@@ -3619,3 +3619,70 @@ aside.tips div.inner {
   margin: -0.5em 0 0 -0.5em;
 }
 /* }}} */
+
+/* {{{ Flash message */
+#flash-message {
+  height: auto;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  margin-top: 4px;
+  position: fixed;
+  width: 100%;
+  z-index: 9999999;
+  cursor: pointer;
+  text-align: center;
+  opacity: 0.9;
+}
+
+#flash-message .message:last-child {
+  box-shadow: 0 0.25em 0.25em rgba(0, 0, 0, 0.1);
+  z-index: -1;
+}
+
+#flash-message .message {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  position: relative;
+  font-weight: 700;
+  font-size: 1.125em;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+}
+
+#flash-message .message a {
+  color:#fff;
+  text-decoration: none;
+  border-bottom: 1px dotted #fff;
+  font-weight: bold;
+}
+
+#flash-message .success {
+  background-color: #DFF0D8;
+  border-color: #D6E9C6;
+  color: #3C763D;
+}
+
+#flash-message .error {
+  background-color: #F2DEDE;
+  border-color: #EBCCD1;
+  color: #A94442;
+}
+
+#flash-message .warning {
+  background-color: #FCF8E3;
+  border-color: #FAEBCC;
+  color: #8A6D3B;
+}
+#flash-message .warning a {
+  color: #826200 !important;
+  border-bottom: 1px dotted #826200;
+}
+
+#flash-message .info {
+  background-color: #D9EDF7;
+  border-color: #BCE8F1;
+  color: #31708F;
+}
+/* }}} */

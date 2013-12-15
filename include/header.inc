@@ -85,6 +85,8 @@ if (isset($shortname) && $shortname) {
       </div>
     </div>
   </div>
+<div id="flash-message">
+</div>
 </nav>
 
 <?php if (!empty($config['breadcrumbs'])): ?>

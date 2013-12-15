@@ -235,6 +235,8 @@ $(document).ready(function() {
           request.done(function(data) {
             if(data.success != null && data.success == true) {
               $("#V"+id).html("<div style=\"float: left; width: 16px; height: 16px; background-image: url(/images/notes-features.png); background-position:-32px 16px; margin-right: 8px; overflow: hidden;\" border=\"0\" alt=\"success\" title=\"Thank you for voting!\"></div>" + data.update);
+            
+              flashMessage({text: 'Thank you for voting!'});
             }
             else {
               var responsedata = "Error :(";
@@ -242,12 +244,16 @@ $(document).ready(function() {
                 responsedata = data.msg;
               }
               $("#V"+id).html("<div style=\"float: left; width: 16px; height: 16px; background-image: url(/images/notes-features.png); background-position:-32px 0px; margin-right: 8px; overflow: hidden;\" border=\"0\" alt=\"fail\" title=\"" + responsedata + "\"></div>");
+              
+              flashMessage({text: 'Unexpected error occured, please try again later!', type: 'error'});
             }
           });
           request.fail(function(jqXHR, textStatus) {
             $("#Vu"+id).show();
             $("#Vd"+id).show();
             $("#V"+id).html("<div style=\"float: left; width: 16px; height: 16px; background-image: url(/images/notes-features.png); background-position:-32px 0px; margin-right: 8px; overflow: hidden;\" border=\"0\" alt=\"fail\" title=\"Error :(\"></div>");
+            
+            flashMessage({text: 'Something went wrong :(', type: 'error'});
           });
           request.always(function(data) {
             $("#V"+id).fadeIn(500, "linear");
@@ -309,9 +315,23 @@ $(document).ready(function() {
   $('code.parameter').closest('em').addClass('reset');
 /* }}} */
 
+/* {{{ Init template generated flash messages */
+  $('#flash-message .message').each(function()
+  {
+    var alertType = $(this).data('type');
+    var timeout = 6000;
+  	var n = flashMessage({
+  		text: $(this).html(),
+  		type: alertType,
+      timeout: timeout
+  	});
+  });
+/* }}} */
+
 });
 
 /* {{{ add-user.php animations */
+// @author dm@php.net
 $(function() {
 
   if ( ! document.getElementById('add-note-usernotes'))
@@ -368,6 +388,46 @@ $(function() {
   }, times[2]);
 
 });
+/* }}} */
+
+/* {{{ Flash Messenger */
+// @author dm@php.net
+function flashMessage(options)
+{
+  var defaults = { 
+    timeout: 6000,
+    type: 'success',
+    text: '',
+    parent: '#flash-message',
+  };
+  
+  var options = $.extend(defaults, options); 
+  
+  var id = 'id_' + Math.random().toString().replace('0.', '');
+  var message = $('<div />').addClass('message ' + options.type).data('type', options.type).attr('id', id).html(options.text);
+  $(options.parent).append(message);
+
+  var o = $('#' + id);
+  
+  if (options.timeout)
+  {
+    setTimeout(function()
+    {
+      if ( ! o.length) 
+        return;
+      o.slideUp(400, function()
+      {
+        $(this).remove();
+      });
+    }, options.timeout);
+  }
+  
+  o.on('click', function() {
+    o.remove();
+  });
+  
+  return true;
+};
 /* }}} */
 
 /**
