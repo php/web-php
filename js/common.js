@@ -308,8 +308,8 @@ $(document).ready(function() {
 /* {{{ Init template generated flash messages */
   $('#flash-message .message').each(function()
   {
-    var alertType = $(this).data('type');
-    var timeout = 6000;
+    var alertType = $(this).data('type') || 'success';
+    var timeout = $(this).data('timeout') || 6000;
   	var n = flashMessage({
   		text: $(this).html(),
   		type: alertType,
@@ -396,22 +396,25 @@ function flashMessage(options)
   $(options.parent).append(message);
 
   var o = $('#' + id);
-  
+
+  var remove = function(o) {
+    o.slideUp(400, function() {
+      $(this).remove();
+    });
+  };
+
   if (options.timeout)
   {
     setTimeout(function()
     {
       if ( ! o.length) 
         return;
-      o.slideUp(400, function()
-      {
-        $(this).remove();
-      });
+      remove(o);
     }, options.timeout);
   }
   
   o.on('click', function() {
-    o.remove();
+    remove($(this));
   });
   
   return true;
