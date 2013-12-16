@@ -61,6 +61,7 @@ $SIDEBAR_DATA = '
      download site. Binaries available on external servers:
     </p>
     <ul>
+      <li><a href="http://windows.php.net/">Windows (PHP.net)</a></li>
       <li><a href="http://www.ampps.com/">Mac OS X (AMPPS)</a></li>
       <li><a href="http://www.mamp.info/">Mac OS X (MAMP)</a></li>
       <li><a href="http://bitnami.com/stack/mamp">Mac OS X (BitNami)</a></li>

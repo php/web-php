@@ -8,10 +8,7 @@
 
     ?>
 <?php if (!empty($config['sidebar'])): ?>
-    <aside class="tips span3">
-        <div class="border first"></div>
-        <div class="border second"></div>
-        <div class="border third"></div>
+    <aside class="tips">
         <div class="inner"><?php echo $config['sidebar']; ?></div>
     </aside>
 <?php endif; ?>
