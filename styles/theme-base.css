@@ -178,35 +178,6 @@ textarea {
 .navbar .brand:focus {
   text-decoration: none;
 }
-.navbar-text {
-  margin-bottom: 0;
-  line-height: 40px;
-  color: #777777;
-}
-.navbar-link {
-  color: #777777;
-}
-.navbar-link:hover,
-.navbar-link:focus {
-  color: #333333;
-}
-.navbar .divider-vertical {
-  height: 40px;
-  margin: 0 9px;
-  border-left: 1px solid #f2f2f2;
-  border-right: 1px solid #fff;
-}
-.navbar .btn,
-.navbar .btn-group {
-  margin-top: 5px;
-}
-.navbar .btn-group .btn,
-.navbar .input-prepend .btn,
-.navbar .input-append .btn,
-.navbar .input-prepend .btn-group,
-.navbar .input-append .btn-group {
-  margin-top: 0;
-}
 .navbar-search {
   position: relative;
   float: left;
@@ -235,10 +206,6 @@ textarea {
   float: left;
   margin: 0 10px 0 0;
 }
-.navbar .nav.pull-right {
-  float: right;
-  margin-right: 0;
-}
 .navbar .nav > li {
   float: left;
 }
@@ -247,9 +214,6 @@ textarea {
   padding: .75em;
   text-decoration: none;
   text-shadow: 0 1px 0 #fff;
-}
-.navbar .nav .dropdown-toggle .caret {
-  margin-top: 8px;
 }
 .navbar .nav > li > a:focus,
 .navbar .nav > li > a:hover {
