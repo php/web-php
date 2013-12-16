@@ -1977,6 +1977,11 @@ div.soft-deprecation-notice blockquote.sidebar {
     display: none !important;
   }
 
+  #flash-message {
+    margin-top: 0px !important;
+    top: 0;
+  }
+
 }
 
 @media (min-width:768px) {
