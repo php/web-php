@@ -446,16 +446,12 @@ div.elephpants div.images {
 }
 div.elephpants img {
   opacity: 0.5;
-  -moz-opacity: 0.5;
-  -webkit-opacity: 0.5;
   transition: all 0.25s ease-in-out;
   -webkit-transition: all 0.25s ease-in-out;
   -moz-transition: all 0.25s ease-in-out;
 }
 div.elephpants:hover img {
   opacity: 0.6;
-  -moz-opacity: 0.6;
-  -webkit-opacity: 0.6;
   transition: all 0.25s ease-in-out;
   -webkit-transition: all 0.25s ease-in-out;
   -moz-transition: all 0.25s ease-in-out;
@@ -463,8 +459,6 @@ div.elephpants:hover img {
 div.elephpants img:hover,
 div.elephpants img:focus {
   opacity: 1;
-  -moz-opacity: 1;
-  -webkit-opacity: 1;
 }
 /* }}} */
 
