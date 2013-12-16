@@ -25,6 +25,9 @@ if (ini_get("date.timezone") === "" && function_exists("date_default_timezone_se
 }
 
 $now = $_SERVER["REQUEST_TIME"];
+if(!isset($_SERVER["QUERY_STRING"])) {
+    $_SERVER["QUERY_STRING"] = "phpweb";
+}
 switch($_SERVER["QUERY_STRING"]) {
     case "QA":
     case "qa":
