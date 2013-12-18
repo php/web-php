@@ -495,9 +495,9 @@ function get_shortname($page) {
 // the name of the Apache vhost.
 
 if (!isset($_SERVER["HTTPS"]) || $_SERVER["HTTPS"] != "on") {
-    $proto = "https";
-} else {
     $proto = "http";
+} else {
+    $proto = "https";
 }
 
 if($_SERVER["SERVER_PORT"] != '80' || $_SERVER["SERVER_PORT"] != 443) {
