@@ -494,44 +494,57 @@ function get_shortname($page) {
 // it works under more then one name). SERVER_NAME is
 // the name of the Apache vhost.
 
-
-if($_SERVER["SERVER_PORT"] != '80') {
-    $MYSITE = 'http://' . $_SERVER["SERVER_NAME"] . ':' . (int)$_SERVER["SERVER_PORT"] . '/'; 
+if (!isset($_SERVER["HTTPS"]) || $_SERVER["HTTPS"] != "on") {
+    $proto = "https";
 } else {
-    $MYSITE = 'http://' . $_SERVER["SERVER_NAME"] . '/'; 
+    $proto = "http";
+}
+
+if($_SERVER["SERVER_PORT"] != '80' || $_SERVER["SERVER_PORT"] != 443) {
+    $MYSITE = $proto . '://' . $_SERVER["SERVER_NAME"] . ':' . (int)$_SERVER["SERVER_PORT"] . '/';
+    $msite  =      'http://' . $_SERVER["SERVER_NAME"] . ':' . (int)$_SERVER["SERVER_PORT"] . '/';
+} else {
+    $MYSITE = $proto . '://' . $_SERVER["SERVER_NAME"] . '/';
+    $msite  =      'http://' . $_SERVER["SERVER_NAME"] . '/';
 }
 
 // If this site does not exist - it is most likely because
 // CC.php.net isn't in this array anymore.
 if (!isset($MIRRORS[$MYSITE])) {
+    if (isset($MIRRORS[$msite])) {
+        $MIRRORS[$MYSITE] = $MIRRORS[$msite];
+        unset($MIRRORS[$msite]);
+    }
+}
 
+if (!isset($MIRRORS[$MYSITE])) {
     // Check if the IP address exists (a fix for the round-robin introduction)
     if (isset($MIRRORS[$_SERVER['SERVER_ADDR']])) {
-	// Since it does, we know the servername is fine
-	$MYSITE = 'http://' . $_SERVER["SERVER_NAME"] . '/';
+        // Since it does, we know the servername is fine
+        $MYSITE = $proto . '://' . $_SERVER["SERVER_NAME"] . '/';
     } else {
 
         // Try the hostname [without www]. In case the main name above is
         // not found, we try to find the mirror with the name provided by
         // the browser (in the Host HTTP header).
  
-        if($_SERVER["SERVER_PORT"] != '80') {
-            $tmp = 'http://' . preg_replace("!^www\\.!", "", $_SERVER["SERVER_NAME"]) . ':' . (int)$_SERVER["SERVER_PORT"] . '/'; 
-        } else {
-            $tmp = 'http://' . preg_replace("!^www\\.!", "", $_SERVER["SERVER_NAME"]) . '/';
-        }
+        $msite = str_replace("www.", "", $msite);
 
         // If the name without www. exists, use it
-        if (isset($MIRRORS[$tmp])) {
-            $MYSITE = $tmp;
-        }
-
-        // If the mirror is not registered with this name, provide defaults
-        // (no country code, no search, no stats, English default language ...)
-        if (!isset($MIRRORS[$MYSITE])) {
-            $MIRRORS[$MYSITE] = array("xx", $MYSITE, FALSE, $MYSITE, MIRROR_VIRTUAL, FALSE, "en", MIRROR_OK);
+        if (isset($MIRRORS[$msite])) {
+            $MYSITE = str_replace("www.", "", $MYSITE);
+            if (!isset($MIRRORS[$MYSITE])) {
+                $MIRRORS[$MYSITE] = $MIRRORS[$msite];
+                unset($MIRRORS[$msite]);
+            }
         }
     }
+}
+
+// If the mirror is not registered with this name, provide defaults
+// (no country code, no search, no stats, English default language ...)
+if (!isset($MIRRORS[$MYSITE])) {
+    $MIRRORS[$MYSITE] = array("xx", $MYSITE, FALSE, $MYSITE, MIRROR_VIRTUAL, FALSE, "en", MIRROR_OK);
 }
 
 // Override mirror language with local preference
