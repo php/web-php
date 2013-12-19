@@ -399,15 +399,12 @@ aside.tips div.border {
   border-bottom-color:#bfbfbf;
 }
 .layout-menu ul.parent-menu-list a {
-  color: #262626;
+  color: #000;
 }
 .layout-menu ul.parent-menu-list a:hover {
     color: #693;
     border-color: #693;
     text-shadow:0 0 .25em #fff;
-}
-.layout-menu ul.parent-menu-list > li > a {
-  color:#000;
 }
 .layout-menu ul.child-menu-list a {
   border-bottom-color: #808080;
