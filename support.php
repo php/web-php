@@ -9,7 +9,6 @@ $SIDEBAR_DATA ='
   <div class="body">
     <ul>
       <li><a href="#documentation">Documentation</a></li>
-      <li><a href="#books">Books</a></li>
       <li><a href="#mailing-lists">Mailing Lists</a></li>
       <li><a href="#newsgroups">Newsgroups</a></li>
       <li><a href="#user-groups">User Groups</a></li>
@@ -36,19 +35,6 @@ site_header(
  href="/FAQ.php">frequently asked questions (with answers, of course)</a>. Then
  have a look at the rest of the online manual and other resources in the <a
  href="/docs.php">documentation</a> section.
-</p>
-
-<h2 id="books">Books</h2>
-<p>
- Books are convenient resources to begin exploring or extend your
- PHP knowledge. There are literally thousands of books available in
- English and numerous in other languages. Search at your favourite
- online or offline bookstore. You can search at
- <a href="http://www.amazon.com/exec/obidos/external-search?mode=books&amp;keyword=PHP&amp;tag=wwwphpnet">Amazon.com</a>, or 
- go directly to
- <a href="http://www.amazon.de/exec/obidos/redirect-home/wwwphpnet07">Amazon.de</a>
- or <a href="http://www.amazon.fr/exec/obidos/redirect-home/wwwphpnet0f">Amazon.fr</a>
- and search there.
 </p>
 
 <h2 id="mailing-lists">Mailing Lists</h2>
@@ -80,13 +66,10 @@ site_header(
 <h2 id="user-groups">User Groups</h2>
 
 <p>
- Christopher R. Moewes-Bystrom is running a PHP user group registry at <a
- href="http://www.phpusergroups.org/">http://www.phpusergroups.org/</a>.
- There's also a list of user groups in Germany, as well as news from them,
- and link to other countries user groups at
- <a href="http://www.phpug.de/">http://www.phpug.de/</a>.
- <a href="http://php.meetup.com/">PHP Meetup</a> is another great
- opportunity to get together.
+ Chances are that there is a User Group in your neighborhood, which are generally
+ a great resource both for beginners and experienced PHP users.
+ Check out the User Group listing on <a href="http://php.ug/">PHP.ug</a> to see if there
+ is one close by.
 </p>
 
 <h2 id="events-training">Events &amp; Training</h2>
