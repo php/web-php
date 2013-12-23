@@ -273,7 +273,7 @@ $(document).ready(function() {
     // Search box autocomplete.
     jQuery("#topsearch .search-query").search({
         language: getLanguage(),
-        limit: 3
+        limit: 30
     });
 
 /* {{{ Negative user notes fade-out */

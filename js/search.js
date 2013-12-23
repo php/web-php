@@ -118,7 +118,7 @@
         var element = this;
 
         options.language = options.language || "en";
-        options.limit = options.limit || 10;
+        options.limit = options.limit || 30;
 
         /**
          * Utility function to check if the user's browser supports local
@@ -176,6 +176,10 @@
                 if (item[0]) {
                     var tokens = [item[0]];
                     var type = null;
+
+                    if (item[0].indexOf("_") != -1) {
+                        tokens.push(item[0].replace("_", ""));
+                    }
 
                     if (item[1].match(/^function\./)) {
                         type = "function";

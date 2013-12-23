@@ -1104,6 +1104,8 @@ fieldset {
 
 .tt-suggestions {
     color: #ccc;
+    overflow: scroll;
+    max-height: 210px;
 }
 
 .tt-dropdown-menu .search {
