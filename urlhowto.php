@@ -17,12 +17,6 @@ $SIDEBAR_DATA='
  <li><a href="'.$MYSITE.'searchterm">/searchterm</a></li>
 </ul>
 
-<h3>Quick reference tips</h3>
-<p>
- You can find <a href="/tips.php">more
- quick reference tips</a> on our site.
-</p>
-
 <h3>My PHP.net</h3>
 <p>
  URL shortcut behaviour is greatly influenced by

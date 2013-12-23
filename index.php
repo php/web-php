@@ -172,7 +172,6 @@ $SIDEBAR = <<< SIDEBAR_DATA
     <p class='panel'><a href='/migration55'>Upgrading to PHP5.5</a></p>
 $announcements
     <p class='panel'><a href='/cal.php'>User Group Events</a></p>
-    <p class='panel'><a href='/tips.php'>Tips and Tricks</a></p>
     <p class='panel'><a href='/thanks.php'>Special Thanks</a></p>
 
 SIDEBAR_DATA;

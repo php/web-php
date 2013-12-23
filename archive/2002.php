@@ -155,7 +155,7 @@ site_header("News Archive - 2002", array("generate_modified" => true));
  <span class="newsdate">[29-Oct-2002]</span>
  We added a new option to access our site's content quickly. In addition to
  <a href="/urlhowto.php">URL shortcuts</a>, keyboard shortcuts and
- <a href="/tips.php">browser specific magic</a> you can now use our
+ browser specific magic you can now use our
  <a href="/sidebars.php">Search Bar</a> from the major browsers. Please help
  us to test this new service, and provide feedback via
  <a href="http://bugs.php.net/">the bug system</a> (categorize your bug

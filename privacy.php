@@ -1,5 +1,4 @@
 <?php
-// $Id: tips.php 286580 2009-07-31 10:28:16Z bjori $
 $_SERVER['BASE_PAGE'] = 'privacy.php';
 include_once $_SERVER['DOCUMENT_ROOT'] . '/include/prepend.inc';
 site_header("Privacy Policy", array("current" => "footer"));

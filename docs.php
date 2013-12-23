@@ -16,9 +16,7 @@ site_header("Documentation", array("current" => "docs"));
 </p>
 
 <p>
- You can learn how to integrate our online manual with various tools, including
- your web browser, on our <a href="tips.php">quick reference tips</a> page.
- You can also get more information about php.net URL shortcuts by visiting our
+ More information about php.net URL shortcuts by visiting our
  <a href="urlhowto.php">URL howto page</a>.
 </p>
 
