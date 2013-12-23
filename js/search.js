@@ -2,8 +2,6 @@
  * A jQuery plugin to add typeahead search functionality to the navbar search
  * box.  This requires Hogan for templating and typeahead.js for the actual
  * typeahead functionality.
- *
- * @author Adam Harvey <aharvey@php.net>
  */
 (function ($) {
     /**
