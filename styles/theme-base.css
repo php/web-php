@@ -1128,7 +1128,7 @@ fieldset {
 }
 
 /* Class and other matches descriptions tend to be useless. */
-.tt-dataset-0 .tt-suggestion .description {
+.tt-suggestion .description {
     display: block;
     font-size: 0.8em;
     line-height: 1.3;
@@ -1137,9 +1137,6 @@ fieldset {
     text-overflow: ellipsis;
 }
 
-.tt-suggestion .description {
-    display: none;
-}
 
 /* Selected items. */
 .tt-is-under-cursor {
@@ -1149,13 +1146,13 @@ fieldset {
 /* We need to crunch down the dropdown on smaller displays. Firstly we'll drop
  * the descriptions, then classes (since they're two clicks away if you have
  * matching functions). */
-@media screen and (max-height: 580px) {
-    .tt-dataset-0 .tt-suggestion .description {
+@media screen and (max-height: 480px) {
+    .tt-suggestion .description {
         display: none;
     }
 }
 
-@media screen and (max-height: 500px) {
+@media screen and (max-height: 400px) {
     .tt-dataset-1 {
         /* Overriding an unfortunate element style. */
         display: none !important;
