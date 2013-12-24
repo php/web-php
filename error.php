@@ -443,6 +443,10 @@ $uri_aliases = array (
     # Bugfixes
     "array_sort"    => "sort", // #64743
     "array-sort"    => "sort", // #64743
+
+    # Removed pages
+    "tips.php"      => "urlhowto",
+    "tips"          => "urlhowto",
 );
 
 $external_redirects = array(
