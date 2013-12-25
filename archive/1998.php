@@ -92,4 +92,5 @@ site_header("News Archive - 1998", array("generate_modified" => true));
  Report or check on bugs in the PHP 3 Bug Database.
 </p>
 
-<?php site_footer(); ?>
+<?php site_footer(array('elephpants' => true, 'sidebar' => $SIDEBAR_DATA));
+

@@ -118,4 +118,5 @@ site_header("News Archive - 1999", array("generate_modified" => true));
  information!
 </p>
 
-<?php site_footer(); ?>
+<?php site_footer(array('elephpants' => true, 'sidebar' => $SIDEBAR_DATA));
+
