@@ -521,6 +521,7 @@ function site_header($title = '', $config = array())
         "meta-navigation" => array(),
         'classes' => '',
         'layout_span' => 9,
+        "cache"       => false,
     );
 
     $config = array_merge($defaults, $config);

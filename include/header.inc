@@ -14,6 +14,17 @@ if (isset($shortname) && $shortname) {
     header("Link: <$shorturl>; rel=shorturl");
 }
 
+if ($config["cache"]) {
+    $timestamp = filemtime($_SERVER["DOCUMENT_ROOT"] . "/" .$_SERVER["BASE_PAGE"]);
+    $tsstring = gmdate("D, d M Y H:i:s ", $timestamp) . "GMT";
+
+    if (isset($_SERVER["HTTP_IF_MODIFIED_SINCE"]) && $_SERVER["HTTP_IF_MODIFIED_SINCE"] == $tsstring) {
+        header("HTTP/1.1 304 Not Modified");
+        exit;
+    }
+    header("Last-Modified: " . $tsstring);
+}
+
 ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="<?php echo $lang?>">
