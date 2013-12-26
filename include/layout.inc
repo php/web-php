@@ -512,7 +512,6 @@ EOT;
 // BETA
 function site_header($title = '', $config = array())
 {
-    global $SIDEBAR_DATA;
     global $MYSITE;
 
     $defaults = array(
