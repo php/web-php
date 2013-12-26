@@ -57,7 +57,6 @@ Mousetrap.bind('up up down down left right left right b a enter', function() {
         $(".brand img").attr("src", "/images/php_konami.gif");
 });
 Mousetrap.bind("?", function() {
-    $.scrollTo(0, 10);
     $("#trick").slideToggle();
 });
 /*

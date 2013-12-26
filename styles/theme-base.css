@@ -1737,23 +1737,18 @@ div.soft-deprecation-notice blockquote.sidebar {
 #trick {
     display: none;
     background-color: #333;
-    border: .5em solid #9999CC;
-    border-right: 0;
-    border-left: 0;
-    border-top: 0;
     height: 100%;
     width: 100%;
+    opacity: 0.9;
+    position: fixed;
+    top: 50px;
+    z-index: 5000;
 }
 #trick div {
     margin: 0 auto;
 }
-#trick dt {
-    margin: 0 auto;
-}
 #trick dt, #trick dl {
     color: #eee;
-    font-weight: bold;
-    margin-top: 1em;
 }
 #trick dl {
     display: inline-block;
@@ -1762,9 +1757,8 @@ div.soft-deprecation-notice blockquote.sidebar {
 #trick a {
     color: #eee;
     display: block;
-    padding: 2px;
-    color: #ccc;
     border-bottom: none;
+    padding: 1px;
 }
 /* {{{ Right-hand sidebar */
 aside.tips {
