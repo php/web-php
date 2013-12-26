@@ -69,9 +69,6 @@ if (get_magic_quotes_runtime()) {
     @set_magic_quotes_runtime(0);
 }
 
-// Check for APC support
-$APC = function_exists('apc_store');
-
 // Site details (mirror site information)
 include $_SERVER['DOCUMENT_ROOT'] . '/include/site.inc';
 
