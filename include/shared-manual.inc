@@ -361,20 +361,21 @@ function manual_setup($setup) {
         $menu[] = $last_item;
     }
     
-    $_SERVER["BASE_PAGE"] = "/manual/" . $setup["head"][1] . "/" . $setup["this"][0];
+    $base = "manual/" . $setup["head"][1] . "/";
+    $_SERVER["BASE_PAGE"] = "/" . $base . $setup["this"][0];
 
     $config = array(
         "current" => "docs",
         "leftmenu" => $siblings,
         "breadcrumbs" => $menu,
         "meta-navigation" => array(
-            "contents" => $setup["home"][0],
-            "index"    => $setup["up"][0],
-            "prev"     => $setup["prev"][0],
-            "next"     => $setup["next"][0],
+            "contents" => $base . $setup["home"][0],
+            "index"    => $base . $setup["up"][0],
+            "prev"     => $base . $setup["prev"][0],
+            "next"     => $base . $setup["next"][0],
         ),
-        "lang" => $setup["head"][1],
-        "thispage" => $setup["this"][0],
+        "lang" => $base . $setup["head"][1],
+        "thispage" => $base . $setup["this"][0],
         "prev" => $setup["prev"],
         "next" => $setup["next"],
     );

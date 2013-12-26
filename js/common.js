@@ -53,6 +53,73 @@ function scroll(target, interval)
 (function($){var h=$.scrollTo=function(a,b,c){$(window).scrollTo(a,b,c)};h.defaults={axis:'xy',duration:parseFloat($.fn.jquery)>=1.3?0:1,limit:true};h.window=function(a){return $(window)._scrollable()};$.fn._scrollable=function(){return this.map(function(){var a=this,isWin=!a.nodeName||$.inArray(a.nodeName.toLowerCase(),['iframe','#document','html','body'])!=-1;if(!isWin)return a;var b=(a.contentWindow||a).document||a.ownerDocument||a;return/webkit/i.test(navigator.userAgent)||b.compatMode=='BackCompat'?b.body:b.documentElement})};$.fn.scrollTo=function(e,f,g){if(typeof f=='object'){g=f;f=0}if(typeof g=='function')g={onAfter:g};if(e=='max')e=9e9;g=$.extend({},h.defaults,g);f=f||g.duration;g.queue=g.queue&&g.axis.length>1;if(g.queue)f/=2;g.offset=both(g.offset);g.over=both(g.over);return this._scrollable().each(function(){if(e==null)return;var d=this,$elem=$(d),targ=e,toff,attr={},win=$elem.is('html,body');switch(typeof targ){case'number':case'string':if(/^([+-]=?)?\d+(\.\d+)?(px|%)?$/.test(targ)){targ=both(targ);break}targ=$(targ,this);if(!targ.length)return;case'object':if(targ.is||targ.style)toff=(targ=$(targ)).offset()}$.each(g.axis.split(''),function(i,a){var b=a=='x'?'Left':'Top',pos=b.toLowerCase(),key='scroll'+b,old=d[key],max=h.max(d,a);if(toff){attr[key]=toff[pos]+(win?0:old-$elem.offset()[pos]);if(g.margin){attr[key]-=parseInt(targ.css('margin'+b))||0;attr[key]-=parseInt(targ.css('border'+b+'Width'))||0}attr[key]+=g.offset[pos]||0;if(g.over[pos])attr[key]+=targ[a=='x'?'width':'height']()*g.over[pos]}else{var c=targ[pos];attr[key]=c.slice&&c.slice(-1)=='%'?parseFloat(c)/100*max:c}if(g.limit&&/^\d+$/.test(attr[key]))attr[key]=attr[key]<=0?0:Math.min(attr[key],max);if(!i&&g.queue){if(old!=attr[key])animate(g.onAfterFirst);delete attr[key]}});animate(g.onAfter);function animate(a){$elem.animate(attr,f,g.easing,a&&function(){a.call(this,targ,g)})}}).end()};h.max=function(a,b){var c=b=='x'?'Width':'Height',scroll='scroll'+c;if(!$(a).is('html,body'))return a[scroll]-$(a)[c.toLowerCase()]();var d='client'+c,html=a.ownerDocument.documentElement,body=a.ownerDocument.body;return Math.max(html[scroll],body[scroll])-Math.min(html[d],body[d])};function both(a){return typeof a=='object'?a:{top:a,left:a}}})(jQuery);
 /*}}}*/
 
+Mousetrap.bind('up up down down left right left right b a enter', function() {
+        $(".brand img").attr("src", "/images/php_konami.gif");
+});
+Mousetrap.bind("?", function() {
+    $.scrollTo(0, 10);
+    $("#trick").slideToggle();
+});
+/*
+Mousetrap.bind("j", function() {
+    var n = window.pageYOffset + 20;
+    $.scrollTo(n, 10);
+});
+Mousetrap.bind("k", function() {
+    var n = window.pageYOffset - 20;
+    $.scrollTo(n, 10);
+});
+*/
+Mousetrap.bind("G", function() {
+    var n = $(document).height();
+    $.scrollTo(n, 10);
+});
+Mousetrap.bind("g h", function() {
+    window.location.href = "/";
+});
+Mousetrap.bind("g g", function() {
+    $.scrollTo(0, 10);
+});
+Mousetrap.bind("g p", function() {
+    var link = $("link[rel=prev]").attr("href");
+    if (link) {
+        window.location.href = link;
+    }
+});
+Mousetrap.bind("g n", function() {
+    var link = $("link[rel=next]").attr("href");
+    if (link) {
+        window.location.href = link;
+    }
+});
+Mousetrap.bind("j", function() {
+    var fixedheader = 50;
+    var node = $(".layout-menu .current");
+    if (node.next().length) {
+        var curr = node.toggleClass("current").next().toggleClass("current");
+        $.scrollTo(curr.offset().top-fixedheader);
+        curr.children("a").first().focus().css({outline: "none"});
+    }
+});
+Mousetrap.bind("k", function() {
+    var fixedheader = 50;
+    var node = $(".layout-menu .current");
+    if (node.prev().length) {
+        var curr = node.toggleClass("current").prev().toggleClass("current");
+        $.scrollTo(curr.offset().top-fixedheader);
+        curr.children("a").first().focus().css({outline: "none"});
+    }
+});
+Mousetrap.bind("/", function(e) {
+    if (e.preventDefault) {
+        e.preventDefault();
+    } else {
+        // internet explorer
+        e.returnValue = false;
+    }
+    $("input[type=search]").focus()
+});
+
 $(window).load(function()
 {
   // Fire our scroll, webkit needs onload

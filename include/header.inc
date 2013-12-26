@@ -94,6 +94,7 @@ if ($config["cache"]) {
   </div>
   <div id="flash-message"></div>
 </nav>
+<nav id="trick"><div><?php doc_toc("en") ?></div></nav>
 
 <?php if (!empty($config['breadcrumbs'])): ?>
   <div id="breadcrumbs">

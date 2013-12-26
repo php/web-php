@@ -588,53 +588,42 @@ function doc_toc($lang) {
     }
     require dirname(__FILE__) . "/../manual/$lang/toc/index.inc";
 
-?>
-    <dl>
-        <dt><a href="/manual/">PHP Manual</a></dt>
-        <?php doc_toc_list($lang, $TOC, 'getting-started'); ?>
-        <?php doc_toc_title($lang, $TOC, 'install', 'dd'); ?>
-    </dl>
+    echo "<dl>\n";
+    doc_toc_list($lang, $TOC, "getting-started");
+    doc_toc_list($lang, $TOC, "langref");
+    echo "</dl>\n";
 
-    <dl>
-        <?php doc_toc_title($lang, $TOC, 'langref'); ?>
-        <?php doc_sub_entry($lang, 'langref', 'language.basic-syntax'); ?>
-        <?php doc_sub_entry($lang, 'langref', 'language.variables'); ?>
-        <?php doc_sub_entry($lang, 'langref', 'language.operators'); ?>
-        <?php doc_sub_entry($lang, 'langref', 'language.functions'); ?>
-        <?php doc_sub_entry($lang, 'langref', 'language.oop5'); ?>
-    </dl>
+    echo "<dl>\n";
+    doc_toc_list($lang, $TOC, "security");
+    doc_toc_list($lang, $TOC, "features");
+    echo "</dl>\n";
 
-    <dl>
-        <?php doc_toc_title($lang, $TOC, 'funcref'); ?>
-        <?php doc_sub_entry($lang, 'refs.basic.vartype', 'book.array'); ?>
-        <?php doc_sub_entry($lang, 'refs.calendar', 'book.datetime'); ?>
-        <?php doc_sub_entry($lang, 'refs.basic.text', 'book.strings'); ?>
-        <?php doc_toc_title($lang, $TOC, 'faq'); ?>
-    </dl>
+    echo "<dl>\n";
+    doc_toc_list($lang, $TOC, "funcref");
+    echo "</dl>\n";
 
-    <dl>
-        <?php doc_toc_title($lang, $TOC, 'security'); ?>
-        <?php doc_sub_entry($lang, 'security', 'security.database'); ?>
-        <?php doc_sub_entry($lang, 'security', 'security.variables'); ?>
-        <?php doc_sub_entry($lang, 'faq', 'faq.passwords'); ?>
-        <?php doc_toc_title($lang, $TOC, 'appendices'); ?>
-    </dl>
-<?php
-}
-function doc_sub_entry($lang, $file, $subfile, $elm = "dd") {
-    static $cache = array();
+    echo "<dl>\n";
+    echo "<dt>Keyboard Shortcuts</dt>";
+    echo "<dt>?</dt>\n";
+    echo "<dd>This help</dd>\n";
+    echo "<dt>j</dt>\n";
+    echo "<dd>Next menu item</dd>\n";
+    echo "<dt>k</dt>\n";
+    echo "<dd>Previous menu item</dd>\n";
+    echo "<dt>g p</dt>\n";
+    echo "<dd>Previous man page</dd>\n";
+    echo "<dt>g n</dt>\n";
+    echo "<dd>Next man page</dd>\n";
+    echo "<dt>G</dt>\n";
+    echo "<dd>Scroll to bottom</dd>\n";
+    echo "<dt>g g</dt>\n";
+    echo "<dd>Scroll to top</dd>\n";
+    echo "<dt>g h</dt>\n";
+    echo "<dd>Goto homepage</dd>\n";
+    echo "<dt>/</dt>\n";
+    echo "<dd>Focus search box</dd>\n";
+    echo "</dl>";
 
-    if (isset($cache["$lang.$file"])) {
-        $TOC = $cache["$lang.$file"];
-    } else {
-        include dirname(__FILE__) . "/../manual/$lang/toc/$file.inc";
-    }
-
-    foreach($TOC as $entry) {
-        if (substr($entry[0], 0, strlen($subfile)) == $subfile) {
-            echo "\t<$elm><a href='/manual/$lang/{$entry[0]}'>{$entry[1]}</a></$elm>\n";
-        }
-    }
 }
 function doc_toc_list($lang, $index, $file) {
     include dirname(__FILE__) . "/../manual/$lang/toc/$file.inc";
@@ -654,11 +643,6 @@ function doc_toc_title($lang, $index, $file, $elm = "dt") {
     }
     echo "<$elm><a href='/manual/$lang/$link'>$title</a></$elm>\n";
 }
-
-
-
-
-
 
 /* vim: set et ts=4 sw=4 ft=php: : */
 
