@@ -521,10 +521,14 @@ function site_header($title = '', $config = array())
         'classes' => '',
         'layout_span' => 9,
         "cache"       => false,
+        "headsup"     => "",
     );
+
 
     $config = array_merge($defaults, $config);
 
+
+    $config["headsup"] = get_news_changes();
     $lang = language_convert($config["lang"]);
     $curr = $config["current"];
     $classes = $config['classes'];
@@ -544,6 +548,25 @@ function site_footer($config = array())
 {
     global $MYSITE;
     require dirname(__FILE__) . "/footer.inc";
+}
+
+function get_news_changes()
+{
+    include dirname(__FILE__) . "/pregen-news.inc";
+    $date = date_create($NEWS_ENTRIES[0]["updated"]);
+    if (isset($_COOKIE["LAST_NEWS"]) && $_COOKIE["LAST_NEWS"] >= $date->getTimestamp()) {
+        return false;
+    }
+    if ($_SERVER["BASE_PAGE"] == "index.php") {
+        return false;
+    }
+
+    $date->modify("+1 week");
+    if ($date->getTimestamp() > $_SERVER["REQUEST_TIME"]) {
+        $link = substr($NEWS_ENTRIES[0]["link"][0]["href"], 14); // Strip http://php.net
+        $title = $NEWS_ENTRIES[0]["title"];
+        return "<a href='{$link}'>{$title}</a>";
+    }
 }
 
 function news_toc($sections = null) {

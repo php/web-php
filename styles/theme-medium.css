@@ -475,5 +475,19 @@ div.elephpants img:focus {
 	position: relative;
 }
 
+.headsup {
+  padding:.25em 0;
+  height:1.5em;
+  border-bottom:.125em solid #696;
+  background-color: #9c9;
+  color:#fff;
+}
+
+.headsup,
+.headsup a {
+  margin: 0 auto;
+  text-align: center;
+  color: #fff;
+}
 
 // vim: set ts=2 sw=2 et:
