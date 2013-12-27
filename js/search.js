@@ -16,18 +16,6 @@
         this.elements = {};
     };
 
-    /**
-     * Adds a description to the given item. If the ID doesn't exist, this
-     * method will do nothing, successfully.
-     *
-     * @param {String} id          The ID to match.
-     * @param {String} description The description to add.
-     */
-    Backend.prototype.addDescription = function (id, description) {
-        if (id in this.elements) {
-            this.elements[id].description = description;
-        }
-    };
 
     /**
      * Adds an item to the backend.
@@ -36,12 +24,12 @@
      * @param {String} name   The item name to use as a label.
      * @param {Array}  tokens An array of tokens that should match this item.
      */
-    Backend.prototype.addItem = function (id, name, tokens) {
+    Backend.prototype.addItem = function (id, name, description, tokens) {
         this.elements[id] = {
             tokens: tokens,
             id: id,
             name: name,
-            description: null
+            description: description
         };
     };
 
@@ -134,26 +122,7 @@
         };
 
         /**
-         * Given a data structure in the format of our search-description.json
-         * files, augments the given backends with descriptions.
-         *
-         * @param {Object} backends An object or array containing one or more
-         *                          Backend objects.
-         * @param {Object} desc     A description array, keyed by page ID.
-         * @return {Object} The updated backends.
-         */
-        var processDescription = function (backends, desc) {
-            $.each(desc, function (id, description) {
-                $.each(backends, function (_, backend) {
-                    backend.addDescription(id, description);
-                });
-            });
-
-            return backends;
-        };
-
-        /**
-         * Processes a data structure in the format of our search-index.json
+         * Processes a data structure in the format of our search-index.php
          * files and returns an object containing multiple Backend objects.
          *
          * @param {Object} index
@@ -167,7 +136,7 @@
                 "general": new Backend("Other Matches")
             };
 
-            $.each(index, function (_, item) {
+            $.each(index, function (id, item) {
                 /* If the item has a name, then we should figure out what type
                  * of data this is, and hence which backend this should go
                  * into. */
@@ -179,7 +148,7 @@
                         tokens.push(item[0].replace("_", ""));
                     }
 
-                    if (item[1].match(/^function\./)) {
+                    if (id.match(/^function\./)) {
                         type = "function";
                     } else if (item[0].indexOf("::") != -1) {
                         type = "function";
@@ -198,9 +167,10 @@
                          * other matches category. */
                         type = "general";
                     }
+                    /* item[2] contains the XML element name.. may be better? */
 
                     if (type) {
-                        backends[type].addItem(item[1], item[0], tokens);
+                        backends[type].addItem(id, item[0], item[1], tokens);
                     }
                 }
             });
@@ -252,32 +222,18 @@
                 success: function (data) {
                     // Transform the data into something useful.
                     var backends = processIndex(data);
-
-                    // See if we can augment this with description data.
-                    $.ajax({
-                        dataType: "json",
-                        error: function () {
-                            // Return the data without descriptions but don't
-                            // cache it.
-                            success(backends);
-                        },
-                        success: function (data) {
-                            backends = processDescription(backends, data);
-
-                            // Cache the data if we can.
-                            if (canCache()) {
-                                window.localStorage.setItem(key, JSON.stringify({
-                                    data: backends,
-                                    time: new Date().getTime()
-                                }));
-                            }
-
-                            success(backends);
-                        },
-                        url: "/cached.php?f=/manual/" + language + "/search-description.json"
-                    });
+                    // Cache the data if we can.
+                    if (canCache()) {
+                        window.localStorage.setItem(key,
+                            JSON.stringify({
+                                data: backends,
+                                time: new Date().getTime()
+                            })
+                        );
+                    }
+                    success(backends);
                 },
-                url: "/cached.php?f=/manual/" + language + "/search-index.json"
+                url: "/js/search-index.php?lang=" + language
             });
         };
 
