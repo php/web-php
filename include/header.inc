@@ -54,7 +54,7 @@ if ($config["cache"]) {
 
  <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,400italic,600italic|Source+Code+Pro&amp;subset=latin,latin-ext' rel='stylesheet' type='text/css'>
 <?php foreach($CSS as $filename => $modified): ?>
-<link rel="stylesheet" type="text/css" href="<?php echo $MYSITE ?>cached.php?f=styles/<?php echo $filename?>&amp;t=<?php echo $modified?>" media="screen">
+<link rel="stylesheet" type="text/css" href="<?php echo $MYSITE ?>cached.php?t=<?php echo $modified?>&amp;f=styles/<?php echo $filename?>" media="screen">
 <?php endforeach ?>
 
  <!--[if lte IE 7]>
