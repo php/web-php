@@ -106,11 +106,11 @@ h1.refname {
   color:#f80;
 }
 
-.home .newsentry h3 a {
+.newsentry h3 a {
   color: #446;
   border-color:#C6C6E2;
 }
-.home .newsentry h3,
+.newsentry h3,
 .downloads .content-header,
 .refsect1 h3.title {
   color: #446;
