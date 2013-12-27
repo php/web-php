@@ -59,6 +59,9 @@ Mousetrap.bind('up up down down left right left right b a enter', function() {
 Mousetrap.bind("?", function() {
     $("#trick").slideToggle();
 });
+Mousetrap.bind("esc", function() {
+    $("#trick").slideUp();
+});
 /*
 Mousetrap.bind("j", function() {
     var n = window.pageYOffset + 20;
