@@ -55,6 +55,9 @@ html {
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
 }
+a {
+  border-bottom:1px solid;
+}
 a:focus {
   outline: thin dotted #333;
   outline-offset: -2px;
@@ -485,25 +488,18 @@ hr {
     position: relative;
     margin-top:1.5em;
 }
-
-#usernotes h3.title {
-    border-bottom: 0.166666667em solid;
-    margin-bottom: -0.166666667em;
-    line-height:2.666666667;
-}
-
 #usernotes .count {
+    display:inline-block;
+    vertical-align: text-top;
     padding: 0.333333333em .5em;
     font-size: 0.666666667em;
-    line-height:2;
-    vertical-align: middle;
 }
 
 /* Add a note buttons. */
 #usernotes .action {
     display: block;
-    top: 1em;
-    right: 0;
+    top: 8px;
+    right: 12px;
     position: absolute;
     text-align: right;
 }
@@ -1198,12 +1194,13 @@ fieldset {
     }
 }
 
-.newsentry h3,
-.downloads .content-header,
-.refsect1 h3.title {
-  padding:0.333333333em 0.444444444em;
+.title {
+  padding:6px 12px;
   border-top:2px solid #669;
   border-bottom:1px solid;
+}
+.title a {
+  border:0;
 }
 .refsect1 > *:last-child {
     margin-bottom:0;
@@ -1214,6 +1211,19 @@ fieldset {
 
 .refsect1 > .title + * {
     margin-top:0;
+}
+
+.country {
+  position: relative;
+  padding:0 12px;
+}
+.country .countrytitle {
+  margin-left:-12px;
+  margin-right:-12px;
+}
+.country .title img {
+  position: absolute;
+  right: 12px;
 }
 
 /* {{{ General styles (p, parameters, initializers, ...) */
@@ -1881,6 +1891,29 @@ aside.tips div.inner {
 #flash-message .message a {
   border-style: dotted;
   font-weight: bolder;
+}
+/* }}} */
+
+/* {{{ News */
+.newsentry {
+  margin: 0 0 1.5em;
+  position: relative;
+}
+.newsentry h3 {
+  font-weight:normal;
+}
+.newsentry h3 .release-state {
+  float: right;
+  opacity: 0.8;
+}
+.newsentry .newstime {
+  float:right;
+}
+
+.newsentry .newsimage a {
+  float: right;
+  border: 0;
+  padding: 10px;
 }
 /* }}} */
 

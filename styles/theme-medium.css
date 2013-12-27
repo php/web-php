@@ -54,7 +54,6 @@ h1, h2, h3, h4, h5, h6 {
 a:link,
 a:visited {
   color: #369;
-  border-bottom: 1px solid;
 }
 
 a:hover,
@@ -106,13 +105,7 @@ h1.refname {
   color:#f80;
 }
 
-.newsentry h3 a {
-  color: #446;
-  border-color:#C6C6E2;
-}
-.newsentry h3,
-.downloads .content-header,
-.refsect1 h3.title {
+.title {
   color: #446;
   background: #E3E3F1;
   border-radius:0 0 2px 2px;
@@ -121,6 +114,9 @@ h1.refname {
   box-shadow:
     inset 1px 0 1px -1px #C6C6E2,
     inset -1px 0 1px -1px #C6C6E2
+}
+.title a {
+  color: #446;
 }
 
 .methodname b,
@@ -139,7 +135,6 @@ h1.refname {
 .dc-description {
   color:#737373;
 }
-
 
 /* {{{ Warnings, Tips and Notes */
 #flash-message .success {
@@ -210,10 +205,6 @@ div.warning:before {
 
 
 /* {{{ User notes */
-#usernotes h3.title {
-  border-color:#669;
-  color:#262626;
-}
 #usernotes .count {
   background-color: #669;
   color: #fff;
@@ -488,13 +479,6 @@ div.elephpants img:focus {
   margin: 0 auto;
   text-align: center;
   color: #fff;
-}
-.country {
-  position: relative;
-}
-.country .title img {
-  position: absolute;
-  right: 0px;
 }
 
 // vim: set ts=2 sw=2 et:

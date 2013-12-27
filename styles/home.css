@@ -66,41 +66,13 @@ complimentary greens: 9FB553    7B8851    61761B    C6DA82    CCDA99
     content: "\21AF \2003";
 }
 
-
-
-.newsentry {
-    margin: 0 0 2.25em;
-    position: relative;
+.home .newsentry .newstitle a:after  {
+  content:"\20 \00bb";
+  color:#666;
 }
-.newsentry h3 {
-  font-weight:normal;
-  margin-left: -25px;
-  padding-left: 25px;
-  padding-right: 25px;
-  margin-right: -25px
-}
-.newsentry h3 .release-state {
-    float: right;
-    opacity: 0.8;
-}
-.newsentry h3 a {
-    color: #000;
-    border:0;
-}
-.newsentry .newstitle a::after  {
-    content:"\20 \00bb";
-    color:#666;
-}
-.newsentry .newstime {
-    float:right;
-    margin-top:.5em;
-    margin-right:.444444444em;
-}
-
-.newsentry .newsimage a {
-	float: right;
-	border: 0;
-	padding: 10px;
+.home .newsentry .newstime {
+  margin-top:8px;
+  margin-right:12px;
 }
 
 p.archive {

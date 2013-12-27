@@ -32,7 +32,7 @@ foreach($frontpage as $entry) {
     $id   = parse_url($entry["id"], PHP_URL_FRAGMENT);
     $date = date_format(date_create($entry["updated"]), 'Y-m-d');
     $content .= '<div class="newsentry">';
-    $content .= '<h3 class="newstitle"><a href="'. $MYSITE.$link .'" name="' . $id . '">' . $entry["title"] . '</a></h3>';
+    $content .= '<h3 class="newstitle title"><a href="'. $MYSITE.$link .'" name="' . $id . '">' . $entry["title"] . '</a></h3>';
     $content .= '<div class="newsimage">';
     $content .= sprintf('<a href="%s"><img src="/images/news/%s"></a>', $entry["newsImage"]["link"], $entry["newsImage"]["content"]);
     $content .= '</div>';

@@ -6,7 +6,6 @@ include_once $_SERVER['DOCUMENT_ROOT'] . '/include/prepend.inc';
 site_header("Hypertext Preprocessor",
     array(
         'current' => 'community',
-        'css' => array('home.css'),
         //'intro' => $intro
     )
 );
@@ -60,11 +59,11 @@ foreach($groupped as $country => $events) {
     $entry = "";
 
     $entry .= '<div class="country" id="' . $country. '">';
-    $entry .= '<h2 class="title">' . $countrycode;
+    $entry .= '<h2 class="title countrytitle">' . $countrycode;
     $entry .= '<img alt="' . $countrycode . '" height="25" width="45" src="' . $_SERVER['STATIC_ROOT'] . '/images/flags/beta/' . strtolower($country) . '.png">';
     $entry .= '</h2>';
     if ($events["ug"]) {
-        $entry .= "<h2>User Groups in $countrycode</h2>";
+        $entry .= "<h2 class='title'>User Groups in $countrycode</h2>";
     }
 
     foreach($events["ug"] as $event) {
@@ -80,7 +79,7 @@ foreach($groupped as $country => $events) {
         $entry .= '</div>';
     }
     if ($events["conf"]) {
-        $entry .= "<h2>Conferences in $countrycode</h2>";
+        $entry .= "<h2 class='title'>Conferences in $countrycode</h2>";
     }
     foreach($events["conf"] as $event) {
         $link = $event["url"];

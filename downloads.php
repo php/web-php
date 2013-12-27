@@ -96,7 +96,7 @@ site_header("Downloads",
   <?php $mver = substr($v, 0, strrpos($v, '.')); ?>
   <?php $stable = $i++ === 0 ? "Current Stable" : "Old Stable"; ?>
 
-  <h3 id="v<?php echo $v; ?>" class="content-header">
+  <h3 id="v<?php echo $v; ?>" class="title">
     <span class="release-state"><?php echo $stable; ?></span>
     PHP <?php echo $v; ?>
     (<a href="/ChangeLog-<?php echo $MAJOR; ?>.php#<?php echo urlencode($v); ?>" class="changelog">Changelog</a>)

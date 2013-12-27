@@ -68,7 +68,7 @@ foreach($frontpage as $entry) {
     $content .= <<<NEWSENTRY
 <div class="newsentry">
   <div class="newstime">$date</div>
-  <h3 class="newstitle"><a href="{$MYSITE}{$link}" id="{$id}">{$entry["title"]}</a></h3>
+  <h3 class="newstitle title"><a href="{$MYSITE}{$link}" id="{$id}">{$entry["title"]}</a></h3>
   <div class="newscontent">
     {$entry["content"]}
   </div>
