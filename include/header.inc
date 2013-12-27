@@ -15,7 +15,11 @@ if (isset($shortname) && $shortname) {
 }
 
 if ($config["cache"]) {
-    $timestamp = filemtime($_SERVER["DOCUMENT_ROOT"] . "/" .$_SERVER["BASE_PAGE"]);
+    if (is_numeric($config["cache"])) {
+        $timestamp = $config["cache"];
+    } else {
+        $timestamp = filemtime($_SERVER["DOCUMENT_ROOT"] . "/" .$_SERVER["BASE_PAGE"]);
+    }
     $tsstring = gmdate("D, d M Y H:i:s ", $timestamp) . "GMT";
 
     if (isset($_SERVER["HTTP_IF_MODIFIED_SINCE"]) && $_SERVER["HTTP_IF_MODIFIED_SINCE"] == $tsstring) {

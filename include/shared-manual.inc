@@ -138,7 +138,7 @@ class ManualNotesSorter {
 
 
 // Print out all user notes for this manual page
-function manual_notes() {
+function manual_notes($notes) {
     // Get needed values
     list($filename, $title) = $GLOBALS['PGI']['this'];
 
@@ -146,9 +146,6 @@ function manual_notes() {
     if (substr($filename, -4) == '.php') {
         $filename = substr($filename, 0, -4);
     }
-
-    // Load user note for this page
-    $notes = manual_notes_load($filename);
 
     $sorter = new ManualNotesSorter;
     $sorter->sort($notes);
@@ -320,11 +317,23 @@ USER_NOTE_TEXT;
 // Set up variables important for this page
 // including HTTP header information
 function manual_setup($setup) {
-    global $PGI, $MYSITE;
+    global $PGI, $MYSITE, $USERNOTES;
+
     $PGI = $setup;
     // Set base href for this manual page
     $_SERVER['BASE_PAGE'] = 'manual/' . language_convert($setup['head'][1]) . "/" . $setup['this'][0];
     $_SERVER['BASE_HREF'] = $MYSITE . $_SERVER['BASE_PAGE'];
+
+    // Load user note for this page
+    list($filename, $title) = $PGI['this'];
+
+    // Drop file extension from the name
+    if (substr($filename, -4) == '.php') {
+        $filename = substr($filename, 0, -4);
+    }
+    $USERNOTES = manual_notes_load($filename);
+    $note = current($USERNOTES);
+    $lastusernote = $note["xwhen"];
 
 
     $siblings = array();
@@ -363,6 +372,8 @@ function manual_setup($setup) {
     
     $base = "manual/" . $setup["head"][1] . "/";
     $_SERVER["BASE_PAGE"] = "/" . $base . $setup["this"][0];
+    $f = $_SERVER["DOCUMENT_ROOT"] . $_SERVER["BASE_PAGE"];
+    $lastmod = max(filemtime($f), $lastusernote);
 
     $config = array(
         "current" => "docs",
@@ -378,6 +389,7 @@ function manual_setup($setup) {
         "thispage" => $setup["this"][0],
         "prev" => $setup["prev"],
         "next" => $setup["next"],
+        "cache" => $lastmod,
     );
     site_header($setup["this"][1] . " - Manual ", $config);
     
@@ -423,8 +435,9 @@ function manual_language_chooser($currentlang, $currentpage) {
 
 function manual_header(){}
 function manual_footer() {
+    global $USERNOTES;
 
-    manual_notes();
+    manual_notes($USERNOTES);
     echo "</section>";
     $config = array();
     site_footer($config);
