@@ -120,7 +120,8 @@ if (preg_match("!^manual/(\\w+)/(print|printwn|html)((/.+)|$)!", $URI, $array)) 
 // If someone is looking for something in distributions/* and it isn't there,
 // send them to the /releases page since that is likely to be most helpful.
 if (preg_match("!^distributions/.*!", $URI, $array)) {
-	mirror_redirect("/releases/");
+    status_header(404);
+    include_once $_SERVER['DOCUMENT_ROOT'] . "/releases/index.php";
 }
 
 // ============================================================================
@@ -537,6 +538,6 @@ mirror_redirect(
     '&pattern=' . urlencode(substr($_SERVER['REQUEST_URI'], 1))
 );
 /*
- * vim:et
+ * vim: set et ts=4 sw=4 ft=php: :
  */
 ?>
