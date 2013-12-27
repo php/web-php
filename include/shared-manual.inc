@@ -374,7 +374,7 @@ function manual_setup($setup) {
             "prev"     => $base . $setup["prev"][0],
             "next"     => $base . $setup["next"][0],
         ),
-        "lang" => $base . $setup["head"][1],
+        "lang" => $setup["head"][1],
         "thispage" => $setup["this"][0],
         "prev" => $setup["prev"],
         "next" => $setup["next"],
