@@ -114,7 +114,6 @@
          * @return {Boolean}
          */
         var canCache = function () {
-            return false;
             try {
                 return ('localStorage' in window && window['localStorage'] !== null && "JSON" in window && window["JSON"] !== null);
             } catch (e) {
