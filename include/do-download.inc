@@ -41,30 +41,5 @@ function download_file($mirror, $file)
     // download the file, even if the log server is down
     echo " ";
     flush();
-    
-    // Log download on master server (may be a registered
-    // shutdown function to really run after the file is
-    // started to download)
-    // if ($log) { download_log($mirror, $found); }
 }
 
-// Log downloads on the master server
-function download_log($mirror, $file)
-{
-    // Set referer value
-    $referer = (isset($_SERVER['HTTP_REFERER']) ? $_SERVER['HTTP_REFERER'] : '-');
-    
-    // String to pass on as a query to the remote log
-    $log_file = "https://master.php.net/log_download.php" .
-                "?download_file=" . urlencode($file) .
-                "&mirror=" .        urlencode($mirror) .
-                "&user_referer=" .  urlencode($referer) .
-                "&user_ip=" .       urlencode(i2c_realip());
-
-    // Open the remote log and read some bytes
-    $remote_log = @fopen($log_file, 'r');
-    if ($remote_log) {
-        fread($remote_log, 1024);
-        fclose($remote_log);
-    }
-}
