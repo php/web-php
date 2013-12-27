@@ -114,6 +114,7 @@
          * @return {Boolean}
          */
         var canCache = function () {
+            return false;
             try {
                 return ('localStorage' in window && window['localStorage'] !== null && "JSON" in window && window["JSON"] !== null);
             } catch (e) {
@@ -132,7 +133,10 @@
             // The search types we want to support.
             var backends = {
                 "function": new Backend("Functions"),
+                "variable": new Backend("Variables"),
                 "class": new Backend("Classes"),
+                "exception": new Backend("Exceptions"),
+                "extension": new Backend("Extensions"),
                 "general": new Backend("Other Matches")
             };
 
@@ -147,27 +151,45 @@
                     if (item[0].indexOf("_") != -1) {
                         tokens.push(item[0].replace("_", ""));
                     }
-
-                    if (id.match(/^function\./)) {
-                        type = "function";
-                    } else if (item[0].indexOf("::") != -1) {
-                        type = "function";
-
+                    if (item[0].indexOf("::") != -1) {
                         /* We'll add tokens to make the autocompletion more
                          * useful: users can search for method names and can
                          * specify that they only want method names by
                          * prefixing their search with ::. */
                         tokens.push(item[0].split("::")[1]);
                         tokens.push("::" + item[0].split("::")[1]);
-                    } else if (item[1].match(/^class\./)) {
-                        type = "class";
-                    } else {
-                        /* Most other items don't have headings (which is
-                         * probably a bug), but those that do can go into the
-                         * other matches category. */
-                        type = "general";
                     }
-                    /* item[2] contains the XML element name.. may be better? */
+
+                    switch(item[2]) {
+                        case "phpdoc:varentry":
+                            type = "variable";
+                            break;
+
+                        case "refentry":
+                            type = "function";
+                            break;
+
+                        case "phpdoc:exceptionref":
+                             type = "exception";
+                             break;
+
+                        case "phpdoc:classref":
+                             type = "class";
+                             break;
+
+                        case "set":
+                        case "book":
+                        case "reference":
+                             type = "extension";
+                             break;
+
+                        case "section":
+                        case "chapter":
+                        case "appendix":
+                        case "article":
+                        default:
+                             type = "general";
+                    }
 
                     if (type) {
                         backends[type].addItem(id, item[0], item[1], tokens);
