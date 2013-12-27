@@ -71,8 +71,8 @@ foreach($groupped as $country => $events) {
         $link = $event["url"];
         $date = format_event_date($event["sdato"], $event["edato"], $event["recur"]);
         $entry .= '<div class="newsentry">';
-        $entry .= '<h3 class="newstitle"><a href="'. $link .'">' . $event["sdesc"];
         $entry .= "<div class='newstime'>$date</div>";
+        $entry .= '<h3 class="newstitle"><a href="'. $link .'">' . $event["sdesc"];
         $entry .= '</a>'.'</h3>';
         $entry .= '<div class="newscontent">';
         $entry .= nl2br($event["ldesc"]);
