@@ -59,10 +59,10 @@ foreach($groupped as $country => $events) {
     $SIDEBAR .= '<p class="panel"><a href="#' . $country . '">' . $countrycode . '</p>';
     $entry = "";
 
-    $entry .= '<div class="mirror" id="' . $country. '">';
-    $entry .= '<div class="title">' . $countrycode;
+    $entry .= '<div class="country" id="' . $country. '">';
+    $entry .= '<h2 class="title">' . $countrycode;
     $entry .= '<img alt="' . $countrycode . '" height="25" width="45" src="' . $_SERVER['STATIC_ROOT'] . '/images/flags/beta/' . strtolower($country) . '.png">';
-    $entry .= '</div>';
+    $entry .= '</h2>';
     if ($events["ug"]) {
         $entry .= "<h2>User Groups in $countrycode</h2>";
     }

@@ -489,5 +489,12 @@ div.elephpants img:focus {
   text-align: center;
   color: #fff;
 }
+.country {
+  position: relative;
+}
+.country .title img {
+  position: absolute;
+  right: 0px;
+}
 
 // vim: set ts=2 sw=2 et:
