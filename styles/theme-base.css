@@ -1695,11 +1695,6 @@ div.soft-deprecation-notice blockquote.sidebar {
     max-height: 50em;
   }
 
-  /* Hiding UserVoice sticky bar when in smartphone mode */
-  #uvTab {
-    display: none !important;
-  }
-
   #flash-message {
     margin-top: 0px !important;
     top: 0;
