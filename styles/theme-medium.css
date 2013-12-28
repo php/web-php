@@ -208,7 +208,6 @@ div.warning:before {
 #usernotes .count {
   background-color: #669;
   color: #fff;
-  -moz-border-radius: 4px;
   border-radius: 4px;
 }
 #usernotes .note .name {
