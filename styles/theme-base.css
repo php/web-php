@@ -1808,6 +1808,7 @@ aside.tips div.inner {
 .panel .body {
   background-color: #f9f9f9;
   border-top:1px solid #d9d9d9;
+  border-radius: 0 0 2px 2px;
 }
 .panel .body:first-child {
   border-top:0;
