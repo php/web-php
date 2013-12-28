@@ -1458,6 +1458,9 @@ ul.chunklist_children {
 .docs .layout-menu ul.child-menu-list .current {
     position:relative;
 }
+#layout-content .current:before {
+    content:"\bb \20";
+}
 .docs .layout-menu ul.child-menu-list .current a:before {
     content:"\bb \20";
     position:absolute;

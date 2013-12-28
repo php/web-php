@@ -94,22 +94,65 @@ Mousetrap.bind("g n", function() {
         window.location.href = link;
     }
 });
-Mousetrap.bind("j", function() {
-    var fixedheader = 50;
-    var node = $(".layout-menu .current");
-    if (node.next().length) {
-        var curr = node.toggleClass("current").next().toggleClass("current");
-        $.scrollTo(curr.offset().top-fixedheader);
+
+var FIXED_HEADER_HEIGHT = 50;
+function cycle(to, from) {
+    from.removeClass("current");
+    to.addClass("current");
+    $.scrollTo(to.offset().top-FIXED_HEADER_HEIGHT);
+}
+function getNextOrPreviousSibling(node, forward) {
+    if (forward) {
+        return node.next();
+    }
+    return node.prev();
+}
+function cycleMenuItems(current, forward) {
+    if (getNextOrPreviousSibling(current, forward).length) {
+        cycle(getNextOrPreviousSibling(current, forward), current);
         curr.children("a").first().focus().css({outline: "none"});
+    }
+}
+function cycleHeaders(matches, forward) {
+    /* forward=1 next match
+     * forward=0 previous match
+     */
+    var gotmatch = 0;
+
+    matches.each(function(k, item) {
+        if ($(item).hasClass("current")) {
+            if ($(matches[forward ? k+1 : k-1]).length) {
+                cycle($(matches[forward ? k+1 : k-1]), $(item));
+                gotmatch = 1;
+                return false;
+            }
+        }
+    });
+    if (!gotmatch) {
+        cycle($(matches[forward ? 0 : matches.length-1]), $(matches[forward ? matches.length-1 : 0]));
+    }
+}
+Mousetrap.bind("j", function() {
+    /* Doc page */
+    var node = $(".layout-menu .current");
+    if (node.length) {
+        cycleMenuItems(node, 1);
+    }
+    else {
+        /* Cycle through headers on normal pages */
+        var matches = $("#layout-content h1, #layout-content h2, #layout-content h3");
+        cycleHeaders(matches, 1);
     }
 });
 Mousetrap.bind("k", function() {
-    var fixedheader = 50;
     var node = $(".layout-menu .current");
-    if (node.prev().length) {
-        var curr = node.toggleClass("current").prev().toggleClass("current");
-        $.scrollTo(curr.offset().top-fixedheader);
-        curr.children("a").first().focus().css({outline: "none"});
+    if (node.length) {
+        cycleMenuItems(node, 0);
+    }
+    else {
+        /* Cycle through headers on normal pages */
+        var matches = $("#layout-content h1, #layout-content h2, #layout-content h3");
+        cycleHeaders(matches, 0);
     }
 });
 Mousetrap.bind("/", function(e) {
