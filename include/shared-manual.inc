@@ -372,8 +372,13 @@ function manual_setup($setup) {
     
     $base = "manual/" . $setup["head"][1] . "/";
     $_SERVER["BASE_PAGE"] = "/" . $base . $setup["this"][0];
-    $f = $_SERVER["DOCUMENT_ROOT"] . $_SERVER["BASE_PAGE"];
-    $lastmod = max(filemtime($f), $lastusernote);
+    $timestamps = array(
+        filemtime($_SERVER["DOCUMENT_ROOT"] . $_SERVER["BASE_PAGE"]),
+        filemtime($_SERVER["DOCUMENT_ROOT"] . "/include/prepend.inc"),
+        filemtime($_SERVER["DOCUMENT_ROOT"] . "/styles/theme-base.css"),
+        $lastusernote,
+    );
+    $lastmod = max($timestamps);
 
     $config = array(
         "current" => "docs",
