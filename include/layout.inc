@@ -642,6 +642,8 @@ function doc_toc($lang) {
     echo "<dd>Scroll to top</dd>\n";
     echo "<dt>g h</dt>\n";
     echo "<dd>Goto homepage</dd>\n";
+    echo "<dt>g s</dt>\n";
+    echo "<dd>Goto search<br>(current page)</dd>\n";
     echo "<dt>/</dt>\n";
     echo "<dd>Focus search box</dd>\n";
     echo "</dl>";
