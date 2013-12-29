@@ -1,5 +1,7 @@
 <?php
 
+$refresh = isset($_GET["refresh"]) ? true : false;
+
 function imgheader($filename) {
     $ext = strtolower(pathinfo($filename, PATHINFO_EXTENSION));
     switch($ext) {
@@ -48,8 +50,10 @@ if ($day < 7 || 365-$day < 32) {
 }
 
 /* Every so often.. give the elephpant a chance */
-if ($now % 60 == 10) {
+if ($now % 60 == 10 || $refresh) {
     $logos[] = "./ele-running.gif";
+}
+if ($now % 120 == 10 || $refresh) {
     $logos = array_merge($logos, glob("logos/oldschool/*"));
 }
 
@@ -62,7 +66,7 @@ if (isset($_SERVER["HTTP_IF_MODIFIED_SINCE"])) {
     $last = strtotime($_SERVER["HTTP_IF_MODIFIED_SINCE"]);
 
     /* Use the same logo for a day */
-    if (strtotime("+1 day", $last) > $now) {
+    if (strtotime("+1 day", $last) > $now && !$refresh) {
         header("HTTP/1.1 304 Not Modified");
         exit;
     }
