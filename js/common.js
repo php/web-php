@@ -166,15 +166,20 @@ $.expr[":"].icontains = $.expr.createPseudo(function(arg) {
 });
 function lookfor(txt) {
     var retval = $("#layout a:icontains('" + txt + "')");
-    $("#goto .results ul").empty();
     $(retval).each(function(k, val) {
         $("#goto .results ul").append("<li><a href='" + $(val).attr("href") + "'>" + $(val).text() +"</a></li>");
     });
-    $("#goto .results a:first").focus();
+}
+function localpage(text) {
+    lookfor(text);
 }
 Mousetrap.bind("g s", function(e) {
+    boogie(e, localpage);
+});
+function boogie(e, cb) {
+    cb($("#goto .text").text());
+    $("#goto .results a:first").focus();
     $("#goto").slideToggle();
-    lookfor($("#goto .text").text());
 
     $("html").on("keydown", function(e) {
         switch(e.which || e.keyCode) {
@@ -183,7 +188,9 @@ Mousetrap.bind("g s", function(e) {
                 var txt = $("#goto .text").text();
                 txt = txt.substring(0, txt.length - 1);
                 $("#goto .text").text(txt);
-                lookfor(txt);
+                $("#goto .results ul").empty();
+                cb(txt);
+                $("#goto .results a:first").focus();
                 e.preventDefault();
                 break;
 
@@ -210,11 +217,45 @@ Mousetrap.bind("g s", function(e) {
         var letter = String.fromCharCode(e.which || e.keyCode);
         $("#goto .text").append(letter);
         var txt = $("#goto .text").text().trim();
-        lookfor(txt);
+        $("#goto .results ul").empty();
+        cb(txt);
+        $("#goto .results a:first").focus();
     });
 
     Mousetrap.pause();
+}
+if (!('contains' in String.prototype)) {
+    String.prototype.contains = function(str, startIndex) {
+        return -1 !== String.prototype.indexOf.call(this, str, startIndex);
+    };
+}
+Mousetrap.bind("g a", function(e) {
+    boogie(e, globalsearch);
 });
+function globalsearch(txt) {
+    var key = "search-en";
+    var cache = window.localStorage.getItem(key);
+    cache = JSON.parse(cache);
+
+    var term = txt.toLowerCase();
+    if (term.length < 3) {
+        return;
+    }
+    if (cache) {
+        for (var type in cache.data) {
+            console.log(type);
+            var elms = cache.data[type].elements;
+            for (var node in elms) {
+                if (elms[node].description.toLowerCase().contains(term) || elms[node].name.toLowerCase().contains(term)) {
+                    $("#goto .results ul").append("<li><a href='/manual/en/" + elms[node].id + ".php'>" + elms[node].name + ": " + elms[node].description +"</a></li>");
+                    if ($("#goto .results ul li") > 30) {
+                        return;
+                    }
+                }
+            }
+        }
+    }
+}
 Mousetrap.bind("/", function(e) {
     if (e.preventDefault) {
         e.preventDefault();

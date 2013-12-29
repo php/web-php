@@ -1744,13 +1744,14 @@ div.soft-deprecation-notice blockquote.sidebar {
   line-height: 1;
 }
 #goto .search .results :focus {
-  font-size: 2.5em;
-  line-height: 1.5;
+  font-size: 2em;
+  line-height: 1.2;
 }
 #goto .search .text {
   color: #222;
   text-shadow: 0px 2px 3px #555;
   font-size: 10em;
+  line-height: .7;
 }
 #trick {
     display: none;
