@@ -102,6 +102,12 @@ if ($config["cache"]) {
 <div class="headsup"><?php echo $config["headsup"]?></div>
 <?php endif ?>
 <nav id="trick"><div><?php doc_toc("en") ?></div></nav>
+<div id="goto">
+    <div class="search">
+         <div class="text"></div>
+         <div class="results"><ul></ul></div>
+   </div>
+</div>
 
 <?php if (!empty($config['breadcrumbs'])): ?>
   <div id="breadcrumbs">

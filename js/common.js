@@ -61,6 +61,10 @@ Mousetrap.bind("?", function() {
 });
 Mousetrap.bind("esc", function() {
     $("#trick").slideUp();
+    $("#goto").slideUp();
+
+    $("html").off("keydown");
+    $("html").off("keypress");
 });
 /*
 Mousetrap.bind("j", function() {
@@ -154,6 +158,62 @@ Mousetrap.bind("k", function() {
         var matches = $("#layout-content h1, #layout-content h2, #layout-content h3");
         cycleHeaders(matches, 0);
     }
+});
+$.expr[":"].icontains = $.expr.createPseudo(function(arg) {
+    return function( elem ) {
+        return $(elem).text().toUpperCase().indexOf(arg.toUpperCase()) >= 0;
+    };
+});
+function lookfor(txt) {
+    var retval = $("#layout a:icontains('" + txt + "')");
+    $("#goto .results ul").empty();
+    $(retval).each(function(k, val) {
+        $("#goto .results ul").append("<li><a href='" + $(val).attr("href") + "'>" + $(val).text() +"</a></li>");
+    });
+    $("#goto .results a:first").focus();
+}
+Mousetrap.bind("g s", function(e) {
+    $("#goto").slideToggle();
+    lookfor($("#goto .text").text());
+
+    $("html").on("keydown", function(e) {
+        switch(e.which || e.keyCode) {
+            /* Backspace */
+            case 8:
+                var txt = $("#goto .text").text();
+                txt = txt.substring(0, txt.length - 1);
+                $("#goto .text").text(txt);
+                lookfor(txt);
+                e.preventDefault();
+                break;
+
+            /* Enter */
+            case 13:
+                Mousetrap.unpause();
+                Mousetrap.trigger('esc');
+                return true;
+
+            /* Tab */
+            case 9:
+                $(document.activeElement).parent().next().first().focus();
+                break;
+            case 27:
+                Mousetrap.unpause();
+                Mousetrap.trigger('esc');
+        }
+    });
+    $("html").on("keypress", function(e) {
+        if (e.which == 13) {
+            return true;
+        }
+        e.preventDefault();
+        var letter = String.fromCharCode(e.which || e.keyCode);
+        $("#goto .text").append(letter);
+        var txt = $("#goto .text").text().trim();
+        lookfor(txt);
+    });
+
+    Mousetrap.pause();
 });
 Mousetrap.bind("/", function(e) {
     if (e.preventDefault) {
