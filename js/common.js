@@ -265,6 +265,37 @@ Mousetrap.bind("/", function(e) {
     }
     $("input[type=search]").focus()
 });
+var rotate = 0;
+Mousetrap.bind("r o t a t e enter", function(e) {
+    rotate += 90;
+    if (rotate > 360) {
+        rotate = 0;
+    }
+    $("html").css("-webkit-transform", "rotate(" + rotate + "deg)");
+    $("html").css("-moz-transform", "rotate(" + rotate + "deg)");
+    $("html").css("-o-transform", "rotate(" + rotate + "deg)");
+    $("html").css("-ms-transform", "rotate(" + rotate + "deg)");
+    $("html").css("transform", "rotate(" + rotate + "deg)");
+});
+var scale = 1;
+Mousetrap.bind("m i r r o r enter", function(e) {
+    scale *= -1;
+    $("html").css("-webkit-transform", "scaleX(" + scale + ")");
+    $("html").css("-moz-transform", "scaleX(" + scale + ")");
+    $("html").css("-o-transform", "scaleX(" + scale + ")");
+    $("html").css("-ms-transform", "scaleX(" + scale + ")");
+    $("html").css("transform", "scaleX(" + scale + ")");
+});
+Mousetrap.bind("I space h a t e space P H P enter", function(e) {
+    window.location = "http://python.org";
+});
+Mousetrap.bind("I space l o v e space P H P enter", function(e) {
+    flashMessage({text: 'Live long and prosper !'});
+});
+Mousetrap.bind("l o g o enter", function(e) {
+    var time = new Date().getTime();
+    $(".brand img").attr("src", "/images/logo.php?refresh&time=" + time);
+});
 
 $(window).load(function()
 {
