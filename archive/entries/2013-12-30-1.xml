@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom" xmlns:default="http://php.net/ns/news">
+  <title>PHP Tour Lyon calling for papers</title>
+  <id>http://php.net/archive/2013.php#id2013-12-30-1</id>
+  <published>2013-12-30T09:29:57+00:00</published>
+  <updated>2013-12-30T09:29:57+00:00</updated>
+  <default:finalTeaserDate xmlns="http://php.net/ns/news">2014-02-28</default:finalTeaserDate>
+  <category term="cfp" label="Call for Papers"/>
+  <link href="http://php.net/conferences/index.php#id2013-12-30-1" rel="alternate" type="text/html"/>
+  <default:newsImage xmlns="http://php.net/ns/news" link="http://afup.org/pages/phptourlyon2014/appel-a-conferenciers.php" title="phptour-lyon">phptour-lyon.png</default:newsImage>
+  <link href="http://afup.org/pages/phptourlyon2014/appel-a-conferenciers.php" rel="via" type="text/html"/>
+  <content type="xhtml">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+    <p>
+     The <a href="http://afup.org/pages/phptourlyon2014/">PHP Tour Lyon 2014</a>, organized by AFUP, French PHP Users Association, will be held on June 23st and 24th.
+The PHP Tour event is a conference moving each year all around the country. Nantes in 2012, Lille in 2011... Lyon is proud to welcome the next step of this PHP "Tour de France" !
+	</p>
+	<p>
+	Expert in PHP domains, or speakers taking part in an Open Source project, please come and share your experience!
+	</p>
+	<p>
+	Are you expert in some specific PHP domains? Did you deploy one or several PHP applications (CMS, e-commerce, CRM, EDMS) in a particular context (heavy load, famous customer, innovating project)? Are you taking part in an Open Source project? Come and share your experience!
+	</p>
+	<p>
+	The Forum is mainly constituted by conferences and workshops throughout the two days, possibly completed by other informal speeches.
+Conferences should last 45 minutes, followed by a QA session.
+	</p>
+	<p>
+	Proposals will be reviewed after the deadline has passed (February 28th). Additional information may be asked where needed. Proposals will be chosen according to their layout, relevancy for a professional audience and the overall homegeneity of the forum. Every candidate will be personnally notified of the status of their proposal. The decision is final.
+	</p>
+	<p>
+	Don't forget : registration for the PHP Tour Lyon 2014 is already open, and Early Bird tickets are still available. Save 100€ for 2 days ! 
+	</p>
+    </div>
+  </content>
+</entry>
