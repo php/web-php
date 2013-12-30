@@ -308,10 +308,6 @@ $(window).load(function()
 
 $(document).ready(function() {
 
-    // Ugh, cookie handling.
-    var cookies = document.cookie.split(";");
-
-
     var $docs = $('.docs');
     var $refsect1 = $docs.find('.refentry .refsect1');
     var $docsDivWithId = $docs.find('div[id]');
