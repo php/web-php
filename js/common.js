@@ -14,8 +14,9 @@ String.prototype.toInt = function()
 var jHtmlBody = $('html, body');
 function scroll(target, interval)
 {
-  if (typeof interval == 'undefined')
+  if (typeof interval == 'undefined') {
     interval = 400;
+  }
 
   var hash = target;
   target = $('[id="' + target.substring(1) + '"]');
@@ -524,8 +525,8 @@ $(document).ready(function() {
             "min": -5
         };
         this.range = {
-            "max": .75,
-            "min": .35
+            "max": 0.75,
+            "min": 0.35
         };
   
         // This is a generic normalizaion algorithm:
