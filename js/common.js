@@ -441,7 +441,6 @@ $(document).ready(function() {
         $.scrollTo(0, settings.scrollSpeed, {easing: settings.easingType});
       });
       
-      var toTopHidden = true;
       $(window).scroll(function() {
         var sd = $(this).scrollTop();
         if (sd > settings.min && toTopHidden)
@@ -573,16 +572,18 @@ $(document).ready(function() {
 /* {{{ add-user.php animations */
 $(function() {
 
-  if ( ! document.getElementById('add-note-usernotes'))
+  if ( ! document.getElementById('add-note-usernotes')) {
     return;
+  }
   
   $('#usernotes').animate({marginLeft: 0}, 1000);
   
   $('#usernotes .note').removeAttr('style');
     
   var times = [3, 7, 10];
-  for (i in times)
+  for (i in times) {
     times[i] = times[i] * 1000;
+  }
   
   var notes = [];
   notes[0] = $('#usernotes .bad');
@@ -636,7 +637,7 @@ function flashMessage(o)
     timeout: 6000,
     type: 'success',
     text: '',
-    parent: '#flash-message',
+    parent: '#flash-message'
   };
   
   // Options are passed, set defaults and generate message
@@ -660,7 +661,7 @@ function flashMessage(o)
   // Only timeout is adjustable via data-timeout=""
   else
   {
-    var options = {timeout: o.data('timeout')};
+    options = {timeout: o.data('timeout')};
   }
 
   var remove = function(o) {
@@ -673,8 +674,9 @@ function flashMessage(o)
   {
     setTimeout(function()
     {
-      if ( ! o.length) 
+      if ( ! o.length)  {
         return;
+      }
       remove(o);
     }, options.timeout);
   }
@@ -684,7 +686,7 @@ function flashMessage(o)
   });
   
   return true;
-};
+}
 /* }}} */
 
 /**
