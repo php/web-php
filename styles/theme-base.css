@@ -451,28 +451,24 @@ hr {
 }
 
 .page-tools {
-    float: right;
-    position:relative;
-    text-align: right;
-    z-index:100;
+  margin-left:1.5em;
+  float: right;
+  text-align: right;
 }
-.change-language {
-    margin-bottom: 0.75em;
+.page-tools .change-language {
+  margin-bottom: 0.75em;
 }
-.change-language p {
-    margin:0;
+.page-tools #changelang-langs {
+  font-size:.75em;
+  line-height:2;
 }
-.change-language .select {
-    border-radius: 0;
+.page-tools .edit-bug {
+  line-height: 2;
+  font-size: 0.75em;
 }
-.edit-bug {
-    line-height: 2;
-    font-size: 0.75em;
-}
-.edit-bug a:link,
-.edit-bug a:visited {
+.page-tools .edit-bug a {
     border: 0;
-    padding-left: 1em;
+    margin-left: 1em;
 }
 
 /**
@@ -1181,6 +1177,7 @@ fieldset {
   padding:6px 12px;
   border-top:2px solid #669;
   border-bottom:1px solid;
+  overflow:hidden;
 }
 .title a {
   border:0;
@@ -1465,13 +1462,6 @@ ul.chunklist_children {
     content:"\bb \20";
     position:absolute;
     left:-.675em;
-}
-
-#changelang-langs {
-    width:12em; 
-    font-size:.75em;
-    line-height:2;
-    margin: 0 0 0 .75em;
 }
 
 .docs .sect2 {
