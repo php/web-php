@@ -399,22 +399,22 @@ function manual_setup($setup) {
     site_header($setup["this"][1] . " - Manual ", $config);
     
     $id = substr($setup['this'][0], 0, -4);
-    ?>
-      <div class="page-tools">
-        <div class="change-language">
-          <?php echo manual_language_chooser($config['lang'], $config['thispage']); ?>
-        </div>
-        <div class="edit-bug">
-          <a href="https://edit.php.net/?project=PHP&amp;perm=<?php echo $config['lang']; ?>/<?php echo $config['thispage']; ?>">Edit</a>
-          <a href="https://bugs.php.net/report.php?bug_type=Documentation+problem&amp;manpage=<?php echo $id; ?>">Report a Bug</a>
-        </div>
-      </div>
-    <?php
+    $language_chooser = 'manual_language_chooser';
+    echo <<<PAGE_TOOLS
+  <div class="page-tools">
+    <div class="change-language">
+      {$language_chooser($config['lang'], $config['thispage'])}
+    </div>
+    <div class="edit-bug">
+      <a href="https://edit.php.net/?project=PHP&amp;perm={$config['lang']}/{$config['thispage']}">Edit</a>
+      <a href="https://bugs.php.net/report.php?bug_type=Documentation+problem&amp;manpage=$id">Report a Bug</a>
+    </div>
+  </div>
+PAGE_TOOLS;
 }
 
 function manual_language_chooser($currentlang, $currentpage) {
     global $ACTIVE_ONLINE_LANGUAGES;
-
 
     $links = array();
 
@@ -423,19 +423,31 @@ function manual_language_chooser($currentlang, $currentpage) {
     }
 
     // Print out the form with all the options
-    $rt = '<form action="/manual/change.php" method="get" id="changelang" name="changelang">'.
-          '<fieldset>'.
-          '
-          <p>Change language: 
-          <select onchange="document.changelang.submit()" name="page" id="changelang-langs">';
-                foreach ($links as $link) {
-                    $rt.= "<option value='{$link[0]}' " .($link[2] == $currentlang ? "selected" : ""). ">{$link[1]}</option>\n";
-                }
-        $rt.= '<option value="help-translate.php">Other</option>'.
-          '</select></p>'.
-              '</fieldset>'.
-              '</form>';
-    return $rt;
+    $format_options = function (array $links) use ($currentlang) {
+        $out = '';
+        $tab = str_repeat('  ', 6);
+        foreach ($links as $link) {
+            list($value, $text, $lang) = $link;
+            $selected = '';
+            if ($lang == $currentlang) {
+                $selected = ' selected="selected"';
+            }
+            $out .= "$tab<option value='$value'$selected>$text</option>\n";
+        }
+        return trim($out);
+    };
+    $r = <<<CHANGE_LANG
+      <form action="/manual/change.php" method="get" id="changelang" name="changelang">
+        <fieldset>
+          <label for="changelang-langs">Change language:</label>
+          <select onchange="document.changelang.submit()" name="page" id="changelang-langs">
+            {$format_options($links)}
+            <option value="help-translate.php">Other</option>
+          </select>
+        </fieldset>
+      </form>
+CHANGE_LANG;
+    return trim($r);
 }
 
 function manual_header(){}
