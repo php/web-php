@@ -454,6 +454,8 @@ hr {
   margin-left:1.5em;
   float: right;
   text-align: right;
+  position: relative;
+  z-index: 100;
 }
 .page-tools .change-language {
   margin-bottom: 0.75em;
