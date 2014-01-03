@@ -84,6 +84,7 @@ function blacklisted($email) {
 	'enu.kz',
 	'isim-congress',
 	'.*cmcb.*',
+	'molmedcon',
     );
     foreach ($mosquitoes as $m) {
         if (preg_match('/'.$m.'/i',$email)) return true;
