@@ -1903,18 +1903,21 @@ aside.tips div.inner {
 /* }}} */
 
 /* {{{ News */
+.newsentry header h2 {
+  margin:0;
+}
 .newsentry {
   margin: 0 0 1.5em;
   position: relative;
 }
-.newsentry h3 {
+.newsentry h2 {
   font-weight:normal;
 }
-.newsentry h3 .release-state {
+.newsentry h2 .release-state {
   float: right;
   opacity: 0.8;
 }
-.newsentry .newstime {
+.newsentry header time {
   float:right;
 }
 

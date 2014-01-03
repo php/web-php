@@ -65,15 +65,21 @@ foreach($NEWS_ENTRIES as $entry) {
 foreach($frontpage as $entry) {
     $link = substr($entry["id"], 15); // Strip http://php.net/
     $id   = parse_url($entry["id"], PHP_URL_FRAGMENT);
-    $date = date_format(date_create($entry["updated"]), 'Y-m-d');
+    $date = date_create($entry['updated']);
+    $date_human = date_format($date, 'Y-m-d');
+    $date_w3c = date_format($date, DATE_W3C);
     $content .= <<<NEWSENTRY
-<div class="newsentry">
-  <div class="newstime">$date</div>
-  <h3 class="newstitle title"><a href="{$MYSITE}{$link}" id="{$id}">{$entry["title"]}</a></h3>
+<article class="newsentry">
+  <header class="title">
+    <time datetime="$date_w3c">$date_human</time>
+    <h2 class="newstitle">
+      <a href="{$MYSITE}{$link}" id="{$id}">{$entry["title"]}</a>
+    </h2>
+  </header>
   <div class="newscontent">
     {$entry["content"]}
   </div>
-</div>
+</article>
 NEWSENTRY;
 }
 $content .= '<p class="archive"><a href="/archive/">Older News Entries</a></p>';

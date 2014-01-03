@@ -29,21 +29,11 @@ abbr {
   border-color: #999;
 }
 
-h1, h1 a, h1 a:visited, h1 a:link {
+h1 {
     color: #336;
 }
-h1 a:hover,
-h1 a:focus {
-    color: #000;
-}
-
-h2, h2 a, h2 a:visited, h2 a:link {
+h2 {
     color: #262626;
-}
-
-h2 a:hover,
-h2 a:focus {
-    color: #000;
 }
 
 h1, h2, h3, h4, h5, h6 {
