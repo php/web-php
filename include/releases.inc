@@ -989,8 +989,39 @@ $OLDRELEASES = array (
           'name' => 'Windows 5.3.27 binaries and source',
         ),
       ),
-      'date' => '09 May 2013',
+      'date' => '11 Jul 2013',
       'museum' => false,
+    ),
+    '5.3.26' => 
+    array (
+      'announcement' => 
+      array (
+        'English' => '/releases/5_3_26.php',
+      ),
+      'source' => 
+      array (
+        0 => 
+        array (
+          'filename' => 'php-5.3.26.tar.bz2',
+          'name' => 'PHP 5.3.26 (tar.bz2)',
+          'md5' => 'd71db8d92edbb48beb5b645b55471139',
+          'date' => '06 Jun 2013',
+        ),
+        1 => 
+        array (
+          'filename' => 'php-5.3.26.tar.gz',
+          'name' => 'PHP 5.3.26 (tar.gz)',
+          'md5' => 'a430a48b8939fe1f8915ee38681b0afa',
+          'date' => '06 Jun 2013',
+        ),
+        2 => 
+        array (
+          'link' => 'http://windows.php.net/download/#php-5.3',
+          'name' => 'Windows 5.3.26 binaries and source',
+        ),
+      ),
+      'date' => '06 Jun 2013',
+      'museum' => true,
     ),
     '5.3.25' => 
     array (
