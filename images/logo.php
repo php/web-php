@@ -44,8 +44,8 @@ switch($_SERVER["QUERY_STRING"]) {
 }
 
 /* xmas season, december and the first week of January */
-$day = date("z", $_SERVER["REQUEST_TIME"]) - date("L", $now);
-if ($day < 7 || 365-$day < 32) {
+$day = date("z", $now) - date("L", $now);
+if ($day < 6 || 365-$day < 32) {
     $logos = array("./logos/php-xmas-2013.png");
 }
 
