@@ -79,7 +79,6 @@ if ($config["cache"]) {
 
 </head>
 <body class="<?php print $curr; ?> <?php echo $classes; ?>">
-<noscript><img src="/images/noscript.jpg"></noscript>
 
 <nav id="head-nav" class="navbar navbar-fixed-top">
   <div class="navbar-inner clearfix">
