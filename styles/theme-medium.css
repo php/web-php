@@ -301,7 +301,7 @@ div.phpcode span.string {
   padding: 2px 4px;
   white-space: nowrap;
   font-style: normal;
-  font: normal 14px / 1.46 "Source Code Pro", monospace; 
+  font: normal 14px / 1.46 monospace;
 }
 
 em.reset, var.reset

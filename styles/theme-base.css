@@ -349,7 +349,7 @@ code,
 pre.info,
 .docs .classsynopsis,
 .docs .classsynopsis code {
-    font: normal 14px / 1.46 "Source Code Pro", monospace; 
+    font: normal 14px / 1.46 monospace;
 }
 
 body {
@@ -1151,7 +1151,7 @@ fieldset {
 }
 .content-box .md5sum {
     display: block;
-    font: normal 14px / 1.46 "Source Code Pro", monospace;
+    font: normal 14px / 1.46 monospace;
 }
 .content-box .md5sum:before {
     content: "md5: ";
@@ -1167,7 +1167,7 @@ fieldset {
     margin: 0px;
     padding: 0.75em 0.625em;
     overflow: auto;
-    font: normal 14px / 1.46 "Source Code Pro", monospace;
+    font: normal 14px / 1.46 monospace;
 }
 @media (max-width: 465px) {
     .content-box h3 .release-state {
@@ -1274,7 +1274,7 @@ div.tip p {
 .docs .sect1 .dc-description code {
     font-weight:400;
     font-size:16px;
-    font-family:"Source Code Pro", monospace;
+    font-family: monospace;
     letter-spacing:-.0625em;
     word-spacing:-.125em;
     margin:0;
