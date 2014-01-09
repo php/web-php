@@ -215,6 +215,12 @@ div.warning:before {
   box-shadow:
     inset 1px 0 1px -1px #CCC,
     inset -1px 0 1px -1px #CCC;
+
+  -webkit-transition: opacity 0.4s;
+  -moz-transition: opacity 0.4s;
+  -o-transition: opacity 0.4s;
+  -ms-transition: opacity 0.4s;
+  transition: opacity 0.4s;
 }
 #usernotes .note .votes .tally {
   color: #262626;

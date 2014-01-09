@@ -545,12 +545,12 @@ $(document).ready(function() {
       if (event.type === 'mouseleave' && $note.data('opacity') !== undefined) { 
         opacity = $note.data('opacity');
       }
-      $note.fadeTo('fast', opacity);
+      $note.css('opacity', opacity);
     }).find('.note').each(function() {
       $(this).find('.tally:contains("-")').each(function(){
         var id = this.id.replace('V', 'Hcom');
         var v = mapper.normalize(this.innerHTML.toInt());
-        $('#' + id).fadeTo(0, v).data("opacity", v);
+        $('#' + id).css('opacity', v).data("opacity", v);
       });
     });
   }
