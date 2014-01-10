@@ -8,13 +8,15 @@
   <category term="releases" label="New PHP release"/>
   <link href="http://php.net/index.php#id2014-01-10-2" rel="alternate" type="text/html"/>
   <link href="http://php.net/archive/2014.php#id2014-01-10-2" rel="via" type="text/html"/>
-  <content type="html">
-          &lt;p&gt;The PHP development team announces the immediate availability of PHP
+  <content type="xhtml">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+          <p>The PHP development team announces the immediate availability of PHP
           5.4.24. About 14 bugs were fixed. All PHP 5.4 users are encouraged to upgrade to this version.
-          &lt;/p&gt;
+          </p>
      
-          &lt;p&gt;For source downloads of PHP 5.4.24 please visit our &lt;a href="http://www.php.net/downloads.php"&gt;downloads page&lt;/a&gt;,
-          Windows binaries can be found on &lt;a href="http://windows.php.net/download/"&gt;windows.php.net/download/&lt;/a&gt;.
-          The list of changes is recorded in the &lt;a href="http://www.php.net/ChangeLog-5.php#5.4.24"&gt;ChangeLog&lt;/a&gt;.
+          <p>For source downloads of PHP 5.4.24 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+          Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
+          The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.4.24">ChangeLog</a>.
+	</div>
 </content>
 </entry>
