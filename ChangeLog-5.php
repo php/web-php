@@ -10,6 +10,78 @@ function peclbugl($number)   { echo "<a href=\"http://pecl.php.net/bugs/bug.php?
 ?>
 
 <h1>PHP 5 ChangeLog</h1>
+<section class="version" id="5.5.8"><!-- {{{ 5.5.8 -->
+<h3>Version 5.5.8</h3>
+<b>9-Jan-2014</b>
+<ul><li>Core:
+<ul>
+  <li>Disallowed JMP into a finally block.</li>
+  <li>Added validation of class names in the autoload process.</li>
+  <li>Fixed invalid C code in zend_strtod.c.</li>
+  <li><?php bugfix(66041); ?> (list() fails to unpack yielded ArrayAccess object).</li>
+  <li><?php bugfix(65764); ?> (generators/throw_rethrow FAIL with ZEND_COMPILE_EXTENDED_INFO).</li>
+  <li><?php bugfix(61645); ?> (fopen and O_NONBLOCK).</li>
+  <li><?php bugfix(66218); ?> (zend_register_functions breaks reflection).</li>
+</ul></li>
+<li>Date:
+<ul>
+  <li><?php bugfix(66060); ?> (Heap buffer over-read in DateInterval).</li>
+  <li><?php bugfix(65768); ?> (DateTimeImmutable::diff does not work).</li>
+</ul></li>
+<li>DOM:
+<ul>
+  <li><?php bugfix(65196); ?> (Passing DOMDocumentFragment to DOMDocument::saveHTML() 
+    Produces invalid Markup).</li>
+</ul></li>
+<li>Exif:
+<ul>
+  <li><?php bugfix(65873); ?> (Integer overflow in exif_read_data()).</li>
+</ul></li>
+<li>Filter:
+<ul>
+  <li><?php bugfix(66229); ?> (128.0.0.0/16 isn't reserved any longer).</li>
+</ul></li>
+<li>GD:
+<ul>
+  <li><?php bugfix(64405); ?> (Use freetype-config for determining freetype2 dir(s)).</li>
+</ul></li>
+<li>PDO_odbc:
+<ul>
+  <li><?php bugfix(66311); ?> (Stack smashing protection kills PDO/ODBC queries).</li>
+</ul></li>
+<li>MySQLi:
+<ul>
+  <li><?php bugfix(65486); ?> (mysqli_poll() is broken on win x64).</li>
+</ul></li>
+<li>OPCache:
+<ul>
+  <li>Fixed revalidate_path=1 behavior to avoid caching of symlinks values.</li>
+  <li>Fixed Issue #140: "opcache.enable_file_override" doesn't respect
+    "opcache.revalidate_freq".</li>
+</ul></li>
+<li>SNMP:
+<ul>
+  <li>Fixed SNMP_ERR_TOOBIG handling for bulk walk operations.</li>
+</ul></li>
+<li>SOAP:
+<ul>
+  <li><?php bugfix(66112); ?> (Use after free condition in SOAP extension).</li>
+</ul></li>
+<li>Sockets:
+<ul>
+  <li><?php bugfix(65923); ?> (ext/socket assumes AI_V4MAPPED is defined).</li>
+</ul></li>
+<li>XSL:
+<ul>
+  <li><?php bugfix(49634); ?> (Segfault throwing an exception in a XSL registered function).</li>
+</ul></li>
+<li>ZIP:
+<ul>
+  <li><?php bugfix(66321); ?> (ZipArchive::open() ze_obj->filename_len not real).</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
 <section class="version" id="5.5.7"><!-- {{{ 5.5.7 -->
 <h3>Version 5.5.7</h3>
 <b>12-Dec-2013</b>
