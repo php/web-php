@@ -64,12 +64,14 @@ $RELEASES = array(
                     "md5"      => $PHP_5_5_MD5["tar.gz"],
                     "date"     => $PHP_5_5_DATE,
                 ),
+                /*
                 array(
                     "filename" => "php-$PHP_5_5_VERSION.tar.xz",
                     "name"     => "PHP $PHP_5_5_VERSION (tar.xz)",
                     "md5"      => $PHP_5_5_MD5["tar.xz"],
                     "date"     => $PHP_5_5_DATE,
                 ),
+                 */
             ),
         ),
         $PHP_5_4_VERSION => array(
