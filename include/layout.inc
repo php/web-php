@@ -303,7 +303,7 @@ function display_event($event, $include_date = 1)
 
     // Weekday names array
     for ($i = 1; $i <= 7; $i++) {
-        $days[$i] = strftime('%A', mktime(12, 0, 0, 4, $i));
+        $days[$i] = strftime('%A', mktime(12, 0, 0, 4, $i, 2012));
     }
 
     // Recurring possibilities
