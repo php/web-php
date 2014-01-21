@@ -13,6 +13,17 @@ $MAJOR = 5;
 $releases = array_slice($RELEASES[$MAJOR], 0, $SHOW_COUNT);
 
 $gpg = array(
+    "5.6" => <<< GPG
+pub   2048R/33CFC8B3 2014-01-14 [expires: 2020-01-13]
+      Key fingerprint = 6E4F 6AB3 21FD C07F 2C33  2E3A C2BF 0BC4 33CF C8B3
+uid                  Ferenc Kovacs &lt;tyrael@php.net&gt;
+
+pub   2048R/90D90EC1 2013-07-18 [expire : 2016-07-17]
+      Key fingerprint = 0BD7 8B5F 9750 0D45 0838  F95D FE85 7D9A 90D9 0EC1
+uid                  Julien Pauli &lt;jpauli@php.net&gt;
+
+GPG
+,
     "5.5" => <<< GPG
 pub   2048R/90D90EC1 2013-07-18 [expire : 2016-07-17]
       Key fingerprint = 0BD7 8B5F 9750 0D45 0838  F95D FE85 7D9A 90D9 0EC1
