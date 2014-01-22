@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom" xmlns:default="http://php.net/ns/news">
+  <title>PHP Cape Town 2014</title>
+  <id>http://php.net/archive/2014.php#id2014-01-22-1</id>
+  <published>2014-01-22T11:24:46-08:00</published>
+  <updated>2014-01-22T11:24:46-08:00</updated>
+  <default:finalTeaserDate xmlns="http://php.net/ns/news">2014-04-12</default:finalTeaserDate>
+  <category term="conferences" label="Conference announcement"/>
+  <link href="http://php.net/conferences/index.php#id2014-01-22-1" rel="alternate" type="text/html"/>
+  <default:newsImage xmlns="http://php.net/ns/news" link="http://www.phpsouthafrica.com/" title="PHP Cape Town">phpsa2014.png</default:newsImage>
+  <link href="http://www.phpsouthafrica.com/" rel="via" type="text/html"/>
+  <content type="xhtml">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+     <p>
+     <a href="http://www.phpsouthafrica.com/">PHP Cape Town</a><br/>
+     12th April2014
+     </p>
+     <p>
+     This intimate One Day Advanced PHP Craft session is for the experienced developer, CTO and
+     skilled developers looking to take the next step.
+     </p>
+     <p>During this session you will hear from
+     Rasmus Lerdorf about his 7 year experience with Yahoo and an exclusive Q&amp;A with him. We
+     will also hear Phil Sturgeon share some of his experiences and knowledge about API
+     Pain-Points &amp; The FIG:PSR-4.
+     </p>
+     <p>You will have the opportunity to question, interact and solve
+     some of your issues. At this Craft Session we will be welcoming some more international
+     guests for this jammed packed full day session. This PHP Advanced Developers session in
+     Cape Town will be the highlight of our calendar to Welcome some acclaimed developers to
+     The Mother City.
+     </p>
+     <p>We have limited seat available for this event to encourage more
+     interaction.
+     </p>
+    </div>
+  </content>
+</entry>
