@@ -509,7 +509,6 @@ EOT;
 
 
 
-// BETA
 function site_header($title = '', $config = array())
 {
     global $MYSITE;
