@@ -578,6 +578,14 @@ function get_near_usergroups()
     if (!myphpnet_showug()) {
         return false;
     }
+    if ($_SERVER["BASE_PAGE"] == "ug.php") {
+        return false;
+    }
+    if (isset($_COOKIE["LAST_UG"]) && $_COOKIE["LAST_UG"] >= $_SERVER["REQUEST_TIME"]) {
+        if (!isset($_GET["showug"])) {
+            return false;
+        }
+    }
 
     $ugs = get_usergroups_in($COUNTRY);
     $count = count($ugs);

@@ -3,6 +3,7 @@
 $_SERVER['BASE_PAGE'] = 'ug.php';
 include_once $_SERVER['DOCUMENT_ROOT'] . '/include/prepend.inc';
 
+mirror_setcookie("LAST_UG", $_SERVER["REQUEST_TIME"]+60*60*24, 60*60*24);
 site_header("Hypertext Preprocessor",
     array(
         'current' => 'community',
