@@ -170,7 +170,12 @@ function myphpnet_showug($enable = null) {
     if ($enable !== null) {
         $MYPHPNET[3] = $enable;
     }
-    return $MYPHPNET[3];
+
+    if (isset($MYPHPNET[3])) {
+        return $MYPHPNET[3];
+    }
+
+    return false;
 }
 
 // Save user settings in cookie
