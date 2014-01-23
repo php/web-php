@@ -181,6 +181,7 @@ $COUNTRIES = array(
 'STP' => 'Sao Tome and Principe',
 'SAU' => 'Saudi Arabia',
 'SEN' => 'Senegal',
+'SRB' => 'Serbia',
 'YUG' => 'Serbia and Montenegro',
 'SYC' => 'Seychelles',
 'SLE' => 'Sierra Leone',
