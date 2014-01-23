@@ -16,7 +16,9 @@ header("Content-type: text/html; charset=utf-8");
 if (isset($_SERVER["HTTP_ORIGIN"])) {
     $host = parse_url($_SERVER["HTTP_ORIGIN"]);
     if (strncmp(strrev($host["host"]), strrev("php.net"), strlen("php.net")) != 0) {
-        exit(10);
+        if ($host["host"] != $_SERVER["SERVER_NAME"]) {
+            exit(10);
+        }
     }
     if (isset($host["port"])) {
         $hostname = $host["host"] . ":" . $host["port"];
