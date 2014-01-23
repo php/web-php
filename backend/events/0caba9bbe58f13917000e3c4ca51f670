@@ -1,0 +1,110 @@
+BEGIN:VCALENDAR
+PRODID:-//Google Inc//Google Calendar 70.9054//EN
+VERSION:2.0
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:PHP Usergroup Karlsruhe
+X-WR-TIMEZONE:Europe/Rome
+X-WR-CALDESC:Termine der Treffen der PHP Usergroup Karlsruhe.
+BEGIN:VEVENT
+DTSTART:20101026T170000Z
+DTEND:20101026T200000Z
+DTSTAMP:20140123T050007Z
+UID:taur8f40md2kcqhmotj0qrclnk@google.com
+CREATED:20101008T164243Z
+DESCRIPTION:Die bekannte Open-Source Foren Software phpBB erlaubt das\nErwe
+ itern und Modifizieren ihres Kerns auf sehr ungewöhnliche Art und\nWeise. M
+ it einem Blick auf mehr als 10 Jahre phpBB\nEntwicklungsgeschichte möchte i
+ ch eine Plugin-Welt vorstellen\, die sich\nstark von anderen PHP Projekten 
+ absetzt. Ich werde erklären wie die\nSicherheit phpBBs drastisch verbessert
+  werden konnte und mit welchen\nMitteln andere große Open-Source Projekte d
+ ie Qualität und Sicherheit\nvon Plugins verbesssern können.
+LAST-MODIFIED:20101110T233214Z
+LOCATION:Hochschule Karlsruhe\, Gebäude M\, 3. Obergeschoss\, Raum 302
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:“phpBB erweitern: unkonventionell aber erfolgreich” von Nils Aderma
+ nn
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20100622T170000Z
+DTEND:20100622T200000Z
+DTSTAMP:20140123T050007Z
+UID:9r496o1cc6jvfci6spt6g3nsk8@google.com
+CLASS:PUBLIC
+CREATED:20100616T182414Z
+DESCRIPTION:Urlaubswerk.de sponsored unsere Verpflegung! Bitte im Forum anm
+ elden mit Verpflegungswünschen :)\n\nAdresse:\nCIE Cube – Geb. 30.29     \n
+ Engesserstr. 9 (vor dem Gerthsen Hörsaal)\n76131 Karlsruhe     \n\nWeitere 
+ Infos:\nhttp://www.phpug-karlsruhe.de/?p=210
+LAST-MODIFIED:20100704T055856Z
+LOCATION:CIE-Cube (beim KIT)
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:PHP BBQ\, beim CIE-Cube
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20100629T170000Z
+DTEND:20100629T200000Z
+DTSTAMP:20140123T050007Z
+UID:cf1geb1ba1loc6lftoq9t7os7s@google.com
+CLASS:PUBLIC
+CREATED:20100616T182518Z
+DESCRIPTION:Thema: Frontend-Performance (mit PHP) von Nico Steiner & Frank 
+ Kleine\nDatum: Dienstag den 29. Juni 2010\, 19 Uhr\nLocation: Hochschule Ka
+ rlsruhe\nGebäude M\, 3. Obergeschoss\, Raum 302\nInfos und Anmeldung:\nhttp
+ ://forum.phpug-karlsruhe.de/viewtopic.php?f=2&t=270&start=0\n
+LAST-MODIFIED:20100704T055856Z
+LOCATION:Hochschule Karlsruhe\, Gebäude M\, 3. Obergeschoss\, Raum 302
+SEQUENCE:2
+STATUS:CONFIRMED
+SUMMARY:PHPUG Treffen\, Frontend Performance
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20091124T180000Z
+DTEND:20091124T203000Z
+DTSTAMP:20140123T050007Z
+UID:09694tib95vr2001vi3tp29okc@google.com
+CLASS:PUBLIC
+CREATED:20091108T131812Z
+DESCRIPTION:Dezentrale Versions Kontrolle - was nach Subversion kommt\n\nSe
+ it der Migration großer OpenSource Projekte wie dem Linux Kernel\, Perl ode
+ r OpenOffice ist dezentrale Versionskontrolle in das Sichtfeld vieler Entwi
+ ckler gerückt. Der Vortrag gibt eine Einführung in die Konzepte der dezentr
+ alen Versionskontrolle und zeigt\, dass hinter Subversion eine kleine Revol
+ ution in der Welt der Versionskontrolle stattfindet. Anhand des Systems Mer
+ curial werden Stärken und Schwächen der alternativen Versionskontrolle geze
+ igt.\n\nInfos und Anmeldung:\nhttp://forum.phpug-karlsruhe.de/viewtopic.php
+ ?f=2&t=260
+LAST-MODIFIED:20091220T104531Z
+LOCATION:HS-Karlsruhe\, Gebäude M\, 3. Obergeschoss\, Raum 302
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:PHPUGKA: “Dezentrale Versions Kontrolle” von David Soria Parra
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20091027T180000Z
+DTEND:20091027T203000Z
+DTSTAMP:20140123T050007Z
+UID:lm6nput90u6lt8h94gajprtm4c@google.com
+CLASS:PUBLIC
+CREATED:20091011T151208Z
+DESCRIPTION:Wie bekomme ich testbaren Code?\n\nWer macht *wirklich* Test-Dr
+ iven Development? Vermutlich nur eine kleine Minderheit. Der Vortrag zeigt 
+ auf\, welcher Code zu schwierigen Tests führt und worauf man achten muss\, 
+ damit das Schreiben von Tests wesentlich einfacher wird – nur weil man kein
+  TDD macht ist das noch lange keine Entschuldigung dafür\, keine Tests zu h
+ aben.\n\nInfos und Anmeldung:\nhttp://forum.phpug-karlsruhe.de/viewtopic.ph
+ p?f=2&t=250
+LAST-MODIFIED:20091011T152743Z
+LOCATION:HS-Karlsruhe\, Gebäude M\, 3. Obergeschoss\, Raum 302
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:PHPUGKA: “Wie bekomme ich testbaren Code?” von Frank Kleine
+TRANSP:TRANSPARENT
+END:VEVENT
+END:VCALENDAR

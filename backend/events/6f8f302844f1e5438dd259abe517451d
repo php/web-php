@@ -1,0 +1,149 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Meetup//RemoteApi//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-ORIGINAL-URL:http://www.meetup.com/mysql-144/events/ical/The+Raleigh+My
+ SQL-PHP+Meetup+Group/
+X-WR-CALNAME:Events - The Raleigh MySQL-PHP Meetup Group
+BEGIN:VTIMEZONE
+TZID:America/New_York
+X-LIC-LOCATION:America/New_York
+BEGIN:DAYLIGHT
+TZOFFSETFROM:-0500
+TZOFFSETTO:-0400
+TZNAME:EDT
+DTSTART:19700308T020000
+RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=2SU
+END:DAYLIGHT
+BEGIN:STANDARD
+TZOFFSETFROM:-0400
+TZOFFSETTO:-0500
+TZNAME:EST
+DTSTART:19701101T020000
+RRULE:FREQ=YEARLY;BYMONTH=11;BYDAY=1SU
+END:STANDARD
+END:VTIMEZONE
+BEGIN:VEVENT
+DTSTAMP:20140123T050006Z
+DTSTART;TZID=America/New_York:20140123T183000
+DTEND;TZID=America/New_York:20140123T213000
+STATUS:CONFIRMED
+SUMMARY:TrianglePHP Planning Meeting
+DESCRIPTION:TrianglePHP\nThursday\, January 23 at 6:30 PM\n\nFor our firs
+ t meeting of the year\, we have decided to a planning meeting to map out
+  the activities and goals of the group for 2014.  If you have any i...\n
+ \nDetails: http://www.meetup.com/trianglephp/events/154252472/
+CLASS:PUBLIC
+CREATED:20120516T143443Z
+GEO:35.86;-78.52
+LOCATION:Natty Greene's Pub and Brewing Co. (505 West Jones Street\, Rale
+ igh\, NC 27603)
+URL:http://www.meetup.com/trianglephp/events/154252472/
+LAST-MODIFIED:20140115T154948Z
+UID:event_qgtpwcyscbvb@meetup.com
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20140123T050006Z
+DTSTART;TZID=America/New_York:20140220T190000
+DTEND;TZID=America/New_York:20140220T220000
+STATUS:CONFIRMED
+SUMMARY:PHP @ TEKsystems - Speaker Needed
+DESCRIPTION:TrianglePHP\nThursday\, February 20 at 7:00 PM\n\nInterested 
+ in speaking?  Please let us know and we can get you on the schedule!   T
+ EKsystems will provide pizza and drinks.  Doors open at 6:45\, Prese...\
+ n\nDetails: http://www.meetup.com/trianglephp/events/160727372/
+CLASS:PUBLIC
+CREATED:20120516T143443Z
+GEO:35.86;-78.52
+LOCATION:TEKsystems (1201 Edwards Mill Rd\, Raleigh\, NC 27607)
+URL:http://www.meetup.com/trianglephp/events/160727372/
+LAST-MODIFIED:20120516T173231Z
+UID:event_qgtpwcysdbbc@meetup.com
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20140123T050006Z
+DTSTART;TZID=America/New_York:20140320T190000
+DTEND;TZID=America/New_York:20140320T220000
+STATUS:CONFIRMED
+SUMMARY:PHP @ TEKsystems - Speaker Needed
+DESCRIPTION:TrianglePHP\nThursday\, March 20 at 7:00 PM\n\nInterested in 
+ speaking?  Please let us know and we can get you on the schedule!   TEKs
+ ystems will provide pizza and drinks.  Doors open at 6:45\, Prese...\n\n
+ Details: http://www.meetup.com/trianglephp/events/qgtpwcysfbbc/
+CLASS:PUBLIC
+CREATED:20120516T143443Z
+GEO:35.86;-78.52
+URL:http://www.meetup.com/trianglephp/events/qgtpwcysfbbc/
+LAST-MODIFIED:20120516T173231Z
+UID:event_qgtpwcysfbbc@meetup.com
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20140123T050006Z
+DTSTART;TZID=America/New_York:20140417T190000
+DTEND;TZID=America/New_York:20140417T220000
+STATUS:CONFIRMED
+SUMMARY:PHP @ TEKsystems - Speaker Needed
+DESCRIPTION:TrianglePHP\nThursday\, April 17 at 7:00 PM\n\nInterested in 
+ speaking?  Please let us know and we can get you on the schedule!   TEKs
+ ystems will provide pizza and drinks.  Doors open at 6:45\, Prese...\n\n
+ Details: http://www.meetup.com/trianglephp/events/qgtpwcysgbwb/
+CLASS:PUBLIC
+CREATED:20120516T143443Z
+GEO:35.86;-78.52
+URL:http://www.meetup.com/trianglephp/events/qgtpwcysgbwb/
+LAST-MODIFIED:20120516T173231Z
+UID:event_qgtpwcysgbwb@meetup.com
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20140123T050006Z
+DTSTART;TZID=America/New_York:20140515T190000
+DTEND;TZID=America/New_York:20140515T220000
+STATUS:CONFIRMED
+SUMMARY:PHP @ TEKsystems - Speaker Needed
+DESCRIPTION:TrianglePHP\nThursday\, May 15 at 7:00 PM\n\nInterested in sp
+ eaking?  Please let us know and we can get you on the schedule!   TEKsys
+ tems will provide pizza and drinks.  Doors open at 6:45\, Prese...\n\nDe
+ tails: http://www.meetup.com/trianglephp/events/qgtpwcyshbtb/
+CLASS:PUBLIC
+CREATED:20120516T143443Z
+GEO:35.86;-78.52
+URL:http://www.meetup.com/trianglephp/events/qgtpwcyshbtb/
+LAST-MODIFIED:20120516T173231Z
+UID:event_qgtpwcyshbtb@meetup.com
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20140123T050006Z
+DTSTART;TZID=America/New_York:20140619T190000
+DTEND;TZID=America/New_York:20140619T220000
+STATUS:CONFIRMED
+SUMMARY:PHP @ TEKsystems - Speaker Needed
+DESCRIPTION:TrianglePHP\nThursday\, June 19 at 7:00 PM\n\nInterested in s
+ peaking?  Please let us know and we can get you on the schedule!   TEKsy
+ stems will provide pizza and drinks.  Doors open at 6:45\, Prese...\n\nD
+ etails: http://www.meetup.com/trianglephp/events/qgtpwcysjbzb/
+CLASS:PUBLIC
+CREATED:20120516T143443Z
+GEO:35.86;-78.52
+URL:http://www.meetup.com/trianglephp/events/qgtpwcysjbzb/
+LAST-MODIFIED:20120516T173231Z
+UID:event_qgtpwcysjbzb@meetup.com
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20140123T050006Z
+DTSTART;TZID=America/New_York:20140717T190000
+DTEND;TZID=America/New_York:20140717T220000
+STATUS:CONFIRMED
+SUMMARY:PHP @ TEKsystems - Speaker Needed
+DESCRIPTION:TrianglePHP\nThursday\, July 17 at 7:00 PM\n\nInterested in s
+ peaking?  Please let us know and we can get you on the schedule!   TEKsy
+ stems will provide pizza and drinks.  Doors open at 6:45\, Prese...\n\nD
+ etails: http://www.meetup.com/trianglephp/events/qgtpwcyskbwb/
+CLASS:PUBLIC
+CREATED:20120516T143443Z
+GEO:35.86;-78.52
+URL:http://www.meetup.com/trianglephp/events/qgtpwcyskbwb/
+LAST-MODIFIED:20120516T173231Z
+UID:event_qgtpwcyskbwb@meetup.com
+END:VEVENT
+END:VCALENDAR

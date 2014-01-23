@@ -1,0 +1,62 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Meetup//RemoteApi//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-ORIGINAL-URL:http://www.sfphp.org/events/ical/The+SF+PHP+Meetup+Group/
+X-WR-CALNAME:Events - The SF PHP Meetup Group
+BEGIN:VTIMEZONE
+TZID:America/Los_Angeles
+X-LIC-LOCATION:America/Los_Angeles
+BEGIN:DAYLIGHT
+TZOFFSETFROM:-0800
+TZOFFSETTO:-0700
+TZNAME:PDT
+DTSTART:19700308T020000
+RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=2SU
+END:DAYLIGHT
+BEGIN:STANDARD
+TZOFFSETFROM:-0700
+TZOFFSETTO:-0800
+TZNAME:PST
+DTSTART:19701101T020000
+RRULE:FREQ=YEARLY;BYMONTH=11;BYDAY=1SU
+END:STANDARD
+END:VTIMEZONE
+BEGIN:VEVENT
+DTSTAMP:20140123T050009Z
+DTSTART;TZID=America/Los_Angeles:20140210T190000
+DTEND;TZID=America/Los_Angeles:20140210T220000
+STATUS:CONFIRMED
+SUMMARY:Roll'n API - Apigility with Doctrine
+DESCRIPTION:The SF PHP Meetup Group\nMonday\, February 10 at 7:00 PM\n\nT
+ his presentation will be an introduction to Apigility with Doctrine. The
+  presentation will explain how Apigility implements emerging standards f
+ or AP...\n\nDetails: http://www.meetup.com/sf-php/events/160945402/
+CLASS:PUBLIC
+CREATED:20140116T191210Z
+GEO:37.77;-122.40
+URL:http://www.meetup.com/sf-php/events/160945402/
+LAST-MODIFIED:20140116T191352Z
+UID:event_160945402@meetup.com
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20140123T050009Z
+DTSTART;TZID=America/Los_Angeles:20140305T183000
+DTEND;TZID=America/Los_Angeles:20140305T210000
+STATUS:CONFIRMED
+SUMMARY:HipHop Virtual Machine - All about what's new & exciting!
+DESCRIPTION:The SF PHP Meetup Group\nWednesday\, March 5 at 6:30 PM\n\nTh
+ is March we'll have Sara Golemon come talk with us about the HipHop Virt
+ ual Machine (HHVM). There have been a lot of great improvements in HHVM 
+ that...\n\nDetails: http://www.meetup.com/sf-php/events/159404382/
+CLASS:PUBLIC
+CREATED:20140108T170806Z
+GEO:37.77;-122.40
+LOCATION:Mashery\, Inc. (717 Market St.\, Suite 300\, San Francisco\, CA 
+ 94103)
+URL:http://www.meetup.com/sf-php/events/159404382/
+LAST-MODIFIED:20140108T170806Z
+UID:event_159404382@meetup.com
+END:VEVENT
+END:VCALENDAR

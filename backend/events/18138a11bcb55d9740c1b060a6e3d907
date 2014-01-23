@@ -1,0 +1,46 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Meetup//RemoteApi//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-ORIGINAL-URL:http://www.meetup.com/phpmeetup/events/ical/PHP+meetup/
+X-WR-CALNAME:Events - PHP meetup
+X-MS-OLK-FORCEINSPECTOROPEN:TRUE
+BEGIN:VTIMEZONE
+TZID:Europe/Budapest
+X-LIC-LOCATION:Europe/Budapest
+BEGIN:DAYLIGHT
+TZOFFSETFROM:+0100
+TZOFFSETTO:+0200
+TZNAME:CEST
+DTSTART:19700329T020000
+RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=-1SU
+END:DAYLIGHT
+BEGIN:STANDARD
+TZOFFSETFROM:+0200
+TZOFFSETTO:+0100
+TZNAME:CET
+DTSTART:19701025T030000
+RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU
+END:STANDARD
+END:VTIMEZONE
+BEGIN:VEVENT
+DTSTAMP:20140123T050008Z
+DTSTART;TZID=Europe/Budapest:20140128T190000
+DTEND;TZID=Europe/Budapest:20140128T220000
+STATUS:CONFIRMED
+SUMMARY:III. évfolyam 1. felvonás\, januári PHP Meetup
+DESCRIPTION:PHP meetup\nTuesday\, January 28 at 7:00 PM\n\nSziasztok\,  i
+ smét eltelt egy év\, és új évad is kezdődik. Immár sorrendben a harmadik
+ . Ezért először is szeretném megköszönni a PHP meetup közösség köz...\n\
+ nDetails: http://www.meetup.com/phpmeetup/events/160773122/
+CLASS:PUBLIC
+CREATED:20140115T213052Z
+GEO:47.50;19.07
+LOCATION:Müszi - Művelődési Szint (1085 Budapest Blaha Lujza tér 1.\, Bud
+ apest\, Hungary)
+URL:http://www.meetup.com/phpmeetup/events/160773122/
+LAST-MODIFIED:20140115T233748Z
+UID:event_160773122@meetup.com
+END:VEVENT
+END:VCALENDAR

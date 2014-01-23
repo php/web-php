@@ -1,0 +1,14 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//wp-events-plugin.com//5.52//EN
+BEGIN:VEVENT
+UID:1f03647d-d246-4e5b-878f-a519f05cb0bc
+DTSTART:20140130T180000Z
+DTEND:20140130T210000Z
+DTSTAMP:20140117T133735Z
+SUMMARY:PHPUGFFM I / 2014 - Hanauer Landstraße - 30 Jan 14 19:00
+DESCRIPTION:Agenda:\n\n19:00\nAnkommen\n\n19:10\nIntro\n\n19:15\nStephan Hochdoerfer - PostgreSQL als NoSQL-Datenbank nutzen\n\n20:00\nPause\n\n20:15\nAndreas Heigl - "... und jetzt machen wir ein PDF!"\n\nab 21:00\nEpilog / Networking\n\nParken und Anreise:\n\n\nFolgt....
+LOCATION:Hanauer Landstraße
+URL:http://www.phpugffm.de/veranstaltungen-2/1-treffen-2014/
+END:VEVENT
+END:VCALENDAR
