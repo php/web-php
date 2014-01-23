@@ -593,7 +593,7 @@ function get_near_usergroups()
         return false;
     }
 
-    return sprintf("There %s %d <a href='/ug.php?cc=%s'>PHP User Group%c in %s</a>, are you a member of your local UG?",
+    return sprintf("There %s %d <a href='/ug.php?cc=%s'>PHP User Group%s in %s</a>, are you a member of your local UG?",
         $count == 1 ? "is" : "are",
         $count,
         $COUNTRY,
