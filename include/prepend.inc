@@ -160,6 +160,19 @@ function myphpnet_mirror($murl = FALSE)
     } else { return "NONE"; }
 }
 
+function myphpnet_showug($enable = null) {
+    global $MYPHPNET;
+
+    if (isset($_GET["showug"])) {
+        $enable = true;
+    }
+
+    if ($enable !== null) {
+        $MYPHPNET[3] = $enable;
+    }
+    return $MYPHPNET[3];
+}
+
 // Save user settings in cookie
 function myphpnet_save()
 {
