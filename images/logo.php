@@ -53,7 +53,7 @@ if ($day < 6 || 365-$day < 32) {
 if ($now % 60 == 10 || $refresh) {
     $logos[] = "./ele-running.gif";
 }
-if ($now % 120 == 10 || $refresh) {
+if ($now % 240 == 10 || $refresh) {
     $logos = array_merge($logos, glob("logos/oldschool/*"));
 }
 
