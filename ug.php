@@ -31,7 +31,12 @@ function ug_get_more_info($group) {
             file_put_contents("backend/events/" . md5($group["icalendar_url"]), $data);
         }
          */
-        $data = file("backend/events/" . md5($url), FILE_IGNORE_NEW_LINES|FILE_SKIP_EMPTY_LINES);
+        $filename = "backend/events/" . md5($url);
+        /* Broken icalendar link */
+        if (!file_exists($filename)) {
+            return "";
+        }
+        $data = file($filename, FILE_IGNORE_NEW_LINES|FILE_SKIP_EMPTY_LINES);
         $retval = ug_get_next_even_from_ical_array($data);
         return $retval;
     }
