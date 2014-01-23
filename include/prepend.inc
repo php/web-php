@@ -175,6 +175,10 @@ function myphpnet_showug($enable = null) {
         return $MYPHPNET[3];
     }
 
+    if ($_SERVER["REQUEST_TIME"] % 10) {
+        return true;
+    }
+
     return false;
 }
 
