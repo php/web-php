@@ -5,6 +5,7 @@
   <published>2014-01-23T23:24:10+01:00</published>
   <updated>2014-01-23T23:24:10+01:00</updated>
   <category term="releases" label="New PHP release"/>
+  <category term="frontpage" label="PHP.net frontpage news"/>
   <link href="http://php.net/index.php#id2014-01-23-1" rel="alternate" type="text/html"/>
   <link href="http://php.net/archive/2014.php#id2014-01-23-1" rel="via" type="text/html"/>
   <content type="xhtml">
