@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+  <title>PHP 5.6.0alpha1 released</title>
+  <id>http://php.net/archive/2014.php#id2014-01-23-1</id>
+  <published>2014-01-23T23:24:10+01:00</published>
+  <updated>2014-01-23T23:24:10+01:00</updated>
+  <category term="releases" label="New PHP release"/>
+  <link href="http://php.net/index.php#id2014-01-23-1" rel="alternate" type="text/html"/>
+  <link href="http://php.net/archive/2014.php#id2014-01-23-1" rel="via" type="text/html"/>
+  <content type="xhtml">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+      <p>
+        The PHP development team announces the immediate availability of
+        PHP 5.6.0alpha1. This release marks the beginning of the PHP 5.6.0 release cycle.
+        All users of PHP are encouraged to test this version carefully,
+        and report any bugs in <a href="https://bugs.php.net">the bug tracking system</a>.
+     </p>
+
+     <strong>THIS IS A DEVELOPMENT PREVIEW - DO NOT USE IT IN PRODUCTION!</strong>
+
+     <p>
+      PHP 5.6.0alpha1 comes with new features such as (incomplete list) :
+     </p>
+     <ul>
+        <li>constant scalar expressions,</li>
+        <li>variadic functions,</li>
+        <li>argument unpacking,</li>
+        <li>support for large(>2GiB) file uploads,</li>
+        <li>SSL/TLS improvements,</li>
+        <li>a new command line debugger called phpdbg.</li>
+     </ul>
+
+     <p>For more information about the new features you can check out the work-in-progress
+      <a href="http://docs.php.net/manual/en/migration56.new-features.php">documentation</a>
+      or you can read the full list of changes in the
+      <a href="https://github.com/php/php-src/blob/php-5.6.0alpha1/NEWS">NEWS file</a> contained
+      in the release archive.
+     </p>
+
+     <p>
+      For source downloads of PHP 5.6.0alpha1 please visit
+      the <a href="http://downloads.php.net/tyrael">download page</a>, Windows binaries
+      can be found on <a href="http://windows.php.net/qa/">windows.php.net/qa/</a>.
+     </p>
+
+     <p>
+      Our second beta should show up on 6th of February.
+     </p>
+
+     <p>
+        Thank you for helping us making PHP better.
+     </p>
+    </div>
+  </content>
+</entry>
