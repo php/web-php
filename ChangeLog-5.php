@@ -25,7 +25,7 @@ function peclbugl($number)   { echo "<a href=\"http://pecl.php.net/bugs/bug.php?
 </ul></li>
 <li>Date:
 <ul>
-  <li><?php bugfix(66060); ?> (Heap buffer over-read in DateInterval).</li>
+  <li><?php bugfix(66060); ?> (Heap buffer over-read in DateInterval, CVE-2013-6712).</li>
   <li><?php bugfix(65768); ?> (DateTimeImmutable::diff does not work).</li>
 </ul></li>
 <li>DOM:
@@ -93,7 +93,7 @@ function peclbugl($number)   { echo "<a href=\"http://pecl.php.net/bugs/bug.php?
 </ul></li>
 <li>Date:
 <ul>
-  <li><?php bugfix(66060); ?> (Heap buffer over-read in DateInterval).</li>
+  <li><?php bugfix(66060); ?> (Heap buffer over-read in DateInterval, CVE-2013-6712).</li>
   <li><?php bugfix(63391); ?> (Incorrect/inconsistent day of week prior to the year 1600).</li>
   <li><?php bugfix(61599); ?> (Wrong Day of Week).</li>
 </ul></li>
