@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom" xmlns:default="http://php.net/ns/news">
+  <title>php[tek] 2014 : Schedule Announced</title>
+  <id>http://php.net/archive/2014.php#id2014-02-05-1</id>
+  <published>2014-02-05T12:52:31-08:00</published>
+  <updated>2014-02-05T12:52:31-08:00</updated>
+  <default:finalTeaserDate xmlns="http://php.net/ns/news">2014-05-23</default:finalTeaserDate>
+  <category term="conferences" label="Conference announcement"/>
+  <link href="http://php.net/conferences/index.php#id2014-02-05-1" rel="alternate" type="text/html"/>
+  <default:newsImage xmlns="http://php.net/ns/news" link="http://tek.phparch.com/" title="php[tek] 2014 : Schedule Announced">tek14.fb.png</default:newsImage>
+  <link href="http://tek.phparch.com/" rel="via" type="text/html"/>
+  <content type="xhtml">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+     <p>The <a href="http://tek.phparch.com/schedule/">conference
+     schedule</a> has now been posted for <a href="http://tek.phparch.com/">php[tek] 2014</a> – The premier
+     professional PHP conference from the team at php[architect].</p>
+     
+     <p>Taking place from May 19-23rd in Chicago, IL, USA, the conference
+     will consist of 4 parallel tracks of sessions, a tutorial day, an <a href="http://tek.phparch.com/speakers/#91919">introduction to PHP day of
+     training</a>, and more.</p>
+     
+     <p>New to php[tek] this year is the <a href="http://tek.phparch.com/events/#open">Open Spaces</a> room, where
+     we hope to encourage all sorts of great discussions to take place by our
+     attendees, and larger breaks between sessions as well to make sure that
+     the hallway-track is given as much importance as the sessions
+     themselves.</p>
+     
+     <p>Our <a href="http://tek.phparch.com/pricing-and-registration/">Early
+     Bird Sale</a> is still currently ongoing, but expires on February 15th.
+      So make sure to <a href="http://tek.phparch.com/pricing-and-registration/">register
+     soon</a> in order to save $200 off the total price!</p>
+    </div>
+  </content>
+</entry>
