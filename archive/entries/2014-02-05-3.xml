@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom" xmlns:default="http://php.net/ns/news">
+  <title>MidwestPHP 2014</title>
+  <id>http://php.net/archive/2014.php#id2014-02-05-3</id>
+  <published>2014-02-05T13:09:54-08:00</published>
+  <updated>2014-02-05T13:09:54-08:00</updated>
+  <default:finalTeaserDate xmlns="http://php.net/ns/news">2014-03-16</default:finalTeaserDate>
+  <category term="conferences" label="Conference announcement"/>
+  <link href="http://php.net/conferences/index.php#id2014-02-05-3" rel="alternate" type="text/html"/>
+  <default:newsImage xmlns="http://php.net/ns/news" link="http://www.midwestphp.org/" title="MidwestPHP 2014">midwest2014.jpg</default:newsImage>
+  <link href="http://www.midwestphp.org/" rel="via" type="text/html"/>
+  <content type="xhtml">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+     <p><a href="http://www.midwestphp.org/">MidwestPHP</a> is back in Minneapolis
+     again for its second year, March 15th-16th, boasting 2 days filled with sessions about Zend
+     Framework 2, PHPUnit, RabbitMQ, Vagrant, Application development, Security, and
+     more.  And if you're new to PHP, there's something for you too- php|architect
+     will be hosting a training day to cover the basics of PHP on the 14th.
+     </p>
+     
+     <p>Don't miss out on 2 great days of sessions, fantastic Minnesota food, a
+     great chance for networking, and of course the world famous Minnesota Niceness
+     everyone is talking about.
+     <a href="http://www.midwestphp.org/registration/">Register for your spot at MidwestPHP</a> today!
+     </p>
+    </div>
+  </content>
+</entry>
