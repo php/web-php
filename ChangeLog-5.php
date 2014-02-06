@@ -10,6 +10,51 @@ function peclbugl($number)   { echo "<a href=\"http://pecl.php.net/bugs/bug.php?
 ?>
 
 <h1>PHP 5 ChangeLog</h1>
+<section class="version" id="5.5.9"><!-- {{{ 5.5.9 -->
+<h3>Version 5.5.9</h3>
+<b>6-Feb-2014</b>
+<ul><li>Core:
+<ul>
+  <li><?php bugfix(66509); ?> (copy() arginfo has changed starting from 5.4).</li>
+</ul></li>
+<li>GD:
+<ul>
+  <li><?php bugfix(66356); ?> (Heap Overflow Vulnerability in imagecrop()).</li>
+</ul></li>
+<li>OPCache:
+<ul>
+  <li><?php bugfix(66474); ?> (Optimizer bug in constant string to boolean conversion).</li>
+  <li><?php bugfix(66461); ?> (PHP crashes if opcache.interned_strings_buffer=0).</li>
+  <li><?php bugfix(66298); ?> (ext/opcache/Optimizer/zend_optimizer.c has dos-style ^M as lineend).</li>
+</ul></li>
+<li>PDO_pgsql:
+<ul>
+  <li><?php bugfix(62479); ?> (PDO-pgsql cannot connect if password contains spaces).</li>
+</ul></li>
+<li>Readline:
+<ul>
+  <li><?php bugfix(66412); ?> (readline_clear_history() with libedit causes segfault after #65714).</li>
+</ul></li>
+<li>Session:
+<ul>
+  <li><?php bugfix(66469); ?> (Session module is sending multiple set-cookie headers when session.use_strict_mode=1).</li>
+  <li><?php bugfix(66481); ?> (Segfaults on session_name()).</li>
+</ul></li>
+<li>Standard:
+<ul>
+  <li><?php bugfix(66395); ?> (basename function doesn't remove drive letter).</li>
+</ul></li>
+<li>Sockets:
+<ul>
+  <li><?php bugfix(66381); ?> (__ss_family was changed on AIX 5.3).</li>
+</ul></li>
+<li>Zend Engine:
+<ul>
+  <li><?php bugfix(66009); ?> (Failed compilation of PHP extension with C++ std library using VS 2012).</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
 <section class="version" id="5.5.8"><!-- {{{ 5.5.8 -->
 <h3>Version 5.5.8</h3>
 <b>9-Jan-2014</b>

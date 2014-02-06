@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+  <title>PHP 5.5.9 is ready for download</title>
+  <id>http://php.net/archive/2014.php#id2014-02-05-4</id>
+  <published>2014-02-05T10:45:56+00:00</published>
+  <updated>2014-02-05T10:45:56+00:00</updated>
+  <category term="frontpage" label="PHP.net frontpage news"/>
+  <category term="releases" label="New PHP release"/>
+  <link href="http://php.net/index.php#id2014-02-05-1" rel="alternate" type="text/html"/>
+  <link href="http://php.net/archive/2014.php#id2014-02-05-1" rel="via" type="text/html"/>
+  <content type="xhtml">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+     <p>The PHP development team announces the immediate availability of PHP 5.5.9. This release fixes several bugs against
+      PHP 5.5.8.</p>
+
+    <p>
+      For source downloads of PHP 5.5.9 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+     Windows binaries are located on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
+     The list of changes can be found in the <a href="http://www.php.net/ChangeLog-5.php#5.5.9">ChangeLog</a>.
+   </p>
+    </div>
+  </content>
+</entry>
