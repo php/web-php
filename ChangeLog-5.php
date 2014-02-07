@@ -55,6 +55,29 @@ function peclbugl($number)   { echo "<a href=\"http://pecl.php.net/bugs/bug.php?
 </ul>
 <!-- }}} --></section>
 
+<section class="version" id="5.4.25"><!-- {{{ 5.4.25 -->
+<h3>Version 5.4.25</h3>
+<b>06-Feb-2014</b>
+<ul><li>Core:
+<ul>
+  <li><?php bugfix(66286); ?> (Incorrect object comparison with inheritance).</li>
+  <li><?php bugfix(66509); ?> (copy() arginfo has changed starting from 5.4).</li>
+</ul></li>
+<li>mysqlnd:
+<ul>
+  <li><?php bugfix(66283); ?> (Segmentation fault after memory_limit).</li>
+</ul></li>
+<li>PDO_pgsql:
+<ul>
+  <li><?php bugfix(62479); ?> (PDO-psql cannot connect if password contains spaces).</li>
+</ul></li>
+<li>Session:
+<ul>
+  <li><?php bugfix(66481); ?> (Calls to session_name() segfault when session.name is null).</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
 <section class="version" id="5.5.8"><!-- {{{ 5.5.8 -->
 <h3>Version 5.5.8</h3>
 <b>9-Jan-2014</b>
