@@ -19,7 +19,7 @@ function peclbugl($number)   { echo "<a href=\"http://pecl.php.net/bugs/bug.php?
 </ul></li>
 <li>GD:
 <ul>
-  <li><?php bugfix(66356); ?> (Heap Overflow Vulnerability in imagecrop()).</li>
+  <li><?php bugfix(66356); ?> (Heap Overflow Vulnerability in imagecrop(), CVE-2013-7226).</li>
 </ul></li>
 <li>OPCache:
 <ul>
