@@ -853,7 +853,7 @@ function peclbugl($number)   { echo "<a href=\"http://pecl.php.net/bugs/bug.php?
 <b>12-Dec-2013</b>
 <ul><li>Openssl:
 <ul>
-  <li>Fixed handling null bytes in subjectAltName (CVE-2013-4073).</li>
+  <li>Fixed handling null bytes in subjectAltName (CVE-2013-4248).</li>
   <li>Fixed memory corruption in openssl_x509_parse() (CVE-2013-6420). (Stefan Esser).</li>
 </ul></li>
 </ul>
