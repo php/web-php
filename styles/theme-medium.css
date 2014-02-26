@@ -4,21 +4,21 @@
  * ---------------+---------+
  *  light-purple  | #E3E3F1 |
  * ---------------+---------+
- *  medium-purple | #9999cc |
+ *  medium-purple | #8C8CC5 |
  * ---------------+---------+
- *  dark-purple   | #666699 |
+ *  dark-purple   | #5B5B89 |
  * ---------------+---------+
  *
  */
 
 
 html {
-  background-color: #262626;
+  background-color: #333;
 }
 
 body {
-  background:#E3E3F1;
-  color: #262626;
+  background:#C6C6E2;
+  color: #333;
 }
 #layout-content {
   background:#fff;
@@ -26,19 +26,19 @@ body {
 }
 
 abbr {
-  border-color: #999;
+  border-color: #8C8CC5;
 }
 
 h1 {
-    color: #336;
+    color: #333;
 }
 h2 {
-    color: #262626;
+    color: #333;
 }
 
 h1, h2, h3, h4, h5, h6 {
   font-weight:bolder;
-  color:#336
+  color:#333
 }
 
 a:link,
@@ -60,17 +60,12 @@ ol {
   list-style-type: decimal;
 }
 
-em,
-strong {
-  color: #262626;
-}
-
 dl.qandaentry {
   border-color:#000;
 }
 
 h1.refname {
-  color: #669;
+  color: #333;
 }
 
 
@@ -84,7 +79,7 @@ h1.refname {
 .fieldsynopsis .modifier,
 .methodsynopsis .modifier,
 .constructorsynopsis .modifier {
-  color:#444;
+  color:#333;
 }
 
 .classsynopsis {
@@ -96,17 +91,17 @@ h1.refname {
 }
 
 .title {
-  color: #446;
+  color: #333;
   background: #E3E3F1;
   border-radius:0 0 2px 2px;
   border-color:#C6C6E2;
-  border-top-color:#669;
+  border-top-color:#5B5B89;
   box-shadow:
     inset 1px 0 1px -1px #C6C6E2,
     inset -1px 0 1px -1px #C6C6E2
 }
 .title a {
-  color: #446;
+  color: #333;
 }
 
 .methodname b,
@@ -138,8 +133,8 @@ div.tip {
   border-bottom-color:#9FBFDF;
 }
 blockquote.note {
-  background-color: #F2F2F2;
-  border-color: #CCC;
+  background-color: #E6E6E6;
+  border-color: #ccc;
 }
 div.caution {
   background: #fcfce9;
@@ -187,8 +182,8 @@ div.warning:before {
 
 /* {{{ Navbar */
 .navbar {
-  border-color:#669;
-  background:#99c;
+  border-color:#5B5B89;
+  background:#8C8CC5;
   box-shadow: 0 .25em .25em  rgba(0,0,0,.1);
 }
 /* }}} */
@@ -196,12 +191,12 @@ div.warning:before {
 
 /* {{{ User notes */
 #usernotes .count {
-  background-color: #669;
+  background-color: #5B5B89;
   color: #fff;
   border-radius: 4px;
 }
 #usernotes .note .name {
-  color: #444;
+  color: #333;
 }
 #usernotes .note .date {
   color: #666;
@@ -210,11 +205,11 @@ div.warning:before {
   color: black;
 }
 #usernotes .note .text {
-  background-color: #F2F2F2;
-  border-color: #CCC;
+  background-color: #E6E6E6;
+  border-color: #ccc;
   box-shadow:
-    inset 1px 0 1px -1px #CCC,
-    inset -1px 0 1px -1px #CCC;
+    inset 1px 0 1px -1px #ccc,
+    inset -1px 0 1px -1px #ccc;
 
   -webkit-transition: opacity 0.4s;
   -moz-transition: opacity 0.4s;
@@ -223,7 +218,7 @@ div.warning:before {
   transition: opacity 0.4s;
 }
 #usernotes .note .votes .tally {
-  color: #262626;
+  color: #333;
 }
 #usernotes .note .votes a {
   -webkit-transition: border 0.4s;
@@ -240,11 +235,12 @@ div.warning:before {
   border-color: #ccc;
 }
 .doctable thead tr {
-  border-color: #99c;
-  color: #262626;
+  border-color: #C6C6E2;
+  border-bottom-color: #8C8CC5;
+  color: #333;
 }
 .doctable th {
-  background-color: #bbd;
+  background-color: #C6C6E2;
 }
 .doctable tr {
   border-color: #ccc
@@ -253,7 +249,7 @@ div.warning:before {
   background-color: #ffffff;
 }
 .doctable tbody tr:nth-child(even) {
-  background-color: #E3E3F1;
+  background-color: #E6E6E6;
 }
 /* }}} */
 
@@ -261,7 +257,7 @@ div.warning:before {
 /* {{{ Syntax highlighting */
 .example-contents > [class$="code"],
 .example-contents.screen {
-  background-color: #f2f2f2;
+  background-color: #fff;
   border-color: #d0d0d0 !important;
   border-top-color: #cdcdcd !important;
 }
@@ -280,7 +276,7 @@ div.warning:before {
   background-color: transparent;
 }
 .phpcode span.comment {
-  color: #808080;
+  color: #5B5B89;
   background-color: transparent;
 }
 div.phpcode span.default {
@@ -301,9 +297,9 @@ div.phpcode span.string {
 .simpara em:not(.emphasis),
 .simpara var
 {
-  background-color: #f2f2f2;
+  background-color: #E6E6E6;
   border-radius: 2px;
-  color: #474747;
+  color: #333;
   padding: 2px 4px;
   white-space: nowrap;
   font-style: normal;
@@ -335,8 +331,8 @@ a.genanchor:focus {
 
 
 .warn {
-  border-color: #669;
-  background-color: #f2f2f2;
+  border-color: #5B5B89;
+  background-color: #fff;
   border-radius: 0 0 2px 2px;
 }
 
@@ -346,14 +342,14 @@ pre.info {
 }
 
 aside.tips {
-  border-color:#99c;
+  border-color:#8C8CC5;
 }
 aside.tips div.border {
     display:none;
 }
 
 .soft-deprecation-notice {
-  color: #262626;
+  color: #333;
   border-color: #eecdde;
   background-color: #f9ecf2;
 }
@@ -368,44 +364,45 @@ aside.tips div.border {
 
 /* {{{ Breadcrumbs */
 #breadcrumbs {
-    color: #737373;
-    background-color: #f2f2f2;
+    color: #666;
+    background-color: #E6E6E6;
     border-color: #ccc;
 }
 #breadcrumbs li:last-child a {
-    color:#262626;
+    color:#333;
 }
 /* }}} */
 
 
 /* {{{ Layout menu Left-hand sidebar */
 .layout-menu {
-  background-color:#f2f2f2;
+  background-color:#E6E6E6;
   border-color: #ccc;
-  border-bottom-color:#bfbfbf;
 }
 .layout-menu ul.parent-menu-list a {
   color: #000;
 }
-.layout-menu ul.parent-menu-list a:hover {
+.layout-menu ul.parent-menu-list a:hover,
+.layout-menu ul.parent-menu-list a:focus {
     color: #693;
     border-color: #693;
     text-shadow:0 0 .25em #fff;
+    outline:0;
 }
 .layout-menu ul.child-menu-list a {
-  border-bottom-color: #808080;
+  border-bottom-color: #999;
 }
 .layout-menu ul.child-menu-list .current a {
-  color:#669;
-  border-color:#669;
+  color:#5B5B89;
+  border-color:#5B5B89;
 }
 /* }}} */
 
 
 /* {{{ Footer */
 footer {
-  background-color: #262626;
-  border-top-color: #99C;
+  background-color: #333;
+  border-top-color: #8C8CC5;
 }
 footer a {
   color:#ccc;
@@ -417,7 +414,7 @@ footer a:visited {
 }
 footer a:hover,
 footer a:focus {
-  color: #888;
+  color: #999;
   border-bottom: none;
 }
 /* }}} */
@@ -425,7 +422,7 @@ footer a:focus {
 
 /* {{{ ElePHPants */
 div.elephpants div.images {
-  background-color: #262626;
+  background-color: #333;
 }
 div.elephpants img {
   opacity: 0.5;
@@ -448,7 +445,7 @@ div.elephpants img:focus {
 
 .mirror {
 	position: relative;
-	border: 1px solid #CCC;
+	border: 1px solid #ccc;
 	padding: 20px;
 	margin: 5px;
 }

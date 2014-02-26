@@ -173,7 +173,7 @@ textarea {
   float: left;
   display: block;
   height: 1.5em;
-  padding: .75em;
+  padding: .75em .75em .75em 1.5em;
   color: #fff;
   text-shadow: 0 1px 0 #fff;
 }
@@ -231,12 +231,9 @@ textarea {
   background-color: #e5e5e5;
   box-shadow: inset 0 3px 8px rgba(0, 0, 0, 0.125);
 }
-.navbar .navbar-inner {
-  background-color: #99c;
-}
 .navbar .brand,
 .navbar .nav > li > a {
-  color: #eef;
+  color: #eee;
   border:0;
   text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
 }
@@ -255,7 +252,7 @@ textarea {
 .navbar .nav .active > a:hover,
 .navbar .nav .active > a:focus {
   color: #fff;
-  background-color: #669;
+  background-color: #5B5B89;
 }
 .navbar .navbar-search .search-query {
   background-color: #fff;
@@ -634,17 +631,13 @@ pre.info {
 }
 
 .layout-menu {
-    padding:.625em .75em 1.5em;
-    border: 1px solid;
-    border-top:0;
-    border-right:0;
+    padding:.75em 1.5em 1.5em;
+    border-right:1px solid;
     -moz-box-sizing:border-box;
     box-sizing:border-box;
 }
 #layout-content {
   padding:1.5em;
-  border:1px solid;
-  border-top:0;
   -moz-box-sizing:border-box;
   box-sizing:border-box;
 }
@@ -758,14 +751,14 @@ table.standard th {
 }
 
 table.standard tr:nth-child(even) td {
-    background-color: #f2f2f2;
+    background-color: #E6E6E6;
 }
 
 table.standard th {
     font-size: 1.125em;
     line-height: 1.333333333;
     padding: 20px 10px 5px 10px;
-    color: #777;
+    color: #666;
     font-weight: normal;
 }
 
@@ -782,7 +775,7 @@ table.standard tr:nth-child(even) td.sub,
 table.standard tr:nth-child(even) th.sub,
 table.standard tr td.sub,
 table.standard tr th.sub {
-    background: #E3E3F1;
+    background: #E6E6E6;
 }
 
 table.standard td.subr,
@@ -1177,7 +1170,7 @@ fieldset {
 
 .title {
   padding:6px 12px;
-  border-top:2px solid #669;
+  border-top:2px solid #666;
   border-bottom:1px solid;
   overflow:hidden;
 }
@@ -1393,7 +1386,7 @@ ul.chunklist_children {
 }
 
 .refsect1 {
-    margin: 1.5em 0 2.25em;
+    margin: 1.5em 0;
 }
 
 .docs .classsynopsis {
@@ -1432,38 +1425,44 @@ ul.chunklist_children {
 }
 .docs .layout-menu ul.parent-menu-list > li > a {
     border:0;
+    font-size: 1.125rem;
+    line-height:1.333333333;
+    margin-bottom:0.666666667em;
+    display:block;
 }
 
 .docs .layout-menu ul.child-menu-list {
     margin: 0;
-    padding:0 .25em;
 }
 
 .layout-menu ul.child-menu-list li {
     list-style-type: none;
     margin: 0;
 }
+.layout-menu ul.child-menu-list li:first-child a {
+    border-top: 1px dotted;
+}
 .layout-menu ul.child-menu-list a {
     font-size: .875em;
     line-height: 1.714285714;
     border-bottom: 1px dotted;
     display:block;
-    padding-left:.125em;
+    padding-left:.75em;
+    position:relative;
 }
 
-.docs .layout-menu ul.child-menu-list .current {
+.layout-menu ul.child-menu-list .current {
     font-weight:bolder;
-}
-.docs .layout-menu ul.child-menu-list .current {
-    position:relative;
 }
 #layout-content .current:before {
     content:"\bb \20";
 }
-.docs .layout-menu ul.child-menu-list .current a:before {
+.layout-menu ul.child-menu-list a:hover:before,
+.layout-menu ul.child-menu-list a:focus:before,
+.layout-menu ul.child-menu-list .current a:before {
     content:"\bb \20";
     position:absolute;
-    left:-.675em;
+    left:0em;
 }
 
 .docs .sect2 {
@@ -1495,8 +1494,7 @@ div.soft-deprecation-notice blockquote.sidebar {
 #breadcrumbs {
     -moz-box-sizing:border-box;
     box-sizing:border-box;
-    border:1px solid;
-    border-top:0;
+    border-bottom:1px solid;
     margin:0 auto;
     font-size:.875em;
     line-height:1.71428571428571;
@@ -1509,7 +1507,7 @@ div.soft-deprecation-notice blockquote.sidebar {
     overflow: hidden;
 }
 #breadcrumbs div {
-    padding:.5em .75em;
+    padding:.5em 1.714285714em;
 }
 #breadcrumbs li {
     display:inline-block;
@@ -1618,7 +1616,7 @@ div.soft-deprecation-notice blockquote.sidebar {
   }
 
   #mainmenu-toggle-overlay {
-    background: #669 url(/images/mobile-menu.png) no-repeat center center;
+    background: #5B5B89 url(/images/mobile-menu.png) no-repeat center center;
     float: right;
     display: block;
     height: 32px;
@@ -1782,9 +1780,8 @@ aside.tips p {
 }
 aside.tips .panel {
     margin:0.66666666666667em 0;
-    background:#f0f0f0;
-    border:1px solid #d9d9d9;
-    border-bottom-color:#d0d0d0;
+    background:#E3E3F1;
+    border:1px solid #C6C6E2;
     border-radius:2px;
 }
 
@@ -1796,7 +1793,6 @@ aside.tips .panel > a {
 aside.tips .panel > a:hover,
 aside.tips .panel > a:focus {
     color:#369;
-    background:#f9f9f9;
 }
 aside.tips .panel .headline,
 .panel .body,
@@ -1813,8 +1809,8 @@ aside.tips div.inner {
     background:inherit;
 }
 .panel .body {
-  background-color: #f9f9f9;
-  border-top:1px solid #d9d9d9;
+  background-color: #fff;
+  border-top:1px solid #C6C6E2;
   border-radius: 0 0 2px 2px;
 }
 .panel .body:first-child {
