@@ -454,9 +454,6 @@ hr {
   position: relative;
   z-index: 100;
 }
-.page-tools .change-language {
-  margin-bottom: 0.75em;
-}
 .page-tools #changelang-langs {
   font-size:.75em;
   line-height:2;
