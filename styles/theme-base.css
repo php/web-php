@@ -1909,5 +1909,13 @@ aside.tips div.inner {
 }
 /* }}} */
 
+/* {{{ Logo Downloads */
+
+.logo-list ul{
+  list-style-type: none;
+}
+
+/* }}} */
+
 
 // vim: set ts=2 sw=2 et:
