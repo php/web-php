@@ -10,6 +10,51 @@ function peclbugl($number)   { echo "<a href=\"http://pecl.php.net/bugs/bug.php?
 ?>
 
 <h1>PHP 5 ChangeLog</h1>
+<section class="version" id="5.5.10"><!-- {{{ 5.5.10 -->
+<h3>Version 5.5.10</h3>
+<b>6-Mar-2014</b>
+<ul><li>Core:
+<ul>
+  <li><?php bugfix(66574); ?> (Allow multiple paths in php_ini_scanned_path).</li>
+</ul></li>
+<li>Date:
+<ul>
+  <li><?php bugfix(45528); ?> (Allow the DateTimeZone constructor to accept timezones
+    per offset too).</li>
+</ul></li>
+<li>Fileinfo:
+<ul>
+  <li><?php bugfix(66731); ?> (file: infinite recursion (CVE-2014-1943)).</li>
+  <li><?php bugfix(66820); ?> (out-of-bounds memory access in fileinfo (CVE-2014-2270)).</li>
+</ul></li>
+<li>GD:
+<ul>
+  <li><?php bugfix(66815); ?> (imagecrop(): insufficient fix for NULL defer (CVE-2013-7327)).</li>
+</ul></li>
+<li>JSON:
+<ul>
+  <li><?php bugfix(65753); ?> (JsonSerializeable couldn't implement on module extension).</li>
+</ul></li>
+<li>LDAP:
+<ul>
+  <li>Implemented ldap_modify_batch (https://wiki.php.net/rfc/ldap_modify_batch).</li>
+</ul></li>
+<li>Openssl:
+<ul>
+  <li><?php bugfix(66501); ?> (Add EC key support to php_openssl_is_private_key).</li>
+</ul></li>
+<li>PCRE:
+<ul>
+  <li>Upgraded to PCRE 8.34.</li>
+</ul></li>
+<li>Pgsql:
+<ul>
+  <li>Added warning for dangerous client encoding and remove possible injections
+    for pg_insert()/pg_update()/pg_delete()/pg_select().</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
 <section class="version" id="5.5.9"><!-- {{{ 5.5.9 -->
 <h3>Version 5.5.9</h3>
 <b>6-Feb-2014</b>
