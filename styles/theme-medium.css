@@ -2,11 +2,11 @@
  *
  *  COLORS:       | HEX     |
  * ---------------+---------+
- *  light-purple  | #E3E3F1 |
+ *  light-purple  | #E2E4EF |
  * ---------------+---------+
- *  medium-purple | #8C8CC5 |
+ *  medium-purple | #8892BF |
  * ---------------+---------+
- *  dark-purple   | #5B5B89 |
+ *  dark-purple   | #4F5B93 |
  * ---------------+---------+
  *
  */
@@ -17,7 +17,7 @@ html {
 }
 
 body {
-  background:#C6C6E2;
+  background:#C4C9DF;
   color: #333;
 }
 #layout-content {
@@ -26,7 +26,7 @@ body {
 }
 
 abbr {
-  border-color: #8C8CC5;
+  border-color: #8892BF;
 }
 
 h1 {
@@ -92,13 +92,13 @@ h1.refname {
 
 .title {
   color: #333;
-  background: #E3E3F1;
+  background: #E2E4EF;
   border-radius:0 0 2px 2px;
-  border-color:#C6C6E2;
-  border-top-color:#5B5B89;
+  border-color:#C4C9DF;
+  border-top-color:#4F5B93;
   box-shadow:
-    inset 1px 0 1px -1px #C6C6E2,
-    inset -1px 0 1px -1px #C6C6E2
+    inset 1px 0 1px -1px #C4C9DF,
+    inset -1px 0 1px -1px #C4C9DF
 }
 .title a {
   color: #333;
@@ -182,8 +182,8 @@ div.warning:before {
 
 /* {{{ Navbar */
 .navbar {
-  border-color:#5B5B89;
-  background:#8C8CC5;
+  border-color:#4F5B93;
+  background:#8892BF;
   box-shadow: 0 .25em .25em  rgba(0,0,0,.1);
 }
 .navbar .brand {
@@ -197,7 +197,7 @@ div.warning:before {
 
 /* {{{ User notes */
 #usernotes .count {
-  background-color: #5B5B89;
+  background-color: #4F5B93;
   color: #fff;
   border-radius: 4px;
 }
@@ -241,12 +241,12 @@ div.warning:before {
   border-color: #ccc;
 }
 .doctable thead tr {
-  border-color: #C6C6E2;
-  border-bottom-color: #8C8CC5;
+  border-color: #C4C9DF;
+  border-bottom-color: #8892BF;
   color: #333;
 }
 .doctable th {
-  background-color: #C6C6E2;
+  background-color: #C4C9DF;
 }
 .doctable tr {
   border-color: #ccc
@@ -282,7 +282,7 @@ div.warning:before {
   background-color: transparent;
 }
 .phpcode span.comment {
-  color: #5B5B89;
+  color: #4F5B93;
   background-color: transparent;
 }
 div.phpcode span.default {
@@ -298,9 +298,7 @@ div.phpcode span.string {
   background-color: transparent;
 }
 
-.para em:not(.emphasis), 
 .para var,
-.simpara em:not(.emphasis),
 .simpara var
 {
   background-color: #E6E6E6;
@@ -312,7 +310,7 @@ div.phpcode span.string {
   font: normal 14px / 1.46 "Source Code Pro", monospace; 
 }
 
-em.reset, var.reset
+var.reset
 {
   background: none !important;
   padding: 0 !important;
@@ -337,7 +335,7 @@ a.genanchor:focus {
 
 
 .warn {
-  border-color: #5B5B89;
+  border-color: #4F5B93;
   background-color: #fff;
   border-radius: 0 0 2px 2px;
 }
@@ -348,7 +346,7 @@ pre.info {
 }
 
 aside.tips {
-  border-color:#8C8CC5;
+  border-color:#8892BF;
 }
 aside.tips div.border {
     display:none;
@@ -399,8 +397,8 @@ aside.tips div.border {
   border-bottom-color: #999;
 }
 .layout-menu ul.child-menu-list .current a {
-  color:#5B5B89;
-  border-color:#5B5B89;
+  color:#4F5B93;
+  border-color:#4F5B93;
 }
 /* }}} */
 
@@ -408,7 +406,7 @@ aside.tips div.border {
 /* {{{ Footer */
 footer {
   background-color: #333;
-  border-top-color: #8C8CC5;
+  border-top-color: #8892BF;
 }
 footer a {
   color:#ccc;

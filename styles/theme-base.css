@@ -222,7 +222,7 @@ textarea {
 }
 .navbar .brand,
 .navbar .nav > li > a {
-  color: #E3E3F1;
+  color: #E2E4EF;
   border:0;
   text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
 }
@@ -241,7 +241,7 @@ textarea {
 .navbar .nav .active > a:hover,
 .navbar .nav .active > a:focus {
   color: #fff;
-  background-color: #5B5B89;
+  background-color: #4F5B93;
 }
 .navbar .navbar-search .search-query {
   background-color: #fff;
@@ -1602,7 +1602,7 @@ div.soft-deprecation-notice blockquote.sidebar {
   }
 
   #mainmenu-toggle-overlay {
-    background: #5B5B89 url(/images/mobile-menu.png) no-repeat center center;
+    background: #4F5B93 url(/images/mobile-menu.png) no-repeat center center;
     float: right;
     display: block;
     height: 32px;
@@ -1765,8 +1765,8 @@ aside.tips p {
 }
 aside.tips .panel {
     margin:0.66666666666667em 0;
-    background:#E3E3F1;
-    border:1px solid #C6C6E2;
+    background:#E2E4EF;
+    border:1px solid #C4C9DF;
     border-radius:2px;
 }
 
@@ -1795,7 +1795,7 @@ aside.tips div.inner {
 }
 .panel .body {
   background-color: #fff;
-  border-top:1px solid #C6C6E2;
+  border-top:1px solid #C4C9DF;
   border-radius: 0 0 2px 2px;
 }
 .panel .body:first-child {
