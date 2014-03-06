@@ -72,7 +72,7 @@ function random_bgcolor($min, $max)
  browser/operating system don't handle transparent PNG images very well.
 </p>
 
-<div class="center">
+<div class="center logo-list">
 <table border="0" width="90%" cellspacing="2" cellpadding="10" id="logos">
  
  <tr>
