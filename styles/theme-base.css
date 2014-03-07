@@ -332,7 +332,7 @@ body, input, textarea {
     font-family: "Source Sans Pro", Helvetica, Arial, sans-serif;
 }
 code,
-pre,
+pre.info,
 .docs .classsynopsis,
 .docs .classsynopsis code {
     font: normal 0.875rem / 1.46 "Source Code Pro", monospace; 
