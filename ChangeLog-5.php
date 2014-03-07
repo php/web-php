@@ -55,6 +55,33 @@ function peclbugl($number)   { echo "<a href=\"http://pecl.php.net/bugs/bug.php?
 </ul>
 <!-- }}} --></section>
 
+<section class="version" id="5.4.26"><!-- {{{ 5.4.26 -->
+<h3>Version 5.4.26</h3>
+<b>06-Mar-2014</b>
+<ul><li>JSON:
+<ul>
+  <li><?php bugfix(65753); ?> (JsonSerializeable couldn't implement on module extension)</li>
+</ul></li>
+<li>Fileinfo:
+<ul>
+  <li><?php bugfix(66731); ?> (file: infinite recursion) (CVE-2014-1943).</li>
+  <li><?php bugfix(66820); ?> (out-of-bounds memory access in fileinfo)</li>
+</ul></li>
+<li>LDAP:
+<ul>
+  <li>Implemented ldap_modify_batch (https://wiki.php.net/rfc/ldap_modify_batch).</li>
+</ul></li>
+<li>Openssl:
+<ul>
+  <li><?php bugfix(66501); ?> (Add EC key support to php_openssl_is_private_key).</li>
+</ul></li>
+<li>Pgsql:
+<ul>
+  <li>Added warning for dangerous client encoding and remove possible injections for pg_insert()/pg_update()/pg_delete()/pg_select().</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
 <section class="version" id="5.5.9"><!-- {{{ 5.5.9 -->
 <h3>Version 5.5.9</h3>
 <b>6-Feb-2014</b>
