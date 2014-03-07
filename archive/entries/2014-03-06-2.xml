@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+  <title>PHP 5.6.0alpha3 released</title>
+  <id>http://php.net/archive/2014.php#id2014-03-06-2</id>
+  <published>2014-03-06T22:42:01+01:00</published>
+  <updated>2014-03-06T22:42:01+01:00</updated>
+  <category term="frontpage" label="PHP.net frontpage news"/>
+  <category term="releases" label="New PHP release"/>
+  <link href="http://php.net/index.php#id2014-03-06-2" rel="alternate" type="text/html"/>
+  <link href="http://php.net/archive/2014.php#id2014-03-06-2" rel="via" type="text/html"/>
+  <content type="xhtml">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+      <p>
+        The PHP development team announces the immediate availability of
+        PHP 5.6.0alpha3. This release adds new features and fixes bugs.
+        All users of PHP are encouraged to test this version carefully,
+        and report any bugs in <a href="https://bugs.php.net">the bug tracking system</a>.
+     </p>
+
+     <strong>THIS IS A DEVELOPMENT PREVIEW - DO NOT USE IT IN PRODUCTION!</strong>
+
+     <p>
+      PHP 5.6.0alpha3 comes with a number of new features, including:
+     </p>
+     <ul>
+        <li>A new magic method called __debugInfo() for providing additional debug information for an object</li>
+        <li>A new config option called clear_env for the FPM SAPI</li>
+        <li>A new function called opcache_is_script_cached()</li>
+        <li>Support for the Windows CA cert store for peer verification when no CA file is available</li>
+        <li>Various other ssl related improvements in the curl and openssl extensions</li>
+     </ul>
+
+     <p>For more information about the new features you can check out the work-in-progress
+      <a href="http://docs.php.net/manual/en/migration56.new-features.php">documentation</a>
+      or you can read the full list of changes in the
+      <a href="https://github.com/php/php-src/blob/php-5.6.0alpha3/NEWS">NEWS file</a> contained
+      in the release archive.
+     </p>
+
+     <p>
+      For source downloads of PHP 5.6.0alpha3 please visit
+      the <a href="http://downloads.php.net/tyrael">download page</a>. Windows binaries
+      can be found on <a href="http://windows.php.net/qa/">windows.php.net/qa/</a>.
+     </p>
+
+     <p>
+      Hopefully this was our last alpha for 5.6.0, and our first beta should show up on the
+      20th of March, which will mark the start of the feature freeze for this version.
+     </p>
+
+     <p>
+        Thank you for helping us make PHP better.
+     </p>
+    </div>
+  </content>
+</entry>
