@@ -110,7 +110,7 @@ if ($config["cache"]) {
 </div>
 
 <?php if (!empty($config['breadcrumbs'])): ?>
-  <div id="breadcrumbs">
+  <div id="breadcrumbs" class="clearfix">
     <?php if (isset($config['prev'])): ?>
       <div class="prev">
         <a href="<?php echo $config['prev'][0]; ?>">
