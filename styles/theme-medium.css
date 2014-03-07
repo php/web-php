@@ -456,9 +456,9 @@ div.elephpants img:focus {
 }
 
 .headsup {
-  padding:.25em 0;
-  height:1.5em;
-  border-bottom:.125em solid #696;
+  padding:.25rem 0;
+  height:1.5rem;
+  border-bottom:.125rem solid #696;
   background-color: #9c9;
   color:#fff;
 }
