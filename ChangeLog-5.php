@@ -65,7 +65,7 @@ function peclbugl($number)   { echo "<a href=\"http://pecl.php.net/bugs/bug.php?
 <li>Fileinfo:
 <ul>
   <li><?php bugfix(66731); ?> (file: infinite recursion) (CVE-2014-1943).</li>
-  <li><?php bugfix(66820); ?> (out-of-bounds memory access in fileinfo)</li>
+  <li><?php bugfix(66820); ?> (out-of-bounds memory access in fileinfo) (CVE-2014-2270).</li>
 </ul></li>
 <li>LDAP:
 <ul>
