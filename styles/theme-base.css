@@ -332,7 +332,7 @@ body, input, textarea {
     font-family: "Source Sans Pro", Helvetica, Arial, sans-serif;
 }
 code,
-pre.info,
+pre,
 .docs .classsynopsis,
 .docs .classsynopsis code {
     font: normal 0.875rem / 1.46 "Source Code Pro", monospace; 
@@ -1125,7 +1125,7 @@ fieldset {
     margin: 0px;
     padding: 0.75rem 0.625rem;
     overflow: auto;
-    font: normal 0.875 / 1.46 "Source Code Pro", monospace;
+    font: normal 0.875rem / 1.46 "Source Code Pro", monospace;
 }
 @media (max-width: 465px) {
     .content-box h3 .release-state {
