@@ -49,7 +49,7 @@ site_header(
 <h2 id="newsgroups">Newsgroups</h2>
 
 <p>
- The PHP language newsgroup is <code>comp.lang.php</code>, available on any
+ The PHP language newsgroup is comp.lang.php, available on any
  news server around the globe. In addition to this many of our mailing
  lists are also reflected onto the news server at
  <a href="news://news.php.net">news://news.php.net/</a>. The
