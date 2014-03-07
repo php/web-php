@@ -96,22 +96,12 @@ $intro = <<<EOF
 
 EOF;
 if(!empty($RELEASES[5])) {
-    $releases = array_chunk($RELEASES[5], 2, $preserve_keys = TRUE);
-    foreach ($releases as $row) {
+    $intro .= "<ul>\n";
+    foreach ($RELEASES[5] as $version => $release) {
         $intro .= "
-        <div class='row-fluid'>
-";
-        foreach ($row as $version => $release) {
-            $intro .= "
-          <div class='span6'>
-            <p><a class='download-link' href='/downloads.php#v$version'>$version</a> <a class='notes' href='/ChangeLog-5.php#$version'>Release Notes</a></p>
-          </div>
-";
-        }
-        $intro .="
-        </div>
-";
+        <li><a class='download-link' href='/downloads.php#v$version'>$version</a> <a class='notes' href='/ChangeLog-5.php#$version'>Release Notes</a></li>\n";
     }
+    $intro .= "</ul>\n";
 }
 $intro .= <<<EOF
     </div>

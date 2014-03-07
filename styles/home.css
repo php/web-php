@@ -5,31 +5,23 @@ complimentary greens: 9FB553    7B8851    61761B    C6DA82    CCDA99
 */
 #intro {
     background:#333 url('/images/bg-texture-00.svg');
-    box-shadow:inset 0 0 2em rgba(0,0,0,.375);
+    box-shadow:inset 0 0 2rem rgba(0,0,0,.375);
     color:#fff;
-    border-bottom:.25em solid #8892BF;
+    border-bottom:.25rem solid #8892BF;
 }
-#intro p {
+#intro p,
+#intro ul {
     text-shadow:0 1px 2px rgba(0,0,0,.5);
-    font-size:1.25em;
-    line-height:1.2;
-    margin-bottom:1.2em;
+    font-size:1.125rem;
 }   
 #intro .row .blurb,
 #intro .row .download {
   display:table-cell;
   float:none;
   vertical-align: middle;
+  padding:.75em 1.5rem 0;
 }
-#intro .blurb {
-  padding:0 1.5em;
-}
-#intro .blurb p {
-    line-height:1.8;
-} 
 #intro h2 {
-    font-size:1.25em;
-    line-height:1.8;
     color:#ccc;
     text-shadow:0 -1px 0 rgba(0,0,0,.25);
     text-transform:uppercase;
@@ -44,14 +36,12 @@ complimentary greens: 9FB553    7B8851    61761B    C6DA82    CCDA99
 
 #intro .download {
   background:rgba(255,255,255,.1);
-  padding:.75em 1.5em;
 }
-#intro .download p {
-    margin:0;
+#intro .download ul {
+  list-style:none;
 }
 #intro .download a.notes {
     font-size:.75em;
-    line-height:2;
     padding-left:.5em;
     white-space:nowrap;
 }

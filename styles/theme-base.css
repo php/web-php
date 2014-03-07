@@ -169,11 +169,11 @@ textarea {
 }
 
 .navbar .brand {
-  margin-right:.75em;
+  margin-right:.75rem;
   float: left;
   display: block;
-  height: 1.5em;
-  padding: .75em .75em .75em 1.5em;
+  height: 1.5rem;
+  padding: .75rem .75rem .75rem 1.5rem;
 }
 .navbar .brand:hover,
 .navbar .brand:focus {
@@ -182,7 +182,7 @@ textarea {
 .navbar-search {
   position: relative;
   float: left;
-  margin-top: .625em;
+  margin-top: .625rem;
   margin-bottom: 0;
   width:100%;
   -moz-box-sizing:border-box;
@@ -190,7 +190,7 @@ textarea {
 }
 .navbar-search .search-query {
   margin-bottom: 0;
-  padding: .25em .5em;
+  padding: .25rem .5rem;
   line-height: 1;
   -moz-box-sizing: border-box;
   box-sizing:border-box;
@@ -211,7 +211,7 @@ textarea {
 }
 .navbar .nav > li > a {
   float: none;
-  padding: .75em;
+  padding: .75rem;
 }
 .navbar .nav > li > a:focus,
 .navbar .nav > li > a:hover {
@@ -335,12 +335,12 @@ code,
 pre.info,
 .docs .classsynopsis,
 .docs .classsynopsis code {
-    font: normal 14px / 1.46 "Source Code Pro", monospace; 
+    font: normal 0.875rem / 1.46 "Source Code Pro", monospace; 
 }
 
 body {
-    font-size: 1em;
-    line-height: 1.5;
+    font-size: 1rem;
+    line-height: 1.5rem;
     padding-left:0;
     padding-right:0;
     padding-bottom:0;
@@ -365,26 +365,21 @@ input[type="search"] {
     box-sizing: content-box;
 }
 
+h1, h2, h3, h4, h5, h6, p {
+  line-height: 1.5rem;
+  margin:0 0 .75rem;
+}
 h1 {
-    font-size: 1.5em;
-    line-height: 1;
-    margin:0 0 .5em;
+    font-size: 1.5rem;
 }
 h2 {
-    font-size: 1.25em;
-    line-height: 1.2;
-    margin:0 0 0.6em;
+    font-size: 1.25rem;
 }
-h3 {
-    font-size: 1.125em;
-    line-height: 1.333333333;
-    margin:0 0 0.66666666666667em;
-}
-p {
-    margin: .75em 0;
+h3, h4, h5, h6 {
+    font-size: 1.125rem;
 }
 ul, ol {
-    margin:.75em 1.5em;
+    margin:.75rem 1.5rem;
     padding:0;
 }
 p:empty {
@@ -393,11 +388,10 @@ p:empty {
     display:none;
 }
 small {
-    font-size: 0.75em;
-    line-height: 2;
+    font-size: 0.75rem;
 }
 blockquote {
-    margin: .75em 0 .75em .75em;
+    margin: .75rem 0 .75rem .75rem;
 }
 
 abbr {
@@ -408,16 +402,11 @@ a {
     text-decoration:none;
 }
 
-h4, h5, h6 {
-    font-size:1.125em;
-    line-height: 1.333333333;
-    margin:0 0 0.666666667em;
-}
 hr {
-    margin:1.5em 0 1.25em;
+    margin:1.5rem 0;
     border:0;
     height:0;
-    border-top:.25em solid #99c;
+    border-top:.25rem solid #99c;
 }
 
 .navbar .brand img {
@@ -430,30 +419,26 @@ hr {
 }
 
 .navbar {
-  border-bottom:.25em solid;
+  border-bottom:.25rem solid;
   overflow: visible;
   *position: relative;
   *z-index: 2;
 }
 
 .page-tools {
-  margin-left:1.5em;
+  margin-left:1.5rem;
   float: right;
   text-align: right;
   position: relative;
   z-index: 100;
 }
-.page-tools #changelang-langs {
-  font-size:.75em;
-  line-height:2;
-}
+.page-tools #changelang-langs,
 .page-tools .edit-bug {
-  line-height: 2;
-  font-size: 0.75em;
+  font-size:.75rem;
 }
 .page-tools .edit-bug a {
     border: 0;
-    margin-left: 1em;
+    margin-left: 1rem;
 }
 
 /**
@@ -461,13 +446,14 @@ hr {
  */
 #usernotes {
     position: relative;
-    margin-top:1.5em;
+    margin-top:1.5rem;
 }
 #usernotes .count {
     display:inline-block;
     vertical-align: text-top;
-    padding: 0.333333333em .5em;
-    font-size: 0.666666667em;
+    padding: 0.25rem 0.375rem;
+    font-size: 0.75rem;
+    line-height:1rem;
 }
 
 /* Add a note buttons. */
@@ -481,12 +467,12 @@ hr {
 
 #usernotes .foot {
     text-align: right;
-    margin-bottom: 1em;
+    margin-bottom: 1rem;
 }
 
 /* Notes themselves. */
 #usernotes .note {
-    margin: 1.5em 0;
+    margin: 1.5rem 0;
     position: relative;
 }
 
@@ -496,9 +482,8 @@ hr {
 
 #usernotes .note .name {
     border-bottom: 0;
-    margin-left: 1em;
-    font-size: 1.125em;
-    line-height:1.333333333;
+    margin-left: 1rem;
+    font-size: 1.125rem;
 }
 
 #usernotes .note .name em {
@@ -517,7 +502,7 @@ hr {
 
 #usernotes .note .admin {
     float: left;
-    padding-left: 1em;
+    padding-left: 1rem;
 }
 
 #usernotes .note .admin a {
@@ -525,9 +510,9 @@ hr {
 }
 
 #usernotes .note .text {
-    border-top: .125em solid;
-    padding: .625em .75em .75em;
-    margin-top:.25em;
+    border-top: .125rem solid;
+    padding: .625rem .75rem .75rem;
+    margin-top:.25rem;
     border-radius:0 0 2px 2px;
     border-bottom:1px solid;
 }
@@ -571,19 +556,19 @@ hr {
 }
 
 #usernotes .note .votes .tally {
-    padding: 0 0.3em;
+    padding: 0 0.3rem;
 }
 
 /* Definition lists used on eg. the unsub page */
 dl dd {
     margin:0;
-    padding:0 1.5em;
+    padding:0 1.5rem;
 }
 dl dd p {
     margin:0;
 }
 dl dd p + p {
-    margin-top: .75em;
+    margin-top: .75rem;
 }
 
 .phpcode, div.classsynopsis {
@@ -591,19 +576,19 @@ dl dd p + p {
 }
 div.classsynopsisinfo_comment {
     font-weight: bold;
-    margin-top:.75em;
+    margin-top:.75rem;
 }
 
 .warn {
-    padding: .75em 1em;
-    margin: 1.5em 0 1.5em 1.5em;
-    border-top: .1875em solid;
+    padding: .75rem 1rem;
+    margin: 1.5rem 0 1.5rem 1.5rem;
+    border-top: .1875rem solid;
 }
 
 pre.info {
     border: 1px solid;
-    margin: 1em 2em 1.3em;
-    margin-right: 0.8em;
+    margin: 1rem 2rem 1.3rem;
+    margin-right: 0.8rem;
 }
 
 #langform {
@@ -612,18 +597,18 @@ pre.info {
 
 
 #layout {
-    margin: 0 auto 1.5em;
+    margin: 0 auto 1.5rem;
     clear:both;
 }
 
 .layout-menu {
-    padding:.75em 1.5em 1.5em;
+    padding:.75rem 1.5rem 1.5rem;
     border-right:1px solid;
     -moz-box-sizing:border-box;
     box-sizing:border-box;
 }
 #layout-content {
-  padding:1.5em;
+  padding:1.5rem;
   -moz-box-sizing:border-box;
   box-sizing:border-box;
 }
@@ -648,25 +633,24 @@ pre.info {
 }
 
 #search-results li {
-    padding:1em 0;
+    padding:1rem 0;
     list-style: none;
 }
 
 #search-results li .result {
-    font-size: 1.25em;
-    line-height:1.2;
+    font-size: 1.25rem;
 }
 
 #results_nav_list {
     margin:0;
-    padding:1em 0;
+    padding:1rem 0;
 }
 #results_nav_list li {
     list-style: none;
     display:inline-block;
 }
 #results_nav_list li a {
-    padding:.5em .66em;
+    padding:.5rem .66rem;
 }
 #results_nav_list li.current {
     font-weight: bold;
@@ -676,8 +660,8 @@ pre.info {
 footer {
     clear: both;
     overflow: auto;
-    border-top: .25em solid;
-    padding: .75em 0;
+    border-top: .25rem solid;
+    padding: .75rem 0;
 }
 
 footer ul {
@@ -690,7 +674,7 @@ footer .footmenu li {
 }
 
 footer a {
-    margin: 0 .5em;
+    margin: 0 .5rem;
 }
 
 
@@ -719,7 +703,7 @@ div.elephpants img {
 table {
   border-collapse: collapse;
   border-spacing: 0;
-  margin:0 0 1.5em;
+  margin:0 0 1.5rem;
 }
 table td {
   vertical-align:top;
@@ -741,8 +725,7 @@ table.standard tr:nth-child(even) td {
 }
 
 table.standard th {
-    font-size: 1.125em;
-    line-height: 1.333333333;
+    font-size: 1.125rem;
     padding: 20px 10px 5px 10px;
     color: #666;
     font-weight: normal;
@@ -776,7 +759,7 @@ table.standard th.subr {
 #layout .gsc-control-cse,
 #layout .gsc-control-cse .gsc-table-result {
     font-family: "Source Sans Pro", Helvetica, Arial, sans-serif;
-    font-size: 1em;
+    font-size: 1rem;
     margin: 0;
     padding: 0;
     position: relative;
@@ -785,7 +768,7 @@ table.standard th.subr {
 /* Override the search box styling. */
 #layout .cse form.gsc-search-box,
 #layout form.gsc-search-box {
-    margin: 0 0 1em 0;
+    margin: 0 0 1rem 0;
     padding: 0;
 }
 
@@ -811,7 +794,6 @@ table.standard th.subr {
     border: solid 1px #99c;
     border-radius: 0;
     color: rgb(238, 238, 255);
-    font-size: 100%;
 }
 
 #layout .cse input.gsc-search-button:hover,
@@ -829,7 +811,7 @@ table.standard th.subr {
 #layout .cse div.gsc-results-wrapper-visible,
 #layout div.gsc-results-wrapper-visible {
     position: relative;
-    min-height: 11em;
+    min-height: 11rem;
 }
 
 #layout .cse .gsc-tabsArea,
@@ -839,7 +821,7 @@ table.standard th.subr {
     left: 0;
     width: 23.404%;
     margin-right: 2.762%;
-    padding:.5em .75em;
+    padding:.5rem .75rem;
     border: 1px solid;
     background-color:#f2f2f2;
     border-color: #e0e0e0;
@@ -894,7 +876,7 @@ table.standard th.subr {
 #layout .gsc-above-wrapper-area {
     border: 0;
     margin: 0;
-    padding: 0 0 1em 26.166%;
+    padding: 0 0 1rem 26.166%;
     width: 73.834%;
 }
 
@@ -912,7 +894,7 @@ table.standard th.subr {
 #layout .cse .gsc-result-info,
 #layout .gsc-result-info {
     color: #333;
-    font-size: 0.75em;
+    font-size: 0.75rem;
     padding: 0;
     margin: 0;
 }
@@ -931,7 +913,7 @@ table.standard th.subr {
 
 #layout .cse .gsc-webResult.gsc-result,
 #layout .gsc-webResult.gsc-result {
-    margin: 0 0 1em 0;
+    margin: 0 0 1rem 0;
     padding: 0;
     border: 0;
 }
@@ -975,7 +957,7 @@ table.standard th.subr {
 /* }}} */
 
 div.informalexample {
-    margin: .75em 0;
+    margin: .75rem 0;
 }
 
 em {
@@ -991,8 +973,8 @@ strong {
     display:none;
     text-decoration:none;
     position:fixed;
-    bottom:.75em;
-    right:.75em;
+    bottom:.75rem;
+    right:.75rem;
     overflow:hidden;
     width:43px;
     height:43px;
@@ -1040,15 +1022,14 @@ fieldset {
 }
 
 .tt-dropdown-menu h3 {
-    font-size:1.25em;
-    line-height:1.4;
+    font-size:1.25rem;
     color:#ccc;
     text-shadow:0 -1px 0 rgba(0,0,0,.25);
     text-transform:uppercase;
     letter-spacing:3px;
     word-spacing:6px;
     margin: 0;
-    padding: 0.3em;
+    padding: 0.3rem;
 }
 
 .tt-dropdown-menu .result-count {
@@ -1068,19 +1049,18 @@ fieldset {
     border: none;
     color: white;
     display: block;
-    padding: 0.3em;
+    padding: 0.3rem;
     background: rgba(0, 0, 0, 0.2);
 }
 
 .tt-suggestion {
     margin: 0;
-    padding: 0.3em;
+    padding: 0.3rem;
 }
 
 .tt-suggestion h4 {
     color: white;
     margin: 0;
-    line-height: 1.3;
     overflow: hidden;
     text-overflow: ellipsis;
 }
@@ -1088,9 +1068,8 @@ fieldset {
 /* Class and other matches descriptions tend to be useless. */
 .tt-suggestion .description {
     display: block;
-    font-size: 0.8em;
-    line-height: 1.3;
-    max-height: 1.3em;
+    font-size: 0.75rem;
+    max-height: 1.25rem;
     overflow: hidden;
     text-overflow: ellipsis;
 }
@@ -1119,7 +1098,7 @@ fieldset {
 /* }}} */
 
 .downloads .content-box {
-  margin:0 0 2.25em;
+  margin:0 0 2.25rem;
 }
 .content-header .release-state {
     float: right;
@@ -1130,7 +1109,7 @@ fieldset {
 }
 .content-box .md5sum {
     display: block;
-    font: normal 14px / 1.46 "Source Code Pro", monospace;
+    font: normal 0.875rem / 1.46 "Source Code Pro", monospace;
 }
 .content-box .md5sum:before {
     content: "md5: ";
@@ -1138,15 +1117,15 @@ fieldset {
 }
 .content-box .releasedate {
     float: right;
-    font-size: 0.9em;
+    font-size: 0.9rem;
 }
 .content-box pre {
     background: white;
     border: solid 1px rgb(214, 214, 214);
     margin: 0px;
-    padding: 0.75em 0.625em;
+    padding: 0.75rem 0.625rem;
     overflow: auto;
-    font: normal 14px / 1.46 "Source Code Pro", monospace;
+    font: normal 0.875 / 1.46 "Source Code Pro", monospace;
 }
 @media (max-width: 465px) {
     .content-box h3 .release-state {
@@ -1155,10 +1134,11 @@ fieldset {
 }
 
 .title {
-  padding:6px 12px;
-  border-top:2px solid #666;
+  padding:.5rem .75rem;
+  border-top:.125rem solid #666;
   border-bottom:1px solid;
   overflow:hidden;
+  margin-bottom:.75rem;
 }
 .title a {
   border:0;
@@ -1193,14 +1173,14 @@ fieldset {
     cursor:pointer;
 }
 .refsect1 dt {
-    height:1.5em;
+    height:1.5rem;
 }
 
 .refsect1 code.parameter {
     font-weight:bold;
 }
 .docs code.parameter {
-    font-size:1em;
+    font-size:1rem;
 }
 .docs .methodname strong {
     font-style:normal;
@@ -1219,14 +1199,14 @@ div.warning,
 div.caution,
 blockquote.note {
     border:1px solid;
-    padding:.375em .5em;
+    padding:.375rem .5rem;
     position:relative;
-    margin-top:.75em;
-    margin-bottom:.75em;
+    margin-top:.75rem;
+    margin-bottom:.75rem;
 }
 
 div.warning strong.warning {
-    font-size: 1.5em;
+    font-size: 1.5rem;
     display:block;
     text-align: center;
 }
@@ -1236,7 +1216,7 @@ div.tip strong.tip,
 div.caution b.caution,
 div.caution strong.caution {
     float: left;
-    margin-right: 0.5em;
+    margin-right: 0.5rem;
 }
 blockquote.note p,
 div.caution p,
@@ -1252,10 +1232,10 @@ div.tip p {
 .docs .sect1 .dc-description,
 .docs .sect1 .dc-description code {
     font-weight:400;
-    font-size:16px;
+    font-size:1rem;
     font-family:"Source Code Pro", monospace;
-    letter-spacing:-.0625em;
-    word-spacing:-.125em;
+    letter-spacing:-.0625rem;
+    word-spacing:-.125rem;
     margin:0;
 }
 
@@ -1265,34 +1245,34 @@ div.tip p {
 }
 
 .docs dl dd + dt {
-    margin-top:.75em;
+    margin-top:.75rem;
 }
 
 /* }}} */
 
 .docs .example {
-    margin: .75em 0;
+    margin: .75rem 0;
 }
 
 /* {{{ Examples  */
 
 .docs .example-contents {
-    margin-bottom:.75em;
+    margin-bottom:.75rem;
 }
 .docs .example-contents pre {
     margin:0;
 }
 .docs .example-contents > [class$="code"],
 .docs .example-contents.screen {
-    padding: .75em .625em;
+    padding: .75rem .625rem;
     border:1px solid;
 }
 
 .refsect1 .dc-description,
 .docs .sect1 .dc-description {
-    padding: .5em .75em .625em;
+    padding: .5rem .75rem .625rem;
     border: 1px solid;
-    margin-bottom: .75em;
+    margin-bottom: .75rem;
 }
 
 .docs .phpcode code {
@@ -1310,12 +1290,12 @@ div.tip p {
 
 .docs td,
 .docs th {
-    padding: .25em .5em;
+    padding: .25rem .5rem;
 }
 
 .doctable {
     width: 100%;
-    margin:.75em 0;
+    margin:.75rem 0;
 }
 .doctable thead tr {
     border:1px solid;
@@ -1354,8 +1334,7 @@ ul.chunklist_children {
 }
 
 .docs .refnamediv p.verinfo {
-    font-size: .75em;
-    line-height:2;
+    font-size: .75rem;
 }
 .docs .refnamediv p {
     margin:0;
@@ -1372,11 +1351,11 @@ ul.chunklist_children {
 }
 
 .refsect1 {
-    margin: 1.5em 0;
+    margin: 1.5rem 0;
 }
 
 .docs .classsynopsis {
-    margin-bottom:.75em;
+    margin-bottom:.75rem;
 }
 
 
@@ -1389,7 +1368,7 @@ ul.chunklist_children {
 .classsynopsis .methodsynopsis,
 .classsynopsis .destructorsynopsis,
 .classsynopsis .fieldsynopsis {
-    margin-left:2em;
+    margin-left:2rem;
 }
 
 #changelang {
@@ -1412,8 +1391,7 @@ ul.chunklist_children {
 .docs .layout-menu ul.parent-menu-list > li > a {
     border:0;
     font-size: 1.125rem;
-    line-height:1.333333333;
-    margin-bottom:0.666666667em;
+    margin-bottom:0.75rem;
     display:block;
 }
 
@@ -1429,11 +1407,10 @@ ul.chunklist_children {
     border-top: 1px dotted;
 }
 .layout-menu ul.child-menu-list a {
-    font-size: .875em;
-    line-height: 1.714285714;
+    font-size: .875rem;
     border-bottom: 1px dotted;
     display:block;
-    padding-left:.75em;
+    padding-left:.75rem;
     position:relative;
 }
 
@@ -1448,11 +1425,11 @@ ul.chunklist_children {
 .layout-menu ul.child-menu-list .current a:before {
     content:"\bb \20";
     position:absolute;
-    left:0em;
+    left:0;
 }
 
 .docs .sect2 {
-    margin-top: .75em;
+    margin-top: .75rem;
 }
 
 /* Soft-deprecation Notices */
@@ -1482,24 +1459,23 @@ div.soft-deprecation-notice blockquote.sidebar {
     box-sizing:border-box;
     border-bottom:1px solid;
     margin:0 auto;
-    font-size:.875em;
-    line-height:1.71428571428571;
+    font-size:.875rem;
     display:none;
 }
 #breadcrumbs ul {
     margin:0;
-    padding:.5em;
-    padding-left: 1.714285714em;
+    padding:.5rem;
+    padding-left: 1.5rem;
     overflow: hidden;
 }
 #breadcrumbs div {
-    padding:.5em 1.714285714em;
+    padding:.5rem 1.5rem;
 }
 #breadcrumbs li {
     display:inline-block;
 }
 #breadcrumbs li+li:before {
-    padding:0 .5em 0;
+    padding:0 .5rem 0;
     content:"\203A";
 }
 #breadcrumbs a:link,
@@ -1525,7 +1501,7 @@ div.soft-deprecation-notice blockquote.sidebar {
     transform: translateZ(0);
   }
   body {
-    margin:3.25em 0 0;
+    margin:3.25rem 0 0;
   }
   #breadcrumbs {
     display:block;
@@ -1626,7 +1602,7 @@ div.soft-deprecation-notice blockquote.sidebar {
 
   .navbar .brand {
     float: left;
-    margin-bottom: 0.5em;
+    margin-bottom: 0.5rem;
   }
 
   .navbar-search {
@@ -1666,7 +1642,7 @@ div.soft-deprecation-notice blockquote.sidebar {
 
   #mainmenu-toggle:checked + .nav {
     /* This just has to be big enough to cover whatever's in .nav. */
-    max-height: 50em;
+    max-height: 50rem;
   }
 
   #flash-message {
@@ -1690,7 +1666,7 @@ div.soft-deprecation-notice blockquote.sidebar {
 
 @media (max-width: 979px) and (min-width: 768px) {
   #intro .download-php a.btn-pop {
-    padding-right:.375em;
+    padding-right:.375rem;
   }
 }
 @media (min-width:980px) {
@@ -1716,17 +1692,17 @@ div.soft-deprecation-notice blockquote.sidebar {
 }
 #goto .search .results {
   text-shadow: 0px 2px 3px #555;
-  font-size: 2em;
+  font-size: 2rem;
   line-height: 1;
 }
 #goto .search .results :focus {
-  font-size: 2em;
+  font-size: 2rem;
   line-height: 1.2;
 }
 #goto .search .text {
   color: #222;
   text-shadow: 0px 2px 3px #555;
-  font-size: 10em;
+  font-size: 10rem;
   line-height: .7;
 }
 #trick {
@@ -1764,7 +1740,7 @@ aside.tips p {
   margin-top:0;
 }
 aside.tips .panel {
-    margin:0.66666666666667em 0;
+    margin:0.75rem 0;
     background:#E2E4EF;
     border:1px solid #C4C9DF;
     border-radius:2px;
@@ -1782,13 +1758,13 @@ aside.tips .panel > a:focus {
 aside.tips .panel .headline,
 .panel .body,
 aside.tips .panel > a {
-    padding:.75em 1em;
+    padding:.75rem 1rem;
     margin:0;
 }
 /* Announcement Area */
 
 aside.tips div.inner {
-    padding:0 0 0 .75em;
+    padding:0 0 0 .75rem;
     clear:none;
     border:0;
     background:inherit;
@@ -1825,12 +1801,12 @@ aside.tips div.inner {
 
 #add-note-usernotes li
 {
-  margin-bottom: 1em;
+  margin-bottom: 1rem;
 }
 
 #add-note-usernotes #usernotes {
   position: relative;
-  margin: 1em 0 1em 100px;
+  margin: 1rem 0 1rem 100px;
 }
 
 #whatnottoenter strong
@@ -1846,15 +1822,15 @@ aside.tips div.inner {
 
 #whatnottoenter div.row-fluid
 {
-  margin-bottom: 1em;
+  margin-bottom: 1rem;
 }
 
 #whatnottoenter strong:before{
   color: #333366;
   content: '•';
   position: absolute;
-  font-size: 2em;
-  margin: -0.5em 0 0 -0.5em;
+  font-size: 2rem;
+  margin: -0.5rem 0 0 -0.5rem;
 }
 /* }}} */
 
@@ -1866,7 +1842,7 @@ aside.tips div.inner {
   width: 100%;
   z-index: 95;
   text-align: center;
-  box-shadow: 0 0.25em 0.25em rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0.25rem 0.25rem rgba(0, 0, 0, 0.1);
 }
 
 #flash-message .message {
@@ -1874,7 +1850,7 @@ aside.tips div.inner {
   text-align: center;
   position: relative;
   border-bottom:1px solid;
-  padding:.25em;
+  padding:.25rem;
 }
 
 #flash-message .message a {
@@ -1888,7 +1864,7 @@ aside.tips div.inner {
   margin:0;
 }
 .newsentry {
-  margin: 0 0 1.5em;
+  margin: 0 0 1.5rem;
   position: relative;
 }
 .newsentry h2 {
