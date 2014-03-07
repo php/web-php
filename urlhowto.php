@@ -56,9 +56,9 @@ function a($href) {
 <h2>Page shortcuts</h2>
 
 <p>
- If you write in a PHP.net URL, like <tt><?php echo $MYSITE; ?>get-involved</tt>,
+ If you write in a PHP.net URL, like <code><?php echo $MYSITE; ?>get-involved</code>,
  first this URL is matched against the PHP.net pages. If there is
- a page named <tt>get-involved.php</tt>, then you'll get that page
+ a page named <code>get-involved.php</code>, then you'll get that page
  immediately. This type of shortcut makes easy to type in a link
  in an IRC conversation or mailing list message. If the script
  finds no page with this name, it tries to find a manual page.
@@ -69,16 +69,16 @@ function a($href) {
 <p>
  If your URL can't be matched with a page name, a manual page
  is searched for your query. This is the case for the 
- <tt><?php echo $MYSITE; ?>preg_match</tt> URL. The following pages
+ <code><?php echo $MYSITE; ?>preg_match</code> URL. The following pages
  are searched for in the manual:</p>
 <ul>
- <li>Chapter pages, like <tt><?php echo $MYSITE; ?>installation</tt></li>
- <li>Reference pages, like <tt><?php echo $MYSITE; ?>imap</tt></li>
- <li>Function pages, like <tt><?php echo $MYSITE; ?>join</tt></li>
- <li>Class pages, like <tt><?php echo $MYSITE; ?>dir</tt></li>
- <li>Feature pages, like <tt><?php echo $MYSITE; ?>safe_mode</tt></li>
- <li>Control structure pages, like <tt><?php echo $MYSITE; ?>while</tt></li>
- <li>Other language pages, like <tt><?php echo $MYSITE; ?>oop</tt></li>
+ <li>Chapter pages, like <code><?php echo $MYSITE; ?>installation</code></li>
+ <li>Reference pages, like <code><?php echo $MYSITE; ?>imap</code></li>
+ <li>Function pages, like <code><?php echo $MYSITE; ?>join</code></li>
+ <li>Class pages, like <code><?php echo $MYSITE; ?>dir</code></li>
+ <li>Feature pages, like <code><?php echo $MYSITE; ?>safe_mode</code></li>
+ <li>Control structure pages, like <code><?php echo $MYSITE; ?>while</code></li>
+ <li>Other language pages, like <code><?php echo $MYSITE; ?>oop</code></li>
 </ul>
 <p>
  Since there are several manual pages that could potentionally match the query
@@ -86,43 +86,43 @@ function a($href) {
 </p>
 <ul>
  <li>Extension <abbr title="Table of Contents">TOC</abbr>:
-  <tt><?php echo $MYSITE ?>book.extname</tt>
+  <code><?php echo $MYSITE ?>book.extname</code>
   (ex: <?php a("book.dom")?>).
  </li>
  <li>Extension intro pages:
-  <tt><?php echo $MYSITE ?>intro.extname</tt>
+  <code><?php echo $MYSITE ?>intro.extname</code>
   (ex: <?php a("intro.array") ?>).
  </li>
  <li>Extension setup <abbr title="Table of Contents">TOC</abbr>:
-  <tt><?php echo $MYSITE ?>extname.setup</tt>
+  <code><?php echo $MYSITE ?>extname.setup</code>
   (ex: <?php a("intl.setup") ?>).
  </li>
  <li>Extension install chapter:
-  <tt><?php echo $MYSITE ?>extname.installation</tt>
+  <code><?php echo $MYSITE ?>extname.installation</code>
   (ex: <?php a("apc.installation") ?>).
  </li>
  <li>Extension configuration:
-  <tt><?php echo $MYSITE ?>extname.configuration</tt>
+  <code><?php echo $MYSITE ?>extname.configuration</code>
   (ex: <?php a("session.configuration") ?>).
  </li>
  <li>Extension resources:
-  <tt><?php echo $MYSITE ?>extname.resources</tt>
+  <code><?php echo $MYSITE ?>extname.resources</code>
   (ex: <?php a("mysql.resources") ?>).
  </li>
  <li>Extension constants:
-  <tt><?php echo $MYSITE ?>extname.constants</tt>
+  <code><?php echo $MYSITE ?>extname.constants</code>
   (ex: <?php a("image.constants") ?>).
  </li>
  <li>Class synopsis:
-  <tt><?php echo $MYSITE ?>class.classname</tt>
+  <code><?php echo $MYSITE ?>class.classname</code>
   (ex: <?php a("class.xmlreader") ?>).
  </li>
  <li>Class method:
-  <tt><?php echo $MYSITE ?>classname.methodname</tt>
+  <code><?php echo $MYSITE ?>classname.methodname</code>
   (ex: <?php a("pdo.query") ?>).
  </li>
  <li>Functions:
-  <tt><?php echo $MYSITE ?>function.functionname</tt>
+  <code><?php echo $MYSITE ?>function.functionname</code>
   (ex: <?php a("function.strpos") ?>).
  </li>
 </ul>
@@ -133,7 +133,7 @@ function a($href) {
  always override this setting by explicitly providing
  the language you want to get to. You can embed the language
  in the URL before the manual search term.
- <tt><?php echo $MYSITE; ?>hu/sort</tt> will bring up
+ <code><?php echo $MYSITE; ?>hu/sort</code> will bring up
  the Hungarian manual page for sort() for example.
 </p>
 
@@ -143,7 +143,7 @@ function a($href) {
  At last, if there is no PHP page, and there is no manual
  page matching your query, a search is issued on the site with
  the query you typed into the URL. An example of this kind
- of URL is <tt><?php echo $MYSITE; ?>search_for_this</tt>.
+ of URL is <code><?php echo $MYSITE; ?>search_for_this</code>.
  The exact behaviour of this search is affected by
  <a href="/my.php">your own My PHP.net settings</a>.
 </p>
@@ -167,11 +167,11 @@ function a($href) {
  We also have shortcut aliases to access some resources more quickly,
  and with a nice URL. Aliases are translated to their relevant shortcuts
  before the first step (PHP page search) mentioned above. Some examples
- of shortcut aliases: <tt><?php echo $MYSITE; ?>whatisphp</tt>,
- <tt><?php echo $MYSITE; ?>php4news</tt>. The latter is an external page
+ of shortcut aliases: <code><?php echo $MYSITE; ?>whatisphp</code>,
+ <code><?php echo $MYSITE; ?>php4news</code>. The latter is an external page
  alias, as it points to a file on the Git server, containing information
  about changes in PHP. There are also some convenient aliases, like
- <tt><?php echo $MYSITE; ?>de/phpversion</tt> which displays the German
+ <code><?php echo $MYSITE; ?>de/phpversion</code> which displays the German
  manual page for the phpversion() function.
 </p>
 
