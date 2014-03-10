@@ -30,6 +30,7 @@ if (isset($_SERVER["HTTP_IF_MODIFIED_SINCE"]) &&
 }
 
 header("Last-Modified: " . $tsstring);
+header("Cache-Control: no-transform,public,max-age=2678400,s-maxage=2678400");
 
 if (substr($abs, -3) == ".js" || substr($abs, -5) == ".json") {
     header("Content-Type: application/javascript");
