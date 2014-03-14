@@ -66,7 +66,7 @@ foreach($frontpage as $entry) {
     $link = substr($entry["id"], 15); // Strip http://php.net/
     $id   = parse_url($entry["id"], PHP_URL_FRAGMENT);
     $date = date_create($entry['updated']);
-    $date_human = date_format($date, 'Y-m-d');
+    $date_human = date_format($date, 'd M Y');
     $date_w3c = date_format($date, DATE_W3C);
     $content .= <<<NEWSENTRY
 <article class="newsentry">
