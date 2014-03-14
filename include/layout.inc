@@ -456,7 +456,6 @@ function print_news($news, $dog, $max = 5, $onlyyear = null, $return = false) {
             $image = news_image($item["newsImage"]["link"], $item["newsImage"]["content"], $item["newsImage"]["title"], false);
         }
 
-        //$id = parse_url($item["id"], PHP_URL_FRAGMENT); 5.1.2
         $id = parse_url($item["id"]);
         $id = $id["fragment"];
 
@@ -471,10 +470,9 @@ function print_news($news, $dog, $max = 5, $onlyyear = null, $return = false) {
             $permlink = "#" .$id;
         }
 
-        // PHP4 strtotime() doesn't support RFC3339 timestamps
         $published = substr($item["published"], 0, 10);
         $nixtimestamp = strtotime($published);
-        $newsdate = date("d-M-Y", $nixtimestamp);
+        $newsdate = date("d M Y", $nixtimestamp);
         if ($onlyyear && date("Y", $nixtimestamp) != $onlyyear) {
             $count--;
             continue;
@@ -491,14 +489,16 @@ function print_news($news, $dog, $max = 5, $onlyyear = null, $return = false) {
         }
 
         echo <<< EOT
-<div class="newsItem hentry{$vevent}">
+<article class="newsItem">
+  <header>
     <div class="newsImage">{$image}</div>
-    <h2 class="summary entry-title"><a name="{$id}" id="{$id}" href="{$permlink}" rel="bookmark" class="bookmark">{$item["title"]}</a></h2>
-    <div class="entry-content description">
-        <abbr class="published newsdate" title="{$item["published"]}">{$newsdate}</abbr>
-        {$item["content"]}
-    </div>
-</div>
+    <h2 class="newstitle"><a id="{$id}" href="{$permlink}" rel="bookmark" class="bookmark">{$item["title"]}</a></h2>
+  </header>
+  <time class="newsdate" datetime="{$item["published"]}">{$newsdate}</time>
+  <div class="newscontent">
+    {$item["content"]}
+  </div>
+</article>
 
 EOT;
     }
