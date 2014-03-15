@@ -74,6 +74,7 @@ $SIDEBAR_DATA = '
     <ul>
       <li><a href="http://windows.php.net/">Windows (PHP.net)</a></li>
       <li><a href="http://bitnami.com/stack/wamp">Windows (BitNami)</a></li>
+      <li><a href="http://www.ampps.com/">Windows (AMPPS)</a></li>
       <li><a href="http://www.apachefriends.org/download.html">Windows (XAMPP)</a></li>
       <li><a href="http://www.ampps.com/">Mac OS X (AMPPS)</a></li>
       <li><a href="http://www.mamp.info/">Mac OS X (MAMP)</a></li>
@@ -81,6 +82,7 @@ $SIDEBAR_DATA = '
       <li><a href="http://bitnami.com/stack/mamp">Mac OS X (BitNami)</a></li>
       <li><a href="http://bitnami.com/stack/lamp">Linux (BitNami)</a></li>
       <li><a href="http://www.apachefriends.org/">Linux (XAMPP)</a></li>
+      <li><a href="http://www.ampps.com/">Linux (AMPPS)</a></li>
       <li><a href="http://iuscommunity.org/">Redhat/CentOS Binaries (IUS)</a></li>
       <li><a href="http://rpms.famillecollet.com/">Fedora/Redhat/CentOS Binaries (Remi)</a></li>
       <li><a href="http://www.opencsw.org/packages/php5">Solaris OpenCSW packages</a></li>
