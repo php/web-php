@@ -4,7 +4,7 @@
   <id>http://php.net/archive/2013.php#id2013-07-19-2</id>
   <published>2013-07-19T11:56:29-07:00</published>
   <updated>2013-07-19T11:56:29-07:00</updated>
-  <default:finalTeaserDate xmlns="http://php.net/ns/news">2014-11-14</default:finalTeaserDate>
+  <default:finalTeaserDate xmlns="http://php.net/ns/news">2013-11-14</default:finalTeaserDate>
   <category term="cfp" label="Call for Papers"/>
   <link href="http://php.net/conferences/index.php#id2013-07-19-2" rel="alternate" type="text/html"/>
   <default:newsImage xmlns="http://php.net/ns/news" link="https://www.skiphp.com/" title="Ski PHP 2014">ski-php.png</default:newsImage>
