@@ -1293,14 +1293,17 @@ div.tip p {
     padding: .25rem .5rem;
 }
 
-.doctable {
+.doctable,
+.segmentedlist {
     width: 100%;
     margin:.75rem 0;
 }
-.doctable thead tr {
+.doctable thead tr,
+.segmentedlist thead tr {
     border:1px solid;
 }
-.doctable tr {
+.doctable tr,
+.segmentedlist tr {
     border:1px solid;
 }
 

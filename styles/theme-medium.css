@@ -230,24 +230,30 @@ div.warning:before {
 
 
 /* {{{ Tables */
-.doctable {
+.doctable,
+.segmentedlist {
   border-color: #ccc;
 }
-.doctable thead tr {
+.doctable thead tr,
+.segmentedlist thead tr {
   border-color: #C4C9DF;
   border-bottom-color: #8892BF;
   color: #333;
 }
-.doctable th {
+.doctable th,
+.segmentedlist th {
   background-color: #C4C9DF;
 }
-.doctable tr {
+.doctable tr,
+.segmentedlist tr {
   border-color: #ccc
 }
-.doctable tbody tr:nth-child(odd) {
+.doctable tbody tr:nth-child(odd),
+.segmentedlist tbody tr:nth-child(odd) {
   background-color: #ffffff;
 }
-.doctable tbody tr:nth-child(even) {
+.doctable tbody tr:nth-child(even),
+.segmentedlist tbody tr:nth-child(even) {
   background-color: #E6E6E6;
 }
 /* }}} */
