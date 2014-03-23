@@ -8,6 +8,9 @@ include $_SERVER['DOCUMENT_ROOT'] . '/include/mirrors.inc';
 // Define $COUNTRIES array
 include $_SERVER['DOCUMENT_ROOT'] . '/include/countries.inc';
 
+// Define $COUNTRIES_ALPHA2 array
+include $_SERVER['DOCUMENT_ROOT'] . '/include/countries-alpha2.inc';
+
 // Define $LANGUAGES array
 include $_SERVER['DOCUMENT_ROOT'] . '/include/languages.inc';
 

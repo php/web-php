@@ -606,16 +606,25 @@ function get_near_usergroups()
 function get_usergroups_in($country, &$allcountries = array()) {
     $filename = $_SERVER["DOCUMENT_ROOT"] . "/backend/usergroups.json";
 
+    // get the complete list of usergroups once a day
+    if (! file_exists($filename) || (time()-24*60*60) > filemtime($filename)) {
+        $data = file_get_contents('http://php.ug/api/rest/listtype.json/1');
+        file_put_contents($filename, $data);
+    }
+
     $matches = array();
     $data = json_decode(file_get_contents($filename), true);
     foreach($data["groups"] as $group) {
-        if (isset($group["ccc"])) {
-            $allcountries[$group["ccc"]] = 1;
-            if ($group["ccc"] == $country) {
+        if (isset($group["country"])) {
+            $allcountries[$group["country"]] = 1;
+            if ($group["country"] == $country) {
                 $matches[] = $group;
             }
         }
     }
+    usort($matches, function($first, $second){
+        return strnatcasecmp($first['name'], $second['name']);
+    });
 
     return $matches;
 }
