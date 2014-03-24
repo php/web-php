@@ -28,14 +28,7 @@ function ug_get_more_info($group) {
     $url = $group["icalendar_url"];
 
     $filename = "backend/events/" . md5($url);
-    if (! file_exists($filename) || (time()-24*60*60) > filemtime($filename)) {
-        if (strncmp("webcal://", $url, strlen("webcal://")) == 0) {
-            $url = str_replace("webcal://", "http://", $url);
-        }
-        $data = file_get_contents($url);
-        file_put_contents("backend/events/" . md5($group["icalendar_url"]), $data);
-    }
-    // */
+
     /* Broken icalendar link */
     if (!file_exists($filename)) {
         return null;
