@@ -510,11 +510,13 @@ $(document).ready(function() {
     );
 /*}}}*/
 
-    // Search box autocomplete.
-    jQuery("#topsearch .search-query").search({
-        language: getLanguage(),
-        limit: 30
-    });
+    // Search box autocomplete (for browsers that aren't IE <= 8, anyway).
+    if (typeof window.brokenIE === "undefined") {
+        jQuery("#topsearch .search-query").search({
+            language: getLanguage(),
+            limit: 30
+        });
+    }
 
 /* {{{ Negative user notes fade-out */
   var usernotes = document.getElementById('usernotes');

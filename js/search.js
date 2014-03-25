@@ -16,7 +16,6 @@
         this.elements = {};
     };
 
-
     /**
      * Adds an item to the backend.
      *
@@ -245,12 +244,19 @@
                     var backends = processIndex(data);
                     // Cache the data if we can.
                     if (canCache()) {
-                        window.localStorage.setItem(key,
-                            JSON.stringify({
-                                data: backends,
-                                time: new Date().getTime()
-                            })
-                        );
+                        /* This may fail in IE 8 due to exceeding the local
+                         * storage limit. If so, squash the exception: this
+                         * isn't a required part of the system. */
+                        try {
+                            window.localStorage.setItem(key,
+                                JSON.stringify({
+                                    data: backends,
+                                    time: new Date().getTime()
+                                })
+                            );
+                        } catch (e) {
+                            // Derp.
+                        }
                     }
                     success(backends);
                 },
