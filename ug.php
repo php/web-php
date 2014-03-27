@@ -98,7 +98,16 @@ function print_ug_matches($matches) {
     echo "</dl>";
 }
 
-$country = isset($_GET["cc"]) ? $_GET["cc"] : $COUNTRY;
+function get_alpha2_country_from_alpha3($country) {
+    $countries = include dirname(__FILE__) . '/include/countries_alpha_mapping.inc';
+    if (! isset($countries[$country])) {
+        return '';
+    }
+    return $countries[$country];
+}
+$COUNTRY_ALPHA_2 = get_alpha2_country_from_alpha3($COUNTRY);
+echo $COUNTRY_ALPHA_2 . '::' . $COUNTRY;
+$country = isset($_GET["cc"]) ? $_GET["cc"] : $COUNTRY_ALPHA_2;
 $allcountries = array();
 if (isset($COUNTRIES_ALPHA2[$country])) {
     $matches = get_usergroups_in($country, $allcountries);
