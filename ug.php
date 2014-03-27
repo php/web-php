@@ -100,8 +100,8 @@ function print_ug_matches($matches) {
 
 $country = isset($_GET["cc"]) ? $_GET["cc"] : $COUNTRY;
 $allcountries = array();
+$matches = get_usergroups_in($country, $allcountries);
 if (isset($COUNTRIES_ALPHA2[$country])) {
-    $matches = get_usergroups_in($country, $allcountries);
     print_cc_header($country);
     print_ug_matches($matches);
 } else {
