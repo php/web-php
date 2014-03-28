@@ -106,7 +106,6 @@ function get_alpha2_country_from_alpha3($country) {
     return $countries[$country];
 }
 $COUNTRY_ALPHA_2 = get_alpha2_country_from_alpha3($COUNTRY);
-echo $COUNTRY_ALPHA_2 . '::' . $COUNTRY;
 $country = isset($_GET["cc"]) ? $_GET["cc"] : $COUNTRY_ALPHA_2;
 $allcountries = array();
 $matches = get_usergroups_in($country, $allcountries);
