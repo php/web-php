@@ -2,7 +2,7 @@
 /**
  * This file has been extracted from http://opengeocode.org/download/countrynames.txt
  */
-return array(
+$COUNTRY_ALPHA_3_TO_2 = array(
  "AFG" => "AF",
  "ALA" => "AX",
  "ALB" => "AL",
@@ -252,3 +252,4 @@ return array(
  "ZMB" => "ZM",
  "ZWE" => "ZW",
  );
+$COUNTRY_ALPHA_2_TO_3 = array_flip($COUNTRY_ALPHA_3_TO_2);
