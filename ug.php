@@ -12,10 +12,10 @@ site_header("Hypertext Preprocessor",
 
 
 function print_cc_header($country) {
-    global $COUNTRIES_ALPHA2;
+    global $COUNTRIES;
     ?>
     <div class="country" id="<?php echo $country ?>">
-    <h2 class="title countrytitle">User Groups in <?php echo $COUNTRIES_ALPHA2[$country] ?>
+    <h2 class="title countrytitle">User Groups in <?php echo $COUNTRIES[$country] ?>
         <img height="25" width="45" src="/images/flags/beta/<?php echo strtolower($country) ?>.png">
     </h2>
     <ul class="ugs">
@@ -71,7 +71,7 @@ function ug_get_next_even_from_ical_array($ical) {
     return array("event" => $data);
 }
 function print_ug_matches($matches) {
-    global $COUNTRIES_ALPHA2, $country;
+    global $COUNTRIES, $country;
     $content = "";
     echo '<dl>';
     foreach($matches as $group) {
@@ -93,23 +93,16 @@ function print_ug_matches($matches) {
         echo '<dt class="ug"><a href="'. $group["url"].'">' . $group["name"] . "</a></dt><dd>$details</dd>";
     }
     if (!$matches) {
-        echo "<dt>Sorry</dt><dd>There are no known User Groups in {$COUNTRIES_ALPHA2[$country]} at this time :(</dd>";
+        echo "<dt>Sorry</dt><dd>There are no known User Groups in {$COUNTRIES[$country]} at this time :(</dd>";
     }
     echo "</dl>";
 }
 
-function get_alpha2_country_from_alpha3($country) {
-    $countries = include dirname(__FILE__) . '/include/countries_alpha_mapping.inc';
-    if (! isset($countries[$country])) {
-        return '';
-    }
-    return $countries[$country];
-}
-$COUNTRY_ALPHA_2 = get_alpha2_country_from_alpha3($COUNTRY);
-$country = isset($_GET["cc"]) ? $_GET["cc"] : $COUNTRY_ALPHA_2;
+//$COUNTRY_ALPHA_2 = get_alpha2_country_from_alpha3($COUNTRY);
+$country = isset($_GET["cc"]) ? $_GET["cc"] : $COUNTRY;
 $allcountries = array();
-$matches = get_usergroups_in($country, $allcountries);
-if (isset($COUNTRIES_ALPHA2[$country])) {
+$matches = get_usergroups_in($COUNTRY_ALPHA_3_TO_2[$country], $allcountries);
+if (isset($COUNTRIES[$country])) {
     print_cc_header($country);
     print_ug_matches($matches);
 } else {
@@ -117,15 +110,15 @@ if (isset($COUNTRIES_ALPHA2[$country])) {
 }
 
 uksort($allcountries, function($first, $second){
-    global $COUNTRIES_ALPHA2;
-    return strnatcasecmp($COUNTRIES_ALPHA2[$first], $COUNTRIES_ALPHA2[$second]);
+    global $COUNTRIES;
+    return strnatcasecmp($COUNTRIES[$first], $COUNTRIES[$second]);
 });
 
 $SIDEBAR_DATA = <<< EOF
     <p class="panel"><a href="http://php.ug/ug/promote">Register new UG</a></p>
 EOF;
 foreach($allcountries as $country => $nada) {
-    $SIDEBAR_DATA .= '<p class="panel"><a href="/ug.php?cc=' . $country . '">' . $COUNTRIES_ALPHA2[$country] . '</a></p>';
+    $SIDEBAR_DATA .= '<p class="panel"><a href="/ug.php?cc=' . $country . '">' . $COUNTRIES[$country] . '</a></p>';
 }
 
 // Print the common footer.

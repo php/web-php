@@ -604,13 +604,15 @@ function get_near_usergroups()
 
 }
 function get_usergroups_in($country, &$allcountries = array()) {
+    global $COUNTRY_ALPHA_2_TO_3;
+
     $filename = $_SERVER["DOCUMENT_ROOT"] . "/backend/usergroups.json";
 
     $matches = array();
     $data = json_decode(file_get_contents($filename), true);
     foreach($data["groups"] as $group) {
         if (isset($group["country"])) {
-            $allcountries[$group["country"]] = 1;
+            $allcountries[$COUNTRY_ALPHA_2_TO_3[$group["country"]]] = 1;
             if ($group["country"] == $country) {
                 $matches[] = $group;
             }

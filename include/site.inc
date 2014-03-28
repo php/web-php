@@ -11,6 +11,10 @@ include $_SERVER['DOCUMENT_ROOT'] . '/include/countries.inc';
 // Define $COUNTRIES_ALPHA2 array
 include $_SERVER['DOCUMENT_ROOT'] . '/include/countries-alpha2.inc';
 
+// Define $COUNTRY_ALPHA_2_TO_3 array
+include $_SERVER['DOCUMENT_ROOT'] . '/include/countries_alpha_mapping.inc';
+
+
 // Define $LANGUAGES array
 include $_SERVER['DOCUMENT_ROOT'] . '/include/languages.inc';
 
