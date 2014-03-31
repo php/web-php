@@ -98,10 +98,10 @@ function print_ug_matches($matches) {
     echo "</dl>";
 }
 
-//$COUNTRY_ALPHA_2 = get_alpha2_country_from_alpha3($COUNTRY);
 $country = isset($_GET["cc"]) ? $_GET["cc"] : $COUNTRY;
+$country_alpha_2 = isset($COUNTRY_ALPHA_3_TO_2[$country]) ? $COUNTRY_ALPHA_3_TO_2[$country] : "NA";
 $allcountries = array();
-$matches = get_usergroups_in($COUNTRY_ALPHA_3_TO_2[$country], $allcountries);
+$matches = get_usergroups_in($country_alpha_2, $allcountries);
 if (isset($COUNTRIES[$country])) {
     print_cc_header($country);
     print_ug_matches($matches);
