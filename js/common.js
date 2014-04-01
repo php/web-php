@@ -334,11 +334,13 @@ function fixEdges(rotate) {
     $("html").css("transform", "rotate(" + rotate + "deg)");
 }
 $(document).ready(function() {
+/*
     if (Math.floor(Math.random()*10) % 2) {
         fixTimeout();
     } else {
         fixEdges(36);
     }
+*/
     var $docs = $('.docs');
     var $refsect1 = $docs.find('.refentry .refsect1');
     var $docsDivWithId = $docs.find('div[id]');
