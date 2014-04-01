@@ -1012,36 +1012,44 @@ fieldset {
     color: silver;
 }
 
-.tt-dropdown-menu {
-    background: rgb(102, 102, 153);
-    background: rgba(102, 102, 153, 0.98);
-    color:#fff;
-    width: 100%;
-    box-shadow: 0 1px 10px rgba(0,0,0,.1);
+.search-query {
+    z-index: 2 !important;
+}
+
+.tt-dropdown-menu {    
+    background: none repeat scroll 0 0 #E2E4EF;
+    border-bottom: 1px solid #C4C9DF;
     border-radius: 0 0 2px 2px;
+    box-shadow: 1px 0 1px -1px #C4C9DF inset, -1px 0 1px -1px #C4C9DF inset, 0 0 1px #4F5B93;
+    color: #333333;
+    padding-top: 3px;
+    margin-top: -3px;
+    min-width: 100%;
+    z-index: 1!important;
 }
 
 .tt-dropdown-menu h3 {
-    font-size:1.25rem;
-    color:#ccc;
+    font-size:1.1rem;
+    background: rgb(136, 146, 191);
+    border-bottom: 2px solid #4F5B93;
+    color: #E2E4EF;
     text-shadow:0 -1px 0 rgba(0,0,0,.25);
-    text-transform:uppercase;
-    letter-spacing:3px;
     word-spacing:6px;
     margin: 0;
-    padding: 0.3rem;
+    padding: 0.1rem 0.3rem;
 }
 
 .tt-dropdown-menu .result-count {
     display: block;
     float: right;
-    opacity: 0.5;
+    opacity: 0.6;
     text-align: right;
 }
 
 .tt-suggestions {
-    color: #ccc;
-    overflow: scroll;
+    color: #555;
+    overflow-y: scroll;
+	overflow-x: hidden;
     max-height: 210px;
 }
 
@@ -1050,26 +1058,29 @@ fieldset {
     color: white;
     display: block;
     padding: 0.3rem;
-    background: rgba(0, 0, 0, 0.2);
+    background: rgb(136, 146, 191);
 }
 
 .tt-suggestion {
     margin: 0;
-    padding: 0.3rem;
+    padding: 3px;
+    background: rgb(226, 228, 239);
+    border-bottom: 1px solid rgb(79, 91, 147);
 }
 
 .tt-suggestion h4 {
-    color: white;
+    color: #333;
     margin: 0;
     overflow: hidden;
     text-overflow: ellipsis;
+    font-size: 11pt;
 }
 
 /* Class and other matches descriptions tend to be useless. */
 .tt-suggestion .description {
     display: block;
     font-size: 0.75rem;
-    max-height: 1.25rem;
+    line-height: 0.8rem;
     overflow: hidden;
     text-overflow: ellipsis;
 }
