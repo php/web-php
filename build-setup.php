@@ -30,17 +30,17 @@ site_header("Get Involved", array("current" => "community"));
     For most *nix like operating systems, some external dependencies may be required to bring a build to completion; 
         if a build fails because of missing headers or libraries, issuing a variant of the following command should resolve those dependencies, allowing the build to continue:
     <ul>
-        <li><pre>[sudo] yum|apt-get|ports install package[-dev[el]]</pre></li>
+        <li><pre class="small">[sudo] yum|apt-get|ports install package[-dev[el]]</pre></li>
     </ul>
 </p>
 <p>
     For those working in <i>Ubuntu Linux</i>, you can run the following command to automate the installation of dependencies:
     <ul>
-        <li><pre>sudo apt-get build-dep php5</pre></li>
+        <li><pre class="small">sudo apt-get build-dep php5</pre></li>
     </ul>
     If the compilation of <i>an extension</i> should fail because of missing dependencies, <i>Ubuntu Linux</i> can attempt to automate the resolution of those dependencies by issuing:
     <ul>
-        <li><pre>sudo apt-get build-dep php5-<i>extname</i></pre></li>
+        <li><pre class="small">sudo apt-get build-dep php5-<i>extname</i></pre></li>
     </ul>
 </p>
 <p>
@@ -101,23 +101,23 @@ site_header("Get Involved", array("current" => "community"));
     </ul>
     Visual Studio 2008 and 2012:
     <ul>
-        <li><pre>cd C:\path-to-workspace</pre></li>
-        <li><pre>bin\phpsdk_setvars.bat</pre></li>
-        <li><pre>bin\phpsdk_buildtree.bat phpdev</pre></li>
+        <li><pre class="small">cd C:\path-to-workspace</pre></li>
+        <li><pre class="small">bin\phpsdk_setvars.bat</pre></li>
+        <li><pre class="small">bin\phpsdk_buildtree.bat phpdev</pre></li>
     </ul>
     Windows should now change to the directory C:\path-to-workspace\phpdev\<i>VCXX</i>\<i>XARCH</i>, and consider it the root of the workspace for the current build.
 </p>
 <p>
     The next step for everyone is to obtain the versioned PHP sources via git:
     <ul>
-        <li><pre>git clone -b BRANCH https://github.com/php/php-src .</pre></li>
+        <li><pre class="small">git clone -b BRANCH https://github.com/php/php-src .</pre></li>
     </ul>
     BRANCH should be replaced with an appropriate branch name, for example <i>PHP-5.5</i>.
 </p>
 <p>
     At this point you have a working build environment and the vanilla sources for your chosen branch of PHP, it is a good idea, before you change anything at all, to create a new branch and switch to it, in preparation for your awesome changes to come:
     <ul>
-        <li><pre>git checkout -b my-awesome-changes</pre></li>
+        <li><pre class="small">git checkout -b my-awesome-changes</pre></li>
     </ul>
 </p>
 </div>
@@ -128,31 +128,31 @@ site_header("Get Involved", array("current" => "community"));
 <p>
     All operating systems now converge on (near as makes no difference) the same solutions for the rest of the build process:
     <ul class="listed">
-        <li><pre>buildconf: generates the configure script for PHP</pre></li>
-        <li><pre>configure: configures the build of PHP and creates Makefile</pre></li>
-        <li><pre>make: builds PHP</pre></li>
-        <li><pre>make test: runs testsuite</pre></li>
-        <li><pre>make install: installs PHP</pre></li>
+        <li><pre class="small">buildconf: generates the configure script for PHP</pre></li>
+        <li><pre class="small">configure: configures the build of PHP and creates Makefile</pre></li>
+        <li><pre class="small">make: builds PHP</pre></li>
+        <li><pre class="small">make test: runs testsuite</pre></li>
+        <li><pre class="small">make install: installs PHP</pre></li>
     </ul>
 </p>
 <p>
     For Microsoft Windows operating systems, those commands looks like this:
     <ul class="listed">
-        <li><pre>buildconf</pre></li>
-        <li><pre>configure --with-prefix=C:\my-awesome-php</pre></li>
-        <li><pre>nmake</pre></li>
-        <li><pre>nmake test</pre></li>
-        <li><pre>nmake install</pre></li>
+        <li><pre class="small">buildconf</pre></li>
+        <li><pre class="small">configure --with-prefix=C:\my-awesome-php</pre></li>
+        <li><pre class="small">nmake</pre></li>
+        <li><pre class="small">nmake test</pre></li>
+        <li><pre class="small">nmake install</pre></li>
     </ul>
 </p>
 <p>
     While for the rest of us, those commands look like this:
     <ul class="listed">
-        <li><pre>./buildconf</pre></li>
-        <li><pre>./configure --prefix=/opt/my-awesome-php</pre></li>
-        <li><pre>make</pre></li>
-        <li><pre>make test</pre></li>
-        <li><pre>make install</pre></li>
+        <li><pre class="small">./buildconf</pre></li>
+        <li><pre class="small">./configure --prefix=/opt/my-awesome-php</pre></li>
+        <li><pre class="small">make</pre></li>
+        <li><pre class="small">make test</pre></li>
+        <li><pre class="small">make install</pre></li>
     </ul>
 </p>
 <p>
@@ -168,7 +168,7 @@ site_header("Get Involved", array("current" => "community"));
 <p>
     It is also possible to run a set (directory) of tests in the following way:
     <ul>
-        <li><pre>[n]make test TESTS=sapi/cli</pre></li>
+        <li><pre class="small">[n]make test TESTS=sapi/cli</pre></li>
     </ul>
 </p>
 </div>
