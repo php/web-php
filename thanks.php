@@ -84,12 +84,11 @@ site_header("Thanks", array("current" => "community"));
 
 <h1>Thanks Emeritus</h1>
 
-<ul>
-<li>
+<p>
  Special 'legacy' thanks go to the people and companies who have helped
  us in our past.
-</li>
-
+</p>
+<ul>
 <li>
  <a href="http://www.yahoo.com/">Yahoo! Inc.</a> provided us with many many
  terabytes of bandwidth and hosting for www.php.net, and svn.php.net and git.php.net
