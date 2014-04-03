@@ -16,6 +16,75 @@ function release_date($in) {
 ?>
 
 <h1>PHP 5 ChangeLog</h1>
+<section class="version" id="5.5.11"><!-- {{{ 5.5.11 -->
+<h3>Version 5.5.11</h3>
+<?php release_date('3-Apr-2014'); ?>
+<ul><li>Core:
+<ul>
+  <li><?php bugfix(60602); ?> (proc_open() changes environment array).</li>
+  <li>Allow zero length comparison in substr_compare().</li>
+</ul></li>
+<li>cURL:
+<ul>
+  <li><?php bugfix(66109); ?> (Can't reset CURLOPT_CUSTOMREQUEST to default behaviour).</li>
+  <li>Fix compilation on libcurl versions between 7.10.5 and 7.12.2, inclusive.</li>
+</ul></li>
+<li>Fileinfo:
+<ul>
+  <li><?php bugfix(66946); ?> (fileinfo: extensive backtracking in awk rule regular expression (CVE-2013-7345)).</li>
+</ul></li>
+<li>FPM:
+<ul>
+  <li>Added clear_env configuration directive to disable clearenv() call.</li>
+</ul></li>
+<li>GD:
+<ul>
+  <li><?php bugfix(66714); ?> (imageconvolution breakage).</li>
+  <li><?php bugfix(66869); ?> (Invalid 2nd argument crashes imageaffinematrixget).</li>
+  <li><?php bugfix(66887); ?> (imagescale - poor quality of scaled image).</li>
+  <li><?php bugfix(66890); ?> (imagescale segfault).</li>
+  <li><?php bugfix(66893); ?> (imagescale ignore method argument).</li>
+</ul></li>
+<li>GMP:
+<ul>
+  <li><?php bugfix(66872); ?> (invalid argument crashes gmp_testbit).</li>
+</ul></li>
+<li>Hash:
+<ul>
+  <li>hash_pbkdf2() now works correctly if the $length argument is not specified.</li>
+</ul></li>
+<li>Intl:
+<ul>
+  <li><?php bugfix(66873); ?> A reproductible crash in UConverter when given invalid encoding.</li>
+</ul></li>
+<li>Mail:
+<ul>
+  <li><?php bugfix(66535); ?> (Don't add newline after X-PHP-Originating-Script).</li>
+</ul></li>
+<li>MySQLi:
+<ul>
+  <li><?php bugfix(66762); ?> (Segfault in mysqli_stmt::bind_result() when link closed).</li>
+</ul></li>
+<li>OPCache:
+<ul>
+  <li>Added function opcache_is_script_cached().</li>
+  <li>Added information about interned strings usage.</li>
+</ul></li>
+<li>Openssl:
+<ul>
+  <li><?php bugfix(66833); ?> (Default disgest algo is still MD5, switch to SHA1).</li>
+</ul></li>
+<li>SQLite:
+<ul>
+  <li>Updated bundled libsqlite to 3.8.3.1.</li>
+</ul></li>
+<li>SPL:
+<ul>
+  <li>Added feature #65545 (SplFileObject::fread()).</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
 <section class="version" id="5.5.10"><!-- {{{ 5.5.10 -->
 <h3>Version 5.5.10</h3>
 <?php release_date('6-Mar-2014'); ?>
