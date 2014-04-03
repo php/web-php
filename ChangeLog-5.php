@@ -85,6 +85,41 @@ function release_date($in) {
 </ul>
 <!-- }}} --></section>
 
+<section class="version" id="5.4.27"><!-- {{{ 5.4.27 -->
+<h3>Version 5.4.27</h3>
+<b>03-Apr-2014</b>
+<ul><li>Core:
+<ul>
+  <li><?php bugfix(60602); ?> (proc_open() changes environment array)</li>
+</ul></li>
+<li>Fileinfo:
+<ul>
+  <li><?php bugfix(66946); ?> (fileinfo: extensive backtracking in awk rule regular expression)</li>
+</ul></li>
+<li>FPM:
+<ul>
+  <li>Added clear_env configuration directive to disable clearenv() call.</li>
+</ul></li>
+<li>GMP:
+<ul>
+  <li><?php bugfix(66872); ?> (invalid argument crashes gmp_testbit)</li>
+</ul></li>
+<li>Mail:
+<ul>
+  <li><?php bugfix(66535); ?> (Don't add newline after X-PHP-Originating-Script)</li>
+</ul></li>
+<li>MySQLi:
+<ul>
+  <li><?php bugfix(66762); ?> (Segfault in mysqli_stmt::bind_result() when link closed)</li>
+</ul></li>
+<li>Openssl:
+<ul>
+  <li><?php bugfix(66833); ?> (Default disgest algo is still MD5, switch to SHA1)</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
+
 <section class="version" id="5.5.10"><!-- {{{ 5.5.10 -->
 <h3>Version 5.5.10</h3>
 <?php release_date('6-Mar-2014'); ?>
