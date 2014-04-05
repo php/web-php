@@ -14,7 +14,7 @@ $SIDEBAR_DATA ='
 </div>
 ';
 
-site_header("Get Involved", array("current" => "community"));
+site_header("Operating System Preparation", array("current" => "community"));
 
 ?>
 <h2 id="os-prep" class="content-header">Operating System Preparation</h2>
