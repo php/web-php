@@ -38,7 +38,7 @@ if (substr($abs, -3) == ".js" || substr($abs, -5) == ".json") {
     header("Content-Type: text/css");
 }
 
-if(FALSE !== stristr($abs, 'php') or FALSE !== stristr($abs, '://') or FALSE !== stristr($abs, '..'))
+if(FALSE !== stristr($abs, 'php'))
         die('You shall not pass!');
 
 readfile($abs);
