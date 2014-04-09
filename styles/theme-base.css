@@ -338,7 +338,9 @@ pre.info,
   font: normal 0.875rem/1.5rem "Source Code Pro", monospace; 
 }
 p code,
-li code {
+li code,
+dt code,
+dl code {
   line-height:1.375rem;
 }
 
@@ -569,7 +571,7 @@ hr {
 
 /* Definition lists used on eg. the unsub page */
 dl dd {
-    margin:0;
+    margin:0 0 1.5rem;
     padding:0 1.5rem;
 }
 
@@ -578,7 +580,7 @@ dl dd {
 }
 div.classsynopsisinfo_comment {
     font-weight: bold;
-    margin-top:.75rem;
+    margin-top:1.5rem;
 }
 
 .warn {
@@ -1185,7 +1187,10 @@ header.title {
     font-weight:bold;
 }
 .docs code.parameter {
-    font-size:1rem;
+  font-size:1rem;
+}
+.docs .classsynopsis code.parameter {
+  font-size:.875rem;
 }
 .docs .methodname strong {
     font-style:normal;
@@ -1286,7 +1291,7 @@ div.tip p {
 .doctable,
 .segmentedlist {
     width: 100%;
-    margin:.75rem 0;
+    margin:0 0 1.5rem;
 }
 .doctable thead tr,
 .segmentedlist thead tr {
@@ -1339,7 +1344,7 @@ ul.chunklist_children {
 }
 
 .docs .classsynopsis {
-    margin-bottom:.75rem;
+    margin-bottom:1.5rem;
 }
 
 
@@ -1352,7 +1357,7 @@ ul.chunklist_children {
 .classsynopsis .methodsynopsis,
 .classsynopsis .destructorsynopsis,
 .classsynopsis .fieldsynopsis {
-    margin-left:2rem;
+    margin-left:1.5rem;
 }
 
 #changelang {
