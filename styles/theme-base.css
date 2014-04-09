@@ -1212,22 +1212,20 @@ div.tip,
 div.warning,
 div.caution,
 blockquote.note {
-    border:1px solid;
-    padding:.375rem .5rem;
-    position:relative;
+    padding:.75rem;
     margin-top:.75rem;
     margin-bottom:.75rem;
 }
 
+div.caution strong.caution,
 div.warning strong.warning {
-    font-size: 1.5rem;
-    display:block;
-    text-align: center;
+  font-size: 1.25rem;
 }
 
 div.tip b.tip,
 div.tip strong.tip,
 div.caution b.caution,
+div.warning strong.warning,
 div.caution strong.caution {
     float: left;
     margin-right: 0.5rem;
@@ -1284,8 +1282,7 @@ div.tip p {
 
 .refsect1 .dc-description,
 .docs .sect1 .dc-description {
-    padding: .5rem .75rem .625rem;
-    border: 1px solid;
+    padding: .75rem;
     margin-bottom: .75rem;
 }
 
