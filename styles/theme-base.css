@@ -335,7 +335,11 @@ code,
 pre.info,
 .docs .classsynopsis,
 .docs .classsynopsis code {
-    font: normal 0.875rem / 1.46 "Source Code Pro", monospace; 
+  font: normal 0.875rem/1.5rem "Source Code Pro", monospace; 
+}
+p code,
+li code {
+  line-height:1.375rem;
 }
 
 body {
@@ -365,21 +369,28 @@ input[type="search"] {
     box-sizing: content-box;
 }
 
-h1, h2, h3, h4, h5, h6, p {
-  line-height: 1.5rem;
-  margin:0 0 .75rem;
+h1, h2, h3, h4, h5, h6 {
+  line-height: 3rem;
+  margin:0 0 1.5rem;
+  overflow:hidden;
 }
 h1 {
-    font-size: 1.5rem;
+  font-size: 1.5rem;
 }
 h2 {
-    font-size: 1.25rem;
+  font-size: 1.25rem;
 }
-h3, h4, h5, h6 {
-    font-size: 1.125rem;
+h3 {
+  font-size:1.125rem;
+}
+h4, h5, h6 {
+  font-size: 1rem;
+}
+p {
+  margin:0 0 1.5rem
 }
 ul, ol {
-    margin:.75rem 1.5rem;
+    margin:0 0 1.5rem 1.5rem;
     padding:0;
 }
 p:empty {
@@ -510,11 +521,8 @@ hr {
 }
 
 #usernotes .note .text {
-    border-top: .125rem solid;
-    padding: .625rem .75rem .75rem;
-    margin-top:.25rem;
-    border-radius:0 0 2px 2px;
-    border-bottom:1px solid;
+  padding: .75rem;
+  border-radius:0 0 2px 2px;
 }
 
 /* Vote arrow styles. */
@@ -563,12 +571,6 @@ hr {
 dl dd {
     margin:0;
     padding:0 1.5rem;
-}
-dl dd p {
-    margin:0;
-}
-dl dd p + p {
-    margin-top: .75rem;
 }
 
 .phpcode, div.classsynopsis {
@@ -1120,7 +1122,7 @@ fieldset {
 }
 .content-box .md5sum {
     display: block;
-    font: normal 0.875rem / 1.46 "Source Code Pro", monospace;
+    font: normal 0.875rem/1.5rem "Source Code Pro", monospace;
 }
 .content-box .md5sum:before {
     content: "md5: ";
@@ -1134,9 +1136,9 @@ fieldset {
     background: white;
     border: solid 1px rgb(214, 214, 214);
     margin: 0px;
-    padding: 0.75rem 0.625rem;
+    padding: 0.75rem;
     overflow: auto;
-    font: normal 0.875rem / 1.46 "Source Code Pro", monospace;
+    font: normal 0.875rem/1.5rem "Source Code Pro", monospace;
 }
 .content-box pre.small {
     padding: 0;
@@ -1148,24 +1150,13 @@ fieldset {
 }
 
 .title {
-  padding:.5rem .75rem;
-  border-top:.125rem solid #666;
-  border-bottom:1px solid;
-  overflow:hidden;
-  margin-bottom:.75rem;
+  padding:0 .75rem;
+}
+header.title {
+  margin-bottom:1.5rem;
 }
 .title a {
   border:0;
-}
-.refsect1 > *:last-child {
-    margin-bottom:0;
-}
-.refsect1 > *:last-child *:last-child {
-    margin-bottom:0;
-}
-
-.refsect1 > .title + * {
-    margin-top:0;
 }
 
 .country {
@@ -1212,29 +1203,23 @@ div.tip,
 div.warning,
 div.caution,
 blockquote.note {
-    padding:.75rem;
-    margin-top:.75rem;
-    margin-bottom:.75rem;
+  padding: .75rem;
+  margin: 1.5rem 0;
+  overflow: hidden
 }
 
-div.caution strong.caution,
-div.warning strong.warning {
-  font-size: 1.125rem;
-}
-
-div.tip b.tip,
 div.tip strong.tip,
-div.caution b.caution,
 div.warning strong.warning,
 div.caution strong.caution {
-    float: left;
-    margin-right: 0.5rem;
+  float: left;
+  margin-right: 0.5rem;
+  font-size: 1.125rem;
 }
 blockquote.note p,
 div.caution p,
 div.warning p,
 div.tip p {
-    margin: 0;
+   margin: 0;
 }
 
 /* }}} */
@@ -1255,35 +1240,29 @@ div.tip p {
 .docs .refentry .parameters dl {
     margin-bottom:0;
 }
-
-.docs dl dd + dt {
-    margin-top:.75rem;
-}
-
 /* }}} */
-
-.docs .example {
-    margin: .75rem 0;
-}
 
 /* {{{ Examples  */
 
+.docs .example {
+    margin: 1.5rem 0;
+}
+
 .docs .example-contents {
-    margin-bottom:.75rem;
+    margin-bottom:1.5rem;
 }
 .docs .example-contents pre {
     margin:0;
 }
 .docs .example-contents > [class$="code"],
 .docs .example-contents.screen {
-    padding: .75rem .625rem;
-    border:1px solid;
+    padding: .75rem;
 }
 
 .refsect1 .dc-description,
 .docs .sect1 .dc-description {
     padding: .75rem;
-    margin-bottom: .75rem;
+    margin-bottom: 1.5rem;
 }
 
 .docs .phpcode code {
@@ -1348,24 +1327,15 @@ ul.chunklist_children {
 }
 
 .docs .refnamediv p.verinfo {
-    font-size: .75rem;
-}
-.docs .refnamediv p {
-    margin:0;
-}
-.refsect1 p {
-    margin-top:0;
+  font-size: .875rem;
+  margin:0;
 }
 
-.docs h1.refname {
-    font-weight:bolder
+.docs h1.refname + h1.refname {
+  margin-top:-1.5rem; /* for functions with OO and procedural definitions */
 }
 .docs .refnamediv {
     position:relative;
-}
-
-.refsect1 {
-    margin: 1.5rem 0;
 }
 
 .docs .classsynopsis {
@@ -1419,10 +1389,12 @@ ul.chunklist_children {
 }
 .layout-menu ul.child-menu-list li:first-child a {
     border-top: 1px dotted;
+    margin-top:-1px;
 }
 .layout-menu ul.child-menu-list a {
     font-size: .875rem;
     border-bottom: 1px dotted;
+    margin-bottom:-1px;
     display:block;
     padding-left:.75rem;
     position:relative;
@@ -1754,9 +1726,8 @@ aside.tips p {
   margin-top:0;
 }
 aside.tips .panel {
-    margin:0.75rem 0;
+    margin:1.5rem 0;
     background:#E2E4EF;
-    border:1px solid #C4C9DF;
     border-radius:2px;
 }
 
@@ -1878,7 +1849,7 @@ aside.tips div.inner {
   margin:0;
 }
 .newsentry {
-  margin: 0 0 1.5rem;
+  margin: 0 0 3rem;
   position: relative;
 }
 .newsentry h2 {
@@ -1890,6 +1861,7 @@ aside.tips div.inner {
 }
 .newsentry header time {
   float:right;
+  line-height:3rem;
 }
 
 .newsentry .newsimage a {
