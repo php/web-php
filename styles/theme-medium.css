@@ -154,10 +154,10 @@ div.warning {
   border-color: #EABFBF;
 }
 
-div.tip,
 .refsect1 .dc-description,
 .docs .sect1 .dc-description,
-.refsect1 blockquote.note,
+div.tip,
+blockquote.note,
 div.caution,
 div.warning {
   box-shadow:inset 0 0 0 1px rgba(0,0,0,.1);
