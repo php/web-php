@@ -1152,6 +1152,7 @@ fieldset {
 }
 
 .title {
+  position:relative;
   padding:0 .75rem;
   clear:both;
 }
@@ -1173,6 +1174,10 @@ header.title {
 .country .title img {
   position: absolute;
   right: 12px;
+}
+
+.refentry .refsect1 {
+  margin-bottom:3rem;
 }
 
 /* {{{ General styles (p, parameters, initializers, ...) */
@@ -1335,9 +1340,14 @@ ul.chunklist_children {
     position: relative;
 }
 
-.docs .refnamediv p.verinfo {
+.docs .verinfo {
   font-size: .875rem;
   margin:0;
+}
+.refname .verinfo {
+  line-height:2.875rem;
+  float:right;
+  font-weight:normal;
 }
 
 .docs h1.refname + h1.refname {
