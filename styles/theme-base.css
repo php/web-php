@@ -1153,6 +1153,7 @@ fieldset {
 
 .title {
   padding:0 .75rem;
+  clear:both;
 }
 header.title {
   margin-bottom:1.5rem;
