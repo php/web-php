@@ -26,7 +26,7 @@
      <ul>
         <li>A new method called fread() to the SplFileObject class</li>
         <li>A new static method called createFromMutable() to the DateTimeImmutable class</li>
-        <li>A new function called hash_compare()</li>
+        <li>A new function called hash_equals()</li>
         <li>Support for marks to the PCRE extension</li>
         <li>Support for asynchronous connections and queries to the Pgsql extension</li>
      </ul>
