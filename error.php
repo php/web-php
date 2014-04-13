@@ -170,13 +170,15 @@ if (preg_match("!^get/([^/]+)/from/([^/]+)(/mirror)?$!", $URI, $dlinfo)) {
         error_nomirror($mr);
         exit;
     }
+
     // Start the download process
-    status_header(200);
     include $_SERVER['DOCUMENT_ROOT'] . "/include/do-download.inc";
     $filename = get_actual_download_file($df);
     if ($filename) {
+        status_header(200);
         download_file($mr, $filename);
     } else {
+        status_header(404);
         /* The file didn't exist on this server.. ask the user to pick another mirror */
         include $_SERVER['DOCUMENT_ROOT'] . "/include/get-download.inc";
     }
