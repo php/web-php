@@ -59,6 +59,11 @@ site_header("Thanks", array("current" => "community"));
 </li>
 
 <li>
+ <a href="http://www.sohosted.nl/webhosting/">SoHosted Webhosting</a> provides the
+ servers and bandwidth used for buildbot testing and various windows based servers.
+</li>
+
+<li>
  <a href="http://www.redpill-linpro.com">Redpill Linpro</a> provides managed servers and bandwidth for various php.net services.
 </li>
 
