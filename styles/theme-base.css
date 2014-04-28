@@ -213,56 +213,6 @@ textarea {
   float: none;
   padding: .75rem;
 }
-.navbar .nav > li > a:focus,
-.navbar .nav > li > a:hover {
-  color: #333333;
-}
-.navbar .nav > .active > a {
-  box-shadow: inset 0 3px 8px rgba(0, 0, 0, 0.125);
-}
-.navbar .brand,
-.navbar .nav > li > a {
-  color: #E2E4EF;
-  border:0;
-  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
-}
-.navbar .brand:hover,
-.navbar .nav > li > a:hover,
-.navbar .brand:focus,
-.navbar .nav > li > a:focus {
-  color: #fff;
-}
-.navbar .nav > li > a:focus,
-.navbar .nav > li > a:hover {
-  background-color: transparent;
-  color: #fff;
-}
-.navbar .nav .active > a,
-.navbar .nav .active > a:hover,
-.navbar .nav .active > a:focus {
-  color: #fff;
-  background-color: #4F5B93;
-}
-.navbar .navbar-search .search-query {
-  background-color: #fff;
-  color: #333;
-  text-shadow: 0 1px 0 #fff;
-  border:0;
-  border-radius:2px;
-  box-shadow: inset 0 1px 2px rgba(0,0,0,.2);
-}
-.navbar .navbar-search .search-query:focus {
-  box-shadow: inset 0 1px 2px rgba(0,0,0,.2);
-}
-.navbar .navbar-search .search-query:-moz-placeholder {
-  color: #999;
-}
-.navbar .navbar-search .search-query:-ms-input-placeholder {
-  color: #999;
-}
-.navbar .navbar-search .search-query::-webkit-input-placeholder {
-  color: #999;
-}
 @-ms-viewport {
   width: device-width;
 }
@@ -377,15 +327,18 @@ h1, h2, h3, h4, h5, h6 {
   overflow:hidden;
 }
 h1 {
-  font-size: 1.5rem;
+  font-size: 1.75rem;
 }
 h2 {
-  font-size: 1.25rem;
+  font-size: 1.5rem;
 }
 h3 {
+  font-size:1.25rem;
+}
+h4 {
   font-size:1.125rem;
 }
-h4, h5, h6 {
+h5, h6 {
   font-size: 1rem;
 }
 p {
@@ -607,7 +560,6 @@ pre.info {
 
 .layout-menu {
     padding:.75rem 1.5rem 1.5rem;
-    border-right:1px solid;
     -moz-box-sizing:border-box;
     box-sizing:border-box;
 }
@@ -1153,7 +1105,6 @@ fieldset {
 
 .title {
   position:relative;
-  padding:0 .75rem;
   clear:both;
 }
 header.title {
@@ -1461,19 +1412,18 @@ div.soft-deprecation-notice blockquote.sidebar {
 #breadcrumbs {
     -moz-box-sizing:border-box;
     box-sizing:border-box;
-    border-bottom:1px solid;
     margin:0 auto;
     font-size:.875rem;
+    line-height:3rem;
     display:none;
 }
 #breadcrumbs ul {
     margin:0;
-    padding:.5rem;
-    padding-left: 1.5rem;
+    padding:0 .5rem 0 1.5rem;
     overflow: hidden;
 }
 #breadcrumbs div {
-    padding:.5rem 1.5rem;
+    padding:0 1.5rem;
 }
 #breadcrumbs li {
     display:inline-block;
@@ -1739,48 +1689,34 @@ div.soft-deprecation-notice blockquote.sidebar {
 aside.tips {
   -moz-box-sizing:border-box;
   box-sizing:border-box;
+  padding:1.5rem;
+  color:#ccc;
 }
 aside.tips p {
   margin-top:0;
 }
 aside.tips .panel {
-    margin:1.5rem 0;
-    background:#E2E4EF;
-    border-radius:2px;
+    margin:0 0 1.5rem;
 }
 
+aside.tips a {
+  color:#ccc;
+  border-bottom-style:dotted;
+}
 aside.tips .panel > a {
-    color:#333;
-    border-bottom:0;
     display: block;
 }
 aside.tips .panel > a:hover,
 aside.tips .panel > a:focus {
     color:#369;
 }
-aside.tips .panel .headline,
-.panel .body,
-aside.tips .panel > a {
-    padding:.75rem 1rem;
-    margin:0;
-}
 /* Announcement Area */
 
 aside.tips div.inner {
-    padding:0 0 0 .75rem;
     clear:none;
     border:0;
     background:inherit;
 }
-.panel .body {
-  background-color: #fff;
-  border-top:1px solid #C4C9DF;
-  border-radius: 0 0 2px 2px;
-}
-.panel .body:first-child {
-  border-top:0;
-}
-
 /* }}} */
 
 /* {{{ Adjustments for add-note.php animations */

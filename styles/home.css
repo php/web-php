@@ -4,10 +4,7 @@ complimentary greens: 9FB553    7B8851    61761B    C6DA82    CCDA99
 
 */
 #intro {
-    background:#333 url('/images/bg-texture-00.svg');
-    box-shadow:inset 0 0 2rem rgba(0,0,0,.375);
     color:#fff;
-    border-bottom:.25rem solid #8892BF;
 }
 #intro p,
 #intro ul {
@@ -27,7 +24,6 @@ complimentary greens: 9FB553    7B8851    61761B    C6DA82    CCDA99
     text-transform:uppercase;
     letter-spacing:3px;
     word-spacing:6px;
-    text-align:center;
   margin-bottom:0;
 }
 #intro h2:after {
@@ -38,14 +34,10 @@ complimentary greens: 9FB553    7B8851    61761B    C6DA82    CCDA99
   display:table-row;
 }
 
-#intro .download {
-  background:rgba(255,255,255,.1);
-}
-#intro .download ul {
-  list-style:none;
-}
 #intro ul {
+  list-style:none;
   word-spacing:.25rem;
+  margin-left:0;
 }
 #intro .download a.notes {
     font-size:.75em;
@@ -67,6 +59,9 @@ complimentary greens: 9FB553    7B8851    61761B    C6DA82    CCDA99
     content: "\21AF \2003";
 }
 
+#layout-content {
+  border-right:.25rem solid #666;
+}
 .home .newsentry .newstitle a:after  {
   content:"\20 \00bb";
   color:#666;
