@@ -7,10 +7,39 @@
     }
 
     ?>
-<?php if (!empty($config['sidebar'])): ?>
-    <aside class="tips">
-        <div class="inner"><?php echo $config['sidebar']; ?></div>
+<?php if (!empty($config['related_menu'])): ?>
+    <aside class='layout-menu'>
+    
+        <ul class='parent-menu-list'>
+            <?php foreach($config['related_menu'] as $section): ?>
+            <li>
+                <a href="<?php echo $section['link']; ?>"><?php echo $section['title']; ?></a>
+    
+                <?php if ($section['children']): ?>
+                    <ul class='child-menu-list'>
+    
+                        <?php
+                        foreach($section['children'] as $item):
+                            $cleanTitle = $item['title'];
+                        ?>  
+                        <li class="<?php echo ($item['current']) ? 'current' : ''; ?>">
+                            <a href="<?php echo $item['link']; ?>" title="<?php echo $cleanTitle; ?>"><?php echo $cleanTitle; ?></a>
+                        </li>
+                        <?php endforeach; ?>
+    
+                    </ul>
+                <?php endif; ?>
+    
+            </li>
+            <?php endforeach; ?>
+        </ul>
     </aside>
+<?php endif; ?>
+
+<?php if (!empty($config['sidebar'])): ?>
+<aside class="tips">
+    <div class="inner"><?php echo $config['sidebar']; ?></div>
+</aside>
 <?php endif; ?>
 
   </div><!-- layout -->

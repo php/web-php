@@ -3,7 +3,7 @@
 complimentary greens: 9FB553    7B8851    61761B    C6DA82    CCDA99
 
 */
-#intro {
+#intro p{
     color:#fff;
 }
 #intro p,
@@ -11,12 +11,15 @@ complimentary greens: 9FB553    7B8851    61761B    C6DA82    CCDA99
     text-shadow:0 1px 2px rgba(0,0,0,.5);
     font-size:1.125rem;
 }   
+#intro .row .blurb p:first-child {
+  margin-top:1.5rem;
+}
 #intro .row .blurb,
 #intro .row .download {
   display:table-cell;
   float:none;
   vertical-align: middle;
-  padding:.75em 1.5rem 0;
+  padding:0 1.5rem;
 }
 #intro h2 {
     color:#ccc;
@@ -38,6 +41,10 @@ complimentary greens: 9FB553    7B8851    61761B    C6DA82    CCDA99
   list-style:none;
   word-spacing:.25rem;
   margin-left:0;
+  margin-top:1.5rem;
+}
+#intro .download {
+  text-align:center;
 }
 #intro .download a.notes {
     font-size:.75em;
@@ -54,9 +61,6 @@ complimentary greens: 9FB553    7B8851    61761B    C6DA82    CCDA99
 
 #intro .download a.download-link {
     color:#fff;
-}
-#intro .download a.download-link:before {
-    content: "\21AF \2003";
 }
 
 #layout-content {

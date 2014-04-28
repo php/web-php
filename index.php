@@ -92,7 +92,6 @@ $intro = <<<EOF
       <p>Fast, flexible and pragmatic, PHP powers everything from your blog to the most popular websites in the world.</p>
     </div>
     <div class="download">
-        <h2><a href="/downloads.php">Download PHP</a></h2>
 
 EOF;
 if(!empty($RELEASES[5])) {

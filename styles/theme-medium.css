@@ -16,10 +16,8 @@ html {
   background: #333 url('/images/bg-texture-00.svg');
   color: #CCC;
 }
-.layout-menu + #layout-content {
-  border-left:.25rem solid #666;
-}
 #layout-content {
+  border-right:.25rem solid #666;
   background:#F2F2F2;
   color:#333;
 }

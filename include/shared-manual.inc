@@ -314,10 +314,63 @@ USER_NOTE_TEXT;
 
 }
 
+
+function manual_navigation_breadcrumbs(array $setup) {
+    $menu = array();
+    foreach(array_reverse($setup["parents"]) as $parent) {
+        $menu[] = array(
+            "title" => $parent[1],
+            "link"  => $parent[0],
+        );  
+    }   
+
+    // The index manual page has no parent..
+    if ($setup["up"][0]) {
+        $last_item = array(
+            "title" => $setup["up"][1],
+            "link"  => $setup["up"][0],
+        );  
+        $menu[] = $last_item;
+    } 
+    return $menu;
+}
+
+function manual_navigation_related(array $setup) {
+    $siblings = array();
+    foreach($setup["toc"] as $entry) {
+        // We strip out any class prefix here, we only want method names
+        $methodname = $entry[1];
+        if(strpos($entry[1], '::') !== false && strpos($entry[1], ' ') === false) {
+            list($classname, $methodname) = explode('::', $entry[1]); 
+        }       
+        //add zero-width spaces to allow line-breaks at various characters
+        $methodname = str_replace(array('-','_'), array('-&#8203;','_&#8203;'), $methodname);
+        $siblings[] = array(
+            "title" => $methodname,
+            "link"  => $entry[0],
+            "current" => $setup["this"][0] == $entry[0],
+        );      
+    }
+
+    // The index manual page has no parent..
+    if ($setup["up"][0]) {
+        $last_item = array(
+            "title" => $setup["up"][1],
+            "link"  => $setup["up"][0],
+        );
+        $siblings = array(array_merge($last_item, array("children" => $siblings)));
+    }
+    return $siblings;
+}
+
+
 // Set up variables important for this page
 // including HTTP header information
 function manual_setup($setup) {
     global $PGI, $MYSITE, $USERNOTES;
+
+    //TODO: get rid of this hack to get the related items into manual_footer
+    global $__RELATED; 
 
     $PGI = $setup;
     // Set base href for this manual page
@@ -335,41 +388,6 @@ function manual_setup($setup) {
     $note = current($USERNOTES);
     $lastusernote = $note["xwhen"];
 
-
-    $siblings = array();
-    foreach($setup["toc"] as $entry) {
-        // We strip out any class prefix here, we only want method names
-        $methodname = $entry[1];
-        if(strpos($entry[1], '::') !== false && strpos($entry[1], ' ') === false) {
-            list($classname, $methodname) = explode('::', $entry[1]);
-        }
-        //add zero-width spaces to allow line-breaks at various characters
-        $methodname = str_replace(array('-','_'), array('-&#8203;','_&#8203;'), $methodname);
-        $siblings[] = array(
-            "title" => $methodname,
-            "link"  => $entry[0],
-            "current" => $setup["this"][0] == $entry[0],
-        );
-    }
-    
-    $menu = array();
-    foreach(array_reverse($setup["parents"]) as $parent) {
-        $menu[] = array(
-            "title" => $parent[1],
-            "link"  => $parent[0],
-        );
-    }
-
-    // The index manual page has no parent..
-    if ($setup["up"][0]) {
-        $last_item = array(
-            "title" => $setup["up"][1],
-            "link"  => $setup["up"][0],
-        );
-        $siblings = array(array_merge($last_item, array("children" => $siblings)));
-        $menu[] = $last_item;
-    }
-    
     $base = "manual/" . $setup["head"][1] . "/";
     $_SERVER["BASE_PAGE"] = "/" . $base . $setup["this"][0];
     $timestamps = array(
@@ -380,10 +398,12 @@ function manual_setup($setup) {
     );
     $lastmod = max($timestamps);
 
+    $breadcrumbs = manual_navigation_breadcrumbs($setup);
+    $__RELATED = manual_navigation_related($setup);
+    
     $config = array(
         "current" => "docs",
-        "leftmenu" => $siblings,
-        "breadcrumbs" => $menu,
+        "breadcrumbs" => $breadcrumbs,
         "meta-navigation" => array(
             "contents" => $base . $setup["home"][0],
             "index"    => $base . $setup["up"][0],
@@ -452,11 +472,13 @@ CHANGE_LANG;
 
 function manual_header(){}
 function manual_footer() {
-    global $USERNOTES;
+    global $USERNOTES, $__RELATED;
 
     manual_notes($USERNOTES);
     echo "</section>";
-    $config = array();
+    $config = array(
+        'related_menu' => $__RELATED
+    );
     site_footer($config);
 }
 

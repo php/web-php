@@ -1438,13 +1438,14 @@ div.soft-deprecation-notice blockquote.sidebar {
 }
 
 #breadcrumbs .prev {
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
+  float:left;
 }
 #breadcrumbs .next {
-    float: right;
-}
-@media (max-width:767px) {
+  float: right;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  width:25%;
+  text-align:right;
 }
 @media (min-width: 768px) {
 
@@ -1460,7 +1461,6 @@ div.soft-deprecation-notice blockquote.sidebar {
   #breadcrumbs {
     display:block;
   }
-  #breadcrumbs .prev,
   .navbar-search,
   #intro .download,
   #intro .background,
@@ -1698,6 +1698,9 @@ aside.tips p {
 aside.tips .panel {
     margin:0 0 1.5rem;
 }
+aside.tips .panel .body {
+  font-size:.875rem;
+}
 
 aside.tips a {
   color:#ccc;
@@ -1706,9 +1709,9 @@ aside.tips a {
 aside.tips .panel > a {
     display: block;
 }
-aside.tips .panel > a:hover,
-aside.tips .panel > a:focus {
-    color:#369;
+aside.tips a:hover,
+aside.tips a:focus {
+    color:#AE508D;
 }
 /* Announcement Area */
 
