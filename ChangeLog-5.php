@@ -92,6 +92,67 @@ function release_date($in) {
 </ul>
 <!-- }}} --></section>
 
+<section class="version" id="5.4.28"><!-- {{{ 5.4.28 -->
+<h3>Version 5.4.28</h3>
+<b>01-May-2014</b>
+<ul><li>Core:
+<ul>
+  <li><?php bugfix(61019); ?> (Out of memory on command stream_get_contents).</li>
+  <li><?php bugfix(64330); ?> (stream_socket_server() creates wrong Abstract Namespace UNIX sockets).</li>
+  <li><?php bugfix(66171); ?> (Symlinks and session handler allow open_basedir bypass).</li>
+  <li><?php bugfix(66182); ?> (exit in stream filter produces segfault).</li>
+  <li><?php bugfix(66736); ?> (fpassthru broken).</li>
+  <li><?php bugfix(67024); ?> (getimagesize should recognize BMP files with negative height).</li>
+</ul></li>
+<li>cURL:
+<ul>
+  <li><?php bugfix(66562); ?> (curl_exec returns differently than curl_multi_getcontent).</li>
+</ul></li>
+<li>Date:
+<ul>
+  <li><?php bugfix(66721); ?> (__wakeup of DateTime segfaults when invalid object data is supplied).</li>
+</ul></li>
+<li>Embed:
+<ul>
+  <li><?php bugfix(65715); ?> (php5embed.lib isn't provided anymore).</li>
+</ul></li>
+<li>Fileinfo:
+<ul>
+  <li><?php bugfix(66987); ?> (Memory corruption in fileinfo ext / bigendian).</li>
+</ul></li>
+<li>FPM:
+<ul>
+  <li><?php bugfix(66482); ?> (unknown entry 'priority' in php-fpm.conf).</li>
+  <li><?php bugfix(67060); ?> (sapi/fpm: possible privilege escalation due to insecure default configuration) (CVE-2014-0185).</li>
+</ul></li>
+<li>JSON:
+<ul>
+  <li><?php bugfix(66021); ?> (Blank line inside empty array/object when JSON_PRETTY_PRINT is set).</li>
+</ul></li>
+<li>LDAP:
+<ul>
+  <li>Fixed issue with null bytes in LDAP bindings.</li>
+</ul></li>
+<li>OpenSSL:
+<ul>
+  <li><?php bugfix(66942); ?> (memory leak in openssl_seal()).</li>
+  <li><?php bugfix(66952); ?> (memory leak in openssl_open()).</li>
+</ul></li>
+<li>SimpleXML:
+<ul>
+  <li><?php bugfix(66084); ?> (simplexml_load_string() mangles empty node name) (Anatol)</li>
+</ul></li>
+<li>XSL:
+<ul>
+  <li><?php bugfix(53965); ?> (&lt;xsl:include&gt; cannot find files with relative paths when loaded with "file://").</li>
+</ul></li>
+<li>Apache2 Handler SAPI:
+<ul>
+  <li>Fixed Apache log issue caused by APR's lack of support for %zu (APR issue <a href="https://issues.apache.org/bugzilla/show_bug.cgi?id=56120">56120</a>).</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
 <section class="version" id="5.5.11"><!-- {{{ 5.5.11 -->
 <h3>Version 5.5.11</h3>
 <?php release_date('3-Apr-2014'); ?>

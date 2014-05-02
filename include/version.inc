@@ -29,11 +29,11 @@ $PHP_5_5_MD5     = array(
 $PHP_5_4_RC = false; // Current RC version (e.g., '5.6.7RC1') or false
 $PHP_5_4_RC_DATE = '20 Mar 2014';
 
-$PHP_5_4_VERSION         = "5.4.27";
-$PHP_5_4_DATE            = "3 Apr 2014";
+$PHP_5_4_VERSION         = "5.4.28";
+$PHP_5_4_DATE            = "2 May 2014";
 $PHP_5_4_MD5     = array(
-                       "tar.bz2"       => "1c6e99187d25023411b663ea09f145ee",
-                       "tar.gz"        => "3080690bbb14d798a511e325a81a6f32",
+                       "tar.bz2"       => "1676c807683041445f0df63913738571",
+                       "tar.gz"        => "7fd1235a56d4579ef3c9497a983c4a83",
 );
 
 /* PHP 5.3 Release */
