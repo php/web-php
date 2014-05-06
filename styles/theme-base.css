@@ -631,13 +631,13 @@ body > footer ul {
 }
 
 body > footer .footmenu li {
-    display: inline;
+  display: inline-block;
+  margin:0 0.75rem;
 }
-
 body > footer a {
-    margin: 0 .5rem;
+  display:inline-block;
+  border-bottom:0;
 }
-
 
 /* {{{ ElePHPants photo stream */
 

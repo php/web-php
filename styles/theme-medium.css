@@ -48,14 +48,21 @@ h3:after {
 
 a:link,
 a:visited {
+  color: #ccc;
+}
+#layout-content a:link,
+#layout-content a:visited {
   color: #369;
 }
-
 a:hover,
-a:focus {
-  color: #693;
-  border-bottom-color:#693;
+a:focus,
+#layout-content a:hover,
+#layout-content a:focus {
+  color: #AE508D;
+  border-color: #AE508D;
+  outline:0;
 }
+
 
 ul {
   list-style-type: disc;
@@ -362,14 +369,14 @@ var.reset
 
 
 /* {{{ The anchor for section headers */
-a.genanchor:link,
-a.genanchor:visited {
+#layout-content a.genanchor:link,
+#layout-content a.genanchor:visited {
     color: transparent;
     border-bottom: none;
 }
-a.genanchor:hover,
-a.genanchor:focus {
-    color: #000;
+#layout-content a.genanchor:hover,
+#layout-content a.genanchor:focus {
+    color: #333;
     border-bottom: none;
 }
 /* }}} */
@@ -408,28 +415,16 @@ aside.tips div.border {
 #breadcrumbs {
     color: #999;
 }
-#breadcrumbs a {
-    color:#CCC;
-}
 /* }}} */
 
 
 /* {{{ Layout menu Left-hand sidebar */
-.layout-menu ul.parent-menu-list a {
-  color: #CCC;
-}
-a:hover,
-a:focus,
-.layout-menu ul.child-menu-list .current a,
-.layout-menu ul.parent-menu-list a:hover,
-.layout-menu ul.parent-menu-list a:focus {
-  color: #AE508D;
-  border-color: #AE508D;
-  outline:0;
-}
-
 .layout-menu ul.child-menu-list li:first-child a {
   border-top-color:#666;
+}
+.layout-menu ul.child-menu-list li.current a {
+  color:#AE508D;
+  border-color:#AE508D;
 }
 .layout-menu ul.child-menu-list a {
   border-color: #666;
@@ -437,41 +432,18 @@ a:focus,
 /* }}} */
 
 
-/* {{{ Footer */
-footer {
-  border-top-color: #8892BF;
-}
-footer a {
-  color:#ccc;
-}
-footer a:link,
-footer a:visited {
-  color: #ccc;
-  border-bottom: none;
-}
-footer a:hover,
-footer a:focus {
-  color: #999;
-  border-bottom: none;
-}
-/* }}} */
-
-
 /* {{{ ElePHPants */
-div.elephpants div.images {
-  background-color: #333;
-}
 div.elephpants img {
   opacity: 0.5;
-  transition: all 0.25s ease-in-out;
-  -webkit-transition: all 0.25s ease-in-out;
-  -moz-transition: all 0.25s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
 }
 div.elephpants:hover img {
   opacity: 0.6;
-  transition: all 0.25s ease-in-out;
-  -webkit-transition: all 0.25s ease-in-out;
-  -moz-transition: all 0.25s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
 }
 div.elephpants img:hover,
 div.elephpants img:focus {
