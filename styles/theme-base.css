@@ -1415,12 +1415,12 @@ div.soft-deprecation-notice blockquote.sidebar {
 }
 
 #breadcrumbs {
-    -moz-box-sizing:border-box;
-    box-sizing:border-box;
-    margin:0 auto;
-    font-size:.875rem;
-    line-height:3rem;
-    display:none;
+  -moz-box-sizing:border-box;
+  box-sizing:border-box;
+  margin:0 auto;
+  padding:.75rem 0;
+  font-size:.875rem;
+  display:none;
 }
 #breadcrumbs ul {
     margin:0;
