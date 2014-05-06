@@ -613,23 +613,28 @@ pre.info {
 }
 /* Footer styling */
 
-footer {
-    clear: both;
-    overflow: auto;
-    border-top: .25rem solid;
-    padding: .75rem 0;
+body > footer {
+  clear: both;
+  overflow: auto;
+  line-height:3rem;
+}
+body > footer .footer-content {
+  margin: 1.5rem auto 0 ;
+  padding:0 1.5rem;
+  -moz-box-sizing:border-box;
+  box-sizing:border-box;
 }
 
-footer ul {
+body > footer ul {
     margin:0;
     padding:0;
 }
 
-footer .footmenu li {
+body > footer .footmenu li {
     display: inline;
 }
 
-footer a {
+body > footer a {
     margin: 0 .5rem;
 }
 
@@ -1437,15 +1442,9 @@ div.soft-deprecation-notice blockquote.sidebar {
     border-width:0;
 }
 
+#breadcrumbs .next,
 #breadcrumbs .prev {
-  float:left;
-}
-#breadcrumbs .next {
-  float: right;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  width:25%;
-  text-align:right;
+  float:right;
 }
 @media (min-width: 768px) {
 
@@ -1491,7 +1490,8 @@ div.soft-deprecation-notice blockquote.sidebar {
   #breadcrumbs,
   #goto div,
   #trick div,
-  #layout {
+  #layout,
+  body > footer .footer-content {
     width:1170px;
   }
 }
@@ -1501,7 +1501,8 @@ div.soft-deprecation-notice blockquote.sidebar {
   #breadcrumbs,
   #goto div,
   #trick div,
-  #layout {
+  #layout, 
+  body > footer .footer-content {
     width:1440px;
   }
 }
