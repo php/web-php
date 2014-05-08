@@ -50,8 +50,8 @@ if ($day < 6 || 365-$day < 32) {
 }
 
 /* Every so often.. give the elephpant a chance */
-if ($now % 60 == 10 || $refresh) {
-    $logos[] = "./ele-running.gif";
+if ($now % 64 == 0 || $refresh) {
+    $logos[] = "./logos/elephpant-running-78x48.gif";
 }
 if ($now % 240 == 10 || $refresh) {
     $logos = array_merge($logos, glob("logos/oldschool/*"));
