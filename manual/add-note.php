@@ -259,7 +259,7 @@ else {
     <div class="phpcode">
       <code>
         <span class="html">
-        <p>egg bacon sausage spam spam spam spam baked beans spam spam spam and spam</p>
+        <p>egg bacon sausage spam spam baked beans</p>
         </span>
       </code>
     </div>
