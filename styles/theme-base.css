@@ -471,11 +471,12 @@ hr {
 
 /* Add a note buttons. */
 #usernotes .action {
-    display: block;
-    top: 8px;
-    right: 12px;
-    position: absolute;
-    text-align: right;
+  display: block;
+  top: 8px;
+  right: 12px;
+  position: absolute;
+  text-align: right;
+  z-index: 1;
 }
 
 #usernotes .foot {
@@ -1781,60 +1782,6 @@ aside.tips div.inner {
   border-top:0;
 }
 
-/* }}} */
-
-/* {{{ Adjustments for add-note.php animations */
-#add-note-usernotes
-{
-  overflow: hidden;
-  position: relative;
-  height: 400px;
-}
-
-#add-note-usernotes .shadow
-{
-  box-shadow: inset -10px 0 5px -5px rgba(0, 0, 0, 0.1);
-  width:3%;
-  height: 100%;
-  position:absolute;
-  float:right;
-  z-index:1;
-  left: 97%;
-}
-
-#add-note-usernotes li
-{
-  margin-bottom: 1rem;
-}
-
-#add-note-usernotes #usernotes {
-  position: relative;
-  margin: 1rem 0 1rem 100px;
-}
-
-#whatnottoenter strong
-{
-  display: block;
-  text-align: left;
-}
-
-#whatnottoenter div, #add-note-usernotes li
-{
-  text-align: justify;
-}
-
-#whatnottoenter div.row-fluid
-{
-  margin-bottom: 1rem;
-}
-
-#whatnottoenter strong:before{
-  color: #333366;
-  content: '•';
-  position: absolute;
-  font-size: 2rem;
-  margin: -0.5rem 0 0 -0.5rem;
-}
 /* }}} */
 
 /* {{{ Flash message */
