@@ -15,6 +15,9 @@
 #layout-content li {
   margin-bottom:1.5rem;
 }
+#whatnottoenter li strong{
+  display:block;
+}
 
 @media (min-width:768px) {
   #email_and_formatting > section,
