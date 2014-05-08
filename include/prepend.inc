@@ -33,6 +33,9 @@ if (isset($_SERVER["HTTP_ORIGIN"])) {
         header("Access-Control-Allow-Headers: $headers");
     }
 }
+/* Clickjacking workaround. Nothing should be in a frame so it could technically be 'deny'
+ * but it doesn't make any difference anyway */
+header("X-Frame-Options: SAMEORIGIN");
 
 // Be 100% sure the timezone is set
 if (ini_get("date.timezone") === "" && function_exists("date_default_timezone_set")) {
