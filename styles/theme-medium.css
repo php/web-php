@@ -396,6 +396,23 @@ pre.info {
 aside.tips div.border {
     display:none;
 }
+aside.tips a {
+  color:#ccc;
+  border-bottom:1px dotted #666;
+}
+aside.tips .panel > a:after {
+  content:" ";
+  display:block;
+  border-bottom:1px dotted #666;
+}
+aside.tips .panel > a:hover:after {
+  border-color:#AE508D;
+}
+aside.tips a:hover,
+aside.tips a:focus {
+  color:#AE508D;
+  border-color:#AE508D;
+}
 
 .soft-deprecation-notice {
   color: #333;

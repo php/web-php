@@ -1705,24 +1705,11 @@ aside.tips .panel .body {
   margin-top:1.5rem;
 }
 
-aside.tips a {
-  color:#ccc;
-  border-bottom-style:dotted;
-}
 aside.tips .panel > a {
   display: block;
   border-bottom:0;
   line-height:3rem;
   font-size:1.125rem;
-}
-aside.tips .panel > a:after {
-  content:" ";
-  display:block;
-  border-bottom:1px dotted;
-}
-aside.tips a:hover,
-aside.tips a:focus {
-    color:#AE508D;
 }
 /* Announcement Area */
 
