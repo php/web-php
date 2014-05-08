@@ -9,7 +9,7 @@ include_once $_SERVER['DOCUMENT_ROOT'] . '/include/posttohost.inc';
 include_once $_SERVER['DOCUMENT_ROOT'] . '/include/shared-manual.inc';
 include      $_SERVER['DOCUMENT_ROOT'] . '/manual/spam_challenge.php';
 
-site_header("Add Manual Note");
+site_header("Add Manual Note", array( 'css' => 'add-note.css'));
 
 // Copy over "sect" and "redirect" from GET to POST
 if (empty($_POST['sect']) && isset($_GET['sect'])) {
@@ -156,66 +156,55 @@ if ($process) {
 else { 
 ?>
 
-<div id="add-note-usernotes" class="row-fluid">
-<div class="span4">
-
+<section id="add-note-usernotes" class="clearfix">
   <h1>Adding a note to the manual</h1>
-
-  <ul>
-    <li>
-      Please read <a href="#whatnottoenter">What not to enter</a>
-      we have many comments to moderate and there is an overwhelming number of
-      users ignoring this important section.
-    </li>
-    <li>
-      Good notes (high score) are voted up and <strong>rise to top</strong> 
-      so they are easy to find.
-    </li>
-    <li>
-      Low score (negative) notes are faded out to discourage usage and
-      after certain threshold are removed.
-    </li>
-    <li>
-      Any form of spam is removed immediately. Some folks still don't get it.
-    </li>
-  </ul>
-
-</div>
-<div class="span8">
-<div class="shadow"></div>
-<div id="usernotes">
-
-<h3 class="title">User Contributed Notes <span class="count">3 notes</span></h3>
-
-<div class="note bad">
-  <div class="votes">
-    <div>
-      <a class="usernotes-voteu" title="Vote up!">up</a>
-    </div>
-    <div>
-      <a class="usernotes-voted" title="Vote down!">down</a>
-    </div>
-    <div title="" class="tally">
-      3
-    </div>
+  <div class="note_description">
+    <ul>
+      <li>
+        Please read <a href="#whatnottoenter">What not to enter</a>
+        we have many comments to moderate and there is an overwhelming number of
+        users ignoring this important section.
+      </li>
+      <li>
+        <em>Good notes rise to the top</em> as they are voted up; this makes 
+        them easier to find.
+      </li>
+      <li>
+        <em>Poor notes fall to the bottom and are faded out</em> to discourage
+        their use; after certain threshold they are removed.
+      </li>
+      <li>Any form of spam is removed immediately.</li>
+    </ul>
   </div>
-  <a class="name"><strong class="user"><em>Anonymous</em></strong></a>
-  <a class="genanchor" href="#"> ¶</a>
-  <div class="date">
-    <strong>
-      1 year ago
-    </strong>
-  </div>
-  <div class="text">
-    <div class="phpcode">
-      <code>
-        <span class="html">
-        <p>eval() is the best for all sorts of things</p>
-        </span>
-      </code>
+  <div class="note_example">
+    <div class="shadow"></div>
+    <div id="usernotes">
+      <h3 class="title">User Contributed Notes <span class="count">3 notes</span></h3>
+      <div class="note bad">
+        <div class="votes">
+          <div>
+            <a class="usernotes-voteu" title="Vote up!">up</a>
+          </div>
+        <div>
+          <a class="usernotes-voted" title="Vote down!">down</a>
+        </div>
+        <div class="tally">3</div>
+      </div>
+      <a class="name"><strong class="user"><em>Anonymous</em></strong></a>
+      <a class="genanchor" href="#"> ¶</a>
+      <div class="date">
+        <strong>1 year ago</strong>
+      </div>
+      <div class="text">
+        <div class="phpcode">
+          <code>
+            <span class="html">
+              <p>eval() is the best for all sorts of things</p>
+            </span>
+          </code>
+        </div>
+      </div>
     </div>
-  </div>
-</div>
 
 <div class="note good">
   <div class="votes">
@@ -280,85 +269,58 @@ else {
 </div>
 
 </div>
-</div>
+</section>
 
 
-<div id="whatnottoenter">
+<section id="whatnottoenter" class='clearfix'>
 <h3>Thou shall not enter! <small>(No, really, don't)</small></h3>
-
-<div class="row-fluid">
-  <div class="span3">
-  <strong>Bug reports &amp; Missing documentation</strong> Instead
-  <a href="http://bugs.php.net/report.php?bug_type=Documentation+problem<?php echo isset($_POST['sect']) ? '&amp;manpage=' . clean($_POST['sect']) : ''; ?>">report a bug</a>
+<div class='columns'>
+<ul>
+  <li><strong>Bug reports &amp; Missing documentation</strong>
+    Instead <a href="http://bugs.php.net/report.php?bug_type=Documentation+problem<?php echo isset($_POST['sect']) ? '&amp;manpage=' . clean($_POST['sect']) : ''; ?>">report a bug</a>
   for this manual page to the bug database.
-  </div>
-  <div class="span3">
-    <strong>Support questions or request for help</strong> See the <a href="/support.php">support page</a>
-    for available options. In other words, do not ask questions within the user notes.
-  </div>
-  <div class="span3">
-    <strong>References to other notes or authors</strong>  This is not a forum;
-    we do not encourage nor permit discussions here.  Further, if a note is
-    referenced directly and is later removed or modified it causes confusion.
-  </div>
-  <div class="span3">
-    <strong>Code collaboration or improvements</strong> This is not to suggest that
-    your code snippet is bad; this is simply not the place to show it off.  You
-    should publish elsewhere (perhaps on your blog).
-  </div>
-</div>
-<div class="row-fluid">
-  <div class="span3">
-    <strong>Links to your website, blog, code, or a third-party website</strong>
-    On occasion we permit the posting of websites such as faqs.org or the MySQL
-    manual, but links to other sites will be removed, no matter how well-intended.
-  </div>
-  <div class="span3">
-    <strong>Complaints that your notes keep getting deleted</strong> Most likely
-    you didn't bother to read this page and you violated one of these rules.  
-  </div>
-  <div class="span3">
-    <strong>Notes in languages other than English</strong> 不 gach duine понимает
-    el lenguaje जिसमें Sie sprechen.
-  </div>
-  <div class="span3">
-    <strong>Your disdain for PHP and/or its maintainers</strong> Go learn FORTRAN instead.
-  </div>
+  </li>
+  <li><strong>Support questions or request for help</strong> See the <a href="/support.php">support page</a> for available options. In other words, do not ask questions within the user notes.</li>
+  <li><strong>References to other notes or authors</strong>  This is not a forum; we do not encourage nor permit discussions here.  Further, if a note is referenced directly and is later removed or modified it causes confusion.
+  </li>
+  <li><strong>Code collaboration or improvements</strong> This is not to suggest that your code snippet is bad; this is simply not the place to show it off.  You should publish elsewhere (perhaps on your blog).</li>
+  <li><strong>Links to your website, blog, code, or a third-party website</strong> On occasion we permit the posting of websites such as faqs.org or the MySQL manual, but links to other sites will be removed, no matter how well-intended.</li>
+  <li><strong>Complaints that your notes keep getting deleted</strong> Most likely you didn't bother to read this page and you violated one of these rules.</li>
+  <li><strong>Notes in languages other than English</strong> 不 gach duine понимает el lenguaje जिसमें Sie sprechen.</li>
+  <li><strong>Your disdain for PHP and/or its maintainers</strong> Go learn FORTRAN instead.</li>
+</ul>
 </div>
 <p>User notes may be edited or deleted for any reason, whether in the list above or not!</p>
+</section>
+
+
+<div id="email_and_formatting" class="clearfix">
+  <section>
+    <h3>Email address conversion</h3>
+    <p>
+      We have a simple conversion in place to convert the @ signs and dots in your 
+      address. You may still want to include a part in the email address
+      that is understandable only by humans as our conversion can be performed in
+      the opposite direction. You may submit your email address as
+      <tt>user@NOSPAM.example.com</tt> for example (which will be displayed
+      as <tt>user at NOSPAM dot example dot com</tt>. If we remove your note we can
+      only send an email if you use your real email address.
+    </p>
+  </section>
+  <section>
+    <h3>Formatting</h3>
+    <p>
+      Note that HTML tags are not allowed in the posts, but the note formatting
+      is preserved. URLs will be turned into clickable links, PHP code blocks
+      enclosed in the PHP tags &lt;?php and ?&gt; will
+      be source highlighted automatically. So always enclose PHP snippets in
+      these tags. <em>Double-check that your note appears
+      as you want during the preview; that's why it is there!</em>
+    </p>
+  </section>
 </div>
 
-
-<div class="row-fluid">
-
-<div class="span6">
-<h3>Email address conversion</h3>
-<p>
- We have a simple conversion in place to convert the @ signs and dots in your 
- address. You may still want to include a part in the email address
- that is understandable only by humans as our conversion can be performed in
- the opposite direction. You may submit your email address as
- <tt>user@NOSPAM.example.com</tt> for example (which will be displayed
- as <tt>user at NOSPAM dot example dot com</tt>. If we remove your note we can
- only send an email if you use your real email address.
-</p>
-</div>
-
-<div class="span6">
-<h3>Formatting</h3>
-<p>
- Note that HTML tags are not allowed in the posts, but the note formatting
- is preserved. URLs will be turned into clickable links, PHP code blocks
- enclosed in the PHP tags &lt;?php and ?&gt; will
- be source highlighted automatically. So always enclose PHP snippets in
- these tags. <em>(Double-check that your note appears
- as you want during the preview. That's why it is there!)</em>
-</p>
-</div>
-
-</div>
-
-<div class="row-fluid">
+<div class="row-fluid clearfix">
 <div class="span12">
 <h3>Additional information</h3>
 <p>

@@ -2,6 +2,32 @@
 $OLDRELEASES = array (
   5 => 
   array (
+    '5.5.11' => 
+    array (
+      'announcement' => 
+      array (
+        'English' => '/releases/5_5_11.php',
+      ),
+      'source' => 
+      array (
+        0 => 
+        array (
+          'filename' => 'php-5.5.11.tar.bz2',
+          'name' => 'PHP 5.5.11 (tar.bz2)',
+          'md5' => 'c8c9ad960bae0265054b5879423f7a75',
+          'date' => '3 Apr 2014',
+        ),
+        1 => 
+        array (
+          'filename' => 'php-5.5.11.tar.gz',
+          'name' => 'PHP 5.5.11 (tar.gz)',
+          'md5' => '9156fcd4b254cbfa9a7535f931da29d5',
+          'date' => '3 Apr 2014',
+        ),
+      ),
+      'date' => '3 Apr 2014',
+      'museum' => false,
+    ),
     '5.5.10' => 
     array (
       'announcement' => 
@@ -386,6 +412,37 @@ $OLDRELEASES = array (
       'date' => '20 Jun 2013',
       'museum' => true,
     ),
+    '5.4.27' => 
+    array (
+      'announcement' => 
+      array (
+        'English' => '/releases/5_4_27.php',
+      ),
+      'source' => 
+      array (
+        0 => 
+        array (
+          'filename' => 'php-5.4.27.tar.bz2',
+          'name' => 'PHP 5.4.27 (tar.bz2)',
+          'md5' => '1c6e99187d25023411b663ea09f145ee',
+          'date' => '3 Apr 2014',
+        ),
+        1 => 
+        array (
+          'filename' => 'php-5.4.27.tar.gz',
+          'name' => 'PHP 5.4.27 (tar.gz)',
+          'md5' => '3080690bbb14d798a511e325a81a6f32',
+          'date' => '3 Apr 2014',
+        ),
+        2 => 
+        array (
+          'link' => 'http://windows.php.net/download/#php-5.4',
+          'name' => 'Windows 5.4.26 binaries and source',
+        ),
+      ),
+      'date' => '6 Mar 2014',
+      'museum' => false,
+    ),
     '5.4.26' => 
     array (
       'announcement' => 
@@ -403,8 +460,8 @@ $OLDRELEASES = array (
         ),
         1 => 
         array (
-          'filename' => 'php-5.4.25.tar.gz',
-          'name' => 'PHP 5.4.25 (tar.gz)',
+          'filename' => 'php-5.4.26.tar.gz',
+          'name' => 'PHP 5.4.26 (tar.gz)',
           'md5' => '7e5f6254d1bac06efc225259a1e38a27',
           'date' => '6 Mar 2014',
         ),
