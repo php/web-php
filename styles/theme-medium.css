@@ -17,9 +17,11 @@ html {
   color: #CCC;
 }
 #layout-content {
-  border-right:.25rem solid #666;
   background:#F2F2F2;
   color:#333;
+}
+#layout-content:not(:only-child) {
+  border-right:.25rem solid #666;
 }
 
 abbr {

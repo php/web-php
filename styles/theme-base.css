@@ -569,6 +569,9 @@ pre.info {
   -moz-box-sizing:border-box;
   box-sizing:border-box;
 }
+#layout-content:only-child {
+  width:100%;
+}
 
 /**
 #layout .refentry div[id], #layout .sect1 div[id], #usernotes div.note[id]
