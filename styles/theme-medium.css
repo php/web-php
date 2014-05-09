@@ -441,7 +441,7 @@ aside.tips a:focus {
 }
 .layout-menu ul.child-menu-list li.current a {
   color:#AE508D;
-  border-color:#AE508D;
+  border-bottom-color:#AE508D;
 }
 .layout-menu ul.child-menu-list a {
   border-color: #666;
