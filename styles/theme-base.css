@@ -1230,6 +1230,7 @@ div.tip p {
     padding: .75rem;
 }
 
+.docs .classsynopsis,
 .refsect1 .dc-description,
 .docs .sect1 .dc-description {
     padding: .75rem;

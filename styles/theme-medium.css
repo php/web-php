@@ -157,6 +157,7 @@ div.warning {
   border-color: #EABFBF;
 }
 
+.docs .classsynopsis,
 .refsect1 .dc-description,
 .docs .sect1 .dc-description,
 div.tip,
@@ -319,11 +320,11 @@ div.warning a:focus {
 .refsect1 .example-contents.screen {
   background-color: #fff;
 }
+.docs .classsynopsis,
 .refsect1 .dc-description,
 .docs .sect1 .dc-description {
     background:#fff;
     border-color: #d9d9d9;
-    border-top-color:#d9d9d9;
 }
 .phpcode span.html {
   color: black;
