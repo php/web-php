@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <entry xmlns="http://www.w3.org/2005/Atom">
-  <title>PHP 5.4.12 and PHP 5.3.22 released!</title>
+  <title>PHP 5.4.12 and PHP 5.3.22 Released!</title>
   <id>http://php.net/archive/2013.php#id2013-02-21-1</id>
   <published>2013-02-21T20:38:02+00:00</published>
   <updated>2013-02-21T20:38:02+00:00</updated>
@@ -13,7 +13,7 @@
      <div>
        <div>
          <p>The PHP development team announces the immediate availability of PHP 5.4.12 and PHP 5.3.22. These releases fix about 10 bugs. All users of PHP are encouraged to upgrade to PHP 5.4.12.</p>
-     
+
          <p>For source downloads of PHP 5.4.12 and PHP 5.3.22 please visit our <a href="/downloads.php">downloads page</a>, Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.</p>
          <p>The list of changes are recorded in the <a href="/ChangeLog-5.php">ChangeLog</a>.</p>
        </div>

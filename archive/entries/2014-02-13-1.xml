@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <entry xmlns="http://www.w3.org/2005/Atom">
-  <title>PHP 5.6.0alpha2 released</title>
+  <title>PHP 5.6.0alpha2 Released</title>
   <id>http://php.net/archive/2014.php#id2014-02-13-1</id>
   <published>2014-02-13T23:00:39+01:00</published>
   <updated>2014-02-13T23:00:39+01:00</updated>
@@ -16,9 +16,9 @@
         All users of PHP are encouraged to test this version carefully,
         and report any bugs in <a href="https://bugs.php.net">the bug tracking system</a>.
      </p>
- 
+
      <strong>THIS IS A DEVELOPMENT PREVIEW - DO NOT USE IT IN PRODUCTION!</strong>
- 
+
      <p>
       PHP 5.6.0alpha2 comes with a number of new features, including:
      </p>
@@ -27,24 +27,24 @@
         <li>An exponentiation operator has been added: **</li>
         <li>Output encoding handling has been simplified by using default_charset as the default character encoding</li>
      </ul>
- 
+
      <p>For more information about the new features you can check out the work-in-progress
       <a href="http://docs.php.net/manual/en/migration56.new-features.php">documentation</a>
       or you can read the full list of changes in the
       <a href="https://github.com/php/php-src/blob/php-5.6.0alpha2/NEWS">NEWS file</a> contained
       in the release archive.
      </p>
- 
+
      <p>
       For source downloads of PHP 5.6.0alpha2 please visit
       the <a href="http://downloads.php.net/tyrael">download page</a>. Windows binaries
       can be found on <a href="http://windows.php.net/qa/">windows.php.net/qa/</a>.
      </p>
- 
+
      <p>
       Our third alpha should show up on the 27th of February.
      </p>
- 
+
      <p>
         Thank you for helping us make PHP better.
      </p>

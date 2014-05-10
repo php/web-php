@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <entry xmlns="http://www.w3.org/2005/Atom">
-  <title>PHP 5.4.25 Released!</title>
+  <title>PHP 5.4.25 Released</title>
   <id>http://php.net/archive/2014.php#id2014-02-06-1</id>
   <published>2014-02-06T21:14:31-08:00</published>
   <updated>2014-02-06T21:14:31-08:00</updated>
@@ -14,7 +14,7 @@
      5.4.25. 5 bugs were fixed in this release.
      All PHP 5.4 users are encouraged to upgrade to this version.
      </p>
-     
+
      <p>For source downloads of PHP 5.4.25 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
      Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.4.25">ChangeLog</a>.
