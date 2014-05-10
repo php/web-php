@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <entry xmlns="http://www.w3.org/2005/Atom">
-  <title>PHP 5.5.0 released.</title>
+  <title>PHP 5.5.0 Released</title>
   <id>http://php.net/archive/2013.php#id2013-06-20-1</id>
   <published>2013-06-20T16:20:26+00:00</published>
   <updated>2013-06-20T16:20:26+00:00</updated>
@@ -13,7 +13,7 @@
      <p>The PHP development team is proud to announce the immediate availability of PHP 5.5.0.
      This release includes a large number of new features and bug fixes.
      </p>
-     
+
      <p>
         <b>The key features of PHP 5.5.0 include:</b>
         </p>

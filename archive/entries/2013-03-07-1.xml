@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <entry xmlns="http://www.w3.org/2005/Atom">
-  <title>PHP 5.5.0alpha6 released</title>
+  <title>PHP 5.5.0alpha6 Released</title>
   <id>http://php.net/archive/2013.php#id2013-03-07-1</id>
   <published>2013-03-07T13:26:26+00:00</published>
   <updated>2013-03-07T13:26:26+00:00</updated>
@@ -47,7 +47,7 @@
      <p>
         Thank you for supporting PHP.
      </p>
-     
+
     </div>
   </content>
 </entry>

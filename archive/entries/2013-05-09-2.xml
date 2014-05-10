@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <entry xmlns="http://www.w3.org/2005/Atom">
-  <title>PHP 5.5.0RC1 is available</title>
+  <title>PHP 5.5.0RC1 Released</title>
   <id>http://php.net/archive/2013.php#id2013-05-09-2</id>
   <published>2013-05-09T09:12:44+00:00</published>
   <updated>2013-05-09T09:12:44+00:00</updated>
@@ -34,7 +34,7 @@
     </p>
     <p>
     Note that our release candidate cycle is only meant to bug fixes, no more features will be added to PHP 5.5 from now.
-    </p>     
+    </p>
     <p>
      Please help us to identify bugs in order to ensure that the release is solid and all things behave as expected.
      Please test this release candidate against your code base and report any problems that you encounter to the

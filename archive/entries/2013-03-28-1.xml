@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <entry xmlns="http://www.w3.org/2005/Atom">
-  <title>PHP 5.5 beta2 released</title>
+  <title>PHP 5.5 beta2 Released</title>
   <id>http://php.net/archive/2013.php#id2013-03-28-1</id>
   <published>2013-03-28T08:55:45+00:00</published>
   <updated>2013-03-28T08:55:45+00:00</updated>
@@ -45,7 +45,7 @@
      <p>
         Thank you for supporting PHP.
      </p>
-     
+
     </div>
   </content>
 </entry>
