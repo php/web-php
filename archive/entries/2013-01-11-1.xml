@@ -12,9 +12,9 @@
   <content type="xhtml">
     <div xmlns="http://www.w3.org/1999/xhtml">
      <p>Save $145 on ConFoo tickets by purchasing before January 20th. <a href="http://confoo.ca/en/register">Register online</a> without delay. ConFoo 2013 will be held on February 27th through March 1st in Montreal, Canada and is loaded with PHP content.</p>
-     
+
      <p>We gathered 100 speakers from around the world to talk about all aspects of web programming. The conference is preceeded by two training days. Places are very limited. Choose from 4 training topics:</p>
-     
+
      <ul>
      	<li>Advanced PHP Training (Sebastian Bergmann, Arne Blankerts and Stefan Priebsch)</li>
      	<li>PHP Web Security: From Exploitation to Correction (Jonathan Marcil)</li>

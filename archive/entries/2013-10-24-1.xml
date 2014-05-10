@@ -18,7 +18,7 @@
      it was actually written to do exactly that so we were quite certain it
      was a false positive, but we kept digging.
      </p>
-     
+
      <p>
      It turned out that by combing through the access logs for static.php.net
      it was periodically serving up userprefs.js with the wrong content length
@@ -28,16 +28,16 @@
      was being served, but of course, when we looked at it manually it looked
      fine. So more confusion.
      </p>
-     
+
      <p>
      We are still investigating how someone caused that file to be changed,
      but in the meantime we have migrated www/static to new clean servers.
      The highest priority is obviously the source code integrity and after
      a quick:
      </p>
-     
+
        <blockquote>git fsck --no-reflog --full --strict</blockquote>
-     
+
      <p>
      on all our repos plus manually checking the md5sums of the PHP distribution
      files we see no evidence that the PHP code has been compromised. We have

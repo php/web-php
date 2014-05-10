@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <entry xmlns="http://www.w3.org/2005/Atom">
-  <title>PHP 5.4.20 released</title>
+  <title>PHP 5.4.20 Released</title>
   <id>http://php.net/archive/2013.php#id2013-09-19-2</id>
   <published>2013-09-19T21:42:19-07:00</published>
   <updated>2013-09-19T21:42:19-07:00</updated>
@@ -13,7 +13,7 @@
      <p>The PHP development team announces the immediate availability of PHP
      5.4.20. About 30 bugs were fixed. All PHP 5.4 users are encouraged to upgrade to this version.
      </p>
-     
+
      <p>For source downloads of PHP 5.4.20 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
      Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.4.20">ChangeLog</a>.
