@@ -1,16 +1,6 @@
 <?php
-// $Id$
 $_SERVER['BASE_PAGE'] = 'sites.php';
 include_once $_SERVER['DOCUMENT_ROOT'] . '/include/prepend.inc';
-$SIDEBAR_DATA = '
-<h3>PHP.net Sitemap</h3>
-<p>
- It might also be a good idea to dig deeper into
- what PHP.net can offer you. Our <a href="/sitemap.php">sitemap</a>
- helps you find your way around the site.
-</p>
-
-';
 site_header("A Tourist's Guide", array("current" => "help"));
 ?>
 
