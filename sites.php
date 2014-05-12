@@ -120,11 +120,11 @@ site_header("A Tourist's Guide", array("current" => "help"));
  reported the same problem!).
 </p>
 
-<h2 id="doc" class="content-header"><a href="http://doc.php.net/">doc.php.net</a>: Documentation collaboration</h2>
+<h2 id="doc" class="content-header"><a href="http://doc.php.net/">doc.php.net</a>: Documentation Tools</h2>
 
 <p class="content-box">
- The documentation projects website tries to gather all PHP.net hosted
- documentation teams together with tools, status reports and an RFC system.
+ This page provides set of useful tools for PHP Manual translators
+ and contributors.
 </p>
 
 <h2 id="edit" class="content-header"><a href="https://edit.php.net/">edit.php.net</a>: PhD Online Editor</h2>
@@ -180,7 +180,8 @@ site_header("A Tourist's Guide", array("current" => "help"));
 <p class="content-box">
  The PHP project used to be organized under the SVN revision control system, but
  migrated to <a href="http://git.php.net/">Git</a> (see above) in March 2012.
- The old SVN repository is archived here for posterity.
+ The old SVN repository is archived here for posterity, however it's still used for
+ i.e. documentation files.
 </p>
 
 <h2 id="cvs" class="content-header"><a href="http://cvsold.php.net/">cvsold.php.net</a>: Archived CVS Repository</h2>
@@ -189,7 +190,8 @@ site_header("A Tourist's Guide", array("current" => "help"));
  The PHP project used to be organized under the CVS revision control system, but
  migrated to <a href="http://svn.php.net/">Subversion</a> (see above) in July of 2009.
  The old CVS repository is archived here for posterity. It was formerly named
- cvs.php.net, but that now redirects to the SVN repository.
+ cvs.php.net, but that now redirects to the SVN repository. This is not available
+ via HTTP.
 </p>
 
 <h2 id="lxr" class="content-header"><a href="http://lxr.php.net/">lxr.php.net</a>: Cross Reference</h2>
