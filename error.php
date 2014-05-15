@@ -269,7 +269,7 @@ if (isset($manual_page_moves[$URI])) {
 // Feel free to remove me on around May 15, 2015
 if (false !== stripos($URI, 'amqp')) {
     status_header(404);
-    mirror_redirect('https://github.com/videlalvaro/php-amqplib');
+    mirror_redirect('https://github.com/pdezwart/php-amqp');
 }
 
 // ============================================================================
