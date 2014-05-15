@@ -265,6 +265,13 @@ if (isset($manual_page_moves[$URI])) {
     mirror_redirect("/manual/$match[1]/" . $manual_page_moves[$match[2]] . ".php");
 }
 
+// The AMQP manual was removed awhile back, maybe this will prevent more bug reports
+// Feel free to remove me on around May 15, 2015
+if (false !== stripos($URI, 'amqp')) {
+    status_header(404);
+    mirror_redirect('https://github.com/videlalvaro/php-amqplib');
+}
+
 // ============================================================================
 // Define shortcuts for PHP files, manual pages and external redirects
 $uri_aliases = array (
