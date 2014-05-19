@@ -111,8 +111,8 @@ site_header("Thanks", array("current" => "community"));
  by donating a server and resources to enable us to build manuals
  and distribute our content via rsync.
 </li>
-
-<li>PHP.net is very grateful for all their support.</li>
 </ul>
+
+<p>PHP.net is very grateful for all their support.</p>
 
 <?php site_footer(); ?>
