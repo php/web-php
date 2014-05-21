@@ -43,7 +43,7 @@ if (ini_get("date.timezone") === "" && function_exists("date_default_timezone_se
 }
 
 
-/* Compatability with the PHP webserver.. */
+/* Compatibility with the PHP webserver.. */
 if (!isset($_SERVER["SERVER_ADDR"])) {
     $_SERVER["SERVER_ADDR"] = "127.0.0.1";
 }

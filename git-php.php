@@ -101,7 +101,7 @@ if (count($_POST) && (!isset($_POST['purpose']) || !is_array($_POST['purpose']) 
         );
         // Error while posting
         if ($error) {
-            $error = "An error occured when trying to create the account: $error.";
+            $error = "An error occurred when trying to create the account: $error.";
         }
     }
 
