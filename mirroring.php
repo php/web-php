@@ -187,7 +187,7 @@ site_header(
  The other is via the SQLite3 extension. These extensions are both compiled
  into PHP by default. Note: Some Linux distributions disable many extensions
  in their package systems, including SQLite. Please make sure you install the
- "php5-sqlite" (or similiar) package if using such a system.
+ "php5-sqlite" (or similar) package if using such a system.
 </p>
 
 <h2>Setup Apache VirtualHost</h2>

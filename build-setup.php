@@ -45,7 +45,7 @@ site_header("Operating System Preparation", array("current" => "community"));
 </p>
 <p>
     The following table shows what is required for Microsoft Windows users to build PHP:
-<p/>
+</p>
 <table>
 <tr>
     <th>PHP</th>
@@ -156,7 +156,7 @@ site_header("Operating System Preparation", array("current" => "community"));
     </ul>
 </p>
 <p>
-    The <i>configure</i> script has the ability to customize almost every aspect of PHP, to ellicit help at the console pass <i>--help</i>
+    The <i>configure</i> script has the ability to customize almost every aspect of PHP, to elicit help at the console pass <i>--help</i>
  as the only argument to <i>configure</i></p>
 <p>
     When <i>configure</i> executes, it saves the options passed in to a re-usable <i>config.nice</i> which executes <i>configure</i> when invoked.

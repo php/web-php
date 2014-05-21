@@ -77,7 +77,7 @@ if (preg_match("!(.*\\.php)3$!", $URI, $array)) {
 
 // ============================================================================
 // BC: handle moving english manual down into its own directory (also supports
-//     default language manual accessibilty on mirror sites through /manual/filename)
+//     default language manual accessibility on mirror sites through /manual/filename)
 // @todo do we rely on this? how about removing it...
 if (preg_match("!^manual/([^/]*)$!", $URI, $array)) {
     if (!isset($INACTIVE_ONLINE_LANGUAGES[$array[1]])) {
@@ -221,7 +221,7 @@ $manual_page_moves = array(
     // entry point changed
     'installation'               => 'install',
     
-    // was splitted among platforms (don't know where to redirect)
+    // was split among platforms (don't know where to redirect)
     'install.apache'             => 'install', 
     'install.apache2'            => 'install',
     'install.netscape-enterprise'=> 'install',
@@ -472,7 +472,7 @@ $external_redirects = array(
     "rest/readme.mailinglist_rules" => "http://git.php.net/?p=php-src.git;a=blob_plain;f=README.MAILINGLIST_RULES;hb=HEAD",
     "rest/readme.git-rules"         => "http://git.php.net/?p=php-src.git;a=blob_plain;f=README.GIT-RULES;hb=HEAD",
     "rest/coding_standards"         => "http://git.php.net/?p=php-src.git;a=blob_plain;f=CODING_STANDARDS;hb=HEAD",
-    "sunglasses"  => "https://www.youtube.com/watch?v=dQw4w9WgXcQ", // Temporary easiter egg for bug#66144
+    "sunglasses"  => "https://www.youtube.com/watch?v=dQw4w9WgXcQ", // Temporary easter egg for bug#66144
 );
 
 // ============================================================================

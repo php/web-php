@@ -85,7 +85,7 @@ site_header("License Information", array("current" => "help"));
 <a name="faq-lic"></a>
 <h2>Frequently Asked Questions</h2>
 
-<!-- Selecetd FAQ points from former page on License Information [v 1.13] -->
+<!-- Selected FAQ points from former page on License Information [v 1.13] -->
 <!-- Comments ref.old versions of PHP license prior to v3.0 have been removed -->
 
 <h3>Use of the "PHP" name</h3>
