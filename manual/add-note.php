@@ -75,7 +75,7 @@ if ($process) {
         $error = "Your note is too short. Trying to test the notes system? Save us the trouble of deleting your test, and don't. It works.";
     }
 
-    // Chek if any line is too long
+    // Check if any line is too long
     else {
     
         // Split the note by whitespace, and check length

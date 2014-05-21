@@ -81,7 +81,7 @@ function a($href) {
  <li>Other language pages (e.g. <?php a("oop") ?>)</li>
 </ul>
 <p>
- Since there are several manual pages that could potentionally match the query
+ Since there are several manual pages that could potentially match the query
  (extension, class, function name..) you are encouraged to use their prefix/suffix:
 </p>
 <ul>

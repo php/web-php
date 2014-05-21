@@ -24,7 +24,7 @@ if (isset($_POST['my_lang']) && isset($langs[$_POST['my_lang']])) {
     unset($langs[$_POST['my_lang']]);
 }
 
-// We have recevied a cookie and it is an available language
+// We have received a cookie and it is an available language
 elseif (isset($langs[myphpnet_language()])) {
 
     // Add this as first option, selected
