@@ -190,8 +190,7 @@ textarea {
 }
 .navbar-search .search-query {
   margin-bottom: 0;
-  padding: .25rem .5rem;
-  line-height: 1;
+  padding: .125rem .5rem;
   -moz-box-sizing: border-box;
   box-sizing:border-box;
   width:100%;
@@ -279,13 +278,14 @@ textarea {
 }
 
 body, input, textarea {
-    font-family: "Source Sans Pro", Helvetica, Arial, sans-serif;
+    font-family: "Fira Sans", "Source Sans Pro", Helvetica, Arial, sans-serif;
+  font-weight: 400;
 }
 code,
 pre.info,
 .docs .classsynopsis,
 .docs .classsynopsis code {
-  font: normal 0.875rem/1.5rem "Source Code Pro", monospace; 
+  font: normal 0.875rem/1.5rem "Fira Mono", "Source Code Pro", monospace; 
   word-wrap: break-word;
 }
 p code,
@@ -326,6 +326,7 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 3rem;
   margin:0 0 1.5rem;
   overflow:hidden;
+  text-rendering: optimizeLegibility;
 }
 h1 {
   font-size: 1.75rem;
@@ -534,7 +535,6 @@ dl dd {
     text-align: left;
 }
 div.classsynopsisinfo_comment {
-    font-weight: bold;
     margin-top:1.5rem;
 }
 
@@ -614,7 +614,7 @@ pre.info {
     padding:.5rem .66rem;
 }
 #results_nav_list li.current {
-    font-weight: bold;
+    font-weight: bolder;
 }
 /* Footer styling */
 
@@ -724,7 +724,7 @@ table.standard th.subr {
 #layout .cse .gsc-control-cse,
 #layout .gsc-control-cse,
 #layout .gsc-control-cse .gsc-table-result {
-    font-family: "Source Sans Pro", Helvetica, Arial, sans-serif;
+    font-family: "Fira Sans", "Source Sans Pro", Helvetica, Arial, sans-serif;
     font-size: 1rem;
     margin: 0;
     padding: 0;
@@ -926,13 +926,30 @@ div.informalexample {
     margin: .75rem 0;
 }
 
+strong,
+em {
+  text-rendering: optimizeLegibility;
+}
 em {
     font-weight:normal;
     font-style:italic;
 }
 strong {
-    font-weight:bold;
-    font-style:normal;
+  font-weight:bolder;
+  font-style:normal;
+}
+article strong,
+#layout-content ol strong,
+#layout-content ul strong,
+#layout-content p strong {
+  font-weight: 500;
+}
+
+.refsect1 code.parameter,
+strong code,
+strong pre,
+pre strong {
+  font-weight: 600;
 }
 
 #toTop {
@@ -1086,11 +1103,11 @@ fieldset {
 }
 .content-box .md5sum {
     display: block;
-    font: normal 0.875rem/1.5rem "Source Code Pro", monospace;
+    font: normal 0.875rem/1.5rem "Fira Mono", "Source Code Pro", monospace;
 }
 .content-box .md5sum:before {
     content: "md5: ";
-    font-family: "Source Sans Pro", Helvetica, Arial, sans-serif;
+    font-family: "Fira Sans", "Source Sans Pro", Helvetica, Arial, sans-serif;
 }
 .content-box .releasedate {
     float: right;
@@ -1150,9 +1167,6 @@ header.title {
     height:1.5rem;
 }
 
-.refsect1 code.parameter {
-    font-weight:bold;
-}
 .docs code.parameter {
   font-size:1rem;
 }
@@ -1205,7 +1219,7 @@ div.tip p {
 .docs .sect1 .dc-description code {
     font-weight:400;
     font-size:1rem;
-    font-family:"Source Code Pro", monospace;
+    font-family:"Fira Mono", "Source Code Pro", monospace;
     letter-spacing:-.0625rem;
     word-spacing:-.125rem;
     margin:0;
@@ -1322,11 +1336,6 @@ ul.chunklist_children {
     margin-bottom:1.5rem;
 }
 
-
-.docs .classsynopsisinfo_comment {
-    font-weight:normal;
-}
-
 .classsynopsisinfo_comment,
 .classsynopsis .constructorsynopsis,
 .classsynopsis .methodsynopsis,
@@ -1381,7 +1390,7 @@ ul.chunklist_children {
 }
 
 .layout-menu ul.child-menu-list .current {
-    font-weight:bolder;
+    font-weight: bolder;
 }
 #layout-content .current:before {
     content:"\bb \20";
@@ -1406,7 +1415,6 @@ ul.chunklist_children {
     margin:0;
     top:-22px;
     left: 0;
-    font-weight: bold;
 }
 div.soft-deprecation-notice {
     position: relative;
@@ -1715,6 +1723,8 @@ aside.tips .panel > a {
   border-bottom:0;
   line-height:3rem;
   font-size:1.125rem;
+  color:#E6E6E6;
+  text-rendering: optimizeLegibility;
 }
 /* Announcement Area */
 

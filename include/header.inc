@@ -1,11 +1,14 @@
 <?php
 /* $Id$ */
-$cssfiles = array(200 => "theme-base.css", "theme-medium.css");
+$cssfiles = array('/fonts/Fira/fira.css', '/styles/theme-base.css', '/styles/theme-medium.css');
 if (isset($config['css'])) {
-    $cssfiles += (array) $config['css'];
+    $cssfiles = array_merge($cssfiles, (array) $config['css']);
 }
 foreach($cssfiles as $filename) {
-    $path = dirname(dirname(__FILE__)).'/styles/'.$filename;
+    if ($filename[0] !== DIRECTORY_SEPARATOR) {
+        $filename = "/styles/$filename";
+    }
+    $path = dirname(__DIR__) . $filename;
     $CSS[$filename] = @filemtime($path);
 }
 
@@ -56,9 +59,8 @@ if ($config["cache"]) {
  <link rel="<?php echo $rel ?>" href="<?php echo $MYSITE ?><?php echo $page ?>">
 <?php endforeach ?>
 
- <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,400italic,600italic|Source+Code+Pro&amp;subset=latin,latin-ext' rel='stylesheet' type='text/css'>
 <?php foreach($CSS as $filename => $modified): ?>
-<link rel="stylesheet" type="text/css" href="<?php echo $MYSITE ?>cached.php?t=<?php echo $modified?>&amp;f=styles/<?php echo $filename?>" media="screen">
+<link rel="stylesheet" type="text/css" href="<?php echo $MYSITE ?>cached.php?t=<?php echo $modified?>&amp;f=<?php echo $filename?>" media="screen">
 <?php endforeach ?>
 
  <!--[if lte IE 7]>
