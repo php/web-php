@@ -399,6 +399,9 @@ pre.info {
 aside.tips div.border {
     display:none;
 }
+aside.tips h3 {
+  color:#E6E6E6;
+}
 aside.tips a {
   color:#ccc;
   border-bottom:1px dotted #666;
