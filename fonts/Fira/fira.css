@@ -1,3 +1,4 @@
+/*
 @font-face{
     font-family: 'Fira Sans';
     src: url('eot/FiraSans-Hair.eot');
@@ -63,7 +64,7 @@
     font-weight: 300;
     font-style: italic;
 }
-
+*/
 @font-face{
     font-family: 'Fira Sans';
     src: url('eot/FiraSans-Book.eot');
@@ -151,7 +152,7 @@
     font-weight: 700;
     font-style: italic;
 }
-
+/*
 @font-face{
     font-family: 'Fira Sans';
     src: url('eot/FiraSans-ExtraBold.eot');
@@ -195,7 +196,7 @@
     font-weight: 900;
     font-style: italic;
 }
-
+*/
 
 @font-face{
     font-family: 'Fira Mono';
