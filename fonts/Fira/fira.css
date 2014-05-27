@@ -68,7 +68,7 @@
 @font-face{
     font-family: 'Fira Sans';
     src: url('/fonts/Fira/eot/FiraSans-Book.eot');
-    src: local('/fonts/Fira/Fira Sans Regular'),
+    src: local('/fonts/Fira/Fira Sans Book'),
          url('/fonts/Fira/eot/FiraSans-Book.eot') format('embedded-opentype'),
          url('/fonts/Fira/woff/FiraSans-Book.woff') format('woff'),
          url('/fonts/Fira/ttf/FiraSans-Book.ttf') format('truetype');
@@ -79,7 +79,7 @@
 @font-face{
     font-family: 'Fira Sans';
     src: url('/fonts/Fira/eot/FiraSans-BookItalic.eot');
-    src: local('/fonts/Fira/Fira Sans Regular Italic'),
+    src: local('/fonts/Fira/Fira Sans Book Italic'),
          url('/fonts/Fira/eot/FiraSans-BookItalic.eot') format('embedded-opentype'),
          url('/fonts/Fira/woff/FiraSans-BookItalic.woff') format('woff'),
          url('/fonts/Fira/ttf/FiraSans-BookItalic.ttf') format('truetype');
