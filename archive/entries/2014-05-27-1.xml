@@ -9,13 +9,9 @@
   <link href="http://php.net/archive/2014.php#id2014-05-27-1" rel="via" type="text/html"/>
   <content type="xhtml">
     <div xmlns="http://www.w3.org/1999/xhtml">
-     <p>When we aren't looking for pictures of kittens on the internet, internals developers are nearly always looking for ways to improve PHP, a few developers have a focus on performance.</p>
-     <p>Over the last year, some research into the possibility of introducing JIT compilation capabilities to PHP has been conducted.</p>
-     <p>During this research, the realization was made that in order to achieve optimal performance from PHP, some internal API's should be changed.</p>
-     <p>This necessitated the birth of the phpng branch, authored by Dmitry Stogov, Xinchen Hui, and Nikita Popov. This branch does not include JIT capabilities, but rather seeks to solve those problems that prohibit the current, and any future implementation of a JIT capable executor achieving optimal performance by improving memory usage and cleaning up some core API's.</p>
-     <p>In solving these problems, the phpng branch gives us a considerable performance improvement in real world applications, for example a 20% increase in throughput for Wordpress. The door may well now be open for a JIT capable compiler that can perform as we expect, but it's necessary to say that these changes stand strong on their own, without requiring a JIT capable compiler in the future to validate them.</p>
-     <p>The name "Next Generation" was optimistically presumptuous, which we all like, in reality phpng is an internal project that we are working on, it is not a production ready branch that anyone should deploy, or judge as they would a release of PHP.</p>
-     <p>The work on phpng, the doors it opens, the conversations it has started, the collaboration it is inspiring, are all worth getting excited about. But, we need to stay grounded, honest, and open; and say that there is much work to do in order to make the "Next Generation" a reality, this is only the start.</p>
+     <p>There's been a lot of confusion about the PHPNG branch and third-party sites have spread a lot of misinformation. So we thought we'd take a break from looking at kittens on the Internet and provide some more information.</p>
+     <p>Over the last year some developers were researching the possibility of introducing JIT compilation capabilities to PHP. During this research, they realized that in order to achieve optimal performance from PHP some internal API's should be changed. This gave birth to the phpng branch, initially authored by Dmitry Stogov, Xinchen Hui, and Nikita Popov. This branch improves memory usage and cleans up some core API's; it does not include JIT compiliation.</p>
+     <p>The optimistically named PHP Next Generation branch provides a considerable performance improvement in real world applications; for example, Wordpress has a 20% increased throughput on this branch. There is still a lot of work to be done to make this patch production ready and it hasn't yet been voted on yet. The patch authors are hoping that it will be a suitable base for PHP 6.0.</p>
     </div>
   </content>
 </entry>
