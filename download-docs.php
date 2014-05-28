@@ -36,27 +36,6 @@ $SIDEBAR_DATA='
         </ul>
     </div>
 </div>
-
-<div class="panel">
-    <div class="headline">HTML Help viewers</div>
-    <div class="body">
-        <ul class="toc">
-            <li>Microsoft Windows has a reader built in.</li>
-            <li>
-                On Linux, *BSD and Solaris:<br />
-                <ul class="simple">
-                    <li><a href="http://xchm.sourceforge.net/">xCHM</a></li>
-                    <li><a href="http://gnochm.sourceforge.net/">GnoCHM</a></li>
-                    <li><a href="http://www.kchmviewer.net/">KchmViewer</a></li>
-                </ul>
-            </li>
-            <li>
-                <a href="http://code.google.com/p/ichm/">iChm</a> caters
-                to Mac OS X users.
-            </li>
-        </ul>
-    </div>
-</div>
 ';
 
 site_header("Download documentation", array("current" => "docs"));
