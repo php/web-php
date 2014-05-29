@@ -23,11 +23,11 @@ function release_date($in) {
 <ul>
   <li><?php bugfix(67079); ?> (Missing MIME types for XML/XSL files).</li>
 </ul></li>
-<ul><li>COM:
+<li>COM:
 <ul>
   <li><?php bugfix(66431); ?> (Special Character via COM Interface (CP_UTF8)).</li>
 </ul></li>
-<ul><li>Core:
+<li>Core:
 <ul>
   <li><?php bugfix(65701); ?> (copy() doesn't work when destination filename is created
     by tempnam()).</li>
