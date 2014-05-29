@@ -81,6 +81,47 @@ function release_date($in) {
 </ul>
 <!-- }}} --></section>
 
+<section class="version" id="5.4.29"><!-- {{{ 5.4.29 -->
+<h3>Version 5.4.29</h3>
+<b>29-May-2014</b>
+<ul><li>COM:
+<ul>
+  <li><?php bugfix(66431); ?> (Special Character via COM Interface (CP_UTF8)).</li>
+</ul></li>
+<li>Core:
+<ul>
+  <li><?php bugfix(65701); ?> (copy() doesn't work when destination filename is created by tempnam()).</li>
+  <li><?php bugfix(67072); ?> (Echoing unserialized "SplFileObject" crash).</li>
+  <li><?php bugfix(67245); ?> (usage of memcpy() with overlapping src and dst in zend_exceptions.c).</li>
+  <li><?php bugfix(67247); ?> (spl_fixedarray_resize integer overflow).</li>
+  <li><?php bugfix(67249); ?> (printf out-of-bounds read).</li>
+  <li><?php bugfix(67250); ?> (iptcparse out-of-bounds read).</li>
+  <li><?php bugfix(67252); ?> (convert_uudecode out-of-bounds read). (Stas) - Fileinfo:</li>
+  <li><?php bugfix(66307); ?> (Fileinfo crashes with powerpoint files).</li>
+  <li><?php bugfix(67327); ?> (fileinfo: CDF infinite loop in nelements DoS). (CVE-2014-0238)</li>
+  <li><?php bugfix(67328); ?> (fileinfo: fileinfo: numerous file_printf calls resulting in performance degradation). (CVE-2014-0237)</li>
+</ul></li>
+<li>Date:
+<ul>
+  <li><?php bugfix(67118); ?> (DateTime constructor crash with invalid data).</li>
+  <li><?php bugfix(67251); ?> (date_parse_from_format out-of-bounds read).</li>
+  <li><?php bugfix(67253); ?> (timelib_meridian_with_check out-of-bounds read).</li>
+</ul></li>
+<li>DOM:
+<ul>
+  <li><?php bugfix(67081); ?> (DOMDocumentType-&gt;internalSubset returns entire DOCTYPE tag, not only the subset).</li>
+</ul></li>
+<li>FPM:
+<ul>
+  <li><?php bugfix(66908); ?> (php-fpm reload leaks epoll_create() file descriptor).</li>
+</ul></li>
+<li>Phar:
+<ul>
+  <li><?php bugfix(64498); ?> ($phar-&gt;buildFromDirectory can't compress file with an accent in its name).</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
 <section class="version" id="5.5.12"><!-- {{{ 5.5.12 -->
 <h3>Version 5.5.12</h3>
 <?php release_date('1-May-2014'); ?>
