@@ -38,7 +38,6 @@ if ($config["cache"]) {
 <head>
 
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
 
   <title>PHP: <?php echo $title ?></title>
@@ -92,7 +91,7 @@ if ($config["cache"]) {
   <div class="navbar-inner clearfix">
     <a href="/" class="brand"><img src="/images/logo.php" width="48" height="24" alt="php"></a>
     <div id="mainmenu-toggle-overlay"></div>
-    <input type="checkbox" id="mainmenu-toggle" />
+    <input type="checkbox" id="mainmenu-toggle">
     <ul class="nav">
       <li class="<?php echo $curr == "downloads" ? "active" : ""?>"><a href="/downloads">Downloads</a></li>
       <li class="<?php echo $curr == "docs" ? "active" : ""?>"><a href="/docs.php">Documentation</a></li>
