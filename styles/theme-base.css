@@ -1011,9 +1011,8 @@ fieldset {
     z-index: 1!important;
 }
 
-.tt-dropdown-menu h3 {
+.tt-dropdown-menu .result-heading {
     font-size:1.1rem;
-    background: rgb(136, 146, 191);
     border-bottom: 2px solid #4F5B93;
     color: #E2E4EF;
     text-shadow:0 -1px 0 rgba(0,0,0,.25);
@@ -1021,10 +1020,31 @@ fieldset {
     margin: 0;
     padding: 0.1rem 0.3rem;
     line-height: 2.5rem;
+    background-color: rgb(136, 146, 191);
+}
+
+.tt-dropdown-menu .result-heading .collapsible {
+    background: url(../images/search-sprites.png) no-repeat left center;
+    background-position: 0 -15px;
+    width: 30px;
+    height: 13px;
+    display: inline-block;
+}
+
+.tt-dropdown-menu .result-heading .collapsible:hover {
+    cursor: pointer;
+}
+
+.tt-dropdown-menu .result-heading .collapsible.closed {
+    background-position: 0 -2px;
+}
+
+.tt-dropdown-menu .result-heading::after {
+    border-bottom: none;
 }
 
 .tt-dropdown-menu .result-count {
-    display: block;
+    display: inline-block;
     float: right;
     opacity: 0.6;
     text-align: right;
