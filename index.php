@@ -98,7 +98,7 @@ if(!empty($RELEASES[5])) {
     $intro .= "<ul>\n";
     foreach ($RELEASES[5] as $version => $release) {
         $intro .= "
-        <li><a class='download-link' href='/downloads.php#v$version'>$version</a> &middot; <a class='notes' href='/ChangeLog-5.php#$version'>Release Notes</a></li>\n";
+        <li><a class='download-link' href='/downloads.php#v$version'>$version</a><span class='dot'>&middot;</span><a class='notes' href='/ChangeLog-5.php#$version'>Release Notes</a></li>\n";
     }
     $intro .= "</ul>\n";
 }

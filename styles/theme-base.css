@@ -253,6 +253,7 @@ textarea {
   .hidden-tablet {
     display: none !important;
   }
+
 }
 @media (max-width: 767px) {
   .hidden-desktop {
@@ -268,6 +269,8 @@ textarea {
     display: none !important;
   }
 }
+
+
 @media (max-width: 979px) {
 }
 @media (min-width: 980px) {
@@ -1514,8 +1517,7 @@ div.soft-deprecation-notice blockquote.sidebar {
     float: left;
   }
 
-  #intro .blurb,
-  #layout-content {
+  #intro .blurb, #layout-content {
     float:left;
     width:75%;
   }
@@ -1527,7 +1529,18 @@ div.soft-deprecation-notice blockquote.sidebar {
     margin-bottom: 0;
   }
 }
+
+
+
+
 @media (min-width: 768px) and (max-width: 979px) {
+    #intro .download, aside.tips, .navbar-search {
+        width: 30% !important;
+    }
+
+    #intro .blurb, #layout-content {
+        width: 70% !important;
+    }
 }
 @media (min-width: 1200px) {
   #intro .container,
