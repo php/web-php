@@ -145,17 +145,17 @@ echo $content;
 if (is_array($CONF_TEASER)) {
     $conftype = array(
         'conference' => 'Upcoming conferences',
-        'cfp'        => 'Conferences Calling for papers',
+        'cfp'        => 'Conferences calling for papers',
     );
     $announcements = "";
     foreach($CONF_TEASER as $category => $entries) {
 		if ($entries) {
             $announcements .= '<div class="panel">';
-            $announcements .= '  <a href="/conferences" class="headline">' . $conftype[$category] .'</a>';
+            $announcements .= '  <a href="/conferences" class="headline" title="' . $conftype[$category] . '">' . $conftype[$category] .'</a>';
             $announcements .= '<div class="body"><ul>';
             foreach (array_slice($entries, 0, 4) as $url => $title) {
                 $title = preg_replace("'([A-Za-z0-9])([\s\:\-\,]*?)call for(.*?)$'i", "$1", $title);
-                $announcements .= "<li><a href='$url'>$title</a></li>";
+                $announcements .= "<li><a href='$url' title='$title'>$title</a></li>";
             }
             $announcements .= '</ul></div>';
             $announcements .= '</div>';
@@ -167,7 +167,7 @@ if (is_array($CONF_TEASER)) {
 
 $SIDEBAR = <<< SIDEBAR_DATA
 
-    <p class='panel'><a href='/migration55'>Upgrading to PHP5.5</a></p>
+    <p class='panel'><a href='/migration55' title='Upgrading to PHP5.5' class='headline'>Upgrading to PHP5.5</a></p>
 $announcements
     <p class='panel'><a href='/cal.php'>User Group Events</a></p>
     <p class='panel'><a href='/thanks.php'>Special Thanks</a></p>
