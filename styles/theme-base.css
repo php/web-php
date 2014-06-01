@@ -1055,7 +1055,7 @@ fieldset {
 
 .tt-suggestions {
     color: #555;
-    overflow-y: scroll;
+    overflow-y: auto;
 	overflow-x: hidden;
     max-height: 210px;
 }
@@ -1532,7 +1532,6 @@ div.soft-deprecation-notice blockquote.sidebar {
 
 
 
-
 @media (min-width: 768px) and (max-width: 979px) {
     #intro .download, aside.tips, .navbar-search {
         width: 30% !important;
@@ -1542,6 +1541,7 @@ div.soft-deprecation-notice blockquote.sidebar {
         width: 70% !important;
     }
 }
+
 @media (min-width: 1200px) {
   #intro .container,
   .navbar-inner,
