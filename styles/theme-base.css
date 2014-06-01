@@ -1020,6 +1020,7 @@ fieldset {
     word-spacing:6px;
     margin: 0;
     padding: 0.1rem 0.3rem;
+    line-height: 2.5rem;
 }
 
 .tt-dropdown-menu .result-count {
@@ -1057,13 +1058,15 @@ fieldset {
     overflow: hidden;
     text-overflow: ellipsis;
     font-size: 11pt;
+    line-height: 2rem;
+    font-weight: normal;
 }
 
 /* Class and other matches descriptions tend to be useless. */
 .tt-suggestion .description {
     display: block;
     font-size: 0.75rem;
-    line-height: 0.8rem;
+    line-height: 1rem;
     overflow: hidden;
     text-overflow: ellipsis;
 }
