@@ -1070,8 +1070,16 @@ fieldset {
 
 
 /* Selected items. */
-.tt-is-under-cursor {
-    background: rgba(255, 255, 255, 0.1);
+.tt-suggestion.tt-is-under-cursor {
+    background-color: #4F5B93;
+}
+
+.tt-suggestion.tt-is-under-cursor h4 {
+    color: #FFF;
+}
+
+.tt-suggestion.tt-is-under-cursor .description {
+    color: #FFF;
 }
 
 /* We need to crunch down the dropdown on smaller displays. Firstly we'll drop
