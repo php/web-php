@@ -1729,10 +1729,10 @@ aside.tips .panel .body {
   margin-top:1.5rem;
 }
 
-aside.tips .panel > a {
+aside.tips .panel .headline {
   display: block;
   border-bottom:0;
-  line-height:3rem;
+  line-height: 1.5rem;
   font-size:1.125rem;
   color:#E6E6E6;
   text-rendering: optimizeLegibility;
@@ -1789,6 +1789,10 @@ aside.tips div.inner {
 .newsentry header time {
   float:right;
   line-height:3rem;
+}
+
+.newsentry p {
+    line-height: 1.7rem;
 }
 
 .newsentry .newsimage a {
