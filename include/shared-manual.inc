@@ -368,6 +368,7 @@ function manual_navigation_related(array $setup) {
 // including HTTP header information
 function manual_setup($setup) {
     global $PGI, $MYSITE, $USERNOTES;
+    global $ACTIVE_ONLINE_LANGUAGES;
 
     //TODO: get rid of this hack to get the related items into manual_footer
     global $__RELATED; 
@@ -404,6 +405,7 @@ function manual_setup($setup) {
     $config = array(
         "current" => "docs",
         "breadcrumbs" => $breadcrumbs,
+        "languages"   => array_keys($ACTIVE_ONLINE_LANGUAGES),
         "meta-navigation" => array(
             "contents" => $base . $setup["home"][0],
             "index"    => $base . $setup["up"][0],

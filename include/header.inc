@@ -31,6 +31,9 @@ if ($config["cache"]) {
     }
     header("Last-Modified: " . $tsstring);
 }
+if (!isset($config["languages"])) {
+    $config["languages"] = array();
+}
 
 ?>
 <!DOCTYPE html>
@@ -51,11 +54,16 @@ if ($config["cache"]) {
  <link rel="canonical" href="http://php.net/<?php echo $_SERVER['BASE_PAGE']?>">
 <?php if ($shortname): ?>
  <link rel="shorturl" href="<?php echo $shorturl ?>">
+ <link rel="alternate" href="<?php echo $shorturl ?>" hreflang="x-default">
 <?php endif ?>
 <?php endif ?>
 
 <?php foreach($config["meta-navigation"] as $rel => $page): ?>
  <link rel="<?php echo $rel ?>" href="<?php echo $MYSITE ?><?php echo $page ?>">
+<?php endforeach ?>
+
+<?php foreach($config["languages"] as $code): ?>
+ <link rel="alternate" href="<?php echo $MYSITE ?>/manual/<?php echo $code?>/<?php echo $config["thispage"] ?>" hreflang="<?php echo $code?>">
 <?php endforeach ?>
 
 <?php foreach($CSS as $filename => $modified): ?>
