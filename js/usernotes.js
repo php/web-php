@@ -14,7 +14,7 @@ $(document).ready(function() {
             beforeSend: function() {
               $("#Vu"+id).hide();
               $("#Vd"+id).hide();
-              $("#V"+id).html("<img src=\"/images/working.gif\" alt=\"Working...\" border=\"0\" title=\"Working...\" />");
+              $("#V"+id).html("<img src=\"/images/working.gif\" alt=\"Working...\" border=\"0\" title=\"Working...\">");
             }
           });
           request.done(function(data) {

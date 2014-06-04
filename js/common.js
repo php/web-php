@@ -507,7 +507,7 @@ $(document).ready(function() {
             beforeSend: function() {
               $("#Vu"+id).hide();
               $("#Vd"+id).hide();
-              $("#V"+id).html("<img src=\"/images/working.gif\" alt=\"Working...\" border=\"0\" title=\"Working...\" />");
+              $("#V"+id).html("<img src=\"/images/working.gif\" alt=\"Working...\" border=\"0\" title=\"Working...\">");
             }
           });
           request.done(function(data) {
@@ -682,7 +682,7 @@ function flashMessage(o)
   
     var id = 'id_' + Math.random().toString().replace('0.', '');
 
-    var message = $('<div />')
+    var message = $('<div>')
                   .addClass('message ' + options.type)
                   .data('type', options.type)
                   .attr('id', id)
