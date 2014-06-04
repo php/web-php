@@ -9,7 +9,7 @@ if(!isset($_COOKIE["MAGIC_COOKIE"])) {
 }
 
 $SIDEBAR_DATA = <<< EOT
-<br />
+<br>
 <div id="securitySidebar">
  <h3><a href="/security/">Security Center?</a></h3>
  <p>In an effort to make security related information more readily available, the PHP Security Response Team created a new Security Center on March 1st, 2007. The Security Center will serve as the central location where interested parties can find information about security threats, fixes and/or workarounds and any other related meterial.</p>
@@ -70,8 +70,8 @@ if(is_resource($fp)) {
 ?>
 <h3>PHP Vulnerability Disclosures</h3>
 <p>This page contains information about PHP-related security threats, patches and known workarounds.</p>
-<p>If you believe you have discovered a security problem in PHP please inform the<br />PHP Security Response Team in confidence by mailing <a href="mailto:security@php.net">security@php.net</a></p>
-<br />
+<p>If you believe you have discovered a security problem in PHP please inform the<br>PHP Security Response Team in confidence by mailing <a href="mailto:security@php.net">security@php.net</a></p>
+<br>
 <p>The following colors are used to highlight the severity of a bug:</p>
 <ul class="colors">
  <li class="low">low risk is yellow</li>
@@ -106,7 +106,7 @@ if(is_resource($fp)) {
             $last_month = $current_month;
             $current_month = $record["affects"];
 
-            echo "<br /><h1>", date("F Y", strtotime($record["published"])), "</h1>\n";
+            echo "<br><h1>", date("F Y", strtotime($record["published"])), "</h1>\n";
         }
 ?>
 <div class="record <?php echo strtolower($record["severity"]) ?>">

@@ -116,7 +116,7 @@ function bugl($number)   { echo "<a href=\"http://bugs.php.net/$number\">#$numbe
 <li><?php bugfix(34066); ?> (recursive array_walk causes segfault).</li>
 </ul>
 
-There is a <a href="release_4_4_4.php">separate announcement</a> available for this release.<br />
+There is a <a href="release_4_4_4.php">separate announcement</a> available for this release.<br>
 
 <!-- }}} --></section>
 
@@ -139,7 +139,7 @@ There is a <a href="release_4_4_4.php">separate announcement</a> available for t
 <li><?php bugfix(29538); ?> (number_format and problem with 0).</li>
 </ul>
 
-There is a <a href="release_4_4_4.php">separate announcement</a> available for this release.<br />
+There is a <a href="release_4_4_4.php">separate announcement</a> available for this release.<br>
 
 <!-- }}} --></section>
 
@@ -175,7 +175,7 @@ There is a <a href="release_4_4_4.php">separate announcement</a> available for t
 <li><?php bugfix(36017); ?> (fopen() crashes PHP when opening a URL).</li>
 </ul>
 
-There is a <a href="release_4_4_3.php">separate announcement</a> available for this release.<br />
+There is a <a href="release_4_4_3.php">separate announcement</a> available for this release.<br>
 
 <!-- }}} --></section>
 
@@ -224,7 +224,7 @@ There is a <a href="release_4_4_3.php">separate announcement</a> available for t
 
 </ul>
 
-There is a <a href="release_4_4_2.php">separate announcement</a> available for this release.<br />
+There is a <a href="release_4_4_2.php">separate announcement</a> available for this release.<br>
 
 <!-- }}} --></section>
 
@@ -278,7 +278,7 @@ There is a <a href="release_4_4_2.php">separate announcement</a> available for t
 <li><?php bugfix(21306); ?> (ext/sesssion: catch bailouts of write handler during RSHUTDOWN).</li>
 </ul>
 
-There is a <a href="release_4_4_1.php">separate announcement</a> available for this release.<br />
+There is a <a href="release_4_4_1.php">separate announcement</a> available for this release.<br>
 
 <!-- }}} --></section>
 
@@ -343,7 +343,7 @@ There is a <a href="release_4_4_1.php">separate announcement</a> available for t
 <li><?php bugfix(28377); ?> (debug_backtrace is intermittently passing args).</li>
 </ul>
 
-There is a <a href="release_4_4_0.php">separate announcement</a> available for this release.<br />
+There is a <a href="release_4_4_0.php">separate announcement</a> available for this release.<br>
 
 <!-- }}} --></section>
 
@@ -428,7 +428,7 @@ There is a <a href="release_4_4_0.php">separate announcement</a> available for t
 <li><?php bugfix(7782); ?> (Cannot use PATH_INFO fully with php isapi).</li>
 </ul>
 
-There is a <a href="release_4_3_11.php">separate announcement</a> available for this release.<br />
+There is a <a href="release_4_3_11.php">separate announcement</a> available for this release.<br>
 
 <!-- }}} --></section>
 
@@ -473,7 +473,7 @@ There is a <a href="release_4_3_11.php">separate announcement</a> available for 
 
 </ul>
 
-There is a <a href="release_4_3_10.php">separate announcement</a> available for this release.<br />
+There is a <a href="release_4_3_10.php">separate announcement</a> available for this release.<br>
 
 <!-- }}} --></section>
 
@@ -533,7 +533,7 @@ There is a <a href="release_4_3_10.php">separate announcement</a> available for 
 <li><?php bugfix(28175); ?> (Allow bundled GD to compile against freetype 2.1.2).</li>
 
 </ul>
-There is a <a href="release_4_3_9.php">separate announcement</a> available for this release.<br />
+There is a <a href="release_4_3_9.php">separate announcement</a> available for this release.<br>
 
 <!-- }}} --></section>
 
@@ -549,7 +549,7 @@ There is a <a href="release_4_3_9.php">separate announcement</a> available for t
 <li><?php bugfix(28632); ?> Prevent open_basedir bypass via MySQL's LOAD DATA LOCAL. (Ilia)</li>
 </ul>
 
-There is a <a href="release_4_3_8.php">separate announcement</a> available for this release.<br />
+There is a <a href="release_4_3_8.php">separate announcement</a> available for this release.<br>
 <!-- }}} --></section>
 
 <section class="version" id="4.3.7"><!-- {{{ 4.3.7 -->
@@ -591,7 +591,7 @@ There is a <a href="release_4_3_8.php">separate announcement</a> available for t
 <li><?php bugfix(23220); ?> (SSL: fatal protocol error when talking to IIS). (Wez)</li>
 
 </ul>
-There is a <a href="release_4_3_7.php">separate announcement</a> available for this release.<br />
+There is a <a href="release_4_3_7.php">separate announcement</a> available for this release.<br>
 
 <!-- }}} --></section>
 
@@ -626,7 +626,7 @@ There is a <a href="release_4_3_7.php">separate announcement</a> available for t
 <li><?php bugfix(25547); ?> (error_handler and array index with function call). cschneid at cschneid dot com)</li>
 
 </ul>
-There is a <a href="release_4_3_6.php">separate announcement</a> available for this release.<br />
+There is a <a href="release_4_3_6.php">separate announcement</a> available for this release.<br>
 
 <!-- }}} --></section>
 
@@ -794,7 +794,7 @@ There is a <a href="release_4_3_6.php">separate announcement</a> available for t
 <li><?php bugfix(21070); ?> (ftp_genlist/ANSI-tmpfile() fail w/ some platform). (Sara)</li>
 
 </ul>
-There is a <a href="release_4_3_5.php">separate announcement</a> available for this release.<br />
+There is a <a href="release_4_3_5.php">separate announcement</a> available for this release.<br>
 
 
 <!-- }}} --></section>
@@ -881,7 +881,7 @@ There is a <a href="release_4_3_5.php">separate announcement</a> available for t
 <li><?php bugfix(18534); ?> (ifx_close() leaves open session). (nobbie@php.net)</li>
 <li><?php bugfix(14049); ?> (realpath() returns invalid results for non-existent paths). (Ilia)</li>
 </ul>
-There is a <a href="release_4_3_4.php">separate announcement</a> available for this release.<br />
+There is a <a href="release_4_3_4.php">separate announcement</a> available for this release.<br>
 
 <!-- }}} --></section>
 
@@ -1035,7 +1035,7 @@ There is a <a href="release_4_3_4.php">separate announcement</a> available for t
 <li><?php bugfix(11924); ?> (ibase_query(), ibase_execute() mangled passed parameters). (Jani)</li>
 <li><?php bugfix(7014); ?> (crash in _php_ibase_error() after request shutdown). (Ard)</li>
 </ul>
-More information on this release on <a href="/releases.php#4.3.3">our Releases page</a>.<br />
+More information on this release on <a href="/releases.php#4.3.3">our Releases page</a>.<br>
 
 <!-- }}} --></section>
 
@@ -1226,7 +1226,7 @@ More information on this release on <a href="/releases.php#4.3.3">our Releases p
 <li><?php bugfix(13561); ?> (--without-pear disabled phpize/php-config install). (Jani)</li>
 <li><?php bugfix(13551); ?> (bcmath functions applying scale incorrectly). (Sara)</li>
 </ul>
-More information on this release on <a href="/releases.php#4.3.2">our Releases page</a>.<br />
+More information on this release on <a href="/releases.php#4.3.2">our Releases page</a>.<br>
 
 <!-- }}} --></section>
 
@@ -1236,7 +1236,7 @@ More information on this release on <a href="/releases.php#4.3.2">our Releases p
 <ul>
 <li>Fixed serious security vulnerability in CGI SAPI. (Shane)</li>
 </ul>
-More information on this release on <a href="/releases.php#4.3.1">our Releases page</a>.<br />
+More information on this release on <a href="/releases.php#4.3.1">our Releases page</a>.<br>
 
 <!-- }}} --></section>
 
@@ -1749,7 +1749,7 @@ More information on this release on <a href="/releases.php#4.3.1">our Releases p
   dependencies. Automake is only needed for its aclocal tool. The build 
   process is now more portable and less resource-consuming. (Sascha)</li>
 </ul>
-More information on this release on <a href="/releases.php#4.3.0">our Releases page</a>.<br />
+More information on this release on <a href="/releases.php#4.3.0">our Releases page</a>.<br>
 
 <!-- }}} --></section>
 
@@ -1788,7 +1788,7 @@ More information on this release on <a href="/releases.php#4.3.0">our Releases p
 <li>Fixed array_rand() on thread-safe platforms such as Windows. (Edin)</li>
 <li>Report the right exit code after a call to exit(). (Edin)</li>
 </ul>
-More information on this release on <a href="/releases.php#4.2.3">our Releases page</a>.<br />
+More information on this release on <a href="/releases.php#4.2.3">our Releases page</a>.<br>
 
 <!-- }}} --></section>
 
@@ -1798,7 +1798,7 @@ More information on this release on <a href="/releases.php#4.2.3">our Releases p
 <ul>
 <li>Fixed serious security vulnerability. (Stefan Esser)</li>
 </ul>
-More information on this release on <a href="/releases.php#4.2.2">our Releases page</a>.<br />
+More information on this release on <a href="/releases.php#4.2.2">our Releases page</a>.<br>
 
 <!-- }}} --></section>
 
@@ -1855,7 +1855,7 @@ More information on this release on <a href="/releases.php#4.2.2">our Releases p
 <li>Fixed a bug in the COM extension that caused outproc servers to 'hang'
   because of a missing Release() call. (Alan, Harald)</li>
 </ul>
-More information on this release on <a href="/releases.php#4.2.1">our Releases page</a>.<br />
+More information on this release on <a href="/releases.php#4.2.1">our Releases page</a>.<br>
 
 <!-- }}} --></section>
 
@@ -1884,11 +1884,11 @@ example: socket_connect($sock, 'www.yahoo.com', 80);</li>
   <li>Removed all code pertaining to fd_sets (socket_fd_*)</li>
   <li>Modified/Improved socket_select() to accept array of resources instead of fd_sets. example:
     <pre>
-    &lt;?php<br />
-    $wfds=$rfds=array($sock1, $sock2, $sock3, $sock7);<br />
-    $r=socket_select($rfds, $wfds, NULL, 1);<br />
-    print "Ready to read:\n"; var_dump($rfds);<br />
-    ?&gt;<br />
+    &lt;?php<br>
+    $wfds=$rfds=array($sock1, $sock2, $sock3, $sock7);<br>
+    $r=socket_select($rfds, $wfds, NULL, 1);<br>
+    print "Ready to read:\n"; var_dump($rfds);<br>
+    ?&gt;<br>
     </pre></li>
   </ul></li>
 <li>Fixed segfault in ibase_close() if user does not free the resultset.
@@ -2069,7 +2069,7 @@ or entries for the specified extension. (Jani)</li>
 (Patch by Alan Knowles &lt;<a href="mailto:alan_k@hklc.com">alan_k@hklc.com</a>&gt; and Wez)</li>
 <li>Improved support for autoconf-2.50+/libtool 1.4b+. (Jan Kneschke, Sascha)</li>
 </ul>
-More information on this release on <a href="/releases.php#4.2.0">our Releases page</a>.<br />
+More information on this release on <a href="/releases.php#4.2.0">our Releases page</a>.<br>
 
 <!-- }}} --></section>
 
@@ -2086,7 +2086,7 @@ More information on this release on <a href="/releases.php#4.2.0">our Releases p
 <li>Changed the default output encoding of mbstring 'pass' to fix 
   initialization problem (Rui)</li>
 </ul>
-More information on this release on <a href="/releases.php#4.1.2">our Releases page</a>.<br />
+More information on this release on <a href="/releases.php#4.1.2">our Releases page</a>.<br>
 
 <!-- }}} --></section>
 
@@ -2113,7 +2113,7 @@ More information on this release on <a href="/releases.php#4.1.2">our Releases p
 <li>Fixed a bug in the strtotime() function where it was incorrectly recognizing
   GMT +0100 and GMT -0100. (Derick)</li>
 </ul>
-More information on this release on <a href="/releases.php#4.1.1">our Releases page</a>.<br />
+More information on this release on <a href="/releases.php#4.1.1">our Releases page</a>.<br>
 
 <!-- }}} --></section>
 
@@ -2318,7 +2318,7 @@ More information on this release on <a href="/releases.php#4.1.1">our Releases p
   string indexed array. (Jason)</li>
 <li>Fixed memory leak upon re-registering constants. (Sascha, Zend Engine)</li>
 </ul>
-More information on this release on <a href="/releases.php#4.1.0">our Releases page</a>.<br />
+More information on this release on <a href="/releases.php#4.1.0">our Releases page</a>.<br>
 
 <!-- }}} --></section>
 
@@ -2434,7 +2434,7 @@ More information on this release on <a href="/releases.php#4.1.0">our Releases p
 <li>Added mysql_unbuffered_query(), which is useful for very large result sets.
   (Zeev)</li>
 </ul>
-More information on this release on <a href="/releases.php#4.0.6">our Releases page</a>.<br />
+More information on this release on <a href="/releases.php#4.0.6">our Releases page</a>.<br>
 
 <!-- }}} --></section>
 
@@ -2581,7 +2581,7 @@ More information on this release on <a href="/releases.php#4.0.6">our Releases p
 <li>ext/odbc: IBM DB2 patch by Walter Franzini. (walter@sys-net.it)</li>
 <li>Added extension for the cracklib library. (Alexander Feldman)</li>
 </ul>
-More information on this release on <a href="/releases.php#4.0.5">our Releases page</a>.<br />
+More information on this release on <a href="/releases.php#4.0.5">our Releases page</a>.<br>
 
 <!-- }}} --></section>
 
@@ -2737,7 +2737,7 @@ More information on this release on <a href="/releases.php#4.0.5">our Releases p
 <li>Added HMAC support in the mhash module (nmav@altera.gr)</li>
 <li>Added module for Ovrimos sql server (nmav@altera.gr)</li>
 </ul>
-More information on this release on <a href="/releases.php#4.0.4">our Releases page</a>.<br />
+More information on this release on <a href="/releases.php#4.0.4">our Releases page</a>.<br>
 
 <!-- }}} --></section>
 
@@ -2820,7 +2820,7 @@ More information on this release on <a href="/releases.php#4.0.4">our Releases p
   method. Instead define yourself a method such as toString() and use
   print $obj-&gt;toString() (Andi, Zend Engine)</li>
 </ul>
-More information on this release on <a href="/releases.php#4.0.3">our Releases page</a>.<br />
+More information on this release on <a href="/releases.php#4.0.3">our Releases page</a>.<br>
 
 <!-- }}} --></section>
 
@@ -2991,7 +2991,7 @@ More information on this release on <a href="/releases.php#4.0.3">our Releases p
 <li>Added an optional parameter to preg_replace() that can be used to
   specify how many replacements to make. (Andrei)</li>
 </ul>
-More information on this release on <a href="/releases.php#4.0.2">our Releases page</a>.<br />
+More information on this release on <a href="/releases.php#4.0.2">our Releases page</a>.<br>
 
 <!-- }}} --></section>
 
@@ -3155,7 +3155,7 @@ More information on this release on <a href="/releases.php#4.0.2">our Releases p
 <li>Moved to virtual current working directory support. This highly improves the
   functionality and stability of multi-threaded versions of PHP (Andi, Sascha)</li>
 </ul>
-More information on this release on <a href="/releases.php#4.0.1">our Releases page</a>.<br />
+More information on this release on <a href="/releases.php#4.0.1">our Releases page</a>.<br>
 
 <!-- }}} --></section>
 
@@ -3178,7 +3178,7 @@ More information on this release on <a href="/releases.php#4.0.1">our Releases p
 <li>Ported imagegammacorrect from PHP3 to PHP4. (Sterling)</li>
 <li>Added array_rand() function. (Andrei)</li>
 </ul>
-More information on this release on <a href="/releases.php#4.0.0">our Releases page</a>.<br />
+More information on this release on <a href="/releases.php#4.0.0">our Releases page</a>.<br>
 
 <!-- }}} --></section>
 

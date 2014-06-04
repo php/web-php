@@ -10,7 +10,7 @@ site_header("PHP 4.3.3 Release Announcement");
 <p>[ <a href="/releases/4_3_3_fr.php">Version Fran&ccedil;aise</a> ]</p>
 
 <p>
- After a lengthy QA process, <a href="/downloads.php">PHP 4.3.3</a> is finally out!<br />
+ After a lengthy QA process, <a href="/downloads.php">PHP 4.3.3</a> is finally out!<br>
  This maintenance release solves a fair number of bugs found in prior PHP versions and
  addresses several security issues. All users are <strong>strongly</strong> advised to
  upgrade to 4.3.3 as soon as possible.

@@ -10,7 +10,7 @@ site_header("Annonce de publication de PHP 4.3.3");
 <p>[ <a href="/releases/4_3_3.php">English version</a> ]</p>
 
 <p>
-Apr&egrave;s avoir suivi un long processus qualit&eacute;, <a href="/downloads.php">PHP 4.3.3</a> est disponible!<br />
+Apr&egrave;s avoir suivi un long processus qualit&eacute;, <a href="/downloads.php">PHP 4.3.3</a> est disponible!<br>
 Cette version de maintenance r&eacute;sout un bon nombre de bugs d&eacute;couverts
 dans des versions ant&eacute;rieures de PHP. Elle corrige aussi plusieurs
 probl&egrave;mes de s&eacute;curit&eacute;. Il est <strong>vivement recommand&eacute;</strong> &agrave; tous les

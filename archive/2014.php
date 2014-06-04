@@ -14,7 +14,7 @@ site_header("News Archive - 2014");
  Here are the most important news items we have published in 2014 on PHP.net.
 </p>
 
-<hr />
+<hr>
 
 <?php
 

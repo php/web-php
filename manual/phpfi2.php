@@ -137,7 +137,7 @@ when it is bad, it is better than nothing.
 
     <li><a href="#hacknotes">Notes for Code Hacks</a></li>
   </ol>
-  <hr />
+  <hr>
 
   <h2><a name="history" id="history">Brief History</a></h2>
 
@@ -196,7 +196,7 @@ when it is bad, it is better than nothing.
   source distribution. When I build the package without any access
   logging or access restriction support, I call my binary FI. When
   I build with these options, I call it PHP.</p>
-  <hr />
+  <hr>
 
   <h2><a name="install" id="install">Installation
   Instructions</a></h2>
@@ -220,7 +220,7 @@ when it is bad, it is better than nothing.
 
     <dd>
       <p>- Can you run both get and post method cgi programs on
-      your server?<br />
+      your server?<br>
       <em>This is not relevant if you installing the Apache module
       version.</em> If not, you can not use this package. On many
       public ISP's CGI programs are either disallowed or severely
@@ -310,7 +310,7 @@ when it is bad, it is better than nothing.
       you can safely leave the setuid bit off.</p>
 
       <p><em><strong>Step 4. (if you are installing the Apache
-      module version)</strong></em><br />
+      module version)</strong></em><br>
       Change to your Apache src directory where the
       <em>mod_php.c</em> and <em>mod_php.h</em> files should have
       been copied to. If they weren't which usually happens because
@@ -383,7 +383,7 @@ when it is bad, it is better than nothing.
       <p>This does not apply to Apace module users.</p>
     </dd>
   </dl>
-  <hr />
+  <hr>
 
   <h2><a name="starting" id="starting">So, what can I do with
   PHP/FI?</a></h2>
@@ -405,10 +405,10 @@ when it is bad, it is better than nothing.
   <p>Suppose you have a form:</p>
 
   <p><tt>&lt;FORM ACTION="/cgi-bin/php.cgi/~userid/display.html"
-  METHOD=POST&gt;<br />
-  &lt;INPUT TYPE="text" name="name"&gt;<br />
-  &lt;INPUT TYPE="text" name="age"&gt;<br />
-  &lt;INPUT TYPE="submit"&gt;<br />
+  METHOD=POST&gt;<br>
+  &lt;INPUT TYPE="text" name="name"&gt;<br>
+  &lt;INPUT TYPE="text" name="age"&gt;<br>
+  &lt;INPUT TYPE="submit"&gt;<br>
   &lt;/FORM&gt;</tt></p>
 
   <p>Your display.html file could then contain something like:</p>
@@ -475,7 +475,7 @@ when it is bad, it is better than nothing.
   supports embedded SQL queries in your .HTML files. See the
   section on <a href="#mysql_support">mysql Support</a> for more
   information.</p>
-  <hr />
+  <hr>
 
   <h2><a name="redirect" id="redirect">CGI Redirection</a></h2>
 
@@ -614,7 +614,7 @@ when it is bad, it is better than nothing.
       "http://php.iquest.net/files/">PHP/FI file archives</a>.</p>
     </dd>
   </dl>
-  <hr />
+  <hr>
 
   <h2><a name="security" id="security">Security Issues</a></h2>
 
@@ -654,7 +654,7 @@ when it is bad, it is better than nothing.
   <p>For additional security options related to sites which provide
   shared access to PHP, see the <a href="#safemode">Safe Mode</a>
   section.</p>
-  <hr />
+  <hr>
 
   <h2><a name="safemode" id="safemode">Safe Mode</a></h2>
 
@@ -711,7 +711,7 @@ when it is bad, it is better than nothing.
     password grabbing script which spoofs another authenticated
     page on the same server.</dd>
   </dl>
-  <hr />
+  <hr>
 
   <h2><a name="commandline" id="commandline">Running PHP/FI from
   the command line</a></h2>
@@ -725,7 +725,7 @@ when it is bad, it is better than nothing.
     #!/usr/local/bin/php.cgi -q
 </pre>The "-q" suppresses the printing of the HTTP headers. You can
 leave off this option if you like.
-  <hr />
+  <hr>
 
   <h2><a name="http_auth" id="http_auth">HTTP
   Authentication</a></h2>
@@ -779,7 +779,7 @@ leave off this option if you like.
   in <em>php.h</em> can be undefined to make sure that these
   variables will never be set and thus disable anybody from using
   mod_php to try to steal passwords.</p>
-  <hr />
+  <hr>
 
   <h2><a name="requestvars" id="requestvars">Apache Request
   Variables</a></h2>
@@ -804,7 +804,7 @@ leave off this option if you like.
     Keep-Alive
     www.host.com
 </pre>
-  <hr />
+  <hr>
 
   <h2><a name="module" id="module">Apache Module Notes</a></h2>
 
@@ -986,7 +986,7 @@ leave off this option if you like.
 
   <p>All of these directives are optional. If a directive is not
   specified anywhere, the compile-time default will be used.</p>
-  <hr />
+  <hr>
 
   <h2><a name="fastcgi" id="fastcgi">FastCGI Support</a></h2>
 
@@ -1004,13 +1004,13 @@ leave off this option if you like.
     module, then recompile Apache.</li>
 
     <li>Edit your <em>srm.conf</em> file and add lines similar
-    to:<br />
-    <tt>AddType application/x-httpd-fcgi .fcgi<br />
+    to:<br>
+    <tt>AddType application/x-httpd-fcgi .fcgi<br>
     AppClass /usr/local/etc/httpd/fcgi-bin/php.fcgi -processes
-    4<br />
-    AddType application/x-httpd-fphp .fhtml<br />
+    4<br>
+    AddType application/x-httpd-fphp .fhtml<br>
     Action application/x-httpd-fphp
-    /fcgi-bin/php.fcgi<br /></tt></li>
+    /fcgi-bin/php.fcgi<br></tt></li>
 
     <li>Copy your <em>php.cgi</em> binary to
     <em>/usr/local/etc/httpd/fcgi-bin/php.fcgi</em></li>
@@ -1025,7 +1025,7 @@ leave off this option if you like.
   but not identical. CGI Redirection mechanisms are available for
   NCSA and Netscape servers at the <a href=
   "http://php.iquest.net/files/">PHP/FI File Archive</a>.</p>
-  <hr />
+  <hr>
 
   <h2><a name="access" id="access">Access Control</a></h2>
 
@@ -1075,8 +1075,7 @@ leave off this option if you like.
   users coming from a "<em>.edu</em>" domain will not be granted
   access.</p>
 
-  <p><img src="gifs/config.gif" alt=
-  "[Image of ?config screen]" /></p>
+  <p><img src="gifs/config.gif" alt="[Image of ?config screen]"></p>
 
   <p>To edit a rule-set modify the fields until the desired
   configuration is reached within a rule-set and then hit the
@@ -1090,7 +1089,7 @@ leave off this option if you like.
   <p>Note that you need to enter a regular expression in the
   pattern field. See the section on regular expressions in this
   documentation for more details.</p>
-  <hr />
+  <hr>
 
   <h2><a name="logging" id="logging">Access Logging</a></h2>
 
@@ -1200,7 +1199,7 @@ leave off this option if you like.
   like this to your page:</p>
 
   <p><tt>&lt;?setshowinfo(0)&gt;</tt></p>
-  <hr />
+  <hr>
 
   <h2><a name="relative" id="relative">Relative vs. Absolute URL's
   - or, Why do my Images Break?</a></h2>
@@ -1276,7 +1275,7 @@ the same directory as the source HTML file.
 
   <p>Another way to handle this is to use the traditional &lt;BASE
   HREF=...&gt; in the HTML file.</p>
-  <hr />
+  <hr>
 
   <h2><a name="getpost" id="getpost">How PHP handles GET and POST
   method data</a></h2>
@@ -1349,8 +1348,8 @@ the same directory as the source HTML file.
 
   <p>Each selected option will arrive at the action handler as:</p>
 
-  <p>var=option1<br />
-  var=option2<br />
+  <p>var=option1<br>
+  var=option2<br>
   var=option3</p>
 
   <p>Each option will overwrite the contents of the previous $var
@@ -1366,7 +1365,7 @@ the same directory as the source HTML file.
   "#count">count()</a> function can be used to determine how many
   options were selected, and the <a href="#sort">sort()</a>
   function can be used to sort the option array if necessary.</p>
-  <hr />
+  <hr>
   <a name="imagecoord" id="imagecoord"><strong><tt>IMAGE
   SUBMIT</tt> and PHP</strong></a>
 
@@ -1383,7 +1382,7 @@ the same directory as the source HTML file.
   may note that the actual variable names sent by the browser
   contains a period rather than an underscore, but PHP converts the
   period to an underscore automatically.</p>
-  <hr />
+  <hr>
 
   <h2><a name="gd_support" id="gd_support">GD (a graphics library
   for GIF creation) Support in PHP</a></h2>PHP supports the GD
@@ -1403,7 +1402,7 @@ the same directory as the source HTML file.
 
   <p><em>GD 1.2 is copyright 1994, 1995 Quest Protein Database
   Center, Cold Springs Harbor Labs.</em></p>
-  <hr />
+  <hr>
 
   <h2><a name="virtual_hosts" id="virtual_hosts">PHP/FI and Virtual
   Hosts</a></h2>PHP works fine on virtual host setups supported by
@@ -1419,7 +1418,7 @@ the same directory as the source HTML file.
   will need to edit the <em>php.h</em> file and set the
   VIRTUAL_PATH #define to the path to your <em>php.cgi</em> binary
   relative to your top-level directory.
-  <hr />
+  <hr>
 
   <h2><a name="upload" id="upload">File Upload Support</a></h2>
 
@@ -1435,10 +1434,10 @@ the same directory as the source HTML file.
 
   <blockquote>
    <pre>
-    &lt;FORM ENCTYPE="multipart/form-data" ACTION="_URL_" METHOD=POST&gt;<br />
-    &lt;INPUT TYPE="hidden" name="MAX_FILE_SIZE" value="1000"&gt;<br />
-    Send this file: &lt;INPUT NAME="userfile" TYPE="file"&gt;<br />
-    &lt;INPUT TYPE="submit" VALUE="Send File"&gt;<br />
+    &lt;FORM ENCTYPE="multipart/form-data" ACTION="_URL_" METHOD=POST&gt;<br>
+    &lt;INPUT TYPE="hidden" name="MAX_FILE_SIZE" value="1000"&gt;<br>
+    Send this file: &lt;INPUT NAME="userfile" TYPE="file"&gt;<br>
+    &lt;INPUT TYPE="submit" VALUE="Send File"&gt;<br>
     &lt;/FORM&gt;
    </pre>
   </blockquote>
@@ -1501,7 +1500,7 @@ the same directory as the source HTML file.
   starting at the first whitespace in the content-type mime header
   it gets from the client. As long as this is the case, CERN httpd
   will not support the file upload feature.</p>
-  <hr />
+  <hr>
 
   <h2><a name="cookies" id="cookies">Cookie Support</a></h2>
 
@@ -1533,7 +1532,7 @@ pass this along. ie.
     SetCookie("Count",$Count, time()+3600);
     SetCookie("Cart[$Count]",$item, time()+3600);
 </pre>
-  <hr />
+  <hr>
 
   <h2><a name="msql_support" id="msql_support">mSQL
   Support</a></h2>
@@ -1591,7 +1590,7 @@ pass this along. ie.
   defined in the <em>php.h</em> file then these quotes will be
   automatically escaped making it easier to pass form data directly
   to msql queries.</p>
-  <hr />
+  <hr>
 
   <h2><a name="pg95_support" id=
   "pg95_support">Postgres95/PostgreSQL Support</a></h2>
@@ -1687,7 +1686,7 @@ pass this along. ie.
    pg_Close($conn);
 &gt;
 </pre>
-  <hr />
+  <hr>
 
   <h2><a name="mysql_support" id="mysql_support">mysql
   Support</a></h2>
@@ -1741,7 +1740,7 @@ pass this along. ie.
   defined in the <em>php.h</em> file then these quotes will be
   automatically escaped making it easier to pass form data directly
   to mysql queries.</p>
-  <hr />
+  <hr>
 
   <h2><a name="solid_support" id="solid_support">Solid
   Support</a></h2>
@@ -1811,7 +1810,7 @@ pass this along. ie.
    Solid_Close($conn);
 &gt;
 </pre>
-  <hr />
+  <hr>
 
   <h2><a name="sybase_support" id="sybase_support">Sybase
   Support</a></h2>The supporting functions uses Sybase DB library
@@ -1854,7 +1853,7 @@ pass this along. ie.
 
   <p>For a complete example, see the example following the <a href=
   "#sybsql_result">sybSQL_Result()</a> function.</p>
-  <hr />
+  <hr>
 
   <h2><a name="oracle_support" id="oracle_support">Oracle
   Support</a></h2>The PHP/FI interface to Oracle uses the Oracle
@@ -1955,7 +1954,7 @@ Ora_Close($cursor);
 Ora_Logoff($conn);
 &gt;
 </pre>
-  <hr />
+  <hr>
 
   <h2><a name="illustra_support" id="illustra_support">Informix
   Illustra Support</a></h2>
@@ -2026,7 +2025,7 @@ Ora_Logoff($conn);
    mi_Close($conn);
 &gt;
 </pre>
-  <hr />
+  <hr>
 
   <h2><a name="adabas_support" id="adabas_support">Adabas
   Support</a></h2>
@@ -2095,7 +2094,7 @@ Ora_Logoff($conn);
    Ada_Close($conn);
 &gt;
 </pre>
-  <hr />
+  <hr>
 
   <h2><a name="regexp" id="regexp">Regular Expressions</a></h2>
 
@@ -2142,7 +2141,7 @@ Ora_Logoff($conn);
       3.</dd>
 
       <dt><tt>ereg("([[:alnum:]]+) ([[:alnum:]]+)
-      ([[:alnum:]]+)",$string,$regs);</tt><br /></dt>
+      ([[:alnum:]]+)",$string,$regs);</tt><br></dt>
 
       <dd>Places three space separated words into $regs[1],
       $regs[2] and $regs[3].</dd>
@@ -2165,7 +2164,7 @@ Ora_Logoff($conn);
       $string.</dd>
     </dl>
   </blockquote>
-  <hr />
+  <hr>
 
   <h2><a name="escapes" id="escapes">Escape Characters</a></h2>
 
@@ -2183,7 +2182,7 @@ Ora_Logoff($conn);
         \xXX --&gt; hex char
 </pre>
   </blockquote>
-  <hr />
+  <hr>
 
   <h2><a name="octal" id="octal">Octal Notation of Unix file
   permissions</a></h2>
@@ -2220,7 +2219,7 @@ nibble, like 0?755:
     2: sgid bit   (set group id)
     1: sticky bit (on a directory, only the owner can delete a file)
 </pre>
-  <hr />
+  <hr>
 
   <h2><a name="script" id="script">PHP/FI Script Language</a></h2>
 
@@ -2275,7 +2274,7 @@ nibble, like 0?755:
   comments in the C language. <strong>/*</strong> starts a comment
   and <strong>*/</strong> ends a comment. Comments can be placed
   anywhere within the <strong>&lt;? ... &gt;</strong> block.</p>
-  <hr />
+  <hr>
 
   <h3><a name="vars" id="vars">Variables</a></h3>
 
@@ -2391,7 +2390,7 @@ nibble, like 0?755:
   is placed in $a. This also leads to some caveats. You should read
   the section on <a href="#overload">overloaded operators</a> to
   get a better understanding of how to deal with them.</p>
-  <hr />
+  <hr>
 
   <h3><a name="assoc" id="assoc">Associative Arrays</a></h3>
 
@@ -2402,7 +2401,7 @@ nibble, like 0?755:
   associative arrays. These include, <a href="#next">Next()</a>,
   <a href="#prev">Prev()</a>,<a href="#reset">Reset()</a>,<a href=
   "#end">End()</a>, and <a href="#key">Key()</a>.</p>
-  <hr />
+  <hr>
 
   <h3><a name="varvars" id="varvars">Variable Variables</a></h3>
 
@@ -2441,7 +2440,7 @@ nibble, like 0?755:
 </pre>
 
   <p>ie. they both produce: <strong>hello world</strong></p>
-  <hr />
+  <hr>
 
   <h3><a name="lang" id="lang">Language Constructs</a></h3>
 
@@ -2494,7 +2493,7 @@ nibble, like 0?755:
     &gt;
 </pre>
 
-  <p>The above may also be written in standard C syntax:<br />
+  <p>The above may also be written in standard C syntax:<br>
   In this case, there is no need for a semicolon after the closing
   curly brace.</p>
   <pre>
@@ -2532,7 +2531,7 @@ nibble, like 0?755:
 
   <p>Both version are valid and they will do exactly the same
   thing.</p>
-  <hr />
+  <hr>
 
   <h3><a name="user_funcs" id="user_funcs">User-Defined
   Functions</a></h3>
@@ -2577,7 +2576,7 @@ nibble, like 0?755:
   and forth between the main code and functions, global variables
   can be used. This brings us to the section on the scope of
   variables.</p>
-  <hr />
+  <hr>
 
   <h3><a name="scope" id="scope">Scope of Variables</a></h3>
 
@@ -2671,7 +2670,7 @@ nibble, like 0?755:
       } 
     );
 </pre>
-  <hr />
+  <hr>
 
   <h3><a name="math" id="math">Mathematical Expressions</a></h3>
 
@@ -2712,7 +2711,7 @@ nibble, like 0?755:
   <pre>
     &lt;? $a = $a &amp;  4&gt;
 </pre>
-  <hr />
+  <hr>
 
   <h3><a name="while" id="while">While Loops</a></h3>
 
@@ -2740,7 +2739,7 @@ nibble, like 0?755:
   <p>As explained in the <a href="#lang">Language Constructs</a>
   section above, the same can be obtained with <em>while();
   endwhile;</em>.</p>
-  <hr />
+  <hr>
 
   <h3><a name="switch" id="switch">Switch Construct</a></h3>
 
@@ -2777,7 +2776,7 @@ nibble, like 0?755:
   inside each other just like C. The various files in the
   <em>examples</em> directory of the PHP distribution should
   provide a good starting point for learning the language.</p>
-  <hr />
+  <hr>
 
   <h3><a name="secure" id="secure">Secure Variables - Defeating GET
   method hacks</a></h3>
@@ -2823,7 +2822,7 @@ nibble, like 0?755:
   simply telnetting to the HTTP port on your system. You need to
   take appropriate security measures to stop people from doing this
   if in fact security is a concern.</p>
-  <hr />
+  <hr>
 
   <h3><a name="overload" id="overload">Overloaded Operators and
   dealing with variable types</a></h3>An overloaded operator is an
@@ -2917,7 +2916,7 @@ nibble, like 0?755:
   scripts will be rather simple and in most cases written by
   non-programmers who want a language with a basic logical syntax
   that doesn't have too high a learning curve.</p>
-  <hr />
+  <hr>
 
   <h3><a name="quiet" id="quiet">Suppressing Errors from function
   calls</a></h3>
@@ -2950,7 +2949,7 @@ nibble, like 0?755:
   <pre>
     SetErrorReporting(1);
 </pre>
-  <hr />
+  <hr>
 
   <h3><a name="funcs" id="funcs">Internal
   Functions</a></h3><a href="function"></a>
@@ -3015,7 +3014,7 @@ nibble, like 0?755:
       ada_exec tries to establish or to use a connection with the
       parameters given with the <a href="#directives">configuration
       directives</a> <em>phpAdaDefDB, phpAdaUser</em> and
-      <em>phpAdaPW</em>.<br />
+      <em>phpAdaPW</em>.<br>
       The return value of this function is an identifier to be used
       to access the results by other Adabas functions. This
       function will return <strong>0</strong> on error. It will
@@ -3199,7 +3198,7 @@ nibble, like 0?755:
       integer. The return value is of type double (floating point)
       such that it can be used properly in complex equations. To
       get an integer type back, use: <tt>$new =
-      IntVal(Ceil($value));</tt><br />
+      IntVal(Ceil($value));</tt><br>
       See also <a href="#floor">Floor()</a>.</p>
     </dd>
 
@@ -3973,7 +3972,7 @@ nibble, like 0?755:
       integer. The return value is of type double (floating point)
       such that it can be used properly in complex equations. To
       get an integer type back, use: <tt>$new =
-      IntVal(Floor($value));</tt><br />
+      IntVal(Floor($value));</tt><br>
       See also <a href="#ceil">Ceil()</a>.</p>
     </dd>
 
@@ -4153,7 +4152,7 @@ nibble, like 0?755:
       <p>getLastAccess returns the date and time in unix time
       format of the last time the current page was access. This
       value can be passed to the <a href="#date">Date()</a>
-      function for formatting.<br />
+      function for formatting.<br>
       This function is only available if PHP was compiled with
       Access Logging enabled.</p>
     </dd>
@@ -4163,7 +4162,7 @@ nibble, like 0?755:
 
     <dd>
       <p>getLastBrowser returns the identification string of
-      browser the last user to access the current page used.<br />
+      browser the last user to access the current page used.<br>
       This function is only available if PHP was compiled with
       Access Logging enabled.</p>
     </dd>
@@ -4173,7 +4172,7 @@ nibble, like 0?755:
 
     <dd>
       <p>getLastEmail returns the E-Mail address of the last user
-      to access the current page.<br />
+      to access the current page.<br>
       This function is only available if PHP was compiled with
       Access Logging enabled.</p>
     </dd>
@@ -4183,7 +4182,7 @@ nibble, like 0?755:
 
     <dd>
       <p>getLastHost returns the hostname of the last user to
-      access the current page.<br />
+      access the current page.<br>
       This function is only available if PHP was compiled with
       Access Logging enabled.</p>
     </dd>
@@ -4195,7 +4194,7 @@ nibble, like 0?755:
       <p>getLastMod returns the date and time in unix time format
       of the last time the current page was modified. This value
       can be passed to the <a href="#date">Date()</a> function for
-      formatting.<br />
+      formatting.<br>
       This function is only available if PHP was compiled with
       Access Logging enabled.</p>
     </dd>
@@ -4205,7 +4204,7 @@ nibble, like 0?755:
 
     <dd>
       <p>getLastRef returns the URL of the referring document of
-      the last user to access the current page.<br />
+      the last user to access the current page.<br>
       This function is only available if PHP was compiled with
       Access Logging enabled.</p>
     </dd>
@@ -4274,7 +4273,7 @@ nibble, like 0?755:
 
     <dd>
       <p>getToday returns the total number of hits the current page
-      has had since 12 midnight local time.<br />
+      has had since 12 midnight local time.<br>
       This function is only available if PHP was compiled with
       Access Logging enabled.</p>
     </dd>
@@ -4284,7 +4283,7 @@ nibble, like 0?755:
 
     <dd>
       <p>getTotal returns the total number of hits the current page
-      has had since access logging was started on the page.<br />
+      has had since access logging was started on the page.<br>
       This function is only available if PHP was compiled with
       Access Logging enabled.</p>
     </dd>
@@ -4318,7 +4317,7 @@ nibble, like 0?755:
       Specification</a> for more information on raw http headers.
       Remember that the Header() command must be used before any
       actual output is sent either by normal HTML tags or by PHP
-      echo commands.<br />
+      echo commands.<br>
       Usage examples can be found in the <a href="#http_auth">HTTP
       Authentication</a> section.</p>
     </dd>
@@ -4351,7 +4350,7 @@ nibble, like 0?755:
       "#imagecreate">im</a>. w and h specifies the ellipse's width
       and height respectively while the start and end points are
       specified in degrees indicated by the s and e
-      arguments.<br />
+      arguments.<br>
       This function is only available if GD support has been
       enabled in PHP.</p>
     </dd>
@@ -4364,7 +4363,7 @@ nibble, like 0?755:
       <a href="#imagecreate">im</a> at coordinates x,y (top left is
       0,0) in colour col. The size argument can be 1, 2, 3, 4 or 5
       indicating the size of the font to be used. 1 is the smallest
-      and 5 is the largest.<br />
+      and 5 is the largest.<br>
       This function is only available if GD support has been
       enabled in PHP.</p>
     </dd>
@@ -4377,7 +4376,7 @@ nibble, like 0?755:
       identified by <a href="#imagecreate">im</a> at coordinates
       x,y (top left is 0,0) in colour col. The size argument can be
       1, 2, 3, 4 or 5 indicating the size of the font to be used. 1
-      is the smallest and 5 is the largest.<br />
+      is the smallest and 5 is the largest.<br>
       This function is only available if GD support has been
       enabled in PHP.</p>
     </dd>
@@ -4392,7 +4391,7 @@ nibble, like 0?755:
       The im argument is the return from the <a href=
       "#imagecreate">ImageCreate</a> function. ImageColorAllocate
       must be called to create each colour that is to be used in
-      the image represented by im.<br />
+      the image represented by im.<br>
       This function is only available if GD support has been
       enabled in PHP.</p>
     </dd>
@@ -4425,7 +4424,7 @@ nibble, like 0?755:
       corner. This function can be used to copy regions within the
       same image (if <em>dst_im</em> is the same as
       <em>src_im</em>) but if the regions overlap the results will
-      be unpredictable.<br />
+      be unpredictable.<br>
       This function is only available if GD support has been
       enabled in PHP.</p>
     </dd>
@@ -4435,7 +4434,7 @@ nibble, like 0?755:
 
     <dd>
       <p>ImageCreate returns an image identifier representing a
-      blank image of size x_size by y_size.<br />
+      blank image of size x_size by y_size.<br>
       This function is only available if GD support has been
       enabled in PHP.</p>
     </dd>
@@ -4447,7 +4446,7 @@ nibble, like 0?755:
     <dd>
       <p>ImageCreateFromGif returns an image identifier
       representing the image obtained from the given
-      <em>filename</em>.<br />
+      <em>filename</em>.<br>
       This function is only available if GD support has been
       enabled in PHP.</p>
     </dd>
@@ -4467,7 +4466,7 @@ nibble, like 0?755:
 
     <dd>
       <p>ImageFill performs a flood fill starting at coordinate x,y
-      (top left is 0,0) with colour col in image im.<br />
+      (top left is 0,0) with colour col in image im.<br>
       This function is only available if GD support has been
       enabled in PHP.</p>
     </dd>
@@ -4481,7 +4480,7 @@ nibble, like 0?755:
       <a href="#imagecreate">im</a>. points is a PHP array
       containing the polygon's vertices. ie. points[0] = x0,
       points[1] = y0, points[2] = x1, points[3] = y1, etc.
-      num_points is the total number of vertices.<br />
+      num_points is the total number of vertices.<br>
       This function is only available if GD support has been
       enabled in PHP.</p>
     </dd>
@@ -4494,7 +4493,7 @@ nibble, like 0?755:
       <p>ImageFilledRectangle creates a filled rectangle of colour
       col in image im starting at upper left coordinate x1,y1 and
       ending at bottom right coordinate x2,y2. 0,0 is the top left
-      corner of the image.<br />
+      corner of the image.<br>
       This function is only available if GD support has been
       enabled in PHP.</p>
     </dd>
@@ -4507,7 +4506,7 @@ nibble, like 0?755:
       <p>ImageFillToBorder performs a flood fill whose border
       colour is defined by border. The starting point for the fill
       is x,y (top left is 0,0) and the region is filled with colour
-      col.<br />
+      col.<br>
       This function is only available if GD support has been
       enabled in PHP.</p>
     </dd>
@@ -4523,7 +4522,7 @@ nibble, like 0?755:
       will be returned directly. By sending an <em>image/gif</em>
       content-type using the <a href="#header">Header()</a>
       function, you can create a PHP/FI script which returns GIF
-      images directly using this function.<br />
+      images directly using this function.<br>
       This function is only available if GD support has been
       enabled in PHP.</p>
     </dd>
@@ -4545,7 +4544,7 @@ nibble, like 0?755:
     <dd>
       <p>ImageLine draws a line from x1,y1 to x2,y2 (top left is
       0,0) in image <a href="#imagecreate">im</a> of colour
-      <a href="#imagecolorallocate">col</a>.<br />
+      <a href="#imagecolorallocate">col</a>.<br>
       This function is only available if GD support has been
       enabled in PHP.</p>
     </dd>
@@ -4558,7 +4557,7 @@ nibble, like 0?755:
       "#imagecreate">im</a>. points is a PHP array containing the
       polygon's vertices. ie. points[0] = x0, points[1] = y0,
       points[2] = x1, points[3] = y1, etc. num_points is the total
-      number of vertices.<br />
+      number of vertices.<br>
       This function is only available if GD support has been
       enabled in PHP.</p>
     </dd>
@@ -4570,7 +4569,7 @@ nibble, like 0?755:
       <p>ImageRectangle creates a rectangle of colour col in image
       im starting at upper left coordinate x1,y1 and ending at
       bottom right coordinate x2,y2. 0,0 is the top left corner of
-      the image.<br />
+      the image.<br>
       This function is only available if GD support has been
       enabled in PHP.</p>
     </dd>
@@ -4581,7 +4580,7 @@ nibble, like 0?755:
     <dd>
       <p>ImageSetPixel draws a pixel at x,y (top left is 0,0) in
       image <a href="#imagecreate">im</a> of colour <a href=
-      "#imagecolorallocate">col</a>.<br />
+      "#imagecolorallocate">col</a>.<br>
       This function is only available if GD support has been
       enabled in PHP.</p>
     </dd>
@@ -4594,7 +4593,7 @@ nibble, like 0?755:
       <a href="#imagecreate">im</a> at coordinates x,y (top left is
       0,0) in colour col. The size argument can be 1, 2, 3, 4 or 5
       indicating the size of the font to be used. 1 is the smallest
-      and 5 is the largest.<br />
+      and 5 is the largest.<br>
       This function is only available if GD support has been
       enabled in PHP.</p>
     </dd>
@@ -4607,7 +4606,7 @@ nibble, like 0?755:
       identified by <a href="#imagecreate">im</a> at coordinates
       x,y (top left is 0,0) in colour col. The size argument can be
       1, 2, 3, 4 or 5 indicating the size of the font to be used. 1
-      is the smallest and 5 is the largest.<br />
+      is the smallest and 5 is the largest.<br>
       This function is only available if GD support has been
       enabled in PHP.</p>
     </dd>
@@ -4919,7 +4918,7 @@ inserted at the end of the header, example:
       <p>Microtime() returns a string "msec sec" where sec is
       number of seconds since 00:00 GMT, Jan 1, 1970, and msec is
       the microseconds part (as fraction of seconds). Ex
-      "0.87633900 825010464".<br />
+      "0.87633900 825010464".<br>
       This function is only available on operating systems that
       support the gettimeofday() system call.</p>
     </dd>
@@ -4996,7 +4995,7 @@ inserted at the end of the header, example:
       error string will also be printed out. For mSQL 2.0, the
       $result variable will contain the number of rows affected by
       the SQL command performed. If you want your application to be
-      portable to mSQL 1.0, do not rely on this.<br />
+      portable to mSQL 1.0, do not rely on this.<br>
       This function is only available if mSQL support has been
       enabled in PHP.</p>
     </dd>
@@ -5026,7 +5025,7 @@ inserted at the end of the header, example:
       msql_connect() is made in a file, then the connection to the
       first host is automatically closed. To explicitly connect to
       the msql daemon on the local host, use:
-      <strong><tt>&lt;?msql_connect("localhost")&gt;</tt></strong><br />
+      <strong><tt>&lt;?msql_connect("localhost")&gt;</tt></strong><br>
 
       This function is only available if mSQL support has been
       enabled in PHP.</p>
@@ -5036,7 +5035,7 @@ inserted at the end of the header, example:
     msql_CreateDB($database)</big></a></dt>
 
     <dd>
-      <p>msql_CreateDB creates the given database.<br />
+      <p>msql_CreateDB creates the given database.<br>
       This function is only available if mSQL support has been
       enabled in PHP.</p>
     </dd>
@@ -5049,7 +5048,7 @@ inserted at the end of the header, example:
       <em>$i</em> of the result pointer returned from the <a href=
       "#msql_listdbs">msql_ListDbs()</a> function. The <a href=
       "#msql_numrows">msql_NumRows()</a> function can be used to
-      determine how many database names are available.<br />
+      determine how many database names are available.<br>
       This function is only available if mSQL support has been
       enabled in PHP.</p>
     </dd>
@@ -5059,7 +5058,7 @@ inserted at the end of the header, example:
 
     <dd>
       <p>msql_DropDB deletes the given mSQL database. Use this with
-      caution as all data in the database will be lost.<br />
+      caution as all data in the database will be lost.<br>
       This function is only available if mSQL support has been
       enabled in PHP.</p>
     </dd>
@@ -5070,7 +5069,7 @@ inserted at the end of the header, example:
     <dd>
       <p>msql_FieldFlags returns the field flags of the specified
       field. Currently this is either, "not null", "primary key", a
-      combination of the two or "" (an empty string).<br />
+      combination of the two or "" (an empty string).<br>
       This function is only available if mSQL support has been
       enabled in PHP.</p>
     </dd>
@@ -5080,7 +5079,7 @@ inserted at the end of the header, example:
 
     <dd>
       <p>msql_FieldLen returns the length of the specified
-      field.<br />
+      field.<br>
       This function is only available if mSQL support has been
       enabled in PHP.</p>
     </dd>
@@ -5093,7 +5092,7 @@ inserted at the end of the header, example:
       Arguments to the function is the result identifier and the
       field index. ie. <tt>msql_FieldName($result,2);</tt> will
       return the name of the second field in the result associated
-      with the result identifier.<br />
+      with the result identifier.<br>
       This function is only available if mSQL support has been
       enabled in PHP.</p>
     </dd>
@@ -5104,7 +5103,7 @@ inserted at the end of the header, example:
     <dd>
       <p>msql_FieldType is similar to the msql_FieldName()
       function. The arguments are identical, but the field type is
-      returned. This will be one of "int", "char" or "real".<br />
+      returned. This will be one of "int", "char" or "real".<br>
       This function is only available if mSQL support has been
       enabled in PHP.</p>
     </dd>
@@ -5119,7 +5118,7 @@ inserted at the end of the header, example:
       finished. But, if you are sure you are not going to need the
       result data anymore in a script, you may call msql_freeresult
       with the result identifier as an argument and the associated
-      result memory will be freed.<br />
+      result memory will be freed.<br>
       This function is only available if mSQL support has been
       enabled in PHP.</p>
     </dd>
@@ -5131,7 +5130,7 @@ inserted at the end of the header, example:
       <p>msql_ListDBs will return a result pointer containing the
       databases available from the current mSQL daemon. Use the
       <a href="#msql_dbname">msql_dbName()</a> function to traverse
-      this result pointer.<br />
+      this result pointer.<br>
       This function is only available if mSQL support has been
       enabled in PHP.</p>
     </dd>
@@ -5149,7 +5148,7 @@ inserted at the end of the header, example:
       The function returns -1 if a error occurs. A string
       describing the error will be placed in $phperrmsg, and unless
       the function was called as @msql() then this error string
-      will also be printed out.<br />
+      will also be printed out.<br>
       This function is only available if mSQL support has been
       enabled in PHP.</p>
     </dd>
@@ -5162,7 +5161,7 @@ inserted at the end of the header, example:
       much like the <a href="#msql">msql()</a> function. The
       <a href="#msql_tablename">msql_TableName()</a> function
       should be used to extract the actual table names from the
-      result pointer.<br />
+      result pointer.<br>
       This function is only available if mSQL support has been
       enabled in PHP.</p>
     </dd>
@@ -5173,7 +5172,7 @@ inserted at the end of the header, example:
     <dd>
       <p>msql_NumFields returns the number of fields in a result.
       The argument is the result identifier returned by the msql()
-      function.<br />
+      function.<br>
       This function is only available if mSQL support has been
       enabled in PHP.</p>
     </dd>
@@ -5184,7 +5183,7 @@ inserted at the end of the header, example:
     <dd>
       <p>msql_NumRows simply returns the number of rows in a
       result. The argument is the result identifier returned by the
-      msql() function.<br />
+      msql() function.<br>
       This function is only available if mSQL support has been
       enabled in PHP.</p>
     </dd>
@@ -5196,7 +5195,7 @@ inserted at the end of the header, example:
       <p>msql_RegCase takes a string argument and converts it to
       the regular expression needed to send to mSQL in order to get
       a case insensitive match. This turns a string like "abc" into
-      "[Aa][Bb][Cc]".<br />
+      "[Aa][Bb][Cc]".<br>
       This function is only available if mSQL support has been
       enabled in PHP.</p>
     </dd>
@@ -5267,7 +5266,7 @@ inserted at the end of the header, example:
         $i++;
       endwhile;
     &gt;
-</pre><br />
+</pre><br>
       This function is only available if mSQL support has been
       enabled in PHP.
     </dd>
@@ -5289,7 +5288,7 @@ inserted at the end of the header, example:
       <strong>-1</strong> if an error occurs. A string describing
       the error will be placed in $phperrmsg, and unless the
       function was called as <strong>@mysql()</strong> then this
-      error string will also be printed out.<br />
+      error string will also be printed out.<br>
       This function is only available if mysql support has been
       enabled in PHP.</p>
     </dd>
@@ -5335,7 +5334,7 @@ inserted at the end of the header, example:
 
       <p>To explicitly connect to the mysql daemon on the local
       host, use:
-      <strong><tt>&lt;?mysql_connect("localhost")&gt;</tt></strong><br />
+      <strong><tt>&lt;?mysql_connect("localhost")&gt;</tt></strong><br>
 
       This function is only available if mysql support has been
       enabled in PHP.</p>
@@ -5345,7 +5344,7 @@ inserted at the end of the header, example:
     mysql_CreateDB($database)</big></a></dt>
 
     <dd>
-      <p>mysql_CreateDB creates the given database.<br />
+      <p>mysql_CreateDB creates the given database.<br>
       This function is only available if mysql support has been
       enabled in PHP.</p>
     </dd>
@@ -5358,7 +5357,7 @@ inserted at the end of the header, example:
       <em>$i</em> of the result pointer returned from the <a href=
       "#mysql_listdbs">mysql_ListDbs()</a> function. The <a href=
       "#mysql_numrows">mysql_NumRows()</a> function can be used to
-      determine how many database names are available.<br />
+      determine how many database names are available.<br>
       This function is only available if mysql support has been
       enabled in PHP.</p>
     </dd>
@@ -5368,7 +5367,7 @@ inserted at the end of the header, example:
 
     <dd>
       <p>mysql_DropDB deletes the given mysql database. Use this
-      with caution as all data in the database will be lost.<br />
+      with caution as all data in the database will be lost.<br>
       This function is only available if mysql support has been
       enabled in PHP.</p>
     </dd>
@@ -5379,7 +5378,7 @@ inserted at the end of the header, example:
     <dd>
       <p>mysql_FieldFlags returns the field flags of the specified
       field. Currently this is either, "not null", "primary key", a
-      combination of the two or "" (an empty string).<br />
+      combination of the two or "" (an empty string).<br>
       This function is only available if mysql support has been
       enabled in PHP.</p>
     </dd>
@@ -5389,7 +5388,7 @@ inserted at the end of the header, example:
 
     <dd>
       <p>mysql_FieldLen returns the length of the specified
-      field.<br />
+      field.<br>
       This function is only available if mysql support has been
       enabled in PHP.</p>
     </dd>
@@ -5402,7 +5401,7 @@ inserted at the end of the header, example:
       Arguments to the function is the result identifier and the
       field index. ie. <tt>mysql_FieldName($result,2);</tt> will
       return the name of the second field in the result associated
-      with the result identifier.<br />
+      with the result identifier.<br>
       This function is only available if mysql support has been
       enabled in PHP.</p>
     </dd>
@@ -5413,7 +5412,7 @@ inserted at the end of the header, example:
     <dd>
       <p>mysql_FieldType is similar to the mysql_FieldName()
       function. The arguments are identical, but the field type is
-      returned. This will be one of "int", "char" or "real".<br />
+      returned. This will be one of "int", "char" or "real".<br>
       This function is only available if mysql support has been
       enabled in PHP.</p>
     </dd>
@@ -5429,7 +5428,7 @@ inserted at the end of the header, example:
       going to need the result data anymore in a script, you may
       call mysql_freeresult with the result identifier as an
       argument and the associated result memory will be
-      freed.<br />
+      freed.<br>
       This function is only available if mysql support has been
       enabled in PHP.</p>
     </dd>
@@ -5451,7 +5450,7 @@ inserted at the end of the header, example:
       <p>mysql_ListDBs will return a result pointer containing the
       databases available from the current mysql daemon. Use the
       <a href="#mysql_dbname">mysql_dbName()</a> function to
-      traverse this result pointer.<br />
+      traverse this result pointer.<br>
       This function is only available if mysql support has been
       enabled in PHP.</p>
     </dd>
@@ -5469,7 +5468,7 @@ inserted at the end of the header, example:
       The function returns -1 if a error occurs. A string
       describing the error will be placed in $phperrmsg, and unless
       the function was called as @mysql() then this error string
-      will also be printed out.<br />
+      will also be printed out.<br>
       This function is only available if mysql support has been
       enabled in PHP.</p>
     </dd>
@@ -5483,7 +5482,7 @@ inserted at the end of the header, example:
       much like the <a href="#mysql">mysql()</a> function. The
       <a href="#mysql_tablename">mysql_TableName()</a> function
       should be used to extract the actual table names from the
-      result pointer.<br />
+      result pointer.<br>
       This function is only available if mysql support has been
       enabled in PHP.</p>
     </dd>
@@ -5494,7 +5493,7 @@ inserted at the end of the header, example:
     <dd>
       <p>mysql_NumFields returns the number of fields in a result.
       The argument is the result identifier returned by the mysql()
-      function.<br />
+      function.<br>
       This function is only available if mysql support has been
       enabled in PHP.</p>
     </dd>
@@ -5505,7 +5504,7 @@ inserted at the end of the header, example:
     <dd>
       <p>mysql_NumRows simply returns the number of rows in a
       result. The argument is the result identifier returned by the
-      mysql() function.<br />
+      mysql() function.<br>
       This function is only available if mysql support has been
       enabled in PHP.</p>
     </dd>
@@ -5582,7 +5581,7 @@ inserted at the end of the header, example:
         $i++;
       endwhile;
     &gt;
-</pre><br />
+</pre><br>
       This function is only available if mysql support has been
       enabled in PHP.
     </dd>
@@ -5644,32 +5643,32 @@ inserted at the end of the header, example:
 
     <dt><a name="ora_bind" id="ora_bind"><big>
     Ora_Bind(cursor_ind, php_variable_name, sql_variable_name,
-    size)</big></a><br /></dt>
+    size)</big></a><br></dt>
 
     <dd>Ora_Bind() performs binding of PHP variables with Oracle
-    ones.<br />
-    <br />
-    Function parameters are:<br /></dd>
+    ones.<br>
+    <br>
+    Function parameters are:<br></dd>
 
     <dd>
       <var>cursor_id</var> - oracle cursor id for _parsed_ SQL
-      query or PL/SQL block;<br />
+      query or PL/SQL block;<br>
       <var>php_variable_name</var> - variable name in PHP script
-      without leading '$'<br />
+      without leading '$'<br>
       <var>sql_variable_name</var> - variable name in SQL with
-      leading colon<br />
+      leading colon<br>
       <var>size</var> - maximal number of bytes to be taken into
-      account at binding<br />
-      <br />
-      <b>Notes:</b><br />
+      account at binding<br>
+      <br>
+      <b>Notes:</b><br>
       1) PHP variable <b>SHOULD</b> be initialised with at least
       <b>size</b> bytes length string even it is return-only
-      variable.<br />
+      variable.<br>
       2) Ora_Bind() <b>SHOULD</b> be used after Ora_Parse and
       before Ora_Exec. In case of re-parsing the SQL sentence, all
-      used variables have to be re-bound.<br />
-      <br />
-      Ora_Bind() returns 0 upon success, -1 upon failure.<br />
+      used variables have to be re-bound.<br>
+      <br>
+      Ora_Bind() returns 0 upon success, -1 upon failure.<br>
 
       <p>There is an example of Ora_Bind() usage:</p>
       <pre>
@@ -5807,7 +5806,7 @@ inserted at the end of the header, example:
 
     <dd>
       <p>Parse_str takes a string identical to a regular URL
-      encoded string and extracts variables and their values.<br />
+      encoded string and extracts variables and their values.<br>
       ex.</p>
       <pre>
     &lt;? parse_str("a[]=hello+world&amp;a[]=second+variable");
@@ -6251,7 +6250,7 @@ second variable
     <dd>
       <p><b>This function has been replaced by the <a href=
       "#ereg">ereg()</a> function. It is however still available
-      for backwards compatibility.</b><br />
+      for backwards compatibility.</b><br>
       reg_Match returns non-zero if the regular expression is
       matched in the argument string. For example, the condition,
       <tt>&lt;?if (reg_match("^This.*", "This is an example
@@ -6272,7 +6271,7 @@ second variable
     <dd>
       <p><b>This function has been replaced by the <a href=
       "#ereg_replace">ereg_replace()</a> function. It is however
-      still available for backwards compatibility.</b><br />
+      still available for backwards compatibility.</b><br>
       reg_Replace scans the entire argument string and replaces any
       portions of the string matched by the given expression with
       the replacement string. For example, in the string, <tt>"This
@@ -6290,7 +6289,7 @@ second variable
     <dd>
       <p><b>This function has been replaced by the <a href=
       "#ereg">ereg()</a> function. It is however still available
-      for backwards compatibility.</b><br />
+      for backwards compatibility.</b><br>
       reg_Search will scan the entire argument string for any
       matches to the given regular expression. If a match is found,
       it will return the portion of the string starting at where
@@ -6679,10 +6678,10 @@ second variable
       and can thus be used to simplify searches in databases where
       you know the pronunciation but not the spelling. This soundex
       function returns a string 4 characters long, starting with a
-      letter.<br />
+      letter.<br>
       This particular soundex function is one described by Donald
       Knuth in "The Art Of Computer Programming, vol. 3: Sorting
-      And Searching", Addison-Wesley (1973), pp. 391-392.<br />
+      And Searching", Addison-Wesley (1973), pp. 391-392.<br>
       Example:</p>
       <pre>
    Euler and Ellery map to E460
@@ -6899,9 +6898,9 @@ second variable
       <p>The environment variables are:</p>
 
       <p><b>DSQUERY</b> - the alias of the sybase server as defined
-      in the sybase interface file.<br />
+      in the sybase interface file.<br>
       <b>DBUSER</b> - connect to the sybase server as this
-      user.<br />
+      user.<br>
       <b>DBPW</b> - password of the user.</p>
 
       <p>These variables can be set in several ways. If php/fi is
@@ -7257,7 +7256,7 @@ second variable
       to use &lt;?Include&gt;.</p>
     </dd>
   </dl>
-  <hr />
+  <hr>
 
   <h2><a name="addfunc" id="addfunc">Adding your own internal
   functions to PHP/FI</a></h2>It may well be that the set of
@@ -7574,7 +7573,7 @@ typedef struct Stack {
   <p>The <em>Debug()</em> call in the Crypt() example shows how to
   add debugging output to your function. Debug() is a varags
   (variable argument list) function just like printf.</p>
-  <hr />
+  <hr>
 
   <h2><a name="hacknotes" id="hacknotes">Notes for
   Code-Hacks</a></h2>

@@ -139,7 +139,7 @@ site_header("Downloads",
   </div>
 <?php endforeach; ?>
 
-<hr/>
+<hr>
 <h2>GPG Keys</h2>
 <p>
 The releases are tagged and signed in the <a href='git.php'>PHP Git Repository</a>.

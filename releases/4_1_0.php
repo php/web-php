@@ -8,7 +8,7 @@ site_header("PHP 4.1.0 Release Announcement");
 <h1>PHP 4.1.0 Release Announcement</h1>
 
 <p>
- After a lengthy QA process, PHP 4.1.0 is <a href="/downloads.php">finally out</a>!<br />
+ After a lengthy QA process, PHP 4.1.0 is <a href="/downloads.php">finally out</a>!<br>
  [ <a href="/releases/4_1_0_fr.php">Version Fran&ccedil;aise</a> ]
 </p>
 
@@ -48,7 +48,7 @@ site_header("PHP 4.1.0 Release Announcement");
  changes in PHP 4.1.0, see the <a href="/ChangeLog-4.php#4.1.0">ChangeLog</a>.
 </p>
 
-<hr />
+<hr>
 
 <h2>SECURITY: NEW INPUT MECHANISM</h2>
 

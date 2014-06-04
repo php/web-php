@@ -57,31 +57,31 @@ if (count($_POST) && (!isset($_POST['purpose']) || !is_array($_POST['purpose']) 
 
     // Check for errors
     if (empty($_POST['id'])) {
-        $error .= "You must supply a desired Git user id. <br />";
+        $error .= "You must supply a desired Git user id. <br>";
     } elseif(!preg_match('!^[a-z]\w+$!', $_POST['id'])) {
         $error .= "Your user id must be >1 char long, start with ".
-                  "a letter and contain nothing but a-z, 0-9, and _ <br />";
+                  "a letter and contain nothing but a-z, 0-9, and _ <br>";
     }
     if (empty($_POST['fullname'])) {
-        $error .= "You must supply your real name. <br />";
+        $error .= "You must supply your real name. <br>";
     }
     if (empty($_POST['realpurpose'])) {
-        $error .= "You must supply a reason for requesting the Git account. <br />";
+        $error .= "You must supply a reason for requesting the Git account. <br>";
     }
     if (empty($_POST['password'])) {
-        $error .= "You must supply a desired password. <br />";
+        $error .= "You must supply a desired password. <br>";
     }
     if (empty($_POST['email']) || !is_emailable_address($cleaned['email'])) {
-        $error .= "You must supply a proper email address. <br />";
+        $error .= "You must supply a proper email address. <br>";
     }
     if (empty($_POST['yesno']) || $_POST['yesno'] != 'yes') {
-        $error .= "You did not fill the form out correctly. <br />";
+        $error .= "You did not fill the form out correctly. <br>";
     }
     if (empty($_POST['group']) || $_POST['group'] === 'none' || !isset($groups[$_POST['group']])) {
-        $error .= "You did not fill out where to send the request. <br />";
+        $error .= "You did not fill out where to send the request. <br>";
     }
     if (!isset($_POST['guidelines']) || !$_POST['guidelines']) {
-        $error .= "You did not agree to follow the contribution guidelines. <br />";
+        $error .= "You did not agree to follow the contribution guidelines. <br>";
     }
 
     // Post the request if there is no error
@@ -345,15 +345,15 @@ EOT;
 <tr>
  <th class="subr">Full Name:</th>
  <td><input type="text" size="50" name="fullname"
-      class="max" value="<?php if (isset($_POST['fullname'])) echo clean($_POST['fullname']);?>" /></td>
+      class="max" value="<?php if (isset($_POST['fullname'])) echo clean($_POST['fullname']);?>"></td>
 </tr>
 <tr>
  <th class="subr">Email:</th>
  <td><input type="text" size="50" name="email"
-      class="max" value="<?php if (isset($_POST['email'])) echo clean($_POST['email']);?>" /></td>
+      class="max" value="<?php if (isset($_POST['email'])) echo clean($_POST['email']);?>"></td>
 </tr>
 <tr>
- <th class="subr">For what purpose do you require a Git account:<br />
+ <th class="subr">For what purpose do you require a Git account:<br>
  (check all that apply)</th>
  <td>
 <?php 
@@ -364,31 +364,31 @@ $purposes = array("Learning PHP", "Coding in PHP", "Reading the PHP source",
 
 foreach ($purposes as $i => $p) { ?>
   <input type="checkbox" name="purpose[<?php echo $i?>]" value="1" 
-	checked="checked" /><?php echo $p; ?><br />
+	checked="checked"><?php echo $p; ?><br>
 <?php } ?>
  </td>
 </tr>
 <tr>
- <th class="subr">If your intended purpose is not in the list, <br />please state it here:</th>
+ <th class="subr">If your intended purpose is not in the list, <br>please state it here:</th>
  <td><textarea cols="50" rows="5" name="realpurpose" class="max"><?php if (isset($_POST['realpurpose'])) echo clean($_POST['realpurpose']);?></textarea></td>
 </tr>
 <tr>
 <th class="subr">Do you agree to follow the <a href="license/contrib-guidelines-code.php">contribution guidelines</a>?</th>
-<td><input type="checkbox" name="guidelines" value="1" />Check the box if you agree.</td>
+<td><input type="checkbox" name="guidelines" value="1">Check the box if you agree.</td>
 </tr>
 <tr>
- <th class="subr">User ID:<br /> <small>(single word, lower case)</small></th>
+ <th class="subr">User ID:<br> <small>(single word, lower case)</small></th>
  <td><input type="text" size="10" name="id"
-      class="max" value="<?php if (isset($_POST['id'])) echo clean($_POST['id']);?>" /></td>
+      class="max" value="<?php if (isset($_POST['id'])) echo clean($_POST['id']);?>"></td>
 </tr>
 <tr>
  <th class="subr">Requested Password:</th>
  <td><input type="password" size="10" name="password"
-      class="max" value="<?php if (isset($_POST['password'])) echo clean($_POST['password']);?>" /></td>
+      class="max" value="<?php if (isset($_POST['password'])) echo clean($_POST['password']);?>"></td>
 </tr>
 <tr>
  <th class="subr">Did you fill this form out correctly (yes/no)?</th>
- <td><input type="text" size="10" name="yesno" class="max" value="no" /></td>
+ <td><input type="text" size="10" name="yesno" class="max" value="no"></td>
 </tr>
 <tr>
  <th class="subr">Type of initial karma (who to send this request to):</th>
@@ -404,7 +404,7 @@ foreach($groups as $group => $name) {
  </td>
 </tr>
 <tr>
- <th colspan="2"><input type="submit" value="Send Request" /></th>
+ <th colspan="2"><input type="submit" value="Send Request"></th>
 </tr>
 </table>
 </form>

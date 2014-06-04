@@ -11,7 +11,7 @@ site_header("Annonce de publication de PHP 4.3.2", array("lang" => "fr"));
 
 <p>
  Apr&egrave;s une longue &eacute;tape de tests d'assurance Qualit&eacute;,
- <a href="/downloads.php">PHP 4.3.2</a> est finalement disponible!<br />
+ <a href="/downloads.php">PHP 4.3.2</a> est finalement disponible!<br>
  Cette version de maintenance r&eacute;sout un grand nombre de bugs trouv&eacute;s dans
  des versions plus anciennes de PHP, et il est <strong>recommand&eacute;</strong> 
  de faire la mise &agrave; jour pour tous les utilisateurs PHP.

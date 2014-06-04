@@ -116,13 +116,13 @@ else {
   <div style="background-color: #f5f5ff; border: 1px solid black; padding: 15px; width: 90%; margin: auto;">
    <form action="" method="post">
     <div>
-    <p>Please answer this simple SPAM challenge: <strong><?php $c = gen_challenge(); echo $c[3]; ?></strong>?<br/>
-    <input type="text" name="challenge" maxlength="10" /> (Example: nine)</p>
-    <p><input type="submit" value="Vote" name="votenote" /></p>
+    <p>Please answer this simple SPAM challenge: <strong><?php $c = gen_challenge(); echo $c[3]; ?></strong>?<br>
+    <input type="text" name="challenge" maxlength="10"> (Example: nine)</p>
+    <p><input type="submit" value="Vote" name="votenote"></p>
     </div>
-    <input type="hidden" name="func" value="<?php echo $c[0]; ?>" />
-    <input type="hidden" name="arga" value="<?php echo $c[1]; ?>" />
-    <input type="hidden" name="argb" value="<?php echo $c[2]; ?>" />
+    <input type="hidden" name="func" value="<?php echo $c[0]; ?>">
+    <input type="hidden" name="arga" value="<?php echo $c[1]; ?>">
+    <input type="hidden" name="argb" value="<?php echo $c[2]; ?>">
    </form>
   </div>
  </div>
@@ -148,7 +148,7 @@ if ($error) {
     $error_div = <<<EOL
       <div style="width: 90%; padding: 15px; margin: auto; border: 1px dotted red; background-color: #9999cc; color: white;">
         <div style="float: left; padding: 15px;">
-          <img src="/images/docs-warning.png"/>
+          <img src="/images/docs-warning.png">
         </div>
         <p>
           <strong>There was an error with your request!</strong>
@@ -168,13 +168,13 @@ if (!$headerset) {
   <div style="background-color: #f5f5ff; border: 1px solid black; padding: 15px; width: 90%; margin: auto;">
    <form action="" method="post">
     <div>
-    <p>Please answer this simple SPAM challenge: <strong><?php $c = gen_challenge(); echo $c[3]; ?></strong>?<br/>
-    <input type="text" name="challenge" maxlength="10" /> (Example: nine)</p>
-    <p><input type="submit" value="Vote" name="votenote" /></p>
+    <p>Please answer this simple SPAM challenge: <strong><?php $c = gen_challenge(); echo $c[3]; ?></strong>?<br>
+    <input type="text" name="challenge" maxlength="10"> (Example: nine)</p>
+    <p><input type="submit" value="Vote" name="votenote"></p>
     </div>
-    <input type="hidden" name="func" value="<?php echo $c[0]; ?>" />
-    <input type="hidden" name="arga" value="<?php echo $c[1]; ?>" />
-    <input type="hidden" name="argb" value="<?php echo $c[2]; ?>" />
+    <input type="hidden" name="func" value="<?php echo $c[0]; ?>">
+    <input type="hidden" name="arga" value="<?php echo $c[1]; ?>">
+    <input type="hidden" name="argb" value="<?php echo $c[2]; ?>">
    </form>
   <?php echo $error_div; ?>
   </div>

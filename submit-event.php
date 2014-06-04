@@ -59,7 +59,7 @@ if ($process) {
         $errors[] = "You must supply a short description of the event.";
     }
 
-    $_POST['ldesc'] = trim(strip_tags($_POST['ldesc'], '<a><i><b><br /><p>'));
+    $_POST['ldesc'] = trim(strip_tags($_POST['ldesc'], '<a><i><b><br><p>'));
     $_POST['ldesc'] = preg_replace("/(style|on\\w+?)\s*=[^>]*/i", "", $_POST['ldesc']);
     if (!$_POST['ldesc']) {
         $errors[] = "You must supply a long description of the event.";
@@ -183,9 +183,9 @@ if ($process && count($errors) === 0) {
   <th class="subr">Start Date</th>
   <td>
    <select name="smonth"><option></option><?php display_options($months, $_POST['smonth'])?></select>
-   <input type="text" name="sday" size="2" maxlength="2" value="<?php echo htmlentities($_POST['sday'], ENT_QUOTES | ENT_IGNORE, 'UTF-8')?>" />
-   <input type="text" name="syear" size="4" maxlength="4" value="<?php echo $_POST['syear'] ? htmlentities($_POST['syear'], ENT_QUOTES | ENT_IGNORE, 'UTF-8') : date("Y")?>" />
-   <input type="radio" id="single" name="type" value="single"<?php if ($_POST['type'] == 'single' || !$_POST['type']) echo ' checked="checked"';?> />
+   <input type="text" name="sday" size="2" maxlength="2" value="<?php echo htmlentities($_POST['sday'], ENT_QUOTES | ENT_IGNORE, 'UTF-8')?>">
+   <input type="text" name="syear" size="4" maxlength="4" value="<?php echo $_POST['syear'] ? htmlentities($_POST['syear'], ENT_QUOTES | ENT_IGNORE, 'UTF-8') : date("Y")?>">
+   <input type="radio" id="single" name="type" value="single"<?php if ($_POST['type'] == 'single' || !$_POST['type']) echo ' checked="checked"';?>>
    <label for="single">One day (no end-date required)</label>
   </td>
  </tr>
@@ -193,9 +193,9 @@ if ($process && count($errors) === 0) {
   <th class="subr">End Date</th>
   <td>
    <select name="emonth"><option></option><?php display_options($months, $_POST['emonth'])?></select>
-   <input type="text" name="eday" size="2" maxlength="2" value="<?php echo htmlentities($_POST['eday'], ENT_QUOTES | ENT_IGNORE, 'UTF-8')?>" />
-   <input type="text" name="eyear" size="4" maxlength="4" value="<?php echo $_POST['eyear'] ? htmlentities($_POST['eyear'], ENT_QUOTES | ENT_IGNORE, 'UTF-8') : date("Y")?>" />
-   <input type="radio" id="multi" name="type" value="multi"<?php if ($_POST['type'] == 'multi') echo ' checked="checked"';?> />
+   <input type="text" name="eday" size="2" maxlength="2" value="<?php echo htmlentities($_POST['eday'], ENT_QUOTES | ENT_IGNORE, 'UTF-8')?>">
+   <input type="text" name="eyear" size="4" maxlength="4" value="<?php echo $_POST['eyear'] ? htmlentities($_POST['eyear'], ENT_QUOTES | ENT_IGNORE, 'UTF-8') : date("Y")?>">
+   <input type="radio" id="multi" name="type" value="multi"<?php if ($_POST['type'] == 'multi') echo ' checked="checked"';?>>
    <label for="multi">Multi-day event</label>
   </td>
  </tr>
@@ -204,17 +204,17 @@ if ($process && count($errors) === 0) {
   <td>
    <select name="recur"><option></option><?php display_options($re, $_POST['recur'])?></select>
    <select name="recur_day"><option></option><?php display_options($days, $_POST['recur_day'])?></select>
-   <input type="radio" id="recur" name="type" value="recur"<?php if ($_POST['type'] == 'recur') echo ' checked="checked"';?> />
+   <input type="radio" id="recur" name="type" value="recur"<?php if ($_POST['type'] == 'recur') echo ' checked="checked"';?>>
    <label for="recur">Recurring (every month)</label>
   </td>
  </tr>
  <tr>
   <th class="subr">Short Description</th>
-  <td><input type="text" name="sdesc" class="max" value="<?php echo htmlentities($_POST['sdesc'], ENT_QUOTES | ENT_IGNORE, 'UTF-8')?>" size="32" maxlength="32" /></td>
+  <td><input type="text" name="sdesc" class="max" value="<?php echo htmlentities($_POST['sdesc'], ENT_QUOTES | ENT_IGNORE, 'UTF-8')?>" size="32" maxlength="32"></td>
  </tr>
  <tr>
   <th class="subr">URL</th>
-  <td><input type="text" name="url" size="40" maxlength="128" class="max" value="<?php echo htmlentities($_POST['url'], ENT_QUOTES | ENT_IGNORE, 'UTF-8')?>" /></td>
+  <td><input type="text" name="url" size="40" maxlength="128" class="max" value="<?php echo htmlentities($_POST['url'], ENT_QUOTES | ENT_IGNORE, 'UTF-8')?>"></td>
  </tr>
  <tr>
   <th class="subr">Country</th>
@@ -239,7 +239,7 @@ if ($process && count($errors) === 0) {
  <tr>
   <th class="subr">Email</th>
   <td>
-   <input type="text" name="email" size="40" maxlength="128" class="max" value="<?php echo htmlentities($_POST['email'], ENT_QUOTES | ENT_IGNORE, 'UTF-8')?>" /><br />
+   <input type="text" name="email" size="40" maxlength="128" class="max" value="<?php echo htmlentities($_POST['email'], ENT_QUOTES | ENT_IGNORE, 'UTF-8')?>"><br>
    <small>This email address is only used to contact you about the listing, it will not displayed along with the listing.</small>
   </td>
  </tr>
@@ -249,9 +249,9 @@ if ($process && count($errors) === 0) {
  </tr>
  <tr>
   <th colspan="2">
-    <input type="submit" name="action" value="Preview" />
+    <input type="submit" name="action" value="Preview">
 <?php if ($process && count($errors) == 0) {?>
-    <input type="submit" name="action" value="Submit" />
+    <input type="submit" name="action" value="Submit">
 <?php }?>
   </th>
  </tr>

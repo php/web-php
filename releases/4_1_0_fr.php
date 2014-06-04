@@ -8,7 +8,7 @@ site_header("Annonce de publication de PHP 4.1.0", array("lang" => "fr"));
 <h1>Annonce de publication de PHP 4.1.0</h1>
 
 <p>
- Apr&egrave;s un long processus "QA", PHP 4.1.0 <a href="/downloads.php">est enfin sorti</a>!<br />
+ Apr&egrave;s un long processus "QA", PHP 4.1.0 <a href="/downloads.php">est enfin sorti</a>!<br>
  [ <a href="/releases/4_1_0.php">English Version</a> ]
 </p>
 
@@ -53,7 +53,7 @@ site_header("Annonce de publication de PHP 4.1.0", array("lang" => "fr"));
  <a href="/ChangeLog-4.php#4.1.0">ChangeLog</a>.
 </p>
 
-<hr />
+<hr>
 
 <h2>SECURITE: NOUVEAU MECANISME D'ENTREE</h2>
 

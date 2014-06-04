@@ -59,7 +59,7 @@ manual_header();
  <div class="info">
   <div class="authorgroup" id="authors">
 
-   <div class="author vcard"><strong class="by">著者</strong>:<br />
+   <div class="author vcard"><strong class="by">著者</strong>:<br>
    <span class="personname fn">
      <span class="firstname given-name">Mehdi</span>  <span class="surname family-name">Achour</span>  
    </span>

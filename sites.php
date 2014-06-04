@@ -96,7 +96,7 @@ site_header("A Tourist's Guide", array("current" => "help"));
 <p class="content-box">
  PECL is a repository for PHP Extensions, providing a directory of all known 
  extensions and hosting facilities for downloading and development of PHP 
- extensions. <br />
+ extensions. <br>
 
  The packaging and distribution system used by PECL is shared with 
  its sister, PEAR.

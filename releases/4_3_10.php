@@ -12,19 +12,20 @@ PHP Development Team would like to announce the immediate release of <a href="/d
 maintenance release that in addition to over 30 non-critical bug fixes addresses several very 
 serious security issues. 
 </p>
-<p />
+<p>
 These include the following:
-<p />
-<a href="http://www.cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2004-1018">CAN-2004-1018</a> - shmop_write() out of bounds memory write access.<br />
-<a href="http://www.cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2004-1018">CAN-2004-1018</a> - integer overflow/underflow in pack() and unpack() functions.<br />
-<a href="http://www.cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2004-1019">CAN-2004-1019</a> - possible information disclosure, double free and negative reference index array underflow in deserialization code.<br />
-<a href="http://www.cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2004-1020">CAN-2004-1020</a> - addslashes() not escaping \0 correctly.<br />
-<a href="http://www.cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2004-1063">CAN-2004-1063</a> - safe_mode execution directory bypass.<br />
-<a href="http://www.cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2004-1064">CAN-2004-1064</a> - arbitrary file access through path truncation.<br />
-<a href="http://www.cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2004-1065">CAN-2004-1065</a> - exif_read_data() overflow on long sectionname.<br />
+</p>
+<p>
+<a href="http://www.cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2004-1018">CAN-2004-1018</a> - shmop_write() out of bounds memory write access.<br>
+<a href="http://www.cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2004-1018">CAN-2004-1018</a> - integer overflow/underflow in pack() and unpack() functions.<br>
+<a href="http://www.cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2004-1019">CAN-2004-1019</a> - possible information disclosure, double free and negative reference index array underflow in deserialization code.<br>
+<a href="http://www.cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2004-1020">CAN-2004-1020</a> - addslashes() not escaping \0 correctly.<br>
+<a href="http://www.cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2004-1063">CAN-2004-1063</a> - safe_mode execution directory bypass.<br>
+<a href="http://www.cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2004-1064">CAN-2004-1064</a> - arbitrary file access through path truncation.<br>
+<a href="http://www.cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2004-1065">CAN-2004-1065</a> - exif_read_data() overflow on long sectionname.<br>
 magic_quotes_gpc could lead to one level directory traversal with file uploads.
-<p />
-All Users of PHP are strongly encouraged to upgrade to this release as soon as possible.<p /> 
+</p>
+<p>All Users of PHP are strongly encouraged to upgrade to this release as soon as possible.</p> 
 
 <h2>Bugfix release</h2>
 

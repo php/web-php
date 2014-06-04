@@ -8,8 +8,8 @@ site_header("PHP Usage Stats", array("current" => "community"));
 <h1>Usage Stats for January 2013</h1>
 
 <p>
-PHP: 244M sites, 2.1M IP addresses<br />
-Source: <a href="http://news.netcraft.com/archives/2013/01/31/php-just-grows-grows.html">Netcraft</a><br />
+PHP: 244M sites, 2.1M IP addresses<br>
+Source: <a href="http://news.netcraft.com/archives/2013/01/31/php-just-grows-grows.html">Netcraft</a><br>
 </p>
 
 <p>
@@ -21,7 +21,7 @@ Source: <a href="http://news.netcraft.com/archives/2013/01/31/php-just-grows-gro
 <a href="http://w3techs.com/technologies/overview/programming_language/all">server-side programming languages</a>
 where you can also see the market share
 <a href="http://w3techs.com/technologies/details/pl-php/all/all">by version</a>.
-<br />
+<br>
 See their <a href="http://w3techs.com/faq">FAQ</a> and <a href="http://w3techs.com/technologies">technologies</a>
 page for the details of the methodologies used for the surveys.
 </p>

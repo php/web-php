@@ -18,7 +18,7 @@ site_header('PHP Version 3 Documentation');
   <li><a href="#debugger">Debugger</a></li>
   <li><a href="#internals">Internals</a></li>
 </ol>
-<hr />
+<hr>
 
 <h2><a name="introduction" id="introduction">Introduction</a></h2>
 

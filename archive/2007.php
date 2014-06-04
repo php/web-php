@@ -12,7 +12,7 @@ site_header("News Archive - 2007", array("cache" => true));
  Here are the most important news items we have published in 2007 on PHP.net.
 </p>
 
-<hr />
+<hr>
 
 <div class="newsItem">
     <a name="2007-11-08-1" id="2007-11-08-1"><h1>PHP 5.2.5 Released</h1></a>
@@ -39,7 +39,7 @@ site_header("News Archive - 2007", array("cache" => true));
 </div>
 </div>
 
-<hr />
+<hr>
 <?php news_image("http://www.prophp.com.br/phpconference.php", "phpconfbrasil2007.png", "São Paulo 2007"); ?>
 <div class="newsItem">
     
@@ -54,7 +54,7 @@ Visit <a href="http://www.prophp.com.br/phpconference.php">the website</a> for m
 </div>
 </div>
 
-<hr />
+<hr>
 <div class="newsItem">
 
     
@@ -82,7 +82,7 @@ using <a href="/my.php">my.php</a>.
 </div>
 </div>
 
-<hr />
+<hr>
 <?php news_image("http://www.dcphpconference.com/", "dcphpconference.2007.png", "Washington DC 2007"); ?>
 <div class="newsItem">
     
@@ -99,7 +99,7 @@ Please see <a href="http://www.dcphpconference.com ">the website</a> for more de
 </div>
 </div>
 
-<hr />
+<hr>
 <?php news_image("http://www.afup.org/pages/forumphp2007/", "afup2007.jpg", "Paris Forum 2007"); ?>
 <div class="newsItem">
     
@@ -118,7 +118,7 @@ enterprise solutions and advanced techniques.
 </div>
 </div>
 
-<hr />
+<hr>
 <div class="newsItem">
     
     <a name="2007-08-30-1" id="2007-08-30-1"><h1>PHP 5.2.4 Released</h1></a>
@@ -169,7 +169,7 @@ those releases and PHP 5.2.4.
 </div>
 </div>
 
-<hr />
+<hr>
 <?php news_image("http://www.zendcon.com/", "zendcon07_logo_s.jpg", "Zend/PHP Conference 2007"); ?>
 <div class="newsItem">
     
@@ -207,7 +207,7 @@ For more information please see <a href="http://www.zendcon.com/">http://www.zen
 </div>
 </div>
 
-<hr />
+<hr>
 <?php news_image("http://works.phparch.com/c/p/index", "phpworks2007.png", "php|works 2007"); ?>
 <div class="newsItem">
     
@@ -224,7 +224,7 @@ This year, the conference once again promises to be an excellent event for PHP d
 </div>
 </div>
 
-<hr />
+<hr>
 <div class="newsItem">
     
     <a name="2007-07-13-1" id="2007-07-13-1"><h1>PHP 4 end of life announcement</h1></a>
@@ -254,7 +254,7 @@ This year, the conference once again promises to be an excellent event for PHP d
 </div>
 </div>
 
-<hr />
+<hr>
 <div class="newsItem">
     
     <a name="2007-06-01-1" id="2007-06-01-1"><h1>PHP 5.2.3 Released</h1></a>
@@ -297,7 +297,7 @@ those releases and PHP 5.2.3.
 </div>
 </div>
 
-<hr />
+<hr>
 <?php news_image("http://www.wtconferences.com/2007/?q=node/1", "wtlogo_s.png", "WebTech 2007"); ?>
 <div class="newsItem">
     
@@ -321,7 +321,7 @@ those releases and PHP 5.2.3.
 </div>
 </div>
 
-<hr />
+<hr>
 <div class="newsItem">
     
     <a name="2007-05-03-1" id="2007-05-03-1"><h1>PHP 5.2.2 and PHP 4.4.7 Released</h1></a>
@@ -398,7 +398,7 @@ those releases and PHP 5.2.3.
 </div>
 </div>
 
-<hr />
+<hr>
 <div class="newsItem">
     
     <a name="2007-04-14-1" id="2007-04-14-1"><h1>The PHP.net Google Summer of Code</h1></a>
@@ -469,7 +469,7 @@ those releases and PHP 5.2.3.
 </div>
 </div>
 
-<hr />
+<hr>
 <div class="newsItem">
     
     <a name="2007-03-01-1" id="2007-03-01-1"><h1>PHP 4.4.6 Released</h1></a>
@@ -495,7 +495,7 @@ those releases and PHP 5.2.3.
 </div>
 </div>
 
-<hr />
+<hr>
 <div class="newsItem">
     
     <a name="2007-02-08-2" id="2007-02-08-2"><h1>PHP 5.2.1 and PHP 4.4.5 Released</h1></a>
@@ -581,7 +581,7 @@ posted in the <a href="/downloads.php">download section</a>.</p>
 </div>
 </div>
 
-<hr />
+<hr>
 <div class="newsItem">
     
     <a name="2007-02-08-1" id="2007-02-08-1"><h1>The front page has changed</h1></a>
@@ -595,7 +595,7 @@ posted in the <a href="/downloads.php">download section</a>.</p>
 </div>
 </div>
 
-<hr />
+<hr>
 <?php news_image("http://conf.phpquebec.com/en/conf2007/", "conference_php_quebec.gif", "PHP Québec conference"); ?>
 <div class="newsItem">
     
@@ -625,7 +625,7 @@ contributors.
 </div>
 </div>
 
-<hr />
+<hr>
 <div class="newsItem">
     
     <a name="2007-02-03-1" id="2007-02-03-1"><h1>PHP Manual Updates</h1></a>
@@ -644,7 +644,7 @@ contributors.
 </div>
 </div>
 
-<hr />
+<hr>
 <?php news_image("http://www.phpconference.co.uk/", "phplondon2007.png", "PHP London 2007"); ?>
 <div class="newsItem">
     
@@ -658,7 +658,7 @@ After the success of 2006 the <a href="http://www.phplondon.org/">PHP London use
 </div>
 </div>
 
-<hr />
+<hr>
 <?php news_image("http://www.phparch.com/tek", "phptek2007.png", "php|tek 2007"); ?>
 <div class="newsItem">
     

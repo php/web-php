@@ -13,19 +13,20 @@ la publication de <a href="/downloads.php">PHP 4.3.10</a>. C'est une version
 de maintenance, destin&eacute;e &agrave; corriger une trentaine de bogues 
 non-critiques et ainsi que plusieurs problèmes de sécurité sérieux.
 </p>
-<p />
-Cela inclut notamment : 
-<p />
-<a href="http://www.cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2004-1018">CAN-2004-1018</a> - shmop_write() écrit hors des limites de la mémoire.<br />
-<a href="http://www.cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2004-1018">CAN-2004-1018</a> - dépassement de capacité avec pack() et unpack().<br />
-<a href="http://www.cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2004-1019">CAN-2004-1019</a> - publication possible d'informations, dépassement de capacité dans les index négatif lors de délinéarisation de données.<br />
-<a href="http://www.cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2004-1020">CAN-2004-1020</a> - addslashes() ne protège pas correctement \0.<br />
-<a href="http://www.cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2004-1063">CAN-2004-1063</a> - contournement de la directive de dossier d'exécution.<br />
-<a href="http://www.cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2004-1064">CAN-2004-1064</a> - accès arbitraire à un fichier via une troncature.<br />
-<a href="http://www.cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2004-1065">CAN-2004-1065</a> - dépassement de capacité avec exif_read_data()  sur un long nom de section.<br />
+<p>
+Cela inclut notamment: 
+</p>
+<p>
+<a href="http://www.cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2004-1018">CAN-2004-1018</a> - shmop_write() écrit hors des limites de la mémoire.<br>
+<a href="http://www.cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2004-1018">CAN-2004-1018</a> - dépassement de capacité avec pack() et unpack().<br>
+<a href="http://www.cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2004-1019">CAN-2004-1019</a> - publication possible d'informations, dépassement de capacité dans les index négatif lors de délinéarisation de données.<br>
+<a href="http://www.cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2004-1020">CAN-2004-1020</a> - addslashes() ne protège pas correctement \0.<br>
+<a href="http://www.cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2004-1063">CAN-2004-1063</a> - contournement de la directive de dossier d'exécution.<br>
+<a href="http://www.cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2004-1064">CAN-2004-1064</a> - accès arbitraire à un fichier via une troncature.<br>
+<a href="http://www.cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2004-1065">CAN-2004-1065</a> - dépassement de capacité avec exif_read_data()  sur un long nom de section.<br>
 magic_quotes_gpc peut mener à la lecture d'un dossier via le téléchargement de fichiers.
-<p />
-Tous les utilisateurs sont encouragés à utiliser cette version.<p /> 
+</p>
+<p>Tous les utilisateurs sont encouragés à utiliser cette version.</p> 
 
 <h2>Version de correction de bogues</h2>
 

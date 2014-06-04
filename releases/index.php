@@ -147,7 +147,7 @@ function mk_rel($major, $ver, $date, $announcement, $source, $windows, $museum) 
 		foreach(array_merge($source, $windows) as $src) {
 			echo " <li>\n";
 			if (isset($src['filename'])) {
-				download_link($src["filename"], $src["name"]); echo "<br />\n";
+				download_link($src["filename"], $src["name"]); echo "<br>\n";
 				if (isset($src["md5"])) {
 					echo '<span class="md5sum">md5: ' .$src["md5"]. "</span>\n";
 				}
@@ -177,7 +177,7 @@ $latest = max(array_keys($OLDRELEASES));
 foreach($OLDRELEASES as $major => $a) {
 	echo '<a name="v' .$major. '"></a>';
 	if ($major != $latest) {
-		echo "\n<hr />\n";
+		echo "\n<hr>\n";
 		if ($major == 4) {
 			echo '<p>Support for PHP 4 has been <b style="color: red;">discontinued</b> since 2007-12-31. Please consider upgrading to PHP 5.</p>'."\n";
 		}

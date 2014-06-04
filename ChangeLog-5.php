@@ -10572,7 +10572,7 @@ function release_date($in) {
 <li>Changed phpize not to require libtool. (Jani)</li>
 <li>Updated bundled oniguruma library (used for multibyte regular expression)
   to 3.7.0. (Moriyoshi)</li>
-<li>Updated bundled libmbfl library (used for multibyte functions). (Moriyoshi)<br />Fixed bugs:
+<li>Updated bundled libmbfl library (used for multibyte functions). (Moriyoshi)<br>Fixed bugs:
   <ul>
     <li>Bug <?php bugl(32063); ?> (mb_convert_encoding ignores named entity 'alpha')</li>
     <li>Bug <?php bugl(31911); ?> (mb_decode_mimeheader() is case-sensitive to hex escapes)</li>

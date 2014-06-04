@@ -62,7 +62,7 @@ elseif ($cy && $cm && $cd) {
             echo "<h2>", date("F j, Y", $date), "</h2>\n";
             foreach ($events as $event) {
                 display_event($event, 0);
-                echo "<br />";
+                echo "<br>";
             }
             $begun = TRUE;
         }
@@ -146,7 +146,7 @@ if (valid_year(date("Y", $nm))) {
 }
 
 // Print out navigation links for previous and next month
-echo '<br /><table id="calnav" width="100%" border="0" cellspacing="0" cellpadding="3">',
+echo '<br><table id="calnav" width="100%" border="0" cellspacing="0" cellpadding="3">',
      "\n<tr>", '<td align="left" width="33%">', $prev_link, '</td>', 
      '<td align="center" width="33%">', strftime('<b>%B, %Y</b></td>', $bom),
      '<td align="right" width="33%">', $next_link, "</td></tr>\n</table>\n";

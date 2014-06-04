@@ -12,7 +12,7 @@ site_header("News Archive - 2002", array("cache" => true));
  Here are the most important news items we have published in 2002 on PHP.net.
 </p>
 
-<hr />
+<hr>
 
 <h1>PHP Look Back 2002</h1>
 <p>
@@ -26,7 +26,7 @@ site_header("News Archive - 2002", array("cache" => true));
  Happy New Year!
 </p>
 
-<hr />
+<hr>
 
 <h1>PHP 4.3.0 Released!</h1>
 <p>
@@ -43,7 +43,7 @@ site_header("News Archive - 2002", array("cache" => true));
  the full <a href="release_4_3_0.php">release announcement</a>.
 </p>
 
-<hr />
+<hr>
 
 <?php news_image("http://weblabor.hu/php-doc-chm", "chmhelp.gif", "CHM"); ?>
 
@@ -65,7 +65,7 @@ site_header("News Archive - 2002", array("cache" => true));
  more information</a>.
 </p>
 
-<hr />
+<hr>
 
 <?php news_image("http://www.mysql.com/events/uc2003/", "mysqluc2003.png", "MySQL Users Conference and Expo 2003"); ?>
 
@@ -83,7 +83,7 @@ site_header("News Archive - 2002", array("cache" => true));
  event's website</a>.
 </p>
 
-<hr />
+<hr>
 
 <h1>PHP news feed available</h1>
 <p>
@@ -96,7 +96,7 @@ site_header("News Archive - 2002", array("cache" => true));
  file is available on every mirror site.
 </p>
 
-<hr />
+<hr>
 
 <?php news_image("http://www.afup.org/", "afup-logo.gif", "AFUP"); ?>
 
@@ -112,7 +112,7 @@ site_header("News Archive - 2002", array("cache" => true));
  website.
 </p>
 
-<hr />
+<hr>
 
 <h1>PHP Magazine - International Edition</h1>
 <p>
@@ -135,7 +135,7 @@ site_header("News Archive - 2002", array("cache" => true));
  href="http://www.php-mag.net/">website</a> which will open shortly.
 </p>
 
-<hr />
+<hr>
 
 <h1>New Monthly PHP Magazine Launched</h1>
 <p>
@@ -148,7 +148,7 @@ site_header("News Archive - 2002", array("cache" => true));
  available on the magazine website
 </p>
 
-<hr />
+<hr>
 
 <h1>PHP Search Bars available for major browsers</h1>
 <p>
@@ -162,7 +162,7 @@ site_header("News Archive - 2002", array("cache" => true));
  as a PHP.net website bug please).
 </p>
 
-<hr />
+<hr>
 
 <h1>PHP at the LinuxWorld Expo Oct. 29-31th in Frankfurt, Germany</h1>
 <p>
@@ -183,7 +183,7 @@ site_header("News Archive - 2002", array("cache" => true));
  software available at the booth.
 </p>
 
-<hr />
+<hr>
 
 <h1>New keyboard shortcuts</h1>
 <p>
@@ -198,7 +198,7 @@ site_header("News Archive - 2002", array("cache" => true));
  the HTML standard</a>.
 </p>
 
-<hr />
+<hr>
 
 <h1>PHP 4.2.3 Released</h1>
 <p>
@@ -209,7 +209,7 @@ site_header("News Archive - 2002", array("cache" => true));
  be found in the <a href="ChangeLog-4.php">ChangeLog</a>.
 </p>
 
-<hr />
+<hr>
 
 <?php news_image("http://www.php-conference.de/2002/index_en.php", "phpconf2002.gif", "PHP Conference 2002"); ?>
 
@@ -238,7 +238,7 @@ site_header("News Archive - 2002", array("cache" => true));
  persons get special discounts.
 </p>
 
-<hr />
+<hr>
 
 <?php news_image("http://www.php-con.com/", "phpcon2002.png", "PHPCon 2002"); ?>
 
@@ -273,7 +273,7 @@ site_header("News Archive - 2002", array("cache" => true));
  California.
 </p>
 
-<hr />
+<hr>
 
 <h1>Printer friendly manual pages with notes</h1>
 <p>
@@ -285,7 +285,7 @@ site_header("News Archive - 2002", array("cache" => true));
  change languages.
 </p>
 
-<hr />
+<hr>
 
 <h1>ActiveState Awards</h1>
 <p>
@@ -310,7 +310,7 @@ site_header("News Archive - 2002", array("cache" => true));
  <a href="http://www.ActiveState.com/ActiveAwards2002">http://www.ActiveState.com/ActiveAwards2002</a>
 </p>
 
-<hr />
+<hr>
 
 <h1>PHP 4.2.2 released in response to vulnerability</h1>
 
@@ -323,7 +323,7 @@ site_header("News Archive - 2002", array("cache" => true));
  other changes, so upgrading from 4.2.1 is safe and painless.
 </p>
 
-<hr />
+<hr>
 
 <h1>New comp.lang.php newsgroup started</h1>
 
@@ -347,7 +347,7 @@ site_header("News Archive - 2002", array("cache" => true));
  and to help others.
 </p>
 
-<hr />
+<hr>
 
 <?php print_image("news/engine.gif", "Zend Engine 2", "right"); ?>
 
@@ -375,7 +375,7 @@ site_header("News Archive - 2002", array("cache" => true));
  Windows binary version is also available.
 </p>
 
-<hr />
+<hr>
 
 <h1>PHP for NetWare (Beta) Released</h1>
 <p>
@@ -386,7 +386,7 @@ site_header("News Archive - 2002", array("cache" => true));
  4.0.8 (development) version of the PHP source code.
 </p>
 
-<hr />
+<hr>
 
 <?php news_image("http://www.linuxtag.org/2002/deutsch/showitem.php3?item=30&amp;lang=en", "linuxtag3.gif", "LinuxTag"); ?>
 
@@ -403,7 +403,7 @@ site_header("News Archive - 2002", array("cache" => true));
  (text in German).
 </p>
 
-<hr />
+<hr>
 
 <h1>PHP Coding Contest</h1>
 <p>
@@ -414,7 +414,7 @@ site_header("News Archive - 2002", array("cache" => true));
  You can enter the challenge by visiting <a href="http://codewalkers.com/php-contest.php">their site</a>.
 </p>
 
-<hr />
+<hr>
 
 <h1>PHP 4.2.1 released</h1>
 <p>
@@ -432,7 +432,7 @@ site_header("News Archive - 2002", array("cache" => true));
  <a href="/release_4_2_1.php">PHP 4.2.1 release announcement</a>.
 </p>
 
-<hr />
+<hr>
 
 <?php news_image("http://www.php-award.net/", "phpaward_100.gif", "PHP Award"); ?>
 
@@ -448,7 +448,7 @@ site_header("News Archive - 2002", array("cache" => true));
  <a href="http://www.php-award.net/">http://www.php-award.net/</a>.
 </p>
 
-<hr />
+<hr>
 
 <h1>PHP.net: A Tourist's Guide</h1>
 <p>
@@ -461,7 +461,7 @@ site_header("News Archive - 2002", array("cache" => true));
  you've been missing.
 </p>
 
-<hr />
+<hr>
 
 <h1>PHP 4.2.0 released</h1>
 <p>
@@ -479,7 +479,7 @@ site_header("News Archive - 2002", array("cache" => true));
  <a href="/release_4_2_0.php">PHP 4.2.0 release announcement</a>.
 </p>
 
-<hr />
+<hr>
 
 <?php news_image("http://weblabor.hu/php-doc-chm", "chmhelp.gif", "CHM"); ?>
 
@@ -499,7 +499,7 @@ site_header("News Archive - 2002", array("cache" => true));
  <a href="mailto:php-doc-chm@lists.php.net">dedicated mailing list</a>.
 </p>
 
-<hr />
+<hr>
 
 <?php news_image("http://www.phpmag.de/", "phpmag.gif", "PHP Magazin"); ?>
 
@@ -513,7 +513,7 @@ site_header("News Archive - 2002", array("cache" => true));
  <a href="http://www.phpmag.de/">www.phpmag.de</a>.
 </p>
  
-<hr />
+<hr>
 
 <h1>New PHP.net URL Howto</h1>
 <p>
@@ -526,7 +526,7 @@ site_header("News Archive - 2002", array("cache" => true));
  <a href="urlhowto.php">URL Howto</a>.
 </p>
 
-<hr />
+<hr>
 
 <?php news_image("http://www.php-ev.de/documents/phpdoc/protocol.html", "brain.gif", "PHPDoc Brain"); ?>
 
@@ -538,7 +538,7 @@ site_header("News Archive - 2002", array("cache" => true));
  8th-10th) are now available.
 </p>
 
-<hr />
+<hr>
 
 <h1>PHP Security Update - Windows Version</h1>
 <p>
@@ -550,7 +550,7 @@ site_header("News Archive - 2002", array("cache" => true));
  encouraged to upgrade to the <a href="/downloads.php">latest version</a>.
 </p>
 
-<hr />
+<hr>
 
 <h1>PHP Security Update</h1>
 <p>
@@ -563,7 +563,7 @@ site_header("News Archive - 2002", array("cache" => true));
  href="/downloads.php">available for PHP 3.0.18, 4.0.6 and 4.1.0/4.1.1)</a>.
 </p>
 
-<hr />
+<hr>
 
 <h1>PHP-GTK 0.5.0 released</h1>
 
@@ -582,7 +582,7 @@ site_header("News Archive - 2002", array("cache" => true));
  learn this exciting extension and also contribute to the project.
 </p>
 
-<hr />
+<hr>
 
 <?php news_image("http://www.phpconference.de/2001/index_en.php", "international_conference.gif", "International PHP Conference 2001"); ?>
 

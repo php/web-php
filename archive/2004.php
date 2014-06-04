@@ -12,7 +12,7 @@ site_header("News Archive - 2004", array("cache" => true));
  Here are the most important news items we have published in 2004 on PHP.net.
 </p>
 
-<hr />
+<hr>
 
 <h1>A Note on Security in PHP</h1>
 
@@ -26,7 +26,7 @@ site_header("News Archive - 2004", array("cache" => true));
  for anybody using PHP.
 </p>
 
-<hr />
+<hr>
 
 <h1>Function list suggestions available</h1>
 <p>
@@ -51,7 +51,7 @@ site_header("News Archive - 2004", array("cache" => true));
  the search page.
 </p>
 
-<hr />
+<hr>
 
 <h1>PHP 4.3.10 &amp; 5.0.3 released!</h1>
 <p>
@@ -70,7 +70,7 @@ site_header("News Archive - 2004", array("cache" => true));
  <a href="/ChangeLog-5.php#5.0.3">PHP 5 ChangeLog</a>.
 </p>
 
-<hr />
+<hr>
 
 <h1>Second Bulgarian PHP Conference</h1>
 <p>
@@ -86,7 +86,7 @@ site_header("News Archive - 2004", array("cache" => true));
  others.
 </p>
 
-<hr />
+<hr>
 
 <h1>International PHP Conference 2005 - Spring Edition (Amsterdam, May 2-4)</h1>
 <p>
@@ -103,7 +103,7 @@ site_header("News Archive - 2004", array("cache" => true));
  and PHP-GTK.
 </p>
 
-<hr />
+<hr>
 
 <?php news_image("http://nosoftwarepatents.com/", "90x40_3.jpg", "No Software Patents"); ?>
 
@@ -119,7 +119,7 @@ site_header("News Archive - 2004", array("cache" => true));
  very informative <a href="http://nosoftwarepatents.com">website</a>.
 </p>
 
-<hr />
+<hr>
 
 <?php news_image("http://www.zend.com/php5/contest/", "zendtech_logo.gif", "Zend Technologies"); ?>
 
@@ -141,7 +141,7 @@ site_header("News Archive - 2004", array("cache" => true));
  the code and see how the new features in PHP 5 should be used.
 </p>
 
-<hr />
+<hr>
 
 <?php news_image("http://www.phpquebec.com/modules/news/article.php?storyid=55", "conference_php_quebec.gif", "PHP Québec"); ?>
 <h1>PHP before Canadian government, in Ottawa, October 19th and 20th, 2004</h1>
@@ -155,7 +155,7 @@ site_header("News Archive - 2004", array("cache" => true));
  Come and meet us on the floor, booth 1610C.
 </p>
 
-<hr />
+<hr>
 
 <?php news_image("http://www.afup.org/forumphp/", "afup2004.jpg", "Forum PHP"); ?>
 
@@ -171,7 +171,7 @@ site_header("News Archive - 2004", array("cache" => true));
  (in French).
 </p>
 
-<hr />
+<hr>
 
 <?php news_image("/downloads.php#v5", "php-version5.gif", "PHP 5"); ?>
 <h1>PHP 5.0.2 released!</h1>
@@ -188,7 +188,7 @@ site_header("News Archive - 2004", array("cache" => true));
  <a href="/ChangeLog-5.php#5.0.2">ChangeLog</a>.
 </p>
 
-<hr />
+<hr>
 
 <?php news_image("/downloads.php#v4", "php-version4.gif", "PHP 4"); ?>
 <h1>PHP 4.3.9 released!</h1>
@@ -206,7 +206,7 @@ site_header("News Archive - 2004", array("cache" => true));
  <a href="/ChangeLog-4.php#4.3.9">ChangeLog</a>.
 </p>
 
-<hr />
+<hr>
 
 <?php news_image("http://mysqlcomconeurope.com", "MySQLcomcon_logo.gif", "MySQL"); ?>
 <h1>MySQL ComCon Europe</h1>
@@ -223,7 +223,7 @@ site_header("News Archive - 2004", array("cache" => true));
  <a href="http://mysqlcomconeurope.com">http://mysqlcomconeurope.com/</a>.
 </p>
 
-<hr />
+<hr>
 
 <h1>OSCOM.4 with Apache Track</h1>
 <p>
@@ -239,7 +239,7 @@ site_header("News Archive - 2004", array("cache" => true));
  now open</a>!
 </p>
 
-<hr />
+<hr>
 
 <h1>New Installation Instructions</h1>
 <p>
@@ -252,7 +252,7 @@ site_header("News Archive - 2004", array("cache" => true));
  files. This way upgrades and configuration changes become easier.
 </p>
 
-<hr />
+<hr>
 
 <?php news_image("/downloads.php#v5", "php-version5.gif", "PHP 5"); ?>
 <a name="5.0.1"></a>
@@ -269,7 +269,7 @@ site_header("News Archive - 2004", array("cache" => true));
  <a href="/ChangeLog-5.php#5.0.1">ChangeLog</a>.
 </p>
 
-<hr />
+<hr>
 
 <h1>PHP Tunisie Magazine</h1>
 <p>
@@ -285,7 +285,7 @@ site_header("News Archive - 2004", array("cache" => true));
  PHP Tunisie Magazine is edited by the Tunisian PHP Users Group.
 </p>
 
-<hr />
+<hr>
 
 <?php news_image("/downloads.php#v5", "php-version5.gif", "PHP 5"); ?>
 <a name="5.0.0"></a>
@@ -336,7 +336,7 @@ site_header("News Archive - 2004", array("cache" => true));
  <a href="/ChangeLog-5.php#5.0.0">ChangeLog</a>.
 </p>
 
-<hr />
+<hr>
 
 <?php news_image("/downloads.php#v4", "php-version4.gif", "PHP 4"); ?>
 
@@ -348,7 +348,7 @@ site_header("News Archive - 2004", array("cache" => true));
  4.3.7 release. All users of PHP are strongly encouraged to upgrade to PHP 4.3.8 as soon as possible.
 </p>
 
-<hr />
+<hr>
 
 <?php //news_image("http://www.phpconference.de/2003/index_en.php", "international_conference_2003.gif", "International PHP Conference"); ?>
 <h1>International PHP Conference 2004</h1>
@@ -369,7 +369,7 @@ site_header("News Archive - 2004", array("cache" => true));
  where PHP related OpenSource projects can present themselves for free.
 </p>
 
-<hr />
+<hr>
 
 <?php news_image("http://phparch.com/phpworks", "phpworks.png", "php|works"); ?>
 <h1>php|works - early-bird discount now in effect</h1>
@@ -399,7 +399,7 @@ site_header("News Archive - 2004", array("cache" => true));
  href="http://www.phparch.com/phpworks">php|works website</a>.
 </p>
 
-<hr />
+<hr>
 
 <?php news_image("http://lamparea.org/en", "lamparea.png", "Lamp Area"); ?>
 <h1>LAMP area at LinuxTag 2004 in Karlsruhe, Germany</h1>
@@ -424,7 +424,7 @@ site_header("News Archive - 2004", array("cache" => true));
  website.
 </p>
 
-<hr />
+<hr>
 
 <?php news_image("/downloads.php#5", "php-version5.gif", "PHP 5"); ?>
 <h1>PHP 5 Release Candidate 3 Released!</h1>
@@ -440,7 +440,7 @@ site_header("News Archive - 2004", array("cache" => true));
 <a href="/ChangeLog-5.php#5.0.0RC3">here</a>.
 </p>
 
-<hr />
+<hr>
 
 <?php news_image("http://www.zend.com/php5/contest/", "zendtech_logo.gif", "Zend Technologies"); ?>
 
@@ -465,7 +465,7 @@ site_header("News Archive - 2004", array("cache" => true));
  are available!
 </p>
 
-<hr />
+<hr>
 
 <?php news_image("/downloads.php#5", "php-version5.gif", "PHP 5"); ?>
 <h1>PHP 5 Release Candidate 2 Released!</h1>
@@ -506,7 +506,7 @@ site_header("News Archive - 2004", array("cache" => true));
  <a href="/ChangeLog-5.php#5.0.0RC2">ChangeLog</a>.
 </p>
 
-<hr />
+<hr>
 
 <h1>Second PHP Marathon announced</h1>
 <p>
@@ -518,7 +518,7 @@ site_header("News Archive - 2004", array("cache" => true));
  now feature a problem on PHP 5. Participation is free of charge.
 </p>
 
-<hr />
+<hr>
 
 <?php news_image("/downloads.php#5", "php-version5.gif", "PHP 5"); ?>
 <a name="5.0.0RC1"></a>
@@ -573,7 +573,7 @@ site_header("News Archive - 2004", array("cache" => true));
  <a href="/ChangeLog-5.php#5.0.0RC1">ChangeLog</a>.
 </p>
 
-<hr />
+<hr>
 
 <h1>Spanish PHP Mailing List Now at PHP.net</h1>
 <p>
@@ -585,7 +585,7 @@ site_header("News Archive - 2004", array("cache" => true));
  news server</a>.
 </p>
 
-<hr />
+<hr>
 
 <?php news_image("http://www.phpconference.com/", "intcon2004spring.png", "International PHP Conference 2004 - Spring Edition"); ?>
 
@@ -609,7 +609,7 @@ site_header("News Archive - 2004", array("cache" => true));
  Software &amp; Support.
 </p>
 
-<hr />
+<hr>
 
 <?php news_image("http://conf.phpquebec.org/", "conference_php_quebec.gif", "Conference PHP Quebec"); ?>
 
@@ -633,7 +633,7 @@ site_header("News Archive - 2004", array("cache" => true));
  <a href="http://conf.phpquebec.org/">conf.phpquebec.com</a>.
 </p>
 
-<hr />
+<hr>
 
 <?php news_image("http://www.pawscon.com/", "paws_small.jpg", "PHP and Web Standards Conference - UK 2004"); ?>
 

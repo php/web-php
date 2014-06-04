@@ -77,7 +77,7 @@ function random_bgcolor($min, $max)
  
  <tr>
   <td class="logo">
-   <?php print_image("logos/php-med-trans-light.gif", "PHP logo"); ?><br />
+   <?php print_image("logos/php-med-trans-light.gif", "PHP logo"); ?><br>
    (not exactly as shown)
   </td>
   <?php print_star(); ?>
@@ -94,7 +94,7 @@ function random_bgcolor($min, $max)
 
  <tr>
   <td class="logo">
-   <?php print_image("logos/php-med-trans-light.gif", "PHP logo"); ?><br />
+   <?php print_image("logos/php-med-trans-light.gif", "PHP logo"); ?><br>
    (not exactly as shown)
   </td>
   <td></td>
@@ -215,8 +215,8 @@ function random_bgcolor($min, $max)
 
  <tr>
   <td class="logo">
-   <?php print_image("logos/php-power-micro.png", "PHP Powered"); ?><br /><br />
-   <?php print_image("logos/php-power-micro2.png", "PHP Powered"); ?><br /><br />
+   <?php print_image("logos/php-power-micro.png", "PHP Powered"); ?><br><br>
+   <?php print_image("logos/php-power-micro2.png", "PHP Powered"); ?><br><br>
    <?php print_image("logos/php5-power-micro.png", "PHP 5 Powered"); ?>
   </td>
   <td></td>
@@ -281,7 +281,7 @@ function random_bgcolor($min, $max)
  
  <tr>
   <td class="logo">
-   <?php print_image("logos/php-icon-white.gif", "PHP icons"); ?><br />
+   <?php print_image("logos/php-icon-white.gif", "PHP icons"); ?><br>
    (not exactly as shown)
   </td>
   <td></td>
@@ -301,7 +301,7 @@ function random_bgcolor($min, $max)
 
  <tr>
   <td class="logo">
-   <?php print_image("logos/php_file_ico.gif", "PHP file icons"); ?><br />
+   <?php print_image("logos/php_file_ico.gif", "PHP file icons"); ?><br>
    (not exactly as shown)
   </td>
   <td></td>
@@ -318,7 +318,7 @@ function random_bgcolor($min, $max)
 
  <tr>
   <td class="logo">
-   <?php print_image("logos/php_script_ico.png", "PHP script icons"); ?><br />
+   <?php print_image("logos/php_script_ico.png", "PHP script icons"); ?><br>
    (not exactly as shown)
   </td>
   <td></td>
@@ -335,7 +335,7 @@ function random_bgcolor($min, $max)
 
  <tr>
   <td class="logo">
-   <?php print_image("logos/php_xpstyle_ico.gif", "Windows XP PHP file icons"); ?><br />
+   <?php print_image("logos/php_xpstyle_ico.gif", "Windows XP PHP file icons"); ?><br>
    (not exactly as shown)
   </td>
   <td></td>
