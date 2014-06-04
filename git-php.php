@@ -1,5 +1,4 @@
 <?php
-// $Id$ 
 $_SERVER['BASE_PAGE'] = 'git-php.php';
 include_once $_SERVER['DOCUMENT_ROOT'] . '/include/prepend.inc';
 include_once $_SERVER['DOCUMENT_ROOT'] . '/include/email-validation.inc';
@@ -107,7 +106,7 @@ if (count($_POST) && (!isset($_POST['purpose']) || !is_array($_POST['purpose']) 
 
     // Some error was found, while checking or submitting the data
     if ($error) {
-        echo "<p class=\"formerror\">$error</p>";
+        echo "<div class=\"warning\"><p>$error</p></div>";
     }
     else {
 ?>

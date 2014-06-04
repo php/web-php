@@ -280,7 +280,7 @@
                 return {
                     name: name,
                     local: backend.toTypeaheadArray(),
-                    header: "<h3>" + backend.label + "</h3>",
+                    header: '<h3 class="result-heading"><span class="collapsible"></span>' + backend.label + '</h3>',
                     limit: options.limit,
                     valueKey: "name",
                     engine: Hogan,
@@ -293,11 +293,28 @@
             var results = {};
 
             // Set up the typeahead and the various listeners we need.
-            $(element).typeahead(typeaheadOptions).on("typeahead:selected", function (_, item) {
-                /* If the user has selected an autocomplete item and hits
-                 * enter, we should take them straight to the page. */
+            var searchTypeahead = $(element).typeahead(typeaheadOptions);
+
+            // Delegate click events to result-heading collapsible icons, and trigger the accordion action
+            $('.tt-dropdown-menu').delegate('.result-heading .collapsible', 'click', function() {
+                var el = $(this), suggestions = el.parent().parent().find('.tt-suggestions');
+                suggestions.stop();
+                if(!el.hasClass('closed')) {
+                    suggestions.slideUp();
+                    el.addClass('closed');
+                } else {
+                    suggestions.slideDown();
+                    el.removeClass('closed');
+                }
+
+            });
+
+            // If the user has selected an autocomplete item and hits enter, we should take them straight to the page.
+            searchTypeahead.on("typeahead:selected", function (_, item) {
                 window.location = "/manual/" + options.language + "/" + item.id;
-            }).on("keyup", (function () {
+            });
+
+            searchTypeahead.on("keyup", (function () {
                 /* typeahead.js doesn't give us a reliable event for the
                  * dropdown entries having been updated, so we'll hook into the
                  * input element's keyup instead. The aim here is to put in
@@ -313,17 +330,25 @@
                  * when the user has typed something into the search box after
                  * typeahead.js has done its thing. */
                 return function () {
-                    // Grab what the user entered.
-                    var pattern = $(element).val();
-
                     // Add result totals to each section heading.
                     $.each(results, function (name, numResults) {
-                        var container = $(".tt-dataset-" + name, $(element).parent());
-                        var results = $("<span class='result-count' />").text(numResults);
+                        var container = $(".tt-dataset-" + name, $(element).parent()),
+                            resultHeading = container.find('.result-heading'),
+                            resultCount = container.find('.result-count');
 
-                        $("h3 .result-count", container).remove();
-                        $("h3", container).append(results);
+                        // Does a result count already exist in this resultHeading?
+                        if(resultCount.length == 0) {
+                            var results = $("<span class='result-count' />").text(numResults);
+                            resultHeading.append(results);
+                        } else {
+                            resultCount.text(numResults);
+                        }
+
+
                     });
+
+                    // Grab what the user entered.
+                    var pattern = $(element).val();
 
                     /* Add a global search option. Note that, as above, the
                      * link is only displayed if more than 2 characters have

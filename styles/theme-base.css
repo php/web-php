@@ -253,6 +253,7 @@ textarea {
   .hidden-tablet {
     display: none !important;
   }
+
 }
 @media (max-width: 767px) {
   .hidden-desktop {
@@ -268,6 +269,8 @@ textarea {
     display: none !important;
   }
 }
+
+
 @media (max-width: 979px) {
 }
 @media (min-width: 980px) {
@@ -1011,19 +1014,40 @@ fieldset {
     z-index: 1!important;
 }
 
-.tt-dropdown-menu h3 {
+.tt-dropdown-menu .result-heading {
     font-size:1.1rem;
-    background: rgb(136, 146, 191);
     border-bottom: 2px solid #4F5B93;
     color: #E2E4EF;
     text-shadow:0 -1px 0 rgba(0,0,0,.25);
     word-spacing:6px;
     margin: 0;
     padding: 0.1rem 0.3rem;
+    line-height: 2.5rem;
+    background-color: rgb(136, 146, 191);
+}
+
+.tt-dropdown-menu .result-heading .collapsible {
+    background: url(../images/search-sprites.png) no-repeat left center;
+    background-position: 0 -15px;
+    width: 30px;
+    height: 13px;
+    display: inline-block;
+}
+
+.tt-dropdown-menu .result-heading .collapsible:hover {
+    cursor: pointer;
+}
+
+.tt-dropdown-menu .result-heading .collapsible.closed {
+    background-position: 0 -2px;
+}
+
+.tt-dropdown-menu .result-heading::after {
+    border-bottom: none;
 }
 
 .tt-dropdown-menu .result-count {
-    display: block;
+    display: inline-block;
     float: right;
     opacity: 0.6;
     text-align: right;
@@ -1031,7 +1055,7 @@ fieldset {
 
 .tt-suggestions {
     color: #555;
-    overflow-y: scroll;
+    overflow-y: auto;
 	overflow-x: hidden;
     max-height: 210px;
 }
@@ -1057,21 +1081,31 @@ fieldset {
     overflow: hidden;
     text-overflow: ellipsis;
     font-size: 11pt;
+    line-height: 2rem;
+    font-weight: normal;
 }
 
 /* Class and other matches descriptions tend to be useless. */
 .tt-suggestion .description {
     display: block;
     font-size: 0.75rem;
-    line-height: 0.8rem;
+    line-height: 1rem;
     overflow: hidden;
     text-overflow: ellipsis;
 }
 
 
 /* Selected items. */
-.tt-is-under-cursor {
-    background: rgba(255, 255, 255, 0.1);
+.tt-suggestion.tt-is-under-cursor {
+    background-color: #4F5B93;
+}
+
+.tt-suggestion.tt-is-under-cursor h4 {
+    color: #FFF;
+}
+
+.tt-suggestion.tt-is-under-cursor .description {
+    color: #FFF;
 }
 
 /* We need to crunch down the dropdown on smaller displays. Firstly we'll drop
@@ -1483,8 +1517,7 @@ div.soft-deprecation-notice blockquote.sidebar {
     float: left;
   }
 
-  #intro .blurb,
-  #layout-content {
+  #intro .blurb, #layout-content {
     float:left;
     width:75%;
   }
@@ -1496,8 +1529,19 @@ div.soft-deprecation-notice blockquote.sidebar {
     margin-bottom: 0;
   }
 }
+
+
+
 @media (min-width: 768px) and (max-width: 979px) {
+    #intro .download, aside.tips, .navbar-search {
+        width: 30% !important;
+    }
+
+    #intro .blurb, #layout-content {
+        width: 70% !important;
+    }
 }
+
 @media (min-width: 1200px) {
   #intro .container,
   .navbar-inner,
@@ -1718,10 +1762,10 @@ aside.tips .panel .body {
   margin-top:1.5rem;
 }
 
-aside.tips .panel > a {
+aside.tips .panel .headline {
   display: block;
   border-bottom:0;
-  line-height:3rem;
+  line-height: 1.5rem;
   font-size:1.125rem;
   color:#E6E6E6;
   text-rendering: optimizeLegibility;
@@ -1778,6 +1822,10 @@ aside.tips div.inner {
 .newsentry header time {
   float:right;
   line-height:3rem;
+}
+
+.newsentry p {
+    line-height: 1.7rem;
 }
 
 .newsentry .newsimage a {

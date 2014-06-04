@@ -9,6 +9,11 @@
     text-shadow:0 1px 2px rgba(0,0,0,.5);
     font-size:1.125rem;
 }
+
+#intro ul a {
+    word-spacing: 0;
+}
+
 #intro .row .blurb p:first-child {
   margin-top:1.5rem;
 }
@@ -16,7 +21,6 @@
 #intro .row .download {
   display:table-cell;
   float:none;
-  vertical-align: middle;
   padding:0 1.5rem;
 }
 
@@ -38,8 +42,14 @@
   word-spacing:.25rem;
   margin-left:0;
 }
+
+#intro .dot {
+    display: inline-block;
+    width: 5px;
+    padding: 0 5px;
+}
+
 #intro .download {
-  text-align:center;
 }
 #intro .download a.notes {
     font-size:.75em;
@@ -56,6 +66,8 @@
 
 #intro .download a.download-link {
     color:#fff;
+    width: 50px;
+    display: inline-block;
 }
 
 #layout-content {
@@ -68,4 +80,44 @@
 
 p.archive {
 	text-align: right;
+}
+
+@media (min-width: 480px) and (max-width: 768px) {
+    #intro .download {
+        width: 35%;
+    }
+
+    #intro .blurb {
+        width: 65%;
+    }
+}
+
+@media (min-width: 768px) {
+    .navbar-search,
+    #intro .download,
+    #intro .background,
+    aside.tips,
+    .layout-menu {
+        width: 25%;
+    }
+
+    #intro .blurb, #layout-content {
+        width: 75%;
+    }
+}
+
+@media (min-width: 480px) and (max-width: 590px) {
+    #intro .dot {
+        display: none;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 784px) {
+    #intro .download, aside.tips, .navbar-search {
+        width: 30%;
+    }
+
+    #intro .blurb, #layout-content {
+        width:70%;
+    }
 }
