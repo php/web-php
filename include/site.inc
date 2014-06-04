@@ -229,7 +229,7 @@ function print_full_mirror_list($download_file = null, $direct_download = false)
 
         if (isset($groupped[$COUNTRY])) {
             print_mirror_box($COUNTRIES[$COUNTRY], $COUNTRY, $groupped[$COUNTRY], $download_file, $direct_download, true);
-            echo "<br />";
+            echo "<br>";
         }
     }
     foreach($groupped as $mirrorcode => $country) {

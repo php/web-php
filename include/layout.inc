@@ -29,7 +29,7 @@ function highlight_php($code, $return = FALSE)
     $highlighted = '<div class="phpcode">' . str_replace(
         array(
             '&nbsp;',
-            '<br />',
+            '<br>',
             '<font color="',        // for PHP 4
             '<span style="color: ', // from PHP 5.0.0RC1
             '</font>',
@@ -39,7 +39,7 @@ function highlight_php($code, $return = FALSE)
         ),
         array(
             ' ',
-            "<br />\n",
+            "<br>\n",
             '<span class="',
             '<span class="',
             '</span>',
@@ -72,12 +72,12 @@ function resize_image($img, $width = 1, $height = 1)
     // Return image with new width and height added
     return preg_replace(
         '!/?>$!',
-        sprintf(' height="%s" width="%s" />', $height, $width),
+        sprintf(' height="%s" width="%s">', $height, $width),
         $str
     );
 }
 
-// Return an <img /> tag for a given image file available on the server
+// Return an <img> tag for a given image file available on the server
 function make_image($file, $alt = FALSE, $align = FALSE, $extras = FALSE,
                     $dir = '/images', $border = 0, $addsize = TRUE)
 {
@@ -102,7 +102,7 @@ function make_image($file, $alt = FALSE, $align = FALSE, $extras = FALSE,
     }
 
     // Return with image built up
-    return sprintf('<img src="%s/%s" alt="%s"%s%s%s />',
+    return sprintf('<img src="%s/%s" alt="%s"%s%s%s>',
         $webdir,
         $file,
         ($alt    ? $alt : ''),
@@ -112,7 +112,7 @@ function make_image($file, $alt = FALSE, $align = FALSE, $extras = FALSE,
     );
 }
 
-// Print an <img /> tag out for a given file
+// Print an <img> tag out for a given file
 function print_image($file, $alt = FALSE, $align = FALSE, $extras = FALSE,
                      $dir = '/images', $border = 0)
 {
@@ -379,10 +379,10 @@ function display_event($event, $include_date = 1)
 <?php
 
     // Print long description
-    echo preg_replace("/\r?\n\r?\n/", "<br /><br />", trim(htmlentities($event['ldesc'],ENT_QUOTES | ENT_IGNORE, 'UTF-8')));
+    echo preg_replace("/\r?\n\r?\n/", "<br><br>", trim(htmlentities($event['ldesc'],ENT_QUOTES | ENT_IGNORE, 'UTF-8')));
     // If we have an URL, print it out
     if ($event['url']) {
-        echo '<br /><br /><b>URL:</b> ',
+        echo '<br><br><b>URL:</b> ',
              '<a href="', htmlentities($event['url'], ENT_QUOTES | ENT_IGNORE, 'UTF-8'), '">',
              htmlentities($event['url'], ENT_QUOTES | ENT_IGNORE, 'UTF-8'), '</a>';
     }
