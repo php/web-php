@@ -43,7 +43,7 @@ site_header('PHP Version 3 Documentation');
 </p>
 
 <dl>
- <dt><big>Changed</big></dt>
+ <dt><span style="font-size:1.2em">Changed</span></dt>
  <dd>
   <p>
    FTP configure option changed from <em>--with-ftp</em> to <em>--enable-ftp</em>
@@ -67,7 +67,7 @@ site_header('PHP Version 3 Documentation');
 </dl>
 
 <dl>
- <dt><big>Removed</big></dt>
+ <dt><span style="font-size:1.2em">Removed</span></dt>
  <dd>
   <p>
    <em>--with-imsp[=DIR]</em> includes IMSP support (DIR is IMSP's include dir and libimsp.a dir).
@@ -97,7 +97,7 @@ site_header('PHP Version 3 Documentation');
 <h2><a name="changed_behaviour" id="changed_bahaviour">Changed Behaviour</a></h2>
 
 <dl>
- <dt><big>Return values</big></dt>
+ <dt><span style="font-size:1.2em">Return values</span></dt>
  <dd>
   <p>
    unset() returns 1.
@@ -118,7 +118,7 @@ site_header('PHP Version 3 Documentation');
 </dl>
 
 <dl>
- <dt><big>Function parameters</big></dt>
+ <dt><span style="font-size:1.2em">Function parameters</span></dt>
  <dd>
   <p>
    gettype() has a 'user function' return value.
@@ -142,7 +142,7 @@ site_header('PHP Version 3 Documentation');
 </dl>
 
 <dl>
- <dt><big>Other</big></dt>
+ <dt><span style="font-size:1.2em">Other</span></dt>
  <dd>
   <p>
    Variables are always assigned by value, as there are no references.

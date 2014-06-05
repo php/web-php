@@ -202,7 +202,7 @@ when it is bad, it is better than nothing.
   Instructions</a></h2>
 
   <dl>
-    <dt><big>Before You Begin</big></dt>
+    <dt><span style="font-size:1.2em">Before You Begin</span></dt>
 
     <dd>
       <p>If you have absolutely no Unix experience, you may want to
@@ -215,8 +215,8 @@ when it is bad, it is better than nothing.
       knows the particulars of the destination system well.</p>
     </dd>
 
-    <dt><big>Things You Need To Know Before
-    Installing</big></dt>
+    <dt><span style="font-size:1.2em">Things You Need To Know Before
+    Installing</span></dt>
 
     <dd>
       <p>- Can you run both get and post method cgi programs on
@@ -263,7 +263,7 @@ when it is bad, it is better than nothing.
       will need to know the Apache src code directory location.</p>
     </dd>
 
-    <dt><big>Installation Steps</big></dt>
+    <dt><span style="font-size:1.2em">Installation Steps</span></dt>
 
     <dd>
       <p><em><strong>Step 1.</strong></em></p>
@@ -347,7 +347,7 @@ when it is bad, it is better than nothing.
       configuring the PHP Module.</p>
     </dd>
 
-    <dt><big>Testing the software</big></dt>
+    <dt><span style="font-size:1.2em">Testing the software</span></dt>
 
     <dd>
       <p>Once installed you can test to see if your executable
@@ -364,7 +364,7 @@ when it is bad, it is better than nothing.
       the file and see if it gets parsed.</p>
     </dd>
 
-    <dt><big>Using the software</big></dt>
+    <dt><span style="font-size:1.2em">Using the software</span></dt>
 
     <dd>
       <p>To actually use the software on an existing HTML file, you
@@ -2969,13 +2969,13 @@ nibble, like 0?755:
   <h3>Alphabetical List of Functions</h3>
 
   <dl>
-    <dt><a name="abs" id="abs"><big>Abs(arg)</big></a></dt>
+    <dt><a name="abs" id="abs"><span style="font-size:1.2em">Abs(arg)</span></a></dt>
 
     <dd>
       <p>Abs returns the absolute value of arg.</p>
     </dd>
 
-    <dt><a name="ada_close" id="ada_close"><big>Ada_Close(connection_id)</big></a></dt>
+    <dt><a name="ada_close" id="ada_close"><span style="font-size:1.2em">Ada_Close(connection_id)</span></a></dt>
 
     <dd>
       <p>Ada_Close will close down the connection to the Adabas
@@ -2985,8 +2985,8 @@ nibble, like 0?755:
       enabled in PHP.</p>
     </dd>
 
-    <dt><a name="ada_connect" id="ada_connect"><big>$connection = Ada_Connect(data source name, username,
-    password)</big></a></dt>
+    <dt><a name="ada_connect" id="ada_connect"><span style="font-size:1.2em">$connection = Ada_Connect(data source name, username,
+    password)</span></a></dt>
 
     <dd>
       <p>Ada_Connect opens a connection to a Adabas server. Each of
@@ -3003,8 +3003,8 @@ nibble, like 0?755:
       enabled in PHP.</p>
     </dd>
 
-    <dt><a name="ada_exec" id="ada_exec"><big>$result =
-    Ada_Exec(connection_id, query_string)</big></a></dt>
+    <dt><a name="ada_exec" id="ada_exec"><span style="font-size:1.2em">$result =
+    Ada_Exec(connection_id, query_string)</span></a></dt>
 
     <dd>
       <p>Ada_Exec will send an SQL statement to the Adabas server
@@ -3027,7 +3027,7 @@ nibble, like 0?755:
       enabled in PHP.</p>
     </dd>
 
-    <dt><a name="ada_fetchrow" id="ada_fetchrow"><big>Ada_FetchRow(result_id [,row_number])</big></a></dt>
+    <dt><a name="ada_fetchrow" id="ada_fetchrow"><span style="font-size:1.2em">Ada_FetchRow(result_id [,row_number])</span></a></dt>
 
     <dd>
       <p>Ada_FetchRow fetches a row of the data that was returned
@@ -3049,7 +3049,7 @@ nibble, like 0?755:
       enabled in PHP.</p>
     </dd>
 
-    <dt><a name="ada_fieldname" id="ada_fieldname"><big>Ada_FieldName(result_id, field_number)</big></a></dt>
+    <dt><a name="ada_fieldname" id="ada_fieldname"><span style="font-size:1.2em">Ada_FieldName(result_id, field_number)</span></a></dt>
 
     <dd>
       <p>Ada_FieldName will return the name of the field occupying
@@ -3060,7 +3060,7 @@ nibble, like 0?755:
       enabled in PHP.</p>
     </dd>
 
-    <dt><a name="ada_fieldnum" id="ada_fieldnum"><big>Ada_FieldNum(result_id, field_name)</big></a></dt>
+    <dt><a name="ada_fieldnum" id="ada_fieldnum"><span style="font-size:1.2em">Ada_FieldNum(result_id, field_name)</span></a></dt>
 
     <dd>
       <p>Ada_FieldNum will return the number of the column slot
@@ -3072,8 +3072,8 @@ nibble, like 0?755:
       enabled in PHP.</p>
     </dd>
 
-    <dt><a name="ada_fieldtype" id="ada_fieldtype"><big>Ada_FieldType(result_id,
-    field_name|field_number)</big></a></dt>
+    <dt><a name="ada_fieldtype" id="ada_fieldtype"><span style="font-size:1.2em">Ada_FieldType(result_id,
+    field_name|field_number)</span></a></dt>
 
     <dd>
       <p>Ada_FieldType will return the SQL type of the field
@@ -3084,7 +3084,7 @@ nibble, like 0?755:
       enabled in PHP.</p>
     </dd>
 
-    <dt><a name="ada_freeresult" id="ada_freeresult"><big>Ada_FreeResult(result_id)</big></a></dt>
+    <dt><a name="ada_freeresult" id="ada_freeresult"><span style="font-size:1.2em">Ada_FreeResult(result_id)</span></a></dt>
 
     <dd>
       <p>Ada_FreeResult only needs to be called if you are worried
@@ -3099,7 +3099,7 @@ nibble, like 0?755:
       enabled in PHP.</p>
     </dd>
 
-    <dt><a name="ada_numfields" id="ada_numfields"><big>Ada_NumFields(result_id)</big></a></dt>
+    <dt><a name="ada_numfields" id="ada_numfields"><span style="font-size:1.2em">Ada_NumFields(result_id)</span></a></dt>
 
     <dd>
       <p>Ada_NumFields will return the number of fields (columns)
@@ -3111,7 +3111,7 @@ nibble, like 0?755:
       enabled in PHP.</p>
     </dd>
 
-    <dt><a name="ada_numrows" id="ada_numrows"><big>Ada_NumRows(result_id)</big></a></dt>
+    <dt><a name="ada_numrows" id="ada_numrows"><span style="font-size:1.2em">Ada_NumRows(result_id)</span></a></dt>
 
     <dd>
       <p>Ada_NumRows will return the number of rows in a Adabas
@@ -3125,7 +3125,7 @@ nibble, like 0?755:
       enabled in PHP.</p>
     </dd>
 
-    <dt><a name="ada_result" id="ada_result"><big>Ada_Result(result_id, field name | index)</big></a></dt>
+    <dt><a name="ada_result" id="ada_result"><span style="font-size:1.2em">Ada_Result(result_id, field name | index)</span></a></dt>
 
     <dd>
       <p>Ada_Result will return values from a result identifier
@@ -3142,7 +3142,7 @@ nibble, like 0?755:
       enabled in PHP.</p>
     </dd>
 
-    <dt><a name="ada_resultall" id="ada_resultall"><big>Ada_ResultAll(result_id [,format])</big></a></dt>
+    <dt><a name="ada_resultall" id="ada_resultall"><span style="font-size:1.2em">Ada_ResultAll(result_id [,format])</span></a></dt>
 
     <dd>
       <p>Ada_ResultAll will print all rows from a result identifier
@@ -3158,7 +3158,7 @@ nibble, like 0?755:
       enabled in PHP.</p>
     </dd>
 
-    <dt><a name="addslashes" id="addslashes"><big>AddSlashes(arg)</big></a></dt>
+    <dt><a name="addslashes" id="addslashes"><span style="font-size:1.2em">AddSlashes(arg)</span></a></dt>
 
     <dd>
       <p>Escapes any $ \ or ' (if MAGIC_QUOTES is set) with a
@@ -3166,7 +3166,7 @@ nibble, like 0?755:
       "#stripslashes">StripSlashes()</a>.</p>
     </dd>
 
-    <dt><a name="asort" id="asort"><big>ASort(array)</big></a></dt>
+    <dt><a name="asort" id="asort"><span style="font-size:1.2em">ASort(array)</span></a></dt>
 
     <dd>
       <p>Sort is used to sort a PHP associative array in ascending
@@ -3181,7 +3181,7 @@ nibble, like 0?755:
       <a href="#sort">Sort()</a> function.</p>
     </dd>
 
-    <dt><a name="bindec" id="bindec"><big>BinDec(binary_string)</big></a></dt>
+    <dt><a name="bindec" id="bindec"><span style="font-size:1.2em">BinDec(binary_string)</span></a></dt>
 
     <dd>
       <p>BinDec returns the decimal equivalent of the binary number
@@ -3191,7 +3191,7 @@ nibble, like 0?755:
       function.</p>
     </dd>
 
-    <dt><a name="ceil" id="ceil"><big>Ceil(value)</big></a></dt>
+    <dt><a name="ceil" id="ceil"><span style="font-size:1.2em">Ceil(value)</span></a></dt>
 
     <dd>
       <p>Ceil() rounds a floating point value up to the next
@@ -3202,20 +3202,20 @@ nibble, like 0?755:
       See also <a href="#floor">Floor()</a>.</p>
     </dd>
 
-    <dt><a name="chdir" id="chdir"><big>ChDir(dir)</big></a></dt>
+    <dt><a name="chdir" id="chdir"><span style="font-size:1.2em">ChDir(dir)</span></a></dt>
 
     <dd>
       <p>ChDir changes the current working directory to the
       directory specified in the argument.</p>
     </dd>
 
-    <dt><a name="chgrp" id="chgrp"><big>ChGrp(file,group)</big></a></dt>
+    <dt><a name="chgrp" id="chgrp"><span style="font-size:1.2em">ChGrp(file,group)</span></a></dt>
 
     <dd>
       <p>ChGrp changes the group id of the specified file.</p>
     </dd>
 
-    <dt><a name="chmod" id="chmod"><big>ChMod(file,perms)</big></a></dt>
+    <dt><a name="chmod" id="chmod"><span style="font-size:1.2em">ChMod(file,perms)</span></a></dt>
 
     <dd>
       <p>ChMod changes the file permissions of the specified file.
@@ -3223,7 +3223,7 @@ nibble, like 0?755:
       "#octal">octal</a> notation. eg. ChMod($filename,0755)</p>
     </dd>
 
-    <dt><a name="chown" id="chown"><big>ChOwn(file,owner)</big></a></dt>
+    <dt><a name="chown" id="chown"><span style="font-size:1.2em">ChOwn(file,owner)</span></a></dt>
 
     <dd>
       <p>ChOwn changes the specified file to be owned by the
@@ -3232,21 +3232,21 @@ nibble, like 0?755:
       idea).</p>
     </dd>
 
-    <dt><a name="chop" id="chop"><big>Chop(string)</big></a></dt>
+    <dt><a name="chop" id="chop"><span style="font-size:1.2em">Chop(string)</span></a></dt>
 
     <dd>
       <p>Chop removes all trailing whitespaces including new-lines,
       tabs and spaces and returns the new string.</p>
     </dd>
 
-    <dt><a name="chr" id="chr"><big>Chr(arg)</big></a></dt>
+    <dt><a name="chr" id="chr"><span style="font-size:1.2em">Chr(arg)</span></a></dt>
 
     <dd>
       <p>Chr returns the ASCII character represented by the integer
       argument.</p>
     </dd>
 
-    <dt><a name="clearstack" id="clearstack"><big>ClearStack()</big></a></dt>
+    <dt><a name="clearstack" id="clearstack"><span style="font-size:1.2em">ClearStack()</span></a></dt>
 
     <dd>
       <p>The ClearStack() function is a hack/workaround for a
@@ -3266,8 +3266,8 @@ nibble, like 0?755:
       use this temporary variable in whatever context you need.</p>
     </dd>
 
-    <dt><a name="clearstatcache" id="clearstatcache"><big>
-    ClearStatCache()</big></a></dt>
+    <dt><a name="clearstatcache" id="clearstatcache"><span style="font-size:1.2em">
+    ClearStatCache()</span></a></dt>
 
     <dd>
       <p>The stat() system call is normally an expensive operation
@@ -3282,16 +3282,16 @@ nibble, like 0?755:
       the cached stat() result.</p>
     </dd>
 
-    <dt><a name="closedir" id="closedir"><big>
-    closeDir()</big></a></dt>
+    <dt><a name="closedir" id="closedir"><span style="font-size:1.2em">
+    closeDir()</span></a></dt>
 
     <dd>
       <p>closeDir closes a directory opened using the <a href=
       "#opendir">openDir</a> function.</p>
     </dd>
 
-    <dt><a name="closelog" id="closelog"><big>
-    CloseLog()</big></a></dt>
+    <dt><a name="closelog" id="closelog"><span style="font-size:1.2em">
+    CloseLog()</span></a></dt>
 
     <dd>
       <p>CloseLog() closes the descriptor Syslog() uses to write to
@@ -3301,16 +3301,16 @@ nibble, like 0?755:
       "#initsyslog">InitSyslog()</a>.</p>
     </dd>
 
-    <dt><a name="cos" id="cos"><big>
-    Cos(arg)</big></a></dt>
+    <dt><a name="cos" id="cos"><span style="font-size:1.2em">
+    Cos(arg)</span></a></dt>
 
     <dd>
       <p>Cos returns the cosine of arg in radians. See also
       <a href="#sin">Sin()</a> and <a href="#tan">Tan()</a></p>
     </dd>
 
-    <dt><a name="count" id="count"><big>
-    Count(array)</big></a></dt>
+    <dt><a name="count" id="count"><span style="font-size:1.2em">
+    Count(array)</span></a></dt>
 
     <dd>
       <p>Count returns the number of items in an array variable. If
@@ -3320,8 +3320,8 @@ nibble, like 0?755:
       will be 0.</p>
     </dd>
 
-    <dt><a name="crypt" id="crypt"><big>
-    Crypt(string,[salt])</big></a></dt>
+    <dt><a name="crypt" id="crypt"><span style="font-size:1.2em">
+    Crypt(string,[salt])</span></a></dt>
 
     <dd>
       <p>Crypt will encrypt a string using the standard Unix DES
@@ -3335,8 +3335,8 @@ nibble, like 0?755:
       non-US site.</p>
     </dd>
 
-    <dt><a name="date" id="date"><big>
-    Date(format,time)</big></a></dt>
+    <dt><a name="date" id="date"><span style="font-size:1.2em">
+    Date(format,time)</span></a></dt>
 
     <dd>
       <p>The Date function is used to display times and dates in
@@ -3387,16 +3387,16 @@ nibble, like 0?755:
       <p>See also the <a href="#mktime">MkTime()</a> function.</p>
     </dd>
 
-    <dt><a name="dblist" id="dblist"><big>
-    dbList()</big></a></dt>
+    <dt><a name="dblist" id="dblist"><span style="font-size:1.2em">
+    dbList()</span></a></dt>
 
     <dd>
       <p>dbList outputs information about the db support compiled
       into PHP.</p>
     </dd>
 
-    <dt><a name="dbmclose" id="dbmclose"><big>
-    dbmClose(filename)</big></a></dt>
+    <dt><a name="dbmclose" id="dbmclose"><span style="font-size:1.2em">
+    dbmClose(filename)</span></a></dt>
 
     <dd>
       <p>dbmClose simply closes the specified dbm file. It will
@@ -3404,32 +3404,32 @@ nibble, like 0?755:
       dbm files that have been opened.</p>
     </dd>
 
-    <dt><a name="dbmdelete" id="dbmdelete"><big>
-    dbmDelete(filename,key)</big></a></dt>
+    <dt><a name="dbmdelete" id="dbmdelete"><span style="font-size:1.2em">
+    dbmDelete(filename,key)</span></a></dt>
 
     <dd>
       <p>dbmDelete will delete the key/content pair specified by
       the given key argument.</p>
     </dd>
 
-    <dt><a name="dbmexists" id="dbmexists"><big>
-    dbmExists(filename,key)</big></a></dt>
+    <dt><a name="dbmexists" id="dbmexists"><span style="font-size:1.2em">
+    dbmExists(filename,key)</span></a></dt>
 
     <dd>
       <p>dbmExists will return 1 if the key exists and 0
       otherwise.</p>
     </dd>
 
-    <dt><a name="dbmfetch" id="dbmfetch"><big>
-    dbmFetch(filename,key)</big></a></dt>
+    <dt><a name="dbmfetch" id="dbmfetch"><span style="font-size:1.2em">
+    dbmFetch(filename,key)</span></a></dt>
 
     <dd>
       <p>dbmFetch will return the content string associated with
       the given key.</p>
     </dd>
 
-    <dt><a name="dbmfirstkey" id="dbmfirstkey"><big>
-    dbmFirstKey(filename)</big></a></dt>
+    <dt><a name="dbmfirstkey" id="dbmfirstkey"><span style="font-size:1.2em">
+    dbmFirstKey(filename)</span></a></dt>
 
     <dd>
       <p>dbmFirstKey returns the first key in the dbm file. Note
@@ -3440,16 +3440,16 @@ nibble, like 0?755:
       necessary.</p>
     </dd>
 
-    <dt><a name="dbminsert" id="dbminsert"><big>
-    dbmInsert(filename,key,content)</big></a></dt>
+    <dt><a name="dbminsert" id="dbminsert"><span style="font-size:1.2em">
+    dbmInsert(filename,key,content)</span></a></dt>
 
     <dd>
       <p>dbmInsert inserts a new key/content data pair into a dbm
       file. If the key already exists, the insert will fail.</p>
     </dd>
 
-    <dt><a name="dbmnextkey" id="dbmnextkey"><big>
-    dbmNextKey(filename,key)</big></a></dt>
+    <dt><a name="dbmnextkey" id="dbmnextkey"><span style="font-size:1.2em">
+    dbmNextKey(filename,key)</span></a></dt>
 
     <dd>
       <p>dbmNextKey returns the next key after the specified key.
@@ -3458,8 +3458,8 @@ nibble, like 0?755:
       possible to visit every key/content pair in the dbm file.</p>
     </dd>
 
-    <dt><a name="dbmopen" id="dbmopen"><big>
-    dbmOpen(filename,mode)</big></a></dt>
+    <dt><a name="dbmopen" id="dbmopen"><span style="font-size:1.2em">
+    dbmOpen(filename,mode)</span></a></dt>
 
     <dd>
       <p>dbmOpen() opens a dbm file. The first argument is the
@@ -3480,8 +3480,8 @@ nibble, like 0?755:
       "ftp://prep.ai.mit.edu/pub/gnu">ftp://prep.ai.mit.edu/pub/gnu</a>.</p>
     </dd>
 
-    <dt><a name="dbmreplace" id="dbmreplace"><big>
-    dbmReplace(filename,key,content)</big></a></dt>
+    <dt><a name="dbmreplace" id="dbmreplace"><span style="font-size:1.2em">
+    dbmReplace(filename,key,content)</span></a></dt>
 
     <dd>
       <p>dbmReplace is similar to the <strong>dbminsert()</strong>
@@ -3490,8 +3490,8 @@ nibble, like 0?755:
       new.</p>
     </dd>
 
-    <dt><a name="decbin" id="decbin"><big>
-    DecBin(number)</big></a></dt>
+    <dt><a name="decbin" id="decbin"><span style="font-size:1.2em">
+    DecBin(number)</span></a></dt>
 
     <dd>
       <p>DecBin returns a string containing a binary representation
@@ -3500,24 +3500,24 @@ nibble, like 0?755:
       the <a href="#bindec">BinDec()</a> function.</p>
     </dd>
 
-    <dt><a name="dechex" id="dechex"><big>
-    DecHex(number)</big></a></dt>
+    <dt><a name="dechex" id="dechex"><span style="font-size:1.2em">
+    DecHex(number)</span></a></dt>
 
     <dd>
       <p>DecHex converts a decimal number to a hexadecimal string.
       See also the <a href="#hexdec">HexDec()</a> function.</p>
     </dd>
 
-    <dt><a name="decoct" id="decoct"><big>
-    DecOct(number)</big></a></dt>
+    <dt><a name="decoct" id="decoct"><span style="font-size:1.2em">
+    DecOct(number)</span></a></dt>
 
     <dd>
       <p>DecOct converts a decimal number to an octal number. See
       also <a href="#octdec">OctDec()</a>.</p>
     </dd>
 
-    <dt><a name="doubleval" id="doubleval"><big>
-    doubleval(variable)</big></a></dt>
+    <dt><a name="doubleval" id="doubleval"><span style="font-size:1.2em">
+    doubleval(variable)</span></a></dt>
 
     <dd>
       <p>doubleval returns the double (floating point) value of the
@@ -3525,9 +3525,9 @@ nibble, like 0?755:
       <a href="#intval">intval()</a> functions.</p>
     </dd>
 
-    <dt><a name="echo" id="echo"><big>Echo
+    <dt><a name="echo" id="echo"><span style="font-size:1.2em">Echo
     [format_string] expression [, expression
-    [,...]]</big></a></dt>
+    [,...]]</span></a></dt>
 
     <dd>
       <p>Echo is not a function. ie. you do not put brackets around
@@ -3642,8 +3642,8 @@ nibble, like 0?755:
       </blockquote>
     </dd>
 
-    <dt><a name="end" id="end"><big>
-    End(variable)</big></a></dt>
+    <dt><a name="end" id="end"><span style="font-size:1.2em">
+    End(variable)</span></a></dt>
 
     <dd>
       <p>End moves the internal array pointer for the given
@@ -3668,8 +3668,8 @@ nibble, like 0?755:
 </pre>
     </dd>
 
-    <dt><a name="ereg" id="ereg"><big>
-    ereg(expr,arg[,regs])</big></a></dt>
+    <dt><a name="ereg" id="ereg"><span style="font-size:1.2em">
+    ereg(expr,arg[,regs])</span></a></dt>
 
     <dd>
       <p>ereg returns non-zero if the regular expression is matched
@@ -3686,8 +3686,8 @@ nibble, like 0?755:
       expression section</a> of this document.</p>
     </dd>
 
-    <dt><a name="eregi" id="eregi"><big>
-    eregi(expr,arg[,regs])</big></a></dt>
+    <dt><a name="eregi" id="eregi"><span style="font-size:1.2em">
+    eregi(expr,arg[,regs])</span></a></dt>
 
     <dd>
       <p>eregi is identical to the <a href="#ereg">ereg()</a>
@@ -3695,8 +3695,8 @@ nibble, like 0?755:
       applied such that upper/lower case is ignored.</p>
     </dd>
 
-    <dt><a name="ereg_replace" id="ereg_replace"><big>
-    ereg_replace(expr,replace,arg)</big></a></dt>
+    <dt><a name="ereg_replace" id="ereg_replace"><span style="font-size:1.2em">
+    ereg_replace(expr,replace,arg)</span></a></dt>
 
     <dd>
       <p>ereg_Replace scans the entire argument string and replaces
@@ -3710,8 +3710,8 @@ nibble, like 0?755:
       section</a> of this document.</p>
     </dd>
 
-    <dt><a name="eregi_replace" id="eregi_replace"><big>
-    eregi_replace(expr,replace,arg)</big></a></dt>
+    <dt><a name="eregi_replace" id="eregi_replace"><span style="font-size:1.2em">
+    eregi_replace(expr,replace,arg)</span></a></dt>
 
     <dd>
       <p>eregi_replace is identical to the <a href=
@@ -3720,8 +3720,8 @@ nibble, like 0?755:
       upper/lower case is ignored.</p>
     </dd>
 
-    <dt><a name="escapeshellcmd" id="escapeshellcmd"><big>
-    EscapeShellCmd(string)</big></a></dt>
+    <dt><a name="escapeshellcmd" id="escapeshellcmd"><span style="font-size:1.2em">
+    EscapeShellCmd(string)</span></a></dt>
 
     <dd>
       <p>EscapeShellCmd escapes any characters in a string that
@@ -3736,8 +3736,8 @@ nibble, like 0?755:
 </pre>
     </dd>
 
-    <dt><a name="eval" id="eval"><big>
-    Eval(string)</big></a></dt>
+    <dt><a name="eval" id="eval"><span style="font-size:1.2em">
+    Eval(string)</span></a></dt>
 
     <dd>
       <p>Eval takes the contents of the string argument and treats
@@ -3758,9 +3758,9 @@ nibble, like 0?755:
 </pre>
     </dd>
 
-    <dt><a name="exec" id="exec"><big>
+    <dt><a name="exec" id="exec"><span style="font-size:1.2em">
     Exec(command_string [, array
-    [,return_var]])</big></a></dt>
+    [,return_var]])</span></a></dt>
 
     <dd>
       <p>Exec executes the given unix command, however it does not
@@ -3785,24 +3785,24 @@ nibble, like 0?755:
       function.</p>
     </dd>
 
-    <dt><a name="exit" id="exit"><big>
-    Exit</big></a></dt>
+    <dt><a name="exit" id="exit"><span style="font-size:1.2em">
+    Exit</span></a></dt>
 
     <dd>
       <p>The Exit command is used to terminate parsing right away
       as soon as this tag is parsed.</p>
     </dd>
 
-    <dt><a name="exp" id="exp"><big>
-    Exp(arg)</big></a></dt>
+    <dt><a name="exp" id="exp"><span style="font-size:1.2em">
+    Exp(arg)</span></a></dt>
 
     <dd>
       <p>Exp returns e raised to the power of arg. See also
       <a href="#pow">pow()</a></p>
     </dd>
 
-    <dt><a name="fclose" id="fclose"><big>
-    fclose($fd)</big></a></dt>
+    <dt><a name="fclose" id="fclose"><span style="font-size:1.2em">
+    fclose($fd)</span></a></dt>
 
     <dd>
       <p>fclose() closes a file opened by <a href=
@@ -3810,16 +3810,16 @@ nibble, like 0?755:
       returned by the fopen() call.</p>
     </dd>
 
-    <dt><a name="feof" id="feof"><big>
-    feof($fd)</big></a></dt>
+    <dt><a name="feof" id="feof"><span style="font-size:1.2em">
+    feof($fd)</span></a></dt>
 
     <dd>
       <p>Feof returns true if the file referred to by the file
       pointer index argument has hit end-of-file.</p>
     </dd>
 
-    <dt><a name="fgets" id="fgets"><big>
-    fgets($fd,bytes)</big></a></dt>
+    <dt><a name="fgets" id="fgets"><span style="font-size:1.2em">
+    fgets($fd,bytes)</span></a></dt>
 
     <dd>
       <p>fgets() reads a line from a file opened by <a href=
@@ -3830,8 +3830,8 @@ nibble, like 0?755:
       also <a href="#fputs">fputs()</a>.</p>
     </dd>
 
-    <dt><a name="fgetss" id="fgetss"><big>
-    fgetss($fd,bytes)</big></a></dt>
+    <dt><a name="fgetss" id="fgetss"><span style="font-size:1.2em">
+    fgetss($fd,bytes)</span></a></dt>
 
     <dd>
       <p>Identical to the fgets() function, except this one tries
@@ -3839,8 +3839,8 @@ nibble, like 0?755:
       reading the file.</p>
     </dd>
 
-    <dt><a name="file" id="file"><big>$array =
-    File(filename)</big></a></dt>
+    <dt><a name="file" id="file"><span style="font-size:1.2em">$array =
+    File(filename)</span></a></dt>
 
     <dd>
       <p>File reads the entire file and returns an array with each
@@ -3848,8 +3848,8 @@ nibble, like 0?755:
       array index <strong>0</strong>.</p>
     </dd>
 
-    <dt><a name="fileatime" id="fileatime"><big>
-    fileAtime(filename)</big></a></dt>
+    <dt><a name="fileatime" id="fileatime"><span style="font-size:1.2em">
+    fileAtime(filename)</span></a></dt>
 
     <dd>
       <p>fileAtime returns the time of last data access. If the
@@ -3861,8 +3861,8 @@ nibble, like 0?755:
       called before the call to the file* function.</p>
     </dd>
 
-    <dt><a name="filectime" id="filectime"><big>
-    fileCtime(filename)</big></a></dt>
+    <dt><a name="filectime" id="filectime"><span style="font-size:1.2em">
+    fileCtime(filename)</span></a></dt>
 
     <dd>
       <p>fileCtime returns the time of last status change. If the
@@ -3874,8 +3874,8 @@ nibble, like 0?755:
       called before the call to the file* function.</p>
     </dd>
 
-    <dt><a name="filegroup" id="filegroup"><big>
-    fileGroup(filename)</big></a></dt>
+    <dt><a name="filegroup" id="filegroup"><span style="font-size:1.2em">
+    fileGroup(filename)</span></a></dt>
 
     <dd>
       <p>fileGroup returns the group id of the owner of the file.
@@ -3887,8 +3887,8 @@ nibble, like 0?755:
       should be called before the call to the file* function.</p>
     </dd>
 
-    <dt><a name="fileinode" id="fileinode"><big>
-    fileInode(filename)</big></a></dt>
+    <dt><a name="fileinode" id="fileinode"><span style="font-size:1.2em">
+    fileInode(filename)</span></a></dt>
 
     <dd>
       <p>fileInode returns the file's inode. If the file does not
@@ -3900,8 +3900,8 @@ nibble, like 0?755:
       before the call to the file* function.</p>
     </dd>
 
-    <dt><a name="filemtime" id="filemtime"><big>
-    fileMtime(filename)</big></a></dt>
+    <dt><a name="filemtime" id="filemtime"><span style="font-size:1.2em">
+    fileMtime(filename)</span></a></dt>
 
     <dd>
       <p>fileMtime returns the time of last data modification. If
@@ -3913,8 +3913,8 @@ nibble, like 0?755:
       called before the call to the file* function.</p>
     </dd>
 
-    <dt><a name="fileowner" id="fileowner"><big>
-    fileOwner(filename)</big></a></dt>
+    <dt><a name="fileowner" id="fileowner"><span style="font-size:1.2em">
+    fileOwner(filename)</span></a></dt>
 
     <dd>
       <p>fileOwner returns the uid of the owner of the file. If the
@@ -3926,8 +3926,8 @@ nibble, like 0?755:
       called before the call to the file* function.</p>
     </dd>
 
-    <dt><a name="fileperms" id="fileperms"><big>
-    filePerms(filename)</big></a></dt>
+    <dt><a name="fileperms" id="fileperms"><span style="font-size:1.2em">
+    filePerms(filename)</span></a></dt>
 
     <dd>
       <p>filePerms returns the permission bits of the file. This is
@@ -3940,8 +3940,8 @@ nibble, like 0?755:
       called before the call to the file* function.</p>
     </dd>
 
-    <dt><a name="filesize" id="filesize"><big>
-    fileSize(filename)</big></a></dt>
+    <dt><a name="filesize" id="filesize"><span style="font-size:1.2em">
+    fileSize(filename)</span></a></dt>
 
     <dd>
       <p>fileSize returns the size of the file in bytes. If the
@@ -3953,8 +3953,8 @@ nibble, like 0?755:
       called before the call to the file* function.</p>
     </dd>
 
-    <dt><a name="filetype" id="filetype"><big>
-    fileType(filename)</big></a></dt>
+    <dt><a name="filetype" id="filetype"><span style="font-size:1.2em">
+    fileType(filename)</span></a></dt>
 
     <dd>
       <p>fileType returns the type of the file. The return values
@@ -3964,8 +3964,8 @@ nibble, like 0?755:
       respectively.</p>
     </dd>
 
-    <dt><a name="floor" id="floor"><big>
-    Floor(value)</big></a></dt>
+    <dt><a name="floor" id="floor"><span style="font-size:1.2em">
+    Floor(value)</span></a></dt>
 
     <dd>
       <p>Floor() rounds a floating point value down to the previous
@@ -3976,8 +3976,8 @@ nibble, like 0?755:
       See also <a href="#ceil">Ceil()</a>.</p>
     </dd>
 
-    <dt><a name="flush" id="flush"><big>
-    Flush()</big></a></dt>
+    <dt><a name="flush" id="flush"><span style="font-size:1.2em">
+    Flush()</span></a></dt>
 
     <dd>
       <p>The Flush() function is used to Flush the output buffer.
@@ -3990,8 +3990,8 @@ nibble, like 0?755:
       alternatively, run the Apache module version of PHP.</p>
     </dd>
 
-    <dt><a name="fopen" id="fopen"><big>$fp =
-    fopen(filename,mode)</big></a></dt>
+    <dt><a name="fopen" id="fopen"><span style="font-size:1.2em">$fp =
+    fopen(filename,mode)</span></a></dt>
 
     <dd>
       <p>fopen() opens a file and returns a file pointer index. If
@@ -4010,8 +4010,8 @@ nibble, like 0?755:
 </pre>
     </dd>
 
-    <dt><a name="fputs" id="fputs"><big>
-    fputs(fp,string)</big></a></dt>
+    <dt><a name="fputs" id="fputs"><span style="font-size:1.2em">
+    fputs(fp,string)</span></a></dt>
 
     <dd>
       <p>fputs() writes a line to a file opened by <a href=
@@ -4023,8 +4023,8 @@ nibble, like 0?755:
       tabs respectively. See also <a href="#fgets">fgets()</a>.</p>
     </dd>
 
-    <dt><a name="fpassthru" id="fpassthru"><big>
-    FPassThru(fp)</big></a></dt>
+    <dt><a name="fpassthru" id="fpassthru"><span style="font-size:1.2em">
+    FPassThru(fp)</span></a></dt>
 
     <dd>
       <p>FPassThru() outputs all remaining data on <i>fp</i>
@@ -4036,8 +4036,8 @@ nibble, like 0?755:
       number of bytes read and written.</p>
     </dd>
 
-    <dt><a name="fseek" id="fseek"><big>
-    fseek(fp,pos)</big></a></dt>
+    <dt><a name="fseek" id="fseek"><span style="font-size:1.2em">
+    fseek(fp,pos)</span></a></dt>
 
     <dd>
       <p>fseek() positions a file pointer identified by the $fd
@@ -4048,8 +4048,8 @@ nibble, like 0?755:
       "#ftell">ftell()</a> and <a href="#rewind">rewind()</a>.</p>
     </dd>
 
-    <dt><a name="fsockopen" id="fsockopen"><big>fp =
-    fsockopen(hostname,port)</big></a></dt>
+    <dt><a name="fsockopen" id="fsockopen"><span style="font-size:1.2em">fp =
+    fsockopen(hostname,port)</span></a></dt>
 
     <dd>
       <p>fsockopen() opens a socket connection and returns a file
@@ -4065,8 +4065,8 @@ nibble, like 0?755:
       operating system support Unix domain sockets.</p>
     </dd>
 
-    <dt><a name="ftell" id="ftell"><big>pos =
-    ftell(fp)</big></a></dt>
+    <dt><a name="ftell" id="ftell"><span style="font-size:1.2em">pos =
+    ftell(fp)</span></a></dt>
 
     <dd>
       <p>ftell() returns the position of a file pointer identified
@@ -4076,8 +4076,8 @@ nibble, like 0?755:
       and <a href="#rewind">rewind()</a>.</p>
     </dd>
 
-    <dt><a name="getaccdir" id="getaccdir"><big>
-    getAccDir()</big></a></dt>
+    <dt><a name="getaccdir" id="getaccdir"><span style="font-size:1.2em">
+    getAccDir()</span></a></dt>
 
     <dd>
       <p>getAccDir returns the directory where PHP access
@@ -4086,8 +4086,8 @@ nibble, like 0?755:
       access configurations they represent.</p>
     </dd>
 
-    <dt><a name="getenv" id="getenv"><big>
-    GetEnv(string)</big></a></dt>
+    <dt><a name="getenv" id="getenv"><span style="font-size:1.2em">
+    GetEnv(string)</span></a></dt>
 
     <dd>
       <p>GetEnv returns the value of the environment value
@@ -4106,16 +4106,16 @@ nibble, like 0?755:
       whatever security mechanism you might have.</p>
     </dd>
 
-    <dt><a name="gethostbyname" id="gethostbyname"><big>
-    getHostByName(domain_name)</big></a></dt>
+    <dt><a name="gethostbyname" id="gethostbyname"><span style="font-size:1.2em">
+    getHostByName(domain_name)</span></a></dt>
 
     <dd>
       <p>getHostByName converts the given domain name into an IP
       address in nnn.nnn.nnn.nnn format.</p>
     </dd>
 
-    <dt><a name="gethostbyaddr" id="gethostbyaddr"><big>
-    getHostByAddr(ip_address)</big></a></dt>
+    <dt><a name="gethostbyaddr" id="gethostbyaddr"><span style="font-size:1.2em">
+    getHostByAddr(ip_address)</span></a></dt>
 
     <dd>
       <p>getHostByAddr converts the given IP address in
@@ -4123,8 +4123,8 @@ nibble, like 0?755:
       name.</p>
     </dd>
 
-    <dt><a name="getimagesize" id="getimagesize"><big>
-    GetImageSize(filename)</big></a></dt>
+    <dt><a name="getimagesize" id="getimagesize"><span style="font-size:1.2em">
+    GetImageSize(filename)</span></a></dt>
 
     <dd>
       <p>The GetImageSize() function takes either a full path
@@ -4145,8 +4145,8 @@ nibble, like 0?755:
 </pre>
     </dd>
 
-    <dt><a name="getlastaccess" id="getlastaccess"><big>
-    getLastAccess()</big></a></dt>
+    <dt><a name="getlastaccess" id="getlastaccess"><span style="font-size:1.2em">
+    getLastAccess()</span></a></dt>
 
     <dd>
       <p>getLastAccess returns the date and time in unix time
@@ -4157,8 +4157,8 @@ nibble, like 0?755:
       Access Logging enabled.</p>
     </dd>
 
-    <dt><a name="getlastbrowser" id="getlastbrowser"><big>
-    getLastbrowser()</big></a></dt>
+    <dt><a name="getlastbrowser" id="getlastbrowser"><span style="font-size:1.2em">
+    getLastbrowser()</span></a></dt>
 
     <dd>
       <p>getLastBrowser returns the identification string of
@@ -4167,8 +4167,8 @@ nibble, like 0?755:
       Access Logging enabled.</p>
     </dd>
 
-    <dt><a name="getlastemail" id="getlastemail"><big>
-    getLastEmail()</big></a></dt>
+    <dt><a name="getlastemail" id="getlastemail"><span style="font-size:1.2em">
+    getLastEmail()</span></a></dt>
 
     <dd>
       <p>getLastEmail returns the E-Mail address of the last user
@@ -4177,8 +4177,8 @@ nibble, like 0?755:
       Access Logging enabled.</p>
     </dd>
 
-    <dt><a name="getlasthost" id="getlasthost"><big>
-    getLastHost()</big></a></dt>
+    <dt><a name="getlasthost" id="getlasthost"><span style="font-size:1.2em">
+    getLastHost()</span></a></dt>
 
     <dd>
       <p>getLastHost returns the hostname of the last user to
@@ -4187,8 +4187,8 @@ nibble, like 0?755:
       Access Logging enabled.</p>
     </dd>
 
-    <dt><a name="getlastmod" id="getlastmod"><big>
-    getLastMod()</big></a></dt>
+    <dt><a name="getlastmod" id="getlastmod"><span style="font-size:1.2em">
+    getLastMod()</span></a></dt>
 
     <dd>
       <p>getLastMod returns the date and time in unix time format
@@ -4199,8 +4199,8 @@ nibble, like 0?755:
       Access Logging enabled.</p>
     </dd>
 
-    <dt><a name="getlastref" id="getlastref"><big>
-    getLastref()</big></a></dt>
+    <dt><a name="getlastref" id="getlastref"><span style="font-size:1.2em">
+    getLastref()</span></a></dt>
 
     <dd>
       <p>getLastRef returns the URL of the referring document of
@@ -4209,8 +4209,8 @@ nibble, like 0?755:
       Access Logging enabled.</p>
     </dd>
 
-    <dt><a name="getlogdir" id="getlogdir"><big>
-    getLogDir()</big></a></dt>
+    <dt><a name="getlogdir" id="getlogdir"><span style="font-size:1.2em">
+    getLogDir()</span></a></dt>
 
     <dd>
       <p>getLogDir returns the top-level directory under which PHP
@@ -4222,32 +4222,32 @@ nibble, like 0?755:
       represent as the primary component of the filename.</p>
     </dd>
 
-    <dt><a name="getmyinode" id="getmyinode"><big>
-    getMyInode()</big></a></dt>
+    <dt><a name="getmyinode" id="getmyinode"><span style="font-size:1.2em">
+    getMyInode()</span></a></dt>
 
     <dd>
       <p>getMyInode returns the numerical inode of the current HTML
       file.</p>
     </dd>
 
-    <dt><a name="getmypid" id="getmypid"><big>
-    getMyPid()</big></a></dt>
+    <dt><a name="getmypid" id="getmypid"><span style="font-size:1.2em">
+    getMyPid()</span></a></dt>
 
     <dd>
       <p>getMyPid() returns the current process id of the PHP
       parsing process.</p>
     </dd>
 
-    <dt><a name="getmyuid" id="getmyuid"><big>
-    getMyUid()</big></a></dt>
+    <dt><a name="getmyuid" id="getmyuid"><span style="font-size:1.2em">
+    getMyUid()</span></a></dt>
 
     <dd>
       <p>getMyUid returns the numerical user id of the owner of the
       current HTML file.</p>
     </dd>
 
-    <dt><a name="getrandmax" id="getrandmax"><big>
-    getRandMax()</big></a></dt>
+    <dt><a name="getrandmax" id="getrandmax"><span style="font-size:1.2em">
+    getRandMax()</span></a></dt>
 
     <dd>
       <p>getRandMax returns the maximum random number the <a href=
@@ -4256,8 +4256,8 @@ nibble, like 0?755:
       file in the PHP distribution for more information.</p>
     </dd>
 
-    <dt><a name="getstartlogging" id="getstartlogging"><big>
-    getStartLogging()</big></a></dt>
+    <dt><a name="getstartlogging" id="getstartlogging"><span style="font-size:1.2em">
+    getStartLogging()</span></a></dt>
 
     <dd>
       <p>getStartLogging returns the time and date in Unix time
@@ -4268,8 +4268,8 @@ nibble, like 0?755:
       created.</p>
     </dd>
 
-    <dt><a name="gettoday" id="gettoday"><big>
-    getToday()</big></a></dt>
+    <dt><a name="gettoday" id="gettoday"><span style="font-size:1.2em">
+    getToday()</span></a></dt>
 
     <dd>
       <p>getToday returns the total number of hits the current page
@@ -4278,8 +4278,8 @@ nibble, like 0?755:
       Access Logging enabled.</p>
     </dd>
 
-    <dt><a name="gettotal" id="gettotal"><big>
-    getTotal()</big></a></dt>
+    <dt><a name="gettotal" id="gettotal"><span style="font-size:1.2em">
+    getTotal()</span></a></dt>
 
     <dd>
       <p>getTotal returns the total number of hits the current page
@@ -4288,8 +4288,8 @@ nibble, like 0?755:
       Access Logging enabled.</p>
     </dd>
 
-    <dt><a name="gettype" id="gettype"><big>
-    GetType(variable)</big></a></dt>
+    <dt><a name="gettype" id="gettype"><span style="font-size:1.2em">
+    GetType(variable)</span></a></dt>
 
     <dd>
       <p>GetType returns the type of the variable. The return value
@@ -4298,8 +4298,8 @@ nibble, like 0?755:
       function</p>
     </dd>
 
-    <dt><a name="gmdate" id="gmdate"><big>
-    gmDate(format,time)</big></a></dt>
+    <dt><a name="gmdate" id="gmdate"><span style="font-size:1.2em">
+    gmDate(format,time)</span></a></dt>
 
     <dd>
       <p>gmDate is identical to the <a href="#date">Date</a>
@@ -4307,8 +4307,8 @@ nibble, like 0?755:
       instead of the current local time.</p>
     </dd>
 
-    <dt><a name="header" id="header"><big>
-    Header(header_string)</big></a></dt>
+    <dt><a name="header" id="header"><span style="font-size:1.2em">
+    Header(header_string)</span></a></dt>
 
     <dd>
       <p>The Header command is used at the top of an HTML file to
@@ -4322,8 +4322,8 @@ nibble, like 0?755:
       Authentication</a> section.</p>
     </dd>
 
-    <dt><a name="hexdec" id="hexdec"><big>
-    HexDec(hex_string)</big></a></dt>
+    <dt><a name="hexdec" id="hexdec"><span style="font-size:1.2em">
+    HexDec(hex_string)</span></a></dt>
 
     <dd>
       <p>HexDec converts a hexadecimal string to a decimal number.
@@ -4331,7 +4331,7 @@ nibble, like 0?755:
     </dd>
 
     <dt><a name="htmlspecialchars" id=
-    "htmlspecialchars"><big>HtmlSpecialChars(string)</big></a></dt>
+    "htmlspecialchars"><span style="font-size:1.2em">HtmlSpecialChars(string)</span></a></dt>
 
     <dd>
       <p>HtmlSpecialChars converts any characters with ascii codes
@@ -4341,8 +4341,8 @@ nibble, like 0?755:
       and <b>"</b> are also converted.</p>
     </dd>
 
-    <dt><a name="imagearc" id="imagearc"><big>
-    ImageArc(im, cx, cy, w, h, s, e, col)</big></a></dt>
+    <dt><a name="imagearc" id="imagearc"><span style="font-size:1.2em">
+    ImageArc(im, cx, cy, w, h, s, e, col)</span></a></dt>
 
     <dd>
       <p>ImageArc draws a partial ellipse centered at cx,cy (top
@@ -4355,8 +4355,8 @@ nibble, like 0?755:
       enabled in PHP.</p>
     </dd>
 
-    <dt><a name="imagechar" id="imagechar"><big>
-    ImageChar(im, size, x, y, c, col)</big></a></dt>
+    <dt><a name="imagechar" id="imagechar"><span style="font-size:1.2em">
+    ImageChar(im, size, x, y, c, col)</span></a></dt>
 
     <dd>
       <p>ImageChar draws the character c in the image identified by
@@ -4368,8 +4368,8 @@ nibble, like 0?755:
       enabled in PHP.</p>
     </dd>
 
-    <dt><a name="imagecharup" id="imagecharup"><big>
-    ImageCharUp(im, size, x, y, c, col)</big></a></dt>
+    <dt><a name="imagecharup" id="imagecharup"><span style="font-size:1.2em">
+    ImageCharUp(im, size, x, y, c, col)</span></a></dt>
 
     <dd>
       <p>ImageCharUp draws the character c vertically in the image
@@ -4382,8 +4382,8 @@ nibble, like 0?755:
     </dd>
 
     <dt><a name="imagecolorallocate" id=
-    "imagecolorallocate"><big>col =
-    ImageColorAllocate(im, red, green, blue)</big></a></dt>
+    "imagecolorallocate"><span style="font-size:1.2em">col =
+    ImageColorAllocate(im, red, green, blue)</span></a></dt>
 
     <dd>
       <p>ImageColorAllocate returns a colour identifier
@@ -4397,8 +4397,8 @@ nibble, like 0?755:
     </dd>
 
     <dt><a name="imagecolortransparent" id=
-    "imagecolortransparent"><big>
-    ImageColorTransparent(im, col)</big></a></dt>
+    "imagecolortransparent"><span style="font-size:1.2em">
+    ImageColorTransparent(im, col)</span></a></dt>
 
     <dd>
       <p>ImageColorTransparent sets the transparent colour in the
@@ -4410,9 +4410,9 @@ nibble, like 0?755:
     </dd>
 
     <dt><a name="imagecopyresized" id=
-    "imagecopyresized"><big>ImageCopyResized(dst_im,
+    "imagecopyresized"><span style="font-size:1.2em">ImageCopyResized(dst_im,
     src_im, dstX, dstY, srcX, srcY, dstW, dstH, srcW, srcH
-    )</big></a></dt>
+    )</span></a></dt>
 
     <dd>
       <p>ImageCopyResized copies a rectangular portion of one image
@@ -4429,8 +4429,8 @@ nibble, like 0?755:
       enabled in PHP.</p>
     </dd>
 
-    <dt><a name="imagecreate" id="imagecreate"><big>im =
-    ImageCreate(x_size, y_size)</big></a></dt>
+    <dt><a name="imagecreate" id="imagecreate"><span style="font-size:1.2em">im =
+    ImageCreate(x_size, y_size)</span></a></dt>
 
     <dd>
       <p>ImageCreate returns an image identifier representing a
@@ -4440,8 +4440,8 @@ nibble, like 0?755:
     </dd>
 
     <dt><a name="imagecreatefromgif" id=
-    "imagecreatefromgif"><big>im =
-    ImageCreateFromGif(filename)</big></a></dt>
+    "imagecreatefromgif"><span style="font-size:1.2em">im =
+    ImageCreateFromGif(filename)</span></a></dt>
 
     <dd>
       <p>ImageCreateFromGif returns an image identifier
@@ -4451,8 +4451,8 @@ nibble, like 0?755:
       enabled in PHP.</p>
     </dd>
 
-    <dt><a name="imagedestroy" id="imagedestroy"><big>
-    ImageDestroy(im)</big></a></dt>
+    <dt><a name="imagedestroy" id="imagedestroy"><span style="font-size:1.2em">
+    ImageDestroy(im)</span></a></dt>
 
     <dd>
       <p>ImageDestroy frees any memory associated with image im. im
@@ -4461,8 +4461,8 @@ nibble, like 0?755:
       only available if GD support has been enabled in PHP.</p>
     </dd>
 
-    <dt><a name="imagefill" id="imagefill"><big>
-    ImageFill(im, x, y, col)</big></a></dt>
+    <dt><a name="imagefill" id="imagefill"><span style="font-size:1.2em">
+    ImageFill(im, x, y, col)</span></a></dt>
 
     <dd>
       <p>ImageFill performs a flood fill starting at coordinate x,y
@@ -4472,8 +4472,8 @@ nibble, like 0?755:
     </dd>
 
     <dt><a name="imagefilledpolygon" id=
-    "imagefilledpolygon"><big>ImageFilledPolygon(im,
-    points, num_points, col)</big></a></dt>
+    "imagefilledpolygon"><span style="font-size:1.2em">ImageFilledPolygon(im,
+    points, num_points, col)</span></a></dt>
 
     <dd>
       <p>ImageFilledPolygon creates a filled polygon in image
@@ -4486,8 +4486,8 @@ nibble, like 0?755:
     </dd>
 
     <dt><a name="imagefilledrectangle" id=
-    "imagefilledrectangle"><big>ImageFilledRectangle(im,
-    x1, y1, x2, y2, col)</big></a></dt>
+    "imagefilledrectangle"><span style="font-size:1.2em">ImageFilledRectangle(im,
+    x1, y1, x2, y2, col)</span></a></dt>
 
     <dd>
       <p>ImageFilledRectangle creates a filled rectangle of colour
@@ -4499,8 +4499,8 @@ nibble, like 0?755:
     </dd>
 
     <dt><a name="imagefilltoborder" id=
-    "imagefilltoborder"><big>ImageFillToBorder(im, x, y,
-    border, col)</big></a></dt>
+    "imagefilltoborder"><span style="font-size:1.2em">ImageFillToBorder(im, x, y,
+    border, col)</span></a></dt>
 
     <dd>
       <p>ImageFillToBorder performs a flood fill whose border
@@ -4511,8 +4511,8 @@ nibble, like 0?755:
       enabled in PHP.</p>
     </dd>
 
-    <dt><a name="imagegif" id="imagegif"><big>
-    ImageGif(im [,filename])</big></a></dt>
+    <dt><a name="imagegif" id="imagegif"><span style="font-size:1.2em">
+    ImageGif(im [,filename])</span></a></dt>
 
     <dd>
       <p>ImageGif creates the GIF file in filename from the image
@@ -4527,8 +4527,8 @@ nibble, like 0?755:
       enabled in PHP.</p>
     </dd>
 
-    <dt><a name="imageinterlace" id="imageinterlace"><big>
-    ImageInterlace(im, interlace)</big></a></dt>
+    <dt><a name="imageinterlace" id="imageinterlace"><span style="font-size:1.2em">
+    ImageInterlace(im, interlace)</span></a></dt>
 
     <dd>
       <p>ImageInterlace turns the interlace bit on or off. If
@@ -4538,8 +4538,8 @@ nibble, like 0?755:
       PHP.</p>
     </dd>
 
-    <dt><a name="imageline" id="imageline"><big>
-    ImageLine(im, x1, y1, x2, y2, col)</big></a></dt>
+    <dt><a name="imageline" id="imageline"><span style="font-size:1.2em">
+    ImageLine(im, x1, y1, x2, y2, col)</span></a></dt>
 
     <dd>
       <p>ImageLine draws a line from x1,y1 to x2,y2 (top left is
@@ -4549,8 +4549,8 @@ nibble, like 0?755:
       enabled in PHP.</p>
     </dd>
 
-    <dt><a name="imagepolygon" id="imagepolygon"><big>
-    ImagePolygon(im, points, num_points, col)</big></a></dt>
+    <dt><a name="imagepolygon" id="imagepolygon"><span style="font-size:1.2em">
+    ImagePolygon(im, points, num_points, col)</span></a></dt>
 
     <dd>
       <p>ImagePolygon creates a polygon in image <a href=
@@ -4562,8 +4562,8 @@ nibble, like 0?755:
       enabled in PHP.</p>
     </dd>
 
-    <dt><a name="imagerectangle" id="imagerectangle"><big>
-    ImageRectangle(im, x1, y1, x2, y2, col)</big></a></dt>
+    <dt><a name="imagerectangle" id="imagerectangle"><span style="font-size:1.2em">
+    ImageRectangle(im, x1, y1, x2, y2, col)</span></a></dt>
 
     <dd>
       <p>ImageRectangle creates a rectangle of colour col in image
@@ -4574,8 +4574,8 @@ nibble, like 0?755:
       enabled in PHP.</p>
     </dd>
 
-    <dt><a name="imagesetpixel" id="imagesetpixel"><big>
-    ImageSetPixel(im, x, y, col)</big></a></dt>
+    <dt><a name="imagesetpixel" id="imagesetpixel"><span style="font-size:1.2em">
+    ImageSetPixel(im, x, y, col)</span></a></dt>
 
     <dd>
       <p>ImageSetPixel draws a pixel at x,y (top left is 0,0) in
@@ -4585,8 +4585,8 @@ nibble, like 0?755:
       enabled in PHP.</p>
     </dd>
 
-    <dt><a name="imagestring" id="imagestring"><big>
-    ImageString(im, size, x, y, s, col)</big></a></dt>
+    <dt><a name="imagestring" id="imagestring"><span style="font-size:1.2em">
+    ImageString(im, size, x, y, s, col)</span></a></dt>
 
     <dd>
       <p>ImageString draws the string s in the image identified by
@@ -4598,8 +4598,8 @@ nibble, like 0?755:
       enabled in PHP.</p>
     </dd>
 
-    <dt><a name="imagestringup" id="imagestringup"><big>
-    ImageStringUp(im, size, x, y, s, col)</big></a></dt>
+    <dt><a name="imagestringup" id="imagestringup"><span style="font-size:1.2em">
+    ImageStringUp(im, size, x, y, s, col)</span></a></dt>
 
     <dd>
       <p>ImageStringUp draws the string s vertically in the image
@@ -4611,24 +4611,24 @@ nibble, like 0?755:
       enabled in PHP.</p>
     </dd>
 
-    <dt><a name="imagesx" id="imagesx"><big>
-    ImageSX(im)</big></a></dt>
+    <dt><a name="imagesx" id="imagesx"><span style="font-size:1.2em">
+    ImageSX(im)</span></a></dt>
 
     <dd>
       <p>ImageSX returns the width of the image identified by
       <em>im</em>.</p>
     </dd>
 
-    <dt><a name="imagesy" id="imagesy"><big>
-    ImageSY(im)</big></a></dt>
+    <dt><a name="imagesy" id="imagesy"><span style="font-size:1.2em">
+    ImageSY(im)</span></a></dt>
 
     <dd>
       <p>ImageSY returns the height of the image identified by
       <em>im</em>.</p>
     </dd>
 
-    <dt><a name="include" id="include"><big>
-    Include(filename)</big></a></dt>
+    <dt><a name="include" id="include"><span style="font-size:1.2em">
+    Include(filename)</span></a></dt>
 
     <dd>
       <p>The Include command can be used to insert other files into
@@ -4652,8 +4652,8 @@ nibble, like 0?755:
 </pre>
     </dd>
 
-    <dt><a name="initsyslog" id="initsyslog"><big>
-    InitSyslog()</big></a></dt>
+    <dt><a name="initsyslog" id="initsyslog"><span style="font-size:1.2em">
+    InitSyslog()</span></a></dt>
 
     <dd>
       <p>InitSyslog() defines some PHP variables that you need when
@@ -4666,8 +4666,8 @@ nibble, like 0?755:
       "#closelog">CloseLog()</a>.</p>
     </dd>
 
-    <dt><a name="intval" id="intval"><big>
-    intval(variable)</big></a></dt>
+    <dt><a name="intval" id="intval"><span style="font-size:1.2em">
+    intval(variable)</span></a></dt>
 
     <dd>
       <p>intval returns the long integer value of the variable. See
@@ -4675,16 +4675,16 @@ nibble, like 0?755:
       "#doubleval">doubleval()</a> functions.</p>
     </dd>
 
-    <dt><a name="isset" id="isset"><big>
-    IsSet(variable)</big></a></dt>
+    <dt><a name="isset" id="isset"><span style="font-size:1.2em">
+    IsSet(variable)</span></a></dt>
 
     <dd>
       <p>The IsSet function returns 1 if the given variable is
       defined, and 0 if it isn't.</p>
     </dd>
 
-    <dt><a name="key" id="key"><big>
-    Key(variable)</big></a></dt>
+    <dt><a name="key" id="key"><span style="font-size:1.2em">
+    Key(variable)</span></a></dt>
 
     <dd>
       <p>Key returns the key of the current array item. The current
@@ -4697,8 +4697,8 @@ nibble, like 0?755:
       array, although it will work for normal array as well.</p>
     </dd>
 
-    <dt><a name="link" id="link"><big>
-    Link(target,link)</big></a></dt>
+    <dt><a name="link" id="link"><span style="font-size:1.2em">
+    Link(target,link)</span></a></dt>
 
     <dd>
       <p>Link() creates a hard link. See the <a href=
@@ -4707,8 +4707,8 @@ nibble, like 0?755:
       <a href="#LinkInfo">LinkInfo</a> functions.</p>
     </dd>
 
-    <dt><a name="linkinfo" id="linkinfo"><big>
-    LinkInfo(path)</big></a></dt>
+    <dt><a name="linkinfo" id="linkinfo"><span style="font-size:1.2em">
+    LinkInfo(path)</span></a></dt>
 
     <dd>
       <p>LinkInfo returns the st_dev field of the UNIX C stat
@@ -4718,22 +4718,22 @@ nibble, like 0?755:
       stat.h). Returns -1 in case of error.</p>
     </dd>
 
-    <dt><a name="log" id="log"><big>
-    Log(arg)</big></a></dt>
+    <dt><a name="log" id="log"><span style="font-size:1.2em">
+    Log(arg)</span></a></dt>
 
     <dd>
       <p>Log returns the natural logarithm of arg.</p>
     </dd>
 
-    <dt><a name="log10" id="log10"><big>
-    Log10(arg)</big></a></dt>
+    <dt><a name="log10" id="log10"><span style="font-size:1.2em">
+    Log10(arg)</span></a></dt>
 
     <dd>
       <p>Log10 returns the base-10 logarithm of arg.</p>
     </dd>
 
-    <dt><a name="logas" id="logas"><big>
-    LogAs(filename)</big></a></dt>
+    <dt><a name="logas" id="logas"><span style="font-size:1.2em">
+    LogAs(filename)</span></a></dt>
 
     <dd>
       <p>The LogAs() function will treat the hit on the current
@@ -4741,8 +4741,8 @@ nibble, like 0?755:
       filename.</p>
     </dd>
 
-    <dt><a name="mail" id="mail"><big>
-    Mail(to,subject,message[,headers])</big></a></dt>
+    <dt><a name="mail" id="mail"><span style="font-size:1.2em">
+    Mail(to,subject,message[,headers])</span></a></dt>
 
     <dd>
       <p>Mail automatically mails the message specified in the
@@ -4763,8 +4763,8 @@ inserted at the end of the header, example:
 </pre>
     </dd>
 
-    <dt><a name="max" id="max"><big>
-    Max(array)</big></a></dt>
+    <dt><a name="max" id="max"><span style="font-size:1.2em">
+    Max(array)</span></a></dt>
 
     <dd>
       <p>Max returns the maximum value of a PHP array. ie. it will
@@ -4774,15 +4774,15 @@ inserted at the end of the header, example:
       were sorted.</p>
     </dd>
 
-    <dt><a name="md5" id="md5"><big>
-    Md5(message)</big></a></dt>
+    <dt><a name="md5" id="md5"><span style="font-size:1.2em">
+    Md5(message)</span></a></dt>
 
     <dd>
       <p>Md5 returns the MD5 hash of a string value.</p>
     </dd>
 
-    <dt><a name="mi_close" id="mi_close"><big>
-    mi_Close(connection_id)</big></a></dt>
+    <dt><a name="mi_close" id="mi_close"><span style="font-size:1.2em">
+    mi_Close(connection_id)</span></a></dt>
 
     <dd>
       <p>mi_Close will close down the connection to an Illustra
@@ -4792,9 +4792,9 @@ inserted at the end of the header, example:
       been enabled in PHP.</p>
     </dd>
 
-    <dt><a name="mi_connect" id="mi_connect"><big>
+    <dt><a name="mi_connect" id="mi_connect"><span style="font-size:1.2em">
     $connection = mi_Connect(database, username,
-    password)</big></a></dt>
+    password)</span></a></dt>
 
     <dd>
       <p>mi_Connect opens a connection to an Illustra database.
@@ -4810,8 +4810,8 @@ inserted at the end of the header, example:
       been enabled in PHP.</p>
     </dd>
 
-    <dt><a name="mi_dbname" id="mi_dbname"><big>
-    mi_DBname(connection_id)</big></a></dt>
+    <dt><a name="mi_dbname" id="mi_dbname"><span style="font-size:1.2em">
+    mi_DBname(connection_id)</span></a></dt>
 
     <dd>
       <p>mi_DBname will return the name of the database that the
@@ -4821,8 +4821,8 @@ inserted at the end of the header, example:
       been enabled in PHP.</p>
     </dd>
 
-    <dt><a name="mi_exec" id="mi_exec"><big>$result =
-    mi_Exec(connection_id, query_string)</big></a></dt>
+    <dt><a name="mi_exec" id="mi_exec"><span style="font-size:1.2em">$result =
+    mi_Exec(connection_id, query_string)</span></a></dt>
 
     <dd>
       <p>mi_Exec will send an SQL statement to the Illustra
@@ -4836,9 +4836,9 @@ inserted at the end of the header, example:
       been enabled in PHP.</p>
     </dd>
 
-    <dt><a name="mi_fieldname" id="mi_fieldname"><big>
+    <dt><a name="mi_fieldname" id="mi_fieldname"><span style="font-size:1.2em">
     mi_FieldName(connection_id, result_id,
-    field_number)</big></a></dt>
+    field_number)</span></a></dt>
 
     <dd>
       <p>mi_FieldName will return the name of the field occupying
@@ -4852,9 +4852,9 @@ inserted at the end of the header, example:
       been enabled in PHP.</p>
     </dd>
 
-    <dt><a name="mi_fieldnum" id="mi_fieldnum"><big>
+    <dt><a name="mi_fieldnum" id="mi_fieldnum"><span style="font-size:1.2em">
     mi_FieldNum(connection_id, result_id,
-    field_name)</big></a></dt>
+    field_name)</span></a></dt>
 
     <dd>
       <p>mi_FieldNum will return the number of the column slot that
@@ -4866,8 +4866,8 @@ inserted at the end of the header, example:
       been enabled in PHP.</p>
     </dd>
 
-    <dt><a name="mi_numfields" id="mi_numfields"><big>
-    mi_NumFields(connection_id, result_id)</big></a></dt>
+    <dt><a name="mi_numfields" id="mi_numfields"><span style="font-size:1.2em">
+    mi_NumFields(connection_id, result_id)</span></a></dt>
 
     <dd>
       <p>mi_NumFields will return the number of fields (columns) in
@@ -4879,8 +4879,8 @@ inserted at the end of the header, example:
       been enabled in PHP.</p>
     </dd>
 
-    <dt><a name="mi_numrows" id="mi_numrows"><big>
-    mi_NumRows(connection_id, result_id)</big></a></dt>
+    <dt><a name="mi_numrows" id="mi_numrows"><span style="font-size:1.2em">
+    mi_NumRows(connection_id, result_id)</span></a></dt>
 
     <dd>
       <p>mi_NumRows will return the number of rows in an Illustra
@@ -4892,9 +4892,9 @@ inserted at the end of the header, example:
       been enabled in PHP.</p>
     </dd>
 
-    <dt><a name="mi_result" id="mi_result"><big>
+    <dt><a name="mi_result" id="mi_result"><span style="font-size:1.2em">
     mi_Result(connection_id, result_id, row_number, field
-    name/index)</big></a></dt>
+    name/index)</span></a></dt>
 
     <dd>
       <p>mi_Result will return values from a result identifier
@@ -4911,8 +4911,8 @@ inserted at the end of the header, example:
       been enabled in PHP.</p>
     </dd>
 
-    <dt><a name="microtime" id="microtime"><big>
-    Microtime()</big></a></dt>
+    <dt><a name="microtime" id="microtime"><span style="font-size:1.2em">
+    Microtime()</span></a></dt>
 
     <dd>
       <p>Microtime() returns a string "msec sec" where sec is
@@ -4923,8 +4923,8 @@ inserted at the end of the header, example:
       support the gettimeofday() system call.</p>
     </dd>
 
-    <dt><a name="min" id="min"><big>
-    Min(array)</big></a></dt>
+    <dt><a name="min" id="min"><span style="font-size:1.2em">
+    Min(array)</span></a></dt>
 
     <dd>
       <p>Min returns the minimum value of a PHP array. ie. it will
@@ -4934,8 +4934,8 @@ inserted at the end of the header, example:
       were sorted.</p>
     </dd>
 
-    <dt><a name="mkdir" id="mkdir"><big>
-    MkDir(dir,mode)</big></a></dt>
+    <dt><a name="mkdir" id="mkdir"><span style="font-size:1.2em">
+    MkDir(dir,mode)</span></a></dt>
 
     <dd>
       <p>MkDir creates a directory. The <em>mode</em> parameter
@@ -4943,8 +4943,8 @@ inserted at the end of the header, example:
       MkDir("DirName",0755);</p>
     </dd>
 
-    <dt><a name="mktime" id="mktime"><big>
-    MkTime(hour,min,sec,mon,day,year)</big></a></dt>
+    <dt><a name="mktime" id="mktime"><span style="font-size:1.2em">
+    MkTime(hour,min,sec,mon,day,year)</span></a></dt>
 
     <dd>
       <p>MkTime returns a time in Unix timestamp (long integer)
@@ -4975,8 +4975,8 @@ inserted at the end of the header, example:
 </pre>
     </dd>
 
-    <dt><a name="msql" id="msql"><big>$result =
-    msql($database,$query)</big></a></dt>
+    <dt><a name="msql" id="msql"><span style="font-size:1.2em">$result =
+    msql($database,$query)</span></a></dt>
 
     <dd>
       <p>msql sends an mSQL query. Arguments are the database name
@@ -5000,8 +5000,8 @@ inserted at the end of the header, example:
       enabled in PHP.</p>
     </dd>
 
-    <dt><a name="msql_close" id="msql_close"><big>
-    msql_close()</big></a></dt>
+    <dt><a name="msql_close" id="msql_close"><span style="font-size:1.2em">
+    msql_close()</span></a></dt>
 
     <dd>
       <p>msql_Close closes the socket connection to the msql
@@ -5010,8 +5010,8 @@ inserted at the end of the header, example:
       function does not take an argument.</p>
     </dd>
 
-    <dt><a name="msql_connect" id="msql_connect"><big>
-    msql_connect($hostname)</big></a></dt>
+    <dt><a name="msql_connect" id="msql_connect"><span style="font-size:1.2em">
+    msql_connect($hostname)</span></a></dt>
 
     <dd>
       <p>msql_Connect specifies the host name or IP on which the
@@ -5031,8 +5031,8 @@ inserted at the end of the header, example:
       enabled in PHP.</p>
     </dd>
 
-    <dt><a name="msql_createdb" id="msql_createdb"><big>
-    msql_CreateDB($database)</big></a></dt>
+    <dt><a name="msql_createdb" id="msql_createdb"><span style="font-size:1.2em">
+    msql_CreateDB($database)</span></a></dt>
 
     <dd>
       <p>msql_CreateDB creates the given database.<br>
@@ -5040,8 +5040,8 @@ inserted at the end of the header, example:
       enabled in PHP.</p>
     </dd>
 
-    <dt><a name="msql_dbname" id="msql_dbname"><big>
-    msql_dbName($result,$i)</big></a></dt>
+    <dt><a name="msql_dbname" id="msql_dbname"><span style="font-size:1.2em">
+    msql_dbName($result,$i)</span></a></dt>
 
     <dd>
       <p>msql_dbName returns the database name stored in position
@@ -5053,8 +5053,8 @@ inserted at the end of the header, example:
       enabled in PHP.</p>
     </dd>
 
-    <dt><a name="msql_dropdb" id="msql_dropdb"><big>
-    msql_DropDB($database)</big></a></dt>
+    <dt><a name="msql_dropdb" id="msql_dropdb"><span style="font-size:1.2em">
+    msql_DropDB($database)</span></a></dt>
 
     <dd>
       <p>msql_DropDB deletes the given mSQL database. Use this with
@@ -5063,8 +5063,8 @@ inserted at the end of the header, example:
       enabled in PHP.</p>
     </dd>
 
-    <dt><a name="msql_fieldflags" id="msql_fieldflags"><big>
-    msql_FieldFlags($result,$i)</big></a></dt>
+    <dt><a name="msql_fieldflags" id="msql_fieldflags"><span style="font-size:1.2em">
+    msql_FieldFlags($result,$i)</span></a></dt>
 
     <dd>
       <p>msql_FieldFlags returns the field flags of the specified
@@ -5074,8 +5074,8 @@ inserted at the end of the header, example:
       enabled in PHP.</p>
     </dd>
 
-    <dt><a name="msql_fieldlen" id="msql_fieldlen"><big>
-    msql_FieldLen($result,$i)</big></a></dt>
+    <dt><a name="msql_fieldlen" id="msql_fieldlen"><span style="font-size:1.2em">
+    msql_FieldLen($result,$i)</span></a></dt>
 
     <dd>
       <p>msql_FieldLen returns the length of the specified
@@ -5084,8 +5084,8 @@ inserted at the end of the header, example:
       enabled in PHP.</p>
     </dd>
 
-    <dt><a name="msql_fieldname" id="msql_fieldname"><big>
-    msql_FieldName($result,$i)</big></a></dt>
+    <dt><a name="msql_fieldname" id="msql_fieldname"><span style="font-size:1.2em">
+    msql_FieldName($result,$i)</span></a></dt>
 
     <dd>
       <p>msql_FieldName returns the name of the specified field.
@@ -5097,8 +5097,8 @@ inserted at the end of the header, example:
       enabled in PHP.</p>
     </dd>
 
-    <dt><a name="msql_fieldtype" id="msql_fieldtype"><big>
-    msql_FieldType($result,$i)</big></a></dt>
+    <dt><a name="msql_fieldtype" id="msql_fieldtype"><span style="font-size:1.2em">
+    msql_FieldType($result,$i)</span></a></dt>
 
     <dd>
       <p>msql_FieldType is similar to the msql_FieldName()
@@ -5108,8 +5108,8 @@ inserted at the end of the header, example:
       enabled in PHP.</p>
     </dd>
 
-    <dt><a name="msql_freeresult" id="msql_freeresult"><big>
-    msql_FreeResult($result)</big></a></dt>
+    <dt><a name="msql_freeresult" id="msql_freeresult"><span style="font-size:1.2em">
+    msql_FreeResult($result)</span></a></dt>
 
     <dd>
       <p>msql_FreeResult only needs to be called if you are worried
@@ -5123,8 +5123,8 @@ inserted at the end of the header, example:
       enabled in PHP.</p>
     </dd>
 
-    <dt><a name="msql_listdbs" id="msql_listdbs"><big>
-    $result = msql_ListDBs()</big></a></dt>
+    <dt><a name="msql_listdbs" id="msql_listdbs"><span style="font-size:1.2em">
+    $result = msql_ListDBs()</span></a></dt>
 
     <dd>
       <p>msql_ListDBs will return a result pointer containing the
@@ -5135,9 +5135,9 @@ inserted at the end of the header, example:
       enabled in PHP.</p>
     </dd>
 
-    <dt><a name="msql_listfields" id="msql_listfields"><big>
+    <dt><a name="msql_listfields" id="msql_listfields"><span style="font-size:1.2em">
     $result =
-    msql_Listfields($database,$tablename)</big></a></dt>
+    msql_Listfields($database,$tablename)</span></a></dt>
 
     <dd>
       <p>msql_listfields retrieves information about the the given
@@ -5153,8 +5153,8 @@ inserted at the end of the header, example:
       enabled in PHP.</p>
     </dd>
 
-    <dt><a name="msql_listtables" id="msql_listtables"><big>
-    $result = msql_ListTables($database)</big></a></dt>
+    <dt><a name="msql_listtables" id="msql_listtables"><span style="font-size:1.2em">
+    $result = msql_ListTables($database)</span></a></dt>
 
     <dd>
       <p>msql_ListTables takes a database name and result pointer
@@ -5166,8 +5166,8 @@ inserted at the end of the header, example:
       enabled in PHP.</p>
     </dd>
 
-    <dt><a name="msql_numfields" id="msql_numfields"><big>
-    msql_NumFields($result)</big></a></dt>
+    <dt><a name="msql_numfields" id="msql_numfields"><span style="font-size:1.2em">
+    msql_NumFields($result)</span></a></dt>
 
     <dd>
       <p>msql_NumFields returns the number of fields in a result.
@@ -5177,8 +5177,8 @@ inserted at the end of the header, example:
       enabled in PHP.</p>
     </dd>
 
-    <dt><a name="msql_numrows" id="msql_numrows"><big>
-    msql_NumRows($result)</big></a></dt>
+    <dt><a name="msql_numrows" id="msql_numrows"><span style="font-size:1.2em">
+    msql_NumRows($result)</span></a></dt>
 
     <dd>
       <p>msql_NumRows simply returns the number of rows in a
@@ -5188,8 +5188,8 @@ inserted at the end of the header, example:
       enabled in PHP.</p>
     </dd>
 
-    <dt><a name="msql_regcase" id="msql_regcase"><big>
-    msql_RegCase(string)</big></a></dt>
+    <dt><a name="msql_regcase" id="msql_regcase"><span style="font-size:1.2em">
+    msql_RegCase(string)</span></a></dt>
 
     <dd>
       <p>msql_RegCase takes a string argument and converts it to
@@ -5200,8 +5200,8 @@ inserted at the end of the header, example:
       enabled in PHP.</p>
     </dd>
 
-    <dt><a name="msql_result" id="msql_result"><big>
-    msql_Result($result,$i,field)</big></a></dt>
+    <dt><a name="msql_result" id="msql_result"><span style="font-size:1.2em">
+    msql_Result($result,$i,field)</span></a></dt>
 
     <dd>
       <p>msql_Result displays a field from a returned record.
@@ -5245,8 +5245,8 @@ inserted at the end of the header, example:
       enabled in PHP.</p>
     </dd>
 
-    <dt><a name="msql_tablename" id="msql_tablename"><big>
-    msql_TableName($result,$i)</big></a></dt>
+    <dt><a name="msql_tablename" id="msql_tablename"><span style="font-size:1.2em">
+    msql_TableName($result,$i)</span></a></dt>
 
     <dd>
       <p>msql_TableName takes a result pointer returned by the
@@ -5271,8 +5271,8 @@ inserted at the end of the header, example:
       enabled in PHP.
     </dd>
 
-    <dt><a name="mysql" id="mysql"><big>$result =
-    mysql($database,$query)</big></a></dt>
+    <dt><a name="mysql" id="mysql"><span style="font-size:1.2em">$result =
+    mysql($database,$query)</span></a></dt>
 
     <dd>
       <p>mysql sends a mysql query. Arguments are the database name
@@ -5294,25 +5294,25 @@ inserted at the end of the header, example:
     </dd>
 
     <dt><a name="mysql_affected_rows" id=
-    "mysql_affected_rows"><big>
-    mysql_affected_rows()</big></a></dt>
+    "mysql_affected_rows"><span style="font-size:1.2em">
+    mysql_affected_rows()</span></a></dt>
 
     <dd>
       <p>mysql_affected_rows() returns number of rows affected by
       the last INSERT, UPDATE or DELETE query.</p>
     </dd>
 
-    <dt><a name="mysql_close" id="mysql_close"><big>
-    mysql_close()</big></a></dt>
+    <dt><a name="mysql_close" id="mysql_close"><span style="font-size:1.2em">
+    mysql_close()</span></a></dt>
 
     <dd>
       <p>mysql_Close closes the socket connection to the mysql
       daemon, if an open connection exists.</p>
     </dd>
 
-    <dt><a name="mysql_connect" id="mysql_connect"><big>
+    <dt><a name="mysql_connect" id="mysql_connect"><span style="font-size:1.2em">
     mysql_connect($hostname [,username
-    [,password]])</big></a></dt>
+    [,password]])</span></a></dt>
 
     <dd>
       <p>mysql_Connect specifies the host name or IP on which the
@@ -5340,8 +5340,8 @@ inserted at the end of the header, example:
       enabled in PHP.</p>
     </dd>
 
-    <dt><a name="mysql_createdb" id="mysql_createdb"><big>
-    mysql_CreateDB($database)</big></a></dt>
+    <dt><a name="mysql_createdb" id="mysql_createdb"><span style="font-size:1.2em">
+    mysql_CreateDB($database)</span></a></dt>
 
     <dd>
       <p>mysql_CreateDB creates the given database.<br>
@@ -5349,8 +5349,8 @@ inserted at the end of the header, example:
       enabled in PHP.</p>
     </dd>
 
-    <dt><a name="mysql_dbname" id="mysql_dbname"><big>
-    mysql_dbName($result,$i)</big></a></dt>
+    <dt><a name="mysql_dbname" id="mysql_dbname"><span style="font-size:1.2em">
+    mysql_dbName($result,$i)</span></a></dt>
 
     <dd>
       <p>mysql_dbName returns the database name stored in position
@@ -5362,8 +5362,8 @@ inserted at the end of the header, example:
       enabled in PHP.</p>
     </dd>
 
-    <dt><a name="mysql_dropdb" id="mysql_dropdb"><big>
-    mysql_DropDB($database)</big></a></dt>
+    <dt><a name="mysql_dropdb" id="mysql_dropdb"><span style="font-size:1.2em">
+    mysql_DropDB($database)</span></a></dt>
 
     <dd>
       <p>mysql_DropDB deletes the given mysql database. Use this
@@ -5373,7 +5373,7 @@ inserted at the end of the header, example:
     </dd>
 
     <dt><a name="mysql_fieldflags" id=
-    "mysql_fieldflags"><big>mysql_FieldFlags($result,$i)</big></a></dt>
+    "mysql_fieldflags"><span style="font-size:1.2em">mysql_FieldFlags($result,$i)</span></a></dt>
 
     <dd>
       <p>mysql_FieldFlags returns the field flags of the specified
@@ -5383,8 +5383,8 @@ inserted at the end of the header, example:
       enabled in PHP.</p>
     </dd>
 
-    <dt><a name="mysql_fieldlen" id="mysql_fieldlen"><big>
-    mysql_FieldLen($result,$i)</big></a></dt>
+    <dt><a name="mysql_fieldlen" id="mysql_fieldlen"><span style="font-size:1.2em">
+    mysql_FieldLen($result,$i)</span></a></dt>
 
     <dd>
       <p>mysql_FieldLen returns the length of the specified
@@ -5393,8 +5393,8 @@ inserted at the end of the header, example:
       enabled in PHP.</p>
     </dd>
 
-    <dt><a name="mysql_fieldname" id="mysql_fieldname"><big>
-    mysql_FieldName($result,$i)</big></a></dt>
+    <dt><a name="mysql_fieldname" id="mysql_fieldname"><span style="font-size:1.2em">
+    mysql_FieldName($result,$i)</span></a></dt>
 
     <dd>
       <p>mysql_FieldName returns the name of the specified field.
@@ -5406,8 +5406,8 @@ inserted at the end of the header, example:
       enabled in PHP.</p>
     </dd>
 
-    <dt><a name="mysql_fieldtype" id="mysql_fieldtype"><big>
-    mysql_FieldType($result,$i)</big></a></dt>
+    <dt><a name="mysql_fieldtype" id="mysql_fieldtype"><span style="font-size:1.2em">
+    mysql_FieldType($result,$i)</span></a></dt>
 
     <dd>
       <p>mysql_FieldType is similar to the mysql_FieldName()
@@ -5418,7 +5418,7 @@ inserted at the end of the header, example:
     </dd>
 
     <dt><a name="mysql_freeresult" id=
-    "mysql_freeresult"><big>mysql_FreeResult($result)</big></a></dt>
+    "mysql_freeresult"><span style="font-size:1.2em">mysql_FreeResult($result)</span></a></dt>
 
     <dd>
       <p>mysql_FreeResult only needs to be called if you are
@@ -5433,8 +5433,8 @@ inserted at the end of the header, example:
       enabled in PHP.</p>
     </dd>
 
-    <dt><a name="mysql_insert_id" id="mysql_insert_id"><big>
-    mysql_insert_id()</big></a></dt>
+    <dt><a name="mysql_insert_id" id="mysql_insert_id"><span style="font-size:1.2em">
+    mysql_insert_id()</span></a></dt>
 
     <dd>
       <p>mysql_insert_id() returns the ID generated for an
@@ -5443,8 +5443,8 @@ inserted at the end of the header, example:
       query performed.</p>
     </dd>
 
-    <dt><a name="mysql_listdbs" id="mysql_listdbs"><big>
-    $result = mysql_ListDBs()</big></a></dt>
+    <dt><a name="mysql_listdbs" id="mysql_listdbs"><span style="font-size:1.2em">
+    $result = mysql_ListDBs()</span></a></dt>
 
     <dd>
       <p>mysql_ListDBs will return a result pointer containing the
@@ -5456,8 +5456,8 @@ inserted at the end of the header, example:
     </dd>
 
     <dt><a name="mysql_listfields" id=
-    "mysql_listfields"><big>$result =
-    mysql_Listfields($database,$tablename)</big></a></dt>
+    "mysql_listfields"><span style="font-size:1.2em">$result =
+    mysql_Listfields($database,$tablename)</span></a></dt>
 
     <dd>
       <p>mysql_listfields retrieves information about the the given
@@ -5474,8 +5474,8 @@ inserted at the end of the header, example:
     </dd>
 
     <dt><a name="mysql_listtables" id=
-    "mysql_listtables"><big>$result =
-    mysql_ListTables($database)</big></a></dt>
+    "mysql_listtables"><span style="font-size:1.2em">$result =
+    mysql_ListTables($database)</span></a></dt>
 
     <dd>
       <p>mysql_ListTables takes a database name and result pointer
@@ -5487,8 +5487,8 @@ inserted at the end of the header, example:
       enabled in PHP.</p>
     </dd>
 
-    <dt><a name="mysql_numfields" id="mysql_numfields"><big>
-    mysql_NumFields($result)</big></a></dt>
+    <dt><a name="mysql_numfields" id="mysql_numfields"><span style="font-size:1.2em">
+    mysql_NumFields($result)</span></a></dt>
 
     <dd>
       <p>mysql_NumFields returns the number of fields in a result.
@@ -5498,8 +5498,8 @@ inserted at the end of the header, example:
       enabled in PHP.</p>
     </dd>
 
-    <dt><a name="mysql_numrows" id="mysql_numrows"><big>
-    mysql_NumRows($result)</big></a></dt>
+    <dt><a name="mysql_numrows" id="mysql_numrows"><span style="font-size:1.2em">
+    mysql_NumRows($result)</span></a></dt>
 
     <dd>
       <p>mysql_NumRows simply returns the number of rows in a
@@ -5509,8 +5509,8 @@ inserted at the end of the header, example:
       enabled in PHP.</p>
     </dd>
 
-    <dt><a name="mysql_result" id="mysql_result"><big>
-    mysql_Result($result,$i,field)</big></a></dt>
+    <dt><a name="mysql_result" id="mysql_result"><span style="font-size:1.2em">
+    mysql_Result($result,$i,field)</span></a></dt>
 
     <dd>
       <p>mysql_Result displays a field from a returned record.
@@ -5560,8 +5560,8 @@ inserted at the end of the header, example:
       enabled in PHP.</p>
     </dd>
 
-    <dt><a name="mysql_tablename" id="mysql_tablename"><big>
-    mysql_TableName($result,$i)</big></a></dt>
+    <dt><a name="mysql_tablename" id="mysql_tablename"><span style="font-size:1.2em">
+    mysql_TableName($result,$i)</span></a></dt>
 
     <dd>
       <p>mysql_TableName takes a result pointer returned by the
@@ -5586,8 +5586,8 @@ inserted at the end of the header, example:
       enabled in PHP.
     </dd>
 
-    <dt><a name="next" id="next"><big>
-    Next(variable)</big></a></dt>
+    <dt><a name="next" id="next"><span style="font-size:1.2em">
+    Next(variable)</span></a></dt>
 
     <dd>
       <p>Next moves the internal array pointer to the next item in
@@ -5611,16 +5611,16 @@ inserted at the end of the header, example:
 </pre>
     </dd>
 
-    <dt><a name="octdec" id="octdec"><big>
-    OctDec(octal_number)</big></a></dt>
+    <dt><a name="octdec" id="octdec"><span style="font-size:1.2em">
+    OctDec(octal_number)</span></a></dt>
 
     <dd>
       <p>OctDec converts an octal number to a decimal number. See
       also <a href="#decoct">DecOct()</a>.</p>
     </dd>
 
-    <dt><a name="opendir" id="opendir"><big>
-    openDir(directory)</big></a></dt>
+    <dt><a name="opendir" id="opendir"><span style="font-size:1.2em">
+    openDir(directory)</span></a></dt>
 
     <dd>
       <p>openDir opens the specified directory and places an
@@ -5630,8 +5630,8 @@ inserted at the end of the header, example:
       <a href="#closedir">closeDir</a> function.</p>
     </dd>
 
-    <dt><a name="openlog" id="openlog"><big>
-    OpenLog(ident,options,facility)</big></a></dt>
+    <dt><a name="openlog" id="openlog"><span style="font-size:1.2em">
+    OpenLog(ident,options,facility)</span></a></dt>
 
     <dd>
       <p>OpenLog() initializes the system for further Syslog()
@@ -5641,9 +5641,9 @@ inserted at the end of the header, example:
       "#closelog">CloseLog()</a>.</p>
     </dd>
 
-    <dt><a name="ora_bind" id="ora_bind"><big>
+    <dt><a name="ora_bind" id="ora_bind"><span style="font-size:1.2em">
     Ora_Bind(cursor_ind, php_variable_name, sql_variable_name,
-    size)</big></a><br></dt>
+    size)</span></a><br></dt>
 
     <dd>Ora_Bind() performs binding of PHP variables with Oracle
     ones.<br>
@@ -5702,15 +5702,15 @@ inserted at the end of the header, example:
 </pre>
     </dd>
 
-    <dt><a name="ora_close" id="ora_close"><big>
-    Ora_Close(conn_ind)</big></a></dt>
+    <dt><a name="ora_close" id="ora_close"><span style="font-size:1.2em">
+    Ora_Close(conn_ind)</span></a></dt>
 
     <dd>Ora_Close() closes the Oracle connection identified by
     <var>conn_ind</var>. Returns 0 upon success, -1 upon
     failure.</dd>
 
-    <dt><a name="ora_commit" id="ora_commit"><big>
-    Ora_Commit(conn_ind)</big></a></dt>
+    <dt><a name="ora_commit" id="ora_commit"><span style="font-size:1.2em">
+    Ora_Commit(conn_ind)</span></a></dt>
 
     <dd>Commits the current transaction on <var>conn_ind</var>. The
     current transaction starts from the <a href=
@@ -5721,88 +5721,88 @@ inserted at the end of the header, example:
     Ora_Commit() returns -1 (and an error message) upon
     failure.</dd>
 
-    <dt><a name="ora_commitoff" id="ora_commitoff"><big>
-    Ora_CommitOff(conn_ind)</big></a></dt>
+    <dt><a name="ora_commitoff" id="ora_commitoff"><span style="font-size:1.2em">
+    Ora_CommitOff(conn_ind)</span></a></dt>
 
     <dd>Ora_CommitOff() turns off autocommit (automatic commit of
     every SQL data manipulation statement) on the Oracle connection
     <var>conn_ind</var>.</dd>
 
-    <dt><a name="ora_commiton" id="ora_commiton"><big>
-    Ora_CommitOn(conn_ind)</big></a></dt>
+    <dt><a name="ora_commiton" id="ora_commiton"><span style="font-size:1.2em">
+    Ora_CommitOn(conn_ind)</span></a></dt>
 
     <dd>Ora_CommitOff() turns on autocommit (automatic commit of
     every SQL data manipulation statement) on the Oracle connection
     <var>conn_ind</var>.</dd>
 
-    <dt><a name="ora_exec" id="ora_exec"><big>
-    Ora_Exec(cursor_ind)</big></a></dt>
+    <dt><a name="ora_exec" id="ora_exec"><span style="font-size:1.2em">
+    Ora_Exec(cursor_ind)</span></a></dt>
 
     <dd>Ora_Exec() executes the SQL statement associated with
     <var>cursor_ind</var> and prepares storage for select-list
     items. The return value is the number of columns for selects,
     or -1 on error.</dd>
 
-    <dt><a name="ora_fetch" id="ora_fetch"><big>
-    Ora_Fetch(cursor_ind)</big></a></dt>
+    <dt><a name="ora_fetch" id="ora_fetch"><span style="font-size:1.2em">
+    Ora_Fetch(cursor_ind)</span></a></dt>
 
     <dd>Ora_Fetch() retrieves a row from the database. Returns 1 if
     a column was retrieved, 0 if there are no more columns to
     retrieve or -1 on error.</dd>
 
-    <dt><a name="ora_getcolumn" id="ora_getcolumn"><big>
-    Ora_GetColumn(cursor_ind, column)</big></a></dt>
+    <dt><a name="ora_getcolumn" id="ora_getcolumn"><span style="font-size:1.2em">
+    Ora_GetColumn(cursor_ind, column)</span></a></dt>
 
     <dd>Ora_GetColumn() fetches data for a single column in a
     returned row. <a href="ora_fetch">Ora_Fetch()</a> must have
     been called prior to Ora_GetColumn().</dd>
 
-    <dt><a name="ora_logoff" id="ora_logoff"><big>
-    Ora_Logoff(conn_ind)</big></a></dt>
+    <dt><a name="ora_logoff" id="ora_logoff"><span style="font-size:1.2em">
+    Ora_Logoff(conn_ind)</span></a></dt>
 
     <dd>Ora_Logoff() disconnects the logon data area belonging to
     <var>conn_ind</var> and frees used Oracle resources.</dd>
 
-    <dt><a name="ora_logon" id="ora_logon"><big>
-    Ora_Logon(userid, password)</big></a></dt>
+    <dt><a name="ora_logon" id="ora_logon"><span style="font-size:1.2em">
+    Ora_Logon(userid, password)</span></a></dt>
 
     <dd>Ora_Logon() establishes a connection between PHP and an
     Oracle database with the given user id and password. Returns 0
     on success and -1 on failure.</dd>
 
-    <dt><a name="ora_open" id="ora_open"><big>
-    Ora_Open(conn_ind)</big></a></dt>
+    <dt><a name="ora_open" id="ora_open"><span style="font-size:1.2em">
+    Ora_Open(conn_ind)</span></a></dt>
 
     <dd>Ora_Open() opens a cursor in Oracle that maintains state
     information about the processing of a SQL statement. Returns a
     cursor index or -1 on error.</dd>
 
-    <dt><a name="ora_parse" id="ora_parse"><big>
+    <dt><a name="ora_parse" id="ora_parse"><span style="font-size:1.2em">
     Ora_Parse(cursor_ind, sql_statement [,
-    defer])</big></a></dt>
+    defer])</span></a></dt>
 
     <dd>Ora_Parse() parses a SQL statement or PL/SQL block and
     associates it with a cursor. An optional third argument can be
     set to 1 to defer the parse. Returns 0 on success or -1 on
     error.</dd>
 
-    <dt><a name="ora_rollback" id="ora_rollback"><big>
-    Ora_Rollback(cursor_ind)</big></a></dt>
+    <dt><a name="ora_rollback" id="ora_rollback"><span style="font-size:1.2em">
+    Ora_Rollback(cursor_ind)</span></a></dt>
 
     <dd>Ora_Rollback() rolls back the current transaction. See
     <a href="#ora_commit">Ora_Commit()</a> for a definition of the
     current transaction.</dd>
 
-    <dt><a name="ord" id="ord"><big>
-    Ord(arg)</big></a></dt>
+    <dt><a name="ord" id="ord"><span style="font-size:1.2em">
+    Ord(arg)</span></a></dt>
 
     <dd>
       <p>Ord returns the ASCII value of the first character of
       arg.</p>
     </dd>
 
-    <dt><a name="parse_str" id="parse_str"><big>
-    Parse_Str(arg)</big></a></dt>
+    <dt><a name="parse_str" id="parse_str"><span style="font-size:1.2em">
+    Parse_Str(arg)</span></a></dt>
 
     <dd>
       <p>Parse_str takes a string identical to a regular URL
@@ -5821,8 +5821,8 @@ second variable
 </pre>
     </dd>
 
-    <dt><a name="passthru" id="passthru"><big>
-    PassThru(command_string [,return_var])</big></a></dt>
+    <dt><a name="passthru" id="passthru"><span style="font-size:1.2em">
+    PassThru(command_string [,return_var])</span></a></dt>
 
     <dd>
       <p>The PassThru() function is similar to the <a href=
@@ -5839,16 +5839,16 @@ second variable
       images directly.</p>
     </dd>
 
-    <dt><a name="pclose" id="pclose"><big>
-    pclose(fp)</big></a></dt>
+    <dt><a name="pclose" id="pclose"><span style="font-size:1.2em">
+    pclose(fp)</span></a></dt>
 
     <dd>
       <p>Pclose closes a pipe opened using the <a href=
       "#popen">popen()</a> function.</p>
     </dd>
 
-    <dt><a name="pg_close" id="pg_close"><big>
-    pg_Close(connection_id)</big></a></dt>
+    <dt><a name="pg_close" id="pg_close"><span style="font-size:1.2em">
+    pg_Close(connection_id)</span></a></dt>
 
     <dd>
       <p>pg_Close will close down the connection to a Postgres
@@ -5858,9 +5858,9 @@ second variable
       been enabled in PHP.</p>
     </dd>
 
-    <dt><a name="pg_connect" id="pg_connect"><big>
+    <dt><a name="pg_connect" id="pg_connect"><span style="font-size:1.2em">
     $connection = pg_Connect(host, port, options, tty,
-    dbname)</big></a></dt>
+    dbname)</span></a></dt>
 
     <dd>
       <p>pg_Connect opens a connection to a Postgres database. Each
@@ -5875,8 +5875,8 @@ second variable
       been enabled in PHP.</p>
     </dd>
 
-    <dt><a name="pg_dbname" id="pg_dbname"><big>
-    pg_DBname(connection_id)</big></a></dt>
+    <dt><a name="pg_dbname" id="pg_dbname"><span style="font-size:1.2em">
+    pg_DBname(connection_id)</span></a></dt>
 
     <dd>
       <p>pg_DBname will return the name of the database that the
@@ -5886,8 +5886,8 @@ second variable
       been enabled in PHP.</p>
     </dd>
 
-    <dt><a name="pg_errorMessage" id="pg_errorMessage"><big>
-    pg_ErrorMessage(connection_id)</big></a></dt>
+    <dt><a name="pg_errorMessage" id="pg_errorMessage"><span style="font-size:1.2em">
+    pg_ErrorMessage(connection_id)</span></a></dt>
 
     <dd>
       <p>If an error occured on the last database action for which
@@ -5899,8 +5899,8 @@ second variable
       been enabled in PHP.</p>
     </dd>
 
-    <dt><a name="pg_exec" id="pg_exec"><big>$result =
-    pg_Exec(connection_id, query_string)</big></a></dt>
+    <dt><a name="pg_exec" id="pg_exec"><span style="font-size:1.2em">$result =
+    pg_Exec(connection_id, query_string)</span></a></dt>
 
     <dd>
       <p>pg_Exec will send an SQL statement to the Postgres
@@ -5918,8 +5918,8 @@ second variable
       been enabled in PHP.</p>
     </dd>
 
-    <dt><a name="pg_fieldname" id="pg_fieldname"><big>
-    pg_FieldName(result_id, field_number)</big></a></dt>
+    <dt><a name="pg_fieldname" id="pg_fieldname"><span style="font-size:1.2em">
+    pg_FieldName(result_id, field_number)</span></a></dt>
 
     <dd>
       <p>pg_FieldName will return the name of the field occupying
@@ -5930,9 +5930,9 @@ second variable
       been enabled in PHP.</p>
     </dd>
 
-    <dt><a name="pg_fieldprtlen" id="pg_fieldprtlen"><big>
+    <dt><a name="pg_fieldprtlen" id="pg_fieldprtlen"><span style="font-size:1.2em">
     pg_FieldPrtLen(result_id, row_number,
-    field_name)</big></a></dt>
+    field_name)</span></a></dt>
 
     <dd>
       <p>pg_FieldPrtLen will return the actual printed length
@@ -5944,8 +5944,8 @@ second variable
       been enabled in PHP.</p>
     </dd>
 
-    <dt><a name="pg_fieldnum" id="pg_fieldnum"><big>
-    pg_FieldNum(result_id, field_name)</big></a></dt>
+    <dt><a name="pg_fieldnum" id="pg_fieldnum"><span style="font-size:1.2em">
+    pg_FieldNum(result_id, field_name)</span></a></dt>
 
     <dd>
       <p>pg_FieldNum will return the number of the column slot that
@@ -5957,8 +5957,8 @@ second variable
       been enabled in PHP.</p>
     </dd>
 
-    <dt><a name="pg_fieldsize" id="pg_fieldsize"><big>
-    pg_FieldSize(result_id, field_name)</big></a></dt>
+    <dt><a name="pg_fieldsize" id="pg_fieldsize"><span style="font-size:1.2em">
+    pg_FieldSize(result_id, field_name)</span></a></dt>
 
     <dd>
       <p>pg_FieldSize will return the internal storage size (in
@@ -5970,8 +5970,8 @@ second variable
       been enabled in PHP.</p>
     </dd>
 
-    <dt><a name="pg_fieldtype" id="pg_fieldtype"><big>
-    pg_FieldType(result_id, field_number)</big></a></dt>
+    <dt><a name="pg_fieldtype" id="pg_fieldtype"><span style="font-size:1.2em">
+    pg_FieldType(result_id, field_number)</span></a></dt>
 
     <dd>
       <p>pg_FieldType will return a string containing the type name
@@ -5982,8 +5982,8 @@ second variable
       been enabled in PHP.</p>
     </dd>
 
-    <dt><a name="pg_freeresult" id="pg_freeresult"><big>
-    pg_FreeResult(result_id)</big></a></dt>
+    <dt><a name="pg_freeresult" id="pg_freeresult"><span style="font-size:1.2em">
+    pg_FreeResult(result_id)</span></a></dt>
 
     <dd>
       <p>pg_FreeResult only needs to be called if you are worried
@@ -5998,8 +5998,8 @@ second variable
       been enabled in PHP.</p>
     </dd>
 
-    <dt><a name="pg_getlastoid" id="pg_getlastoid"><big>
-    pg_GetLastOid()</big></a></dt>
+    <dt><a name="pg_getlastoid" id="pg_getlastoid"><span style="font-size:1.2em">
+    pg_GetLastOid()</span></a></dt>
 
     <dd>
       <p>pg_GetLastOid can be used to retrieve the Oid assigned to
@@ -6013,8 +6013,8 @@ second variable
       been enabled in PHP.</p>
     </dd>
 
-    <dt><a name="pg_host" id="pg_host"><big>
-    pg_Host(connection_id)</big></a></dt>
+    <dt><a name="pg_host" id="pg_host"><span style="font-size:1.2em">
+    pg_Host(connection_id)</span></a></dt>
 
     <dd>
       <p>pg_Host will return the host name the the given Postgres
@@ -6024,8 +6024,8 @@ second variable
       been enabled in PHP.</p>
     </dd>
 
-    <dt><a name="pg_numfields" id="pg_numfields"><big>
-    pg_NumFields(result_id)</big></a></dt>
+    <dt><a name="pg_numfields" id="pg_numfields"><span style="font-size:1.2em">
+    pg_NumFields(result_id)</span></a></dt>
 
     <dd>
       <p>pg_NumFields will return the number of fields (columns) in
@@ -6037,8 +6037,8 @@ second variable
       been enabled in PHP.</p>
     </dd>
 
-    <dt><a name="pg_numrows" id="pg_numrows"><big>
-    pg_NumRows(result_id)</big></a></dt>
+    <dt><a name="pg_numrows" id="pg_numrows"><span style="font-size:1.2em">
+    pg_NumRows(result_id)</span></a></dt>
 
     <dd>
       <p>pg_NumRows will return the number of rows in a Postgres
@@ -6050,8 +6050,8 @@ second variable
       been enabled in PHP.</p>
     </dd>
 
-    <dt><a name="pg_options" id="pg_options"><big>
-    pg_Options(connection_id)</big></a></dt>
+    <dt><a name="pg_options" id="pg_options"><span style="font-size:1.2em">
+    pg_Options(connection_id)</span></a></dt>
 
     <dd>
       <p>pg_Options will return a string containing the options
@@ -6061,8 +6061,8 @@ second variable
       been enabled in PHP.</p>
     </dd>
 
-    <dt><a name="pg_port" id="pg_port"><big>
-    pg_Port(connection_id)</big></a></dt>
+    <dt><a name="pg_port" id="pg_port"><span style="font-size:1.2em">
+    pg_Port(connection_id)</span></a></dt>
 
     <dd>
       <p>pg_Port will return the port number that the given
@@ -6072,9 +6072,9 @@ second variable
       been enabled in PHP.</p>
     </dd>
 
-    <dt><a name="pg_result" id="pg_result"><big>
+    <dt><a name="pg_result" id="pg_result"><span style="font-size:1.2em">
     pg_Result(result_id, row_number, field
-    name/index)</big></a></dt>
+    name/index)</span></a></dt>
 
     <dd>
       <p>pg_Result will return values from a result identifier
@@ -6099,8 +6099,8 @@ second variable
       been enabled in PHP.</p>
     </dd>
 
-    <dt><a name="pg_tty" id="pg_tty"><big>
-    pg_tty(connection_id)</big></a></dt>
+    <dt><a name="pg_tty" id="pg_tty"><span style="font-size:1.2em">
+    pg_tty(connection_id)</span></a></dt>
 
     <dd>
       <p>pg_tty will return the tty name that server side debugging
@@ -6111,8 +6111,8 @@ second variable
       been enabled in PHP.</p>
     </dd>
 
-    <dt><a name="phpinfo" id="phpinfo"><big>
-    phpInfo()</big></a></dt>
+    <dt><a name="phpinfo" id="phpinfo"><span style="font-size:1.2em">
+    phpInfo()</span></a></dt>
 
     <dd>
       <p>phpInfo prints the same page you get when adding "?info"
@@ -6122,16 +6122,16 @@ second variable
       internal data.</p>
     </dd>
 
-    <dt><a name="phpversion" id="phpversion"><big>
-    phpVersion()</big></a></dt>
+    <dt><a name="phpversion" id="phpversion"><span style="font-size:1.2em">
+    phpVersion()</span></a></dt>
 
     <dd>
       <p>phpVersion returns the version number of PHP/FI currently
       running.</p>
     </dd>
 
-    <dt><a name="popen" id="popen"><big>fp =
-    popen(command,mode)</big></a></dt>
+    <dt><a name="popen" id="popen"><span style="font-size:1.2em">fp =
+    popen(command,mode)</span></a></dt>
 
     <dd>
       <p>Popen opens a pipe to a command and returns a file pointer
@@ -6144,8 +6144,8 @@ second variable
       the <a href="#pclose">pclose()</a> function.</p>
     </dd>
 
-    <dt><a name="pos" id="pos"><big>
-    pos(var)</big></a></dt>
+    <dt><a name="pos" id="pos"><span style="font-size:1.2em">
+    pos(var)</span></a></dt>
 
     <dd>
       <p>The Pos() function returns the numerical position of an
@@ -6154,16 +6154,16 @@ second variable
       handy.</p>
     </dd>
 
-    <dt><a name="pow" id="pow"><big>
-    pow(x,y)</big></a></dt>
+    <dt><a name="pow" id="pow"><span style="font-size:1.2em">
+    pow(x,y)</span></a></dt>
 
     <dd>
       <p>Evaluates x raised to the power of y. See also <a href=
       "#exp">Exp()</a></p>
     </dd>
 
-    <dt><a name="prev" id="prev"><big>
-    Prev(variable)</big></a></dt>
+    <dt><a name="prev" id="prev"><span style="font-size:1.2em">
+    Prev(variable)</span></a></dt>
 
     <dd>
       <p>Prev moves the internal array pointer for the given
@@ -6176,8 +6176,8 @@ second variable
       "#next">Next()</a>.</p>
     </dd>
 
-    <dt><a name="putenv" id="putenv"><big>
-    PutEnv(string)</big></a></dt>
+    <dt><a name="putenv" id="putenv"><span style="font-size:1.2em">
+    PutEnv(string)</span></a></dt>
 
     <dd>
       <p>PutEnv puts the given string in the environment. Not
@@ -6189,8 +6189,8 @@ second variable
       to switch back and forth between the different sockets.</p>
     </dd>
 
-    <dt><a name="quotemeta" id="quotemeta"><big>
-    QuoteMeta(arg)</big></a></dt>
+    <dt><a name="quotemeta" id="quotemeta"><span style="font-size:1.2em">
+    QuoteMeta(arg)</span></a></dt>
 
     <dd>
       <p>QuoteMeta returns a string composed of arg with any
@@ -6198,8 +6198,8 @@ second variable
       backslash.</p>
     </dd>
 
-    <dt><a name="rand" id="rand"><big>
-    Rand()</big></a></dt>
+    <dt><a name="rand" id="rand"><span style="font-size:1.2em">
+    Rand()</span></a></dt>
 
     <dd>
       <p>Rand returns a random number between 0 and RANDMAX.
@@ -6212,8 +6212,8 @@ second variable
       result.</p>
     </dd>
 
-    <dt><a name="readdir" id="readdir"><big>
-    readDir()</big></a></dt>
+    <dt><a name="readdir" id="readdir"><span style="font-size:1.2em">
+    readDir()</span></a></dt>
 
     <dd>
       <p>readDir reads the next entry from the currently open
@@ -6224,8 +6224,8 @@ second variable
       directory before calling this function.</p>
     </dd>
 
-    <dt><a name="readfile" id="readfile"><big>
-    ReadFile(filename)</big></a></dt>
+    <dt><a name="readfile" id="readfile"><span style="font-size:1.2em">
+    ReadFile(filename)</span></a></dt>
 
     <dd>
       <p>$size = ReadFile(Filename) - Reads the file filename and
@@ -6237,15 +6237,15 @@ second variable
       ReadFile is more efficient.</p>
     </dd>
 
-    <dt><a name="readlink" id="readlink"><big>
-    ReadLink(path)</big></a></dt>
+    <dt><a name="readlink" id="readlink"><span style="font-size:1.2em">
+    ReadLink(path)</span></a></dt>
 
     <dd>ReadLink does the same as the readlink C function and
     returns the contents of the symbolic link path or -1 in case of
     error. See also <a href="#linkinfo">LinkInfo</a>.</dd>
 
-    <dt><a name="reg_match" id="reg_match"><big>
-    reg_Match(expr,arg[,regs])</big></a></dt>
+    <dt><a name="reg_match" id="reg_match"><span style="font-size:1.2em">
+    reg_Match(expr,arg[,regs])</span></a></dt>
 
     <dd>
       <p><b>This function has been replaced by the <a href=
@@ -6265,8 +6265,8 @@ second variable
       expression section</a> of this document.</p>
     </dd>
 
-    <dt><a name="reg_replace" id="reg_replace"><big>
-    reg_replace(expr,replace,arg)</big></a></dt>
+    <dt><a name="reg_replace" id="reg_replace"><span style="font-size:1.2em">
+    reg_replace(expr,replace,arg)</span></a></dt>
 
     <dd>
       <p><b>This function has been replaced by the <a href=
@@ -6283,8 +6283,8 @@ second variable
       document.</p>
     </dd>
 
-    <dt><a name="reg_search" id="reg_search"><big>
-    reg_Search(expr,arg[,regs])</big></a></dt>
+    <dt><a name="reg_search" id="reg_search"><span style="font-size:1.2em">
+    reg_Search(expr,arg[,regs])</span></a></dt>
 
     <dd>
       <p><b>This function has been replaced by the <a href=
@@ -6302,16 +6302,16 @@ second variable
       expression section</a> of this document.</p>
     </dd>
 
-    <dt><a name="rename" id="rename"><big>
-    Rename(old,new)</big></a></dt>
+    <dt><a name="rename" id="rename"><span style="font-size:1.2em">
+    Rename(old,new)</span></a></dt>
 
     <dd>
       <p>Rename filename old to new. Similar to the Unix C rename()
       function.</p>
     </dd>
 
-    <dt><a name="reset" id="reset"><big>
-    Reset(variable)</big></a></dt>
+    <dt><a name="reset" id="reset"><span style="font-size:1.2em">
+    Reset(variable)</span></a></dt>
 
     <dd>
       <p>Reset moves the internal array pointer for the given array
@@ -6332,8 +6332,8 @@ second variable
 </pre>
     </dd>
 
-    <dt><a name="return" id="return"><big>
-    return(value)</big></a></dt>
+    <dt><a name="return" id="return"><span style="font-size:1.2em">
+    return(value)</span></a></dt>
 
     <dd>
       <p>Return exits the current function call and returns the
@@ -6342,8 +6342,8 @@ second variable
       information.</p>
     </dd>
 
-    <dt><a name="rewind" id="rewind"><big>
-    rewind($fd)</big></a></dt>
+    <dt><a name="rewind" id="rewind"><span style="font-size:1.2em">
+    rewind($fd)</span></a></dt>
 
     <dd>
       <p>rewind() resets a file pointer identified by the $fd
@@ -6353,8 +6353,8 @@ second variable
       "#ftell">ftell()</a> and <a href="#fseek">fseek()</a>.</p>
     </dd>
 
-    <dt><a name="rewinddir" id="rewinddir"><big>
-    rewindDir()</big></a></dt>
+    <dt><a name="rewinddir" id="rewinddir"><span style="font-size:1.2em">
+    rewindDir()</span></a></dt>
 
     <dd>
       <p>rewindDir moves the current directory pointer back to the
@@ -6363,8 +6363,8 @@ second variable
       calling this function.</p>
     </dd>
 
-    <dt><a name="rmdir" id="rmdir"><big>
-    RmDir(dir)</big></a></dt>
+    <dt><a name="rmdir" id="rmdir"><span style="font-size:1.2em">
+    RmDir(dir)</span></a></dt>
 
     <dd>
       <p>RmDir() removes the given directory. See the <a href=
@@ -6372,8 +6372,8 @@ second variable
       files.</p>
     </dd>
 
-    <dt><a name="setcookie" id="setcookie"><big>
-    SetCookie(name,value,expire,path,domain,secure)</big></a></dt>
+    <dt><a name="setcookie" id="setcookie"><span style="font-size:1.2em">
+    SetCookie(name,value,expire,path,domain,secure)</span></a></dt>
 
     <dd>
       <p>SetCookie() defines a cookie to be sent along with the
@@ -6404,8 +6404,8 @@ second variable
     </dd>
 
     <dt><a name="seterrorreporting" id=
-    "seterrorreporting"><big>
-    SetErrorReporting(arg)</big></a></dt>
+    "seterrorreporting"><span style="font-size:1.2em">
+    SetErrorReporting(arg)</span></a></dt>
 
     <dd>
       <p>SetErrorReporting sets the current error reporting state
@@ -6418,8 +6418,8 @@ second variable
       information.</p>
     </dd>
 
-    <dt><a name="setlogging" id="setlogging"><big>
-    SetLogging(arg)</big></a></dt>
+    <dt><a name="setlogging" id="setlogging"><span style="font-size:1.2em">
+    SetLogging(arg)</span></a></dt>
 
     <dd>
       <p>SetLogging() either enables or disables the logging of
@@ -6427,8 +6427,8 @@ second variable
       logging will be enabled, if zero, disabled.</p>
     </dd>
 
-    <dt><a name="setshowinfo" id="setshowinfo"><big>
-    SetShowInfo(arg)</big></a></dt>
+    <dt><a name="setshowinfo" id="setshowinfo"><span style="font-size:1.2em">
+    SetShowInfo(arg)</span></a></dt>
 
     <dd>
       <p>SetShowInfo() either enables or disables the information
@@ -6437,8 +6437,8 @@ second variable
       zero, disabled.</p>
     </dd>
 
-    <dt><a name="settype" id="settype"><big>
-    SetType(variable,type)</big></a></dt>
+    <dt><a name="settype" id="settype"><span style="font-size:1.2em">
+    SetType(variable,type)</span></a></dt>
 
     <dd>
       <p>SetType sets the type of a variable. The type argument is
@@ -6446,30 +6446,30 @@ second variable
       <a href="#gettype">GetType()</a> function.</p>
     </dd>
 
-    <dt><a name="shl" id="shl"><big>
-    shl(n,b)</big></a></dt>
+    <dt><a name="shl" id="shl"><span style="font-size:1.2em">
+    shl(n,b)</span></a></dt>
 
     <dd>
       <p>Shift the value <b>n</b> left <b>b</b> bits.</p>
     </dd>
 
-    <dt><a name="shr" id="shr"><big>
-    shr(n,b)</big></a></dt>
+    <dt><a name="shr" id="shr"><span style="font-size:1.2em">
+    shr(n,b)</span></a></dt>
 
     <dd>
       <p>Shift the value <b>n</b> right <b>b</b> bits.</p>
     </dd>
 
-    <dt><a name="sin" id="sin"><big>
-    Sin(arg)</big></a></dt>
+    <dt><a name="sin" id="sin"><span style="font-size:1.2em">
+    Sin(arg)</span></a></dt>
 
     <dd>
       <p>Sin returns the sine of arg in radians. See also <a href=
       "#cos">Cos()</a> and <a href="#tan">Tan()</a></p>
     </dd>
 
-    <dt><a name="sleep" id="sleep"><big>
-    Sleep(secs)</big></a></dt>
+    <dt><a name="sleep" id="sleep"><span style="font-size:1.2em">
+    Sleep(secs)</span></a></dt>
 
     <dd>
       <p>Sleep will delay for secs seconds. Similar to the Unix C
@@ -6477,8 +6477,8 @@ second variable
       function.</p>
     </dd>
 
-    <dt><a name="solid_close" id="solid_close"><big>
-    Solid_Close(connection_id)</big></a></dt>
+    <dt><a name="solid_close" id="solid_close"><span style="font-size:1.2em">
+    Solid_Close(connection_id)</span></a></dt>
 
     <dd>
       <p>Solid_Close will close down the connection to the Solid
@@ -6488,9 +6488,9 @@ second variable
       enabled in PHP.</p>
     </dd>
 
-    <dt><a name="solid_connect" id="solid_connect"><big>
+    <dt><a name="solid_connect" id="solid_connect"><span style="font-size:1.2em">
     $connection = Solid_Connect(data source name, username,
-    password)</big></a></dt>
+    password)</span></a></dt>
 
     <dd>
       <p>Solid_Connect opens a connection to a Solid server. Each
@@ -6506,9 +6506,9 @@ second variable
       enabled in PHP.</p>
     </dd>
 
-    <dt><a name="solid_exec" id="solid_exec"><big>
+    <dt><a name="solid_exec" id="solid_exec"><span style="font-size:1.2em">
     $result = Solid_Exec(connection_id,
-    query_string)</big></a></dt>
+    query_string)</span></a></dt>
 
     <dd>
       <p>Solid_Exec will send an SQL statement to the Solid server
@@ -6526,8 +6526,8 @@ second variable
       enabled in PHP.</p>
     </dd>
 
-    <dt><a name="solid_fetchrow" id="solid_fetchrow"><big>
-    Solid_FetchRow(result_id)</big></a></dt>
+    <dt><a name="solid_fetchrow" id="solid_fetchrow"><span style="font-size:1.2em">
+    Solid_FetchRow(result_id)</span></a></dt>
 
     <dd>
       <p>Solid_FetchRow fetches a row of the data that was returned
@@ -6544,8 +6544,8 @@ second variable
       enabled in PHP.</p>
     </dd>
 
-    <dt><a name="solid_fieldname" id="solid_fieldname"><big>
-    Solid_FieldName(result_id, field_number)</big></a></dt>
+    <dt><a name="solid_fieldname" id="solid_fieldname"><span style="font-size:1.2em">
+    Solid_FieldName(result_id, field_number)</span></a></dt>
 
     <dd>
       <p>Solid_FieldName will return the name of the field
@@ -6556,8 +6556,8 @@ second variable
       enabled in PHP.</p>
     </dd>
 
-    <dt><a name="solid_fieldnum" id="solid_fieldnum"><big>
-    Solid_FieldNum(result_id, field_name)</big></a></dt>
+    <dt><a name="solid_fieldnum" id="solid_fieldnum"><span style="font-size:1.2em">
+    Solid_FieldNum(result_id, field_name)</span></a></dt>
 
     <dd>
       <p>Solid_FieldNum will return the number of the column slot
@@ -6570,7 +6570,7 @@ second variable
     </dd>
 
     <dt><a name="solid_freeresult" id=
-    "solid_freeresult"><big>Solid_FreeResult(result_id)</big></a></dt>
+    "solid_freeresult"><span style="font-size:1.2em">Solid_FreeResult(result_id)</span></a></dt>
 
     <dd>
       <p>Solid_FreeResult only needs to be called if you are
@@ -6585,8 +6585,8 @@ second variable
       enabled in PHP.</p>
     </dd>
 
-    <dt><a name="solid_numfields" id="solid_numfields"><big>
-    Solid_NumFields(result_id)</big></a></dt>
+    <dt><a name="solid_numfields" id="solid_numfields"><span style="font-size:1.2em">
+    Solid_NumFields(result_id)</span></a></dt>
 
     <dd>
       <p>Solid_NumFields will return the number of fields (columns)
@@ -6598,8 +6598,8 @@ second variable
       enabled in PHP.</p>
     </dd>
 
-    <dt><a name="solid_numrows" id="solid_numrows"><big>
-    Solid_NumRows(result_id)</big></a></dt>
+    <dt><a name="solid_numrows" id="solid_numrows"><span style="font-size:1.2em">
+    Solid_NumRows(result_id)</span></a></dt>
 
     <dd>
       <p>Solid_NumRows will return the number of rows in a Solid
@@ -6639,8 +6639,8 @@ second variable
       enabled in PHP.</p>
     </dd>
 
-    <dt><a name="solid_result" id="solid_result"><big>
-    Solid_Result(result_id, field name/index)</big></a></dt>
+    <dt><a name="solid_result" id="solid_result"><span style="font-size:1.2em">
+    Solid_Result(result_id, field name/index)</span></a></dt>
 
     <dd>
       <p>Solid_Result will return values from a result identifier
@@ -6653,8 +6653,8 @@ second variable
       enabled in PHP.</p>
     </dd>
 
-    <dt><a name="sort" id="sort"><big>
-    Sort(array)</big></a></dt>
+    <dt><a name="sort" id="sort"><span style="font-size:1.2em">
+    Sort(array)</span></a></dt>
 
     <dd>
       <p>Sort is used to sort a PHP array in ascending order. To
@@ -6668,8 +6668,8 @@ second variable
       "#asort">ASort()</a> function.</p>
     </dd>
 
-    <dt><a name="soundex" id="soundex"><big>
-    Soundex(string)</big></a></dt>
+    <dt><a name="soundex" id="soundex"><span style="font-size:1.2em">
+    Soundex(string)</span></a></dt>
 
     <dd>
       <p>This function takes a string argument and returns the
@@ -6694,8 +6694,8 @@ second variable
 </pre>
     </dd>
 
-    <dt><a name="sprintf" id="sprintf"><big>
-    Sprintf(format,arg [,arg,arg,arg,arg])</big></a></dt>
+    <dt><a name="sprintf" id="sprintf"><span style="font-size:1.2em">
+    Sprintf(format,arg [,arg,arg,arg,arg])</span></a></dt>
 
     <dd>
       <p>Sprintf returns the string created by the formatted output
@@ -6712,15 +6712,15 @@ second variable
       in the format string.</p>
     </dd>
 
-    <dt><a name="sqrt" id="sqrt"><big>
-    Sqrt(arg)</big></a></dt>
+    <dt><a name="sqrt" id="sqrt"><span style="font-size:1.2em">
+    Sqrt(arg)</span></a></dt>
 
     <dd>
       <p>Sqrt returns the square root of arg.</p>
     </dd>
 
-    <dt><a name="srand" id="srand"><big>
-    Srand(integer)</big></a></dt>
+    <dt><a name="srand" id="srand"><span style="font-size:1.2em">
+    Srand(integer)</span></a></dt>
 
     <dd>
       <p>Srand seeds the random number generator. This function
@@ -6735,8 +6735,8 @@ second variable
 </pre>
     </dd>
 
-    <dt><a name="strchr" id="strchr"><big>
-    strchr(string,arg)</big></a></dt>
+    <dt><a name="strchr" id="strchr"><span style="font-size:1.2em">
+    strchr(string,arg)</span></a></dt>
 
     <dd>
       <p>strchr and <a href="#strstr">strstr</a> are actually
@@ -6749,8 +6749,8 @@ second variable
       <code>"an example string"</code>.</p>
     </dd>
 
-    <dt><a name="strtr" id="strtr"><big>
-    strtr(input,set1,set2)</big></a></dt>
+    <dt><a name="strtr" id="strtr"><span style="font-size:1.2em">
+    strtr(input,set1,set2)</span></a></dt>
 
     <dd>strtr() translates each character of "string" that is in
     "set1" to the corresponding character in "set2". Characters not
@@ -6760,23 +6760,23 @@ second variable
     one of "set1" or "set2" is longer, longer "set?" is truncated
     to length of shorter "set?".</dd>
 
-    <dt><a name="stripslashes" id="stripslashes"><big>
-    StripSlashes(arg)</big></a></dt>
+    <dt><a name="stripslashes" id="stripslashes"><span style="font-size:1.2em">
+    StripSlashes(arg)</span></a></dt>
 
     <dd>
       <p>StripSlashes unescapes the string argument. See also
       <a href="#addslashes">AddSlashes()</a>.</p>
     </dd>
 
-    <dt><a name="strlen" id="strlen"><big>
-    strlen(string)</big></a></dt>
+    <dt><a name="strlen" id="strlen"><span style="font-size:1.2em">
+    strlen(string)</span></a></dt>
 
     <dd>
       <p>strlen returns the length of the string.</p>
     </dd>
 
-    <dt><a name="strrchr" id="strrchr"><big>
-    strrchr(string,arg)</big></a></dt>
+    <dt><a name="strrchr" id="strrchr"><span style="font-size:1.2em">
+    strrchr(string,arg)</span></a></dt>
 
     <dd>
       <p>strrchr will search for a single character starting at the
@@ -6785,8 +6785,8 @@ second variable
       character was found and an empty string if it wasn't.</p>
     </dd>
 
-    <dt><a name="strstr" id="strstr"><big>
-    strstr(string,arg)</big></a></dt>
+    <dt><a name="strstr" id="strstr"><span style="font-size:1.2em">
+    strstr(string,arg)</span></a></dt>
 
     <dd>
       <p>strstr and <a href="#strchr">strchr</a> are actually
@@ -6799,8 +6799,8 @@ second variable
       <code>"an example string"</code>.</p>
     </dd>
 
-    <dt><a name="strtok" id="strtok"><big>
-    strtok(string,arg)</big></a></dt>
+    <dt><a name="strtok" id="strtok"><span style="font-size:1.2em">
+    strtok(string,arg)</span></a></dt>
 
     <dd>
       <p>strtok is used to tokenize a string. That is, if you have
@@ -6829,24 +6829,24 @@ second variable
       characters in the argument are found.</p>
     </dd>
 
-    <dt><a name="strtolower" id="strtolower"><big>
-    strtolower(string)</big></a></dt>
+    <dt><a name="strtolower" id="strtolower"><span style="font-size:1.2em">
+    strtolower(string)</span></a></dt>
 
     <dd>
       <p>strtolower converts the string argument to all lower case
       characters.</p>
     </dd>
 
-    <dt><a name="strtoupper" id="strtoupper"><big>
-    strtoupper(string)</big></a></dt>
+    <dt><a name="strtoupper" id="strtoupper"><span style="font-size:1.2em">
+    strtoupper(string)</span></a></dt>
 
     <dd>
       <p>strtoupper converts the string argument to all upper case
       characters.</p>
     </dd>
 
-    <dt><a name="strval" id="strval"><big>
-    strval(variable)</big></a></dt>
+    <dt><a name="strval" id="strval"><span style="font-size:1.2em">
+    strval(variable)</span></a></dt>
 
     <dd>
       <p>strval returns the string value of the variable. See also
@@ -6854,8 +6854,8 @@ second variable
       "#doubleval">doubleval()</a> functions.</p>
     </dd>
 
-    <dt><a name="substr" id="substr"><big>substr(string,
-    start, length)</big></a></dt>
+    <dt><a name="substr" id="substr"><span style="font-size:1.2em">substr(string,
+    start, length)</span></a></dt>
 
     <dd>
       <p>substr returns a part of the given string. The start
@@ -6866,16 +6866,16 @@ second variable
     </dd>
 
     <dt><a name="sybsql_checkconnect" id=
-    "sybsql_checkconnect"><big>
-    sybSQL_CheckConnect()</big></a></dt>
+    "sybsql_checkconnect"><span style="font-size:1.2em">
+    sybSQL_CheckConnect()</span></a></dt>
 
     <dd>
       <p>This function returns 1 if the connection to the database
       has been established and 0 otherwise.</p>
     </dd>
 
-    <dt><a name="sybsql_dbuse" id="sybsql_dbuse"><big>
-    sybSQL_DBuse(database)</big></a></dt>
+    <dt><a name="sybsql_dbuse" id="sybsql_dbuse"><span style="font-size:1.2em">
+    sybSQL_DBuse(database)</span></a></dt>
 
     <dd>
       <p>This function issues a Sybase Transact-SQL <b>use</b>
@@ -6886,8 +6886,8 @@ second variable
       <p>The function returns 1 on success and 0 on failure.</p>
     </dd>
 
-    <dt><a name="sybsql_connect" id="sybsql_connect"><big>
-    sybSQL_Connect()</big></a></dt>
+    <dt><a name="sybsql_connect" id="sybsql_connect"><span style="font-size:1.2em">
+    sybSQL_Connect()</span></a></dt>
 
     <dd>
       <p>This function opens a network connection to the sybase
@@ -6916,8 +6916,8 @@ second variable
       <p>The function returns 1 on success and 0 on failure.</p>
     </dd>
 
-    <dt><a name="sybsql_exit" id="sybsql_exit"><big>
-    sybSQL_Exit()</big></a></dt>
+    <dt><a name="sybsql_exit" id="sybsql_exit"><span style="font-size:1.2em">
+    sybSQL_Exit()</span></a></dt>
 
     <dd>
       <p>This function forces a Sybase connection to be shut down.
@@ -6927,7 +6927,7 @@ second variable
     </dd>
 
     <dt><a name="sybsql_fieldname" id=
-    "sybsql_fieldname"><big>sybSQL_Fieldname(index)</big></a></dt>
+    "sybsql_fieldname"><span style="font-size:1.2em">sybSQL_Fieldname(index)</span></a></dt>
 
     <dd>
       <p>This function returns the field name of a regular result
@@ -6939,8 +6939,8 @@ second variable
       function returns an empty string ("").</p>
     </dd>
 
-    <dt><a name="sybsql_getfield" id="sybsql_getfield"><big>
-    sybSQL_GetField(field)</big></a></dt>
+    <dt><a name="sybsql_getfield" id="sybsql_getfield"><span style="font-size:1.2em">
+    sybSQL_GetField(field)</span></a></dt>
 
     <dd>
       <p>This function gets the value of a specific column of the
@@ -6957,8 +6957,8 @@ second variable
       string ("").</p>
     </dd>
 
-    <dt><a name="sybsql_isrow" id="sybsql_isrow"><big>
-    sybSQL_IsRow()</big></a></dt>
+    <dt><a name="sybsql_isrow" id="sybsql_isrow"><span style="font-size:1.2em">
+    sybSQL_IsRow()</span></a></dt>
 
     <dd>
       <p>This function indicates if the current SQL command
@@ -6968,8 +6968,8 @@ second variable
       rows and 0 if the command didn't return any rows.</p>
     </dd>
 
-    <dt><a name="sybsql_nextrow" id="sybsql_nextrow"><big>
-    sybSQL_NextRow()</big></a></dt>
+    <dt><a name="sybsql_nextrow" id="sybsql_nextrow"><span style="font-size:1.2em">
+    sybSQL_NextRow()</span></a></dt>
 
     <dd>
       <p>This function increments the row pointer to the next
@@ -6981,7 +6981,7 @@ second variable
     </dd>
 
     <dt><a name="sybsql_numfields" id=
-    "sybsql_numfields"><big>sybSQL_NumFields()</big></a></dt>
+    "sybsql_numfields"><span style="font-size:1.2em">sybSQL_NumFields()</span></a></dt>
 
     <dd>
       <p>This function returns the number of fields in a current
@@ -6992,8 +6992,8 @@ second variable
       0.</p>
     </dd>
 
-    <dt><a name="sybsql_numrows" id="sybsql_numrows"><big>
-    sybSQL_NumRows()</big></a></dt>
+    <dt><a name="sybsql_numrows" id="sybsql_numrows"><span style="font-size:1.2em">
+    sybSQL_NumRows()</span></a></dt>
 
     <dd>
       <p>This function returns the number of rows in the current
@@ -7010,8 +7010,8 @@ second variable
       will return 0.</p>
     </dd>
 
-    <dt><a name="sybsql_query" id="sybsql_query"><big>
-    sybSQL_Query()</big></a></dt>
+    <dt><a name="sybsql_query" id="sybsql_query"><span style="font-size:1.2em">
+    sybSQL_Query()</span></a></dt>
 
     <dd>
       <p>This function submits a Sybase SQL query request to the
@@ -7023,8 +7023,8 @@ second variable
       successfully and returns 0 if the request fails.</p>
     </dd>
 
-    <dt><a name="sybsql_result" id="sybsql_result"><big>
-    sybSQL_Result(string)</big></a></dt>
+    <dt><a name="sybsql_result" id="sybsql_result"><span style="font-size:1.2em">
+    sybSQL_Result(string)</span></a></dt>
 
     <dd>
       <p>This function prints specific fields of the current result
@@ -7074,8 +7074,8 @@ second variable
     </dd>
 
     <dt><a name="sybsql_result_all" id=
-    "sybsql_result_all"><big>
-    sybSQL_Result_All()</big></a></dt>
+    "sybsql_result_all"><span style="font-size:1.2em">
+    sybSQL_Result_All()</span></a></dt>
 
     <dd>
       <p>This function prints all rows in the current result
@@ -7085,8 +7085,8 @@ second variable
       there are any column headings in the output.</p>
     </dd>
 
-    <dt><a name="sybsql_seek" id="sybsql_seek"><big>
-    sybSQL_Seek(row)</big></a></dt>
+    <dt><a name="sybsql_seek" id="sybsql_seek"><span style="font-size:1.2em">
+    sybSQL_Seek(row)</span></a></dt>
 
     <dd>
       <p>This function sets the requested row number as the current
@@ -7101,16 +7101,16 @@ second variable
       function can be used for this purpose.</p>
     </dd>
 
-    <dt><a name="symlink" id="symlink"><big>
-    Symlink(target,link)</big></a></dt>
+    <dt><a name="symlink" id="symlink"><span style="font-size:1.2em">
+    Symlink(target,link)</span></a></dt>
 
     <dd>
       <p>Symlink() creates a symbolic link. See the <a href=
       "#link">Link()</a> function to create hard links.</p>
     </dd>
 
-    <dt><a name="syslog" id="syslog"><big>
-    Syslog(level,message)</big></a></dt>
+    <dt><a name="syslog" id="syslog"><span style="font-size:1.2em">
+    Syslog(level,message)</span></a></dt>
 
     <dd>
       <p>Syslog() logs messages to the system using UNIX's
@@ -7120,8 +7120,8 @@ second variable
       "#closelog">CloseLog()</a>.</p>
     </dd>
 
-    <dt><a name="system" id="system"><big>
-    System(command_string [,return_var])</big></a></dt>
+    <dt><a name="system" id="system"><span style="font-size:1.2em">
+    System(command_string [,return_var])</span></a></dt>
 
     <dd>
       <p>System is just like the C <em>system()</em> command in
@@ -7142,16 +7142,16 @@ second variable
       "#exec">Exec</a> function.</p>
     </dd>
 
-    <dt><a name="tan" id="tan"><big>
-    Tan(arg)</big></a></dt>
+    <dt><a name="tan" id="tan"><span style="font-size:1.2em">
+    Tan(arg)</span></a></dt>
 
     <dd>
       <p>Sin returns the tangent of arg in radians. See also
       <a href="#sin">Sin()</a> and <a href="#cos">Cos()</a></p>
     </dd>
 
-    <dt><a name="tempnam" id="tempnam"><big>
-    TempNam(path, prefix)</big></a></dt>
+    <dt><a name="tempnam" id="tempnam"><span style="font-size:1.2em">
+    TempNam(path, prefix)</span></a></dt>
 
     <dd>
       <p>TempNam returns a unique filename located in the directory
@@ -7159,8 +7159,8 @@ second variable
       identical to the Unix C tempnam() function.</p>
     </dd>
 
-    <dt><a name="time" id="time"><big>
-    Time()</big></a></dt>
+    <dt><a name="time" id="time"><span style="font-size:1.2em">
+    Time()</span></a></dt>
 
     <dd>
       <p>Time simply returns the current local time in seconds
@@ -7170,8 +7170,8 @@ second variable
       "#microtime">Microtime</a> function.</p>
     </dd>
 
-    <dt><a name="umask" id="umask"><big>
-    Umask([mask])</big></a></dt>
+    <dt><a name="umask" id="umask"><span style="font-size:1.2em">
+    Umask([mask])</span></a></dt>
 
     <dd>
       <p>Umask(<i>mask</i>) sets PHP's umask to <i>mask</i> &amp;
@@ -7183,8 +7183,8 @@ second variable
       returns the current umask.</p>
     </dd>
 
-    <dt><a name="uniqid" id="uniqid"><big>
-    UniqId()</big></a></dt>
+    <dt><a name="uniqid" id="uniqid"><span style="font-size:1.2em">
+    UniqId()</span></a></dt>
 
     <dd>
       <p>UniqId returns a prefixed unique identifier based on
@@ -7195,8 +7195,8 @@ second variable
       long.</p>
     </dd>
 
-    <dt><a name="unlink" id="unlink"><big>
-    Unlink(filename)</big></a></dt>
+    <dt><a name="unlink" id="unlink"><span style="font-size:1.2em">
+    Unlink(filename)</span></a></dt>
 
     <dd>
       <p>Unlink deletes the given filename. Similar to the Unix C
@@ -7204,8 +7204,8 @@ second variable
       function for removing directories.</p>
     </dd>
 
-    <dt><a name="unset" id="unset"><big>
-    UnSet($var)</big></a></dt>
+    <dt><a name="unset" id="unset"><span style="font-size:1.2em">
+    UnSet($var)</span></a></dt>
 
     <dd>
       <p>UnSet undefines the given variable. In the case of an
@@ -7213,8 +7213,8 @@ second variable
       may also be unset.</p>
     </dd>
 
-    <dt><a name="urldecode" id="urldecode"><big>
-    UrlDecode(arg)</big></a></dt>
+    <dt><a name="urldecode" id="urldecode"><span style="font-size:1.2em">
+    UrlDecode(arg)</span></a></dt>
 
     <dd>
       <p>UrlDecode decodes a string encoded with the <a href=
@@ -7225,8 +7225,8 @@ second variable
       included.</p>
     </dd>
 
-    <dt><a name="urlencode" id="urlencode"><big>
-    UrlEncode(arg)</big></a></dt>
+    <dt><a name="urlencode" id="urlencode"><span style="font-size:1.2em">
+    UrlEncode(arg)</span></a></dt>
 
     <dd>
       <p>UrlEncode encodes any characters from arg which are not
@@ -7235,8 +7235,8 @@ second variable
       returned.</p>
     </dd>
 
-    <dt><a name="usleep" id="usleep"><big>
-    USleep(microsecs)</big></a></dt>
+    <dt><a name="usleep" id="usleep"><span style="font-size:1.2em">
+    USleep(microsecs)</span></a></dt>
 
     <dd>
       <p>Sleep will delay for the given number of microseconds.
@@ -7244,8 +7244,8 @@ second variable
       <a href="#sleep">Sleep()</a> function.</p>
     </dd>
 
-    <dt><a name="virtual" id="virtual"><big>
-    Virtual(filename)</big></a></dt>
+    <dt><a name="virtual" id="virtual"><span style="font-size:1.2em">
+    Virtual(filename)</span></a></dt>
 
     <dd>
       <p>Virtual is an Apache-specific function which is equivalent
