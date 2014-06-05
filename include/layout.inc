@@ -14,24 +14,19 @@ ini_set('highlight.html',    'html');
 // Highlight PHP code
 function highlight_php($code, $return = FALSE)
 {
-    // Using OB, as highlight_string() only supports
-    // returning the result from 4.2.0
-    ob_start();
-    highlight_string($code);
-    $highlighted = ob_get_contents();
-    ob_end_clean();
+	$highlighted = highlight_string($code, TRUE);
 
-    // This should eventually be a php_syntax_check() call when we move to PHP5
-    // But use this ugly hack for now to avoid code snippets with bad syntax screwing up the highlighter
-    if(strstr($highlighted,"include/layout.inc</b>")) $highlighted = '<span class="html">'.nl2br(htmlentities($code))."</span>";
+	// Use this ugly hack for now to avoid code snippets with bad syntax screwing up the highlighter
+    if(strstr($highlighted, "include/layout.inc</b>")) {
+		$highlighted = '<span class="html">'. nl2br(htmlentities($code, ENT_HTML5), FALSE) ."</span>";
+	}
 
     // Fix output to use CSS classes and wrap well
     $highlighted = '<div class="phpcode">' . str_replace(
         array(
             '&nbsp;',
             '<br>',
-            '<font color="',        // for PHP 4
-            '<span style="color: ', // from PHP 5.0.0RC1
+            '<span style="color: ',
             '</font>',
             "\n ",
             '  ',
@@ -40,7 +35,6 @@ function highlight_php($code, $return = FALSE)
         array(
             ' ',
             "<br>\n",
-            '<span class="',
             '<span class="',
             '</span>',
             "\n&nbsp;",
@@ -62,7 +56,6 @@ function commonHeader($title) { site_header($title); }
 function commonFooter() { site_footer(); }
 
 // Resize the image using the output of make_image()
-// (considering possible HTML/XHTML image tag endings)
 function resize_image($img, $width = 1, $height = 1)
 {
     // Drop width and height values from image if available
