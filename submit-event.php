@@ -240,7 +240,7 @@ if ($process && count($errors) === 0) {
   <th class="subr">Email</th>
   <td>
    <input type="text" name="email" size="40" maxlength="128" class="max" value="<?php echo htmlentities($_POST['email'], ENT_QUOTES | ENT_IGNORE, 'UTF-8')?>"><br>
-   <small>This email address is only used to contact you about the listing, it will not displayed along with the listing.</small>
+   <span style="font-size:0.8em">This email address is only used to contact you about the listing, it will not displayed along with the listing.</span>
   </td>
  </tr>
  <tr>

@@ -273,7 +273,7 @@ else {
 
 
 <section id="whatnottoenter" class='clearfix'>
-<h3>Thou shall not enter! <small>(No, really, don't)</small></h3>
+<h3>Thou shall not enter! <span style="font-size:0.8em">(No, really, don't)</span></h3>
 <div class='columns'>
 <ul>
   <li><strong>Bug reports &amp; Missing documentation</strong>

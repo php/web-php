@@ -377,7 +377,7 @@ foreach ($purposes as $i => $p) { ?>
 <td><input type="checkbox" name="guidelines" value="1">Check the box if you agree.</td>
 </tr>
 <tr>
- <th class="subr">User ID:<br> <small>(single word, lower case)</small></th>
+ <th class="subr">User ID:<br> <span style="font-size:0.8em">(single word, lower case)</span></th>
  <td><input type="text" size="10" name="id"
       class="max" value="<?php if (isset($_POST['id'])) echo clean($_POST['id']);?>"></td>
 </tr>

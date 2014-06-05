@@ -200,7 +200,7 @@ if (count($found_formats) == 0) {
 
                 // Sizes required to be printed out (URL parameter or preferred language)
                 if (isset($_GET['sizes']) || $preflang) {
-                    echo "<br><small>Size: $fileinfo[1]Kb<br>Date: $fileinfo[2]</small>";
+                    echo "<br><span style="font-size:0.8em">Size: $fileinfo[1]Kb<br>Date: $fileinfo[2]</span>";
                 }
             }
 
