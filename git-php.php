@@ -256,7 +256,7 @@ EOT;
  to participate in any discussion your patch generates! Your patch may
  not get noticed the first time. Make sure that when you send your patch, you
  explain what it does. Make sure you use a clear subject when sending your
- patch (you might even want to prefix it with <tt>"[PATCH]"</tt>). If nobody
+ patch (you might even want to prefix it with <code>"[PATCH]"</code>). If nobody
  seems to take notice after a few days, you might want to try resubmitting it.
  Your original message might have gotten missed because of another heated
  discussion.

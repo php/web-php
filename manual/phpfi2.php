@@ -54,10 +54,10 @@ when it is bad, it is better than nothing.
       data</a>
 
       <ul>
-        <li><a href="#selmul"><tt>SELECT MULTIPLE</tt> and
+        <li><a href="#selmul"><code>SELECT MULTIPLE</code> and
         PHP</a></li>
 
-        <li><a href="#imagecoord"><tt>IMAGE SUBMIT</tt> and
+        <li><a href="#imagecoord"><code>IMAGE SUBMIT</code> and
         PHP</a></li>
       </ul>
     </li>
@@ -268,7 +268,7 @@ when it is bad, it is better than nothing.
     <dd>
       <p><em><strong>Step 1.</strong></em></p>
 
-      <p>Run the install program: <tt>./install</tt></p>
+      <p>Run the install program: <code>./install</code></p>
 
       <p>You will be asked a number of questions. If you do not
       understand what is being asked, simply hit return. The
@@ -277,19 +277,19 @@ when it is bad, it is better than nothing.
       your configuration and log files however. Choose any
       directory to which the httpd (usually "nobody") has write
       privileges. You may create this directory manually somewhere
-      and simply <strong><tt>chown nobody
-      directory</tt></strong>.</p>
+      and simply <strong><code>chown nobody
+      directory</code></strong>.</p>
 
       <p><em><strong>Step 2.</strong></em></p>
 
-      <p>Go into the src directory: <tt>cd src</tt></p>
+      <p>Go into the src directory: <code>cd src</code></p>
 
       <p>Have a look at the php.h file. There are a number of
       compile-time options that can be set here.</p>
 
       <p><em><strong>Step 3.</strong></em></p>
 
-      <p>type: <tt>make</tt></p>
+      <p>type: <code>make</code></p>
 
       <p>This will create the actual executable program file named
       <em>php.cgi</em> by default, or if you are installing the
@@ -302,7 +302,7 @@ when it is bad, it is better than nothing.
       cgi-bin directory. If you do not have access to do this and
       wish to install it in your own personal directory, you may do
       so, but you should set the setuid bit on the executable with:
-      <tt>chmod u+s /path/php.cgi</tt></p>
+      <code>chmod u+s /path/php.cgi</code></p>
 
       <p>If you do not make set the setuid bit on the binary then
       any files created by the binary will be owned by the user id
@@ -319,7 +319,7 @@ when it is bad, it is better than nothing.
       line which was produced at the end of <strong>Step
       3</strong>. And add:</p>
 
-      <p><tt><strong>Module php_module mod_php.o</strong></tt></p>
+      <p><code><strong>Module php_module mod_php.o</strong></code></p>
 
       <p>to the very end of the file. Then type:
       <strong>./Configure</strong> and then <strong>make</strong>
@@ -328,8 +328,8 @@ when it is bad, it is better than nothing.
       <p>Next you need to edit your Apache conf/srm.conf file and
       add a line like:</p>
 
-      <p><tt><strong>AddType application/x-httpd-php
-      .phtml</strong></tt></p>
+      <p><code><strong>AddType application/x-httpd-php
+      .phtml</strong></code></p>
 
       <p>This defines a new MIME, application/x-httpd-php, which
       will trigger the PHP module to parse any file ending with the
@@ -354,7 +354,7 @@ when it is bad, it is better than nothing.
       works by entering a URL similar to the following in your
       browser:</p>
 
-      <p><tt>http://your.site.domain/cgi-bin/php.cgi</tt></p>
+      <p><code>http://your.site.domain/cgi-bin/php.cgi</code></p>
 
       <p>This should show you a page which contains the version
       number along with various other useful information.</p>
@@ -372,7 +372,7 @@ when it is bad, it is better than nothing.
       ie.</p>
 
       <p>
-      <tt>http://your.site.domain/cgi-bin/php.cgi/path/file.html</tt></p>
+      <code>http://your.site.domain/cgi-bin/php.cgi/path/file.html</code></p>
 
       <p>You should have a look at the <a href="#redirect">CGI
       Redirection</a> section of this documentation. Running PHP/FI
@@ -404,17 +404,17 @@ when it is bad, it is better than nothing.
 
   <p>Suppose you have a form:</p>
 
-  <p><tt>&lt;FORM ACTION="/cgi-bin/php.cgi/~userid/display.html"
+  <p><code>&lt;FORM ACTION="/cgi-bin/php.cgi/~userid/display.html"
   METHOD=POST&gt;<br>
   &lt;INPUT TYPE="text" name="name"&gt;<br>
   &lt;INPUT TYPE="text" name="age"&gt;<br>
   &lt;INPUT TYPE="submit"&gt;<br>
-  &lt;/FORM&gt;</tt></p>
+  &lt;/FORM&gt;</code></p>
 
   <p>Your display.html file could then contain something like:</p>
 
-  <p><tt>&lt;?echo "Hi $name, you are $age years
-  old!&lt;p&gt;"&gt;</tt></p>
+  <p><code>&lt;?echo "Hi $name, you are $age years
+  old!&lt;p&gt;"&gt;</code></p>
 
   <p>It's that simple! PHP/FI automatically creates a variable for
   each form input field in your form. You can then use these
@@ -550,12 +550,12 @@ when it is bad, it is better than nothing.
       <em>Configuration</em>. The line to be added if you want to
       use the mod_actions module is:</p>
 
-      <p><tt>Module action_module mod_actions.o</tt></p>
+      <p><code>Module action_module mod_actions.o</code></p>
 
       <p>If you are using the mod_cgi_redirect.c module add this
       line:</p>
 
-      <p><tt>Module cgi_redirect_module mod_cgi_redirect.o</tt></p>
+      <p><code>Module cgi_redirect_module mod_cgi_redirect.o</code></p>
 
       <p>Then compile your httpd and install it. To configure the
       cgi redirection you need to either create a new mime type in
@@ -564,19 +564,19 @@ when it is bad, it is better than nothing.
       file to add the mime type. The mime type to be added should
       be something like this:</p>
 
-      <p><tt>application/x-httpd-php phtml</tt></p>
+      <p><code>application/x-httpd-php phtml</code></p>
 
       <p>If you are using the mod_actions.c module you need to add
       the following line to your <em>srm.conf</em> file:</p>
 
-      <p><tt>Action application/x-httpd-php
-      /cgi-bin/php.cgi</tt></p>
+      <p><code>Action application/x-httpd-php
+      /cgi-bin/php.cgi</code></p>
 
       <p>If you are using mod_cgi_redirect.c you should add this
       line to <em>srm.conf</em>:</p>
 
-      <p><tt>CgiRedirect application/x-httpd-php
-      /cgi-bin/php.cgi</tt></p>
+      <p><code>CgiRedirect application/x-httpd-php
+      /cgi-bin/php.cgi</code></p>
 
       <p>Don't try to use both mod_actions.c and mod_cgi_redirect.c
       at the same time.</p>
@@ -717,7 +717,7 @@ when it is bad, it is better than nothing.
   the command line</a></h2>
 
   <p>If you build the CGI version of PHP/FI, you can use it from
-  the command line simply typing: <tt>php.cgi filename</tt> where
+  the command line simply typing: <code>php.cgi filename</code> where
   filename is the file you want to parse. You can also create
   standalone PHP/FI scripts by making the first line of your script
   look something like:</p>
@@ -1005,12 +1005,12 @@ leave off this option if you like.
 
     <li>Edit your <em>srm.conf</em> file and add lines similar
     to:<br>
-    <tt>AddType application/x-httpd-fcgi .fcgi<br>
+    <code>AddType application/x-httpd-fcgi .fcgi<br>
     AppClass /usr/local/etc/httpd/fcgi-bin/php.fcgi -processes
     4<br>
     AddType application/x-httpd-fphp .fhtml<br>
     Action application/x-httpd-fphp
-    /fcgi-bin/php.fcgi<br></tt></li>
+    /fcgi-bin/php.fcgi<br></code></li>
 
     <li>Copy your <em>php.cgi</em> binary to
     <em>/usr/local/etc/httpd/fcgi-bin/php.fcgi</em></li>
@@ -1039,7 +1039,7 @@ leave off this option if you like.
   access control file. ie.</p>
 
   <p>
-  <tt>http://your.machine.domain/cgi-bin/php.cgi/path/file.html?config</tt></p>
+  <code>http://your.machine.domain/cgi-bin/php.cgi/path/file.html?config</code></p>
 
   <p>Your configuration password will initially be set to your user
   id. If your user id does not work as your password, it probably
@@ -1172,10 +1172,10 @@ leave off this option if you like.
   <p>Access logging stores information about each "hit" on a page.
   This information can then be summarized by examining these log
   files. An example log file summarizing script is included in the
-  package. It is the <tt>log.html</tt> file in the
-  <tt>examples</tt> directory. This is the dbm log file analyzer.
-  The mSQL log file analyzer is called <tt>mlog.html</tt>. And the
-  mysql log file analyzer is called <tt>mylog.html</tt>. To run it,
+  package. It is the <code>log.html</code> file in the
+  <code>examples</code> directory. This is the dbm log file analyzer.
+  The mSQL log file analyzer is called <code>mlog.html</code>. And the
+  mysql log file analyzer is called <code>mylog.html</code>. To run it,
   copy it and the other mlog.* files to a directory accessible from
   your web server and type:</p>
   <pre>
@@ -1198,7 +1198,7 @@ leave off this option if you like.
   "#access">?config</a> section for the page, or by adding a tag
   like this to your page:</p>
 
-  <p><tt>&lt;?setshowinfo(0)&gt;</tt></p>
+  <p><code>&lt;?setshowinfo(0)&gt;</code></p>
   <hr>
 
   <h2><a name="relative" id="relative">Relative vs. Absolute URL's
@@ -1223,22 +1223,22 @@ leave off this option if you like.
     ~rasmus/public_html/file.html
 </pre>
 
-  <p>If within the <tt>file.html</tt> file I had the tag:</p>
+  <p>If within the <code>file.html</code> file I had the tag:</p>
   <pre>
     &lt;IMG SRC="pic.gif"&gt;
 </pre>
 
   <p>when loaded normally this file gif file is expected to be in
-  <tt>~rasmus/public_html/pic.gif</tt>. However, when loaded
+  <code>~rasmus/public_html/pic.gif</code>. However, when loaded
   through a CGI wrapper with a URL like:</p>
   <pre>
     http://my.machine/cgi-bin/php.cgi/~rasmus/file.html
 </pre>
 
-  <p>then HTTPD sets the current directory to <tt>/cgi-bin</tt> (or
+  <p>then HTTPD sets the current directory to <code>/cgi-bin</code> (or
   wherever the ScriptAlias might point) and subsequently when the
-  page is loaded the <tt>pic.gif</tt> file is expected to be in:
-  <tt>/cgi-bin/pic.gif</tt> which is usually not the desired
+  page is loaded the <code>pic.gif</code> file is expected to be in:
+  <code>/cgi-bin/pic.gif</code> which is usually not the desired
   effect.</p>
 
   <p>The quick way around this problem is to use absolute URL's. In
@@ -1270,7 +1270,7 @@ leave off this option if you like.
   <pre>
     &lt;IMG SRC="&lt;?echo $PATH_DIR&gt;/pic.gif"&gt;
 </pre>By using the above, you can move the file containing this tag
-around, and the tag will always refer to a <tt>pic.gif</tt> file in
+around, and the tag will always refer to a <code>pic.gif</code> file in
 the same directory as the source HTML file.
 
   <p>Another way to handle this is to use the traditional &lt;BASE
@@ -1335,7 +1335,7 @@ the same directory as the source HTML file.
   variables must be the last (or only) component of the GET method
   data for it to be valid.</p>
 
-  <p><a name="selmul" id="selmul"><strong><tt>SELECT MULTIPLE</tt>
+  <p><a name="selmul" id="selmul"><strong><code>SELECT MULTIPLE</code>
   and PHP</strong></a></p>
 
   <p>The SELECT MULTIPLE tag in an HTML construct allows users to
@@ -1366,8 +1366,8 @@ the same directory as the source HTML file.
   options were selected, and the <a href="#sort">sort()</a>
   function can be used to sort the option array if necessary.</p>
   <hr>
-  <a name="imagecoord" id="imagecoord"><strong><tt>IMAGE
-  SUBMIT</tt> and PHP</strong></a>
+  <a name="imagecoord" id="imagecoord"><strong><code>IMAGE
+  SUBMIT</code> and PHP</strong></a>
 
   <p>When submitting a form, it is possible to use an image instead
   of the standard submit button with a tag like:</p>
@@ -2120,45 +2120,45 @@ Ora_Logoff($conn);
 
   <blockquote>
     <dl>
-      <dt><tt>ereg("abc",$string);</tt></dt>
+      <dt><code>ereg("abc",$string);</code></dt>
 
       <dd>Returns true if "abc" is found anywhere in $string.</dd>
 
-      <dt><tt>ereg("^abc",$string);</tt></dt>
+      <dt><code>ereg("^abc",$string);</code></dt>
 
       <dd>Returns true if "abc" is found at the beginning of
       $string.</dd>
 
-      <dt><tt>ereg("abc$",$string);</tt></dt>
+      <dt><code>ereg("abc$",$string);</code></dt>
 
       <dd>Returns true if "abc" is found at the end of
       $string.</dd>
 
       <dt>
-      <tt>eregi("(ozilla.[23]|MSIE.3)",$HTTP_USER_AGENT);</tt></dt>
+      <code>eregi("(ozilla.[23]|MSIE.3)",$HTTP_USER_AGENT);</code></dt>
 
       <dd>Returns true if client browser is Netscape 2, 3 or MSIE
       3.</dd>
 
-      <dt><tt>ereg("([[:alnum:]]+) ([[:alnum:]]+)
-      ([[:alnum:]]+)",$string,$regs);</tt><br></dt>
+      <dt><code>ereg("([[:alnum:]]+) ([[:alnum:]]+)
+      ([[:alnum:]]+)",$string,$regs);</code><br></dt>
 
       <dd>Places three space separated words into $regs[1],
       $regs[2] and $regs[3].</dd>
 
-      <dt><tt>ereg_replace("^","&lt;BR&gt;",$string)</tt></dt>
+      <dt><code>ereg_replace("^","&lt;BR&gt;",$string)</code></dt>
 
       <dd>Put a &lt;BR&gt; tag at the beginning of $string.</dd>
 
-      <dt><tt>ereg_replace("$","&lt;BR&gt;",$string)</tt></dt>
+      <dt><code>ereg_replace("$","&lt;BR&gt;",$string)</code></dt>
 
       <dd>Put a &lt;BR&gt; tag at the end of $string.</dd>
 
-      <dt><tt>ereg_replace(10,"",$string);</tt></dt>
+      <dt><code>ereg_replace(10,"",$string);</code></dt>
 
       <dd>Get rid of any linefeed characters in $string.</dd>
 
-      <dt><tt>ereg_replace(13,"&lt;BR&gt;",$string);</tt></dt>
+      <dt><code>ereg_replace(13,"&lt;BR&gt;",$string);</code></dt>
 
       <dd>Replace all carriage returns with a &lt;BR&gt; tag in
       $string.</dd>
@@ -2520,7 +2520,7 @@ nibble, like 0?755:
 </pre>
 
   <p>In this example it is easy to see why it is sometimes more
-  desirable to use the <tt>endif</tt> keyword as opposed to a
+  desirable to use the <code>endif</code> keyword as opposed to a
   closing brace. The above is much more readable than the
   following:</p>
   <pre>
@@ -2692,7 +2692,7 @@ nibble, like 0?755:
    &lt;?$a = (2+1)*3+6/3&gt;
 </pre>
 
-  <p>The C-like incremental operators <tt>+=</tt> and <tt>-=</tt>
+  <p>The C-like incremental operators <code>+=</code> and <code>-=</code>
   are supported. ie.</p>
   <pre>
     &lt;? $a += $b&gt;
@@ -2703,8 +2703,8 @@ nibble, like 0?755:
     &lt;? $a = $a + $b&gt;
 </pre>
 
-  <p>The C-like bit-wise operators <tt>&amp;=</tt>, <tt>|=</tt> and
-  <tt>^=</tt> are supported. ie.</p>
+  <p>The C-like bit-wise operators <code>&amp;=</code>, <code>|=</code> and
+  <code>^=</code> are supported. ie.</p>
   <pre>
     &lt;? $a &amp;= 4&gt;
 </pre>This is equivalent to:
@@ -2893,7 +2893,7 @@ nibble, like 0?755:
   on.</p>
 
   <p>The <em>GetType()</em> function returns the type.
-  <tt>GetType($a)</tt> would return "double" in this case.</p>
+  <code>GetType($a)</code> would return "double" in this case.</p>
 
   <p>Functions also exist to return the 3 various types without
   moving the type flag.</p>
@@ -3197,8 +3197,8 @@ nibble, like 0?755:
       <p>Ceil() rounds a floating point value up to the next
       integer. The return value is of type double (floating point)
       such that it can be used properly in complex equations. To
-      get an integer type back, use: <tt>$new =
-      IntVal(Ceil($value));</tt><br>
+      get an integer type back, use: <code>$new =
+      IntVal(Ceil($value));</code><br>
       See also <a href="#floor">Floor()</a>.</p>
     </dd>
 
@@ -3351,37 +3351,37 @@ nibble, like 0?755:
       verbosely:</p>
 
       <ul>
-        <li><tt>Y - Year eg. 1995</tt></li>
+        <li><code>Y - Year eg. 1995</code></li>
 
-        <li><tt>y - Year eg. 95</tt></li>
+        <li><code>y - Year eg. 95</code></li>
 
-        <li><tt>M - Month eg. Oct</tt></li>
+        <li><code>M - Month eg. Oct</code></li>
 
-        <li><tt>m - Month eg. 10</tt></li>
+        <li><code>m - Month eg. 10</code></li>
 
-        <li><tt>F - Month eg. October</tt></li>
+        <li><code>F - Month eg. October</code></li>
 
-        <li><tt>D - Day eg. Fri</tt></li>
+        <li><code>D - Day eg. Fri</code></li>
 
-        <li><tt>l - Day eg. Friday</tt></li>
+        <li><code>l - Day eg. Friday</code></li>
 
-        <li><tt>d - Day eg. 27</tt></li>
+        <li><code>d - Day eg. 27</code></li>
 
-        <li><tt>z - Day of the year eg. 299</tt></li>
+        <li><code>z - Day of the year eg. 299</code></li>
 
-        <li><tt>H - Hours in 24 hour format eg. 13</tt></li>
+        <li><code>H - Hours in 24 hour format eg. 13</code></li>
 
-        <li><tt>h - Hours in 12 hour format eg. 1</tt></li>
+        <li><code>h - Hours in 12 hour format eg. 1</code></li>
 
-        <li><tt>i - Minutes eg. 5</tt></li>
+        <li><code>i - Minutes eg. 5</code></li>
 
-        <li><tt>s - Seconds eg. 40</tt></li>
+        <li><code>s - Seconds eg. 40</code></li>
 
-        <li><tt>U - Seconds since epoch eg. 814807830</tt></li>
+        <li><code>U - Seconds since epoch eg. 814807830</code></li>
 
-        <li><tt>A - AM/PM</tt></li>
+        <li><code>A - AM/PM</code></li>
 
-        <li><tt>a - am/pm</tt></li>
+        <li><code>a - am/pm</code></li>
       </ul>
 
       <p>See also the <a href="#mktime">MkTime()</a> function.</p>
@@ -3631,7 +3631,7 @@ nibble, like 0?755:
         for example, is a GNU extension).</p>
 
         <p>Most conversions will accept a field width and a
-        precision, as shown in the <tt>demo_echo.html</tt> file in
+        precision, as shown in the <code>demo_echo.html</code> file in
         the directory /examples. It is not necessary to specify any
         type modifiers, and, in fact, PHP will complain if the type
         modifier does not make sense (which is almost always the
@@ -3674,8 +3674,8 @@ nibble, like 0?755:
     <dd>
       <p>ereg returns non-zero if the regular expression is matched
       in the argument string. For example, the condition,
-      <tt>&lt;?if (ereg("^This.*", "This is an example
-      string")&gt;</tt> would be true since the "^This.*"
+      <code>&lt;?if (ereg("^This.*", "This is an example
+      string")&gt;</code> would be true since the "^This.*"
       expression says to match the word <strong>This</strong> at
       the beginning of the string and then match any characters
       afterwards. If the <em>regs</em> argument is present, then
@@ -3702,7 +3702,7 @@ nibble, like 0?755:
       <p>ereg_Replace scans the entire argument string and replaces
       any portions of the string matched by the given expression
       with the replacement string. For example, in the string,
-      <tt>"This is an example string"</tt> we could very easily
+      <code>"This is an example string"</code> we could very easily
       replace every space with a dash with the command:
       <strong>ereg_replace(" ","-","This is an example
       string")</strong>.For more information on regular
@@ -3971,8 +3971,8 @@ nibble, like 0?755:
       <p>Floor() rounds a floating point value down to the previous
       integer. The return value is of type double (floating point)
       such that it can be used properly in complex equations. To
-      get an integer type back, use: <tt>$new =
-      IntVal(Floor($value));</tt><br>
+      get an integer type back, use: <code>$new =
+      IntVal(Floor($value));</code><br>
       See also <a href="#ceil">Ceil()</a>.</p>
     </dd>
 
@@ -4953,8 +4953,8 @@ inserted at the end of the header, example:
       given component is set to the current value according to the
       current local time and date. These left out arguments may
       only be left out from right to left. ie.
-      <tt>MkTime(hour,min,sec)</tt> is valid, but
-      <tt>MkTime(mon,day,year)</tt> is not valid. Note that this
+      <code>MkTime(hour,min,sec)</code> is valid, but
+      <code>MkTime(mon,day,year)</code> is not valid. Note that this
       function can be very handy as a tool for doing both date
       arithmetic and date validation. You can feed it invalid
       parameters, such as a month greater than 12, or a day greater
@@ -4980,8 +4980,8 @@ inserted at the end of the header, example:
 
     <dd>
       <p>msql sends an mSQL query. Arguments are the database name
-      and the query string. ie. <strong><tt>&lt;?msql("MyDatabase"
-      , "select * from table")&gt;</tt></strong>. The return value
+      and the query string. ie. <strong><code>&lt;?msql("MyDatabase"
+      , "select * from table")&gt;</code></strong>. The return value
       from this function is a result identifier to be used to
       access the results from the other msql_ functions. A result
       identifier is a positive integer. The function returns
@@ -5025,7 +5025,7 @@ inserted at the end of the header, example:
       msql_connect() is made in a file, then the connection to the
       first host is automatically closed. To explicitly connect to
       the msql daemon on the local host, use:
-      <strong><tt>&lt;?msql_connect("localhost")&gt;</tt></strong><br>
+      <strong><code>&lt;?msql_connect("localhost")&gt;</code></strong><br>
 
       This function is only available if mSQL support has been
       enabled in PHP.</p>
@@ -5090,7 +5090,7 @@ inserted at the end of the header, example:
     <dd>
       <p>msql_FieldName returns the name of the specified field.
       Arguments to the function is the result identifier and the
-      field index. ie. <tt>msql_FieldName($result,2);</tt> will
+      field index. ie. <code>msql_FieldName($result,2);</code> will
       return the name of the second field in the result associated
       with the result identifier.<br>
       This function is only available if mSQL support has been
@@ -5276,8 +5276,8 @@ inserted at the end of the header, example:
 
     <dd>
       <p>mysql sends a mysql query. Arguments are the database name
-      and the query string. ie. <strong><tt>&lt;?mysql("MyDatabase"
-      , "select * from table")&gt;</tt></strong>. The return value
+      and the query string. ie. <strong><code>&lt;?mysql("MyDatabase"
+      , "select * from table")&gt;</code></strong>. The return value
       from this function is a result identifier to be used to
       access the results from the other mysql_ functions. A result
       identifier is a positive integer. The function returns
@@ -5334,7 +5334,7 @@ inserted at the end of the header, example:
 
       <p>To explicitly connect to the mysql daemon on the local
       host, use:
-      <strong><tt>&lt;?mysql_connect("localhost")&gt;</tt></strong><br>
+      <strong><code>&lt;?mysql_connect("localhost")&gt;</code></strong><br>
 
       This function is only available if mysql support has been
       enabled in PHP.</p>
@@ -5399,7 +5399,7 @@ inserted at the end of the header, example:
     <dd>
       <p>mysql_FieldName returns the name of the specified field.
       Arguments to the function is the result identifier and the
-      field index. ie. <tt>mysql_FieldName($result,2);</tt> will
+      field index. ie. <code>mysql_FieldName($result,2);</code> will
       return the name of the second field in the result associated
       with the result identifier.<br>
       This function is only available if mysql support has been
@@ -6253,8 +6253,8 @@ second variable
       for backwards compatibility.</b><br>
       reg_Match returns non-zero if the regular expression is
       matched in the argument string. For example, the condition,
-      <tt>&lt;?if (reg_match("^This.*", "This is an example
-      string")&gt;</tt> would be true since the "^This.*"
+      <code>&lt;?if (reg_match("^This.*", "This is an example
+      string")&gt;</code> would be true since the "^This.*"
       expression says to match the word <strong>This</strong> at
       the beginning of the string and then match any characters
       afterwards. If the <em>regs</em> argument is present, then
@@ -6274,8 +6274,8 @@ second variable
       still available for backwards compatibility.</b><br>
       reg_Replace scans the entire argument string and replaces any
       portions of the string matched by the given expression with
-      the replacement string. For example, in the string, <tt>"This
-      is an example string"</tt> we could very easily replace every
+      the replacement string. For example, in the string, <code>"This
+      is an example string"</code> we could very easily replace every
       space with a dash with the command: <strong>reg_replace("
       ","-","This is an example string")</strong>.For more
       information on regular expressions, see the <a href=
@@ -6744,9 +6744,9 @@ second variable
       both are included for completeness sake. They will return the
       portion of the string argument starting at the point where
       the given sub-string is found. For example, in the string,
-      "This is an example string" above, the call: <tt>&lt;?echo
-      strchr($string,"an ")&gt;</tt> would return the string:
-      <tt>"an example string"</tt>.</p>
+      "This is an example string" above, the call: <code>&lt;?echo
+      strchr($string,"an ")&gt;</code> would return the string:
+      <code>"an example string"</code>.</p>
     </dd>
 
     <dt><a name="strtr" id="strtr"><big>
@@ -6794,9 +6794,9 @@ second variable
       both are included for completeness sake. They will return the
       portion of the string argument starting at the point where
       the given sub-string is found. For example, in the string,
-      "This is an example string" above, the call: <tt>&lt;?echo
-      strstr($string,"an ")&gt;</tt> would return the string:
-      <tt>"an example string"</tt>.</p>
+      "This is an example string" above, the call: <code>&lt;?echo
+      strstr($string,"an ")&gt;</code> would return the string:
+      <code>"an example string"</code>.</p>
     </dd>
 
     <dt><a name="strtok" id="strtok"><big>
@@ -7321,9 +7321,9 @@ second variable
 
     <dd>
       <p>To do this, edit <em>lex.c</em> and find the hash table
-      near the top of the file. Look for the line, <tt>static
-      cmd_table_t cmd_table[22][30] = {</tt>, which defines the
-      beginning of the hash table. The <tt>[22][30]</tt> defines
+      near the top of the file. Look for the line, <code>static
+      cmd_table_t cmd_table[22][30] = {</code>, which defines the
+      beginning of the hash table. The <code>[22][30]</code> defines
       the size of the 2 dimensional array which holds the hash
       table. The 22 is one greater than the maximum function name
       length and the 30 refers to the maximum number of functions
@@ -7387,7 +7387,7 @@ void UnixTime(void) {
       expression stack only accepts strings, so we sprintf the long
       integer into a string and push it onto the stack indicating
       that it is actually a long integer with the line:
-      <tt>Push(temp,LNUMBER);</tt></p>
+      <code>Push(temp,LNUMBER);</code></p>
     </dd>
 
     <dt><strong>Step 4 - Add your function prototype to

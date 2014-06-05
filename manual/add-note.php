@@ -302,8 +302,8 @@ else {
       address. You may still want to include a part in the email address
       that is understandable only by humans as our conversion can be performed in
       the opposite direction. You may submit your email address as
-      <tt>user@NOSPAM.example.com</tt> for example (which will be displayed
-      as <tt>user at NOSPAM dot example dot com</tt>. If we remove your note we can
+      <code>user@NOSPAM.example.com</code> for example (which will be displayed
+      as <code>user at NOSPAM dot example dot com</code>. If we remove your note we can
       only send an email if you use your real email address.
     </p>
   </section>
