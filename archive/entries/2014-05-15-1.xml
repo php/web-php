@@ -12,7 +12,7 @@
     <div xmlns="http://www.w3.org/1999/xhtml">
       <p>
         The PHP development team announces the immediate availability of PHP 5.6.0beta3.
-        As we entered the feature freeze with beta1, this is is a bugfix-only release.
+        As we entered the feature freeze with beta1, this is a bugfix-only release.
         All users of PHP are encouraged to test this version carefully,
         and report any bugs in <a href="https://bugs.php.net">the bug tracking system</a>.
      </p>
