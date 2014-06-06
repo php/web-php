@@ -59,7 +59,7 @@ EOT;
 </strong>
 <?php
 if ($size) {
-    echo '<span style="font-size:0.8em">(' . number_format($size, 0, '.', ',') . ' bytes)</span>';
+    echo '<small>(' . number_format($size, 0, '.', ',') . ' bytes)</small>';
 }
 ?>
 </span>

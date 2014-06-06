@@ -363,10 +363,10 @@ site_header("News Archive - 2008", array("cache" => true));
           <a href="http://phpconference.com/">Register now!</a>
         </p>
         <p>
-          <span style="font-size:0.8em">* Confirmation with your company's letter head</span>
+          <small>* Confirmation with your company's letter head</small>
           <br>
 
-          <span style="font-size:0.8em">** With Student ID. Limited seating available</span>
+          <small>** With Student ID. Limited seating available</small>
         </p>
       </div>
     
