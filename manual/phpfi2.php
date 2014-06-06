@@ -202,7 +202,7 @@ when it is bad, it is better than nothing.
   Instructions</a></h2>
 
   <dl>
-    <dt><span style="font-size:1.2em">Before You Begin</span></dt>
+    <dt><span class="big">Before You Begin</span></dt>
 
     <dd>
       <p>If you have absolutely no Unix experience, you may want to
@@ -215,7 +215,7 @@ when it is bad, it is better than nothing.
       knows the particulars of the destination system well.</p>
     </dd>
 
-    <dt><span style="font-size:1.2em">Things You Need To Know Before
+    <dt><span class="big">Things You Need To Know Before
     Installing</span></dt>
 
     <dd>
@@ -263,7 +263,7 @@ when it is bad, it is better than nothing.
       will need to know the Apache src code directory location.</p>
     </dd>
 
-    <dt><span style="font-size:1.2em">Installation Steps</span></dt>
+    <dt><span class="big">Installation Steps</span></dt>
 
     <dd>
       <p><em><strong>Step 1.</strong></em></p>
@@ -347,7 +347,7 @@ when it is bad, it is better than nothing.
       configuring the PHP Module.</p>
     </dd>
 
-    <dt><span style="font-size:1.2em">Testing the software</span></dt>
+    <dt><span class="big">Testing the software</span></dt>
 
     <dd>
       <p>Once installed you can test to see if your executable
@@ -364,7 +364,7 @@ when it is bad, it is better than nothing.
       the file and see if it gets parsed.</p>
     </dd>
 
-    <dt><span style="font-size:1.2em">Using the software</span></dt>
+    <dt><span class="big">Using the software</span></dt>
 
     <dd>
       <p>To actually use the software on an existing HTML file, you
@@ -2969,13 +2969,13 @@ nibble, like 0?755:
   <h3>Alphabetical List of Functions</h3>
 
   <dl>
-    <dt><a name="abs" id="abs"><span style="font-size:1.2em">Abs(arg)</span></a></dt>
+    <dt><a name="abs" id="abs"><span class="big">Abs(arg)</span></a></dt>
 
     <dd>
       <p>Abs returns the absolute value of arg.</p>
     </dd>
 
-    <dt><a name="ada_close" id="ada_close"><span style="font-size:1.2em">Ada_Close(connection_id)</span></a></dt>
+    <dt><a name="ada_close" id="ada_close"><span class="big">Ada_Close(connection_id)</span></a></dt>
 
     <dd>
       <p>Ada_Close will close down the connection to the Adabas
@@ -2985,7 +2985,7 @@ nibble, like 0?755:
       enabled in PHP.</p>
     </dd>
 
-    <dt><a name="ada_connect" id="ada_connect"><span style="font-size:1.2em">$connection = Ada_Connect(data source name, username,
+    <dt><a name="ada_connect" id="ada_connect"><span class="big">$connection = Ada_Connect(data source name, username,
     password)</span></a></dt>
 
     <dd>
@@ -3003,7 +3003,7 @@ nibble, like 0?755:
       enabled in PHP.</p>
     </dd>
 
-    <dt><a name="ada_exec" id="ada_exec"><span style="font-size:1.2em">$result =
+    <dt><a name="ada_exec" id="ada_exec"><span class="big">$result =
     Ada_Exec(connection_id, query_string)</span></a></dt>
 
     <dd>
@@ -3027,7 +3027,7 @@ nibble, like 0?755:
       enabled in PHP.</p>
     </dd>
 
-    <dt><a name="ada_fetchrow" id="ada_fetchrow"><span style="font-size:1.2em">Ada_FetchRow(result_id [,row_number])</span></a></dt>
+    <dt><a name="ada_fetchrow" id="ada_fetchrow"><span class="big">Ada_FetchRow(result_id [,row_number])</span></a></dt>
 
     <dd>
       <p>Ada_FetchRow fetches a row of the data that was returned
@@ -3049,7 +3049,7 @@ nibble, like 0?755:
       enabled in PHP.</p>
     </dd>
 
-    <dt><a name="ada_fieldname" id="ada_fieldname"><span style="font-size:1.2em">Ada_FieldName(result_id, field_number)</span></a></dt>
+    <dt><a name="ada_fieldname" id="ada_fieldname"><span class="big">Ada_FieldName(result_id, field_number)</span></a></dt>
 
     <dd>
       <p>Ada_FieldName will return the name of the field occupying
@@ -3060,7 +3060,7 @@ nibble, like 0?755:
       enabled in PHP.</p>
     </dd>
 
-    <dt><a name="ada_fieldnum" id="ada_fieldnum"><span style="font-size:1.2em">Ada_FieldNum(result_id, field_name)</span></a></dt>
+    <dt><a name="ada_fieldnum" id="ada_fieldnum"><span class="big">Ada_FieldNum(result_id, field_name)</span></a></dt>
 
     <dd>
       <p>Ada_FieldNum will return the number of the column slot
@@ -3072,7 +3072,7 @@ nibble, like 0?755:
       enabled in PHP.</p>
     </dd>
 
-    <dt><a name="ada_fieldtype" id="ada_fieldtype"><span style="font-size:1.2em">Ada_FieldType(result_id,
+    <dt><a name="ada_fieldtype" id="ada_fieldtype"><span class="big">Ada_FieldType(result_id,
     field_name|field_number)</span></a></dt>
 
     <dd>
@@ -3084,7 +3084,7 @@ nibble, like 0?755:
       enabled in PHP.</p>
     </dd>
 
-    <dt><a name="ada_freeresult" id="ada_freeresult"><span style="font-size:1.2em">Ada_FreeResult(result_id)</span></a></dt>
+    <dt><a name="ada_freeresult" id="ada_freeresult"><span class="big">Ada_FreeResult(result_id)</span></a></dt>
 
     <dd>
       <p>Ada_FreeResult only needs to be called if you are worried
@@ -3099,7 +3099,7 @@ nibble, like 0?755:
       enabled in PHP.</p>
     </dd>
 
-    <dt><a name="ada_numfields" id="ada_numfields"><span style="font-size:1.2em">Ada_NumFields(result_id)</span></a></dt>
+    <dt><a name="ada_numfields" id="ada_numfields"><span class="big">Ada_NumFields(result_id)</span></a></dt>
 
     <dd>
       <p>Ada_NumFields will return the number of fields (columns)
@@ -3111,7 +3111,7 @@ nibble, like 0?755:
       enabled in PHP.</p>
     </dd>
 
-    <dt><a name="ada_numrows" id="ada_numrows"><span style="font-size:1.2em">Ada_NumRows(result_id)</span></a></dt>
+    <dt><a name="ada_numrows" id="ada_numrows"><span class="big">Ada_NumRows(result_id)</span></a></dt>
 
     <dd>
       <p>Ada_NumRows will return the number of rows in a Adabas
@@ -3125,7 +3125,7 @@ nibble, like 0?755:
       enabled in PHP.</p>
     </dd>
 
-    <dt><a name="ada_result" id="ada_result"><span style="font-size:1.2em">Ada_Result(result_id, field name | index)</span></a></dt>
+    <dt><a name="ada_result" id="ada_result"><span class="big">Ada_Result(result_id, field name | index)</span></a></dt>
 
     <dd>
       <p>Ada_Result will return values from a result identifier
@@ -3142,7 +3142,7 @@ nibble, like 0?755:
       enabled in PHP.</p>
     </dd>
 
-    <dt><a name="ada_resultall" id="ada_resultall"><span style="font-size:1.2em">Ada_ResultAll(result_id [,format])</span></a></dt>
+    <dt><a name="ada_resultall" id="ada_resultall"><span class="big">Ada_ResultAll(result_id [,format])</span></a></dt>
 
     <dd>
       <p>Ada_ResultAll will print all rows from a result identifier
@@ -3158,7 +3158,7 @@ nibble, like 0?755:
       enabled in PHP.</p>
     </dd>
 
-    <dt><a name="addslashes" id="addslashes"><span style="font-size:1.2em">AddSlashes(arg)</span></a></dt>
+    <dt><a name="addslashes" id="addslashes"><span class="big">AddSlashes(arg)</span></a></dt>
 
     <dd>
       <p>Escapes any $ \ or ' (if MAGIC_QUOTES is set) with a
@@ -3166,7 +3166,7 @@ nibble, like 0?755:
       "#stripslashes">StripSlashes()</a>.</p>
     </dd>
 
-    <dt><a name="asort" id="asort"><span style="font-size:1.2em">ASort(array)</span></a></dt>
+    <dt><a name="asort" id="asort"><span class="big">ASort(array)</span></a></dt>
 
     <dd>
       <p>Sort is used to sort a PHP associative array in ascending
@@ -3181,7 +3181,7 @@ nibble, like 0?755:
       <a href="#sort">Sort()</a> function.</p>
     </dd>
 
-    <dt><a name="bindec" id="bindec"><span style="font-size:1.2em">BinDec(binary_string)</span></a></dt>
+    <dt><a name="bindec" id="bindec"><span class="big">BinDec(binary_string)</span></a></dt>
 
     <dd>
       <p>BinDec returns the decimal equivalent of the binary number
@@ -3191,7 +3191,7 @@ nibble, like 0?755:
       function.</p>
     </dd>
 
-    <dt><a name="ceil" id="ceil"><span style="font-size:1.2em">Ceil(value)</span></a></dt>
+    <dt><a name="ceil" id="ceil"><span class="big">Ceil(value)</span></a></dt>
 
     <dd>
       <p>Ceil() rounds a floating point value up to the next
@@ -3202,20 +3202,20 @@ nibble, like 0?755:
       See also <a href="#floor">Floor()</a>.</p>
     </dd>
 
-    <dt><a name="chdir" id="chdir"><span style="font-size:1.2em">ChDir(dir)</span></a></dt>
+    <dt><a name="chdir" id="chdir"><span class="big">ChDir(dir)</span></a></dt>
 
     <dd>
       <p>ChDir changes the current working directory to the
       directory specified in the argument.</p>
     </dd>
 
-    <dt><a name="chgrp" id="chgrp"><span style="font-size:1.2em">ChGrp(file,group)</span></a></dt>
+    <dt><a name="chgrp" id="chgrp"><span class="big">ChGrp(file,group)</span></a></dt>
 
     <dd>
       <p>ChGrp changes the group id of the specified file.</p>
     </dd>
 
-    <dt><a name="chmod" id="chmod"><span style="font-size:1.2em">ChMod(file,perms)</span></a></dt>
+    <dt><a name="chmod" id="chmod"><span class="big">ChMod(file,perms)</span></a></dt>
 
     <dd>
       <p>ChMod changes the file permissions of the specified file.
@@ -3223,7 +3223,7 @@ nibble, like 0?755:
       "#octal">octal</a> notation. eg. ChMod($filename,0755)</p>
     </dd>
 
-    <dt><a name="chown" id="chown"><span style="font-size:1.2em">ChOwn(file,owner)</span></a></dt>
+    <dt><a name="chown" id="chown"><span class="big">ChOwn(file,owner)</span></a></dt>
 
     <dd>
       <p>ChOwn changes the specified file to be owned by the
@@ -3232,21 +3232,21 @@ nibble, like 0?755:
       idea).</p>
     </dd>
 
-    <dt><a name="chop" id="chop"><span style="font-size:1.2em">Chop(string)</span></a></dt>
+    <dt><a name="chop" id="chop"><span class="big">Chop(string)</span></a></dt>
 
     <dd>
       <p>Chop removes all trailing whitespaces including new-lines,
       tabs and spaces and returns the new string.</p>
     </dd>
 
-    <dt><a name="chr" id="chr"><span style="font-size:1.2em">Chr(arg)</span></a></dt>
+    <dt><a name="chr" id="chr"><span class="big">Chr(arg)</span></a></dt>
 
     <dd>
       <p>Chr returns the ASCII character represented by the integer
       argument.</p>
     </dd>
 
-    <dt><a name="clearstack" id="clearstack"><span style="font-size:1.2em">ClearStack()</span></a></dt>
+    <dt><a name="clearstack" id="clearstack"><span class="big">ClearStack()</span></a></dt>
 
     <dd>
       <p>The ClearStack() function is a hack/workaround for a
@@ -3266,7 +3266,7 @@ nibble, like 0?755:
       use this temporary variable in whatever context you need.</p>
     </dd>
 
-    <dt><a name="clearstatcache" id="clearstatcache"><span style="font-size:1.2em">
+    <dt><a name="clearstatcache" id="clearstatcache"><span class="big">
     ClearStatCache()</span></a></dt>
 
     <dd>
@@ -3282,7 +3282,7 @@ nibble, like 0?755:
       the cached stat() result.</p>
     </dd>
 
-    <dt><a name="closedir" id="closedir"><span style="font-size:1.2em">
+    <dt><a name="closedir" id="closedir"><span class="big">
     closeDir()</span></a></dt>
 
     <dd>
@@ -3290,7 +3290,7 @@ nibble, like 0?755:
       "#opendir">openDir</a> function.</p>
     </dd>
 
-    <dt><a name="closelog" id="closelog"><span style="font-size:1.2em">
+    <dt><a name="closelog" id="closelog"><span class="big">
     CloseLog()</span></a></dt>
 
     <dd>
@@ -3301,7 +3301,7 @@ nibble, like 0?755:
       "#initsyslog">InitSyslog()</a>.</p>
     </dd>
 
-    <dt><a name="cos" id="cos"><span style="font-size:1.2em">
+    <dt><a name="cos" id="cos"><span class="big">
     Cos(arg)</span></a></dt>
 
     <dd>
@@ -3309,7 +3309,7 @@ nibble, like 0?755:
       <a href="#sin">Sin()</a> and <a href="#tan">Tan()</a></p>
     </dd>
 
-    <dt><a name="count" id="count"><span style="font-size:1.2em">
+    <dt><a name="count" id="count"><span class="big">
     Count(array)</span></a></dt>
 
     <dd>
@@ -3320,7 +3320,7 @@ nibble, like 0?755:
       will be 0.</p>
     </dd>
 
-    <dt><a name="crypt" id="crypt"><span style="font-size:1.2em">
+    <dt><a name="crypt" id="crypt"><span class="big">
     Crypt(string,[salt])</span></a></dt>
 
     <dd>
@@ -3335,7 +3335,7 @@ nibble, like 0?755:
       non-US site.</p>
     </dd>
 
-    <dt><a name="date" id="date"><span style="font-size:1.2em">
+    <dt><a name="date" id="date"><span class="big">
     Date(format,time)</span></a></dt>
 
     <dd>
@@ -3387,7 +3387,7 @@ nibble, like 0?755:
       <p>See also the <a href="#mktime">MkTime()</a> function.</p>
     </dd>
 
-    <dt><a name="dblist" id="dblist"><span style="font-size:1.2em">
+    <dt><a name="dblist" id="dblist"><span class="big">
     dbList()</span></a></dt>
 
     <dd>
@@ -3395,7 +3395,7 @@ nibble, like 0?755:
       into PHP.</p>
     </dd>
 
-    <dt><a name="dbmclose" id="dbmclose"><span style="font-size:1.2em">
+    <dt><a name="dbmclose" id="dbmclose"><span class="big">
     dbmClose(filename)</span></a></dt>
 
     <dd>
@@ -3404,7 +3404,7 @@ nibble, like 0?755:
       dbm files that have been opened.</p>
     </dd>
 
-    <dt><a name="dbmdelete" id="dbmdelete"><span style="font-size:1.2em">
+    <dt><a name="dbmdelete" id="dbmdelete"><span class="big">
     dbmDelete(filename,key)</span></a></dt>
 
     <dd>
@@ -3412,7 +3412,7 @@ nibble, like 0?755:
       the given key argument.</p>
     </dd>
 
-    <dt><a name="dbmexists" id="dbmexists"><span style="font-size:1.2em">
+    <dt><a name="dbmexists" id="dbmexists"><span class="big">
     dbmExists(filename,key)</span></a></dt>
 
     <dd>
@@ -3420,7 +3420,7 @@ nibble, like 0?755:
       otherwise.</p>
     </dd>
 
-    <dt><a name="dbmfetch" id="dbmfetch"><span style="font-size:1.2em">
+    <dt><a name="dbmfetch" id="dbmfetch"><span class="big">
     dbmFetch(filename,key)</span></a></dt>
 
     <dd>
@@ -3428,7 +3428,7 @@ nibble, like 0?755:
       the given key.</p>
     </dd>
 
-    <dt><a name="dbmfirstkey" id="dbmfirstkey"><span style="font-size:1.2em">
+    <dt><a name="dbmfirstkey" id="dbmfirstkey"><span class="big">
     dbmFirstKey(filename)</span></a></dt>
 
     <dd>
@@ -3440,7 +3440,7 @@ nibble, like 0?755:
       necessary.</p>
     </dd>
 
-    <dt><a name="dbminsert" id="dbminsert"><span style="font-size:1.2em">
+    <dt><a name="dbminsert" id="dbminsert"><span class="big">
     dbmInsert(filename,key,content)</span></a></dt>
 
     <dd>
@@ -3448,7 +3448,7 @@ nibble, like 0?755:
       file. If the key already exists, the insert will fail.</p>
     </dd>
 
-    <dt><a name="dbmnextkey" id="dbmnextkey"><span style="font-size:1.2em">
+    <dt><a name="dbmnextkey" id="dbmnextkey"><span class="big">
     dbmNextKey(filename,key)</span></a></dt>
 
     <dd>
@@ -3458,7 +3458,7 @@ nibble, like 0?755:
       possible to visit every key/content pair in the dbm file.</p>
     </dd>
 
-    <dt><a name="dbmopen" id="dbmopen"><span style="font-size:1.2em">
+    <dt><a name="dbmopen" id="dbmopen"><span class="big">
     dbmOpen(filename,mode)</span></a></dt>
 
     <dd>
@@ -3480,7 +3480,7 @@ nibble, like 0?755:
       "ftp://prep.ai.mit.edu/pub/gnu">ftp://prep.ai.mit.edu/pub/gnu</a>.</p>
     </dd>
 
-    <dt><a name="dbmreplace" id="dbmreplace"><span style="font-size:1.2em">
+    <dt><a name="dbmreplace" id="dbmreplace"><span class="big">
     dbmReplace(filename,key,content)</span></a></dt>
 
     <dd>
@@ -3490,7 +3490,7 @@ nibble, like 0?755:
       new.</p>
     </dd>
 
-    <dt><a name="decbin" id="decbin"><span style="font-size:1.2em">
+    <dt><a name="decbin" id="decbin"><span class="big">
     DecBin(number)</span></a></dt>
 
     <dd>
@@ -3500,7 +3500,7 @@ nibble, like 0?755:
       the <a href="#bindec">BinDec()</a> function.</p>
     </dd>
 
-    <dt><a name="dechex" id="dechex"><span style="font-size:1.2em">
+    <dt><a name="dechex" id="dechex"><span class="big">
     DecHex(number)</span></a></dt>
 
     <dd>
@@ -3508,7 +3508,7 @@ nibble, like 0?755:
       See also the <a href="#hexdec">HexDec()</a> function.</p>
     </dd>
 
-    <dt><a name="decoct" id="decoct"><span style="font-size:1.2em">
+    <dt><a name="decoct" id="decoct"><span class="big">
     DecOct(number)</span></a></dt>
 
     <dd>
@@ -3516,7 +3516,7 @@ nibble, like 0?755:
       also <a href="#octdec">OctDec()</a>.</p>
     </dd>
 
-    <dt><a name="doubleval" id="doubleval"><span style="font-size:1.2em">
+    <dt><a name="doubleval" id="doubleval"><span class="big">
     doubleval(variable)</span></a></dt>
 
     <dd>
@@ -3525,7 +3525,7 @@ nibble, like 0?755:
       <a href="#intval">intval()</a> functions.</p>
     </dd>
 
-    <dt><a name="echo" id="echo"><span style="font-size:1.2em">Echo
+    <dt><a name="echo" id="echo"><span class="big">Echo
     [format_string] expression [, expression
     [,...]]</span></a></dt>
 
@@ -3642,7 +3642,7 @@ nibble, like 0?755:
       </blockquote>
     </dd>
 
-    <dt><a name="end" id="end"><span style="font-size:1.2em">
+    <dt><a name="end" id="end"><span class="big">
     End(variable)</span></a></dt>
 
     <dd>
@@ -3668,7 +3668,7 @@ nibble, like 0?755:
 </pre>
     </dd>
 
-    <dt><a name="ereg" id="ereg"><span style="font-size:1.2em">
+    <dt><a name="ereg" id="ereg"><span class="big">
     ereg(expr,arg[,regs])</span></a></dt>
 
     <dd>
@@ -3686,7 +3686,7 @@ nibble, like 0?755:
       expression section</a> of this document.</p>
     </dd>
 
-    <dt><a name="eregi" id="eregi"><span style="font-size:1.2em">
+    <dt><a name="eregi" id="eregi"><span class="big">
     eregi(expr,arg[,regs])</span></a></dt>
 
     <dd>
@@ -3695,7 +3695,7 @@ nibble, like 0?755:
       applied such that upper/lower case is ignored.</p>
     </dd>
 
-    <dt><a name="ereg_replace" id="ereg_replace"><span style="font-size:1.2em">
+    <dt><a name="ereg_replace" id="ereg_replace"><span class="big">
     ereg_replace(expr,replace,arg)</span></a></dt>
 
     <dd>
@@ -3710,7 +3710,7 @@ nibble, like 0?755:
       section</a> of this document.</p>
     </dd>
 
-    <dt><a name="eregi_replace" id="eregi_replace"><span style="font-size:1.2em">
+    <dt><a name="eregi_replace" id="eregi_replace"><span class="big">
     eregi_replace(expr,replace,arg)</span></a></dt>
 
     <dd>
@@ -3720,7 +3720,7 @@ nibble, like 0?755:
       upper/lower case is ignored.</p>
     </dd>
 
-    <dt><a name="escapeshellcmd" id="escapeshellcmd"><span style="font-size:1.2em">
+    <dt><a name="escapeshellcmd" id="escapeshellcmd"><span class="big">
     EscapeShellCmd(string)</span></a></dt>
 
     <dd>
@@ -3736,7 +3736,7 @@ nibble, like 0?755:
 </pre>
     </dd>
 
-    <dt><a name="eval" id="eval"><span style="font-size:1.2em">
+    <dt><a name="eval" id="eval"><span class="big">
     Eval(string)</span></a></dt>
 
     <dd>
@@ -3758,7 +3758,7 @@ nibble, like 0?755:
 </pre>
     </dd>
 
-    <dt><a name="exec" id="exec"><span style="font-size:1.2em">
+    <dt><a name="exec" id="exec"><span class="big">
     Exec(command_string [, array
     [,return_var]])</span></a></dt>
 
@@ -3785,7 +3785,7 @@ nibble, like 0?755:
       function.</p>
     </dd>
 
-    <dt><a name="exit" id="exit"><span style="font-size:1.2em">
+    <dt><a name="exit" id="exit"><span class="big">
     Exit</span></a></dt>
 
     <dd>
@@ -3793,7 +3793,7 @@ nibble, like 0?755:
       as soon as this tag is parsed.</p>
     </dd>
 
-    <dt><a name="exp" id="exp"><span style="font-size:1.2em">
+    <dt><a name="exp" id="exp"><span class="big">
     Exp(arg)</span></a></dt>
 
     <dd>
@@ -3801,7 +3801,7 @@ nibble, like 0?755:
       <a href="#pow">pow()</a></p>
     </dd>
 
-    <dt><a name="fclose" id="fclose"><span style="font-size:1.2em">
+    <dt><a name="fclose" id="fclose"><span class="big">
     fclose($fd)</span></a></dt>
 
     <dd>
@@ -3810,7 +3810,7 @@ nibble, like 0?755:
       returned by the fopen() call.</p>
     </dd>
 
-    <dt><a name="feof" id="feof"><span style="font-size:1.2em">
+    <dt><a name="feof" id="feof"><span class="big">
     feof($fd)</span></a></dt>
 
     <dd>
@@ -3818,7 +3818,7 @@ nibble, like 0?755:
       pointer index argument has hit end-of-file.</p>
     </dd>
 
-    <dt><a name="fgets" id="fgets"><span style="font-size:1.2em">
+    <dt><a name="fgets" id="fgets"><span class="big">
     fgets($fd,bytes)</span></a></dt>
 
     <dd>
@@ -3830,7 +3830,7 @@ nibble, like 0?755:
       also <a href="#fputs">fputs()</a>.</p>
     </dd>
 
-    <dt><a name="fgetss" id="fgetss"><span style="font-size:1.2em">
+    <dt><a name="fgetss" id="fgetss"><span class="big">
     fgetss($fd,bytes)</span></a></dt>
 
     <dd>
@@ -3839,7 +3839,7 @@ nibble, like 0?755:
       reading the file.</p>
     </dd>
 
-    <dt><a name="file" id="file"><span style="font-size:1.2em">$array =
+    <dt><a name="file" id="file"><span class="big">$array =
     File(filename)</span></a></dt>
 
     <dd>
@@ -3848,7 +3848,7 @@ nibble, like 0?755:
       array index <strong>0</strong>.</p>
     </dd>
 
-    <dt><a name="fileatime" id="fileatime"><span style="font-size:1.2em">
+    <dt><a name="fileatime" id="fileatime"><span class="big">
     fileAtime(filename)</span></a></dt>
 
     <dd>
@@ -3861,7 +3861,7 @@ nibble, like 0?755:
       called before the call to the file* function.</p>
     </dd>
 
-    <dt><a name="filectime" id="filectime"><span style="font-size:1.2em">
+    <dt><a name="filectime" id="filectime"><span class="big">
     fileCtime(filename)</span></a></dt>
 
     <dd>
@@ -3874,7 +3874,7 @@ nibble, like 0?755:
       called before the call to the file* function.</p>
     </dd>
 
-    <dt><a name="filegroup" id="filegroup"><span style="font-size:1.2em">
+    <dt><a name="filegroup" id="filegroup"><span class="big">
     fileGroup(filename)</span></a></dt>
 
     <dd>
@@ -3887,7 +3887,7 @@ nibble, like 0?755:
       should be called before the call to the file* function.</p>
     </dd>
 
-    <dt><a name="fileinode" id="fileinode"><span style="font-size:1.2em">
+    <dt><a name="fileinode" id="fileinode"><span class="big">
     fileInode(filename)</span></a></dt>
 
     <dd>
@@ -3900,7 +3900,7 @@ nibble, like 0?755:
       before the call to the file* function.</p>
     </dd>
 
-    <dt><a name="filemtime" id="filemtime"><span style="font-size:1.2em">
+    <dt><a name="filemtime" id="filemtime"><span class="big">
     fileMtime(filename)</span></a></dt>
 
     <dd>
@@ -3913,7 +3913,7 @@ nibble, like 0?755:
       called before the call to the file* function.</p>
     </dd>
 
-    <dt><a name="fileowner" id="fileowner"><span style="font-size:1.2em">
+    <dt><a name="fileowner" id="fileowner"><span class="big">
     fileOwner(filename)</span></a></dt>
 
     <dd>
@@ -3926,7 +3926,7 @@ nibble, like 0?755:
       called before the call to the file* function.</p>
     </dd>
 
-    <dt><a name="fileperms" id="fileperms"><span style="font-size:1.2em">
+    <dt><a name="fileperms" id="fileperms"><span class="big">
     filePerms(filename)</span></a></dt>
 
     <dd>
@@ -3940,7 +3940,7 @@ nibble, like 0?755:
       called before the call to the file* function.</p>
     </dd>
 
-    <dt><a name="filesize" id="filesize"><span style="font-size:1.2em">
+    <dt><a name="filesize" id="filesize"><span class="big">
     fileSize(filename)</span></a></dt>
 
     <dd>
@@ -3953,7 +3953,7 @@ nibble, like 0?755:
       called before the call to the file* function.</p>
     </dd>
 
-    <dt><a name="filetype" id="filetype"><span style="font-size:1.2em">
+    <dt><a name="filetype" id="filetype"><span class="big">
     fileType(filename)</span></a></dt>
 
     <dd>
@@ -3964,7 +3964,7 @@ nibble, like 0?755:
       respectively.</p>
     </dd>
 
-    <dt><a name="floor" id="floor"><span style="font-size:1.2em">
+    <dt><a name="floor" id="floor"><span class="big">
     Floor(value)</span></a></dt>
 
     <dd>
@@ -3976,7 +3976,7 @@ nibble, like 0?755:
       See also <a href="#ceil">Ceil()</a>.</p>
     </dd>
 
-    <dt><a name="flush" id="flush"><span style="font-size:1.2em">
+    <dt><a name="flush" id="flush"><span class="big">
     Flush()</span></a></dt>
 
     <dd>
@@ -3990,7 +3990,7 @@ nibble, like 0?755:
       alternatively, run the Apache module version of PHP.</p>
     </dd>
 
-    <dt><a name="fopen" id="fopen"><span style="font-size:1.2em">$fp =
+    <dt><a name="fopen" id="fopen"><span class="big">$fp =
     fopen(filename,mode)</span></a></dt>
 
     <dd>
@@ -4010,7 +4010,7 @@ nibble, like 0?755:
 </pre>
     </dd>
 
-    <dt><a name="fputs" id="fputs"><span style="font-size:1.2em">
+    <dt><a name="fputs" id="fputs"><span class="big">
     fputs(fp,string)</span></a></dt>
 
     <dd>
@@ -4023,7 +4023,7 @@ nibble, like 0?755:
       tabs respectively. See also <a href="#fgets">fgets()</a>.</p>
     </dd>
 
-    <dt><a name="fpassthru" id="fpassthru"><span style="font-size:1.2em">
+    <dt><a name="fpassthru" id="fpassthru"><span class="big">
     FPassThru(fp)</span></a></dt>
 
     <dd>
@@ -4036,7 +4036,7 @@ nibble, like 0?755:
       number of bytes read and written.</p>
     </dd>
 
-    <dt><a name="fseek" id="fseek"><span style="font-size:1.2em">
+    <dt><a name="fseek" id="fseek"><span class="big">
     fseek(fp,pos)</span></a></dt>
 
     <dd>
@@ -4048,7 +4048,7 @@ nibble, like 0?755:
       "#ftell">ftell()</a> and <a href="#rewind">rewind()</a>.</p>
     </dd>
 
-    <dt><a name="fsockopen" id="fsockopen"><span style="font-size:1.2em">fp =
+    <dt><a name="fsockopen" id="fsockopen"><span class="big">fp =
     fsockopen(hostname,port)</span></a></dt>
 
     <dd>
@@ -4065,7 +4065,7 @@ nibble, like 0?755:
       operating system support Unix domain sockets.</p>
     </dd>
 
-    <dt><a name="ftell" id="ftell"><span style="font-size:1.2em">pos =
+    <dt><a name="ftell" id="ftell"><span class="big">pos =
     ftell(fp)</span></a></dt>
 
     <dd>
@@ -4076,7 +4076,7 @@ nibble, like 0?755:
       and <a href="#rewind">rewind()</a>.</p>
     </dd>
 
-    <dt><a name="getaccdir" id="getaccdir"><span style="font-size:1.2em">
+    <dt><a name="getaccdir" id="getaccdir"><span class="big">
     getAccDir()</span></a></dt>
 
     <dd>
@@ -4086,7 +4086,7 @@ nibble, like 0?755:
       access configurations they represent.</p>
     </dd>
 
-    <dt><a name="getenv" id="getenv"><span style="font-size:1.2em">
+    <dt><a name="getenv" id="getenv"><span class="big">
     GetEnv(string)</span></a></dt>
 
     <dd>
@@ -4106,7 +4106,7 @@ nibble, like 0?755:
       whatever security mechanism you might have.</p>
     </dd>
 
-    <dt><a name="gethostbyname" id="gethostbyname"><span style="font-size:1.2em">
+    <dt><a name="gethostbyname" id="gethostbyname"><span class="big">
     getHostByName(domain_name)</span></a></dt>
 
     <dd>
@@ -4114,7 +4114,7 @@ nibble, like 0?755:
       address in nnn.nnn.nnn.nnn format.</p>
     </dd>
 
-    <dt><a name="gethostbyaddr" id="gethostbyaddr"><span style="font-size:1.2em">
+    <dt><a name="gethostbyaddr" id="gethostbyaddr"><span class="big">
     getHostByAddr(ip_address)</span></a></dt>
 
     <dd>
@@ -4123,7 +4123,7 @@ nibble, like 0?755:
       name.</p>
     </dd>
 
-    <dt><a name="getimagesize" id="getimagesize"><span style="font-size:1.2em">
+    <dt><a name="getimagesize" id="getimagesize"><span class="big">
     GetImageSize(filename)</span></a></dt>
 
     <dd>
@@ -4145,7 +4145,7 @@ nibble, like 0?755:
 </pre>
     </dd>
 
-    <dt><a name="getlastaccess" id="getlastaccess"><span style="font-size:1.2em">
+    <dt><a name="getlastaccess" id="getlastaccess"><span class="big">
     getLastAccess()</span></a></dt>
 
     <dd>
@@ -4157,7 +4157,7 @@ nibble, like 0?755:
       Access Logging enabled.</p>
     </dd>
 
-    <dt><a name="getlastbrowser" id="getlastbrowser"><span style="font-size:1.2em">
+    <dt><a name="getlastbrowser" id="getlastbrowser"><span class="big">
     getLastbrowser()</span></a></dt>
 
     <dd>
@@ -4167,7 +4167,7 @@ nibble, like 0?755:
       Access Logging enabled.</p>
     </dd>
 
-    <dt><a name="getlastemail" id="getlastemail"><span style="font-size:1.2em">
+    <dt><a name="getlastemail" id="getlastemail"><span class="big">
     getLastEmail()</span></a></dt>
 
     <dd>
@@ -4177,7 +4177,7 @@ nibble, like 0?755:
       Access Logging enabled.</p>
     </dd>
 
-    <dt><a name="getlasthost" id="getlasthost"><span style="font-size:1.2em">
+    <dt><a name="getlasthost" id="getlasthost"><span class="big">
     getLastHost()</span></a></dt>
 
     <dd>
@@ -4187,7 +4187,7 @@ nibble, like 0?755:
       Access Logging enabled.</p>
     </dd>
 
-    <dt><a name="getlastmod" id="getlastmod"><span style="font-size:1.2em">
+    <dt><a name="getlastmod" id="getlastmod"><span class="big">
     getLastMod()</span></a></dt>
 
     <dd>
@@ -4199,7 +4199,7 @@ nibble, like 0?755:
       Access Logging enabled.</p>
     </dd>
 
-    <dt><a name="getlastref" id="getlastref"><span style="font-size:1.2em">
+    <dt><a name="getlastref" id="getlastref"><span class="big">
     getLastref()</span></a></dt>
 
     <dd>
@@ -4209,7 +4209,7 @@ nibble, like 0?755:
       Access Logging enabled.</p>
     </dd>
 
-    <dt><a name="getlogdir" id="getlogdir"><span style="font-size:1.2em">
+    <dt><a name="getlogdir" id="getlogdir"><span class="big">
     getLogDir()</span></a></dt>
 
     <dd>
@@ -4222,7 +4222,7 @@ nibble, like 0?755:
       represent as the primary component of the filename.</p>
     </dd>
 
-    <dt><a name="getmyinode" id="getmyinode"><span style="font-size:1.2em">
+    <dt><a name="getmyinode" id="getmyinode"><span class="big">
     getMyInode()</span></a></dt>
 
     <dd>
@@ -4230,7 +4230,7 @@ nibble, like 0?755:
       file.</p>
     </dd>
 
-    <dt><a name="getmypid" id="getmypid"><span style="font-size:1.2em">
+    <dt><a name="getmypid" id="getmypid"><span class="big">
     getMyPid()</span></a></dt>
 
     <dd>
@@ -4238,7 +4238,7 @@ nibble, like 0?755:
       parsing process.</p>
     </dd>
 
-    <dt><a name="getmyuid" id="getmyuid"><span style="font-size:1.2em">
+    <dt><a name="getmyuid" id="getmyuid"><span class="big">
     getMyUid()</span></a></dt>
 
     <dd>
@@ -4246,7 +4246,7 @@ nibble, like 0?755:
       current HTML file.</p>
     </dd>
 
-    <dt><a name="getrandmax" id="getrandmax"><span style="font-size:1.2em">
+    <dt><a name="getrandmax" id="getrandmax"><span class="big">
     getRandMax()</span></a></dt>
 
     <dd>
@@ -4256,7 +4256,7 @@ nibble, like 0?755:
       file in the PHP distribution for more information.</p>
     </dd>
 
-    <dt><a name="getstartlogging" id="getstartlogging"><span style="font-size:1.2em">
+    <dt><a name="getstartlogging" id="getstartlogging"><span class="big">
     getStartLogging()</span></a></dt>
 
     <dd>
@@ -4268,7 +4268,7 @@ nibble, like 0?755:
       created.</p>
     </dd>
 
-    <dt><a name="gettoday" id="gettoday"><span style="font-size:1.2em">
+    <dt><a name="gettoday" id="gettoday"><span class="big">
     getToday()</span></a></dt>
 
     <dd>
@@ -4278,7 +4278,7 @@ nibble, like 0?755:
       Access Logging enabled.</p>
     </dd>
 
-    <dt><a name="gettotal" id="gettotal"><span style="font-size:1.2em">
+    <dt><a name="gettotal" id="gettotal"><span class="big">
     getTotal()</span></a></dt>
 
     <dd>
@@ -4288,7 +4288,7 @@ nibble, like 0?755:
       Access Logging enabled.</p>
     </dd>
 
-    <dt><a name="gettype" id="gettype"><span style="font-size:1.2em">
+    <dt><a name="gettype" id="gettype"><span class="big">
     GetType(variable)</span></a></dt>
 
     <dd>
@@ -4298,7 +4298,7 @@ nibble, like 0?755:
       function</p>
     </dd>
 
-    <dt><a name="gmdate" id="gmdate"><span style="font-size:1.2em">
+    <dt><a name="gmdate" id="gmdate"><span class="big">
     gmDate(format,time)</span></a></dt>
 
     <dd>
@@ -4307,7 +4307,7 @@ nibble, like 0?755:
       instead of the current local time.</p>
     </dd>
 
-    <dt><a name="header" id="header"><span style="font-size:1.2em">
+    <dt><a name="header" id="header"><span class="big">
     Header(header_string)</span></a></dt>
 
     <dd>
@@ -4322,7 +4322,7 @@ nibble, like 0?755:
       Authentication</a> section.</p>
     </dd>
 
-    <dt><a name="hexdec" id="hexdec"><span style="font-size:1.2em">
+    <dt><a name="hexdec" id="hexdec"><span class="big">
     HexDec(hex_string)</span></a></dt>
 
     <dd>
@@ -4331,7 +4331,7 @@ nibble, like 0?755:
     </dd>
 
     <dt><a name="htmlspecialchars" id=
-    "htmlspecialchars"><span style="font-size:1.2em">HtmlSpecialChars(string)</span></a></dt>
+    "htmlspecialchars"><span class="big">HtmlSpecialChars(string)</span></a></dt>
 
     <dd>
       <p>HtmlSpecialChars converts any characters with ascii codes
@@ -4341,7 +4341,7 @@ nibble, like 0?755:
       and <b>"</b> are also converted.</p>
     </dd>
 
-    <dt><a name="imagearc" id="imagearc"><span style="font-size:1.2em">
+    <dt><a name="imagearc" id="imagearc"><span class="big">
     ImageArc(im, cx, cy, w, h, s, e, col)</span></a></dt>
 
     <dd>
@@ -4355,7 +4355,7 @@ nibble, like 0?755:
       enabled in PHP.</p>
     </dd>
 
-    <dt><a name="imagechar" id="imagechar"><span style="font-size:1.2em">
+    <dt><a name="imagechar" id="imagechar"><span class="big">
     ImageChar(im, size, x, y, c, col)</span></a></dt>
 
     <dd>
@@ -4368,7 +4368,7 @@ nibble, like 0?755:
       enabled in PHP.</p>
     </dd>
 
-    <dt><a name="imagecharup" id="imagecharup"><span style="font-size:1.2em">
+    <dt><a name="imagecharup" id="imagecharup"><span class="big">
     ImageCharUp(im, size, x, y, c, col)</span></a></dt>
 
     <dd>
@@ -4382,7 +4382,7 @@ nibble, like 0?755:
     </dd>
 
     <dt><a name="imagecolorallocate" id=
-    "imagecolorallocate"><span style="font-size:1.2em">col =
+    "imagecolorallocate"><span class="big">col =
     ImageColorAllocate(im, red, green, blue)</span></a></dt>
 
     <dd>
@@ -4397,7 +4397,7 @@ nibble, like 0?755:
     </dd>
 
     <dt><a name="imagecolortransparent" id=
-    "imagecolortransparent"><span style="font-size:1.2em">
+    "imagecolortransparent"><span class="big">
     ImageColorTransparent(im, col)</span></a></dt>
 
     <dd>
@@ -4410,7 +4410,7 @@ nibble, like 0?755:
     </dd>
 
     <dt><a name="imagecopyresized" id=
-    "imagecopyresized"><span style="font-size:1.2em">ImageCopyResized(dst_im,
+    "imagecopyresized"><span class="big">ImageCopyResized(dst_im,
     src_im, dstX, dstY, srcX, srcY, dstW, dstH, srcW, srcH
     )</span></a></dt>
 
@@ -4429,7 +4429,7 @@ nibble, like 0?755:
       enabled in PHP.</p>
     </dd>
 
-    <dt><a name="imagecreate" id="imagecreate"><span style="font-size:1.2em">im =
+    <dt><a name="imagecreate" id="imagecreate"><span class="big">im =
     ImageCreate(x_size, y_size)</span></a></dt>
 
     <dd>
@@ -4440,7 +4440,7 @@ nibble, like 0?755:
     </dd>
 
     <dt><a name="imagecreatefromgif" id=
-    "imagecreatefromgif"><span style="font-size:1.2em">im =
+    "imagecreatefromgif"><span class="big">im =
     ImageCreateFromGif(filename)</span></a></dt>
 
     <dd>
@@ -4451,7 +4451,7 @@ nibble, like 0?755:
       enabled in PHP.</p>
     </dd>
 
-    <dt><a name="imagedestroy" id="imagedestroy"><span style="font-size:1.2em">
+    <dt><a name="imagedestroy" id="imagedestroy"><span class="big">
     ImageDestroy(im)</span></a></dt>
 
     <dd>
@@ -4461,7 +4461,7 @@ nibble, like 0?755:
       only available if GD support has been enabled in PHP.</p>
     </dd>
 
-    <dt><a name="imagefill" id="imagefill"><span style="font-size:1.2em">
+    <dt><a name="imagefill" id="imagefill"><span class="big">
     ImageFill(im, x, y, col)</span></a></dt>
 
     <dd>
@@ -4472,7 +4472,7 @@ nibble, like 0?755:
     </dd>
 
     <dt><a name="imagefilledpolygon" id=
-    "imagefilledpolygon"><span style="font-size:1.2em">ImageFilledPolygon(im,
+    "imagefilledpolygon"><span class="big">ImageFilledPolygon(im,
     points, num_points, col)</span></a></dt>
 
     <dd>
@@ -4486,7 +4486,7 @@ nibble, like 0?755:
     </dd>
 
     <dt><a name="imagefilledrectangle" id=
-    "imagefilledrectangle"><span style="font-size:1.2em">ImageFilledRectangle(im,
+    "imagefilledrectangle"><span class="big">ImageFilledRectangle(im,
     x1, y1, x2, y2, col)</span></a></dt>
 
     <dd>
@@ -4499,7 +4499,7 @@ nibble, like 0?755:
     </dd>
 
     <dt><a name="imagefilltoborder" id=
-    "imagefilltoborder"><span style="font-size:1.2em">ImageFillToBorder(im, x, y,
+    "imagefilltoborder"><span class="big">ImageFillToBorder(im, x, y,
     border, col)</span></a></dt>
 
     <dd>
@@ -4511,7 +4511,7 @@ nibble, like 0?755:
       enabled in PHP.</p>
     </dd>
 
-    <dt><a name="imagegif" id="imagegif"><span style="font-size:1.2em">
+    <dt><a name="imagegif" id="imagegif"><span class="big">
     ImageGif(im [,filename])</span></a></dt>
 
     <dd>
@@ -4527,7 +4527,7 @@ nibble, like 0?755:
       enabled in PHP.</p>
     </dd>
 
-    <dt><a name="imageinterlace" id="imageinterlace"><span style="font-size:1.2em">
+    <dt><a name="imageinterlace" id="imageinterlace"><span class="big">
     ImageInterlace(im, interlace)</span></a></dt>
 
     <dd>
@@ -4538,7 +4538,7 @@ nibble, like 0?755:
       PHP.</p>
     </dd>
 
-    <dt><a name="imageline" id="imageline"><span style="font-size:1.2em">
+    <dt><a name="imageline" id="imageline"><span class="big">
     ImageLine(im, x1, y1, x2, y2, col)</span></a></dt>
 
     <dd>
@@ -4549,7 +4549,7 @@ nibble, like 0?755:
       enabled in PHP.</p>
     </dd>
 
-    <dt><a name="imagepolygon" id="imagepolygon"><span style="font-size:1.2em">
+    <dt><a name="imagepolygon" id="imagepolygon"><span class="big">
     ImagePolygon(im, points, num_points, col)</span></a></dt>
 
     <dd>
@@ -4562,7 +4562,7 @@ nibble, like 0?755:
       enabled in PHP.</p>
     </dd>
 
-    <dt><a name="imagerectangle" id="imagerectangle"><span style="font-size:1.2em">
+    <dt><a name="imagerectangle" id="imagerectangle"><span class="big">
     ImageRectangle(im, x1, y1, x2, y2, col)</span></a></dt>
 
     <dd>
@@ -4574,7 +4574,7 @@ nibble, like 0?755:
       enabled in PHP.</p>
     </dd>
 
-    <dt><a name="imagesetpixel" id="imagesetpixel"><span style="font-size:1.2em">
+    <dt><a name="imagesetpixel" id="imagesetpixel"><span class="big">
     ImageSetPixel(im, x, y, col)</span></a></dt>
 
     <dd>
@@ -4585,7 +4585,7 @@ nibble, like 0?755:
       enabled in PHP.</p>
     </dd>
 
-    <dt><a name="imagestring" id="imagestring"><span style="font-size:1.2em">
+    <dt><a name="imagestring" id="imagestring"><span class="big">
     ImageString(im, size, x, y, s, col)</span></a></dt>
 
     <dd>
@@ -4598,7 +4598,7 @@ nibble, like 0?755:
       enabled in PHP.</p>
     </dd>
 
-    <dt><a name="imagestringup" id="imagestringup"><span style="font-size:1.2em">
+    <dt><a name="imagestringup" id="imagestringup"><span class="big">
     ImageStringUp(im, size, x, y, s, col)</span></a></dt>
 
     <dd>
@@ -4611,7 +4611,7 @@ nibble, like 0?755:
       enabled in PHP.</p>
     </dd>
 
-    <dt><a name="imagesx" id="imagesx"><span style="font-size:1.2em">
+    <dt><a name="imagesx" id="imagesx"><span class="big">
     ImageSX(im)</span></a></dt>
 
     <dd>
@@ -4619,7 +4619,7 @@ nibble, like 0?755:
       <em>im</em>.</p>
     </dd>
 
-    <dt><a name="imagesy" id="imagesy"><span style="font-size:1.2em">
+    <dt><a name="imagesy" id="imagesy"><span class="big">
     ImageSY(im)</span></a></dt>
 
     <dd>
@@ -4627,7 +4627,7 @@ nibble, like 0?755:
       <em>im</em>.</p>
     </dd>
 
-    <dt><a name="include" id="include"><span style="font-size:1.2em">
+    <dt><a name="include" id="include"><span class="big">
     Include(filename)</span></a></dt>
 
     <dd>
@@ -4652,7 +4652,7 @@ nibble, like 0?755:
 </pre>
     </dd>
 
-    <dt><a name="initsyslog" id="initsyslog"><span style="font-size:1.2em">
+    <dt><a name="initsyslog" id="initsyslog"><span class="big">
     InitSyslog()</span></a></dt>
 
     <dd>
@@ -4666,7 +4666,7 @@ nibble, like 0?755:
       "#closelog">CloseLog()</a>.</p>
     </dd>
 
-    <dt><a name="intval" id="intval"><span style="font-size:1.2em">
+    <dt><a name="intval" id="intval"><span class="big">
     intval(variable)</span></a></dt>
 
     <dd>
@@ -4675,7 +4675,7 @@ nibble, like 0?755:
       "#doubleval">doubleval()</a> functions.</p>
     </dd>
 
-    <dt><a name="isset" id="isset"><span style="font-size:1.2em">
+    <dt><a name="isset" id="isset"><span class="big">
     IsSet(variable)</span></a></dt>
 
     <dd>
@@ -4683,7 +4683,7 @@ nibble, like 0?755:
       defined, and 0 if it isn't.</p>
     </dd>
 
-    <dt><a name="key" id="key"><span style="font-size:1.2em">
+    <dt><a name="key" id="key"><span class="big">
     Key(variable)</span></a></dt>
 
     <dd>
@@ -4697,7 +4697,7 @@ nibble, like 0?755:
       array, although it will work for normal array as well.</p>
     </dd>
 
-    <dt><a name="link" id="link"><span style="font-size:1.2em">
+    <dt><a name="link" id="link"><span class="big">
     Link(target,link)</span></a></dt>
 
     <dd>
@@ -4707,7 +4707,7 @@ nibble, like 0?755:
       <a href="#LinkInfo">LinkInfo</a> functions.</p>
     </dd>
 
-    <dt><a name="linkinfo" id="linkinfo"><span style="font-size:1.2em">
+    <dt><a name="linkinfo" id="linkinfo"><span class="big">
     LinkInfo(path)</span></a></dt>
 
     <dd>
@@ -4718,21 +4718,21 @@ nibble, like 0?755:
       stat.h). Returns -1 in case of error.</p>
     </dd>
 
-    <dt><a name="log" id="log"><span style="font-size:1.2em">
+    <dt><a name="log" id="log"><span class="big">
     Log(arg)</span></a></dt>
 
     <dd>
       <p>Log returns the natural logarithm of arg.</p>
     </dd>
 
-    <dt><a name="log10" id="log10"><span style="font-size:1.2em">
+    <dt><a name="log10" id="log10"><span class="big">
     Log10(arg)</span></a></dt>
 
     <dd>
       <p>Log10 returns the base-10 logarithm of arg.</p>
     </dd>
 
-    <dt><a name="logas" id="logas"><span style="font-size:1.2em">
+    <dt><a name="logas" id="logas"><span class="big">
     LogAs(filename)</span></a></dt>
 
     <dd>
@@ -4741,7 +4741,7 @@ nibble, like 0?755:
       filename.</p>
     </dd>
 
-    <dt><a name="mail" id="mail"><span style="font-size:1.2em">
+    <dt><a name="mail" id="mail"><span class="big">
     Mail(to,subject,message[,headers])</span></a></dt>
 
     <dd>
@@ -4763,7 +4763,7 @@ inserted at the end of the header, example:
 </pre>
     </dd>
 
-    <dt><a name="max" id="max"><span style="font-size:1.2em">
+    <dt><a name="max" id="max"><span class="big">
     Max(array)</span></a></dt>
 
     <dd>
@@ -4774,14 +4774,14 @@ inserted at the end of the header, example:
       were sorted.</p>
     </dd>
 
-    <dt><a name="md5" id="md5"><span style="font-size:1.2em">
+    <dt><a name="md5" id="md5"><span class="big">
     Md5(message)</span></a></dt>
 
     <dd>
       <p>Md5 returns the MD5 hash of a string value.</p>
     </dd>
 
-    <dt><a name="mi_close" id="mi_close"><span style="font-size:1.2em">
+    <dt><a name="mi_close" id="mi_close"><span class="big">
     mi_Close(connection_id)</span></a></dt>
 
     <dd>
@@ -4792,7 +4792,7 @@ inserted at the end of the header, example:
       been enabled in PHP.</p>
     </dd>
 
-    <dt><a name="mi_connect" id="mi_connect"><span style="font-size:1.2em">
+    <dt><a name="mi_connect" id="mi_connect"><span class="big">
     $connection = mi_Connect(database, username,
     password)</span></a></dt>
 
@@ -4810,7 +4810,7 @@ inserted at the end of the header, example:
       been enabled in PHP.</p>
     </dd>
 
-    <dt><a name="mi_dbname" id="mi_dbname"><span style="font-size:1.2em">
+    <dt><a name="mi_dbname" id="mi_dbname"><span class="big">
     mi_DBname(connection_id)</span></a></dt>
 
     <dd>
@@ -4821,7 +4821,7 @@ inserted at the end of the header, example:
       been enabled in PHP.</p>
     </dd>
 
-    <dt><a name="mi_exec" id="mi_exec"><span style="font-size:1.2em">$result =
+    <dt><a name="mi_exec" id="mi_exec"><span class="big">$result =
     mi_Exec(connection_id, query_string)</span></a></dt>
 
     <dd>
@@ -4836,7 +4836,7 @@ inserted at the end of the header, example:
       been enabled in PHP.</p>
     </dd>
 
-    <dt><a name="mi_fieldname" id="mi_fieldname"><span style="font-size:1.2em">
+    <dt><a name="mi_fieldname" id="mi_fieldname"><span class="big">
     mi_FieldName(connection_id, result_id,
     field_number)</span></a></dt>
 
@@ -4852,7 +4852,7 @@ inserted at the end of the header, example:
       been enabled in PHP.</p>
     </dd>
 
-    <dt><a name="mi_fieldnum" id="mi_fieldnum"><span style="font-size:1.2em">
+    <dt><a name="mi_fieldnum" id="mi_fieldnum"><span class="big">
     mi_FieldNum(connection_id, result_id,
     field_name)</span></a></dt>
 
@@ -4866,7 +4866,7 @@ inserted at the end of the header, example:
       been enabled in PHP.</p>
     </dd>
 
-    <dt><a name="mi_numfields" id="mi_numfields"><span style="font-size:1.2em">
+    <dt><a name="mi_numfields" id="mi_numfields"><span class="big">
     mi_NumFields(connection_id, result_id)</span></a></dt>
 
     <dd>
@@ -4879,7 +4879,7 @@ inserted at the end of the header, example:
       been enabled in PHP.</p>
     </dd>
 
-    <dt><a name="mi_numrows" id="mi_numrows"><span style="font-size:1.2em">
+    <dt><a name="mi_numrows" id="mi_numrows"><span class="big">
     mi_NumRows(connection_id, result_id)</span></a></dt>
 
     <dd>
@@ -4892,7 +4892,7 @@ inserted at the end of the header, example:
       been enabled in PHP.</p>
     </dd>
 
-    <dt><a name="mi_result" id="mi_result"><span style="font-size:1.2em">
+    <dt><a name="mi_result" id="mi_result"><span class="big">
     mi_Result(connection_id, result_id, row_number, field
     name/index)</span></a></dt>
 
@@ -4911,7 +4911,7 @@ inserted at the end of the header, example:
       been enabled in PHP.</p>
     </dd>
 
-    <dt><a name="microtime" id="microtime"><span style="font-size:1.2em">
+    <dt><a name="microtime" id="microtime"><span class="big">
     Microtime()</span></a></dt>
 
     <dd>
@@ -4923,7 +4923,7 @@ inserted at the end of the header, example:
       support the gettimeofday() system call.</p>
     </dd>
 
-    <dt><a name="min" id="min"><span style="font-size:1.2em">
+    <dt><a name="min" id="min"><span class="big">
     Min(array)</span></a></dt>
 
     <dd>
@@ -4934,7 +4934,7 @@ inserted at the end of the header, example:
       were sorted.</p>
     </dd>
 
-    <dt><a name="mkdir" id="mkdir"><span style="font-size:1.2em">
+    <dt><a name="mkdir" id="mkdir"><span class="big">
     MkDir(dir,mode)</span></a></dt>
 
     <dd>
@@ -4943,7 +4943,7 @@ inserted at the end of the header, example:
       MkDir("DirName",0755);</p>
     </dd>
 
-    <dt><a name="mktime" id="mktime"><span style="font-size:1.2em">
+    <dt><a name="mktime" id="mktime"><span class="big">
     MkTime(hour,min,sec,mon,day,year)</span></a></dt>
 
     <dd>
@@ -4975,7 +4975,7 @@ inserted at the end of the header, example:
 </pre>
     </dd>
 
-    <dt><a name="msql" id="msql"><span style="font-size:1.2em">$result =
+    <dt><a name="msql" id="msql"><span class="big">$result =
     msql($database,$query)</span></a></dt>
 
     <dd>
@@ -5000,7 +5000,7 @@ inserted at the end of the header, example:
       enabled in PHP.</p>
     </dd>
 
-    <dt><a name="msql_close" id="msql_close"><span style="font-size:1.2em">
+    <dt><a name="msql_close" id="msql_close"><span class="big">
     msql_close()</span></a></dt>
 
     <dd>
@@ -5010,7 +5010,7 @@ inserted at the end of the header, example:
       function does not take an argument.</p>
     </dd>
 
-    <dt><a name="msql_connect" id="msql_connect"><span style="font-size:1.2em">
+    <dt><a name="msql_connect" id="msql_connect"><span class="big">
     msql_connect($hostname)</span></a></dt>
 
     <dd>
@@ -5031,7 +5031,7 @@ inserted at the end of the header, example:
       enabled in PHP.</p>
     </dd>
 
-    <dt><a name="msql_createdb" id="msql_createdb"><span style="font-size:1.2em">
+    <dt><a name="msql_createdb" id="msql_createdb"><span class="big">
     msql_CreateDB($database)</span></a></dt>
 
     <dd>
@@ -5040,7 +5040,7 @@ inserted at the end of the header, example:
       enabled in PHP.</p>
     </dd>
 
-    <dt><a name="msql_dbname" id="msql_dbname"><span style="font-size:1.2em">
+    <dt><a name="msql_dbname" id="msql_dbname"><span class="big">
     msql_dbName($result,$i)</span></a></dt>
 
     <dd>
@@ -5053,7 +5053,7 @@ inserted at the end of the header, example:
       enabled in PHP.</p>
     </dd>
 
-    <dt><a name="msql_dropdb" id="msql_dropdb"><span style="font-size:1.2em">
+    <dt><a name="msql_dropdb" id="msql_dropdb"><span class="big">
     msql_DropDB($database)</span></a></dt>
 
     <dd>
@@ -5063,7 +5063,7 @@ inserted at the end of the header, example:
       enabled in PHP.</p>
     </dd>
 
-    <dt><a name="msql_fieldflags" id="msql_fieldflags"><span style="font-size:1.2em">
+    <dt><a name="msql_fieldflags" id="msql_fieldflags"><span class="big">
     msql_FieldFlags($result,$i)</span></a></dt>
 
     <dd>
@@ -5074,7 +5074,7 @@ inserted at the end of the header, example:
       enabled in PHP.</p>
     </dd>
 
-    <dt><a name="msql_fieldlen" id="msql_fieldlen"><span style="font-size:1.2em">
+    <dt><a name="msql_fieldlen" id="msql_fieldlen"><span class="big">
     msql_FieldLen($result,$i)</span></a></dt>
 
     <dd>
@@ -5084,7 +5084,7 @@ inserted at the end of the header, example:
       enabled in PHP.</p>
     </dd>
 
-    <dt><a name="msql_fieldname" id="msql_fieldname"><span style="font-size:1.2em">
+    <dt><a name="msql_fieldname" id="msql_fieldname"><span class="big">
     msql_FieldName($result,$i)</span></a></dt>
 
     <dd>
@@ -5097,7 +5097,7 @@ inserted at the end of the header, example:
       enabled in PHP.</p>
     </dd>
 
-    <dt><a name="msql_fieldtype" id="msql_fieldtype"><span style="font-size:1.2em">
+    <dt><a name="msql_fieldtype" id="msql_fieldtype"><span class="big">
     msql_FieldType($result,$i)</span></a></dt>
 
     <dd>
@@ -5108,7 +5108,7 @@ inserted at the end of the header, example:
       enabled in PHP.</p>
     </dd>
 
-    <dt><a name="msql_freeresult" id="msql_freeresult"><span style="font-size:1.2em">
+    <dt><a name="msql_freeresult" id="msql_freeresult"><span class="big">
     msql_FreeResult($result)</span></a></dt>
 
     <dd>
@@ -5123,7 +5123,7 @@ inserted at the end of the header, example:
       enabled in PHP.</p>
     </dd>
 
-    <dt><a name="msql_listdbs" id="msql_listdbs"><span style="font-size:1.2em">
+    <dt><a name="msql_listdbs" id="msql_listdbs"><span class="big">
     $result = msql_ListDBs()</span></a></dt>
 
     <dd>
@@ -5135,7 +5135,7 @@ inserted at the end of the header, example:
       enabled in PHP.</p>
     </dd>
 
-    <dt><a name="msql_listfields" id="msql_listfields"><span style="font-size:1.2em">
+    <dt><a name="msql_listfields" id="msql_listfields"><span class="big">
     $result =
     msql_Listfields($database,$tablename)</span></a></dt>
 
@@ -5153,7 +5153,7 @@ inserted at the end of the header, example:
       enabled in PHP.</p>
     </dd>
 
-    <dt><a name="msql_listtables" id="msql_listtables"><span style="font-size:1.2em">
+    <dt><a name="msql_listtables" id="msql_listtables"><span class="big">
     $result = msql_ListTables($database)</span></a></dt>
 
     <dd>
@@ -5166,7 +5166,7 @@ inserted at the end of the header, example:
       enabled in PHP.</p>
     </dd>
 
-    <dt><a name="msql_numfields" id="msql_numfields"><span style="font-size:1.2em">
+    <dt><a name="msql_numfields" id="msql_numfields"><span class="big">
     msql_NumFields($result)</span></a></dt>
 
     <dd>
@@ -5177,7 +5177,7 @@ inserted at the end of the header, example:
       enabled in PHP.</p>
     </dd>
 
-    <dt><a name="msql_numrows" id="msql_numrows"><span style="font-size:1.2em">
+    <dt><a name="msql_numrows" id="msql_numrows"><span class="big">
     msql_NumRows($result)</span></a></dt>
 
     <dd>
@@ -5188,7 +5188,7 @@ inserted at the end of the header, example:
       enabled in PHP.</p>
     </dd>
 
-    <dt><a name="msql_regcase" id="msql_regcase"><span style="font-size:1.2em">
+    <dt><a name="msql_regcase" id="msql_regcase"><span class="big">
     msql_RegCase(string)</span></a></dt>
 
     <dd>
@@ -5200,7 +5200,7 @@ inserted at the end of the header, example:
       enabled in PHP.</p>
     </dd>
 
-    <dt><a name="msql_result" id="msql_result"><span style="font-size:1.2em">
+    <dt><a name="msql_result" id="msql_result"><span class="big">
     msql_Result($result,$i,field)</span></a></dt>
 
     <dd>
@@ -5245,7 +5245,7 @@ inserted at the end of the header, example:
       enabled in PHP.</p>
     </dd>
 
-    <dt><a name="msql_tablename" id="msql_tablename"><span style="font-size:1.2em">
+    <dt><a name="msql_tablename" id="msql_tablename"><span class="big">
     msql_TableName($result,$i)</span></a></dt>
 
     <dd>
@@ -5271,7 +5271,7 @@ inserted at the end of the header, example:
       enabled in PHP.
     </dd>
 
-    <dt><a name="mysql" id="mysql"><span style="font-size:1.2em">$result =
+    <dt><a name="mysql" id="mysql"><span class="big">$result =
     mysql($database,$query)</span></a></dt>
 
     <dd>
@@ -5294,7 +5294,7 @@ inserted at the end of the header, example:
     </dd>
 
     <dt><a name="mysql_affected_rows" id=
-    "mysql_affected_rows"><span style="font-size:1.2em">
+    "mysql_affected_rows"><span class="big">
     mysql_affected_rows()</span></a></dt>
 
     <dd>
@@ -5302,7 +5302,7 @@ inserted at the end of the header, example:
       the last INSERT, UPDATE or DELETE query.</p>
     </dd>
 
-    <dt><a name="mysql_close" id="mysql_close"><span style="font-size:1.2em">
+    <dt><a name="mysql_close" id="mysql_close"><span class="big">
     mysql_close()</span></a></dt>
 
     <dd>
@@ -5310,7 +5310,7 @@ inserted at the end of the header, example:
       daemon, if an open connection exists.</p>
     </dd>
 
-    <dt><a name="mysql_connect" id="mysql_connect"><span style="font-size:1.2em">
+    <dt><a name="mysql_connect" id="mysql_connect"><span class="big">
     mysql_connect($hostname [,username
     [,password]])</span></a></dt>
 
@@ -5340,7 +5340,7 @@ inserted at the end of the header, example:
       enabled in PHP.</p>
     </dd>
 
-    <dt><a name="mysql_createdb" id="mysql_createdb"><span style="font-size:1.2em">
+    <dt><a name="mysql_createdb" id="mysql_createdb"><span class="big">
     mysql_CreateDB($database)</span></a></dt>
 
     <dd>
@@ -5349,7 +5349,7 @@ inserted at the end of the header, example:
       enabled in PHP.</p>
     </dd>
 
-    <dt><a name="mysql_dbname" id="mysql_dbname"><span style="font-size:1.2em">
+    <dt><a name="mysql_dbname" id="mysql_dbname"><span class="big">
     mysql_dbName($result,$i)</span></a></dt>
 
     <dd>
@@ -5362,7 +5362,7 @@ inserted at the end of the header, example:
       enabled in PHP.</p>
     </dd>
 
-    <dt><a name="mysql_dropdb" id="mysql_dropdb"><span style="font-size:1.2em">
+    <dt><a name="mysql_dropdb" id="mysql_dropdb"><span class="big">
     mysql_DropDB($database)</span></a></dt>
 
     <dd>
@@ -5373,7 +5373,7 @@ inserted at the end of the header, example:
     </dd>
 
     <dt><a name="mysql_fieldflags" id=
-    "mysql_fieldflags"><span style="font-size:1.2em">mysql_FieldFlags($result,$i)</span></a></dt>
+    "mysql_fieldflags"><span class="big">mysql_FieldFlags($result,$i)</span></a></dt>
 
     <dd>
       <p>mysql_FieldFlags returns the field flags of the specified
@@ -5383,7 +5383,7 @@ inserted at the end of the header, example:
       enabled in PHP.</p>
     </dd>
 
-    <dt><a name="mysql_fieldlen" id="mysql_fieldlen"><span style="font-size:1.2em">
+    <dt><a name="mysql_fieldlen" id="mysql_fieldlen"><span class="big">
     mysql_FieldLen($result,$i)</span></a></dt>
 
     <dd>
@@ -5393,7 +5393,7 @@ inserted at the end of the header, example:
       enabled in PHP.</p>
     </dd>
 
-    <dt><a name="mysql_fieldname" id="mysql_fieldname"><span style="font-size:1.2em">
+    <dt><a name="mysql_fieldname" id="mysql_fieldname"><span class="big">
     mysql_FieldName($result,$i)</span></a></dt>
 
     <dd>
@@ -5406,7 +5406,7 @@ inserted at the end of the header, example:
       enabled in PHP.</p>
     </dd>
 
-    <dt><a name="mysql_fieldtype" id="mysql_fieldtype"><span style="font-size:1.2em">
+    <dt><a name="mysql_fieldtype" id="mysql_fieldtype"><span class="big">
     mysql_FieldType($result,$i)</span></a></dt>
 
     <dd>
@@ -5418,7 +5418,7 @@ inserted at the end of the header, example:
     </dd>
 
     <dt><a name="mysql_freeresult" id=
-    "mysql_freeresult"><span style="font-size:1.2em">mysql_FreeResult($result)</span></a></dt>
+    "mysql_freeresult"><span class="big">mysql_FreeResult($result)</span></a></dt>
 
     <dd>
       <p>mysql_FreeResult only needs to be called if you are
@@ -5433,7 +5433,7 @@ inserted at the end of the header, example:
       enabled in PHP.</p>
     </dd>
 
-    <dt><a name="mysql_insert_id" id="mysql_insert_id"><span style="font-size:1.2em">
+    <dt><a name="mysql_insert_id" id="mysql_insert_id"><span class="big">
     mysql_insert_id()</span></a></dt>
 
     <dd>
@@ -5443,7 +5443,7 @@ inserted at the end of the header, example:
       query performed.</p>
     </dd>
 
-    <dt><a name="mysql_listdbs" id="mysql_listdbs"><span style="font-size:1.2em">
+    <dt><a name="mysql_listdbs" id="mysql_listdbs"><span class="big">
     $result = mysql_ListDBs()</span></a></dt>
 
     <dd>
@@ -5456,7 +5456,7 @@ inserted at the end of the header, example:
     </dd>
 
     <dt><a name="mysql_listfields" id=
-    "mysql_listfields"><span style="font-size:1.2em">$result =
+    "mysql_listfields"><span class="big">$result =
     mysql_Listfields($database,$tablename)</span></a></dt>
 
     <dd>
@@ -5474,7 +5474,7 @@ inserted at the end of the header, example:
     </dd>
 
     <dt><a name="mysql_listtables" id=
-    "mysql_listtables"><span style="font-size:1.2em">$result =
+    "mysql_listtables"><span class="big">$result =
     mysql_ListTables($database)</span></a></dt>
 
     <dd>
@@ -5487,7 +5487,7 @@ inserted at the end of the header, example:
       enabled in PHP.</p>
     </dd>
 
-    <dt><a name="mysql_numfields" id="mysql_numfields"><span style="font-size:1.2em">
+    <dt><a name="mysql_numfields" id="mysql_numfields"><span class="big">
     mysql_NumFields($result)</span></a></dt>
 
     <dd>
@@ -5498,7 +5498,7 @@ inserted at the end of the header, example:
       enabled in PHP.</p>
     </dd>
 
-    <dt><a name="mysql_numrows" id="mysql_numrows"><span style="font-size:1.2em">
+    <dt><a name="mysql_numrows" id="mysql_numrows"><span class="big">
     mysql_NumRows($result)</span></a></dt>
 
     <dd>
@@ -5509,7 +5509,7 @@ inserted at the end of the header, example:
       enabled in PHP.</p>
     </dd>
 
-    <dt><a name="mysql_result" id="mysql_result"><span style="font-size:1.2em">
+    <dt><a name="mysql_result" id="mysql_result"><span class="big">
     mysql_Result($result,$i,field)</span></a></dt>
 
     <dd>
@@ -5560,7 +5560,7 @@ inserted at the end of the header, example:
       enabled in PHP.</p>
     </dd>
 
-    <dt><a name="mysql_tablename" id="mysql_tablename"><span style="font-size:1.2em">
+    <dt><a name="mysql_tablename" id="mysql_tablename"><span class="big">
     mysql_TableName($result,$i)</span></a></dt>
 
     <dd>
@@ -5586,7 +5586,7 @@ inserted at the end of the header, example:
       enabled in PHP.
     </dd>
 
-    <dt><a name="next" id="next"><span style="font-size:1.2em">
+    <dt><a name="next" id="next"><span class="big">
     Next(variable)</span></a></dt>
 
     <dd>
@@ -5611,7 +5611,7 @@ inserted at the end of the header, example:
 </pre>
     </dd>
 
-    <dt><a name="octdec" id="octdec"><span style="font-size:1.2em">
+    <dt><a name="octdec" id="octdec"><span class="big">
     OctDec(octal_number)</span></a></dt>
 
     <dd>
@@ -5619,7 +5619,7 @@ inserted at the end of the header, example:
       also <a href="#decoct">DecOct()</a>.</p>
     </dd>
 
-    <dt><a name="opendir" id="opendir"><span style="font-size:1.2em">
+    <dt><a name="opendir" id="opendir"><span class="big">
     openDir(directory)</span></a></dt>
 
     <dd>
@@ -5630,7 +5630,7 @@ inserted at the end of the header, example:
       <a href="#closedir">closeDir</a> function.</p>
     </dd>
 
-    <dt><a name="openlog" id="openlog"><span style="font-size:1.2em">
+    <dt><a name="openlog" id="openlog"><span class="big">
     OpenLog(ident,options,facility)</span></a></dt>
 
     <dd>
@@ -5641,7 +5641,7 @@ inserted at the end of the header, example:
       "#closelog">CloseLog()</a>.</p>
     </dd>
 
-    <dt><a name="ora_bind" id="ora_bind"><span style="font-size:1.2em">
+    <dt><a name="ora_bind" id="ora_bind"><span class="big">
     Ora_Bind(cursor_ind, php_variable_name, sql_variable_name,
     size)</span></a><br></dt>
 
@@ -5702,14 +5702,14 @@ inserted at the end of the header, example:
 </pre>
     </dd>
 
-    <dt><a name="ora_close" id="ora_close"><span style="font-size:1.2em">
+    <dt><a name="ora_close" id="ora_close"><span class="big">
     Ora_Close(conn_ind)</span></a></dt>
 
     <dd>Ora_Close() closes the Oracle connection identified by
     <var>conn_ind</var>. Returns 0 upon success, -1 upon
     failure.</dd>
 
-    <dt><a name="ora_commit" id="ora_commit"><span style="font-size:1.2em">
+    <dt><a name="ora_commit" id="ora_commit"><span class="big">
     Ora_Commit(conn_ind)</span></a></dt>
 
     <dd>Commits the current transaction on <var>conn_ind</var>. The
@@ -5721,21 +5721,21 @@ inserted at the end of the header, example:
     Ora_Commit() returns -1 (and an error message) upon
     failure.</dd>
 
-    <dt><a name="ora_commitoff" id="ora_commitoff"><span style="font-size:1.2em">
+    <dt><a name="ora_commitoff" id="ora_commitoff"><span class="big">
     Ora_CommitOff(conn_ind)</span></a></dt>
 
     <dd>Ora_CommitOff() turns off autocommit (automatic commit of
     every SQL data manipulation statement) on the Oracle connection
     <var>conn_ind</var>.</dd>
 
-    <dt><a name="ora_commiton" id="ora_commiton"><span style="font-size:1.2em">
+    <dt><a name="ora_commiton" id="ora_commiton"><span class="big">
     Ora_CommitOn(conn_ind)</span></a></dt>
 
     <dd>Ora_CommitOff() turns on autocommit (automatic commit of
     every SQL data manipulation statement) on the Oracle connection
     <var>conn_ind</var>.</dd>
 
-    <dt><a name="ora_exec" id="ora_exec"><span style="font-size:1.2em">
+    <dt><a name="ora_exec" id="ora_exec"><span class="big">
     Ora_Exec(cursor_ind)</span></a></dt>
 
     <dd>Ora_Exec() executes the SQL statement associated with
@@ -5743,41 +5743,41 @@ inserted at the end of the header, example:
     items. The return value is the number of columns for selects,
     or -1 on error.</dd>
 
-    <dt><a name="ora_fetch" id="ora_fetch"><span style="font-size:1.2em">
+    <dt><a name="ora_fetch" id="ora_fetch"><span class="big">
     Ora_Fetch(cursor_ind)</span></a></dt>
 
     <dd>Ora_Fetch() retrieves a row from the database. Returns 1 if
     a column was retrieved, 0 if there are no more columns to
     retrieve or -1 on error.</dd>
 
-    <dt><a name="ora_getcolumn" id="ora_getcolumn"><span style="font-size:1.2em">
+    <dt><a name="ora_getcolumn" id="ora_getcolumn"><span class="big">
     Ora_GetColumn(cursor_ind, column)</span></a></dt>
 
     <dd>Ora_GetColumn() fetches data for a single column in a
     returned row. <a href="ora_fetch">Ora_Fetch()</a> must have
     been called prior to Ora_GetColumn().</dd>
 
-    <dt><a name="ora_logoff" id="ora_logoff"><span style="font-size:1.2em">
+    <dt><a name="ora_logoff" id="ora_logoff"><span class="big">
     Ora_Logoff(conn_ind)</span></a></dt>
 
     <dd>Ora_Logoff() disconnects the logon data area belonging to
     <var>conn_ind</var> and frees used Oracle resources.</dd>
 
-    <dt><a name="ora_logon" id="ora_logon"><span style="font-size:1.2em">
+    <dt><a name="ora_logon" id="ora_logon"><span class="big">
     Ora_Logon(userid, password)</span></a></dt>
 
     <dd>Ora_Logon() establishes a connection between PHP and an
     Oracle database with the given user id and password. Returns 0
     on success and -1 on failure.</dd>
 
-    <dt><a name="ora_open" id="ora_open"><span style="font-size:1.2em">
+    <dt><a name="ora_open" id="ora_open"><span class="big">
     Ora_Open(conn_ind)</span></a></dt>
 
     <dd>Ora_Open() opens a cursor in Oracle that maintains state
     information about the processing of a SQL statement. Returns a
     cursor index or -1 on error.</dd>
 
-    <dt><a name="ora_parse" id="ora_parse"><span style="font-size:1.2em">
+    <dt><a name="ora_parse" id="ora_parse"><span class="big">
     Ora_Parse(cursor_ind, sql_statement [,
     defer])</span></a></dt>
 
@@ -5786,14 +5786,14 @@ inserted at the end of the header, example:
     set to 1 to defer the parse. Returns 0 on success or -1 on
     error.</dd>
 
-    <dt><a name="ora_rollback" id="ora_rollback"><span style="font-size:1.2em">
+    <dt><a name="ora_rollback" id="ora_rollback"><span class="big">
     Ora_Rollback(cursor_ind)</span></a></dt>
 
     <dd>Ora_Rollback() rolls back the current transaction. See
     <a href="#ora_commit">Ora_Commit()</a> for a definition of the
     current transaction.</dd>
 
-    <dt><a name="ord" id="ord"><span style="font-size:1.2em">
+    <dt><a name="ord" id="ord"><span class="big">
     Ord(arg)</span></a></dt>
 
     <dd>
@@ -5801,7 +5801,7 @@ inserted at the end of the header, example:
       arg.</p>
     </dd>
 
-    <dt><a name="parse_str" id="parse_str"><span style="font-size:1.2em">
+    <dt><a name="parse_str" id="parse_str"><span class="big">
     Parse_Str(arg)</span></a></dt>
 
     <dd>
@@ -5821,7 +5821,7 @@ second variable
 </pre>
     </dd>
 
-    <dt><a name="passthru" id="passthru"><span style="font-size:1.2em">
+    <dt><a name="passthru" id="passthru"><span class="big">
     PassThru(command_string [,return_var])</span></a></dt>
 
     <dd>
@@ -5839,7 +5839,7 @@ second variable
       images directly.</p>
     </dd>
 
-    <dt><a name="pclose" id="pclose"><span style="font-size:1.2em">
+    <dt><a name="pclose" id="pclose"><span class="big">
     pclose(fp)</span></a></dt>
 
     <dd>
@@ -5847,7 +5847,7 @@ second variable
       "#popen">popen()</a> function.</p>
     </dd>
 
-    <dt><a name="pg_close" id="pg_close"><span style="font-size:1.2em">
+    <dt><a name="pg_close" id="pg_close"><span class="big">
     pg_Close(connection_id)</span></a></dt>
 
     <dd>
@@ -5858,7 +5858,7 @@ second variable
       been enabled in PHP.</p>
     </dd>
 
-    <dt><a name="pg_connect" id="pg_connect"><span style="font-size:1.2em">
+    <dt><a name="pg_connect" id="pg_connect"><span class="big">
     $connection = pg_Connect(host, port, options, tty,
     dbname)</span></a></dt>
 
@@ -5875,7 +5875,7 @@ second variable
       been enabled in PHP.</p>
     </dd>
 
-    <dt><a name="pg_dbname" id="pg_dbname"><span style="font-size:1.2em">
+    <dt><a name="pg_dbname" id="pg_dbname"><span class="big">
     pg_DBname(connection_id)</span></a></dt>
 
     <dd>
@@ -5886,7 +5886,7 @@ second variable
       been enabled in PHP.</p>
     </dd>
 
-    <dt><a name="pg_errorMessage" id="pg_errorMessage"><span style="font-size:1.2em">
+    <dt><a name="pg_errorMessage" id="pg_errorMessage"><span class="big">
     pg_ErrorMessage(connection_id)</span></a></dt>
 
     <dd>
@@ -5899,7 +5899,7 @@ second variable
       been enabled in PHP.</p>
     </dd>
 
-    <dt><a name="pg_exec" id="pg_exec"><span style="font-size:1.2em">$result =
+    <dt><a name="pg_exec" id="pg_exec"><span class="big">$result =
     pg_Exec(connection_id, query_string)</span></a></dt>
 
     <dd>
@@ -5918,7 +5918,7 @@ second variable
       been enabled in PHP.</p>
     </dd>
 
-    <dt><a name="pg_fieldname" id="pg_fieldname"><span style="font-size:1.2em">
+    <dt><a name="pg_fieldname" id="pg_fieldname"><span class="big">
     pg_FieldName(result_id, field_number)</span></a></dt>
 
     <dd>
@@ -5930,7 +5930,7 @@ second variable
       been enabled in PHP.</p>
     </dd>
 
-    <dt><a name="pg_fieldprtlen" id="pg_fieldprtlen"><span style="font-size:1.2em">
+    <dt><a name="pg_fieldprtlen" id="pg_fieldprtlen"><span class="big">
     pg_FieldPrtLen(result_id, row_number,
     field_name)</span></a></dt>
 
@@ -5944,7 +5944,7 @@ second variable
       been enabled in PHP.</p>
     </dd>
 
-    <dt><a name="pg_fieldnum" id="pg_fieldnum"><span style="font-size:1.2em">
+    <dt><a name="pg_fieldnum" id="pg_fieldnum"><span class="big">
     pg_FieldNum(result_id, field_name)</span></a></dt>
 
     <dd>
@@ -5957,7 +5957,7 @@ second variable
       been enabled in PHP.</p>
     </dd>
 
-    <dt><a name="pg_fieldsize" id="pg_fieldsize"><span style="font-size:1.2em">
+    <dt><a name="pg_fieldsize" id="pg_fieldsize"><span class="big">
     pg_FieldSize(result_id, field_name)</span></a></dt>
 
     <dd>
@@ -5970,7 +5970,7 @@ second variable
       been enabled in PHP.</p>
     </dd>
 
-    <dt><a name="pg_fieldtype" id="pg_fieldtype"><span style="font-size:1.2em">
+    <dt><a name="pg_fieldtype" id="pg_fieldtype"><span class="big">
     pg_FieldType(result_id, field_number)</span></a></dt>
 
     <dd>
@@ -5982,7 +5982,7 @@ second variable
       been enabled in PHP.</p>
     </dd>
 
-    <dt><a name="pg_freeresult" id="pg_freeresult"><span style="font-size:1.2em">
+    <dt><a name="pg_freeresult" id="pg_freeresult"><span class="big">
     pg_FreeResult(result_id)</span></a></dt>
 
     <dd>
@@ -5998,7 +5998,7 @@ second variable
       been enabled in PHP.</p>
     </dd>
 
-    <dt><a name="pg_getlastoid" id="pg_getlastoid"><span style="font-size:1.2em">
+    <dt><a name="pg_getlastoid" id="pg_getlastoid"><span class="big">
     pg_GetLastOid()</span></a></dt>
 
     <dd>
@@ -6013,7 +6013,7 @@ second variable
       been enabled in PHP.</p>
     </dd>
 
-    <dt><a name="pg_host" id="pg_host"><span style="font-size:1.2em">
+    <dt><a name="pg_host" id="pg_host"><span class="big">
     pg_Host(connection_id)</span></a></dt>
 
     <dd>
@@ -6024,7 +6024,7 @@ second variable
       been enabled in PHP.</p>
     </dd>
 
-    <dt><a name="pg_numfields" id="pg_numfields"><span style="font-size:1.2em">
+    <dt><a name="pg_numfields" id="pg_numfields"><span class="big">
     pg_NumFields(result_id)</span></a></dt>
 
     <dd>
@@ -6037,7 +6037,7 @@ second variable
       been enabled in PHP.</p>
     </dd>
 
-    <dt><a name="pg_numrows" id="pg_numrows"><span style="font-size:1.2em">
+    <dt><a name="pg_numrows" id="pg_numrows"><span class="big">
     pg_NumRows(result_id)</span></a></dt>
 
     <dd>
@@ -6050,7 +6050,7 @@ second variable
       been enabled in PHP.</p>
     </dd>
 
-    <dt><a name="pg_options" id="pg_options"><span style="font-size:1.2em">
+    <dt><a name="pg_options" id="pg_options"><span class="big">
     pg_Options(connection_id)</span></a></dt>
 
     <dd>
@@ -6061,7 +6061,7 @@ second variable
       been enabled in PHP.</p>
     </dd>
 
-    <dt><a name="pg_port" id="pg_port"><span style="font-size:1.2em">
+    <dt><a name="pg_port" id="pg_port"><span class="big">
     pg_Port(connection_id)</span></a></dt>
 
     <dd>
@@ -6072,7 +6072,7 @@ second variable
       been enabled in PHP.</p>
     </dd>
 
-    <dt><a name="pg_result" id="pg_result"><span style="font-size:1.2em">
+    <dt><a name="pg_result" id="pg_result"><span class="big">
     pg_Result(result_id, row_number, field
     name/index)</span></a></dt>
 
@@ -6099,7 +6099,7 @@ second variable
       been enabled in PHP.</p>
     </dd>
 
-    <dt><a name="pg_tty" id="pg_tty"><span style="font-size:1.2em">
+    <dt><a name="pg_tty" id="pg_tty"><span class="big">
     pg_tty(connection_id)</span></a></dt>
 
     <dd>
@@ -6111,7 +6111,7 @@ second variable
       been enabled in PHP.</p>
     </dd>
 
-    <dt><a name="phpinfo" id="phpinfo"><span style="font-size:1.2em">
+    <dt><a name="phpinfo" id="phpinfo"><span class="big">
     phpInfo()</span></a></dt>
 
     <dd>
@@ -6122,7 +6122,7 @@ second variable
       internal data.</p>
     </dd>
 
-    <dt><a name="phpversion" id="phpversion"><span style="font-size:1.2em">
+    <dt><a name="phpversion" id="phpversion"><span class="big">
     phpVersion()</span></a></dt>
 
     <dd>
@@ -6130,7 +6130,7 @@ second variable
       running.</p>
     </dd>
 
-    <dt><a name="popen" id="popen"><span style="font-size:1.2em">fp =
+    <dt><a name="popen" id="popen"><span class="big">fp =
     popen(command,mode)</span></a></dt>
 
     <dd>
@@ -6144,7 +6144,7 @@ second variable
       the <a href="#pclose">pclose()</a> function.</p>
     </dd>
 
-    <dt><a name="pos" id="pos"><span style="font-size:1.2em">
+    <dt><a name="pos" id="pos"><span class="big">
     pos(var)</span></a></dt>
 
     <dd>
@@ -6154,7 +6154,7 @@ second variable
       handy.</p>
     </dd>
 
-    <dt><a name="pow" id="pow"><span style="font-size:1.2em">
+    <dt><a name="pow" id="pow"><span class="big">
     pow(x,y)</span></a></dt>
 
     <dd>
@@ -6162,7 +6162,7 @@ second variable
       "#exp">Exp()</a></p>
     </dd>
 
-    <dt><a name="prev" id="prev"><span style="font-size:1.2em">
+    <dt><a name="prev" id="prev"><span class="big">
     Prev(variable)</span></a></dt>
 
     <dd>
@@ -6176,7 +6176,7 @@ second variable
       "#next">Next()</a>.</p>
     </dd>
 
-    <dt><a name="putenv" id="putenv"><span style="font-size:1.2em">
+    <dt><a name="putenv" id="putenv"><span class="big">
     PutEnv(string)</span></a></dt>
 
     <dd>
@@ -6189,7 +6189,7 @@ second variable
       to switch back and forth between the different sockets.</p>
     </dd>
 
-    <dt><a name="quotemeta" id="quotemeta"><span style="font-size:1.2em">
+    <dt><a name="quotemeta" id="quotemeta"><span class="big">
     QuoteMeta(arg)</span></a></dt>
 
     <dd>
@@ -6198,7 +6198,7 @@ second variable
       backslash.</p>
     </dd>
 
-    <dt><a name="rand" id="rand"><span style="font-size:1.2em">
+    <dt><a name="rand" id="rand"><span class="big">
     Rand()</span></a></dt>
 
     <dd>
@@ -6212,7 +6212,7 @@ second variable
       result.</p>
     </dd>
 
-    <dt><a name="readdir" id="readdir"><span style="font-size:1.2em">
+    <dt><a name="readdir" id="readdir"><span class="big">
     readDir()</span></a></dt>
 
     <dd>
@@ -6224,7 +6224,7 @@ second variable
       directory before calling this function.</p>
     </dd>
 
-    <dt><a name="readfile" id="readfile"><span style="font-size:1.2em">
+    <dt><a name="readfile" id="readfile"><span class="big">
     ReadFile(filename)</span></a></dt>
 
     <dd>
@@ -6237,14 +6237,14 @@ second variable
       ReadFile is more efficient.</p>
     </dd>
 
-    <dt><a name="readlink" id="readlink"><span style="font-size:1.2em">
+    <dt><a name="readlink" id="readlink"><span class="big">
     ReadLink(path)</span></a></dt>
 
     <dd>ReadLink does the same as the readlink C function and
     returns the contents of the symbolic link path or -1 in case of
     error. See also <a href="#linkinfo">LinkInfo</a>.</dd>
 
-    <dt><a name="reg_match" id="reg_match"><span style="font-size:1.2em">
+    <dt><a name="reg_match" id="reg_match"><span class="big">
     reg_Match(expr,arg[,regs])</span></a></dt>
 
     <dd>
@@ -6265,7 +6265,7 @@ second variable
       expression section</a> of this document.</p>
     </dd>
 
-    <dt><a name="reg_replace" id="reg_replace"><span style="font-size:1.2em">
+    <dt><a name="reg_replace" id="reg_replace"><span class="big">
     reg_replace(expr,replace,arg)</span></a></dt>
 
     <dd>
@@ -6283,7 +6283,7 @@ second variable
       document.</p>
     </dd>
 
-    <dt><a name="reg_search" id="reg_search"><span style="font-size:1.2em">
+    <dt><a name="reg_search" id="reg_search"><span class="big">
     reg_Search(expr,arg[,regs])</span></a></dt>
 
     <dd>
@@ -6302,7 +6302,7 @@ second variable
       expression section</a> of this document.</p>
     </dd>
 
-    <dt><a name="rename" id="rename"><span style="font-size:1.2em">
+    <dt><a name="rename" id="rename"><span class="big">
     Rename(old,new)</span></a></dt>
 
     <dd>
@@ -6310,7 +6310,7 @@ second variable
       function.</p>
     </dd>
 
-    <dt><a name="reset" id="reset"><span style="font-size:1.2em">
+    <dt><a name="reset" id="reset"><span class="big">
     Reset(variable)</span></a></dt>
 
     <dd>
@@ -6332,7 +6332,7 @@ second variable
 </pre>
     </dd>
 
-    <dt><a name="return" id="return"><span style="font-size:1.2em">
+    <dt><a name="return" id="return"><span class="big">
     return(value)</span></a></dt>
 
     <dd>
@@ -6342,7 +6342,7 @@ second variable
       information.</p>
     </dd>
 
-    <dt><a name="rewind" id="rewind"><span style="font-size:1.2em">
+    <dt><a name="rewind" id="rewind"><span class="big">
     rewind($fd)</span></a></dt>
 
     <dd>
@@ -6353,7 +6353,7 @@ second variable
       "#ftell">ftell()</a> and <a href="#fseek">fseek()</a>.</p>
     </dd>
 
-    <dt><a name="rewinddir" id="rewinddir"><span style="font-size:1.2em">
+    <dt><a name="rewinddir" id="rewinddir"><span class="big">
     rewindDir()</span></a></dt>
 
     <dd>
@@ -6363,7 +6363,7 @@ second variable
       calling this function.</p>
     </dd>
 
-    <dt><a name="rmdir" id="rmdir"><span style="font-size:1.2em">
+    <dt><a name="rmdir" id="rmdir"><span class="big">
     RmDir(dir)</span></a></dt>
 
     <dd>
@@ -6372,7 +6372,7 @@ second variable
       files.</p>
     </dd>
 
-    <dt><a name="setcookie" id="setcookie"><span style="font-size:1.2em">
+    <dt><a name="setcookie" id="setcookie"><span class="big">
     SetCookie(name,value,expire,path,domain,secure)</span></a></dt>
 
     <dd>
@@ -6404,7 +6404,7 @@ second variable
     </dd>
 
     <dt><a name="seterrorreporting" id=
-    "seterrorreporting"><span style="font-size:1.2em">
+    "seterrorreporting"><span class="big">
     SetErrorReporting(arg)</span></a></dt>
 
     <dd>
@@ -6418,7 +6418,7 @@ second variable
       information.</p>
     </dd>
 
-    <dt><a name="setlogging" id="setlogging"><span style="font-size:1.2em">
+    <dt><a name="setlogging" id="setlogging"><span class="big">
     SetLogging(arg)</span></a></dt>
 
     <dd>
@@ -6427,7 +6427,7 @@ second variable
       logging will be enabled, if zero, disabled.</p>
     </dd>
 
-    <dt><a name="setshowinfo" id="setshowinfo"><span style="font-size:1.2em">
+    <dt><a name="setshowinfo" id="setshowinfo"><span class="big">
     SetShowInfo(arg)</span></a></dt>
 
     <dd>
@@ -6437,7 +6437,7 @@ second variable
       zero, disabled.</p>
     </dd>
 
-    <dt><a name="settype" id="settype"><span style="font-size:1.2em">
+    <dt><a name="settype" id="settype"><span class="big">
     SetType(variable,type)</span></a></dt>
 
     <dd>
@@ -6446,21 +6446,21 @@ second variable
       <a href="#gettype">GetType()</a> function.</p>
     </dd>
 
-    <dt><a name="shl" id="shl"><span style="font-size:1.2em">
+    <dt><a name="shl" id="shl"><span class="big">
     shl(n,b)</span></a></dt>
 
     <dd>
       <p>Shift the value <b>n</b> left <b>b</b> bits.</p>
     </dd>
 
-    <dt><a name="shr" id="shr"><span style="font-size:1.2em">
+    <dt><a name="shr" id="shr"><span class="big">
     shr(n,b)</span></a></dt>
 
     <dd>
       <p>Shift the value <b>n</b> right <b>b</b> bits.</p>
     </dd>
 
-    <dt><a name="sin" id="sin"><span style="font-size:1.2em">
+    <dt><a name="sin" id="sin"><span class="big">
     Sin(arg)</span></a></dt>
 
     <dd>
@@ -6468,7 +6468,7 @@ second variable
       "#cos">Cos()</a> and <a href="#tan">Tan()</a></p>
     </dd>
 
-    <dt><a name="sleep" id="sleep"><span style="font-size:1.2em">
+    <dt><a name="sleep" id="sleep"><span class="big">
     Sleep(secs)</span></a></dt>
 
     <dd>
@@ -6477,7 +6477,7 @@ second variable
       function.</p>
     </dd>
 
-    <dt><a name="solid_close" id="solid_close"><span style="font-size:1.2em">
+    <dt><a name="solid_close" id="solid_close"><span class="big">
     Solid_Close(connection_id)</span></a></dt>
 
     <dd>
@@ -6488,7 +6488,7 @@ second variable
       enabled in PHP.</p>
     </dd>
 
-    <dt><a name="solid_connect" id="solid_connect"><span style="font-size:1.2em">
+    <dt><a name="solid_connect" id="solid_connect"><span class="big">
     $connection = Solid_Connect(data source name, username,
     password)</span></a></dt>
 
@@ -6506,7 +6506,7 @@ second variable
       enabled in PHP.</p>
     </dd>
 
-    <dt><a name="solid_exec" id="solid_exec"><span style="font-size:1.2em">
+    <dt><a name="solid_exec" id="solid_exec"><span class="big">
     $result = Solid_Exec(connection_id,
     query_string)</span></a></dt>
 
@@ -6526,7 +6526,7 @@ second variable
       enabled in PHP.</p>
     </dd>
 
-    <dt><a name="solid_fetchrow" id="solid_fetchrow"><span style="font-size:1.2em">
+    <dt><a name="solid_fetchrow" id="solid_fetchrow"><span class="big">
     Solid_FetchRow(result_id)</span></a></dt>
 
     <dd>
@@ -6544,7 +6544,7 @@ second variable
       enabled in PHP.</p>
     </dd>
 
-    <dt><a name="solid_fieldname" id="solid_fieldname"><span style="font-size:1.2em">
+    <dt><a name="solid_fieldname" id="solid_fieldname"><span class="big">
     Solid_FieldName(result_id, field_number)</span></a></dt>
 
     <dd>
@@ -6556,7 +6556,7 @@ second variable
       enabled in PHP.</p>
     </dd>
 
-    <dt><a name="solid_fieldnum" id="solid_fieldnum"><span style="font-size:1.2em">
+    <dt><a name="solid_fieldnum" id="solid_fieldnum"><span class="big">
     Solid_FieldNum(result_id, field_name)</span></a></dt>
 
     <dd>
@@ -6570,7 +6570,7 @@ second variable
     </dd>
 
     <dt><a name="solid_freeresult" id=
-    "solid_freeresult"><span style="font-size:1.2em">Solid_FreeResult(result_id)</span></a></dt>
+    "solid_freeresult"><span class="big">Solid_FreeResult(result_id)</span></a></dt>
 
     <dd>
       <p>Solid_FreeResult only needs to be called if you are
@@ -6585,7 +6585,7 @@ second variable
       enabled in PHP.</p>
     </dd>
 
-    <dt><a name="solid_numfields" id="solid_numfields"><span style="font-size:1.2em">
+    <dt><a name="solid_numfields" id="solid_numfields"><span class="big">
     Solid_NumFields(result_id)</span></a></dt>
 
     <dd>
@@ -6598,7 +6598,7 @@ second variable
       enabled in PHP.</p>
     </dd>
 
-    <dt><a name="solid_numrows" id="solid_numrows"><span style="font-size:1.2em">
+    <dt><a name="solid_numrows" id="solid_numrows"><span class="big">
     Solid_NumRows(result_id)</span></a></dt>
 
     <dd>
@@ -6639,7 +6639,7 @@ second variable
       enabled in PHP.</p>
     </dd>
 
-    <dt><a name="solid_result" id="solid_result"><span style="font-size:1.2em">
+    <dt><a name="solid_result" id="solid_result"><span class="big">
     Solid_Result(result_id, field name/index)</span></a></dt>
 
     <dd>
@@ -6653,7 +6653,7 @@ second variable
       enabled in PHP.</p>
     </dd>
 
-    <dt><a name="sort" id="sort"><span style="font-size:1.2em">
+    <dt><a name="sort" id="sort"><span class="big">
     Sort(array)</span></a></dt>
 
     <dd>
@@ -6668,7 +6668,7 @@ second variable
       "#asort">ASort()</a> function.</p>
     </dd>
 
-    <dt><a name="soundex" id="soundex"><span style="font-size:1.2em">
+    <dt><a name="soundex" id="soundex"><span class="big">
     Soundex(string)</span></a></dt>
 
     <dd>
@@ -6694,7 +6694,7 @@ second variable
 </pre>
     </dd>
 
-    <dt><a name="sprintf" id="sprintf"><span style="font-size:1.2em">
+    <dt><a name="sprintf" id="sprintf"><span class="big">
     Sprintf(format,arg [,arg,arg,arg,arg])</span></a></dt>
 
     <dd>
@@ -6712,14 +6712,14 @@ second variable
       in the format string.</p>
     </dd>
 
-    <dt><a name="sqrt" id="sqrt"><span style="font-size:1.2em">
+    <dt><a name="sqrt" id="sqrt"><span class="big">
     Sqrt(arg)</span></a></dt>
 
     <dd>
       <p>Sqrt returns the square root of arg.</p>
     </dd>
 
-    <dt><a name="srand" id="srand"><span style="font-size:1.2em">
+    <dt><a name="srand" id="srand"><span class="big">
     Srand(integer)</span></a></dt>
 
     <dd>
@@ -6735,7 +6735,7 @@ second variable
 </pre>
     </dd>
 
-    <dt><a name="strchr" id="strchr"><span style="font-size:1.2em">
+    <dt><a name="strchr" id="strchr"><span class="big">
     strchr(string,arg)</span></a></dt>
 
     <dd>
@@ -6749,7 +6749,7 @@ second variable
       <code>"an example string"</code>.</p>
     </dd>
 
-    <dt><a name="strtr" id="strtr"><span style="font-size:1.2em">
+    <dt><a name="strtr" id="strtr"><span class="big">
     strtr(input,set1,set2)</span></a></dt>
 
     <dd>strtr() translates each character of "string" that is in
@@ -6760,7 +6760,7 @@ second variable
     one of "set1" or "set2" is longer, longer "set?" is truncated
     to length of shorter "set?".</dd>
 
-    <dt><a name="stripslashes" id="stripslashes"><span style="font-size:1.2em">
+    <dt><a name="stripslashes" id="stripslashes"><span class="big">
     StripSlashes(arg)</span></a></dt>
 
     <dd>
@@ -6768,14 +6768,14 @@ second variable
       <a href="#addslashes">AddSlashes()</a>.</p>
     </dd>
 
-    <dt><a name="strlen" id="strlen"><span style="font-size:1.2em">
+    <dt><a name="strlen" id="strlen"><span class="big">
     strlen(string)</span></a></dt>
 
     <dd>
       <p>strlen returns the length of the string.</p>
     </dd>
 
-    <dt><a name="strrchr" id="strrchr"><span style="font-size:1.2em">
+    <dt><a name="strrchr" id="strrchr"><span class="big">
     strrchr(string,arg)</span></a></dt>
 
     <dd>
@@ -6785,7 +6785,7 @@ second variable
       character was found and an empty string if it wasn't.</p>
     </dd>
 
-    <dt><a name="strstr" id="strstr"><span style="font-size:1.2em">
+    <dt><a name="strstr" id="strstr"><span class="big">
     strstr(string,arg)</span></a></dt>
 
     <dd>
@@ -6799,7 +6799,7 @@ second variable
       <code>"an example string"</code>.</p>
     </dd>
 
-    <dt><a name="strtok" id="strtok"><span style="font-size:1.2em">
+    <dt><a name="strtok" id="strtok"><span class="big">
     strtok(string,arg)</span></a></dt>
 
     <dd>
@@ -6829,7 +6829,7 @@ second variable
       characters in the argument are found.</p>
     </dd>
 
-    <dt><a name="strtolower" id="strtolower"><span style="font-size:1.2em">
+    <dt><a name="strtolower" id="strtolower"><span class="big">
     strtolower(string)</span></a></dt>
 
     <dd>
@@ -6837,7 +6837,7 @@ second variable
       characters.</p>
     </dd>
 
-    <dt><a name="strtoupper" id="strtoupper"><span style="font-size:1.2em">
+    <dt><a name="strtoupper" id="strtoupper"><span class="big">
     strtoupper(string)</span></a></dt>
 
     <dd>
@@ -6845,7 +6845,7 @@ second variable
       characters.</p>
     </dd>
 
-    <dt><a name="strval" id="strval"><span style="font-size:1.2em">
+    <dt><a name="strval" id="strval"><span class="big">
     strval(variable)</span></a></dt>
 
     <dd>
@@ -6854,7 +6854,7 @@ second variable
       "#doubleval">doubleval()</a> functions.</p>
     </dd>
 
-    <dt><a name="substr" id="substr"><span style="font-size:1.2em">substr(string,
+    <dt><a name="substr" id="substr"><span class="big">substr(string,
     start, length)</span></a></dt>
 
     <dd>
@@ -6866,7 +6866,7 @@ second variable
     </dd>
 
     <dt><a name="sybsql_checkconnect" id=
-    "sybsql_checkconnect"><span style="font-size:1.2em">
+    "sybsql_checkconnect"><span class="big">
     sybSQL_CheckConnect()</span></a></dt>
 
     <dd>
@@ -6874,7 +6874,7 @@ second variable
       has been established and 0 otherwise.</p>
     </dd>
 
-    <dt><a name="sybsql_dbuse" id="sybsql_dbuse"><span style="font-size:1.2em">
+    <dt><a name="sybsql_dbuse" id="sybsql_dbuse"><span class="big">
     sybSQL_DBuse(database)</span></a></dt>
 
     <dd>
@@ -6886,7 +6886,7 @@ second variable
       <p>The function returns 1 on success and 0 on failure.</p>
     </dd>
 
-    <dt><a name="sybsql_connect" id="sybsql_connect"><span style="font-size:1.2em">
+    <dt><a name="sybsql_connect" id="sybsql_connect"><span class="big">
     sybSQL_Connect()</span></a></dt>
 
     <dd>
@@ -6916,7 +6916,7 @@ second variable
       <p>The function returns 1 on success and 0 on failure.</p>
     </dd>
 
-    <dt><a name="sybsql_exit" id="sybsql_exit"><span style="font-size:1.2em">
+    <dt><a name="sybsql_exit" id="sybsql_exit"><span class="big">
     sybSQL_Exit()</span></a></dt>
 
     <dd>
@@ -6927,7 +6927,7 @@ second variable
     </dd>
 
     <dt><a name="sybsql_fieldname" id=
-    "sybsql_fieldname"><span style="font-size:1.2em">sybSQL_Fieldname(index)</span></a></dt>
+    "sybsql_fieldname"><span class="big">sybSQL_Fieldname(index)</span></a></dt>
 
     <dd>
       <p>This function returns the field name of a regular result
@@ -6939,7 +6939,7 @@ second variable
       function returns an empty string ("").</p>
     </dd>
 
-    <dt><a name="sybsql_getfield" id="sybsql_getfield"><span style="font-size:1.2em">
+    <dt><a name="sybsql_getfield" id="sybsql_getfield"><span class="big">
     sybSQL_GetField(field)</span></a></dt>
 
     <dd>
@@ -6957,7 +6957,7 @@ second variable
       string ("").</p>
     </dd>
 
-    <dt><a name="sybsql_isrow" id="sybsql_isrow"><span style="font-size:1.2em">
+    <dt><a name="sybsql_isrow" id="sybsql_isrow"><span class="big">
     sybSQL_IsRow()</span></a></dt>
 
     <dd>
@@ -6968,7 +6968,7 @@ second variable
       rows and 0 if the command didn't return any rows.</p>
     </dd>
 
-    <dt><a name="sybsql_nextrow" id="sybsql_nextrow"><span style="font-size:1.2em">
+    <dt><a name="sybsql_nextrow" id="sybsql_nextrow"><span class="big">
     sybSQL_NextRow()</span></a></dt>
 
     <dd>
@@ -6981,7 +6981,7 @@ second variable
     </dd>
 
     <dt><a name="sybsql_numfields" id=
-    "sybsql_numfields"><span style="font-size:1.2em">sybSQL_NumFields()</span></a></dt>
+    "sybsql_numfields"><span class="big">sybSQL_NumFields()</span></a></dt>
 
     <dd>
       <p>This function returns the number of fields in a current
@@ -6992,7 +6992,7 @@ second variable
       0.</p>
     </dd>
 
-    <dt><a name="sybsql_numrows" id="sybsql_numrows"><span style="font-size:1.2em">
+    <dt><a name="sybsql_numrows" id="sybsql_numrows"><span class="big">
     sybSQL_NumRows()</span></a></dt>
 
     <dd>
@@ -7010,7 +7010,7 @@ second variable
       will return 0.</p>
     </dd>
 
-    <dt><a name="sybsql_query" id="sybsql_query"><span style="font-size:1.2em">
+    <dt><a name="sybsql_query" id="sybsql_query"><span class="big">
     sybSQL_Query()</span></a></dt>
 
     <dd>
@@ -7023,7 +7023,7 @@ second variable
       successfully and returns 0 if the request fails.</p>
     </dd>
 
-    <dt><a name="sybsql_result" id="sybsql_result"><span style="font-size:1.2em">
+    <dt><a name="sybsql_result" id="sybsql_result"><span class="big">
     sybSQL_Result(string)</span></a></dt>
 
     <dd>
@@ -7074,7 +7074,7 @@ second variable
     </dd>
 
     <dt><a name="sybsql_result_all" id=
-    "sybsql_result_all"><span style="font-size:1.2em">
+    "sybsql_result_all"><span class="big">
     sybSQL_Result_All()</span></a></dt>
 
     <dd>
@@ -7085,7 +7085,7 @@ second variable
       there are any column headings in the output.</p>
     </dd>
 
-    <dt><a name="sybsql_seek" id="sybsql_seek"><span style="font-size:1.2em">
+    <dt><a name="sybsql_seek" id="sybsql_seek"><span class="big">
     sybSQL_Seek(row)</span></a></dt>
 
     <dd>
@@ -7101,7 +7101,7 @@ second variable
       function can be used for this purpose.</p>
     </dd>
 
-    <dt><a name="symlink" id="symlink"><span style="font-size:1.2em">
+    <dt><a name="symlink" id="symlink"><span class="big">
     Symlink(target,link)</span></a></dt>
 
     <dd>
@@ -7109,7 +7109,7 @@ second variable
       "#link">Link()</a> function to create hard links.</p>
     </dd>
 
-    <dt><a name="syslog" id="syslog"><span style="font-size:1.2em">
+    <dt><a name="syslog" id="syslog"><span class="big">
     Syslog(level,message)</span></a></dt>
 
     <dd>
@@ -7120,7 +7120,7 @@ second variable
       "#closelog">CloseLog()</a>.</p>
     </dd>
 
-    <dt><a name="system" id="system"><span style="font-size:1.2em">
+    <dt><a name="system" id="system"><span class="big">
     System(command_string [,return_var])</span></a></dt>
 
     <dd>
@@ -7142,7 +7142,7 @@ second variable
       "#exec">Exec</a> function.</p>
     </dd>
 
-    <dt><a name="tan" id="tan"><span style="font-size:1.2em">
+    <dt><a name="tan" id="tan"><span class="big">
     Tan(arg)</span></a></dt>
 
     <dd>
@@ -7150,7 +7150,7 @@ second variable
       <a href="#sin">Sin()</a> and <a href="#cos">Cos()</a></p>
     </dd>
 
-    <dt><a name="tempnam" id="tempnam"><span style="font-size:1.2em">
+    <dt><a name="tempnam" id="tempnam"><span class="big">
     TempNam(path, prefix)</span></a></dt>
 
     <dd>
@@ -7159,7 +7159,7 @@ second variable
       identical to the Unix C tempnam() function.</p>
     </dd>
 
-    <dt><a name="time" id="time"><span style="font-size:1.2em">
+    <dt><a name="time" id="time"><span class="big">
     Time()</span></a></dt>
 
     <dd>
@@ -7170,7 +7170,7 @@ second variable
       "#microtime">Microtime</a> function.</p>
     </dd>
 
-    <dt><a name="umask" id="umask"><span style="font-size:1.2em">
+    <dt><a name="umask" id="umask"><span class="big">
     Umask([mask])</span></a></dt>
 
     <dd>
@@ -7183,7 +7183,7 @@ second variable
       returns the current umask.</p>
     </dd>
 
-    <dt><a name="uniqid" id="uniqid"><span style="font-size:1.2em">
+    <dt><a name="uniqid" id="uniqid"><span class="big">
     UniqId()</span></a></dt>
 
     <dd>
@@ -7195,7 +7195,7 @@ second variable
       long.</p>
     </dd>
 
-    <dt><a name="unlink" id="unlink"><span style="font-size:1.2em">
+    <dt><a name="unlink" id="unlink"><span class="big">
     Unlink(filename)</span></a></dt>
 
     <dd>
@@ -7204,7 +7204,7 @@ second variable
       function for removing directories.</p>
     </dd>
 
-    <dt><a name="unset" id="unset"><span style="font-size:1.2em">
+    <dt><a name="unset" id="unset"><span class="big">
     UnSet($var)</span></a></dt>
 
     <dd>
@@ -7213,7 +7213,7 @@ second variable
       may also be unset.</p>
     </dd>
 
-    <dt><a name="urldecode" id="urldecode"><span style="font-size:1.2em">
+    <dt><a name="urldecode" id="urldecode"><span class="big">
     UrlDecode(arg)</span></a></dt>
 
     <dd>
@@ -7225,7 +7225,7 @@ second variable
       included.</p>
     </dd>
 
-    <dt><a name="urlencode" id="urlencode"><span style="font-size:1.2em">
+    <dt><a name="urlencode" id="urlencode"><span class="big">
     UrlEncode(arg)</span></a></dt>
 
     <dd>
@@ -7235,7 +7235,7 @@ second variable
       returned.</p>
     </dd>
 
-    <dt><a name="usleep" id="usleep"><span style="font-size:1.2em">
+    <dt><a name="usleep" id="usleep"><span class="big">
     USleep(microsecs)</span></a></dt>
 
     <dd>
@@ -7244,7 +7244,7 @@ second variable
       <a href="#sleep">Sleep()</a> function.</p>
     </dd>
 
-    <dt><a name="virtual" id="virtual"><span style="font-size:1.2em">
+    <dt><a name="virtual" id="virtual"><span class="big">
     Virtual(filename)</span></a></dt>
 
     <dd>

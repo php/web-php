@@ -14,11 +14,11 @@ ini_set('highlight.html',    'html');
 // Highlight PHP code
 function highlight_php($code, $return = FALSE)
 {
-	$highlighted = highlight_string($code, TRUE);
+    $highlighted = highlight_string($code, TRUE);
 
-	// Use this ugly hack for now to avoid code snippets with bad syntax screwing up the highlighter
+    // Use this ugly hack for now to avoid code snippets with bad syntax screwing up the highlighter
     if(strstr($highlighted, "include/layout.inc</b>")) {
-		$highlighted = '<span class="html">'. nl2br(htmlentities($code, ENT_HTML5), FALSE) ."</span>";
+	    $highlighted = '<span class="html">'. nl2br(htmlentities($code, ENT_HTML5), FALSE) ."</span>";
 	}
 
     // Fix output to use CSS classes and wrap well

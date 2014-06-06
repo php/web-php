@@ -361,6 +361,11 @@ p:empty {
 small {
     font-size: 0.75rem;
 }
+/* use this instead of the obsolet <big> tag */
+.big {
+	font-size: 1.2rem;
+}
+
 blockquote {
     margin: .75rem 0 .75rem .75rem;
 }
