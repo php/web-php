@@ -2,20 +2,12 @@
 // $Id$
 $_SERVER['BASE_PAGE'] = 'ChangeLog-5.php';
 include_once $_SERVER['DOCUMENT_ROOT'] . '/include/prepend.inc';
-site_header("PHP 5 ChangeLog", array("current" => "docs", 'css' => array('changelog.css'), 'layout_span' => 12));
-function bugfix($number) { echo "Fixed bug "; bugl($number); }
-function bugl($number)   { echo "<a href=\"http://bugs.php.net/$number\">#$number</a>"; }
-function peclbugfix($number) { echo "Fixed PECL bug "; bugl($number); }
-function peclbugl($number)   { echo "<a href=\"http://pecl.php.net/bugs/bug.php?id=$number\">#$number</a>"; }
-function release_date($in) {
-    $time = strtotime($in);
-    $human_readable = date('d M Y', $time);
-    $for_tools = date('Y-m-d', $time);
-    echo "<time class='releasedate' datetime='{$for_tools}'>{$human_readable}</time>";
-}
+include_once $_SERVER['DOCUMENT_ROOT'] . '/include/changelogs.inc';
+site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("changelog.css"), "layout_span" => 12));
 ?>
 
 <h1>PHP 5 ChangeLog</h1>
+
 <section class="version" id="5.5.13"><!-- {{{ 5.5.13 -->
 <h3>Version 5.5.13</h3>
 <?php release_date('29-May-2014'); ?>
