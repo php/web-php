@@ -170,10 +170,12 @@ if (count($_POST) && (!isset($_POST['purpose']) || !is_array($_POST['purpose']) 
 else {
 	if (count($_POST)) {
         print <<<EOT
-<p class="formerror">
+<div class="warning">
+<p>
  We could not have said it more clearly. Read everything on
  this page and look at the form you are submitting carefully.
 </p>
+</div>
 EOT;
     }
 ?>
