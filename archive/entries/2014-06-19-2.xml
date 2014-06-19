@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom" xmlns:default="http://php.net/ns/news">
+  <title>New Zealand PHP Conference 2014</title>
+  <id>http://php.net/archive/2014.php#id2014-06-19-2</id>
+  <published>2014-06-19T23:19:54+00:00</published>
+  <updated>2014-06-19T23:19:54+00:00</updated>
+  <default:finalTeaserDate xmlns="http://php.net/ns/news">2014-08-29</default:finalTeaserDate>
+  <category term="conferences" label="Conference announcement"/>
+  <link href="http://php.net/conferences/index.php#id2014-06-19-2" rel="alternate" type="text/html"/>
+  <default:newsImage xmlns="http://php.net/ns/news" link="http://www.phpconference.co.nz/" title="New Zealand PHP Conference 2014">newzealand-2014.png</default:newsImage>
+  <link href="http://www.phpconference.co.nz/" rel="via" type="text/html"/>
+  <content type="xhtml">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+     <p>
+     We're thrilled to announce the <a href="http://www.phpconference.co.nz/">2014
+     New Zealand PHP Conference</a> held on 27th, 28th and 29th August at The
+     Victoria Business School located in the coolest little capital in the world,
+     Wellington - New Zealand.
+     </p>
+     
+     
+     <p>
+     This conference promises to be one of the most important IT events connecting
+     the Oceania PHP Community, with highly recognized speakers presenting two
+     concurrent tracks including over 22 talks exploring PHP trends and other web
+     technologies to both inspire and challenge you.
+     </p>
+     
+     <p>
+     A tutorial day on Wednesday 27th August provides an opportunity to spend some
+     time with experts, going in-depth on particular topics. This is an opportunity
+     to rub shoulders with national and international speakers, Web developers and
+     leading IT companies from all over New Zealand, Australia and the global PHP
+     community.
+     </p>
+     
+     <p>
+     Our main topics are: SilverStripe, Apigility, Zend Framework 2, Laravel,
+     Symfony, Scaling PHP, Performance Testing, Web optimization, AngularJS, Apache
+     Cassandra, Security, Cloud, Working remotely, Patterns, OOP, Raspberry Pi,
+     Arduino and PHP and much more.
+     </p>
+    </div>
+  </content>
+</entry>
