@@ -71,7 +71,7 @@ if (!isset($config["languages"])) {
 <?php endforeach ?>
 
  <!--[if lte IE 7]>
- <link rel="stylesheet" type="text/css" href="<?php echo $MYSITE ?>styles/workarounds.ie7.css" media="screen" />
+ <link rel="stylesheet" type="text/css" href="<?php echo $MYSITE ?>styles/workarounds.ie7.css" media="screen">
  <![endif]-->
 
  <!--[if lte IE 8]>
@@ -81,7 +81,7 @@ if (!isset($config["languages"])) {
  <![endif]-->
 
  <!--[if lte IE 9]>
- <link rel="stylesheet" type="text/css" href="<?php echo $MYSITE ?>styles/workarounds.ie9.css" media="screen" />
+ <link rel="stylesheet" type="text/css" href="<?php echo $MYSITE ?>styles/workarounds.ie9.css" media="screen">
  <![endif]-->
 
  <!--[if IE]>

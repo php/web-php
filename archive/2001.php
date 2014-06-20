@@ -12,7 +12,7 @@ site_header("News Archive - 2001", array("cache" => true));
  Here are the most important news items we have published in 2001 on PHP.net.
 </p>
 
-<hr />
+<hr>
 
 <h1>PHP 4.1.0 Released!</h1>
 
@@ -25,7 +25,7 @@ site_header("News Archive - 2001", array("cache" => true));
  <a href="/ChangeLog-4.php">changelog</a>. Windows binaries are also available.
 </p>
 
-<hr />
+<hr>
 
 <h1>Windows Manual Survey Results</h1>
 
@@ -38,7 +38,7 @@ site_header("News Archive - 2001", array("cache" => true));
  <a href="http://weblabor.hu/php-doc-chm/">the project's own page</a>.
 </p>
 
-<hr />
+<hr>
 
 <h1>PHP-GTK Documentation Update</h1>
 
@@ -53,7 +53,7 @@ site_header("News Archive - 2001", array("cache" => true));
  let us know. 
 </p>
 
-<hr />
+<hr>
 
 <?php news_image("http://www.rackspace.com/?supbid=php.net", "rackspace.gif", "Rackspace"); ?>
 <h1>Rackspace providing additional hosting for PHP project</h1>
@@ -68,7 +68,7 @@ site_header("News Archive - 2001", array("cache" => true));
  by our supporters.
 </p>
 
-<hr />
+<hr>
 
 <h1>11.09.2001</h1>
 
@@ -80,7 +80,7 @@ site_header("News Archive - 2001", array("cache" => true));
  Red Cross.</a>
 </p>
 
-<hr />
+<hr>
 
 <h1>Manual notes are mirrored worldwide</h1>
 
@@ -92,7 +92,7 @@ site_header("News Archive - 2001", array("cache" => true));
  the closest mirror. See the bottom of our pages.
 </p>
 
-<hr />
+<hr>
 
 <?php news_image("http://www.php-conference.de/2001/index_en.php", "international_conference.gif", "International PHP Conference 2001"); ?>
 <h1>International PHP Conference in Frankfurt (November 5-7, 2001)</h1>
@@ -104,7 +104,7 @@ site_header("News Archive - 2001", array("cache" => true));
  More information at <a href="http://www.php-conference.de/2001/index_en.php">www.php-conference.de</a>.
 </p>
 
-<hr />
+<hr>
 
 <?php news_image("http://gtk.php.net/", "php-gtk-white.gif", "PHP-GTK"); ?>
 <h1>PHP-GTK version 0.1 released</h1>
@@ -127,7 +127,7 @@ site_header("News Archive - 2001", array("cache" => true));
  For more information, visit <a href="http://gtk.php.net/">the PHP-GTK website</a>.
 </p>
 
-<hr />
+<hr>
 
 <h1>PHP Conference</h1>
 <p>
@@ -155,7 +155,7 @@ site_header("News Archive - 2001", array("cache" => true));
  <a href="ftp://ftp.oreilly.com/pub/conference/os2001/">O'Reilly FTP site</a>
 </p>
 
-<hr />
+<hr>
 
 <h1>Integrated FAQ in the PHP Manual</h1>
 <p>
@@ -168,7 +168,7 @@ site_header("News Archive - 2001", array("cache" => true));
  the pages online</a>, as you wish.
 </p>
 
-<hr />
+<hr>
 
 <?php news_image("http://www.linuxtag.org/2001/english/30.html", "phplt.gif", "LinuxTag"); ?>
 
@@ -181,7 +181,7 @@ site_header("News Archive - 2001", array("cache" => true));
  <a href="http://www.phpug.de/phplt_en.php4">a report</a> on the PHP events at LinuxTag.
 </p>
 
-<hr />
+<hr>
 
 <?php news_image("http://promote.pair.com/direct.pl?php.net", "pair.gif", "pair Networks"); ?>
 <h1>Mailing lists and CVS are up!</h1>
@@ -193,7 +193,7 @@ site_header("News Archive - 2001", array("cache" => true));
  by <a href="http://promote.pair.com/direct.pl?php.net">pair Networks</a>. Thanks!
 </p>
 
-<hr />
+<hr>
 
 <h1>PHP 4.0.6 Released!</h1>
 <p>
@@ -205,7 +205,7 @@ site_header("News Archive - 2001", array("cache" => true));
  check out the <a href="/ChangeLog-4.php#4.0.6">Change Log</a>.
 </p>
 
-<hr />
+<hr>
 
 <?php news_image("http://www.php-kongress.de/2001/index_en.php", "international_conference.gif", "PHP International Conference 2001"); ?>
 <h1>PHP conventions in Europe</h1>
@@ -222,7 +222,7 @@ site_header("News Archive - 2001", array("cache" => true));
  <a href="http://www.linuxtag.org/2001/english/showitem.php3?item=273&amp;lang=en">strong PHP presence</a>.
 </p>
 
-<hr />
+<hr>
 
 <h1>PHP Conference</h1>
 <p>
@@ -240,7 +240,7 @@ site_header("News Archive - 2001", array("cache" => true));
  Diego Hotel and Marina in San Diego, California.
 </p>
 
-<hr />
+<hr>
 
 <h1>PHP 4.0.5 Released!</h1>
 <p>
@@ -251,7 +251,7 @@ site_header("News Archive - 2001", array("cache" => true));
  For a full list of changes, check out the <a href="/ChangeLog-4.php#4.0.5">ChangeLog</a>.
 </p>
 
-<hr />
+<hr>
 
 <h1>ApacheCon 2001 Over</h1>
 
@@ -269,7 +269,7 @@ site_header("News Archive - 2001", array("cache" => true));
  <li>Nathan Wallace with <a href="http://www.e-gineer.com/articles/php-hackers-paradise-revisited.phtml">PHP: Hackers Paradise Revisited</a></li>
 </ul>
 
-<hr />
+<hr>
 
 <h1>ApacheCon 2001</h1>
 <p> 
@@ -282,7 +282,7 @@ site_header("News Archive - 2001", array("cache" => true));
  ends March 9, so act fast for discounted prices!
 </p>
 
-<hr />
+<hr>
 
 <h1>New Site Design</h1>
 <p>
@@ -293,7 +293,7 @@ site_header("News Archive - 2001", array("cache" => true));
  bugs that are surely lingering behind this new facade.
 </p>
 
-<hr />
+<hr>
 
 <?php news_image("http://gtk.php.net/", "php-gtk-white.gif", "PHP-GTK"); ?>
 <h1>Announcing PHP-GTK</h1>
@@ -305,7 +305,7 @@ site_header("News Archive - 2001", array("cache" => true));
  <a href="http://gtk.php.net/">http://gtk.php.net/</a>.
 </p>
 
-<hr />
+<hr>
 
 <h1>Patch Level 1 released for PHP 4.0.4</h1>
 <p>

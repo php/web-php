@@ -148,7 +148,7 @@ if ($process) {
         echo '<p>This is what your entry will look like, roughly:</p>';
         echo '<div id="usernotes">';
         manual_note_display(time(), ($MQ ? stripslashes($user) : $user), ($MQ ? stripslashes($note) : $note), FALSE);
-        echo '</div><br /><br />';
+        echo '</div><br><br>';
     }
 }
 
@@ -302,8 +302,8 @@ else {
       address. You may still want to include a part in the email address
       that is understandable only by humans as our conversion can be performed in
       the opposite direction. You may submit your email address as
-      <tt>user@NOSPAM.example.com</tt> for example (which will be displayed
-      as <tt>user at NOSPAM dot example dot com</tt>. If we remove your note we can
+      <code>user@NOSPAM.example.com</code> for example (which will be displayed
+      as <code>user at NOSPAM dot example dot com</code>. If we remove your note we can
       only send an email if you use your real email address.
     </p>
   </section>
@@ -358,16 +358,16 @@ if (!isset($_POST['sect']) || !isset($_POST['redirect'])) {
 else {?>
 <form method="post" action="/manual/add-note.php">
  <p>
-  <input type="hidden" name="sect" value="<?php echo clean($_POST['sect']); ?>" />
-  <input type="hidden" name="redirect" value="<?php echo clean($_POST['redirect']); ?>" />
+  <input type="hidden" name="sect" value="<?php echo clean($_POST['sect']); ?>">
+  <input type="hidden" name="redirect" value="<?php echo clean($_POST['redirect']); ?>">
  </p>
  <table border="0" cellpadding="3" class="standard">
   <tr>
    <td colspan="2">
     <b>
-     <a href="/support.php">Click here to go to the support pages.</a><br />
-     <a href="http://bugs.php.net/report.php?bug_type=Documentation+problem&amp;manpage=<?php echo clean($_POST['sect']); ?>">Click here to submit a bug report.</a><br />
-     <a href="http://bugs.php.net/report.php?bug_type=Documentation+problem&amp;manpage=<?php echo clean($_POST['sect']); ?>">Click here to request a feature.</a><br />
+     <a href="/support.php">Click here to go to the support pages.</a><br>
+     <a href="http://bugs.php.net/report.php?bug_type=Documentation+problem&amp;manpage=<?php echo clean($_POST['sect']); ?>">Click here to submit a bug report.</a><br>
+     <a href="http://bugs.php.net/report.php?bug_type=Documentation+problem&amp;manpage=<?php echo clean($_POST['sect']); ?>">Click here to request a feature.</a><br>
      (Again, please note, if you ask a question, report a bug, or request a feature,
      your note <i>will be deleted</i>.)
     </b>
@@ -375,27 +375,27 @@ else {?>
   </tr>
   <tr>
    <th class="subr">Your email address (or name):</th>
-   <td><input type="text" name="user" size="60" maxlength="40" value="<?php echo clean($_POST['user']); ?>" /></td>
+   <td><input type="text" name="user" size="60" maxlength="40" value="<?php echo clean($_POST['user']); ?>"></td>
   </tr>
   <tr>
    <th class="subr">Your notes:</th>
    <td><textarea name="note" rows="20" cols="60" wrap="virtual"><?php if (isset($_POST['note'])) { echo clean($_POST['note']); } ?></textarea>
-   <br />
+   <br>
   </td>
   </tr>
   <tr>
-   <th class="subr">Answer to this simple question (SPAM challenge):<br />
+   <th class="subr">Answer to this simple question (SPAM challenge):<br>
    <?php $c = gen_challenge(); echo $c[3]; ?>?</th>
-   <td><input type="text" name="answer" size="60" maxlength="10" /> (Example: nine)</td>
+   <td><input type="text" name="answer" size="60" maxlength="10"> (Example: nine)</td>
   </td>
   </tr>
   <tr>
    <th colspan="2">
-    <input type="hidden" name="func" value="<?php echo $c[0]; ?>" />
-    <input type="hidden" name="arga" value="<?php echo $c[1]; ?>" />
-    <input type="hidden" name="argb" value="<?php echo $c[2]; ?>" />
-    <input type="submit" name="action" value="Preview" />
-    <input type="submit" name="action" value="Add Note" />
+    <input type="hidden" name="func" value="<?php echo $c[0]; ?>">
+    <input type="hidden" name="arga" value="<?php echo $c[1]; ?>">
+    <input type="hidden" name="argb" value="<?php echo $c[2]; ?>">
+    <input type="submit" name="action" value="Preview">
+    <input type="submit" name="action" value="Add Note">
    </th>
   </tr>
  </table>

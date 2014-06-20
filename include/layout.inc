@@ -14,24 +14,19 @@ ini_set('highlight.html',    'html');
 // Highlight PHP code
 function highlight_php($code, $return = FALSE)
 {
-    // Using OB, as highlight_string() only supports
-    // returning the result from 4.2.0
-    ob_start();
-    highlight_string($code);
-    $highlighted = ob_get_contents();
-    ob_end_clean();
+    $highlighted = highlight_string($code, TRUE);
 
-    // This should eventually be a php_syntax_check() call when we move to PHP5
-    // But use this ugly hack for now to avoid code snippets with bad syntax screwing up the highlighter
-    if(strstr($highlighted,"include/layout.inc</b>")) $highlighted = '<span class="html">'.nl2br(htmlentities($code))."</span>";
+    // Use this ugly hack for now to avoid code snippets with bad syntax screwing up the highlighter
+    if(strstr($highlighted, "include/layout.inc</b>")) {
+	    $highlighted = '<span class="html">'. nl2br(htmlentities($code, ENT_HTML5), FALSE) ."</span>";
+	}
 
     // Fix output to use CSS classes and wrap well
     $highlighted = '<div class="phpcode">' . str_replace(
         array(
             '&nbsp;',
-            '<br />',
-            '<font color="',        // for PHP 4
-            '<span style="color: ', // from PHP 5.0.0RC1
+            '<br>',
+            '<span style="color: ',
             '</font>',
             "\n ",
             '  ',
@@ -39,8 +34,7 @@ function highlight_php($code, $return = FALSE)
         ),
         array(
             ' ',
-            "<br />\n",
-            '<span class="',
+            "<br>\n",
             '<span class="',
             '</span>',
             "\n&nbsp;",
@@ -62,7 +56,6 @@ function commonHeader($title) { site_header($title); }
 function commonFooter() { site_footer(); }
 
 // Resize the image using the output of make_image()
-// (considering possible HTML/XHTML image tag endings)
 function resize_image($img, $width = 1, $height = 1)
 {
     // Drop width and height values from image if available
@@ -72,12 +65,12 @@ function resize_image($img, $width = 1, $height = 1)
     // Return image with new width and height added
     return preg_replace(
         '!/?>$!',
-        sprintf(' height="%s" width="%s" />', $height, $width),
+        sprintf(' height="%s" width="%s">', $height, $width),
         $str
     );
 }
 
-// Return an <img /> tag for a given image file available on the server
+// Return an <img> tag for a given image file available on the server
 function make_image($file, $alt = FALSE, $align = FALSE, $extras = FALSE,
                     $dir = '/images', $border = 0, $addsize = TRUE)
 {
@@ -102,7 +95,7 @@ function make_image($file, $alt = FALSE, $align = FALSE, $extras = FALSE,
     }
 
     // Return with image built up
-    return sprintf('<img src="%s/%s" alt="%s"%s%s%s />',
+    return sprintf('<img src="%s/%s" alt="%s"%s%s%s>',
         $webdir,
         $file,
         ($alt    ? $alt : ''),
@@ -112,7 +105,7 @@ function make_image($file, $alt = FALSE, $align = FALSE, $extras = FALSE,
     );
 }
 
-// Print an <img /> tag out for a given file
+// Print an <img> tag out for a given file
 function print_image($file, $alt = FALSE, $align = FALSE, $extras = FALSE,
                      $dir = '/images', $border = 0)
 {
@@ -379,10 +372,10 @@ function display_event($event, $include_date = 1)
 <?php
 
     // Print long description
-    echo preg_replace("/\r?\n\r?\n/", "<br /><br />", trim(htmlentities($event['ldesc'],ENT_QUOTES | ENT_IGNORE, 'UTF-8')));
+    echo preg_replace("/\r?\n\r?\n/", "<br><br>", trim(htmlentities($event['ldesc'],ENT_QUOTES | ENT_IGNORE, 'UTF-8')));
     // If we have an URL, print it out
     if ($event['url']) {
-        echo '<br /><br /><b>URL:</b> ',
+        echo '<br><br><b>URL:</b> ',
              '<a href="', htmlentities($event['url'], ENT_QUOTES | ENT_IGNORE, 'UTF-8'), '">',
              htmlentities($event['url'], ENT_QUOTES | ENT_IGNORE, 'UTF-8'), '</a>';
     }

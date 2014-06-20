@@ -2,16 +2,15 @@
 // $Id$
 $_SERVER['BASE_PAGE'] = 'ChangeLog-4.php';
 include_once $_SERVER['DOCUMENT_ROOT'] . '/include/prepend.inc';
-site_header("PHP 4 ChangeLog", array("current" => "docs", 'css' => array('changelog.css'), 'layout_span' => 12));
-function bugfix($number) { echo "Fixed bug "; bugl($number); }
-function bugl($number)   { echo "<a href=\"http://bugs.php.net/$number\">#$number</a>"; }
+include_once $_SERVER['DOCUMENT_ROOT'] . '/include/changelogs.inc';
+site_header("PHP 4 ChangeLog", array("current" => "docs", "css" => array("changelog.css"), "layout_span" => 12));
 ?>
 
 <h1>PHP 4 ChangeLog</h1>
 
 <section class="version" id="4.4.9"><!-- {{{ 4.4.9 -->
 <h3>Version 4.4.9</h3>
-<b>07-Aug-2008</b>
+<?php release_date("07-Aug-2008"); ?>
 <ul>
 <li>Updated PCRE to version 7.7.</li>
 <li>Fixed overflow in memnstr().</li>
@@ -24,7 +23,7 @@ function bugl($number)   { echo "<a href=\"http://bugs.php.net/$number\">#$numbe
 
 <section class="version" id="4.4.8"><!-- {{{ 4.4.8 -->
 <h3>Version 4.4.8</h3>
-<b>03-Jan-2008</b>
+<?php release_date("03-Jan-2008"); ?>
 <ul>
 <li>Improved fix for MOPB-02-2007.</li>
 <li>Fixed an integer overflow inside chunk_split(). Identified by Gerhard Wagner.</li>
@@ -45,7 +44,7 @@ function bugl($number)   { echo "<a href=\"http://bugs.php.net/$number\">#$numbe
 
 <section class="version" id="4.4.7"><!-- {{{ 4.4.7 -->
 <h3>Version 4.4.7</h3>
-<b>03-May-2007</b>
+<?php release_date("03-May-2007"); ?>
 <ul>
 <li>Fixed MOPB-33-2007 (PHP mail() Message ASCIIZ Byte Truncation).</li>
 <li>Fixed MOPB-32-2007 (Double free inside session_decode()).</li>
@@ -70,7 +69,7 @@ function bugl($number)   { echo "<a href=\"http://bugs.php.net/$number\">#$numbe
 
 <section class="version" id="4.4.6"><!-- {{{ 4.4.6 -->
 <h3>Version 4.4.6</h3>
-<b>01-Mar-2007</b>
+<?php release_date("01-Mar-2007"); ?>
 <ul>
 <li>Updated PCRE to version 7.0.</li>
 <li>Fixed segfault in ext/session when register_globals=On.</li>
@@ -85,7 +84,7 @@ function bugl($number)   { echo "<a href=\"http://bugs.php.net/$number\">#$numbe
 
 <section class="version" id="4.4.5"><!-- {{{ 4.4.5 -->
 <h3>Version 4.4.5</h3>
-<b>14-Feb-2007</b>
+<?php release_date("14-Feb-2007"); ?>
 <ul>
 <li>Upgraded PEAR to 1.5.0.</li>
 <li>Updated PCRE to version 6.7.</li>
@@ -116,13 +115,13 @@ function bugl($number)   { echo "<a href=\"http://bugs.php.net/$number\">#$numbe
 <li><?php bugfix(34066); ?> (recursive array_walk causes segfault).</li>
 </ul>
 
-There is a <a href="release_4_4_4.php">separate announcement</a> available for this release.<br />
+There is a <a href="release_4_4_4.php">separate announcement</a> available for this release.<br>
 
 <!-- }}} --></section>
 
 <section class="version" id="4.4.4"><!-- {{{ 4.4.4 -->
 <h3>Version 4.4.4</h3>
-<b>17-Aug-2006</b>
+<?php release_date("17-Aug-2006"); ?>
 <ul>
 <li>Fixed memory_limit on 64bit systems.</li>
 <li>Fixed overflow on 64bit systems in str_repeat() and wordwrap().</li>
@@ -139,13 +138,13 @@ There is a <a href="release_4_4_4.php">separate announcement</a> available for t
 <li><?php bugfix(29538); ?> (number_format and problem with 0).</li>
 </ul>
 
-There is a <a href="release_4_4_4.php">separate announcement</a> available for this release.<br />
+There is a <a href="release_4_4_4.php">separate announcement</a> available for this release.<br>
 
 <!-- }}} --></section>
 
 <section class="version" id="4.4.3"><!-- {{{ 4.4.3 -->
 <h3>Version 4.4.3</h3>
-<b>03-Aug-2006</b>
+<?php release_date("03-Aug-2006"); ?>
 <ul>
 <li>Added control character checks for cURL extension's open_basedir/safe_mode checks.</li>
 <li>Added overflow checks to wordwrap() function.</li>
@@ -175,13 +174,13 @@ There is a <a href="release_4_4_4.php">separate announcement</a> available for t
 <li><?php bugfix(36017); ?> (fopen() crashes PHP when opening a URL).</li>
 </ul>
 
-There is a <a href="release_4_4_3.php">separate announcement</a> available for this release.<br />
+There is a <a href="release_4_4_3.php">separate announcement</a> available for this release.<br>
 
 <!-- }}} --></section>
 
 <section class="version" id="4.4.2"><!-- {{{ 4.4.2 -->
 <h3>Version 4.4.2</h3>
-<b>11-Jan-2006</b>
+<?php release_date("11-Jan-2006"); ?>
 <ul>
 <li>Added missing safe_mode/open_basedir checks into cURL extension.</li>
 <li>Backported missing imap_mailcompose() fixes from PHP 5.x.</li>
@@ -224,13 +223,13 @@ There is a <a href="release_4_4_3.php">separate announcement</a> available for t
 
 </ul>
 
-There is a <a href="release_4_4_2.php">separate announcement</a> available for this release.<br />
+There is a <a href="release_4_4_2.php">separate announcement</a> available for this release.<br>
 
 <!-- }}} --></section>
 
 <section class="version" id="4.4.1"><!-- {{{ 4.4.1 -->
 <h3>Version 4.4.1</h3>
-<b>31-Oct-2005</b>
+<?php release_date("31-Oct-2005"); ?>
 <ul>
 <li>Added missing safe_mode checks for image* functions and cURL.</li>
 <li>Added missing safe_mode/open_basedir checks for file uploads.</li>
@@ -278,13 +277,13 @@ There is a <a href="release_4_4_2.php">separate announcement</a> available for t
 <li><?php bugfix(21306); ?> (ext/sesssion: catch bailouts of write handler during RSHUTDOWN).</li>
 </ul>
 
-There is a <a href="release_4_4_1.php">separate announcement</a> available for this release.<br />
+There is a <a href="release_4_4_1.php">separate announcement</a> available for this release.<br>
 
 <!-- }}} --></section>
 
 <section class="version" id="4.4.0"><!-- {{{ 4.4.0 -->
 <h3>Version 4.4.0</h3>
-<b>11-Jul-2005</b>
+<?php release_date("11-Jul-2005"); ?>
 <ul>
 <li>Added man pages for "phpize" and "php-config" scripts.</li>
 <li>Added support for .cc files in extensions.</li>
@@ -343,13 +342,13 @@ There is a <a href="release_4_4_1.php">separate announcement</a> available for t
 <li><?php bugfix(28377); ?> (debug_backtrace is intermittently passing args).</li>
 </ul>
 
-There is a <a href="release_4_4_0.php">separate announcement</a> available for this release.<br />
+There is a <a href="release_4_4_0.php">separate announcement</a> available for this release.<br>
 
 <!-- }}} --></section>
 
 <section class="version" id="4.3.11"><!-- {{{ 4.3.11 -->
 <h3>Version 4.3.11</h3>
-<b>31-Mar-2005</b>
+<?php release_date("31-Mar-2005"); ?>
 <ul>
 <li>Added Oracle Instant Client support</li>
 <li>Added checks for negative values to gmp_sqrt(), gmp_powm(), gmp_sqrtrem() and gmp_fact() to prevent SIGFPE</li>
@@ -428,13 +427,13 @@ There is a <a href="release_4_4_0.php">separate announcement</a> available for t
 <li><?php bugfix(7782); ?> (Cannot use PATH_INFO fully with php isapi).</li>
 </ul>
 
-There is a <a href="release_4_3_11.php">separate announcement</a> available for this release.<br />
+There is a <a href="release_4_3_11.php">separate announcement</a> available for this release.<br>
 
 <!-- }}} --></section>
 
 <section class="version" id="4.3.10"><!-- {{{ 4.3.10 -->
 <h3>Version 4.3.10</h3>
-<b>14-Dec-2004</b>
+<?php release_date("14-Dec-2004"); ?>
 <ul>
 <li>Added the %F modifier to *printf to render a non-locale-aware representation of a float with the . as decimal separator.</li>
 <li>Fixed a bug in addslashes() handling of the '\0' character.</li>
@@ -473,13 +472,13 @@ There is a <a href="release_4_3_11.php">separate announcement</a> available for 
 
 </ul>
 
-There is a <a href="release_4_3_10.php">separate announcement</a> available for this release.<br />
+There is a <a href="release_4_3_10.php">separate announcement</a> available for this release.<br>
 
 <!-- }}} --></section>
 
 <section class="version" id="4.3.9"><!-- {{{ 4.3.9 -->
 <h3>Version 4.3.9</h3>
-<b>22-Sep-2004</b>
+<?php release_date("22-Sep-2004"); ?>
 <ul>
 <li>GPC input processing fixes.</li>
 <li>Implemented periodic PCRE compiled regexp cache cleanup, to avoid memory exhaustion.</li>
@@ -533,13 +532,13 @@ There is a <a href="release_4_3_10.php">separate announcement</a> available for 
 <li><?php bugfix(28175); ?> (Allow bundled GD to compile against freetype 2.1.2).</li>
 
 </ul>
-There is a <a href="release_4_3_9.php">separate announcement</a> available for this release.<br />
+There is a <a href="release_4_3_9.php">separate announcement</a> available for this release.<br>
 
 <!-- }}} --></section>
 
 <section class="version" id="4.3.8"><!-- {{{ 4.3.8 -->
 <h3>Version 4.3.8</h3>
-<b>13-Jul-2004</b>
+<?php release_date("13-Jul-2004"); ?>
 <ul>
 <li>Fixed strip_tags() to correctly handle '\0' characters. (Stefan)</li>
 <li>Improved stability during startup when memory_limit is used. (Stefan)</li>
@@ -549,12 +548,12 @@ There is a <a href="release_4_3_9.php">separate announcement</a> available for t
 <li><?php bugfix(28632); ?> Prevent open_basedir bypass via MySQL's LOAD DATA LOCAL. (Ilia)</li>
 </ul>
 
-There is a <a href="release_4_3_8.php">separate announcement</a> available for this release.<br />
+There is a <a href="release_4_3_8.php">separate announcement</a> available for this release.<br>
 <!-- }}} --></section>
 
 <section class="version" id="4.3.7"><!-- {{{ 4.3.7 -->
 <h3>Version 4.3.7</h3>
-<b>03-Jun-2004</b>
+<?php release_date("03-Jun-2004"); ?>
 <ul>
 <li>Upgraded bundled GD library to 2.0.23. (Ilia)</li>
 <li>Changed user error handler mechanism to relay to built-in error handler if it returns false. (Andrei)</li>
@@ -591,13 +590,13 @@ There is a <a href="release_4_3_8.php">separate announcement</a> available for t
 <li><?php bugfix(23220); ?> (SSL: fatal protocol error when talking to IIS). (Wez)</li>
 
 </ul>
-There is a <a href="release_4_3_7.php">separate announcement</a> available for this release.<br />
+There is a <a href="release_4_3_7.php">separate announcement</a> available for this release.<br>
 
 <!-- }}} --></section>
 
 <section class="version" id="4.3.6"><!-- {{{ 4.3.6 -->
 <h3>Version 4.3.6</h3>
-<b>15-Apr-2004</b>
+<?php release_date("15-Apr-2004"); ?>
 <ul>
 <li>Updated bundled PDFLib library to version 5.0.3p1 in Windows distribution. (Edin)</li>
 <li>Synchronized bundled GD library with GD 2.0.22. (Ilia)</li>
@@ -626,13 +625,13 @@ There is a <a href="release_4_3_7.php">separate announcement</a> available for t
 <li><?php bugfix(25547); ?> (error_handler and array index with function call). cschneid at cschneid dot com)</li>
 
 </ul>
-There is a <a href="release_4_3_6.php">separate announcement</a> available for this release.<br />
+There is a <a href="release_4_3_6.php">separate announcement</a> available for this release.<br>
 
 <!-- }}} --></section>
 
 <section class="version" id="4.3.5"><!-- {{{ 4.3.5 -->
 <h3>Version 4.3.5</h3>
-<b>26-Mar-2004</b>
+<?php release_date("26-Mar-2004"); ?>
 <ul>
 
 <li>Fixed possible crash using an invalid color index with a palette image in imagecolortransparent (Pierre)</li>
@@ -794,14 +793,14 @@ There is a <a href="release_4_3_6.php">separate announcement</a> available for t
 <li><?php bugfix(21070); ?> (ftp_genlist/ANSI-tmpfile() fail w/ some platform). (Sara)</li>
 
 </ul>
-There is a <a href="release_4_3_5.php">separate announcement</a> available for this release.<br />
+There is a <a href="release_4_3_5.php">separate announcement</a> available for this release.<br>
 
 
 <!-- }}} --></section>
 
 <section class="version" id="4.3.4"><!-- {{{ 4.3.4 -->
 <h3>Version 4.3.4</h3>
-<b>03-Nov-2003</b>
+<?php release_date("03-Nov-2003"); ?>
 <ul>
 <li>Made MCVE extension available on win32. (Jani)</li>
 <li>Upgraded bundled libfcgi and made FastCGI support viable on Win32. (Sascha)</li>
@@ -881,13 +880,13 @@ There is a <a href="release_4_3_5.php">separate announcement</a> available for t
 <li><?php bugfix(18534); ?> (ifx_close() leaves open session). (nobbie@php.net)</li>
 <li><?php bugfix(14049); ?> (realpath() returns invalid results for non-existent paths). (Ilia)</li>
 </ul>
-There is a <a href="release_4_3_4.php">separate announcement</a> available for this release.<br />
+There is a <a href="release_4_3_4.php">separate announcement</a> available for this release.<br>
 
 <!-- }}} --></section>
 
 <section class="version" id="4.3.3"><!-- {{{ 4.3.3 -->
 <h3>Version 4.3.3</h3>
-<b>25-Aug-2003</b>
+<?php release_date("25-Aug-2003"); ?>
 <ul>
 <li>Synchronized bundled GD library with GD 2.0.15. (Ilia)</li>
 <li>Upgraded the bundled Expat library to version 1.95.6. (Jani)</li>
@@ -1035,13 +1034,13 @@ There is a <a href="release_4_3_4.php">separate announcement</a> available for t
 <li><?php bugfix(11924); ?> (ibase_query(), ibase_execute() mangled passed parameters). (Jani)</li>
 <li><?php bugfix(7014); ?> (crash in _php_ibase_error() after request shutdown). (Ard)</li>
 </ul>
-More information on this release on <a href="/releases.php#4.3.3">our Releases page</a>.<br />
+More information on this release on <a href="/releases.php#4.3.3">our Releases page</a>.<br>
 
 <!-- }}} --></section>
 
 <section class="version" id="4.3.2"><!-- {{{ 4.3.2 -->
 <h3>Version 4.3.2</h3>
-<b>29-May-2003</b>
+<?php release_date("29-May-2003"); ?>
 <ul>
 <li>Syncronized bundled GD library with GD 2.0.12. (Ilia)</li>
 <li>Removed support for GDLIB version 1.x.x (php_gd.dll) on Windows. (Edin)</li>
@@ -1226,23 +1225,23 @@ More information on this release on <a href="/releases.php#4.3.3">our Releases p
 <li><?php bugfix(13561); ?> (--without-pear disabled phpize/php-config install). (Jani)</li>
 <li><?php bugfix(13551); ?> (bcmath functions applying scale incorrectly). (Sara)</li>
 </ul>
-More information on this release on <a href="/releases.php#4.3.2">our Releases page</a>.<br />
+More information on this release on <a href="/releases.php#4.3.2">our Releases page</a>.<br>
 
 <!-- }}} --></section>
 
 <section class="version" id="4.3.1"><!-- {{{ 4.3.1 -->
 <h3>Version 4.3.1</h3>
-<b>17-Feb-2003</b>
+<?php release_date("17-Feb-2003"); ?>
 <ul>
 <li>Fixed serious security vulnerability in CGI SAPI. (Shane)</li>
 </ul>
-More information on this release on <a href="/releases.php#4.3.1">our Releases page</a>.<br />
+More information on this release on <a href="/releases.php#4.3.1">our Releases page</a>.<br>
 
 <!-- }}} --></section>
 
 <section class="version" id="4.3.0"><!-- {{{ 4.3.0 -->
 <h3>Version 4.3.0</h3>
-<b>27-Dec-2002</b>
+<?php release_date("27-Dec-2002"); ?>
 <ul>
 <li>If you don't specify building any other SAPI "make install" will install the
   CGI SAPI binary in {PREFIX}/bin/php. If you want to install CLI SAPI in that
@@ -1749,13 +1748,13 @@ More information on this release on <a href="/releases.php#4.3.1">our Releases p
   dependencies. Automake is only needed for its aclocal tool. The build 
   process is now more portable and less resource-consuming. (Sascha)</li>
 </ul>
-More information on this release on <a href="/releases.php#4.3.0">our Releases page</a>.<br />
+More information on this release on <a href="/releases.php#4.3.0">our Releases page</a>.<br>
 
 <!-- }}} --></section>
 
 <section class="version" id="4.2.3"><!-- {{{ 4.2.3 -->
 <h3>Version 4.2.3</h3>
-<b>06-Sep-2002</b>
+<?php release_date("06-Sep-2002"); ?>
 <ul>
 <li>Enable UTF8 modifier support for PCRE on win32. (Wez, Edin)</li>
 <li>Enabled strcoll() on win32. (Markus)</li>
@@ -1788,23 +1787,23 @@ More information on this release on <a href="/releases.php#4.3.0">our Releases p
 <li>Fixed array_rand() on thread-safe platforms such as Windows. (Edin)</li>
 <li>Report the right exit code after a call to exit(). (Edin)</li>
 </ul>
-More information on this release on <a href="/releases.php#4.2.3">our Releases page</a>.<br />
+More information on this release on <a href="/releases.php#4.2.3">our Releases page</a>.<br>
 
 <!-- }}} --></section>
 
 <section class="version" id="4.2.2"><!-- {{{ 4.2.2 -->
 <h3>Version 4.2.2</h3>
-<b>22-Jul-2002</b>
+<?php release_date("22-Jul-2002"); ?>
 <ul>
 <li>Fixed serious security vulnerability. (Stefan Esser)</li>
 </ul>
-More information on this release on <a href="/releases.php#4.2.2">our Releases page</a>.<br />
+More information on this release on <a href="/releases.php#4.2.2">our Releases page</a>.<br>
 
 <!-- }}} --></section>
 
 <section class="version" id="4.2.1"><!-- {{{ 4.2.1 -->
 <h3>Version 4.2.1</h3>
-<b>13-May-2002</b>
+<?php release_date("13-May-2002"); ?>
 <ul>
 <li>Added safe-mode checks to show_source(), parse_ini_file() and rmdir(). Also
  fixed security problems with safe_mode_include_dir directive. (Rasmus)</li>
@@ -1855,13 +1854,13 @@ More information on this release on <a href="/releases.php#4.2.2">our Releases p
 <li>Fixed a bug in the COM extension that caused outproc servers to 'hang'
   because of a missing Release() call. (Alan, Harald)</li>
 </ul>
-More information on this release on <a href="/releases.php#4.2.1">our Releases page</a>.<br />
+More information on this release on <a href="/releases.php#4.2.1">our Releases page</a>.<br>
 
 <!-- }}} --></section>
 
 <section class="version" id="4.2.0"><!-- {{{ 4.2.0 -->
 <h3>Version 4.2.0</h3>
-<b>22-Apr-2002</b>
+<?php release_date("22-Apr-2002"); ?>
 <ul>
 <li>ATTENTION!! register_globals defaults to 'off' now !!!</li>
 <li>Note: Apache2 support is EXPERIMENTAL.</li>
@@ -1884,11 +1883,11 @@ example: socket_connect($sock, 'www.yahoo.com', 80);</li>
   <li>Removed all code pertaining to fd_sets (socket_fd_*)</li>
   <li>Modified/Improved socket_select() to accept array of resources instead of fd_sets. example:
     <pre>
-    &lt;?php<br />
-    $wfds=$rfds=array($sock1, $sock2, $sock3, $sock7);<br />
-    $r=socket_select($rfds, $wfds, NULL, 1);<br />
-    print "Ready to read:\n"; var_dump($rfds);<br />
-    ?&gt;<br />
+    &lt;?php<br>
+    $wfds=$rfds=array($sock1, $sock2, $sock3, $sock7);<br>
+    $r=socket_select($rfds, $wfds, NULL, 1);<br>
+    print "Ready to read:\n"; var_dump($rfds);<br>
+    ?&gt;<br>
     </pre></li>
   </ul></li>
 <li>Fixed segfault in ibase_close() if user does not free the resultset.
@@ -2069,13 +2068,13 @@ or entries for the specified extension. (Jani)</li>
 (Patch by Alan Knowles &lt;<a href="mailto:alan_k@hklc.com">alan_k@hklc.com</a>&gt; and Wez)</li>
 <li>Improved support for autoconf-2.50+/libtool 1.4b+. (Jan Kneschke, Sascha)</li>
 </ul>
-More information on this release on <a href="/releases.php#4.2.0">our Releases page</a>.<br />
+More information on this release on <a href="/releases.php#4.2.0">our Releases page</a>.<br>
 
 <!-- }}} --></section>
 
 <section class="version" id="4.1.2"><!-- {{{ 4.1.2 -->
 <h3>Version 4.1.2</h3>
-<b>27-Feb-2002</b>
+<?php release_date("27-Feb-2002"); ?>
 <ul>
 <li>Fixed start up failure when mm save handler is used and there is multiple 
   SAPIs are working at the same time. (Yasuo)</li>
@@ -2086,13 +2085,13 @@ More information on this release on <a href="/releases.php#4.2.0">our Releases p
 <li>Changed the default output encoding of mbstring 'pass' to fix 
   initialization problem (Rui)</li>
 </ul>
-More information on this release on <a href="/releases.php#4.1.2">our Releases page</a>.<br />
+More information on this release on <a href="/releases.php#4.1.2">our Releases page</a>.<br>
 
 <!-- }}} --></section>
 
 <section class="version" id="4.1.1"><!-- {{{ 4.1.1 -->
 <h3>Version 4.1.1</h3>
-<b>26-Dec-2001</b>
+<?php release_date("26-Dec-2001"); ?>
 <ul>
 <li>Fixed incompatibility with Windows .NET / IIS 6 - may improve stability
   under other versions of IIS. (Zeev)</li>
@@ -2113,13 +2112,13 @@ More information on this release on <a href="/releases.php#4.1.2">our Releases p
 <li>Fixed a bug in the strtotime() function where it was incorrectly recognizing
   GMT +0100 and GMT -0100. (Derick)</li>
 </ul>
-More information on this release on <a href="/releases.php#4.1.1">our Releases page</a>.<br />
+More information on this release on <a href="/releases.php#4.1.1">our Releases page</a>.<br>
 
 <!-- }}} --></section>
 
 <section class="version" id="4.1.0"><!-- {{{ 4.1.0 -->
 <h3>Version 4.1.0</h3>
-<b>10-Dec-2001</b>
+<?php release_date("10-Dec-2001"); ?>
 <ul>
 <li>Worked around a bug in the MySQL client library that could cause PHP to hang
   when using unbuffered queries. (Zeev)</li>
@@ -2318,13 +2317,13 @@ More information on this release on <a href="/releases.php#4.1.1">our Releases p
   string indexed array. (Jason)</li>
 <li>Fixed memory leak upon re-registering constants. (Sascha, Zend Engine)</li>
 </ul>
-More information on this release on <a href="/releases.php#4.1.0">our Releases page</a>.<br />
+More information on this release on <a href="/releases.php#4.1.0">our Releases page</a>.<br>
 
 <!-- }}} --></section>
 
 <section class="version" id="4.0.6"><!-- {{{ 4.0.6 -->
 <h3>Version 4.0.6</h3>
-<b>23-Jun-2001</b>
+<?php release_date("23-Jun-2001"); ?>
 <ul>
 <li>Fixed memory fragmention problem which could lead to web server processes
   growing much more than they should. (Andi, Zend Engine)</li>
@@ -2434,13 +2433,13 @@ More information on this release on <a href="/releases.php#4.1.0">our Releases p
 <li>Added mysql_unbuffered_query(), which is useful for very large result sets.
   (Zeev)</li>
 </ul>
-More information on this release on <a href="/releases.php#4.0.6">our Releases page</a>.<br />
+More information on this release on <a href="/releases.php#4.0.6">our Releases page</a>.<br>
 
 <!-- }}} --></section>
 
 <section class="version" id="4.0.5"><!-- {{{ 4.0.5 -->
 <h3>Version 4.0.5</h3>
-<b>30-Apr-2001</b>
+<?php release_date("30-Apr-2001"); ?>
 <ul>
 <li>IMPORTANT: removed /F modifier handling from preg_replace(). Instead
   one should use new preg_replace_callback() function. (Andrei)</li>
@@ -2581,13 +2580,13 @@ More information on this release on <a href="/releases.php#4.0.6">our Releases p
 <li>ext/odbc: IBM DB2 patch by Walter Franzini. (walter@sys-net.it)</li>
 <li>Added extension for the cracklib library. (Alexander Feldman)</li>
 </ul>
-More information on this release on <a href="/releases.php#4.0.5">our Releases page</a>.<br />
+More information on this release on <a href="/releases.php#4.0.5">our Releases page</a>.<br>
 
 <!-- }}} --></section>
 
 <section class="version" id="4.0.4"><!-- {{{ 4.0.4 -->
 <h3>Version 4.0.4</h3>
-<b>19-Dec-2000</b>
+<?php release_date("19-Dec-2000"); ?>
 <ul>
 <li>Allow assigning a newly created object by reference. This is needed only if 
   your constructor makes other data structures reference the $this object (for 
@@ -2737,13 +2736,13 @@ More information on this release on <a href="/releases.php#4.0.5">our Releases p
 <li>Added HMAC support in the mhash module (nmav@altera.gr)</li>
 <li>Added module for Ovrimos sql server (nmav@altera.gr)</li>
 </ul>
-More information on this release on <a href="/releases.php#4.0.4">our Releases page</a>.<br />
+More information on this release on <a href="/releases.php#4.0.4">our Releases page</a>.<br>
 
 <!-- }}} --></section>
 
 <section class="version" id="4.0.3"><!-- {{{ 4.0.3 -->
 <h3>Version 4.0.3</h3>
-<b>11-Oct-2000</b>
+<?php release_date("11-Oct-2000"); ?>
 <ul>
 <li>Fixed a possible crash in -a interactive mode (Zeev, Zend Engine)</li>
 <li>Added mysql_escape_string() (Peter A. Savitch and &amp; Brian Wang)</li>
@@ -2820,13 +2819,13 @@ More information on this release on <a href="/releases.php#4.0.4">our Releases p
   method. Instead define yourself a method such as toString() and use
   print $obj-&gt;toString() (Andi, Zend Engine)</li>
 </ul>
-More information on this release on <a href="/releases.php#4.0.3">our Releases page</a>.<br />
+More information on this release on <a href="/releases.php#4.0.3">our Releases page</a>.<br>
 
 <!-- }}} --></section>
 
 <section class="version" id="4.0.2"><!-- {{{ 4.0.2 -->
 <h3>Version 4.0.2</h3>
-<b>29-Aug-2000</b>
+<?php release_date("29-Aug-2000"); ?>
 <ul>
 <li>Added PHP API for Zend's ticks. (Stig)</li>
 <li>PHP 3 regression testing framework re-born (Stig)</li>
@@ -2991,13 +2990,13 @@ More information on this release on <a href="/releases.php#4.0.3">our Releases p
 <li>Added an optional parameter to preg_replace() that can be used to
   specify how many replacements to make. (Andrei)</li>
 </ul>
-More information on this release on <a href="/releases.php#4.0.2">our Releases page</a>.<br />
+More information on this release on <a href="/releases.php#4.0.2">our Releases page</a>.<br>
 
 <!-- }}} --></section>
 
 <section class="version" id="4.0.1"><!-- {{{ 4.0.1 -->
 <h3>Version 4.0.1</h3>
-<b>28-Jun-2000</b>
+<?php release_date("28-Jun-2000"); ?>
 <ul>
 <li>Fixed a possible crash in the LDAP modify code. (Eric Kilfoil)</li>
 <li>Fixed a bug in opendir(), which prevented readdir() from working properly if
@@ -3155,13 +3154,13 @@ More information on this release on <a href="/releases.php#4.0.2">our Releases p
 <li>Moved to virtual current working directory support. This highly improves the
   functionality and stability of multi-threaded versions of PHP (Andi, Sascha)</li>
 </ul>
-More information on this release on <a href="/releases.php#4.0.1">our Releases page</a>.<br />
+More information on this release on <a href="/releases.php#4.0.1">our Releases page</a>.<br>
 
 <!-- }}} --></section>
 
 <section class="version" id="4.0.0"><!-- {{{ 4.0.0 -->
 <h3>Version 4.0.0 Release</h3>
-<b>22-May-2000</b>
+<?php release_date("22-May-2000"); ?>
 <ul>
 <li>Allow the writing of flash files to stdout.</li>
 <li>Fixed a crash bug in .phps syntax-highlighted files (Andi)</li>
@@ -3178,13 +3177,13 @@ More information on this release on <a href="/releases.php#4.0.1">our Releases p
 <li>Ported imagegammacorrect from PHP3 to PHP4. (Sterling)</li>
 <li>Added array_rand() function. (Andrei)</li>
 </ul>
-More information on this release on <a href="/releases.php#4.0.0">our Releases page</a>.<br />
+More information on this release on <a href="/releases.php#4.0.0">our Releases page</a>.<br>
 
 <!-- }}} --></section>
 
 <section class="version" id="4.0RC2">
 <h3>Version 4.0, Release Candidate 2</h3>
-<b>08-May-2000</b>
+<?php release_date("08-May-2000"); ?>
 <ul>
 <li>NSAPI WIN32 Module compilable, untested (Shane)</li>
 <li>Apache WIN32 Module compilable and lightly tested. (Shane)</li>
@@ -3281,7 +3280,7 @@ More information on this release on <a href="/releases.php#4.0.0">our Releases p
 
 <section class="version" id="4.0RC1">
 <h3>Version 4.0, Release Candidate 1</h3>
-<b>27-Mar-2000</b>
+<?php release_date("27-Mar-2000"); ?>
 <ul>
 <li>Added support for UCD-SNMP 4.1.x (Sascha)</li>
 <li>Fixed a data corruption bug in mysql_result(), if used in table.fieldname
@@ -3370,7 +3369,7 @@ More information on this release on <a href="/releases.php#4.0.0">our Releases p
 
 <section class="version" id="4.0b4l1">
 <h3>Version 4.0, Beta 4 Patch Level 1</h3>
-<b>21-Feb-2000</b>
+<?php release_date("21-Feb-2000"); ?>
 <ul>
 <li>Fixed crash when magic_quotes were switched off. (Thies)</li>
 <li>Support for pdflib 2.30 (Uwe)</li>
@@ -3380,7 +3379,7 @@ More information on this release on <a href="/releases.php#4.0.0">our Releases p
 
 <section class="version" id="4.0b4">
 <h3>Version 4.0, Beta 4</h3>
-<b>20-Feb-2000</b>
+<?php release_date("20-Feb-2000"); ?>
 <ul>
 <li>Introduced $HTTP_POST_FILES[], that contains information about files uploaded
   through HTTP upload (Zeev)</li>
@@ -3555,7 +3554,7 @@ More information on this release on <a href="/releases.php#4.0.0">our Releases p
 
 <section class="version" id="4.0b3">
 <h3>Version 4.0 Beta 3</h3>
-<b>16-Nov-1999</b>
+<?php release_date("16-Nov-1999"); ?>
 <ul>
 <li>ucfirst()/ucwords() no longer modify arg1 (Thies)</li>
 <li>Fixed strtr() not to modify arg1 (Thies)</li>
@@ -3781,7 +3780,7 @@ More information on this release on <a href="/releases.php#4.0.0">our Releases p
 
 <section class="version" id="4.0b2">
 <h3>Version 4.0 Beta 2</h3>
-<b>09-Aug-1999</b>
+<?php release_date("09-Aug-1999"); ?>
 <ul>
 <li>Fixed a problem when sending HTTP/1.x header lines using header() (Zeev)</li>
 <li>Win32 builds now include the ODBC module built-in (Zeev)</li>
@@ -3864,7 +3863,7 @@ More information on this release on <a href="/releases.php#4.0.0">our Releases p
 
 <section class="version" id="4.0b1">
 <h3>Version 4.0 Beta 1</h3>
-<b>19-Jul-1999</b>
+<?php release_date("19-Jul-1999"); ?>
 <ul>
 <li>First public beta of PHP 4.0</li>
 </ul>

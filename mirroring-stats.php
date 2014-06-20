@@ -16,7 +16,7 @@ site_header("Setting Up Local Stats", array("current" => "community"));
 <ol>
  <li>
   <p>
-   <a href="http://www.mrunix.net/webalizer/">Get The Webalizer</a><br /><br />
+   <a href="http://www.mrunix.net/webalizer/">Get The Webalizer</a><br><br>
    The Webalizer is a web server log analysis program. It is designed to 
    scan web server log files in various formats and produce usage statistics 
    in HTML format for viewing through a browser. Note that Webalizer requires
@@ -25,7 +25,7 @@ site_header("Setting Up Local Stats", array("current" => "community"));
  </li>
  <li>
   <p>
-   Install The Webalizer<br /><br />
+   Install The Webalizer<br><br>
    There is a <code>configure</code> file in the distribution now, and other setup options
    are also available. Consult the <code>INSTALL</code> file included in the package.
    Copy the executable to somewhere accessible, eg. <code>/usr/bin</code>.
@@ -33,7 +33,7 @@ site_header("Setting Up Local Stats", array("current" => "community"));
  </li>
  <li>
   <p>
-   Grab <a href="/mirror-stats.conf">mirror-stats.conf</a> and edit the file.<br /><br />
+   Grab <a href="/mirror-stats.conf">mirror-stats.conf</a> and edit the file.<br><br>
    This is the main conf file for The Webalizer. Specifically, you will want to 
    change the lines which define where your log file sits, where the output
    should go, and the name of your host machine. Look for these settings:
@@ -44,7 +44,7 @@ site_header("Setting Up Local Stats", array("current" => "community"));
  </li>
  <li>
   <p>
-   Give it a test<br /><br />
+   Give it a test<br><br>
    From the command line in the stats directory, type:
    <code>webalizer -c mirror-stats.conf</code> You should get an index
    file, a usage file for the current month, some images,
@@ -53,7 +53,7 @@ site_header("Setting Up Local Stats", array("current" => "community"));
  </li>
  <li>
   <p>
-   Add it to your cron<br /><br />
+   Add it to your cron<br><br>
    If all went well, in the previous step, it is ready to be updated
    regularly. Something like this will be sufficient (update things
    daily at 3 am):

@@ -190,12 +190,12 @@ $type = myphpnet_urlsearch();
 if ($type === MYPHPNET_URL_NONE || $type === MYPHPNET_URL_FUNC) {
     echo ' checked="checked"';
 }
-echo ' /> Function list search <input type="radio" name="urlsearch" value="manual"';
+echo '> Function list search <input type="radio" name="urlsearch" value="manual"';
 if ($type === MYPHPNET_URL_MANUAL) {
     echo ' checked="checked"';
 }
 ?>
- /> PHP Documentation search
+> PHP Documentation search
 </div>
 
 <h2>Mirror site redirection</h2>
@@ -257,7 +257,7 @@ and will very likely change a lot and be broken at times.
 <label for="showugdisable">Disable UG tips</label> <input type="radio" name="showug" id="showugdisable" value="disable" <?php echo myphpnet_showug() ? "" : "checked=checked" ?>>
 
 <p class="center">
- <input type="submit" value="Set All Preferences" />
+ <input type="submit" value="Set All Preferences">
 </p>
 </form>
 

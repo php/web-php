@@ -12,7 +12,7 @@ site_header("News Archive - 1998", array("cache" => true));
  Here are the most important news items we have published in 1998 on PHP.net.
 </p>
 
-<hr />
+<hr>
 
 <h1>PHP 3.0.6 has been released!</h1>
 <p>
@@ -24,10 +24,10 @@ site_header("News Archive - 1998", array("cache" => true));
  that might apply to you, then upgrade.
 </p>
 
-<hr />
+<hr>
 
 <h1>
- PHP/MySQL ... Two great things that go great together<br />
+ PHP/MySQL ... Two great things that go great together<br>
  Combination wins Database of the Year Award at Web98
 </h1>
 <p>
@@ -40,7 +40,7 @@ site_header("News Archive - 1998", array("cache" => true));
  communities of people on the Net."
 </p>
 
-<hr />
+<hr>
 
 <h1>PHP 3.0 Released</h1>
 <p>
@@ -63,7 +63,7 @@ site_header("News Archive - 1998", array("cache" => true));
  the full anouncement</a>.
 </p>
 
-<hr />
+<hr>
 
 <h1>PHP Meaning Vote</h1>
 <p>
@@ -73,7 +73,7 @@ site_header("News Archive - 1998", array("cache" => true));
  were PHP HTML|Hypermedia|Hypertext Preprocesor.
 </p>
 
-<hr />
+<hr>
 
 <h1>New Look</h1>
 <p>
@@ -84,7 +84,7 @@ site_header("News Archive - 1998", array("cache" => true));
  with the site by sending a message to the webmasters.
 </p>
 
-<hr />
+<hr>
 
 <h1>Bug Database Live</h1>
 <p>

@@ -10,7 +10,7 @@ site_header("PHP 4.3.2 Release Announcement");
 <p>[ <a href="/releases/4_3_2_fr.php">Version Fran&ccedil;aise</a> ]</p>
 
 <p>
- After a lengthy QA process, <a href="/downloads.php">PHP 4.3.2</a> is finally out!<br />
+ After a lengthy QA process, <a href="/downloads.php">PHP 4.3.2</a> is finally out!<br>
  This maintenance release solves a lot of bugs found in earlier PHP versions
  and is a <strong>strongly</strong> recommended upgrade for all users of PHP.
 </p>

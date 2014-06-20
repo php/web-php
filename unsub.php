@@ -41,15 +41,15 @@ site_header("Unsubscribing", array("current" => "community"));
 
 <p>
  To unsubscribe from one of those mailing lists, all you usually need to
- do is send an email to <tt><em>listname</em>-unsubscribe@lists.php.net</tt>
- (substituting the name of the list for <tt><em>listname</em></tt>
- &mdash; for example, <tt>php-general-unsubscribe@lists.php.net</tt>).
+ do is send an email to <code><em>listname</em>-unsubscribe@lists.php.net</code>
+ (substituting the name of the list for <code><em>listname</em></code>
+ &mdash; for example, <code>php-general-unsubscribe@lists.php.net</code>).
 </p>
 
 <p>
  If you are subscribed to the <strong>digest version</strong> of the
  mailing list, you need to send an email to
- <tt><em>listname</em>-digest-unsubscribe@lists.php.net</tt>.
+ <code><em>listname</em>-digest-unsubscribe@lists.php.net</code>.
 </p>
 
 <p>
@@ -77,7 +77,7 @@ site_header("Unsubscribing", array("current" => "community"));
  of one of those messages. The email address will be encoded in the
  'Return-Path' header with the @-sign replaced with an equals (=) sign.
  For example, if the subscribed email address is
- <tt>joecool@example.com</tt>, the 'Return-Path' header will look
+ <code>joecool@example.com</code>, the 'Return-Path' header will look
  something like:
 </p>
 
@@ -166,8 +166,8 @@ site_header("Unsubscribing", array("current" => "community"));
 <p>
  To unsubscribe an address like this that is different from what the
  mailing list software recognizes as your own address, you need to send mail to
- <tt><em>listname</em>-unsubscribe-<em>joecool=example.com</em>@lists.php.net</tt>
- (or <tt>-unsubscribe-digest-</tt>, if the address is subscribed to the
+ <code><em>listname</em>-unsubscribe-<em>joecool=example.com</em>@lists.php.net</code>
+ (or <code>-unsubscribe-digest-</code>, if the address is subscribed to the
  digest format of the list).
 </p>
 
@@ -183,7 +183,7 @@ site_header("Unsubscribing", array("current" => "community"));
  absolutely no reason that you would be unable to unsubscribe yourself from
  the list, except for your ability to follow these directions. However, if
  you find yourself unable to unsubscribe from the mailing list, send an
- email to <tt>php-list-admin@lists.php.net</tt>. Make sure to include the
+ email to <code>php-list-admin@lists.php.net</code>. Make sure to include the
  <strong>complete</strong> headers from one of the messages you have
  received from the mailing list. Keep in mind that there's a human being
  at the other end of that last email address, so you'll have to be patient.

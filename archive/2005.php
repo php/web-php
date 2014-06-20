@@ -12,12 +12,12 @@ site_header("News Archive - 2005", array("cache" => true));
  Here are the most important news items we have published in 2005 on PHP.net.
 </p>
 
-<hr />
+<hr>
 
 <h1>PHP 5.1.1 Released</h1>
 <p>
  <span class="newsdate">[28-Nov-2005]</span>
- The PHP Development Team would like to announce the immediate release of <a href="/downloads.php">PHP 5.1.1</a>.<br />
+ The PHP Development Team would like to announce the immediate release of <a href="/downloads.php">PHP 5.1.1</a>.<br>
  This is a regression correction release aimed at addressing several issues introduced by PHP 5.1.0, the core changes as follows: 
 <ul>
 <li>Native date class is withdrawn to prevent namespace conflict with PEAR's date package.</li>
@@ -32,12 +32,12 @@ The complete details about all of the changes can be found in the
 <a href="/ChangeLog-5.php#5.1.1">PHP 5 ChangeLog</a>.
 </p>
 
-<hr />
+<hr>
 
 <h1>PHP 5.1.0 Released</h1>
 <p>
  <span class="newsdate">[24-Nov-2005]</span>
- The PHP development team is proud to announce the release of <a href="/downloads.php#v5">PHP 5.1.0</a>.<br />
+ The PHP development team is proud to announce the release of <a href="/downloads.php#v5">PHP 5.1.0</a>.<br>
  Some of the key features of PHP 5.1.0 include:
 <ul>
 <li>A complete rewrite of date handling code, with improved timezone support.</li>
@@ -57,7 +57,7 @@ The complete details about all of the changes can be found in the
 <a href="/migration51">upgrading guide</a> is available as well.
 </p>
 
-<hr />
+<hr>
 
 <h1>PHP 4.4.1 Released</h1>
 <p>
@@ -72,7 +72,7 @@ The complete details about all of the changes can be found in the
  <a href="/ChangeLog-4.php#4.4.1">PHP 4 ChangeLog</a>.
 </p>
 
-<hr />
+<hr>
 
 <?php news_image("http://www.afup.org/pages/forumphp/", "afup2005.jpg", "Forum PHP"); ?>
 
@@ -88,7 +88,7 @@ The complete details about all of the changes can be found in the
  (in French).
 </p>
 
-<hr />
+<hr>
 
 <?php news_image("http://zend.kbconferences.com/", "zendphp_conf.gif", "Zend/PHP Conference &amp; Expo"); ?>
 <h1>Zend/PHP Conference &amp; Expo 2005 Program Announced</h1>
@@ -112,7 +112,7 @@ The complete details about all of the changes can be found in the
  and SpikeSource.  Registration discounts are still available.
 </p>
 
-<hr />
+<hr>
 
 <h1>Get Your Pocket PHP Reference and Help Hurricane Relief</h1>
 <p>
@@ -132,7 +132,7 @@ The complete details about all of the changes can be found in the
  Cross' Katrina Relief Fund.
 </p>
 
-<hr />
+<hr>
 
 <h1>PHP 5.0.5 Released</h1>
 <p>
@@ -147,7 +147,7 @@ The complete details about all of the changes can be found in the
  <a href="/ChangeLog-5.php#5.0.5">PHP 5 ChangeLog</a>.
 </p>
 
-<hr />
+<hr>
 
 <?php news_image("http://www.phpconference.com/", "intconf2005fall.gif", "International PHP Conference 2005"); ?>
 <h1>International PHP Conference 2005 - Program available</h1>
@@ -174,7 +174,7 @@ The complete details about all of the changes can be found in the
  special discounts for students and private persons.
 </p>
 
-<hr />
+<hr>
 
 <?php news_image("http://www.phparch.com/phpworks", "php-web-works-logo.gif", "php|works and web|works 2005"); ?>
 <h1>web|works and php|works 2005 Program Online</h1>
@@ -193,7 +193,7 @@ The complete details about all of the changes can be found in the
  available for students, member of academia and non-profit organizations.
 </p>
 
-<hr />
+<hr>
 
 <h1>PHP 4.4.0 Released</h1>
 <p>
@@ -216,7 +216,7 @@ For changes in PHP 4.4.0 since PHP 4.3.11, please consult the
 <a href="/ChangeLog-4.php#4.4.0">PHP 4 ChangeLog</a>.
 </p>
 
-<hr />
+<hr>
 
 <h1>PEAR XML_RPC Vulnerability and PHP 4.4.0RC2 release</h1>
 <p>
@@ -244,7 +244,7 @@ For changes in PHP 4.4.0 since PHP 4.3.11, please consult the
  11th. PHP 4.4.0RC2 can be found <a href="http://qa.php.net/~derick/">here</a>.
 </p>
 
-<hr />
+<hr>
 
 <?php news_image("http://zend.kbconferences.com/", "zendphp_conf.gif", "Zend/PHP Conference &amp; Expo"); ?>
 <h1>Zend/PHP Conference 2005</h1>
@@ -260,7 +260,7 @@ For changes in PHP 4.4.0 since PHP 4.3.11, please consult the
  Resources: Tools, Libraries and Techniquies.  Early registration
  discounts are available until August 15, 2005.
 </p>
-<hr />
+<hr>
 
 <?php news_image("http://www.php.net", "php10thbd.jpg", "PHP 10th anniversary cake"); ?>
 <h1>10 years since PHP 1.0 was released!</h1>
@@ -275,7 +275,7 @@ For changes in PHP 4.4.0 since PHP 4.3.11, please consult the
 
 </p>
 
-<hr />
+<hr>
 
 <h1>CfP PHP Track - (AUUG) Annual Conference</h1>
 <p>
@@ -291,7 +291,7 @@ For changes in PHP 4.4.0 since PHP 4.3.11, please consult the
  href="mailto:arjen&#64;mysql.com">Arjen</a>.
 </p>
 
-<hr />
+<hr>
 
 <?php news_image("http://www.phpwest.com/", "phpwest.gif", "PHP West Conferences"); ?> 
 
@@ -312,7 +312,7 @@ For changes in PHP 4.4.0 since PHP 4.3.11, please consult the
  closing ceremonies.
 </p>
 
-<hr />
+<hr>
 
 <?php news_image("http://conf.phpquebec.org/en/cdrom2005/", "cdrom_phpquebec_2005.gif", "PHP Québec CD ROM 2005"); ?> 
 
@@ -332,7 +332,7 @@ For changes in PHP 4.4.0 since PHP 4.3.11, please consult the
  international experts at the 2005 PHP Québec conference.
 </p>
 
-<hr />
+<hr>
 
 <h1>PHP 5.0.4 and 4.3.11 Released</h1>
 <p>
@@ -350,7 +350,7 @@ For changes in PHP 4.4.0 since PHP 4.3.11, please consult the
  <a href="/ChangeLog-4.php#4.3.11">PHP 4 ChangeLog</a>.
 </p>
 
-<hr />
+<hr>
 
 <h1>International PHP Conference 2005 Spring Edition</h1>
 <p>
@@ -366,7 +366,7 @@ For changes in PHP 4.4.0 since PHP 4.3.11, please consult the
  1, 2005.
 </p>
 
-<hr />
+<hr>
 
 <h1>PHP Québec 2005: PHP - MySQL - Apache</h1>
 
@@ -387,7 +387,7 @@ For changes in PHP 4.4.0 since PHP 4.3.11, please consult the
  is open to everyone.
 </p>
 
-<hr />
+<hr>
 
 <h1>PHP and PEAR at FOSDEM 2005</h1>
 
@@ -409,7 +409,7 @@ For changes in PHP 4.4.0 since PHP 4.3.11, please consult the
  We hope to see you there !
 </p>
 
-<hr />
+<hr>
 
 <h1>php|symphony</h1>
 
@@ -428,7 +428,7 @@ For changes in PHP 4.4.0 since PHP 4.3.11, please consult the
  Shiflett titled "Mastering PHP Security".
 </p>
 
-<hr />
+<hr>
 
 <h1>ApacheCon Europe 2005</h1>
 <p>
@@ -437,7 +437,7 @@ For changes in PHP 4.4.0 since PHP 4.3.11, please consult the
  will be held from July 18th to July 22th in Stuttgart, Germany.
 </p>
 
-<hr />
+<hr>
 
 <?php news_image("http://phpsec.org/", "phpsc-logo.gif", "PHPSC Logo"); ?>
 
@@ -458,7 +458,7 @@ For changes in PHP 4.4.0 since PHP 4.3.11, please consult the
  best practice for PHP application development.
 </p>
 
-<hr />
+<hr>
 
 <h1>O'Reilly Open Source Convention 2005</h1>
 
@@ -472,7 +472,7 @@ For changes in PHP 4.4.0 since PHP 4.3.11, please consult the
  hall.
 </p>
 
-<hr />
+<hr>
 
 <?php news_image("http://phpconf.hu/2005/", "hu_conf.gif", "PHPConf.hu"); ?>
 
@@ -492,7 +492,7 @@ For changes in PHP 4.4.0 since PHP 4.3.11, please consult the
  discover the most talented PHP programmers in the country.
 </p>
 
-<hr />
+<hr>
 
 <?php news_image("http://www.phparch.com/tropics", "php_tropics.jpg", "php|tropics"); ?>
 <h1>php|tropics</h1>
@@ -520,7 +520,7 @@ For changes in PHP 4.4.0 since PHP 4.3.11, please consult the
  attendees interested in trying their hand at the Zend Certification Exam.
 </p>
 
-<hr />
+<hr>
 
 <?php news_image("http://www.php.net/", "php-logo.gif", "Programming Language of 2004"); ?>
 <h1>PHP awarded Programming Language of 2004</h1>

@@ -43,7 +43,7 @@ site_header("License Information", array("current" => "help"));
  </li>
  <li>
   Some files have been contributed under other (compatible) licenses and carry 
-  additional requirements and copyright information.<br/>
+  additional requirements and copyright information.<br>
   This is indicated in the license + copyright comment block at the top of the source file.
  </li>
  <li>
@@ -102,7 +102,7 @@ your project unless you include any code from the PHP distribution, in
 which case you would be violating the license. 
 See Clause 4 in the <a href="http://www.php.net/license/3_01.txt">
 PHP License v3.01</a>. 
-<br/>But we would really prefer if people would come up with their own names 
+<br>But we would really prefer if people would come up with their own names 
 independent of the  PHP name. 
 </p>
 

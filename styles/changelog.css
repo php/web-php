@@ -9,8 +9,6 @@ section.version > :last-child {
     margin-bottom:0;
 }
 
-/* In older changelogs than 5, the b element was used for time */
-section.version > b,
 section.version time.releasedate {
     color: #666;
     display: block;

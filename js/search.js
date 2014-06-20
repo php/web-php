@@ -338,7 +338,7 @@
 
                         // Does a result count already exist in this resultHeading?
                         if(resultCount.length == 0) {
-                            var results = $("<span class='result-count' />").text(numResults);
+                            var results = $("<span class='result-count'>").text(numResults);
                             resultHeading.append(results);
                         } else {
                             resultCount.text(numResults);
@@ -387,7 +387,7 @@
              * manipulation, which breaks the auto-submit functionality we
              * previously relied upon for enter keypresses in the input box to
              * work. Adding a hidden submit button re-enables it. */
-            $("<input type='submit' style='visibility: hidden; position: fixed' />").insertAfter(element);
+            $("<input type='submit' style='visibility: hidden; position: fixed'>").insertAfter(element);
 
             // Fix for a styling issue on the created input element.
             $(".tt-hint", $(element).parent()).addClass("search-query");

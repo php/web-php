@@ -52,7 +52,7 @@ if (isset($_POST['maillist'])) {
     if (empty($_POST['email']) || $_POST['email'] == 'user@example.com' ||
         $_POST['email'] == 'fake@from.net' || !is_emailable_address($_POST['email'])) {
         $error = "You forgot to specify an email address to be added to the list, or specified an invalid address." .
-                 "<br />Please go back and try again.";
+                 "<br>Please go back and try again.";
     }
     
     // Seems to be a valid email address
@@ -80,7 +80,7 @@ if (isset($_POST['maillist'])) {
         
         // Provide error if unable to [un]subscribe
         if ($result) {
-            $error = "We were unable to subscribe you due to some technical problems.<br/ >" .
+            $error = "We were unable to subscribe you due to some technical problems.<br>" .
                      "Please try again later.";
         }
     }
@@ -281,7 +281,7 @@ in following various information about the PHP project.
     'PHP internal website mailing lists',
     array (
       'php-webmaster', 'PHP php.net internal infrastructure discussion',
-      'List for discussing and maintaining the php.net web infrastructure.<br />
+      'List for discussing and maintaining the php.net web infrastructure.<br>
        For general PHP support questions, see "General Mailing Lists" or the <a href="/support.php">support page</a>',
       FALSE, FALSE, FALSE, "php.webmaster"
     ),
@@ -314,7 +314,7 @@ function output_lists_table($mailing_lists)
                  "<th>Newsgroup</th><th>Normal</th><th>Digest</th></tr>\n";
         } else {
             echo '<tr align="center">';
-            echo '<td align="left"><strong>' . $listinfo[1] . '</strong><br /><small>'. $listinfo[2] . '</small></td>';
+            echo '<td align="left"><strong>' . $listinfo[1] . '</strong><br><small>'. $listinfo[2] . '</small></td>';
             echo '<td>' . ($listinfo[3] ? 'yes' : 'no') . '</td>';
 
             // Let the list name defined with a string, if the
@@ -325,8 +325,8 @@ function output_lists_table($mailing_lists)
             } else { $larchive = FALSE; }
             echo '<td>' . ($larchive ? "<a href=\"http://marc.info/?l={$larchive}\">yes</a>" : 'n/a') . '</td>';
             echo '<td>' . ($listinfo[6] ? "<a href=\"news://news.php.net/{$listinfo[6]}\">yes</a> <a href=\"http://news.php.net/group.php?group={$listinfo[6]}\">http</a>" : 'n/a') . '</td>';
-            echo '<td><input name="maillist" type="radio" value="' . $listinfo[0] . '" /></td>';
-            echo '<td>' . ($listinfo[5] ? '<input name="maillist" type="radio" value="' . $listinfo[0] . '-digest" />' : 'n/a' ) . '</td>';
+            echo '<td><input name="maillist" type="radio" value="' . $listinfo[0] . '"></td>';
+            echo '<td>' . ($listinfo[5] ? '<input name="maillist" type="radio" value="' . $listinfo[0] . '-digest">' : 'n/a' ) . '</td>';
             echo "</tr>\n";
         }
     }
@@ -347,9 +347,9 @@ function output_lists_table($mailing_lists)
 
 <p class="center">
  <strong>Email:</strong>
- <input type="text" name="email" size="40" value="user@example.com" />
- <input type="submit" name="action" value="Subscribe" />
- <input type="submit" name="action" value="Unsubscribe" />
+ <input type="text" name="email" size="40" value="user@example.com">
+ <input type="submit" name="action" value="Subscribe">
+ <input type="submit" name="action" value="Unsubscribe">
 </p>
 
 </form>
