@@ -464,7 +464,7 @@ $external_redirects = array(
     "pear"        => "http://pear.php.net/",
     "bugs"        => "http://bugs.php.net/",
     "bugstats"    => "http://bugs.php.net/bugstats.php",
-    "phpdochowto" => "https://wiki.php.net/doc/howto",
+    "phpdochowto" => "http://doc.php.net/tutorial/",
     "rev"         => "http://doc.php.net/revcheck.php?p=graph&lang=$LANG",
     "release/5_3_0.php" => "/releases/5_3_0.php", // PHP 5.3.0 release announcement had a typo
     "ideas.php"   => "http://wiki.php.net/ideas", // BC
