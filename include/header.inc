@@ -63,7 +63,7 @@ if (!isset($config["languages"])) {
 <?php endforeach ?>
 
 <?php foreach($config["languages"] as $code): ?>
- <link rel="alternate" href="<?php echo $MYSITE ?>/manual/<?php echo $code?>/<?php echo $config["thispage"] ?>" hreflang="<?php echo $code?>">
+ <link rel="alternate" href="<?php echo $MYSITE ?>manual/<?php echo $code?>/<?php echo $config["thispage"] ?>" hreflang="<?php echo $code?>">
 <?php endforeach ?>
 
 <?php foreach($CSS as $filename => $modified): ?>
