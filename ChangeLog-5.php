@@ -8,6 +8,80 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 
 <h1>PHP 5 ChangeLog</h1>
 
+<section class="version" id="5.5.14"><!-- {{{ 5.5.14 -->
+<h3>Version 5.5.14</h3>
+<?php release_date('26-Jun-2014'); ?>
+<ul><li>CLI server:
+<ul>
+  <li><?php bugfix(67406); ?> (built-in web-server segfaults on startup).</li>
+</ul></li>
+<li>Core:
+<ul>
+  <li><?php bugfix(66622); ?> (Closures do not correctly capture the late bound class
+    (static::) in some cases).</li>
+  <li><?php bugfix(67390); ?> (insecure temporary file use in the configure script).
+    (CVE-2014-3981).</li>
+  <li><?php bugfix(67399); ?> (putenv with empty variable may lead to crash).</li>
+  <li><?php bugfix(67498); ?> (phpinfo() Type Confusion Information Leak Vulnerability).</li>
+  <li>Fixed BC break introduced by patch for bug #67072.</li>
+</ul></li>
+<li>Date:
+<ul>
+  <li><?php bugfix(67308); ?> (Serialize of DateTime truncates fractions of second).</li>
+  <li>Fixed regression in fix for bug #67118 (constructor can't be called twice).</li>
+</ul></li>
+<li>Fileinfo:
+<ul>
+  <li><?php bugfix(67326); ?> (cdf_read_short_sector insufficient boundary check).
+    (CVE-2014-0207)).</li>
+  <li><?php bugfix(67410); ?> (mconvert incorrect handling of truncated pascal
+    string size). (CVE-2014-3478).</li>
+  <li><?php bugfix(67411); ?> (cdf_check_stream_offset insufficient boundary
+    check). (CVE-2014-3479).</li>
+  <li><?php bugfix(67412); ?> (cdf_count_chain insufficient boundary check).
+    (CVE-2014-3480).</li>
+  <li><?php bugfix(67413); ?> (cdf_read_property_info insufficient boundary
+    check). (CVE-2014-3487).</li>
+</ul></li>
+<li>Intl:
+<ul>
+  <li><?php bugfix(67349); ?> (Locale::parseLocale Double Free).</li>
+  <li><?php bugfix(67397); ?> (Buffer overflow in locale_get_display_name and
+    uloc_getDisplayName (libicu 4.8.1)).</li>
+</ul></li>
+<li>Network:
+<ul>
+  <li><?php bugfix(67432); ?> (Fix potential segfault in dns_get_record()).
+    (CVE-2014-4049)).</li>
+</ul></li>
+<li>OPCache:
+<ul>
+  <li>Fixed issue #183 (TMP_VAR is not only used once).</li>
+</ul></li>
+<li>OpenSSL:
+<ul>
+  <li><?php bugfix(65698); ?> (certificates validity parsing does not work past 2050).</li>
+  <li><?php bugfix(66636); ?> (openssl_x509_parse warning with V_ASN1_GENERALIZEDTIME).</li>
+</ul></li>
+<li>PDO-ODBC:
+<ul>
+  <li><?php bugfix(50444); ?> (PDO-ODBC changes for 64-bit).</li>
+</ul></li>
+<li>SOAP:
+<ul>
+  <li>Implemented FR #49898 (Add SoapClient::__getCookies()).</li>
+</ul></li>
+<li>SPL:
+<ul>
+  <li><?php bugfix(66127); ?> (Segmentation fault with ArrayObject unset).</li>
+  <li><?php bugfix(67359); ?> (Segfault in recursiveDirectoryIterator).</li>
+  <li><?php bugfix(67360); ?> (Missing element after ArrayObject::getIterator).</li>
+  <li><?php bugfix(67492); ?> (unserialize() SPL ArrayObject / SPLObjectStorage Type 
+    Confusion). (CVE-2014-3515).</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
 <section class="version" id="5.4.30"><!-- {{{ 5.4.30 -->
 <h3>Version 5.4.30</h3>
 <b>26-Jun-2014</b>
