@@ -23,7 +23,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
     (CVE-2014-3981).</li>
   <li><?php bugfix(67399); ?> (putenv with empty variable may lead to crash).</li>
   <li><?php bugfix(67498); ?> (phpinfo() Type Confusion Information Leak Vulnerability).</li>
-  <li>Fixed BC break introduced by patch for bug #67072.</li>
+  <li>Fixed BC break introduced by patch for bug <?php bugl(67072); ?>.</li>
 </ul></li>
 <li>Date:
 <ul>
