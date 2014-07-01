@@ -373,7 +373,7 @@ site_header(
 </ul>
 
 <p>
- The PHP Group and the Network Infrastructure Manager reserve the
+ The <a href="/credits.php">PHP Group</a> and the Network Infrastructure Manager reserve the
  right to refuse images based on content, but most things should be fine.
 </p>
 

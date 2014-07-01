@@ -29,7 +29,7 @@ site_header("License Information", array("current" => "help"));
 <ul>
  <li>
   PHP 4 and PHP 5 are distributed under the
-  <a href="http://www.php.net/license/3_01.txt">PHP License v3.01</a>, copyright (c) the PHP Group.
+  <a href="http://www.php.net/license/3_01.txt">PHP License v3.01</a>, copyright (c) the <a href="/credits.php">PHP Group</a>.
   <ul>
    <li>
     This is an <a href="http://www.opensource.org/docs/osd">Open Source license</a>, 
