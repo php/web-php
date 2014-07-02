@@ -123,8 +123,8 @@ if (isset($_POST['maillist'])) {
 <h2>Twitter</h2>
 <p>
  The PHP team maintains an official PHP.net account on twitter,
-<a href="https://twitter.com/official_php">@official_php</a>, for those interested
-in following various information about the PHP project.
+ <a href="https://twitter.com/official_php">@official_php</a>, for those
+ interested in following news and other announcements from the PHP project.
 </p>
 
 <h2>Mailing List Posting guidelines</h2>
