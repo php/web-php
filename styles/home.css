@@ -121,3 +121,16 @@ p.archive {
         width:70%;
     }
 }
+
+/* Social media buttons. */
+aside.tips .social-media a {
+    border-bottom: 0;
+}
+
+aside.tips .panel.social-media > a:after {
+    display: none;
+}
+
+aside.tips .social-media .headline {
+    font-size: 1.5em;
+}

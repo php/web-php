@@ -171,6 +171,11 @@ $SIDEBAR = <<< SIDEBAR_DATA
 $announcements
     <p class='panel'><a href='/cal.php'>User Group Events</a></p>
     <p class='panel'><a href='/thanks.php'>Special Thanks</a></p>
+    <p class='panel social-media'>
+      <a class='headline' href="https://twitter.com/official_php">
+        <i class="icon-twitter"></i>
+      </a>
+    </p>
 
 SIDEBAR_DATA;
 
