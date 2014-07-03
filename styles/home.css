@@ -123,6 +123,10 @@ p.archive {
 }
 
 /* Social media buttons. */
+aside.tips .social-media {
+    padding-top: 2em;
+}
+
 aside.tips .social-media a {
     border-bottom: 0;
 }
