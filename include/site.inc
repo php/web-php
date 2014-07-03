@@ -515,6 +515,10 @@ if($_SERVER["SERVER_PORT"] != '80' && $_SERVER["SERVER_PORT"] != 443) {
     $msite  =      'http://' . $_SERVER["SERVER_NAME"] . '/';
 }
 
+// This is a horrendous hack that should be removed at some point, but we need
+// to avoid cross-domain issues where php.net is configured as www.php.net.
+$MIRRORS['http://php.net/'] = $MIRRORS['http://www.php.net/'];
+
 // If this site does not exist - it is most likely because
 // CC.php.net isn't in this array anymore.
 if (!isset($MIRRORS[$MYSITE])) {
