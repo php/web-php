@@ -326,6 +326,7 @@ $uri_aliases = array (
     "global"       => "language.variables.scope",
     "@"            => "language.operators.errorcontrol",
     "&"            => "language.references",
+    "**"           => "language.operators.arithmetic",
 
     "dowhile"      => "control-structures.do.while",
     
