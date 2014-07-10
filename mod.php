@@ -13,7 +13,7 @@ include_once $_SERVER['DOCUMENT_ROOT'] . '/include/prepend.inc';
 site_header("Email confirmation", array("current" => "community"));
 
 // Only run on main php.net box.
-if ($MYSITE != "http://www.php.net/" && $MYSITE != 'http://php.net/') { 
+if (!is_primary_site()) {
     echo <<<ERROR
 <h1>Email confirmation failed</h1>
 
