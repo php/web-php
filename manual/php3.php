@@ -20,7 +20,7 @@ site_header('PHP Version 3 Documentation');
 </ol>
 <hr>
 
-<h2><a name="introduction" id="introduction">Introduction</a></h2>
+<h2 id="introduction">Introduction</h2>
 
 <p>
  The PHP 3 documentation was removed from the PHP Manual and placed here for
@@ -35,7 +35,7 @@ site_header('PHP Version 3 Documentation');
  information about PHP 3.
 </p>
 
-<h2><a name="directives" id="directives">Configuration Directives</a></h2>
+<h2 id="directives">Configuration Directives</h2>
 
 <p>
  Most directives are prepended with php3_ instead of php_. These differences
@@ -94,7 +94,7 @@ site_header('PHP Version 3 Documentation');
  </dd>
 </dl>
 
-<h2><a name="changed_behaviour" id="changed_bahaviour">Changed Behaviour</a></h2>
+<h2 id="changed_bahaviour">Changed Behaviour</h2>
 
 <dl>
  <dt><span class="big">Return values</span></dt>
@@ -180,7 +180,7 @@ site_header('PHP Version 3 Documentation');
  </dd>
 </dl>
 
-<h2><a name="miscellaneous" id="miscellaneous">Miscellaneous</a></h2>
+<h2 id="miscellaneous">Miscellaneous</h2>
 
 <dl>
  <dd>
@@ -253,21 +253,21 @@ site_header('PHP Version 3 Documentation');
  </dd>
 </dl>
 
-<h2><a name="migration" id="migration">Migration</a></h2>
+<h2 id="migration">Migration</h2>
 
 <p>
  There are a few migration specific documents involving PHP 3 but due to
  their size and structure they were not added to this document.
 </p>
 
-<h2><a name="debugger" id="debugger">Debugger</a></h2>
+<h2 id="debugger">Debugger</h2>
 
 <p>
  Information related to the debugger that comes standard with PHP 3 was
  not added to this document.
 </p>
 
-<h2><a name="internals" id="internals">Internals</a></h2>
+<h2 id="internals">Internals</h2>
 
 <p>
  Information related to the internal workings of PHP 3 that is commonly used
