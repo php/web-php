@@ -72,6 +72,11 @@ site_header("Thanks", array("current" => "community"));
 </li>
 
 <li>
+ <a href="http://krystal.co.uk">Krystal.co.uk</a> provides a server and bandwidth
+ for the ci.qa.php.net build and quality assurance infrastructure.
+</li>
+
+<li>
  <a href="http://servergrove.com/">ServerGrove</a> provides managed servers and bandwidth for various php.net services.
 </li>
 
