@@ -267,6 +267,11 @@ if (isset($_POST['maillist'])) {
       'General bug activity are posted here',
       FALSE, FALSE, FALSE, "php.bugs"
     ),
+    array (
+      'standards', 'PHP Standardization and interoperability list',
+      'Development of language standards',
+      FALSE, FALSE, FALSE, "php.standards"
+    ),
 
     'PHP internal website mailing lists',
     array (
