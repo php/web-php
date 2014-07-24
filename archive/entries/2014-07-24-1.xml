@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <entry xmlns="http://www.w3.org/2005/Atom">
-  <title>5.5.15</title>
+  <title>PHP 5.5.15 is released</title>
   <id>http://php.net/archive/2014.php#id2014-07-24-1</id>
   <published>2014-07-24T09:01:34+00:00</published>
-  <updated>2014-07-24T09:01:34+00:00</updated>
+  <updated>2014-07-24T17:03:26+01:00</updated>
+  <category term="frontpage" label="PHP.net frontpage news"/>
+  <category term="releases" label="New PHP release"/>
   <link href="http://php.net/index.php#id2014-07-24-1" rel="alternate" type="text/html"/>
   <link href="http://php.net/archive/2014.php#id2014-07-24-1" rel="via" type="text/html"/>
   <content type="xhtml">
