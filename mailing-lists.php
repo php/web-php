@@ -253,11 +253,6 @@ if (isset($_POST['maillist'])) {
       TRUE, TRUE, FALSE, "php.cvs"
     ),
     array (
-      'php-cvs-daily', 'Daily Git commit summary',
-      'Daily changelog and NEWS file updates',
-      TRUE, FALSE, FALSE, ""
-    ),
-    array (
       'git-pulls', 'Git pull requests',
       'Pull requests from Github',
       FALSE, FALSE, FALSE, "php.git-pulls"
@@ -266,11 +261,6 @@ if (isset($_POST['maillist'])) {
       'php-qa', 'Quality Assurance list',
       'List for the members of the PHP-QA Team',
       FALSE, TRUE, FALSE, "php.qa"
-    ),
-    array (
-      'pdo', 'PDO Developmental list',
-      'Discuss the past, present and future of PDO',
-      FALSE, FALSE, TRUE, "php.pdo"
     ),
     array (
       'php-bugs', 'General bugs',
