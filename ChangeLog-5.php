@@ -67,6 +67,47 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 </ul>
 <!-- }}} --></section>
 
+<section class="version" id="5.4.31"><!-- {{{ 5.4.31 -->
+<h3>Version 5.4.31</h3>
+<b>24-Jul-2014</b>
+<ul><li>Core:
+<ul>
+  <li><?php bugfix(67428); ?> (header('Location: foo') will override a 308-399 response code).</li>
+  <li><?php bugfix(67436); ?> (Autoloader isn't called if two method definitions don't match).</li>
+  <li><?php bugfix(67091); ?> (make install fails to install libphp5.so on FreeBSD 10.0).</li>
+  <li><?php bugfix(67151); ?> (strtr with empty array crashes).</li>
+  <li><?php bugfix(67407); ?> (Windows 8.1/Server 2012 R2 reported as Windows 8/Server 2012).</li>
+</ul></li>
+<li>CLI server:
+<ul>
+  <li>Implemented FR <?php bugl(67429); ?> (CLI server is missing some new HTTP response codes).</li>
+  <li><?php bugfix(66830); ?> (Empty header causes PHP built-in web server to hang).</li>
+</ul></li>
+<li>FPM:
+<ul>
+  <li><?php bugfix(67530); ?> (error_log=syslog ignored).</li>
+  <li><?php bugfix(67531); ?> (syslog cannot be set in pool configuration).</li>
+</ul></li>
+<li>Intl:
+<ul>
+  <li><?php bugfix(67052); ?> (NumberFormatter::parse() resets LC_NUMERIC setting).</li>
+</ul></li>
+<li>pgsql:
+<ul>
+  <li><?php bugfix(67550); ?> (Error in code "form" instead of "from", pgsql.c, line 756), which affected builds against libpq &lt; 7.3.</li>
+</ul></li>
+<li>Phar:
+<ul>
+  <li><?php bugfix(67587); ?> (Redirection loop on nginx with FPM).</li>
+</ul></li>
+<li>Streams:
+<ul>
+  <li><?php bugfix(67430); ?> (http:// wrapper doesn't follow 308 redirects).</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
+
 <section class="version" id="5.5.14"><!-- {{{ 5.5.14 -->
 <h3>Version 5.5.14</h3>
 <?php release_date('26-Jun-2014'); ?>

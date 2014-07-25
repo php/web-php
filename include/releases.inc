@@ -490,6 +490,37 @@ $OLDRELEASES = array (
       'date' => '20 Jun 2013',
       'museum' => true,
     ),
+    '5.4.30' => 
+    array (
+      'announcement' => 
+      array (
+        'English' => '/releases/5_4_30.php',
+      ),
+      'source' => 
+      array (
+        0 => 
+        array (
+          'filename' => 'php-5.4.30.tar.bz2',
+          'name' => 'PHP 5.4.30 (tar.bz2)',
+          'md5' => 'a8a27fdc1d9e1020c9f8922b608326de',
+          'date' => '26 Jun 2014',
+        ),
+        1 => 
+        array (
+          'filename' => 'php-5.4.30.tar.gz',
+          'name' => 'PHP 5.4.30 (tar.gz)',
+          'md5' => '461afd4b84778c5845b71e837776139f',
+          'date' => '26 Jun 2014',
+        ),
+        2 => 
+        array (
+          'link' => 'http://windows.php.net/download/#php-5.4',
+          'name' => 'Windows 5.4.30 binaries and source',
+        ),
+      ),
+      'date' => '26 Jun 2014',
+      'museum' => false,
+    ),
     '5.4.29' => 
     array (
       'announcement' => 
