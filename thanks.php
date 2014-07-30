@@ -15,7 +15,12 @@ site_header("Thanks", array("current" => "community"));
 
 <li>
  <a href="https://myracloud.com/de/ddos-schutz/">DDoS protection by myracloud</a>, along with hosting
- www.php.net, git.php.net and svn.php.net for us.
+ www.php.net and git.php.net for us.
+</li>
+
+<li>
+ <a href="http://www.streamservice.nl">Stream Service</a>
+ provices svn.php.net, gtk.php.net, people.php.net and europe.rsync.php.net for us.
 </li>
 
 <li>
