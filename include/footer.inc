@@ -55,6 +55,15 @@
         <li><a href="/mirrors.php">Mirror sites</a></li>
         <li><a href="/privacy.php">Privacy policy</a></li>
       </ul>
+      <ul class="footmenu">
+        <?php
+        if(is_primary_site() || is_backup_primary() || is_official_mirror()){
+            print '<li><a href="/mirror.php">This mirror</a> generously provided by: <a href="'.mirror_provider_url().'">'.mirror_provider().'</a></li>';
+        }else{
+            print '<li><a href="/mirror.php">This mirror</a> is an unofficial mirror</a></li>';
+        }
+        ?>
+      </ul>
       </div>
     </div>
   </footer>
