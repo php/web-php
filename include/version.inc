@@ -26,8 +26,8 @@ $PHP_5_5_MD5     = array(
                        "tar.xz"        => "d64c85f95fb767f16ee3ca281a20b5f7",
 );
 /* PHP 5.4 Release */
-$PHP_5_4_RC = false; // Current RC version (e.g., '5.6.7RC1') or false
-$PHP_5_4_RC_DATE = '24 Jul 2014';
+$PHP_5_4_RC = '5.4.32RC1'; // Current RC version (e.g., '5.6.7RC1') or false
+$PHP_5_4_RC_DATE = '7 Aug 2014';
 
 $PHP_5_4_VERSION         = "5.4.31";
 $PHP_5_4_DATE            = "24 Jul 2014";
