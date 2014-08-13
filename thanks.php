@@ -20,7 +20,7 @@ site_header("Thanks", array("current" => "community"));
 
 <li>
  <a href="http://www.streamservice.nl">Stream Service</a>
- provices svn.php.net, gtk.php.net, people.php.net and europe.rsync.php.net for us.
+ provides svn.php.net, gtk.php.net, people.php.net and europe.rsync.php.net for us.
 </li>
 
 <li>
