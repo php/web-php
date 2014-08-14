@@ -37,15 +37,16 @@ $PHP_5_4_MD5     = array(
 );
 
 /* PHP 5.3 Release */
-$PHP_5_3_RC      = '5.3.29RC1'; // Current RC version (e.g., '5.6.7RC1') or false
+$PHP_5_3_RC      = false; //'5.3.29RC1'; // Current RC version (e.g., '5.6.7RC1') or false
 $PHP_5_3_RC_DATE = '31 Jul 2013';
 
-$PHP_5_3_VERSION         = "5.3.28";
-$PHP_5_3_DATE            = "12 Dec 2013";
+$PHP_5_3_VERSION         = "5.3.29";
+$PHP_5_3_DATE            = "14 Aug 2014";
 
 $PHP_5_3_MD5     = array(
-                       "tar.bz2"       => "56ff88934e068d142d6c0deefd1f396b",
-                       "tar.gz"        => "eec3fb5ccb6d8c238f973d306bebb00e",
+                       "tar.bz2"       => "9469e240cbe6ac865aeaec89b253dd30",
+                       "tar.gz"        => "ebfa96ea636b2a7ece71e78ad116a338",
+                       "tar.xz"        => "dcff9c881fe436708c141cfc56358075"
 );
 
 $RELEASES = array(

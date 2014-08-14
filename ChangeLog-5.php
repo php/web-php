@@ -8,6 +8,68 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 
 <h1>PHP 5 ChangeLog</h1>
 
+<section class="version" id="5.3.29"><!-- {{{ 5.3.29 -->
+<h3>Version 5.3.29</h3>
+<?php release_date('14-Aug-2014'); ?>
+<ul><li>Core:
+<ul>
+  <li><?php bugfix(66127); ?> (Segmentation fault with ArrayObject unset).</li>
+  <li><?php bugfix(67247); ?> (spl_fixedarray_resize integer overflow).</li>
+  <li><?php bugfix(67249); ?> (printf out-of-bounds read).</li>
+  <li><?php bugfix(67250); ?> (iptcparse out-of-bounds read).</li>
+  <li><?php bugfix(67252); ?> (convert_uudecode out-of-bounds read).</li>
+  <li><?php bugfix(67359); ?> (Segfault in recursiveDirectoryIterator).</li>
+  <li><?php bugfix(67390); ?> (insecure temporary file use in the configure script). (CVE-2014-3981)</li>
+  <li><?php bugfix(67399); ?> (putenv with empty variable may lead to crash).</li>
+  <li><?php bugfix(67492); ?> (unserialize() SPL ArrayObject / SPLObjectStorage Type Confusion) (CVE-2014-3515).</li>
+  <li><?php bugfix(67498); ?> (phpinfo() Type Confusion Information Leak Vulnerability).</li>
+</li>
+</ul></li>
+<li>COM:
+<ul>
+  <li>Fixed missing type checks in com_event_sink.</li>
+</ul></li>
+<li>Date:
+<ul>
+  <li><?php bugfix(66060); ?> (Heap buffer over-read in DateInterval). (CVE-2013-6712)</li>
+  <li><?php bugfix(67251); ?> (date_parse_from_format out-of-bounds read).</li>
+  <li><?php bugfix(67253); ?> (timelib_meridian_with_check out-of-bounds read).</li>
+</ul></li>
+<li>Exif:
+<ul>
+  <li><?php bugfix(65873); ?> (Integer overflow in exif_read_data()).</li>
+</ul></li>
+<li>Fileinfo:
+<ul>
+  <li><?php bugfix(66307); ?> (Fileinfo crashes with powerpoint files).</li>
+  <li><?php bugfix(67326); ?> (fileinfo: cdf_read_short_sector insufficient boundary check). (CVE-2014-0207)</li>
+  <li><?php bugfix(67327); ?> (fileinfo: CDF infinite loop in nelements DoS). (CVE-2014-0238)</li>
+  <li><?php bugfix(67328); ?> (fileinfo: fileinfo: numerous file_printf calls resulting in performance degradation). (CVE-2014-0237)</li>
+  <li><?php bugfix(67410); ?> (fileinfo: mconvert incorrect handling of truncated pascal string size).</li>
+  <li><?php bugfix(67411); ?> (fileinfo: cdf_check_stream_offset insufficient boundary check).</li>
+  <li><?php bugfix(67412); ?> (fileinfo: cdf_count_chain insufficient boundary check).</li>
+  <li><?php bugfix(67413); ?> (fileinfo: cdf_read_property_info insufficient boundary check).</li>
+</ul></li>
+<li>Intl:
+<ul>
+  <li><?php bugfix(67349); ?> (Locale::parseLocale Double Free).</li>
+  <li><?php bugfix(67397); ?> (Buffer overflow in locale_get_display_name and uloc_getDisplayName (libicu 4.8.1)).</li>
+</ul></li>
+<li>Network:
+<ul>
+  <li><?php bugfix(67432); ?> (Fix potential segfault in dns_check_record()). (CVE-2014-4049)</li>
+</ul></li>
+<li>OpenSSL:
+<ul>
+  <li>Fixed missing type checks in OpenSSL options.</li>
+</ul></li>
+<li>Session:
+<ul>
+  <li>Fixed missing type checks in php_session_create_id.</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
 <section class="version" id="5.5.15"><!-- {{{ 5.5.15 -->
 <h3>Version 5.5.15</h3>
 <?php release_date('24-Jul-2014'); ?>
