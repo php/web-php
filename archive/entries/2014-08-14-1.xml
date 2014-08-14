@@ -10,23 +10,23 @@
   <link href="http://php.net/archive/2014.php#id2014-08-14-1" rel="via" type="text/html"/>
   <content type="xhtml">
     <div xmlns="http://www.w3.org/1999/xhtml">
-     The PHP development team announces the immediate availability of
+     <p>The PHP development team announces the immediate availability of
      PHP 5.3.29. This release marks the end of life of the PHP 5.3 series.
      Future releases of this series are not planned. All PHP 5.3 users are
      encouraged to upgrade to the current stable version of PHP 5.5 or
      previous stable version of PHP 5.4, which are supported till at least
-     2016 and 2015 respectively.
+     2016 and 2015 respectively.</p>
      
-     PHP 5.3.29 contains about 25 potentially security related fixes
-     backported from PHP 5.4 and 5.5.
+     <p>PHP 5.3.29 contains about 25 potentially security related fixes
+	     backported from PHP 5.4 and 5.5.</p>
      
-     For source downloads of PHP 5.3.29, please visit our <a href="http://www.php.net/downloads.php">downloads page</a>. Windows
+     <p>For source downloads of PHP 5.3.29, please visit our <a href="http://www.php.net/downloads.php">downloads page</a>. Windows
      binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>. The list of changes is recorded in
-     the <a href="http://www.php.net/ChangeLog-5.php#5.3.29">ChangeLog</a>.
+     the <a href="http://www.php.net/ChangeLog-5.php#5.3.29">ChangeLog</a>.</p>
      
-     For helping your migration to newer versions please refer to our migration
+     <p>For helping your migration to newer versions please refer to our migration
      guides for updates from <a href="http://php.net/migration54">PHP 5.3 to
-     5.4</a> and from <a href="http://php.net/migration55">PHP 5.4 to 5.5</a>.
+	     5.4</a> and from <a href="http://php.net/migration55">PHP 5.4 to 5.5</a>.</p>
     </div>
   </content>
 </entry>
