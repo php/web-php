@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <entry xmlns="http://www.w3.org/2005/Atom">
-  <title>PHP 5.3.29 is available, PHP 5.3 reaching end of life</title>
+  <title>Last 5.3 release ever available: PHP 5.3.29 - 5.3 now EOL</title>
   <id>http://php.net/archive/2014.php#id2014-08-14-1</id>
   <published>2014-08-14T14:26:40+02:00</published>
   <updated>2014-08-14T14:26:40+02:00</updated>
@@ -11,8 +11,8 @@
   <content type="xhtml">
     <div xmlns="http://www.w3.org/1999/xhtml">
      <p>The PHP development team announces the immediate availability of
-     PHP 5.3.29. This release marks the end of life of the PHP 5.3 series.
-     Future releases of this series are not planned. All PHP 5.3 users are
+     PHP 5.3.29. This release marks the <strong>end of life</strong> of the <strong>PHP 5.3 series</strong>.
+     Future releases of this series are <strong>not planned</strong>. All PHP 5.3 users are
      encouraged to upgrade to the current stable version of PHP 5.5 or
      previous stable version of PHP 5.4, which are supported till at least
      2016 and 2015 respectively.</p>
