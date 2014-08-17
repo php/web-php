@@ -26,6 +26,15 @@ site_header("Documentation", array("current" => "docs"));
  parts might be outdated. The translation teams are open to
  contributions. 
 </p>
+
+ <div class="warning">
+  <p>
+   Documentation for PHP 4 is currently being removed from the
+   manual, but there is archived version still available. For
+   more informations, please read <a href="/manual/php4.php">
+   this explanation</a>.
+  </p>
+ </div>
 </div>
 
 <table class="standard">
@@ -79,6 +88,10 @@ foreach ($ACTIVE_ONLINE_LANGUAGES as $langcode => $langname) {
  <li>
   <a href="http://pear.php.net/manual/">Documentation of PEAR and the various
   packages</a> can be found on a separate server.
+ </li>
+ <li>
+  If you are looking for PHP 4 documentation, plase read <a href="/manual/php4.php">
+  this explanation</a>.
  </li>
  <li>
   You can still read a copy of the original <a href="/manual/phpfi2.php">PHP/FI
