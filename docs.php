@@ -29,10 +29,10 @@ site_header("Documentation", array("current" => "docs"));
 
  <div class="warning">
   <p>
-   Documentation for PHP 4 is currently being removed from the
+   Documentation for PHP 4 has been removed from the
    manual, but there is archived version still available. For
    more informations, please read <a href="/manual/php4.php">
-   this explanation</a>.
+   Documentation for PHP 4</a>.
   </p>
  </div>
 </div>
@@ -90,7 +90,7 @@ foreach ($ACTIVE_ONLINE_LANGUAGES as $langcode => $langname) {
   packages</a> can be found on a separate server.
  </li>
  <li>
-  If you are looking for PHP 4 documentation, plase read <a href="/manual/php4.php">
+  If you are looking for PHP 4 documentation, please read <a href="/manual/php4.php">
   this explanation</a>.
  </li>
  <li>
