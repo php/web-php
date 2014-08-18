@@ -122,6 +122,11 @@ p.archive {
     }
 }
 
+/* Homepage mirror sponsor */
+aside.tips .mirror-sponsor {
+    padding-top: 1.5rem;
+}
+
 /* Social media buttons. */
 aside.tips .social-media {
     padding-top: 2em;
