@@ -90,13 +90,10 @@ foreach ($ACTIVE_ONLINE_LANGUAGES as $langcode => $langname) {
   packages</a> can be found on a separate server.
  </li>
  <li>
-  If you are looking for PHP 4 documentation, please read <a href="/manual/php4.php">
-  this explanation</a>.
- </li>
- <li>
   You can still read a copy of the original <a href="/manual/phpfi2.php">PHP/FI
   2.0 Manual</a> on our site, which we only host for historical purposes.
-  The same applies to the <a href="/manual/php3.php">PHP 3 Manual</a>.
+  The same applies to the <a href="/manual/php3.php">PHP 3 Manual</a>, and
+  the <a href="/manual/php4.php">PHP 4 Manual</a>.
  </li>
 </ul>
 
