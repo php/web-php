@@ -39,7 +39,7 @@ function get_eol_branches() {
 	}
 
 	krsort($branches);
-	foreach ($branches as $major => $branch) {
+	foreach ($branches as $major => &$branch) {
 		krsort($branch);
 	}
 
