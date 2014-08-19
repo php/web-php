@@ -82,7 +82,7 @@ site_header('Unsupported Branches');
 							<em><?php echo $eolPeriod ?></em>
 						</td>
 						<td>
-							<a href="/releases/#<?php echo htmlspecialchars($detail['version']); ?>">
+							<a href="<?php echo htmlspecialchars($detail['link']); ?>">
 								<?php echo htmlspecialchars($detail['version']); ?>
 							</a>
 						</td>

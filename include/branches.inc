@@ -22,6 +22,7 @@ function get_eol_branches($always_include = null) {
 				if (!isset($branches[$major][$branch]) || version_compare($version, $branches[$major][$branch]['version'], 'gt')) {
 					$branches[$major][$branch] = array(
 						'date' => strtotime($release['date']),
+						'link' => "/releases#$version",
 						'version' => $version,
 					);
 				}
@@ -52,6 +53,7 @@ function get_eol_branches($always_include = null) {
 				if ($branch = version_number_to_branch($version)) {
 					$branches[$major][$branch] = array(
 						'date' => strtotime($release['source'][0]['date']),
+						'link' => "/downloads#v$version",
 						'version' => $version,
 					);
 				}
