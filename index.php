@@ -165,57 +165,12 @@ if (is_array($CONF_TEASER)) {
     $announcements = '';
 }
 
-$MIRROR_IMAGE = '';
-
-// Try to find a sponsor image in case this is an official mirror
-if (is_official_mirror()) {
-
-    // Iterate through possible mirror provider logo types in priority order
-    $types = array("gif", "jpg", "png");
-    while (list(,$ext) = each($types)) {
-
-        // Check if file exists for this type
-        if (file_exists("backend/mirror." . $ext)) {
-
-            // Add text to rigth sidebar
-            $MIRROR_IMAGE = "<div class='panel mirror-sponsor'>"
-                          . '<a href="' . mirror_provider_url() . '">'
-                          . "This mirror sponsored by</a><div class=\"body\">\n";
-
-            // Create image HTML code
-            $img = make_image(
-                'mirror.' . $ext,
-                htmlspecialchars(mirror_provider()),
-                FALSE,
-                FALSE,
-                'backend',
-                0
-            );
-
-            // Add size information depending on mirror type
-            if (is_primary_site() || is_backup_primary()) {
-                $img = resize_image($img, 125, 125);
-            } else {
-                $img = resize_image($img, 120, 60);
-            }
-
-            // End mirror specific part
-            $MIRROR_IMAGE .= '<a class="mirror-logo" href="' . mirror_provider_url() . '" title="'.htmlspecialchars(mirror_provider()).'">' .
-                             $img . "</a></div></div>\n";
-
-            // We have found an image
-            break;
-        }
-    }
-}
-
 $SIDEBAR = <<< SIDEBAR_DATA
 
     <p class='panel'><a href='/migration55' title='Upgrading to PHP 5.5' class='headline'>Upgrading to PHP 5.5</a></p>
 $announcements
     <p class='panel'><a href='/cal.php'>User Group Events</a></p>
     <p class='panel'><a href='/thanks.php'>Special Thanks</a></p>
-$MIRROR_IMAGE
     <p class='panel social-media'>
       <a class='headline' href="https://twitter.com/official_php">
         <i class="icon-twitter"></i>
