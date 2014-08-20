@@ -189,6 +189,17 @@ if (preg_match("!^get/([^/]+)/from/([^/]+)(/mirror)?$!", $URI, $dlinfo)) {
 if (is_numeric($URI)) {
     mirror_redirect("http://bugs.php.net/bug.php?id=$URI");
 }
+
+// ============================================================================
+// Redirect if the entered URI was a PHP page name (except some pages,
+// which we display in the mirror's language or the explicitly specified
+// language [see below])
+if (!in_array($URI, array('mirror-info', 'error', 'mod')) &&
+    file_exists($_SERVER['DOCUMENT_ROOT'] . "/$URI.php")) {
+    echo($_SERVER['DOCUMENT_ROOT'] . "/$URI.php");
+exit;
+    mirror_redirect("/$URI.php");
+}
  
 // Work with lowercased URI from now
 $URI = strtolower($URI);
@@ -483,15 +494,6 @@ $external_redirects = array(
 
 if (isset($uri_aliases[$URI])) {
     $URI = $uri_aliases[$URI];
-}
-
-// ============================================================================
-// Redirect if the entered URI was a PHP page name (except some pages,
-// which we display in the mirror's language or the explicitly specified
-// language [see below])
-if (!in_array($URI, array('mirror-info', 'error', 'mod')) &&
-    file_exists($_SERVER['DOCUMENT_ROOT'] . "/$URI.php")) {
-    mirror_redirect("/$URI.php");
 }
 
 // ============================================================================
