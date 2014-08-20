@@ -196,8 +196,6 @@ if (is_numeric($URI)) {
 // language [see below])
 if (!in_array($URI, array('mirror-info', 'error', 'mod')) &&
     file_exists($_SERVER['DOCUMENT_ROOT'] . "/$URI.php")) {
-    echo($_SERVER['DOCUMENT_ROOT'] . "/$URI.php");
-exit;
     mirror_redirect("/$URI.php");
 }
  
