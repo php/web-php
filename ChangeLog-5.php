@@ -115,10 +115,6 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 <ul>
   <li><?php bugfix(60616); ?> (odbc_fetch_into returns junk data at end of multi-byte char fields).</li>
 </ul></li>
-<li>Zlib:
-<ul>
-  <li><?php bugfix(67724); ?> (chained zlib filters silently fail with large amounts of data).</li>
-</ul></li>
 </ul>
 <!-- }}} --></section>
 
