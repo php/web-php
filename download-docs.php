@@ -67,6 +67,10 @@ $formats = array(
   translations are based on that version. Most of the translations
   are not complete, and contain English parts. 
  </li>
+ <li>
+  If you are looking for PHP 4 documentation, please read
+  <a href="/manual/php4.php">this explanation</a>.
+ </li>
 </ul>
 
 <p class="warn">
