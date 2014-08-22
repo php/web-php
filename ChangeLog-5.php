@@ -8,6 +8,61 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 
 <h1>PHP 5 ChangeLog</h1>
 
+<section class="version" id="5.4.32"><!-- {{{ 5.4.32 -->
+<h3>Version 5.4.32</h3>
+<b>21-Aug-2014</b>
+<ul><li>Core:
+<ul>
+  <li><?php bugfix(67717); ?> (segfault in dns_get_record) (CVE-2014-3597).</li>
+  <li><?php bugfix(67693); ?> (incorrect push to the empty array)</li>
+</ul></li>
+<li>COM:
+<ul>
+  <li>Fixed missing type checks in com_event_sink.</li>
+</ul></li>
+<li>Fileinfo:
+<ul>
+  <li><?php bugfix(67705); ?> (extensive backtracking in rule regular expression) (CVE-2014-3538).</li>
+  <li><?php bugfix(67716); ?> (Segfault in cdf.c) (CVE-2014-3587).</li>
+</ul></li>
+<li>GD:
+<ul>
+  <li><?php bugfix(66901); ?> (php-gd 'c_color' NULL pointer dereference) (CVE-2014-2497).</li>
+  <li><?php bugfix(67730); ?> (Null byte injection possible with imagexxx functions) (CVE-2014-5120).</li>
+</ul></li>
+<li>Milter:
+<ul>
+  <li><?php bugfix(67715); ?> (php-milter does not build and crashes randomly).</li>
+</ul></li>
+<li>OpenSSL:
+<ul>
+  <li>Fixed missing type checks in OpenSSL options (Yussuf Khalil, Stas).</li>
+</ul></li>
+<li>Readline:
+<ul>
+  <li><?php bugfix(55496); ?> (Interactive mode doesn't force a newline before the prompt).</li>
+  <li><?php bugfix(67496); ?> (Save command history when exiting interactive shell with control-c).</li>
+</ul></li>
+<li>Sessions:
+<ul>
+  <li>Fixed missing type checks in php_session_create_id.</li></
+</ul></li>
+<li>SPL:
+<ul>
+  <li><?php bugfix(67539); ?> (ArrayIterator use-after-free due to object change during sorting) (CVE-2014-4698).</li>
+  <li><?php bugfix(67538); ?> (SPL Iterators use-after-free) (CVE-2014-4670).</li>
+</ul></li>
+<li>ODBC:
+<ul>
+  <li><?php bugfix(60616); ?> (odbc_fetch_into returns junk data at end of multi-byte char fields).</li>
+</ul></li>
+<li>Zlib:
+<ul>
+  <li><?php bugfix(67724); ?> (chained zlib filters silently fail with large amounts of data).</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
 <section class="version" id="5.3.29"><!-- {{{ 5.3.29 -->
 <h3>Version 5.3.29</h3>
 <?php release_date('14-Aug-2014'); ?>
@@ -119,7 +174,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 <li>SPL:
 <ul>
   <li><?php bugfix(67539); ?> (ArrayIterator use-after-free due to object change during 
-    sorting).</li>
+    sorting). (CVE-2014-4698)</li>
   <li><?php bugfix(67538); ?> (SPL Iterators use-after-free) (CVE-2014-4670).</li>
 </ul></li>
 <li>Streams:
