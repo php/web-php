@@ -45,7 +45,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 </ul></li>
 <li>Sessions:
 <ul>
-  <li>Fixed missing type checks in php_session_create_id.</li></
+  <li>Fixed missing type checks in php_session_create_id.</li>
 </ul></li>
 <li>SPL:
 <ul>
