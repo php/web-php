@@ -155,10 +155,10 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
   <li><?php bugfix(67326); ?> (fileinfo: cdf_read_short_sector insufficient boundary check). (CVE-2014-0207)</li>
   <li><?php bugfix(67327); ?> (fileinfo: CDF infinite loop in nelements DoS). (CVE-2014-0238)</li>
   <li><?php bugfix(67328); ?> (fileinfo: fileinfo: numerous file_printf calls resulting in performance degradation). (CVE-2014-0237)</li>
-  <li><?php bugfix(67410); ?> (fileinfo: mconvert incorrect handling of truncated pascal string size).</li>
-  <li><?php bugfix(67411); ?> (fileinfo: cdf_check_stream_offset insufficient boundary check).</li>
-  <li><?php bugfix(67412); ?> (fileinfo: cdf_count_chain insufficient boundary check).</li>
-  <li><?php bugfix(67413); ?> (fileinfo: cdf_read_property_info insufficient boundary check).</li>
+  <li><?php bugfix(67410); ?> (fileinfo: mconvert incorrect handling of truncated pascal string size) (CVE-2014-3478).</li>
+  <li><?php bugfix(67411); ?> (fileinfo: cdf_check_stream_offset insufficient boundary check) (CVE-2014-3479).</li>
+  <li><?php bugfix(67412); ?> (fileinfo: cdf_count_chain insufficient boundary check) (CVE-2014-3480).</li>
+  <li><?php bugfix(67413); ?> (fileinfo: cdf_read_property_info insufficient boundary check) (CVE-2014-3487).</li>
 </ul></li>
 <li>Intl:
 <ul>
