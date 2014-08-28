@@ -28,7 +28,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
  <li>Stream wrappers verify peer certificates and host names by default in encrypted client streams.</li>
  <li>Uploads equal or greater than 2GB in size are now accepted.</li>
 </ul>
-<ul>
+</li>
 <li>Core:
 <ul>
   <li><?php bugfix(67693); ?> (incorrect push to the empty array).</li>
