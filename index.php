@@ -167,7 +167,7 @@ if (is_array($CONF_TEASER)) {
 
 $SIDEBAR = <<< SIDEBAR_DATA
 
-    <p class='panel'><a href='/migration55' title='Upgrading to PHP 5.5' class='headline'>Upgrading to PHP 5.5</a></p>
+    <p class='panel'><a href='/migration56' title='Upgrading to PHP 5.6' class='headline'>Upgrading to PHP 5.6</a></p>
 $announcements
     <p class='panel'><a href='/cal.php'>User Group Events</a></p>
     <p class='panel'><a href='/thanks.php'>Special Thanks</a></p>
