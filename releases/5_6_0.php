@@ -8,7 +8,7 @@ site_header("PHP 5.6.0 Release Announcement");
 <h1>PHP 5.6.0 Release Announcement</h1>
 
 <p>The PHP Development Team announces the immediate availability of PHP 5.6.0.
-This new version release comes with new features, some backward incompatible changes and many improvements.
+This new version comes with new features, some backward incompatible changes and many improvements.
 </p>
 
 <p><b>The main features of PHP 5.6.0 include:</b></p>
