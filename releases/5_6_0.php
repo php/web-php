@@ -13,10 +13,10 @@ This new version release comes with new features, some backward incompatible cha
 
 <p><b>The main features of PHP 5.6.0 include:</b></p>
 <ul>
- <li><a href="http://php.net/migration56.new-features.const-scalar-exprs">Constant scalar expressionss</a>.</li>
+ <li><a href="http://php.net/migration56.new-features#migration56.new-features.const-scalar-exprs">Constant scalar expressions</a>.</li>
  <li><a href="http://php.net/functions.arguments.php#functions.variable-arg-list">Variadic functions</a>, and argument unpacking syntax</li>
  <li><a href="http://php.net/language.operators.arithmetic">Exponentiation operator</a>.</li>
- <li><a href="http://php.net/migration56.new-features.use">Function and constants imports</a> with the <a href="http://php.net/language.namespaces.importing.php">use keyword</a>.</li>
+ <li><a href="http://php.net/migration56.new-features#migration56.new-features.use">Function and constant importing</a> with the <a href="http://php.net/language.namespaces.importing.php">use keyword</a>.</li>
  <li><a href="http://phpdbg.com/docs">phpdbg</a> as an interactive integrated debugger SAPI.</li>
  <li><a href="http://php.net/wrappers.php.php#wrappers.php.input">php://input</a> attribute changes as well as POST data parsing mechanism.</li>
  <li><a href="http://php.net/book.gmp">GMP</a> objects now support operator overloading.</li>
