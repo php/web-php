@@ -14,6 +14,17 @@
  *         ),
  *     ),
  * );
+/* PHP 5.6 Release */
+$PHP_5_6_RC = false; // Current RC version (e.g., '5.6.7RC1') or false
+$PHP_5_6_RC_DATE = '11 Sep 2014';
+
+$PHP_5_6_VERSION         = "5.6.0";
+$PHP_5_6_DATE            = "28 Aug 2014";
+$PHP_5_6_MD5     = array(
+                       "tar.bz2"       => "1f889357528809a6675e2f23995832d7",
+                       "tar.gz"        => "7e39f839eee4ffbf011cdcd21b5f1c4f",
+                       "tar.xz"        => "642825d75ce2634d9513d5b21dbee521",
+);
 /* PHP 5.5 Release */
 $PHP_5_5_RC = false; // Current RC version (e.g., '5.6.7RC1') or false
 $PHP_5_5_RC_DATE = '7 Aug 2014';
@@ -51,6 +62,29 @@ $PHP_5_3_MD5     = array(
 
 $RELEASES = array(
     5 => array(
+        $PHP_5_6_VERSION => array(
+            "announcement" => true,
+            "source" => array(
+                array(
+                    "filename" => "php-$PHP_5_6_VERSION.tar.bz2",
+                    "name"     => "PHP $PHP_5_6_VERSION (tar.bz2)",
+                    "md5"      => $PHP_5_6_MD5["tar.bz2"],
+                    "date"     => $PHP_5_6_DATE,
+                ),
+                array(
+                    "filename" => "php-$PHP_5_6_VERSION.tar.gz",
+                    "name"     => "PHP $PHP_5_6_VERSION (tar.gz)",
+                    "md5"      => $PHP_5_6_MD5["tar.gz"],
+                    "date"     => $PHP_5_6_DATE,
+                ),
+                array(
+                    "filename" => "php-$PHP_5_6_VERSION.tar.xz",
+                    "name"     => "PHP $PHP_5_6_VERSION (tar.xz)",
+                    "md5"      => $PHP_5_6_MD5["tar.xz"],
+                    "date"     => $PHP_5_6_DATE,
+                ),
+            ),
+        ),
         $PHP_5_5_VERSION => array(
             "announcement" => true,
             "source" => array(
@@ -111,7 +145,7 @@ $RELEASES = array(
     ),
 );
 
-$PHP_5_VERSION = $PHP_5_5_VERSION; // Some scripts require this set
-$PHP_5_DATE    = $PHP_5_5_DATE; // Used by buumpRelease script
-$PHP_5_RC_DATE = $PHP_5_5_RC_DATE; // Used by master
+$PHP_5_VERSION = $PHP_5_6_VERSION; // Some scripts require this set
+$PHP_5_DATE    = $PHP_5_6_DATE; // Used by buumpRelease script
+$PHP_5_RC_DATE = $PHP_5_6_RC_DATE; // Used by master
 

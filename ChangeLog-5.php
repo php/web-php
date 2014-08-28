@@ -8,6 +8,462 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 
 <h1>PHP 5 ChangeLog</h1>
 
+<section class="version" id="5.6.0"><!-- {{{ 5.6.0 -->
+<h3>Version 5.6.0</h3>
+<b>28-Aug-2014</b>
+<ul>
+<li>General improvement:
+<ul>
+ <li>Added constant scalar expressions syntax.</li>
+ <li>Added dedicated syntax for variadic functions.</li>
+ <li>Added support for argument unpacking to complement the variadic syntax.</li>
+ <li>Added an exponentiation operator (**).</li>
+ <li>Added phpdbg SAPI.</li>
+ <li>Added unified default encoding.</li>
+ <li>The php://input stream is now re-usable and can be used concurrently with enable_post_data_reading=0.</li>
+ <li>Added use function and use const..</li>
+ <li>Added a function for timing attack safe string comparison.</li>
+ <li>Added the __debugInfo() magic method to allow userland classes to implement the get_debug_info API previously available only to extensions.</li>
+ <li>Added gost-crypto (CryptoPro S-box) hash algorithm.</li>
+ <li>Stream wrappers verify peer certificates and host names by default in encrypted client streams.</li>
+ <li>Uploads equal or greater than 2GB in size are now accepted.</li>
+</ul>
+<ul>
+<li>Core:
+<ul>
+  <li><?php bugfix(67693); ?> (incorrect push to the empty array).</li>
+  <li>Removed inconsistency regarding behaviour of array in constants at run-time.</li>
+  <li><?php bugfix(67497); ?> (eval with parse error causes segmentation fault in generator).</li>
+  <li><?php bugfix(67151); ?> (strtr with empty array crashes).</li>
+  <li><?php bugfix(67407); ?> (Windows 8.1/Server 2012 R2 reported as Windows 8/Server 2012).</li>
+  <li><?php bugfix(66608); ?> (Incorrect behavior with nested "finally" blocks).</li>
+  <li>Implemented FR <?php bugl(34407); ?> (ucwords and Title Case).</li>
+  <li><?php bugfix(67091); ?> (make install fails to install libphp5.so on FreeBSD 10.0).</li>
+  <li><?php bugfix(67368); ?> (Memory leak with immediately dereferenced array in class constant).</li>
+  <li><?php bugfix(67468); ?> (Segfault in highlight_file()/highlight_string()).</li>
+  <li><?php bugfix(67498); ?> (phpinfo() Type Confusion Information Leak Vulnerability).</li>
+  <li><?php bugfix(67551); ?> (php://input temp file will be located in sys_temp_dir instead of upload_tmp_dir).</li>
+  <li><?php bugfix(67169); ?> (array_splice all elements, then []= gives wrong index).</li>
+  <li><?php bugfix(67198); ?> (php://input regression).</li>
+  <li><?php bugfix(67247); ?> (spl_fixedarray_resize integer overflow).</li>
+  <li><?php bugfix(67250); ?> (iptcparse out-of-bounds read).</li>
+  <li><?php bugfix(67252); ?> (convert_uudecode out-of-bounds read).</li>
+  <li><?php bugfix(67249); ?> (printf out-of-bounds read).</li>
+  <li>Implemented FR <?php bugl(64744); ?> (Differentiate between member function call on a null and non-null, non-objects).</li>
+  <li><?php bugfix(67436); ?> (Autoloader isn't called if two method definitions don't match).</li>
+  <li><?php bugfix(66622); ?> (Closures do not correctly capture the late bound class (static::) in some cases).</li>
+  <li><?php bugfix(67390); ?> (insecure temporary file use in the configure script).</li>
+  <li><?php bugfix(67392); ?> (dtrace breaks argument unpack).</li>
+  <li><?php bugfix(67428); ?> (header('Location: foo') will override a 308-399 response code).</li>
+  <li><?php bugfix(67433); ?> (SIGSEGV when using count() on an object implementing Countable).</li>
+  <li><?php bugfix(67399); ?> (putenv with empty variable may lead to crash).</li>
+  <li>Expose get_debug_info class hook as __debugInfo() magic method.</li>
+  <li>Implemented unified default encoding (RFC: https://wiki.php.net/rfc/default_encoding).</li>
+  <li>Added T_POW (**) operator (RFC: https://wiki.php.net/rfc/pow-operator).</li>
+  <li>Improved IS_VAR operands fetching.</li>
+  <li>Improved empty string handling. Now ZE uses an interned string instead of allocation new empty string each time.</li>
+  <li>Implemented internal operator overloading (RFC: https://wiki.php.net/rfc/operator_overloading_gmp).</li>
+  <li>Made calls from incompatible context issue an E_DEPRECATED warning instead of E_STRICT (phase 1 of RFC: https://wiki.php.net/rfc/incompat_ctx).</li>
+  <li>Uploads equal or greater than 2GB in size are now accepted.</li>
+  <li>Reduced POST data memory usage by 200-300%. Changed INI setting always_populate_raw_post_data to throw a deprecation warning when enabling and to accept -1 for never populating the $HTTP_RAW_POST_DATA global variable, which will be the default in future PHP versions.</li>
+  <li>Implemented dedicated syntax for variadic functions (RFC: https://wiki.php.net/rfc/variadics).</li>
+  <li><?php bugfix(50333); ?> Improving multi-threaded scalability by using emalloc/efree/estrdup (Anatol, Dmitry)</li>
+  <li>Implemented constant scalar expressions (with support for constants) (RFC: https://wiki.php.net/rfc/const_scalar_exprs).</li>
+  <li><?php bugfix(65784); ?> (Segfault with finally).</li>
+  <li><?php bugfix(66509); ?> (copy() arginfo has changed starting from 5.4).</li>
+  <li>Allow zero length comparison in substr_compare() (Tjerk)</li>
+  <li><?php bugfix(60602); ?> (proc_open() changes environment array) (Tjerk)</li>
+  <li><?php bugfix(61019); ?> (Out of memory on command stream_get_contents).</li>
+  <li><?php bugfix(64330); ?> (stream_socket_server() creates wrong Abstract Namespace UNIX sockets).</li>
+  <li><?php bugfix(66182); ?> (exit in stream filter produces segfault).</li>
+  <li><?php bugfix(66736); ?> (fpassthru broken).</li>
+  <li><?php bugfix(66822); ?> (Cannot use T_POW in const expression) (Tjerk)</li>
+  <li><?php bugfix(67043); ?> (substr_compare broke by previous change) (Tjerk)</li>
+  <li><?php bugfix(65701); ?> (copy() doesn't work when destination filename is created by tempnam()).</li>
+  <li><?php bugfix(66015); ?> (Unexpected array indexing in class's static property).</li>
+  <li>Added (constant) string/array dereferencing to static scalar expressions to complete the set; now possible thanks to bug #66015 being fixed.</li>
+  <li><?php bugfix(66568); ?> (Update reflection information for unserialize() function).</li>
+  <li><?php bugfix(66660); ?> (Composer.phar install/update fails).</li>
+  <li><?php bugfix(67024); ?> (getimagesize should recognize BMP files with negative height).</li>
+  <li><?php bugfix(67064); ?>  (Countable interface prevents using 2nd parameter ($mode) of count() function).</li>
+  <li><?php bugfix(67072); ?> (Echoing unserialized "SplFileObject" crash).</li>
+  <li><?php bugfix(67033); ?> (Remove reference to Windows 95).</li>
+</ul></li>
+<li>Apache2 Handler SAPI:
+<ul>
+  <li>Fixed Apache log issue caused by APR's lack of support for %zu (APR issue https://issues.apache.org/bugzilla/show_bug.cgi?id=56120).</li>
+</ul></li>
+<li>CLI server:
+<ul>
+  <li>Added some MIME types to the CLI web server.</li>
+  <li><?php bugfix(67079); ?> (Missing MIME types for XML/XSL files).</li>
+  <li><?php bugfix(66830); ?> (Empty header causes PHP built-in web server to hang).</li>
+  <li><?php bugfix(67594); ?> (Unable to access to apache_request_headers() elements).</li>
+  <li>Implemented FR <?php bugl(67429); ?> (CLI server is missing some new HTTP response codes).</li>
+  <li>Fixed Bug #67406 (built-in web-server segfaults on startup).</li>
+</ul></li>
+<li>COM:
+<ul>
+  <li><?php bugfix(41577); ?> (DOTNET is successful once per server run) (Aidas Kasparas)</li>
+  <li>Fixed missing type checks in com_event_sink (Yussuf Khalil, Stas).</li>
+  <li><?php bugfix(66431); ?> (Special Character via COM Interface (CP_UTF8)).</li>
+</ul></li>
+<li>Curl:
+<ul>
+  <li>Implemented FR <?php bugl(65646); ?> (re-enable CURLOPT_FOLLOWLOCATION with open_basedir or safe_mode).</li>
+  <li>Check for openssl.cafile ini directive when loading CA certs.</li>
+  <li>Remove cURL close policy related constants as these have no effect and are no longer used in libcurl.</li>
+  <li><?php bugfix(66109); ?> (Can't reset CURLOPT_CUSTOMREQUEST to default behaviour) (Tjerk)</li>
+  <li>Fix compilation on libcurl versions between 7.10.5 and 7.12.2, inclusive.</li>
+  <li><?php bugfix(64247); ?> (CURLOPT_INFILE doesn't allow reset).</li>
+  <li><?php bugfix(66562); ?> (curl_exec returns differently than curl_multi_getcontent).</li>
+</ul></li>
+<li>Date:
+<ul>
+  <li><?php bugfix(66091); ?> (memory leaks in DateTime constructor) (Tjerk).</li>
+  <li><?php bugfix(67308); ?> (Serialize of DateTime truncates fractions of second).</li>
+  <li>Fixed regression in fix for bug #67118 (constructor can't be called twice).</li>
+  <li><?php bugfix(67251); ?> (date_parse_from_format out-of-bounds read).</li>
+  <li><?php bugfix(67253); ?> (timelib_meridian_with_check out-of-bounds read).</li>
+  <li>Added DateTimeImmutable::createFromMutable to create a DateTimeImmutable object from an existing DateTime (mutable) object (Derick)</li>
+  <li><?php bugfix(66721); ?> (__wakeup of DateTime segfaults when invalid object data is supplied).</li>
+  <li><?php bugfix(67118); ?> (DateTime constructor crash with invalid data).</li>
+</ul></li>
+<li>DOM:
+<ul>
+  <li><?php bugfix(67081); ?> (DOMDocumentType-&gt;internalSubset returns entire DOCTYPE tag, not only the subset).</li>
+</ul></li>
+<li>Embed:
+<ul>
+  <li><?php bugfix(65715); ?> (php5embed.lib isn't provided anymore). (Anatol).</li>
+</ul></li>
+<li>Fileinfo:
+<ul>
+  <li><?php bugfix(67716); ?> (Segfault in cdf.c).</li>
+  <li><?php bugfix(67705); ?> (extensive backtracking in rule regular expression).</li>
+  <li><?php bugfix(67327); ?> (fileinfo: CDF infinite loop in nelements DoS).</li>
+  <li><?php bugfix(67328); ?> (fileinfo: fileinfo: numerous file_printf calls resulting in performance degradation).</li>
+  <li><?php bugfix(67326); ?> (fileinfo: cdf_read_short_sector insufficient boundary check).</li>
+  <li><?php bugfix(67329); ?> (fileinfo: NULL pointer deference flaw by processing certain CDF files).</li>
+  <li><?php bugfix(67410); ?> (fileinfo: mconvert incorrect handling of truncated pascal string size).</li>
+  <li><?php bugfix(67411); ?> (fileinfo: cdf_check_stream_offset insufficient boundary check).</li>
+  <li><?php bugfix(67412); ?> (fileinfo: cdf_count_chain insufficient boundary check).</li>
+  <li><?php bugfix(67413); ?> (fileinfo: cdf_read_property_info insufficient boundary check).</li>
+  <li>Upgraded to libmagic-5.17 (Anatol)</li>
+  <li><?php bugfix(66731); ?> (file: infinite recursion).</li>
+  <li><?php bugfix(66820); ?> (out-of-bounds memory access in fileinfo) (CVE-2014-2270).</li>
+  <li><?php bugfix(66946); ?>i (fileinfo: extensive backtracking in awk rule regular expression).</li>
+  <li><?php bugfix(66987); ?> (Memory corruption in fileinfo ext / bigendian).</li>
+  <li><?php bugfix(66907); ?> (Solaris 10 is missing strcasestr and needs substitute).</li>
+  <li><?php bugfix(66307); ?> (Fileinfo crashes with powerpoint files).</li>
+</ul></li>
+<li>FPM:
+<ul>
+  <li>Fix bug #67606 (revised fix 67541, broke mod_fastcgi BC).</li>
+  <li><?php bugfix(67530); ?> (error_log=syslog ignored).</li>
+  <li><?php bugfix(67635); ?> (php links to systemd libraries without using pkg-config).</li>
+  <li>Fix bug #67531 (syslog cannot be set in pool configuration).</li>
+  <li>Fix bug #67541 (Fix Apache 2.4.10+ SetHandler proxy:fcgi:// incompatibilities).</li>
+  <li>Included apparmor support in fpm (RFC: https://wiki.php.net/rfc/fpm_change_hat).</li>
+  <li>Added clear_env configuration directive to disable clearenv() call.</li>
+  <li><?php bugfix(66482); ?> (unknown entry 'priority' in php-fpm.conf).</li>
+  <li><?php bugfix(66908); ?> (php-fpm reload leaks epoll_create() file descriptor).</li>
+  <li><?php bugfix(67060); ?> (sapi/fpm: possible privilege escalation due to insecure default configuration) (CVE-2014-0185).</li>
+</ul></li>
+<li>GD:
+<ul>
+  <li><?php bugfix(67730); ?> (Null byte injection possible with imagexxx functions).</li>
+  <li><?php bugfix(66901); ?> (php-gd 'c_color' NULL pointer dereference).</li>
+  <li><?php bugfix(67248); ?> (imageaffinematrixget missing check of parameters).</li>
+  <li>Fixed imagettftext to load the correct character map rather than the last one.</li>
+  <li><?php bugfix(66714); ?> ( imageconvolution breakage).</li>
+  <li><?php bugfix(66815); ?> (imagecrop(): insufficient fix for NULL defer CVE-2013-7327). (Tomas Hoger, Remi).</li>
+  <li>Fixed #66869 (Invalid 2nd argument crashes imageaffinematrixget) (Pierre)</li>
+  <li><?php bugfix(66887); ?> (imagescale - poor quality of scaled image).</li>
+  <li><?php bugfix(66890); ?> (imagescale segfault).</li>
+  <li><?php bugfix(66893); ?> (imagescale ignore method argument).</li>
+</ul></li>
+<li>GMP:
+<ul>
+  <li><?php bugfix(66872); ?> (invalid argument crashes gmp_testbit) (Pierre)</li>
+  <li>Fixed crashes in serialize/unserialize.</li>
+  <li>Moved GMP to use object as the underlying structure and implemented various improvements based on this.</li>
+  <li>Added gmp_root() and gmp_rootrem() functions for calculating nth roots.</li>
+</ul></li>
+<li>Hash:
+<ul>
+  <li>Added gost-crypto (CryptoPro S-box) GOST hash algo.</li>
+  <li><?php bugfix(66698); ?> (Missing FNV1a32 and FNV1a64 hash functions). (Michael M Slusarz).</li>
+  <li>Implemented timing attack safe string comparison function (RFC: https://wiki.php.net/rfc/timing_attack).</li>
+  <li>hash_pbkdf2() now works correctly if the $length argument is not specified.</li>
+</ul></li>
+<li>Intl:
+<ul>
+  <li><?php bugfix(66873); ?> (A reproductible crash in UConverter when given invalid encoding) (Stas)</li>
+  <li><?php bugfix(66921); ?> (Wrong argument type hint for function intltz_from_date_time_zone).</li>
+  <li><?php bugfix(67052); ?> (NumberFormatter::parse() resets LC_NUMERIC setting).</li>
+  <li><?php bugfix(67349); ?> (Locale::parseLocale Double Free).</li>
+  <li><?php bugfix(67397); ?> (Buffer overflow in locale_get_display_name and uloc_getDisplayName (libicu 4.8.1)).</li>
+</ul></li>
+<li>JSON:
+<ul>
+  <li>Fixed case part of bug #64874 ("json_decode handles whitespace and case-sensitivity incorrectly")</li>
+  <li><?php bugfix(65753); ?> (JsonSerializeable couldn't implement on module extension) (chobieeee@php.net)</li>
+  <li><?php bugfix(66021); ?> (Blank line inside empty array/object when JSON_PRETTY_PRINT is set).</li>
+</ul></li>
+<li>ldap:
+<ul>
+  <li>Added new function ldap_modify_batch().</li>
+  <li>Fixed issue with null bytes in LDAP bindings.</li>
+</ul></li>
+<li>litespeed:
+<ul>
+  <li><?php bugfix(63228); ?> (-Werror=format-security error in lsapi code).</li>
+</ul></li>
+<li>Mail:
+<ul>
+  <li><?php bugfix(66535); ?> (Don't add newline after X-PHP-Originating-Script) (Tjerk)</li>
+</ul></li>
+<li>Mcrypt:
+<ul>
+  <li>No longer allow invalid key sizes, invalid IV sizes or missing required IV in mcrypt_encrypt, mcrypt_decrypt and the deprecated mode functions.</li>
+  <li>Use /dev/urandom as the default source for mcrypt_create_iv().</li>
+</ul></li>
+<li>Mbstring:
+<ul>
+  <li>Upgraded to oniguruma 5.9.5 (Anatol)</li>
+  <li><?php bugfix(67199); ?> (mb_regex_encoding mismatch).</li>
+</ul></li>
+<li>Milter:
+<ul>
+  <li><?php bugfix(67715); ?> (php-milter does not build and crashes randomly).</li>
+</ul></li>
+<li>mysqli:
+<ul>
+  <li>Added new function mysqli_get_links_stats() as well as new INI variable mysqli.rollback_on_cached_plink of type bool (Andrey)</li>
+  <li><?php bugfix(66762); ?> (Segfault in mysqli_stmt::bind_result() when link closed) (Remi)</li>
+  <li>Fixed building against an external libmysqlclient.</li>
+</ul></li>
+<li>mysqlnd:
+<ul>
+  <li>Disabled flag for SP OUT variables for 5.5+ servers as they are not natively supported by the overlying APIs.</li>
+  <li>Added a new fetching mode to mysqlnd.</li>
+  <li>Added support for gb18030 from MySQL 5.7.</li>
+</ul></li>
+<li>Network:
+<ul>
+  <li><?php bugfix(67717); ?> (segfault in dns_get_record).</li>
+  <li><?php bugfix(67432); ?> (Fix potential segfault in dns_get_record()).</li>
+</ul></li>
+<li>OCI8:
+<ul>
+  <li>Fixed Bug #66875 (Improve performance of multi-row OCI_RETURN_LOB queries) (Perrier, Chris Jones)</li>
+</ul></li>
+<li>ODBC:
+<ul>
+  <li><?php bugfix(60616); ?> (odbc_fetch_into returns junk at end of multi-byte char fields).</li>
+</ul></li>
+<li>OpenSSL:
+<ul>
+  <li>Fixed missing type checks in OpenSSL options (Yussuf Khalil, Stas).</li>
+  <li><?php bugfix(67609); ?> (TLS connections fail behind HTTP proxy).</li>
+  <li>Fixed broken build against OpenSSL older than 0.9.8 where ECDH unavailable.</li>
+  <li><?php bugfix(67666); ?> (Subject altNames doesn't support wildcard matching).</li>
+  <li><?php bugfix(67224); ?> (Fall back to crypto_type from context if not specified explicitly in stream_socket_enable_crypto).</li>
+  <li><?php bugfix(65698); ?> (certificates validity parsing does not work past 2050).</li>
+  <li><?php bugfix(66636); ?> (openssl_x509_parse warning with V_ASN1_GENERALIZEDTIME).</li>
+  <li>Peer certificates now verified by default in client socket operations (RFC: https://wiki.php.net/rfc/tls-peer-verification).</li>
+  <li>New openssl.cafile and openssl.capath ini directives.</li>
+  <li>Added crypto_method option for the ssl stream context.</li>
+  <li>Added certificate fingerprint support.</li>
+  <li>Added explicit TLSv1.1 and TLSv1.2 stream transports.</li>
+  <li><?php bugfix(65729); ?> (CN_match gives false positive).</li>
+  <li>Peer name verification matches SAN DNS names for certs using the Subject Alternative Name x509 extension.</li>
+  <li>Fixed segfault when built against OpenSSL&gt;=1.0.1 (Daniel Lowrey)</li>
+  <li>Added SPKAC support.</li>
+  <li>Fallback to Windows CA cert store for peer verification if no openssl.cafile ini directive or "cafile" SSL context option specified in Windows.</li>
+  <li>The openssl.cafile and openssl.capath ini directives introduced in alpha2 now have PHP_INI_PERDIR accessibility (was PHP_INI_ALL).</li>
+  <li>New "peer_name" SSL context option replaces "CN_match" (which still works as before but triggers E_DEPRECATED).</li>
+  <li>Fixed segfault when accessing non-existent context for client SNI use (Daniel Lowrey)</li>
+  <li><?php bugfix(66501); ?> (Add EC key support to php_openssl_is_private_key).</li>
+  <li>Fixed Bug #47030 (add new boolean "verify_peer_name" SSL context option allowing clients to verify cert names separately from the cert itself). "verify_peer_name" is enabled by default for client streams.</li>
+  <li>Fixed Bug #65538 ("cafile" SSL context option now supports stream wrappers).</li>
+  <li>New openssl_get_cert_locations() function to aid CA file and peer verification debugging.</li>
+  <li>Encrypted stream wrappers now disable TLS compression by default.</li>
+  <li>New "capture_session_meta" SSL context option allows encrypted client and server streams access to negotiated protocol/cipher information.</li>
+  <li>New "honor_cipher_order" SSL context option allows servers to prioritize cipher suites of their choosing when negotiating SSL/TLS handshakes.</li>
+  <li>New "single_ecdh_use" and "single_dh_use" SSL context options allow for improved forward secrecy in encrypted stream servers.</li>
+  <li>New "dh_param" SSL context option allows stream servers control over the parameters when negotiating DHE cipher suites.</li>
+  <li>New "ecdh_curve" SSL context option allowing stream servers to specify the curve to use when negotiating ephemeral ECDHE ciphers (defaults to NIST P-256).</li>
+  <li>New "rsa_key_size" SSL context option gives stream servers control over the key size (in bits) used for RSA key agreements.</li>
+  <li>Crypto methods for encrypted client and server streams now use bitwise flags for fine-grained protocol support.</li>
+  <li>Added new tlsv1.0 stream wrapper to specify TLSv1 client/server method. tls wrapper now negotiates TLSv1, TLSv1.1 or TLSv1.2.</li>
+  <li>Encrypted client streams now enable SNI by default.</li>
+  <li>Encrypted streams now prioritize ephemeral key agreement and high strength ciphers by default.</li>
+  <li>New OPENSSL_DEFAULT_STREAM_CIPHERS constant exposes default cipher list.</li>
+  <li>New STREAM_CRYPTO_METHOD_* constants for enhanced control over the crypto methods negotiated encrypted server/client sessions.</li>
+  <li>Encrypted stream servers now automatically mitigate potential DoS vector arising from client-initiated TLS renegotiation. New "reneg_limit", "reneg_window" and "reneg_limit_callback" SSL context options for custom renegotiation limiting control.</li>
+  <li>Fixed memory leak in windows cert verification on verify failure.</li>
+  <li>Peer certificate capturing via SSL context options now functions even if peer verification fails.</li>
+  <li>Encrypted TLS servers now support the server name indication TLS extension via the new  "SNI_server_certs" SSL context option.</li>
+  <li><?php bugfix(66833); ?> (Default disgest algo is still MD5, switch to SHA1).</li>
+  <li>Fix bug #66942 (memory leak in openssl_seal()).</li>
+  <li>Fix bug #66952 (memory leak in openssl_open()).</li>
+  <li>Fix bug #66840 (Fix broken build when extension built separately).</li>
+</ul></li>
+<li>OPcache:
+<ul>
+  <li>Added an optimization of class constants and constant calls to some internal functions (Laruence, Dmitry)</li>
+  <li>Added an optimization pass to convert FCALL_BY_NAME into DO_FCALL.</li>
+  <li>Added an optimization pass to merged identical constants (and related cache_slots) in op_array-&gt;literals table.</li>
+  <li>Added script level constant replacement optimization pass.</li>
+  <li>Added function opcache_is_script_cached().</li>
+  <li>Added information about interned strings usage.</li>
+  <li><?php bugfix(67215); ?> (php-cgi work with opcache, may be segmentation fault happen) (Dmitry, Laruence)</li>
+</ul></li>
+<li>PCRE:
+<ul>
+  <li><?php bugfix(67238); ?> (Ungreedy and min/max quantifier bug, applied patch from the upstream).</li>
+  <li>Upgraded to PCRE 8.34.</li>
+  <li>Added support for (*MARK) backtracking verbs.</li>
+</ul></li>
+<li>pgsql:
+<ul>
+  <li>Fix bug #67550 (Error in code "form" instead of "from", pgsql.c, line 756), which affected builds against libpq &lt; 7.3.</li>
+  <li>pg_insert()/pg_select()/pg_update()/pg_delete() are no longer EXPERIMENTAL.</li>
+  <li>Impremented FR <?php bugl(25854); ?> Return value for pg_insert should be resource instead of bool.</li>
+  <li>Implemented FR <?php bugl(41146); ?> - Add "description" with exteneded flag pg_meta_data(). pg_meta_data(resource $conn, string $table [, bool extended]) It also made pg_meta_data() return "is enum" always.</li>
+  <li>Read-only access to the socket stream underlying database connections is exposed via a new pg_socket() function to allow read/write polling when establishing asynchronous connections and executing queries in non-blocking applications.</li>
+  <li>Asynchronous connections are now possible using the PGSQL_CONNECT_ASYNC flag in conjunction with a new pg_connect_poll() function and connection polling status constants.</li>
+  <li>New pg_flush() and pg_consume_input() functions added to manually complete non-blocking reads/writes to underlying connection sockets.</li>
+  <li>pg_version() returns full report which obtained by PQparameterStatus().</li>
+  <li>Added pg_lo_truncate().</li>
+  <li>Added 64bit large object support for PostgreSQL 9.3 and later.</li>
+  <li><?php bugfix(67555); ?> (Cannot build against libpq 7.3).</li>
+</ul></li>
+<li>phpdbg:
+<ul>
+  <li><?php bugfix(67575); ?> (Compilation fails for phpdbg when the build directory != src directory).</li>
+  <li>Fix Bug #67499 (readline feature not enabled when build with libedit).</li>
+  <li>Fix issue krakjoe/phpdbg#94 (List behavior is inconsistent).</li>
+  <li>Fix issue krakjoe/phpdbg#97 (The prompt should always ensure it is on a newline).</li>
+  <li>Fix issue krakjoe/phpdbg#98 (break if does not seem to work).</li>
+  <li>Fix issue krakjoe/phpdbg#99 (register function has the same behavior as run).</li>
+  <li>Fix issue krakjoe/phpdbg#100 (No way to list the current stack/frames) (Help entry was missing).</li>
+  <li>Fixed bug which caused phpdbg to fail immediately on startup in non-debug builds.</li>
+  <li><?php bugfix(67212); ?> (phpdbg uses non-standard TIOCGWINSZ).</li>
+  <li>Included phpdbg sapi (RFC: https://wiki.php.net/rfc/phpdbg).</li>
+  <li>Added watchpoints (watch command).</li>
+  <li>Renamed some commands (next =&gt; continue and how to step).</li>
+  <li>Fixed issue #85 (https://github.com/krakjoe/phpdbg/issues/85) (Added stdin/stdout/stderr constants and their php:// wrappers).</li>
+</ul></li>
+<li>PDO:
+<ul>
+  <li><?php bugfix(66604); ?> ('pdo/php_pdo_error.h' not copied to the include dir).</li>
+</ul></li>
+<li>PDO-ODBC:
+<ul>
+  <li><?php bugfix(50444); ?> (PDO-ODBC changes for 64-bit).</li>
+</ul></li>
+<li>PDO_pgsql:
+<ul>
+  <li>Fixed Bug #42614 (PDO_pgsql: add pg_get_notify support).</li>
+  <li>Fixed Bug #63657 (pgsqlCopyFromFile, pgsqlCopyToArray use Postgres &lt; 7.3 syntax).</li>
+  <li>Cleaned up code by increasing the requirements to libpq versions providing PQexecParams, PQprepare, PQescapeStringConn, PQescapeByteaConn. According to the release notes that means 8.0.8+ or 8.1.4+.</li>
+  <li>Deprecated PDO::PGSQL_ATTR_DISABLE_NATIVE_PREPARED_STATEMENT, an undocument constant effectively equivalent to PDO::ATTR_EMULATE_PREPARES.</li>
+  <li>Added PDO::PGSQL_ATTR_DISABLE_PREPARES constant to execute the queries without preparing them, while still passing parameters separately from the command text using PQexecParams.</li>
+</ul></li>
+<li>PDO_firebird:
+<ul>
+  <li>Fixed Bug #66071 (memory corruption in error handling) (Popa)</li>
+</ul></li>
+<li>Phar:
+<ul>
+  <li>Fix bug #64498 ($phar-&gt;buildFromDirectory can't compress file with an accent in its name).</li>
+  <li><?php bugfix(67587); ?> (Redirection loop on nginx with FPM).</li>
+</ul></li>
+<li>readline:
+<ul>
+  <li><?php bugfix(55496); ?> (Interactive mode doesn't force a newline before the prompt).</li>
+  <li><?php bugfix(67496); ?> (Save command history when exiting interactive shell with control-c).</li>
+</ul></li>
+<li>Reflection:
+<ul>
+  <li>Implemented FR <?php bugl(67713); ?> (loosen the restrictions on ReflectionClass::newInstanceWithoutConstructor()).</li>
+</ul></li>
+<li>Session:
+<ul>
+  <li><?php bugfix(67694); ?> (Regression in session_regenerate_id()).</li>
+  <li>Fixed missing type checks in php_session_create_id (Yussuf Khalil, Stas).</li>
+  <li><?php bugfix(66827); ?> (Session raises E_NOTICE when session name variable is array).</li>
+  <li>Fixed Bug #65315 (session.hash_function silently fallback to default md5) (Yasuo)</li>
+  <li>Implemented Request #17860 (Session write short circuit).</li>
+  <li>Implemented Request #20421 (session_abort() and session_reset() function).</li>
+  <li>Remove session_gc() and session_serializer_name() wich were introduced in the first 5.6.0 alpha.</li>
+</ul></li>
+<li>SimpleXML:
+<ul>
+  <li><?php bugfix(66084); ?> (simplexml_load_string() mangles empty node name) (Anatol)</li>
+</ul></li>
+<li>SQLite:
+<ul>
+  <li>Updated the bundled libsqlite to the version 3.8.3.1 (Anatol)</li>
+  <li><?php bugfix(66967); ?> (Updated bundled libsqlite to 3.8.4.3).</li>
+</ul></li>
+<li>SOAP:
+<ul>
+  <li>Implemented FR <?php bugl(49898); ?> (Add SoapClient::__getCookies()).</li>
+</ul></li>
+<li>SPL:
+<ul>
+  <li>Revert fix for bug #67064 (BC issues).</li>
+  <li><?php bugfix(67539); ?> (ArrayIterator use-after-free due to object change during sorting).</li>
+  <li><?php bugfix(67538); ?> (SPL Iterators use-after-free).</li>
+  <li><?php bugfix(67492); ?> (unserialize() SPL ArrayObject / SPLObjectStorage Type Confusion) (CVE-2014-3515).</li>
+  <li><?php bugfix(67359); ?> (Segfault in recursiveDirectoryIterator).</li>
+  <li><?php bugfix(66127); ?> (Segmentation fault with ArrayObject unset).</li>
+  <li>Fixed request #67453 (Allow to unserialize empty data).</li>
+  <li>Added feature #65545 (SplFileObject::fread()) (Tjerk)</li>
+  <li><?php bugfix(66834); ?> (empty() does not work on classes that extend ArrayObject) (Tjerk)</li>
+  <li><?php bugfix(66702); ?> (RegexIterator::INVERT_MATCH does not invert).</li>
+</ul></li>
+<li>Standard:
+<ul>
+  <li>Implemented FR <?php bugl(65634); ?> (HTTP wrapper is very slow with protocol_version 1.1).</li>
+  <li>Implemented Change crypt() behavior w/o salt RFC. (Yasuo) https://wiki.php.net/rfc/crypt_function_salt</li>
+  <li>Implemented request #49824 (Change array_fill() to allow creating empty array).</li>
+</ul></li>
+<li>Streams:
+<ul>
+  <li><?php bugfix(67430); ?> (http:// wrapper doesn't follow 308 redirects).</li>
+</ul></li>
+<li>Tokenizer:
+<ul>
+  <li><?php bugfix(67395); ?> (token_name() does not return name for T_POW and T_POW_EQUAL token).</li>
+</ul></li>
+<li>XMLReader:
+<ul>
+  <li><?php bugfix(55285); ?> (XMLReader::getAttribute/No/Ns methods inconsistency).</li>
+</ul></li>
+<li>XSL:
+<ul>
+  <li><?php bugfix(53965); ?> (&lt;xsl:include&gt; cannot find files with relative paths when loaded with "file://").</li>
+</ul></li>
+<li>Zip:
+<ul>
+  <li>update libzip to version 1.11.2. PHP don't use any ilibzip private symbol anymore.</li>
+  <li>new method ZipArchive::setPassword($password).</li>
+  <li>add --with-libzip option to build with system libzip.</li>
+  <li>new methods: ZipArchive::setExternalAttributesName($name, $opsys, $attr [, $flags]) ZipArchive::setExternalAttributesIndex($idx, $opsys, $attr [, $flags]) ZipArchive::getExternalAttributesName($name, &amp;$opsys, &amp;$attr [, $flags]) ZipArchive::getExternalAttributesIndex($idx, &amp;$opsys, &amp;$attr [, $flags])</li>
+</ul></li>
+<li>Zlib:
+<ul>
+  <li><?php bugfix(67865); ?> (internal corruption phar error). Mike</li>
+  <li><?php bugfix(67724); ?> (chained zlib filters silently fail with large amounts of data).</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
 <section class="version" id="5.5.16"><!-- {{{ 5.5.16 -->
 <h3>Version 5.5.16</h3>
 <?php release_date('21-Aug-2014'); ?>
