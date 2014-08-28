@@ -623,7 +623,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 </ul></li>
 <li>Network:
 <ul>
-  <li><?php bugfix(67432); ?> (Fix potential segfault in dns_check_record()). (CVE-2014-4049)</li>
+  <li><?php bugfix(67432); ?> (Fix potential segfault in dns_get_record()). (CVE-2014-4049)</li>
 </ul></li>
 <li>OpenSSL:
 <ul>
