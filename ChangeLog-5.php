@@ -177,7 +177,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
   <li><?php bugfix(66901); ?> (php-gd 'c_color' NULL pointer dereference).</li>
   <li><?php bugfix(67248); ?> (imageaffinematrixget missing check of parameters).</li>
   <li>Fixed imagettftext to load the correct character map rather than the last one.</li>
-  <li><?php bugfix(66714); ?> ( imageconvolution breakage).</li>
+  <li><?php bugfix(66356); ?> (Heap Overflow Vulnerability in imagecrop()). (CVE-2013-7226)</li>
   <li><?php bugfix(66815); ?> (imagecrop(): insufficient fix for NULL defer). (CVE-2013-7327)</li>
   <li><?php bugfix(66869); ?> (Invalid 2nd argument crashes imageaffinematrixget).</li>
   <li><?php bugfix(66887); ?> (imagescale - poor quality of scaled image).</li>
