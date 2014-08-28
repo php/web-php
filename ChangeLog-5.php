@@ -120,6 +120,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 </ul></li>
 <li>Date:
 <ul>
+  <li><?php bugfix(66060); ?> (Heap buffer over-read in DateInterval). (CVE-2013-6712)</li>
   <li><?php bugfix(66091); ?> (memory leaks in DateTime constructor) (Tjerk).</li>
   <li><?php bugfix(67308); ?> (Serialize of DateTime truncates fractions of second).</li>
   <li>Fixed regression in fix for bug #67118 (constructor can't be called twice).</li>
