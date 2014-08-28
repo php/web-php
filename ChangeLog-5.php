@@ -81,7 +81,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
   <li><?php bugfix(67043); ?> (substr_compare broke by previous change) (Tjerk)</li>
   <li><?php bugfix(65701); ?> (copy() doesn't work when destination filename is created by tempnam()).</li>
   <li><?php bugfix(66015); ?> (Unexpected array indexing in class's static property).</li>
-  <li>Added (constant) string/array dereferencing to static scalar expressions to complete the set; now possible thanks to bug #66015 being fixed.</li>
+  <li>Added (constant) string/array dereferencing to static scalar expressions to complete the set; now possible thanks to <?php bugl(66015); ?> being fixed.</li>
   <li><?php bugfix(66568); ?> (Update reflection information for unserialize() function).</li>
   <li><?php bugfix(66660); ?> (Composer.phar install/update fails).</li>
   <li><?php bugfix(67024); ?> (getimagesize should recognize BMP files with negative height).</li>
@@ -100,7 +100,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
   <li><?php bugfix(66830); ?> (Empty header causes PHP built-in web server to hang).</li>
   <li><?php bugfix(67594); ?> (Unable to access to apache_request_headers() elements).</li>
   <li>Implemented FR <?php bugl(67429); ?> (CLI server is missing some new HTTP response codes).</li>
-  <li>Fixed Bug #67406 (built-in web-server segfaults on startup).</li>
+  <li><?php bugfix(67406); ?> (built-in web-server segfaults on startup).</li>
 </ul></li>
 <li>COM:
 <ul>
@@ -123,7 +123,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
   <li><?php bugfix(66060); ?> (Heap buffer over-read in DateInterval). (CVE-2013-6712)</li>
   <li><?php bugfix(66091); ?> (memory leaks in DateTime constructor) (Tjerk).</li>
   <li><?php bugfix(67308); ?> (Serialize of DateTime truncates fractions of second).</li>
-  <li>Fixed regression in fix for bug #67118 (constructor can't be called twice).</li>
+  <li>Fixed regression in fix for <?php bugl(67118); ?> (constructor can't be called twice).</li>
   <li><?php bugfix(67251); ?> (date_parse_from_format out-of-bounds read).</li>
   <li><?php bugfix(67253); ?> (timelib_meridian_with_check out-of-bounds read).</li>
   <li>Added DateTimeImmutable::createFromMutable to create a DateTimeImmutable object from an existing DateTime (mutable) object (Derick)</li>
@@ -160,11 +160,11 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 </ul></li>
 <li>FPM:
 <ul>
-  <li>Fix bug #67606 (revised fix 67541, broke mod_fastcgi BC).</li>
+  <li><?php bugfix(67606); ?> (revised fix 67541, broke mod_fastcgi BC).</li>
   <li><?php bugfix(67530); ?> (error_log=syslog ignored).</li>
   <li><?php bugfix(67635); ?> (php links to systemd libraries without using pkg-config).</li>
-  <li>Fix bug #67531 (syslog cannot be set in pool configuration).</li>
-  <li>Fix bug #67541 (Fix Apache 2.4.10+ SetHandler proxy:fcgi:// incompatibilities).</li>
+  <li><?php bugfix(67531); ?> (syslog cannot be set in pool configuration).</li>
+  <li><?php bugfix(67541); ?> (Fix Apache 2.4.10+ SetHandler proxy:fcgi:// incompatibilities).</li>
   <li>Included apparmor support in fpm (RFC: https://wiki.php.net/rfc/fpm_change_hat).</li>
   <li>Added clear_env configuration directive to disable clearenv() call.</li>
   <li><?php bugfix(66482); ?> (unknown entry 'priority' in php-fpm.conf).</li>
@@ -208,7 +208,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 </ul></li>
 <li>JSON:
 <ul>
-  <li>Fixed case part of bug #64874 ("json_decode handles whitespace and case-sensitivity incorrectly")</li>
+  <li>Fixed case part of bug <?php bugl(64874); ?> ("json_decode handles whitespace and case-sensitivity incorrectly")</li>
   <li><?php bugfix(65753); ?> (JsonSerializeable couldn't implement on module extension) (chobieeee@php.net)</li>
   <li><?php bugfix(66021); ?> (Blank line inside empty array/object when JSON_PRETTY_PRINT is set).</li>
 </ul></li>
@@ -258,7 +258,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 </ul></li>
 <li>OCI8:
 <ul>
-  <li>Fixed Bug #66875 (Improve performance of multi-row OCI_RETURN_LOB queries) (Perrier, Chris Jones)</li>
+  <li><?php bugfix(66875); ?> (Improve performance of multi-row OCI_RETURN_LOB queries) (Perrier, Chris Jones)</li>
 </ul></li>
 <li>ODBC:
 <ul>
@@ -287,8 +287,8 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
   <li>New "peer_name" SSL context option replaces "CN_match" (which still works as before but triggers E_DEPRECATED).</li>
   <li>Fixed segfault when accessing non-existent context for client SNI use (Daniel Lowrey)</li>
   <li><?php bugfix(66501); ?> (Add EC key support to php_openssl_is_private_key).</li>
-  <li>Fixed Bug #47030 (add new boolean "verify_peer_name" SSL context option allowing clients to verify cert names separately from the cert itself). "verify_peer_name" is enabled by default for client streams.</li>
-  <li>Fixed Bug #65538 ("cafile" SSL context option now supports stream wrappers).</li>
+  <li><?php bugfix(47030); ?> (add new boolean "verify_peer_name" SSL context option allowing clients to verify cert names separately from the cert itself). "verify_peer_name" is enabled by default for client streams.</li>
+  <li><?php bugfix(65538); ?> ("cafile" SSL context option now supports stream wrappers).</li>
   <li>New openssl_get_cert_locations() function to aid CA file and peer verification debugging.</li>
   <li>Encrypted stream wrappers now disable TLS compression by default.</li>
   <li>New "capture_session_meta" SSL context option allows encrypted client and server streams access to negotiated protocol/cipher information.</li>
@@ -308,9 +308,9 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
   <li>Peer certificate capturing via SSL context options now functions even if peer verification fails.</li>
   <li>Encrypted TLS servers now support the server name indication TLS extension via the new  "SNI_server_certs" SSL context option.</li>
   <li><?php bugfix(66833); ?> (Default disgest algo is still MD5, switch to SHA1).</li>
-  <li>Fix bug #66942 (memory leak in openssl_seal()).</li>
-  <li>Fix bug #66952 (memory leak in openssl_open()).</li>
-  <li>Fix bug #66840 (Fix broken build when extension built separately).</li>
+  <li><?php bugfix(66942); ?> (memory leak in openssl_seal()).</li>
+  <li><?php bugfix(66952); ?> (memory leak in openssl_open()).</li>
+  <li><?php bugfix(66840); ?> (Fix broken build when extension built separately).</li>
 </ul></li>
 <li>OPcache:
 <ul>
@@ -330,7 +330,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 </ul></li>
 <li>pgsql:
 <ul>
-  <li>Fix bug #67550 (Error in code "form" instead of "from", pgsql.c, line 756), which affected builds against libpq &lt; 7.3.</li>
+  <li><?php bugfix(67550); ?> (Error in code "form" instead of "from", pgsql.c, line 756), which affected builds against libpq &lt; 7.3.</li>
   <li>pg_insert()/pg_select()/pg_update()/pg_delete() are no longer EXPERIMENTAL.</li>
   <li>Impremented FR <?php bugl(25854); ?> Return value for pg_insert should be resource instead of bool.</li>
   <li>Implemented FR <?php bugl(41146); ?> - Add "description" with exteneded flag pg_meta_data(). pg_meta_data(resource $conn, string $table [, bool extended]) It also made pg_meta_data() return "is enum" always.</li>
@@ -345,7 +345,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 <li>phpdbg:
 <ul>
   <li><?php bugfix(67575); ?> (Compilation fails for phpdbg when the build directory != src directory).</li>
-  <li>Fix Bug #67499 (readline feature not enabled when build with libedit).</li>
+  <li><?php bugfix(67499); ?> (readline feature not enabled when build with libedit).</li>
   <li>Fix issue krakjoe/phpdbg#94 (List behavior is inconsistent).</li>
   <li>Fix issue krakjoe/phpdbg#97 (The prompt should always ensure it is on a newline).</li>
   <li>Fix issue krakjoe/phpdbg#98 (break if does not seem to work).</li>
@@ -368,19 +368,19 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 </ul></li>
 <li>PDO_pgsql:
 <ul>
-  <li>Fixed Bug #42614 (PDO_pgsql: add pg_get_notify support).</li>
-  <li>Fixed Bug #63657 (pgsqlCopyFromFile, pgsqlCopyToArray use Postgres &lt; 7.3 syntax).</li>
+  <li><?php bugfix(42614); ?> (PDO_pgsql: add pg_get_notify support).</li>
+  <li><?php bugfix(63657); ?> (pgsqlCopyFromFile, pgsqlCopyToArray use Postgres &lt; 7.3 syntax).</li>
   <li>Cleaned up code by increasing the requirements to libpq versions providing PQexecParams, PQprepare, PQescapeStringConn, PQescapeByteaConn. According to the release notes that means 8.0.8+ or 8.1.4+.</li>
   <li>Deprecated PDO::PGSQL_ATTR_DISABLE_NATIVE_PREPARED_STATEMENT, an undocument constant effectively equivalent to PDO::ATTR_EMULATE_PREPARES.</li>
   <li>Added PDO::PGSQL_ATTR_DISABLE_PREPARES constant to execute the queries without preparing them, while still passing parameters separately from the command text using PQexecParams.</li>
 </ul></li>
 <li>PDO_firebird:
 <ul>
-  <li>Fixed Bug #66071 (memory corruption in error handling) (Popa)</li>
+  <li><?php bugfix(66071); ?> (memory corruption in error handling) (Popa)</li>
 </ul></li>
 <li>Phar:
 <ul>
-  <li>Fix bug #64498 ($phar-&gt;buildFromDirectory can't compress file with an accent in its name).</li>
+  <li><?php bugfix(64498); ?> ($phar-&gt;buildFromDirectory can't compress file with an accent in its name).</li>
   <li><?php bugfix(67587); ?> (Redirection loop on nginx with FPM).</li>
 </ul></li>
 <li>readline:
@@ -397,9 +397,9 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
   <li><?php bugfix(67694); ?> (Regression in session_regenerate_id()).</li>
   <li>Fixed missing type checks in php_session_create_id (Yussuf Khalil, Stas).</li>
   <li><?php bugfix(66827); ?> (Session raises E_NOTICE when session name variable is array).</li>
-  <li>Fixed Bug #65315 (session.hash_function silently fallback to default md5) (Yasuo)</li>
-  <li>Implemented Request #17860 (Session write short circuit).</li>
-  <li>Implemented Request #20421 (session_abort() and session_reset() function).</li>
+  <li><?php bugfix(65315); ?> (session.hash_function silently fallback to default md5) (Yasuo)</li>
+  <li>Implemented Request <?php bugl(17860); ?> (Session write short circuit).</li>
+  <li>Implemented Request <?php bugl(20421); ?> (session_abort() and session_reset() function).</li>
   <li>Remove session_gc() and session_serializer_name() wich were introduced in the first 5.6.0 alpha.</li>
 </ul></li>
 <li>SimpleXML:
@@ -417,14 +417,14 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 </ul></li>
 <li>SPL:
 <ul>
-  <li>Revert fix for bug #67064 (BC issues).</li>
+  <li>Revert fix for <?php bugl(67064); ?> (BC issues).</li>
   <li><?php bugfix(67539); ?> (ArrayIterator use-after-free due to object change during sorting). (CVE-2014-4698)</li>
   <li><?php bugfix(67538); ?> (SPL Iterators use-after-free). (CVE-2014-4670)</li>
   <li><?php bugfix(67492); ?> (unserialize() SPL ArrayObject / SPLObjectStorage Type Confusion). (CVE-2014-3515)</li>
   <li><?php bugfix(67359); ?> (Segfault in recursiveDirectoryIterator).</li>
   <li><?php bugfix(66127); ?> (Segmentation fault with ArrayObject unset).</li>
-  <li>Fixed request #67453 (Allow to unserialize empty data).</li>
-  <li>Added feature #65545 (SplFileObject::fread()) (Tjerk)</li>
+  <li>Fixed request <?php bugl(67453); ?> (Allow to unserialize empty data).</li>
+  <li>Added feature <?php bugl(65545); ?> (SplFileObject::fread()) (Tjerk)</li>
   <li><?php bugfix(66834); ?> (empty() does not work on classes that extend ArrayObject) (Tjerk)</li>
   <li><?php bugfix(66702); ?> (RegexIterator::INVERT_MATCH does not invert).</li>
 </ul></li>
@@ -432,7 +432,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 <ul>
   <li>Implemented FR <?php bugl(65634); ?> (HTTP wrapper is very slow with protocol_version 1.1).</li>
   <li>Implemented Change crypt() behavior w/o salt RFC. (Yasuo) https://wiki.php.net/rfc/crypt_function_salt</li>
-  <li>Implemented request #49824 (Change array_fill() to allow creating empty array).</li>
+  <li>Implemented request <?php bugl(49824); ?> (Change array_fill() to allow creating empty array).</li>
 </ul></li>
 <li>Streams:
 <ul>
