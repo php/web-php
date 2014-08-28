@@ -52,7 +52,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
   <li>Implemented FR <?php bugl(64744); ?> (Differentiate between member function call on a null and non-null, non-objects).</li>
   <li><?php bugfix(67436); ?> (Autoloader isn't called if two method definitions don't match).</li>
   <li><?php bugfix(66622); ?> (Closures do not correctly capture the late bound class (static::) in some cases).</li>
-  <li><?php bugfix(67390); ?> (insecure temporary file use in the configure script).</li>
+  <li><?php bugfix(67390); ?> (insecure temporary file use in the configure script). (CVE-2014-3981)</li>
   <li><?php bugfix(67392); ?> (dtrace breaks argument unpack).</li>
   <li><?php bugfix(67428); ?> (header('Location: foo') will override a 308-399 response code).</li>
   <li><?php bugfix(67433); ?> (SIGSEGV when using count() on an object implementing Countable).</li>
@@ -140,20 +140,20 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 </ul></li>
 <li>Fileinfo:
 <ul>
-  <li><?php bugfix(67716); ?> (Segfault in cdf.c).</li>
-  <li><?php bugfix(67705); ?> (extensive backtracking in rule regular expression).</li>
-  <li><?php bugfix(67327); ?> (fileinfo: CDF infinite loop in nelements DoS).</li>
-  <li><?php bugfix(67328); ?> (fileinfo: fileinfo: numerous file_printf calls resulting in performance degradation).</li>
-  <li><?php bugfix(67326); ?> (fileinfo: cdf_read_short_sector insufficient boundary check).</li>
+  <li><?php bugfix(67716); ?> (Segfault in cdf.c). (CVE-2014-3587)</li>
+  <li><?php bugfix(67705); ?> (extensive backtracking in rule regular expression). (CVE-2014-3538)</li>
+  <li><?php bugfix(67327); ?> (fileinfo: CDF infinite loop in nelements DoS). (CVE-2014-0238)</li>
+  <li><?php bugfix(67328); ?> (fileinfo: fileinfo: numerous file_printf calls resulting in performance degradation). (CVE-2014-0237)</li>
+  <li><?php bugfix(67326); ?> (fileinfo: cdf_read_short_sector insufficient boundary check). (CVE-2014-0207)</li>
   <li><?php bugfix(67329); ?> (fileinfo: NULL pointer deference flaw by processing certain CDF files).</li>
-  <li><?php bugfix(67410); ?> (fileinfo: mconvert incorrect handling of truncated pascal string size).</li>
-  <li><?php bugfix(67411); ?> (fileinfo: cdf_check_stream_offset insufficient boundary check).</li>
-  <li><?php bugfix(67412); ?> (fileinfo: cdf_count_chain insufficient boundary check).</li>
-  <li><?php bugfix(67413); ?> (fileinfo: cdf_read_property_info insufficient boundary check).</li>
+  <li><?php bugfix(67410); ?> (fileinfo: mconvert incorrect handling of truncated pascal string size). (CVE-2014-3478)</li>
+  <li><?php bugfix(67411); ?> (fileinfo: cdf_check_stream_offset insufficient boundary check). (CVE-2014-3479)</li>
+  <li><?php bugfix(67412); ?> (fileinfo: cdf_count_chain insufficient boundary check). (CVE-2014-3480)</li>
+  <li><?php bugfix(67413); ?> (fileinfo: cdf_read_property_info insufficient boundary check). (CVE-2014-3487)</li>
   <li>Upgraded to libmagic-5.17 (Anatol)</li>
-  <li><?php bugfix(66731); ?> (file: infinite recursion).</li>
-  <li><?php bugfix(66820); ?> (out-of-bounds memory access in fileinfo) (CVE-2014-2270).</li>
-  <li><?php bugfix(66946); ?>i (fileinfo: extensive backtracking in awk rule regular expression).</li>
+  <li><?php bugfix(66731); ?> (file: infinite recursion). (CVE-2014-1943)</li>
+  <li><?php bugfix(66820); ?> (out-of-bounds memory access in fileinfo). (CVE-2014-2270)</li>
+  <li><?php bugfix(66946); ?> (fileinfo: extensive backtracking in awk rule regular expression). (CVE-2013-7345)</li>
   <li><?php bugfix(66987); ?> (Memory corruption in fileinfo ext / bigendian).</li>
   <li><?php bugfix(66907); ?> (Solaris 10 is missing strcasestr and needs substitute).</li>
   <li><?php bugfix(66307); ?> (Fileinfo crashes with powerpoint files).</li>
@@ -169,12 +169,12 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
   <li>Added clear_env configuration directive to disable clearenv() call.</li>
   <li><?php bugfix(66482); ?> (unknown entry 'priority' in php-fpm.conf).</li>
   <li><?php bugfix(66908); ?> (php-fpm reload leaks epoll_create() file descriptor).</li>
-  <li><?php bugfix(67060); ?> (sapi/fpm: possible privilege escalation due to insecure default configuration) (CVE-2014-0185).</li>
+  <li><?php bugfix(67060); ?> (sapi/fpm: possible privilege escalation due to insecure default configuration). (CVE-2014-0185)</li>
 </ul></li>
 <li>GD:
 <ul>
-  <li><?php bugfix(67730); ?> (Null byte injection possible with imagexxx functions).</li>
-  <li><?php bugfix(66901); ?> (php-gd 'c_color' NULL pointer dereference).</li>
+  <li><?php bugfix(67730); ?> (Null byte injection possible with imagexxx functions). (CVE-2014-5120)</li>
+  <li><?php bugfix(66901); ?> (php-gd 'c_color' NULL pointer dereference). (CVE-2014-2497)</li>
   <li><?php bugfix(67248); ?> (imageaffinematrixget missing check of parameters).</li>
   <li>Fixed imagettftext to load the correct character map rather than the last one.</li>
   <li><?php bugfix(66356); ?> (Heap Overflow Vulnerability in imagecrop()). (CVE-2013-7226)</li>
@@ -253,8 +253,8 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 </ul></li>
 <li>Network:
 <ul>
-  <li><?php bugfix(67717); ?> (segfault in dns_get_record).</li>
-  <li><?php bugfix(67432); ?> (Fix potential segfault in dns_get_record()).</li>
+  <li><?php bugfix(67717); ?> (segfault in dns_get_record). (CVE-2014-3597)</li>
+  <li><?php bugfix(67432); ?> (Fix potential segfault in dns_get_record()). (CVE-2014-4049)</li>
 </ul></li>
 <li>OCI8:
 <ul>
@@ -418,9 +418,9 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 <li>SPL:
 <ul>
   <li>Revert fix for bug #67064 (BC issues).</li>
-  <li><?php bugfix(67539); ?> (ArrayIterator use-after-free due to object change during sorting).</li>
-  <li><?php bugfix(67538); ?> (SPL Iterators use-after-free).</li>
-  <li><?php bugfix(67492); ?> (unserialize() SPL ArrayObject / SPLObjectStorage Type Confusion) (CVE-2014-3515).</li>
+  <li><?php bugfix(67539); ?> (ArrayIterator use-after-free due to object change during sorting). (CVE-2014-4698)</li>
+  <li><?php bugfix(67538); ?> (SPL Iterators use-after-free). (CVE-2014-4670)</li>
+  <li><?php bugfix(67492); ?> (unserialize() SPL ArrayObject / SPLObjectStorage Type Confusion). (CVE-2014-3515)</li>
   <li><?php bugfix(67359); ?> (Segfault in recursiveDirectoryIterator).</li>
   <li><?php bugfix(66127); ?> (Segmentation fault with ArrayObject unset).</li>
   <li>Fixed request #67453 (Allow to unserialize empty data).</li>
