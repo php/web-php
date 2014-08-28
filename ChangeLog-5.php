@@ -12,7 +12,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 <h3>Version 5.6.0</h3>
 <b>28-Aug-2014</b>
 <ul>
-<li>General improvement:
+<li>General improvements:
 <ul>
  <li>Added constant scalar expressions syntax.</li>
  <li>Added dedicated syntax for variadic functions.</li>
@@ -2195,7 +2195,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 </ul>
 
 <ul>
-<li>General improvement:
+<li>General improvements:
 <ul>
  <li>Added generators and coroutines.</li>
  <li>Added "finally" keyword. </li>
