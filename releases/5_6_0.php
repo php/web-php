@@ -14,11 +14,11 @@ This new version comes with new features, some backward incompatible changes and
 <p><b>The main features of PHP 5.6.0 include:</b></p>
 <ul>
  <li><a href="http://php.net/migration56.new-features#migration56.new-features.const-scalar-exprs">Constant scalar expressions</a>.</li>
- <li><a href="http://php.net/functions.arguments.php#functions.variable-arg-list">Variadic functions</a> and argument unpacking using the <code>...</code> operator.</li>
+ <li><a href="http://php.net/functions.arguments#functions.variable-arg-list">Variadic functions</a> and argument unpacking using the <code>...</code> operator.</li>
 <li><a href="http://php.net/language.operators.arithmetic">Exponentiation using the <code>**</code> operator</a>.</li>
- <li><a href="http://php.net/migration56.new-features#migration56.new-features.use">Function and constant importing</a> with the <a href="http://php.net/language.namespaces.importing.php">use keyword</a>.</li>
+ <li><a href="http://php.net/migration56.new-features#migration56.new-features.use">Function and constant importing</a> with the <a href="http://php.net/language.namespaces.importing">use keyword</a>.</li>
  <li><a href="http://phpdbg.com/docs">phpdbg</a> as an interactive integrated debugger SAPI.</li>
- <li><a href="http://php.net/wrappers.php.php#wrappers.php.input">php://input</a> is now reusable, and <code>$HTTP_RAW_POST_DATA</code> is deprecated.</li>
+ <li><a href="http://php.net/wrappers#wrappers.php.input">php://input</a> is now reusable, and <code>$HTTP_RAW_POST_DATA</code> is deprecated.</li>
  <li><a href="http://php.net/book.gmp">GMP</a> objects now support operator overloading.</li>
  <li>File uploads larger than 2 gigabytes in size are now accepted.</li>
 </ul>
