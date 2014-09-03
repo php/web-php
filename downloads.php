@@ -7,7 +7,7 @@ include_once $_SERVER['DOCUMENT_ROOT'] . '/include/version.inc';
 // Try to make this page non-cached
 header_nocache();
 
-$SHOW_COUNT = 3;
+$SHOW_COUNT = 4;
 $MAJOR = 5;
 
 $releases = array_slice($RELEASES[$MAJOR], 0, $SHOW_COUNT);
