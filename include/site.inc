@@ -256,7 +256,7 @@ function print_mirror_box($countryname, $countrycode, $mirrors, $file = null, $d
     }
 ?>
             <div class="entry">
-                <div class="url"><a href="<?php echo $url; ?>" title="<?php echo clean($mirror['url']); ?>"><?php echo clean($urltitle); ?></a></div>
+                <div class="url"><a href="<?php echo htmlentities($url, ENT_QUOTES | ENT_IGNORE, 'UTF-8'); ?>" title="<?php echo clean($mirror['url']); ?>"><?php echo clean($urltitle); ?></a></div>
                 <div class="provider"><a href="<?php echo $mirror['provider_url']; ?>" title="<?php echo clean($mirror['provider_title']); ?>"><?php echo clean($mirror['provider_title']); ?></a></div>
             </div>
             <?php endforeach; ?>
