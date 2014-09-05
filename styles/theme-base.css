@@ -1247,6 +1247,16 @@ blockquote.note p,
 div.caution p,
 div.warning p,
 div.tip p {
+   margin: 1.5rem 0 0;
+}
+blockquote.note *:first-child + p,
+div.caution *:first-child + p,
+div.warning *:first-child + p,
+div.tip *:first-child + p,
+blockquote.note p:first-child,
+div.caution p:first-child,
+div.warning p:first-child,
+div.tip p:first-child {
    margin: 0;
 }
 
