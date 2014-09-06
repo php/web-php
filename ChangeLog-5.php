@@ -424,7 +424,6 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
   <li><?php bugfix(67359); ?> (Segfault in recursiveDirectoryIterator).</li>
   <li><?php bugfix(66127); ?> (Segmentation fault with ArrayObject unset).</li>
   <li>Fixed request <?php bugl(67453); ?> (Allow to unserialize empty data).</li>
-  <li>Added feature <?php bugl(65545); ?> (SplFileObject::fread()) (Tjerk)</li>
   <li><?php bugfix(66834); ?> (empty() does not work on classes that extend ArrayObject) (Tjerk)</li>
   <li><?php bugfix(66702); ?> (RegexIterator::INVERT_MATCH does not invert).</li>
 </ul></li>
@@ -1174,7 +1173,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 </ul></li>
 <li>SPL:
 <ul>
-  <li>Added feature #65545 (SplFileObject::fread()).</li>
+  <li>Added feature <?php bugl(65545); ?> (SplFileObject::fread()).</li>
 </ul></li>
 </ul>
 <!-- }}} --></section>
