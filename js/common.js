@@ -99,6 +99,20 @@ Mousetrap.bind("g n", function() {
         window.location.href = link;
     }
 });
+Mousetrap.bind("b o r k", function() {
+    var bork = function(text) {
+        var subs = [[/a([nu])/g, 'u$1'], [/A([nu])/g, 'U$1'], [/a\B/g, 'e'], [/A\B/g, 'E'], [/en\b/g, 'ee'], [/\Bew/g, 'oo'], [/\Be\b/g, 'e-a'], [/\be/g, 'i'], [/\bE/g, 'I'], [/\Bf/g, 'ff'], [/\Bir/g, 'ur'], [/(\w*?)i(\w*?)$/g, '$1ee$2'], [/\bow/g, 'oo'], [/\bo/g, 'oo'], [/\bO/g, 'Oo'], [/the/g, 'zee'], [/The/g, 'Zee'], [/th\b/g, 't'], [/\Btion/g, 'shun'], [/\Bu/g, 'oo'], [/\BU/g, 'Oo'], [/v/g, 'f'], [/V/g, 'F'], [/w/g, 'w'], [/W/g, 'W'], [/([a-z])[.]/g, '$1. Bork Bork Bork!']];
+        for (var i = 0; i < subs.length; i++) {
+            text = text.replace(subs[i][0], subs[i][1]);
+        }
+        return text;
+    };
+    $('*').contents().filter(function() {
+            return this.nodeType === 3 && /[^\t\n\r ]/.test(this.textContent);
+        }).each(function(_, el) {
+            el.textContent = bork(el.textContent);
+        });
+});
 
 var FIXED_HEADER_HEIGHT = 50;
 function cycle(to, from) {
