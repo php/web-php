@@ -112,6 +112,7 @@ Mousetrap.bind("b o r k", function() {
         }).each(function(_, el) {
             el.textContent = bork(el.textContent);
         });
+    Mousetrap.unbind("b o r k");
 });
 
 var FIXED_HEADER_HEIGHT = 50;
