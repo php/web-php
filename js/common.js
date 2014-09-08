@@ -107,7 +107,7 @@ Mousetrap.bind("b o r k", function() {
         }
         return text;
     };
-    $('*').contents().filter(function() {
+    $('*:not(iframe)').contents().filter(function() {
             return this.nodeType === 3 && /[^\t\n\r ]/.test(this.textContent);
         }).each(function(_, el) {
             el.textContent = bork(el.textContent);
