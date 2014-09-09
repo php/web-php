@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom" xmlns:default="http://php.net/ns/news">
+  <title>ConFoo: Call for paper is now Open</title>
+  <id>http://php.net/archive/2014.php#id2014-09-09-1</id>
+  <published>2014-09-09T18:07:52+00:00</published>
+  <updated>2014-09-09T18:07:52+00:00</updated>
+  <default:finalTeaserDate xmlns="http://php.net/ns/news">2014-08-25</default:finalTeaserDate>
+  <category term="cfp" label="Call for Papers"/>
+  <link href="http://php.net/conferences/index.php#id2014-09-09-1" rel="alternate" type="text/html"/>
+  <default:newsImage xmlns="http://php.net/ns/news" link="http://confoo.ca/en" title="ConFoo: Call for paper is now Open">confoo-2015.gif</default:newsImage>
+  <link href="http://confoo.ca/en" rel="via" type="text/html"/>
+  <content type="xhtml">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+     <p>
+     ConFoo is looking for PHP experts to share their skills and experience at
+     the next ConFoo. <a href="http://confoo.ca/en/call-for-papers">Submit your
+     proposals</a> between August 25th and September 22nd.
+     </p>
+
+     <ul>
+     <li>ConFoo 2015 will be hosted on February 18th-20th in Montreal, at the Hilton Bonaventure Hotel.</li>
+     <li>We take good care of our speakers by covering most expenses including travel, accommodation, lunch, full conference ticket, etc.</li>
+     <li>Presentations are 35min + 10min for questions, and may be delivered in English or French.</li>
+     <li>ConFoo is an open environment where everyone is welcome to submit. Are you skilled and friendly? Come join us.</li>
+     </ul>
+
+     <p>If you would simply prefer to <a href="/en/register">attend the conference</a>, we have a $290 discount until October 13th. You can also <a href="http://confoo.ca/en/call-for-papers">rate any proposal</a> and help shape the content of the event.</p>
+    </div>
+  </content>
+</entry>
