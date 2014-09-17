@@ -46,7 +46,7 @@ $LANGUAGES = array(
     'es'    => 'Spanish',
     'sv'    => 'Swedish',
     'tr'    => 'Turkish',
-    'uk'    => 'Ukraine',
+    'uk'    => 'Ukrainian',
 );
 
 /*
@@ -82,7 +82,7 @@ $INACTIVE_ONLINE_LANGUAGES = array(
     'sk'    => 'Slovak',
     'sl'    => 'Slovenian',
     'sv'    => 'Swedish',
-    'uk'    => 'Ukraine',
+    'uk'    => 'Ukrainian',
  );
 
 $ACTIVE_ONLINE_LANGUAGES = array_diff($LANGUAGES, $INACTIVE_ONLINE_LANGUAGES);
