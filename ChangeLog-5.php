@@ -8,6 +8,57 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 
 <h1>PHP 5 ChangeLog</h1>
 
+<section class="version" id="5.5.17"><!-- {{{ 5.5.17 -->
+<h3>Version 5.5.17</h3>
+<?php release_date('18-Sep-2014'); ?>
+<ul><li>Core:
+<ul>
+  <li><?php bugfix(47358); ?> (glob returns error, should be empty array()).</li>
+  <li><?php bugfix(65463); ?> (SIGSEGV during zend_shutdown()).</li>
+  <li><?php bugfix(66036); ?> (Crash on SIGTERM in apache process).</li>
+  <li><?php bugfix(67878); ?> (program_prefix not honoured in man pages).</li>
+</ul></li>
+<li>COM:
+<ul>
+  <li><?php bugfix(41577); ?> (DOTNET is successful once per server run).</li>
+</ul></li>
+<li>Date:
+<ul>
+  <li><?php bugfix(66091); ?> (memory leaks in DateTime constructor).</li>
+  <li><?php bugfix(66985); ?> (Some timezones are no longer valid in PHP 5.5.10).</li>
+  <li><?php bugfix(67109); ?> (First uppercase letter breaks date string parsing).</li>
+</ul></li>
+<li>FPM:
+<ul>
+  <li><?php bugfix(67606); ?> (FPM with mod_fastcgi/apache2.4 is broken).</li>
+</ul></li>
+<li>GD:
+<ul>
+  <li>Made fontFetch's path parser thread-safe.</li>
+</ul></li>
+<li>MySQLi:
+<ul>
+  <li><?php bugfix(67839); ?> (mysqli does not handle 4-byte floats correctly).</li>
+</ul></li>
+<li>OpenSSL:
+<ul>
+  <li><?php bugfix(41631); ?> (socket timeouts not honored in blocking SSL reads).</li>
+  <li><?php bugfix(67850); ?> (extension won't build if openssl compiled without SSLv3).</li>
+</ul></li>
+<li>SPL:
+<ul>
+  <li><?php bugfix(67813); ?> (CachingIterator::__construct InvalidArgumentException
+    wrong message).</li>
+</ul></li>
+<li>Zlib:
+<ul>
+  <li><?php bugfix(67724); ?> (chained zlib filters silently fail with large amounts of 
+    data).</li>
+  <li><?php bugfix(67865); ?> (internal corruption phar error).</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
 <section class="version" id="5.6.0"><!-- {{{ 5.6.0 -->
 <h3>Version 5.6.0</h3>
 <b>28-Aug-2014</b>
