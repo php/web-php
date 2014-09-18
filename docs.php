@@ -79,7 +79,7 @@ foreach ($ACTIVE_ONLINE_LANGUAGES as $langcode => $langname) {
 <ul class="content-box listed">
  <li>
   If you are interested in how the documentation is edited and translated,
-  you should read the <a href="https://wiki.php.net/doc/howto">Documentation HOWTO</a>.
+  you should read the <a href="http://doc.php.net/tutorial/">Documentation HOWTO</a>.
  </li>
  <li>
   <a href="http://gtk.php.net/docs.php">PHP-GTK related documentation</a>
