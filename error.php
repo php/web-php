@@ -101,13 +101,6 @@ if (preg_match("!^release_([^\\.]+)(\\.php$|$)!", $URI, $array)) {
 }
 
 // ============================================================================
-// BC: handle documentation howto moved to the doc.php.net server
-// (redirect to index page)
-if (preg_match("!^manual/howto/!", $URI, $array)) {
-    mirror_redirect("http://doc.php.net/tutorial/");
-}
-
-// ============================================================================
 // BC: Printer friendly manual page handling was separate previously, but we
 // only need to redirect the old URLs now. Our pages are now printer friendly
 // by design.
