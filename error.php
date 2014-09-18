@@ -104,7 +104,7 @@ if (preg_match("!^release_([^\\.]+)(\\.php$|$)!", $URI, $array)) {
 // BC: handle documentation howto moved to the doc.php.net server
 // (redirect to index page)
 if (preg_match("!^manual/howto/!", $URI, $array)) {
-    mirror_redirect("https://wiki.php.net/doc/howto");
+    mirror_redirect("http://doc.php.net/tutorial/");
 }
 
 // ============================================================================

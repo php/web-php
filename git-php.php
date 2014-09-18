@@ -215,11 +215,11 @@ EOT;
  </tr>
  <tr>
   <td class="sub">Reading the PHP source</td>
-  <td><a href="https://wiki.php.net/doc/howto">Maintaining the documentation</a></td>
+  <td><a href="http://doc.php.net/tutorial/">Maintaining the documentation</a></td>
  </tr>
  <tr>
   <td class="sub">Using PHP extensions</td>
-  <td><a href="https://wiki.php.net/doc/howto">Translating the documentation</a></td>
+  <td><a href="http://doc.php.net/tutorial/">Translating the documentation</a></td>
  </tr>
  <tr>
   <td class="sub">Creating experimental PHP extensions</td>
@@ -273,7 +273,7 @@ EOT;
  Similarly, if you plan on contributing documentation, you should
  <a href="mailto:phpdoc-subscribe@lists.php.net">subscribe to the
  documentation mailing list</a>, and read the
- <a href="https://wiki.php.net/doc/howto">PHP Documentation HOWTO</a>.
+ <a href="http://doc.php.net/tutorial/">PHP Documentation HOWTO</a>.
 </p>
 
 <p>

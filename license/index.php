@@ -65,7 +65,7 @@ site_header("License Information", array("current" => "help"));
   copyright (c) the PHP Documentation Group
  </li>
  <li><a href="http://creativecommons.org/licenses/by/3.0/">Summary</a> in human-readable form</li>
- <li>Practical Information: <a href="https://wiki.php.net/doc/howto">Documentation HOWTO</a></li>
+ <li>Practical Information: <a href="http://doc.php.net/tutorial/">Documentation HOWTO</a></li>
 </ul>
 
 <a name="web-lic"></a>
