@@ -59,6 +59,43 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 </ul>
 <!-- }}} --></section>
 
+<section class="version" id="5.4.33"><!-- {{{ 5.4.33 -->
+<h3>Version 5.4.33</h3>
+<b>18-Sep-2014</b>
+<ul><li>Core:
+<ul>
+  <li><?php bugfix(47358); ?> (glob returns error, should be empty array()).</li>
+  <li><?php bugfix(65463); ?> (SIGSEGV during zend_shutdown()).</li>
+  <li><?php bugfix(66036); ?> (Crash on SIGTERM in apache process).</li>
+</ul></li>
+<li>OpenSSL:
+<ul>
+  <li><?php bugfix(41631); ?> (socket timeouts not honored in blocking SSL reads).</li>
+</ul></li>
+<li>Date:
+<ul>
+  <li><?php bugfix(66091); ?> (memory leaks in DateTime constructor).</li>
+</ul></li>
+<li>FPM:
+<ul>
+  <li><?php bugfix(67606); ?> (FPM with mod_fastcgi/apache2.4 is broken).</li>
+</ul></li>
+<li>GD:
+<ul>
+  <li>Made fontFetch's path parser thread-safe.</li>
+</ul></li>
+<li>Wddx:
+<ul>
+  <li><?php bugfix(67873); ?> (Segfaults in php_wddx_serialize_var).</li>
+</ul></li>
+<li>Zlib:
+<ul>
+  <li><?php bugfix(67724); ?> (chained zlib filters silently fail with large amounts of data).</li>
+  <li><?php bugfix(67865); ?> (internal corruption phar error).</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
 <section class="version" id="5.6.0"><!-- {{{ 5.6.0 -->
 <h3>Version 5.6.0</h3>
 <b>28-Aug-2014</b>
