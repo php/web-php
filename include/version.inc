@@ -40,7 +40,7 @@ $PHP_5_5_MD5     = array(
 $PHP_5_4_RC = false; // Current RC version (e.g., '5.6.7RC1') or false
 $PHP_5_4_RC_DATE = '4 Sep 2014';
 
-$PHP_5_4_VERSION         = "5.4.32";
+$PHP_5_4_VERSION         = "5.4.33";
 $PHP_5_4_DATE            = "18 Sep 2014";
 $PHP_5_4_MD5     = array(
                        "tar.bz2"       => "c6878bb1cdb46bfc1e1a5cd67a024737",
