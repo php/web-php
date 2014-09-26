@@ -142,9 +142,10 @@ if ($process) {
 
 // No form data to process
 else {
-    echo "<p>\n Have an upcoming PHP user group meeting? Holding a PHP training session?\n" .
-         " Submit your event here, and after it has been approved, it will be listed on\n" .
-         " the PHP.net homepage and appear in our full event listings.\n</p>";
+    echo "<p>\n Have an upcoming PHP user group meeting?\n" .
+         " Submit your event here, and after it has been approved, it will be listed in\n" .
+         " our event calendar.\n</p>";
+    echo "<p>Please note that conference submissions should be emailed to php-webmaster@lists.php.net</p>\n";
 }
 
 // Display errors if found
@@ -230,7 +231,7 @@ if ($process && count($errors) === 0) {
   <td>
    <select name="category" class="max">
 <?php
-	$cat = array("- Select a category -", "User Group Event", "Conference", "Training");
+        $cat = array("- Select a category -", "User Group Event", 3 => "Training"); // 2 = conference.. which should be on php.net/conferences instead
         display_options($cat, $_POST['category']);
 ?>
    </select>
