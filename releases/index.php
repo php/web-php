@@ -43,7 +43,7 @@ if (isset($_GET["serialize"])) {
 				echo serialize($r);
 			}
 		} else {
-			echo serialize(array("error" => "Unkown version"));
+			echo serialize(array("error" => "Unknown version"));
 		}
 	} else {
 		$array = array();
