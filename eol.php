@@ -38,7 +38,7 @@ site_header('Unsupported Branches');
 		</tr>
 	</thead>
 	<tbody>
-		<?php foreach (get_eol_branches(array('5.3.29')) as $major => $branches):
+		<?php foreach (get_eol_branches() as $major => $branches):
 
 				foreach ($branches as $branch => $detail) {
 					try {

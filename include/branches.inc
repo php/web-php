@@ -13,6 +13,7 @@ function version_number_to_branch($version) {
  * must be in $RELEASES _and_ must be the full version number, not the branch:
  * ie provide array('5.3.29'), not array('5.3'). */
 function get_eol_branches($always_include = null) {
+	$always_include = $always_include ? $always_include : array();
 	$branches = array();
 
 	// Gather the last release on each branch into a convenient array.
@@ -31,12 +32,19 @@ function get_eol_branches($always_include = null) {
 	}
 
 	/* Exclude releases from active branches, where active is defined as "in
-	 * the $RELEASES array". */
+	 * the $RELEASES array and not explicitly marked as EOL there". */
 	foreach ($GLOBALS['RELEASES'] as $major => $releases) {
 		foreach ($releases as $version => $release) {
 			if ($branch = version_number_to_branch($version)) {
-				if (isset($branches[$major][$branch])) {
-					unset($branches[$major][$branch]);
+				if (empty($release['eol'])) {
+					/* This branch isn't EOL: remove it from our array. */
+					if (isset($branches[$major][$branch])) {
+						unset($branches[$major][$branch]);
+					}
+				} else {
+					/* Add the release information to the EOL branches array, since it
+					 * should be newer than the information we got from $OLDRELEASES. */
+					$always_include[] = $version;
 				}
 			}
 		}

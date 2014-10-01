@@ -10,7 +10,8 @@
  *                 "date"     => "this files release date",
  *                 "note"     => "this file was updated 29feb due to broken phar files..",
  *             ),
- *             "announcement" => "bool, release announcement exists in releases/?"
+ *             "announcement" => "bool, release announcement exists in releases/?",
+ *             "eol" => "bool, true to mark as EOL (affects bug tracker and eol.php)"
  *         ),
  *     ),
  * );
@@ -127,6 +128,7 @@ $RELEASES = array(
         ),
         $PHP_5_3_VERSION => array(
             "announcement" => true,
+            "eol" => true,
             "source" => array(
                 array(
                     "filename" => "php-$PHP_5_3_VERSION.tar.bz2",
