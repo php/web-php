@@ -17,6 +17,7 @@ function get_active_branches() {
 			if ($branch = version_number_to_branch($version)) {
 				if (empty($release['eol'])) {
 					$branches[$major][$branch] = $release;
+					$branches[$major][$branch]['version'] = $version;
 				}
 			}
 		}
