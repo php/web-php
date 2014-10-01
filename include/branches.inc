@@ -9,6 +9,22 @@ function version_number_to_branch($version) {
 	}
 }
 
+function get_active_branches() {
+	$branches = array();
+
+	foreach ($GLOBALS['RELEASES'] as $major => $releases) {
+		foreach ($releases as $version => $release) {
+			if ($branch = version_number_to_branch($version)) {
+				if (empty($release['eol'])) {
+					$branches[$major][$branch] = $release;
+				}
+			}
+		}
+	}
+
+	return $branches;
+}
+
 /* If you provide an array to $always_include, note that the version numbers
  * must be in $RELEASES _and_ must be the full version number, not the branch:
  * ie provide array('5.3.29'), not array('5.3'). */
