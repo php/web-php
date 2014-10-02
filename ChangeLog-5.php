@@ -8,6 +8,64 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 
 <h1>PHP 5 ChangeLog</h1>
 
+<section class="version" id="5.6.1"><!-- {{{ 5.6.1 -->
+<h3>Version 5.6.1</h3>
+<b>02-Oct-2014</b>
+<ul><li>Core:
+<ul>
+  <li>Implemented FR <?php bugl(38409); ?> (parse_ini_file() looses the type of booleans).</li>
+  <li><?php bugfix(65463); ?> (SIGSEGV during zend_shutdown()).</li>
+  <li><?php bugfix(66036); ?> (Crash on SIGTERM in apache process).</li>
+  <li><?php bugfix(67878); ?> (program_prefix not honoured in man pages).</li>
+  <li><?php bugfix(67938); ?> (Segfault when extending interface method with variadic).</li>
+  <li><?php bugfix(67985); ?> (Incorrect last used array index copied to new array after unset).</li>
+  <li><?php bugfix(68088); ?> (New Posthandler Potential Illegal efree() vulnerability).</li>
+</ul></li>
+<li>DOM:
+<ul>
+  <li>Made DOMNode::textContent writeable.</li>
+</ul></li>
+<li>Fileinfo:
+<ul>
+  <li><?php bugfix(67731); ?> (finfo::file() returns invalid mime type for binary files).</li>
+</ul></li>
+<li>GD:
+<ul>
+  <li>Made fontFetch's path parser thread-safe.</li>
+</ul></li>
+<li>GMP:
+<ul>
+  <li><?php bugfix(67917); ?> (Using GMP objects with overloaded operators can cause memory exhaustion).</li>
+  <li><?php bugfix(50175); ?> (gmp_init() results 0 on given base and number starting with 0x or 0b).</li>
+  <li>Implemented gmp_import() and gmp_export().</li>
+</ul></li>
+<li>MySQLi:
+<ul>
+  <li><?php bugfix(67839); ?> (mysqli does not handle 4-byte floats correctly).</li>
+</ul></li>
+<li>OpenSSL:
+<ul>
+  <li><?php bugfix(67850); ?> (extension won't build if openssl compiled without SSLv3).</li>
+</ul></li>
+<li>phpdbg:
+<ul>
+  <li>Fixed issue krakjoe/phpdbg#111 (compile error without ZEND_SIGNALS).</li>
+</ul></li>
+<li>SOAP:
+<ul>
+  <li><?php bugfix(67955); ?> (SoapClient prepends 0-byte to cookie names).</li>
+</ul></li>
+<li>Session:
+<ul>
+  <li><?php bugfix(67972); ?> (SessionHandler Invalid memory read create_sid()).</li>
+</ul></li>
+<li>Sysvsem:
+<ul>
+  <li>Implemented FR <?php bugl(67990); ?> (Add optional nowait argument to sem_acquire).</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
 <section class="version" id="5.5.17"><!-- {{{ 5.5.17 -->
 <h3>Version 5.5.17</h3>
 <?php release_date('18-Sep-2014'); ?>
