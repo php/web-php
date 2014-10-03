@@ -13,7 +13,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 <b>02-Oct-2014</b>
 <ul><li>Core:
 <ul>
-  <li>Implemented FR <?php bugl(38409); ?> (parse_ini_file() looses the type of booleans).</li>
+  <li>Implemented FR <?php bugl(38409); ?> (parse_ini_file() loses the type of booleans).</li>
   <li><?php bugfix(65463); ?> (SIGSEGV during zend_shutdown()).</li>
   <li><?php bugfix(66036); ?> (Crash on SIGTERM in apache process).</li>
   <li><?php bugfix(67878); ?> (program_prefix not honoured in man pages).</li>
