@@ -19,7 +19,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
   <li><?php bugfix(67878); ?> (program_prefix not honoured in man pages).</li>
   <li><?php bugfix(67938); ?> (Segfault when extending interface method with variadic).</li>
   <li><?php bugfix(67985); ?> (Incorrect last used array index copied to new array after unset).</li>
-  <li><?php bugfix(68088); ?> (New Posthandler Potential Illegal efree() vulnerability).</li>
+  <li><?php bugfix(68088); ?> (New Posthandler Potential Illegal efree() vulnerability). (CVE-2014-3622)</li>
 </ul></li>
 <li>DOM:
 <ul>
