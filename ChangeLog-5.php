@@ -8,6 +8,54 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 
 <h1>PHP 5 ChangeLog</h1>
 
+<section class="version" id="5.5.18"><!-- {{{ 5.5.18 -->
+<h3>Version 5.5.18</h3>
+<?php release_date('16-Oct-2014'); ?>
+<ul><li>Core:
+<ul>
+  <li><?php bugfix(67985); ?> (Incorrect last used array index copied to new array after
+    unset).</li>
+  <li><?php bugfix(67739); ?> (Windows 8.1/Server 2012 R2 OS build number reported
+    as 6.2 (instead of 6.3)).</li>
+  <li><?php bugfix(67633); ?> (A foreach on an array returned from a function not doing
+    copy-on-write).</li>
+  <li><?php bugfix(51800); ?> (proc_open on Windows hangs forever).</li>
+  <li><?php bugfix(68044); ?> (Integer overflow in unserialize() (32-bits only)).
+    (CVE-2014-3669).</li>
+</ul></li>
+<li>cURL:
+<ul>
+  <li><?php bugfix(68089); ?> (NULL byte injection - cURL lib).</li>
+</ul></li>
+<li>Exif:
+<ul>
+  <li><?php bugfix(68113); ?> (Heap corruption in exif_thumbnail()). (CVE-2014-3670).</li>
+</ul></li>
+<li>FPM:
+<ul>
+  <li><?php bugfix(65641); ?> (PHP-FPM incorrectly defines the SCRIPT_NAME variable
+    when using Apache, mod_proxy-fcgi and ProxyPass).</li>
+</ul></li>
+<li>OpenSSL:
+<ul>
+  <li>Revert regression introduced by fix of bug #41631.</li>
+</ul></li>
+<li>Reflection:
+<ul>
+  <li><?php bugfix(68103); ?> (Duplicate entry in Reflection for class alias).</li>
+</ul></li>
+<li>Session:
+<ul>
+  <li><?php bugfix(67972); ?> (SessionHandler Invalid memory read create_sid()).</li>
+</ul></li>
+<li>XMLRPC:
+<ul>
+  <li><?php bugfix(68027); ?> (Global buffer overflow in mkgmtime() function). 
+    (CVE-2014-3668).</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
 <section class="version" id="5.6.1"><!-- {{{ 5.6.1 -->
 <h3>Version 5.6.1</h3>
 <b>02-Oct-2014</b>
