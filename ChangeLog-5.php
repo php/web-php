@@ -56,6 +56,37 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 </ul>
 <!-- }}} --></section>
 
+<section class="version" id="5.4.34"><!-- {{{ 5.4.34 -->
+<h3>Version 5.4.34</h3>
+<b>16-Oct-2014</b>
+<ul><li>Fileinfo:
+<ul>
+  <li><?php bugfix(66242); ?> (libmagic: don't assume char is signed).</li>
+</ul></li>
+<li>Core:
+<ul>
+  <li><?php bugfix(67985); ?> (Incorrect last used array index copied to new array after unset).</li>
+  <li><?php bugfix(68044); ?> (Integer overflow in unserialize() (32-bits only)). (CVE-2014-3669)</li>
+</ul></li>
+<li>cURL:
+<ul>
+  <li><?php bugfix(68089); ?> (NULL byte injection - cURL lib).</li>
+</ul></li>
+<li>EXIF:
+<ul>
+  <li><?php bugfix(68113); ?> (Heap corruption in exif_thumbnail()). (CVE-2014-3670)</li>
+</ul></li>
+<li>OpenSSL:
+<ul>
+  <li>Reverted fixes for bug <?php bugl(41631); ?>, due to regressions.</li>
+</ul></li>
+<li>XMLRPC:
+<ul>
+  <li><?php bugfix(68027); ?> (Global buffer overflow in mkgmtime() function). (CVE-2014-3668)</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
 <section class="version" id="5.6.1"><!-- {{{ 5.6.1 -->
 <h3>Version 5.6.1</h3>
 <b>02-Oct-2014</b>
