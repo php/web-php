@@ -8,6 +8,28 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 
 <h1>PHP 5 ChangeLog</h1>
 
+<section class="version" id="5.6.2"><!-- {{{ 5.6.2 -->
+<h3>Version 5.6.2</h3>
+<?php release_date('16-Oct-2014'); ?>
+<ul><li>Core:
+<ul>
+  <li><?php bugfix(68044); ?> (Integer overflow in unserialize() (32-bits only)).</li>
+</ul></li>
+<li>cURL:
+<ul>
+  <li><?php bugfix(68089); ?> (NULL byte injection - cURL lib).</li>
+</ul></li>
+<li>EXIF:
+<ul>
+  <li><?php bugfix(68113); ?> (Heap corruption in exif_thumbnail()).</li>
+</ul></li>
+<li>XMLRPC:
+<ul>
+  <li><?php bugfix(68027); ?> (Global buffer overflow in mkgmtime() function).</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
 <section class="version" id="5.5.18"><!-- {{{ 5.5.18 -->
 <h3>Version 5.5.18</h3>
 <?php release_date('16-Oct-2014'); ?>
@@ -89,7 +111,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 
 <section class="version" id="5.6.1"><!-- {{{ 5.6.1 -->
 <h3>Version 5.6.1</h3>
-<b>02-Oct-2014</b>
+<?php release_date('02-Oct-2014'); ?>
 <ul><li>Core:
 <ul>
   <li>Implemented FR <?php bugl(38409); ?> (parse_ini_file() loses the type of booleans).</li>
@@ -235,7 +257,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 
 <section class="version" id="5.6.0"><!-- {{{ 5.6.0 -->
 <h3>Version 5.6.0</h3>
-<b>28-Aug-2014</b>
+<?php release_date('28-Aug-2014'); ?>
 <ul>
 <li>General improvements:
 <ul>
