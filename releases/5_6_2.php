@@ -8,7 +8,7 @@ site_header("PHP 5.6.2 Release Announcement");
 <h1>PHP 5.6.2 Release Announcement</h1>
 
 <p>The PHP development team announces the immediate availability of PHP 5.6.2.
-4 security-related bugs were fixed in this release, including fixes for CVE-2014-3668, CVE-2014-3669 and CVE-2014-3670.
+Four security-related bugs were fixed in this release, including fixes for CVE-2014-3668, CVE-2014-3669 and CVE-2014-3670.
 All PHP 5.6 users are encouraged to upgrade to this version.
 </p>
 
