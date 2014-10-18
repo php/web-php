@@ -13,7 +13,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 <?php release_date('16-Oct-2014'); ?>
 <ul><li>Core:
 <ul>
-  <li><?php bugfix(68044); ?> (Integer overflow in unserialize() (32-bits only)).</li>
+  <li><?php bugfix(68044); ?> (Integer overflow in unserialize() (32-bits only)). (CVE-2014-3669)</li>
 </ul></li>
 <li>cURL:
 <ul>
@@ -21,11 +21,11 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 </ul></li>
 <li>EXIF:
 <ul>
-  <li><?php bugfix(68113); ?> (Heap corruption in exif_thumbnail()).</li>
+  <li><?php bugfix(68113); ?> (Heap corruption in exif_thumbnail()). (CVE-2014-3670)</li>
 </ul></li>
 <li>XMLRPC:
 <ul>
-  <li><?php bugfix(68027); ?> (Global buffer overflow in mkgmtime() function).</li>
+  <li><?php bugfix(68027); ?> (Global buffer overflow in mkgmtime() function). (CVE-2014-3668)</li>
 </ul></li>
 </ul>
 <!-- }}} --></section>
@@ -43,7 +43,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
     copy-on-write).</li>
   <li><?php bugfix(51800); ?> (proc_open on Windows hangs forever).</li>
   <li><?php bugfix(68044); ?> (Integer overflow in unserialize() (32-bits only)).
-    (CVE-2014-3669).</li>
+    (CVE-2014-3669)</li>
 </ul></li>
 <li>cURL:
 <ul>
@@ -51,7 +51,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 </ul></li>
 <li>Exif:
 <ul>
-  <li><?php bugfix(68113); ?> (Heap corruption in exif_thumbnail()). (CVE-2014-3670).</li>
+  <li><?php bugfix(68113); ?> (Heap corruption in exif_thumbnail()). (CVE-2014-3670)</li>
 </ul></li>
 <li>FPM:
 <ul>
@@ -73,7 +73,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 <li>XMLRPC:
 <ul>
   <li><?php bugfix(68027); ?> (Global buffer overflow in mkgmtime() function). 
-    (CVE-2014-3668).</li>
+    (CVE-2014-3668)</li>
 </ul></li>
 </ul>
 <!-- }}} --></section>
