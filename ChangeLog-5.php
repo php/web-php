@@ -60,7 +60,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 </ul></li>
 <li>OpenSSL:
 <ul>
-  <li>Revert regression introduced by fix of bug #41631.</li>
+  <li>Revert regression introduced by fix of bug <?php bugl(41631); ?>.</li>
 </ul></li>
 <li>Reflection:
 <ul>
