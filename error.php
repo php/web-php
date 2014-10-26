@@ -430,7 +430,6 @@ $uri_aliases = array (
     
     # external shortcut aliases ;)
     "dochowto"     => "phpdochowto",
-    "projects.php" => "projects", // BC
     
     # CVS -> SVN
     "anoncvs.php"   => "git",
@@ -465,7 +464,6 @@ $external_redirects = array(
     "php55news"   => "https://git.php.net/?p=php-src.git;a=blob_plain;f=NEWS;hb=refs/heads/PHP-5.5",
     "php56news"   => "https://git.php.net/?p=php-src.git;a=blob_plain;f=NEWS;hb=refs/heads/PHP-5.6",
     "phptrunknews"=> "https://git.php.net/?p=php-src.git;a=blob_plain;f=NEWS;hb=refs/heads/master",
-    "projects"    => "http://freshmeat.net/tags/php",
     "pear"        => "http://pear.php.net/",
     "bugs"        => "http://bugs.php.net/",
     "bugstats"    => "http://bugs.php.net/bugstats.php",
