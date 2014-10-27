@@ -406,7 +406,7 @@ hr {
   float: right;
   text-align: right;
   position: relative;
-  z-index: 100;
+  z-index: 10;
 }
 .page-tools #changelang-langs,
 .page-tools .edit-bug {
@@ -1016,7 +1016,6 @@ fieldset {
     padding-top: 3px;
     margin-top: -3px;
     min-width: 100%;
-    z-index: 1!important;
 }
 
 .tt-dropdown-menu .result-heading {
