@@ -2,6 +2,49 @@
 include_once $_SERVER['DOCUMENT_ROOT'] . '/include/releases.inc';
 include_once $_SERVER['DOCUMENT_ROOT'] . '/include/version.inc';
 
+function format_interval($from, $to) {
+	try {
+		$from_obj = $from instanceof DateTime ? $from : new DateTime($from);
+		$to_obj = $to instanceof DateTime ? $to : new DateTime($to);
+		$diff = $to_obj->diff($from_obj);
+
+		$times = array();
+		if ($diff->y) {
+			$times[] = array($diff->y,'year');
+			if ($diff->m) {
+					$times[] = array($diff->m,'month');
+			}
+		} elseif ($diff->m) {
+			$times[] = array($diff->m,'month');
+		} elseif ($diff->d) {
+			$times[] = array($diff->d,'day');
+		} else {
+			$eolPeriod = 'today';
+		}
+		if ($times) {
+			$eolPeriod = implode(', ', 
+										array_map(
+											function($t) {
+												return "$t[0] $t[1]" .
+														($t[0] != 1 ? 's' : '');
+											},
+											$times
+										)
+								);
+
+			if ($diff->invert) {
+				$eolPeriod = "$eolPeriod ago";
+			} else {
+				$eolPeriod = "in $eolPeriod";
+			}
+		}
+	} catch(Exception $e) {
+		$eolPeriod = 'unknown';
+	}
+
+	return $eolPeriod;
+}
+
 function version_number_to_branch($version) {
 	$parts = explode('.', $version);
 	if (count($parts) > 1) {

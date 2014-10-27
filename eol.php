@@ -38,41 +38,9 @@ site_header('Unsupported Branches');
 		</tr>
 	</thead>
 	<tbody>
-		<?php foreach (get_eol_branches() as $major => $branches):
-
-				foreach ($branches as $branch => $detail) {
-					try {
-						$now  = new DateTime;
-						$then = new DateTime('@'.$detail['date']);
-						$diff = $now->diff($then);
-						$times = array();
-						if ($diff->y) {
-							$times[] = array($diff->y,'year');
-							if ($diff->m) {
-    							$times[] = array($diff->m,'month');
-							}
-						} elseif ($diff->m) {
-							$times[] = array($diff->m,'month');
-						} elseif ($diff->d) {
-							$times[] = array($diff->d,'day');
-						} else {
-							$eolPeriod = 'moments ago...';
-						}
-						if ($times) {
-							$eolPeriod = implode(', ', 
-														array_map(
-															function($t) {
-																return "$t[0] $t[1]" .
-																		($t[0] != 1 ? 's' : '');
-															},
-															$times
-														)
-												) . " ago";
-						}
-					} catch(Exception $e) {
-						$eolPeriod = 'unknown...';
-					}
-		?>
+		<?php foreach (get_eol_branches() as $major => $branches): ?>
+			<?php foreach ($branches as $branch => $detail): ?>
+				<?php $eolPeriod = format_interval('@'.$detail['date'], null) ?>
 					<tr>
 						<td><?php echo htmlspecialchars($branch); ?></td>
 						<td>
@@ -90,8 +58,8 @@ site_header('Unsupported Branches');
 							<?php echo isset($BRANCH_NOTES[$branch]) ? $BRANCH_NOTES[$branch] : ''; ?>
 					</td>
 				</tr>
-			    <?php } ?>
-		<?php endforeach; ?>
+			<?php endforeach ?>
+		<?php endforeach ?>
 	</tbody>
 </table>
 
