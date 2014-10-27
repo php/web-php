@@ -2,6 +2,24 @@
 include_once $_SERVER['DOCUMENT_ROOT'] . '/include/releases.inc';
 include_once $_SERVER['DOCUMENT_ROOT'] . '/include/version.inc';
 
+/* Branch overrides. For situations where we've changed the exact dates for a
+ * branch's active support and security fix EOLs, these can be reflected here.
+ *
+ * Supported keys are:
+ *    - stable:   the end of active support (usually two years after release).
+ *    - security: the end of security support (usually release + 3 years).
+ */
+$BRANCHES = array(
+	'5.3' => array(
+		'stable'   => '2013-07-11',
+		'security' => '2014-08-14',
+	),
+	'5.4' => array(
+		'stable'   => '2014-09-14',
+		'security' => '2015-09-14',
+	),
+);
+
 function format_interval($from, $to) {
 	try {
 		$from_obj = $from instanceof DateTime ? $from : new DateTime($from);
@@ -196,9 +214,8 @@ function get_initial_release($branch) {
 }
 
 function get_branch_bug_eol_date($branch) {
-	// Hardcode 5.3.
-	if (strncmp($branch, '5.3', 3) == 0) {
-		return new DateTime('2013-07-11');
+	if (isset($GLOBALS['BRANCHES'][$branch]['stable'])) {
+		return new DateTime($GLOBALS['BRANCHES'][$branch]['stable']);
 	}
 
 	$date = get_branch_release_date($branch);
@@ -207,9 +224,8 @@ function get_branch_bug_eol_date($branch) {
 }
 
 function get_branch_security_eol_date($branch) {
-	// Hardcode 5.3.
-	if (strncmp($branch, '5.3', 3) == 0) {
-		return new DateTime('2014-08-14');
+	if (isset($GLOBALS['BRANCHES'][$branch]['security'])) {
+		return new DateTime($GLOBALS['BRANCHES'][$branch]['security']);
 	}
 
 	$date = get_branch_release_date($branch);
