@@ -1,0 +1,18 @@
+/* Branches page */
+
+table.standard tr.eol td:first-child {
+	background: #f99;
+}
+
+table.standard tr.security td:first-child {
+	background: #f93;
+}
+
+table.standard tr.stable td:first-child {
+	background: #9c9;
+}
+
+svg {
+	max-width: 100%;
+	height: auto;
+}

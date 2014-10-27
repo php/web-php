@@ -52,6 +52,39 @@ function version_number_to_branch($version) {
 	}
 }
 
+function get_all_branches() {
+	$branches = array();
+
+	foreach ($GLOBALS['OLDRELEASES'] as $major => $releases) {
+		foreach ($releases as $version => $release) {
+			if ($branch = version_number_to_branch($version)) {
+				if (!isset($branches[$major][$branch]) || version_compare($version, $branches[$major][$branch]['version'], 'gt')) {
+					$branches[$major][$branch] = $release;
+					$branches[$major][$branch]['version'] = $version;
+				}
+			}
+		}
+	}
+
+	foreach ($GLOBALS['RELEASES'] as $major => $releases) {
+		foreach ($releases as $version => $release) {
+			if ($branch = version_number_to_branch($version)) {
+				if (!isset($branches[$major][$branch]) || version_compare($version, $branches[$major][$branch]['version'], 'gt')) {
+					$branches[$major][$branch] = $release;
+					$branches[$major][$branch]['version'] = $version;
+				}
+			}
+		}
+	}
+
+	krsort($branches);
+	foreach ($branches as $major => &$branch) {
+		krsort($branch);
+	}
+
+	return $branches;
+}
+
 function get_active_branches() {
 	$branches = array();
 
@@ -135,4 +168,79 @@ function get_eol_branches($always_include = null) {
 	}
 
 	return $branches;
+}
+
+/* $branch is expected to have at least two components: MAJOR.MINOR or
+ * MAJOR.MINOR.REVISION (the REVISION will be ignored if provided). This will
+ * return either null (if no release exists on the given branch), or the usual
+ * version metadata from $RELEASES for a single release. */
+function get_initial_release($branch) {
+	$branch = version_number_to_branch($branch);
+	if (!$branch) {
+		return null;
+	}
+	$major = substr($branch, 0, strpos($branch, '.'));
+
+	if (isset($GLOBALS['OLDRELEASES'][$major]["$branch.0"])) {
+		return $GLOBALS['OLDRELEASES'][$major]["$branch.0"];
+	}
+
+	/* If there's only been one release on the branch, it won't be in
+	 * $OLDRELEASES yet, so let's check $RELEASES. */
+	if (isset($GLOBALS['RELEASES'][$major]["$branch.0"])) {
+		return $GLOBALS['RELEASES'][$major]["$branch.0"];
+	}
+
+	// Shrug.
+	return null;
+}
+
+function get_branch_bug_eol_date($branch) {
+	// Hardcode 5.3.
+	if (strncmp($branch, '5.3', 3) == 0) {
+		return new DateTime('2013-07-11');
+	}
+
+	$date = get_branch_release_date($branch);
+
+	return $date ? $date->add(new DateInterval('P2Y')) : null;
+}
+
+function get_branch_security_eol_date($branch) {
+	// Hardcode 5.3.
+	if (strncmp($branch, '5.3', 3) == 0) {
+		return new DateTime('2014-08-14');
+	}
+
+	$date = get_branch_release_date($branch);
+
+	return $date ? $date->add(new DateInterval('P3Y')) : null;
+}
+
+function get_branch_release_date($branch) {
+	$initial = get_initial_release($branch);
+
+	return $initial ? new DateTime($initial['date']) : null;
+}
+
+function get_branch_support_state($branch) {
+	$initial = get_branch_release_date($branch);
+	$bug = get_branch_bug_eol_date($branch);
+	$security = get_branch_security_eol_date($branch);
+
+	if ($initial && $bug && $security) {
+		$now = new DateTime;
+
+		if ($now >= $security) {
+			return 'eol';
+		} elseif ($now >= $bug) {
+			return 'security';
+		} elseif ($now >= $initial) {
+			return 'stable';
+		} else {
+			return 'future';
+		}
+	}
+
+	return null;
 }
