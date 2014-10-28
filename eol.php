@@ -23,8 +23,8 @@ site_header('Unsupported Branches');
 <p>
 	This page lists the end of life date for each unsupported branch of PHP. If
 	you are using these releases, you are strongly urged to upgrade to
-	<a href="/downloads">a current version</a>, as using older versions may
-	expose you to security vulnerabilities and bugs that have been fixed in
+	<a href="/supported-versions">a current version</a>, as using older versions
+	may expose you to security vulnerabilities and bugs that have been fixed in
 	more recent versions of PHP.
 </p>
 

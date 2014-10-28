@@ -72,6 +72,13 @@ krsort($eol);
 $eol = implode('', array_slice($eol, 0, 2));
 
 $SIDEBAR_DATA = '
+<div class="panel">
+  <a class="headline" href="/supported-versions.php">Supported Versions</a>
+  <div class="body">
+    Check the <a href="/supported-versions.php">supported versions</a> page for
+    more information on the support lifetime of each version of PHP.
+  </div>
+</div>
 
 <div class="panel">
   <a class="headline" href="/eol.php">End of Life Dates</a>
