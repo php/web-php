@@ -1,7 +1,8 @@
 /* Branches page */
 
 table.standard tr.eol td:first-child {
-	background: #f99;
+	background: #f33;
+	color: white;
 }
 
 table.standard tr.security td:first-child {

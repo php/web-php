@@ -98,6 +98,14 @@ include $_SERVER['DOCUMENT_ROOT'] . '/images/supported-versions.php';
 			are only made on an as-needed basis.
 		</td>
 	</tr>
+	<tr class="eol">
+		<td>End of life</td>
+		<td>
+			A release that is no longer supported. Users of this release should
+			upgrade as soon as possible, as they may be exposed to unpatched security
+			vulnerabilities.
+		</td>
+	</tr>
 </table>
 
 <?php site_footer(); ?>

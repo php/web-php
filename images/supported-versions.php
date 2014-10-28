@@ -71,16 +71,28 @@ $height = $header_height + $footer_height + (count($branches) * $branch_height);
 				font-size: <?php echo (2 / 3) * $header_height; ?>px;
 			}
 
+			g.eol rect,
+			.branches rect.eol {
+				fill: #f33;
+			}
+
+			g.eol text {
+				fill: white;
+			}
+
+			g.security rect,
 			.branches rect.security {
 				fill: #f93;
 			}
 
+			g.stable rect,
 			.branches rect.stable {
 				fill: #9c9;
 			}
 
 			.branch-labels text {
 				alignment-baseline: central;
+				text-anchor: middle;
 			}
 
 			.today line {
@@ -107,9 +119,12 @@ $height = $header_height + $footer_height + (count($branches) * $branch_height);
 	<!-- Branch labels -->
 	<g class="branch-labels">
 		<?php foreach ($branches as $branch => $version): ?>
-			<text x="0" y="<?php echo $version['top'] + (0.5 * $branch_height) ?>">
-				<?php echo htmlspecialchars($branch) ?>
-			</text>
+			<g class="<?php echo get_branch_support_state($branch) ?>">
+				<rect x="0" y="<?php echo $version['top'] ?>" width="<?php echo 0.5 * $margin_left ?>" height="<?php echo $branch_height ?>" />
+				<text x="<?php echo 0.25 * $margin_left ?>" y="<?php echo $version['top'] + (0.5 * $branch_height) ?>">
+					<?php echo htmlspecialchars($branch) ?>
+				</text>
+			</g>
 		<?php endforeach ?>
 	</g>
 
