@@ -13,6 +13,20 @@ table.standard tr.stable td:first-child {
 	background: #9c9;
 }
 
+@media (max-width: 767px) {
+	table.standard th {
+		font-size: 1rem;
+	}
+
+	table.standard td.collapse-phone {
+		padding: 0;
+	}
+
+	table.standard td.collapse-phone * {
+		display: none;
+	}
+}
+
 svg {
 	max-width: 100%;
 	height: auto;

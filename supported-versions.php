@@ -56,11 +56,11 @@ site_header('Supported Versions', array('css' => array('supported-versions.css')
 						</a>
 					</td>
 					<td><?php echo htmlspecialchars($initial->format('j M Y')) ?></td>
-					<td><em><?php echo htmlspecialchars(format_interval($initial, null)) ?></em></td>
+					<td class="collapse-phone"><em><?php echo htmlspecialchars(format_interval($initial, null)) ?></em></td>
 					<td><?php echo htmlspecialchars($until->format('j M Y')) ?></td>
-					<td><em><?php echo htmlspecialchars(format_interval($until, null)) ?></em></td>
+					<td class="collapse-phone"><em><?php echo htmlspecialchars(format_interval($until, null)) ?></em></td>
 					<td><?php echo htmlspecialchars($eol->format('j M Y')) ?></td>
-					<td><em><?php echo htmlspecialchars(format_interval($eol, null)) ?></em></td>
+					<td class="collapse-phone"><em><?php echo htmlspecialchars(format_interval($eol, null)) ?></em></td>
 				</tr>
 			<?php endforeach ?>
 		<?php endforeach ?>
