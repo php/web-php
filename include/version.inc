@@ -22,9 +22,9 @@ $PHP_5_6_RC_DATE = '30 Oct 2014';
 $PHP_5_6_VERSION         = "5.6.2";
 $PHP_5_6_DATE            = "16 Oct 2014";
 $PHP_5_6_MD5     = array(
-                       "tar.bz2"       => "97202449bf4f011c477ff860b173a92a",
-                       "tar.gz"        => "f0b54371fae6d4b6b99fb3d360f086ac",
-                       "tar.xz"        => "c976f54d429a0e5214659b0098e44e37",
+                       "tar.bz2"       => "1d7392821cc4ba85e4d055c7dcf307f3",
+                       "tar.gz"        => "158745acf76f7639987a6058a6a98e74",
+                       "tar.xz"        => "a4cadd97b42dae23d278daacb68b7d32",
 );
 /* PHP 5.5 Release */
 $PHP_5_5_RC = '5.5.19RC1'; // Current RC version (e.g., '5.6.7RC1') or false
