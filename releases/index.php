@@ -5,6 +5,7 @@ include_once $_SERVER['DOCUMENT_ROOT'] . '/include/prepend.inc';
 include_once $_SERVER["DOCUMENT_ROOT"] . "/include/branches.inc";
 
 if (isset($_GET["serialize"])) {
+	header('Content-type: text/plain');
 	$RELEASES[5][$PHP_5_4_VERSION]["date"] = $PHP_5_4_DATE;
 	$RELEASES[5][$PHP_5_3_VERSION]["date"] = $PHP_5_3_DATE;
 	$RELEASES                              = $RELEASES + $OLDRELEASES;
@@ -57,6 +58,60 @@ if (isset($_GET["serialize"])) {
 	return;
 }
 
+if (isset($_GET["json"])) {
+	header('Content-Type: application/json');
+	$RELEASES[5][$PHP_5_4_VERSION]["date"] = $PHP_5_4_DATE;
+	$RELEASES[5][$PHP_5_3_VERSION]["date"] = $PHP_5_3_DATE;
+	$RELEASES                              = $RELEASES + $OLDRELEASES;
+
+	if (isset($_GET["version"])) {
+		$ver = (int)$_GET["version"];
+
+		if (isset($RELEASES[$ver])) {
+			list($version, $r) = each($RELEASES[$ver]);
+
+			if (isset($_GET["max"])) {
+				$max = (int)$_GET["max"];
+				if ($max == -1) { $max = PHP_INT_MAX; }
+
+				$return = array($version => $r);
+
+				$count = 1;
+
+				/* check if other $RELEASES[$ver] are there */
+				/* e.g., 5_3, 5_4, and 5_5 all exist and have a release */
+				while(($z = each($RELEASES[$ver])) && $count++ < $max) {
+					$return[$z[0]] = $z[1];
+				}
+
+				foreach($OLDRELEASES[$ver] as $version => $release) {
+					if ($max <= $count++) {
+						break;
+					}
+
+					$return[$version] = $release;
+				}
+				echo json_encode($return);
+			} else {
+				$r["version"] = $version;
+
+				echo json_encode($r);
+			}
+		} else {
+			echo json_encode(array("error" => "Unknown version"));
+		}
+	} else {
+		$array = array();
+		foreach($RELEASES as $major => $release) {
+			list($version, $r) = each($release);
+			$r["version"] = $version;
+			$array[$major] = $r;
+		}
+		echo json_encode($array);
+	}
+	return;
+}
+
 
 // Tarball list generated with:
 // cvs status -v php[34]/INSTALL |grep 'php_'|awk '{print $1}'|grep -Ev '(RC[0-9]*|rc[_0-9]*|REL|[ab][a0-9-]+|b..rc.|b.pl.|bazaar|pre|[ab])$'|sed -e 's,php_,,' -e 's,_,.,g'|sort -n|while read ver; do echo "        <option value=\"php-${ver}.tar.gz\">$ver</option>"; done
@@ -102,9 +157,18 @@ $SIDEBAR_DATA = '
 <div class="panel">
   <div class="headline">Want a PHP serialize()d list of the PHP releases?</div>
   <div class="body">
-    <p>Add <a href="?serialize=1">?serialize=1</a> to the url</p>
-    <p>Only want PHP 5 releases? <a href="?serialize=1&amp;version=5">&amp;version=5</a></p>
-    <p>The last 3? <a href="?serialize=1&amp;version=5&amp;max=3">&amp;max=3</a></p>
+    <p>Add <a href="?serialize">?serialize</a> to the url</p>
+    <p>Only want PHP 5 releases? <a href="?serialize&amp;version=5">&amp;version=5</a></p>
+    <p>The last 3? <a href="?serialize&amp;version=5&amp;max=3">&amp;max=3</a></p>
+  </div>
+</div>
+
+<div class="panel">
+  <div class="headline">Want a json_encode()ded list of the PHP releases?</div>
+  <div class="body">
+    <p>Add <a href="?json">?json</a> to the url</p>
+    <p>Only want PHP 5 releases? <a href="?json&amp;version=5">&amp;version=5</a></p>
+    <p>The last 3? <a href="?json&amp;version=5&amp;max=3">&amp;max=3</a></p>
   </div>
 </div>
 ';
