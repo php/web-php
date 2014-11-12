@@ -1,14 +1,10 @@
 <?php
-// $Id$
-
 /*
-
  This script handles all 401, 403 and 404 error redirects,
  and some directory requests (like /images). Uses the
  preferred language setting and the REQUEST_URI to guess what
  page should be displayed. In case there is no page that can
  be displayed, the user is redirected to a search page.
-
 */
 
 // Ensure that our environment is set up
@@ -466,7 +462,7 @@ $external_redirects = array(
     "phptrunknews"=> "https://git.php.net/?p=php-src.git;a=blob_plain;f=NEWS;hb=refs/heads/master",
     "pear"        => "http://pear.php.net/",
     "bugs"        => "http://bugs.php.net/",
-    "bugstats"    => "http://bugs.php.net/bugstats.php",
+    "bugstats"    => "http://bugs.php.net/stats.php",
     "phpdochowto" => "http://doc.php.net/tutorial/",
     "rev"         => "http://doc.php.net/revcheck.php?p=graph&lang=$LANG",
     "release/5_3_0.php" => "/releases/5_3_0.php", // PHP 5.3.0 release announcement had a typo
