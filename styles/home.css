@@ -1,12 +1,10 @@
 /* Home Page */
 
 #intro p {
-  color:#fff;
   text-rendering: optimizeLegibility;
 }
 #intro p,
 #intro ul {
-    text-shadow:0 1px 2px rgba(0,0,0,.5);
     font-size:1.125rem;
 }
 
@@ -26,7 +24,6 @@
 
 #intro h3 {
   margin:1.5rem 0 0;
-  color:#E6E6E6;
 }
 #intro h3:after {
   display:none;
@@ -56,7 +53,6 @@
     white-space:nowrap;
 }
 #intro .download a {
-    color:#ccc;
     border:0;
 }
 #intro .download a:hover,
@@ -65,14 +61,10 @@
 }
 
 #intro .download a.download-link {
-    color:#fff;
     width: 50px;
     display: inline-block;
 }
 
-#layout-content {
-  border-right:.25rem solid #666;
-}
 .home .newsentry .newstitle a:after  {
   content:"\20 \00bb";
   color:#666;
