@@ -1479,17 +1479,19 @@ div.soft-deprecation-notice blockquote.sidebar {
 #breadcrumbs {
   -moz-box-sizing:border-box;
   box-sizing:border-box;
-  margin:0 auto;
   padding:.75rem 0;
   font-size:.875rem;
   display:none;
+}
+#breadcrumbs #breadcrumbs-inner {
+  margin:0 auto;
 }
 #breadcrumbs ul {
     margin:0;
     padding:0 .5rem 0 1.5rem;
     overflow: hidden;
 }
-#breadcrumbs div {
+#breadcrumbs-inner div {
     padding:0 1.5rem;
 }
 #breadcrumbs li {
@@ -1559,7 +1561,7 @@ div.soft-deprecation-notice blockquote.sidebar {
 @media (min-width: 1200px) {
   #intro .container,
   .navbar-inner,
-  #breadcrumbs,
+  #breadcrumbs-inner,
   #goto div,
   #trick div,
   #layout,
@@ -1570,7 +1572,7 @@ div.soft-deprecation-notice blockquote.sidebar {
 @media (min-width: 1500px) {
   #intro .container,
   .navbar-inner,
-  #breadcrumbs,
+  #breadcrumbs-inner,
   #goto div,
   #trick div,
   #layout, 
