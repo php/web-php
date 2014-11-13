@@ -64,7 +64,7 @@
     display: block;
     float: right;
     font-size: 1.6em;
-    font-weight: bold;
+    font-weight: bolder;
     margin-left: 0.4375em;
     margin-bottom: 0.4375em;
     padding: 0.4em;
@@ -127,7 +127,7 @@
 }
 
 .calendar-day .vevent .url b {
-    font-weight: bold;
+    font-weight: bolder;
 }
 
 .calendar-day .vevent tr.description td {

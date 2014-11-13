@@ -43,28 +43,6 @@
 }
 
 @font-face{
-    font-family: 'Fira Sans';
-    src: url('/fonts/Fira/eot/FiraSans-SemiBold.eot');
-    src: local('/fonts/Fira/Fira Sans SemiBold'),
-         url('/fonts/Fira/eot/FiraSans-SemiBold.eot') format('embedded-opentype'),
-         url('/fonts/Fira/woff/FiraSans-SemiBold.woff') format('woff'),
-         url('/fonts/Fira/ttf/FiraSans-SemiBold.ttf') format('truetype');
-    font-weight: 600;
-    font-style: normal;
-}
-
-@font-face{
-    font-family: 'Fira Sans';
-    src: url('/fonts/Fira/eot/FiraSans-SemiBoldItalic.eot');
-    src: local('/fonts/Fira/Fira Sans SemiBold Italic'),
-         url('/fonts/Fira/eot/FiraSans-SemiBoldItalic.eot') format('embedded-opentype'),
-         url('/fonts/Fira/woff/FiraSans-SemiBoldItalic.woff') format('woff'),
-         url('/fonts/Fira/ttf/FiraSans-SemiBoldItalic.ttf') format('truetype');
-    font-weight: 600;
-    font-style: italic;
-}
-
-@font-face{
     font-family: 'Fira Mono';
     src: url('/fonts/Fira/eot/FiraMono-Regular.eot');
     src: local('/fonts/Fira/Fira Mono'),
@@ -82,7 +60,7 @@
          url('/fonts/Fira/eot/FiraMono-Bold.eot') format('embedded-opentype'),
          url('/fonts/Fira/woff/FiraMono-Bold.woff') format('woff'),
          url('/fonts/Fira/ttf/FiraMono-Bold.ttf') format('truetype');
-    font-weight: 600;
+    font-weight: 700;
     font-style: normal;
 }
 
