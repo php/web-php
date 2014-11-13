@@ -2,6 +2,39 @@
 $OLDRELEASES = array (
   5 => 
   array (
+    '5.5.18' => 
+    array (
+      'announcement' => 
+      array (
+        'English' => '/releases/5_5_18.php',
+      ),
+      'source' => 
+      array (
+        0 => 
+        array (
+          'filename' => 'php-5.5.18.tar.bz2',
+          'name' => 'PHP 5.5.18 (tar.bz2)',
+          'md5' => '6f0d581ed35a2c65188a9513ccc142a0',
+          'date' => '16 Oct 2014',
+        ),
+        1 => 
+        array (
+          'filename' => 'php-5.5.18.tar.gz',
+          'name' => 'PHP 5.5.18 (tar.gz)',
+          'md5' => '53cdc7589cb301871888c7776eed3cf9',
+          'date' => '16 Oct 2014',
+        ),
+        2 => 
+        array (
+          'filename' => 'php-5.5.18.tar.xz',
+          'name' => 'PHP 5.5.18 (tar.xz)',
+          'md5' => '3984f32985842afebe5795457e26931f',
+          'date' => '16 Oct 2014',
+        ),
+      ),
+      'date' => '16 Oct 2014',
+      'museum' => false,
+    ),
     '5.6.1' => 
     array (
       'announcement' => 

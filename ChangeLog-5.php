@@ -8,6 +8,61 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 
 <h1>PHP 5 ChangeLog</h1>
 
+<section class="version" id="5.5.19"><!-- {{{ 5.5.19 -->
+<h3>Version 5.5.19</h3>
+<?php release_date('13-Nov-2014'); ?>
+<ul><li>Core:
+<ul>
+  <li><?php bugfix(68095); ?> (AddressSanitizer reports a heap buffer overflow in 
+    php_getopt()).</li>
+  <li><?php bugfix(68118); ?> ($a-&gt;foo .= 'test'; can leave $a-&gt;foo undefined).</li>
+  <li><?php bugfix(68129); ?> (parse_url() - incomplete support for empty usernames
+    and passwords).</li>
+  <li><?php bugfix(68365); ?> (zend_mm_heap corrupted after memory overflow in
+    zend_hash_copy).</li>
+</ul></li>
+<li>cURL:
+<ul>
+  <li>Add CURL_SSLVERSION_TLSv1_0, CURL_SSLVERSION_TLSv1_1, and 
+    CURL_SSLVERSION_TLSv1_2 constants if supported by libcurl.</li>
+</ul></li>
+<li>Fileinfo:
+<ul>
+  <li><?php bugfix(66242); ?> (libmagic: don't assume char is signed).</li>
+  <li><?php bugfix(68283); ?> (fileinfo: out-of-bounds read in elf note headers).
+    (CVE-2014-3710).</li>
+</ul></li>
+<li>FPM:
+<ul>
+  <li>Implemented FR #55508 (listen and listen.allowed_clients should take IPv6
+    addresses.</li>
+</ul></li>
+<li>GD:
+<ul>
+  <li><?php bugfix(65171); ?>imagescale() fails without height param</li>
+</ul></li>
+<li>GMP:
+<ul>
+  <li><?php bugfix(63595); ?> (GMP memory management conflicts with other libraries
+    using GMP).</li>
+</ul></li>
+<li>Mysqli:
+<ul>
+  <li><?php bugfix(68114); ?> (linker error on some OS X machines with fixed width
+    decimal support).</li>
+</ul></li>
+<li>ODBC:
+<ul>
+  <li><?php bugfix(68087); ?> (ODBC not correctly reading DATE column when preceded by
+    a VARCHAR column)</li>
+</ul></li>
+<li>SPL:
+<ul>
+  <li><?php bugfix(68128); ?> (Regression in RecursiveRegexIterator)</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
 <section class="version" id="5.6.2"><!-- {{{ 5.6.2 -->
 <h3>Version 5.6.2</h3>
 <?php release_date('16-Oct-2014'); ?>
