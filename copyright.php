@@ -51,4 +51,11 @@ site_header("Copyright", array("current" => "footer"));
  <a href="http://php.net/">the PHP homepage</a>.
 </p>
 
+<h2>PHP Manual</h2>
+
+<p>
+ The PHP Manual is covered by a separate license, which is available
+ <a href="/manual/en/copyright.php">from within the manual itself</a>.
+</p>
+
 <?php site_footer();
