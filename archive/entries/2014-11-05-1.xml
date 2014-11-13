@@ -11,9 +11,64 @@
   <link href="https://phpconference.com/2015se/en" rel="via" type="text/html"/>
   <content type="xhtml">
     <div xmlns="http://www.w3.org/1999/xhtml">
-     <p>The International PHP Conference is a globally recognized event for PHP developers, webworkers, IT managers and everyone interested in web technology.</p>
-     
-     <p>Once again, the conference will explore key topics and core technologies for developers and decision makers. We will show you how to scale your applications, explain the details of Continuous Integration or evaluate different approaches to NoSQL. Attendees will have the opportunity to meet with speakers, core developers and consultants, and there are often opportunities to evaluate your code. Community and enterprise projects profit from our international reputation and impulses given from the developer community.</p>
+	<p>The International PHP Conference is a globally recognized event for PHP developers, webworkers, IT managers and everyone interested in web technology.</p>
+	<p>Once again, the conference will explore key topics and core technologies for developers and decision makers. We will show you how to scale your applications, explain the details of Continuous Integration or evaluate different approaches to NoSQL. Attendees will have the opportunity to meet with speakers, core developers and consultants, and there are often opportunities to evaluate your code. Community and enterprise projects profit from our international reputation and impulses given from the developer community.
+	</p>
+	<p>
+	    Below is the information for our Call for Papers, the deadline is November 24th, 2014:
+	</p>
+	<p>
+	    We are already planning for the IPC Spring 2015 which will take place
+	    in Berlin again. We hope that next week's
+	    conference will give you some inspiration for new talks for the next
+	    conference. 
+	</p>
+	<p>
+	    We are very much looking forward to your submissions for workshops,
+	    sessions &amp; keynotes, which can be either in English or in German. Our
+	    goal is to provide at least 60% of the whole program of the integrated
+	    conference in English, so that our international friends have plenty
+	    of sessions to choose from. Please see below our list of topics which
+	    we would like to have covered, but please feel free to add additional
+	    topics, if you believe they fit into the scope of the conference.
+	    We are looking forward to your exciting submissions and wish you all
+	    the best!
+	</p>
+	<p>
+	Basic facts:
+	<ul>
+	    <li> Date: June 7th - 10th, 2015 </li>
+	    <li> Location: Berlin</li>
+	    <li> Deadline for Submissions: November 24th, 2014</li>
+	    <li> URL for Submissions: <a href="conftool.sandsmedia.com">conftool.sandsmedia.com</a> </li>
+	</ul>
+	<br/>
+	Topics:
+	<ul>
+	    <li>Core PHP /PHPNG</li>
+	    <li>PHP Frameworks</li>
+	    <li>PHP Scaling &amp; Performance</li>
+	    <li>PHP Security</li>
+	    <li>PHP Testing &amp; Quality</li>
+	    <li>HHVM &amp; Hack</li>
+	    <li>Architecture</li>
+	    <li>JavaScript / ECMAScript 6</li>
+	    <li>JavaScript  Frameworks</li>
+	    <li>JavaScript Performance &amp; Security</li>
+	    <li>Web APIs &amp; Services</li>
+	    <li>Agile</li>
+	    <li>Continuous Delivery</li>
+	    <li>DevOps</li>
+	    <li>Cloud</li>
+	    <li>Data Stores</li>
+	</ul>
+	</p>
+	<p>
+	    We are looking forward to your proposals!
+	    For inquiries and suggestions, please do not hesitate to contact us!
+	    Yours, 
+	    The Program Team of the International PHP Conference 
+	</p>
     </div>
   </content>
 </entry>
