@@ -8,6 +8,73 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 
 <h1>PHP 5 ChangeLog</h1>
 
+<section class="version" id="5.6.3"><!-- {{{ 5.6.3 -->
+<h3>Version 5.6.3</h3>
+<?php release_date('13-Nov-2014'); ?>
+<ul><li>Core:
+<ul>
+  <li>Implemented 64-bit format codes for pack() and unpack().</li>
+  <li><?php bugfix(51800); ?> (proc_open on Windows hangs forever).</li>
+  <li><?php bugfix(67633); ?> (A foreach on an array returned from a function not doing copy-on-write).</li>
+  <li><?php bugfix(67739); ?> (Windows 8.1/Server 2012 R2 OS build number reported as 6.2 (instead of 6.3)).</li>
+  <li><?php bugfix(67949); ?> (DOMNodeList elements should be accessible through array notation) (Florian)</li>
+  <li><?php bugfix(68095); ?> (AddressSanitizer reports a heap buffer overflow in php_getopt()).</li>
+  <li><?php bugfix(68118); ?> ($a-&gt;foo .= 'test'; can leave $a-&gt;foo undefined).</li>
+  <li><?php bugfix(68129); ?> (parse_url() - incomplete support for empty usernames and passwords) (Tjerk)</li>
+  <li><?php bugfix(68365); ?> (zend_mm_heap corrupted after memory overflow in zend_hash_copy).</li>
+</ul></li>
+<li>CURL:
+<ul>
+  <li>Add CURL_SSLVERSION_TLSv1_0, CURL_SSLVERSION_TLSv1_1, and CURL_SSLVERSION_TLSv1_2 constants if supported by libcurl (Rasmus)</li>
+</ul></li>
+<li>Fileinfo:
+<ul>
+  <li><?php bugfix(66242); ?> (libmagic: don't assume char is signed).</li>
+  <li><?php bugfix(68224); ?> (buffer-overflow in libmagic/readcdf.c caught by AddressSanitizer).</li>
+  <li><?php bugfix(68283); ?> (fileinfo: out-of-bounds read in elf note headers).</li>
+</ul></li>
+<li>FPM:
+<ul>
+  <li><?php bugfix(65641); ?> (PHP-FPM incorrectly defines the SCRIPT_NAME variable when using Apache, mod_proxy-fcgi and ProxyPass).</li>
+  <li>Implemented FR <?php bugl(55508); ?> (listen and listen.allowed_clients should take IPv6 addresses).</li>
+</ul></li>
+<li>GD:
+<ul>
+  <li><?php bugfix(65171); ?> (imagescale() fails without height param).</li>
+</ul></li>
+<li>GMP:
+<ul>
+  <li>Implemented gmp_random_range() and gmp_random_bits().</li>
+  <li><?php bugfix(63595); ?> (GMP memory management conflicts with other libraries using GMP).</li>
+</ul></li>
+<li>Mysqli:
+<ul>
+  <li><?php bugfix(68114); ?> (linker error on some OS X machines with fixed width decimal support) (Keyur Govande)</li>
+</ul></li>
+<li>ODBC:
+<ul>
+  <li><?php bugfix(68087); ?> (ODBC not correctly reading DATE column when preceded by a VARCHAR column) (Keyur Govande)</li>
+</ul></li>
+<li>OpenSSL:
+<ul>
+  <li><?php bugfix(68074); ?> (Allow to use system cipher list instead of hardcoded value).</li>
+</ul></li>
+<li>PDO_pgsql:
+<ul>
+  <li><?php bugfix(68199); ?> (PDO::pgsqlGetNotify doesn't support NOTIFY payloads) (Matteo, Alain Laporte)</li>
+  <li><?php bugfix(66584); ?> (Segmentation fault on statement deallocation) (Matteo)</li>
+</ul></li>
+<li>Reflection:
+<ul>
+  <li><?php bugfix(68103); ?> (Duplicate entry in Reflection for class alias).</li>
+</ul></li>
+<li>SPL:
+<ul>
+  <li><?php bugfix(68128); ?> (Regression in RecursiveRegexIterator) (Tjerk)</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
 <section class="version" id="5.5.19"><!-- {{{ 5.5.19 -->
 <h3>Version 5.5.19</h3>
 <?php release_date('13-Nov-2014'); ?>
