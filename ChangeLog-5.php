@@ -152,6 +152,28 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 </ul>
 <!-- }}} --></section>
 
+<section class="version" id="5.4.35"><!-- {{{ 5.4.35 -->
+<h3>Version 5.4.35</h3>
+<b>13-Nov-2014</b>
+<ul><li>Core:
+<ul>
+  <li><?php bugfix(68365); ?> (zend_mm_heap corrupted after memory overflow in zend_hash_copy).</li>
+</ul></li>
+<li>Fileinfo:
+<ul>
+  <li><?php bugfix(68283); ?> (fileinfo: out-of-bounds read in elf note headers). (CVE-2014-3710)</li>
+</ul></li>
+<li>GMP:
+<ul>
+  <li><?php bugfix(63595); ?> (GMP memory management conflicts with other libraries using GMP).</li>
+</ul></li>
+<li>PDO_pgsql:
+<ul>
+  <li><?php bugfix(66584); ?> (Segmentation fault on statement deallocation).</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
 <section class="version" id="5.5.18"><!-- {{{ 5.5.18 -->
 <h3>Version 5.5.18</h3>
 <?php release_date('16-Oct-2014'); ?>
