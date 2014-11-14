@@ -1786,6 +1786,44 @@ $OLDRELEASES = array (
       'date' => '01 March 2012',
       'museum' => true,
     ),
+    '5.3.29' => 
+    array (
+      'announcement' => 
+      array (
+        'English' => '/releases/5_3_29.php',
+      ),
+      'source' => 
+      array (
+        0 => 
+        array (
+          'filename' => 'php-5.3.29.tar.bz2',
+          'name' => 'PHP 5.3.29 (tar.bz2)',
+          'md5' => '9469e240cbe6ac865aeaec89b253dd30',
+          'date' => '14 Aug 2014',
+        ),
+        1 => 
+        array (
+          'filename' => 'php-5.3.29.tar.gz',
+          'name' => 'PHP 5.3.29 (tar.gz)',
+          'md5' => 'ebfa96ea636b2a7ece71e78ad116a338',
+          'date' => '14 Aug 2014',
+        ),
+        2 => 
+        array (
+          'filename' => 'php-5.3.29.tar.xz',
+          'name' => 'PHP 5.3.29 (tar.xz)',
+          'md5' => 'dcff9c881fe436708c141cfc56358075',
+          'date' => '14 Aug 2014',
+        ),
+        3 => 
+        array (
+          'link' => 'http://windows.php.net/download/#php-5.3',
+          'name' => 'Windows 5.3.29 binaries and source',
+        ),
+      ),
+      'date' => '14 Aug 2014',
+      'museum' => false,
+    ),
     '5.3.28' => 
     array (
       'announcement' => 

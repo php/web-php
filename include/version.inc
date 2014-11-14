@@ -48,19 +48,6 @@ $PHP_5_4_MD5     = array(
                        "tar.gz"        => "da7bed3b65033c7f096c96572cd9ea45",
 );
 
-/* PHP 5.3 Release */
-$PHP_5_3_RC      = false; //'5.3.29RC1'; // Current RC version (e.g., '5.6.7RC1') or false
-$PHP_5_3_RC_DATE = '31 Jul 2013';
-
-$PHP_5_3_VERSION         = "5.3.29";
-$PHP_5_3_DATE            = "14 Aug 2014";
-
-$PHP_5_3_MD5     = array(
-                       "tar.bz2"       => "9469e240cbe6ac865aeaec89b253dd30",
-                       "tar.gz"        => "ebfa96ea636b2a7ece71e78ad116a338",
-                       "tar.xz"        => "dcff9c881fe436708c141cfc56358075"
-);
-
 $RELEASES = array(
     5 => array(
         $PHP_5_6_VERSION => array(
@@ -123,24 +110,6 @@ $RELEASES = array(
                     "name"     => "PHP $PHP_5_4_VERSION (tar.gz)",
                     "md5"      => $PHP_5_4_MD5["tar.gz"],
                     "date"     => $PHP_5_4_DATE,
-                ),
-            ),
-        ),
-        $PHP_5_3_VERSION => array(
-            "announcement" => true,
-            "eol" => true,
-            "source" => array(
-                array(
-                    "filename" => "php-$PHP_5_3_VERSION.tar.bz2",
-                    "name"     => "PHP $PHP_5_3_VERSION (tar.bz2)",
-                    "md5"      => $PHP_5_3_MD5["tar.bz2"],
-                    "date"     => $PHP_5_3_DATE,
-                ),
-                array(
-                    "filename" => "php-$PHP_5_3_VERSION.tar.gz",
-                    "name"     => "PHP $PHP_5_3_VERSION (tar.gz)",
-                    "md5"      => $PHP_5_3_MD5["tar.gz"],
-                    "date"     => $PHP_5_3_DATE,
                 ),
             ),
         ),
