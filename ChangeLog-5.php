@@ -1365,7 +1365,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 
 <section class="version" id="5.5.12"><!-- {{{ 5.5.12 -->
 <h3>Version 5.5.12</h3>
-<?php release_date('1-May-2014'); ?>
+<?php release_date('01-May-2014'); ?>
 <ul><li>Core:
 <ul>
   <li><?php bugfix(61019); ?> (Out of memory on command stream_get_contents).</li>
@@ -1502,7 +1502,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 
 <section class="version" id="5.5.11"><!-- {{{ 5.5.11 -->
 <h3>Version 5.5.11</h3>
-<?php release_date('3-Apr-2014'); ?>
+<?php release_date('03-Apr-2014'); ?>
 <ul><li>Core:
 <ul>
   <li><?php bugfix(60602); ?> (proc_open() changes environment array).</li>
@@ -1606,7 +1606,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 
 <section class="version" id="5.5.10"><!-- {{{ 5.5.10 -->
 <h3>Version 5.5.10</h3>
-<?php release_date('6-Mar-2014'); ?>
+<?php release_date('06-Mar-2014'); ?>
 <ul><li>Core:
 <ul>
   <li><?php bugfix(66574); ?> (Allow multiple paths in php_ini_scanned_path).</li>
@@ -1678,7 +1678,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 
 <section class="version" id="5.5.9"><!-- {{{ 5.5.9 -->
 <h3>Version 5.5.9</h3>
-<?php release_date('6-Feb-2014'); ?>
+<?php release_date('06-Feb-2014'); ?>
 <ul><li>Core:
 <ul>
   <li><?php bugfix(66509); ?> (copy() arginfo has changed starting from 5.4).</li>
@@ -1746,7 +1746,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 
 <section class="version" id="5.5.8"><!-- {{{ 5.5.8 -->
 <h3>Version 5.5.8</h3>
-<?php release_date('9-Jan-2014'); ?>
+<?php release_date('09-Jan-2014'); ?>
 <ul><li>Core:
 <ul>
   <li>Disallowed JMP into a finally block.</li>
@@ -12186,7 +12186,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 
 <section class="version" id="5.0.0RC3"><!-- {{{ 5.0.0RC3 -->
 <h3>Version 5.0.0 Release Candidate 3</h3>
-<?php release_date('8-Jun-2004'); ?>
+<?php release_date('08-Jun-2004'); ?>
 <ul>
 <li>Moved the PDFLib extension to PECL. (Wez)</li>
 <li>Added MySQL 4.1.2-alpha and 4.1.3-beta support to MySQLI extension. (Georg)</li>
