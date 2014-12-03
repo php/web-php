@@ -132,7 +132,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 
 <section class="version" id="5.4.35"><!-- {{{ 5.4.35 -->
 <h3>Version 5.4.35</h3>
-<b>13-Nov-2014</b>
+<?php release_date('13-Nov-2014'); ?>
 <ul><li>Core:
 <ul>
   <li><?php bugfix(68365); ?> (zend_mm_heap corrupted after memory overflow in zend_hash_copy).</li>
@@ -224,7 +224,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 
 <section class="version" id="5.4.34"><!-- {{{ 5.4.34 -->
 <h3>Version 5.4.34</h3>
-<b>16-Oct-2014</b>
+<?php release_date('16-Oct-2014'); ?>
 <ul><li>Fileinfo:
 <ul>
   <li><?php bugfix(66242); ?> (libmagic: don't assume char is signed).</li>
@@ -364,7 +364,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 
 <section class="version" id="5.4.33"><!-- {{{ 5.4.33 -->
 <h3>Version 5.4.33</h3>
-<b>18-Sep-2014</b>
+<?php release_date('18-Sep-2014'); ?>
 <ul><li>Core:
 <ul>
   <li><?php bugfix(47358); ?> (glob returns error, should be empty array()).</li>
@@ -916,7 +916,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 
 <section class="version" id="5.4.32"><!-- {{{ 5.4.32 -->
 <h3>Version 5.4.32</h3>
-<b>21-Aug-2014</b>
+<?php release_date('21-Aug-2014'); ?>
 <ul><li>Core:
 <ul>
   <li><?php bugfix(67717); ?> (segfault in dns_get_record) (CVE-2014-3597).</li>
@@ -1088,7 +1088,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 
 <section class="version" id="5.4.31"><!-- {{{ 5.4.31 -->
 <h3>Version 5.4.31</h3>
-<b>24-Jul-2014</b>
+<?php release_date('24-Jul-2014'); ?>
 <ul><li>Core:
 <ul>
   <li><?php bugfix(67428); ?> (header('Location: foo') will override a 308-399 response code).</li>
@@ -1203,7 +1203,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 
 <section class="version" id="5.4.30"><!-- {{{ 5.4.30 -->
 <h3>Version 5.4.30</h3>
-<b>26-Jun-2014</b>
+<?php release_date('26-Jun-2014'); ?>
 <ul><li>Core:
 <ul>
   <li>Fixed BC break introduced by patch for bug <?php bugl(67072); ?>.</li>
@@ -1324,7 +1324,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 
 <section class="version" id="5.4.29"><!-- {{{ 5.4.29 -->
 <h3>Version 5.4.29</h3>
-<b>29-May-2014</b>
+<?php release_date('29-May-2014'); ?>
 <ul><li>COM:
 <ul>
   <li><?php bugfix(66431); ?> (Special Character via COM Interface (CP_UTF8)).</li>
@@ -1441,7 +1441,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 
 <section class="version" id="5.4.28"><!-- {{{ 5.4.28 -->
 <h3>Version 5.4.28</h3>
-<b>01-May-2014</b>
+<?php release_date('01-May-2014'); ?>
 <ul><li>Core:
 <ul>
   <li><?php bugfix(61019); ?> (Out of memory on command stream_get_contents).</li>
@@ -1571,7 +1571,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 
 <section class="version" id="5.4.27"><!-- {{{ 5.4.27 -->
 <h3>Version 5.4.27</h3>
-<b>03-Apr-2014</b>
+<?php release_date('03-Apr-2014'); ?>
 <ul><li>Core:
 <ul>
   <li><?php bugfix(60602); ?> (proc_open() changes environment array)</li>
