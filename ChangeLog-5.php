@@ -130,28 +130,6 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 </ul>
 <!-- }}} --></section>
 
-<section class="version" id="5.6.2"><!-- {{{ 5.6.2 -->
-<h3>Version 5.6.2</h3>
-<?php release_date('16-Oct-2014'); ?>
-<ul><li>Core:
-<ul>
-  <li><?php bugfix(68044); ?> (Integer overflow in unserialize() (32-bits only)). (CVE-2014-3669)</li>
-</ul></li>
-<li>cURL:
-<ul>
-  <li><?php bugfix(68089); ?> (NULL byte injection - cURL lib).</li>
-</ul></li>
-<li>EXIF:
-<ul>
-  <li><?php bugfix(68113); ?> (Heap corruption in exif_thumbnail()). (CVE-2014-3670)</li>
-</ul></li>
-<li>XMLRPC:
-<ul>
-  <li><?php bugfix(68027); ?> (Global buffer overflow in mkgmtime() function). (CVE-2014-3668)</li>
-</ul></li>
-</ul>
-<!-- }}} --></section>
-
 <section class="version" id="5.4.35"><!-- {{{ 5.4.35 -->
 <h3>Version 5.4.35</h3>
 <b>13-Nov-2014</b>
@@ -170,6 +148,28 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 <li>PDO_pgsql:
 <ul>
   <li><?php bugfix(66584); ?> (Segmentation fault on statement deallocation).</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
+<section class="version" id="5.6.2"><!-- {{{ 5.6.2 -->
+<h3>Version 5.6.2</h3>
+<?php release_date('16-Oct-2014'); ?>
+<ul><li>Core:
+<ul>
+  <li><?php bugfix(68044); ?> (Integer overflow in unserialize() (32-bits only)). (CVE-2014-3669)</li>
+</ul></li>
+<li>cURL:
+<ul>
+  <li><?php bugfix(68089); ?> (NULL byte injection - cURL lib).</li>
+</ul></li>
+<li>EXIF:
+<ul>
+  <li><?php bugfix(68113); ?> (Heap corruption in exif_thumbnail()). (CVE-2014-3670)</li>
+</ul></li>
+<li>XMLRPC:
+<ul>
+  <li><?php bugfix(68027); ?> (Global buffer overflow in mkgmtime() function). (CVE-2014-3668)</li>
 </ul></li>
 </ul>
 <!-- }}} --></section>
