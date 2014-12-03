@@ -3288,7 +3288,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 
 <section class="version" id="5.4.14"><!-- {{{ 5.4.14 -->
 <h3>Version 5.4.14</h3>
-<?php echo release_date('11-April-2013'); ?>
+<?php release_date('11-April-2013'); ?>
 <ul>
 <li>Core:
 <ul>
@@ -3355,7 +3355,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 
 <section class="version" id="5.4.13"><!-- {{{ 5.4.13 -->
 <h3>Version 5.4.13</h3>
-<?php echo release_date('14-March-2013'); ?>
+<?php release_date('14-March-2013'); ?>
 <ul>
 <li>Core:
 <ul>
@@ -3407,7 +3407,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 
 <section class="version" id="5.3.23"><!-- {{{ 5.3.23 -->
 <h3>Version 5.3.23</h3>
-<?php echo release_date('14-March-2013'); ?>
+<?php release_date('14-March-2013'); ?>
 <ul>
 <li>Phar:
 <ul>
@@ -3431,7 +3431,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 
 <section class="version" id="5.4.12"><!-- {{{ 5.4.12 -->
 <h3>Version 5.4.12</h3>
-<?php echo release_date('21-February-2013'); ?>
+<?php release_date('21-February-2013'); ?>
 <ul>
 <li>Core:
 <ul>
@@ -3495,7 +3495,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 
 <section class="version" id="5.3.22"><!-- {{{ 5.3.22 -->
 <h3>Version 5.3.22</h3>
-<?php echo release_date('21-February-2013'); ?>
+<?php release_date('21-February-2013'); ?>
 <ul>
 <li>Zend Engine:
 <ul>
@@ -3535,7 +3535,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 
 <section class="version" id="5.4.11"><!-- {{{ 5.4.11 -->
 <h3>Version 5.4.11</h3>
-<?php echo release_date('17-January-2013'); ?>
+<?php release_date('17-January-2013'); ?>
 <ul>
 <li>Core:
 <ul>
@@ -3580,7 +3580,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 
 <section class="version" id="5.3.21"><!-- {{{ 5.3.21 -->
 <h3>Version 5.3.21</h3>
-<?php echo release_date('17-January-2013'); ?>
+<?php release_date('17-January-2013'); ?>
 <ul>
 <li>Zend Engine:
 <ul>
@@ -3603,7 +3603,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 
 <section class="version" id="5.4.10"><!-- {{{ 5.4.10 -->
 <h3>Version 5.4.10</h3>
-<?php echo release_date('20-December-2012'); ?>
+<?php release_date('20-December-2012'); ?>
 <ul>
 <li>Core:
 <ul>
@@ -3704,7 +3704,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 
 <section class="version" id="5.3.20"><!-- {{{ 5.3.20 -->
 <h3>Version 5.3.20</h3>
-<?php echo release_date('20-December-2012'); ?>
+<?php release_date('20-December-2012'); ?>
 <ul>
 <li>Zend Engine:
 <ul>
@@ -3784,7 +3784,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 
 <section class="version" id="5.4.9"><!-- {{{ 5.4.9 -->
 <h3>Version 5.4.9</h3>
-<?php echo release_date('22-November-2012'); ?>
+<?php release_date('22-November-2012'); ?>
 <ul>
 <li>Core:
 <ul>
@@ -3879,7 +3879,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 
 <section class="version" id="5.3.19"><!-- {{{ 5.3.19 -->
 <h3>Version 5.3.19</h3>
-<?php echo release_date('22-November-2012'); ?>
+<?php release_date('22-November-2012'); ?>
 <ul>
 <li>Core:
 <ul>
@@ -3956,7 +3956,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 
 <section class="version" id="5.4.8"><!-- {{{ 5.4.8 -->
 <h3>Version 5.4.8</h3>
-<?php echo release_date('18-October-2012'); ?>
+<?php release_date('18-October-2012'); ?>
 <ul>
 <li>CLI server
 <ul>
@@ -4062,7 +4062,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 
 <section class="version" id="5.3.18"><!-- {{{ 5.3.18 -->
 <h3>Version 5.3.18</h3>
-<?php echo release_date('18-October-2012'); ?>
+<?php release_date('18-October-2012'); ?>
 <ul>
 <li>Core
 <ul>
@@ -4118,7 +4118,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 
 <section class="version" id="5.4.7"><!-- {{{ 5.4.7 -->
 <h3>Version 5.4.7</h3>
-<?php echo release_date('13-September-2012'); ?>
+<?php release_date('13-September-2012'); ?>
 <ul>
 <li>Core
 <ul>
@@ -4223,7 +4223,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 
 <section class="version" id="5.3.17"><!-- {{{ 5.3.17 -->
 <h3>Version 5.3.17</h3>
-<?php echo release_date('13-September-2012'); ?>
+<?php release_date('13-September-2012'); ?>
 <ul>
 <li>Core
 <ul>
@@ -4295,7 +4295,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 
 <section class="version" id="5.4.6"><!-- {{{ 5.4.6 -->
 <h3>Version 5.4.6</h3>
-<?php echo release_date('16-August-2012'); ?>
+<?php release_date('16-August-2012'); ?>
 <ul>
 <li>CLI Server
 <ul>
@@ -4394,7 +4394,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 
 <section class="version" id="5.3.16"><!-- {{{ 5.3.16 -->
 <h3>Version 5.3.16</h3>
-<?php echo release_date('16-August-2012'); ?>
+<?php release_date('16-August-2012'); ?>
 <ul>
 <li>Core
 <ul>
@@ -4459,7 +4459,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 
 <section class="version" id="5.4.5"><!-- {{{ 5.4.5 -->
 <h3>Version 5.4.5</h3>
-<?php echo release_date('19-July-2012'); ?>
+<?php release_date('19-July-2012'); ?>
 <ul>
 <li>Core
 <ul>
@@ -4583,7 +4583,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 
 <section class="version" id="5.3.15"><!-- {{{ 5.3.15 -->
 <h3>Version 5.3.15</h3>
-<?php echo release_date('19-July-2012'); ?>
+<?php release_date('19-July-2012'); ?>
 <ul>
 <li>Zend Engine
 <ul>
@@ -4693,7 +4693,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 
 <section class="version" id="5.4.4"><!-- {{{ 5.4.4 -->
 <h3>Version 5.4.4</h3>
-<?php echo release_date('06-June-2012'); ?>
+<?php release_date('06-June-2012'); ?>
 <ul>
 <li>CLI SAPI
 <ul>
@@ -4819,7 +4819,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 
 <section class="version" id="5.3.14"><!-- {{{ 5.3.14 -->
 <h3>Version 5.3.14</h3>
-<?php echo release_date('06-June-2012'); ?>
+<?php release_date('06-June-2012'); ?>
 <ul>
 <li>CLI SAPI
 <ul>
