@@ -71,6 +71,9 @@ site_header("Downloads",
         </li>
       <?php endforeach; ?>
     </ul>
+    
+    <a href="http://windows.php.net/download#php-<?php echo urlencode($v); ?>">Windows downloads</a><br />
+    <br />
 
     <a href="#gpg-<?php echo $mver; ?>">GPG Keys for PHP <?php echo $mver; ?></a>
   </div>
