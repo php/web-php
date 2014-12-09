@@ -70,6 +70,11 @@ site_header("Downloads",
           <?php endif; ?>
         </li>
       <?php endforeach; ?>
+      <li>
+        <a href="http://windows.php.net/download#php-<?php echo urlencode($mver); ?>">
+          Windows downloads
+        </a>
+      </li>
     </ul>
 
     <a href="#gpg-<?php echo $mver; ?>">GPG Keys for PHP <?php echo $mver; ?></a>
