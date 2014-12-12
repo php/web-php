@@ -1,0 +1,139 @@
+/* Calendar navigation styles. */
+#calnav {
+    border-bottom: solid 0.25em #99C;
+    margin-bottom: 1.2em;
+}
+
+#calnav td {
+    vertical-align: middle;
+}
+
+#calnav td:first-child a:before {
+    content: "\ab\20";
+}
+
+#calnav td a {
+    background: #ddd;
+    border: 0;
+    color: #333;
+    padding: 0.6em 1em;
+    display: inline-block;
+}
+
+#calnav td a:hover {
+    background: #eee;
+}
+
+#calnav td b {
+    font-size: 1.25em;
+    font-weight: normal;
+}
+
+#calnav td:last-child a:after {
+    content: "\20\bb";
+}
+
+/* The actual monthly calendar. */
+#cal {
+    border-collapse: collapse;
+}
+
+#cal td, #cal th {
+    border: solid 1px #ccc;
+    padding: 0.7em;
+}
+
+/* Drop the left and right borders to match the manual. */
+#cal td:first-child, #cal th:first-child {
+    border-left: 0;
+}
+
+#cal td:last-child, #cal th:last-child {
+    border-right: 0;
+}
+
+#cal th {
+    font-size: 1.125em;
+    font-weight: normal;
+}
+
+#cal .day {
+    border: 0;
+    background: white;
+    color: #333;
+    display: block;
+    float: right;
+    font-size: 1.6em;
+    font-weight: bolder;
+    margin-left: 0.4375em;
+    margin-bottom: 0.4375em;
+    padding: 0.4em;
+    text-decoration: none;
+}
+
+#cal .event a {
+    display: block;
+    font-size: 0.8em;
+    padding: 0.4em 0;
+}
+
+#cal .event a:hover {
+    background: #ddd;
+}
+
+#cal .event:last-child a {
+    border-bottom: 0;
+}
+
+#cal .event:nth-child(2n) {
+    background: #efefef;
+}
+
+/* Event styling. */
+.vevent .url {
+    border: 0;
+    display: block;
+    color: #666;
+    font-size: 2em;
+    line-height: 1.5em;
+    margin-bottom: 0.8em;
+}
+
+.vevent .url b {
+    font-weight: normal;
+}
+
+/* Single day view: let's try putting the events into columns. */
+.calendar-day .vevent {
+    float: left;
+    width: 33%;
+    margin-bottom: 1.5em;
+}
+
+.calendar-day .vevent:nth-child(3n+2) {
+    clear: left;
+}
+
+.calendar-day .vevent td {
+    background: #eee;
+    border-right: solid 2.5em white;
+    padding: 0.4em;
+}
+
+.calendar-day .vevent .url {
+    border-bottom: solid 1px #99c;
+    color: #3f438d;
+    font-size: 1em;
+}
+
+.calendar-day .vevent .url b {
+    font-weight: bolder;
+}
+
+.calendar-day .vevent tr.description td {
+    padding-top: 1.5em;
+}
+
+.calendar-day section > br {
+    display: none;
+}

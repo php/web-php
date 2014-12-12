@@ -3,7 +3,7 @@
 $_SERVER['BASE_PAGE'] = 'archive/2003.php';
 include_once $_SERVER['DOCUMENT_ROOT'] . '/include/prepend.inc';
 news_archive_sidebar();
-site_header("News Archive - 2003", array("generate_modified" => true));
+site_header("News Archive - 2003", array("cache" => true));
 ?>
 
 <h1>News Archive - 2003</h1>
@@ -12,7 +12,7 @@ site_header("News Archive - 2003", array("generate_modified" => true));
  Here are the most important news items we have published in 2003 on PHP.net.
 </p>
 
-<hr />
+<hr>
 
 <?php news_image("http://vancouver.php.net/", "vancouver_conference_2004.gif", "Vancouver PHP Conference 2004"); ?>
 
@@ -25,7 +25,7 @@ site_header("News Archive - 2003", array("generate_modified" => true));
  business professionals to share their experience with both students and PHP professionals in a series of talks.
 </p>
 
-<hr />
+<hr>
 
 <h1>PHP Community Site Project Announced</h1>
 <p>
@@ -44,7 +44,7 @@ site_header("News Archive - 2003", array("generate_modified" => true));
  advocates.
 </p>
 
-<hr />
+<hr>
 
 <?php news_image("http://www.php-mag.net/", "php-mag.gif", "International PHP Magazine"); ?>
 
@@ -60,7 +60,7 @@ site_header("News Archive - 2003", array("generate_modified" => true));
  <a href="http://www.php-mag.net/">the magazine's website</a>.
 </p>
 
-<hr />
+<hr>
 
 <?php news_image("http://conf.phpquebec.org/index.html", "conference_php_quebec.gif", "Conference PHP Quebec"); ?>
 
@@ -80,7 +80,7 @@ site_header("News Archive - 2003", array("generate_modified" => true));
  <a href="http://conf.phpquebec.org/main.php/fr/dvd2003/main">French</a>.
 </p>
 
-<hr />
+<hr>
 
 <?php news_image("http://mysql.com/events/uc2004", "mysqluc2004.png", "MySQL User Conference 2004"); ?>
 
@@ -101,7 +101,7 @@ site_header("News Archive - 2003", array("generate_modified" => true));
  place on April 14th to 16th in Orlando, Florida, USA.
 </p>
 
-<hr />
+<hr>
 
 <?php news_image("http://www.phpconf.hu/", "hu_conf.gif", "Second Hungarian PHP conference"); ?>
 <?php news_image("http://webdevmagazine.co.uk/conf/index_n.php", "bulgaria_2004.gif", "First Bulgarian PHP conference"); ?>
@@ -123,7 +123,7 @@ site_header("News Archive - 2003", array("generate_modified" => true));
  from PHP internals to web standard compliance. The event is exclusively in Hungarian.
 </p>
  
-<hr />
+<hr>
 
 <?php news_image("http://conf.phpquebec.org/index.html", "conference_php_quebec.gif", "Conference PHP Quebec"); ?>
 
@@ -155,7 +155,7 @@ site_header("News Archive - 2003", array("generate_modified" => true));
  href="http://conf.phpquebec.org/main.php/en/conf2004/conferencier">PHP Qu&eacute;bec</a>.
 </p>
 
-<hr />
+<hr>
 
 <h1>New function list auto completion</h1>
 <p>
@@ -172,7 +172,7 @@ site_header("News Archive - 2003", array("generate_modified" => true));
  as much information as possible (OS, Browser version, Javascript errors, etc..).
 </p>
 
-<hr />
+<hr>
 
 <h1>PHP 4.3.4 released!</h1>
 <p>
@@ -184,7 +184,7 @@ site_header("News Archive - 2003", array("generate_modified" => true));
  <a href="ChangeLog-4.php#4.3.4">ChangeLog</a>.
 </p>
 
-<hr />
+<hr>
 
 <h1>PHP 5.0.0 Beta 2 released</h1>
 <p>
@@ -223,7 +223,7 @@ site_header("News Archive - 2003", array("generate_modified" => true));
  changes are documented on <a href="/zend-engine-2.php">our PHP 5/Zend Engine 2 page</a>.
 </p>
 
-<hr />
+<hr>
 
 <?php news_image("http://www.afup.org/forumphp/", "afup2003.png", "Forum PHP"); ?>
 
@@ -239,7 +239,7 @@ site_header("News Archive - 2003", array("generate_modified" => true));
  (in French).
 </p>
 
-<hr />
+<hr>
 
 <?php news_image("http://www.directionphp.biz/", "directionphp.png", "Direction|PHP"); ?>
 
@@ -256,7 +256,7 @@ site_header("News Archive - 2003", array("generate_modified" => true));
  href="http://www.directionphp.biz/index.php">Direction|PHP website</a> (in French).
 </p>
 
-<hr />
+<hr>
 
 <?php news_image("http://www.apachecon.com/", "apachecon2003.jpg", "ApacheCon"); ?>
 
@@ -273,7 +273,7 @@ site_header("News Archive - 2003", array("generate_modified" => true));
  XML, Java, MySQL, and WebDAV.
 </p>
 
-<hr />
+<hr>
 
 <?php news_image("http://www.phpcruise.com/", "phpcruise.png", "php|cruise"); ?>
 
@@ -292,7 +292,7 @@ site_header("News Archive - 2003", array("generate_modified" => true));
  give away one free place on the cruise.
 </p>
 
-<hr />
+<hr>
 
 <?php news_image("http://www.zend.com/zend/php_survey_results.php", "zendtech_logo.gif", "Zend Technologies"); ?>
 
@@ -304,7 +304,7 @@ site_header("News Archive - 2003", array("generate_modified" => true));
  from thousands of PHP users around the world.  Thanks for all who contributed!
 </p>
 
-<hr />
+<hr>
 
 <?php news_image("http://weblabor.hu/php-doc-chm", "chmhelp.gif", "CHM"); ?>
 
@@ -320,7 +320,7 @@ site_header("News Archive - 2003", array("generate_modified" => true));
  homepage of this edition.</a>
 </p>
 
-<hr />
+<hr>
 
 <?php news_image("http://www.phpconference.de/2003/index_en.php", "international_conference_2003.gif", "International PHP Conference 2003"); ?>
 
@@ -340,7 +340,7 @@ site_header("News Archive - 2003", array("generate_modified" => true));
  website</a> for more information.
 </p>
 
-<hr />
+<hr>
 
 <?php news_image("http://servercentral.net", "server_central.gif", "Server Central"); ?>
 
@@ -354,7 +354,7 @@ site_header("News Archive - 2003", array("generate_modified" => true));
  Server Central!
 </p>
 
-<hr />
+<hr>
 
 <h1>European Open Source Development Threatened!</h1>
 <p>
@@ -367,7 +367,7 @@ site_header("News Archive - 2003", array("generate_modified" => true));
  the <a href="http://swpat.ffii.org/">campaign website</a> 
 </p>
  
-<hr />
+<hr>
 
 <?php news_image("http://www.php-con.com", "phpcon_2003.gif", "php{con west 2003"); ?>  
 
@@ -383,7 +383,7 @@ site_header("News Archive - 2003", array("generate_modified" => true));
  <a href="http://www.php-con.com">their website</a>
 </p>
 
-<hr />
+<hr>
 
 <h1>PHP 4.3.3 released!</h1>
 <p>
@@ -395,7 +395,7 @@ site_header("News Archive - 2003", array("generate_modified" => true));
  the <a href="ChangeLog-4.php#4.3.3">ChangeLog</a>.
 </p>
 
-<hr />
+<hr>
 
 <?php news_image("http://www.ActiveState.com/Corporate/ActiveAwards/", "activestate_logo.gif", "ActiveState"); ?>
 
@@ -419,7 +419,7 @@ site_header("News Archive - 2003", array("generate_modified" => true));
  to PHP development.
 </p>
 
-<hr />
+<hr>
 
 <h1>PHP.net news history</h1>
 
@@ -435,7 +435,7 @@ site_header("News Archive - 2003", array("generate_modified" => true));
  <a href="/history">the manual's history appendix</a>.
 </p>
 
-<hr />
+<hr>
 
 <h1>Select mirror for redirection</h1>
 
@@ -449,7 +449,7 @@ site_header("News Archive - 2003", array("generate_modified" => true));
  site for redirections.
 </p>
 
-<hr />
+<hr>
 
 <?php news_image("http://www.php-mag.net/", "php-mag.gif", "PHP Magazine"); ?> 
 
@@ -463,7 +463,7 @@ site_header("News Archive - 2003", array("generate_modified" => true));
  related technologies.
 </p>
 
-<hr />
+<hr>
 
 <h1>URL Shortcuts and Site Search</h1>
 
@@ -478,7 +478,7 @@ site_header("News Archive - 2003", array("generate_modified" => true));
  onsite search solution, Google is used temporarily to search our site.
 </p>
 
-<hr />
+<hr>
 
 <?php news_image("http://www.phparch.com/", "phpa_logo_small.gif", "php|architect"); ?> 
 
@@ -493,7 +493,7 @@ site_header("News Archive - 2003", array("generate_modified" => true));
  price for readers worldwide.
 </p>
 
-<hr />
+<hr>
 
 <?php news_image("http://www.linuxtag.org/2003/en/index.html", "linuxtag2003.gif", "LinuxTag"); ?>
 
@@ -517,7 +517,7 @@ site_header("News Archive - 2003", array("generate_modified" => true));
  Ken Coar (Apache), Rasmus Lerdorf (PHP) or Kaj Arn&ouml; (MySQL).
 </p>
 
-<hr />
+<hr>
 
 <h1>PHP 5.0.0 Beta 1</h1>
 <p>
@@ -557,7 +557,7 @@ site_header("News Archive - 2003", array("generate_modified" => true));
  installations of PHP 4 at this time.
 </p>
 
-<hr />
+<hr>
 
 <?php news_image("http://www.zend.com/survey/php_net.php", "zendtech_logo.gif", "Zend Technologies"); ?>
 
@@ -572,7 +572,7 @@ site_header("News Archive - 2003", array("generate_modified" => true));
  and get a chance to win one of 50 PHP T-shirts!
 </p>
 
-<hr />
+<hr>
 
 <h1>PHP 4.3.2 Released!</h1>
 <p>
@@ -583,7 +583,7 @@ site_header("News Archive - 2003", array("generate_modified" => true));
  Full list of fixes can be found in the <a href="ChangeLog-4.php#4.3.2">ChangeLog</a> file.
 </p>
 
-<hr />
+<hr>
 
 <h1>Automatic Mirror Select</h1>
 <p>
@@ -596,7 +596,7 @@ site_header("News Archive - 2003", array("generate_modified" => true));
  version of the site.
 </p>
 
-<hr />
+<hr>
 
 <h1>Country Detection</h1>
 <p>
@@ -609,7 +609,7 @@ site_header("News Archive - 2003", array("generate_modified" => true));
  sites for downloads and your usual daily work.
 </p>
 
-<hr />
+<hr>
 
 <h1>My PHP.net</h1>
 
@@ -628,7 +628,7 @@ site_header("News Archive - 2003", array("generate_modified" => true));
  on for PHP.net to let this feature work!
 </p>
 
-<hr />
+<hr>
 
 <h1>Grant Program</h1>
 
@@ -651,7 +651,7 @@ site_header("News Archive - 2003", array("generate_modified" => true));
  href="http://www.phparch.com/grant/">program's website</a>.
 </p>
 
-<hr />
+<hr>
 
 <h1>Set your own language preference</h1>
 
@@ -673,7 +673,7 @@ site_header("News Archive - 2003", array("generate_modified" => true));
  providing translated content.
 </p>
 
-<hr />
+<hr>
 
 <?php news_image("http://phpconf.hu/", "hu_conf.gif", "PHPConf.hu"); ?>
 
@@ -694,7 +694,7 @@ site_header("News Archive - 2003", array("generate_modified" => true));
  official phorums.
 </p>
 
-<hr />
+<hr>
 
 <h1>PHP 4.3.1 released in response to CGI vulnerability</h1>
 
@@ -708,7 +708,7 @@ site_header("News Archive - 2003", array("generate_modified" => true));
  so upgrading from 4.3.0 is safe and painless.
 </p>
 
-<hr />
+<hr>
 
 <?php news_image("http://www.php-con.com/return.php?i=ph2", "phpcon_logo.png", "PHPCon East 2003"); ?>
 
@@ -732,7 +732,7 @@ site_header("News Archive - 2003", array("generate_modified" => true));
  the PHPCon website</a>.
 </p>
 
-<hr />
+<hr>
 
 <?php news_image("http://phpconf.phpquebec.org/index.php", "conference_php_quebec.gif", "Conference PHP Quebec"); ?>
 
@@ -757,7 +757,7 @@ site_header("News Archive - 2003", array("generate_modified" => true));
  <a href="http://phpconf.phpquebec.org/index.php">phpconf.phpquebec.com</a>.
 </p>
 
-<hr />
+<hr>
 
 <?php news_image("http://www.phpconference.com/", "international_conference_2003_spring.gif", "Int'l PHP Conference"); ?>
 
@@ -784,7 +784,7 @@ site_header("News Archive - 2003", array("generate_modified" => true));
  Design, PHP Extensions, PHP &amp; XML and PHP-GTK.
 </p>
 
-<hr />
+<hr>
 
 <h1>PEAR Out of Beta!</h1>
 <p>
@@ -796,4 +796,4 @@ site_header("News Archive - 2003", array("generate_modified" => true));
  of beta-quality.
 </p>
 
-<?php site_footer(); ?>
+<?php site_footer(array('elephpants' => true, 'sidebar' => $SIDEBAR_DATA));

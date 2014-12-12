@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom" xmlns:default="http://php.net/ns/news">
+  <title>ZendCon 2013</title>
+  <id>http://php.net/archive/2013.php#id2013-08-19-1</id>
+  <published>2013-08-19T12:53:59-07:00</published>
+  <updated>2013-08-31T12:53:59-07:00</updated>
+  <default:finalTeaserDate xmlns="http://php.net/ns/news">2013-10-13</default:finalTeaserDate>
+  <category term="conferences" label="Conference announcement"/>
+  <link href="http://php.net/conferences/index.php#id2013-08-19-1" rel="alternate" type="text/html"/>
+  <default:newsImage xmlns="http://php.net/ns/news" link="http://www.zendcon.com/" title="ZendCon">ZendCon2013.png</default:newsImage>
+  <link href="http://php.net/archive/2013.php#id2013-08-19-1" rel="via" type="text/html"/>
+  <content type="xhtml">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+      <p>
+        The 9th Annual <a href="http://www.zendcon.com/">ZendCon</a> will bring together developers, IT managers and PHP
+        experts from around the world. With a focus on PHP, mobile and cloud
+        development, attendees at this highly acclaimed conference will expand their
+        skills and explore new technologies.
+      </p>
+
+      <p>
+        ZendCon provides unique opportunities to learn from a wide variety of technical
+        sessions, hear keynote presentations from thought leaders, and engage with
+        prominent PHP speakers and vendors. You’ll learn about the latest innovations
+        and network with peers to solve PHP challenges
+      </p>
+      <p>
+        The conference is scheduled from October 7-10, 2013. For more information,
+        visit <a href="http://www.zendcon.com/">http://www.zendcon.com/</a>.
+      </p>
+    </div>
+  </content>
+</entry>

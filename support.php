@@ -2,10 +2,33 @@
 // $Id$
 $_SERVER['BASE_PAGE'] = 'support.php';
 include_once $_SERVER['DOCUMENT_ROOT'] . '/include/prepend.inc';
-site_header("Getting Help", array("current" => "help"));
+
+$SIDEBAR_DATA ='
+<div class="panel" style="position:fixed">
+  <div class="headline">Table of Contents</div>
+  <div class="body">
+    <ul>
+      <li><a href="#documentation">Documentation</a></li>
+      <li><a href="#mailing-lists">Mailing Lists</a></li>
+      <li><a href="#newsgroups">Newsgroups</a></li>
+      <li><a href="#user-groups">User Groups</a></li>
+      <li><a href="#events-training">Events &amp; Training</a></li>
+      <li><a href="#irc">IRC</a></li>
+      <!-- Purposefully no link to the webmasters -->
+    </ul>
+  </div>
+</div>
+';
+
+site_header(
+    'Getting Help',
+    array(
+        'current' => 'help',
+    )
+);
 ?>
 
-<h1>Documentation</h1>
+<h2 id="documentation">Documentation</h2>
 
 <p>
  A good place to start is by skimming through the ever-growing list of <a
@@ -14,20 +37,7 @@ site_header("Getting Help", array("current" => "help"));
  href="/docs.php">documentation</a> section.
 </p>
 
-<h1>Books</h1>
-<p>
- Books are convenient resources to begin exploring or extend your
- PHP knowledge. There are literally thousands of books available in
- English and numerous in other languages. Search at your favourite
- online or offline bookstore. You can search at
- <a href="http://www.amazon.com/exec/obidos/external-search?mode=books&amp;keyword=PHP&amp;tag=wwwphpnet">Amazon.com</a>, or 
- go directly to
- <a href="http://www.amazon.de/exec/obidos/redirect-home/wwwphpnet07">Amazon.de</a>
- or <a href="http://www.amazon.fr/exec/obidos/redirect-home/wwwphpnet0f">Amazon.fr</a>
- and search there.
-</p>
-
-<h1>Mailing Lists</h1>
+<h2 id="mailing-lists">Mailing Lists</h2>
 
 <p>
  There are a number of mailing lists devoted to talking about PHP and related
@@ -36,10 +46,10 @@ site_header("Getting Help", array("current" => "help"));
  subscribe to the lists.
 </p>
 
-<h1>Newsgroups</h1>
+<h2 id="newsgroups">Newsgroups</h2>
 
 <p>
- The PHP language newsgroup is <tt>comp.lang.php</tt>, available on any
+ The PHP language newsgroup is comp.lang.php, available on any
  news server around the globe. In addition to this many of our mailing
  lists are also reflected onto the news server at
  <a href="news://news.php.net">news://news.php.net/</a>. The
@@ -53,19 +63,16 @@ site_header("Getting Help", array("current" => "help"));
  that these newsgroups are only available on this server.
 </p>
 
-<h1>User Groups</h1>
+<h2 id="user-groups">User Groups</h2>
 
 <p>
- Christopher R. Moewes-Bystrom is running a PHP user group registry at <a
- href="http://www.phpusergroups.org/">http://www.phpusergroups.org/</a>.
- There's also a list of user groups in Germany, as well as news from them,
- and link to other countries user groups at
- <a href="http://www.phpug.de/">http://www.phpug.de/</a>.
- <a href="http://php.meetup.com/">PHP Meetup</a> is another great
- opportunity to get together.
+ Chances are that there is a User Group in your neighborhood, which are generally
+ a great resource both for beginners and experienced PHP users.
+ Check out the User Group listing on <a href="http://php.ug/">PHP.ug</a> to see if there
+ is one close by.
 </p>
 
-<h1>Events &amp; Training</h1>
+<h2 id="events-training">Events &amp; Training</h2>
 
 <p>
  A list of upcoming events (such as user group meetings and PHP training
@@ -75,9 +82,7 @@ site_header("Getting Help", array("current" => "help"));
  href="/submit-event.php">on this page</a>.
 </p>
 
-<h1>Sample Code</h1>
-
-<h1>Instant Resource Center</h1>
+<h2 id="irc">Instant Resource Center</h2>
 
 <p>
  Otherwise known as IRC or Internet Relay Chat. Here you can usually find
@@ -92,7 +97,7 @@ site_header("Getting Help", array("current" => "help"));
  <a href="http://www.freenode.net/">freenode</a>).
 </p>
 
-<h1>PHP.net webmasters</h1>
+<h2 id="webmasters">PHP.net webmasters</h2>
 
 <p>
  If you have a problem or suggestion <em>in connection with the PHP.net
@@ -103,4 +108,4 @@ site_header("Getting Help", array("current" => "help"));
  questions.
 </p>
 
-<?php site_footer(); ?>
+<?php site_footer(array('sidebar' => $SIDEBAR_DATA)); ?>

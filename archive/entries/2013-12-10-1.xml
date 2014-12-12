@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom" xmlns:default="http://php.net/ns/news">
+  <title>php[tek] 2014 : Call for Papers</title>
+  <id>http://php.net/archive/2013.php#id2013-12-10-1</id>
+  <published>2013-12-10T12:30:02-08:00</published>
+  <updated>2013-12-10T12:30:02-08:00</updated>
+  <default:finalTeaserDate xmlns="http://php.net/ns/news">2014-01-10</default:finalTeaserDate>
+  <category term="cfp" label="Call for Papers"/>
+  <link href="http://php.net/conferences/index.php#id2013-12-10-1" rel="alternate" type="text/html"/>
+  <default:newsImage xmlns="http://php.net/ns/news" link="http://tek.phparch.com/" title="php[tek] 2014">tek14.fb.png</default:newsImage>
+  <link href="http://tek.phparch.com/" rel="via" type="text/html"/>
+  <content type="xhtml">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+     <p>
+     The team at <a href="http://www.phparch.com/" title="php[architect]">php[architect]</a>
+     are once again going to run <a href="http://tek.phparch.com/">php[tek]</a> their
+     premier professional PHP conference.  The conference will take place on May 19-23,
+     2014 in Chicago, USA, and will feature:
+     </p>
+     <ul>
+         <li>4 concurrent tracks featuring 48 separate sessions</li>
+         <li>Both a Tutorial Day, and a Training Day before the conference</li>
+         <li>Plenty of evening events to network with fellow attendees</li>
+         <li>A number of special events that php[tek] has become known for,
+             including a hackathon, a special summit, and an Open Spaces area to
+             allow everyone to join in on the discussions
+         </li>
+     </ul>
+     <p>
+         The <a href="http://tek.phparch.com/call-for-papers/">Call for Papers</a> is
+         currently open, and will close on <strong>January 10th, 2014 at midnight UTC</strong>
+     </p>
+     <p>
+         Also <a href="http://tek.phparch.com/pricing-and-registration/">registration for
+         the conference</a> is open at this time, and Early Bird specials are running until
+         February 15th.  Register Now to make sure that you get the best price possible.
+         The pricing has been changed this year to make the <a href="http://tek.phparch.com/">php[tek]</a> experience as affordable as possible
+         to Individuals and Students who wish to attend.
+     </p>
+    </div>
+  </content>
+</entry>

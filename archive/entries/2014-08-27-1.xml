@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom" xmlns:default="http://php.net/ns/news">
+  <title>php[world] in Washington, D.C.</title>
+  <id>http://php.net/archive/2014.php#id2014-08-27-1</id>
+  <published>2014-08-27T21:06:14+02:00</published>
+  <updated>2014-08-27T21:06:14+02:00</updated>
+  <default:finalTeaserDate xmlns="http://php.net/ns/news">2014-11-10</default:finalTeaserDate>
+  <category term="conferences" label="Conference announcement"/>
+  <link href="http://php.net/conferences/index.php#id2014-08-27-1" rel="alternate" type="text/html"/>
+  <default:newsImage xmlns="http://php.net/ns/news" link="http://world.phparch.com/" title="php[world] in Washington, D.C.">conference_php_world_11_10.png</default:newsImage>
+  <link href="http://world.phparch.com/" rel="via" type="text/html"/>
+  <content type="xhtml">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+     <p>The team at <a href="http://www.phparch.com/" title="php[architect] : Magazine, Training, Books, Conferences">php[architect]</a> is excited to
+         announce our new conference: <a href="http://world.phparch.com/" title="php[world] conference">php[world]</a>!  This conference, is being
+         designed to bring together all of the various PHP communities into one
+         place to share ideas together.
+     </p>
+     <p>Whether you are a core PHP developer, or use WordPress, Drupal,
+         Magento, Joomla!, Symfony, Laravel, Zend Framework or another framework.
+         This conference has a track specifically for you!  Check out our
+         published <a href="http://world.phparch.com/schedule/">schedule</a> and
+         <a href="http://world.phparch.com/speakers/">speaker list</a> to see all
+         the sessions available.
+     </p>
+     <p>The conference takes place on November 10-14, 2014 in Washington, DC,
+         USA.  It features a Training Day, Tutorial Day, and 3 days full of
+         sessions &amp; keynotes.  Our Training day includes full day trainings on
+         WordPress, Web Security, and an Introduction to PHP.
+     </p>
+     <p>We've recently announced our <a href="http://world.phparch.com/five-amazing-keynotes/">keynote
+         lineup</a> as well, including:
+     </p>
+     <ul>
+         <li><b>Angela Byron</b> - @webchick - Core Contributor to Drupal</li>
+         <li><b>Andrew Nacin</b> - @nacin - Lead Developer on WordPress</li>
+         <li><b>Jeffrey 'jam' McQuire</b> - @horncologne - Open Source
+             Evangelist for Acquia
+         </li>
+         <li><b>Luke Stokes</b> - @lukestokes - Founder and CTO of FoxyCart</li>
+         <li>Plus we will be ending the conference with the
+             <b><i>biggest</i></b> panel around.  Featuring key notables from at
+             least seven different of the most popular PHP applications and
+             frameworks to discuss, debate, and answer your questions.
+         </li>
+     </ul>
+     <p>For more information and to purchase your tickets, head over to
+         <a href="http://world.phparch.com/">world.phparch.com</a> and we look
+         forward to seeing you in D.C.!
+     </p>
+    </div>
+  </content>
+</entry>

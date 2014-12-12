@@ -16,7 +16,42 @@ $SIDEBAR_DATA = '
  mirroring page</a>.
 </p>
 ';
-site_header("Information About This PHP Mirror Site", array("current" => "FIXME"));
+
+$MIRROR_IMAGE = '';
+
+// Try to find a sponsor image in case this is an official mirror
+if (is_official_mirror()) {
+
+    // Iterate through possible mirror provider logo types in priority order
+    $types = array("gif", "jpg", "png");
+    while (list(,$ext) = each($types)) {
+
+        // Check if file exists for this type
+        if (file_exists("backend/mirror." . $ext)) {
+
+            // Create image HTML code
+            $MIRROR_IMAGE = make_image(
+                'mirror.' . $ext,
+                htmlspecialchars(mirror_provider()),
+                FALSE,
+                FALSE,
+                'backend',
+                0
+            );
+
+            // Add size information depending on mirror type
+            if (is_primary_site() || is_backup_primary()) {
+                $MIRROR_IMAGE = resize_image($MIRROR_IMAGE, 125, 125);
+            } else {
+                $MIRROR_IMAGE = resize_image($MIRROR_IMAGE, 120, 60);
+            }
+
+            // We have found an image
+            break;
+        }
+    }
+}
+site_header("Information About This PHP Mirror Site", array("current" => "community"));
 ?>
 
 <h1>Information About This PHP Mirror Site</h1>
@@ -35,10 +70,19 @@ site_header("Information About This PHP Mirror Site", array("current" => "FIXME"
 <ul>
  <li>This site is <?php echo is_official_mirror() ? "" : "not"; ?> an official PHP.net mirror site</li>
  <li>The mirror site's address is <?php print_link($MYSITE); ?></li>
- <?php if (is_official_mirror()) { ?>
- <li>The provider of this mirror is <?php print_link(mirror_provider_url(), mirror_provider()); ?></li>
- <?php } ?>
 </ul>
+
+<?php if (is_official_mirror()) { ?>
+<h2>Mirror Provider</h2>
+<ul>
+ <li>
+  <p>The provider of this mirror is <?php print_link(mirror_provider_url(), mirror_provider()); ?></p>
+  <?php if ($MIRROR_IMAGE) { ?>
+  <p><?php echo $MIRROR_IMAGE; ?></p>
+  <?php } ?>
+ </li>
+</ul>
+<?php } ?>
 
 <h2>Mirror Services</h2>
 

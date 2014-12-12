@@ -43,7 +43,6 @@ site_header("Sitemap", array("current" => "help"));
      <li><a href="/docs.php">Online Documentation</a></li>
      <li><a href="/faq.php">Frequently Asked Questions</a></li>
      <li><a href="/download-docs.php">Download documentation</a></li>
-     <li><a href="/reST">Internal documentations for developers</a></li>
     </ul>
    </li>
    <li>Other support pages
@@ -67,11 +66,8 @@ site_header("Sitemap", array("current" => "help"));
 
 <ul>
  <li><a href="/my.php">My PHP.net</a></li>
- <li><a href="/search.php">Search</a></li>
- <li><a href="/sidebars.php">Search Bars</a></li>
  <li><a href="/urlhowto.php">URL Shortcuts</a></li>
  <li><a href="/quickref.php">Quick Function Reference</a></li>
- <li><a href="/tips.php">Quick Reference Tips</a></li>
  <li><a href="/sites.php">PHP.net Sites List</a></li>
 </ul>
 

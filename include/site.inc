@@ -8,6 +8,13 @@ include $_SERVER['DOCUMENT_ROOT'] . '/include/mirrors.inc';
 // Define $COUNTRIES array
 include $_SERVER['DOCUMENT_ROOT'] . '/include/countries.inc';
 
+// Define $COUNTRIES_ALPHA2 array
+include $_SERVER['DOCUMENT_ROOT'] . '/include/countries-alpha2.inc';
+
+// Define $COUNTRY_ALPHA_2_TO_3 array
+include $_SERVER['DOCUMENT_ROOT'] . '/include/countries_alpha_mapping.inc';
+
+
 // Define $LANGUAGES array
 include $_SERVER['DOCUMENT_ROOT'] . '/include/languages.inc';
 
@@ -17,7 +24,7 @@ function is_primary_site($site = FALSE)
 {
     global $MYSITE;
     if (!$site) { $site = $MYSITE; }
-    return $site == "http://www.php.net/";
+    return ($site == "http://www.php.net/" || $site == "http://php.net/" );
 }
 
 // Returns true if the current (or specified)
@@ -78,7 +85,14 @@ function mirror_provider($site = FALSE)
 {
     global $MIRRORS, $MYSITE;
     if (!$site) { $site = $MYSITE; }
-    return (isset($MIRRORS[$site]) ? $MIRRORS[$site][1] : FALSE);
+
+    if (isset($MIRRORS[$site])) {
+	return $MIRRORS[$site][1];
+    } elseif (isset($MIRRORS[$_SERVER['SERVER_ADDR']])) {
+	return $MIRRORS[$_SERVER['SERVER_ADDR']][1];
+    }
+
+    return false;
 }
 
 // Returns the current (or specified)
@@ -87,7 +101,14 @@ function mirror_provider_url($site = FALSE)
 {
     global $MIRRORS,$MYSITE;
     if (!$site) { $site = $MYSITE; }
-    return (isset($MIRRORS[$site]) ? $MIRRORS[$site][3] : FALSE);
+
+    if (isset($MIRRORS[$site])) {
+        return $MIRRORS[$site][3];
+    } elseif (isset($MIRRORS[$_SERVER['SERVER_ADDR']])) {
+        return $MIRRORS[$_SERVER['SERVER_ADDR']][3];
+    }
+
+    return false;
 }
 
 // Returns the current (or specified)
@@ -96,7 +117,14 @@ function mirror_type($site = FALSE)
 {
     global $MIRRORS, $MYSITE;
     if (!$site) { $site = $MYSITE; }
-    return (isset($MIRRORS[$site]) ? $MIRRORS[$site][4] : FALSE);
+
+    if (isset($MIRRORS[$site])) {
+        return $MIRRORS[$site][4];
+    } elseif (isset($MIRRORS[$_SERVER['SERVER_ADDR']])) {
+        return $MIRRORS[$_SERVER['SERVER_ADDR']][4];
+    }
+
+    return false;
 }
 
 // Returns the current (or specified)
@@ -105,7 +133,14 @@ function mirror_status($site = FALSE)
 {
     global $MIRRORS, $MYSITE;
     if (!$site) { $site = $MYSITE; }
-    return (isset($MIRRORS[$site]) ? $MIRRORS[$site][7] : FALSE);
+
+    if (isset($MIRRORS[$site])) {
+        return $MIRRORS[$site][7];
+    } elseif (isset($MIRRORS[$_SERVER['SERVER_ADDR']])) {
+        return $MIRRORS[$_SERVER['SERVER_ADDR']][7];
+    }
+
+    return false;
 }
 
 // Count all mirrors or mirrors in a given country
@@ -159,6 +194,74 @@ function mirror_setcookie($name, $content, $exptime)
     } else {
         return FALSE;
     }
+}
+
+function organise_mirrors($mirrors) {
+    // Lets group the mirrors by country code, for easy output on the page.
+    $retval = array();
+    foreach($mirrors as $key => $mirror) {
+
+        // If the mirror is not all right or it is virtual (not an official mirror), skip it
+        if (mirror_status($key) != MIRROR_OK || mirror_type($key) == MIRROR_VIRTUAL) { continue; }
+
+        if(!isset($grouped_mirrors[$mirror[0]])) {
+            $grouped_mirrors[$mirror[0]] = array();
+        }
+
+        $retval[$mirror[0]][] = array(
+            'url'            => $key,
+            'country_code'   => $mirror[0],
+            'provider_title' => $mirror[1],
+            'provider_url'   => $mirror[3]
+        );
+
+    }
+    return $retval;
+}
+function print_full_mirror_list($download_file = null, $direct_download = false) {
+    global $COUNTRIES, $COUNTRY, $MIRRORS;
+
+    $groupped = organise_mirrors($MIRRORS);
+    $close = count_mirrors($COUNTRY);
+    if ($close) {
+        $mnum = (($close > 1) ? "mirrors" : "mirror");
+        echo "<p>We have automatically detected the following $mnum to be close to you</p>";
+
+        if (isset($groupped[$COUNTRY])) {
+            print_mirror_box($COUNTRIES[$COUNTRY], $COUNTRY, $groupped[$COUNTRY], $download_file, $direct_download, true);
+            echo "<br>";
+        }
+    }
+    foreach($groupped as $mirrorcode => $country) {
+        print_mirror_box($COUNTRIES[$mirrorcode], $mirrorcode, $country, $download_file, $direct_download, false);
+    }
+}
+
+function print_mirror_box($countryname, $countrycode, $mirrors, $file = null, $direct_download = false, $homecountry = false) {
+?>
+    <div class="mirror <?php echo $homecountry ? "homecountry" : ""?>">
+            <div class="title"><?php echo $countryname; ?>
+                <img alt="<?php echo $countrycode; ?>"
+                     height="25"
+                     width="45"
+                     src="<?php echo $_SERVER['MYSITE'] . '/images/flags/beta/' . strtolower($countrycode) . '.png'; ?>">
+            </div>
+            <?php foreach($mirrors as $mirror): ?>
+<?php
+    $url = $mirror["url"];
+    $urltitle = substr($url, strpos($url, '//') + 2, -1);
+    if ($file) {
+        $what = $direct_download ? "this" : "a";
+        $url = $mirror["url"] . "get/$file/from/$what/mirror";
+    }
+?>
+            <div class="entry">
+                <div class="url"><a href="<?php echo htmlentities($url, ENT_QUOTES | ENT_IGNORE, 'UTF-8'); ?>" title="<?php echo clean($mirror['url']); ?>"><?php echo clean($urltitle); ?></a></div>
+                <div class="provider"><a href="<?php echo $mirror['provider_url']; ?>" title="<?php echo clean($mirror['provider_title']); ?>"><?php echo clean($mirror['provider_title']); ?></a></div>
+            </div>
+            <?php endforeach; ?>
+        </div>
+<?php
 }
 
 // Use this function to write out proper headers on
@@ -398,37 +501,57 @@ function get_shortname($page) {
 // it works under more then one name). SERVER_NAME is
 // the name of the Apache vhost.
 
-
-if($_SERVER["SERVER_PORT"] != '80') {
-    $MYSITE = 'http://' . $_SERVER["SERVER_NAME"] . ':' . (int)$_SERVER["SERVER_PORT"] . '/'; 
+if (!isset($_SERVER["HTTPS"]) || $_SERVER["HTTPS"] != "on") {
+    $proto = "http";
 } else {
-    $MYSITE = 'http://' . $_SERVER["SERVER_NAME"] . '/'; 
+    $proto = "https";
 }
 
-// If this site does not exist
+if($_SERVER["SERVER_PORT"] != '80' && $_SERVER["SERVER_PORT"] != 443) {
+    $MYSITE = $proto . '://' . $_SERVER["SERVER_NAME"] . ':' . (int)$_SERVER["SERVER_PORT"] . '/';
+    $msite  =      'http://' . $_SERVER["SERVER_NAME"] . ':' . (int)$_SERVER["SERVER_PORT"] . '/';
+} else {
+    $MYSITE = $proto . '://' . $_SERVER["SERVER_NAME"] . '/';
+    $msite  =      'http://' . $_SERVER["SERVER_NAME"] . '/';
+}
+
+// If this site does not exist - it is most likely because
+// CC.php.net isn't in this array anymore.
 if (!isset($MIRRORS[$MYSITE])) {
+    if (isset($MIRRORS[$msite])) {
+        $MIRRORS[$MYSITE] = $MIRRORS[$msite];
+        unset($MIRRORS[$msite]);
+    }
+}
 
-    // Try the hostname [without www]. In case the main name above is
-    // not found, we try to find the mirror with the name provided by
-    // the browser (in the Host HTTP header).
- 
-    if($_SERVER["SERVER_PORT"] != '80') {
-        $tmp = 'http://' . preg_replace("!^www\\.!", "", $_SERVER["SERVER_NAME"]) . ':' . (int)$_SERVER["SERVER_PORT"] . '/'; 
+if (!isset($MIRRORS[$MYSITE])) {
+    // Check if the IP address exists (a fix for the round-robin introduction)
+    if (isset($MIRRORS[$_SERVER['SERVER_ADDR']])) {
+        // Since it does, we know the servername is fine
+        $MYSITE = $proto . '://' . $_SERVER["SERVER_NAME"] . '/';
     } else {
-        $tmp = 'http://' . preg_replace("!^www\\.!", "", $_SERVER["SERVER_NAME"]) . '/';
-    }
 
-    // If the name without www. exists, use it
-    if (isset($MIRRORS[$tmp])) {
-        $MYSITE = $tmp;
-    }
+        // Try the hostname [without www]. In case the main name above is
+        // not found, we try to find the mirror with the name provided by
+        // the browser (in the Host HTTP header).
+ 
+        $msite = str_replace("www.", "", $msite);
 
-    // If the mirror is not registered with this name, provide defaults
-    // (no country code, no search, no stats, English default language ...)
-    if (!isset($MIRRORS[$MYSITE])) {
-        $MIRRORS[$MYSITE] = array("xx", $MYSITE, FALSE, $MYSITE, MIRROR_VIRTUAL, FALSE, "en", MIRROR_OK);
+        // If the name without www. exists, use it
+        if (isset($MIRRORS[$msite])) {
+            $MYSITE = str_replace("www.", "", $MYSITE);
+            if (!isset($MIRRORS[$MYSITE])) {
+                $MIRRORS[$MYSITE] = $MIRRORS[$msite];
+                unset($MIRRORS[$msite]);
+            }
+        }
     }
+}
 
+// If the mirror is not registered with this name, provide defaults
+// (no country code, no search, no stats, English default language ...)
+if (!isset($MIRRORS[$MYSITE])) {
+    $MIRRORS[$MYSITE] = array("xx", $MYSITE, FALSE, $MYSITE, MIRROR_VIRTUAL, FALSE, "en", MIRROR_OK);
 }
 
 // Override mirror language with local preference

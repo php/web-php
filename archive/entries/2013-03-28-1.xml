@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+  <title>PHP 5.5 beta2 Released</title>
+  <id>http://php.net/archive/2013.php#id2013-03-28-1</id>
+  <published>2013-03-28T08:55:45+00:00</published>
+  <updated>2013-03-28T08:55:45+00:00</updated>
+  <category term="frontpage" label="PHP.net frontpage news"/>
+  <category term="releases" label="New PHP release"/>
+  <link href="http://php.net/index.php#id2013-03-28-1" rel="alternate" type="text/html"/>
+  <link href="http://php.net/archive/2013.php#id2013-03-28-1" rel="via" type="text/html"/>
+  <content type="xhtml">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+     <p>
+        The PHP development team announces the release of the second beta of PHP 5.5.0.
+        This release fixes some bugs from beta one that could prevent the release from compiling.
+     </p>
+
+     <strong>THIS IS A DEVELOPMENT PREVIEW - DO NOT USE IT IN PRODUCTION!</strong>
+
+     <p>
+      PHP 5.5.0beta2 is shipped with some bug fixes. Here is an incomplete list:
+     </p>
+     <ul>
+        <li>Fixed a memoryleak when using the same variablename 2times in
+        function declaration.</li>
+        <li>Fixed a compilation fail with error: conflicting types for 'zendparse'</li>
+        <li>Fixed Debug backtrace changed behavior since 5.4.10 or 5.4.11</li>
+     </ul>
+
+     <p>You can read the full list of changes in the
+      <a href="https://github.com/php/php-src/blob/php-5.5.0beta2/NEWS">NEWS file</a> contained
+      in the release archive.
+     </p>
+
+     <p>
+      For source downloads of PHP 5.5.0beta2 please visit
+      the <a href="http://downloads.php.net/dsp">download page</a>, Windows binaries
+      can be found on <a href="http://windows.php.net/qa/">windows.php.net/qa/</a>.
+     </p>
+
+     <p>
+      Our next beta is expected for April 11th.
+     </p>
+
+     <p>
+        Thank you for supporting PHP.
+     </p>
+
+    </div>
+  </content>
+</entry>

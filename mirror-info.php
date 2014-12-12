@@ -14,12 +14,14 @@ header("Content-type: text/plain; charset=utf-8");
 $mirror_stats = (int) (isset($_SERVER['MIRROR_STATS']) && $_SERVER['MIRROR_STATS'] == '1');
 
 // MD5 check last release file (identifies rsync setup problems)
-$filename = $_SERVER['DOCUMENT_ROOT'] . '/distributions/' . $RELEASES[5][$PHP_5_3_VERSION]["source"][0]["filename"];
-$md5_ok = (int) (file_exists($filename) && md5_file($filename) == $PHP_5_3_MD5["tar.bz2"]);
+$filename = $_SERVER['DOCUMENT_ROOT'] . '/distributions/' . $RELEASES[5][$PHP_5_6_VERSION]["source"][0]["filename"];
+$md5_ok = (int) (file_exists($filename) && md5_file($filename) == $PHP_5_6_MD5["tar.bz2"]);
 
 // Does this mirror have sqlite?
 // Gets all available sqlite versions for possible future sqlite wrapper
 $sqlite = get_available_sqlites();
+
+$exts = join(get_loaded_extensions(), ',');
 
 if (isset($_GET["token"]) && md5($_GET["token"]) === "19a3ec370affe2d899755f005e5cd90e") {
 	$retval = run_self_tests();
@@ -37,14 +39,17 @@ if (isset($_GET["token"]) && md5($_GET["token"]) === "19a3ec370affe2d899755f005e
 }
 
 echo join('|', array(
-    $MYSITE,            // 0: ServerName problems
-    phpversion(),       // 1: PHP version overview
-    $LAST_UPDATED,      // 2: Update problems
-    $sqlite,            // 3: SQLite support?
-    $mirror_stats,      // 4: Optional local stats support
-    default_language(), // 5: Mirror language
-    'manual-noalias',   // 6: /manual alias check is done elsewhere now
-    $md5_ok,            // 7: Rsync setup problems
+    $MYSITE,            	// 0 : CNAME for mirror as accessed (CC, CC1, etc.)
+    phpversion(),       	// 1 : PHP version overview
+    $LAST_UPDATED,      	// 2 : Update problems
+    $sqlite,            	// 3 : SQLite support?
+    $mirror_stats,      	// 4 : Optional local stats support
+    default_language(), 	// 5 : Mirror language
+    'manual-noalias',   	// 6 : /manual alias check is done elsewhere now
+    $md5_ok,            	// 7 : Rsync setup problems
+    $exts,              	// 8 : List of php extensions separated by comma
+    gethostname(),		// 9 : The configured hostname of the local system
+    $_SERVER['SERVER_ADDR'],	// 10: The IP address under which we're running
 ));
 
 function run_self_tests() {

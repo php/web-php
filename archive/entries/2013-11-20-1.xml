@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+  <title>Our modern web theme goes live!</title>
+  <id>http://php.net/archive/2013.php#id2013-11-20-1</id>
+  <published>2013-11-20T04:00:00-08:00</published>
+  <updated>2013-11-20T13:32:00-00:00</updated>
+  <category term="frontpage" label="PHP.net frontpage news"/>
+  <link href="http://php.net/index.php#id2013-11-20-1" rel="alternate" type="text/html"/>
+  <link href="http://php.net/archive/2013.php#id2013-11-20-1" rel="via" type="text/html"/>
+  <content type="xhtml">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+     <p>The PHP web team are delighted to announce the launch of the new web theme that has been
+    in beta for many months. Lots of hard work has gone into this release and we will be continually
+    improving things over time now that we have migrated away from the legacy theme.</p>
+
+    <p>From an aesthetics point of view the general color scheme of the website has been lightened from the
+      older dark purple. Lots of borders and links use a similar purple color to attain
+      consistency. Fonts are smoother, and colors, contrast and highlighting have significantly improved; especially
+      on function reference pages. Code examples should now be much more readable.</p>
+
+     <p>The theme is marked up using HTML5 and is generally much more modern. We are using Google Fonts and
+      Bootstrap for our theme base.</p>
+
+     <p>To provide valuable feedback, you can use the 'Feedback' widget on the side of the page (not visible
+      on smartphones) and to report bugs, you can make use of the <a href="http://bugs.php.net" title="PHP Bug Tracker">bugs.php.net</a>
+      tracker. Despite our extensive multi-device/multi-browser testing, we may have missed something. So, if you
+      spot any issues please do get in touch.</p>
+
+     <p>Special thanks to the guys who helped make this happen, you know who you are!</p>
+
+    </div>
+  </content>
+</entry>

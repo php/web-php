@@ -14,7 +14,7 @@ security issues inside the exif and fbsql extensions as well as the unserialize(
 swf_definepoly() and getimagesize() functions.
 </p>
 
-All Users of PHP are strongly encouraged to upgrade to this release.<p /> 
+<p>All Users of PHP are strongly encouraged to upgrade to this release.</p> 
 
 <h2>Bugfix release</h2>
 

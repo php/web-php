@@ -1,350 +1,145 @@
-/* Home Page
+/* Home Page */
 
-complimentary greens: 9FB553    7B8851    61761B    C6DA82    CCDA99
-
-*/
-
-#mega-drop-down div.what-is-php {
-    color: #eee;
-    width: 648px;
-    float: left;
+#intro p {
+  color:#fff;
+  text-rendering: optimizeLegibility;
 }
-
-#mega-drop-down div.what-is-php p {
-    font-size: 1.125em;
-    line-height: 1.333em;
-    margin:1.333em 0;
-}
-#mega-drop-down .what-is-php .tutorial {
-    text-align: center;
-}
-#mega-drop-down .what-is-php .tutorial a {
-    background: #669;
-    -webkit-box-shadow: 0px 1px 0px 0px rgba(255,255,255,.334) inset, 0px -1px 5px 0px rgba(255,255,255,.1) inset;
-    -moz-box-shadow: 0px 1px 0px 0px rgba(255,255,255,.334) inset, 0px -1px 5px 0px rgba(255,255,255,.1) inset;
-    box-shadow: 0px 1px 0px 0px rgba(255,255,255,.334) inset;
-    -webkit-border-radius: 2px;
-    -moz-border-radius: 2px;
-    border-radius: 2px;
-    padding: .6em 1.2em;
-    margin-bottom:-3px;
-    display: block;
-    border: 1px solid rgba(0,0,0,.9);
-    border-bottom-width:3px;
-    text-align: center;
-    font:1em bold inherit;
-    color: #fff;
-    color: rgba(255,255,255,.8);
-    text-shadow: 0 -1px 0 rgba(0,0,0,.3);
-    display:inline-block;
-}
-#mega-drop-down .what-is-php .tutorial a:hover,
-#mega-drop-down .what-is-php .tutorial a:focus {
-    background: #77a;
-}
-#mega-drop-down .what-is-php .tutorial a:active {
-    background: #669;
-    border-bottom-width:1px;
-    margin-top:2px;
+#intro p,
+#intro ul {
+    text-shadow:0 1px 2px rgba(0,0,0,.5);
+    font-size:1.125rem;
 }
 
-#mega-drop-down div.download {
-    color: #eee;
-    width: 264px;
-    margin:0 0 0 20px;
-    display: block;
-    float: right;
-    min-height:240px;
-    background:#4f4f4f;
+#intro ul a {
+    word-spacing: 0;
 }
 
-#mega-drop-down div.download h2 {
-    font-size:1em;
-    line-height: 3;
-    color: #ddd;
-    text-align: center;
-    letter-spacing: .2em;
-    word-spacing: .4em;
-    text-transform: uppercase;
-    text-shadow: #000 -1px -1px 1px;
+#intro .row .blurb p:first-child {
+  margin-top:1.5rem;
+}
+#intro .row .blurb,
+#intro .row .download {
+  display:table-cell;
+  float:none;
+  padding:0 1.5rem;
 }
 
-
-#mega-drop-down div.children.downloads {
-    padding-bottom: 0;
+#intro h3 {
+  margin:1.5rem 0 0;
+  color:#E6E6E6;
+}
+#intro h3:after {
+  display:none;
 }
 
-
-/* We have to override these because theme.css has a generic style for 'ul'
-   and that doesn't apply here on the downloads area
-*/
-#mega-drop-down div.download ul {
-    float: none !important;
-    width: auto !important;
-    padding: 0 !important;
-    margin: 0;
+#intro .row {
+  position:relative;
+  display:table-row;
 }
 
-#mega-drop-down div.download li:first-child {
-    background: url('/images/sprites.png') no-repeat 0px -195px;
+#intro ul {
+  list-style:none;
+  word-spacing:.25rem;
+  margin-left:0;
 }
 
-#mega-drop-down div.download li {
-    color: #eee;
-    display: block;
-    padding: 0 0 1.5em 100px;
-    background: url('/images/sprites.png') no-repeat 14px -273px;
-    cursor: pointer;
-    border-top: 1px solid #6f6f6f;
-    margin: -1px 0 0;
-    line-height: 1;
+#intro .dot {
+    display: inline-block;
+    width: 5px;
+    padding: 0 5px;
 }
 
-#mega-drop-down div.download a {
-    padding: 0;
-    display: block;
-    clear: right;
-    font-weight: normal;
-    line-height: 1.5em;
+#intro .download {
 }
-#mega-drop-down div.download  li:first-child a:first-child {
-    font-size: 1.5em;
-    line-height: 2;
-}
-#mega-drop-down div.download a:first-child {
-    font-size: 1.25em;
-    line-height: 2.4;
-    font-weight: bold;
-    color: #fff;
-    text-shadow:0 .1em .1em rgba(0,0,0,.666);
-}
-
-#head-beta-warning {
-    background: #339900;
-    display: none;
-    position: fixed;
-    top: 0px;
-    left: 0px;
-    width: 100%;
-    z-index: 100;
-}
-
-#beta-warning {
-    margin: 0 auto;
-    padding: 0.3em;
-    width: 960px;
-    display: none;
-}
-
-#beta-warning .blurb {
-    font-size: 1.3em;
-    line-height: 1.65em;
-    vertical-align: middle;
-    color: #EEE;
-    display: none;
-}
-
-#beta-warning .blurb a {
-    color: #333;
-}
-
-#beta-warning .blurb strong {
-    color: #333;
-}
-
-#beta-warning-close {
-    display: block;
-    float: right;
-    background: #333;
-    color: #EEE;
-    font-weight: bold;
-    text-decoration: none;
-    margin-top: 0.24em;
-    height: 1.2em;
-    line-height: 1.2em;
-    vertical-align: middle;
-    width: 1.2em;
-    padding: 0.2em;
-    text-align: center;
-    border-radius: 5px;
-    -moz-border-radius: 5px;
-    -webkit-border-radius: 5px;
-}
-
-/* Main content area */
-
-section.layout-content.home {
-    width: 960px;
-    margin: 0 auto;
-}
-
-div.home-content {
-    width: 648px;
-}
-
-/* Announcement Area */
-
-.home .announcements {
-    display: block;
-    background-color: #cce;
-    padding: 1.5em;
-    text-align: left;
-    margin: 0 auto;
-    list-style: none;
-}
-.home .announcements li + li {
-    margin-top:1.5em;
-}
-.home .announcements ul, .home .announcements ul li {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    text-align: left;
-}
-
-/* 2x2 Featured Content Grid */
-div.featured-content div.top-left,
-div.featured-content div.top-right {
-    margin-top:-1.5em;
-}
-div.featured-content div.feature {
-    float: left;
-    width: 270px;
-    padding:0 20px;
-    text-align: center;
-}
-div.featured-content div.bottom-left,
-div.featured-content div.bottom-right {
-    padding-top:1.5em;
-}
-
-div.featured-content span.graphic {
-    display: block;
-    width: 128px;
-    height: 128px;
-    margin:0 auto;
-    padding:8px 0;
-    background-image: url('../images/home-sprites.png');
-}
-
-div.featured-content div.top-left span.graphic {
-    background-position: 0 8px;
-}
-
-div.featured-content div.top-right span.graphic {
-    background-position: 0px -121px;
-}
-
-div.featured-content div.bottom-left span.graphic {
-    background-position: 0px -258px;
-}
-
-div.featured-content div.bottom-right span.graphic {
-    background-position: 0px -399px;
-}
-
-.featured-content .feature h3 {
-    text-align: center;
-    color:#000;
-    font-weight:bold;
-}
-.featured-content .feature p {
-    margin:1.5em 0 0;
-    color:#333;
-}
-
-/* Right-hand sidebar */
-
-div.home-sidebar {
-    float: right;
-    width: 264px;
-    padding: 0 0 1.5em;
-    margin: 0 0 0 20px;
-}
-
-div.home-sidebar h3 {
-    border-bottom: .25em solid #99c;
-    margin: 1.2em 0 .95em;
-    padding:0;
-}
-div.home-sidebar h3.panel {
-    line-height: 1.2em;
-    border:0;
-    margin:1.2em 0;
-}
-div.home-sidebar h3:first-child {
-    margin-top: 0;
-}
-div.home-sidebar h3.panel a {
-    background:#ddd;
-    color:#333;
-    border:0;
-    display: block;
-    padding:.6em 1em;
-}
-div.home-sidebar h3.panel a::after {
-    float:right;
-    content:"»";
-}
-div.home-sidebar h3.panel a:hover,
-div.home-sidebar h3.panel a:focus {
-    background:#eee;
-}
-
-div.home-sidebar ul {
-    margin: 0 0 0 0;
-    list-style-type: none;
-    padding: 0;
-}
-
-div.home-sidebar a:link,
-div.home-sidebar a:visited {
-    border-bottom-color: transparent;
-}
-div.home-sidebar a:hover,
-div.home-sidebar a:focus {
-    border-bottom-color: #3F438D;
-}
-
-.home-content #recentNewsEntries {
-    position: relative;
-}
-
-.clear-left {
-    clear:left
-}
-.home-content .separator {
-    clear: left;
-    height:.25em;
-    margin-top:3em;
-    margin-bottom:-.25em;
-    background:#669;
-}
-#thanks-to {
-    border-top:.25em solid #669;
-    padding-top:1.25em;
-}
-
-.newsItem h2 a {
-    border-bottom-width:0;
-}
-.newsItem h2 a:hover,
-.newsItem h2 a:focus {
-    border-bottom-width:1px;
-}
-.fullArticleLink {
+#intro .download a.notes {
     font-size:.75em;
-    line-height: 2;
+    white-space:nowrap;
 }
-.fullArticleLink a {
-    color:#666;
-    border-color:transparent;
+#intro .download a {
+    color:#ccc;
+    border:0;
 }
-.fullArticleLink a:hover,
-.fullArticleLink a:focus {
-    color:#333;
-    border-bottom-color:#333;
+#intro .download a:hover,
+#intro .download a:focus {
+  border-bottom:1px dotted;
 }
-.newsArchive {
-    text-align: right;
+
+#intro .download a.download-link {
+    color:#fff;
+    width: 50px;
+    display: inline-block;
+}
+
+#layout-content {
+  border-right:.25rem solid #666;
+}
+.home .newsentry .newstitle a:after  {
+  content:"\20 \00bb";
+  color:#666;
+}
+
+p.archive {
+	text-align: right;
+}
+
+@media (min-width: 480px) and (max-width: 768px) {
+    #intro .download {
+        width: 35%;
+    }
+
+    #intro .blurb {
+        width: 65%;
+    }
+}
+
+@media (min-width: 768px) {
+    .navbar-search,
+    #intro .download,
+    #intro .background,
+    aside.tips,
+    .layout-menu {
+        width: 25%;
+    }
+
+    #intro .blurb, #layout-content {
+        width: 75%;
+    }
+}
+
+@media (min-width: 480px) and (max-width: 590px) {
+    #intro .dot {
+        display: none;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 784px) {
+    #intro .download, aside.tips, .navbar-search {
+        width: 30%;
+    }
+
+    #intro .blurb, #layout-content {
+        width:70%;
+    }
+}
+
+/* Homepage mirror sponsor */
+aside.tips .mirror-sponsor {
+    padding-top: 1.5rem;
+}
+
+/* Social media buttons. */
+aside.tips .social-media {
+    padding-top: 2em;
+}
+
+aside.tips .social-media a {
+    border-bottom: 0;
+}
+
+aside.tips .panel.social-media > a:after {
+    display: none;
+}
+
+aside.tips .social-media .headline {
+    font-size: 1.5em;
 }

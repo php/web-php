@@ -1,0 +1,133 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Meetup//RemoteApi//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-ORIGINAL-URL:http://www.meetup.com/OklahomaPHP/events/ical/OklahomaPHP/
+ 
+X-WR-CALNAME:Events - OklahomaPHP
+BEGIN:VTIMEZONE
+TZID:America/Chicago
+X-LIC-LOCATION:America/Chicago
+BEGIN:DAYLIGHT
+TZOFFSETFROM:-0600
+TZOFFSETTO:-0500
+TZNAME:CDT
+DTSTART:19700308T020000
+RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=2SU
+END:DAYLIGHT
+BEGIN:STANDARD
+TZOFFSETFROM:-0500
+TZOFFSETTO:-0600
+TZNAME:CST
+DTSTART:19701101T020000
+RRULE:FREQ=YEARLY;BYMONTH=11;BYDAY=1SU
+END:STANDARD
+END:VTIMEZONE
+BEGIN:VEVENT
+DTSTAMP:20140123T050025Z
+DTSTART;TZID=America/Chicago:20140220T113000
+DTEND;TZID=America/Chicago:20140220T123000
+STATUS:CONFIRMED
+SUMMARY:Oklahoma City Meetup
+DESCRIPTION:OklahomaPHP\nThursday\, February 20 at 11:30 AM\n\nOur first 
+ meetup! We're still pulling together all of the details\, but we will be
+  meeting at The Exchange (@TheExchangeOKC) Thursday\, February 20th. I..
+ .\n\nDetails: http://www.meetup.com/OklahomaPHP/events/160646632/
+CLASS:PUBLIC
+CREATED:20140115T035802Z
+GEO:35.47;-97.51
+LOCATION:The Exchange (700 1/2 W Sheridan Ave\, Oklahoma City\, OK 73102)
+ 
+URL:http://www.meetup.com/OklahomaPHP/events/160646632/
+LAST-MODIFIED:20140115T223240Z
+UID:event_drxwnhysdbbc@meetup.com
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20140123T050025Z
+DTSTART;TZID=America/Chicago:20140320T113000
+DTEND;TZID=America/Chicago:20140320T123000
+STATUS:CONFIRMED
+SUMMARY:Oklahoma City Meetup
+DESCRIPTION:OklahomaPHP\nThursday\, March 20 at 11:30 AM\n\nOur first mee
+ tup! We're still pulling together all of the details\, but we will be me
+ eting at The Exchange (@TheExchangeOKC) Thursday\, February 20th. I...\n
+ \nDetails: http://www.meetup.com/OklahomaPHP/events/160785142/
+CLASS:PUBLIC
+CREATED:20140115T182905Z
+GEO:35.47;-97.51
+LOCATION:The Exchange (700 1/2 W Sheridan Ave\, Oklahoma City\, OK 73102)
+ 
+URL:http://www.meetup.com/OklahomaPHP/events/160785142/
+LAST-MODIFIED:20140115T223253Z
+UID:event_drxwnhysfbbc@meetup.com
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20140123T050025Z
+DTSTART;TZID=America/Chicago:20140417T113000
+DTEND;TZID=America/Chicago:20140417T143000
+STATUS:CONFIRMED
+SUMMARY:Oklahoma City Meetup
+DESCRIPTION:OklahomaPHP\nThursday\, April 17 at 11:30 AM\n\nOur first mee
+ tup! We're still pulling together all of the details\, but we will be me
+ eting at The Exchange (@TheExchangeOKC) Thursday\, February 20th. I...\n
+ \nDetails: http://www.meetup.com/OklahomaPHP/events/drxwnhysgbwb/
+CLASS:PUBLIC
+CREATED:20140115T182905Z
+GEO:35.47;-97.51
+URL:http://www.meetup.com/OklahomaPHP/events/drxwnhysgbwb/
+LAST-MODIFIED:20140115T183016Z
+UID:event_drxwnhysgbwb@meetup.com
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20140123T050025Z
+DTSTART;TZID=America/Chicago:20140515T113000
+DTEND;TZID=America/Chicago:20140515T143000
+STATUS:CONFIRMED
+SUMMARY:Oklahoma City Meetup
+DESCRIPTION:OklahomaPHP\nThursday\, May 15 at 11:30 AM\n\nOur first meetu
+ p! We're still pulling together all of the details\, but we will be meet
+ ing at The Exchange (@TheExchangeOKC) Thursday\, February 20th. I...\n\n
+ Details: http://www.meetup.com/OklahomaPHP/events/drxwnhyshbtb/
+CLASS:PUBLIC
+CREATED:20140115T182905Z
+GEO:35.47;-97.51
+URL:http://www.meetup.com/OklahomaPHP/events/drxwnhyshbtb/
+LAST-MODIFIED:20140115T183016Z
+UID:event_drxwnhyshbtb@meetup.com
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20140123T050025Z
+DTSTART;TZID=America/Chicago:20140619T113000
+DTEND;TZID=America/Chicago:20140619T143000
+STATUS:CONFIRMED
+SUMMARY:Oklahoma City Meetup
+DESCRIPTION:OklahomaPHP\nThursday\, June 19 at 11:30 AM\n\nOur first meet
+ up! We're still pulling together all of the details\, but we will be mee
+ ting at The Exchange (@TheExchangeOKC) Thursday\, February 20th. I...\n\
+ nDetails: http://www.meetup.com/OklahomaPHP/events/drxwnhysjbzb/
+CLASS:PUBLIC
+CREATED:20140115T182905Z
+GEO:35.47;-97.51
+URL:http://www.meetup.com/OklahomaPHP/events/drxwnhysjbzb/
+LAST-MODIFIED:20140115T183016Z
+UID:event_drxwnhysjbzb@meetup.com
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20140123T050025Z
+DTSTART;TZID=America/Chicago:20140717T113000
+DTEND;TZID=America/Chicago:20140717T143000
+STATUS:CONFIRMED
+SUMMARY:Oklahoma City Meetup
+DESCRIPTION:OklahomaPHP\nThursday\, July 17 at 11:30 AM\n\nOur first meet
+ up! We're still pulling together all of the details\, but we will be mee
+ ting at The Exchange (@TheExchangeOKC) Thursday\, February 20th. I...\n\
+ nDetails: http://www.meetup.com/OklahomaPHP/events/drxwnhyskbwb/
+CLASS:PUBLIC
+CREATED:20140115T182905Z
+GEO:35.47;-97.51
+URL:http://www.meetup.com/OklahomaPHP/events/drxwnhyskbwb/
+LAST-MODIFIED:20140115T183016Z
+UID:event_drxwnhyskbwb@meetup.com
+END:VEVENT
+END:VCALENDAR

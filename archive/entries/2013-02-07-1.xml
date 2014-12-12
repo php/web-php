@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom" xmlns:default="http://php.net/ns/news">
+  <title>php[tek] 2013: Schedule Posted</title>
+  <id>http://php.net/archive/2013.php#id2013-02-07-1</id>
+  <published>2013-02-07T17:45:52-08:00</published>
+  <updated>2013-02-07T17:45:52-08:00</updated>
+  <default:finalTeaserDate xmlns="http://php.net/ns/news">2013-05-17</default:finalTeaserDate>
+  <category term="conferences" label="Conference announcement"/>
+  <link href="http://php.net/conferences/index.php#id2013-02-07-1" rel="alternate" type="text/html"/>
+  <default:newsImage xmlns="http://php.net/ns/news" link="http://tek13.phparch.com/" title="php[tek] 2013">tek13_badge.png</default:newsImage>
+  <link href="http://tek13.phparch.com/" rel="via" type="text/html"/>
+  <content type="xhtml">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+     <p>The <a href="http://tek13.phparch.com/schedule">conference
+     schedule</a> &amp; speaker selection for <a href="http://tek13.phparch.com/">tek13</a> have now been posted online.
+      tek13 is taking place from May 14th - 17th, 2013 in it's traditional
+     Chicago, IL location.  This year we've decided to expand the conference,
+     and it is now running 4 parallel tracks!  <a href="http://tek13.phparch.com/pricing-and-registration/">Register
+     soon</a> as the Early Bird discount rate expires on February 28th.</p>
+    </div>
+  </content>
+</entry>

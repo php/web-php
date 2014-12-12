@@ -3,7 +3,7 @@
 $_SERVER['BASE_PAGE'] = 'archive/1999.php';
 include_once $_SERVER['DOCUMENT_ROOT'] . '/include/prepend.inc';
 news_archive_sidebar();
-site_header("News Archive - 1999", array("generate_modified" => true));
+site_header("News Archive - 1999", array("cache" => true));
 ?>
 
 <h1>News Archive - 1999</h1>
@@ -12,7 +12,7 @@ site_header("News Archive - 1999", array("generate_modified" => true));
  Here are the most important news items we have published in 1999 on PHP.net.
 </p>
 
-<hr />
+<hr>
 
 <h1>The Mars Polar Lander and PHP</h1>
 <p>
@@ -27,7 +27,7 @@ site_header("News Archive - 1999", array("generate_modified" => true));
  is up to the task of being part of such a large-scale deployment.
 </p>
 
-<hr />
+<hr>
 
 <h1>PHP 4.0 Beta 3 is out!</h1>
 <p>
@@ -38,7 +38,7 @@ site_header("News Archive - 1999", array("generate_modified" => true));
  All 4.0 beta users are encouraged to upgrade.
 </p>
 
-<hr />
+<hr>
 
 <h1>LinuxWorld Editors' Choice Awards</h1>
 <p>
@@ -48,7 +48,7 @@ site_header("News Archive - 1999", array("generate_modified" => true));
  "Programming Library/Tools" category.
 </p>
 
-<hr />
+<hr>
 
 <h1>PHP 4.0 Beta 1 is out!</h1>
 <p>
@@ -56,7 +56,7 @@ site_header("News Archive - 1999", array("generate_modified" => true));
  The long awaited beta of the new generation of PHP is here.
 </p>
 
-<hr />
+<hr>
 
 <h1>PHP Tutorials at O'Reilly Open Source Software Convention</h1>
 <p>
@@ -67,7 +67,7 @@ site_header("News Archive - 1999", array("generate_modified" => true));
  California.
 </p>
 
-<hr />
+<hr>
 
 <h1>PHP 3.0.11 has been released!</h1>
 <p>
@@ -85,7 +85,7 @@ site_header("News Archive - 1999", array("generate_modified" => true));
  ChangeLog.
 </p>
 
-<hr />
+<hr>
 
 <h1>PHP 3.0.9 has been released!</h1>
 <p>
@@ -97,7 +97,7 @@ site_header("News Archive - 1999", array("generate_modified" => true));
  changes, see the ChangeLog.
 </p>
 
-<hr />
+<hr>
 
 <h1>PHP Related Books are Available</h1>
 <p>
@@ -107,7 +107,7 @@ site_header("News Archive - 1999", array("generate_modified" => true));
  two are already available.
 </p>
 
-<hr />
+<hr>
 
 <h1>Zend has been announced</h1>
 <p>
@@ -118,4 +118,5 @@ site_header("News Archive - 1999", array("generate_modified" => true));
  information!
 </p>
 
-<?php site_footer(); ?>
+<?php site_footer(array('elephpants' => true, 'sidebar' => $SIDEBAR_DATA));
+

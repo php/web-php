@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom" xmlns:default="http://php.net/ns/news">
+  <title>International PHP Conference 2014</title>
+  <id>http://php.net/archive/2014.php#id2014-06-19-3</id>
+  <published>2014-06-19T23:29:15+00:00</published>
+  <updated>2014-06-25T11:37:18+01:00</updated>
+  <default:finalTeaserDate xmlns="http://php.net/ns/news">2014-10-26</default:finalTeaserDate>
+  <category term="conferences" label="Conference announcement"/>
+  <link href="http://php.net/conferences/index.php#id2014-06-19-3" rel="alternate" type="text/html"/>
+  <default:newsImage xmlns="http://php.net/ns/news" link="http://phpconference.com/" title="International PHP Conference 2014">ipc2014-oct.png</default:newsImage>
+  <link href="http://phpconference.com/" rel="via" type="text/html"/>
+  <content type="xhtml">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+     <p>
+       As the world's first conference for PHP professionals, movers and
+       shakers, the International PHP Conference has established itself as
+       one of the most important meeting places for developers and decision
+       makers. This year's IPC presents 4 days packed with know-how about
+       PHP and web technologies, from October 26 to 29 in Munich.
+     </p>
+     <p>
+       Highlights 2014
+     </p>
+     <ul>
+       <li><strong>90+ </strong>best practice sessions with <strong>60+</strong> international top speakers</li>
+       <li>Hands on Power Workshop Day on Sunday (October 26, 2014) </li>
+       <li><b>2-day expo</b> with exciting exhibitors</li>
+       <li><strong>Conference Combo: </strong>Visit the <a href="http://www.webtechcon.de/" title="WebTech Conference 2014">WebTech Conference</a> for free</li>
+       <li><strong>All inclusive:</strong> Changing buffets, snacks &amp; refreshing drinks</li>
+       <li>Official <strong>conference certificate</strong> for all attendees</li>
+       <li><strong>Free Swag:</strong> Developer backpack, T-Shirt, magazines etc.</li>
+       <li>Networking at exclusive <strong>community events</strong></li>
+       <li>And so much more... <a href="http://phpconference.com/">http://phpconference.com</a></li>
+     </ul>
+     <p>
+       To get in touch, please follow us on <a href="http://twitter.com/phpconference">Twitter</a>,
+       <a href="https://www.facebook.com/ipc.germany">Facebook</a> and
+       <a href="https://plus.google.com/b/109347669400413843557/109347669400413843557/posts">Google+</a>
+       and see you soon in Munich!
+     </p>
+    </div>
+  </content>
+</entry>

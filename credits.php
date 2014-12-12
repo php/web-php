@@ -23,7 +23,7 @@ $credits = str_replace(
 
 // If there is something left, print it out
 if ($credits) {
-    site_header("Credits", array("current" => "community"));
+    site_header("Credits", array("current" => "community", 'css' => array('credits.css')));
     echo $credits;
     site_footer(); 
 }

@@ -1,4 +1,20 @@
 <?php
+include_once $_SERVER['DOCUMENT_ROOT'] . '/include/prepend.inc';
+
+$now = $_SERVER["REQUEST_TIME"];
+if (isset($_SERVER["HTTP_IF_MODIFIED_SINCE"])) {
+    $last = strtotime($_SERVER["HTTP_IF_MODIFIED_SINCE"]);
+
+    /* Use the same logo for a day */
+    if (strtotime("+1 day", $last) > $now) {
+        header("HTTP/1.1 304 Not Modified");
+        exit;
+    }
+}
+$future = strtotime("+1 day", $now);
+$tsstring = gmdate("D, d M Y H:i:s ", $now) . "GMT";
+header("Last-Modified: " . $tsstring);
+header("Expires: " . date(DATE_RSS, $future));
 
 /*
 
@@ -15,12 +31,11 @@
  },{
      ...
  }]
- 
 */
 
 // determine how many images to serve.
 if (isset($_REQUEST['count'])) {
-    $count = intval($_REQUEST['count']);
+    $count = min(intval($_REQUEST['count']), 50);
 } else {
     header('HTTP/1.1 400', true, 400);
     print json_encode(array(
@@ -46,10 +61,11 @@ if (!$photos || !is_array($photos)) {
 // prepare requested number of elephpants at random.
 shuffle($photos);
 $elephpants = array();
+$got = 0;
 foreach ($photos as $photo) {
 
     // stop when we have the requested number of photos.
-    if (count($elephpants) == $count) {
+    if ($got == $count) {
         break;
     }
 
@@ -58,6 +74,7 @@ foreach ($photos as $photo) {
         continue;
     }
     
+    $got++;
     // add photo to response array.
     $elephpants[] = array(
         'title' => $photo['title'],
@@ -67,3 +84,4 @@ foreach ($photos as $photo) {
 }
 
 print json_encode($elephpants);
+

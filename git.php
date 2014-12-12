@@ -71,43 +71,43 @@ site_header("Git Access", array("current" => "community"));
   You can retrieve the PHP source code from our
   <a href="https://github.com/php/php-src.git">GitHub mirror</a> with this
   command:
-  <br /><br />
+  <br><br>
   <code>git clone https://github.com/php/php-src.git</code>
-  <br /><br />
+  <br><br>
 
   Alternatively, you can retrieve the source code from
   <a href="http://git.php.net/">git.php.net</a> with this command:
-  <br /><br />
+  <br><br>
   <code>git clone http://git.php.net/repository/php-src.git</code>
-  <br /><br />
+  <br><br>
  </li>
 
  <li>
   Make sure you're in the right directory to work on PHP:
-  <br /><br />
+  <br><br>
   <code>cd php-src</code>
-  <br /><br />
+  <br><br>
  </li>
 
  <li>
   You can then check out the branch you want to build:
-  <br /><br />
+  <br><br>
   <strong>PHP 5.3</strong>:
   <code>git checkout PHP-5.3</code>
-  <br />
+  <br>
   <strong>PHP 5.4</strong>:
   <code>git checkout PHP-5.4</code>
-  <br />
+  <br>
   <strong>PHP HEAD</strong>:
   <code>git checkout master</code>
-  <br /><br />
+  <br><br>
  </li>
 
  <li>
   <div class="tip" style="margin: 10px 0 10px 20px;">
    <p>Note that certain combinations of autoconf, automake and libtool may not
    work when used together. See <a href="#buildconf_fail">below</a> for
-   details.<br />
+   details.<br>
    Also, certain versions of autoconf may generate warnings of <code>AC_PROG_CPP
    called before AC_PROG_CC</code>. These messages can usually be ignored.</p>
   </div>
@@ -147,9 +147,9 @@ site_header("Git Access", array("current" => "community"));
 <p>
  The PHP manual is still currently hosted on SVN, although it will be migrated
  to Git in the near future. To checkout the latest English version of the PHP
- manual:<br />
+ manual:<br>
  <code>svn checkout https://svn.php.net/repository/phpdoc/modules/doc-en ./phpdoc-en</code>
- <br /><br />
+ <br><br>
  You can also check the <a href="https://wiki.php.net/vcs/svnfaq">SVN FAQ on the wiki</a>.
 </p>
 
@@ -174,7 +174,7 @@ site_header("Git Access", array("current" => "community"));
  If you have multiple versions of autoconf installed on your computer, as is
  common for many UNIXes, you can set the PHP_AUTOCONF and PHP_AUTOHEADER
  variables when running buildconf to indicate which versions it should use
- e.g.:<br />
+ e.g.:<br>
  <code>PHP_AUTOCONF=autoconf213 PHP_AUTOHEADER=autoheader213 ./buildconf</code>
 </p>
 

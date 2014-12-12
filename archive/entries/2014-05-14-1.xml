@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom" xmlns:default="http://php.net/ns/news">
+  <title>Northeast PHP Conference</title>
+  <id>http://php.net/archive/2014.php#id2014-05-14-1</id>
+  <published>2014-05-14T12:51:03-07:00</published>
+  <updated>2014-05-14T12:51:03-07:00</updated>
+  <default:finalTeaserDate xmlns="http://php.net/ns/news">2014-06-02</default:finalTeaserDate>
+  <category term="cfp" label="Call for Papers"/>
+  <link href="http://php.net/conferences/index.php#id2014-05-14" rel="alternate" type="text/html"/>
+  <default:newsImage xmlns="http://php.net/ns/news" link="http://www.nephp.org/" title="Northeast PHP Technical Conference">NEPHP_2014.png</default:newsImage>
+  <link href="http://www.nephp.org/" rel="via" type="text/html"/>
+  <content type="xhtml">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+     <p>Northeast PHP 2014 Announced
+     </p>
+     <p>Call for Papers and Workshops.
+     </p>
+     <p>
+      NEPHP 2014 will be held Saturday, September 6 - Sunday, September 7
+      2014 at the Microsoft Nerd center, Cambridge, MA.
+     </p>
+     <p>
+      Our call for papers is now open through June 1st.
+      Please consider submiting a talk at
+      <a href="https://www.northeastphp.org/propose">https://www.northeastphp.org/propose</a>
+     </p>
+     <p>
+      Speakers will be announced in late June.
+      Our format will be 3 tracks of talks 45 minutes in length:
+     </p>
+     <ul>
+      <li>PHP Dev (Beginner/Intermediate)</li>
+      <li>PHP Advanced Techniques &amp; Tools</li>
+      <li>User Experience / Web Tech</li>
+     </ul>
+     <p>
+      We hope to see you all again this fall !
+     </p>
+    </div>
+  </content>
+</entry>

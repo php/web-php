@@ -10,38 +10,92 @@
  *                 "date"     => "this files release date",
  *                 "note"     => "this file was updated 29feb due to broken phar files..",
  *             ),
- *             "announcement" => "bool, release announcement exists in releases/?"
+ *             "announcement" => "bool, release announcement exists in releases/?",
+ *             "eol" => "bool, true to mark as EOL (affects bug tracker and eol.php)"
  *         ),
  *     ),
  * );
- */
+/* PHP 5.6 Release */
+$PHP_5_6_RC = "5.6.4RC1"; // Current RC version (e.g., '5.6.7RC1') or false
+$PHP_5_6_RC_DATE = '27 Nov 2014';
 
-/* PHP 5.4 Release */
-$PHP_5_4_RC = ''; // set to false when there is no RC
-$PHP_5_4_RC_DATE = '';
-
-$PHP_5_4_VERSION         = "5.4.6";
-$PHP_5_4_DATE            = "16 Aug 2012";
-
-$PHP_5_4_MD5     = array(
-                       "tar.bz2"       => "c9aa0f4996d1b91ee9e45afcfaeb5d2e",
-                       "tar.gz"        => "efe59afb73190c9bd6d50614998ffceb",
+$PHP_5_6_VERSION         = "5.6.3";
+$PHP_5_6_DATE            = "13 Nov 2014";
+$PHP_5_6_MD5     = array(
+                       "tar.bz2"       => "13fb79d464b08392703e311778dd7ec0",
+                       "tar.gz"        => "b6278e4fb74bae260a2ef2d8a430c8fc",
+                       "tar.xz"        => "7635f344145a4edd7dff6ecec795aaea",
 );
+/* PHP 5.5 Release */
+$PHP_5_5_RC = '5.5.20RC1'; // Current RC version (e.g., '5.6.7RC1') or false
+$PHP_5_5_RC_DATE = '27 Nov 2014';
 
-/* PHP 5.3 Release */
-$PHP_5_3_RC      = '';
-$PHP_5_3_RC_DATE = '';
+$PHP_5_5_VERSION         = "5.5.19";
+$PHP_5_5_DATE            = "13 Nov 2014";
+$PHP_5_5_MD5     = array(
+                       "tar.bz2"       => "20464e44bf843ff786abf147567127ef",
+                       "tar.gz"        => "8ef89261aa6bb2d74df8d147f0d183a1",
+                       "tar.xz"        => "c63dcfd8b318d12127ba6d39ecc8a444",
+);
+/* PHP 5.4 Release */
+$PHP_5_4_RC = false; // Current RC version (e.g., '5.6.7RC1') or false
+$PHP_5_4_RC_DATE = '4 Sep 2014';
 
-$PHP_5_3_VERSION         = "5.3.16";
-$PHP_5_3_DATE            = "16 Aug 2012";
-
-$PHP_5_3_MD5     = array(
-                       "tar.bz2"       => "99cfd78531643027f60c900e792d21be",
-                       "tar.gz"        => "59b776edeac2897ebe3712dcc94b6706",
+$PHP_5_4_VERSION         = "5.4.35";
+$PHP_5_4_DATE            = "13 Nov 2014";
+$PHP_5_4_MD5     = array(
+                       "tar.bz2"       => "489cc8336488fb2e722ffa3c08f9c864",
+                       "tar.gz"        => "da7bed3b65033c7f096c96572cd9ea45",
 );
 
 $RELEASES = array(
     5 => array(
+        $PHP_5_6_VERSION => array(
+            "announcement" => true,
+            "source" => array(
+                array(
+                    "filename" => "php-$PHP_5_6_VERSION.tar.bz2",
+                    "name"     => "PHP $PHP_5_6_VERSION (tar.bz2)",
+                    "md5"      => $PHP_5_6_MD5["tar.bz2"],
+                    "date"     => $PHP_5_6_DATE,
+                ),
+                array(
+                    "filename" => "php-$PHP_5_6_VERSION.tar.gz",
+                    "name"     => "PHP $PHP_5_6_VERSION (tar.gz)",
+                    "md5"      => $PHP_5_6_MD5["tar.gz"],
+                    "date"     => $PHP_5_6_DATE,
+                ),
+                array(
+                    "filename" => "php-$PHP_5_6_VERSION.tar.xz",
+                    "name"     => "PHP $PHP_5_6_VERSION (tar.xz)",
+                    "md5"      => $PHP_5_6_MD5["tar.xz"],
+                    "date"     => $PHP_5_6_DATE,
+                ),
+            ),
+        ),
+        $PHP_5_5_VERSION => array(
+            "announcement" => true,
+            "source" => array(
+                array(
+                    "filename" => "php-$PHP_5_5_VERSION.tar.bz2",
+                    "name"     => "PHP $PHP_5_5_VERSION (tar.bz2)",
+                    "md5"      => $PHP_5_5_MD5["tar.bz2"],
+                    "date"     => $PHP_5_5_DATE,
+                ),
+                array(
+                    "filename" => "php-$PHP_5_5_VERSION.tar.gz",
+                    "name"     => "PHP $PHP_5_5_VERSION (tar.gz)",
+                    "md5"      => $PHP_5_5_MD5["tar.gz"],
+                    "date"     => $PHP_5_5_DATE,
+                ),
+                array(
+                    "filename" => "php-$PHP_5_5_VERSION.tar.xz",
+                    "name"     => "PHP $PHP_5_5_VERSION (tar.xz)",
+                    "md5"      => $PHP_5_5_MD5["tar.xz"],
+                    "date"     => $PHP_5_5_DATE,
+                ),
+            ),
+        ),
         $PHP_5_4_VERSION => array(
             "announcement" => true,
             "source" => array(
@@ -57,37 +111,12 @@ $RELEASES = array(
                     "md5"      => $PHP_5_4_MD5["tar.gz"],
                     "date"     => $PHP_5_4_DATE,
                 ),
-                array(
-                    "link"  => 'http://windows.php.net/download/#php-5.4',
-                    "name"  => "Windows $PHP_5_4_VERSION binaries and source",
-                ),
-            ),
-        ),
-        $PHP_5_3_VERSION => array(
-            "announcement" => true,
-            "source" => array(
-                array(
-                    "filename" => "php-$PHP_5_3_VERSION.tar.bz2",
-                    "name"     => "PHP $PHP_5_3_VERSION (tar.bz2)",
-                    "md5"      => $PHP_5_3_MD5["tar.bz2"],
-                    "date"     => $PHP_5_3_DATE,
-                ),
-                array(
-                    "filename" => "php-$PHP_5_3_VERSION.tar.gz",
-                    "name"     => "PHP $PHP_5_3_VERSION (tar.gz)",
-                    "md5"      => $PHP_5_3_MD5["tar.gz"],
-                    "date"     => $PHP_5_3_DATE,
-                ),
-                array(
-                    "link"  => 'http://windows.php.net/download/#php-5.3',
-                    "name"  => "Windows $PHP_5_3_VERSION binaries and source",
-                ),
             ),
         ),
     ),
 );
 
-$PHP_5_VERSION = $PHP_5_4_VERSION; // Some scripts require this set
-$PHP_5_DATE    = $PHP_5_4_DATE; // Used by buumpRelease script
-$PHP_5_RC_DATE = $PHP_5_4_RC_DATE; // Used by master
+$PHP_5_VERSION = $PHP_5_6_VERSION; // Some scripts require this set
+$PHP_5_DATE    = $PHP_5_6_DATE; // Used by buumpRelease script
+$PHP_5_RC_DATE = $PHP_5_6_RC_DATE; // Used by master
 

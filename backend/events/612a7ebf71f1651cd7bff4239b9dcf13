@@ -1,0 +1,122 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Meetup//RemoteApi//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-ORIGINAL-URL:http://www.meetup.com/010PHP/events/ical/010PHP/
+X-WR-CALNAME:Events - 010PHP
+BEGIN:VTIMEZONE
+TZID:Europe/Amsterdam
+X-LIC-LOCATION:Europe/Amsterdam
+BEGIN:DAYLIGHT
+TZOFFSETFROM:+0100
+TZOFFSETTO:+0200
+TZNAME:CEST
+DTSTART:19700329T020000
+RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=-1SU
+END:DAYLIGHT
+BEGIN:STANDARD
+TZOFFSETFROM:+0200
+TZOFFSETTO:+0100
+TZNAME:CET
+DTSTART:19701025T030000
+RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU
+END:STANDARD
+END:VTIMEZONE
+BEGIN:VEVENT
+DTSTAMP:20140123T050022Z
+DTSTART;TZID=Europe/Amsterdam:20140213T193000
+DTEND;TZID=Europe/Amsterdam:20140213T223000
+STATUS:CONFIRMED
+SUMMARY:010PHP UserGroup Meetup
+DESCRIPTION:010PHP\nThursday\, February 13 at 7:30 PM\n\nOut monthly meet
+ up\, with talks and drinks!\n\nDetails: http://www.meetup.com/010PHP/eve
+ nts/155923282/
+CLASS:PUBLIC
+CREATED:20130719T131814Z
+GEO:51.93;4.48
+URL:http://www.meetup.com/010PHP/events/155923282/
+LAST-MODIFIED:20131109T143754Z
+UID:event_qsdjkgysdbrb@meetup.com
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20140123T050022Z
+DTSTART;TZID=Europe/Amsterdam:20140313T193000
+DTEND;TZID=Europe/Amsterdam:20140313T223000
+STATUS:CONFIRMED
+SUMMARY:010PHP UserGroup Meetup
+DESCRIPTION:010PHP\nThursday\, March 13 at 7:30 PM\n\nOut monthly meetup\
+ , with talks and drinks!\n\nDetails: http://www.meetup.com/010PHP/events
+ /qsdjkgysfbrb/
+CLASS:PUBLIC
+CREATED:20130719T131814Z
+GEO:51.93;4.48
+URL:http://www.meetup.com/010PHP/events/qsdjkgysfbrb/
+LAST-MODIFIED:20131109T143754Z
+UID:event_qsdjkgysfbrb@meetup.com
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20140123T050022Z
+DTSTART;TZID=Europe/Amsterdam:20140410T193000
+DTEND;TZID=Europe/Amsterdam:20140410T223000
+STATUS:CONFIRMED
+SUMMARY:010PHP UserGroup Meetup
+DESCRIPTION:010PHP\nThursday\, April 10 at 7:30 PM\n\nOut monthly meetup\
+ , with talks and drinks!\n\nDetails: http://www.meetup.com/010PHP/events
+ /qsdjkgysgbnb/
+CLASS:PUBLIC
+CREATED:20130719T131814Z
+GEO:51.93;4.48
+URL:http://www.meetup.com/010PHP/events/qsdjkgysgbnb/
+LAST-MODIFIED:20131109T143754Z
+UID:event_qsdjkgysgbnb@meetup.com
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20140123T050022Z
+DTSTART;TZID=Europe/Amsterdam:20140508T193000
+DTEND;TZID=Europe/Amsterdam:20140508T223000
+STATUS:CONFIRMED
+SUMMARY:010PHP UserGroup Meetup
+DESCRIPTION:010PHP\nThursday\, May 8 at 7:30 PM\n\nOut monthly meetup\, w
+ ith talks and drinks!\n\nDetails: http://www.meetup.com/010PHP/events/qs
+ djkgyshblb/
+CLASS:PUBLIC
+CREATED:20130719T131814Z
+GEO:51.93;4.48
+URL:http://www.meetup.com/010PHP/events/qsdjkgyshblb/
+LAST-MODIFIED:20131109T143754Z
+UID:event_qsdjkgyshblb@meetup.com
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20140123T050022Z
+DTSTART;TZID=Europe/Amsterdam:20140612T193000
+DTEND;TZID=Europe/Amsterdam:20140612T223000
+STATUS:CONFIRMED
+SUMMARY:010PHP UserGroup Meetup
+DESCRIPTION:010PHP\nThursday\, June 12 at 7:30 PM\n\nOut monthly meetup\,
+  with talks and drinks!\n\nDetails: http://www.meetup.com/010PHP/events/
+ qsdjkgysjbqb/
+CLASS:PUBLIC
+CREATED:20130719T131814Z
+GEO:51.93;4.48
+URL:http://www.meetup.com/010PHP/events/qsdjkgysjbqb/
+LAST-MODIFIED:20131109T143754Z
+UID:event_qsdjkgysjbqb@meetup.com
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20140123T050022Z
+DTSTART;TZID=Europe/Amsterdam:20140710T193000
+DTEND;TZID=Europe/Amsterdam:20140710T223000
+STATUS:CONFIRMED
+SUMMARY:010PHP UserGroup Meetup
+DESCRIPTION:010PHP\nThursday\, July 10 at 7:30 PM\n\nOut monthly meetup\,
+  with talks and drinks!\n\nDetails: http://www.meetup.com/010PHP/events/
+ qsdjkgyskbnb/
+CLASS:PUBLIC
+CREATED:20130719T131814Z
+GEO:51.93;4.48
+URL:http://www.meetup.com/010PHP/events/qsdjkgyskbnb/
+LAST-MODIFIED:20131109T143754Z
+UID:event_qsdjkgyskbnb@meetup.com
+END:VEVENT
+END:VCALENDAR

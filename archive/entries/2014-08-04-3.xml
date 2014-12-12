@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom" xmlns:default="http://php.net/ns/news">
+  <title>CakeFest 2014 - The CakePHP Conference</title>
+  <id>http://php.net/archive/2014.php#id2014-08-04-3</id>
+  <published>2014-08-04T21:11:08+01:00</published>
+  <updated>2014-08-04T21:11:08+01:00</updated>
+  <default:finalTeaserDate xmlns="http://php.net/ns/news">2014-08-21</default:finalTeaserDate>
+  <category term="conferences" label="Conference announcement"/>
+  <link href="http://php.net/conferences/index.php#id2014-08-04-3" rel="alternate" type="text/html"/>
+  <default:newsImage xmlns="http://php.net/ns/news" link="http://cakefest.org/" title="CakeFest 2014">cakefest-2014.png</default:newsImage>
+  <link href="http://cakefest.org/" rel="via" type="text/html"/>
+  <content type="xhtml">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+      <p>
+        <a href="http://cakefest.org/">CakeFest</a> is the annual conference
+        dedicated to the CakePHP framework and related technologies, hosting
+        live workshops, and inviting a variety of great speakers, to give the
+        very best in presentations and talks on the latest from the community.
+        This year the conference comes to Madrid, Spain, and takes place from
+        August 21st until August 24th.
+      </p>
+      <p>
+        The workshops are a great way to learn CakePHP, and get up-to-date with
+        the latest version 3.0 and innovations directly from the core
+        developers, while the conference days are packed with presentations,
+        discussions and talks, and an ideal moment to learn more from
+        the community.
+      </p>
+      <p>
+        It's a great opportunity to network, meet friends old and new, and have
+        some fun with the core members of the project. Plus, there's cake!
+      </p>
+      <p>
+        Tickets are available <a href="http://cakefest.org/">here</a> and a list of conference
+        speakers is available <a href="http://cakefest.org/schedule">here</a>.
+      </p>
+    </div>
+  </content>
+</entry>

@@ -1,0 +1,57 @@
+#add-note-usernotes {
+  overflow: hidden;
+  position: relative;
+}
+
+#add-note-usernotes .shadow {
+  box-shadow: inset -10px 0 5px -5px rgba(0, 0, 0, 0.1);
+  width:3%;
+  height: 100%;
+  position:absolute;
+  float:right;
+  z-index:1;
+  left: 97%; 
+}
+#layout-content li {
+  margin-bottom:1.5rem;
+}
+#whatnottoenter li strong{
+  display:block;
+}
+
+@media (min-width:768px) {
+  #email_and_formatting > section,
+  #add-note-usernotes .note_description,
+  #add-note-usernotes .note_example {
+    -moz-box-sizing:border-box;
+    box-sizing:border-box;
+    float:left;
+  }
+  #add-note-usernotes .note_description {
+    width:33.333333%;
+  }
+  #add-note-usernotes .note_example {
+    padding-left: 1.5rem;
+    width:66.666666%;
+  }
+  #email_and_formatting > section {
+    width:50%;
+  }
+  #email_and_formatting > section:first-child {
+    padding-right:1.5rem;
+  }
+  #email_and_formatting > section:last-child {
+    padding-left:1.5rem;
+  }
+  #whatnottoenter .columns {
+    -webkit-columns:15rem;
+    -moz-columns:15rem;
+    columns:15rem;
+  }
+  #whatnottoenter .columns li {
+    -webkit-column-break-inside:avoid;
+    -moz-column-break-inside:avoid;
+    -o-column-break-inside:avoid;
+    break-inside:avoid;
+  }
+}

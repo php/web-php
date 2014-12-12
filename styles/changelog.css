@@ -1,0 +1,20 @@
+/* Changelog pages. */
+section.version {
+    border-top: solid 0.125rem #99C;
+    margin: .75rem 0;
+    padding: .75rem 0;
+}
+
+section.version > :last-child {
+    margin-bottom:0;
+}
+
+section.version time.releasedate {
+    color: #666;
+    display: block;
+    font-size: 0.875rem;
+}
+
+section.version ul ul {
+  margin-top:0;
+}

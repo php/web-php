@@ -1,5 +1,4 @@
 <?php
-
 // $Id$
 
 /*
@@ -78,7 +77,7 @@ if (preg_match("!(.*\\.php)3$!", $URI, $array)) {
 
 // ============================================================================
 // BC: handle moving english manual down into its own directory (also supports
-//     default language manual accessibilty on mirror sites through /manual/filename)
+//     default language manual accessibility on mirror sites through /manual/filename)
 // @todo do we rely on this? how about removing it...
 if (preg_match("!^manual/([^/]*)$!", $URI, $array)) {
     if (!isset($INACTIVE_ONLINE_LANGUAGES[$array[1]])) {
@@ -102,13 +101,6 @@ if (preg_match("!^release_([^\\.]+)(\\.php$|$)!", $URI, $array)) {
 }
 
 // ============================================================================
-// BC: handle documentation howto moved to the doc.php.net server
-// (redirect to index page)
-if (preg_match("!^manual/howto/!", $URI, $array)) {
-    mirror_redirect("https://wiki.php.net/doc/howto");
-}
-
-// ============================================================================
 // BC: Printer friendly manual page handling was separate previously, but we
 // only need to redirect the old URLs now. Our pages are now printer friendly
 // by design.
@@ -121,11 +113,8 @@ if (preg_match("!^manual/(\\w+)/(print|printwn|html)((/.+)|$)!", $URI, $array)) 
 // If someone is looking for something in distributions/* and it isn't there,
 // send them to the /releases page since that is likely to be most helpful.
 if (preg_match("!^distributions/.*!", $URI, $array)) {
-	// Debug: Logging referrers to www.php.net temporarily
-	// if(!empty($_SERVER['HTTP_REFERER'])) {
-	//	file_get_contents("http://www.php.net/track_ref.php?url=".$_SERVER['SERVER_NAME'].'/'.urlencode($URI).'&ref='.urlencode($_SERVER['HTTP_REFERER']));
-	// }
-	mirror_redirect("/releases/");
+    status_header(404);
+    include_once $_SERVER['DOCUMENT_ROOT'] . "/releases/index.php";
 }
 
 // ============================================================================
@@ -174,23 +163,33 @@ if (preg_match("!^get/([^/]+)/from/([^/]+)(/mirror)?$!", $URI, $dlinfo)) {
         error_nomirror($mr);
         exit;
     }
-    // Start the download process
-    status_header(200);
-    include $_SERVER['DOCUMENT_ROOT'] . "/include/do-download.inc";
-    download_file($mr, $df);
-    exit;
-}
 
-// The rest rendering
-if (strpos($URI, "reST/") === 0) {
-    $_GET["rel_path"] = substr($URI, 5);
-    include $_SERVER['DOCUMENT_ROOT'] ."/reST/index.php";
+    // Start the download process
+    include $_SERVER['DOCUMENT_ROOT'] . "/include/do-download.inc";
+    $filename = get_actual_download_file($df);
+    if ($filename) {
+        status_header(200);
+        download_file($mr, $filename);
+    } else {
+        status_header(404);
+        /* The file didn't exist on this server.. ask the user to pick another mirror */
+        include $_SERVER['DOCUMENT_ROOT'] . "/include/get-download.inc";
+    }
     exit;
 }
 
 // php.net/42 --> likely a bug number
 if (is_numeric($URI)) {
     mirror_redirect("http://bugs.php.net/bug.php?id=$URI");
+}
+
+// ============================================================================
+// Redirect if the entered URI was a PHP page name (except some pages,
+// which we display in the mirror's language or the explicitly specified
+// language [see below])
+if (!in_array($URI, array('mirror-info', 'error', 'mod')) &&
+    file_exists($_SERVER['DOCUMENT_ROOT'] . "/$URI.php")) {
+    mirror_redirect("/$URI.php");
 }
  
 // Work with lowercased URI from now
@@ -224,7 +223,7 @@ $manual_page_moves = array(
     // entry point changed
     'installation'               => 'install',
     
-    // was splitted among platforms (don't know where to redirect)
+    // was split among platforms (don't know where to redirect)
     'install.apache'             => 'install', 
     'install.apache2'            => 'install',
     'install.netscape-enterprise'=> 'install',
@@ -242,6 +241,8 @@ $manual_page_moves = array(
     'install.sambar'             => 'install.windows.sambar',
     'install.solaris'            => 'install.unix.solaris',
     'install.xitami'             => 'install.windows.xitami',
+    'install.windows.installer.msi' => 'install.windows',
+    'install.windows.installer'  => 'install.windows',
 
     // Internals docs where moved
     'zend'                       => 'internals2.ze1.zendapi',
@@ -327,6 +328,9 @@ $uri_aliases = array (
     "global"       => "language.variables.scope",
     "@"            => "language.operators.errorcontrol",
     "&"            => "language.references",
+    "**"           => "language.operators.arithmetic",
+    "..."          => "functions.arguments",
+    "splat"        => "functions.arguments",
 
     "dowhile"      => "control-structures.do.while",
     
@@ -426,7 +430,6 @@ $uri_aliases = array (
     
     # external shortcut aliases ;)
     "dochowto"     => "phpdochowto",
-    "projects.php" => "projects", // BC
     
     # CVS -> SVN
     "anoncvs.php"   => "git",
@@ -438,25 +441,44 @@ $uri_aliases = array (
     "svn-php"       => "git-php",
     "svn-php.php"   => "git-php",
 
+    # CVSUp -> Nada
+    "cvsup"         => "mirroring",
+
     # Other items
     "security/crypt" => "security/crypt_blowfish",
+
+    # Bugfixes
+    "array_sort"    => "sort", // #64743
+    "array-sort"    => "sort", // #64743
+
+    # Removed pages
+    "tips.php"      => "urlhowto",
+    "tips"          => "urlhowto",
 );
 
 $external_redirects = array(
     "php4news"    => "https://git.php.net/?p=php-src.git;a=blob_plain;f=NEWS;hb=refs/heads/PHP-4.4",
-    "php5news"    => "https://git.php.net/?p=php-src.git;a=blob_plain;f=NEWS;hb=refs/heads/PHP-5.4",
+    "php5news"    => "https://git.php.net/?p=php-src.git;a=blob_plain;f=NEWS;hb=refs/heads/PHP-5.6",
     "php53news"   => "https://git.php.net/?p=php-src.git;a=blob_plain;f=NEWS;hb=refs/heads/PHP-5.3",
     "php54news"   => "https://git.php.net/?p=php-src.git;a=blob_plain;f=NEWS;hb=refs/heads/PHP-5.4",
+    "php55news"   => "https://git.php.net/?p=php-src.git;a=blob_plain;f=NEWS;hb=refs/heads/PHP-5.5",
+    "php56news"   => "https://git.php.net/?p=php-src.git;a=blob_plain;f=NEWS;hb=refs/heads/PHP-5.6",
     "phptrunknews"=> "https://git.php.net/?p=php-src.git;a=blob_plain;f=NEWS;hb=refs/heads/master",
-    "projects"    => "http://freshmeat.net/tags/php",
     "pear"        => "http://pear.php.net/",
     "bugs"        => "http://bugs.php.net/",
     "bugstats"    => "http://bugs.php.net/bugstats.php",
-    "phpdochowto" => "https://wiki.php.net/doc/howto",
-    "rev"         => "http://doc.php.net/php/$LANG/revcheck.php",
-    "functions.js.txt" => "http://svn.php.net/phpdoc/doc-base/trunk/scripts/quickref",
+    "phpdochowto" => "http://doc.php.net/tutorial/",
+    "rev"         => "http://doc.php.net/revcheck.php?p=graph&lang=$LANG",
     "release/5_3_0.php" => "/releases/5_3_0.php", // PHP 5.3.0 release announcement had a typo
     "ideas.php"   => "http://wiki.php.net/ideas", // BC
+    "releases.atom" => "/releases/feed.php", // BC, No need to pre-generate it
+    // We used to do reST rendering of README files
+    "rest/readme.release_process"   => "http://git.php.net/?p=php-src.git;a=blob_plain;f=README.RELEASE_PROCESS;hb=HEAD",
+    "rest/readme.mailinglist_rules" => "http://git.php.net/?p=php-src.git;a=blob_plain;f=README.MAILINGLIST_RULES;hb=HEAD",
+    "rest/readme.git-rules"         => "http://git.php.net/?p=php-src.git;a=blob_plain;f=README.GIT-RULES;hb=HEAD",
+    "rest/coding_standards"         => "http://git.php.net/?p=php-src.git;a=blob_plain;f=CODING_STANDARDS;hb=HEAD",
+    "spec"        => "https://github.com/php/php-langspec",
+    "sunglasses"  => "https://www.youtube.com/watch?v=dQw4w9WgXcQ", // Temporary easter egg for bug#66144
 );
 
 // ============================================================================
@@ -464,15 +486,6 @@ $external_redirects = array(
 
 if (isset($uri_aliases[$URI])) {
     $URI = $uri_aliases[$URI];
-}
-
-// ============================================================================
-// Redirect if the entered URI was a PHP page name (except some pages,
-// which we display in the mirror's language or the explicitly specified
-// language [see below])
-if (!in_array($URI, array('mirror-info', 'error')) &&
-    file_exists($_SERVER['DOCUMENT_ROOT'] . "/$URI.php")) {
-    mirror_redirect("/$URI.php");
 }
 
 // ============================================================================
@@ -524,6 +537,6 @@ mirror_redirect(
     '&pattern=' . urlencode(substr($_SERVER['REQUEST_URI'], 1))
 );
 /*
- * vim:et
+ * vim: set et ts=4 sw=4 ft=php: :
  */
 ?>

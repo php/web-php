@@ -1,9 +1,14 @@
 <?php
-// $Id$ 
 $_SERVER['BASE_PAGE'] = 'git-php.php';
 include_once $_SERVER['DOCUMENT_ROOT'] . '/include/prepend.inc';
 include_once $_SERVER['DOCUMENT_ROOT'] . '/include/email-validation.inc';
 include_once $_SERVER['DOCUMENT_ROOT'] . '/include/posttohost.inc';
+
+// Force the account requests to php.net
+if (!is_primary_site()) {
+    header('Location: http://php.net/'.$_SERVER['BASE_PAGE']);
+    exit;
+}
 
 $SIDEBAR_DATA = '
 <h3>More about Git</h3>
@@ -19,7 +24,7 @@ $SIDEBAR_DATA = '
  <a href="/git.php">Git</a>. No Git account is required.
 </p>
 ';
-site_header("Using Git for PHP Development", array("current" => "FIXME"));
+site_header("Using Git for PHP Development", array("current" => "community"));
 
 $groups = array(
   "none" => "Choose One",
@@ -31,7 +36,7 @@ $groups = array(
 
 ?>
 
-<h1>Using Git for PHP Development</h1>
+<h1 class="content-header">Using Git for PHP Development</h1>
 
 <?php
 
@@ -52,31 +57,31 @@ if (count($_POST) && (!isset($_POST['purpose']) || !is_array($_POST['purpose']) 
 
     // Check for errors
     if (empty($_POST['id'])) {
-        $error .= "You must supply a desired Git user id. <br />";
+        $error .= "You must supply a desired Git user id. <br>";
     } elseif(!preg_match('!^[a-z]\w+$!', $_POST['id'])) {
         $error .= "Your user id must be >1 char long, start with ".
-                  "a letter and contain nothing but a-z, 0-9, and _ <br />";
+                  "a letter and contain nothing but a-z, 0-9, and _ <br>";
     }
     if (empty($_POST['fullname'])) {
-        $error .= "You must supply your real name. <br />";
+        $error .= "You must supply your real name. <br>";
     }
     if (empty($_POST['realpurpose'])) {
-        $error .= "You must supply a reason for requesting the Git account. <br />";
+        $error .= "You must supply a reason for requesting the Git account. <br>";
     }
     if (empty($_POST['password'])) {
-        $error .= "You must supply a desired password. <br />";
+        $error .= "You must supply a desired password. <br>";
     }
     if (empty($_POST['email']) || !is_emailable_address($cleaned['email'])) {
-        $error .= "You must supply a proper email address. <br />";
+        $error .= "You must supply a proper email address. <br>";
     }
     if (empty($_POST['yesno']) || $_POST['yesno'] != 'yes') {
-        $error .= "You did not fill the form out correctly. <br />";
+        $error .= "You did not fill the form out correctly. <br>";
     }
     if (empty($_POST['group']) || $_POST['group'] === 'none' || !isset($groups[$_POST['group']])) {
-        $error .= "You did not fill out where to send the request. <br />";
+        $error .= "You did not fill out where to send the request. <br>";
     }
     if (!isset($_POST['guidelines']) || !$_POST['guidelines']) {
-        $error .= "You did not agree to follow the contribution guidelines. <br />";
+        $error .= "You did not agree to follow the contribution guidelines. <br>";
     }
 
     // Post the request if there is no error
@@ -95,13 +100,13 @@ if (count($_POST) && (!isset($_POST['purpose']) || !is_array($_POST['purpose']) 
         );
         // Error while posting
         if ($error) {
-            $error = "An error occured when trying to create the account: $error.";
+            $error = "An error occurred when trying to create the account: $error.";
         }
     }
 
     // Some error was found, while checking or submitting the data
     if ($error) {
-        echo "<p class=\"formerror\">$error</p>";
+        echo "<div class=\"warning\"><p>$error</p></div>";
     }
     else {
 ?>
@@ -165,14 +170,17 @@ if (count($_POST) && (!isset($_POST['purpose']) || !is_array($_POST['purpose']) 
 else {
 	if (count($_POST)) {
         print <<<EOT
-<p class="formerror">
+<div class="warning">
+<p>
  We could not have said it more clearly. Read everything on
  this page and look at the form you are submitting carefully.
 </p>
+</div>
 EOT;
     }
 ?>
 
+<div class="content-box">
 <p>
  All PHP development is done through a distributed revision control system
  called Git. This helps us track changes and it makes it possible for people
@@ -190,6 +198,7 @@ EOT;
 <p>
  And once again, since people just don't seem to understand this point:
 </p>
+</div>
 
 <table border="0" cellpadding="3" class="standard">
  <tr>
@@ -206,15 +215,15 @@ EOT;
  </tr>
  <tr>
   <td class="sub">Reading the PHP source</td>
-  <td><a href="https://wiki.php.net/doc/howto">Maintaining the documentation</a></td>
+  <td><a href="http://doc.php.net/tutorial/">Maintaining the documentation</a></td>
  </tr>
  <tr>
   <td class="sub">Using PHP extensions</td>
-  <td><a href="https://wiki.php.net/doc/howto">Translating the documentation</a></td>
+  <td><a href="http://doc.php.net/tutorial/">Translating the documentation</a></td>
  </tr>
  <tr>
   <td class="sub">Creating experimental PHP extensions</td>
-  <td>Maintaining www.php.net</td>
+  <td>Maintaining php.net</td>
  </tr>
  <tr>
   <td class="sub">Submitting a patch to PHP</td>
@@ -234,7 +243,8 @@ EOT;
  </tr>
 </table>
 
-<p>
+<h3 class="content-header">Contributing patches</h3>
+<p class="content-box">
  If you are contributing a patch, a small fix, or another minor change you do
  not need to ask for a Git account before submitting it. Fork our
  <a href="https://github.com/php/php-src">GitHub repository</a> and create a
@@ -248,7 +258,7 @@ EOT;
  to participate in any discussion your patch generates! Your patch may
  not get noticed the first time. Make sure that when you send your patch, you
  explain what it does. Make sure you use a clear subject when sending your
- patch (you might even want to prefix it with <tt>"[PATCH]"</tt>). If nobody
+ patch (you might even want to prefix it with <code>"[PATCH]"</code>). If nobody
  seems to take notice after a few days, you might want to try resubmitting it.
  Your original message might have gotten missed because of another heated
  discussion.
@@ -263,7 +273,7 @@ EOT;
  Similarly, if you plan on contributing documentation, you should
  <a href="mailto:phpdoc-subscribe@lists.php.net">subscribe to the
  documentation mailing list</a>, and read the
- <a href="https://wiki.php.net/doc/howto">PHP Documentation HOWTO</a>.
+ <a href="http://doc.php.net/tutorial/">PHP Documentation HOWTO</a>.
 </p>
 
 <p>
@@ -281,7 +291,9 @@ EOT;
  <a href="http://pear.php.net/">the PEAR website</a>. If you have a new PECL
  extension you wish to contribute, bring it up on the appropriate
  <a href="http://pecl.php.net/support.php">PECL mailing list</a> first. 
- <br />
+</p>
+
+<p>
  Once your PEAR package has been approved, or you get the sense that
  people generally agree that your PECL contribution is worthwhile, you
  may apply for a Git account here. Specify the name of your PEAR package
@@ -335,15 +347,15 @@ EOT;
 <tr>
  <th class="subr">Full Name:</th>
  <td><input type="text" size="50" name="fullname"
-      class="max" value="<?php if (isset($_POST['fullname'])) echo clean($_POST['fullname']);?>" /></td>
+      class="max" value="<?php if (isset($_POST['fullname'])) echo clean($_POST['fullname']);?>"></td>
 </tr>
 <tr>
  <th class="subr">Email:</th>
  <td><input type="text" size="50" name="email"
-      class="max" value="<?php if (isset($_POST['email'])) echo clean($_POST['email']);?>" /></td>
+      class="max" value="<?php if (isset($_POST['email'])) echo clean($_POST['email']);?>"></td>
 </tr>
 <tr>
- <th class="subr">For what purpose do you require a Git account:<br />
+ <th class="subr">For what purpose do you require a Git account:<br>
  (check all that apply)</th>
  <td>
 <?php 
@@ -354,34 +366,34 @@ $purposes = array("Learning PHP", "Coding in PHP", "Reading the PHP source",
 
 foreach ($purposes as $i => $p) { ?>
   <input type="checkbox" name="purpose[<?php echo $i?>]" value="1" 
-	checked="checked" /><?php echo $p; ?><br />
+	checked="checked"><?php echo $p; ?><br>
 <?php } ?>
  </td>
 </tr>
 <tr>
- <th class="subr">If your intended purpose is not in the list, <br />please state it here:</th>
+ <th class="subr">If your intended purpose is not in the list, <br>please state it here:</th>
  <td><textarea cols="50" rows="5" name="realpurpose" class="max"><?php if (isset($_POST['realpurpose'])) echo clean($_POST['realpurpose']);?></textarea></td>
 </tr>
 <tr>
 <th class="subr">Do you agree to follow the <a href="license/contrib-guidelines-code.php">contribution guidelines</a>?</th>
-<td><input type="checkbox" name="guidelines" value="1" />Check the box if you agree.</td>
+<td><input type="checkbox" name="guidelines" value="1">Check the box if you agree.</td>
 </tr>
 <tr>
- <th class="subr">User ID:<br /> <small>(single word, lower case)</small></th>
+ <th class="subr">User ID:<br> <small>(single word, lower case)</small></th>
  <td><input type="text" size="10" name="id"
-      class="max" value="<?php if (isset($_POST['id'])) echo clean($_POST['id']);?>" /></td>
+      class="max" value="<?php if (isset($_POST['id'])) echo clean($_POST['id']);?>"></td>
 </tr>
 <tr>
  <th class="subr">Requested Password:</th>
  <td><input type="password" size="10" name="password"
-      class="max" value="<?php if (isset($_POST['password'])) echo clean($_POST['password']);?>" /></td>
+      class="max" value="<?php if (isset($_POST['password'])) echo clean($_POST['password']);?>"></td>
 </tr>
 <tr>
  <th class="subr">Did you fill this form out correctly (yes/no)?</th>
- <td><input type="text" size="10" name="yesno" class="max" value="no" /></td>
+ <td><input type="text" size="10" name="yesno" class="max" value="no"></td>
 </tr>
 <tr>
- <th>Type of initial karma (who to send this request to):</th>
+ <th class="subr">Type of initial karma (who to send this request to):</th>
  <td>
   <select name="group">
 <?php
@@ -394,7 +406,7 @@ foreach($groups as $group => $name) {
  </td>
 </tr>
 <tr>
- <th colspan="2"><input type="submit" value="Send Request" /></th>
+ <th colspan="2"><input type="submit" value="Send Request"></th>
 </tr>
 </table>
 </form>

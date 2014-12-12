@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom" xmlns:default="http://php.net/ns/news">
+  <title>Dutch PHP Conference 2013</title>
+  <id>http://php.net/archive/2013.php#id2013-04-23-1</id>
+  <published>2013-04-23T11:56:47-07:00</published>
+  <updated>2013-04-23T11:56:47-07:00</updated>
+  <default:finalTeaserDate xmlns="http://php.net/ns/news">2013-06-08</default:finalTeaserDate>
+  <category term="conferences" label="Conference announcement"/>
+  <link href="http://php.net/conferences/index.php#id2013-04-23-1" rel="alternate" type="text/html"/>
+  <default:newsImage xmlns="http://php.net/ns/news" link="http://www.phpconference.nl/" title="Dutch PHP Conference 2013">dpc_2013.png</default:newsImage>
+  <link href="http://www.phpconference.nl/" rel="via" type="text/html"/>
+  <content type="xhtml">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+     <p>
+     Ibuildings is proud to organise the seventh Dutch PHP Conference on June 7 and
+     8, plus a pre-conference tutorial day on June 6. Both programs will be
+     completely in English so the only Dutch thing about it is the location.
+     </p>
+
+     <p>
+     This year we have 30+ speakers gathering in Amsterdam. The 3-track main
+     conference covers topics like PHP 5.5, software design, APIs, Zend Framework 2,
+     Symfony 2, security, scalability and more. Our Tutorial Day has an additional
+     16 in-depth sessions to choose from.
+     </p>
+
+     <p>
+     Your DPC ticket also lets you into the Dutch Mobile Conference: an additional
+     two tracks about cutting edge javascript and non-native application
+     development. This year features several side events: a bigger and better
+     unconference, a Zend sponsored hackathon, a social in downtown Amsterdam, and a
+     Symfony2 certification exam.
+     </p>
+
+     <p>
+     The Early Bird special ends April 28th, so book right away for a 15% discount.
+     We look forward to seeing you in June!
+     </p>
+    </div>
+  </content>
+</entry>

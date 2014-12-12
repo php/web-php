@@ -11,7 +11,7 @@ site_header("Annonce de publication de PHP 4.3.4", array("lang" => "fr"));
 
 <p>
  Apr&egrave;s un long processus d'assurance qualit&eacute;, 
- <a href="/downloads.php">PHP 4.3.4</a> est d&eacute;sormais disponible!<br />
+ <a href="/downloads.php">PHP 4.3.4</a> est d&eacute;sormais disponible!<br>
  C'est une version mineure d'entretien, avec de nombreuses corrections de bogues.
  Tous les utilisateurs sont invit&eacute;s &agrave; passer &agrave; cette nouvelle version.
 </p>

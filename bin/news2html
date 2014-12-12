@@ -1,0 +1,70 @@
+#!/usr/local/bin/php
+<?php
+PHP_SAPI == 'cli' or die("Please run this script using the cli sapi");
+
+// get args
+if($argc < 3) {
+	echo "Use: $argv[0] /path/to/php-5.4.16/NEWS 5.4.16\n";
+	exit(1);
+}
+// find NEWS entry
+$fp = fopen($argv[1], "r");
+if(!$fp) {
+	die("Can not open $argv[1]");
+}
+$version = $argv[2];
+$inside = false;
+$entries = array();
+while(($ln = fgets($fp)) !== false) {
+	if(preg_match("/(.. ... ....), PHP $version/", $ln, $m)) {
+		// got entry start
+		$inside = true;
+		$date = strtr($m[1], " ", "-");
+		continue;
+	}
+	if($inside) {
+		if(preg_match('/, PHP \d+.\d+.\d+/', $ln)) {
+			// next entry - we're done
+			break;
+		}
+		if($ln == "\n") {
+			$module = 'Core';
+			continue;
+		}
+ 		if($ln[0] == '-') {
+			// module
+			$module = trim(substr($ln, 1), " \t\n:");
+		} elseif(preg_match('/^\s+\.\s/',$ln)) {
+			$entries[$module][] = trim(preg_replace('/^\s+\.\s+/', '', $ln));
+		} else {
+			// continued line
+			$c = count($entries[$module])-1;
+			$entries[$module][$c] = trim($entries[$module][$c] )." ".trim($ln);
+		}
+	}
+}
+echo <<<HEAD
+<section class="version" id="$version"><!-- {{{ $version -->
+<h3>Version $version</h3>
+<b>$date</b>
+<ul>
+HEAD;
+
+foreach($entries as $module => $items) {
+	echo "<li>$module:\n<ul>\n";
+	foreach($items as $item) {
+		// strip author
+		$item = preg_replace('/\.\s+\(.+?\)$/', '.', $item);
+		// encode HTML
+		$item = htmlspecialchars($item, ENT_NOQUOTES);
+		// convert bug numbers
+		$item = preg_replace(
+			array('/Fixed bug #([0-9]+)/', '/Fixed PECL bug #([0-9]+)/', '/FR #([0-9]+)/'),
+			array('<?php bugfix(\1); ?>', '<?php peclbugfix(\1); ?>', 'FR <?php bugl(\1); ?>'),
+			$item
+		);
+		echo "  <li>$item</li>\n";
+	}
+	echo "</ul></li>\n";
+}
+echo "</ul>\n<!-- }}} --></section>\n\n";

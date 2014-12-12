@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom" xmlns:default="http://php.net/ns/news">
+  <title>Brno PHP Conference 2014</title>
+  <id>http://php.net/archive/2014.php#id2014-08-04-1</id>
+  <published>2014-08-04T20:41:07+01:00</published>
+  <updated>2014-08-04T20:41:07+01:00</updated>
+  <default:finalTeaserDate xmlns="http://php.net/ns/news">2014-09-20</default:finalTeaserDate>
+  <category term="conferences" label="Conference announcement"/>
+  <link href="http://php.net/conferences/index.php#id2014-08-04-1" rel="alternate" type="text/html"/>
+  <default:newsImage xmlns="http://php.net/ns/news" link="https://www.brnophp.cz/conference-2014" title="BRNO PHP Conference 2014">brnophp-conference-2014.png</default:newsImage>
+  <link href="https://www.brnophp.cz/conference-2014" rel="via" type="text/html"/>
+  <content type="html">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+      <p>
+        Brno PHP Conference 2014 - 20th of September 2014
+      </p>
+      <p>
+        We are pleased to announce the first international PHP conference in Czech
+        Republic. Over the years, the creative minds behind this conference,
+        gathered experience and motivation to do something bigger and unique. Being
+        the first of its kind, it brings together great technology content and
+        great people. You will find a high-quality presentations by the brightest
+        experts in the PHP world, coupled with a welcoming and friendly community
+        of attendees and speakers.
+      </p>
+      <p>
+        We have special events <a href="https://www.brnophp.cz/workshop-microsoft-azure">Microsoft Azure Workshop</a>
+        and a smashing <a href="https://www.brnophp.cz/conference-2014-after-party">After Party</a>.
+      </p>
+      <p>
+        See a schedule at <a href="https://www.brnophp.cz/conference-2014">https://www.brnophp.cz/conference-2014</a>
+        and you certainly enjoy it!
+      </p>
+      <p>
+        Looking forward to see you there :-)
+      </p>
+    </div>
+  </content>
+</entry>

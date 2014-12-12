@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom" xmlns:default="http://php.net/ns/news">
+  <title>CFP: Dutch PHP Conference 2014</title>
+  <id>http://php.net/archive/2014.php#id2014-02-05-2</id>
+  <published>2014-02-05T12:56:51-08:00</published>
+  <updated>2014-02-05T12:56:51-08:00</updated>
+  <default:finalTeaserDate xmlns="http://php.net/ns/news">2014-02-16</default:finalTeaserDate>
+  <category term="cfp" label="Call for Papers"/>
+  <link href="http://php.net/conferences/index.php#id2014-02-05-2" rel="alternate" type="text/html"/>
+  <default:newsImage xmlns="http://php.net/ns/news" link="http://www.phpconference.nl/" title="DPC 2014">dpc_2014.png</default:newsImage>
+  <link href="http://www.phpconference.nl/" rel="via" type="text/html"/>
+  <content type="xhtml">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+     <p>We're back! And we are glad to announce that we’ll be organizing the 8th edition of the
+     <a href="http://www.phpconference.nl/">Dutch PHP Conference</a>, which will be held in
+     Amsterdam from 26th to 28th June 2014. Thursday 26th will be the
+     tutorial day and June 27th and 28th will be the main conference days.
+     </p>
+     <p>Speakers, the call for papers is now open! We’re looking for high-quality, technical sessions from
+     speakers who can cover advanced topics and keep our demanding audience inspired. The call for
+     papers is open until February 16th. You can send in as many proposals as you like, so start submitting
+     your talks. We’re very excited to see what you can come up with, and we’re looking forward to
+     reading all the different proposals.</p>
+    </div>
+  </content>
+</entry>

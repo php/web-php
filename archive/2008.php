@@ -2,9 +2,8 @@
 // $Id$
 $_SERVER['BASE_PAGE'] = 'archive/2008.php';
 include_once $_SERVER['DOCUMENT_ROOT'] . '/include/prepend.inc';
-include_once $_SERVER['DOCUMENT_ROOT'] . '/include/pregen-news.inc';
 news_archive_sidebar();
-site_header("News Archive - 2008", array("generate_modified" => true));
+site_header("News Archive - 2008", array("cache" => true));
 ?>
 
 <h1>News Archive - 2008</h1>
@@ -13,7 +12,7 @@ site_header("News Archive - 2008", array("generate_modified" => true));
  Here are the most important news items we have published in 2008 on PHP.net.
 </p>
 
-<hr />
+<hr>
 
 <div class="newsItem hentry">
     <div class="newsImage"></div>
@@ -31,7 +30,7 @@ site_header("News Archive - 2008", array("generate_modified" => true));
     </div>
 </div>
 
-<hr />
+<hr>
 <div class="newsItem hentry">
     <div class="newsImage"></div>
     <h1 class="summary entry-title"><a name="id2008-12-08-1" id="id2008-12-08-1" href="http://www.php.net/archive/2008.php#id2008-12-08-1" rel="bookmark" class="bookmark">PHP 5.2.8 Released!</a></h1>
@@ -45,7 +44,7 @@ site_header("News Archive - 2008", array("generate_modified" => true));
     </div>
 </div>
 
-<hr />
+<hr>
 <div class="newsItem hentry">
     <div class="newsImage"></div>
     <h1 class="summary entry-title"><a name="id2008-12-07-1" id="id2008-12-07-1" href="http://www.php.net/archive/2008.php#id2008-12-07-1" rel="bookmark" class="bookmark">PHP 5.2.7 has been removed from distribution</a></h1>
@@ -65,7 +64,7 @@ site_header("News Archive - 2008", array("generate_modified" => true));
     </div>
 </div>
 
-<hr />
+<hr>
 <div class="newsItem hentry">
     <div class="newsImage"></div>
     <h1 class="summary entry-title"><a name="id2008-12-04-3" id="id2008-12-04-3" href="http://www.php.net/archive/2008.php#id2008-12-04-3" rel="bookmark" class="bookmark">PHP 5.2.7 Released</a></h1>
@@ -118,7 +117,7 @@ site_header("News Archive - 2008", array("generate_modified" => true));
        Further details about the PHP 5.2.7 release can be found in the <a href="/releases/5_2_7.php">release announcement for 5.2.7</a>, the full list of changes is available in the <a href="/ChangeLog-5.php#5.2.7">ChangeLog for PHP 5</a>.
       </p>
 
-      <br/>
+      <br>
       <p>
        <strong>Update (December 6th):</strong>
        Added missing zip security fix
@@ -128,7 +127,7 @@ site_header("News Archive - 2008", array("generate_modified" => true));
     </div>
 </div>
 
-<hr />
+<hr>
 
 <div class="newsItem hentry">
     <div class="newsImage"></div>
@@ -174,7 +173,7 @@ site_header("News Archive - 2008", array("generate_modified" => true));
     </div>
 </div>
 
-<hr />
+<hr>
 <div class="newsItem hentry">
     <div class="newsImage"></div>
     <h1 class="summary entry-title"><a name="id2008-12-04-1" id="id2008-12-04-1" href="http://www.php.net/archive/2008.php#id2008-12-04-1" rel="bookmark" class="bookmark">PHP Advent 2008</a></h1>
@@ -194,7 +193,7 @@ site_header("News Archive - 2008", array("generate_modified" => true));
     </div>
 </div>
 
-<hr />
+<hr>
 <div class="newsItem hentry vevent">
     <div class="newsImage"><?php news_image("http://www.afup.org/", "afup2008.png", "Forum AFUP Paris 2008"); ?></div>
     <h1 class="summary entry-title"><a name="id2008-11-15-1" id="id2008-11-15-1" href="http://www.php.net/archive/2008.php#id2008-11-15-1" rel="bookmark" class="bookmark">Forum PHP Paris 2008</a></h1>
@@ -217,7 +216,7 @@ site_header("News Archive - 2008", array("generate_modified" => true));
 
 </div>
 
-<hr />
+<hr>
 <div class="newsItem hentry vevent">
     <div class="newsImage"><?php news_image("http://conference.phpnw.org.uk", "phpnw08_logo.jpg", "PHPNW08 logo"); ?></div>
     <h1 class="summary entry-title"><a name="id2008-11-04-2" id="id2008-11-04-2" href="http://conference.phpnw.org.uk" rel="bookmark" class="bookmark">PHPNW08 - November 22nd - Manchester, UK</a></h1>
@@ -259,7 +258,7 @@ site_header("News Archive - 2008", array("generate_modified" => true));
     </div>
 </div>
 
-<hr />
+<hr>
 <div class="newsItem hentry vevent">
     <div class="newsImage"></div>
     <h1 class="summary entry-title"><a name="id2008-09-16-1" id="id2008-09-16-1" href="http://www.php.net/archive/2008.php#id2008-09-16-1" rel="bookmark" class="bookmark">PHP Quebec 2009</a></h1>
@@ -285,7 +284,7 @@ site_header("News Archive - 2008", array("generate_modified" => true));
     </div>
 </div>
 
-<hr />
+<hr>
 <div class="newsItem hentry vevent">
     <div class="newsImage"><?php news_image("http://phpconference.es/", "PHPBarcelonaConference003.png", "Barcelona PHP Conference"); ?></div>
     <h1 class="summary entry-title"><a name="id2008-09-10-1" id="id2008-09-10-1" href="http://phpconference.es/" rel="bookmark" class="bookmark">Barcelona PHP Conference 2008</a></h1>
@@ -325,7 +324,7 @@ site_header("News Archive - 2008", array("generate_modified" => true));
     </div>
 </div>
 
-<hr />
+<hr>
 <div class="newsItem hentry vevent">
     <div class="newsImage"><?php news_image("http://www.phpconference.com/", "icp08.jpg", "International PHP Conference 2008"); ?></div>
     <h1 class="summary entry-title"><a name="id2008-09-08-1" id="id2008-09-08-1" href="http://www.phpconference.com/" rel="bookmark" class="bookmark">International PHP Conference 2008 October 27-31st Mainz, Germany</a></h1>
@@ -365,7 +364,7 @@ site_header("News Archive - 2008", array("generate_modified" => true));
         </p>
         <p>
           <small>* Confirmation with your company's letter head</small>
-          <br/>
+          <br>
 
           <small>** With Student ID. Limited seating available</small>
         </p>
@@ -374,7 +373,7 @@ site_header("News Archive - 2008", array("generate_modified" => true));
     </div>
 </div>
 
-<hr />
+<hr>
 <div class="newsItem hentry vevent">
     <div class="newsImage"><?php news_image("http://phpworks.mtacon.com/", "phppyworks.png", "php|works / PyWorks 2008: Chicago"); ?></div>
     <h1 class="summary entry-title"><a name="2008-09-03-1" id="2008-09-03-1" href="http://phpworks.mtacon.com/" rel="bookmark" class="bookmark">php|works &amp; PyWorks 2008 - Atlanta</a></h1>
@@ -404,7 +403,7 @@ site_header("News Archive - 2008", array("generate_modified" => true));
     </div>
 </div>
 
-<hr />
+<hr>
 <div class="newsItem hentry">
     <div class="newsImage"></div>
     <h1 class="summary entry-title"><a name="id2008-08-07-1" id="id2008-08-07-1" href="http://www.php.net/archive/2008.php#id2008-08-07-1" rel="bookmark" class="bookmark">PHP 4.4.9 released!</a></h1>
@@ -436,7 +435,7 @@ site_header("News Archive - 2008", array("generate_modified" => true));
     </div>
 </div>
 
-<hr />
+<hr>
 <div class="newsItem hentry">
     <div class="newsImage"></div>
 
@@ -476,7 +475,7 @@ site_header("News Archive - 2008", array("generate_modified" => true));
     </div>
 </div>
 
-<hr />
+<hr>
 <div class="newsItem hentry">
 
     <div class="newsImage"></div>
@@ -509,7 +508,7 @@ site_header("News Archive - 2008", array("generate_modified" => true));
     </div>
 </div>
 
-<hr />
+<hr>
 <div class="newsItem hentry">
     <div class="newsImage"></div>
     <h1 class="summary entry-title"><a name="id2008-07-29-1" id="id2008-07-29-1" href="http://www.php.net/archive/2008.php#id2008-07-29-1" rel="bookmark" class="bookmark">Manual restructure and license change</a></h1>
@@ -553,7 +552,7 @@ site_header("News Archive - 2008", array("generate_modified" => true));
     </div>
 </div>
 
-<hr />
+<hr>
 <div class="newsItem hentry vevent">
     <div class="newsImage"><?php news_image("http://zendcon.com/", "zlogo.gif", "ZendCon 2008"); ?></div>
 
@@ -577,7 +576,7 @@ site_header("News Archive - 2008", array("generate_modified" => true));
     </div>
 </div>
 
-<hr />
+<hr>
 
 <div class="newsItem hentry vevent">
     <div class="newsImage"><?php news_image("http://www.afup.org/", "elephpants.jpg", "elePHPants"); ?></div>
@@ -606,7 +605,7 @@ and join the <a href="http://www.flickr.com/photos/tags/elephpant/">world of blu
     </div>
 </div>
 
-<hr />
+<hr>
 <div class="newsItem hentry">
     <div class="newsImage"></div>
     <h1 class="summary entry-title"><a name="id2008-04-22-1" id="id2008-04-22-1" href="http://www.php.net/archive/2008.php#id2008-04-22-1" rel="bookmark" class="bookmark">Google Summer of Code: php.net students</a></h1>
@@ -687,7 +686,7 @@ and join the <a href="http://www.flickr.com/photos/tags/elephpant/">world of blu
     </div>
 </div>
 
-<hr />
+<hr>
 <div class="newsItem hentry">
     <div class="newsImage"></div>
     <h1 class="summary entry-title"><a name="id2008-05-01-1" id="id2008-05-01-1" href="http://www.php.net/archive/2008.php#id2008-05-01-1" rel="bookmark" class="bookmark">PHP 5.2.6 Released</a></h1>
@@ -721,7 +720,7 @@ and join the <a href="http://www.flickr.com/photos/tags/elephpant/">world of blu
 
 </div>
 
-<hr />
+<hr>
 <div class="newsItem hentry vevent">
     <div class="newsImage"><?php news_image("http://www.afup.org/", "afup2008.png", "Forum AFUP Paris 2008"); ?></div>
     <h1 class="summary entry-title"><a name="id2008-04-13-2" id="id2008-04-13-2" href="http://www.php.net/archive/2008.php#id2008-04-13-2" rel="bookmark" class="bookmark">Call for speakers for Forum PHP Paris 2008</a></h1>
@@ -753,7 +752,7 @@ and join the <a href="http://www.flickr.com/photos/tags/elephpant/">world of blu
     </div>
 </div>
 
-<hr />
+<hr>
 <div class="newsItem hentry vevent">
     <div class="newsImage"><?php news_image("http://www.dcphpconference.com/", "dcphpconference.2008.png", "PHP DC conference 2008"); ?></div>
     <h1 class="summary entry-title"><a name="id2008-04-13-1" id="id2008-04-13-1" href="http://www.dcphpconference.com/" rel="bookmark" class="bookmark">PHP DC conference 2008</a></h1>
@@ -789,7 +788,7 @@ and join the <a href="http://www.flickr.com/photos/tags/elephpant/">world of blu
     </div>
 </div>
 
-<hr />
+<hr>
 <div class="newsItem hentry">
     <div class="newsImage"></div>
 
@@ -822,7 +821,7 @@ and join the <a href="http://www.flickr.com/photos/tags/elephpant/">world of blu
     </div>
 </div>
 
-<hr />
+<hr>
 <div class="newsItem hentry">
     <div class="newsImage"></div>
     <h1 class="summary entry-title"><a name="2008-03-19-1" id="2008-03-19-1" href="http://www.php.net/archive/2008.php#2008-03-19-1" rel="bookmark" class="bookmark">Google Summer of Code 2008</a></h1>
@@ -838,7 +837,7 @@ and join the <a href="http://www.flickr.com/photos/tags/elephpant/">world of blu
     </div>
 </div>
 
-<hr />
+<hr>
 <div class="newsItem hentry vevent">
     <div class="newsImage"><?php news_image("http://tek.phparch.com/", "phptek_2008.png", "php|tek 2008: Chicago"); ?></div>
     <h1 class="summary entry-title"><a name="2008-02-19-1" id="2008-02-19-1" href="http://tek.phparch.com/" rel="bookmark" class="bookmark">php|tek 2008: Chicago</a></h1>
@@ -862,7 +861,7 @@ For the past two years, php|architect's spring conference has sold out <em>weeks
     </div>
 </div>
 
-<hr />
+<hr>
 <div class="newsItem hentry vevent">
     <div class="newsImage"><?php news_image("http://conf.phpquebec.com/en/conf2008/", "conference_php_quebec.gif", "PHP Québec conference 2008"); ?></div>
     <h1 class="summary entry-title"><a name="2008-02-06-1" id="2008-02-06-1" href="http://conf.phpquebec.com/en/conf2008/" rel="bookmark" class="bookmark">PHP Québec conference 2008</a></h1>
@@ -892,7 +891,7 @@ visit the website: <a href="http://conf.phpquebec.com">http://conf.phpquebec.com
     </div>
 </div>
 
-<hr />
+<hr>
 <div class="newsItem hentry vevent">
     <div class="newsImage"><?php news_image("http://www.phpconference.co.uk/", "phplondon2008.png", "PHP London Conference 08"); ?></div>
     <h1 class="summary entry-title"><a name="2008-01-10-1" id="2008-01-10-1" href="http://www.phpconference.co.uk/" rel="bookmark" class="bookmark">phplondon conference 2008</a></h1>
@@ -912,7 +911,7 @@ visit the website: <a href="http://conf.phpquebec.com">http://conf.phpquebec.com
     </div>
 </div>
 
-<hr />
+<hr>
 <div class="newsItem hentry">
     <div class="newsImage"></div>
     <h1 class="summary entry-title"><a name="2008-01-03-1" id="2008-01-03-1" href="http://www.php.net/archive/2008.php#2008-01-03-1" rel="bookmark" class="bookmark">PHP 4.4.8 Released</a></h1>
@@ -952,7 +951,4 @@ releases to address security issues could be made until 2008-08-08.
     </div>
 </div>
 
-<?php
-
-site_footer();
-
+<?php site_footer(array('elephpants' => true, 'sidebar' => $SIDEBAR_DATA));

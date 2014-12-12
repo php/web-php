@@ -3,7 +3,7 @@
 $_SERVER['BASE_PAGE'] = 'archive/1998.php';
 include_once $_SERVER['DOCUMENT_ROOT'] . '/include/prepend.inc';
 news_archive_sidebar();
-site_header("News Archive - 1998", array("generate_modified" => true));
+site_header("News Archive - 1998", array("cache" => true));
 ?>
 
 <h1>News Archive - 1998</h1>
@@ -12,7 +12,7 @@ site_header("News Archive - 1998", array("generate_modified" => true));
  Here are the most important news items we have published in 1998 on PHP.net.
 </p>
 
-<hr />
+<hr>
 
 <h1>PHP 3.0.6 has been released!</h1>
 <p>
@@ -24,10 +24,10 @@ site_header("News Archive - 1998", array("generate_modified" => true));
  that might apply to you, then upgrade.
 </p>
 
-<hr />
+<hr>
 
 <h1>
- PHP/MySQL ... Two great things that go great together<br />
+ PHP/MySQL ... Two great things that go great together<br>
  Combination wins Database of the Year Award at Web98
 </h1>
 <p>
@@ -40,7 +40,7 @@ site_header("News Archive - 1998", array("generate_modified" => true));
  communities of people on the Net."
 </p>
 
-<hr />
+<hr>
 
 <h1>PHP 3.0 Released</h1>
 <p>
@@ -63,7 +63,7 @@ site_header("News Archive - 1998", array("generate_modified" => true));
  the full anouncement</a>.
 </p>
 
-<hr />
+<hr>
 
 <h1>PHP Meaning Vote</h1>
 <p>
@@ -73,7 +73,7 @@ site_header("News Archive - 1998", array("generate_modified" => true));
  were PHP HTML|Hypermedia|Hypertext Preprocesor.
 </p>
 
-<hr />
+<hr>
 
 <h1>New Look</h1>
 <p>
@@ -84,7 +84,7 @@ site_header("News Archive - 1998", array("generate_modified" => true));
  with the site by sending a message to the webmasters.
 </p>
 
-<hr />
+<hr>
 
 <h1>Bug Database Live</h1>
 <p>
@@ -92,4 +92,5 @@ site_header("News Archive - 1998", array("generate_modified" => true));
  Report or check on bugs in the PHP 3 Bug Database.
 </p>
 
-<?php site_footer(); ?>
+<?php site_footer(array('elephpants' => true, 'sidebar' => $SIDEBAR_DATA));
+

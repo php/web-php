@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom" xmlns:default="http://php.net/ns/news">
+  <title>PHPBenelux Conference 2013</title>
+  <id>http://php.net/archive/2012.php#id2012-12-20-2</id>
+  <published>2012-12-20T12:16:46-08:00</published>
+  <updated>2012-12-20T12:16:46-08:00</updated>
+  <default:finalTeaserDate xmlns="http://php.net/ns/news">2013-01-26</default:finalTeaserDate>
+  <category term="conferences" label="Conference announcement"/>
+  <link href="http://php.net/conferences/index.php#id2012-12-20-2" rel="alternate" type="text/html"/>
+  <default:newsImage xmlns="http://php.net/ns/news" link="http://conference.phpbenelux.eu/2013/" title="PHPBenelux Conference 2013">phpbenelux_conference_logo-01-e1344277762627.png</default:newsImage>
+  <link href="http://conference.phpbenelux.eu/2013/" rel="via" type="text/html"/>
+  <content type="xhtml">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+     <p>
+     After a very successful 2012 edition, we are proud to announce PHPBenelux
+     Conference 2013. This event will take place on Friday January 25th and
+     Saturday January 26th 2013 in Antwerp, Belgium. We organize a community
+     oriented conference that is built around an excellent lineup and awesome
+     socials. Our schedule has been announced and tickets are available. Go to
+     <a href="http://conference.phpbenelux.eu/2013/">http://conference.phpbenelux.eu/2013/</a> for more information.
+     </p>
+    </div>
+  </content>
+</entry>

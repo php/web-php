@@ -3,7 +3,7 @@
 $_SERVER['BASE_PAGE'] = 'archive/2009.php';
 include_once $_SERVER['DOCUMENT_ROOT'] . '/include/prepend.inc';
 news_archive_sidebar();
-site_header("News Archive - 2009");
+site_header("News Archive - 2009", array("cache" => true));
 ?>
 
 <h1>News Archive - 2009</h1>
@@ -12,7 +12,7 @@ site_header("News Archive - 2009");
  Here are the most important news items we have published in 2009 on PHP.net.
 </p>
 
-<hr />
+<hr>
 <div class="newsItem hentry"> 
     <div class="newsImage"></div> 
     <h1 class="summary entry-title"><a name="id2009-12-17-1" id="id2009-12-17-1" href="http://www.php.net/archive/2009.php#id2009-12-17-1" rel="bookmark" class="bookmark">PHP 5.2.12 Released!</a></h1> 
@@ -44,7 +44,7 @@ site_header("News Archive - 2009");
     </div> 
 </div> 
  
-<hr /> 
+<hr> 
 <div class="newsItem hentry vevent"> 
     <div class="newsImage"><?php news_image("http://www.phpconference.co.uk/", "phpukconf2010.png", "PHP UK Conference 2010"); ?></div> 
     <h1 class="summary entry-title"><a name="id2009-12-09-1" id="id2009-12-09-1" href="http://www.phpconference.co.uk/" rel="bookmark" class="bookmark">PHP UK Conference 2010</a></h1> 
@@ -105,7 +105,7 @@ site_header("News Archive - 2009");
     </div> 
 </div> 
  
-<hr /> 
+<hr> 
 <div class="newsItem hentry"> 
     <div class="newsImage"></div> 
     <h1 class="summary entry-title"><a name="id2009-11-19-1" id="id2009-11-19-1" href="http://www.php.net/archive/2009.php#id2009-11-19-1" rel="bookmark" class="bookmark">PHP 5.3.1 Released!</a></h1> 
@@ -131,7 +131,7 @@ site_header("News Archive - 2009");
     </div> 
 </div> 
  
-<hr /> 
+<hr> 
 <div class="newsItem hentry vevent"> 
     <div class="newsImage"><?php news_image("http://www.phpconference.com/", "ipc09.png", "International PHP Conference"); ?></div> 
     <h1 class="summary entry-title"><a name="id2009-10-21-1" id="id2009-10-21-1" href="http://www.phpconference.com/" rel="bookmark" class="bookmark">International PHP Conference</a></h1> 
@@ -147,7 +147,7 @@ site_header("News Archive - 2009");
     </div> 
 </div> 
  
-<hr /> 
+<hr> 
 <div class="newsItem hentry vevent"> 
     <div class="newsImage"><?php news_image("http://www.phpworld-kongress.de", "phpworldkongress09.gif", "PHP World Kongress"); ?></div> 
     <h1 class="summary entry-title"><a name="id2009-10-01-1" id="id2009-10-01-1" href="http://www.phpworld-kongress.de" rel="bookmark" class="bookmark">PHP World Kongress</a></h1> 
@@ -175,7 +175,7 @@ site_header("News Archive - 2009");
     </div> 
 </div> 
  
-<hr /> 
+<hr> 
 <div class="newsItem hentry vevent"> 
     <div class="newsImage"><?php news_image("http://phpconference.es/", "phpbarcelonaconference2009small1.jpg", "PHP Barcelona"); ?></div> 
     <h1 class="summary entry-title"><a name="id2009-09-28-1" id="id2009-09-28-1" href="http://phpconference.es/" rel="bookmark" class="bookmark">PHP Barcelona Conference 2009</a></h1> 
@@ -190,7 +190,7 @@ site_header("News Archive - 2009");
     </div> 
 </div> 
  
-<hr /> 
+<hr> 
 <div class="newsItem hentry"> 
     <div class="newsImage"></div> 
     <h1 class="summary entry-title"><a name="id2009-09-17-1" id="id2009-09-17-1" href="http://www.php.net/archive/2009.php#id2009-09-17-1" rel="bookmark" class="bookmark">PHP 5.2.11 Released!</a></h1> 
@@ -220,7 +220,7 @@ site_header("News Archive - 2009");
     </div> 
 </div> 
  
-<hr /> 
+<hr> 
 <div class="newsItem hentry vevent"> 
     <div class="newsImage"><?php news_image("http://zendcon.com", "ZendCon09-logo.gif", "ZendCon 2009"); ?></div> 
     <h1 class="summary entry-title"><a name="id2009-08-26-1" id="id2009-08-26-1" href="http://zendcon.com" rel="bookmark" class="bookmark">ZendCon 2009!</a></h1> 
@@ -248,7 +248,7 @@ site_header("News Archive - 2009");
     </div> 
 </div> 
  
-<hr /> 
+<hr> 
 <div class="newsItem hentry"> 
     <div class="newsImage"></div> 
     <h1 class="summary entry-title"><a name="id2009-07-30-1" id="id2009-07-30-1" href="http://www.php.net/archive/2009.php#id2009-07-30-1" rel="bookmark" class="bookmark">PHP TestFest 2009 Winners</a></h1> 
@@ -300,7 +300,7 @@ site_header("News Archive - 2009");
     </div> 
 </div> 
  
-<hr /> 
+<hr> 
 <div class="newsItem hentry vevent"> 
     <div class="newsImage"><?php news_image("http://conference.phpnw.org.uk/", "phpnw09_blk_300x110.png", "PHP NW 2009"); ?></div> 
     <h1 class="summary entry-title"><a name="id2009-07-21-1" id="id2009-07-21-1" href="http://conference.phpnw.org.uk/" rel="bookmark" class="bookmark">PHP North West Conference</a></h1> 
@@ -335,7 +335,7 @@ site_header("News Archive - 2009");
     </div> 
 </div> 
  
-<hr /> 
+<hr> 
 <div class="newsItem hentry"> 
     <div class="newsImage"></div> 
     <h1 class="summary entry-title"><a name="id2009-07-16-1" id="id2009-07-16-1" href="http://www.php.net/archive/2009.php#id2009-07-16-1" rel="bookmark" class="bookmark">Subversion Migration Complete</a></h1> 
@@ -363,7 +363,7 @@ site_header("News Archive - 2009");
     </div> 
 </div> 
  
-<hr /> 
+<hr> 
 <div class="newsItem hentry"> 
     <div class="newsImage"></div> 
     <h1 class="summary entry-title"><a name="id2009-07-09-1" id="id2009-07-09-1" href="http://www.php.net/archive/2009.php#id2009-07-09-1" rel="bookmark" class="bookmark">2009 PHP TestFest</a></h1> 
@@ -418,7 +418,7 @@ site_header("News Archive - 2009");
     </div> 
 </div> 
  
-<hr /> 
+<hr> 
 <div class="newsItem hentry"> 
     <div class="newsImage"></div> 
     <h1 class="summary entry-title"><a name="id2009-06-30-1" id="id2009-06-30-1" href="http://www.php.net/archive/2009.php#id2009-06-30-1" rel="bookmark" class="bookmark">PHP 5.3.0 Released!</a></h1> 
@@ -465,7 +465,7 @@ site_header("News Archive - 2009");
     </div> 
 </div> 
  
-<hr /> 
+<hr> 
 <div class="newsItem hentry vevent"> 
     <div class="newsImage"><?php news_image("http://www.phprio.org/phpnrio09", "phpnrio09.png", "PHP Rio"); ?></div> 
     <h1 class="summary entry-title"><a name="id2009-06-21-1" id="id2009-06-21-1" href="http://www.php.net/archive/2009.php#id2009-06-21-1" rel="bookmark" class="bookmark">PHP'n Rio conference</a></h1> 
@@ -502,7 +502,7 @@ site_header("News Archive - 2009");
     </div> 
 </div> 
  
-<hr /> 
+<hr> 
 <div class="newsItem hentry"> 
     <div class="newsImage"></div> 
     <h1 class="summary entry-title"><a name="id2009-06-19-1" id="id2009-06-19-1" href="http://www.php.net/archive/2009.php#id2009-06-19-1" rel="bookmark" class="bookmark">PHP 5.3.0RC4 Release Announcements</a></h1> 
@@ -532,7 +532,7 @@ site_header("News Archive - 2009");
     </div> 
 </div> 
  
-<hr /> 
+<hr> 
 <div class="newsItem hentry"> 
     <div class="newsImage"></div> 
     <h1 class="summary entry-title"><a name="id2009-06-18-1" id="id2009-06-18-1" href="http://www.php.net/archive/2009.php#id2009-06-18-1" rel="bookmark" class="bookmark">PHP 5.2.10 Released!</a></h1> 
@@ -560,7 +560,7 @@ site_header("News Archive - 2009");
     </div> 
 </div> 
  
-<hr /> 
+<hr> 
 <div class="newsItem hentry"> 
     <div class="newsImage"></div> 
     <h1 class="summary entry-title"><a name="id2009-06-12-1" id="id2009-06-12-1" href="http://www.php.net/archive/2009.php#id2009-06-12-1" rel="bookmark" class="bookmark">PHP 5.2.10RC2 and PHP 5.3.0RC3 Release Announcements</a></h1> 
@@ -571,7 +571,7 @@ site_header("News Archive - 2009");
     </div> 
 </div> 
  
-<hr /> 
+<hr> 
 <div class="newsItem hentry vevent"> 
     <div class="newsImage"><?php news_image("http://cw.mtacon.com/", "codeworks2009.png", "CodeWorks Conference"); ?></div> 
     <h1 class="summary entry-title"><a name="id2009-06-03-1" id="id2009-06-03-1" href="http://cw.mtacon.com/" rel="bookmark" class="bookmark">CodeWorks Conference</a></h1> 
@@ -599,7 +599,7 @@ site_header("News Archive - 2009");
     </div> 
 </div> 
  
-<hr /> 
+<hr> 
 <div class="newsItem hentry vevent"> 
     <div class="newsImage"><?php news_image("http://www.afup.org/", "forumphp2009.jpg", "Forum PHP Paris"); ?></div> 
     <h1 class="summary entry-title"><a name="id2009-05-29-1" id="id2009-05-29-1" href="http://www.afup.org/" rel="bookmark" class="bookmark">Forum PHP Paris 2009</a></h1> 
@@ -629,7 +629,7 @@ site_header("News Archive - 2009");
     </div> 
 </div> 
  
-<hr /> 
+<hr> 
 <div class="newsItem hentry"> 
     <div class="newsImage"></div> 
     <h1 class="summary entry-title"><a name="id2009-05-09-1" id="id2009-05-09-1" href="http://www.php.net/archive/2009.php#id2009-05-09-1" rel="bookmark" class="bookmark">TestFest 2009</a></h1> 
@@ -677,7 +677,7 @@ site_header("News Archive - 2009");
     </div> 
 </div> 
  
-<hr /> 
+<hr> 
 <div class="newsItem hentry"> 
     <div class="newsImage"></div> 
     <h1 class="summary entry-title"><a name="id2009-05-07-1" id="id2009-05-07-1" href="http://www.php.net/archive/2009.php#id2009-05-07-1" rel="bookmark" class="bookmark">PHP 5.3.0RC2 Release Announcement</a></h1> 
@@ -704,7 +704,7 @@ site_header("News Archive - 2009");
     </div> 
 </div> 
  
-<hr /> 
+<hr> 
 <div class="newsItem hentry vevent"> 
     <div class="newsImage"><?php news_image("http://www.phpday.it/", "phpday-it-2009.png", "phpDay Italy"); ?></div> 
     <h1 class="summary entry-title"><a name="id2009-04-17-1" id="id2009-04-17-1" href="http://www.phpday.it/" rel="bookmark" class="bookmark">phpDay Italy</a></h1> 
@@ -742,7 +742,7 @@ site_header("News Archive - 2009");
     </div> 
 </div> 
  
-<hr /> 
+<hr> 
 <div class="newsItem hentry"> 
     <div class="newsImage"></div> 
     <h1 class="summary entry-title"><a name="id2009-04-08-1" id="id2009-04-08-1" href="http://www.php.net/archive/2009.php#id2009-04-08-1" rel="bookmark" class="bookmark">PHP 5.2.9-2 (Windows) released</a></h1> 
@@ -759,7 +759,7 @@ site_header("News Archive - 2009");
     </div> 
 </div> 
  
-<hr /> 
+<hr> 
 <div class="newsItem hentry vevent"> 
     <div class="newsImage"><?php news_image("http://phpconference.nl/", "dpc09_banner.jpg", "DPC09"); ?></div> 
     <h1 class="summary entry-title"><a name="id2009-04-06-1" id="id2009-04-06-1" href="http://phpconference.nl/" rel="bookmark" class="bookmark">DPC09</a></h1> 
@@ -794,7 +794,7 @@ site_header("News Archive - 2009");
     </div> 
 </div> 
  
-<hr /> 
+<hr> 
 <div class="newsItem hentry"> 
     <div class="newsImage"></div> 
     <h1 class="summary entry-title"><a name="id2009-03-27-1" id="id2009-03-27-1" href="http://www.php.net/archive/2009.php#id2009-03-27-1" rel="bookmark" class="bookmark">Google Summer of Code 2009</a></h1> 
@@ -817,7 +817,7 @@ site_header("News Archive - 2009");
     </div> 
 </div> 
  
-<hr /> 
+<hr> 
 <div class="newsItem hentry"> 
     <div class="newsImage"></div> 
     <h1 class="summary entry-title"><a name="id2009-03-24-1" id="id2009-03-24-1" href="http://www.php.net/archive/2009.php#id2009-03-24-1" rel="bookmark" class="bookmark">PHP 5.3.0RC1 Release Announcement</a></h1> 
@@ -883,7 +883,7 @@ site_header("News Archive - 2009");
     </div> 
 </div> 
  
-<hr /> 
+<hr> 
 <div class="newsItem hentry"> 
     <div class="newsImage"></div> 
     <h1 class="summary entry-title"><a name="id2009-03-10-1" id="id2009-03-10-1" href="http://www.php.net/archive/2009.php#id2009-03-10-1" rel="bookmark" class="bookmark">5.2.9-1 (for Windows) released</a></h1> 
@@ -899,7 +899,7 @@ site_header("News Archive - 2009");
     </div> 
 </div> 
  
-<hr /> 
+<hr> 
 <div class="newsItem hentry"> 
     <div class="newsImage"></div> 
     <h1 class="summary entry-title"><a name="id2009-02-26-1" id="id2009-02-26-1" href="http://www.php.net/archive/2009.php#id2009-02-26-1" rel="bookmark" class="bookmark">PHP 5.2.9 Released!</a></h1> 
@@ -917,7 +917,7 @@ site_header("News Archive - 2009");
     </div> 
 </div> 
  
-<hr /> 
+<hr> 
 <div class="newsItem hentry vevent"> 
     <div class="newsImage"></div> 
     <h1 class="summary entry-title"><a name="id2009-02-20-1" id="id2009-02-20-1" href="http://www.php.net/archive/2009.php#id2009-02-20-1" rel="bookmark" class="bookmark">php|tek 2009</a></h1> 
@@ -934,7 +934,7 @@ site_header("News Archive - 2009");
     </div> 
 </div> 
  
-<hr /> 
+<hr> 
 <div class="newsItem hentry vevent"> 
     <div class="newsImage"></div> 
     <h1 class="summary entry-title"><a name="id2009-02-18-1" id="id2009-02-18-1" href="http://www.php.net/archive/2009.php#id2009-02-18-1" rel="bookmark" class="bookmark">2009 PHP Quebec Conference</a></h1> 
@@ -964,8 +964,7 @@ site_header("News Archive - 2009");
   
     </div> 
 </div>
-<?php
 
-/* %s/<a href="\(.*\)"><img src="\/images\/news\/\(.*\)" alt="\(.*\)" width.*><\/a>/<?php news_image("\1", "\2", "\3"); ?>/g */
-site_footer();
+
+<?php site_footer(array('elephpants' => true, 'sidebar' => $SIDEBAR_DATA));
 

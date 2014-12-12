@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom" xmlns:default="http://php.net/ns/news">
+  <title>PHP Cape Town Conference</title>
+  <id>http://php.net/archive/2014.php#id2014-07-08-1</id>
+  <published>2014-07-08T17:03:44-07:00</published>
+  <updated>2014-07-08T17:03:44-07:00</updated>
+  <default:finalTeaserDate xmlns="http://php.net/ns/news">2014-10-04</default:finalTeaserDate>
+  <category term="conferences" label="Conference announcement"/>
+  <link href="http://php.net/conferences/index.php#id2014-07-08-1" rel="alternate" type="text/html"/>
+  <default:newsImage xmlns="http://php.net/ns/news" link="http://www.phpsouthafrica.com/" title="PHP Cape Town">capetown2014.png</default:newsImage>
+  <link href="http://www.phpsouthafrica.com/" rel="via" type="text/html"/>
+  <content type="xhtml">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+     <p>
+     Cape Town's 2nd Annual PHP Conference is here... 2nd – 4th October 2014
+     </p>
+     
+     <p>
+     We are excited to announce our 2nd Annual
+     <a href="http://www.phpsouthafrica.com/">PHP Cape Town Conference</a>, 3 Days
+     at The Cape Town Stadium overlooking the Atlantic Ocean - yip insane views.
+     </p>
+     
+     <p>
+     Keeping with our winning formula of international speakers combined with some
+     great local talent to learn off. With over 300 delegates expected, you do not
+     want to miss this one.
+     </p>
+     
+     <p>
+     PHP Cape Town 2013 SOLD OUT in less than 4 weeks and it will happen again.
+     </p>
+     
+     <p>
+     If you're PHP-Curious or Skilled Developer we would like you to share in the
+     experience. Thank You to the PHP Cape Town Community for volunteering and
+     helping out. Call for Papers will close 20th July 2014.
+     </p>
+     
+     <ul>
+       <li>12 Speakers</li>
+       <li>6 Practical Workshop Sessions</li>
+       <li>Great Sponsors</li>
+       <li>Free Swag, T Shirt and Books</li>
+       <li>Prize Draws</li>
+     </ul>
+    </div>
+  </content>
+</entry>

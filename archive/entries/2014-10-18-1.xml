@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom" xmlns:default="http://php.net/ns/news">
+  <title>SunshinePHP Developer Conference 2015</title>
+  <id>http://php.net/archive/2014.php#id2014-10-18-1</id>
+  <published>2014-10-18T03:42:05+02:00</published>
+  <updated>2014-10-18T03:42:05+02:00</updated>
+  <default:finalTeaserDate xmlns="http://php.net/ns/news">2015-02-05</default:finalTeaserDate>
+  <category term="conferences" label="Conference announcement"/>
+  <link href="http://php.net/conferences/index.php#id2014-10-18-1" rel="alternate" type="text/html"/>
+  <default:newsImage xmlns="http://php.net/ns/news" link="http://sunshinephp.com/" title="SunshinePHP Developer Conference 2015">sunshinephp-feb-2015-thumb.png</default:newsImage>
+  <link href="http://sunshinephp.com/" rel="via" type="text/html"/>
+  <content type="xhtml">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+     <p>
+         The 3rd year of <a href="http://sunshinephp.com/" title="SunshinePHP">SunshinePHP</a> in Miami, Florida is shaping up to be awesome once again from February 5th - 7th, 2015.  We will have a full day of in-depth 3-hour tutorials on Thursday, followed by the 2 day conference on Friday an Saturday.  The conference has something for every level of PHP developer, as well as a hack-a-thon, unscheduled Uncon, fun activities, and of course sunshine.  February is the perfect time to be in sunny Miami, Florida but you'll want to hurry because tickets sold out last year.
+     </p>
+     <p>
+         So when it is cold everywhere else, come down to Florida where it is sunny and warm to enjoy some PHP, learning, community, and fun!
+     </p>
+     <p>
+         <a href="http://sunshinephp.com/" title="SunshinePHP">SunshinePHP</a>
+         <a href="https://twitter.com/hashtag/ssp15" title="SunshinePHP on Twitter">#ssp15</a>
+     </p>
+     <p>
+         NOTE: Yes, there will be elePHPants!
+     </p>
+    </div>
+  </content>
+</entry>

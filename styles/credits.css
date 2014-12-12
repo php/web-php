@@ -1,0 +1,34 @@
+/* Overrides for the default phpcredits() styling in credits.php. */
+
+section.layout-content {
+    margin: 0 auto;
+    width: 960px;
+}
+
+h1 {
+    margin-bottom: 0.7em;
+}
+
+table {
+    border-bottom: solid 0.25em #99C;
+    width: 100% !important;
+}
+
+table tr:last-child td, table tr:last-child th {
+    padding-bottom: 1.6em;
+}
+
+.h:first-child th {
+    color: #333;
+    font-size: 1.5em;
+    font-weight: normal;
+    line-height: 2em;
+}
+
+th {
+    text-align: left;
+}
+
+td:first-child, th:first-child {
+    width: 33%;
+}

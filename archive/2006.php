@@ -3,7 +3,7 @@
 $_SERVER['BASE_PAGE'] = 'archive/2006.php';
 include_once $_SERVER['DOCUMENT_ROOT'] . '/include/prepend.inc';
 news_archive_sidebar();
-site_header("News Archive - 2006", array("generate_modified" => true));
+site_header("News Archive - 2006", array("cache" => true));
 ?>
 
 <h1>News Archive - 2006</h1>
@@ -12,7 +12,7 @@ site_header("News Archive - 2006", array("generate_modified" => true));
  Here are the most important news items we have published in 2006 on PHP.net.
 </p>
 
-<hr />
+<hr>
 <?php news_image("http://www.prophp.com.br/phpconference.php", "phpconfbrasil.jpg", "PHP Brasil 2007"); ?>
 <h1>PHP Conference Brazil</h1>
 <p>
@@ -29,7 +29,7 @@ site_header("News Archive - 2006", array("generate_modified" => true));
  <a href="http://www.prophp.com.br/phpconference.php">the Brazilian PHP Conference</a> Web site.
 </p>
 
-<hr />
+<hr>
 
 <h1>PHP 5.2.0 Released</h1>
 <p>
@@ -52,7 +52,7 @@ site_header("News Archive - 2006", array("generate_modified" => true));
  and PHP 5.2.0.
 </p>
 
-<hr />
+<hr>
 
 <?php news_image("http://www.afup.org/forumphp/", "afup2006.jpg", "AFUP Paris 2006"); ?>
 
@@ -67,7 +67,7 @@ for two days of sessions, packed with enterprise solutions and
 advanced techniques (in French).
 </p>
 
-<hr />
+<hr>
 
 <?php news_image("http://phpconference.com/", "intconf2006fall.png", "International PHP Conference 2006"); ?>
 
@@ -92,7 +92,7 @@ advanced techniques (in French).
  Registration is now open.
 </p>
 
-<hr />
+<hr>
 
 <h1>PHP 5.1.6 Released</h1>
 <p>
@@ -102,7 +102,7 @@ advanced techniques (in French).
  memory_limit restriction on 64 bit systems that was not included in PHP 5.1.5.
 </p>
 
-<hr />
+<hr>
 
 <?php news_image("http://www.amazon.com/exec/obidos/ASIN/0596528124/wwwphpnet", "mre3cover_sm.jpg", "Mastering Regular Expressions, 3rd edition"); ?>
 <h1>Mastering Regular Expressions - now with PHP coverage</h1>
@@ -114,7 +114,7 @@ advanced techniques (in French).
  resource from Jeffrey Friedl who has been writing about regexps for years.
 </p>
 
-<hr />
+<hr>
 
 <h1>PHP 4.4.4 and PHP 5.1.5 Released</h1>
 <p>
@@ -145,7 +145,7 @@ available in the ChangeLogs (<a href="/ChangeLog-4.php#4.4.4">PHP 4</a>,
 <a href="/ChangeLog-5.php#5.1.5">PHP 5</a>).
 </p>
 
-<hr />
+<hr>
 
 <h1>PHP 4.4.3 Released</h1>
 <p>
@@ -171,7 +171,7 @@ href="/release_4_4_3.php">release announcement</a> and the full list of changes
 is available in the <a href="/ChangeLog-4.php#4.4.3">PHP 4 ChangeLog</a>.
 </p>
 
-<hr />
+<hr>
 
 <?php news_image("http://www.phparch.com/works/", "phpworks.png", "php|works / db|works 2006"); ?>
 <h1>php/db|works 2006 Schedule Now Online</h1>
@@ -188,7 +188,7 @@ is available in the <a href="/ChangeLog-4.php#4.4.3">PHP 4 ChangeLog</a>.
  including special evening social events with top-notch prizes.
 </p>
 
-<hr />
+<hr>
 
 <?php news_image("http://code.google.com/soc/php/about.html", "google_soc_2006_128x53.gif", "Google Summer of Code 2006"); ?>
 
@@ -206,7 +206,7 @@ The students, their projects and their assigned mentors can be viewed
 <a href="http://code.google.com/soc/php/about.html">here</a>.
 </p>
 
-<hr />
+<hr>
 
 <?php news_image("http://www.nyphpcon.com/", "NYPHPCon06.gif", "NYPHPCon 2006"); ?>
 
@@ -234,7 +234,7 @@ Business Strategy and Technical Solutions</a>.  Over 400 are expected to attend,
 including business and technical professionals from around the world.
 </p>
 
-<hr />
+<hr>
 
 <h1>PHP 5.1.4 Released</h1>
 <p>
@@ -245,11 +245,11 @@ including business and technical professionals from around the world.
 <p>
 Further details about this release can be found in the <a href="/release_5_1_4.php">release announcement</a> 
 and the full list of changes is available in the <a href="/ChangeLog-5.php#5.1.4">PHP 5 ChangeLog</a>.
-<br />
+<br>
 <b>The tarballs were updated to include the PEAR's phar file, previously missing from the release.</b>
 </p>
 
-<hr />
+<hr>
 
 <h1>PHP 5.1.3 Released</h1>
 <p>
@@ -279,7 +279,7 @@ Further details about this release can be found in the <a href="/release_5_1_3.p
 and the full list of changes is available in the <a href="/ChangeLog-5.php#5.1.3">PHP 5 ChangeLog</a>.
 </p>
 
-<hr />
+<hr>
 
 <h1>Summer of Code</h1>
 <p>
@@ -299,7 +299,7 @@ and the full list of changes is available in the <a href="/ChangeLog-5.php#5.1.3
  then go to <a href="http://code.google.com/soc/student_step1.html">Step 1</a>.
 </p>
 
-<hr />
+<hr>
 <h1>PHP Vikinger</h1>
 <p>
  <span class="newsdate">[24-Apr-2006]</span>
@@ -321,7 +321,7 @@ and the full list of changes is available in the <a href="/ChangeLog-5.php#5.1.3
  registration for the event opens on May 1st.
 </p>
 
-<hr />
+<hr>
 <?php news_image("http://www.phparch.com/tek/", "php_tek_2006.gif", "php|tek 2006"); ?>
 <h1>php|tek 2006</h1>
 <p>
@@ -335,7 +335,7 @@ and the full list of changes is available in the <a href="/ChangeLog-5.php#5.1.3
  variety of topics that highlight PHP's scalability, robustness and future.
 </p>
 
-<hr />
+<hr>
 <?php news_image("http://conf.phpquebec.com/en/conf2006/", "conference_php_quebec.gif", "PHP Quebec 2006"); ?>
 
 <h1>PHP Quebec 2006</h1>
@@ -359,12 +359,12 @@ also present the various storage solutions available such has IBM DB2,
 PostgreSQL, SQLite and MySQL.
 </p>
 <p>
-Early bird pricing are available until march 3rd.<br />
+Early bird pricing are available until march 3rd.<br>
 Learn more about this <a 
 href="http://conf.phpquebec.com/en/conf2006/">exciting conference</a>.
 </p>
 
-<hr />
+<hr>
 <?php news_image("http://www.nyphpcon.com/", "NYPHPCon06.gif", "NYPHPCon 2006"); ?>
 
 <h1>NYPHPCon 2006</h1>
@@ -387,7 +387,7 @@ href="http://www.nyphpcon.com/attendee_registration.php">early-bird
 discount is available until March 1st</a>.
 </p>
 
-<hr />
+<hr>
 
 <?php news_image("http://wtconferences.com/", "webtech2006.png", "WebTech 2006"); ?>
 
@@ -410,7 +410,7 @@ discount is available until March 1st</a>.
  internet, and others.
 </p>
 
-<hr />
+<hr>
 <?php news_image("http://www.phpconference.co.uk/", "ukphp2006.png", "UK PHP Conference 2006"); ?>
 
 <h1>UK PHP Conference 2006</h1>
@@ -424,7 +424,7 @@ discount is available until March 1st</a>.
  Chris Kunz and Matt Zandstra. Not bad for 50 quid.
 </p>
 
-<hr />
+<hr>
 <h1>PHP 4.4.2 Released</h1>
 <p>
  <span class="newsdate">[13-Jan-2006]</span>
@@ -445,7 +445,7 @@ Further details about this release can be found in the <a href="/release_4_4_2.p
 and the full list of changes is available in the <a href="/ChangeLog-4.php#4.4.2">PHP 4 ChangeLog</a>.
 </p>
 
-<hr />
+<hr>
 <h1>PHP 5.1.2 Released</h1>
 <p>
  <span class="newsdate">[12-Jan-2006]</span>
@@ -467,4 +467,4 @@ Further details about this release can be found in the <a href="/release_5_1_2.p
 and the full list of changes is available in the <a href="/ChangeLog-5.php#5.1.2">PHP 5 ChangeLog</a>.
 </p>
 
-<?php site_footer(); ?>
+<?php site_footer(array('elephpants' => true, 'sidebar' => $SIDEBAR_DATA));

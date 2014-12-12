@@ -1,12 +1,8 @@
 <?php
 /* $Id$ */
 
-// Set the static content root differently on php.net
-if ($MYSITE == "http://www.php.net/") {
-    $_SERVER['STATIC_ROOT'] = 'http://static.php.net/www.php.net';
-} elseif (!isset($_SERVER['STATIC_ROOT'])) {
-    $_SERVER['STATIC_ROOT'] = "";
-}
+$_SERVER['STATIC_ROOT'] = $MYSITE;
+$_SERVER['MYSITE'] = $MYSITE;
 
 // Use class names instead of colors
 ini_set('highlight.comment', 'comment');
@@ -18,24 +14,19 @@ ini_set('highlight.html',    'html');
 // Highlight PHP code
 function highlight_php($code, $return = FALSE)
 {
-    // Using OB, as highlight_string() only supports
-    // returning the result from 4.2.0
-    ob_start();
-    highlight_string($code);
-    $highlighted = ob_get_contents();
-    ob_end_clean();
+    $highlighted = highlight_string($code, TRUE);
 
-    // This should eventually be a php_syntax_check() call when we move to PHP5
-    // But use this ugly hack for now to avoid code snippets with bad syntax screwing up the highlighter
-    if(strstr($highlighted,"include/layout.inc</b>")) $highlighted = '<span class="html">'.nl2br(htmlentities($code))."</span>";
+    // Use this ugly hack for now to avoid code snippets with bad syntax screwing up the highlighter
+    if(strstr($highlighted, "include/layout.inc</b>")) {
+	    $highlighted = '<span class="html">'. nl2br(htmlentities($code, ENT_HTML5), FALSE) ."</span>";
+	}
 
     // Fix output to use CSS classes and wrap well
     $highlighted = '<div class="phpcode">' . str_replace(
         array(
             '&nbsp;',
-            '<br />',
-            '<font color="',        // for PHP 4
-            '<span style="color: ', // from PHP 5.0.0RC1
+            '<br>',
+            '<span style="color: ',
             '</font>',
             "\n ",
             '  ',
@@ -43,8 +34,7 @@ function highlight_php($code, $return = FALSE)
         ),
         array(
             ' ',
-            "<br />\n",
-            '<span class="',
+            "<br>\n",
             '<span class="',
             '</span>',
             "\n&nbsp;",
@@ -61,312 +51,11 @@ function highlight_php($code, $return = FALSE)
 // Stats pages still need this
 function commonHeader($title) { site_header($title); }
 
-function site_header($title = '', $config = array())
-{
-    if (myphpnet_beta()) {
-        return site_header_beta($title, $config);
-    }
-    global $EXPL_LANG, $SIDEBAR_DATA, $RSIDEBAR_DATA, $PAGE_COLUMNS, $PGI;
-
-    // Default to empty array if improper parameter passed
-    if (!is_array($config)) { $config = array(); }
-
-    // String defaults
-    $lang_input = $canonical = $base = $meta = $layout_helper = '';
-
-    // Count number of columns for layout. The number identifies
-    // the layout precisely, as we have no page having a right
-    // sidebar and no left sidebar
-    $PAGE_COLUMNS = 1;
-    if (!empty($SIDEBAR_DATA))  { $PAGE_COLUMNS++; }
-    if (!empty($RSIDEBAR_DATA)) { $PAGE_COLUMNS++; }
-
-    // Check which language we are presenting, default to english
-    $lang = "en";
-    if (isset($config["lang"])) {
-        $lang = language_convert($config["lang"]);
-    } elseif (isset($PGI, $PGI['head'], $PGI['head'][1])) {
-        $lang = language_convert($PGI['head'][1]);
-    }
-
-    // Print out lang and charset headers
-    if (!isset($config["charset"])) { $config["charset"] = "utf-8"; }
-    header("Content-type: text/html;charset={$config['charset']}");
-    header("Content-language: {$lang}");
-    if (isset($config["generate_modified"]) && $config["generate_modified"]) {
-        $timestamp = @filemtime($_SERVER["DOCUMENT_ROOT"] . "/" .$_SERVER["BASE_PAGE"]);
-        if ($timestamp) {
-            $tsstring = gmdate("D, d M Y H:i:s ", $timestamp) . "GMT";
-            header("Last-Modified: " . $tsstring);
-        }
-    }
-
-
-    if (isset($config["extra_headers"]) && is_array($config["extra_headers"])) {
-        foreach($config["extra_headers"] as $key => $value) {
-            header(sprintf("%s: %s", $key, $value));
-        }
-    }
-
-    if (!empty($title)) { $title = ": $title"; }
-
-    // This page should not be indexed by robots
-    if (in_array("noindex", $config)) {
-        $meta .= "\n <meta name=\"robots\" content=\"noindex\" />";
-    }
-
-    // Set onload handler if required
-    $onload = (isset($config['onload']) ? ' onload="' . $config['onload'] . '"' : '');
-
-    // Explicit language setting means that we should put that into the form
-    if (isset($EXPL_LANG)) {
-        $lang_input = "\n   <input type=\"hidden\" name=\"lang\" value=\"$EXPL_LANG\" />";
-    }
-
-    // Link tags
-    $link = "";
-    if (isset($config['link']) && is_array($config['link'])) {
-        foreach($config['link'] as $rel => $url) {
-            if (!is_array($url)) {
-                $link .= "\n <link rel=\"$rel\" href=\"$url\" />";
-            } else {
-                $link .= "\n <link ";
-                foreach($url as $attr => $val) {
-                    $link .= "$attr=\"$val\" ";
-                }
-                $link .= "/>";
-            }
-        }
-    }
-
-    // Base href setting for URL shortcuts to work
-    if (!empty($_SERVER['BASE_HREF'])) {
-        $base = "\n <base href=\"{$_SERVER['BASE_HREF']}\" />";
-        $canonical = '<link rel="canonical" href="http://php.net/' . $_SERVER['BASE_PAGE'] . '" />';
-    }
-
-    // Define layout helper in case we need it
-    if ($PAGE_COLUMNS > 2) {
-        $layout_helper = "<div id=\"layout_{$PAGE_COLUMNS}_helper\">";
-    }
-
-    // Choose name of mirror site specific CSS file
-    $mirror_specific_style = ($_SERVER['STATIC_ROOT'] ? 'phpnet' : 'mirror');
-
-    // Support for more header tags
-    $moreheadtags = '';
-    if (isset($config['headtags'])) {
-      if (is_array($config['headtags'])) {
-        $moreheadtags = "\n " . join("\n ", $config['headtags']);
-      } else {
-        $moreheadtags = "\n " . ((string)$config['headtags']);
-      }
-    }
-    $classname = "default";
-    if(isset($_SERVER['BASE_PAGE'])) {
-        $classname = dirname($_SERVER['BASE_PAGE']);
-        if(empty($classname)) {
-            $classname = "default";
-        }
-    }
-
-    // Right-to-left support
-    $rtl = "";
-    /* Does not appear to work... commenting out.
-    switch ($lang) {
-        case "he":
-        case "ar":
-            $rtl = ' style="direction: rtl"';
-            break;
-    }
-    */
-
-    // RTL Hack. Edit styles/rtl.css for rtl specific CSS.
-    $import_rtl = '';
-    if (in_array($lang, array('ar', 'fa', 'he'))) {
-        $import_rtl = '@import url("' . $_SERVER['STATIC_ROOT'] . '/styles/rtl.css");';
-    }
-
-    $profile = "";
-    if (isset($config['profile']) && !empty($config['profile'])) {
-        $profile = ' profile="';
-        if (is_array($config['profile'])) {
-            $profile .= implode(" ", $config['profile']);
-        } else {
-            $profile .= $config['profile'];
-        }
-        $profile .= '"';
-    }
-
-
-    print <<<END_HEADER
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-                      "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="{$lang}" lang="{$lang}">
-<head{$profile}>
- <title>PHP{$title}</title>
- <style type="text/css" media="all">
-  @import url("{$_SERVER['STATIC_ROOT']}/styles/site.css");
-  @import url("{$_SERVER['STATIC_ROOT']}/styles/{$mirror_specific_style}.css");
-  $import_rtl
- </style>
- <!--[if IE]><![if gte IE 6]><![endif]-->
-  <style type="text/css" media="print">
-   @import url("{$_SERVER['STATIC_ROOT']}/styles/print.css");
-  </style>
- <!--[if IE]><![endif]><![endif]-->
- <meta http-equiv="Content-Type" content="text/html; charset={$config['charset']}"/>
- <link rel="shortcut icon" href="{$_SERVER['STATIC_ROOT']}/favicon.ico" />{$link}
- $canonical
- <script type="text/javascript" src="{$_SERVER['STATIC_ROOT']}/userprefs.js"></script>{$base}{$meta}{$moreheadtags}
-</head>
-<body{$onload}>
-
-<div id="headnav">
- <a href="/" rel="home"><img src="{$_SERVER['STATIC_ROOT']}/images/php.gif"
- alt="PHP" width="120" height="67" id="phplogo" /></a>
- <div id="headmenu">
-  <a href="/downloads.php">downloads</a> |
-  <a href="/docs.php">documentation</a> |
-  <a href="/FAQ.php">faq</a> |
-  <a href="/support.php">getting help</a> |
-  <a href="/mailing-lists.php">mailing lists</a> |
-  <a href="/license">licenses</a> |
-  <a href="https://wiki.php.net/">wiki</a> |
-  <a href="https://bugs.php.net/">reporting bugs</a> |
-  <a href="/sites.php">php.net sites</a> |
-  <a href="/conferences/">conferences</a> |
-  <a href="/my.php">my php.net</a>
- </div>
-</div>
-
-<div id="headsearch">
- <form method="post" action="/search.php" id="topsearch">
-  <p>
-   <span title="Keyboard shortcut: Alt+S (Win), Ctrl+S (Apple)">
-    <span class="shortkey">s</span>earch for
-   </span>
-   <input type="text" name="pattern" value="" size="30" accesskey="s" />
-   <span>in the</span>
-   <select name="show">
-    <option value="all"      >all php.net sites</option>
-    <option value="local"    >this mirror only</option>
-    <option value="quickref" selected="selected">function list</option>
-    <option value="manual"   >online documentation</option>
-    <option value="bugdb"    >bug database</option>
-    <option value="news_archive">Site News Archive</option>
-    <option value="changelogs">All Changelogs</option>
-    <option value="pear"     >just pear.php.net</option>
-    <option value="pecl"     >just pecl.php.net</option>
-    <option value="talks"    >just talks.php.net</option>
-    <option value="maillist" >general mailing list</option>
-    <option value="devlist"  >developer mailing list</option>
-    <option value="phpdoc"   >documentation mailing list</option>
-   </select>
-   <input type="image"
-          src="{$_SERVER['STATIC_ROOT']}/images/small_submit_white.gif"
-          class="submit" alt="search" />{$lang_input}
-  </p>
- </form>
-</div>
-
-<div id="layout_{$PAGE_COLUMNS}">{$layout_helper}
-END_HEADER;
-
-    // Print out left column
-    if ($PAGE_COLUMNS > 1) {
-        echo "\n <div id=\"leftbar\">\n$SIDEBAR_DATA\n </div>";
-    }
-
-    // Print out right column
-    if ($PAGE_COLUMNS > 2) {
-        echo "\n <div id=\"rightbar\">\n$RSIDEBAR_DATA\n </div>";
-    }
-
-    // Any layout workarounds?
-    if (!empty($config["layout_workaround"])) {
-        echo $config["layout_workaround"];
-    }
-
-    // Start main page content
-    echo "\n <div id=\"content\" class=\"$classname\"{$rtl}>\n";
-}
 
 // Stats pages still need this
 function commonFooter() { site_footer(); }
 
-function site_footer($config = array())
-{
-    if (myphpnet_beta()) {
-        return site_footer_beta($config);
-    }
-    global $LAST_UPDATED, $PAGE_COLUMNS;
-
-    $stats         = (have_stats() ? "\n <a href=\"/stats/\">stats</a> |" : "");
-    $rsslink       = (isset($config["rss"]) ?
-        "<a href=\"{$config["rss"]}\">RSS</a> |" :
-        "");
-    $atomlink      = (isset($config["atom"]) ?
-        "<a href=\"{$config["atom"]}\">Atom</a> |" :
-        "");
-    $viewsource    = (isset($_SERVER['BASE_PAGE']) ?
-        "<a href=\"/source.php?url=/{$_SERVER['BASE_PAGE']}\">show source</a> |" :
-        "");
-    $provider_url  = mirror_provider_url();
-    $provider_name = mirror_provider();
-    $mirror_text   = (is_official_mirror() ?
-        "<a href=\"/mirror.php\">This mirror</a> generously provided by:" :
-        "<a href=\"/mirror.php\">This unofficial mirror</a> is operated at:");
-    $last_updated  = strftime("%c %Z", $LAST_UPDATED);
-    $layout_helper = ($PAGE_COLUMNS > 2 ? "</div>" : "");
-    //$functionsjs   = (in_array("functionsjs", $config) ? "\n<script src=\"" . $_SERVER['STATIC_ROOT'] . '/functions.js" type="text/javascript"></script>' : '');
-
-    // Automate the Copyright year
-    $current_year = date('Y');
-
-    print <<<END_FOOTER
-
- </div>
- <div class="cleaner">&nbsp;</div>
-{$layout_helper}</div>
-
-<div id="footnav">
- $rsslink $atomlink $viewsource
- <a href="/credits.php">credits</a> |$stats
- <a href="/sitemap.php">sitemap</a> |
- <a href="/contact.php">contact</a> |
- <a href="/contact.php#ads">advertising</a> |
- <a href="/mirrors.php">mirror sites</a>
-</div>
-
-<div id="pagefooter">
- <div id="copyright">
-  <a href="/copyright.php">Copyright &copy; 2001-{$current_year} The PHP Group</a><br />
-  All rights reserved.
- </div>
-
- <div id="thismirror">
-  {$mirror_text}
-  <a href="{$provider_url}">{$provider_name}</a><br />
-  Last updated: {$last_updated}
- </div>
-</div>
-<!--[if IE 6]>
-<script type="text/javascript">
-    /*Load jQuery if not already loaded*/ if(typeof jQuery == 'undefined'){ document.write("<script type=\"text/javascript\"   src=\"http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js\"></"+"script>"); var __noconflict = true; }
-    var IE6UPDATE_OPTIONS = {
-        icons_path: "/ie6update/images/"
-    }
-</script>
-<script type="text/javascript" src="/ie6update/ie6update.js"></script>
-<![endif]-->
-</body>
-</html>
-END_FOOTER;
-}
-
 // Resize the image using the output of make_image()
-// (considering possible HTML/XHTML image tag endings)
 function resize_image($img, $width = 1, $height = 1)
 {
     // Drop width and height values from image if available
@@ -376,17 +65,17 @@ function resize_image($img, $width = 1, $height = 1)
     // Return image with new width and height added
     return preg_replace(
         '!/?>$!',
-        sprintf(' height="%s" width="%s" />', $height, $width),
+        sprintf(' height="%s" width="%s">', $height, $width),
         $str
     );
 }
 
-// Return an <img /> tag for a given image file available on the server
+// Return an <img> tag for a given image file available on the server
 function make_image($file, $alt = FALSE, $align = FALSE, $extras = FALSE,
                     $dir = '/images', $border = 0, $addsize = TRUE)
 {
     // If no / was provided at the start of $dir, add it
-    $webdir = $_SERVER['STATIC_ROOT'] . ($dir{0} == '/' ? '' : '/') . $dir;
+    $webdir = $_SERVER['MYSITE'] . ($dir{0} == '/' ? '' : '/') . $dir;
 
     // Get width and height values if possible
     if ($addsize && ($size = @getimagesize($_SERVER['DOCUMENT_ROOT'] . "$dir/$file"))) {
@@ -406,7 +95,7 @@ function make_image($file, $alt = FALSE, $align = FALSE, $extras = FALSE,
     }
 
     // Return with image built up
-    return sprintf('<img src="%s/%s" alt="%s"%s%s%s />',
+    return sprintf('<img src="%s/%s" alt="%s"%s%s%s>',
         $webdir,
         $file,
         ($alt    ? $alt : ''),
@@ -414,10 +103,9 @@ function make_image($file, $alt = FALSE, $align = FALSE, $extras = FALSE,
         $align,
         ($extras ? ' ' . $extras              : '')
     );
-    return $image;
 }
 
-// Print an <img /> tag out for a given file
+// Print an <img> tag out for a given file
 function print_image($file, $alt = FALSE, $align = FALSE, $extras = FALSE,
                      $dir = '/images', $border = 0)
 {
@@ -516,6 +204,17 @@ function download_link($file, $title, $showsize = TRUE, $mirror = '')
             $local_file = "distributions/$file";
         }
 
+        if(@file_exists($local_file.".asc")) {
+            echo " ";
+            $sig_link = "get/$file.asc/from/a/mirror";
+            if ($mirror != '') {
+                $sig_link = $mirror . $sig_link;
+            } else {
+                $sig_link = "/" . $sig_link;
+            }
+            print_link($sig_link, "(sig)");
+        }
+
         // Try to get the size of the file
         $size = @filesize($local_file);
 
@@ -530,6 +229,7 @@ function download_link($file, $title, $showsize = TRUE, $mirror = '')
             }
             echo ']';
         }
+        
     }
 }
 
@@ -596,7 +296,7 @@ function display_event($event, $include_date = 1)
 
     // Weekday names array
     for ($i = 1; $i <= 7; $i++) {
-        $days[$i] = strftime('%A', mktime(12, 0, 0, 4, $i, 2001));
+        $days[$i] = strftime('%A', mktime(12, 0, 0, 4, $i, 2012));
     }
 
     // Recurring possibilities
@@ -610,8 +310,17 @@ function display_event($event, $include_date = 1)
         -3 => '3rd Last'
     );
 
-    $sday = (isset($event['start']) && !empty($event['start'])) ? strtotime($event['start']) : 0;
-    $eday = (isset($event['end']) && !empty($event['end'])) ? strtotime($event['end']) : 0;
+    if (!isset($event['start']) && isset($event['sday'])) {
+        $sday = mktime(12,0,0,$event['smonth'],$event['sday'],$event['syear']);
+    } else {
+        $sday = (isset($event['start']) && !empty($event['start'])) ? strtotime($event['start']) : 0;
+    }
+
+    if (!isset($event['end']) && isset($event['eday'])) {
+        $eday = mktime(12,0,0,$event['emonth'],$event['eday'],$event['eyear']);
+    } else {
+        $eday = (isset($event['end']) && !empty($event['end'])) ? strtotime($event['end']) : 0;
+    }
 ?>
 <table border="0" cellspacing="0" cellpadding="3" width="100%" class="vevent">
  <tr bgcolor="#dddddd"><td>
@@ -663,10 +372,10 @@ function display_event($event, $include_date = 1)
 <?php
 
     // Print long description
-    echo preg_replace("/\r?\n\r?\n/", "<br /><br />", trim(htmlentities($event['ldesc'],ENT_QUOTES | ENT_IGNORE, 'UTF-8')));
+    echo preg_replace("/\r?\n\r?\n/", "<br><br>", trim(htmlentities($event['ldesc'],ENT_QUOTES | ENT_IGNORE, 'UTF-8')));
     // If we have an URL, print it out
     if ($event['url']) {
-        echo '<br /><br /><b>URL:</b> ',
+        echo '<br><br><b>URL:</b> ',
              '<a href="', htmlentities($event['url'], ENT_QUOTES | ENT_IGNORE, 'UTF-8'), '">',
              htmlentities($event['url'], ENT_QUOTES | ENT_IGNORE, 'UTF-8'), '</a>';
     }
@@ -687,9 +396,7 @@ function print_view($templateName, array $params = array()) {
     $path = $_SERVER['DOCUMENT_ROOT'] . '/views/' . $templateName;
     if(file_exists($path)) {
         if(!empty($params)) {
-        foreach($params as $key => $param) {
-            $$key = $param;
-            }
+            extract($params);
         }
         include_once $path;
     }
@@ -700,23 +407,14 @@ function news_archive_sidebar()
 {
     global $SIDEBAR_DATA;
     $SIDEBAR_DATA = '
-<h3>Latest news</h3>
+<h3 class="announcements">Archives by year</h3>
 
-<p>
- For the latest news, <a href="/index.php" rel="home">check the homepage</a>,
- or <a href="/feed.atom">our Atom feed</a>.
-</p>
-
-<h3>Archives by year</h3>
-
-<ul class="toc">
 ';
     for ($i = date("Y"); $i >= 1998; $i--) {
         $pagename = "archive/$i.php";
-        $classname = ($pagename == $_SERVER['BASE_PAGE'] ? ' class="active"' : '');
-        $SIDEBAR_DATA .= "<li{$classname}><a href=\"/{$pagename}\">{$i}</a></li>\n";
+        $classname = ($pagename == $_SERVER['BASE_PAGE'] ? " active" : '');
+        $SIDEBAR_DATA .= "<p class='panel{$classname}'><a href=\"/{$pagename}\">{$i}</a></p>\n";
     }
-    $SIDEBAR_DATA .= '</ul>';
 }
 
 // Print news
@@ -751,7 +449,6 @@ function print_news($news, $dog, $max = 5, $onlyyear = null, $return = false) {
             $image = news_image($item["newsImage"]["link"], $item["newsImage"]["content"], $item["newsImage"]["title"], false);
         }
 
-        //$id = parse_url($item["id"], PHP_URL_FRAGMENT); 5.1.2
         $id = parse_url($item["id"]);
         $id = $id["fragment"];
 
@@ -766,10 +463,9 @@ function print_news($news, $dog, $max = 5, $onlyyear = null, $return = false) {
             $permlink = "#" .$id;
         }
 
-        // PHP4 strtotime() doesn't support RFC3339 timestamps
         $published = substr($item["published"], 0, 10);
         $nixtimestamp = strtotime($published);
-        $newsdate = date("d-M-Y", $nixtimestamp);
+        $newsdate = date("d M Y", $nixtimestamp);
         if ($onlyyear && date("Y", $nixtimestamp) != $onlyyear) {
             $count--;
             continue;
@@ -786,14 +482,16 @@ function print_news($news, $dog, $max = 5, $onlyyear = null, $return = false) {
         }
 
         echo <<< EOT
-<div class="newsItem hentry{$vevent}">
+<article class="newsItem">
+  <header>
     <div class="newsImage">{$image}</div>
-    <h2 class="summary entry-title"><a name="{$id}" id="{$id}" href="{$permlink}" rel="bookmark" class="bookmark">{$item["title"]}</a></h2>
-    <div class="entry-content description">
-        <abbr class="published newsdate" title="{$item["published"]}">{$newsdate}</abbr>
-        {$item["content"]}
-    </div>
-</div>
+    <h2 class="newstitle"><a id="{$id}" href="{$permlink}" rel="bookmark" class="bookmark">{$item["title"]}</a></h2>
+  </header>
+  <time class="newsdate" datetime="{$item["published"]}">{$newsdate}</time>
+  <div class="newscontent">
+    {$item["content"]}
+  </div>
+</article>
 
 EOT;
     }
@@ -804,22 +502,32 @@ EOT;
 
 
 
-// BETA
-function site_header_beta($title = '', $config = array())
+function site_header($title = '', $config = array())
 {
-    global $SIDEBAR_DATA;
     global $MYSITE;
 
     $defaults = array(
         "lang" => myphpnet_language(),
         "current" => "",
         "meta-navigation" => array(),
+        'classes' => '',
+        'layout_span' => 9,
+        "cache"       => false,
+        "headsup"     => "",
     );
 
-    $config += $defaults;
+
+    $config = array_merge($defaults, $config);
+
+
+    $config["headsup"] = get_news_changes();
+    if (!$config["headsup"]) {
+        $config["headsup"] = get_near_usergroups();
+    }
 
     $lang = language_convert($config["lang"]);
     $curr = $config["current"];
+    $classes = $config['classes'];
 
     if (empty($title)) {
         $title = "Hypertext Preprocessor";
@@ -830,21 +538,84 @@ function site_header_beta($title = '', $config = array())
         $shorturl = "http://php.net/" . $shortname;
     }
 
-    // For static content
-    // FIXME: How does static.php.net work? Will it get the /js/ folders?
-    if (false && $MYSITE == "http://www.php.net/") {
-        $STATIC_ROOT = "http://static.php.net/www.php.net/";
-    } elseif (false && !empty($_SERVER["STATIC_ROOT"])) {
-        $STATIC_ROOT = $_SERVER["STATIC_ROOT"];
-    } else {
-        $STATIC_ROOT = "/";
-    }
-
     require dirname(__FILE__) ."/header.inc";
 }
-function site_footer_beta($config = array())
+function site_footer($config = array())
 {
+    global $MYSITE;
     require dirname(__FILE__) . "/footer.inc";
+}
+
+function get_news_changes()
+{
+    include dirname(__FILE__) . "/pregen-news.inc";
+    $date = date_create($NEWS_ENTRIES[0]["updated"]);
+    if (isset($_COOKIE["LAST_NEWS"]) && $_COOKIE["LAST_NEWS"] >= $date->getTimestamp()) {
+        return false;
+    }
+    if ($_SERVER["BASE_PAGE"] == "index.php") {
+        return false;
+    }
+
+    $date->modify("+1 week");
+    if ($date->getTimestamp() > $_SERVER["REQUEST_TIME"]) {
+        $link = substr($NEWS_ENTRIES[0]["link"][0]["href"], 14); // Strip http://php.net
+        $title = $NEWS_ENTRIES[0]["title"];
+        return "<a href='{$link}'>{$title}</a>";
+    }
+}
+function get_near_usergroups()
+{
+    global $COUNTRIES, $COUNTRY;
+
+    if (!myphpnet_showug()) {
+        return false;
+    }
+    if ($_SERVER["BASE_PAGE"] == "ug.php") {
+        return false;
+    }
+    if (isset($_COOKIE["LAST_UG"]) && $_COOKIE["LAST_UG"] >= $_SERVER["REQUEST_TIME"]) {
+        if (!isset($_GET["showug"])) {
+            return false;
+        }
+    }
+
+    $ugs = get_usergroups_in($COUNTRY);
+    $count = count($ugs);
+    if (!$count) {
+        return false;
+    }
+
+    return sprintf("There %s %d <a href='/ug.php?cc=%s'>PHP User Group%s in %s</a>, are you a member of your local UG?",
+        $count == 1 ? "is" : "are",
+        $count,
+        $COUNTRY,
+        $count == 1 ? "" : "s",
+        $COUNTRIES[$COUNTRY]
+    );
+
+
+}
+function get_usergroups_in($country, &$allcountries = array()) {
+    global $COUNTRY_ALPHA_2_TO_3;
+
+    $filename = $_SERVER["DOCUMENT_ROOT"] . "/backend/usergroups.json";
+
+    $matches = array();
+    $data = json_decode(file_get_contents($filename), true);
+    foreach($data["groups"] as $group) {
+        if (isset($group["country"])) {
+            $allcountries[$COUNTRY_ALPHA_2_TO_3[$group["country"]]] = 1;
+            if ($group["country"] == $country) {
+                $matches[] = $group;
+            }
+        }
+    }
+    usort($matches, function($first, $second){
+        return strnatcasecmp($first['name'], $second['name']);
+    });
+
+    return $matches;
 }
 
 function news_toc($sections = null) {
@@ -867,7 +638,6 @@ function news_toc($sections = null) {
         ),
     );
 
-    echo "<dl>\n";
     foreach($items as $section => $menu) {
 
         // only print requested sections.
@@ -880,7 +650,6 @@ function news_toc($sections = null) {
             echo "<dd><a href='{$child["permlink"]}'>{$child["title"]}</a></dd>\n";
         }
     }
-    echo "</dl>\n";
 }
 function doc_toc($lang) {
     $file = dirname(__FILE__) . "/../manual/$lang/toc/index.inc";
@@ -905,15 +674,28 @@ function doc_toc($lang) {
     echo "</dl>\n";
 
     echo "<dl>\n";
-    echo "<dt>Miscellaneous</dt>";
-    doc_toc_title($lang, $TOC, "install", "dd");
-    doc_toc_title($lang, $TOC, "internals2", "dd");
-    doc_toc_title($lang, $TOC, "faq", "dd");
-    doc_toc_title($lang, $TOC, "appendices", "dd");
-    echo "<dd><a href='/quickref.php'>Quick Function Reference</a></dd>\n";
-    echo "<dd><a href='/docs.php'>Translations</a></dd>\n";
-    echo "<dd><a href='/download-docs.php'>Documentation Downloads</a></dd>\n";
-    echo "</dl>\n";
+    echo "<dt>Keyboard Shortcuts</dt>";
+    echo "<dt>?</dt>\n";
+    echo "<dd>This help</dd>\n";
+    echo "<dt>j</dt>\n";
+    echo "<dd>Next menu item</dd>\n";
+    echo "<dt>k</dt>\n";
+    echo "<dd>Previous menu item</dd>\n";
+    echo "<dt>g p</dt>\n";
+    echo "<dd>Previous man page</dd>\n";
+    echo "<dt>g n</dt>\n";
+    echo "<dd>Next man page</dd>\n";
+    echo "<dt>G</dt>\n";
+    echo "<dd>Scroll to bottom</dd>\n";
+    echo "<dt>g g</dt>\n";
+    echo "<dd>Scroll to top</dd>\n";
+    echo "<dt>g h</dt>\n";
+    echo "<dd>Goto homepage</dd>\n";
+    echo "<dt>g s</dt>\n";
+    echo "<dd>Goto search<br>(current page)</dd>\n";
+    echo "<dt>/</dt>\n";
+    echo "<dd>Focus search box</dd>\n";
+    echo "</dl>";
 
 }
 function doc_toc_list($lang, $index, $file) {
@@ -934,11 +716,6 @@ function doc_toc_title($lang, $index, $file, $elm = "dt") {
     }
     echo "<$elm><a href='/manual/$lang/$link'>$title</a></$elm>\n";
 }
-
-
-
-
-
 
 /* vim: set et ts=4 sw=4 ft=php: : */
 

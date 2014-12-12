@@ -1,0 +1,10 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Meetup//RemoteApi//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-ORIGINAL-URL:http://www.meetup.com/tampa-bay-php/events/ical/Tampa+Bay+
+ PHP/
+X-WR-CALNAME:Events - Tampa Bay PHP
+X-MS-OLK-FORCEINSPECTOROPEN:TRUE
+END:VCALENDAR

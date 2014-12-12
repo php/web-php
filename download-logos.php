@@ -33,7 +33,7 @@ function random_bgcolor($min, $max)
 <p>
  Right click on one of the images and select "Save Image As" to save the
  logo (except where otherwise indicated). Then, link it to the main PHP
- site at <code>www.php.net</code>. 
+ site at <code>php.net</code>. 
 </p>
 
 <p>
@@ -72,12 +72,12 @@ function random_bgcolor($min, $max)
  browser/operating system don't handle transparent PNG images very well.
 </p>
 
-<div class="center">
+<div class="center logo-list">
 <table border="0" width="90%" cellspacing="2" cellpadding="10" id="logos">
  
  <tr>
   <td class="logo">
-   <?php print_image("logos/php-med-trans-light.gif", "PHP logo"); ?><br />
+   <?php print_image("logos/php-med-trans-light.gif", "PHP logo"); ?><br>
    (not exactly as shown)
   </td>
   <?php print_star(); ?>
@@ -94,7 +94,7 @@ function random_bgcolor($min, $max)
 
  <tr>
   <td class="logo">
-   <?php print_image("logos/php-med-trans-light.gif", "PHP logo"); ?><br />
+   <?php print_image("logos/php-med-trans-light.gif", "PHP logo"); ?><br>
    (not exactly as shown)
   </td>
   <td></td>
@@ -215,8 +215,8 @@ function random_bgcolor($min, $max)
 
  <tr>
   <td class="logo">
-   <?php print_image("logos/php-power-micro.png", "PHP Powered"); ?><br /><br />
-   <?php print_image("logos/php-power-micro2.png", "PHP Powered"); ?><br /><br />
+   <?php print_image("logos/php-power-micro.png", "PHP Powered"); ?><br><br>
+   <?php print_image("logos/php-power-micro2.png", "PHP Powered"); ?><br><br>
    <?php print_image("logos/php5-power-micro.png", "PHP 5 Powered"); ?>
   </td>
   <td></td>
@@ -281,7 +281,7 @@ function random_bgcolor($min, $max)
  
  <tr>
   <td class="logo">
-   <?php print_image("logos/php-icon-white.gif", "PHP icons"); ?><br />
+   <?php print_image("logos/php-icon-white.gif", "PHP icons"); ?><br>
    (not exactly as shown)
   </td>
   <td></td>
@@ -301,7 +301,7 @@ function random_bgcolor($min, $max)
 
  <tr>
   <td class="logo">
-   <?php print_image("logos/php_file_ico.gif", "PHP file icons"); ?><br />
+   <?php print_image("logos/php_file_ico.gif", "PHP file icons"); ?><br>
    (not exactly as shown)
   </td>
   <td></td>
@@ -318,7 +318,7 @@ function random_bgcolor($min, $max)
 
  <tr>
   <td class="logo">
-   <?php print_image("logos/php_script_ico.png", "PHP script icons"); ?><br />
+   <?php print_image("logos/php_script_ico.png", "PHP script icons"); ?><br>
    (not exactly as shown)
   </td>
   <td></td>
@@ -335,7 +335,7 @@ function random_bgcolor($min, $max)
 
  <tr>
   <td class="logo">
-   <?php print_image("logos/php_xpstyle_ico.gif", "Windows XP PHP file icons"); ?><br />
+   <?php print_image("logos/php_xpstyle_ico.gif", "Windows XP PHP file icons"); ?><br>
    (not exactly as shown)
   </td>
   <td></td>

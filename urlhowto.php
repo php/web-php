@@ -17,12 +17,6 @@ $SIDEBAR_DATA='
  <li><a href="'.$MYSITE.'searchterm">/searchterm</a></li>
 </ul>
 
-<h3>Quick reference tips</h3>
-<p>
- You can find <a href="/tips.php">more
- quick reference tips</a> on our site.
-</p>
-
 <h3>My PHP.net</h3>
 <p>
  URL shortcut behaviour is greatly influenced by
@@ -62,9 +56,9 @@ function a($href) {
 <h2>Page shortcuts</h2>
 
 <p>
- If you write in a PHP.net URL, like <tt><?php echo $MYSITE; ?>get-involved</tt>,
+ If you write in a PHP.net URL (e.g. <kbd><?php echo $MYSITE; ?>get-involved</kbd>,
  first this URL is matched against the PHP.net pages. If there is
- a page named <tt>get-involved.php</tt>, then you'll get that page
+ a page named <em>get-involved.php</em>, then you'll get that page
  immediately. This type of shortcut makes easy to type in a link
  in an IRC conversation or mailing list message. If the script
  finds no page with this name, it tries to find a manual page.
@@ -75,61 +69,61 @@ function a($href) {
 <p>
  If your URL can't be matched with a page name, a manual page
  is searched for your query. This is the case for the 
- <tt><?php echo $MYSITE; ?>preg_match</tt> URL. The following pages
+ <kbd><?php echo $MYSITE; ?>preg_match</kbd> URL. The following pages
  are searched for in the manual:</p>
 <ul>
- <li>Chapter pages, like <tt><?php echo $MYSITE; ?>installation</tt></li>
- <li>Reference pages, like <tt><?php echo $MYSITE; ?>imap</tt></li>
- <li>Function pages, like <tt><?php echo $MYSITE; ?>join</tt></li>
- <li>Class pages, like <tt><?php echo $MYSITE; ?>dir</tt></li>
- <li>Feature pages, like <tt><?php echo $MYSITE; ?>safe_mode</tt></li>
- <li>Control structure pages, like <tt><?php echo $MYSITE; ?>while</tt></li>
- <li>Other language pages, like <tt><?php echo $MYSITE; ?>oop</tt></li>
+ <li>Chapter pages (e.g. <?php a("installation") ?>)</li>
+ <li>Reference pages (e.g. <?php a("imap") ?>)</li>
+ <li>Function pages (e.g. <?php a("join") ?>)</li>
+ <li>Class pages (e.g. <?php a("dir") ?>)</li>
+ <li>Feature pages (e.g. <?php a("safe_mode") ?>)</li>
+ <li>Control structure pages (e.g. <?php a("while") ?>)</li>
+ <li>Other language pages (e.g. <?php a("oop") ?>)</li>
 </ul>
 <p>
- Since there are several manual pages that could potentionally match the query
+ Since there are several manual pages that could potentially match the query
  (extension, class, function name..) you are encouraged to use their prefix/suffix:
 </p>
 <ul>
  <li>Extension <abbr title="Table of Contents">TOC</abbr>:
-  <tt><?php echo $MYSITE ?>book.extname</tt>
-  (ex: <?php a("book.dom")?>).
+  <kbd><?php echo $MYSITE ?><var>book.extname</var></kbd>
+  (e.g. <?php a("book.dom")?>).
  </li>
  <li>Extension intro pages:
-  <tt><?php echo $MYSITE ?>intro.extname</tt>
-  (ex: <?php a("intro.array") ?>).
+  <kbd><?php echo $MYSITE ?><var>intro.extname</var></kbd>
+  (e.g. <?php a("intro.array") ?>).
  </li>
  <li>Extension setup <abbr title="Table of Contents">TOC</abbr>:
-  <tt><?php echo $MYSITE ?>extname.setup</tt>
-  (ex: <?php a("intl.setup") ?>).
+  <kbd><?php echo $MYSITE ?><var>extname.setup</var></kbd>
+  (e.g. <?php a("intl.setup") ?>).
  </li>
  <li>Extension install chapter:
-  <tt><?php echo $MYSITE ?>extname.installation</tt>
-  (ex: <?php a("apc.installation") ?>).
+  <kbd><?php echo $MYSITE ?><var>extname.installation</var></kbd>
+  (e.g. <?php a("apc.installation") ?>).
  </li>
  <li>Extension configuration:
-  <tt><?php echo $MYSITE ?>extname.configuration</tt>
-  (ex: <?php a("session.configuration") ?>).
+  <kbd><?php echo $MYSITE ?><var>extname.configuration</var></kbd>
+  (e.g. <?php a("session.configuration") ?>).
  </li>
  <li>Extension resources:
-  <tt><?php echo $MYSITE ?>extname.resources</tt>
-  (ex: <?php a("mysql.resources") ?>).
+  <kbd><?php echo $MYSITE ?><var>extname.resources</var></kbd>
+  (e.g. <?php a("mysql.resources") ?>).
  </li>
  <li>Extension constants:
-  <tt><?php echo $MYSITE ?>extname.constants</tt>
-  (ex: <?php a("image.constants") ?>).
+  <kbd><?php echo $MYSITE ?><var>extname.constants</var></kbd>
+  (e.g. <?php a("image.constants") ?>).
  </li>
  <li>Class synopsis:
-  <tt><?php echo $MYSITE ?>class.classname</tt>
-  (ex: <?php a("class.xmlreader") ?>).
+  <kbd><?php echo $MYSITE ?><var>class.classname</var></kbd>
+  (e.g. <?php a("class.xmlreader") ?>).
  </li>
  <li>Class method:
-  <tt><?php echo $MYSITE ?>classname.methodname</tt>
-  (ex: <?php a("pdo.query") ?>).
+  <kbd><?php echo $MYSITE ?><var>classname.methodname</var></kbd>
+  (e.g. <?php a("pdo.query") ?>).
  </li>
  <li>Functions:
-  <tt><?php echo $MYSITE ?>function.functionname</tt>
-  (ex: <?php a("function.strpos") ?>).
+  <kbd><?php echo $MYSITE ?><var>function.functionname</var></kbd>
+  (e.g. <?php a("function.strpos") ?>).
  </li>
 </ul>
 
@@ -139,7 +133,7 @@ function a($href) {
  always override this setting by explicitly providing
  the language you want to get to. You can embed the language
  in the URL before the manual search term.
- <tt><?php echo $MYSITE; ?>hu/sort</tt> will bring up
+ <kbd><?php echo $MYSITE; ?>hu/sort</kbd> will bring up
  the Hungarian manual page for sort() for example.
 </p>
 
@@ -149,24 +143,21 @@ function a($href) {
  At last, if there is no PHP page, and there is no manual
  page matching your query, a search is issued on the site with
  the query you typed into the URL. An example of this kind
- of URL is <tt><?php echo $MYSITE; ?>search_for_this</tt>.
+ of URL is <kbd><?php echo $MYSITE; ?><var>search_for_this</var></kbd>.
  The exact behaviour of this search is affected by
  <a href="/my.php">your own My PHP.net settings</a>.
 </p>
 
 <h2>PHP Developer shortcuts</h2>
 <ul>
- <li>Snap downloads: <a href="http://snaps.php.net/?53">http://snaps.php.net/?53</a>
-  (ex: latest 5.3 snap. Use ?trunk or ?latest for latest trunk)
+ <li>Snap downloads: <a href="http://snaps.php.net/?55">http://snaps.php.net/?53</a>
+  (e.g. latest 5.5 snap. Use ?latest for latest master)
  </li>
  <li>Changelog information: <a href="http://php.net/changelog">http://php.net/changelog</a>
-  (ex: latest PHP changelog. php5news = latest PHP 5 NEWS, phptrunknews = latest PHP trunk NEWS)
+  (e.g. latest PHP changelog. php5news = latest PHP 5 NEWS, phptrunknews = latest PHP trunk NEWS)
  </li>
  <li>Bugs: <a href="http://php.net/42">http://php.net/42</a>
   (any numeric value redirects to said bug # at bugs.php.net)
- </li>
- <li>reST based README info: <a href="http://php.net/reST/">http://php.net/reST/</a>
- (lists several README files)
  </li>
 </ul>
 
@@ -176,34 +167,13 @@ function a($href) {
  We also have shortcut aliases to access some resources more quickly,
  and with a nice URL. Aliases are translated to their relevant shortcuts
  before the first step (PHP page search) mentioned above. Some examples
- of shortcut aliases: <tt><?php echo $MYSITE; ?>whatisphp</tt>,
- <tt><?php echo $MYSITE; ?>php4news</tt>. The latter is an external page
+ of shortcut aliases: <?php a("whatisphp") ?>,
+ <?php a("php4news") ?>. The latter is an external page
  alias, as it points to a file on the Git server, containing information
- about changes in PHP. There are also some convenient aliases, like
- <tt><?php echo $MYSITE; ?>de/phpversion</tt> which displays the German
+ about changes in PHP. There are also some convenient aliases(e.g.
+ <?php a("de/phpversion") ?> which displays the German
  manual page for the phpversion() function.
 </p>
 
-<h1>Get it on your site</h1>
-
-<p>
- What enables PHP.net to have this feature is a combination of some
- ErrorDocument Apache settings, redirecting the browser to another page
- in case of an "Error 401/3/4" and a little search script that looks up
- page names or functions names in the manual corresponding to what
- you searched for in <tt><?php echo $MYSITE; ?>search_for_this</tt>.
- We also have a general language selection method.
-</p>
-
-<p>
- Everything behind this feature is available here:
-</p>
-<ul>
- <li><a href="/mirroring.php">Mirroring instructions</a> (see the three ErrorDocument settings)</li>
- <li><a href="/source.php?url=/include/langchooser.inc">include/langchooser.inc</a></li>
- <li><a href="/source.php?url=/error.php">error.php</a></li>
- <li><a href="/source.php?url=/include/manual-lookup.inc">include/manual-lookup.inc</a></li>
- <li><a href="/source.php?url=/search.php">search.php</a></li>
-</ul>
 
 <?php site_footer(); ?>

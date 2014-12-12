@@ -1,0 +1,137 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Meetup//RemoteApi//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-ORIGINAL-URL:http://www.meetup.com/buffalophp/events/ical/The+Buffalo+P
+ HP+User+Group/
+X-WR-CALNAME:Events - The Buffalo PHP User Group
+BEGIN:VTIMEZONE
+TZID:America/New_York
+X-LIC-LOCATION:America/New_York
+BEGIN:DAYLIGHT
+TZOFFSETFROM:-0500
+TZOFFSETTO:-0400
+TZNAME:EDT
+DTSTART:19700308T020000
+RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=2SU
+END:DAYLIGHT
+BEGIN:STANDARD
+TZOFFSETFROM:-0400
+TZOFFSETTO:-0500
+TZNAME:EST
+DTSTART:19701101T020000
+RRULE:FREQ=YEARLY;BYMONTH=11;BYDAY=1SU
+END:STANDARD
+END:VTIMEZONE
+BEGIN:VEVENT
+DTSTAMP:20140123T050009Z
+DTSTART;TZID=America/New_York:20140211T183000
+DTEND;TZID=America/New_York:20140211T200000
+STATUS:CONFIRMED
+SUMMARY:The Buffalo PHP User Group Monthly Meetup
+DESCRIPTION:The Buffalo PHP User Group\nTuesday\, February 11 at 6:30 PM\
+ n\nMEETUP AGENDA ============ * 6:30 Intro to PHP   * 6:45 Tips & Commun
+ ity News   * 7:00 Introductions   * 7:15 Presentations   * 7:45 Networki
+ ng + Food...\n\nDetails: http://www.meetup.com/buffalophp/events/1608625
+ 12/
+CLASS:PUBLIC
+CREATED:20130909T200339Z
+GEO:42.86;-78.83
+LOCATION:Buffalo Lab - a makerspace (298 Northampton\, Buffalo\, NY 14208
+ )
+URL:http://www.meetup.com/buffalophp/events/160862512/
+LAST-MODIFIED:20130909T200339Z
+UID:event_dtgbsgysdbpb@meetup.com
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20140123T050009Z
+DTSTART;TZID=America/New_York:20140311T183000
+DTEND;TZID=America/New_York:20140311T200000
+STATUS:CONFIRMED
+SUMMARY:The Buffalo PHP User Group Monthly Meetup
+DESCRIPTION:The Buffalo PHP User Group\nTuesday\, March 11 at 6:30 PM\n\n
+ MEETUP AGENDA ============ * 6:30 Intro to PHP   * 6:45 Tips & Community
+  News   * 7:00 Introductions   * 7:15 Presentations   * 7:45 Networking 
+ + Food...\n\nDetails: http://www.meetup.com/buffalophp/events/dtgbsgysfb
+ pb/
+CLASS:PUBLIC
+CREATED:20130909T200339Z
+GEO:42.86;-78.83
+URL:http://www.meetup.com/buffalophp/events/dtgbsgysfbpb/
+LAST-MODIFIED:20130909T200339Z
+UID:event_dtgbsgysfbpb@meetup.com
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20140123T050009Z
+DTSTART;TZID=America/New_York:20140408T183000
+DTEND;TZID=America/New_York:20140408T200000
+STATUS:CONFIRMED
+SUMMARY:The Buffalo PHP User Group Monthly Meetup
+DESCRIPTION:The Buffalo PHP User Group\nTuesday\, April 8 at 6:30 PM\n\nM
+ EETUP AGENDA ============ * 6:30 Intro to PHP   * 6:45 Tips & Community 
+ News   * 7:00 Introductions   * 7:15 Presentations   * 7:45 Networking +
+  Food...\n\nDetails: http://www.meetup.com/buffalophp/events/dtgbsgysgbl
+ b/
+CLASS:PUBLIC
+CREATED:20130909T200339Z
+GEO:42.86;-78.83
+URL:http://www.meetup.com/buffalophp/events/dtgbsgysgblb/
+LAST-MODIFIED:20130909T200339Z
+UID:event_dtgbsgysgblb@meetup.com
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20140123T050009Z
+DTSTART;TZID=America/New_York:20140513T183000
+DTEND;TZID=America/New_York:20140513T200000
+STATUS:CONFIRMED
+SUMMARY:The Buffalo PHP User Group Monthly Meetup
+DESCRIPTION:The Buffalo PHP User Group\nTuesday\, May 13 at 6:30 PM\n\nME
+ ETUP AGENDA ============ * 6:30 Intro to PHP   * 6:45 Tips & Community N
+ ews   * 7:00 Introductions   * 7:15 Presentations   * 7:45 Networking + 
+ Food...\n\nDetails: http://www.meetup.com/buffalophp/events/dtgbsgyshbrb
+ /
+CLASS:PUBLIC
+CREATED:20130909T200339Z
+GEO:42.86;-78.83
+URL:http://www.meetup.com/buffalophp/events/dtgbsgyshbrb/
+LAST-MODIFIED:20130909T200339Z
+UID:event_dtgbsgyshbrb@meetup.com
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20140123T050009Z
+DTSTART;TZID=America/New_York:20140610T183000
+DTEND;TZID=America/New_York:20140610T200000
+STATUS:CONFIRMED
+SUMMARY:The Buffalo PHP User Group Monthly Meetup
+DESCRIPTION:The Buffalo PHP User Group\nTuesday\, June 10 at 6:30 PM\n\nM
+ EETUP AGENDA ============ * 6:30 Intro to PHP   * 6:45 Tips & Community 
+ News   * 7:00 Introductions   * 7:15 Presentations   * 7:45 Networking +
+  Food...\n\nDetails: http://www.meetup.com/buffalophp/events/dtgbsgysjbn
+ b/
+CLASS:PUBLIC
+CREATED:20130909T200339Z
+GEO:42.86;-78.83
+URL:http://www.meetup.com/buffalophp/events/dtgbsgysjbnb/
+LAST-MODIFIED:20130909T200339Z
+UID:event_dtgbsgysjbnb@meetup.com
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20140123T050009Z
+DTSTART;TZID=America/New_York:20140708T183000
+DTEND;TZID=America/New_York:20140708T200000
+STATUS:CONFIRMED
+SUMMARY:The Buffalo PHP User Group Monthly Meetup
+DESCRIPTION:The Buffalo PHP User Group\nTuesday\, July 8 at 6:30 PM\n\nME
+ ETUP AGENDA ============ * 6:30 Intro to PHP   * 6:45 Tips & Community N
+ ews   * 7:00 Introductions   * 7:15 Presentations   * 7:45 Networking + 
+ Food...\n\nDetails: http://www.meetup.com/buffalophp/events/dtgbsgyskblb
+ /
+CLASS:PUBLIC
+CREATED:20130909T200339Z
+GEO:42.86;-78.83
+URL:http://www.meetup.com/buffalophp/events/dtgbsgyskblb/
+LAST-MODIFIED:20130909T200339Z
+UID:event_dtgbsgyskblb@meetup.com
+END:VEVENT
+END:VCALENDAR

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom" xmlns:default="http://php.net/ns/news">
+  <title>PHP Unconference Europe 2015</title>
+  <id>http://php.net/archive/2014.php#id2014-10-27-1</id>
+  <published>2014-10-27T01:23:45+02:00</published>
+  <updated>2014-10-27T01:23:45+02:00</updated>
+  <default:finalTeaserDate xmlns="http://php.net/ns/news">2015-05-09</default:finalTeaserDate>
+  <category term="conferences" label="Conference announcement"/>
+  <link href="http://php.net/conferences/index.php#id2014-10-27-1" rel="alternate" type="text/html"/>
+  <default:newsImage xmlns="http://php.net/ns/news" link="http://www.phpuceu.org/phpuceu-2015/" title="PHP Unconference Europe 2015">phpuceu-may-2015-thumb.png</default:newsImage>
+  <link href="http://www.phpuceu.org/phpuceu-2015/" rel="via" type="text/html"/>
+  <content type="xhtml">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+      <p>The 4th PHPucEU is taking place on May 9th and 10th on the wonderful island of Majorca, Spain.</p>
+      <p>
+        For the 3rd PHP Unconference Europe in 2014 about 100 attendees came to
+        Spain and joined a bunch of different sessions. Our mission is to bring
+        together an international group with knowledge of PHP. In order to address
+        as wide an audience as possible, the language of all sessions, presentations
+        and round table discussions will be English.
+      </p>
+      <p>
+        One of the key aspects of an unconference, besides the sessions themselves,
+        is the motivation for further discussions about topics while a coffee break
+        (or depending on the time of the day, a beer). We are looking forward to
+        organize an inspiring, comprehensive and successful weekend, talking about
+        PHP and related Open Source and web technologies on the sunny island
+        of Majorca again.
+      </p>
+      <p>
+        Start your summer with a short trip to Majorca, enjoy good coffee and shiny
+        weather while discussing PHP related topics with international attendees.
+      </p>
+      <p>
+        <a href="http://www.phpuceu.org/phpuceu-2015/" title="PHP Unconference Europe 2015">PHP Unconference Europe 2015</a>
+        <a href="https://twitter.com/hashtag/phpuceu" title="PHP Unconference Europe on Twitter">#phpuceu</a>
+      </p>
+    </div>
+  </content>
+</entry>

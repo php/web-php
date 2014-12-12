@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom" xmlns:default="http://php.net/ns/news">
+  <title>International PHP Conference - Spring Edition - 2014</title>
+  <id>http://php.net/archive/2014.php#id2014-01-22-2</id>
+  <published>2014-01-22T11:31:42-08:00</published>
+  <updated>2014-01-22T11:31:42-08:00</updated>
+  <default:finalTeaserDate xmlns="http://php.net/ns/news">2014-06-04</default:finalTeaserDate>
+  <category term="conferences" label="Conference announcement"/>
+  <link href="http://php.net/conferences/index.php#id2014-01-22-2" rel="alternate" type="text/html"/>
+  <default:newsImage xmlns="http://php.net/ns/news" link="http://phpconference.com/2014se/en" title="IPC 2014">ipc2014.png</default:newsImage>
+  <link href="http://phpconference.com/2014se/en" rel="via" type="text/html"/>
+  <content type="xhtml">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+     <p>
+     Since its inception in 2001, the
+     <a href="http://phpconference.com/2014se/en">International PHP Conference</a>
+     has evolved into one of the most significant PHP events worldwide. As a meeting point for
+     PHP professionals, evangelists, movers and shakers, the tradition continues this year from
+     June 1 to 4 in Berlin (Germany). Once again, the conference will explore key topics and
+     core technologies for developers and decision makers.
+     </p>
+
+     <p>
+     Highlights 2014
+     </p>
+     <ul>
+     <li>Heavyset PHProgram: 60+ workshops, sessions &amp; keynotes</li>
+     <li>Cool PHP &amp; the Gang: 50+ international speakers and trainers</li>
+     <li>Hands-on Power Workshops on Sunday (June 1, 2014)</li>
+     <li>2-day expo with leading IT companies (June 3-4, 2014)</li>
+     <li>Full board during the conference: lunch, snacks &amp; drinks</li>
+     <li>Free swag: certificate, t-shirt, backpack, magazines…</li>
+     <li>Plenty of best practices and networking opportunities</li>
+     </ul>
+
+     <p>
+     Join us on <a href="http://twitter.com/phpconference">Twitter</a>,
+     <a href="https://www.facebook.com/ipc.germany">Facebook</a> and
+     <a href="https://plus.google.com/b/109347669400413843557/109347669400413843557/posts">Google+</a>
+     or visit our website at <a href="http://phpconference.com/">http://phpconference.com</a>
+     We look forward to seeing you in Berlin!
+     </p>
+    </div>
+  </content>
+</entry>

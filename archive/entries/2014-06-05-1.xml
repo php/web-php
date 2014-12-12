@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+  <title>PHP 5.6.0beta4 Released</title>
+  <id>http://php.net/archive/2014.php#id2014-06-05-1</id>
+  <published>2014-06-05T13:20:11-07:00</published>
+  <updated>2014-06-05T13:20:11-07:00</updated>
+  <category term="frontpage" label="PHP.net frontpage news"/>
+  <category term="releases" label="New PHP release"/>
+  <link href="http://php.net/index.php#id2014-06-05-1" rel="alternate" type="text/html"/>
+  <link href="http://php.net/archive/2014.php#id2014-06-05-1" rel="via" type="text/html"/>
+  <content type="xhtml">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+      <p>
+        The PHP development team announces the immediate availability of PHP 5.6.0beta4.
+        As we entered the feature freeze with beta1, this is a bugfix-only release.
+        All users of PHP are encouraged to test this version carefully, and report any
+        bugs in <a href="https://bugs.php.net">the bug tracking system</a>.
+      </p>
+
+      <p>
+        The beta phase is officially closed with this release. A couple of RCs are to be
+        expected, until we are confident that the release is stable enough for the final
+        release. For that, we really need your help in testing and reporting any problems
+        that you encounter.
+      </p>
+
+      <strong>THIS IS A DEVELOPMENT PREVIEW - DO NOT USE IT IN PRODUCTION!</strong>
+
+      <p>
+        For more information about the new features you can check out the work-in-progress
+        <a href="http://docs.php.net/manual/en/migration56.new-features.php">documentation</a>
+        or you can read the full list of changes in the
+        <a href="https://github.com/php/php-src/blob/php-5.6.0beta4/NEWS">NEWS file</a>
+        contained in the release archive.
+      </p>
+
+      <p>
+        For source downloads of PHP 5.6.0beta4 please visit
+        the <a href="http://qa.php.net/">download page</a>. Windows binaries
+        can be found on <a href="http://windows.php.net/qa/">windows.php.net/qa/</a>.
+      </p>
+
+      <p>
+        Our first Release Candidate should show up on the 19th of June.
+      </p>
+
+      <p>
+        Thank you for helping us make PHP better.
+      </p>
+    </div>
+  </content>
+</entry>

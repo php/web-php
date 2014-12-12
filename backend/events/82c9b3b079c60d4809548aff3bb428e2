@@ -1,0 +1,10 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Meetup//RemoteApi//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-ORIGINAL-URL:http://www.nycphpmeetup.org/events/ical/New+York+PHP+Meetu
+ p/
+X-WR-CALNAME:Events - New York PHP Meetup
+X-MS-OLK-FORCEINSPECTOROPEN:TRUE
+END:VCALENDAR

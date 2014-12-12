@@ -3,7 +3,7 @@
 $_SERVER['BASE_PAGE'] = 'archive/2010.php';
 include_once $_SERVER['DOCUMENT_ROOT'] . '/include/prepend.inc';
 news_archive_sidebar();
-site_header("News Archive - 2010");
+site_header("News Archive - 2010", array("cache" => true));
 ?>
 
 <h1>News Archive - 2010</h1>
@@ -12,7 +12,7 @@ site_header("News Archive - 2010");
  Here are the most important news items we have published in 2010 on PHP.net.
 </p>
 
-<hr />
+<hr>
 <div class="newsItem hentry"> 
     <div class="newsImage"></div> 
     <h1 class="summary entry-title"><a name="id2010-12-16-1" id="id2010-12-16-1" href="http://www.php.net/archive/2010.php#id2010-12-16-1" rel="bookmark" class="bookmark">PHP 5.2.16 Released!</a></h1> 
@@ -43,7 +43,7 @@ site_header("News Archive - 2010");
     </div> 
 </div> 
  
-<hr /> 
+<hr> 
 <div class="newsItem hentry"> 
     <div class="newsImage"></div> 
     <h1 class="summary entry-title"><a name="id2010-12-10-1" id="id2010-12-10-1" href="http://www.php.net/archive/2010.php#id2010-12-10-1" rel="bookmark" class="bookmark">PHP 5.3.4 Released!</a></h1> 
@@ -104,7 +104,7 @@ site_header("News Archive - 2010");
     </div> 
 </div> 
  
-<hr /> 
+<hr> 
 <div class="newsItem hentry"> 
     <div class="newsImage"></div> 
     <h1 class="summary entry-title"><a name="id2010-12-09-1" id="id2010-12-09-1" href="http://www.php.net/archive/2010.php#id2010-12-09-1" rel="bookmark" class="bookmark">PHP 5.2.15 Released!</a></h1> 
@@ -153,7 +153,7 @@ site_header("News Archive - 2010");
     </div> 
 </div> 
  
-<hr /> 
+<hr> 
 <div class="newsItem hentry vevent"> 
     <div class="newsImage"><?php news_image("http://www.confoo.ca/", "logo_confoo_300_95.gif", "Confoo"); ?></div> 
     <h1 class="summary entry-title"><a name="id2010-11-08-1" id="id2010-11-08-1" href="http://confoo.ca/" rel="bookmark" class="bookmark">Confoo</a></h1> 
@@ -181,7 +181,7 @@ site_header("News Archive - 2010");
     </div> 
 </div> 
  
-<hr /> 
+<hr> 
 <div class="newsItem hentry vevent"> 
     <div class="newsImage"><?php news_image("http://www.phprio.org/phpnrio10", "phpnrio10.png", "PHP'n Rio 10"); ?></div> 
     <h1 class="summary entry-title"><a name="id2010-11-02-1" id="id2010-11-02-1" href="http://www.phprio.org/phpnrio10" rel="bookmark" class="bookmark">PHP'n Rio 10</a></h1> 
@@ -215,7 +215,7 @@ site_header("News Archive - 2010");
     </div> 
 </div> 
  
-<hr /> 
+<hr> 
 <div class="newsItem hentry vevent"> 
     <div class="newsImage"><?php news_image("http://www.zendcon.com/", "zend_phpconf10.jpg", "Zend / PHP Conference"); ?></div> 
     <h1 class="summary entry-title"><a name="id2010-09-30-1" id="id2010-09-30-1" href="http://www.zendcon.com/" rel="bookmark" class="bookmark">Zend / PHP Conference</a></h1> 
@@ -267,7 +267,7 @@ site_header("News Archive - 2010");
     </div> 
 </div> 
  
-<hr /> 
+<hr> 
 <div class="newsItem hentry vevent"> 
     <div class="newsImage"><?php news_image("http://phpconference.es/", "barcelona2010.png", "PHP Barcelona Conference 2010"); ?></div> 
     <h1 class="summary entry-title"><a name="id2010-09-25-2" id="id2010-09-25-2" href="http://phpconference.es/" rel="bookmark" class="bookmark">PHP Barcelona Conference 2010</a></h1> 
@@ -284,7 +284,7 @@ site_header("News Archive - 2010");
     </div> 
 </div> 
  
-<hr /> 
+<hr> 
 <div class="newsItem hentry vevent"> 
     <div class="newsImage"><?php news_image("http://phpconference.com/", "ipc2010.gif", "International PHP Conference 2010"); ?></div> 
     <h1 class="summary entry-title"><a name="id2010-09-25-1" id="id2010-09-25-1" href="http://phpconference.com/" rel="bookmark" class="bookmark">International PHP Conference</a></h1> 
@@ -316,7 +316,7 @@ site_header("News Archive - 2010");
     </div> 
 </div> 
  
-<hr /> 
+<hr> 
 <div class="newsItem hentry vevent"> 
     <div class="newsImage"><?php news_image("http://conference.phpnw.org.uk/phpnw10/", "phpnw10_logo.png", "PHP | OSI Days 2010"); ?></div> 
     <h1 class="summary entry-title"><a name="id2010-09-09-1" id="id2010-09-09-1" href="http://www.php.net/archive/2010.php#id2010-09-09-1" rel="bookmark" class="bookmark">PHPNW10</a></h1> 
@@ -346,7 +346,7 @@ site_header("News Archive - 2010");
     </div> 
 </div> 
  
-<hr /> 
+<hr> 
 <div class="newsItem hentry"> 
     <div class="newsImage"></div> 
     <h1 class="summary entry-title"><a name="id2010-07-22-2" id="id2010-07-22-2" href="http://www.php.net/archive/2010.php#id2010-07-22-2" rel="bookmark" class="bookmark">PHP 5.3.3 Released!</a></h1> 
@@ -369,14 +369,14 @@ site_header("News Archive - 2010");
              will no longer be treated as constructor. This change doesn't affect
              non-namespaced classes.
      
-             <p><code>&lt;?php<br/> 
-namespace Foo;<br/> 
-class Bar {<br/> 
-    public function Bar() {<br/> 
-        // treated as constructor in PHP 5.3.0-5.3.2<br/> 
-        // treated as regular method in PHP 5.3.3<br/> 
-    }<br/> 
-}<br/> 
+             <p><code>&lt;?php<br> 
+namespace Foo;<br> 
+class Bar {<br> 
+    public function Bar() {<br> 
+        // treated as constructor in PHP 5.3.0-5.3.2<br> 
+        // treated as regular method in PHP 5.3.3<br> 
+    }<br> 
+}<br> 
 ?&gt;</code></p> 
              <p>There is no impact on migration from 5.2.x because namespaces were only introduced in PHP 5.3.</p></li> 
      </ul> 
@@ -436,7 +436,7 @@ class Bar {<br/>
     </div> 
 </div> 
  
-<hr /> 
+<hr> 
 <div class="newsItem hentry"> 
     <div class="newsImage"></div> 
     <h1 class="summary entry-title"><a name="id2010-07-22-1" id="id2010-07-22-1" href="http://www.php.net/archive/2010.php#id2010-07-22-1" rel="bookmark" class="bookmark">PHP 5.2.14 Released!</a></h1> 
@@ -497,7 +497,7 @@ class Bar {<br/>
     </div> 
 </div> 
  
-<hr /> 
+<hr> 
 <div class="newsItem hentry"> 
     <div class="newsImage"></div> 
     <h1 class="summary entry-title"><a name="id2010-06-23-1" id="id2010-06-23-1" href="http://www.php.net/archive/2010.php#id2010-06-23-1" rel="bookmark" class="bookmark">TestFest 2010</a></h1> 
@@ -530,7 +530,7 @@ class Bar {<br/>
     </div> 
 </div> 
  
-<hr /> 
+<hr> 
 <div class="newsItem hentry vevent"> 
     <div class="newsImage"><?php news_image("http://osidays.com/node/add/proposal", "php_osi_2010.png", "PHP | OSI Days 2010"); ?></div> 
     <h1 class="summary entry-title"><a name="id2010-06-05-1" id="id2010-06-05-1" href="http://www.php.net/archive/2010.php#id2010-06-05-1" rel="bookmark" class="bookmark">PHP | OSI Days 2010: Participate at the confluence of PHP's finest!</a></h1> 
@@ -600,15 +600,15 @@ class Bar {<br/>
    <p><strong>Contact</strong></p> 
    <p>For registration and more details visit: <a href="http://osidays.com" class="url">http://osidays.com</a> or contact 
     Dhiraj Khare at dhiraj@osidays.com or call at +919811206582
-    <br/><br/> 
-    Team,<br/> 
+    <br/><br> 
+    Team,<br> 
     OSI Days 2010
    </p> 
   
     </div> 
 </div> 
  
-<hr /> 
+<hr> 
 <div class="newsItem hentry"> 
     <div class="newsImage"></div> 
     <h1 class="summary entry-title"><a name="id2010-03-04-1" id="id2010-03-04-1" href="http://www.php.net/archive/2010.php#id2010-03-04-1" rel="bookmark" class="bookmark">PHP 5.3.2 Released!</a></h1> 
@@ -671,7 +671,7 @@ class Bar {<br/>
     </div> 
 </div> 
  
-<hr /> 
+<hr> 
 <div class="newsItem hentry"> 
     <div class="newsImage"></div> 
     <h1 class="summary entry-title"><a name="id2010-02-25-1" id="id2010-02-25-1" href="http://www.php.net/archive/2010.php#id2010-02-25-1" rel="bookmark" class="bookmark">PHP 5.2.13 Released!</a></h1> 
@@ -702,7 +702,7 @@ class Bar {<br/>
     </div> 
 </div> 
  
-<hr /> 
+<hr> 
 <div class="newsItem hentry vevent"> 
     <div class="newsImage"><?php news_image("http://phpconference.nl/", "dpc10_banner.jpg", "Dutch PHP Conference 2010"); ?></div> 
     <h1 class="summary entry-title"><a name="id2010-02-19-1" id="id2010-02-19-1" href="http://phpconference.nl/" rel="bookmark" class="bookmark">Dutch PHP Conference</a></h1> 
@@ -729,7 +729,7 @@ class Bar {<br/>
     </div> 
 </div> 
  
-<hr /> 
+<hr> 
 <div class="newsItem hentry vevent"> 
     <div class="newsImage"><?php news_image("http://confoo.ca/en", "logo_confoo_300_95.gif", "ConFoo Web Techno Conference"); ?></div> 
     <h1 class="summary entry-title"><a name="id2010-01-16-1" id="id2010-01-16-1" href="http://confoo.ca/en" rel="bookmark" class="bookmark">ConFoo Web Techno Conference</a></h1> 
@@ -758,14 +758,12 @@ class Bar {<br/>
      <p> 
      <a href="http://confoo.ca/en/register">Register</a> online before
      January 22nd and save 200$!
-     <br/> 
+     <br> 
      Looking forward to see you at the conference.
      </p> 
     </div> 
   
     </div> 
 </div>
-<?php
 
-site_footer();
-
+<?php site_footer(array('elephpants' => true, 'sidebar' => $SIDEBAR_DATA));

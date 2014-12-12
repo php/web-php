@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+  <title>A quick update on the status of php.net</title>
+  <id>http://php.net/archive/2013.php#id2013-10-24-1</id>
+  <published>2013-10-24T20:55:17-05:00</published>
+  <updated>2013-10-24T20:55:17-05:00</updated>
+  <category term="frontpage" label="PHP.net frontpage news"/>
+  <link href="http://php.net/index.php#id2013-10-24-1" rel="alternate" type="text/html"/>
+  <link href="http://php.net/archive/2013.php#id2013-10-24-1" rel="via" type="text/html"/>
+  <content type="xhtml">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+     <p>
+     On 24 Oct 2013 06:15:39 +0000 Google started saying www.php.net was hosting
+     malware. The Google Webmaster Tools were initially quite delayed in showing
+     the reason why and when they did it looked a lot like a false positive
+     because we had some minified/obfuscated javascript being dynamically
+     injected into userprefs.js. This looked suspicious to us as well, but
+     it was actually written to do exactly that so we were quite certain it
+     was a false positive, but we kept digging.
+     </p>
+
+     <p>
+     It turned out that by combing through the access logs for static.php.net
+     it was periodically serving up userprefs.js with the wrong content length
+     and then reverting back to the right size after a few minutes. This is due
+     to an rsync cron job. So the file was being modified locally and reverted.
+     Google's crawler caught one of these small windows where the wrong file
+     was being served, but of course, when we looked at it manually it looked
+     fine. So more confusion.
+     </p>
+
+     <p>
+     We are still investigating how someone caused that file to be changed,
+     but in the meantime we have migrated www/static to new clean servers.
+     The highest priority is obviously the source code integrity and after
+     a quick:
+     </p>
+
+       <blockquote>git fsck --no-reflog --full --strict</blockquote>
+
+     <p>
+     on all our repos plus manually checking the md5sums of the PHP distribution
+     files we see no evidence that the PHP code has been compromised. We have
+     a mirror of our git repos on github.com and we will manually check git
+     commits as well and have a full post-mortem on the intrusion when we have
+     a clearer picture of what happened.
+     </p>
+    </div>
+  </content>
+</entry>

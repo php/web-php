@@ -9,51 +9,33 @@ if (!empty($_GET['active_langs'])) {
 }
 
 $SIDEBAR_DATA='
-<h3>Online documentation</h3>
-<p>
- You can read the
- <a href="/docs.php">documentation online</a>
- in various languages. The Documentation HOWTO,
- and archive manuals are also available
- from our <a href="/docs.php">documentation page</a>.
-</p>
+<div class="panel">
+    <div class="headline">Online documentation</div>
+    <div class="body">
+        <p>
+            You can read the
+            <a href="/docs.php">documentation online</a>
+            in various languages. The Documentation HOWTO,
+            and archive manuals are also available
+            from our <a href="/docs.php">documentation page</a>.
+        </p>
+    </div>
+</div>
 
-<h3>Other formats</h3>
-<p>
- The manual is also available via *nix style man pages. To
- install and use:
-</p>
-<ul class="toc">
- <li>Install: pear install doc.php.net/pman</li>
- <li>Upgrade: pear upgrade doc.php.net/pman</li>
- <li>Example usage: pman strlen</li>
-</ul>
-
-<h3>HTML Help viewers</h3>
-<ul class="toc">
- <li>Microsoft Windows has a reader built in.</li>
- <li>
-  On Linux, *BSD and Solaris:<br />
-  <ul class="simple">
-   <li><a href="http://xchm.sourceforge.net/">xCHM</a></li>
-   <li><a href="http://gnochm.sourceforge.net/">GnoCHM</a></li>
-   <li><a href="http://www.kchmviewer.net/">KchmViewer</a></li>
-  </ul>
- </li>
- <li>
-  <a href="http://code.google.com/p/ichm/">iChm</a> caters
-  to Mac OS X users.
- </li>
-</ul>
-
-<h3>File sizes and dates</h3>
-<p>
- If you are using a capable browser, the file size and
- date will show up when you move the mouse above a link.
- If you cannot view this information, or would like to see all the
- information, you can <a href="/download-docs.php?sizes=1">click
- here to see all the file sizes and dates</a>.
-</p>
+<div class="panel">
+    <div class="headline">Other formats</div>
+    <div class="body">
+        <p>
+            The manual is also available via *nix style man pages. To
+            install and use:
+        </p>
+        <ul class="toc">
+            <li>Install: <code>pear install doc.php.net/pman</code></li>
+            <li>Upgrade: <code>pear upgrade doc.php.net/pman</code></li>
+            <li>Example usage: <code>pman strlen</code></li>
+        </ul>
+    </div>
+</div>
 ';
 
 site_header("Download documentation", array("current" => "docs"));
@@ -86,13 +68,12 @@ $formats = array(
   are not complete, and contain English parts. 
  </li>
  <li>
-  The packaged HTML version of the manual (tar.gz) doesn't contain
-  any directories, so all of the files will be dumped into your
-  current working directory when you expand the archive unless the
-  tool you use does otherwise.
+  If you are looking for PHP 4 documentation, please read
+  <a href="/manual/php4.php">this explanation</a>.
  </li>
- <li>
-  <p class="warn">
+</ul>
+
+<p class="warn">
   If you are using Windows XP SP2 or later and you are going to download the
   documentation in CHM format, you <strong>need</strong> to &quot;unblock&quot;
   the file after downloading it by right-clicking on it in Windows Explorer and
@@ -101,9 +82,7 @@ $formats = array(
   &quot;Security&quot; options).  Failure to unblock the documentation file may
   result in error messages including &quot;Navigation to the webpage was
   canceled&quot; due to Windows security restrictions.
-  </p>
- </li>
-</ul>
+</p>
 
 <?php
 $files = array(); $found_formats = array();
@@ -225,7 +204,7 @@ if (count($found_formats) == 0) {
 
                 // Sizes required to be printed out (URL parameter or preferred language)
                 if (isset($_GET['sizes']) || $preflang) {
-                    echo "<br /><small>Size: $fileinfo[1]Kb<br />Date: $fileinfo[2]</small>";
+                    echo "<br><small>Size: $fileinfo[1]Kb<br>Date: $fileinfo[2]</small>";
                 }
             }
 
@@ -241,4 +220,4 @@ if (count($found_formats) == 0) {
 }
 ?>
 
-<?php site_footer();
+<?php site_footer(array('sidebar' => $SIDEBAR_DATA));

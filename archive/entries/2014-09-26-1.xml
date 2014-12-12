@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom" xmlns:default="http://php.net/ns/news">
+  <title>PHP Australia Conference 2015</title>
+  <id>http://php.net/archive/2014.php#id2014-09-26-1</id>
+  <published>2014-09-26T09:52:27+02:00</published>
+  <updated>2014-09-26T09:52:27+02:00</updated>
+  <default:finalTeaserDate xmlns="http://php.net/ns/news">2015-03-12</default:finalTeaserDate>
+  <category term="conferences" label="Conference announcement"/>
+  <link href="http://php.net/conferences/index.php#id2014-09-26-1" rel="alternate" type="text/html"/>
+  <default:newsImage xmlns="http://php.net/ns/news" link="http://www.phpconference.com.au" title="PHP Australia Conference 2015">php-australia-march12.png</default:newsImage>
+  <link href="http://www.phpconference.com.au" rel="via" type="text/html"/>
+  <content type="xhtml">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+     <p>
+         We are extremely pleased to be hosting Australia’s first ever PHP
+         Conference on the 12th &amp; 13th March 2015 in Sydney. This conference
+         has been a long time coming. We aim to inspire, educate and motivate
+         our brilliant PHP Australia developers. We are delighted to be hosting
+         this event where beginner, intermediate to skilled developers are
+         welcome to participate. Please join us on this opportunity, share your
+         ideas, get valuable knowledge, collaborate with your peers and enjoy
+         this amazing adventure.
+     </p>
+     
+     <p>
+         With more than 200 delegates expected over two days, this will be the
+         highlight of our 2015 calendar. We will be welcoming some amazing
+         international and local speakers to share their knowledge.
+     </p>
+     
+     <p>
+         <a href="http://www.phpconference.com.au">http://www.phpconference.com.au</a>
+         <a href="https://twitter.com/hashtag/PHPOZ15">#phpoz15</a>
+     </p>
+    </div>
+  </content>
+</entry>

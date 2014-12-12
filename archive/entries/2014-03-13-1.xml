@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom" xmlns:default="http://php.net/ns/news">
+  <title>Dutch PHP Conference 2014</title>
+  <id>http://php.net/archive/2014.php#id2014-03-13-1</id>
+  <published>2014-03-13T06:18:00-07:00</published>
+  <updated>2014-03-13T06:18:00-07:00</updated>
+  <default:finalTeaserDate xmlns="http://php.net/ns/news">2014-06-28</default:finalTeaserDate>
+  <category term="conferences" label="Conference announcement"/>
+  <link href="http://php.net/conferences/index.php#id2014-03-13-1" rel="alternate" type="text/html"/>
+  <default:newsImage xmlns="http://php.net/ns/news" link="http://www.phpconference.nl/" title="DPC2014">dpc_2014-2.png</default:newsImage>
+  <link href="http://www.phpconference.nl/" rel="via" type="text/html"/>
+  <content type="xhtml">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+
+     <p>
+     Ibuildings is proud to organise the eighth
+     <a href="http://www.phpconference.nl/">Dutch PHP Conference</a> on June 27 and 28,
+     plus a pre-conference tutorial day on June 26. Both programs will be completely in
+     English so the only Dutch thing about it is the location.
+     </p>
+
+     <p>
+     DPC brings together the best speakers and PHP talent from Europe and beyond
+     for three days of high-level technical sessions. Our
+     <a href="http://www.phpconference.nl/schedule">schedule</a> is already online and
+     features talks on Redis, Git, HHVM, NGINX, Security, Mocking, PhpSpec 2, Zend
+     Framework 2, Apache Cassandra, JavaScript testing, Docker and much more.
+     </p>
+
+     <p>
+     The tutorial day on Thursday 26th June at the same venue gives an opportunity for a
+     smaller number of attendees to spend some time with an expert, going in-depth on
+     particular topics - topics like DDD, Zend Framework 2, Ansible, Apigility, JavaScript
+     Testing, Laravel, Symfony and more are all on offer.
+     </p>
+
+     <p>
+     So come along to our two main conference days on 27th and 28th June and our
+     tutorial day on 26th June in Amsterdam!
+     </p>
+    </div>
+  </content>
+</entry>

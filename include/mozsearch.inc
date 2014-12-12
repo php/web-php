@@ -15,7 +15,7 @@
  browserResultType="result"
  resultListStart="<!-- result list start -->"
  resultListEnd="<!-- result list end -->"
- resultItemEnd="<br />"
+ resultItemEnd="<br>"
 >
 
 <browser

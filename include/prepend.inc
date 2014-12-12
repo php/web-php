@@ -1,4 +1,6 @@
 <?php // -*- C++ -*-
+// Compress all pages, if ext/zlib is available on the mirror
+ini_set("zlib.output_compression", 1);
 
 // $Id$
 
@@ -10,9 +12,40 @@
 header("Content-language: en");
 header("Content-type: text/html; charset=utf-8");
 
+/* Fix Silly Same Origin Policies */
+if (isset($_SERVER["HTTP_ORIGIN"])) {
+    $host = parse_url($_SERVER["HTTP_ORIGIN"]);
+    if (strncmp(strrev($host["host"]), strrev("php.net"), strlen("php.net")) != 0) {
+        if ($host["host"] != $_SERVER["SERVER_NAME"]) {
+            exit(10);
+        }
+    }
+    if (isset($host["port"])) {
+        $hostname = $host["host"] . ":" . $host["port"];
+    } else {
+        $hostname = $host["host"];
+    }
+
+    header("Access-Control-Allow-Origin: http://$hostname");
+    if (isset($_SERVER["HTTP_ACCESS_CONTROL_REQUEST_HEADERS"])) {
+        $headers = $_SERVER["HTTP_ACCESS_CONTROL_REQUEST_HEADERS"];
+        $headers = str_replace(array("\r", "\n", "\0"), "", $headers);
+        header("Access-Control-Allow-Headers: $headers");
+    }
+}
+/* Clickjacking workaround. Nothing should be in a frame so it could technically be 'deny'
+ * but it doesn't make any difference anyway */
+header("X-Frame-Options: SAMEORIGIN");
+
 // Be 100% sure the timezone is set
 if (ini_get("date.timezone") === "" && function_exists("date_default_timezone_set")) {
     date_default_timezone_set("UTC");
+}
+
+
+/* Compatibility with the PHP webserver.. */
+if (!isset($_SERVER["SERVER_ADDR"])) {
+    $_SERVER["SERVER_ADDR"] = "127.0.0.1";
 }
 
 // As of PHP 5.3.0 multibyte sequence errors are no longer 
@@ -40,9 +73,6 @@ $MQ = get_magic_quotes_gpc();
 if (get_magic_quotes_runtime()) {
     @set_magic_quotes_runtime(0);
 }
-
-// Check for APC support
-$APC = function_exists('apc_store');
 
 // Site details (mirror site information)
 include $_SERVER['DOCUMENT_ROOT'] . '/include/site.inc';
@@ -94,12 +124,7 @@ function myphpnet_language($langcode = FALSE)
     elseif (isset($MYPHPNET[0]) && $MYPHPNET[0]) {
         return $MYPHPNET[0];
     }
-    else {
-        if (myphpnet_beta()) {
-            return "en";
-        }
-        return FALSE;
-    }
+    return false;
 }
 
 define("MYPHPNET_URL_NONE", FALSE);
@@ -138,20 +163,26 @@ function myphpnet_mirror($murl = FALSE)
     } else { return "NONE"; }
 }
 
-// Set suggestion hiding preference
-function myphpnet_hidesuggest($hide = FALSE)
-{
+function myphpnet_showug($enable = null) {
     global $MYPHPNET;
 
-    // Set hiding preference, or return with value
-    if (is_numeric($hide)) {
-        $MYPHPNET[3] = $hide;
+    if (isset($_GET["showug"])) {
+        $enable = true;
     }
-    elseif (isset($MYPHPNET[3])) {
+
+    if ($enable !== null) {
+        $MYPHPNET[3] = $enable;
+    }
+
+    if (isset($MYPHPNET[3])) {
         return $MYPHPNET[3];
-    } else {
-        return 0;
     }
+
+    if ($_SERVER["REQUEST_TIME"] % 10) {
+        return true;
+    }
+
+    return false;
 }
 
 // Save user settings in cookie
@@ -166,30 +197,7 @@ function myphpnet_save()
 
     // Set all the preferred values for a year
     mirror_setcookie("MYPHPNET", join(",", $MYPHPNET), 60*60*24*365);
-}
 
-function myphpnet_setbeta($bool = false) {
-    global $MYPHPNET;
-
-    $MYPHPNET[4] = (bool)$bool;
-}
-function myphpnet_beta() {
-    global $MYPHPNET;
-    global $MYSITE;
-
-    if (isset($_GET["beta"])) {
-        return (bool)$_GET["beta"];
-    }
-
-    if ($MYSITE === 'http://prototype.php.net/') {
-        return true;
-    }
-
-    if (isset($MYPHPNET[4])) {
-        return (bool)$MYPHPNET[4];
-    }
-
-    return false;
 }
 
 // Default: Default search.
@@ -197,13 +205,20 @@ function myphpnet_beta() {
 // TODO: Possible $default escaping issues
 function google_cse($default = '', $lang = 'en') {
 ?>
-<div id="cse" style="width: 100%;">Loading</div>
+<noscript>
+  php.net's search functionality requires JavaScript to operate. Please enable
+  JavaScript and reload to continue.
+</noscript>
+<div id="cse" style="width: 100%;"></div>
 <script src="http://www.google.com/jsapi" type="text/javascript"></script>
 <script type="text/javascript"> 
+  document.getElementById("cse").innerHTML = "Loading...";
   google.load('search', '1', {language : '<?php echo $lang; ?>', style : google.loader.themes.MINIMALIST});
   google.setOnLoadCallback(function() {
-    var customSearchOptions = {};  var customSearchControl = new google.search.CustomSearchControl(
+    var customSearchOptions = {};
+    var customSearchControl = new google.search.CustomSearchControl(
       '011570197911755000456:fip9wopfz_u', customSearchOptions);
+    customSearchControl.setLinkTarget(google.search.Search.LINK_TARGET_SELF);
     customSearchControl.setResultSetSize(google.search.Search.FILTERED_CSE_RESULTSET);
     var options = new google.search.DrawOptions();
     options.setAutoComplete(true);

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+  <title>PHP 5.5 beta4 Released</title>
+  <id>http://php.net/archive/2013.php#id2013-04-25-1</id>
+  <published>2013-04-25T08:18:09+00:00</published>
+  <updated>2013-04-25T08:18:09+00:00</updated>
+  <category term="frontpage" label="PHP.net frontpage news"/>
+  <category term="releases" label="New PHP release"/>
+  <link href="http://php.net/index.php#id2013-04-25-1" rel="alternate" type="text/html"/>
+  <link href="http://php.net/archive/2013.php#id2013-04-25-1" rel="via" type="text/html"/>
+  <content type="xhtml">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+     <p>
+        The PHP development team announces the release of the 4th beta of PHP 5.5.0.
+        This release fixes some bugs against beta 3 and cleans up some features.
+     </p>
+
+     <strong>THIS IS A DEVELOPMENT PREVIEW - DO NOT USE IT IN PRODUCTION!</strong>
+
+     <p>
+      PHP 5.5.0beta4 is shipped with some bug fixes. Here is the list:
+     </p>
+     <ul>
+        <li>Fixed bug #64677, execution operator `` stealing surrounding arguments.</li>
+        <li>Fixed bug #64342, ZipArchive::addFile() has to check for file existence.</li>
+        <li>Fixed Windows x64 version of stream_socket_pair() and improved error handling.</li>
+        <li>Remove curl stream wrappers</li>
+     </ul>
+
+     <p>You can read the full list of changes in the
+      <a href="https://github.com/php/php-src/blob/php-5.5.0beta4/NEWS">NEWS file</a> contained
+      in the release archive.
+     </p>
+
+     <p>
+      For source downloads of PHP 5.5.0beta4 please visit
+      the <a href="http://downloads.php.net/dsp">download page</a>, Windows binaries
+      can be found on <a href="http://windows.php.net/qa/">windows.php.net/qa/</a>.
+     </p>
+
+     <p>
+      Next step is Release Candidate. Our 1st RC is expected for May 9th.
+     </p>
+
+     <p>
+        Thank you for supporting PHP.
+     </p>
+    </div>
+  </content>
+</entry>

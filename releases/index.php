@@ -5,8 +5,8 @@ include_once $_SERVER['DOCUMENT_ROOT'] . '/include/prepend.inc';
 include_once $_SERVER["DOCUMENT_ROOT"] . "/include/branches.inc";
 
 if (isset($_GET["serialize"])) {
+	$RELEASES[5][$PHP_5_4_VERSION]["date"] = $PHP_5_4_DATE;
 	$RELEASES[5][$PHP_5_3_VERSION]["date"] = $PHP_5_3_DATE;
-	$RELEASES[5][$PHP_5_2_VERSION]["date"] = $PHP_5_2_DATE;
 	$RELEASES                              = $RELEASES + $OLDRELEASES;
 
 	if (isset($_GET["version"])) {
@@ -24,7 +24,7 @@ if (isset($_GET["serialize"])) {
 				$count = 1;
 
 				/* check if other $RELEASES[$ver] are there */
-				/* e.g., 5_2, 5_3, and 5_4 all exist and have a release */
+				/* e.g., 5_3, 5_4, and 5_5 all exist and have a release */
 				while(($z = each($RELEASES[$ver])) && $count++ < $max) {
 					$return[$z[0]] = $z[1];
 				}
@@ -43,7 +43,7 @@ if (isset($_GET["serialize"])) {
 				echo serialize($r);
 			}
 		} else {
-			echo serialize(array("error" => "Unkown version"));
+			echo serialize(array("error" => "Unknown version"));
 		}
 	} else {
 		$array = array();
@@ -72,36 +72,44 @@ krsort($eol);
 $eol = implode('', array_slice($eol, 0, 2));
 
 $SIDEBAR_DATA = '
-<h3>End of Life Dates</h3>
+<div class="panel">
+  <a class="headline" href="/supported-versions.php">Supported Versions</a>
+  <div class="body">
+    Check the <a href="/supported-versions.php">supported versions</a> page for
+    more information on the support lifetime of each version of PHP.
+  </div>
+</div>
 
-<p>
- The most recent branches to reach end of life status are:
+<div class="panel">
+  <a class="headline" href="/eol.php">End of Life Dates</a>
+  <div class="body">
+    <p>The most recent branches to reach end of life status are:</p>
+    <ul>'.$eol.'</ul>
+  </div>
+</div>
+
+<p class="panel">
+ <a href="/ChangeLog-5.php">PHP 5 ChangeLog</a>
+</p>
+<p class="panel">
+ <a href="/ChangeLog-4.php">PHP 4 ChangeLog</a>
 </p>
 
-<ul>'.$eol.'</ul>
+<div class="panel">
+ <a href="http://museum.php.net/">PHP Museum</a>
+</div>
 
-<p>
- You can also view a
- <a href="/eol.php">list of end of life dates for all branches</a>.
-</p>
-
-<h3>Other PHP Releases</h3>
-<p>
- Release candidates and beta versions are not listed here.
- You will be able to find those as well as even PHP 3 and
- PHP 2 releases in the <a href="http://museum.php.net/">PHP
- Museum</a>.
-</p>
-
-<div class="information">
- <strong>Want a PHP serialize()d list of the PHP releases?</strong><br />
- <p>Add <a href="?serialize=1">?serialize=1</a> to the url</p>
- <p>Only want PHP 5 releases? <a href="?serialize=1&version=5">&version=5</a></p>
- <p>The last 3? <a href="?serialize=1&version=5&max=3">&max=3</a></p>
+<div class="panel">
+  <div class="headline">Want a PHP serialize()d list of the PHP releases?</div>
+  <div class="body">
+    <p>Add <a href="?serialize=1">?serialize=1</a> to the url</p>
+    <p>Only want PHP 5 releases? <a href="?serialize=1&version=5">&version=5</a></p>
+    <p>The last 3? <a href="?serialize=1&version=5&max=3">&max=3</a></p>
+  </div>
 </div>
 ';
 
-site_header("Releases");
+site_header("Releases", array("current" => "downloads"));
 ?>
 
 <h1>Unsupported Historical Releases</h1>
@@ -146,7 +154,7 @@ function mk_rel($major, $ver, $date, $announcement, $source, $windows, $museum) 
 		foreach(array_merge($source, $windows) as $src) {
 			echo " <li>\n";
 			if (isset($src['filename'])) {
-				download_link($src["filename"], $src["name"]); echo "<br />\n";
+				download_link($src["filename"], $src["name"]); echo "<br>\n";
 				if (isset($src["md5"])) {
 					echo '<span class="md5sum">md5: ' .$src["md5"]. "</span>\n";
 				}
@@ -158,6 +166,9 @@ function mk_rel($major, $ver, $date, $announcement, $source, $windows, $museum) 
 		echo "</ul>\n";
 	} else {
 		foreach($source as $src) {
+			if (!isset($src["filename"])) {
+				continue;
+			}
 			printf('<a href="http://museum.php.net/php%d/%s">%s</a>'."\n", $major, $src["filename"], $src["name"]);
 		}
 		foreach($windows as $src) {
@@ -173,7 +184,7 @@ $latest = max(array_keys($OLDRELEASES));
 foreach($OLDRELEASES as $major => $a) {
 	echo '<a name="v' .$major. '"></a>';
 	if ($major != $latest) {
-		echo "\n<hr />\n";
+		echo "\n<hr>\n";
 		if ($major == 4) {
 			echo '<p>Support for PHP 4 has been <b style="color: red;">discontinued</b> since 2007-12-31. Please consider upgrading to PHP 5.</p>'."\n";
 		}
@@ -194,5 +205,5 @@ foreach($OLDRELEASES as $major => $a) {
 	}
 }
 
-site_footer();
+site_footer(array("sidebar" => $SIDEBAR_DATA));
 

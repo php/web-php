@@ -4,7 +4,7 @@
 /*
  This page supports the PHP.net automoderation system
  with enabling users to confirm their emails via the web.
- This script only need to run on www.php.net.
+ This script only need to run on the primary php.net box.
 */
 
 $_SERVER['BASE_PAGE'] = 'mod.php';
@@ -12,8 +12,8 @@ include_once $_SERVER['DOCUMENT_ROOT'] . '/include/prepend.inc';
 
 site_header("Email confirmation", array("current" => "community"));
 
-// Only run on www.php.net
-if ($MYSITE != "http://www.php.net/") { 
+// Only run on main php.net box.
+if (!is_primary_site()) {
     echo <<<ERROR
 <h1>Email confirmation failed</h1>
 

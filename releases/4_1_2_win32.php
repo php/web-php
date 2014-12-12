@@ -24,8 +24,8 @@ site_header("PHP 4.1.2 Windows (Win32) Release Announcement");
 
 <p>The new settings are:</p>
 <ul>
- <li><tt>cgi.force_redirect 0|1</tt></li>
- <li><tt>cgi.redirect_status_env ENV_VAR_NAME</tt></li>
+ <li><code>cgi.force_redirect 0|1</code></li>
+ <li><code>cgi.redirect_status_env ENV_VAR_NAME</code></li>
 </ul>
 
 <h2>WebServers affected by this vulnerability</h2>

@@ -3,40 +3,12 @@
 $_SERVER['BASE_PAGE'] = 'docs.php';
 include_once $_SERVER['DOCUMENT_ROOT'] . '/include/prepend.inc';
 
-$SIDEBAR_DATA='
-<h3>FAQ</h3>
-<p>
- The <a href="/FAQ.php">PHP FAQ</a> is your first stop for general
- information and those questions that seem to be on most people\'s minds.
- If you have licensing questions, see the separate
- <a href="/license/">License FAQ</a>.
-</p>
-
-<h3>Changelog</h3>
-<p>
- You can also find the <a href="/ChangeLog-4.php">PHP 4 Changelog</a> or
- the <a href="/ChangeLog-5.php">PHP 5 Changelog</a> useful,
- if you would like to look up changes between various versions of PHP.
-</p>
-
-<h3>Books</h3>
-<p>
- There are literally thousands of books available in
- English and numerous other languages. You can easily search at
- <a href="http://www.amazon.com/exec/obidos/external-search?mode=books&amp;keyword=PHP&amp;tag=wwwphpnet">Amazon.com</a>, or 
- go directly to
- <a href="http://www.amazon.de/exec/obidos/redirect-home/wwwphpnet07">Amazon.de</a>
- or <a href="http://www.amazon.fr/exec/obidos/redirect-home/wwwphpnet0f">Amazon.fr</a>
- and search there.
-</p>
-
-';
-
 site_header("Documentation", array("current" => "docs"));
 
 ?>
 
 <h1>Documentation</h1>
+<div class="content-box">
 
 <p>
  The PHP Manual is available online in a selection of languages.
@@ -44,9 +16,7 @@ site_header("Documentation", array("current" => "docs"));
 </p>
 
 <p>
- You can learn how to integrate our online manual with various tools, including
- your web browser, on our <a href="tips.php">quick reference tips</a> page.
- You can also get more information about php.net URL shortcuts by visiting our
+ More information about php.net URL shortcuts by visiting our
  <a href="urlhowto.php">URL howto page</a>.
 </p>
 
@@ -57,7 +27,17 @@ site_header("Documentation", array("current" => "docs"));
  contributions. 
 </p>
 
-<table border="0" cellpadding="3" cellspacing="2" class="standard">
+ <div class="warning">
+  <p>
+   Documentation for PHP 4 has been removed from the
+   manual, but there is archived version still available. For
+   more informations, please read <a href="/manual/php4.php">
+   Documentation for PHP 4</a>.
+  </p>
+ </div>
+</div>
+
+<table class="standard">
  <tr>
   <th>Formats</th>
   <th>Destinations</th>
@@ -95,11 +75,11 @@ foreach ($ACTIVE_ONLINE_LANGUAGES as $langcode => $langname) {
  </tr>
 </table>
 
-<h2>More documentation</h2>
-<ul>
+<h2 class="content-header">More documentation</h2>
+<ul class="content-box listed">
  <li>
   If you are interested in how the documentation is edited and translated,
-  you should read the <a href="https://wiki.php.net/doc/howto">Documentation HOWTO</a>.
+  you should read the <a href="http://doc.php.net/tutorial/">Documentation HOWTO</a>.
  </li>
  <li>
   <a href="http://gtk.php.net/docs.php">PHP-GTK related documentation</a>
@@ -112,7 +92,8 @@ foreach ($ACTIVE_ONLINE_LANGUAGES as $langcode => $langname) {
  <li>
   You can still read a copy of the original <a href="/manual/phpfi2.php">PHP/FI
   2.0 Manual</a> on our site, which we only host for historical purposes.
-  The same applies to the <a href="/manual/php3.php">PHP 3 Manual</a>.
+  The same applies to the <a href="/manual/php3.php">PHP 3 Manual</a>, and
+  the <a href="/manual/php4.php">PHP 4 Manual</a>.
  </li>
 </ul>
 

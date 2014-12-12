@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom" xmlns:default="http://php.net/ns/news">
+  <title>Madison PHP Conference 2014</title>
+  <id>http://php.net/archive/2014.php#id2014-08-04-2</id>
+  <published>2014-08-04T20:57:13+01:00</published>
+  <updated>2014-08-04T20:57:13+01:00</updated>
+  <default:finalTeaserDate xmlns="http://php.net/ns/news">2013-09-04</default:finalTeaserDate>
+  <category term="conferences" label="Conference announcement"/>
+  <link href="http://php.net/conferences/index.php#id2014-08-04-2" rel="alternate" type="text/html"/>
+  <default:newsImage xmlns="http://php.net/ns/news" link="http://www.madisonphpconference.com/" title="Madison PHP Conference 2014">madison-php-2013.png</default:newsImage>
+  <link href="http://www.madisonphpconference.com/" rel="via" type="text/html"/>
+  <content type="xhtml">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+      <p>
+        One day, three tracks, more fun than a barrel of elePHPants!
+      </p>
+      <p>
+        Join us for a one day, three-track conference that focuses on PHP and
+        related web technologies. This event is organized by Madison PHP and is
+        designed to offer something to attendees at all skill levels. It will
+        be a day of networking, learning, sharing, and great fun!
+      </p>
+      <p>
+        <strong>Three Tracks</strong>
+      </p>
+      <p>
+        We've carefully crafted three distinct tracks but you're not locked
+        into just one. Attend any talk from any track.
+      </p>
+      <p>
+        <strong>PHP Foundations Track</strong>
+      </p>
+      <p>
+        Learn the basics of PHP development. A carefully selected set of talks
+        for those who have never programmed before or who are new to PHP and
+        would like a refresher of the basics.
+      </p>
+      <p>
+        <strong>PHP Professional Track (2x)</strong>
+      </p>
+      <p>
+        Explore new technologies and techniques. Gather with other seasoned
+        developers and increase your value with a series of talks that will
+        both energize and get you excited about the future of PHP.
+      </p>
+    </div>
+  </content>
+</entry>

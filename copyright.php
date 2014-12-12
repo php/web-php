@@ -19,7 +19,7 @@ site_header("Copyright", array("current" => "footer"));
 <p>
  The code, text, PHP logo, and graphical elements on this website 
  and the mirror websites (the "Site") are Copyright &copy; 2001-<?php echo date("Y") ?>
- The PHP Group. All rights reserved.
+ the <a href="/credits.php">PHP Group</a>. All rights reserved.
 </p>
 
 <p>
@@ -48,7 +48,14 @@ site_header("Copyright", array("current" => "footer"));
 
 <p>
  For more information on the PHP Group and the PHP project, please see 
- <a href="http://www.php.net/">the PHP homepage</a>.
+ <a href="http://php.net/">the PHP homepage</a>.
+</p>
+
+<h2>PHP Manual</h2>
+
+<p>
+ The PHP Manual is covered by a separate license, which is available
+ <a href="/manual/en/copyright.php">from within the manual itself</a>.
 </p>
 
 <?php site_footer();

@@ -3,7 +3,7 @@
 $_SERVER['BASE_PAGE'] = 'archive/2000.php';
 include_once $_SERVER['DOCUMENT_ROOT'] . '/include/prepend.inc';
 news_archive_sidebar();
-site_header("News Archive - 2000", array("generate_modified" => true));
+site_header("News Archive - 2000", array("cache" => true));
 ?>
 
 <h1>News Archive - 2000</h1>
@@ -12,7 +12,7 @@ site_header("News Archive - 2000", array("generate_modified" => true));
  Here are the most important news items we have published in 2000 on PHP.net.
 </p>
 
-<hr />
+<hr>
 
 <h1>PHP 4.0.4 Released</h1>
 <p>
@@ -23,7 +23,7 @@ site_header("News Archive - 2000", array("generate_modified" => true));
  <a href="ChangeLog-4.php#4.0.4">ChangeLog</a>.
 </p>
 
-<hr />
+<hr>
 
 <h1>PHP 3.0.18 released</h1>
 <p>
@@ -33,7 +33,7 @@ site_header("News Archive - 2000", array("generate_modified" => true));
  contains a full list of changes.
 </p>
 
-<hr />
+<hr>
 
 <h1>Patch Level 1 available for PHP 4.0.3</h1>
 <p>
@@ -44,7 +44,7 @@ site_header("News Archive - 2000", array("generate_modified" => true));
  memory leak that was discovered in the module versions of PHP.
 </p>
 
-<hr />
+<hr>
 
 <h1>PHP 4.0.3 Released</h1>
 <p>
@@ -55,7 +55,7 @@ site_header("News Archive - 2000", array("generate_modified" => true));
  You can read the <a href="/ChangeLog-4.php#4.0.3">changelog</a> here.
 </p>
 
-<hr />
+<hr>
 
 <h1>Manual Search Tip</h1>
 <p>
@@ -64,7 +64,7 @@ site_header("News Archive - 2000", array("generate_modified" => true));
  <a href="http://php.net/strlen">php.net/strlen</a>.
 </p>
 
-<hr />
+<hr>
 
 <h1>PHP 4.0.2 Released!</h1>
 <p>
@@ -74,7 +74,7 @@ site_header("News Archive - 2000", array("generate_modified" => true));
  <a href="/ChangeLog-4.php#4.0.2">changelog</a> here.
 </p>
 
-<hr />
+<hr>
 
 <h1>PHP 4.0.1 Patch Level 2 available</h1>
 <p>
@@ -84,7 +84,7 @@ site_header("News Archive - 2000", array("generate_modified" => true));
  from working properly.
 </p>
 
-<hr />
+<hr>
 
 <h1>PHP 4.0.1 Released!</h1>
 <p>
@@ -96,7 +96,7 @@ site_header("News Archive - 2000", array("generate_modified" => true));
  for all PHP users. <a href="/downloads.php">Download now!</a>
 </p>
 
-<hr />
+<hr>
 
 <h1>PHP 4.0.0 Released!</h1>
 <p>
@@ -107,7 +107,7 @@ site_header("News Archive - 2000", array("generate_modified" => true));
  now!</a>
 </p>
 
-<hr />
+<hr>
 
 <h1>PHP 3.0.16 released</h1>
 <p>
@@ -118,7 +118,7 @@ site_header("News Archive - 2000", array("generate_modified" => true));
  PHP homepage. The ChangeLog contains a full list of changes.
 </p>
 
-<hr />
+<hr>
 
 <h1>Zend Optimizer released!</h1>
 <p>
@@ -129,7 +129,7 @@ site_header("News Archive - 2000", array("generate_modified" => true));
  download</a>
 </p>
 
-<hr />
+<hr>
 
 <h1>PHP Talks at ApacheCon</h1>
 <p>
@@ -142,7 +142,7 @@ site_header("News Archive - 2000", array("generate_modified" => true));
  href="http://www.apachecon.com/2000/US/html/sessions.html">here</a>.
 </p>
 
-<hr />
+<hr>
 
 <h1>PHP Developers' Meeting</h1>
 <p>
@@ -154,7 +154,7 @@ site_header("News Archive - 2000", array("generate_modified" => true));
  PHP/MySQL combination even stronger than it already is.
 </p>
 
-<hr />
+<hr>
 
 <h1>PHP 3.0.13 has been released</h1>
 <p>
@@ -166,4 +166,5 @@ site_header("News Archive - 2000", array("generate_modified" => true));
  ChangeLog provides a complete list of changes.
 </p>
 
-<?php site_footer(); ?>
+<?php site_footer(array('elephpants' => true, 'sidebar' => $SIDEBAR_DATA));
+

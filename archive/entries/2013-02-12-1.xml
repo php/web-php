@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom" xmlns:default="http://php.net/ns/news">
+  <title>Lone Star PHP 2013</title>
+  <id>http://php.net/archive/2013.php#id2013-02-12-1</id>
+  <published>2013-02-12T17:20:07-08:00</published>
+  <updated>2013-02-12T17:20:07-08:00</updated>
+  <default:finalTeaserDate xmlns="http://php.net/ns/news">2013-02-28</default:finalTeaserDate>
+  <category term="cfp" label="Call for Papers"/>
+  <link href="http://php.net/conferences/index.php#id2013-02-12-1" rel="alternate" type="text/html"/>
+  <default:newsImage xmlns="http://php.net/ns/news" link="http://lonestarphp.com/" title="Lone Star PHP 2013">logo-lonestarphp.png</default:newsImage>
+  <link href="http://lonestarphp.com/" rel="via" type="text/html"/>
+  <content type="xhtml">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+        <p><a href="http://lonestarphp.com/">Lone Star PHP</a> is back again for its 3rd year in Dallas, Texas from June 28th - 29th. This 2 day event will offer 2 tracks showcasing amazing speakers from all over the PHP community.</p>
+     <p>Come join more than 200 developers for 2 days of learning and networking. This year will be featuring a brand new focused 1 day track, PHP Fundamentals.
+     </p>
+     <p><a href="http://lonestarphp.com/call-for-papers">Call for Papers</a> are open until February 28th, 2013. Get your talk ideas in quick and join us in Dallas! Early bird registration opening soon!</p>
+    </div>
+  </content>
+</entry>

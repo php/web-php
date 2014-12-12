@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+  <title>PHP 5.5.0 beta1 Released</title>
+  <id>http://php.net/archive/2013.php#id2013-03-21-1</id>
+  <published>2013-03-21T12:45:18+00:00</published>
+  <updated>2013-03-21T12:45:18+00:00</updated>
+  <category term="frontpage" label="PHP.net frontpage news"/>
+  <category term="releases" label="New PHP release"/>
+  <link href="http://php.net/index.php#id2013-03-21-1" rel="alternate" type="text/html"/>
+  <link href="http://php.net/archive/2013.php#id2013-03-21-1" rel="via" type="text/html"/>
+  <content type="xhtml">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+     <p>
+        The PHP development team announces the release of the first beta of PHP 5.5.0.
+        This release is the first to include the <a href="https://wiki.php.net/rfc/optimizerplus">Zend OPCache</a>.
+        Please help our efforts to provide a stable PHP version and test this version carefully
+        against several different applications, with Zend OPCache enabled and report any bug in
+        <a href="https://bugs.php.net">the bug tracking system</a>.
+     </p>
+
+     <strong>THIS IS A DEVELOPMENT PREVIEW - DO NOT USE IT IN PRODUCTION!</strong>
+
+     <p>
+      PHP 5.5.0beta1 is shipped with improvements. Here is an incomplete list:
+     </p>
+     <ul>
+        <li>Added Zend Opcache extension (but disabled by ini setting),</li>
+        <li>Added array_column function which returns a column in a multidimensional
+            array,</li>
+        <li>Added support for non-scalar Iterator keys in foreach,</li>
+        <li>Added support for changing the process's title in CLI/CLI-Server SAPIs</li>
+     </ul>
+
+     <p>You can read the full list of changes in the
+      <a href="https://github.com/php/php-src/blob/php-5.5.0beta1/NEWS">NEWS file</a> contained
+      in the release archive.
+     </p>
+
+     <p>
+      For source downloads of PHP 5.5.0beta1 please visit
+      the <a href="http://downloads.php.net/dsp">download page</a>, Windows binaries
+      can be found on <a href="http://windows.php.net/qa/">windows.php.net/qa/</a>.
+     </p>
+
+     <p>
+         This beta marks the beginning of the feature freeze. No new
+         features will be added to PHP 5.5 after this point.  Please,
+         test and help us to roll out a stable release. Our next beta is
+         planned for April 4th.
+     </p>
+
+     <p>
+        Thank you for supporting PHP.
+     </p>
+
+    </div>
+  </content>
+</entry>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom" xmlns:default="http://php.net/ns/news">
+  <title>Web &amp; PHP Conference</title>
+  <id>http://php.net/archive/2013.php#id2013-08-08-1</id>
+  <published>2013-08-08T10:37:33-07:00</published>
+  <updated>2013-08-12T13:07:33-07:00</updated>
+  <default:finalTeaserDate xmlns="http://php.net/ns/news">2013-09-18</default:finalTeaserDate>
+  <category term="conferences" label="Conference announcement"/>
+  <link href="http://php.net/conferences/index.php#id2013-08-08-1" rel="alternate" type="text/html"/>
+  <default:newsImage xmlns="http://php.net/ns/news" link="http://webandphp.com/conference/webandphpcon2013" title="WPC 2013">WPCLogo-2013.jpg</default:newsImage>
+  <link href="http://webandphp.com/conference/webandphpcon2013" rel="via" type="text/html"/>
+  <content type="xhtml">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+     <p>
+     <a href="http://webandphp.com/conference/webandphpcon2013">Web &amp; PHP Magazine invites you to its first ever conference.</a>
+     This 3 day
+     conference, taking place in San Jose, CA this September, will immerse you in a
+     world of continuously evolving web technologies.
+     </p>
+     <p>
+     Sticking with our ethos of
+     open knowledge sharing and community support, all conference sessions, keynote
+     presentations, hacks and Expo on September 17 &amp; 18 are FREE to attend!
+     </p>
+     <p>
+     Whether
+     your interests lay in core PHP, security, testing,architecture, frameworks,
+     cloud, HTML5, CSS3, responsive design, UX, mobile web or web-based mobile apps,
+     our final program of sessions, workshops and keynote presentations will have
+     something for you....
+     </p>
+     <p>
+     There will also be a pre-conference day with hands-on workshops and
+     deep-dive tutorials, allowing you to work with and learn from some of
+     the leading experts in their field. With this special discount code:
+     <strong>WPC13PN</strong> you can access the Workshops Day for the
+     special price of $159 instead of $199.
+     </p>
+    </div>
+  </content>
+</entry>

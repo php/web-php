@@ -24,7 +24,7 @@ if (isset($_POST['my_lang']) && isset($langs[$_POST['my_lang']])) {
     unset($langs[$_POST['my_lang']]);
 }
 
-// We have recevied a cookie and it is an available language
+// We have received a cookie and it is an available language
 elseif (isset($langs[myphpnet_language()])) {
 
     // Add this as first option, selected
@@ -55,21 +55,16 @@ if (isset($_POST['urlsearch'])) {
     myphpnet_urlsearch($_POST['urlsearch']);
 }
 
+if (isset($_POST["showug"])) {
+    myphpnet_showug($_POST["showug"] == "enable");
+}
+
 // Set preferred mirror site, prepare mirror array
 if (isset($_POST['mirror'])) {
     myphpnet_mirror($_POST['mirror']);
 }
 $mirror_sites = $MIRRORS;
 $mirror_sites["NONE"] = array(7 => MIRROR_OK);
-
-// Save suggestion hiding settings
-if (isset($_POST['hidesuggest'])) {
-    myphpnet_hidesuggest($_POST['hidesuggest']);
-}
-
-if (isset($_POST['beta'])) {
-    myphpnet_setbeta($_POST['beta']);
-}
 
 myphpnet_save();
 
@@ -80,8 +75,7 @@ site_header("My PHP.net", array("current" => "community"));
 <h1>My PHP.net</h1>
 
 <p>
- This page allows you to customize the PHP.net site to some degree
- to your own liking.
+ This page allows you to customize the PHP.net site.
 </p>
 
 <?php if (!is_official_mirror()) { ?>
@@ -93,9 +87,8 @@ site_header("My PHP.net", array("current" => "community"));
 </p>
 <?php } else { ?>
 <p>
- These settings will be active on all official PHP.net mirror sites,
- and are stored using cookies, so you need to have cookies enabled
- to let your settings work.
+ These settings are cookie-based and will work on all official PHP.net
+ mirror sites.
 </p>
 <?php } ?>
 
@@ -106,7 +99,7 @@ site_header("My PHP.net", array("current" => "community"));
  is determined by checking for the following settings. The list is
  in priority order, the first is the most important. Normally you don't
  need to set your preferred language, as your last seen language is
- always remembered, and is a good estimate on your preferred language
+ always remembered, and is a good estimate of your preferred language
  most of the time.
 </p>
 
@@ -150,7 +143,7 @@ foreach ($langinfo as $lin => $lid) {
 </p>
 
 <p>
- The language setting is honored when you use an
+ The language setting is honored when you use a
  <a href="/urlhowto.php">URL shortcut</a>, when you start
  a function list search on a non-manual page, when you visit
  the <a href="/download-docs.php">manual download</a> or
@@ -181,7 +174,7 @@ if (i2c_valid_country()) {
 <h2>URL search fallback</h2>
 
 <p>
- When you try to access a PHP.net page via an URL shortcut, and
+ When you try to access a PHP.net page via a URL shortcut, and
  the site is unable to find that particular page, it falls back
  to a documentation search, or a function list lookup, depending on
  your choice. The default is a function list lookup, as most of
@@ -195,39 +188,18 @@ $type = myphpnet_urlsearch();
 if ($type === MYPHPNET_URL_NONE || $type === MYPHPNET_URL_FUNC) {
     echo ' checked="checked"';
 }
-echo ' /> Function list search <input type="radio" name="urlsearch" value="manual"';
+echo '> Function list search <input type="radio" name="urlsearch" value="manual"';
 if ($type === MYPHPNET_URL_MANUAL) {
     echo ' checked="checked"';
 }
 ?>
- /> PHP Documentation search
-</div>
-
-<h2>Search field suggestions</h2>
-
-<p>
- Whenever you start a search on a PHP.net page, a list of suggested function
- names starting with the letters you typed in are suggested. If your browser
- has problems with this functionality or you are not interested in these
- suggestions, you can turn them off here. <strong>Note that this feature is
- currently only available on the <a href="/search">search page itself</a>,
- not on any of the other pages.</strong>
-</p>
-
-<div class="indent">
- Your setting: <input type="radio" name="hidesuggest" value="0"
-<?php
-echo (myphpnet_hidesuggest() ? '' : ' checked="checked"');
-echo ' /> Show suggestions <input type="radio" name="hidesuggest" value="1"';
-echo (myphpnet_hidesuggest() ? ' checked="checked"' : '');
-?>
- /> Hide suggestions
+> PHP Documentation search
 </div>
 
 <h2>Mirror site redirection</h2>
 
 <p>
- The www.php.net site redirects users to mirror sites in several cases
+ The php.net site redirects users to mirror sites in several cases
  automatically. It tries to find a close mirror first (a mirror in the
  user's country), and if no such mirror is found, it selects one mirror
  randomly. Here you can set one preferred mirror site for yourself in
@@ -249,7 +221,7 @@ foreach ($mirror_sites as $murl => $mdata) {
     
     // Skip inactive mirrors
     if (mirror_status($murl) != MIRROR_OK ||
-        $murl == "http://www.php.net/") { continue; }
+        $murl == "http://www.php.net/" || $murl == 'http://php.net/') { continue; }
     
     // Compute user friendly mirror name
     if ($murl == "NONE") {
@@ -272,27 +244,18 @@ foreach ($mirror_sites as $murl => $mdata) {
 ?>
  </select>
 </div>
-
-
-<h2>PHP.net alpha</h2>
+<br>
+<h2>User Group tips</h2>
 
 <p>
- php.net is undergoing plastic surgery these days. If you want to see
- how the site <strong>may</strong> look in the future, you can join our alpha program.
- <br />
- Comments, feedback and patches should be directed to
- <a href="mailto:php-webmaster@lists.php.net">php-webmaster@lists.php.net</a>.
+We are experimenting with listing nearby user groups. This feature is highly experimental
+and will very likely change a lot and be broken at times.
 </p>
-
-<div class="indent">
- <select name="beta">
-    <option value="0" <?php echo myphpnet_beta() ? "" : "selected" ?>>Disable</option>
-    <option value="1" <?php echo myphpnet_beta() ? "selected" : "" ?>>Enable</option>
- </select>
-</div>
+<label for="showugenable">Enable UG tips</label> <input type="radio" name="showug" id="showugenable" value="enable" <?php    echo myphpnet_showug() ? "checked=checked" : "" ?>><br>
+<label for="showugdisable">Disable UG tips</label> <input type="radio" name="showug" id="showugdisable" value="disable" <?php echo myphpnet_showug() ? "" : "checked=checked" ?>>
 
 <p class="center">
- <input type="submit" value="Set All Preferences" />
+ <input type="submit" value="Set All Preferences">
 </p>
 </form>
 

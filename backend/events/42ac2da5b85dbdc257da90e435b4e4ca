@@ -1,0 +1,470 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Meetup//RemoteApi//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-ORIGINAL-URL:http://www.meetup.com/South-Florida-PHP-Users-Group/events
+ /ical/South+Florida+PHP+Users+Group/
+X-WR-CALNAME:Events - South Florida PHP Users Group
+BEGIN:VTIMEZONE
+TZID:America/New_York
+X-LIC-LOCATION:America/New_York
+BEGIN:DAYLIGHT
+TZOFFSETFROM:-0500
+TZOFFSETTO:-0400
+TZNAME:EDT
+DTSTART:19700308T020000
+RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=2SU
+END:DAYLIGHT
+BEGIN:STANDARD
+TZOFFSETFROM:-0400
+TZOFFSETTO:-0500
+TZNAME:EST
+DTSTART:19701101T020000
+RRULE:FREQ=YEARLY;BYMONTH=11;BYDAY=1SU
+END:STANDARD
+END:VTIMEZONE
+BEGIN:VEVENT
+DTSTAMP:20140123T050005Z
+DTSTART;TZID=America/New_York:20140130T190000
+DTEND;TZID=America/New_York:20140130T210000
+STATUS:CONFIRMED
+SUMMARY:Ladies Night (Breaking into Freelance)
+DESCRIPTION:South Florida PHP User Group (SoFloPHP)\nThursday\, January 3
+ 0 at 7:00 PM\n\nFor anybody thinking of going freelance Melissa Billias 
+ will talk about her journey and adventures learning the ropes. She will 
+ discuss pros and cons ...\n\nDetails: http://www.meetup.com/South-Florid
+ a-PHP-Users-Group/events/145110122/
+CLASS:PUBLIC
+CREATED:20131011T195654Z
+GEO:26.40;-80.16
+LOCATION:Caffeine Spaces (3701 FAU Blvd\, Suite #210\, Boca Raton\, FL 33
+ 431)
+URL:http://www.meetup.com/South-Florida-PHP-Users-Group/events/145110122/
+ 
+LAST-MODIFIED:20140106T000204Z
+UID:event_qdphxgyscbnc@meetup.com
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20140123T050005Z
+DTSTART;TZID=America/New_York:20140206T080000
+DTEND;TZID=America/New_York:20140208T180000
+STATUS:CONFIRMED
+SUMMARY:2014 SunshinePHP Developer Conference
+DESCRIPTION:South Florida PHP User Group (SoFloPHP)\nThursday\, February 
+ 6 at 8:00 AM\n\nThe largest PHP event in South Florida will be held in F
+ ebruary 2014. Please come join us. Information and registration at http:
+ //sunshinephp.com\n\nDetails: http://www.meetup.com/South-Florida-PHP-Us
+ ers-Group/events/149278602/
+CLASS:PUBLIC
+CREATED:20131105T144004Z
+GEO:26.40;-80.16
+LOCATION:Embassy Suites Miami - International Airport (3974 Northwest Sou
+ th River Drive\, Miami\, FL 33166)
+URL:http://www.meetup.com/South-Florida-PHP-Users-Group/events/149278602/
+ 
+LAST-MODIFIED:20131105T144208Z
+UID:event_149278602@meetup.com
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20140123T050005Z
+DTSTART;TZID=America/New_York:20140221T190000
+DTEND;TZID=America/New_York:20140221T220000
+STATUS:CONFIRMED
+SUMMARY:Open subject and/or hack night
+DESCRIPTION:South Florida PHP User Group (SoFloPHP)\nFriday\, February 21
+  at 7:00 PM\n\nThis meetup is "Open" subject night\, and an opportunity 
+ to get together at a specific day/time. If you have a problem or hurdle 
+ you can't seem to solv...\n\nDetails: http://www.meetup.com/South-Florid
+ a-PHP-Users-Group/events/dwmspdysdbcc/
+CLASS:PUBLIC
+CREATED:20121010T165753Z
+GEO:26.40;-80.16
+URL:http://www.meetup.com/South-Florida-PHP-Users-Group/events/dwmspdysdb
+ cc/
+LAST-MODIFIED:20130910T205754Z
+UID:event_dwmspdysdbcc@meetup.com
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20140123T050005Z
+DTSTART;TZID=America/New_York:20140227T190000
+DTEND;TZID=America/New_York:20140227T210000
+STATUS:CONFIRMED
+SUMMARY:Ladies Night (Breaking into Freelance)
+DESCRIPTION:South Florida PHP User Group (SoFloPHP)\nThursday\, February 
+ 27 at 7:00 PM\n\nFor anybody thinking of going freelance Melissa Billias
+  will talk about her journey and adventures learning the ropes. She will
+  discuss pros and cons ...\n\nDetails: http://www.meetup.com/South-Flori
+ da-PHP-Users-Group/events/qdphxgysdbkc/
+CLASS:PUBLIC
+CREATED:20131011T195751Z
+GEO:26.40;-80.16
+URL:http://www.meetup.com/South-Florida-PHP-Users-Group/events/qdphxgysdb
+ kc/
+LAST-MODIFIED:20131222T165707Z
+UID:event_qdphxgysdbkc@meetup.com
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20140123T050005Z
+DTSTART;TZID=America/New_York:20140312T190000
+DTEND;TZID=America/New_York:20140312T210000
+STATUS:CONFIRMED
+SUMMARY:SoFloPHP Boca (Monthly Meetup)
+DESCRIPTION:South Florida PHP User Group (SoFloPHP)\nWednesday\, March 12
+  at 7:00 PM\n\nA subject for this meetup not firm yet\, but it is bound 
+ to be good even if we simply get together and chat about what we are all
+  up to lately. Most of...\n\nDetails: http://www.meetup.com/South-Florid
+ a-PHP-Users-Group/events/qsscjhysfbqb/
+CLASS:PUBLIC
+CREATED:20131222T165617Z
+GEO:26.40;-80.16
+URL:http://www.meetup.com/South-Florida-PHP-Users-Group/events/qsscjhysfb
+ qb/
+LAST-MODIFIED:20131222T165617Z
+UID:event_qsscjhysfbqb@meetup.com
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20140123T050005Z
+DTSTART;TZID=America/New_York:20140319T190000
+DTEND;TZID=America/New_York:20140319T210000
+STATUS:CONFIRMED
+SUMMARY:SoFloPHP Miami (Monthly Meetup)
+DESCRIPTION:South Florida PHP User Group (SoFloPHP)\nWednesday\, March 19
+  at 7:00 PM\n\nA subject for this meetup not firm yet\, but it is bound 
+ to be good even if we simply get together and chat about what we are all
+  up to lately. Most of...\n\nDetails: http://www.meetup.com/South-Florid
+ a-PHP-Users-Group/events/161589442/
+CLASS:PUBLIC
+CREATED:20131222T165646Z
+GEO:26.40;-80.16
+LOCATION:Partners for Self Employment (3000 Biscayne Blvd. Suite 215\, Mi
+ ami\, FL 33137)
+URL:http://www.meetup.com/South-Florida-PHP-Users-Group/events/161589442/
+ 
+LAST-MODIFIED:20131222T165646Z
+UID:event_qtscjhysfbzb@meetup.com
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20140123T050005Z
+DTSTART;TZID=America/New_York:20140321T190000
+DTEND;TZID=America/New_York:20140321T220000
+STATUS:CONFIRMED
+SUMMARY:Open subject and/or hack night
+DESCRIPTION:South Florida PHP User Group (SoFloPHP)\nFriday\, March 21 at
+  7:00 PM\n\nThis meetup is "Open" subject night\, and an opportunity to 
+ get together at a specific day/time. If you have a problem or hurdle you
+  can't seem to solv...\n\nDetails: http://www.meetup.com/South-Florida-P
+ HP-Users-Group/events/dwmspdysfbcc/
+CLASS:PUBLIC
+CREATED:20121010T165753Z
+GEO:26.40;-80.16
+URL:http://www.meetup.com/South-Florida-PHP-Users-Group/events/dwmspdysfb
+ cc/
+LAST-MODIFIED:20130910T205754Z
+UID:event_dwmspdysfbcc@meetup.com
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20140123T050005Z
+DTSTART;TZID=America/New_York:20140327T190000
+DTEND;TZID=America/New_York:20140327T210000
+STATUS:CONFIRMED
+SUMMARY:Ladies Night (Breaking into Freelance)
+DESCRIPTION:South Florida PHP User Group (SoFloPHP)\nThursday\, March 27 
+ at 7:00 PM\n\nFor anybody thinking of going freelance Melissa Billias wi
+ ll talk about her journey and adventures learning the ropes. She will di
+ scuss pros and cons ...\n\nDetails: http://www.meetup.com/South-Florida-
+ PHP-Users-Group/events/qdphxgysfbkc/
+CLASS:PUBLIC
+CREATED:20131011T195751Z
+GEO:26.40;-80.16
+URL:http://www.meetup.com/South-Florida-PHP-Users-Group/events/qdphxgysfb
+ kc/
+LAST-MODIFIED:20131222T165707Z
+UID:event_qdphxgysfbkc@meetup.com
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20140123T050005Z
+DTSTART;TZID=America/New_York:20140409T190000
+DTEND;TZID=America/New_York:20140409T210000
+STATUS:CONFIRMED
+SUMMARY:SoFloPHP Boca (Monthly Meetup)
+DESCRIPTION:South Florida PHP User Group (SoFloPHP)\nWednesday\, April 9 
+ at 7:00 PM\n\nA subject for this meetup not firm yet\, but it is bound t
+ o be good even if we simply get together and chat about what we are all 
+ up to lately. Most of...\n\nDetails: http://www.meetup.com/South-Florida
+ -PHP-Users-Group/events/qsscjhysgbmb/
+CLASS:PUBLIC
+CREATED:20131222T165617Z
+GEO:26.40;-80.16
+URL:http://www.meetup.com/South-Florida-PHP-Users-Group/events/qsscjhysgb
+ mb/
+LAST-MODIFIED:20131222T165617Z
+UID:event_qsscjhysgbmb@meetup.com
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20140123T050005Z
+DTSTART;TZID=America/New_York:20140416T190000
+DTEND;TZID=America/New_York:20140416T210000
+STATUS:CONFIRMED
+SUMMARY:SoFloPHP Miami (Monthly Meetup)
+DESCRIPTION:South Florida PHP User Group (SoFloPHP)\nWednesday\, April 16
+  at 7:00 PM\n\nA subject for this meetup not firm yet\, but it is bound 
+ to be good even if we simply get together and chat about what we are all
+  up to lately. Most of...\n\nDetails: http://www.meetup.com/South-Florid
+ a-PHP-Users-Group/events/qtscjhysgbvb/
+CLASS:PUBLIC
+CREATED:20131222T165646Z
+GEO:26.40;-80.16
+URL:http://www.meetup.com/South-Florida-PHP-Users-Group/events/qtscjhysgb
+ vb/
+LAST-MODIFIED:20131222T165646Z
+UID:event_qtscjhysgbvb@meetup.com
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20140123T050005Z
+DTSTART;TZID=America/New_York:20140418T190000
+DTEND;TZID=America/New_York:20140418T220000
+STATUS:CONFIRMED
+SUMMARY:Open subject and/or hack night
+DESCRIPTION:South Florida PHP User Group (SoFloPHP)\nFriday\, April 18 at
+  7:00 PM\n\nThis meetup is "Open" subject night\, and an opportunity to 
+ get together at a specific day/time. If you have a problem or hurdle you
+  can't seem to solv...\n\nDetails: http://www.meetup.com/South-Florida-P
+ HP-Users-Group/events/dwmspdysgbxb/
+CLASS:PUBLIC
+CREATED:20121010T165753Z
+GEO:26.40;-80.16
+URL:http://www.meetup.com/South-Florida-PHP-Users-Group/events/dwmspdysgb
+ xb/
+LAST-MODIFIED:20130910T205754Z
+UID:event_dwmspdysgbxb@meetup.com
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20140123T050005Z
+DTSTART;TZID=America/New_York:20140424T190000
+DTEND;TZID=America/New_York:20140424T210000
+STATUS:CONFIRMED
+SUMMARY:Ladies Night (Breaking into Freelance)
+DESCRIPTION:South Florida PHP User Group (SoFloPHP)\nThursday\, April 24 
+ at 7:00 PM\n\nFor anybody thinking of going freelance Melissa Billias wi
+ ll talk about her journey and adventures learning the ropes. She will di
+ scuss pros and cons ...\n\nDetails: http://www.meetup.com/South-Florida-
+ PHP-Users-Group/events/qdphxgysgbgc/
+CLASS:PUBLIC
+CREATED:20131011T195751Z
+GEO:26.40;-80.16
+URL:http://www.meetup.com/South-Florida-PHP-Users-Group/events/qdphxgysgb
+ gc/
+LAST-MODIFIED:20131222T165707Z
+UID:event_qdphxgysgbgc@meetup.com
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20140123T050005Z
+DTSTART;TZID=America/New_York:20140514T190000
+DTEND;TZID=America/New_York:20140514T210000
+STATUS:CONFIRMED
+SUMMARY:SoFloPHP Boca (Monthly Meetup)
+DESCRIPTION:South Florida PHP User Group (SoFloPHP)\nWednesday\, May 14 a
+ t 7:00 PM\n\nA subject for this meetup not firm yet\, but it is bound to
+  be good even if we simply get together and chat about what we are all u
+ p to lately. Most of...\n\nDetails: http://www.meetup.com/South-Florida-
+ PHP-Users-Group/events/qsscjhyshbsb/
+CLASS:PUBLIC
+CREATED:20131222T165617Z
+GEO:26.40;-80.16
+URL:http://www.meetup.com/South-Florida-PHP-Users-Group/events/qsscjhyshb
+ sb/
+LAST-MODIFIED:20131222T165617Z
+UID:event_qsscjhyshbsb@meetup.com
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20140123T050005Z
+DTSTART;TZID=America/New_York:20140516T190000
+DTEND;TZID=America/New_York:20140516T220000
+STATUS:CONFIRMED
+SUMMARY:Open subject and/or hack night
+DESCRIPTION:South Florida PHP User Group (SoFloPHP)\nFriday\, May 16 at 7
+ :00 PM\n\nThis meetup is "Open" subject night\, and an opportunity to ge
+ t together at a specific day/time. If you have a problem or hurdle you c
+ an't seem to solv...\n\nDetails: http://www.meetup.com/South-Florida-PHP
+ -Users-Group/events/dwmspdyshbvb/
+CLASS:PUBLIC
+CREATED:20121010T165753Z
+GEO:26.40;-80.16
+URL:http://www.meetup.com/South-Florida-PHP-Users-Group/events/dwmspdyshb
+ vb/
+LAST-MODIFIED:20130910T205754Z
+UID:event_dwmspdyshbvb@meetup.com
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20140123T050005Z
+DTSTART;TZID=America/New_York:20140521T190000
+DTEND;TZID=America/New_York:20140521T210000
+STATUS:CONFIRMED
+SUMMARY:SoFloPHP Miami (Monthly Meetup)
+DESCRIPTION:South Florida PHP User Group (SoFloPHP)\nWednesday\, May 21 a
+ t 7:00 PM\n\nA subject for this meetup not firm yet\, but it is bound to
+  be good even if we simply get together and chat about what we are all u
+ p to lately. Most of...\n\nDetails: http://www.meetup.com/South-Florida-
+ PHP-Users-Group/events/qtscjhyshbcc/
+CLASS:PUBLIC
+CREATED:20131222T165646Z
+GEO:26.40;-80.16
+URL:http://www.meetup.com/South-Florida-PHP-Users-Group/events/qtscjhyshb
+ cc/
+LAST-MODIFIED:20131222T165646Z
+UID:event_qtscjhyshbcc@meetup.com
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20140123T050005Z
+DTSTART;TZID=America/New_York:20140529T190000
+DTEND;TZID=America/New_York:20140529T210000
+STATUS:CONFIRMED
+SUMMARY:Ladies Night (Breaking into Freelance)
+DESCRIPTION:South Florida PHP User Group (SoFloPHP)\nThursday\, May 29 at
+  7:00 PM\n\nFor anybody thinking of going freelance Melissa Billias will
+  talk about her journey and adventures learning the ropes. She will disc
+ uss pros and cons ...\n\nDetails: http://www.meetup.com/South-Florida-PH
+ P-Users-Group/events/qdphxgyshbmc/
+CLASS:PUBLIC
+CREATED:20131011T195751Z
+GEO:26.40;-80.16
+URL:http://www.meetup.com/South-Florida-PHP-Users-Group/events/qdphxgyshb
+ mc/
+LAST-MODIFIED:20131222T165707Z
+UID:event_qdphxgyshbmc@meetup.com
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20140123T050005Z
+DTSTART;TZID=America/New_York:20140611T190000
+DTEND;TZID=America/New_York:20140611T210000
+STATUS:CONFIRMED
+SUMMARY:SoFloPHP Boca (Monthly Meetup)
+DESCRIPTION:South Florida PHP User Group (SoFloPHP)\nWednesday\, June 11 
+ at 7:00 PM\n\nA subject for this meetup not firm yet\, but it is bound t
+ o be good even if we simply get together and chat about what we are all 
+ up to lately. Most of...\n\nDetails: http://www.meetup.com/South-Florida
+ -PHP-Users-Group/events/qsscjhysjbpb/
+CLASS:PUBLIC
+CREATED:20131222T165617Z
+GEO:26.40;-80.16
+URL:http://www.meetup.com/South-Florida-PHP-Users-Group/events/qsscjhysjb
+ pb/
+LAST-MODIFIED:20131222T165617Z
+UID:event_qsscjhysjbpb@meetup.com
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20140123T050005Z
+DTSTART;TZID=America/New_York:20140618T190000
+DTEND;TZID=America/New_York:20140618T210000
+STATUS:CONFIRMED
+SUMMARY:SoFloPHP Miami (Monthly Meetup)
+DESCRIPTION:South Florida PHP User Group (SoFloPHP)\nWednesday\, June 18 
+ at 7:00 PM\n\nA subject for this meetup not firm yet\, but it is bound t
+ o be good even if we simply get together and chat about what we are all 
+ up to lately. Most of...\n\nDetails: http://www.meetup.com/South-Florida
+ -PHP-Users-Group/events/qtscjhysjbxb/
+CLASS:PUBLIC
+CREATED:20131222T165646Z
+GEO:26.40;-80.16
+URL:http://www.meetup.com/South-Florida-PHP-Users-Group/events/qtscjhysjb
+ xb/
+LAST-MODIFIED:20131222T165646Z
+UID:event_qtscjhysjbxb@meetup.com
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20140123T050005Z
+DTSTART;TZID=America/New_York:20140620T190000
+DTEND;TZID=America/New_York:20140620T220000
+STATUS:CONFIRMED
+SUMMARY:Open subject and/or hack night
+DESCRIPTION:South Florida PHP User Group (SoFloPHP)\nFriday\, June 20 at 
+ 7:00 PM\n\nThis meetup is "Open" subject night\, and an opportunity to g
+ et together at a specific day/time. If you have a problem or hurdle you 
+ can't seem to solv...\n\nDetails: http://www.meetup.com/South-Florida-PH
+ P-Users-Group/events/dwmspdysjbbc/
+CLASS:PUBLIC
+CREATED:20121010T165753Z
+GEO:26.40;-80.16
+URL:http://www.meetup.com/South-Florida-PHP-Users-Group/events/dwmspdysjb
+ bc/
+LAST-MODIFIED:20130910T205754Z
+UID:event_dwmspdysjbbc@meetup.com
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20140123T050005Z
+DTSTART;TZID=America/New_York:20140626T190000
+DTEND;TZID=America/New_York:20140626T210000
+STATUS:CONFIRMED
+SUMMARY:Ladies Night (Breaking into Freelance)
+DESCRIPTION:South Florida PHP User Group (SoFloPHP)\nThursday\, June 26 a
+ t 7:00 PM\n\nFor anybody thinking of going freelance Melissa Billias wil
+ l talk about her journey and adventures learning the ropes. She will dis
+ cuss pros and cons ...\n\nDetails: http://www.meetup.com/South-Florida-P
+ HP-Users-Group/events/qdphxgysjbjc/
+CLASS:PUBLIC
+CREATED:20131011T195751Z
+GEO:26.40;-80.16
+URL:http://www.meetup.com/South-Florida-PHP-Users-Group/events/qdphxgysjb
+ jc/
+LAST-MODIFIED:20131222T165707Z
+UID:event_qdphxgysjbjc@meetup.com
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20140123T050005Z
+DTSTART;TZID=America/New_York:20140709T190000
+DTEND;TZID=America/New_York:20140709T210000
+STATUS:CONFIRMED
+SUMMARY:SoFloPHP Boca (Monthly Meetup)
+DESCRIPTION:South Florida PHP User Group (SoFloPHP)\nWednesday\, July 9 a
+ t 7:00 PM\n\nA subject for this meetup not firm yet\, but it is bound to
+  be good even if we simply get together and chat about what we are all u
+ p to lately. Most of...\n\nDetails: http://www.meetup.com/South-Florida-
+ PHP-Users-Group/events/qsscjhyskbmb/
+CLASS:PUBLIC
+CREATED:20131222T165617Z
+GEO:26.40;-80.16
+URL:http://www.meetup.com/South-Florida-PHP-Users-Group/events/qsscjhyskb
+ mb/
+LAST-MODIFIED:20131222T165617Z
+UID:event_qsscjhyskbmb@meetup.com
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20140123T050005Z
+DTSTART;TZID=America/New_York:20140716T190000
+DTEND;TZID=America/New_York:20140716T210000
+STATUS:CONFIRMED
+SUMMARY:SoFloPHP Miami (Monthly Meetup)
+DESCRIPTION:South Florida PHP User Group (SoFloPHP)\nWednesday\, July 16 
+ at 7:00 PM\n\nA subject for this meetup not firm yet\, but it is bound t
+ o be good even if we simply get together and chat about what we are all 
+ up to lately. Most of...\n\nDetails: http://www.meetup.com/South-Florida
+ -PHP-Users-Group/events/qtscjhyskbvb/
+CLASS:PUBLIC
+CREATED:20131222T165646Z
+GEO:26.40;-80.16
+URL:http://www.meetup.com/South-Florida-PHP-Users-Group/events/qtscjhyskb
+ vb/
+LAST-MODIFIED:20131222T165646Z
+UID:event_qtscjhyskbvb@meetup.com
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20140123T050005Z
+DTSTART;TZID=America/New_York:20140718T190000
+DTEND;TZID=America/New_York:20140718T220000
+STATUS:CONFIRMED
+SUMMARY:Open subject and/or hack night
+DESCRIPTION:South Florida PHP User Group (SoFloPHP)\nFriday\, July 18 at 
+ 7:00 PM\n\nThis meetup is "Open" subject night\, and an opportunity to g
+ et together at a specific day/time. If you have a problem or hurdle you 
+ can't seem to solv...\n\nDetails: http://www.meetup.com/South-Florida-PH
+ P-Users-Group/events/dwmspdyskbxb/
+CLASS:PUBLIC
+CREATED:20121010T165753Z
+GEO:26.40;-80.16
+URL:http://www.meetup.com/South-Florida-PHP-Users-Group/events/dwmspdyskb
+ xb/
+LAST-MODIFIED:20130910T205754Z
+UID:event_dwmspdyskbxb@meetup.com
+END:VEVENT
+END:VCALENDAR

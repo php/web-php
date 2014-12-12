@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom" xmlns:default="http://php.net/ns/news">
+  <title>PHP Conference Argentina</title>
+  <id>http://php.net/archive/2014.php#id2014-03-26-1</id>
+  <published>2014-03-26T16:56:35-07:00</published>
+  <updated>2014-03-26T16:56:35-07:00</updated>
+  <default:finalTeaserDate xmlns="http://php.net/ns/news">2014-11-09</default:finalTeaserDate>
+  <category term="conferences" label="Conference announcement"/>
+  <link href="http://php.net/conferences/index.php#id2014-03-26-1" rel="alternate" type="text/html"/>
+  <default:newsImage xmlns="http://php.net/ns/news" link="http://www.phpconference.com.ar/" title="PHP Argentina">argentina-2014.png</default:newsImage>
+  <link href="http://www.phpconference.com.ar/" rel="via" type="text/html"/>
+  <content type="xhtml">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+      <p>
+        We are excited to invite you to the 2014 edition of
+        <a href="http://www.phpconference.com.ar">PHP Conference Argentina</a>,
+        to be held on November 7, 8 and 9 in Buenos Aires, Argentina.
+      </p>
+      <p>
+        <a href="http://www.phpconference.com.ar">PHP Conference Argentina</a>,
+        is the largest developer conference in Argentina and one of the most important
+        events in the region, where programmers and decision makers from all over Latin
+        America get together for a 3-days event filled with talks given by highly
+        recognized speakers, and networking opportunities.
+      </p>
+      <p>
+        Conference numbers
+        <ul>
+          <li>Expecting more than 700 attendees</li>
+          <li>Full exclusivity of a highly recognized venue in Buenos Aires, giving us
+            amazing opportunities for a wide variety of activities.</li>
+          <li>A three day event spanned across two days of conference talks, and a full
+            day at a farm (called the "Gaucho day") to improve networking opportunities.</li>
+          <li>Organized social activities for both conference days.</li>
+        </ul>
+        More info: <a href="http://www.phpconference.com.ar">www.phpconference.com.ar</a>
+      </p>
+    </div>
+  </content>
+</entry>
