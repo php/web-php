@@ -86,6 +86,16 @@ function blacklisted($email) {
 	'.*cmcb.*',
 	'molmedcon',
 	'agbtinternational',
+	'biosensors',
+	'conferenceseries.net',
+	'wirelesscommunication',
+	'clinicalpharmacy',
+	'antibiotics',
+	'globaleconomics',
+	'sandeepsingh.torrent117232@gmail.com',
+	'herbals',
+	'europsychiatrysummit',
+	'antibodies',
     );
     foreach ($mosquitoes as $m) {
         if (preg_match('/'.$m.'/i',$email)) return true;
