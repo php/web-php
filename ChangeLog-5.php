@@ -8,6 +8,66 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 
 <h1>PHP 5 ChangeLog</h1>
 
+<section class="version" id="5.6.4"><!-- {{{ 5.6.4 -->
+<h3>Version 5.6.4</h3>
+<?php release_date('18-Dec-2014'); ?>
+<ul><li>Core:
+<ul>
+  <li><?php bugfix(68091); ?> (Some Zend headers lack appropriate extern "C" blocks).</li>
+  <li><?php bugfix(68104); ?> (Segfault while pre-evaluating a disabled function).</li>
+  <li><?php bugfix(68185); ?> ("Inconsistent insteadof definition."- incorrectly triggered).</li>
+  <li><?php bugfix(68355); ?> (Inconsistency in example php.ini comments).</li>
+  <li><?php bugfix(68370); ?> ("unset($this)" can make the program crash).</li>
+  <li><?php bugfix(68422); ?> (Incorrect argument reflection info for array_multisort()).</li>
+  <li><?php bugfix(68545); ?> (NULL pointer dereference in unserialize.c).</li>
+  <li><?php bugfix(68446); ?> (Array constant not accepted for array parameter default).</li>
+  <li><?php bugfix(68594); ?> (Use after free vulnerability in unserialize()).</li>
+</ul></li>
+<li>Date:
+<ul>
+  <li>Fixed day_of_week function as it could sometimes return negative values internally.</li>
+</ul></li>
+<li>FPM:
+<ul>
+  <li><?php bugfix(68381); ?> (fpm_unix_init_main ignores log_level).</li>
+  <li><?php bugfix(68420); ?> (listen=9000 listens to ipv6 localhost instead of all addresses).</li>
+  <li><?php bugfix(68421); ?> (access.format='%R' doesn't log ipv6 address).</li>
+  <li><?php bugfix(68423); ?> (PHP-FPM will no longer load all pools).</li>
+  <li><?php bugfix(68428); ?> (listen.allowed_clients is IPv4 only).</li>
+  <li><?php bugfix(68452); ?> (php-fpm man page is oudated).</li>
+  <li>Fixed request <?php bugl(68458); ?> (Change pm.start_servers default warning to notice).</li>
+  <li><?php bugfix(68463); ?> (listen.allowed_clients can silently result in no allowed access).</li>
+  <li>Fixed request <?php bugl(68391); ?> (php-fpm conf files loading order).</li>
+  <li><?php bugfix(68478); ?> (access.log don't use prefix).</li>
+</ul></li>
+<li>Mcrypt:
+<ul>
+  <li>Fixed possible read after end of buffer and use after free.</li>
+</ul></li>
+<li>GMP:
+<ul>
+  <li><?php bugfix(68419); ?> (build error with gmp 4.1).</li>
+</ul></li>
+<li>PDO_pgsql:
+<ul>
+  <li><?php bugfix(67462); ?> (PDO_PGSQL::beginTransaction() wrongly throws exception when not in transaction) (Matteo)</li>
+  <li><?php bugfix(68351); ?> (PDO::PARAM_BOOL and ATTR_EMULATE_PREPARES misbehaving) (Matteo)</li>
+</ul></li>
+<li>Session:
+<ul>
+  <li><?php bugfix(68331); ?> (Session custom storage callable functions not being called) (Yasuo Ohgaki)</li>
+</ul></li>
+<li>SOAP:
+<ul>
+  <li><?php bugfix(68361); ?> (Segmentation fault on SoapClient::__getTypes).</li>
+</ul></li>
+<li>zlib:
+<ul>
+  <li><?php bugfix(53829); ?> (Compiling PHP with large file support will replace function gzopen by gzopen64) (Sascha Kettler, Matteo)</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
 <section class="version" id="5.5.20"><!-- {{{ 5.5.20 -->
 <h3>Version 5.5.20</h3>
 <?php release_date('18-Dec-2014'); ?>
