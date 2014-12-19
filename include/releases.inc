@@ -787,6 +787,37 @@ $OLDRELEASES = array (
       'date' => '20 Jun 2013',
       'museum' => true,
     ),
+    '5.4.35' => 
+    array (
+      'announcement' => 
+      array (
+        'English' => '/releases/5_4_35.php',
+      ),
+      'source' => 
+      array (
+        0 => 
+        array (
+          'filename' => 'php-5.4.35.tar.bz2',
+          'name' => 'PHP 5.4.35 (tar.bz2)',
+          'md5' => '489cc8336488fb2e722ffa3c08f9c864',
+          'date' => '13 Nov 2014',
+        ),
+        1 => 
+        array (
+          'filename' => 'php-5.4.35.tar.gz',
+          'name' => 'PHP 5.4.35 (tar.gz)',
+          'md5' => 'da7bed3b65033c7f096c96572cd9ea45',
+          'date' => '13 Nov 2014',
+        ),
+        2 => 
+        array (
+          'link' => 'http://windows.php.net/download/#php-5.4',
+          'name' => 'Windows 5.4.35 binaries and source',
+        ),
+      ),
+      'date' => '13 Nov 2014',
+      'museum' => false,
+    ),
     '5.4.34' => 
     array (
       'announcement' => 

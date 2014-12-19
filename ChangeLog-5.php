@@ -114,6 +114,16 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 </ul></li>
 </ul>
 <!-- }}} --></section>
+<section class="version" id="5.4.36"><!-- {{{ 5.4.36 -->
+<h3>Version 5.4.36</h3>
+<b>18-Dec-2014</b>
+<ul><li>Core:
+<ul>
+  <li>Upgraded crypt_blowfish to version 1.3.</li>
+  <li><?php bugfix(68545); ?> (NULL pointer dereference in unserialize.c).</li>
+  <li><?php bugfix(68594); ?> (Use after free vulnerability in unserialize()) (CVE-2014-8142).</li>
+</ul>
+<!-- }}} --></section>
 
 <section class="version" id="5.6.3"><!-- {{{ 5.6.3 -->
 <h3>Version 5.6.3</h3>

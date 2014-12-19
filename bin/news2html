@@ -16,7 +16,7 @@ $version = $argv[2];
 $inside = false;
 $entries = array();
 while(($ln = fgets($fp)) !== false) {
-	if(preg_match("/(.. ... ....), PHP $version/", $ln, $m)) {
+	if(preg_match("/(.. ... ....),? PHP $version/", $ln, $m)) {
 		// got entry start
 		$inside = true;
 		$date = strtr($m[1], " ", "-");
