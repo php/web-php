@@ -21,7 +21,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
   <li><?php bugfix(68422); ?> (Incorrect argument reflection info for array_multisort()).</li>
   <li><?php bugfix(68545); ?> (NULL pointer dereference in unserialize.c).</li>
   <li><?php bugfix(68446); ?> (Array constant not accepted for array parameter default).</li>
-  <li><?php bugfix(68594); ?> (Use after free vulnerability in unserialize()).</li>
+  <li><?php bugfix(68594); ?> (Use after free vulnerability in unserialize()). (CVE-2014-8142)</li>
 </ul></li>
 <li>Date:
 <ul>
@@ -77,7 +77,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
   <li><?php bugfix(68185); ?> ("Inconsistent insteadof definition."- incorrectly triggered).</li>
   <li><?php bugfix(68370); ?> ("unset($this)" can make the program crash).</li>
   <li><?php bugfix(68545); ?> (NULL pointer dereference in unserialize.c).</li>
-  <li><?php bugfix(68594); ?> (Use after free vulnerability in unserialize())(CVE-2014-8142).</li>
+  <li><?php bugfix(68594); ?> (Use after free vulnerability in unserialize()). (CVE-2014-8142)</li>
 </ul></li>
 <li>Date:
 <ul>
@@ -121,7 +121,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 <ul>
   <li>Upgraded crypt_blowfish to version 1.3.</li>
   <li><?php bugfix(68545); ?> (NULL pointer dereference in unserialize.c).</li>
-  <li><?php bugfix(68594); ?> (Use after free vulnerability in unserialize()) (CVE-2014-8142).</li>
+  <li><?php bugfix(68594); ?> (Use after free vulnerability in unserialize()). (CVE-2014-8142)</li>
 </ul>
 <!-- }}} --></section>
 
