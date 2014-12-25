@@ -50,12 +50,12 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 </ul></li>
 <li>PDO_pgsql:
 <ul>
-  <li><?php bugfix(67462); ?> (PDO_PGSQL::beginTransaction() wrongly throws exception when not in transaction) (Matteo)</li>
-  <li><?php bugfix(68351); ?> (PDO::PARAM_BOOL and ATTR_EMULATE_PREPARES misbehaving) (Matteo)</li>
+  <li><?php bugfix(67462); ?> (PDO_PGSQL::beginTransaction() wrongly throws exception when not in transaction).</li>
+  <li><?php bugfix(68351); ?> (PDO::PARAM_BOOL and ATTR_EMULATE_PREPARES misbehaving).</li>
 </ul></li>
 <li>Session:
 <ul>
-  <li><?php bugfix(68331); ?> (Session custom storage callable functions not being called) (Yasuo Ohgaki)</li>
+  <li><?php bugfix(68331); ?> (Session custom storage callable functions not being called).</li>
 </ul></li>
 <li>SOAP:
 <ul>
@@ -63,7 +63,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 </ul></li>
 <li>zlib:
 <ul>
-  <li><?php bugfix(53829); ?> (Compiling PHP with large file support will replace function gzopen by gzopen64) (Sascha Kettler, Matteo)</li>
+  <li><?php bugfix(53829); ?> (Compiling PHP with large file support will replace function gzopen by gzopen64).</li>
 </ul></li>
 </ul>
 <!-- }}} --></section>
@@ -142,7 +142,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 </ul></li>
 <li>CURL:
 <ul>
-  <li>Add CURL_SSLVERSION_TLSv1_0, CURL_SSLVERSION_TLSv1_1, and CURL_SSLVERSION_TLSv1_2 constants if supported by libcurl (Rasmus)</li>
+  <li>Add CURL_SSLVERSION_TLSv1_0, CURL_SSLVERSION_TLSv1_1, and CURL_SSLVERSION_TLSv1_2 constants if supported by libcurl.</li>
 </ul></li>
 <li>Fileinfo:
 <ul>
@@ -166,11 +166,11 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 </ul></li>
 <li>Mysqli:
 <ul>
-  <li><?php bugfix(68114); ?> (linker error on some OS X machines with fixed width decimal support) (Keyur Govande)</li>
+  <li><?php bugfix(68114); ?> (linker error on some OS X machines with fixed width decimal support).</li>
 </ul></li>
 <li>ODBC:
 <ul>
-  <li><?php bugfix(68087); ?> (ODBC not correctly reading DATE column when preceded by a VARCHAR column) (Keyur Govande)</li>
+  <li><?php bugfix(68087); ?> (ODBC not correctly reading DATE column when preceded by a VARCHAR column).</li>
 </ul></li>
 <li>OpenSSL:
 <ul>
@@ -178,8 +178,8 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 </ul></li>
 <li>PDO_pgsql:
 <ul>
-  <li><?php bugfix(68199); ?> (PDO::pgsqlGetNotify doesn't support NOTIFY payloads) (Matteo, Alain Laporte)</li>
-  <li><?php bugfix(66584); ?> (Segmentation fault on statement deallocation) (Matteo)</li>
+  <li><?php bugfix(68199); ?> (PDO::pgsqlGetNotify doesn't support NOTIFY payloads).</li>
+  <li><?php bugfix(66584); ?> (Segmentation fault on statement deallocation).</li>
 </ul></li>
 <li>Reflection:
 <ul>
@@ -187,7 +187,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 </ul></li>
 <li>SPL:
 <ul>
-  <li><?php bugfix(68128); ?> (Regression in RecursiveRegexIterator) (Tjerk)</li>
+  <li><?php bugfix(68128); ?> (Regression in RecursiveRegexIterator).</li>
 </ul></li>
 </ul>
 <!-- }}} --></section>
