@@ -148,7 +148,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 <ul>
   <li><?php bugfix(66242); ?> (libmagic: don't assume char is signed).</li>
   <li><?php bugfix(68224); ?> (buffer-overflow in libmagic/readcdf.c caught by AddressSanitizer).</li>
-  <li><?php bugfix(68283); ?> (fileinfo: out-of-bounds read in elf note headers).</li>
+  <li><?php bugfix(68283); ?> (fileinfo: out-of-bounds read in elf note headers). (CVE-2014-3710)</li>
 </ul></li>
 <li>FPM:
 <ul>
