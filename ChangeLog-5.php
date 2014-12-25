@@ -123,6 +123,10 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
   <li><?php bugfix(68545); ?> (NULL pointer dereference in unserialize.c).</li>
   <li><?php bugfix(68594); ?> (Use after free vulnerability in unserialize()). (CVE-2014-8142)</li>
 </ul>
+<li>Mcrypt:
+<ul>
+  <li>Fixed possible read after end of buffer and use after free.</li>
+</ul></li>
 <!-- }}} --></section>
 
 <section class="version" id="5.6.3"><!-- {{{ 5.6.3 -->
