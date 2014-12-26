@@ -103,8 +103,8 @@ $SIDEBAR_DATA = '
   <div class="headline">Want a PHP serialize()d list of the PHP releases?</div>
   <div class="body">
     <p>Add <a href="?serialize=1">?serialize=1</a> to the url</p>
-    <p>Only want PHP 5 releases? <a href="?serialize=1&version=5">&version=5</a></p>
-    <p>The last 3? <a href="?serialize=1&version=5&max=3">&max=3</a></p>
+    <p>Only want PHP 5 releases? <a href="?serialize=1&amp;version=5">&amp;version=5</a></p>
+    <p>The last 3? <a href="?serialize=1&amp;version=5&amp;max=3">&amp;max=3</a></p>
   </div>
 </div>
 ';
@@ -129,7 +129,7 @@ site_header("Releases", array("current" => "downloads"));
 
 <?php
 function mk_rel($major, $ver, $date, $announcement, $source, $windows, $museum) {
-	printf("<a name=\"%s\"></a>\n<h2>%1\$s</h2>\n<ul>\n <li>Released: %s</li>\n <li>Announcement: ", ($pos = strpos($ver, " ")) ? substr($ver, 0, $pos) : $ver, $date);
+	printf("<a id=\"%s\"></a>\n<h2>%1\$s</h2>\n<ul>\n <li>Released: %s</li>\n <li>Announcement: ", ($pos = strpos($ver, " ")) ? substr($ver, 0, $pos) : $ver, $date);
 	if ($announcement) {
 		if (is_array($announcement)) {
 			foreach($announcement as $ann => $url) {
@@ -182,7 +182,7 @@ function mk_rel($major, $ver, $date, $announcement, $source, $windows, $museum) 
 
 $latest = max(array_keys($OLDRELEASES));
 foreach($OLDRELEASES as $major => $a) {
-	echo '<a name="v' .$major. '"></a>';
+	echo '<a id="v' .$major. '"></a>';
 	if ($major != $latest) {
 		echo "\n<hr>\n";
 		if ($major == 4) {
