@@ -109,7 +109,10 @@ $SIDEBAR_DATA = '
 </div>
 ';
 
-site_header("Releases", array("current" => "downloads"));
+site_header("Releases", array(
+    'current' => 'downloads',
+    'css' => '/styles/releases.css',
+));
 ?>
 
 <h1>Unsupported Historical Releases</h1>

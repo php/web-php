@@ -1,0 +1,10 @@
+/* This allows the link target to not be covered by the sticky-header; it works
+ * because the release page creates empty HTML anchors with id attributes above
+ * each header that is used to create an invisible barrier above the target */
+a[id]:empty {
+  content:"";
+  display:block;
+  height:4.25rem;
+  margin-top:-4.25rem;
+  border:none;
+}
