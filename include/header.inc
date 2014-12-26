@@ -1,10 +1,20 @@
 <?php
 /* $Id$ */
-$cssfiles = array('/fonts/Fira/fira.css', '/fonts/Font-Awesome/css/fontello.css', '/styles/theme-base.css', '/styles/theme-medium.css');
+
+$css_files = array(
+    '/fonts/Fira/fira.css',
+    '/fonts/Font-Awesome/css/fontello.css',
+    '/styles/theme-base.css',
+    '/styles/theme-medium.css',
+);
+
 if (isset($config['css'])) {
-    $cssfiles = array_merge($cssfiles, (array) $config['css']);
+    $css_files = array_merge($css_files, (array) $config['css']);
 }
-foreach($cssfiles as $filename) {
+
+foreach($css_files as $filename) {
+    // files that do not start with / are assumed to be located in the /styles
+    // directory
     if ($filename[0] !== DIRECTORY_SEPARATOR) {
         $filename = "/styles/$filename";
     }
