@@ -1307,6 +1307,10 @@ div.tip p:first-child {
     display: block;
 }
 
+.docs .qandaentry dt .phpcode * {
+    font-weight: normal;
+}
+
 /* }}} */
 
 
