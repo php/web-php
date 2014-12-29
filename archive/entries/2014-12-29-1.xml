@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom" xmlns:default="http://php.net/ns/news">
+  <title>Bulgaria Web Summit 2015</title>
+  <id>http://php.net/archive/2014.php#id2014-12-29-1</id>
+  <published>2014-12-29T23:03:02+01:00</published>
+  <updated>2014-12-29T23:03:02+01:00</updated>
+  <default:finalTeaserDate xmlns="http://php.net/ns/news">2015-04-18</default:finalTeaserDate>
+  <category term="conferences" label="Conference announcement"/>
+  <link href="http://php.net/conferences/index.php#id2014-12-29-1" rel="alternate" type="text/html"/>
+  <default:newsImage xmlns="http://php.net/ns/news" link="http://bulgariawebsummit.com/" title="Bulgaria Web Summit 2015">bulgaria-web-summit.png</default:newsImage>
+  <link href="http://bulgariawebsummit.com/" rel="via" type="text/html"/>
+  <content type="xhtml">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+     <p>Bulgaria Web Summit 2015 is an event about (almost) everything a modern web person should know: {Programming, IoT, UX, UI, Fun, Privacy}. This year we will have strong PHP presense to support the growth of Bulgarian PHP community.  The event will take place on the 18th of April  at the conference area of the Inter Expo Centre.</p>
+     
+     <p>The purpose of this meeting is to discuss the new tendencies in this direction and to popularize the internet technologies in the spheres of business, education, and services. The range of subjects includes technologies like PHP, JavaScript, CSS, Privacy and others.</p>
+     
+     <p>Join us and have fun while learning something new.</p>
+     <p>Twitter: <a href="https://twitter.com/bgwebsummit">@bgwebsummit</a></p>
+     
+    </div>
+  </content>
+</entry>

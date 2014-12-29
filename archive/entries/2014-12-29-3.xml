@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom" xmlns:default="http://php.net/ns/news">
+  <title>Ski PHP 2015</title>
+  <id>http://php.net/archive/2014.php#id2014-12-29-3</id>
+  <published>2014-12-29T23:15:29+01:00</published>
+  <updated>2014-12-29T23:15:29+01:00</updated>
+  <default:finalTeaserDate xmlns="http://php.net/ns/news">2015-01-31</default:finalTeaserDate>
+  <category term="cfp" label="Call for Papers"/>
+  <link href="http://php.net/conferences/index.php#id2014-12-29-3" rel="alternate" type="text/html"/>
+  <default:newsImage xmlns="http://php.net/ns/news" link="https://www.skiphp.com/" title="Ski PHP 2015">ski-php-2015.png</default:newsImage>
+  <link href="https://www.skiphp.com/" rel="via" type="text/html"/>
+  <content type="xhtml">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+     <p>For those who like to do more than just code, we're pleased to announce Ski PHP 2015, which will be held from May 7-9, 2015, in conjunction with the OpenWest Conference.  Attendees will be able to enjoy the skiing, snowboarding, snowmobiling, and other outdoor activities that Utah has to offer after the conclusion of the conference.</p>
+     
+     <p>We are looking for presentations on a variety of topics, including frameworks, security, front-end, and data.  Interested presenters should submit to our CFP at <a href="http://cfp.openwest.org/">http://cfp.openwest.org/</a>.  A generous speaker package will be provided for accepted speakers.</p>
+    </div>
+  </content>
+</entry>
