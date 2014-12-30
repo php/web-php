@@ -160,6 +160,7 @@ div.warning {
 }
 
 .docs .classsynopsis,
+.docs .fieldsynopsis,
 .refsect1 .dc-description,
 .docs .sect1 .dc-description,
 div.tip,
@@ -323,6 +324,7 @@ div.warning a:focus {
   background-color: #fff;
 }
 .docs .classsynopsis,
+.docs .fieldsynopsis,
 .refsect1 .dc-description,
 .docs .sect1 .dc-description {
     background:#fff;
