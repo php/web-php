@@ -72,6 +72,7 @@ $INACTIVE_ONLINE_LANGUAGES = array(
     'he'    => 'Hebrew',
     'hu'    => 'Hungarian',
     'id'    => 'Indonesian',
+    'it'    => 'Italian',
     'lt'    => 'Lithuanian',
     'no'    => 'Norwegian',
     'pl'    => 'Polish',
