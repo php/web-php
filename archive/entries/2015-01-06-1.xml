@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom" xmlns:default="http://php.net/ns/news">
+  <title>ConFoo 2015 - Become a Master</title>
+  <id>http://php.net/archive/2015.php#id2015-01-06-1</id>
+  <published>2015-01-06T18:15:50+00:00</published>
+  <updated>2015-01-06T18:15:50+00:00</updated>
+  <default:finalTeaserDate xmlns="http://php.net/ns/news">2015-02-18</default:finalTeaserDate>
+  <category term="conferences" label="Conference announcement"/>
+  <link href="http://php.net/conferences/index.php#id2015-01-06-1" rel="alternate" type="text/html"/>
+  <default:newsImage xmlns="http://php.net/ns/news" link="http://confoo.ca" title="Become a master: improve your skills at ConFoo">confoo-2015.jpg</default:newsImage>
+  <link href="http://confoo.ca" rel="via" type="text/html"/>
+  <content type="xhtml">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+     <p>We want you to learn as much as possible during the three days of conference. We do that through quality and variety of both content and speakers, as well as creating a fun and friendly atmosphere.</p>
+     
+     <p>We have presentations for any level, from beginner to advanced. You'll learn about the backend and frontend, web and mobile, information systems and games, hard and soft skills, as well as many related topics.</p>
+     
+     <p>We have speakers from many different countries and industries. They brings unique perspectives that you won't find in your backyard. How often will you talk tech with someone from Taiwan or Saudi Arabia? How often will you learn from people who build robots or write their own programming language?</p>
+     
+     <p>If your goal is to learn and meet interesting people, then ConFoo is the conference for you! Take advantage of our <a href="http://confoo.ca">$190 early bird discount</a>.</p>
+    </div> 
+  </content>
+</entry>
