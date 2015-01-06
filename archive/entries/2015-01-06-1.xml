@@ -11,7 +11,6 @@
   <link href="http://confoo.ca" rel="via" type="text/html"/>
   <content type="xhtml">
     <div xmlns="http://www.w3.org/1999/xhtml">
-     <div xmlns="http://www.w3.org/1999/xhtml">
      <p>We want you to learn as much as possible during the three days of conference. We do that through quality and variety of both content and speakers, as well as creating a fun and friendly atmosphere.</p>
      
      <p>We have presentations for any level, from beginner to advanced. You'll learn about the backend and frontend, web and mobile, information systems and games, hard and soft skills, as well as many related topics.</p>
@@ -19,7 +18,6 @@
      <p>We have speakers from many different countries and industries. They brings unique perspectives that you won't find in your backyard. How often will you talk tech with someone from Taiwan or Saudi Arabia? How often will you learn from people who build robots or write their own programming language?</p>
      
      <p>If your goal is to learn and meet interesting people, then ConFoo is the conference for you! Take advantage of our <a href="http://confoo.ca">$190 early bird discount</a>.</p>
-    </div>
-    </div>
+    </div> 
   </content>
 </entry>
