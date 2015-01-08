@@ -16,8 +16,8 @@
  *     ),
  * );
 /* PHP 5.6 Release */
-$PHP_5_6_RC = false; // Current RC version (e.g., '5.6.7RC1') or false
-$PHP_5_6_RC_DATE = '27 Nov 2014';
+$PHP_5_6_RC = '5.6.5RC1'; // Current RC version (e.g., '5.6.7RC1') or false
+$PHP_5_6_RC_DATE = '8 Jan 2015';
 
 $PHP_5_6_VERSION         = "5.6.4";
 $PHP_5_6_DATE            = "18 Dec 2014";
