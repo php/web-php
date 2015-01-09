@@ -214,7 +214,7 @@ site_header(
      &lt;/Directory&gt;
 
      ServerName ccx.php.net
-     ServerAlias cc.php.net www.ccx.php.net www.cc.php.net the.cname.you.set.up.example.com
+     ServerAlias cc.php.net www.php.net the.cname.you.set.up.example.com
      ServerAdmin yourname@example.com
      UseCanonicalName On
      
