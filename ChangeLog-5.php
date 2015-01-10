@@ -35,9 +35,9 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
   <li><?php bugfix(68423); ?> (PHP-FPM will no longer load all pools).</li>
   <li><?php bugfix(68428); ?> (listen.allowed_clients is IPv4 only).</li>
   <li><?php bugfix(68452); ?> (php-fpm man page is oudated).</li>
-  <li>Fixed request <?php bugl(68458); ?> (Change pm.start_servers default warning to notice).</li>
+  <li><?php implemented(68458); ?> (Change pm.start_servers default warning to notice).</li>
   <li><?php bugfix(68463); ?> (listen.allowed_clients can silently result in no allowed access).</li>
-  <li>Fixed request <?php bugl(68391); ?> (php-fpm conf files loading order).</li>
+  <li><?php implemented(68391); ?> (php-fpm conf files loading order).</li>
   <li><?php bugfix(68478); ?> (access.log don't use prefix).</li>
 </ul></li>
 <li>Mcrypt:
@@ -157,7 +157,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 <li>FPM:
 <ul>
   <li><?php bugfix(65641); ?> (PHP-FPM incorrectly defines the SCRIPT_NAME variable when using Apache, mod_proxy-fcgi and ProxyPass).</li>
-  <li>Implemented FR <?php bugl(55508); ?> (listen and listen.allowed_clients should take IPv6 addresses).</li>
+  <li><?php implemented(55508); ?> (listen and listen.allowed_clients should take IPv6 addresses).</li>
 </ul></li>
 <li>GD:
 <ul>
@@ -222,7 +222,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 </ul></li>
 <li>FPM:
 <ul>
-  <li>Implemented FR #55508 (listen and listen.allowed_clients should take IPv6
+  <li><?php implemented(55508); ?> (listen and listen.allowed_clients should take IPv6
     addresses.</li>
 </ul></li>
 <li>GD:
@@ -379,7 +379,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 <?php release_date('02-Oct-2014'); ?>
 <ul><li>Core:
 <ul>
-  <li>Implemented FR <?php bugl(38409); ?> (parse_ini_file() loses the type of booleans).</li>
+  <li><?php implemented(38409); ?> (parse_ini_file() loses the type of booleans).</li>
   <li><?php bugfix(65463); ?> (SIGSEGV during zend_shutdown()).</li>
   <li><?php bugfix(66036); ?> (Crash on SIGTERM in apache process).</li>
   <li><?php bugfix(67878); ?> (program_prefix not honoured in man pages).</li>
@@ -415,7 +415,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 </ul></li>
 <li>phpdbg:
 <ul>
-  <li>Fixed issue krakjoe/phpdbg#111 (compile error without ZEND_SIGNALS).</li>
+  <li><?php githubissue('krakjoe/phpdbg', 111); ?> (compile error without ZEND_SIGNALS).</li>
 </ul></li>
 <li>SOAP:
 <ul>
@@ -427,7 +427,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 </ul></li>
 <li>Sysvsem:
 <ul>
-  <li>Implemented FR <?php bugl(67990); ?> (Add optional nowait argument to sem_acquire).</li>
+  <li><?php implemented(67990); ?> (Add optional nowait argument to sem_acquire).</li>
 </ul></li>
 </ul>
 <!-- }}} --></section>
@@ -549,7 +549,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
   <li><?php bugfix(67151); ?> (strtr with empty array crashes).</li>
   <li><?php bugfix(67407); ?> (Windows 8.1/Server 2012 R2 reported as Windows 8/Server 2012).</li>
   <li><?php bugfix(66608); ?> (Incorrect behavior with nested "finally" blocks).</li>
-  <li>Implemented FR <?php bugl(34407); ?> (ucwords and Title Case).</li>
+  <li><?php implemented(34407); ?> (ucwords and Title Case).</li>
   <li><?php bugfix(67091); ?> (make install fails to install libphp5.so on FreeBSD 10.0).</li>
   <li><?php bugfix(67368); ?> (Memory leak with immediately dereferenced array in class constant).</li>
   <li><?php bugfix(67468); ?> (Segfault in highlight_file()/highlight_string()).</li>
@@ -561,7 +561,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
   <li><?php bugfix(67250); ?> (iptcparse out-of-bounds read).</li>
   <li><?php bugfix(67252); ?> (convert_uudecode out-of-bounds read).</li>
   <li><?php bugfix(67249); ?> (printf out-of-bounds read).</li>
-  <li>Implemented FR <?php bugl(64744); ?> (Differentiate between member function call on a null and non-null, non-objects).</li>
+  <li><?php implemented(64744); ?> (Differentiate between member function call on a null and non-null, non-objects).</li>
   <li><?php bugfix(67436); ?> (Autoloader isn't called if two method definitions don't match).</li>
   <li><?php bugfix(66622); ?> (Closures do not correctly capture the late bound class (static::) in some cases).</li>
   <li><?php bugfix(67390); ?> (insecure temporary file use in the configure script). (CVE-2014-3981)</li>
@@ -611,7 +611,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
   <li><?php bugfix(67079); ?> (Missing MIME types for XML/XSL files).</li>
   <li><?php bugfix(66830); ?> (Empty header causes PHP built-in web server to hang).</li>
   <li><?php bugfix(67594); ?> (Unable to access to apache_request_headers() elements).</li>
-  <li>Implemented FR <?php bugl(67429); ?> (CLI server is missing some new HTTP response codes).</li>
+  <li><?php implemented(67429); ?> (CLI server is missing some new HTTP response codes).</li>
   <li><?php bugfix(67406); ?> (built-in web-server segfaults on startup).</li>
 </ul></li>
 <li>COM:
@@ -622,7 +622,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 </ul></li>
 <li>Curl:
 <ul>
-  <li>Implemented FR <?php bugl(65646); ?> (re-enable CURLOPT_FOLLOWLOCATION with open_basedir or safe_mode).</li>
+  <li><?php implemented(65646); ?> (re-enable CURLOPT_FOLLOWLOCATION with open_basedir or safe_mode).</li>
   <li>Check for openssl.cafile ini directive when loading CA certs.</li>
   <li>Remove cURL close policy related constants as these have no effect and are no longer used in libcurl.</li>
   <li><?php bugfix(66109); ?> (Can't reset CURLOPT_CUSTOMREQUEST to default behaviour) (Tjerk)</li>
@@ -844,8 +844,8 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 <ul>
   <li><?php bugfix(67550); ?> (Error in code "form" instead of "from", pgsql.c, line 756), which affected builds against libpq &lt; 7.3.</li>
   <li>pg_insert()/pg_select()/pg_update()/pg_delete() are no longer EXPERIMENTAL.</li>
-  <li>Impremented FR <?php bugl(25854); ?> Return value for pg_insert should be resource instead of bool.</li>
-  <li>Implemented FR <?php bugl(41146); ?> - Add "description" with exteneded flag pg_meta_data(). pg_meta_data(resource $conn, string $table [, bool extended]) It also made pg_meta_data() return "is enum" always.</li>
+  <li><?php implemented(25854); ?> (Return value for pg_insert should be resource instead of bool).</li>
+  <li><?php implemented(41146); ?> (Add "description" with exteneded flag pg_meta_data(). pg_meta_data(resource $conn, string $table [, bool extended]) It also made pg_meta_data() return "is enum" always).</li>
   <li>Read-only access to the socket stream underlying database connections is exposed via a new pg_socket() function to allow read/write polling when establishing asynchronous connections and executing queries in non-blocking applications.</li>
   <li>Asynchronous connections are now possible using the PGSQL_CONNECT_ASYNC flag in conjunction with a new pg_connect_poll() function and connection polling status constants.</li>
   <li>New pg_flush() and pg_consume_input() functions added to manually complete non-blocking reads/writes to underlying connection sockets.</li>
@@ -858,17 +858,17 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 <ul>
   <li><?php bugfix(67575); ?> (Compilation fails for phpdbg when the build directory != src directory).</li>
   <li><?php bugfix(67499); ?> (readline feature not enabled when build with libedit).</li>
-  <li>Fix issue krakjoe/phpdbg#94 (List behavior is inconsistent).</li>
-  <li>Fix issue krakjoe/phpdbg#97 (The prompt should always ensure it is on a newline).</li>
-  <li>Fix issue krakjoe/phpdbg#98 (break if does not seem to work).</li>
-  <li>Fix issue krakjoe/phpdbg#99 (register function has the same behavior as run).</li>
-  <li>Fix issue krakjoe/phpdbg#100 (No way to list the current stack/frames) (Help entry was missing).</li>
+  <li><?php githubissue('krakjoe/phpdbg', 94); ?> (List behavior is inconsistent).</li>
+  <li><?php githubissue('krakjoe/phpdbg', 97); ?> (The prompt should always ensure it is on a newline).</li>
+  <li><?php githubissue('krakjoe/phpdbg', 98); ?> (break if does not seem to work).</li>
+  <li><?php githubissue('krakjoe/phpdbg', 99); ?> (register function has the same behavior as run).</li>
+  <li><?php githubissue('krakjoe/phpdbg', 100); ?> (No way to list the current stack/frames) (Help entry was missing).</li>
   <li>Fixed bug which caused phpdbg to fail immediately on startup in non-debug builds.</li>
   <li><?php bugfix(67212); ?> (phpdbg uses non-standard TIOCGWINSZ).</li>
   <li>Included phpdbg sapi (RFC: https://wiki.php.net/rfc/phpdbg).</li>
   <li>Added watchpoints (watch command).</li>
   <li>Renamed some commands (next =&gt; continue and how to step).</li>
-  <li>Fixed issue #85 (https://github.com/krakjoe/phpdbg/issues/85) (Added stdin/stdout/stderr constants and their php:// wrappers).</li>
+  <li><?php githubissue('krakjoe/phpdbg', 85); ?> (Added stdin/stdout/stderr constants and their php:// wrappers).</li>
 </ul></li>
 <li>PDO:
 <ul>
@@ -902,7 +902,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 </ul></li>
 <li>Reflection:
 <ul>
-  <li>Implemented FR <?php bugl(67713); ?> (loosen the restrictions on ReflectionClass::newInstanceWithoutConstructor()).</li>
+  <li><?php implemented(67713); ?> (loosen the restrictions on ReflectionClass::newInstanceWithoutConstructor()).</li>
 </ul></li>
 <li>Session:
 <ul>
@@ -910,8 +910,8 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
   <li>Fixed missing type checks in php_session_create_id (Yussuf Khalil, Stas).</li>
   <li><?php bugfix(66827); ?> (Session raises E_NOTICE when session name variable is array).</li>
   <li><?php bugfix(65315); ?> (session.hash_function silently fallback to default md5) (Yasuo)</li>
-  <li>Implemented Request <?php bugl(17860); ?> (Session write short circuit).</li>
-  <li>Implemented Request <?php bugl(20421); ?> (session_abort() and session_reset() function).</li>
+  <li><?php implemented(17860); ?> (Session write short circuit).</li>
+  <li><?php implemented(20421); ?> (session_abort() and session_reset() function).</li>
   <li>Remove session_gc() and session_serializer_name() wich were introduced in the first 5.6.0 alpha.</li>
 </ul></li>
 <li>SimpleXML:
@@ -925,7 +925,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 </ul></li>
 <li>SOAP:
 <ul>
-  <li>Implemented FR <?php bugl(49898); ?> (Add SoapClient::__getCookies()).</li>
+  <li><?php implemented(49898); ?> (Add SoapClient::__getCookies()).</li>
 </ul></li>
 <li>SPL:
 <ul>
@@ -935,15 +935,15 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
   <li><?php bugfix(67492); ?> (unserialize() SPL ArrayObject / SPLObjectStorage Type Confusion). (CVE-2014-3515)</li>
   <li><?php bugfix(67359); ?> (Segfault in recursiveDirectoryIterator).</li>
   <li><?php bugfix(66127); ?> (Segmentation fault with ArrayObject unset).</li>
-  <li>Fixed request <?php bugl(67453); ?> (Allow to unserialize empty data).</li>
+  <li><?php implemented(67453); ?> (Allow to unserialize empty data).</li>
   <li><?php bugfix(66834); ?> (empty() does not work on classes that extend ArrayObject) (Tjerk)</li>
   <li><?php bugfix(66702); ?> (RegexIterator::INVERT_MATCH does not invert).</li>
 </ul></li>
 <li>Standard:
 <ul>
-  <li>Implemented FR <?php bugl(65634); ?> (HTTP wrapper is very slow with protocol_version 1.1).</li>
+  <li><?php implemented(65634); ?> (HTTP wrapper is very slow with protocol_version 1.1).</li>
   <li>Implemented Change crypt() behavior w/o salt RFC. (Yasuo) https://wiki.php.net/rfc/crypt_function_salt</li>
-  <li>Implemented request <?php bugl(49824); ?> (Change array_fill() to allow creating empty array).</li>
+  <li><?php implemented(49824); ?> (Change array_fill() to allow creating empty array).</li>
 </ul></li>
 <li>Streams:
 <ul>
@@ -1220,7 +1220,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 </ul></li>
 <li>CLI server:
 <ul>
-  <li>Implemented FR <?php bugl(67429); ?> (CLI server is missing some new HTTP response codes).</li>
+  <li><?php implemented(67429); ?> (CLI server is missing some new HTTP response codes).</li>
   <li><?php bugfix(66830); ?> (Empty header causes PHP built-in web server to hang).</li>
 </ul></li>
 <li>FPM:
@@ -1268,7 +1268,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 <li>Date:
 <ul>
   <li><?php bugfix(67308); ?> (Serialize of DateTime truncates fractions of second).</li>
-  <li>Fixed regression in fix for bug #67118 (constructor can't be called twice).</li>
+  <li>Fixed regression in fix for bug <?php bugl(67118) ?> (constructor can't be called twice).</li>
 </ul></li>
 <li>Fileinfo:
 <ul>
@@ -1296,7 +1296,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 </ul></li>
 <li>OPCache:
 <ul>
-  <li>Fixed issue #183 (TMP_VAR is not only used once).</li>
+  <li><?php githubissue('zendtech/ZendOptimizerPlus', 183); ?> (TMP_VAR is not only used once).</li>
 </ul></li>
 <li>OpenSSL:
 <ul>
@@ -1309,7 +1309,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 </ul></li>
 <li>SOAP:
 <ul>
-  <li>Implemented FR #49898 (Add SoapClient::__getCookies()).</li>
+  <li><?php implemented(49898); ?> (Add SoapClient::__getCookies()).</li>
 </ul></li>
 <li>SPL:
 <ul>
@@ -1366,7 +1366,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 </ul></li>
 <li>SOAP:
 <ul>
-  <li>Implemented FR <?php bugl(49898); ?> (Add SoapClient::__getCookies()).</li>
+  <li><?php implemented(49898); ?> (Add SoapClient::__getCookies()).</li>
 </ul></li>
 <li>SPL:
 <ul>
@@ -1911,8 +1911,8 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 <li>OPCache:
 <ul>
   <li>Fixed revalidate_path=1 behavior to avoid caching of symlinks values.</li>
-  <li>Fixed Issue #140: "opcache.enable_file_override" doesn't respect
-    "opcache.revalidate_freq".</li>
+  <li><?php githubissue('zendtech/ZendOptimizerPlus', 140); ?> ("opcache.enable_file_override" doesn't respect
+    "opcache.revalidate_freq".)</li>
 </ul></li>
 <li>SNMP:
 <ul>
@@ -1982,7 +1982,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 </ul></li>
 <li>ZIP:
 <ul>
-  <li>Fixed Bug #66321 (ZipArchive::open() ze_obj-&gt;filename_len not real).</li>
+  <li><?php bugfix(66321); ?> (ZipArchive::open() ze_obj-&gt;filename_len not real).</li>
 </ul></li>
 </ul>
 <!-- }}} --></section>
@@ -1999,7 +1999,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 <li>CLI server:
 <ul>
   <li>Added some MIME types to the CLI web server.</li>
-  <li>Implemented FR #65917 (getallheaders() is not supported by the built-in web
+  <li><?php implemented(65917); ?> (getallheaders() is not supported by the built-in web
     server) - also implements apache_response_headers()</li>
 </ul></li>
 <li>OPCache:
@@ -2045,8 +2045,8 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 <li>OPCache:
 <ul>
   <li>Increased limit for opcache.max_accelerated_files to 1,000,000.</li>
-  <li>Fixed issue #115 (path issue when using phar).</li>
-  <li>Fixed issue #149 (Phar mount points not working with OPcache enabled).</li>
+  <li><?php githubissue('zendtech/ZendOptimizerPlus', 115); ?> (path issue when using phar).</li>
+  <li><?php githubissue('zendtech/ZendOptimizerPlus', 149); ?> (Phar mount points not working with OPcache enabled).</li>
 </ul></li>
 <li>ODBC:
 <ul>
@@ -2183,7 +2183,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
   <li><?php bugfix(65845); ?> (Error when Zend Opcache Optimizer is fully enabled).</li>
   <li><?php bugfix(65665); ?> (Exception not properly caught when opcache enabled).</li>
   <li><?php bugfix(65510); ?> (5.5.2 crashes in _get_zval_ptr_ptr_var).</li>
-  <li>Fixed issue #135 (segfault in interned strings if initial memory is too low).</li>
+  <li><?php githubissue('zendtech/ZendOptimizerPlus', 135); ?> (segfault in interned strings if initial memory is too low).</li>
   <li>Added function opcache_compile_file() to load PHP scripts into cache without execution.</li>
   <li>Added support for GNU Hurd.</li>
 </ul></li>
@@ -2537,7 +2537,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 </ul></li>
 <li>Sockets:
 <ul>
-  <li>Implemented FR <?php bugl(63472); ?> (Setting SO_BINDTODEVICE with socket_set_option).</li>
+  <li><?php implemented(63472); ?> (Setting SO_BINDTODEVICE with socket_set_option).</li>
 </ul></li>
 <li>SPL:
 <ul>
@@ -2730,10 +2730,10 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
  <li>Added support for changing the process's title in CLI/CLI-Server SAPIs. The implementation is more robust that the proctitle PECL module</li>
  <li>Improve set_exception_handler while doing reset</li>
  <li>Return previous handler when passing NULL to set_error_handler and set_exception_handler</li>
- <li>Implemented <?php bugl(64175); ?> (Added HTTP codes as of RFC 6585)</li>
- <li>Implemented <?php bugl(60738); ?> (Allow 'set_error_handler' to handle NULL)</li>
- <li>Implemented <?php bugl(60524); ?> (specify temp dir by php.ini)</li>
- <li>Implemented <?php bugl(46487); ?> (Dereferencing process-handles no longer waits on those processes)</li>
+ <li><?php implemented(64175); ?> (Added HTTP codes as of RFC 6585)</li>
+ <li><?php implemented(60738); ?> (Allow 'set_error_handler' to handle NULL)</li>
+ <li><?php implemented(60524); ?> (specify temp dir by php.ini)</li>
+ <li><?php implemented(46487); ?> (Dereferencing process-handles no longer waits on those processes)</li>
  <li><?php bugfix(65051); ?> (count() off by one inside unset())</li>
  <li><?php bugfix(64988); ?> (Class loading order affects E_STRICT warning)</li>
  <li><?php bugfix(64966); ?> (segfault in zend_do_fcall_common_helper_SPEC)</li>
@@ -2810,7 +2810,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 <li>CURL:
 <ul>
  <li>Remove curl stream wrappers.</li>
- <li>Implemented <?php bugl(46439); ?> - added CURLFile for safer file uploads</li>
+ <li><?php implemented(46439); ?> (added CURLFile for safer file uploads).</li>
  <li>Added support for CURLOPT_FTP_RESPONSE_TIMEOUT, CURLOPT_APPEND,
     CURLOPT_DIRLISTONLY, CURLOPT_NEW_DIRECTORY_PERMS, CURLOPT_NEW_FILE_PERMS,
     CURLOPT_NETRC_FILE, CURLOPT_PREQUOTE, CURLOPT_KRBLEVEL, CURLOPT_MAXFILESIZE,
@@ -2866,7 +2866,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 <ul>
 <li>Filter:
 <ul>
- <li>Implemented <?php bugl(49180); ?> added MAC address validation.</li>
+ <li><?php implemented(49180); ?> (added MAC address validation)</li>
 </ul></li>
 </ul>
 
@@ -2888,7 +2888,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
     Type=notify in the systemd unit file.</li>
  <li>Ignore QUERY_STRING when sent in SCRIPT_FILENAME</li>
  <li>Log a warning when a syscall fails</li>
- <li>Implemented <?php bugl(64764); ?> (add support for FPM init.d script)</li>
+ <li><?php implemented(64764); ?> (add support for FPM init.d script)</li>
  <li><?php bugfix(64915); ?> (error_log ignored when daemonize=0)</li>
  <li><?php bugfix(63999); ?> (php with fpm fails to build on Solaris 10 or 11)</li>
  <li>Fixed some possible memory or resource leaks and possible null dereference
@@ -3212,7 +3212,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 <li>FPM:
 <ul>
   <li><?php bugfix(64915); ?> (error_log ignored when daemonize=0).</li>
-  <li>Implemented FR <?php bugl(64764); ?> (add support for FPM init.d script).</li>
+  <li><?php implemented(64764); ?> (add support for FPM init.d script).</li>
 </ul></li>
 <li>PDO:
 <ul>
@@ -3481,7 +3481,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 <li>Core:
 <ul>
  <li><?php bugfix(64235); ?> (Insteadof not work for class method in 5.4.11).</li>
- <li>Implemented FR <?php bugl(64175); ?> (Added HTTP codes as of RFC 6585).</li>
+ <li><?php implemented(64175); ?> (Added HTTP codes as of RFC 6585).</li>
  <li><?php bugfix(64142); ?> (dval to lval different behavior on ppc64). </li>
  <li><?php bugfix(64070); ?> (Inheritance with Traits failed with error).</li>
 </ul></li>
@@ -4141,7 +4141,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 <ul>
 <li>OpenSSL
 <ul>
-  <li>Implemented FR <?php bugl(61421); ?> (OpenSSL signature verification missing RMD160, SHA224, SHA256, SHA384, SHA512).</li>
+  <li><?php implemented(61421); ?> (OpenSSL signature verification missing RMD160, SHA224, SHA256, SHA384, SHA512).</li>
 </ul></li>
 </ul>
 
@@ -4155,7 +4155,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 <ul>
 <li>SPL
 <ul>
-  <li>Bug #62987 (Assigning to ArrayObject[null][something] overrides all undefined variables).</li>
+  <li><?php bugfix(62987); ?> (Assigning to ArrayObject[null][something] overrides all undefined variables).</li>
 </ul></li>
 </ul>
 
@@ -4169,7 +4169,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 <ul>
 <li>Filter extension
 <ul>
-  <li>Bug #49510: Boolean validation fails with FILTER_NULL_ON_FAILURE with empty string or false.</li>
+  <li><?php bugfix(49510); ?> (Boolean validation fails with FILTER_NULL_ON_FAILURE with empty string or false.)</li>
 </ul></li>
 </ul>
 
@@ -4218,7 +4218,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 <ul>
 <li>Intl
 <ul>
-  <li>Fix bug #62915 (defective cloning in several intl classes).</li>
+  <li><?php bugfix(62915); ?> (defective cloning in several intl classes).</li>
 </ul></li>
 </ul>
 
@@ -4232,7 +4232,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 <ul>
 <li>SPL
 <ul>
-  <li>Bug #62987 (Assigning to ArrayObject[null][something] overrides all undefined variables).</li>
+  <li><?php bugfix(62987) ?> (Assigning to ArrayObject[null][something] overrides all undefined variables).</li>
 </ul></li>
 </ul>
 <!-- }}} --></section>
@@ -4277,8 +4277,8 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 <li>Intl
 <ul>
     <li>Fixed Spoofchecker not being registered on ICU 49.1</li>
-    <li>Fix bug #62933 (ext/intl compilation error on icu 3.4.1)</li>
-    <li>Fix bug #62915 (defective cloning in several intl classes)</li>
+    <li><?php bugfix(62933); ?> (ext/intl compilation error on icu 3.4.1)</li>
+    <li><?php bugfix(62915); ?> (defective cloning in several intl classes)</li>
 </ul></li>
 </ul>
 
@@ -4323,7 +4323,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 <li>SPL
 <ul>
     <li><?php bugfix(62904); ?> (Crash when cloning an object which inherits SplFixedArray)</li>
-    <li>Implemented FR <?php bugl(62840); ?> (Add sort flag to ArrayObject::ksort)</li>
+    <li><?php implemented(62840); ?> (Add sort flag to ArrayObject::ksort)</li>
 </ul></li>
 </ul>
 
@@ -4353,7 +4353,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
     <li><?php bugfix(62763); ?> (register_shutdown_function and extending class)</li>
     <li><?php bugfix(62744); ?> (dangling pointers made by zend_disable_class)</li>
     <li><?php bugfix(62716); ?> (munmap() is called with the incorrect length)</li>
-    <li>Fixed bug ##62460 (php binaries installed as binary.dSYM)</li>
+    <li><?php bugfix(62460); ?> (php binaries installed as binary.dSYM)</li>
 </ul></li>
 </ul>
 
@@ -4420,7 +4420,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 <ul>
 <li>CLI Server
 <ul>
-    <li>Implemented FR <?php bugl(62700); ?> (have the console output 'Listening on http://localhost:8000').</li>
+    <li><?php implemented(62700); ?> (have the console output 'Listening on http://localhost:8000').</li>
 </ul></li>
 </ul>
 
@@ -4479,14 +4479,14 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 <ul>
 <li>Reflection
 <ul>
-  <li>Implemented FR <?php bugl(61602); ?> (Allow access to name of constant used as default value).</li>
+  <li><?php implemented(61602); ?> (Allow access to name of constant used as default value).</li>
 </ul></li>
 </ul>
 
 <ul>
 <li>SimpleXML
 <ul>
-  <li>Implemented FR <?php bugl(55218); ?> (Get namespaces from current node).</li>
+  <li><?php implemented(55218); ?> (Get namespaces from current node).</li>
 </ul></li>
 </ul>
 
@@ -4764,7 +4764,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 <ul>
 <li>JSON
 <ul>
-  <li>Reverted fix for bug #61537</li>
+  <li>Reverted fix for bug <?php bugl(61537); ?></li>
 </ul></li>
 </ul>
 
@@ -4818,7 +4818,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 <ul>
 <li>CLI SAPI
 <ul>
-  <li>Implemented FR <?php bugl(61977); ?> (Need CLI web-server support for files with .htm &amp; svg extensions)</li>
+  <li><?php implemented(61977); ?> (Need CLI web-server support for files with .htm &amp; svg extensions)</li>
   <li>Improved performance while sending error page, this also fixed bug <?php bugfix(61785); ?>
   (Memory leak when access a non-exists file without router)</li>
   <li><?php bugfix(61546); ?> (functions related to current script failed when chdir() in cli sapi)</li>
@@ -4830,7 +4830,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 <ul>
   <li>Fixed missing bound check in iptcparse()</li>
   <li>Fixed CVE-2012-2143</li>
-  <li><?php bugfix(62097); ?> (fix for for bug #54547)</li>
+  <li><?php bugfix(62097); ?> (fix for bug <?php bugl(54547); ?>)</li>
   <li><?php bugfix(62005); ?> (unexpected behavior when incrementally assigning to a member of a null object)</li>
   <li><?php bugfix(61978); ?> (Object recursion not detected for classes that implement JsonSerializable)</li>
   <li><?php bugfix(61991); ?> (long overflow in realpath_cache_get())</li>
@@ -5072,7 +5072,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 <li>CLI Server
 <ul>
   <li><?php bugfix(61461); ?> (missing checks around malloc() calls).</li>
-  <li>Implemented <?php bugl(60850); ?> (Built in web server does not set 
+  <li><?php implemented(60850); ?> (Built in web server does not set 
     $_SERVER['SCRIPT_FILENAME'] when using router).</li>
 </ul></li>
 </ul>
@@ -5968,7 +5968,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
   <li>Added RegexIterator::getRegex() method.</li>
   <li>Added SplObjectStorage::getHash() hook.</li>
   <li>Added CallbackFilterIterator and RecursiveCallbackFilterIterator.</li>
-  <li>Added missing class_uses(..) as pointed out by #55266.</li>
+  <li>Added missing class_uses(..) as pointed out by <?php bugl(55266); ?>.</li>
   <li>Immediately reject wrong usages of directories under Spl(Temp)FileObject
     and friends.</li>
   <li>FilesystemIterator, GlobIterator and (Recursive)DirectoryIterator now use
@@ -6140,7 +6140,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 </li>
 <li>Filter:
 <ul>
-  <li>Fixed Bug #55478 (FILTER_VALIDATE_EMAIL fails with internationalized
+  <li><?php bugfix(55478); ?> (FILTER_VALIDATE_EMAIL fails with internationalized
     domain name addresses containing &gt;1 -). (Ilia)</li>
 </ul>
 </li>
@@ -6202,7 +6202,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 </li>
 <li>NSAPI SAPI:
 <ul>
-  <li>Don't set $_SERVER['HTTPS'] on unsecure connection (bug #55403). (Uwe
+  <li>Don't set $_SERVER['HTTPS'] on unsecure connection (bug <?php bugl(55403); ?>). (Uwe
     Schindler)</li>
 </ul>
 </li>
@@ -6270,7 +6270,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
   <li><?php bugfix(60179); ?> (php_flag and php_value does not work properly). (fat)</li>
   <li><?php bugfix(55526); ?> (Heartbeat causes a lot of unnecessary events). (fat)</li>
   <li><?php bugfix(55533); ?> (The -d parameter doesn't work). (fat)</li>
-  <li>Implemented FR <?php bugl(52569); ?> (Add the "ondemand" process-manager
+  <li><?php implemented(52569); ?> (Add the "ondemand" process-manager
     to allow zero children). (fat)</li>
   <li><?php bugfix(55486); ?> (status show BIG processes number). (fat)</li>
   <li><?php bugfix(55577); ?> (status.html does not install). (fat)</li>
@@ -6284,7 +6284,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
   <li>Backported FR <?php bugl(54098); ?> from 5.4 branch (Lowered process manager
     default value). (fat)</li>
   <li>Backported FR <?php bugl(52052); ?> from 5.4 branch (Added partial syslog support). (fat)</li>
-  <li>Implemented FR <?php bugl(54577); ?> (Enhanced status page with full status and details
+  <li><?php implemented(54577); ?> (Enhanced status page with full status and details
     about each processes. Also provide a web page (status.html) for
     real-time FPM status. (fat)</li>
   <li>Enhance error log when the primary script can't be open. FR <?php bugl(60199); ?>. (fat)</li>
@@ -6311,7 +6311,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 <ul>
   <li>Reverted the SimpleXML-&gt;query() behaviour to returning empty arrays
     instead of false when no nodes are found as it was since 5.3.3
-    (bug #48601). (chregu, rrichards)</li>
+    (bug <?php bugl(48601); ?>). (chregu, rrichards)</li>
 </ul>
 </li>
 <li>SOAP
@@ -6378,7 +6378,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 <ul>
   <li>Reverted a change in timeout handling restoring PHP 5.3.6 behavior,
     as the new behavior caused mysqlnd SSL connections to hang (
-    <a href="http://bugs.php.net/55283">Bug #55283</a>).
+    bug <?php bugl(55283); ?></a>).
     (Pierre, Andrey, Johannes)</li>
 </ul>
 </li>
@@ -6419,7 +6419,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
   <li>Added PHP_MANDIR constant telling where the manpages were installed into, and an --man-dir argument to php-config. (Hannes)</li>
   <li>Fixed a crash inside dtor for error handling. (Ilia)</li>
   <li>Fixed buffer overflow on overlog salt in crypt(). (Clément LECIGNE, Stas</li>
-  <li>Implemented FR <?php bugfix(54459); ?> (Range function accuracy). (Adam)</li>
+  <li><?php implemented(54459); ?> (Range function accuracy). (Adam)</li>
 
   <li><?php bugfix(55399); ?> (parse_url() incorrectly treats ':' as a valid path). (Ilia)</li>
   <li><?php bugfix(55339); ?> (Segfault with allow_call_time_pass_reference = Off). (Dmitry)</li>
@@ -6517,8 +6517,8 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
   
 <li>intl extension:
 <ul>
-  <li>Implemented FR <?php bugfix(54561); ?> (Expose ICU version info). (David Zuelke, Ilia)</li>
-  <li>Implemented FR <?php bugfix(54540); ?> (Allow loading of arbitrary resource bundles when fallback is disabled). (David Zuelke, Stas)</li>
+  <li><?php implemented(54561); ?> (Expose ICU version info). (David Zuelke, Ilia)</li>
+  <li><?php implemented(54540); ?> (Allow loading of arbitrary resource bundles when fallback is disabled). (David Zuelke, Stas)</li>
 </ul>
 </li>
 
@@ -6623,7 +6623,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 <ul>
   <li><?php bugfix(54644); ?> (wrong pathes in php_pdo_mysql_int.h). (Tony, Johannes)</li>
   <li><?php bugfix(53782); ?> (foreach throws irrelevant exception). (Johannes, Andrey)</li>
-  <li>Implemented FR <?php bugfix(48587); ?> (MySQL PDO driver doesn't support SSL connections). (Rob)</li>
+  <li><?php implemented(48587); ?> (MySQL PDO driver doesn't support SSL connections). (Rob)</li>
 </ul>
 </li>
 
@@ -6647,8 +6647,8 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 
 <li>PHP-FPM SAPI:
 <ul>
-  <li>Implemented FR <?php bugfix(54499); ?> (FPM ping and status_path should handle HEAD request). (fat)</li>
-  <li>Implemented FR <?php bugfix(54172); ?> (Overriding the pid file location of php-fpm). (fat)</li>
+  <li><?php implemented(54499); ?> (FPM ping and status_path should handle HEAD request). (fat)</li>
+  <li><?php implemented(54172); ?> (Overriding the pid file location of php-fpm). (fat)</li>
   <li>Fixed missing Expires and Cache-Control headers for ping and status pages. (fat)</li>
   <li>Fixed memory leak. (fat) Reported and fixed by Giovanni Giacobbi.
   <li>Fixed wrong value of log_level when invoking fpm with -tt. (fat)</li>
@@ -6749,7 +6749,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 
 <li>DOM extension:
 <ul>
-  <li>Implemented FR <?php bugl(39771); ?> (Made DOMDocument::saveHTML accept an optional DOMNode like DOMDocument::saveXML). (Gustavo)</li>
+  <li><?php implemented(39771); ?> (Made DOMDocument::saveHTML accept an optional DOMNode like DOMDocument::saveXML). (Gustavo)</li>
 </ul>
 </li>
   
@@ -6793,7 +6793,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 
 <li>IMAP extension:
 <ul>
-  <li>Implemented FR <?php bugl(53812); ?> (get MIME headers of the part of the email). (Stas)</li>
+  <li><?php implemented(53812); ?> (get MIME headers of the part of the email). (Stas)</li>
   <li><?php bugfix(53377); ?> (imap_mime_header_decode() doesn't ignore \t during long MIME header unfolding). (Adam)</li>
 </ul>
 </li>
@@ -6834,14 +6834,14 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
   <li><?php bugfix(54060); ?> (Memory leaks when openssl_encrypt). (Pierre)</li>
   <li><?php bugfix(54061); ?> (Memory leaks when openssl_decrypt). (Pierre)</li>
   <li><?php bugfix(53592); ?> (stream_socket_enable_crypto() busy-waits in client mode). (Gustavo)</li>
-  <li>Implemented FR <?php bugl(53447); ?> (Cannot disable SessionTicket extension for servers that do not support it) by adding a no_ticket SSL context option. (Adam, Tony)</li>
+  <li><?php implemented(53447); ?> (Cannot disable SessionTicket extension for servers that do not support it) by adding a no_ticket SSL context option. (Adam, Tony)</li>
 </ul>
 </li>
 
 <li>PDO MySQL driver:
 <ul>
   <li><?php bugfix(53551); ?> (PDOStatement execute segfaults for pdo_mysql driver). (Johannes)</li>
-  <li>Implemented FR <?php bugl(47802); ?> (Support for setting character sets in DSN strings). (Kalle)</li>
+  <li><?php implemented(47802); ?> (Support for setting character sets in DSN strings). (Kalle)</li>
 </ul>
 </li>
 
@@ -6917,7 +6917,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
   <li>Fixed memory leaked introduced by the NULL poisoning patch. (Mateusz Kocielski, Pierre)</li>
   <li>Fixed memory leak on SQLite3Result and SQLite3Stmt when assigning to a reference. (Felipe)</li>
   <li>Add SQlite3_Stmt::readonly() for checking if a statement is read only. (Scott)</li>
-  <li>Implemented FR <?php bugl(53466); ?> (SQLite3Result::columnType() should return false after all of the rows have been fetched). (Scott)</li>
+  <li><?php implemented(53466); ?> (SQLite3Result::columnType() should return false after all of the rows have been fetched). (Scott)</li>
 </ul>
 </li>
 
@@ -6926,7 +6926,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
   <li><?php bugfix(54092); ?> (Segmentation fault when using HTTP proxy with the FTP wrapper). (Gustavo)</li>
   <li><?php bugfix(53913); ?> (Streams functions assume HAVE_GLOB is defined). (Chris Jones)</li>
   <li><?php bugfix(53903); ?> (userspace stream stat callback does not separate the elements of the returned array before converting them). (Gustavo)</li>
-  <li>Implemented FR <?php bugl(26158); ?> (open arbitrary file descriptor with fopen). (Gustavo)</li>
+  <li><?php implemented(26158); ?> (open arbitrary file descriptor with fopen). (Gustavo)</li>
 </ul>
 </li>
 
@@ -7032,13 +7032,13 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 </li>
 <li>Implemented feature requests:
 <ul>
-  <li>Implemented FR <?php bugl(52348); ?>, added new constant ZEND_MULTIBYTE to detect
+  <li><?php implemented(52348); ?>, added new constant ZEND_MULTIBYTE to detect
     zend multibyte at runtime. (Kalle)</li>
-  <li>Implemented FR <?php bugl(52173); ?>, added functions pcntl_get_last_error() and 
+  <li><?php implemented(52173); ?>, added functions pcntl_get_last_error() and 
      pcntl_strerror(). (nick dot telford at gmail dot com, Arnaud)</li>
   <li>Implemented symbolic links support for open_basedir checks. (Pierre)</li>
-  <li>Implemented FR <?php bugl(51804); ?>, SplFileInfo::getLinkTarget on Windows. (Pierre)</li>
-  <li>Implemented FR <?php bugl(50692); ?>, not uploaded files don't count towards
+  <li><?php implemented(51804); ?>, SplFileInfo::getLinkTarget on Windows. (Pierre)</li>
+  <li><?php implemented(50692); ?>, not uploaded files don't count towards
     max_file_uploads limit. As a side improvement, temporary files are not opened
     for empty uploads and, in debug mode, 0-length uploads. (Gustavo)</li>
 </ul>    
@@ -7497,8 +7497,8 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 <li>Reset error state in PDO::beginTransaction() reset error state. (Ilia)</li>
 </ul>
 <ul>
-<li>Implemented FR <?php bugl(51295); ?> (SQLite3::busyTimeout not existing). (Mark)</li>
-<li>Implemented FR <?php bugl(35638); ?> (Adding udate to imap_fetch_overview results). (Charles_Duffy at dell dot com )</li>
+<li><?php implemented(51295); ?> (SQLite3::busyTimeout not existing). (Mark)</li>
+<li><?php implemented(35638); ?> (Adding udate to imap_fetch_overview results). (Charles_Duffy at dell dot com )</li>
 <li>Rewrote var_export() to use smart_str rather than output buffering, prevents data disclosure if a fatal error occurs (CVE-2010-2531). (Scott)</li>
 <li>Fixed possible buffer overflows in mysqlnd_list_fields,  mysqlnd_change_user. (Andrey)</li>
 <li>Fixed possible buffer overflows when handling error packets in mysqlnd. Reported by Stefan Esser. (Andrey)</li>
@@ -7657,7 +7657,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 <h3>Version 5.2.14</h3>
 <?php release_date('22-Jul-2010'); ?>
 <ul>
-<li>Reverted bug fix #49521 (PDO fetchObject sets values before calling constructor). (Felipe)</li>
+<li>Reverted bug fix <?php bugl(49521) ?> (PDO fetchObject sets values before calling constructor). (Felipe)</li>
 </ul>
 <ul>
 <li>Updated timezone database to version 2010.5. (Derick)</li>
@@ -7873,7 +7873,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 <li><?php bugfix(49921); ?> (Curl post upload functions changed). (Ilia)</li>
 <li><?php bugfix(49866); ?> (Making reference on string offsets crashes PHP). (Dmitry)</li>
 <li><?php bugfix(49855); ?> (import_request_variables() always returns NULL). (Ilia, sjoerd at php dot net)</li>
-<li><?php bugfix(49851); ?>, #50451 (http wrapper breaks on 1024 char long headers). (Ilia)</li>
+<li><?php bugfix(49851); ?>, <?php bugl(50451); ?> (http wrapper breaks on 1024 char long headers). (Ilia)</li>
 <li><?php bugfix(49800); ?> (SimpleXML allow (un)serialize() calls without warning). (Ilia, wmeler at wp-sa dot pl)</li>
 <li><?php bugfix(49719); ?> (ReflectionClass::hasProperty returns true for a private property in base class). (Felipe)</li>
 <li><?php bugfix(49677); ?> (ini parser crashes with apache2 and using ${something} ini variables). (Jani)</li>
@@ -8104,7 +8104,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 <li><?php bugfix(48400); ?> (imap crashes when closing stream opened with OP_PROTOTYPE flag). (Jani)</li>
 <li><?php bugfix(48377); ?> (error message unclear on converting phar with existing file). (Greg)</li>
 <li><?php bugfix(48247); ?> (Infinite loop and possible crash during startup with errors when errors are logged). (Jani)</li>
-<li><?php bugfix(48198); ?> error: 'MYSQLND_LLU_SPEC' undeclared. Cause for #48780 and #46952 - both fixed too. (Andrey)</li>
+<li><?php bugfix(48198); ?> error: 'MYSQLND_LLU_SPEC' undeclared. Cause for <?php bugl(48780); ?> and <?php bugl(46952); ?> - both fixed too. (Andrey)</li>
 <li><?php bugfix(48189); ?> (ibase_execute error in return param). (Kalle)</li>
 <li><?php bugfix(48182); ?> (ssl handshake fails during asynchronous socket connection). (Sriram Natarajan)</li>
 <li><?php bugfix(48116); ?> (Fixed build with Openssl 1.0). (Pierre,  Al dot Smith at aeschi dot ch dot eu dot org)</li>
@@ -8603,10 +8603,10 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 	<li>Added pixelation support in imagefilter(). (Takeshi Abe, Kalle)</li>
 	<li>Added SplObjectStorage::addAll/removeAll. (Etienne)</li>
 
-	<li>Implemented FR <?php bugl(41712); ?> (curl progress callback: CURLOPT_PROGRESSFUNCTION).
+	<li><?php implemented(41712); ?> (curl progress callback: CURLOPT_PROGRESSFUNCTION).
   (sdteffen[at]gmail[dot].com, Pierre)</li>
-	<li>Implemented FR <?php bugl(47739); ?> (Missing cURL option do disable IPv6). (Pierre)</li>
-	<li>Implemented FR <?php bugl(39637); ?> (Missing cURL option CURLOPT_FTP_FILEMETHOD). (Pierre)</li>
+	<li><?php implemented(47739); ?> (Missing cURL option do disable IPv6). (Pierre)</li>
+	<li><?php implemented(39637); ?> (Missing cURL option CURLOPT_FTP_FILEMETHOD). (Pierre)</li>
 
 	<li>Fixed an issue with ReflectionProperty::setAccessible().
   (Sebastian, Roman Borschel)</li>
@@ -9694,7 +9694,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 <li>Added PCRE_VERSION constant. (Tony)</li>
 <li>Added ReflectionExtension::info() function to print the phpinfo() block for an extension. (Johannes)</li>
 
-<li>Implemented FR <?php bugl(41884); ?> (ReflectionClass::getDefaultProperties() does not handle static attributes). (Tony)</li>
+<li><?php implemented(41884); ?> (ReflectionClass::getDefaultProperties() does not handle static attributes). (Tony)</li>
 
 <li>Fixed possible crash in imagepsloadfont(), work around a bug in the pslib on Windows. (Pierre)</li>
 <li>Fixed oci8 and PDO_OCI extensions to allow configuring with Oracle 11g client libraries. (Chris Jones)</li>
@@ -9849,7 +9849,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 <li>Added CURLOPT_TIMEOUT_MS and CURLOPT_CONNECTTIMEOUT_MS cURL constants. (Sara)</li>
 <li>Added --ini switch to CLI that prints out configuration file names. (Marcus)</li>
 
-<li>Implemented FR <?php bugl(41416); ?> (getColumnMeta() should also return table name). (Tony)</li>
+<li><?php implemented(41416); ?> (getColumnMeta() should also return table name). (Tony)</li>
 
 <li>Fixed filetype() and linkinfo() processing of symlinks on ZTS systems. (Oliver Block, Tony, Dmitry)</li>
 <li>Fixed SOAP extension's handler() to work even when "always_populate_raw_post_data" is off. (Ilia)</li>
@@ -11279,7 +11279,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
   <li>ming 0.3b</li>
   <li>libpq (PostgreSQL) 8.0.1</li>
   </ul></li>
-<li>Implemented feature request <?php bugl(33452); ?> (Year belonging to ISO week). (Derick)</li>
+<li><?php implemented(33452); ?> (Year belonging to ISO week). (Derick)</li>
 <li>Allowed return by reference from internal functions. (Marcus, Andi, Dmitry)</li>
 <li>Rewrote strtotime() with support for timezones and many new formats.  Implements feature requests <?php bugl(21399); ?>, <?php bugl(26694); ?>, <?php bugl(28088); ?>, <?php bugl(29150); ?>, <?php bugl(29585); ?> and  <?php bugl(29595); ?>. (Derick)</li>
 <li>Moved extensions to PECL:
