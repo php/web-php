@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom" xmlns:default="http://php.net/ns/news">
+  <title>Midwest PHP 2015</title>
+  <id>http://php.net/archive/2015.php#id2015-01-10-1</id>
+  <published>2015-01-10T05:09:25+01:00</published>
+  <updated>2015-01-10T05:09:25+01:00</updated>
+  <default:finalTeaserDate xmlns="http://php.net/ns/news">2015-03-14</default:finalTeaserDate>
+  <category term="conferences" label="Conference announcement"/>
+  <link href="http://php.net/conferences/index.php#id2015-01-10-1" rel="alternate" type="text/html"/>
+  <default:newsImage xmlns="http://php.net/ns/news" link="http://2015.midwestphp.org/" title="Midwest PHP 2015">midwest2015.png</default:newsImage>
+  <link href="http://2015.midwestphp.org/" rel="via" type="text/html"/>
+  <content type="xhtml">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+     <p>Midwest PHP is taking over beautiful Minneapolis once again this year, bringing leading experts from around the world to talk about APIs, Frameworks, Security, Version Control, Testing, Continuous Integration, and much more!  Midwest PHP welcomes developers of all levels and encourages diversity - we promise there will be something for everyone.  So join us March 14-15th for great talks, great people, and of course great food!  Register today at <a href="http://www.midwestphp.org">http://www.midwestphp.org</a></p>
+    </div>
+  </content>
+</entry>
