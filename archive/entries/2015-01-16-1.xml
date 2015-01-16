@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom" xmlns:default="http://php.net/ns/news">
+  <title>Dutch PHP Conference 2015</title>
+  <id>http://php.net/archive/2015.php#id2015-01-16-1</id>
+  <published>2015-01-16T10:07:58+01:00</published>
+  <updated>2015-01-16T10:07:58+01:00</updated>
+  <default:finalTeaserDate xmlns="http://php.net/ns/news">2015-02-22</default:finalTeaserDate>
+  <category term="cfp" label="Call for Papers"/>
+  <link href="http://php.net/conferences/index.php#id2015-01-16-1" rel="alternate" type="text/html"/>
+  <default:newsImage xmlns="http://php.net/ns/news" link="http://www.phpconference.nl/" title="Dutch PHP Conference 2015">dpc-2015.png</default:newsImage>
+  <link href="http://www.phpconference.nl/" rel="via" type="text/html"/>
+  <content type="xhtml">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+     <p>We're back! And we are glad to announce that we’ll be organising the 9th edition of the <a href="http://www.phpconference.nl/">Dutch PHP Conference</a>, which will be held in Amsterdam from 25th to 27th June 2015. Thursday 25th will be the tutorial day and June 26th and 27th will be the main conference days.</p>
+     <p>Speakers, the call for papers is now open! We’re looking for high-quality, technical sessions from speakers who can cover advanced topics and keep our demanding audience inspired. The call for papers is open until February 22nd. You can send in as many proposals as you like, so <a href="http://www.phpconference.nl/call-for-papers-dpc">start submitting</a> your talks. </p>
+     <p>We’re very excited to see what you can come up with, and we’re looking forward to reading all the different proposals.</p>
+    </div>
+  </content>
+</entry>
