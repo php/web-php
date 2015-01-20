@@ -396,7 +396,7 @@ function print_view($templateName, array $params = array()) {
     $path = $_SERVER['DOCUMENT_ROOT'] . '/views/' . $templateName;
     if(file_exists($path)) {
         if(!empty($params)) {
-            extract($params);
+            extract($params, EXTR_SKIP);
         }
         include_once $path;
     }
