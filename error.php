@@ -465,8 +465,8 @@ $external_redirects = array(
     "php56news"   => "https://git.php.net/?p=php-src.git;a=blob_plain;f=NEWS;hb=refs/heads/PHP-5.6",
     "phptrunknews"=> "https://git.php.net/?p=php-src.git;a=blob_plain;f=NEWS;hb=refs/heads/master",
     "pear"        => "http://pear.php.net/",
-    "bugs"        => "http://bugs.php.net/",
-    "bugstats"    => "http://bugs.php.net/bugstats.php",
+    "bugs"        => "https://bugs.php.net/",
+    "bugstats"    => "https://bugs.php.net/stats.php",
     "phpdochowto" => "http://doc.php.net/tutorial/",
     "rev"         => "http://doc.php.net/revcheck.php?p=graph&lang=$LANG",
     "release/5_3_0.php" => "/releases/5_3_0.php", // PHP 5.3.0 release announcement had a typo
