@@ -8,6 +8,112 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 
 <h1>PHP 5 ChangeLog</h1>
 
+<section class="version" id="5.6.5"><!-- {{{ 5.6.5 -->
+<h3>Version 5.6.5</h3>
+<?php release_date('22-Jan-2015'); ?>
+<ul><li>Core:
+<ul>
+  <li>Upgraded crypt_blowfish to version 1.3.</li>
+  <li><?php bugfix(60704); ?> (unlink() bug with some files path).</li>
+  <li><?php bugfix(65419); ?> (Inside trait, self::class != __CLASS__).</li>
+  <li><?php bugfix(68536); ?> (pack for 64bits integer is broken on bigendian).</li>
+  <li><?php bugfix(55541); ?> (errors spawn MessageBox, which blocks test automation).</li>
+  <li><?php bugfix(68297); ?> (Application Popup provides too few information).</li>
+  <li><?php bugfix(65769); ?> (localeconv() broken in TS builds).</li>
+  <li><?php bugfix(65230); ?> (setting locale randomly broken).</li>
+  <li><?php bugfix(66764); ?> (configure doesn't define EXPANDED_DATADIR / PHP_DATADIR correctly).</li>
+  <li><?php bugfix(68583); ?> (Crash in timeout thread).</li>
+  <li><?php bugfix(65576); ?> (Constructor from trait conflicts with inherited constructor).</li>
+  <li><?php bugfix(68676); ?> (Explicit Double Free).</li>
+  <li><?php bugfix(68710); ?> (Use After Free Vulnerability in PHP's unserialize()).</li>
+</ul></li>
+<li>CGI:
+<ul>
+  <li><?php bugfix(68618); ?> (out of bounds read crashes php-cgi).</li>
+</ul></li>
+<li>CLI server:
+<ul>
+  <li><?php bugfix(68745); ?> (Invalid HTTP requests make web server segfault).</li>
+</ul></li>
+<li>cURL:
+<ul>
+  <li><?php bugfix(67643); ?> (curl_multi_getcontent returns '' when CURLOPT_RETURNTRANSFER isn't set).</li>
+</ul></li>
+<li>Date:
+<ul>
+  <li><?php implemented(68268); ?> (DatePeriod: Getter for start date, end date and interval).</li>
+</ul></li>
+<li>EXIF:
+<ul>
+  <li><?php bugfix(68799); ?>: Free called on unitialized pointer.</li>
+</ul></li>
+<li>Fileinfo:
+<ul>
+  <li><?php bugfix(68398); ?> (msooxml matches too many archives).</li>
+  <li><?php bugfix(68665); ?> (invalid free in libmagic).</li>
+  <li><?php bugfix(68671); ?> (incorrect expression in libmagic).</li>
+  <li>Removed readelf.c and related code from libmagic sources (Remi, Anatol)</li>
+  <li><?php bugfix(68735); ?> (fileinfo out-of-bounds memory access).</li>
+</ul></li>
+<li>FPM:
+<ul>
+  <li><?php implemented(68526); ?> (Implement POSIX Access Control List for UDS).</li>
+  <li><?php bugfix(68751); ?> (listen.allowed_clients is broken).</li>
+</ul></li>
+<li>GD:
+<ul>
+  <li><?php bugfix(68601); ?> (buffer read overflow in gd_gif_in.c).</li>
+  <li><?php implemented(68656); ?> (Report gd library version).</li>
+</ul></li>
+<li>mbstring:
+<ul>
+  <li><?php bugfix(68504); ?> (--with-libmbfl configure option not present on Windows).</li>
+</ul></li>
+<li>Opcache:
+<ul>
+  <li><?php bugfix(68644); ?> (strlen incorrect : mbstring + func_overload=2 +UTF-8 + Opcache).</li>
+  <li><?php bugfix(67111); ?> (Memory leak when using "continue 2" inside two foreach loops).</li>
+</ul></li>
+<li>OpenSSL:
+<ul>
+  <li>Improved handling of OPENSSL_KEYTYPE_EC keys.</li>
+</ul></li>
+<li>pcntl:
+<ul>
+  <li><?php bugfix(60509); ?> (pcntl_signal doesn't decrease ref-count of old handler when setting SIG_DFL).</li>
+</ul></li>
+<li>PCRE:
+<ul>
+  <li><?php bugfix(66679); ?> (Alignment Bug in PCRE 8.34 upstream).</li>
+</ul></li>
+<li>pgsql:
+<ul>
+  <li><?php bugfix(68697); ?> (lo_export return -1 on failure).</li>
+</ul></li>
+<li>PDO:
+<ul>
+  <li><?php bugfix(68371); ?> (PDO#getAttribute() cannot be called with platform-specifi attribute names).</li>
+</ul></li>
+<li>PDO_mysql:
+<ul>
+  <li><?php bugfix(68424); ?> (Add new PDO mysql connection attr to control multi statements option).</li>
+</ul></li>
+<li>SPL:
+<ul>
+  <li><?php bugfix(66405); ?> (RecursiveDirectoryIterator::CURRENT_AS_PATHNAME breaks the RecursiveIterator).</li>
+  <li><?php bugfix(68479); ?> (Added escape parameter to SplFileObject::fputcsv).</li>
+</ul></li>
+<li>SQLite:
+<ul>
+  <li><?php bugfix(68120); ?> (Update bundled libsqlite to 3.8.7.2).</li>
+</ul></li>
+<li>Streams:
+<ul>
+  <li><?php bugfix(68532); ?> (convert.base64-encode omits padding bytes).</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
 <section class="version" id="5.5.21"><!-- {{{ 5.5.21 -->
 <h3>Version 5.5.21</h3>
 <?php release_date('22-Jan-2015'); ?>
