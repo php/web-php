@@ -215,6 +215,33 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 </ul>
 <!-- }}} --></section>
 
+<section class="version" id="5.4.37"><!-- {{{ 5.4.37 -->
+<h3>Version 5.4.37</h3>
+<b>22-Jan-2015</b>
+<ul><li>Core:
+<ul>
+  <li><?php bugfix(68710); ?> (Use After Free Vulnerability in PHP's unserialize()) (CVE-2015-0231).</li>
+</ul></li>
+<li>CGI:
+<ul>
+  <li><?php bugfix(68618); ?> (out of bounds read crashes php-cgi) (CVE-2014-9427).</li>
+</ul></li>
+<li>EXIF:
+<ul>
+  <li><?php bugfix(68799); ?> (Free called on unitialized pointer) (CVE-2015-0232).</li>
+</ul></li>
+<li>Fileinfo:
+<ul>
+  <li>Removed readelf.c and related code from libmagic sources.</li>
+  <li><?php bugfix(68735); ?> (fileinfo out-of-bounds memory access).</li>
+</ul></li>
+<li>OpenSSL:
+<ul>
+  <li><?php bugfix(55618); ?> (use case-insensitive cert name matching).</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
 <section class="version" id="5.6.4"><!-- {{{ 5.6.4 -->
 <h3>Version 5.6.4</h3>
 <?php release_date('18-Dec-2014'); ?>

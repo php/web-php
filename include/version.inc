@@ -41,11 +41,11 @@ $PHP_5_5_MD5     = array(
 $PHP_5_4_RC = false; // Current RC version (e.g., '5.6.7RC1') or false
 $PHP_5_4_RC_DATE = '4 Sep 2014';
 
-$PHP_5_4_VERSION         = "5.4.36";
-$PHP_5_4_DATE            = "18 Dec 2014";
+$PHP_5_4_VERSION         = "5.4.37";
+$PHP_5_4_DATE            = "22 Jan 2015";
 $PHP_5_4_MD5     = array(
-                       "tar.bz2"       => "70e223be4bb460e465b7a9d7cb5b9cac",
-                       "tar.gz"        => "d724ec84124ec948a7a493b74546efef",
+                       "tar.bz2"       => "1962086593e8e39342674be0483db439",
+                       "tar.gz"        => "42494eea588dea228719757deca03d30",
 );
 
 $RELEASES = array(
