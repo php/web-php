@@ -10,7 +10,6 @@
   <link href="http://php.net/archive/2015.php#id2015-01-22-3" rel="via" type="text/html"/>
   <content type="xhtml">
     <div xmlns="http://www.w3.org/1999/xhtml">
-     <h1>PHP 5.4.37 Release Announcement</h1>
      
      <p>The PHP development team announces the immediate availability of PHP
      5.4.37. Six security-related bugs were fixed in this release, including CVE-2015-0231, CVE-2014-9427
