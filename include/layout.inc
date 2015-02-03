@@ -536,6 +536,11 @@ function get_news_changes()
     if (isset($_COOKIE["LAST_NEWS"]) && $_COOKIE["LAST_NEWS"] >= $date->getTimestamp()) {
         return false;
     }
+
+    /* It is a bug when this happens.. but I don't know where it is coming from */
+    if (!isset($_SERVER["BASE_PAGE"])) {
+        return false;
+    }
     if ($_SERVER["BASE_PAGE"] == "index.php") {
         return false;
     }
