@@ -385,23 +385,6 @@ function display_event($event, $include_date = 1)
 <?php
 }
 
-/**
- * Print a view
- *
- * @param string $templateName
- * @param array $params
- * @return void
- */
-function print_view($templateName, array $params = array()) {
-    $path = $_SERVER['DOCUMENT_ROOT'] . '/views/' . $templateName;
-    if(file_exists($path)) {
-        if(!empty($params)) {
-            extract($params, EXTR_SKIP);
-        }
-        include_once $path;
-    }
-}
-
 // Print news links for archives
 function news_archive_sidebar()
 {
