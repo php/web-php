@@ -375,7 +375,8 @@ function manual_setup($setup) {
 
     $PGI = $setup;
     // Set base href for this manual page
-    $_SERVER['BASE_PAGE'] = 'manual/' . language_convert($setup['head'][1]) . "/" . $setup['this'][0];
+    $base = 'manual/' . language_convert($setup['head'][1]) . "/";
+    $_SERVER['BASE_PAGE'] = $base . $setup['this'][0];
     $_SERVER['BASE_HREF'] = $MYSITE . $_SERVER['BASE_PAGE'];
 
     // Load user note for this page
@@ -389,8 +390,6 @@ function manual_setup($setup) {
     $note = current($USERNOTES);
     $lastusernote = $note["xwhen"];
 
-    $base = "manual/" . $setup["head"][1] . "/";
-    $_SERVER["BASE_PAGE"] = $base . $setup["this"][0];
     $timestamps = array(
         filemtime($_SERVER["DOCUMENT_ROOT"] . "/" . $_SERVER["BASE_PAGE"]),
         filemtime($_SERVER["DOCUMENT_ROOT"] . "/include/prepend.inc"),
