@@ -90,10 +90,11 @@ h1.refname {
   color:#693;
 }
 
+.classsynopsisinfo .modifier,
 .fieldsynopsis .modifier,
 .methodsynopsis .modifier,
 .constructorsynopsis .modifier {
-  color:#333;
+  color: #936;
 }
 
 .classsynopsis {
