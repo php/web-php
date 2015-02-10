@@ -52,7 +52,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
   <li><?php bugfix(68398); ?> (msooxml matches too many archives).</li>
   <li><?php bugfix(68665); ?> (invalid free in libmagic).</li>
   <li><?php bugfix(68671); ?> (incorrect expression in libmagic).</li>
-  <li>Removed readelf.c and related code from libmagic sources (Remi, Anatol)</li>
+  <li>Removed readelf.c and related code from libmagic sources.</li>
   <li><?php bugfix(68735); ?> (fileinfo out-of-bounds memory access).</li>
 </ul></li>
 <li>FPM:
@@ -119,7 +119,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 <?php release_date('22-Jan-2015'); ?>
 <ul><li>Core:
 <ul>
-  <li>Upgraded crypt_blowfish to version 1.3</li>
+  <li>Upgraded crypt_blowfish to version 1.3.</li>
   <li><?php bugfix(60704); ?> (unlink() bug with some files path).</li>
   <li><?php bugfix(65419); ?> (Inside trait, self::class != __CLASS__).</li>
   <li><?php bugfix(65576); ?> (Constructor from trait conflicts with inherited constructor).</li>
@@ -152,7 +152,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 <ul>
   <li><?php bugfix(68671); ?> (incorrect expression in libmagic).</li>
   <li><?php bugfix(68735); ?> (fileinfo out-of-bounds memory access).</li>
-  <li>Removed readelf.c and related code from libmagic sources</li>
+  <li>Removed readelf.c and related code from libmagic sources.</li>
 </ul></li>
 <li>FPM:
 <ul>
@@ -372,10 +372,10 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
   <li><?php bugfix(51800); ?> (proc_open on Windows hangs forever).</li>
   <li><?php bugfix(67633); ?> (A foreach on an array returned from a function not doing copy-on-write).</li>
   <li><?php bugfix(67739); ?> (Windows 8.1/Server 2012 R2 OS build number reported as 6.2 (instead of 6.3)).</li>
-  <li><?php bugfix(67949); ?> (DOMNodeList elements should be accessible through array notation) (Florian)</li>
+  <li><?php bugfix(67949); ?> (DOMNodeList elements should be accessible through array notation).</li>
   <li><?php bugfix(68095); ?> (AddressSanitizer reports a heap buffer overflow in php_getopt()).</li>
   <li><?php bugfix(68118); ?> ($a-&gt;foo .= 'test'; can leave $a-&gt;foo undefined).</li>
-  <li><?php bugfix(68129); ?> (parse_url() - incomplete support for empty usernames and passwords) (Tjerk)</li>
+  <li><?php bugfix(68129); ?> (parse_url() - incomplete support for empty usernames and passwords).</li>
   <li><?php bugfix(68365); ?> (zend_mm_heap corrupted after memory overflow in zend_hash_copy).</li>
 </ul></li>
 <li>CURL:
