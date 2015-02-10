@@ -130,11 +130,11 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
   <li><?php bugfix(66764); ?> (configure doesn't define EXPANDED_DATADIR / PHP_DATADIR correctly).</li>
   <li><?php bugfix(68583); ?> (Crash in timeout thread).</li>
   <li><?php bugfix(68676); ?> (Explicit Double Free).</li>
-  <li><?php bugfix(68710); ?> (Use After Free Vulnerability in PHP's unserialize()).(CVE-2015-0231).</li>
+  <li><?php bugfix(68710); ?> (Use After Free Vulnerability in PHP's unserialize()). (CVE-2015-0231)</li>
 </ul></li>
 <li>CGI:
 <ul>
-  <li><?php bugfix(68618); ?> (out of bounds read crashes php-cgi).(CVE-2014-9427).</li>
+  <li><?php bugfix(68618); ?> (out of bounds read crashes php-cgi). (CVE-2014-9427)</li>
 </ul></li>
 <li>CLI server:
 <ul>
@@ -220,15 +220,15 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 <b>22-Jan-2015</b>
 <ul><li>Core:
 <ul>
-  <li><?php bugfix(68710); ?> (Use After Free Vulnerability in PHP's unserialize()) (CVE-2015-0231).</li>
+  <li><?php bugfix(68710); ?> (Use After Free Vulnerability in PHP's unserialize()). (CVE-2015-0231)</li>
 </ul></li>
 <li>CGI:
 <ul>
-  <li><?php bugfix(68618); ?> (out of bounds read crashes php-cgi) (CVE-2014-9427).</li>
+  <li><?php bugfix(68618); ?> (out of bounds read crashes php-cgi). (CVE-2014-9427)</li>
 </ul></li>
 <li>EXIF:
 <ul>
-  <li><?php bugfix(68799); ?> (Free called on unitialized pointer) (CVE-2015-0232).</li>
+  <li><?php bugfix(68799); ?> (Free called on unitialized pointer). (CVE-2015-0232)</li>
 </ul></li>
 <li>Fileinfo:
 <ul>
@@ -452,7 +452,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 <ul>
   <li><?php bugfix(66242); ?> (libmagic: don't assume char is signed).</li>
   <li><?php bugfix(68283); ?> (fileinfo: out-of-bounds read in elf note headers).
-    (CVE-2014-3710).</li>
+    (CVE-2014-3710)</li>
 </ul></li>
 <li>FPM:
 <ul>
