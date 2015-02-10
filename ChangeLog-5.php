@@ -24,12 +24,12 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
   <li><?php bugfix(66764); ?> (configure doesn't define EXPANDED_DATADIR / PHP_DATADIR correctly).</li>
   <li><?php bugfix(68583); ?> (Crash in timeout thread).</li>
   <li><?php bugfix(65576); ?> (Constructor from trait conflicts with inherited constructor).</li>
-  <li><?php bugfix(68676); ?> (Explicit Double Free).</li>
-  <li><?php bugfix(68710); ?> (Use After Free Vulnerability in PHP's unserialize()).</li>
+  <li><?php bugfix(68676); ?> (Explicit Double Free). (CVE-2014-9425)</li>
+  <li><?php bugfix(68710); ?> (Use After Free Vulnerability in PHP's unserialize()). (CVE-2015-0231)</li>
 </ul></li>
 <li>CGI:
 <ul>
-  <li><?php bugfix(68618); ?> (out of bounds read crashes php-cgi).</li>
+  <li><?php bugfix(68618); ?> (out of bounds read crashes php-cgi). (CVE-2014-9427)</li>
 </ul></li>
 <li>CLI server:
 <ul>
@@ -45,7 +45,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 </ul></li>
 <li>EXIF:
 <ul>
-  <li><?php bugfix(68799); ?>: Free called on unitialized pointer.</li>
+  <li><?php bugfix(68799); ?> (Free called on unitialized pointer). (CVE-2015-0232)</li>
 </ul></li>
 <li>Fileinfo:
 <ul>
@@ -129,7 +129,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
   <li><?php bugfix(65230); ?> (setting locale randomly broken).</li>
   <li><?php bugfix(66764); ?> (configure doesn't define EXPANDED_DATADIR / PHP_DATADIR correctly).</li>
   <li><?php bugfix(68583); ?> (Crash in timeout thread).</li>
-  <li><?php bugfix(68676); ?> (Explicit Double Free).</li>
+  <li><?php bugfix(68676); ?> (Explicit Double Free). (CVE-2014-9425)</li>
   <li><?php bugfix(68710); ?> (Use After Free Vulnerability in PHP's unserialize()). (CVE-2015-0231)</li>
 </ul></li>
 <li>CGI:
