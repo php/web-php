@@ -150,9 +150,6 @@ function a($href) {
 
 <h2>PHP Developer shortcuts</h2>
 <ul>
- <li>Snap downloads: <a href="http://snaps.php.net/?55">http://snaps.php.net/?53</a>
-  (e.g. latest 5.5 snap. Use ?latest for latest master)
- </li>
  <li>Changelog information: <a href="http://php.net/changelog">http://php.net/changelog</a>
   (e.g. latest PHP changelog. php5news = latest PHP 5 NEWS, phptrunknews = latest PHP trunk NEWS)
  </li>
