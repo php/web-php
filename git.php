@@ -21,13 +21,6 @@ $SIDEBAR_DATA = '
  group. You may want <a href="/git-php.php">your own Git account</a>
  to contribute.
 </p>
-
-<h3>Source and binary snapshots</h3>
-<p>
- You may also be interested in a PHP snapshot, see
- <a href="http://snaps.php.net/">snaps.php.net</a>.
- Compiled snapshots for Windows users are also included.
-</p>
 ';
 site_header("Git Access", array("current" => "community"));
 ?>

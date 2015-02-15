@@ -210,14 +210,6 @@ site_header("A Tourist's Guide", array("current" => "help"));
  and the latest news from the project.
 </p>
 
-<h2 id="snaps" class="content-header"><a href="http://snaps.php.net/">snaps.php.net</a>: Daily PHP Snapshots</h2>
-
-<p class="content-box">
- This is your first stop if you're looking for cutting edge development versions
- of PHP which are generated every day from the current stable and current
- development sources.
-</p>
-
 <h2 id="gcov" class="content-header"><a href="http://gcov.php.net/">gcov.php.net</a>: Test and Code Coverage analysis</h2>
 
 <p class="content-box">
