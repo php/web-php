@@ -27,18 +27,16 @@
 $CONF_TEASER = array (
   'cfp' => 
   array (
-    'http://php.net/conferences/index.php#id2013-09-05-1' => ' PHPBenelux Conference 2014',
-    'http://php.net/conferences/index.php#id2013-09-01-1' => 'ConFoo 2014 wants you to be a speaker',
-    'http://php.net/conferences/index.php#id2013-08-31-1' => 'SunshinePHP 2014',
-    'http://php.net/conferences/index.php#id2013-07-19-2' => 'Ski PHP 2014',
+    'http://php.net/conferences/index.php#id2015-01-16-1' => 'Dutch PHP Conference 2015',
   ),
   'conference' => 
   array (
-    'http://php.net/conferences/index.php#id2013-08-19-2' => 'CodeConnexx 2013',
-    'http://php.net/conferences/index.php#id2013-08-19-1' => 'ZendCon 2013',
-    'http://php.net/conferences/index.php#id2013-08-07-1' => 'International PHP Conference 2013',
-    'http://php.net/conferences/index.php#id2013-05-06-1' => 'PHP Conference Argentina',
-    'http://php.net/conferences/index.php#id2013-04-12-1' => 'PHP South Africa 2013',
+    'http://php.net/conferences/index.php#id2015-01-10-1' => 'Midwest PHP 2015',
+    'http://php.net/conferences/index.php#id2015-01-06-1' => 'ConFoo 2015 - Become a Master',
+    'http://php.net/conferences/index.php#id2014-12-29-1' => 'Bulgaria Web Summit 2015',
+    'http://php.net/conferences/index.php#id2014-11-05-1' => 'International PHP Conference Spring 2015',
+    'http://php.net/conferences/index.php#id2014-10-27-1' => 'PHP Unconference Europe 2015',
+    'http://php.net/conferences/index.php#id2014-09-26-1' => 'PHP Australia Conference 2015',
   ),
 )
 ?>
