@@ -44,12 +44,17 @@ site_header("Git Access", array("current" => "community"));
 </p>
 
 <ul>
- <li><i>autoconf</i>: 2.13 (2.59+ for PHP 5.4+)</li>
+ <li><i>autoconf</i>: 2.59+</li>
  <li><i>automake</i>: 1.4+</li>
  <li><i>libtool</i>: 1.4.x+ (except 1.4.2)</li>
- <li><i>bison</i>: 1.28, 1.35, 1.75, 2.0 or higher</li>
- <li><i>flex (PHP 5.2 and earlier)</i>: 2.5.4 (<strong>not higher</strong>)</li>
  <li><i>re2c</i>: 0.13.4+</li>
+ <li id="bison"><i>bison</i>:
+  <ul>
+   <li><i>PHP 5.4</i>: 1.28, 1.35, 1.75, 2.0 to 2.6.4</li>
+   <li><i>PHP 5.5 and 5.6</i>: 2.4 to 2.7</li>
+   <li><i>PHP 7</i>: 2.4+</li>
+  </ul>
+ </li>
 </ul>
 
 <p>
@@ -73,6 +78,13 @@ site_header("Git Access", array("current" => "community"));
   <br><br>
   <code>git clone http://git.php.net/repository/php-src.git</code>
   <br><br>
+
+  You can also download a snapshot from GitHub:<br><br>
+  <ul>
+   <li>Go to the <a href="https://github.com/php/php-src">php-src project page</a>.</li>
+   <li>Select the branch you're interested in from the branch dropdown.</li>
+   <li>Click on the <strong>Download ZIP</strong> button.</li>
+  </ul>
  </li>
 
  <li>
@@ -83,13 +95,16 @@ site_header("Git Access", array("current" => "community"));
  </li>
 
  <li>
-  You can then check out the branch you want to build:
+  You can then check out the branch you want to build, for example:
   <br><br>
-  <strong>PHP 5.3</strong>:
-  <code>git checkout PHP-5.3</code>
-  <br>
   <strong>PHP 5.4</strong>:
   <code>git checkout PHP-5.4</code>
+  <br>
+  <strong>PHP 5.5</strong>:
+  <code>git checkout PHP-5.5</code>
+  <br>
+  <strong>PHP 5.6</strong>:
+  <code>git checkout PHP-5.6</code>
   <br>
   <strong>PHP HEAD</strong>:
   <code>git checkout master</code>
@@ -99,8 +114,8 @@ site_header("Git Access", array("current" => "community"));
  <li>
   <div class="tip" style="margin: 10px 0 10px 20px;">
    <p>Note that certain combinations of autoconf, automake and libtool may not
-   work when used together. See <a href="#buildconf_fail">below</a> for
-   details.<br>
+   work when used together, particularly with historical versions of PHP. See
+   <a href="#buildconf_fail">below</a> for details.<br>
    Also, certain versions of autoconf may generate warnings of <code>AC_PROG_CPP
    called before AC_PROG_CC</code>. These messages can usually be ignored.</p>
   </div>
@@ -112,10 +127,10 @@ site_header("Git Access", array("current" => "community"));
 
  <li>
   From this point onwards, installation is similar to the installation of one of
-  the official packages with one main difference &ndash; you may need bison 1.28 or later
-  and flex 2.5.4 (PHP 5.2 and earlier) or re2c 0.13.4+ or later (PHP 5.3 and later) to
-  compile, because the pre-generated scanner and parser files may not
-  be included in Git.
+  the official packages with one main difference &ndash; you will need
+  <a href="#bison">a version of bison that is supported for the PHP version you want to build</a>.
+  You may also require re2c if you intend to change any of the scanner and
+  parser files PHP uses.
  </li>
 </ol>
 
@@ -139,15 +154,16 @@ site_header("Git Access", array("current" => "community"));
 
 <p>
  The PHP manual is still currently hosted on SVN, although it will be migrated
- to Git in the near future. To checkout the latest English version of the PHP
+ to Git in the future. To checkout the latest English version of the PHP
  manual:<br>
  <code>svn checkout https://svn.php.net/repository/phpdoc/modules/doc-en ./phpdoc-en</code>
  <br><br>
  You can also check the <a href="https://wiki.php.net/vcs/svnfaq">SVN FAQ on the wiki</a>.
 </p>
 
-<a name="buildconf_fail"></a>
-<h2>autoconf, automake and libtool information</h2>
+<h2>Historical issues</h2>
+
+<h3 id="buildconf_fail">autoconf, automake and libtool information for PHP 5.3 and below</h3>
 
 <p>
  There seem to be problems with libtool 1.4.2. It is suggested
@@ -171,8 +187,7 @@ site_header("Git Access", array("current" => "community"));
  <code>PHP_AUTOCONF=autoconf213 PHP_AUTOHEADER=autoheader213 ./buildconf</code>
 </p>
 
-<a name="flex_fail"></a>
-<h2>Zend/zend_language_scanner.c: No such file or directory</h2>
+<h3 id="flex_fail">Zend/zend_language_scanner.c: No such file or directory</h3>
 
 <p>
  PHP only supports flex 2.5.4, <strong>not</strong> later versions as they broke backwards compatibility.
