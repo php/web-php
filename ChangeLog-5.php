@@ -8,6 +8,88 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 
 <h1>PHP 5 ChangeLog</h1>
 
+<section class="version" id="5.6.6"><!-- {{{ 5.6.6 -->
+<h3>Version 5.6.6</h3>
+<?php release_date('19-Feb-2015'); ?>
+<ul><li>Core:
+<ul>
+  <li>Removed support for multi-line headers, as the are deprecated by RFC 7230.</li>
+  <li><?php bugfix(67068); ?> (getClosure returns somethings that's not a closure).</li>
+  <li><?php bugfix(68942); ?> (Use after free vulnerability in unserialize() with DateTimeZone). (CVE-2015-0273)</li>
+  <li><?php bugfix(68925); ?> (Mitigation for CVE-2015-0235 – GHOST: glibc gethostbyname buffer overflow).</li>
+  <li><?php bugfix(67988); ?> (htmlspecialchars() does not respect default_charset specified by ini_set) (Yasuo)</li>
+  <li>Added NULL byte protection to exec, system and passthru.</li>
+</ul></li>
+<li>Dba:
+<ul>
+  <li><?php bugfix(68711); ?> (useless comparisons).</li>
+</ul></li>
+<li>Enchant:
+<ul>
+  <li><?php bugfix(68552); ?> (heap buffer overflow in enchant_broker_request_dict()).</li>
+</ul></li>
+<li>Fileinfo:
+<ul>
+  <li><?php bugfix(68827); ?> (Double free with disabled ZMM).</li>
+  <li><?php bugfix(67647); ?> (Bundled libmagic 5.17 does not detect quicktime files correctly).</li>
+  <li><?php bugfix(68731); ?> (finfo_buffer doesn't extract the correct mime with some gifs).</li>
+</ul></li>
+<li>FPM:
+<ul>
+  <li><?php bugfix(66479); ?> (Wrong response to FCGI_GET_VALUES).</li>
+  <li><?php bugfix(68571); ?> (core dump when webserver close the socket).</li>
+</ul></li>
+<li>JSON:
+<ul>
+  <li><?php bugfix(50224); ?> (json_encode() does not always encode a float as a float) by adding JSON_PRESERVE_ZERO_FRACTION.</li>
+</ul></li>
+<li>LIBXML:
+<ul>
+  <li><?php bugfix(64938); ?> (libxml_disable_entity_loader setting is shared between threads).</li>
+</ul></li>
+<li>Mysqli:
+<ul>
+  <li><?php bugfix(68114); ?> (linker error on some OS X machines with fixed width decimal support) (Keyur Govande)</li>
+  <li><?php bugfix(68657); ?> (Reading 4 byte floats with Mysqli and libmysqlclient has rounding errors) (Keyur Govande)</li>
+</ul></li>
+<li>Opcache:
+<ul>
+  <li>Fixed bug with try blocks being removed when extended_info opcode generation is turned on.</li>
+</ul></li>
+<li>PDO_mysql:
+<ul>
+  <li><?php bugfix(68750); ?> (PDOMysql with mysqlnd does not allow the usage of named pipes).</li>
+</ul></li>
+<li>Phar:
+<ul>
+  <li><?php bugfix(68901); ?> (use after free).</li>
+</ul></li>
+<li>Pgsql:
+<ul>
+  <li><?php bugfix(65199); ?> (pg_copy_from() modifies input array variable) (Yasuo)</li>
+</ul></li>
+<li>Session:
+<ul>
+  <li><?php bugfix(68941); ?> (mod_files.sh is a bash-script) (bugzilla at ii.nl, Yasuo)</li>
+  <li><?php bugfix(66623); ?> (no EINTR check on flock) (Yasuo)</li>
+  <li><?php bugfix(68063); ?> (Empty session IDs do still start sessions) (Yasuo)</li>
+</ul></li>
+<li>Sqlite3:
+<ul>
+  <li><?php bugfix(68260); ?> (SQLite3Result::fetchArray declares wrong required_num_args).</li>
+</ul></li>
+<li>Standard:
+<ul>
+  <li><?php bugfix(65272); ?> (flock() out parameter not set correctly in windows).</li>
+  <li><?php bugfix(69033); ?> (Request may get env. variables from previous requests if PHP works as FastCGI).</li>
+</ul></li>
+<li>Streams:
+<ul>
+  <li>Fixed bug which caused call after final close on streams filter.</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
 <section class="version" id="5.5.22"><!-- {{{ 5.5.22 -->
 <h3>Version 5.5.22</h3>
 <b>19-Feb-2015</b>
