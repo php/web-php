@@ -8,6 +8,28 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 
 <h1>PHP 5 ChangeLog</h1>
 
+<section class="version" id="5.4.38"><!-- {{{ 5.4.38 -->
+<h3>Version 5.4.38</h3>
+<b>19-Feb-2015</b>
+<ul><li>Core:
+<ul>
+  <li>Removed support for multi-line headers, as they are deprecated by RFC 7230.</li>
+  <li>Added NULL byte protection to exec, system and passthru.</li>
+  <li><?php bugfix(68925); ?> (Mitigation for CVE-2015-0235 – GHOST: glibc gethostbyname buffer overflow).</li>
+  <li><?php bugfix(67827); ?> (broken detection of system crypt sha256/sha512 support).</li>
+  <li><?php bugfix(68942); ?> (Use after free vulnerability in unserialize() with DateTimeZone). (CVE-2015-0273)</li>
+</ul></li>
+<li>Enchant:
+<ul>
+  <li><?php bugfix(6855); ?> (heap buffer overflow in enchant_broker_request_dict()).</li>
+</ul></li>
+<li>SOAP:
+<ul>
+  <li><?php bugfix(67427); ?> (SoapServer cannot handle large messages).</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
 <section class="version" id="5.6.5"><!-- {{{ 5.6.5 -->
 <h3>Version 5.6.5</h3>
 <?php release_date('22-Jan-2015'); ?>

@@ -23,7 +23,7 @@ while(($ln = fgets($fp)) !== false) {
 		continue;
 	}
 	if($inside) {
-		if(preg_match('/, PHP \d+.\d+.\d+/', $ln)) {
+		if(preg_match('/,? PHP \d+.\d+.\d+/', $ln)) {
 			// next entry - we're done
 			break;
 		}
@@ -54,7 +54,7 @@ foreach($entries as $module => $items) {
 	echo "<li>$module:\n<ul>\n";
 	foreach($items as $item) {
 		// strip author
-		$item = preg_replace('/\.\s+\(.+?\)$/', '.', $item);
+		$item = preg_replace('/\.\s+\(.+?\)\s*$/', '.', $item);
 		// encode HTML
 		$item = htmlspecialchars($item, ENT_NOQUOTES);
 		// convert bug numbers
