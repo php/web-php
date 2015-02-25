@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom" xmlns:default="http://php.net/ns/news">
+  <title>Bulgaria PHP Conference</title>
+  <id>http://php.net/archive/2015.php#id2015-02-25-3</id>
+  <published>2015-02-25T12:53:27+01:00</published>
+  <updated>2015-02-25T12:53:27+01:00</updated>
+  <default:finalTeaserDate xmlns="http://php.net/ns/news">2015-03-16</default:finalTeaserDate>
+  <category term="conferences" label="Conference announcement"/>
+  <category term="cfp" label="Call for Papers"/>
+  <link href="http://php.net/conferences/index.php#id2015-02-25-3" rel="alternate" type="text/html"/>
+  <default:newsImage xmlns="http://php.net/ns/news" link="http://bgphp.org/" title="Bulgaria PHP Conference">conference-phpbulgaria2015.png</default:newsImage>
+  <link href="http://bgphp.org/" rel="via" type="text/html"/>
+  <content type="xhtml">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+     <p>The Bulgaria PHP Conference is an event organized by the local PHP user group: @bgphp. This is going to be our first conference but nonetheless we have attracted a number of prominent international and local speakers (<a href="http://www.bgphp.org/confirmed-speakers/" title="Confirmed speakers">http://www.bgphp.org/confirmed-speakers/</a>). We expect 450 attendees from Bulgaria, the Balkans region, Europe, and other parts of the world. We welcome a diverse crowd of PHP developers who want to learn new things and share their passion for code.</p>
+     
+     <p>Bulgaria is one of the fastest growing IT regions. A lot of international companies outsource their IT departments in the country. The PHP community is large and actively travels abroad to attend international summits of all kinds. The official language of the conference is English and all talks and sessions will be in English. Attendees and sponsors will be pleasantly surprised by the affordability of all services in the country. Hotel accommodation, food and even the tickets for the event are quite affordable, given the high quality of service you’ll get in return.</p>
+     
+     <p>Take advantage of our blind bird tickets (<a href="PHP Bulgaria tickets" title="PHP Bulgaria tickets">http://www.bgphp.org/tickets/</a>) by March 15th for only 49 EUR!.</p>
+    </div>
+  </content>
+</entry>
