@@ -53,19 +53,45 @@ $categories = array(
 );
 $confs = array(2, 3);
 
+$imageRestriction = array(
+	'width' => 400,
+	'height' => 400
+);
+
 do {
+	$catVerified = false;
 	fwrite(STDOUT, "Categories:\n");
 	foreach($categories as $n => $category) {
 		fprintf(STDOUT, "\t%d: %s\t [%s]\n", $n, key($category), current($category));
 	}
 	fwrite(STDOUT, "Please select appropriate categories, seperated with space: ");
 
-	$cat = explode(" ", rtrim(fgets(STDIN)));
+	$catInput = (string) rtrim(fgets(STDIN));
 
-	if ($cat) {
+	if (0 !== strlen($catInput)) {
+		$cat = explode(" ", $catInput);
+	} else {
+		fwrite(STDERR, "You have to pick at least one category\n");
+		continue;
+	}
+
+	$unknownCategories = array();
+	foreach($cat as $n) {
+		if (false === array_key_exists($n, $categories)) {
+			$unknownCategories[] = $n;
+		}
+	}
+
+	if (0 === count($unknownCategories)) {
+		$catVerified = true;
+	} else {
+		fwrite(STDERR, "Unknown categories selected: " . implode(',', $unknownCategories) . "\n");
+	}
+
+	if ($catVerified) {
 		break;
 	}
-	fwrite(STDERR, "You have to pick at least one category\n");
+
 } while(1);
 
 
@@ -104,8 +130,6 @@ if ($conf) {
 foreach($cat as $n) {
 	if (isset($categories[$n])) {
 		ce($dom, "category", null, array("term" => key($categories[$n]), "label" => current($categories[$n])), $item);
-	} else {
-		fprintf(STDERR, "Unkown category %d\n", $n);
 	}
 }
 
@@ -113,11 +137,37 @@ ce($dom, "link", null, array("href" => "$href#id$id", "rel"  => "alternate", "ty
 
 fwrite(STDOUT, "Will a picture be accompanying this entry? ");
 $yn = fgets(STDIN);
+
+
 if (strtoupper($yn[0]) == "Y") {
+	$isValidImage = false;
+
 	do {
 		fwrite(STDOUT, "Enter the image name (note: the image has to exist in './images/news'): ");
 		$path = basename(rtrim(fgets(STDIN)));
-	} while(!file_exists("./images/news/$path"));
+
+		if (true === file_exists("./images/news/$path")) {
+			$isValidImage = true;
+
+			if (true === extension_loaded('gd')) {
+				$imageSizes = getimagesize("./images/news/$path");
+
+				if (
+					$imageSizes[0] > $imageRestriction['width'] ||
+					$imageSizes[1] > $imageRestriction['height']
+				) {
+					fwrite(STDOUT, "Provided image has a higher size than recommended (" . implode(' by ', $imageRestriction) . "). Continue? ");
+					$ynImg = fgets(STDIN);
+					if (strtoupper($ynImg[0]) == "Y") {
+						break;
+					} else {
+						$isValidImage = false;
+					}
+				}
+			}
+		}
+
+	} while($isValidImage !== true);
 
 	fwrite(STDOUT, "Image title: ");
 	$title = rtrim(fgets(STDIN));
