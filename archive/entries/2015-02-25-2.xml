@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom" xmlns:default="http://php.net/ns/news">
+  <title>Lone Star PHP 2015</title>
+  <id>http://php.net/archive/2015.php#id2015-02-25-2</id>
+  <published>2015-02-25T11:21:44+01:00</published>
+  <updated>2015-02-25T11:21:44+01:00</updated>
+  <default:finalTeaserDate xmlns="http://php.net/ns/news">2015-04-16</default:finalTeaserDate>
+  <category term="conferences" label="Conference announcement"/>
+  <link href="http://php.net/conferences/index.php#id2015-02-25-2" rel="alternate" type="text/html"/>
+  <default:newsImage xmlns="http://php.net/ns/news" link="http://lonestarphp.com/" title="Lone Star PHP 2015">conference-logo-lonestar2015.png</default:newsImage>
+  <link href="http://lonestarphp.com/" rel="via" type="text/html"/>
+  <content type="xhtml">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+     <p>Welcome back to Lone Star PHP for another great year! We're in our <strong>fifth year</strong> and we're making things better all the time. This year's event will provide all of the great PHP speakers and content you've come to expect from Lone Star PHP. This year we are <strong>introducing the Training Day</strong>. Training Day will provide a more hands-on experience for all that attend. There'll be plenty of time to spend with the local PHP community too through after-parties and other events.</p>
+     
+     <p>Thanks to the generous support of our sponsors year after year we're able to present this conference at minimal cost to our attendees, opening up attendance to many who could not normally justify the cost of similar events. We couldn't do it without their support and we hope that this year you'll help us share this experience with the community. With the amazing feedback we receive each year from our attendees and sponsors we continue to improve our event to keep our place as the best php community conference around.</p>
+    </div>
+  </content>
+</entry>
