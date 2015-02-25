@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom" xmlns:default="http://php.net/ns/news">
+  <title>SOLIDay 2015</title>
+  <id>http://php.net/archive/2015.php#id2015-02-25-1</id>
+  <published>2015-02-25T11:14:34+01:00</published>
+  <updated>2015-02-25T11:14:34+01:00</updated>
+  <default:finalTeaserDate xmlns="http://php.net/ns/news">2015-05-30</default:finalTeaserDate>
+  <category term="conferences" label="Conference announcement"/>
+  <link href="http://php.net/conferences/index.php#id2015-02-25-1" rel="alternate" type="text/html"/>
+  <default:newsImage xmlns="http://php.net/ns/news" link="http://soliday.phpsrbija.rs/" title="SOLIDay 2015">conference-solid-day.png</default:newsImage>
+  <link href="http://soliday.phpsrbija.rs/" rel="via" type="text/html"/>
+  <content type="xhtml">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+     <p>Conference about software architecture, best programming practices and design patterns.</p>
+     
+     <p>PHP Serbia will be organizing a big event on May 30, 2015 – SOLIDay conference. Nicely coined name, huh? It will be one of the major events in the region, on which you will have opportunity to attend presentations of world-famous PHP experts and professionals, on topic of OOP principles, design patterns, software architecture, frameworks and similar. Whether you are a novice, intermediate or advanced developer, join us on this conference and expand, improve or simply refresh your knowledge of this important topic.</p>
+    </div>
+  </content>
+</entry>
