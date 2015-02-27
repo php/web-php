@@ -111,7 +111,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 </ul></li>
 <li>Enchant:
 <ul>
-  <li><?php bugfix(6855); ?> (heap buffer overflow in enchant_broker_request_dict()).</li>
+  <li><?php bugfix(68552); ?> (heap buffer overflow in enchant_broker_request_dict()).</li>
 </ul></li>
 <li>Fileinfo:
 <ul>
@@ -183,7 +183,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 </ul></li>
 <li>Enchant:
 <ul>
-  <li><?php bugfix(6855); ?> (heap buffer overflow in enchant_broker_request_dict()).</li>
+  <li><?php bugfix(68552); ?> (heap buffer overflow in enchant_broker_request_dict()).</li>
 </ul></li>
 <li>SOAP:
 <ul>
