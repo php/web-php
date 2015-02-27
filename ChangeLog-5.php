@@ -126,10 +126,6 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 <ul>
   <li><?php bugfix(64938); ?> (libxml_disable_entity_loader setting is shared between threads).</li>
 </ul></li>
-<li>OpenSSL:
-<ul>
-  <li><?php bugfix(55618); ?> (use case-insensitive cert name matching).</li>
-</ul></li>
 <li>PDO_mysql:
 <ul>
   <li><?php bugfix(68750); ?> (PDOMysql with mysqlnd does not allow the usage of named pipes).</li>
@@ -357,6 +353,10 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 <li>Opcache:
 <ul>
   <li><?php bugfix(67111); ?> (Memory leak when using "continue 2" inside two foreach loops).</li>
+</ul></li>
+<li>OpenSSL:
+<ul>
+  <li><?php bugfix(55618); ?> (use case-insensitive cert name matching).</li>
 </ul></li>
 <li>Pcntl:
 <ul>
