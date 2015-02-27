@@ -17,7 +17,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
   <li><?php bugfix(67068); ?> (getClosure returns somethings that's not a closure).</li>
   <li><?php bugfix(68942); ?> (Use after free vulnerability in unserialize() with DateTimeZone). (CVE-2015-0273)</li>
   <li><?php bugfix(68925); ?> (Mitigation for CVE-2015-0235 – GHOST: glibc gethostbyname buffer overflow).</li>
-  <li><?php bugfix(67988); ?> (htmlspecialchars() does not respect default_charset specified by ini_set) (Yasuo)</li>
+  <li><?php bugfix(67988); ?> (htmlspecialchars() does not respect default_charset specified by ini_set).</li>
   <li>Added NULL byte protection to exec, system and passthru.</li>
 </ul></li>
 <li>Dba:
@@ -49,8 +49,8 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 </ul></li>
 <li>Mysqli:
 <ul>
-  <li><?php bugfix(68114); ?> (linker error on some OS X machines with fixed width decimal support) (Keyur Govande)</li>
-  <li><?php bugfix(68657); ?> (Reading 4 byte floats with Mysqli and libmysqlclient has rounding errors) (Keyur Govande)</li>
+  <li><?php bugfix(68114); ?> (linker error on some OS X machines with fixed width decimal support).</li>
+  <li><?php bugfix(68657); ?> (Reading 4 byte floats with Mysqli and libmysqlclient has rounding errors).</li>
 </ul></li>
 <li>Opcache:
 <ul>
@@ -66,13 +66,13 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 </ul></li>
 <li>Pgsql:
 <ul>
-  <li><?php bugfix(65199); ?> (pg_copy_from() modifies input array variable) (Yasuo)</li>
+  <li><?php bugfix(65199); ?> (pg_copy_from() modifies input array variable).</li>
 </ul></li>
 <li>Session:
 <ul>
-  <li><?php bugfix(68941); ?> (mod_files.sh is a bash-script) (bugzilla at ii.nl, Yasuo)</li>
-  <li><?php bugfix(66623); ?> (no EINTR check on flock) (Yasuo)</li>
-  <li><?php bugfix(68063); ?> (Empty session IDs do still start sessions) (Yasuo)</li>
+  <li><?php bugfix(68941); ?> (mod_files.sh is a bash-script).</li>
+  <li><?php bugfix(66623); ?> (no EINTR check on flock).</li>
+  <li><?php bugfix(68063); ?> (Empty session IDs do still start sessions).</li>
 </ul></li>
 <li>Sqlite3:
 <ul>
