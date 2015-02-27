@@ -67,6 +67,8 @@ $SIDEBAR_DATA ='
        by which developers can suggest and discuss new ideas with the community</li>
      <li><a href="/build-setup.php">Developer Setup Help</a> - some helpful information
        regarding setting up a development environment for PHP</li>
+     <li><a href="/mailing-lists.php">Mailing List</a> - List of general and internal mailing lists
+      used by PHP</li>
     </ul>
   </div>
 </div>
