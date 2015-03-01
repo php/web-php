@@ -525,6 +525,10 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
   when not in transaction).</li>
   <li><?php bugfix(68351); ?> (PDO::PARAM_BOOL and ATTR_EMULATE_PREPARES misbehaving).</li>
 </ul></li>
+<li>SOAP:
+<ul>
+  <li><?php bugfix(68361); ?> (Segmentation fault on SoapClient::__getTypes).</li>
+</ul></li>
 <li>zlib:
 <ul>
   <li><?php bugfix(53829); ?> (Compiling PHP with large file support will replace
