@@ -13,7 +13,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 <?php release_date('19-Feb-2015'); ?>
 <ul><li>Core:
 <ul>
-  <li>Removed support for multi-line headers, as the are deprecated by RFC 7230.</li>
+  <li>Removed support for multi-line headers, as they are deprecated by RFC 7230.</li>
   <li><?php bugfix(67068); ?> (getClosure returns somethings that's not a closure).</li>
   <li><?php bugfix(68942); ?> (Use after free vulnerability in unserialize() with DateTimeZone). (CVE-2015-0273)</li>
   <li><?php bugfix(68925); ?> (Mitigation for CVE-2015-0235 – GHOST: glibc gethostbyname buffer overflow).</li>
@@ -99,7 +99,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
   <li><?php bugfix(68925); ?> (Mitigation for CVE-2015-0235 – GHOST: glibc gethostbyname buffer overflow).</li>
   <li><?php bugfix(68942); ?> (Use after free vulnerability in unserialize() with DateTimeZone). (CVE-2015-0273)</li>
   <li>Added NULL byte protection to exec, system and passthru.</li>
-  <li>Removed support for multi-line headers, as the are deprecated by RFC 7230.</li>
+  <li>Removed support for multi-line headers, as they are deprecated by RFC 7230.</li>
 </ul></li>
 <li>Date:
 <ul>
