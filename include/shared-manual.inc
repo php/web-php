@@ -358,7 +358,7 @@ function manual_navigation_related(array $setup) {
 
 function manual_navigation_deprecated(array $setup) {
     $methods = array();
-    foreach($setup['toc_deprecated'] as $entry) {
+    foreach((array)$setup['toc_deprecated'] as $entry) {
         $methods[] = array(
             "title" => manual_navigation_methodname($entry[1]),
             "link"  => $entry[0],
