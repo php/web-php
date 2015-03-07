@@ -337,16 +337,9 @@ function manual_navigation_breadcrumbs(array $setup) {
 
 function manual_navigation_related(array $setup) {
     $siblings = array();
-    foreach($setup["toc"] as $entry) {
-        // We strip out any class prefix here, we only want method names
-        $methodname = $entry[1];
-        if(strpos($entry[1], '::') !== false && strpos($entry[1], ' ') === false) {
-            list($classname, $methodname) = explode('::', $entry[1]); 
-        }       
-        //add zero-width spaces to allow line-breaks at various characters
-        $methodname = str_replace(array('-','_'), array('-&#8203;','_&#8203;'), $methodname);
+    foreach($setup['toc'] as $entry) {
         $siblings[] = array(
-            "title" => $methodname,
+            "title" => manual_navigation_methodname($entry[1]),
             "link"  => $entry[0],
             "current" => $setup["this"][0] == $entry[0],
         );      
@@ -363,6 +356,29 @@ function manual_navigation_related(array $setup) {
     return $siblings;
 }
 
+function manual_navigation_deprecated(array $setup) {
+    $methods = array();
+    foreach($setup['toc_deprecated'] as $entry) {
+        $methods[] = array(
+            "title" => manual_navigation_methodname($entry[1]),
+            "link"  => $entry[0],
+            "current" => $setup["this"][0] == $entry[0],
+        );
+    }
+
+    return $methods;
+}
+
+function manual_navigation_methodname($methodname) {
+    // We strip out any class prefix here, we only want method names
+    if (strpos($entry[1], '::') !== false && strpos($entry[1], ' ') === false) {
+        $tmp = explode('::', $entry[1]);
+        $methodname = $tmp[1];
+    }
+
+    // Add zero-width spaces to allow line-breaks at various characters
+    return str_replace(array('-','_'), array('-&#8203;','_&#8203;'), $methodname);
+}
 
 // Set up variables important for this page
 // including HTTP header information
@@ -399,8 +415,9 @@ function manual_setup($setup) {
     $lastmod = max($timestamps);
 
     $breadcrumbs = manual_navigation_breadcrumbs($setup);
-    $__RELATED = manual_navigation_related($setup);
-    
+    $__RELATED['toc'] = manual_navigation_related($setup);
+    $__RELATED['toc_deprecated'] = manual_navigation_deprecated($setup);
+
     $config = array(
         "current" => "docs",
         "breadcrumbs" => $breadcrumbs,
@@ -478,7 +495,8 @@ function manual_footer() {
     manual_notes($USERNOTES);
     echo "</section>";
     $config = array(
-        'related_menu' => $__RELATED
+        'related_menu' => $__RELATED['toc'],
+        'related_menu_deprecated' => $__RELATED['toc_deprecated']
     );
     site_footer($config);
 }
