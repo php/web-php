@@ -371,8 +371,8 @@ function manual_navigation_deprecated(array $setup) {
 
 function manual_navigation_methodname($methodname) {
     // We strip out any class prefix here, we only want method names
-    if (strpos($entry[1], '::') !== false && strpos($entry[1], ' ') === false) {
-        $tmp = explode('::', $entry[1]);
+    if (strpos($methodname, '::') !== false && strpos($methodname, ' ') === false) {
+        $tmp = explode('::', $methodname);
         $methodname = $tmp[1];
     }
 
