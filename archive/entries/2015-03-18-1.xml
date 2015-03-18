@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom" xmlns:default="http://php.net/ns/news">
+  <title>Italian phpDay 2015</title>
+  <id>http://php.net/archive/2015.php#id2015-03-18-1</id>
+  <published>2015-03-18T19:55:00+01:00</published>
+  <updated>2015-03-18T19:55:00+01:00</updated>
+  <default:finalTeaserDate xmlns="http://php.net/ns/news">2015-05-15</default:finalTeaserDate>
+  <category term="conferences" label="Conference announcement"/>
+  <link href="http://php.net/conferences/index.php#id2015-03-18-1" rel="alternate" type="text/html"/>
+  <default:newsImage xmlns="http://php.net/ns/news" link="http://2015.phpday.it/" title="Italian phpDay 2015">phpday2012.png</default:newsImage>
+  <link href="http://2015.phpday.it/" rel="via" type="text/html"/>
+  <content type="xhtml">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+     <p>The Italian PHP user group GrUSP is pleased to announce the 12th edition of the Italian phpDay (<a href="http://www.phpday.it/">http://www.phpday.it/</a>) conference, taking place on May 15th and 16th, 2012 in Verona. </p>
+     
+     <p>phpDay is the first historic Italian conference dedicated solely to PHP development, technologies and management. It is aimed to IT managers, developers and innovators. Each year it renews the opportunity to link to new business partners.</p>
+    </div>
+  </content>
+</entry>
