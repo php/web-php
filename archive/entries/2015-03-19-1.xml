@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom" xmlns:default="http://php.net/ns/news">
+  <title>PHP Tour Luxembourg</title>
+  <id>http://php.net/archive/2015.php#id2015-03-19-1</id>
+  <published>2015-03-19T15:33:43+00:00</published>
+  <updated>2015-03-19T15:33:43+00:00</updated>
+  <default:finalTeaserDate xmlns="http://php.net/ns/news">2015-05-12</default:finalTeaserDate>
+  <category term="conferences" label="Conference announcement"/>
+  <link href="http://php.net/conferences/index.php#id2015-03-19-1" rel="alternate" type="text/html"/>
+  <default:newsImage xmlns="http://php.net/ns/news" link="http://www.afup.org/pages/phptourluxembourg2015/apropos-en.php" title="PHP Tour Luxembourg">phptour2015.png</default:newsImage>
+  <link href="http://www.afup.org/pages/phptourluxembourg2015/apropos-en.php" rel="via" type="text/html"/>
+  <content type="xhtml">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+     <p>For the first time, the PHP Tour will take place outside of France: AFUP and the locale branch of Luxembourg will welcome you at the Abbey of Neumünster, a historical venue in the heart of Luxembourg City. English speakers? Come and join us, many talks will be proposed in english.</p>
+
+<p>AFUP, The French PHP usergroup, is glad to announce that the fourth edition of the PHP Tour will be held in Luxembourg City on May 12 &amp; 13, 2015. PHP experts will share their advanced knowledge and experience with developers, decision makers and companies, during keynotes, sessions and workshops.</p>
+
+<p>This year, just around the corner of Amazon and Microsoft offices, the event will be partly focused on the theme "PHP &amp; the Cloud": tools, continuous integration, security, costs... But of course, a lot of talks will be about PHP itself, innovation and improvement. Julien Pauli, Thibaut Lenclos, Wim Godden, Oswald de Riemaecker and François Zaninotto are the first speakers confirmed for the event. Who will join this dream team? Stay tuned to discover the program in the next few days. 
+Presentation length is 45 minutes which includes question time. 3 hours workshops with limited audience are planned on Wednesday.</p>
+
+<p>Still not convinced? This year, we celebrate PHP's 20th birthday, and AFUP's 15th birthday: book your ticket right now, and come to party with us! You’ve got your ticket ? Please book your hotel room as soon as possible : there are not so many hotels in Luxembourg-City, and May is a busy period in town.</p>
+    </div>
+  </content>
+</entry>
