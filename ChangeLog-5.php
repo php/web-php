@@ -26,7 +26,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 </ul></li>
 <li>Enchant:
 <ul>
-  <li><?php bugfix(68552); ?> (heap buffer overflow in enchant_broker_request_dict()).</li>
+  <li><?php bugfix(68552); ?> (heap buffer overflow in enchant_broker_request_dict()). (CVE-2014-9705)</li>
 </ul></li>
 <li>Fileinfo:
 <ul>
@@ -62,7 +62,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 </ul></li>
 <li>Phar:
 <ul>
-  <li><?php bugfix(68901); ?> (use after free).</li>
+  <li><?php bugfix(68901); ?> (use after free). (CVE-2015-2301)</li>
 </ul></li>
 <li>Pgsql:
 <ul>
@@ -111,7 +111,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 </ul></li>
 <li>Enchant:
 <ul>
-  <li><?php bugfix(68552); ?> (heap buffer overflow in enchant_broker_request_dict()).</li>
+  <li><?php bugfix(68552); ?> (heap buffer overflow in enchant_broker_request_dict()). (CVE-2014-9705)</li>
 </ul></li>
 <li>Fileinfo:
 <ul>
@@ -132,7 +132,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 </ul></li>
 <li>Phar:
 <ul>
-  <li><?php bugfix(68901); ?> (use after free).</li>
+  <li><?php bugfix(68901); ?> (use after free). (CVE-2015-2301)</li>
 </ul></li>
 <li>Pgsql:
 <ul>
