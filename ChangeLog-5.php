@@ -233,7 +233,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
   <li><?php bugfix(68665); ?> (invalid free in libmagic).</li>
   <li><?php bugfix(68671); ?> (incorrect expression in libmagic).</li>
   <li>Removed readelf.c and related code from libmagic sources.</li>
-  <li><?php bugfix(68735); ?> (fileinfo out-of-bounds memory access).</li>
+  <li><?php bugfix(68735); ?> (fileinfo out-of-bounds memory access). (CVE-2014-9652)</li>
 </ul></li>
 <li>FPM:
 <ul>
@@ -331,7 +331,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 <li>Fileinfo:
 <ul>
   <li><?php bugfix(68671); ?> (incorrect expression in libmagic).</li>
-  <li><?php bugfix(68735); ?> (fileinfo out-of-bounds memory access).</li>
+  <li><?php bugfix(68735); ?> (fileinfo out-of-bounds memory access). (CVE-2014-9652)</li>
   <li>Removed readelf.c and related code from libmagic sources.</li>
 </ul></li>
 <li>FPM:
@@ -417,7 +417,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 <li>Fileinfo:
 <ul>
   <li>Removed readelf.c and related code from libmagic sources.</li>
-  <li><?php bugfix(68735); ?> (fileinfo out-of-bounds memory access).</li>
+  <li><?php bugfix(68735); ?> (fileinfo out-of-bounds memory access). (CVE-2014-9652)</li>
 </ul></li>
 <li>OpenSSL:
 <ul>
