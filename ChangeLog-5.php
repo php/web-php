@@ -13,13 +13,13 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 <b>19-Mar-2015</b>
 <ul><li>Core:
 <ul>
-  <li><?php bugfix(68976); ?> (Use After Free Vulnerability in unserialize()) (CVE-2015-0231).</li>
+  <li><?php bugfix(68976); ?> (Use After Free Vulnerability in unserialize()). (CVE-2015-0231)</li>
   <li><?php bugfix(69134); ?> (Per Directory Values overrides PHP_INI_SYSTEM configuration options).</li>
   <li><?php bugfix(69207); ?> (move_uploaded_file allows nulls in path).</li>
 </ul></li>
 <li>Ereg:
 <ul>
-  <li><?php bugfix(69248); ?> (heap overflow vulnerability in regcomp.c) (CVE-2015-2305).</li>
+  <li><?php bugfix(69248); ?> (heap overflow vulnerability in regcomp.c). (CVE-2015-2305)</li>
 </ul></li>
 <li>SOAP:
 <ul>
@@ -27,7 +27,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 </ul></li>
 <li>ZIP:
 <ul>
-  <li><?php bugfix(69253); ?> (ZIP Integer Overflow leads to writing past heap boundary) (CVE-2015-2331).</li>
+  <li><?php bugfix(69253); ?> (ZIP Integer Overflow leads to writing past heap boundary). (CVE-2015-2331)</li>
 </ul></li>
 </ul>
 <!-- }}} --></section>
