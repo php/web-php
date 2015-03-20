@@ -57,7 +57,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 </ul></li>
 <li>OpenSSL:
 <ul>
-  <li>Fixed bugs #61285, #68329, #68046, #41631 (encrypted streams don't observe socket timeouts).</li>
+  <li><?php bugfix(61285); ?>, <? bugl(68329); ?>, <? bugl(68046); ?>, <? bugl(41631); ?> (encrypted streams don't observe socket timeouts).</li>
 </ul></li>
 <li>pgsql:
 <ul>
