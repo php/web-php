@@ -8,6 +8,82 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 
 <h1>PHP 5 ChangeLog</h1>
 
+<section class="version" id="5.5.23"><!-- {{{ 5.5.23 -->
+<h3>Version 5.5.23</h3>
+<b>19-Mar-2015</b>
+<ul><li>Core:
+<ul>
+  <li><?php bugfix(69174); ?> (leaks when unused inner class use traits precedence).</li>
+  <li><?php bugfix(69139); ?> (Crash in gc_zval_possible_root on unserialize).</li>
+  <li><?php bugfix(69121); ?> (Segfault in get_current_user when script owner is not in passwd with ZTS build).</li>
+  <li><?php bugfix(65593); ?> (Segfault when calling ob_start from output buffering callback).</li>
+  <li><?php bugfix(69017); ?> (Fail to push to the empty array with the constant value defined in class scope).</li>
+  <li><?php bugfix(68986); ?> (pointer returned by php_stream_fopen_temporary_file not validated in memory.c).</li>
+  <li><?php bugfix(68166); ?> (Exception with invalid character causes segv).</li>
+  <li><?php bugfix(69141); ?> (Missing arguments in reflection info for some builtin functions).</li>
+  <li><?php bugfix(68976); ?> (Use After Free Vulnerability in unserialize()). (CVE-2015-0231)</li>
+  <li><?php bugfix(69134); ?> (Per Directory Values overrides PHP_INI_SYSTEM configuration options).</li>
+  <li><?php bugfix(69207); ?> (move_uploaded_file allows nulls in path).</li>
+</ul></li>
+<li>CGI:
+<ul>
+  <li><?php bugfix(69015); ?> (php-cgi's getopt does not see $argv).</li>
+</ul></li>
+<li>CLI:
+<ul>
+  <li><?php bugfix(67741); ?> (auto_prepend_file messes up __LINE__).</li>
+</ul></li>
+<li>cURL:
+<ul>
+  <li><?php bugfix(69088); ?> (PHP_MINIT_FUNCTION does not fully initialize cURL on Win32).</li>
+  <li>Add CURLPROXY_SOCKS4A and CURLPROXY_SOCKS5_HOSTNAME constants if supported by libcurl.</li>
+</ul></li>
+<li>Ereg:
+<ul>
+  <li><?php bugfix(69248); ?> (heap overflow vulnerability in regcomp.c). (CVE-2015-2305).</li>
+</ul></li>
+<li>FPM:
+<ul>
+  <li><?php bugfix(68822); ?> (request time is reset too early).</li>
+</ul></li>
+<li>ODBC:
+<ul>
+  <li><?php bugfix(68964); ?> (Allowed memory size exhausted with odbc_exec).</li>
+</ul></li>
+<li>Opcache:
+<ul>
+  <li><?php bugfix(69125); ?> (Array numeric string as key).</li>
+  <li><?php bugfix(69038); ?> (switch(SOMECONSTANT) misbehaves).</li>
+</ul></li>
+<li>OpenSSL:
+<ul>
+  <li>Fixed bugs #61285, #68329, #68046, #41631 (encrypted streams don't observe socket timeouts).</li>
+</ul></li>
+<li>pgsql:
+<ul>
+  <li><?php bugfix(68638); ?> (pg_update() fails to store infinite values).</li>
+</ul></li>
+<li>Readline:
+<ul>
+  <li><?php bugfix(69054); ?> (Null dereference in readline_(read|write)_history() without parameters).</li>
+</ul></li>
+<li>SOAP:
+<ul>
+  <li><?php bugfix(69085); ?> (SoapClient's __call() type confusion through unserialize()).</li>
+</ul></li>
+<li>SPL:
+<ul>
+  <li><?php bugfix(69108); ?> ("Segmentation fault" when (de)serializing SplObjectStorage).</li>
+  <li><?php bugfix(68557); ?> (RecursiveDirectoryIterator::seek(0) broken after calling getChildren()).</li>
+</ul></li>
+<li>ZIP:
+<ul>
+  <li><?php bugfix(69253); ?> (ZIP Integer Overflow leads to writing past heap boundary). (CVE-2015-2331).</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
+
 <section class="version" id="5.4.39"><!-- {{{ 5.4.39 -->
 <h3>Version 5.4.39</h3>
 <b>19-Mar-2015</b>
