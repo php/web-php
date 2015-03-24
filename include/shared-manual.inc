@@ -389,6 +389,9 @@ function manual_setup($setup) {
     //TODO: get rid of this hack to get the related items into manual_footer
     global $__RELATED; 
 
+    if (!isset($setup["toc_deprecated"])) {
+        $setup["toc_deprecated"] = array();
+    }
     $PGI = $setup;
     // Set base href for this manual page
     $base = 'manual/' . language_convert($setup['head'][1]) . "/";
