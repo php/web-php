@@ -423,7 +423,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 </ul></li>
 <li>GD:
 <ul>
-  <li><?php bugfix(68601); ?> (buffer read overflow in gd_gif_in.c).</li>
+  <li><?php bugfix(68601); ?> (buffer read overflow in gd_gif_in.c). (CVE-2014-9709)</li>
   <li><?php implemented(68656); ?> (Report gd library version).</li>
 </ul></li>
 <li>mbstring:
@@ -521,7 +521,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 </ul></li>
 <li>GD:
 <ul>
-  <li><?php bugfix(68601); ?> (buffer read overflow in gd_gif_in.c).</li>
+  <li><?php bugfix(68601); ?> (buffer read overflow in gd_gif_in.c). (CVE-2014-9709)</li>
 </ul></li>
 <li>Mbstring:
 <ul>
