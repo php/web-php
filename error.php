@@ -131,6 +131,26 @@ if (preg_match("!^get/([^/]+)$!", $URI, $what)) {
     }
 }
 
+// Method of downloading files that is wget friendly
+// This method serves requests for /download/filename.ext from THIS mirror
+if (preg_match("|^download/(.+?)$|", $URI, $match)) {
+    $filename = $match[1];
+
+    include $_SERVER['DOCUMENT_ROOT'] . "/include/do-download.inc";
+    $filename = get_actual_download_file($filename);
+
+    if ($filename) {
+        // Found the file, so we do a redirect to the file directly
+        status_header(200);
+        download_file($MYSITE, $filename);
+    } else {
+        // File missing on the server
+        status_header(404);
+        include $_SERVER['DOCUMENT_ROOT'] . "/include/get-download.inc";
+    }
+
+    exit;
+}
 
 // ============================================================================
 // Nice URLs for download files, so wget works completely well with download links
