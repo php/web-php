@@ -7,11 +7,11 @@
     }
 
     ?>
-<?php if ($config['related_menu'] || $config['related_menu_deprecated']): ?>
+<?php if (!empty($config['related_menu']) || !empty($config['related_menu_deprecated'])): ?>
     <aside class='layout-menu'>
     
         <ul class='parent-menu-list'>
-            <?php if ($config['related_menu']): ?>
+            <?php if (!empty($config['related_menu'])): ?>
             <?php foreach($config['related_menu'] as $section): ?>
             <li>
                 <a href="<?php echo $section['link']; ?>"><?php echo $section['title']; ?></a>
@@ -35,7 +35,7 @@
             <?php endforeach; ?>
             <?php endif; ?>
 
-            <?php if ($config['related_menu_deprecated']): ?>
+            <?php if (!empty($config['related_menu_deprecated'])): ?>
             <li>
                 <span class="header">Deprecated</span>
                 <ul class="child-menu-list">
