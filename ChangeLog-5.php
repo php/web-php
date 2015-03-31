@@ -20,7 +20,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
   <li><?php bugfix(68986); ?> (pointer returned by php_stream_fopen_temporary_file not validated in memory.c).</li>
   <li><?php bugfix(68166); ?> (Exception with invalid character causes segv).</li>
   <li><?php bugfix(69141); ?> (Missing arguments in reflection info for some builtin functions).</li>
-  <li><?php bugfix(68976); ?> (Use After Free Vulnerability in unserialize()). (CVE-2015-0231)</li>
+  <li><?php bugfix(68976); ?> (Use After Free Vulnerability in unserialize()). (CVE-2015-2787)</li>
   <li><?php bugfix(69134); ?> (Per Directory Values overrides PHP_INI_SYSTEM configuration options).</li>
   <li><?php bugfix(69207); ?> (move_uploaded_file allows nulls in path).</li>
 </ul></li>
@@ -102,7 +102,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
   <li><?php bugfix(68986); ?> (pointer returned by php_stream_fopen_temporary_file not validated in memory.c).</li>
   <li><?php bugfix(68166); ?> (Exception with invalid character causes segv).</li>
   <li><?php bugfix(69141); ?> (Missing arguments in reflection info for some builtin functions).</li>
-  <li><?php bugfix(68976); ?> (Use After Free Vulnerability in unserialize()). (CVE-2015-0231)</li>
+  <li><?php bugfix(68976); ?> (Use After Free Vulnerability in unserialize()). (CVE-2015-2787)</li>
   <li><?php bugfix(69134); ?> (Per Directory Values overrides PHP_INI_SYSTEM configuration options).</li>
   <li><?php bugfix(69207); ?> (move_uploaded_file allows nulls in path).</li>
 </ul></li>
@@ -170,7 +170,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 <b>19-Mar-2015</b>
 <ul><li>Core:
 <ul>
-  <li><?php bugfix(68976); ?> (Use After Free Vulnerability in unserialize()). (CVE-2015-0231)</li>
+  <li><?php bugfix(68976); ?> (Use After Free Vulnerability in unserialize()). (CVE-2015-2787)</li>
   <li><?php bugfix(69134); ?> (Per Directory Values overrides PHP_INI_SYSTEM configuration options).</li>
   <li><?php bugfix(69207); ?> (move_uploaded_file allows nulls in path).</li>
 </ul></li>
