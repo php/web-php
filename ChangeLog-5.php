@@ -22,7 +22,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
   <li><?php bugfix(69141); ?> (Missing arguments in reflection info for some builtin functions).</li>
   <li><?php bugfix(68976); ?> (Use After Free Vulnerability in unserialize()). (CVE-2015-2787)</li>
   <li><?php bugfix(69134); ?> (Per Directory Values overrides PHP_INI_SYSTEM configuration options).</li>
-  <li><?php bugfix(69207); ?> (move_uploaded_file allows nulls in path).</li>
+  <li><?php bugfix(69207); ?> (move_uploaded_file allows nulls in path). (CVE-2015-2348)</li>
 </ul></li>
 <li>CGI:
 <ul>
@@ -104,7 +104,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
   <li><?php bugfix(69141); ?> (Missing arguments in reflection info for some builtin functions).</li>
   <li><?php bugfix(68976); ?> (Use After Free Vulnerability in unserialize()). (CVE-2015-2787)</li>
   <li><?php bugfix(69134); ?> (Per Directory Values overrides PHP_INI_SYSTEM configuration options).</li>
-  <li><?php bugfix(69207); ?> (move_uploaded_file allows nulls in path).</li>
+  <li><?php bugfix(69207); ?> (move_uploaded_file allows nulls in path). (CVE-2015-2348)</li>
 </ul></li>
 <li>CGI:
 <ul>
@@ -172,7 +172,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 <ul>
   <li><?php bugfix(68976); ?> (Use After Free Vulnerability in unserialize()). (CVE-2015-2787)</li>
   <li><?php bugfix(69134); ?> (Per Directory Values overrides PHP_INI_SYSTEM configuration options).</li>
-  <li><?php bugfix(69207); ?> (move_uploaded_file allows nulls in path).</li>
+  <li><?php bugfix(69207); ?> (move_uploaded_file allows nulls in path). (CVE-2015-2348)</li>
 </ul></li>
 <li>Ereg:
 <ul>
