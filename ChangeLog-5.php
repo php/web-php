@@ -406,7 +406,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 </ul></li>
 <li>EXIF:
 <ul>
-  <li><?php bugfix(68799); ?> (Free called on unitialized pointer). (CVE-2015-0232)</li>
+  <li><?php bugfix(68799); ?> (Free called on uninitialized pointer). (CVE-2015-0232)</li>
 </ul></li>
 <li>Fileinfo:
 <ul>
@@ -507,7 +507,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 </ul></li>
 <li>EXIF:
 <ul>
-  <li><?php bugfix(68799); ?> (Free called on unitialized pointer). (CVE-2015-0232)</li>
+  <li><?php bugfix(68799); ?> (Free called on uninitialized pointer). (CVE-2015-0232)</li>
 </ul></li>
 <li>Fileinfo:
 <ul>
@@ -593,7 +593,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 </ul></li>
 <li>EXIF:
 <ul>
-  <li><?php bugfix(68799); ?> (Free called on unitialized pointer). (CVE-2015-0232)</li>
+  <li><?php bugfix(68799); ?> (Free called on uninitialized pointer). (CVE-2015-0232)</li>
 </ul></li>
 <li>Fileinfo:
 <ul>
