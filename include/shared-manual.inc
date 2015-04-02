@@ -464,7 +464,8 @@ function manual_language_chooser($currentlang, $currentpage) {
     }
 
     // Print out the form with all the options
-    $format_options = function (array $links) use ($currentlang) {
+    $othersel = ' selected="selected"';
+    $format_options = function (array $links) use ($currentlang, &$othersel) {
         $out = '';
         $tab = str_repeat('  ', 6);
         foreach ($links as $link) {
@@ -472,6 +473,7 @@ function manual_language_chooser($currentlang, $currentpage) {
             $selected = '';
             if ($lang == $currentlang) {
                 $selected = ' selected="selected"';
+                $othersel = '';
             }
             $out .= "$tab<option value='$value'$selected>$text</option>\n";
         }
@@ -483,7 +485,7 @@ function manual_language_chooser($currentlang, $currentpage) {
           <label for="changelang-langs">Change language:</label>
           <select onchange="document.changelang.submit()" name="page" id="changelang-langs">
             {$format_options($links)}
-            <option value="help-translate.php">Other</option>
+            <option value="help-translate.php"{$othersel}>Other</option>
           </select>
         </fieldset>
       </form>
