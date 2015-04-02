@@ -210,7 +210,7 @@ function google_cse($default = '', $lang = 'en') {
   JavaScript and reload to continue.
 </noscript>
 <div id="cse" style="width: 100%;"></div>
-<script src="http://www.google.com/jsapi" type="text/javascript"></script>
+<script src="//www.google.com/jsapi" type="text/javascript"></script>
 <script type="text/javascript"> 
   document.getElementById("cse").innerHTML = "Loading...";
   google.load('search', '1', {language : '<?php echo $lang; ?>', style : google.loader.themes.MINIMALIST});
