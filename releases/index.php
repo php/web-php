@@ -4,10 +4,11 @@ $_SERVER['BASE_PAGE'] = 'releases/index.php';
 include_once $_SERVER['DOCUMENT_ROOT'] . '/include/prepend.inc';
 include_once $_SERVER["DOCUMENT_ROOT"] . "/include/branches.inc";
 
-if (isset($_GET["serialize"])) {
+if (isset($_GET["serialize"]) || isset($_GET["json"])) {
 	$RELEASES[5][$PHP_5_4_VERSION]["date"] = $PHP_5_4_DATE;
-	$RELEASES[5][$PHP_5_3_VERSION]["date"] = $PHP_5_3_DATE;
 	$RELEASES                              = $RELEASES + $OLDRELEASES;
+
+	$machineReadable = array();
 
 	if (isset($_GET["version"])) {
 		$ver = (int)$_GET["version"];
@@ -19,14 +20,14 @@ if (isset($_GET["serialize"])) {
 				$max = (int)$_GET["max"];
 				if ($max == -1) { $max = PHP_INT_MAX; }
 
-				$return = array($version => $r);
+				$machineReadable = array($version => $r);
 
 				$count = 1;
 
 				/* check if other $RELEASES[$ver] are there */
 				/* e.g., 5_3, 5_4, and 5_5 all exist and have a release */
 				while(($z = each($RELEASES[$ver])) && $count++ < $max) {
-					$return[$z[0]] = $z[1];
+					$machineReadable[$z[0]] = $z[1];
 				}
 
 				foreach($OLDRELEASES[$ver] as $version => $release) {
@@ -34,25 +35,31 @@ if (isset($_GET["serialize"])) {
 						break;
 					}
 
-					$return[$version] = $release;
+					$machineReadable[$version] = $release;
 				}
-				echo serialize($return);
 			} else {
 				$r["version"] = $version;
 
-				echo serialize($r);
+				$machineReadable = $r;
 			}
 		} else {
-			echo serialize(array("error" => "Unknown version"));
+			$machineReadable = array("error" => "Unknown version");
 		}
 	} else {
-		$array = array();
+		$machineReadable = array();
 		foreach($RELEASES as $major => $release) {
 			list($version, $r) = each($release);
 			$r["version"] = $version;
-			$array[$major] = $r;
+			$machineReadable[$major] = $r;
 		}
-		echo serialize($array);
+	}
+
+	if (isset($_GET["serialize"])) {
+		header('Content-type: text/plain');
+		echo serialize($machineReadable);
+	} elseif (isset($_GET["json"])) {
+		header('Content-Type: application/json');
+		echo json_encode($machineReadable);
 	}
 	return;
 }
@@ -100,11 +107,24 @@ $SIDEBAR_DATA = '
 </div>
 
 <div class="panel">
-  <div class="headline">Want a PHP serialize()d list of the PHP releases?</div>
+  <div class="headline">Want a PHP serialized list of the PHP releases?</div>
   <div class="body">
-    <p>Add <a href="?serialize=1">?serialize=1</a> to the url</p>
-    <p>Only want PHP 5 releases? <a href="?serialize=1&amp;version=5">&amp;version=5</a></p>
-    <p>The last 3? <a href="?serialize=1&amp;version=5&amp;max=3">&amp;max=3</a></p>
+    <ul>
+      <li>Add <a href="?serialize">?serialize</a> to the url</li>
+      <li>Only want PHP 5 releases? <a href="?serialize&amp;version=5">&amp;version=5</a></li>
+      <li>The last 3? <a href="?serialize&amp;version=5&amp;max=3">&amp;max=3</a></li>
+    </ul>
+  </div>
+</div>
+
+<div class="panel">
+  <div class="headline">Want a JSON list of the PHP releases?</div>
+  <div class="body">
+    <ul>
+      <li>Add <a href="?json">?json</a> to the url</li>
+      <li>Only want PHP 5 releases? <a href="?json&amp;version=5">&amp;version=5</a></li>
+      <li>The last 3? <a href="?json&amp;version=5&amp;max=3">&amp;max=3</a></li>
+    </ul>
   </div>
 </div>
 ';
