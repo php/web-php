@@ -7,7 +7,6 @@ include_once $_SERVER["DOCUMENT_ROOT"] . "/include/branches.inc";
 if (isset($_GET["serialize"])) {
 	header('Content-type: text/plain');
 	$RELEASES[5][$PHP_5_4_VERSION]["date"] = $PHP_5_4_DATE;
-	$RELEASES[5][$PHP_5_3_VERSION]["date"] = $PHP_5_3_DATE;
 	$RELEASES                              = $RELEASES + $OLDRELEASES;
 
 	if (isset($_GET["version"])) {
@@ -61,7 +60,6 @@ if (isset($_GET["serialize"])) {
 if (isset($_GET["json"])) {
 	header('Content-Type: application/json');
 	$RELEASES[5][$PHP_5_4_VERSION]["date"] = $PHP_5_4_DATE;
-	$RELEASES[5][$PHP_5_3_VERSION]["date"] = $PHP_5_3_DATE;
 	$RELEASES                              = $RELEASES + $OLDRELEASES;
 
 	if (isset($_GET["version"])) {
