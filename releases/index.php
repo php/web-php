@@ -107,20 +107,24 @@ $SIDEBAR_DATA = '
 </div>
 
 <div class="panel">
-  <div class="headline">Want a PHP serialize()d list of the PHP releases?</div>
+  <div class="headline">Want a PHP serialized list of the PHP releases?</div>
   <div class="body">
-    <p>Add <a href="?serialize">?serialize</a> to the url</p>
-    <p>Only want PHP 5 releases? <a href="?serialize&amp;version=5">&amp;version=5</a></p>
-    <p>The last 3? <a href="?serialize&amp;version=5&amp;max=3">&amp;max=3</a></p>
+    <ul>
+      <li>Add <a href="?serialize">?serialize</a> to the url</li>
+      <li>Only want PHP 5 releases? <a href="?serialize&amp;version=5">&amp;version=5</a></li>
+      <li>The last 3? <a href="?serialize&amp;version=5&amp;max=3">&amp;max=3</a></li>
+    </ul>
   </div>
 </div>
 
 <div class="panel">
-  <div class="headline">Want a json_encode()ded list of the PHP releases?</div>
+  <div class="headline">Want a JSON list of the PHP releases?</div>
   <div class="body">
-    <p>Add <a href="?json">?json</a> to the url</p>
-    <p>Only want PHP 5 releases? <a href="?json&amp;version=5">&amp;version=5</a></p>
-    <p>The last 3? <a href="?json&amp;version=5&amp;max=3">&amp;max=3</a></p>
+    <ul>
+      <li>Add <a href="?json">?json</a> to the url</li>
+      <li>Only want PHP 5 releases? <a href="?json&amp;version=5">&amp;version=5</a></li>
+      <li>The last 3? <a href="?json&amp;version=5&amp;max=3">&amp;max=3</a></li>
+    </ul>
   </div>
 </div>
 ';
