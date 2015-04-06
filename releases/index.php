@@ -4,10 +4,11 @@ $_SERVER['BASE_PAGE'] = 'releases/index.php';
 include_once $_SERVER['DOCUMENT_ROOT'] . '/include/prepend.inc';
 include_once $_SERVER["DOCUMENT_ROOT"] . "/include/branches.inc";
 
-if (isset($_GET["serialize"])) {
-	header('Content-type: text/plain');
+if (isset($_GET["serialize"]) || isset($_GET["json"])) {
 	$RELEASES[5][$PHP_5_4_VERSION]["date"] = $PHP_5_4_DATE;
 	$RELEASES                              = $RELEASES + $OLDRELEASES;
+
+	$return = array();
 
 	if (isset($_GET["version"])) {
 		$ver = (int)$_GET["version"];
@@ -36,14 +37,13 @@ if (isset($_GET["serialize"])) {
 
 					$return[$version] = $release;
 				}
-				echo serialize($return);
 			} else {
 				$r["version"] = $version;
 
-				echo serialize($r);
+				$return = $r;
 			}
 		} else {
-			echo serialize(array("error" => "Unknown version"));
+			$return = array("error" => "Unknown version");
 		}
 	} else {
 		$array = array();
@@ -52,60 +52,15 @@ if (isset($_GET["serialize"])) {
 			$r["version"] = $version;
 			$array[$major] = $r;
 		}
-		echo serialize($array);
+		$return = $array;
 	}
-	return;
-}
 
-if (isset($_GET["json"])) {
-	header('Content-Type: application/json');
-	$RELEASES[5][$PHP_5_4_VERSION]["date"] = $PHP_5_4_DATE;
-	$RELEASES                              = $RELEASES + $OLDRELEASES;
-
-	if (isset($_GET["version"])) {
-		$ver = (int)$_GET["version"];
-
-		if (isset($RELEASES[$ver])) {
-			list($version, $r) = each($RELEASES[$ver]);
-
-			if (isset($_GET["max"])) {
-				$max = (int)$_GET["max"];
-				if ($max == -1) { $max = PHP_INT_MAX; }
-
-				$return = array($version => $r);
-
-				$count = 1;
-
-				/* check if other $RELEASES[$ver] are there */
-				/* e.g., 5_3, 5_4, and 5_5 all exist and have a release */
-				while(($z = each($RELEASES[$ver])) && $count++ < $max) {
-					$return[$z[0]] = $z[1];
-				}
-
-				foreach($OLDRELEASES[$ver] as $version => $release) {
-					if ($max <= $count++) {
-						break;
-					}
-
-					$return[$version] = $release;
-				}
-				echo json_encode($return);
-			} else {
-				$r["version"] = $version;
-
-				echo json_encode($r);
-			}
-		} else {
-			echo json_encode(array("error" => "Unknown version"));
-		}
-	} else {
-		$array = array();
-		foreach($RELEASES as $major => $release) {
-			list($version, $r) = each($release);
-			$r["version"] = $version;
-			$array[$major] = $r;
-		}
-		echo json_encode($array);
+	if (isset($_GET["serialize"])) {
+		header('Content-type: text/plain');
+		echo serialize($return);
+	} elseif (isset($_GET["json"])) {
+		header('Content-Type: application/json');
+		echo json_encode($return);
 	}
 	return;
 }
