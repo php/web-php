@@ -452,27 +452,27 @@ Search snippet provider: A dirty proof-of-concept:
 function is_known_snippet($term) {
 $snippets = array(
 	'global'	=> '
-		The <b>global</b> keyword is used to manipulate <a href="/language.variables.scope.php">variable scope</a>, and
-		there is also the concept of <a href="/language.variables.superglobals.php">super globals</a> in PHP,
+		The <b>global</b> keyword is used to manipulate <a href="/language.variables.scope">variable scope</a>, and
+		there is also the concept of <a href="/language.variables.superglobals">super globals</a> in PHP,
 		which are special variables with a global scope.',
 	'string'	=> '
-		There is the <a href="/language.types.string.php">string type</a>, which is a scalar, 
-		and also many <a href="/ref.strings.php">string functions.</a>',
+		There is the <a href="/language.types.string">string type</a>, which is a scalar, 
+		and also many <a href="/ref.strings">string functions.</a>',
 	'str'		=> '
-		Many <a href="/ref.strings.php">string functions</a> begin with <b>str</b>, 
-		and there is also the <a href="/language.types.string.php">string type</a>.',
+		Many <a href="/ref.strings">string functions</a> begin with <b>str</b>, 
+		and there is also the <a href="/language.types.string">string type</a>.',
 	'_server'	=> '
-		<a href="/reserved.variables.server.php">$_SERVER</a> 
-		is a <a href="/language.variables.superglobals.php">super global</a>, 
+		<a href="/reserved.variables.server">$_SERVER</a> 
+		is a <a href="/language.variables.superglobals">super global</a>, 
 		and is home to many predefined variables that are typically provided by a web server',
 	'class'		=> '
-		A <a href="/language.oop5.php">class</a> is an OOP (Object Oriented Programming) concept,
+		A <a href="/language.oop5">class</a> is an OOP (Object Oriented Programming) concept,
 		and PHP is both a procedural and OOP friendly language.',
 	'function'	=> '
 		PHP contains thousands of functions. You might be interested in how a
-		<a href="/language.functions.php">function is defined</a>, or
-		<a href="/about.prototypes.php">how to read a function prototype</a>.
-		See also the list of <a href="/extensions.php">PHP extensions</a>',
+		<a href="/language.functions">function is defined</a>, or
+		<a href="/about.prototypes">how to read a function prototype</a>.
+		See also the list of <a href="/extensions">PHP extensions</a>',
 	);
 
 	$term = strtolower(trim($term));
