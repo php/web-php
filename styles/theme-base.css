@@ -1292,7 +1292,8 @@ div.tip p:first-child {
     margin:0;
 }
 .docs .example-contents > [class$="code"],
-.docs .example-contents.screen {
+.docs .example-contents.screen,
+.informalexample .literallayout {
     padding: .75rem;
 }
 

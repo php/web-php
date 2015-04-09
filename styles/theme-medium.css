@@ -315,7 +315,8 @@ div.warning a:focus {
 /* {{{ Syntax highlighting (and other similar boxes) */
 #usernotes .note .text,
 .example-contents > [class$="code"],
-.example-contents.screen {
+.example-contents.screen,
+.informalexample .literallayout {
   background-color: #FFF;
   box-shadow: inset 0 0 0 1px rgba(0,0,0,.15);
   border-radius: 0 0 2px 2px;
