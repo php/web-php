@@ -17,7 +17,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
   <li><?php bugfix(68021); ?> (get_browser() browser_name_regex returns non-utf-8 characters).</li>
   <li><?php bugfix(68917); ?> (parse_url fails on some partial urls).</li>
   <li><?php bugfix(69134); ?> (Per Directory Values overrides PHP_INI_SYSTEM configuration options).</li>
-  <li>Additional fix for bug #69152 (Type confusion vulnerability in exception::getTraceAsString).</li>
+  <li>Additional fix for bug <?php bugl(69152); ?> (Type confusion vulnerability in exception::getTraceAsString).</li>
   <li><?php bugfix(69210); ?> (serialize function return corrupted data when sleep has non-string values).</li>
   <li><?php bugfix(69212); ?> (Leaking VIA_HANDLER func when exception thrown in __call/... arg passing).</li>
   <li><?php bugfix(69221); ?> (Segmentation fault when using a generator in combination with an Iterator).</li>
@@ -112,7 +112,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
   <li><?php bugfix(68021); ?> (get_browser() browser_name_regex returns non-utf-8 characters).</li>
   <li><?php bugfix(68917); ?> (parse_url fails on some partial urls).</li>
   <li><?php bugfix(69134); ?> (Per Directory Values overrides PHP_INI_SYSTEM configuration options).</li>
-  <li>Additional fix for bug #69152 (Type confusion vulnerability in exception::getTraceAsString).</li>
+  <li>Additional fix for bug <?php bugl(69152); ?> (Type confusion vulnerability in exception::getTraceAsString).</li>
   <li><?php bugfix(69212); ?> (Leaking VIA_HANDLER func when exception thrown in __call/... arg passing).</li>
   <li><?php bugfix(69221); ?> (Segmentation fault when using a generator in combination with an Iterator).</li>
   <li><?php bugfix(69337); ?> (php_stream_url_wrap_http_ex() type-confusion vulnerability).</li>
@@ -193,7 +193,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 </ul></li>
 <li>Core:
 <ul>
-  <li>Additional fix for bug #69152 (Type confusion vulnerability in exception::getTraceAsString).</li>
+  <li>Additional fix for bug <?php bugl(69152); ?> (Type confusion vulnerability in exception::getTraceAsString).</li>
   <li><?php bugfix(69337); ?> (php_stream_url_wrap_http_ex() type-confusion vulnerability).</li>
   <li><?php bugfix(69353); ?> (Missing null byte checks for paths in various PHP extensions).</li>
 </ul></li>
