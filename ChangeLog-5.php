@@ -74,7 +74,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
   <li><?php bugfix(64931); ?> (phar_add_file is too restrictive on filename).</li>
   <li><?php bugfix(65467); ?> (Call to undefined method cli_arg_typ_string).</li>
   <li><?php bugfix(67761); ?> (Phar::mapPhar fails for Phars inside a path containing ".tar").</li>
-  <li><?php bugfix(69324); ?> (Buffer Over-read in unserialize when parsing Phar).</li>
+  <li><?php bugfix(69324); ?> (Buffer Over-read in unserialize when parsing Phar). (CVE-2015-2783)</li>
   <li><?php bugfix(69441); ?> (Buffer Overflow when parsing tar/zip/phar in phar_set_inode).</li>
 </ul></li>
 <li>Postgres:
@@ -161,7 +161,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
   <li><?php bugfix(64931); ?> (phar_add_file is too restrictive on filename).</li>
   <li><?php bugfix(65467); ?> (Call to undefined method cli_arg_typ_string).</li>
   <li><?php bugfix(67761); ?> (Phar::mapPhar fails for Phars inside a path containing ".tar").</li>
-  <li><?php bugfix(69324); ?> (Buffer Over-read in unserialize when parsing Phar).</li>
+  <li><?php bugfix(69324); ?> (Buffer Over-read in unserialize when parsing Phar). (CVE-2015-2783)</li>
   <li><?php bugfix(69441); ?> (Buffer Overflow when parsing tar/zip/phar in phar_set_inode).</li>
 </ul></li>
 <li>Postgres:
@@ -180,6 +180,56 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 <ul>
   <li><?php bugfix(68760); ?> (SQLITE segfaults if custom collator throws an exception).</li>
   <li><?php bugfix(69287); ?> (Upgrade bundled sqlite to 3.8.8.3).</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
+<section class="version" id="5.4.40"><!-- {{{ 5.4.40 -->
+<h3>Version 5.4.40</h3>
+<b>16-Apr-2015</b>
+<ul><li>Apache2handler:
+<ul>
+  <li><?php bugfix(69218); ?> (potential remote code execution with apache 2.4 apache2handler).</li>
+</ul></li>
+<li>Core:
+<ul>
+  <li>Additional fix for bug #69152 (Type confusion vulnerability in exception::getTraceAsString).</li>
+  <li><?php bugfix(69337); ?> (php_stream_url_wrap_http_ex() type-confusion vulnerability).</li>
+  <li><?php bugfix(69353); ?> (Missing null byte checks for paths in various PHP extensions).</li>
+</ul></li>
+<li>cURL:
+<ul>
+  <li><?php bugfix(69316); ?> (Use-after-free in php_curl related to CURLOPT_FILE/_INFILE/_WRITEHEADER).</li>
+</ul></li>
+<li>Ereg:
+<ul>
+  <li><?php bugfix(68740); ?> (NULL Pointer Dereference).</li>
+</ul></li>
+<li>Fileinfo:
+<ul>
+  <li><?php bugfix(68819); ?> (Fileinfo on specific file causes spurious OOM and/or segfault).</li>
+</ul></li>
+<li>GD:
+<ul>
+  <li><?php bugfix(68601); ?> (buffer read overflow in gd_gif_in.c). (CVE-2014-9709)</li>
+</ul></li>
+<li>Phar:
+<ul>
+  <li><?php bugfix(68901); ?> (use after free). (CVE-2015-2301)</li>
+  <li><?php bugfix(69324); ?> (Buffer Over-read in unserialize when parsing Phar). (CVE-2015-2783)</li>
+  <li><?php bugfix(69441); ?> (Buffer Overflow when parsing tar/zip/phar in phar_set_inode).</li>
+</ul></li>
+<li>Postgres:
+<ul>
+  <li><?php bugfix(68741); ?> (Null pointer deference) (CVE-2015-1352).</li>
+</ul></li>
+<li>SOAP:
+<ul>
+  <li><?php bugfix(69152); ?> (Type Confusion Infoleak Vulnerability in unserialize() with SoapFault).</li>
+</ul></li>
+<li>Sqlite3:
+<ul>
+  <li><?php bugfix(66550); ?> (SQLite prepared statement use-after-free).</li>
 </ul></li>
 </ul>
 <!-- }}} --></section>
