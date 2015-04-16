@@ -8,6 +8,96 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 
 <h1>PHP 5 ChangeLog</h1>
 
+<section class="version" id="5.6.8"><!-- {{{ 5.6.8 -->
+<h3>Version 5.6.8</h3>
+<b>16-Apr-2015</b>
+<ul><li>Core:
+<ul>
+  <li><?php bugfix(66609); ?> (php crashes with __get() and ++ operator in some cases).</li>
+  <li><?php bugfix(68021); ?> (get_browser() browser_name_regex returns non-utf-8 characters).</li>
+  <li><?php bugfix(68917); ?> (parse_url fails on some partial urls).</li>
+  <li><?php bugfix(69134); ?> (Per Directory Values overrides PHP_INI_SYSTEM configuration options).</li>
+  <li>Additional fix for bug #69152 (Type confusion vulnerability in exception::getTraceAsString).</li>
+  <li><?php bugfix(69210); ?> (serialize function return corrupted data when sleep has non-string values).</li>
+  <li><?php bugfix(69212); ?> (Leaking VIA_HANDLER func when exception thrown in __call/... arg passing).</li>
+  <li><?php bugfix(69221); ?> (Segmentation fault when using a generator in combination with an Iterator).</li>
+  <li><?php bugfix(69337); ?> (php_stream_url_wrap_http_ex() type-confusion vulnerability).</li>
+  <li><?php bugfix(69353); ?> (Missing null byte checks for paths in various PHP extensions).</li>
+</ul></li>
+<li>Apache2handler:
+<ul>
+  <li><?php bugfix(69218); ?> (potential remote code execution with apache 2.4 apache2handler).</li>
+</ul></li>
+<li>cURL:
+<ul>
+  <li><?php implemented(69278); ?> (HTTP2 support).</li>
+  <li><?php bugfix(68739); ?> (Missing break / control flow).</li>
+  <li><?php bugfix(69316); ?> (Use-after-free in php_curl related to CURLOPT_FILE/_INFILE/_WRITEHEADER).</li>
+</ul></li>
+<li>Date:
+<ul>
+  <li><?php bugfix(69336); ?> (Issues with "last day of &lt;monthname&gt;").</li>
+</ul></li>
+<li>Enchant:
+<ul>
+  <li><?php bugfix(65406); ?> (Enchant broker plugins are in the wrong place in windows builds).</li>
+</ul></li>
+<li>Ereg:
+<ul>
+  <li><?php bugfix(68740); ?> (NULL Pointer Dereference).</li>
+</ul></li>
+<li>Fileinfo:
+<ul>
+  <li><?php bugfix(68819); ?> (Fileinfo on specific file causes spurious OOM and/or segfault).</li>
+</ul></li>
+<li>Filter:
+<ul>
+  <li><?php bugfix(69202); ?>: (FILTER_FLAG_STRIP_BACKTICK ignored unless other flags are used).</li>
+  <li><?php bugfix(69203); ?> (FILTER_FLAG_STRIP_HIGH doesn't strip ASCII 127).</li>
+</ul></li>
+<li>OPCache:
+<ul>
+  <li><?php bugfix(69297); ?> (function_exists strange behavior with OPCache on disabled function).</li>
+  <li><?php bugfix(69281); ?> (opcache_is_script_cached no longer works).</li>
+  <li><?php bugfix(68677); ?> (Use After Free). (CVE-2015-1351)</li>
+</ul></li>
+<li>OpenSSL:
+<ul>
+  <li>Fixed bugs #68853, #65137 (Buffered crypto stream data breaks IO polling in stream_select() contexts) (Chris Wright)</li>
+  <li><?php bugfix(69197); ?> (openssl_pkcs7_sign handles default value incorrectly) (Daniel Lowrey)</li>
+  <li><?php bugfix(69215); ?> (Crypto servers should send client CA list) (Daniel Lowrey)</li>
+  <li>Add a check for RAND_egd to allow compiling against LibreSSL (Leigh)</li>
+</ul></li>
+<li>Phar:
+<ul>
+  <li><?php bugfix(64343); ?> (PharData::extractTo fails for tarball created by BSD tar).</li>
+  <li><?php bugfix(64931); ?> (phar_add_file is too restrictive on filename).</li>
+  <li><?php bugfix(65467); ?> (Call to undefined method cli_arg_typ_string).</li>
+  <li><?php bugfix(67761); ?> (Phar::mapPhar fails for Phars inside a path containing ".tar").</li>
+  <li><?php bugfix(69324); ?> (Buffer Over-read in unserialize when parsing Phar).</li>
+  <li><?php bugfix(69441); ?> (Buffer Overflow when parsing tar/zip/phar in phar_set_inode).</li>
+</ul></li>
+<li>Postgres:
+<ul>
+  <li><?php bugfix(68741); ?> (Null pointer dereference). (CVE-2015-1352)</li>
+</ul></li>
+<li>SPL:
+<ul>
+  <li><?php bugfix(69227); ?> (Use after free in zval_scan caused by spl_object_storage_get_gc).</li>
+</ul></li>
+<li>SOAP:
+<ul>
+  <li><?php bugfix(69293); ?> (NEW segfault when using SoapClient::__setSoapHeader (bisected, regression)).</li>
+</ul></li>
+<li>Sqlite3:
+<ul>
+  <li><?php bugfix(68760); ?> (SQLITE segfaults if custom collator throws an exception).</li>
+  <li><?php bugfix(69287); ?> (Upgrade bundled libsqlite to 3.8.8.3).</li>
+  <li><?php bugfix(66550); ?> (SQLite prepared statement use-after-free).</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
 <section class="version" id="5.5.24"><!-- {{{ 5.5.24 -->
 <h3>Version 5.5.24</h3>
 <b>16-Apr-2015</b>
@@ -30,7 +120,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 </ul></li>
 <li>Curl:
 <ul>
-  <li>Implemented FR#69278 (HTTP2 support).</li>
+  <li><?php implemented(69278); ?> (HTTP2 support).</li>
   <li><?php bugfix(69316); ?> (Use-after-free in php_curl related to CURLOPT_FILE/_INFILE/_WRITEHEADER).</li>
 </ul></li>
 <li>Date:
@@ -57,7 +147,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 </ul></li>
 <li>OPCache:
 <ul>
-  <li><?php bugfix(68677); ?> (Use After Free).</li>
+  <li><?php bugfix(68677); ?> (Use After Free). (CVE-2015-1351)</li>
   <li><?php bugfix(69281); ?> (opcache_is_script_cached no longer works).</li>
 </ul></li>
 <li>OpenSSL:
@@ -76,7 +166,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 </ul></li>
 <li>Postgres:
 <ul>
-  <li><?php bugfix(68741); ?> (Null pointer dereference).</li>
+  <li><?php bugfix(68741); ?> (Null pointer dereference). (CVE-2015-1352)</li>
 </ul></li>
 <li>SPL:
 <ul>
