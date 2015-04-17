@@ -61,6 +61,7 @@ site_header("Downloads",
           <?php download_link($rel['filename'], $rel['filename']); ?>
           <span class="releasedate"><?php echo date('d M Y', strtotime($rel['date'])); ?></span>
           <span class="md5sum"><?php echo $rel['md5']; ?></span>
+          <span class="sha256"><?php echo $rel['sha256']; ?></span>
           <?php if (isset($rel['note']) && $rel['note']): ?>
             <p>
               <strong>Note:</strong>
