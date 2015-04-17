@@ -410,7 +410,8 @@ aside.tips a {
   color:#ccc;
   border-bottom:1px dotted #666;
 }
-aside.tips .panel > a:after {
+aside.tips .panel > a:after,
+aside.tips .panel > span:after {
   content:" ";
   display:block;
   border-bottom:1px dotted #666;

@@ -128,18 +128,7 @@ aside.tips .mirror-sponsor {
 }
 
 /* Social media buttons. */
-aside.tips .social-media {
-    padding-top: 2em;
-}
-
-aside.tips .social-media a {
-    border-bottom: 0;
-}
-
-aside.tips .panel.social-media > a:after {
-    display: none;
-}
-
-aside.tips .social-media .headline {
+aside.tips .social-media .icon-twitter {
     font-size: 1.5em;
+    vertical-align: middle;
 }
