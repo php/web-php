@@ -1139,12 +1139,16 @@ fieldset {
 .content-header .changelog {
     color:#369;
 }
-.content-box .md5sum {
+.content-box .md5sum, .content-box .sha256 {
     display: block;
     font: normal 0.875rem/1.5rem "Fira Mono", "Source Code Pro", monospace;
 }
 .content-box .md5sum:before {
     content: "md5: ";
+    font-family: "Fira Sans", "Source Sans Pro", Helvetica, Arial, sans-serif;
+}
+.content-box .sha256:before {
+    content: "sha256: ";
     font-family: "Fira Sans", "Source Sans Pro", Helvetica, Arial, sans-serif;
 }
 .content-box .releasedate {
