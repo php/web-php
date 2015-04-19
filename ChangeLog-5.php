@@ -63,10 +63,10 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 </ul></li>
 <li>OpenSSL:
 <ul>
-  <li>Fixed bugs #68853, #65137 (Buffered crypto stream data breaks IO polling in stream_select() contexts) (Chris Wright)</li>
-  <li><?php bugfix(69197); ?> (openssl_pkcs7_sign handles default value incorrectly) (Daniel Lowrey)</li>
-  <li><?php bugfix(69215); ?> (Crypto servers should send client CA list) (Daniel Lowrey)</li>
-  <li>Add a check for RAND_egd to allow compiling against LibreSSL (Leigh)</li>
+  <li><?php bugfix(68853); ?>, <?php bugl(65137); ?> (Buffered crypto stream data breaks IO polling in stream_select() contexts).</li>
+  <li><?php bugfix(69197); ?> (openssl_pkcs7_sign handles default value incorrectly).</li>
+  <li><?php bugfix(69215); ?> (Crypto servers should send client CA list).</li>
+  <li>Add a check for RAND_egd to allow compiling against LibreSSL.</li>
 </ul></li>
 <li>Phar:
 <ul>
@@ -221,7 +221,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 </ul></li>
 <li>Postgres:
 <ul>
-  <li><?php bugfix(68741); ?> (Null pointer deference) (CVE-2015-1352).</li>
+  <li><?php bugfix(68741); ?> (Null pointer deference). (CVE-2015-1352)</li>
 </ul></li>
 <li>SOAP:
 <ul>
