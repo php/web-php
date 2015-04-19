@@ -75,7 +75,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
   <li><?php bugfix(65467); ?> (Call to undefined method cli_arg_typ_string).</li>
   <li><?php bugfix(67761); ?> (Phar::mapPhar fails for Phars inside a path containing ".tar").</li>
   <li><?php bugfix(69324); ?> (Buffer Over-read in unserialize when parsing Phar). (CVE-2015-2783)</li>
-  <li><?php bugfix(69441); ?> (Buffer Overflow when parsing tar/zip/phar in phar_set_inode).</li>
+  <li><?php bugfix(69441); ?> (Buffer Overflow when parsing tar/zip/phar in phar_set_inode). (CVE-2015-3329)</li>
 </ul></li>
 <li>Postgres:
 <ul>
@@ -162,7 +162,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
   <li><?php bugfix(65467); ?> (Call to undefined method cli_arg_typ_string).</li>
   <li><?php bugfix(67761); ?> (Phar::mapPhar fails for Phars inside a path containing ".tar").</li>
   <li><?php bugfix(69324); ?> (Buffer Over-read in unserialize when parsing Phar). (CVE-2015-2783)</li>
-  <li><?php bugfix(69441); ?> (Buffer Overflow when parsing tar/zip/phar in phar_set_inode).</li>
+  <li><?php bugfix(69441); ?> (Buffer Overflow when parsing tar/zip/phar in phar_set_inode). (CVE-2015-3329)</li>
 </ul></li>
 <li>Postgres:
 <ul>
@@ -217,7 +217,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 <ul>
   <li><?php bugfix(68901); ?> (use after free). (CVE-2015-2301)</li>
   <li><?php bugfix(69324); ?> (Buffer Over-read in unserialize when parsing Phar). (CVE-2015-2783)</li>
-  <li><?php bugfix(69441); ?> (Buffer Overflow when parsing tar/zip/phar in phar_set_inode).</li>
+  <li><?php bugfix(69441); ?> (Buffer Overflow when parsing tar/zip/phar in phar_set_inode). (CVE-2015-3329)</li>
 </ul></li>
 <li>Postgres:
 <ul>
