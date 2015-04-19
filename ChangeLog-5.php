@@ -26,7 +26,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 </ul></li>
 <li>Apache2handler:
 <ul>
-  <li><?php bugfix(69218); ?> (potential remote code execution with apache 2.4 apache2handler).</li>
+  <li><?php bugfix(69218); ?> (potential remote code execution with apache 2.4 apache2handler). (CVE-2015-3330)</li>
 </ul></li>
 <li>cURL:
 <ul>
@@ -103,7 +103,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 <b>16-Apr-2015</b>
 <ul><li>Apache2handler:
 <ul>
-  <li><?php bugfix(69218); ?> (potential remote code execution with apache 2.4 apache2handler).</li>
+  <li><?php bugfix(69218); ?> (potential remote code execution with apache 2.4 apache2handler). (CVE-2015-3330)</li>
 </ul></li>
 <li>Core:
 <ul>
@@ -189,7 +189,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 <b>16-Apr-2015</b>
 <ul><li>Apache2handler:
 <ul>
-  <li><?php bugfix(69218); ?> (potential remote code execution with apache 2.4 apache2handler).</li>
+  <li><?php bugfix(69218); ?> (potential remote code execution with apache 2.4 apache2handler). (CVE-2015-3330)</li>
 </ul></li>
 <li>Core:
 <ul>
