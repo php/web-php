@@ -39,6 +39,13 @@ function tryprefix($lang, $keyword, $prefix)
         if (@file_exists($_SERVER['DOCUMENT_ROOT'] . $try)) { return $try; }
     }
 
+    // Replace namespace sperators, and try that (if different)
+    $noul = str_replace("\\", "-", $keyword);
+    if ($noul != $keyword) {
+        $try = "/manual/${lang}/${prefix}${noul}.php";
+        if (@file_exists($_SERVER['DOCUMENT_ROOT'] . $try)) { return $try; }
+    }
+
     // Nothing found
     return "";
 }
@@ -169,7 +176,7 @@ function find_manual_page($lang, $keyword)
         
             $stm = $dbh->prepare($SQL);
             if ($stm) {
-                $stm->execute(array($lang, $keyword, str_replace(' ', '', $keyword), str_replace(' ', '-', $keyword), str_replace('-', '', $keyword), $keyword));
+                $stm->execute(array($lang, $keyword, str_replace('\\', '-', $keyword), str_replace(' ', '', $keyword), str_replace(' ', '-', $keyword), str_replace('-', '', $keyword), $keyword));
             }
         }
         
