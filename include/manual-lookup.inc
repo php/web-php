@@ -39,7 +39,8 @@ function tryprefix($lang, $keyword, $prefix)
         if (@file_exists($_SERVER['DOCUMENT_ROOT'] . $try)) { return $try; }
     }
 
-    // Replace namespace sperators, and try that (if different)
+    // urldecode() (%5C == \) Replace namespace sperators, and try that (if different)
+    $keyword = urldecode($keyword);
     $noul = str_replace("\\", "-", $keyword);
     if ($noul != $keyword) {
         $try = "/manual/${lang}/${prefix}${noul}.php";
