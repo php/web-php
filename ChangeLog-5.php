@@ -85,13 +85,13 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 <ul>
   <li><?php bugfix(68741); ?> (Null pointer dereference). (CVE-2015-1352)</li>
 </ul></li>
-<li>SPL:
-<ul>
-  <li><?php bugfix(69227); ?> (Use after free in zval_scan caused by spl_object_storage_get_gc).</li>
-</ul></li>
 <li>SOAP:
 <ul>
   <li><?php bugfix(69293); ?> (NEW segfault when using SoapClient::__setSoapHeader (bisected, regression)).</li>
+</ul></li>
+<li>SPL:
+<ul>
+  <li><?php bugfix(69227); ?> (Use after free in zval_scan caused by spl_object_storage_get_gc).</li>
 </ul></li>
 <li>Sqlite3:
 <ul>
@@ -181,13 +181,13 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 <ul>
   <li><?php bugfix(68741); ?> (Null pointer dereference). (CVE-2015-1352)</li>
 </ul></li>
-<li>SPL:
-<ul>
-  <li><?php bugfix(69227); ?> (Use after free in zval_scan caused by spl_object_storage_get_gc).</li>
-</ul></li>
 <li>SOAP:
 <ul>
   <li><?php bugfix(69293); ?> (NEW segfault when using SoapClient::__setSoapHeader (bisected, regression)).</li>
+</ul></li>
+<li>SPL:
+<ul>
+  <li><?php bugfix(69227); ?> (Use after free in zval_scan caused by spl_object_storage_get_gc).</li>
 </ul></li>
 <li>SQLITE:
 <ul>
