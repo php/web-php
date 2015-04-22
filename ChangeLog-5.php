@@ -10,7 +10,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 
 <section class="version" id="5.6.8"><!-- {{{ 5.6.8 -->
 <h3>Version 5.6.8</h3>
-<b>16-Apr-2015</b>
+<?php release_date('16-Apr-2015'); ?>
 <ul><li>Core:
 <ul>
   <li><?php bugfix(66609); ?> (php crashes with __get() and ++ operator in some cases).</li>
@@ -104,7 +104,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 
 <section class="version" id="5.5.24"><!-- {{{ 5.5.24 -->
 <h3>Version 5.5.24</h3>
-<b>16-Apr-2015</b>
+<?php release_date('16-Apr-2015'); ?>
 <ul><li>Apache2handler:
 <ul>
   <li><?php bugfix(69218); ?> (potential remote code execution with apache 2.4 apache2handler). (CVE-2015-3330)</li>
@@ -200,7 +200,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 
 <section class="version" id="5.4.40"><!-- {{{ 5.4.40 -->
 <h3>Version 5.4.40</h3>
-<b>16-Apr-2015</b>
+<?php release_date('16-Apr-2015'); ?>
 <ul><li>Apache2handler:
 <ul>
   <li><?php bugfix(69218); ?> (potential remote code execution with apache 2.4 apache2handler). (CVE-2015-3330)</li>
@@ -250,7 +250,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 
 <section class="version" id="5.6.7"><!-- {{{ 5.6.7 -->
 <h3>Version 5.6.7</h3>
-<b>19-Mar-2015</b>
+<?php release_date('19-Mar-2015'); ?>
 <ul><li>Core:
 <ul>
   <li><?php bugfix(69174); ?> (leaks when unused inner class use traits precedence).</li>
@@ -331,7 +331,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 
 <section class="version" id="5.5.23"><!-- {{{ 5.5.23 -->
 <h3>Version 5.5.23</h3>
-<b>19-Mar-2015</b>
+<?php release_date('19-Mar-2015'); ?>
 <ul><li>Core:
 <ul>
   <li><?php bugfix(69174); ?> (leaks when unused inner class use traits precedence).</li>
@@ -407,7 +407,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 
 <section class="version" id="5.4.39"><!-- {{{ 5.4.39 -->
 <h3>Version 5.4.39</h3>
-<b>19-Mar-2015</b>
+<?php release_date('19-Mar-2015'); ?>
 <ul><li>Core:
 <ul>
   <li><?php bugfix(68976); ?> (Use After Free Vulnerability in unserialize()). (CVE-2015-2787)</li>
@@ -513,7 +513,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 
 <section class="version" id="5.5.22"><!-- {{{ 5.5.22 -->
 <h3>Version 5.5.22</h3>
-<b>19-Feb-2015</b>
+<?php release_date('19-Feb-2015'); ?>
 <ul><li>Core:
 <ul>
   <li><?php bugfix(67068); ?> (getClosure returns somethings that's not a closure).</li>
@@ -589,7 +589,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 
 <section class="version" id="5.4.38"><!-- {{{ 5.4.38 -->
 <h3>Version 5.4.38</h3>
-<b>19-Feb-2015</b>
+<?php release_date('19-Feb-2015'); ?>
 <ul><li>Core:
 <ul>
   <li>Removed support for multi-line headers, as they are deprecated by RFC 7230.</li>
@@ -822,7 +822,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 
 <section class="version" id="5.4.37"><!-- {{{ 5.4.37 -->
 <h3>Version 5.4.37</h3>
-<b>22-Jan-2015</b>
+<?php release_date('22-Jan-2015'); ?>
 <ul><li>Core:
 <ul>
   <li><?php bugfix(68710); ?> (Use After Free Vulnerability in PHP's unserialize()). (CVE-2015-0231)</li>
@@ -959,7 +959,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 <!-- }}} --></section>
 <section class="version" id="5.4.36"><!-- {{{ 5.4.36 -->
 <h3>Version 5.4.36</h3>
-<b>18-Dec-2014</b>
+<?php release_date('18-Dec-2014'); ?>
 <ul><li>Core:
 <ul>
   <li>Upgraded crypt_blowfish to version 1.3.</li>
