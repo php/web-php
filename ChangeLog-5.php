@@ -118,9 +118,10 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
   <li><?php bugfix(69337); ?> (php_stream_url_wrap_http_ex() type-confusion vulnerability).</li>
   <li><?php bugfix(69353); ?> (Missing null byte checks for paths in various PHP extensions).</li>
 </ul></li>
-<li>Curl:
+<li>cURL:
 <ul>
   <li><?php implemented(69278); ?> (HTTP2 support).</li>
+  <li><?php bugfix(68739); ?> (Missing break / control flow).</li>
   <li><?php bugfix(69316); ?> (Use-after-free in php_curl related to CURLOPT_FILE/_INFILE/_WRITEHEADER).</li>
 </ul></li>
 <li>Date:
@@ -131,6 +132,10 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 <li>Enchant:
 <ul>
   <li><?php bugfix(65406); ?> (Enchant broker plugins are in the wrong place in windows builds).</li>
+</ul></li>
+<li>Ereg:
+<ul>
+  <li><?php bugfix(68740); ?> (NULL Pointer Dereference).</li>
 </ul></li>
 <li>Fileinfo:
 <ul>
@@ -145,10 +150,14 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 <ul>
   <li><?php bugfix(68846); ?> (False detection of CJK Unified Ideographs Extension E).</li>
 </ul></li>
+<li>ODBC:
+<ul>
+  <li><?php bugfix(69354); ?> (Incorrect use of SQLColAttributes with ODBC 3.0).</li>
+</ul></li>
 <li>OPCache:
 <ul>
-  <li><?php bugfix(68677); ?> (Use After Free). (CVE-2015-1351)</li>
   <li><?php bugfix(69281); ?> (opcache_is_script_cached no longer works).</li>
+  <li><?php bugfix(68677); ?> (Use After Free). (CVE-2015-1351)</li>
 </ul></li>
 <li>OpenSSL:
 <ul>
@@ -180,6 +189,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 <ul>
   <li><?php bugfix(68760); ?> (SQLITE segfaults if custom collator throws an exception).</li>
   <li><?php bugfix(69287); ?> (Upgrade bundled sqlite to 3.8.8.3).</li>
+  <li><?php bugfix(66550); ?> (SQLite prepared statement use-after-free).</li>
 </ul></li>
 </ul>
 <!-- }}} --></section>
