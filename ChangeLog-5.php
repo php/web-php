@@ -55,6 +55,10 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
   <li><?php bugfix(69202); ?>: (FILTER_FLAG_STRIP_BACKTICK ignored unless other flags are used).</li>
   <li><?php bugfix(69203); ?> (FILTER_FLAG_STRIP_HIGH doesn't strip ASCII 127).</li>
 </ul></li>
+<li>Mbstring:
+<ul>
+  <li><?php bugfix(68846); ?> (False detection of CJK Unified Ideographs Extension E).</li>
+</ul></li>
 <li>OPCache:
 <ul>
   <li><?php bugfix(69297); ?> (function_exists strange behavior with OPCache on disabled function).</li>
