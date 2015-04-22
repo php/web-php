@@ -87,6 +87,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 </ul></li>
 <li>SOAP:
 <ul>
+  <li><?php bugfix(69152); ?> (Type Confusion Infoleak Vulnerability in unserialize() with SoapFault).</li>
   <li><?php bugfix(69293); ?> (NEW segfault when using SoapClient::__setSoapHeader (bisected, regression)).</li>
 </ul></li>
 <li>SPL:
@@ -183,6 +184,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 </ul></li>
 <li>SOAP:
 <ul>
+  <li><?php bugfix(69152); ?> (Type Confusion Infoleak Vulnerability in unserialize() with SoapFault).</li>
   <li><?php bugfix(69293); ?> (NEW segfault when using SoapClient::__setSoapHeader (bisected, regression)).</li>
 </ul></li>
 <li>SPL:
@@ -240,6 +242,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 <li>SOAP:
 <ul>
   <li><?php bugfix(69152); ?> (Type Confusion Infoleak Vulnerability in unserialize() with SoapFault).</li>
+  <li><?php bugfix(69293); ?> (NEW segfault when using SoapClient::__setSoapHeader (bisected, regression)).</li>
 </ul></li>
 <li>Sqlite3:
 <ul>
