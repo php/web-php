@@ -52,7 +52,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 </ul></li>
 <li>Filter:
 <ul>
-  <li><?php bugfix(69202); ?>: (FILTER_FLAG_STRIP_BACKTICK ignored unless other flags are used).</li>
+  <li><?php bugfix(69202); ?> (FILTER_FLAG_STRIP_BACKTICK ignored unless other flags are used).</li>
   <li><?php bugfix(69203); ?> (FILTER_FLAG_STRIP_HIGH doesn't strip ASCII 127).</li>
 </ul></li>
 <li>Mbstring:
