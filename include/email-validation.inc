@@ -96,6 +96,7 @@ function blacklisted($email) {
 	'herbals',
 	'europsychiatrysummit',
 	'antibodies',
+	'graduatecentral',
     );
     foreach ($mosquitoes as $m) {
         if (preg_match('/'.$m.'/i',$email)) return true;
