@@ -312,6 +312,14 @@ Mousetrap.bind("l o g o enter", function(e) {
     var time = new Date().getTime();
     $(".brand img").attr("src", "/images/logo.php?refresh&time=" + time);
 });
+Mousetrap.bind("u n r e a d a b l e enter", function(e) {
+    document.cookie = 'MD=; path=/; expires=Thu, 01 Jan 1970 00:00:00 GMT';
+    location.reload(true);
+});
+Mousetrap.bind("r e a d a b l e enter", function(e) {
+    document.cookie = 'MD=1; path=/';
+    location.reload(true);
+});
 
 $(window).load(function()
 {

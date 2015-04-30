@@ -1,0 +1,193 @@
+/*
+ * Thanks to brilliant work by Andrea D. (aka NKjoep):
+ * 	 https://github.com/NKjoep
+ *
+ * See:
+ * https://github.com/NKjoep/i-love-markdown.css
+ */
+.markdown-content *,
+.markdown-content *:before,
+.markdown-content *:after {
+  font-size: 14px;
+  font-family: monospace;
+  line-height: 1.1;
+  margin: 0;
+  padding: 0;
+  font-weight: normal;
+  font-style: normal;
+}
+.markdown-content h1,
+.markdown-content h2,
+.markdown-content h3,
+.markdown-content h4,
+.markdown-content h5,
+.markdown-content h6 {
+  margin-bottom: 1em;
+  margin-bottom: 2ch;
+}
+.markdown-content h1:before {
+  content: '# ';
+}
+.markdown-content h2:before {
+  content: '## ';
+}
+.markdown-content h3:before {
+  content: '### ';
+}
+.markdown-content h4:before {
+  content: '#### ';
+}
+.markdown-content h5:before {
+  content: '##### ';
+}
+.markdown-content h6:before {
+  content: '###### ';
+}
+.markdown-content pre,
+.markdown-content blockquote {
+  margin: 1em 1em 1em 1em;
+  margin: 2ch 2ch 2ch 2ch;
+  clear: both;
+}
+.markdown-content pre code:before,
+.markdown-content pre code:after {
+  content: '```';
+  display: block;
+}
+.markdown-content p {
+  margin: 0 0 1em 0;
+  margin: 0 0 2ch 0;
+}
+.markdown-content p code:before,
+.markdown-content p code:after {
+  content: '`';
+}
+.markdown-content blockquote {
+  position: relative;
+  padding-left: 1em;
+  padding-left: 2ch;
+  overflow: hidden;
+}
+.markdown-content blockquote:after {
+  content: ">\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>";
+  white-space: pre;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.markdown-content li {
+  list-style-type: none;
+  list-style-position: inside;
+  padding-left: 3ch;
+}
+.markdown-content ul,
+.markdown-content ol {
+  margin: 0 0 1em 0;
+  margin: 0 0 2ch 0;
+}
+.markdown-content ul ul,
+.markdown-content ol ul,
+.markdown-content ul ol,
+.markdown-content ol ol {
+  margin: 0 0 0 2ch;
+}
+.markdown-content ul > li:before {
+  content: '- ';
+  float: left;
+  margin: 0 0.5em 0 0;
+  margin: 0 0 0 -3ch;
+}
+.markdown-content ol > li:before {
+  content: '1. ';
+  float: left;
+  margin: 0 0.5em 0 0;
+  margin: 0 0 0 -3ch;
+}
+.markdown-content em {
+  font-weight: normal;
+  font-style: normal;
+}
+.markdown-content em:before,
+.markdown-content em:after {
+  content: '*';
+}
+.markdown-content del {
+  font-weight: normal;
+  font-style: normal;
+  text-decoration: none;
+}
+.markdown-content del:before,
+.markdown-content del:after {
+  content: '~~';
+}
+.markdown-content strong {
+  font-weight: normal;
+  font-style: normal;
+}
+.markdown-content strong:before,
+.markdown-content strong:after {
+  content: '__';
+}
+.markdown-content a:before {
+  content: '[';
+}
+.markdown-content a:after {
+  content: "](" attr(href) ")";
+}
+.markdown-content a:link,
+.markdown-content a:visited,
+.markdown-content a:hover,
+.markdown-content a:active,
+.markdown-content a:focus {
+  color: #000;
+  text-decoration: none;
+}
+.markdown-content hr {
+  margin: 0 0 1em 0;
+  margin: 0 0 2ch 0;
+  display: block;
+  border: 0;
+  background-color: transparent;
+}
+.markdown-content hr:after {
+  content: '----';
+}
+.markdown-content th:before,
+.markdown-content td:before {
+  content: '|';
+}
+.markdown-content th:last-child:after,
+.markdown-content td:last-child:after {
+  content: '|';
+}
+.markdown-content img {
+  height: 0;
+  width: 0;
+  font-size: 0;
+  color: transparent;
+  position: relative;
+  content: "";
+}
+.markdown-content img:before,
+.markdown-content img:after {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.markdown-content img:before {
+  content: '![' attr(alt) '](' attr(src) ' "' attr(title) '")';
+}
+.markdown-content table {
+  margin: 0 0 1em 0;
+  margin: 0 0 2ch 0;
+  text-align: left;
+}
+.markdown-content th[style],
+.markdown-content td[style] {
+  text-align: left !important;
+}
+
+
+.brand, #mainmenu-toggle-overlay, #mainmenu-toggle, #trick {
+	display: none;
+}

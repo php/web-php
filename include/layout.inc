@@ -512,6 +512,11 @@ function site_header($title = '', $config = array())
     $curr = $config["current"];
     $classes = $config['classes'];
 
+    if (isset($_COOKIE["MD"]) || isset($_GET["MD"])) {
+        $classes .= "markdown-content";
+        $config["css_overwrite"] = array("/styles/i-love-markdown.css");
+    }
+
     if (empty($title)) {
         $title = "Hypertext Preprocessor";
     }

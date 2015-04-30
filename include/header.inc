@@ -11,6 +11,9 @@ $css_files = array(
 if (isset($config['css'])) {
     $css_files = array_merge($css_files, (array) $config['css']);
 }
+if (isset($config["css_overwrite"])) {
+    $css_files = $config["css_overwrite"];
+}
 
 foreach($css_files as $filename) {
     // files that do not start with / are assumed to be located in the /styles
