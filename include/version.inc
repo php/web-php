@@ -33,8 +33,8 @@ $PHP_5_6_SHA256     = array(
                        "tar.xz"        => "4c417387b88e100ca306adeda8051eb9fad93dae8da983f962dabf91a14b2b7b",
 );
 /* PHP 5.5 Release */
-$PHP_5_5_RC =  false; // Current RC version (e.g., '5.6.7RC1') or false
-$PHP_5_5_RC_DATE = '2 Apr 2015';
+$PHP_5_5_RC =  '5.5.25RC1'; // Current RC version (e.g., '5.6.7RC1') or false
+$PHP_5_5_RC_DATE = '30 Apr 2015';
 
 $PHP_5_5_VERSION         = "5.5.24";
 $PHP_5_5_DATE            = "16 Apr 2015";
