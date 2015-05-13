@@ -99,6 +99,6 @@ function blacklisted($email) {
 	'graduatecentral',
     );
     foreach ($mosquitoes as $m) {
-        if (preg_match('/'.$m.'/i',$email)) return true;
+        if (preg_match('/'.preg_quote($m, '/').'/i',$email)) return true;
     }
 }
