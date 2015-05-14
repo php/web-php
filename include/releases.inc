@@ -2,6 +2,42 @@
 $OLDRELEASES = array (
   5 => 
   array (
+    '5.5.24' => 
+    array (
+      'announcement' => 
+      array (
+        'English' => '/releases/5_5_24.php',
+      ),
+      'source' => 
+      array (
+        0 => 
+        array (
+          'filename' => 'php-5.5.24.tar.bz2',
+          'name' => 'PHP 5.5.24 (tar.bz2)',
+          'md5' => 'f9a8f3e4bb88b33b087bd63732b1402a',
+          'sha256' => '801b5cf2e0c01b07314d4ac3c8a7c28d524bdd8263ebdd0e33a99008251316a2',
+          'date' => '16 Apr 2015',
+        ),
+        1 => 
+        array (
+          'filename' => 'php-5.5.24.tar.gz',
+          'name' => 'PHP 5.6.24 (tar.gz)',
+          'md5' => 'f5666659d9279f725f4351866bb73bed',
+          'sha256' => '43e6b83fe8151f8d2062ca4da915312fc92e47789801049231c705a8b29b05bc',
+          'date' => '16 Apr 2015',
+        ),
+        2 => 
+        array (
+          'filename' => 'php-5.5.24.tar.xz',
+          'name' => 'PHP 5.5.24 (tar.xz)',
+          'md5' => '32e5ab1d77186142474cb65c685659bd',
+          'sha256' => 'ffb6235a25043cab71e6445cfc9e8bf16ae80a2835f0373cdd948fcc31eafe57',
+          'date' => '16 Apr 2015',
+        ),
+      ),
+      'date' => '16 Apr 2015',
+      'museum' => false,
+    ),
     '5.6.7' => 
     array (
       'announcement' => 

@@ -8,6 +8,47 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 
 <h1>PHP 5 ChangeLog</h1>
 
+<section class="version" id="5.5.25"><!-- {{{ 5.5.25 -->
+<h3>Version 5.5.25</h3>
+<b>14-May-2015</b>
+<ul><li>Core:
+<ul>
+  <li><?php bugfix(69364); ?> (PHP Multipart/form-data remote dos Vulnerability).</li>
+  <li><?php bugfix(69403); ?> (str_repeat() sign mismatch based memory corruption).</li>
+  <li><?php bugfix(69418); ?> (CVE-2006-7243 fix regressions in 5.4+).</li>
+  <li><?php bugfix(69522); ?> (heap buffer overflow in unpack()).</li>
+  <li><?php bugfix(69467); ?> (Wrong checked for the interface by using Trait).</li>
+  <li><?php bugfix(69420); ?> (Invalid read in zend_std_get_method).</li>
+  <li><?php bugfix(60022); ?> ("use statement [...] has no effect" depends on leading backslash).</li>
+  <li><?php bugfix(67314); ?> (Segmentation fault in gc_remove_zval_from_buffer).</li>
+  <li><?php bugfix(68652); ?> (segmentation fault in destructor).</li>
+  <li><?php bugfix(69419); ?> (Returning compatible sub generator produces a warning).</li>
+  <li><?php bugfix(69472); ?> (php_sys_readlink ignores misc errors from GetFinalPathNameByHandleA).</li>
+</ul></li>
+<li>FTP:
+<ul>
+  <li><?php bugfix(69545); ?> (Integer overflow in ftp_genlist() resulting in heap overflow).</li>
+</ul></li>
+<li>ODBC:
+<ul>
+  <li><?php bugfix(69474); ?> (ODBC: Query with same field name from two tables returns incorrect result).</li>
+  <li><?php bugfix(69381); ?> (out of memory with sage odbc driver).</li>
+</ul></li>
+<li>OpenSSL:
+<ul>
+  <li><?php bugfix(69402); ?> (Reading empty SSL stream hangs until timeout).</li>
+</ul></li>
+<li>PCNTL:
+<ul>
+  <li><?php bugfix(68598); ?> (pcntl_exec() should not allow null char).</li>
+</ul></li>
+<li>Phar:
+<ul>
+  <li><?php bugfix(69453); ?> (Memory Corruption in phar_parse_tarfile when entry filename starts with null).</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
 <section class="version" id="5.6.8"><!-- {{{ 5.6.8 -->
 <h3>Version 5.6.8</h3>
 <?php release_date('16-Apr-2015'); ?>
