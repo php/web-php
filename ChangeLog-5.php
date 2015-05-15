@@ -49,6 +49,35 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 </ul>
 <!-- }}} --></section>
 
+<section class="version" id="5.4.41"><!-- {{{ 5.4.41 -->
+<h3>Version 5.4.41</h3>
+<b>14-May-2015</b>
+<ul><li>Core:
+<ul>
+  <li><?php bugfix(69364); ?> (PHP Multipart/form-data remote dos Vulnerability).</li>
+  <li><?php bugfix(69403); ?> (str_repeat() sign mismatch based memory corruption).</li>
+  <li><?php bugfix(69418); ?> (CVE-2006-7243 fix regressions in 5.4+).</li>
+  <li><?php bugfix(69522); ?> (heap buffer overflow in unpack()).</li>
+</ul></li>
+<li>FTP:
+<ul>
+  <li><?php bugfix(69545); ?> (Integer overflow in ftp_genlist() resulting in heap overflow).</li>
+</ul></li>
+<li>PCNTL:
+<ul>
+  <li><?php bugfix(68598); ?> (pcntl_exec() should not allow null char).</li>
+</ul></li>
+<li>PCRE:
+<ul>
+  <li>Upgraded pcrelib to 8.37.</li>
+</ul></li>
+<li>Phar:
+<ul>
+  <li><?php bugfix(69453); ?> (Memory Corruption in phar_parse_tarfile when entry filename starts with null).</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
 <section class="version" id="5.6.8"><!-- {{{ 5.6.8 -->
 <h3>Version 5.6.8</h3>
 <?php release_date('16-Apr-2015'); ?>
