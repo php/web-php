@@ -49,7 +49,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 </ul></li>
 <li>Phar:
 <ul>
-  <li><?php bugfix(69453); ?> (Memory Corruption in phar_parse_tarfile when entry filename starts with null).</li>
+  <li><?php bugfix(69453); ?> (Memory Corruption in phar_parse_tarfile when entry filename starts with null). (CVE-2015-4021)</li>
 </ul></li>
 </ul>
 <!-- }}} --></section>
@@ -90,7 +90,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 </ul></li>
 <li>Phar:
 <ul>
-  <li><?php bugfix(69453); ?> (Memory Corruption in phar_parse_tarfile when entry filename starts with null).</li>
+  <li><?php bugfix(69453); ?> (Memory Corruption in phar_parse_tarfile when entry filename starts with null). (CVE-2015-4021)</li>
 </ul></li>
 </ul>
 <!-- }}} --></section>
@@ -119,7 +119,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 </ul></li>
 <li>Phar:
 <ul>
-  <li><?php bugfix(69453); ?> (Memory Corruption in phar_parse_tarfile when entry filename starts with null).</li>
+  <li><?php bugfix(69453); ?> (Memory Corruption in phar_parse_tarfile when entry filename starts with null). (CVE-2015-4021)</li>
 </ul></li>
 </ul>
 <!-- }}} --></section>
