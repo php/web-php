@@ -45,7 +45,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 </ul></li>
 <li>PCRE:
 <ul>
-  <li>Upgraded pcrelib to 8.37.</li>
+  <li>Upgraded pcrelib to 8.37. (CVE-2015-2325, CVE-2015-2326)</li>
 </ul></li>
 <li>Phar:
 <ul>
@@ -115,7 +115,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 </ul></li>
 <li>PCRE:
 <ul>
-  <li>Upgraded pcrelib to 8.37.</li>
+  <li>Upgraded pcrelib to 8.37. (CVE-2015-2325, CVE-2015-2326)</li>
 </ul></li>
 <li>Phar:
 <ul>
