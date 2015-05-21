@@ -41,7 +41,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 </ul></li>
 <li>PCNTL:
 <ul>
-  <li><?php bugfix(68598); ?> (pcntl_exec() should not allow null char).</li>
+  <li><?php bugfix(68598); ?> (pcntl_exec() should not allow null char). (CVE-2015-4026)</li>
 </ul></li>
 <li>PCRE:
 <ul>
@@ -86,7 +86,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 </ul></li>
 <li>PCNTL:
 <ul>
-  <li><?php bugfix(68598); ?> (pcntl_exec() should not allow null char).</li>
+  <li><?php bugfix(68598); ?> (pcntl_exec() should not allow null char). (CVE-2015-4026)</li>
 </ul></li>
 <li>Phar:
 <ul>
@@ -111,7 +111,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 </ul></li>
 <li>PCNTL:
 <ul>
-  <li><?php bugfix(68598); ?> (pcntl_exec() should not allow null char).</li>
+  <li><?php bugfix(68598); ?> (pcntl_exec() should not allow null char). (CVE-2015-4026)</li>
 </ul></li>
 <li>PCRE:
 <ul>
