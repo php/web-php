@@ -22,7 +22,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
   <li><?php bugfix(69472); ?> (php_sys_readlink ignores misc errors from GetFinalPathNameByHandleA).</li>
   <li><?php bugfix(69364); ?> (PHP Multipart/form-data remote dos Vulnerability). (CVE-2015-4024)</li>
   <li><?php bugfix(69403); ?> (str_repeat() sign mismatch based memory corruption).</li>
-  <li><?php bugfix(69418); ?> (CVE-2006-7243 fix regressions in 5.4+).</li>
+  <li><?php bugfix(69418); ?> (CVE-2006-7243 fix regressions in 5.4+). (CVE-2015-4025)</li>
   <li><?php bugfix(69522); ?> (heap buffer overflow in unpack()).</li>
 </ul></li>
 <li>FTP:
@@ -61,7 +61,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 <ul>
   <li><?php bugfix(69364); ?> (PHP Multipart/form-data remote dos Vulnerability). (CVE-2015-4024)</li>
   <li><?php bugfix(69403); ?> (str_repeat() sign mismatch based memory corruption).</li>
-  <li><?php bugfix(69418); ?> (CVE-2006-7243 fix regressions in 5.4+).</li>
+  <li><?php bugfix(69418); ?> (CVE-2006-7243 fix regressions in 5.4+). (CVE-2015-4025)</li>
   <li><?php bugfix(69522); ?> (heap buffer overflow in unpack()).</li>
   <li><?php bugfix(69467); ?> (Wrong checked for the interface by using Trait).</li>
   <li><?php bugfix(69420); ?> (Invalid read in zend_std_get_method).</li>
@@ -102,7 +102,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 <ul>
   <li><?php bugfix(69364); ?> (PHP Multipart/form-data remote dos Vulnerability). (CVE-2015-4024)</li>
   <li><?php bugfix(69403); ?> (str_repeat() sign mismatch based memory corruption).</li>
-  <li><?php bugfix(69418); ?> (CVE-2006-7243 fix regressions in 5.4+).</li>
+  <li><?php bugfix(69418); ?> (CVE-2006-7243 fix regressions in 5.4+). (CVE-2015-4025)</li>
   <li><?php bugfix(69522); ?> (heap buffer overflow in unpack()).</li>
 </ul></li>
 <li>FTP:
