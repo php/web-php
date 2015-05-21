@@ -20,7 +20,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
   <li><?php bugfix(68652); ?> (segmentation fault in destructor).</li>
   <li><?php bugfix(69419); ?> (Returning compatible sub generator produces a warning).</li>
   <li><?php bugfix(69472); ?> (php_sys_readlink ignores misc errors from GetFinalPathNameByHandleA).</li>
-  <li><?php bugfix(69364); ?> (PHP Multipart/form-data remote dos Vulnerability).</li>
+  <li><?php bugfix(69364); ?> (PHP Multipart/form-data remote dos Vulnerability). (CVE-2015-4024)</li>
   <li><?php bugfix(69403); ?> (str_repeat() sign mismatch based memory corruption).</li>
   <li><?php bugfix(69418); ?> (CVE-2006-7243 fix regressions in 5.4+).</li>
   <li><?php bugfix(69522); ?> (heap buffer overflow in unpack()).</li>
@@ -59,7 +59,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 <b>14-May-2015</b>
 <ul><li>Core:
 <ul>
-  <li><?php bugfix(69364); ?> (PHP Multipart/form-data remote dos Vulnerability).</li>
+  <li><?php bugfix(69364); ?> (PHP Multipart/form-data remote dos Vulnerability). (CVE-2015-4024)</li>
   <li><?php bugfix(69403); ?> (str_repeat() sign mismatch based memory corruption).</li>
   <li><?php bugfix(69418); ?> (CVE-2006-7243 fix regressions in 5.4+).</li>
   <li><?php bugfix(69522); ?> (heap buffer overflow in unpack()).</li>
@@ -100,7 +100,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 <b>14-May-2015</b>
 <ul><li>Core:
 <ul>
-  <li><?php bugfix(69364); ?> (PHP Multipart/form-data remote dos Vulnerability).</li>
+  <li><?php bugfix(69364); ?> (PHP Multipart/form-data remote dos Vulnerability). (CVE-2015-4024)</li>
   <li><?php bugfix(69403); ?> (str_repeat() sign mismatch based memory corruption).</li>
   <li><?php bugfix(69418); ?> (CVE-2006-7243 fix regressions in 5.4+).</li>
   <li><?php bugfix(69522); ?> (heap buffer overflow in unpack()).</li>
