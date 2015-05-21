@@ -27,7 +27,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 </ul></li>
 <li>FTP:
 <ul>
-  <li><?php bugfix(69545); ?> (Integer overflow in ftp_genlist() resulting in heap overflow).</li>
+  <li><?php bugfix(69545); ?> (Integer overflow in ftp_genlist() resulting in heap overflow). (CVE-2015-4022)</li>
 </ul></li>
 <li>ODBC:
 <ul>
@@ -73,7 +73,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 </ul></li>
 <li>FTP:
 <ul>
-  <li><?php bugfix(69545); ?> (Integer overflow in ftp_genlist() resulting in heap overflow).</li>
+  <li><?php bugfix(69545); ?> (Integer overflow in ftp_genlist() resulting in heap overflow). (CVE-2015-4022)</li>
 </ul></li>
 <li>ODBC:
 <ul>
@@ -107,7 +107,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 </ul></li>
 <li>FTP:
 <ul>
-  <li><?php bugfix(69545); ?> (Integer overflow in ftp_genlist() resulting in heap overflow).</li>
+  <li><?php bugfix(69545); ?> (Integer overflow in ftp_genlist() resulting in heap overflow). (CVE-2015-4022)</li>
 </ul></li>
 <li>PCNTL:
 <ul>
