@@ -77,6 +77,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 </ul></li>
 <li>ODBC:
 <ul>
+  <li><?php bugfix(69354); ?> (Incorrect use of SQLColAttributes with ODBC 3.0).</li>
   <li><?php bugfix(69474); ?> (ODBC: Query with same field name from two tables returns incorrect result).</li>
   <li><?php bugfix(69381); ?> (out of memory with sage odbc driver).</li>
 </ul></li>
