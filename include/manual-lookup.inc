@@ -47,6 +47,18 @@ function tryprefix($lang, $keyword, $prefix)
         if (@file_exists($_SERVER['DOCUMENT_ROOT'] . $try)) { return $try; }
     }
 
+    // Replace first - with a dot and try that (for mysqli_ type entries)
+    // Only necessary when prefix is empty
+    if (empty($prefix)) {
+        $pos = strpos($keyword, '-');
+        if ($pos !== false) {
+            $keyword[$pos] = '.';
+
+            $try = "/manual/${lang}/${prefix}${keyword}.php";
+            if (@file_exists($_SERVER['DOCUMENT_ROOT'] . $try)) { return $try; }
+        }
+    }
+
     // Nothing found
     return "";
 }
