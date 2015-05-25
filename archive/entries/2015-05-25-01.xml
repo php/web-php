@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom" xmlns:default="http://php.net/ns/news">
+  <title>DevConf 2015</title>
+  <id>http://www.php.net/archive/2015.php#id2015-05-25-1</id>
+  <published>2015-05-25T16:57:52+00:00</published>
+  <updated>2015-05-25T16:57:52+00:00</updated>
+  <default:finalTeaserDate xmlns="http://php.net/ns/news">2015-06-20</default:finalTeaserDate>
+  <category term="conferences" label="Conference announcement"/>
+  <link href="http://www.php.net/conferences/index.php#id2015-05-25-1" rel="alternate" type="text/html"/>
+  <default:newsImage xmlns="http://php.net/ns/news" link="http://devconf.ru" title="DevConf 2015">devconfru2012.png</default:newsImage>
+  <link href="http://devconf.ru" rel="via" type="text/html"/>
+  <content type="xhtml">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+     <p>
+      DevConf 2015 in Moscow, Russia on Jun 19-20
+     </p>
+     <p>
+      DevConf is the ultimate meeting place for russian-speaking web-developers,
+      combining several language-specific conferences under one roof.
+     </p>
+     <p>
+      This year DevConf will include the following sections:
+     </p>
+     <ul>
+      <li>DevConf::PHP();</li>
+      <li>DevConf::Ruby();</li>
+      <li>DevConf::Python();</li>
+      <li>DevConf::Javascript();</li>
+      <li>DevConf::Storage();</li>
+     </ul>
+     <p>
+      Each section will feature several talks from the active contributors/authors of the language.
+	  Among the invited speakers are Dmitry Stogov (Zend), Egor Homakov (Sakurity), Sveta Smirnova (Percona), 
+	  speakers from 1C, Avito, Badoo, LinguaLeo, Mail.ru, Wamba and other companies. 
+      See more details on <a href="http://devconf.ru">the official website</a>.
+     </p>
+    </div>
+  </content>
+</entry>
