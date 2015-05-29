@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom" xmlns:default="http://php.net/ns/news">
+  <title>php[world] 2015 Call for Speakers</title>
+  <id>http://php.net/archive/2015.php#id2015-05-27-3</id>
+  <published>2015-05-27T23:48:38-04:00</published>
+  <updated>2015-05-27T23:48:38-04:00</updated>
+  <default:finalTeaserDate xmlns="http://php.net/ns/news">2015-06-06</default:finalTeaserDate>
+  <category term="cfp" label="Call for Papers"/>
+  <link href="http://php.net/conferences/index.php#id2015-05-27-3" rel="alternate" type="text/html"/>
+  <default:newsImage xmlns="http://php.net/ns/news" link="https://world.phparch.com/call-for-papers/" title="php[world] 2015">2015.world.logo.png</default:newsImage>
+  <link href="https://world.phparch.com/call-for-papers/" rel="via" type="text/html"/>
+  <content type="xhtml">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+     <p>The team at <a href="http://www.phparch.com/">php[architect]</a> is once again running <a href="https://world.phparch.com/">php[world]</a>.  The original conference designed to bring the whole world of PHP together in one place.  With dedicated tracks for WordPress, Drupal, Joomla!, Magneto, Laravel, Symfony, Zend Framework, and CakePHP!</p>
+     
+     <p>The <a href="https://world.phparch.com/call-for-papers/">Call for Speakers</a> is currently open, but only until June 6th, so get those submissions in soon!  We are interested in sessions on any framework, application, or general PHP topics.  We especially want to see sessions that are designed to encourage people to mingle and be exposed to other PHP communities that they don't interact with on a daily basis.</p>
+     
+     <p>We offer a very comprehensive speaker package, so there's no reason not to submit some proposals today!</p>
+     
+    </div>
+  </content>
+</entry>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom" xmlns:default="http://php.net/ns/news">
+  <title>PHP Craft Johannesburg</title>
+  <id>http://php.net/archive/2015.php#id2015-05-27-2</id>
+  <published>2015-05-27T23:45:28-04:00</published>
+  <updated>2015-05-27T23:45:28-04:00</updated>
+  <default:finalTeaserDate xmlns="http://php.net/ns/news">2015-06-17</default:finalTeaserDate>
+  <category term="conferences" label="Conference announcement"/>
+  <category term="cfp" label="Call for Papers"/>
+  <link href="http://php.net/conferences/index.php#id2015-05-27-2" rel="alternate" type="text/html"/>
+  <default:newsImage xmlns="http://php.net/ns/news" link="http://phpsouthafrica.com/" title="PHP CRAFT">PHPCraftLogo.png</default:newsImage>
+  <link href="http://phpsouthafrica.com/" rel="via" type="text/html"/>
+  <content type="xhtml">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+     <p>Our 2nd Annual PHP Craft Conference will be hosted in Johannesburg South Africa. 2 Days of fantastic content presented by local and international speakers. </p>
+     
+     <p>Our Call for Papers now open and will close 17th June 2015. We hope to see some great topics covering fancy new tools and/or best Practice — <a href="http://www.phpsouthafrica.com/">www.phpsouthafrica.com</a></p>
+     
+    </div>
+  </content>
+</entry>
