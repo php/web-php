@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom" xmlns:default="http://php.net/ns/news">
+  <title>PHP Barcelona Conference 2015</title>
+  <id>http://php.net/archive/2015.php#id2015-06-01-1</id>
+  <published>2015-06-01T23:45:28-04:00</published>
+  <updated>2015-06-01T23:45:28-04:00</updated>
+  <default:finalTeaserDate xmlns="http://php.net/ns/news">2015-10-30</default:finalTeaserDate>
+  <category term="conferences" label="Conference announcement"/>
+  <category term="cfp" label="Call for Papers"/>
+  <link href="http://php.net/conferences/index.php#id2015-06-01-1" rel="alternate" type="text/html"/>
+  <default:newsImage xmlns="http://php.net/ns/news" link="http://2015.phpconference.es/" title="PHP Barcelona Conference 2015">phpbarcelonaconference15.png</default:newsImage>
+  <link href="http://2015.phpconference.es/" rel="via" type="text/html"/>
+  <content type="xhtml">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+     <p>The PHP Barcelona User Group is proud to announce that the PHP Barcelona Conference is back! This year we are preparing a bigger event in the heart of a glamorous city. 2 days, 30th - 31st October, one track with amazing and stunning talks.</p>
+     
+     <p>We opened the call for papers that will end on the 30th September 2015 — <a href="http://2015.phpconference.es/call-for-papers">2015.phpconference.es/call-for-papers</a>. So what are you waiting for, go, submit your paper! We offer attractive packages to speakers who want to enroll! Come and join us! :)</p>
+    </div>
+  </content>
+</entry>
