@@ -8,7 +8,7 @@
   <category term="conferences" label="Conference announcement"/>
   <category term="cfp" label="Call for Papers"/>
   <link href="http://php.net/conferences/index.php#id2015-06-01-1" rel="alternate" type="text/html"/>
-  <default:newsImage xmlns="http://php.net/ns/news" link="http://2015.phpconference.es/" title="PHP Barcelona Conference 2015">phpbarcelonaconference2015.png</default:newsImage>
+  <default:newsImage xmlns="http://php.net/ns/news" link="http://2015.phpconference.es/" title="PHP Barcelona Conference 2015">phpbarcelonaconference15.png</default:newsImage>
   <link href="http://2015.phpconference.es/" rel="via" type="text/html"/>
   <content type="xhtml">
     <div xmlns="http://www.w3.org/1999/xhtml">
