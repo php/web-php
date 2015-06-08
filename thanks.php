@@ -30,6 +30,11 @@ site_header("Thanks", array("current" => "community"));
 </li>
 
 <li>
+ <a href="https://www.digitalocean.com/">DigitalOcean</a> provides
+ VMs for a number of PHP services.
+</li>
+
+<li>
  <a href="http://promote.pair.com/direct.pl?php.net">pair Networks</a>
  provides the servers and bandwidth for PEAR, PECL and mailing list services.
 </li>
