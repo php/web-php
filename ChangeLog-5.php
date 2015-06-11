@@ -8,6 +8,65 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 
 <h1>PHP 5 ChangeLog</h1>
 
+<section class="version" id="5.5.26"><!-- {{{ 5.5.26 -->
+<h3>Version 5.5.26</h3>
+<b>11-Jun-2015</b>
+<ul><li>Core:
+<ul>
+  <li><?php bugfix(69566); ?> (Conditional jump or move depends on uninitialised value in extension trait).</li>
+  <li><?php bugfix(66048); ?> (temp. directory is cached during multiple requests).</li>
+  <li><?php bugfix(69628); ?> (complex GLOB_BRACE fails on Windows).</li>
+  <li><?php bugfix(69646); ?> (OS command injection vulnerability in escapeshellarg).</li>
+  <li><?php bugfix(69719); ?> (Incorrect handling of paths with NULs).</li>
+</ul></li>
+<li>FTP:
+<ul>
+  <li>Improved fix for bug #69545 (Integer overflow in ftp_genlist() resulting in heap overflow).</li>
+</ul></li>
+<li>GD:
+<ul>
+  <li><?php bugfix(69479); ?> (GD fails to build with newer libvpx).</li>
+</ul></li>
+<li>Iconv:
+<ul>
+  <li><?php bugfix(48147); ?> (iconv with //IGNORE cuts the string).</li>
+</ul></li>
+<li>Litespeed SAPI:
+<ul>
+  <li><?php bugfix(68812); ?> (Unchecked return value).</li>
+</ul></li>
+<li>Mail:
+<ul>
+  <li><?php bugfix(68776); ?> (mail() does not have mail header injection prevention for additional headers).</li>
+</ul></li>
+<li>MCrypt:
+<ul>
+  <li>Added file descriptor caching to mcrypt_create_iv() (Leigh)</li>
+</ul></li>
+<li>Opcache:
+<ul>
+  <li><?php bugfix(69549); ?> (Memory leak with opcache.optimization_level=0xFFFFFFFF).</li>
+</ul></li>
+<li>PCRE:
+<ul>
+  <li>Upgraded pcrelib to 8.37. (CVE-2015-2325, CVE-2015-2326)</li>
+</ul></li>
+<li>Phar:
+<ul>
+  <li><?php bugfix(69680); ?> (phar symlink in binary directory broken).</li>
+</ul></li>
+<li>Postgres:
+<ul>
+  <li><?php bugfix(69667); ?> (segfault in php_pgsql_meta_data).</li>
+</ul></li>
+<li>Sqlite3:
+<ul>
+  <li>Upgrade bundled sqlite to 3.8.10.2. (CVE-2015-3414, CVE-2015-3415,
+    CVE-2015-3416)</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
 <section class="version" id="5.6.9"><!-- {{{ 5.6.9 -->
 <h3>Version 5.6.9</h3>
 <b>14-May-2015</b>
