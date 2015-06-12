@@ -36,24 +36,24 @@
 
      <p>
       For more information on the new features and other changes, you can read the 
-      <a href="https://github.com/php/php-src/blob/php-7.0.0alpha1/NEWS">NEWS file</a> or the 
-      or the <a href="https://github.com/php/php-src/blob/php-7.0.0alpha1/UPGRADING">UPGRADING file</a> 
+      <a href="https://github.com/php/php-src/blob/php-7.0.0alpha1/NEWS">NEWS file</a>, or the
+      <a href="https://github.com/php/php-src/blob/php-7.0.0alpha1/UPGRADING">UPGRADING file</a>
       for a complete list of upgrading notes. These files can also be found in the release archive.
      </p>
 
      <p>
       For source downloads of PHP 7.0.0 Alpha 1 please visit
       the <a href="https://downloads.php.net/ab/">download page</a>, Windows binaries
-      can be found on <a href="https://windows.php.net/qa/">windows.php.net/qa/</a>.
+      can be found on <a href="http://windows.php.net/qa/">windows.php.net/qa/</a>.
      </p>
 
      <p>
-      The second alpha will be released on 25th of June. You can also read the full list of 
+      The second alpha will be released on the 25th of June. You can also read the full list of
       planned releases on our <a href="https://wiki.php.net/todo/php70#timetable">wiki</a>.
      </p>
 
      <p>
-        Thank you for helping us making PHP better.
+        Thank you for helping us make PHP better.
      </p>
     </div>
   </content>
