@@ -3,7 +3,7 @@
   <title>PHP 7.0.0 Alpha 1 Released</title>
   <id>http://php.net/archive/2015.php#id2015-01-11-6</id>
   <published>2015-06-11T23:24:10+01:00</published>
-  <updated>2015-06-11T23:24:10+01:00</updated>
+  <updated>2015-06-12T17:07:56+01:00</updated>
   <category term="releases" label="New PHP release"/>
   <category term="frontpage" label="PHP.net frontpage news"/>
   <link href="http://php.net/index.php#id2015-06-11-3" rel="alternate" type="text/html"/>
@@ -29,6 +29,7 @@
         <li>Removal of old and unsupported SAPIs and extensions</li>
         <li>The null coalescing operator (??)</li>
         <li>Combined comparison Operator (&lt;=&gt;)</li>
+        <li>Return Type Declarations</li>
         <li>Scalar Type Declarations</li>
         <li>Anonymous Classes</li>
      </ul>
