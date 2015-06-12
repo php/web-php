@@ -4,6 +4,7 @@ $_SERVER['BASE_PAGE'] = 'releases/5_6_8.php';
 include_once $_SERVER['DOCUMENT_ROOT'] . '/include/prepend.inc';
 site_header("PHP 5.6.8 Release Announcement");
 ?>
+     <h1>PHP 5.6.8 Release Announcement</h1>
 
       <p>The PHP development team announces the immediate availability of PHP
      5.6.8. Several bugs have been fixed some of them beeing security related, like CVE-2015-1351 and CVE-2015-1352.
