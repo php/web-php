@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+  <title>PHP 5.4.42 Released</title>
+  <id>http://php.net/archive/2015.php#id2015-06-11-4</id>
+  <published>2015-06-11T20:43:05-07:00</published>
+  <updated>2015-06-11T20:43:05-07:00</updated>
+  <category term="frontpage" label="PHP.net frontpage news"/>
+  <category term="releases" label="New PHP release"/>
+  <link href="http://php.net/index.php#id2015-06-11-4" rel="alternate" type="text/html"/>
+  <link href="http://php.net/archive/2015.php#id2015-06-11-4" rel="via" type="text/html"/>
+  <content type="xhtml">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+     <p>The PHP development team announces the immediate availability of PHP
+     5.4.42. Six security-related issues in PHP were fixed in this release,
+     as well as several security issues in bundled sqlite library (CVE-2015-3414, CVE-2015-3415, CVE-2015-3416).
+     
+     All PHP 5.4 users are encouraged to upgrade to this version.
+     </p>
+     
+     <p>For source downloads of PHP 5.4.42 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+     Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
+     The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.4.42">ChangeLog</a>.
+     </p>
+    </div>
+  </content>
+</entry>

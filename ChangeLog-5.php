@@ -128,6 +128,34 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 </ul>
 <!-- }}} --></section>
 
+<section class="version" id="5.4.42"><!-- {{{ 5.4.42 -->
+<h3>Version 5.4.42</h3>
+<b>11-Jun-2015</b>
+<ul><li>Core:
+<ul>
+  <li>Imroved fix for bug <?php bugl(69545); ?>  (Integer overflow in ftp_genlist() resulting in heap overflow).</li>
+  <li><?php bugfix(69646); ?> (OS command injection vulnerability in escapeshellarg).</li>
+  <li><?php bugfix(69719); ?> (Incorrect handling of paths with NULs).</li>
+</ul></li>
+<li>Litespeed SAPI:
+<ul>
+  <li><?php bugfix(68812); ?> (Unchecked return value).</li>
+</ul></li>
+<li>Mail:
+<ul>
+  <li><?php bugfix(68776); ?> (mail() does not have mail header injection prevention for additional headers).</li>
+</ul></li>
+<li>Postgres:
+<ul>
+  <li><?php bugfix(69667); ?> (segfault in php_pgsql_meta_data).</li>
+</ul></li>
+<li>Sqlite3:
+<ul>
+  <li>Upgrade bundled sqlite to 3.8.10.2. (CVE-2015-3414, CVE-2015-3415, CVE-2015-3416)</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
 <section class="version" id="5.6.9"><!-- {{{ 5.6.9 -->
 <h3>Version 5.6.9</h3>
 <?php release_date('14-May-2015'); ?>
