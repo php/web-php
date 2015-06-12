@@ -23,7 +23,7 @@
       PHP 7.0.0 Alpha 1 comes with new version of the Zend Engine with features such as (incomplete list):
      </p>
      <ul>
-        <li>Improved performance: PHP 7 is up to twice as fast as PHP 5.6/li>
+        <li>Improved performance: PHP 7 is up to twice as fast as PHP 5.6</li>
         <li>Consistent 64-bit support</li>
         <li>Many fatal errors are now Exceptions</li>
         <li>Removal of old and unsupported SAPIs and extensions</li>
