@@ -82,19 +82,19 @@ site_header(
  href="/submit-event.php">on this page</a>.
 </p>
 
-<h2 id="irc">Instant Resource Center</h2>
+<h2 id="irc">Internet Relay Chat</h2>
 
 <p>
- Otherwise known as IRC or Internet Relay Chat. Here you can usually find
- experienced PHP people sitting around doing nothing on various channels with
- php in their names.  Note that there is no official IRC channel.
- Check <a href="http://oftc.net">OFTC</a> or any other major network
+ Otherwise known as IRC. Here you can usually find experienced PHP people 
+ sitting around doing nothing on various channels with php in their names.  
+ Note that there is no official IRC channel. Check 
+ <a href="http://www.freenode.net/">freenode</a> or any other major network
  (<a href="http://www.efnet.org/">EFNet</a>,
- <a href="http://www.ircnet.com/">IRCNet</a>,
  <a href="http://www.quakenet.org">QuakeNet</a>,
+ <a href="http://www.ircnet.com/">IRCNet</a>, 
  <a href="http://www.icq.com">IrCQNet</a>,
  <a href="http://www.dal.net/">DALNet</a> and
- <a href="http://www.freenode.net/">freenode</a>).
+ <a href="http://oftc.net">OFTC</a>).
 </p>
 
 <h2 id="webmasters">PHP.net webmasters</h2>
