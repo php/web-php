@@ -18,12 +18,12 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
   <li><?php bugfix(69599); ?> (Strange generator+exception+variadic crash).</li>
   <li><?php bugfix(69628); ?> (complex GLOB_BRACE fails on Windows).</li>
   <li>Fixed POST data processing slowdown due to small input buffer size on Windows.</li>
-  <li><?php bugfix(69646); ?> (OS command injection vulnerability in escapeshellarg).</li>
+  <li><?php bugfix(69646); ?> (OS command injection vulnerability in escapeshellarg). (CVE-2015-4642)</li>
   <li><?php bugfix(69719); ?> (Incorrect handling of paths with NULs).</li>
 </ul></li>
 <li>FTP:
 <ul>
-  <li>Improved fix for bug <?php bugl(69545); ?> (Integer overflow in ftp_genlist() resulting in heap overflow).</li>
+  <li>Improved fix for bug <?php bugl(69545); ?> (Integer overflow in ftp_genlist() resulting in heap overflow). (CVE-2015-4643)</li>
 </ul></li>
 <li>GD:
 <ul>
@@ -59,7 +59,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 </ul></li>
 <li>Postgres:
 <ul>
-  <li><?php bugfix(69667); ?> (segfault in php_pgsql_meta_data).</li>
+  <li><?php bugfix(69667); ?> (segfault in php_pgsql_meta_data). (CVE-2015-4644)</li>
 </ul></li>
 <li>Sqlite3:
 <ul>
@@ -77,12 +77,12 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
   <li><?php bugfix(69566); ?> (Conditional jump or move depends on uninitialised value in extension trait).</li>
   <li><?php bugfix(66048); ?> (temp. directory is cached during multiple requests).</li>
   <li><?php bugfix(69628); ?> (complex GLOB_BRACE fails on Windows).</li>
-  <li><?php bugfix(69646); ?> (OS command injection vulnerability in escapeshellarg).</li>
+  <li><?php bugfix(69646); ?> (OS command injection vulnerability in escapeshellarg). (CVE-2015-4642)</li>
   <li><?php bugfix(69719); ?> (Incorrect handling of paths with NULs).</li>
 </ul></li>
 <li>FTP:
 <ul>
-  <li>Improved fix for bug <?php bugl(69545); ?> (Integer overflow in ftp_genlist() resulting in heap overflow).</li>
+  <li>Improved fix for bug <?php bugl(69545); ?> (Integer overflow in ftp_genlist() resulting in heap overflow). (CVE-2015-4643)</li>
 </ul></li>
 <li>GD:
 <ul>
@@ -118,7 +118,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 </ul></li>
 <li>Postgres:
 <ul>
-  <li><?php bugfix(69667); ?> (segfault in php_pgsql_meta_data).</li>
+  <li><?php bugfix(69667); ?> (segfault in php_pgsql_meta_data). (CVE-2015-4644)</li>
 </ul></li>
 <li>Sqlite3:
 <ul>
@@ -133,8 +133,8 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 <b>11-Jun-2015</b>
 <ul><li>Core:
 <ul>
-  <li>Imroved fix for bug <?php bugl(69545); ?>  (Integer overflow in ftp_genlist() resulting in heap overflow).</li>
-  <li><?php bugfix(69646); ?> (OS command injection vulnerability in escapeshellarg).</li>
+  <li>Improved fix for bug <?php bugl(69545); ?> (Integer overflow in ftp_genlist() resulting in heap overflow). (CVE-2015-4643)</li>
+  <li><?php bugfix(69646); ?> (OS command injection vulnerability in escapeshellarg). (CVE-2015-4642)</li>
   <li><?php bugfix(69719); ?> (Incorrect handling of paths with NULs).</li>
 </ul></li>
 <li>Litespeed SAPI:
@@ -147,7 +147,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 </ul></li>
 <li>Postgres:
 <ul>
-  <li><?php bugfix(69667); ?> (segfault in php_pgsql_meta_data).</li>
+  <li><?php bugfix(69667); ?> (segfault in php_pgsql_meta_data). (CVE-2015-4644)</li>
 </ul></li>
 <li>Sqlite3:
 <ul>
