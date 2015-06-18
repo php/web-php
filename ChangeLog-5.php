@@ -43,7 +43,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 </ul></li>
 <li>MCrypt:
 <ul>
-  <li>Added file descriptor caching to mcrypt_create_iv() (Leigh)</li>
+  <li>Added file descriptor caching to mcrypt_create_iv().</li>
 </ul></li>
 <li>Opcache:
 <ul>
@@ -102,7 +102,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 </ul></li>
 <li>MCrypt:
 <ul>
-  <li>Added file descriptor caching to mcrypt_create_iv() (Leigh)</li>
+  <li>Added file descriptor caching to mcrypt_create_iv().</li>
 </ul></li>
 <li>Opcache:
 <ul>
