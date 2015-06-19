@@ -7,6 +7,7 @@
   <default:finalTeaserDate xmlns="http://php.net/ns/news">2015-10-19</default:finalTeaserDate>
   <category term="conferences" label="Conference announcement"/>
   <link href="http://php.net/conferences/index.php#id2015-06-19-1" rel="alternate" type="text/html"/>
+  <default:newsImage xmlns="http://php.net/ns/news" link="http://www.zendcon.com/" title="ZendCon 2015">ZendCon15.png</default:newsImage>
   <link href="http://www.zendcon.com/" rel="via" type="text/html"/>
   <content type="xhtml">
     <div xmlns="http://www.w3.org/1999/xhtml">
