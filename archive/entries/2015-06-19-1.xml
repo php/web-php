@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom" xmlns:default="http://php.net/ns/news">
+  <title>ZendCon 2015</title>
+  <id>http://php.net/archive/2015.php#id2015-06-19-1</id>
+  <published>2015-06-19T10:00:00+00:00</published>
+  <updated>2015-06-19T10:00:00+00:00</updated>
+  <default:finalTeaserDate xmlns="http://php.net/ns/news">2015-10-19</default:finalTeaserDate>
+  <category term="conferences" label="Conference announcement"/>
+  <link href="http://php.net/conferences/index.php#id2015-06-19-1" rel="alternate" type="text/html"/>
+  <link href="http://www.zendcon.com/" rel="via" type="text/html"/>
+  <content type="xhtml">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+     <p>Announcing ZendCon 2015, the global PHP conference, happening at the exciting Hard Rock Hotel &amp; Casino in Las Vegas, Nevada. It will start with a full day of tutorials on October 19th and then continue with inspirational keynotes and breakout sessions through the 22nd.</p>
+
+     <p>The conference will feature many of the top developers and speakers in the PHP space to deliver dedicated tracks centered around Zend Framework, Symfony, Laravel, WordPress, Joomla!, Drupal, and Magento. We will also host additional tracks for PHP best practices, PHP architecture, IBM i, and PHP 7.</p>
+
+     <p>We look forward to seeing you in Las Vegas in October. <a href="http://www.zendcon.com/">http://www.zendcon.com/</a></p>
+    </div>
+  </content>
+</entry>
