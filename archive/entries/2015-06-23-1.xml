@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom" xmlns:default="http://php.net/ns/news">
+  <title>Madison PHP Conference 2015</title>
+  <id>http://php.net/archive/2015.php#id2015-06-23-1</id>
+  <published>2015-06-23T11:00:00+00:00</published>
+  <updated>2015-06-23T11:00:00+00:00</updated>
+  <default:finalTeaserDate xmlns="http://php.net/ns/news">2015-11-14</default:finalTeaserDate>
+  <category term="conferences" label="Conference announcement"/>
+  <category term="cfp" label="Call for Papers"/>
+  <link href="http://php.net/conferences/index.php#id2015-06-23-1" rel="alternate" type="text/html"/>
+  <default:newsImage xmlns="http://php.net/ns/news" link="http://www.madisonphpconference.com/" title="Madison PHP Conference 2015">madison-php-2013.png</default:newsImage>
+  <link href="http://www.madisonphpconference.com/" rel="via" type="text/html"/>
+  <content type="xhtml">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+     <p>Join us on Saturday, November 14th, 2015 for a one day, three track conference in Madison, Wisconsin, USA that focuses on PHP and related web technologies. This event is organized by Madison PHP and is designed to offer something to attendees at all skill levels. It will be a day of networking, learning, sharing, and great fun!</p>
+
+     <p>Our Call for Papers is open until August 4th, 2015:<br /><a href="http://cfp.madisonphpconference.com/">http://cfp.madisonphpconference.com/</a></p>
+    </div>
+  </content>
+</entry>
