@@ -3,12 +3,12 @@
 String.prototype.escapeSelector = function()
 {
   return this.replace(/(.|#)([ #;&,.+*~\':"!^$\[\]\(\)=>|\/])/g, '$1' + '\\\\$2');
-}
+};
 
 String.prototype.toInt = function()
 {
   return parseInt(this);
-}
+};
 
 /** {{{
 * jQuery.ScrollTo - Easy element scrolling using jQuery.
