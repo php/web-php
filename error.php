@@ -376,7 +376,6 @@ $uri_aliases = array (
     "__destruct"   => "language.oop5.decon",
     "__call"       => "language.oop5.overloading",
     "__callstatic" => "language.oop5.overloading",
-    "__debuginfo"  => "language.oop5.overloading",
     "__get"        => "language.oop5.overloading",
     "__set"        => "language.oop5.overloading",
     "__isset"      => "language.oop5.overloading",
@@ -385,6 +384,7 @@ $uri_aliases = array (
     "__wakeup"     => "language.oop5.magic",
     "__tostring"   => "language.oop5.magic",
     "__set_state"  => "language.oop5.magic",
+    "__debuginfo"  => "language.oop5.magic",
     "__clone"      => "language.oop5.cloning",
 
     "throw"        => "language.exceptions",
