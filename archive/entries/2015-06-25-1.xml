@@ -20,7 +20,7 @@
      <strong>THIS IS A DEVELOPMENT PREVIEW - DO <u>NOT</u> USE IT IN PRODUCTION!</strong>
 
      <p>
-      Alpha 2 introduces the new Trowable interface and changes to the Exception hierarchy 
+      Alpha 2 introduces the new Throwable interface and changes to the Exception hierarchy 
       and about 25 bug fixes reported since the first alpha.
      </p>
 
