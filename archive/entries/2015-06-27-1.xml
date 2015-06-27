@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom" xmlns:default="http://php.net/ns/news">
+  <title>AFUP ForumPHP 2015</title>
+  <id>http://php.net/archive/2015.php#id2015-06-27-1</id>
+  <published>2015-06-27T09:03:03+00:00</published>
+  <updated>2015-06-27T09:03:03+00:00</updated>
+  <default:finalTeaserDate xmlns="http://php.net/ns/news">2015-08-15</default:finalTeaserDate>
+  <category term="conferences" label="Conference announcement"/>
+  <link href="http://php.net/conferences/index.php#id2015-06-27-1" rel="alternate" type="text/html"/>
+  <default:newsImage xmlns="http://php.net/ns/news" link="http://www.afup.org/pages/forumphp2015/appel-a-conferenciers-en.php" title="forumphp-afup-2015">forumphp-afup-2015.png</default:newsImage>
+  <link href="http://www.afup.org/pages/forumphp2015/appel-a-conferenciers-en.php" rel="via" type="text/html"/>
+  <content type="xhtml">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+     <p>Come and join us at Forum PHP 2015, our annual conference gathering all PHP and Open Source communities, pros and PHP lovers.</p>
+
+<p>This year, the event will be held at Beffroi de Montrouge, on November, 23rd and 24th. </p>
+
+<p>“PHP’s 20th anniversary : 20 years of web, 20 years of global success, 20 years of innovation”
+In 1995, Rasmus Lerdorf started creating PHP. 20 years later, 80% of websites in the world use the language. Celebrate with us this worldwide success, during 2 days, 3 tracks, and all the best developers involved in PHP7 !</p>
+
+<p>The call for papers is open until August, 15th: <a href="http://www.afup.org/pages/forumphp2015/appel-a-conferenciers-en.php">http://www.afup.org/pages/forumphp2015/appel-a-conferenciers-en.php</a></p>
+    </div>
+  </content>
+</entry>
