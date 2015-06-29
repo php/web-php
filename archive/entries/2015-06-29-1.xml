@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom" xmlns:default="http://php.net/ns/news">
+  <title>php[world] 2015 Schedule Announced</title>
+  <id>http://php.net/archive/2015.php#id2015-06-29-1</id>
+  <published>2015-06-29T15:58:16+00:00</published>
+  <updated>2015-06-29T15:58:16+00:00</updated>
+  <default:finalTeaserDate xmlns="http://php.net/ns/news">2015-11-16</default:finalTeaserDate>
+  <category term="conferences" label="Conference announcement"/>
+  <link href="http://php.net/conferences/index.php#id2015-06-29-1" rel="alternate" type="text/html"/>
+  <default:newsImage xmlns="http://php.net/ns/news" link="https://world.phparch.com/" title="php[world] 2015">2015.world.logo.png</default:newsImage>
+  <link href="https://world.phparch.com/" rel="via" type="text/html"/>
+  <content type="xhtml">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+     <p>The team at php[architect] is excited to announce the schedule for <a href="https://world.phparch.com">php[world] 2015</a>!  As always our conference is designed to bring all the various PHP communities together in one place to learn from each other.  We will have separate tracks for PHP, Drupal, WordPress, Magento, Joomla!, Zend Framework, Symfony, Laravel, and CakePHP.</p>
+     <p>This year we are expanding the conference to 6 concurrent sessions so that we can cover even more material.  Join us for this very unique event from November 16th through November 20th.</p>
+     <ul>
+     	<li>5 day-long training sessions</li>
+     	<li>12 separate tutorials</li>
+     	<li>5 keynotes</li>
+     	<li>60 conference sessions</li>
+     	<li>... 5 amazing days ...</li>
+     </ul>
+     
+    </div>
+  </content>
+</entry>
