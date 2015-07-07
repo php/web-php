@@ -4,7 +4,7 @@ $GPG_KEYS = array(
     "7.0" => <<< GPG
 pub   2048R/22FE5A12 2015-07-07 [expires: 2020-07-05]
       Key fingerprint = D620 173D 6924 BA1C 2244  C7C4 1B6B 6676 22FE 5A12
-uid                  Kalle Sommer Nielsen (PHP) <kalle@php.net>
+uid                  Kalle Sommer Nielsen (PHP) &lt;kalle@php.net&gt;
 
 pub   2048R/9C0D5763 2015-06-09 [expires: 2024-06-06]
       Key fingerprint = 1A4E 8B72 77C4 2E53 DBA9  C7B9 BCAA 30EA 9C0D 5763
