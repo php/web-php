@@ -8,7 +8,7 @@ uid                  Kalle Sommer Nielsen (PHP) &lt;kalle@php.net&gt;
 
 pub   2048R/9C0D5763 2015-06-09 [expires: 2024-06-06]
       Key fingerprint = 1A4E 8B72 77C4 2E53 DBA9  C7B9 BCAA 30EA 9C0D 5763
-uid                  Anatol Belski &lt;@php.net&gt;
+uid                  Anatol Belski &lt;ab@php.net&gt;
 
 GPG
 ,
