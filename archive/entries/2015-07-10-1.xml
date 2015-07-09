@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom" xmlns:default="http://php.net/ns/news">
+  <title>Pacific Northwest PHP Conference 2015</title>
+  <id>http://php.net/archive/2015.php#id2015-07-10-1</id>
+  <published>2015-07-10T02:00:00+01:00</published>
+  <updated>2015-07-10T02:00:00+01:00</updated>
+  <default:finalTeaserDate xmlns="http://php.net/ns/news">2015-07-20</default:finalTeaserDate>
+  <category term="conferences" label="Conference announcement"/>
+  <link href="http://php.net/conferences/index.php#id2015-07-10-1" rel="alternate" type="text/html"/>
+  <default:newsImage xmlns="http://php.net/ns/news" link="http://www.pnwphp.com/" title="Pacific Northwest PHP Conference 2015">pnw-php-2015.png</default:newsImage>
+  <link href="http://www.pnwphp.com/" rel="via" type="text/html"/>
+  <content type="xhtml">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+     <p>
+       Our <em>3-day</em> event will be overflowing with awesome sauce as we hear from world-renowned <a href="http://www.pnwphp.com/speakers">speakers</a> 
+       from the PHP community and companies like Amazon, AOL, Facebook, Google, Microsoft, Oracle, and Zend. With <a href="http://www.pnwphp.com/tags">topics</a> 
+       ranging from continuous delivery to the cloud, you'll be full to the brim with new knowledge to take home
+      </p>
+
+      <p>
+       For tickets and more information: <a href="http://www.pnwphp.com">http://www.pnwphp.com/</a>.
+      </p>
+    </div>
+  </content>
+</entry>
