@@ -4,7 +4,7 @@
   <id>http://php.net/archive/2015.php#id2015-07-04-1</id>
   <published>2015-07-04T10:00:00+00:00</published>
   <updated>2015-07-04T10:00:00+00:00</updated>
-  <default:finalTeaserDate xmlns="http://php.net/ns/news">2015-07-04</default:finalTeaserDate>
+  <default:finalTeaserDate xmlns="http://php.net/ns/news">2015-07-25</default:finalTeaserDate>
   <category term="conferences" label="Conference announcement"/>
   <link href="http://php.net/conferences/index.php#id2015-07-04-1" rel="alternate" type="text/html"/>
   <default:newsImage xmlns="http://php.net/ns/news" link="http://phpkonf.org/" title="PHPKonf İstanbul PHP Conference 2015">phpkonf_2015.png</default:newsImage>
