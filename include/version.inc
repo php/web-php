@@ -33,20 +33,20 @@ $PHP_5_6_SHA256     = array(
                        "tar.xz"        => "1af720c955b0a57aa47606e928616e84c78868aff2a5f269c70601a77d6da8c1",
 );
 /* PHP 5.5 Release */
-$PHP_5_5_RC =  '5.5.27RC1'; // Current RC version (e.g., '5.6.7RC1') or false
+$PHP_5_5_RC =  false; // Current RC version (e.g., '5.6.7RC1') or false
 $PHP_5_5_RC_DATE = '25 Jun 2015';
 
-$PHP_5_5_VERSION         = "5.5.26";
-$PHP_5_5_DATE            = "11 Jun 2015";
+$PHP_5_5_VERSION         = "5.5.27";
+$PHP_5_5_DATE            = "09 Jul 2015";
 $PHP_5_5_MD5     = array(
-                       "tar.bz2"       => "383a4b35327809afd2822e1e5efc8ee1",
-                       "tar.gz"        => "00cdcf41c6432eb82ce5c4b687eef801",
-                       "tar.xz"        => "a3de70d115b8580e50c433f83691cfaf",
+                       "tar.bz2"       => "e105f664450efd87513f5b4a2055e917",
+                       "tar.gz"        => "39cc2659f8d777e803816f7b437d9001",
+                       "tar.xz"        => "2efe7c087d7073bffa64e5d538f22711",
 );
 $PHP_5_5_SHA256     = array(
-                       "tar.bz2"       => "816afffdb03ff4c542bc172a2f77f9c69b817df82d60cce05c1b4f578c2c926e",
-                       "tar.gz"        => "bee980d433bab99d07ee2bf6f2dcb87d746e49d57adec7d0ce7edb39306695ec",
-                       "tar.xz"        => "97672c41cf2f95628dbffb63648147b43b23ea41b99ad22ccf5f4fe9b6e91b51",
+                       "tar.bz2"       => "c4b4c6a534c0ca67a9ae39bec4f51e52d13e820135dd016eae230e15337e1f70",
+                       "tar.gz"        => "57cc716ebb37a62654c154582e48a282055b08ce91995c79b0be41b9940237f0",
+                       "tar.xz"        => "7ee398058067a7d8184e402fcdccb25003852cb8dc94eefa3cda051a3e47fdd8",
 );
 /* PHP 5.4 Release */
 $PHP_5_4_RC = false; // Current RC version (e.g., '5.6.7RC1') or false
