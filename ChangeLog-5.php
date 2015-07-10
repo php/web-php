@@ -8,6 +8,26 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 
 <h1>PHP 5 ChangeLog</h1>
 
+<section class="version" id="5.4.43"><!-- {{{ 5.4.43 -->
+<h3>Version 5.4.43</h3>
+<b>09-Jul-2015</b>
+<ul><li>Core:
+<ul>
+  <li><?php bugfix(69768); ?> (escapeshell*() doesn't cater to !).</li>
+  <li><?php bugfix(69874); ?> (Can't set empty additional_headers for mail()), regression from fix to bug <?php bugl(68776); ?>.</li>
+</ul></li>
+<li>Mysqlnd:
+<ul>
+  <li><?php bugfix(69669); ?> (mysqlnd is vulnerable to BACKRONYM) (CVE-2015-3152).</li>
+</ul></li>
+<li>Phar:
+<ul>
+  <li><?php bugfix(69958); ?> (Segfault in Phar::convertToData on invalid file).</li>
+  <li><?php bugfix(69923); ?> (Buffer overflow and stack smashing error in phar_fix_filepath).</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
 <section class="version" id="5.6.10"><!-- {{{ 5.6.10 -->
 <h3>Version 5.6.10</h3>
 <?php release_date('11-Jun-2015'); ?>
