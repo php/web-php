@@ -8,6 +8,62 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 
 <h1>PHP 5 ChangeLog</h1>
 
+<section class="version" id="5.6.11"><!-- {{{ 5.6.11 -->
+<h3>Version 5.6.11</h3>
+<?php release_date('10-Jul-2015'); ?>
+<ul><li>Core:
+<ul>
+  <li><?php bugfix(69768); ?> (escapeshell*() doesn't cater to !).</li>
+  <li><?php bugfix(69703); ?> (Use __builtin_clzl on PowerPC).</li>
+  <li><?php bugfix(69732); ?> (can induce segmentation fault with basic php code).</li>
+  <li><?php bugfix(69642); ?> (Windows 10 reported as Windows 8).</li>
+  <li><?php bugfix(69551); ?> (parse_ini_file() and parse_ini_string() segmentation fault).</li>
+  <li><?php bugfix(69781); ?> (phpinfo() reports Professional Editions of Windows 7/8/8.1/10 as "Business").</li>
+  <li><?php bugfix(69740); ?> (finally in generator (yield) swallows exception in iteration).</li>
+  <li><?php bugfix(69835); ?> (phpinfo() does not report many Windows SKUs).</li>
+  <li><?php bugfix(69892); ?> (Different arrays compare indentical due to integer key truncation).</li>
+  <li><?php bugfix(69874); ?> (Can't set empty additional_headers for mail()), regression from fix to bug #68776.</li>
+</ul></li>
+<li>GD:
+<ul>
+  <li><?php bugfix(61221); ?> (imagegammacorrect function loses alpha channel).</li>
+</ul></li>
+<li>GMP:
+<ul>
+  <li><?php bugfix(69803); ?> (gmp_random_range() modifies second parameter if GMP number).</li>
+</ul></li>
+<li>Mysqlnd:
+<ul>
+  <li><?php bugfix(69669); ?> (mysqlnd is vulnerable to BACKRONYM) (CVE-2015-3152).</li>
+</ul></li>
+<li>PCRE:
+<ul>
+  <li><?php bugfix(53823); ?> (preg_replace: * qualifier on unicode replace garbles the string).</li>
+  <li><?php bugfix(69864); ?> (Segfault in preg_replace_callback) (cmb, ab)</li>
+</ul></li>
+<li>PDO_pgsql:
+<ul>
+  <li><?php bugfix(69752); ?> (PDOStatement::execute() leaks memory with DML Statements when closeCuror() is u).</li>
+  <li><?php bugfix(69362); ?> (PDO-pgsql fails to connect if password contains a leading single quote).</li>
+  <li><?php bugfix(69344); ?> (PDO PgSQL Incorrect binding numeric array with gaps).</li>
+</ul></li>
+<li>SimpleXML:
+<ul>
+  <li>Refactored the fix for bug <?php bugl(66084); ?> (simplexml_load_string() mangles empty node name).</li>
+</ul></li>
+<li>SPL:
+<ul>
+  <li><?php bugfix(69737); ?> (Segfault when SplMinHeap::compare produces fatal error).</li>
+  <li><?php bugfix(67805); ?> (SplFileObject setMaxLineLength). (Willian Gustavo Veiga).</li>
+  <li><?php bugfix(69970); ?> (Use-after-free vulnerability in spl_recursive_it_move_forward_ex()).</li>
+</ul></li>
+<li>Sqlite3:
+<ul>
+  <li><?php bugfix(69972); ?> (Use-after-free vulnerability in sqlite3SafetyCheckSickOrOk()).</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
 <section class="version" id="5.5.27"><!-- {{{ 5.5.27 -->
 <h3>Version 5.5.27</h3>
 <b>09-Jul-2015</b>
