@@ -22,7 +22,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
   <li><?php bugfix(69740); ?> (finally in generator (yield) swallows exception in iteration).</li>
   <li><?php bugfix(69835); ?> (phpinfo() does not report many Windows SKUs).</li>
   <li><?php bugfix(69892); ?> (Different arrays compare indentical due to integer key truncation).</li>
-  <li><?php bugfix(69874); ?> (Can't set empty additional_headers for mail()), regression from fix to bug #68776.</li>
+  <li><?php bugfix(69874); ?> (Can't set empty additional_headers for mail()), regression from fix to bug <?php bugl(68776); ?>.</li>
 </ul></li>
 <li>GD:
 <ul>
@@ -34,12 +34,12 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 </ul></li>
 <li>Mysqlnd:
 <ul>
-  <li><?php bugfix(69669); ?> (mysqlnd is vulnerable to BACKRONYM) (CVE-2015-3152).</li>
+  <li><?php bugfix(69669); ?> (mysqlnd is vulnerable to BACKRONYM). (CVE-2015-3152)</li>
 </ul></li>
 <li>PCRE:
 <ul>
   <li><?php bugfix(53823); ?> (preg_replace: * qualifier on unicode replace garbles the string).</li>
-  <li><?php bugfix(69864); ?> (Segfault in preg_replace_callback) (cmb, ab)</li>
+  <li><?php bugfix(69864); ?> (Segfault in preg_replace_callback).</li>
 </ul></li>
 <li>PDO_pgsql:
 <ul>
@@ -54,7 +54,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 <li>SPL:
 <ul>
   <li><?php bugfix(69737); ?> (Segfault when SplMinHeap::compare produces fatal error).</li>
-  <li><?php bugfix(67805); ?> (SplFileObject setMaxLineLength). (Willian Gustavo Veiga).</li>
+  <li><?php bugfix(67805); ?> (SplFileObject setMaxLineLength).</li>
   <li><?php bugfix(69970); ?> (Use-after-free vulnerability in spl_recursive_it_move_forward_ex()).</li>
 </ul></li>
 <li>Sqlite3:
@@ -77,7 +77,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
   <li><?php bugfix(69781); ?> (phpinfo() reports Professional Editions of Windows 7/8/8.1/10 as "Business").</li>
   <li><?php bugfix(69835); ?> (phpinfo() does not report many Windows SKUs).</li>
   <li><?php bugfix(69892); ?> (Different arrays compare indentical due to integer key truncation).</li>
-  <li><?php bugfix(69874); ?> (Can't set empty additional_headers for mail()), regression from fix to bug #68776.</li>
+  <li><?php bugfix(69874); ?> (Can't set empty additional_headers for mail()), regression from fix to bug <?php bugl(68776); ?>.</li>
 </ul></li>
 <li>GD:
 <ul>
@@ -85,12 +85,12 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 </ul></li>
 <li>Mysqlnd:
 <ul>
-  <li><?php bugfix(69669); ?> (mysqlnd is vulnerable to BACKRONYM) (CVE-2015-3152).</li>
+  <li><?php bugfix(69669); ?> (mysqlnd is vulnerable to BACKRONYM). (CVE-2015-3152)</li>
 </ul></li>
 <li>PCRE:
 <ul>
   <li>Fixed Bug #53823 (preg_replace: * qualifier on unicode replace garbles the string).</li>
-  <li><?php bugfix(69864); ?> (Segfault in preg_replace_callback) (cmb, ab)</li>
+  <li><?php bugfix(69864); ?> (Segfault in preg_replace_callback).</li>
 </ul></li>
 <li>PDO_pgsql:
 <ul>
@@ -110,7 +110,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 <li>SPL:
 <ul>
   <li><?php bugfix(69737); ?> (Segfault when SplMinHeap::compare produces fatal error).</li>
-  <li><?php bugfix(67805); ?> (SplFileObject setMaxLineLength). (Willian Gustavo Veiga).</li>
+  <li><?php bugfix(67805); ?> (SplFileObject setMaxLineLength).</li>
 </ul></li>
 </ul>
 <!-- }}} --></section>
@@ -125,7 +125,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 </ul></li>
 <li>Mysqlnd:
 <ul>
-  <li><?php bugfix(69669); ?> (mysqlnd is vulnerable to BACKRONYM) (CVE-2015-3152).</li>
+  <li><?php bugfix(69669); ?> (mysqlnd is vulnerable to BACKRONYM). (CVE-2015-3152)</li>
 </ul></li>
 <li>Phar:
 <ul>
