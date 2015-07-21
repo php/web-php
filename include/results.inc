@@ -12,7 +12,7 @@ function search_results($res, $q, $profile='all', $per_page=10, $s=0, $l='en', $
 	echo '<ul id="search-results">'."\n";
 	$pos = $res['ResultSet']['firstResultPosition'];
 
-	$php_img_dir = 'http://static.php.net/www.php.net/images';
+	$php_img_dir = 'http://www.php.net/images';
 	$types = array(
 		'pear'     => '<img src="'. $php_img_dir .'/pear_item.gif" height="19" width="17" style="float:left; margin-left:-30px;"/>',
 		'pecl'     => '<img src="'. $php_img_dir .'/pecl_item.gif" height="19" width="17" style="float:left; margin-left:-30px;"/>',
