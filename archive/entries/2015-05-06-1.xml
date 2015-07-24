@@ -3,7 +3,7 @@
   <title>2015 Northeast PHP Conference</title>
   <id>http://php.net/archive/2015.php#id2015-05-06-1</id>
   <published>2015-05-06T00:32:35+02:00</published>
-  <updated>2015-05-06T00:32:35+02:00</updated>
+  <updated>2015-07-23T21:13:00+02:00</updated>
   <default:finalTeaserDate xmlns="http://php.net/ns/news">2015-08-23</default:finalTeaserDate>
   <category term="conferences" label="Conference announcement"/>
   <category term="cfp" label="Call for Papers"/>
@@ -12,20 +12,25 @@
   <link href="http://2015.northeastphp.org" rel="via" type="text/html"/>
   <content type="xhtml">
     <div xmlns="http://www.w3.org/1999/xhtml">
-     <p>
-      We are so pleased to announce that Mr. Andi Gutmans of Zend Corporation (The PHP Company) will be our special opening keynote speaker at this year's conference.  
-    </p>
-    <p>
-     August 22 &amp; 23 in Boston, MA.
-     </p>
-     <p>
-     Early Bird registration is now open as well.
-     </p>
-     <p>
-      More details will follow, but be sure to tell your friends!!
-     </p>
-     
-     <a href="http://2015.northeastphp.org/">http://2015.northeastphp.org/</a>
+      <p>
+        <b>The speaker lineup has been decided!<b> 
+      </p>
+      <p>
+        We’ve got all the <a href="http://2015.northeastphp.org/speakers/" title="speakers">rockstars</a> from our industry in one place just for you! With talks ranging from starting to work in the industry to expanding your skill set as an experienced user; we have sessions for everyone!
+      </p>
+      <p>
+       We are also pleased to announce that Mr. Andi Gutmans of Zend Corporation (The PHP Company) will be our special opening keynote speaker at this year's conference.  
+      </p>
+      <p>
+        August 22 &amp; 23 in Boston, MA.
+      </p>
+      <p>
+        Early Bird registration is now open as well.
+      </p>
+      <p>
+        More details will follow, but be sure to tell your friends!!
+      </p>
+     <a href="http://2015.northeastphp.org/" title="NortheastPHP 2015">http://2015.northeastphp.org/</a>
     </div>
   </content>
 </entry>
