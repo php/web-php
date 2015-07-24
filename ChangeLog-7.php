@@ -8,6 +8,62 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
 
 <h1>PHP 7 ChangeLog</h1>
 
+<section class="version" id="7.0.0b2"><!-- {{{ 7.0.0b2 -->
+<h3>Version 7.0.0 Beta 2</h3>
+<b>23-Jul-2015</b>
+<ul><li>Core:
+<ul>
+  <li><?php bugfix(70089); ?> (segfault at ZEND_FETCH_DIM_W_SPEC_VAR_CONST_HANDLER ()).</li>
+  <li><?php bugfix(70057); ?> (Build failure on 32-bit Mac OS X 10.6.8: recursive inlining).</li>
+  <li><?php bugfix(70012); ?> (Exception lost with nested finally block).</li>
+  <li><?php bugfix(69996); ?> (Changing the property of a cloned object affects the original).</li>
+  <li><?php bugfix(70083); ?> (Use after free with assign by ref to overloaded objects).</li>
+</ul></li>
+<li>Curl:
+<ul>
+  <li><?php bugfix(70065); ?> (curl_getinfo() returns corrupted values).</li>
+</ul></li>
+<li>GD:
+<ul>
+  <li><?php bugfix(53156); ?> (imagerectangle problem with point ordering).</li>
+  <li><?php bugfix(66387); ?> (Stack overflow with imagefilltoborder).</li>
+  <li><?php bugfix(70102); ?> (imagecreatefromwebm() shifts colors).</li>
+  <li><?php bugfix(66590); ?> (imagewebp() doesn't pad to even length).</li>
+  <li><?php bugfix(66882); ?> (imagerotate by -90 degrees truncates image by 1px).</li>
+  <li><?php bugfix(70064); ?> (imagescale(..., IMG_BICUBIC) leaks memory).</li>
+  <li><?php bugfix(69024); ?> (imagescale segfault with palette based image).</li>
+  <li><?php bugfix(53154); ?> (Zero-height rectangle has whiskers).</li>
+  <li><?php bugfix(67447); ?> (imagecrop() add a black line when cropping).</li>
+  <li><?php bugfix(68714); ?> (copy 'n paste error).</li>
+  <li><?php bugfix(66339); ?> (PHP segfaults in imagexbm).</li>
+  <li><?php bugfix(70047); ?> (gd_info() doesn't report WebP support).</li>
+  <li>Replace libvpx with libwebp for bundled libgd.</li>
+</ul></li>
+<li>Opcache:
+<ul>
+  <li><?php bugfix(70058); ?> (Build fails when building for i386).</li>
+  <li><?php bugfix(70022); ?> (Crash with opcache using opcache.file_cache_only=1).</li>
+</ul></li>
+<li>Soap:
+<ul>
+  <li><?php bugfix(70079); ?> (Segmentation fault after more than 100 SoapClient calls).</li>
+  <li><?php bugfix(70032); ?> (make_http_soap_request calls zend_hash_get_current_key_ex(,,,NULL).</li>
+</ul></li>
+<li>SPL:
+<ul>
+  <li><?php bugfix(70053); ?> (MutlitpleIterator array-keys incompatible change in PHP 7).</li>
+</ul></li>
+<li>Standard:
+<ul>
+  <li><?php bugfix(70096); ?> (Repeated iptcembed() adds superfluous FF bytes).</li>
+  <li><?php bugfix(70018); ?> (exec does not strip all whitespace).</li>
+</ul></li>
+<li>Tokenizer:
+<ul>
+  <li><?php bugfix(69430); ?> (token_get_all has new irrecoverable errors).</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
 <section class="version" id="7.0.0b1"><!-- {{{ 7.0.0b1 -->
 <h3>Version 7.0.0 Beta 1</h3>
 <b>11-Jun-2015</b>
