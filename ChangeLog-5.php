@@ -8,6 +8,48 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 
 <h1>PHP 5 ChangeLog</h1>
 
+<section class="version" id="5.6.12"><!-- {{{ 5.6.12 -->
+<h3>Version 5.6.12</h3>
+<?php release_date('06-Aug-2015'); ?>
+<ul><li>Core:
+<ul>
+  <li><?php bugfix(70012); ?> (Exception lost with nested finally block).</li>
+</ul></li>
+<li>CLI server:
+<ul>
+  <li><?php bugfix(69655); ?> (php -S changes MKCALENDAR request method to MKCOL).</li>
+  <li><?php bugfix(64878); ?> (304 responses return Content-Type header).</li>
+</ul></li>
+<li>GD:
+<ul>
+  <li><?php bugfix(53156); ?> (imagerectangle problem with point ordering).</li>
+  <li><?php bugfix(66387); ?> (Stack overflow with imagefilltoborder).</li>
+  <li><?php bugfix(70102); ?> (imagecreatefromwebm() shifts colors).</li>
+  <li><?php bugfix(66590); ?> (imagewebp() doesn't pad to even length).</li>
+  <li><?php bugfix(66882); ?> (imagerotate by -90 degrees truncates image by 1px).</li>
+  <li><?php bugfix(70064); ?> (imagescale(..., IMG_BICUBIC) leaks memory).</li>
+  <li><?php bugfix(69024); ?> (imagescale segfault with palette based image).</li>
+  <li><?php bugfix(53154); ?> (Zero-height rectangle has whiskers).</li>
+  <li><?php bugfix(67447); ?> (imagecrop() add a black line when cropping).</li>
+  <li><?php bugfix(68714); ?> (copy 'n paste error).</li>
+  <li><?php bugfix(66339); ?> (PHP segfaults in imagexbm).</li>
+  <li><?php bugfix(70047); ?> (gd_info() doesn't report WebP support).</li>
+</ul></li>
+<li>ODBC:
+<ul>
+  <li><?php bugfix(69975); ?> (PHP segfaults when accessing nvarchar(max) defined columns).</li>
+</ul></li>
+<li>OpenSSL:
+<ul>
+  <li><?php bugfix(69882); ?> (OpenSSL error "key values mismatch" after openssl_pkcs12_read with extra cert).</li>
+</ul></li>
+<li>Standard:
+<ul>
+  <li><?php bugfix(70096); ?> (Repeated iptcembed() adds superfluous FF bytes).</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
 <section class="version" id="5.5.28"><!-- {{{ 5.5.28 -->
 <h3>Version 5.5.28</h3>
 <b>06-Aug-2015</b>
