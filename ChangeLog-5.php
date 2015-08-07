@@ -8,6 +8,71 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 
 <h1>PHP 5 ChangeLog</h1>
 
+<section class="version" id="5.5.28"><!-- {{{ 5.5.28 -->
+<h3>Version 5.5.28</h3>
+<b>06-Aug-2015</b>
+<ul><li>Core:
+<ul>
+  <li><?php bugfix(69793); ?> (Remotely triggerable stack exhaustion via recursive method calls).</li>
+  <li><?php bugfix(69892); ?> (Different arrays compare indentical due to integer key truncation).</li>
+  <li><?php bugfix(70002); ?> (TS issues with temporary dir handling).</li>
+  <li><?php bugfix(70121); ?> (unserialize() could lead to unexpected methods execution / NULL pointer deref).</li>
+</ul></li>
+<li>OpenSSL:
+<ul>
+  <li><?php bugfix(70014); ?> (openssl_random_pseudo_bytes() is not cryptographically secure).</li>
+</ul></li>
+<li>Phar:
+<ul>
+  <li>Improved fix for bug #69441.</li>
+  <li><?php bugfix(70019); ?> (Files extracted from archive may be placed outside of destination directory).</li>
+</ul></li>
+<li>SOAP:
+<ul>
+  <li><?php bugfix(70081); ?> (SoapClient info leak / null pointer dereference via multiple type confusions).</li>
+</ul></li>
+<li>SPL:
+<ul>
+  <li><?php bugfix(70068); ?> (Dangling pointer in the unserialization of ArrayObject items).</li>
+  <li><?php bugfix(70166); ?> (Use After Free Vulnerability in unserialize() with SPLArrayObject).</li>
+  <li><?php bugfix(70168); ?> (Use After Free Vulnerability in unserialize() with SplObjectStorage).</li>
+  <li><?php bugfix(70169); ?> (Use After Free Vulnerability in unserialize() with SplDoublyLinkedList).</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
+<section class="version" id="5.4.44"><!-- {{{ 5.4.44 -->
+<h3>Version 5.4.44</h3>
+<b>06-Aug-2015</b>
+<ul><li>Core:
+<ul>
+  <li><?php bugfix(69793); ?> (Remotely triggerable stack exhaustion via recursive method calls).</li>
+  <li><?php bugfix(69892); ?> (Different arrays compare indentical due to integer key truncation).</li>
+  <li><?php bugfix(70121); ?> (unserialize() could lead to unexpected methods execution / NULL pointer deref).</li>
+</ul></li>
+<li>OpenSSL:
+<ul>
+  <li><?php bugfix(70014); ?> (openssl_random_pseudo_bytes() is not cryptographically secure).</li>
+</ul></li>
+<li>Phar:
+<ul>
+  <li>Improved fix for bug <?php bugl(69441) ?>.</li>
+  <li><?php bugfix(70019); ?> (Files extracted from archive may be placed outside of destination directory).</li>
+</ul></li>
+<li>SOAP:
+<ul>
+  <li><?php bugfix(70081); ?> (SoapClient info leak / null pointer dereference via multiple type confusions).</li>
+</ul></li>
+<li>SPL:
+<ul>
+  <li><?php bugfix(70068); ?> (Dangling pointer in the unserialization of ArrayObject items).</li>
+  <li><?php bugfix(70166); ?> (Use After Free Vulnerability in unserialize() with SPLArrayObject).</li>
+  <li><?php bugfix(70168); ?> (Use After Free Vulnerability in unserialize() with SplObjectStorage).</li>
+  <li><?php bugfix(70169); ?> (Use After Free Vulnerability in unserialize() with SplDoublyLinkedList).</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
 <section class="version" id="5.6.11"><!-- {{{ 5.6.11 -->
 <h3>Version 5.6.11</h3>
 <?php release_date('10-Jul-2015'); ?>

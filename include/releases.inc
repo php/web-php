@@ -2,7 +2,43 @@
 $OLDRELEASES = array (
   5 => 
   array (
-    '5.6.10' => 
+  '5.5.27' => 
+  array (
+    'announcement' => 
+    array (
+      'English' => '/releases/5_5_27.php',
+    ),
+    'source' => 
+    array (
+      0 => 
+      array (
+        'filename' => 'php-5.5.27.tar.bz2',
+        'name' => 'PHP 5.5.27 (tar.bz2)',
+        'md5' => 'e105f664450efd87513f5b4a2055e917',
+        'sha256' => 'c4b4c6a534c0ca67a9ae39bec4f51e52d13e820135dd016eae230e15337e1f70',
+        'date' => '09 Jul 2015',
+      ),
+      1 => 
+      array (
+        'filename' => 'php-5.5.27.tar.gz',
+        'name' => 'PHP 5.5.27 (tar.gz)',
+        'md5' => '39cc2659f8d777e803816f7b437d9001',
+        'sha256' => '57cc716ebb37a62654c154582e48a282055b08ce91995c79b0be41b9940237f0',
+        'date' => '09 Jul 2015',
+      ),
+      2 => 
+      array (
+        'filename' => 'php-5.5.27.tar.xz',
+        'name' => 'PHP 5.5.27 (tar.xz)',
+        'md5' => '2efe7c087d7073bffa64e5d538f22711',
+        'sha256' => '7ee398058067a7d8184e402fcdccb25003852cb8dc94eefa3cda051a3e47fdd8',
+        'date' => '09 Jul 2015',
+      ),
+    ),
+    'date' => '09 Jul 2015',
+    'museum' => false,
+  ),
+ '5.6.10' => 
     array (
       'announcement' => 
       array (
@@ -1266,6 +1302,39 @@ $OLDRELEASES = array (
       ),
       'date' => '20 Jun 2013',
       'museum' => true,
+    ),
+    '5.4.43' => 
+    array (
+      'announcement' => 
+      array (
+        'English' => '/releases/5_4_43.php',
+      ),
+      'source' => 
+      array (
+        0 => 
+        array (
+          'filename' => 'php-5.4.43.tar.bz2',
+          'name' => 'PHP 5.4.43 (tar.bz2)',
+          'md5' => 'eedfa86393db2ae49a163d1f80aa2c19',
+          'sha256' => '25d7724fb00ad1b520f5bad2173717031153d0a8e3de2c75e7a084c76f8ecd6b',
+          'date' => '09 Jul 2015',
+        ),
+        1 => 
+        array (
+          'filename' => 'php-5.4.43.tar.gz',
+          'name' => 'PHP 5.4.43 (tar.gz)',
+          'md5' => 'b09580551c32ba191e926bbbdea4e082',
+          'sha256' => 'cfc2176adc05f009666ecfab4a1cc66cc546c5d071245b2a048b3d113f67a2af',
+          'date' => '09 Jul 2015',
+        ),
+        2 => 
+        array (
+          'link' => 'http://windows.php.net/download/#php-5.4',
+          'name' => 'Windows 5.4.43 binaries and source',
+        ),
+      ),
+      'date' => '09 Jul 2015',
+      'museum' => false,
     ),
     '5.4.42' => 
     array (
