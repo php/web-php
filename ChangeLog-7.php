@@ -8,6 +8,75 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
 
 <h1>PHP 7 ChangeLog</h1>
 
+<section class="version" id="7.0.0b3"><!-- {{{ 7.0.0b3 -->
+<h3>Version 7.0.0 Beta 3</h3>
+<b>06-Aug-2015</b>
+<ul><li>Core:
+<ul>
+  <li>Fixed "finally" issues.</li>
+  <li><?php bugfix(70098); ?> (Real memory usage doesn't decrease).</li>
+  <li><?php bugfix(70159); ?> (__CLASS__ is lost in closures).</li>
+  <li><?php bugfix(70156); ?> (Segfault in zend_find_alias_name).</li>
+  <li><?php bugfix(70124); ?> (null ptr deref / seg fault in ZEND_HANDLE_EXCEPTION).</li>
+  <li><?php bugfix(70117); ?> (Unexpected return type error).</li>
+  <li><?php bugfix(70106); ?> (Inheritance by anonymous class).</li>
+  <li><?php bugfix(69674); ?> (SIGSEGV array.c:953).</li>
+  <li><?php bugfix(70164); ?> (__COMPILER_HALT_OFFSET__ under namespace is not defined).</li>
+  <li><?php bugfix(70108); ?> (sometimes empty $_SERVER['QUERY_STRING']).</li>
+  <li><?php bugfix(70179); ?> ($this refcount issue).</li>
+  <li><?php bugfix(69896); ?> ('asm' operand has impossible constraints).</li>
+  <li><?php bugfix(70183); ?> (null pointer deref (segfault) in zend_eval_const_expr).</li>
+  <li><?php bugfix(70182); ?> (Segfault in ZEND_ASSIGN_DIV_SPEC_CV_UNUSED_HANDLER).</li>
+  <li><?php bugfix(69793); ?> (Remotely triggerable stack exhaustion via recursive method calls).</li>
+  <li><?php bugfix(69892); ?> (Different arrays compare indentical due to integer key truncation).</li>
+  <li><?php bugfix(70121); ?> (unserialize() could lead to unexpected methods execution / NULL pointer deref).</li>
+</ul></li>
+<li>Curl:
+<ul>
+  <li><?php bugfix(70163); ?> (curl_setopt_array() type confusion).</li>
+</ul></li>
+<li>IMAP:
+<ul>
+  <li><?php bugfix(70158); ?> (Building with static imap fails).</li>
+  <li><?php bugfix(69998); ?> (curl multi leaking memory).</li>
+</ul></li>
+<li>Opcache:
+<ul>
+  <li><?php bugfix(70111); ?> (Segfault when a function uses both an explicit return type and an explicit cast).</li>
+</ul></li>
+<li>OpenSSL:
+<ul>
+  <li><?php bugfix(70014); ?> (openssl_random_pseudo_bytes() is not cryptographically secure).</li>
+</ul></li>
+<li>Phar:
+<ul>
+  <li>Improved fix for bug <?php bugl(69441) ?>.</li>
+  <li><?php bugfix(70019); ?> (Files extracted from archive may be placed outside of destination directory).</li>
+</ul></li>
+<li>Phpdbg:
+<ul>
+  <li><?php bugfix(70138); ?> (Segfault when displaying memory leaks).</li>
+</ul></li>
+<li>SOAP:
+<ul>
+  <li><?php bugfix(70081); ?> (SoapClient info leak / null pointer dereference via multiple type confusions).</li>
+</ul></li>
+<li>SPL:
+<ul>
+  <li><?php bugfix(70068); ?> (Dangling pointer in the unserialization of ArrayObject items).</li>
+  <li><?php bugfix(70166); ?> (Use After Free Vulnerability in unserialize() with SPLArrayObject).</li>
+  <li><?php bugfix(70168); ?> (Use After Free Vulnerability in unserialize() with SplObjectStorage).</li>
+  <li><?php bugfix(70169); ?> (Use After Free Vulnerability in unserialize() with SplDoublyLinkedList).</li>
+</ul></li>
+<li>Standard:
+<ul>
+  <li><?php bugfix(70140); ?> (str_ireplace/php_string_tolower - Arbitrary Code</li>
+  <li>Implemented FR <?php bugl(70112); ?> (Allow "dirname" to go up various times).</li>
+  <li><?php bugfix(36365); ?> (scandir duplicates file name at every 65535th file).</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
 <section class="version" id="7.0.0b2"><!-- {{{ 7.0.0b2 -->
 <h3>Version 7.0.0 Beta 2</h3>
 <b>23-Jul-2015</b>
