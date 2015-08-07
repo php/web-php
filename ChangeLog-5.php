@@ -14,6 +14,10 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 <ul><li>Core:
 <ul>
   <li><?php bugfix(70012); ?> (Exception lost with nested finally block).</li>
+  <li><?php bugfix(70002); ?> (TS issues with temporary dir handling).</li>
+  <li><?php bugfix(69793); ?> (Remotely triggerable stack exhaustion via recursive method calls).</li>
+  <li><?php bugfix(69892); ?> (Different arrays compare indentical due to integer key truncation).</li>
+  <li><?php bugfix(70121); ?> (unserialize() could lead to unexpected methods execution / NULL pointer deref).</li>
 </ul></li>
 <li>CLI server:
 <ul>
@@ -42,6 +46,23 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 <li>OpenSSL:
 <ul>
   <li><?php bugfix(69882); ?> (OpenSSL error "key values mismatch" after openssl_pkcs12_read with extra cert).</li>
+  <li><?php bugfix(70014); ?> (openssl_random_pseudo_bytes() is not cryptographically secure).</li>
+</ul></li>
+<li>Phar:
+<ul>
+  <li>Improved fix for bug <?php bugl(69441) ?>.</li>
+  <li><?php bugfix(70019); ?> (Files extracted from archive may be placed outside of destination directory).</li>
+</ul></li>
+<li>SOAP:
+<ul>
+  <li><?php bugfix(70081); ?> (SoapClient info leak / null pointer dereference via multiple type confusions).</li>
+</ul></li>
+<li>SPL:
+<ul>
+  <li><?php bugfix(70068); ?> (Dangling pointer in the unserialization of ArrayObject items).</li>
+  <li><?php bugfix(70166); ?> (Use After Free Vulnerability in unserialize() with SPLArrayObject).</li>
+  <li><?php bugfix(70168); ?> (Use After Free Vulnerability in unserialize() with SplObjectStorage).</li>
+  <li><?php bugfix(70169); ?> (Use After Free Vulnerability in unserialize() with SplDoublyLinkedList).</li>
 </ul></li>
 <li>Standard:
 <ul>
@@ -66,7 +87,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 </ul></li>
 <li>Phar:
 <ul>
-  <li>Improved fix for bug #69441.</li>
+  <li>Improved fix for bug <?php bugl(69441) ?>.</li>
   <li><?php bugfix(70019); ?> (Files extracted from archive may be placed outside of destination directory).</li>
 </ul></li>
 <li>SOAP:
