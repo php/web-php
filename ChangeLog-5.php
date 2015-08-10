@@ -843,7 +843,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 </ul></li>
 <li>SOAP:
 <ul>
-  <li><?php bugfix(69085); ?> (SoapClient's __call() type confusion through unserialize()).</li>
+  <li><?php bugfix(69085); ?> (SoapClient's __call() type confusion through unserialize()). (CVE-2015-4147, CVE-2015-4148)</li>
 </ul></li>
 <li>SPL:
 <ul>
@@ -918,7 +918,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 </ul></li>
 <li>SOAP:
 <ul>
-  <li><?php bugfix(69085); ?> (SoapClient's __call() type confusion through unserialize()).</li>
+  <li><?php bugfix(69085); ?> (SoapClient's __call() type confusion through unserialize()). (CVE-2015-4147, CVE-2015-4148)</li>
 </ul></li>
 <li>SPL:
 <ul>
@@ -948,7 +948,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 </ul></li>
 <li>SOAP:
 <ul>
-  <li><?php bugfix(69085); ?> (SoapClient's __call() type confusion through unserialize()).</li>
+  <li><?php bugfix(69085); ?> (SoapClient's __call() type confusion through unserialize()). (CVE-2015-4147, CVE-2015-4148)</li>
 </ul></li>
 <li>ZIP:
 <ul>
