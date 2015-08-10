@@ -175,6 +175,11 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
   <li><?php bugfix(69362); ?> (PDO-pgsql fails to connect if password contains a leading single quote).</li>
   <li><?php bugfix(69344); ?> (PDO PgSQL Incorrect binding numeric array with gaps).</li>
 </ul></li>
+<li>Phar:
+<ul>
+  <li><?php bugfix(69958); ?> (Segfault in Phar::convertToData on invalid file). (CVE-2015-5589)</li>
+  <li><?php bugfix(69923); ?> (Buffer overflow and stack smashing error in phar_fix_filepath). (CVE-2015-5590)</li>
+</ul></li>
 <li>SimpleXML:
 <ul>
   <li>Refactored the fix for bug <?php bugl(66084); ?> (simplexml_load_string() mangles empty node name).</li>
@@ -228,8 +233,8 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 </ul></li>
 <li>Phar:
 <ul>
-  <li><?php bugfix(69958); ?> (Segfault in Phar::convertToData on invalid file).</li>
-  <li><?php bugfix(69923); ?> (Buffer overflow and stack smashing error in phar_fix_filepath).</li>
+  <li><?php bugfix(69958); ?> (Segfault in Phar::convertToData on invalid file). (CVE-2015-5589)</li>
+  <li><?php bugfix(69923); ?> (Buffer overflow and stack smashing error in phar_fix_filepath). (CVE-2015-5590)</li>
 </ul></li>
 <li>SimpleXML:
 <ul>
@@ -257,8 +262,8 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 </ul></li>
 <li>Phar:
 <ul>
-  <li><?php bugfix(69958); ?> (Segfault in Phar::convertToData on invalid file).</li>
-  <li><?php bugfix(69923); ?> (Buffer overflow and stack smashing error in phar_fix_filepath).</li>
+  <li><?php bugfix(69958); ?> (Segfault in Phar::convertToData on invalid file). (CVE-2015-5589)</li>
+  <li><?php bugfix(69923); ?> (Buffer overflow and stack smashing error in phar_fix_filepath). (CVE-2015-5590)</li>
 </ul></li>
 </ul>
 <!-- }}} --></section>
