@@ -12,43 +12,44 @@
   <link href="https://phpconference.com" rel="via" type="text/html"/>
   <content type="html">
     <div xmlns="http://www.w3.org/1999/xhtml">
-     &lt;p&gt;&lt;a href="https://phpconference.com"&gt;The International PHP Conference&lt;/a&gt; is the world’s first PHP conference and stands since more than a decade for top-notch pragmatic expertise in PHP and web technologies. At the IPC, internationally renowned experts from the PHP industry meet up with PHP users and developers from large and small companies. Here is the place where concepts emerge and ideas are born – the IPC signifies knowledge transfer at highest level.&lt;/p&gt;
-     &lt;p&gt;All delegates of the International PHP Conference have, in addition to PHP program, free access to the entire range of the &lt;a href="https://webtechcon.de/"&gt;WebTechCon&lt;/a&gt; taking place at the same time.&lt;/p&gt;
-     &lt;p&gt;Basic facts:&lt;/p&gt;
-     &lt;p&gt;Date: October 25 – 29, 2015&lt;br /&gt;
-     Location: Holiday Inn City Centre, Munich&lt;/p&gt;
-     &lt;p&gt;Highlights:&lt;/p&gt;
-     &lt;ul&gt;
-     &lt;li&gt;90+ best practice sessions&lt;/li&gt;
-     &lt;li&gt;Cool PHP &amp; the Gang: 60+ international top speakers&lt;/li&gt;
-     &lt;li&gt;PHPower: Hands-on Power Workshops&lt;/li&gt;
-     &lt;li&gt;Expo with exiting exhibitors&lt;/li&gt;
-     &lt;li&gt;Conference Combo: Visit the WebTechCon [Link zu www.webtechcon.de] For Free&lt;/li&gt;
-     &lt;li&gt;All inclusive: Changing buffets, snacks &amp; refreshing drinks&lt;/li&gt;
-     &lt;li&gt;Official certificate for attendees&lt;/li&gt;
-     &lt;li&gt;Free Swag: Developer bag, T-Shirt, magazines etc.&lt;/li&gt;
-     &lt;li&gt;Exclusive networking events&lt;/li&gt;
-     &lt;/ul&gt;
-     &lt;p&gt;Topics:
-     &lt;ul&gt;
-     &lt;li&gt;Core PHP / PHP7&lt;/li&gt;
-     &lt;li&gt;PHP Frameworks&lt;/li&gt;
-     &lt;li&gt;PHP Scaling &amp; Performance&lt;/li&gt;
-     &lt;li&gt;PHP Security&lt;/li&gt;
-     &lt;li&gt;PHP Testing &amp; Quality&lt;/li&gt;
-     &lt;li&gt;HHVM &amp; Hack&lt;/li&gt;
-     &lt;li&gt;Architecture&lt;/li&gt;
-     &lt;li&gt;JavaScript / ECMAScript 6&lt;/li&gt;
-     &lt;li&gt;JavaScript Frameworks&lt;/li&gt;
-     &lt;li&gt;JavaScript Performance &amp; Security&lt;/li&gt;
-     &lt;li&gt;Web APIs &amp; Services&lt;/li&gt;
-     &lt;li&gt;Agile&lt;/li&gt;
-     &lt;li&gt;Continuous Delivery&lt;/li&gt;
-     &lt;li&gt;DevOps&lt;/li&gt;
-     &lt;li&gt;Cloud&lt;/li&gt;
-     &lt;li&gt;Data Stores&lt;/li&gt;
-     &lt;/ul&gt;
-     &lt;p&gt;For further information on International PHP Conference’s sessions and speakers visit: &lt;a href="https://phpconference.com"&gt;phpconference.com&lt;/a&gt;&lt;/p&gt;
+    <p><a href="https://phpconference.com">The International PHP Conference</a> is the world’s first PHP conference and stands since more than a decade for top-notch pragmatic expertise in PHP and web technologies. At the IPC, internationally renowned experts from the PHP industry meet up with PHP users and developers from large and small companies. Here is the place where concepts emerge and ideas are born – the IPC signifies knowledge transfer at highest level.</p>
+<p>All delegates of the International PHP Conference have, in addition to PHP program, free access to the entire range of the <a href="https://webtechcon.de/">WebTechCon</a> taking place at the same time.</p>
+<p>Basic facts:</p>
+<p>Date: October 25 – 29, 2015</p>
+<p>Location: Holiday Inn City Centre, Munich</p>
+<p>Highlights:</p>
+<ul>
+<li>90+ best practice sessions</li>
+<li>Cool PHP &amp; the Gang: 60+ international top speakers</li>
+<li>PHPower: Hands-on Power Workshops</li>
+<li>Expo with exiting exhibitors</li>
+<li>Conference Combo: Visit the WebTechCon [Link zu www.webtechcon.de] For Free</li>
+<li>All inclusive: Changing buffets, snacks &amp; refreshing drinks</li>
+<li>Official certificate for attendees</li>
+<li>Free Swag: Developer bag, T-Shirt, magazines etc.</li>
+<li>Exclusive networking events</li>
+</ul>
+<p>Topics:</p>
+<ul>
+<li>Core PHP / PHP7</li>
+<li>PHP Frameworks</li>
+<li>PHP Scaling &amp; Performance</li>
+<li>PHP Security</li>
+<li>PHP Testing &amp; Quality</li>
+<li>HHVM &amp; Hack</li>
+<li>Architecture</li>
+<li>JavaScript / ECMAScript 6</li>
+<li>JavaScript Frameworks</li>
+<li>JavaScript Performance &amp; Security</li>
+<li>Web APIs &amp; Services</li>
+<li>Agile</li>
+<li>Continuous Delivery</li>
+<li>DevOps</li>
+<li>Cloud</li>
+<li>Data Stores</li>
+</ul>
+<p>For further information on International PHP Conference’s sessions and speakers visit: <a href="https://phpconference.com">phpconference.com</a></p>  
+
   </div>
 </content>
 </entry>
