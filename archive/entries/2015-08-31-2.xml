@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom" xmlns:default="http://php.net/ns/news">
+  <title>ConFoo Call for Papers is Open</title>
+  <id>http://php.net/archive/2015.php#id2015-08-31-2</id>
+  <published>2015-08-31T16:35:19-04:00</published>
+  <updated>2015-08-31T16:35:19-04:00</updated>
+  <default:finalTeaserDate xmlns="http://php.net/ns/news">2015-09-20</default:finalTeaserDate>
+  <category term="cfp" label="Call for Papers"/>
+  <link href="http://php.net/conferences/index.php#id2015-08-31-2" rel="alternate" type="text/html"/>
+  <default:newsImage xmlns="http://php.net/ns/news" link="https://confoo.ca/en" title="ConFoo - Conference for Web Developers">confoo-2015.jpg</default:newsImage>
+  <link href="https://confoo.ca/en" rel="via" type="text/html"/>
+  <content type="xhtml">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+     <p>ConFoo is once more seeking passionate speakers for the upcoming conference.</p>
+     
+     <p>The event is happening in Montreal, Canada, between February 24th and 26th, 2016. It is an exciting conference for web developers with speakers from all over the world. It unites many web programming languages under one roof, as well as other topics related to web development. The <a href="https://confoo.ca/en/call-for-papers">call for papers</a> closes on September 20th.</p>
+     
+     <p>For the last few years, ConFoo renewed 50% of its speakers. If you're new to this conference, you should definitely submit.</p>
+     
+     <p>If you would just like to attend, there is a <a href="https://confoo.ca/en/register">discount</a> until October 13th.</p>
+    </div>
+  </content>
+</entry>
