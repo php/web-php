@@ -70,7 +70,7 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
 </ul></li>
 <li>Standard:
 <ul>
-  <li><?php bugfix(70140); ?> (str_ireplace/php_string_tolower - Arbitrary Code</li>
+  <li><?php bugfix(70140); ?> (str_ireplace/php_string_tolower - Arbitrary Code Excecution). (CVE-2015-6527)</li>
   <li>Implemented FR <?php bugl(70112); ?> (Allow "dirname" to go up various times).</li>
   <li><?php bugfix(36365); ?> (scandir duplicates file name at every 65535th file).</li>
 </ul></li>
