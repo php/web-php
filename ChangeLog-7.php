@@ -8,6 +8,67 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
 
 <h1>PHP 7 ChangeLog</h1>
 
+<section class="version" id="7.0.0RC1"><!-- {{{ 7.0.0RC1 -->
+<h3>Version 7.0.0 RC1</h3>
+<b>20-Aug-2015</b>
+<ul><li>Core:
+<ul>
+  <li><?php bugfix(70299); ?> (Memleak while assigning object offsetGet result).</li>
+  <li><?php bugfix(70288); ?> (Apache crash related to ZEND_SEND_REF).</li>
+  <li><?php bugfix(70262); ?> (Accessing array crashes PHP 7.0beta3).</li>
+  <li><?php bugfix(70258); ?> (Segfault if do_resize fails to allocated memory).</li>
+  <li><?php bugfix(70253); ?> (segfault at _efree () in zend_alloc.c:1389).</li>
+  <li><?php bugfix(70240); ?> (Segfault when doing unset($var());).</li>
+  <li><?php bugfix(70223); ?> (Incrementing value returned by magic getter).</li>
+  <li><?php bugfix(70215); ?> (Segfault when __invoke is static).</li>
+  <li><?php bugfix(70207); ?> (Finally is broken with opcache).</li>
+  <li><?php bugfix(70173); ?> (ZVAL_COPY_VALUE_EX broken for 32bit Solaris Sparc).</li>
+  <li><?php bugfix(69487); ?> (SAPI may truncate POST data).</li>
+  <li><?php bugfix(70198); ?> (Checking liveness does not work as expected).</li>
+  <li><?php bugfix(70241); ?>/#70293 (Skipped assertions affect Generator returns).</li>
+  <li><?php bugfix(70239); ?> (Creating a huge array doesn't result in exhausted, but segfault).</li>
+</ul></li>
+<li>CLI server:
+<ul>
+  <li><?php bugfix(66606); ?> (Sets HTTP_CONTENT_TYPE but not CONTENT_TYPE).</li>
+  <li><?php bugfix(70264); ?> (CLI server directory traversal).</li>
+</ul></li>
+<li>Date:
+<ul>
+  <li><?php bugfix(70245); ?> (strtotime does not emit warning when 2nd parameter is object or string).</li>
+  <li><?php bugfix(70266); ?> (DateInterval::__construct.interval_spec is not supposed to be optional).</li>
+  <li><?php bugfix(70277); ?> (new DateTimeZone($foo) is ignoring text after null byte).</li>
+</ul></li>
+<li>MCrypt:
+<ul>
+  <li><?php bugfix(69833); ?> (mcrypt fd caching not working).</li>
+</ul></li>
+<li>Opcache:
+<ul>
+  <li><?php bugfix(70237); ?> (Empty while and do-while segmentation fault with opcode on CLI enabled).</li>
+</ul></li>
+<li>PCRE:
+<ul>
+  <li><?php bugfix(70232); ?> (Incorrect bump-along behavior with \K and empty string match).</li>
+</ul></li>
+<li>PDO:
+<ul>
+  <li><?php bugfix(70272); ?> (Segfault in pdo_mysql).</li>
+  <li><?php bugfix(70221); ?> (persistent sqlite connection + custom function segfaults).</li>
+</ul></li>
+<li>Phpdbg:
+<ul>
+  <li><?php bugfix(70214); ?> (FASYNC not defined, needs sys/file.h include).</li>
+</ul></li>
+<li>Standard:
+<ul>
+  <li><?php bugfix(70250); ?> (extract() turns array elements to references).</li>
+  <li><?php bugfix(70211); ?> (php 7 ZEND_HASH_IF_FULL_DO_RESIZE use after free).</li>
+  <li><?php bugfix(70208); ?> (Assert breaking access on objects).</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
 <section class="version" id="7.0.0b3"><!-- {{{ 7.0.0b3 -->
 <h3>Version 7.0.0 Beta 3</h3>
 <b>06-Aug-2015</b>
