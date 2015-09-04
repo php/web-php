@@ -8,6 +8,75 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 
 <h1>PHP 5 ChangeLog</h1>
 
+<section class="version" id="5.6.13"><!-- {{{ 5.6.13 -->
+<h3>Version 5.6.13</h3>
+<?php release_date('03-Sep-2015'); ?>
+<ul><li>Core:
+<ul>
+  <li><?php bugfix(69900); ?> (Too long timeout on pipes).</li>
+  <li><?php bugfix(69487); ?> (SAPI may truncate POST data).</li>
+  <li><?php bugfix(70198); ?> (Checking liveness does not work as expected).</li>
+  <li><?php bugfix(70172); ?> (Use After Free Vulnerability in unserialize()).</li>
+  <li><?php bugfix(70219); ?> (Use after free vulnerability in session deserializer).</li>
+</ul></li>
+<li>CLI server:
+<ul>
+  <li><?php bugfix(66606); ?> (Sets HTTP_CONTENT_TYPE but not CONTENT_TYPE).</li>
+  <li><?php bugfix(70264); ?> (CLI server directory traversal).</li>
+</ul></li>
+<li>Date:
+<ul>
+  <li><?php bugfix(70266); ?> (DateInterval::__construct.interval_spec is not supposed to be optional).</li>
+  <li><?php bugfix(70277); ?> (new DateTimeZone($foo) is ignoring text after null byte).</li>
+</ul></li>
+<li>EXIF:
+<ul>
+  <li><?php bugfix(70385); ?> (Buffer over-read in exif_read_data with TIFF IFD tag byte value of 32 bytes).</li>
+</ul></li>
+<li>hash:
+<ul>
+  <li><?php bugfix(70312); ?> (HAVAL gives wrong hashes in specific cases).</li>
+</ul></li>
+<li>MCrypt:
+<ul>
+  <li><?php bugfix(69833); ?> (mcrypt fd caching not working).</li>
+</ul></li>
+<li>Opcache:
+<ul>
+  <li><?php bugfix(70237); ?> (Empty while and do-while segmentation fault with opcode on CLI enabled).</li>
+</ul></li>
+<li>PCRE:
+<ul>
+  <li><?php bugfix(70232); ?> (Incorrect bump-along behavior with \K and empty string match).</li>
+  <li><?php bugfix(70345); ?> (Multiple vulnerabilities related to PCRE functions).</li>
+</ul></li>
+<li>SOAP:
+<ul>
+  <li><?php bugfix(70388); ?> (SOAP serialize_function_call() type confusion / RCE).</li>
+</ul></li>
+<li>SPL:
+<ul>
+  <li><?php bugfix(70290); ?> (Null pointer deref (segfault) in spl_autoload via ob_start).</li>
+  <li><?php bugfix(70303); ?> (Incorrect constructor reflection for ArrayObject).</li>
+  <li><?php bugfix(70365); ?> (Use-after-free vulnerability in unserialize() with SplObjectStorage).</li>
+  <li><?php bugfix(70366); ?> (Use-after-free vulnerability in unserialize() with SplDoublyLinkedList).</li>
+</ul></li>
+<li>Standard:
+<ul>
+  <li><?php bugfix(70052); ?> (getimagesize() fails for very large and very small WBMP).</li>
+  <li><?php bugfix(70157); ?> (parse_ini_string() segmentation fault with INI_SCANNER_TYPED).</li>
+</ul></li>
+<li>XSLT:
+<ul>
+  <li><?php bugfix(69782); ?> (NULL pointer dereference).</li>
+</ul></li>
+<li>ZIP:
+<ul>
+  <li><?php bugfix(70350); ?> (ZipArchive::extractTo allows for directory traversal when creating directories).</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
 <section class="version" id="5.6.12"><!-- {{{ 5.6.12 -->
 <h3>Version 5.6.12</h3>
 <?php release_date('06-Aug-2015'); ?>
