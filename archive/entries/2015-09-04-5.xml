@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom" xmlns:default="http://php.net/ns/news">
+  <title>PHPConf.Asia 2015</title>
+  <id>http://php.net/archive/2015.php#id2015-09-04-5</id>
+  <published>2015-09-04T11:29:00+08:00</published>
+  <updated>2015-09-04T11:29:00+08:00</updated>
+  <default:finalTeaserDate xmlns="http://php.net/ns/news">2015-09-22</default:finalTeaserDate>
+  <category term="conferences" label="Conference announcement"/>
+  <link href="http://php.net/conferences/index.php#id2015-09-04-5" rel="alternate" type="text/html"/>
+  <default:newsImage xmlns="http://php.net/ns/news" link="http://phpconf.asia" title="PHPConf.Asia 2015">phpconfasia2015-logo.png</default:newsImage>
+  <link href="http://phpconf.asia" rel="via" type="text/html"/>
+  <content type="html">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+      <p><strong>Join us at <a href="http://phpconf.asia" target="_blank">PHPConf.Asia 2015</a> - The First Pan-Asian PHP Conference</strong></p>
+
+      <p>The inaugural pan-Asian PHP conference will take place on 22 &amp; 23 September 2015 in <a href="https://en.wikipedia.org/wiki/Singapore" target="_blank">Singapore</a> - the Garden City of the East! Come and meet with the fastest growing PHP communities in Asia. More than 200 attendees are expected in this single track conference.</p>
+
+      <p>Our keynote speakers are Rasmus Ledorf (<a href="https://twitter.com/rasmus" target="_blank">@rasmus</a>), the creator of PHP and Jenny Wong (<a href="https://twitter.com/miss_jwo" target="_blank">@miss_jwo</a>) advocate for both the PHP and WordPress communities and an evangelist for PHP Women. Heard from <a href="http://phpconf.asia#speakers" target="_blank">21 regional and international speakers</a>!</p>
+
+      <p><a href="https://phpconfasia.codecraft.com.sg/" target="_blank">Early Bird Tickets</a> are still available! Hop over to <a href="http://phpconf.asia" target="_blank">http://phpconf.asia</a> for more details.</p>
+    </div>
+  </content>
+</entry>
