@@ -8,6 +8,46 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 
 <h1>PHP 5 ChangeLog</h1>
 
+<section class="version" id="5.5.29"><!-- {{{ 5.5.29 -->
+<h3>Version 5.5.29</h3>
+<?php release_date('03-Sep-2015'); ?>
+<ul><li>Core:
+<ul>
+  <li><?php bugfix(70172); ?> (Use After Free Vulnerability in unserialize()).</li>
+  <li><?php bugfix(70219); ?> (Use after free vulnerability in session deserializer).</li>
+</ul></li>
+<li>EXIF:
+<ul>
+  <li><?php bugfix(70385); ?> (Buffer over-read in exif_read_data with TIFF IFD tag byte value of 32 bytes).</li>
+</ul></li>
+<li>hash:
+<ul>
+  <li><?php bugfix(70312); ?> (HAVAL gives wrong hashes in specific cases).</li>
+</ul></li>
+<li>PCRE:
+<ul>
+  <li><?php bugfix(70345); ?> (Multiple vulnerabilities related to PCRE functions).</li>
+</ul></li>
+<li>SOAP:
+<ul>
+  <li><?php bugfix(70388); ?> (SOAP serialize_function_call() type confusion / RCE).</li>
+</ul></li>
+<li>SPL:
+<ul>
+  <li><?php bugfix(70365); ?> (Use-after-free vulnerability in unserialize() with SplObjectStorage).</li>
+  <li><?php bugfix(70366); ?> (Use-after-free vulnerability in unserialize() with SplDoublyLinkedList).</li>
+</ul></li>
+<li>XSLT:
+<ul>
+  <li><?php bugfix(69782); ?> (NULL pointer dereference).</li>
+</ul></li>
+<li>ZIP:
+<ul>
+  <li><?php bugfix(70350); ?> (ZipArchive::extractTo allows for directory traversal when creating directories).</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
 <section class="version" id="5.6.13"><!-- {{{ 5.6.13 -->
 <h3>Version 5.6.13</h3>
 <?php release_date('03-Sep-2015'); ?>
