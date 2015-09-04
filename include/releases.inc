@@ -1411,6 +1411,39 @@ $OLDRELEASES = array (
       'date' => '20 Jun 2013',
       'museum' => true,
     ),
+    '5.4.44' => 
+    array (
+      'announcement' => 
+      array (
+        'English' => '/releases/5_4_44.php',
+      ),
+      'source' => 
+      array (
+        0 => 
+        array (
+          'filename' => 'php-5.4.44.tar.bz2',
+          'name' => 'PHP 5.4.44 (tar.bz2)',
+          'md5' => '25725eb0dff0d45351b01fb483709b8d',
+          'sha256' => '8dd59e5ce9248cf36ac3de5412a518b8b24c01ace6c46ce3d12e4ce981a3856d',
+          'date' => '06 Aug 2015',
+        ),
+        1 => 
+        array (
+          'filename' => 'php-5.4.44.tar.gz',
+          'name' => 'PHP 5.4.44 (tar.gz)',
+          'md5' => '9a6f79bc68eb926d230448905229dd1c',
+          'sha256' => '1799998e48da3d8f34722840628e18789e26ea21741d4e498ade6749b3266602',
+          'date' => '06 Aug 2015',
+        ),
+        2 => 
+        array (
+          'link' => 'http://windows.php.net/download/#php-5.4',
+          'name' => 'Windows 5.4.44 binaries and source',
+        ),
+      ),
+      'date' => '06 Aug 2015',
+      'museum' => false,
+    ),
     '5.4.43' => 
     array (
       'announcement' => 

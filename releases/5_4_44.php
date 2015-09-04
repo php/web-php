@@ -18,7 +18,7 @@ The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.p
 </p>
 
 <p>Please note that PHP 5.4 branch is nearing the end of its <a href="http://php.net/supported-versions.php">support timeframe</a>. Either September or October release, depending on discovered issues, will be the last official release of PHP 5.4. 
-If your PHP installations is based on PHP 5.4, it may be a good time to start making the plans for the upgrade.
+If your PHP installation is based on PHP 5.4, it may be a good time to start making the plans for the upgrade.
 </p> 
 
 <?php site_footer(); ?>
