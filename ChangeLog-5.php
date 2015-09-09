@@ -17,7 +17,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
   <li><?php bugfix(69487); ?> (SAPI may truncate POST data).</li>
   <li><?php bugfix(70198); ?> (Checking liveness does not work as expected).</li>
   <li><?php bugfix(70172); ?> (Use After Free Vulnerability in unserialize()).</li>
-  <li><?php bugfix(70219); ?> (Use after free vulnerability in session deserializer).</li>
+  <li><?php bugfix(70219); ?> (Use after free vulnerability in session deserializer). (CVE-2015-6835)</li>
 </ul></li>
 <li>CLI server:
 <ul>
@@ -83,7 +83,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 <ul><li>Core:
 <ul>
   <li><?php bugfix(70172); ?> (Use After Free Vulnerability in unserialize()).</li>
-  <li><?php bugfix(70219); ?> (Use after free vulnerability in session deserializer).</li>
+  <li><?php bugfix(70219); ?> (Use after free vulnerability in session deserializer). (CVE-2015-6835)</li>
 </ul></li>
 <li>EXIF:
 <ul>
@@ -123,7 +123,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 <ul><li>Core:
 <ul>
   <li><?php bugfix(70172); ?> (Use After Free Vulnerability in unserialize()).</li>
-  <li><?php bugfix(70219); ?> (Use after free vulnerability in session deserializer).</li>
+  <li><?php bugfix(70219); ?> (Use after free vulnerability in session deserializer). (CVE-2015-6835)</li>
 </ul></li>
 <li>EXIF:
 <ul>
