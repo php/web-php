@@ -209,9 +209,9 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 <li>SPL:
 <ul>
   <li><?php bugfix(70068); ?> (Dangling pointer in the unserialization of ArrayObject items).</li>
-  <li><?php bugfix(70166); ?> (Use After Free Vulnerability in unserialize() with SPLArrayObject).</li>
-  <li><?php bugfix(70168); ?> (Use After Free Vulnerability in unserialize() with SplObjectStorage).</li>
-  <li><?php bugfix(70169); ?> (Use After Free Vulnerability in unserialize() with SplDoublyLinkedList).</li>
+  <li><?php bugfix(70166); ?> (Use After Free Vulnerability in unserialize() with SPLArrayObject). (CVE-2015-6831)</li>
+  <li><?php bugfix(70168); ?> (Use After Free Vulnerability in unserialize() with SplObjectStorage). (CVE-2015-6831)</li>
+  <li><?php bugfix(70169); ?> (Use After Free Vulnerability in unserialize() with SplDoublyLinkedList). (CVE-2015-6831)</li>
 </ul></li>
 <li>Standard:
 <ul>
@@ -246,9 +246,9 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 <li>SPL:
 <ul>
   <li><?php bugfix(70068); ?> (Dangling pointer in the unserialization of ArrayObject items).</li>
-  <li><?php bugfix(70166); ?> (Use After Free Vulnerability in unserialize() with SPLArrayObject).</li>
-  <li><?php bugfix(70168); ?> (Use After Free Vulnerability in unserialize() with SplObjectStorage).</li>
-  <li><?php bugfix(70169); ?> (Use After Free Vulnerability in unserialize() with SplDoublyLinkedList).</li>
+  <li><?php bugfix(70166); ?> (Use After Free Vulnerability in unserialize() with SPLArrayObject). (CVE-2015-6831)</li>
+  <li><?php bugfix(70168); ?> (Use After Free Vulnerability in unserialize() with SplObjectStorage). (CVE-2015-6831)</li>
+  <li><?php bugfix(70169); ?> (Use After Free Vulnerability in unserialize() with SplDoublyLinkedList). (CVE-2015-6831)</li>
 </ul></li>
 </ul>
 <!-- }}} --></section>
@@ -278,9 +278,9 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 <li>SPL:
 <ul>
   <li><?php bugfix(70068); ?> (Dangling pointer in the unserialization of ArrayObject items).</li>
-  <li><?php bugfix(70166); ?> (Use After Free Vulnerability in unserialize() with SPLArrayObject).</li>
-  <li><?php bugfix(70168); ?> (Use After Free Vulnerability in unserialize() with SplObjectStorage).</li>
-  <li><?php bugfix(70169); ?> (Use After Free Vulnerability in unserialize() with SplDoublyLinkedList).</li>
+  <li><?php bugfix(70166); ?> (Use After Free Vulnerability in unserialize() with SPLArrayObject). (CVE-2015-6831)</li>
+  <li><?php bugfix(70168); ?> (Use After Free Vulnerability in unserialize() with SplObjectStorage). (CVE-2015-6831)</li>
+  <li><?php bugfix(70169); ?> (Use After Free Vulnerability in unserialize() with SplDoublyLinkedList). (CVE-2015-6831)</li>
 </ul></li>
 </ul>
 <!-- }}} --></section>
