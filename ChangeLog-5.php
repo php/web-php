@@ -33,6 +33,10 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 <ul>
   <li><?php bugfix(70385); ?> (Buffer over-read in exif_read_data with TIFF IFD tag byte value of 32 bytes).</li>
 </ul></li>
+<li>GMP:
+<ul>
+  <li><?php bugfix(70284); ?> (Use after free vulnerability in unserialize() with GMP).</li>
+</ul></li>
 <li>hash:
 <ul>
   <li><?php bugfix(70312); ?> (HAVAL gives wrong hashes in specific cases).</li>
