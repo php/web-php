@@ -52,7 +52,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 </ul></li>
 <li>SOAP:
 <ul>
-  <li><?php bugfix(70388); ?> (SOAP serialize_function_call() type confusion / RCE).</li>
+  <li><?php bugfix(70388); ?> (SOAP serialize_function_call() type confusion / RCE). (CVE-2015-6836)</li>
 </ul></li>
 <li>SPL:
 <ul>
@@ -99,7 +99,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 </ul></li>
 <li>SOAP:
 <ul>
-  <li><?php bugfix(70388); ?> (SOAP serialize_function_call() type confusion / RCE).</li>
+  <li><?php bugfix(70388); ?> (SOAP serialize_function_call() type confusion / RCE). (CVE-2015-6836)</li>
 </ul></li>
 <li>SPL:
 <ul>
@@ -139,7 +139,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 </ul></li>
 <li>SOAP:
 <ul>
-  <li><?php bugfix(70388); ?> (SOAP serialize_function_call() type confusion / RCE).</li>
+  <li><?php bugfix(70388); ?> (SOAP serialize_function_call() type confusion / RCE). (CVE-2015-6836)</li>
 </ul></li>
 <li>SPL:
 <ul>
