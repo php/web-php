@@ -68,7 +68,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 </ul></li>
 <li>XSLT:
 <ul>
-  <li><?php bugfix(69782); ?> (NULL pointer dereference).</li>
+  <li><?php bugfix(69782); ?> (NULL pointer dereference). (CVE-2015-6837, CVE-2015-6838)</li>
 </ul></li>
 <li>ZIP:
 <ul>
@@ -108,7 +108,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 </ul></li>
 <li>XSLT:
 <ul>
-  <li><?php bugfix(69782); ?> (NULL pointer dereference).</li>
+  <li><?php bugfix(69782); ?> (NULL pointer dereference). (CVE-2015-6837, CVE-2015-6838)</li>
 </ul></li>
 <li>ZIP:
 <ul>
@@ -148,7 +148,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 </ul></li>
 <li>XSLT:
 <ul>
-  <li><?php bugfix(69782); ?> (NULL pointer dereference).</li>
+  <li><?php bugfix(69782); ?> (NULL pointer dereference). (CVE-2015-6837, CVE-2015-6838)</li>
 </ul></li>
 <li>ZIP:
 <ul>
