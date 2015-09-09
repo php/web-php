@@ -16,7 +16,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
   <li><?php bugfix(69900); ?> (Too long timeout on pipes).</li>
   <li><?php bugfix(69487); ?> (SAPI may truncate POST data).</li>
   <li><?php bugfix(70198); ?> (Checking liveness does not work as expected).</li>
-  <li><?php bugfix(70172); ?> (Use After Free Vulnerability in unserialize()). (CVE-2105-6834)</li>
+  <li><?php bugfix(70172); ?> (Use After Free Vulnerability in unserialize()). (CVE-2015-6834)</li>
   <li><?php bugfix(70219); ?> (Use after free vulnerability in session deserializer). (CVE-2015-6835)</li>
 </ul></li>
 <li>CLI server:
@@ -86,7 +86,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 <?php release_date('03-Sep-2015'); ?>
 <ul><li>Core:
 <ul>
-  <li><?php bugfix(70172); ?> (Use After Free Vulnerability in unserialize()). (CVE-2105-6834)</li>
+  <li><?php bugfix(70172); ?> (Use After Free Vulnerability in unserialize()). (CVE-2015-6834)</li>
   <li><?php bugfix(70219); ?> (Use after free vulnerability in session deserializer). (CVE-2015-6835)</li>
 </ul></li>
 <li>EXIF:
@@ -126,7 +126,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 <b><?php release_date('03-Sep-2015'); ?></b>
 <ul><li>Core:
 <ul>
-  <li><?php bugfix(70172); ?> (Use After Free Vulnerability in unserialize()). (CVE-2105-6834)</li>
+  <li><?php bugfix(70172); ?> (Use After Free Vulnerability in unserialize()). (CVE-2015-6834)</li>
   <li><?php bugfix(70219); ?> (Use after free vulnerability in session deserializer). (CVE-2015-6835)</li>
 </ul></li>
 <li>EXIF:
