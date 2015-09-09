@@ -208,7 +208,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 </ul></li>
 <li>SPL:
 <ul>
-  <li><?php bugfix(70068); ?> (Dangling pointer in the unserialization of ArrayObject items).</li>
+  <li><?php bugfix(70068); ?> (Dangling pointer in the unserialization of ArrayObject items). (CVE-2015-6832)</li>
   <li><?php bugfix(70166); ?> (Use After Free Vulnerability in unserialize() with SPLArrayObject). (CVE-2015-6831)</li>
   <li><?php bugfix(70168); ?> (Use After Free Vulnerability in unserialize() with SplObjectStorage). (CVE-2015-6831)</li>
   <li><?php bugfix(70169); ?> (Use After Free Vulnerability in unserialize() with SplDoublyLinkedList). (CVE-2015-6831)</li>
@@ -245,7 +245,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 </ul></li>
 <li>SPL:
 <ul>
-  <li><?php bugfix(70068); ?> (Dangling pointer in the unserialization of ArrayObject items).</li>
+  <li><?php bugfix(70068); ?> (Dangling pointer in the unserialization of ArrayObject items). (CVE-2015-6832)</li>
   <li><?php bugfix(70166); ?> (Use After Free Vulnerability in unserialize() with SPLArrayObject). (CVE-2015-6831)</li>
   <li><?php bugfix(70168); ?> (Use After Free Vulnerability in unserialize() with SplObjectStorage). (CVE-2015-6831)</li>
   <li><?php bugfix(70169); ?> (Use After Free Vulnerability in unserialize() with SplDoublyLinkedList). (CVE-2015-6831)</li>
@@ -277,7 +277,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 </ul></li>
 <li>SPL:
 <ul>
-  <li><?php bugfix(70068); ?> (Dangling pointer in the unserialization of ArrayObject items).</li>
+  <li><?php bugfix(70068); ?> (Dangling pointer in the unserialization of ArrayObject items). (CVE-2015-6832)</li>
   <li><?php bugfix(70166); ?> (Use After Free Vulnerability in unserialize() with SPLArrayObject). (CVE-2015-6831)</li>
   <li><?php bugfix(70168); ?> (Use After Free Vulnerability in unserialize() with SplObjectStorage). (CVE-2015-6831)</li>
   <li><?php bugfix(70169); ?> (Use After Free Vulnerability in unserialize() with SplDoublyLinkedList). (CVE-2015-6831)</li>
