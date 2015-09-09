@@ -200,7 +200,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 <li>Phar:
 <ul>
   <li>Improved fix for bug <?php bugl(69441) ?>.</li>
-  <li><?php bugfix(70019); ?> (Files extracted from archive may be placed outside of destination directory).</li>
+  <li><?php bugfix(70019); ?> (Files extracted from archive may be placed outside of destination directory). (CVE-2015-6833)</li>
 </ul></li>
 <li>SOAP:
 <ul>
@@ -237,7 +237,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 <li>Phar:
 <ul>
   <li>Improved fix for bug <?php bugl(69441) ?>.</li>
-  <li><?php bugfix(70019); ?> (Files extracted from archive may be placed outside of destination directory).</li>
+  <li><?php bugfix(70019); ?> (Files extracted from archive may be placed outside of destination directory). (CVE-2015-6833)</li>
 </ul></li>
 <li>SOAP:
 <ul>
@@ -269,7 +269,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 <li>Phar:
 <ul>
   <li>Improved fix for bug <?php bugl(69441) ?>.</li>
-  <li><?php bugfix(70019); ?> (Files extracted from archive may be placed outside of destination directory).</li>
+  <li><?php bugfix(70019); ?> (Files extracted from archive may be placed outside of destination directory). (CVE-2015-6833)</li>
 </ul></li>
 <li>SOAP:
 <ul>
