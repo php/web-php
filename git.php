@@ -106,6 +106,9 @@ site_header("Git Access", array("current" => "community"));
   <strong>PHP 5.6</strong>:
   <code>git checkout PHP-5.6</code>
   <br>
+  <strong>PHP 7.0</strong>:
+  <code>git checkout PHP-7.0</code>
+  <br>
   <strong>PHP HEAD</strong>:
   <code>git checkout master</code>
   <br><br>
