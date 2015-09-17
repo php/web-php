@@ -8,6 +8,153 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
 
 <h1>PHP 7 ChangeLog</h1>
 
+<section class="version" id="7.0.0RC3"><!-- {{{ 7.0.0RC3 -->
+<h3>Version 7.0.0 RC 3</h3>
+<b>17-Sep-2015</b>
+<ul><li>Core:
+<ul>
+  <li><?php bugfix(70431); ?> (Memory leak in php_ini.c).</li>
+  <li><?php bugfix(70478); ?> (**= does no longer work).</li>
+</ul></li>
+<li>CLI server:
+<ul>
+  <li><?php bugfix(68291); ?> (404 on urls with '+').</li>
+</ul></li>
+<li>DOM:
+<ul>
+  <li><?php bugfix(70001); ?> (Assigning to DOMNode::textContent does additional entity encoding).</li>
+</ul></li>
+<li>Intl:
+<ul>
+  <li><?php bugfix(70453); ?> (IntlChar::foldCase() incorrect arguments and missing constants).</li>
+  <li><?php bugfix(70454); ?> (IntlChar::forDigit second parameter should be optional).</li>
+</ul></li>
+<li>Mysqlnd:
+<ul>
+  <li><?php bugfix(70456); ?> (mysqlnd doesn't activate TCP keep-alive when connecting to a server).</li>
+</ul></li>
+<li>Opcache:
+<ul>
+  <li><?php bugfix(70423); ?> (Warning Internal error: wrong size calculation).</li>
+</ul></li>
+<li>OpenSSL:
+<ul>
+  <li><?php bugfix(55259); ?> (openssl extension does not get the DH parameters from DH key resource).</li>
+  <li><?php bugfix(70395); ?> (Missing ARG_INFO for openssl_seal()).</li>
+  <li><?php bugfix(60632); ?> (openssl_seal fails with AES).</li>
+  <li>Implemented FR <?php bugl(70438); ?> (Add IV parameter for openssl_seal and openssl_open)</li>
+</ul></li>
+<li>Phpdbg:
+<ul>
+  <li><?php bugfix(70449); ?> (PHP won't compile on 10.4 and 10.5 because of missing constants).</li>
+</ul></li>
+<li>Session:
+<ul>
+  <li><?php bugfix(70013); ?> (Reference to $_SESSION is lost after a call to session_regenerate_id()).</li>
+</ul></li>
+<li>Standard:
+<ul>
+  <li>Implemented the RFC `Random Functions Throwing Exceptions in PHP 7`.</li>
+  <li><?php bugfix(70487); ?> (pack('x') produces an error).</li>
+</ul></li>
+<li>Streams:
+<ul>
+  <li><?php bugfix(70361); ?> (HTTP stream wrapper doesn't close keep-alive connections).</li>
+</ul></li>
+<li>XMLReader:
+<ul>
+  <li><?php bugfix(70309); ?> (XmlReader read generates extra output).</li>
+</ul></li>
+<li>Zip:
+<ul>
+  <li><?php bugfix(70322); ?> (ZipArchive::close() doesn't indicate errors).</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
+<section class="version" id="7.0.0RC2"><!-- {{{ 7.0.0RC2 -->
+<h3>Version 7.0.0</h3>
+<b>03-Sep-2015</b>
+<ul><li>Core:
+<ul>
+  <li><?php bugfix(70398); ?> (SIGSEGV, Segmentation fault zend_ast_destroy_ex).</li>
+  <li><?php bugfix(70332); ?> (Wrong behavior while returning reference on object).</li>
+  <li><?php bugfix(70300); ?> (Syntactical inconsistency with new group use syntax).</li>
+  <li><?php bugfix(70321); ?> (Magic getter breaks reference to array property).</li>
+  <li><?php bugfix(70187); ?> (Notice: unserialize(): Unexpected end of serialized data).</li>
+  <li><?php bugfix(70145); ?> (From field incorrectly parsed from headers).</li>
+  <li><?php bugfix(70370); ?> (Bundled libtool.m4 doesn't handle FreeBSD 10 when building extensions).</li>
+  <li>Fixed bug causing exception traces with anon classes to be truncated.</li>
+  <li><?php bugfix(70397); ?> (Segmentation fault when using Closure::call and yield).</li>
+</ul></li>
+<li>Curl:
+<ul>
+  <li><?php bugfix(70330); ?> (Segmentation Fault with multiple "curl_copy_handle").</li>
+</ul></li>
+<li>EXIF:
+<ul>
+  <li><?php bugfix(70385); ?> (Buffer over-read in exif_read_data with TIFF IFD tag byte value of 32 bytes).</li>
+</ul></li>
+<li>GMP:
+<ul>
+  <li><?php bugfix(70284); ?> (Use after free vulnerability in unserialize() with GMP).</li>
+</ul></li>
+<li>hash:
+<ul>
+  <li><?php bugfix(70312); ?> (HAVAL gives wrong hashes in specific cases).</li>
+</ul></li>
+<li>Mysqli:
+<ul>
+  <li><?php bugfix(32490); ?> (constructor of mysqli has wrong name).</li>
+</ul></li>
+<li>Pcntl:
+<ul>
+  <li><?php bugfix(70386); ?> (Can't compile on NetBSD because of missing WCONTINUED and WIFCONTINUED).</li>
+</ul></li>
+<li>PCRE:
+<ul>
+  <li><?php bugfix(70232); ?> (Incorrect bump-along behavior with \K and empty string match).</li>
+  <li><?php bugfix(70345); ?> (Multiple vulnerabilities related to PCRE functions).</li>
+</ul></li>
+<li>PDO:
+<ul>
+  <li><?php bugfix(70389); ?> (PDO constructor changes unrelated variables).</li>
+</ul></li>
+<li>PDO_OCI:
+<ul>
+  <li><?php bugfix(70308); ?> (PDO::ATTR_PREFETCH is ignored).</li>
+</ul></li>
+<li>SOAP:
+<ul>
+  <li><?php bugfix(70388); ?> (SOAP serialize_function_call() type confusion / RCE).</li>
+</ul></li>
+<li>SPL:
+<ul>
+  <li><?php bugfix(70303); ?> (Incorrect constructor reflection for ArrayObject).</li>
+</ul></li>
+<li>Standard:
+<ul>
+  <li><?php bugfix(70342); ?> (changing configuration with ignore_user_abort(true) isn't working).</li>
+  <li><?php bugfix(70295); ?> (Segmentation fault with setrawcookie).</li>
+  <li><?php bugfix(67131); ?> (setcookie() conditional for empty values not met).</li>
+  <li><?php bugfix(70365); ?> (Use-after-free vulnerability in unserialize() with SplObjectStorage).</li>
+  <li><?php bugfix(70366); ?> (Use-after-free vulnerability in unserialize() with SplDoublyLinkedList).</li>
+</ul></li>
+<li>Reflection:
+<ul>
+  <li>Fixed bug causing bogus traces for ReflectionGenerator::getTrace().</li>
+</ul></li>
+<li>XSLT:
+<ul>
+  <li><?php bugfix(69782); ?> (NULL pointer dereference).</li>
+</ul></li>
+<li>ZIP:
+<ul>
+  <li><?php bugfix(70350); ?> (ZipArchive::extractTo allows for directory traversal when creating directories).</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
 <section class="version" id="7.0.0RC1"><!-- {{{ 7.0.0RC1 -->
 <h3>Version 7.0.0 RC1</h3>
 <b>20-Aug-2015</b>
