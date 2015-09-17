@@ -46,7 +46,7 @@ while(($ln = fgets($fp)) !== false) {
 echo <<<HEAD
 <section class="version" id="$version"><!-- {{{ $version -->
 <h3>Version $version</h3>
-<b><?php release_date($date); ?></b>
+<b><?php release_date('$date'); ?></b>
 <ul>
 HEAD;
 
