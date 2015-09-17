@@ -9,7 +9,7 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
 <h1>PHP 7 ChangeLog</h1>
 
 <section class="version" id="7.0.0RC3"><!-- {{{ 7.0.0RC3 -->
-<h3>Version 7.0.0 RC 3</h3>
+<h3>Version 7.0.0 RC3</h3>
 <b>17-Sep-2015</b>
 <ul><li>Core:
 <ul>
@@ -73,7 +73,7 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
 <!-- }}} --></section>
 
 <section class="version" id="7.0.0RC2"><!-- {{{ 7.0.0RC2 -->
-<h3>Version 7.0.0</h3>
+<h3>Version 7.0.0 RC2</h3>
 <b>03-Sep-2015</b>
 <ul><li>Core:
 <ul>
