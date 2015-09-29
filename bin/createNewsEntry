@@ -97,6 +97,19 @@ if ($conf) {
 		fwrite(STDERR, "I told you I would run it through strtotime()!\n");
 	} while(1);
 	$item->appendChild($dom->createElementNs("http://php.net/ns/news", "finalTeaserDate", date("Y-m-d", $t)));
+
+	do {
+		fwrite(STDOUT, "What's the URL of the conference/cfp-Website? ");
+		$i = trim(fgets(STDIN));
+		$u = filter_var($i, FILTER_VALIDATE_URL);
+		if (false !== $u) {
+			break;
+		}
+
+		fwrite(STDERR, "That doesn't seem to be a valid URL");
+	} while(1);
+	$item->appendChild($dom->createElementNs("http://php.net/ns/news", "website", $u));
+
 } else {
 	$href = $BASE . "/index.php";
 }
