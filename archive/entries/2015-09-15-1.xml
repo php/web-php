@@ -11,9 +11,8 @@
   <link href="http://2015.phpconf.tw" rel="via" type="text/html"/>
   <content type="xhtml">
     <div xmlns="http://www.w3.org/1999/xhtml">
-     We are honored to announce <a href="http://2015.phpconf.tw">PHPConf Taiwan 2015</a> will be held in Taipei, Taiwan on Oct. 9th. As the biggest PHP event in Taiwan, PHPConf attracts hundreds of developers and users in Taiwan to share their knowledge on PHP. This year, to celebrate the 20th anniversary of the invention of PHP and the release of PHP 7, Mr. Rasmus Lerdorf, creator of PHP, and Mr. Xinchen Hui, member from the PHP core developer team, are invited to be our keynote speakers. In addition, we also invited well-known developers in Taiwan to share their expertise and experience at PHPConf. The <a href="http://2015.phpconf.tw/#schedule-section">two-track agenda</a> covers various topics, including Big Data, horizontal extension, software architecture, ORM and Async I/O… etc.
-     
-     For ticketing and other information, please visit <a href="http://2015.phpconf.tw">http://2015.phpconf.tw</a>. We look forward to seeing you in Taipei this October!
+      <p>We are honored to announce <a href="http://2015.phpconf.tw">PHPConf Taiwan 2015</a> will be held in Taipei, Taiwan on Oct. 9th. As the biggest PHP event in Taiwan, PHPConf attracts hundreds of developers and users in Taiwan to share their knowledge on PHP. This year, to celebrate the 20th anniversary of the invention of PHP and the release of PHP 7, Mr. Rasmus Lerdorf, creator of PHP, and Mr. Xinchen Hui, member from the PHP core developer team, are invited to be our keynote speakers. In addition, we also invited well-known developers in Taiwan to share their expertise and experience at PHPConf. The <a href="http://2015.phpconf.tw/#schedule-section">two-track agenda</a> covers various topics, including Big Data, horizontal extension, software architecture, ORM and Async I/O… etc.</p>
+      <p>For ticketing and other information, please visit <a href="http://2015.phpconf.tw">http://2015.phpconf.tw</a>. We look forward to seeing you in Taipei this October!</p>
     </div>
   </content>
 </entry>
