@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom" xmlns:default="http://php.net/ns/news">
+  <title>PHPBenelux Conference 2016</title>
+  <id>http://php.net/archive/2015.php#id2015-09-30-1</id>
+  <published>2015-09-30T09:56:51-04:00</published>
+  <updated>2015-09-30T09:56:51-04:00</updated>
+  <default:finalTeaserDate xmlns="http://php.net/ns/news">2015-10-14</default:finalTeaserDate>
+  <category term="cfp" label="Call for Papers"/>
+  <category term="conferences" label="Conference announcement"/>
+  <link href="http://php.net/conferences/index.php#id2015-09-30-1" rel="alternate" type="text/html"/>
+  <default:newsImage xmlns="http://php.net/ns/news" link="https://conference.phpbenelux.eu/" title="PHPBenelux Conference 2016">phpconf_logo_2.png</default:newsImage>
+  <link href="https://conference.phpbenelux.eu/" rel="via" type="text/html"/>
+  <content type="xhtml">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+     <p>
+     	With great pleasure we would like to announce the 7th edition of
+     PHPBenelux Conference 2016 which will take place on January 29 and 30,
+     2016 in Antwerp, Belgium.
+     </p><p>
+     PHPBenelux is a great conference bringing local and foreign speakers
+     to an international crowd where the main language is English to allow
+     foreigners to feel comfortable talking with others, inspiring the
+     hallway tracks between and after the sessions.
+     </p><p>
+     On the first day in the morning we offer 3-hour tutorials by experts
+     to get hands-down experience on the subjects offered. The afternoon
+     and second day are all devoted to multi-track hour sessions about
+     trends, best practices and solutions for common PHP development
+     challenges. Each evening we provide a social event for people to
+     network and socialize in a friendly, unpressured environment.
+     </p><p>
+     The "Call for Papers" is open until October 14 if you have interest
+     presenting at PHPBenelux Conference 2016. Check out our
+     <a href="http://cfp.phpbenelux.eu">http://cfp.phpbenelux.eu</a> website for further details.
+     </p><p>
+     Come to PHPBenelux Conference 2016. You will learn from the experts,
+     meet interesting people and have fun will doing all this. See you in Antwerp!
+     </p><p>
+     The PHPBenelux Crew
+     </p>
+    </div>
+  </content>
+</entry>
