@@ -8,6 +8,17 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 
 <h1>PHP 5 ChangeLog</h1>
 
+<section class="version" id="5.5.30">
+<h3>Version 5.5.30</h3>
+<b><?php release_date('01-Oct-2015'); ?></b>
+<ul><li>Phar:
+<ul>
+  <li><?php bugfix(69720); ?> (Null pointer dereference in phar_get_fp_offset()).</li>
+  <li><?php bugfix(70433); ?> (Uninitialized pointer in phar_make_dirstream when zip entry filename is "/").</li>
+</ul></li>
+</ul>
+</section>
+
 <section class="version" id="5.6.13"><!-- {{{ 5.6.13 -->
 <h3>Version 5.6.13</h3>
 <?php release_date('03-Sep-2015'); ?>
