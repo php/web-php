@@ -8,6 +8,61 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 
 <h1>PHP 5 ChangeLog</h1>
 
+<section class="version" id="5.6.14"><!-- {{{ 5.6.14 -->
+<h3>Version 5.6.14</h3>
+<b><?php release_date('01-Oct-2015'); ?></b>
+
+<ul><li>Core:
+<ul>
+  <li><?php bugfix(70370); ?> (Bundled libtool.m4 doesn't handle FreeBSD 10 when building extensions).</li>
+</ul></li>
+<li>CLI server:
+<ul>
+  <li><?php bugfix(68291); ?> (404 on urls with '+').</li>
+</ul></li>
+<li>DOM:
+<ul>
+  <li><?php bugfix(70001); ?> (Assigning to DOMNode::textContent does additional entity encoding).</li>
+</ul></li>
+<li>Mysqlnd:
+<ul>
+  <li><?php bugfix(70456); ?> (mysqlnd doesn't activate TCP keep-alive when connecting to a server).</li>
+</ul></li>
+<li>OpenSSL:
+<ul>
+  <li><?php bugfix(55259); ?> (openssl extension does not get the DH parameters from DH key resource).</li>
+  <li><?php bugfix(70395); ?> (Missing ARG_INFO for openssl_seal()).</li>
+  <li><?php bugfix(60632); ?> (openssl_seal fails with AES).</li>
+  <li><?php bugfix(68312); ?> (Lookup for openssl.cnf causes a message box).</li>
+</ul></li>
+<li>PDO:
+<ul>
+  <li><?php bugfix(70389); ?> (PDO constructor changes unrelated variables).</li>
+</ul></li>
+<li>Phar:
+<ul>
+  <li><?php bugfix(69720); ?> (Null pointer dereference in phar_get_fp_offset()).</li>
+  <li><?php bugfix(70433); ?> (Uninitialized pointer in phar_make_dirstream when zip entry filename is "/").</li>
+</ul></li>
+<li>Phpdbg:
+<ul>
+  <li>Fix phpdbg_break_next() sometimes not breaking.</li>
+</ul></li>
+<li>Standard:
+<ul>
+  <li><?php bugfix(67131); ?> (setcookie() conditional for empty values not met).</li>
+</ul></li>
+<li>Streams:
+<ul>
+  <li><?php bugfix(70361); ?> (HTTP stream wrapper doesn't close keep-alive connections).</li>
+</ul></li>
+<li>Zip:
+<ul>
+  <li><?php bugfix(70322); ?> (ZipArchive::close() doesn't indicate errors).</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
 <section class="version" id="5.5.30">
 <h3>Version 5.5.30</h3>
 <b><?php release_date('01-Oct-2015'); ?></b>
