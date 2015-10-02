@@ -24,6 +24,11 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 <ul>
   <li><?php bugfix(70001); ?> (Assigning to DOMNode::textContent does additional entity encoding).</li>
 </ul></li>
+<li>ldap:
+<ul>
+  <li><?php bugfix(70465); ?> (Bug in ldap_search() modifies LDAP_OPT_TIMELIMIT/DEREF's values). (Tyson Andre).</li>
+  <li><?php bugfix(69574); ?> (ldap timeouts not enforced). (Côme Bernigaud).</li>
+</ul></li>
 <li>Mysqlnd:
 <ul>
   <li><?php bugfix(70456); ?> (mysqlnd doesn't activate TCP keep-alive when connecting to a server).</li>
