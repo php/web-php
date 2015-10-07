@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom" xmlns:default="http://php.net/ns/news">
+  <title>SunshinePHP 2016</title>
+  <id>http://php.net/archive/2015.php#id2015-10-07-1</id>
+  <published>2015-10-07T12:05:32-04:00</published>
+  <updated>2015-10-07T12:05:32-04:00</updated>
+  <default:finalTeaserDate xmlns="http://php.net/ns/news">2016-02-04</default:finalTeaserDate>
+  <category term="conferences" label="Conference announcement"/>
+  <link href="http://php.net/conferences/index.php#id2015-10-07-1" rel="alternate" type="text/html"/>
+  <default:newsImage xmlns="http://php.net/ns/news" link="http://2016.sunshinephp.com" title="SunshinePHP 2016">sunshine2015.gif</default:newsImage>
+  <link href="http://2016.sunshinephp.com" rel="via" type="text/html"/>
+  <content type="xhtml">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+     <p>WooHoo! SunshinePHP has hit it's 4th year and will happen from February 4th - 6th, 2016 in sunny Miami, Florida.</p>
+     
+     <p>As one of the largest community conferences in the U.S. our call for papers ended with 600+ submissions, so there is no doubt the schedule will be amazing this year. We will have a full tutorial day featuring 3-hour sessions followed by 2 days of 1-hour talks and inspirational keynotes.</p>
+     
+     <p>This year there is something special planned, we are introducing a 4th track featuring excellent speakers local to Florida who will join 3 more tracks of awesome international and domestic speakers. This means we will host 8 in-depth tutorial sessions, 40 educational talks, and 5 trend setting keynotes from some of the most inspirational and knowledgeable people.</p>
+     
+     <p>Then we add a hackathon, uncon, panel discussion on some hot topic, and fun social events to make SunshinePHP an unforgettable experience that keeps the PHP community buzzing all year long.</p>
+     
+     <p>Come in from the cold to enjoy some warm weather, and PHP, this February in sunny Miami.</p>
+     
+     <p>The past 3 years have sold out, so don't wait! The earlier you register the lower the prices will be, so register now at <a href="http://sunshinephp.com" title="Sunshine PHP Developer Conference">http://sunshinephp.com</a> to claim your ticket.</p>
+    </div>
+  </content>
+</entry>
