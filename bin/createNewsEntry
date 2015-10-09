@@ -51,7 +51,8 @@ $categories = array(
 	array("conferences" => "Conference announcement"),
 	array("cfp"         => "Call for Papers"),
 );
-$confs = array(2, 3);
+$confs = array(2);
+$cfps  = array(3);
 
 do {
 	fwrite(STDOUT, "Categories:\n");
@@ -77,18 +78,23 @@ ce($dom, "updated", date(DATE_ATOM), array(), $item);
 
 
 $conf = false;
+$cfp = false;
 foreach($cat as $keys) {
 	if (in_array($keys, $confs)) {
-		$conf = true;
-		break;
+        $conf = true;
 	}
+    if (in_array($keys, $cfps)) {
+        $cfp = true;
+    }
 }
+
+$href = $BASE . "/index.php";
 if ($conf) {
 	/* /conferences news item */
 	$href = $BASE . "/conferences/index.php";
 
 	do {
-		fwrite(STDOUT, "When does the conference start/cfp end? (strtotime() compatible syntax): ");
+		fwrite(STDOUT, "When does the conference start? (strtotime() compatible syntax): ");
 		$t = strtotime(fgets(STDIN));
 		if ($t) {
 			break;
@@ -97,9 +103,10 @@ if ($conf) {
 		fwrite(STDERR, "I told you I would run it through strtotime()!\n");
 	} while(1);
 	$item->appendChild($dom->createElementNs("http://php.net/ns/news", "finalTeaserDate", date("Y-m-d", $t)));
+	$item->appendChild($dom->createElementNs("http://php.net/ns/news", "conferenceStart", date("Y-m-d", $t)));
 
 	do {
-		fwrite(STDOUT, "What's the URL of the conference/cfp-Website? ");
+		fwrite(STDOUT, "What's the URL of the conference? ");
 		$i = trim(fgets(STDIN));
 		$u = filter_var($i, FILTER_VALIDATE_URL);
 		if (false !== $u) {
@@ -109,9 +116,33 @@ if ($conf) {
 		fwrite(STDERR, "That doesn't seem to be a valid URL");
 	} while(1);
 	$item->appendChild($dom->createElementNs("http://php.net/ns/news", "website", $u));
+}
 
-} else {
-	$href = $BASE . "/index.php";
+if ($cfp) {
+    /* /cfp news item */
+    do {
+        fwrite(STDOUT, "When does the cfp end? (strtotime() compatible syntax): ");
+        $t = strtotime(fgets(STDIN));
+        if ($t) {
+            break;
+        }
+
+        fwrite(STDERR, "I told you I would run it through strtotime()!\n");
+    } while(1);
+    $item->appendChild($dom->createElementNs("http://php.net/ns/news", "finalTeaserDate", date("Y-m-d", $t)));
+    $item->appendChild($dom->createElementNs("http://php.net/ns/news", "cfpEnd", date("Y-m-d", $t)));
+
+    do {
+        fwrite(STDOUT, "What's the URL of the cfp-Website? ");
+        $i = trim(fgets(STDIN));
+        $u = filter_var($i, FILTER_VALIDATE_URL);
+        if (false !== $u) {
+            break;
+        }
+
+        fwrite(STDERR, "That doesn't seem to be a valid URL");
+    } while(1);
+    $item->appendChild($dom->createElementNs("http://php.net/ns/news", "cfpwebsite", $u));
 }
 
 foreach($cat as $n) {
