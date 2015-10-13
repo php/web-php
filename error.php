@@ -256,6 +256,9 @@ $manual_page_moves = array(
 
     // Refactored
     'regexp.reference'           => 'regexp.introduction',
+
+    // changed what we called a pseudo-type
+    'callable'                   => 'callback',
 );
 
 if (isset($manual_page_moves[$URI])) {
