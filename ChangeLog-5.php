@@ -46,8 +46,8 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 </ul></li>
 <li>Phar:
 <ul>
-  <li><?php bugfix(69720); ?> (Null pointer dereference in phar_get_fp_offset()).</li>
-  <li><?php bugfix(70433); ?> (Uninitialized pointer in phar_make_dirstream when zip entry filename is "/").</li>
+  <li><?php bugfix(69720); ?> (Null pointer dereference in phar_get_fp_offset()). (CVE-2015-7803)</li>
+  <li><?php bugfix(70433); ?> (Uninitialized pointer in phar_make_dirstream when zip entry filename is "/"). (CVE-2015-7804)</li>
 </ul></li>
 <li>Phpdbg:
 <ul>
@@ -73,8 +73,8 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 <b><?php release_date('01-Oct-2015'); ?></b>
 <ul><li>Phar:
 <ul>
-  <li><?php bugfix(69720); ?> (Null pointer dereference in phar_get_fp_offset()).</li>
-  <li><?php bugfix(70433); ?> (Uninitialized pointer in phar_make_dirstream when zip entry filename is "/").</li>
+  <li><?php bugfix(69720); ?> (Null pointer dereference in phar_get_fp_offset()). (CVE-2015-7803)</li>
+  <li><?php bugfix(70433); ?> (Uninitialized pointer in phar_make_dirstream when zip entry filename is "/"). (CVE-2015-7804)</li>
 </ul></li>
 </ul>
 </section>
