@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+  <title>PHP 7.0.0 RC 5 Released</title>
+  <id>http://php.net/archive/2015.php#id2015-10-15-2</id>
+  <published>2015-10-15T13:00:00+01:00</published>
+  <updated>2015-10-15T13:00:00+01:00</updated>
+  <category term="releases" label="New PHP release"/>
+  <category term="frontpage" label="PHP.net frontpage news"/>
+  <link href="http://php.net/index.php#id2015-10-15-2" rel="alternate" type="text/html"/>
+  <link href="http://php.net/archive/2015.php#id2015-10-15-2" rel="via" type="text/html"/>
+  <content type="xhtml">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+      <p>
+        The PHP development team announces the immediate availability of
+        PHP 7.0.0 RC 5. This is the tenth pre-release of the new PHP 7 
+        major series. All users of PHP are encouraged to test this version carefully,
+        and report any bugs and incompatibilities in <a href="https://bugs.php.net">the bug tracking system</a>.
+     </p>
+
+     <strong>THIS IS A DEVELOPMENT PREVIEW - DO <u>NOT</u> USE IT IN PRODUCTION!</strong>
+
+     <p>
+     PHP 7.0.0 RC 5 contains fixes for 11 reported bugs and over 100 commits with various improvements.
+     </p>
+
+     <p>
+      PHP 7.0.0 comes with new version of the Zend Engine with features such as (incomplete list):
+     </p>
+     <ul>
+        <li>Improved performance: PHP 7 is up to twice as fast as PHP 5.6</li>
+        <li>Consistent 64-bit support</li>
+        <li>Many fatal errors are now Exceptions</li>
+        <li>Removal of old and unsupported SAPIs and extensions</li>
+        <li>The null coalescing operator (??)</li>
+        <li>Combined comparison Operator (&lt;=&gt;)</li>
+        <li>Return Type Declarations</li>
+        <li>Scalar Type Declarations</li>
+        <li>Anonymous Classes</li>
+     </ul>
+
+     <p>
+      For more information on the new features and other changes, you can read the 
+      <a href="https://github.com/php/php-src/blob/php-7.0.0RC5/NEWS">NEWS file</a>, or the
+      <a href="http://php.net/manual/migration70.php">migration guide</a>
+      for a complete list of upgrading notes. NEWS and UPGRADING files can also be found in
+      the release archive.
+     </p>
+
+     <p>
+      For source downloads of PHP 7.0.0 RC 5 please visit
+      the <a href="https://downloads.php.net/ab/">download page</a>, Windows source and binaries
+      can be found on <a href="http://windows.php.net/qa/">windows.php.net/qa/</a>.
+     </p>
+
+     <p>
+      The next release will be RC 6, which is to be released on the 29th of October. You can also 
+      read the full list of planned releases on our <a href="https://wiki.php.net/todo/php70#timetable">wiki</a>.
+     </p>
+
+     <p>
+        Thank you for helping us make PHP better.
+     </p>
+    </div>
+  </content>
+</entry>
