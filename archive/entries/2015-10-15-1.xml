@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom" xmlns:default="http://php.net/ns/news">
+  <title>PHP Frameworks Day 2015</title>
+  <id>http://php.net/archive/2015.php#id2015-10-15-1</id>
+  <published>2015-10-15T12:05:32-04:00</published>
+  <updated>2015-10-15T12:05:32-04:00</updated>
+  <default:finalTeaserDate xmlns="http://php.net/ns/news">2015-10-19</default:finalTeaserDate>
+  <category term="conferences" label="Conference announcement"/>
+  <link href="http://php.net/conferences/index.php#id2015-10-07-1" rel="alternate" type="text/html"/>
+  <default:newsImage xmlns="http://php.net/ns/news" link="http://frameworksdays.com/event/php-frameworks-day-2015" title="PHP Frameworks Day 2015">phpfworksday-logo.png</default:newsImage>
+  <link href="http://frameworksdays.com/event/php-frameworks-day-2015" rel="via" type="text/html"/>
+  <content type="xhtml">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+
+<p>#fwdays invites everybody interested in PHP topic to attend PHP Frameworks Day 2015 conference on October 17.</p>
+
+<p>This is the third time PHP Frameworks Day is being held and each time it grows and becomes more interesting! <a href="https://www.youtube.com/watch?v=qPlQQqnGM-s" title="Watch">Watch</a> how we spent PHP Frameworks Day 2014.
+
+<p>It is the largest PHP event in Ukraine. There will be exciting talks in 2 tracks. Useful networking during
+    the breaks, coffee-breaks and delicious lunch. Our partners have prepared interesting entertainment and
+    gifts. Moreover, we will celebrate the 20th anniversary of the PHP language at the after-party.</p>
+
+<p>We will discuss such topics: Phalcon 2 Framework, Docker, PPI Framework Engine, Yii Framework, how to maintain an open source project and will not forget about Symfony Framework.</p>
+
+<p><b>Speakers:</b> Paul Dragoonis, Jordi Boggiano, Mikhail Bodnarchuk, Alexander Makarov, Sergey Yakovlev and the list is not final.</p>
+
+<p><b>Venue:</b> Kyiv, Ramada Encore Kiev hotel, 103 Stolychne Highway</p>
+
+<p><b>Ticket price:</b> UAH 1800 (~$80)</p>
+
+<p>Check the program on the <a href="http://frameworksdays.com/event/php-frameworks-day-2015/page/program" title="conference website">conference website</a></p>
+
+
+
+    </div>
+  </content>
+</entry>
