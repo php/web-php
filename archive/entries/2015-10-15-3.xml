@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom" xmlns:default="http://php.net/ns/news">
+  <title>PhpConference Brasil 2015</title>
+  <id>http://php.net/archive/2015.php#id2015-10-15-3</id>
+  <published>2015-10-15T22:00:00-03:00</published>
+  <updated>2015-10-15T22:00:00-03:00</updated>
+  <default:finalTeaserDate xmlns="http://php.net/ns/news">2015-12-02</default:finalTeaserDate>
+  <category term="conferences" label="Conference announcement"/>
+  <link href="http://php.net/conferences/index.php#id2015-10-15-3" rel="alternate" type="text/html"/>
+  <default:newsImage xmlns="http://php.net/ns/news" link="http://phpconference.com.br" title="PhpConference Brasil 2015">phpconfbrasil2015.png</default:newsImage>
+  <link href="http://phpconference.com.br" rel="via" type="text/html"/>
+  <content type="html">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+	  <p>Come to the leading PHP Conference in Latin America!</p>
+      <p>
+      We're celebrating our 10th anniversary with a 5 days event, starting on
+      wednesday, december 2nd, and ending on december 6th - on a beach!
+      </p>
+      
+      <p>
+      This year, we'll have hands-on courses (with 8 hour duration each),
+      practical mini-courses, talks and keynotes. The event place provide us a
+      camping area, so you can come and stay all night long, and on december
+      6th - last event day -, we have the PHP Conference on Beach: a day to
+      enjoy with event attendees.
+      </p>
+      
+      <p>
+      Come to learn about PHP and improve your networking! Check out what you
+      will see on PHP Conference Brasil 2015:
+      </p>
+
+      <ul>
+        <li>80 activities, including talks (both national and international), courses and mini-courses;</li>
+        <li>Camping area;</li>
+        <li>PHPConference on Beach;</li>
+        <li>GirlPower promotion: womans have 50% off on ticket.</li>
+      </ul>
+
+      <p>
+      More informations at
+      <a href="http://phpconference.com.br">phpconference.com.br</a>.
+      </p>
+    </div>
+  </content>
+</entry>
