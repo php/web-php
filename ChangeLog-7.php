@@ -86,8 +86,7 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
 </ul></li>
 <li>Session:
 <ul>
-  <li><?php bugfix(70529); ?> (Session read causes "String is not zero-terminate
-d" error).</li>
+  <li><?php bugfix(70529); ?> (Session read causes "String is not zero-terminated" error).</li>
 </ul></li>
 <li>SQLite3:
 <ul>
