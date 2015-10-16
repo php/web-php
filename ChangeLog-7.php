@@ -1,5 +1,4 @@
 <?php
-// $Id$
 $_SERVER['BASE_PAGE'] = 'ChangeLog-7.php';
 include_once $_SERVER['DOCUMENT_ROOT'] . '/include/prepend.inc';
 include_once $_SERVER['DOCUMENT_ROOT'] . '/include/changelogs.inc';
@@ -7,6 +6,107 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
 ?>
 
 <h1>PHP 7 ChangeLog</h1>
+
+<section class="version" id="7.0.0 RC5"><!-- {{{ 7.0.0 RC5 -->
+<h3>Version 7.0.0 RC5</h3>
+<b>15-Oct-2015</b>
+<ul><li>Core:
+<ul>
+  <li><?php bugfix(70630); ?> (Closure::call/bind() crash with ReflectionFunction-&gt; getClosure()).</li>
+  <li><?php bugfix(70662); ?> (Duplicate array key via undefined index error handler).</li>
+  <li><?php bugfix(70681); ?> (Segfault when binding $this of internal instance method to null).</li>
+  <li><?php bugfix(70685); ?> (Segfault for getClosure() internal method rebind with invalid $this).</li>
+</ul></li>
+<li>Mcrypt:
+<ul>
+  <li><?php bugfix(70625); ?> (mcrypt_encrypt() won't return data when no IV was specified under RC4).</li>
+</ul></li>
+<li>Opcache:
+<ul>
+  <li>Fixed compatibility with Windows 10 (see also bug <?php bugl(70652); ?>).</li>
+</ul></li>
+<li>Phpdbg:
+<ul>
+  <li><?php bugfix(70614); ?> (incorrect exit code in -rr mode with Exceptions).</li>
+</ul></li>
+<li>Reflection:
+<ul>
+  <li><?php bugfix(70650); ?> (Wrong docblock assignment).</li>
+  <li><?php bugfix(70674); ?> (ReflectionFunction::getClosure() leaks memory when used for internal functions).</li>
+</ul></li>
+<li>Standard:
+<ul>
+  <li><?php bugfix(70667); ?> (strtr() causes invalid writes and a crashes).</li>
+  <li><?php bugfix(70668); ?> (array_keys() doesn't respect references when $strict is true).</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
+<section class="version" id="7.0.0 RC4"><!-- {{{ 7.0.0 RC4 -->
+<h3>Version 7.0.0 RC4</h3>
+<b>01-Oct-2015</b>
+<ul><li>Core:
+<ul>
+  <li>Added zend_internal_function.reserved[] fields.</li>
+  <li><?php bugfix(70557); ?> (Memleak on return type verifying failed).</li>
+  <li><?php bugfix(70555); ?> (fun_get_arg() on unsetted vars return UNKNOW).</li>
+  <li><?php bugfix(70548); ?> (Redundant information printed in case of uncaught engine exception).</li>
+  <li><?php bugfix(70547); ?> (unsetting function variables corrupts backtrace).</li>
+  <li><?php bugfix(70528); ?> (assert() with instanceof adds apostrophes around class name).</li>
+  <li><?php bugfix(70481); ?> (Memory leak in auto_global_copy_ctor() in ZTS build).</li>
+</ul></li>
+<li>DOM:
+<ul>
+  <li><?php bugfix(70558); ?> ("Couldn't fetch" error in DOMDocument::registerNodeClass()).</li>
+</ul></li>
+<li>FPM:
+<ul>
+  <li><?php bugfix(70538); ?> ("php-fpm -i" crashes).</li>
+  <li><?php bugfix(70279); ?> (HTTP Authorization Header is sometimes passed to newer reqeusts).</li>
+</ul></li>
+<li>Opcache:
+<ul>
+  <li>Attmpt to fix "Unable to reattach to base address" problem.</li>
+</ul></li>
+<li>OpenSSL:
+<ul>
+  <li>Require at least OpenSSL version 0.9.8.</li>
+  <li><?php bugfix(68312); ?> (Lookup for openssl.cnf causes a message box).</li>
+</ul></li>
+<li>Phar:
+<ul>
+  <li><?php bugfix(69720); ?> (Null pointer dereference in phar_get_fp_offset()).</li>
+  <li><?php bugfix(70433); ?> (Uninitialized pointer in phar_make_dirstream when zip entry filename is "/").</li>
+</ul></li>
+<li>Phpdbg:
+<ul>
+  <li><?php bugfix(70532); ?> (phpdbg must respect set_exception_handler).</li>
+  <li><?php bugfix(70531); ?> (Run and quit mode (-qrr) should not fallback to interactive mode).</li>
+  <li><?php bugfix(70533); ?> (Help overview (-h) does not print anything under Windows).</li>
+</ul></li>
+<li>Session:
+<ul>
+  <li><?php bugfix(70529); ?> (Session read causes "String is not zero-terminate
+d" error).</li>
+</ul></li>
+<li>SQLite3:
+<ul>
+  <li><?php bugfix(70571); ?> (Memory leak in sqlite3_do_callback).</li>
+</ul></li>
+<li>SPL:
+<ul>
+  <li><?php bugfix(70573); ?> (Cloning SplPriorityQueue leads to memory leaks).</li>
+</ul></li>
+<li>XMLRPC:
+<ul>
+  <li><?php bugfix(70526); ?> (xmlrpc_set_type returns false on success).</li>
+</ul></li>
+<li>XSL:
+<ul>
+  <li><?php bugfix(70535); ?> (XSLT: free(): invalid pointer).</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
 
 <section class="version" id="7.0.0RC3"><!-- {{{ 7.0.0RC3 -->
 <h3>Version 7.0.0 RC3</h3>
