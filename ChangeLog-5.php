@@ -8,6 +8,37 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 
 <h1>PHP 5 ChangeLog</h1>
 
+<section class="version" id="5.6.15"><!-- {{{ 5.6.15 -->
+<h3>Version 5.6.15</h3>
+<b><?php release_date('29-Oct-2015'); ?></b>
+<ul><li>Core:
+<ul>
+  <li><?php bugfix(70681); ?> (Segfault when binding $this of internal instance method to null).</li>
+  <li><?php bugfix(70685); ?> (Segfault for getClosure() internal method rebind with invalid $this).</li>
+</ul></li>
+<li>Date:
+<ul>
+  <li><?php bugfix(70619); ?> (DateTimeImmutable segfault).</li>
+</ul></li>
+<li>Mcrypt:
+<ul>
+  <li><?php bugfix(70625); ?> (mcrypt_encrypt() won't return data when no IV was specified under RC4).</li>
+</ul></li>
+<li>Mysqlnd:
+<ul>
+  <li><?php bugfix(70384); ?> (mysqli_real_query():Unknown type 245 sent by the server).</li>
+  <li><?php bugfix(70572); ?> segfault in mysqlnd_connect.</li>
+</ul></li>
+<li>Opcache:
+<ul>
+  <li><?php bugfix(70632); ?> (Third one of segfault in gc_remove_from_buffer).</li>
+  <li><?php bugfix(70631); ?> (Another Segfault in gc_remove_from_buffer()).</li>
+  <li><?php bugfix(70601); ?> (Segfault in gc_remove_from_buffer()).</li>
+  <li>Fixed compatibility with Windows 10 (see also <?php bugl(70652); ?>).</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
 <section class="version" id="5.6.14"><!-- {{{ 5.6.14 -->
 <h3>Version 5.6.14</h3>
 <b><?php release_date('01-Oct-2015'); ?></b>
