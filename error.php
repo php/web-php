@@ -306,6 +306,7 @@ $uri_aliases = array (
     "gd"               => "image",
     "bcmath"           => "bc",
     'streams'          => 'book.stream',
+    "mongodb"          => "set.mongodb",
 
     "callback"     => "language.pseudo-types",
     "number"       => "language.pseudo-types",
