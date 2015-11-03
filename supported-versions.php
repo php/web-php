@@ -51,9 +51,13 @@ site_header('Supported Versions', array('css' => array('supported-versions.css')
 				?>
 				<tr class="<?php echo $state ?>">
 					<td>
-						<a href="/downloads.php#v<?php echo htmlspecialchars($release['version']) ?>">
+						<?php if ($state == 'eol'): ?>
 							<?php echo htmlspecialchars($branch) ?>
-						</a>
+						<?php else: ?>
+							<a href="/downloads.php#v<?php echo htmlspecialchars($release['version']) ?>">
+								<?php echo htmlspecialchars($branch) ?>
+							</a>
+						<?php endif; ?>
 					</td>
 					<td><?php echo htmlspecialchars($initial->format('j M Y')) ?></td>
 					<td class="collapse-phone"><em><?php echo htmlspecialchars(format_interval($initial, null)) ?></em></td>
