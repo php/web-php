@@ -5,7 +5,7 @@ include_once $_SERVER['DOCUMENT_ROOT'] . '/include/prepend.inc';
 include_once $_SERVER["DOCUMENT_ROOT"] . "/include/branches.inc";
 
 if (isset($_GET["serialize"]) || isset($_GET["json"])) {
-	$RELEASES[5][$PHP_5_4_VERSION]["date"] = $PHP_5_4_DATE;
+	$RELEASES[5][$PHP_5_6_VERSION]["date"] = $PHP_5_6_DATE;
 	$RELEASES                              = $RELEASES + $OLDRELEASES;
 
 	$machineReadable = array();

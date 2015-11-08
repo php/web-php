@@ -48,20 +48,6 @@ $PHP_5_5_SHA256     = array(
                        "tar.gz"        => "8ad57f4317391354e66c83d26752f67515b2e923277eb97b2b420dfeff3c1007",
                        "tar.xz"        => "d00dc06fa5e0f3de048fb0cf940b3cc59b43b3f8cad825d4fffb35503cf2e8f2",
 );
-/* PHP 5.4 Release */
-$PHP_5_4_RC = false; // Current RC version (e.g., '5.6.7RC1') or false
-$PHP_5_4_RC_DATE = '4 Sep 2014';
-
-$PHP_5_4_VERSION         = "5.4.45";
-$PHP_5_4_DATE            = "03 Sep 2015";
-$PHP_5_4_MD5     = array(
-                       "tar.bz2"       => "185f67f1ca652b18bc0cca9d7edbde7c",
-                       "tar.gz"        => "ba580e774ed1ab256f22d1fa69a59311",
-);
-$PHP_5_4_SHA256     = array(
-                       "tar.bz2"       => "4e0d28b1554c95cfaea6fa2b64aac85433f158ce72bb571bcd5574f98f4c6582",
-                       "tar.gz"        => "25bc4723955f4e352935258002af14a14a9810b491a19400d76fcdfa9d04b28f",
-);
 
 $RELEASES = array(
     5 => array(
@@ -114,25 +100,6 @@ $RELEASES = array(
                     "md5"      => $PHP_5_5_MD5["tar.xz"],
                     "sha256"   => $PHP_5_5_SHA256["tar.xz"],
                     "date"     => $PHP_5_5_DATE,
-                ),
-            ),
-        ),
-        $PHP_5_4_VERSION => array(
-            "announcement" => true,
-            "source" => array(
-                array(
-                    "filename" => "php-$PHP_5_4_VERSION.tar.bz2",
-                    "name"     => "PHP $PHP_5_4_VERSION (tar.bz2)",
-                    "md5"      => $PHP_5_4_MD5["tar.bz2"],
-                    "sha256"   => $PHP_5_4_SHA256["tar.bz2"],
-                    "date"     => $PHP_5_4_DATE,
-                ),
-                array(
-                    "filename" => "php-$PHP_5_4_VERSION.tar.gz",
-                    "name"     => "PHP $PHP_5_4_VERSION (tar.gz)",
-                    "md5"      => $PHP_5_4_MD5["tar.gz"],
-                    "sha256"   => $PHP_5_4_SHA256["tar.gz"],
-                    "date"     => $PHP_5_4_DATE,
                 ),
             ),
         ),

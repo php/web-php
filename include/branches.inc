@@ -16,7 +16,7 @@ $BRANCHES = array(
 	),
 	'5.4' => array(
 		'stable'   => '2014-09-14',
-		'security' => '2015-09-14',
+		'security' => '2015-09-03',
 	),
 	'5.5' => array(
 		'stable'   => '2015-07-10',
