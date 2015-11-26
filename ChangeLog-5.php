@@ -8,6 +8,37 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 
 <h1>PHP 5 ChangeLog</h1>
 
+<section class="version" id="5.6.16"><!-- {{{ 5.6.16 -->
+<h3>Version 5.6.16</h3>
+<b><?php release_date('26-Nov-2015'); ?></b>
+<ul><li>Core:
+<ul>
+  <li><?php bugfix(70828); ?> (php-fpm 5.6 with opcache crashes when referencing a non-existent constant).</li>
+  <li><?php bugfix(70748); ?> (Segfault in ini_lex () at Zend/zend_ini_scanner.l).</li>
+</ul></li>
+<li>Mysqlnd:
+<ul>
+  <li><?php bugfix(68344); ?> (MySQLi does not provide way to disable peer certificate validation) by introducing MYSQLI_CLIENT_SSL_DONT_VERIFY_SERVER_CERT connection flag.</li>
+</ul></li>
+<li>OCI8:
+<ul>
+  <li><?php bugfix(68298); ?> (OCI int overflow).</li>
+</ul></li>
+<li>PDO_DBlib:
+<ul>
+  <li><?php bugfix(69757); ?> (Segmentation fault on nextRowset).</li>
+</ul></li>
+<li>SOAP:
+<ul>
+  <li><?php bugfix(70875); ?> (Segmentation fault if wsdl has no targetNamespace attribute).</li>
+</ul></li>
+<li>SPL:
+<ul>
+  <li><?php bugfix(70852); ?> (Segfault getting NULL offset of an ArrayObject).</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
 <section class="version" id="5.6.15"><!-- {{{ 5.6.15 -->
 <h3>Version 5.6.15</h3>
 <b><?php release_date('29-Oct-2015'); ?></b>
