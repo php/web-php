@@ -7,6 +7,120 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
 
 <h1>PHP 7 ChangeLog</h1>
 
+<section class="version" id="7.0.0 RC8"><!-- {{{ 7.0.0 RC8 -->
+<h3>Version 7.0.0 RC8</h3>
+<b>26-Nov-2015</b>
+<ul><li>Core:
+<ul>
+  <li><?php bugfix(70947); ?> (INI parser segfault with INI_SCANNER_TYPED).</li>
+  <li><?php bugfix(70914); ?> (zend_throw_or_error() format string vulnerability).</li>
+  <li><?php bugfix(70912); ?> (Null ptr dereference instantiating class with invalid  array property).</li>
+  <li><?php bugfix(70895); ?> (null ptr deref and segfault with crafted calable).</li>
+  <li><?php bugfix(70898); ?> (SIGBUS/GPF zend_mm_alloc_small (zend_alloc.c:1291)).</li>
+</ul></li></ul>
+<ul><li>OCI8:
+<ul>
+  <li>Fixed memory leak with LOBs.</li>
+</ul></li></ul>
+<ul><li>SOAP:
+<ul>
+  <li><?php bugfix(70940); ?> (Segfault in soap / type_to_string).</li>
+  <li><?php bugfix(70900); ?> (SoapClient systematic out of memory error).</li>
+</ul></li></ul>
+<ul><li>SPL:
+<ul>
+  <li><?php bugfix(70959); ?> (ArrayObject unserialize does not restore protected fields).</li>
+</ul></li></ul>
+<ul><li>Standard:
+<ul>
+  <li>Fixed count on symbol tables.</li>
+  <li><?php bugfix(70963); ?> (Unserialize shows UNKNOWN in result).</li>
+  <li><?php bugfix(70910); ?> (extract() breaks variable references).</li>
+</ul></li></ul>
+</ul>
+<!-- }}} --></section>
+
+<section class="version" id="7.0.0 RC7"><!-- {{{ 7.0.0 RC7 -->
+<h3>Version 7.0.0 RC7</h3>
+<b>12-Nov-2015</b>
+<ul><li>Core:
+<ul>
+  <li><?php bugfix(70249); ?> (Segmentation fault while running PHPUnit tests on phpBB 3.2-dev).</li>
+  <li><?php bugfix(70805); ?> (Segmentation faults whilst running Drupal 8 test suite).</li>
+  <li><?php bugfix(70842); ?> (Persistent Stream Segmentation Fault).</li>
+  <li><?php bugfix(70862); ?> (Several functions do not check return code of php_stream_copy_to_mem()).</li>
+  <li><?php bugfix(70863); ?> (Incorect logic to increment_function for proxy objects).</li>
+  <li><?php bugfix(70323); ?> (Regression in zend_fetch_debug_backtrace() can cause segfaults).</li>
+  <li><?php bugfix(70873); ?> (Regression on private static properties access).</li>
+</ul></li></ul>
+<ul><li>OCI8:
+<ul>
+  <li><?php bugfix(68298); ?> (OCI int overflow).</li>
+</ul></li></ul>
+<ul><li>Opcache:
+<ul>
+  <li><?php bugfix(70656); ?> (require() statement broken after opcache_reset() or a few hours of use).</li>
+  <li><?php bugfix(70843); ?> (Segmentation fault on MacOSX with opcache.file_cache_only=1).</li>
+</ul></li></ul>
+<ul><li>PDO:
+<ul>
+  <li><?php bugfix(70861); ?> (Segmentation fault in pdo_parse_params() during Drupal 8 test suite).</li>
+</ul></li></ul>
+<ul><li>Session:
+<ul>
+  <li><?php bugfix(70876); ?> (Segmentation fault when regenerating session id with strict mode).</li>
+</ul></li></ul>
+<ul><li>SOAP:
+<ul>
+  <li><?php bugfix(70875); ?> (Segmentation fault if wsdl has no targetNamespace attribute).</li>
+</ul></li></ul>
+<ul><li>SPL:
+<ul>
+  <li><?php bugfix(70853); ?> (SplFixedArray throws exception when using ref variable as index).</li>
+  <li><?php bugfix(70868); ?> (PCRE JIT and pattern reuse segfault).</li>
+</ul></li></ul>
+<ul><li>Standard:
+<ul>
+  <li><?php bugfix(70808); ?> (array_merge_recursive corrupts memory of unset items).</li>
+</ul></li></ul>
+<ul><li>XSL:
+<ul>
+  <li><?php bugfix(70678); ?> (PHP7 returns true when false is expected).</li>
+</ul></li></ul>
+</ul>
+<!-- }}} --></section>
+
+<section class="version" id="7.0.0 RC6"><!-- {{{ 7.0.0 RC6 -->
+<h3>Version 7.0.0 RC6</h3>
+<b>29-Oct-2015</b>
+<ul><li>Core:
+<ul>
+  <li><?php bugfix(70748); ?> (Segfault in ini_lex () at Zend/zend_ini_scanner.l).</li>
+  <li><?php bugfix(70689); ?> (Exception handler does not work as expected).</li>
+  <li><?php bugfix(70430); ?> (Stack buffer overflow in zend_language_parser()).</li>
+  <li><?php bugfix(70782); ?> (null ptr deref and segfault (zend_get_class_fetch_type)).</li>
+  <li><?php bugfix(70785); ?> (Infinite loop due to exception during identical comparison).</li>
+</ul></li></ul>
+<ul><li>Opcache:
+<ul>
+  <li><?php bugfix(70724); ?> (Undefined Symbols from opcache.so on Mac OS X 10.10).</li>
+</ul></li></ul>
+<ul><li>PDO_DBlib:
+<ul>
+  <li><?php bugfix(69757); ?> (Segmentation fault on nextRowset).</li>
+</ul></li></ul>
+<ul><li>SOAP:
+<ul>
+  <li><?php bugfix(70715); ?> (Segmentation fault inside soap client).</li>
+  <li><?php bugfix(70709); ?> (SOAP Client generates Segfault).</li>
+</ul></li></ul>
+<ul><li>SPL:
+<ul>
+  <li><?php bugfix(70730); ?> (Incorrect ArrayObject serialization if unset is called in serialize()).</li>
+</ul></li></ul>
+</ul>
+<!-- }}} --></section>
+
 <section class="version" id="7.0.0 RC5"><!-- {{{ 7.0.0 RC5 -->
 <h3>Version 7.0.0 RC5</h3>
 <b>15-Oct-2015</b>
