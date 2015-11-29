@@ -9,9 +9,6 @@ include_once $_SERVER['DOCUMENT_ROOT'] . '/include/version.inc';
 header_nocache();
 
 $SHOW_COUNT = 4;
-$MAJOR = 5;
-
-$releases = array_slice($RELEASES[$MAJOR], 0, $SHOW_COUNT);
 
 $SIDEBAR_DATA = '
 <div class="panel">
@@ -43,7 +40,10 @@ site_header("Downloads",
     )
 );
 ?>
-<a id="v5"></a>
+<?php foreach ($RELEASES as $MAJOR => $major_releases): /* major releases loop start */
+        $releases = array_slice($major_releases, 0, $SHOW_COUNT);
+?>
+<a id="v<?php echo $MAJOR; ?>"></a>
 <?php $i = 0; foreach ($releases as $v => $a): ?>
   <?php $mver = substr($v, 0, strrpos($v, '.')); ?>
   <?php $stable = $i++ === 0 ? "Current Stable" : "Old Stable"; ?>
@@ -80,6 +80,7 @@ site_header("Downloads",
     <a href="#gpg-<?php echo $mver; ?>">GPG Keys for PHP <?php echo $mver; ?></a>
   </div>
 <?php endforeach; ?>
+<?php endforeach; /* major releases loop end */ ?>
 
 <hr>
 <h2>GPG Keys</h2>
@@ -88,7 +89,11 @@ The releases are tagged and signed in the <a href='git.php'>PHP Git Repository</
 The following official GnuPG keys of the current PHP Release Manager can be used
 to verify the tags:
 </p>
-<?php foreach ($RELEASES[$MAJOR] as $v => $_): ?>
+
+<?php foreach ($RELEASES as $MAJOR => $major_releases): /* major releases loop start */
+        $releases = array_slice($major_releases, 0, $SHOW_COUNT);
+?>
+<?php foreach ($releases as $v => $_): ?>
   <?php $branch = implode('.', array_slice(explode('.', $v), 0, 2)); ?>
   <?php if (isset($GPG_KEYS[$branch])): ?>
     <h3 id="gpg-<?php echo $branch; ?>" class="content-header">PHP <?php echo $branch; ?></h3>
@@ -99,6 +104,8 @@ to verify the tags:
     </div>
   <?php endif ?>
 <?php endforeach ?>
+<?php endforeach; /* major releases loop end */ ?>
+
 <p>
   <a href="gpg-keys.php">
     A full list of GPG keys used for current and older releases is also

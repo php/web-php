@@ -16,6 +16,22 @@
  *         ),
  *     ),
  * );
+/* PHP 7.0 Release */
+$PHP_7_0_RC = false; // Current RC version (e.g., '5.6.7RC1') or false
+$PHP_7_0_RC_DATE = '29 Oct 2015';
+
+$PHP_7_0_VERSION         = "7.0.0";
+$PHP_7_0_DATE            = "26 Nov 2015";
+$PHP_7_0_MD5     = array(
+                       "tar.bz2"       => "2e1332123a7e19d15ed2af2d1d6bd6fd",
+                       "tar.gz"        => "ae625e0cfcfdacea3e7a70a075e47155",
+                       "tar.xz"        => "96080ad8c5111446f58290cc6f18698c",
+);
+$PHP_7_0_SHA256     = array(
+                       "tar.bz2"       => "36f295f11641c1839a5df00e693f685fd134c65e8a1d46e8ee0abae8662b2eb0",
+                       "tar.gz"        => "29baf7ffca644f7f8e86028c40275b9e460342bdf9562d45f8f0498899cb738d",
+                       "tar.xz"        => "c8edf6b05fd8a69ebd88d90c5c0975ee168502204622ad5cfcd550bc222632d9",
+);
 /* PHP 5.6 Release */
 $PHP_5_6_RC = false; // Current RC version (e.g., '5.6.7RC1') or false
 $PHP_5_6_RC_DATE = '15 Oct 2015';
@@ -50,6 +66,34 @@ $PHP_5_5_SHA256     = array(
 );
 
 $RELEASES = array(
+    /*7 => array(
+        $PHP_7_0_VERSION => array(
+            "announcement" => true,
+            "source" => array(
+                array(
+                    "filename" => "php-$PHP_7_0_VERSION.tar.bz2",
+                    "name"     => "PHP $PHP_7_0_VERSION (tar.bz2)",
+                    "md5"      => $PHP_7_0_MD5["tar.bz2"],
+                    "sha256"   => $PHP_7_0_SHA256["tar.bz2"],
+                    "date"     => $PHP_7_0_DATE,
+                ),
+                array(
+                    "filename" => "php-$PHP_7_0_VERSION.tar.gz",
+                    "name"     => "PHP $PHP_7_0_VERSION (tar.gz)",
+                    "md5"      => $PHP_7_0_MD5["tar.gz"],
+                    "sha256"   => $PHP_7_0_SHA256["tar.gz"],
+                    "date"     => $PHP_7_0_DATE,
+                ),
+                array(
+                    "filename" => "php-$PHP_7_0_VERSION.tar.xz",
+                    "name"     => "PHP $PHP_7_0_VERSION (tar.xz)",
+                    "md5"      => $PHP_7_0_MD5["tar.xz"],
+                    "sha256"   => $PHP_7_0_SHA256["tar.xz"],
+                    "date"     => $PHP_7_0_DATE,
+                ),
+            ),
+        ),
+    ),*/
     5 => array(
         $PHP_5_6_VERSION => array(
             "announcement" => true,
@@ -109,4 +153,8 @@ $RELEASES = array(
 $PHP_5_VERSION = $PHP_5_6_VERSION; // Some scripts require this set
 $PHP_5_DATE    = $PHP_5_6_DATE; // Used by buumpRelease script
 $PHP_5_RC_DATE = $PHP_5_6_RC_DATE; // Used by master
+
+$PHP_7_VERSION = $PHP_7_0_VERSION; // Some scripts require this set
+$PHP_7_DATE    = $PHP_7_0_DATE; // Used by buumpRelease script
+$PHP_7_RC_DATE = $PHP_7_0_RC_DATE; // Used by master
 
