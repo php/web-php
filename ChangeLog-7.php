@@ -19,7 +19,7 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
 
 <section class="version" id="7.0.0 RC8"><!-- {{{ 7.0.0 RC8 -->
 <h3>Version 7.0.0 RC8</h3>
-<b>26-Nov-2015</b>
+<b><?php release_date('26-Nov-2015'); ?></b>
 <ul><li>Core:
 <ul>
   <li><?php bugfix(70947); ?> (INI parser segfault with INI_SCANNER_TYPED).</li>
@@ -52,7 +52,7 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
 
 <section class="version" id="7.0.0 RC7"><!-- {{{ 7.0.0 RC7 -->
 <h3>Version 7.0.0 RC7</h3>
-<b>12-Nov-2015</b>
+<b><?php release_date('12-Nov-2015'); ?></b>
 <ul><li>Core:
 <ul>
   <li><?php bugfix(70249); ?> (Segmentation fault while running PHPUnit tests on phpBB 3.2-dev).</li>
@@ -102,7 +102,7 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
 
 <section class="version" id="7.0.0 RC6"><!-- {{{ 7.0.0 RC6 -->
 <h3>Version 7.0.0 RC6</h3>
-<b>29-Oct-2015</b>
+<b><?php release_date('29-Oct-2015'); ?></b>
 <ul><li>Core:
 <ul>
   <li><?php bugfix(70748); ?> (Segfault in ini_lex () at Zend/zend_ini_scanner.l).</li>
@@ -133,7 +133,7 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
 
 <section class="version" id="7.0.0 RC5"><!-- {{{ 7.0.0 RC5 -->
 <h3>Version 7.0.0 RC5</h3>
-<b>15-Oct-2015</b>
+<b><?php release_date('15-Oct-2015'); ?></b>
 <ul><li>Core:
 <ul>
   <li><?php bugfix(70630); ?> (Closure::call/bind() crash with ReflectionFunction-&gt; getClosure()).</li>
@@ -168,7 +168,7 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
 
 <section class="version" id="7.0.0 RC4"><!-- {{{ 7.0.0 RC4 -->
 <h3>Version 7.0.0 RC4</h3>
-<b>01-Oct-2015</b>
+<b><?php release_date('01-Oct-2015'); ?></b>
 <ul><li>Core:
 <ul>
   <li>Added zend_internal_function.reserved[] fields.</li>
@@ -233,7 +233,7 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
 
 <section class="version" id="7.0.0RC3"><!-- {{{ 7.0.0RC3 -->
 <h3>Version 7.0.0 RC3</h3>
-<b>17-Sep-2015</b>
+<b><?php release_date('17-Sep-2015'); ?></b>
 <ul><li>Core:
 <ul>
   <li><?php bugfix(70431); ?> (Memory leak in php_ini.c).</li>
@@ -297,7 +297,7 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
 
 <section class="version" id="7.0.0RC2"><!-- {{{ 7.0.0RC2 -->
 <h3>Version 7.0.0 RC2</h3>
-<b>03-Sep-2015</b>
+<b><?php release_date('03-Sep-2015'); ?></b>
 <ul><li>Core:
 <ul>
   <li><?php bugfix(70398); ?> (SIGSEGV, Segmentation fault zend_ast_destroy_ex).</li>
@@ -380,7 +380,7 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
 
 <section class="version" id="7.0.0RC1"><!-- {{{ 7.0.0RC1 -->
 <h3>Version 7.0.0 RC1</h3>
-<b>20-Aug-2015</b>
+<b><?php release_date('20-Aug-2015'); ?></b>
 <ul><li>Core:
 <ul>
   <li><?php bugfix(70299); ?> (Memleak while assigning object offsetGet result).</li>
@@ -441,7 +441,7 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
 
 <section class="version" id="7.0.0b3"><!-- {{{ 7.0.0b3 -->
 <h3>Version 7.0.0 Beta 3</h3>
-<b>06-Aug-2015</b>
+<b><?php release_date('06-Aug-2015'); ?></b>
 <ul><li>Core:
 <ul>
   <li>Fixed "finally" issues.</li>
@@ -510,7 +510,7 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
 
 <section class="version" id="7.0.0b2"><!-- {{{ 7.0.0b2 -->
 <h3>Version 7.0.0 Beta 2</h3>
-<b>23-Jul-2015</b>
+<b><?php release_date('23-Jul-2015'); ?></b>
 <ul><li>Core:
 <ul>
   <li><?php bugfix(70089); ?> (segfault at ZEND_FETCH_DIM_W_SPEC_VAR_CONST_HANDLER ()).</li>
@@ -566,7 +566,7 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
 <!-- }}} --></section>
 <section class="version" id="7.0.0b1"><!-- {{{ 7.0.0b1 -->
 <h3>Version 7.0.0 Beta 1</h3>
-<b>11-Jun-2015</b>
+<b><?php release_date('11-Jun-2015'); ?></b>
 <ul><li>Core:
 <ul>
   <li><?php bugfix(69767); ?> (Default parameter value with wrong type segfaults).</li>
