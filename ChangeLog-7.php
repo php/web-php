@@ -7,6 +7,16 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
 
 <h1>PHP 7 ChangeLog</h1>
 
+<section class="version" id="7.0.0"><!-- {{{ 7.0.0 -->
+<h3>Version 7.0.0</h3>
+<b><?php release_date('03-Dec-2015'); ?></b>
+<ul><li>Mysqlnd:
+<ul>
+  <li><?php bugfix(70949); ?> (SQL Result Sets With NULL Can Cause Fatal Memory Errors).</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
 <section class="version" id="7.0.0 RC8"><!-- {{{ 7.0.0 RC8 -->
 <h3>Version 7.0.0 RC8</h3>
 <b>26-Nov-2015</b>
