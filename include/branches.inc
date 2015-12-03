@@ -121,6 +121,7 @@ function get_active_branches() {
 		}
 	}
 
+	ksort($branches);
 	return $branches;
 }
 
