@@ -15,7 +15,7 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
   <li><?php bugfix(70947); ?> (INI parser segfault with INI_SCANNER_TYPED).</li>
   <li><?php bugfix(70914); ?> (zend_throw_or_error() format string vulnerability).</li>
   <li><?php bugfix(70912); ?> (Null ptr dereference instantiating class with invalid array property).</li>
-  <li><?php bugfix(70895); ?>, #70898 (null ptr deref and segfault with crafted calable).</li>
+  <li><?php bugfix(70895); ?>, <?php bugl(70898); ?> (null ptr deref and segfault with crafted calable).</li>
   <li><?php bugfix(70249); ?> (Segmentation fault while running PHPUnit tests on phpBB 3.2-dev).</li>
   <li><?php bugfix(70805); ?> (Segmentation faults whilst running Drupal 8 test suite).</li>
   <li><?php bugfix(70842); ?> (Persistent Stream Segmentation Fault).</li>
@@ -62,7 +62,7 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
   <li><?php bugfix(70173); ?> (ZVAL_COPY_VALUE_EX broken for 32bit Solaris Sparc).</li>
   <li><?php bugfix(69487); ?> (SAPI may truncate POST data).</li>
   <li><?php bugfix(70198); ?> (Checking liveness does not work as expected).</li>
-  <li><?php bugfix(70241); ?>/#70293 (Skipped assertions affect Generator returns).</li>
+  <li><?php bugfix(70241); ?>, <?php bugl(70293); ?> (Skipped assertions affect Generator returns).</li>
   <li><?php bugfix(70239); ?> (Creating a huge array doesn't result in exhausted, but segfault).</li>
   <li>Fixed "finally" issues.</li>
   <li><?php bugfix(70098); ?> (Real memory usage doesn't decrease).</li>
@@ -88,7 +88,7 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
   <li><?php bugfix(70083); ?> (Use after free with assign by ref to overloaded objects).</li>
   <li><?php bugfix(70006); ?> (cli - function with default arg = STDOUT crash output).</li>
   <li><?php bugfix(69521); ?> (Segfault in gc_collect_cycles()).</li>
-  <li>Improved zend_string API</li>
+  <li>Improved zend_string API.</li>
   <li><?php bugfix(69955); ?> (Segfault when trying to combine [] and assign-op on ArrayAccess object).</li>
   <li><?php bugfix(69957); ?> (Different ways of handling div/mod/intdiv).</li>
   <li><?php bugfix(69900); ?> (Too long timeout on pipes).</li>
@@ -193,7 +193,7 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
   <li>Removed $is_dst parameter from mktime() and gmmktime().</li>
   <li>Removed date.timezone warning (https://wiki.php.net/rfc/date.timezone_warning_removal).</li>
   <li>Added "v" DateTime format modifier to get the 3-digit version of fraction of seconds.</li>
-  <li>Implemented FR <?php bugl(69089); ?>: Added DateTime::RFC3339_EXTENDED to output in RFC3339 Extended format which includes fraction of seconds.</li>
+  <li>Implemented FR <?php bugl(69089); ?> (Added DateTime::RFC3339_EXTENDED to output in RFC3339 Extended format which includes fraction of seconds).</li>
 </ul></li>
 <li>DBA:
 <ul>
@@ -225,7 +225,7 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
   <li><?php bugfix(70279); ?> (HTTP Authorization Header is sometimes passed to newer reqeusts).</li>
   <li><?php bugfix(68945); ?> (Unknown admin values segfault pools).</li>
   <li><?php bugfix(65933); ?> (Cannot specify config lines longer than 1024 bytes).</li>
-  <li>Implement request #67106 (Split main fpm config).</li>
+  <li>Implemented FR <?php bugl(67106); ?> (Split main fpm config).</li>
 </ul></li>
 <li>FTP:
 <ul>
@@ -273,7 +273,7 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
 <ul>
   <li><?php bugfix(62010); ?> (json_decode produces invalid byte-sequences).</li>
   <li><?php bugfix(68546); ?> (json_decode() Fatal error: Cannot access property started with '\0').</li>
-  <li>Replace non-free JSON parser with a parser from Jsond extension, fixes #63520 (JSON extension includes a problematic license statement).</li>
+  <li>Replace non-free JSON parser with a parser from Jsond extension, fixes <?php bugl(63520); ?> (JSON extension includes a problematic license statement).</li>
   <li><?php bugfix(68938); ?> (json_decode() decodes empty string without error).</li>
 </ul></li>
 <li>LDAP:
@@ -306,7 +306,7 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
   <li><?php bugfix(70384); ?> (mysqli_real_query():Unknown type 245 sent by the server).</li>
   <li><?php bugfix(70456); ?> (mysqlnd doesn't activate TCP keep-alive when connecting to a server).</li>
   <li><?php bugfix(70572); ?> segfault in mysqlnd_connect.</li>
-  <li>Fixed Bug #69796 (mysqli_stmt::fetch doesn't assign null values to bound variables).</li>
+  <li><?php bugfix(69796); ?> (mysqli_stmt::fetch doesn't assign null values to bound variables).</li>
 </ul></li>
 <li>OCI8:
 <ul>
@@ -323,7 +323,7 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
   <li><?php bugfix(70656); ?> (require() statement broken after opcache_reset() or a few hours of use).</li>
   <li><?php bugfix(70843); ?> (Segmentation fault on MacOSX with opcache.file_cache_only=1).</li>
   <li><?php bugfix(70724); ?> (Undefined Symbols from opcache.so on Mac OS X 10.10).</li>
-  <li>Fixed compatibility with Windows 10 (see also bug #70652).</li>
+  <li>Fixed compatibility with Windows 10 (see also bug <?php bugl(70652); ?>).</li>
   <li>Attmpt to fix "Unable to reattach to base address" problem.</li>
   <li><?php bugfix(70423); ?> (Warning Internal error: wrong size calculation).</li>
   <li><?php bugfix(70237); ?> (Empty while and do-while segmentation fault with opcode on CLI enabled).</li>
@@ -354,7 +354,7 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
 <ul>
   <li><?php bugfix(70386); ?> (Can't compile on NetBSD because of missing WCONTINUED and WIFCONTINUED).</li>
   <li><?php bugfix(60509); ?> (pcntl_signal doesn't decrease ref-count of old handler when setting SIG_DFL).</li>
-  <li>Request #68505 (Added wifcontinued and wcontinued).</li>
+  <li>Implemented FR <?php bugl(68505); ?> (Added wifcontinued and wcontinued).</li>
   <li>Added rusage support to pcntl_wait() and pcntl_waitpid().</li>
 </ul></li>
 <li>PCRE:
@@ -367,7 +367,7 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
 </ul></li>
 <li>PDO:
 <ul>
-  <li>Fix bug #70861 (Segmentation fault in pdo_parse_params() during Drupal 8 test suite).</li>
+  <li><?php bugfix(70861); ?> (Segmentation fault in pdo_parse_params() during Drupal 8 test suite).</li>
   <li><?php bugfix(70389); ?> (PDO constructor changes unrelated variables).</li>
   <li><?php bugfix(70272); ?> (Segfault in pdo_mysql).</li>
   <li><?php bugfix(70221); ?> (persistent sqlite connection + custom function segfaults).</li>
@@ -394,8 +394,8 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
 <li>Phar:
 <ul>
   <li><?php bugfix(69720); ?> (Null pointer dereference in phar_get_fp_offset()).</li>
-  <li>FIxed bug #70433 (Uninitialized pointer in phar_make_dirstream when zip entry filename is "/").</li>
-  <li>Improved fix for bug #69441.</li>
+  <li><?php bugfix(70433); ?> (Uninitialized pointer in phar_make_dirstream when zip entry filename is "/").</li>
+  <li>Improved fix for bug <?php bugl(69441); ?>.</li>
   <li><?php bugfix(70019); ?> (Files extracted from archive may be placed outside of destination directory).</li>
 </ul></li>
 <li>Phpdbg:
@@ -455,7 +455,7 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
   <li><?php bugfix(69970); ?> (Use-after-free vulnerability in spl_recursive_it_move_forward_ex()).</li>
   <li><?php bugfix(69845); ?> (ArrayObject with ARRAY_AS_PROPS broken).</li>
   <li>Changed ArrayIterator implementation using zend_hash_iterator_... API. Allowed modification of iterated ArrayObject using the same behavior as proposed in `Fix "foreach" behavior`. Removed "Array was modified outside object and internal position is no longer valid" hack.</li>
-  <li>Implemented #67886 (SplPriorityQueue/SplHeap doesn't expose extractFlags nor curruption state).</li>
+  <li>Implemented FR <?php bugl(67886); ?> (SplPriorityQueue/SplHeap doesn't expose extractFlags nor curruption state).</li>
   <li><?php bugfix(66405); ?> (RecursiveDirectoryIterator::CURRENT_AS_PATHNAME breaks the RecursiveIterator).</li>
 </ul></li>
 <li>SQLite3:
