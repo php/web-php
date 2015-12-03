@@ -10,6 +10,10 @@ pub   2048R/9C0D5763 2015-06-09 [expires: 2024-06-06]
       Key fingerprint = 1A4E 8B72 77C4 2E53 DBA9  C7B9 BCAA 30EA 9C0D 5763
 uid                  Anatol Belski &lt;ab@php.net&gt;
 
+pub   2048R/33CFC8B3 2014-01-14 [expires: 2020-01-13]
+      Key fingerprint = 6E4F 6AB3 21FD C07F 2C33  2E3A C2BF 0BC4 33CF C8B3
+uid                  Ferenc Kovacs &lt;tyrael@php.net&gt;
+
 GPG
 ,
     "5.6" => <<< GPG
