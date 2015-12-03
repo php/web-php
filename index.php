@@ -100,8 +100,9 @@ $intro .= "<ul>\n";
 foreach (get_active_branches() as $major => $releases) {
     foreach ($releases as $release) {
         $version = $release['version'];
+        list($major, $minor, $_) = explode('.', $version);
         $intro .= "
-            <li><a class='download-link' href='/downloads.php#v$version'>$version</a><span class='dot'>&middot;</span><a class='notes' href='/ChangeLog-$major.php#$version'>Release Notes</a></li>\n";
+            <li><a class='download-link' href='/downloads.php#v$version'>$version</a><span class='dot'>&middot;</span><a class='notes' href='/ChangeLog-$major.php#$version'>Release Notes</a><span class='dot'>&middot;</span><a class='notes' href='/migration$major$minor'>Upgrading</a></li>\n";
     }
 }
 $intro .= <<<EOF
@@ -169,7 +170,6 @@ if (is_array($CONF_TEASER)) {
 
 $SIDEBAR = <<< SIDEBAR_DATA
 
-    <p class='panel'><a href='/migration70' title='Upgrading to PHP 7' class='headline'>Upgrading to PHP 7</a></p>
 $announcements
     <p class='panel'><a href='/cal.php'>User Group Events</a></p>
     <p class='panel'><a href='/thanks.php'>Special Thanks</a></p>
