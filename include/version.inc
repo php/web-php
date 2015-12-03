@@ -16,22 +16,25 @@
  *         ),
  *     ),
  * );
+ */
+
 /* PHP 7.0 Release */
 $PHP_7_0_RC = false; // Current RC version (e.g., '5.6.7RC1') or false
 $PHP_7_0_RC_DATE = '29 Oct 2015';
 
 $PHP_7_0_VERSION         = "7.0.0";
-$PHP_7_0_DATE            = "26 Nov 2015";
+$PHP_7_0_DATE            = "03 Dec 2015";
 $PHP_7_0_MD5     = array(
-                       "tar.bz2"       => "2e1332123a7e19d15ed2af2d1d6bd6fd",
-                       "tar.gz"        => "ae625e0cfcfdacea3e7a70a075e47155",
-                       "tar.xz"        => "96080ad8c5111446f58290cc6f18698c",
+                       "tar.bz2"       => "e53384277331c0613f3b2d7f9151adc1",
+                       "tar.gz"        => "4ac36fc0c028c7f704b8485b9cd636e9",
+                       "tar.xz"        => "394e4d6c517078ca3e23acf633c5ed27",
 );
 $PHP_7_0_SHA256     = array(
-                       "tar.bz2"       => "36f295f11641c1839a5df00e693f685fd134c65e8a1d46e8ee0abae8662b2eb0",
-                       "tar.gz"        => "29baf7ffca644f7f8e86028c40275b9e460342bdf9562d45f8f0498899cb738d",
-                       "tar.xz"        => "c8edf6b05fd8a69ebd88d90c5c0975ee168502204622ad5cfcd550bc222632d9",
+                       "tar.bz2"       => "a92a54306832167a39f7c0ec00524fc6f3f7d985c806caa7632561d0ddedfcea",
+                       "tar.gz"        => "d6ae7b4a2e5c43a9945a97e83b6b3adfb7d0df0b91ef78b647a6dffefaa9c71b",
+                       "tar.xz"        => "7dbdda74c502960febe0544b3e3a7c430389a7a4260e94c73fd8ca26c33b8540",
 );
+
 /* PHP 5.6 Release */
 $PHP_5_6_RC = false; // Current RC version (e.g., '5.6.7RC1') or false
 $PHP_5_6_RC_DATE = '15 Oct 2015';
@@ -66,7 +69,7 @@ $PHP_5_5_SHA256     = array(
 );
 
 $RELEASES = array(
-    /*7 => array(
+    7 => array(
         $PHP_7_0_VERSION => array(
             "announcement" => true,
             "source" => array(
@@ -93,7 +96,7 @@ $RELEASES = array(
                 ),
             ),
         ),
-    ),*/
+    ),
     5 => array(
         $PHP_5_6_VERSION => array(
             "announcement" => true,
