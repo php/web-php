@@ -36,6 +36,7 @@ else {
 
 $_SERVER['BASE_PAGE'] = 'index.php';
 include_once 'include/prepend.inc';
+include_once 'include/branches.inc';
 include_once 'include/pregen-confs.inc';
 include_once 'include/pregen-news.inc';
 include_once 'include/version.inc';
@@ -94,13 +95,14 @@ $intro = <<<EOF
     <div class="download">
       <h3>Download</h3>
 EOF;
-if(!empty($RELEASES[5])) {
-    $intro .= "<ul>\n";
-    foreach ($RELEASES[5] as $version => $release) {
+
+$intro .= "<ul>\n";
+foreach (get_active_branches() as $major => $releases) {
+    foreach ($releases as $release) {
+        $version = $release['version'];
         $intro .= "
-        <li><a class='download-link' href='/downloads.php#v$version'>$version</a><span class='dot'>&middot;</span><a class='notes' href='/ChangeLog-5.php#$version'>Release Notes</a></li>\n";
+            <li><a class='download-link' href='/downloads.php#v$version'>$version</a><span class='dot'>&middot;</span><a class='notes' href='/ChangeLog-5.php#$version'>Release Notes</a></li>\n";
     }
-    $intro .= "</ul>\n";
 }
 $intro .= <<<EOF
     </div>
