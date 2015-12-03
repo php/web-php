@@ -119,6 +119,7 @@ function get_active_branches() {
 				}
 			}
 		}
+		ksort($branches[$major]);
 	}
 
 	ksort($branches);
