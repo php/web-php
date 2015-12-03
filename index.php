@@ -101,7 +101,7 @@ foreach (get_active_branches() as $major => $releases) {
     foreach ($releases as $release) {
         $version = $release['version'];
         $intro .= "
-            <li><a class='download-link' href='/downloads.php#v$version'>$version</a><span class='dot'>&middot;</span><a class='notes' href='/ChangeLog-5.php#$version'>Release Notes</a></li>\n";
+            <li><a class='download-link' href='/downloads.php#v$version'>$version</a><span class='dot'>&middot;</span><a class='notes' href='/ChangeLog-$major.php#$version'>Release Notes</a></li>\n";
     }
 }
 $intro .= <<<EOF
