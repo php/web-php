@@ -491,6 +491,10 @@ $external_redirects = array(
 
 if (isset($uri_aliases[$URI])) {
     $URI = $uri_aliases[$URI];
+    /* If it was a page alias, redirect right away */
+    if (file_exists($_SERVER['DOCUMENT_ROOT'] . "/$URI.php")) {
+        mirror_redirect("/$URI.php");
+    }
 }
 
 // ============================================================================
