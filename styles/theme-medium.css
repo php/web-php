@@ -510,9 +510,4 @@ div.elephpants img:focus {
   color: #fff;
 }
 
-/* very temporary hack until migration70.xml gets rebuilt */
-#migration70\.intro div.warning {
-  display: none;
-}
-
 /* vim: set ts=2 sw=2 et: */
