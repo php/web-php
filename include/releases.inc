@@ -14,24 +14,24 @@ $OLDRELEASES = array (
         array (
           'filename' => 'php-7.0.0.tar.bz2',
           'name' => 'PHP 7.0.0 (tar.bz2)',
-          'md5' => '',
-          'sha256' => '',
+          'md5' => 'e53384277331c0613f3b2d7f9151adc1',
+          'sha256' => 'a92a54306832167a39f7c0ec00524fc6f3f7d985c806caa7632561d0ddedfcea',
           'date' => '03 Dec 2015',
         ),
         1 =>
         array (
           'filename' => 'php-7.0.0.tar.gz',
           'name' => 'PHP 7.0.0 (tar.gz)',
-          'md5' => '',
-          'sha256' => '',
+          'md5' => '4ac36fc0c028c7f704b8485b9cd636e9',
+          'sha256' => 'd6ae7b4a2e5c43a9945a97e83b6b3adfb7d0df0b91ef78b647a6dffefaa9c71b',
           'date' => '03 Dec 2015',
         ),
         2 =>
         array (
           'filename' => 'php-7.0.0.tar.xz',
           'name' => 'PHP 7.0.0 (tar.xz)',
-          'md5' => '',
-          'sha256' => '',
+          'md5' => '394e4d6c517078ca3e23acf633c5ed27',
+          'sha256' => '7dbdda74c502960febe0544b3e3a7c430389a7a4260e94c73fd8ca26c33b8540',
           'date' => '03 Dec 2015',
         ),
       ),
