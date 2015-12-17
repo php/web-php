@@ -1,5 +1,44 @@
 <?php
 $OLDRELEASES = array (
+  7 =>
+  array (
+    '7.0.0' =>
+    array (
+      'announcement' =>
+      array (
+        'English' => '/releases/7_0_0.php',
+      ),
+      'source' =>
+      array (
+        0 =>
+        array (
+          'filename' => 'php-7.0.0.tar.bz2',
+          'name' => 'PHP 7.0.0 (tar.bz2)',
+          'md5' => '',
+          'sha256' => '',
+          'date' => '03 Dec 2015',
+        ),
+        1 =>
+        array (
+          'filename' => 'php-7.0.0.tar.gz',
+          'name' => 'PHP 7.0.0 (tar.gz)',
+          'md5' => '',
+          'sha256' => '',
+          'date' => '03 Dec 2015',
+        ),
+        2 =>
+        array (
+          'filename' => 'php-7.0.0.tar.xz',
+          'name' => 'PHP 7.0.0 (tar.xz)',
+          'md5' => '',
+          'sha256' => '',
+          'date' => '03 Dec 2015',
+        ),
+      ),
+      'date' => '03 Dec 2015',
+      'museum' => false,
+    ),
+  ),
   5 => 
   array (
     '5.6.15' => 

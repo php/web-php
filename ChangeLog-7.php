@@ -7,6 +7,89 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
 
 <h1>PHP 7 ChangeLog</h1>
 
+<section class="version" id="7.0.1"><!-- {{{ 7.0.1 -->
+<h3>Version 7.0.1</h3>
+<b><?php release_date('17-Dec-2015'); ?></b>
+<ul><li>Core:
+<ul>
+  <li><?php bugfix(71105); ?> (Format String Vulnerability in Class Name Error Message).</li>
+  <li><?php bugfix(70831); ?> (Compile fails on system with 160 CPUs).</li>
+  <li><?php bugfix(71006); ?> (symbol referencing errors on Sparc/Solaris).</li>
+  <li><?php bugfix(70997); ?> (When using parentClass:: instead of parent::, static context changed).</li>
+  <li><?php bugfix(70970); ?> (Segfault when combining error handler with output buffering).</li>
+  <li><?php bugfix(70967); ?> (Weird error handling for __toString when Error is thrown).</li>
+  <li><?php bugfix(70958); ?> (Invalid opcode while using ::class as trait method paramater default value).</li>
+  <li><?php bugfix(70944); ?> (try{ } finally{} can create infinite chains of exceptions).</li>
+  <li><?php bugfix(70931); ?> (Two errors messages are in conflict).</li>
+  <li><?php bugfix(70904); ?> (yield from incorrectly marks valid generator as finished).</li>
+  <li><?php bugfix(70899); ?> (buildconf failure in extensions).</li>
+  <li><?php bugfix(61751); ?> (SAPI build problem on AIX: Undefined symbol: php_register_internal_extensions).</li>
+  <li>Fixed \int (or generally every scalar type name with leading backslash) to not be accepted as type name.</li>
+  <li>Fixed exception not being thrown immediately into a generator yielding from an array.</li>
+  <li><?php bugfix(70987); ?> (static::class within Closure::call() causes segfault).</li>
+  <li><?php bugfix(71013); ?> (Incorrect exception handler with yield from).</li>
+  <li>Fixed double free in error condition of format printer.</li>
+</ul></li>
+<li>CLI server:
+<ul>
+  <li><?php bugfix(71005); ?> (Segfault in php_cli_server_dispatch_router()).</li>
+</ul></li>
+<li>Intl:
+<ul>
+  <li><?php bugfix(71020); ?> (Use after free in Collator::sortWithSortKeys).</li>
+</ul></li>
+<li>Mysqlnd:
+<ul>
+  <li><?php bugfix(68077); ?> (LOAD DATA LOCAL INFILE / open_basedir restriction).</li>
+  <li><?php bugfix(68344); ?> (MySQLi does not provide way to disable peer certificate validation) by introducing MYSQLI_CLIENT_SSL_DONT_VERIFY_SERVER_CERT connection flag.</li>
+</ul></li>
+<li>OCI8:
+<ul>
+  <li>Fixed LOB implementation size_t/zend_long mismatch reported by gcov.</li>
+</ul></li>
+<li>Opcache:
+<ul>
+  <li>Fixed #71024 (Unable to use PHP 7.0 x64 side-by-side with PHP 5.6 x32 on the same server).</li>
+  <li><?php bugfix(70991); ?> (zend_file_cache.c:710: error: array type has incomplete element type).</li>
+  <li><?php bugfix(70977); ?> (Segmentation fault with opcache.huge_code_pages=1).</li>
+</ul></li>
+<li>Phpdbg:
+<ul>
+  <li>Fixed stderr being written to stdout.</li>
+</ul></li>
+<li>Reflection:
+<ul>
+  <li><?php bugfix(71018); ?> (ReflectionProperty::setValue() behavior changed).</li>
+  <li><?php bugfix(70982); ?> (setStaticPropertyValue behaviors inconsistently with 5.6).</li>
+</ul></li>
+<li>SPL:
+<ul>
+  <li><?php bugfix(71028); ?> (Undefined index with ArrayIterator).</li>
+</ul></li>
+<li>SQLite3:
+<ul>
+  <li><?php bugfix(71049); ?> (SQLite3Stmt::execute() releases bound parameter instead of internal buffer).</li>
+</ul></li>
+<li>Standard:
+<ul>
+  <li><?php bugfix(70999); ?> (php_random_bytes: called object is not a function).</li>
+  <li><?php bugfix(70960); ?> (ReflectionFunction for array_unique returns wrong number of parameters).</li>
+</ul></li>
+<li>Streams/Socket:
+<ul>
+  <li>Add IPV6_V6ONLY constant / make it usable in stream contexts.</li>
+</ul></li>
+<li>Soap:
+<ul>
+  <li><?php bugfix(70993); ?> (Array key references break argument processing).</li>
+</ul></li>
+<li>PDO_Firebird:
+<ul>
+  <li><?php bugfix(60052); ?> (Integer returned as a 64bit integer on X64_86).</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
 <section class="version" id="7.0.0"><!-- {{{ 7.0.0 -->
 <h3>Version 7.0.0</h3>
 <b><?php release_date('03-Dec-2015'); ?></b>
