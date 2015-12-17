@@ -49,7 +49,7 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
 </ul></li>
 <li>Opcache:
 <ul>
-  <li>Fixed #71024 (Unable to use PHP 7.0 x64 side-by-side with PHP 5.6 x32 on the same server).</li>
+  <li><?php bugfix(71024); ?> (Unable to use PHP 7.0 x64 side-by-side with PHP 5.6 x32 on the same server).</li>
   <li><?php bugfix(70991); ?> (zend_file_cache.c:710: error: array type has incomplete element type).</li>
   <li><?php bugfix(70977); ?> (Segmentation fault with opcache.huge_code_pages=1).</li>
 </ul></li>
