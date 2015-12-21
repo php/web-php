@@ -447,6 +447,7 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
   <li><?php bugfix(70232); ?> (Incorrect bump-along behavior with \K and empty string match).</li>
   <li><?php bugfix(53823); ?> (preg_replace: * qualifier on unicode replace garbles the string).</li>
   <li><?php bugfix(69864); ?> (Segfault in preg_replace_callback).</li>
+  <li>Removed support for the /e (PREG_REPLACE_EVAL) modifier.</li>
 </ul></li>
 <li>PDO:
 <ul>
@@ -454,7 +455,6 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
   <li><?php bugfix(70389); ?> (PDO constructor changes unrelated variables).</li>
   <li><?php bugfix(70272); ?> (Segfault in pdo_mysql).</li>
   <li><?php bugfix(70221); ?> (persistent sqlite connection + custom function segfaults).</li>
-  <li>Removed support for the /e (PREG_REPLACE_EVAL) modifier.</li>
   <li><?php bugfix(59450); ?> (./configure fails with "Cannot find php_pdo_driver.h").</li>
 </ul></li>
 <li>PDO_DBlib:
