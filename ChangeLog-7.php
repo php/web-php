@@ -36,7 +36,7 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
 </ul></li>
 <li>Intl:
 <ul>
-  <li><?php bugfix(71020); ?> (Use after free in Collator::sortWithSortKeys).</li>
+  <li><?php bugfix(71020); ?> (Use after free in Collator::sortWithSortKeys). (CVE-2015-8616)</li>
 </ul></li>
 <li>Mysqlnd:
 <ul>
