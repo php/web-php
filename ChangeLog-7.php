@@ -53,6 +53,10 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
   <li><?php bugfix(70991); ?> (zend_file_cache.c:710: error: array type has incomplete element type).</li>
   <li><?php bugfix(70977); ?> (Segmentation fault with opcache.huge_code_pages=1).</li>
 </ul></li>
+<li>PDO_Firebird:
+<ul>
+  <li><?php bugfix(60052); ?> (Integer returned as a 64bit integer on X64_86).</li>
+</ul></li>
 <li>Phpdbg:
 <ul>
   <li>Fixed stderr being written to stdout.</li>
@@ -61,6 +65,10 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
 <ul>
   <li><?php bugfix(71018); ?> (ReflectionProperty::setValue() behavior changed).</li>
   <li><?php bugfix(70982); ?> (setStaticPropertyValue behaviors inconsistently with 5.6).</li>
+</ul></li>
+<li>Soap:
+<ul>
+  <li><?php bugfix(70993); ?> (Array key references break argument processing).</li>
 </ul></li>
 <li>SPL:
 <ul>
@@ -78,14 +86,6 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
 <li>Streams/Socket:
 <ul>
   <li>Add IPV6_V6ONLY constant / make it usable in stream contexts.</li>
-</ul></li>
-<li>Soap:
-<ul>
-  <li><?php bugfix(70993); ?> (Array key references break argument processing).</li>
-</ul></li>
-<li>PDO_Firebird:
-<ul>
-  <li><?php bugfix(60052); ?> (Integer returned as a 64bit integer on X64_86).</li>
 </ul></li>
 </ul>
 <!-- }}} --></section>
