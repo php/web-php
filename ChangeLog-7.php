@@ -12,7 +12,7 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
 <b><?php release_date('17-Dec-2015'); ?></b>
 <ul><li>Core:
 <ul>
-  <li><?php bugfix(71105); ?> (Format String Vulnerability in Class Name Error Message).</li>
+  <li><?php bugfix(71105); ?> (Format String Vulnerability in Class Name Error Message). (CVE-2015-8617)</li>
   <li><?php bugfix(70831); ?> (Compile fails on system with 160 CPUs).</li>
   <li><?php bugfix(71006); ?> (symbol referencing errors on Sparc/Solaris).</li>
   <li><?php bugfix(70997); ?> (When using parentClass:: instead of parent::, static context changed).</li>
