@@ -1,16 +1,16 @@
 <?php
 $OLDRELEASES = array (
-  7 =>
+  7 => 
   array (
-    '7.0.1' =>
+    '7.0.1' => 
     array (
-      'announcement' =>
+      'announcement' => 
       array (
         'English' => '/releases/7_0_1.php',
       ),
-      'source' =>
+      'source' => 
       array (
-        0 =>
+        0 => 
         array (
           'filename' => 'php-7.0.1.tar.bz2',
           'name' => 'PHP 7.0.1 (tar.bz2)',
@@ -18,7 +18,7 @@ $OLDRELEASES = array (
           'sha256' => '04ce3bd1da001397b342c2219a5093be9ecbbc97f022e1e6a0ec2fedc3d93e42',
           'date' => '17 Dec 2015',
         ),
-        1 =>
+        1 => 
         array (
           'filename' => 'php-7.0.1.tar.gz',
           'name' => 'PHP 7.0.1 (tar.gz)',
@@ -26,7 +26,7 @@ $OLDRELEASES = array (
           'sha256' => 'd12aaba2bead056322aa53bd5fbe762b27a42d37f451cd42ff2e7a549ca21dbf',
           'date' => '17 Dec 2015',
         ),
-        2 =>
+        2 => 
         array (
           'filename' => 'php-7.0.1.tar.xz',
           'name' => 'PHP 7.0.1 (tar.xz)',
@@ -38,15 +38,15 @@ $OLDRELEASES = array (
       'date' => '17 Dec 2015',
       'museum' => false,
     ),
-    '7.0.0' =>
+    '7.0.0' => 
     array (
-      'announcement' =>
+      'announcement' => 
       array (
         'English' => '/releases/7_0_0.php',
       ),
-      'source' =>
+      'source' => 
       array (
-        0 =>
+        0 => 
         array (
           'filename' => 'php-7.0.0.tar.bz2',
           'name' => 'PHP 7.0.0 (tar.bz2)',
@@ -54,7 +54,7 @@ $OLDRELEASES = array (
           'sha256' => 'a92a54306832167a39f7c0ec00524fc6f3f7d985c806caa7632561d0ddedfcea',
           'date' => '03 Dec 2015',
         ),
-        1 =>
+        1 => 
         array (
           'filename' => 'php-7.0.0.tar.gz',
           'name' => 'PHP 7.0.0 (tar.gz)',
@@ -62,7 +62,7 @@ $OLDRELEASES = array (
           'sha256' => 'd6ae7b4a2e5c43a9945a97e83b6b3adfb7d0df0b91ef78b647a6dffefaa9c71b',
           'date' => '03 Dec 2015',
         ),
-        2 =>
+        2 => 
         array (
           'filename' => 'php-7.0.0.tar.xz',
           'name' => 'PHP 7.0.0 (tar.xz)',
@@ -77,7 +77,43 @@ $OLDRELEASES = array (
   ),
   5 => 
   array (
-   '5.5.30' => 
+    '5.6.16' => 
+    array (
+      'announcement' => 
+      array (
+        'English' => '/releases/5_6_16.php',
+      ),
+      'source' => 
+      array (
+        0 => 
+        array (
+          'filename' => 'php-5.6.16.tar.bz2',
+          'name' => 'PHP 5.6.16 (tar.bz2)',
+          'md5' => '765b164b89af1f03ae2fdf39a4e4e1df',
+          'sha256' => '4fe6f40964c1bfaba05fc144ba20a2cdad33e11685f4f101ea5a48b98bbcd2ae',
+          'date' => '26 Nov 2015',
+        ),
+        1 => 
+        array (
+          'filename' => 'php-5.6.16.tar.gz',
+          'name' => 'PHP 5.6.16 (tar.gz)',
+          'md5' => 'dc3c848000a80b805c1393abe39341fa',
+          'sha256' => 'b6618df6b11a275fa28596f1775727679f8492e100f3bd488d8a8bfbfc19349f',
+          'date' => '26 Nov 2015',
+        ),
+        2 => 
+        array (
+          'filename' => 'php-5.6.16.tar.xz',
+          'name' => 'PHP 5.6.16 (tar.xz)',
+          'md5' => '3f1d999ed1f9cb5713c9a0161c557f2f',
+          'sha256' => '8ef43271d9bd8cc8f8d407d3ba569de9fa14a28985ae97c76085bb50d597de98',
+          'date' => '26 Nov 2015',
+        ),
+      ),
+      'date' => '26 Nov 2015',
+      'museum' => false,
+    ),
+    '5.5.30' => 
     array (
       'announcement' => 
       array (
