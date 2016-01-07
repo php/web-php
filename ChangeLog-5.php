@@ -7,6 +7,28 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 ?>
 
 <h1>PHP 5 ChangeLog</h1>
+<section class="version" id="5.5.31"><!-- {{{ 5.5.31 -->
+<h3>Version 5.5.31</h3>
+<b><?php release_date('07-Jan-2015'); ?></b>
+<ul><li>FPM:
+<ul>
+  <li><?php bugfix(70755); ?> (fpm_log.c memory leak and buffer overflow).</li>
+</ul></li>
+<li>GD:
+<ul>
+  <li><?php bugfix(70976); ?> (Memory Read via gdImageRotateInterpolated Array Index Out of Bounds).</li>
+</ul></li>
+<li>WDDX:
+<ul>
+  <li><?php bugfix(70661); ?> (Use After Free Vulnerability in WDDX Packet Deserialization).</li>
+  <li><?php bugfix(70741); ?> (Session WDDX Packet Deserialization Type Confusion Vulnerability).</li>
+</ul></li>
+<li>XMLRPC:
+<ul>
+  <li><?php bugfix(70728); ?> (Type Confusion Vulnerability in PHP_to_XMLRPC_worker()).</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
 
 <section class="version" id="5.6.16"><!-- {{{ 5.6.16 -->
 <h3>Version 5.6.16</h3>

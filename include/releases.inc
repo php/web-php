@@ -77,6 +77,42 @@ $OLDRELEASES = array (
   ),
   5 => 
   array (
+   '5.5.30' => 
+    array (
+      'announcement' => 
+      array (
+        'English' => '/releases/5_5_30.php',
+      ),
+      'source' => 
+      array (
+        0 => 
+        array (
+          'filename' => 'php-5.5.30.tar.bz2',
+          'name' => 'PHP 5.5.30 (tar.bz2)',
+          'md5' => '181d153c9fba7ff46534df1bdab4d853',
+          'sha256' => 'e7332a713cecdd1cb44a1b1336739885c9789f633f0f51236b25e48ab03c3b29',
+          'date' => '01 Oct 2015',
+        ),
+        1 => 
+        array (
+          'filename' => 'php-5.5.30.tar.gz',
+          'name' => 'PHP 5.5.30 (tar.gz)',
+          'md5' => '42ce02c3dd2f477bfe210a4c1ef95f4e',
+          'sha256' => '8ad57f4317391354e66c83d26752f67515b2e923277eb97b2b420dfeff3c1007',
+          'date' => '01 Oct 2015',
+        ),
+        2 => 
+        array (
+          'filename' => 'php-5.5.30.tar.xz',
+          'name' => 'PHP 5.5.30 (tar.xz)',
+          'md5' => 'ef6d848756ea9d19b7a7e1a9d824d7c1',
+          'sha256' => 'd00dc06fa5e0f3de048fb0cf940b3cc59b43b3f8cad825d4fffb35503cf2e8f2',
+          'date' => '01 Oct 2015',
+        ),
+      ),
+      'date' => '01 Oct 2015',
+      'museum' => false,
+    ),
     '5.6.15' => 
     array (
       'announcement' => 
