@@ -7,6 +7,91 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
 
 <h1>PHP 7 ChangeLog</h1>
 
+<section class="version" id="7.0.2"><!-- {{{ 7.0.2 -->
+<h3>Version 7.0.2</h3>
+<b><?php release_date('07-Jan-2016'); ?></b>
+<ul><li>Core:
+<ul>
+  <li><?php bugfix(71165); ?> (-DGC_BENCH=1 doesn't work on PHP7).</li>
+  <li><?php bugfix(71163); ?> (Segmentation Fault: cleanup_unfinished_calls).</li>
+  <li><?php bugfix(71109); ?> (ZEND_MOD_CONFLICTS("xdebug") doesn't work).</li>
+  <li><?php bugfix(71092); ?> (Segmentation fault with return type hinting).</li>
+  <li>Fixed bug memleak in header_register_callback.</li>
+  <li><?php bugfix(71067); ?> (Local object in class method stays in memory for each call).</li>
+  <li><?php bugfix(66909); ?> (configure fails utf8_to_mutf7 test).</li>
+  <li><?php bugfix(70781); ?> (Extension tests fail on dynamic ext dependency).</li>
+  <li><?php bugfix(71089); ?> (No check to duplicate zend_extension).</li>
+  <li><?php bugfix(71086); ?> (Invalid numeric literal parse error within highlight_string() function).</li>
+  <li><?php bugfix(71154); ?> (Incorrect HT iterator invalidation causes iterator reuse).</li>
+  <li><?php bugfix(52355); ?> (Negating zero does not produce negative zero).</li>
+  <li><?php bugfix(66179); ?> (var_export() exports float as integer).</li>
+  <li><?php bugfix(70804); ?> (Unary add on negative zero produces positive zero).</li>
+</ul></li>
+<li>CURL:
+<ul>
+  <li><?php bugfix(71144); ?> (Sementation fault when using cURL with ZTS).</li>
+</ul></li>
+<li>DBA:
+<ul>
+  <li>Fixed key leak with invalid resource.</li>
+</ul></li>
+<li>Filter:
+<ul>
+  <li><?php bugfix(71063); ?> (filter_input(INPUT_ENV, ..) does not work).</li>
+</ul></li>
+<li>FTP:
+<ul>
+  <li>Implemented FR <?php bugl(55651); ?> (Option to ignore the returned FTP PASV address).</li>
+</ul></li>
+<li>FPM:
+<ul>
+  <li><?php bugfix(70755); ?> (fpm_log.c memory leak and buffer overflow).</li>
+</ul></li>
+<li>GD:
+<ul>
+  <li><?php bugfix(70976); ?> (Memory Read via gdImageRotateInterpolated Array Index Out of Bounds).</li>
+</ul></li>
+<li>Mbstring:
+<ul>
+  <li><?php bugfix(71066); ?> (mb_send_mail: Program terminated with signal SIGSEGV, Segmentation fault).</li>
+</ul></li>
+<li>Opcache:
+<ul>
+  <li><?php bugfix(71127); ?> (Define in auto_prepend_file is overwrite).</li>
+</ul></li>
+<li>PCRE:
+<ul>
+  <li><?php bugfix(71178); ?> (preg_replace with arrays creates [0] in replace array if not already set).</li>
+</ul></li>
+<li>Readline:
+<ul>
+  <li><?php bugfix(71094); ?> (readline_completion_function corrupts static array on second TAB).</li>
+</ul></li>
+<li>Session:
+<ul>
+  <li><?php bugfix(71122); ?> (Session GC may not remove obsolete session data).</li>
+</ul></li>
+<li>SPL:
+<ul>
+  <li><?php bugfix(71077); ?> (ReflectionMethod for ArrayObject constructor returns wrong number of parameters).</li>
+  <li><?php bugfix(71153); ?> (Performance Degradation in ArrayIterator with large arrays).</li>
+</ul></li>
+<li>Standard:
+<ul>
+  <li><?php bugfix(71270); ?> (Heap BufferOver Flow in escapeshell functions).</li>
+</ul></li>
+<li>WDDX:
+<ul>
+  <li><?php bugfix(70661); ?> (Use After Free Vulnerability in WDDX Packet Deserialization).</li>
+  <li><?php bugfix(70741); ?> (Session WDDX Packet Deserialization Type Confusion Vulnerability).</li>
+</ul></li>
+<li>XMLRPC:
+<ul>
+  <li><?php bugfix(70728); ?> (Type Confusion Vulnerability in PHP_to_XMLRPC_worker).</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
 <section class="version" id="7.0.1"><!-- {{{ 7.0.1 -->
 <h3>Version 7.0.1</h3>
 <b><?php release_date('17-Dec-2015'); ?></b>
