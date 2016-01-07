@@ -24,7 +24,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 </ul></li>
 <li>GD:
 <ul>
-  <li><?php bugfix(70976); ?> (Memory Read via gdImageRotateInterpolated Array Index Out of Bounds). (emmanuel dot law at gmail dot com).</li>
+  <li><?php bugfix(70976); ?> (Memory Read via gdImageRotateInterpolated Array Index Out of Bounds).</li>
 </ul></li>
 <li>Mysqlnd:
 <ul>
