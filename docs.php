@@ -82,7 +82,7 @@ foreach ($ACTIVE_ONLINE_LANGUAGES as $langcode => $langname) {
   you should read the <a href="http://doc.php.net/tutorial/">Documentation HOWTO</a>.
  </li>
  <li>
-  <a href="http://gtk.php.net/docs.php">PHP-GTK related documentation</a>
+  <a href="http://gtk.php.net/">PHP-GTK related documentation</a>
   is hosted on the PHP-GTK website.
  </li>
  <li>
