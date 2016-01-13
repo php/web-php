@@ -5,6 +5,13 @@ include_once $_SERVER['DOCUMENT_ROOT'] . '/include/prepend.inc';
 include_once $_SERVER['DOCUMENT_ROOT'] . '/include/branches.inc';
 
 site_header('Supported Versions', array('css' => array('supported-versions.css')));
+
+// Version notes: if you need to make a note about a version having an unusual
+// support lifetime, add it under a heading with an anchor, and add the anchor
+// and branch names to the array below ('x.y' => '#anchor-name').
+$VERSION_NOTES = array(
+	'5.6' => '#php-5.6',
+);
 ?>
 
 <h1>Supported Versions</h1>
@@ -51,9 +58,10 @@ site_header('Supported Versions', array('css' => array('supported-versions.css')
 				?>
 				<tr class="<?php echo $state ?>">
 					<td>
-						<a href="/downloads.php#v<?php echo htmlspecialchars($release['version']) ?>">
-							<?php echo htmlspecialchars($branch) ?>
-						</a>
+						<a href="/downloads.php#v<?php echo htmlspecialchars($release['version']) ?>"><?php echo htmlspecialchars($branch) ?></a>
+						<?php if (isset($VERSION_NOTES[$branch])): ?>
+							<a class="version-notes" href="<?php echo htmlspecialchars($VERSION_NOTES[$branch]) ?>">*</a>
+						<?php endif ?>
 					</td>
 					<td><?php echo htmlspecialchars($initial->format('j M Y')) ?></td>
 					<td class="collapse-phone"><em><?php echo htmlspecialchars(format_interval($initial, null)) ?></em></td>
@@ -107,5 +115,15 @@ include $_SERVER['DOCUMENT_ROOT'] . '/images/supported-versions.php';
 		</td>
 	</tr>
 </table>
+
+<h4>Version specific notes</h4>
+
+<h5 id="php-5.6">PHP 5.6</h5>
+
+<p>
+	As it is the final PHP 5 release, support for PHP 5.6 has been extended:
+	active support will run for an additional four months, and the security fix
+	period has been doubled from one to two years. Other releases are unaffected.
+</p>
 
 <?php site_footer(); ?>

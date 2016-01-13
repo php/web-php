@@ -31,3 +31,7 @@ svg {
 	max-width: 100%;
 	height: auto;
 }
+
+.version-notes {
+  border: 0;
+}
