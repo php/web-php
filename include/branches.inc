@@ -22,6 +22,10 @@ $BRANCHES = array(
 		'stable'   => '2015-07-10',
 		'security' => '2016-07-10',
 	),
+	'5.6' => array(
+		'stable'   => '2016-12-31',
+		'security' => '2018-12-31',
+	),
 );
 
 function format_interval($from, $to) {
