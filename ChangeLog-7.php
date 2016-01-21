@@ -78,7 +78,7 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
 </ul></li>
 <li>Standard:
 <ul>
-  <li><?php bugfix(71270); ?> (Heap BufferOver Flow in escapeshell functions).</li>
+  <li><?php bugfix(71270); ?> (Heap BufferOver Flow in escapeshell functions). (CVE-2016-1904)</li>
 </ul></li>
 <li>WDDX:
 <ul>
