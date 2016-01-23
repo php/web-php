@@ -56,7 +56,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 
 <section class="version" id="5.5.31"><!-- {{{ 5.5.31 -->
 <h3>Version 5.5.31</h3>
-<b><?php release_date('07-Jan-2015'); ?></b>
+<b><?php release_date('07-Jan-2016'); ?></b>
 <ul><li>FPM:
 <ul>
   <li><?php bugfix(70755); ?> (fpm_log.c memory leak and buffer overflow).</li>
