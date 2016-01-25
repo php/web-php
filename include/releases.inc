@@ -1,7 +1,190 @@
 <?php
 $OLDRELEASES = array (
+  7 => 
+  array (
+    '7.0.1' => 
+    array (
+      'announcement' => 
+      array (
+        'English' => '/releases/7_0_1.php',
+      ),
+      'source' => 
+      array (
+        0 => 
+        array (
+          'filename' => 'php-7.0.1.tar.bz2',
+          'name' => 'PHP 7.0.1 (tar.bz2)',
+          'md5' => 'c999d29cb8861aa71574a11e8c635691',
+          'sha256' => '04ce3bd1da001397b342c2219a5093be9ecbbc97f022e1e6a0ec2fedc3d93e42',
+          'date' => '17 Dec 2015',
+        ),
+        1 => 
+        array (
+          'filename' => 'php-7.0.1.tar.gz',
+          'name' => 'PHP 7.0.1 (tar.gz)',
+          'md5' => '2da2981724d5c99ab7dc6e2164c8e756',
+          'sha256' => 'd12aaba2bead056322aa53bd5fbe762b27a42d37f451cd42ff2e7a549ca21dbf',
+          'date' => '17 Dec 2015',
+        ),
+        2 => 
+        array (
+          'filename' => 'php-7.0.1.tar.xz',
+          'name' => 'PHP 7.0.1 (tar.xz)',
+          'md5' => '23aba67d57d53145becacb982ed498d5',
+          'sha256' => '84fcb8b9c61f70db802d3b6636c6ba602470a375e593375c0c744483aa0c0357',
+          'date' => '17 Dec 2015',
+        ),
+      ),
+      'date' => '17 Dec 2015',
+      'museum' => false,
+    ),
+    '7.0.0' => 
+    array (
+      'announcement' => 
+      array (
+        'English' => '/releases/7_0_0.php',
+      ),
+      'source' => 
+      array (
+        0 => 
+        array (
+          'filename' => 'php-7.0.0.tar.bz2',
+          'name' => 'PHP 7.0.0 (tar.bz2)',
+          'md5' => 'e53384277331c0613f3b2d7f9151adc1',
+          'sha256' => 'a92a54306832167a39f7c0ec00524fc6f3f7d985c806caa7632561d0ddedfcea',
+          'date' => '03 Dec 2015',
+        ),
+        1 => 
+        array (
+          'filename' => 'php-7.0.0.tar.gz',
+          'name' => 'PHP 7.0.0 (tar.gz)',
+          'md5' => '4ac36fc0c028c7f704b8485b9cd636e9',
+          'sha256' => 'd6ae7b4a2e5c43a9945a97e83b6b3adfb7d0df0b91ef78b647a6dffefaa9c71b',
+          'date' => '03 Dec 2015',
+        ),
+        2 => 
+        array (
+          'filename' => 'php-7.0.0.tar.xz',
+          'name' => 'PHP 7.0.0 (tar.xz)',
+          'md5' => '394e4d6c517078ca3e23acf633c5ed27',
+          'sha256' => '7dbdda74c502960febe0544b3e3a7c430389a7a4260e94c73fd8ca26c33b8540',
+          'date' => '03 Dec 2015',
+        ),
+      ),
+      'date' => '03 Dec 2015',
+      'museum' => false,
+    ),
+  ),
   5 => 
   array (
+    '5.6.16' => 
+    array (
+      'announcement' => 
+      array (
+        'English' => '/releases/5_6_16.php',
+      ),
+      'source' => 
+      array (
+        0 => 
+        array (
+          'filename' => 'php-5.6.16.tar.bz2',
+          'name' => 'PHP 5.6.16 (tar.bz2)',
+          'md5' => '765b164b89af1f03ae2fdf39a4e4e1df',
+          'sha256' => '4fe6f40964c1bfaba05fc144ba20a2cdad33e11685f4f101ea5a48b98bbcd2ae',
+          'date' => '26 Nov 2015',
+        ),
+        1 => 
+        array (
+          'filename' => 'php-5.6.16.tar.gz',
+          'name' => 'PHP 5.6.16 (tar.gz)',
+          'md5' => 'dc3c848000a80b805c1393abe39341fa',
+          'sha256' => 'b6618df6b11a275fa28596f1775727679f8492e100f3bd488d8a8bfbfc19349f',
+          'date' => '26 Nov 2015',
+        ),
+        2 => 
+        array (
+          'filename' => 'php-5.6.16.tar.xz',
+          'name' => 'PHP 5.6.16 (tar.xz)',
+          'md5' => '3f1d999ed1f9cb5713c9a0161c557f2f',
+          'sha256' => '8ef43271d9bd8cc8f8d407d3ba569de9fa14a28985ae97c76085bb50d597de98',
+          'date' => '26 Nov 2015',
+        ),
+      ),
+      'date' => '26 Nov 2015',
+      'museum' => false,
+    ),
+    '5.5.30' => 
+    array (
+      'announcement' => 
+      array (
+        'English' => '/releases/5_5_30.php',
+      ),
+      'source' => 
+      array (
+        0 => 
+        array (
+          'filename' => 'php-5.5.30.tar.bz2',
+          'name' => 'PHP 5.5.30 (tar.bz2)',
+          'md5' => '181d153c9fba7ff46534df1bdab4d853',
+          'sha256' => 'e7332a713cecdd1cb44a1b1336739885c9789f633f0f51236b25e48ab03c3b29',
+          'date' => '01 Oct 2015',
+        ),
+        1 => 
+        array (
+          'filename' => 'php-5.5.30.tar.gz',
+          'name' => 'PHP 5.5.30 (tar.gz)',
+          'md5' => '42ce02c3dd2f477bfe210a4c1ef95f4e',
+          'sha256' => '8ad57f4317391354e66c83d26752f67515b2e923277eb97b2b420dfeff3c1007',
+          'date' => '01 Oct 2015',
+        ),
+        2 => 
+        array (
+          'filename' => 'php-5.5.30.tar.xz',
+          'name' => 'PHP 5.5.30 (tar.xz)',
+          'md5' => 'ef6d848756ea9d19b7a7e1a9d824d7c1',
+          'sha256' => 'd00dc06fa5e0f3de048fb0cf940b3cc59b43b3f8cad825d4fffb35503cf2e8f2',
+          'date' => '01 Oct 2015',
+        ),
+      ),
+      'date' => '01 Oct 2015',
+      'museum' => false,
+    ),
+    '5.6.15' => 
+    array (
+      'announcement' => 
+      array (
+        'English' => '/releases/5_6_15.php',
+      ),
+      'source' => 
+      array (
+        0 => 
+        array (
+          'filename' => 'php-5.6.15.tar.bz2',
+          'name' => 'PHP 5.6.15 (tar.bz2)',
+          'md5' => 'bdfa8fb1b895a25e1cc05c162f9ae5fc',
+          'sha256' => '11a0645c4d4b749e256da1e0d6df89dd886b5b06b83c914d942653661dbd1c38',
+          'date' => '29 Oct 2015',
+        ),
+        1 => 
+        array (
+          'filename' => 'php-5.6.15.tar.gz',
+          'name' => 'PHP 5.6.15 (tar.gz)',
+          'md5' => '4ec2fe201e24c6f65bf7bd4bac1bc880',
+          'sha256' => 'bb2d4c226a4897b7c3659c2538a87aef7ec104f58f5ae930a263dd77fb8ebc40',
+          'date' => '29 Oct 2015',
+        ),
+        2 => 
+        array (
+          'filename' => 'php-5.6.15.tar.xz',
+          'name' => 'PHP 5.6.15 (tar.xz)',
+          'md5' => 'c726a86238017c2d9db0171b14d300e7',
+          'sha256' => 'cf52e2e621e60997269663fa4bc06253191fa2a41dc9b08c8c911435b3ebcca9',
+          'date' => '29 Oct 2015',
+        ),
+      ),
+      'date' => '29 Oct 2015',
+      'museum' => false,
+    ),
     '5.6.14' => 
     array (
       'announcement' => 

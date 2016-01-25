@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom" xmlns:default="http://php.net/ns/news">
+  <title>php[tek] 2016 Call for Speakers</title>
+  <id>http://php.net/archive/2015.php#id2015-12-16-1</id>
+  <published>2015-12-16T13:33:38+00:00</published>
+  <updated>2015-12-16T13:33:38+00:00</updated>
+  <default:finalTeaserDate xmlns="http://php.net/ns/news">2016-01-16</default:finalTeaserDate>
+  <category term="cfp" label="Call for Papers"/>
+  <link href="http://php.net/conferences/index.php#id2015-12-16-1" rel="alternate" type="text/html"/>
+  <default:newsImage xmlns="http://php.net/ns/news" link="https://tek.phparch.com/" title="php[tek] 2016">phptek2016.png</default:newsImage>
+  <link href="https://tek.phparch.com/" rel="via" type="text/html"/>
+  <content type="xhtml">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+     <p>The team at <a href="https://www.phparch.com/">php[architect]</a> is excited to annouce that the <a href="https://tek.phparch.com/call-for-speakers/">Call for Speakers</a> is open for <a href="https://tek.phparch.com/">php[tek] 2016</a>.</p>
+     
+     <p>This 11th annual conference that is focused on community is this year moving to a <a href="https://tek.phparch.com/location-hotel/">bigger venue in Saint Louis</a> so that we can expand and give our attendees some elbow room!  We have a number of other updates that will be announced in the coming months as well.</p>
+     
+     <p>But right now, we want to hear from you!  We want to hear what talk ideas you have.  Without our speakers, there would be no conference.  We offer a very comprehensive speakers package, including:</p>
+     
+     <ul>
+     <li>Airfare coverage (up to $400 domestic, $1000 international)</li>
+     <li>Hotel Room (1 night + 1 per accepted talk)</li>
+     <li>Free ticket to the conference, including Tutorial Day</li>
+     </ul>
+     
+     <p>Don't hesitate!  Our <a href="https://tek.phparch.com/call-for-speakers/">Call for Speakers</a> closes on <strong>January 16th, 2016</strong>.  So you only have a few weeks to get those submissions in.  We look forward to hearing from you!</p>
+    </div>
+  </content>
+</entry>

@@ -7,6 +7,106 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 ?>
 
 <h1>PHP 5 ChangeLog</h1>
+<section class="version" id="5.6.17"><!-- {{{ 5.6.17 -->
+<h3>Version 5.6.17</h3>
+<b><?php release_date('07-Jan-2016'); ?></b>
+<ul><li>Core:
+<ul>
+  <li><?php bugfix(66909); ?> (configure fails utf8_to_mutf7 test).</li>
+  <li><?php bugfix(70958); ?> (Invalid opcode while using ::class as trait method paramater default value).</li>
+  <li><?php bugfix(70957); ?> (self::class can not be resolved with reflection for abstract class).</li>
+  <li><?php bugfix(70944); ?> (try{ } finally{} can create infinite chains of exceptions).</li>
+  <li><?php bugfix(61751); ?> (SAPI build problem on AIX: Undefined symbol: php_register_internal_extensions).</li>
+</ul></li>
+<li>FPM:
+<ul>
+  <li><?php bugfix(70755); ?> (fpm_log.c memory leak and buffer overflow).</li>
+</ul></li>
+<li>GD:
+<ul>
+  <li><?php bugfix(70976); ?> (Memory Read via gdImageRotateInterpolated Array Index Out of Bounds). (CVE-2016-1903)</li>
+</ul></li>
+<li>Mysqlnd:
+<ul>
+  <li><?php bugfix(68077); ?> (LOAD DATA LOCAL INFILE / open_basedir restriction).</li>
+</ul></li>
+<li>SOAP:
+<ul>
+  <li><?php bugfix(70900); ?> (SoapClient systematic out of memory error).</li>
+</ul></li>
+<li>Standard:
+<ul>
+  <li><?php bugfix(70960); ?> (ReflectionFunction for array_unique returns wrong number of parameters).</li>
+</ul></li>
+<li>PDO_Firebird:
+<ul>
+  <li><?php bugfix(60052); ?> (Integer returned as a 64bit integer on X64_86).</li>
+</ul></li>
+<li>WDDX:
+<ul>
+  <li><?php bugfix(70661); ?> (Use After Free Vulnerability in WDDX Packet Deserialization).</li>
+  <li><?php bugfix(70741); ?> (Session WDDX Packet Deserialization Type Confusion Vulnerability).</li>
+</ul></li>
+<li>XMLRPC:
+<ul>
+  <li><?php bugfix(70728); ?> (Type Confusion Vulnerability in PHP_to_XMLRPC_worker()).</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
+<section class="version" id="5.5.31"><!-- {{{ 5.5.31 -->
+<h3>Version 5.5.31</h3>
+<b><?php release_date('07-Jan-2016'); ?></b>
+<ul><li>FPM:
+<ul>
+  <li><?php bugfix(70755); ?> (fpm_log.c memory leak and buffer overflow).</li>
+</ul></li>
+<li>GD:
+<ul>
+  <li><?php bugfix(70976); ?> (Memory Read via gdImageRotateInterpolated Array Index Out of Bounds). (CVE-2016-1903)</li>
+</ul></li>
+<li>WDDX:
+<ul>
+  <li><?php bugfix(70661); ?> (Use After Free Vulnerability in WDDX Packet Deserialization).</li>
+  <li><?php bugfix(70741); ?> (Session WDDX Packet Deserialization Type Confusion Vulnerability).</li>
+</ul></li>
+<li>XMLRPC:
+<ul>
+  <li><?php bugfix(70728); ?> (Type Confusion Vulnerability in PHP_to_XMLRPC_worker()).</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
+<section class="version" id="5.6.16"><!-- {{{ 5.6.16 -->
+<h3>Version 5.6.16</h3>
+<b><?php release_date('26-Nov-2015'); ?></b>
+<ul><li>Core:
+<ul>
+  <li><?php bugfix(70828); ?> (php-fpm 5.6 with opcache crashes when referencing a non-existent constant).</li>
+  <li><?php bugfix(70748); ?> (Segfault in ini_lex () at Zend/zend_ini_scanner.l).</li>
+</ul></li>
+<li>Mysqlnd:
+<ul>
+  <li><?php bugfix(68344); ?> (MySQLi does not provide way to disable peer certificate validation) by introducing MYSQLI_CLIENT_SSL_DONT_VERIFY_SERVER_CERT connection flag.</li>
+</ul></li>
+<li>OCI8:
+<ul>
+  <li><?php bugfix(68298); ?> (OCI int overflow).</li>
+</ul></li>
+<li>PDO_DBlib:
+<ul>
+  <li><?php bugfix(69757); ?> (Segmentation fault on nextRowset).</li>
+</ul></li>
+<li>SOAP:
+<ul>
+  <li><?php bugfix(70875); ?> (Segmentation fault if wsdl has no targetNamespace attribute).</li>
+</ul></li>
+<li>SPL:
+<ul>
+  <li><?php bugfix(70852); ?> (Segfault getting NULL offset of an ArrayObject).</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
 
 <section class="version" id="5.6.15"><!-- {{{ 5.6.15 -->
 <h3>Version 5.6.15</h3>

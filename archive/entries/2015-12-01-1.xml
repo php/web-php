@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom" xmlns:default="http://php.net/ns/news">
+  <title>php[cruise]</title>
+  <id>http://php.net/archive/2015.php#id2015-12-01-1</id>
+  <published>2015-12-01T18:12:59+00:00</published>
+  <updated>2015-12-01T18:12:59+00:00</updated>
+  <default:finalTeaserDate xmlns="http://php.net/ns/news">2016-07-17</default:finalTeaserDate>
+  <category term="conferences" label="Conference announcement"/>
+  <link href="http://php.net/conferences/index.php#id2015-12-01-1" rel="alternate" type="text/html"/>
+  <default:newsImage xmlns="http://php.net/ns/news" link="https://cruise.phparch.com/" title="php[cruise]">phpcruise.2016.png</default:newsImage>
+  <link href="https://cruise.phparch.com/" rel="via" type="text/html"/>
+  <content type="xhtml">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+     <p>
+     It’s been a long time coming … Back in 2004 php[architect] ran a conference-cruise, and ever
+     since we’ve heard people asking for us to repeat the event.  We figured that 12 years was
+     long enough of a wait.  Therefore we’d like to announce <a href="https://cruise.phparch.com">php[cruise] happening in 2016</a>!
+     This 7 day long conference-cruise will be a unique event for the PHP community.
+     Completely immersive and giving you, the attendee, a hands-on experience not to be matched!
+     </p><p>
+     You can learn more about the conference, the cruise, <a href="https://cruise.phparch.com/pricing/">how the pricing is structured</a>,
+     and what talks we will be having by <a href="https://cruise.phparch.com">exploring our website</a>.  And please if you have
+     any questions don’t hesitate to contact us.
+     </p><p>
+     Our Early Bird Sale runs just until December 31st, 2015 - <a href="https://cruise.phparch.com/registration/">So buy tickets soon</a> to
+     save yourself a spot at this limited space event.
+     </p>
+    </div>
+  </content>
+</entry>

@@ -22,6 +22,10 @@ $BRANCHES = array(
 		'stable'   => '2015-07-10',
 		'security' => '2016-07-10',
 	),
+	'5.6' => array(
+		'stable'   => '2016-12-31',
+		'security' => '2018-12-31',
+	),
 );
 
 function format_interval($from, $to) {
@@ -119,8 +123,10 @@ function get_active_branches() {
 				}
 			}
 		}
+		ksort($branches[$major]);
 	}
 
+	ksort($branches);
 	return $branches;
 }
 
@@ -210,7 +216,10 @@ function get_initial_release($branch) {
 	/* If there's only been one release on the branch, it won't be in
 	 * $OLDRELEASES yet, so let's check $RELEASES. */
 	if (isset($GLOBALS['RELEASES'][$major]["$branch.0"])) {
-		return $GLOBALS['RELEASES'][$major]["$branch.0"];
+		// Fake a date like we have on the oldreleases array.
+		$release = $GLOBALS['RELEASES'][$major]["$branch.0"];
+		$release['date'] = $release['source'][0]['date'];
+		return $release;
 	}
 
 	// Shrug.

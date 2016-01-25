@@ -422,6 +422,7 @@ $uri_aliases = array (
     "software/index.php"     => "software",          // BC
     "releases.php"           => "releases/index",    // BC
 
+    "migration7"             => "migration70",      // Consistent with migration5
     "update_5_2.txt"         => "migration52",      // BC
     "readme_upgrade_51.php"  => "migration51",      // BC
     "internals"              => "internals2",       // BC
@@ -491,6 +492,10 @@ $external_redirects = array(
 
 if (isset($uri_aliases[$URI])) {
     $URI = $uri_aliases[$URI];
+    /* If it was a page alias, redirect right away */
+    if (file_exists($_SERVER['DOCUMENT_ROOT'] . "/$URI.php")) {
+        mirror_redirect("/$URI.php");
+    }
 }
 
 // ============================================================================
