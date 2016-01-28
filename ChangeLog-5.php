@@ -1250,6 +1250,11 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 <ul>
   <li><?php bugfix(68822); ?> (request time is reset too early).</li>
 </ul></li>
+<li>JSON :
+<ul>
+  <li>Fixed bug #64695 (JSON_NUMERIC_CHECK has issues with strings that are 
+     numbers plus the letter e).</li>
+</ul></li>
 <li>ODBC:
 <ul>
   <li><?php bugfix(68964); ?> (Allowed memory size exhausted with odbc_exec).</li>
