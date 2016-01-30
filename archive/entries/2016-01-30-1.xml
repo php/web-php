@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom" xmlns:default="http://php.net/ns/news">
+  <title>NortheastPHP Conference CfP Opens</title>
+  <id>http://php.net/archive/2016.php#id2016-01-30-1</id>
+  <published>2016-01-30T04:50:46-05:00</published>
+  <updated>2016-01-30T04:50:46-05:00</updated>
+  <default:finalTeaserDate xmlns="http://php.net/ns/news">2016-03-31</default:finalTeaserDate>
+  <category term="cfp" label="Call for Papers"/>
+  <link href="http://php.net/conferences/index.php#id2016-01-30-1" rel="alternate" type="text/html"/>
+  <default:newsImage xmlns="http://php.net/ns/news" link="http://2016.northeastphp.org/call-for-papers/" title="NortheastPHP 2016">ne2016.png</default:newsImage>
+  <link href="http://2016.northeastphp.org/call-for-papers/" rel="via" type="text/html"/>
+  <content type="xhtml">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+     <p>The team at NortheastPHP is excited to annouce that the Call for Speakers is open for our 2016 conference.</p>
+     
+     <p>This 5th annual conference that is focused on community is moving to Charlottetown, Prince Edward Island! We have a number of other updates that will be announced in the coming months as well.</p>
+     
+     <p>For now, we want to hear from you! We want to hear what talk ideas you have. Without our speakers, there would be no conference. We offer a very comprehensive speakers package as well.</p>
+     
+     <p>Don't hesitate! Our Call for Speakers will be closed before you know it. So you only have a short time to get those submissions in. We look forward to hearing from you!</p>
+     
+     <p><a href="http://2016.northeastphp.org/call-for-papers/" title="Call For Papers - Northeast PHP 2016">http://2016.northeastphp.org/call-for-papers/</a></p>
+    </div>
+  </content>
+</entry>
