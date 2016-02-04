@@ -130,6 +130,10 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
 <ul>
   <li><?php bugfix(70976); ?> (Memory Read via gdImageRotateInterpolated Array Index Out of Bounds). (CVE-2016-1903)</li>
 </ul></li>
+<li>PCRE:
+<ul>
+  <li>Upgraded pcrelib to 8.38.</li>
+</ul></li>
 <li>Mbstring:
 <ul>
   <li><?php bugfix(71066); ?> (mb_send_mail: Program terminated with signal SIGSEGV, Segmentation fault).</li>
