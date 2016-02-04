@@ -7,6 +7,36 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 ?>
 
 <h1>PHP 5 ChangeLog</h1>
+<section class="version" id="5.5.32"><!-- {{{ 5.5.32 -->
+<h3>Version 5.5.32</h3>
+<b><?php release_date('04-Feb-2016'); ?></b>
+<ul><li>Core:
+<ul>
+  <li><?php bugfix(71039); ?> (exec functions ignore length but look for NULL termination).</li>
+  <li><?php bugfix(71323); ?> (Output of stream_get_meta_data can be falsified by its input).</li>
+  <li><?php bugfix(71459); ?> (Integer overflow in iptcembed()).</li>
+</ul></li>
+<li>GD:
+<ul>
+  <li>Improved the fix for bug #70976.</li>
+</ul></li>
+<li>PCRE:
+<ul>
+  <li>Upgraded pcrelib to 8.38.</li>
+</ul></li>
+<li>Phar:
+<ul>
+  <li><?php bugfix(71354); ?> (Heap corruption in tar/zip/phar parser).</li>
+  <li><?php bugfix(71391); ?> (NULL Pointer Dereference in phar_tar_setupmetadata()).</li>
+  <li><?php bugfix(71488); ?> (Stack overflow when decompressing tar archives).</li>
+</ul></li>
+<li>WDDX:
+<ul>
+  <li><?php bugfix(71335); ?> (Type Confusion in WDDX Packet Deserialization).</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
 <section class="version" id="5.6.17"><!-- {{{ 5.6.17 -->
 <h3>Version 5.6.17</h3>
 <b><?php release_date('07-Jan-2016'); ?></b>
