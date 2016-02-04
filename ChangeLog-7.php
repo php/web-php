@@ -7,6 +7,85 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
 
 <h1>PHP 7 ChangeLog</h1>
 
+<section class="version" id="7.0.3"><!-- {{{ 7.0.3 -->
+<h3>Version 7.0.3</h3>
+<b><?php release_date('04-Feb-2016'); ?></b>
+<ul><li>Core:
+<ul>
+  <li>Added support for new HTTP 451 code.</li>
+  <li><?php bugfix(71039); ?> (exec functions ignore length but look for NULL termination).</li>
+  <li><?php bugfix(71089); ?> (No check to duplicate zend_extension).</li>
+  <li><?php bugfix(71201); ?> (round() segfault on 64-bit builds).</li>
+  <li><?php bugfix(71221); ?> (Null pointer deref (segfault) in get_defined_vars via ob_start).</li>
+  <li><?php bugfix(71248); ?> (Wrong interface is enforced).</li>
+  <li><?php bugfix(71273); ?> (A wrong ext directory setup in php.ini leads to crash).</li>
+  <li><?php bugfix(71275); ?> (Bad method called on cloning an object having a trait).</li>
+  <li><?php bugfix(71297); ?> (Memory leak with consecutive yield from).</li>
+  <li><?php bugfix(71300); ?> (Segfault in zend_fetch_string_offset).</li>
+  <li><?php bugfix(71314); ?> (var_export(INF) prints INF.0).</li>
+  <li><?php bugfix(71323); ?> (Output of stream_get_meta_data can be falsified by its input).</li>
+  <li><?php bugfix(71336); ?> (Wrong is_ref on properties as exposed via get_object_vars()).</li>
+  <li><?php bugfix(71459); ?> (Integer overflow in iptcembed()).</li>
+</ul></li>
+<li>Apache2handler:
+<ul>
+  <li>Fix &gt;2G Content-Length headers in apache2handler.</li>
+</ul></li>
+<li>CURL:
+<ul>
+  <li><?php bugfix(71227); ?> (Can't compile php_curl statically).</li>
+  <li><?php bugfix(71225); ?> (curl_setopt() fails to set CURLOPT_POSTFIELDS with reference to CURLFile).</li>
+</ul></li>
+<li>Interbase:
+<ul>
+  <li><?php bugfix(71305); ?> (Crash when optional resource is omitted).</li>
+</ul></li>
+<li>LDAP:
+<ul>
+  <li><?php bugfix(71249); ?> (ldap_mod_replace/ldap_mod_add store value as string "Array").</li>
+</ul></li>
+<li>mbstring:
+<ul>
+  <li><?php bugfix(71397); ?> (mb_send_mail segmentation fault).</li>
+</ul></li>
+<li>OpenSSL:
+<ul>
+  <li><?php bugfix(71475); ?> (openssl_seal() uninitialized memory usage).</li>
+</ul></li>
+<li>Phar:
+<ul>
+  <li><?php bugfix(71354); ?> (Heap corruption in tar/zip/phar parser).</li>
+  <li><?php bugfix(71391); ?> (NULL Pointer Dereference in phar_tar_setupmetadata()).</li>
+  <li><?php bugfix(71488); ?> (Stack overflow when decompressing tar archives).</li>
+</ul></li>
+<li>SOAP:
+<ul>
+  <li><?php bugfix(70979); ?> (crash with bad soap request).</li>
+</ul></li>
+<li>SPL:
+<ul>
+  <li><?php bugfix(71204); ?> (segfault if clean spl_autoload_funcs while autoloading).</li>
+  <li><?php bugfix(71202); ?> (Autoload function registered by another not activated immediately).</li>
+  <li><?php bugfix(71311); ?> (Use-after-free vulnerability in SPL(ArrayObject, unserialize)).</li>
+  <li><?php bugfix(71313); ?> (Use-after-free vulnerability in SPL(SplObjectStorage, unserialize)).</li>
+</ul></li>
+<li>Standard:
+<ul>
+  <li><?php bugfix(71287); ?> (Error message contains hexadecimal instead of decimal number).</li>
+  <li><?php bugfix(71264); ?> (file_put_contents() returns unexpected value when filesystem runs full).</li>
+  <li><?php bugfix(71245); ?> (file_get_contents() ignores "header" context option if it's a reference).</li>
+  <li><?php bugfix(71220); ?> (Null pointer deref (segfault) in compact via ob_start).</li>
+  <li><?php bugfix(71190); ?> (substr_replace converts integers in original $search array to strings).</li>
+  <li><?php bugfix(71188); ?> (str_replace converts integers in original $search array to strings).</li>
+  <li><?php bugfix(71132); ?>, #71197 (range() segfaults).</li>
+</ul></li>
+<li>WDDX:
+<ul>
+  <li><?php bugfix(71335); ?> (Type Confusion in WDDX Packet Deserialization).</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
 <section class="version" id="7.0.2"><!-- {{{ 7.0.2 -->
 <h3>Version 7.0.2</h3>
 <b><?php release_date('07-Jan-2016'); ?></b>
