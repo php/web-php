@@ -7,6 +7,61 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 ?>
 
 <h1>PHP 5 ChangeLog</h1>
+<section class="version" id="5.6.18"><!-- {{{ 5.6.18 -->
+<h3>Version 5.6.18</h3>
+<b><?php release_date('04-Feb-2016'); ?></b>
+<ul><li>Core:
+<ul>
+  <li><?php bugfix(71039); ?> (exec functions ignore length but look for NULL termination).</li>
+  <li><?php bugfix(71089); ?> (No check to duplicate zend_extension).</li>
+  <li><?php bugfix(71201); ?> (round() segfault on 64-bit builds).</li>
+  <li>Added support for new HTTP 451 code.</li>
+  <li><?php bugfix(71273); ?> (A wrong ext directory setup in php.ini leads to crash).</li>
+  <li><?php bugfix(71323); ?> (Output of stream_get_meta_data can be falsified by its input).</li>
+  <li><?php bugfix(71459); ?> (Integer overflow in iptcembed()).</li>
+</ul></li>
+<li>Apache2handler:
+<ul>
+  <li>Fix &gt;2G Content-Length headers in apache2handler.</li>
+</ul></li>
+<li>FTP:
+<ul>
+  <li>Implemented FR <?php bugl(55651); ?> (Option to ignore the returned FTP PASV address).</li>
+</ul></li>
+<li>Opcache:
+<ul>
+  <li><?php bugfix(71127); ?> (Define in auto_prepend_file is overwrite).</li>
+  <li><?php bugfix(71024); ?> (Unable to use PHP 7.0 x64 side-by-side with PHP 5.6 x32 on the same server).</li>
+</ul></li>
+<li>PCRE:
+<ul>
+  <li>Upgraded bundled PCRE library to 8.38.</li>
+</ul></li>
+<li>Phar:
+<ul>
+  <li><?php bugfix(71354); ?> (Heap corruption in tar/zip/phar parser).</li>
+  <li><?php bugfix(71391); ?> (NULL Pointer Dereference in phar_tar_setupmetadata()).</li>
+  <li><?php bugfix(71488); ?> (Stack overflow when decompressing tar archives).</li>
+</ul></li>
+<li>Session:
+<ul>
+  <li><?php bugfix(69111); ?> (Crash in SessionHandler::read()).</li>
+</ul></li>
+<li>SOAP:
+<ul>
+  <li><?php bugfix(70979); ?> (crash with bad soap request).</li>
+</ul></li>
+<li>SPL:
+<ul>
+  <li><?php bugfix(71204); ?> (segfault if clean spl_autoload_funcs while autoloading).</li>
+</ul></li>
+<li>WDDX:
+<ul>
+  <li><?php bugfix(71335); ?> (Type Confusion in WDDX Packet Deserialization).</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
 <section class="version" id="5.5.32"><!-- {{{ 5.5.32 -->
 <h3>Version 5.5.32</h3>
 <b><?php release_date('04-Feb-2016'); ?></b>

@@ -113,7 +113,43 @@ $OLDRELEASES = array (
   ),
   5 => 
   array (
-     '5.5.31' => 
+    '5.6.17' => 
+    array (
+      'announcement' => 
+      array (
+        'English' => '/releases/5_6_17.php',
+      ),
+      'source' => 
+      array (
+        0 => 
+        array (
+          'filename' => 'php-5.6.17.tar.bz2',
+          'name' => 'PHP 5.6.17 (tar.bz2)',
+          'md5' => '23e2183852b172a8e2b2c739b7dde4ca',
+          'sha256' => '77b45f56a1e63e75bb22b42cfb8b438ec4083c59ce774b4d7c1685544b7add3b',
+          'date' => '07 Jan 2016',
+        ),
+        1 => 
+        array (
+          'filename' => 'php-5.6.17.tar.gz',
+          'name' => 'PHP 5.6.17 (tar.gz)',
+          'md5' => '9cbf226d0b5d852e66a0b7272368ecea',
+          'sha256' => 'f5036535651e919415f4b6589391c95e4ff48f2d391818251c45da216791aac8',
+          'date' => '07 Jan 2016',
+        ),
+        2 => 
+        array (
+          'filename' => 'php-5.6.17.tar.xz',
+          'name' => 'PHP 5.6.17 (tar.xz)',
+          'md5' => '5e080e4b7df5db24f1b64313f8114bd8',
+          'sha256' => 'ea9d5749380c7c7171e131616466deacd7cb124b5010eafc34e551b0a7b0fb2c',
+          'date' => '07 Jan 2016',
+        ),
+      ),
+      'date' => '07 Jan 2016',
+      'museum' => false,
+    ),
+    '5.5.31' => 
     array (
       'announcement' => 
       array (
