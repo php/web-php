@@ -52,6 +52,10 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
 <ul>
   <li><?php bugfix(71475); ?> (openssl_seal() uninitialized memory usage).</li>
 </ul></li>
+<li>PCRE:
+<ul>
+  <li>Upgraded pcrelib to 8.38.</li>
+</ul></li>
 <li>Phar:
 <ul>
   <li><?php bugfix(71354); ?> (Heap corruption in tar/zip/phar parser).</li>
@@ -129,10 +133,6 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
 <li>GD:
 <ul>
   <li><?php bugfix(70976); ?> (Memory Read via gdImageRotateInterpolated Array Index Out of Bounds). (CVE-2016-1903)</li>
-</ul></li>
-<li>PCRE:
-<ul>
-  <li>Upgraded pcrelib to 8.38.</li>
 </ul></li>
 <li>Mbstring:
 <ul>
