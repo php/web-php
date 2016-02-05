@@ -9,7 +9,7 @@
   <link href="http://php.net/conferences/index.php#id2016-01-25-1" rel="alternate" type="text/html"/>
   <default:newsImage xmlns="http://php.net/ns/news" link="https://phpconference.com" title="International PHP Conference 2016">ipc_se_2016.jpg</default:newsImage>
   <link href="https://phpconference.com" rel="via" type="text/html"/>
-  <content type="html"/>
+  <content type="html">
 	  <div xmlns="http://www.w3.org/1999/xhtml">
 		<p><a href="https://phpconference.com">The International PHP Conference</a> is the world's first PHP conference and stands since more than a decade for top-notch pragmatic expertise in PHP and web technologies. At the IPC, internationally renowned experts from the PHP industry meet up with PHP users and developers from large and small companies. Here is the place where concepts emerge and ideas are born - the IPC signifies knowledge transfer at highest level.</p>
 		<p>All delegates of the International PHP Conference have, in addition to PHP program, free access to the entire range of the <a href="https://webinale.de">webinale</a> taking place at the same time.</p>
