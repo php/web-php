@@ -12,10 +12,10 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 <b><?php release_date('04-Feb-2016'); ?></b>
 <ul><li>Core:
 <ul>
+  <li>Added support for new HTTP 451 code.</li>
   <li><?php bugfix(71039); ?> (exec functions ignore length but look for NULL termination).</li>
   <li><?php bugfix(71089); ?> (No check to duplicate zend_extension).</li>
   <li><?php bugfix(71201); ?> (round() segfault on 64-bit builds).</li>
-  <li>Added support for new HTTP 451 code.</li>
   <li><?php bugfix(71273); ?> (A wrong ext directory setup in php.ini leads to crash).</li>
   <li><?php bugfix(71323); ?> (Output of stream_get_meta_data can be falsified by its input).</li>
   <li><?php bugfix(71459); ?> (Integer overflow in iptcembed()).</li>
