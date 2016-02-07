@@ -36,6 +36,10 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
   <li><?php bugfix(71227); ?> (Can't compile php_curl statically).</li>
   <li><?php bugfix(71225); ?> (curl_setopt() fails to set CURLOPT_POSTFIELDS with reference to CURLFile).</li>
 </ul></li>
+<li>GD:
+<ul>
+  <li>Improved fix for bug <?php bugl(70976) ?>.</li>
+</ul></li>
 <li>Interbase:
 <ul>
   <li><?php bugfix(71305); ?> (Crash when optional resource is omitted).</li>

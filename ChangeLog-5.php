@@ -28,6 +28,10 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 <ul>
   <li>Implemented FR <?php bugl(55651); ?> (Option to ignore the returned FTP PASV address).</li>
 </ul></li>
+<li>GD:
+<ul>
+  <li>Improved fix for bug <?php bugl(70976) ?>.</li>
+</ul></li>
 <li>Opcache:
 <ul>
   <li><?php bugfix(71127); ?> (Define in auto_prepend_file is overwrite).</li>
