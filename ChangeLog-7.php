@@ -85,7 +85,7 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
   <li><?php bugfix(71220); ?> (Null pointer deref (segfault) in compact via ob_start).</li>
   <li><?php bugfix(71190); ?> (substr_replace converts integers in original $search array to strings).</li>
   <li><?php bugfix(71188); ?> (str_replace converts integers in original $search array to strings).</li>
-  <li><?php bugfix(71132); ?>, #71197 (range() segfaults).</li>
+  <li><?php bugfix(71132); ?>, <?php bugl(71197) ?> (range() segfaults).</li>
 </ul></li>
 <li>WDDX:
 <ul>
