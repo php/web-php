@@ -54,7 +54,7 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
 </ul></li>
 <li>PCRE:
 <ul>
-  <li>Upgraded pcrelib to 8.38.</li>
+  <li>Upgraded bundled PCRE library to 8.38. (CVE-2015-8383, CVE-2015-8386, CVE-2015-8387, CVE-2015-8389, CVE-2015-8390, CVE-2015-8391, CVE-2015-8393, CVE-2015-8394)</li>
 </ul></li>
 <li>Phar:
 <ul>
