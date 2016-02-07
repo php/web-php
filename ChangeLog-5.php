@@ -73,7 +73,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 </ul></li>
 <li>GD:
 <ul>
-  <li>Improved the fix for bug #70976.</li>
+  <li>Improved fix for bug <?php bugl(70976) ?>.</li>
 </ul></li>
 <li>PCRE:
 <ul>
