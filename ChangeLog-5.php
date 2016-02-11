@@ -1017,7 +1017,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 </ul></li>
 <li>Fileinfo:
 <ul>
-  <li><?php bugfix(68819); ?> (Fileinfo on specific file causes spurious OOM and/or segfault).</li>
+  <li><?php bugfix(68819); ?> (Fileinfo on specific file causes spurious OOM and/or segfault). (CVE-2015-4604, CVE-2015-4605)</li>
 </ul></li>
 <li>Filter:
 <ul>
@@ -1113,7 +1113,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 </ul></li>
 <li>Fileinfo:
 <ul>
-  <li><?php bugfix(68819); ?> (Fileinfo on specific file causes spurious OOM and/or segfault).</li>
+  <li><?php bugfix(68819); ?> (Fileinfo on specific file causes spurious OOM and/or segfault). (CVE-2015-4604, CVE-2015-4605)</li>
 </ul></li>
 <li>Filter:
 <ul>
@@ -1192,7 +1192,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 </ul></li>
 <li>Fileinfo:
 <ul>
-  <li><?php bugfix(68819); ?> (Fileinfo on specific file causes spurious OOM and/or segfault).</li>
+  <li><?php bugfix(68819); ?> (Fileinfo on specific file causes spurious OOM and/or segfault). (CVE-2015-4604, CVE-2015-4605)</li>
 </ul></li>
 <li>GD:
 <ul>
