@@ -991,7 +991,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
   <li><?php bugfix(69212); ?> (Leaking VIA_HANDLER func when exception thrown in __call/... arg passing).</li>
   <li><?php bugfix(69221); ?> (Segmentation fault when using a generator in combination with an Iterator).</li>
   <li><?php bugfix(69337); ?> (php_stream_url_wrap_http_ex() type-confusion vulnerability).</li>
-  <li><?php bugfix(69353); ?> (Missing null byte checks for paths in various PHP extensions).</li>
+  <li><?php bugfix(69353); ?> (Missing null byte checks for paths in various PHP extensions). (CVE-2015-3411, CVE-2015-3412)</li>
 </ul></li>
 <li>Apache2handler:
 <ul>
@@ -1090,7 +1090,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
   <li><?php bugfix(69212); ?> (Leaking VIA_HANDLER func when exception thrown in __call/... arg passing).</li>
   <li><?php bugfix(69221); ?> (Segmentation fault when using a generator in combination with an Iterator).</li>
   <li><?php bugfix(69337); ?> (php_stream_url_wrap_http_ex() type-confusion vulnerability).</li>
-  <li><?php bugfix(69353); ?> (Missing null byte checks for paths in various PHP extensions).</li>
+  <li><?php bugfix(69353); ?> (Missing null byte checks for paths in various PHP extensions). (CVE-2015-3411, CVE-2015-3412)</li>
 </ul></li>
 <li>cURL:
 <ul>
@@ -1180,7 +1180,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 <ul>
   <li>Additional fix for bug <?php bugl(69152); ?> (Type confusion vulnerability in exception::getTraceAsString).</li>
   <li><?php bugfix(69337); ?> (php_stream_url_wrap_http_ex() type-confusion vulnerability).</li>
-  <li><?php bugfix(69353); ?> (Missing null byte checks for paths in various PHP extensions).</li>
+  <li><?php bugfix(69353); ?> (Missing null byte checks for paths in various PHP extensions). (CVE-2015-3411, CVE-2015-3412)</li>
 </ul></li>
 <li>cURL:
 <ul>
