@@ -723,7 +723,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
   <li><?php bugfix(69628); ?> (complex GLOB_BRACE fails on Windows).</li>
   <li>Fixed POST data processing slowdown due to small input buffer size on Windows.</li>
   <li><?php bugfix(69646); ?> (OS command injection vulnerability in escapeshellarg). (CVE-2015-4642)</li>
-  <li><?php bugfix(69719); ?> (Incorrect handling of paths with NULs).</li>
+  <li><?php bugfix(69719); ?> (Incorrect handling of paths with NULs). (CVE-2015-4598)</li>
 </ul></li>
 <li>FTP:
 <ul>
@@ -782,7 +782,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
   <li><?php bugfix(66048); ?> (temp. directory is cached during multiple requests).</li>
   <li><?php bugfix(69628); ?> (complex GLOB_BRACE fails on Windows).</li>
   <li><?php bugfix(69646); ?> (OS command injection vulnerability in escapeshellarg). (CVE-2015-4642)</li>
-  <li><?php bugfix(69719); ?> (Incorrect handling of paths with NULs).</li>
+  <li><?php bugfix(69719); ?> (Incorrect handling of paths with NULs). (CVE-2015-4598)</li>
 </ul></li>
 <li>FTP:
 <ul>
@@ -839,7 +839,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 <ul>
   <li>Improved fix for bug <?php bugl(69545); ?> (Integer overflow in ftp_genlist() resulting in heap overflow). (CVE-2015-4643)</li>
   <li><?php bugfix(69646); ?> (OS command injection vulnerability in escapeshellarg). (CVE-2015-4642)</li>
-  <li><?php bugfix(69719); ?> (Incorrect handling of paths with NULs).</li>
+  <li><?php bugfix(69719); ?> (Incorrect handling of paths with NULs). (CVE-2015-4598)</li>
 </ul></li>
 <li>Litespeed SAPI:
 <ul>
