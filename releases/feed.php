@@ -22,6 +22,7 @@ XML;
 
 $FEED_UPDATED =  0;
 $RELEASED_VERSIONS = array_merge($RELEASES[5], $RELEASES[7]);
+krsort($RELEASED_VERSIONS);
 foreach ($RELEASED_VERSIONS as $version => $release) {
     $published = date(DATE_ATOM, strtotime($release["source"][0]["date"]));
     if ($release["announcement"]) {
