@@ -21,7 +21,8 @@ XML;
 /* FIX silly editor highlighting */?><?php
 
 $FEED_UPDATED =  0;
-foreach($RELEASES[5] as $version => $release) {
+$RELEASED_VERSIONS = array_merge($RELEASES[5], $RELEASES[7]);
+foreach ($RELEASED_VERSIONS as $version => $release) {
     $published = date(DATE_ATOM, strtotime($release["source"][0]["date"]));
     if ($release["announcement"]) {
         $id = "http://php.net/releases/" . str_replace(".", "_", $version) . ".php";
@@ -58,7 +59,7 @@ XML;
 
     $updated = date(DATE_ATOM, max($maxtime));
 
-echo <<< XML
+    echo <<< XML
         <updated>{$updated}</updated>
         <content src="{$id}" type="application/xhtml+xml"/>
     </entry>
@@ -74,6 +75,3 @@ echo <<< XML
     <updated>{$FEED_UPDATED}</updated>
 </feed>
 XML;
-
-
-
