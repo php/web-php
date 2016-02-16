@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom" xmlns:default="http://php.net/ns/news">
+    <title>Midwest PHP 2016 Conference</title>
+    <id>http://php.net/archive/2016.php#id2016-02-16-1</id>
+    <published>2016-02-16T10:46:00-06:00</published>
+    <updated>2016-02-16T10:46:00-06:00</updated>
+    <default:finalTeaserDate xmlns="http://php.net/ns/news">2016-03-05</default:finalTeaserDate>
+    <category term="conferences" label="Conference announcement"/>
+    <link href="http://php.net/conferences/index.php#id2016-02-16-1" rel="alternate" type="text/html"/>
+    <default:newsImage xmlns="http://php.net/ns/news" link="http://2016.midwestphp.org"
+                       title="Midest PHP 2016 Conference">midwestphp2016.png
+    </default:newsImage>
+    <link href="http://2016.midwestphp.org" rel="via" type="text/html"/>
+    <content type="html">
+        <div xmlns="http://www.w3.org/1999/xhtml">
+            <p>
+                <a href="http://2016.midwestphp.org">Midwest PHP 2016 Conference</a>
+                 is launching into its fourth year in Minneapolis, MN.  Once again this year, Midwest PHP is bringing
+                leading experts from around the world to talk about APIs, Frameworks, Security, Testing, Continuous
+                Integration, and much more! Midwest PHP welcomes developers of all levels and encourages diversity -
+                we promise there will be something for everyone. So join us March 4-5th for great talks, great people,
+                and of course great food!</p>
+
+                <p>Don’t wait until it’s too late to come to this fantastic conference. Last year was a sell out year
+                    and this year we are expecting an even higher demand for tickets. Register today at
+                    <a href="http://2016.midwestphp.org/register">http://2016.midwestphp.org/register</a> and we look
+                    forward to seeing you there.</p>
+
+                <p>Make sure to allow follow us on twitter at
+                    <a href="https://twitter.com/midwestphp">https://twitter.com/midwestphp</a> or on facebook at
+                    <a href="https://www.facebook.com/midwestconf">https://www.facebook.com/midwestconf</a>.</p>
+        </div>
+    </content>
+</entry>
