@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom" xmlns:default="http://php.net/ns/news">
+  <title>php[tek] 2016</title>
+  <id>http://php.net/archive/2016.php#id2016-02-18-1</id>
+  <published>2016-02-18T14:47:35-05:00</published>
+  <updated>2016-02-18T14:47:35-05:00</updated>
+  <default:finalTeaserDate xmlns="http://php.net/ns/news">2016-05-23</default:finalTeaserDate>
+  <category term="conferences" label="Conference announcement"/>
+  <link href="http://php.net/conferences/index.php#id2016-02-18-1" rel="alternate" type="text/html"/>
+  <default:newsImage xmlns="http://php.net/ns/news" link="https://tek.phparch.com" title="php[tek] 2016">phptek2016.png</default:newsImage>
+  <link href="https://tek.phparch.com" rel="via" type="text/html"/>
+  <content type="xhtml">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+     <p>The team at <a href="https://www.phparch.com">php[architect]</a> is excited this year to bring you the
+         11th edition of one of the longest running PHP conference in the world: <a href="https://tek.phparch.com">php[tek] 2016</a>
+         — running from May 23th-27th.</p>
+     
+     <p>This year we have moved the conference to a <a href="https://tek.phparch.com/location-hotel/">bigger venue</a>,
+         in St. Louis, in order to expand this year and for years to come.</p>
+     
+     <p>We've finally announced our <a href="https://tek.phparch.com/schedule/">schedule</a> for the year and will be featuring:</p>
+     
+     <ul>
+     <li>A two-day long PHP Essentials Training Class</li>
+     <li>2 different full-day training classes (on Laravel &amp; Web Security)</li>
+     <li>6 half-day tutorial session</li>
+     <li>46 sessions</li>
+     <li>... and 3 amazing keynotes by community members!</li>
+     </ul>
+     
+     <p>We also are planning lots of great activities to let you mingle with the community, get to know the speakers,
+         and make connections that will last the year through.</p>
+     
+     <p>Join us at:  <a href="https://tek.phparch.com">https://tek.phparch.com</a></p>
+     
+    </div>
+  </content>
+</entry>
