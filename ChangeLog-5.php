@@ -7,6 +7,61 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 ?>
 
 <h1>PHP 5 ChangeLog</h1>
+<section class="version" id="5.6.19"><!-- {{{ 5.6.19 -->
+<h3>Version 5.6.19</h3>
+<b><?php release_date('03-Mar-2016'); ?></b>
+<ul><li>CLI server:
+<ul>
+  <li><?php bugfix(71559); ?> (Built-in HTTP server, we can download file in web by bug).</li>
+</ul></li>
+<li>CURL:
+<ul>
+  <li><?php bugfix(71523); ?> (Copied handle with new option CURLOPT_HTTPHEADER crashes while curl_multi_exec).</li>
+</ul></li>
+<li>Date:
+<ul>
+  <li><?php bugfix(68078); ?> (Datetime comparisons ignore microseconds).</li>
+  <li><?php bugfix(71525); ?> (Calls to date_modify will mutate timelib_rel_time, causing date_date_set issues).</li>
+</ul></li>
+<li>Fileinfo:
+<ul>
+  <li><?php bugfix(71434); ?> (finfo throws notice for specific python file).</li>
+</ul></li>
+<li>FPM:
+<ul>
+  <li><?php bugfix(62172); ?> (FPM not working with Apache httpd 2.4 balancer/fcgi setup).</li>
+</ul></li>
+<li>Opcache:
+<ul>
+  <li><?php bugfix(71584); ?> (Possible use-after-free of ZCG(cwd) in Zend Opcache).</li>
+</ul></li>
+<li>PDO MySQL:
+<ul>
+  <li><?php bugfix(71569); ?> (#70389 fix causes segmentation fault).</li>
+</ul></li>
+<li>Phar:
+<ul>
+  <li><?php bugfix(71498); ?> (Out-of-Bound Read in phar_parse_zipfile()).</li>
+</ul></li>
+<li>Standard:
+<ul>
+  <li><?php bugfix(70720); ?> (strip_tags improper php code parsing).</li>
+</ul></li>
+<li>WDDX:
+<ul>
+  <li><?php bugfix(71587); ?> (Use-After-Free / Double-Free in WDDX Deserialize).</li>
+</ul></li>
+<li>XSL:
+<ul>
+  <li><?php bugfix(71540); ?> (NULL pointer dereference in xsl_ext_function_php()).</li>
+</ul></li>
+<li>Zip:
+<ul>
+  <li><?php bugfix(71561); ?> (NULL pointer dereference in Zip::ExtractTo).</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
 <section class="version" id="5.5.33"><!-- {{{ 5.5.33 -->
 <h3>Version 5.5.33</h3>
 <b><?php release_date('03-Mar-2016'); ?></b>
