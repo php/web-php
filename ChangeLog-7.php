@@ -7,6 +7,77 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
 
 <h1>PHP 7 ChangeLog</h1>
 
+<section class="version" id="7.0.4"><!-- {{{ 7.0.4 -->
+<h3>Version 7.0.4</h3>
+<b><?php release_date('03-Mar-2016'); ?></b>
+<ul><li>Core:
+<ul>
+  <li>Fixed bug (Low probability segfault in zend_arena).</li>
+  <li><?php bugfix(71441); ?> (Typehinted Generator with return in try/finally crashes).</li>
+  <li><?php bugfix(71442); ?> (forward_static_call crash).</li>
+  <li><?php bugfix(71443); ?> (Segfault using built-in webserver with intl using symfony).</li>
+  <li><?php bugfix(71449); ?> (An integer overflow bug in php_implode()).</li>
+  <li><?php bugfix(71450); ?> (An integer overflow bug in php_str_to_str_ex()).</li>
+  <li><?php bugfix(71474); ?> (Crash because of VM stack corruption on Magento2).</li>
+  <li><?php bugfix(71485); ?> (Return typehint on internal func causes Fatal error when it throws exception).</li>
+  <li><?php bugfix(71529); ?> (Variable references on array elements don't work when using count).</li>
+  <li><?php bugfix(71601); ?> (finally block not executed after yield from).</li>
+  <li><?php bugfix(71637); ?> (Multiple Heap Overflow due to integer overflows in xml/filter_url/addcslashes).</li>
+</ul></li>
+<li>CLI server:
+<ul>
+  <li><?php bugfix(71559); ?> (Built-in HTTP server, we can download file in web by bug).</li>
+</ul></li>
+<li>CURL:
+<ul>
+  <li><?php bugfix(71523); ?> (Copied handle with new option CURLOPT_HTTPHEADER crashes while curl_multi_exec).</li>
+  <li>Fixed memory leak in curl_getinfo().</li>
+</ul></li>
+<li>Date:
+<ul>
+  <li><?php bugfix(71525); ?> (Calls to date_modify will mutate timelib_rel_time, causing date_date_set issues).</li>
+</ul></li>
+<li>Fileinfo:
+<ul>
+  <li><?php bugfix(71434); ?> (finfo throws notice for specific python file).</li>
+</ul></li>
+<li>FPM:
+<ul>
+  <li><?php bugfix(62172); ?> (FPM not working with Apache httpd 2.4 balancer/fcgi setup).</li>
+  <li><?php bugfix(71269); ?> (php-fpm dumped core).</li>
+</ul></li>
+<li>Opcache:
+<ul>
+  <li><?php bugfix(71584); ?> (Possible use-after-free of ZCG(cwd) in Zend Opcache).</li>
+</ul></li>
+<li>PCRE:
+<ul>
+  <li><?php bugfix(71537); ?> (PCRE segfault from Opcache).</li>
+</ul></li>
+<li>phpdbg:
+<ul>
+  <li>Fixed inherited functions from unspecified files being included in phpdbg_get_executable().</li>
+</ul></li>
+<li>SOAP:
+<ul>
+  <li><?php bugfix(71610); ?> (Type Confusion Vulnerability - SOAP / make_http_soap_request()).</li>
+</ul></li>
+<li>Standard:
+<ul>
+  <li><?php bugfix(71603); ?> (compact() maintains references in php7).</li>
+  <li><?php bugfix(70720); ?> (strip_tags improper php code parsing).</li>
+</ul></li>
+<li>XMLRPC:
+<ul>
+  <li><?php bugfix(71501); ?> (xmlrpc_encode_request ignores encoding option).</li>
+</ul></li>
+<li>Zip:
+<ul>
+  <li><?php bugfix(71561); ?> (NULL pointer dereference in Zip::ExtractTo).</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
 <section class="version" id="7.0.3"><!-- {{{ 7.0.3 -->
 <h3>Version 7.0.3</h3>
 <b><?php release_date('04-Feb-2016'); ?></b>
