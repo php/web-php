@@ -7,6 +7,20 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 ?>
 
 <h1>PHP 5 ChangeLog</h1>
+<section class="version" id="5.5.33"><!-- {{{ 5.5.33 -->
+<h3>Version 5.5.33</h3>
+<b><?php release_date('03-Mar-2016'); ?></b>
+<ul><li>Phar:
+<ul>
+  <li><?php bugfix(71498); ?> (Out-of-Bound Read in phar_parse_zipfile()).</li>
+</ul></li>
+<li>WDDX:
+<ul>
+  <li><?php bugfix(71587); ?> (Use-After-Free / Double-Free in WDDX Deserialize).</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
 <section class="version" id="5.6.18"><!-- {{{ 5.6.18 -->
 <h3>Version 5.6.18</h3>
 <b><?php release_date('04-Feb-2016'); ?></b>
