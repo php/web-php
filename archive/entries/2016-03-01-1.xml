@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom" xmlns:default="http://php.net/ns/news">
+  <title>PHPKonf: Istanbul PHP Conference 2016</title>
+  <id>http://php.net/archive/2016.php#id2016-03-01-1</id>
+  <published>2016-03-01T09:00:00+00:00</published>
+  <updated>2016-03-01T09:00:00+00:00</updated>
+  <default:finalTeaserDate xmlns="http://php.net/ns/news">2016-05-21</default:finalTeaserDate>
+  <category term="conferences" label="Conference announcement"/>
+  <link href="http://php.net/conferences/index.php#id2016-03-01-1" rel="alternate" type="text/html"/>
+  <default:newsImage xmlns="http://php.net/ns/news" link="http://phpkonf.org/" title="PHPKonf: Istanbul PHP Conference 2016">phpkonf_2015.png</default:newsImage>
+  <link href="http://phpkonf.org/" rel="via" type="text/html"/>
+  <content type="html">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+     <p>Istanbul PHP User Group is proud to announce that the PHPKonf 2016! We'll host some of the best speakers, awesome talk topics, latest technologies, and up to date news in PHP. Join us on 21st/22nd of May for a two day, double track conference in ancient city Istanbul! We’ve something for every level of PHP developer with 2 keynotes, 28 talks and 2 panels.</p>
+
+     For tickets and more information: <a href="http://phpkonf.org">http://phpkonf.org</a>
+    </div>
+  </content>
+</entry>
