@@ -114,7 +114,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 <ul>
   <li><?php bugfix(71354); ?> (Heap corruption in tar/zip/phar parser).</li>
   <li><?php bugfix(71391); ?> (NULL Pointer Dereference in phar_tar_setupmetadata()).</li>
-  <li><?php bugfix(71488); ?> (Stack overflow when decompressing tar archives).</li>
+  <li><?php bugfix(71488); ?> (Stack overflow when decompressing tar archives). (CVE-2016-2554)</li>
 </ul></li>
 <li>Session:
 <ul>
@@ -156,7 +156,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 <ul>
   <li><?php bugfix(71354); ?> (Heap corruption in tar/zip/phar parser).</li>
   <li><?php bugfix(71391); ?> (NULL Pointer Dereference in phar_tar_setupmetadata()).</li>
-  <li><?php bugfix(71488); ?> (Stack overflow when decompressing tar archives).</li>
+  <li><?php bugfix(71488); ?> (Stack overflow when decompressing tar archives). (CVE-2016-2554)</li>
 </ul></li>
 <li>WDDX:
 <ul>
