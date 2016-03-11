@@ -78,7 +78,7 @@ site_header("PHP 4.2.0 Release Announcement");
 
 <p>
  For a full list of changes in PHP 4.2.0,
- <a href="/ChangeLog-4.php#4.0.2">see the ChangeLog</a>.
+ <a href="/ChangeLog-4.php#4.2.0">see the ChangeLog</a>.
 </p>
 
 <?php site_footer(); ?>
