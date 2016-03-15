@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom" xmlns:default="http://php.net/ns/news">
+  <title>PHPTour 2016</title>
+  <id>http://php.net/archive/2016.php#id2016-03-15-1</id>
+  <published>2016-03-15T09:54:21+00:00</published>
+  <updated>2016-03-15T09:54:21+00:00</updated>
+  <default:finalTeaserDate xmlns="http://php.net/ns/news">2016-05-23</default:finalTeaserDate>
+  <category term="conferences" label="Conference announcement"/>
+  <link href="http://php.net/conferences/index.php#id2016-03-15-1" rel="alternate" type="text/html"/>
+  <link href="http://php.net/archive/2016.php#id2016-03-15-1" rel="via" type="text/html"/>
+  <content type="xhtml">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+     <p>After Nantes, Lille, Lyon,and Luxembourg-City, this year the PHP Tour, the itinerant conference organized by the French PHP users group, goes to Clermont-Ferrand, a lovely city surrounded by volcanoes. Helped by Clermont'ech, a local developers organization, AFUP is happy to welcome you on May 23rd and 24th at the Polydome convention centre.</p>
+
+<p>This year, part of the program will focus on performance.
+"The big don't eat the little, the fast eat the slow" (Eberhard von Kuenheim, BMW)</p>
+
+<p>With more and more business-critical applications, performance becomes decisive. HHVM and PHP 7 make PHP better than ever. The engine put aside, there are many different ways to improve the overall performances of PHP applications: database access, hardware infrastructure, software architecture, caching, and so on...</p>
+
+<p>2 days of talks and workshops for PHP lovers community !</p>
+
+<p><a href="http://www.phptour.org">www.phptour.org</a></p>
+    </div>
+  </content>
+</entry>
