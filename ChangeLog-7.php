@@ -60,7 +60,7 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
 </ul></li>
 <li>SOAP:
 <ul>
-  <li><?php bugfix(71610); ?> (Type Confusion Vulnerability - SOAP / make_http_soap_request()).</li>
+  <li><?php bugfix(71610); ?> (Type Confusion Vulnerability - SOAP / make_http_soap_request()). (CVE-2016-3185)</li>
 </ul></li>
 <li>Standard:
 <ul>
