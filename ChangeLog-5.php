@@ -436,7 +436,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 </ul></li>
 <li>ZIP:
 <ul>
-  <li><?php bugfix(70350); ?> (ZipArchive::extractTo allows for directory traversal when creating directories).</li>
+  <li><?php bugfix(70350); ?> (ZipArchive::extractTo allows for directory traversal when creating directories). (CVE-2014-9767)</li>
 </ul></li>
 </ul>
 <!-- }}} --></section>
@@ -476,7 +476,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 </ul></li>
 <li>ZIP:
 <ul>
-  <li><?php bugfix(70350); ?> (ZipArchive::extractTo allows for directory traversal when creating directories).</li>
+  <li><?php bugfix(70350); ?> (ZipArchive::extractTo allows for directory traversal when creating directories). (CVE-2014-9767)</li>
 </ul></li>
 </ul>
 <!-- }}} --></section>
@@ -516,7 +516,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 </ul></li>
 <li>ZIP:
 <ul>
-  <li><?php bugfix(70350); ?> (ZipArchive::extractTo allows for directory traversal when creating directories).</li>
+  <li><?php bugfix(70350); ?> (ZipArchive::extractTo allows for directory traversal when creating directories). (CVE-2014-9767)</li>
 </ul></li>
 </ul>
 <!-- }}} --></section>
