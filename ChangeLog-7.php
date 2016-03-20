@@ -868,7 +868,7 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
 <li>Zip:
 <ul>
   <li><?php bugfix(70322); ?> (ZipArchive::close() doesn't indicate errors).</li>
-  <li><?php bugfix(70350); ?> (ZipArchive::extractTo allows for directory traversal when creating directories).</li>
+  <li><?php bugfix(70350); ?> (ZipArchive::extractTo allows for directory traversal when creating directories). (CVE-2014-9767)</li>
   <li>Added ZipArchive::setCompressionName and ZipArchive::setCompressionIndex methods.</li>
   <li>Update bundled libzip to 1.0.1.</li>
   <li><?php bugfix(67161); ?> (ZipArchive::getStream() returns NULL for certain file).</li>
