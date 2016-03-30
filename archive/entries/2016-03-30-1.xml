@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom" xmlns:default="http://php.net/ns/news">
+  <title>China PHP conference 2016</title>
+  <id>http://php.net/archive/2016.php#id2016-03-30-1</id>
+  <published>2016-03-30T15:53:21+00:00</published>
+  <updated>2016-03-30T15:53:21+00:00</updated>
+  <default:finalTeaserDate xmlns="http://php.net/ns/news">2016-05-14</default:finalTeaserDate>
+  <category term="conferences" label="Conference announcement"/>
+  <link href="http://php.net/conferences/index.php#id2016-03-30-1" rel="alternate" type="text/html"/>
+  <default:newsImage xmlns="http://php.net/ns/news" link="http://devlink.cn"
+	  title="China PHP conference 2016">beijing2016.png</default:newsImage>
+  <link href="http://php.net/archive/2016.php#id2016-03-30-1" rel="via" type="text/html"/>
+  <content type="xhtml">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+					<p>DevLink is pleased to announce the China PHP Conference 2016.</p>
+
+					<p>DevLink is a group dedicated to helping developers continuous improvement. China PHP Conference 2016 face to senior PHP programmers, found for better communication in China. It will be held on 5.14-5.15 2016 for a two-days in Beijing, and we have invited Rasums Lerdorf, Xinchen Hui and other best PHP experts as speakers. There're over 10 topics foucus on PHP performance optimization in the Alibaba double-11 events; PHP development of big data analysis; Swoole cluster development, and SOA applications programming; upgraded to PHP7 experience of enterprise application. </p>
+
+					<p>There will be more than 700 senior PHP programmers and technical managers come to attend the conference.</p>
+					<p>Go to <a href="http://devlink.cn/">devlink.cn</a> for tickets and more information, we are looking forward to seeing you in Beijing! </p>
+    </div>
+  </content>
+</entry>
