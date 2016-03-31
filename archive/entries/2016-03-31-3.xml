@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom" xmlns:default="http://php.net/ns/news">
+    <title>PHPSerbia Conference 2016</title>
+    <id>http://php.net/archive/2016.php#id2016-03-31-3</id>
+    <published>2016-03-31T20:00:00+02:00</published>
+    <updated>2016-03-31T22:00:00+02:00</updated>
+    <default:finalTeaserDate xmlns="http://php.net/ns/news">2016-05-27</default:finalTeaserDate>
+    <category term="conferences" label="Conference announcement"/>
+    <link href="http://php.net/conferences/index.php#id2016-03-31-3" rel="alternate" type="text/html"/>
+    <default:newsImage xmlns="http://php.net/ns/news" link="http://conf2016.phpsrbija.rs" title="PHPSerbia Conference 2016">phpsrb2016.jpg</default:newsImage>
+    <link href="http://conf2016.phpsrbija.rs" rel="via" type="text/html"/>
+    <content type="xhtml">
+        <div xmlns="http://www.w3.org/1999/xhtml">
+            <p>Conference that delivers high-value technical content about PHP and related web technologies, architecture, best practices and testing. Two days of amazing talks by some of the most prominent experts and professionals in the PHP world in a comfortable and professional setting.</p>
+
+            <p>At PHPSerbia Conference, you’ll have the unique opportunity to learn about the latest development trends and innovations, as well as to network with fellow attendees and the speakers.</p>
+
+            <p><a href="http://conf2016.phpsrbija.rs">conf2016.phpsrbija.rs</a></p>
+        </div>
+    </content>
+</entry>
