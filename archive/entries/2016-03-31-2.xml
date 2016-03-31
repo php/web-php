@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom" xmlns:default="http://php.net/ns/news">
+  <title>CakeFest 2016 - The CakePHP Conference</title>
+  <id>http://php.net/archive/2016.php#id2016-03-31-2</id>
+  <published>2016-03-31T11:55:21+00:00</published>
+  <updated>2016-03-31T11:55:21+00:00</updated>
+  <default:finalTeaserDate xmlns="http://php.net/ns/news">2016-05-26</default:finalTeaserDate>
+  <category term="conferences" label="Conference announcement"/>
+  <link href="http://php.net/conferences/index.php#id2016-03-31-2" rel="alternate" type="text/html"/>
+  <default:newsImage xmlns="http://php.net/ns/news" link="http://cakefest.org" title="CakePHP Logo">cake-logo.png</default:newsImage>
+  <link href="http://cakefest.org" rel="via" type="text/html"/>
+  <content type="xhtml">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+     <p>Every summer we hold our annual conference dedicated to <a href="http://cakephp.org">CakePHP</a>. For the
+      past 11 years, the framework has been a benchmark for PHP development,
+      providing developers with a full stack MVC solution to build powerful
+      applications which scale. This, coupled with an amazing community backing
+      and thousands of plugins, makes <a href="http://cakephp.org">CakePHP</a> the number one choice for those
+      who love code.</p>
+     
+     <p>That's why we ask you join us at <a href="http://cakefest.org">CakeFest 2016</a> which will be running from May 26th till May 29th, and experience open
+      source at it's very best! As always, <a href="http://cakefest.org">CakeFest</a> will consist of a two day workshop (At beginner and advanced levels) and a two day conference. This year we are in the beautiful city of Amsterdam, Netherlands.</p>
+     
+     <p>
+      The workshop sessions at <a href="http://cakefest.org">CakeFest</a> are an ideal way to learn <a href="http://cakephp.org">CakePHP</a>
+      whether you are just starting out, or you are a seasoned developer.
+      They are also a great way to get up to speed with the latest versions
+      and innovations within the framework. All this, directly from the core
+      developers themselves! The workshops will be on May 26th and May 27th.
+     </p>
+     
+     <p>
+      Comprising two jam-packed days of presentations, discussions and talks on
+      <a href="http://cakephp.org">CakePHP</a> related technologies. The conference portion of <a href="http://cakefest.org">CakeFest</a> is an
+      event not to miss, for both new and old users of the framework. The conference will be on May 28th and May 29th and we have some fantastic <a href="http://cakefest.org/schedule">speakers</a> lined up.
+     </p>
+     
+     <p><a href="http://cakefest.org/tickets">Tickets</a> are selling fast, so you better grab yours while you still can!</p>
+    </div>
+  </content>
+</entry>
