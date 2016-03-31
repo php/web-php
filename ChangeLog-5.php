@@ -370,7 +370,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 
 <section class="version" id="5.6.13"><!-- {{{ 5.6.13 -->
 <h3>Version 5.6.13</h3>
-<?php release_date('03-Sep-2015'); ?>
+<b><?php release_date('03-Sep-2015'); ?></b>
 <ul><li>Core:
 <ul>
   <li><?php bugfix(69900); ?> (Too long timeout on pipes).</li>
@@ -443,7 +443,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 
 <section class="version" id="5.5.29"><!-- {{{ 5.5.29 -->
 <h3>Version 5.5.29</h3>
-<?php release_date('03-Sep-2015'); ?>
+<b><?php release_date('03-Sep-2015'); ?></b>
 <ul><li>Core:
 <ul>
   <li><?php bugfix(70172); ?> (Use After Free Vulnerability in unserialize()). (CVE-2015-6834)</li>
@@ -523,7 +523,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 
 <section class="version" id="5.6.12"><!-- {{{ 5.6.12 -->
 <h3>Version 5.6.12</h3>
-<?php release_date('06-Aug-2015'); ?>
+<b><?php release_date('06-Aug-2015'); ?></b>
 <ul><li>Core:
 <ul>
   <li><?php bugfix(70012); ?> (Exception lost with nested finally block).</li>
@@ -619,7 +619,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 
 <section class="version" id="5.4.44"><!-- {{{ 5.4.44 -->
 <h3>Version 5.4.44</h3>
-<b>06-Aug-2015</b>
+<b><?php release_date('06-Aug-2015'); ?></b>
 <ul><li>Core:
 <ul>
   <li><?php bugfix(69793); ?> (Remotely triggerable stack exhaustion via recursive method calls).</li>
@@ -651,7 +651,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 
 <section class="version" id="5.6.11"><!-- {{{ 5.6.11 -->
 <h3>Version 5.6.11</h3>
-<?php release_date('10-Jul-2015'); ?>
+<b><?php release_date('10-Jul-2015'); ?></b>
 <ul><li>Core:
 <ul>
   <li><?php bugfix(69768); ?> (escapeshell*() doesn't cater to !).</li>
@@ -712,7 +712,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 
 <section class="version" id="5.5.27"><!-- {{{ 5.5.27 -->
 <h3>Version 5.5.27</h3>
-<b>09-Jul-2015</b>
+<b><?php release_date('09-Jul-2015'); ?></b>
 <ul><li>Core:
 <ul>
   <li><?php bugfix(69768); ?> (escapeshell*() doesn't cater to !).</li>
@@ -763,7 +763,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 
 <section class="version" id="5.4.43"><!-- {{{ 5.4.43 -->
 <h3>Version 5.4.43</h3>
-<b>09-Jul-2015</b>
+<b><?php release_date('09-Jul-2015'); ?></b>
 <ul><li>Core:
 <ul>
   <li><?php bugfix(69768); ?> (escapeshell*() doesn't cater to !).</li>
@@ -783,7 +783,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 
 <section class="version" id="5.6.10"><!-- {{{ 5.6.10 -->
 <h3>Version 5.6.10</h3>
-<?php release_date('11-Jun-2015'); ?>
+<b><?php release_date('11-Jun-2015'); ?></b>
 <ul><li>Core:
 <ul>
   <li><?php bugfix(66048); ?> (temp. directory is cached during multiple requests).</li>
@@ -844,7 +844,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 
 <section class="version" id="5.5.26"><!-- {{{ 5.5.26 -->
 <h3>Version 5.5.26</h3>
-<b>11-Jun-2015</b>
+<b><?php release_date('11-Jun-2015'); ?></b>
 <ul><li>Core:
 <ul>
   <li><?php bugfix(69566); ?> (Conditional jump or move depends on uninitialised value in extension trait).</li>
@@ -903,7 +903,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 
 <section class="version" id="5.4.42"><!-- {{{ 5.4.42 -->
 <h3>Version 5.4.42</h3>
-<b>11-Jun-2015</b>
+<b><?php release_date('11-Jun-2015'); ?></b>
 <ul><li>Core:
 <ul>
   <li>Improved fix for bug <?php bugl(69545); ?> (Integer overflow in ftp_genlist() resulting in heap overflow). (CVE-2015-4643)</li>
@@ -931,7 +931,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 
 <section class="version" id="5.6.9"><!-- {{{ 5.6.9 -->
 <h3>Version 5.6.9</h3>
-<?php release_date('14-May-2015'); ?>
+<b><?php release_date('14-May-2015'); ?></b>
 <ul><li>Core:
 <ul>
   <li><?php bugfix(69467); ?> (Wrong checked for the interface by using Trait).</li>
@@ -977,7 +977,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 
 <section class="version" id="5.5.25"><!-- {{{ 5.5.25 -->
 <h3>Version 5.5.25</h3>
-<b>14-May-2015</b>
+<b><?php release_date('14-May-2015'); ?></b>
 <ul><li>Core:
 <ul>
   <li><?php bugfix(69364); ?> (PHP Multipart/form-data remote dos Vulnerability). (CVE-2015-4024)</li>
@@ -1019,7 +1019,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 
 <section class="version" id="5.4.41"><!-- {{{ 5.4.41 -->
 <h3>Version 5.4.41</h3>
-<b>14-May-2015</b>
+<b><?php release_date('14-May-2015'); ?></b>
 <ul><li>Core:
 <ul>
   <li><?php bugfix(69364); ?> (PHP Multipart/form-data remote dos Vulnerability). (CVE-2015-4024)</li>
@@ -1048,7 +1048,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 
 <section class="version" id="5.6.8"><!-- {{{ 5.6.8 -->
 <h3>Version 5.6.8</h3>
-<?php release_date('16-Apr-2015'); ?>
+<b><?php release_date('16-Apr-2015'); ?></b>
 <ul><li>Core:
 <ul>
   <li><?php bugfix(66609); ?> (php crashes with __get() and ++ operator in some cases).</li>
@@ -1143,7 +1143,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 
 <section class="version" id="5.5.24"><!-- {{{ 5.5.24 -->
 <h3>Version 5.5.24</h3>
-<?php release_date('16-Apr-2015'); ?>
+<b><?php release_date('16-Apr-2015'); ?></b>
 <ul><li>Apache2handler:
 <ul>
   <li><?php bugfix(69218); ?> (potential remote code execution with apache 2.4 apache2handler). (CVE-2015-3330)</li>
@@ -1240,7 +1240,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 
 <section class="version" id="5.4.40"><!-- {{{ 5.4.40 -->
 <h3>Version 5.4.40</h3>
-<?php release_date('16-Apr-2015'); ?>
+<b><?php release_date('16-Apr-2015'); ?></b>
 <ul><li>Apache2handler:
 <ul>
   <li><?php bugfix(69218); ?> (potential remote code execution with apache 2.4 apache2handler). (CVE-2015-3330)</li>
@@ -1291,7 +1291,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 
 <section class="version" id="5.6.7"><!-- {{{ 5.6.7 -->
 <h3>Version 5.6.7</h3>
-<?php release_date('19-Mar-2015'); ?>
+<b><?php release_date('19-Mar-2015'); ?></b>
 <ul><li>Core:
 <ul>
   <li><?php bugfix(69174); ?> (leaks when unused inner class use traits precedence).</li>
@@ -1372,7 +1372,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 
 <section class="version" id="5.5.23"><!-- {{{ 5.5.23 -->
 <h3>Version 5.5.23</h3>
-<?php release_date('19-Mar-2015'); ?>
+<b><?php release_date('19-Mar-2015'); ?></b>
 <ul><li>Core:
 <ul>
   <li><?php bugfix(69174); ?> (leaks when unused inner class use traits precedence).</li>
@@ -1453,7 +1453,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 
 <section class="version" id="5.4.39"><!-- {{{ 5.4.39 -->
 <h3>Version 5.4.39</h3>
-<?php release_date('19-Mar-2015'); ?>
+<b><?php release_date('19-Mar-2015'); ?></b>
 <ul><li>Core:
 <ul>
   <li><?php bugfix(68976); ?> (Use After Free Vulnerability in unserialize()). (CVE-2015-2787)</li>
@@ -1477,7 +1477,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 
 <section class="version" id="5.6.6"><!-- {{{ 5.6.6 -->
 <h3>Version 5.6.6</h3>
-<?php release_date('19-Feb-2015'); ?>
+<b><?php release_date('19-Feb-2015'); ?></b>
 <ul><li>Core:
 <ul>
   <li>Removed support for multi-line headers, as they are deprecated by RFC 7230.</li>
@@ -1559,7 +1559,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 
 <section class="version" id="5.5.22"><!-- {{{ 5.5.22 -->
 <h3>Version 5.5.22</h3>
-<?php release_date('19-Feb-2015'); ?>
+<b><?php release_date('19-Feb-2015'); ?></b>
 <ul><li>Core:
 <ul>
   <li><?php bugfix(67068); ?> (getClosure returns somethings that's not a closure).</li>
@@ -1635,7 +1635,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 
 <section class="version" id="5.4.38"><!-- {{{ 5.4.38 -->
 <h3>Version 5.4.38</h3>
-<?php release_date('19-Feb-2015'); ?>
+<b><?php release_date('19-Feb-2015'); ?></b>
 <ul><li>Core:
 <ul>
   <li>Removed support for multi-line headers, as they are deprecated by RFC 7230.</li>
@@ -1657,7 +1657,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 
 <section class="version" id="5.6.5"><!-- {{{ 5.6.5 -->
 <h3>Version 5.6.5</h3>
-<?php release_date('22-Jan-2015'); ?>
+<b><?php release_date('22-Jan-2015'); ?></b>
 <ul><li>Core:
 <ul>
   <li>Upgraded crypt_blowfish to version 1.3.</li>
@@ -1763,7 +1763,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 
 <section class="version" id="5.5.21"><!-- {{{ 5.5.21 -->
 <h3>Version 5.5.21</h3>
-<?php release_date('22-Jan-2015'); ?>
+<b><?php release_date('22-Jan-2015'); ?></b>
 <ul><li>Core:
 <ul>
   <li>Upgraded crypt_blowfish to version 1.3.</li>
@@ -1868,7 +1868,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 
 <section class="version" id="5.4.37"><!-- {{{ 5.4.37 -->
 <h3>Version 5.4.37</h3>
-<?php release_date('22-Jan-2015'); ?>
+<b><?php release_date('22-Jan-2015'); ?></b>
 <ul><li>Core:
 <ul>
   <li><?php bugfix(68710); ?> (Use After Free Vulnerability in PHP's unserialize()). (CVE-2015-0231)</li>
@@ -1895,7 +1895,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 
 <section class="version" id="5.6.4"><!-- {{{ 5.6.4 -->
 <h3>Version 5.6.4</h3>
-<?php release_date('18-Dec-2014'); ?>
+<b><?php release_date('18-Dec-2014'); ?></b>
 <ul><li>Core:
 <ul>
   <li><?php bugfix(68091); ?> (Some Zend headers lack appropriate extern "C" blocks).</li>
@@ -1955,7 +1955,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 
 <section class="version" id="5.5.20"><!-- {{{ 5.5.20 -->
 <h3>Version 5.5.20</h3>
-<?php release_date('18-Dec-2014'); ?>
+<b><?php release_date('18-Dec-2014'); ?></b>
 <ul><li>Core:
 <ul>
   <li><?php bugfix(68091); ?> (Some Zend headers lack appropriate extern "C" blocks).</li>
@@ -2005,7 +2005,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 <!-- }}} --></section>
 <section class="version" id="5.4.36"><!-- {{{ 5.4.36 -->
 <h3>Version 5.4.36</h3>
-<?php release_date('18-Dec-2014'); ?>
+<b><?php release_date('18-Dec-2014'); ?></b>
 <ul><li>Core:
 <ul>
   <li>Upgraded crypt_blowfish to version 1.3.</li>
@@ -2020,7 +2020,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 
 <section class="version" id="5.6.3"><!-- {{{ 5.6.3 -->
 <h3>Version 5.6.3</h3>
-<?php release_date('13-Nov-2014'); ?>
+<b><?php release_date('13-Nov-2014'); ?></b>
 <ul><li>Core:
 <ul>
   <li>Implemented 64-bit format codes for pack() and unpack().</li>
@@ -2087,7 +2087,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 
 <section class="version" id="5.5.19"><!-- {{{ 5.5.19 -->
 <h3>Version 5.5.19</h3>
-<?php release_date('13-Nov-2014'); ?>
+<b><?php release_date('13-Nov-2014'); ?></b>
 <ul><li>Core:
 <ul>
   <li><?php bugfix(68095); ?> (AddressSanitizer reports a heap buffer overflow in 
@@ -2142,7 +2142,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 
 <section class="version" id="5.4.35"><!-- {{{ 5.4.35 -->
 <h3>Version 5.4.35</h3>
-<?php release_date('13-Nov-2014'); ?>
+<b><?php release_date('13-Nov-2014'); ?></b>
 <ul><li>Core:
 <ul>
   <li><?php bugfix(68365); ?> (zend_mm_heap corrupted after memory overflow in zend_hash_copy).</li>
@@ -2164,7 +2164,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 
 <section class="version" id="5.6.2"><!-- {{{ 5.6.2 -->
 <h3>Version 5.6.2</h3>
-<?php release_date('16-Oct-2014'); ?>
+<b><?php release_date('16-Oct-2014'); ?></b>
 <ul><li>Core:
 <ul>
   <li><?php bugfix(68044); ?> (Integer overflow in unserialize() (32-bits only)). (CVE-2014-3669)</li>
@@ -2186,7 +2186,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 
 <section class="version" id="5.5.18"><!-- {{{ 5.5.18 -->
 <h3>Version 5.5.18</h3>
-<?php release_date('16-Oct-2014'); ?>
+<b><?php release_date('16-Oct-2014'); ?></b>
 <ul><li>Core:
 <ul>
   <li><?php bugfix(67985); ?> (Incorrect last used array index copied to new array after
@@ -2234,7 +2234,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 
 <section class="version" id="5.4.34"><!-- {{{ 5.4.34 -->
 <h3>Version 5.4.34</h3>
-<?php release_date('16-Oct-2014'); ?>
+<b><?php release_date('16-Oct-2014'); ?></b>
 <ul><li>Fileinfo:
 <ul>
   <li><?php bugfix(66242); ?> (libmagic: don't assume char is signed).</li>
@@ -2265,7 +2265,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 
 <section class="version" id="5.6.1"><!-- {{{ 5.6.1 -->
 <h3>Version 5.6.1</h3>
-<?php release_date('02-Oct-2014'); ?>
+<b><?php release_date('02-Oct-2014'); ?></b>
 <ul><li>Core:
 <ul>
   <li><?php implemented(38409); ?> (parse_ini_file() loses the type of booleans).</li>
@@ -2323,7 +2323,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 
 <section class="version" id="5.5.17"><!-- {{{ 5.5.17 -->
 <h3>Version 5.5.17</h3>
-<?php release_date('18-Sep-2014'); ?>
+<b><?php release_date('18-Sep-2014'); ?></b>
 <ul><li>Core:
 <ul>
   <li><?php bugfix(47358); ?> (glob returns error, should be empty array()).</li>
@@ -2374,7 +2374,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 
 <section class="version" id="5.4.33"><!-- {{{ 5.4.33 -->
 <h3>Version 5.4.33</h3>
-<?php release_date('18-Sep-2014'); ?>
+<b><?php release_date('18-Sep-2014'); ?></b>
 <ul><li>Core:
 <ul>
   <li><?php bugfix(47358); ?> (glob returns error, should be empty array()).</li>
@@ -2411,7 +2411,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 
 <section class="version" id="5.6.0"><!-- {{{ 5.6.0 -->
 <h3>Version 5.6.0</h3>
-<?php release_date('28-Aug-2014'); ?>
+<b><?php release_date('28-Aug-2014'); ?></b>
 <ul>
 <li>General improvements:
 <ul>
@@ -2867,7 +2867,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 
 <section class="version" id="5.5.16"><!-- {{{ 5.5.16 -->
 <h3>Version 5.5.16</h3>
-<?php release_date('21-Aug-2014'); ?>
+<b><?php release_date('21-Aug-2014'); ?></b>
 <ul><li>COM:
 <ul>
   <li>Fixed missing type checks in com_event_sink.</li>
@@ -2926,7 +2926,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 
 <section class="version" id="5.4.32"><!-- {{{ 5.4.32 -->
 <h3>Version 5.4.32</h3>
-<?php release_date('21-Aug-2014'); ?>
+<b><?php release_date('21-Aug-2014'); ?></b>
 <ul><li>Core:
 <ul>
   <li><?php bugfix(67717); ?> (segfault in dns_get_record) (CVE-2014-3597).</li>
@@ -2977,7 +2977,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 
 <section class="version" id="5.3.29"><!-- {{{ 5.3.29 -->
 <h3>Version 5.3.29</h3>
-<?php release_date('14-Aug-2014'); ?>
+<b><?php release_date('14-Aug-2014'); ?></b>
 <ul><li>Core:
 <ul>
   <li><?php bugfix(66127); ?> (Segmentation fault with ArrayObject unset).</li>
@@ -3039,7 +3039,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 
 <section class="version" id="5.5.15"><!-- {{{ 5.5.15 -->
 <h3>Version 5.5.15</h3>
-<?php release_date('24-Jul-2014'); ?>
+<b><?php release_date('24-Jul-2014'); ?></b>
 <ul><li>CLI server:
 <ul>
   <li><?php bugfix(67429); ?> (CLI server is missing some new HTTP response codes).</li>
@@ -3098,7 +3098,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 
 <section class="version" id="5.4.31"><!-- {{{ 5.4.31 -->
 <h3>Version 5.4.31</h3>
-<?php release_date('24-Jul-2014'); ?>
+<b><?php release_date('24-Jul-2014'); ?></b>
 <ul><li>Core:
 <ul>
   <li><?php bugfix(67428); ?> (header('Location: foo') will override a 308-399 response code).</li>
@@ -3139,7 +3139,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 
 <section class="version" id="5.5.14"><!-- {{{ 5.5.14 -->
 <h3>Version 5.5.14</h3>
-<?php release_date('26-Jun-2014'); ?>
+<b><?php release_date('26-Jun-2014'); ?></b>
 <ul><li>CLI server:
 <ul>
   <li><?php bugfix(67406); ?> (built-in web-server segfaults on startup).</li>
@@ -3213,7 +3213,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 
 <section class="version" id="5.4.30"><!-- {{{ 5.4.30 -->
 <h3>Version 5.4.30</h3>
-<?php release_date('26-Jun-2014'); ?>
+<b><?php release_date('26-Jun-2014'); ?></b>
 <ul><li>Core:
 <ul>
   <li>Fixed BC break introduced by patch for bug <?php bugl(67072); ?>.</li>
@@ -3269,7 +3269,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 
 <section class="version" id="5.5.13"><!-- {{{ 5.5.13 -->
 <h3>Version 5.5.13</h3>
-<?php release_date('29-May-2014'); ?>
+<b><?php release_date('29-May-2014'); ?></b>
 <ul><li>CLI server:
 <ul>
   <li><?php bugfix(67079); ?> (Missing MIME types for XML/XSL files).</li>
@@ -3334,7 +3334,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 
 <section class="version" id="5.4.29"><!-- {{{ 5.4.29 -->
 <h3>Version 5.4.29</h3>
-<?php release_date('29-May-2014'); ?>
+<b><?php release_date('29-May-2014'); ?></b>
 <ul><li>COM:
 <ul>
   <li><?php bugfix(66431); ?> (Special Character via COM Interface (CP_UTF8)).</li>
@@ -3375,7 +3375,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 
 <section class="version" id="5.5.12"><!-- {{{ 5.5.12 -->
 <h3>Version 5.5.12</h3>
-<?php release_date('01-May-2014'); ?>
+<b><?php release_date('01-May-2014'); ?></b>
 <ul><li>Core:
 <ul>
   <li><?php bugfix(61019); ?> (Out of memory on command stream_get_contents).</li>
@@ -3451,7 +3451,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 
 <section class="version" id="5.4.28"><!-- {{{ 5.4.28 -->
 <h3>Version 5.4.28</h3>
-<?php release_date('01-May-2014'); ?>
+<b><?php release_date('01-May-2014'); ?></b>
 <ul><li>Core:
 <ul>
   <li><?php bugfix(61019); ?> (Out of memory on command stream_get_contents).</li>
@@ -3512,7 +3512,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 
 <section class="version" id="5.5.11"><!-- {{{ 5.5.11 -->
 <h3>Version 5.5.11</h3>
-<?php release_date('03-Apr-2014'); ?>
+<b><?php release_date('03-Apr-2014'); ?></b>
 <ul><li>Core:
 <ul>
   <li><?php bugfix(60602); ?> (proc_open() changes environment array).</li>
@@ -3581,7 +3581,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 
 <section class="version" id="5.4.27"><!-- {{{ 5.4.27 -->
 <h3>Version 5.4.27</h3>
-<?php release_date('03-Apr-2014'); ?>
+<b><?php release_date('03-Apr-2014'); ?></b>
 <ul><li>Core:
 <ul>
   <li><?php bugfix(60602); ?> (proc_open() changes environment array)</li>
@@ -3616,7 +3616,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 
 <section class="version" id="5.5.10"><!-- {{{ 5.5.10 -->
 <h3>Version 5.5.10</h3>
-<?php release_date('06-Mar-2014'); ?>
+<b><?php release_date('06-Mar-2014'); ?></b>
 <ul><li>Core:
 <ul>
   <li><?php bugfix(66574); ?> (Allow multiple paths in php_ini_scanned_path).</li>
@@ -3661,7 +3661,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 
 <section class="version" id="5.4.26"><!-- {{{ 5.4.26 -->
 <h3>Version 5.4.26</h3>
-<?php release_date('06-Mar-2014'); ?>
+<b><?php release_date('06-Mar-2014'); ?></b>
 <ul><li>JSON:
 <ul>
   <li><?php bugfix(65753); ?> (JsonSerializeable couldn't implement on module extension)</li>
@@ -3688,7 +3688,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 
 <section class="version" id="5.5.9"><!-- {{{ 5.5.9 -->
 <h3>Version 5.5.9</h3>
-<?php release_date('06-Feb-2014'); ?>
+<b><?php release_date('06-Feb-2014'); ?></b>
 <ul><li>Core:
 <ul>
   <li><?php bugfix(66509); ?> (copy() arginfo has changed starting from 5.4).</li>
@@ -3733,7 +3733,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 
 <section class="version" id="5.4.25"><!-- {{{ 5.4.25 -->
 <h3>Version 5.4.25</h3>
-<?php release_date('06-Feb-2014'); ?>
+<b><?php release_date('06-Feb-2014'); ?></b>
 <ul><li>Core:
 <ul>
   <li><?php bugfix(66286); ?> (Incorrect object comparison with inheritance).</li>
@@ -3756,7 +3756,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 
 <section class="version" id="5.5.8"><!-- {{{ 5.5.8 -->
 <h3>Version 5.5.8</h3>
-<?php release_date('09-Jan-2014'); ?>
+<b><?php release_date('09-Jan-2014'); ?></b>
 <ul><li>Core:
 <ul>
   <li>Disallowed JMP into a finally block.</li>
@@ -3828,7 +3828,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 
 <section class="version" id="5.4.24"><!-- {{{ 5.4.24 -->
 <h3>Version 5.4.24</h3>
-<?php release_date('09-Jan-2014'); ?>
+<b><?php release_date('09-Jan-2014'); ?></b>
 <ul><li>Core:
 <ul>
   <li>Added validation of class names in the autoload process.</li>
@@ -3879,7 +3879,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 
 <section class="version" id="5.5.7"><!-- {{{ 5.5.7 -->
 <h3>Version 5.5.7</h3>
-<?php release_date('12-Dec-2013'); ?>
+<b><?php release_date('12-Dec-2013'); ?></b>
 <ul><li>Core:
 <ul>
   <li><?php bugfix(66094); ?> (unregister_tick_function tries to cast a Closure to a string).</li>
@@ -3910,7 +3910,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 
 <section class="version" id="5.5.6"><!-- {{{ 5.5.6 -->
 <h3>Version 5.5.6</h3>
-<?php release_date('14-Nov-2013'); ?>
+<b><?php release_date('14-Nov-2013'); ?></b>
 <ul><li>Core:
 <ul>
   <li>Improved performance of array_merge() and func_get_args() by eliminating useless copying.</li>
@@ -3955,7 +3955,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 
 <section class="version" id="5.4.23"><!-- {{{ 5.4.23 -->
 <h3>Version 5.4.23</h3>
-<?php release_date('12-Dec-2013'); ?>
+<b><?php release_date('12-Dec-2013'); ?></b>
 <ul><li>Core:
 <ul>
   <li><?php bugfix(66094); ?> (unregister_tick_function tries to cast a Closure to a string).</li>
@@ -3987,7 +3987,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 
 <section class="version" id="5.4.22"><!-- {{{ 5.4.22 -->
 <h3>Version 5.4.22</h3>
-<?php release_date('14-Nov-2013'); ?>
+<b><?php release_date('14-Nov-2013'); ?></b>
 <ul><li>Core:
 <ul>
   <li><?php bugfix(65911); ?> (scope resolution operator - strange behavior with $this).</li>
@@ -4027,7 +4027,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 
 <section class="version" id="5.5.5"><!-- {{{ 5.5.5 -->
 <h3>Version 5.5.5</h3>
-<?php release_date('17-Oct-2013'); ?>
+<b><?php release_date('17-Oct-2013'); ?></b>
 <ul><li>Core:
 <ul>
   <li><?php bugfix(64979); ?> (Wrong behavior of static variables in closure generators).</li>
@@ -4103,7 +4103,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 
 <section class="version" id="5.4.21"><!-- {{{ 5.4.21 -->
 <h3>Version 5.4.21</h3>
-<?php release_date('17-Oct-2013'); ?>
+<b><?php release_date('17-Oct-2013'); ?></b>
 <ul><li>Core:
 <ul>
   <li><?php bugfix(65322); ?> (compile time errors won't trigger auto loading).</li>
@@ -4143,7 +4143,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 
 <section class="version" id="5.5.4"><!-- {{{ 5.5.4 -->
 <h3>Version 5.5.4</h3>
-<?php release_date('19-Sep-2013'); ?>
+<b><?php release_date('19-Sep-2013'); ?></b>
 <ul><li>Core:
 <ul>
   <li><?php bugfix(60598); ?> (cli/apache sapi segfault on objects manipulation).</li>
@@ -4187,7 +4187,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 
 <section class="version" id="5.4.20"><!-- {{{ 5.4.20 -->
 <h3>Version 5.4.20</h3>
-<?php release_date('19-Sep-2013'); ?>
+<b><?php release_date('19-Sep-2013'); ?></b>
 <ul><li>Core:
 <ul>
   <li><?php bugfix(60598); ?> (cli/apache sapi segfault on objects manipulation).</li>
@@ -4257,7 +4257,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 
 <section class="version" id="5.5.3"><!-- {{{ 5.5.3 -->
 <h3>Version 5.5.3</h3>
-<?php release_date('22-Aug-2013'); ?>
+<b><?php release_date('22-Aug-2013'); ?></b>
 <ul><li>Openssl:
 <ul>
   <li>Fixed UMR in fix for CVE-2013-4248.</li>
@@ -4267,7 +4267,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 
 <section class="version" id="5.4.19"><!-- {{{ 5.4.19 -->
 <h3>Version 5.4.19</h3>
-<?php release_date('22-Aug-2013'); ?>
+<b><?php release_date('22-Aug-2013'); ?></b>
 <ul><li>Core:
 <ul>
   <li><?php bugfix(64503); ?> (Compilation fails with error: conflicting types for 'zendparse').</li>
@@ -4281,7 +4281,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 
 <section class="version" id="5.5.2"><!-- {{{ 5.5.2 -->
 <h3>Version 5.5.2</h3>
-<?php release_date('15-Aug-2013'); ?>
+<b><?php release_date('15-Aug-2013'); ?></b>
 <ul><li>Core:
 <ul>
   <li><?php bugfix(65372); ?> (Segfault in gc_zval_possible_root when return reference fails).</li>
@@ -4344,7 +4344,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 
 <section class="version" id="5.4.18"><!-- {{{ 5.4.18 -->
 <h3>Version 5.4.18</h3>
-<?php release_date('15-Aug-2013'); ?>
+<b><?php release_date('15-Aug-2013'); ?></b>
 <ul><li>Core:
 <ul>
   <li>Fixed value of FILTER_SANITIZE_FULL_SPECIAL_CHARS constant (previously was erroneously set to FILTER_SANITIZE_SPECIAL_CHARS value).</li>
@@ -4444,7 +4444,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 
 <section class="version" id="5.5.1"><!-- {{{ 5.5.1 -->
 <h3>Version 5.5.1</h3>
-<?php release_date('18-Jul-2013'); ?>
+<b><?php release_date('18-Jul-2013'); ?></b>
 <ul><li>Core:
 <ul>
   <li><?php bugfix(65254); ?> (Exception not catchable when exception thrown in autoload with a namespace).</li>
@@ -4526,7 +4526,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 
 <section class="version" id="5.3.28"><!-- {{{ 5.3.28 -->
 <h3>Version 5.3.28</h3>
-<?php release_date('12-Dec-2013'); ?>
+<b><?php release_date('12-Dec-2013'); ?></b>
 <ul><li>Openssl:
 <ul>
   <li>Fixed handling null bytes in subjectAltName (CVE-2013-4248).</li>
@@ -4537,7 +4537,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 
 <section class="version" id="5.3.27"><!-- {{{ 5.3.27 -->
 <h3>Version 5.3.27</h3>
-<?php release_date('11-Jul-2013'); ?>
+<b><?php release_date('11-Jul-2013'); ?></b>
 <ul><li>Core:
 <ul>
   <li><?php bugfix(64966); ?> (segfault in zend_do_fcall_common_helper_SPEC).</li>
@@ -4575,7 +4575,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 
 <section class="version" id="5.5.0"><!-- {{{ 5.5.0 -->
 <h3>Version 5.5.0</h3>
-<?php release_date('20-Jun-2013'); ?>
+<b><?php release_date('20-Jun-2013'); ?></b>
 <ul>
 <li>Drop support for bison &lt; 2.4 when building PHP from GIT source</li>
 </ul>
@@ -5084,7 +5084,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 
 <section class="version" id="5.4.17"><!-- {{{ 5.4.17 -->
 <h3>Version 5.4.17</h3>
-<?php release_date('04-Jul-2013'); ?>
+<b><?php release_date('04-Jul-2013'); ?></b>
 <ul><li>Core:
 <ul>
   <li><?php bugfix(64988); ?> (Class loading order affects E_STRICT warning).</li>
@@ -5143,7 +5143,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 
 <section class="version" id="5.4.16"><!-- {{{ 5.4.16 -->
 <h3>Version 5.4.16</h3>
-<?php release_date('06-Jun-2013'); ?>
+<b><?php release_date('06-Jun-2013'); ?></b>
 <ul>
 <li>Core:
 <ul>
@@ -5203,7 +5203,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 
 <section class="version" id="5.3.26"><!-- {{{ 5.3.26 -->
 <h3>Version 5.3.26</h3>
-<?php release_date('06-Jun-2013'); ?>
+<b><?php release_date('06-Jun-2013'); ?></b>
 <ul>
 <li>Core:
 <ul>
@@ -5247,7 +5247,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 
 <section class="version" id="5.4.15"><!-- {{{ 5.4.15 -->
 <h3>Version 5.4.15</h3>
-<?php release_date('09-May-2013'); ?>
+<b><?php release_date('09-May-2013'); ?></b>
 <ul>
 <li>Core:
 <ul>
@@ -5275,7 +5275,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 
 <section class="version" id="5.3.25"><!-- {{{ 5.3.25 -->
 <h3>Version 5.3.25</h3>
-<?php release_date('09-May-2013'); ?>
+<b><?php release_date('09-May-2013'); ?></b>
 <ul>
 <li>Core:
 <ul>
@@ -5298,7 +5298,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 
 <section class="version" id="5.4.14"><!-- {{{ 5.4.14 -->
 <h3>Version 5.4.14</h3>
-<?php release_date('11-April-2013'); ?>
+<b><?php release_date('11-April-2013'); ?></b>
 <ul>
 <li>Core:
 <ul>
@@ -5332,7 +5332,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 
 <section class="version" id="5.3.24"><!-- {{{ 5.3.24 -->
 <h3>Version 5.3.24</h3>
-<?php release_date('11-Apr-2013'); ?>
+<b><?php release_date('11-Apr-2013'); ?></b>
 <ul>
 <li>Core:
 <ul>
@@ -5365,7 +5365,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 
 <section class="version" id="5.4.13"><!-- {{{ 5.4.13 -->
 <h3>Version 5.4.13</h3>
-<?php release_date('14-March-2013'); ?>
+<b><?php release_date('14-March-2013'); ?></b>
 <ul>
 <li>Core:
 <ul>
@@ -5417,7 +5417,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 
 <section class="version" id="5.3.23"><!-- {{{ 5.3.23 -->
 <h3>Version 5.3.23</h3>
-<?php release_date('14-March-2013'); ?>
+<b><?php release_date('14-March-2013'); ?></b>
 <ul>
 <li>Phar:
 <ul>
@@ -5441,7 +5441,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 
 <section class="version" id="5.4.12"><!-- {{{ 5.4.12 -->
 <h3>Version 5.4.12</h3>
-<?php release_date('21-February-2013'); ?>
+<b><?php release_date('21-February-2013'); ?></b>
 <ul>
 <li>Core:
 <ul>
@@ -5505,7 +5505,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 
 <section class="version" id="5.3.22"><!-- {{{ 5.3.22 -->
 <h3>Version 5.3.22</h3>
-<?php release_date('21-February-2013'); ?>
+<b><?php release_date('21-February-2013'); ?></b>
 <ul>
 <li>Zend Engine:
 <ul>
@@ -5545,7 +5545,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 
 <section class="version" id="5.4.11"><!-- {{{ 5.4.11 -->
 <h3>Version 5.4.11</h3>
-<?php release_date('17-January-2013'); ?>
+<b><?php release_date('17-January-2013'); ?></b>
 <ul>
 <li>Core:
 <ul>
@@ -5590,7 +5590,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 
 <section class="version" id="5.3.21"><!-- {{{ 5.3.21 -->
 <h3>Version 5.3.21</h3>
-<?php release_date('17-January-2013'); ?>
+<b><?php release_date('17-January-2013'); ?></b>
 <ul>
 <li>Zend Engine:
 <ul>
@@ -5613,7 +5613,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 
 <section class="version" id="5.4.10"><!-- {{{ 5.4.10 -->
 <h3>Version 5.4.10</h3>
-<?php release_date('20-December-2012'); ?>
+<b><?php release_date('20-December-2012'); ?></b>
 <ul>
 <li>Core:
 <ul>
@@ -5714,7 +5714,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 
 <section class="version" id="5.3.20"><!-- {{{ 5.3.20 -->
 <h3>Version 5.3.20</h3>
-<?php release_date('20-December-2012'); ?>
+<b><?php release_date('20-December-2012'); ?></b>
 <ul>
 <li>Zend Engine:
 <ul>
@@ -5794,7 +5794,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 
 <section class="version" id="5.4.9"><!-- {{{ 5.4.9 -->
 <h3>Version 5.4.9</h3>
-<?php release_date('22-November-2012'); ?>
+<b><?php release_date('22-November-2012'); ?></b>
 <ul>
 <li>Core:
 <ul>
@@ -5889,7 +5889,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 
 <section class="version" id="5.3.19"><!-- {{{ 5.3.19 -->
 <h3>Version 5.3.19</h3>
-<?php release_date('22-November-2012'); ?>
+<b><?php release_date('22-November-2012'); ?></b>
 <ul>
 <li>Core:
 <ul>
@@ -5966,7 +5966,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 
 <section class="version" id="5.4.8"><!-- {{{ 5.4.8 -->
 <h3>Version 5.4.8</h3>
-<?php release_date('18-October-2012'); ?>
+<b><?php release_date('18-October-2012'); ?></b>
 <ul>
 <li>CLI server
 <ul>
@@ -6072,7 +6072,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 
 <section class="version" id="5.3.18"><!-- {{{ 5.3.18 -->
 <h3>Version 5.3.18</h3>
-<?php release_date('18-October-2012'); ?>
+<b><?php release_date('18-October-2012'); ?></b>
 <ul>
 <li>Core
 <ul>
@@ -6128,7 +6128,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 
 <section class="version" id="5.4.7"><!-- {{{ 5.4.7 -->
 <h3>Version 5.4.7</h3>
-<?php release_date('13-September-2012'); ?>
+<b><?php release_date('13-September-2012'); ?></b>
 <ul>
 <li>Core
 <ul>
@@ -6233,7 +6233,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 
 <section class="version" id="5.3.17"><!-- {{{ 5.3.17 -->
 <h3>Version 5.3.17</h3>
-<?php release_date('13-September-2012'); ?>
+<b><?php release_date('13-September-2012'); ?></b>
 <ul>
 <li>Core
 <ul>
@@ -6305,7 +6305,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 
 <section class="version" id="5.4.6"><!-- {{{ 5.4.6 -->
 <h3>Version 5.4.6</h3>
-<?php release_date('16-August-2012'); ?>
+<b><?php release_date('16-August-2012'); ?></b>
 <ul>
 <li>CLI Server
 <ul>
@@ -6404,7 +6404,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 
 <section class="version" id="5.3.16"><!-- {{{ 5.3.16 -->
 <h3>Version 5.3.16</h3>
-<?php release_date('16-August-2012'); ?>
+<b><?php release_date('16-August-2012'); ?></b>
 <ul>
 <li>Core
 <ul>
@@ -6469,7 +6469,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 
 <section class="version" id="5.4.5"><!-- {{{ 5.4.5 -->
 <h3>Version 5.4.5</h3>
-<?php release_date('19-July-2012'); ?>
+<b><?php release_date('19-July-2012'); ?></b>
 <ul>
 <li>Core
 <ul>
@@ -6593,7 +6593,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 
 <section class="version" id="5.3.15"><!-- {{{ 5.3.15 -->
 <h3>Version 5.3.15</h3>
-<?php release_date('19-July-2012'); ?>
+<b><?php release_date('19-July-2012'); ?></b>
 <ul>
 <li>Zend Engine
 <ul>
@@ -6703,7 +6703,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 
 <section class="version" id="5.4.4"><!-- {{{ 5.4.4 -->
 <h3>Version 5.4.4</h3>
-<?php release_date('06-June-2012'); ?>
+<b><?php release_date('06-June-2012'); ?></b>
 <ul>
 <li>CLI SAPI
 <ul>
@@ -6829,7 +6829,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 
 <section class="version" id="5.3.14"><!-- {{{ 5.3.14 -->
 <h3>Version 5.3.14</h3>
-<?php release_date('06-June-2012'); ?>
+<b><?php release_date('06-June-2012'); ?></b>
 <ul>
 <li>CLI SAPI
 <ul>
@@ -6918,7 +6918,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 
 <section class="version" id="5.4.3"><!-- {{{ 5.4.3 -->
 <h3>Version 5.4.3</h3>
-<?php release_date('08-May-2012'); ?>
+<b><?php release_date('08-May-2012'); ?></b>
 
 <ul>
   <li><?php bugfix(61807); ?> Buffer Overflow in apache_request_headers, CVE-2012-2329.</li>
@@ -6928,7 +6928,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 
 <section class="version" id="5.3.13"><!-- {{{ 5.3.13 -->
 <h3>Version 5.3.13</h3>
-<?php release_date('08-May-2012'); ?>
+<b><?php release_date('08-May-2012'); ?></b>
 
 <ul>
   <li><?php bugfix(61910); ?> Improve fix for PHP-CGI query string parameter vulnerability, CVE-2012-2311.</li>
@@ -6937,7 +6937,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 
 <section class="version" id="5.4.2"><!-- {{{ 5.4.2 -->
 <h3>Version 5.4.2</h3>
-<?php release_date('03-May-2012'); ?>
+<b><?php release_date('03-May-2012'); ?></b>
 
 <ul>
   <li><?php bugfix(61910); ?> Fix PHP-CGI query string parameter vulnerability, CVE-2012-1823.</li>
@@ -6946,7 +6946,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 
 <section class="version" id="5.3.12"><!-- {{{ 5.3.12 -->
 <h3>Version 5.3.12</h3>
-<?php release_date('03-May-2012'); ?>
+<b><?php release_date('03-May-2012'); ?></b>
 
 <ul>
   <li><?php bugfix(61910); ?> Fix PHP-CGI query string parameter vulnerability, CVE-2012-1823.</li>
@@ -6955,7 +6955,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 
 <section class="version" id="5.4.1"><!-- {{{ 5.4.1 -->
 <h3>Version 5.4.1</h3>
-<?php release_date('26-Apr-2012'); ?>
+<b><?php release_date('26-Apr-2012'); ?></b>
 
 <ul>
 <li>CLI Server
@@ -7028,7 +7028,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 
 <section class="version" id="5.3.11"><!-- {{{ 5.3.11 -->
 <h3>Version 5.3.11</h3>
-<?php release_date('26-Apr-2012'); ?>
+<b><?php release_date('26-Apr-2012'); ?></b>
 
 <ul>
 <li>Core
@@ -7268,7 +7268,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 
 <section class="version" id="5.4.0"><!-- {{{ 5.4.0 -->
 <h3>Version 5.4.0</h3>
-<?php release_date('01-Mar-2012'); ?>
+<b><?php release_date('01-Mar-2012'); ?></b>
 
 <ul>
 <li>autoconf 2.59+ is now supported (and required) for generating the
@@ -7908,7 +7908,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 
 <section class="version" id="5.3.10"><!-- {{{ 5.3.10 -->
 <h3>Version 5.3.10</h3>
-<?php release_date('02-Feb-2012'); ?>
+<b><?php release_date('02-Feb-2012'); ?></b>
 
 <ul>
 <li>Core:
@@ -7923,7 +7923,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 
 <section class="version" id="5.3.9"><!-- {{{ 5.3.9 -->
 <h3>Version 5.3.9</h3>
-<?php release_date('10-Jan-2012'); ?>
+<b><?php release_date('10-Jan-2012'); ?></b>
 
 <ul>
 <li>Core:
@@ -8255,7 +8255,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 
 <section class="version" id="5.3.8"><!-- {{{ 5.3.8 -->
 <h3>Version 5.3.8</h3>
-<?php release_date('23-Aug-2011'); ?>
+<b><?php release_date('23-Aug-2011'); ?></b>
 
 <ul>
 <li>Core:
@@ -8277,7 +8277,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 
 <section class="version" id="5.3.7"><!-- {{{ 5.3.7 -->
 <h3>Version 5.3.7</h3>
-<?php release_date('18-Aug-2011'); ?>
+<b><?php release_date('18-Aug-2011'); ?></b>
 
 <ul>
 <li>Upgraded bundled SQLite to version 3.7.7.1. (Scott)</li>
@@ -8597,7 +8597,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 
 <section class="version" id="5.3.6"><!-- {{{ 5.3.6 -->
 <h3>Version 5.3.6</h3>
-<?php release_date('17-Mar-2011'); ?>
+<b><?php release_date('17-Mar-2011'); ?></b>
 
 <ul>
 <li>Upgraded bundled Sqlite3 to version 3.7.4. (Ilia)</li>
@@ -8852,7 +8852,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 
 <section class="version" id="5.3.5"><!-- {{{ 5.3.5 -->
 <h3>Version 5.3.5</h3>
-<?php release_date('06-Jan-2011'); ?>
+<b><?php release_date('06-Jan-2011'); ?></b>
 <ul>
 
 <li><?php bugfix(53632); ?> (PHP hangs on numeric value 2.2250738585072011e-308). (CVE-2010-4645) (Rasmus, Scott)</li>
@@ -8863,7 +8863,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 
 <section class="version" id="5.2.17"><!-- {{{ 5.2.17 -->
 <h3>Version 5.2.17</h3>
-<?php release_date('06-Jan-2011'); ?>
+<b><?php release_date('06-Jan-2011'); ?></b>
 <ul>
 
 <li><?php bugfix(53632); ?> (PHP hangs on numeric value 2.2250738585072011e-308). (CVE-2010-4645) (Rasmus, Scott)</li>
@@ -8874,7 +8874,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 
 <section class="version" id="5.2.16"><!-- {{{ 5.2.16 -->
 <h3>Version 5.2.16</h3>
-<?php release_date('16-Dec-2010'); ?>
+<b><?php release_date('16-Dec-2010'); ?></b>
 <ul>
 
 <li><?php bugfix(53517); ?> (segfault in pgsql_stmt_execute() when postgres is down). (gyp at balabit dot hu)</li>
@@ -8886,7 +8886,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 
 <section class="version" id="5.3.4"><!-- {{{ 5.3.4 -->
 <h3>Version 5.3.4</h3>
-<?php release_date('09-Dec-2010'); ?>
+<b><?php release_date('09-Dec-2010'); ?></b>
 
 <ul>
 <li>Upgraded bundled Sqlite3 to version 3.7.3. (Ilia)</li>
@@ -9333,7 +9333,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 
 <section class="version" id="5.2.15"><!-- {{{ 5.2.15 -->
 <h3>Version 5.2.15</h3>
-<?php release_date('08-Dec-2010'); ?>
+<b><?php release_date('08-Dec-2010'); ?></b>
 <ul>
 
 <li>Fixed extract() to do not overwrite $GLOBALS and $this when using EXTR_OVERWRITE. (jorto at redhat dot com)</li>
@@ -9361,7 +9361,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 
 <section class="version" id="5.3.3"><!-- {{{ 5.3.3 -->
 <h3>Version 5.3.3</h3>
-<?php release_date('22-Jul-2010'); ?>
+<b><?php release_date('22-Jul-2010'); ?></b>
 <ul>
 <li>Upgraded bundled sqlite to version 3.6.23.1. (Ilia)</li>
 <li>Upgraded bundled PCRE to version 8.02. (Ilia)</li>
@@ -9544,7 +9544,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 
 <section class="version" id="5.2.14"><!-- {{{ 5.2.14 -->
 <h3>Version 5.2.14</h3>
-<?php release_date('22-Jul-2010'); ?>
+<b><?php release_date('22-Jul-2010'); ?></b>
 <ul>
 <li>Reverted bug fix <?php bugl(49521) ?> (PDO fetchObject sets values before calling constructor). (Felipe)</li>
 </ul>
@@ -9631,7 +9631,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 
 <section class="version" id="5.3.2"><!-- {{{ 5.3.2 -->
 <h3>Version 5.3.2</h3>
-<?php release_date('04-Mar-2010'); ?>
+<b><?php release_date('04-Mar-2010'); ?></b>
 <ul>
 <li>Security Fixes
 	<ul>
@@ -9794,7 +9794,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 
 <section class="version" id="5.2.13"><!-- {{{ 5.2.13 -->
 <h3>Version 5.2.13</h3>
-<?php release_date('25-Feb-2010'); ?>
+<b><?php release_date('25-Feb-2010'); ?></b>
 <ul>
 <li>Security Fixes
 	<ul>
@@ -9858,7 +9858,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 
 <section class="version" id="5.3.1"><!-- {{{ 5.3.1 -->
 <h3>Version 5.3.1</h3>
-<?php release_date('19-Nov-2009'); ?>
+<b><?php release_date('19-Nov-2009'); ?></b>
 <ul>
 <li>Security Fixes
 	<ul>
@@ -10021,7 +10021,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 
 <section class="version" id="5.3.0"><!-- {{{ 5.3.0 -->
 <h3>Version 5.3.0</h3>
-<?php release_date('30-Jun-2009'); ?>
+<b><?php release_date('30-Jun-2009'); ?></b>
 <ul>
 
 	<li>Upgraded bundled PCRE to version 7.9. (Nuno)</li>
@@ -10735,7 +10735,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 
 <section class="version" id="5.2.12"><!-- {{{ 5.2.12 -->
 <h3>Version 5.2.12</h3>
-<?php release_date('17-Dec-2009'); ?>
+<b><?php release_date('17-Dec-2009'); ?></b>
 <ul>
 <li>Security Fixes
 	<ul>
@@ -10818,7 +10818,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 
 <section class="version" id="5.2.11"><!-- {{{ 5.2.11 -->
 <h3>Version 5.2.11</h3>
-<?php release_date('16-Sep-2009'); ?>
+<b><?php release_date('16-Sep-2009'); ?></b>
 <ul>
 <li>Security Fixes
 	<ul>
@@ -10908,7 +10908,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 
 <section class="version" id="5.2.10"><!-- {{{ 5.2.10 -->
 <h3>Version 5.2.10</h3>
-<?php release_date('18-Jun-2009'); ?>
+<b><?php release_date('18-Jun-2009'); ?></b>
 <ul>
 	<li>Security Fixes
 		<ul>
@@ -11029,7 +11029,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 
 <section class="version" id="5.2.9"><!-- {{{ 5.2.9 -->
 <h3>Version 5.2.9</h3>
-<?php release_date('26-Feb-2009'); ?>
+<b><?php release_date('26-Feb-2009'); ?></b>
 <ul>
 	<li>Security Fixes
 		<ul>
@@ -11101,7 +11101,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 
 <section class="version" id="5.2.8"><!-- {{{ 5.2.8 -->
 <h3>Version 5.2.8</h3>
-<?php release_date('08-Dec-2008'); ?>
+<b><?php release_date('08-Dec-2008'); ?></b>
 <ul>
 	<li>Reverted bug fix <?php bugfix(42718); ?> that broke magic_quotes_gpc (Scott)</li>
 </ul>
@@ -11110,7 +11110,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 
 <section class="version" id="5.2.7"><!-- {{{ 5.2.7 -->
 <h3>Version 5.2.7</h3>
-<?php release_date('04-Dec-2008'); ?>
+<b><?php release_date('04-Dec-2008'); ?></b>
 <ul>
 	<li>Security Fixes
 		<ul>
@@ -11305,7 +11305,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 
 <section class="version" id="5.2.6"><!-- {{{ 5.2.6 -->
 <h3>Version 5.2.6</h3>
-<?php release_date('01-May-2008'); ?>
+<b><?php release_date('01-May-2008'); ?></b>
 <ul>
 	<li>Security Fixes
 		<ul>
@@ -11454,7 +11454,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 
 <section class="version" id="5.2.5"><!-- {{{ 5.2.5 -->
 <h3>Version 5.2.5</h3>
-<?php release_date('08-Nov-2007'); ?>
+<b><?php release_date('08-Nov-2007'); ?></b>
 <ul>
 	<li>Security Fixes
 		<ul>
@@ -11539,7 +11539,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 
 <section class="version" id="5.2.4"><!-- {{{ 5.2.4 -->
 <h3>Version 5.2.4</h3>
-<?php release_date('30-Aug-2007'); ?>
+<b><?php release_date('30-Aug-2007'); ?></b>
 <ul>
 <li>Security Fixes
 	<ul>
@@ -11711,7 +11711,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 
 <section class="version" id="5.2.3"><!-- {{{ 5.2.3 -->
 <h3>Version 5.2.3</h3>
-<?php release_date('31-May-2007'); ?>
+<b><?php release_date('31-May-2007'); ?></b>
 <ul>
 <li>Security Fixes
 	<ul>
@@ -11787,7 +11787,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 
 <section class="version" id="5.2.2"><!-- {{{ 5.2.2 -->
 <h3>Version 5.2.2</h3>
-<?php release_date('03-May-2007'); ?>
+<b><?php release_date('03-May-2007'); ?></b>
 <ul>
 <li>Security Fixes
 	<ul>
@@ -11984,7 +11984,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 
 <section class="version" id="5.2.1"><!-- {{{ 5.2.1 -->
 <h3>Version 5.2.1</h3>
-<?php release_date('08-Feb-2007'); ?>
+<b><?php release_date('08-Feb-2007'); ?></b>
 <ul>
 <li>Added CURLOPT_TCP_NODELAY constant to Curl extension. (Sara)</li>
 <li>Added support for hex numbers of any size. (Matt)</li>
@@ -12257,7 +12257,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 
 <section class="version" id="5.2.0"><!-- {{{ 5.2.0 -->
 <h3>Version 5.2.0</h3>
-<?php release_date('02-Nov-2006'); ?>
+<b><?php release_date('02-Nov-2006'); ?></b>
 <ul>
 <li>Updated bundled OpenSSL to version 0.9.8d in the Windows distro. (Edin)</li>
 <li>Updated Postgresql client libraries to 8.1.4 in the Windows distro. (Edin)</li>
@@ -12633,7 +12633,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 
 <section class="version" id="5.1.6"><!-- {{{ 5.1.6 -->
 <h3>Version 5.1.6</h3>
-<?php release_date('24-Aug-2006'); ?>
+<b><?php release_date('24-Aug-2006'); ?></b>
 <ul>
 	<li>Fixed memory_limit on 64bit systems. (Stefan E.)</li>
 	<li><?php bugfix(38488); ?> (Access to "php://stdin" and family crashes PHP on win32). (Dmitry)</li>
@@ -12643,7 +12643,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 
 <section class="version" id="5.1.5"><!-- {{{ 5.1.5 -->
 <h3>Version 5.1.5</h3>
-<?php release_date('17-Aug-2006'); ?>
+<b><?php release_date('17-Aug-2006'); ?></b>
 <ul>
 	<li>Fixed overflow on 64bit systems in str_repeat() and wordwrap(). (Stefan E.) </li>
 	<li>Disabled CURLOPT_FOLLOWLOCATION in curl when open_basedir or safe_mode are enabled. (Stefan E., Ilia)</li>
@@ -12670,7 +12670,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 
 <section class="version" id="5.1.4"><!-- {{{ 5.1.4 -->
 <h3>Version 5.1.4</h3>
-<?php release_date('04-May-2006'); ?>
+<b><?php release_date('04-May-2006'); ?></b>
 <ul>
 	<li>Added "capture_peer_cert" and "capture_peer_cert_chain" context options for SSL streams. (Wez).</li>
 	<li>Added PDO::PARAM_EVT_* family of constants. (Sara)</li>
@@ -12686,7 +12686,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 
 <section class="version" id="5.1.3"><!-- {{{ 5.1.3 -->
 <h3>Version 5.1.3</h3>
-<?php release_date('02-May-2006'); ?>
+<b><?php release_date('02-May-2006'); ?></b>
 <ul>
 <li>Updated bundled PCRE library to version 6.6. (Andrei)</li>
 <li>Moved extensions to PECL:
@@ -12882,7 +12882,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 
 <section class="version" id="5.1.2"><!-- {{{ 5.1.2 -->
 <h3>Version 5.1.2</h3>
-<?php release_date('12-Jan-2006'); ?>
+<b><?php release_date('12-Jan-2006'); ?></b>
 <ul>
 <li>Updated libsqlite in ext/sqlite to 2.8.17. (Ilia)</li>
 <li>Updated libsqlite in ext/pdo_sqlite to 3.2.8. (Ilia)</li>
@@ -13007,7 +13007,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 
 <section class="version" id="5.1.1"><!-- {{{ 5.1.1 -->
 <h3>Version 5.1.1</h3>
-<?php release_date('28-Nov-2005'); ?>
+<b><?php release_date('28-Nov-2005'); ?></b>
 <ul>
 <li>Disabled native date class to prevent pear::date conflict. (Ilia)</li>
 <li>Improved safe_mode/open_basedir checks in cURL extension. (Ilia, Jani)</li>
@@ -13030,7 +13030,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 
 <section class="version" id="5.1.0"><!-- {{{ 5.1.0 -->
 <h3>Version 5.1.0</h3>
-<?php release_date('24-Nov-2005'); ?>
+<b><?php release_date('24-Nov-2005'); ?></b>
 <ul>
 <li>Added support for class constants and static members for internal classes.  (Dmitry, Michael Wallner)</li>
 <li>Added "new_link" parameter to mssql_connect() (Bug <?php bugl(34369); ?>). (Frank)</li>
@@ -13573,7 +13573,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 
 <section class="version" id="5.0.5"><!-- {{{ 5.0.5 -->
 <h3>Version 5.0.5</h3>
-<?php release_date('05-Sep-2005'); ?>
+<b><?php release_date('05-Sep-2005'); ?></b>
 <ul>
 <li>Upgraded PCRE library to version 5.0. (Andrei)</li>
 <li>Removed php_check_syntax() function which never worked properly. (Ilia)</li>
@@ -13811,7 +13811,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 
 <section class="version" id="5.0.4"><!-- {{{ 5.0.4 -->
 <h3>Version 5.0.4</h3>
-<?php release_date('31-Mar-2005'); ?>
+<b><?php release_date('31-Mar-2005'); ?></b>
 <ul>
 <li>Added SNMPv2 support. (harrie)</li>
 <li>Added Oracle Instant Client support. (cjbj at hotmail dot com, Tony)</li>
@@ -14000,7 +14000,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 
 <section class="version" id="5.0.3"><!-- {{{ 5.0.3 -->
 <h3>Version 5.0.3</h3>
-<?php release_date('15-Dec-2004'); ?>
+<b><?php release_date('15-Dec-2004'); ?></b>
 <ul>
 <li>Added the %F modifier to *printf to render a non-locale-aware representation of a float with the . as decimal seperator. (Derick)</li>
 <li>Fixed error handling in mysqli_multi_query. (Georg)</li>
@@ -14074,7 +14074,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 
 <section class="version" id="5.0.2"><!-- {{{ 5.0.2 -->
 <h3>Version 5.0.2</h3>
-<?php release_date('23-Sep-2004'); ?>
+<b><?php release_date('23-Sep-2004'); ?></b>
 <ul>
 <li> Added new boolean (fourth) parameter to array_slice() that turns on the preservation of keys in the returned array. (Derick) </li>
 <li> Added the sorting flag SORT_LOCALE_STRING to the sort() functions which makes them sort based on the current locale. (Derick) </li>
@@ -14118,7 +14118,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 
 <section class="version" id="5.0.1"><!-- {{{ 5.0.1 -->
 <h3>Version 5.0.1</h3>
-<?php release_date('12-Aug-2004'); ?>
+<b><?php release_date('12-Aug-2004'); ?></b>
 <ul>
 <li> Changed destructor mechanism so that destructors are called prior to request shutdown. (Marcus) </li>
 <li> Rewritten UNIX and Windows install help files. (Documentation Team) </li>
@@ -14167,7 +14167,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 
 <section class="version" id="5.0.0"><!-- {{{ 5.0.0 -->
 <h3>Version 5.0.0</h3>
-<?php release_date('13-Jul-2004'); ?>
+<b><?php release_date('13-Jul-2004'); ?></b>
 <ul>
 <li>Updated PCRE to provide better error handling in certain cases. (Andrei)</li>
 <li>Changed doc comments to require a single white space after '/**'. (Marcus)</li>
@@ -14196,7 +14196,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 
 <section class="version" id="5.0.0RC3"><!-- {{{ 5.0.0RC3 -->
 <h3>Version 5.0.0 Release Candidate 3</h3>
-<?php release_date('08-Jun-2004'); ?>
+<b><?php release_date('08-Jun-2004'); ?></b>
 <ul>
 <li>Moved the PDFLib extension to PECL. (Wez)</li>
 <li>Added MySQL 4.1.2-alpha and 4.1.3-beta support to MySQLI extension. (Georg)</li>
@@ -14232,7 +14232,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 
 <section class="version" id="5.0.0RC2"><!-- {{{ 5.0.0RC2 -->
 <h3>Version 5.0.0 Release Candidate 2</h3>
-<?php release_date('25-Apr-2004'); ?>
+<b><?php release_date('25-Apr-2004'); ?></b>
 <ul>
 <li> Implementing an interface/abstract method with the wrong prototype is now
   a fatal error. (Zeev)
@@ -14324,7 +14324,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 
 <section class="version" id="5.0.0RC1"><!-- {{{ 5.0.0RC1 -->
 <h3>Version 5.0.0 Release Candidate 1</h3>
-<?php release_date('18-Mar-2004'); ?>
+<b><?php release_date('18-Mar-2004'); ?></b>
 <ul>
 <li>Fixed numerous bugs with the just-in-time auto-global initialization, that
   could cause $_SERVER, $argv/$argc and other variables not to work properly.
@@ -14466,7 +14466,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 
 <section class="version" id="5.0.0b4"><!-- {{{ 5.0.0b4 -->
 <h3>Version 5.0.0 Beta 4</h3>
-<?php release_date('12-Feb-2004'); ?>
+<b><?php release_date('12-Feb-2004'); ?></b>
 <ul>
 <li>Changed exceptions so that they must now inherit from the built-in Exception
 class. This allows for a general catch(Exception $e) statement to catch all
@@ -14569,7 +14569,7 @@ exception). (Marcus)</li>
 
 <section class="version" id="5.0.0b3"><!-- {{{ 5.0.0b3 -->
 <h3>Version 5.0.0 Beta 3</h3>
-<?php release_date('21-Dec-2003'); ?>
+<b><?php release_date('21-Dec-2003'); ?></b>
 <ul>
 <li>Bundled new tidy extension (John, Wez)</li>
 <li>Upgraded PCRE library to version 4.5. (Andrei)</li>
@@ -14652,7 +14652,7 @@ segfault). (Moriyoshi)</li>
 
 <section class="version" id="5.0.0b2"><!-- {{{ 5.0.0b2 -->
 <h3>Version 5.0.0 Beta 2</h3>
-<?php release_date('30-Oct-2003'); ?>
+<b><?php release_date('30-Oct-2003'); ?></b>
 <ul>
 <li>Lots and lots of changes in the Zend Engine 2 since beta 1:
  <ul>
@@ -14749,7 +14749,7 @@ fault?]).  (Sterling, Marcus)</li>
 
 <section class="version" id="5.0.0b1"><!-- {{{ 5.0.0b1 -->
 <h3>Version 5.0.0 Beta 1</h3>
-<?php release_date('29-Jun-2003'); ?>
+<b><?php release_date('29-Jun-2003'); ?></b>
 <ul>
 <li>Switch to using Zend Engine 2, which includes numerous engine level improvements.
 A full overview may be downloaded from <a href="http://www.zend.com/engine2/ZendEngine-2.0.pdf">http://www.zend.com/engine2/ZendEngine-2.0.pdf</a> (PDF).
