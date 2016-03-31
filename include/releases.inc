@@ -2,11 +2,47 @@
 $OLDRELEASES = array (
   7 => 
   array (
+    '7.0.4' => 
+    array (
+      'announcement' => 
+      array (
+        'English' => '/releases/7_0_4.php',
+      ),
+      'source' => 
+      array (
+        0 => 
+        array (
+          'filename' => 'php-7.0.4.tar.bz2',
+          'name' => 'PHP 7.0.4 (tar.bz2)',
+          'md5' => '0171201350941327399a5c3e678a86e5',
+          'sha256' => 'a246c503709c189ba8e1e22ed2cb22abc27da43a997ff1b3318e181baf529dcc',
+          'date' => '03 Mar 2016',
+        ),
+        1 => 
+        array (
+          'filename' => 'php-7.0.4.tar.gz',
+          'name' => 'PHP 7.0.4 (tar.gz)',
+          'md5' => 'ce986fe03df3d1050966fdea21224040',
+          'sha256' => 'f6cdac2fd37da0ac0bbcee0187d74b3719c2f83973dfe883d5cde81c356fe0a8',
+          'date' => '03 Mar 2016',
+        ),
+        2 => 
+        array (
+          'filename' => 'php-7.0.4.tar.xz',
+          'name' => 'PHP 7.0.4 (tar.xz)',
+          'md5' => '82c60fc8167dd964119447da539af4f7',
+          'sha256' => '584e0e374e357a71b6e95175a2947d787453afc7f9ab7c55651c10491c4df532',
+          'date' => '03 Mar 2016',
+        ),
+      ),
+      'date' => '03 Mar 2016',
+      'museum' => false,
+    ),
     '7.0.3' => 
     array (
       'announcement' => 
       array (
-        'English' => '/releases/7.0.3.php',
+        'English' => '/releases/7_0_3.php',
       ),
       'source' => 
       array (

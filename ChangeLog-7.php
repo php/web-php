@@ -7,6 +7,97 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
 
 <h1>PHP 7 ChangeLog</h1>
 
+<section class="version" id="7.0.5"><!-- {{{ 7.0.5 -->
+<h3>Version 7.0.5</h3>
+<b><?php release_date('31-Mar-2016'); ?></b>
+<ul><li>Core:
+<ul>
+  <li>Huge pages disabled by default.</li>
+  <li>Added ability to enable huge pages in Zend Memory Manager through the environment variable USE_ZEND_ALLOC_HUGE_PAGES=1.</li>
+  <li><?php bugfix(71756); ?> (Call-by-reference widens scope to uninvolved functions when used in switch).</li>
+  <li><?php bugfix(71729); ?> (Possible crash in zend_bin_strtod, zend_oct_strtod, zend_hex_strtod).</li>
+  <li><?php bugfix(71695); ?> (Global variables are reserved before execution).</li>
+  <li><?php bugfix(71629); ?> (Out-of-bounds access in php_url_decode in context php_stream_url_wrap_rfc2397).</li>
+  <li><?php bugfix(71622); ?> (Strings used in pass-as-reference cannot be used to invoke C::$callable()).</li>
+  <li><?php bugfix(71596); ?> (Segmentation fault on ZTS with date function (setlocale)).</li>
+  <li><?php bugfix(71535); ?> (Integer overflow in zend_mm_alloc_heap()).</li>
+  <li><?php bugfix(71470); ?> (Leaked 1 hashtable iterators).</li>
+  <li><?php bugfix(71575); ?> (ISO C does not allow extra &lsquo;;&rsquo; outside of a function).</li>
+  <li><?php bugfix(71724); ?> (yield from does not count EOLs).</li>
+  <li><?php bugfix(71767); ?> (ReflectionMethod::getDocComment returns the wrong comment).</li>
+  <li><?php bugfix(71806); ?> (php_strip_whitespace() fails on some numerical values).</li>
+  <li><?php bugfix(71624); ?> (`php -R` (PHP_MODE_PROCESS_STDIN) is broken).</li>
+</ul></li>
+<li>CLI Server:
+<ul>
+  <li><?php bugfix(69953); ?> (Support MKCALENDAR request method).</li>
+</ul></li>
+<li>Curl:
+<ul>
+  <li><?php bugfix(71694); ?> (Support constant CURLM_ADDED_ALREADY).</li>
+</ul></li>
+<li>Date:
+<ul>
+  <li><?php bugfix(71635); ?> (DatePeriod::getEndDate segfault).</li>
+</ul></li>
+<li>Fileinfo:
+<ul>
+  <li><?php bugfix(71527); ?> (Buffer over-write in finfo_open with malformed magic file).</li>
+</ul></li>
+<li>libxml:
+<ul>
+  <li><?php bugfix(71536); ?> (Access Violation crashes php-cgi.exe).</li>
+</ul></li>
+<li>mbstring:
+<ul>
+  <li><?php bugfix(71906); ?> (AddressSanitizer: negative-size-param (-1) in mbfl_strcut).</li>
+</ul></li>
+<li>ODBC:
+<ul>
+  <li><?php bugfix(47803); ?>, #69526 (Executing prepared statements is succesfull only for the first two statements).</li>
+</ul></li>
+<li>PCRE:
+<ul>
+  <li><?php bugfix(71659); ?> (segmentation fault in pcre running twig tests).</li>
+</ul></li>
+<li>PDO_DBlib:
+<ul>
+  <li><?php bugfix(54648); ?> (PDO::MSSQL forces format of datetime fields).</li>
+</ul></li>
+<li>Phar:
+<ul>
+  <li><?php bugfix(71625); ?> (Crash in php7.dll with bad phar filename).</li>
+  <li><?php bugfix(71317); ?> (PharData fails to open specific file).</li>
+  <li><?php bugfix(71860); ?> (Invalid memory write in phar on filename with \0 in name).</li>
+</ul></li>
+<li>phpdbg:
+<ul>
+  <li>Fixed crash when advancing (except step) inside an internal function.</li>
+</ul></li>
+<li>Session:
+<ul>
+  <li><?php bugfix(71683); ?> (Null pointer dereference in zend_hash_str_find_bucket).</li>
+</ul></li>
+<li>SNMP:
+<ul>
+  <li><?php bugfix(71704); ?> (php_snmp_error() Format String Vulnerability).</li>
+</ul></li>
+<li>SPL:
+<ul>
+  <li><?php bugfix(71617); ?> (private properties lost when unserializing ArrayObject).</li>
+</ul></li>
+<li>Standard:
+<ul>
+  <li><?php bugfix(71660); ?> (array_column behaves incorrectly after foreach by reference).</li>
+  <li><?php bugfix(71798); ?> (Integer Overflow in php_raw_url_encode).</li>
+</ul></li>
+<li>Zip:
+<ul>
+  <li>Update bundled libzip to 1.1.2.</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
 <section class="version" id="7.0.4"><!-- {{{ 7.0.4 -->
 <h3>Version 7.0.4</h3>
 <b><?php release_date('03-Mar-2016'); ?></b>
