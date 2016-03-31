@@ -7,6 +7,58 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 ?>
 
 <h1>PHP 5 ChangeLog</h1>
+<section class="version" id="5.6.20"><!-- {{{ 5.6.20 -->
+<h3>Version 5.6.20</h3>
+<b><?php release_date('31-Mar-2016'); ?></b>
+<ul><li>CLI Server:
+<ul>
+  <li><?php bugfix(69953); ?> (Support MKCALENDAR request method).</li>
+</ul></li>
+<li>Core:
+<ul>
+  <li><?php bugfix(71596); ?> (Segmentation fault on ZTS with date function (setlocale)).</li>
+</ul></li>
+<li>Curl:
+<ul>
+  <li><?php bugfix(71694); ?> (Support constant CURLM_ADDED_ALREADY).</li>
+</ul></li>
+<li>Date:
+<ul>
+  <li><?php bugfix(71635); ?> (DatePeriod::getEndDate segfault).</li>
+</ul></li>
+<li>Fileinfo:
+<ul>
+  <li><?php bugfix(71527); ?> (Buffer over-write in finfo_open with malformed magic file).</li>
+</ul></li>
+<li>Mbstring:
+<ul>
+  <li><?php bugfix(71906); ?> (AddressSanitizer: negative-size-param (-1) in mbfl_strcut).</li>
+</ul></li>
+<li>ODBC:
+<ul>
+  <li><?php bugfix(47803); ?>, <?php bugl(69526); ?> (Executing prepared statements is succesfull only for the first two statements).</li>
+  <li><?php bugfix(71860); ?> (Invalid memory write in phar on filename with \0 in name).</li>
+</ul></li>
+<li>PDO_DBlib:
+<ul>
+  <li><?php bugfix(54648); ?> (PDO::MSSQL forces format of datetime fields).</li>
+</ul></li>
+<li>Phar:
+<ul>
+  <li><?php bugfix(71625); ?> (Crash in php7.dll with bad phar filename).</li>
+  <li><?php bugfix(71504); ?> (Parsing of tar file with duplicate filenames causes memory leak).</li>
+</ul></li>
+<li>SNMP:
+<ul>
+  <li><?php bugfix(71704); ?> (php_snmp_error() Format String Vulnerability).</li>
+</ul></li>
+<li>Standard:
+<ul>
+  <li><?php bugfix(71798); ?> (Integer Overflow in php_raw_url_encode).</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
 <section class="version" id="5.5.34"><!-- {{{ 5.5.34 -->
 <h3>Version 5.5.34</h3>
 <b><?php release_date('31-Mar-2016'); ?></b>
