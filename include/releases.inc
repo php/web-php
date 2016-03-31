@@ -183,8 +183,43 @@ $OLDRELEASES = array (
       'museum' => false,
     ),
   ),
-  5 => 
-  array (
+  5 => array(
+  '5.5.33' => 
+    array (
+      'announcement' => 
+      array (
+        'English' => '/releases/5_5_33.php',
+      ),
+      'source' => 
+      array (
+        0 => 
+        array (
+          'filename' => 'php-5.5.33.tar.bz2',
+          'name' => 'PHP 5.5.33 (tar.bz2)',
+          'md5' => 'adba9179ddeccb21974493b6eeb8caa2',
+          'sha256' => 'c490b1ed4df596b48eb68f630d89ca512945e2650840e7dace1119cc7e600aa9',
+          'date' => '03 Mar 2016',
+        ),
+        1 => 
+        array (
+          'filename' => 'php-5.5.33.tar.gz',
+          'name' => 'PHP 5.5.33 (tar.gz)',
+          'md5' => '87a0ac3bff1db155ee381086b4a88edb',
+          'sha256' => 'd2747bcf2cc94f652ac216f522904863a22042c66fabcf82ad7449d261d7a45b',
+          'date' => '03 Mar 2016',
+        ),
+        2 => 
+        array (
+          'filename' => 'php-5.5.33.tar.xz',
+          'name' => 'PHP 5.5.33 (tar.xz)',
+          'md5' => 'c1b9e661a8e6e98bdd03aae7ac9534fe',
+          'sha256' => 'b91dbd3c53f9895e8f7b29e5fed25a64dd3a76b454f6ef7265e73c96b4303f30',
+          'date' => '03 Mar 2016',
+        ),
+      ),
+      'date' => '03 Mar 2016',
+      'museum' => false,
+    ),
     '5.6.18' => 
     array (
       'announcement' => 

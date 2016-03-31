@@ -7,6 +7,32 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 ?>
 
 <h1>PHP 5 ChangeLog</h1>
+<section class="version" id="5.5.34"><!-- {{{ 5.5.34 -->
+<h3>Version 5.5.34</h3>
+<b><?php release_date('31-Mar-2016'); ?></b>
+<ul><li>Fileinfo:
+<ul>
+  <li><?php bugfix(71527); ?> (Buffer over-write in finfo_open with malformed magic file).</li>
+</ul></li>
+<li>Mbstring:
+<ul>
+  <li><?php bugfix(71906); ?> (AddressSanitizer: negative-size-param (-1) in mbfl_strcut).</li>
+</ul></li>
+<li>ODBC:
+<ul>
+  <li><?php bugfix(71860); ?> (Invalid memory write in phar on filename with \0 in name).</li>
+</ul></li>
+<li>SNMP:
+<ul>
+  <li><?php bugfix(71704); ?> (php_snmp_error() Format String Vulnerability).</li>
+</ul></li>
+<li>Standard:
+<ul>
+  <li><?php bugfix(71798); ?> (Integer Overflow in php_raw_url_encode).</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
 <section class="version" id="5.6.19"><!-- {{{ 5.6.19 -->
 <h3>Version 5.6.19</h3>
 <b><?php release_date('03-Mar-2016'); ?></b>
