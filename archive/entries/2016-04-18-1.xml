@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom" xmlns:default="http://php.net/ns/news">
+  <title>phpDay 2016</title>
+  <id>http://php.net/archive/2016.php#id2016-04-18-1</id>
+  <published>2016-04-18T10:35:47+02:00</published>
+  <updated>2016-04-18T10:35:47+02:00</updated>
+  <default:finalTeaserDate xmlns="http://php.net/ns/news">2016-05-13</default:finalTeaserDate>
+  <category term="conferences" label="Conference announcement"/>
+  <link href="http://php.net/conferences/index.php#id2016-04-18-1" rel="alternate" type="text/html"/>
+  <default:newsImage xmlns="http://php.net/ns/news" link="http://2016.phpday.it/" title="phpDay">phpday2012.png</default:newsImage>
+  <link href="http://2016.phpday.it/" rel="via" type="text/html"/>
+  <content type="xhtml">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+     The Italian PHP user group GrUSP is pleased to announce the 13th edition
+     of the Italian phpDay conference, taking place
+     on May 13th and 14th, 2016 in Verona. phpDay is the first historic
+     Italian conference dedicated solely to PHP development, technologies and
+     management. It is aimed to IT managers, developers and innovators. Each
+     year it renews the opportunity to link to new business partners.
+    </div>
+  </content>
+</entry>
