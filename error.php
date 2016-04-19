@@ -137,7 +137,10 @@ if (preg_match("!^get/([^/]+)$!", $URI, $what)) {
 if (preg_match("!^get/([^/]+)/from/([^/]+)(/mirror)?$!", $URI, $dlinfo)) {
     
     $df = $dlinfo[1];
-    if(strpos($df, "5-LATEST") !== false) {
+    if(strpos($df, "7-LATEST") !== false) {
+        include_once $_SERVER['DOCUMENT_ROOT'] . "/include/version.inc";
+        $df = str_replace("7-LATEST", $PHP_7_VERSION, $df);
+    } elseif(strpos($df, "5-LATEST") !== false) {
         include_once $_SERVER['DOCUMENT_ROOT'] . "/include/version.inc";
         $df = str_replace("5-LATEST", $PHP_5_VERSION, $df);
     } elseif(strpos($df, "4-LATEST") !== false) {
