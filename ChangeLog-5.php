@@ -7,6 +7,76 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 ?>
 
 <h1>PHP 5 ChangeLog</h1>
+<section class="version" id="5.6.21"><!-- {{{ 5.6.21 -->
+<h3>Version 5.6.21</h3>
+<b><?php release_date('28-Apr-2016'); ?></b>
+<ul><li>Core:
+<ul>
+  <li><?php bugfix(69537); ?> (__debugInfo with empty string for key gives error).</li>
+  <li><?php bugfix(71841); ?> (EG(error_zval) is not handled well).</li>
+</ul></li>
+<li>BCmath:
+<ul>
+  <li><?php bugfix(72093); ?> (bcpowmod accepts negative scale and corrupts _one_ definition).</li>
+</ul></li>
+<li>Curl:
+<ul>
+  <li><?php bugfix(71831); ?> (CURLOPT_NOPROXY applied as long instead of string).</li>
+</ul></li>
+<li>Date:
+<ul>
+  <li><?php bugfix(71889); ?> (DateInterval::format Segmentation fault).</li>
+</ul></li>
+<li>EXIF:
+<ul>
+  <li><?php bugfix(72094); ?> (Out of bounds heap read access in exif header processing).</li>
+</ul></li>
+<li>GD:
+<ul>
+  <li><?php bugfix(71952); ?> (Corruption inside imageaffinematrixget).</li>
+  <li><?php bugfix(71912); ?> (libgd: signedness vulnerability).</li>
+</ul></li>
+<li>Intl:
+<ul>
+  <li><?php bugfix(72061); ?> (Out-of-bounds reads in zif_grapheme_stripos with negative offset).</li>
+</ul></li>
+<li>OCI8:
+<ul>
+  <li><?php bugfix(71422); ?> (Fix ORA-01438: value larger than specified precision allowed for this column).</li>
+</ul></li>
+<li>ODBC:
+<ul>
+  <li><?php bugfix(63171); ?> (Script hangs after max_execution_time).</li>
+</ul></li>
+<li>Opcache:
+<ul>
+  <li><?php bugfix(71843); ?> (null ptr deref ZEND_RETURN_SPEC_CONST_HANDLER).</li>
+</ul></li>
+<li>PDO:
+<ul>
+  <li><?php bugfix(52098); ?> (Own PDOStatement implementation ignore __call()).</li>
+  <li><?php bugfix(71447); ?> (Quotes inside comments not properly handled).</li>
+</ul></li>
+<li>Postgres:
+<ul>
+  <li><?php bugfix(71820); ?> (pg_fetch_object binds parameters before call constructor).</li>
+</ul></li>
+<li>SPL:
+<ul>
+  <li><?php bugfix(67582); ?> (Cloned SplObjectStorage with overwritten getHash fails offsetExists()).</li>
+</ul></li>
+<li>Standard:
+<ul>
+  <li><?php bugfix(71840); ?> (Unserialize accepts wrongly data).</li>
+  <li><?php bugfix(67512); ?> (php_crypt() crashes if crypt_r() does not exist or _REENTRANT is not defined).</li>
+</ul></li>
+<li>XML:
+<ul>
+  <li><?php bugfix(72099); ?> (xml_parse_into_struct segmentation fault).</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
 <section class="version" id="5.5.35"><!-- {{{ 5.5.35 -->
 <h3>Version 5.5.35</h3>
 <b><?php release_date('28-Apr-2016'); ?></b>

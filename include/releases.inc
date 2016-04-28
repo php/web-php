@@ -185,6 +185,42 @@ $OLDRELEASES = array (
   ),
   5 => 
   array (
+    '5.6.20' => 
+    array (
+      'announcement' => 
+      array (
+        'English' => '/releases/5_6_20.php',
+      ),
+      'source' => 
+      array (
+        0 => 
+        array (
+          'filename' => 'php-5.6.20.tar.bz2',
+          'name' => 'PHP 5.6.20 (tar.bz2)',
+          'md5' => 'e6422449bb0342f074eb649a9adf586b',
+          'sha256' => '5ac7bf7caec7a79b18cf458e786fd1609ad2da771224b80bc15cc6f01b22bf1f',
+          'date' => '31 Marc 2016',
+        ),
+        1 => 
+        array (
+          'filename' => 'php-5.6.20.tar.gz',
+          'name' => 'PHP 5.6.20 (tar.gz)',
+          'md5' => 'bdb3cb4dd2306ed247bd8ad7002ef179',
+          'sha256' => '9a7ec6e1080ee93dcbe7df3e49ea1c3c3da5fc2258aff763f39ab3786baf8d56',
+          'date' => '31 Marc 2016',
+        ),
+        2 => 
+        array (
+          'filename' => 'php-5.6.20.tar.xz',
+          'name' => 'PHP 5.6.20 (tar.xz)',
+          'md5' => 'e81f3993997acafeac2ddd2c8bab7153',
+          'sha256' => '2b87d40213361112af49157a435e0d4cdfd334c9b7c731c8b844932b1f444e7a',
+          'date' => '31 Marc 2016',
+        ),
+      ),
+      'date' => '31 Marc 2016',
+      'museum' => false,
+    ),
     '5.5.34' => 
     array (
       'announcement' => 
