@@ -89,7 +89,7 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
 <li>Standard:
 <ul>
   <li><?php bugfix(71660); ?> (array_column behaves incorrectly after foreach by reference).</li>
-  <li><?php bugfix(71798); ?> (Integer Overflow in php_raw_url_encode).</li>
+  <li><?php bugfix(71798); ?> (Integer Overflow in php_raw_url_encode). (CVE-2016-4070)</li>
 </ul></li>
 <li>Zip:
 <ul>

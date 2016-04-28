@@ -54,7 +54,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 </ul></li>
 <li>Standard:
 <ul>
-  <li><?php bugfix(71798); ?> (Integer Overflow in php_raw_url_encode).</li>
+  <li><?php bugfix(71798); ?> (Integer Overflow in php_raw_url_encode). (CVE-2016-4070)</li>
 </ul></li>
 </ul>
 <!-- }}} --></section>
@@ -80,7 +80,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 </ul></li>
 <li>Standard:
 <ul>
-  <li><?php bugfix(71798); ?> (Integer Overflow in php_raw_url_encode).</li>
+  <li><?php bugfix(71798); ?> (Integer Overflow in php_raw_url_encode). (CVE-2016-4070)</li>
 </ul></li>
 </ul>
 <!-- }}} --></section>
