@@ -55,7 +55,7 @@ $PHP_5_6_SHA256     = array(
 $PHP_5_5_RC =  false; // Current RC version (e.g., '5.6.7RC1') or false
 $PHP_5_5_RC_DATE = '25 Jun 2015';
 
-$PHP_5_5_VERSION         = "5.5.34";
+$PHP_5_5_VERSION         = "5.5.35";
 $PHP_5_5_DATE            = "28 Apr 2016";
 $PHP_5_5_MD5     = array(
                        "tar.bz2"       => "8da184329677c955ffff4b3c07401f0d",
