@@ -28,7 +28,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 </ul></li>
 <li>Fileinfo:
 <ul>
-  <li><?php bugfix(71527); ?> (Buffer over-write in finfo_open with malformed magic file).</li>
+  <li><?php bugfix(71527); ?> (Buffer over-write in finfo_open with malformed magic file). (CVE-2015-8865)</li>
 </ul></li>
 <li>Mbstring:
 <ul>
@@ -64,7 +64,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 <b><?php release_date('31-Mar-2016'); ?></b>
 <ul><li>Fileinfo:
 <ul>
-  <li><?php bugfix(71527); ?> (Buffer over-write in finfo_open with malformed magic file).</li>
+  <li><?php bugfix(71527); ?> (Buffer over-write in finfo_open with malformed magic file). (CVE-2015-8865)</li>
 </ul></li>
 <li>Mbstring:
 <ul>

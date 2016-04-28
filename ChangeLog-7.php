@@ -42,7 +42,7 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
 </ul></li>
 <li>Fileinfo:
 <ul>
-  <li><?php bugfix(71527); ?> (Buffer over-write in finfo_open with malformed magic file).</li>
+  <li><?php bugfix(71527); ?> (Buffer over-write in finfo_open with malformed magic file). (CVE-2015-8865)</li>
 </ul></li>
 <li>libxml:
 <ul>
