@@ -68,7 +68,7 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
 <ul>
   <li><?php bugfix(71625); ?> (Crash in php7.dll with bad phar filename).</li>
   <li><?php bugfix(71317); ?> (PharData fails to open specific file).</li>
-  <li><?php bugfix(71860); ?> (Invalid memory write in phar on filename with \0 in name).</li>
+  <li><?php bugfix(71860); ?> (Invalid memory write in phar on filename with \0 in name). (CVE-2016-4072)</li>
 </ul></li>
 <li>phpdbg:
 <ul>

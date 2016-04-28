@@ -37,7 +37,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 <li>ODBC:
 <ul>
   <li><?php bugfix(47803); ?>, <?php bugl(69526); ?> (Executing prepared statements is succesfull only for the first two statements).</li>
-  <li><?php bugfix(71860); ?> (Invalid memory write in phar on filename with \0 in name).</li>
+  <li><?php bugfix(71860); ?> (Invalid memory write in phar on filename with \0 in name). (CVE-2016-4072)</li>
 </ul></li>
 <li>PDO_DBlib:
 <ul>
@@ -72,7 +72,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 </ul></li>
 <li>ODBC:
 <ul>
-  <li><?php bugfix(71860); ?> (Invalid memory write in phar on filename with \0 in name).</li>
+  <li><?php bugfix(71860); ?> (Invalid memory write in phar on filename with \0 in name). (CVE-2016-4072)</li>
 </ul></li>
 <li>SNMP:
 <ul>
