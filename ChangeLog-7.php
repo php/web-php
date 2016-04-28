@@ -225,6 +225,7 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
 <li>Phar:
 <ul>
   <li><?php bugfix(71354); ?> (Heap corruption in tar/zip/phar parser). (CVE-2016-4342)</li>
+  <li><?php bugfix(71331); ?> (Uninitialized pointer in phar_make_dirstream()). (CVE-2016-4343)</li>
   <li><?php bugfix(71391); ?> (NULL Pointer Dereference in phar_tar_setupmetadata()).</li>
   <li><?php bugfix(71488); ?> (Stack overflow when decompressing tar archives). (CVE-2016-2554)</li>
 </ul></li>
