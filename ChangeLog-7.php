@@ -80,7 +80,7 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
 </ul></li>
 <li>SNMP:
 <ul>
-  <li><?php bugfix(71704); ?> (php_snmp_error() Format String Vulnerability).</li>
+  <li><?php bugfix(71704); ?> (php_snmp_error() Format String Vulnerability). (CVE-2016-4071)</li>
 </ul></li>
 <li>SPL:
 <ul>
