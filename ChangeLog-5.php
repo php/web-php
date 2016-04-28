@@ -7,6 +7,32 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 ?>
 
 <h1>PHP 5 ChangeLog</h1>
+<section class="version" id="5.5.35"><!-- {{{ 5.5.35 -->
+<h3>Version 5.5.35</h3>
+<b><?php release_date('28-Apr-2016'); ?></b>
+<ul><li>BCMath:
+<ul>
+  <li><?php bugfix(72093); ?> (bcpowmod accepts negative scale and corrupts _one_ definition).</li>
+</ul></li>
+<li>Exif:
+<ul>
+  <li><?php bugfix(72094); ?> (Out of bounds heap read access in exif header processing).</li>
+</ul></li>
+<li>GD:
+<ul>
+  <li><?php bugfix(71912); ?> (libgd: signedness vulnerability).</li>
+</ul></li>
+<li>Intl:
+<ul>
+  <li><?php bugfix(72061); ?> (Out-of-bounds reads in zif_grapheme_stripos with negative offset).</li>
+</ul></li>
+<li>XML:
+<ul>
+  <li><?php bugfix(72099); ?> (xml_parse_into_struct segmentation fault).</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
 <section class="version" id="5.6.20"><!-- {{{ 5.6.20 -->
 <h3>Version 5.6.20</h3>
 <b><?php release_date('31-Mar-2016'); ?></b>
