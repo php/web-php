@@ -7,6 +7,121 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
 
 <h1>PHP 7 ChangeLog</h1>
 
+<section class="version" id="7.0.6"><!-- {{{ 7.0.6 -->
+<h3>Version 7.0.6</h3>
+<b><?php release_date('28-Apr-2016'); ?></b>
+<ul><li>Core:
+<ul>
+  <li><?php bugfix(71930); ?> (_zval_dtor_func: Assertion `(arr)-&gt;gc.refcount &lt;= 1' failed).</li>
+  <li><?php bugfix(71922); ?> (Crash on assert(new class{})).</li>
+  <li><?php bugfix(71914); ?> (Reference is lost in "switch").</li>
+  <li><?php bugfix(71871); ?> (Interfaces allow final and abstract functions).</li>
+  <li><?php bugfix(71859); ?> (zend_objects_store_call_destructors operates on realloced memory, crashing).</li>
+  <li><?php bugfix(71841); ?> (EG(error_zval) is not handled well).</li>
+  <li><?php bugfix(71750); ?> (Multiple Heap Overflows in php_raw_url_encode/ php_url_encode).</li>
+  <li><?php bugfix(71731); ?> (Null coalescing operator and ArrayAccess).</li>
+  <li><?php bugfix(71609); ?> (Segmentation fault on ZTS with gethostbyname).</li>
+  <li><?php bugfix(71428); ?> (inheritance and allow_null).</li>
+  <li><?php bugfix(71414); ?> (Inheritance, traits and interfaces).</li>
+  <li><?php bugfix(71359); ?> (Null coalescing operator and magic).</li>
+  <li><?php bugfix(71334); ?> (Cannot access array keys while uksort()).</li>
+  <li><?php bugfix(69659); ?> (ArrayAccess, isset() and the offsetExists method).</li>
+  <li><?php bugfix(69537); ?> (__debugInfo with empty string for key gives error).</li>
+  <li><?php bugfix(62059); ?> (ArrayObject and isset are not friends).</li>
+  <li><?php bugfix(71980); ?> (Decorated/Nested Generator is Uncloseable in Finally).</li>
+</ul></li>
+<li>BCmath:
+<ul>
+  <li><?php bugfix(72093); ?> (bcpowmod accepts negative scale and corrupts _one_ definition).</li>
+</ul></li>
+<li>Curl:
+<ul>
+  <li><?php bugfix(71831); ?> (CURLOPT_NOPROXY applied as long instead of string).</li>
+</ul></li>
+<li>Date:
+<ul>
+  <li><?php bugfix(71889); ?> (DateInterval::format Segmentation fault).</li>
+</ul></li>
+<li>EXIF:
+<ul>
+  <li><?php bugfix(72094); ?> (Out of bounds heap read access in exif header processing).</li>
+</ul></li>
+<li>GD:
+<ul>
+  <li><?php bugfix(71912); ?> (libgd: signedness vulnerability). (CVE-2016-3074)</li>
+</ul></li>
+<li>Intl:
+<ul>
+  <li><?php bugfix(71516); ?> (IntlDateFormatter looses locale if pattern is set via constructor).</li>
+  <li><?php bugfix(70455); ?> (Missing constant: IntlChar::NO_NUMERIC_VALUE).</li>
+  <li><?php bugfix(70451); ?>, #70452 (Inconsistencies in return values of IntlChar methods).</li>
+  <li><?php bugfix(68893); ?> (Stackoverflow in datefmt_create).</li>
+  <li><?php bugfix(66289); ?> (Locale::lookup incorrectly returns en or en_US if locale is empty).</li>
+  <li><?php bugfix(70484); ?> (selectordinal doesn't work with named parameters).</li>
+  <li><?php bugfix(72061); ?> (Out-of-bounds reads in zif_grapheme_stripos with negative offset).</li>
+</ul></li>
+<li>ODBC:
+<ul>
+  <li><?php bugfix(63171); ?> (Script hangs after max_execution_time).</li>
+</ul></li>
+<li>Opcache:
+<ul>
+  <li><?php bugfix(71843); ?> (null ptr deref ZEND_RETURN_SPEC_CONST_HANDLER).</li>
+</ul></li>
+<li>PDO:
+<ul>
+  <li><?php bugfix(52098); ?> (Own PDOStatement implementation ignore __call()).</li>
+  <li><?php bugfix(71447); ?> (Quotes inside comments not properly handled).</li>
+</ul></li>
+<li>PDO_DBlib:
+<ul>
+  <li><?php bugfix(71943); ?> (dblib_handle_quoter needs to allocate an extra byte).</li>
+  <li>Add DBLIB-specific attributes for controlling timeouts.</li>
+</ul></li>
+<li>PDO_pgsql:
+<ul>
+  <li><?php bugfix(62498); ?> (pdo_pgsql inefficient when getColumnMeta() is used).</li>
+</ul></li>
+<li>Postgres:
+<ul>
+  <li><?php bugfix(71820); ?> (pg_fetch_object binds parameters before call constructor).</li>
+  <li><?php bugfix(71998); ?> (Function pg_insert does not insert when column type = inet).</li>
+</ul></li>
+<li>SOAP:
+<ul>
+  <li><?php bugfix(71986); ?> (Nested foreach assign-by-reference creates broken variables).</li>
+</ul></li>
+<li>SPL:
+<ul>
+  <li><?php bugfix(71838); ?> (Deserializing serialized SPLObjectStorage-Object can't access properties in PHP).</li>
+  <li><?php bugfix(71735); ?> (Double-free in SplDoublyLinkedList::offsetSet).</li>
+  <li><?php bugfix(67582); ?> (Cloned SplObjectStorage with overwritten getHash fails offsetExists()).</li>
+  <li><?php bugfix(52339); ?> (SPL autoloader breaks class_exists()).</li>
+</ul></li>
+<li>Standard:
+<ul>
+  <li><?php bugfix(72116); ?> (array_fill optimization breaks implementation).</li>
+  <li><?php bugfix(71995); ?> (Returning the same var twice from __sleep() produces broken serialized data).</li>
+  <li><?php bugfix(71940); ?> (Unserialize crushes on restore object reference).</li>
+  <li><?php bugfix(71969); ?> (str_replace returns an incorrect resulting array after a foreach by reference).</li>
+  <li><?php bugfix(71891); ?> (header_register_callback() and register_shutdown_function()).</li>
+  <li><?php bugfix(71884); ?> (Null pointer deref (segfault) in stream_context_get_default).</li>
+  <li><?php bugfix(71840); ?> (Unserialize accepts wrongly data).</li>
+  <li><?php bugfix(71837); ?> (Wrong arrays behaviour).</li>
+  <li><?php bugfix(71827); ?> (substr_replace bug, string length).</li>
+  <li><?php bugfix(67512); ?> (php_crypt() crashes if crypt_r() does not exist or _REENTRANT is not defined).</li>
+</ul></li>
+<li>XML:
+<ul>
+  <li><?php bugfix(72099); ?> (xml_parse_into_struct segmentation fault).</li>
+</ul></li>
+<li>Zip:
+<ul>
+  <li><?php bugfix(71923); ?> (integer overflow in ZipArchive::getFrom*). (CVE-2016-3078)</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
 <section class="version" id="7.0.5"><!-- {{{ 7.0.5 -->
 <h3>Version 7.0.5</h3>
 <b><?php release_date('31-Mar-2016'); ?></b>
