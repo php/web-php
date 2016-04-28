@@ -97,6 +97,7 @@ function blacklisted($email) {
 	'europsychiatrysummit',
 	'antibodies',
 	'graduatecentral',
+	'Gunter.joosen@telenet.be',
     );
     foreach ($mosquitoes as $m) {
         if (preg_match('/'.preg_quote($m, '/').'/i',$email)) return true;
