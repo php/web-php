@@ -1590,7 +1590,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 </ul></li>
 <li>LIBXML:
 <ul>
-  <li><?php bugfix(64938); ?> (libxml_disable_entity_loader setting is shared between threads).</li>
+  <li><?php bugfix(64938); ?> (libxml_disable_entity_loader setting is shared between threads). (CVE-2015-8866)</li>
 </ul></li>
 <li>Mysqli:
 <ul>
@@ -1669,7 +1669,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 </ul></li>
 <li>Libxml:
 <ul>
-  <li><?php bugfix(64938); ?> (libxml_disable_entity_loader setting is shared between threads).</li>
+  <li><?php bugfix(64938); ?> (libxml_disable_entity_loader setting is shared between threads). (CVE-2015-8866)</li>
 </ul></li>
 <li>PDO_mysql:
 <ul>
