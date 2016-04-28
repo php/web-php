@@ -113,7 +113,7 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
   <li><?php bugfix(71485); ?> (Return typehint on internal func causes Fatal error when it throws exception).</li>
   <li><?php bugfix(71529); ?> (Variable references on array elements don't work when using count).</li>
   <li><?php bugfix(71601); ?> (finally block not executed after yield from).</li>
-  <li><?php bugfix(71637); ?> (Multiple Heap Overflow due to integer overflows in xml/filter_url/addcslashes).</li>
+  <li><?php bugfix(71637); ?> (Multiple Heap Overflow due to integer overflows in xml/filter_url/addcslashes). (CVE-2016-4344, CVE-2016-4345, CVE-2016-4346)</li>
 </ul></li>
 <li>CLI server:
 <ul>
