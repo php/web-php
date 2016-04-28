@@ -762,7 +762,7 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
   <li><?php bugfix(70395); ?> (Missing ARG_INFO for openssl_seal()).</li>
   <li><?php bugfix(60632); ?> (openssl_seal fails with AES).</li>
   <li>Implemented FR <?php bugl(70438); ?> (Add IV parameter for openssl_seal and openssl_open).</li>
-  <li><?php bugfix(70014); ?> (openssl_random_pseudo_bytes() is not cryptographically secure).</li>
+  <li><?php bugfix(70014); ?> (openssl_random_pseudo_bytes() is not cryptographically secure). (CVE-2015-8867)</li>
   <li><?php bugfix(69882); ?> (OpenSSL error "key values mismatch" after openssl_pkcs12_read with extra cert).</li>
   <li>Added "alpn_protocols" SSL context option allowing encrypted client/server streams to negotiate alternative protocols using the ALPN TLS extension when built against OpenSSL 1.0.2 or newer. Negotiated protocol information is accessible through stream_get_meta_data() output.</li>
   <li>Removed "CN_match" and "SNI_server_name" SSL context options. Use automatic detection or the "peer_name" option instead.</li>
