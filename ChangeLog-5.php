@@ -34,7 +34,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 <li>GD:
 <ul>
   <li><?php bugfix(71952); ?> (Corruption inside imageaffinematrixget).</li>
-  <li><?php bugfix(71912); ?> (libgd: signedness vulnerability).</li>
+  <li><?php bugfix(71912); ?> (libgd: signedness vulnerability). (CVE-2016-3074)</li>
 </ul></li>
 <li>Intl:
 <ul>
@@ -90,7 +90,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 </ul></li>
 <li>GD:
 <ul>
-  <li><?php bugfix(71912); ?> (libgd: signedness vulnerability).</li>
+  <li><?php bugfix(71912); ?> (libgd: signedness vulnerability). (CVE-2016-3074)</li>
 </ul></li>
 <li>Intl:
 <ul>
