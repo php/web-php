@@ -2617,7 +2617,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
   <li><?php bugfix(67091); ?> (make install fails to install libphp5.so on FreeBSD 10.0).</li>
   <li><?php bugfix(67368); ?> (Memory leak with immediately dereferenced array in class constant).</li>
   <li><?php bugfix(67468); ?> (Segfault in highlight_file()/highlight_string()).</li>
-  <li><?php bugfix(67498); ?> (phpinfo() Type Confusion Information Leak Vulnerability).</li>
+  <li><?php bugfix(67498); ?> (phpinfo() Type Confusion Information Leak Vulnerability). (CVE-2014-4721)</li>
   <li><?php bugfix(67551); ?> (php://input temp file will be located in sys_temp_dir instead of upload_tmp_dir).</li>
   <li><?php bugfix(67169); ?> (array_splice all elements, then []= gives wrong index).</li>
   <li><?php bugfix(67198); ?> (php://input regression).</li>
@@ -3164,7 +3164,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
   <li><?php bugfix(67390); ?> (insecure temporary file use in the configure script). (CVE-2014-3981)</li>
   <li><?php bugfix(67399); ?> (putenv with empty variable may lead to crash).</li>
   <li><?php bugfix(67492); ?> (unserialize() SPL ArrayObject / SPLObjectStorage Type Confusion) (CVE-2014-3515).</li>
-  <li><?php bugfix(67498); ?> (phpinfo() Type Confusion Information Leak Vulnerability).</li>
+  <li><?php bugfix(67498); ?> (phpinfo() Type Confusion Information Leak Vulnerability). (CVE-2014-4721)</li>
 </li>
 </ul></li>
 <li>COM:
@@ -3326,7 +3326,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
   <li><?php bugfix(67390); ?> (insecure temporary file use in the configure script).
     (CVE-2014-3981).</li>
   <li><?php bugfix(67399); ?> (putenv with empty variable may lead to crash).</li>
-  <li><?php bugfix(67498); ?> (phpinfo() Type Confusion Information Leak Vulnerability).</li>
+  <li><?php bugfix(67498); ?> (phpinfo() Type Confusion Information Leak Vulnerability). (CVE-2014-4721)</li>
   <li>Fixed BC break introduced by patch for bug <?php bugl(67072); ?>.</li>
 </ul></li>
 <li>Date:
@@ -3395,7 +3395,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
   <li><?php bugfix(66622); ?> (Closures do not correctly capture the late bound class (static::) in some cases).</li>
   <li><?php bugfix(67390); ?> (insecure temporary file use in the configure script) (CVE-2014-3981).</li>
   <li><?php bugfix(67399); ?> (putenv with empty variable may lead to crash).</li>
-  <li><?php bugfix(67498); ?> (phpinfo() Type Confusion Information Leak Vulnerability).</li>
+  <li><?php bugfix(67498); ?> (phpinfo() Type Confusion Information Leak Vulnerability). (CVE-2014-4721)</li>
 </ul></li>
 <li>CLI server:
 <ul>
