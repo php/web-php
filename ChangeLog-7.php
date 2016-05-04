@@ -21,7 +21,6 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
   <li><?php bugfix(71750); ?> (Multiple Heap Overflows in php_raw_url_encode/ php_url_encode).</li>
   <li><?php bugfix(71731); ?> (Null coalescing operator and ArrayAccess).</li>
   <li><?php bugfix(71609); ?> (Segmentation fault on ZTS with gethostbyname).</li>
-  <li><?php bugfix(71428); ?> (inheritance and allow_null).</li>
   <li><?php bugfix(71414); ?> (Inheritance, traits and interfaces).</li>
   <li><?php bugfix(71359); ?> (Null coalescing operator and magic).</li>
   <li><?php bugfix(71334); ?> (Cannot access array keys while uksort()).</li>
