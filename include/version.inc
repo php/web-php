@@ -19,8 +19,8 @@
  */
 
 /* PHP 7.0 Release */
-$PHP_7_0_RC = false; // Current RC version (e.g., '5.6.7RC1') or false
-$PHP_7_0_RC_DATE = '14 Apr 2016';
+$PHP_7_0_RC = "7.0.7RC1"; // Current RC version (e.g., '5.6.7RC1') or false
+$PHP_7_0_RC_DATE = '12 May 2016';
 
 $PHP_7_0_VERSION         = "7.0.6";
 $PHP_7_0_DATE            = "28 Apr 2016";
