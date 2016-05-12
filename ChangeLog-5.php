@@ -3053,8 +3053,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 </ul></li>
 <li>Fileinfo:
 <ul>
-  <li><?php bugfix(67705); ?> (extensive backtracking in rule regular expression).
-    (CVE-2014-3538).</li>
+  <li><?php bugfix(67705); ?> (extensive backtracking in rule regular expression). (CVE-2014-3538)</li>
   <li><?php bugfix(67716); ?> (Segfault in cdf.c). (CVE-2014-3587).</li>
 </ul></li>
 <li>FPM:
@@ -3113,7 +3112,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 </ul></li>
 <li>Fileinfo:
 <ul>
-  <li><?php bugfix(67705); ?> (extensive backtracking in rule regular expression) (CVE-2014-3538).</li>
+  <li><?php bugfix(67705); ?> (extensive backtracking in rule regular expression). (CVE-2014-3538)</li>
   <li><?php bugfix(67716); ?> (Segfault in cdf.c) (CVE-2014-3587).</li>
 </ul></li>
 <li>GD:
