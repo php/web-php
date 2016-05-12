@@ -3062,8 +3062,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 </ul></li>
 <li>GD:
 <ul>
-  <li><?php bugfix(66901); ?> (php-gd 'c_color' NULL pointer dereference).
-    (CVE-2014-2497).</li>
+  <li><?php bugfix(66901); ?> (php-gd 'c_color' NULL pointer dereference). (CVE-2014-2497)</li>
   <li><?php bugfix(67730); ?> (Null byte injection possible with imagexxx functions).
     (CVE-2014-5120).</li>
 </ul></li>
@@ -3117,7 +3116,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 </ul></li>
 <li>GD:
 <ul>
-  <li><?php bugfix(66901); ?> (php-gd 'c_color' NULL pointer dereference) (CVE-2014-2497).</li>
+  <li><?php bugfix(66901); ?> (php-gd 'c_color' NULL pointer dereference). (CVE-2014-2497)</li>
   <li><?php bugfix(67730); ?> (Null byte injection possible with imagexxx functions) (CVE-2014-5120).</li>
 </ul></li>
 <li>Milter:
