@@ -3700,7 +3700,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 </ul></li>
 <li>Fileinfo:
 <ul>
-  <li><?php bugfix(66946); ?> (fileinfo: extensive backtracking in awk rule regular expression (CVE-2013-7345)).</li>
+  <li><?php bugfix(66946); ?> (fileinfo: extensive backtracking in awk rule regular expression). (CVE-2013-7345)</li>
 </ul></li>
 <li>FPM:
 <ul>
@@ -3763,7 +3763,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 </ul></li>
 <li>Fileinfo:
 <ul>
-  <li><?php bugfix(66946); ?> (fileinfo: extensive backtracking in awk rule regular expression (CVE-2013-7345))</li>
+  <li><?php bugfix(66946); ?> (fileinfo: extensive backtracking in awk rule regular expression). (CVE-2013-7345)</li>
 </ul></li>
 <li>FPM:
 <ul>
