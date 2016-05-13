@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom" xmlns:default="http://php.net/ns/news">
+  <title>ConFoo Vancouver 2016 Calling for Papers</title>
+  <id>http://php.net/archive/2016.php#id2016-05-12-1</id>
+  <published>2016-05-12T20:03:15-04:00</published>
+  <updated>2016-05-12T20:03:15-04:00</updated>
+  <default:finalTeaserDate xmlns="http://php.net/ns/news">2016-06-06</default:finalTeaserDate>
+  <category term="cfp" label="Call for Papers"/>
+  <link href="http://php.net/conferences/index.php#id2016-05-12-1" rel="alternate" type="text/html"/>
+  <default:newsImage xmlns="http://php.net/ns/news" link="https://confoo.ca/en/yvr2016" title="ConFoo December 5-7, 2016 in Vancouver">confoo-2016.png</default:newsImage>
+  <link href="https://confoo.ca/en/yvr2016" rel="via" type="text/html"/>
+  <content type="xhtml">
+    <p>We are happy to open the <a href="https://confoo.ca/en/yvr2016/call-for-papers" target="_blank">call for papers</a> of ConFoo Vancouver 2016! If you are interested in speaking about PHP or other web development topics, please submit until June 6th. We will cover travel and hotel for the speakers who require it.</p>
+
+    <p>ConFoo Vancouver will be held on December 5-7, 2016. For those who are familiar with ConFoo Montreal, that conference will still be running annually in addition to Vancouver. <a href="https://confoo.ca/en/yvr2016" target="_blank">Visit our site</a> to learn more about the event.</p>
+
+    <p>Talks are 35 minutes for the topic and 10 minutes for Q&amp;A, for a total of 45 minutes. We are eagerly expecting your proposals!</p>
+  </content>
+</entry>
