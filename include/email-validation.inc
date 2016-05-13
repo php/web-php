@@ -97,6 +97,9 @@ function blacklisted($email) {
 	'europsychiatrysummit',
 	'antibodies',
 	'graduatecentral',
+	'a@a.com',
+	'@insightconferences.com',
+	'@conferenceseries.com',
     );
     foreach ($mosquitoes as $m) {
         if (preg_match('/'.preg_quote($m, '/').'/i',$email)) return true;
