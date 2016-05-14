@@ -3520,7 +3520,10 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
   <li><?php bugfix(67247); ?> (spl_fixedarray_resize integer overflow).</li>
   <li><?php bugfix(67249); ?> (printf out-of-bounds read).</li>
   <li><?php bugfix(67250); ?> (iptcparse out-of-bounds read).</li>
-  <li><?php bugfix(67252); ?> (convert_uudecode out-of-bounds read). (Stas) - Fileinfo:</li>
+  <li><?php bugfix(67252); ?> (convert_uudecode out-of-bounds read). (Stas)</li>
+</ul></li>
+<li>Fileinfo:
+<ul>
   <li><?php bugfix(66307); ?> (Fileinfo crashes with powerpoint files).</li>
   <li><?php bugfix(67327); ?> (fileinfo: CDF infinite loop in nelements DoS). (CVE-2014-0238)</li>
   <li><?php bugfix(67328); ?> (fileinfo: fileinfo: numerous file_printf calls resulting in performance degradation). (CVE-2014-0237)</li>
