@@ -4746,6 +4746,65 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 </ul>
 <!-- }}} --></section>
 
+<section class="version" id="5.4.17"><!-- {{{ 5.4.17 -->
+<h3>Version 5.4.17</h3>
+<?php release_date('04-Jul-2013'); ?>
+<ul><li>Core:
+<ul>
+  <li><?php bugfix(64988); ?> (Class loading order affects E_STRICT warning).</li>
+  <li><?php bugfix(64966); ?> (segfault in zend_do_fcall_common_helper_SPEC).</li>
+  <li><?php bugfix(64960); ?> (Segfault in gc_zval_possible_root).</li>
+  <li><?php bugfix(64936); ?> (doc comments picked up from previous scanner run).</li>
+  <li><?php bugfix(64934); ?> (Apache2 TS crash with get_browser()).</li>
+  <li><?php bugfix(64166); ?> (quoted-printable-encode stream filter incorrectly discarding whitespace).</li>
+</ul></li>
+<li>DateTime:
+<ul>
+  <li><?php bugfix(53437); ?> (Crash when using unserialized DatePeriod instance).</li>
+</ul></li>
+<li>FPM:
+<ul>
+  <li><?php bugfix(64915); ?> (error_log ignored when daemonize=0).</li>
+  <li><?php implemented(64764); ?> (add support for FPM init.d script).</li>
+</ul></li>
+<li>PDO:
+<ul>
+  <li><?php bugfix(63176); ?> (Segmentation fault when instantiate 2 persistent PDO to the same db server).</li>
+</ul></li>
+<li>PDO_DBlib:
+<ul>
+  <li><?php bugfix(63638); ?> (Cannot connect to SQL Server 2008 with PDO dblib).</li>
+  <li><?php bugfix(64338); ?> (pdo_dblib can't connect to Azure SQL).</li>
+  <li><?php bugfix(64808); ?> (FreeTDS PDO getColumnMeta on a prepared but not executed statement crashes).</li>
+</ul></li>
+<li>PDO_firebird:
+<ul>
+  <li><?php bugfix(64037); ?> (Firebird return wrong value for numeric field).</li>
+  <li><?php bugfix(62024); ?> (Cannot insert second row with null using parametrized query).</li>
+</ul></li>
+<li>PDO_mysql:
+<ul>
+  <li><?php bugfix(48724); ?> (getColumnMeta() doesn't return native_type for BIT, TINYINT and YEAR).</li>
+</ul></li>
+<li>PDO_pgsql:
+<ul>
+  <li><?php bugfix(64949); ?> (Buffer overflow in _pdo_pgsql_error).</li>
+</ul></li>
+<li>pgsql:
+<ul>
+  <li><?php bugfix(64609); ?> (pg_convert enum type support).</li>
+</ul></li>
+<li>Readline:
+<ul>
+  <li>Implement FR <?php bugl(55694); ?> (Expose additional readline variable to prevent default filename completion).</li>
+</ul></li>
+<li>SPL:
+<ul>
+  <li><?php bugfix(64997); ?> (Segfault while using RecursiveIteratorIterator on 64-bits systems).</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
 <section class="version" id="5.5.0"><!-- {{{ 5.5.0 -->
 <h3>Version 5.5.0</h3>
 <?php release_date('20-Jun-2013'); ?>
@@ -5253,65 +5312,6 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 </ul></li>
 </ul>
 
-<!-- }}} --></section>
-
-<section class="version" id="5.4.17"><!-- {{{ 5.4.17 -->
-<h3>Version 5.4.17</h3>
-<?php release_date('04-Jul-2013'); ?>
-<ul><li>Core:
-<ul>
-  <li><?php bugfix(64988); ?> (Class loading order affects E_STRICT warning).</li>
-  <li><?php bugfix(64966); ?> (segfault in zend_do_fcall_common_helper_SPEC).</li>
-  <li><?php bugfix(64960); ?> (Segfault in gc_zval_possible_root).</li>
-  <li><?php bugfix(64936); ?> (doc comments picked up from previous scanner run).</li>
-  <li><?php bugfix(64934); ?> (Apache2 TS crash with get_browser()).</li>
-  <li><?php bugfix(64166); ?> (quoted-printable-encode stream filter incorrectly discarding whitespace).</li>
-</ul></li>
-<li>DateTime:
-<ul>
-  <li><?php bugfix(53437); ?> (Crash when using unserialized DatePeriod instance).</li>
-</ul></li>
-<li>FPM:
-<ul>
-  <li><?php bugfix(64915); ?> (error_log ignored when daemonize=0).</li>
-  <li><?php implemented(64764); ?> (add support for FPM init.d script).</li>
-</ul></li>
-<li>PDO:
-<ul>
-  <li><?php bugfix(63176); ?> (Segmentation fault when instantiate 2 persistent PDO to the same db server).</li>
-</ul></li>
-<li>PDO_DBlib:
-<ul>
-  <li><?php bugfix(63638); ?> (Cannot connect to SQL Server 2008 with PDO dblib).</li>
-  <li><?php bugfix(64338); ?> (pdo_dblib can't connect to Azure SQL).</li>
-  <li><?php bugfix(64808); ?> (FreeTDS PDO getColumnMeta on a prepared but not executed statement crashes).</li>
-</ul></li>
-<li>PDO_firebird:
-<ul>
-  <li><?php bugfix(64037); ?> (Firebird return wrong value for numeric field).</li>
-  <li><?php bugfix(62024); ?> (Cannot insert second row with null using parametrized query).</li>
-</ul></li>
-<li>PDO_mysql:
-<ul>
-  <li><?php bugfix(48724); ?> (getColumnMeta() doesn't return native_type for BIT, TINYINT and YEAR).</li>
-</ul></li>
-<li>PDO_pgsql:
-<ul>
-  <li><?php bugfix(64949); ?> (Buffer overflow in _pdo_pgsql_error).</li>
-</ul></li>
-<li>pgsql:
-<ul>
-  <li><?php bugfix(64609); ?> (pg_convert enum type support).</li>
-</ul></li>
-<li>Readline:
-<ul>
-  <li>Implement FR <?php bugl(55694); ?> (Expose additional readline variable to prevent default filename completion).</li>
-</ul></li>
-<li>SPL:
-<ul>
-  <li><?php bugfix(64997); ?> (Segfault while using RecursiveIteratorIterator on 64-bits systems).</li>
-</ul></li>
-</ul>
 <!-- }}} --></section>
 
 <section class="version" id="5.4.16"><!-- {{{ 5.4.16 -->
