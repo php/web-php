@@ -4113,6 +4113,17 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 </ul>
 <!-- }}} --></section>
 
+<section class="version" id="5.3.28"><!-- {{{ 5.3.28 -->
+<h3>Version 5.3.28</h3>
+<?php release_date('12-Dec-2013'); ?>
+<ul><li>Openssl:
+<ul>
+  <li>Fixed handling null bytes in subjectAltName (CVE-2013-4248).</li>
+  <li>Fixed memory corruption in openssl_x509_parse() (CVE-2013-6420). (Stefan Esser).</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
 <section class="version" id="5.5.6"><!-- {{{ 5.5.6 -->
 <h3>Version 5.5.6</h3>
 <?php release_date('14-Nov-2013'); ?>
@@ -4693,17 +4704,6 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 <li>CGI/FastCGI SAPI:
 <ul>
   <li>Added PHP_FCGI_BACKLOG, overrides the default listen backlog.</li>
-</ul></li>
-</ul>
-<!-- }}} --></section>
-
-<section class="version" id="5.3.28"><!-- {{{ 5.3.28 -->
-<h3>Version 5.3.28</h3>
-<?php release_date('12-Dec-2013'); ?>
-<ul><li>Openssl:
-<ul>
-  <li>Fixed handling null bytes in subjectAltName (CVE-2013-4248).</li>
-  <li>Fixed memory corruption in openssl_x509_parse() (CVE-2013-6420). (Stefan Esser).</li>
 </ul></li>
 </ul>
 <!-- }}} --></section>
