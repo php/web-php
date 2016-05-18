@@ -112,7 +112,7 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
 </ul></li>
 <li>XML:
 <ul>
-  <li><?php bugfix(72099); ?> (xml_parse_into_struct segmentation fault).</li>
+  <li><?php bugfix(72099); ?> (xml_parse_into_struct segmentation fault). (CVE-2016-4539)</li>
 </ul></li>
 <li>Zip:
 <ul>
