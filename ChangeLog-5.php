@@ -17,7 +17,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 </ul></li>
 <li>BCmath:
 <ul>
-  <li><?php bugfix(72093); ?> (bcpowmod accepts negative scale and corrupts _one_ definition).</li>
+  <li><?php bugfix(72093); ?> (bcpowmod accepts negative scale and corrupts _one_ definition). (CVE-2016-4537, CVE-2016-4538)</li>
 </ul></li>
 <li>Curl:
 <ul>
@@ -82,7 +82,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 <b><?php release_date('28-Apr-2016'); ?></b>
 <ul><li>BCMath:
 <ul>
-  <li><?php bugfix(72093); ?> (bcpowmod accepts negative scale and corrupts _one_ definition).</li>
+  <li><?php bugfix(72093); ?> (bcpowmod accepts negative scale and corrupts _one_ definition). (CVE-2016-4537, CVE-2016-4538)</li>
 </ul></li>
 <li>Exif:
 <ul>
