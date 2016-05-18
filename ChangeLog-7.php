@@ -57,7 +57,7 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
   <li><?php bugfix(68893); ?> (Stackoverflow in datefmt_create).</li>
   <li><?php bugfix(66289); ?> (Locale::lookup incorrectly returns en or en_US if locale is empty).</li>
   <li><?php bugfix(70484); ?> (selectordinal doesn't work with named parameters).</li>
-  <li><?php bugfix(72061); ?> (Out-of-bounds reads in zif_grapheme_stripos with negative offset).</li>
+  <li><?php bugfix(72061); ?> (Out-of-bounds reads in zif_grapheme_stripos with negative offset). (CVE-2016-4540, CVE-2016-4541)</li>
 </ul></li>
 <li>ODBC:
 <ul>
