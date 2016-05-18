@@ -43,7 +43,7 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
 </ul></li>
 <li>EXIF:
 <ul>
-  <li><?php bugfix(72094); ?> (Out of bounds heap read access in exif header processing).</li>
+  <li><?php bugfix(72094); ?> (Out of bounds heap read access in exif header processing). (CVE-2016-4542, CVE-2016-4543, CVE-2016-4544)</li>
 </ul></li>
 <li>GD:
 <ul>
