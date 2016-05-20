@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom" xmlns:default="http://php.net/ns/news">
+  <title>Announcing PHPConf.Asia 2016. CFP Opens Now!</title>
+  <id>http://php.net/archive/2016.php#id2016-05-02-2</id>
+  <published>2016-05-02T00:28:11+08:00</published>
+  <updated>2016-05-02T00:28:11+08:00</updated>
+  <default:finalTeaserDate xmlns="http://php.net/ns/news">2016-08-22</default:finalTeaserDate>
+  <category term="conferences" label="Conference announcement"/>
+  <category term="cfp" label="Call for Papers"/>
+  <link href="http://php.net/conferences/index.php#id2016-05-02-2" rel="alternate" type="text/html"/>
+  <default:newsImage xmlns="http://php.net/ns/news" link="https://2016.phpconf.asia" title="PHPConf.Asia 2016">phpconfasia-logo.png</default:newsImage>
+  <link href="https://2016.phpconf.asia" rel="via" type="text/html"/>
+  <content type="xhtml">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+     <p><strong>Announcing <a href="http://2016.phpconf.asia" target="_blank">PHPConf.Asia 2016</a> - The Pan-Asian PHP Conference - CFP Opens Now</strong></p>
+     <p>The second pan-Asian PHP conference will take place between 22<sup>nd</sup> and 24<sup>th</sup> August 2016 in <a href="https://en.wikipedia.org/wiki/Singapore" target="_blank">Singapore</a> - the Garden City of the East! Monday, 22<sup>nd</sup> August 2016 will be a <strong>Tutorial</strong> day. Followed by 2 days of <strong>Conference</strong>.</p>
+     <p>Come and meet with the fastest growing PHP communities in Asia. More than 300 attendees are expected in this single track conference.</p>
+     <p><a href="https://cfp.phpconf.asia/" target="_blank">CFP Opens Now!</a>. Hop over to <a href="http://2016.phpconf.asia" target="_blank">http://2016.phpconf.asia</a> for more details.</p>
+    </div>
+  </content>
+</entry>
