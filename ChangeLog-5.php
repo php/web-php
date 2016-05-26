@@ -13,8 +13,8 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 <ul><li>Core:
 <ul>
   <li><?php bugfix(72172); ?> (zend_hex_strtod should not use strlen).</li>
-  <li><?php bugfix(72114); ?> (Integer underflow / arbitrary null write in fread/gzread).</li>
-  <li><?php bugfix(72135); ?> (Integer Overflow in php_html_entities).</li>
+  <li><?php bugfix(72114); ?> (Integer underflow / arbitrary null write in fread/gzread). (CVE-2016-5096)</li>
+  <li><?php bugfix(72135); ?> (Integer Overflow in php_html_entities). (CVE-2016-5094)</li>
 </ul></li>
 <li>GD:
 <ul>
@@ -37,8 +37,8 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 <b><?php release_date('26-May-2016'); ?></b>
 <ul><li>Core:
 <ul>
-  <li><?php bugfix(72114); ?> (Integer underflow / arbitrary null write in fread/gzread).</li>
-  <li><?php bugfix(72135); ?> (Integer Overflow in php_html_entities).</li>
+  <li><?php bugfix(72114); ?> (Integer underflow / arbitrary null write in fread/gzread). (CVE-2016-5096)</li>
+  <li><?php bugfix(72135); ?> (Integer Overflow in php_html_entities). (CVE-2016-5094)</li>
 </ul></li>
 <li>GD:
 <ul>
