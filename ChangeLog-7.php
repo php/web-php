@@ -7,6 +7,99 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
 
 <h1>PHP 7 ChangeLog</h1>
 
+<section class="version" id="7.0.7"><!-- {{{ 7.0.7 -->
+<h3>Version 7.0.7</h3>
+<b><?php release_date('26-May-2016'); ?></b>
+<ul><li>Core:
+<ul>
+  <li><?php bugfix(72162); ?> (use-after-free - error_reporting).</li>
+  <li>Add compiler option to disable special case function calls.</li>
+  <li><?php bugfix(72101); ?> (crash on complex code).</li>
+  <li><?php bugfix(72100); ?> (implode() inserts garbage into resulting string when joins very big integer).</li>
+  <li><?php bugfix(72057); ?> (PHP Hangs when using custom error handler and typehint).</li>
+  <li><?php bugfix(72038); ?> (Function calls with values to a by-ref parameter don't always throw a notice).</li>
+  <li><?php bugfix(71737); ?> (Memory leak in closure with parameter named $this).</li>
+  <li><?php bugfix(72059); ?> (?? is not allowed on constant expressions).</li>
+  <li><?php bugfix(72159); ?> (Imported Class Overrides Local Class Name).</li>
+</ul></li>
+<li>Curl:
+<ul>
+  <li><?php bugfix(68658); ?> (Define CURLE_SSL_CACERT_BADFILE).</li>
+</ul></li>
+<li>DBA:
+<ul>
+  <li><?php bugfix(72157); ?> (use-after-free caused by dba_open).</li>
+</ul></li>
+<li>GD:
+<ul>
+  <li><?php bugfix(72227); ?> (imagescale out-of-bounds read).</li>
+</ul></li>
+<li>Intl:
+<ul>
+<li><?php bugfix(72241) ?> (get_icu_value_internal out-of-bounds read).</li>
+</ul></li>
+<li>JSON:
+<ul>
+  <li><?php bugfix(72069); ?> (Behavior \JsonSerializable different from json_encode).</li>
+</ul></li>
+<li>Mbstring:
+<ul>
+  <li><?php bugfix(72164); ?> (Null Pointer Dereference - mb_ereg_replace).</li>
+</ul></li>
+<li>OCI8:
+<ul>
+  <li><?php bugfix(71600); ?> (oci_fetch_all segfaults when selecting more than eight columns).</li>
+</ul></li>
+<li>Opcache:
+<ul>
+  <li><?php bugfix(72014); ?> (Including a file with anonymous classes multiple times leads to fatal error).</li>
+</ul></li>
+<li>OpenSSL:
+<ul>
+  <li><?php bugfix(72165); ?> (Null pointer dereference - openssl_csr_new).</li>
+</ul></li>
+<li>PCNTL:
+<ul>
+  <li><?php bugfix(72154); ?> (pcntl_wait/pcntl_waitpid array internal structure overwrite).</li>
+</ul></li>
+<li>POSIX:
+<ul>
+  <li><?php bugfix(72133); ?> (php_posix_group_to_array crashes if gr_passwd is NULL).</li>
+</ul></li>
+<li>Postgres:
+<ul>
+  <li><?php bugfix(72028); ?> (pg_query_params(): NULL converts to empty string).</li>
+  <li><?php bugfix(71062); ?> (pg_convert() doesn't accept ISO 8601 for datatype timestamp).</li>
+  <li><?php bugfix(72151); ?> (mysqli_fetch_object changed behaviour).</li>
+</ul></li>
+<li>Reflection:
+<ul>
+  <li><?php bugfix(72174); ?> (ReflectionProperty#getValue() causes __isset call).</li>
+</ul></li>
+<li>Session:
+<ul>
+  <li><?php bugfix(71972); ?> (Cyclic references causing session_start(): Failed to decode session object).</li>
+</ul></li>
+<li>Sockets:
+<ul>
+  <li>Added socket_export_stream() function for getting a stream compatible resource from a socket resource.</li>
+</ul></li>
+<li>SPL:
+<ul>
+  <li><?php bugfix(72051); ?> (The reference in CallbackFilterIterator doesn't work as expected).</li>
+</ul></li>
+<li>SQLite3:
+<ul>
+  <li><?php bugfix(68849); ?> (bindValue is not using the right data type).</li>
+</ul></li>
+<li>Standard:
+<ul>
+  <li><?php bugfix(72075); ?> (Referencing socket resources breaks stream_select).</li>
+  <li><?php bugfix(72031); ?> (array_column() against an array of objects discards all values matching null).</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
 <section class="version" id="7.0.6"><!-- {{{ 7.0.6 -->
 <h3>Version 7.0.6</h3>
 <b><?php release_date('28-Apr-2016'); ?></b>
