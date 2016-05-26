@@ -32,11 +32,11 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
 </ul></li>
 <li>GD:
 <ul>
-  <li><?php bugfix(72227); ?> (imagescale out-of-bounds read).</li>
+  <li><?php bugfix(72227); ?> (imagescale out-of-bounds read). (CVE-2013-7456)</li>
 </ul></li>
 <li>Intl:
 <ul>
-<li><?php bugfix(72241) ?> (get_icu_value_internal out-of-bounds read).</li>
+  <li><?php bugfix(72241); ?> (get_icu_value_internal out-of-bounds read). (CVE-2016-5093)</li>
 </ul></li>
 <li>JSON:
 <ul>
