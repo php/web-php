@@ -7,6 +7,31 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 ?>
 
 <h1>PHP 5 ChangeLog</h1>
+<section class="version" id="5.6.22"><!-- {{{ 5.6.22 -->
+<h3>Version 5.6.22</h3>
+<b><?php release_date('26-May-2016'); ?></b>
+<ul><li>Core:
+<ul>
+  <li><?php bugfix(72172); ?> (zend_hex_strtod should not use strlen).</li>
+  <li><?php bugfix(72114); ?> (Integer underflow / arbitrary null write in fread/gzread).</li>
+  <li><?php bugfix(72135); ?> (Integer Overflow in php_html_entities).</li>
+</ul></li>
+<li>GD:
+<ul>
+  <li><?php bugfix(72227); ?> (imagescale out-of-bounds read).</li>
+</ul></li>
+<li>Intl:
+<ul>
+  <li><?php bugfix(64524); ?> (Add intl.use_exceptions to php.ini-*).</li>
+  <li><?php bugfix(72241); ?> (get_icu_value_internal out-of-bounds read).</li>
+</ul></li>
+<li>Postgres:
+<ul>
+  <li><?php bugfix(72151); ?> (mysqli_fetch_object changed behaviour).</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
 <section class="version" id="5.5.36"><!-- {{{ 5.5.36 -->
 <h3>Version 5.5.36</h3>
 <b><?php release_date('26-May-2016'); ?></b>
