@@ -7,6 +7,29 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 ?>
 
 <h1>PHP 5 ChangeLog</h1>
+<section class="version" id="5.5.36"><!-- {{{ 5.5.36 -->
+<h3>Version 5.5.36</h3>
+<b><?php release_date('26-May-2016'); ?></b>
+<ul><li>Core:
+<ul>
+  <li><?php bugfix(72114); ?> (Integer underflow / arbitrary null write in fread/gzread).</li>
+  <li><?php bugfix(72135); ?> (Integer Overflow in php_html_entities).</li>
+</ul></li>
+<li>GD:
+<ul>
+  <li><?php bugfix(72227); ?> (imagescale out-of-bounds read).</li>
+</ul></li>
+<li>Intl:
+<ul>
+  <li><?php bugfix(72241); ?> (get_icu_value_internal out-of-bounds read).</li>
+</ul></li>
+<li>Phar:
+<ul>
+  <li><?php bugfix(71331); ?> (Uninitialized pointer in phar_make_dirstream()).</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
 <section class="version" id="5.6.21"><!-- {{{ 5.6.21 -->
 <h3>Version 5.6.21</h3>
 <b><?php release_date('28-Apr-2016'); ?></b>
