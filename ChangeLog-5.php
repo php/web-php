@@ -50,7 +50,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 </ul></li>
 <li>Phar:
 <ul>
-  <li><?php bugfix(71331); ?> (Uninitialized pointer in phar_make_dirstream()).</li>
+  <li><?php bugfix(71331); ?> (Uninitialized pointer in phar_make_dirstream()). (CVE-2016-4343)</li>
 </ul></li>
 </ul>
 <!-- }}} --></section>
