@@ -7128,7 +7128,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 <ul>
 <li>Phar
 <ul>
-<li><?php bugfix(61065); ?> (Secunia SA44335)</li>
+<li><?php bugfix(61065); ?> (Secunia SA44335) (CVE-2012-2386)</li>
 </ul></li>
 </ul>
 
