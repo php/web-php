@@ -4671,7 +4671,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 </ul></li>
 <li>XML:
 <ul>
-  <li><?php bugfix(65236); ?> (heap corruption in xml parser, CVE-2013-4113).</li>
+  <li><?php bugfix(65236); ?> (heap corruption in xml parser). (CVE-2013-4113)</li>
 </ul></li>
 </ul>
 <!-- }}} --></section>
@@ -4792,7 +4792,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 </ul></li>
 <li>XML:
 <ul>
-  <li><?php bugfix(65236); ?> (heap corruption in xml parser).</li>
+  <li><?php bugfix(65236); ?> (heap corruption in xml parser). (CVE-2013-4113)</li>
 </ul></li>
 </ul>
 <!-- }}} --></section>
