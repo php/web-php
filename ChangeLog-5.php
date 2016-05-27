@@ -7023,7 +7023,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 <ul>
 <li>PDO
 <ul>
-  <li><?php bugfix(61755); ?> (A parsing bug in the prepared statements can lead to access violations)</li>
+  <li><?php bugfix(61755); ?> (A parsing bug in the prepared statements can lead to access violations). (CVE-2012-3450)</li>
 </ul></li>
 </ul>
 
@@ -7121,7 +7121,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 <ul>
 <li>PDO
 <ul>
-  <li><?php bugfix(61755); ?> (A parsing bug in the prepared statements can lead to access violations)</li>
+  <li><?php bugfix(61755); ?> (A parsing bug in the prepared statements can lead to access violations). (CVE-2012-3450)</li>
 </ul></li>
 </ul>
 
