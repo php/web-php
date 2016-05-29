@@ -502,7 +502,7 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
 </ul></li>
 <li>FPM:
 <ul>
-  <li><?php bugfix(70755); ?> (fpm_log.c memory leak and buffer overflow).</li>
+  <li><?php bugfix(70755); ?> (fpm_log.c memory leak and buffer overflow). (CVE-2016-5114)</li>
 </ul></li>
 <li>GD:
 <ul>

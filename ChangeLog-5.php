@@ -401,7 +401,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 </ul></li>
 <li>FPM:
 <ul>
-  <li><?php bugfix(70755); ?> (fpm_log.c memory leak and buffer overflow).</li>
+  <li><?php bugfix(70755); ?> (fpm_log.c memory leak and buffer overflow). (CVE-2016-5114)</li>
 </ul></li>
 <li>GD:
 <ul>
@@ -440,7 +440,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 <b><?php release_date('07-Jan-2016'); ?></b>
 <ul><li>FPM:
 <ul>
-  <li><?php bugfix(70755); ?> (fpm_log.c memory leak and buffer overflow).</li>
+  <li><?php bugfix(70755); ?> (fpm_log.c memory leak and buffer overflow). (CVE-2016-5114)</li>
 </ul></li>
 <li>GD:
 <ul>
