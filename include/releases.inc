@@ -160,7 +160,7 @@ $OLDRELEASES = array (
           'name' => 'PHP 7.0.2 (tar.bz2)',
           'md5' => '8c71b2ffd29311e4b7ac7788bd107554',
           'sha256' => '9b1b75fbd9c92c6b0003b234e550965038826d11ea1f430bf279964da9da2236',
-          'date' => '07 Jan 2015',
+          'date' => '07 Jan 2016',
         ),
         1 => 
         array (
