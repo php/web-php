@@ -27,23 +27,25 @@ function random_bgcolor($min, $max)
          ";\"";
 }
 ?>
-
 <h1>Download</h1>
 
 <p>
- Right click on one of the images and select "Save Image As" to save the image.
+ Click on link below image and save the image.
 </p>
 
-<p class="warn">
- Do not just include the graphic from our servers on your page!
- Copy the image to your site please.
-</p>
-
-<p>
- If you're wondering about the font we used, it's called
- <a href="http://www.myfonts.com/fonts/bitstream/handel-gothic/">Handel
- Gothic</a>.
-</p>
+<ul>
+  <li>
+    Copy the image to your server.
+  </li>
+  <li>
+    Prefer SVG and convert to width/format you need.
+  </li>
+  <li>
+    The font used is
+    <a href="http://www.myfonts.com/fonts/bitstream/handel-gothic/">Handel
+    Gothic</a>.
+  </li>
+</ul>
 
 <h2>Licensing</h2>
 
@@ -55,40 +57,33 @@ function random_bgcolor($min, $max)
 
   <ul>
     <li>
-      <b>Attribution</b> — You must give appropriate credit, provide a link
+      <strong>Attribution</strong> — You must give appropriate credit, provide a link
       to the license, and indicate if changes were made. You may do so in any
       reasonable manner, but not in any way that suggests the licensor endorses
       you or your use.
     </li>
     <li>
-      <b>ShareAlike</b> — If you remix, transform, or build upon the material,
+      <strong>ShareAlike</strong> — If you remix, transform, or build upon the material,
       you must distribute your contributions under the same license as the original.
     </li>
   </ul>
 </p>
 
-<div class="center logo-list">
-<table border="0" width="90%" cellspacing="2" cellpadding="10" id="logos">
-
- <tr>
-  <td class="logo">
+<div class="logo-list row">
+  <div class="col center">
    <img src="/images/logos/new-php-logo.png" width="200" alt="php logo">
    <br>
-   <a href="http://php.net/images/logos/new-php-logo.svg">SVG format</a> |
-   <a href="http://php.net/images/logos/new-php-logo.png">PNG format</a>
-  </td>
-
-  <td class="logo">
+   <a href="http://php.net/images/logos/new-php-logo.svg">SVG</a> |
+   <a href="http://php.net/images/logos/new-php-logo.png">PNG</a>
+  </div>
+  <div class="col center">
    <img src="/images/logos/php-logo-bigger.png" width="150" alt="php logo without background">
    <br>
    Without Background
    <br>
-   <a href="http://php.net/images/logos/php-logo.svg">SVG format</a> |
-   <a href="http://php.net/images/logos/php-logo-bigger.png">PNG format</a>
-  </td>
- </tr>
-
-</table>
+   <a href="http://php.net/images/logos/php-logo.svg">SVG</a> |
+   <a href="http://php.net/images/logos/php-logo-bigger.png">PNG</a>
+  </div>
 </div>
 
 <?php site_footer();
