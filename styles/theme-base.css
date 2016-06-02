@@ -1883,7 +1883,7 @@ aside.tips div.inner {
     box-sizing: border-box;
 }}
 @media only screen and (min-width: 30em) {
-  .col { width: 40%; }
+  .col { width: 50%; }
 }
 
 /* }}} */
