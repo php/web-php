@@ -31,9 +31,7 @@ function random_bgcolor($min, $max)
 <h1>Download</h1>
 
 <p>
- Right click on one of the images and select "Save Image As" to save the
- logo (except where otherwise indicated). Then, link it to the main PHP
- site at <code>php.net</code>.
+ Right click on one of the images and select "Save Image As" to save the image.
 </p>
 
 <p class="warn">
@@ -78,6 +76,15 @@ function random_bgcolor($min, $max)
    <br>
    <a href="https://upload.wikimedia.org/wikipedia/commons/2/27/PHP-logo.svg">SVG format</a> |
    <a href="https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/PHP-logo.svg/2000px-PHP-logo.svg.png">PNG format</a>
+  </td>
+
+  <td class="logo">
+   <img src="/images/logos/php-logo-bigger.png" width="150" alt="php logo without background">
+   <br>
+   Without Background
+   <br>
+   <a href="http://php.net/images/logos/php-logo.svg">SVG format</a> |
+   <a href="http://php.net/images/logos/php-logo-bigger.png">PNG format</a>
   </td>
  </tr>
 
