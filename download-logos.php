@@ -38,7 +38,7 @@ function random_bgcolor($min, $max)
     Copy the image to your server.
   </li>
   <li>
-    Prefer SVG and convert to width/format you need.
+    Prefer SVG and convert to size/format you need.
   </li>
   <li>
     The font used is
