@@ -25,7 +25,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
   <li><?php bugfix(64524); ?> (Add intl.use_exceptions to php.ini-*).</li>
   <li><?php bugfix(72241); ?> (get_icu_value_internal out-of-bounds read). (CVE-2016-5093)</li>
 </ul></li>
-<li>Postgres:
+<li>Mysqli:
 <ul>
   <li><?php bugfix(72151); ?> (mysqli_fetch_object changed behaviour).</li>
 </ul></li>
