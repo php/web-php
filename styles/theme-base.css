@@ -1007,8 +1007,8 @@ fieldset {
     z-index: 2 !important;
 }
 
-.tt-dropdown-menu {
-    background: none repeat scroll 0 0 #E2E4EF;    
+.tt-dropdown-menu {    
+    background: none repeat scroll 0 0 #E2E4EF;
     border-bottom: 1px solid #C4C9DF;
     border-radius: 0 0 2px 2px;
     box-shadow: 1px 0 1px -1px #C4C9DF inset, -1px 0 1px -1px #C4C9DF inset, 0 0 1px #4F5B93;
@@ -1600,7 +1600,7 @@ div.soft-deprecation-notice blockquote.sidebar {
   .navbar-fixed-top .container {
     width:auto;
   }
- 
+  
   .navbar-search {
     float:left;
     clear: both;
@@ -1611,7 +1611,7 @@ div.soft-deprecation-notice blockquote.sidebar {
   .navbar .nav {
     margin-right: 0;
   }
- 
+  
   #intro .download-php { 
     margin: 0 !important; 
   }
@@ -1653,7 +1653,7 @@ div.soft-deprecation-notice blockquote.sidebar {
     display: block;
     margin-left: 12px;
   }
- 
+  
   .navbar .nav {
     clear: both;
     float: none;
@@ -1665,14 +1665,14 @@ div.soft-deprecation-notice blockquote.sidebar {
     -ms-transition: max-height 400ms;
     transition: max-height 400ms;
   }
- 
+  
   .navbar .nav > li, .footmenu > li {
     float: none;
     display: block;
     text-align: center;
- 
+  
   }
- 
+  
   .navbar .nav > li a, .footmenu > li > a {
     width: 100%;
     display: block;
