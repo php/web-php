@@ -74,8 +74,8 @@ function random_bgcolor($min, $max)
   <td class="logo">
    <img src="/images/logos/new-php-logo.png" width="200" alt="php logo">
    <br>
-   <a href="https://upload.wikimedia.org/wikipedia/commons/2/27/PHP-logo.svg">SVG format</a> |
-   <a href="https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/PHP-logo.svg/2000px-PHP-logo.svg.png">PNG format</a>
+   <a href="http://php.net/images/logos/new-php-logo.svg">SVG format</a> |
+   <a href="http://php.net/images/logos/new-php-logo.png">PNG format</a>
   </td>
 
   <td class="logo">
