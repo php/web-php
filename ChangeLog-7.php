@@ -859,7 +859,7 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
 <li>GD:
 <ul>
   <li><?php bugfix(53156); ?> (imagerectangle problem with point ordering).</li>
-  <li><?php bugfix(66387); ?> (Stack overflow with imagefilltoborder).</li>
+  <li><?php bugfix(66387); ?> (Stack overflow with imagefilltoborder). (CVE-2015-8874)</li>
   <li><?php bugfix(70102); ?> (imagecreatefromwebm() shifts colors).</li>
   <li><?php bugfix(66590); ?> (imagewebp() doesn't pad to even length).</li>
   <li><?php bugfix(66882); ?> (imagerotate by -90 degrees truncates image by 1px).</li>
