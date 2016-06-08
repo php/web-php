@@ -70,7 +70,7 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
 <ul>
   <li><?php bugfix(72028); ?> (pg_query_params(): NULL converts to empty string).</li>
   <li><?php bugfix(71062); ?> (pg_convert() doesn't accept ISO 8601 for datatype timestamp).</li>
-  <li><?php bugfix(72151); ?> (mysqli_fetch_object changed behaviour).</li>
+  <li><?php bugfix(72151); ?> (mysqli_fetch_object changed behaviour). Patch to <?php bugfix(71820) ?> is reverted.</li>
 </ul></li>
 <li>Reflection:
 <ul>
