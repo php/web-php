@@ -27,7 +27,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 </ul></li>
 <li>Postgres:
 <ul>
-<li><?php bugfix(72151); ?> (mysqli_fetch_object changed behaviour). Patch to <?php bugfix(71820) ?> is reverted.</li>
+<li><?php bugfix(72151); ?> (mysqli_fetch_object changed behaviour). Patch to <?php bugl(71820) ?> is reverted.</li>
 </ul></li>
 </ul>
 <!-- }}} --></section>
