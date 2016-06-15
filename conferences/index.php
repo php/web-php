@@ -26,7 +26,9 @@ foreach($NEWS_ENTRIES as $entry) {
         }
     }
 }
-$panels = "";
+$panels = '<p class="prepend"><a href="https://wiki.php.net/conferences">Want to see your conference appear here?</a></p>';
+
+
 foreach($frontpage as $entry) {
     $link = substr($entry["id"], 15); // Strip http://php.net/
     $id   = parse_url($entry["id"], PHP_URL_FRAGMENT);
