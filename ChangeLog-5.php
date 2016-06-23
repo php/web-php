@@ -7,6 +7,59 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 ?>
 
 <h1>PHP 5 ChangeLog</h1>
+<section class="version" id="5.6.23"><!-- {{{ 5.6.23 -->
+<h3>Version 5.6.23</h3>
+<b><?php release_date('23-Jun-2016'); ?></b>
+<ul><li>Core:
+<ul>
+  <li><?php bugfix(72275); ?> (Integer Overflow in json_encode()/json_decode()/ json_utf8_to_utf16()).</li>
+  <li><?php bugfix(72400); ?> (Integer Overflow in addcslashes/addslashes).</li>
+  <li><?php bugfix(72403); ?> (Integer Overflow in Length of String-typed ZVAL).</li>
+</ul></li>
+<li>GD:
+<ul>
+  <li><?php bugfix(72298); ?> (pass2_no_dither out-of-bounds access).</li>
+  <li><?php bugfix(72337); ?> (invalid dimensions can lead to crash).</li>
+  <li><?php bugfix(72339); ?> (Integer Overflow in _gd2GetHeader() resulting in heap overflow).</li>
+  <li><?php bugfix(72407); ?> (NULL Pointer Dereference at _gdScaleVert).</li>
+  <li><?php bugfix(72446); ?> (Integer Overflow in gdImagePaletteToTrueColor() resulting in heap overflow).</li>
+</ul></li>
+<li>Intl:
+<ul>
+  <li><?php bugfix(70484); ?> (selectordinal doesn't work with named parameters).</li>
+</ul></li>
+<li>mbstring:
+<ul>
+  <li><?php bugfix(72402); ?> (_php_mb_regex_ereg_replace_exec - double free).</li>
+</ul></li>
+<li>mcrypt:
+<ul>
+  <li><?php bugfix(72455); ?> (Heap Overflow due to integer overflows).</li>
+</ul></li>
+<li>OpenSSL:
+<ul>
+  <li><?php bugfix(72140); ?> (segfault after calling ERR_free_strings()).</li>
+</ul></li>
+<li>Phar:
+<ul>
+  <li><?php bugfix(72321); ?> (invalid free in phar_extract_file()).</li>
+</ul></li>
+<li>SPL:
+<ul>
+  <li><?php bugfix(72262); ?> (int/size_t confusion in SplFileObject::fread).</li>
+  <li><?php bugfix(72433); ?> (Use After Free Vulnerability in PHP's GC algorithm and unserialize).</li>
+</ul></li>
+<li>WDDX:
+<ul>
+  <li><?php bugfix(72340); ?> (Double Free Courruption in wddx_deserialize).</li>
+</ul></li>
+<li>zip:
+<ul>
+  <li><?php bugfix(72434); ?> (ZipArchive class Use After Free Vulnerability in PHP's GC algorithm and unserialize).</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
 <section class="version" id="5.6.22"><!-- {{{ 5.6.22 -->
 <h3>Version 5.6.22</h3>
 <b><?php release_date('26-May-2016'); ?></b>
