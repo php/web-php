@@ -34,7 +34,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 </ul></li>
 <li>mcrypt:
 <ul>
-  <li><?php bugfix(72455); ?> (Heap Overflow due to integer overflows).</li>
+  <li><?php bugfix(72455); ?> (Heap Overflow due to integer overflows). (CVE-2016-5769)</li>
 </ul></li>
 <li>OpenSSL:
 <ul>
@@ -84,7 +84,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 </ul></li>
 <li>mcrypt:
 <ul>
-  <li><?php bugfix(72455); ?> (Heap Overflow due to integer overflows).</li>
+  <li><?php bugfix(72455); ?> (Heap Overflow due to integer overflows). (CVE-2016-5769)</li>
 </ul></li>
 <li>SPL:
 <ul>
