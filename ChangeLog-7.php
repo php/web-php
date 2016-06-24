@@ -87,7 +87,7 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
 <li>Zip:
 <ul>
   <li><?php bugfix(72258); ?> (ZipArchive converts filenames to unrecoverable form).</li>
-  <li><?php bugfix(72434); ?> (ZipArchive class Use After Free Vulnerability in PHP's GC algorithm and unserialize).</li>
+  <li><?php bugfix(72434); ?> (ZipArchive class Use After Free Vulnerability in PHP's GC algorithm and unserialize). (CVE-2016-5773)</li>
 </ul></li>
 </ul>
 <!-- }}} --></section>
