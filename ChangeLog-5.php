@@ -51,7 +51,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 </ul></li>
 <li>WDDX:
 <ul>
-  <li><?php bugfix(72340); ?> (Double Free Courruption in wddx_deserialize).</li>
+  <li><?php bugfix(72340); ?> (Double Free Courruption in wddx_deserialize). (CVE-2016-5772)</li>
 </ul></li>
 <li>zip:
 <ul>
@@ -93,7 +93,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 </ul></li>
 <li>WDDX:
 <ul>
-  <li><?php bugfix(72340); ?> (Double Free Courruption in wddx_deserialize).</li>
+  <li><?php bugfix(72340); ?> (Double Free Courruption in wddx_deserialize). (CVE-2016-5772)</li>
 </ul></li>
 <li>zip:
 <ul>
