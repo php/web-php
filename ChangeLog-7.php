@@ -62,7 +62,7 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
 </ul></li>
 <li>SPL:
 <ul>
-  <li><?php bugfix(72262); ?> (int/size_t confusion in SplFileObject::fread).</li>
+  <li><?php bugfix(72262); ?> (int/size_t confusion in SplFileObject::fread). (CVE-2016-5770)</li>
   <li><?php bugfix(72433); ?> (Use After Free Vulnerability in PHP's GC algorithm and unserialize). (CVE-2016-5771)</li>
 </ul></li>
 <li>Standard:
