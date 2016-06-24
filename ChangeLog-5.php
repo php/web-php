@@ -22,7 +22,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
   <li><?php bugfix(72337); ?> (invalid dimensions can lead to crash).</li>
   <li><?php bugfix(72339); ?> (Integer Overflow in _gd2GetHeader() resulting in heap overflow).</li>
   <li><?php bugfix(72407); ?> (NULL Pointer Dereference at _gdScaleVert).</li>
-  <li><?php bugfix(72446); ?> (Integer Overflow in gdImagePaletteToTrueColor() resulting in heap overflow).</li>
+  <li><?php bugfix(72446); ?> (Integer Overflow in gdImagePaletteToTrueColor() resulting in heap overflow). (CVE-2016-5767)</li>
 </ul></li>
 <li>Intl:
 <ul>
@@ -76,7 +76,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
   <li><?php bugfix(72298); ?> (pass2_no_dither out-of-bounds access).</li>
   <li><?php bugfix(72339); ?> (Integer Overflow in _gd2GetHeader() resulting in heap overflow).</li>
   <li><?php bugfix(72407); ?> (NULL Pointer Dereference at _gdScaleVert).</li>
-  <li><?php bugfix(72446); ?> (Integer Overflow in gdImagePaletteToTrueColor() resulting in heap overflow).</li>
+  <li><?php bugfix(72446); ?> (Integer Overflow in gdImagePaletteToTrueColor() resulting in heap overflow). (CVE-2016-5767)</li>
 </ul></li>
 <li>mbstring:
 <ul>
