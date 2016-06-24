@@ -47,7 +47,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 <li>SPL:
 <ul>
   <li><?php bugfix(72262); ?> (int/size_t confusion in SplFileObject::fread).</li>
-  <li><?php bugfix(72433); ?> (Use After Free Vulnerability in PHP's GC algorithm and unserialize).</li>
+  <li><?php bugfix(72433); ?> (Use After Free Vulnerability in PHP's GC algorithm and unserialize). (CVE-2016-5771)</li>
 </ul></li>
 <li>WDDX:
 <ul>
@@ -89,7 +89,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 <li>SPL:
 <ul>
   <li><?php bugfix(72262); ?> (int/size_t confusion in SplFileObject::fread).</li>
-  <li><?php bugfix(72433); ?> (Use After Free Vulnerability in PHP's GC algorithm and unserialize).</li>
+  <li><?php bugfix(72433); ?> (Use After Free Vulnerability in PHP's GC algorithm and unserialize). (CVE-2016-5771)</li>
 </ul></li>
 <li>WDDX:
 <ul>
