@@ -30,7 +30,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 </ul></li>
 <li>mbstring:
 <ul>
-  <li><?php bugfix(72402); ?> (_php_mb_regex_ereg_replace_exec - double free).</li>
+  <li><?php bugfix(72402); ?> (_php_mb_regex_ereg_replace_exec - double free). (CVE-2016-5768)</li>
 </ul></li>
 <li>mcrypt:
 <ul>
@@ -80,7 +80,8 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 </ul></li>
 <li>mbstring:
 <ul>
-  <li><?php bugfix(72402); ?> (_php_mb_regex_ereg_replace_exec - double free).</li>
+  <li><?php bugfix(72402); ?> (_php_mb_regex_ereg_replace_exec - double free). (CVE-2016-5768)</li>
+</ul></li>
 </ul></li>
 <li>mcrypt:
 <ul>
