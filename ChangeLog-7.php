@@ -25,10 +25,12 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
 </ul></li>
 <li>GD:
 <ul>
+  <li><?php bugfix(66387); ?> (Stack overflow with imagefilltoborder). (CVE-2015-8874)</li>
   <li><?php bugfix(72298); ?> (pass2_no_dither out-of-bounds access).</li>
   <li><?php bugfix(72337); ?> (invalid dimensions can lead to crash).</li>
   <li><?php bugfix(72339); ?> (Integer Overflow in _gd2GetHeader() resulting in heap overflow). (CVE-2016-5766)</li>
   <li><?php bugfix(72407); ?> (NULL Pointer Dereference at _gdScaleVert).</li>
+  <li><?php bugfix(72446); ?> (Integer Overflow in gdImagePaletteToTrueColor() resulting in heap overflow). (CVE-2016-5767)</li>
 </ul></li>
 <li>Intl:
 <ul>
@@ -42,6 +44,10 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
 <ul>
   <li><?php bugfix(72455); ?> (Heap Overflow due to integer overflows). (CVE-2016-5769)</li>
 </ul></li>
+<li>OpenSSL:
+<ul>
+  <li><?php bugfix(72140); ?> (segfault after calling ERR_free_strings()).</li>
+</ul></li>
 <li>PCRE:
 <ul>
   <li><?php bugfix(72143); ?> (preg_replace uses int instead of size_t).</li>
@@ -50,6 +56,10 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
 <ul>
   <li><?php bugfix(71573); ?> (Segfault (core dumped) if paramno beyond bound).</li>
   <li><?php bugfix(72294); ?> (Segmentation fault/invalid pointer in connection with pgsql_stmt_dtor).</li>
+</ul></li>
+<li>Phar:
+<ul>
+  <li><?php bugfix(72321); ?> (invalid free in phar_extract_file()).</li>
 </ul></li>
 <li>Phpdbg:
 <ul>
@@ -67,6 +77,10 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
   <li><?php bugfix(72229); ?> (Wrong reference when serialize/unserialize an object).</li>
   <li><?php bugfix(72300); ?> (ignore_user_abort(false) has no effect).</li>
 </ul></li>
+<li>WDDX:
+<ul>
+  <li><?php bugfix(72340); ?> (Double Free Courruption in wddx_deserialize). (CVE-2016-5772)</li>
+</ul></li>
 <li>XML:
 <ul>
   <li><?php bugfix(72206); ?> (xml_parser_create/xml_parser_free leaks mem).</li>
@@ -74,10 +88,6 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
 <li>XMLRPC:
 <ul>
   <li><?php bugfix(72155); ?> (use-after-free caused by get_zval_xmlrpc_type).</li>
-</ul></li>
-<li>WDDX:
-<ul>
-  <li><?php bugfix(72340); ?> (Double Free Courruption in wddx_deserialize). (CVE-2016-5772)</li>
 </ul></li>
 <li>Zip:
 <ul>
