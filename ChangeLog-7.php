@@ -26,7 +26,7 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
 <li>GD:
 <ul>
   <li><?php bugfix(72298); ?> (pass2_no_dither out-of-bounds access).</li>
-  <li><?php bugfix(72337); ?> (invalid dimensions can lead to crash) (Pierre)</li>
+  <li><?php bugfix(72337); ?> (invalid dimensions can lead to crash).</li>
   <li><?php bugfix(72339); ?> (Integer Overflow in _gd2GetHeader() resulting in heap overflow). (CVE-2016-5766)</li>
   <li><?php bugfix(72407); ?> (NULL Pointer Dereference at _gdScaleVert).</li>
 </ul></li>
