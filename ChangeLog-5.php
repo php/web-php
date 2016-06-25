@@ -12,12 +12,14 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 <b><?php release_date('23-Jun-2016'); ?></b>
 <ul><li>Core:
 <ul>
+  <li><?php bugfix(72268); ?> (Integer Overflow in nl2br()).</li>
   <li><?php bugfix(72275); ?> (Integer Overflow in json_encode()/json_decode()/ json_utf8_to_utf16()).</li>
   <li><?php bugfix(72400); ?> (Integer Overflow in addcslashes/addslashes).</li>
   <li><?php bugfix(72403); ?> (Integer Overflow in Length of String-typed ZVAL).</li>
 </ul></li>
 <li>GD:
 <ul>
+  <li><?php bugfix(66387); ?> (Stack overflow with imagefilltoborder). (CVE-2015-8874)</li>
   <li><?php bugfix(72298); ?> (pass2_no_dither out-of-bounds access).</li>
   <li><?php bugfix(72337); ?> (invalid dimensions can lead to crash).</li>
   <li><?php bugfix(72339); ?> (Integer Overflow in _gd2GetHeader() resulting in heap overflow). (CVE-2016-5766)</li>
