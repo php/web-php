@@ -32,7 +32,7 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
 </ul></li>
 <li>Intl:
 <ul>
-  <li><?php bugfix(64524); ?> (Add intl.use_exceptions to php.ini-*).</li>
+  <li><?php bugfix(70484); ?> (selectordinal doesn't work with named parameters).</li>
 </ul></li>
 <li>mbstring:
 <ul>
@@ -116,6 +116,7 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
 </ul></li>
 <li>Intl:
 <ul>
+  <li><?php bugfix(64524); ?> (Add intl.use_exceptions to php.ini-*).</li>
   <li><?php bugfix(72241); ?> (get_icu_value_internal out-of-bounds read). (CVE-2016-5093)</li>
 </ul></li>
 <li>JSON:
