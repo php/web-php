@@ -60,11 +60,6 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
   <li><?php bugfix(72195); ?> (pg_pconnect/pg_connect cause use-after-free).</li>
   <li><?php bugfix(72197); ?> (pg_lo_create arbitrary read).</li>
 </ul></li>
-<li>SPL:
-<ul>
-  <li><?php bugfix(72262); ?> (int/size_t confusion in SplFileObject::fread). (CVE-2016-5770)</li>
-  <li><?php bugfix(72433); ?> (Use After Free Vulnerability in PHP's GC algorithm and unserialize). (CVE-2016-5771)</li>
-</ul></li>
 <li>Standard:
 <ul>
   <li><?php bugfix(72017); ?> (range() with float step produces unexpected result).</li>
