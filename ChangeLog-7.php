@@ -25,22 +25,28 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
 </ul></li>
 <li>GD:
 <ul>
+  <li><?php bugfix(66387); ?> (Stack overflow with imagefilltoborder). (CVE-2015-8874)</li>
   <li><?php bugfix(72298); ?> (pass2_no_dither out-of-bounds access).</li>
-  <li><?php bugfix(72337); ?> (invalid dimensions can lead to crash) (Pierre)</li>
-  <li><?php bugfix(72339); ?> (Integer Overflow in _gd2GetHeader() resulting in heap overflow).</li>
+  <li><?php bugfix(72337); ?> (invalid dimensions can lead to crash).</li>
+  <li><?php bugfix(72339); ?> (Integer Overflow in _gd2GetHeader() resulting in heap overflow). (CVE-2016-5766)</li>
   <li><?php bugfix(72407); ?> (NULL Pointer Dereference at _gdScaleVert).</li>
+  <li><?php bugfix(72446); ?> (Integer Overflow in gdImagePaletteToTrueColor() resulting in heap overflow). (CVE-2016-5767)</li>
 </ul></li>
 <li>Intl:
 <ul>
-  <li><?php bugfix(64524); ?> (Add intl.use_exceptions to php.ini-*).</li>
+  <li><?php bugfix(70484); ?> (selectordinal doesn't work with named parameters).</li>
 </ul></li>
 <li>mbstring:
 <ul>
-  <li><?php bugfix(72402); ?> (_php_mb_regex_ereg_replace_exec - double free).</li>
+  <li><?php bugfix(72402); ?> (_php_mb_regex_ereg_replace_exec - double free). (CVE-2016-5768)</li>
 </ul></li>
 <li>mcrypt:
 <ul>
-  <li><?php bugfix(72455); ?> (Heap Overflow due to integer overflows).</li>
+  <li><?php bugfix(72455); ?> (Heap Overflow due to integer overflows). (CVE-2016-5769)</li>
+</ul></li>
+<li>OpenSSL:
+<ul>
+  <li><?php bugfix(72140); ?> (segfault after calling ERR_free_strings()).</li>
 </ul></li>
 <li>PCRE:
 <ul>
@@ -51,6 +57,10 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
   <li><?php bugfix(71573); ?> (Segfault (core dumped) if paramno beyond bound).</li>
   <li><?php bugfix(72294); ?> (Segmentation fault/invalid pointer in connection with pgsql_stmt_dtor).</li>
 </ul></li>
+<li>Phar:
+<ul>
+  <li><?php bugfix(72321); ?> (invalid free in phar_extract_file()).</li>
+</ul></li>
 <li>Phpdbg:
 <ul>
   <li><?php bugfix(72284); ?> (phpdbg fatal errors with coverage).</li>
@@ -60,17 +70,16 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
   <li><?php bugfix(72195); ?> (pg_pconnect/pg_connect cause use-after-free).</li>
   <li><?php bugfix(72197); ?> (pg_lo_create arbitrary read).</li>
 </ul></li>
-<li>SPL:
-<ul>
-  <li><?php bugfix(72262); ?> (int/size_t confusion in SplFileObject::fread).</li>
-  <li><?php bugfix(72433); ?> (Use After Free Vulnerability in PHP's GC algorithm and unserialize).</li>
-</ul></li>
 <li>Standard:
 <ul>
   <li><?php bugfix(72017); ?> (range() with float step produces unexpected result).</li>
   <li><?php bugfix(72193); ?> (dns_get_record returns array containing elements of type 'unknown').</li>
   <li><?php bugfix(72229); ?> (Wrong reference when serialize/unserialize an object).</li>
   <li><?php bugfix(72300); ?> (ignore_user_abort(false) has no effect).</li>
+</ul></li>
+<li>WDDX:
+<ul>
+  <li><?php bugfix(72340); ?> (Double Free Courruption in wddx_deserialize). (CVE-2016-5772)</li>
 </ul></li>
 <li>XML:
 <ul>
@@ -80,14 +89,10 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
 <ul>
   <li><?php bugfix(72155); ?> (use-after-free caused by get_zval_xmlrpc_type).</li>
 </ul></li>
-<li>WDDX:
-<ul>
-  <li><?php bugfix(72340); ?> (Double Free Courruption in wddx_deserialize).</li>
-</ul></li>
 <li>Zip:
 <ul>
   <li><?php bugfix(72258); ?> (ZipArchive converts filenames to unrecoverable form).</li>
-  <li><?php bugfix(72434); ?> (ZipArchive class Use After Free Vulnerability in PHP's GC algorithm and unserialize).</li>
+  <li><?php bugfix(72434); ?> (ZipArchive class Use After Free Vulnerability in PHP's GC algorithm and unserialize). (CVE-2016-5773)</li>
 </ul></li>
 </ul>
 <!-- }}} --></section>
@@ -121,6 +126,7 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
 </ul></li>
 <li>Intl:
 <ul>
+  <li><?php bugfix(64524); ?> (Add intl.use_exceptions to php.ini-*).</li>
   <li><?php bugfix(72241); ?> (get_icu_value_internal out-of-bounds read). (CVE-2016-5093)</li>
 </ul></li>
 <li>JSON:
