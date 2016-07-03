@@ -17,6 +17,10 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
   <li><?php bugfix(72400); ?> (Integer Overflow in addcslashes/addslashes).</li>
   <li><?php bugfix(72403); ?> (Integer Overflow in Length of String-typed ZVAL).</li>
 </ul></li>
+<li>Date:
+<ul>
+  <li><?php bugfix(63740); ?> (strtotime seems to use both sunday and monday as start of week).</li>
+</ul></li>
 <li>GD:
 <ul>
   <li><?php bugfix(66387); ?> (Stack overflow with imagefilltoborder). (CVE-2015-8874)</li>
