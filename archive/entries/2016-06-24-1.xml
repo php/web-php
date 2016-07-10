@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+  <title>PHP 7.1.0 Alpha 2 Released</title>
+  <id>http://php.net/archive/2016.php#id2016-06-24-1</id>
+  <published>2016-06-27T16:00:00+00:00</published>
+  <updated>2016-06-27T16:00:00+00:00</updated>
+  <category term="frontpage" label="PHP.net frontpage news"/>
+  <category term="releases" label="New PHP release"/>
+  <link href="http://php.net/index.php#id2016-06-24-1" rel="alternate" type="text/html"/>
+  <link href="http://php.net/archive/2016.php#id2016-06-24-1" rel="via" type="text/html"/>
+  <content type="xhtml">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+     <p>
+       The PHP development team announces the immediate availability of PHP 7.1.0 Alpha 2. This is the second alpha release for PHP 7.1.0. All users of PHP are encouraged to test this version carefully, and report any bugs and incompatibilities in the bug tracking system.
+     </p>
+     
+     <p>
+       <strong>THIS IS A DEVELOPMENT PREVIEW - DO NOT USE IT IN PRODUCTION!</strong>
+     </p>
+     
+     <p>
+       For more information on the new features and other changes, you can read the <a href="https://github.com/php/php-src/blob/php-7.1.0alpha2/NEWS">NEWS file</a>, or the <a href="https://github.com/php/php-src/blob/php-7.1.0alpha2/UPGRADING">UPGRADING file</a> for a complete list of upgrading notes. These files can also be found in the release archive.
+     </p>
+     
+     <p>
+       For source downloads of PHP 7.1.0 Alpha 2 please visit the <a href="https://downloads.php.net/~krakjoe/">download page</a>, Windows sources and binaries can be found on <a href="http://windows.php.net/qa/">windows.php.net/qa/</a>.
+     </p>
+     
+     <p>
+       The first beta will be released on the 7th of July. You can also read the full list of planned releases on <a href="https://wiki.php.net/todo/php71">our wiki</a>.
+     </p>
+     
+     <p>
+       Thank you for helping us make PHP better.
+     </p>
+    </div>
+  </content>
+</entry>

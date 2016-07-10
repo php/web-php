@@ -7,6 +7,100 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
 
 <h1>PHP 7 ChangeLog</h1>
 
+<section class="version" id="7.0.8"><!-- {{{ 7.0.8 -->
+<h3>Version 7.0.8</h3>
+<b><?php release_date('23-Jun-2016'); ?></b>
+<ul><li>Core:
+<ul>
+  <li><?php bugfix(72218); ?> (If host name cannot be resolved then PHP 7 crashes).</li>
+  <li><?php bugfix(72221); ?> (segfault, past-the-end access).</li>
+  <li><?php bugfix(72268); ?> (Integer Overflow in nl2br()).</li>
+  <li><?php bugfix(72275); ?> (Integer Overflow in json_encode()/json_decode()/ json_utf8_to_utf16()).</li>
+  <li><?php bugfix(72400); ?> (Integer Overflow in addcslashes/addslashes).</li>
+  <li><?php bugfix(72403); ?> (Integer Overflow in Length of String-typed ZVAL).</li>
+</ul></li>
+<li>Date:
+<ul>
+  <li><?php bugfix(63740); ?> (strtotime seems to use both sunday and monday as start of week).</li>
+</ul></li>
+<li>FPM:
+<ul>
+  <li><?php bugfix(72308); ?> (fastcgi_finish_request and logging environment variables).</li>
+</ul></li>
+<li>GD:
+<ul>
+  <li><?php bugfix(66387); ?> (Stack overflow with imagefilltoborder). (CVE-2015-8874)</li>
+  <li><?php bugfix(72298); ?> (pass2_no_dither out-of-bounds access).</li>
+  <li><?php bugfix(72337); ?> (invalid dimensions can lead to crash).</li>
+  <li><?php bugfix(72339); ?> (Integer Overflow in _gd2GetHeader() resulting in heap overflow). (CVE-2016-5766)</li>
+  <li><?php bugfix(72407); ?> (NULL Pointer Dereference at _gdScaleVert).</li>
+  <li><?php bugfix(72446); ?> (Integer Overflow in gdImagePaletteToTrueColor() resulting in heap overflow). (CVE-2016-5767)</li>
+</ul></li>
+<li>Intl:
+<ul>
+  <li><?php bugfix(70484); ?> (selectordinal doesn't work with named parameters).</li>
+</ul></li>
+<li>mbstring:
+<ul>
+  <li><?php bugfix(72402); ?> (_php_mb_regex_ereg_replace_exec - double free). (CVE-2016-5768)</li>
+</ul></li>
+<li>mcrypt:
+<ul>
+  <li><?php bugfix(72455); ?> (Heap Overflow due to integer overflows). (CVE-2016-5769)</li>
+</ul></li>
+<li>OpenSSL:
+<ul>
+  <li><?php bugfix(72140); ?> (segfault after calling ERR_free_strings()).</li>
+</ul></li>
+<li>PCRE:
+<ul>
+  <li><?php bugfix(72143); ?> (preg_replace uses int instead of size_t).</li>
+</ul></li>
+<li>PDO_pgsql:
+<ul>
+  <li><?php bugfix(71573); ?> (Segfault (core dumped) if paramno beyond bound).</li>
+  <li><?php bugfix(72294); ?> (Segmentation fault/invalid pointer in connection with pgsql_stmt_dtor).</li>
+</ul></li>
+<li>Phar:
+<ul>
+  <li><?php bugfix(72321); ?> (invalid free in phar_extract_file()).</li>
+</ul></li>
+<li>Phpdbg:
+<ul>
+  <li><?php bugfix(72284); ?> (phpdbg fatal errors with coverage).</li>
+</ul></li>
+<li>Postgres:
+<ul>
+  <li><?php bugfix(72195); ?> (pg_pconnect/pg_connect cause use-after-free).</li>
+  <li><?php bugfix(72197); ?> (pg_lo_create arbitrary read).</li>
+</ul></li>
+<li>Standard:
+<ul>
+  <li><?php bugfix(72017); ?> (range() with float step produces unexpected result).</li>
+  <li><?php bugfix(72193); ?> (dns_get_record returns array containing elements of type 'unknown').</li>
+  <li><?php bugfix(72229); ?> (Wrong reference when serialize/unserialize an object).</li>
+  <li><?php bugfix(72300); ?> (ignore_user_abort(false) has no effect).</li>
+</ul></li>
+<li>WDDX:
+<ul>
+  <li><?php bugfix(72340); ?> (Double Free Courruption in wddx_deserialize). (CVE-2016-5772)</li>
+</ul></li>
+<li>XML:
+<ul>
+  <li><?php bugfix(72206); ?> (xml_parser_create/xml_parser_free leaks mem).</li>
+</ul></li>
+<li>XMLRPC:
+<ul>
+  <li><?php bugfix(72155); ?> (use-after-free caused by get_zval_xmlrpc_type).</li>
+</ul></li>
+<li>Zip:
+<ul>
+  <li><?php bugfix(72258); ?> (ZipArchive converts filenames to unrecoverable form).</li>
+  <li><?php bugfix(72434); ?> (ZipArchive class Use After Free Vulnerability in PHP's GC algorithm and unserialize). (CVE-2016-5773)</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
 <section class="version" id="7.0.7"><!-- {{{ 7.0.7 -->
 <h3>Version 7.0.7</h3>
 <b><?php release_date('26-May-2016'); ?></b>
@@ -36,6 +130,7 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
 </ul></li>
 <li>Intl:
 <ul>
+  <li><?php bugfix(64524); ?> (Add intl.use_exceptions to php.ini-*).</li>
   <li><?php bugfix(72241); ?> (get_icu_value_internal out-of-bounds read). (CVE-2016-5093)</li>
 </ul></li>
 <li>JSON:
@@ -70,7 +165,7 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
 <ul>
   <li><?php bugfix(72028); ?> (pg_query_params(): NULL converts to empty string).</li>
   <li><?php bugfix(71062); ?> (pg_convert() doesn't accept ISO 8601 for datatype timestamp).</li>
-  <li><?php bugfix(72151); ?> (mysqli_fetch_object changed behaviour).</li>
+  <li><?php bugfix(72151); ?> (mysqli_fetch_object changed behaviour). Patch to <?php bugl(71820) ?> is reverted.</li>
 </ul></li>
 <li>Reflection:
 <ul>
@@ -859,7 +954,7 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
 <li>GD:
 <ul>
   <li><?php bugfix(53156); ?> (imagerectangle problem with point ordering).</li>
-  <li><?php bugfix(66387); ?> (Stack overflow with imagefilltoborder).</li>
+  <li><?php bugfix(66387); ?> (Stack overflow with imagefilltoborder). (CVE-2015-8874)</li>
   <li><?php bugfix(70102); ?> (imagecreatefromwebm() shifts colors).</li>
   <li><?php bugfix(66590); ?> (imagewebp() doesn't pad to even length).</li>
   <li><?php bugfix(66882); ?> (imagerotate by -90 degrees truncates image by 1px).</li>

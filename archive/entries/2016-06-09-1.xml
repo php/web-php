@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+    <title>PHP 7.1.0 Alpha 1 Released</title>
+    <id>http://php.net/archive/2016.php#id2016-06-09-1</id>
+    <published>2016-06-09T12:39:55-04:00</published>
+    <updated>2016-06-09T12:39:55-04:00</updated>
+    <category term="frontpage" label="PHP.net frontpage news"/>
+    <category term="releases" label="New PHP release"/>
+    <link href="http://php.net/index.php#id2016-06-09-1" rel="alternate" type="text/html"/>
+    <link href="http://php.net/archive/2016.php#id2016-06-09-1" rel="via" type="text/html"/>
+    <content type="xhtml">
+        <div xmlns="http://www.w3.org/1999/xhtml">
+            <p>
+                The PHP development team announces the immediate availability of PHP 7.1.0 Alpha 1. This release marks
+                the beginning of the first minor release in the PHP 7.x series. All users of PHP are encouraged to test
+                this version carefully, and report any bugs and incompatibilities in the bug tracking system.
+            </p>
+            <p>
+                <strong>THIS IS A DEVELOPMENT PREVIEW - DO NOT USE IT IN PRODUCTION!</strong>
+            </p>
+            <p>
+                PHP 7.1.0 Alpha 1 comes with features such as (incomplete list):
+            </p>
+            <ul>
+                <li>
+                    <a href="https://wiki.php.net/rfc/nullable_types">Nullable Types</a>
+                </li>
+                <li>
+                    <a href="https://wiki.php.net/rfc/short_list_syntax">Square bracket syntax for array destructuring
+                        assignment
+                    </a>
+                </li>
+                <li>
+                    <a href="https://wiki.php.net/rfc/list_keys">Allow specifying keys in list()</a>
+                </li>
+                <li>
+                    <a href="https://wiki.php.net/rfc/negative-string-offsets">Generalize support of negative string
+                        offsets
+                    </a>
+                </li>
+                <li>
+                    <a href="https://wiki.php.net/rfc/void_return_type">Void Return Type</a>
+                </li>
+                <li>
+                    <a href="https://wiki.php.net/rfc/class_const_visibility">Class constant visibility modifiers</a>
+                </li>
+                <li>
+                    <a href="https://wiki.php.net/rfc/multiple-catch">Multi catch</a>
+                </li>
+            </ul>
+            <p>
+                For more information on the new features and other changes, you can read the
+                <a href="https://github.com/php/php-src/blob/php-7.1.0alpha1/NEWS">NEWS file</a>, or the
+                <a href="https://github.com/php/php-src/blob/php-7.1.0alpha1/UPGRADING">UPGRADING file</a>
+                for a complete list of upgrading notes. These files can also be found in the release archive.
+            </p>
+
+            <p>
+                For source downloads of PHP 7.1.0 Alpha 1 please visit
+                the <a href="https://downloads.php.net/~krakjoe/">download page</a>, Windows sources and binaries
+                can be found on <a href="http://windows.php.net/qa/">windows.php.net/qa/</a>.
+            </p>
+
+            <p>
+                The second alpha will be released on the 23rd of June. You can also read the full list of
+                planned releases on our <a href="https://wiki.php.net/todo/php71#timetable">wiki</a>.
+            </p>
+
+            <p>
+                Thank you for helping us make PHP better.
+            </p>
+        </div>
+    </content>
+</entry>
