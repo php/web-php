@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+  <title>PHP 7.1.0 Alpha 3 Released</title>
+  <id>http://php.net/archive/2016.php#id2016-07-07-1</id>
+  <published>2016-07-07T19:40:54+00:00</published>
+  <updated>2016-07-07T19:40:54+00:00</updated>
+  <category term="frontpage" label="PHP.net frontpage news"/>
+  <category term="releases" label="New PHP release"/>
+  <link href="http://php.net/index.php#id2016-07-07-1" rel="alternate" type="text/html"/>
+  <link href="http://php.net/archive/2016.php#id2016-07-07-1" rel="via" type="text/html"/>
+  <content type="xhtml">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+     <p>
+       The PHP development team announces the immediate availability of PHP 7.1.0 Alpha 3. This release is the last alpha for 7.1.0. All users of PHP are encouraged to test this version carefully, and report any bugs and incompatibilities in the bug tracking system.
+     </p>
+     
+     <p>
+       <strong>THIS IS A DEVELOPMENT PREVIEW - DO NOT USE IT IN PRODUCTION!</strong>
+     </p>
+     
+     <p>
+       PHP 7.1.0 Alpha 3 builds on previous releases with:
+     </p>
+     
+     <ul>
+       <li>
+       	<a href="https://wiki.php.net/rfc/iterable">Iterable type</a>.
+       </li>
+       <li>
+       	<a href="https://wiki.php.net/rfc/curl_http2_push">HTTP/2 Server Push Support in ext/curl</a> &amp; <a href="https://wiki.php.net/rfc/new-curl-error-functions">other ext/curl improvements</a>
+       </li>
+       <li>
+       	<a href="https://wiki.php.net/rfc/this_var">Fix inconsistent behavior in <code>$this</code> variable</a>
+       </li>
+       <li>
+       	<a href="https://wiki.php.net/rfc/short_list_syntax">Square bracket syntax for array destructuring assignment</a>
+       </li>
+       <li>
+         <a href="https://wiki.php.net/rfc/closurefromcallable">Create closure from callable</a>
+       </li>
+       <li>
+         <a href="https://wiki.php.net/rfc/precise_float_value">More precise float values.</a>
+       </li>
+     </ul>
+     
+     <p>
+       For more information on the new features and other changes, you can read the <a href="https://github.com/php/php-src/blob/master/NEWS">NEWS</a> file,
+       or the <a href="https://github.com/php/php-src/blob/master/UPGRADING">UPGRADING</a> file for a complete list of upgrading notes. These files can also be found in the release archive.
+     </p>
+     
+     <p>
+       For source downloads of PHP 7.1.0 Alpha 3 please visit the <a href="https://downloads.php.net/~krakjoe/">download</a> page, Windows sources and binaries can be found on <a href="http://windows.php.net/qa/">windows.php.net/qa/</a>.
+     </p>
+     
+     <p>
+       The first beta will be released on the 21st of July. You can also read the full list of planned releases on <a href="https://wiki.php.net/todo/php71">our wiki</a>.
+     </p>
+     
+     <p>
+       Thank you for helping us make PHP better.
+     </p>
+    </div>
+  </content>
+</entry>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom" xmlns:default="http://php.net/ns/news">
+  <title>International PHP Conference 2016 - fall edition</title>
+  <id>http://php.net/archive/2016.php#id2016-06-15-1</id>
+  <published>2016-06-15T09:54:24+01:00</published>
+  <updated>2016-06-15T09:54:24+01:00</updated>
+  <default:finalTeaserDate xmlns="http://php.net/ns/news">2016-10-23</default:finalTeaserDate>
+  <category term="conferences" label="Conference announcement"/>
+  <link href="http://php.net/conferences/index.php#id2016-06-15-1" rel="alternate" type="text/html"/>
+  <default:newsImage xmlns="http://php.net/ns/news" link="https://phpconference.com" title="International PHP Conference 2016 - fall edition">ipc-2016-fall.png</default:newsImage>
+  <link href="https://phpconference.com" rel="via" type="text/html"/>
+  <content type="xhtml">
+	  <div xmlns="http://www.w3.org/1999/xhtml">
+		<p><a href="https://phpconference.com">The International PHP Conference</a> is the world's first PHP conference and stands since more than a decade for top-notch pragmatic expertise in PHP and web technologies. At the IPC, internationally renowned experts from the PHP industry meet up with PHP users and developers from large and small companies. Here is the place where concepts emerge and ideas are born - the IPC signifies knowledge transfer at highest level.</p>
+		<p>All delegates of the International PHP Conference have, in addition to PHP program, free access to the entire range of the <a href="https://webtechcon.de">WebTechCon</a> taking place at the same time.</p>
+		<p>Basic facts:</p>
+		<p><strong>Date: October 23 - 27, 2016</strong></p>
+		<p><strong>Location: Holiday Inn City Centre, Munich</strong></p>
+		<p>Highlights:</p>
+		<ul>
+			<li>90+ best practice sessions</li>
+			<li>Cool PHP &amp; the Gang: 60+ international top speakers</li>
+			<li>PHPower: Hands-on Power Workshops</li>
+			<li>Expo with exciting exhibitors</li>
+			<li>Conference Combo: Visit the <a href="https://webtechcon.de">WebTechCon</a> For Free</li>
+			<li>All inclusive: Changing buffets, snacks &amp; refreshing drinks</li>
+			<li>Official certificate for attendees</li>
+			<li>Free Swag: Developer bag, T-Shirt, magazines etc.</li>
+			<li>Exclusive networking events</li>
+		</ul>
+		<p>Topics:</p>
+		<ul>
+			<li>Core PHP / PHP 7</li>
+			<li>PHP Frameworks</li>
+			<li>Scaling &amp; Performance</li>
+			<li>Security</li>
+			<li>Testing &amp; Quality</li>
+			<li>Architecture</li>
+			<li>JavaScript &amp; Frameworks</li>
+			<li>Agile</li>
+			<li>Continuous Delivery</li>
+			<li>DevOps</li>
+			<li>Continuous Delivery / DevOps</li>
+			<li>Cloud</li>
+			<li>Open Web Technologies</li>
+		</ul>	
+		<p>For further information on the International PHP Conference visit: <a href="https://phpconference.com">www.phpconference.com</a></p>
+	  </div>
+  </content>
+</entry>

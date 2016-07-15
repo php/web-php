@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom" xmlns:default="http://php.net/ns/news">
+  <title>DevConf 2016</title>
+  <id>http://php.net/archive/2016.php#id2016-06-06-1</id>
+  <published>2016-06-06T09:10:08+00:00</published>
+  <updated>2016-06-06T09:10:08+00:00</updated>
+  <default:finalTeaserDate xmlns="http://php.net/ns/news">2016-06-17</default:finalTeaserDate>
+  <category term="conferences" label="Conference announcement"/>
+  <link href="http://php.net/conferences/index.php#id2016-06-06-1" rel="alternate" type="text/html"/>
+  <default:newsImage xmlns="http://php.net/ns/news" link="http://devconf.ru" title="DevConf 2016">devconfru2012.png</default:newsImage>
+  <link href="http://devconf.ru" rel="via" type="text/html"/>
+  <content type="xhtml">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+          <p>
+           DevConf 2016 in Moscow, Russia on June 17-18.
+          </p>
+          <p>
+           DevConf is the ultimate meeting place for russian-speaking web-developers,
+              combining several language-specific conferences under one roof.
+              This year the conference will take place in <a href="http://devconf.ru/ru/members/location">Skolkovo Moscow School of Management</a>.
+          </p>
+          <p>
+           DevConf 2016 will include the following sections:
+          </p>
+          <ul>
+           <li>DevConf::PHP();</li>
+           <li>DevConf::Python();</li>
+           <li>DevConf::Javascript();</li>
+           <li>DevConf::Storage();</li>
+           <li>DevConf::Golang();</li>
+           <li>DevConf::DevOps();</li>
+           <li>DevConf::Ruby();</li>
+          </ul>
+          <p>
+           Each section will feature several talks from the active contributors/authors of the language.
+              Among the invited speakers are Dmitry Stogov (Zend), Ekaterina Marshalkina (Drupal), Eduard Medvedev (StackStorm),
+              Alexander Alekseev (Postgres Professional), Sergey Petrunya (MariaDB), Vasily Soshnikov (Mail.Ru),
+              Nik Zavarnickiy (LuaJIT), Anton Shramko (Rust), Valentin Bartenev (NGINX) and speakers from Lazada, Oracle and other companies.
+           See more details on <a href="http://devconf.ru">the official website</a>.
+          </p>
+    </div>
+  </content>
+</entry>

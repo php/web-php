@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom" xmlns:default="http://php.net/ns/news">
+  <title>Madison PHP Conference 2016 Call For Papers</title>
+  <id>http://php.net/archive/2016.php#id2016-06-03-1</id>
+  <published>2016-06-03T21:05:00-04:00</published>
+  <updated>2016-06-03T21:05:00-04:00</updated>
+  <default:finalTeaserDate xmlns="http://php.net/ns/news">2016-06-20</default:finalTeaserDate>
+  <category term="cfp" label="Call for Papers"/>
+  <link href="http://php.net/conferences/index.php#id2016-06-03-1" rel="alternate" type="text/html"/>
+  <default:newsImage xmlns="http://php.net/ns/news" link="http://2016.madisonphpconference.com/" title="Madison PHP Conference 2016">madison-php-2016-conf-logo.png</default:newsImage>
+  <link href="http://2016.madisonphpconference.com" rel="via" type="text/html"/>
+  <content type="xhtml">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+     <p>We are excited to announce that the <a href="https://cfp.madisonphpconference.com/">Call for Papers</a> has opened for <a href="http://2016.madisonphpconference.com">Madison PHP Conference 2016</a>.
+     </p>
+     <p>
+       Join us on Friday, September 30th, 2016 for a full day of tutorials followed by a three tracks of talks on Saturday, October 1st, 2016. Madison PHP Conference in Madison, Wisconsin focuses on PHP and related web technologies. This event is organized by Madison PHP and is designed to offer something to attendees at all skill levels. It will be two days of networking, learning, sharing, and great fun!
+     </p>
+    </div>
+  </content>
+</entry>
