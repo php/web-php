@@ -7,6 +7,54 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 ?>
 
 <h1>PHP 5 ChangeLog</h1>
+<section class="version" id="5.5.38"><!-- {{{ 5.5.38 -->
+<h3>Version 5.5.38</h3>
+<b><?php release_date('21-Jul-2016'); ?></b>
+<ul><li>BZip2:
+<ul>
+  <li><?php bugfix(72613); ?> (Inadequate error handling in bzread()).</li>
+</ul></li>
+<li>Core:
+<ul>
+  <li><?php bugfix(70480); ?> (php_url_parse_ex() buffer overflow read).</li>
+  <li><?php bugfix(72513); ?> (Stack-based buffer overflow vulnerability in virtual_file_ex).</li>
+  <li><?php bugfix(72562); ?> (Use After Free in unserialize() with Unexpected Session Deserialization).</li>
+  <li><?php bugfix(72573); ?> (HTTP_PROXY is improperly trusted by some PHP libraries and applications).</li>
+</ul></li>
+<li>EXIF:
+<ul>
+  <li><?php bugfix(72603); ?> (Out of bound read in exif_process_IFD_in_MAKERNOTE).</li>
+  <li><?php bugfix(72618); ?> (NULL Pointer Dereference in exif_process_user_comment).</li>
+</ul></li>
+<li>GD:
+<ul>
+  <li><?php bugfix(72512); ?> (gdImageTrueColorToPaletteBody allows arbitrary write/read access).</li>
+  <li><?php bugfix(72519); ?> (imagegif/output out-of-bounds access).</li>
+  <li><?php bugfix(72558); ?> (Integer overflow error within _gdContributionsAlloc()).</li>
+</ul></li>
+<li>Intl:
+<ul>
+  <li><?php bugfix(72533); ?> (locale_accept_from_http out-of-bounds access).</li>
+</ul></li>
+<li>ODBC:
+<ul>
+  <li><?php bugfix(69975); ?> (PHP segfaults when accessing nvarchar(max) defined columns)</li>
+</ul></li>
+<li>SNMP:
+<ul>
+  <li><?php bugfix(72479); ?> (Use After Free Vulnerability in SNMP with GC and unserialize()).</li>
+</ul></li>
+<li>Xmlrpc:
+<ul>
+  <li><?php bugfix(72606); ?> (heap-buffer-overflow (write) simplestring_addn simplestring.c).</li>
+</ul></li>
+<li>Zip:
+<ul>
+  <li><?php bugfix(72520); ?> (Stack-based buffer overflow vulnerability in php_stream_zip_opener).</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
 <section class="version" id="5.6.23"><!-- {{{ 5.6.23 -->
 <h3>Version 5.6.23</h3>
 <b><?php release_date('23-Jun-2016'); ?></b>
