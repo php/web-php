@@ -402,12 +402,32 @@ hr {
 }
 
 .page-tools {
-  margin-left:1.5rem;
-  float: right;
-  text-align: right;
-  position: relative;
-  z-index: 10;
+  text-align: center;
 }
+
+@media (min-width:650px){
+  .page-tools {
+    float: right;
+    text-align: right;
+    position: relative;
+    z-index: 10;
+  }
+}
+
+@media (min-width:768px){
+  .page-tools {
+    float:none;
+    text-align:center;
+  }
+}
+
+@media (min-width:886px){
+  .page-tools {
+    float:right;
+    text-align:right;
+  }
+}
+
 .page-tools #changelang-langs,
 .page-tools .edit-bug {
   font-size:.75rem;
