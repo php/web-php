@@ -40,11 +40,12 @@ site_header('Unsupported Branches');
 	<tbody>
 		<?php foreach (get_eol_branches() as $major => $branches): ?>
 			<?php foreach ($branches as $branch => $detail): ?>
-				<?php $eolPeriod = format_interval('@'.$detail['date'], null) ?>
+				<?php $eolDate = get_branch_security_eol_date($branch) ?>
+				<?php $eolPeriod = format_interval($eolDate, null) ?>
 					<tr>
 						<td><?php echo htmlspecialchars($branch); ?></td>
 						<td>
-							<?php echo date('j M Y', $detail['date']); ?>
+							<?php echo $eolDate->format('j M Y') ?>
 						</td>
 						<td>
 							<em><?php echo $eolPeriod ?></em>

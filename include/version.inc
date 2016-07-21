@@ -12,7 +12,6 @@
  *                 "note"     => "this file was updated 29feb due to broken phar files..",
  *             ),
  *             "announcement" => "bool, release announcement exists in releases/?",
- *             "eol" => "bool, true to mark as EOL (affects bug tracker and eol.php)"
  *         ),
  *     ),
  * );

@@ -10,6 +10,12 @@ include_once $_SERVER['DOCUMENT_ROOT'] . '/include/version.inc';
  *    - security: the end of security support (usually release + 3 years).
  */
 $BRANCHES = array(
+	/* 3.0 is here because version_compare() can't handle the only version in
+	 * $OLDRELEASES, and it saves another special case in
+	 * get_branch_security_eol_date(). */
+	'3.0' => array(
+		'security' => '2000-10-20',
+	),
 	'5.3' => array(
 		'stable'   => '2013-07-11',
 		'security' => '2014-08-14',
@@ -27,6 +33,11 @@ $BRANCHES = array(
 		'security' => '2018-12-31',
 	),
 );
+
+/* Time to keep EOLed branches in the array returned by get_active_branches(),
+ * which is used on the front page download links and the supported versions
+ * page. (Currently 28 days.) */
+$KEEP_EOL = new DateInterval('P28D');
 
 function format_interval($from, $to) {
 	try {
@@ -113,11 +124,12 @@ function get_all_branches() {
 
 function get_active_branches() {
 	$branches = array();
+	$now = new DateTime;
 
 	foreach ($GLOBALS['RELEASES'] as $major => $releases) {
 		foreach ($releases as $version => $release) {
 			if ($branch = version_number_to_branch($version)) {
-				if (empty($release['eol'])) {
+				if ($now < get_branch_security_eol_date($branch)->add($GLOBALS['KEEP_EOL'])) {
 					$branches[$major][$branch] = $release;
 					$branches[$major][$branch]['version'] = $version;
 				}
@@ -136,6 +148,7 @@ function get_active_branches() {
 function get_eol_branches($always_include = null) {
 	$always_include = $always_include ? $always_include : array();
 	$branches = array();
+	$now = new DateTime;
 
 	// Gather the last release on each branch into a convenient array.
 	foreach ($GLOBALS['OLDRELEASES'] as $major => $releases) {
@@ -157,7 +170,7 @@ function get_eol_branches($always_include = null) {
 	foreach ($GLOBALS['RELEASES'] as $major => $releases) {
 		foreach ($releases as $version => $release) {
 			if ($branch = version_number_to_branch($version)) {
-				if (empty($release['eol'])) {
+				if ($now < get_branch_security_eol_date($branch)) {
 					/* This branch isn't EOL: remove it from our array. */
 					if (isset($branches[$major][$branch])) {
 						unset($branches[$major][$branch]);
@@ -226,6 +239,37 @@ function get_initial_release($branch) {
 	return null;
 }
 
+function get_final_release($branch) {
+	$branch = version_number_to_branch($branch);
+	if (!$branch) {
+		return null;
+	}
+	$major = substr($branch, 0, strpos($branch, '.'));
+
+	$last = "$branch.0";
+	foreach ($GLOBALS['OLDRELEASES'][$major] as $version => $release) {
+		if (version_number_to_branch($version) == $branch && version_compare($version, $last, '>')) {
+			$last = $version;
+		}
+	}
+
+	if (isset($GLOBALS['OLDRELEASES'][$major][$last])) {
+		return $GLOBALS['OLDRELEASES'][$major][$last];
+	}
+	
+	/* If there's only been one release on the branch, it won't be in
+	 * $OLDRELEASES yet, so let's check $RELEASES. */
+	if (isset($GLOBALS['RELEASES'][$major][$last])) {
+		// Fake a date like we have on the oldreleases array.
+		$release = $GLOBALS['RELEASES'][$major][$last];
+		$release['date'] = $release['source'][0]['date'];
+		return $release;
+	}
+
+	// Shrug.
+	return null;
+}
+
 function get_branch_bug_eol_date($branch) {
 	if (isset($GLOBALS['BRANCHES'][$branch]['stable'])) {
 		return new DateTime($GLOBALS['BRANCHES'][$branch]['stable']);
@@ -241,8 +285,15 @@ function get_branch_security_eol_date($branch) {
 		return new DateTime($GLOBALS['BRANCHES'][$branch]['security']);
 	}
 
-	$date = get_branch_release_date($branch);
+	/* Versions before 5.3 are based solely on the final release date in
+	 * $OLDRELEASES. */
+	if (version_compare($branch, '5.3', '<')) {
+		$release = get_final_release($branch);
 
+		return $release ? new DateTime($release['date']) : null;
+	}
+
+	$date = get_branch_release_date($branch);
 	return $date ? $date->add(new DateInterval('P3Y')) : null;
 }
 
