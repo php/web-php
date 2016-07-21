@@ -7,6 +7,78 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 ?>
 
 <h1>PHP 5 ChangeLog</h1>
+<section class="version" id="5.6.24"><!-- {{{ 5.6.24 -->
+<h3>Version 5.6.24</h3>
+<b><?php release_date('21-Jul-2016'); ?></b>
+<ul><li>Core:
+<ul>
+  <li><?php bugfix(71936); ?> (Segmentation fault destroying HTTP_RAW_POST_DATA).</li>
+  <li><?php bugfix(72496); ?> (Cannot declare public method with signature incompatible with parent private method).</li>
+  <li><?php bugfix(72138); ?> (Integer Overflow in Length of String-typed ZVAL).</li>
+  <li><?php bugfix(72513); ?> (Stack-based buffer overflow vulnerability in virtual_file_ex).</li>
+  <li><?php bugfix(72562); ?> (Use After Free in unserialize() with Unexpected Session Deserialization).</li>
+  <li><?php bugfix(72573); ?> (HTTP_PROXY is improperly trusted by some PHP libraries and applications).</li>
+</ul></li>
+<li>bz2:
+<ul>
+  <li><?php bugfix(72447); ?> (Type Confusion in php_bz2_filter_create()). (gogil at stealien dot com).</li>
+  <li><?php bugfix(72613); ?> (Inadequate error handling in bzread()).</li>
+</ul></li>
+<li>EXIF:
+<ul>
+  <li><?php bugfix(50845); ?> (exif_read_data() returns corrupted exif headers).</li>
+  <li><?php bugfix(72603); ?> (Out of bound read in exif_process_IFD_in_MAKERNOTE).</li>
+  <li><?php bugfix(72618); ?> (NULL Pointer Dereference in exif_process_user_comment).</li>
+</ul></li>
+<li>GD:
+<ul>
+  <li><?php bugfix(43475); ?> (Thick styled lines have scrambled patterns).</li>
+  <li><?php bugfix(53640); ?> (XBM images require width to be multiple of 8).</li>
+  <li><?php bugfix(64641); ?> (imagefilledpolygon doesn't draw horizontal line).</li>
+  <li><?php bugfix(72512); ?> (gdImageTrueColorToPaletteBody allows arbitrary write/read access).</li>
+  <li><?php bugfix(72519); ?> (imagegif/output out-of-bounds access).</li>
+  <li><?php bugfix(72558); ?> (Integer overflow error within _gdContributionsAlloc()).</li>
+</ul></li>
+<li>Intl:
+<ul>
+  <li><?php bugfix(72533); ?> (locale_accept_from_http out-of-bounds access).</li>
+</ul></li>
+<li>ODBC:
+<ul>
+  <li><?php bugfix(69975); ?> (PHP segfaults when accessing nvarchar(max) defined columns)</li>
+</ul></li>
+<li>OpenSSL:
+<ul>
+  <li><?php bugfix(71915); ?> (openssl_random_pseudo_bytes is not fork-safe).</li>
+  <li><?php bugfix(72336); ?> (openssl_pkey_new does not fail for invalid DSA params).</li>
+</ul></li>
+<li>SNMP:
+<ul>
+  <li><?php bugfix(72479); ?> (Use After Free Vulnerability in SNMP with GC and unserialize()).</li>
+</ul></li>
+<li>SPL:
+<ul>
+  <li><?php bugfix(55701); ?> (GlobIterator throws LogicException).</li>
+</ul></li>
+<li>SQLite3:
+<ul>
+  <li><?php bugfix(70628); ?> (Clearing bindings on an SQLite3 statement doesn't work).</li>
+</ul></li>
+<li>Streams:
+<ul>
+  <li><?php bugfix(72439); ?> (Stream socket with remote address leads to a segmentation fault).</li>
+</ul></li>
+<li>Xmlrpc:
+<ul>
+  <li><?php bugfix(72606); ?> (heap-buffer-overflow (write) simplestring_addn simplestring.c).</li>
+</ul></li>
+<li>Zip:
+<ul>
+  <li><?php bugfix(72520); ?> (Stack-based buffer overflow vulnerability in php_stream_zip_opener).</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
 <section class="version" id="5.5.38"><!-- {{{ 5.5.38 -->
 <h3>Version 5.5.38</h3>
 <b><?php release_date('21-Jul-2016'); ?></b>

@@ -329,7 +329,43 @@ $OLDRELEASES = array (
   ),
   5 => 
   array (
-  '5.5.37' => 
+    '5.6.23' => 
+    array (
+      'announcement' => 
+      array (
+        'English' => '/releases/5_6_23.php',
+      ),
+      'source' => 
+      array (
+        0 => 
+        array (
+          'filename' => 'php-5.6.23.tar.bz2',
+          'name' => 'PHP 5.6.23 (tar.bz2)',
+          'md5' => '147734b7e0164ebdd2dc18474fcfb309',
+          'sha256' => 'facd280896d277e6f7084b60839e693d4db68318bfc92085d3dc0251fd3558c7',
+          'date' => '23 Jun 2016',
+        ),
+        1 => 
+        array (
+          'filename' => 'php-5.6.23.tar.gz',
+          'name' => 'PHP 5.6.23 (tar.gz)',
+          'md5' => '5120140b7b3117e50807836a1869e250',
+          'sha256' => '5f2274a13970887e8c81500c2afe292d51c3524d1a06554b0a87c74ce0a24ffe',
+          'date' => '23 Jun 2016',
+        ),
+        2 => 
+        array (
+          'filename' => 'php-5.6.23.tar.xz',
+          'name' => 'PHP 5.6.23 (tar.xz)',
+          'md5' => 'c2d2155e50bcbaa0ee7a63845862c894',
+          'sha256' => '39141e9a617af172aedbbacee7a63eb15502850f7cea20d759a9cffa7cfb0a1a',
+          'date' => '23 Jun 2016',
+        ),
+      ),
+      'date' => '23 Jun 2016',
+      'museum' => false,
+    ),
+    '5.5.37' => 
     array (
       'announcement' => 
       array (
