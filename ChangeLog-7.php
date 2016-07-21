@@ -7,6 +7,102 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
 
 <h1>PHP 7 ChangeLog</h1>
 
+<section class="version" id="7.0.9"><!-- {{{ 7.0.9 -->
+<h3>Version 7.0.9</h3>
+<b><?php release_date('21-Jul-2016'); ?></b>
+<ul><li>Core:
+<ul>
+  <li><?php bugfix(72508); ?> (strange references after recursive function call and "switch" statement).</li>
+  <li><?php bugfix(72513); ?> (Stack-based buffer overflow vulnerability in virtual_file_ex).</li>
+  <li><?php bugfix(72573); ?> (HTTP_PROXY is improperly trusted by some PHP libraries and applications).</li>
+</ul></li>
+<li>bz2:
+<ul>
+  <li><?php bugfix(72613); ?> (Inadequate error handling in bzread()).</li>
+</ul></li>
+<li>CLI:
+<ul>
+  <li><?php bugfix(72484); ?> (SCRIPT_FILENAME shows wrong path if the user specify router.php).</li>
+</ul></li>
+<li>COM:
+<ul>
+  <li><?php bugfix(72498); ?> (variant_date_from_timestamp null dereference).</li>
+</ul></li>
+<li>Curl:
+<ul>
+  <li><?php bugfix(72541); ?> (size_t overflow lead to heap corruption).</li>
+</ul></li>
+<li>Exif:
+<ul>
+  <li><?php bugfix(72603); ?> (Out of bound read in exif_process_IFD_in_MAKERNOTE).</li>
+  <li><?php bugfix(72618); ?> (NULL Pointer Dereference in exif_process_user_comment).</li>
+</ul></li>
+<li>GD:
+<ul>
+  <li><?php bugfix(43475); ?> (Thick styled lines have scrambled patterns).</li>
+  <li><?php bugfix(53640); ?> (XBM images require width to be multiple of 8).</li>
+  <li><?php bugfix(64641); ?> (imagefilledpolygon doesn't draw horizontal line).</li>
+  <li><?php bugfix(72512); ?> (gdImageTrueColorToPaletteBody allows arbitrary write/read access).</li>
+  <li><?php bugfix(72519); ?> (imagegif/output out-of-bounds access).</li>
+  <li><?php bugfix(72558); ?> (Integer overflow error within _gdContributionsAlloc()).</li>
+  <li><?php bugfix(72482); ?> (Ilegal write/read access caused by gdImageAALine overflow).</li>
+  <li><?php bugfix(72494); ?> (imagecropauto out-of-bounds access).</li>
+</ul></li>
+<li>Intl:
+<ul>
+  <li><?php bugfix(72533); ?> (locale_accept_from_http out-of-bounds access).</li>
+</ul></li>
+<li>Mbstring:
+<ul>
+  <li><?php bugfix(72405); ?> (mb_ereg_replace - mbc_to_code (oniguruma) - oob read access).</li>
+  <li><?php bugfix(72399); ?> (Use-After-Free in MBString (search_re)).</li>
+</ul></li>
+<li>mcrypt:
+<ul>
+  <li><?php bugfix(72551); ?>, bug <?php bugl(72552) ?> (Incorrect casting from size_t to int lead to heap overflow in mdecrypt_generic).</li>
+</ul></li>
+<li>PDO_pgsql:
+<ul>
+  <li><?php bugfix(72570); ?> (Segmentation fault when binding parameters on a query without placeholders).</li>
+</ul></li>
+<li>PCRE:
+<ul>
+  <li><?php bugfix(72476); ?> (Memleak in jit_stack).</li>
+  <li><?php bugfix(72463); ?> (mail fails with invalid argument).</li>
+</ul></li>
+<li>Readline:
+<ul>
+  <li><?php bugfix(72538); ?> (readline_redisplay crashes php).</li>
+</ul></li>
+<li>Standard:
+<ul>
+  <li><?php bugfix(72505); ?> (readfile() mangles files larger than 2G).</li>
+  <li><?php bugfix(72306); ?> (Heap overflow through proc_open and $env parameter).</li>
+</ul></li>
+<li>Session:
+<ul>
+  <li><?php bugfix(72531); ?> (ps_files_cleanup_dir Buffer overflow).</li>
+  <li><?php bugfix(72562); ?> (Use After Free in unserialize() with Unexpected Session Deserialization).</li>
+</ul></li>
+<li>SNMP:
+<ul>
+  <li><?php bugfix(72479); ?> (Use After Free Vulnerability in SNMP with GC and unserialize()).</li>
+</ul></li>
+<li>Streams:
+<ul>
+  <li><?php bugfix(72439); ?> (Stream socket with remote address leads to a segmentation fault).</li>
+</ul></li>
+<li>XMLRPC:
+<ul>
+  <li><?php bugfix(72606); ?> (heap-buffer-overflow (write) simplestring_addn simplestring.c).</li>
+</ul></li>
+<li>Zip:
+<ul>
+  <li><?php bugfix(72520); ?> (Stack-based buffer overflow vulnerability in php_stream_zip_opener).</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
 <section class="version" id="7.0.8"><!-- {{{ 7.0.8 -->
 <h3>Version 7.0.8</h3>
 <b><?php release_date('23-Jun-2016'); ?></b>
