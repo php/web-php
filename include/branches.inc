@@ -122,14 +122,18 @@ function get_all_branches() {
 	return $branches;
 }
 
-function get_active_branches() {
+function get_active_branches($include_recent_eols = true) {
 	$branches = array();
 	$now = new DateTime;
 
 	foreach ($GLOBALS['RELEASES'] as $major => $releases) {
 		foreach ($releases as $version => $release) {
 			if ($branch = version_number_to_branch($version)) {
-				if ($now < get_branch_security_eol_date($branch)->add($GLOBALS['KEEP_EOL'])) {
+        $threshold = get_branch_security_eol_date($branch);
+        if ($include_recent_eols) {
+          $threshold->add($GLOBALS['KEEP_EOL']);
+        }
+				if ($now < $threshold) {
 					$branches[$major][$branch] = $release;
 					$branches[$major][$branch]['version'] = $version;
 				}

@@ -47,7 +47,7 @@ $VERSION_NOTES = array(
 		</tr>
 	</thead>
 	<tbody>
-		<?php foreach (get_active_branches() as $major => $releases): ?>
+		<?php foreach (get_active_branches(false) as $major => $releases): ?>
 			<?php ksort($releases) ?>
 			<?php foreach ($releases as $branch => $release): ?>
 				<?php
