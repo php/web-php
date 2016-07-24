@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom" xmlns:default="http://php.net/ns/news">
+  <title>Early Bird Ticket Sale for PHPConf.Asia 2016</title>
+  <id>http://php.net/archive/2016.php#id2016-07-24-1</id>
+  <published>2016-07-24T14:38:59+08:00</published>
+  <updated>2016-07-24T14:38:59+08:00</updated>
+  <default:finalTeaserDate xmlns="http://php.net/ns/news">2016-08-24</default:finalTeaserDate>
+  <category term="conferences" label="Conference announcement"/>
+  <link href="http://php.net/conferences/index.php#id2016-07-24-1" rel="alternate" type="text/html"/>
+  <default:newsImage xmlns="http://php.net/ns/news" link="https://2016.phpconf.asia" title="PHPConf.Asia 2016">phpconfasia2016-logo.png</default:newsImage>
+  <link href="https://2016.phpconf.asia" rel="via" type="text/html"/>
+  <content type="xhtml">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+     <p><a href="https://2016.phpconf.asia" target="_blank">PHPConf.Asia 2016</a> is happening in Singapore on 22-24 August 2016. Tutorial Day on 22 Aug. 2 day single track conference on 23 and 24 August.</p>
+
+     <p><strong>Keynote Speakers:</strong> Davey Shafik (<a href="https://twitter.com/dshafik" target="_blank">@dshafik</a>) and Samantha Quiñones (<a href="https://twitter.com/ieatkillerbees">@ieatkillerbees</a>)</p>
+
+     <p><strong><em>Early Bird Tickets available now!</em></strong> (valid till 5 August). Visit <a href="https://2016.phpconf.asia" target="_blank">https://2016.phpconf.asia</a> for more details.</p>
+    </div>
+  </content>
+</entry>
