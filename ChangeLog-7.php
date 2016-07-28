@@ -32,6 +32,10 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
 <ul>
   <li><?php bugfix(72541); ?> (size_t overflow lead to heap corruption).</li>
 </ul></li>
+<li>Date:
+<ul>
+  <li><?php bugfix(66836); ?> (DateTime::createFromFormat 'U' with pre 1970 dates fails parsing).</li>
+</ul></li>
 <li>Exif:
 <ul>
   <li><?php bugfix(72603); ?> (Out of bound read in exif_process_IFD_in_MAKERNOTE).</li>
