@@ -43,10 +43,6 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 <ul>
   <li><?php bugfix(72533); ?> (locale_accept_from_http out-of-bounds access).</li>
 </ul></li>
-<li>ODBC:
-<ul>
-  <li><?php bugfix(69975); ?> (PHP segfaults when accessing nvarchar(max) defined columns)</li>
-</ul></li>
 <li>OpenSSL:
 <ul>
   <li><?php bugfix(71915); ?> (openssl_random_pseudo_bytes is not fork-safe).</li>
@@ -999,7 +995,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 </ul></li>
 <li>ODBC:
 <ul>
-  <li><?php bugfix(69975); ?> (PHP segfaults when accessing nvarchar(max) defined columns).</li>
+  <li><?php bugfix(69975); ?> (PHP segfaults when accessing nvarchar(max) defined columns). (CVE-2015-8879)</li>
 </ul></li>
 <li>OpenSSL:
 <ul>
