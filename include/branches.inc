@@ -139,7 +139,9 @@ function get_active_branches($include_recent_eols = true) {
 				}
 			}
 		}
-		ksort($branches[$major]);
+		if (!empty($branches[$major])) {
+			ksort($branches[$major]);
+		}
 	}
 
 	ksort($branches);
