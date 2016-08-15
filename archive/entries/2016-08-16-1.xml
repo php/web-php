@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom" xmlns:default="http://php.net/ns/news">
+	<title>ZendCon 2016</title>
+	<id>http://php.net/archive/2016.php#id2016-08-16-1</id>
+	<published>2016-08-16T00:00:01+00:00</published>
+	<updated>2016-08-16T00:00:01+00:00</updated>
+	<default:finalTeaserDate xmlns="http://php.net/ns/news">2016-09-16</default:finalTeaserDate>
+	<category term="conferences" label="Conference announcement"/>
+	<link href="http://php.net/conferences/index.php#id2016-08-16-1" rel="alternate" type="text/html"/>
+	<default:newsImage xmlns="http://php.net/ns/news" link="http://zendcon.com" title="ZendCon 2016">zendcon2016.png</default:newsImage>
+	<link href="http://zendcon.com" rel="via" type="text/html"/>
+	<content type="xhtml">
+		<div xmlns="http://www.w3.org/1999/xhtml">
+			<p>With over 250 million PHP applications and websites driven by a global community of more than 5 million active developers, ZendCon 2016 brings you a curated selection of the best experts, training, and networking opportunities to help you become a PHP authority.</p>
+
+			<p>In its 12th year, ZendCon offers authoritative sessions, in-depth technical tutorials, exhibit hall activities, and informal opportunities to spotlight the best in enterprise PHP development, the latest for PHP 7, and innovations on many open source technologies related to the web.</p>
+
+			<p>Experience web development with the very best to accelerate great PHP.</p>
+
+			<p>Register Now at <a href="http://www.zendcon.com/register-now" title="ZendCon 2016">http://www.zendcon.com/register-now</a>http://www.zendcon.com/register-now</p>
+		</div>
+	</content>
+</entry>
