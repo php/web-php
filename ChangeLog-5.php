@@ -7,6 +7,132 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 ?>
 
 <h1>PHP 5 ChangeLog</h1>
+<section class="version" id="5.6.25"><!-- {{{ 5.6.25 -->
+<h3>Version 5.6.25</h3>
+<b><?php release_date('18-Aug-2016'); ?></b>
+<ul><li>Bz2:
+<ul>
+  <li><?php bugfix(72837); ?> (integer overflow in bzdecompress caused heap corruption).</li>
+</ul></li>
+<li>Core:
+<ul>
+  <li><?php bugfix(70436); ?> (Use After Free Vulnerability in unserialize()).</li>
+  <li><?php bugfix(72024); ?> (microtime() leaks memory).</li>
+  <li><?php bugfix(72581); ?> (previous property undefined in Exception after deserialization).</li>
+  <li>Implemented FR <?php bugl(72614); ?> (Support "nmake test" on building extensions by phpize).</li>
+  <li><?php bugfix(72641); ?> (phpize (on Windows) ignores PHP_PREFIX).</li>
+  <li><?php bugfix(72663); ?> (Create an Unexpected Object and Don't Invoke __wakeup() in Deserialization).</li>
+  <li><?php bugfix(72681); ?> (PHP Session Data Injection Vulnerability).</li>
+</ul></li>
+<li>Calendar:
+<ul>
+  <li><?php bugfix(67976); ?> (cal_days_month() fails for final month of the French calendar).</li>
+  <li><?php bugfix(71894); ?> (AddressSanitizer: global-buffer-overflow in zif_cal_from_jd).</li>
+</ul></li>
+<li>Curl:
+<ul>
+  <li><?php bugfix(71144); ?> (Segmentation fault when using cURL with ZTS).</li>
+  <li><?php bugfix(71929); ?> (Certification information (CERTINFO) data parsing error).</li>
+  <li><?php bugfix(72807); ?> (integer overflow in curl_escape caused heap corruption).</li>
+</ul></li>
+<li>DOM:
+<ul>
+  <li><?php bugfix(66502); ?> (DOM document dangling reference).</li>
+</ul></li>
+<li>Ereg:
+<ul>
+  <li><?php bugfix(72838); ?> (Integer overflow lead to heap corruption in sql_regcase).</li>
+</ul></li>
+<li>EXIF:
+<ul>
+  <li><?php bugfix(72627); ?> (Memory Leakage In exif_process_IFD_in_TIFF).</li>
+  <li><?php bugfix(72735); ?> (Samsung picture thumb not read (zero size)).</li>
+</ul></li>
+<li>Filter:
+<ul>
+  <li><?php bugfix(71745); ?> (FILTER_FLAG_NO_RES_RANGE does not cover whole 127.0.0.0/8 range).</li>
+</ul></li>
+<li>FPM:
+<ul>
+  <li><?php bugfix(72575); ?> (using --allow-to-run-as-root should ignore missing user).</li>
+</ul></li>
+<li>GD:
+<ul>
+  <li><?php bugfix(43828); ?> (broken transparency of imagearc for truecolor in blendingmode).</li>
+  <li><?php bugfix(66555); ?> (Always false condition in ext/gd/libgd/gdkanji.c).</li>
+  <li><?php bugfix(68712); ?> (suspicious if-else statements).</li>
+  <li><?php bugfix(70315); ?> (500 Server Error but page is fully rendered).</li>
+  <li><?php bugfix(72596); ?> (imagetypes function won't advertise WEBP support).</li>
+  <li><?php bugfix(72604); ?> (imagearc() ignores thickness for full arcs).</li>
+  <li><?php bugfix(72697); ?> (select_colors write out-of-bounds).</li>
+  <li><?php bugfix(72709); ?> (imagesetstyle() causes OOB read for empty $styles).</li>
+  <li><?php bugfix(72730); ?> (imagegammacorrect allows arbitrary write access).</li>
+</ul></li>
+<li>Intl:
+<ul>
+  <li>Partially fixed <?php bugl(72506); ?> (idn_to_ascii for UTS #46 incorrect for long domain names).</li>
+</ul></li>
+<li>mbstring:
+<ul>
+  <li><?php bugfix(72691); ?> (mb_ereg_search raises a warning if a match zero-width).</li>
+  <li><?php bugfix(72693); ?> (mb_ereg_search increments search position when a match zero-width).</li>
+  <li><?php bugfix(72694); ?> (mb_ereg_search_setpos does not accept a string's last position).</li>
+  <li><?php bugfix(72710); ?> (`mb_ereg` causes buffer overflow on regexp compile error).</li>
+</ul></li>
+<li>PCRE:
+<ul>
+  <li><?php bugfix(72688); ?> (preg_match missing group names in matches).</li>
+</ul></li>
+<li>PDO_pgsql:
+<ul>
+  <li><?php bugfix(70313); ?> (PDO statement fails to throw exception).</li>
+</ul></li>
+<li>Reflection:
+<ul>
+  <li><?php bugfix(72222); ?> (ReflectionClass::export doesn't handle array constants).</li>
+</ul></li>
+<li>SNMP:
+<ul>
+  <li><?php bugfix(72708); ?> (php_snmp_parse_oid integer overflow in memory allocation).</li>
+</ul></li>
+<li>Standard:
+<ul>
+  <li><?php bugfix(72330); ?> (CSV fields incorrectly split if escape char followed by UTF chars).</li>
+  <li><?php bugfix(72836); ?> (integer overflow in base64_decode).</li>
+  <li><?php bugfix(72848); ?> (integer overflow in quoted_printable_encode).</li>
+  <li><?php bugfix(72849); ?> (integer overflow in urlencode).</li>
+  <li><?php bugfix(72850); ?> (integer overflow in php_uuencode).</li>
+  <li><?php bugfix(72716); ?> (initialize buffer before read).</li>
+</ul></li>
+<li>Streams:
+<ul>
+  <li><?php bugfix(41021); ?> (Problems with the ftps wrapper).</li>
+  <li><?php bugfix(54431); ?> (opendir() does not work with ftps:// wrapper).</li>
+  <li><?php bugfix(72667); ?> (opendir() with ftp:// attempts to open data stream for non-existent directories).</li>
+  <li><?php bugfix(72764); ?> (ftps:// opendir wrapper data channel encryption fails with IIS FTP 7.5, 8.5).</li>
+  <li><?php bugfix(72771); ?> (ftps:// wrapper is vulnerable to protocol downgrade attack).</li>
+</ul></li>
+<li>SPL:
+<ul>
+  <li><?php bugfix(72122); ?> (IteratorIterator breaks '@' error suppression).</li>
+  <li><?php bugfix(72646); ?> (SplFileObject::getCsvControl does not return the escape character).</li>
+  <li><?php bugfix(72684); ?> (AppendIterator segfault with closed generator).</li>
+</ul></li>
+<li>SQLite3:
+<ul>
+  <li>Implemented FR <?php bugl(72653); ?> (SQLite should allow opening with empty filename).</li>
+</ul></li>
+<li>Wddx:
+<ul>
+  <li><?php bugfix(72142); ?> (WDDX Packet Injection Vulnerability in wddx_serialize_value()).</li>
+  <li><?php bugfix(72749); ?> (wddx_deserialize allows illegal memory access) (Stas)</li>
+  <li><?php bugfix(72750); ?> (wddx_deserialize null dereference).</li>
+  <li><?php bugfix(72790); ?> (wddx_deserialize null dereference with invalid xml).</li>
+  <li><?php bugfix(72799); ?> (wddx_deserialize null dereference in php_wddx_pop_element).</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
 <section class="version" id="5.6.24"><!-- {{{ 5.6.24 -->
 <h3>Version 5.6.24</h3>
 <b><?php release_date('21-Jul-2016'); ?></b>

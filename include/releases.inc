@@ -365,6 +365,42 @@ $OLDRELEASES = array (
   ),
   5 => 
   array (
+    '5.6.24' => 
+    array (
+      'announcement' => 
+      array (
+        'English' => '/releases/5_6_24.php',
+      ),
+      'source' => 
+      array (
+        0 => 
+        array (
+          'filename' => 'php-5.6.24.tar.bz2',
+          'name' => 'PHP 5.6.24 (tar.bz2)',
+          'md5' => '2ab124d58b7b763ca453f6a18ec3866b',
+          'sha256' => 'bf23617ec3ed0a125ec8bde2b7bca9d3804b2ff4df8de192890c84dc9fac38c6',
+          'date' => '21 Jul 2016',
+        ),
+        1 => 
+        array (
+          'filename' => 'php-5.6.24.tar.gz',
+          'name' => 'PHP 5.6.24 (tar.gz)',
+          'md5' => 'dfa2e90085516cc817a8a9568e2a374e',
+          'sha256' => '5f8b2e4e00360fee6eb1b89447266ae45993265955bd1ea9866270d75cdb6ec1',
+          'date' => '21 Jul 2016',
+        ),
+        2 => 
+        array (
+          'filename' => 'php-5.6.24.tar.xz',
+          'name' => 'PHP 5.6.24 (tar.xz)',
+          'md5' => '3ef6e3573698b9b444be88edd3b23494',
+          'sha256' => 'ed7c38c6dac539ade62e08118258f4dac0c49beca04d8603bee4e0ea6ca8250b',
+          'date' => '21 Jul 2016',
+        ),
+      ),
+      'date' => '21 Jul 2016',
+      'museum' => false,
+    ),
     '5.6.23' => 
     array (
       'announcement' => 
