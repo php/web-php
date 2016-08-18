@@ -7,6 +7,161 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
 
 <h1>PHP 7 ChangeLog</h1>
 
+<section class="version" id="7.0.10"><!-- {{{ 7.0.10 -->
+<h3>Version 7.0.10</h3>
+<b><?php release_date('18-Aug-2016'); ?></b>
+<ul><li>Core:
+<ul>
+  <li><?php bugfix(72629); ?> (Caught exception assignment to variables ignores references).</li>
+  <li><?php bugfix(72594); ?> (Calling an earlier instance of an included anonymous class fatals).</li>
+  <li><?php bugfix(72581); ?> (previous property undefined in Exception after deserialization).</li>
+  <li><?php bugfix(72496); ?> (Cannot declare public method with signature incompatible with parent private method).</li>
+  <li><?php bugfix(72024); ?> (microtime() leaks memory).</li>
+  <li><?php bugfix(71911); ?> (Unable to set --enable-debug on building extensions by phpize on Windows).</li>
+  <li>Fixed bug causing ClosedGeneratorException being thrown into the calling code instead of the Generator yielding from.</li>
+  <li>Implemented FR <?php bugl(72614); ?> (Support "nmake test" on building extensions by phpize).</li>
+  <li><?php bugfix(72641); ?> (phpize (on Windows) ignores PHP_PREFIX).</li>
+  <li>Fixed potential segfault in object storage freeing in shutdown sequence.</li>
+  <li><?php bugfix(72663); ?> (Create an Unexpected Object and Don't Invoke __wakeup() in Deserialization).</li>
+  <li><?php bugfix(72681); ?> (PHP Session Data Injection Vulnerability).</li>
+  <li><?php bugfix(72683); ?> (getmxrr broken).</li>
+  <li><?php bugfix(72742); ?> (memory allocator fails to realloc small block to large one).</li>
+</ul></li>
+<li>Bz2:
+<ul>
+  <li><?php bugfix(72837); ?> (integer overflow in bzdecompress caused heap corruption).</li>
+</ul></li>
+<li>Calendar:
+<ul>
+  <li><?php bugfix(67976); ?> (cal_days_month() fails for final month of the French calendar).</li>
+  <li><?php bugfix(71894); ?> (AddressSanitizer: global-buffer-overflow in zif_cal_from_jd).</li>
+</ul></li>
+<li>COM:
+<ul>
+  <li><?php bugfix(72569); ?> (DOTNET/COM array parameters broke in PHP7).</li>
+</ul></li>
+<li>CURL:
+<ul>
+  <li><?php bugfix(71709); ?> (curl_setopt segfault with empty CURLOPT_HTTPHEADER).</li>
+  <li><?php bugfix(71929); ?> (CURLINFO_CERTINFO data parsing error).</li>
+  <li><?php bugfix(72674); ?> (Heap overflow in curl_escape).</li>
+</ul></li>
+<li>DOM:
+<ul>
+  <li><?php bugfix(66502); ?> (DOM document dangling reference).</li>
+</ul></li>
+<li>EXIF:
+<ul>
+  <li><?php bugfix(72735); ?> (Samsung picture thumb not read (zero size)).</li>
+  <li><?php bugfix(72627); ?> (Memory Leakage In exif_process_IFD_in_TIFF).</li>
+</ul></li>
+<li>Filter:
+<ul>
+  <li><?php bugfix(71745); ?> (FILTER_FLAG_NO_RES_RANGE does not cover whole 127.0.0.0/8 range).</li>
+</ul></li>
+<li>FPM:
+<ul>
+  <li><?php bugfix(72575); ?> (using --allow-to-run-as-root should ignore missing user).</li>
+</ul></li>
+<li>GD:
+<ul>
+  <li><?php bugfix(72596); ?> (imagetypes function won't advertise WEBP support).</li>
+  <li><?php bugfix(72604); ?> (imagearc() ignores thickness for full arcs).</li>
+  <li><?php bugfix(70315); ?> (500 Server Error but page is fully rendered).</li>
+  <li><?php bugfix(43828); ?> (broken transparency of imagearc for truecolor in blendingmode).</li>
+  <li><?php bugfix(66555); ?> (Always false condition in ext/gd/libgd/gdkanji.c).</li>
+  <li><?php bugfix(68712); ?> (suspicious if-else statements).</li>
+  <li><?php bugfix(72697); ?> (select_colors write out-of-bounds).</li>
+  <li><?php bugfix(72730); ?> (imagegammacorrect allows arbitrary write access).</li>
+</ul></li>
+<li>Intl:
+<ul>
+  <li><?php bugfix(72639); ?> (Segfault when instantiating class that extends IntlCalendar and adds a property).</li>
+  <li>Partially fixed <?php bugfix(72506); ?> (idn_to_ascii for UTS #46 incorrect for long domain names).</li>
+</ul></li>
+<li>mbstring:
+<ul>
+  <li><?php bugfix(72691); ?> (mb_ereg_search raises a warning if a match zero-width).</li>
+  <li><?php bugfix(72693); ?> (mb_ereg_search increments search position when a match zero-width).</li>
+  <li><?php bugfix(72694); ?> (mb_ereg_search_setpos does not accept a string's last position).</li>
+  <li><?php bugfix(72710); ?> (`mb_ereg` causes buffer overflow on regexp compile error).</li>
+</ul></li>
+<li>Mcrypt:
+<ul>
+  <li><?php bugfix(72782); ?> (Heap Overflow due to integer overflows).</li>
+</ul></li>
+<li>Opcache:
+<ul>
+  <li><?php bugfix(72590); ?> (Opcache restart with kill_all_lockers does not work).</li>
+</ul></li>
+<li>PCRE:
+<ul>
+  <li><?php bugfix(72688); ?> (preg_match missing group names in matches).</li>
+</ul></li>
+<li>PDO_pgsql:
+<ul>
+  <li><?php bugfix(70313); ?> (PDO statement fails to throw exception).</li>
+</ul></li>
+<li>Reflection:
+<ul>
+  <li><?php bugfix(72222); ?> (ReflectionClass::export doesn't handle array constants).</li>
+</ul></li>
+<li>SimpleXML:
+<ul>
+  <li><?php bugfix(72588); ?> (Using global var doesn't work while accessing SimpleXML element).</li>
+</ul></li>
+<li>SNMP:
+<ul>
+  <li><?php bugfix(72708); ?> (php_snmp_parse_oid integer overflow in memory allocation).</li>
+</ul></li>
+<li>SPL:
+<ul>
+  <li><?php bugfix(55701); ?> (GlobIterator throws LogicException).</li>
+  <li><?php bugfix(72646); ?> (SplFileObject::getCsvControl does not return the escape character).</li>
+  <li><?php bugfix(72684); ?> (AppendIterator segfault with closed generator).</li>
+</ul></li>
+<li>SQLite3:
+<ul>
+  <li><?php bugfix(72668); ?> (Spurious warning when exception is thrown in user defined function).</li>
+  <li><?php bugfix(72571); ?> (SQLite3::bindValue, SQLite3::bindParam crash).</li>
+  <li>Implemented FR <?php bugl(72653); ?> (SQLite should allow opening with empty filename).</li>
+  <li>Updated to SQLite3 3.13.0.</li>
+</ul></li>
+<li>Standard:
+<ul>
+  <li><?php bugfix(72622); ?> (array_walk + array_replace_recursive create references from nothing).</li>
+  <li><?php bugfix(72152); ?> (base64_decode $strict fails to detect null byte).</li>
+  <li><?php bugfix(72263); ?> (base64_decode skips a character after padding in strict mode).</li>
+  <li><?php bugfix(72264); ?> (base64_decode $strict fails with whitespace between padding).</li>
+  <li><?php bugfix(72330); ?> (CSV fields incorrectly split if escape char followed by UTF chars).</li>
+</ul></li>
+<li>Streams:
+<ul>
+  <li><?php bugfix(41021); ?> (Problems with the ftps wrapper).</li>
+  <li><?php bugfix(54431); ?> (opendir() does not work with ftps:// wrapper).</li>
+  <li><?php bugfix(72667); ?> (opendir() with ftp:// attempts to open data stream for non-existent directories).</li>
+  <li><?php bugfix(72771); ?> (ftps:// wrapper is vulnerable to protocol downgrade attack).</li>
+</ul></li>
+<li>XMLRPC:
+<ul>
+  <li><?php bugfix(72647); ?> (xmlrpc_encode() unexpected output after referencing array elements).</li>
+</ul></li>
+<li>Wddx:
+<ul>
+  <li><?php bugfix(72564); ?> (boolean always deserialized as "true") (Remi)</li>
+  <li><?php bugfix(72142); ?> (WDDX Packet Injection Vulnerability in wddx_serialize_value()).</li>
+  <li><?php bugfix(72749); ?> (wddx_deserialize allows illegal memory access) (Stas)</li>
+  <li><?php bugfix(72750); ?> (wddx_deserialize null dereference).</li>
+  <li><?php bugfix(72790); ?> (wddx_deserialize null dereference with invalid xml).</li>
+  <li><?php bugfix(72799); ?> (wddx_deserialize null dereference in php_wddx_pop_element).</li>
+</ul></li>
+<li>Zip:
+<ul>
+  <li><?php bugfix(72660); ?> (NULL Pointer dereference in zend_virtual_cwd).</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
 <section class="version" id="7.0.9"><!-- {{{ 7.0.9 -->
 <h3>Version 7.0.9</h3>
 <b><?php release_date('21-Jul-2016'); ?></b>
