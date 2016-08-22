@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom" xmlns:default="http://php.net/ns/news">
+  <title>Bulgaria PHP Conference 2016</title>
+  <id>http://php.net/archive/2016.php#id2016-08-22-1</id>
+  <published>2016-08-22T:00:00+03:00</published>
+  <updated>2016-08-22T18:00:00+03:00</updated>
+  <default:finalTeaserDate xmlns="http://php.net/ns/news">2016-10-07</default:finalTeaserDate>
+  <category term="conferences" label="Conference announcement"/>
+  <link href="http://php.net/conferences/index.php#id2016-08-22-1" rel="alternate" type="text/html"/>
+  <default:newsImage xmlns="http://php.net/ns/news" link="http://www.bgphp.org" title="Bulgaria PHP Conference 2016">BulgariaPHP2016.png</default:newsImage>
+  <link href="http://www.bgphp.org" rel="via" type="text/html"/>
+  <content type="xhtml">
+    <div xmlns="http://www.bgphp.org">
+      <p><a href="http://www.bgphp.org">Bulgaria PHP Conference</a> is the premier PHP conference, gathering PHP and frontend developers and engineers from all around Europe. Co-organized by the Bulgaria PHP User Group and SiteGround web hosting, the conference is bringing internationally renowned experts from the PHP industry to talk about APIs, Frameworks, Security, Testing, Continuous Integration, and much more!</p>
+
+      <p>Highlights:</p>
+
+      <ul>
+        <li>500+ passionate attendees</li>
+        <li>27 world renowned speakers</li>
+        <li>4 practical workshops</li>
+        <li>3 actioned-packed days</li>
+        <li>1 legendary after party</li>
+        <li>Games, JeoPHPardy, Hackaton</li>
+        <li>Amazing food, swag and gifts inlcuded</li>
+      </ul>
+
+      <p><a href="http://www.bgphp.org/tickets/">Get your discounted ticket today.</a> Price increases to the regular one (129 EUR) on September 1, 2016.</p>
+
+      <p>Still not convinced? Here are <a href="http://www.bgphp.org/blogpost/reasons-to-attend-bgphp/">several reasons to head to Sofia for Bulgaria PHP Conference</a>.</p>
+    </div>
+  </content>
+</entry>
+>>>>>>> pull-request/119
