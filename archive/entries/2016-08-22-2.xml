@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom" xmlns:default="http://php.net/ns/news">
+  <title>ConFoo Montreal 2017 Calling for Papers</title>
+  <id>http://php.net/archive/2016.php#id2016-08-22-2</id>
+  <published>2016-08-22T16:50:54-04:00</published>
+  <updated>2016-08-22T16:50:54-04:00</updated>
+  <default:finalTeaserDate xmlns="http://php.net/ns/news">2016-09-20</default:finalTeaserDate>
+  <category term="cfp" label="Call for Papers"/>
+  <link href="http://php.net/conferences/index.php#id2016-08-22-2" rel="alternate" type="text/html"/>
+  <default:newsImage xmlns="http://php.net/ns/news" link="https://confoo.ca/en/yul2017/call-for-papers" title="ConFoo March 8-10, 2017 in Montreal, Canada">confoo-yul2017.png</default:newsImage>
+  <link href="https://confoo.ca/en/yul2017/call-for-papers" rel="via" type="text/html"/>
+  <content type="xhtml">
+    <p>Want to get your web development ideas in front of a live audience? The <a href="https://confoo.ca/en/yul2017/call-for-papers">call for papers</a> for the ConFoo Montreal 2017 web developer conference is open! If you have a burning desire to hold forth about PHP, databases, JavaScript, or any other web development topics, we want to see your proposals. The window is open only from August 21 to September 20, 2016, so hurry. An added benefit: If your proposal is selected and you live outside of the Montreal area, we will cover your travel and hotel.</p>
+
+    <p>You’ll have 45 minutes to wow the crowd, with 35 minutes for your topic and 10 minutes for Q&amp;A. We can’t wait to see your proposals. Knock us out!</p>
+
+    <p>ConFoo Montreal will be held on March 8-10, 2017. For those of you who already know about our conference, be aware that this annual tradition will still be running in addition to ConFoo Vancouver. Visit <a href="https://confoo.ca/en">our site</a> to learn more about both events.</p>
+  </content>
+</entry>
