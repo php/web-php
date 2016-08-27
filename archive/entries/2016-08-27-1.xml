@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom" xmlns:default="http://php.net/ns/news">
+  <title>ScotlandPHP 2016</title>
+  <id>http://php.net/archive/2016.php#id2016-08-27-1</id>
+  <published>2016-08-27T12:14:42+00:00</published>
+  <updated>2016-08-27T12:14:42+00:00</updated>
+  <default:finalTeaserDate xmlns="http://php.net/ns/news">2016-10-29</default:finalTeaserDate>
+  <category term="conferences" label="Conference announcement"/>
+  <link href="http://php.net/conferences/index.php#id2016-08-27-1" rel="alternate" type="text/html"/>
+  <default:newsImage xmlns="http://php.net/ns/news" link="https://conference.scotlandphp.co.uk" title="ScotlandPHP 2016">scotlandphp-conf-2016.png</default:newsImage>
+  <link href="https://conference.scotlandphp.co.uk" rel="via" type="text/html"/>
+  <content type="xhtml">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+      <p>
+        Introducing Scotland's first and best PHP conference. ScotlandPHP is a
+        one-day conference, being held on Saturday October 29<sup>th</sup> 2016
+        in our nation's capital, Edinburgh. The conference venue is the super-awesome
+        <a href="https://conference.scotlandphp.co.uk/venue/">Dynamic Earth</a>, in
+        the spectacular surroundings of Holyrood Park and Edinburgh's historic Old Town.
+      </p>
+      <p>
+        There will be two tracks across the day, packed with
+        <a href="https://conference.scotlandphp.co.uk/speakers/">the best speakers around</a>
+        and bookended by keynotes from world class speakers: Anthony Ferrara and Jessica Rose.
+      </p>
+      <p>
+        Visit the <a href="https://conference.scotlandphp.co.uk/">ScotlandPHP Conference website</a>
+        for further details and to purchase tickets.
+      </p>
+    </div>
+  </content>
+</entry>
