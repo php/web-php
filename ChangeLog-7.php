@@ -148,7 +148,7 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
 </ul></li>
 <li>Wddx:
 <ul>
-  <li><?php bugfix(72564); ?> (boolean always deserialized as "true") (Remi)</li>
+  <li><?php bugfix(72564); ?> (boolean always deserialized as "true").</li>
   <li><?php bugfix(72142); ?> (WDDX Packet Injection Vulnerability in wddx_serialize_value()).</li>
   <li><?php bugfix(72749); ?> (wddx_deserialize allows illegal memory access) (Stas)</li>
   <li><?php bugfix(72750); ?> (wddx_deserialize null dereference).</li>
@@ -168,12 +168,12 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
 <ul><li>Core:
 <ul>
   <li><?php bugfix(72508); ?> (strange references after recursive function call and "switch" statement).</li>
-  <li><?php bugfix(72513); ?> (Stack-based buffer overflow vulnerability in virtual_file_ex).</li>
-  <li><?php bugfix(72573); ?> (HTTP_PROXY is improperly trusted by some PHP libraries and applications).</li>
+  <li><?php bugfix(72513); ?> (Stack-based buffer overflow vulnerability in virtual_file_ex). (CVE-2016-6289)</li>
+  <li><?php bugfix(72573); ?> (HTTP_PROXY is improperly trusted by some PHP libraries and applications). (CVE-2016-5385)</li>
 </ul></li>
 <li>bz2:
 <ul>
-  <li><?php bugfix(72613); ?> (Inadequate error handling in bzread()).</li>
+  <li><?php bugfix(72613); ?> (Inadequate error handling in bzread()). (CVE-2016-5399)</li>
 </ul></li>
 <li>CLI:
 <ul>
@@ -189,8 +189,8 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
 </ul></li>
 <li>Exif:
 <ul>
-  <li><?php bugfix(72603); ?> (Out of bound read in exif_process_IFD_in_MAKERNOTE).</li>
-  <li><?php bugfix(72618); ?> (NULL Pointer Dereference in exif_process_user_comment).</li>
+  <li><?php bugfix(72603); ?> (Out of bound read in exif_process_IFD_in_MAKERNOTE). (CVE-2016-6291)</li>
+  <li><?php bugfix(72618); ?> (NULL Pointer Dereference in exif_process_user_comment). (CVE-2016-6292)</li>
 </ul></li>
 <li>GD:
 <ul>
@@ -199,13 +199,14 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
   <li><?php bugfix(64641); ?> (imagefilledpolygon doesn't draw horizontal line).</li>
   <li><?php bugfix(72512); ?> (gdImageTrueColorToPaletteBody allows arbitrary write/read access).</li>
   <li><?php bugfix(72519); ?> (imagegif/output out-of-bounds access).</li>
-  <li><?php bugfix(72558); ?> (Integer overflow error within _gdContributionsAlloc()).</li>
+  <li><?php bugfix(72558); ?> (Integer overflow error within _gdContributionsAlloc()). (CVE-2016-6207)</li>
   <li><?php bugfix(72482); ?> (Ilegal write/read access caused by gdImageAALine overflow).</li>
   <li><?php bugfix(72494); ?> (imagecropauto out-of-bounds access).</li>
 </ul></li>
 <li>Intl:
 <ul>
-  <li><?php bugfix(72533); ?> (locale_accept_from_http out-of-bounds access).</li>
+
+  <li><?php bugfix(72533); ?> (locale_accept_from_http out-of-bounds access). (CVE-2016-6294)</li>
 </ul></li>
 <li>Mbstring:
 <ul>
@@ -241,7 +242,7 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
 </ul></li>
 <li>SNMP:
 <ul>
-  <li><?php bugfix(72479); ?> (Use After Free Vulnerability in SNMP with GC and unserialize()).</li>
+  <li><?php bugfix(72479); ?> (Use After Free Vulnerability in SNMP with GC and unserialize()). (CVE-2016-6295)</li>
 </ul></li>
 <li>Streams:
 <ul>
@@ -249,11 +250,11 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
 </ul></li>
 <li>XMLRPC:
 <ul>
-  <li><?php bugfix(72606); ?> (heap-buffer-overflow (write) simplestring_addn simplestring.c).</li>
+  <li><?php bugfix(72606); ?> (heap-buffer-overflow (write) simplestring_addn simplestring.c). (CVE-2016-6296)</li>
 </ul></li>
 <li>Zip:
 <ul>
-  <li><?php bugfix(72520); ?> (Stack-based buffer overflow vulnerability in php_stream_zip_opener).</li>
+  <li><?php bugfix(72520); ?> (Stack-based buffer overflow vulnerability in php_stream_zip_opener). (CVE-2016-6297)</li>
 </ul></li>
 </ul>
 <!-- }}} --></section>
