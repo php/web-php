@@ -10,11 +10,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 <section class="version" id="5.6.25"><!-- {{{ 5.6.25 -->
 <h3>Version 5.6.25</h3>
 <b><?php release_date('18-Aug-2016'); ?></b>
-<ul><li>Bz2:
-<ul>
-  <li><?php bugfix(72837); ?> (integer overflow in bzdecompress caused heap corruption).</li>
-</ul></li>
-<li>Core:
+<ul><li>Core:
 <ul>
   <li><?php bugfix(70436); ?> (Use After Free Vulnerability in unserialize()).</li>
   <li><?php bugfix(72024); ?> (microtime() leaks memory).</li>
@@ -23,6 +19,10 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
   <li><?php bugfix(72641); ?> (phpize (on Windows) ignores PHP_PREFIX).</li>
   <li><?php bugfix(72663); ?> (Create an Unexpected Object and Don't Invoke __wakeup() in Deserialization).</li>
   <li><?php bugfix(72681); ?> (PHP Session Data Injection Vulnerability).</li>
+</ul></li>
+<li>Bz2:
+<ul>
+  <li><?php bugfix(72837); ?> (integer overflow in bzdecompress caused heap corruption).</li>
 </ul></li>
 <li>Calendar:
 <ul>
