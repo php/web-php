@@ -208,16 +208,16 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 <section class="version" id="5.5.38"><!-- {{{ 5.5.38 -->
 <h3>Version 5.5.38</h3>
 <b><?php release_date('21-Jul-2016'); ?></b>
-<ul><li>BZip2:
-<ul>
-  <li><?php bugfix(72613); ?> (Inadequate error handling in bzread()). (CVE-2016-5399)</li>
-</ul></li>
-<li>Core:
+<ul><li>Core:
 <ul>
   <li><?php bugfix(70480); ?> (php_url_parse_ex() buffer overflow read). (CVE-2016-6288)</li>
   <li><?php bugfix(72513); ?> (Stack-based buffer overflow vulnerability in virtual_file_ex). (CVE-2016-6289)</li>
   <li><?php bugfix(72562); ?> (Use After Free in unserialize() with Unexpected Session Deserialization). (CVE-2016-6290)</li>
   <li><?php bugfix(72573); ?> (HTTP_PROXY is improperly trusted by some PHP libraries and applications). (CVE-2016-5385)</li>
+</ul></li>
+<li>BZip2:
+<ul>
+  <li><?php bugfix(72613); ?> (Inadequate error handling in bzread()). (CVE-2016-5399)</li>
 </ul></li>
 <li>EXIF:
 <ul>
