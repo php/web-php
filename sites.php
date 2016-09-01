@@ -250,7 +250,6 @@ $SIDEBAR = <<< SIDEBAR_DATA
 <p class='panel'><a href="#cvs">Archived CVS Repository</a></p>
 <p class='panel'><a href="#lxr">Cross Reference</a></p>
 <p class='panel'><a href="#gtk">PHP-GTK</a></p>
-<p class='panel'><a href="#snaps">Daily PHP Snapshots</a></p>
 <p class='panel'><a href="#gcov">Test and Code Coverage analysis</a></p>
 <p class='panel'><a href="#wiki">The PHP Wiki</a></h2>
 <p class='panel'><a href="#people">The PHP Developers Profiles</a></h2>
