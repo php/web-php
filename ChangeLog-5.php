@@ -141,20 +141,20 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
   <li><?php bugfix(71936); ?> (Segmentation fault destroying HTTP_RAW_POST_DATA).</li>
   <li><?php bugfix(72496); ?> (Cannot declare public method with signature incompatible with parent private method).</li>
   <li><?php bugfix(72138); ?> (Integer Overflow in Length of String-typed ZVAL).</li>
-  <li><?php bugfix(72513); ?> (Stack-based buffer overflow vulnerability in virtual_file_ex).</li>
-  <li><?php bugfix(72562); ?> (Use After Free in unserialize() with Unexpected Session Deserialization).</li>
-  <li><?php bugfix(72573); ?> (HTTP_PROXY is improperly trusted by some PHP libraries and applications).</li>
+  <li><?php bugfix(72513); ?> (Stack-based buffer overflow vulnerability in virtual_file_ex). (CVE-2016-6289)</li>
+  <li><?php bugfix(72562); ?> (Use After Free in unserialize() with Unexpected Session Deserialization). (CVE-2016-6290)</li>
+  <li><?php bugfix(72573); ?> (HTTP_PROXY is improperly trusted by some PHP libraries and applications). (CVE-2016-5385)</li>
 </ul></li>
 <li>bz2:
 <ul>
-  <li><?php bugfix(72447); ?> (Type Confusion in php_bz2_filter_create()). (gogil at stealien dot com).</li>
-  <li><?php bugfix(72613); ?> (Inadequate error handling in bzread()).</li>
+  <li><?php bugfix(72447); ?> (Type Confusion in php_bz2_filter_create()).</li>
+  <li><?php bugfix(72613); ?> (Inadequate error handling in bzread()). (CVE-2016-5399)</li>
 </ul></li>
 <li>EXIF:
 <ul>
   <li><?php bugfix(50845); ?> (exif_read_data() returns corrupted exif headers).</li>
-  <li><?php bugfix(72603); ?> (Out of bound read in exif_process_IFD_in_MAKERNOTE).</li>
-  <li><?php bugfix(72618); ?> (NULL Pointer Dereference in exif_process_user_comment).</li>
+  <li><?php bugfix(72603); ?> (Out of bound read in exif_process_IFD_in_MAKERNOTE). (CVE-2016-6291)</li>
+  <li><?php bugfix(72618); ?> (NULL Pointer Dereference in exif_process_user_comment). (CVE-2016-6292)</li>
 </ul></li>
 <li>GD:
 <ul>
@@ -163,15 +163,15 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
   <li><?php bugfix(64641); ?> (imagefilledpolygon doesn't draw horizontal line).</li>
   <li><?php bugfix(72512); ?> (gdImageTrueColorToPaletteBody allows arbitrary write/read access).</li>
   <li><?php bugfix(72519); ?> (imagegif/output out-of-bounds access).</li>
-  <li><?php bugfix(72558); ?> (Integer overflow error within _gdContributionsAlloc()).</li>
+  <li><?php bugfix(72558); ?> (Integer overflow error within _gdContributionsAlloc()). (CVE-2016-6207)</li>
 </ul></li>
 <li>Intl:
 <ul>
-  <li><?php bugfix(72533); ?> (locale_accept_from_http out-of-bounds access).</li>
+  <li><?php bugfix(72533); ?> (locale_accept_from_http out-of-bounds access). (CVE-2016-6294)</li>
 </ul></li>
 <li>ODBC:
 <ul>
-  <li><?php bugfix(69975); ?> (PHP segfaults when accessing nvarchar(max) defined columns)</li>
+  <li><?php bugfix(69975); ?> (PHP segfaults when accessing nvarchar(max) defined columns). (CVE-2015-8879)</li>
 </ul></li>
 <li>OpenSSL:
 <ul>
@@ -180,7 +180,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 </ul></li>
 <li>SNMP:
 <ul>
-  <li><?php bugfix(72479); ?> (Use After Free Vulnerability in SNMP with GC and unserialize()).</li>
+  <li><?php bugfix(72479); ?> (Use After Free Vulnerability in SNMP with GC and unserialize()). (CVE-2016-6295)</li>
 </ul></li>
 <li>SPL:
 <ul>
@@ -196,11 +196,11 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 </ul></li>
 <li>Xmlrpc:
 <ul>
-  <li><?php bugfix(72606); ?> (heap-buffer-overflow (write) simplestring_addn simplestring.c).</li>
+  <li><?php bugfix(72606); ?> (heap-buffer-overflow (write) simplestring_addn simplestring.c). (CVE-2016-6296)</li>
 </ul></li>
 <li>Zip:
 <ul>
-  <li><?php bugfix(72520); ?> (Stack-based buffer overflow vulnerability in php_stream_zip_opener).</li>
+  <li><?php bugfix(72520); ?> (Stack-based buffer overflow vulnerability in php_stream_zip_opener). (CVE-2016-6297)</li>
 </ul></li>
 </ul>
 <!-- }}} --></section>
@@ -210,45 +210,45 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 <b><?php release_date('21-Jul-2016'); ?></b>
 <ul><li>BZip2:
 <ul>
-  <li><?php bugfix(72613); ?> (Inadequate error handling in bzread()).</li>
+  <li><?php bugfix(72613); ?> (Inadequate error handling in bzread()). (CVE-2016-5399)</li>
 </ul></li>
 <li>Core:
 <ul>
-  <li><?php bugfix(70480); ?> (php_url_parse_ex() buffer overflow read).</li>
-  <li><?php bugfix(72513); ?> (Stack-based buffer overflow vulnerability in virtual_file_ex).</li>
-  <li><?php bugfix(72562); ?> (Use After Free in unserialize() with Unexpected Session Deserialization).</li>
-  <li><?php bugfix(72573); ?> (HTTP_PROXY is improperly trusted by some PHP libraries and applications).</li>
+  <li><?php bugfix(70480); ?> (php_url_parse_ex() buffer overflow read). (CVE-2016-6288)</li>
+  <li><?php bugfix(72513); ?> (Stack-based buffer overflow vulnerability in virtual_file_ex). (CVE-2016-6289)</li>
+  <li><?php bugfix(72562); ?> (Use After Free in unserialize() with Unexpected Session Deserialization). (CVE-2016-6290)</li>
+  <li><?php bugfix(72573); ?> (HTTP_PROXY is improperly trusted by some PHP libraries and applications). (CVE-2016-5385)</li>
 </ul></li>
 <li>EXIF:
 <ul>
-  <li><?php bugfix(72603); ?> (Out of bound read in exif_process_IFD_in_MAKERNOTE).</li>
-  <li><?php bugfix(72618); ?> (NULL Pointer Dereference in exif_process_user_comment).</li>
+  <li><?php bugfix(72603); ?> (Out of bound read in exif_process_IFD_in_MAKERNOTE). (CVE-2016-6291)</li>
+  <li><?php bugfix(72618); ?> (NULL Pointer Dereference in exif_process_user_comment). (CVE-2016-6292)</li>
 </ul></li>
 <li>GD:
 <ul>
   <li><?php bugfix(72512); ?> (gdImageTrueColorToPaletteBody allows arbitrary write/read access).</li>
   <li><?php bugfix(72519); ?> (imagegif/output out-of-bounds access).</li>
-  <li><?php bugfix(72558); ?> (Integer overflow error within _gdContributionsAlloc()).</li>
+  <li><?php bugfix(72558); ?> (Integer overflow error within _gdContributionsAlloc()). (CVE-2016-6207)</li>
 </ul></li>
 <li>Intl:
 <ul>
-  <li><?php bugfix(72533); ?> (locale_accept_from_http out-of-bounds access).</li>
+  <li><?php bugfix(72533); ?> (locale_accept_from_http out-of-bounds access). (CVE-2016-6294)</li>
 </ul></li>
 <li>ODBC:
 <ul>
-  <li><?php bugfix(69975); ?> (PHP segfaults when accessing nvarchar(max) defined columns)</li>
+  <li><?php bugfix(69975); ?> (PHP segfaults when accessing nvarchar(max) defined columns). (CVE-2015-8879)</li>
 </ul></li>
 <li>SNMP:
 <ul>
-  <li><?php bugfix(72479); ?> (Use After Free Vulnerability in SNMP with GC and unserialize()).</li>
+  <li><?php bugfix(72479); ?> (Use After Free Vulnerability in SNMP with GC and unserialize()). (CVE-2016-6295)</li>
 </ul></li>
 <li>Xmlrpc:
 <ul>
-  <li><?php bugfix(72606); ?> (heap-buffer-overflow (write) simplestring_addn simplestring.c).</li>
+  <li><?php bugfix(72606); ?> (heap-buffer-overflow (write) simplestring_addn simplestring.c). (CVE-2016-6296)</li>
 </ul></li>
 <li>Zip:
 <ul>
-  <li><?php bugfix(72520); ?> (Stack-based buffer overflow vulnerability in php_stream_zip_opener).</li>
+  <li><?php bugfix(72520); ?> (Stack-based buffer overflow vulnerability in php_stream_zip_opener). (CVE-2016-6297)</li>
 </ul></li>
 </ul>
 <!-- }}} --></section>
