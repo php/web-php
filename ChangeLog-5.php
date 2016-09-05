@@ -3423,7 +3423,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 </ul></li>
 <li>Zip:
 <ul>
-  <li>update libzip to version 1.11.2. PHP don't use any ilibzip private symbol anymore.</li>
+  <li>update libzip to version 0.11.2. PHP doesn't use any ilibzip private symbol anymore.</li>
   <li>new method ZipArchive::setPassword($password).</li>
   <li>add --with-libzip option to build with system libzip.</li>
   <li>new methods: ZipArchive::setExternalAttributesName($name, $opsys, $attr [, $flags]) ZipArchive::setExternalAttributesIndex($idx, $opsys, $attr [, $flags]) ZipArchive::getExternalAttributesName($name, &amp;$opsys, &amp;$attr [, $flags]) ZipArchive::getExternalAttributesIndex($idx, &amp;$opsys, &amp;$attr [, $flags])</li>
