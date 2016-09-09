@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom" xmlns:default="http://php.net/ns/news">
+  <title>php[world] 2016</title>
+  <id>http://php.net/archive/2016.php#id2016-09-09-1</id>
+  <published>2016-09-09T08:05:18-04:00</published>
+  <updated>2016-09-09T08:05:18-04:00</updated>
+  <default:finalTeaserDate xmlns="http://php.net/ns/news">2016-11-14</default:finalTeaserDate>
+  <category term="conferences" label="Conference announcement"/>
+  <link href="http://php.net/conferences/index.php#id2016-09-09-1" rel="alternate" type="text/html"/>
+  <default:newsImage xmlns="http://php.net/ns/news" link="https://world.phparch.com/?paref=phpnet&amp;utm_campaign=phpnet" title="php[world] 2016">phpworld-logo-banner-x-200.png</default:newsImage>
+  <link href="https://world.phparch.com/?paref=phpnet&amp;utm_campaign=phpnet" rel="via" type="text/html"/>
+  <content type="xhtml">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+     <p>The team behind php[architect] magazine are excited to announce the full schedule for our Fall conference: <a href="https://world.phparch.com/?paref=phpnet&amp;utm_campaign=phpnet">php[world] 2016</a> coming up from November 14-18 in Washington, D.C.</p>
+     
+     <p>This conference will be our biggest yet, featuring 60 sessions, 10 workshops, and 5 one and two-day <a href="https://world.phparch.com/session-track/training/?paref=phpnet&amp;utm_campaign=phpnet">training classes</a>.  Not to mention 5 <a href="https://world.phparch.com/session-track/keynote/?paref=phpnet&amp;utm_campaign=phpnet">amazing keynotes</a> from leaders in the PHP community, and a <a href="https://world.phparch.com/sessions/keynote-cruft-class-nprs-15-year-journey-php/?paref=phpnet&amp;utm_campaign=phpnet">special keynote</a> by developers from NPR Radio to talk about their experiences with PHP.</p>
+     
+     <p>You will find that <a href="https://world.phparch.com/?paref=phpnet&amp;utm_campaign=phpnet">php[world]</a> is truly a conference like no other, as it's designed to bring the core PHP community together with the various application and framework communities to spend a week learning from each other.  We have dedicated tracks for <a href="https://world.phparch.com/session-track/wordpress/?paref=phpnet&amp;utm_campaign=phpnet">WordPress</a>,
+         <a href="https://world.phparch.com/session-track/drupal/?paref=phpnet&amp;utm_campaign=phpnet">Drupal</a>,
+         <a href="https://world.phparch.com/session-track/Laravel/?paref=phpnet&amp;utm_campaign=phpnet">Laravel</a>,
+         <a href="https://world.phparch.com/session-track/Symfony/?paref=phpnet&amp;utm_campaign=phpnet">Symfony</a>,
+         <a href="https://world.phparch.com/session-track/Magento/?paref=phpnet&amp;utm_campaign=phpnet">Magento</a>,
+         <a href="https://world.phparch.com/session-track/zend-framework/?paref=phpnet&amp;utm_campaign=phpnet">Zend Framework</a>, and
+         <a href="https://world.phparch.com/session-track/CakePHP/?paref=phpnet&amp;utm_campaign=phpnet">CakePHP</a>,
+         while also being having plenty of talks on related topics such as <a href="https://world.phparch.com/session-track/Design/?paref=phpnet&amp;utm_campaign=phpnet">Design</a>, <a href="https://world.phparch.com/session-track/JavaScript/?paref=phpnet&amp;utm_campaign=phpnet">JavaScript</a>, and improving as a developer.</p>
+     
+     <p>We look forward to seeing you again at <a href="https://world.phparch.com/?paref=phpnet&amp;utm_campaign=phpnet">php[world]</a> this fall for an amazing conference!</p>
+     
+    </div>
+  </content>
+</entry>
