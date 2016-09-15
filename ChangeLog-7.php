@@ -155,10 +155,10 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
   <li>Implemented FR <?php bugl(72614); ?> (Support "nmake test" on building extensions by phpize).</li>
   <li><?php bugfix(72641); ?> (phpize (on Windows) ignores PHP_PREFIX).</li>
   <li>Fixed potential segfault in object storage freeing in shutdown sequence.</li>
-  <li><?php bugfix(72663); ?> (Create an Unexpected Object and Don't Invoke __wakeup() in Deserialization).</li>
-  <li><?php bugfix(72681); ?> (PHP Session Data Injection Vulnerability).</li>
+  <li><?php bugfix(72663); ?> (Create an Unexpected Object and Don't Invoke __wakeup() in Deserialization). (CVE-2016-7124)</li>
+  <li><?php bugfix(72681); ?> (PHP Session Data Injection Vulnerability). (CVE-2016-7125)</li>
   <li><?php bugfix(72683); ?> (getmxrr broken).</li>
-  <li><?php bugfix(72742); ?> (memory allocator fails to realloc small block to large one).</li>
+  <li><?php bugfix(72742); ?> (memory allocator fails to realloc small block to large one). (CVE-2016-7133)</li>
 </ul></li>
 <li>Bz2:
 <ul>
@@ -177,7 +177,7 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
 <ul>
   <li><?php bugfix(71709); ?> (curl_setopt segfault with empty CURLOPT_HTTPHEADER).</li>
   <li><?php bugfix(71929); ?> (CURLINFO_CERTINFO data parsing error).</li>
-  <li><?php bugfix(72674); ?> (Heap overflow in curl_escape).</li>
+  <li><?php bugfix(72674); ?> (Heap overflow in curl_escape). (CVE-2016-7134)</li>
 </ul></li>
 <li>DOM:
 <ul>
@@ -186,7 +186,7 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
 <li>EXIF:
 <ul>
   <li><?php bugfix(72735); ?> (Samsung picture thumb not read (zero size)).</li>
-  <li><?php bugfix(72627); ?> (Memory Leakage In exif_process_IFD_in_TIFF).</li>
+  <li><?php bugfix(72627); ?> (Memory Leakage In exif_process_IFD_in_TIFF). (CVE-2016-7128)</li>
 </ul></li>
 <li>Filter:
 <ul>
@@ -204,8 +204,8 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
   <li><?php bugfix(43828); ?> (broken transparency of imagearc for truecolor in blendingmode).</li>
   <li><?php bugfix(66555); ?> (Always false condition in ext/gd/libgd/gdkanji.c).</li>
   <li><?php bugfix(68712); ?> (suspicious if-else statements).</li>
-  <li><?php bugfix(72697); ?> (select_colors write out-of-bounds).</li>
-  <li><?php bugfix(72730); ?> (imagegammacorrect allows arbitrary write access).</li>
+  <li><?php bugfix(72697); ?> (select_colors write out-of-bounds). (CVE-2016-7126)</li>
+  <li><?php bugfix(72730); ?> (imagegammacorrect allows arbitrary write access). (CVE-2016-7127)</li>
 </ul></li>
 <li>Intl:
 <ul>
@@ -283,10 +283,10 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
 <ul>
   <li><?php bugfix(72564); ?> (boolean always deserialized as "true").</li>
   <li><?php bugfix(72142); ?> (WDDX Packet Injection Vulnerability in wddx_serialize_value()).</li>
-  <li><?php bugfix(72749); ?> (wddx_deserialize allows illegal memory access) (Stas)</li>
-  <li><?php bugfix(72750); ?> (wddx_deserialize null dereference).</li>
-  <li><?php bugfix(72790); ?> (wddx_deserialize null dereference with invalid xml).</li>
-  <li><?php bugfix(72799); ?> (wddx_deserialize null dereference in php_wddx_pop_element).</li>
+  <li><?php bugfix(72749); ?> (wddx_deserialize allows illegal memory access). (CVE-2016-7129)</li>
+  <li><?php bugfix(72750); ?> (wddx_deserialize null dereference). (CVE-2016-7130)</li>
+  <li><?php bugfix(72790); ?> (wddx_deserialize null dereference with invalid xml). (CVE-2016-7131)</li>
+  <li><?php bugfix(72799); ?> (wddx_deserialize null dereference in php_wddx_pop_element). (CVE-2016-7132)</li>
 </ul></li>
 <li>Zip:
 <ul>
