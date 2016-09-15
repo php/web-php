@@ -114,8 +114,8 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
   <li><?php bugfix(72581); ?> (previous property undefined in Exception after deserialization).</li>
   <li>Implemented FR <?php bugl(72614); ?> (Support "nmake test" on building extensions by phpize).</li>
   <li><?php bugfix(72641); ?> (phpize (on Windows) ignores PHP_PREFIX).</li>
-  <li><?php bugfix(72663); ?> (Create an Unexpected Object and Don't Invoke __wakeup() in Deserialization).</li>
-  <li><?php bugfix(72681); ?> (PHP Session Data Injection Vulnerability).</li>
+  <li><?php bugfix(72663); ?> (Create an Unexpected Object and Don't Invoke __wakeup() in Deserialization). (CVE-2016-7124)</li>
+  <li><?php bugfix(72681); ?> (PHP Session Data Injection Vulnerability). (CVE-2016-7125)</li>
 </ul></li>
 <li>Bz2:
 <ul>
@@ -142,7 +142,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 </ul></li>
 <li>EXIF:
 <ul>
-  <li><?php bugfix(72627); ?> (Memory Leakage In exif_process_IFD_in_TIFF).</li>
+  <li><?php bugfix(72627); ?> (Memory Leakage In exif_process_IFD_in_TIFF). (CVE-2016-7128)</li>
   <li><?php bugfix(72735); ?> (Samsung picture thumb not read (zero size)).</li>
 </ul></li>
 <li>Filter:
@@ -161,9 +161,9 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
   <li><?php bugfix(70315); ?> (500 Server Error but page is fully rendered).</li>
   <li><?php bugfix(72596); ?> (imagetypes function won't advertise WEBP support).</li>
   <li><?php bugfix(72604); ?> (imagearc() ignores thickness for full arcs).</li>
-  <li><?php bugfix(72697); ?> (select_colors write out-of-bounds).</li>
+  <li><?php bugfix(72697); ?> (select_colors write out-of-bounds). (CVE-2016-7126)</li>
   <li><?php bugfix(72709); ?> (imagesetstyle() causes OOB read for empty $styles).</li>
-  <li><?php bugfix(72730); ?> (imagegammacorrect allows arbitrary write access).</li>
+  <li><?php bugfix(72730); ?> (imagegammacorrect allows arbitrary write access). (CVE-2016-7127)</li>
 </ul></li>
 <li>Intl:
 <ul>
@@ -222,10 +222,10 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 <li>Wddx:
 <ul>
   <li><?php bugfix(72142); ?> (WDDX Packet Injection Vulnerability in wddx_serialize_value()).</li>
-  <li><?php bugfix(72749); ?> (wddx_deserialize allows illegal memory access) (Stas)</li>
-  <li><?php bugfix(72750); ?> (wddx_deserialize null dereference).</li>
-  <li><?php bugfix(72790); ?> (wddx_deserialize null dereference with invalid xml).</li>
-  <li><?php bugfix(72799); ?> (wddx_deserialize null dereference in php_wddx_pop_element).</li>
+  <li><?php bugfix(72749); ?> (wddx_deserialize allows illegal memory access). (CVE-2016-7129)</li>
+  <li><?php bugfix(72750); ?> (wddx_deserialize null dereference). (CVE-2016-7130)</li>
+  <li><?php bugfix(72790); ?> (wddx_deserialize null dereference with invalid xml). (CVE-2016-7131)</li>
+  <li><?php bugfix(72799); ?> (wddx_deserialize null dereference in php_wddx_pop_element). (CVE-2016-7132)</li>
 </ul></li>
 </ul>
 <!-- }}} --></section>
