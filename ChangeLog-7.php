@@ -7,6 +7,139 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
 
 <h1>PHP 7 ChangeLog</h1>
 
+<section class="version" id="7.0.11"><!-- {{{ 7.0.11 -->
+<h3>Version 7.0.11</h3>
+<b><?php release_date('15-Sep-2016'); ?></b>
+<ul><li>Core:
+<ul>
+  <li><?php bugfix(72944); ?> (Null pointer deref in zval_delref_p).</li>
+  <li><?php bugfix(72943); ?> (assign_dim on string doesn't reset hval).</li>
+  <li><?php bugfix(72911); ?> (Memleak in zend_binary_assign_op_obj_helper).</li>
+  <li><?php bugfix(72813); ?> (Segfault with __get returned by ref).</li>
+  <li><?php bugfix(72767); ?> (PHP Segfaults when trying to expand an infinite operator).</li>
+  <li><?php bugfix(72854); ?> (PHP Crashes on duplicate destructor call).</li>
+  <li><?php bugfix(72857); ?> (stream_socket_recvfrom read access violation).</li>
+</ul></li>
+<li>COM:
+<ul>
+  <li><?php bugfix(72922); ?> (COM called from PHP does not return out parameters).</li>
+</ul></li>
+<li>Dba:
+<ul>
+  <li><?php bugfix(70825); ?> (Cannot fetch multiple values with group in ini file).</li>
+</ul></li>
+<li>FTP:
+<ul>
+  <li><?php bugfix(70195); ?> (Cannot upload file using ftp_put to FTPES with require_ssl_reuse).</li>
+</ul></li>
+<li>GD:
+<ul>
+  <li><?php bugfix(72709); ?> (imagesetstyle() causes OOB read for empty $styles).</li>
+  <li><?php bugfix(66005); ?> (imagecopy does not support 1bit transparency on truecolor images).</li>
+  <li><?php bugfix(72913); ?> (imagecopy() loses single-color transparency on palette images).</li>
+  <li><?php bugfix(68716); ?> (possible resource leaks in _php_image_convert()).</li>
+</ul></li>
+<li>iconv:
+<ul>
+  <li><?php bugfix(72320); ?> (iconv_substr returns false for empty strings).</li>
+</ul></li>
+<li>IMAP:
+<ul>
+  <li><?php bugfix(72852); ?> (imap_mail null dereference).</li>
+</ul></li>
+<li>Intl:
+<ul>
+  <li><?php bugfix(65732); ?> (grapheme_*() is not Unicode compliant on CR LF sequence).</li>
+  <li><?php bugfix(73007); ?> (add locale length check).</li>
+</ul></li>
+<li>Mysqlnd:
+<ul>
+  <li><?php bugfix(72293); ?> (Heap overflow in mysqlnd related to BIT fields).</li>
+</ul></li>
+<li>OCI8:
+<ul>
+  <li>Fixed invalid handle error with Implicit Result Sets.</li>
+  <li><?php bugfix(72524); ?> (Binding null values triggers ORA-24816 error).</li>
+</ul></li>
+<li>Opcache:
+<ul>
+  <li><?php bugfix(72949); ?> (Typo in opcache error message).</li>
+</ul></li>
+<li>PDO:
+<ul>
+  <li><?php bugfix(72788); ?> (Invalid memory access when using persistent PDO connection).</li>
+  <li><?php bugfix(72791); ?> (Memory leak in PDO persistent connection handling).</li>
+  <li><?php bugfix(60665); ?> (call to empty() on NULL result using PDO::FETCH_LAZY returns false).</li>
+</ul></li>
+<li>PDO_DBlib:
+<ul>
+  <li>Implemented stringify 'uniqueidentifier' fields.</li>
+</ul></li>
+<li>PDO_pgsql:
+<ul>
+  <li>Implemented FR <?php bugl(72633); ?> (Postgres PDO lastInsertId() should work without specifying a sequence).</li>
+  <li><?php bugfix(72759); ?> (Regression in pgo_pgsql).</li>
+</ul></li>
+<li>Phar:
+<ul>
+  <li><?php bugfix(72928); ?> (Out of bound when verify signature of zip phar in phar_parse_zipfile).</li>
+  <li><?php bugfix(73035); ?> (Out of bound when verify signature of tar phar in phar_parse_tarfile).</li>
+</ul></li>
+<li>Reflection:
+<ul>
+  <li><?php bugfix(72846); ?> (getConstant for a array constant with constant values returns NULL/NFC/UKNOWN).</li>
+</ul></li>
+<li>Session:
+<ul>
+  <li><?php bugfix(72724); ?> (PHP7: session-uploadprogress kills httpd).</li>
+  <li><?php bugfix(72940); ?> (SID always return "name=ID", even if session cookie exist).</li>
+</ul></li>
+<li>SimpleXML:
+<ul>
+  <li><?php bugfix(72971); ?> (SimpleXML isset/unset do not respect namespace).</li>
+  <li><?php bugfix(72957); ?> (Null coalescing operator doesn't behave as expected with SimpleXMLElement).</li>
+</ul></li>
+<li>SPL:
+<ul>
+  <li><?php bugfix(73029); ?> (Missing type check when unserializing SplArray).</li>
+</ul></li>
+<li>Standard:
+<ul>
+  <li><?php bugfix(55451); ?> (substr_compare NULL length interpreted as 0).</li>
+  <li><?php bugfix(72278); ?> (getimagesize returning FALSE on valid jpg).</li>
+  <li><?php bugfix(65550); ?> (get_browser() incorrectly parses entries with "+" sign).</li>
+</ul></li>
+<li>Streams:
+<ul>
+  <li><?php bugfix(72853); ?> (stream_set_blocking doesn't work).</li>
+  <li><?php bugfix(72764); ?> (ftps:// opendir wrapper data channel encryption fails with IIS FTP 7.5, 8.5).</li>
+  <li><?php bugfix(71882); ?> (Negative ftruncate() on php://memory exhausts memory).</li>
+</ul></li>
+<li>SQLite3:
+<ul>
+<li>Downgraded bundled SQLite to 3.8.10.2, see <?php bugl(73068); ?></li>
+</ul></li>
+<li>Sysvshm:
+<ul>
+  <li><?php bugfix(72858); ?> (shm_attach null dereference).</li>
+</ul></li>
+<li>XML:
+<ul>
+  <li><?php bugfix(72085); ?> (SEGV on unknown address zif_xml_parse).</li>
+  <li><?php bugfix(72714); ?> (_xml_startElementHandler() segmentation fault).</li>
+</ul></li>
+<li>Wddx:
+<ul>
+  <li><?php bugfix(72860); ?> (wddx_deserialize use-after-free).</li>
+  <li><?php bugfix(73065); ?> (Out-Of-Bounds Read in php_wddx_push_element).</li>
+</ul></li>
+<li>ZIP:
+<ul>
+  <li><?php bugfix(68302); ?> (impossible to compile php with zip support).</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
 <section class="version" id="7.0.10"><!-- {{{ 7.0.10 -->
 <h3>Version 7.0.10</h3>
 <b><?php release_date('18-Aug-2016'); ?></b>
