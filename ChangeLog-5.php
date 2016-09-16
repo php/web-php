@@ -7,6 +7,103 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 ?>
 
 <h1>PHP 5 ChangeLog</h1>
+<section class="version" id="5.6.26"><!-- {{{ 5.6.26 -->
+<h3>Version 5.6.26</h3>
+<b><?php release_date('15-Sep-2016'); ?></b>
+<ul><li>Core:
+<ul>
+  <li><?php bugfix(72907); ?> (null pointer deref, segfault in gc_remove_zval_from_buffer (zend_gc.c:260)).</li>
+</ul></li>
+<li>Dba:
+<ul>
+  <li><?php bugfix(71514); ?> (Bad dba_replace condition because of wrong API usage).</li>
+  <li><?php bugfix(70825); ?> (Cannot fetch multiple values with group in ini file).</li>
+</ul></li>
+<li>EXIF:
+<ul>
+  <li><?php bugfix(72926); ?> (Uninitialized Thumbail Data Leads To Memory Leakage in exif_process_IFD_in_TIFF).</li>
+</ul></li>
+<li>FTP:
+<ul>
+  <li><?php bugfix(70195); ?> (Cannot upload file using ftp_put to FTPES with require_ssl_reuse).</li>
+</ul></li>
+<li>GD:
+<ul>
+  <li><?php bugfix(66005); ?> (imagecopy does not support 1bit transparency on truecolor images).</li>
+  <li><?php bugfix(72913); ?> (imagecopy() loses single-color transparency on palette images).</li>
+  <li><?php bugfix(68716); ?> (possible resource leaks in _php_image_convert()).</li>
+</ul></li>
+<li>Intl:
+<ul>
+  <li><?php bugfix(73007); ?> (add locale length check).</li>
+</ul></li>
+<li>JSON:
+<ul>
+  <li><?php bugfix(72787); ?> (json_decode reads out of bounds).</li>
+</ul></li>
+<li>mbstring:
+<ul>
+  <li><?php bugfix(66797); ?> (mb_substr only takes 32-bit signed integer).</li>
+  <li><?php bugfix(72910); ?> (Out of bounds heap read in mbc_to_code() / triggered by mb_ereg_match()).</li>
+</ul></li>
+<li>MSSQL:
+<ul>
+  <li><?php bugfix(72039); ?> (Use of uninitialised value on mssql_guid_string).</li>
+</ul></li>
+<li>Mysqlnd:
+<ul>
+  <li><?php bugfix(72293); ?> (Heap overflow in mysqlnd related to BIT fields).</li>
+</ul></li>
+<li>Phar:
+<ul>
+  <li><?php bugfix(72928); ?> (Out of bound when verify signature of zip phar in phar_parse_zipfile).</li>
+  <li><?php bugfix(73035); ?> (Out of bound when verify signature of tar phar in phar_parse_tarfile).</li>
+</ul></li>
+<li>PDO:
+<ul>
+  <li><?php bugfix(60665); ?> (call to empty() on NULL result using PDO::FETCH_LAZY returns false).</li>
+</ul></li>
+<li>PDO_pgsql:
+<ul>
+  <li>Implemented FR <?php bugl(72633); ?> (Postgres PDO lastInsertId() should work without specifying a sequence).</li>
+  <li><?php bugfix(72759); ?> (Regression in pgo_pgsql).</li>
+</ul></li>
+<li>SPL:
+<ul>
+  <li><?php bugfix(73029); ?> (Missing type check when unserializing SplArray).</li>
+</ul></li>
+<li>Standard:
+<ul>
+  <li><?php bugfix(72823); ?> (strtr out-of-bound access).</li>
+  <li><?php bugfix(72278); ?> (getimagesize returning FALSE on valid jpg).</li>
+  <li><?php bugfix(65550); ?> (get_browser() incorrectly parses entries with "+" sign).</li>
+  <li><?php bugfix(71882); ?> (Negative ftruncate() on php://memory exhausts memory).</li>
+  <li><?php bugfix(73011); ?> (integer overflow in fgets cause heap corruption).</li>
+  <li><?php bugfix(73017); ?> (memory corruption in wordwrap function).</li>
+  <li><?php bugfix(73045); ?> (integer overflow in fgetcsv caused heap corruption).</li>
+  <li><?php bugfix(73052); ?> (Memory Corruption in During Deserialized-object Destruction) (Stas)</li>
+</ul></li>
+<li>Streams:
+<ul>
+  <li><?php bugfix(72853); ?> (stream_set_blocking doesn't work).</li>
+</ul></li>
+<li>Wddx:
+<ul>
+  <li><?php bugfix(72860); ?> (wddx_deserialize use-after-free).</li>
+  <li><?php bugfix(73065); ?> (Out-Of-Bounds Read in php_wddx_push_element).</li>
+</ul></li>
+<li>XML:
+<ul>
+  <li><?php bugfix(72085); ?> (SEGV on unknown address zif_xml_parse).</li>
+  <li><?php bugfix(72927); ?> (integer overflow in xml_utf8_encode).</li>
+</ul></li>
+<li>ZIP:
+<ul>
+  <li><?php bugfix(68302); ?> (impossible to compile php with zip support).</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
 <section class="version" id="5.6.25"><!-- {{{ 5.6.25 -->
 <h3>Version 5.6.25</h3>
 <b><?php release_date('18-Aug-2016'); ?></b>
