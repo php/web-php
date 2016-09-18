@@ -35,7 +35,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 </ul></li>
 <li>Intl:
 <ul>
-  <li><?php bugfix(73007); ?> (add locale length check).</li>
+  <li><?php bugfix(73007); ?> (add locale length check). (CVE-2016-7416)</li>
 </ul></li>
 <li>JSON:
 <ul>
@@ -52,12 +52,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 </ul></li>
 <li>Mysqlnd:
 <ul>
-  <li><?php bugfix(72293); ?> (Heap overflow in mysqlnd related to BIT fields).</li>
-</ul></li>
-<li>Phar:
-<ul>
-  <li><?php bugfix(72928); ?> (Out of bound when verify signature of zip phar in phar_parse_zipfile).</li>
-  <li><?php bugfix(73035); ?> (Out of bound when verify signature of tar phar in phar_parse_tarfile).</li>
+  <li><?php bugfix(72293); ?> (Heap overflow in mysqlnd related to BIT fields). (CVE-2016-7412)</li>
 </ul></li>
 <li>PDO:
 <ul>
@@ -68,9 +63,14 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
   <li>Implemented FR <?php bugl(72633); ?> (Postgres PDO lastInsertId() should work without specifying a sequence).</li>
   <li><?php bugfix(72759); ?> (Regression in pgo_pgsql).</li>
 </ul></li>
+<li>Phar:
+<ul>
+  <li><?php bugfix(72928); ?> (Out of bound when verify signature of zip phar in phar_parse_zipfile). (CVE-2016-7414)</li>
+  <li><?php bugfix(73035); ?> (Out of bound when verify signature of tar phar in phar_parse_tarfile).</li>
+</ul></li>
 <li>SPL:
 <ul>
-  <li><?php bugfix(73029); ?> (Missing type check when unserializing SplArray).</li>
+  <li><?php bugfix(73029); ?> (Missing type check when unserializing SplArray). (CVE-2016-7417)</li>
 </ul></li>
 <li>Standard:
 <ul>
@@ -81,7 +81,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
   <li><?php bugfix(73011); ?> (integer overflow in fgets cause heap corruption).</li>
   <li><?php bugfix(73017); ?> (memory corruption in wordwrap function).</li>
   <li><?php bugfix(73045); ?> (integer overflow in fgetcsv caused heap corruption).</li>
-  <li><?php bugfix(73052); ?> (Memory Corruption in During Deserialized-object Destruction) (Stas)</li>
+  <li><?php bugfix(73052); ?> (Memory Corruption in During Deserialized-object Destruction). (CVE-2016-7411)</li>
 </ul></li>
 <li>Streams:
 <ul>
@@ -89,8 +89,8 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 </ul></li>
 <li>Wddx:
 <ul>
-  <li><?php bugfix(72860); ?> (wddx_deserialize use-after-free).</li>
-  <li><?php bugfix(73065); ?> (Out-Of-Bounds Read in php_wddx_push_element).</li>
+  <li><?php bugfix(72860); ?> (wddx_deserialize use-after-free). (CVE-2016-7413)</li>
+  <li><?php bugfix(73065); ?> (Out-Of-Bounds Read in php_wddx_push_element). (CVE-2016-7418)</li>
 </ul></li>
 <li>XML:
 <ul>
