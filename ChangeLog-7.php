@@ -50,11 +50,11 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
 <li>Intl:
 <ul>
   <li><?php bugfix(65732); ?> (grapheme_*() is not Unicode compliant on CR LF sequence).</li>
-  <li><?php bugfix(73007); ?> (add locale length check).</li>
+  <li><?php bugfix(73007); ?> (add locale length check). (CVE-2016-7416)</li>
 </ul></li>
 <li>Mysqlnd:
 <ul>
-  <li><?php bugfix(72293); ?> (Heap overflow in mysqlnd related to BIT fields).</li>
+  <li><?php bugfix(72293); ?> (Heap overflow in mysqlnd related to BIT fields). (CVE-2016-7412)</li>
 </ul></li>
 <li>OCI8:
 <ul>
@@ -82,7 +82,7 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
 </ul></li>
 <li>Phar:
 <ul>
-  <li><?php bugfix(72928); ?> (Out of bound when verify signature of zip phar in phar_parse_zipfile).</li>
+  <li><?php bugfix(72928); ?> (Out of bound when verify signature of zip phar in phar_parse_zipfile). (CVE-2016-7414)</li>
   <li><?php bugfix(73035); ?> (Out of bound when verify signature of tar phar in phar_parse_tarfile).</li>
 </ul></li>
 <li>Reflection:
@@ -101,7 +101,7 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
 </ul></li>
 <li>SPL:
 <ul>
-  <li><?php bugfix(73029); ?> (Missing type check when unserializing SplArray).</li>
+  <li><?php bugfix(73029); ?> (Missing type check when unserializing SplArray). (CVE-2016-7417)</li>
 </ul></li>
 <li>Standard:
 <ul>
@@ -123,15 +123,15 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
 <ul>
   <li><?php bugfix(72858); ?> (shm_attach null dereference).</li>
 </ul></li>
+<li>Wddx:
+<ul>
+  <li><?php bugfix(72860); ?> (wddx_deserialize use-after-free). (CVE-2016-7413)</li>
+  <li><?php bugfix(73065); ?> (Out-Of-Bounds Read in php_wddx_push_element). (CVE-2016-7418)</li>
+</ul></li>
 <li>XML:
 <ul>
   <li><?php bugfix(72085); ?> (SEGV on unknown address zif_xml_parse).</li>
   <li><?php bugfix(72714); ?> (_xml_startElementHandler() segmentation fault).</li>
-</ul></li>
-<li>Wddx:
-<ul>
-  <li><?php bugfix(72860); ?> (wddx_deserialize use-after-free).</li>
-  <li><?php bugfix(73065); ?> (Out-Of-Bounds Read in php_wddx_push_element).</li>
 </ul></li>
 <li>ZIP:
 <ul>
