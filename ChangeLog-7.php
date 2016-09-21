@@ -452,7 +452,7 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
 </ul></li>
 <li>Phar:
 <ul>
-  <li><?php bugfix(72321); ?> (invalid free in phar_extract_file()).</li>
+  <li><?php bugfix(72321); ?> (invalid free in phar_extract_file()). (CVE-2016-4473)</li>
 </ul></li>
 <li>Phpdbg:
 <ul>
