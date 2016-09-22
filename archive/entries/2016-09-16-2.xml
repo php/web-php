@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+  <title>PHP 7.1.0 Release Candidate 2 Released</title>
+  <id>http://php.net/archive/2016.php#id2016-09-16-2</id>
+  <published>2016-09-16T23:33:30+00:00</published>
+  <updated>2016-09-16T23:33:30+00:00</updated>
+  <category term="frontpage" label="PHP.net frontpage news"/>
+  <category term="releases" label="New PHP release"/>
+  <link href="http://php.net/index.php#id2016-09-16-2" rel="alternate" type="text/html"/>
+  <link href="http://php.net/archive/2016.php#id2016-09-16-2" rel="via" type="text/html"/>
+  <content type="xhtml">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+     <p>
+       The PHP development team announces the immediate availability of PHP 7.1.0 Release Candidate 2. This release is the second release candidate for 7.1.0. All users of PHP are encouraged to test this version carefully, and report any bugs and incompatibilities in the bug tracking system.
+     </p>
+     
+     <p>
+       <strong>THIS IS A DEVELOPMENT PREVIEW - DO NOT USE IT IN PRODUCTION!</strong>
+     </p>
+     
+     <p>
+       For more information on the new features and other changes, you can read the <a href="https://github.com/php/php-src/blob/php-7.1.0RC2/NEWS">NEWS</a> file,
+       or the <a href="https://github.com/php/php-src/blob/php-7.1.0RC2/UPGRADING">UPGRADING</a> file for a complete list of upgrading notes. These files can also be found in the release archive.
+     </p>
+     
+     <p>
+       For source downloads of PHP 7.1.0 Release Candidate 2 please visit the <a href="https://downloads.php.net/~davey/">download</a> page, Windows sources and binaries can be found on <a href="http://windows.php.net/qa/">windows.php.net/qa/</a>.
+     </p>
+     
+     <p>
+       The third release candidate will be released on the 29th of September. You can also read the full list of planned releases on <a href="https://wiki.php.net/todo/php71">our wiki</a>.
+     </p>
+     
+     <p>
+       Thank you for helping us make PHP better.
+     </p>
+    </div>
+  </content>
+</entry>
