@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom" xmlns:default="http://php.net/ns/news">
+  <title>Announcing PHP UK Conference 2017</title>
+  <id>http://php.net/archive/2016.php#id2016-09-22-1</id>
+  <published>2016-09-22T08:00:00+00:00</published>
+  <updated>2016-09-22T08:00:00+00:00</updated>
+  <default:finalTeaserDate xmlns="http://php.net/ns/news">2017-02-17</default:finalTeaserDate>
+  <category term="conferences" label="Conference announcement"/>
+  <link href="http://php.net/conferences/index.php#id2016-09-22-1" rel="alternate" type="text/html"/>
+  <link href="http://phpconference.co.uk" rel="via" type="text/html"/>
+  <content type="xhtml">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+      <h4>
+        PHP UK Conference 2017 - February 16 &amp; 17 2017<br />
+        The Brewery Conference Centre in London
+      </h4>
+      <p>The PHP UK team are pleased to announce the 12th annual PHP UK Conference; a 2-day event with 3 great tracks held at at The Brewery, in the heart of the City of London.</p>
+      <p>With over 700 delegates, speakers, and sponsors, PHP UK conference aims to deliver fantastic up-to-date content about PHP and related web technologies in a comfortable and professional setting. There are countless networking opportunities to engage with international speakers and delegates, which makes the event one you won't want to miss.</p>
+      <p>Tickets are on sale now at blind bird rates - book early to get the best price. Scholarship applications are open until February 1st.</p>
+      <p>Anyone is welcome to attend the conference, whether you're a professional, hobbyist, manager, or just starting out, there's something for everyone.</p>
+      <p>For tickets and more information visit our web site <a href="http://phpconference.co.uk">phpconference.co.uk</a></p>
+    </div>
+  </content>
+</entry>
