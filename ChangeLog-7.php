@@ -1323,6 +1323,7 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
 <li>Filter:
 <ul>
   <li>New FILTER_VALIDATE_DOMAIN and better RFC conformance for FILTER_VALIDATE_URL.</li>
+  <li><?php bugfix(67167);?> 	(Wrong return value from FILTER_VALIDATE_BOOLEAN, FILTER_NULL_ON_FAILURE).</li>
 </ul></li>
 <li>FPM:
 <ul>
