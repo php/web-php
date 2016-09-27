@@ -1422,7 +1422,7 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
 </ul></li>
 <li>ODBC:
 <ul>
-  <li><?php bugfix(69975); ?> (PHP segfaults when accessing nvarchar(max) defined columns).</li>
+  <li><?php bugfix(69975); ?> (PHP segfaults when accessing nvarchar(max) defined columns. (CVE-2015-8879)</li>
 </ul></li>
 <li>Opcache:
 <ul>
