@@ -247,6 +247,10 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
   <li><?php bugfix(72447); ?> (Type Confusion in php_bz2_filter_create()).</li>
   <li><?php bugfix(72613); ?> (Inadequate error handling in bzread()). (CVE-2016-5399)</li>
 </ul></li>
+<li>Date:
+<ul>
+  <li><?php bugfix(66836); ?> (DateTime::createFromFormat 'U' with pre 1970 dates fails parsing).</li>
+</ul></li>
 <li>EXIF:
 <ul>
   <li><?php bugfix(50845); ?> (exif_read_data() returns corrupted exif headers).</li>
