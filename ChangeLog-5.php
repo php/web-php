@@ -4294,6 +4294,8 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 <ul>
   <li><?php bugfix(45528); ?> (Allow the DateTimeZone constructor to accept timezones
     per offset too).</li>
+  <li><?php bugfix(44780); ?> (some time zone offsets not recognized by timezone_name_from_abbr)</li>
+  <li><?php bugfix(45543); ?> (DateTime::setTimezone can not set timezones without ID)</li>
 </ul></li>
 <li>Fileinfo:
 <ul>
@@ -4331,7 +4333,12 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 <section class="version" id="5.4.26"><!-- {{{ 5.4.26 -->
 <h3>Version 5.4.26</h3>
 <?php release_date('06-Mar-2014'); ?>
-<ul><li>JSON:
+<ul><li>Date:
+<ul>
+  <li><?php bugfix(44780); ?> (some time zone offsets not recognized by timezone_name_from_abbr)</li>
+  <li><?php bugfix(45543); ?> (DateTime::setTimezone can not set timezones without ID)</li>
+</ul></li>
+<li>JSON:
 <ul>
   <li><?php bugfix(65753); ?> (JsonSerializeable couldn't implement on module extension)</li>
 </ul></li>
