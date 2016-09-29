@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom" xmlns:default="http://php.net/ns/news">
+  <title>PHP UK Conference 2017 Call for Papers</title>
+  <id>http://php.net/archive/2016.php#id2016-09-22-2</id>
+  <published>2016-09-22T09:00:00+00:00</published>
+  <updated>2016-09-22T09:00:00+00:00</updated>
+  <default:finalTeaserDate xmlns="http://php.net/ns/news">2017-10-17</default:finalTeaserDate>
+  <category term="cfp" label="Call for Papers"/>
+  <link href="http://php.net/conferences/index.php#id2016-09-22-2" rel="alternate" type="text/html"/>
+  <default:newsImage xmlns="http://php.net/ns/news" link="http://phpconference.co.uk" title="PHP UK Conference 2017">phpuk17.png</default:newsImage>
+  <link href="http://phpconference.co.uk" rel="via" type="text/html"/>
+  <content type="xhtml">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+      <h4>
+        PHP UK Conference 2017 Call for Papers<br/>
+        Open until: October 17th 2016 6pm GMT
+      </h4>
+      <p>The PHP UK Conference 2017 Call for Papers is now open!</p>
+      <p>We are looking for talks relating to any non-basic aspect of the PHP programming language, be it mainstream, advanced, niche or non-technical. We are looking for real 'wow' talks that are fresh and inspiring about cutting edge topics or new perspectives on common problems. The audience will be from all backgrounds varying in skill level from beginner to intermediate to advanced, so talks varying widely in topic and skill levels are required. Most of all we want speakers who have a deep knowledge about the topics they are proposing and can't wait to share that knowledge with a whole group of of eager listeners. Tell us what you're most passionate about and why we should be passionate about it as well.</p>
+      <ul>
+        <li>Inclusive and anonymous selection process</li>
+        <li>Full speaker package so you can attend the whole conference</li>
+        <li>Over 700 attendees from all over the world</li>
+      </ul>
+      <p>For more information and to submit a paper visit our web site <a href="http://phpconference.co.uk/speakers">phpconference.co.uk/speakers</a></p>
+      <p>PHP UK Conference  will be held on February 16-17, 2017 at the Brewery Conference Centre in London.</p>
+    </div>
+  </content>
+</entry>
