@@ -1,12 +1,10 @@
 /* Plugins, etc, are on top. */
 
-String.prototype.escapeSelector = function()
-{
+String.prototype.escapeSelector = function() {
   return this.replace(/(.|#)([ #;&,.+*~\':"!^$\[\]\(\)=>|\/])/g, '$1' + '\\\\$2');
 };
 
-String.prototype.toInt = function()
-{
+String.prototype.toInt = function() {
   return parseInt(this);
 };
 
@@ -33,18 +31,23 @@ PHP_NET.HEADER_HEIGHT = 52;
  * @param Function callback Function to execute after the animation is complete.
  * @return void
  */
-PHP_NET.scrollElementIntoView = function(element, animationDuration, callback){
+PHP_NET.scrollElementIntoView = function (element, animationDuration, callback) {
     animationDuration = animationDuration || 400;
     var destTop = $(element).offset().top - PHP_NET.HEADER_HEIGHT;
     var callbackCalled = false;
-    $('html, body').animate(
+    // Online sources claim that some browsers scroll body, others scroll html
+    // so we scroll both for compatibility. However, the callback function is
+    // called for each element so the callback function will trigger twice,
+    // once for html and once for body. This is why we track whether the
+    // callback has been called to prevent multiple executions.
+    $("html, body").animate(
         {scrollTop: destTop}, 
         animationDuration,
-        function(){
-            // prevents the callback to be called twice. temporary
-            // solution until further investigation is done
-            if(!callbackCalled) callback();
-            callbackCalled = true;
+        function () {
+            if (!callbackCalled) {
+                callbackCalled = true;
+                callback();
+            }
         }
     );
 };
@@ -52,47 +55,43 @@ PHP_NET.scrollElementIntoView = function(element, animationDuration, callback){
 /**
  * Enables "smooth scrolling to page anchor" for page <a> links.
  */
-$(document).ready(function(){    
-    $('a[href*=#]').click(function(e){
-        var urlTester = document.createElement("a");
-        urlTester.href = this.href;
-        urlTester.hash = location.hash;
-        var targetElement = document.getElementById(this.hash.substr(1));
-        // this <a> targets an id="" on this very page
-        // (the current URL and the target URL
-        // are identic not considering their #hash fragments)
-        if(urlTester.href == location.href && targetElement){
-            // temporarily disable the id="" attribute from such element
-            // so that UA's default scrolling is prevented
-            var wasID = targetElement.id;
-            targetElement.id = "";
-            PHP_NET.scrollElementIntoView(targetElement, null, function(){
-                // restore the id="" attribute to the element
-                targetElement.id = wasID;
-            });
+document.body.addEventListener("click", function (e) {
+    if (e.target && e.target.nodeName === "A") {
+        var href = e.target.getAttribute("href");
+        if (href && href[0] === "#") {
+            var id = href.slice(1);
+            var target = document.getElementById(id);
+            // temporarily remove the id="" attribute so that the UA's
+            // default scrolling is prevented
+            target.id = "";
+            if (target) {
+                PHP_NET.scrollElementIntoView(target, null, function () {
+                    // restore the id="" attribute
+                    target.id = id;
+                });
+            }
         }
-    });
+    }
 });
 
 /**
  * Enables "smooth scrolling to page anchor" when page was just loaded.
  */
-$(document).ready(function(){
-    var targetElm = location.hash ? document.getElementById(location.hash.substr(1)) : null;
-    // if the location.hash points to an element that is actually in the document
-    if(targetElm){
-        // temporarily disable the id="" attribute from such element so that UA's default scrolling is prevented
-        var wasID = targetElm.id;
-        targetElm.id = "";
-        // so when page is fully loaded and after some delay for a smoother result
-        $(window).load(function(){
-            setTimeout(function(){
-                // animate the scrolling so that the element is shown into viewport
-                PHP_NET.scrollElementIntoView(targetElm, null, function(){
-                    // finally restore the id="" attribute to the element
-                    targetElm.id = wasID;
-                });
-            }, 300);
+document.addEventListener("DOMContentLoaded", function () {
+    var target = (location.hash
+        ? document.getElementById(location.hash.slice(1))
+        : null
+    );
+    if (target) {
+        // temporarily remove the id="" attribute so that the UA's default
+        // scrolling is prevented
+        var id = target.id;
+        target.id = "";
+        window.addEventListener("load", function () {
+            PHP_NET.scrollElementIntoView(target, null, function() {
+                // restore the id="" attribute to the element
+                target.id = id;
+            });
         });
     }
 });
