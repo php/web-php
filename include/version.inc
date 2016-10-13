@@ -32,7 +32,7 @@ $PHP_7_0_SHA256     = array(
                        "tar.bz2"       => "38c47294fe8fb239b0230dc63a93c3e4044f472ab93b5dff8b65feb4103a6a27",
                        "tar.gz"        => "c4693cc363b4bbc7224294cc94faf3598e616cbe8540dd6975f68c7d3c52682f",
                        "tar.xz"        => "f3d6c49e1c242e5995dec15e503fde996c327eb86cd7ec45c690e93c971b83ff",
-;
+);
 
 /* PHP 5.6 Release */
 $PHP_5_6_RC = '5.6.27RC1'; // Current RC version (e.g., '5.6.7RC1') or false
