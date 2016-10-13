@@ -7,6 +7,127 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
 
 <h1>PHP 7 ChangeLog</h1>
 
+<section class="version" id="7.0.12"><!-- {{{ 7.0.12 -->
+<h3>Version 7.0.12</h3>
+<b><?php release_date('13-Oct-2016'); ?></b>
+<ul><li>Core:
+<ul>
+  <li><?php bugfix(73025); ?> (Heap Buffer Overflow in virtual_popen of zend_virtual_cwd.c).</li>
+  <li><?php bugfix(72703); ?> (Out of bounds global memory read in BF_crypt triggered by password_verify).</li>
+  <li><?php bugfix(73058); ?> (crypt broken when salt is 'too' long).</li>
+  <li><?php bugfix(69579); ?> (Invalid free in extension trait).</li>
+  <li><?php bugfix(73156); ?> (segfault on undefined function).</li>
+  <li><?php bugfix(73163); ?> (PHP hangs if error handler throws while accessing undef const in default value).</li>
+  <li><?php bugfix(73172); ?> (parse error: Invalid numeric literal).</li>
+  <li>Fixed for #73240 (Write out of bounds at number_format).</li>
+  <li><?php bugfix(73147); ?> (Use After Free in PHP7 unserialize()).</li>
+  <li><?php bugfix(73189); ?> (Memcpy negative size parameter php_resolve_path).</li>
+</ul></li>
+<li>BCmath:
+<ul>
+<li><?php bugfix(73190); ?> (memcpy negative parameter _bc_new_num_ex).</li>
+</ul></li>
+<li>COM:
+<ul>
+  <li><?php bugfix(73126); ?> (Cannot pass parameter 1 by reference).</li>
+</ul></li>
+<li>Date:
+<ul>
+  <li><?php bugfix(73091); ?> (Unserializing DateInterval object may lead to __toString invocation).</li>
+</ul></li>
+<li>DOM:
+<ul>
+  <li><?php bugfix(73150); ?> (missing NULL check in dom_document_save_html).</li>
+</ul></li>
+<li>Filter:
+<ul>
+  <li><?php bugfix(72972); ?> (Bad filter for the flags FILTER_FLAG_NO_RES_RANGE and FILTER_FLAG_NO_PRIV_RANGE).</li>
+  <li><?php bugfix(73054); ?> (default option ignored when object passed to int filter).</li>
+</ul></li>
+<li>GD:
+<ul>
+  <li><?php bugfix(67325); ?> (imagetruecolortopalette: white is duplicated in palette).</li>
+  <li><?php bugfix(50194); ?> (imagettftext broken on transparent background w/o alphablending).</li>
+  <li><?php bugfix(73003); ?> (Integer Overflow in gdImageWebpCtx of gd_webp.c).</li>
+  <li><?php bugfix(53504); ?> (imagettfbbox gives incorrect values for bounding box).</li>
+  <li><?php bugfix(73157); ?> (imagegd2() ignores 3rd param if 4 are given).</li>
+  <li><?php bugfix(73155); ?> (imagegd2() writes wrong chunk sizes on boundaries).</li>
+  <li><?php bugfix(73159); ?> (imagegd2(): unrecognized formats may result in corrupted files).</li>
+  <li><?php bugfix(73161); ?> (imagecreatefromgd2() may leak memory).</li>
+</ul></li>
+<li>Intl:
+<ul>
+  <li><?php bugfix(73218); ?> (add mitigation for ICU int overflow).</li>
+</ul></li>
+<li>Mbstring:
+<ul>
+  <li><?php bugfix(66797); ?> (mb_substr only takes 32-bit signed integer).</li>
+  <li><?php bugfix(66964); ?> (mb_convert_variables() cannot detect recursion).</li>
+  <li><?php bugfix(72992); ?> (mbstring.internal_encoding doesn't inherit default_charset).</li>
+</ul></li>
+<li>Mysqlnd:
+<ul>
+  <li><?php bugfix(72489); ?> (PHP Crashes When Modifying Array Containing MySQLi Result Data).</li>
+</ul></li>
+<li>Opcache:
+<ul>
+  <li><?php bugfix(72982); ?> (Memory leak in zend_accel_blacklist_update_regexp() function).</li>
+</ul></li>
+<li>OpenSSL:
+<ul>
+  <li><?php bugfix(73072); ?> (Invalid path SNI_server_certs causes segfault).</li>
+  <li><?php bugfix(73276); ?> (crash in openssl_random_pseudo_bytes function).</li>
+  <li><?php bugfix(73275); ?> (crash in openssl_encrypt function).</li>
+</ul></li>
+<li>PCRE:
+<ul>
+  <li><?php bugfix(73121); ?> (Bundled PCRE doesn't compile because JIT isn't supported on s390).</li>
+  <li><?php bugfix(73174); ?> (heap overflow in php_pcre_replace_impl).</li>
+</ul></li>
+<li>PDO_DBlib:
+<ul>
+  <li><?php bugfix(72414); ?> (Never quote values as raw binary data).</li>
+  <li>Allow \PDO::setAttribute() to set query timeouts.</li>
+  <li>Handle SQLDECIMAL/SQLNUMERIC types, which are used by later TDS versions.</li>
+  <li>Add common PDO test suite.</li>
+  <li>Free error and message strings when cleaning up PDO instances.</li>
+  <li><?php bugfix(67130); ?> (\PDOStatement::nextRowset() should succeed when all rows in current rowset haven't been fetched).</li>
+  <li>Ignore potentially misleading dberr values.</li>
+</ul></li>
+<li>phpdbg:
+<ul>
+  <li><?php bugfix(72996); ?> (phpdbg_prompt.c undefined reference to DL_LOAD).</li>
+  <li>Fixed next command not stopping when leaving function.</li>
+</ul></li>
+<li>Session:
+<ul>
+  <li><?php bugfix(68015); ?> (Session does not report invalid uid for files save handler).</li>
+  <li><?php bugfix(73100); ?> (session_destroy null dereference in ps_files_path_create).</li>
+</ul></li>
+<li>SimpleXML:
+<ul>
+  <li><?php bugfix(73293); ?> (NULL pointer dereference in SimpleXMLElement::asXML()).</li>
+</ul></li>
+<li>SOAP:
+<ul>
+  <li><?php bugfix(71711); ?> (Soap Server Member variables reference bug).</li>
+  <li><?php bugfix(71996); ?> (Using references in arrays doesn't work like expected).</li>
+</ul></li>
+<li>SPL:
+<ul>
+<li><?php bugfix(73257); ?>, <?php bugfix(73258); ?> (SplObjectStorage unserialize allows use of non-object as key).</li>
+</ul></li>
+<li>SQLite3:
+<ul>
+  <li>Updated bundled SQLite3 to 3.14.2.</li>
+</ul></li>
+<li>Zip:
+<ul>
+  <li><?php bugfix(70752); ?> (Depacking with wrong password leaves 0 length files).</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
 <section class="version" id="7.0.11"><!-- {{{ 7.0.11 -->
 <h3>Version 7.0.11</h3>
 <b><?php release_date('15-Sep-2016'); ?></b>

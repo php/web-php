@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+  <title>PHP 7.0.12 Released</title>
+  <id>http://php.net/archive/2016.php#id2016-10-13-1</id>
+  <published>2016-10-13T23:00:00+01:00</published>
+  <updated>2016-10-13T23:00:00+01:00</updated>
+  <category term="releases" label="New PHP release"/>
+  <category term="frontpage" label="PHP.net frontpage news"/>
+  <link href="http://php.net/index.php#id2016-10-13-1" rel="alternate" type="text/html"/>
+  <link href="http://php.net/archive/2016.php#id2016-10-13-1" rel="via" type="text/html"/>
+  <content type="xhtml">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+     <p>The PHP development team announces the immediate availability of PHP
+     7.0.12. This is a security release. Several security bugs were fixed in
+     this release.
+     
+     All PHP 7.0 users are encouraged to upgrade to this version.</p>
+     
+     <p>For source downloads of PHP 7.0.12 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+     Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
+     The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.0.12">ChangeLog</a>.
+     </p>
+    </div>
+  </content>
+</entry>
