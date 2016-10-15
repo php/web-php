@@ -19,7 +19,7 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
   <li><?php bugfix(73156); ?> (segfault on undefined function).</li>
   <li><?php bugfix(73163); ?> (PHP hangs if error handler throws while accessing undef const in default value).</li>
   <li><?php bugfix(73172); ?> (parse error: Invalid numeric literal).</li>
-  <li>Fixed for #73240 (Write out of bounds at number_format).</li>
+  <li><?php bugfix(73240); ?> (Write out of bounds at number_format).</li>
   <li><?php bugfix(73147); ?> (Use After Free in PHP7 unserialize()).</li>
   <li><?php bugfix(73189); ?> (Memcpy negative size parameter php_resolve_path).</li>
 </ul></li>
