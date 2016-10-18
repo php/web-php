@@ -10,7 +10,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 
 <section class="version" id="5.6.27"><!-- {{{ 5.6.27 -->
 <h3>Version 5.6.27</h3>
-<b><?php release_date('13-Oct-2016'); ?></b>
+<?php release_date('13-Oct-2016'); ?>
 <ul><li>Core:
 <ul>
   <li><?php bugfix(73025); ?> (Heap Buffer Overflow in virtual_popen of zend_virtual_cwd.c).</li>
@@ -110,7 +110,7 @@ FILTER_FLAG_NO_PRIV_RANGE).</li>
 
 <section class="version" id="5.6.26"><!-- {{{ 5.6.26 -->
 <h3>Version 5.6.26</h3>
-<b><?php release_date('15-Sep-2016'); ?></b>
+<?php release_date('15-Sep-2016'); ?>
 <ul><li>Core:
 <ul>
   <li><?php bugfix(72907); ?> (null pointer deref, segfault in gc_remove_zval_from_buffer (zend_gc.c:260)).</li>
@@ -207,7 +207,7 @@ FILTER_FLAG_NO_PRIV_RANGE).</li>
 
 <section class="version" id="5.6.25"><!-- {{{ 5.6.25 -->
 <h3>Version 5.6.25</h3>
-<b><?php release_date('18-Aug-2016'); ?></b>
+<?php release_date('18-Aug-2016'); ?>
 <ul><li>Core:
 <ul>
   <li><?php bugfix(70436); ?> (Use After Free Vulnerability in unserialize()).</li>
@@ -333,7 +333,7 @@ FILTER_FLAG_NO_PRIV_RANGE).</li>
 
 <section class="version" id="5.6.24"><!-- {{{ 5.6.24 -->
 <h3>Version 5.6.24</h3>
-<b><?php release_date('21-Jul-2016'); ?></b>
+<?php release_date('21-Jul-2016'); ?>
 <ul><li>Core:
 <ul>
   <li><?php bugfix(71936); ?> (Segmentation fault destroying HTTP_RAW_POST_DATA).</li>
@@ -405,7 +405,7 @@ FILTER_FLAG_NO_PRIV_RANGE).</li>
 
 <section class="version" id="5.5.38"><!-- {{{ 5.5.38 -->
 <h3>Version 5.5.38</h3>
-<b><?php release_date('21-Jul-2016'); ?></b>
+<?php release_date('21-Jul-2016'); ?>
 <ul><li>Core:
 <ul>
   <li><?php bugfix(70480); ?> (php_url_parse_ex() buffer overflow read). (CVE-2016-6288)</li>
@@ -453,7 +453,7 @@ FILTER_FLAG_NO_PRIV_RANGE).</li>
 
 <section class="version" id="5.6.23"><!-- {{{ 5.6.23 -->
 <h3>Version 5.6.23</h3>
-<b><?php release_date('23-Jun-2016'); ?></b>
+<?php release_date('23-Jun-2016'); ?>
 <ul><li>Core:
 <ul>
   <li><?php bugfix(72268); ?> (Integer Overflow in nl2br()).</li>
@@ -512,7 +512,7 @@ FILTER_FLAG_NO_PRIV_RANGE).</li>
 
 <section class="version" id="5.5.37"><!-- {{{ 5.5.37 -->
 <h3>Version 5.5.37</h3>
-<b><?php release_date('23-Jun-2016'); ?></b>
+<?php release_date('23-Jun-2016'); ?>
 <ul><li>Core:
 <ul>
   <li><?php bugfix(72268); ?> (Integer Overflow in nl2br()).</li>
@@ -555,7 +555,7 @@ FILTER_FLAG_NO_PRIV_RANGE).</li>
 
 <section class="version" id="5.6.22"><!-- {{{ 5.6.22 -->
 <h3>Version 5.6.22</h3>
-<b><?php release_date('26-May-2016'); ?></b>
+<?php release_date('26-May-2016'); ?>
 <ul><li>Core:
 <ul>
   <li><?php bugfix(72172); ?> (zend_hex_strtod should not use strlen).</li>
@@ -580,7 +580,7 @@ FILTER_FLAG_NO_PRIV_RANGE).</li>
 
 <section class="version" id="5.5.36"><!-- {{{ 5.5.36 -->
 <h3>Version 5.5.36</h3>
-<b><?php release_date('26-May-2016'); ?></b>
+<?php release_date('26-May-2016'); ?>
 <ul><li>Core:
 <ul>
   <li><?php bugfix(72114); ?> (Integer underflow / arbitrary null write in fread/gzread). (CVE-2016-5096)</li>
@@ -603,7 +603,7 @@ FILTER_FLAG_NO_PRIV_RANGE).</li>
 
 <section class="version" id="5.6.21"><!-- {{{ 5.6.21 -->
 <h3>Version 5.6.21</h3>
-<b><?php release_date('28-Apr-2016'); ?></b>
+<?php release_date('28-Apr-2016'); ?>
 <ul><li>Core:
 <ul>
   <li><?php bugfix(69537); ?> (__debugInfo with empty string for key gives error).</li>
@@ -673,7 +673,7 @@ FILTER_FLAG_NO_PRIV_RANGE).</li>
 
 <section class="version" id="5.5.35"><!-- {{{ 5.5.35 -->
 <h3>Version 5.5.35</h3>
-<b><?php release_date('28-Apr-2016'); ?></b>
+<?php release_date('28-Apr-2016'); ?>
 <ul><li>BCMath:
 <ul>
   <li><?php bugfix(72093); ?> (bcpowmod accepts negative scale and corrupts _one_ definition). (CVE-2016-4537, CVE-2016-4538)</li>
@@ -699,7 +699,7 @@ FILTER_FLAG_NO_PRIV_RANGE).</li>
 
 <section class="version" id="5.6.20"><!-- {{{ 5.6.20 -->
 <h3>Version 5.6.20</h3>
-<b><?php release_date('31-Mar-2016'); ?></b>
+<?php release_date('31-Mar-2016'); ?>
 <ul><li>CLI Server:
 <ul>
   <li><?php bugfix(69953); ?> (Support MKCALENDAR request method).</li>
@@ -751,7 +751,7 @@ FILTER_FLAG_NO_PRIV_RANGE).</li>
 
 <section class="version" id="5.5.34"><!-- {{{ 5.5.34 -->
 <h3>Version 5.5.34</h3>
-<b><?php release_date('31-Mar-2016'); ?></b>
+<?php release_date('31-Mar-2016'); ?>
 <ul><li>Fileinfo:
 <ul>
   <li><?php bugfix(71527); ?> (Buffer over-write in finfo_open with malformed magic file). (CVE-2015-8865)</li>
@@ -777,7 +777,7 @@ FILTER_FLAG_NO_PRIV_RANGE).</li>
 
 <section class="version" id="5.6.19"><!-- {{{ 5.6.19 -->
 <h3>Version 5.6.19</h3>
-<b><?php release_date('03-Mar-2016'); ?></b>
+<?php release_date('03-Mar-2016'); ?>
 <ul><li>CLI server:
 <ul>
   <li><?php bugfix(71559); ?> (Built-in HTTP server, we can download file in web by bug).</li>
@@ -832,7 +832,7 @@ FILTER_FLAG_NO_PRIV_RANGE).</li>
 
 <section class="version" id="5.5.33"><!-- {{{ 5.5.33 -->
 <h3>Version 5.5.33</h3>
-<b><?php release_date('03-Mar-2016'); ?></b>
+<?php release_date('03-Mar-2016'); ?>
 <ul><li>Phar:
 <ul>
   <li><?php bugfix(71498); ?> (Out-of-Bound Read in phar_parse_zipfile()).</li>
@@ -846,7 +846,7 @@ FILTER_FLAG_NO_PRIV_RANGE).</li>
 
 <section class="version" id="5.6.18"><!-- {{{ 5.6.18 -->
 <h3>Version 5.6.18</h3>
-<b><?php release_date('04-Feb-2016'); ?></b>
+<?php release_date('04-Feb-2016'); ?>
 <ul><li>Core:
 <ul>
   <li>Added support for new HTTP 451 code.</li>
@@ -906,7 +906,7 @@ FILTER_FLAG_NO_PRIV_RANGE).</li>
 
 <section class="version" id="5.5.32"><!-- {{{ 5.5.32 -->
 <h3>Version 5.5.32</h3>
-<b><?php release_date('04-Feb-2016'); ?></b>
+<?php release_date('04-Feb-2016'); ?>
 <ul><li>Core:
 <ul>
   <li><?php bugfix(71039); ?> (exec functions ignore length but look for NULL termination).</li>
@@ -936,7 +936,7 @@ FILTER_FLAG_NO_PRIV_RANGE).</li>
 
 <section class="version" id="5.6.17"><!-- {{{ 5.6.17 -->
 <h3>Version 5.6.17</h3>
-<b><?php release_date('07-Jan-2016'); ?></b>
+<?php release_date('07-Jan-2016'); ?>
 <ul><li>Core:
 <ul>
   <li><?php bugfix(66909); ?> (configure fails utf8_to_mutf7 test).</li>
@@ -983,7 +983,7 @@ FILTER_FLAG_NO_PRIV_RANGE).</li>
 
 <section class="version" id="5.5.31"><!-- {{{ 5.5.31 -->
 <h3>Version 5.5.31</h3>
-<b><?php release_date('07-Jan-2016'); ?></b>
+<?php release_date('07-Jan-2016'); ?>
 <ul><li>FPM:
 <ul>
   <li><?php bugfix(70755); ?> (fpm_log.c memory leak and buffer overflow). (CVE-2016-5114)</li>
@@ -1006,7 +1006,7 @@ FILTER_FLAG_NO_PRIV_RANGE).</li>
 
 <section class="version" id="5.6.16"><!-- {{{ 5.6.16 -->
 <h3>Version 5.6.16</h3>
-<b><?php release_date('26-Nov-2015'); ?></b>
+<?php release_date('26-Nov-2015'); ?>
 <ul><li>Core:
 <ul>
   <li><?php bugfix(70828); ?> (php-fpm 5.6 with opcache crashes when referencing a non-existent constant).</li>
@@ -1037,7 +1037,7 @@ FILTER_FLAG_NO_PRIV_RANGE).</li>
 
 <section class="version" id="5.6.15"><!-- {{{ 5.6.15 -->
 <h3>Version 5.6.15</h3>
-<b><?php release_date('29-Oct-2015'); ?></b>
+<?php release_date('29-Oct-2015'); ?>
 <ul><li>Core:
 <ul>
   <li><?php bugfix(70681); ?> (Segfault when binding $this of internal instance method to null).</li>
@@ -1068,8 +1068,7 @@ FILTER_FLAG_NO_PRIV_RANGE).</li>
 
 <section class="version" id="5.6.14"><!-- {{{ 5.6.14 -->
 <h3>Version 5.6.14</h3>
-<b><?php release_date('01-Oct-2015'); ?></b>
-
+<?php release_date('01-Oct-2015'); ?>
 <ul><li>Core:
 <ul>
   <li><?php bugfix(70370); ?> (Bundled libtool.m4 doesn't handle FreeBSD 10 when building extensions).</li>
@@ -1128,7 +1127,7 @@ FILTER_FLAG_NO_PRIV_RANGE).</li>
 
 <section class="version" id="5.5.30">
 <h3>Version 5.5.30</h3>
-<b><?php release_date('01-Oct-2015'); ?></b>
+<?php release_date('01-Oct-2015'); ?>
 <ul><li>Phar:
 <ul>
   <li><?php bugfix(69720); ?> (Null pointer dereference in phar_get_fp_offset()). (CVE-2015-7803)</li>
@@ -1252,7 +1251,7 @@ FILTER_FLAG_NO_PRIV_RANGE).</li>
 
 <section class="version" id="5.4.45"><!-- {{{ 5.4.45 -->
 <h3>Version 5.4.45</h3>
-<b><?php release_date('03-Sep-2015'); ?></b>
+<?php release_date('03-Sep-2015'); ?>
 <ul><li>Core:
 <ul>
   <li><?php bugfix(70172); ?> (Use After Free Vulnerability in unserialize()). (CVE-2015-6834)</li>
@@ -1355,7 +1354,7 @@ FILTER_FLAG_NO_PRIV_RANGE).</li>
 
 <section class="version" id="5.5.28"><!-- {{{ 5.5.28 -->
 <h3>Version 5.5.28</h3>
-<b>06-Aug-2015</b>
+<?php release_date('06-Aug-2015'); ?>
 <ul><li>Core:
 <ul>
   <li><?php bugfix(69793); ?> (Remotely triggerable stack exhaustion via recursive method calls).</li>
@@ -1388,7 +1387,7 @@ FILTER_FLAG_NO_PRIV_RANGE).</li>
 
 <section class="version" id="5.4.44"><!-- {{{ 5.4.44 -->
 <h3>Version 5.4.44</h3>
-<b>06-Aug-2015</b>
+<?php release_date('06-Aug-2015'); ?>
 <ul><li>Core:
 <ul>
   <li><?php bugfix(69793); ?> (Remotely triggerable stack exhaustion via recursive method calls).</li>
@@ -1481,7 +1480,7 @@ FILTER_FLAG_NO_PRIV_RANGE).</li>
 
 <section class="version" id="5.5.27"><!-- {{{ 5.5.27 -->
 <h3>Version 5.5.27</h3>
-<b>09-Jul-2015</b>
+<?php release_date('09-Jul-2015'); ?>
 <ul><li>Core:
 <ul>
   <li><?php bugfix(69768); ?> (escapeshell*() doesn't cater to !).</li>
@@ -1532,7 +1531,7 @@ FILTER_FLAG_NO_PRIV_RANGE).</li>
 
 <section class="version" id="5.4.43"><!-- {{{ 5.4.43 -->
 <h3>Version 5.4.43</h3>
-<b>09-Jul-2015</b>
+<?php release_date('09-Jul-2015'); ?>
 <ul><li>Core:
 <ul>
   <li><?php bugfix(69768); ?> (escapeshell*() doesn't cater to !).</li>
@@ -1613,7 +1612,7 @@ FILTER_FLAG_NO_PRIV_RANGE).</li>
 
 <section class="version" id="5.5.26"><!-- {{{ 5.5.26 -->
 <h3>Version 5.5.26</h3>
-<b>11-Jun-2015</b>
+<?php release_date('11-Jun-2015'); ?>
 <ul><li>Core:
 <ul>
   <li><?php bugfix(69566); ?> (Conditional jump or move depends on uninitialised value in extension trait).</li>
@@ -1672,7 +1671,7 @@ FILTER_FLAG_NO_PRIV_RANGE).</li>
 
 <section class="version" id="5.4.42"><!-- {{{ 5.4.42 -->
 <h3>Version 5.4.42</h3>
-<b>11-Jun-2015</b>
+<?php release_date('11-Jun-2015'); ?>
 <ul><li>Core:
 <ul>
   <li>Improved fix for bug <?php bugl(69545); ?> (Integer overflow in ftp_genlist() resulting in heap overflow). (CVE-2015-4643)</li>
@@ -1746,7 +1745,7 @@ FILTER_FLAG_NO_PRIV_RANGE).</li>
 
 <section class="version" id="5.5.25"><!-- {{{ 5.5.25 -->
 <h3>Version 5.5.25</h3>
-<b>14-May-2015</b>
+<?php release_date('14-May-2015'); ?>
 <ul><li>Core:
 <ul>
   <li><?php bugfix(69364); ?> (PHP Multipart/form-data remote dos Vulnerability). (CVE-2015-4024)</li>
@@ -1788,7 +1787,7 @@ FILTER_FLAG_NO_PRIV_RANGE).</li>
 
 <section class="version" id="5.4.41"><!-- {{{ 5.4.41 -->
 <h3>Version 5.4.41</h3>
-<b>14-May-2015</b>
+<?php release_date('14-May-2015'); ?>
 <ul><li>Core:
 <ul>
   <li><?php bugfix(69364); ?> (PHP Multipart/form-data remote dos Vulnerability). (CVE-2015-4024)</li>
