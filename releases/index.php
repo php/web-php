@@ -96,6 +96,9 @@ $SIDEBAR_DATA = '
 </div>
 
 <p class="panel">
+ <a href="/ChangeLog-7.php">PHP 7 ChangeLog</a>
+</p>
+<p class="panel">
  <a href="/ChangeLog-5.php">PHP 5 ChangeLog</a>
 </p>
 <p class="panel">
