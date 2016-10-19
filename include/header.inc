@@ -18,7 +18,7 @@ if (isset($config["css_overwrite"])) {
 foreach($css_files as $filename) {
     // files that do not start with / are assumed to be located in the /styles
     // directory
-    if ($filename[0] !== DIRECTORY_SEPARATOR) {
+    if ($filename[0] !== '/') {
         $filename = "/styles/$filename";
     }
     $path = dirname(__DIR__) . $filename;
