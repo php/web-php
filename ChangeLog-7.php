@@ -9,7 +9,7 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
 
 <section class="version" id="7.0.12"><!-- {{{ 7.0.12 -->
 <h3>Version 7.0.12</h3>
-<b><?php release_date('13-Oct-2016'); ?></b>
+<?php release_date('13-Oct-2016'); ?>
 <ul><li>Core:
 <ul>
   <li><?php bugfix(73025); ?> (Heap Buffer Overflow in virtual_popen of zend_virtual_cwd.c).</li>
@@ -130,7 +130,7 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
 
 <section class="version" id="7.0.11"><!-- {{{ 7.0.11 -->
 <h3>Version 7.0.11</h3>
-<b><?php release_date('15-Sep-2016'); ?></b>
+<?php release_date('15-Sep-2016'); ?>
 <ul><li>Core:
 <ul>
   <li><?php bugfix(72944); ?> (Null pointer deref in zval_delref_p).</li>
@@ -263,7 +263,7 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
 
 <section class="version" id="7.0.10"><!-- {{{ 7.0.10 -->
 <h3>Version 7.0.10</h3>
-<b><?php release_date('18-Aug-2016'); ?></b>
+<?php release_date('18-Aug-2016'); ?>
 <ul><li>Core:
 <ul>
   <li><?php bugfix(72629); ?> (Caught exception assignment to variables ignores references).</li>
@@ -418,7 +418,7 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
 
 <section class="version" id="7.0.9"><!-- {{{ 7.0.9 -->
 <h3>Version 7.0.9</h3>
-<b><?php release_date('21-Jul-2016'); ?></b>
+<?php release_date('21-Jul-2016'); ?>
 <ul><li>Core:
 <ul>
   <li><?php bugfix(72508); ?> (strange references after recursive function call and "switch" statement).</li>
@@ -519,7 +519,7 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
 
 <section class="version" id="7.0.8"><!-- {{{ 7.0.8 -->
 <h3>Version 7.0.8</h3>
-<b><?php release_date('23-Jun-2016'); ?></b>
+<?php release_date('23-Jun-2016'); ?>
 <ul><li>Core:
 <ul>
   <li><?php bugfix(72218); ?> (If host name cannot be resolved then PHP 7 crashes).</li>
@@ -613,7 +613,7 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
 
 <section class="version" id="7.0.7"><!-- {{{ 7.0.7 -->
 <h3>Version 7.0.7</h3>
-<b><?php release_date('26-May-2016'); ?></b>
+<?php release_date('26-May-2016'); ?>
 <ul><li>Core:
 <ul>
   <li><?php bugfix(72162); ?> (use-after-free - error_reporting).</li>
@@ -707,7 +707,7 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
 
 <section class="version" id="7.0.6"><!-- {{{ 7.0.6 -->
 <h3>Version 7.0.6</h3>
-<b><?php release_date('28-Apr-2016'); ?></b>
+<?php release_date('28-Apr-2016'); ?>
 <ul><li>Core:
 <ul>
   <li><?php bugfix(71930); ?> (_zval_dtor_func: Assertion `(arr)-&gt;gc.refcount &lt;= 1' failed).</li>
@@ -821,7 +821,7 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
 
 <section class="version" id="7.0.5"><!-- {{{ 7.0.5 -->
 <h3>Version 7.0.5</h3>
-<b><?php release_date('31-Mar-2016'); ?></b>
+<?php release_date('31-Mar-2016'); ?>
 <ul><li>Core:
 <ul>
   <li>Huge pages disabled by default.</li>
@@ -912,7 +912,7 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
 
 <section class="version" id="7.0.4"><!-- {{{ 7.0.4 -->
 <h3>Version 7.0.4</h3>
-<b><?php release_date('03-Mar-2016'); ?></b>
+<?php release_date('03-Mar-2016'); ?>
 <ul><li>Core:
 <ul>
   <li>Fixed bug (Low probability segfault in zend_arena).</li>
@@ -983,7 +983,7 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
 
 <section class="version" id="7.0.3"><!-- {{{ 7.0.3 -->
 <h3>Version 7.0.3</h3>
-<b><?php release_date('04-Feb-2016'); ?></b>
+<?php release_date('04-Feb-2016'); ?>
 <ul><li>Core:
 <ul>
   <li>Added support for new HTTP 451 code.</li>
@@ -1071,7 +1071,7 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
 
 <section class="version" id="7.0.2"><!-- {{{ 7.0.2 -->
 <h3>Version 7.0.2</h3>
-<b><?php release_date('07-Jan-2016'); ?></b>
+<?php release_date('07-Jan-2016'); ?>
 <ul><li>Core:
 <ul>
   <li><?php bugfix(71165); ?> (-DGC_BENCH=1 doesn't work on PHP7).</li>
@@ -1156,7 +1156,7 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
 
 <section class="version" id="7.0.1"><!-- {{{ 7.0.1 -->
 <h3>Version 7.0.1</h3>
-<b><?php release_date('17-Dec-2015'); ?></b>
+<?php release_date('17-Dec-2015'); ?>
 <ul><li>Core:
 <ul>
   <li><?php bugfix(71105); ?> (Format String Vulnerability in Class Name Error Message). (CVE-2015-8617)</li>
@@ -1239,7 +1239,7 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
 
 <section class="version" id="7.0.0"><!-- {{{ 7.0.0 -->
 <h3>Version 7.0.0</h3>
-<b><?php release_date('03-Dec-2015'); ?></b>
+<?php release_date('03-Dec-2015'); ?>
 <ul><li>Core:
 <ul>
   <li><?php bugfix(70947); ?> (INI parser segfault with INI_SCANNER_TYPED).</li>
