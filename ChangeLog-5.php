@@ -265,6 +265,7 @@ FILTER_FLAG_NO_PRIV_RANGE).</li>
   <li><?php bugfix(72697); ?> (select_colors write out-of-bounds). (CVE-2016-7126)</li>
   <li><?php bugfix(72709); ?> (imagesetstyle() causes OOB read for empty $styles).</li>
   <li><?php bugfix(72730); ?> (imagegammacorrect allows arbitrary write access). (CVE-2016-7127)</li>
+  <li><?php bugfix(72494); ?> (imagecropauto out-of-bounds access)</li>
 </ul></li>
 <li>Intl:
 <ul>
