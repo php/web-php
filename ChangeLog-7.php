@@ -327,6 +327,7 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
   <li><?php bugfix(68712); ?> (suspicious if-else statements).</li>
   <li><?php bugfix(72697); ?> (select_colors write out-of-bounds). (CVE-2016-7126)</li>
   <li><?php bugfix(72730); ?> (imagegammacorrect allows arbitrary write access). (CVE-2016-7127)</li>
+  <li><?php bugfix(72494); ?> (imagecropauto out-of-bounds access)</li>
 </ul></li>
 <li>Intl:
 <ul>
