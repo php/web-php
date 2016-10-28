@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom" xmlns:default="http://php.net/ns/news">
+  <title>ConFoo Vancouver &amp; Montreal</title>
+  <id>http://php.net/archive/2016.php#id2016-10-28-1</id>
+  <published>2016-10-28T12:22:24-04:00</published>
+  <updated>2016-10-28T12:22:24-04:00</updated>
+  <default:finalTeaserDate xmlns="http://php.net/ns/news">2016-12-05</default:finalTeaserDate>
+  <category term="conferences" label="Conference announcement"/>
+  <link href="http://php.net/conferences/index.php#id2016-10-28-1" rel="alternate" type="text/html"/>
+  <default:newsImage xmlns="http://php.net/ns/news" link="https://confoo.ca/en" title="ConFoo Vancouver 2016 and Montreal 2017">confoo-yvr2016-yul2017.jpg</default:newsImage>
+  <link href="https://confoo.ca/en" rel="via" type="text/html"/>
+  <content type="xhtml">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+     <p>We recently released the presentations for <a href="https://confoo.ca/en/yul2017/sessions">ConFoo Montreal</a>. This giant conference will be held on March 8-10, 2017.</p>
+     
+     <p>It's also the last chance to get tickets for <a href="https://confoo.ca/en/yvr2016/sessions">ConFoo Vancouver</a>, held on December 5-7, 2016.</p>
+     
+     <p>ConFoo is a multi-technology conference aimed specifically at web developers. It has between 100 and more than 150 presentations by local and international speakers. This conference offers a great diversity in content to expand your knowledge and increase your productivity. It is the perfect place to sharpen those hard tech skills and discover the latest practices.</p>
+     
+     <p>There is a great range of topics, including PHP, many other programming languages, databases, security, performance, machine learning and project management.</p>
+    </div>
+  </content>
+</entry>
