@@ -7,6 +7,72 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
 
 <h1>PHP 7 ChangeLog</h1>
 
+<section class="version" id="7.0.13"><!-- {{{ 7.0.13 -->
+<h3>Version 7.0.13</h3>
+<b><?php release_date('10-Nov-2016'); ?></b>
+<ul><li>Core:
+<ul>
+  <li><?php bugfix(73350); ?> (Exception::__toString() cause circular references).</li>
+  <li><?php bugfix(73181); ?> (parse_str() without a second argument leads to crash).</li>
+  <li><?php bugfix(66773); ?> (Autoload with Opcache allows importing conflicting class name to namespace).</li>
+  <li><?php bugfix(66862); ?> ((Sub-)Namespaces unexpected behaviour).</li>
+  <li>Fix pthreads detection when cross-compiling.</li>
+  <li><?php bugfix(73337); ?> (try/catch not working with two exceptions inside a same operation).</li>
+  <li><?php bugfix(73338); ?> (Exception thrown from error handler causes valgrind warnings (and crashes)).</li>
+  <li><?php bugfix(73329); ?> ((Float)"Nano" == NAN).</li>
+</ul></li>
+<li>GD:
+<ul>
+  <li><?php bugfix(73213); ?> (Integer overflow in imageline() with antialiasing).</li>
+  <li><?php bugfix(73272); ?> (imagescale() is not affected by, but affects imagesetinterpolation()).</li>
+  <li><?php bugfix(73279); ?> (Integer overflow in gdImageScaleBilinearPalette()).</li>
+  <li><?php bugfix(73280); ?> (Stack Buffer Overflow in GD dynamicGetbuf).</li>
+  <li><?php bugfix(72482); ?> (Ilegal write/read access caused by gdImageAALine overflow).</li>
+  <li><?php bugfix(72696); ?> (imagefilltoborder stackoverflow on truecolor images).</li>
+</ul></li>
+<li>IMAP:
+<ul>
+  <li><?php bugfix(73418); ?> (Integer Overflow in "_php_imap_mail" leads to crash).</li>
+</ul></li>
+<li>OCI8:
+<ul>
+  <li><?php bugfix(71148); ?> (Bind reference overwritten on PHP 7).</li>
+</ul></li>
+<li>phpdbg:
+<ul>
+  <li>Properly allow for stdin input from a file.</li>
+  <li>Add -s command line option / stdin command for reading script from stdin.</li>
+  <li>Ignore non-executable opcodes in line mode of phpdbg_end_oplog().</li>
+  <li><?php bugfix(70776); ?> (Simple SIGINT does not have any effect with -rr).</li>
+  <li><?php bugfix(71234); ?> (INI files are loaded even invoked as -n --version).</li>
+</ul></li>
+<li>Session:
+<ul>
+  <li><?php bugfix(73273); ?> (session_unset() empties values from all variables in which is $_session stored).</li>
+</ul></li>
+<li>SOAP:
+<ul>
+  <li><?php bugfix(73037); ?> (SoapServer reports Bad Request when gzipped).</li>
+  <li><?php bugfix(73237); ?> (Nested object in "any" element overwrites other fields).</li>
+  <li><?php bugfix(69137); ?> (Peer verification fails when using a proxy with SoapClient)</li>
+</ul></li>
+<li>SQLite3:
+<ul>
+  <li><?php bugfix(73333); ?> (2147483647 is fetched as string).</li>
+</ul></li>
+<li>Standard:
+<ul>
+  <li><?php bugfix(73203); ?> (passing additional_parameters causes mail to fail).</li>
+  <li><?php bugfix(71241); ?> (array_replace_recursive sometimes mutates its parameters).</li>
+  <li><?php bugfix(73192); ?> (parse_url return wrong hostname).</li>
+</ul></li>
+<li>Wddx:
+<ul>
+  <li><?php bugfix(73331); ?> (NULL Pointer Dereference in WDDX Packet Deserialization with PDORow).</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
 <section class="version" id="7.0.12"><!-- {{{ 7.0.12 -->
 <h3>Version 7.0.12</h3>
 <?php release_date('13-Oct-2016'); ?>
