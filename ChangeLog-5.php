@@ -8,6 +8,55 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 
 <h1>PHP 5 ChangeLog</h1>
 
+<section class="version" id="5.6.28"><!-- {{{ 5.6.28 -->
+<h3>Version 5.6.28</h3>
+<b><?php release_date('10-Nov-2016'); ?></b>
+<ul><li>Core:
+<ul>
+  <li><?php bugfix(73337); ?> (try/catch not working with two exceptions inside a same operation).</li>
+</ul></li>
+<li>Bz2:
+<ul>
+  <li><?php bugfix(73356); ?> (crash in bzcompress function).</li>
+</ul></li>
+<li>GD:
+<ul>
+  <li><?php bugfix(73213); ?> (Integer overflow in imageline() with antialiasing).</li>
+  <li><?php bugfix(73272); ?> (imagescale() is not affected by, but affects imagesetinterpolation()).</li>
+  <li><?php bugfix(73279); ?> (Integer overflow in gdImageScaleBilinearPalette()).</li>
+  <li><?php bugfix(73280); ?> (Stack Buffer Overflow in GD dynamicGetbuf).</li>
+  <li><?php bugfix(72482); ?> (Illegal write/read access caused by gdImageAALine overflow).</li>
+  <li><?php bugfix(72696); ?> (imagefilltoborder stackoverflow on truecolor images).</li>
+</ul></li>
+<li>Imap:
+<ul>
+  <li><?php bugfix(73418); ?> (Integer Overflow in "_php_imap_mail" leads Heap Overflow).</li>
+</ul></li>
+<li>SPL:
+<ul>
+  <li><?php bugfix(73144); ?> (Use-after-free in ArrayObject Deserialization).</li>
+</ul></li>
+<li>SOAP:
+<ul>
+  <li><?php bugfix(73037); ?> (SoapServer reports Bad Request when gzipped).</li>
+</ul></li>
+<li>SQLite3:
+<ul>
+  <li><?php bugfix(73333); ?> (2147483647 is fetched as string).</li>
+</ul></li>
+<li>Standard:
+<ul>
+  <li><?php bugfix(73203); ?> (passing additional_parameters causes mail to fail).</li>
+  <li><?php bugfix(73188); ?> (use after free in userspace streams).</li>
+  <li><?php bugfix(73192); ?> (parse_url return wrong hostname).</li>
+</ul></li>
+<li>Wddx:
+<ul>
+  <li><?php bugfix(73331); ?> (NULL Pointer Dereference in WDDX Packet Deserialization with PDORow).</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
 <section class="version" id="5.6.27"><!-- {{{ 5.6.27 -->
 <h3>Version 5.6.27</h3>
 <?php release_date('13-Oct-2016'); ?>
