@@ -366,7 +366,7 @@ $purposes = array("Learning PHP", "Coding in PHP", "Reading the PHP source",
 
 foreach ($purposes as $i => $p) { ?>
   <input type="checkbox" name="purpose[<?php echo $i?>]" value="1" 
-	checked="checked"><?php echo $p; ?><br>
+	checked="checked" id="vcs-purpose-<?php echo $i; ?>"> <label for="vcs-purpose-<?php echo $i; ?>"><?php echo $p; ?></label><br>
 <?php } ?>
  </td>
 </tr>
@@ -376,7 +376,7 @@ foreach ($purposes as $i => $p) { ?>
 </tr>
 <tr>
 <th class="subr">Do you agree to follow the <a href="license/contrib-guidelines-code.php">contribution guidelines</a>?</th>
-<td><input type="checkbox" name="guidelines" value="1">Check the box if you agree.</td>
+<td><input type="checkbox" name="guidelines" value="1" id="vcs-guidelines"> <label for="vcs-guidelines">Check the box if you agree</label></td>
 </tr>
 <tr>
  <th class="subr">User ID:<br> <small>(single word, lower case)</small></th>
