@@ -14,7 +14,7 @@ site_header("PHP 7.1.0 Release Announcement");
      <ul>
           <li><a href="https://wiki.php.net/rfc/nullable_types">Nullable types</a></li>
           <li><a href="https://wiki.php.net/rfc/void_return_type">Void return type</a></li>
-          <li><a href="https://wiki.php.net/rfc/iterable">Iterable psuedo-type</a></li>
+          <li><a href="https://wiki.php.net/rfc/iterable">Iterable pseudo-type</a></li>
           <li><a href="https://wiki.php.net/rfc/class_const_visibility">Class constant visiblity modifiers</a></li>
           <li><a href="https://wiki.php.net/rfc/short_list_syntax">Square bracket syntax for <code>list()</code></a> and <a href="https://wiki.php.net/rfc/list_keys">the ability to specify keys in <code>list()</code></a></li>
           <li><a href="https://wiki.php.net/rfc/multiple-catch">Catching multiple exceptions types</a></li>
