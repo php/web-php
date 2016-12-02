@@ -8,7 +8,7 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
 <h1>PHP 7 ChangeLog</h1>
 <section class="version" id="7.1.0"><!-- {{{ 7.1.0 -->
 <h3>Version 7.1.0</h3>
-<b><?php release_date('??-???-2016'); ?></b>
+<b><?php release_date('01-Dec-2016'); ?></b>
 <ul><li>Core:
   <ul>
     <li>Added nullable types.</li>
