@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom" xmlns:default="http://php.net/ns/news">
+  <title>CoderCruise</title>
+  <id>http://php.net/archive/2016.php#id2016-12-07-1</id>
+  <published>2016-12-07T14:31:23-05:00</published>
+  <updated>2016-12-07T14:31:23-05:00</updated>
+  <default:finalTeaserDate xmlns="http://php.net/ns/news">2017-01-06</default:finalTeaserDate>
+  <category term="cfp" label="Call for Papers"/>
+  <link href="http://php.net/conferences/index.php#id2016-12-07-1" rel="alternate" type="text/html"/>
+  <default:newsImage xmlns="http://php.net/ns/news" link="https://www.codercruise.com/?paref=phpnet&amp;utm_campaign=phpnet" title="CoderCruise">codercruise.png</default:newsImage>
+  <link href="https://www.codercruise.com/?paref=phpnet&amp;utm_campaign=phpnet" rel="via" type="text/html"/>
+  <content type="xhtml">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+     <p><a href="https://www.codercruise.com/?paref=phpnet&amp;utm_campaign=phpnet">CoderCruise</a> is the spiritual successor to php[cruise] that was run in 2016. The PHP community had so much fun that we decided we needed to expand the idea to the greater web tech community! This will be a 7-day cruise out of the port of New Orleans that will include 3 days of conference (while at sea) and 3 days at the ports of Montego Bay, Grand Cayman, and Cozumel.  Yes, you read that right.  This is a conference on a cruise ship.</p>
+     
+     <p>We currently have our <a href="https://www.codercruise.com/call-for-speakers/?paref=phpnet&amp;utm_campaign=phpnet">Call for Speakers</a> open until January 6th, 2017.  For <a href="https://www.codercruise.com/?paref=phpnet&amp;utm_campaign=phpnet">CoderCruise</a> we are looking for submissions covering a wide range of web technology topics including coding, design, content, and more. Given the scope of this conference, emphasis will be given to talks that appeal to all web technologists regardless of their programming language of choice (or lack thereof).  We also welcome non-technical proposals that will appeal to a tech audience, and most importantly of all, we would love to have <strong>family-friendly sessions</strong> designed to teach kids to code or use related technologies.</p>
+    </div>
+  </content>
+</entry>
