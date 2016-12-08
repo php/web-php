@@ -17,7 +17,7 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
 </ul></li>
 <li>Calendar:
 <ul>
-  <li>Fix integer overflows (Joshua Rogers)</li>
+  <li>(Fix integer overflows).</li>
 </ul></li>
 <li>Date:
 <ul>
