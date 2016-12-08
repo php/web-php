@@ -6,6 +6,90 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
 ?>
 
 <h1>PHP 7 ChangeLog</h1>
+
+<section class="version" id="7.0.14"><!-- {{{ 7.0.14 -->
+<h3>Version 7.0.14</h3>
+<b><?php release_date('08-Dec-2016'); ?></b>
+<ul><li>Core:
+<ul>
+  <li>Fixed memory leak(null coalescing operator with Spl hash).</li>
+  <li><?php bugfix(72736); ?> (Slow performance when fetching large dataset with mysqli / PDO).</li>
+</ul></li>
+<li>Calendar:
+<ul>
+  <li>Fix integer overflows (Joshua Rogers)</li>
+</ul></li>
+<li>Date:
+<ul>
+  <li><?php bugfix(69587); ?> (DateInterval properties and isset).</li>
+</ul></li>
+<li>DTrace:
+<ul>
+  <li>Disabled PHP call tracing by default (it makes significant overhead). This may be enabled again using envirionment variable USE_ZEND_DTRACE=1.</li>
+</ul></li>
+<li>JSON:
+<ul>
+  <li><?php bugfix(73526); ?> (php_json_encode depth issue).</li>
+</ul></li>
+<li>Mysqlnd:
+<ul>
+  <li><?php bugfix(64526); ?> (Add missing mysqlnd.* parameters to php.ini-*).</li>
+</ul></li>
+<li>ODBC:
+<ul>
+  <li><?php bugfix(73448); ?> (odbc_errormsg returns trash, always 513 bytes).</li>
+</ul></li>
+<li>Opcache:
+<ul>
+  <li><?php bugfix(69090); ?> (check cached files permissions).</li>
+  <li><?php bugfix(73546); ?> (Logging for opcache has an empty file name).</li>
+</ul></li>
+<li>PCRE:
+<ul>
+  <li><?php bugfix(73483); ?> (Segmentation fault on pcre_replace_callback).</li>
+  <li><?php bugfix(73392); ?> (A use-after-free in zend allocator management).</li>
+</ul></li>
+<li>PDO_Firebird:
+<ul>
+  <li><?php bugfix(73087); ?>, #61183, #71494 (Memory corruption in bindParam).</li>
+</ul></li>
+<li>Phar:
+<ul>
+  <li><?php bugfix(73580); ?> (Phar::isValidPharFilename illegal memory access).</li>
+</ul></li>
+<li>Postgres:
+<ul>
+  <li><?php bugfix(73498); ?> (Incorrect SQL generated for pg_copy_to()).</li>
+</ul></li>
+<li>Soap:
+<ul>
+  <li><?php bugfix(73538); ?> (SoapClient::__setSoapHeaders doesn't overwrite SOAP headers).</li>
+  <li><?php bugfix(73452); ?> (Segfault (Regression for <?php bugl(69152))).</li>
+</ul></li>
+<li>SPL:
+<ul>
+  <li><?php bugfix(73423); ?> (Reproducible crash with GDB backtrace).</li>
+</ul></li>
+<li>SQLite3:
+<ul>
+  <li><?php bugfix(73530); ?> (Unsetting result set may reset other result set).</li>
+</ul></li>
+<li>Standard:
+<ul>
+  <li><?php bugfix(73297); ?> (HTTP stream wrapper should ignore HTTP 100 Continue).</li>
+  <li><?php bugfix(73645); ?> (version_compare illegal write access).</li>
+</ul></li>
+<li>Wddx:
+<ul>
+  <li><?php bugfix(73631); ?> (Invalid read when wddx decodes empty boolean element).</li>
+</ul></li>
+<li>XML:
+<ul>
+  <li><?php bugfix(72135); ?> (malformed XML causes fault).</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
 <section class="version" id="7.1.0"><!-- {{{ 7.1.0 -->
 <h3>Version 7.1.0</h3>
 <b><?php release_date('01-Dec-2016'); ?></b>
