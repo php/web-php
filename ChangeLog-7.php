@@ -64,7 +64,7 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
 <li>Soap:
 <ul>
   <li><?php bugfix(73538); ?> (SoapClient::__setSoapHeaders doesn't overwrite SOAP headers).</li>
-  <li><?php bugfix(73452); ?> (Segfault (Regression for <?php bugl(69152))).</li>
+  <li><?php bugfix(73452); ?> (Segfault (Regression for <?php bugl(69152) ?>)).</li>
 </ul></li>
 <li>SPL:
 <ul>
