@@ -8,6 +8,45 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 
 <h1>PHP 5 ChangeLog</h1>
 
+<section class="version" id="5.6.29"><!-- {{{ 5.6.29 -->
+<h3>Version 5.6.29</h3>
+<b><?php release_date('08-Dec-2016'); ?></b>
+<ul><li>Mysqlnd:
+<ul>
+  <li><?php bugfix(64526); ?> (Add missing mysqlnd.* parameters to php.ini-*).</li>
+</ul></li>
+<li>Opcache:
+<ul>
+  <li><?php bugfix(73402); ?> (Opcache segfault when using class constant to call a method).</li>
+  <li><?php bugfix(69090); ?> (check cached files permissions)</li>
+</ul></li>
+<li>OpenSSL:
+<ul>
+  <li><?php bugfix(72776); ?> (Invalid parameter in memcpy function trough openssl_pbkdf2).</li>
+</ul></li>
+<li>Postgres:
+<ul>
+  <li><?php bugfix(73498); ?> (Incorrect SQL generated for pg_copy_to()).</li>
+</ul></li>
+<li>SOAP:
+<ul>
+  <li><?php bugfix(73452); ?> (Segfault (Regression for #69152)).</li>
+</ul></li>
+<li>SQLite3:
+<ul>
+  <li><?php bugfix(73530); ?> (Unsetting result set may reset other result set).</li>
+</ul></li>
+<li>Standard:
+<ul>
+  <li><?php bugfix(73297); ?> (HTTP stream wrapper should ignore HTTP 100 Continue).</li>
+</ul></li>
+<li>WDDX:
+<ul>
+  <li><?php bugfix(73631); ?> (Memory leak due to invalid wddx stack processing). (bughunter at fosec dot vn).</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
 <section class="version" id="5.6.28"><!-- {{{ 5.6.28 -->
 <h3>Version 5.6.28</h3>
 <b><?php release_date('10-Nov-2016'); ?></b>
