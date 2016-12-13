@@ -130,7 +130,7 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
     <li><?php bugfix(73058); ?> (crypt broken when salt is 'too' long).</li>
     <li><?php bugfix(72944); ?> (Null pointer deref in zval_delref_p).</li>
     <li><?php bugfix(72943); ?> (assign_dim on string doesn't reset hval).</li>
-    <li><?php bugfix(72598); ?> (Reference is lost after array_slice()) (Nikita)</li>
+    <li><?php bugfix(72598); ?> (Reference is lost after array_slice()).</li>
     <li><?php bugfix(72703); ?> (Out of bounds global memory read in BF_crypt triggered by password_verify).</li>
     <li><?php bugfix(72813); ?> (Segfault with __get returned by ref).</li>
     <li><?php bugfix(72767); ?> (PHP Segfaults when trying to expand an infinite operator).</li>
@@ -145,12 +145,12 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
     <li><?php bugfix(72629); ?> (Caught exception assignment to variables ignores references).</li>
     <li><?php bugfix(72594); ?> (Calling an earlier instance of an included anonymous class fatals).</li>
     <li><?php bugfix(72581); ?> (previous property undefined in Exception after deserialization).</li>
-    <li><?php bugfix(72543); ?> (Different references behavior comparing to PHP 5) (Laruence, Dmitry, Nikita)</li>
+    <li><?php bugfix(72543); ?> (Different references behavior comparing to PHP 5).</li>
     <li><?php bugfix(72347); ?> (VERIFY_RETURN type casts visible in finally).</li>
     <li><?php bugfix(72216); ?> (Return by reference with finally is not memory safe).</li>
     <li><?php bugfix(72215); ?> (Wrong return value if var modified in finally).</li>
     <li><?php bugfix(71818); ?> (Memory leak when array altered in destructor).</li>
-    <li><?php bugfix(71539); ?> (Memory error on $arr[$a] =&amp; $arr[$b] if RHS rehashes) (Dmitry, Nikita)</li>
+    <li><?php bugfix(71539); ?> (Memory error on $arr[$a] =&amp; $arr[$b] if RHS rehashes).</li>
     <li>Added new constant PHP_FD_SETSIZE.</li>
     <li>Added optind parameter to getopt().</li>
     <li>Added PHP to SAPI error severity mapping for logs.</li>
@@ -369,7 +369,7 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
 <li>Mbstring:
   <ul>
     <li><?php bugfix(73532); ?> (Null pointer dereference in mb_eregi).</li>
-    <li><?php bugfix(66964); ?> (mb_convert_variables() cannot detect recursion) (Yasuo)</li>
+    <li><?php bugfix(66964); ?> (mb_convert_variables() cannot detect recursion).</li>
     <li><?php bugfix(72992); ?> (mbstring.internal_encoding doesn't inherit default_charset).</li>
     <li><?php bugfix(66797); ?> (mb_substr only takes 32-bit signed integer).</li>
     <li><?php bugfix(72711); ?> (`mb_ereg` does not clear the `$regs` parameter on failure).</li>
@@ -544,7 +544,7 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
     <li><?php bugfix(73452); ?> (Segfault (Regression for #69152)).</li>
     <li><?php bugfix(73037); ?> (SoapServer reports Bad Request when gzipped).</li>
     <li><?php bugfix(73237); ?> (Nested object in "any" element overwrites other fields).</li>
-    <li><?php bugfix(69137); ?> (Peer verification fails when using a proxy with SoapClient) (Keith Smiley)</li>
+    <li><?php bugfix(69137); ?> (Peer verification fails when using a proxy with SoapClient).</li>
     <li><?php bugfix(71711); ?> (Soap Server Member variables reference bug).</li>
     <li><?php bugfix(71996); ?> (Using references in arrays doesn't work like expected).</li>
   </ul></li>
@@ -629,18 +629,18 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
   <ul>
     <li><?php bugfix(73331); ?> (NULL Pointer Dereference in WDDX Packet Deserialization with PDORow).</li>
     <li><?php bugfix(72142); ?> (WDDX Packet Injection Vulnerability in wddx_serialize_value()).</li>
-    <li><?php bugfix(72749); ?> (wddx_deserialize allows illegal memory access) (Stas)</li>
+    <li><?php bugfix(72749); ?> (wddx_deserialize allows illegal memory access).</li>
     <li><?php bugfix(72750); ?> (wddx_deserialize null dereference).</li>
     <li><?php bugfix(72790); ?> (wddx_deserialize null dereference with invalid xml).</li>
     <li><?php bugfix(72799); ?> (wddx_deserialize null dereference in php_wddx_pop_element).</li>
     <li><?php bugfix(72860); ?> (wddx_deserialize use-after-free).</li>
     <li><?php bugfix(73065); ?> (Out-Of-Bounds Read in php_wddx_push_element).</li>
-    <li><?php bugfix(72564); ?> (boolean always deserialized as "true") (Remi)</li>
+    <li><?php bugfix(72564); ?> (boolean always deserialized as "true").</li>
     <li>A circular reference when serializing will now throw an instance of Error instead of resulting in a fatal error.</li>
   </ul></li>
 <li>XML:
   <ul>
-    <li><?php bugfix(72135); ?> (malformed XML causes fault) (edgarsandi)</li>
+    <li><?php bugfix(72135); ?> (malformed XML causes fault).</li>
     <li><?php bugfix(72714); ?> (_xml_startElementHandler() segmentation fault).</li>
     <li><?php bugfix(72085); ?> (SEGV on unknown address zif_xml_parse).</li>
   </ul></li>
