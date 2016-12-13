@@ -115,7 +115,7 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
     <li>Fixed memory leak(null coalescing operator with Spl hash).</li>
     <li><?php bugfix(72736); ?> (Slow performance when fetching large dataset with mysqli / PDO).</li>
     <li><?php bugfix(72482); ?> (Ilegal write/read access caused by gdImageAALine overflow).</li>
-    <li><?php bugfix(72696); ?> (imagefilltoborder stackoverflow on truecolor images).</li>
+    <li><?php bugfix(72696); ?> (imagefilltoborder stackoverflow on truecolor images). (CVE-2016-9933)</li>
     <li><?php bugfix(73350); ?> (Exception::__toString() cause circular references).</li>
     <li><?php bugfix(73329); ?> ((Float)"Nano" == NAN).</li>
     <li><?php bugfix(73288); ?> (Segfault in __clone &gt; Exception.toString &gt; __get).</li>
@@ -681,7 +681,7 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
   <li><?php bugfix(73279); ?> (Integer overflow in gdImageScaleBilinearPalette()).</li>
   <li><?php bugfix(73280); ?> (Stack Buffer Overflow in GD dynamicGetbuf).</li>
   <li><?php bugfix(72482); ?> (Ilegal write/read access caused by gdImageAALine overflow).</li>
-  <li><?php bugfix(72696); ?> (imagefilltoborder stackoverflow on truecolor images).</li>
+  <li><?php bugfix(72696); ?> (imagefilltoborder stackoverflow on truecolor images). (CVE-2016-9933)</li>
 </ul></li>
 <li>IMAP:
 <ul>

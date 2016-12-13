@@ -65,7 +65,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
   <li><?php bugfix(73279); ?> (Integer overflow in gdImageScaleBilinearPalette()).</li>
   <li><?php bugfix(73280); ?> (Stack Buffer Overflow in GD dynamicGetbuf).</li>
   <li><?php bugfix(72482); ?> (Illegal write/read access caused by gdImageAALine overflow).</li>
-  <li><?php bugfix(72696); ?> (imagefilltoborder stackoverflow on truecolor images).</li>
+  <li><?php bugfix(72696); ?> (imagefilltoborder stackoverflow on truecolor images). (CVE-2016-9933)</li>
 </ul></li>
 <li>Imap:
 <ul>
