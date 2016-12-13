@@ -627,7 +627,7 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
   </ul></li>
 <li>Wddx:
   <ul>
-    <li><?php bugfix(73331); ?> (NULL Pointer Dereference in WDDX Packet Deserialization with PDORow).</li>
+    <li><?php bugfix(73331); ?> (NULL Pointer Dereference in WDDX Packet Deserialization with PDORow). (CVE-2016-9934)</li>
     <li><?php bugfix(72142); ?> (WDDX Packet Injection Vulnerability in wddx_serialize_value()).</li>
     <li><?php bugfix(72749); ?> (wddx_deserialize allows illegal memory access).</li>
     <li><?php bugfix(72750); ?> (wddx_deserialize null dereference).</li>
@@ -721,7 +721,7 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
 </ul></li>
 <li>Wddx:
 <ul>
-  <li><?php bugfix(73331); ?> (NULL Pointer Dereference in WDDX Packet Deserialization with PDORow).</li>
+  <li><?php bugfix(73331); ?> (NULL Pointer Dereference in WDDX Packet Deserialization with PDORow). (CVE-2016-9934)</li>
 </ul></li>
 </ul>
 <!-- }}} --></section>
