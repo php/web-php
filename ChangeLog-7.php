@@ -51,7 +51,7 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
 </ul></li>
 <li>PDO_Firebird:
 <ul>
-  <li><?php bugfix(73087); ?>, #61183, #71494 (Memory corruption in bindParam).</li>
+  <li><?php bugfix(73087); ?>, <?php bugl(61183) ?>, <?php bugl(71494) ?> (Memory corruption in bindParam).</li>
 </ul></li>
 <li>Phar:
 <ul>
@@ -468,7 +468,7 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
   </ul></li>
 <li>PDO_Firebird:
   <ul>
-    <li><?php bugfix(73087); ?>, #61183, #71494 (Memory corruption in bindParam).</li>
+    <li><?php bugfix(73087); ?>, <?php bugl(61183) ?>, <?php bugl(71494) ?> (Memory corruption in bindParam).</li>
     <li><?php bugfix(60052); ?> (Integer returned as a 64bit integer on X86_64).</li>
   </ul></li>
 <li>PDO_pgsql:
