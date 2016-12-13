@@ -14,6 +14,7 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
 <ul>
   <li>Fixed memory leak(null coalescing operator with Spl hash).</li>
   <li><?php bugfix(72736); ?> (Slow performance when fetching large dataset with mysqli / PDO).</li>
+  <li><?php bugfix(72978); ?> (Use After Free Vulnerability in unserialize()). (CVE-2016-9936)</li>
 </ul></li>
 <li>Calendar:
 <ul>
@@ -114,6 +115,7 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
     <li><?php bugfix(73585); ?> (Logging of "Internal Zend error - Missing class information" missing class name).</li>
     <li>Fixed memory leak(null coalescing operator with Spl hash).</li>
     <li><?php bugfix(72736); ?> (Slow performance when fetching large dataset with mysqli / PDO).</li>
+    <li><?php bugfix(72978); ?> (Use After Free Vulnerability in unserialize()). (CVE-2016-9936)</li>
     <li><?php bugfix(72482); ?> (Ilegal write/read access caused by gdImageAALine overflow).</li>
     <li><?php bugfix(72696); ?> (imagefilltoborder stackoverflow on truecolor images). (CVE-2016-9933)</li>
     <li><?php bugfix(73350); ?> (Exception::__toString() cause circular references).</li>
