@@ -1679,10 +1679,6 @@ FILTER_FLAG_NO_PRIV_RANGE).</li>
 <ul>
   <li><?php bugfix(69549); ?> (Memory leak with opcache.optimization_level=0xFFFFFFFF).</li>
 </ul></li>
-<li>PCRE:
-<ul>
-  <li>Upgraded pcrelib to 8.37. (CVE-2015-2325, CVE-2015-2326)</li>
-</ul></li>
 <li>Phar:
 <ul>
   <li><?php bugfix(69680); ?> (phar symlink in binary directory broken).</li>
