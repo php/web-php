@@ -42,7 +42,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 </ul></li>
 <li>WDDX:
 <ul>
-  <li><?php bugfix(73631); ?> (Memory leak due to invalid wddx stack processing).</li>
+  <li><?php bugfix(73631); ?> (Invalid read when wddx decodes empty boolean element). (CVE-2016-9935)</li>
 </ul></li>
 </ul>
 <!-- }}} --></section>

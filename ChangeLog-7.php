@@ -81,7 +81,7 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
 </ul></li>
 <li>Wddx:
 <ul>
-  <li><?php bugfix(73631); ?> (Invalid read when wddx decodes empty boolean element).</li>
+  <li><?php bugfix(73631); ?> (Invalid read when wddx decodes empty boolean element). (CVE-2016-9935)</li>
 </ul></li>
 <li>XML:
 <ul>
