@@ -100,6 +100,10 @@ site_header("Thanks", array("current" => "community"));
  <a href="https://www.appveyor.com/">AppVeyor</a> provides continuous integration for Windows builds of PHP.
 </li>
 
+<li>
+ <a href="https://www.travis-ci.org/">Travis CI</a> provides continuous integration for builds of PHP.
+</li>
+
 </ul>
 <p>
  And special thanks to all the companies who donate server space and
