@@ -97,7 +97,7 @@ site_header("Thanks", array("current" => "community"));
 </li>
 
 <li>
- <a href="https://www.appveyor.com//">AppVeyor</a> provides continuous integration for Windows builds of PHP.
+ <a href="https://www.appveyor.com/">AppVeyor</a> provides continuous integration for Windows builds of PHP.
 </li>
 
 </ul>
