@@ -96,6 +96,10 @@ site_header("Thanks", array("current" => "community"));
  for the php.net monitoring infrastructure.
 </li>
 
+<li>
+ <a href="https://www.appveyor.com//">AppVeyor</a> provides continuous integration for Windows builds of PHP.
+</li>
+
 </ul>
 <p>
  And special thanks to all the companies who donate server space and
