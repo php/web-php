@@ -106,7 +106,6 @@ site_header("Sitemap", array("current" => "help"));
  <li><a href="/credits.php">Credits</a></li>
  <li><a href="/contact.php#ads">Advertising at PHP.net</a></li>
  <li><a href="/license/">License Information</a></li>
- <li><a href="/usage.php">Usage</a></li>
 </ul>
 
 <?php site_footer();
