@@ -10,9 +10,6 @@ pub   4096R/7BD5DCD0 2016-05-07
       Key fingerprint = A917 B1EC DA84 AEC2 B568 FED6 F50A BC80 7BD5 DCD0
 uid                  Davey Shafik &lt;davey@php.net&gt;
 
-GPG
-,
-    "7.1" => <<< GPG
 pub   2048R/31CBD89E 2016-12-08
       Key fingerprint = 5289 95BF EDFB A719 1D46  839E F9BA 0ADA 31CB D89E
 uid                  Joe Watkins &lt;krakjoe@php.net&gt;
