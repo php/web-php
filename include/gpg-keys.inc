@@ -12,6 +12,13 @@ uid                  Davey Shafik &lt;davey@php.net&gt;
 
 GPG
 ,
+    "7.1" => <<< GPG
+pub   2048R/31CBD89E 2016-12-08
+      Key fingerprint = 5289 95BF EDFB A719 1D46  839E F9BA 0ADA 31CB D89E
+uid                  Joe Watkins &lt;krakjoe@php.net&gt;
+
+GPG
+,
     "7.0" => <<< GPG
 pub   2048R/9C0D5763 2015-06-09 [expires: 2024-06-06]
       Key fingerprint = 1A4E 8B72 77C4 2E53 DBA9  C7B9 BCAA 30EA 9C0D 5763
