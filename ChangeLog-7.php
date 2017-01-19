@@ -7,6 +7,100 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
 
 <h1>PHP 7 ChangeLog</h1>
 
+<section class="version" id="7.0.15"><!-- {{{ 7.0.15 -->
+<h3>Version 7.0.15</h3>
+<b><?php release_date('19-Jan-2017'); ?></b>
+<ul><li>Core:
+<ul>
+  <li><?php bugfix(73792); ?> (invalid foreach loop hangs script).</li>
+  <li><?php bugfix(73663); ?> ("Invalid opcode 65/16/8" occurs with a variable created with list()).</li>
+  <li><?php bugfix(73585); ?> (Logging of "Internal Zend error - Missing class information" missing class name).</li>
+  <li><?php bugfix(73753); ?> (unserialized array pointer not advancing).</li>
+  <li><?php bugfix(73825); ?> (Heap out of bounds read on unserialize in finish_nested_data()).</li>
+  <li><?php bugfix(73831); ?> (NULL Pointer Dereference while unserialize php object).</li>
+  <li><?php bugfix(73832); ?> (Use of uninitialized memory in unserialize()).</li>
+  <li><?php bugfix(73092); ?> (Unserialize use-after-free when resizing object's properties hash table).</li>
+  <li><?php bugfix(69425); ?> (Use After Free in unserialize()).</li>
+  <li><?php bugfix(72731); ?> (Type Confusion in Object Deserialization).</li>
+</ul></li>
+<li>COM:
+<ul>
+  <li><?php bugfix(73679); ?> (DOTNET read access violation using invalid codepage).</li>
+</ul></li>
+<li>DOM:
+<ul>
+  <li><?php bugfix(67474); ?> (getElementsByTagNameNS filter on default ns).</li>
+</ul></li>
+<li>EXIF:
+<ul>
+<li><?php bugfix(73737); ?> (FPE when parsing a tag format).</li>
+</ul></li>
+<li>GD:
+<ul>
+  <li><?php bugfix(73869); ?> (Signed Integer Overflow gd_io.c).</li>
+  <li><?php bugfix(73868); ?> (DOS vulnerability in gdImageCreateFromGd2Ctx()).</li>
+</ul></li>
+<li>GMP:
+<ul>
+  <li><?php bugfix(70513); ?> (GMP Deserialization Type Confusion Vulnerability).</li>
+</ul></li>
+<li>Mysqli:
+<ul>
+  <li><?php bugfix(73462); ?> (Persistent connections don't set $connect_errno).</li>
+</ul></li>
+<li>Mysqlnd:
+<ul>
+  <li>Fixed issue with decoding BIT columns when having more than one rows in the result set. 7.0+ problem.</li>
+  <li><?php bugfix(73800); ?> (sporadic segfault with MYSQLI_OPT_INT_AND_FLOAT_NATIVE).</li>
+</ul></li>
+<li>PCRE:
+<ul>
+  <li><?php bugfix(73612); ?> (preg_*() may leak memory).</li>
+</ul></li>
+<li>PDO_Firebird:
+<ul>
+  <li><?php bugfix(72931); ?> (PDO_FIREBIRD with Firebird 3.0 not work on returning statement).</li>
+</ul></li>
+<li>Phar:
+<ul>
+  <li><?php bugfix(73773); ?> (Seg fault when loading hostile phar).</li>
+  <li><?php bugfix(73768); ?> (Memory corruption when loading hostile phar).</li>
+  <li><?php bugfix(73764); ?> (Crash while loading hostile phar archive).</li>
+</ul></li>
+<li>Phpdbg:
+<ul>
+  <li><?php bugfix(73615); ?> (phpdbg without option never load .phpdbginit at startup).</li>
+  <li>Fixed issue getting executable lines from custom wrappers.</li>
+  <li><?php bugfix(73704); ?> (phpdbg shows the wrong line in files with shebang).</li>
+</ul></li>
+<li>Reflection:
+<ul>
+  <li><?php bugfix(46103); ?> (ReflectionObject memory leak).</li>
+</ul></li>
+<li>Streams:
+<ul>
+  <li><?php bugfix(73586); ?> (php_user_filter::$stream is not set to the stream the filter is working on).</li>
+</ul></li>
+<li>SQLite3:
+<ul>
+<li>Reverted fix for <?php bugl(73530); ?> (Unsetting result set may reset other result set).</li>
+</ul></li>
+<li>Standard:
+<ul>
+  <li><?php bugfix(73594); ?> (dns_get_record does not populate $additional out parameter).</li>
+  <li><?php bugfix(70213); ?> (Unserialize context shared on double class lookup).</li>
+  <li><?php bugfix(73154); ?> (serialize object with __sleep function crash).</li>
+  <li><?php bugfix(70490); ?> (get_browser function is very slow).</li>
+  <li><?php bugfix(73265); ?> (Loading browscap.ini at startup causes high memory usage).</li>
+  <li><?php bugfix(31875); ?> (get_defined_functions additional param to exclude disabled functions).</li>
+</ul></li>
+<li>Zlib:
+<ul>
+  <li><?php bugfix(73373); ?> (deflate_add does not verify that output was not truncated).</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
 <section class="version" id="7.1.1"><!-- {{{ 7.1.1 -->
 <h3>Version 7.1.1</h3>
 <b><?php release_date('19-Jan-2017'); ?></b>

@@ -2,6 +2,42 @@
 $OLDRELEASES = array (
   7 => 
   array (
+    '7.0.14' => 
+    array (
+      'announcement' => 
+      array (
+        'English' => '/releases/7_0_14.php',
+      ),
+      'source' => 
+      array (
+        0 => 
+        array (
+          'filename' => 'php-7.0.14.tar.bz2',
+          'name' => 'PHP 7.0.14 (tar.bz2)',
+          'md5' => '903ff1fd199201d7e69dc0963797072b',
+          'sha256' => 'fbc4369a0d42b55fd1ce75eb4f3d17b012da754a67567d8e3288fbfbb7490534',
+          'date' => '08 Dec 2016',
+        ),
+        1 => 
+        array (
+          'filename' => 'php-7.0.14.tar.gz',
+          'name' => 'PHP 7.0.14 (tar.gz)',
+          'md5' => '5e20062f39fb3bd5afeed916866acad9',
+          'sha256' => '320cfd2184e7252d3d77eae5d5474554fa04ab9fbee7c6094c07e8bd3b5b632b',
+          'date' => '08 Dec 2016',
+        ),
+        2 => 
+        array (
+          'filename' => 'php-7.0.14.tar.xz',
+          'name' => 'PHP 7.0.14 (tar.xz)',
+          'md5' => 'a51f1d4f03f4e4c745856e9f76fca476',
+          'sha256' => '0f1dff6392a1cc2ed126b9695f580a2ed77eb09d2c23b41cabfb41e6f27a8c89',
+          'date' => '08 Dec 2016',
+        ),
+      ),
+      'date' => '08 Dec 2016',
+      'museum' => false,
+    ),
 	'7.1.0' => 
     array (
       'announcement' => 
