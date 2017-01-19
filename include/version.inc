@@ -38,7 +38,7 @@ $PHP_7_1_SHA256     = array(
 $PHP_7_0_RC = false; // Current RC version (e.g., '5.6.7RC1') or false
 $PHP_7_0_RC_DATE = "05 Jan 2017";
 
-$PHP_7_0_VERSION         = "7.0.19";
+$PHP_7_0_VERSION         = "7.0.15";
 $PHP_7_0_DATE            = "19 Jan 2017";
 $PHP_7_0_MD5     = array(
                        "tar.bz2"       => "c0fa74e0dbc241194b418675134bd948",
