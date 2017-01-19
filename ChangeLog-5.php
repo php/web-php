@@ -8,6 +8,41 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 
 <h1>PHP 5 ChangeLog</h1>
 
+<section class="version" id="5.6.30"><!-- {{{ 5.6.30 -->
+<h3>Version 5.6.30</h3>
+<b><?php release_date('19-Jan-2017'); ?></b>
+<ul><li>EXIF:
+<ul>
+  <li><?php bugfix(73737); ?> (FPE when parsing a tag format).</li>
+</ul></li>
+<li>GD:
+<ul>
+  <li><?php bugfix(73549); ?> (Use after free when stream is passed to imagepng).</li>
+  <li><?php bugfix(73868); ?> (DOS vulnerability in gdImageCreateFromGd2Ctx()).</li>
+  <li><?php bugfix(73869); ?> (Signed Integer Overflow gd_io.c).</li>
+</ul></li>
+<li>Intl:
+<ul>
+  <li><?php bugfix(68447); ?> (grapheme_extract take an extra trailing character).</li>
+</ul></li>
+<li>Phar:
+<ul>
+  <li><?php bugfix(73764); ?> (Crash while loading hostile phar archive).</li>
+  <li><?php bugfix(73768); ?> (Memory corruption when loading hostile phar).</li>
+  <li><?php bugfix(73773); ?> (Seg fault when loading hostile phar).</li>
+</ul></li>
+<li>SQLite3:
+<ul>
+  <li>Reverted fix for bug <?php bugl(73530); ?> (Unsetting result set may reset other result set).</li>
+</ul></li>
+<li>Standard:
+<ul>
+  <li><?php bugfix(70213); ?> (Unserialize context shared on double class lookup).</li>
+  <li><?php bugfix(73825); ?> (Heap out of bounds read on unserialize in finish_nested_data()).</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
 <section class="version" id="5.6.29"><!-- {{{ 5.6.29 -->
 <h3>Version 5.6.29</h3>
 <b><?php release_date('08-Dec-2016'); ?></b>
