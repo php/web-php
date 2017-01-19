@@ -7,6 +7,124 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
 
 <h1>PHP 7 ChangeLog</h1>
 
+<section class="version" id="7.1.1"><!-- {{{ 7.1.1 -->
+<h3>Version 7.1.1</h3>
+<b><?php release_date('19-Jan-2017'); ?></b>
+<ul>
+	<li>
+	Core
+	<ul>
+		<li><?php bugfix(73792); ?> (invalid foreach loop hangs script).</li>
+		<li><?php bugfix(73686); ?> (Adding settype()ed values to ArrayObject results in references).</li>
+		<li><?php bugfix(73663); ?> ("Invalid opcode 65/16/8" occurs with a variable created with list()).</li>
+		<li><?php bugfix(73727); ?> (ZEND_MM_BITSET_LEN is "undefined symbol" in zend_bitset.h).</li>
+		<li><?php bugfix(73753); ?> (unserialized array pointer not advancing).</li>
+		<li><?php bugfix(73783); ?> (SIG_IGN doesn't work when Zend Signals is enabled).</li>
+		<li><?php bugfix(73825); ?> (Heap out of bounds read on unserialize in finish_nested_data()).</li>
+		<li><?php bugfix(73831); ?> (NULL Pointer Dereference while unserialize php object).</li>
+		<li><?php bugfix(73832); ?> (Use of uninitialized memory in unserialize()).</li>
+	</ul>
+	</li>
+	<li>
+	CLI
+	<ul>
+		<li><?php bugfix(72555); ?> (CLI output(japanese) on Windows).</li>
+	</ul>
+	</li>
+	<li>
+	COM
+	<ul>
+		<li><?php bugfix(73679); ?> (DOTNET read access violation using invalid codepage).</li>
+	</ul>
+	</li>
+	<li>
+	DOM
+	<ul>
+		<li><?php bugfix(67474); ?> (getElementsByTagNameNS filter on default ns).</li>
+	</ul>
+	</li>
+	<li>
+	EXIF
+	<ul>
+		<li><?php bugfix(73737); ?> (FPE when parsing a tag format).</li>
+	</ul>
+	</li>
+	<li>
+	GD
+	<ul>
+		<li><?php bugfix(73869); ?> (Signed Integer Overflow gd_io.c).</li>
+		<li><?php bugfix(73868); ?> (DOS vulnerability in gdImageCreateFromGd2Ctx()).</li>
+	</ul>
+	</li>
+	<li>
+	mbstring
+	<ul>
+		<li><?php bugfix(73646); ?> (mb_ereg_search_init null pointer dereference).</li>
+	</ul>
+	</li>
+	<li>
+	MySQLi
+	<ul>
+		<li><?php bugfix(73462); ?> (Persistent connections don't set $connect_errno).</li>
+	</ul>
+	</li>
+	<li>
+	mysqlnd
+	<ul>
+		<li>Optimized handling of BIT fields - less memory copies and lower memory usage.</li>
+		<li><?php bugfix(73800); ?> (sporadic segfault with MYSQLI_OPT_INT_AND_FLOAT_NATIVE).</li>
+	</ul>
+	</li>
+	<li>
+	opcache
+	<ul>
+		<li><?php bugfix(73789); ?> (Strange behavior of class constants in switch/case block).</li>
+		<li><?php bugfix(73746); ?> (Method that returns string returns UNKNOWN:0 instead).</li>
+		<li><?php bugfix(73654); ?> (Segmentation fault in zend_call_function).</li>
+		<li><?php bugfix(73668); ?> ("SIGFPE Arithmetic exception" in opcache when divide by minus 1).</li>
+		<li><?php bugfix(73847); ?> (Recursion when a variable is redefined as array).</li>
+	</ul>
+	</li>
+	<li>
+	PDO Firebird
+	<ul>
+		<li><?php bugfix(72931); ?> (PDO_FIREBIRD with Firebird 3.0 not work on returning statement).</li>
+	</ul>
+	</li>
+	<li>
+	phpdbg
+	<ul>
+		<li><?php bugfix(73794); ?> (Crash (out of memory) when using run and # command separator).</li>
+		<li><?php bugfix(73704); ?> (phpdbg shows the wrong line in files with shebang).</li>
+	</ul>
+	</li>
+	<li>
+	SQLite3
+	<ul>
+		<li>Reverted fix for <?php bugfix(73530); ?> (Unsetting result set may reset other result set).</li>
+	</ul>
+	</li>
+	<li>
+	Standard
+	<ul>
+		<li><?php bugfix(73594); ?> (dns_get_record does not populate $additional out parameter).</li>
+		<li><?php bugfix(70213); ?> (Unserialize context shared on double class lookup).</li>
+		<li><?php bugfix(73154); ?> (serialize object with __sleep function crash).</li>
+		<li><?php bugfix(70490); ?> (get_browser function is very slow).</li>
+		<li><?php bugfix(73265); ?> (Loading browscap.ini at startup causes high memory usage).</li>
+		<li>(add subject to mail log).</li>
+		<li><?php bugfix(31875); ?> (get_defined_functions additional param to exclude disabled functions).</li>
+	</ul>
+	</li>
+	<li>
+	zlib
+	<ul>
+		<li><?php bugfix(73373); ?> (deflate_add does not verify that output was not truncated).</li>
+	</ul>
+	</li>
+</ul>
+<!-- }}} --></section>
+
 <section class="version" id="7.0.14"><!-- {{{ 7.0.14 -->
 <h3>Version 7.0.14</h3>
 <b><?php release_date('08-Dec-2016'); ?></b>
