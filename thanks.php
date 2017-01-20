@@ -70,7 +70,7 @@ site_header("Thanks", array("current" => "community"));
 </li>
 
 <li>
- <a href="http://www.sohosted.nl/webhosting/">SoHosted Webhosting</a> provides the
+ <a href="https://duocast.nl/">Duocast</a> provides the
  servers and bandwidth used for buildbot testing and various windows based servers.
 </li>
 
