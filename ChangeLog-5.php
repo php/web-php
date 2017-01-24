@@ -38,7 +38,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 <li>Standard:
 <ul>
   <li><?php bugfix(70213); ?> (Unserialize context shared on double class lookup).</li>
-  <li><?php bugfix(73825); ?> (Heap out of bounds read on unserialize in finish_nested_data()).</li>
+  <li><?php bugfix(73825); ?> (Heap out of bounds read on unserialize in finish_nested_data()). (CVE-2016-10161)</li>
 </ul></li>
 </ul>
 <!-- }}} --></section>
