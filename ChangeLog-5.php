@@ -27,8 +27,8 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 </ul></li>
 <li>Phar:
 <ul>
-  <li><?php bugfix(73764); ?> (Crash while loading hostile phar archive).</li>
-  <li><?php bugfix(73768); ?> (Memory corruption when loading hostile phar).</li>
+  <li><?php bugfix(73764); ?> (Crash while loading hostile phar archive). (CVE-2016-10159)</li>
+  <li><?php bugfix(73768); ?> (Memory corruption when loading hostile phar). (CVE-2016-10160)</li>
   <li><?php bugfix(73773); ?> (Seg fault when loading hostile phar).</li>
 </ul></li>
 <li>SQLite3:

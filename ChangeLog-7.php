@@ -64,8 +64,8 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
 <li>Phar:
 <ul>
   <li><?php bugfix(73773); ?> (Seg fault when loading hostile phar).</li>
-  <li><?php bugfix(73768); ?> (Memory corruption when loading hostile phar).</li>
-  <li><?php bugfix(73764); ?> (Crash while loading hostile phar archive).</li>
+  <li><?php bugfix(73768); ?> (Memory corruption when loading hostile phar). (CVE-2016-10160)</li>
+  <li><?php bugfix(73764); ?> (Crash while loading hostile phar archive). (CVE-2016-10159)</li>
 </ul></li>
 <li>Phpdbg:
 <ul>
@@ -185,6 +185,12 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
 		<li><?php bugfix(72931); ?> (PDO_FIREBIRD with Firebird 3.0 not work on returning statement).</li>
 	</ul>
 	</li>
+	<li>Phar:
+	<ul>
+		<li><?php bugfix(73773); ?> (Seg fault when loading hostile phar).</li>
+		<li><?php bugfix(73768); ?> (Memory corruption when loading hostile phar). (CVE-2016-10160)</li>
+		<li><?php bugfix(73764); ?> (Crash while loading hostile phar archive). (CVE-2016-10159)</li>
+	</ul></li>
 	<li>
 	phpdbg
 	<ul>
