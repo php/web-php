@@ -33,7 +33,7 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
 </ul></li>
 <li>EXIF:
 <ul>
-<li><?php bugfix(73737); ?> (FPE when parsing a tag format).</li>
+<li><?php bugfix(73737); ?> (FPE when parsing a tag format). (CVE-2016-10158)</li>
 </ul></li>
 <li>GD:
 <ul>
@@ -140,7 +140,7 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
 	<li>
 	EXIF
 	<ul>
-		<li><?php bugfix(73737); ?> (FPE when parsing a tag format).</li>
+		<li><?php bugfix(73737); ?> (FPE when parsing a tag format). (CVE-2016-10158)</li>
 	</ul>
 	</li>
 	<li>

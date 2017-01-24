@@ -13,7 +13,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 <b><?php release_date('19-Jan-2017'); ?></b>
 <ul><li>EXIF:
 <ul>
-  <li><?php bugfix(73737); ?> (FPE when parsing a tag format).</li>
+  <li><?php bugfix(73737); ?> (FPE when parsing a tag format). (CVE-2016-10158)</li>
 </ul></li>
 <li>GD:
 <ul>
