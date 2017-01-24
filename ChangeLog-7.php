@@ -18,8 +18,8 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
   <li><?php bugfix(73753); ?> (unserialized array pointer not advancing).</li>
   <li><?php bugfix(73825); ?> (Heap out of bounds read on unserialize in finish_nested_data()). (CVE-2016-10161)</li>
   <li><?php bugfix(73831); ?> (NULL Pointer Dereference while unserialize php object). (CVE-2016-10162)</li>
-  <li><?php bugfix(73832); ?> (Use of uninitialized memory in unserialize()).</li>
-  <li><?php bugfix(73092); ?> (Unserialize use-after-free when resizing object's properties hash table).</li>
+  <li><?php bugfix(73832); ?> (Use of uninitialized memory in unserialize()). (CVE-2017-5340)</li>
+  <li><?php bugfix(73092); ?> (Unserialize use-after-free when resizing object's properties hash table). (CVE-2016-7479)</li>
   <li><?php bugfix(69425); ?> (Use After Free in unserialize()).</li>
   <li><?php bugfix(72731); ?> (Type Confusion in Object Deserialization).</li>
 </ul></li>
@@ -116,7 +116,7 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
 		<li><?php bugfix(73783); ?> (SIG_IGN doesn't work when Zend Signals is enabled).</li>
 		<li><?php bugfix(73825); ?> (Heap out of bounds read on unserialize in finish_nested_data()). (CVE-2016-10161)</li>
 		<li><?php bugfix(73831); ?> (NULL Pointer Dereference while unserialize php object). (CVE-2016-10162)</li>
-		<li><?php bugfix(73832); ?> (Use of uninitialized memory in unserialize()).</li>
+		<li><?php bugfix(73832); ?> (Use of uninitialized memory in unserialize()). (CVE-2017-5340)</li>
 	</ul>
 	</li>
 	<li>
