@@ -37,8 +37,8 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
 </ul></li>
 <li>GD:
 <ul>
-  <li><?php bugfix(73869); ?> (Signed Integer Overflow gd_io.c).</li>
-  <li><?php bugfix(73868); ?> (DOS vulnerability in gdImageCreateFromGd2Ctx()).</li>
+  <li><?php bugfix(73869); ?> (Signed Integer Overflow gd_io.c). (CVE-2016-10168)</li>
+  <li><?php bugfix(73868); ?> (DOS vulnerability in gdImageCreateFromGd2Ctx()). (CVE-2016-10167)</li>
 </ul></li>
 <li>GMP:
 <ul>
@@ -146,8 +146,8 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
 	<li>
 	GD
 	<ul>
-		<li><?php bugfix(73869); ?> (Signed Integer Overflow gd_io.c).</li>
-		<li><?php bugfix(73868); ?> (DOS vulnerability in gdImageCreateFromGd2Ctx()).</li>
+		<li><?php bugfix(73869); ?> (Signed Integer Overflow gd_io.c). (CVE-2016-10168)</li>
+		<li><?php bugfix(73868); ?> (DOS vulnerability in gdImageCreateFromGd2Ctx()). (CVE-2016-10167)</li>
 	</ul>
 	</li>
 	<li>

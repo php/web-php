@@ -18,8 +18,8 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 <li>GD:
 <ul>
   <li><?php bugfix(73549); ?> (Use after free when stream is passed to imagepng).</li>
-  <li><?php bugfix(73868); ?> (DOS vulnerability in gdImageCreateFromGd2Ctx()).</li>
-  <li><?php bugfix(73869); ?> (Signed Integer Overflow gd_io.c).</li>
+  <li><?php bugfix(73868); ?> (DOS vulnerability in gdImageCreateFromGd2Ctx()). (CVE-2016-10167)</li>
+  <li><?php bugfix(73869); ?> (Signed Integer Overflow gd_io.c). (CVE-2016-10168)</li>
 </ul></li>
 <li>Intl:
 <ul>
