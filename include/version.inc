@@ -56,7 +56,7 @@ $PHP_5_6_RC = false; // Current RC version (e.g., '5.6.7RC1') or false
 $PHP_5_6_RC_DATE = "05 Jan 2017";
 
 $PHP_5_6_VERSION         = "5.6.30";
-$PHP_5_6_DATE            = "19 Dec 2017";
+$PHP_5_6_DATE            = "19 Jan 2017";
 $PHP_5_6_MD5     = array(
                        "tar.bz2"       => "67566191957b5fcac8567a5a9bbdced7",
                        "tar.gz"        => "8c7ef86c259abad33f213405a35a13c2",
