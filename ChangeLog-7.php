@@ -7,6 +7,115 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
 
 <h1>PHP 7 ChangeLog</h1>
 
+<section class="version" id="7.1.2"><!-- {{{ 7.1.2 -->
+<h3>Version 7.1.2</h3>
+<b><?php release_date('16-Feb-2017'); ?></b>
+<ul><li>Core:
+<ul>
+  <li>Improved GENERATOR_CREATE opcode handler.</li>
+  <li><?php bugfix(73877); ?> (readlink() returns garbage for UTF-8 paths).</li>
+  <li><?php bugfix(73876); ?> (Crash when exporting **= in expansion of assign op).</li>
+  <li><?php bugfix(73962); ?> (bug with symlink related to cyrillic directory).</li>
+  <li><?php bugfix(73969); ?> (segfault in debug_print_backtrace).</li>
+  <li><?php bugfix(73994); ?> (arginfo incorrect for unpack).</li>
+  <li><?php bugfix(73973); ?> (assertion error in debug_zval_dump).</li>
+</ul></li>
+<li>DOM:
+<ul>
+  <li><?php bugfix(54382); ?> (getAttributeNodeNS doesn't get xmlns* attributes).</li>
+</ul></li>
+<li>DTrace:
+<ul>
+  <li><?php bugfix(73965); ?> (DTrace reported as enabled when disabled).</li>
+</ul></li>
+<li>FCGI:
+<ul>
+  <li><?php bugfix(73904); ?> (php-cgi fails to load -c specified php.ini file).</li>
+  <li><?php bugfix(72898); ?> (PHP_FCGI_CHILDREN is not included in phpinfo()).</li>
+</ul></li>
+<li>FPM:
+<ul>
+  <li><?php bugfix(69865); ?> (php-fpm does not close stderr when using syslog).</li>
+</ul></li>
+<li>GD:
+<ul>
+  <li><?php bugfix(73968); ?> (Premature failing of XBM reading).</li>
+</ul></li>
+<li>GMP:
+<ul>
+  <li><?php bugfix(69993); ?> (test for gmp.h needs to test machine includes).</li>
+</ul></li>
+<li>Hash:
+<ul>
+  <li>Added hash_hkdf() function.</li>
+  <li><?php bugfix(73961); ?> (environmental build dependency in hash sha3 source).</li>
+</ul></li>
+<li>Intl:
+<ul>
+  <li>Fix bug #73956 (Link use CC instead of CXX).</li>
+</ul></li>
+<li>LDAP:
+<ul>
+  <li><?php bugfix(73933); ?> (error/segfault with ldap_mod_replace and opcache).</li>
+</ul></li>
+<li>MySQLi:
+<ul>
+  <li><?php bugfix(73949); ?> (leak in mysqli_fetch_object).</li>
+</ul></li>
+<li>Mysqlnd:
+<ul>
+  <li><?php bugfix(69899); ?> (segfault on close() after free_result() with mysqlnd).</li>
+</ul></li>
+<li>Opcache:
+<ul>
+  <li><?php bugfix(73983); ?> (crash on finish work with phar in cli + opcache).</li>
+</ul></li>
+<li>OpenSSL:
+<ul>
+  <li><?php bugfix(71519); ?> (add serial hex to return value array).</li>
+  <li><?php bugfix(73692); ?> (Compile ext/openssl with openssl 1.1.0 on Win).</li>
+  <li><?php bugfix(73978); ?> (openssl_decrypt triggers bug in PDO).</li>
+</ul></li>
+<li>PDO_Firebird:
+<ul>
+  <li>Implemented FR <?php bugl(72583); ?> (All data are fetched as strings).</li>
+</ul></li>
+<li>PDO_PgSQL:
+<ul>
+  <li><?php bugfix(73959); ?> (lastInsertId fails to throw an exception for wrong sequence name).</li>
+</ul></li>
+<li>Phar:
+<ul>
+  <li><?php bugfix(70417); ?> (PharData::compress() doesn't close temp file).</li>
+</ul></li>
+<li>posix:
+<ul>
+  <li><?php bugfix(71219); ?> (configure script incorrectly checks for ttyname_r).</li>
+</ul></li>
+<li>Session:
+<ul>
+  <li><?php bugfix(69582); ?> (session not readable by root in CLI).</li>
+</ul></li>
+<li>SPL:
+<ul>
+  <li><?php bugfix(73896); ?> (spl_autoload() crashes when calls magic _call()).</li>
+</ul></li>
+<li>Standard:
+<ul>
+  <li><?php bugfix(69442); ?> (closing of fd incorrect when PTS enabled).</li>
+  <li><?php bugfix(47021); ?> (SoapClient stumbles over WSDL delivered with "Transfer-Encoding: chunked").</li>
+  <li><?php bugfix(72974); ?> (imap is undefined service on AIX).</li>
+  <li><?php bugfix(72979); ?> (money_format stores wrong length AIX).</li>
+  <li><?php bugfix(73374); ?> (intval() with base 0 should detect binary).</li>
+  <li><?php bugfix(69061); ?> (mail.log = syslog contains double information).</li>
+</ul></li>
+<li>ZIP:
+<ul>
+  <li><?php bugfix(70103); ?> (ZipArchive::addGlob ignores remove_all_path option).</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
 <section class="version" id="7.0.16"><!-- {{{ 7.0.16 -->
 <h3>Version 7.0.16</h3>
 <b><?php release_date('16-Feb-2017'); ?></b>
