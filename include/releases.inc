@@ -1,8 +1,43 @@
 <?php
 $OLDRELEASES = array (
   7 => 
-
   array (
+	'7.1.1' => 
+    array (
+      'announcement' => 
+      array (
+        'English' => '/releases/7_1_1.php',
+      ),
+      'source' => 
+      array (
+        0 => 
+        array (
+          'filename' => 'php-7.1.1.tar.bz2',
+          'name' => 'PHP 7.1.1 (tar.bz2)',
+          'md5' => 'cd5b7dfc4bcf99fe11cae7917e9453e1',
+          'sha256' => 'd791d39d7b54ec42441a05a5f06d68a495647d843210e3ae4f2c6adb99c675bc',
+          'date' => '19 Jan 2017',
+        ),
+        1 => 
+        array (
+          'filename' => 'php-7.1.1.tar.gz',
+          'name' => 'PHP 7.1.1 (tar.gz)',
+          'md5' => '7c565ddf31d69dbc19027e51b6968b79',
+          'sha256' => 'c136279d539c3c2c25176bf149c14913670e79bb27ee6b73e1cd69003985a70d',
+          'date' => '19 Jan 2017',
+        ),
+        2 => 
+        array (
+          'filename' => 'php-7.1.1.tar.xz',
+          'name' => 'PHP 7.1.1 (tar.xz)',
+          'md5' => '65eef256f6e7104a05361939f5e23ada',
+          'sha256' => 'b3565b0c1441064eba204821608df1ec7367abff881286898d900c2c2a5ffe70',
+          'date' => '19 Jan 2017',
+        ),
+      ),
+      'date' => '19 Jan 2017',
+      'museum' => false,
+    ),
     '7.0.15' => 
     array (
       'announcement' => 
