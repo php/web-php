@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom" xmlns:default="http://php.net/ns/news">
+  <title>PHP Unicorn Conference (Online)</title>
+  <id>http://php.net/archive/2017.php#id2017-03-15-1</id>
+  <published>2017-03-15T02:45:21+00:00</published>
+  <updated>2017-03-15T02:45:21+00:00</updated>
+  <default:finalTeaserDate xmlns="http://php.net/ns/news">2017-04-19</default:finalTeaserDate>
+  <category term="conferences" label="Conference announcement"/>
+  <link href="http://php.net/conferences/index.php#id2017-03-15-1" rel="alternate" type="text/html"/>
+  <default:newsImage xmlns="http://php.net/ns/news" link="http://www.phpunicorn.com" title="PHP Unicorn Conference Logo">phpunicorn-logo-250x250.png</default:newsImage>
+  <link href="http://www.phpunicorn.com" rel="via" type="text/html"/>
+  <content type="xhtml">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+      <p>
+        The <a href="http://www.phpunicorn.com">PHP Unicorn Conference</a> is an online conference dedicated to the programming language PHP. You’ll see talks from some of the world’s more recognizable PHP experts; speaking talent so rare, we call them Unicorns.
+      </p>
+      <p>
+        It is true there are many great PHP conferences happening around the world and you should go to as many as can, but if you have a hard time getting to one or can’t spare the time, why not let the conference come to you? The PHP Unicorn Conference comes streaming right to your computer, wherever in the world you might be.
+      </p>
+      <p>
+        So, join us online on May 4, 2017 for an all-day, can’t miss PHP event and hang out with some PHP Unicorns!!!
+      </p>
+      <p>
+        <a href="https://www.papercall.io/phpunicorn">Call for Papers</a> closes March 26th, 2017. The PHP Unicorn Conference offers speaker compensation of $500 USD per speaker. To submit a talk, please visit: <a href="https://www.papercall.io/phpunicorn">https://www.papercall.io/phpunicorn</a>.
+      </p>
+
+    </div>
+  </content>
+</entry>
