@@ -8,7 +8,7 @@
   <category term="conferences" label="Conference announcement"/>
   <category term="cfp" label="Call for Papers"/>
   <link href="http://php.net/conferences/index.php#id2017-02-21-1" rel="alternate" type="text/html"/>
-  <default:newsImage xmlns="http://php.net/ns/news" link="https://cakefest.org" title="CakeFest 2017">cakefest-2017.jpg</default:newsImage>
+  <default:newsImage xmlns="http://php.net/ns/news" link="https://cakefest.org" title="CakeFest 2017">cakefest-2017.png</default:newsImage>
   <link href="https://cakefest.org" rel="via" type="text/html"/>
   <content type="xhtml">
     <div xmlns="http://www.w3.org/1999/xhtml">
