@@ -18,20 +18,20 @@
  */
 
 /* PHP 7.1 Release */
-$PHP_7_1_RC = "7.1.3RC1"; // Current RC version (e.g., '5.6.7RC1') or false
+$PHP_7_1_RC = false; // Current RC version (e.g., '5.6.7RC1') or false
 $PHP_7_1_RC_DATE = "02 Mar 2017";
 
-$PHP_7_1_VERSION         = "7.1.2";
-$PHP_7_1_DATE            = "16 Feb 2017";
+$PHP_7_1_VERSION         = "7.1.3";
+$PHP_7_1_DATE            = "16 Mar 2017";
 $PHP_7_1_MD5     = array(
-    "tar.bz2"       => "ec1d51abaea07e4a84f9dca856a0fa81",
-    "tar.gz"        => "2d1553f3f912b1cb7b9a5ee63230454d",
-    "tar.xz"        => "d79afea1870277c86fac903566fb6c5d",
+    "tar.bz2"       => "1306085cf74ba682dbcbfb4dff67b650",
+    "tar.gz"        => "d3294c06b207ee23126210f8276032bb",
+    "tar.xz"        => "d604d688be17f4a05b99dbb7fb9581f4",
 );
 $PHP_7_1_SHA256     = array(
-    "tar.bz2"       => "e0f2214e2366434ee231156ba70cfefd0c59790f050d8727a3f1dc2affa67004",
-    "tar.gz"        => "e6773217c9c719ca22abb104ae3d437d53daceaf31faf2e5eeb1f9f5028005d8",
-    "tar.xz"        => "d815a0c39fd57bab1434a77ff0610fb507c22f790c66cd6f26e27030c4b3e971",
+    "tar.bz2"       => "c145924d91b7a253eccc31f8d22f15b61589cd24d78105e56240c1bb6413b94f",
+    "tar.gz"        => "4bfadd0012b966eced448497272150ffeede13136a961aacb9e71553b8e929ec",
+    "tar.xz"        => "e4887c2634778e37fd962fbdf5c4a7d32cd708482fe07b448804625570cb0bb0",
 );
 
 /* PHP 7.0 Release */
