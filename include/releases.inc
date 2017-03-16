@@ -2,6 +2,42 @@
 $OLDRELEASES = array (
   7 => 
   array (
+    '7.0.16' => 
+    array (
+      'announcement' => 
+      array (
+        'English' => '/releases/7_0_16.php',
+      ),
+      'source' => 
+      array (
+        0 => 
+        array (
+          'filename' => 'php-7.0.16.tar.bz2',
+          'name' => 'PHP 7.0.16 (tar.bz2)',
+          'md5' => 'ef8efd33842f1b2e6ea60bb54b418a6e',
+          'sha256' => '83c5f57575dc0feca563af529d6f1d60183bf9c2c13e98a6da131fbd0a3597ab',
+          'date' => '16 Feb 2017',
+        ),
+        1 => 
+        array (
+          'filename' => 'php-7.0.16.tar.gz',
+          'name' => 'PHP 7.0.16 (tar.gz)',
+          'md5' => '1ea52de602608a54527698908019fff3',
+          'sha256' => 'bc6709dc7612957d0533c09c9c8a9c2e7c4fd9d64e697707bb1b39670eab61d4',
+          'date' => '16 Feb 2017',
+        ),
+        2 => 
+        array (
+          'filename' => 'php-7.0.16.tar.xz',
+          'name' => 'PHP 7.0.16 (tar.xz)',
+          'md5' => '6161aba9d24322d889da5d2ff944bddf',
+          'sha256' => '244ac39bc657448962860aa7a590e4417f68513ad5e86ee2727b1328b0537309',
+          'date' => '16 Feb 2017',
+        ),
+      ),
+      'date' => '16 Feb 2017',
+      'museum' => false,
+    ),
 	'7.1.1' => 
     array (
       'announcement' => 

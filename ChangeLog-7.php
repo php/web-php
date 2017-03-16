@@ -7,6 +7,72 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
 
 <h1>PHP 7 ChangeLog</h1>
 
+<section class="version" id="7.0.17"><!-- {{{ 7.0.17 -->
+<h3>Version 7.0.17</h3>
+<b><?php release_date('16-Mar-2017'); ?></b>
+<ul><li>Core:
+<ul>
+  <li><?php bugfix(73989); ?> (PHP 7.1 Segfaults within Symfony test suite).</li>
+  <li><?php bugfix(74084); ?> (Out of bound read - zend_mm_alloc_small).</li>
+  <li><?php bugfix(73807); ?> (Performance problem with processing large post request).</li>
+  <li><?php bugfix(73998); ?> (array_key_exists fails on arrays created by get_object_vars).</li>
+  <li><?php bugfix(73954); ?> (NAN check fails on Alpine Linux with musl).</li>
+  <li><?php bugfix(74039); ?> (is_infinite(-INF) returns false).</li>
+  <li><?php bugfix(73677); ?> (Generating phar.phar core dump with gcc ASAN enabled build).</li>
+</ul></li>
+<li>Apache:
+<ul>
+  <li><?php bugfix(61471); ?> (Incomplete POST does not timeout but is passed to PHP).</li>
+</ul></li>
+<li>Date:
+<ul>
+  <li><?php bugfix(72719); ?> (Relative datetime format ignores weekday on sundays only).</li>
+  <li><?php bugfix(73294); ?> (DateTime wrong when date string is negative).</li>
+  <li><?php bugfix(73489); ?> (wrong timestamp when call setTimeZone multi times with UTC offset).</li>
+  <li><?php bugfix(73858); ?> (first/last day of' flag is not being reset).</li>
+  <li><?php bugfix(73942); ?> ($date-&gt;modify('Friday this week') doesn't return a Friday if $date is a Sunday).</li>
+  <li><?php bugfix(74057); ?> (wrong day when using "this week" in strtotime).</li>
+</ul></li>
+<li>FPM:
+<ul>
+  <li><?php bugfix(69860); ?> (php-fpm process accounting is broken with keepalive).</li>
+</ul></li>
+<li>Hash:
+<ul>
+  <li><?php bugfix(73127); ?> (gost-crypto hash incorrect if input data contains long 0xFF sequence).</li>
+</ul></li>
+<li>GD:
+<ul>
+  <li><?php bugfix(74031); ?> (ReflectionFunction for imagepng is missing last two parameters).</li>
+</ul></li>
+<li>Mysqlnd:
+<ul>
+  <li><?php bugfix(74021); ?> (fetch_array broken data. Data more then MEDIUMBLOB).</li>
+</ul></li>
+<li>Opcache:
+<ul>
+  <li><?php bugfix(74152); ?> (if statement says true to a null variable).</li>
+  <li><?php bugfix(74019); ?> (Segfault with list).</li>
+</ul></li>
+<li>OpenSSL:
+<ul>
+  <li><?php bugfix(74022); ?> (PHP Fast CGI crashes when reading from a pfx file).</li>
+</ul></li>
+<li>Standard:
+<ul>
+  <li><?php bugfix(74148); ?> (ReflectionFunction incorrectly reports the number of arguments).</li>
+  <li><?php bugfix(74005); ?> (mail.add_x_header causes RFC-breaking lone line feed).</li>
+  <li><?php bugfix(73118); ?> (is_callable callable name reports misleading value for anonymous classes).</li>
+  <li><?php bugfix(74105); ?> (PHP on Linux should use /dev/urandom when getrandom is not available).</li>
+</ul></li>
+<li>Streams:
+<ul>
+  <li><?php bugfix(73496); ?> (Invalid memory access in zend_inline_hash_func).</li>
+  <li><?php bugfix(74090); ?> (stream_get_contents maxlength&gt;-1 returns empty string).</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
 <section class="version" id="7.1.2"><!-- {{{ 7.1.2 -->
 <h3>Version 7.1.2</h3>
 <b><?php release_date('16-Feb-2017'); ?></b>
