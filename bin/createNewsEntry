@@ -49,7 +49,7 @@ $categories = array(
 	array("frontpage"   => "PHP.net frontpage news"),
 	array("releases"    => "New PHP release"),
 	array("conferences" => "Conference announcement"),
-	array("cfp"         => "Call for Papers"),
+	array("cfp      "   => "Call for Papers"),
 );
 $confs = array(2, 3);
 
@@ -61,11 +61,18 @@ do {
 	fwrite(STDOUT, "Please select appropriate categories, seperated with space: ");
 
 	$cat = explode(" ", rtrim(fgets(STDIN)));
+	$cat = array_intersect(array_keys(array_values($categories)), $cat);
 
-	if ($cat) {
+	$intersect = array_intersect(array(2,3), $cat);
+	if ($cat && (count($intersect) < 2)) {
 		break;
 	}
-	fwrite(STDERR, "You have to pick at least one category\n");
+
+	if (count($intersect) == 2) {
+		fwrite(STDERR, "Pick either a CfP OR a conference\n");
+	} else {
+		fwrite(STDERR, "You have to pick at least one category\n");
+	}
 } while(1);
 
 
