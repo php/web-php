@@ -76,14 +76,91 @@ function random_bgcolor($min, $max)
    <a href="http://php.net/images/logos/new-php-logo.svg">SVG</a> |
    <a href="http://php.net/images/logos/new-php-logo.png">PNG</a>
   </div>
+</div>
+
+<h2>Alternative logo</h2>
+
+<p>
+ Levi Morrison created this alternative version without background to use on PHP Site.
+</p>
+
+<div class="logo-list row">
   <div class="col center">
-   <img src="/images/logos/php-logo-bigger.png" width="150" alt="php logo without background">
-   <br>
-   Without Background
+   <img src="/images/logos/php-logo-bigger.png" width="150" alt="alternative php logo without background">
    <br>
    <a href="http://php.net/images/logos/php-logo.svg">SVG</a> |
    <a href="http://php.net/images/logos/php-logo-bigger.png">PNG</a>
   </div>
+</div>
+
+<h2>Old formats</h2>
+
+<p>
+ Disclaimer: Using these formats is not recommended.
+</p>
+
+<div class="logo-list row">
+
+  <div class="col center">
+   <img src="/images/logos/php-med-trans-light.gif">
+   <br>
+   <a href="http://php.net/images/logos/php-logo.eps">EPS</a> |
+   <a href="http://php.net/images/logos/php-logo.ai">AI (Adobe Illustrator)</a> |
+   <a href="http://php.net/images/logos/php-big.tif">TIF</a> |
+   <a href="http://php.net/images/logos/php-med-trans.png">PNG</a> |
+   <a href="http://php.net/images/logos/php-med-trans-light.gif">GIF</a>
+  </div>
+
+  <div class="col center">
+   <div>
+    <img src="/images/logos/php-power-white.png">
+   </div>
+   <br>
+   "Powered by PHP"
+   <br>
+   <a href="http://php.net/images/logos/php-power-white.png">PNG</a>
+  </div>
+
+  <div class="col center">
+   <div>
+    <img src="/images/logos/php-power-micro.png">
+    <img src="/images/logos/php-power-micro2.png">
+    <img src="/images/logos/php5-power-micro.png">
+   </div>
+   <br>
+   "Powered by PHP"
+   <br>
+   <a href="http://php.net/images/logos/php-power-micro.png">PNG 1</a> |
+   <a href="http://php.net/images/logos/php-power-micro2.png">PNG 2</a> |
+   <a href="http://php.net/images/logos/php5-power-micro.png">PNG 3</a>
+  </div>
+
+  <div class="col center">
+   <div>
+    <img src="/images/logos/php-icon.png">
+   </div>
+   <br>
+   32 x 32 pixels
+   <br>
+   <a href="http://php.net/images/logos/php-icon.png">PNG</a> |
+   <a href="http://php.net/images/logos/php-icon-white.gif">GIF</a> |
+   <a href="http://php.net/images/logos/php.ico">ICO</a>
+  </div>
+
+  <div class="col center">
+   <div>
+    <img src="/images/logos/php_file_ico.gif">
+    <img src="/images/logos/php_script_ico.png">
+    <img src="/images/logos/php_xpstyle_ico.gif">
+   </div>
+   <br>
+   Icon resource for Windows
+   <br>
+   <a href="http://php.net/images/logos/php_file.ico">ICO 1</a>
+   <a href="http://php.net/images/logos/php_script.ico">ICO 2</a>
+   <a href="http://php.net/images/logos/php_xpstyle.ico">ICO 3</a>
+  </div>
+
 </div>
 
 <?php site_footer();
