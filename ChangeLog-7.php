@@ -6,6 +6,36 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
 ?>
 
 <h1>PHP 7 ChangeLog</h1>
+<section class="version" id="7.1.4"><!-- {{{ 7.1.4 -->
+<h3>Version 7.1.4</h3>
+<b><?php release_date('13-Apr-2017'); ?></b>
+<ul><li>Core:
+<ul>
+  <li><?php bugfix(74149); ?> (static embed SAPI linkage error).</li>
+  <li><?php bugfix(73370); ?> (falsely exits with "Out of Memory" when using USE_ZEND_ALLOC=0).</li>
+  <li><?php bugfix(73960); ?> (Leak with instance method calling static method with referenced return).</li>
+  <li><?php bugfix(69676); ?> (Resolution of self::FOO in class constants not correct).</li>
+  <li><?php bugfix(74265); ?> (Build problems after 7.0.17 release: undefined reference to `isfinite').</li>
+  <li><?php bugfix(74302); ?> (yield fromLABEL is over-greedy).</li>
+</ul></li>
+<li>Apache:
+<ul>
+  <li>Reverted patch for bug #61471, fixes bug #74318.</li>
+</ul></li>
+<li>Date:
+<ul>
+  <li><?php bugfix(72096); ?> (Swatch time value incorrect for dates before 1970).</li>
+</ul></li>
+<li>DOM:
+<ul>
+  <li><?php bugfix(74004); ?> (LIBXML_NOWARNING flag ingnored on loadHTML*).</li>
+</ul></li>
+<li>iconv:
+<ul>
+  <li><?php bugfix(74230); ?> (iconv fails to fail on surrogates).</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
 
 <section class="version" id="7.0.18"><!-- {{{ 7.0.18 -->
 <h3>Version 7.0.18</h3>
