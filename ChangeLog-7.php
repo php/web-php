@@ -34,6 +34,34 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
 <ul>
   <li><?php bugfix(74230); ?> (iconv fails to fail on surrogates).</li>
 </ul></li>
+<li>Opcache:
+<ul>
+  <li><?php bugfix(74250); ?> (OPcache compilation performance regression in PHP 5.6/7 with huge classes).</li>
+</ul></li>
+<li>OpenSSL:
+<ul>
+  <li><?php bugfix(72333); ?> (fwrite() on non-blocking SSL sockets doesn't work).</li>
+</ul></li>
+<li>PDO MySQL:
+<ul>
+  <li><?php bugfix(71003); ?> (Expose MYSQLI_CLIENT_SSL_DONT_VERIFY_SERVER_CERT to PDO interface).</li>
+</ul></li>
+<li>SPL:
+<ul>
+  <li><?php bugfix(74058); ?> (ArrayObject can not notice changes).</li>
+</ul></li>
+<li>SQLite:
+<ul>
+  <li><?php bugfix(74217); ?> (Allow creation of deterministic sqlite functions).</li>
+</ul></li>
+<li>Streams:
+<ul>
+  <li><?php bugfix(74216); ?> (Correctly fail on invalid IP address ports).</li>
+</ul></li>
+<li>zlib:
+<ul>
+  <li><?php bugfix(74240); ?> (deflate_add can allocate too much memory).</li>
+</ul></li>
 </ul>
 <!-- }}} --></section>
 
