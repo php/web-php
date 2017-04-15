@@ -49,7 +49,7 @@ $categories = array(
 	array("frontpage"   => "PHP.net frontpage news"),
 	array("releases"    => "New PHP release"),
 	array("conferences" => "Conference announcement"),
-	array("cfp      "   => "Call for Papers"),
+	array("cfp"   => "Call for Papers"),
 );
 $confs = array(2, 3);
 
