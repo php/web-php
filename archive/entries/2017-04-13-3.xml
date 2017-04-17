@@ -5,7 +5,7 @@
   <published>2017-04-13T15:58:29-04:00</published>
   <updated>2017-04-13T15:58:29-04:00</updated>
   <default:finalTeaserDate xmlns="http://php.net/ns/news">2017-05-08</default:finalTeaserDate>
-  <category term="cfp      " label="Call for Papers"/>
+  <category term="cfp" label="Call for Papers"/>
   <link href="http://php.net/conferences/index.php#id2017-04-13-3" rel="alternate" type="text/html"/>
   <default:newsImage xmlns="http://php.net/ns/news" link="https://confoo.ca/en/yvr2017/call-for-papers" title="ConFoo Vancouver 2017">confoo-yvr2017.png</default:newsImage>
   <link href="https://confoo.ca/en/yvr2017/call-for-papers" rel="via" type="text/html"/>
