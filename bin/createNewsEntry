@@ -49,14 +49,14 @@ $categories = array(
 	array("frontpage"   => "PHP.net frontpage news"),
 	array("releases"    => "New PHP release"),
 	array("conferences" => "Conference announcement"),
-	array("cfp      "   => "Call for Papers"),
+	array("cfp"   => "Call for Papers"),
 );
 $confs = array(2, 3);
 
 do {
 	fwrite(STDOUT, "Categories:\n");
 	foreach($categories as $n => $category) {
-		fprintf(STDOUT, "\t%d: %s\t [%s]\n", $n, key($category), current($category));
+		fprintf(STDOUT, "\t%d: %-11s\t [%s]\n", $n, key($category), current($category));
 	}
 	fwrite(STDOUT, "Please select appropriate categories, seperated with space: ");
 
