@@ -5,6 +5,12 @@ $GPG_KEYS = array(
       Key fingerprint = D620 173D 6924 BA1C 2244  C7C4 1B6B 6676 22FE 5A12
 uid                  Kalle Sommer Nielsen (PHP) &lt;kalle@php.net&gt;
 */
+    "7.2" => <<< GPG
+pub   4096R/70D12172 2017-04-14
+      Key fingerprint = 1729 F839 38DA 44E2 7BA0  F4D3 DBDB 3974 70D1 2172
+uid                  Sara Golemon <pollita@php.net>
+GPG
+,
     "7.1" => <<< GPG
 pub   4096R/7BD5DCD0 2016-05-07
       Key fingerprint = A917 B1EC DA84 AEC2 B568 FED6 F50A BC80 7BD5 DCD0
