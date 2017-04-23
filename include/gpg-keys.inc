@@ -8,7 +8,7 @@ uid                  Kalle Sommer Nielsen (PHP) &lt;kalle@php.net&gt;
     "7.2" => <<< GPG
 pub   4096R/70D12172 2017-04-14
       Key fingerprint = 1729 F839 38DA 44E2 7BA0  F4D3 DBDB 3974 70D1 2172
-uid                  Sara Golemon <pollita@php.net>
+uid                  Sara Golemon &lt;pollita@php.net&gt;
 GPG
 ,
     "7.1" => <<< GPG
