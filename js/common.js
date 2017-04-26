@@ -408,7 +408,7 @@ $(document).ready(function() {
     {
       var id = $(this).text().replace(/^[&$]{0,2}/g, '');
       var offsetTop = $('.parameters, .options').find('.parameter').filter(function() {
-          return $(this).text() === id;
+          return $(this).text() === id; // https://bugs.php.net/bug.php?id=74493
       }).offset().top - 52;
       $.scrollTo({top: offsetTop, left: 0}, 400);
     });
