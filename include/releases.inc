@@ -2,6 +2,42 @@
 $OLDRELEASES = array (
   7 => 
   array (
+    '7.0.18' => 
+    array (
+      'announcement' => 
+      array (
+        'English' => '/releases/7_0_18.php',
+      ),
+      'source' => 
+      array (
+        0 => 
+        array (
+          'filename' => 'php-7.0.18.tar.bz2',
+          'name' => 'PHP 7.0.18 (tar.bz2)',
+          'md5' => 'f3b3934799c18614b0775ddd0d602a4d',
+          'sha256' => 'b20cc63d507032b39d8bb14cb64784e460b0e47997e90a8704b703bcbb233fd1',
+          'date' => '13 Apr 2017',
+        ),
+        1 => 
+        array (
+          'filename' => 'php-7.0.18.tar.gz',
+          'name' => 'PHP 7.0.18 (tar.gz)',
+          'md5' => '6417a761ceab0c2a96f60d66d4fdc75e',
+          'sha256' => 'e0fb336749d72e6c9cfcebb9b48497f004fa99f93b68c21cb3eb657053665e1d',
+          'date' => '13 Apr 2017',
+        ),
+        2 => 
+        array (
+          'filename' => 'php-7.0.18.tar.xz',
+          'name' => 'PHP 7.0.18 (tar.xz)',
+          'md5' => 'a578c55644d233635d2caa96c3a6f9c7',
+          'sha256' => '679cffcdf2495dee5ab89bda595e678a1096136678b3a1d08f1f57ba347c234d',
+          'date' => '13 Apr 2017',
+        ),
+      ),
+      'date' => '13 Apr 2017',
+      'museum' => false,
+    ),
     '7.1.3' => 
     array (
       'announcement' => 
