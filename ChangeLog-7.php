@@ -7,6 +7,79 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
 
 <h1>PHP 7 ChangeLog</h1>
 
+<section class="version" id="7.1.5"><!-- {{{ 7.1.5 -->
+<h3>Version 7.1.5</h3>
+<b><?php release_date('11-May-2017'); ?></b>
+<ul><li>Core:
+<ul>
+  <li><?php bugfix(74408); ?> (Endless loop bypassing execution time limit).</li>
+  <li><?php bugfix(74353); ?> (Segfault when killing within bash script trap code).</li>
+  <li><?php bugfix(74340); ?> (Magic function __get has different behavior in php 7.1.x).</li>
+  <li><?php bugfix(74188); ?> (Null coalescing operator fails for undeclared static class properties).</li>
+  <li><?php bugfix(74444); ?> (multiple catch freezes in some cases).</li>
+  <li><?php bugfix(74410); ?> (stream_select() is broken on Windows Nanoserver).</li>
+  <li><?php bugfix(74337); ?> (php-cgi.exe crash on facebook callback).</li>
+</ul></li>
+<li>Date:
+<ul>
+  <li><?php bugfix(74404); ?> (Wrong reflection on DateTimeZone::getTransitions).</li>
+  <li><?php bugfix(74080); ?> (add constant for RFC7231 format datetime).</li>
+</ul></li>
+<li>DOM:
+<ul>
+  <li><?php bugfix(74416); ?> (Wrong reflection on DOMNode::cloneNode).</li>
+</ul></li>
+<li>Fileinfo:
+<ul>
+  <li><?php bugfix(74379); ?> (syntax error compile error in libmagic/apprentice.c).</li>
+</ul></li>
+<li>GD:
+<ul>
+  <li><?php bugfix(74343); ?> (compile fails on solaris 11 with system gd2 library).</li>
+</ul></li>
+<li>MySQLnd:
+<ul>
+  <li><?php bugfix(74376); ?> (Invalid free of persistent results on error/connection loss).</li>
+</ul></li>
+<li>Intl:
+<ul>
+  <li><?php bugfix(65683); ?> (Intl does not support DateTimeImmutable).</li>
+  <li><?php bugfix(74298); ?> (IntlDateFormatter-&gt;format() doesn't return microseconds/fractions).</li>
+  <li><?php bugfix(74433); ?> (wrong reflection for Normalizer methods).</li>
+  <li><?php bugfix(74439); ?> (wrong reflection for Locale methods).</li>
+</ul></li>
+<li>Opcache:
+<ul>
+  <li><?php bugfix(74456); ?> (Segmentation error while running a script in CLI mode).</li>
+  <li><?php bugfix(74431); ?> (foreach infinite loop).</li>
+  <li><?php bugfix(74442); ?> (Opcached version produces a nested array).</li>
+</ul></li>
+<li>OpenSSL:
+<ul>
+  <li><?php bugfix(73833); ?> (null character not allowed in openssl_pkey_get_private).</li>
+  <li><?php bugfix(73711); ?> (Segfault in openssl_pkey_new when generating DSA or DH key).</li>
+  <li><?php bugfix(74341); ?> (openssl_x509_parse fails to parse ASN.1 UTCTime without seconds).</li>
+</ul></li>
+<li>phar:
+<ul>
+  <li><?php bugfix(74383); ?> (phar method parameters reflection correction).</li>
+</ul></li>
+<li>Readline:
+<ul>
+  <li><?php bugfix(74489); ?> (readline() immediately returns false in interactive console mode).</li>
+</ul></li>
+<li>Standard:
+<ul>
+  <li><?php bugfix(72071); ?> (setcookie allows max-age to be negative).</li>
+  <li><?php bugfix(74361); ?> (Compaction in array_rand() violates COW).</li>
+</ul></li>
+<li>Streams:
+<ul>
+  <li><?php bugfix(74429); ?> (Remote socket URI with unique persistence identifier broken).</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
 <section class="version" id="7.0.19"><!-- {{{ 7.0.19 -->
 <h3>Version 7.0.19</h3>
 <b><?php release_date('11-May-2017'); ?></b>

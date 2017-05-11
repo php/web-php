@@ -2,6 +2,42 @@
 $OLDRELEASES = array (
   7 => 
   array (
+    '7.1.4' => 
+    array (
+      'announcement' => 
+      array (
+        'English' => '/releases/7_1_4.php',
+      ),
+      'source' => 
+      array (
+        0 => 
+        array (
+          'filename' => 'php-7.1.4.tar.bz2',
+          'name' => 'PHP 7.1.4 (tar.bz2)',
+          'md5' => '1ecde862aa4fad6b66f3fd2f6b386a1e',
+          'sha256' => '39bf697836e2760b3a44ea322e9e5f1f5b1f07abeb0111f6495eff7538e25805',
+          'date' => '13 Apr 2017',
+        ),
+        1 => 
+        array (
+          'filename' => 'php-7.1.4.tar.gz',
+          'name' => 'PHP 7.1.4 (tar.gz)',
+          'md5' => '47e7d116553a879ff957ef2684987c23',
+          'sha256' => 'ed0006c86de503684dde04c6dd811ea2354a3b6d10ebd9f0cb103dcd28f0e70f',
+          'date' => '13 Apr 2017',
+        ),
+        2 => 
+        array (
+          'filename' => 'php-7.1.4.tar.xz',
+          'name' => 'PHP 7.1.4 (tar.xz)',
+          'md5' => 'a74c13f8779349872b365e6732e8c98e',
+          'sha256' => '71514386adf3e963df087c2044a0b3747900b8b1fc8da3a99f0a0ae9180d300b',
+          'date' => '13 Apr 2017',
+        ),
+      ),
+      'date' => '13 Apr 2017',
+      'museum' => false,
+    ),
     '7.0.18' => 
     array (
       'announcement' => 
