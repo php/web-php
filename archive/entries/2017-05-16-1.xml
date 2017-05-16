@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom" xmlns:default="http://php.net/ns/news">
+  <title>php[world] 2017: Call for Speakers</title>
+  <id>http://php.net/archive/2017.php#id2017-05-16-1</id>
+  <published>2017-05-16T18:08:03-04:00</published>
+  <updated>2017-05-16T18:08:03-04:00</updated>
+  <default:finalTeaserDate xmlns="http://php.net/ns/news">2017-06-23</default:finalTeaserDate>
+  <category term="cfp" label="Call for Papers"/>
+  <link href="http://php.net/conferences/index.php#id2017-05-16-1" rel="alternate" type="text/html"/>
+  <default:newsImage xmlns="http://php.net/ns/news" link="https://world.phparch.com" title="php[world] 2017">phpworld.2017.web.png</default:newsImage>
+  <link href="https://world.phparch.com" rel="via" type="text/html"/>
+  <content type="xhtml">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+     <p>The teams at <a href="https://www.phparch.com">php[architect]</a> and <a href="http://www.oneforall.events" title="One for All Events">One for All Events</a> are excited to announce we have opened up our <a href="https://world.phparch.com/call-for-speakers/?paref=phpnet&amp;utm_campaign=phpnet">Call for Speakers</a> for the 4th annual edition of <a href="https://world.phparch.com/?paref=phpnet&amp;utm_campaign=phpnet">php[world]</a>.</p>
+     
+          <p>This year we are refactoring php[world] into a more focused PHP conference concentrating on providing our attendees deep-dive content which teach core lessons about PHP. We also want talks covering advanced topics in applications and frameworks built in PHP (such as Drupal, WordPress, Laravel, Symfony, and Magento). We encourage submissions on technologies crucial to modern Web development such as HTML5, JavaScript, and emerging technologies. Ideas surrounding the entire software life cycle are often big hits for our attendees. Finally, we do welcome non-technical proposals that will appeal to a developer audience.</p>
+     
+          <p>This year it will be a 2-day conference with concurrent workshops, preceded by two days of training classes.  We've also updated our comprehensive speaker's package this year to simplify it; we will be offering:</p>
+     
+          <ul>
+          <li>A free conference ticket</li>
+          <li>Round-trip economy airfare booked by us</li>
+          <li>Accommodations at the conference hotel:
+          <ul>
+          <li>3 nights for speakers &amp; workshop presenters</li>
+          <li>5 nights for training class teachers</li>
+          </ul></li>
+          </ul>
+     
+          <p>Don't hesitate, the <a href="https://world.phparch.com/call-for-speakers/?paref=phpnet&amp;utm_campaign=phpnet">Call for Speakers</a> is only open until June 23rd, 2017. So get those submissions in soon, we look forward to hearing from you!</p>
+    </div>
+  </content>
+</entry>
