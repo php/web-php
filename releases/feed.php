@@ -51,6 +51,7 @@ XML;
         echo <<< XML
         <link rel="enclosure" title="{$source["name"]}" href="/get/{$source["filename"]}/from/this/mirror">
             <php:md5>{$source["md5"]}</php:md5>
+            <php:sha256>{$source["sha256"]}</php:sha256>
             <php:releaseDate>{$released}</php:releaseDate>
         </link>
 

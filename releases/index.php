@@ -182,7 +182,10 @@ function mk_rel($major, $ver, $date, $announcement, $source, $windows, $museum) 
 			if (isset($src['filename'])) {
 				download_link($src["filename"], $src["name"]); echo "<br>\n";
 				if (isset($src["md5"])) {
-					echo '<span class="md5sum">md5: ' .$src["md5"]. "</span>\n";
+					echo '<span class="md5sum">md5: ' .$src["md5"]. "</span><br>\n";
+				}
+				if (isset($src["sha256"])) {
+					echo '<span class="sha256">sha256: ' .$src["sha256"]. "</span>\n";
 				}
 			} else {
 				echo '<a href="'.$src['link'].'">'.$src['name'].'</a>';
