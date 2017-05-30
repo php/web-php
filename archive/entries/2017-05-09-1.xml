@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom" xmlns:default="http://php.net/ns/news">
+  <title>International PHP Conference 2017 Fall - Call for Papers</title>
+  <id>http://php.net/archive/2017.php#id2017-05-09-1</id>
+  <published>2017-05-09T15:44:54-04:00</published>
+  <updated>2017-05-09T15:44:54-04:00</updated>
+  <default:finalTeaserDate xmlns="http://php.net/ns/news">2017-05-09</default:finalTeaserDate>
+  <category term="cfp" label="Call for Papers"/>
+  <link href="http://php.net/conferences/index.php#id2017-05-09-1" rel="alternate" type="text/html"/>
+  <default:newsImage xmlns="http://php.net/ns/news" link="https://callforpapers.sandsmedia.com" title="International PHP Conference 2017 Fall - Call for Papers">ipc-2017-fall.png</default:newsImage>
+  <link href="https://callforpapers.sandsmedia.com" rel="via" type="text/html"/>
+  <content type="xhtml">
+    <p>While we are eagerly waiting for IPC Spring and webinale to come in later May, we are already preparing for the fall edition of IPC this year. The conference's date is October 23th to 27th and the location will be Munich again.</p>
+	<p>We are looking forward to your submissions for workshops, sessions &amp; keynotes. Please submit your proposals in English language. Please see our list below of topics which we'd love to see covered, but we are sure that you'll add also some extra stuff which is great and which we do not expect!</p>
+	<p><strong>THE BASIC FACTS</strong></p>
+	<ul>
+	  <li>Date: 23 - 27 October 2017</li>
+	  <li>Location &amp; Venue: Holiday Inn Munich City Centre</li>
+  	  <li>Deadline for submissions: June 9th 2017</li>
+	  <li>URL for submissions: <a href="https://callforpapers.sandsmedia.com">https://callforpapers.sandsmedia.com</a></li>
+	</ul>
+	<p>Please see the spectrum of topics we’d like to see covered:</p>
+	<ul>
+	<li><strong>PHP Development</strong></li>
+		<ul>
+		  <li>Core PHP/PHP 7</li>
+		  <li>PHP Frameworks</li>
+		  <li>PHP Security</li>
+		  <li>Data Stores</li>
+		</ul>
+	<li><strong>Testing &amp; Quality</strong></li>
+		<ul>
+		  <li>Scaling</li>
+		  <li>Automated Testing  Quality</li>
+		</ul>
+	<li><strong>Web Architecture</strong></li>
+		<ul>
+		  <li>Software Architecture</li>
+		  <li>Microservices</li>
+		  <li>Web APIs &amp; API Design</li>
+		  <li>RESTful Services</li>
+		</ul>
+	<li><strong>DevOps</strong></li>
+		<ul>
+		  <li>Agile Methodologies</li>
+		  <li>Continuous Delivery/Deployment</li>
+		  <li>DevOps</li>
+		</ul>
+	<li><strong>Server &amp; Deployment</strong></li>
+		<ul>
+		  <li>Cloud &amp; Infrastructure</li>
+		  <li>Docker &amp; Co.</li>
+		  <li>Analytics &amp; Monitoring</li>
+		</ul>
+	<li><strong>Web Development</strong></li>
+		<ul>
+		  <li>Performance</li>
+		  <li>Security</li>
+		  <li>JavaScript/ECMAScript</li>
+		  <li>Angular, Node.js &amp; React</li>
+		  <li>Responsive Web Design</li>
+		  <li>User Experience</li>
+		</ul>
+	</ul>
+	<p>We are looking forward to your exciting submissions! For further information on International PHP Conference’s sessions and speakers visit: <a href="https://phpconference.com">www.phpconference.com</a></p>
+  </content>
+</entry>
