@@ -48,9 +48,14 @@ XML;
         $maxtime[] = $time = strtotime($source["date"]);
         $released = date(DATE_ATOM, $time);
 
+        echo "        <link rel=\"enclosure\" title=\"{$source["name"]}\" href=\"/get/{$source["filename"]}/from/this/mirror\">\n";
+        foreach (array('md5', 'sha256') as $hashAlgo) {
+            if (isset($source[$hashAlgo])) {
+                echo "            <php:{$hashAlgo}>{$source[$hashAlgo]}</php:{$hashAlgo}>\n";
+            }
+        }
+
         echo <<< XML
-        <link rel="enclosure" title="{$source["name"]}" href="/get/{$source["filename"]}/from/this/mirror">
-            <php:md5>{$source["md5"]}</php:md5>
             <php:releaseDate>{$released}</php:releaseDate>
         </link>
 
