@@ -18,7 +18,7 @@ site_header("News Archive - 2017");
 
 <?php
 
-print_news($NEWS_ENTRIES, array("conferences", "cfp", "frontpage", "nofrontpage"), 500, 2017);
+print_news($NEWS_ENTRIES, null, 500, 2017);
 
 /* %s/<a href="\(.*\)"><img src="\/images\/news\/\(.*\)" alt="\(.*\)" width.*><\/a>/<?php news_image("\1", "\2", "\3"); ?>/g */
 site_footer(array('elephpants' => true, 'sidebar' => $SIDEBAR_DATA));
