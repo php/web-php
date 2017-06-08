@@ -7,6 +7,41 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
 
 <h1>PHP 7 ChangeLog</h1>
 
+<section class="version" id="7.0.20"><!-- {{{ 7.0.20 -->
+<h3>Version 7.0.20</h3>
+<b><?php release_date('08-Jun-2017'); ?></b>
+<ul><li>Core:
+<ul>
+  <li><?php bugfix(74600); ?> (crash (SIGSEGV) in _zend_hash_add_or_update_i).</li>
+  <li><?php bugfix(74546); ?> (SIGILL in ZEND_FETCH_CLASS_CONSTANT_SPEC_CONST_CONST).</li>
+</ul></li>
+<li>intl:
+<ul>
+  <li><?php bugfix(74468); ?> (wrong reflection on Collator::sortWithSortKeys).</li>
+</ul></li>
+<li>MySQLi:
+<ul>
+  <li><?php bugfix(74547); ?> (mysqli::change_user() doesn't accept null as $database argument w/strict_types).</li>
+</ul></li>
+<li>Opcache:
+<ul>
+  <li><?php bugfix(74596); ?> (SIGSEGV with opcache.revalidate_path enabled).</li>
+</ul></li>
+<li>phar:
+<ul>
+  <li><?php bugfix(51918); ?> (Phar::webPhar() does not handle requests sent through PUT and DELETE method).</li>
+</ul></li>
+<li>Standard:
+<ul>
+  <li><?php bugfix(74510); ?> (win32/sendmail.c anchors CC header but not BCC).</li>
+</ul></li>
+<li>xmlreader:
+<ul>
+  <li><?php bugfix(74457); ?> (Wrong reflection on XMLReader::expand).</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
 <section class="version" id="7.1.5"><!-- {{{ 7.1.5 -->
 <h3>Version 7.1.5</h3>
 <b><?php release_date('11-May-2017'); ?></b>
