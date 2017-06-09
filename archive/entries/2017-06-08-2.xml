@@ -19,7 +19,7 @@
      <p><strong>THIS IS A DEVELOPMENT PREVIEW - DO NOT USE IT IN PRODUCTION!</strong></p>
 
      <p>For information on new features and other changes, you can read the
-     <a href="github.com/php/php-src/blob/php-7.2.0alpha1/NEWS">NEWS</a> file,
+     <a href="https://github.com/php/php-src/blob/php-7.2.0alpha1/NEWS">NEWS</a> file,
      or the <a href="https://github.com/php/php-src/blob/php-7.2.0alpha1/UPGRADING">UPGRADING</a> file
      for a complete list of upgrading notes. These files can also be found in the release archive.</p>
 
