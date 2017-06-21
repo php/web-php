@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom" xmlns:default="http://php.net/ns/news">
+  <title>php Central Europe 2017: Call for Speakers</title>
+  <id>http://php.net/archive/2017.php#id2017-05-21-1</id>
+  <published>2017-06-21T06:45:03-00:00</published>
+  <updated>2017-06-21T06:45:03-00:00</updated>
+  <default:finalTeaserDate xmlns="http://php.net/ns/news">2017-07-31</default:finalTeaserDate>
+  <category term="cfp" label="Call for Papers"/>
+  <link href="http://php.net/conferences/index.php#id2017-06-21-1" rel="alternate" type="text/html"/>
+  <default:newsImage xmlns="http://php.net/ns/news" link="https://2017.phpce.eu" title="phpCE 2017">phpce-logo.png</default:newsImage>
+  <link href="https://2017.phpce.eu" rel="via" type="text/html"/>
+  <content type="xhtml">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+
+     <p>phpCE is a first edition of a community conference for PHP programmers and enthusiasts hold in weekend, November 3rd-5th, 2017. The meeting was established by merging two nation-wide events: PHPCon Poland and Brno PHP Conference.</p>
+
+     <p>It should be the biggest PHP conference in this part of Europe: over thousand people working and thinking just like you, in the same venue!<br/>We will stay in fifth largest hotel in Poland, the Ossa Cogress & Spa. It is situated in calm countryside, away from city noise, which gives a possibility to take part both in conference and active outdoor rest.</p>
+
+     <p>The unique feature of the php Central Europe Conference is three-path split of agenda, according to difficulty level of talks, into: Relaxing, Intermediate and Geek paths. Submitting a talk you must point a proper level and suggest the Program Committee, which one do you prefer. Note that talks given in the Relaxing path should be done in native language of hosting country (Polish this year).</p>
+
+     <p>php Central Europe Conference is not limited to just PHP-related talks. There have been sessions covering a wide range of topics supporting PHP developers and DevOps as well, and we encourage you to "think outside the box" to come up with your own unique topics.</p>
+
+     <p>Our speaker package for this year's event includes:</p>
+
+	<ul>
+	<li>Full conference pass,</li>
+	<li>Openinng Day for Speakers participance,</li>
+	<li>2 complimentary hotel nights,</li>
+	<li>Additional complimentary night (Thu/Fri) for speakers who decide to attend in our Opening Day for Speakers,</li>
+	<li>100% reimbursement of airfare/travel costs for international speakers (arriving outside Poland),</li>
+	<li>Lunch, dinner, receptions and all other activities included in regular conference,</li>
+	<li>We'll pick you up and drop you off to/from the airport so you don't have to worry about it.</li>
+	</ul>
+
+     <p>The <a href="https://cfp.phpce.eu">Call for Papers</a> is open until July 31st, 2017. Before you submit, please read our <a href="https://cfp.phpce.eu/package">Speaker Guide</a> and <a href="https://cfp.phpce.eu/ideas">Talk Ideas</a>. We look forward to hearing from you!</p>
+
+    </div>
+  </content>
+</entry>
