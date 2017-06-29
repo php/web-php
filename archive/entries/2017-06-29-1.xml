@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom" xmlns:default="http://php.net/ns/news">
+  <title>PHP Developer Day 2017</title>
+  <id>http://php.net/archive/2017.php#id2017-06-29-1</id>
+  <published>2017-06-29T17:24:31+02:00</published>
+  <updated>2017-06-29T17:24:31+02:00</updated>
+  <default:finalTeaserDate xmlns="http://php.net/ns/news">2017-09-22</default:finalTeaserDate>
+  <category term="conferences" label="Conference announcement"/>
+  <link href="http://php.net/conferences/index.php#id2017-06-29-1" rel="alternate" type="text/html"/>
+  <default:newsImage xmlns="http://php.net/ns/news" link="http://phpug-dresden.org/en/phpdd17.html" title="PHP Developer Day 2017 in Dresden, Germany">phpdd17.png</default:newsImage>
+  <link href="http://phpug-dresden.org/en/phpdd17.html" rel="via" type="text/html"/>
+  <content type="xhtml">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+     <p>
+         The PHP USERGROUP DRESDEN e.V. invites you to the beautiful city of Dresden, Germany for the 3rd annual PHP Developer Day.
+     </p>
+     <p>
+         We have 6 talks covering the following topics:
+     </p>
+     <ul>
+         <li>Managing the PHP toolchain</li>
+         <li>Middleware Web APIs in PHP 7.x</li>
+         <li>PostgreSQL as a NoSQL database</li>
+         <li>Event Sourcing</li>
+         <li>Prooph components</li>
+         <li>ReactPHP</li>
+     </ul>
+     <p>
+         Just like the past two events in 2015 and 2016 top talks, free exchange of knowledge, community and fun are the focus of the event.
+     </p>
+     <p>
+         Come along on <strong>SEPTEMBER 22nd at DRESDNER VOLKSHAUS, SCHÜTZENPLATZ 14 in DRESDEN, GERMANY</strong>
+     </p>
+     <p>
+         For more information visit our website at <a href="http://phpug-dresden.org/en/phpdd17.html" target="_blank">http://phpug-dresden.org/en/phpdd17.html</a>
+     </p>
+     <p>
+         We're looking forward to see you!
+     </p>
+    </div>
+  </content>
+</entry>
