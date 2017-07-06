@@ -7,6 +7,86 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
 
 <h1>PHP 7 ChangeLog</h1>
 
+<section class="version" id="7.1.7"><!-- {{{ 7.1.7 -->
+<h3>Version 7.1.7</h3>
+<b><?php release_date('06-Jul-2017'); ?></b>
+<ul><li>Core:
+<ul>
+  <li><?php bugfix(74738); ?> (Multiple [PATH=] and [HOST=] sections not properly parsed).</li>
+  <li><?php bugfix(74658); ?> (Undefined constants in array properties result in broken properties).</li>
+  <li>Fixed misparsing of abstract unix domain socket names.</li>
+  <li><?php bugfix(74603); ?> (PHP INI Parsing Stack Buffer Overflow Vulnerability).</li>
+  <li><?php bugfix(74101); ?>, bug #74614 (Unserialize Heap Use-After-Free (READ: 1) in zval_get_type).</li>
+  <li><?php bugfix(74111); ?> (Heap buffer overread (READ: 1) finish_nested_data from unserialize).</li>
+  <li><?php bugfix(74819); ?> (wddx_deserialize() heap out-of-bound read via php_parse_date()).</li>
+</ul></li>
+<li>Date:
+<ul>
+  <li><?php bugfix(74639); ?> (implement clone for DatePeriod and DateInterval).</li>
+</ul></li>
+<li>DOM:
+<ul>
+  <li><?php bugfix(69373); ?> (References to deleted XPath query results).</li>
+</ul></li>
+<li>GD:
+<ul>
+  <li><?php bugfix(74435); ?> (Buffer over-read into uninitialized memory).</li>
+</ul></li>
+<li>Intl:
+<ul>
+  <li><?php bugfix(73473); ?> (Stack Buffer Overflow in msgfmt_parse_message).</li>
+  <li><?php bugfix(74705); ?> (Wrong reflection on Collator::getSortKey and collator_get_sort_key).</li>
+</ul></li>
+<li>Mbstring:
+<ul>
+  <li>Add oniguruma upstream fix (CVE-2017-9224, CVE-2017-9226, CVE-2017-9227, CVE-2017-9228, CVE-2017-9229) (Remi, Mamoru TASAKA)</li>
+</ul></li>
+<li>OCI8:
+<ul>
+  <li>Add TAF callback (PR #2459).</li>
+</ul></li>
+<li>Opcache:
+<ul>
+  <li><?php bugfix(74663); ?> (Segfault with opcache.memory_protect and validate_timestamp).</li>
+  <li>Revert opcache.enable_cli to default disabled.</li>
+</ul></li>
+<li>OpenSSL:
+<ul>
+  <li><?php bugfix(74720); ?> (pkcs7_en/decrypt does not work if \x1a is used in content).</li>
+  <li><?php bugfix(74651); ?> (negative-size-param (-1) in memcpy in zif_openssl_seal()).</li>
+</ul></li>
+<li>PDO_OCI:
+<ul>
+  <li>Support Instant Client 12.2 in --with-pdo-oci configure option.</li>
+</ul></li>
+<li>Reflection:
+<ul>
+  <li><?php bugfix(74673); ?> (Segfault when cast Reflection object to string with undefined constant).</li>
+</ul></li>
+<li>SPL:
+<ul>
+  <li><?php bugfix(74478); ?> (null coalescing operator failing with SplFixedArray).</li>
+</ul></li>
+<li>FTP:
+<ul>
+  <li><?php bugfix(74598); ?> (ftp:// wrapper ignores context arg).</li>
+</ul></li>
+<li>PHAR:
+<ul>
+  <li><?php bugfix(74386); ?> (Phar::__construct reflection incorrect).</li>
+</ul></li>
+<li>SOAP:
+<ul>
+  <li><?php bugfix(74679); ?> (Incorrect conversion array with WSDL_CACHE_MEMORY).</li>
+</ul></li>
+<li>Streams:
+<ul>
+  <li><?php bugfix(74556); ?> (stream_socket_get_name() returns '\0').</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
+
 <section class="version" id="7.0.21"><!-- {{{ 7.0.21 -->
 <h3>Version 7.0.21</h3>
 <b><?php release_date('06-Jul-2017'); ?></b>
