@@ -30,7 +30,7 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
 </ul></li>
 <li>GD:
 <ul>
-  <li><?php bugfix(74435); ?> (Buffer over-read into uninitialized memory).</li>
+  <li><?php bugfix(74435); ?> (Buffer over-read into uninitialized memory). (CVE-2017-7890)</li>
 </ul></li>
 <li>Intl:
 <ul>
@@ -106,7 +106,7 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
 </ul></li>
 <li>GD:
 <ul>
-  <li><?php bugfix(74435); ?> (Buffer over-read into uninitialized memory).</li>
+  <li><?php bugfix(74435); ?> (Buffer over-read into uninitialized memory). (CVE-2017-7890)</li>
 </ul></li>
 <li>Intl:
 <ul>
