@@ -30,7 +30,7 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
 </ul></li>
 <li>GD:
 <ul>
-  <li><?php bugfix(74435); ?> (Buffer over-read into uninitialized memory).</li>
+  <li><?php bugfix(74435); ?> (Buffer over-read into uninitialized memory). (CVE-2017-7890)</li>
 </ul></li>
 <li>Intl:
 <ul>
@@ -39,7 +39,7 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
 </ul></li>
 <li>Mbstring:
 <ul>
-  <li>Add oniguruma upstream fix (CVE-2017-9224, CVE-2017-9226, CVE-2017-9227, CVE-2017-9228, CVE-2017-9229) (Remi, Mamoru TASAKA)</li>
+  <li>Add oniguruma upstream fix (CVE-2017-9224, CVE-2017-9226, CVE-2017-9227, CVE-2017-9228, CVE-2017-9229)</li>
 </ul></li>
 <li>OCI8:
 <ul>
@@ -106,7 +106,7 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
 </ul></li>
 <li>GD:
 <ul>
-  <li><?php bugfix(74435); ?> (Buffer over-read into uninitialized memory).</li>
+  <li><?php bugfix(74435); ?> (Buffer over-read into uninitialized memory). (CVE-2017-7890)</li>
 </ul></li>
 <li>Intl:
 <ul>
@@ -116,7 +116,7 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
 </ul></li>
 <li>Mbstring:
 <ul>
-  <li>Add oniguruma upstream fix (CVE-2017-9224, CVE-2017-9226, CVE-2017-9227, CVE-2017-9228, CVE-2017-9229) (Remi, Mamoru TASAKA)</li>
+  <li>Add oniguruma upstream fix (CVE-2017-9224, CVE-2017-9226, CVE-2017-9227, CVE-2017-9228, CVE-2017-9229)</li>
 </ul></li>
 <li>OCI8:
 <ul>
