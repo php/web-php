@@ -3,7 +3,7 @@
   <title>PHP 7.2.0 Alpha 1 Released</title>
   <id>http://php.net/archive/2017.php#id2017-06-08-2</id>
   <published>2017-06-08T17:03:24+00:00</published>
-  <updated>2017-06-08T17:03:24+00:00</updated>
+  <updated>2017-07-13T10:02:00+00:00</updated>
   <category term="releases" label="New PHP release"/>
   <category term="frontpage" label="PHP.net frontpage news"/>
   <link href="http://php.net/index.php#id2017-06-08-2" rel="alternate" type="text/html"/>
@@ -11,7 +11,7 @@
   <content type="xhtml">
     <div xmlns="http://www.w3.org/1999/xhtml">
      <p>The PHP development team announces the immediate availability of PHP 7.2.0 Alpha 1.
-     This release marks the beginning of the first minor release in the PHP 7.x series.
+     This release marks the beginning of the second minor release in the PHP 7.x series.
      All users of PHP are encouraged to test this version carefully,
      and report any bugs and incompatibilities in the 
      <a href="https://bugs.php.net/">bug tracking system</a>.</p>
