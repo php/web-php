@@ -3,7 +3,7 @@
   <title>PHP 7.2.0 Beta 1 Released</title>
   <id>http://php.net/archive/2017.php#id2017-07-20-1</id>
   <published>2017-07-20T12:00:00+00:00</published>
-  <updated>2017-07-20T12:00:00+00:00</updated>
+  <updated>2017-07-21T02:21:00+00:00</updated>
   <category term="frontpage" label="PHP.net frontpage news"/>
   <category term="releases" label="New PHP release"/>
   <link href="http://php.net/index.php#id2017-07-20-1" rel="alternate" type="text/html"/>
@@ -13,7 +13,8 @@
      <p>
      The PHP development team announces the immediate availability of PHP 7.2.0 Beta 1.
      This release is the first beta for 7.2.0. All users of PHP are encouraged to test this
-     version carefully, and report any bugs and incompatibilities in the bug tracking system.
+     version carefully, and report any bugs and incompatibilities in the
+     <a href="https://bugs.php.net/">bug tracking system</a>.
      </p>
 
      <p><strong>THIS IS A DEVELOPMENT PREVIEW - DO NOT USE IT IN PRODUCTION!</strong></p>
