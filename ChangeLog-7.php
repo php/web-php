@@ -7,6 +7,53 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
 
 <h1>PHP 7 ChangeLog</h1>
 
+<section class="version" id="7.0.22"><!-- {{{ 7.0.22 -->
+<h3>Version 7.0.22</h3>
+<b><?php release_date('03-Aug-2017'); ?></b>
+<ul><li>Core:
+<ul>
+  <li><?php bugfix(74832); ?> (Loading PHP extension with already registered function name leads to a crash).</li>
+  <li><?php bugfix(74780); ?> (parse_url() borken when query string contains colon).</li>
+  <li><?php bugfix(74761); ?> (Unary operator expected error on some systems).</li>
+  <li><?php bugfix(73900); ?> (Use After Free in unserialize() SplFixedArray).</li>
+  <li><?php bugfix(74913); ?> (fixed incorrect poll.h include).</li>
+  <li><?php bugfix(74906); ?> (fixed incorrect errno.h include).</li>
+</ul></li>
+<li>Date:
+<ul>
+  <li><?php bugfix(74852); ?> (property_exists returns true on unknown DateInterval property).</li>
+</ul></li>
+<li>OCI8:
+<ul>
+  <li><?php bugfix(74625); ?> (Integer overflow in oci_bind_array_by_name).</li>
+</ul></li>
+<li>Opcache:
+<ul>
+  <li><?php bugfix(74840); ?> (Opcache overwrites argument of GENERATOR_RETURN within finally).</li>
+</ul></li>
+<li>PDO:
+<ul>
+  <li><?php bugfix(69356); ?> (PDOStatement::debugDumpParams() truncates query).</li>
+</ul></li>
+<li>SPL:
+<ul>
+  <li><?php bugfix(73471); ?> (PHP freezes with AppendIterator).</li>
+</ul></li>
+<li>SQLite3:
+<ul>
+  <li><?php bugfix(74883); ?> (SQLite3::__construct() produces "out of memory" exception with invalid flags).</li>
+</ul></li>
+<li>Wddx:
+<ul>
+  <li><?php bugfix(73173); ?> (huge memleak when wddx_unserialize).</li>
+</ul></li>
+<li>zlib:
+<ul>
+  <li><?php bugfix(73944); ?> (dictionary option of inflate_init() does not work).</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
 <section class="version" id="7.1.7"><!-- {{{ 7.1.7 -->
 <h3>Version 7.1.7</h3>
 <b><?php release_date('06-Jul-2017'); ?></b>
