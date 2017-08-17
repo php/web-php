@@ -1,8 +1,106 @@
 <?php
-
 $OLDRELEASES = array (
   7 => 
   array (
+    '7.1.7' => 
+    array (
+      'announcement' => 
+      array (
+        'English' => '/releases/7_1_7.php',
+      ),
+      'source' => 
+      array (
+        0 => 
+        array (
+          'filename' => 'php-7.1.7.tar.bz2',
+          'name' => 'PHP 7.1.7 (tar.bz2)',
+          'sha256' => '079b6792987f38dc485f92258c04f9e02dedd593f9d260ebe725343f812d1ff8',
+          'date' => '06 Jul 2017',
+        ),
+        1 => 
+        array (
+          'filename' => 'php-7.1.7.tar.gz',
+          'name' => 'PHP 7.1.7 (tar.gz)',
+          'sha256' => 'e0dbab8da601ee5119368d6f93dc1a86ad53b799d2f8c1209d6b827a2b259f92',
+          'date' => '06 Jul 2017',
+        ),
+        2 => 
+        array (
+          'filename' => 'php-7.1.7.tar.xz',
+          'name' => 'PHP 7.1.7 (tar.xz)',
+          'sha256' => '0d42089729be7b2bb0308cbe189c2782f9cb4b07078c8a235495be5874fff729',
+          'date' => '06 Jul 2017',
+        ),
+      ),
+      'date' => '06 Jul 2017',
+      'museum' => false,
+    ),
+    '7.0.21' => 
+    array (
+      'announcement' => 
+      array (
+        'English' => '/releases/7_0_21.php',
+      ),
+      'source' => 
+      array (
+        0 => 
+        array (
+          'filename' => 'php-7.0.21.tar.bz2',
+          'name' => 'PHP 7.0.21 (tar.bz2)',
+          'sha256' => '2ba133c392de6f86aacced8c54e0adefd1c81d3840ac323b9926b8ed3dc6231f',
+          'date' => '06 Jul 2017',
+        ),
+        1 => 
+        array (
+          'filename' => 'php-7.0.21.tar.gz',
+          'name' => 'PHP 7.0.21 (tar.gz)',
+          'sha256' => 'f2f05f629dd02c75834ddf033916bd5ff92a720602839d81fd8b6d90e37b6225',
+          'date' => '06 Jul 2017',
+        ),
+        2 => 
+        array (
+          'filename' => 'php-7.0.21.tar.xz',
+          'name' => 'PHP 7.0.21 (tar.xz)',
+          'sha256' => '6713fe3024365d661593235b525235045ef81f18d0043654658c9de1bcb8b9e3',
+          'date' => '06 Jul 2017',
+        ),
+      ),
+      'date' => '06 Jul 2017',
+      'museum' => false,
+    ),
+    '7.1.6' => 
+    array (
+      'announcement' => 
+      array (
+        'English' => '/releases/7_1_6.php',
+      ),
+      'source' => 
+      array (
+        0 => 
+        array (
+          'filename' => 'php-7.1.6.tar.bz2',
+          'name' => 'PHP 7.1.6 (tar.bz2)',
+          'sha256' => '6e3576ca77672a18461a4b089c5790647f1b2c19f82e4f5e94c962609aabffcf',
+          'date' => '08 Jun 2017',
+        ),
+        1 => 
+        array (
+          'filename' => 'php-7.1.6.tar.gz',
+          'name' => 'PHP 7.1.6 (tar.gz)',
+          'sha256' => '7ff8c01af791c7e499ee77e1b82e4b1d56e379efe1f706b1203d48751481fd9f',
+          'date' => '08 Jun 2017',
+        ),
+        2 => 
+        array (
+          'filename' => 'php-7.1.6.tar.xz',
+          'name' => 'PHP 7.1.6 (tar.xz)',
+          'sha256' => '01584dc521ab7ec84b502b61952f573652fe6aa00c18d6d844fb9209f14b245b',
+          'date' => '08 Jun 2017',
+        ),
+      ),
+      'date' => '08 Jun 2017',
+      'museum' => false,
+    ),
     '7.0.20' => 
     array (
       'announcement' => 
@@ -36,7 +134,7 @@ $OLDRELEASES = array (
       'date' => '08 Jun 2017',
       'museum' => false,
     ),
-    '7.1.5' =>
+    '7.1.5' => 
     array (
       'announcement' => 
       array (
@@ -897,6 +995,39 @@ $OLDRELEASES = array (
   ),
   5 => 
   array (
+    '5.6.30' => 
+    array (
+      'announcement' => 
+      array (
+        'English' => '/releases/5_6_30.php',
+      ),
+      'source' => 
+      array (
+        0 => 
+        array (
+          'filename' => 'php-5.6.30.tar.bz2',
+          'name' => 'PHP 5.6.30 (tar.bz2)',
+          'sha256' => 'a105c293fa1dbff118b5b0ca74029e6c461f8c78f49b337a2a98be9e32c27906',
+          'date' => '19 Jan 2017',
+        ),
+        1 => 
+        array (
+          'filename' => 'php-5.6.30.tar.gz',
+          'name' => 'PHP 5.6.30 (tar.gz)',
+          'sha256' => '8bc7d93e4c840df11e3d9855dcad15c1b7134e8acf0cf3b90b932baea2d0bde2',
+          'date' => '19 Jan 2017',
+        ),
+        2 => 
+        array (
+          'filename' => 'php-5.6.30.tar.xz',
+          'name' => 'PHP 5.6.30 (tar.xz)',
+          'sha256' => 'a363185c786432f75e3c7ff956b49c3369c3f6906a6b10459f8d1ddc22f70805',
+          'date' => '19 Jan 2017',
+        ),
+      ),
+      'date' => '19 Jan 2017',
+      'museum' => false,
+    ),
     '5.6.29' => 
     array (
       'announcement' => 

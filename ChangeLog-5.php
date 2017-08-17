@@ -8,6 +8,39 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 
 <h1>PHP 5 ChangeLog</h1>
 
+<section class="version" id="5.6.31"><!-- {{{ 5.6.31 -->
+<h3>Version 5.6.31</h3>
+<b><?php release_date('06-Jul-2017'); ?></b>
+<ul><li>Core:
+<ul>
+  <li><?php bugfix(73807); ?> (Performance problem with processing post request over 2000000 chars).</li>
+  <li><?php bugfix(74111); ?> (Heap buffer overread (READ: 1) finish_nested_data from unserialize).</li>
+  <li><?php bugfix(74603); ?> (PHP INI Parsing Stack Buffer Overflow Vulnerability).</li>
+  <li><?php bugfix(74819); ?> (wddx_deserialize() heap out-of-bound read via php_parse_date()).</li>
+</ul></li>
+<li>GD:
+<ul>
+  <li><?php bugfix(74435); ?> (Buffer over-read into uninitialized memory). (CVE-2017-7890)</li>
+</ul></li>
+<li>mbstring:
+<ul>
+  <li>Add oniguruma upstream fix (CVE-2017-9224, CVE-2017-9226, CVE-2017-9227, CVE-2017-9228, CVE-2017-9229)</li>
+</ul></li>
+<li>OpenSSL:
+<ul>
+  <li><?php bugfix(74651); ?> (negative-size-param (-1) in memcpy in zif_openssl_seal()).</li>
+</ul></li>
+<li>PCRE:
+<ul>
+  <li><?php bugfix(74087); ?> (Segmentation fault in PHP7.1.1(compiled using the bundled PCRE library)).</li>
+</ul></li>
+<li>WDDX:
+<ul>
+  <li><?php bugfix(74145); ?> (wddx parsing empty boolean tag leads to SIGSEGV).</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
 <section class="version" id="5.6.30"><!-- {{{ 5.6.30 -->
 <h3>Version 5.6.30</h3>
 <b><?php release_date('19-Jan-2017'); ?></b>
