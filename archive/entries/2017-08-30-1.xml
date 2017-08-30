@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom" xmlns:default="http://php.net/ns/news">
+  <title>PHP North West 2017 (PHPNW17)</title>
+  <id>http://php.net/archive/2017.php#id2017-08-30-1</id>
+  <published>2017-08-30T20:38:08+00:00</published>
+  <updated>2017-08-30T20:38:08+00:00</updated>
+  <default:finalTeaserDate xmlns="http://php.net/ns/news">2017-09-29</default:finalTeaserDate>
+  <category term="conferences" label="Conference announcement"/>
+  <link href="http://php.net/conferences/index.php#id2017-08-30-1" rel="alternate" type="text/html"/>
+  <default:newsImage xmlns="http://php.net/ns/news" link="http://conference.phpnw.org.uk/phpnw17/" title="PHP North West 2017 (PHPNW17)">phpnw17.png</default:newsImage>
+  <link href="http://conference.phpnw.org.uk/phpnw17/" rel="via" type="text/html"/>
+  <content type="xhtml">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+	    <p>One of the largest and most popular PHP Conferences in Europe, <a href="http://conference.phpnw.org.uk/phpnw17/">PHPNW17</a> is a long-running community-based conference, held in Manchester, UK and run on a not-for-profit basis. It is overwhelmingly supported by industry leaders, code experts, web developers and businesses across the world. This year, we are celebrating our 10th conference year, and we aim to be bigger and better than ever before.</p>
+     
+	    <p>The PHPNW Conference has a reputation within the PHP community as a "go to" conference due to its inspiring content, friendly atmosphere and networking opportunities. Our delegates come to our Conference because they are specifically interested in new technologies and ways to improve their skills through our tutorials and talks, as well as the awesome (unofficial) corridor track!</p>
+     
+	    <p>The conference starts with a <a href="http://conference.phpnw.org.uk/phpnw17/tutorial-day/">tutorial day</a> on 29th September 2017, followed by a <a href="http://conference.phpnw.org.uk/phpnw17/schedule/">three-track conference</a> on the Saturday (30th September) and Sunday (1st October). As an additional bonus we have a populare Unconference running alongside the other three tracks on the Saturday.</p>
+    </div>
+  </content>
+</entry>
