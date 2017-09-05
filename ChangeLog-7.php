@@ -7,6 +7,162 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
 
 <h1>PHP 7 ChangeLog</h1>
 
+<section class="version" id="7.1.9"><!-- {{{ 7.1.9 -->
+<h3>Version 7.1.9</h3>
+<b><?php release_date('31-Aug-2017'); ?></b>
+<ul><li>Core:
+<ul>
+  <li><?php bugfix(74947); ?> (Segfault in scanner on INF number).</li>
+  <li><?php bugfix(74954); ?> (null deref and segfault in zend_generator_resume()).</li>
+  <li><?php bugfix(74725); ?> (html_errors=1 breaks unhandled exceptions).</li>
+  <li><?php bugfix(75063); ?> (Main CWD initialized with wrong codepage).</li>
+</ul></li>
+<li>cURL:
+<ul>
+  <li><?php bugfix(74125); ?> (Fixed finding CURL on systems with multiarch support).</li>
+</ul></li>
+<li>Date:
+<ul>
+  <li>Fixed bug #75002 (Null Pointer Dereference in timelib_time_clone).</li>
+</ul></li>
+<li>Intl:
+<ul>
+  <li><?php bugfix(74993); ?> (Wrong reflection on some locale_* functions).</li>
+</ul></li>
+<li>Mbstring:
+<ul>
+  <li><?php bugfix(71606); ?> (Segmentation fault mb_strcut with HTML-ENTITIES encoding).</li>
+  <li><?php bugfix(62934); ?> (mb_convert_kana() does not convert iteration marks).</li>
+  <li><?php bugfix(75001); ?> (Wrong reflection on mb_eregi_replace).</li>
+</ul></li>
+<li>MySQLi:
+<ul>
+  <li><?php bugfix(74968); ?> (PHP crashes when calling mysqli_result::fetch_object with an abstract class).</li>
+</ul></li>
+<li>OCI8:
+<ul>
+  <li>Expose oci_unregister_taf_callback() (Tianfang Yang)</li>
+</ul></li>
+<li>Opcache:
+<ul>
+  <li><?php bugfix(74980); ?> (Narrowing occurred during type inference).</li>
+</ul></li>
+<li>phar:
+<ul>
+  <li><?php bugfix(74991); ?> (include_path has a 4096 char limit in some cases).</li>
+</ul></li>
+<li>Reflection:
+<ul>
+  <li><?php bugfix(74949); ?> (null pointer dereference in _function_string).</li>
+</ul></li>
+<li>Session:
+<ul>
+  <li><?php bugfix(74892); ?> (Url Rewriting (trans_sid) not working on urls that start with "#").</li>
+  <li><?php bugfix(74833); ?> (SID constant created with wrong module number).</li>
+</ul></li>
+<li>SimpleXML:
+<ul>
+  <li><?php bugfix(74950); ?> (nullpointer deref in simplexml_element_getDocNamespaces).</li>
+</ul></li>
+<li>SPL:
+<ul>
+  <li><?php bugfix(75049); ?> (spl_autoload_unregister can't handle spl_autoload_functions results).</li>
+  <li><?php bugfix(74669); ?> (Unserialize ArrayIterator broken).</li>
+  <li><?php bugfix(74977); ?> (Appending AppendIterator leads to segfault).</li>
+  <li><?php bugfix(75015); ?> (Crash in recursive iterator destructors).</li>
+</ul></li>
+<li>Standard:
+<ul>
+  <li><?php bugfix(75075); ?> (unpack with X* causes infinity loop).</li>
+  <li><?php bugfix(74103); ?> (heap-use-after-free when unserializing invalid array size).</li>
+  <li><?php bugfix(75054); ?> (A Denial of Service Vulnerability was found when performing deserialization).</li>
+</ul></li>
+<li>WDDX:
+<ul>
+  <li><?php bugfix(73793); ?> (WDDX uses wrong decimal seperator).</li>
+</ul></li>
+<li>XMLRPC:
+<ul>
+  <li><?php bugfix(74975); ?> (Incorrect xmlrpc serialization for classes with declared properties).</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
+
+<section class="version" id="7.0.23"><!-- {{{ 7.0.23 -->
+<h3>Version 7.0.23</h3>
+<b><?php release_date('31-Aug-2017'); ?></b>
+<ul><li>Core:
+<ul>
+  <li><?php bugfix(74947); ?> (Segfault in scanner on INF number).</li>
+  <li><?php bugfix(74954); ?> (null deref and segfault in zend_generator_resume()).</li>
+  <li><?php bugfix(74725); ?> (html_errors=1 breaks unhandled exceptions).</li>
+</ul></li>
+<li>cURL:
+<ul>
+  <li><?php bugfix(74125); ?> (Fixed finding CURL on systems with multiarch support).</li>
+</ul></li>
+<li>Date:
+<ul>
+<li><?php bugfix(75002); ?> (Null Pointer Dereference in timelib_time_clone).</li>
+</ul></li>
+<li>Intl:
+<ul>
+  <li><?php bugfix(74993); ?> (Wrong reflection on some locale_* functions).</li>
+</ul></li>
+<li>Mbstring:
+<ul>
+  <li><?php bugfix(71606); ?> (Segmentation fault mb_strcut with HTML-ENTITIES encoding).</li>
+  <li><?php bugfix(62934); ?> (mb_convert_kana() does not convert iteration marks).</li>
+  <li><?php bugfix(75001); ?> (Wrong reflection on mb_eregi_replace).</li>
+</ul></li>
+<li>MySQLi:
+<ul>
+  <li><?php bugfix(74968); ?> (PHP crashes when calling mysqli_result::fetch_object with an abstract class).</li>
+</ul></li>
+<li>OCI8:
+<ul>
+  <li>Expose oci_unregister_taf_callback() (Tianfang Yang)</li>
+</ul></li>
+<li>phar:
+<ul>
+  <li><?php bugfix(74991); ?> (include_path has a 4096 char limit in some cases).</li>
+</ul></li>
+<li>Reflection:
+<ul>
+  <li><?php bugfix(74949); ?> (null pointer dereference in _function_string).</li>
+</ul></li>
+<li>Session:
+<ul>
+  <li><?php bugfix(74833); ?> (SID constant created with wrong module number).</li>
+</ul></li>
+<li>SimpleXML:
+<ul>
+  <li><?php bugfix(74950); ?> (nullpointer deref in simplexml_element_getDocNamespaces).</li>
+</ul></li>
+<li>SPL:
+<ul>
+  <li><?php bugfix(75049); ?> (spl_autoload_unregister can't handle spl_autoload_functions results).</li>
+  <li><?php bugfix(74669); ?> (Unserialize ArrayIterator broken).</li>
+  <li><?php bugfix(75015); ?> (Crash in recursive iterator destructors).</li>
+</ul></li>
+<li>Standard:
+<ul>
+  <li><?php bugfix(75075); ?> (unpack with X* causes infinity loop).</li>
+  <li><?php bugfix(74103); ?> (heap-use-after-free when unserializing invalid array size).</li>
+  <li><?php bugfix(75054); ?> (A Denial of Service Vulnerability was found when performing deserialization).</li>
+</ul></li>
+<li>WDDX:
+<ul>
+  <li><?php bugfix(73793); ?> (WDDX uses wrong decimal seperator).</li>
+</ul></li>
+<li>XMLRPC:
+<ul>
+  <li><?php bugfix(74975); ?> (Incorrect xmlrpc serialization for classes with declared properties).</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
 <section class="version" id="7.1.8"><!-- {{{ 7.1.8 -->
 <h3>Version 7.1.8</h3>
 <b><?php release_date('03-Aug-2017'); ?></b>
