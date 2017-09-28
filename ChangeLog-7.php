@@ -7,6 +7,56 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
 
 <h1>PHP 7 ChangeLog</h1>
 
+<section class="version" id="7.0.24"><!-- {{{ 7.0.24 -->
+<h3>Version 7.0.24</h3>
+<b><?php release_date('28-Sep-2017'); ?></b>
+<ul><li>Core:
+<ul>
+  <li><?php bugfix(75042); ?> (run-tests.php issues with EXTENSION block).</li>
+</ul></li>
+<li>BCMath:
+<ul>
+  <li><?php bugfix(44995); ?> (bcpowmod() fails if scale != 0).</li>
+  <li><?php bugfix(46781); ?> (BC math handles minus zero incorrectly).</li>
+  <li><?php bugfix(54598); ?> (bcpowmod() may return 1 if modulus is 1).</li>
+  <li><?php bugfix(75178); ?> (bcpowmod() misbehaves for non-integer base or modulus).</li>
+</ul></li>
+<li>CLI server:
+<ul>
+  <li><?php bugfix(70470); ?> (Built-in server truncates headers spanning over TCP packets).</li>
+</ul></li>
+<li>CURL:
+<ul>
+  <li><?php bugfix(75093); ?> (OpenSSL support not detected).</li>
+</ul></li>
+<li>GD:
+<ul>
+  <li><?php bugfix(75124); ?> (gdImageGrayScale() may produce colors).</li>
+  <li><?php bugfix(75139); ?> (libgd/gd_interpolation.c:1786: suspicious if ?).</li>
+</ul></li>
+<li>Gettext:
+<ul>
+  <li><?php bugfix(73730); ?> (textdomain(null) throws in strict mode).</li>
+</ul></li>
+<li>Intl:
+<ul>
+  <li><?php bugfix(75090); ?> (IntlGregorianCalendar doesn't have constants from parent class).</li>
+</ul></li>
+<li>PDO_OCI:
+<ul>
+  <li><?php bugfix(74631); ?> (PDO_PCO with PHP-FPM: OCI environment initialized before PHP-FPM sets it up).</li>
+</ul></li>
+<li>SPL:
+<ul>
+  <li><?php bugfix(75173); ?> (incorrect behavior of AppendIterator::append in foreach loop).</li>
+</ul></li>
+<li>Standard:
+<ul>
+  <li><?php bugfix(75097); ?> (gethostname fails if your host name is 64 chars long).</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
 <section class="version" id="7.1.9"><!-- {{{ 7.1.9 -->
 <h3>Version 7.1.9</h3>
 <b><?php release_date('31-Aug-2017'); ?></b>
