@@ -259,9 +259,6 @@ $manual_page_moves = array(
 
     // Refactored
     'regexp.reference'           => 'regexp.introduction',
-
-    // changed what we called a pseudo-type
-    'callable'                   => 'callback',
 );
 
 if (isset($manual_page_moves[$URI])) {
@@ -324,6 +321,7 @@ $uri_aliases = array (
     "<<<"          => "language.types.string",
     "object"       => "language.types.object",
     "null"         => "language.types.null",
+    'callable'     => 'language.types.callable',
 
     "htaccess"     => "configuration.changes",
     "php_value"    => "configuration.changes",
