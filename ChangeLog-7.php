@@ -119,6 +119,7 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
   <li><?php bugfix(74954); ?> (null deref and segfault in zend_generator_resume()).</li>
   <li><?php bugfix(74725); ?> (html_errors=1 breaks unhandled exceptions).</li>
   <li><?php bugfix(75063); ?> (Main CWD initialized with wrong codepage).</li>
+  <li><?php bugfix(75349); ?> (NAN comparison).</li>
 </ul></li>
 <li>cURL:
 <ul>
@@ -200,6 +201,7 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
   <li><?php bugfix(74947); ?> (Segfault in scanner on INF number).</li>
   <li><?php bugfix(74954); ?> (null deref and segfault in zend_generator_resume()).</li>
   <li><?php bugfix(74725); ?> (html_errors=1 breaks unhandled exceptions).</li>
+  <li><?php bugfix(75349); ?> (NAN comparison).</li>
 </ul></li>
 <li>cURL:
 <ul>
