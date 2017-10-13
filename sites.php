@@ -159,10 +159,6 @@ site_header("A Tourist's Guide", array("current" => "help"));
  <a href="https://github.com/php/php-src">GitHub</a>, for those who would
  prefer to use GitHub's interface.
 </p>
-<p>
- Using <a href="http://lxr.php.net/">OpenGrok</a> is another option to view the
- source code, and it offers additional features like search and cross referencing.
-</p>
 </div>
 
 <h2 id="svn" class="content-header"><a href="http://svn.php.net/">svn.php.net</a>: Archived SVN Repository</h2>
@@ -183,23 +179,6 @@ site_header("A Tourist's Guide", array("current" => "help"));
  cvs.php.net, but that now redirects to the SVN repository. This is not available
  via HTTP.
 </p>
-
-<h2 id="lxr" class="content-header"><a href="http://lxr.php.net/">lxr.php.net</a>: Cross Reference</h2>
-
-<div  class="content-box">
-<p>
- <a href="http://www.opensolaris.org/os/project/opengrok/">OpenGrok</a> allows
- search and viewing of the PHP source code in an intelligent manner. Several branches
- and sub-projects are listed.
- Any time an important macro or function is detected within the code, it is linked
- to its definition, and all its usage locations. This will help you build your code
- and understand the PHP source.
-</p>
-<p>
- The name "lxr" exists as it was once based on the "Linux Cross Reference", but
- changed over to OpenGrok sometime in 2010.
-</p>
-</div>
                                                                        
 <h2 id="gtk" class="content-header"><a href="http://gtk.php.net/">gtk.php.net</a>: PHP-GTK</h2>
 
@@ -248,7 +227,6 @@ $SIDEBAR = <<< SIDEBAR_DATA
 <p class='panel'><a href="#git">Git Repository</a></p>
 <p class='panel'><a href="#svn">Archived SVN Repository</a></p>
 <p class='panel'><a href="#cvs">Archived CVS Repository</a></p>
-<p class='panel'><a href="#lxr">Cross Reference</a></p>
 <p class='panel'><a href="#gtk">PHP-GTK</a></p>
 <p class='panel'><a href="#gcov">Test and Code Coverage analysis</a></p>
 <p class='panel'><a href="#wiki">The PHP Wiki</a></h2>
