@@ -28,7 +28,7 @@ site_header("A Tourist's Guide", array("current" => "help"));
  (There is also a <a href="http://museum.php.net/">PHP Museum</a>, which has
  all of the source distributions since June 1996.)
 </p>
-                                                                        
+
 <p>
  The next most visited section is the <a href="/docs.php">documentation</a>.
  The documentation is translated into twelve different languages, and is
@@ -94,11 +94,11 @@ site_header("A Tourist's Guide", array("current" => "help"));
 </h2>
 
 <p class="content-box">
- PECL is a repository for PHP Extensions, providing a directory of all known 
- extensions and hosting facilities for downloading and development of PHP 
+ PECL is a repository for PHP Extensions, providing a directory of all known
+ extensions and hosting facilities for downloading and development of PHP
  extensions. <br>
 
- The packaging and distribution system used by PECL is shared with 
+ The packaging and distribution system used by PECL is shared with
  its sister, PEAR.
 </p>
 
@@ -128,9 +128,9 @@ site_header("A Tourist's Guide", array("current" => "help"));
 <h2 id="docs" class="content-header"><a href="http://docs.php.net/">docs.php.net</a>: Documentation dev server</h2>
 
 <p class="content-box">
- The documentation developmental server is a PHP mirror that contains upcoming 
- releases of the PHP documentation before it's pushed out to the mirrors. 
- Documentation changes, such as layout, is tested here (with feedback requested) 
+ The documentation developmental server is a PHP mirror that contains upcoming
+ releases of the PHP documentation before it's pushed out to the mirrors.
+ Documentation changes, such as layout, is tested here (with feedback requested)
  before being made official. Documentation is built here four times a day.
 </p>
 
@@ -168,20 +168,12 @@ site_header("A Tourist's Guide", array("current" => "help"));
 <h2 id="svn" class="content-header"><a href="http://svn.php.net/">svn.php.net</a>: Archived SVN Repository</h2>
 
 <p class="content-box">
- The PHP project used to be organized under the SVN revision control system, but
- migrated to <a href="http://git.php.net/">Git</a> (see above) in March 2012.
- The old SVN repository is archived here for posterity, however it's still used for
- i.e. documentation files.
-</p>
-
-<h2 id="cvs" class="content-header"><a href="http://cvsold.php.net/">cvsold.php.net</a>: Archived CVS Repository</h2>
-
-<p class="content-box">
- The PHP project used to be organized under the CVS revision control system, but
- migrated to <a href="http://svn.php.net/">Subversion</a> (see above) in July of 2009.
- The old CVS repository is archived here for posterity. It was formerly named
- cvs.php.net, but that now redirects to the SVN repository. This is not available
- via HTTP.
+ The PHP project used to be organized under the CVS revision control system. It
+ was formerly named cvs.php.net, and later on archived under the cvsold.php.net.
+ In July 2009 the project migrated to <a href="http://svn.php.net/">Subversion</a>.
+ The old SVN repository is archived here for posterity, however it's still used
+ for i.e. documentation files. In March 2012 the PHP project migrated to
+ <a href="http://git.php.net/">Git</a> (see above).
 </p>
 
 <h2 id="lxr" class="content-header"><a href="http://lxr.php.net/">lxr.php.net</a>: Cross Reference</h2>
@@ -200,7 +192,7 @@ site_header("A Tourist's Guide", array("current" => "help"));
  changed over to OpenGrok sometime in 2010.
 </p>
 </div>
-                                                                       
+
 <h2 id="gtk" class="content-header"><a href="http://gtk.php.net/">gtk.php.net</a>: PHP-GTK</h2>
 
 <p class="content-box">
@@ -213,10 +205,10 @@ site_header("A Tourist's Guide", array("current" => "help"));
 <h2 id="gcov" class="content-header"><a href="http://gcov.php.net/">gcov.php.net</a>: Test and Code Coverage analysis</h2>
 
 <p class="content-box">
- This site is dedicated to automatic PHP code coverage testing. On a regular 
- basis current Git snapshots are being build and tested on this machine. After 
- all tests are done the results are visualized along with a code coverage 
- analysis.  
+ This site is dedicated to automatic PHP code coverage testing. On a regular
+ basis current Git snapshots are being build and tested on this machine. After
+ all tests are done the results are visualized along with a code coverage
+ analysis.
 </p>
 
 <h2 id="wiki" class="content-header"><a href="https://wiki.php.net/">wiki.php.net</a>: The PHP Wiki</h2>
@@ -247,7 +239,6 @@ $SIDEBAR = <<< SIDEBAR_DATA
 <p class='panel'><a href="#qa">Quality Assurance Team</a></p>
 <p class='panel'><a href="#git">Git Repository</a></p>
 <p class='panel'><a href="#svn">Archived SVN Repository</a></p>
-<p class='panel'><a href="#cvs">Archived CVS Repository</a></p>
 <p class='panel'><a href="#lxr">Cross Reference</a></p>
 <p class='panel'><a href="#gtk">PHP-GTK</a></p>
 <p class='panel'><a href="#gcov">Test and Code Coverage analysis</a></p>
@@ -262,4 +253,3 @@ site_footer(
         'sidebar' => $SIDEBAR
     )
 );
-
