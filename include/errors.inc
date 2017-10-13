@@ -87,10 +87,10 @@ function status_header($num)
             @header("HTTP/1.1 $num $status");
             break;
     }
-    
+
     // BC code for PHP < 4.3.0
     @header("Status: $num $status", TRUE, $num);
-    
+
     return TRUE;
 }
 
@@ -162,6 +162,7 @@ $inis = array(
 	'register-globals'				=> 'ini.core.php#ini.register-globals',
 	'register-long-arrays'			=> 'ini.core.php#ini.register-long-arrays',
 	'register-argc-argv'			=> 'ini.core.php#ini.register-argc-argv',
+	'enable-post-data-reading'			=> 'ini.core.php#ini.enable-post-data-reading',
 	'auto-globals-jit'				=> 'ini.core.php#ini.auto-globals-jit',
 	'post-max-size'					=> 'ini.core.php#ini.post-max-size',
 	'magic-quotes-gpc'				=> 'info.configuration.php#ini.magic-quotes-gpc',
@@ -171,12 +172,17 @@ $inis = array(
 	'auto-append-file'				=> 'ini.core.php#ini.auto-append-file',
 	'default-mimetype'				=> 'ini.core.php#ini.default-mimetype',
 	'default-charset'				=> 'ini.core.php#ini.default-charset',
+	'input-encoding'				=> 'ini.core.php#ini.input-encoding',
+	'output-encoding'				=> 'ini.core.php#ini.output-encoding',
+	'internal-encoding'				=> 'ini.core.php#ini.internal-encoding',
 	'always-populate-raw-post-data'	=> 'ini.core.php#ini.always-populate-raw-post-data',
 	'include-path'					=> 'ini.core.php#ini.include-path',
 	'doc-root'						=> 'ini.core.php#ini.doc-root',
 	'user-dir'						=> 'ini.core.php#ini.user-dir',
 	'extension-dir'					=> 'ini.core.php#ini.extension-dir',
 	'enable-dl'						=> 'info.configuration.php#ini.enable-dl',
+	'cgi.check-shebang-line'			=> 'ini.core.php#ini.cgi.check-shebang-line',
+	'cgi.discard-path'			=> 'ini.core.php#ini.cgi.discard-path',
 	'cgi.force-redirect'			=> 'ini.core.php#ini.cgi.force-redirect',
 	'cgi.redirect-status-env'		=> 'ini.core.php#ini.cgi.redirect-status-env',
 	'cgi.fix-pathinfo'				=> 'ini.core.php#ini.cgi.fix-pathinfo',
@@ -202,6 +208,8 @@ $inis = array(
 	'pcre.backtrack-limit'			=> 'pcre.configuration.php#ini.pcre.backtrack-limit',
 	'pcre.recursion-limit'			=> 'pcre.configuration.php#ini.pcre.recursion-limit',
 	'pdo-odbc.connection-pooling'	=> 'ref.pdo-odbc.php#ini.pdo-odbc.connection-pooling',
+	'pdo-mysql.default-socket'	=> 'ref.pdo-mysql.php#ini.pdo-mysql.default-socket',
+	'pdo-mysql.debug'	=> 'ref.pdo-mysql.php#ini.pdo-mysql.debug',
 	'phar.readonly'					=> 'phar.configuration.php#ini.phar.readonly',
 	'phar.require-hash'				=> 'phar.configuration.php#ini.phar.require-hash',
 	'define-syslog-variables'		=> 'network.configuration.php#ini.define-syslog-variables',
@@ -233,11 +241,21 @@ $inis = array(
 	'mysqli.allow-local-infile'              => 'mysqli.configuration.php#ini.mysqli.allow-local-infile',
 	'mysqli.max-links'				=> 'mysqli.configuration.php#ini.mysqli.max-links',
 	'mysqli.allow-persistent'		=> 'mysqli.configuration.php#ini.mysqli.allow-persistent',
+	'mysqli.max-persistent'		=> 'mysqli.configuration.php#ini.mysqli.max-persistent',
 	'mysqli.default-port'			=> 'mysqli.configuration.php#ini.mysqli.default-port',
 	'mysqli.default-socket'			=> 'mysqli.configuration.php#ini.mysqli.default-socket',
 	'mysqli.default-host'			=> 'mysqli.configuration.php#ini.mysqli.default-host',
 	'mysqli.default-user'			=> 'mysqli.configuration.php#ini.mysqli.default-user',
 	'mysqli.default-pw'				=> 'mysqli.configuration.php#ini.mysqli.default-pw',
+	'mysqlnd.collect-statistics'		=> 'mysqlnd.config.php#ini.mysqlnd.collect-statistics',
+	'mysqlnd.collect-memory-statistics'		=> 'mysqlnd.config.php#ini.mysqlnd.collect-memory-statistics',
+	'mysqlnd.debug'		=> 'mysqlnd.config.php#ini.mysqlnd.debug',
+	'mysqlnd.log-mask'		=> 'mysqlnd.config.php#ini.mysqlnd.log-mask',
+	'mysqlnd.mempool-default-size'		=> 'mysqlnd.config.php#ini.mysqlnd.mempool-default-size',
+	'mysqlnd.net-cmd-buffer-size'		=> 'mysqlnd.config.php#ini.mysqlnd.net-cmd-buffer-size',
+	'mysqlnd.net-read-buffer-size'		=> 'mysqlnd.config.php#ini.mysqlnd.net-read-buffer-size',
+	'mysqlnd.net-read-timeout'		=> 'mysqlnd.config.php#ini.mysqlnd.net-read-timeout',
+	'mysqlnd.sha256-server-public-key'		=> 'mysqlnd.config.php#ini.mysqlnd.sha256-server-public-key',
 	'oci8.privileged-connect'		=> 'oci8.configuration.php#ini.oci8.privileged-connect',
 	'oci8.max-persistent'			=> 'oci8.configuration.php#ini.oci8.max-persistent',
 	'oci8.persistent-timeout'		=> 'oci8.configuration.php#ini.oci8.persistent-timeout',
@@ -282,6 +300,7 @@ $inis = array(
 	'session.cache-limiter'			=> 'session.configuration.php#ini.session.cache-limiter',
 	'session.cache-expire'			=> 'session.configuration.php#ini.session.cache-expire',
 	'session.use-trans-sid'			=> 'session.configuration.php#ini.session.use-trans-sid',
+	'session.sid-length'			=> 'session.configuration.php#ini.session.sid-length',
 	'session.hash-function'			=> 'session.configuration.php#ini.session.hash-function',
 	'session.hash-bits-per-character'       => 'session.configuration.php#ini.session.hash-bits-per-character',
 	'session.upload-progress.enabled'       => 'session.configuration.php#ini.session.upload-progress.enabled',
@@ -290,13 +309,16 @@ $inis = array(
 	'session.upload-progress.name'          => 'session.configuration.php#ini.session.upload-progress.name',
 	'session.upload-progress.freq'          => 'session.configuration.php#ini.session.upload-progress.freq',
 	'session.upload-progress.min-freq'      => 'session.configuration.php#ini.session.upload-progress.min-freq',
-	'url-rewriter.tags'				=> 'session.configuration.php#ini.url-rewriter.tags',
+	'session.lazy-write'      => 'session.configuration.php#ini.session.lazy-write',
+	'url-rewriter.tags'				=> 'outcontrol.configuration.php#ini.url-rewriter.tags',
 	'assert.active'					=> 'info.configuration.php#ini.assert.active',
 	'assert.warning'				=> 'info.configuration.php#ini.assert.warning',
 	'assert.bail'					=> 'info.configuration.php#ini.assert.bail',
 	'assert.callback'				=> 'info.configuration.php#ini.assert.callback',
 	'assert.quiet-eval'				=> 'info.configuration.php#ini.assert.quiet-eval',
+	'assert.exception'				=> 'info.configuration.php#ini.assert.exception',
 	'zend.enable-gc'				=> 'info.configuration.php#ini.zend.enable-gc',
+	'zend.assertions'				=> 'ini.core.php#ini.zend.assertions',
 	'com.typelib-file'				=> 'com.configuration.php#ini.com.typelib-file',
 	'com.allow-dcom'				=> 'com.configuration.php#ini.com.allow-dcom',
 	'com.autoregister-typelib'		=> 'com.configuration.php#ini.com.autoregister-typelib',
@@ -323,7 +345,7 @@ $inis = array(
 	'soap.wsdl-cache-dir'			=> 'soap.configuration.php#ini.soap.wsdl-cache-dir',
 	'soap.wsdl-cache-ttl'			=> 'soap.configuration.php#ini.soap.wsdl-cache-ttl',
 	);
-	
+
 	return isset($inis[$ini]) ? $inis[$ini] : false;
 }
 
@@ -435,16 +457,16 @@ $terms = array(
 	'try'			=> 'language.exceptions.php',
 	'upload'		=> 'features.file-upload.php',
 	);
-	
+
 	return isset($terms[$term]) ? $terms[$term] : false;
 }
 
 /*
-Search snippet provider: A dirty proof-of-concept: 
+Search snippet provider: A dirty proof-of-concept:
 	This will probably live in sqlite one day, and be more intelligent (tagging?)
 	This is a 100% hack currently, and let's hope temporary does not become permanent (Hello year 2014!)
 	And this is English only today... we should add translation support via the manual, generated by PhD
-	
+
 	This really is a proof-of-concept, where the choices below are the most popular searched terms at php.net
 	It should also take into account vague searches, such as 'global' and 'str'. The search works well enough for,
 	most terms, so something like $_SERVER isn't really needed but it's defined below anyways...
@@ -456,14 +478,14 @@ $snippets = array(
 		there is also the concept of <a href="/language.variables.superglobals">super globals</a> in PHP,
 		which are special variables with a global scope.',
 	'string'	=> '
-		There is the <a href="/language.types.string">string type</a>, which is a scalar, 
+		There is the <a href="/language.types.string">string type</a>, which is a scalar,
 		and also many <a href="/ref.strings">string functions.</a>',
 	'str'		=> '
-		Many <a href="/ref.strings">string functions</a> begin with <b>str</b>, 
+		Many <a href="/ref.strings">string functions</a> begin with <b>str</b>,
 		and there is also the <a href="/language.types.string">string type</a>.',
 	'_server'	=> '
-		<a href="/reserved.variables.server">$_SERVER</a> 
-		is a <a href="/language.variables.superglobals">super global</a>, 
+		<a href="/reserved.variables.server">$_SERVER</a>
+		is a <a href="/language.variables.superglobals">super global</a>,
 		and is home to many predefined variables that are typically provided by a web server',
 	'class'		=> '
 		A <a href="/language.oop5">class</a> is an OOP (Object Oriented Programming) concept,
