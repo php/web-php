@@ -174,6 +174,9 @@ site_header("A Tourist's Guide", array("current" => "help"));
  i.e. documentation files.
 </p>
 
+<!--
+XXX: The following sites are offline and should be re-added once they are back online in a more permanent state (Kalle, 17/10/2017)
+
 <h2 id="cvs" class="content-header"><a href="http://cvsold.php.net/">cvsold.php.net</a>: Archived CVS Repository</h2>
 
 <p class="content-box">
@@ -200,6 +203,7 @@ site_header("A Tourist's Guide", array("current" => "help"));
  changed over to OpenGrok sometime in 2010.
 </p>
 </div>
+-->
                                                                        
 <h2 id="gtk" class="content-header"><a href="http://gtk.php.net/">gtk.php.net</a>: PHP-GTK</h2>
 
@@ -234,6 +238,14 @@ site_header("A Tourist's Guide", array("current" => "help"));
 </p>
 
 <?php
+/*
+XXX: The following sites are offline and should be re-added once they are back online in a more permanent state (Kalle, 17/10/2017)
+
+<p class='panel'><a href="#cvs">Archived CVS Repository</a></p>
+<p class='panel'><a href="#lxr">Cross Reference</a></p>
+
+*/
+
 $SIDEBAR = <<< SIDEBAR_DATA
 
 <p class='panel'><a href="#www">Main Website</a></p>
@@ -247,8 +259,6 @@ $SIDEBAR = <<< SIDEBAR_DATA
 <p class='panel'><a href="#qa">Quality Assurance Team</a></p>
 <p class='panel'><a href="#git">Git Repository</a></p>
 <p class='panel'><a href="#svn">Archived SVN Repository</a></p>
-<p class='panel'><a href="#cvs">Archived CVS Repository</a></p>
-<p class='panel'><a href="#lxr">Cross Reference</a></p>
 <p class='panel'><a href="#gtk">PHP-GTK</a></p>
 <p class='panel'><a href="#gcov">Test and Code Coverage analysis</a></p>
 <p class='panel'><a href="#wiki">The PHP Wiki</a></h2>
