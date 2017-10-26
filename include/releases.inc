@@ -1160,6 +1160,39 @@ $OLDRELEASES = array (
   ),
   5 => 
   array (
+    '5.6.31' => 
+    array (
+      'announcement' => 
+      array (
+        'English' => '/releases/5_6_31.php',
+      ),
+      'source' => 
+      array (
+        0 => 
+        array (
+          'filename' => 'php-5.6.31.tar.bz2',
+          'name' => 'PHP 5.6.31 (tar.bz2)',
+          'sha256' => '8f397169cb65f0539f3bcb04060f97770d73e19074a37bd2c58b98ebf6ecb10f',
+          'date' => '06 Jul 2017',
+        ),
+        1 => 
+        array (
+          'filename' => 'php-5.6.31.tar.gz',
+          'name' => 'PHP 5.6.31 (tar.gz)',
+          'sha256' => '6687ed2f09150b2ad6b3780ff89715891f83a9c331e69c90241ef699dec4c43f',
+          'date' => '06 Jul 2017',
+        ),
+        2 => 
+        array (
+          'filename' => 'php-5.6.31.tar.xz',
+          'name' => 'PHP 5.6.31 (tar.xz)',
+          'sha256' => 'c464af61240a9b7729fabe0314cdbdd5a000a4f0c9bd201f89f8628732fe4ae4',
+          'date' => '06 Jul 2017',
+        ),
+      ),
+      'date' => '06 Jul 2017',
+      'museum' => false,
+    ),
     '5.6.30' => 
     array (
       'announcement' => 

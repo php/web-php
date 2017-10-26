@@ -8,6 +8,24 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 
 <h1>PHP 5 ChangeLog</h1>
 
+<section class="version" id="5.6.32"><!-- {{{ 5.6.32 -->
+<h3>Version 5.6.32</h3>
+<b><?php release_date('26-Sep-2017'); ?></b>
+<ul><li>Date:
+<ul>
+  <li><?php bugfix(75055); ?> (Out-Of-Bounds Read in timelib_meridian()).</li>
+</ul></li>
+<li>mcrypt:
+<ul>
+  <li><?php bugfix(72535); ?> (arcfour encryption stream filter crashes php).</li>
+</ul></li>
+<li>PCRE:
+<ul>
+  <li><?php bugfix(75207); ?> (applied upstream patch for CVE-2016-1283).</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
 <section class="version" id="5.6.31"><!-- {{{ 5.6.31 -->
 <h3>Version 5.6.31</h3>
 <b><?php release_date('06-Jul-2017'); ?></b>
