@@ -10,7 +10,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 
 <section class="version" id="5.6.32"><!-- {{{ 5.6.32 -->
 <h3>Version 5.6.32</h3>
-<b><?php release_date('26-Sep-2017'); ?></b>
+<b><?php release_date('26-Oct-2017'); ?></b>
 <ul><li>Date:
 <ul>
   <li><?php bugfix(75055); ?> (Out-Of-Bounds Read in timelib_meridian()).</li>
