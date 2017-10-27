@@ -7,6 +7,69 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
 
 <h1>PHP 7 ChangeLog</h1>
 
+<section class="version" id="7.1.11"><!-- {{{ 7.1.11 -->
+<h3>Version 7.1.11</h3>
+<b><?php release_date('26-Oct-2017'); ?></b>
+<ul><li>Core:
+<ul>
+  <li><?php bugfix(75241); ?> (Null pointer dereference in zend_mm_alloc_small()).</li>
+  <li><?php bugfix(75236); ?> (infinite loop when printing an error-message).</li>
+  <li><?php bugfix(75252); ?> (Incorrect token formatting on two parse errors in one request).</li>
+  <li><?php bugfix(75220); ?> (Segfault when calling is_callable on parent).</li>
+  <li><?php bugfix(75290); ?> (debug info of Closures of internal functions contain garbage argument names).</li>
+</ul></li>
+<li>Date:
+<ul>
+  <li><?php bugfix(75055); ?> (Out-Of-Bounds Read in timelib_meridian()).</li>
+</ul></li>
+<li>Apache2Handler:
+<ul>
+  <li><?php bugfix(75311); ?> (error: 'zend_hash_key' has no member named 'arKey' in apache2handler).</li>
+</ul></li>
+<li>Hash:
+<ul>
+  <li><?php bugfix(75303); ?> (sha3 hangs on bigendian).</li>
+</ul></li>
+<li>Intl:
+<ul>
+  <li><?php bugfix(75318); ?> (The parameter of UConverter::getAliases() is not optional).</li>
+</ul></li>
+<li>litespeed:
+<ul>
+  <li><?php bugfix(75248); ?> (Binary directory doesn't get created when building only litespeed SAPI).</li>
+  <li><?php bugfix(75251); ?> (Missing program prefix and suffix).</li>
+</ul></li>
+<li>mcrypt:
+<ul>
+  <li><?php bugfix(72535); ?> (arcfour encryption stream filter crashes php).</li>
+</ul></li>
+<li>MySQLi:
+<ul>
+  <li><?php bugfix(75018); ?> (Data corruption when reading fields of bit type).</li>
+</ul></li>
+<li>OCI8:
+<ul>
+  <li>Fixed incorrect reference counting.</li>
+</ul></li>
+<li>Opcache:
+<ul>
+  <li><?php bugfix(75255); ?> (Request hangs and not finish).</li>
+</ul></li>
+<li>PCRE:
+<ul>
+  <li><?php bugfix(75207); ?> (applied upstream patch for CVE-2016-1283).</li>
+</ul></li>
+<li>PDO_mysql:
+<ul>
+  <li><?php bugfix(75177); ?> (Type 'bit' is fetched as unexpected string).</li>
+</ul></li>
+<li>SPL:
+<ul>
+  <li><?php bugfix(73629); ?> (SplDoublyLinkedList::setIteratorMode masks intern flags).</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
 <section class="version" id="7.0.25"><!-- {{{ 7.0.25 -->
 <h3>Version 7.0.25</h3>
 <b><?php release_date('26-Oct-2017'); ?></b>
