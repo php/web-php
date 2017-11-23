@@ -29,15 +29,15 @@ $PHP_7_1_SHA256     = array(
 );
 
 /* PHP 7.0 Release */
-$PHP_7_0_RC = "7.0.26RC1"; // Current RC version (e.g., '5.6.7RC1') or false
+$PHP_7_0_RC = false; // Current RC version (e.g., '5.6.7RC1') or false
 $PHP_7_0_RC_DATE = "09 November 2017";
 
-$PHP_7_0_VERSION         = "7.0.25";
-$PHP_7_0_DATE            = "26 Oct 2017";
+$PHP_7_0_VERSION         = "7.0.26";
+$PHP_7_0_DATE            = "23 Nov 2017";
 $PHP_7_0_SHA256     = array(
-                       "tar.bz2"       => "95a24d96d126a196e1550e394182b43a6460cdd2026f1a77bef01e422415cc25",
-                       "tar.gz"        => "081b46bf588d38c636fd6cd1dab8855b6b3e171550d1e65f770f53aede594ee7",
-                       "tar.xz"        => "5cc14bd20fb2226f6d34465662425cd100441bde9042ea1cef2e4506d6ded8cc",
+                       "tar.bz2"       => "2590d722f7b23b6a903c5a00cf04e7ee728df79d10ae473e3a81ba41588509a7",
+                       "tar.gz"        => "04c345f7c9e3f1cd02f275bfec893a4e0290e724073f2f3d7282a219128b537c",
+                       "tar.xz"        => "ed5cbb4bbb0ddef8985f100bba2e94002ad22a230b5da2dccfe148915df5f199",
 );
 
 /* PHP 5.6 Release */
