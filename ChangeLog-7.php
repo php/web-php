@@ -6,6 +6,71 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
 ?>
 
 <h1>PHP 7 ChangeLog</h1>
+<section class="version" id="7.1.12"><!-- {{{ 7.1.12 -->
+<h3>Version 7.1.12</h3>
+<b><?php release_date('23-Nov-2017'); ?></b>
+<ul><li>Core:
+<ul>
+  <li><?php bugfix(75420); ?> (Crash when modifing property name in __isset for BP_VAR_IS).</li>
+  <li><?php bugfix(75368); ?> (mmap/munmap trashing on unlucky allocations).</li>
+</ul></li>
+<li>CLI:
+<ul>
+  <li><?php bugfix(75287); ?> (Builtin webserver crash after chdir in a shutdown function).</li>
+</ul></li>
+<li>Enchant:
+<ul>
+  <li><?php bugfix(53070); ?> (enchant_broker_get_path crashes if no path is set).</li>
+  <li><?php bugfix(75365); ?> (Enchant still reports version 1.1.0).</li>
+</ul></li>
+<li>Exif:
+<ul>
+  <li><?php bugfix(75301); ?> (Exif extension has built in revision version).</li>
+</ul></li>
+<li>GD:
+<ul>
+  <li><?php bugfix(65148); ?> (imagerotate may alter image dimensions).</li>
+  <li><?php bugfix(75437); ?> (Wrong reflection on imagewebp).</li>
+</ul></li>
+<li>intl:
+<ul>
+  <li><?php bugfix(75317); ?> (UConverter::setDestinationEncoding changes source instead of destination).</li>
+</ul></li>
+<li>interbase:
+<ul>
+  <li><?php bugfix(75453); ?> (Incorrect reflection for ibase_[p]connect).</li>
+</ul></li>
+<li>Mysqli:
+<ul>
+  <li><?php bugfix(75434); ?> (Wrong reflection for mysqli_fetch_all function).</li>
+</ul></li>
+<li>OCI8:
+<ul>
+  <li>Fixed valgrind issue.</li>
+</ul></li>
+<li>OpenSSL:
+<ul>
+  <li><?php bugfix(75363); ?> (openssl_x509_parse leaks memory).</li>
+  <li><?php bugfix(75307); ?> (Wrong reflection for openssl_open function).</li>
+</ul></li>
+<li>Opcache:
+<ul>
+  <li><?php bugfix(75373); ?> (Warning Internal error: wrong size calculation).</li>
+</ul></li>
+<li>PGSQL:
+<ul>
+  <li><?php bugfix(75419); ?> (Default link incorrectly cleared/linked by pg_close()).</li>
+</ul></li>
+<li>SOAP:
+<ul>
+  <li><?php bugfix(75464); ?> (Wrong reflection on SoapClient::__setSoapHeaders).</li>
+</ul></li>
+<li>Zlib:
+<ul>
+  <li><?php bugfix(75299); ?> (Wrong reflection on inflate_init and inflate_add).</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
 
 <section class="version" id="7.0.26"><!-- {{{ 7.0.26 -->
 <h3>Version 7.0.26</h3>
