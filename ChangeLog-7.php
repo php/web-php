@@ -6,6 +6,291 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
 ?>
 
 <h1>PHP 7 ChangeLog</h1>
+
+<section class="version" id="7.2.0"><!-- {{{ 7.2.0 -->
+<h3>Version 7.2.0</h3>
+<b><?php release_date('30-Nov-2017'); ?></b>
+<ul><li>BCMath:
+<ul>
+  <li><?php bugfix(46564); ?> (bcmod truncates fractionals).</li>
+</ul></li>
+<li>CLI:
+<ul>
+  <li><?php bugfix(74849); ?> (Process is started as interactive shell in PhpStorm).</li>
+  <li><?php bugfix(74979); ?> (Interactive shell opening instead of script execution with -f flag).</li>
+</ul></li>
+<li>CLI server:
+<ul>
+  <li><?php bugfix(60471); ?> (Random "Invalid request (unexpected EOF)" using a router script).</li>
+</ul></li>
+<li>Core:
+<ul>
+  <li>Added ZEND_COUNT, ZEND_GET_CLASS, ZEND_GET_CALLED_CLASS, ZEND_GET_TYPE, ZEND_FUNC_NUM_ARGS, ZEND_FUNC_GET_ARGS instructions, to implement corresponding builtin functions.</li>
+  <li>"Countable" interface is moved from SPL to Core.</li>
+  <li>Added ZEND_IN_ARRAY instruction, implementing optimized in_array() builtin function, through hash lookup in flipped array.</li>
+  <li>Removed IS_TYPE_IMMUTABLE (it's the same as COPYABLE &amp; !REFCOUNTED).</li>
+  <li>Removed the sql.safe_mode directive.</li>
+  <li>Removed support for Netware.</li>
+  <li>Renamed ReflectionClass::isIterateable() to ReflectionClass::isIterable() (alias original name for BC).</li>
+  <li><?php bugfix(54535); ?> (WSA cleanup executes before MSHUTDOWN).</li>
+  <li>Implemented FR <?php bugl(69791); ?> (Disallow mail header injections by extra headers) (Yasuo)</li>
+  <li>Implemented FR <?php bugl(49806); ?> (proc_nice() for Windows).</li>
+  <li>Fix pthreads detection when cross-compiling (ffontaine)</li>
+  <li>Fixed memory leaks caused by exceptions thrown from destructors. (Bob, Dmitry).</li>
+  <li><?php bugfix(73215); ?> (uniqid() should use better random source).</li>
+  <li>Implemented FR <?php bugl(72768); ?> (Add ENABLE_VIRTUAL_TERMINAL_PROCESSING flag for php.exe).</li>
+  <li>Implemented "Convert numeric keys in object/array casts" RFC, fixes bugs <?php bugl(53838); ?>, <?php bugl(61655); ?>, <?php bugl(66173); ?>, <?php bugl(70925); ?>, <?php bugl(72254); ?>, etc.</li>
+  <li>Implemented "Deprecate and Remove Bareword (Unquoted) Strings" RFC.</li>
+  <li>Raised minimum supported Windows versions to Windows 7/Server 2008 R2.</li>
+  <li>Implemented minor optimization in array_keys/array_values().</li>
+  <li>Added PHP_OS_FAMILY constant to determine on which OS we are.</li>
+  <li><?php bugfix(73987); ?> (Method compatibility check looks to original definition and not parent).</li>
+  <li><?php bugfix(73991); ?> (JSON_OBJECT_AS_ARRAY not respected).</li>
+  <li><?php bugfix(74053); ?> (Corrupted class entries on shutdown when a destructor spawns another object).</li>
+  <li><?php bugfix(73971); ?> (Filename got limited to MAX_PATH on Win32 when scan directory).</li>
+  <li><?php bugfix(72359); ?>, bug <?php bugl(72451); ?>, bug <?php bugl(73706); ?>, bug <?php bugl(71115); ?> and others related to interned strings handling in TS builds.</li>
+  <li>Implemented "Trailing Commas In List Syntax" RFC for group use lists only.</li>
+  <li><?php bugfix(74269); ?> (It's possible to override trait property with different loosely-equal value).</li>
+  <li><?php bugfix(61970); ?> (Restraining __construct() access level in subclass gives a fatal error).</li>
+  <li><?php bugfix(63384); ?> (Cannot override an abstract method with an abstract method).</li>
+  <li><?php bugfix(74607); ?> (Traits enforce different inheritance rules).</li>
+  <li>Fixed misparsing of abstract unix domain socket names.</li>
+  <li>Change PHP_OS_FAMILY value from "OSX" to "Darwin".</li>
+  <li>Allow loading PHP/Zend extensions by name in ini files (extension=&lt;name&gt;).</li>
+  <li>Added object type annotation.</li>
+  <li><?php bugfix(74815); ?> (crash with a combination of INI entries at startup).</li>
+  <li><?php bugfix(74836); ?> (isset on zero-prefixed numeric indexes in array broken).</li>
+  <li>Added new VM instuctions ISSET_ISEMPTY_CV and UNSET_CV. Previously they were implemented as ISSET_ISEMPTY_VAR and UNSET_VAR variants with ZEND_QUICK_SET flag.</li>
+  <li><?php bugfix(49649); ?> (unserialize() doesn't handle changes in property visibility).</li>
+  <li><?php bugfix(74866); ?> (extension_dir = "./ext" now use current directory for base).</li>
+  <li>Implemented FR <?php bugl(74963); ?> (Improved error message on fetching property of non-object).</li>
+  <li><?php bugfix(75142); ?> (buildcheck.sh check for autoconf version needs to be updated for v2.64).</li>
+  <li><?php bugfix(74878); ?> (Data race in ZTS builds).</li>
+  <li><?php bugfix(75515); ?> ("stream_copy_to_stream" doesn't stream anymore).</li>
+</ul></li>
+<li>cURL:
+<ul>
+  <li><?php bugfix(75093); ?> (OpenSSL support not detected).</li>
+  <li>Better fix for <?php bugl(74125); ?> (use pkg-config instead of curl-config).</li>
+</ul></li>
+<li>Date:
+<ul>
+  <li><?php bugfix(55407); ?> (Impossible to prototype DateTime::createFromFormat).</li>
+  <li>Implemented FR <?php bugl(71520); ?> (Adding the DateTime constants to the DateTimeInterface interface).</li>
+  <li><?php bugfix(75149); ?> (redefinition of typedefs ttinfo and t1info).</li>
+  <li><?php bugfix(75222); ?> (DateInterval microseconds property always 0).</li>
+</ul></li>
+<li>Dba:
+<ul>
+  <li><?php bugfix(72885); ?> (flatfile: dba_fetch() fails to read replaced entry).</li>
+</ul></li>
+<li>DOM:
+<ul>
+  <li>Implemented FR <?php bugl(74837); ?> (Implement Countable for DomNodeList and DOMNamedNodeMap).</li>
+</ul></li>
+<li>EXIF:
+<ul>
+  <li>Added support for vendor specific tags for the following formats: Samsung, DJI, Panasonic, Sony, Pentax, Minolta, Sigma/Foveon, AGFA, Kyocera, Ricoh &amp; Epson.</li>
+  <li><?php bugfix(72682); ?> (exif_read_data() fails to read all data for some images).</li>
+  <li><?php bugfix(71534); ?> (Type confusion in exif_read_data() leading to heap overflow in debug mode).</li>
+  <li><?php bugfix(68547); ?> (Exif Header component value check error).</li>
+  <li><?php bugfix(66443); ?> (Corrupt EXIF header: maximum directory nesting level reached for some cameras).</li>
+  <li>Fixed Redhat bug #1362571 (PHP not returning full results for exif_read_data function).</li>
+  <li>Implemented FR <?php bugl(65187); ?> (exif_read_data/thumbnail: add support for stream resource).</li>
+  <li>Deprecated the read_exif_data() alias.</li>
+  <li><?php bugfix(74428); ?> (exif_read_data(): "Illegal IFD size" warning occurs with correct exif format).</li>
+  <li><?php bugfix(72819); ?> (EXIF thumbnails not read anymore).</li>
+  <li><?php bugfix(62523); ?> (php crashes with segfault when exif_read_data called).</li>
+  <li><?php bugfix(50660); ?> (exif_read_data(): Illegal IFD offset (works fine with other exif readers).</li>
+</ul></li>
+<li>Fileinfo:
+<ul>
+  <li>Upgrade bundled libmagic to 5.31.</li>
+</ul></li>
+<li>FPM:
+<ul>
+  <li>Configuration to limit fpm slow log trace callers.</li>
+  <li><?php bugfix(75212); ?> (php_value acts like php_admin_value).</li>
+</ul></li>
+<li>FTP:
+<ul>
+  <li>Implement MLSD for structured listing of directories.</li>
+  <li>Added ftp_append() function.</li>
+</ul></li>
+<li>GD:
+<ul>
+  <li>Implemented imageresolution as getter and setter (Christoph)</li>
+  <li><?php bugfix(74744); ?> (gd.h: stdarg.h include missing for va_list use in gdErrorMethod).</li>
+  <li><?php bugfix(75111); ?> (Memory disclosure or DoS via crafted .bmp image).</li>
+</ul></li>
+<li>GMP:
+<ul>
+  <li><?php bugfix(70896); ?> (gmp_fact() silently ignores non-integer input).</li>
+</ul></li>
+<li>Hash:
+<ul>
+  <li>Changed HashContext from resource to object.</li>
+  <li>Disallowed usage of non-cryptographic hash functions with HMAC and PBKDF2.</li>
+  <li><?php bugfix(75284); ?> (sha3 is not supported on bigendian machine).</li>
+</ul></li>
+<li>IMAP:
+<ul>
+  <li><?php bugfix(72324); ?> (imap_mailboxmsginfo() return wrong size).</li>
+</ul></li>
+<li>Intl:
+<ul>
+  <li><?php bugfix(63790); ?> (test using Spoofchecker which may be unavailable).</li>
+  <li><?php bugfix(75378); ?> ([REGRESSION] IntlDateFormatter::parse() does not change $position argument).</li>
+</ul></li>
+<li>JSON:
+<ul>
+  <li>Add JSON_INVALID_UTF8_IGNORE and JSON_INVALID_UTF8_SUBSTITUTE options for json_encode and json_decode to ignore or replace invalid UTF-8 byte sequences - it addresses request <?php bugl(65082); ?>.</li>
+  <li><?php bugfix(75185); ?> (Buffer overflow in json_decode() with JSON_INVALID_UTF8_IGNORE or JSON_INVALID).</li>
+  <li><?php bugfix(68567); ?> (JSON_PARTIAL_OUTPUT_ON_ERROR can result in JSON with null key).</li>
+</ul></li>
+<li>LDAP:
+<ul>
+  <li>Implemented FR <?php bugl(69445); ?> (Support for LDAP EXOP operations)</li>
+  <li>Fixed support for LDAP_OPT_SERVER_CONTROLS and LDAP_OPT_CLIENT_CONTROLS in ldap_get_option</li>
+  <li>Fixed passing an empty array to ldap_set_option for client or server controls.</li>
+</ul></li>
+<li>Mbstring:
+<ul>
+  <li>Implemented FR <?php bugl(66024); ?> (mb_chr() and mb_ord()).</li>
+  <li>Implemented FR <?php bugl(65081); ?> (mb_scrub()).</li>
+  <li>Implemented FR <?php bugl(69086); ?> (enhancement for mb_convert_encoding() that handles multibyte replacement char nicely).</li>
+  <li>Added array input support to mb_convert_encoding().</li>
+  <li>Added array input support to mb_check_encoding().</li>
+  <li><?php bugfix(69079); ?> (enhancement for mb_substitute_character).</li>
+  <li>Update to oniguruma version 6.3.0.</li>
+  <li><?php bugfix(69267); ?> (mb_strtolower fails on titlecase characters).</li>
+</ul></li>
+<li>Mcrypt:
+<ul>
+  <li>The deprecated mcrypt extension has been moved to PECL.</li>
+</ul></li>
+<li>Opcache:
+<ul>
+  <li>Added global optimisation passes based on data flow analysis using Single Static Assignment (SSA) form: Sparse Conditional Constant Propagation (SCCP), Dead Code Elimination (DCE), and removal of unused local variables (Nikita, Dmitry)</li>
+  <li>Fixed incorect constant conditional jump elimination.</li>
+  <li><?php bugfix(75230); ?> (Invalid opcode 49/1/8 using opcache).</li>
+  <li>Fixed bug (assertion fails with extended info generated).</li>
+  <li>Fixed bug (Phi sources removel).</li>
+  <li><?php bugfix(75370); ?> (Webserver hangs on valid PHP text).</li>
+  <li><?php bugfix(75357); ?> (segfault loading WordPress wp-admin).</li>
+</ul></li>
+<li>OpenSSL:
+<ul>
+  <li>Use TLS_ANY for default ssl:// and tls:// negotiation.</li>
+  <li>Fix leak in openssl_spki_new().</li>
+  <li>Added openssl_pkcs7_read() and pk7 parameter to openssl_pkcs7_verify().</li>
+  <li>Add ssl security_level stream option to support OpenSSL security levels. (Jakub Zelenka).</li>
+  <li>Allow setting SNI cert and private key in separate files.</li>
+  <li><?php bugfix(74903); ?> (openssl_pkcs7_encrypt() uses different EOL than before).</li>
+  <li>Automatically load OpenSSL configuration file.</li>
+</ul></li>
+<li>PCRE:
+<ul>
+  <li>Added support for PCRE JIT fast path API.</li>
+  <li><?php bugfix(61780); ?> (Inconsistent PCRE captures in match results).</li>
+  <li><?php bugfix(74873); ?> (Minor BC break: PCRE_JIT changes output of preg_match()).</li>
+  <li><?php bugfix(75089); ?> (preg_grep() is not reporting PREG_BAD_UTF8_ERROR after first input string).</li>
+  <li><?php bugfix(75223); ?> (PCRE JIT broken in 7.2).</li>
+  <li><?php bugfix(75285); ?> (Broken build when system libpcre don't have jit support).</li>
+</ul></li>
+<li>phar:
+<ul>
+  <li><?php bugfix(74196); ?> (phar does not correctly handle names containing dots).</li>
+</ul></li>
+<li>PDO:
+<ul>
+  <li>Add "Sent SQL" to debug dump for emulated prepares.</li>
+  <li>Add parameter types for national character set strings.</li>
+</ul></li>
+<li>PDO_DBlib:
+<ul>
+  <li><?php bugfix(73234); ?> (Emulated statements let value dictate parameter type).</li>
+  <li><?php bugfix(73396); ?> (bigint columns are returned as strings).</li>
+  <li>Expose DB-Library version as \PDO::DBLIB_ATTR_VERSION attribute on \PDO instance.</li>
+  <li>Add test coverage for bug <?php bugl(72969); ?>.</li>
+</ul></li>
+<li>PDO_OCI:
+<ul>
+  <li><?php bugfix(74537); ?> (Align --with-pdo-oci configure option with --with-oci8 syntax).</li>
+</ul></li>
+<li>PDO_Sqlite:
+<ul>
+  <li>Switch to sqlite3_prepare_v2() and sqlite3_close_v2() functions (rasmus)</li>
+</ul></li>
+<li>PHPDBG:
+<ul>
+  <li>Added extended_value to opcode dump output.</li>
+</ul></li>
+<li>Session:
+<ul>
+  <li><?php bugfix(73461); ?> (Prohibit session save handler recursion).</li>
+  <li>PR #2233 Removed register_globals related code and "!" can be used as $_SESSION key name.</li>
+  <li>Improved bug <?php bugl(73100); ?> fix. 'user' save handler can only be set by session_set_save_handler()</li>
+  <li><?php bugfix(74514); ?> (5 session functions incorrectly warn when calling in read-only/getter mode).</li>
+  <li><?php bugfix(74936); ?> (session_cache_expire/cache_limiter/save_path() trigger a warning in read mode).</li>
+  <li><?php bugfix(74941); ?> (session fails to start after having headers sent).</li>
+</ul></li>
+<li>Sodium:
+<ul>
+  <li>New cryptographic extension</li>
+  <li>Added missing bindings for libsodium &gt; 1.0.13.</li>
+</ul></li>
+<li>SPL:
+<ul>
+  <li><?php bugfix(71412); ?> (Incorrect arginfo for ArrayIterator::__construct).</li>
+  <li>Added spl_object_id().</li>
+</ul></li>
+<li>SQLite3:
+<ul>
+  <li>Implement writing to blobs.</li>
+  <li>Update to Sqlite 3.20.1.</li>
+</ul></li>
+<li>Standard:
+<ul>
+  <li><?php bugfix(69442); ?> (closing of fd incorrect when PTS enabled).</li>
+  <li><?php bugfix(74300); ?> (unserialize accepts two plus/minus signs for float number exponent part).</li>
+  <li>Compatibility with libargon2 versions 20161029 and 20160821.</li>
+  <li><?php bugfix(74737); ?> (mysqli_get_client_info reflection info).</li>
+  <li>Add support for extension name as argument to dl().</li>
+  <li><?php bugfix(74851); ?> (uniqid() without more_entropy performs badly).</li>
+  <li><?php bugfix(74103); ?> (heap-use-after-free when unserializing invalid array size).</li>
+  <li><?php bugfix(75054); ?> (A Denial of Service Vulnerability was found when performing deserialization).</li>
+  <li><?php bugfix(75170); ?> (mt_rand() bias on 64-bit machines).</li>
+  <li><?php bugfix(75221); ?> (Argon2i always throws NUL at the end).</li>
+</ul></li>
+<li>Streams:
+<ul>
+  <li>Default ssl/single_dh_use and ssl/honor_cipher_order to true.</li>
+</ul></li>
+<li>XML:
+<ul>
+  <li>Moved utf8_encode() and utf8_decode() to the Standard extension.</li>
+</ul></li>
+<li>XMLRPC:
+<ul>
+  <li>Use Zend MM for allocation in bundled libxmlrpc (Joe)</li>
+</ul></li>
+<li>ZIP:
+<ul>
+  <li>Add support for encrypted archives.</li>
+  <li>Use of bundled libzip is deprecated, --with-libzip option is recommended.</li>
+  <li><?php bugfix(73803); ?> (Reflection of ZipArchive does not show public properties).</li>
+  <li>ZipArchive implements countable, added ZipArchive::count() method.</li>
+  <li>Fix segfault in php_stream_context_get_option call.</li>
+  <li><?php bugfix(75143); ?> (new method setEncryptionName() seems not to exist in ZipArchive).</li>
+</ul></li>
+<li>zlib:
+<ul>
+  <li>Expose inflate_get_status() and inflate_get_read_len() functions.</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
 <section class="version" id="7.1.12"><!-- {{{ 7.1.12 -->
 <h3>Version 7.1.12</h3>
 <b><?php release_date('23-Nov-2017'); ?></b>
