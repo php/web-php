@@ -41,8 +41,8 @@ $PHP_7_1_SHA256     = array(
 );
 
 /* PHP 7.0 Release */
-$PHP_7_0_RC = false; // Current RC version (e.g., '5.6.7RC1') or false
-$PHP_7_0_RC_DATE = "09 November 2017";
+$PHP_7_0_RC = "7.0.27RC1"; // Current RC version (e.g., '5.6.7RC1') or false
+$PHP_7_0_RC_DATE = "07 December 2017";
 
 $PHP_7_0_VERSION         = "7.0.26";
 $PHP_7_0_DATE            = "23 Nov 2017";
