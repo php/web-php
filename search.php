@@ -14,7 +14,7 @@ if ($MQ) {
     foreach ($_FORM as $name => $value) {
         $_FORM[$name] = stripslashes($value);
     }
-}
+}// array map here:) 
 
 // We received something to search for
 if (!empty($_FORM['pattern'])) {
