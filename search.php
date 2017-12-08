@@ -11,10 +11,13 @@ $_FORM = &$_GET;
 
 // If PHP added some slashes to quotes, get rid of them
 if ($MQ) {
-    foreach ($_FORM as $name => $value) {
-        $_FORM[$name] = stripslashes($value);
+    maper function ($valArray) {
+        $ForReturn = stripslashes($valArray);
+        return $ForReturn;
     }
-}// array map here:) 
+    $arrayFinal = map($_FORM, "maper");
+    $desArray = implode(", ",$arrayFinal);
+}// array map here:)
 
 // We received something to search for
 if (!empty($_FORM['pattern'])) {
