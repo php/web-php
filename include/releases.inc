@@ -2,6 +2,72 @@
 $OLDRELEASES = array (
   7 => 
   array (
+    '7.1.11' => 
+    array (
+      'announcement' => 
+      array (
+        'English' => '/releases/7_1_11.php',
+      ),
+      'source' => 
+      array (
+        0 => 
+        array (
+          'filename' => 'php-7.1.11.tar.bz2',
+          'name' => 'PHP 7.1.11 (tar.bz2)',
+          'sha256' => '7646d7de701fc969e3305eeeb2eddda3d46af6a88ee20ef4a47270c447228573',
+          'date' => '26 Oct 2017',
+        ),
+        1 => 
+        array (
+          'filename' => 'php-7.1.11.tar.gz',
+          'name' => 'PHP 7.1.11 (tar.gz)',
+          'sha256' => 'de41b2c166bc5ec8ea96a337d4dd675c794f7b115a8a47bb04595c03dbbdf425',
+          'date' => '26 Oct 2017',
+        ),
+        2 => 
+        array (
+          'filename' => 'php-7.1.11.tar.xz',
+          'name' => 'PHP 7.1.11 (tar.xz)',
+          'sha256' => '074093e9d7d21afedc5106904218a80a47b854abe368d2728ed22184c884893e',
+          'date' => '26 Oct 2017',
+        ),
+      ),
+      'date' => '26 Oct 2017',
+      'museum' => false,
+    ),
+    '7.0.25' => 
+    array (
+      'announcement' => 
+      array (
+        'English' => '/releases/7_0_25.php',
+      ),
+      'source' => 
+      array (
+        0 => 
+        array (
+          'filename' => 'php-7.0.25.tar.bz2',
+          'name' => 'PHP 7.0.25 (tar.bz2)',
+          'sha256' => '95a24d96d126a196e1550e394182b43a6460cdd2026f1a77bef01e422415cc25',
+          'date' => '26 Oct 2017',
+        ),
+        1 => 
+        array (
+          'filename' => 'php-7.0.25.tar.gz',
+          'name' => 'PHP 7.0.25 (tar.gz)',
+          'sha256' => '081b46bf588d38c636fd6cd1dab8855b6b3e171550d1e65f770f53aede594ee7',
+          'date' => '26 Oct 2017',
+        ),
+        2 => 
+        array (
+          'filename' => 'php-7.0.25.tar.xz',
+          'name' => 'PHP 7.0.25 (tar.xz)',
+          'sha256' => '5cc14bd20fb2226f6d34465662425cd100441bde9042ea1cef2e4506d6ded8cc',
+          'date' => '26 Oct 2017',
+        ),
+      ),
+      'date' => '26 Oct 2017',
+      'museum' => false,
+    ),
     '7.1.10' => 
     array (
       'announcement' => 
@@ -15,7 +81,7 @@ $OLDRELEASES = array (
           'filename' => 'php-7.1.10.tar.bz2',
           'name' => 'PHP 7.1.10 (tar.bz2)',
           'sha256' => '0ee51b9b1ae7eca3e9558f772ce20cbacd1f76420009b3af630c87027f9a41af',
-          'date' => '28 Sep Aug 2017',
+          'date' => '28 Sep 2017',
         ),
         1 => 
         array (
