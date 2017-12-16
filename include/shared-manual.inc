@@ -70,9 +70,9 @@ class ManualNotesSorter {
     private function calcRatingPriority(array $note) {
         if ($note['total'] <= 2) {
             return 0.5;
-        } else {
-            return $note['rating'];
         }
+        
+        return $note['rating'];
     }
 
 
@@ -97,9 +97,9 @@ class ManualNotesSorter {
             return 1;
         } elseif ($a['sort'] == $b['sort']) {
             return 0;
-        } else {
-            return -1;
         }
+        
+        return -1;
     }
 
 
