@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom" xmlns:default="http://php.net/ns/news">
+  <title>php[tek] 2018 : Call for Speakers</title>
+  <id>http://php.net/archive/2017.php#id2017-11-20-1</id>
+  <published>2017-11-20T21:55:38+00:00</published>
+  <updated>2017-11-20T21:55:38+00:00</updated>
+  <default:finalTeaserDate xmlns="http://php.net/ns/news">2017-12-29</default:finalTeaserDate>
+  <category term="cfp" label="Call for Papers"/>
+  <link href="http://php.net/conferences/index.php#id2017-11-20-1" rel="alternate" type="text/html"/>
+  <default:newsImage xmlns="http://php.net/ns/news" link="https://tek.phparch.com/" title="php[tek] 2018">tek-basic.png</default:newsImage>
+  <link href="https://tek.phparch.com/" rel="via" type="text/html"/>
+  <content type="xhtml">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+     The 13th annual edition of <a href="https://tek.phparch.com/?paref=phpnet&amp;utm_campaign=phpnet">php[tek]</a>, the longest running community focused PHP conference in the USA, will be taking place May 30 - June 1, 2018 in Atlanta, with workshop and training days preceeding it. We have opened up our <a href="https://tek.phparch.com/call-for-speakers/?paref=phpnet&amp;utm_campaign=phpnet">Call for Speakers</a> and look forward to seeing all the amazing proposals that you will submit to us.
+     
+     As always we plan on offering a broad range of topics with our attendees. We are interested in any topics related to PHP development, as well as non-technical talks that will appeal to a developer heavy audience!
+     
+     Our comprehensive speaker's package this year includes:
+     
+     - A free conference ticket
+     - Round-trip economy airfare booked by us
+     - Accommodations at the conference hotel:
+       - 3 nights for speakers
+       - 4 nights for workshop presenters
+       - 5 nights for training class teachers
+     
+     Don't hesitate, the <a href="https://tek.phparch.com/call-for-speakers/?paref=phpnet&amp;utm_campaign=phpnet">Call for Speakers</a> is only open until December 29th, 2017. So get those submissions in soon, we look forward to hearing from you!
+    </div>
+  </content>
+</entry>
