@@ -1,6 +1,7 @@
 <?php
 $OLDRELEASES = array (
   7 => 
+  array (
     '7.0.26' => 
     array (
       'announcement' => 
@@ -34,7 +35,6 @@ $OLDRELEASES = array (
       'date' => '23 Nov 2017',
       'museum' => false,
     ),
-  array (
     '7.1.11' => 
     array (
       'announcement' => 
