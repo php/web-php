@@ -8,6 +8,20 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 
 <h1>PHP 5 ChangeLog</h1>
 
+<section class="version" id="5.6.33"><!-- {{{ 5.6.33 -->
+<h3>Version 5.6.33</h3>
+<b><?php release_date('04-Jan-2018'); ?></b>
+<ul><li>GD:
+<ul>
+  <li><?php bugfix(75571); ?> (Potential infinite loop in gdImageCreateFromGifCtx).</li>
+</ul></li>
+<li>Phar:
+<ul>
+  <li><?php bugfix(74782); ?> (Reflected XSS in .phar 404 page).</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
 <section class="version" id="5.6.32"><!-- {{{ 5.6.32 -->
 <h3>Version 5.6.32</h3>
 <b><?php release_date('26-Oct-2017'); ?></b>
