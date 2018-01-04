@@ -7,6 +7,114 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
 
 <h1>PHP 7 ChangeLog</h1>
 
+<section class="version" id="7.2.1"><!-- {{{ 7.2.1 -->
+<h3>Version 7.2.1</h3>
+<b><?php release_date('04-Jan-2018'); ?></b>
+<ul><li>Core:
+<ul>
+  <li><?php bugfix(75573); ?> (Segmentation fault in 7.1.12 and 7.0.26).</li>
+  <li><?php bugfix(75384); ?> (PHP seems incompatible with OneDrive files on demand).</li>
+  <li><?php bugfix(75525); ?> (Access Violation in vcruntime140.dll).</li>
+  <li><?php bugfix(74862); ?> (Unable to clone instance when private __clone defined).</li>
+  <li><?php bugfix(75074); ?> (php-process crash when is_file() is used with strings longer 260 chars).</li>
+</ul></li>
+<li>CLI server:
+<ul>
+  <li><?php bugfix(73830); ?> (Directory does not exist).</li>
+</ul></li>
+<li>FPM:
+<ul>
+  <li><?php bugfix(64938); ?> (libxml_disable_entity_loader setting is shared between requests).</li>
+</ul></li>
+<li>GD:
+<ul>
+  <li><?php bugfix(75571); ?> (Potential infinite loop in gdImageCreateFromGifCtx).</li>
+</ul></li>
+<li>Opcache:
+<ul>
+  <li><?php bugfix(75608); ?> ("Narrowing occurred during type inference" error).</li>
+  <li><?php bugfix(75579); ?> (Interned strings buffer overflow may cause crash).</li>
+  <li><?php bugfix(75570); ?> ("Narrowing occurred during type inference" error).</li>
+  <li><?php bugfix(75556); ?> (Invalid opcode 138/1/1).</li>
+</ul></li>
+<li>PCRE:
+<ul>
+  <li><?php bugfix(74183); ?> (preg_last_error not returning error code after error).</li>
+</ul></li>
+<li>Phar:
+<ul>
+  <li><?php bugfix(74782); ?> (remove file name from output to avoid XSS).</li>
+</ul></li>
+<li>Standard:
+<ul>
+  <li><?php bugfix(75511); ?> (fread not free unused buffer).</li>
+  <li><?php bugfix(75514); ?> (mt_rand returns value outside [$min,$max]+ on 32-bit) (Remi)</li>
+  <li><?php bugfix(75535); ?> (Inappropriately parsing HTTP response leads to PHP segment fault).</li>
+  <li><?php bugfix(75409); ?> (accept EFAULT in addition to ENOSYS as indicator that getrandom() is missing).</li>
+  <li><?php bugfix(73124); ?> (php_ini_scanned_files() not reporting correctly).</li>
+  <li><?php bugfix(75574); ?> (putenv does not work properly if parameter contains non-ASCII unicode character).</li>
+</ul></li>
+<li>Zip:
+<ul>
+  <li><?php bugfix(75540); ?> (Segfault with libzip 1.3.1).</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
+
+<section class="version" id="7.1.13"><!-- {{{ 7.1.13 -->
+<h3>Version 7.1.13</h3>
+<b><?php release_date('04-Jan-2018'); ?></b>
+<ul><li>Core:
+<ul>
+  <li><?php bugfix(75573); ?> (Segmentation fault in 7.1.12 and 7.0.26).</li>
+  <li><?php bugfix(75384); ?> (PHP seems incompatible with OneDrive files on demand).</li>
+  <li><?php bugfix(74862); ?> (Unable to clone instance when private __clone defined).</li>
+  <li><?php bugfix(75074); ?> (php-process crash when is_file() is used with strings longer 260 chars).</li>
+</ul></li>
+<li>CLI Server:
+<ul>
+  <li><?php bugfix(60471); ?> (Random "Invalid request (unexpected EOF)" using a router script).</li>
+  <li><?php bugfix(73830); ?> (Directory does not exist).</li>
+</ul></li>
+<li>FPM:
+<ul>
+  <li><?php bugfix(64938); ?> (libxml_disable_entity_loader setting is shared between requests).</li>
+</ul></li>
+<li>GD:
+<ul>
+  <li><?php bugfix(75571); ?> (Potential infinite loop in gdImageCreateFromGifCtx).</li>
+</ul></li>
+<li>Opcache:
+<ul>
+  <li><?php bugfix(75608); ?> ("Narrowing occurred during type inference" error).</li>
+  <li><?php bugfix(75579); ?> (Interned strings buffer overflow may cause crash).</li>
+  <li><?php bugfix(75570); ?> ("Narrowing occurred during type inference" error).</li>
+</ul></li>
+<li>PCRE:
+<ul>
+  <li><?php bugfix(74183); ?> (preg_last_error not returning error code after error).</li>
+</ul></li>
+<li>Phar:
+<ul>
+  <li><?php bugfix(74782); ?> (remove file name from output to avoid XSS).</li>
+</ul></li>
+<li>Standard:
+<ul>
+  <li><?php bugfix(75511); ?> (fread not free unused buffer).</li>
+  <li><?php bugfix(75514); ?> (mt_rand returns value outside [$min,$max]+ on 32-bit) (Remi)</li>
+  <li><?php bugfix(75535); ?> (Inappropriately parsing HTTP response leads to PHP segment fault).</li>
+  <li><?php bugfix(75409); ?> (accept EFAULT in addition to ENOSYS as indicator that getrandom() is missing).</li>
+  <li><?php bugfix(73124); ?> (php_ini_scanned_files() not reporting correctly).</li>
+  <li><?php bugfix(75574); ?> (putenv does not work properly if parameter contains non-ASCII unicode character).</li>
+</ul></li>
+<li>Zip:
+<ul>
+  <li><?php bugfix(75540); ?> (Segfault with libzip 1.3.1).</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
 <section class="version" id="7.0.27"><!-- {{{ 7.0.27 -->
 <h3>Version 7.0.27</h3>
 <b><?php release_date('04-Jan-2018'); ?></b>
