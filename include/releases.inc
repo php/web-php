@@ -2,6 +2,138 @@
 $OLDRELEASES = array (
   7 => 
   array (
+    '7.2.1' => 
+    array (
+      'announcement' => 
+      array (
+        'English' => '/releases/7_2_1.php',
+      ),
+      'source' => 
+      array (
+        0 => 
+        array (
+          'filename' => 'php-7.2.1.tar.bz2',
+          'name' => 'PHP 7.2.1 (tar.bz2)',
+          'sha256' => 'fe06793f268a4dd29cbc5f4ef415f01e786877152b02221ad7d18dbb6864eb79',
+          'date' => '4 Jan 2018',
+        ),
+        1 => 
+        array (
+          'filename' => 'php-7.2.1.tar.gz',
+          'name' => 'PHP 7.2.1 (tar.gz)',
+          'sha256' => '8ecb2950571054a00687ccbd023874a4a075ccd1e2ec3dc00fc25ef589a77dba',
+          'date' => '4 Jan 2018',
+        ),
+        2 => 
+        array (
+          'filename' => 'php-7.2.1.tar.xz',
+          'name' => 'PHP 7.2.1 (tar.xz)',
+          'sha256' => '6c6cf82fda6660ed963821eb0525214bb3547e8e29f447b9c15b2d8e6efd8822',
+          'date' => '4 Jan 2018',
+        ),
+      ),
+      'date' => '4 Jan 2018',
+      'museum' => false,
+    ),
+    '7.1.13' => 
+    array (
+      'announcement' => 
+      array (
+        'English' => '/releases/7_1_13.php',
+      ),
+      'source' => 
+      array (
+        0 => 
+        array (
+          'filename' => 'php-7.1.13.tar.bz2',
+          'name' => 'PHP 7.1.13 (tar.bz2)',
+          'sha256' => '35fda51d2d44600940185fd5818d336a79e77ab3c98e2bd075091f2f91cf98a1',
+          'date' => '4 Jan 2018',
+        ),
+        1 => 
+        array (
+          'filename' => 'php-7.1.13.tar.gz',
+          'name' => 'PHP 7.1.13 (tar.gz)',
+          'sha256' => '12fcbf59c9eb9af215ef38815d5da39b9d74549092c34b0dfc31442699740ce9',
+          'date' => '4 Jan 2018',
+        ),
+        2 => 
+        array (
+          'filename' => 'php-7.1.13.tar.xz',
+          'name' => 'PHP 7.1.13 (tar.xz)',
+          'sha256' => '1a0b3f2fb61959b57a3ee01793a77ed3f19bde5aa90c43dcacc85ea32f64fc10',
+          'date' => '4 Jan 2018',
+        ),
+      ),
+      'date' => '4 Jan 2018',
+      'museum' => false,
+    ),
+    '7.2.0' => 
+    array (
+      'announcement' => 
+      array (
+        'English' => '/releases/7_2_0.php',
+      ),
+      'source' => 
+      array (
+        0 => 
+        array (
+          'filename' => 'php-7.2.0.tar.bz2',
+          'name' => 'PHP 7.2.0 (tar.bz2)',
+          'sha256' => '2bfefae4226b9b97879c9d33078e50bdb5c17f45ff6e255951062a529720c64a',
+          'date' => '30 Nov 2017',
+        ),
+        1 => 
+        array (
+          'filename' => 'php-7.2.0.tar.gz',
+          'name' => 'PHP 7.2.0 (tar.gz)',
+          'sha256' => '801876abd52e0dc58a44701344252035fd50702d8f510cda7fdb317ab79897bc',
+          'date' => '30 Nov 2017',
+        ),
+        2 => 
+        array (
+          'filename' => 'php-7.2.0.tar.xz',
+          'name' => 'PHP 7.2.0 (tar.xz)',
+          'sha256' => '87572a6b924670a5d4aac276aaa4a94321936283df391d702c845ffc112db095',
+          'date' => '30 Nov 2017',
+        ),
+      ),
+      'date' => '30 Nov 2017',
+      'museum' => false,
+    ),
+    '7.1.12' => 
+    array (
+      'announcement' => 
+      array (
+        'English' => '/releases/7_1_12.php',
+      ),
+      'source' => 
+      array (
+        0 => 
+        array (
+          'filename' => 'php-7.1.12.tar.bz2',
+          'name' => 'PHP 7.1.12 (tar.bz2)',
+          'sha256' => 'f9ce3361ab99dce8f3f2fba663695ac9b18a3579bc8014dc280368d1577d87c4',
+          'date' => '23 Nov 2017',
+        ),
+        1 => 
+        array (
+          'filename' => 'php-7.1.12.tar.gz',
+          'name' => 'PHP 7.1.12 (tar.gz)',
+          'sha256' => '188c67d8e424ce7a6fe93475aa64f53182c1d80ca3ac99439651ca91569d969c',
+          'date' => '23 Nov 2017',
+        ),
+        2 => 
+        array (
+          'filename' => 'php-7.1.12.tar.xz',
+          'name' => 'PHP 7.1.12 (tar.xz)',
+          'sha256' => 'a0118850774571b1f2d4e30b4fe7a4b958ca66f07d07d65ebdc789c54ba6eeb3',
+          'date' => '23 Nov 2017',
+        ),
+      ),
+      'date' => '23 Nov 2017',
+      'museum' => false,
+    ),
     '7.0.26' => 
     array (
       'announcement' => 
