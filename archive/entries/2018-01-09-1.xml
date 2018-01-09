@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom" xmlns:default="http://php.net/ns/news">
+  <title>Dutch PHP Conference 2018</title>
+  <id>http://php.net/archive/2018.php#id2018-01-09-1</id>
+  <published>2018-01-09T13:30:36+00:00</published>
+  <updated>2018-01-09T13:30:36+00:00</updated>
+  <default:finalTeaserDate xmlns="http://php.net/ns/news">2018-06-07</default:finalTeaserDate>
+  <category term="conferences" label="Conference announcement"/>
+  <link href="http://php.net/conferences/index.php#id2018-01-09-1" rel="alternate" type="text/html"/>
+  <default:newsImage xmlns="http://php.net/ns/news" link="https://www.phpconference.nl/" title="Dutch PHP Conference 2018">dpc_2018.png</default:newsImage>
+  <link href="https://www.phpconference.nl/" rel="via" type="text/html"/>
+  <content type="xhtml">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+     We are glad to announce that we’ll be organizing the 12th edition of the Dutch PHP Conference, which will be held in Amsterdam from June 7th to 9th 2018. Thursday the 7th will be the tutorial day and June 8 and 9 will be the main conference days. DPC brings together the best speakers and PHP, Javascript and front-end talent from Europe and beyond for three days of high-level technical sessions.
+
+     In-depth tutorial sessions
+     The tutorial day on Thursday June 7th at the same venue gives an opportunity for a smaller number of attendees to spend some time with an expert, going in-depth on particular topics. These are small groups so that presenters can respond to individual questions, and as a result places are limited.
+     
+     More information about the Dutch PHP Conference at  www.phpconference.nl
+     
+    </div>
+  </content>
+</entry>
