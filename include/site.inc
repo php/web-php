@@ -188,12 +188,12 @@ function mirror_setcookie($name, $content, $exptime)
     if (!headers_sent()) {
         if (is_official_mirror()) {
             return setcookie($name, $content, time() + $exptime, '/', '.php.net');
-        } else {
-            return setcookie($name, $content, time() + $exptime, '/');
         }
-    } else {
-        return FALSE;
+
+        return setcookie($name, $content, time() + $exptime, '/');
     }
+    
+    return FALSE;
 }
 
 function organise_mirrors($mirrors) {
@@ -299,9 +299,9 @@ function fetch_contents($url, $headers = false) {
             foreach($array as $line) {
                 if (strlen($line)<=2) {
                     return $header;
-                } else {
-                    $header[] = $line;
                 }
+                
+                $header[] = $line;
             }
         }
         if (!$data) {

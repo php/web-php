@@ -323,9 +323,9 @@ function get_branch_support_state($branch) {
 			return 'security';
 		} elseif ($now >= $initial) {
 			return 'stable';
-		} else {
-			return 'future';
 		}
+		
+		return 'future';
 	}
 
 	return null;

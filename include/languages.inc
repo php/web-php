@@ -108,18 +108,17 @@ function language_convert($langcode, $to_phpweb_format = TRUE)
                 return "en";
         }
     }
-    else {
-        switch ($langcode) {
-            case 'cn': return 'zh_cn';
-            case 'hk': return 'zh_hk';
-            case 'tw': return 'zh_tw';
-            case 'kr': return 'ko';
-            default:
-                if (isset($LANGUAGES[$langcode])) {
-                    return $langcode;
-                }
-                // Fallback on english if we got something wacky
-                return "en";
-        }
+    
+    switch ($langcode) {
+        case 'cn': return 'zh_cn';
+        case 'hk': return 'zh_hk';
+        case 'tw': return 'zh_tw';
+        case 'kr': return 'ko';
+        default:
+            if (isset($LANGUAGES[$langcode])) {
+                return $langcode;
+            }
+            // Fallback on english if we got something wacky
+            return "en";
     }
 }

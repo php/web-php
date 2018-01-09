@@ -45,7 +45,8 @@ function highlight_php($code, $return = FALSE)
     ) . '</div>';
 
     if ($return) { return $highlighted; }
-    else { echo $highlighted; }
+    
+    echo $highlighted;
 }
 
 // Stats pages still need this

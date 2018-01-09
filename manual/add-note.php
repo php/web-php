@@ -139,17 +139,14 @@ if ($process) {
     }
     
     // There was an error, or a preview is needed
-    else {
-
-        // If there was an error, print out
-        if ($error) { echo "<p class=\"formerror\">$error</p>\n"; }
+    // If there was an error, print out
+    if ($error) { echo "<p class=\"formerror\">$error</p>\n"; }
         
-        // Print out preview of note
-        echo '<p>This is what your entry will look like, roughly:</p>';
-        echo '<div id="usernotes">';
-        manual_note_display(time(), ($MQ ? stripslashes($user) : $user), ($MQ ? stripslashes($note) : $note), FALSE);
-        echo '</div><br><br>';
-    }
+    // Print out preview of note
+    echo '<p>This is what your entry will look like, roughly:</p>';
+    echo '<div id="usernotes">';
+    manual_note_display(time(), ($MQ ? stripslashes($user) : $user), ($MQ ? stripslashes($note) : $note), FALSE);
+    echo '</div><br><br>';
 }
 
 // Any needed variable was missing => display instructions
