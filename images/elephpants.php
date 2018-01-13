@@ -35,7 +35,7 @@ header('Expires: ' . date(DATE_RSS, $future));
 
 // determine how many images to serve.
 if (isset($_REQUEST['count'])) {
-    $count = min(intval($_REQUEST['count']), 50);
+    $count = min((int) ($_REQUEST['count']), 50);
 } else {
     header('HTTP/1.1 400', true, 400);
     print json_encode(array(
