@@ -4,41 +4,33 @@ $TOC = array();
 $PARENTS = array();
 
 $setup = array(
-  'home' =>
-  array(
+  'home' => array(
     0 => 'index.php',
     1 => 'PHP Manual',
   ),
-  'head' =>
-  array(
+  'head' => array(
     0 => 'UTF-8',
     1 => 'en',
   ),
-  'this' =>
-  array(
+  'this' => array(
     0 => 'index.php',
     1 => 'PHP Manual',
   ),
-  'up' =>
-  array(
+  'up' => array(
     0 => null,
     1 => null,
   ),
-  'prev' =>
-  array(
+  'prev' => array(
     0 => null,
     1 => null,
   ),
-  'next' =>
-  array(
+  'next' => array(
     0 => null,
     1 => null,
   ),
-  'alternatives' =>
-  array(
+  'alternatives' => array(
   ),
-  'extra_header_links' =>
-  array(
+  'extra_header_links' => array(
     'rel' => 'alternate',
     'href' => '/manual/en/feeds/index.atom',
     'type' => 'application/atom+xml',

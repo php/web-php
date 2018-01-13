@@ -4,41 +4,33 @@ $TOC = array();
 $PARENTS = array();
 include_once __DIR__ .'/toc/index.inc';
 $setup = array(
-  'home' =>
-  array(
+  'home' => array(
     0 => 'index.php',
     1 => 'PHP Manual',
   ),
-  'head' =>
-  array(
+  'head' => array(
     0 => 'UTF-8',
     1 => 'en',
   ),
-  'this' =>
-  array(
+  'this' => array(
     0 => 'funcref.php',
     1 => 'Function Reference',
   ),
-  'up' =>
-  array(
+  'up' => array(
     0 => 'index.php',
     1 => 'PHP Manual',
   ),
-  'prev' =>
-  array(
+  'prev' => array(
     0 => 'features.dtrace.systemtap.php',
     1 => 'Using SystemTap with PHP DTrace Static Probes',
   ),
-  'next' =>
-  array(
+  'next' => array(
     0 => 'refs.basic.php.php',
     1 => 'Affecting PHP\'s Behaviour',
   ),
-  'alternatives' =>
-  array(
+  'alternatives' => array(
   ),
-  'extra_header_links' =>
-  array(
+  'extra_header_links' => array(
     'rel' => 'alternate',
     'href' => '/manual/en/feeds/funcref.atom',
     'type' => 'application/atom+xml',

@@ -4,41 +4,33 @@ $TOC = array();
 $PARENTS = array();
 include_once __DIR__ .'/toc/funcref.inc';
 $setup = array(
-  'home' =>
-  array(
+  'home' => array(
     0 => 'index.php',
     1 => 'PHP Manual',
   ),
-  'head' =>
-  array(
+  'head' => array(
     0 => 'UTF-8',
     1 => 'en',
   ),
-  'this' =>
-  array(
+  'this' => array(
     0 => 'refs.basic.vartype.php',
     1 => 'Variable and Type Related Extensions',
   ),
-  'up' =>
-  array(
+  'up' => array(
     0 => 'funcref.php',
     1 => 'Function Reference',
   ),
-  'prev' =>
-  array(
+  'prev' => array(
     0 => 'changelog.strings.php',
     1 => 'Changelog',
   ),
-  'next' =>
-  array(
+  'next' => array(
     0 => 'book.array.php',
     1 => 'Arrays',
   ),
-  'alternatives' =>
-  array(
+  'alternatives' => array(
   ),
-  'extra_header_links' =>
-  array(
+  'extra_header_links' => array(
     'rel' => 'alternate',
     'href' => '/manual/en/feeds/refs.basic.vartype.atom',
     'type' => 'application/atom+xml',

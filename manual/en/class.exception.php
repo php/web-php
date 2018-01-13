@@ -4,41 +4,33 @@ $TOC = array();
 $PARENTS = array();
 include_once __DIR__ .'/toc/reserved.exceptions.inc';
 $setup = array(
-  'home' =>
-  array(
+  'home' => array(
     0 => 'index.php',
     1 => 'PHP Manual',
   ),
-  'head' =>
-  array(
+  'head' => array(
     0 => 'UTF-8',
     1 => 'en',
   ),
-  'this' =>
-  array(
+  'this' => array(
     0 => 'class.exception.php',
     1 => 'Exception',
   ),
-  'up' =>
-  array(
+  'up' => array(
     0 => 'reserved.exceptions.php',
     1 => 'Predefined Exceptions',
   ),
-  'prev' =>
-  array(
+  'prev' => array(
     0 => 'reserved.exceptions.php',
     1 => 'Predefined Exceptions',
   ),
-  'next' =>
-  array(
+  'next' => array(
     0 => 'exception.construct.php',
     1 => 'Exception::__construct',
   ),
-  'alternatives' =>
-  array(
+  'alternatives' => array(
   ),
-  'extra_header_links' =>
-  array(
+  'extra_header_links' => array(
     'rel' => 'alternate',
     'href' => '/manual/en/feeds/class.exception.atom',
     'type' => 'application/atom+xml',

@@ -4,38 +4,31 @@ $TOC = array();
 $PARENTS = array();
 include_once __DIR__ .'/toc/ref.strings.inc';
 $setup = array(
-  'home' =>
-  array(
+  'home' => array(
     0 => 'index.php',
     1 => 'PHP Manual',
   ),
-  'head' =>
-  array(
+  'head' => array(
     0 => 'UTF-8',
     1 => 'en',
   ),
-  'this' =>
-  array(
+  'this' => array(
     0 => 'function.strpos.php',
     1 => 'strpos',
   ),
-  'up' =>
-  array(
+  'up' => array(
     0 => 'ref.strings.php',
     1 => 'String Functions',
   ),
-  'prev' =>
-  array(
+  'prev' => array(
     0 => 'function.strpbrk.php',
     1 => 'strpbrk',
   ),
-  'next' =>
-  array(
+  'next' => array(
     0 => 'function.strrchr.php',
     1 => 'strrchr',
   ),
-  'alternatives' =>
-  array(
+  'alternatives' => array(
   ),
 );
 $setup['toc'] = $TOC;

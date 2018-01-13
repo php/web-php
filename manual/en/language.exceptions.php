@@ -4,41 +4,33 @@ $TOC = array();
 $PARENTS = array();
 include_once __DIR__ .'/toc/langref.inc';
 $setup = array(
-  'home' =>
-  array(
+  'home' => array(
     0 => 'index.php',
     1 => 'PHP Manual',
   ),
-  'head' =>
-  array(
+  'head' => array(
     0 => 'UTF-8',
     1 => 'en',
   ),
-  'this' =>
-  array(
+  'this' => array(
     0 => 'language.exceptions.php',
     1 => 'Exceptions',
   ),
-  'up' =>
-  array(
+  'up' => array(
     0 => 'langref.php',
     1 => 'Language Reference',
   ),
-  'prev' =>
-  array(
+  'prev' => array(
     0 => 'language.namespaces.faq.php',
     1 => 'FAQ: things you need to know about namespaces',
   ),
-  'next' =>
-  array(
+  'next' => array(
     0 => 'language.exceptions.extending.php',
     1 => 'Extending Exceptions',
   ),
-  'alternatives' =>
-  array(
+  'alternatives' => array(
   ),
-  'extra_header_links' =>
-  array(
+  'extra_header_links' => array(
     'rel' => 'alternate',
     'href' => '/manual/en/feeds/language.exceptions.atom',
     'type' => 'application/atom+xml',

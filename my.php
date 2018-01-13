@@ -110,17 +110,13 @@ site_header('My PHP.net', array('current' => 'community'));
 // Data for the language settings table
 $langinfo = array(
 
-    'Your preferred language' =>
-    $langpref,
+    'Your preferred language' => $langpref,
 
-    'Last seen language' =>
-    (isset($_COOKIE['LAST_LANG']) ? htmlentities($_COOKIE['LAST_LANG'], ENT_QUOTES | ENT_IGNORE, 'UTF-8') : 'None'),
+    'Last seen language' => (isset($_COOKIE['LAST_LANG']) ? htmlentities($_COOKIE['LAST_LANG'], ENT_QUOTES | ENT_IGNORE, 'UTF-8') : 'None'),
 
-    'Your Accept-Language browser setting' =>
-    (isset($_SERVER['HTTP_ACCEPT_LANGUAGE']) ? htmlentities($_SERVER['HTTP_ACCEPT_LANGUAGE'], ENT_QUOTES | ENT_IGNORE, 'UTF-8') : 'None'),
+    'Your Accept-Language browser setting' => (isset($_SERVER['HTTP_ACCEPT_LANGUAGE']) ? htmlentities($_SERVER['HTTP_ACCEPT_LANGUAGE'], ENT_QUOTES | ENT_IGNORE, 'UTF-8') : 'None'),
 
-    "The mirror's default language" =>
-    default_language(),
+    "The mirror's default language" => default_language(),
 
     'Default' => 'en'
 );
