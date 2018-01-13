@@ -48,7 +48,7 @@ foreach ($langs as $code => $name) {
 
 // Assemble form from collected data
 $langpref = "<select name=\"my_lang\">\n" .
-            join('', $options) . "</select>\n";
+            implode('', $options) . "</select>\n";
 
 // Save URL shortcut fallback setting
 if (isset($_POST['urlsearch'])) {

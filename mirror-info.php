@@ -31,7 +31,7 @@ if (!file_exists($filename)) {
 // Gets all available sqlite versions for possible future sqlite wrapper
 $sqlite = get_available_sqlites();
 
-$exts = join(get_loaded_extensions(), ',');
+$exts = implode(get_loaded_extensions(), ',');
 
 if (isset($_GET['token']) && md5($_GET['token']) === '19a3ec370affe2d899755f005e5cd90e') {
     $retval = run_self_tests();
@@ -48,7 +48,7 @@ if (isset($_GET['token']) && md5($_GET['token']) === '19a3ec370affe2d899755f005e
     exit(0);
 }
 
-echo join('|', array(
+echo implode('|', array(
     $MYSITE,            	// 0 : CNAME for mirror as accessed (CC, CC1, etc.)
     phpversion(),       	// 1 : PHP version overview
     $LAST_UPDATED,      	// 2 : Update problems
