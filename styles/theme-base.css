@@ -8,7 +8,7 @@
  *
  * Designed and built with all the love in the world @twitter by @mdo and @fat.
  */
- 
+
 .clearfix {
   *zoom: 1;
 }
@@ -288,7 +288,7 @@ code,
 pre.info,
 .docs .classsynopsis,
 .docs .classsynopsis code {
-  font: normal 0.875rem/1.5rem "Fira Mono", "Source Code Pro", monospace; 
+  font: normal 0.875rem/1.5rem "Fira Mono", "Source Code Pro", monospace;
   word-wrap: break-word;
 }
 p code,
@@ -1004,7 +1004,7 @@ fieldset {
     z-index: 2 !important;
 }
 
-.tt-dropdown-menu {    
+.tt-dropdown-menu {
     background: none repeat scroll 0 0 #E2E4EF;
     border-bottom: 1px solid #C4C9DF;
     border-radius: 0 0 2px 2px;
@@ -1414,7 +1414,7 @@ ul.chunklist_children {
 .docs .layout-menu ul.parent-menu-list > li {
     margin-top:0;
     margin-bottom:0;
-    
+
 }
 .docs .layout-menu ul.parent-menu-list > li > a {
     border:0;
@@ -1582,7 +1582,7 @@ div.soft-deprecation-notice blockquote.sidebar {
   #breadcrumbs-inner,
   #goto div,
   #trick div,
-  #layout, 
+  #layout,
   body > footer .footer-content {
     width:1440px;
   }
@@ -1597,20 +1597,20 @@ div.soft-deprecation-notice blockquote.sidebar {
   .navbar-fixed-top .container {
     width:auto;
   }
-  
+
   .navbar-search {
     float:left;
     clear: both;
     margin-top: 0;
     padding: 0px 10px 10px 10px;
   }
-  
+
   .navbar .nav {
     margin-right: 0;
   }
-  
-  #intro .download-php { 
-    margin: 0 !important; 
+
+  #intro .download-php {
+    margin: 0 !important;
   }
 
   #mainmenu-toggle-overlay {
@@ -1650,7 +1650,7 @@ div.soft-deprecation-notice blockquote.sidebar {
     display: block;
     margin-left: 12px;
   }
-  
+
   .navbar .nav {
     clear: both;
     float: none;
@@ -1662,14 +1662,14 @@ div.soft-deprecation-notice blockquote.sidebar {
     -ms-transition: max-height 400ms;
     transition: max-height 400ms;
   }
-  
+
   .navbar .nav > li, .footmenu > li {
     float: none;
     display: block;
     text-align: center;
-  
+
   }
-  
+
   .navbar .nav > li a, .footmenu > li > a {
     width: 100%;
     display: block;
