@@ -9,7 +9,7 @@ include_once $_SERVER['DOCUMENT_ROOT'] . '/include/posttohost.inc';
 include_once $_SERVER['DOCUMENT_ROOT'] . '/include/shared-manual.inc';
 include      $_SERVER['DOCUMENT_ROOT'] . '/manual/spam_challenge.php';
 
-site_header('Add Manual Note', array( 'css' => 'add-note.css'));
+site_header('Add Manual Note', array('css' => 'add-note.css'));
 
 // Copy over "sect" and "redirect" from GET to POST
 if (empty($_POST['sect']) && isset($_GET['sect'])) {
