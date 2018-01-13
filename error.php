@@ -174,7 +174,7 @@ if (preg_match('!^get/([^/]+)/from/([^/]+)(/mirror)?$!', $URI, $dlinfo)) {
         download_file($mr, $filename);
     } else {
         status_header(404);
-        /* The file didn't exist on this server.. ask the user to pick another mirror */
+        // The file didn't exist on this server.. ask the user to pick another mirror
         include $_SERVER['DOCUMENT_ROOT'] . '/include/get-download.inc';
     }
     exit;
@@ -273,7 +273,7 @@ if (isset($manual_page_moves[$URI])) {
 // Define shortcuts for PHP files, manual pages and external redirects
 $uri_aliases = array(
 
-    # PHP page shortcuts
+    // PHP page shortcuts
     'download'      => 'downloads',
     'getphp'        => 'downloads',
     'getdocs'       => 'download-docs',
@@ -287,7 +287,7 @@ $uri_aliases = array(
     'subscribe'     => 'mailing-lists',
     'logos'         => 'download-logos',
 
-    # manual shortcuts
+    // manual shortcuts
     'intro'        => 'introduction',
     'whatis'       => 'introduction',
     'whatisphp'    => 'introduction',
@@ -428,36 +428,36 @@ $uri_aliases = array(
     'internals'              => 'internals2',       // BC
     'configuration.directives' => 'ini.core',       // BC
 
-    # regexp. BC
+    // regexp. BC
     'regexp.reference.backslash'      => 'regexp.reference.escape',
     'regexp.reference.circudollar'    => 'regexp.reference.anchors',
     'regexp.reference.squarebrackets' => 'regexp.reference.character-classes',
     'regexp.reference.verticalbar'    => 'regexp.reference.alternation',
 
-    # external shortcut aliases ;)
+    // external shortcut aliases ;)
     'dochowto'     => 'phpdochowto',
 
-    # CVS -> SVN
+    // CVS -> SVN
     'anoncvs.php'   => 'git',
     'cvs-php.php'   => 'git-php',
 
-    # SVN -> Git
+    // SVN -> Git
     'svn'           => 'git',
     'svn.php'       => 'git',
     'svn-php'       => 'git-php',
     'svn-php.php'   => 'git-php',
 
-    # CVSUp -> Nada
+    // CVSUp -> Nada
     'cvsup'         => 'mirroring',
 
-    # Other items
+    // Other items
     'security/crypt' => 'security/crypt_blowfish',
 
-    # Bugfixes
+    // Bugfixes
     'array_sort'    => 'sort', // #64743
     'array-sort'    => 'sort', // #64743
 
-    # Removed pages
+    // Removed pages
     'tips.php'      => 'urlhowto',
     'tips'          => 'urlhowto',
 );
@@ -602,7 +602,7 @@ $uri_aliases = array_merge($uri_aliases, $mysqli_redirects);
 
 if (isset($uri_aliases[$URI])) {
     $URI = $uri_aliases[$URI];
-    /* If it was a page alias, redirect right away */
+    // If it was a page alias, redirect right away
     if (file_exists($_SERVER['DOCUMENT_ROOT'] . "/$URI.php")) {
         mirror_redirect("/$URI.php");
     }
@@ -655,6 +655,4 @@ mirror_redirect(
     '/search.php?show=' . $fallback . '&lang=' . urlencode($LANG) .
     '&pattern=' . substr($_SERVER['REQUEST_URI'], 1)
 );
-/*
- * vim: set et ts=4 sw=4 ft=php: :
- */
+// vim: set et ts=4 sw=4 ft=php: :

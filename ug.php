@@ -28,7 +28,7 @@ function ug_get_more_info($group) {
 
     $filename = 'backend/events/' . md5($url);
 
-    /* Broken icalendar link */
+    // Broken icalendar link
     if (!file_exists($filename)) {
         return null;
     }
@@ -55,10 +55,10 @@ function ug_get_next_even_from_ical_array($ical) {
         }
     }
     if (!isset($data['DTSTAMP'])) {
-        /* There is no scheduled next meeting */
+        // There is no scheduled next meeting
         return array();
     }
-    /* Meetup.com seems to have fetish for injecting the TZ into the keyname */
+    // Meetup.com seems to have fetish for injecting the TZ into the keyname
     if (isset($data['TZID'])) {
         $data['STARTSAT'] = $data["DTSTART;TZID={$data['TZID']}"];
     } else {
@@ -83,7 +83,7 @@ function print_ug_matches($matches) {
             /* The icalendar has all sorts of weird trailing slashes and totally weirdo
              * newlines making this look like geocities */
             //$description = nl2br(htmlspecialchars($data["event"]["DESCRIPTION"]), false);
-            if ($url) { /* Google Calendar doesn't have this */
+            if ($url) { // Google Calendar doesn't have this
                 $details = "{$d} - <a href='$url'>{$summary}</a>"; //<br>" . $description;
             } else {
                 $details = "{$d} - $summary";// . $description;

@@ -40,7 +40,7 @@ site_header('Downloads',
     )
 );
 ?>
-<?php foreach ($RELEASES as $MAJOR => $major_releases): /* major releases loop start */
+<?php foreach ($RELEASES as $MAJOR => $major_releases): // major releases loop start
         $releases = array_slice($major_releases, 0, $SHOW_COUNT);
 ?>
 <a id="v<?php echo $MAJOR; ?>"></a>
@@ -92,7 +92,7 @@ The following official GnuPG keys of the current PHP Release Manager can be used
 to verify the tags:
 </p>
 
-<?php foreach ($RELEASES as $MAJOR => $major_releases): /* major releases loop start */
+<?php foreach ($RELEASES as $MAJOR => $major_releases): // major releases loop start
         $releases = array_slice($major_releases, 0, $SHOW_COUNT);
 ?>
 <?php foreach ($releases as $v => $_): ?>

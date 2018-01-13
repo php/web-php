@@ -24,8 +24,8 @@ if (isset($_GET['serialize']) || isset($_GET['json'])) {
 
 				$count = 1;
 
-				/* check if other $RELEASES[$ver] are there */
-				/* e.g., 5_3, 5_4, and 5_5 all exist and have a release */
+				// check if other $RELEASES[$ver] are there
+				// e.g., 5_3, 5_4, and 5_5 all exist and have a release
 				while(($z = each($RELEASES[$ver])) && $count++ < $max) {
 					$machineReadable[$z[0]] = $z[1];
 				}

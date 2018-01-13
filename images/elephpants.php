@@ -5,7 +5,7 @@ $now = $_SERVER['REQUEST_TIME'];
 if (isset($_SERVER['HTTP_IF_MODIFIED_SINCE'])) {
     $last = strtotime($_SERVER['HTTP_IF_MODIFIED_SINCE']);
 
-    /* Use the same logo for a day */
+    // Use the same logo for a day
     if (strtotime('+1 day', $last) > $now) {
         header('HTTP/1.1 304 Not Modified');
         exit;

@@ -82,4 +82,4 @@ $SIDEBAR_DATA ='
 
 site_footer(array('sidebar'=>$SIDEBAR_DATA));
 
-/* vim: set et ts=4 sw=4 ft=php: : */
+// vim: set et ts=4 sw=4 ft=php: :

@@ -32,7 +32,7 @@ $types = array(
 $indexfile = $_SERVER['DOCUMENT_ROOT'] . "/manual/$lang/search-index.json";
 $descfile = $_SERVER['DOCUMENT_ROOT'] . "/manual/$lang/search-description.json";
 
-/* {{{ Cache this */
+// {{{ Cache this
 $time = max(filemtime($indexfile), filemtime($descfile));
 $tsstring = gmdate('D, d M Y H:i:s ', $time) . 'GMT';
 if (isset($_SERVER['HTTP_IF_MODIFIED_SINCE']) &&
@@ -43,7 +43,7 @@ if (isset($_SERVER['HTTP_IF_MODIFIED_SINCE']) &&
 
 header('Last-Modified: ' . $tsstring);
 header('Content-Type: application/javascript');
-/* }}} */
+// }}}
 
 $s = file_get_contents($indexfile);
 $js = json_decode($s, true);
@@ -51,7 +51,7 @@ $js = json_decode($s, true);
 $index = array();
 foreach($js as $item) {
     if ($item[0]) {
-        /* key: ID/filename, 0=>*/
+        // key: ID/filename, 0=>
         $index[$item[1]] = array($item[0], '', $item[2]);
     }
 }
