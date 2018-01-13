@@ -38,7 +38,7 @@ if (isset($_REQUEST['count'])) {
     $count = min((int) ($_REQUEST['count']), 50);
 } else {
     header('HTTP/1.1 400', true, 400);
-    print json_encode(array(
+    echo json_encode(array(
         'error' => "Specify how many elephpants to serve via 'count'."
     ));
     exit;
@@ -52,7 +52,7 @@ $photos = json_decode($json, true);
 // if no photo data, respond with an error.
 if (!$photos || !is_array($photos)) {
     header('HTTP/1.1 500', true, 500);
-    print json_encode(array(
+    echo json_encode(array(
         'error' => 'No elephpant metadata available.'
     ));
     exit;
@@ -83,4 +83,4 @@ foreach ($photos as $photo) {
     );
 }
 
-print json_encode($elephpants);
+echo json_encode($elephpants);
