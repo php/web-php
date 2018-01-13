@@ -2,7 +2,7 @@
 include_once $_SERVER['DOCUMENT_ROOT'] . '/include/shared-manual.inc';
 $TOC = array();
 $PARENTS = array();
-include_once dirname(__FILE__) .'/toc/reserved.exceptions.inc';
+include_once __DIR__ .'/toc/reserved.exceptions.inc';
 $setup = array (
   'home' =>
   array (

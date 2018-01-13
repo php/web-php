@@ -2,7 +2,7 @@
 include_once $_SERVER['DOCUMENT_ROOT'] . '/include/shared-manual.inc';
 $TOC = array();
 $PARENTS = array();
-include_once dirname(__FILE__) .'/toc/context.inc';
+include_once __DIR__ .'/toc/context.inc';
 $setup = array (
   'home' =>
   array (
