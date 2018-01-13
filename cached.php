@@ -18,7 +18,7 @@ if (!isset($_GET['f'])) {
     exit;
 }
 $pwd = realpath($_SERVER['DOCUMENT_ROOT']);
-$abs = $pwd. '/' .(string) $_GET['f'];
+$abs = $pwd . '/' . (string) $_GET['f'];
 $abs = realpath($abs);
 
 if (strncmp($abs, $pwd, strlen($pwd)) != 0) {

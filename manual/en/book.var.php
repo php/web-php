@@ -2,7 +2,7 @@
 include_once $_SERVER['DOCUMENT_ROOT'] . '/include/shared-manual.inc';
 $TOC = array();
 $PARENTS = array();
-include_once __DIR__ .'/toc/refs.basic.vartype.inc';
+include_once __DIR__ . '/toc/refs.basic.vartype.inc';
 $setup = array(
   'home' => array(
     0 => 'index.php',

@@ -6,7 +6,7 @@ include_once $_SERVER['DOCUMENT_ROOT'] . '/include/posttohost.inc';
 
 // Force the account requests to php.net
 if (!is_primary_site()) {
-    header('Location: http://php.net/'.$_SERVER['BASE_PAGE']);
+    header('Location: http://php.net/' . $_SERVER['BASE_PAGE']);
     exit;
 }
 
@@ -59,7 +59,7 @@ if (count($_POST) && (!isset($_POST['purpose']) || !is_array($_POST['purpose']) 
     if (empty($_POST['id'])) {
         $error .= 'You must supply a desired Git user id. <br>';
     } elseif(!preg_match('!^[a-z]\w+$!', $_POST['id'])) {
-        $error .= 'Your user id must be >1 char long, start with '.
+        $error .= 'Your user id must be >1 char long, start with ' .
                   'a letter and contain nothing but a-z, 0-9, and _ <br>';
     }
     if (empty($_POST['fullname'])) {

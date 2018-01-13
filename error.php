@@ -633,7 +633,7 @@ if ($try) {
 }
 // BC. The class methods are now classname.methodname
 if (preg_match("!^manual/(.+)/function\.(.+)-(.+).php$!", $URI, $array)) {
-    $try = find_manual_page($array[1], $array[2]. '.' .$array[3]);
+    $try = find_manual_page($array[1], $array[2] . '.' . $array[3]);
     if ($try) {
         status_header(301);
         mirror_redirect($try);

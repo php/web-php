@@ -223,7 +223,7 @@ foreach ($mirror_sites as $murl => $mdata) {
     if ($murl == 'NONE') {
         $mname = 'Automatic selection (default)';
     } else {
-        $tmpurl = ' (' .substr($murl, strpos($murl, '//') + 2, -1). ')';
+        $tmpurl = ' (' . substr($murl, strpos($murl, '//') + 2, -1) . ')';
         if (isset($COUNTRIES[$mdata[0]])) {
             $mname = $COUNTRIES[$mdata[0]] . $tmpurl;
         } else {

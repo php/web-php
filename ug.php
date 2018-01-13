@@ -89,7 +89,7 @@ function print_ug_matches($matches) {
                 $details = "{$d} - $summary";// . $description;
             }
         }
-        echo '<dt class="ug"><a href="'. $group['url'].'">' . $group['name'] . "</a></dt><dd>$details</dd>";
+        echo '<dt class="ug"><a href="' . $group['url'] . '">' . $group['name'] . "</a></dt><dd>$details</dd>";
     }
     if (!$matches) {
         echo "<dt>Sorry</dt><dd>There are no known User Groups in {$COUNTRIES[$country]} at this time :(</dd>";

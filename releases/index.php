@@ -90,7 +90,7 @@ $SIDEBAR_DATA = '
   <a class="headline" href="/eol.php">End of Life Dates</a>
   <div class="body">
     <p>The most recent branches to reach end of life status are:</p>
-    <ul>'.$eol.'</ul>
+    <ul>' . $eol . '</ul>
   </div>
 </div>
 
@@ -158,11 +158,11 @@ function mk_rel($major, $ver, $date, $announcement, $source, $windows, $museum) 
     if ($announcement) {
         if (is_array($announcement)) {
             foreach($announcement as $ann => $url) {
-                echo '<a href="'.$url.'">' .$ann. '</a> ';
+                echo '<a href="' . $url . '">' . $ann . '</a> ';
             }
         } else {
             $url = str_replace('.', '_', $ver);
-            echo '<a href="/releases/' .$url. '.php">English</a>';
+            echo '<a href="/releases/' . $url . '.php">English</a>';
         }
     } else {
         echo 'None';
@@ -170,7 +170,7 @@ function mk_rel($major, $ver, $date, $announcement, $source, $windows, $museum) 
     echo "</li>\n";
 
     if ($major != 3) {
-        echo ' <li><a href="/ChangeLog-'.$major.'.php#' .$ver. '">ChangeLog</a></li>';
+        echo ' <li><a href="/ChangeLog-' . $major . '.php#' . $ver . '">ChangeLog</a></li>';
     }
     echo "\n <li>\n  Download:\n";
 
@@ -181,16 +181,16 @@ function mk_rel($major, $ver, $date, $announcement, $source, $windows, $museum) 
             if (isset($src['filename'])) {
                 download_link($src['filename'], $src['name']); echo "<br>\n";
                 if (isset($src['md5'])) {
-                    echo '<span class="md5sum">md5: ' .$src['md5']. "</span>\n";
+                    echo '<span class="md5sum">md5: ' . $src['md5'] . "</span>\n";
                     if (isset($src['sha256'])) {
                         echo '<br/>';
                     }
                 }
                 if (isset($src['sha256'])) {
-                    echo '<span class="sha256sum">sha256: ' .$src['sha256']. "</span>\n";
+                    echo '<span class="sha256sum">sha256: ' . $src['sha256'] . "</span>\n";
                 }
             } else {
-                echo '<a href="'.$src['link'].'">'.$src['name'].'</a>';
+                echo '<a href="' . $src['link'] . '">' . $src['name'] . '</a>';
             }
             echo " </li>\n";
         }
@@ -200,10 +200,10 @@ function mk_rel($major, $ver, $date, $announcement, $source, $windows, $museum) 
             if (!isset($src['filename'])) {
                 continue;
             }
-            printf('<a href="http://museum.php.net/php%d/%s">%s</a>'."\n", $major, $src['filename'], $src['name']);
+            printf('<a href="http://museum.php.net/php%d/%s">%s</a>' . "\n", $major, $src['filename'], $src['name']);
         }
         foreach($windows as $src) {
-            printf('<a href="http://museum.php.net/%s/%s">%s</a>'."\n", ($major == 5 ? 'php5' : 'win32'), $src['filename'], $src['name']);
+            printf('<a href="http://museum.php.net/%s/%s">%s</a>' . "\n", ($major == 5 ? 'php5' : 'win32'), $src['filename'], $src['name']);
         }
     }
 
@@ -213,11 +213,11 @@ function mk_rel($major, $ver, $date, $announcement, $source, $windows, $museum) 
 
 $latest = max(array_keys($OLDRELEASES));
 foreach($OLDRELEASES as $major => $a) {
-    echo '<a id="v' .$major. '"></a>';
+    echo '<a id="v' . $major . '"></a>';
     if ($major != $latest) {
         echo "\n<hr>\n";
         if ($major == 4) {
-            echo '<p>Support for PHP 4 has been <b style="color: red;">discontinued</b> since 2007-12-31. Please consider upgrading to PHP 5.</p>'."\n";
+            echo '<p>Support for PHP 4 has been <b style="color: red;">discontinued</b> since 2007-12-31. Please consider upgrading to PHP 5.</p>' . "\n";
         }
     }
 
