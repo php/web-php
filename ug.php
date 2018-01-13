@@ -108,7 +108,7 @@ if (isset($COUNTRIES[$country])) {
     echo '<h1>Unknown country</h1>';
 }
 
-uksort($allcountries, function($first, $second){
+uksort($allcountries, function ($first, $second) {
     global $COUNTRIES;
     return strnatcasecmp($COUNTRIES[$first], $COUNTRIES[$second]);
 });
