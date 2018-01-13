@@ -13,7 +13,7 @@ $test_add = array (
     'asasasd324324@php.net', 'jcastagnetto-delete-this-@yahoo.com',
     'wrong-address-with@@@@-remove_me-and-some-i-hate_SPAM-stuff');
 
-while (list(,$v) = each($test_add)) {
+while (list(, $v) = each($test_add)) {
     echo "The address: $v (".clean_AntiSpam($v).') is';
     if (!is_emailable_address(clean_AntiSPAM($v)))
         echo ' not';
