@@ -36,7 +36,6 @@ if (!empty($_FORM['pattern'])) {
             mirror_redirect("/manual-lookup.php?pattern={$ucp}{$langparam}&scope={$_FORM['show']}");
             break;
 
-
         case 'manual':
         case '404manual':
             mirror_redirect($MYSITE . "results.php?q={$ucp}&p={$_FORM['show']}&l=$LANG");

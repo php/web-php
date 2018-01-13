@@ -37,7 +37,6 @@ $challenges = array(
 	array('plus',  'print_infix', 'gen_plus'),
 );
 
-
 // generate a challenge
 function gen_challenge() {
 	global $challenges, $nums;
@@ -50,7 +49,6 @@ function gen_challenge() {
 
 	return array($c[0], $an, $bn, $c[1]($c[0], $an, $bn));
 }
-
 
 // test an answer for validity
 function test_answer($name, $an, $bn, $answer) {
@@ -70,6 +68,5 @@ function test_answer($name, $an, $bn, $answer) {
 
 	return ($nums[$c[0]($a, $b)] === $answer);
 }
-
 
 ?>

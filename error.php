@@ -131,7 +131,6 @@ if (preg_match('!^get/([^/]+)$!', $URI, $what)) {
     }
 }
 
-
 // ============================================================================
 // Nice URLs for download files, so wget works completely well with download links
 if (preg_match('!^get/([^/]+)/from/([^/]+)(/mirror)?$!', $URI, $dlinfo)) {
@@ -641,7 +640,6 @@ if (preg_match("!^manual/(.+)/function\.(.+)-(.+).php$!", $URI, $array)) {
         exit;
     }
 }
-
 
 // ============================================================================
 // 404 page for manual pages (eg. not built language)

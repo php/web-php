@@ -10,7 +10,6 @@ site_header('Hypertext Preprocessor',
     )
 );
 
-
 function print_cc_header($country) {
     global $COUNTRIES;
     ?>

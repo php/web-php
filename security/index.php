@@ -29,7 +29,6 @@ $SIDEBAR_DATA = <<< EOT
 </div>
 EOT;
 
-
 site_header('PHP Security center');
 echo "<h1>PHP Security Center</h1>\n";
 

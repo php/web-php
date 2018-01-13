@@ -16,7 +16,6 @@ $BACKid = htmlspecialchars(isset($_REQUEST['id']) ? $_REQUEST['id'] : '');
 $link = "/{$BACKpage}#{$BACKid}";
 $master_url = 'http://master.php.net/entry/user-notes-vote.php';
 
-
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
   if (isset($_SERVER['HTTP_X_JSON']) && $_SERVER['HTTP_X_JSON'] == 'On' && !empty($_REQUEST['id']) && !empty($_REQUEST['page']) && ($N = manual_notes_load($_REQUEST['page'])) && array_key_exists($_REQUEST['id'], $N) && !empty($_REQUEST['vote']) && ($_REQUEST['vote'] === 'up' || $_REQUEST['vote'] === 'down')) {
     $response = array();

@@ -10,7 +10,6 @@ $header_config = array(
 );
 site_header('Mirror Sites', $header_config);
 
-
 ?>
 <div id="mirrors-container">
 

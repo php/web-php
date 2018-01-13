@@ -15,7 +15,6 @@ if (!isset($LANGUAGES[$lang])) {
     $lang = 'en';
 }
 
-
 // HTTP status line is passed on, signifies an error
 site_header(
     'Search results',

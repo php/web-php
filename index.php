@@ -43,7 +43,6 @@ include_once 'include/version.inc';
 
 mirror_setcookie('LAST_NEWS', $_SERVER['REQUEST_TIME'], 60*60*24*365);
 
-
 $content = "<div class='home-content'>";
 $releasenews = 0;
 $frontpage = array();
