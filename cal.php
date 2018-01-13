@@ -19,7 +19,7 @@ $site_header_config = array(
  a fallback to display the actual month/year.
 */
 
-$begun = FALSE; $errors = array();
+$begun = false; $errors = array();
 $id = isset($_GET['id']) ? (int) $_GET['id'] : 0;
 $cy = isset($_GET['cy']) ? (int) $_GET['cy'] : 0;
 $cm = isset($_GET['cm']) ? (int) $_GET['cm'] : 0;
@@ -38,7 +38,7 @@ if ($id) {
     if ($event = load_event($id)) {
         site_header('Event: ' . stripslashes(htmlentities($event['sdesc'], ENT_QUOTES | ENT_IGNORE, 'UTF-8')), $site_header_config);
         display_event($event, 0);
-        $begun = TRUE;
+        $begun = true;
     }
     // Unable to find event, put this to the error messages' list
     else {
@@ -64,7 +64,7 @@ elseif ($cy && $cm && $cd) {
                 display_event($event, 0);
                 echo '<br>';
             }
-            $begun = TRUE;
+            $begun = true;
         }
 
         // Unable to load events for that day
@@ -111,10 +111,10 @@ if (!$begun) {
 }
 
 // Get events list for a whole month
-$events = load_events($date, TRUE);
+$events = load_events($date, true);
 
 // If there was an error, or there are no events, this is an error
-if ($events === FALSE || count($events) == 0) {
+if ($events === false || count($events) == 0) {
     $errors[] = 'No events found for this month';
 }
 
@@ -241,7 +241,7 @@ function load_event($id)
 {
     // Open events CSV file, return on error
     $fp = @fopen('backend/events.csv','r');
-    if (!$fp) { return FALSE; }
+    if (!$fp) { return false; }
 
     // Read as we can, event by event
     while (!feof($fp)) {
@@ -250,7 +250,7 @@ function load_event($id)
 
       // Return with the event, if it's ID is the one
       // we search for (also close the file)
-      if ($event !== FALSE && $event['id'] == $id) {
+      if ($event !== false && $event['id'] == $id) {
         fclose($fp);
         return $event;
       }
@@ -258,12 +258,12 @@ function load_event($id)
 
     // Close file, and return sign of failure
     fclose($fp);
-    return FALSE;
+    return false;
 }
 
 // Load a list of events. Either for a particular day ($from) or a whole
 // month (if second parameter specified with TRUE)
-function load_events($from, $whole_month = FALSE)
+function load_events($from, $whole_month = false)
 {
     // Take advantage of the equality behavior of this date format
     $from_date = date('Y-m-d', $from);
@@ -276,14 +276,14 @@ function load_events($from, $whole_month = FALSE)
 
     // Try to open the events file for reading, return if unable to
     $fp = @fopen('backend/events.csv','r');
-    if (!$fp) { return FALSE; }
+    if (!$fp) { return false; }
 
     // For all events, read in the event and check it if fits our scope
     while (!feof($fp)) {
 
         // Read the event data into $event, or continue with next
         // line, if there was an error with this line
-        if (($event = read_event($fp)) === FALSE) {
+        if (($event = read_event($fp)) === false) {
             continue;
         }
 
@@ -329,12 +329,12 @@ function load_events($from, $whole_month = FALSE)
 function read_event($fp)
 {
     // We were unable to read a line from the file, return
-    if (($linearr = fgetcsv($fp, 8192)) === FALSE) {
-        return FALSE;
+    if (($linearr = fgetcsv($fp, 8192)) === false) {
+        return false;
     }
 
     // Corrupt line in CSV file
-    if (count($linearr) < 13) { return FALSE; }
+    if (count($linearr) < 13) { return false; }
 
     // Get components
     list(
@@ -370,11 +370,11 @@ function valid_year($year)
 
     // We only allow this and the next year for displays
     if ($year != $current_year && $year != $current_year+1) {
-        return FALSE;
+        return false;
     }
 
     // The year is all right
-    return TRUE;
+    return true;
 }
 
 ?>

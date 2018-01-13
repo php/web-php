@@ -56,7 +56,7 @@ $functions = $maybe = $temp = $parts = array();
 $p = 0;
 
 // Get all file names from the directory
-while (($entry = readdir($dirh)) !== FALSE) {
+while (($entry = readdir($dirh)) !== false) {
 
     // Skip names starting with a dot
     if (substr($entry, 0, 1) == '.') { continue; }
@@ -72,7 +72,7 @@ while (($entry = readdir($dirh)) !== FALSE) {
 
             // If $notfound is a substring of $funcname then overwrite the score
             // similar_text() gave it.
-            if ($p < 70 && ($pos = strpos($funcname, $notfound)) !== FALSE) {
+            if ($p < 70 && ($pos = strpos($funcname, $notfound)) !== false) {
                 $p = 90 - $pos;
             }
             $temp[$entry] = $p;
@@ -95,7 +95,7 @@ if (count($temp) > 0) {
 
         // If the two are more then 70% similar or $notfound is a substring
         // of $funcname, then the match is a very similar one
-        if ($p >= 70 || (strpos($functions[$file], $notfound) !== FALSE)) {
+        if ($p >= 70 || (strpos($functions[$file], $notfound) !== false)) {
             $maybe[$file] = '<b>' . $functions[$file] . '</b>';
         }
         // Otherwise it is just similar

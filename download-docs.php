@@ -117,7 +117,7 @@ foreach ($LANGUAGES as $langcode => $language) {
             $changed = @filemtime($filepath);
 
             // Size available, collect information
-            if ($size !== FALSE) {
+            if ($size !== false) {
                 $files[$langcode][$formatname] = array(
                     $link_to,
                     (int) ($size/1024),
@@ -169,8 +169,8 @@ if (count($found_formats) == 0) {
     foreach ($files as $langcode => $lang_files) {
 
         // See if current language is the preferred one
-        if ($langcode == $LANG) { $preflang = TRUE; }
-        else { $preflang = FALSE; }
+        if ($langcode == $LANG) { $preflang = true; }
+        else { $preflang = false; }
 
         // Highlight manual in preferred language
         if ($preflang) {
