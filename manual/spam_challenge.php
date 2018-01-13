@@ -66,5 +66,5 @@ function test_answer($name, $an, $bn, $answer) {
 
 	if (empty($c) || $a === false || $b === false) return false;
 
-	return ($nums[$c[0]($a, $b)] === $answer);
+	return $nums[$c[0]($a, $b)] === $answer;
 }
