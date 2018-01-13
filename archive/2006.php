@@ -3,7 +3,7 @@
 $_SERVER['BASE_PAGE'] = 'archive/2006.php';
 include_once $_SERVER['DOCUMENT_ROOT'] . '/include/prepend.inc';
 news_archive_sidebar();
-site_header("News Archive - 2006", array("cache" => true));
+site_header('News Archive - 2006', array('cache' => true));
 ?>
 
 <h1>News Archive - 2006</h1>
@@ -13,7 +13,7 @@ site_header("News Archive - 2006", array("cache" => true));
 </p>
 
 <hr>
-<?php news_image("http://www.prophp.com.br/phpconference.php", "phpconfbrasil.jpg", "PHP Brasil 2007"); ?>
+<?php news_image('http://www.prophp.com.br/phpconference.php', 'phpconfbrasil.jpg', 'PHP Brasil 2007'); ?>
 <h1>PHP Conference Brazil</h1>
 <p>
  <span class="newsdate">[27-Nov-2006]</span>
@@ -54,7 +54,7 @@ site_header("News Archive - 2006", array("cache" => true));
 
 <hr>
 
-<?php news_image("http://www.afup.org/forumphp/", "afup2006.jpg", "AFUP Paris 2006"); ?>
+<?php news_image('http://www.afup.org/forumphp/', 'afup2006.jpg', 'AFUP Paris 2006'); ?>
 
 <h1>Forum PHP in Paris, France, November 9 &amp; 10th, 2006</h1>
 <p>
@@ -69,7 +69,7 @@ advanced techniques (in French).
 
 <hr>
 
-<?php news_image("http://phpconference.com/", "intconf2006fall.png", "International PHP Conference 2006"); ?>
+<?php news_image('http://phpconference.com/', 'intconf2006fall.png', 'International PHP Conference 2006'); ?>
 
 <h1>International PHP Conference 2006</h1>
 <p>
@@ -104,7 +104,7 @@ advanced techniques (in French).
 
 <hr>
 
-<?php news_image("http://www.amazon.com/exec/obidos/ASIN/0596528124/wwwphpnet", "mre3cover_sm.jpg", "Mastering Regular Expressions, 3rd edition"); ?>
+<?php news_image('http://www.amazon.com/exec/obidos/ASIN/0596528124/wwwphpnet', 'mre3cover_sm.jpg', 'Mastering Regular Expressions, 3rd edition'); ?>
 <h1>Mastering Regular Expressions - now with PHP coverage</h1>
 <p>
  <span class="newsdate">[24-Aug-2006]</span>
@@ -173,7 +173,7 @@ is available in the <a href="/ChangeLog-4.php#4.4.3">PHP 4 ChangeLog</a>.
 
 <hr>
 
-<?php news_image("http://www.phparch.com/works/", "phpworks.png", "php|works / db|works 2006"); ?>
+<?php news_image('http://www.phparch.com/works/', 'phpworks.png', 'php|works / db|works 2006'); ?>
 <h1>php/db|works 2006 Schedule Now Online</h1>
 <p>
  <span class="newsdate">[29-June-2006]</span>
@@ -190,7 +190,7 @@ is available in the <a href="/ChangeLog-4.php#4.4.3">PHP 4 ChangeLog</a>.
 
 <hr>
 
-<?php news_image("http://code.google.com/soc/php/about.html", "google_soc_2006_128x53.gif", "Google Summer of Code 2006"); ?>
+<?php news_image('http://code.google.com/soc/php/about.html', 'google_soc_2006_128x53.gif', 'Google Summer of Code 2006'); ?>
 
 <h1>Welcome Summer of Code 2006 Students</h1>
 <p>
@@ -208,7 +208,7 @@ The students, their projects and their assigned mentors can be viewed
 
 <hr>
 
-<?php news_image("http://www.nyphpcon.com/", "NYPHPCon06.gif", "NYPHPCon 2006"); ?>
+<?php news_image('http://www.nyphpcon.com/', 'NYPHPCon06.gif', 'NYPHPCon 2006'); ?>
 
 <h1>NYPHPCon 2006 Program Announced</h1>
 <p>
@@ -322,7 +322,7 @@ and the full list of changes is available in the <a href="/ChangeLog-5.php#5.1.3
 </p>
 
 <hr>
-<?php news_image("http://www.phparch.com/tek/", "php_tek_2006.gif", "php|tek 2006"); ?>
+<?php news_image('http://www.phparch.com/tek/', 'php_tek_2006.gif', 'php|tek 2006'); ?>
 <h1>php|tek 2006</h1>
 <p>
  <span class="newsdate">[02-Mar-2006]</span>
@@ -336,7 +336,7 @@ and the full list of changes is available in the <a href="/ChangeLog-5.php#5.1.3
 </p>
 
 <hr>
-<?php news_image("http://conf.phpquebec.com/en/conf2006/", "conference_php_quebec.gif", "PHP Quebec 2006"); ?>
+<?php news_image('http://conf.phpquebec.com/en/conf2006/', 'conference_php_quebec.gif', 'PHP Quebec 2006'); ?>
 
 <h1>PHP Quebec 2006</h1>
 <p>
@@ -365,7 +365,7 @@ href="http://conf.phpquebec.com/en/conf2006/">exciting conference</a>.
 </p>
 
 <hr>
-<?php news_image("http://www.nyphpcon.com/", "NYPHPCon06.gif", "NYPHPCon 2006"); ?>
+<?php news_image('http://www.nyphpcon.com/', 'NYPHPCon06.gif', 'NYPHPCon 2006'); ?>
 
 <h1>NYPHPCon 2006</h1>
 <p>
@@ -389,7 +389,7 @@ discount is available until March 1st</a>.
 
 <hr>
 
-<?php news_image("http://wtconferences.com/", "webtech2006.png", "WebTech 2006"); ?>
+<?php news_image('http://wtconferences.com/', 'webtech2006.png', 'WebTech 2006'); ?>
 
 <h1>Third Bulgarian PHP Conference</h1>
 <p>
@@ -411,7 +411,7 @@ discount is available until March 1st</a>.
 </p>
 
 <hr>
-<?php news_image("http://www.phpconference.co.uk/", "ukphp2006.png", "UK PHP Conference 2006"); ?>
+<?php news_image('http://www.phpconference.co.uk/', 'ukphp2006.png', 'UK PHP Conference 2006'); ?>
 
 <h1>UK PHP Conference 2006</h1>
 <p>

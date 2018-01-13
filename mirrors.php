@@ -8,7 +8,7 @@ $header_config = array(
     'current' => 'community',
     'css'     => array('mirror.css')
 );
-site_header("Mirror Sites", $header_config);
+site_header('Mirror Sites', $header_config);
 
 
 ?>

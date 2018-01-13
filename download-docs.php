@@ -38,16 +38,16 @@ $SIDEBAR_DATA='
 </div>
 ';
 
-site_header("Download documentation", array("current" => "docs"));
+site_header('Download documentation', array('current' => 'docs'));
 
 // Format to look for
 $formats = array(
-    "Single HTML file" => "html.gz",
-    "Many HTML files"  => "tar.gz",
+    'Single HTML file' => 'html.gz',
+    'Many HTML files'  => 'tar.gz',
 #   "Many PDF files"   => "pdf.tar.gz",
 #   "PDF"              => "pdf",
-    "HTML Help file"   => "chm",
-    "HTML Help file (with user notes)" => "chm",
+    'HTML Help file'   => 'chm',
+    'HTML Help file (with user notes)' => 'chm',
 );
 ?>
 
@@ -121,7 +121,7 @@ foreach ($LANGUAGES as $langcode => $language) {
                 $files[$langcode][$formatname] = array(
                     $link_to,
                     (int) ($size/1024),
-                    date("j M Y", $changed),
+                    date('j M Y', $changed),
                     $extension
                 );
                 $found_formats[$formatname] = 1;
@@ -152,7 +152,7 @@ if (file_exists($actual_file)) {
 }}} */
 
 if (count($found_formats) == 0) {
-    echo "<p class=\"tip\">This mirror has no documentation files for download.</p>";
+    echo '<p class="tip">This mirror has no documentation files for download.</p>';
 } else {
 
     echo '<table border="0" cellpadding="4" cellspacing="2" class="standard">' . "\n" .
@@ -176,7 +176,7 @@ if (count($found_formats) == 0) {
         if ($preflang) {
             $cellclass = ' class="highlight"';
         } else {
-            $cellclass = "";
+            $cellclass = '';
         }
 
         echo "<tr>\n<th class=\"subl\">" . $LANGUAGES[$langcode] . "</th>\n";
@@ -188,7 +188,7 @@ if (count($found_formats) == 0) {
 
             echo "<td align=\"center\"$cellclass>";
             if (!isset($lang_files[$formatname])) {
-                echo "&nbsp;";
+                echo '&nbsp;';
             } else {
 
                 $fileinfo = $lang_files[$formatname];

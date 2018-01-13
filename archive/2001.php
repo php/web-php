@@ -3,7 +3,7 @@
 $_SERVER['BASE_PAGE'] = 'archive/2001.php';
 include_once $_SERVER['DOCUMENT_ROOT'] . '/include/prepend.inc';
 news_archive_sidebar();
-site_header("News Archive - 2001", array("cache" => true));
+site_header('News Archive - 2001', array('cache' => true));
 ?>
 
 <h1>News Archive - 2001</h1>
@@ -55,7 +55,7 @@ site_header("News Archive - 2001", array("cache" => true));
 
 <hr>
 
-<?php news_image("http://www.rackspace.com/?supbid=php.net", "rackspace.gif", "Rackspace"); ?>
+<?php news_image('http://www.rackspace.com/?supbid=php.net', 'rackspace.gif', 'Rackspace'); ?>
 <h1>Rackspace providing additional hosting for PHP project</h1>
 
 <p>
@@ -94,7 +94,7 @@ site_header("News Archive - 2001", array("cache" => true));
 
 <hr>
 
-<?php news_image("http://www.php-conference.de/2001/index_en.php", "international_conference.gif", "International PHP Conference 2001"); ?>
+<?php news_image('http://www.php-conference.de/2001/index_en.php', 'international_conference.gif', 'International PHP Conference 2001'); ?>
 <h1>International PHP Conference in Frankfurt (November 5-7, 2001)</h1>
 <p>
  <span class="newsdate">[17-Aug-2001]</span>
@@ -106,7 +106,7 @@ site_header("News Archive - 2001", array("cache" => true));
 
 <hr>
 
-<?php news_image("http://gtk.php.net/", "php-gtk-white.gif", "PHP-GTK"); ?>
+<?php news_image('http://gtk.php.net/', 'php-gtk-white.gif', 'PHP-GTK'); ?>
 <h1>PHP-GTK version 0.1 released</h1>
 
 <p>
@@ -170,7 +170,7 @@ site_header("News Archive - 2001", array("cache" => true));
 
 <hr>
 
-<?php news_image("http://www.linuxtag.org/2001/english/30.html", "phplt.gif", "LinuxTag"); ?>
+<?php news_image('http://www.linuxtag.org/2001/english/30.html', 'phplt.gif', 'LinuxTag'); ?>
 
 <h1>LinuxTag 2001 in Europe is over</h1>
 
@@ -183,7 +183,7 @@ site_header("News Archive - 2001", array("cache" => true));
 
 <hr>
 
-<?php news_image("http://promote.pair.com/direct.pl?php.net", "pair.gif", "pair Networks"); ?>
+<?php news_image('http://promote.pair.com/direct.pl?php.net', 'pair.gif', 'pair Networks'); ?>
 <h1>Mailing lists and CVS are up!</h1>
 
 <p>
@@ -207,7 +207,7 @@ site_header("News Archive - 2001", array("cache" => true));
 
 <hr>
 
-<?php news_image("http://www.php-kongress.de/2001/index_en.php", "international_conference.gif", "PHP International Conference 2001"); ?>
+<?php news_image('http://www.php-kongress.de/2001/index_en.php', 'international_conference.gif', 'PHP International Conference 2001'); ?>
 <h1>PHP conventions in Europe</h1>
 <p>
  <span class="newsdate">[14-Jun-2001]</span>
@@ -295,7 +295,7 @@ site_header("News Archive - 2001", array("cache" => true));
 
 <hr>
 
-<?php news_image("http://gtk.php.net/", "php-gtk-white.gif", "PHP-GTK"); ?>
+<?php news_image('http://gtk.php.net/', 'php-gtk-white.gif', 'PHP-GTK'); ?>
 <h1>Announcing PHP-GTK</h1>
 <p>
  <span class="newsdate">[01-Mar-2001]</span>

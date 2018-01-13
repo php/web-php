@@ -8,11 +8,11 @@ if (!isset($_GET['l']) || !is_string($_GET['l'])) {
   $_GET['l'] = null;
 }
 
-$lang = isset($_GET["l"]) ? (string)$_GET["l"] : "en";
-$query = isset($_GET["q"]) ? (string)$_GET["q"] : '';
+$lang = isset($_GET['l']) ? (string)$_GET['l'] : 'en';
+$query = isset($_GET['q']) ? (string)$_GET['q'] : '';
 
 if (!isset($LANGUAGES[$lang])) {
-    $lang = "en";
+    $lang = 'en';
 }
 
 

@@ -2,22 +2,22 @@
 // $Id$
 $_SERVER['BASE_PAGE'] = 'releases/index.php';
 include_once $_SERVER['DOCUMENT_ROOT'] . '/include/prepend.inc';
-include_once $_SERVER["DOCUMENT_ROOT"] . "/include/branches.inc";
+include_once $_SERVER['DOCUMENT_ROOT'] . '/include/branches.inc';
 
-if (isset($_GET["serialize"]) || isset($_GET["json"])) {
-	$RELEASES[5][$PHP_5_6_VERSION]["date"] = $PHP_5_6_DATE;
+if (isset($_GET['serialize']) || isset($_GET['json'])) {
+	$RELEASES[5][$PHP_5_6_VERSION]['date'] = $PHP_5_6_DATE;
 	$RELEASES                              = $RELEASES + $OLDRELEASES;
 
 	$machineReadable = array();
 
-	if (isset($_GET["version"])) {
-		$ver = (int)$_GET["version"];
+	if (isset($_GET['version'])) {
+		$ver = (int)$_GET['version'];
 
 		if (isset($RELEASES[$ver])) {
 			list($version, $r) = each($RELEASES[$ver]);
 
-			if (isset($_GET["max"])) {
-				$max = (int)$_GET["max"];
+			if (isset($_GET['max'])) {
+				$max = (int)$_GET['max'];
 				if ($max == -1) { $max = PHP_INT_MAX; }
 
 				$machineReadable = array($version => $r);
@@ -38,26 +38,26 @@ if (isset($_GET["serialize"]) || isset($_GET["json"])) {
 					$machineReadable[$version] = $release;
 				}
 			} else {
-				$r["version"] = $version;
+				$r['version'] = $version;
 
 				$machineReadable = $r;
 			}
 		} else {
-			$machineReadable = array("error" => "Unknown version");
+			$machineReadable = array('error' => 'Unknown version');
 		}
 	} else {
 		$machineReadable = array();
 		foreach($RELEASES as $major => $release) {
 			list($version, $r) = each($release);
-			$r["version"] = $version;
+			$r['version'] = $version;
 			$machineReadable[$major] = $r;
 		}
 	}
 
-	if (isset($_GET["serialize"])) {
+	if (isset($_GET['serialize'])) {
 		header('Content-type: text/plain');
 		echo serialize($machineReadable);
-	} elseif (isset($_GET["json"])) {
+	} elseif (isset($_GET['json'])) {
 		header('Content-Type: application/json');
 		echo json_encode($machineReadable);
 	}
@@ -132,7 +132,7 @@ $SIDEBAR_DATA = '
 </div>
 ';
 
-site_header("Releases", array(
+site_header('Releases', array(
     'current' => 'downloads',
     'css' => '/styles/releases.css',
 ));
@@ -155,18 +155,18 @@ site_header("Releases", array(
 
 <?php
 function mk_rel($major, $ver, $date, $announcement, $source, $windows, $museum) {
-	printf("<a id=\"%s\"></a>\n<h2>%1\$s</h2>\n<ul>\n <li>Released: %s</li>\n <li>Announcement: ", ($pos = strpos($ver, " ")) ? substr($ver, 0, $pos) : $ver, $date);
+	printf("<a id=\"%s\"></a>\n<h2>%1\$s</h2>\n<ul>\n <li>Released: %s</li>\n <li>Announcement: ", ($pos = strpos($ver, ' ')) ? substr($ver, 0, $pos) : $ver, $date);
 	if ($announcement) {
 		if (is_array($announcement)) {
 			foreach($announcement as $ann => $url) {
 				echo '<a href="'.$url.'">' .$ann. '</a> ';
 			}
 		} else {
-			$url = str_replace(".", "_", $ver);
+			$url = str_replace('.', '_', $ver);
 			echo '<a href="/releases/' .$url. '.php">English</a>';
 		}
 	} else {
-		echo "None";
+		echo 'None';
 	}
 	echo "</li>\n";
 
@@ -180,15 +180,15 @@ function mk_rel($major, $ver, $date, $announcement, $source, $windows, $museum) 
 		foreach(array_merge($source, $windows) as $src) {
 			echo " <li>\n";
 			if (isset($src['filename'])) {
-				download_link($src["filename"], $src["name"]); echo "<br>\n";
-				if (isset($src["md5"])) {
-					echo '<span class="md5sum">md5: ' .$src["md5"]. "</span>\n";
-					if (isset($src["sha256"])) {
+				download_link($src['filename'], $src['name']); echo "<br>\n";
+				if (isset($src['md5'])) {
+					echo '<span class="md5sum">md5: ' .$src['md5']. "</span>\n";
+					if (isset($src['sha256'])) {
 						echo '<br/>';
 					}
 				}
-				if (isset($src["sha256"])) {
-					echo '<span class="sha256sum">sha256: ' .$src["sha256"]. "</span>\n";
+				if (isset($src['sha256'])) {
+					echo '<span class="sha256sum">sha256: ' .$src['sha256']. "</span>\n";
 				}
 			} else {
 				echo '<a href="'.$src['link'].'">'.$src['name'].'</a>';
@@ -198,13 +198,13 @@ function mk_rel($major, $ver, $date, $announcement, $source, $windows, $museum) 
 		echo "</ul>\n";
 	} else {
 		foreach($source as $src) {
-			if (!isset($src["filename"])) {
+			if (!isset($src['filename'])) {
 				continue;
 			}
-			printf('<a href="http://museum.php.net/php%d/%s">%s</a>'."\n", $major, $src["filename"], $src["name"]);
+			printf('<a href="http://museum.php.net/php%d/%s">%s</a>'."\n", $major, $src['filename'], $src['name']);
 		}
 		foreach($windows as $src) {
-			printf('<a href="http://museum.php.net/%s/%s">%s</a>'."\n", ($major == 5 ? "php5" : "win32"), $src["filename"], $src["name"]);
+			printf('<a href="http://museum.php.net/%s/%s">%s</a>'."\n", ($major == 5 ? 'php5' : 'win32'), $src['filename'], $src['name']);
 		}
 	}
 
@@ -228,14 +228,14 @@ foreach($OLDRELEASES as $major => $a) {
 		mk_rel(
 			$major,
 			$ver,
-			$release["date"],
-			isset($release["announcement"]) ? $release["announcement"] : false,
-			$release["source"],
-			(isset($release["windows"]) ? $release["windows"] : array()),
-			isset($release["museum"]) ? $release["museum"] : ($i<3 ? false : true)
+			$release['date'],
+			isset($release['announcement']) ? $release['announcement'] : false,
+			$release['source'],
+			(isset($release['windows']) ? $release['windows'] : array()),
+			isset($release['museum']) ? $release['museum'] : ($i<3 ? false : true)
 		);
 	}
 }
 
-site_footer(array("sidebar" => $SIDEBAR_DATA));
+site_footer(array('sidebar' => $SIDEBAR_DATA));
 

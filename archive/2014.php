@@ -4,7 +4,7 @@ $_SERVER['BASE_PAGE'] = 'archive/2014.php';
 include_once $_SERVER['DOCUMENT_ROOT'] . '/include/prepend.inc';
 include_once $_SERVER['DOCUMENT_ROOT'] . '/include/pregen-news.inc';
 news_archive_sidebar();
-site_header("News Archive - 2014", array("cache" => true));
+site_header('News Archive - 2014', array('cache' => true));
 ?>
 
 <h1>News Archive - 2014</h1>
@@ -17,7 +17,7 @@ site_header("News Archive - 2014", array("cache" => true));
 
 <article class="newsItem">
   <header>
-    <div class="newsImage"><?php news_image("http://2015.phpsouthcoast.co.uk/", "php-south-coast.png", "PHP South Coast 2015"); ?></div>
+    <div class="newsImage"><?php news_image('http://2015.phpsouthcoast.co.uk/', 'php-south-coast.png', 'PHP South Coast 2015'); ?></div>
     <h2 class="newstitle"><a id="id2014-12-29-2" href="http://2015.phpsouthcoast.co.uk/" rel="bookmark" class="bookmark">PHP South Coast 2015</a></h2>
   </header>
   <time class="newsdate" datetime="2014-12-29T23:08:32+01:00">29 Dec 2014</time>
@@ -31,7 +31,7 @@ site_header("News Archive - 2014", array("cache" => true));
 </article>
 <article class="newsItem">
   <header>
-    <div class="newsImage"><?php news_image("http://bulgariawebsummit.com/", "bulgaria-web-summit.png", "Bulgaria Web Summit 2015"); ?></div>
+    <div class="newsImage"><?php news_image('http://bulgariawebsummit.com/', 'bulgaria-web-summit.png', 'Bulgaria Web Summit 2015'); ?></div>
     <h2 class="newstitle"><a id="id2014-12-29-1" href="http://bulgariawebsummit.com/" rel="bookmark" class="bookmark">Bulgaria Web Summit 2015</a></h2>
   </header>
   <time class="newsdate" datetime="2014-12-29T23:03:02+01:00">29 Dec 2014</time>
@@ -181,7 +181,7 @@ site_header("News Archive - 2014", array("cache" => true));
 </article>
 <article class="newsItem">
   <header>
-    <div class="newsImage"><?php news_image("https://phpconference.com/2015se/en", "ipc2015.png", "International PHP Conference Spring 2015"); ?></div>
+    <div class="newsImage"><?php news_image('https://phpconference.com/2015se/en', 'ipc2015.png', 'International PHP Conference Spring 2015'); ?></div>
     <h2 class="newstitle"><a id="id2014-11-05-1" href="https://phpconference.com/2015se/en" rel="bookmark" class="bookmark">International PHP Conference Spring 2015</a></h2>
   </header>
   <time class="newsdate" datetime="2014-11-05T22:31:52+01:00">05 Nov 2014</time>
@@ -238,7 +238,7 @@ site_header("News Archive - 2014", array("cache" => true));
 </article>
 <article class="newsItem">
   <header>
-    <div class="newsImage"><?php news_image("http://www.phpuceu.org/phpuceu-2015/", "phpuceu-may-2015-thumb.png", "PHP Unconference Europe 2015"); ?></div>
+    <div class="newsImage"><?php news_image('http://www.phpuceu.org/phpuceu-2015/', 'phpuceu-may-2015-thumb.png', 'PHP Unconference Europe 2015'); ?></div>
     <h2 class="newstitle"><a id="id2014-10-27-1" href="http://www.phpuceu.org/phpuceu-2015/" rel="bookmark" class="bookmark">PHP Unconference Europe 2015</a></h2>
   </header>
   <time class="newsdate" datetime="2014-10-27T01:23:45+02:00">27 Oct 2014</time>
@@ -274,7 +274,7 @@ site_header("News Archive - 2014", array("cache" => true));
 </article>
 <article class="newsItem">
   <header>
-    <div class="newsImage"><?php news_image("http://sunshinephp.com/", "sunshinephp-feb-2015-thumb.png", "SunshinePHP Developer Conference 2015"); ?></div>
+    <div class="newsImage"><?php news_image('http://sunshinephp.com/', 'sunshinephp-feb-2015-thumb.png', 'SunshinePHP Developer Conference 2015'); ?></div>
     <h2 class="newstitle"><a id="id2014-10-18-1" href="http://sunshinephp.com/" rel="bookmark" class="bookmark">SunshinePHP Developer Conference 2015</a></h2>
   </header>
   <time class="newsdate" datetime="2014-10-18T03:42:05+02:00">18 Oct 2014</time>
@@ -390,7 +390,7 @@ site_header("News Archive - 2014", array("cache" => true));
 </article>
 <article class="newsItem">
   <header>
-    <div class="newsImage"><?php news_image("http://www.phpconference.com.au", "php-australia-march12.png", "PHP Australia Conference 2015"); ?></div>
+    <div class="newsImage"><?php news_image('http://www.phpconference.com.au', 'php-australia-march12.png', 'PHP Australia Conference 2015'); ?></div>
     <h2 class="newstitle"><a id="id2014-09-26-1" href="http://www.phpconference.com.au" rel="bookmark" class="bookmark">PHP Australia Conference 2015</a></h2>
   </header>
   <time class="newsdate" datetime="2014-09-26T09:52:27+02:00">26 Sep 2014</time>
@@ -523,7 +523,7 @@ This new version comes with new features, some backward incompatible changes and
 </article>
 <article class="newsItem">
   <header>
-    <div class="newsImage"><?php news_image("http://world.phparch.com/", "conference_php_world_11_10.png", "php[world] in Washington, D.C."); ?></div>
+    <div class="newsImage"><?php news_image('http://world.phparch.com/', 'conference_php_world_11_10.png', 'php[world] in Washington, D.C.'); ?></div>
     <h2 class="newstitle"><a id="id2014-08-27-1" href="http://world.phparch.com/" rel="bookmark" class="bookmark">php[world] in Washington, D.C.</a></h2>
   </header>
   <time class="newsdate" datetime="2014-08-27T21:06:14+02:00">27 Aug 2014</time>
@@ -692,7 +692,7 @@ The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.p
 </article>
 <article class="newsItem">
   <header>
-    <div class="newsImage"><?php news_image("http://cakefest.org/", "cakefest-2014.png", "CakeFest 2014"); ?></div>
+    <div class="newsImage"><?php news_image('http://cakefest.org/', 'cakefest-2014.png', 'CakeFest 2014'); ?></div>
     <h2 class="newstitle"><a id="id2014-08-04-3" href="http://cakefest.org/" rel="bookmark" class="bookmark">CakeFest 2014 - The CakePHP Conference</a></h2>
   </header>
   <time class="newsdate" datetime="2014-08-04T21:11:08+01:00">04 Aug 2014</time>
@@ -727,7 +727,7 @@ The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.p
 </article>
 <article class="newsItem">
   <header>
-    <div class="newsImage"><?php news_image("http://www.madisonphpconference.com/", "madison-php-2013.png", "Madison PHP Conference 2014"); ?></div>
+    <div class="newsImage"><?php news_image('http://www.madisonphpconference.com/', 'madison-php-2013.png', 'Madison PHP Conference 2014'); ?></div>
     <h2 class="newstitle"><a id="id2014-08-04-2" href="http://www.madisonphpconference.com/" rel="bookmark" class="bookmark">Madison PHP Conference 2014</a></h2>
   </header>
   <time class="newsdate" datetime="2014-08-04T20:57:13+01:00">04 Aug 2014</time>
@@ -771,7 +771,7 @@ The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.p
 </article>
 <article class="newsItem">
   <header>
-    <div class="newsImage"><?php news_image("https://www.brnophp.cz/conference-2014", "brnophp-conference-2014.png", "BRNO PHP Conference 2014"); ?></div>
+    <div class="newsImage"><?php news_image('https://www.brnophp.cz/conference-2014', 'brnophp-conference-2014.png', 'BRNO PHP Conference 2014'); ?></div>
     <h2 class="newstitle"><a id="id2014-08-04-1" href="https://www.brnophp.cz/conference-2014" rel="bookmark" class="bookmark">Brno PHP Conference 2014</a></h2>
   </header>
   <time class="newsdate" datetime="2014-08-04T20:41:07+01:00">04 Aug 2014</time>
@@ -894,7 +894,7 @@ The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.p
 </article>
 <article class="newsItem">
   <header>
-    <div class="newsImage"><?php news_image("http://www.phpsouthafrica.com/", "capetown2014.png", "PHP Cape Town"); ?></div>
+    <div class="newsImage"><?php news_image('http://www.phpsouthafrica.com/', 'capetown2014.png', 'PHP Cape Town'); ?></div>
     <h2 class="newstitle"><a id="id2014-07-08-1" href="http://www.phpsouthafrica.com/" rel="bookmark" class="bookmark">PHP Cape Town Conference</a></h2>
   </header>
   <time class="newsdate" datetime="2014-07-08T17:03:44-07:00">08 Jul 2014</time>
@@ -1049,7 +1049,7 @@ The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.p
 </article>
 <article class="newsItem">
   <header>
-    <div class="newsImage"><?php news_image("http://phpconference.com/", "ipc2014-oct.png", "International PHP Conference 2014"); ?></div>
+    <div class="newsImage"><?php news_image('http://phpconference.com/', 'ipc2014-oct.png', 'International PHP Conference 2014'); ?></div>
     <h2 class="newstitle"><a id="id2014-06-19-3" href="http://phpconference.com/" rel="bookmark" class="bookmark">International PHP Conference 2014</a></h2>
   </header>
   <time class="newsdate" datetime="2014-06-19T23:29:15+00:00">19 Jun 2014</time>
@@ -1088,7 +1088,7 @@ The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.p
 </article>
 <article class="newsItem">
   <header>
-    <div class="newsImage"><?php news_image("http://www.phpconference.co.nz/", "newzealand-2014.png", "New Zealand PHP Conference 2014"); ?></div>
+    <div class="newsImage"><?php news_image('http://www.phpconference.co.nz/', 'newzealand-2014.png', 'New Zealand PHP Conference 2014'); ?></div>
     <h2 class="newstitle"><a id="id2014-06-19-2" href="http://www.phpconference.co.nz/" rel="bookmark" class="bookmark">New Zealand PHP Conference 2014</a></h2>
   </header>
   <time class="newsdate" datetime="2014-06-19T23:19:54+00:00">19 Jun 2014</time>
@@ -1265,7 +1265,7 @@ The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.p
 </article>
 <article class="newsItem">
   <header>
-    <div class="newsImage"><?php news_image("http://devconf.ru", "devconfru2012.png", "DevConf 2014"); ?></div>
+    <div class="newsImage"><?php news_image('http://devconf.ru', 'devconfru2012.png', 'DevConf 2014'); ?></div>
     <h2 class="newstitle"><a id="id2014-05-29-3" href="http://devconf.ru" rel="bookmark" class="bookmark">DevConf 2014</a></h2>
   </header>
   <time class="newsdate" datetime="2014-05-29T16:57:52+00:00">29 May 2014</time>
@@ -1301,7 +1301,7 @@ The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.p
 </article>
 <article class="newsItem">
   <header>
-    <div class="newsImage"><?php news_image("http://cfp.zendcon.com", "ZendCon2014.png", "ZendCon 2014"); ?></div>
+    <div class="newsImage"><?php news_image('http://cfp.zendcon.com', 'ZendCon2014.png', 'ZendCon 2014'); ?></div>
     <h2 class="newstitle"><a id="id2014-05-29-2" href="http://cfp.zendcon.com" rel="bookmark" class="bookmark">ZendCon 2014 - 10th Annual Event</a></h2>
   </header>
   <time class="newsdate" datetime="2014-05-29T03:11:15+02:00">29 May 2014</time>
@@ -1336,7 +1336,7 @@ The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.p
 </article>
 <article class="newsItem">
   <header>
-    <div class="newsImage"><?php news_image("http://www.phpconchina.com/", "china2014conference.png", "China PHP Conference 2014"); ?></div>
+    <div class="newsImage"><?php news_image('http://www.phpconchina.com/', 'china2014conference.png', 'China PHP Conference 2014'); ?></div>
     <h2 class="newstitle"><a id="id2014-05-29-1" href="http://www.phpconchina.com/" rel="bookmark" class="bookmark">China PHP Conference 2014</a></h2>
   </header>
   <time class="newsdate" datetime="2014-05-29T01:43:06+02:00">29 May 2014</time>
@@ -1609,7 +1609,7 @@ The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.p
 </article>
 <article class="newsItem">
   <header>
-    <div class="newsImage"><?php news_image("http://www.phpconference.com.ar/", "argentina-2014.png", "PHP Argentina"); ?></div>
+    <div class="newsImage"><?php news_image('http://www.phpconference.com.ar/', 'argentina-2014.png', 'PHP Argentina'); ?></div>
     <h2 class="newstitle"><a id="id2014-03-26-1" href="http://www.phpconference.com.ar/" rel="bookmark" class="bookmark">PHP Conference Argentina</a></h2>
   </header>
   <time class="newsdate" datetime="2014-03-26T16:56:35-07:00">26 Mar 2014</time>
@@ -1645,7 +1645,7 @@ The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.p
 </article>
 <article class="newsItem">
   <header>
-    <div class="newsImage"><?php news_image("http://www.phpconference.nl/", "dpc_2014-2.png", "DPC2014"); ?></div>
+    <div class="newsImage"><?php news_image('http://www.phpconference.nl/', 'dpc_2014-2.png', 'DPC2014'); ?></div>
     <h2 class="newstitle"><a id="id2014-03-13-1" href="http://www.phpconference.nl/" rel="bookmark" class="bookmark">Dutch PHP Conference 2014</a></h2>
   </header>
   <time class="newsdate" datetime="2014-03-13T06:18:00-07:00">13 Mar 2014</time>
@@ -1871,7 +1871,7 @@ The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.p
 </article>
 <article class="newsItem">
   <header>
-    <div class="newsImage"><?php news_image("http://www.midwestphp.org/", "midwest2014.jpg", "MidwestPHP 2014"); ?></div>
+    <div class="newsImage"><?php news_image('http://www.midwestphp.org/', 'midwest2014.jpg', 'MidwestPHP 2014'); ?></div>
     <h2 class="newstitle"><a id="id2014-02-05-3" href="http://www.midwestphp.org/" rel="bookmark" class="bookmark">MidwestPHP 2014</a></h2>
   </header>
   <time class="newsdate" datetime="2014-02-05T13:09:54-08:00">05 Feb 2014</time>
@@ -1895,7 +1895,7 @@ The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.p
 </article>
 <article class="newsItem">
   <header>
-    <div class="newsImage"><?php news_image("http://tek.phparch.com/", "tek14.fb.png", "php[tek] 2014 : Schedule Announced"); ?></div>
+    <div class="newsImage"><?php news_image('http://tek.phparch.com/', 'tek14.fb.png', 'php[tek] 2014 : Schedule Announced'); ?></div>
     <h2 class="newstitle"><a id="id2014-02-05-1" href="http://tek.phparch.com/" rel="bookmark" class="bookmark">php[tek] 2014 : Schedule Announced</a></h2>
   </header>
   <time class="newsdate" datetime="2014-02-05T12:52:31-08:00">05 Feb 2014</time>
@@ -1978,7 +1978,7 @@ The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.p
 </article>
 <article class="newsItem">
   <header>
-    <div class="newsImage"><?php news_image("http://phpconference.com/2014se/en", "ipc2014.png", "IPC 2014"); ?></div>
+    <div class="newsImage"><?php news_image('http://phpconference.com/2014se/en', 'ipc2014.png', 'IPC 2014'); ?></div>
     <h2 class="newstitle"><a id="id2014-01-22-2" href="http://phpconference.com/2014se/en" rel="bookmark" class="bookmark">International PHP Conference - Spring Edition - 2014</a></h2>
   </header>
   <time class="newsdate" datetime="2014-01-22T11:31:42-08:00">22 Jan 2014</time>
@@ -2019,7 +2019,7 @@ The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.p
 </article>
 <article class="newsItem">
   <header>
-    <div class="newsImage"><?php news_image("http://www.phpsouthafrica.com/", "phpsa2014.png", "PHP Cape Town"); ?></div>
+    <div class="newsImage"><?php news_image('http://www.phpsouthafrica.com/', 'phpsa2014.png', 'PHP Cape Town'); ?></div>
     <h2 class="newstitle"><a id="id2014-01-22-1" href="http://www.phpsouthafrica.com/" rel="bookmark" class="bookmark">PHP Cape Town 2014</a></h2>
   </header>
   <time class="newsdate" datetime="2014-01-22T11:24:46-08:00">22 Jan 2014</time>

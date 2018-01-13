@@ -14,7 +14,7 @@ $headerset = false;
 $BACKpage = htmlspecialchars(isset($_REQUEST['page']) ? $_REQUEST['page'] : '');
 $BACKid = htmlspecialchars(isset($_REQUEST['id']) ? $_REQUEST['id'] : '');
 $link = "/{$BACKpage}#{$BACKid}";
-$master_url = "http://master.php.net/entry/user-notes-vote.php";
+$master_url = 'http://master.php.net/entry/user-notes-vote.php';
 
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
@@ -22,34 +22,34 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $response = array();
     $update = $N[$_REQUEST['id']]['votes']['up'] - $N[$_REQUEST['id']]['votes']['down'];
     $hash = substr(md5($_REQUEST['page']), 0, 16);
-    $notes_file = $_SERVER['DOCUMENT_ROOT'] . "/backend/notes/" .
+    $notes_file = $_SERVER['DOCUMENT_ROOT'] . '/backend/notes/' .
         substr($hash, 0, 2) . "/$hash";
     if (!file_exists($notes_file)) {
-      $response["success"] = false;
-      $response["msg"] = "Invalid request.";
+      $response['success'] = false;
+      $response['msg'] = 'Invalid request.';
     }
     else {
       $data = array(
-          "noteid" => $_REQUEST['id'],
-          "sect" => $_REQUEST['page'],
-          "vote" => $_REQUEST['vote'],
-          "ip" => $_SERVER['REMOTE_ADDR']
+          'noteid' => $_REQUEST['id'],
+          'sect' => $_REQUEST['page'],
+          'vote' => $_REQUEST['vote'],
+          'ip' => $_SERVER['REMOTE_ADDR']
       );
-      if (($r = posttohost($master_url, $data)) === null || strpos($r,"failed to open socket to") !== false) {
-        $response["success"] = false;
-        $response["msg"] = "Could not process your request at this time. Please try again later...";
+      if (($r = posttohost($master_url, $data)) === null || strpos($r,'failed to open socket to') !== false) {
+        $response['success'] = false;
+        $response['msg'] = 'Could not process your request at this time. Please try again later...';
       }
       else {
         $r = json_decode($r);
         if (json_last_error() == JSON_ERROR_NONE && isset($r->status) && $r->status && isset($r->votes)) {
-          $response["success"] = true;
-          $response["update"] = (int)$r->votes;
+          $response['success'] = true;
+          $response['update'] = (int)$r->votes;
         } elseif (json_last_error() == JSON_ERROR_NONE && isset($r->status) && isset($r->message) && $r->status == false) {
-          $response["success"] = false;
-          $response["msg"] = $r->message;
+          $response['success'] = false;
+          $response['msg'] = $r->message;
         } else {
-          $response["success"] = false;
-          $response["msg"] = "The server did not respond properly. Please try again later...";
+          $response['success'] = false;
+          $response['msg'] = 'The server did not respond properly. Please try again later...';
         }
       }
     }
@@ -59,7 +59,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
   elseif (!empty($_REQUEST['id']) && !empty($_REQUEST['page']) && ($N = manual_notes_load($_REQUEST['page'])) && array_key_exists($_REQUEST['id'], $N) && !empty($_REQUEST['vote']) && ($_REQUEST['vote'] === 'up' || $_REQUEST['vote'] === 'down')) {
     if (!empty($_POST['challenge']) && !empty($_POST['func']) || empty($_POST['arga']) || empty($_POST['argb'])) {
       if (!test_answer($_POST['func'], $_POST['arga'], $_POST['argb'], $_POST['challenge'])) {
-        $error = "Incorrect answer! Please try again.";
+        $error = 'Incorrect answer! Please try again.';
       }
       else {
         if ($_REQUEST['vote'] == 'up') {
@@ -70,43 +70,43 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         }
         $update = $N[$_REQUEST['id']]['votes']['up'] - $N[$_REQUEST['id']]['votes']['down'];
         $hash = substr(md5($_REQUEST['page']), 0, 16);
-        $notes_file = $_SERVER['DOCUMENT_ROOT'] . "/backend/notes/" .
+        $notes_file = $_SERVER['DOCUMENT_ROOT'] . '/backend/notes/' .
             substr($hash, 0, 2) . "/$hash";
         if (file_exists($notes_file)) {
           $data = array(
-              "noteid" => $_REQUEST['id'],
-              "sect" => $_REQUEST['page'],
-              "vote" => $_REQUEST['vote'],
-              "ip" => $_SERVER['REMOTE_ADDR'],
+              'noteid' => $_REQUEST['id'],
+              'sect' => $_REQUEST['page'],
+              'vote' => $_REQUEST['vote'],
+              'ip' => $_SERVER['REMOTE_ADDR'],
           );
-          if (($r = posttohost($master_url, $data)) !== null && strpos($r,"failed to open socket to") === false) {
+          if (($r = posttohost($master_url, $data)) !== null && strpos($r,'failed to open socket to') === false) {
             $r = json_decode($r);
             if (json_last_error() == JSON_ERROR_NONE && isset($r->status) && $r->status && isset($r->votes)) {
               $thankyou = true;
             } else {
-              $error = "Invalid request.";
+              $error = 'Invalid request.';
             }
           }
           else {
-            $error = "Invalid request.";
+            $error = 'Invalid request.';
           }
         }
         else {
-          $error = "Invalid request.";
+          $error = 'Invalid request.';
         }
       }
     }
     else {
-      $error = "You did not answer the spam challenge question.";
+      $error = 'You did not answer the spam challenge question.';
     }
   }
   else {
-    $error = "Invalid request.";
+    $error = 'Invalid request.';
   }
 }
 else {
   // Site header
-  site_header("Vote On User Notes");
+  site_header('Vote On User Notes');
   $headerset = true;
 
   if (!empty($_REQUEST['id']) && !empty($_REQUEST['page']) && ($N = manual_notes_load($_REQUEST['page'])) && array_key_exists($_REQUEST['id'], $N) && !empty($_REQUEST['vote']) && ($_REQUEST['vote'] === 'up' || $_REQUEST['vote'] === 'down')) {
@@ -141,7 +141,7 @@ else {
 <?php
   }
   else {
-    $error = "Invalid request.";
+    $error = 'Invalid request.';
   }
 }
 if ($error) {
@@ -159,7 +159,7 @@ if ($error) {
       </div>
 EOL;
 if (!$headerset) {
-  site_header("Error - Voting");
+  site_header('Error - Voting');
   $headerset = true;
 }
 ?>
@@ -180,7 +180,7 @@ if (!$headerset) {
   </div>
  </div>
 <?php
-  if ($error != "Invalid request.") {
+  if ($error != 'Invalid request.') {
 ?>
  <div style="width: 100%; margin: auto;"><h1>The Note You're Voting On</h1></div>
  <div style="width: 90%; margin: auto; padding: 15px; background-color: lightgray; border: 1px dashed gray;">
@@ -198,7 +198,7 @@ if (!$headerset) {
   }
 }
 if ($thankyou) {
-  site_header("Thank you for voting!");
+  site_header('Thank you for voting!');
   $headerset = true;
 ?>
  <div class="container" id="notes-dialog" style="width: 100%; padding: 15px; margin: auto;">

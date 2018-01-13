@@ -10,7 +10,7 @@
 $_SERVER['BASE_PAGE'] = 'mod.php';
 include_once $_SERVER['DOCUMENT_ROOT'] . '/include/prepend.inc';
 
-site_header("Email confirmation", array("current" => "community"));
+site_header('Email confirmation', array('current' => 'community'));
 
 // Only run on main php.net box.
 if (!is_primary_site()) {
@@ -26,13 +26,13 @@ ERROR;
 }
 
 // These sites are handled by automoderation
-$sites = array("php.net", "lists.php.net");
+$sites = array('php.net', 'lists.php.net');
 
 // Get data from the URL
-list($none, $site, $token, $sender) = explode("/", $_SERVER["PATH_INFO"]);
+list($none, $site, $token, $sender) = explode('/', $_SERVER['PATH_INFO']);
 
 // Error in input data
-if ($sender == "" || strlen($token) < 32 || !isset($sites[$site])) {
+if ($sender == '' || strlen($token) < 32 || !isset($sites[$site])) {
     echo <<<ERROR
 <h1>Email confirmation failed</h1>
 
@@ -46,8 +46,8 @@ ERROR;
 // Data OK, send confirmation mail
 else {
     mail(
-        "confirm@" . $sites[$site],
-        "confirm",
+        'confirm@' . $sites[$site],
+        'confirm',
         "[confirm: $token $sender]",
         "From: $sender"
     );

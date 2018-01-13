@@ -3,7 +3,7 @@
 $_SERVER['BASE_PAGE'] = 'ChangeLog-5.php';
 include_once $_SERVER['DOCUMENT_ROOT'] . '/include/prepend.inc';
 include_once $_SERVER['DOCUMENT_ROOT'] . '/include/changelogs.inc';
-site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("changelog.css"), "layout_span" => 12));
+site_header('PHP 5 ChangeLog', array('current' => 'docs', 'css' => array('changelog.css'), 'layout_span' => 12));
 ?>
 
 <h1>PHP 5 ChangeLog</h1>

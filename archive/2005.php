@@ -3,7 +3,7 @@
 $_SERVER['BASE_PAGE'] = 'archive/2005.php';
 include_once $_SERVER['DOCUMENT_ROOT'] . '/include/prepend.inc';
 news_archive_sidebar();
-site_header("News Archive - 2005", array("cache" => true));
+site_header('News Archive - 2005', array('cache' => true));
 ?>
 
 <h1>News Archive - 2005</h1>
@@ -74,7 +74,7 @@ The complete details about all of the changes can be found in the
 
 <hr>
 
-<?php news_image("http://www.afup.org/pages/forumphp/", "afup2005.jpg", "Forum PHP"); ?>
+<?php news_image('http://www.afup.org/pages/forumphp/', 'afup2005.jpg', 'Forum PHP'); ?>
 
 <h1>Forum PHP in Paris, November 9 &amp; 10th, 2005</h1>
 <p>
@@ -90,7 +90,7 @@ The complete details about all of the changes can be found in the
 
 <hr>
 
-<?php news_image("http://zend.kbconferences.com/", "zendphp_conf.gif", "Zend/PHP Conference &amp; Expo"); ?>
+<?php news_image('http://zend.kbconferences.com/', 'zendphp_conf.gif', 'Zend/PHP Conference &amp; Expo'); ?>
 <h1>Zend/PHP Conference &amp; Expo 2005 Program Announced</h1>
 <p>
  <span class="newsdate">[20-Sep-2005]</span>
@@ -149,7 +149,7 @@ The complete details about all of the changes can be found in the
 
 <hr>
 
-<?php news_image("http://www.phpconference.com/", "intconf2005fall.gif", "International PHP Conference 2005"); ?>
+<?php news_image('http://www.phpconference.com/', 'intconf2005fall.gif', 'International PHP Conference 2005'); ?>
 <h1>International PHP Conference 2005 - Program available</h1>
 <p>
  <span class="newsdate">[12-Aug-2005]</span>
@@ -176,7 +176,7 @@ The complete details about all of the changes can be found in the
 
 <hr>
 
-<?php news_image("http://www.phparch.com/phpworks", "php-web-works-logo.gif", "php|works and web|works 2005"); ?>
+<?php news_image('http://www.phparch.com/phpworks', 'php-web-works-logo.gif', 'php|works and web|works 2005'); ?>
 <h1>web|works and php|works 2005 Program Online</h1>
 <p>
  <span class="newsdate">[16-Jul-2005]</span>
@@ -246,7 +246,7 @@ For changes in PHP 4.4.0 since PHP 4.3.11, please consult the
 
 <hr>
 
-<?php news_image("http://zend.kbconferences.com/", "zendphp_conf.gif", "Zend/PHP Conference &amp; Expo"); ?>
+<?php news_image('http://zend.kbconferences.com/', 'zendphp_conf.gif', 'Zend/PHP Conference &amp; Expo'); ?>
 <h1>Zend/PHP Conference 2005</h1>
 <p>
  <span class="newsdate">[23-Jun-2005]</span>
@@ -262,7 +262,7 @@ For changes in PHP 4.4.0 since PHP 4.3.11, please consult the
 </p>
 <hr>
 
-<?php news_image("http://www.php.net", "php10thbd.jpg", "PHP 10th anniversary cake"); ?>
+<?php news_image('http://www.php.net', 'php10thbd.jpg', 'PHP 10th anniversary cake'); ?>
 <h1>10 years since PHP 1.0 was released!</h1>
 <p>
  <span class="newsdate">[08-Jun-2005]</span>
@@ -293,7 +293,7 @@ For changes in PHP 4.4.0 since PHP 4.3.11, please consult the
 
 <hr>
 
-<?php news_image("http://www.phpwest.com/", "phpwest.gif", "PHP West Conferences"); ?>
+<?php news_image('http://www.phpwest.com/', 'phpwest.gif', 'PHP West Conferences'); ?>
 
 <h1>PHP West Security Conference in Vancouver, BC</h1>
 <p>
@@ -314,7 +314,7 @@ For changes in PHP 4.4.0 since PHP 4.3.11, please consult the
 
 <hr>
 
-<?php news_image("http://conf.phpquebec.org/en/cdrom2005/", "cdrom_phpquebec_2005.gif", "PHP Québec CD ROM 2005"); ?>
+<?php news_image('http://conf.phpquebec.org/en/cdrom2005/', 'cdrom_phpquebec_2005.gif', 'PHP Québec CD ROM 2005'); ?>
 
 <h1>PHP Applications gathering</h1>
 <p>
@@ -439,7 +439,7 @@ For changes in PHP 4.4.0 since PHP 4.3.11, please consult the
 
 <hr>
 
-<?php news_image("http://phpsec.org/", "phpsc-logo.gif", "PHPSC Logo"); ?>
+<?php news_image('http://phpsec.org/', 'phpsc-logo.gif', 'PHPSC Logo'); ?>
 
 <h1>PHP Security Consortium</h1>
 <p>
@@ -474,7 +474,7 @@ For changes in PHP 4.4.0 since PHP 4.3.11, please consult the
 
 <hr>
 
-<?php news_image("http://phpconf.hu/2005/", "hu_conf.gif", "PHPConf.hu"); ?>
+<?php news_image('http://phpconf.hu/2005/', 'hu_conf.gif', 'PHPConf.hu'); ?>
 
 <h1>Third Hungarian PHP Conference</h1>
 
@@ -494,7 +494,7 @@ For changes in PHP 4.4.0 since PHP 4.3.11, please consult the
 
 <hr>
 
-<?php news_image("http://www.phparch.com/tropics", "php_tropics.jpg", "php|tropics"); ?>
+<?php news_image('http://www.phparch.com/tropics', 'php_tropics.jpg', 'php|tropics'); ?>
 <h1>php|tropics</h1>
 
 <p>
@@ -522,7 +522,7 @@ For changes in PHP 4.4.0 since PHP 4.3.11, please consult the
 
 <hr>
 
-<?php news_image("http://www.php.net/", "php-logo.gif", "Programming Language of 2004"); ?>
+<?php news_image('http://www.php.net/', 'php-logo.gif', 'Programming Language of 2004'); ?>
 <h1>PHP awarded Programming Language of 2004</h1>
 
 <p>

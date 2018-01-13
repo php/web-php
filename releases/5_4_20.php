@@ -2,7 +2,7 @@
 // $Id$
 $_SERVER['BASE_PAGE'] = 'releases/5_4_20.php';
 include_once $_SERVER['DOCUMENT_ROOT'] . '/include/prepend.inc';
-site_header("PHP 5.4.20 Release Announcement");
+site_header('PHP 5.4.20 Release Announcement');
 ?>
 
 <h1>PHP 5.4.20 Release Announcement</h1>

@@ -3,8 +3,8 @@
 $_SERVER['BASE_PAGE'] = 'security/index.php';
 
 include_once $_SERVER['DOCUMENT_ROOT'] . '/include/prepend.inc';
-if(!isset($_COOKIE["MAGIC_COOKIE"])) {
-    mirror_redirect("/manual/security");
+if(!isset($_COOKIE['MAGIC_COOKIE'])) {
+    mirror_redirect('/manual/security');
     exit;
 }
 
@@ -30,18 +30,18 @@ $SIDEBAR_DATA = <<< EOT
 EOT;
 
 
-site_header("PHP Security center");
+site_header('PHP Security center');
 echo "<h1>PHP Security Center</h1>\n";
 
 $dbfile = $_SERVER['DOCUMENT_ROOT'] . '/security/vulndb.txt';
-$fp = @fopen($dbfile, "rt");
+$fp = @fopen($dbfile, 'rt');
 if(is_resource($fp)) {
     $RECORDS = array();
     $record_no = 1;
     while($s = fgets($fp)) {
         if($s == "\n") {
-            if(!isset($RECORDS[$record_no]["id"])) {
-                $RECORDS[$record_no]["id"] = $record_no;
+            if(!isset($RECORDS[$record_no]['id'])) {
+                $RECORDS[$record_no]['id'] = $record_no;
             }
             $field = null;
             $record_no++;
@@ -65,7 +65,7 @@ if(is_resource($fp)) {
     }
 
     //echo "<pre>";print_r($RECORDS);
-    $id = isset($_GET["id"]) ? (int)$_GET["id"] : 0;
+    $id = isset($_GET['id']) ? (int)$_GET['id'] : 0;
     if(!$id || !isset($RECORDS[$id])) {
 ?>
 <h3>PHP Vulnerability Disclosures</h3>
@@ -80,8 +80,8 @@ if(is_resource($fp)) {
 </ul>
 <?php
     function cmp_records($a, $b) {
-        $c = date("Ym", strtotime($a["published"]));
-        $d = date("Ym", strtotime($b["published"]));
+        $c = date('Ym', strtotime($a['published']));
+        $d = date('Ym', strtotime($b['published']));
         if($c >= $d) {
             if($c > $d) {
                 return -1;
@@ -90,45 +90,45 @@ if(is_resource($fp)) {
         }
         return 1;
     }
-    usort($RECORDS, "cmp_records");
+    usort($RECORDS, 'cmp_records');
 
-    $last_month = "";
+    $last_month = '';
     foreach($RECORDS as $record) {
-        if(!isset($record["summary"])) {
-            if(strlen($record["description"]) > 80) {
-                $record["summary"] = substr($record["description"], 0, 70) . "...";
+        if(!isset($record['summary'])) {
+            if(strlen($record['description']) > 80) {
+                $record['summary'] = substr($record['description'], 0, 70) . '...';
             } else {
-                $record["summary"] = $record["description"];
+                $record['summary'] = $record['description'];
             }
         }
-        $current_month = date("Ym", strtotime($record["published"]));
+        $current_month = date('Ym', strtotime($record['published']));
         if($current_month != $last_month) {
             $last_month = $current_month;
-            $current_month = $record["affects"];
+            $current_month = $record['affects'];
 
-            echo "<br><h1>", date("F Y", strtotime($record["published"])), "</h1>\n";
+            echo '<br><h1>', date('F Y', strtotime($record['published'])), "</h1>\n";
         }
 ?>
-<div class="record <?php echo strtolower($record["severity"]) ?>">
-    <div class="id"><a href="/security/advisories/PHPSA-<?php echo $record["id"] ?>.php">PHPSA-<?php printf("%04d", $record["id"]) ?></a></div>
-    <div class="date"><?php echo date("Y-m-d", strtotime($record["published"]))?></div>
-    <div class="range <?php echo strtolower($record["range"]) ?>"><?php echo $record["range"] ?></div>
-    <div class="affects"><?php echo $record["affects"] ?></div>
-    <div class="summary"><?php echo $record["summary"] ?></div>
+<div class="record <?php echo strtolower($record['severity']) ?>">
+    <div class="id"><a href="/security/advisories/PHPSA-<?php echo $record['id'] ?>.php">PHPSA-<?php printf('%04d', $record['id']) ?></a></div>
+    <div class="date"><?php echo date('Y-m-d', strtotime($record['published']))?></div>
+    <div class="range <?php echo strtolower($record['range']) ?>"><?php echo $record['range'] ?></div>
+    <div class="affects"><?php echo $record['affects'] ?></div>
+    <div class="summary"><?php echo $record['summary'] ?></div>
 </div>
 
 <?php
     } // foreach($records);
 } elseif(isset($RECORDS)) { // Print a single record
-    $date = date("F jS Y", strtotime($RECORDS[$id]["published"]));
-    $RECORDS[$id]["id"] = sprintf("PHPSA-%04d", $RECORDS[$id]["id"]);
-    printf("<h3>%s (%s)</h3>\n", $RECORDS[$id]["id"], $date);
+    $date = date('F jS Y', strtotime($RECORDS[$id]['published']));
+    $RECORDS[$id]['id'] = sprintf('PHPSA-%04d', $RECORDS[$id]['id']);
+    printf("<h3>%s (%s)</h3>\n", $RECORDS[$id]['id'], $date);
     echo "<div class=\"singlerecord\">\n";
     foreach($RECORDS[$id] as $field => $data) {
         if(!$data) {
             continue;
         }
-        $title = ucfirst(strtr($field, "-", " "));
+        $title = ucfirst(strtr($field, '-', ' '));
         // Turn urls into links (stolen from master/manage/user-notes.php)
         $data = preg_replace(
             '!((mailto:|(http|ftp|nntp|news):\/\/).*?)(\s|<|\)|"|\\|\'|$)!',

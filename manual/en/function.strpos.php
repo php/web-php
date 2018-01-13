@@ -2,7 +2,7 @@
 include_once $_SERVER['DOCUMENT_ROOT'] . '/include/shared-manual.inc';
 $TOC = array();
 $PARENTS = array();
-include_once dirname(__FILE__) ."/toc/ref.strings.inc";
+include_once dirname(__FILE__) .'/toc/ref.strings.inc';
 $setup = array (
   'home' =>
   array (
@@ -38,8 +38,8 @@ $setup = array (
   array (
   ),
 );
-$setup["toc"] = $TOC;
-$setup["parents"] = $PARENTS;
+$setup['toc'] = $TOC;
+$setup['parents'] = $PARENTS;
 manual_setup($setup);
 
 manual_header();

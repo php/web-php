@@ -44,8 +44,8 @@ $setup = array (
     'type' => 'application/atom+xml',
   ),
 );
-$setup["toc"] = $TOC;
-$setup["parents"] = $PARENTS;
+$setup['toc'] = $TOC;
+$setup['parents'] = $PARENTS;
 manual_setup($setup);
 
 manual_header();
