@@ -64,7 +64,7 @@ if(is_resource($fp)) {
     }
 
     //echo "<pre>";print_r($RECORDS);
-    $id = isset($_GET['id']) ? (int)$_GET['id'] : 0;
+    $id = isset($_GET['id']) ? (int) $_GET['id'] : 0;
     if(!$id || !isset($RECORDS[$id])) {
 ?>
 <h3>PHP Vulnerability Disclosures</h3>

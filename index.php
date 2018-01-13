@@ -97,7 +97,7 @@ EOF;
 
 $intro .= "<ul>\n";
 foreach (get_active_branches() as $major => $releases) {
-    foreach ((array)$releases as $release) {
+    foreach ((array) $releases as $release) {
         $version = $release['version'];
         list($major, $minor, $_) = explode('.', $version);
         $intro .= "

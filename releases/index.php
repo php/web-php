@@ -11,13 +11,13 @@ if (isset($_GET['serialize']) || isset($_GET['json'])) {
 	$machineReadable = array();
 
 	if (isset($_GET['version'])) {
-		$ver = (int)$_GET['version'];
+		$ver = (int) $_GET['version'];
 
 		if (isset($RELEASES[$ver])) {
 			list($version, $r) = each($RELEASES[$ver]);
 
 			if (isset($_GET['max'])) {
-				$max = (int)$_GET['max'];
+				$max = (int) $_GET['max'];
 				if ($max == -1) { $max = PHP_INT_MAX; }
 
 				$machineReadable = array($version => $r);

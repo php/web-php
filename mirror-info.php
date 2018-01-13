@@ -20,9 +20,9 @@ if (!file_exists($filename)) {
 } elseif (isset($PHP_5_6_SHA256['tar.bz2']) &&
 		function_exists('hash_file') &&
 		in_array('sha256', hash_algos(), true)) {
-	$hash_ok = (int)(hash_file('sha256', $filename) === $PHP_5_6_SHA256['tar.bz2']);
+	$hash_ok = (int) (hash_file('sha256', $filename) === $PHP_5_6_SHA256['tar.bz2']);
 } elseif (isset($PHP_5_6_MD5['tar.bz2'])) {
-	$hash_ok = (int)(md5_file($filename) === $PHP_5_6_MD5['tar.bz2']);
+	$hash_ok = (int) (md5_file($filename) === $PHP_5_6_MD5['tar.bz2']);
 } else {
 	$hash_ok = 0;
 }
