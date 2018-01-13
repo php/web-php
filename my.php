@@ -236,7 +236,7 @@ foreach ($mirror_sites as $murl => $mdata) {
     }
 
     // Print out mirror option with selection if needed
-    printf (
+    printf(
         "  <option value=\"$murl\"%s>$mname</option>\n",
         ($mirror == $murl ? ' selected="selected"' : '')
     );

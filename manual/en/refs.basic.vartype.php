@@ -3,42 +3,42 @@ include_once $_SERVER['DOCUMENT_ROOT'] . '/include/shared-manual.inc';
 $TOC = array();
 $PARENTS = array();
 include_once __DIR__ .'/toc/funcref.inc';
-$setup = array (
+$setup = array(
   'home' =>
-  array (
+  array(
     0 => 'index.php',
     1 => 'PHP Manual',
   ),
   'head' =>
-  array (
+  array(
     0 => 'UTF-8',
     1 => 'en',
   ),
   'this' =>
-  array (
+  array(
     0 => 'refs.basic.vartype.php',
     1 => 'Variable and Type Related Extensions',
   ),
   'up' =>
-  array (
+  array(
     0 => 'funcref.php',
     1 => 'Function Reference',
   ),
   'prev' =>
-  array (
+  array(
     0 => 'changelog.strings.php',
     1 => 'Changelog',
   ),
   'next' =>
-  array (
+  array(
     0 => 'book.array.php',
     1 => 'Arrays',
   ),
   'alternatives' =>
-  array (
+  array(
   ),
   'extra_header_links' =>
-  array (
+  array(
     'rel' => 'alternate',
     'href' => '/manual/en/feeds/refs.basic.vartype.atom',
     'type' => 'application/atom+xml',

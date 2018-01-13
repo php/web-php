@@ -3,39 +3,39 @@ include_once $_SERVER['DOCUMENT_ROOT'] . '/include/shared-manual.inc';
 $TOC = array();
 $PARENTS = array();
 include_once __DIR__ .'/toc/context.inc';
-$setup = array (
+$setup = array(
   'home' =>
-  array (
+  array(
     0 => 'index.php',
     1 => 'PHP Manual',
   ),
   'head' =>
-  array (
+  array(
     0 => 'UTF-8',
     1 => 'en',
   ),
   'this' =>
-  array (
+  array(
     0 => 'context.http.php',
     1 => 'HTTP context options',
   ),
   'up' =>
-  array (
+  array(
     0 => 'context.php',
     1 => 'Context options and parameters',
   ),
   'prev' =>
-  array (
+  array(
     0 => 'context.socket.php',
     1 => 'Socket context options',
   ),
   'next' =>
-  array (
+  array(
     0 => 'context.ftp.php',
     1 => 'FTP context options',
   ),
   'alternatives' =>
-  array (
+  array(
   ),
 );
 $setup['toc'] = $TOC;

@@ -182,50 +182,50 @@ if (isset($_POST['maillist'])) {
   $general_mailing_lists = array(
 
     'General mailing lists for PHP users',
-    array (
+    array(
       'php-announce', 'Announcements',
       'Announcements of new PHP releases are sent to this very low-volume list',
       true, false, false, 'php.announce'
     ),
-    array (
+    array(
       'php-general', 'General user list',
       'This is a high volume list for general PHP support; ask PHP questions here',
       false, true, true, 'php.general'
     ),
-    array (
+    array(
       'php-windows', 'Windows PHP users list',
       'Using PHP on Microsoft Windows',
       false, true, true, 'php.windows'
     ),
 
     'Subject specific lists for PHP users',
-    array (
+    array(
       'php-install', 'Installation issues and problems',
       'How to install PHP with particular configurations and servers',
       false, true, true, 'php.install'
     ),
-    array (
+    array(
       'php-db', 'Databases and PHP',
       'This list is for the discussion of PHP database topics',
       false, true, true, 'php.db'
     ),
-    array (
+    array(
       'php-i18n', 'Unicode and Internationalization',
       'Unicode support, Internationalization (i18n) and localization (l10n) issues and features',
       false, true, true, 'php.i18n'
     ),
-    array (
+    array(
       'php-evangelism', 'PHP evangelism mailing list',
       'A list for people interested in promoting PHP and learning good reasons to support PHP in the enterprise',
       true, true, true, 'php.evangelism'
     ),
-    array (
+    array(
       'soap', 'PHP SOAP list',
       'List for the SOAP developers',
       false, false, false, 'php.soap'
     ),
     'Non-English language mailing lists',
-    array (
+    array(
       'php-es', 'Spanish PHP Mailing list',
       'List for Spanish speaking people interested in PHP',
       false, false, false, 'php.general.es'
@@ -237,44 +237,44 @@ if (isset($_POST['maillist'])) {
   $internals_mailing_lists = array(
 
     'PHP and Zend Engine internals lists',
-    array (
+    array(
       'internals', 'Internals list',
       'A medium volume list for those who want to help out with the development of PHP',
       false, 'php-internals', true, 'php.internals'
     ),
-    array (
+    array(
       'internals-win', 'Windows Internals list',
       'A low volume list for those who want to help out with the development of PHP on Windows',
       false, false, true, 'php.internals.win'
     ),
-    array (
+    array(
       'php-cvs', 'Git commit list',
       'All commits to internals (php-src) and the Zend Engine are posted to this list automatically',
       true, true, false, 'php.cvs'
     ),
-    array (
+    array(
       'git-pulls', 'Git pull requests',
       'Pull requests from Github',
       false, false, false, 'php.git-pulls'
     ),
-    array (
+    array(
       'php-qa', 'Quality Assurance list',
       'List for the members of the PHP-QA Team',
       false, true, false, 'php.qa'
     ),
-    array (
+    array(
       'php-bugs', 'General bugs',
       'General bug activity are posted here',
       false, false, false, 'php.bugs'
     ),
-    array (
+    array(
       'standards', 'PHP Standardization and interoperability list',
       'Development of language standards',
       false, false, false, 'php.standards'
     ),
 
     'PHP internal website mailing lists',
-    array (
+    array(
       'php-webmaster', 'PHP php.net internal infrastructure discussion',
       'List for discussing and maintaining the php.net web infrastructure.<br>
        For general PHP support questions, see "General Mailing Lists" or the <a href="/support.php">support page</a>',
@@ -282,17 +282,17 @@ if (isset($_POST['maillist'])) {
     ),
 
     'PHP documentation mailing lists',
-    array (
+    array(
       'phpdoc', 'Documentation discussion',
       'List for discussing the PHP documentation',
       false, true, false, 'php.doc'
     ),
-    array (
+    array(
       'doc-cvs', 'Documentation changes and commits',
       'Changes to the documentation are posted here',
       true, 'php-doc-cvs', false, 'php.doc.cvs'
     ),
-    array (
+    array(
       'doc-bugs', 'Documentation bugs',
       'Documentation bug activity (translations, sources, and build system) are posted here',
       true, 'php-doc-bugs', false, 'php.doc.bugs'

@@ -3,42 +3,42 @@ include_once $_SERVER['DOCUMENT_ROOT'] . '/include/shared-manual.inc';
 $TOC = array();
 $PARENTS = array();
 
-$setup = array (
+$setup = array(
   'home' =>
-  array (
+  array(
     0 => 'index.php',
     1 => 'PHP Manual',
   ),
   'head' =>
-  array (
+  array(
     0 => 'UTF-8',
     1 => 'en',
   ),
   'this' =>
-  array (
+  array(
     0 => 'index.php',
     1 => 'PHP Manual',
   ),
   'up' =>
-  array (
+  array(
     0 => null,
     1 => null,
   ),
   'prev' =>
-  array (
+  array(
     0 => null,
     1 => null,
   ),
   'next' =>
-  array (
+  array(
     0 => null,
     1 => null,
   ),
   'alternatives' =>
-  array (
+  array(
   ),
   'extra_header_links' =>
-  array (
+  array(
     'rel' => 'alternate',
     'href' => '/manual/en/feeds/index.atom',
     'type' => 'application/atom+xml',

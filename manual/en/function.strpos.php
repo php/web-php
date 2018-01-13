@@ -3,39 +3,39 @@ include_once $_SERVER['DOCUMENT_ROOT'] . '/include/shared-manual.inc';
 $TOC = array();
 $PARENTS = array();
 include_once __DIR__ .'/toc/ref.strings.inc';
-$setup = array (
+$setup = array(
   'home' =>
-  array (
+  array(
     0 => 'index.php',
     1 => 'PHP Manual',
   ),
   'head' =>
-  array (
+  array(
     0 => 'UTF-8',
     1 => 'en',
   ),
   'this' =>
-  array (
+  array(
     0 => 'function.strpos.php',
     1 => 'strpos',
   ),
   'up' =>
-  array (
+  array(
     0 => 'ref.strings.php',
     1 => 'String Functions',
   ),
   'prev' =>
-  array (
+  array(
     0 => 'function.strpbrk.php',
     1 => 'strpbrk',
   ),
   'next' =>
-  array (
+  array(
     0 => 'function.strrchr.php',
     1 => 'strrchr',
   ),
   'alternatives' =>
-  array (
+  array(
   ),
 );
 $setup['toc'] = $TOC;

@@ -68,7 +68,7 @@ $height = $header_height + $footer_height + (count($branches) * $branch_height);
 			text {
 				fill: #333;
 				font-family: "Fira Sans", "Source Sans Pro", Helvetica, Arial, sans-serif;
-				font-size: <?php echo (2 / 3) * $header_height; ?>px;
+				font-size: <?php echo(2 / 3) * $header_height; ?>px;
 			}
 
 			g.eol rect,

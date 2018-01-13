@@ -5,7 +5,7 @@
 
 require getcwd().'/email-validation.inc';
 
-$test_add = array (
+$test_add = array(
     'wrong-email-address@lists.php.net','jmcastagnetto@yahoo.com',
     'some-wrong@asdas.com', 'jcastagnetto-NO-SPAM@yahoo.com',
     'jcastagnetto@NoSpam-yahoo.com', 'jmcastagnetto@chek2.com',

@@ -271,7 +271,7 @@ if (isset($manual_page_moves[$URI])) {
 
 // ============================================================================
 // Define shortcuts for PHP files, manual pages and external redirects
-$uri_aliases = array (
+$uri_aliases = array(
 
     # PHP page shortcuts
     'download'      => 'downloads',
