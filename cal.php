@@ -127,7 +127,7 @@ if (count($errors) > 0) {
 
 // Beginning and end of this month
 $bom = mktime(0, 0, 1, $cm, 1, $cy);
-$eom = mktime(0, 0, 1, $cm+1, 0, $cy);
+$eom = mktime(0, 0, 1, $cm + 1, 0, $cy);
 
 // Link to previous month (but do not link to too early dates)
 $lm = mktime(0, 0, 1, $cm, 0, $cy);
@@ -138,7 +138,7 @@ if (valid_year(date('Y', $lm))) {
 }
 
 // Link to next month (but do not link to too early dates)
-$nm = mktime(0, 0, 1, $cm+1, 1, $cy);
+$nm = mktime(0, 0, 1, $cm + 1, 1, $cy);
 if (valid_year(date('Y', $nm))) {
    $next_link = '<a href="/cal.php' . strftime('?cm=%m&amp;cy=%Y">%B, %Y</a>', $nm);
 } else {
@@ -157,7 +157,7 @@ echo '<table id="cal" width="100%" border="1" cellspacing="0" cellpadding="3">',
 
 // Print out headers for weekdays
 for ($i = 0; $i < 7; $i++) {
-    echo '<th width="14%">', date('l', mktime(0, 0, 1, 4, $i+1, 2001)), "</th>\n";
+    echo '<th width="14%">', date('l', mktime(0, 0, 1, 4, $i + 1, 2001)), "</th>\n";
 }
 echo "</tr>\n<tr>";
 
@@ -208,7 +208,7 @@ function date_for_recur($recur, $day, $bom, $eom)
     else {
         $eomd = date('w', $eom) + 1;
         $days = (($eomd - $day + 7) % 7) + ((abs($recur) - 1) * 7);
-        return mktime(0, 0, 1, date('m', $bom)+1, -$days, date('Y', $bom));
+        return mktime(0, 0, 1, date('m', $bom) + 1, -$days, date('Y', $bom));
     }
 }
 
@@ -369,7 +369,7 @@ function valid_year($year)
     $current_year = date('Y');
 
     // We only allow this and the next year for displays
-    if ($year != $current_year && $year != $current_year+1) {
+    if ($year != $current_year && $year != $current_year + 1) {
         return false;
     }
 

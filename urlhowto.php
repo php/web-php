@@ -3,7 +3,7 @@
 $_SERVER['BASE_PAGE'] = 'urlhowto.php';
 include_once $_SERVER['DOCUMENT_ROOT'] . '/include/prepend.inc';
 
-$SIDEBAR_DATA='
+$SIDEBAR_DATA = '
 <h3>URL examples</h3>
 <p>
  We have many kind of URL shortcuts. Here are some

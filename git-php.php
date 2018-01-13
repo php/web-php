@@ -112,7 +112,7 @@ if (count($_POST) && (!isset($_POST['purpose']) || !is_array($_POST['purpose']) 
 ?>
 <p>
  Thank you. Your request has been sent. You should hear something within the
- next week or so. If you haven't heard anything by around <?php echo date('l, F jS', time()+604800); ?>
+ next week or so. If you haven't heard anything by around <?php echo date('l, F jS', time() + 604800); ?>
  then please send an email to the appropriate <a href="/mailing-lists.php">mailing list</a>:
 </p>
 <ul>

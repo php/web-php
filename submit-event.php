@@ -49,7 +49,7 @@ if ($process) {
      * Add, edit, or remove blacklisted users or domains
      * in include/email-validation.inc :: blacklisted().
      */
-    $uemail     = isset($_POST['email']) ? strtolower($_POST['email']) : '';
+    $uemail = isset($_POST['email']) ? strtolower($_POST['email']) : '';
     if (blacklisted($uemail)) {
         $errors[] = 'An expected error has been encountered.  Please don\'t try again later.';
     }

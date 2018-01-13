@@ -616,7 +616,7 @@ if (isset($external_redirects[$URI])) {
 
 // Temporary hack for mirror-info, until all the pages
 // will be capable of being included from anywhere
-if ($URI=='mirror-info') {
+if ($URI == 'mirror-info') {
     status_header(200);
     include_once $_SERVER['DOCUMENT_ROOT'] . "/$URI.php";
     exit;

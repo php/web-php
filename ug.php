@@ -3,7 +3,7 @@
 $_SERVER['BASE_PAGE'] = 'ug.php';
 include_once $_SERVER['DOCUMENT_ROOT'] . '/include/prepend.inc';
 
-mirror_setcookie('LAST_UG', $_SERVER['REQUEST_TIME']+60*60*24, 60*60*24);
+mirror_setcookie('LAST_UG', $_SERVER['REQUEST_TIME'] + 60 * 60 * 24, 60 * 60 * 24);
 site_header('Hypertext Preprocessor',
     array(
         'current' => 'community',
@@ -32,7 +32,7 @@ function ug_get_more_info($group) {
     if (!file_exists($filename)) {
         return null;
     }
-    $data = file($filename, FILE_IGNORE_NEW_LINES|FILE_SKIP_EMPTY_LINES);
+    $data = file($filename, FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES);
     $retval = ug_get_next_even_from_ical_array($data);
 
     return $retval;

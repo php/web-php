@@ -63,7 +63,7 @@ XXX: lxr is offline and should be re-added once its are back online in a more pe
 
 */
 
-$SIDEBAR_DATA ='
+$SIDEBAR_DATA = '
 <div class="panel"><a href="build-setup.php">Developer Setup Help</a></div>
 <div class="panel">
   <div class="headline">Useful links for developers:</div>
@@ -80,6 +80,6 @@ $SIDEBAR_DATA ='
 </div>
 ';
 
-site_footer(array('sidebar'=>$SIDEBAR_DATA));
+site_footer(array('sidebar' => $SIDEBAR_DATA));
 
 // vim: set et ts=4 sw=4 ft=php: :

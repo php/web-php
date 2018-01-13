@@ -231,7 +231,7 @@ foreach($OLDRELEASES as $major => $a) {
 			isset($release['announcement']) ? $release['announcement'] : false,
 			$release['source'],
 			(isset($release['windows']) ? $release['windows'] : array()),
-			isset($release['museum']) ? $release['museum'] : ($i<3 ? false : true)
+			isset($release['museum']) ? $release['museum'] : ($i < 3 ? false : true)
 		);
 	}
 }

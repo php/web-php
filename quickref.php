@@ -110,7 +110,7 @@ if (count($temp) > 0) {
 if (count($maybe) > 0) { $head_options = array('noindex'); }
 else { $head_options = array(); }
 
-site_header('Manual Quick Reference', $head_options+array('current' => 'help'));
+site_header('Manual Quick Reference', $head_options + array('current' => 'help'));
 
 // Note: $notfound is defined (with htmlspecialchars) inside manual-lookup.php
 $notfound_enc = urlencode($notfound);

@@ -8,7 +8,7 @@ if (!empty($_GET['active_langs'])) {
     exit;
 }
 
-$SIDEBAR_DATA='
+$SIDEBAR_DATA = '
 <div class="panel">
     <div class="headline">Online documentation</div>
     <div class="body">
@@ -120,7 +120,7 @@ foreach ($LANGUAGES as $langcode => $language) {
             if ($size !== false) {
                 $files[$langcode][$formatname] = array(
                     $link_to,
-                    (int) ($size/1024),
+                    (int) ($size / 1024),
                     date('j M Y', $changed),
                     $extension
                 );

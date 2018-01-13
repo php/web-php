@@ -112,7 +112,7 @@ if ($process) {
             if (strpos($result, '[TOO MANY NOTES]') !== false) {
                 print '<p class="formerror">As a security precaution, we only allow a certain number of notes to be submitted per minute. At this time, this number has been exceeded. Please re-submit your note in about a minute.</p>';
             } elseif (($pos = strpos($result, '[SPAMMER]')) !== false) {
-                $ip       = trim(substr($result, $pos+9));
+                $ip       = trim(substr($result, $pos + 9));
                 $spam_url = $ip_spam_lookup_url . $ip;
                 print '<p class="formerror">Your IP is listed in one of the spammers lists we use, which aren\'t controlled by us. More information is available at <a href="'.$spam_url.'">'.$spam_url.'</a>.</p>';
             } elseif (strpos($result, '[SPAM WORD]') !== false) {

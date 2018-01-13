@@ -4,7 +4,7 @@ $_SERVER['BASE_PAGE'] = 'conferences/index.php';
 include_once $_SERVER['DOCUMENT_ROOT'] . '/include/prepend.inc';
 include_once $_SERVER['DOCUMENT_ROOT'] . '/include/pregen-news.inc';
 
-mirror_setcookie('LAST_NEWS', $_SERVER['REQUEST_TIME'], 60*60*24*365);
+mirror_setcookie('LAST_NEWS', $_SERVER['REQUEST_TIME'], 60 * 60 * 24 * 365);
 site_header('PHP Conferences around the world', array(
     'headtags' => '<link rel="alternate" type="application/atom+xml" title="PHP: Conference announcements" href="' . $MYSITE . 'feed.atom">',
     'current'  => 'community',

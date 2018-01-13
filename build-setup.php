@@ -3,7 +3,7 @@
 $_SERVER['BASE_PAGE'] = 'get-involved.php';
 include_once $_SERVER['DOCUMENT_ROOT'] . '/include/prepend.inc';
 
-$SIDEBAR_DATA ='
+$SIDEBAR_DATA = '
 <div class="panel">
   <div class="body">
     <p>
@@ -173,6 +173,6 @@ site_header('Operating System Preparation', array('current' => 'community'));
 </p>
 </div>
 <?php
-site_footer(array('sidebar'=>$SIDEBAR_DATA));
+site_footer(array('sidebar' => $SIDEBAR_DATA));
 
 // vim: set et ts=4 sw=4 ft=php: :
