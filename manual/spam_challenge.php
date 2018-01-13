@@ -68,5 +68,3 @@ function test_answer($name, $an, $bn, $answer) {
 
 	return ($nums[$c[0]($a, $b)] === $answer);
 }
-
-?>

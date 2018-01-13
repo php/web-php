@@ -658,4 +658,3 @@ mirror_redirect(
 /*
  * vim: set et ts=4 sw=4 ft=php: :
  */
-?>

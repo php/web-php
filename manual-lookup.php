@@ -37,5 +37,3 @@ if ($function) {
 // Fall back to a quick reference search
 $notfound = $function;
 include $_SERVER['DOCUMENT_ROOT'] . '/quickref.php';
-
-?>
