@@ -118,4 +118,3 @@ function run_self_tests() {
 	);
 
 }
-

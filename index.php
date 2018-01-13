@@ -197,4 +197,3 @@ site_footer(
         'sidebar' => $SIDEBAR
     )
 );
-

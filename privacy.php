@@ -37,4 +37,3 @@ site_header('Privacy Policy', array('current' => 'footer'));
 
 <?php
 site_footer();
-

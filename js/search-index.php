@@ -66,4 +66,3 @@ foreach($js as $k => $item) {
 }
 
 echo json_encode($index);
-

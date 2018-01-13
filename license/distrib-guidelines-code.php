@@ -64,4 +64,3 @@ site_header('License Information', array('current' => 'help'));
 </ul>
 
 <?php site_footer();
-

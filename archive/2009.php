@@ -967,4 +967,3 @@ site_header('News Archive - 2009', array('cache' => true));
 
 
 <?php site_footer(array('elephpants' => true, 'sidebar' => $SIDEBAR_DATA));
-

@@ -65,4 +65,3 @@ announcement</a> for more information.
 
 <?php
 site_footer();
-

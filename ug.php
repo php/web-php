@@ -127,4 +127,3 @@ site_footer(
         'sidebar' => $SIDEBAR_DATA,
     )
 );
-

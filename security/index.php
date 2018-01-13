@@ -145,4 +145,3 @@ EOT;
 }
 
 site_footer();
-

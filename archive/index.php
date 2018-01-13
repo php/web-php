@@ -12,4 +12,3 @@ do {
 
 include_once $_SERVER['DOCUMENT_ROOT'] . '/include/errors.inc';
 error_noservice();
-
