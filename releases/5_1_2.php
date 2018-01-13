@@ -43,7 +43,7 @@ The feature enhancements include the following notables:
 The release also includes over 85 bug fixes with a focus on:
 <ul>
 <li>Correction of the many regressions in the strtotime() function.</li>
-<li>Fixes of several crashes, leaks and memory corruptions found in the 
+<li>Fixes of several crashes, leaks and memory corruptions found in the
     imap, pdo, gd, mysqli, mcrypt and soap extensions.</li>
 <li>Corrected problems with the usage of SSI and virtual() in the Apache2 SAPI.</li>
 <li>Build fixes for iconv and sybase_ct extensions.</li>

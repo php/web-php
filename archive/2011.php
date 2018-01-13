@@ -56,7 +56,7 @@ site_header("News Archive - 2011", array("cache" => true));
        The next release candidate will be released in 14 days.
      </p>
     </div>
-  
+
     </div>
 </div>
 
@@ -73,7 +73,7 @@ site_header("News Archive - 2011", array("cache" => true));
          Website: <a href="http://www.phpconference.nl/">http://www.phpconference.nl/</a>
      </p>
     </div>
-  
+
     </div>
 </div>
 
@@ -87,15 +87,15 @@ site_header("News Archive - 2011", array("cache" => true));
       <p>
         The PHP development team is proud to announce the third
         <a href="http://qa.php.net">release candidate</a> of PHP 5.4.
-        PHP 5.4 includes new language features and removes several legacy 
-        (deprecated) behaviours. Windows binaries can be downloaded from the 
+        PHP 5.4 includes new language features and removes several legacy
+        (deprecated) behaviours. Windows binaries can be downloaded from the
         <a href="http://windows.php.net/qa/">Windows QA site</a>.
       </p>
       <p>
         <strong>THIS IS A RELEASE CANDIDATE - DO NOT USE IT IN PRODUCTION!</strong>.
       </p>
       <p>
-        This is the third release candidate. The release candidate phase is intended as 
+        This is the third release candidate. The release candidate phase is intended as
         a period of bug fixing prior to the stable release. No new features should
         be included before the final version of PHP 5.4.0.
       </p>
@@ -119,7 +119,7 @@ site_header("News Archive - 2011", array("cache" => true));
         <a href="https://bugs.php.net/">PHP bug tracker</a>.
       </p>
     </div>
-  
+
     </div>
 </div>
 
@@ -131,17 +131,17 @@ site_header("News Archive - 2011", array("cache" => true));
         <abbr class="published newsdate" title="2011-11-29T21:34:29+00:00">[29-Nov-2011]</abbr>
         <div>
       <p>
-        The PHP development team is proud to announce the second 
+        The PHP development team is proud to announce the second
         <a href="http://qa.php.net">release candidate</a> of PHP 5.4.
-        PHP 5.4 includes new language features and removes several legacy 
-        (deprecated) behaviours. Windows binaries can be downloaded from the 
+        PHP 5.4 includes new language features and removes several legacy
+        (deprecated) behaviours. Windows binaries can be downloaded from the
         <a href="http://windows.php.net/qa/">Windows QA site</a>.
       </p>
       <p>
         <strong>THIS IS A RELEASE CANDIDATE - DO NOT USE IT IN PRODUCTION!</strong>.
       </p>
       <p>
-        This is the second release candidate. The release candidate phase is intended as 
+        This is the second release candidate. The release candidate phase is intended as
         a period of bug fixing prior to the stable release. No new features should
         be included before the final version of PHP 5.4.0.
       </p>
@@ -165,7 +165,7 @@ site_header("News Archive - 2011", array("cache" => true));
         <a href="https://bugs.php.net/">PHP bug tracker</a>.
       </p>
     </div>
-  
+
     </div>
 </div>
 
@@ -196,7 +196,7 @@ site_header("News Archive - 2011", array("cache" => true));
          information, please visit our website: <a href="http://www.phpday.it">http://www.phpday.it</a>
      </p>
     </div>
-  
+
     </div>
 </div>
 
@@ -208,18 +208,18 @@ site_header("News Archive - 2011", array("cache" => true));
         <abbr class="published newsdate" title="2011-11-11T00:01:11+00:00">[11-Nov-2011]</abbr>
         <div>
      <p>
-      The PHP development team is proud to announce the first 
-      <a href="http://qa.php.net/">release candidate</a> of PHP 5.4. 
-      PHP 5.4 includes new language features and removes several legacy 
-      (deprecated) behaviours. Windows binaries can be downloaded from the 
+      The PHP development team is proud to announce the first
+      <a href="http://qa.php.net/">release candidate</a> of PHP 5.4.
+      PHP 5.4 includes new language features and removes several legacy
+      (deprecated) behaviours. Windows binaries can be downloaded from the
       <a href="http://windows.php.net/qa/">Windows QA site</a>.
      </p>
      <p>
       <strong>THIS IS A RELEASE CANDIDATE - DO NOT USE IT IN PRODUCTION!</strong>
      </p>
      <p>
-      This is the first release candidate. No new features will be included 
-      before the final version of PHP 5.4.0. The release candidate phase is 
+      This is the first release candidate. No new features will be included
+      before the final version of PHP 5.4.0. The release candidate phase is
       intended as a period of bug fixing prior to the stable release.
      </p>
      <p>
@@ -231,18 +231,18 @@ site_header("News Archive - 2011", array("cache" => true));
         <li>Numerous bug fixes and improvements in the Core and other extensions.</li>
       </ul>
      <p>
-      Please help us to identify bugs in order to ensure that the release is solid and 
-      all things behave as expected.  Please test this release candidate against your 
-      code base and report any problems that you encounter to the 
-      <a href="mailto:php-qa@lists.php.net">QA mailing list</a> and/or the 
+      Please help us to identify bugs in order to ensure that the release is solid and
+      all things behave as expected.  Please test this release candidate against your
+      code base and report any problems that you encounter to the
+      <a href="mailto:php-qa@lists.php.net">QA mailing list</a> and/or the
       <a href="https://bugs.php.net/">PHP bug tracker</a>.
      </p>
      <p>
-      Read the <a href="/releases/NEWS_5_4_0_RC1.txt">NEWS</a> file for a 
+      Read the <a href="/releases/NEWS_5_4_0_RC1.txt">NEWS</a> file for a
       complete list of changes in this release.
      </p>
     </div>
-  
+
     </div>
 </div>
 
@@ -276,7 +276,7 @@ site_header("News Archive - 2011", array("cache" => true));
        file for a complete list of changes.
       </p>
     </div>
-  
+
     </div>
 </div>
 
@@ -297,7 +297,7 @@ site_header("News Archive - 2011", array("cache" => true));
                frameworks, web applications built in PHP, and the art of testing
                code.
            </p>
-     
+
            <p>
                Whether you live here or are around just enjoying the marvelous city,
                come and join us :) For more information, please visit
@@ -307,7 +307,7 @@ site_header("News Archive - 2011", array("cache" => true));
                (Portuguese only).
            </p>
     </div>
-  
+
     </div>
 </div>
 
@@ -347,7 +347,7 @@ site_header("News Archive - 2011", array("cache" => true));
      Information and booking via the website: <a href="http://www.web-devcon.de">http://www.web-devcon.de</a>
      </p>
     </div>
-  
+
     </div>
 </div>
 
@@ -387,7 +387,7 @@ site_header("News Archive - 2011", array("cache" => true));
         file for a complete list of changes.
       </p>
     </div>
-  
+
     </div>
 </div>
 
@@ -403,7 +403,7 @@ site_header("News Archive - 2011", array("cache" => true));
      to announce that the 5th edition of the <a href="http://phpconference.es/">PHP
      Barcelona Conference</a> is here!
      </p>
-     
+
      <p>
      There will be 30 one-hour talks and workshops in two days with three
      parallel tracks, covering many PHP development subjects such as Application
@@ -411,7 +411,7 @@ site_header("News Archive - 2011", array("cache" => true));
      Unit Testing, Best Practices, Cloud Computing, and many more topics and
      surprises.
      </p>
-     
+
      <p>
      The conference will take place from the 28th to the 29th of October and will
      bring together <strong>Rasmus Lerdorf</strong>, <strong>Derick
@@ -419,7 +419,7 @@ site_header("News Archive - 2011", array("cache" => true));
      Tabini</strong> and many more of the shiniest names in the industry for two
      fun-packed days of intensive PHP.
      </p>
-     
+
      <p>
      For registration and more info about it, please visit
      <a href="http://phpconference.es/">http://phpconference.es</a>
@@ -428,7 +428,7 @@ site_header("News Archive - 2011", array("cache" => true));
      Hope to see you in Barcelona!
      </p>
     </div>
-  
+
     </div>
 </div>
 
@@ -447,7 +447,7 @@ site_header("News Archive - 2011", array("cache" => true));
      <p>
      These are the topics we're aiming for:
      </p>
-     
+
      <ul>
      <li>Content Management Systems</li>
      <li>Cloud</li>
@@ -458,15 +458,15 @@ site_header("News Archive - 2011", array("cache" => true));
      <li>General and in depth programming skills</li>
      <li>HTML5 &amp; co (with a PHP twist)</li>
      </ul>
-     
+
      <p>
      All information about the conference and the CFP can be found on our
      <a href="http://conference.phpbenelux.eu/2012">conference website</a>.
      Schedule and ticket information will be announced early November
      </p>
-     
+
     </div>
-  
+
     </div>
 </div>
 
@@ -480,13 +480,13 @@ site_header("News Archive - 2011", array("cache" => true));
      <p>The PHP development team would like to announce the immediate
      availability of PHP 5.3.8. This release fixes two issues introduced in
      the PHP 5.3.7 release:</p>
-     
+
      <ul>
          <li>Fixed bug <a href="https://bugs.php.net/bug.php?id=55439">#55439</a> (crypt() returns only the salt for MD5)</li>
          <li>Reverted a change in timeout handling restoring PHP 5.3.6 behavior,
           which caused mysqlnd SSL connections to hang (Bug #55283).</li>
      </ul>
-     
+
      <p>All PHP users should note that the PHP 5.2 series is NOT supported
         anymore. All users are strongly encouraged to upgrade to PHP 5.3.8.</p>
 
@@ -497,7 +497,7 @@ site_header("News Archive - 2011", array("cache" => true));
          <strong>For more details on the crypt() blowfish security issue in pre 5.3.6 see <a href="http://php.net/security/crypt_blowfish">the crypt blowfish page</a></strong>
     </p>
     </div>
-  
+
     </div>
 </div>
 
@@ -513,7 +513,7 @@ site_header("News Archive - 2011", array("cache" => true));
          users should postpone upgrading until 5.3.8 is released (expected in a few days).
      </p>
     </div>
-  
+
     </div>
 </div>
 
@@ -527,7 +527,7 @@ site_header("News Archive - 2011", array("cache" => true));
      <p>
      The Zend PHP Conference (ZendCon) is the largest gathering of the PHP Community and brings together PHP developers and IT managers from around the world to discuss PHP best practices and explore new technologies.
      </p>
-     
+
      <p>This year’s conference will be held on October 17-20, 2011 at the Convention Center in Santa Clara, California. The conference will include a variety of technical sessions and in-depth tutorials in the following areas:
      <ul>
      <li>Cloud Computing - build applications, not infrastructure.<br>Learn about the latest developments in PHP Cloud infrastructure, management and application services</li>
@@ -539,7 +539,7 @@ site_header("News Archive - 2011", array("cache" => true));
      For more details and to register for ZendCon, visit the website at: http://www.zendcon.com/
      </p>
     </div>
-  
+
     </div>
 </div>
 
@@ -554,7 +554,7 @@ site_header("News Archive - 2011", array("cache" => true));
      availability of PHP 5.3.7. This release focuses on improving the
      stability of the PHP 5.3.x branch with over 90 bug fixes, some of which
      are security related.</p>
-     
+
      <p><b>Security Enhancements and Fixes in PHP 5.3.7:</b></p>
      <ul>
          <li>Updated crypt_blowfish to 1.2. (CVE-2011-2483) <a href="http://php.net/security/crypt_blowfish">(more info)</a></li>
@@ -564,7 +564,7 @@ site_header("News Archive - 2011", array("cache" => true));
          <li>Fixed stack buffer overflow in socket_connect(). (CVE-2011-1938)</li>
          <li>Fixed bug #54238 (use-after-free in substr_replace()). (CVE-2011-1148)</li>
      </ul>
-     
+
      <p><b>Key enhancements in PHP 5.3.7 include:</b></p>
      <ul>
          <li>Upgraded bundled Sqlite3 to version 3.7.7.1</li>
@@ -591,11 +591,11 @@ site_header("News Archive - 2011", array("cache" => true));
          <li>Fixed bug #54681 (addGlob() crashes on invalid flags)</li>
          <li>Over 80 other bug fixes.</li>
      </ul>
-     
+
      <p>Windows users: please mind that we do no longer provide builds created
      with Visual Studio C++ 6. It is impossible to maintain a high quality
      and safe build of PHP for Windows using this unmaintained compiler.</p>
-     
+
      <p>For Apache SAPIs (php5_apache2_2.dll), be sure that you use a Visual
      Studio C++ 9 version of Apache. We recommend the Apache builds as provided
      by <a href="http://www.apachelounge.com/">ApacheLounge</a>. For any other
@@ -603,7 +603,7 @@ site_header("News Archive - 2011", array("cache" => true));
      server), everything works as before. Third party extension providers
      must rebuild their extensions to make them compatible and loadable with
      the Visual Studio C++9 builds that we now provide.</p>
-     
+
      <p>All PHP users should note that the PHP 5.2 series is NOT supported
      anymore. All users are strongly encouraged to upgrade to PHP 5.3.7.</p>
     </div>
@@ -612,7 +612,7 @@ site_header("News Archive - 2011", array("cache" => true));
      <a href="/ChangeLog-5.php#5.3.7">ChangeLog</a>. For source downloads
      please visit our <a href="/downloads.php">downloads page</a>, Windows
      binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.</p>
-  
+
     </div>
 </div>
 
@@ -627,18 +627,18 @@ site_header("News Archive - 2011", array("cache" => true));
      We are looking for the best speakers willing to share their skills and
      experience with developers and managers. ConFoo is a community driven
      conference dedicated to Web technologies.</p>
-     
+
      <p>The conference will be held in Montreal from February 29th to March 2nd,
      2012 at the prestigious Hotel Hilton Bonaventure. We will also have two days
      of private training. The topics will be revealed later this year.</p>
-     
+
      <p>Talk proposals must be received by September 2nd and may be written in English
      or French.</p>
-     
+
      <p>For more information and updates, visit our Website:
      <a href="http://confoo.ca/en">http://confoo.ca/en</a>.</p>
     </div>
-  
+
     </div>
 </div>
 
@@ -648,7 +648,7 @@ site_header("News Archive - 2011", array("cache" => true));
     <h1 class="summary entry-title"><a name="id2011-06-28-1" id="id2011-06-28-1" href="#id2011-06-28-1" rel="bookmark" class="bookmark">PHP 5.4 alpha1 released</a></h1>
     <div class="entry-content description">
         <abbr class="published newsdate" title="2011-06-28T23:34:42+02:00">[28-Jun-2011]</abbr>
-        <div> 
+        <div>
      <p>
       The PHP development team is proud to announce the first PHP 5.4 <a href="http://qa.php.net/">alpha release</a>.
       PHP 5.4 includes new language features and removes several legacy (deprecated) behaviors.
@@ -666,11 +666,11 @@ site_header("News Archive - 2011", array("cache" => true));
       the <a href="https://bugs.php.net/">PHP bug tracker</a>. Windows binaries
       can be downloaded from the <a href="http://windows.php.net/qa/">
       Windows QA site</a>.
-     </p> 
+     </p>
      <p>
       Here is an incomplete list of changes:
      </p>
-     <ul> 
+     <ul>
        <li>Added: Traits language construct</li>
        <li>Added: Array dereferencing support</li>
        <li>Added: DTrace support</li>
@@ -690,9 +690,9 @@ site_header("News Archive - 2011", array("cache" => true));
          <a href="https://wiki.php.net/rfc/releaseprocess/">releaseprocess RFC</a>.
          The next alpha will be released within four weeks. The PHP 5.4 feature
          set and API has not been finalized.
-     </p> 
-    </div> 
-  
+     </p>
+    </div>
+
     </div>
 </div>
 
@@ -733,7 +733,7 @@ site_header("News Archive - 2011", array("cache" => true));
      </p>
 
     </div>
-  
+
     </div>
 </div>
 
@@ -760,7 +760,7 @@ site_header("News Archive - 2011", array("cache" => true));
       <a href="http://2011.osidays.com/blog/php-days-call-paper">Submit a proposal now!</a>
      </p>
     </div>
-  
+
     </div>
 </div>
 
@@ -789,7 +789,7 @@ site_header("News Archive - 2011", array("cache" => true));
      crowd to hang out with - hope to see you there :)
      </p>
     </div>
-  
+
     </div>
 </div>
 
@@ -808,7 +808,7 @@ site_header("News Archive - 2011", array("cache" => true));
      Keywords for these days: Know-how, Technology, Best Practices, Networking, Tips &amp; Tricks.
      </p>
     </div>
-  
+
     </div>
 </div>
 
@@ -828,14 +828,14 @@ site_header("News Archive - 2011", array("cache" => true));
      integration and so on. There are also talks about design, project
      management, agile and various php-related technologies.
      </p>
-     
+
      <p>
      phpDay is the first historic Italian conference dedicated solely to PHP
      development, technologies and management. It is aimed to IT managers,
      developers and innovators. Each year it renews the opportunity to link
      to new business partners.
      </p>
-     
+
      <p>
      <a href="http://www.phpday.it">phpDay</a> introduces the most important
      international PHP gurus to italian
@@ -845,7 +845,7 @@ site_header("News Archive - 2011", array("cache" => true));
      with PHP.
      </p>
     </div>
-  
+
     </div>
 </div>
 
@@ -864,11 +864,11 @@ site_header("News Archive - 2011", array("cache" => true));
      accounts were used to inject anything malicious. Nothing was found.
      The compromised machine has been wiped and we are forcing a password
      change for all svn accounts.</p>
-     
+
      <p>We are still investigating the details of the attack which combined a
      vulnerability in the Wiki software with a Linux root exploit.</p>
     </div>
-  
+
     </div>
 </div>
 
@@ -883,7 +883,7 @@ site_header("News Archive - 2011", array("cache" => true));
      availability of PHP 5.3.6. This release focuses on improving the
      stability of the PHP 5.3.x branch with over 60 bug fixes, some of which
      are security related.</p>
-     
+
      <p><b>Security Enhancements and Fixes in PHP 5.3.6:</b></p>
      <ul>
      <li>Enforce security in the fastcgi protocol parsing with fpm SAPI.</li>
@@ -893,7 +893,7 @@ site_header("News Archive - 2011", array("cache" => true));
      <li>Fixed bug #54002 (crash on crafted tag in exif). (CVE-2011-0708)</li>
      <li>Fixed bug #53885 (ZipArchive segfault with FL_UNCHANGED on empty archive). (CVE-2011-0421)</li>
      </ul>
-     
+
      <p><b>Key enhancements in PHP 5.3.6 include:</b></p>
      <ul>
      <li>Upgraded bundled Sqlite3 to version 3.7.4.</li>
@@ -906,12 +906,12 @@ site_header("News Archive - 2011", array("cache" => true));
      <li>Fixed bug #53577 (Regression introduced in 5.3.4 in open_basedir with a trailing forward slash).</li>
      <li>Over 60 other bug fixes.</li>
      </ul>
-     
+
      <p>Windows users: please mind that we do no longer provide builds created
      with Visual Studio C++ 6. It is impossible to maintain a high quality
      and safe build of PHP for Windows using this unmaintained compiler.
      </p>
-     
+
      <p>For Apache SAPIs (php5_apache2_2.dll), be sure that you use a Visual
      Studio C++ 9 version of Apache. We recommend the Apache builds as provided
      by <a href="http://www.apachelounge.com/">ApacheLounge</a>. For any other SAPI (CLI,
@@ -920,7 +920,7 @@ site_header("News Archive - 2011", array("cache" => true));
      must rebuild their extensions to make them compatible and loadable with
      the Visual Studio C++ 9 builds that we now provide.
      </p>
-     
+
      <p>All PHP users should note that the PHP 5.2 series is NOT supported anymore. All users
      are strongly encouraged to upgrade to PHP 5.3.6.</p>
 
@@ -929,7 +929,7 @@ site_header("News Archive - 2011", array("cache" => true));
      please visit our <a href="/downloads.php">downloads page</a>, Windows
      binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.</p>
     </div>
-  
+
     </div>
 </div>
 
@@ -979,7 +979,7 @@ site_header("News Archive - 2011", array("cache" => true));
         See you in Nashville!
       </p>
     </div>
-  
+
     </div>
 </div>
 
@@ -1010,7 +1010,7 @@ site_header("News Archive - 2011", array("cache" => true));
      immediately.
     </p>
     </div>
-  
+
     </div>
 </div>
 

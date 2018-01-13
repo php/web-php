@@ -14,7 +14,7 @@ fix.</p>
 <p>Security Fixes in PHP 5.3.10:</p>
 
 <ul>
-  <li>Fixed arbitrary remote code execution vulnerability reported by Stefan 
+  <li>Fixed arbitrary remote code execution vulnerability reported by Stefan
     Esser, CVE-2012-0830.</li>
 </ul>
 

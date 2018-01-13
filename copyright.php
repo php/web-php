@@ -17,14 +17,14 @@ site_header("Copyright", array("current" => "footer"));
 <h1>Website Copyright</h1>
 
 <p>
- The code, text, PHP logo, and graphical elements on this website 
+ The code, text, PHP logo, and graphical elements on this website
  and the mirror websites (the "Site") are Copyright &copy; 2001-<?php echo date("Y") ?>
  the <a href="/credits.php">PHP Group</a>. All rights reserved.
 </p>
 
 <p>
  Except as otherwise indicated elsewhere on this Site, you are free
- to view, download and print the documents and information available 
+ to view, download and print the documents and information available
  on this Site subject to the following conditions:
 </p>
 
@@ -47,7 +47,7 @@ site_header("Copyright", array("current" => "footer"));
 </ul>
 
 <p>
- For more information on the PHP Group and the PHP project, please see 
+ For more information on the PHP Group and the PHP project, please see
  <a href="http://php.net/">the PHP homepage</a>.
 </p>
 

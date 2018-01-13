@@ -4,40 +4,40 @@ $TOC = array();
 $PARENTS = array();
 include_once dirname(__FILE__) ."/toc/reserved.exceptions.inc";
 $setup = array (
-  'home' => 
+  'home' =>
   array (
     0 => 'index.php',
     1 => 'PHP Manual',
   ),
-  'head' => 
+  'head' =>
   array (
     0 => 'UTF-8',
     1 => 'en',
   ),
-  'this' => 
+  'this' =>
   array (
     0 => 'class.exception.php',
     1 => 'Exception',
   ),
-  'up' => 
+  'up' =>
   array (
     0 => 'reserved.exceptions.php',
     1 => 'Predefined Exceptions',
   ),
-  'prev' => 
+  'prev' =>
   array (
     0 => 'reserved.exceptions.php',
     1 => 'Predefined Exceptions',
   ),
-  'next' => 
+  'next' =>
   array (
     0 => 'exception.construct.php',
     1 => 'Exception::__construct',
   ),
-  'alternatives' => 
+  'alternatives' =>
   array (
   ),
-  'extra_header_links' => 
+  'extra_header_links' =>
   array (
     'rel' => 'alternate',
     'href' => '/manual/en/feeds/class.exception.atom',
@@ -52,10 +52,10 @@ manual_header();
 ?>
 <div id="class.exception" class="reference">
  <h1 class="title">Exception</h1>
- 
- 
+
+
  <div class="partintro"><p class="verinfo">(PHP 5 &gt;= 5.1.0)</p>
- 
+
 
   <div class="section" id="exception.intro">
    <h2 class="title">Introduction</h2>
@@ -65,14 +65,14 @@ manual_header();
    </p>
   </div>
 
- 
+
   <div class="section" id="exception.synopsis">
    <h2 class="title">Class synopsis</h2>
- 
+
 
    <div class="classsynopsis">
     <div class="ooclass"></div>
- 
+
 
     <div class="classsynopsisinfo">
      <span class="ooclass">
@@ -80,7 +80,7 @@ manual_header();
      </span>
      {</div>
 
- 
+
     <div class="classsynopsisinfo classsynopsisinfo_comment">/* Properties */</div>
     <div class="fieldsynopsis">
      <span class="modifier">protected</span>
@@ -153,11 +153,11 @@ manual_header();
    )</div>
 
    }</div>
- 
 
- 
+
+
   </div>
- 
+
 
   <div class="section" id="exception.props">
    <h2 class="title">Properties</h2>
@@ -203,58 +203,8 @@ manual_header();
 
   </div>
 
- 
+
  </div>
- 
- 
-
-
-
- 
-
-
-
- 
-
-
-
- 
-
-
-
- 
-
-
-
- 
-
-
-
- 
-
-
-
- 
-
-
-
- 
-
-
-
- 
-
-
-
- 
-
-
-
- 
-
-
-
- 
 
 
 
@@ -262,31 +212,81 @@ manual_header();
 
 
 
- 
 
 
 
- 
 
 
 
- 
 
 
 
- 
 
 
 
- 
 
 
 
- 
 
 
 
- 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <h2>Table of Contents</h2><ul class="chunklist chunklist_reference"><li><a href="exception.construct.php">Exception::__construct</a> — Construct the exception</li><li><a href="exception.getmessage.php">Exception::getMessage</a> — Gets the Exception message</li><li><a href="exception.getprevious.php">Exception::getPrevious</a> — Returns previous Exception</li><li><a href="exception.getcode.php">Exception::getCode</a> — Gets the Exception code</li><li><a href="exception.getfile.php">Exception::getFile</a> — Gets the file in which the exception occurred</li><li><a href="exception.getline.php">Exception::getLine</a> — Gets the line in which the exception occurred</li><li><a href="exception.gettrace.php">Exception::getTrace</a> — Gets the stack trace</li><li><a href="exception.gettraceasstring.php">Exception::getTraceAsString</a> — Gets the stack trace as a string</li><li><a href="exception.tostring.php">Exception::__toString</a> — String representation of the exception</li><li><a href="exception.clone.php">Exception::__clone</a> — Clone the exception</li></ul>
 </div>
 <?php manual_footer(); ?>

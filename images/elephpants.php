@@ -21,12 +21,12 @@ header("Expires: " . date(DATE_RSS, $future));
  Simple script to serve elephpant images in json format.
  This script is called directly by the browser to feed the
  javascript generated banner of elephpant images.
- 
+
  The structure of the response data is:
- 
+
  [{
-     title: <image title>, 
-     url:   <link to image on flickr>, 
+     title: <image title>,
+     url:   <link to image on flickr>,
      data:  <base64 encoded image>
  },{
      ...
@@ -73,7 +73,7 @@ foreach ($photos as $photo) {
     if (!is_readable($path . '/' . $photo['filename'])) {
         continue;
     }
-    
+
     $got++;
     // add photo to response array.
     $elephpants[] = array(

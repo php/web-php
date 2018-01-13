@@ -7,7 +7,7 @@ site_header("PHP 5.2.2 Release Announcement");
 
 <h1>PHP 5.2.2 Release Announcement</h1>
 <p>
-The PHP development team would like to announce the immediate availability of PHP 5.2.2. 
+The PHP development team would like to announce the immediate availability of PHP 5.2.2.
 This release continues to improve the security and the stability of the 5.X
 branch and all users are strongly encouraged to upgrade to it as soon as possible.
 </p>
@@ -34,7 +34,7 @@ branch and all users are strongly encouraged to upgrade to it as soon as possibl
 </ul>
 
 <p>
-While majority of the issues outlined above are local, in some circumstances given specific code paths they can be    
+While majority of the issues outlined above are local, in some circumstances given specific code paths they can be
 triggered externally. Therefor, we strongly recommend that if you use code utilizing the functions and extensions identified as
 having had vulnerabilities in them, you consider upgrading your PHP.
 </p>
@@ -50,7 +50,7 @@ having had vulnerabilities in them, you consider upgrading your PHP.
 </ul>
 
 <p>
-For users upgrading from PHP 5.0 and PHP 5.1, an upgrade guide is available 
+For users upgrading from PHP 5.0 and PHP 5.1, an upgrade guide is available
 <a href="/UPDATE_5_2.txt">here</a>, detailing the changes between those releases
 and PHP 5.2.2.
 </p>

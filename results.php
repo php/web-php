@@ -28,7 +28,7 @@ site_header(
 
 echo '<h1>Search results</h1>';
 
-google_cse($query, $lang); 
+google_cse($query, $lang);
 
 site_footer();
 

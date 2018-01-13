@@ -9,7 +9,7 @@ site_header("PHP 5.2.11 Release Announcement");
 <p>
 The PHP development team would like to announce the immediate
 availability of PHP 5.2.11. This release focuses on improving the stability of
-the PHP 5.2.x branch with over 75 bug fixes, some of which are security related. 
+the PHP 5.2.x branch with over 75 bug fixes, some of which are security related.
 All users of PHP 5.2 are encouraged to upgrade to this release.
 </p>
 
@@ -39,7 +39,7 @@ All users of PHP 5.2 are encouraged to upgrade to this release.
 </ul>
 
 <p>
-For users upgrading from PHP 5.0 and PHP 5.1, an upgrade guide is available 
+For users upgrading from PHP 5.0 and PHP 5.1, an upgrade guide is available
 <a href="/UPDATE_5_2.txt">here</a>, detailing the changes between those releases
 and PHP 5.2.11.
 </p>

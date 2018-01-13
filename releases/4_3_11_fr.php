@@ -12,7 +12,7 @@ L'&eacute;quipe de d&eacute;veloppement PHP a le plaisir de vous annoncer la pub
 </p>
 <p>
 Tous les utilisateurs sont encouragés à utiliser cette version.
-</p> 
+</p>
 
 <h2>Version de correction de bogues</h2>
 <ul>

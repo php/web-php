@@ -10,18 +10,18 @@ site_header("Annonce de publication de PHP 4.3.5");
 <p>[ <a href="/releases/4_3_5.php">English Version</a> ]</p>
 
 <p>
-L'&eacute;quipe de d&eacute;veloppement PHP a le plaisir de vous annoncer 
-la publication de <a href="/downloads.php">PHP 4.3.5</a>. C'est une version 
-de maintenance, destin&eacute;e &agrave; corriger des erreurs, et sans aucun 
-ajout de fonctionnalit&eacute;. PHP 4.3.5 est, de loin, la version de PHP 
-la plus stable, et il est recommand&eacute; &agrave; tous les utilisateurs 
+L'&eacute;quipe de d&eacute;veloppement PHP a le plaisir de vous annoncer
+la publication de <a href="/downloads.php">PHP 4.3.5</a>. C'est une version
+de maintenance, destin&eacute;e &agrave; corriger des erreurs, et sans aucun
+ajout de fonctionnalit&eacute;. PHP 4.3.5 est, de loin, la version de PHP
+la plus stable, et il est recommand&eacute; &agrave; tous les utilisateurs
 d'adopter cette version d&egrave;s que possible.
 </p>
 
 <h2>Version de correction de bogues</h2>
 
 <p>
- PHP 4.3.5 contient notamment les corrections, ajouts et am&eacute;liorations suivantes : 
+ PHP 4.3.5 contient notamment les corrections, ajouts et am&eacute;liorations suivantes :
 </p>
 
 <ul>

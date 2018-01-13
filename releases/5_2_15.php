@@ -13,7 +13,7 @@ for PHP 5.2. All users of PHP 5.2 are encouraged to upgrade to PHP 5.3.
 </p>
 
 <p>
-This release focuses on improving the security and stability of the 
+This release focuses on improving the security and stability of the
 PHP 5.2.x branch with a small number, of predominatly security fixes.
 </p>
 

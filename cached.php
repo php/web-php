@@ -3,13 +3,13 @@
   Yes, we know this can be used to view the source for any file
   in the docroot directory. This is intentional and not an LFI
   vulnerability. The source code for everything in the docroot
-  is publicly available at 
+  is publicly available at
 
     https://github.com/php/web-php
 
   so there is no vulnerability here. You can't use this to view
   anything that is private.
-*/  
+*/
 $_SERVER['BASE_PAGE'] = 'cached.php';
 include_once 'include/prepend.inc';
 

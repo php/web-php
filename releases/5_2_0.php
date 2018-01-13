@@ -51,7 +51,7 @@ the 5.1 branch of PHP.
 </p>
 
 <p>
-For users upgrading from PHP 5.0 and PHP 5.1 there is an upgrading guide 
+For users upgrading from PHP 5.0 and PHP 5.1 there is an upgrading guide
 available <a href="/UPDATE_5_2.txt">here</a>, detailing the changes between those releases
 and PHP 5.2.0.
 </p>

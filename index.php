@@ -7,7 +7,7 @@ $timestamps = array(@getlastmod());
    included files. Please touch it if you modify any
    other include file (and the modification affects
    the display of the index page). The cost of stat'ing
-   them all is prohibitive. 
+   them all is prohibitive.
 */
 $timestamps[] = @filemtime("include/prepend.inc");
 

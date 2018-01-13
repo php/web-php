@@ -36,7 +36,7 @@ site_header("PHP 4.2.2 Release Announcement");
  sent by the user agent in a "multipart/form-data" request. This parser
  has insufficient input checking, leading to the vulnerability.
 </p>
-   
+
 <p>
  The vulnerability is exploitable by anyone who can send HTTP POST
  requests to an affected web server. Both local and remote users, even
@@ -70,7 +70,7 @@ site_header("PHP 4.2.2 Release Announcement");
  POST input from user agents, it is often possible to deny POST requests
  on the web server.
 </p>
-   
+
 <p>
  In the Apache web server, for example, this is possible with the
  following code included in the main configuration file or a top-level
@@ -83,7 +83,7 @@ site_header("PHP 4.2.2 Release Announcement");
    Deny from all
 &lt;/Limit&gt;
 </pre>
-      
+
 <p>
  Note that an existing configuration and/or .htaccess file may have
  parameters contradicting the example given above.
@@ -97,5 +97,5 @@ site_header("PHP 4.2.2 Release Announcement");
  <a href="http://security.e-matters.de/advisories/022002.html">independent
  advisory</a>, describing the vulnerability in more detail.
 </p>
-   
+
 <?php site_footer(); ?>

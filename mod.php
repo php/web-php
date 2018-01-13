@@ -55,7 +55,7 @@ else {
     echo <<<THANKS
 <h1>Email confirmation successful</h1>
 
-<p> 
+<p>
  Thanks for confirming your email address. No further
  action is required on your part.
 </p>

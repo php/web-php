@@ -20,7 +20,7 @@ site_header("PHP 4.2.0 Release Announcement");
  are no longer registered in the global scope by default.</strong> The preferred
  method of accessing these external variables is by using the new Superglobal
  arrays, introduced in PHP 4.1.0. More information about this change:</p>
- 
+
 <ul>
  <li><a href="/variables.predefined">PHP Manual: Predefined variables</a></li>
  <li><a href="/releases/4_1_0.php">The PHP 4.1.0 release announcement</a></li>
@@ -45,7 +45,7 @@ site_header("PHP 4.2.0 Release Announcement");
  due to be released in August, 2002, will be the first PHP
  release to officially support Mac OS X. It, along with future
  Mac OS X and Apache releases, will enable full feature parity
- with other PHP platforms. <strong>Update:</strong> 
+ with other PHP platforms. <strong>Update:</strong>
  <a href="http://www.entropy.ch/software/macosx/php/">Instructions on
  overcoming these limitations</a>
 </p>
@@ -62,7 +62,7 @@ site_header("PHP 4.2.0 Release Announcement");
  <li>Overhaul of the sockets extension</li>
  <li>Highly improved performance with file uploads</li>
  <li>
-  The satellite and mailparse extensions were moved to PECL and are no longer 
+  The satellite and mailparse extensions were moved to PECL and are no longer
   bundled with the official PHP release
  </li>
  <li>The posix extension has been cleaned up</li>

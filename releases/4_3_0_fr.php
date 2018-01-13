@@ -27,7 +27,7 @@ site_header("Annonce de publication de PHP 4.3.0", array("lang" => "fr"));
  applications shell ou graphiques (avec <a href="http://gtk.php.net/">PHP-GTK</a>).
  La version CLI de PHP est toujours compil&eacute;es, mais elle n'est
  install&eacute;e que si la version CGI est d&eacute;sactiv&eacute;e
- avec l'option --disable-cgi. De plus, vous pouvez utilisez la commande 
+ avec l'option --disable-cgi. De plus, vous pouvez utilisez la commande
  <strong>make install-cli</strong>. Sous Windows, la version CLI est
  disponible dans le dossier <strong>cli</strong>.
 </p>
@@ -35,7 +35,7 @@ site_header("Annonce de publication de PHP 4.3.0", array("lang" => "fr"));
 <p>
  CLI dispose de fonctionnalit&eacute;s diff&eacute;rentes, par rappot
  &agrave; la version interfac&eacute;e avec les serveurs web. Pour
- plus de d&eacute;tails, reportez vous &agrave; 
+ plus de d&eacute;tails, reportez vous &agrave;
  <a href="/features.commandline">Utiliser PHP en ligne de commande</a>
 </p>
 
@@ -87,7 +87,7 @@ site_header("Annonce de publication de PHP 4.3.0", array("lang" => "fr"));
   fhttpd)
  </li>
  <li>
-  Acc&eacute;l&eacute;ration des fonctions de traitement des 
+  Acc&eacute;l&eacute;ration des fonctions de traitement des
   channes de caract&egrave;res
  </li>
  <li>

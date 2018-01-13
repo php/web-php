@@ -19,7 +19,7 @@ PHP Security Advisory: CGI vulnerability in PHP version 4.3.0
 </dl>
 
 <p>
- The PHP Group has learned of a serious security vulnerability in 
+ The PHP Group has learned of a serious security vulnerability in
  the CGI SAPI of PHP version 4.3.0.
 </p>
 
@@ -36,18 +36,18 @@ PHP Security Advisory: CGI vulnerability in PHP version 4.3.0
  NOTE: This bug does NOT affect any of the other SAPI modules.
  (such as the Apache or ISAPI modules, etc.)
 </p>
-   
+
 <h2>Impact</h2>
 
 <p>
- Anyone with access to websites hosted on a web server which employs 
+ Anyone with access to websites hosted on a web server which employs
  the CGI module may exploit this vulnerability to gain access to any file
  readable by the user under which the webserver runs.
 </p>
 
 <p>
- A remote attacker could also trick PHP into executing arbitrary PHP code 
- if attacker is able to inject the code into files accessible by the CGI. 
+ A remote attacker could also trick PHP into executing arbitrary PHP code
+ if attacker is able to inject the code into files accessible by the CGI.
  This could be for example the web server access-logs.
 </p>
 
@@ -70,8 +70,8 @@ PHP Security Advisory: CGI vulnerability in PHP version 4.3.0
 <h2>Credits</h2>
 
 <p>
- The PHP Group would like to thank Kosmas Skiadopoulos for discovering 
+ The PHP Group would like to thank Kosmas Skiadopoulos for discovering
  this vulnerability.
 </p>
-   
+
 <?php site_footer(); ?>

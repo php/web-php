@@ -23,11 +23,11 @@ site_header("Operating System Preparation", array("current" => "community"));
     Improving PHP requires a working build environment to test changes, the following section deals with setting up a working build environment.
 </p>
 <p>
-    Your build environment should have an appropriate toolchain that includes a working C compiler, 
+    Your build environment should have an appropriate toolchain that includes a working C compiler,
         for those not working in Microsoft Windows, you will need a working, compatible autotools installation, and at the very least a shared copy of zlib.
 </p>
 <p>
-    For most *nix like operating systems, some external dependencies may be required to bring a build to completion; 
+    For most *nix like operating systems, some external dependencies may be required to bring a build to completion;
         if a build fails because of missing headers or libraries, issuing a variant of the following command should resolve those dependencies, allowing the build to continue:
     <ul>
         <li><pre class="small">[sudo] yum|apt-get|ports install package[-dev[el]]</pre></li>
@@ -162,7 +162,7 @@ site_header("Operating System Preparation", array("current" => "community"));
     When <i>configure</i> executes, it saves the options passed in to a re-usable <i>config.nice</i> which executes <i>configure</i> when invoked.
 </p>
 <p>
-    Upon successful completion of a build, it is recommended to run the test suite, this will help you to identify regression problems in your work, 
+    Upon successful completion of a build, it is recommended to run the test suite, this will help you to identify regression problems in your work,
         running the test suite can take a while; go out for a run, or a burger.
 </p>
 <p>

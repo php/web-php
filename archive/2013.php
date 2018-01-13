@@ -76,7 +76,7 @@ site_header("News Archive - 2013", array("cache" => true));
     <abbr class="published newsdate" title="2013-11-20T04:00:00-08:00">20-Nov-2013</abbr>
     <div>
       <p>The PHP web team are delighted to announce the launch of the new web theme that has been
-      in beta for many months. Lots of hard work has gone into this release and we will be continually 
+      in beta for many months. Lots of hard work has gone into this release and we will be continually
       improving things over time now that we have migrated away from the legacy theme.</p>
 
       <p>From an aesthetics point of view the general color scheme of the website has been lightened from the
@@ -818,7 +818,7 @@ site_header("News Archive - 2013", array("cache" => true));
       </p>
       <p>
       Note that our release candidate cycle is only meant to bug fixes, no more features will be added to PHP 5.5 from now.
-      </p>     
+      </p>
       <p>
       Please help us to identify bugs in order to ensure that the release is solid and all things behave as expected.
       Please test this release candidate against your code base and report any problems that you encounter to the

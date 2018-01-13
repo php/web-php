@@ -11,18 +11,18 @@ site_header("Annonce de publication de PHP 4.3.6");
 <p>[ <a href="/releases/4_3_6.php">English Version</a> ]</p>
 
 <p>
-L'&eacute;quipe de d&eacute;veloppement PHP a le plaisir de vous annoncer 
-la publication de <a href="/downloads.php">PHP 4.3.6</a>. C'est une version 
+L'&eacute;quipe de d&eacute;veloppement PHP a le plaisir de vous annoncer
+la publication de <a href="/downloads.php">PHP 4.3.6</a>. C'est une version
 de maintenance, destin&eacute;e &agrave; corriger deux bogues qui
 peuvent conduire &agrave; des crashs de PHP si la s&eacute;curit&eacute; threads est activ&eacute;e.
-Il est recommand&eacute; &agrave; tous les utilisateurs d'adopter cette 
+Il est recommand&eacute; &agrave; tous les utilisateurs d'adopter cette
 version d&egrave;s que possible.
 </p>
 
 <h2>Version de correction de bogues</h2>
 
 <p>
- PHP 4.3.6 contient notamment les corrections, ajouts et am&eacute;liorations suivantes : 
+ PHP 4.3.6 contient notamment les corrections, ajouts et am&eacute;liorations suivantes :
 </p>
 
 <ul>

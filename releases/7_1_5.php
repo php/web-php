@@ -6,7 +6,7 @@ site_header("PHP 7.1.5 Release Announcement");
 ?>
 
     <h1>PHP 7.1.5 Release Announcement</h1>
-     
+
     <p>The PHP development team announces the immediate availability of PHP
 	7.1.5. Several bugs have been fixed.
 

@@ -65,7 +65,7 @@ $formats = array(
  <li>
   The English version should be considered the most accurate, since
   translations are based on that version. Most of the translations
-  are not complete, and contain English parts. 
+  are not complete, and contain English parts.
  </li>
  <li>
   If you are looking for PHP 4 documentation, please read
@@ -96,26 +96,26 @@ foreach ($LANGUAGES as $langcode => $language) {
 
     // Go through all possible manual formats
     foreach ($formats as $formatname => $extension) {
-    
+
         $filepath = $_SERVER['DOCUMENT_ROOT'] . '/distributions/manual/';
         if ($formatname === 'HTML Help file (with user notes)') {
             $filename = "php_enhanced_$langcode.$extension";
         } else {
             $filename = "php_manual_$langcode.$extension";
         }
-        
+
         $filepath .= $filename;
-        
+
         // File named after the language and format exists
         if (file_exists($filepath)) {
-            
+
             // Mirror selection download URL
             $link_to = "/get/$filename/from/a/mirror";
 
             // Try to get size and changed date
             $size    = @filesize($filepath);
             $changed = @filemtime($filepath);
-            
+
             // Size available, collect information
             if ($size !== FALSE) {
                 $files[$langcode][$formatname] = array(
@@ -167,11 +167,11 @@ if (count($found_formats) == 0) {
     echo " </tr>\n";
 
     foreach ($files as $langcode => $lang_files) {
-    
+
         // See if current language is the preferred one
         if ($langcode == $LANG) { $preflang = TRUE; }
         else { $preflang = FALSE; }
-        
+
         // Highlight manual in preferred language
         if ($preflang) {
             $cellclass = ' class="highlight"';
@@ -182,7 +182,7 @@ if (count($found_formats) == 0) {
         echo "<tr>\n<th class=\"subl\">" . $LANGUAGES[$langcode] . "</th>\n";
 
         foreach ($formats as $formatname => $extension) {
-        
+
             // Skip if no file found
             if (!isset($found_formats[$formatname])) { continue; }
 
@@ -190,7 +190,7 @@ if (count($found_formats) == 0) {
             if (!isset($lang_files[$formatname])) {
                 echo "&nbsp;";
             } else {
-                
+
                 $fileinfo = $lang_files[$formatname];
                 echo "<a href=\"$fileinfo[0]\"";
 
@@ -212,7 +212,7 @@ if (count($found_formats) == 0) {
             echo "</td>\n";
 
         }
-        
+
         // End table row
         echo "</tr>\n";
     }

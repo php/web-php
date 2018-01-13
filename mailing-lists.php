@@ -22,7 +22,7 @@ $SIDEBAR_DATA = '
  lists</a>, the <a href="http://pecl.php.net/support.php">PECL
  lists</a>, and the <a href="http://gtk.php.net/resources.php">PHP-GTK
  lists</a> on their own pages.
-</p> 
+</p>
 
 <a name="local"></a>
 <h3>Local Mailing Lists and Newsgroups</h3>
@@ -44,20 +44,20 @@ site_header("Mailing Lists", array("current" => "help"));
 
 // Some mailing list is selected for [un]subscription
 if (isset($_POST['maillist'])) {
-    
+
     // No error found yet
     $error = "";
-    
+
     // Check email address
     if (empty($_POST['email']) || $_POST['email'] == 'user@example.com' ||
         $_POST['email'] == 'fake@from.net' || !is_emailable_address($_POST['email'])) {
         $error = "You forgot to specify an email address to be added to the list, or specified an invalid address." .
                  "<br>Please go back and try again.";
     }
-    
+
     // Seems to be a valid email address
     else {
- 
+
         // Decide on request mode, email address part and IP address
         $request = strtolower($_POST['action']);
         if ($request != "subscribe" && $request != "unsubscribe") {
@@ -77,14 +77,14 @@ if (isset($_POST['maillist'])) {
                 "referer"  => $MYSITE . "mailing-lists.php"
             )
         );
-        
+
         // Provide error if unable to [un]subscribe
         if ($result) {
             $error = "We were unable to subscribe you due to some technical problems.<br>" .
                      "Please try again later.";
         }
     }
-    
+
     // Give error information or success report
     if (!empty($error)) {
         echo "<p class=\"formerror\">$error</p>";
@@ -218,7 +218,7 @@ if (isset($_POST['maillist'])) {
       'php-evangelism', 'PHP evangelism mailing list',
       'A list for people interested in promoting PHP and learning good reasons to support PHP in the enterprise',
       TRUE, TRUE, TRUE, "php.evangelism"
-    ),	
+    ),
     array (
       'soap', 'PHP SOAP list',
       'List for the SOAP developers',
@@ -230,7 +230,7 @@ if (isset($_POST['maillist'])) {
       'List for Spanish speaking people interested in PHP',
       FALSE, FALSE, FALSE, 'php.general.es'
     ),
-  
+
   );
 
   // array of lists (list, name, short desc., moderated, archive, digest, newsgroup)
@@ -361,7 +361,7 @@ function output_lists_table($mailing_lists)
  messages per day. If your mailbox can't handle this sort of traffic you
  might want to consider subscribing to the digest list instead (two messages
  per day), using the news server, or reading the mailing list using the
- archives. 
+ archives.
 </p>
 
 <h2>Mailing list options</h2>

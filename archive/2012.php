@@ -61,7 +61,7 @@ site_header("News Archive - 2012", array("cache" => true));
         Thank you for helping us making PHP better.
      </p>
     </div>
-  
+
     </div>
 </div>
 <div class="newsItem hentry vevent">
@@ -79,7 +79,7 @@ site_header("News Archive - 2012", array("cache" => true));
      <a href="http://conference.phpbenelux.eu/2013/">http://conference.phpbenelux.eu/2013/</a> for more information.
      </p>
     </div>
-  
+
     </div>
 </div>
 <div class="newsItem hentry">
@@ -94,7 +94,7 @@ site_header("News Archive - 2012", array("cache" => true));
        <p>The list of changes are recorded in the <a href="/ChangeLog-5.php">ChangeLog</a>.</p>
      </div>
     </div>
-  
+
     </div>
 </div>
 <div class="newsItem hentry vevent">
@@ -107,13 +107,13 @@ site_header("News Archive - 2012", array("cache" => true));
      year again at it's traditional location in Chicago, IL.  This year's
      dates are from May 14th - 17th, 2013.  It will again be a 3-track
      conference with a focus on the community.</p>
-     
+
      <p>The <a href="http://tek13.phparch.com/call-for-papers/">Call for
      Papers</a> has been announced and will be running until January 15th,
      2013.   Conference registration will open on January 1st.  We look
      forward to seeing many of you there this year!</p>
     </div>
-  
+
     </div>
 </div>
 <div class="newsItem hentry">
@@ -126,7 +126,7 @@ site_header("News Archive - 2012", array("cache" => true));
      <p>For source downloads of PHP 5.4.9 and PHP 5.3.19 please visit our <a href="/downloads.php">downloads page</a>, Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.</p>
      <p>The list of changes are recorded in the <a href="/ChangeLog-5.php">ChangeLog</a>.</p>
     </div>
-  
+
     </div>
 </div>
 <div class="newsItem hentry">
@@ -173,7 +173,7 @@ site_header("News Archive - 2012", array("cache" => true));
      </p>
 
     </div>
-  
+
     </div>
 </div>
 <div class="newsItem hentry vevent">
@@ -199,7 +199,7 @@ site_header("News Archive - 2012", array("cache" => true));
          consider each submission.
      </p>
     </div>
-  
+
     </div>
 </div>
 <div class="newsItem hentry vevent">
@@ -221,7 +221,7 @@ site_header("News Archive - 2012", array("cache" => true));
          Our call for papers is open until November the 22nd and we would love to hear from you!
      </p>
     </div>
-  
+
     </div>
 </div>
 <div class="newsItem hentry">
@@ -236,28 +236,28 @@ site_header("News Archive - 2012", array("cache" => true));
       All users of PHP are encouraged to upgrade to PHP 5.4.8,
       or at least 5.3.18.
      </p>
-     
+
      <p>
       Key enhancements in these releases include:
      </p>
-     
+
      <ul>
          <li>Fixed bug #63111 (is_callable() lies for abstract static method)</li>
        <li>Fixed bug #61442 (exception threw in __autoload can not be catched)</li>
      </ul>
-     
+
      <p>
       For source downloads of PHP 5.4.8 and PHP 5.3.18 please visit
       our <a href="/downloads.php">downloads page</a>, Windows binaries
       can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
      </p>
-     
+
      <p>
       The list of changes are recorded in the <a href="/ChangeLog-5.php">ChangeLog</a>.
      </p>
-     
+
     </div>
-  
+
     </div>
 </div>
 <div class="newsItem hentry vevent">
@@ -272,14 +272,14 @@ site_header("News Archive - 2012", array("cache" => true));
      that Toronto has an awesome PHP community and deserves an equally
      awesome conference.
      </p>
-     
+
      <p>
      Come out November 2-3, 2012 and hear both local talent and
      internationally known members of the PHP community share their thoughts
      and tools they use to build the web.
      </p>
     </div>
-  
+
     </div>
 </div>
 <div class="newsItem hentry vevent">
@@ -296,7 +296,7 @@ site_header("News Archive - 2012", array("cache" => true));
      the website via <a href="http://www.web-developer-conference.de">www.web-developer-conference.de</a>.
      </p>
     </div>
-  
+
     </div>
 </div>
 <div class="newsItem hentry vevent">
@@ -312,7 +312,7 @@ site_header("News Archive - 2012", array("cache" => true));
          frameworks, databases, third party tools and components, and web development.
      </p>
     </div>
-  
+
     </div>
 </div>
 <div class="newsItem hentry">
@@ -322,32 +322,32 @@ site_header("News Archive - 2012", array("cache" => true));
         <abbr class="published newsdate" title="2012-09-13T15:29:37+00:00">13-Sep-2012</abbr>
         <div>
      <p>
-      The PHP development team announces the immediate availability of 
-      PHP 5.4.7 and PHP 5.3.17. These releases fix over 20 bugs. 
-      All users of PHP are encouraged to upgrade to PHP 5.4.7, 
+      The PHP development team announces the immediate availability of
+      PHP 5.4.7 and PHP 5.3.17. These releases fix over 20 bugs.
+      All users of PHP are encouraged to upgrade to PHP 5.4.7,
       or at least 5.3.17.
      </p>
-     
+
      <p>
       Key enhancements in these releases include:
      </p>
-     
+
      <ul>
        <li>Fixed bug #62955 (Only one directive is loaded from "Per Directory Values" Windows registry).</li>
        <li>Fixed bug #62460 (php binaries installed as binary.dSYM).</li>
      </ul>
-     
+
      <p>
-      For source downloads of PHP 5.4.7 and PHP 5.3.17 please visit 
-      our <a href="/downloads.php">downloads page</a>, Windows binaries 
+      For source downloads of PHP 5.4.7 and PHP 5.3.17 please visit
+      our <a href="/downloads.php">downloads page</a>, Windows binaries
       can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
      </p>
-     
+
      <p>
       The list of changes are recorded in the <a href="/ChangeLog-5.php">ChangeLog</a>.
      </p>
     </div>
-  
+
     </div>
 </div>
 <div class="newsItem hentry vevent">
@@ -365,7 +365,7 @@ site_header("News Archive - 2012", array("cache" => true));
      childcare will be available for those who need it. We hope you can join us!
      </p>
     </div>
-  
+
     </div>
 </div>
 <div class="newsItem hentry vevent">
@@ -389,7 +389,7 @@ site_header("News Archive - 2012", array("cache" => true));
      Community and enterprise projects profit from its international reputation and impulses given from the developer community.
      </p>
     </div>
-  
+
     </div>
 </div>
 <div class="newsItem hentry vevent">
@@ -399,15 +399,15 @@ site_header("News Archive - 2012", array("cache" => true));
         <abbr class="published newsdate" title="2012-08-29T14:50:10+00:00">29-Aug-2012</abbr>
         <div>
      <p>ConFoo is one of the most important developer-oriented conferences loaded with PHP content. ConFoo 2013 will be held on February 25 through March 1 in Montreal, Canada.</p>
-     
+
      <p>The team just opened its call for papers. Candidates can submit proposals <b>until September 23</b>. Consult the <a href="http://confoo.ca/en/call-for-papers">call for papers</a> page for details and to start submitting. That page also explains what expenses ConFoo can cover for speakers. You can even get <a href="http://confoo.ca/en/call-for-papers/guidelines">advice</a> on how to write proposals.</p>
-     
+
      <p>The call for papers is public, meaning that all proposals get published on the website for others to vote and comment on. This approach allows the organizers to pick subjects that have most interest in the community. The comments are only visible to speakers and organizers to avoid influencing the votes.</p>
-     
+
      <p>To stay in touch via Twitter, follow <a href="http://twitter.com/confooca">@confooca</a> and use the <a href="http://twitter.com/#!/search/%23confoo">#confoo</a> tag. You can also help promote the event with these cool <a href="http://confoo.ca/en/propaganda">badges</a> for your site.</p>
-     
+
     </div>
-  
+
     </div>
 </div>
 <div class="newsItem hentry vevent">
@@ -445,7 +445,7 @@ site_header("News Archive - 2012", array("cache" => true));
       been waiting.
      </p>
     </div>
-  
+
     </div>
 </div>
 <div class="newsItem hentry vevent">
@@ -483,7 +483,7 @@ site_header("News Archive - 2012", array("cache" => true));
      </ul>
      </p>
     </div>
-  
+
     </div>
 </div>
 <div class="newsItem hentry">
@@ -493,12 +493,12 @@ site_header("News Archive - 2012", array("cache" => true));
         <abbr class="published newsdate" title="2012-08-16T19:30:09+00:00">16-Aug-2012</abbr>
         <div>
 	    <p>The PHP development team announces the immediate availability of PHP 5.4.6 and PHP 5.3.16. These releases fix over 20 bugs. All users of PHP are encouraged to upgrade to PHP 5.4.6, or at least 5.3.16.</p>
-     
+
      <p>For source downloads of PHP 5.4.6 and PHP 5.3.16 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
           Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
           The list of changes are recorded in the <a href="http://www.php.net/ChangeLog-5.php">ChangeLog</a>.</p>
     </div>
-  
+
     </div>
 </div>
 <div class="newsItem hentry vevent">
@@ -524,7 +524,7 @@ site_header("News Archive - 2012", array("cache" => true));
      developer looking to find out more, this event will have something to make
      you glad you came along.</p>
     </div>
-  
+
     </div>
 </div>
 <div class="newsItem hentry vevent">
@@ -545,7 +545,7 @@ site_header("News Archive - 2012", array("cache" => true));
           <a href="http://www.web-developer-conference.de">the conference website</a>.
           </p>
     </div>
-  
+
     </div>
 </div>
 <div class="newsItem hentry">
@@ -559,13 +559,13 @@ site_header("News Archive - 2012", array("cache" => true));
      bugs and includes a fix for a security related overflow issue in the
      stream implementation. All users of PHP are encouraged to upgrade to
      PHP 5.4.5 or PHP 5.3.15.</p>
-     
+
      <p>For source downloads of PHP 5.4.5 and PHP 5.3.15 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
      Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes are recorded in the <a href="http://www.php.net/ChangeLog-5.php">ChangeLog</a>.</p>
-     
+
     </div>
-  
+
     </div>
 </div>
 <div class="newsItem hentry vevent">
@@ -594,7 +594,7 @@ site_header("News Archive - 2012", array("cache" => true));
          </ul>
      </p>
     </div>
-  
+
     </div>
 </div>
 <div class="newsItem hentry">
@@ -606,19 +606,19 @@ site_header("News Archive - 2012", array("cache" => true));
      <p>The PHP development team would like to announce the immediate
       availability of PHP 5.4.4 and PHP 5.3.14. All users of PHP are
       encouraged to upgrade to PHP 5.4.4 or PHP 5.3.14.</p>
-     
+
       <p>The release fixes multiple security issues: A weakness in the DES
       implementation of <a href="http://docs.php.net/crypt">crypt</a> and a
       heap overflow issue in the phar extension</p>
-     
+
      <p>PHP 5.4.4 and PHP 5.3.14 fixes over 30 bugs. Please note that the
      use of <i>php://fd</i> streams is now restricted to the CLI SAPI</p>
-     
+
       <p>For source downloads of PHP 5.4.4 and PHP 5.3.14 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
       Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
       The list of changes are recorded in the <a href="http://www.php.net/ChangeLog-5.php">ChangeLog</a>.</p>
     </div>
-  
+
     </div>
 </div>
 <div class="newsItem hentry">
@@ -642,7 +642,7 @@ site_header("News Archive - 2012", array("cache" => true));
      Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes are recorded in the <a href="http://www.php.net/ChangeLog-5.php">ChangeLog</a>.</p>
     </div>
-  
+
     </div>
 </div>
 <div class="newsItem hentry">
@@ -669,7 +669,7 @@ site_header("News Archive - 2012", array("cache" => true));
 
     Note that this will block otherwise safe requests like ?top-40 so if you
     have query parameters that look like that, adjust your regex accordingly.</p>
-    
+
     <p>Another set of releases are planned for Tuesday, May, 8th. These
     releases will fix the CGI flaw and another CGI-related issue in
     apache_request_header (5.4 only).</p>
@@ -677,7 +677,7 @@ site_header("News Archive - 2012", array("cache" => true));
     <p>We apologize for the inconvenience created with these releases and the
     (lack of) communication around them.</p>
     </div>
-  
+
     </div>
 </div>
 <div class="newsItem hentry">
@@ -686,62 +686,62 @@ site_header("News Archive - 2012", array("cache" => true));
     <div class="entry-content description">
         <abbr class="published newsdate" title="2012-05-03T18:00:36+02:00">03-May-2012</abbr>
         <div>
-     
+
      <p>There is a vulnerability in certain CGI-based setups <b>(Apache+mod_php and nginx+php-fpm are not affected)</b>
      that has gone unnoticed for at least 8 years. <a href="http://tools.ietf.org/html/draft-robinson-www-interface-00#section-7">Section
      7 of the CGI spec</a> states:</p>
-     
+
      <cite>
         Some systems support a method for supplying a [sic] array of strings to the
         CGI script. This is only used in the case of an `indexed' query. This
         is identified by a "GET" or "HEAD" HTTP request with a URL search
         string not containing any unencoded "=" characters.
      </cite>
-     
+
      <p>So, requests that do not have a "=" in the query string are treated
      differently from those who do in some CGI implementations. For PHP this
      means that a request containing ?-s may dump the PHP source code for the
      page, but a request that has ?-s&amp;=1 is fine.</p>
-     
+
      <p>A large number of sites run PHP as either an Apache module through
      mod_php or using php-fpm under nginx. Neither of these setups are
      vulnerable to this. Straight shebang-style CGI also does not appear to
      be vulnerable.</p>
-     
+
      <p>If you are using Apache mod_cgi to run PHP you may be vulnerable. To see
      if you are, just add ?-s to the end of any of your URLs. If you see your
      source code, you are vulnerable. If your site renders normally, you are not.</p>
-     
+
      <p>To fix this, update to PHP 5.3.12 or PHP 5.4.2. </p>
-     
+
      <p>We recognize that since CGI is a rather outdated way to run PHP, it may not be feasible to
      upgrade these sites to a modern version of PHP. An alternative is to
      configure your web server to not let these types of requests with query
      strings starting with a "-" and not containing a "=" through. Adding a
      rule like this should not break any sites. For Apache using mod_rewrite
      it would look like this:</p>
-     
+
      <pre>
          RewriteCond %{QUERY_STRING} ^(%2d|-)[^=]+$ [NC]
          RewriteRule ^(.*) $1? [L]
      </pre>
-     
+
      <p>If you are writing your own rule, be sure to take the urlencoded ?%2ds
      version into account.</p>
-     
+
      <p>Making a bad week worse, we had a bug in our bug system that toggled the
      private flag of a bug report to public on a comment to the bug report
      causing this issue to go public before we had time to test solutions to
      the level we would like. Please report any issues via <a href="https://bugs.php.net/">bugs.php.net</a>.</p>
-     
+
      <p>For source downloads of PHP 5.3.12 and PHP 5.4.2 please visit
      our <a href="/downloads.php">downloads page</a>, Windows binaries can be found
      on <a href="http://windows.php.net/download/">windows.php.net/download/</a>. A
      <a href="/ChangeLog-5.php#5.4.2">ChangeLog</a> exists.</p>
-     
+
 
     </div>
-  
+
     </div>
 </div>
 <div class="newsItem hentry vevent">
@@ -754,8 +754,8 @@ site_header("News Archive - 2012", array("cache" => true));
       DevConf 2012 in Moscow, Russia on Jun 9 - Jun 10
      </p>
 	 <p>
-      DevConf is the ultimate meeting place for russian-speaking web-developers, 
-      combining several language-specific conferences under one roof.  
+      DevConf is the ultimate meeting place for russian-speaking web-developers,
+      combining several language-specific conferences under one roof.
      </p>
 	 <p>
       This year DevConf will include the following sections:
@@ -768,15 +768,15 @@ site_header("News Archive - 2012", array("cache" => true));
       <li>DevConf::Javascript();</li>
      </ul>
      <p>
-       Each section will feature several talks from the active contributors/authors of the language. 
-       Among the invited speakers are Derick Rethans (<a href="http://xdebug.org">XDebug</a> creator), 
-	   David Soria Parra (active PHP contributor), Andrey Aksyonov (author of <a href="http://sphinxsearch.com">Sphinx</a>), 
-	   Alexander Makarov (one of the main contributors to <a href="http://www.yiiframework.com">Yii</a>), 
-	   Sergey Petrunya (of <a href="http://mariadb.org">MariaDB</a> fame), Ilya Alekseev (<a href="http://openstack.org">OpenStack</a> Nova contributor) 
+       Each section will feature several talks from the active contributors/authors of the language.
+       Among the invited speakers are Derick Rethans (<a href="http://xdebug.org">XDebug</a> creator),
+	   David Soria Parra (active PHP contributor), Andrey Aksyonov (author of <a href="http://sphinxsearch.com">Sphinx</a>),
+	   Alexander Makarov (one of the main contributors to <a href="http://www.yiiframework.com">Yii</a>),
+	   Sergey Petrunya (of <a href="http://mariadb.org">MariaDB</a> fame), Ilya Alekseev (<a href="http://openstack.org">OpenStack</a> Nova contributor)
 	   and many others, see more details on <a href="http://devconf.ru">the official website</a>.
      </p>
     </div>
-  
+
     </div>
 </div>
 <div class="newsItem hentry">
@@ -786,34 +786,34 @@ site_header("News Archive - 2012", array("cache" => true));
         <abbr class="published newsdate" title="2012-04-26T10:50:38+00:00">26-Apr-2012</abbr>
         <div>
      <p>The PHP development team announces the immediate availability of PHP 5.3.11 and PHP 5.4.1. These releases focuses on improving the stability of the current PHP branches with over 60 bug fixes, some of which are security related.</p>
-     
+
      <p>Security Enhancements for both PHP 5.3.11 and PHP 5.4.1:</p>
-     
+
      <ul>
      <li>Fixed bug #54374 (Insufficient validating of upload name leading to corrupted $_FILES indices). (CVE-2012-1172).</li>
      <li>Add open_basedir checks to readline_write_history and readline_read_history.</li>
      </ul>
-     
+
      <p>Security Enhancement affecting PHP 5.3.11 only:</p>
-     
+
      <ul>
      <li>Fixed bug #61043 (Regression in magic_quotes_gpc fix for CVE-2012-0831).</li>
      </ul>
-     
+
      <p>Key enhancements in these releases include:</p>
-     
+
      <ul>
      <li>Added debug info handler to DOM objects.</li>
      <li>Fixed bug #61172 (Add Apache 2.4 support).</li>
      </ul>
-     
+
      <p>For a full list of changes in PHP 5.3.11 and PHP 5.4.1, see the <a href="/ChangeLog-5.php">ChangeLog</a>. For source downloads please visit
      our <a href="/downloads.php">downloads page</a>, Windows binaries can be found
      on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.</p>
-     
+
      <p>All users of PHP are strongly encouraged to upgrade to PHP 5.3.11 or PHP 5.4.1.</p>
     </div>
-  
+
     </div>
 </div>
 <div class="newsItem hentry">
@@ -857,7 +857,7 @@ site_header("News Archive - 2012", array("cache" => true));
         PHP 5.4.1 final will be released on April 26.
       </p>
     </div>
-  
+
     </div>
 </div>
 <div class="newsItem hentry">
@@ -901,7 +901,7 @@ site_header("News Archive - 2012", array("cache" => true));
      the conversion. Let the forking begin!
     </p>
    </div>
-  
+
     </div>
 </div>
 <div class="newsItem hentry">
@@ -947,7 +947,7 @@ site_header("News Archive - 2012", array("cache" => true));
      on all mirrors.
      </p>
     </div>
-  
+
     </div>
 </div>
 <div class="newsItem hentry">
@@ -959,21 +959,21 @@ site_header("News Archive - 2012", array("cache" => true));
      <p>The PHP development team would like to announce the immediate
      availability of PHP 5.3.10. This release delivers a critical security
      fix.</p>
-     
+
      <p>Security Fixes in PHP 5.3.10:</p>
-     
+
      <ul>
        <li>Fixed arbitrary remote code execution vulnerability reported by Stefan
          Esser, CVE-2012-0830.</li>
      </ul>
-     
+
      <p>All users are strongly encouraged to upgrade to PHP 5.3.10.</p>
-     
+
      <p>For source downloads please visit
             our <a href="/downloads.php">downloads page</a>, Windows binaries can be found
             on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.</p>
     </div>
-  
+
     </div>
 </div>
 <div class="newsItem hentry vevent">
@@ -996,13 +996,13 @@ site_header("News Archive - 2012", array("cache" => true));
       <li>160 presentations focusing on core competencies improvement;</li>
      </ul>
      <p>
-      Don't miss this great opportunity and <a href="http://confoo.ca/en/register">register today</a>! 
+      Don't miss this great opportunity and <a href="http://confoo.ca/en/register">register today</a>!
       Also check out our two <a href="http://confoo.ca/en/2012/training">training days</a>
       around PHP, HTML5, Symfony2 and security topics right before the
       conference.
      </p>
     </div>
-  
+
     </div>
 </div>
 <div class="newsItem hentry">
@@ -1015,24 +1015,24 @@ site_header("News Archive - 2012", array("cache" => true));
      availability of PHP 5.3.9. This release focuses on improving the
      stability of the PHP 5.3.x branch with over 90 bug fixes, some of
      which are security related.</p>
-     
+
      <p>Security Enhancements and Fixes in PHP 5.3.9:</p>
-     
+
      <ul>
        <li>Added max_input_vars directive to prevent attacks based on hash collisions. (CVE-2011-4885)</li>
        <li>Fixed bug #60150 (Integer overflow during the parsing of invalid exif
          header). (CVE-2011-4566)</li>
      </ul>
-     
+
      <p>Key enhancements in PHP 5.3.9 include:</p>
-     
+
      <ul>
        <li>Fixed bug #55475 (is_a() triggers autoloader, new optional 3rd argument to
          is_a and is_subclass_of).</li>
        <li>Fixed bug #55609 (mysqlnd cannot be built shared)</li>
        <li>Many changes to the FPM SAPI module</li>
      </ul>
-     
+
      <p>For a full list of changes in PHP 5.3.9, see the <a href="/ChangeLog-5.php#5.3.9">ChangeLog</a>. For source downloads please visit
        our <a href="/downloads.php">downloads page</a>, Windows binaries can be found
        on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.</p>
@@ -1040,7 +1040,7 @@ site_header("News Archive - 2012", array("cache" => true));
      <p>All users are strongly encouraged to upgrade to PHP 5.3.9.</p>
 
     </div>
-  
+
     </div>
 </div>
 <div class="newsItem hentry vevent">
@@ -1062,7 +1062,7 @@ site_header("News Archive - 2012", array("cache" => true));
      There are some tickets still available, get them at <a href="http://shop.phpbenelux.eu">http://shop.phpbenelux.eu</a>.
      </p>
     </div>
-  
+
     </div>
 </div>
 

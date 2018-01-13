@@ -62,9 +62,9 @@ site_header("PHP 4.1.0 Release Announcement");
 <p>Now that we have that behind us, let's move on :)</p>
 
 <p>
- For various reasons, PHP setups which rely on register_globals 
- being on (i.e., on form, server and environment variables becoming 
- a part of the global namespace, automatically) are very often 
+ For various reasons, PHP setups which rely on register_globals
+ being on (i.e., on form, server and environment variables becoming
+ a part of the global namespace, automatically) are very often
  exploitable to various degrees.  For example, the piece of code:
 </p>
 
@@ -145,7 +145,7 @@ function example1()
  they should take advantage of the new features supplied in PHP 4.1.0 that
  make this transition much easier.
 </p>
- 
+
 <p>
  As of the next semi-major version of PHP, new installations of PHP will
  default to having register_globals set to off. No worries! Existing

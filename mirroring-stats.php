@@ -17,8 +17,8 @@ site_header("Setting Up Local Stats", array("current" => "community"));
  <li>
   <p>
    <a href="http://www.mrunix.net/webalizer/">Get The Webalizer</a><br><br>
-   The Webalizer is a web server log analysis program. It is designed to 
-   scan web server log files in various formats and produce usage statistics 
+   The Webalizer is a web server log analysis program. It is designed to
+   scan web server log files in various formats and produce usage statistics
    in HTML format for viewing through a browser. Note that Webalizer requires
    you to have the GD library installed on your site.
   </p>
@@ -34,11 +34,11 @@ site_header("Setting Up Local Stats", array("current" => "community"));
  <li>
   <p>
    Grab <a href="/mirror-stats.conf">mirror-stats.conf</a> and edit the file.<br><br>
-   This is the main conf file for The Webalizer. Specifically, you will want to 
+   This is the main conf file for The Webalizer. Specifically, you will want to
    change the lines which define where your log file sits, where the output
    should go, and the name of your host machine. Look for these settings:
    LogFile, OutputDir, HostName, HideSite, HideReferrer. The stats
-   directory is not required to be in the webroot, it may be aliased 
+   directory is not required to be in the webroot, it may be aliased
    to be there (see <a href="/mirroring.php">mirroring.php</a>).
   </p>
  </li>

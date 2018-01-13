@@ -49,19 +49,19 @@ are security related.</p>
     <li>Over 80 other bug fixes.</li>
 </ul>
 
-<p>Windows users: please mind that we do no longer provide builds created 
-with Visual Studio C++ 6. It is impossible to maintain a high quality 
+<p>Windows users: please mind that we do no longer provide builds created
+with Visual Studio C++ 6. It is impossible to maintain a high quality
 and safe build of PHP for Windows using this unmaintained compiler.</p>
 
-<p>For Apache SAPIs (php5_apache2_2.dll), be sure that you use a Visual 
-Studio C++ 9 version of Apache. We recommend the Apache builds as provided 
-by <a href="http://www.apachelounge.com/">ApacheLounge</a>. For any other 
-SAPI (CLI, FastCGI via mod_fcgi, FastCGI with IIS or other FastCGI capable 
-server), everything works as before. Third party extension providers 
-must rebuild their extensions to make them compatible and loadable with 
+<p>For Apache SAPIs (php5_apache2_2.dll), be sure that you use a Visual
+Studio C++ 9 version of Apache. We recommend the Apache builds as provided
+by <a href="http://www.apachelounge.com/">ApacheLounge</a>. For any other
+SAPI (CLI, FastCGI via mod_fcgi, FastCGI with IIS or other FastCGI capable
+server), everything works as before. Third party extension providers
+must rebuild their extensions to make them compatible and loadable with
 the Visual Studio C++9 builds that we now provide.</p>
 
-<p>All PHP users should note that the PHP 5.2 series is NOT supported 
+<p>All PHP users should note that the PHP 5.2 series is NOT supported
 anymore. All users are strongly encouraged to upgrade to PHP 5.3.7.</p>
 
 

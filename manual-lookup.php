@@ -25,7 +25,7 @@ if ($function) {
     if ($MQ) {
         $function = stripslashes($function);
     }
-    
+
     $function = strtolower($function);
 
     // Try to find appropriate manual page

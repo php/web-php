@@ -8,7 +8,7 @@ site_header("PHP 5.4.23 Release Announcement");
 <h1>PHP 5.4.23 Release Announcement</h1>
 
 <p>The PHP development team announces the immediate availability of PHP
-5.4.23. About 10 bugs were fixed, including a security issue in OpenSSL module (CVE-2013-6420). 
+5.4.23. About 10 bugs were fixed, including a security issue in OpenSSL module (CVE-2013-6420).
 All PHP 5.4 users are encouraged to upgrade to this version.
 </p>
 

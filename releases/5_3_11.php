@@ -16,7 +16,7 @@ PHP 5.3 branch with over 60 bug fixes, some of which are security related.</p>
 <ul>
   <li>Fixed bug #61043 (Regression in magic_quotes_gpc fix for CVE-2012-0831).
     Reported by Stefan Esser. (Ondřej Surý)</li>
-  <li>Fixed bug #54374 (Insufficient validating of upload name leading to 
+  <li>Fixed bug #54374 (Insufficient validating of upload name leading to
     corrupted $_FILES indices). (CVE-2012-1172). (Stas, lekensteyn at
     gmail dot com, Pierre)</li>
   <li>Add open_basedir checks to readline_write_history and readline_read_history.
@@ -30,7 +30,7 @@ PHP 5.3 branch with over 60 bug fixes, some of which are security related.</p>
   <li>Fixed bug #61172 (Add Apache 2.4 support). (Chris Jones)</li>
 </ul>
 
-<p>For a full list of changes in PHP 5.3.11, see the <a 
+<p>For a full list of changes in PHP 5.3.11, see the <a
 href="/ChangeLog-5.php#5.3.11">ChangeLog</a>. For source downloads please visit
 our <a href="/downloads.php">downloads page</a>, Windows binaries can be found
 on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.</p>
