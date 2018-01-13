@@ -5,63 +5,63 @@ include_once $_SERVER['DOCUMENT_ROOT'] . '/include/prepend.inc';
 include_once $_SERVER['DOCUMENT_ROOT'] . '/include/branches.inc';
 
 if (isset($_GET['serialize']) || isset($_GET['json'])) {
-	$RELEASES[5][$PHP_5_6_VERSION]['date'] = $PHP_5_6_DATE;
-	$RELEASES                              = $RELEASES + $OLDRELEASES;
+    $RELEASES[5][$PHP_5_6_VERSION]['date'] = $PHP_5_6_DATE;
+    $RELEASES                              = $RELEASES + $OLDRELEASES;
 
-	$machineReadable = array();
+    $machineReadable = array();
 
-	if (isset($_GET['version'])) {
-		$ver = (int) $_GET['version'];
+    if (isset($_GET['version'])) {
+        $ver = (int) $_GET['version'];
 
-		if (isset($RELEASES[$ver])) {
-			list($version, $r) = each($RELEASES[$ver]);
+        if (isset($RELEASES[$ver])) {
+            list($version, $r) = each($RELEASES[$ver]);
 
-			if (isset($_GET['max'])) {
-				$max = (int) $_GET['max'];
-				if ($max == -1) { $max = PHP_INT_MAX; }
+            if (isset($_GET['max'])) {
+                $max = (int) $_GET['max'];
+                if ($max == -1) { $max = PHP_INT_MAX; }
 
-				$machineReadable = array($version => $r);
+                $machineReadable = array($version => $r);
 
-				$count = 1;
+                $count = 1;
 
-				// check if other $RELEASES[$ver] are there
-				// e.g., 5_3, 5_4, and 5_5 all exist and have a release
-				while(($z = each($RELEASES[$ver])) && $count++ < $max) {
-					$machineReadable[$z[0]] = $z[1];
-				}
+                // check if other $RELEASES[$ver] are there
+                // e.g., 5_3, 5_4, and 5_5 all exist and have a release
+                while(($z = each($RELEASES[$ver])) && $count++ < $max) {
+                    $machineReadable[$z[0]] = $z[1];
+                }
 
-				foreach($OLDRELEASES[$ver] as $version => $release) {
-					if ($max <= $count++) {
-						break;
-					}
+                foreach($OLDRELEASES[$ver] as $version => $release) {
+                    if ($max <= $count++) {
+                        break;
+                    }
 
-					$machineReadable[$version] = $release;
-				}
-			} else {
-				$r['version'] = $version;
+                    $machineReadable[$version] = $release;
+                }
+            } else {
+                $r['version'] = $version;
 
-				$machineReadable = $r;
-			}
-		} else {
-			$machineReadable = array('error' => 'Unknown version');
-		}
-	} else {
-		$machineReadable = array();
-		foreach($RELEASES as $major => $release) {
-			list($version, $r) = each($release);
-			$r['version'] = $version;
-			$machineReadable[$major] = $r;
-		}
-	}
+                $machineReadable = $r;
+            }
+        } else {
+            $machineReadable = array('error' => 'Unknown version');
+        }
+    } else {
+        $machineReadable = array();
+        foreach($RELEASES as $major => $release) {
+            list($version, $r) = each($release);
+            $r['version'] = $version;
+            $machineReadable[$major] = $r;
+        }
+    }
 
-	if (isset($_GET['serialize'])) {
-		header('Content-type: text/plain');
-		echo serialize($machineReadable);
-	} elseif (isset($_GET['json'])) {
-		header('Content-Type: application/json');
-		echo json_encode($machineReadable);
-	}
-	return;
+    if (isset($_GET['serialize'])) {
+        header('Content-type: text/plain');
+        echo serialize($machineReadable);
+    } elseif (isset($_GET['json'])) {
+        header('Content-Type: application/json');
+        echo json_encode($machineReadable);
+    }
+    return;
 }
 
 // Tarball list generated with:
@@ -70,9 +70,9 @@ if (isset($_GET['serialize']) || isset($_GET['json'])) {
 // Show the two most recent EOLed branches.
 $eol = array();
 foreach (get_eol_branches() as $major => $branches) {
-	foreach ($branches as $branch => $detail) {
-		$eol[$detail['date']] = sprintf('<li>%s: %s</li>', $branch, date('j M Y', $detail['date']));
-	}
+    foreach ($branches as $branch => $detail) {
+        $eol[$detail['date']] = sprintf('<li>%s: %s</li>', $branch, date('j M Y', $detail['date']));
+    }
 }
 krsort($eol);
 $eol = implode('', array_slice($eol, 0, 2));
@@ -154,86 +154,86 @@ site_header('Releases', array(
 
 <?php
 function mk_rel($major, $ver, $date, $announcement, $source, $windows, $museum) {
-	printf("<a id=\"%s\"></a>\n<h2>%1\$s</h2>\n<ul>\n <li>Released: %s</li>\n <li>Announcement: ", ($pos = strpos($ver, ' ')) ? substr($ver, 0, $pos) : $ver, $date);
-	if ($announcement) {
-		if (is_array($announcement)) {
-			foreach($announcement as $ann => $url) {
-				echo '<a href="'.$url.'">' .$ann. '</a> ';
-			}
-		} else {
-			$url = str_replace('.', '_', $ver);
-			echo '<a href="/releases/' .$url. '.php">English</a>';
-		}
-	} else {
-		echo 'None';
-	}
-	echo "</li>\n";
+    printf("<a id=\"%s\"></a>\n<h2>%1\$s</h2>\n<ul>\n <li>Released: %s</li>\n <li>Announcement: ", ($pos = strpos($ver, ' ')) ? substr($ver, 0, $pos) : $ver, $date);
+    if ($announcement) {
+        if (is_array($announcement)) {
+            foreach($announcement as $ann => $url) {
+                echo '<a href="'.$url.'">' .$ann. '</a> ';
+            }
+        } else {
+            $url = str_replace('.', '_', $ver);
+            echo '<a href="/releases/' .$url. '.php">English</a>';
+        }
+    } else {
+        echo 'None';
+    }
+    echo "</li>\n";
 
-	if ($major != 3) {
-		echo ' <li><a href="/ChangeLog-'.$major.'.php#' .$ver. '">ChangeLog</a></li>';
-	}
-	echo "\n <li>\n  Download:\n";
+    if ($major != 3) {
+        echo ' <li><a href="/ChangeLog-'.$major.'.php#' .$ver. '">ChangeLog</a></li>';
+    }
+    echo "\n <li>\n  Download:\n";
 
-	if (!$museum) {
-		echo "<ul>\n";
-		foreach(array_merge($source, $windows) as $src) {
-			echo " <li>\n";
-			if (isset($src['filename'])) {
-				download_link($src['filename'], $src['name']); echo "<br>\n";
-				if (isset($src['md5'])) {
-					echo '<span class="md5sum">md5: ' .$src['md5']. "</span>\n";
-					if (isset($src['sha256'])) {
-						echo '<br/>';
-					}
-				}
-				if (isset($src['sha256'])) {
-					echo '<span class="sha256sum">sha256: ' .$src['sha256']. "</span>\n";
-				}
-			} else {
-				echo '<a href="'.$src['link'].'">'.$src['name'].'</a>';
-			}
-			echo " </li>\n";
-		}
-		echo "</ul>\n";
-	} else {
-		foreach($source as $src) {
-			if (!isset($src['filename'])) {
-				continue;
-			}
-			printf('<a href="http://museum.php.net/php%d/%s">%s</a>'."\n", $major, $src['filename'], $src['name']);
-		}
-		foreach($windows as $src) {
-			printf('<a href="http://museum.php.net/%s/%s">%s</a>'."\n", ($major == 5 ? 'php5' : 'win32'), $src['filename'], $src['name']);
-		}
-	}
+    if (!$museum) {
+        echo "<ul>\n";
+        foreach(array_merge($source, $windows) as $src) {
+            echo " <li>\n";
+            if (isset($src['filename'])) {
+                download_link($src['filename'], $src['name']); echo "<br>\n";
+                if (isset($src['md5'])) {
+                    echo '<span class="md5sum">md5: ' .$src['md5']. "</span>\n";
+                    if (isset($src['sha256'])) {
+                        echo '<br/>';
+                    }
+                }
+                if (isset($src['sha256'])) {
+                    echo '<span class="sha256sum">sha256: ' .$src['sha256']. "</span>\n";
+                }
+            } else {
+                echo '<a href="'.$src['link'].'">'.$src['name'].'</a>';
+            }
+            echo " </li>\n";
+        }
+        echo "</ul>\n";
+    } else {
+        foreach($source as $src) {
+            if (!isset($src['filename'])) {
+                continue;
+            }
+            printf('<a href="http://museum.php.net/php%d/%s">%s</a>'."\n", $major, $src['filename'], $src['name']);
+        }
+        foreach($windows as $src) {
+            printf('<a href="http://museum.php.net/%s/%s">%s</a>'."\n", ($major == 5 ? 'php5' : 'win32'), $src['filename'], $src['name']);
+        }
+    }
 
-	echo "  </li>\n";
-	echo " </ul>\n";
+    echo "  </li>\n";
+    echo " </ul>\n";
 }
 
 $latest = max(array_keys($OLDRELEASES));
 foreach($OLDRELEASES as $major => $a) {
-	echo '<a id="v' .$major. '"></a>';
-	if ($major != $latest) {
-		echo "\n<hr>\n";
-		if ($major == 4) {
-			echo '<p>Support for PHP 4 has been <b style="color: red;">discontinued</b> since 2007-12-31. Please consider upgrading to PHP 5.</p>'."\n";
-		}
-	}
+    echo '<a id="v' .$major. '"></a>';
+    if ($major != $latest) {
+        echo "\n<hr>\n";
+        if ($major == 4) {
+            echo '<p>Support for PHP 4 has been <b style="color: red;">discontinued</b> since 2007-12-31. Please consider upgrading to PHP 5.</p>'."\n";
+        }
+    }
 
-	$i = 0;
-	foreach($a as $ver => $release) {
-		$i++;
-		mk_rel(
-			$major,
-			$ver,
-			$release['date'],
-			isset($release['announcement']) ? $release['announcement'] : false,
-			$release['source'],
-			(isset($release['windows']) ? $release['windows'] : array()),
-			isset($release['museum']) ? $release['museum'] : ($i < 3 ? false : true)
-		);
-	}
+    $i = 0;
+    foreach($a as $ver => $release) {
+        $i++;
+        mk_rel(
+            $major,
+            $ver,
+            $release['date'],
+            isset($release['announcement']) ? $release['announcement'] : false,
+            $release['source'],
+            (isset($release['windows']) ? $release['windows'] : array()),
+            isset($release['museum']) ? $release['museum'] : ($i < 3 ? false : true)
+        );
+    }
 }
 
 site_footer(array('sidebar' => $SIDEBAR_DATA));

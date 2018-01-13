@@ -21,12 +21,12 @@ foreach ($vars as $varname) {
     }
 }
 $vars = array(
-	'type', 'country', 'category', 'email', 'url', 'ldesc', 'sdesc'
+    'type', 'country', 'category', 'email', 'url', 'ldesc', 'sdesc'
 );
 foreach($vars as $varname) {
-	if (!isset($_POST[$varname])) {
-		$_POST[$varname] = '';
-	}
+    if (!isset($_POST[$varname])) {
+        $_POST[$varname] = '';
+    }
 }
 
 // We need to process some form data

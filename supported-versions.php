@@ -10,7 +10,7 @@ site_header('Supported Versions', array('css' => array('supported-versions.css')
 // support lifetime, add it under a heading with an anchor, and add the anchor
 // and branch names to the array below ('x.y' => '#anchor-name').
 $VERSION_NOTES = array(
-	'5.6' => '#php-5.6',
+    '5.6' => '#php-5.6',
 );
 ?>
 
@@ -51,11 +51,11 @@ $VERSION_NOTES = array(
 			<?php ksort($releases) ?>
 			<?php foreach ($releases as $branch => $release): ?>
 				<?php
-				$state = get_branch_support_state($branch);
-				$initial = get_branch_release_date($branch);
-				$until = get_branch_bug_eol_date($branch);
-				$eol = get_branch_security_eol_date($branch);
-				?>
+                $state = get_branch_support_state($branch);
+                $initial = get_branch_release_date($branch);
+                $until = get_branch_bug_eol_date($branch);
+                $eol = get_branch_security_eol_date($branch);
+                ?>
 				<tr class="<?php echo $state ?>">
 					<td>
 						<a href="/downloads.php#v<?php echo htmlspecialchars($release['version']) ?>"><?php echo htmlspecialchars($branch) ?></a>
