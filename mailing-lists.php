@@ -303,7 +303,7 @@ if (isset($_POST['maillist'])) {
 function output_lists_table($mailing_lists)
 {
     echo '<table cellpadding="5" border="0" class="standard mailing-lists">', "\n";
-    while ( list(, $listinfo) = each($mailing_lists)) {
+    while (list(, $listinfo) = each($mailing_lists)) {
         if (!is_array($listinfo)) {
             echo "<tr><th>{$listinfo}</th><th>Moderated</th><th>Archive</th>" .
                  "<th>Newsgroup</th><th>Normal</th><th>Digest</th></tr>\n";
@@ -321,7 +321,7 @@ function output_lists_table($mailing_lists)
             echo '<td>' . ($larchive ? "<a href=\"http://marc.info/?l={$larchive}\">yes</a>" : 'n/a') . '</td>';
             echo '<td>' . ($listinfo[6] ? "<a href=\"news://news.php.net/{$listinfo[6]}\">yes</a> <a href=\"http://news.php.net/group.php?group={$listinfo[6]}\">http</a>" : 'n/a') . '</td>';
             echo '<td><input name="maillist" type="radio" value="' . $listinfo[0] . '"></td>';
-            echo '<td>' . ($listinfo[5] ? '<input name="maillist" type="radio" value="' . $listinfo[0] . '-digest">' : 'n/a' ) . '</td>';
+            echo '<td>' . ($listinfo[5] ? '<input name="maillist" type="radio" value="' . $listinfo[0] . '-digest">' : 'n/a') . '</td>';
             echo "</tr>\n";
         }
     }
