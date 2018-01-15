@@ -1059,7 +1059,7 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
   <li><?php bugfix(74658); ?> (Undefined constants in array properties result in broken properties).</li>
   <li>Fixed misparsing of abstract unix domain socket names.</li>
   <li><?php bugfix(74603); ?> (PHP INI Parsing Stack Buffer Overflow Vulnerability).</li>
-  <li><?php bugfix(74101); ?>, bug #74614 (Unserialize Heap Use-After-Free (READ: 1) in zval_get_type).</li>
+  <li><?php bugfix(74101); ?> (Unserialize Heap Use-After-Free (READ: 1) in zval_get_type). (CVE-2017-12934)</li>
   <li><?php bugfix(74111); ?> (Heap buffer overread (READ: 1) finish_nested_data from unserialize).</li>
   <li><?php bugfix(74819); ?> (wddx_deserialize() heap out-of-bound read via php_parse_date()). (CVE-2017-11145)</li>
 </ul></li>
@@ -1138,7 +1138,7 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
   <li><?php bugfix(74738); ?> (Multiple [PATH=] and [HOST=] sections not properly parsed).</li>
   <li><?php bugfix(74658); ?> (Undefined constants in array properties result in broken properties).</li>
   <li>Fixed misparsing of abstract unix domain socket names.</li>
-  <li><?php bugfix(74101); ?>, bug #74614 (Unserialize Heap Use-After-Free (READ: 1) in zval_get_type).</li>
+  <li><?php bugfix(74101); ?> (Unserialize Heap Use-After-Free (READ: 1) in zval_get_type). (CVE-2017-12934)</li>
   <li><?php bugfix(74111); ?> (Heap buffer overread (READ: 1) finish_nested_data from unserialize).</li>
   <li><?php bugfix(74603); ?> (PHP INI Parsing Stack Buffer Overflow Vulnerability).</li>
   <li><?php bugfix(74819); ?> (wddx_deserialize() heap out-of-bound read via php_parse_date()). (CVE-2017-11145)</li>
