@@ -43,7 +43,7 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
 </ul></li>
 <li>Phar:
 <ul>
-  <li><?php bugfix(74782); ?> (remove file name from output to avoid XSS).</li>
+  <li><?php bugfix(74782); ?> (Reflected XSS in .phar 404 page).</li>
 </ul></li>
 <li>Standard:
 <ul>
@@ -97,7 +97,7 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
 </ul></li>
 <li>Phar:
 <ul>
-  <li><?php bugfix(74782); ?> (remove file name from output to avoid XSS).</li>
+  <li><?php bugfix(74782); ?> (Reflected XSS in .phar 404 page).</li>
 </ul></li>
 <li>Standard:
 <ul>
