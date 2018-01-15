@@ -60,7 +60,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 </ul></li>
 <li>OpenSSL:
 <ul>
-  <li><?php bugfix(74651); ?> (negative-size-param (-1) in memcpy in zif_openssl_seal()).</li>
+  <li><?php bugfix(74651); ?> (negative-size-param (-1) in memcpy in zif_openssl_seal()). (CVE-2017-11144)</li>
 </ul></li>
 <li>PCRE:
 <ul>
