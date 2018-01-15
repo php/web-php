@@ -1077,7 +1077,7 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
 </ul></li>
 <li>Intl:
 <ul>
-  <li><?php bugfix(73473); ?> (Stack Buffer Overflow in msgfmt_parse_message).</li>
+  <li><?php bugfix(73473); ?> (Stack Buffer Overflow in msgfmt_parse_message). (CVE-2017-11362)</li>
   <li><?php bugfix(74705); ?> (Wrong reflection on Collator::getSortKey and collator_get_sort_key).</li>
 </ul></li>
 <li>Mbstring:
@@ -1153,7 +1153,7 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
 </ul></li>
 <li>Intl:
 <ul>
-  <li><?php bugfix(73473); ?> (Stack Buffer Overflow in msgfmt_parse_message).</li>
+  <li><?php bugfix(73473); ?> (Stack Buffer Overflow in msgfmt_parse_message). (CVE-2017-11362)</li>
   <li><?php bugfix(74705); ?> (Wrong reflection on Collator::getSortKey and collator_get_sort_key).</li>
   <li><?php bugfix(73634); ?> (grapheme_strpos illegal memory access).</li>
 </ul></li>
