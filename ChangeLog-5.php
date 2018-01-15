@@ -47,7 +47,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 <ul>
   <li><?php bugfix(73807); ?> (Performance problem with processing large post request). (CVE-2017-11142)</li>
   <li><?php bugfix(74111); ?> (Heap buffer overread (READ: 1) finish_nested_data from unserialize). (CVE-2017-12933)</li>
-  <li><?php bugfix(74603); ?> (PHP INI Parsing Stack Buffer Overflow Vulnerability).</li>
+  <li><?php bugfix(74603); ?> (PHP INI Parsing Stack Buffer Overflow Vulnerability). (CVE-2017-11628)</li>
   <li><?php bugfix(74819); ?> (wddx_deserialize() heap out-of-bound read via php_parse_date()). (CVE-2017-11145)</li>
 </ul></li>
 <li>GD:
