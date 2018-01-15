@@ -411,7 +411,7 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
   <li><?php bugfix(74737); ?> (mysqli_get_client_info reflection info).</li>
   <li>Add support for extension name as argument to dl().</li>
   <li><?php bugfix(74851); ?> (uniqid() without more_entropy performs badly).</li>
-  <li><?php bugfix(74103); ?> (heap-use-after-free when unserializing invalid array size).</li>
+  <li><?php bugfix(74103); ?> (heap-use-after-free when unserializing invalid array size). (CVE-2017-12932)</li>
   <li><?php bugfix(75054); ?> (A Denial of Service Vulnerability was found when performing deserialization).</li>
   <li><?php bugfix(75170); ?> (mt_rand() bias on 64-bit machines).</li>
   <li><?php bugfix(75221); ?> (Argon2i always throws NUL at the end).</li>
@@ -857,7 +857,7 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
 <li>Standard:
 <ul>
   <li><?php bugfix(75075); ?> (unpack with X* causes infinity loop).</li>
-  <li><?php bugfix(74103); ?> (heap-use-after-free when unserializing invalid array size).</li>
+  <li><?php bugfix(74103); ?> (heap-use-after-free when unserializing invalid array size). (CVE-2017-12932)</li>
   <li><?php bugfix(75054); ?> (A Denial of Service Vulnerability was found when performing deserialization).</li>
 </ul></li>
 <li>WDDX:
@@ -933,7 +933,7 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
 <li>Standard:
 <ul>
   <li><?php bugfix(75075); ?> (unpack with X* causes infinity loop).</li>
-  <li><?php bugfix(74103); ?> (heap-use-after-free when unserializing invalid array size).</li>
+  <li><?php bugfix(74103); ?> (heap-use-after-free when unserializing invalid array size). (CVE-2017-12932)</li>
   <li><?php bugfix(75054); ?> (A Denial of Service Vulnerability was found when performing deserialization).</li>
 </ul></li>
 <li>WDDX:
