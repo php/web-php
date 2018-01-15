@@ -27,7 +27,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 <b><?php release_date('26-Oct-2017'); ?></b>
 <ul><li>Date:
 <ul>
-  <li><?php bugfix(75055); ?> (Out-Of-Bounds Read in timelib_meridian()).</li>
+  <li><?php bugfix(75055); ?> (Out-Of-Bounds Read in timelib_meridian()). (CVE-2017-16642)</li>
 </ul></li>
 <li>mcrypt:
 <ul>

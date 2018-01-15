@@ -229,6 +229,7 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
 <ul>
   <li><?php bugfix(55407); ?> (Impossible to prototype DateTime::createFromFormat).</li>
   <li>Implemented FR <?php bugl(71520); ?> (Adding the DateTime constants to the DateTimeInterface interface).</li>
+  <li><?php bugfix(75055); ?> (Out-Of-Bounds Read in timelib_meridian()). (CVE-2017-16642)</li>
   <li><?php bugfix(75149); ?> (redefinition of typedefs ttinfo and t1info).</li>
   <li><?php bugfix(75222); ?> (DateInterval microseconds property always 0).</li>
 </ul></li>
@@ -588,7 +589,7 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
 </ul></li>
 <li>Date:
 <ul>
-  <li><?php bugfix(75055); ?> (Out-Of-Bounds Read in timelib_meridian()).</li>
+  <li><?php bugfix(75055); ?> (Out-Of-Bounds Read in timelib_meridian()). (CVE-2017-16642)</li>
 </ul></li>
 <li>Apache2Handler:
 <ul>
@@ -655,7 +656,7 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
 </ul></li>
 <li>Date:
 <ul>
-  <li><?php bugfix(75055); ?> (Out-Of-Bounds Read in timelib_meridian()).</li>
+  <li><?php bugfix(75055); ?> (Out-Of-Bounds Read in timelib_meridian()). (CVE-2017-16642)</li>
 </ul></li>
 <li>Intl:
 <ul>
