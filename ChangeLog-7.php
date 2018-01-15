@@ -1058,7 +1058,7 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
   <li><?php bugfix(74603); ?> (PHP INI Parsing Stack Buffer Overflow Vulnerability).</li>
   <li><?php bugfix(74101); ?>, bug #74614 (Unserialize Heap Use-After-Free (READ: 1) in zval_get_type).</li>
   <li><?php bugfix(74111); ?> (Heap buffer overread (READ: 1) finish_nested_data from unserialize).</li>
-  <li><?php bugfix(74819); ?> (wddx_deserialize() heap out-of-bound read via php_parse_date()).</li>
+  <li><?php bugfix(74819); ?> (wddx_deserialize() heap out-of-bound read via php_parse_date()). (CVE-2017-11145)</li>
 </ul></li>
 <li>Date:
 <ul>
@@ -1138,7 +1138,7 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
   <li><?php bugfix(74101); ?>, bug #74614 (Unserialize Heap Use-After-Free (READ: 1) in zval_get_type).</li>
   <li><?php bugfix(74111); ?> (Heap buffer overread (READ: 1) finish_nested_data from unserialize).</li>
   <li><?php bugfix(74603); ?> (PHP INI Parsing Stack Buffer Overflow Vulnerability).</li>
-  <li><?php bugfix(74819); ?> (wddx_deserialize() heap out-of-bound read via php_parse_date()).</li>
+  <li><?php bugfix(74819); ?> (wddx_deserialize() heap out-of-bound read via php_parse_date()). (CVE-2017-11145)</li>
 </ul></li>
 <li>DOM:
 <ul>
