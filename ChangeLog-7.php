@@ -1545,7 +1545,7 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
   <li><?php bugfix(74093); ?> (Maximum execution time of n+2 seconds exceed not written in error_log).</li>
   <li><?php bugfix(73989); ?> (PHP 7.1 Segfaults within Symfony test suite).</li>
   <li><?php bugfix(74084); ?> (Out of bound read - zend_mm_alloc_small).</li>
-  <li><?php bugfix(73807); ?> (Performance problem with processing large post request).</li>
+  <li><?php bugfix(73807); ?> (Performance problem with processing large post request). (CVE-2017-11142)</li>
   <li><?php bugfix(73998); ?> (array_key_exists fails on arrays created by get_object_vars).</li>
   <li><?php bugfix(73954); ?> (NAN check fails on Alpine Linux with musl).</li>
   <li><?php bugfix(73677); ?> (Generating phar.phar core dump with gcc ASAN enabled build).</li>
@@ -1606,7 +1606,7 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
 <ul>
   <li><?php bugfix(73989); ?> (PHP 7.1 Segfaults within Symfony test suite).</li>
   <li><?php bugfix(74084); ?> (Out of bound read - zend_mm_alloc_small).</li>
-  <li><?php bugfix(73807); ?> (Performance problem with processing large post request).</li>
+  <li><?php bugfix(73807); ?> (Performance problem with processing large post request). (CVE-2017-11142)</li>
   <li><?php bugfix(73998); ?> (array_key_exists fails on arrays created by get_object_vars).</li>
   <li><?php bugfix(73954); ?> (NAN check fails on Alpine Linux with musl).</li>
   <li><?php bugfix(74039); ?> (is_infinite(-INF) returns false).</li>
