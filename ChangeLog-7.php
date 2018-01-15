@@ -992,6 +992,7 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
 <li>Wddx:
 <ul>
   <li><?php bugfix(73173); ?> (huge memleak when wddx_unserialize).</li>
+  <li><?php bugfix(74145); ?> (wddx parsing empty boolean tag leads to SIGSEGV). (CVE-2017-11143)</li>
 </ul></li>
 <li>zlib:
 <ul>
@@ -1040,6 +1041,7 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
 <li>Wddx:
 <ul>
   <li><?php bugfix(73173); ?> (huge memleak when wddx_unserialize).</li>
+  <li><?php bugfix(74145); ?> (wddx parsing empty boolean tag leads to SIGSEGV). (CVE-2017-11143)</li>
 </ul></li>
 <li>zlib:
 <ul>

@@ -68,7 +68,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 </ul></li>
 <li>WDDX:
 <ul>
-  <li><?php bugfix(74145); ?> (wddx parsing empty boolean tag leads to SIGSEGV).</li>
+  <li><?php bugfix(74145); ?> (wddx parsing empty boolean tag leads to SIGSEGV). (CVE-2017-11143)</li>
 </ul></li>
 </ul>
 <!-- }}} --></section>
