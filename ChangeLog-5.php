@@ -17,7 +17,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 </ul></li>
 <li>Phar:
 <ul>
-  <li><?php bugfix(74782); ?> (Reflected XSS in .phar 404 page).</li>
+  <li><?php bugfix(74782); ?> (Reflected XSS in .phar 404 page). (CVE-2018-5712)</li>
 </ul></li>
 </ul>
 <!-- }}} --></section>
