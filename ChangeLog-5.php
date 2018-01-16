@@ -13,7 +13,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 <b><?php release_date('04-Jan-2018'); ?></b>
 <ul><li>GD:
 <ul>
-  <li><?php bugfix(75571); ?> (Potential infinite loop in gdImageCreateFromGifCtx).</li>
+  <li><?php bugfix(75571); ?> (Potential infinite loop in gdImageCreateFromGifCtx). (CVE-2018-5711)</li>
 </ul></li>
 <li>Phar:
 <ul>

@@ -28,7 +28,7 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
 </ul></li>
 <li>GD:
 <ul>
-  <li><?php bugfix(75571); ?> (Potential infinite loop in gdImageCreateFromGifCtx).</li>
+  <li><?php bugfix(75571); ?> (Potential infinite loop in gdImageCreateFromGifCtx). (CVE-2018-5711)</li>
 </ul></li>
 <li>Opcache:
 <ul>
@@ -83,7 +83,7 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
 </ul></li>
 <li>GD:
 <ul>
-  <li><?php bugfix(75571); ?> (Potential infinite loop in gdImageCreateFromGifCtx).</li>
+  <li><?php bugfix(75571); ?> (Potential infinite loop in gdImageCreateFromGifCtx). (CVE-2018-5711)</li>
 </ul></li>
 <li>Opcache:
 <ul>
@@ -133,7 +133,7 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
 </ul></li>
 <li>GD:
 <ul>
-  <li><?php bugfix(75571); ?> (Potential infinite loop in gdImageCreateFromGifCtx).</li>
+  <li><?php bugfix(75571); ?> (Potential infinite loop in gdImageCreateFromGifCtx). (CVE-2018-5711)</li>
 </ul></li>
 <li>Opcache:
 <ul>
