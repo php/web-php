@@ -7,6 +7,76 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
 
 <h1>PHP 7 ChangeLog</h1>
 
+<section class="version" id="7.2.2"><!-- {{{ 7.2.2 -->
+<h3>Version 7.2.2</h3>
+<b><?php release_date('01-Feb-2018'); ?></b>
+<ul><li>Core:
+<ul>
+  <li><?php bugfix(75742); ?> (potential memleak in internal classes's static members).</li>
+  <li><?php bugfix(75679); ?> (Path 260 character problem).</li>
+  <li><?php bugfix(75614); ?> (Some non-portable == in shell scripts).</li>
+  <li><?php bugfix(75786); ?> (segfault when using spread operator on generator passed by reference).</li>
+  <li><?php bugfix(75799); ?> (arg of get_defined_functions is optional).</li>
+  <li><?php bugfix(75396); ?> (Exit inside generator finally results in fatal error).</li>
+</ul></li>
+<li>FCGI:
+<ul>
+  <li><?php bugfix(75794); ?> (getenv() crashes on Windows 7.2.1 when second parameter is false).</li>
+</ul></li>
+<li>IMAP:
+<ul>
+  <li><?php bugfix(75774); ?> (imap_append HeapCorruction).</li>
+</ul></li>
+<li>Opcache:
+<ul>
+  <li><?php bugfix(75720); ?> (File cache not populated after SHM runs full).</li>
+  <li><?php bugfix(75687); ?> (var 8 (TMP) has array key type but not value type).</li>
+  <li><?php bugfix(75698); ?> (Using @ crashes php7.2-fpm).</li>
+  <li><?php bugfix(75579); ?> (Interned strings buffer overflow may cause crash).</li>
+</ul></li>
+<li>PDO:
+<ul>
+  <li><?php bugfix(75616); ?> (PDO extension doesn't allow to be built shared on Darwin).</li>
+</ul></li>
+<li>PDO MySQL:
+<ul>
+  <li><?php bugfix(75615); ?> (PDO Mysql module can't be built as module).</li>
+</ul></li>
+<li>PGSQL:
+<ul>
+  <li><?php bugfix(75671); ?> (pg_version() crashes when called on a connection to cockroach).</li>
+</ul></li>
+<li>Readline:
+<ul>
+  <li><?php bugfix(75775); ?> (readline_read_history segfaults with empty file).</li>
+</ul></li>
+<li>SAPI:
+<ul>
+  <li><?php bugfix(75735); ?> ([embed SAPI] Segmentation fault in sapi_register_post_entry).</li>
+</ul></li>
+<li>SOAP:
+<ul>
+  <li><?php bugfix(70469); ?> (SoapClient generates E_ERROR even if exceptions=1 is used).</li>
+  <li><?php bugfix(75502); ?> (Segmentation fault in zend_string_release).</li>
+</ul></li>
+<li>SPL:
+<ul>
+  <li><?php bugfix(75717); ?> (RecursiveArrayIterator does not traverse arrays by reference).</li>
+  <li><?php bugfix(75242); ?> (RecursiveArrayIterator doesn't have constants from parent class).</li>
+  <li><?php bugfix(73209); ?> (RecursiveArrayIterator does not iterate object properties).</li>
+</ul></li>
+<li>Standard:
+<ul>
+  <li><?php bugfix(75781); ?> (substr_count incorrect result).</li>
+  <li><?php bugfix(75653); ?> (array_values don't work on empty array).</li>
+</ul></li>
+<li>Zip:
+<ul>
+  <li>Display headers (buildtime) and library (runtime) versions in phpinfo (with libzip &gt;= 1.3.1).</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
 <section class="version" id="7.2.1"><!-- {{{ 7.2.1 -->
 <h3>Version 7.2.1</h3>
 <b><?php release_date('04-Jan-2018'); ?></b>
