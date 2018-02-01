@@ -77,6 +77,60 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
 </ul>
 <!-- }}} --></section>
 
+<section class="version" id="7.1.14"><!-- {{{ 7.1.14 -->
+<h3>Version 7.1.14</h3>
+<b><?php release_date('01-Feb-2018'); ?></b>
+<ul><li>Core:
+<ul>
+  <li><?php bugfix(75679); ?> (Path 260 character problem).</li>
+  <li><?php bugfix(75786); ?> (segfault when using spread operator on generator passed by reference).</li>
+  <li><?php bugfix(75799); ?> (arg of get_defined_functions is optional).</li>
+  <li><?php bugfix(75396); ?> (Exit inside generator finally results in fatal error).</li>
+  <li><?php bugfix(75079); ?> (self keyword leads to incorrectly generated TypeError when in closure in trait).</li>
+</ul></li>
+<li>FCGI:
+<ul>
+  <li><?php bugfix(75794); ?> (getenv() crashes on Windows 7.2.1 when second parameter is false).</li>
+</ul></li>
+<li>IMAP:
+<ul>
+  <li><?php bugfix(75774); ?> (imap_append HeapCorruction).</li>
+</ul></li>
+<li>Opcache:
+<ul>
+  <li><?php bugfix(75720); ?> (File cache not populated after SHM runs full).</li>
+  <li><?php bugfix(75579); ?> (Interned strings buffer overflow may cause crash).</li>
+</ul></li>
+<li>PGSQL:
+<ul>
+  <li><?php bugfix(75671); ?> (pg_version() crashes when called on a connection to cockroach).</li>
+</ul></li>
+<li>Readline:
+<ul>
+  <li><?php bugfix(75775); ?> (readline_read_history segfaults with empty file).</li>
+</ul></li>
+<li>SAPI:
+<ul>
+  <li><?php bugfix(75735); ?> ([embed SAPI] Segmentation fault in sapi_register_post_entry).</li>
+</ul></li>
+<li>SOAP:
+<ul>
+  <li><?php bugfix(70469); ?> (SoapClient generates E_ERROR even if exceptions=1 is used).</li>
+  <li><?php bugfix(75502); ?> (Segmentation fault in zend_string_release).</li>
+</ul></li>
+<li>SPL:
+<ul>
+  <li><?php bugfix(75717); ?> (RecursiveArrayIterator does not traverse arrays by reference).</li>
+  <li><?php bugfix(75242); ?> (RecursiveArrayIterator doesn't have constants from parent class).</li>
+  <li><?php bugfix(73209); ?> (RecursiveArrayIterator does not iterate object properties).</li>
+</ul></li>
+<li>Standard:
+<ul>
+  <li><?php bugfix(75781); ?> (substr_count incorrect result).</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
 <section class="version" id="7.2.1"><!-- {{{ 7.2.1 -->
 <h3>Version 7.2.1</h3>
 <b><?php release_date('04-Jan-2018'); ?></b>
