@@ -9,7 +9,7 @@ include_once $_SERVER['DOCUMENT_ROOT'] . '/include/posttohost.inc';
 include_once $_SERVER['DOCUMENT_ROOT'] . '/include/shared-manual.inc';
 include      $_SERVER['DOCUMENT_ROOT'] . '/manual/spam_challenge.php';
 
-site_header("Add Manual Note", array( 'css' => 'add-note.css'));
+site_header('Add Manual Note', array('css' => 'add-note.css'));
 
 // Copy over "sect" and "redirect" from GET to POST
 if (empty($_POST['sect']) && isset($_GET['sect'])) {
@@ -19,12 +19,12 @@ if (empty($_POST['redirect']) && isset($_GET['redirect'])) {
     $_POST['redirect'] = $_GET['redirect'];
 }
 
-// Decide on whether all vars are present for processing 
-$process = TRUE;
+// Decide on whether all vars are present for processing
+$process = true;
 $needed_vars = array('note', 'user', 'sect', 'redirect', 'action', 'func', 'arga', 'argb', 'answer');
 foreach ($needed_vars as $varname) {
     if (empty($_POST[$varname])) {
-        $process = FALSE;
+        $process = false;
         break;
     }
 }
@@ -32,27 +32,27 @@ foreach ($needed_vars as $varname) {
 // We have a submitted form to process
 if ($process) {
 
-    // Clean off leading and trailing whitespace 
+    // Clean off leading and trailing whitespace
     $user = trim($_POST['user']);
     $note = trim($_POST['note']);
-    
+
     // Convert all line-endings to unix format,
     // and don't allow out-of-control blank lines
     $note = str_replace("\r\n", "\n", $note);
     $note = str_replace("\r", "\n", $note);
     $note = preg_replace("/\n{2,}/", "\n\n", $note);
-    
+
     // Don't pass through example username
-    if ($user == "user@example.com") {
-        $user = "Anonymous";
+    if ($user == 'user@example.com') {
+        $user = 'Anonymous';
     }
-    
+
     // We don't know of any error now
-    $error = FALSE;
+    $error = false;
 
     // No note specified
     if (strlen($note) == 0) {
-        $error = "You have not specified the note text.";
+        $error = 'You have not specified the note text.';
     }
 
     // SPAM challenge failed
@@ -61,8 +61,8 @@ if ($process) {
     }
 
     // The user name contains a malicious character
-    elseif (stristr($user, "|")) {
-        $error = "You have included bad characters within your username. We appreciate you may want to obfuscate your email further, but we have a system in place to do this for you.";
+    elseif (stristr($user, '|')) {
+        $error = 'You have included bad characters within your username. We appreciate you may want to obfuscate your email further, but we have a system in place to do this for you.';
     }
 
     // Check if the note is too long
@@ -77,18 +77,18 @@ if ($process) {
 
     // Check if any line is too long
     else {
-    
+
         // Split the note by whitespace, and check length
-        foreach (preg_split("/\\s+/", $note) as $chunk) {
+        foreach (preg_split('/\\s+/', $note) as $chunk) {
             if (strlen($chunk) > 120) {
-                $error = "Your note contains a bit of text that will result in a line that is too long, even after using wordwrap().";
+                $error = 'Your note contains a bit of text that will result in a line that is too long, even after using wordwrap().';
                 break;
             }
         }
     }
 
     // No error was found, and the submit action is required
-    if (!$error && strtolower($_POST['action']) != "preview") {
+    if (!$error && strtolower($_POST['action']) != 'preview') {
 
         $redirip = isset($_SERVER['HTTP_X_FORWARDED_FOR']) ?
                    $_SERVER['HTTP_X_FORWARDED_FOR'] :
@@ -97,7 +97,7 @@ if ($process) {
         // Post the variables to the central user note script
         // ($MQ is defined in prepend.inc)
         $result = posttohost(
-            "http://master.php.net/entry/user-note.php",
+            'http://master.php.net/entry/user-note.php',
             array(
                 'user'    => ($MQ ? stripslashes($user) : $user),
                 'note'    => ($MQ ? stripslashes($note) : $note),
@@ -109,51 +109,51 @@ if ($process) {
 
         // If there is any non-header result, then it is an error
         if ($result) {
-            if (strpos($result, '[TOO MANY NOTES]') !== FALSE) {
-                print "<p class=\"formerror\">As a security precaution, we only allow a certain number of notes to be submitted per minute. At this time, this number has been exceeded. Please re-submit your note in about a minute.</p>";
-            } else if (($pos = strpos($result, '[SPAMMER]')) !== FALSE) {
-                $ip       = trim(substr($result, $pos+9));
+            if (strpos($result, '[TOO MANY NOTES]') !== false) {
+                echo '<p class="formerror">As a security precaution, we only allow a certain number of notes to be submitted per minute. At this time, this number has been exceeded. Please re-submit your note in about a minute.</p>';
+            } elseif (($pos = strpos($result, '[SPAMMER]')) !== false) {
+                $ip       = trim(substr($result, $pos + 9));
                 $spam_url = $ip_spam_lookup_url . $ip;
-                print '<p class="formerror">Your IP is listed in one of the spammers lists we use, which aren\'t controlled by us. More information is available at <a href="'.$spam_url.'">'.$spam_url.'</a>.</p>';
-            } else if (strpos($result, '[SPAM WORD]') !== FALSE) {
+                echo '<p class="formerror">Your IP is listed in one of the spammers lists we use, which aren\'t controlled by us. More information is available at <a href="' . $spam_url . '">' . $spam_url . '</a>.</p>';
+            } elseif (strpos($result, '[SPAM WORD]') !== false) {
                 echo '<p class="formerror">Your note contains a prohibited (usually SPAM) word. Please remove it and try again.</p>';
-            } else if (strpos($result, '[CLOSED]') !== FALSE) {
+            } elseif (strpos($result, '[CLOSED]') !== false) {
                 echo '<p class="formerror">Due to some technical problems this service isn\'t currently working. Please try again later. Sorry for any inconvenience.</p>';
             } else {
                 echo "<!-- $result -->";
-                echo "<p class=\"formerror\">There was an internal error processing your submission. Please try to submit again later.</p>";
+                echo '<p class="formerror">There was an internal error processing your submission. Please try to submit again later.</p>';
             }
         }
 
         // There was no error returned
-        else { 
+        else {
             echo '<p>Your submission was successful -- thanks for contributing! Note ',
                  'that it will not show up for up to a few hours on some of the <a ',
                  'href="/mirrors.php">mirrors</a>, but it will find its way to all of ',
                  'our mirrors in due time.</p>';
         }
-        
+
         // Print out common footer, and end page
         site_footer();
         exit();
     }
-    
+
     // There was an error, or a preview is needed
     else {
 
         // If there was an error, print out
         if ($error) { echo "<p class=\"formerror\">$error</p>\n"; }
-        
+
         // Print out preview of note
         echo '<p>This is what your entry will look like, roughly:</p>';
         echo '<div id="usernotes">';
-        manual_note_display(time(), ($MQ ? stripslashes($user) : $user), ($MQ ? stripslashes($note) : $note), FALSE);
+        manual_note_display(time(), ($MQ ? stripslashes($user) : $user), ($MQ ? stripslashes($note) : $note), false);
         echo '</div><br><br>';
     }
 }
 
 // Any needed variable was missing => display instructions
-else { 
+else {
 ?>
 
 <section id="add-note-usernotes" class="clearfix">
@@ -166,7 +166,7 @@ else {
         users ignoring this important section.
       </li>
       <li>
-        <em>Good notes rise to the top</em> as they are voted up; this makes 
+        <em>Good notes rise to the top</em> as they are voted up; this makes
         them easier to find.
       </li>
       <li>
@@ -298,7 +298,7 @@ else {
   <section>
     <h3>Email address conversion</h3>
     <p>
-      We have a simple conversion in place to convert the @ signs and dots in your 
+      We have a simple conversion in place to convert the @ signs and dots in your
       address. You may still want to include a part in the email address
       that is understandable only by humans as our conversion can be performed in
       the opposite direction. You may submit your email address as
@@ -346,7 +346,7 @@ else {
 }
 
 // If the user name was not specified, provide a default
-if (empty($_POST['user'])) { $_POST['user'] = "user@example.com"; }
+if (empty($_POST['user'])) { $_POST['user'] = 'user@example.com'; }
 
 // There is no section to add note to
 if (!isset($_POST['sect']) || !isset($_POST['redirect'])) {

@@ -1,7 +1,7 @@
 <?php
 $_SERVER['BASE_PAGE'] = 'privacy.php';
 include_once $_SERVER['DOCUMENT_ROOT'] . '/include/prepend.inc';
-site_header("Privacy Policy", array("current" => "footer"));
+site_header('Privacy Policy', array('current' => 'footer'));
 ?>
 
 <h1>Privacy Policy</h1>
@@ -37,4 +37,3 @@ site_header("Privacy Policy", array("current" => "footer"));
 
 <?php
 site_footer();
-

@@ -10,9 +10,9 @@ $SIDEBAR_DATA = '
  lists</a>, the <a href="http://pecl.php.net/support.php">PECL
  lists</a>, and the <a href="http://gtk.php.net/resources.php">PHP-GTK
  lists</a> on their own pages.
-</p> 
+</p>
 ';
-site_header("Unsubscribing", array("current" => "community"));
+site_header('Unsubscribing', array('current' => 'community'));
 ?>
 
 <h1>Unsubscribing From a Mailing List</h1>
@@ -150,13 +150,13 @@ site_header("Unsubscribing", array("current" => "community"));
 
  <dt><a href="http://www.washington.edu/pine/">Pine</a></dt>
  <dd>
-  From the main Pine menu, type 'S' for 'Setup', then 'C' for 'Config'. 
+  From the main Pine menu, type 'S' for 'Setup', then 'C' for 'Config'.
   Use the space bar and down arrow to scroll until you reach the
   <code>[ ] enable-full-header-cmd</code> option. Type 'X' in the box
   to toggle the option on. Type 'E' to exit 'Config', and 'Y' to save
   changes. The next time you read a message, type 'H' and the full
   headers will be displayed at the top of the message. Type 'H' again
-  to hide the headers. 
+  to hide the headers.
  </dd>
 </dl>
 

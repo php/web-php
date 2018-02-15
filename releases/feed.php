@@ -1,7 +1,7 @@
 <?php
-header("Content-Type: application/atom+xml");
+header('Content-Type: application/atom+xml');
 
-include __DIR__ . "/../include/version.inc";
+include __DIR__ . '/../include/version.inc';
 
 echo <<< XML
 <?xml version="1.0" encoding="UTF-8"?>
@@ -20,13 +20,13 @@ XML;
 
 /* FIX silly editor highlighting */?><?php
 
-$FEED_UPDATED =  0;
+$FEED_UPDATED = 0;
 $RELEASED_VERSIONS = array_merge($RELEASES[5], $RELEASES[7]);
 krsort($RELEASED_VERSIONS);
 foreach ($RELEASED_VERSIONS as $version => $release) {
-    $published = date(DATE_ATOM, strtotime($release["source"][0]["date"]));
-    if ($release["announcement"]) {
-        $id = "http://php.net/releases/" . str_replace(".", "_", $version) . ".php";
+    $published = date(DATE_ATOM, strtotime($release['source'][0]['date']));
+    if ($release['announcement']) {
+        $id = 'http://php.net/releases/' . str_replace('.', '_', $version) . '.php';
     } else {
         $id = "http://qa.php.net/#$version";
     }
@@ -41,14 +41,14 @@ foreach ($RELEASED_VERSIONS as $version => $release) {
 
 XML;
     $maxtime = array();
-    foreach ($release["source"] as $source) {
-        if (!isset($source["date"])) {
+    foreach ($release['source'] as $source) {
+        if (!isset($source['date'])) {
             continue;
         }
-        $maxtime[] = $time = strtotime($source["date"]);
+        $maxtime[] = $time = strtotime($source['date']);
         $released = date(DATE_ATOM, $time);
 
-        echo "        <link rel=\"enclosure\" title=\"{$source["name"]}\" href=\"/get/{$source["filename"]}/from/this/mirror\">\n";
+        echo "        <link rel=\"enclosure\" title=\"{$source['name']}\" href=\"/get/{$source['filename']}/from/this/mirror\">\n";
         foreach (array('md5', 'sha256') as $hashAlgo) {
             if (isset($source[$hashAlgo])) {
                 echo "            <php:{$hashAlgo}>{$source[$hashAlgo]}</php:{$hashAlgo}>\n";

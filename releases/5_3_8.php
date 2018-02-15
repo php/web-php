@@ -2,7 +2,7 @@
 // $Id$
 $_SERVER['BASE_PAGE'] = 'releases/5_3_8.php';
 include_once $_SERVER['DOCUMENT_ROOT'] . '/include/prepend.inc';
-site_header("PHP 5.3.8 Release Announcement");
+site_header('PHP 5.3.8 Release Announcement');
 ?>
 
 <h1>PHP 5.3.8 Release Announcement</h1>
@@ -17,7 +17,7 @@ the PHP 5.3.7 release:</p>
      which caused mysqlnd SSL connections to hang (Bug #55283).</li>
 </ul>
 
-<p>All PHP users should note that the PHP 5.2 series is NOT supported 
+<p>All PHP users should note that the PHP 5.2 series is NOT supported
 anymore. All users are strongly encouraged to upgrade to PHP 5.3.8.</p>
 
 

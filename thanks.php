@@ -2,7 +2,7 @@
 // $Id$
 $_SERVER['BASE_PAGE'] = 'thanks.php';
 include_once $_SERVER['DOCUMENT_ROOT'] . '/include/prepend.inc';
-site_header("Thanks", array("current" => "community"));
+site_header('Thanks', array('current' => 'community'));
 ?>
 
 <h1>Thanks</h1>
@@ -45,12 +45,12 @@ site_header("Thanks", array("current" => "community"));
 </li>
 
 <li>
- <a href="http://www.servercentral.net/">Server Central</a> provides 
+ <a href="http://www.servercentral.net/">Server Central</a> provides
  a box and connection which runs various services and sites for php.net
 </li>
 
 <li>
- <a href="http://www.spry.com/">Spry VPS Hosting</a> provides a server and 
+ <a href="http://www.spry.com/">Spry VPS Hosting</a> provides a server and
  bandwidth for various php.net services.
 </li>
 
@@ -107,7 +107,7 @@ site_header("Thanks", array("current" => "community"));
 </ul>
 <p>
  And special thanks to all the companies who donate server space and
- bandwidth to host our international array of 
+ bandwidth to host our international array of
  <a href="/mirrors.php">mirror sites</a>.
 </p>
 

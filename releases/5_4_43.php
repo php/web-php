@@ -2,7 +2,7 @@
 // $Id$
 $_SERVER['BASE_PAGE'] = 'releases/5_4_43.php';
 include_once $_SERVER['DOCUMENT_ROOT'] . '/include/prepend.inc';
-site_header("PHP 5.4.43 Release Announcement");
+site_header('PHP 5.4.43 Release Announcement');
 ?>
 
 <h1>PHP 5.4.43 Release Announcement</h1>
@@ -17,8 +17,8 @@ Windows binaries can be found on <a href="http://windows.php.net/download/">wind
 The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.4.43">ChangeLog</a>.
 </p>
 
-<p>Please note that PHP 5.4 branch is nearing the end of its <a href="http://php.net/supported-versions.php">support timeframe</a>. 
+<p>Please note that PHP 5.4 branch is nearing the end of its <a href="http://php.net/supported-versions.php">support timeframe</a>.
 If your PHP installations is based on PHP 5.4, it may be a good time to start making the plans for the upgrade.
-</p> 
+</p>
 
 <?php site_footer(); ?>

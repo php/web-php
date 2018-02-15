@@ -3,7 +3,7 @@
 $_SERVER['BASE_PAGE'] = 'security/index.php';
 include_once $_SERVER['DOCUMENT_ROOT'] . '/include/prepend.inc';
 
-site_header("CRYPT_BLOWFISH security fix details");
+site_header('CRYPT_BLOWFISH security fix details');
 ?>
 
 <h1>CRYPT_BLOWFISH security fix details</h1>
@@ -65,4 +65,3 @@ announcement</a> for more information.
 
 <?php
 site_footer();
-

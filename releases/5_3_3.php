@@ -2,13 +2,13 @@
 // $Id $
 $_SERVER['BASE_PAGE'] = 'releases/5_3_3.php';
 include_once $_SERVER['DOCUMENT_ROOT'] . '/include/prepend.inc';
-site_header("PHP 5.3.3 Release Announcement");
+site_header('PHP 5.3.3 Release Announcement');
 ?>
 
 <h1>PHP 5.3.3 Release Announcement</h1>
 <p>
 The PHP development team would like to announce the immediate
-availability of PHP 5.3.3. This release focuses on improving the  
+availability of PHP 5.3.3. This release focuses on improving the
 stability and security of the PHP 5.3.x branch with over 100 bug
 fixes, some of which are security related. All users are encouraged
 to upgrade to this release.
@@ -23,7 +23,7 @@ to upgrade to this release.
 	non-namespaced classes.
 
 	<p><?php
-	highlight_string('<?php
+    highlight_string('<?php
 namespace Foo;
 class Bar {
     public function Bar() {
@@ -32,7 +32,7 @@ class Bar {
     }
 }
 ?>');
-	?></p>
+    ?></p>
 	<p>There is no impact on migration from 5.2.x because namespaces were only introduced in PHP 5.3.</p></li>
 </ul>
 <p>

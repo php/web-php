@@ -7,7 +7,7 @@
 */
 $_SERVER['BASE_PAGE'] = 'stats/index.php';
 include_once $_SERVER['DOCUMENT_ROOT'] . '/include/prepend.inc';
-site_header("No Stats");
+site_header('No Stats');
 ?>
 
 <h1>No Stats</h1>

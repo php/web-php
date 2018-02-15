@@ -3,7 +3,7 @@
 $_SERVER['BASE_PAGE'] = 'support.php';
 include_once $_SERVER['DOCUMENT_ROOT'] . '/include/prepend.inc';
 
-$SIDEBAR_DATA ='
+$SIDEBAR_DATA = '
 <div class="panel" style="position:fixed">
   <div class="headline">Table of Contents</div>
   <div class="body">
@@ -85,13 +85,13 @@ site_header(
 <h2 id="irc">Internet Relay Chat</h2>
 
 <p>
- Otherwise known as IRC. Here you can usually find experienced PHP people 
- sitting around doing nothing on various channels with php in their names.  
- Note that there is no official IRC channel. Check 
+ Otherwise known as IRC. Here you can usually find experienced PHP people
+ sitting around doing nothing on various channels with php in their names.
+ Note that there is no official IRC channel. Check
  <a href="http://www.freenode.net/">freenode</a> or any other major network
  (<a href="http://www.efnet.org/">EFNet</a>,
  <a href="http://www.quakenet.org">QuakeNet</a>,
- <a href="http://www.ircnet.com/">IRCNet</a>, 
+ <a href="http://www.ircnet.com/">IRCNet</a>,
  <a href="http://www.icq.com">IrCQNet</a>,
  <a href="http://www.dal.net/">DALNet</a> and
  <a href="http://oftc.net">OFTC</a>).

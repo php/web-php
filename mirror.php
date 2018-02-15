@@ -23,18 +23,18 @@ $MIRROR_IMAGE = '';
 if (is_official_mirror()) {
 
     // Iterate through possible mirror provider logo types in priority order
-    $types = array("gif", "jpg", "png");
-    while (list(,$ext) = each($types)) {
+    $types = array('gif', 'jpg', 'png');
+    while (list(, $ext) = each($types)) {
 
         // Check if file exists for this type
-        if (file_exists("backend/mirror." . $ext)) {
+        if (file_exists('backend/mirror.' . $ext)) {
 
             // Create image HTML code
             $MIRROR_IMAGE = make_image(
                 'mirror.' . $ext,
                 htmlspecialchars(mirror_provider()),
-                FALSE,
-                FALSE,
+                false,
+                false,
                 'backend',
                 0
             );
@@ -51,7 +51,7 @@ if (is_official_mirror()) {
         }
     }
 }
-site_header("Information About This PHP Mirror Site", array("current" => "community"));
+site_header('Information About This PHP Mirror Site', array('current' => 'community'));
 ?>
 
 <h1>Information About This PHP Mirror Site</h1>
@@ -68,7 +68,7 @@ site_header("Information About This PHP Mirror Site", array("current" => "commun
 <h2>General Information</h2>
 
 <ul>
- <li>This site is <?php echo is_official_mirror() ? "" : "not"; ?> an official PHP.net mirror site</li>
+ <li>This site is <?php echo is_official_mirror() ? '' : 'not'; ?> an official PHP.net mirror site</li>
  <li>The mirror site's address is <?php print_link($MYSITE); ?></li>
 </ul>
 
@@ -88,13 +88,13 @@ site_header("Information About This PHP Mirror Site", array("current" => "commun
 
 <ul>
  <li>Default language is <?php echo $LANGUAGES[default_language()]; ?></li>
- <li>Local visitor statistics are <?php echo have_stats() ? "available" : "not available"; ?></li>
+ <li>Local visitor statistics are <?php echo have_stats() ? 'available' : 'not available'; ?></li>
 </ul>
 
 <h2>Mirror Status</h2>
 
 <ul>
- <li>The site was last updated at <?php echo strftime("%c %Z", $LAST_UPDATED); ?></li>
+ <li>The site was last updated at <?php echo strftime('%c %Z', $LAST_UPDATED); ?></li>
 </ul>
 
 <?php site_footer(); ?>

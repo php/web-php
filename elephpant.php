@@ -10,7 +10,7 @@ $SIDEBAR_DATA = '
  <a href="/license/">see our licensing information page</a>.
 </p>
 ';
-site_header("ElePHPant", array("current" => "footer"));
+site_header('ElePHPant', array('current' => 'footer'));
 ?>
 
 <a name="copyright"></a>
@@ -30,7 +30,7 @@ site_header("ElePHPant", array("current" => "footer"));
 </p>
 
 <p>
- For more information on the PHP Group and the PHP project, please see 
+ For more information on the PHP Group and the PHP project, please see
  <a href="http://php.net/">the PHP homepage</a>.
 </p>
 

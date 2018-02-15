@@ -41,7 +41,6 @@ function imgheader($filename) {
     header("Content-Type: $hdr");
 }
 
-
 function get_accepted_encodings() {
     if (isset($_SERVER['HTTP_ACCEPT_ENCODING'])) {
         $encodings = explode(',', $_SERVER['HTTP_ACCEPT_ENCODING']);
@@ -51,7 +50,6 @@ function get_accepted_encodings() {
     }
     return array();
 }
-
 
 function serve_compressed_if_available($logo) {
     $encodings = get_accepted_encodings();
@@ -72,12 +70,12 @@ function serve_compressed_if_available($logo) {
 
 $logo = './logos/php-logo.svg';
 if (isset($_SERVER['QUERY_STRING'])) {
-	switch ($_SERVER['QUERY_STRING']) {
-		case 'QA':
-		case 'qa':
-		    $logo = './logos/qa.jpg';
-		    break;
-	}
+    switch ($_SERVER['QUERY_STRING']) {
+        case 'QA':
+        case 'qa':
+            $logo = './logos/qa.jpg';
+            break;
+    }
 }
 
 // xmas season, december and the first week of January
@@ -92,5 +90,3 @@ header('Last-Modified: ' . $tsstring);
 header('Expires: ' . date(DATE_RSS, $future));
 imgheader($logo);
 serve_compressed_if_available($logo);
-
-

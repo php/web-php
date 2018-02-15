@@ -2,44 +2,37 @@
 include_once $_SERVER['DOCUMENT_ROOT'] . '/include/shared-manual.inc';
 $TOC = array();
 $PARENTS = array();
-include_once dirname(__FILE__) ."/toc/context.inc";
-$setup = array (
-  'home' => 
-  array (
+include_once __DIR__ . '/toc/context.inc';
+$setup = array(
+  'home' => array(
     0 => 'index.php',
     1 => 'PHP Manual',
   ),
-  'head' => 
-  array (
+  'head' => array(
     0 => 'UTF-8',
     1 => 'en',
   ),
-  'this' => 
-  array (
+  'this' => array(
     0 => 'context.http.php',
     1 => 'HTTP context options',
   ),
-  'up' => 
-  array (
+  'up' => array(
     0 => 'context.php',
     1 => 'Context options and parameters',
   ),
-  'prev' => 
-  array (
+  'prev' => array(
     0 => 'context.socket.php',
     1 => 'Socket context options',
   ),
-  'next' => 
-  array (
+  'next' => array(
     0 => 'context.ftp.php',
     1 => 'FTP context options',
   ),
-  'alternatives' => 
-  array (
+  'alternatives' => array(
   ),
 );
-$setup["toc"] = $TOC;
-$setup["parents"] = $PARENTS;
+$setup['toc'] = $TOC;
+$setup['parents'] = $PARENTS;
 manual_setup($setup);
 
 manual_header();
@@ -50,7 +43,7 @@ manual_header();
   <p class="refpurpose"><span class="refname">HTTP context options</span> &mdash; <span class="dc-title">HTTP context option listing</span></p>
 
  </div>
- 
+
  <div class="refsect1 description" id="refsect1-context.http-description">
   <h3 class="title">Description</h3>
   <p class="para">
@@ -221,7 +214,7 @@ manual_header();
       <p class="para">
        Defaults to <em>1.0</em>.
       </p>
-      <blockquote class="note"><p><strong class="note">Note</strong>: 
+      <blockquote class="note"><p><strong class="note">Note</strong>:
        <p class="para">
         PHP prior to 5.3.0 does not implement chunked transfer decoding.
         If this value is set to <em>1.1</em> it is your
@@ -274,12 +267,12 @@ manual_header();
   </p>
  </div>
 
- 
+
  <div class="refsect1 changelog" id="refsect1-context.http-changelog">
   <h3 class="title">Changelog</h3>
   <p class="para">
    <table class="doctable informaltable">
-    
+
      <thead>
       <tr>
        <th>Version</th>
@@ -347,13 +340,13 @@ manual_header();
       </tr>
 
      </tbody>
-    
+
    </table>
 
   </p>
  </div>
 
- 
+
  <div class="refsect1 examples" id="refsect1-context.http-examples">
   <h3 class="title">Examples</h3>
   <p class="para">
@@ -385,7 +378,7 @@ manual_header();
 
  <div class="refsect1 notes" id="refsect1-context.http-notes">
   <h3 class="title">Notes</h3>
-  <blockquote class="note"><p><strong class="note">Note</strong>: 
+  <blockquote class="note"><p><strong class="note">Note</strong>:
    <strong>Underlying socket stream context options</strong><br>
    <span class="simpara">
     Additional context options may be supported by the
@@ -396,7 +389,7 @@ manual_header();
     for the <em>ssl://</em> transport.
    </span>
   </p></blockquote>
-  <blockquote class="note"><p><strong class="note">Note</strong>: 
+  <blockquote class="note"><p><strong class="note">Note</strong>:
    <strong>HTTP status line</strong><br>
    <span class="simpara">
     When this stream wrapper follows a redirect, the

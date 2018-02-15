@@ -26,27 +26,27 @@ $SIDEBAR_DATA = '
 <p class="panel"><a href="/releases/">Old archives</a></p>
 ';
 
-site_header("Downloads",
+site_header('Downloads',
     array(
         'link' => array(
             array(
-                "rel"   => "alternate",
-                "type"  => "application/atom+xml",
-                "href"  => $MYSITE . "releases/feed.php",
-                "title" => "PHP Release feed"
+                'rel'   => 'alternate',
+                'type'  => 'application/atom+xml',
+                'href'  => $MYSITE . 'releases/feed.php',
+                'title' => 'PHP Release feed'
             ),
         ),
-        "current" => "downloads",
+        'current' => 'downloads',
     )
 );
 ?>
-<?php foreach ($RELEASES as $MAJOR => $major_releases): /* major releases loop start */
+<?php foreach ($RELEASES as $MAJOR => $major_releases): // major releases loop start
         $releases = array_slice($major_releases, 0, $SHOW_COUNT);
 ?>
 <a id="v<?php echo $MAJOR; ?>"></a>
 <?php $i = 0; foreach ($releases as $v => $a): ?>
   <?php $mver = substr($v, 0, strrpos($v, '.')); ?>
-  <?php $stable = $i++ === 0 ? "Current Stable" : "Old Stable"; ?>
+  <?php $stable = $i++ === 0 ? 'Current Stable' : 'Old Stable'; ?>
 
   <h3 id="v<?php echo $v; ?>" class="title">
     <span class="release-state"><?php echo $stable; ?></span>
@@ -92,7 +92,7 @@ The following official GnuPG keys of the current PHP Release Manager can be used
 to verify the tags:
 </p>
 
-<?php foreach ($RELEASES as $MAJOR => $major_releases): /* major releases loop start */
+<?php foreach ($RELEASES as $MAJOR => $major_releases): // major releases loop start
         $releases = array_slice($major_releases, 0, $SHOW_COUNT);
 ?>
 <?php foreach ($releases as $v => $_): ?>

@@ -3,7 +3,7 @@
 $_SERVER['BASE_PAGE'] = 'archive/2004.php';
 include_once $_SERVER['DOCUMENT_ROOT'] . '/include/prepend.inc';
 news_archive_sidebar();
-site_header("News Archive - 2004", array("cache" => true));
+site_header('News Archive - 2004', array('cache' => true));
 ?>
 
 <h1>News Archive - 2004</h1>
@@ -56,10 +56,10 @@ site_header("News Archive - 2004", array("cache" => true));
 <h1>PHP 4.3.10 &amp; 5.0.3 released!</h1>
 <p>
  <span class="newsdate">[15-Dec-2004]</span>
-  The PHP Development Team would like to announce the immediate release of 
-  <a href="/downloads.php">PHP 4.3.10</a> and <a href="/downloads.php">PHP 5.0.3</a>. 
-  These are maintenance releases that in addition to non-critical bug fixes 
-  address several very serious security issues. All Users of PHP are strongly 
+  The PHP Development Team would like to announce the immediate release of
+  <a href="/downloads.php">PHP 4.3.10</a> and <a href="/downloads.php">PHP 5.0.3</a>.
+  These are maintenance releases that in addition to non-critical bug fixes
+  address several very serious security issues. All Users of PHP are strongly
   encouraged to upgrade to one of these releases as soon as possible.
 </p>
 
@@ -105,7 +105,7 @@ site_header("News Archive - 2004", array("cache" => true));
 
 <hr>
 
-<?php news_image("http://nosoftwarepatents.com/", "90x40_3.jpg", "No Software Patents"); ?>
+<?php news_image('http://nosoftwarepatents.com/', '90x40_3.jpg', 'No Software Patents'); ?>
 
 <h1>MySQL, RedHat and other partners started a new campaign against software patents</h1>
 <p>
@@ -121,7 +121,7 @@ site_header("News Archive - 2004", array("cache" => true));
 
 <hr>
 
-<?php news_image("http://www.zend.com/php5/contest/", "zendtech_logo.gif", "Zend Technologies"); ?>
+<?php news_image('http://www.zend.com/php5/contest/', 'zendtech_logo.gif', 'Zend Technologies'); ?>
 
 <h1>Zend's PHP 5 Coding Contest winners announced</h1>
 <p>
@@ -143,21 +143,21 @@ site_header("News Archive - 2004", array("cache" => true));
 
 <hr>
 
-<?php news_image("http://www.phpquebec.com/modules/news/article.php?storyid=55", "conference_php_quebec.gif", "PHP Québec"); ?>
+<?php news_image('http://www.phpquebec.com/modules/news/article.php?storyid=55', 'conference_php_quebec.gif', 'PHP Québec'); ?>
 <h1>PHP before Canadian government, in Ottawa, October 19th and 20th, 2004</h1>
 <p>
  <span class="newsdate">[12-Oct-2004]</span>
  <a href="http://www.phpquebec.com/">PHP Québec</a>, the profesional association
- of PHP users in Québec, will be part of the <a 
- href="http://www.gtecweek.com/">GTEC exhibition</a>, in Ottawa, Ontario, on 
+ of PHP users in Québec, will be part of the <a
+ href="http://www.gtecweek.com/">GTEC exhibition</a>, in Ottawa, Ontario, on
  Tuesday October 19th and Wednesday October 20th. PHP Québec will present PHP's
- features, its capabilities for e-government and its support services in Canada. 
+ features, its capabilities for e-government and its support services in Canada.
  Come and meet us on the floor, booth 1610C.
 </p>
 
 <hr>
 
-<?php news_image("http://www.afup.org/forumphp/", "afup2004.jpg", "Forum PHP"); ?>
+<?php news_image('http://www.afup.org/forumphp/', 'afup2004.jpg', 'Forum PHP'); ?>
 
 <h1>Forum PHP in Paris, November 18 &amp; 19, 2004</h1>
 <p>
@@ -173,13 +173,13 @@ site_header("News Archive - 2004", array("cache" => true));
 
 <hr>
 
-<?php news_image("/downloads.php#v5", "php-version5.gif", "PHP 5"); ?>
+<?php news_image('/downloads.php#v5', 'php-version5.gif', 'PHP 5'); ?>
 <h1>PHP 5.0.2 released!</h1>
 <p>
  <span class="newsdate">[23-Sep-2004]</span>
  The PHP Development Team is proud to announce the immediate release of <a href="/downloads.php#v5">PHP 5.0.2</a>.
  This is a maintenance release that in addition to many non-critical bug fixes, addresses a problem
- with GPC input processing. 
+ with GPC input processing.
  All Users of PHP 5 are encouraged to upgrade to this release as soon as possible.
 </p>
 
@@ -190,7 +190,7 @@ site_header("News Archive - 2004", array("cache" => true));
 
 <hr>
 
-<?php news_image("/downloads.php#v4", "php-version4.gif", "PHP 4"); ?>
+<?php news_image('/downloads.php#v4', 'php-version4.gif', 'PHP 4'); ?>
 <h1>PHP 4.3.9 released!</h1>
 <p>
  <span class="newsdate">[22-Sep-2004]</span>
@@ -208,7 +208,7 @@ site_header("News Archive - 2004", array("cache" => true));
 
 <hr>
 
-<?php news_image("http://mysqlcomconeurope.com", "MySQLcomcon_logo.gif", "MySQL"); ?>
+<?php news_image('http://mysqlcomconeurope.com', 'MySQLcomcon_logo.gif', 'MySQL'); ?>
 <h1>MySQL ComCon Europe</h1>
 <p>
  <span class="newsdate">[06-Sep-2004]</span>
@@ -248,13 +248,13 @@ site_header("News Archive - 2004", array("cache" => true));
  <a href="/install">Installation and Configuration</a> part, which is now
  divided into sections for individual platforms and servers to ease your first
  steps with PHP. The Windows installation instructions are completely
- revised, and now suggest you to set environment variables instead of moving 
+ revised, and now suggest you to set environment variables instead of moving
  files. This way upgrades and configuration changes become easier.
 </p>
 
 <hr>
 
-<?php news_image("/downloads.php#v5", "php-version5.gif", "PHP 5"); ?>
+<?php news_image('/downloads.php#v5', 'php-version5.gif', 'PHP 5'); ?>
 <a name="5.0.1"></a>
 <h1>PHP 5.0.1 Released!</h1>
 <p>
@@ -274,8 +274,8 @@ site_header("News Archive - 2004", array("cache" => true));
 <h1>PHP Tunisie Magazine</h1>
 <p>
  <span class="newsdate">[02-Aug-2004]</span>
- <a href="http://www.phptunisie.net/">PHP Tunisie</a> has just released the 
- <a href="http://www.phptunisie.net/formation/downloadmagazine/2/1/">second 
+ <a href="http://www.phptunisie.net/">PHP Tunisie</a> has just released the
+ <a href="http://www.phptunisie.net/formation/downloadmagazine/2/1/">second
  issue</a> of its monthly french PHP Magazine. In this issue you'll find
  a large plan on PostgreSQL, Databases abstractions with PHP, your mini
  template engine, an article on images generation with PHP, the migration
@@ -287,7 +287,7 @@ site_header("News Archive - 2004", array("cache" => true));
 
 <hr>
 
-<?php news_image("/downloads.php#v5", "php-version5.gif", "PHP 5"); ?>
+<?php news_image('/downloads.php#v5', 'php-version5.gif', 'PHP 5'); ?>
 <a name="5.0.0"></a>
 <h1>PHP 5.0.0 Released!</h1>
 <p>
@@ -338,7 +338,7 @@ site_header("News Archive - 2004", array("cache" => true));
 
 <hr>
 
-<?php news_image("/downloads.php#v4", "php-version4.gif", "PHP 4"); ?>
+<?php news_image('/downloads.php#v4', 'php-version4.gif', 'PHP 4'); ?>
 
 <h1>PHP 4.3.8 released!</h1>
 <p>
@@ -350,7 +350,7 @@ site_header("News Archive - 2004", array("cache" => true));
 
 <hr>
 
-<?php //news_image("http://www.phpconference.de/2003/index_en.php", "international_conference_2003.gif", "International PHP Conference"); ?>
+<?php //news_image("http://www.phpconference.de/2003/index_en.php", "international_conference_2003.gif", "International PHP Conference");?>
 <h1>International PHP Conference 2004</h1>
 <p>
  <span class="newsdate">[18-Jun-2004]</span>
@@ -371,7 +371,7 @@ site_header("News Archive - 2004", array("cache" => true));
 
 <hr>
 
-<?php news_image("http://phparch.com/phpworks", "phpworks.png", "php|works"); ?>
+<?php news_image('http://phparch.com/phpworks', 'phpworks.png', 'php|works'); ?>
 <h1>php|works - early-bird discount now in effect</h1>
 <p>
  <span class="newsdate">[16-Jun-2004]</span>
@@ -401,7 +401,7 @@ site_header("News Archive - 2004", array("cache" => true));
 
 <hr>
 
-<?php news_image("http://lamparea.org/en", "lamparea.png", "Lamp Area"); ?>
+<?php news_image('http://lamparea.org/en', 'lamparea.png', 'Lamp Area'); ?>
 <h1>LAMP area at LinuxTag 2004 in Karlsruhe, Germany</h1>
 <p>
  <span class="newsdate">[14-Jun-2004]</span>
@@ -426,7 +426,7 @@ site_header("News Archive - 2004", array("cache" => true));
 
 <hr>
 
-<?php news_image("/downloads.php#5", "php-version5.gif", "PHP 5"); ?>
+<?php news_image('/downloads.php#5', 'php-version5.gif', 'PHP 5'); ?>
 <h1>PHP 5 Release Candidate 3 Released!</h1>
 <p>
  <span class="newsdate">[8-Jun-2004]</span>
@@ -442,14 +442,14 @@ site_header("News Archive - 2004", array("cache" => true));
 
 <hr>
 
-<?php news_image("http://www.zend.com/php5/contest/", "zendtech_logo.gif", "Zend Technologies"); ?>
+<?php news_image('http://www.zend.com/php5/contest/', 'zendtech_logo.gif', 'Zend Technologies'); ?>
 
 <h1>Zend's PHP 5 Coding Contest</h1>
 
 <p>
  <span class="newsdate">[06-Jun-2004]</span>
  <a href="http://www.zend.com/php5/contest/">Zend's
- PHP 5 Coding Contest</a> is underway and accepting submissions. 
+ PHP 5 Coding Contest</a> is underway and accepting submissions.
  This is every developer's chance to flaunt their PHP 5 skills
  and let their application shine!
 </p>
@@ -457,7 +457,7 @@ site_header("News Archive - 2004", array("cache" => true));
 <p>
  Applications will be rated both by your peers and by a panel of
  judges assembled from among the most known and well-respected
- names in the PHP community. 
+ names in the PHP community.
 </p>
 
 <p>
@@ -467,7 +467,7 @@ site_header("News Archive - 2004", array("cache" => true));
 
 <hr>
 
-<?php news_image("/downloads.php#5", "php-version5.gif", "PHP 5"); ?>
+<?php news_image('/downloads.php#5', 'php-version5.gif', 'PHP 5'); ?>
 <h1>PHP 5 Release Candidate 2 Released!</h1>
 <p>
  <span class="newsdate">[25-Apr-2004]</span>
@@ -520,7 +520,7 @@ site_header("News Archive - 2004", array("cache" => true));
 
 <hr>
 
-<?php news_image("/downloads.php#5", "php-version5.gif", "PHP 5"); ?>
+<?php news_image('/downloads.php#5', 'php-version5.gif', 'PHP 5'); ?>
 <a name="5.0.0RC1"></a>
 <h1>PHP 5 Release Candidate 1 Released!</h1>
 <p>
@@ -587,7 +587,7 @@ site_header("News Archive - 2004", array("cache" => true));
 
 <hr>
 
-<?php news_image("http://www.phpconference.com/", "intcon2004spring.png", "International PHP Conference 2004 - Spring Edition"); ?>
+<?php news_image('http://www.phpconference.com/', 'intcon2004spring.png', 'International PHP Conference 2004 - Spring Edition'); ?>
 
 <h1>International PHP Conference 2004 Amsterdam: Timetable and Open Source PHP projects</h1>
 <p>
@@ -611,7 +611,7 @@ site_header("News Archive - 2004", array("cache" => true));
 
 <hr>
 
-<?php news_image("http://conf.phpquebec.org/", "conference_php_quebec.gif", "Conference PHP Quebec"); ?>
+<?php news_image('http://conf.phpquebec.org/', 'conference_php_quebec.gif', 'Conference PHP Quebec'); ?>
 
 <h1>Conf&eacute;rence PHP Qu&eacute;bec 2004 - (Montr&eacute;al, March 25&amp;26rst, 2004)</h1>
 <p>
@@ -623,33 +623,33 @@ site_header("News Archive - 2004", array("cache" => true));
  It will take place downtown Montr&eacute;al, Qu&eacute;bec, Canada.
 </p>
 <p>
- We are currently offering <a 
+ We are currently offering <a
  href="http://conf.phpquebec.org/main.php/en/conf2004/tarif">early bird prices</a>.
  Students and Small Businesses are eligible for reduced prices.
  Buy your tickets early to get rebates and discount with the DVD!
 </p>
 <p>
- Learn more about those exciting days at 
+ Learn more about those exciting days at
  <a href="http://conf.phpquebec.org/">conf.phpquebec.com</a>.
 </p>
 
 <hr>
 
-<?php news_image("http://www.pawscon.com/", "paws_small.jpg", "PHP and Web Standards Conference - UK 2004"); ?>
+<?php news_image('http://www.pawscon.com/', 'paws_small.jpg', 'PHP and Web Standards Conference - UK 2004'); ?>
 
 <h1>PaWS Tickets Now On Sale!</h1>
 <p>
  <span class="newsdate">[05-Feb-2004]</span>
  The <a href="http://www.pawscon.com/">PaWS Group</a> is proud to announce that
- tickets are now available for the first 
+ tickets are now available for the first
  <a href="http://www.pawscon.com/">PHP and Web Standards Conference</a>. We are
  offering Weekend tickets (Saturday 21st and Sunday 22nd only) as well as Conference
- tickets (Friday 20th - Tuesday 24th) for the entire length of the event. 
+ tickets (Friday 20th - Tuesday 24th) for the entire length of the event.
  Additionally, we also have Daily tickets available for each day of the conference.
  Tickets will also be available on the door for those that simply want to drop in.
 </p>
 <p>
- For ticket and accommodation Prices, look over our 
+ For ticket and accommodation Prices, look over our
  <a href="http://www.pawscon.com/pricing">pricing guide</a> for more information.
  <a href="http://www.pawscon.com/register">Purchase your tickets</a> today for this
  one of a kind conference!

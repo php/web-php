@@ -2,104 +2,48 @@
 include_once $_SERVER['DOCUMENT_ROOT'] . '/include/shared-manual.inc';
 $TOC = array();
 $PARENTS = array();
-include_once dirname(__FILE__) ."/toc/funcref.inc";
-$setup = array (
-  'home' => 
-  array (
+include_once __DIR__ . '/toc/funcref.inc';
+$setup = array(
+  'home' => array(
     0 => 'index.php',
     1 => 'PHP Manual',
   ),
-  'head' => 
-  array (
+  'head' => array(
     0 => 'UTF-8',
     1 => 'en',
   ),
-  'this' => 
-  array (
+  'this' => array(
     0 => 'refs.basic.vartype.php',
     1 => 'Variable and Type Related Extensions',
   ),
-  'up' => 
-  array (
+  'up' => array(
     0 => 'funcref.php',
     1 => 'Function Reference',
   ),
-  'prev' => 
-  array (
+  'prev' => array(
     0 => 'changelog.strings.php',
     1 => 'Changelog',
   ),
-  'next' => 
-  array (
+  'next' => array(
     0 => 'book.array.php',
     1 => 'Arrays',
   ),
-  'alternatives' => 
-  array (
+  'alternatives' => array(
   ),
-  'extra_header_links' => 
-  array (
+  'extra_header_links' => array(
     'rel' => 'alternate',
     'href' => '/manual/en/feeds/refs.basic.vartype.atom',
     'type' => 'application/atom+xml',
   ),
 );
-$setup["toc"] = $TOC;
-$setup["parents"] = $PARENTS;
+$setup['toc'] = $TOC;
+$setup['parents'] = $PARENTS;
 manual_setup($setup);
 
 manual_header();
 ?>
 <div id="refs.basic.vartype" class="set">
    <h1 class="title">Variable and Type Related Extensions</h1>
-   
-
-
-
-
-
-
-
-   
-
-
-
-
-
-
-   
-
-
-
-
-
-
-
-   
-
-
-
-
-
-
-
-   
-
-
-
-
-
-
-
-   
-
-
-
-
-
-
-
-   
 
 
 
@@ -108,7 +52,6 @@ manual_header();
 
 
 
-   
 
 
 
@@ -116,7 +59,6 @@ manual_header();
 
 
 
-   
 
 
 
@@ -124,7 +66,57 @@ manual_header();
 
 
 
-   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

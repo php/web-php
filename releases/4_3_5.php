@@ -2,7 +2,7 @@
 // $Id$
 $_SERVER['BASE_PAGE'] = 'releases/4_3_5.php';
 include_once $_SERVER['DOCUMENT_ROOT'] . '/include/prepend.inc';
-site_header("PHP 4.3.5 Release Announcement");
+site_header('PHP 4.3.5 Release Announcement');
 ?>
 
 <h1>PHP 4.3.5 Release Announcement</h1>
@@ -12,7 +12,7 @@ site_header("PHP 4.3.5 Release Announcement");
 <p>
  PHP Development Team is proud to announce the release of <a href="/downloads.php">PHP 4.3.5</a>.
  This is primarily a bug fix release, without any new features or additions. PHP 4.3.5
- is by far the most stable release of PHP to date and it is recommended that 
+ is by far the most stable release of PHP to date and it is recommended that
  all users upgrade to this release whenever possible.
 </p>
 

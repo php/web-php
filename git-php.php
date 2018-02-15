@@ -6,7 +6,7 @@ include_once $_SERVER['DOCUMENT_ROOT'] . '/include/posttohost.inc';
 
 // Force the account requests to php.net
 if (!is_primary_site()) {
-    header('Location: http://php.net/'.$_SERVER['BASE_PAGE']);
+    header('Location: http://php.net/' . $_SERVER['BASE_PAGE']);
     exit;
 }
 
@@ -20,18 +20,18 @@ $SIDEBAR_DATA = '
 <h3>Git access</h3>
 <p>
  If you would like to grab PHP sources or other PHP.net
- hosted project data from PHP.net, you can also use 
+ hosted project data from PHP.net, you can also use
  <a href="/git.php">Git</a>. No Git account is required.
 </p>
 ';
-site_header("Using Git for PHP Development", array("current" => "community"));
+site_header('Using Git for PHP Development', array('current' => 'community'));
 
 $groups = array(
-  "none" => "Choose One",
-  "php"  => "PHP Group",
-  "pear" => "PEAR Group",
-  "pecl" => "PECL Group",
-  "doc"  => "Doc Group",
+  'none' => 'Choose One',
+  'php'  => 'PHP Group',
+  'pear' => 'PEAR Group',
+  'pecl' => 'PECL Group',
+  'doc'  => 'Doc Group',
 );
 
 ?>
@@ -53,49 +53,49 @@ if (count($_POST) && (!isset($_POST['purpose']) || !is_array($_POST['purpose']) 
     }
 
     // No error found yet
-    $error = "";
+    $error = '';
 
     // Check for errors
     if (empty($_POST['id'])) {
-        $error .= "You must supply a desired Git user id. <br>";
+        $error .= 'You must supply a desired Git user id. <br>';
     } elseif(!preg_match('!^[a-z]\w+$!', $_POST['id'])) {
-        $error .= "Your user id must be >1 char long, start with ".
-                  "a letter and contain nothing but a-z, 0-9, and _ <br>";
+        $error .= 'Your user id must be >1 char long, start with ' .
+                  'a letter and contain nothing but a-z, 0-9, and _ <br>';
     }
     if (empty($_POST['fullname'])) {
-        $error .= "You must supply your real name. <br>";
+        $error .= 'You must supply your real name. <br>';
     }
     if (empty($_POST['realpurpose'])) {
-        $error .= "You must supply a reason for requesting the Git account. <br>";
+        $error .= 'You must supply a reason for requesting the Git account. <br>';
     }
     if (empty($_POST['password'])) {
-        $error .= "You must supply a desired password. <br>";
+        $error .= 'You must supply a desired password. <br>';
     }
     if (empty($_POST['email']) || !is_emailable_address($cleaned['email'])) {
-        $error .= "You must supply a proper email address. <br>";
+        $error .= 'You must supply a proper email address. <br>';
     }
     if (empty($_POST['yesno']) || $_POST['yesno'] != 'yes') {
-        $error .= "You did not fill the form out correctly. <br>";
+        $error .= 'You did not fill the form out correctly. <br>';
     }
     if (empty($_POST['group']) || $_POST['group'] === 'none' || !isset($groups[$_POST['group']])) {
-        $error .= "You did not fill out where to send the request. <br>";
+        $error .= 'You did not fill out where to send the request. <br>';
     }
     if (!isset($_POST['guidelines']) || !$_POST['guidelines']) {
-        $error .= "You did not agree to follow the contribution guidelines. <br>";
+        $error .= 'You did not agree to follow the contribution guidelines. <br>';
     }
 
     // Post the request if there is no error
     if (!$error) {
         $error = posttohost(
-            "http://master.php.net/entry/svn-account.php",
+            'http://master.php.net/entry/svn-account.php',
             array(
-                "username" => $cleaned['id'],
-                "name"     => $cleaned['fullname'],
-                "email"    => $cleaned['email'],
-                "passwd"   => $cleaned['password'],
-                "note"     => $cleaned['realpurpose'],
-                "yesno"    => $cleaned['yesno'],
-                "group"    => $cleaned['group'],
+                'username' => $cleaned['id'],
+                'name'     => $cleaned['fullname'],
+                'email'    => $cleaned['email'],
+                'passwd'   => $cleaned['password'],
+                'note'     => $cleaned['realpurpose'],
+                'yesno'    => $cleaned['yesno'],
+                'group'    => $cleaned['group'],
             )
         );
         // Error while posting
@@ -112,7 +112,7 @@ if (count($_POST) && (!isset($_POST['purpose']) || !is_array($_POST['purpose']) 
 ?>
 <p>
  Thank you. Your request has been sent. You should hear something within the
- next week or so. If you haven't heard anything by around <?php echo date('l, F jS', time()+604800); ?>
+ next week or so. If you haven't heard anything by around <?php echo date('l, F jS', time() + 604800); ?>
  then please send an email to the appropriate <a href="/mailing-lists.php">mailing list</a>:
 </p>
 <ul>
@@ -168,8 +168,8 @@ if (count($_POST) && (!isset($_POST['purpose']) || !is_array($_POST['purpose']) 
 } // endif: no data or checkread not checked
 
 else {
-	if (count($_POST)) {
-        print <<<EOT
+    if (count($_POST)) {
+        echo <<<EOT
 <div class="warning">
 <p>
  We could not have said it more clearly. Read everything on
@@ -290,7 +290,7 @@ EOT;
  through the <a href="http://pear.php.net/pepr/">PEPR system</a> on
  <a href="http://pear.php.net/">the PEAR website</a>. If you have a new PECL
  extension you wish to contribute, bring it up on the appropriate
- <a href="http://pecl.php.net/support.php">PECL mailing list</a> first. 
+ <a href="http://pecl.php.net/support.php">PECL mailing list</a> first.
 </p>
 
 <p>
@@ -325,8 +325,8 @@ EOT;
 </p>
 
 <p>
- If you get no resposne to an account request after a while, remember this is a 
- manual process, then please contact the relevant mailing list that belongs to 
+ If you get no resposne to an account request after a while, remember this is a
+ manual process, then please contact the relevant mailing list that belongs to
  the part of PHP you requested access to.
 </p>
 
@@ -344,12 +344,12 @@ EOT;
  mailing list.
 </p>
 <p class="warn">
- Please do <strong>NOT</strong> submit account requests if you have not previously 
+ Please do <strong>NOT</strong> submit account requests if you have not previously
  contributed any work such as patches to PHP.
 </p>
 <p class="warn">
- If someone told you to fill in an account request because you are a developer of 
- a certain extension, for example a <a href="http://pecl.php.net/">PECL</a> extension, 
+ If someone told you to fill in an account request because you are a developer of
+ a certain extension, for example a <a href="http://pecl.php.net/">PECL</a> extension,
  then please state who told you to submit this request in the purpose text field below.
 </p>
 
@@ -373,14 +373,14 @@ EOT;
  <th class="subr">For what purpose do you require a Git account:<br>
  (check all that apply)</th>
  <td>
-<?php 
-$purposes = array("Learning PHP", "Coding in PHP", "Reading the PHP source",
-	"Using PHP extensions", "Creating experimental PHP extensions",
-	"Submitting a patch to PHP", "Adding notes to the documentation",
-	"Writing web pages with PHP", "Setting up a php.net mirror site");
+<?php
+$purposes = array('Learning PHP', 'Coding in PHP', 'Reading the PHP source',
+    'Using PHP extensions', 'Creating experimental PHP extensions',
+    'Submitting a patch to PHP', 'Adding notes to the documentation',
+    'Writing web pages with PHP', 'Setting up a php.net mirror site');
 
 foreach ($purposes as $i => $p) { ?>
-  <input type="checkbox" name="purpose[<?php echo $i?>]" value="1" 
+  <input type="checkbox" name="purpose[<?php echo $i?>]" value="1"
 	checked="checked" id="vcs-purpose-<?php echo $i; ?>"> <label for="vcs-purpose-<?php echo $i; ?>"><?php echo $p; ?></label><br>
 <?php } ?>
  </td>
@@ -413,7 +413,7 @@ foreach ($purposes as $i => $p) { ?>
   <select name="group">
 <?php
 foreach($groups as $group => $name) {
-  $selected = (isset($_POST["group"]) && $_POST["group"] == $group) ? ' selected="selected"' : '';
+  $selected = (isset($_POST['group']) && $_POST['group'] == $group) ? ' selected="selected"' : '';
   echo "<option value='$group'$selected>$name</option>\n";
 }
 ?>

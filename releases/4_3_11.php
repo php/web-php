@@ -2,19 +2,19 @@
 // $Id$
 $_SERVER['BASE_PAGE'] = 'releases/4_3_11.php';
 include_once $_SERVER['DOCUMENT_ROOT'] . '/include/prepend.inc';
-site_header("PHP 4.3.11 Release Announcement");
+site_header('PHP 4.3.11 Release Announcement');
 ?>
 
 <h1>PHP 4.3.11 Release Announcement</h1>
 <p>[ <a href="/releases/4_3_11_fr.php">Version Fran&ccedil;aise</a> ]</p>
 <p>
-PHP Development Team is would like to announce the immediate release of <a href="/downloads.php">PHP 4.3.11</a>. 
-This is a maintenance release that in addition to over 70 non-critical bug fixes addresses several 
+PHP Development Team is would like to announce the immediate release of <a href="/downloads.php">PHP 4.3.11</a>.
+This is a maintenance release that in addition to over 70 non-critical bug fixes addresses several
 security issues inside the exif and fbsql extensions as well as the unserialize(),
 swf_definepoly() and getimagesize() functions.
 </p>
 
-<p>All Users of PHP are strongly encouraged to upgrade to this release.</p> 
+<p>All Users of PHP are strongly encouraged to upgrade to this release.</p>
 
 <h2>Bugfix release</h2>
 

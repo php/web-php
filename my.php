@@ -12,14 +12,14 @@ $options = array();
 
 // We have post data, and it is an available language
 if (isset($_POST['my_lang']) && isset($langs[$_POST['my_lang']])) {
-    
+
     // Set the language preference
     myphpnet_language($_POST['my_lang']);
-    
+
     // Add this as first option, selected
     $options[] = '<option value="' . $_POST['my_lang'] . '" selected>' .
                  $langs[$_POST['my_lang']] . "</option>\n";
-    
+
     // Remove, so it is not listed two times
     unset($langs[$_POST['my_lang']]);
 }
@@ -30,7 +30,7 @@ elseif (isset($langs[myphpnet_language()])) {
     // Add this as first option, selected
     $options[] = '<option value="' . myphpnet_language() . '" selected>' .
                  $langs[myphpnet_language()] . "</option>\n";
-    
+
     // Remove, so it is not listed two times
     unset($langs[myphpnet_language()]);
 }
@@ -48,15 +48,15 @@ foreach ($langs as $code => $name) {
 
 // Assemble form from collected data
 $langpref = "<select name=\"my_lang\">\n" .
-            join("", $options) . "</select>\n";
-            
+            implode('', $options) . "</select>\n";
+
 // Save URL shortcut fallback setting
 if (isset($_POST['urlsearch'])) {
     myphpnet_urlsearch($_POST['urlsearch']);
 }
 
-if (isset($_POST["showug"])) {
-    myphpnet_showug($_POST["showug"] == "enable");
+if (isset($_POST['showug'])) {
+    myphpnet_showug($_POST['showug'] == 'enable');
 }
 
 // Set preferred mirror site, prepare mirror array
@@ -64,11 +64,11 @@ if (isset($_POST['mirror'])) {
     myphpnet_mirror($_POST['mirror']);
 }
 $mirror_sites = $MIRRORS;
-$mirror_sites["NONE"] = array(7 => MIRROR_OK);
+$mirror_sites['NONE'] = array(7 => MIRROR_OK);
 
 myphpnet_save();
 
-site_header("My PHP.net", array("current" => "community"));
+site_header('My PHP.net', array('current' => 'community'));
 ?>
 
 <form action="/my.php" method="post">
@@ -109,26 +109,22 @@ site_header("My PHP.net", array("current" => "community"));
 
 // Data for the language settings table
 $langinfo = array(
-    
-    "Your preferred language" =>
-    $langpref,
-    
-    "Last seen language" =>
-    (isset($_COOKIE['LAST_LANG']) ? htmlentities($_COOKIE['LAST_LANG'], ENT_QUOTES | ENT_IGNORE, 'UTF-8') : "None"),
-    
-    "Your Accept-Language browser setting" =>
-    (isset($_SERVER['HTTP_ACCEPT_LANGUAGE']) ? htmlentities($_SERVER['HTTP_ACCEPT_LANGUAGE'], ENT_QUOTES | ENT_IGNORE, 'UTF-8') : "None"),
-    
-    "The mirror's default language" =>
-    default_language(),
-    
-    "Default" => "en"
+
+    'Your preferred language' => $langpref,
+
+    'Last seen language' => (isset($_COOKIE['LAST_LANG']) ? htmlentities($_COOKIE['LAST_LANG'], ENT_QUOTES | ENT_IGNORE, 'UTF-8') : 'None'),
+
+    'Your Accept-Language browser setting' => (isset($_SERVER['HTTP_ACCEPT_LANGUAGE']) ? htmlentities($_SERVER['HTTP_ACCEPT_LANGUAGE'], ENT_QUOTES | ENT_IGNORE, 'UTF-8') : 'None'),
+
+    "The mirror's default language" => default_language(),
+
+    'Default' => 'en'
 );
 
 // Write a row for all settings
 foreach ($langinfo as $lin => $lid) {
     echo " <tr>\n  <td class=\"sub\">" . $lin . "</td>\n";
-    echo "  <td>" . $lid . "</td>\n </tr>\n";
+    echo '  <td>' . $lid . "</td>\n </tr>\n";
 }
 
 ?>
@@ -164,9 +160,9 @@ foreach ($langinfo as $lin => $lid) {
 <div class="indent">
 <?php
 if (i2c_valid_country()) {
-    echo "We detected that you are from <b>" . $COUNTRIES[$COUNTRY] . "</b>";
+    echo 'We detected that you are from <b>' . $COUNTRIES[$COUNTRY] . '</b>';
 } else {
-    echo "We were unable to detect your country";
+    echo 'We were unable to detect your country';
 }
 ?>
 </div>
@@ -210,7 +206,7 @@ if ($type === MYPHPNET_URL_MANUAL) {
  Please note that in case the site finds your preferred mirror site disabled
  for some reason, it will fall back to the automatic selection procedure, but
  will not alter your preferences, so next time when your selected server works,
- the redirections will lead you there. 
+ the redirections will lead you there.
 </p>
 
 <div class="indent">
@@ -218,25 +214,25 @@ if ($type === MYPHPNET_URL_MANUAL) {
 <?php
 $mirror = myphpnet_mirror();
 foreach ($mirror_sites as $murl => $mdata) {
-    
+
     // Skip inactive mirrors
     if (mirror_status($murl) != MIRROR_OK ||
-        $murl == "http://www.php.net/" || $murl == 'http://php.net/') { continue; }
-    
+        $murl == 'http://www.php.net/' || $murl == 'http://php.net/') { continue; }
+
     // Compute user friendly mirror name
-    if ($murl == "NONE") {
-        $mname = "Automatic selection (default)";
+    if ($murl == 'NONE') {
+        $mname = 'Automatic selection (default)';
     } else {
-        $tmpurl = " (" .substr($murl, strpos($murl, '//') + 2, -1). ")";
+        $tmpurl = ' (' . substr($murl, strpos($murl, '//') + 2, -1) . ')';
         if (isset($COUNTRIES[$mdata[0]])) {
             $mname = $COUNTRIES[$mdata[0]] . $tmpurl;
         } else {
-            $mname = "Unknown" . $tmpurl;
+            $mname = 'Unknown' . $tmpurl;
         }
     }
-    
+
     // Print out mirror option with selection if needed
-    printf (
+    printf(
         "  <option value=\"$murl\"%s>$mname</option>\n",
         ($mirror == $murl ? ' selected="selected"' : '')
     );
@@ -251,8 +247,8 @@ foreach ($mirror_sites as $murl => $mdata) {
 We are experimenting with listing nearby user groups. This feature is highly experimental
 and will very likely change a lot and be broken at times.
 </p>
-<label for="showugenable">Enable UG tips</label> <input type="radio" name="showug" id="showugenable" value="enable" <?php    echo myphpnet_showug() ? "checked=checked" : "" ?>><br>
-<label for="showugdisable">Disable UG tips</label> <input type="radio" name="showug" id="showugdisable" value="disable" <?php echo myphpnet_showug() ? "" : "checked=checked" ?>>
+<label for="showugenable">Enable UG tips</label> <input type="radio" name="showug" id="showugenable" value="enable" <?php    echo myphpnet_showug() ? 'checked=checked' : '' ?>><br>
+<label for="showugdisable">Disable UG tips</label> <input type="radio" name="showug" id="showugdisable" value="disable" <?php echo myphpnet_showug() ? '' : 'checked=checked' ?>>
 
 <p class="center">
  <input type="submit" value="Set All Preferences">

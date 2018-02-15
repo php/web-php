@@ -214,7 +214,7 @@ div.warning a:focus {
   background-color: transparent;
   color: #fff;
 }
-.navbar .nav .active > a, 
+.navbar .nav .active > a,
 .navbar .nav .active > a:hover,
 .navbar .nav .active > a:focus {
   color: #fff;
@@ -362,7 +362,7 @@ div.phpcode span.string {
   padding: 2px 4px;
   white-space: nowrap;
   font-style: normal;
-  font: normal 14px / 1.46 "Source Code Pro", monospace; 
+  font: normal 14px / 1.46 "Source Code Pro", monospace;
 }
 
 var.reset

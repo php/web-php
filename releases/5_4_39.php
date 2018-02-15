@@ -2,13 +2,13 @@
 // $Id$
 $_SERVER['BASE_PAGE'] = 'releases/5_4_39.php';
 include_once $_SERVER['DOCUMENT_ROOT'] . '/include/prepend.inc';
-site_header("PHP 5.4.39 Release Announcement");
+site_header('PHP 5.4.39 Release Announcement');
 ?>
 
 <h1>PHP 5.4.39 Release Announcement</h1>
 
 <p>The PHP development team announces the immediate availability of PHP
-5.4.39. Six security-related bugs were fixed in this release, including CVE-2015-0231, CVE-2015-2305 and CVE-2015-2331. 
+5.4.39. Six security-related bugs were fixed in this release, including CVE-2015-0231, CVE-2015-2305 and CVE-2015-2331.
 
 All PHP 5.4 users are encouraged to upgrade to this version.
 </p>

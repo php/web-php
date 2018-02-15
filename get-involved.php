@@ -3,7 +3,7 @@
 $_SERVER['BASE_PAGE'] = 'get-involved.php';
 include_once $_SERVER['DOCUMENT_ROOT'] . '/include/prepend.inc';
 
-site_header("Get Involved", array("current" => "community"));
+site_header('Get Involved', array('current' => 'community'));
 ?>
 
 <h2 class="content-title">Contributing to PHP</h2>
@@ -45,7 +45,7 @@ site_header("Get Involved", array("current" => "community"));
  Someone hoping to become involved in the maintenance and development of
  the source should be experienced in all of the areas mentioned above, as
  this creates a strong team; everyone knows how every other part of the
- project works. 
+ project works.
 </p>
 
 <p>
@@ -63,7 +63,7 @@ XXX: lxr is offline and should be re-added once its are back online in a more pe
 
 */
 
-$SIDEBAR_DATA ='
+$SIDEBAR_DATA = '
 <div class="panel"><a href="build-setup.php">Developer Setup Help</a></div>
 <div class="panel">
   <div class="headline">Useful links for developers:</div>
@@ -80,7 +80,6 @@ $SIDEBAR_DATA ='
 </div>
 ';
 
-site_footer(array('sidebar'=>$SIDEBAR_DATA));
+site_footer(array('sidebar' => $SIDEBAR_DATA));
 
-/* vim: set et ts=4 sw=4 ft=php: : */
-
+// vim: set et ts=4 sw=4 ft=php: :

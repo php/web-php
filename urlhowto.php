@@ -3,18 +3,18 @@
 $_SERVER['BASE_PAGE'] = 'urlhowto.php';
 include_once $_SERVER['DOCUMENT_ROOT'] . '/include/prepend.inc';
 
-$SIDEBAR_DATA='
+$SIDEBAR_DATA = '
 <h3>URL examples</h3>
 <p>
  We have many kind of URL shortcuts. Here are some
  examples you can try out:
 </p>
 <ul class="simple">
- <li><a href="'.$MYSITE.'echo">/echo</a></li>
- <li><a href="'.$MYSITE.'it/echo">/it/echo</a></li>
- <li><a href="'.$MYSITE.'imap">/imap</a></li>
- <li><a href="'.$MYSITE.'downloads">/downloads</a></li>
- <li><a href="'.$MYSITE.'searchterm">/searchterm</a></li>
+ <li><a href="' . $MYSITE . 'echo">/echo</a></li>
+ <li><a href="' . $MYSITE . 'it/echo">/it/echo</a></li>
+ <li><a href="' . $MYSITE . 'imap">/imap</a></li>
+ <li><a href="' . $MYSITE . 'downloads">/downloads</a></li>
+ <li><a href="' . $MYSITE . 'searchterm">/searchterm</a></li>
 </ul>
 
 <h3>My PHP.net</h3>
@@ -25,10 +25,10 @@ $SIDEBAR_DATA='
 </p>
 ';
 
-site_header("URL Howto", array("current" => "help"));
+site_header('URL Howto', array('current' => 'help'));
 function a($href) {
     global $MYSITE;
-	echo '<a href="' . $MYSITE . $href . '">' . $MYSITE . $href . '</a>';
+    echo '<a href="' . $MYSITE . $href . '">' . $MYSITE . $href . '</a>';
 }
 
 ?>
@@ -68,17 +68,17 @@ function a($href) {
 
 <p>
  If your URL can't be matched with a page name, a manual page
- is searched for your query. This is the case for the 
+ is searched for your query. This is the case for the
  <kbd><?php echo $MYSITE; ?>preg_match</kbd> URL. The following pages
  are searched for in the manual:</p>
 <ul>
- <li>Chapter pages (e.g. <?php a("installation") ?>)</li>
- <li>Reference pages (e.g. <?php a("imap") ?>)</li>
- <li>Function pages (e.g. <?php a("join") ?>)</li>
- <li>Class pages (e.g. <?php a("dir") ?>)</li>
- <li>Feature pages (e.g. <?php a("safe_mode") ?>)</li>
- <li>Control structure pages (e.g. <?php a("while") ?>)</li>
- <li>Other language pages (e.g. <?php a("oop") ?>)</li>
+ <li>Chapter pages (e.g. <?php a('installation') ?>)</li>
+ <li>Reference pages (e.g. <?php a('imap') ?>)</li>
+ <li>Function pages (e.g. <?php a('join') ?>)</li>
+ <li>Class pages (e.g. <?php a('dir') ?>)</li>
+ <li>Feature pages (e.g. <?php a('safe_mode') ?>)</li>
+ <li>Control structure pages (e.g. <?php a('while') ?>)</li>
+ <li>Other language pages (e.g. <?php a('oop') ?>)</li>
 </ul>
 <p>
  Since there are several manual pages that could potentially match the query
@@ -87,48 +87,48 @@ function a($href) {
 <ul>
  <li>Extension <abbr title="Table of Contents">TOC</abbr>:
   <kbd><?php echo $MYSITE ?><var>book.extname</var></kbd>
-  (e.g. <?php a("book.dom")?>).
+  (e.g. <?php a('book.dom')?>).
  </li>
  <li>Extension intro pages:
   <kbd><?php echo $MYSITE ?><var>intro.extname</var></kbd>
-  (e.g. <?php a("intro.array") ?>).
+  (e.g. <?php a('intro.array') ?>).
  </li>
  <li>Extension setup <abbr title="Table of Contents">TOC</abbr>:
   <kbd><?php echo $MYSITE ?><var>extname.setup</var></kbd>
-  (e.g. <?php a("intl.setup") ?>).
+  (e.g. <?php a('intl.setup') ?>).
  </li>
  <li>Extension install chapter:
   <kbd><?php echo $MYSITE ?><var>extname.installation</var></kbd>
-  (e.g. <?php a("apc.installation") ?>).
+  (e.g. <?php a('apc.installation') ?>).
  </li>
  <li>Extension configuration:
   <kbd><?php echo $MYSITE ?><var>extname.configuration</var></kbd>
-  (e.g. <?php a("session.configuration") ?>).
+  (e.g. <?php a('session.configuration') ?>).
  </li>
  <li>Extension resources:
   <kbd><?php echo $MYSITE ?><var>extname.resources</var></kbd>
-  (e.g. <?php a("mysql.resources") ?>).
+  (e.g. <?php a('mysql.resources') ?>).
  </li>
  <li>Extension constants:
   <kbd><?php echo $MYSITE ?><var>extname.constants</var></kbd>
-  (e.g. <?php a("image.constants") ?>).
+  (e.g. <?php a('image.constants') ?>).
  </li>
  <li>Class synopsis:
   <kbd><?php echo $MYSITE ?><var>class.classname</var></kbd>
-  (e.g. <?php a("class.xmlreader") ?>).
+  (e.g. <?php a('class.xmlreader') ?>).
  </li>
  <li>Class method:
   <kbd><?php echo $MYSITE ?><var>classname.methodname</var></kbd>
-  (e.g. <?php a("pdo.query") ?>).
+  (e.g. <?php a('pdo.query') ?>).
  </li>
  <li>Functions:
   <kbd><?php echo $MYSITE ?><var>function.functionname</var></kbd>
-  (e.g. <?php a("function.strpos") ?>).
+  (e.g. <?php a('function.strpos') ?>).
  </li>
 </ul>
 
 <p>
- This kind of URL will bring up the manual page in 
+ This kind of URL will bring up the manual page in
  <a href="/my.php">your preferred language</a>. You can
  always override this setting by explicitly providing
  the language you want to get to. You can embed the language
@@ -164,11 +164,11 @@ function a($href) {
  We also have shortcut aliases to access some resources more quickly,
  and with a nice URL. Aliases are translated to their relevant shortcuts
  before the first step (PHP page search) mentioned above. Some examples
- of shortcut aliases: <?php a("whatisphp") ?>,
- <?php a("php4news") ?>. The latter is an external page
+ of shortcut aliases: <?php a('whatisphp') ?>,
+ <?php a('php4news') ?>. The latter is an external page
  alias, as it points to a file on the Git server, containing information
  about changes in PHP. There are also some convenient aliases(e.g.
- <?php a("de/phpversion") ?> which displays the German
+ <?php a('de/phpversion') ?> which displays the German
  manual page for the phpversion() function.
 </p>
 

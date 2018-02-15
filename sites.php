@@ -1,7 +1,7 @@
 <?php
 $_SERVER['BASE_PAGE'] = 'sites.php';
 include_once $_SERVER['DOCUMENT_ROOT'] . '/include/prepend.inc';
-site_header("A Tourist's Guide", array("current" => "help"));
+site_header("A Tourist's Guide", array('current' => 'help'));
 ?>
 
 <h1 class="content-header">PHP.net: A Tourist's Guide</h1>
@@ -28,7 +28,7 @@ site_header("A Tourist's Guide", array("current" => "help"));
  (There is also a <a href="http://museum.php.net/">PHP Museum</a>, which has
  all of the source distributions since June 1996.)
 </p>
-                                                                        
+
 <p>
  The next most visited section is the <a href="/docs.php">documentation</a>.
  The documentation is translated into twelve different languages, and is
@@ -94,11 +94,11 @@ site_header("A Tourist's Guide", array("current" => "help"));
 </h2>
 
 <p class="content-box">
- PECL is a repository for PHP Extensions, providing a directory of all known 
- extensions and hosting facilities for downloading and development of PHP 
+ PECL is a repository for PHP Extensions, providing a directory of all known
+ extensions and hosting facilities for downloading and development of PHP
  extensions. <br>
 
- The packaging and distribution system used by PECL is shared with 
+ The packaging and distribution system used by PECL is shared with
  its sister, PEAR.
 </p>
 
@@ -128,9 +128,9 @@ site_header("A Tourist's Guide", array("current" => "help"));
 <h2 id="docs" class="content-header"><a href="http://docs.php.net/">docs.php.net</a>: Documentation dev server</h2>
 
 <p class="content-box">
- The documentation developmental server is a PHP mirror that contains upcoming 
- releases of the PHP documentation before it's pushed out to the mirrors. 
- Documentation changes, such as layout, is tested here (with feedback requested) 
+ The documentation developmental server is a PHP mirror that contains upcoming
+ releases of the PHP documentation before it's pushed out to the mirrors.
+ Documentation changes, such as layout, is tested here (with feedback requested)
  before being made official. Documentation is built here four times a day.
 </p>
 
@@ -204,7 +204,7 @@ XXX: The following sites are offline and should be re-added once they are back o
 </p>
 </div>
 -->
-                                                                       
+
 <h2 id="gtk" class="content-header"><a href="http://gtk.php.net/">gtk.php.net</a>: PHP-GTK</h2>
 
 <p class="content-box">
@@ -217,10 +217,10 @@ XXX: The following sites are offline and should be re-added once they are back o
 <h2 id="gcov" class="content-header"><a href="http://gcov.php.net/">gcov.php.net</a>: Test and Code Coverage analysis</h2>
 
 <p class="content-box">
- This site is dedicated to automatic PHP code coverage testing. On a regular 
- basis current Git snapshots are being build and tested on this machine. After 
- all tests are done the results are visualized along with a code coverage 
- analysis.  
+ This site is dedicated to automatic PHP code coverage testing. On a regular
+ basis current Git snapshots are being build and tested on this machine. After
+ all tests are done the results are visualized along with a code coverage
+ analysis.
 </p>
 
 <h2 id="wiki" class="content-header"><a href="https://wiki.php.net/">wiki.php.net</a>: The PHP Wiki</h2>
@@ -272,4 +272,3 @@ site_footer(
         'sidebar' => $SIDEBAR
     )
 );
-

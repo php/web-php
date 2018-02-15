@@ -15,7 +15,7 @@ PHP                                                                        NEWS
   . highlight.bg ini option. (Kalle)
   . Session bug compatibility mode (session.bug_compat42 and
     session.bug_compat_warn ini options). (Kalle)
-  . session_is_registered(), session_register() and session_unregister() 
+  . session_is_registered(), session_register() and session_unregister()
     functions. (Kalle)
   . y2k_compliance ini option. (Kalle)
 
@@ -25,7 +25,7 @@ PHP                                                                        NEWS
 - Changed $_SERVER['REQUEST_TIME'] to include microsecond precision. (Ilia)
 - Changed default value of "default_charset" php.ini option from ISO-8859-1 to
   UTF-8. (Rasmus)
-- Changed array_combine() to return empty array instead of FALSE when both 
+- Changed array_combine() to return empty array instead of FALSE when both
   parameter arrays are empty. FR #34857. (joel.perras@gmail.com)
 - Changed third parameter of preg_match_all() to optional. FR #53238. (Adam)
 - Changed silent casting of null/''/false into an Object when adding
@@ -59,7 +59,7 @@ PHP                                                                        NEWS
     handler. (Stas)
 
 - Improved Zend Engine memory usage: (Dmitry)
-  . Replaced zend_function.pass_rest_by_reference by 
+  . Replaced zend_function.pass_rest_by_reference by
     ZEND_ACC_PASS_REST_BY_REFERENCE in zend_function.fn_flags.
   . Replaced zend_function.return_reference by ZEND_ACC_RETURN_REFERENCE
     in zend_function.fn_flags.
@@ -68,7 +68,7 @@ PHP                                                                        NEWS
     meaning) is represented by zend_internal_function_info structure.
   . Moved zend_op_array.size, size_var, size_literal, current_brk_cont,
     backpatch_count into CG(context) as they are used only during compilation.
-  . Moved zend_op_array.start_op into EG(start_op) as it's used only for 
+  . Moved zend_op_array.start_op into EG(start_op) as it's used only for
     'interactive' execution of single top-level op-array.
   . Replaced zend_op_array.done_pass_two by ZEND_ACC_DONE_PASS_TWO in
     zend_op_array.fn_flags.
@@ -77,7 +77,7 @@ PHP                                                                        NEWS
     in zend_class_entry.ce_flags.
   . Reduced the size of zend_class_entry by sharing the same memory space
     by different information for internal and user classes.
-    See zend_class_entry.info union. 
+    See zend_class_entry.info union.
   . Reduced size of temp_variable.
 
 - Changed the structure of op_array.opcodes. The constant values are moved from
@@ -161,7 +161,7 @@ PHP                                                                        NEWS
   . Added JsonSerializable interface. (Sara)
   . Added JSON_BIGINT_AS_STRING, extended json_decode() sig with $options.
     (Sara)
-  . Added support for JSON_NUMERIC_CHECK option in json_encode() that converts 
+  . Added support for JSON_NUMERIC_CHECK option in json_encode() that converts
     numeric strings to integers. (Ilia)
   . Added new json_encode() option JSON_PRETTY_PRINT. FR #44331. (Adam)
   . Added new json_encode() option JSON_UNESCAPED_SLASHES. FR #49366. (Adam)
@@ -173,7 +173,7 @@ PHP                                                                        NEWS
 - Improved MySQL extensions:
   . MySQL: Deprecated mysql_list_dbs(). FR #50667. (Andrey)
   . mysqlnd: Added named pipes support. FR #48082. (Andrey)
-  . MySQLi: Added iterator support in MySQLi. mysqli_result implements 
+  . MySQLi: Added iterator support in MySQLi. mysqli_result implements
     Traversable. (Andrey, Johannes)
   . PDO_mysql: Removed support for linking with MySQL client libraries older
     than 4.1. (Johannes)
@@ -212,7 +212,7 @@ PHP                                                                        NEWS
   . Re-implemented non-file related functionality. (Mike)
 
 - Improved SNMP extension (Boris Lytochkin):
-  . Added OO API. FR #53594 (php-snmp rewrite). 
+  . Added OO API. FR #53594 (php-snmp rewrite).
   . Sanitized return values of existing functions. Now it returns FALSE on
     failure.
   . Allow ~infinite OIDs in GET/GETNEXT/SET queries. Autochunk them to max_oids

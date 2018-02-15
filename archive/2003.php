@@ -3,7 +3,7 @@
 $_SERVER['BASE_PAGE'] = 'archive/2003.php';
 include_once $_SERVER['DOCUMENT_ROOT'] . '/include/prepend.inc';
 news_archive_sidebar();
-site_header("News Archive - 2003", array("cache" => true));
+site_header('News Archive - 2003', array('cache' => true));
 ?>
 
 <h1>News Archive - 2003</h1>
@@ -14,7 +14,7 @@ site_header("News Archive - 2003", array("cache" => true));
 
 <hr>
 
-<?php news_image("http://vancouver.php.net/", "vancouver_conference_2004.gif", "Vancouver PHP Conference 2004"); ?>
+<?php news_image('http://vancouver.php.net/', 'vancouver_conference_2004.gif', 'Vancouver PHP Conference 2004'); ?>
 
 <h1>Vancouver PHP Conference 2004</h1>
 <p>
@@ -46,7 +46,7 @@ site_header("News Archive - 2003", array("cache" => true));
 
 <hr>
 
-<?php news_image("http://www.php-mag.net/", "php-mag.gif", "International PHP Magazine"); ?>
+<?php news_image('http://www.php-mag.net/', 'php-mag.gif', 'International PHP Magazine'); ?>
 
 <h1>PHP Magazine in PDF Format</h1>
 <p>
@@ -62,7 +62,7 @@ site_header("News Archive - 2003", array("cache" => true));
 
 <hr>
 
-<?php news_image("http://conf.phpquebec.org/index.html", "conference_php_quebec.gif", "Conference PHP Quebec"); ?>
+<?php news_image('http://conf.phpquebec.org/index.html', 'conference_php_quebec.gif', 'Conference PHP Quebec'); ?>
 
 <h1>First PHP dedicated DVD released!</h1>
 <p>
@@ -82,7 +82,7 @@ site_header("News Archive - 2003", array("cache" => true));
 
 <hr>
 
-<?php news_image("http://mysql.com/events/uc2004", "mysqluc2004.png", "MySQL User Conference 2004"); ?>
+<?php news_image('http://mysql.com/events/uc2004', 'mysqluc2004.png', 'MySQL User Conference 2004'); ?>
 
 <h1>Call for Participation: MySQL User Conference 2004</h1>
 <p>
@@ -103,8 +103,8 @@ site_header("News Archive - 2003", array("cache" => true));
 
 <hr>
 
-<?php news_image("http://www.phpconf.hu/", "hu_conf.gif", "Second Hungarian PHP conference"); ?>
-<?php news_image("http://webdevmagazine.co.uk/conf/index_n.php", "bulgaria_2004.gif", "First Bulgarian PHP conference"); ?>
+<?php news_image('http://www.phpconf.hu/', 'hu_conf.gif', 'Second Hungarian PHP conference'); ?>
+<?php news_image('http://webdevmagazine.co.uk/conf/index_n.php', 'bulgaria_2004.gif', 'First Bulgarian PHP conference'); ?>
 
 <h1>First Bulgarian and Second Hungarian PHP Conference</h1>
 <p>
@@ -122,23 +122,23 @@ site_header("News Archive - 2003", array("cache" => true));
  open for the conference, speakers are welcome to hold sessions and workshops ranging
  from PHP internals to web standard compliance. The event is exclusively in Hungarian.
 </p>
- 
+
 <hr>
 
-<?php news_image("http://conf.phpquebec.org/index.html", "conference_php_quebec.gif", "Conference PHP Quebec"); ?>
+<?php news_image('http://conf.phpquebec.org/index.html', 'conference_php_quebec.gif', 'Conference PHP Quebec'); ?>
 
 <h1>Call for Speakers: PHP Qu&eacute;bec 2004</h1>
 <p>
  <span class="newsdate">[11-Nov-2003]</span>
- The PHP Qu&eacute;bec is pleased to announce the PHP Qu&eacute;bec 
- conference 2004, which will be held on March, 25th&amp;26th 2004. 
- We are looking for the best speakers, willing to 
- share their experience and skills with the educated crowd of PHP 
- programmers in eastern Canada and in the USA. PHP Qu&eacute;bec 
+ The PHP Qu&eacute;bec is pleased to announce the PHP Qu&eacute;bec
+ conference 2004, which will be held on March, 25th&amp;26th 2004.
+ We are looking for the best speakers, willing to
+ share their experience and skills with the educated crowd of PHP
+ programmers in eastern Canada and in the USA. PHP Qu&eacute;bec
  2004 features 3 distinct tracks:
  <ul>
   <li>
-   Professional PHP, dealing with php usage in professional 
+   Professional PHP, dealing with php usage in professional
    environment and unusual businesses.
   </li>
   <li>
@@ -149,9 +149,9 @@ site_header("News Archive - 2003", array("cache" => true));
   </li>
  </ul>
  <a href="http://conf.phpquebec.com/">Sessions</a> will be held in
- <a href="http://conf.phpquebec.com/main.php/fr/accueil/main">French</a> or 
+ <a href="http://conf.phpquebec.com/main.php/fr/accueil/main">French</a> or
  <a href="http://conf.phpquebec.com/main.php/en/accueil/main">English</a>.
- For more information, read the <a 
+ For more information, read the <a
  href="http://conf.phpquebec.org/main.php/en/conf2004/conferencier">PHP Qu&eacute;bec</a>.
 </p>
 
@@ -168,7 +168,7 @@ site_header("News Archive - 2003", array("cache" => true));
  with the up and down cursor keys. We welcome feedback on this feature at
  <a href="/contact.php">the webmasters email address</a>, but
  please submit any bugs you find <a href="http://bugs.php.net/">in the
- bug system</a> classifying them as a "PHP.net website problem" and providing 
+ bug system</a> classifying them as a "PHP.net website problem" and providing
  as much information as possible (OS, Browser version, Javascript errors, etc..).
 </p>
 
@@ -179,8 +179,8 @@ site_header("News Archive - 2003", array("cache" => true));
  <span class="newsdate">[03-Nov-2003]</span>
  The PHP developers are proud to announce the immediate availability of
  <a href="release_4_3_4.php">PHP 4.3.4</a>. This release contains a fair
- number of bug fixes and we recommend that all users of PHP upgrade to 
- this version. Full list of fixes can be found in the 
+ number of bug fixes and we recommend that all users of PHP upgrade to
+ this version. Full list of fixes can be found in the
  <a href="ChangeLog-4.php#4.3.4">ChangeLog</a>.
 </p>
 
@@ -225,7 +225,7 @@ site_header("News Archive - 2003", array("cache" => true));
 
 <hr>
 
-<?php news_image("http://www.afup.org/forumphp/", "afup2003.png", "Forum PHP"); ?>
+<?php news_image('http://www.afup.org/forumphp/', 'afup2003.png', 'Forum PHP'); ?>
 
 <h1>Forum PHP in Paris, November 26 & 27th</h1>
 <p>
@@ -241,7 +241,7 @@ site_header("News Archive - 2003", array("cache" => true));
 
 <hr>
 
-<?php news_image("http://www.directionphp.biz/", "directionphp.png", "Direction|PHP"); ?>
+<?php news_image('http://www.directionphp.biz/', 'directionphp.png', 'Direction|PHP'); ?>
 
 <h1>Monthly PHP Magazine in French launched!</h1>
 <p>
@@ -252,13 +252,13 @@ site_header("News Archive - 2003", array("cache" => true));
  articles from PHP|Architect.
 </p>
 <p>
- For more information, read the <a 
+ For more information, read the <a
  href="http://www.directionphp.biz/index.php">Direction|PHP website</a> (in French).
 </p>
 
 <hr>
 
-<?php news_image("http://www.apachecon.com/", "apachecon2003.jpg", "ApacheCon"); ?>
+<?php news_image('http://www.apachecon.com/', 'apachecon2003.jpg', 'ApacheCon'); ?>
 
 <h1>ApacheCon 2003, the Global Hub for All Things Apache</h1>
 <p>
@@ -275,7 +275,7 @@ site_header("News Archive - 2003", array("cache" => true));
 
 <hr>
 
-<?php news_image("http://www.phpcruise.com/", "phpcruise.png", "php|cruise"); ?>
+<?php news_image('http://www.phpcruise.com/', 'phpcruise.png', 'php|cruise'); ?>
 
 <h1>php|cruise: The World's First Ever PHP-only Cruise</h1>
 <p>
@@ -284,7 +284,7 @@ site_header("News Archive - 2003", array("cache" => true));
   href="http://www.phparch.com/cruise/">php|cruise</a>, a five-day cruise to the
   Bahamas Islands featuring a lot of fun and over thirty different
   sessions dedicated to PHP from well known experts like Wez Furlong, Alan
-  Knowles and John Coggeshall. 
+  Knowles and John Coggeshall.
 </p>
 <p>
  The cruise will take place March 1st to 5th, 2004. The organizers have
@@ -294,7 +294,7 @@ site_header("News Archive - 2003", array("cache" => true));
 
 <hr>
 
-<?php news_image("http://www.zend.com/zend/php_survey_results.php", "zendtech_logo.gif", "Zend Technologies"); ?>
+<?php news_image('http://www.zend.com/zend/php_survey_results.php', 'zendtech_logo.gif', 'Zend Technologies'); ?>
 
 <h1>PHP Usage Survey Results</h1>
 <p>
@@ -306,7 +306,7 @@ site_header("News Archive - 2003", array("cache" => true));
 
 <hr>
 
-<?php news_image("http://weblabor.hu/php-doc-chm", "chmhelp.gif", "CHM"); ?>
+<?php news_image('http://weblabor.hu/php-doc-chm', 'chmhelp.gif', 'CHM'); ?>
 
 <h1>PHP Manual CHM Edition - 12th build</h1>
 <p>
@@ -322,7 +322,7 @@ site_header("News Archive - 2003", array("cache" => true));
 
 <hr>
 
-<?php news_image("http://www.phpconference.de/2003/index_en.php", "international_conference_2003.gif", "International PHP Conference 2003"); ?>
+<?php news_image('http://www.phpconference.de/2003/index_en.php', 'international_conference_2003.gif', 'International PHP Conference 2003'); ?>
 
 <h1>International PHP Conference 2003 program online</h1>
 <p>
@@ -342,7 +342,7 @@ site_header("News Archive - 2003", array("cache" => true));
 
 <hr>
 
-<?php news_image("http://servercentral.net", "server_central.gif", "Server Central"); ?>
+<?php news_image('http://servercentral.net', 'server_central.gif', 'Server Central'); ?>
 
 <h1>Server Central Donates Server</h1>
 <p>
@@ -361,22 +361,22 @@ site_header("News Archive - 2003", array("cache" => true));
  <span class="newsdate">[27-Aug-2003]</span>
  Today sees an international day of protest against the move by the EU to
  make obtaining a patent easier within Europe. Such patents may cause Open
- Source software such as PHP to infringe on existing licenses and new ones, 
+ Source software such as PHP to infringe on existing licenses and new ones,
  meaning we would no longer be safe to distribute PHP within Europe. Contact
  your EU Representative to get this cruicial vote blocked. Find out more at
- the <a href="http://swpat.ffii.org/">campaign website</a> 
+ the <a href="http://swpat.ffii.org/">campaign website</a>
 </p>
- 
+
 <hr>
 
-<?php news_image("http://www.php-con.com", "phpcon_2003.gif", "php{con west 2003"); ?>  
+<?php news_image('http://www.php-con.com', 'phpcon_2003.gif', 'php{con west 2003'); ?>
 
 <h1>php{con west is announced</h1>
 <p>
  <span class="newsdate">[26-Aug-2003]</span>
  php{con returns to the San Francisco Bay Area with new sessions, PHP gurus
  and a whole new day of PHP-intensive learning. Their program features a full
- day of tutorials, three technical session tracks over two days, an all day 
+ day of tutorials, three technical session tracks over two days, an all day
  coding marathon, Code Sprint, social events, works in progress, and
  presentations from PHP luminaries. Early Bird discounts end on September
  26th. See the full program and register online at
@@ -397,7 +397,7 @@ site_header("News Archive - 2003", array("cache" => true));
 
 <hr>
 
-<?php news_image("http://www.ActiveState.com/Corporate/ActiveAwards/", "activestate_logo.gif", "ActiveState"); ?>
+<?php news_image('http://www.ActiveState.com/Corporate/ActiveAwards/', 'activestate_logo.gif', 'ActiveState'); ?>
 
 <h1>Active Awards 2003 Winners</h1>
 
@@ -451,7 +451,7 @@ site_header("News Archive - 2003", array("cache" => true));
 
 <hr>
 
-<?php news_image("http://www.php-mag.net/", "php-mag.gif", "PHP Magazine"); ?> 
+<?php news_image('http://www.php-mag.net/', 'php-mag.gif', 'PHP Magazine'); ?>
 
 <h1>PHP Magazine web site now with daily news</h1>
 
@@ -480,7 +480,7 @@ site_header("News Archive - 2003", array("cache" => true));
 
 <hr>
 
-<?php news_image("http://www.phparch.com/", "phpa_logo_small.gif", "php|architect"); ?> 
+<?php news_image('http://www.phparch.com/', 'phpa_logo_small.gif', 'php|architect'); ?>
 
 <h1>php|architect now in print</h1>
 
@@ -488,14 +488,14 @@ site_header("News Archive - 2003", array("cache" => true));
  <span class="newsdate">[17-Jul-2003]</span>
  The publishers of <a href="http://www.phparch.com/">php|architect</a>, a
  monthly magazine dedicated exclusively to the world of PHP, have announced the
- availability of a <a href="http://www.phparch.com/print/">print edition</a> of 
+ availability of a <a href="http://www.phparch.com/print/">print edition</a> of
  their publication. Subscriptions are now available at a special introductory
  price for readers worldwide.
 </p>
 
 <hr>
 
-<?php news_image("http://www.linuxtag.org/2003/en/index.html", "linuxtag2003.gif", "LinuxTag"); ?>
+<?php news_image('http://www.linuxtag.org/2003/en/index.html', 'linuxtag2003.gif', 'LinuxTag'); ?>
 
 <h1>PHP @ LinuxTag</h1>
 <p>
@@ -524,7 +524,7 @@ site_header("News Archive - 2003", array("cache" => true));
  <span class="newsdate">[29-Jun-2003]</span>
  The PHP development community is proud to announce the release of PHP 5
  Beta 1. Both source packages, and a Windows build are available in the
- <a href="/downloads.php">Downloads Section</a>. A list of changes 
+ <a href="/downloads.php">Downloads Section</a>. A list of changes
  can be found in the <a href="/ChangeLog-5.php#5.0.0b1">ChangeLog</a>.
 </p>
 <p>
@@ -532,19 +532,19 @@ site_header("News Archive - 2003", array("cache" => true));
 </p>
 <ul>
  <li>
-  PHP 5 features the Zend Engine 2.  For a list of Zend Engine 2 changes, please visit 
+  PHP 5 features the Zend Engine 2.  For a list of Zend Engine 2 changes, please visit
   <a href="/zend-engine-2.php">this</a> webpage.
  </li>
  <li>
-  XML support has been completely redone in PHP 5, all extensions are now focused around the 
+  XML support has been completely redone in PHP 5, all extensions are now focused around the
   excellent libxml2 library (<a href="http://www.xmlsoft.org/">http://www.xmlsoft.org/</a>).
  </li>
  <li>
-  SQLite has been bundled with PHP. For more information on SQLite, please visit their 
+  SQLite has been bundled with PHP. For more information on SQLite, please visit their
   <a href="http://www.hwaci.com/sw/sqlite/">website</a>.
  </li>
  <li>
-  Streams have been greatly improved, including the ability to access low-level socket 
+  Streams have been greatly improved, including the ability to access low-level socket
   operations on streams.
  </li>
 </ul>
@@ -552,14 +552,14 @@ site_header("News Archive - 2003", array("cache" => true));
  <strong>Note</strong>: <em>This is a beta version. It should not be used in
  production or even semi-production web sites.</em> There are known bugs in it,
  and in addition, some of the features may change (based on feedback). We
- encourage you to download and play with it (and <a href="http://bugs.php.net/">report 
+ encourage you to download and play with it (and <a href="http://bugs.php.net/">report
  bugs</a> if you find any!), but please do not replace your production
  installations of PHP 4 at this time.
 </p>
 
 <hr>
 
-<?php news_image("http://www.zend.com/survey/php_net.php", "zendtech_logo.gif", "Zend Technologies"); ?>
+<?php news_image('http://www.zend.com/survey/php_net.php', 'zendtech_logo.gif', 'Zend Technologies'); ?>
 
 <h1>PHP Usage Survey</h1>
 <p>
@@ -591,7 +591,7 @@ site_header("News Archive - 2003", array("cache" => true));
  In our ongoing battle to fight load and keep serving you content, whenever you
  perform a search on www.php.net, you will be redirected onto a nearby mirror
  (determined using the <a href="http://www.directi.com/?site=ip-to-country">Directi
- Ip-to-Country Database</a>). 
+ Ip-to-Country Database</a>).
  You may experience a few quirks in the search until your mirrors have synced an up-to-date
  version of the site.
 </p>
@@ -647,7 +647,7 @@ site_header("News Archive - 2003", array("cache" => true));
 </p>
 
 <p>
- For more information, visit the <a 
+ For more information, visit the <a
  href="http://www.phparch.com/grant/">program's website</a>.
 </p>
 
@@ -675,7 +675,7 @@ site_header("News Archive - 2003", array("cache" => true));
 
 <hr>
 
-<?php news_image("http://phpconf.hu/", "hu_conf.gif", "PHPConf.hu"); ?>
+<?php news_image('http://phpconf.hu/', 'hu_conf.gif', 'PHPConf.hu'); ?>
 
 <h1>First Hungarian PHP Conference</h1>
 
@@ -710,7 +710,7 @@ site_header("News Archive - 2003", array("cache" => true));
 
 <hr>
 
-<?php news_image("http://www.php-con.com/return.php?i=ph2", "phpcon_logo.png", "PHPCon East 2003"); ?>
+<?php news_image('http://www.php-con.com/return.php?i=ph2', 'phpcon_logo.png', 'PHPCon East 2003'); ?>
 
 <h1>PHPCon East 2003 - (April 23-25, 2003)</h1>
 <p>
@@ -734,32 +734,32 @@ site_header("News Archive - 2003", array("cache" => true));
 
 <hr>
 
-<?php news_image("http://phpconf.phpquebec.org/index.php", "conference_php_quebec.gif", "Conference PHP Quebec"); ?>
+<?php news_image('http://phpconf.phpquebec.org/index.php', 'conference_php_quebec.gif', 'Conference PHP Quebec'); ?>
 
 <h1>Conf&eacute;rence PHP Qu&eacute;bec 2003 - (Montr&eacute;al, March 20&amp;21rst, 2003)</h1>
 <p>
  <span class="newsdate">[28-Jan-2003]</span>
  The PHP Qu&eacute;bec association announces the <a
  href="http://phpconf.phpquebec.com/">Conf&eacute;rence PHP Qu&eacute;bec 2003</a>.
- The conference will take place in the &Eacute;cole Polytechnique de Montr&eacute;al, 
+ The conference will take place in the &Eacute;cole Polytechnique de Montr&eacute;al,
  Qu&eacute;bec, Canada.
 </p>
 
 <p>
- The Conf&eacute;rence PHP Qu&eacute;bec features two days of conferences, with 
- outstanding customer cases from Canada, and cutting edge technical 
+ The Conf&eacute;rence PHP Qu&eacute;bec features two days of conferences, with
+ outstanding customer cases from Canada, and cutting edge technical
  sessions, hosted by international experts. An exhibitor room will
  showroom professional solutions.
 </p>
 
 <p>
- Learn more about those exciting days at 
+ Learn more about those exciting days at
  <a href="http://phpconf.phpquebec.org/index.php">phpconf.phpquebec.com</a>.
 </p>
 
 <hr>
 
-<?php news_image("http://www.phpconference.com/", "international_conference_2003_spring.gif", "Int'l PHP Conference"); ?>
+<?php news_image('http://www.phpconference.com/', 'international_conference_2003_spring.gif', "Int'l PHP Conference"); ?>
 
 <h1>International PHP Conference 2003 - Spring Edition (Amsterdam, May 8-9)</h1>
 <p>

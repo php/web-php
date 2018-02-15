@@ -4,11 +4,11 @@ $_SERVER['BASE_PAGE'] = 'submit-event.php';
 include_once $_SERVER['DOCUMENT_ROOT'] . '/include/prepend.inc';
 include_once $_SERVER['DOCUMENT_ROOT'] . '/include/posttohost.inc';
 include_once $_SERVER['DOCUMENT_ROOT'] . '/include/email-validation.inc';
-site_header("Submit an Event", array("current" => "community"));
+site_header('Submit an Event', array('current' => 'community'));
 
 // No errors, processing depends on POST data
 $errors = array();
-$process = (boolean) count($_POST);
+$process = (bool) count($_POST);
 
 // Avoid E_NOTICE errors on incoming vars if not set
 $vars = array(
@@ -21,12 +21,12 @@ foreach ($vars as $varname) {
     }
 }
 $vars = array(
-	'type', 'country', 'category', 'email', 'url', 'ldesc', 'sdesc'
+    'type', 'country', 'category', 'email', 'url', 'ldesc', 'sdesc'
 );
 foreach($vars as $varname) {
-	if (!isset($_POST[$varname])) {
-		$_POST[$varname] = "";
-	}
+    if (!isset($_POST[$varname])) {
+        $_POST[$varname] = '';
+    }
 }
 
 // We need to process some form data
@@ -49,20 +49,20 @@ if ($process) {
      * Add, edit, or remove blacklisted users or domains
      * in include/email-validation.inc :: blacklisted().
      */
-    $uemail     = isset($_POST['email']) ? strtolower($_POST['email']) : '';
+    $uemail = isset($_POST['email']) ? strtolower($_POST['email']) : '';
     if (blacklisted($uemail)) {
         $errors[] = 'An expected error has been encountered.  Please don\'t try again later.';
     }
-  
+
     $_POST['sdesc'] = trim($_POST['sdesc']);
     if (!$_POST['sdesc']) {
-        $errors[] = "You must supply a short description of the event.";
+        $errors[] = 'You must supply a short description of the event.';
     }
 
     $_POST['ldesc'] = trim(strip_tags($_POST['ldesc'], '<a><i><b><br><p>'));
-    $_POST['ldesc'] = preg_replace("/(style|on\\w+?)\s*=[^>]*/i", "", $_POST['ldesc']);
+    $_POST['ldesc'] = preg_replace("/(style|on\\w+?)\s*=[^>]*/i", '', $_POST['ldesc']);
     if (!$_POST['ldesc']) {
-        $errors[] = "You must supply a long description of the event.";
+        $errors[] = 'You must supply a long description of the event.';
     }
 
     $valid_schemes = array('http','https','ftp');
@@ -72,10 +72,10 @@ if ($process) {
     $pu['host'] = isset($pu['host']) ? trim($pu['host']) : '';
 
     if (!$_POST['url']) {
-        $errors[] = "You must supply a URL with more information about the event.";
+        $errors[] = 'You must supply a URL with more information about the event.';
     }
     elseif (empty($pu['host']) || !in_array($pu['scheme'], $valid_schemes)) {
-        $errors[] = "The URL you supplied was invalid.";
+        $errors[] = 'The URL you supplied was invalid.';
     }
 
     if (!$_POST['country']) {
@@ -87,41 +87,41 @@ if ($process) {
     }
 
     if (!checkdate($_POST['smonth'], $_POST['sday'], $_POST['syear'])) {
-      $errors[] = "You must specify a valid start date.";
+      $errors[] = 'You must specify a valid start date.';
     }
     else {
         $sdate = mktime(0, 0, 1, $_POST['smonth'], $_POST['sday'], $_POST['syear']);
         if ($sdate < time()) {
-            $errors[] = "You must specify a start date that is in the future.";
+            $errors[] = 'You must specify a start date that is in the future.';
         }
     }
 
     if ($_POST['type'] == 'multi' && !checkdate($_POST['emonth'], $_POST['eday'], $_POST['eyear'])) {
-        $errors[] = "You must specify a valid end date for a multi-day event.";
+        $errors[] = 'You must specify a valid end date for a multi-day event.';
     }
     elseif ($_POST['type'] == 'multi' && checkdate($_POST['smonth'], $_POST['sday'], $_POST['syear'])) {
         $sdate = mktime(0, 0, 1, $_POST['smonth'], $_POST['sday'], $_POST['syear']);
         $edate = mktime(0, 0, 1, $_POST['emonth'], $_POST['eday'], $_POST['eyear']);
         if ($edate < time()) {
-            $errors[] = "You must specify an end date that is in the future.";
+            $errors[] = 'You must specify an end date that is in the future.';
         }
         elseif ($edate < $sdate) {
-            $errors[] = "You must specify an end date that is after the start date.";
+            $errors[] = 'You must specify an end date that is after the start date.';
         }
     }
 
     if ($_POST['type'] == 'recur' && !($_POST['recur'] && $_POST['recur_day'])) {
-        $errors[] = "You must specify a valid day of the month for a recurring event.";
+        $errors[] = 'You must specify a valid day of the month for a recurring event.';
     }
 
     // Spam question
-    if ($_POST["sane"] != 3) {
+    if ($_POST['sane'] != 3) {
         $errors[] = "It's OK. I'm not real either";
     }
 
     if (isset($_POST['action']) && $_POST['action'] === 'Submit' && empty($errors)) {
         // Submit to master.php.net
-        $result = posttohost("http://master.php.net/entry/event.php", $_POST);
+        $result = posttohost('http://master.php.net/entry/event.php', $_POST);
         if ($result) {
             $errors[] = "There was an error processing your submission: $result";
         }
@@ -189,7 +189,7 @@ if ($process && count($errors) === 0) {
   <td>
    <select name="smonth"><option></option><?php display_options($months, $_POST['smonth'])?></select>
    <input type="text" name="sday" size="2" maxlength="2" value="<?php echo htmlentities($_POST['sday'], ENT_QUOTES | ENT_IGNORE, 'UTF-8')?>">
-   <input type="text" name="syear" size="4" maxlength="4" value="<?php echo $_POST['syear'] ? htmlentities($_POST['syear'], ENT_QUOTES | ENT_IGNORE, 'UTF-8') : date("Y")?>">
+   <input type="text" name="syear" size="4" maxlength="4" value="<?php echo $_POST['syear'] ? htmlentities($_POST['syear'], ENT_QUOTES | ENT_IGNORE, 'UTF-8') : date('Y')?>">
    <input type="radio" id="single" name="type" value="single"<?php if ($_POST['type'] == 'single' || !$_POST['type']) echo ' checked="checked"';?>>
    <label for="single">One day (no end-date required)</label>
   </td>
@@ -199,7 +199,7 @@ if ($process && count($errors) === 0) {
   <td>
    <select name="emonth"><option></option><?php display_options($months, $_POST['emonth'])?></select>
    <input type="text" name="eday" size="2" maxlength="2" value="<?php echo htmlentities($_POST['eday'], ENT_QUOTES | ENT_IGNORE, 'UTF-8')?>">
-   <input type="text" name="eyear" size="4" maxlength="4" value="<?php echo $_POST['eyear'] ? htmlentities($_POST['eyear'], ENT_QUOTES | ENT_IGNORE, 'UTF-8') : date("Y")?>">
+   <input type="text" name="eyear" size="4" maxlength="4" value="<?php echo $_POST['eyear'] ? htmlentities($_POST['eyear'], ENT_QUOTES | ENT_IGNORE, 'UTF-8') : date('Y')?>">
    <input type="radio" id="multi" name="type" value="multi"<?php if ($_POST['type'] == 'multi') echo ' checked="checked"';?>>
    <label for="multi">Multi-day event</label>
   </td>
@@ -235,7 +235,7 @@ if ($process && count($errors) === 0) {
   <td>
    <select name="category" class="max">
 <?php
-        $cat = array("- Select a category -", "User Group Event", 3 => "Training"); // 2 = conference.. which should be on php.net/conferences instead
+        $cat = array('- Select a category -', 'User Group Event', 3 => 'Training'); // 2 = conference.. which should be on php.net/conferences instead
         display_options($cat, $_POST['category']);
 ?>
    </select>
@@ -262,7 +262,7 @@ if ($process && count($errors) === 0) {
  </tr>
  <tr>
   <th class="subr">Are you real?</th>
-  <td><select name="sane"><?php display_options(array("I, Robot", "I used to be", "WTF?", "Yes", "No, but I'd still want to submit this"), "2"); ?></select></td>
+  <td><select name="sane"><?php display_options(array('I, Robot', 'I used to be', 'WTF?', 'Yes', "No, but I'd still want to submit this"), '2'); ?></select></td>
  </tr>
 </table>
 </form>
@@ -279,5 +279,5 @@ function display_options($options, $current)
     }
 }
 
-/* vim: set et ts=4 sw=4 ft=php: : */
+// vim: set et ts=4 sw=4 ft=php: :
 ?>

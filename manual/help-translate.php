@@ -4,7 +4,7 @@
 $_SERVER['BASE_PAGE'] = 'manual/help-translate.php';
 include_once $_SERVER['DOCUMENT_ROOT'] . '/include/prepend.inc';
 include_once $_SERVER['DOCUMENT_ROOT'] . '/include/shared-manual.inc';
-site_header("Help translate the PHP Manual");
+site_header('Help translate the PHP Manual');
 ?>
 
 <h3>Looking for a translation?</h3>
@@ -31,7 +31,7 @@ $archived = array('da', 'kr', 'pl', 'tw');
 foreach ($INACTIVE_ONLINE_LANGUAGES as $cc => $lang) {
     $link = 'no archive';
     if (in_array($cc, $archived)) {
-        $link = '<a href="http://docs.php.net/manual/'. $cc .'">archive</a>';
+        $link = '<a href="http://docs.php.net/manual/' . $cc . '">archive</a>';
     }
     echo '<li>', $lang, ': (', $link, ')</li>';
 }

@@ -2,15 +2,15 @@
 // $Id$
 $_SERVER['BASE_PAGE'] = 'releases/4_3_10.php';
 include_once $_SERVER['DOCUMENT_ROOT'] . '/include/prepend.inc';
-site_header("PHP 4.3.10 Release Announcement");
+site_header('PHP 4.3.10 Release Announcement');
 ?>
 
 <h1>PHP 4.3.10 Release Announcement</h1>
-<p>[ <a href="/releases/4_3_10_fr.php">Version Fran&ccedil;aise</a> ]</p> 
+<p>[ <a href="/releases/4_3_10_fr.php">Version Fran&ccedil;aise</a> ]</p>
 <p>
-PHP Development Team would like to announce the immediate release of <a href="/downloads.php">PHP 4.3.10</a>. This is a 
-maintenance release that in addition to over 30 non-critical bug fixes addresses several very 
-serious security issues. 
+PHP Development Team would like to announce the immediate release of <a href="/downloads.php">PHP 4.3.10</a>. This is a
+maintenance release that in addition to over 30 non-critical bug fixes addresses several very
+serious security issues.
 </p>
 <p>
 These include the following:
@@ -25,7 +25,7 @@ These include the following:
 <a href="http://www.cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2004-1065">CAN-2004-1065</a> - exif_read_data() overflow on long sectionname.<br>
 magic_quotes_gpc could lead to one level directory traversal with file uploads.
 </p>
-<p>All Users of PHP are strongly encouraged to upgrade to this release as soon as possible.</p> 
+<p>All Users of PHP are strongly encouraged to upgrade to this release as soon as possible.</p>
 
 <h2>Bugfix release</h2>
 

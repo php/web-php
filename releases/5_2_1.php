@@ -2,12 +2,12 @@
 // $Id$
 $_SERVER['BASE_PAGE'] = 'releases/5_2_1.php';
 include_once $_SERVER['DOCUMENT_ROOT'] . '/include/prepend.inc';
-site_header("PHP 5.2.1 Release Announcement");
+site_header('PHP 5.2.1 Release Announcement');
 ?>
 
 <h1>PHP 5.2.1 Release Announcement</h1>
 <p>
-The PHP development team would like to announce the immediate availability of PHP 5.2.1. 
+The PHP development team would like to announce the immediate availability of PHP 5.2.1.
 This release is a major stability and security enhancement of the 5.X branch, and all
 users are strongly encouraged to upgrade to it as soon as possible.
 </p>
@@ -38,9 +38,9 @@ users are strongly encouraged to upgrade to it as soon as possible.
 </ul>
 
 <p>
-The majority of the security vulnerabilities discovered and resolved can in most cases be only abused by local users and cannot be triggered 
-remotely. However, some of the above issues can be triggered remotely in certain situations, or exploited by malicious local users on shared hosting setups 
-utilizing PHP as an Apache module. Therefore, we strongly advise all users of PHP, regardless of the version to upgrade to 5.2.1 release 
+The majority of the security vulnerabilities discovered and resolved can in most cases be only abused by local users and cannot be triggered
+remotely. However, some of the above issues can be triggered remotely in certain situations, or exploited by malicious local users on shared hosting setups
+utilizing PHP as an Apache module. Therefore, we strongly advise all users of PHP, regardless of the version to upgrade to 5.2.1 release
 as soon as possible. PHP 4.4.5 with equivalent security corrections is <a href='4_4_5.php'>available</a> as well.
 </p>
 
@@ -58,7 +58,7 @@ as soon as possible. PHP 4.4.5 with equivalent security corrections is <a href='
 </ul>
 
 <p>
-For users upgrading from PHP 5.0 and PHP 5.1, an upgrade guide is available 
+For users upgrading from PHP 5.0 and PHP 5.1, an upgrade guide is available
 <a href="/UPDATE_5_2.txt">here</a>, detailing the changes between those releases
 and PHP 5.2.1.
 </p>

@@ -2,50 +2,42 @@
 include_once $_SERVER['DOCUMENT_ROOT'] . '/include/shared-manual.inc';
 $TOC = array();
 $PARENTS = array();
-include_once dirname(__FILE__) ."/toc/langref.inc";
-$setup = array (
-  'home' => 
-  array (
+include_once __DIR__ . '/toc/langref.inc';
+$setup = array(
+  'home' => array(
     0 => 'index.php',
     1 => 'PHP Manual',
   ),
-  'head' => 
-  array (
+  'head' => array(
     0 => 'UTF-8',
     1 => 'en',
   ),
-  'this' => 
-  array (
+  'this' => array(
     0 => 'language.exceptions.php',
     1 => 'Exceptions',
   ),
-  'up' => 
-  array (
+  'up' => array(
     0 => 'langref.php',
     1 => 'Language Reference',
   ),
-  'prev' => 
-  array (
+  'prev' => array(
     0 => 'language.namespaces.faq.php',
     1 => 'FAQ: things you need to know about namespaces',
   ),
-  'next' => 
-  array (
+  'next' => array(
     0 => 'language.exceptions.extending.php',
     1 => 'Extending Exceptions',
   ),
-  'alternatives' => 
-  array (
+  'alternatives' => array(
   ),
-  'extra_header_links' => 
-  array (
+  'extra_header_links' => array(
     'rel' => 'alternate',
     'href' => '/manual/en/feeds/language.exceptions.atom',
     'type' => 'application/atom+xml',
   ),
 );
-$setup["toc"] = $TOC;
-$setup["parents"] = $PARENTS;
+$setup['toc'] = $TOC;
+$setup['parents'] = $PARENTS;
 manual_setup($setup);
 
 manual_header();
@@ -89,7 +81,7 @@ manual_header();
    class or a subclass of <a href="class.exception.php" class="classname">Exception</a>. Trying to throw an
    object that is not will result in a PHP Fatal Error.
   </p>
-  <blockquote class="note"><p><strong class="note">Note</strong>: 
+  <blockquote class="note"><p><strong class="note">Note</strong>:
    <p class="para">
     Internal PHP functions mainly use
     <a href="errorfunc.configuration.php#ini.error-reporting" class="link">Error reporting</a>, only modern
@@ -158,8 +150,8 @@ string(4) &quot;foo!&quot;
 </pre></div>
     </div>
    </div>
-   
-  
+
+
 
  </div>
 <?php manual_footer(); ?>

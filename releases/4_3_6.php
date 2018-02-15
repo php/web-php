@@ -2,7 +2,7 @@
 // $Id$
 $_SERVER['BASE_PAGE'] = 'releases/4_3_6.php';
 include_once $_SERVER['DOCUMENT_ROOT'] . '/include/prepend.inc';
-site_header("PHP 4.3.6 Release Announcement");
+site_header('PHP 4.3.6 Release Announcement');
 ?>
 
 <h1>PHP 4.3.6 Release Announcement</h1>
@@ -11,9 +11,9 @@ site_header("PHP 4.3.6 Release Announcement");
 
 <p>
  PHP Development Team is proud to announce the release of PHP <a href="/downloads.php">PHP 4.3.6</a>.
- This is is a bug fix release whose primary goal is to address two bugs which may 
- result in crashes in PHP builds with thread-safety enabled. All users of PHP 
- in a threaded environment (Windows) are strongly encouraged to upgrade to 
+ This is is a bug fix release whose primary goal is to address two bugs which may
+ result in crashes in PHP builds with thread-safety enabled. All users of PHP
+ in a threaded environment (Windows) are strongly encouraged to upgrade to
  this release.
 </p>
 
@@ -32,7 +32,7 @@ site_header("PHP 4.3.6 Release Announcement");
  <li>Fixed a bug that prevented compilation of cURL extension against libcurl 7.11.1</li>
  <li>Fixed a number of crashes inside domxml and mssql extensions.</li>
 
- <li>All in all this release fixes approximately 25 bugs that have been discovered 
+ <li>All in all this release fixes approximately 25 bugs that have been discovered
  since the 4.3.5 release.</li>
 </ul>
 

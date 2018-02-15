@@ -3,14 +3,14 @@
 $_SERVER['BASE_PAGE'] = 'ChangeLog-4.php';
 include_once $_SERVER['DOCUMENT_ROOT'] . '/include/prepend.inc';
 include_once $_SERVER['DOCUMENT_ROOT'] . '/include/changelogs.inc';
-site_header("PHP 4 ChangeLog", array("current" => "docs", "css" => array("changelog.css"), "layout_span" => 12));
+site_header('PHP 4 ChangeLog', array('current' => 'docs', 'css' => array('changelog.css'), 'layout_span' => 12));
 ?>
 
 <h1>PHP 4 ChangeLog</h1>
 
 <section class="version" id="4.4.9"><!-- {{{ 4.4.9 -->
 <h3>Version 4.4.9</h3>
-<?php release_date("07-Aug-2008"); ?>
+<?php release_date('07-Aug-2008'); ?>
 <ul>
 <li>Updated PCRE to version 7.7.</li>
 <li>Fixed overflow in memnstr().</li>
@@ -23,7 +23,7 @@ site_header("PHP 4 ChangeLog", array("current" => "docs", "css" => array("change
 
 <section class="version" id="4.4.8"><!-- {{{ 4.4.8 -->
 <h3>Version 4.4.8</h3>
-<?php release_date("03-Jan-2008"); ?>
+<?php release_date('03-Jan-2008'); ?>
 <ul>
 <li>Improved fix for MOPB-02-2007.</li>
 <li>Fixed an integer overflow inside chunk_split(). Identified by Gerhard Wagner.</li>
@@ -44,7 +44,7 @@ site_header("PHP 4 ChangeLog", array("current" => "docs", "css" => array("change
 
 <section class="version" id="4.4.7"><!-- {{{ 4.4.7 -->
 <h3>Version 4.4.7</h3>
-<?php release_date("03-May-2007"); ?>
+<?php release_date('03-May-2007'); ?>
 <ul>
 <li>Fixed MOPB-33-2007 (PHP mail() Message ASCIIZ Byte Truncation).</li>
 <li>Fixed MOPB-32-2007 (Double free inside session_decode()).</li>
@@ -69,7 +69,7 @@ site_header("PHP 4 ChangeLog", array("current" => "docs", "css" => array("change
 
 <section class="version" id="4.4.6"><!-- {{{ 4.4.6 -->
 <h3>Version 4.4.6</h3>
-<?php release_date("01-Mar-2007"); ?>
+<?php release_date('01-Mar-2007'); ?>
 <ul>
 <li>Updated PCRE to version 7.0.</li>
 <li>Fixed segfault in ext/session when register_globals=On.</li>
@@ -84,7 +84,7 @@ site_header("PHP 4 ChangeLog", array("current" => "docs", "css" => array("change
 
 <section class="version" id="4.4.5"><!-- {{{ 4.4.5 -->
 <h3>Version 4.4.5</h3>
-<?php release_date("14-Feb-2007"); ?>
+<?php release_date('14-Feb-2007'); ?>
 <ul>
 <li>Upgraded PEAR to 1.5.0.</li>
 <li>Updated PCRE to version 6.7.</li>
@@ -121,7 +121,7 @@ There is a <a href="release_4_4_4.php">separate announcement</a> available for t
 
 <section class="version" id="4.4.4"><!-- {{{ 4.4.4 -->
 <h3>Version 4.4.4</h3>
-<?php release_date("17-Aug-2006"); ?>
+<?php release_date('17-Aug-2006'); ?>
 <ul>
 <li>Fixed memory_limit on 64bit systems.</li>
 <li>Fixed overflow on 64bit systems in str_repeat() and wordwrap().</li>
@@ -144,7 +144,7 @@ There is a <a href="release_4_4_4.php">separate announcement</a> available for t
 
 <section class="version" id="4.4.3"><!-- {{{ 4.4.3 -->
 <h3>Version 4.4.3</h3>
-<?php release_date("03-Aug-2006"); ?>
+<?php release_date('03-Aug-2006'); ?>
 <ul>
 <li>Added control character checks for cURL extension's open_basedir/safe_mode checks.</li>
 <li>Added overflow checks to wordwrap() function.</li>
@@ -180,7 +180,7 @@ There is a <a href="release_4_4_3.php">separate announcement</a> available for t
 
 <section class="version" id="4.4.2"><!-- {{{ 4.4.2 -->
 <h3>Version 4.4.2</h3>
-<?php release_date("11-Jan-2006"); ?>
+<?php release_date('11-Jan-2006'); ?>
 <ul>
 <li>Added missing safe_mode/open_basedir checks into cURL extension.</li>
 <li>Backported missing imap_mailcompose() fixes from PHP 5.x.</li>
@@ -229,7 +229,7 @@ There is a <a href="release_4_4_2.php">separate announcement</a> available for t
 
 <section class="version" id="4.4.1"><!-- {{{ 4.4.1 -->
 <h3>Version 4.4.1</h3>
-<?php release_date("31-Oct-2005"); ?>
+<?php release_date('31-Oct-2005'); ?>
 <ul>
 <li>Added missing safe_mode checks for image* functions and cURL.</li>
 <li>Added missing safe_mode/open_basedir checks for file uploads.</li>
@@ -283,7 +283,7 @@ There is a <a href="release_4_4_1.php">separate announcement</a> available for t
 
 <section class="version" id="4.4.0"><!-- {{{ 4.4.0 -->
 <h3>Version 4.4.0</h3>
-<?php release_date("11-Jul-2005"); ?>
+<?php release_date('11-Jul-2005'); ?>
 <ul>
 <li>Added man pages for "phpize" and "php-config" scripts.</li>
 <li>Added support for .cc files in extensions.</li>
@@ -348,7 +348,7 @@ There is a <a href="release_4_4_0.php">separate announcement</a> available for t
 
 <section class="version" id="4.3.11"><!-- {{{ 4.3.11 -->
 <h3>Version 4.3.11</h3>
-<?php release_date("31-Mar-2005"); ?>
+<?php release_date('31-Mar-2005'); ?>
 <ul>
 <li>Added Oracle Instant Client support</li>
 <li>Added checks for negative values to gmp_sqrt(), gmp_powm(), gmp_sqrtrem() and gmp_fact() to prevent SIGFPE</li>
@@ -433,7 +433,7 @@ There is a <a href="release_4_3_11.php">separate announcement</a> available for 
 
 <section class="version" id="4.3.10"><!-- {{{ 4.3.10 -->
 <h3>Version 4.3.10</h3>
-<?php release_date("14-Dec-2004"); ?>
+<?php release_date('14-Dec-2004'); ?>
 <ul>
 <li>Added the %F modifier to *printf to render a non-locale-aware representation of a float with the . as decimal separator.</li>
 <li>Fixed a bug in addslashes() handling of the '\0' character.</li>
@@ -478,7 +478,7 @@ There is a <a href="release_4_3_10.php">separate announcement</a> available for 
 
 <section class="version" id="4.3.9"><!-- {{{ 4.3.9 -->
 <h3>Version 4.3.9</h3>
-<?php release_date("22-Sep-2004"); ?>
+<?php release_date('22-Sep-2004'); ?>
 <ul>
 <li>GPC input processing fixes.</li>
 <li>Implemented periodic PCRE compiled regexp cache cleanup, to avoid memory exhaustion.</li>
@@ -538,7 +538,7 @@ There is a <a href="release_4_3_9.php">separate announcement</a> available for t
 
 <section class="version" id="4.3.8"><!-- {{{ 4.3.8 -->
 <h3>Version 4.3.8</h3>
-<?php release_date("13-Jul-2004"); ?>
+<?php release_date('13-Jul-2004'); ?>
 <ul>
 <li>Fixed strip_tags() to correctly handle '\0' characters. (Stefan)</li>
 <li>Improved stability during startup when memory_limit is used. (Stefan)</li>
@@ -553,7 +553,7 @@ There is a <a href="release_4_3_8.php">separate announcement</a> available for t
 
 <section class="version" id="4.3.7"><!-- {{{ 4.3.7 -->
 <h3>Version 4.3.7</h3>
-<?php release_date("03-Jun-2004"); ?>
+<?php release_date('03-Jun-2004'); ?>
 <ul>
 <li>Upgraded bundled GD library to 2.0.23. (Ilia)</li>
 <li>Changed user error handler mechanism to relay to built-in error handler if it returns false. (Andrei)</li>
@@ -596,7 +596,7 @@ There is a <a href="release_4_3_7.php">separate announcement</a> available for t
 
 <section class="version" id="4.3.6"><!-- {{{ 4.3.6 -->
 <h3>Version 4.3.6</h3>
-<?php release_date("15-Apr-2004"); ?>
+<?php release_date('15-Apr-2004'); ?>
 <ul>
 <li>Updated bundled PDFLib library to version 5.0.3p1 in Windows distribution. (Edin)</li>
 <li>Synchronized bundled GD library with GD 2.0.22. (Ilia)</li>
@@ -631,7 +631,7 @@ There is a <a href="release_4_3_6.php">separate announcement</a> available for t
 
 <section class="version" id="4.3.5"><!-- {{{ 4.3.5 -->
 <h3>Version 4.3.5</h3>
-<?php release_date("26-Mar-2004"); ?>
+<?php release_date('26-Mar-2004'); ?>
 <ul>
 
 <li>Fixed possible crash using an invalid color index with a palette image in imagecolortransparent (Pierre)</li>
@@ -800,7 +800,7 @@ There is a <a href="release_4_3_5.php">separate announcement</a> available for t
 
 <section class="version" id="4.3.4"><!-- {{{ 4.3.4 -->
 <h3>Version 4.3.4</h3>
-<?php release_date("03-Nov-2003"); ?>
+<?php release_date('03-Nov-2003'); ?>
 <ul>
 <li>Made MCVE extension available on win32. (Jani)</li>
 <li>Upgraded bundled libfcgi and made FastCGI support viable on Win32. (Sascha)</li>
@@ -886,7 +886,7 @@ There is a <a href="release_4_3_4.php">separate announcement</a> available for t
 
 <section class="version" id="4.3.3"><!-- {{{ 4.3.3 -->
 <h3>Version 4.3.3</h3>
-<?php release_date("25-Aug-2003"); ?>
+<?php release_date('25-Aug-2003'); ?>
 <ul>
 <li>Synchronized bundled GD library with GD 2.0.15. (Ilia)</li>
 <li>Upgraded the bundled Expat library to version 1.95.6. (Jani)</li>
@@ -909,7 +909,7 @@ There is a <a href="release_4_3_4.php">separate announcement</a> available for t
 	<li>Added imap_timeout() function. (bug <?php bugl(24161); ?>)</li>
 	<li>Added optional 'charset' parameter to imap_search() and imap_sort(). (bug <?php bugl(22505); ?>)</li>
  </ul>
-</li>	
+</li>
 <li>Improved the InterBase extension (Daniela)
  <ul>
 	<li>Added transaction constants: IBASE_REC_VERSION, IBASE_REC_NO_VERSION, IBASE_WRITE, IBASE_WAIT and IBASE_CONCURRENCY. (bugs <?php bugl(8797); ?>, <?php bugl(23887); ?>)</li>
@@ -1040,7 +1040,7 @@ More information on this release on <a href="/releases.php#4.3.3">our Releases p
 
 <section class="version" id="4.3.2"><!-- {{{ 4.3.2 -->
 <h3>Version 4.3.2</h3>
-<?php release_date("29-May-2003"); ?>
+<?php release_date('29-May-2003'); ?>
 <ul>
 <li>Syncronized bundled GD library with GD 2.0.12. (Ilia)</li>
 <li>Removed support for GDLIB version 1.x.x (php_gd.dll) on Windows. (Edin)</li>
@@ -1231,7 +1231,7 @@ More information on this release on <a href="/releases.php#4.3.2">our Releases p
 
 <section class="version" id="4.3.1"><!-- {{{ 4.3.1 -->
 <h3>Version 4.3.1</h3>
-<?php release_date("17-Feb-2003"); ?>
+<?php release_date('17-Feb-2003'); ?>
 <ul>
 <li>Fixed serious security vulnerability in CGI SAPI. (Shane)</li>
 </ul>
@@ -1241,7 +1241,7 @@ More information on this release on <a href="/releases.php#4.3.1">our Releases p
 
 <section class="version" id="4.3.0"><!-- {{{ 4.3.0 -->
 <h3>Version 4.3.0</h3>
-<?php release_date("27-Dec-2002"); ?>
+<?php release_date('27-Dec-2002'); ?>
 <ul>
 <li>If you don't specify building any other SAPI "make install" will install the
   CGI SAPI binary in {PREFIX}/bin/php. If you want to install CLI SAPI in that
@@ -1292,7 +1292,7 @@ More information on this release on <a href="/releases.php#4.3.1">our Releases p
 <li>Fixed a crash when converting between true-color images (png/jpeg) and
   gd1/gd2 image formats, png/jpeg -&gt; gd1/gd2 -&gt; png/jpeg conversion now
   works correctly. (Ilia, Pierre-Alain Joye).</li>
-<li>Fixed a memory leak in the bundled GD library inside 
+<li>Fixed a memory leak in the bundled GD library inside
   gdImageTrueColorToPalette(). (Ilia)</li>
 <li><?php bugfix(12776); ?> (array_walk crash). (Moriyoshi)</li>
 <li><?php bugfix(20934); ?> (htmlspecialchars returns latin1 from UTF-8). (Moriyoshi)</li>
@@ -1330,7 +1330,7 @@ More information on this release on <a href="/releases.php#4.3.1">our Releases p
 <li><?php bugfix(18868); ?> (improved the check for availability of realpath()). (Ilia)</li>
 <li>Fixed width/height detection of bmp images using getimagesize() function on
   big endian systems and added code to retrieve bmp bit depth. (Ilia)</li>
-<li><?php bugfix(20035); ?> (line counting error when script starts with #! in 
+<li><?php bugfix(20035); ?> (line counting error when script starts with #! in
   cgi/cli/fastcgi sapis). (Ilia)</li>
 <li><?php bugfix(20235); ?> (incorrect handling of symlinks on ZTS build). (Ilia)</li>
 <li>Added sanity checks to headers_sent() &amp; image_type_to_mime_type(). (Ilia)</li>
@@ -1354,7 +1354,7 @@ More information on this release on <a href="/releases.php#4.3.1">our Releases p
   (Pierre-Alain Joye, Ilia)</li>
 <li><?php bugfix(17497); ?> (mssql extension crashes if magic_quotes_runtime is on).
   (Sterling)</li>
-<li>Remove $_FILES from $_REQUEST (import_request_variables is not modified), 
+<li>Remove $_FILES from $_REQUEST (import_request_variables is not modified),
   this didn't work properly in the first place, and added confusion. (Sterling)</li>
 <li>Fix the socket_read() function on win32 to work in normal mode (reading to
   the end of a line), as well as binary mode. (Sterling)</li>
@@ -1423,14 +1423,14 @@ More information on this release on <a href="/releases.php#4.3.1">our Releases p
 <li><?php bugfix(17825); ?> (ob_start() chunk size option didn't work well). (Yasuo)</li>
 <li>Fixed output buffer infinite loop when buffer_size became 0. (Marcus, Wez)</li>
 <li>Added getopt() for parsing command line options and arguments. (Jon)</li>
-<li>Added pg_fetch_assoc(), pg_fetch_all(), pg_ping(), pg_meta_data(), pg_convert(), 
+<li>Added pg_fetch_assoc(), pg_fetch_all(), pg_ping(), pg_meta_data(), pg_convert(),
   pg_insert(), pg_select(), pg_update(), pg_delete(), pg_result_seek(),
   pg_unescape_bytea(), pg_get_notify() and pg_get_pid(). (Yasuo)</li>
 <li><?php bugfix(17281); ?> (Sanity checks for encoding sessions). (Ilia)</li>
 <li><?php bugfix(16995); ?> and <?php bugl(19392); ?> (Prevent crash if $HTTP_SESSION_VARS != ARRAY).
   (Ilia)</li>
 <li><?php bugfix(19292); ?> (open_basedir restriction problem). (Rasmus)</li>
-<li><?php bugfix(19366); ?> (gdImageFill crashes when x &amp; y are outside of 
+<li><?php bugfix(19366); ?> (gdImageFill crashes when x &amp; y are outside of
   the image's boundries). (Ilia)</li>
 <li><?php bugfix(13936); ?> (__FILE__ constant didn't contain full path). (Ilia)</li>
 <li>PHP now has a new stream system that allows it to do some clever stuff with
@@ -1438,7 +1438,7 @@ More information on this release on <a href="/releases.php#4.3.1">our Releases p
   <ul>
   <li>URL wrappers natively supports https:// URLs if you have compiled
     OpenSSL support into PHP (shared extension does not support this).</li>
-  <li>Added support for fopen("ftps://...", ...) which allows to connect to FTP 
+  <li>Added support for fopen("ftps://...", ...) which allows to connect to FTP
     servers via SSL. (Stefan Esser)</li>
   <li>fsockopen() adds support for ssl:// and tls:// connections via TCP/IP</li>
   <li>copy($srcfilename, $destfilename) can now be used with URL wrappers</li>
@@ -1490,9 +1490,9 @@ More information on this release on <a href="/releases.php#4.3.1">our Releases p
 </li>
 <li><?php bugfix(18022); ?> (fopen does not work with php://stdin anymore on Solaris).
   (Wez)</li>
-<li>Added php.ini option "default_socket_timeout" to set the timeout limit for 
+<li>Added php.ini option "default_socket_timeout" to set the timeout limit for
   PHP network streams. (kalowsky, ilia@prohost.org, Wez)</li>
-<li>Added file_get_contents() which returns the contents of a file as a string. 
+<li>Added file_get_contents() which returns the contents of a file as a string.
   This function also supports the URL wrappers. (Wez)</li>
 <li><?php bugfix(19595); ?> (Missing functions for GD2 format handling). (Edin)</li>
 <li><?php bugfix(19633); ?> (Wrong directories in ext/ldap/config.m4). (Derick)</li>
@@ -1513,12 +1513,12 @@ More information on this release on <a href="/releases.php#4.3.1">our Releases p
   with strip_tags() function. (Ilia)</li>
 <li>Fixed bugs <?php bugl(17570); ?> and <?php bugl(17957); ?> (Regexps related). (Andrei, Ilia)</li>
 <li>Fixed bugs <?php bugl(18167); ?> and <?php bugl(16859); ?> (SEGV with session_decode). (Ilia)</li>
-<li>Fixed bugs <?php bugl(19573); ?> and <?php bugl(13472); ?> (Session, XHTML compliance and trans_sid). 
+<li>Fixed bugs <?php bugl(19573); ?> and <?php bugl(13472); ?> (Session, XHTML compliance and trans_sid).
   (Sascha)</li>
-<li><?php bugfix(19570); ?> (last character was missing in get_html_translation_table). 
+<li><?php bugfix(19570); ?> (last character was missing in get_html_translation_table).
   (Wez)</li>
 <li>Upgraded PCRE to version 3.9. (Wez)</li>
-<li>Fixed bug in OCIResult() which returned garbage when called on 
+<li>Fixed bug in OCIResult() which returned garbage when called on
   empty result-sets. (Thies)</li>
 <li>Added ability to use Perl-style ${n} subpattern references in the
   replacement string for preg_replace() (bug <?php bugl(18442); ?>). (Andrei)</li>
@@ -1533,13 +1533,13 @@ More information on this release on <a href="/releases.php#4.3.1">our Releases p
 <li>Backported debug_backtrace() from ZendEngine2. (Thies)</li>
 <li>Added html-free phpinfo() output for CLI. (Jan)</li>
 <li>Fixed socket_recvfrom() to be binary safe. (Jason)</li>
-<li>Changed mail() to use escape_shell_cmd() to allow multiple extra parameters 
+<li>Changed mail() to use escape_shell_cmd() to allow multiple extra parameters
   to the invocation of the mailer as used in the fifth parameter. (Derick)</li>
 <li>Changed cURL extension to require cURL version 7.9.8 (Derick)</li>
 <li>Added zend_execute_internal which is called like zend_execute but for
   internal functions. (Thies)</li>
 <li>Changed pg_connection_status(), pg_connection_reset(), pg_connection_busy(),
-  pg_result_status() and pg_result_error() to silently return FALSE when 
+  pg_result_status() and pg_result_error() to silently return FALSE when
   resource is not passed to them. (Yasuo)</li>
 <li>Fixed some mysql compile failures on 64 bit-OS. (Georg)</li>
 <li>Added warnings for deprecated mysql functions:
@@ -1550,12 +1550,12 @@ More information on this release on <a href="/releases.php#4.3.1">our Releases p
   </ul>
 </li>
 <li>Added XsltObject-&lt;result_dump_mem($result) for returning xslt-result directly
-  into a string and XsltObject-&lt;result_dump_file($result,$file[,$compression]) 
+  into a string and XsltObject-&lt;result_dump_file($result,$file[,$compression])
   for dumping into a file. (morus.walter@web.de, chregu)</li>
 <li>Made mime_magic and ZIP extensions available on Windows. (Edin)</li>
 <li>Added xslt_backend_version() and xslt_backend_name() for getting
   information about the processor backend. (chregu)</li>
-<li>Added ImageColorMatch() and ImageLayerEffect() functions which are only 
+<li>Added ImageColorMatch() and ImageLayerEffect() functions which are only
   available when using the bundled GD library. (ttoohey)</li>
 <li>Made major improvents to the pcntl extension. (Jason)
   <ul>
@@ -1576,17 +1576,17 @@ More information on this release on <a href="/releases.php#4.3.1">our Releases p
   ie. new_child is moved, not copied. (chregu)</li>
 <li>Added some namespace support with DomNode-&gt;add_namespace(uri, prefix)
   and DomDocument-&gt;create_element_ns(uri, nodename) (chregu)</li>
-<li>Added optional parameter to DomElement-&gt;node_name() for retrieving fully 
+<li>Added optional parameter to DomElement-&gt;node_name() for retrieving fully
   qualified name (ie. namespace prefix). (chregu)</li>
 <li>Changed DomNode-&gt;child_nodes() to return empty array instead of false if no
   child nodes are found. (chregu)</li>
 <li>Fixed a bug with handling the Expect header. (Patch by ilia@prohost.org)</li>
-<li>Fixed a bug in ODBC where closing the module caused a crash in the Windows 
+<li>Fixed a bug in ODBC where closing the module caused a crash in the Windows
   executable. (kalowsky)</li>
 <li>Fixed memory leaks in pack() and unpack(). (Patch by ilia@prohost.org)</li>
-<li>Added URLs to error messages which direct to a page describing the error or 
+<li>Added URLs to error messages which direct to a page describing the error or
   function in question. (Derick, Wez, Marcus)</li>
-<li>Added odbc_data_source() functionality to identify DB ServerName, and a 
+<li>Added odbc_data_source() functionality to identify DB ServerName, and a
   description of it gathered from the DSN. (kalowsky)</li>
 <li>Fixed copy() to return TRUE with 0 byte files. (Patch by ilia@prohost.org)</li>
 <li>Added ob_list_handlers() which returns an array of all active output
@@ -1596,7 +1596,7 @@ More information on this release on <a href="/releases.php#4.3.1">our Releases p
   comma separated string. (Marcus)</li>
 <li>Added the ability for declare() compiler modifications to occur globally
   by using an empty statement. (Jason, Zend Engine)
-  i.e.  
+  i.e.
   <pre>
         //Globally enables the ticks modifier for the whole program
         declare (ticks=1);
@@ -1620,18 +1620,18 @@ More information on this release on <a href="/releases.php#4.3.1">our Releases p
 <li>Added optional 5th parameter to FTP functions to support resuming. (Stefan)</li>
 <li>Added optional 2nd parameter to print_r() to make it return the variable
   representation instead of echoing it. (Derick)</li>
-<li>Added mysql_ping(), mysql_real_escape_string(), mysql_character_set_name(), 
+<li>Added mysql_ping(), mysql_real_escape_string(), mysql_character_set_name(),
   mysql_thread_id(), mysql_stat() and mysql_list_processes(). (Zak, Georg)</li>
 <li>Added safe_mode &amp; open_basedir checks for pg_lo_export(). (Yasuo)</li>
 <li>Added open_basedir check for pg_lo_import(). (Yasuo)</li>
 <li>Fixed infinite recursion crash bug in ticks. (Jason)</li>
-<li>Added php.ini option "mysql.connect_timeout" to set the timeout limit for 
+<li>Added php.ini option "mysql.connect_timeout" to set the timeout limit for
   mysql_connect() and mysql_pconnect(). (Georg)</li>
-<li>Added optional parameter "flags" to mysql_connect() and mysql_pconnect() 
+<li>Added optional parameter "flags" to mysql_connect() and mysql_pconnect()
   which can be used to set usage of idle timeout and different protocols,
   SSL and compressed. (Georg)</li>
 <li>Added automatic rollback to ext/mysql for non committed transactions. (Georg)</li>
-<li>Fixed cases where preg_split() incorrectly terminated final element if it 
+<li>Fixed cases where preg_split() incorrectly terminated final element if it
   contained null bytes. (Andrei)</li>
 <li>Added persistent connections/pipelining to thttpd. (Sascha)</li>
 <li>Fixed two potential blocking issues in thttpd. (Sascha)</li>
@@ -1640,7 +1640,7 @@ More information on this release on <a href="/releases.php#4.3.1">our Releases p
 <li>Made iconv() work well with both libiconv and libgconv. (Moriyoshi, Yasuo)</li>
 <li>Fixed socket_set_timeout() on win32. (Jason, Edin, Jani)</li>
 <li>Added domxml_node_namespace_uri(). (Rui Lopes)</li>
-<li>Fixed win32 memory leak in /ext/sockets that would occur on any error 
+<li>Fixed win32 memory leak in /ext/sockets that would occur on any error
   condition. Also fixed host resolution error messages on win32. (Jason)</li>
 <li>Added optional 3rd parameter 'recursive' to ftp_rawlist() which will
   do 'LIST -R' instead of 'LIST'. (Jani)</li>
@@ -1648,11 +1648,11 @@ More information on this release on <a href="/releases.php#4.3.1">our Releases p
   for iff imagetype. (Marcus)</li>
 <li>Added runtime Apache2 thread check to ensure we don't run a non-threaded
   PHP inside a threaded Apache2 MPM.  (Rasmus)</li>
-<li>Made getimagesize() and exif_read_data() to return also the mime-type and 
+<li>Made getimagesize() and exif_read_data() to return also the mime-type and
   exif_thumbnail() to return also the image-type. (Marcus)</li>
 <li>Added image_type_to_mime_type() which converts image-types to mime-types.
   (Marcus)</li>
-<li>Made GD functions to only exist if they are available in libgd. Now the 
+<li>Made GD functions to only exist if they are available in libgd. Now the
   availability can be tested with function_exists(). (Derick)</li>
 <li>Added an optional parameter to the header() function which overrides the HTTP
   response code. (Derick)</li>
@@ -1679,12 +1679,12 @@ More information on this release on <a href="/releases.php#4.3.1">our Releases p
 <li>Fixed is_a() to properly work on extension registered classes. (Andrei)</li>
 <li>Added new constants: PHP_PREFIX and PHP_SHLIB_SUFFIX. (Stig)</li>
 <li>Added pctnl_alarm() function. (Edin)</li>
-<li>If zlib.output_compression is enabled and a page is compressed 
+<li>If zlib.output_compression is enabled and a page is compressed
   a "Vary: Accept-Encoding" header is now added. (Stefan)</li>
-<li>Renamed getallheaders() to apache_request_headers() and kept getallheaders() 
-  as an alias to it. Also added apache_response_headers() which returns the 
+<li>Renamed getallheaders() to apache_request_headers() and kept getallheaders()
+  as an alias to it. Also added apache_response_headers() which returns the
   current response headers from Apache. (Rasmus)</li>
-<li>Added missing AddRef() calls in the COM extension. This should fix weird 
+<li>Added missing AddRef() calls in the COM extension. This should fix weird
   behaviour (in particular with ADODB). (Harald)</li>
 <li>Fixed segfault in version_compare(). (Stig)</li>
 <li>Added compressed Flash MX files support to getimagesize(). (Derick)</li>
@@ -1706,25 +1706,25 @@ More information on this release on <a href="/releases.php#4.3.1">our Releases p
   information is saved to the specified file. (chregu)</li>
 <li>Added MD5 support for crypt() on Windows. (Edin)</li>
 <li>Fixed resource bug in LDAP extension. (Stig Venaas)</li>
-<li>Fixed crash in output buffering when buffer is overwritten in a callback. 
+<li>Fixed crash in output buffering when buffer is overwritten in a callback.
   (Yasuo)</li>
 <li>Added output_add_rewrite_var() and output_remove_rewrite_var() to inject
   and remove variables from the URL-Rewriter. (Thies)</li>
-<li>The Windows build can now be configured more comfortably, for example 
+<li>The Windows build can now be configured more comfortably, for example
   when dealing with built-in extensions. (Sebastian)</li>
 <li>Added large OID value (2^31 to 2^32) support for pg_lo_import(),
   pg_lo_unlink(), pg_lo_open() and pg_lo_export(). (Yasuo)</li>
 <li>Fixed mixing OCIPlogon() and OCINLogon() to not leak Oracle-Sessions. (Thies)</li>
 <li>Added php.ini options for EXIF extension to encode and decode Unicode/JIS
   user comments. (Marcus)</li>
-<li>Changed the "-c" CLI/CGI option to allow both 'filename' and 
+<li>Changed the "-c" CLI/CGI option to allow both 'filename' and
   'path to php.ini'. (Yasuo)</li>
 <li>Added version information to the .dll and .exe files created under Windows.
   (jtate)</li>
 <li>Added __FUNCTION__ and __CLASS__ constants. (Jani, Zend Engine)</li>
-<li>Added optional 2nd parameter for pg_result_status() to specify return type. 
+<li>Added optional 2nd parameter for pg_result_status() to specify return type.
   (Yasuo)</li>
-<li>Added "log_errors_max_len" php.ini option which controls maximum length for 
+<li>Added "log_errors_max_len" php.ini option which controls maximum length for
   error messages. (Marcus)</li>
 <li>Added "ignore_repeated_errors" and "ignore_repeated_source" php.ini options
   which can be used to disable logging of repeated error messages. (Marcus)</li>
@@ -1732,7 +1732,7 @@ More information on this release on <a href="/releases.php#4.3.1">our Releases p
 <li>Added "pgsql.ignore_notice" and "pgsql.log_notice" php.ini options. (Yasuo)</li>
 <li>Added "zlib.output_compression_level" php.ini option. (Stig)</li>
 <li>Added support for --with-apxs build on Mac OS X / Darwin. (markonen)</li>
-<li>Added support for dynamically loaded extensions on OS X / Darwin. 
+<li>Added support for dynamically loaded extensions on OS X / Darwin.
   NOTE: This requires Apache 1.3.25 or later. (kalowsky, markonen)</li>
 <li>Fixed CR/LF processing in quoted_printable_decode() on Win32. (kir)</li>
 <li>Made crack extension available on Win32. Cracklib libraries for Win32 are
@@ -1743,9 +1743,9 @@ More information on this release on <a href="/releases.php#4.3.1">our Releases p
   (Yasuo)</li>
 <li>Made var_dump() handle recursive structures better. (Yasuo, Derick)</li>
 <li>Added exif_imagetype() function. (Marcus)</li>
-<li>New improved build system. Among other improvements, replaces the slow 
+<li>New improved build system. Among other improvements, replaces the slow
   recursive make with one global Makefile and eases the integration of proper
-  dependencies. Automake is only needed for its aclocal tool. The build 
+  dependencies. Automake is only needed for its aclocal tool. The build
   process is now more portable and less resource-consuming. (Sascha)</li>
 </ul>
 More information on this release on <a href="/releases.php#4.3.0">our Releases page</a>.<br>
@@ -1754,7 +1754,7 @@ More information on this release on <a href="/releases.php#4.3.0">our Releases p
 
 <section class="version" id="4.2.3"><!-- {{{ 4.2.3 -->
 <h3>Version 4.2.3</h3>
-<?php release_date("06-Sep-2002"); ?>
+<?php release_date('06-Sep-2002'); ?>
 <ul>
 <li>Enable UTF8 modifier support for PCRE on win32. (Wez, Edin)</li>
 <li>Enabled strcoll() on win32. (Markus)</li>
@@ -1793,7 +1793,7 @@ More information on this release on <a href="/releases.php#4.2.3">our Releases p
 
 <section class="version" id="4.2.2"><!-- {{{ 4.2.2 -->
 <h3>Version 4.2.2</h3>
-<?php release_date("22-Jul-2002"); ?>
+<?php release_date('22-Jul-2002'); ?>
 <ul>
 <li>Fixed serious security vulnerability. (Stefan Esser)</li>
 </ul>
@@ -1803,7 +1803,7 @@ More information on this release on <a href="/releases.php#4.2.2">our Releases p
 
 <section class="version" id="4.2.1"><!-- {{{ 4.2.1 -->
 <h3>Version 4.2.1</h3>
-<?php release_date("13-May-2002"); ?>
+<?php release_date('13-May-2002'); ?>
 <ul>
 <li>Added safe-mode checks to show_source(), parse_ini_file() and rmdir(). Also
  fixed security problems with safe_mode_include_dir directive. (Rasmus)</li>
@@ -1825,10 +1825,10 @@ More information on this release on <a href="/releases.php#4.2.2">our Releases p
       </ul>
     </li>
     <li>
-      Fixed a segfault in domxml_unlink(). 
+      Fixed a segfault in domxml_unlink().
     </li>
     <li>
-      Added formatting option to domxml_dump_mem(). 
+      Added formatting option to domxml_dump_mem().
     </li>
   </ul>
   (Uwe, jtate, Chregu)</li>
@@ -1860,7 +1860,7 @@ More information on this release on <a href="/releases.php#4.2.1">our Releases p
 
 <section class="version" id="4.2.0"><!-- {{{ 4.2.0 -->
 <h3>Version 4.2.0</h3>
-<?php release_date("22-Apr-2002"); ?>
+<?php release_date('22-Apr-2002'); ?>
 <ul>
 <li>ATTENTION!! register_globals defaults to 'off' now !!!</li>
 <li>Note: Apache2 support is EXPERIMENTAL.</li>
@@ -2074,15 +2074,15 @@ More information on this release on <a href="/releases.php#4.2.0">our Releases p
 
 <section class="version" id="4.1.2"><!-- {{{ 4.1.2 -->
 <h3>Version 4.1.2</h3>
-<?php release_date("27-Feb-2002"); ?>
+<?php release_date('27-Feb-2002'); ?>
 <ul>
-<li>Fixed start up failure when mm save handler is used and there is multiple 
+<li>Fixed start up failure when mm save handler is used and there is multiple
   SAPIs are working at the same time. (Yasuo)</li>
 <li>Fixed the Roxen SAPI (Yasuo)</li>
 <li>Fixed a buffer overflow in the RFC-1867 file upload code (Stefan)</li>
 <li>Fixed a crash in the session module (Yasuo)</li>
 <li>Fixed a crash in the pspell module (Yasuo)</li>
-<li>Changed the default output encoding of mbstring 'pass' to fix 
+<li>Changed the default output encoding of mbstring 'pass' to fix
   initialization problem (Rui)</li>
 </ul>
 More information on this release on <a href="/releases.php#4.1.2">our Releases page</a>.<br>
@@ -2091,7 +2091,7 @@ More information on this release on <a href="/releases.php#4.1.2">our Releases p
 
 <section class="version" id="4.1.1"><!-- {{{ 4.1.1 -->
 <h3>Version 4.1.1</h3>
-<?php release_date("26-Dec-2001"); ?>
+<?php release_date('26-Dec-2001'); ?>
 <ul>
 <li>Fixed incompatibility with Windows .NET / IIS 6 - may improve stability
   under other versions of IIS. (Zeev)</li>
@@ -2118,7 +2118,7 @@ More information on this release on <a href="/releases.php#4.1.1">our Releases p
 
 <section class="version" id="4.1.0"><!-- {{{ 4.1.0 -->
 <h3>Version 4.1.0</h3>
-<?php release_date("10-Dec-2001"); ?>
+<?php release_date('10-Dec-2001'); ?>
 <ul>
 <li>Worked around a bug in the MySQL client library that could cause PHP to hang
   when using unbuffered queries. (Zeev)</li>
@@ -2130,7 +2130,7 @@ More information on this release on <a href="/releases.php#4.1.1">our Releases p
   element if it was a scalar one. (Andrei)</li>
 <li>Make ImageColorAt() and ImageColorsForIndex() work with TrueColor images.
   (Rasmus)</li>
-<li>Fixed a bug in preg_match_all() that would return results under improper 
+<li>Fixed a bug in preg_match_all() that would return results under improper
   indices in certain cases. (Andrei)</li>
 <li>Fixed a crash in str_replace() that would happen if search parameter was an
   array and one of the replacements resulted in subject string being empty.
@@ -2181,7 +2181,7 @@ More information on this release on <a href="/releases.php#4.1.1">our Releases p
   regardless of the context.  (Andi &amp; Zeev)</li>
 <li>Introduced $_GET, $_POST, $_COOKIE, $_SERVER and $_ENV variables, which
   deprecate the old $HTTP_*_VARS arrays.  In addition to be much shorter to
-  type - these variables are also available regardless of the scope, and 
+  type - these variables are also available regardless of the scope, and
   there's no need to import them using the 'global' statement.  (Andi &amp; Zeev)</li>
 <li>Added vprintf() and vsprintf() functions that allow passing all arguments
   after format as an array. (Andrei)</li>
@@ -2193,7 +2193,7 @@ More information on this release on <a href="/releases.php#4.1.1">our Releases p
 <li>Added optional extra argument to gmp_init(). The extra argument
   indicates which number base gmp should use when converting a
   string to the gmp-number. (Troels)</li>
-<li>Added the Cyrus-IMAP extension, which allows a direct interface to Cyrus' 
+<li>Added the Cyrus-IMAP extension, which allows a direct interface to Cyrus'
   more advanced capabilities. (Sterling)</li>
 <li>Enhance read_exif_data() to support multiple comment tags (Rasmus)</li>
 <li>Fixed a crash bug in array_map() when NULL callback was passed in. (Andrei)</li>
@@ -2203,7 +2203,7 @@ More information on this release on <a href="/releases.php#4.1.1">our Releases p
 <li>Added optional second parameter to trim, chop and ltrim. You can
   now specify which characters to trim (jeroen)</li>
 <li>Hugely improved the performance of the thread-safe version of PHP, especially
-  under Windows (Andi &amp; Zeev)</li> 
+  under Windows (Andi &amp; Zeev)</li>
 <li>Improved request-shutdown performance significantly (Andi &amp; Zeev, Zend
   Engine)</li>
 <li>Added a few new math functions. (Jesus)</li>
@@ -2231,7 +2231,7 @@ More information on this release on <a href="/releases.php#4.1.1">our Releases p
 <li>Fixed return value for a failed snmpset() - now returns false  (Rasmus)</li>
 <li>Added hostname:port support to snmp functions (nbougues@axialys.net, Rasmus)</li>
 <li>Added fdf_set_encoding() function (Masaki YATSU, Rasmus)</li>
-<li>Reversed the destruction-order of resources.  This fixes the reported OCI8 
+<li>Reversed the destruction-order of resources.  This fixes the reported OCI8
   "failed to rollback outstanding transactions!" message (Thies, Zend Engine)</li>
 <li>Added option for returning XMLRPC fault packets. (Matt Allen, Sascha
   Schumann)</li>
@@ -2296,7 +2296,7 @@ More information on this release on <a href="/releases.php#4.1.1">our Releases p
   specified that the drawn curve should be rounded. (Sterling)</li>
 <li>Updated the sockets extension to use resources instead of longs for the
   socket descriptors.  The socket functions have been renamed to conform with
-  the PHP standard instead of their C counterparts.  The sockets extension is 
+  the PHP standard instead of their C counterparts.  The sockets extension is
   now usable under Win32. (Daniel)</li>
 <li>Added disk_total_space() to return the total size of a filesystem.
   (Patch from Steven Bower)</li>
@@ -2323,7 +2323,7 @@ More information on this release on <a href="/releases.php#4.1.0">our Releases p
 
 <section class="version" id="4.0.6"><!-- {{{ 4.0.6 -->
 <h3>Version 4.0.6</h3>
-<?php release_date("23-Jun-2001"); ?>
+<?php release_date('23-Jun-2001'); ?>
 <ul>
 <li>Fixed memory fragmention problem which could lead to web server processes
   growing much more than they should. (Andi, Zend Engine)</li>
@@ -2369,14 +2369,14 @@ More information on this release on <a href="/releases.php#4.1.0">our Releases p
 <li>Udm_Cat_List and Udm_Cat_Path functions has been added.</li>
 <li>Added key_exists() to check if a given key or index exists in an
   array or object. (David Croft)</li>
-<li>Modify the cURL extension to compile only with the latest cURL release.  
-  Backwards compatibility with regards to the extension api has not been 
+<li>Modify the cURL extension to compile only with the latest cURL release.
+  Backwards compatibility with regards to the extension api has not been
   broken. (Sterling)</li>
 <li>Added the ability to use user-defined callbacks with cURL. (Sterling)</li>
 <li>Added the SSL_VERIFYPEER, CAINFO, MAXREDIRS, FILETIME, RANDOM_FILE, EGDSOCKET
   and CONNECTTIMEOUT options to curl_setopt(). (Sterling)</li>
 <li>Added support for persistent connections with cURL. (Sterling)</li>
-<li>Fixed a problem in cURL with file descriptors being allocated, but never 
+<li>Fixed a problem in cURL with file descriptors being allocated, but never
   closed. (Sterling)</li>
 <li>Fixed interactive mode (-a). It works again with the same limitations it
   has always had. (Andi, Zend Engine)</li>
@@ -2439,12 +2439,12 @@ More information on this release on <a href="/releases.php#4.0.6">our Releases p
 
 <section class="version" id="4.0.5"><!-- {{{ 4.0.5 -->
 <h3>Version 4.0.5</h3>
-<?php release_date("30-Apr-2001"); ?>
+<?php release_date('30-Apr-2001'); ?>
 <ul>
 <li>IMPORTANT: removed /F modifier handling from preg_replace(). Instead
   one should use new preg_replace_callback() function. (Andrei)</li>
 <li>Added new php.ini directive: arg_separator.input which is used to tell
-  PHP which characters are considered as argument separators in URLs. 
+  PHP which characters are considered as argument separators in URLs.
   Renamed php.ini directive: arg_separator -&gt; arg_separator.output (Jani)</li>
 <li>Added FastCGI SAPI module. (Ben Mansell)</li>
 <li>Added array_reduce(), which allows iterative reduction of an array
@@ -2461,7 +2461,7 @@ More information on this release on <a href="/releases.php#4.0.6">our Releases p
   (Zeev, Zend Engine)</li>
 <li>Implemented high-performance zlib-based output compression - see
   zlib.output_compression INI directive. (Zeev)</li>
-<li>Improved ob_gzhandler() to support chunked output buffering - it's 
+<li>Improved ob_gzhandler() to support chunked output buffering - it's
   recommended to use it with 4KB chunks. (Zeev)</li>
 <li>Fixed chunked output buffering. (Zeev)</li>
 <li>Forced call_user_method() and call_user_method_array() to take the
@@ -2540,14 +2540,14 @@ More information on this release on <a href="/releases.php#4.0.6">our Releases p
   offset. (Andrei)</li>
 <li>Changed 'Z' flag to date() to always return timezone offset with
   negative sign if it's west of UTC. (Andrei)</li>
-<li>Added the HTML_Processor class which provides common functions for 
+<li>Added the HTML_Processor class which provides common functions for
   processing HTML. (Sterling)</li>
 <li>Added localeconv() and strcoll() functions for localization. (Sean)</li>
 <li>Added the xslt_set_base function. (Sterling)</li>
 <li>Added support for Zeus 3.3.8.</li>
 <li>Added odbc_error() and odbc_errormsg() functions. (Stig)</li>
 <li>New extension for vpopmail - <a href="http://www.inter7.com/vpopmail">http://www.inter7.com/vpopmail</a>,
-  give it a try, but keep in mind that it is not ready for production 
+  give it a try, but keep in mind that it is not ready for production
   environments. (David Croft, Boian Bonev)</li>
 <li>Added sybase_get_last_message() to the Sybase CT module. (Jan Fedak)</li>
 <li>Made ldap_list(), ldap_read() and ldap_search() do parallel search when
@@ -2586,10 +2586,10 @@ More information on this release on <a href="/releases.php#4.0.5">our Releases p
 
 <section class="version" id="4.0.4"><!-- {{{ 4.0.4 -->
 <h3>Version 4.0.4</h3>
-<?php release_date("19-Dec-2000"); ?>
+<?php release_date('19-Dec-2000'); ?>
 <ul>
-<li>Allow assigning a newly created object by reference. This is needed only if 
-  your constructor makes other data structures reference the $this object (for 
+<li>Allow assigning a newly created object by reference. This is needed only if
+  your constructor makes other data structures reference the $this object (for
   example, $GLOBALS["foobar"] =&amp; $this;)
   The new syntax is $obj =&amp; new MyClass(); (Andi, Zend Engine)</li>
 <li><pre>Allow for three expression types to be sent to functions which are requesting
@@ -2607,12 +2607,12 @@ More information on this release on <a href="/releases.php#4.0.5">our Releases p
 <li>Made ldap_get_entries() return an array even if there are no entries
   in search result. (Jani)</li>
 <li>Fixed bad mod_perl interaction which caused segfaults when using LFS (Sascha)</li>
-<li>const CONSTNAME now gets recognized. Before the patch only @const CONSTNAME 
+<li>const CONSTNAME now gets recognized. Before the patch only @const CONSTNAME
   description was recognized.</li>
 <li>Added the is_null() function that will return true if a variable is of
   type null. (Sterling)</li>
 <li>Fixed a bug which made readdir() unusable in some systems. (Jani)</li>
-<li>Added the get_defined_functions() function which returns a list of all 
+<li>Added the get_defined_functions() function which returns a list of all
   currently defined functions. (Sterling)</li>
 <li>Added the get_defined_vars() function which returns an associative array
   of all variables defined in the current scope and their subsequent values.
@@ -2664,7 +2664,7 @@ More information on this release on <a href="/releases.php#4.0.5">our Releases p
   affecting modules that were loaded via php.ini (Zeev)</li>
 <li>Fixed a bug in ftp_mkdir() when used on ftp server which doesn't return
   the full path (Jani)</li>
-<li>Added ImageCreateFromString() which creates an image stream out of 
+<li>Added ImageCreateFromString() which creates an image stream out of
   e.g. a MySQL blob. (Mathieu)</li>
 <li>Fixed a crash bug in imagewbmp() (Jani)</li>
 <li>Changed the sablot configuration file so that if you use any version of
@@ -2701,7 +2701,7 @@ More information on this release on <a href="/releases.php#4.0.5">our Releases p
 <li>Made session_destroy() close files before unlinking (Daniel)</li>
 <li>Added array_sum() function. (Andrei)</li>
 <li>Fixed a bug in session.c. The php_session_save_current_state did not check
-  if mod_data is NULL and such situation is possible if the user calls 
+  if mod_data is NULL and such situation is possible if the user calls
   session_module_name with a parameter. (alex@zend.com)</li>
 <li>Added IIS Admin extension. (Frank)</li>
 <li>OCIBindByName() now does better parameter-checking. (Thies)</li>
@@ -2718,7 +2718,7 @@ More information on this release on <a href="/releases.php#4.0.5">our Releases p
 <li>Renamed the shm_* functions to shmop_* (Derick)</li>
 <li>Updated ext/mysql/libmysql to version 3.23 (tim@mysql.com)</li>
 <li>Added ldap_get_option() and ldap_set_option() functions (Stig Venaas)</li>
-<li>Fixed a crash in CGI mode, in case no file was provided 
+<li>Fixed a crash in CGI mode, in case no file was provided
   (Daniel Beulshausen&amp; Zeev)</li>
 <li>Fixed possible crash bug in imap_fetchstructure() (Jani)</li>
 <li>Fixed possible crash bug in imap_open() (Jani &amp; Mark Musone)</li>
@@ -2742,7 +2742,7 @@ More information on this release on <a href="/releases.php#4.0.4">our Releases p
 
 <section class="version" id="4.0.3"><!-- {{{ 4.0.3 -->
 <h3>Version 4.0.3</h3>
-<?php release_date("11-Oct-2000"); ?>
+<?php release_date('11-Oct-2000'); ?>
 <ul>
 <li>Fixed a possible crash in -a interactive mode (Zeev, Zend Engine)</li>
 <li>Added mysql_escape_string() (Peter A. Savitch and &amp; Brian Wang)</li>
@@ -2764,7 +2764,7 @@ More information on this release on <a href="/releases.php#4.0.4">our Releases p
 <li>Added the shmop extension. It allows more general ways of shared memory
   access. (thanks to Ilia Alshanestky &lt;iliaa@home.com&gt; and Slava Poliakov
   &lt;slavapl@mailandnews.com&gt; (Derick)</li>
-<li>Added the ability for CURLOPT_POSTFIELDS to accept an associative array of 
+<li>Added the ability for CURLOPT_POSTFIELDS to accept an associative array of
   HTTP POST variables and values. (Sterling)</li>
 <li>Added the CURLOPT_HTTPHEADER option to curl_setopt(). (Sterling)</li>
 <li>Added the curl_error() and curl_errno() functions. (Sterling)</li>
@@ -2825,7 +2825,7 @@ More information on this release on <a href="/releases.php#4.0.3">our Releases p
 
 <section class="version" id="4.0.2"><!-- {{{ 4.0.2 -->
 <h3>Version 4.0.2</h3>
-<?php release_date("29-Aug-2000"); ?>
+<?php release_date('29-Aug-2000'); ?>
 <ul>
 <li>Added PHP API for Zend's ticks. (Stig)</li>
 <li>PHP 3 regression testing framework re-born (Stig)</li>
@@ -2874,7 +2874,7 @@ More information on this release on <a href="/releases.php#4.0.3">our Releases p
 <li>Added 4th optional parameter to sybase_[p]connect to specify the charset
   for the connection (alf@alpha.ulatina.ac.cr)</li>
 <li>Fixed support for current thttpd releases. (Sascha)</li>
-<li>Added support for kerberized IMAP library using --with-kerberos 
+<li>Added support for kerberized IMAP library using --with-kerberos
   (Rasmus, Sascha)</li>
 <li>Virtualize realpath, chmod, chown and utime (Stas)</li>
 <li>Support content-encoding headers in file upload MIME parts
@@ -2996,7 +2996,7 @@ More information on this release on <a href="/releases.php#4.0.2">our Releases p
 
 <section class="version" id="4.0.1"><!-- {{{ 4.0.1 -->
 <h3>Version 4.0.1</h3>
-<?php release_date("28-Jun-2000"); ?>
+<?php release_date('28-Jun-2000'); ?>
 <ul>
 <li>Fixed a possible crash in the LDAP modify code. (Eric Kilfoil)</li>
 <li>Fixed a bug in opendir(), which prevented readdir() from working properly if
@@ -3005,7 +3005,7 @@ More information on this release on <a href="/releases.php#4.0.2">our Releases p
 <li>Removed 8KB limit on line length of the file() function (Zeev)</li>
 <li>Disabled dl() when PHP is being used as a module inside a multithreaded web
   server - it didn't work before, and caused weird results (Zeev)</li>
-<li>Added the ImageColorClosestHWB(), ImageCopyMerge() and ImagePaletteCopy() 
+<li>Added the ImageColorClosestHWB(), ImageCopyMerge() and ImagePaletteCopy()
   functions. (Sterling)</li>
 <li>Added ImageCreateFromWBMP() function. (Jouni)</li>
 <li>Fixed problems with POST requests under the NSAPI module. (Roberto Biancardi)</li>
@@ -3031,7 +3031,7 @@ More information on this release on <a href="/releases.php#4.0.2">our Releases p
 <li>Updated strtotime() to handle many more formats. It now has complete
   feature parity with GNU date command. (Andrei)</li>
 <li>Added support for multiple arguments in unset(). (Faisal, Zend Engine)</li>
-<li>Functions that expect a resource but are passed something else now return 
+<li>Functions that expect a resource but are passed something else now return
   NULL instead of FALSE. (Thies, Zend Engine)</li>
 <li>Fixed gmmktime(), on certain systems it incorrectly adjusted for the timezone
   offset and daylight savings time. (Andrei)</li>
@@ -3160,7 +3160,7 @@ More information on this release on <a href="/releases.php#4.0.1">our Releases p
 
 <section class="version" id="4.0.0"><!-- {{{ 4.0.0 -->
 <h3>Version 4.0.0 Release</h3>
-<?php release_date("22-May-2000"); ?>
+<?php release_date('22-May-2000'); ?>
 <ul>
 <li>Allow the writing of flash files to stdout.</li>
 <li>Fixed a crash bug in .phps syntax-highlighted files (Andi)</li>
@@ -3183,7 +3183,7 @@ More information on this release on <a href="/releases.php#4.0.0">our Releases p
 
 <section class="version" id="4.0RC2">
 <h3>Version 4.0, Release Candidate 2</h3>
-<?php release_date("08-May-2000"); ?>
+<?php release_date('08-May-2000'); ?>
 <ul>
 <li>NSAPI WIN32 Module compilable, untested (Shane)</li>
 <li>Apache WIN32 Module compilable and lightly tested. (Shane)</li>
@@ -3201,7 +3201,7 @@ More information on this release on <a href="/releases.php#4.0.0">our Releases p
 <li>Added configure time checking for bcmath package. (Joey, Sascha)</li>
 <li>Added get_declared_classes(). (Andrei, Zend Engine)</li>
 <li>Added initial NSAPI module from Jayakumar Muthukumarasamy. (Rasmus)</li>
-<li>Added the SWF module which allows you to create Macromedia Flash files via 
+<li>Added the SWF module which allows you to create Macromedia Flash files via
   libswf. (Sterling)</li>
 <li>Improved UNIX build system to support more vendor make tools (Sascha)</li>
 <li>Updated natural comparison/sorting algorithm by Martin Pool
@@ -3271,7 +3271,7 @@ More information on this release on <a href="/releases.php#4.0.0">our Releases p
 <li>Added --enable-libgcc switch to force linking against libgcc (Sascha)</li>
 <li>Fixed dynamic loading where extension_dir had no trailing slash (Sascha)</li>
 <li>Fixed dynamic loading on OpenBSD (Sascha)</li>
-<li>Improved POSIX threads check. ZTS works now on at least Linux, Solaris, 
+<li>Improved POSIX threads check. ZTS works now on at least Linux, Solaris,
   FreeBSD and OpenBSD (Sascha, TSRM)</li>
 <li>Added !== operator support. (Torben, Zend Engine)</li>
 </ul>
@@ -3280,7 +3280,7 @@ More information on this release on <a href="/releases.php#4.0.0">our Releases p
 
 <section class="version" id="4.0RC1">
 <h3>Version 4.0, Release Candidate 1</h3>
-<?php release_date("27-Mar-2000"); ?>
+<?php release_date('27-Mar-2000'); ?>
 <ul>
 <li>Added support for UCD-SNMP 4.1.x (Sascha)</li>
 <li>Fixed a data corruption bug in mysql_result(), if used in table.fieldname
@@ -3369,7 +3369,7 @@ More information on this release on <a href="/releases.php#4.0.0">our Releases p
 
 <section class="version" id="4.0b4l1">
 <h3>Version 4.0, Beta 4 Patch Level 1</h3>
-<?php release_date("21-Feb-2000"); ?>
+<?php release_date('21-Feb-2000'); ?>
 <ul>
 <li>Fixed crash when magic_quotes were switched off. (Thies)</li>
 <li>Support for pdflib 2.30 (Uwe)</li>
@@ -3379,7 +3379,7 @@ More information on this release on <a href="/releases.php#4.0.0">our Releases p
 
 <section class="version" id="4.0b4">
 <h3>Version 4.0, Beta 4</h3>
-<?php release_date("20-Feb-2000"); ?>
+<?php release_date('20-Feb-2000'); ?>
 <ul>
 <li>Introduced $HTTP_POST_FILES[], that contains information about files uploaded
   through HTTP upload (Zeev)</li>
@@ -3431,7 +3431,7 @@ More information on this release on <a href="/releases.php#4.0.0">our Releases p
 <li>Added the XML Expat library to the standard PHP source distribution thanks
   to its author James Clark (Andi &amp; Zeev)</li>
 <li>Added XML support to the default Win32 build (Andi &amp; Zeev)</li>
-<li>Added socket_get_status() function. Renamed set_socket_timeout() to 
+<li>Added socket_get_status() function. Renamed set_socket_timeout() to
   socket_set_timeout() and set_socket_blocking() to socket_set_blocking(). (Andrei)</li>
 <li>Added realpath() function. (Andrei)</li>
 <li>mktime interprets years in the range 0-70 now as 2000-2070. You can
@@ -3535,7 +3535,7 @@ More information on this release on <a href="/releases.php#4.0.0">our Releases p
 <li>Fixed a leak when using automatic output buffering (Zeev)</li>
 <li>Introduced PECL - PHP Extension and Code Library
   (prounounced "pickle") (Stig)</li>
-<li>Fixed inconsistencies in the implementation of here-docs (Andi &amp; Zeev, Zend 
+<li>Fixed inconsistencies in the implementation of here-docs (Andi &amp; Zeev, Zend
   library)</li>
 <li>Fixed a problem with constant class-member initializations (Andi &amp; Zeev,
   Zend Engine)</li>
@@ -3554,7 +3554,7 @@ More information on this release on <a href="/releases.php#4.0.0">our Releases p
 
 <section class="version" id="4.0b3">
 <h3>Version 4.0 Beta 3</h3>
-<?php release_date("16-Nov-1999"); ?>
+<?php release_date('16-Nov-1999'); ?>
 <ul>
 <li>ucfirst()/ucwords() no longer modify arg1 (Thies)</li>
 <li>Fixed strtr() not to modify arg1 (Thies)</li>
@@ -3565,7 +3565,7 @@ More information on this release on <a href="/releases.php#4.0.0">our Releases p
 <li>Fixed selecting nested-tables in OCI8. (Thies)</li>
 <li>RFC-854 fix for internal FTP-Code. Commands have to end in "\r\n" (Thies)</li>
 <li>Fixed OpenLink ODBC support (Stig)</li>
-<li>min(),max(),a[r]sort(),[r]sort(),k[r]sort() now work consistent with the 
+<li>min(),max(),a[r]sort(),[r]sort(),k[r]sort() now work consistent with the
   language-core. (Thies)</li>
 <li>tempnam() now uses mkstemp() if available (Stig)</li>
 <li>serialize() and var_dump() now honor the precision as set in php.ini
@@ -3625,7 +3625,7 @@ More information on this release on <a href="/releases.php#4.0.0">our Releases p
 <li>Ported range() and shuffle() from PHP 3 to PHP 4 (Andrei)</li>
 <li>Fixed header("HTTP/..."); behaviour (Sascha)</li>
 <li>Improved UNIX build system. Now utilizes libtool (Sascha)</li>
-<li>Upgrade some more internal functions to use new Zend function API. (Thies, 
+<li>Upgrade some more internal functions to use new Zend function API. (Thies,
   Zend Engine)</li>
 <li>Fixed backwards incompatibility with ereg() (Thies)</li>
 <li>Updated Zend garbage collection with a much more thorough method.
@@ -3678,7 +3678,7 @@ More information on this release on <a href="/releases.php#4.0.0">our Releases p
 <li>Resourcified XML (Thies)</li>
 <li>Fixed a memory leak in the Apache per-directory directives handler (Zeev)</li>
 <li>Added array_count_values() function. (Thies)</li>
-<li>snmp, pgsql, mysql and gd modules can be built as dynamically loaded 
+<li>snmp, pgsql, mysql and gd modules can be built as dynamically loaded
   modules (Greg)</li>
 <li>OCI8 fix for fetching empty LOBs (Thies)</li>
 <li>Added user-level callbacks for session module (Sascha)</li>
@@ -3688,7 +3688,7 @@ More information on this release on <a href="/releases.php#4.0.0">our Releases p
 <li>Fixed unserializing objects (Thies)</li>
 <li>PHP 4.0 now serializes Objects as 'O' (not understood by PHP 3.0), but
   unserializes PHP 3.0 serialized objects as expected. (Thies)</li>
-<li>Made serialize/unserialize work on classes. If the class is known at 
+<li>Made serialize/unserialize work on classes. If the class is known at
   unserialize() time, you'll get back a fully working object! (Thies)</li>
 <li>Reworked preg_* functions according to the new PCRE API, which also made
   them behave much more like Perl ones (Andrei)</li>
@@ -3712,7 +3712,7 @@ More information on this release on <a href="/releases.php#4.0.0">our Releases p
 <li>Added session_unset() function (Andrei)</li>
 <li>Fixed double session globals shutdown crash (Andrei)</li>
 <li>Fixed crash related to ignore_user_abort ini entry (Andrei)</li>
-<li>Added support for external entropy sources for session id creation 
+<li>Added support for external entropy sources for session id creation
   (on Unices /dev/random and /dev/urandom) (Sascha)</li>
 <li>Added gpc_globals variable directive to php.ini.  By default it is On, but
   if it is set to Off, GET, POST and Cookie variables will not be inserted
@@ -3780,7 +3780,7 @@ More information on this release on <a href="/releases.php#4.0.0">our Releases p
 
 <section class="version" id="4.0b2">
 <h3>Version 4.0 Beta 2</h3>
-<?php release_date("09-Aug-1999"); ?>
+<?php release_date('09-Aug-1999'); ?>
 <ul>
 <li>Fixed a problem when sending HTTP/1.x header lines using header() (Zeev)</li>
 <li>Win32 builds now include the ODBC module built-in (Zeev)</li>
@@ -3863,7 +3863,7 @@ More information on this release on <a href="/releases.php#4.0.0">our Releases p
 
 <section class="version" id="4.0b1">
 <h3>Version 4.0 Beta 1</h3>
-<?php release_date("19-Jul-1999"); ?>
+<?php release_date('19-Jul-1999'); ?>
 <ul>
 <li>First public beta of PHP 4.0</li>
 </ul>

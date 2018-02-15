@@ -2,7 +2,7 @@
 // $Id$
 $_SERVER['BASE_PAGE'] = 'releases/4_2_1_fr.php';
 include_once $_SERVER['DOCUMENT_ROOT'] . '/include/prepend.inc';
-site_header("Annonce de publication de PHP 4.2.1", array("lang" => "fr"));
+site_header('Annonce de publication de PHP 4.2.1', array('lang' => 'fr'));
 ?>
 
 <h1>Annonce de publication de PHP 4.2.1</h1>
@@ -44,7 +44,7 @@ site_header("Annonce de publication de PHP 4.2.1", array("lang" => "fr"));
 </ul>
 
 <p>
- Pour une liste compl&egrave;te des modifications de PHP 4.2.1, voyez le fichier 
+ Pour une liste compl&egrave;te des modifications de PHP 4.2.1, voyez le fichier
  <a href="/ChangeLog-4.php#4.2.1">ChangeLog</a>.
 </p>
 

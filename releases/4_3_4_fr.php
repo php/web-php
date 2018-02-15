@@ -2,7 +2,7 @@
 // $Id$
 $_SERVER['BASE_PAGE'] = 'releases/4_3_4.php';
 include_once $_SERVER['DOCUMENT_ROOT'] . '/include/prepend.inc';
-site_header("Annonce de publication de PHP 4.3.4", array("lang" => "fr"));
+site_header('Annonce de publication de PHP 4.3.4', array('lang' => 'fr'));
 ?>
 
 <h1>Annonce de publication de PHP 4.3.4</h1>
@@ -10,7 +10,7 @@ site_header("Annonce de publication de PHP 4.3.4", array("lang" => "fr"));
 <p>[ <a href="/releases/4_3_4.php">English version</a> ]</p>
 
 <p>
- Apr&egrave;s un long processus d'assurance qualit&eacute;, 
+ Apr&egrave;s un long processus d'assurance qualit&eacute;,
  <a href="/downloads.php">PHP 4.3.4</a> est d&eacute;sormais disponible!<br>
  C'est une version mineure d'entretien, avec de nombreuses corrections de bogues.
  Tous les utilisateurs sont invit&eacute;s &agrave; passer &agrave; cette nouvelle version.
@@ -19,8 +19,8 @@ site_header("Annonce de publication de PHP 4.3.4", array("lang" => "fr"));
 <h2>Version de correction de bogues</h2>
 
 <p>
- PHP 4.3.4 contient notamment les corrections, ajouts et 
- am&eacute;liorations suivantes : 
+ PHP 4.3.4 contient notamment les corrections, ajouts et
+ am&eacute;liorations suivantes :
 </p>
 
 <ul>
