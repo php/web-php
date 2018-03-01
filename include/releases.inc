@@ -1754,6 +1754,39 @@ $OLDRELEASES = array (
       'date' => '21 Jul 2016',
       'museum' => false,
     ),
+    '5.5.38' =>
+    array (
+      'announcement' =>
+      array (
+        'English' => '/releases/5_5_38.php',
+      ),
+      'source' =>
+      array (
+        0 =>
+        array (
+          'filename' => 'php-5.5.38.tar.bz2',
+          'name' => 'PHP 5.5.38 (tar.bz2)',
+          'sha256' => '473c81ebb2e48ca468caee031762266651843d7227c18a824add9b07b9393e38',
+          'date' => '21 Jul 2016',
+        ),
+        1 =>
+        array (
+          'filename' => 'php-5.5.38.tar.gz',
+          'name' => 'PHP 5.5.38 (tar.gz)',
+          'sha256' => '4f458c9b504269615715a62f182b7c2f89bb8284f484befc221b56a1571b506e',
+          'date' => '21 Jul 2016',
+        ),
+        2 =>
+        array (
+          'filename' => 'php-5.5.38.tar.xz',
+          'name' => 'PHP 5.5.38 (tar.xz)',
+          'sha256' => 'cb527c44b48343c8557fe2446464ff1d4695155a95601083e5d1f175df95580f',
+          'date' => '21 Jul 2016',
+        ),
+      ),
+      'date' => '21 Jul 2016',
+      'museum' => false,
+    ),
     '5.6.23' => 
     array (
       'announcement' => 
@@ -1811,9 +1844,9 @@ $OLDRELEASES = array (
         ),
         2 => 
         array (
-          'filename' => 'php-5.5.36.tar.xz',
-          'name' => 'PHP 5.5.36 (tar.xz)',
-          'sha256' => 'e1bbe33d6b4da66b15c483131520a9fc505eeb6629fa70c5cfba79590a1d0801',
+          'filename' => 'php-5.5.37.tar.xz',
+          'name' => 'PHP 5.5.37 (tar.xz)',
+          'sha256' => 'c322444fdf6d3ba26aa67d67ee32d1e815a877f35831351c83763431a80e3612',
           'date' => '23 Jun 2016',
         ),
       ),
