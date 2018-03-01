@@ -2,29 +2,29 @@
 $OLDRELEASES = array (
   7 => 
   array (
-    '7.2.2' =>
+    '7.2.2' => 
     array (
-      'announcement' =>
+      'announcement' => 
       array (
         'English' => '/releases/7_2_2.php',
       ),
-      'source' =>
+      'source' => 
       array (
-        0 =>
+        0 => 
         array (
           'filename' => 'php-7.2.2.tar.bz2',
           'name' => 'PHP 7.2.2 (tar.bz2)',
           'sha256' => 'f841ac58e17471f2241ea892b34edb01dc9b93ad9f661ffe4e3f1f476a8f4aee',
           'date' => '1 Feb 2018',
         ),
-        1 =>
+        1 => 
         array (
           'filename' => 'php-7.2.2.tar.gz',
           'name' => 'PHP 7.2.2 (tar.gz)',
           'sha256' => '5963df05fec21927c03fe9f7bf379be2d1eacde6c0f9dcde6143c7133e55abd4',
           'date' => '1 Feb 2018',
         ),
-        2 =>
+        2 => 
         array (
           'filename' => 'php-7.2.2.tar.xz',
           'name' => 'PHP 7.2.2 (tar.xz)',
@@ -101,29 +101,29 @@ $OLDRELEASES = array (
       'date' => '4 Jan 2018',
       'museum' => false,
     ),
-    '7.1.13' =>
+    '7.1.13' => 
     array (
-      'announcement' =>
+      'announcement' => 
       array (
         'English' => '/releases/7_1_13.php',
       ),
-      'source' =>
+      'source' => 
       array (
-        0 =>
+        0 => 
         array (
           'filename' => 'php-7.1.13.tar.bz2',
           'name' => 'PHP 7.1.13 (tar.bz2)',
           'sha256' => '35fda51d2d44600940185fd5818d336a79e77ab3c98e2bd075091f2f91cf98a1',
           'date' => '4 Jan 2018',
         ),
-        1 =>
+        1 => 
         array (
           'filename' => 'php-7.1.13.tar.gz',
           'name' => 'PHP 7.1.13 (tar.gz)',
           'sha256' => '12fcbf59c9eb9af215ef38815d5da39b9d74549092c34b0dfc31442699740ce9',
           'date' => '4 Jan 2018',
         ),
-        2 =>
+        2 => 
         array (
           'filename' => 'php-7.1.13.tar.xz',
           'name' => 'PHP 7.1.13 (tar.xz)',
@@ -1490,6 +1490,39 @@ $OLDRELEASES = array (
   ),
   5 => 
   array (
+    '5.6.33' => 
+    array (
+      'announcement' => 
+      array (
+        'English' => '/releases/5_6_33.php',
+      ),
+      'source' => 
+      array (
+        0 => 
+        array (
+          'filename' => 'php-5.6.33.tar.bz2',
+          'name' => 'PHP 5.6.33 (tar.bz2)',
+          'sha256' => '07f696a9761dcd839e2045c95c3a4d2ffb52c54417477cca9d30a14975b831cc',
+          'date' => '04 Jan 2018',
+        ),
+        1 => 
+        array (
+          'filename' => 'php-5.6.33.tar.gz',
+          'name' => 'PHP 5.6.33 (tar.gz)',
+          'sha256' => 'bedfac81cfaa25961812a1aec458c4109411a14991b43a416343ffb830b8da6a',
+          'date' => '04 Jan 2018',
+        ),
+        2 => 
+        array (
+          'filename' => 'php-5.6.33.tar.xz',
+          'name' => 'PHP 5.6.33 (tar.xz)',
+          'sha256' => '9004995fdf55f111cd9020e8b8aff975df3d8d4191776c601a46988c375f3553',
+          'date' => '04 Jan 2018',
+        ),
+      ),
+      'date' => '04 Jan 2018',
+      'museum' => false,
+    ),
     '5.6.32' => 
     array (
       'announcement' => 
@@ -1787,29 +1820,29 @@ $OLDRELEASES = array (
       'date' => '21 Jul 2016',
       'museum' => false,
     ),
-    '5.5.38' =>
+    '5.5.38' => 
     array (
-      'announcement' =>
+      'announcement' => 
       array (
         'English' => '/releases/5_5_38.php',
       ),
-      'source' =>
+      'source' => 
       array (
-        0 =>
+        0 => 
         array (
           'filename' => 'php-5.5.38.tar.bz2',
           'name' => 'PHP 5.5.38 (tar.bz2)',
           'sha256' => '473c81ebb2e48ca468caee031762266651843d7227c18a824add9b07b9393e38',
           'date' => '21 Jul 2016',
         ),
-        1 =>
+        1 => 
         array (
           'filename' => 'php-5.5.38.tar.gz',
           'name' => 'PHP 5.5.38 (tar.gz)',
           'sha256' => '4f458c9b504269615715a62f182b7c2f89bb8284f484befc221b56a1571b506e',
           'date' => '21 Jul 2016',
         ),
-        2 =>
+        2 => 
         array (
           'filename' => 'php-5.5.38.tar.xz',
           'name' => 'PHP 5.5.38 (tar.xz)',
