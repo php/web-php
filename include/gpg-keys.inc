@@ -24,6 +24,10 @@ pub   2048R/31CBD89E 2016-12-08
       Key fingerprint = 5289 95BF EDFB A719 1D46  839E F9BA 0ADA 31CB D89E
 uid                  Joe Watkins &lt;krakjoe@php.net&gt;
 
+pub   4096R/70D12172 2017-04-14 [expires: 2024-04-21]
+      Key fingerprint = 1729 F839 38DA 44E2 7BA0  F4D3 DBDB 3974 70D1 2172
+uid                  Sara Golemon &lt;pollita@php.net&gt;
+
 GPG
 ,
     "7.0" => <<< GPG

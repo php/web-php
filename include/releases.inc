@@ -2,6 +2,39 @@
 $OLDRELEASES = array (
   7 => 
   array (
+    '7.0.27' => 
+    array (
+      'announcement' => 
+      array (
+        'English' => '/releases/7_0_27.php',
+      ),
+      'source' => 
+      array (
+        0 => 
+        array (
+          'filename' => 'php-7.0.27.tar.bz2',
+          'name' => 'PHP 7.0.27 (tar.bz2)',
+          'sha256' => '99fa2563bb4c4c1cde9febe87cfe97324227d7b4b8828f2e936e507127394131',
+          'date' => '04 Jan 2018',
+        ),
+        1 => 
+        array (
+          'filename' => 'php-7.0.27.tar.gz',
+          'name' => 'PHP 7.0.27 (tar.gz)',
+          'sha256' => '809c0181e970dd17c6a6cabbf64518e719c7253e7490f8e1279bc1e1fbdf7996',
+          'date' => '04 Jan 2018',
+        ),
+        2 => 
+        array (
+          'filename' => 'php-7.0.27.tar.xz',
+          'name' => 'PHP 7.0.27 (tar.xz)',
+          'sha256' => '4b2bc823e806dbf7b62fe0b92b0d14b0c6e03f88c3fc5d96278416c54ce11f6c',
+          'date' => '04 Jan 2018',
+        ),
+      ),
+      'date' => '04 Jan 2018',
+      'museum' => false,
+    ),
     '7.2.1' => 
     array (
       'announcement' => 
@@ -29,6 +62,39 @@ $OLDRELEASES = array (
           'filename' => 'php-7.2.1.tar.xz',
           'name' => 'PHP 7.2.1 (tar.xz)',
           'sha256' => '6c6cf82fda6660ed963821eb0525214bb3547e8e29f447b9c15b2d8e6efd8822',
+          'date' => '4 Jan 2018',
+        ),
+      ),
+      'date' => '4 Jan 2018',
+      'museum' => false,
+    ),
+    '7.1.13' =>
+    array (
+      'announcement' =>
+      array (
+        'English' => '/releases/7_1_13.php',
+      ),
+      'source' =>
+      array (
+        0 =>
+        array (
+          'filename' => 'php-7.1.13.tar.bz2',
+          'name' => 'PHP 7.1.13 (tar.bz2)',
+          'sha256' => '35fda51d2d44600940185fd5818d336a79e77ab3c98e2bd075091f2f91cf98a1',
+          'date' => '4 Jan 2018',
+        ),
+        1 =>
+        array (
+          'filename' => 'php-7.1.13.tar.gz',
+          'name' => 'PHP 7.1.13 (tar.gz)',
+          'sha256' => '12fcbf59c9eb9af215ef38815d5da39b9d74549092c34b0dfc31442699740ce9',
+          'date' => '4 Jan 2018',
+        ),
+        2 =>
+        array (
+          'filename' => 'php-7.1.13.tar.xz',
+          'name' => 'PHP 7.1.13 (tar.xz)',
+          'sha256' => '1a0b3f2fb61959b57a3ee01793a77ed3f19bde5aa90c43dcacc85ea32f64fc10',
           'date' => '4 Jan 2018',
         ),
       ),
