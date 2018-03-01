@@ -8,7 +8,7 @@ site_header("PHP 7.0.28 Release Announcement");
      <h1>PHP 7.0.28 Release Announcement</h1>
      
      <p>The PHP development team announces the immediate availability of PHP
-     7.0.28. This is a security release. One security bug were fixed in
+     7.0.28. This is a security release. One security bug was fixed in
      this release.
      
      All PHP 7.0 users are encouraged to upgrade to this version.
