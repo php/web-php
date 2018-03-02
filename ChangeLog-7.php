@@ -7,6 +7,109 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
 
 <h1>PHP 7 ChangeLog</h1>
 
+<section class="version" id="7.2.3"><!-- {{{ 7.2.3 -->
+<h3>Version 7.2.3</h3>
+<b><?php release_date('01-Mar-2018'); ?></b>
+<ul><li>Core:
+<ul>
+  <li><?php bugfix(75864); ?> ("stream_isatty" returns wrong value on s390x).</li>
+</ul></li>
+<li>Apache2Handler:
+<ul>
+  <li><?php bugfix(75882); ?> (a simple way for segfaults in threadsafe php just with configuration).</li>
+</ul></li>
+<li>Date:
+<ul>
+  <li><?php bugfix(75857); ?> (Timezone gets truncated when formatted).</li>
+  <li><?php bugfix(75928); ?> (Argument 2 for `DateTimeZone::listIdentifiers()` should accept `null`).</li>
+  <li><?php bugfix(68406); ?> (calling var_dump on a DateTimeZone object modifies it).</li>
+</ul></li>
+<li>LDAP:
+<ul>
+  <li><?php bugfix(49876); ?> (Fix LDAP path lookup on 64-bit distros).</li>
+</ul></li>
+<li>libxml2:
+<ul>
+  <li><?php bugfix(75871); ?> (use pkg-config where available).</li>
+</ul></li>
+<li>PGSQL:
+<ul>
+  <li><?php bugfix(75838); ?> (Memory leak in pg_escape_bytea()).</li>
+</ul></li>
+<li>Phar:
+<ul>
+  <li><?php bugfix(54289); ?> (Phar::extractTo() does not accept specific directories to be extracted).</li>
+  <li><?php bugfix(65414); ?> (deal with leading slash while adding files correctly).</li>
+  <li><?php bugfix(65414); ?> (deal with leading slash when adding files correctly).</li>
+</ul></li>
+<li>ODBC:
+<ul>
+  <li><?php bugfix(73725); ?> (Unable to retrieve value of varchar(max) type).</li>
+</ul></li>
+<li>Opcache:
+<ul>
+  <li><?php bugfix(75729); ?> (opcache segfault when installing Bitrix).</li>
+  <li><?php bugfix(75893); ?> (file_get_contents $http_response_header variable bugged with opcache).</li>
+  <li><?php bugfix(75938); ?> (Modulus value not stored in variable).</li>
+</ul></li>
+<li>SPL:
+<ul>
+  <li><?php bugfix(74519); ?> (strange behavior of AppendIterator).</li>
+</ul></li>
+<li>Standard:
+<ul>
+  <li><?php bugfix(75916); ?> (DNS_CAA record results contain garbage).</li>
+  <li><?php bugfix(75981); ?> (Prevent reading beyond buffer start in http wrapper).</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
+<section class="version" id="7.1.15"><!-- {{{ 7.1.15 -->
+<h3>Version 7.1.15</h3>
+<b><?php release_date('01-Mar-2018'); ?></b>
+<ul><li>Apache2Handler:
+<ul>
+  <li><?php bugfix(75882); ?> (a simple way for segfaults in threadsafe php just with configuration).</li>
+</ul></li>
+<li>Date:
+<ul>
+  <li><?php bugfix(75857); ?> (Timezone gets truncated when formatted).</li>
+  <li><?php bugfix(75928); ?> (Argument 2 for `DateTimeZone::listIdentifiers()` should accept `null`).</li>
+  <li><?php bugfix(68406); ?> (calling var_dump on a DateTimeZone object modifies it).</li>
+</ul></li>
+<li>PGSQL:
+<ul>
+  <li>Fixed #75838 (Memory leak in pg_escape_bytea()).</li>
+</ul></li>
+<li>ODBC:
+<ul>
+  <li><?php bugfix(73725); ?> (Unable to retrieve value of varchar(max) type).</li>
+</ul></li>
+<li>LDAP:
+<ul>
+  <li><?php bugfix(49876); ?> (Fix LDAP path lookup on 64-bit distros).</li>
+</ul></li>
+<li>libxml2:
+<ul>
+  <li><?php bugfix(75871); ?> (use pkg-config where available).</li>
+</ul></li>
+<li>Phar:
+<ul>
+  <li><?php bugfix(65414); ?> (deal with leading slash when adding files correctly).</li>
+</ul></li>
+<li>SPL:
+<ul>
+  <li><?php bugfix(74519); ?> (strange behavior of AppendIterator).</li>
+</ul></li>
+<li>Standard:
+<ul>
+  <li><?php bugfix(75916); ?> (DNS_CAA record results contain garbage).</li>
+  <li><?php bugfix(75981); ?> (stack-buffer-overflow while parsing HTTP response).</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
+
 <section class="version" id="7.0.28"><!-- {{{ 7.0.28 -->
 <h3>Version 7.0.28</h3>
 <b><?php release_date('01-Mar-2018'); ?></b>

@@ -8,6 +8,16 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 
 <h1>PHP 5 ChangeLog</h1>
 
+<section class="version" id="5.6.34"><!-- {{{ 5.6.34 -->
+<h3>Version 5.6.34</h3>
+<b><?php release_date('01-Mar-2018'); ?></b>
+<ul><li>Standard:
+<ul>
+  <li><?php bugfix(75981); ?> (stack-buffer-overflow while parsing HTTP response).</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
 <section class="version" id="5.6.33"><!-- {{{ 5.6.33 -->
 <h3>Version 5.6.33</h3>
 <b><?php release_date('04-Jan-2018'); ?></b>
