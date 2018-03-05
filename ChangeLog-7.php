@@ -59,7 +59,7 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
 <li>Standard:
 <ul>
   <li><?php bugfix(75916); ?> (DNS_CAA record results contain garbage).</li>
-  <li><?php bugfix(75981); ?> (Prevent reading beyond buffer start in http wrapper).</li>
+  <li><?php bugfix(75981); ?> (stack-buffer-overflow while parsing HTTP response). (CVE-2018-7584)</li>
 </ul></li>
 </ul>
 <!-- }}} --></section>
@@ -104,7 +104,7 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
 <li>Standard:
 <ul>
   <li><?php bugfix(75916); ?> (DNS_CAA record results contain garbage).</li>
-  <li><?php bugfix(75981); ?> (stack-buffer-overflow while parsing HTTP response).</li>
+  <li><?php bugfix(75981); ?> (stack-buffer-overflow while parsing HTTP response). (CVE-2018-7584)</li>
 </ul></li>
 </ul>
 <!-- }}} --></section>
@@ -115,7 +115,7 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
 <b><?php release_date('01-Mar-2018'); ?></b>
 <ul><li>Standard:
 <ul>
-  <li><?php bugfix(75981); ?> (stack-buffer-overflow while parsing HTTP response).</li>
+  <li><?php bugfix(75981); ?> (stack-buffer-overflow while parsing HTTP response). (CVE-2018-7584)</li>
 </ul></li>
 </ul>
 <!-- }}} --></section>
