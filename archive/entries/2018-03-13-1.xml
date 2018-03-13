@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom" xmlns:default="http://php.net/ns/news">
+  <title>Darkmira Tour PHP 2018</title>
+  <id>http://php.net/archive/2018.php#id2018-03-13-1</id>
+  <published>2018-03-13T11:35:08-03:00</published>
+  <updated>2018-03-13T11:35:08-03:00</updated>
+  <default:finalTeaserDate xmlns="http://php.net/ns/news">2018-04-14</default:finalTeaserDate>
+  <category term="conferences" label="Conference announcement"/>
+  <link href="http://php.net/conferences/index.php#id2018-03-13-1" rel="alternate" type="text/html"/>
+  <default:newsImage xmlns="http://php.net/ns/news" link="https://php.darkmiratour.rocks/2018" title="Darkmira Tour PHP 2018">dm.png</default:newsImage>
+  <link href="https://php.darkmiratour.rocks/2018" rel="via" type="text/html"/>
+  <content type="xhtml">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+     With a lot of PHP's Rockstars, Darkmira Tour PHP 2018 is a conference focused on security and quality in PHP's ecosystems, in Brazil's capital in April 14-15. During the two days of Darkmira, you can interact with all the 400 participants along the coffee breaks, demonstrations and networking, and learn a lot about the PHP's ecosystems!
+     
+     For more information, visit https://php.darkmiratour.rocks/2018.
+     
+    </div>
+  </content>
+</entry>
