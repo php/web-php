@@ -55,7 +55,7 @@ $confs = array(2, 3);
 
 $imageRestriction = array(
 	'width' => 400,
-	'height' => 400
+	'height' => 250
 );
 
 do {
