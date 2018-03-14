@@ -416,6 +416,10 @@ aside.tips .panel > span:after {
   display:block;
   border-bottom:1px dotted #666;
 }
+aside.tips .panel > a {
+  display:block;
+  border-bottom: none;
+}
 aside.tips .panel > a:hover:after {
   border-color:#AE508D;
 }
