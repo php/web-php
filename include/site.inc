@@ -250,9 +250,11 @@ function print_mirror_box($countryname, $countrycode, $mirrors, $file = null, $d
 <?php
     $url = $mirror["url"];
     $urltitle = substr($url, strpos($url, '//') + 2, -1);
-    if ($file) {
-        $what = $direct_download ? "this" : "a";
-        $url = $mirror["url"] . "get/$file/from/$what/mirror";
+
+    if ($file && $direct_download) {
+        $url = $mirror["url"] . "download/$file";
+    } elseif ($file && !$direct_download) {
+        $url = $mirror["url"] . "get/$file/from/a/mirror";
     }
 ?>
             <div class="entry">
