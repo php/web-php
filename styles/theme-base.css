@@ -1864,6 +1864,25 @@ aside.tips div.inner {
   list-style-type: none;
 }
 
+/* https://github.com/mourner/dead-simple-grid */
+.row .row { margin:  0 -1.5em; }
+.col      { padding: 1.5em; }
+
+.row:after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+@media only screen { .col {
+    float: left;
+    width: 100%;
+    box-sizing: border-box;
+}}
+@media only screen and (min-width: 30em) {
+  .col { width: 50%; }
+}
+
 /* }}} */
 
 
