@@ -61,6 +61,12 @@ pub   4096R/7267B52D 2012-03-20 [expires: 2016-03-19]
       Key fingerprint = 0B96 609E 270F 565C 1329  2B24 C13C 70B8 7267 B52D
 uid                  David Soria Parra &lt;dsp@php.net&gt;
 
+pub   2048D/5DA04B5D 2012-03-19
+      Key fingerprint = F382 5282 6ACD 957E F380  D39F 2F79 56BC 5DA0 4B5D
+uid                  Stanislav Malyshev (PHP key) &lt;smalyshev@gmail.com&gt;
+uid                  Stanislav Malyshev (PHP key) &lt;stas@php.net&gt;
+uid                  Stanislav Malyshev (PHP key) &lt;smalyshev@sugarcrm.com&gt;
+
 GPG
 ,
     "5.4" => <<< GPG
