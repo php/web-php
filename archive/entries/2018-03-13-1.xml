@@ -13,7 +13,7 @@
     <div xmlns="http://www.w3.org/1999/xhtml">
      <p>With a lot of PHP's Rockstars, Darkmira Tour PHP 2018 is a conference focused on security and quality in PHP's ecosystems, in Brazil's capital in April 14-15. During the two days of Darkmira, you can interact with all the 400 participants along the coffee breaks, demonstrations and networking, and learn a lot about the PHP's ecosystems!</p>
      
-      <p>For more information, visit https://php.darkmiratour.rocks/2018.</p>
+      <p>For more information, visit <a href="https://php.darkmiratour.rocks/2018" title="Darkmira Tour PHP 2018">https://php.darkmiratour.rocks/2018</a>.</p>
      
     </div>
   </content>
