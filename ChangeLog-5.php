@@ -8,12 +8,36 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 
 <h1>PHP 5 ChangeLog</h1>
 
+<section class="version" id="5.6.34"><!-- {{{ 5.6.34 -->
+<h3>Version 5.6.34</h3>
+<b><?php release_date('01-Mar-2018'); ?></b>
+<ul><li>Standard:
+<ul>
+  <li><?php bugfix(75981); ?> (stack-buffer-overflow while parsing HTTP response). (CVE-2018-7584)</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
+<section class="version" id="5.6.33"><!-- {{{ 5.6.33 -->
+<h3>Version 5.6.33</h3>
+<b><?php release_date('04-Jan-2018'); ?></b>
+<ul><li>GD:
+<ul>
+  <li><?php bugfix(75571); ?> (Potential infinite loop in gdImageCreateFromGifCtx). (CVE-2018-5711)</li>
+</ul></li>
+<li>Phar:
+<ul>
+  <li><?php bugfix(74782); ?> (Reflected XSS in .phar 404 page). (CVE-2018-5712)</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
 <section class="version" id="5.6.32"><!-- {{{ 5.6.32 -->
 <h3>Version 5.6.32</h3>
 <b><?php release_date('26-Oct-2017'); ?></b>
 <ul><li>Date:
 <ul>
-  <li><?php bugfix(75055); ?> (Out-Of-Bounds Read in timelib_meridian()).</li>
+  <li><?php bugfix(75055); ?> (Out-Of-Bounds Read in timelib_meridian()). (CVE-2017-16642)</li>
 </ul></li>
 <li>mcrypt:
 <ul>
@@ -31,10 +55,10 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 <b><?php release_date('06-Jul-2017'); ?></b>
 <ul><li>Core:
 <ul>
-  <li><?php bugfix(73807); ?> (Performance problem with processing post request over 2000000 chars).</li>
-  <li><?php bugfix(74111); ?> (Heap buffer overread (READ: 1) finish_nested_data from unserialize).</li>
-  <li><?php bugfix(74603); ?> (PHP INI Parsing Stack Buffer Overflow Vulnerability).</li>
-  <li><?php bugfix(74819); ?> (wddx_deserialize() heap out-of-bound read via php_parse_date()).</li>
+  <li><?php bugfix(73807); ?> (Performance problem with processing large post request). (CVE-2017-11142)</li>
+  <li><?php bugfix(74111); ?> (Heap buffer overread (READ: 1) finish_nested_data from unserialize). (CVE-2017-12933)</li>
+  <li><?php bugfix(74603); ?> (PHP INI Parsing Stack Buffer Overflow Vulnerability). (CVE-2017-11628)</li>
+  <li><?php bugfix(74819); ?> (wddx_deserialize() heap out-of-bound read via php_parse_date()). (CVE-2017-11145)</li>
 </ul></li>
 <li>GD:
 <ul>
@@ -46,7 +70,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 </ul></li>
 <li>OpenSSL:
 <ul>
-  <li><?php bugfix(74651); ?> (negative-size-param (-1) in memcpy in zif_openssl_seal()).</li>
+  <li><?php bugfix(74651); ?> (negative-size-param (-1) in memcpy in zif_openssl_seal()). (CVE-2017-11144)</li>
 </ul></li>
 <li>PCRE:
 <ul>
@@ -54,7 +78,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 </ul></li>
 <li>WDDX:
 <ul>
-  <li><?php bugfix(74145); ?> (wddx parsing empty boolean tag leads to SIGSEGV).</li>
+  <li><?php bugfix(74145); ?> (wddx parsing empty boolean tag leads to SIGSEGV). (CVE-2017-11143)</li>
 </ul></li>
 </ul>
 <!-- }}} --></section>
@@ -80,7 +104,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 <ul>
   <li><?php bugfix(73764); ?> (Crash while loading hostile phar archive). (CVE-2016-10159)</li>
   <li><?php bugfix(73768); ?> (Memory corruption when loading hostile phar). (CVE-2016-10160)</li>
-  <li><?php bugfix(73773); ?> (Seg fault when loading hostile phar).</li>
+  <li><?php bugfix(73773); ?> (Seg fault when loading hostile phar). (CVE-2017-11147)</li>
 </ul></li>
 <li>SQLite3:
 <ul>

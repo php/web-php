@@ -22,7 +22,7 @@ function print_star()
 // Provide a random bgcolor setting for a cell
 function random_bgcolor($min, $max)
 {
-    echo "style=\"background-color: #" . 
+    echo "style=\"background-color: #" .
          sprintf('%02x%02x%02x', rand($min, $max)*51, rand($min, $max)*51, rand($min, $max)*51) .
          ";\"";
 }
@@ -30,10 +30,9 @@ function random_bgcolor($min, $max)
 
 <h1>Download Logos and Icons</h1>
 
-<p>
- Right click on one of the images and select "Save Image As" to save the
- logo (except where otherwise indicated). Then, link it to the main PHP
- site at <code>php.net</code>. 
+<p class="warn">
+ Do not just include the graphic from our servers on your page!
+ Copy the image to your site please.
 </p>
 
 <p>
@@ -44,26 +43,49 @@ function random_bgcolor($min, $max)
  Gothic</a>.
 </p>
 
-<h2>Logo licensing</h2>
+<h2>PHP logo</h2>
 
 <p>
- If you are planning on making money off of our logo 
- (e.g. you want to make merchandise with the logo ... t-shirts,
- coffee mugs, pocket protectors, etc.), then you need to contact 
- <a href="mailto:group@php.net">group@php.net</a> for licensing information.  
- For pretty much all other uses, there is no licensing requirement. For 
- example: a logo on your website showing that you use/promote PHP, even 
- commercial websites; course materials; a bunch of t-shirts for your own use 
- and some friends, or your user group; a PHP-related book; a banner for your 
- computer group; etc.. If in doubt, <a href="mailto:group@php.net">ask</a>.
- However you should not use the logo in such a way, that it suggests that a
- particular person, company, course, etc. is endorsed by PHP.net.
+ The author Colin Viebrock released the PHP logo as
+ <a href="https://creativecommons.org/licenses/by-sa/4.0/">Creative Commons
+ Attribution-Share Alike 4.0 International</a>, feel free to reuse, do not
+ forget the terms of use:
+
+  <ul>
+    <li>
+      <strong>Attribution</strong> — You must give appropriate credit, provide a link
+      to the license, and indicate if changes were made. You may do so in any
+      reasonable manner, but not in any way that suggests the licensor endorses
+      you or your use.
+    </li>
+    <li>
+      <strong>ShareAlike</strong> — If you remix, transform, or build upon the material,
+      you must distribute your contributions under the same license as the original.
+    </li>
+  </ul>
 </p>
 
-<p class="warn">
- Do not just include the graphic from our servers on your page!
- Copy the image to your site please.
+<div class="center logo-list">
+  <?php print_image("logos/new-php-logo.svg", "PHP logo", FALSE, 'width="200"'); ?>
+  <br>
+  <a href="/images/logos/new-php-logo.svg">SVG</a> |
+  <a href="/images/logos/new-php-logo.png">PNG</a>
+</div>
+
+<h2>Alternative logo</h2>
+
+<p>
+ Levi Morrison created this alternative version to use on PHP.net.
 </p>
+
+<div class="center logo-list">
+  <?php print_image("logos/php-logo.svg", "PHP logo", FALSE, 'width="200"'); ?>
+  <br>
+  <a href="/images/logos/php-logo.svg">SVG</a> |
+  <a href="/images/logos/php-logo-bigger.png">PNG</a>
+</div>
+
+<h2>Other logos and graphics</h2>
 
 <p>
  The images marked with a <span class="star" title="recommended">*</span> are
@@ -74,7 +96,7 @@ function random_bgcolor($min, $max)
 
 <div class="center logo-list">
 <table border="0" width="90%" cellspacing="2" cellpadding="10" id="logos">
- 
+
  <tr>
   <td class="logo">
    <?php print_image("logos/php-med-trans-light.gif", "PHP logo"); ?><br>
@@ -85,7 +107,7 @@ function random_bgcolor($min, $max)
    <ul>
     <li>scaleable vector image</li>
     <li>
-     <a href="/images/logos/php-logo.eps">EPS format</a> | 
+     <a href="/images/logos/php-logo.eps">EPS format</a> |
      <a href="/images/logos/php-logo.ai">AI (Adobe Illustrator) format</a>
     </li>
    </ul>
@@ -278,7 +300,7 @@ function random_bgcolor($min, $max)
    </ul>
   </td>
  </tr>
- 
+
  <tr>
   <td class="logo">
    <?php print_image("logos/php-icon-white.gif", "PHP icons"); ?><br>

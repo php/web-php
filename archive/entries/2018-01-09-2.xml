@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom" xmlns:default="http://php.net/ns/news">
+  <title>Dutch PHP Conference 2018 – Call for Papers</title>
+  <id>http://php.net/archive/2018.php#id2018-01-09-2</id>
+  <published>2018-01-09T13:35:18+00:00</published>
+  <updated>2018-01-09T13:35:18+00:00</updated>
+  <default:finalTeaserDate xmlns="http://php.net/ns/news">2018-01-28</default:finalTeaserDate>
+  <category term="cfp" label="Call for Papers"/>
+  <link href="http://php.net/conferences/index.php#id2018-01-09-2" rel="alternate" type="text/html"/>
+  <default:newsImage xmlns="http://php.net/ns/news" link="https://cfp.phpconference.nl/" title="Dutch PHP Conference 2018 – Call for Papers">dpc_2018.png</default:newsImage>
+  <link href="https://cfp.phpconference.nl/" rel="via" type="text/html"/>
+  <content type="html">
+     This year marks the 12th edition of the Dutch PHP Conference, once again hosted in the beautiful city of Amsterdam. Our tutorial day will be Thursday, June 7th, with the main 2-day conference following on the 8th and 9th 2018.
+     Speakers, <a href="https://cfp.phpconference.nl/">the call for papers</a> is now open! We’re looking for high-quality, technical sessions from speakers who can cover advanced topics and keep our demanding audience inspired.
+     
+     As always we’re excited about all kinds of different topics. You could say that as long as it’s somehow related to PHP and you’re really excited about it, we want to hear it! It doesn’t matter who you are, this event is all about technology. DPC has an established reputation as the best place to expand a developer’s skill set and improve existing practice, and that remains our focus this year.
+     The call for papers is open until January 28th. You can send in as many proposals as you like, so start submitting your talks! If you are accepted as a speaker we’ll pay your travel costs, put you up in a hotel and give you a pass to the conference so you can join us during the event.
+     We’re very excited to see what you can come up with, and we’re looking forward to reading all the different proposals.
+     
+</content>
+</entry>

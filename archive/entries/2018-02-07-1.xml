@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom" xmlns:default="http://php.net/ns/news">
+  <title>php[tek] 2018</title>
+  <id>http://php.net/archive/2018.php#id2018-02-07-2</id>
+  <published>2018-02-07T17:27:41+00:00</published>
+  <updated>2018-02-07T17:27:41+00:00</updated>
+  <default:finalTeaserDate xmlns="http://php.net/ns/news">2018-05-31</default:finalTeaserDate>
+  <category term="conferences" label="Conference announcement"/>
+  <link href="http://php.net/conferences/index.php#id2018-02-07-2" rel="alternate" type="text/html"/>
+  <default:newsImage xmlns="http://php.net/ns/news" link="https://tek.phparch.com/" title="php[tek] 2018">tek-basic.png</default:newsImage>
+  <link href="https://tek.phparch.com/" rel="via" type="text/html"/>
+  <content type="xhtml">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+     <p>We are excited to announce the <a href="https://tek.phparch.com/schedule?utm_campaign=phpnet">full schedule</a> for the 13th annual <a href="https://tek.phparch.com/?utm_campaign=phpnet">php[tek]</a>, the premier PHP conference experience. The 2018 edition will be better than ever, now taking place in Downtown Atlanta, GA. The main conference is two days: May 31 and June 1, while we will have a workshop day on May 30, and a day of Training Classes on May 29th.</p>
+     
+     <p>There is an <a href="https://tek.phparch.com/schedule?utm_campaign=phpnet">amazing list of sessions</a> that have been put together for you, including:</p>
+     
+     <ul>
+     <li>3 Full-day Training Classes</li>
+     <li>8 Hands-on Workshops</li>
+     <li>40 Breakout Sessions</li>
+     <li><a href="https://tek.phparch.com/keynotes?utm_campaign=phpnet">4 Keynotes</a></li>
+     </ul>
+     
+     <p>This is all being provided by <a href="https://tek.phparch.com/speakers?utm_campaign=phpnet">39 different speakers</a> from around the world, including speakers from companies like MailChimp, Oracle, MongoDB, Etsy, Salesforce, Google, and Mozilla.</p>
+     
+     <p>We sincerely look forward to seeing you in Atlanta this May!  It's going to be the best <a href="https://tek.phparch.com/?utm_campaign=phpnet">php[tek]</a> ever!</p>
+    </div>
+  </content>
+</entry>

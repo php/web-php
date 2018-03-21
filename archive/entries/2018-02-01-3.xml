@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom" xmlns:default="http://php.net/ns/news">
+  <title>PHP Experience 2018</title>
+  <id>http://php.net/archive/2018.php#id2018-02-01-3</id>
+  <published>2018-02-01T10:20:29-02:00</published>
+  <updated>2018-02-01T10:20:29-02:00</updated>
+  <default:finalTeaserDate xmlns="http://php.net/ns/news">2018-03-05</default:finalTeaserDate>
+  <category term="conferences" label="Conference announcement"/>
+  <link href="http://php.net/conferences/index.php#id2018-02-01-3" rel="alternate" type="text/html"/>
+  <default:newsImage xmlns="http://php.net/ns/news" link="https://eventos.imasters.com.br/phpexperience/" title="PHP Experience 2018">phpx-2018-logo-1.png</default:newsImage>
+  <link href="https://eventos.imasters.com.br/phpexperience/" rel="via" type="text/html"/>
+  <content type="xhtml">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+      <p>With big names from PHP community, the sixth edition of PHP Experience brings together about 1200 PHP developers in São Paulo/SP - Brazil from March 05 to 06, 2018.</p>
+      <p>In two days of content we will have: international keynotes, three tracks, in addition to several actions to exchange experiences and networking.</p>
+      <p>Check out the programming at https://eventos.imasters.com.br/phpexperience/#secao-atracoes </p>
+      <p>Check out the confirmed speakers at https://eventos.imasters.com.br/phpexperience/#secao-texto</p>
+	  <p>Subscriptions at https://eventos.imasters.com.br/phpexperience/#secao-inscricao</p>
+    </div>
+  </content>
+</entry>

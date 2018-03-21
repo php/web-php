@@ -9,11 +9,37 @@
     <uri>http://php.net/contact</uri>
     <email>php-webmaster@lists.php.net</email>
   </author>
+  <xi:include href="entries/2018-03-13-1.xml"/>
+  <xi:include href="entries/2018-03-02-1.xml"/>
+  <xi:include href="entries/2018-03-01-5.xml"/>
+  <xi:include href="entries/2018-03-01-4.xml"/>
+  <xi:include href="entries/2018-03-01-3.xml"/>
+  <xi:include href="entries/2018-03-01-2.xml"/>
+  <xi:include href="entries/2018-03-01-1.xml"/>
+  <xi:include href="entries/2018-02-26-1.xml"/>
+  <xi:include href="entries/2018-02-22-1.xml"/>
+  <xi:include href="entries/2018-02-16-1.xml"/>
+  <xi:include href="entries/2018-02-14-1.xml"/>
+  <xi:include href="entries/2018-02-07-1.xml"/>
+  <xi:include href="entries/2018-02-06-1.xml"/>
+  <xi:include href="entries/2018-02-01-3.xml"/>
+  <xi:include href="entries/2018-02-01-2.xml"/>
+  <xi:include href="entries/2018-02-01-1.xml"/>
+  <xi:include href="entries/2018-01-31-1.xml"/>
+  <xi:include href="entries/2018-01-09-2.xml"/>
+  <xi:include href="entries/2018-01-09-1.xml"/>
+  <xi:include href="entries/2018-01-04-4.xml"/>
+  <xi:include href="entries/2018-01-04-3.xml"/>
+  <xi:include href="entries/2018-01-04-2.xml"/>
+  <xi:include href="entries/2018-01-04-1.xml"/>
+  <xi:include href="entries/2017-12-23-1.xml"/>
   <xi:include href="entries/2017-11-30-1.xml"/>
   <xi:include href="entries/2017-11-24-1.xml"/>
   <xi:include href="entries/2017-11-23-1.xml"/>
+  <xi:include href="entries/2017-11-22-2.xml"/>
   <xi:include href="entries/2017-11-22-1.xml"/>
   <xi:include href="entries/2017-11-20-1.xml"/>
+  <xi:include href="entries/2017-11-16-1.xml"/>
   <xi:include href="entries/2017-11-09-1.xml"/>
   <xi:include href="entries/2017-11-08-1.xml"/>
   <xi:include href="entries/2017-11-06-1.xml"/>

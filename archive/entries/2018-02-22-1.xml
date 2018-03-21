@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom" xmlns:default="http://php.net/ns/news">
+  <title>Northeast PHP 2018 Boston - Call for Speakers</title>
+  <id>http://php.net/archive/2018.php#id2018-02-22-1</id>
+  <published>2018-02-22T22:41:47-05:00</published>
+  <updated>2018-02-22T22:41:47-05:00</updated>
+  <default:finalTeaserDate xmlns="http://php.net/ns/news">2018-04-11</default:finalTeaserDate>
+  <category term="cfp" label="Call for Papers"/>
+  <link href="http://php.net/conferences/index.php#id2018-02-22-1" rel="alternate" type="text/html"/>
+  <default:newsImage xmlns="http://php.net/ns/news" link="http://cfp.northeastphp.org/" title="Northeast PHP Logo">northeast_logo_2015.png</default:newsImage>
+  <link href="http://cfp.northeastphp.org/" rel="via" type="text/html"/>
+  <content type="xhtml">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+     <p>The team at Northeast PHP is excited to annouce that we're returning to Boston, September 19-21 2018, and the <a href="http://cfp.northeastphp.org/">Call for Speakers</a> is now open until April 11.</p><p>We're pleased to announce our conference, <a href="http://2018.northeastphp.org/">the 2018 Web Development and UX Conference by Northeast PHP</a>, where community members come together to learn and share information about the latest trends and technologies in professional PHP development, User Experience design, and Web Technologies.</p><p>Our community oriented conference wants to hear from you! Our speaker package includes a full conference ticket and hotel for out of town speakers. We're interested in talks about PHP secuity, internals, testing, and frameworks; Front End JavaScript development; Front End user experience design, accessibility, virtual and augmented reality, mobile design, information visualization; and soft topics including project management, agile, professional development, mental health, and human resources. First time speakers are welcome and encouraged.</p>
+    </div>
+  </content>
+</entry>

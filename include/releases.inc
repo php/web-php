@@ -2,6 +2,270 @@
 $OLDRELEASES = array (
   7 => 
   array (
+    '7.1.14' => 
+    array (
+      'announcement' => 
+      array (
+        'English' => '/releases/7_1_14.php',
+      ),
+      'source' => 
+      array (
+        0 => 
+        array (
+          'filename' => 'php-7.1.14.tar.bz2',
+          'name' => 'PHP 7.1.14 (tar.bz2)',
+          'sha256' => '63b2fd139ed7656756b0fa290bc42f8fff854723c3d2710a700e646370c581f4',
+          'date' => '1 Feb 2018',
+        ),
+        1 => 
+        array (
+          'filename' => 'php-7.1.14.tar.gz',
+          'name' => 'PHP 7.1.14 (tar.gz)',
+          'sha256' => '8c7360209d255ee46d388bdcd43ef1a2d14b370c331be30ea628ece18a1e7683',
+          'date' => '1 Feb 2018',
+        ),
+        2 => 
+        array (
+          'filename' => 'php-7.1.14.tar.xz',
+          'name' => 'PHP 7.1.14 (tar.xz)',
+          'sha256' => 'c09f0c1074f5689b492d79034adb84e6a6c6d08c6763c02282e6318d41156779',
+          'date' => '1 Feb 2018',
+        ),
+      ),
+      'date' => '1 Feb 2018',
+      'museum' => false,
+    ),
+    '7.2.2' => 
+    array (
+      'announcement' => 
+      array (
+        'English' => '/releases/7_2_2.php',
+      ),
+      'source' => 
+      array (
+        0 => 
+        array (
+          'filename' => 'php-7.2.2.tar.bz2',
+          'name' => 'PHP 7.2.2 (tar.bz2)',
+          'sha256' => 'f841ac58e17471f2241ea892b34edb01dc9b93ad9f661ffe4e3f1f476a8f4aee',
+          'date' => '1 Feb 2018',
+        ),
+        1 => 
+        array (
+          'filename' => 'php-7.2.2.tar.gz',
+          'name' => 'PHP 7.2.2 (tar.gz)',
+          'sha256' => '5963df05fec21927c03fe9f7bf379be2d1eacde6c0f9dcde6143c7133e55abd4',
+          'date' => '1 Feb 2018',
+        ),
+        2 => 
+        array (
+          'filename' => 'php-7.2.2.tar.xz',
+          'name' => 'PHP 7.2.2 (tar.xz)',
+          'sha256' => '47d7607d38a1d565fc43ea942c92229a7cd165f156737f210937e375b243cb11',
+          'date' => '1 Feb 2018',
+        ),
+      ),
+      'date' => '1 Feb 2018',
+      'museum' => false,
+    ),
+    '7.0.27' => 
+    array (
+      'announcement' => 
+      array (
+        'English' => '/releases/7_0_27.php',
+      ),
+      'source' => 
+      array (
+        0 => 
+        array (
+          'filename' => 'php-7.0.27.tar.bz2',
+          'name' => 'PHP 7.0.27 (tar.bz2)',
+          'sha256' => '99fa2563bb4c4c1cde9febe87cfe97324227d7b4b8828f2e936e507127394131',
+          'date' => '04 Jan 2018',
+        ),
+        1 => 
+        array (
+          'filename' => 'php-7.0.27.tar.gz',
+          'name' => 'PHP 7.0.27 (tar.gz)',
+          'sha256' => '809c0181e970dd17c6a6cabbf64518e719c7253e7490f8e1279bc1e1fbdf7996',
+          'date' => '04 Jan 2018',
+        ),
+        2 => 
+        array (
+          'filename' => 'php-7.0.27.tar.xz',
+          'name' => 'PHP 7.0.27 (tar.xz)',
+          'sha256' => '4b2bc823e806dbf7b62fe0b92b0d14b0c6e03f88c3fc5d96278416c54ce11f6c',
+          'date' => '04 Jan 2018',
+        ),
+      ),
+      'date' => '04 Jan 2018',
+      'museum' => false,
+    ),
+    '7.2.1' => 
+    array (
+      'announcement' => 
+      array (
+        'English' => '/releases/7_2_1.php',
+      ),
+      'source' => 
+      array (
+        0 => 
+        array (
+          'filename' => 'php-7.2.1.tar.bz2',
+          'name' => 'PHP 7.2.1 (tar.bz2)',
+          'sha256' => 'fe06793f268a4dd29cbc5f4ef415f01e786877152b02221ad7d18dbb6864eb79',
+          'date' => '4 Jan 2018',
+        ),
+        1 => 
+        array (
+          'filename' => 'php-7.2.1.tar.gz',
+          'name' => 'PHP 7.2.1 (tar.gz)',
+          'sha256' => '8ecb2950571054a00687ccbd023874a4a075ccd1e2ec3dc00fc25ef589a77dba',
+          'date' => '4 Jan 2018',
+        ),
+        2 => 
+        array (
+          'filename' => 'php-7.2.1.tar.xz',
+          'name' => 'PHP 7.2.1 (tar.xz)',
+          'sha256' => '6c6cf82fda6660ed963821eb0525214bb3547e8e29f447b9c15b2d8e6efd8822',
+          'date' => '4 Jan 2018',
+        ),
+      ),
+      'date' => '4 Jan 2018',
+      'museum' => false,
+    ),
+    '7.1.13' => 
+    array (
+      'announcement' => 
+      array (
+        'English' => '/releases/7_1_13.php',
+      ),
+      'source' => 
+      array (
+        0 => 
+        array (
+          'filename' => 'php-7.1.13.tar.bz2',
+          'name' => 'PHP 7.1.13 (tar.bz2)',
+          'sha256' => '35fda51d2d44600940185fd5818d336a79e77ab3c98e2bd075091f2f91cf98a1',
+          'date' => '4 Jan 2018',
+        ),
+        1 => 
+        array (
+          'filename' => 'php-7.1.13.tar.gz',
+          'name' => 'PHP 7.1.13 (tar.gz)',
+          'sha256' => '12fcbf59c9eb9af215ef38815d5da39b9d74549092c34b0dfc31442699740ce9',
+          'date' => '4 Jan 2018',
+        ),
+        2 => 
+        array (
+          'filename' => 'php-7.1.13.tar.xz',
+          'name' => 'PHP 7.1.13 (tar.xz)',
+          'sha256' => '1a0b3f2fb61959b57a3ee01793a77ed3f19bde5aa90c43dcacc85ea32f64fc10',
+          'date' => '4 Jan 2018',
+        ),
+      ),
+      'date' => '4 Jan 2018',
+      'museum' => false,
+    ),
+    '7.2.0' => 
+    array (
+      'announcement' => 
+      array (
+        'English' => '/releases/7_2_0.php',
+      ),
+      'source' => 
+      array (
+        0 => 
+        array (
+          'filename' => 'php-7.2.0.tar.bz2',
+          'name' => 'PHP 7.2.0 (tar.bz2)',
+          'sha256' => '2bfefae4226b9b97879c9d33078e50bdb5c17f45ff6e255951062a529720c64a',
+          'date' => '30 Nov 2017',
+        ),
+        1 => 
+        array (
+          'filename' => 'php-7.2.0.tar.gz',
+          'name' => 'PHP 7.2.0 (tar.gz)',
+          'sha256' => '801876abd52e0dc58a44701344252035fd50702d8f510cda7fdb317ab79897bc',
+          'date' => '30 Nov 2017',
+        ),
+        2 => 
+        array (
+          'filename' => 'php-7.2.0.tar.xz',
+          'name' => 'PHP 7.2.0 (tar.xz)',
+          'sha256' => '87572a6b924670a5d4aac276aaa4a94321936283df391d702c845ffc112db095',
+          'date' => '30 Nov 2017',
+        ),
+      ),
+      'date' => '30 Nov 2017',
+      'museum' => false,
+    ),
+    '7.1.12' => 
+    array (
+      'announcement' => 
+      array (
+        'English' => '/releases/7_1_12.php',
+      ),
+      'source' => 
+      array (
+        0 => 
+        array (
+          'filename' => 'php-7.1.12.tar.bz2',
+          'name' => 'PHP 7.1.12 (tar.bz2)',
+          'sha256' => 'f9ce3361ab99dce8f3f2fba663695ac9b18a3579bc8014dc280368d1577d87c4',
+          'date' => '23 Nov 2017',
+        ),
+        1 => 
+        array (
+          'filename' => 'php-7.1.12.tar.gz',
+          'name' => 'PHP 7.1.12 (tar.gz)',
+          'sha256' => '188c67d8e424ce7a6fe93475aa64f53182c1d80ca3ac99439651ca91569d969c',
+          'date' => '23 Nov 2017',
+        ),
+        2 => 
+        array (
+          'filename' => 'php-7.1.12.tar.xz',
+          'name' => 'PHP 7.1.12 (tar.xz)',
+          'sha256' => 'a0118850774571b1f2d4e30b4fe7a4b958ca66f07d07d65ebdc789c54ba6eeb3',
+          'date' => '23 Nov 2017',
+        ),
+      ),
+      'date' => '23 Nov 2017',
+      'museum' => false,
+    ),
+    '7.0.26' => 
+    array (
+      'announcement' => 
+      array (
+        'English' => '/releases/7_0_26.php',
+      ),
+      'source' => 
+      array (
+        0 => 
+        array (
+          'filename' => 'php-7.0.26.tar.bz2',
+          'name' => 'PHP 7.0.26 (tar.bz2)',
+          'sha256' => '2590d722f7b23b6a903c5a00cf04e7ee728df79d10ae473e3a81ba41588509a7',
+          'date' => '23 Nov 2017',
+        ),
+        1 => 
+        array (
+          'filename' => 'php-7.0.26.tar.gz',
+          'name' => 'PHP 7.0.26 (tar.gz)',
+          'sha256' => '04c345f7c9e3f1cd02f275bfec893a4e0290e724073f2f3d7282a219128b537c',
+          'date' => '23 Nov 2017',
+        ),
+        2 => 
+        array (
+          'filename' => 'php-7.0.26.tar.xz',
+          'name' => 'PHP 7.0.26 (tar.xz)',
+          'sha256' => 'ed5cbb4bbb0ddef8985f100bba2e94002ad22a230b5da2dccfe148915df5f199',
+          'date' => '23 Nov 2017',
+        ),
+      ),
+      'date' => '23 Nov 2017',
+      'museum' => false,
+    ),
     '7.1.11' => 
     array (
       'announcement' => 
@@ -1259,6 +1523,72 @@ $OLDRELEASES = array (
   ),
   5 => 
   array (
+    '5.6.33' => 
+    array (
+      'announcement' => 
+      array (
+        'English' => '/releases/5_6_33.php',
+      ),
+      'source' => 
+      array (
+        0 => 
+        array (
+          'filename' => 'php-5.6.33.tar.bz2',
+          'name' => 'PHP 5.6.33 (tar.bz2)',
+          'sha256' => '07f696a9761dcd839e2045c95c3a4d2ffb52c54417477cca9d30a14975b831cc',
+          'date' => '04 Jan 2018',
+        ),
+        1 => 
+        array (
+          'filename' => 'php-5.6.33.tar.gz',
+          'name' => 'PHP 5.6.33 (tar.gz)',
+          'sha256' => 'bedfac81cfaa25961812a1aec458c4109411a14991b43a416343ffb830b8da6a',
+          'date' => '04 Jan 2018',
+        ),
+        2 => 
+        array (
+          'filename' => 'php-5.6.33.tar.xz',
+          'name' => 'PHP 5.6.33 (tar.xz)',
+          'sha256' => '9004995fdf55f111cd9020e8b8aff975df3d8d4191776c601a46988c375f3553',
+          'date' => '04 Jan 2018',
+        ),
+      ),
+      'date' => '04 Jan 2018',
+      'museum' => false,
+    ),
+    '5.6.32' => 
+    array (
+      'announcement' => 
+      array (
+        'English' => '/releases/5_6_32.php',
+      ),
+      'source' => 
+      array (
+        0 => 
+        array (
+          'filename' => 'php-5.6.32.tar.bz2',
+          'name' => 'PHP 5.6.32 (tar.bz2)',
+          'sha256' => '3ee44e7a5fa42b563652b3ea0d3487bc236fcc9e5ea74b583775cab867abcb51',
+          'date' => '26 Oct 2017',
+        ),
+        1 => 
+        array (
+          'filename' => 'php-5.6.32.tar.gz',
+          'name' => 'PHP 5.6.32 (tar.gz)',
+          'sha256' => '7bef1ae8cd633df5b9c5964262d276d2dc21acbfcd94022d1e2084d199315df4',
+          'date' => '26 Oct 2017',
+        ),
+        2 => 
+        array (
+          'filename' => 'php-5.6.32.tar.xz',
+          'name' => 'PHP 5.6.32 (tar.xz)',
+          'sha256' => '8c2b4f721c7475fb9eabda2495209e91ea933082e6f34299d11cba88cd76e64b',
+          'date' => '26 Oct 2017',
+        ),
+      ),
+      'date' => '26 Oct 2017',
+      'museum' => false,
+    ),
     '5.6.31' => 
     array (
       'announcement' => 
@@ -1523,6 +1853,39 @@ $OLDRELEASES = array (
       'date' => '21 Jul 2016',
       'museum' => false,
     ),
+    '5.5.38' => 
+    array (
+      'announcement' => 
+      array (
+        'English' => '/releases/5_5_38.php',
+      ),
+      'source' => 
+      array (
+        0 => 
+        array (
+          'filename' => 'php-5.5.38.tar.bz2',
+          'name' => 'PHP 5.5.38 (tar.bz2)',
+          'sha256' => '473c81ebb2e48ca468caee031762266651843d7227c18a824add9b07b9393e38',
+          'date' => '21 Jul 2016',
+        ),
+        1 => 
+        array (
+          'filename' => 'php-5.5.38.tar.gz',
+          'name' => 'PHP 5.5.38 (tar.gz)',
+          'sha256' => '4f458c9b504269615715a62f182b7c2f89bb8284f484befc221b56a1571b506e',
+          'date' => '21 Jul 2016',
+        ),
+        2 => 
+        array (
+          'filename' => 'php-5.5.38.tar.xz',
+          'name' => 'PHP 5.5.38 (tar.xz)',
+          'sha256' => 'cb527c44b48343c8557fe2446464ff1d4695155a95601083e5d1f175df95580f',
+          'date' => '21 Jul 2016',
+        ),
+      ),
+      'date' => '21 Jul 2016',
+      'museum' => false,
+    ),
     '5.6.23' => 
     array (
       'announcement' => 
@@ -1580,9 +1943,9 @@ $OLDRELEASES = array (
         ),
         2 => 
         array (
-          'filename' => 'php-5.5.36.tar.xz',
-          'name' => 'PHP 5.5.36 (tar.xz)',
-          'sha256' => 'e1bbe33d6b4da66b15c483131520a9fc505eeb6629fa70c5cfba79590a1d0801',
+          'filename' => 'php-5.5.37.tar.xz',
+          'name' => 'PHP 5.5.37 (tar.xz)',
+          'sha256' => 'c322444fdf6d3ba26aa67d67ee32d1e815a877f35831351c83763431a80e3612',
           'date' => '23 Jun 2016',
         ),
       ),

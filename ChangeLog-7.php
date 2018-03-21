@@ -7,6 +7,395 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
 
 <h1>PHP 7 ChangeLog</h1>
 
+<section class="version" id="7.2.3"><!-- {{{ 7.2.3 -->
+<h3>Version 7.2.3</h3>
+<b><?php release_date('01-Mar-2018'); ?></b>
+<ul><li>Core:
+<ul>
+  <li><?php bugfix(75864); ?> ("stream_isatty" returns wrong value on s390x).</li>
+</ul></li>
+<li>Apache2Handler:
+<ul>
+  <li><?php bugfix(75882); ?> (a simple way for segfaults in threadsafe php just with configuration).</li>
+</ul></li>
+<li>Date:
+<ul>
+  <li><?php bugfix(75857); ?> (Timezone gets truncated when formatted).</li>
+  <li><?php bugfix(75928); ?> (Argument 2 for `DateTimeZone::listIdentifiers()` should accept `null`).</li>
+  <li><?php bugfix(68406); ?> (calling var_dump on a DateTimeZone object modifies it).</li>
+</ul></li>
+<li>LDAP:
+<ul>
+  <li><?php bugfix(49876); ?> (Fix LDAP path lookup on 64-bit distros).</li>
+</ul></li>
+<li>libxml2:
+<ul>
+  <li><?php bugfix(75871); ?> (use pkg-config where available).</li>
+</ul></li>
+<li>PGSQL:
+<ul>
+  <li><?php bugfix(75838); ?> (Memory leak in pg_escape_bytea()).</li>
+</ul></li>
+<li>Phar:
+<ul>
+  <li><?php bugfix(54289); ?> (Phar::extractTo() does not accept specific directories to be extracted).</li>
+  <li><?php bugfix(65414); ?> (deal with leading slash while adding files correctly).</li>
+  <li><?php bugfix(65414); ?> (deal with leading slash when adding files correctly).</li>
+</ul></li>
+<li>ODBC:
+<ul>
+  <li><?php bugfix(73725); ?> (Unable to retrieve value of varchar(max) type).</li>
+</ul></li>
+<li>Opcache:
+<ul>
+  <li><?php bugfix(75729); ?> (opcache segfault when installing Bitrix).</li>
+  <li><?php bugfix(75893); ?> (file_get_contents $http_response_header variable bugged with opcache).</li>
+  <li><?php bugfix(75938); ?> (Modulus value not stored in variable).</li>
+</ul></li>
+<li>SPL:
+<ul>
+  <li><?php bugfix(74519); ?> (strange behavior of AppendIterator).</li>
+</ul></li>
+<li>Standard:
+<ul>
+  <li><?php bugfix(75916); ?> (DNS_CAA record results contain garbage).</li>
+  <li><?php bugfix(75981); ?> (stack-buffer-overflow while parsing HTTP response). (CVE-2018-7584)</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
+<section class="version" id="7.1.15"><!-- {{{ 7.1.15 -->
+<h3>Version 7.1.15</h3>
+<b><?php release_date('01-Mar-2018'); ?></b>
+<ul><li>Apache2Handler:
+<ul>
+  <li><?php bugfix(75882); ?> (a simple way for segfaults in threadsafe php just with configuration).</li>
+</ul></li>
+<li>Date:
+<ul>
+  <li><?php bugfix(75857); ?> (Timezone gets truncated when formatted).</li>
+  <li><?php bugfix(75928); ?> (Argument 2 for `DateTimeZone::listIdentifiers()` should accept `null`).</li>
+  <li><?php bugfix(68406); ?> (calling var_dump on a DateTimeZone object modifies it).</li>
+</ul></li>
+<li>PGSQL:
+<ul>
+  <li>Fixed #75838 (Memory leak in pg_escape_bytea()).</li>
+</ul></li>
+<li>ODBC:
+<ul>
+  <li><?php bugfix(73725); ?> (Unable to retrieve value of varchar(max) type).</li>
+</ul></li>
+<li>LDAP:
+<ul>
+  <li><?php bugfix(49876); ?> (Fix LDAP path lookup on 64-bit distros).</li>
+</ul></li>
+<li>libxml2:
+<ul>
+  <li><?php bugfix(75871); ?> (use pkg-config where available).</li>
+</ul></li>
+<li>Phar:
+<ul>
+  <li><?php bugfix(65414); ?> (deal with leading slash when adding files correctly).</li>
+</ul></li>
+<li>SPL:
+<ul>
+  <li><?php bugfix(74519); ?> (strange behavior of AppendIterator).</li>
+</ul></li>
+<li>Standard:
+<ul>
+  <li><?php bugfix(75916); ?> (DNS_CAA record results contain garbage).</li>
+  <li><?php bugfix(75981); ?> (stack-buffer-overflow while parsing HTTP response). (CVE-2018-7584)</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
+
+<section class="version" id="7.0.28"><!-- {{{ 7.0.28 -->
+<h3>Version 7.0.28</h3>
+<b><?php release_date('01-Mar-2018'); ?></b>
+<ul><li>Standard:
+<ul>
+  <li><?php bugfix(75981); ?> (stack-buffer-overflow while parsing HTTP response). (CVE-2018-7584)</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
+<section class="version" id="7.2.2"><!-- {{{ 7.2.2 -->
+<h3>Version 7.2.2</h3>
+<b><?php release_date('01-Feb-2018'); ?></b>
+<ul><li>Core:
+<ul>
+  <li><?php bugfix(75742); ?> (potential memleak in internal classes's static members).</li>
+  <li><?php bugfix(75679); ?> (Path 260 character problem).</li>
+  <li><?php bugfix(75614); ?> (Some non-portable == in shell scripts).</li>
+  <li><?php bugfix(75786); ?> (segfault when using spread operator on generator passed by reference).</li>
+  <li><?php bugfix(75799); ?> (arg of get_defined_functions is optional).</li>
+  <li><?php bugfix(75396); ?> (Exit inside generator finally results in fatal error).</li>
+</ul></li>
+<li>FCGI:
+<ul>
+  <li><?php bugfix(75794); ?> (getenv() crashes on Windows 7.2.1 when second parameter is false).</li>
+</ul></li>
+<li>IMAP:
+<ul>
+  <li><?php bugfix(75774); ?> (imap_append HeapCorruction).</li>
+</ul></li>
+<li>Opcache:
+<ul>
+  <li><?php bugfix(75720); ?> (File cache not populated after SHM runs full).</li>
+  <li><?php bugfix(75687); ?> (var 8 (TMP) has array key type but not value type).</li>
+  <li><?php bugfix(75698); ?> (Using @ crashes php7.2-fpm).</li>
+  <li><?php bugfix(75579); ?> (Interned strings buffer overflow may cause crash).</li>
+</ul></li>
+<li>PDO:
+<ul>
+  <li><?php bugfix(75616); ?> (PDO extension doesn't allow to be built shared on Darwin).</li>
+</ul></li>
+<li>PDO MySQL:
+<ul>
+  <li><?php bugfix(75615); ?> (PDO Mysql module can't be built as module).</li>
+</ul></li>
+<li>PGSQL:
+<ul>
+  <li><?php bugfix(75671); ?> (pg_version() crashes when called on a connection to cockroach).</li>
+</ul></li>
+<li>Readline:
+<ul>
+  <li><?php bugfix(75775); ?> (readline_read_history segfaults with empty file).</li>
+</ul></li>
+<li>SAPI:
+<ul>
+  <li><?php bugfix(75735); ?> ([embed SAPI] Segmentation fault in sapi_register_post_entry).</li>
+</ul></li>
+<li>SOAP:
+<ul>
+  <li><?php bugfix(70469); ?> (SoapClient generates E_ERROR even if exceptions=1 is used).</li>
+  <li><?php bugfix(75502); ?> (Segmentation fault in zend_string_release).</li>
+</ul></li>
+<li>SPL:
+<ul>
+  <li><?php bugfix(75717); ?> (RecursiveArrayIterator does not traverse arrays by reference).</li>
+  <li><?php bugfix(75242); ?> (RecursiveArrayIterator doesn't have constants from parent class).</li>
+  <li><?php bugfix(73209); ?> (RecursiveArrayIterator does not iterate object properties).</li>
+</ul></li>
+<li>Standard:
+<ul>
+  <li><?php bugfix(75781); ?> (substr_count incorrect result).</li>
+  <li><?php bugfix(75653); ?> (array_values don't work on empty array).</li>
+</ul></li>
+<li>Zip:
+<ul>
+  <li>Display headers (buildtime) and library (runtime) versions in phpinfo (with libzip &gt;= 1.3.1).</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
+<section class="version" id="7.1.14"><!-- {{{ 7.1.14 -->
+<h3>Version 7.1.14</h3>
+<b><?php release_date('01-Feb-2018'); ?></b>
+<ul><li>Core:
+<ul>
+  <li><?php bugfix(75679); ?> (Path 260 character problem).</li>
+  <li><?php bugfix(75786); ?> (segfault when using spread operator on generator passed by reference).</li>
+  <li><?php bugfix(75799); ?> (arg of get_defined_functions is optional).</li>
+  <li><?php bugfix(75396); ?> (Exit inside generator finally results in fatal error).</li>
+  <li><?php bugfix(75079); ?> (self keyword leads to incorrectly generated TypeError when in closure in trait).</li>
+</ul></li>
+<li>FCGI:
+<ul>
+  <li><?php bugfix(75794); ?> (getenv() crashes on Windows 7.2.1 when second parameter is false).</li>
+</ul></li>
+<li>IMAP:
+<ul>
+  <li><?php bugfix(75774); ?> (imap_append HeapCorruction).</li>
+</ul></li>
+<li>Opcache:
+<ul>
+  <li><?php bugfix(75720); ?> (File cache not populated after SHM runs full).</li>
+  <li><?php bugfix(75579); ?> (Interned strings buffer overflow may cause crash).</li>
+</ul></li>
+<li>PGSQL:
+<ul>
+  <li><?php bugfix(75671); ?> (pg_version() crashes when called on a connection to cockroach).</li>
+</ul></li>
+<li>Readline:
+<ul>
+  <li><?php bugfix(75775); ?> (readline_read_history segfaults with empty file).</li>
+</ul></li>
+<li>SAPI:
+<ul>
+  <li><?php bugfix(75735); ?> ([embed SAPI] Segmentation fault in sapi_register_post_entry).</li>
+</ul></li>
+<li>SOAP:
+<ul>
+  <li><?php bugfix(70469); ?> (SoapClient generates E_ERROR even if exceptions=1 is used).</li>
+  <li><?php bugfix(75502); ?> (Segmentation fault in zend_string_release).</li>
+</ul></li>
+<li>SPL:
+<ul>
+  <li><?php bugfix(75717); ?> (RecursiveArrayIterator does not traverse arrays by reference).</li>
+  <li><?php bugfix(75242); ?> (RecursiveArrayIterator doesn't have constants from parent class).</li>
+  <li><?php bugfix(73209); ?> (RecursiveArrayIterator does not iterate object properties).</li>
+</ul></li>
+<li>Standard:
+<ul>
+  <li><?php bugfix(75781); ?> (substr_count incorrect result).</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
+<section class="version" id="7.2.1"><!-- {{{ 7.2.1 -->
+<h3>Version 7.2.1</h3>
+<b><?php release_date('04-Jan-2018'); ?></b>
+<ul><li>Core:
+<ul>
+  <li><?php bugfix(75573); ?> (Segmentation fault in 7.1.12 and 7.0.26).</li>
+  <li><?php bugfix(75384); ?> (PHP seems incompatible with OneDrive files on demand).</li>
+  <li><?php bugfix(75525); ?> (Access Violation in vcruntime140.dll).</li>
+  <li><?php bugfix(74862); ?> (Unable to clone instance when private __clone defined).</li>
+  <li><?php bugfix(75074); ?> (php-process crash when is_file() is used with strings longer 260 chars).</li>
+</ul></li>
+<li>CLI server:
+<ul>
+  <li><?php bugfix(73830); ?> (Directory does not exist).</li>
+</ul></li>
+<li>FPM:
+<ul>
+  <li><?php bugfix(64938); ?> (libxml_disable_entity_loader setting is shared between requests).</li>
+</ul></li>
+<li>GD:
+<ul>
+  <li><?php bugfix(75571); ?> (Potential infinite loop in gdImageCreateFromGifCtx). (CVE-2018-5711)</li>
+</ul></li>
+<li>Opcache:
+<ul>
+  <li><?php bugfix(75608); ?> ("Narrowing occurred during type inference" error).</li>
+  <li><?php bugfix(75579); ?> (Interned strings buffer overflow may cause crash).</li>
+  <li><?php bugfix(75570); ?> ("Narrowing occurred during type inference" error).</li>
+  <li><?php bugfix(75556); ?> (Invalid opcode 138/1/1).</li>
+</ul></li>
+<li>PCRE:
+<ul>
+  <li><?php bugfix(74183); ?> (preg_last_error not returning error code after error).</li>
+</ul></li>
+<li>Phar:
+<ul>
+  <li><?php bugfix(74782); ?> (Reflected XSS in .phar 404 page). (CVE-2018-5712)</li>
+</ul></li>
+<li>Standard:
+<ul>
+  <li><?php bugfix(75511); ?> (fread not free unused buffer).</li>
+  <li><?php bugfix(75514); ?> (mt_rand returns value outside [$min,$max]+ on 32-bit) (Remi)</li>
+  <li><?php bugfix(75535); ?> (Inappropriately parsing HTTP response leads to PHP segment fault).</li>
+  <li><?php bugfix(75409); ?> (accept EFAULT in addition to ENOSYS as indicator that getrandom() is missing).</li>
+  <li><?php bugfix(73124); ?> (php_ini_scanned_files() not reporting correctly).</li>
+  <li><?php bugfix(75574); ?> (putenv does not work properly if parameter contains non-ASCII unicode character).</li>
+</ul></li>
+<li>Zip:
+<ul>
+  <li><?php bugfix(75540); ?> (Segfault with libzip 1.3.1).</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
+
+<section class="version" id="7.1.13"><!-- {{{ 7.1.13 -->
+<h3>Version 7.1.13</h3>
+<b><?php release_date('04-Jan-2018'); ?></b>
+<ul><li>Core:
+<ul>
+  <li><?php bugfix(75573); ?> (Segmentation fault in 7.1.12 and 7.0.26).</li>
+  <li><?php bugfix(75384); ?> (PHP seems incompatible with OneDrive files on demand).</li>
+  <li><?php bugfix(74862); ?> (Unable to clone instance when private __clone defined).</li>
+  <li><?php bugfix(75074); ?> (php-process crash when is_file() is used with strings longer 260 chars).</li>
+</ul></li>
+<li>CLI Server:
+<ul>
+  <li><?php bugfix(60471); ?> (Random "Invalid request (unexpected EOF)" using a router script).</li>
+  <li><?php bugfix(73830); ?> (Directory does not exist).</li>
+</ul></li>
+<li>FPM:
+<ul>
+  <li><?php bugfix(64938); ?> (libxml_disable_entity_loader setting is shared between requests).</li>
+</ul></li>
+<li>GD:
+<ul>
+  <li><?php bugfix(75571); ?> (Potential infinite loop in gdImageCreateFromGifCtx). (CVE-2018-5711)</li>
+</ul></li>
+<li>Opcache:
+<ul>
+  <li><?php bugfix(75608); ?> ("Narrowing occurred during type inference" error).</li>
+  <li><?php bugfix(75579); ?> (Interned strings buffer overflow may cause crash).</li>
+  <li><?php bugfix(75570); ?> ("Narrowing occurred during type inference" error).</li>
+</ul></li>
+<li>PCRE:
+<ul>
+  <li><?php bugfix(74183); ?> (preg_last_error not returning error code after error).</li>
+</ul></li>
+<li>Phar:
+<ul>
+  <li><?php bugfix(74782); ?> (Reflected XSS in .phar 404 page). (CVE-2018-5712)</li>
+</ul></li>
+<li>Standard:
+<ul>
+  <li><?php bugfix(75511); ?> (fread not free unused buffer).</li>
+  <li><?php bugfix(75514); ?> (mt_rand returns value outside [$min,$max]+ on 32-bit) (Remi)</li>
+  <li><?php bugfix(75535); ?> (Inappropriately parsing HTTP response leads to PHP segment fault).</li>
+  <li><?php bugfix(75409); ?> (accept EFAULT in addition to ENOSYS as indicator that getrandom() is missing).</li>
+  <li><?php bugfix(73124); ?> (php_ini_scanned_files() not reporting correctly).</li>
+  <li><?php bugfix(75574); ?> (putenv does not work properly if parameter contains non-ASCII unicode character).</li>
+</ul></li>
+<li>Zip:
+<ul>
+  <li><?php bugfix(75540); ?> (Segfault with libzip 1.3.1).</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
+<section class="version" id="7.0.27"><!-- {{{ 7.0.27 -->
+<h3>Version 7.0.27</h3>
+<b><?php release_date('04-Jan-2018'); ?></b>
+<ul><li>CLI Server:
+<ul>
+  <li><?php bugfix(60471); ?> (Random "Invalid request (unexpected EOF)" using a router script).</li>
+</ul></li>
+<li>Core:
+<ul>
+  <li><?php bugfix(75384); ?> (PHP seems incompatible with OneDrive files on demand).</li>
+  <li><?php bugfix(75573); ?> (Segmentation fault in 7.1.12 and 7.0.26).</li>
+</ul></li>
+<li>FPM:
+<ul>
+  <li><?php bugfix(64938); ?> (libxml_disable_entity_loader setting is shared between requests).</li>
+</ul></li>
+<li>GD:
+<ul>
+  <li><?php bugfix(75571); ?> (Potential infinite loop in gdImageCreateFromGifCtx). (CVE-2018-5711)</li>
+</ul></li>
+<li>Opcache:
+<ul>
+  <li><?php bugfix(75579); ?> (Interned strings buffer overflow may cause crash).</li>
+</ul></li>
+<li>PCRE:
+<ul>
+  <li><?php bugfix(74183); ?> (preg_last_error not returning error code after error).</li>
+</ul></li>
+<li>Phar:
+<ul>
+  <li><?php bugfix(74782); ?> (Reflected XSS in .phar 404 page). (CVE-2018-5712)</li>
+</ul></li>
+<li>Standard:
+<ul>
+  <li><?php bugfix(75535); ?> (Inappropriately parsing HTTP response leads to PHP segment fault).</li>
+  <li><?php bugfix(75409); ?> (accept EFAULT in addition to ENOSYS as indicator that getrandom() is missing).</li>
+</ul></li>
+<li>Zip:
+<ul>
+  <li><?php bugfix(75540); ?> (Segfault with libzip 1.3.1).</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
 <section class="version" id="7.2.0"><!-- {{{ 7.2.0 -->
 <h3>Version 7.2.0</h3>
 <b><?php release_date('30-Nov-2017'); ?></b>
@@ -77,6 +466,7 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
 <ul>
   <li><?php bugfix(55407); ?> (Impossible to prototype DateTime::createFromFormat).</li>
   <li>Implemented FR <?php bugl(71520); ?> (Adding the DateTime constants to the DateTimeInterface interface).</li>
+  <li><?php bugfix(75055); ?> (Out-Of-Bounds Read in timelib_meridian()). (CVE-2017-16642)</li>
   <li><?php bugfix(75149); ?> (redefinition of typedefs ttinfo and t1info).</li>
   <li><?php bugfix(75222); ?> (DateInterval microseconds property always 0).</li>
 </ul></li>
@@ -258,7 +648,7 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
   <li><?php bugfix(74737); ?> (mysqli_get_client_info reflection info).</li>
   <li>Add support for extension name as argument to dl().</li>
   <li><?php bugfix(74851); ?> (uniqid() without more_entropy performs badly).</li>
-  <li><?php bugfix(74103); ?> (heap-use-after-free when unserializing invalid array size).</li>
+  <li><?php bugfix(74103); ?> (heap-use-after-free when unserializing invalid array size). (CVE-2017-12932)</li>
   <li><?php bugfix(75054); ?> (A Denial of Service Vulnerability was found when performing deserialization).</li>
   <li><?php bugfix(75170); ?> (mt_rand() bias on 64-bit machines).</li>
   <li><?php bugfix(75221); ?> (Argon2i always throws NUL at the end).</li>
@@ -436,7 +826,7 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
 </ul></li>
 <li>Date:
 <ul>
-  <li><?php bugfix(75055); ?> (Out-Of-Bounds Read in timelib_meridian()).</li>
+  <li><?php bugfix(75055); ?> (Out-Of-Bounds Read in timelib_meridian()). (CVE-2017-16642)</li>
 </ul></li>
 <li>Apache2Handler:
 <ul>
@@ -503,7 +893,7 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
 </ul></li>
 <li>Date:
 <ul>
-  <li><?php bugfix(75055); ?> (Out-Of-Bounds Read in timelib_meridian()).</li>
+  <li><?php bugfix(75055); ?> (Out-Of-Bounds Read in timelib_meridian()). (CVE-2017-16642)</li>
 </ul></li>
 <li>Intl:
 <ul>
@@ -704,7 +1094,7 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
 <li>Standard:
 <ul>
   <li><?php bugfix(75075); ?> (unpack with X* causes infinity loop).</li>
-  <li><?php bugfix(74103); ?> (heap-use-after-free when unserializing invalid array size).</li>
+  <li><?php bugfix(74103); ?> (heap-use-after-free when unserializing invalid array size). (CVE-2017-12932)</li>
   <li><?php bugfix(75054); ?> (A Denial of Service Vulnerability was found when performing deserialization).</li>
 </ul></li>
 <li>WDDX:
@@ -780,7 +1170,7 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
 <li>Standard:
 <ul>
   <li><?php bugfix(75075); ?> (unpack with X* causes infinity loop).</li>
-  <li><?php bugfix(74103); ?> (heap-use-after-free when unserializing invalid array size).</li>
+  <li><?php bugfix(74103); ?> (heap-use-after-free when unserializing invalid array size). (CVE-2017-12932)</li>
   <li><?php bugfix(75054); ?> (A Denial of Service Vulnerability was found when performing deserialization).</li>
 </ul></li>
 <li>WDDX:
@@ -839,6 +1229,7 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
 <li>Wddx:
 <ul>
   <li><?php bugfix(73173); ?> (huge memleak when wddx_unserialize).</li>
+  <li><?php bugfix(74145); ?> (wddx parsing empty boolean tag leads to SIGSEGV). (CVE-2017-11143)</li>
 </ul></li>
 <li>zlib:
 <ul>
@@ -887,6 +1278,7 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
 <li>Wddx:
 <ul>
   <li><?php bugfix(73173); ?> (huge memleak when wddx_unserialize).</li>
+  <li><?php bugfix(74145); ?> (wddx parsing empty boolean tag leads to SIGSEGV). (CVE-2017-11143)</li>
 </ul></li>
 <li>zlib:
 <ul>
@@ -903,10 +1295,10 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
   <li><?php bugfix(74738); ?> (Multiple [PATH=] and [HOST=] sections not properly parsed).</li>
   <li><?php bugfix(74658); ?> (Undefined constants in array properties result in broken properties).</li>
   <li>Fixed misparsing of abstract unix domain socket names.</li>
-  <li><?php bugfix(74603); ?> (PHP INI Parsing Stack Buffer Overflow Vulnerability).</li>
-  <li><?php bugfix(74101); ?>, bug #74614 (Unserialize Heap Use-After-Free (READ: 1) in zval_get_type).</li>
-  <li><?php bugfix(74111); ?> (Heap buffer overread (READ: 1) finish_nested_data from unserialize).</li>
-  <li><?php bugfix(74819); ?> (wddx_deserialize() heap out-of-bound read via php_parse_date()).</li>
+  <li><?php bugfix(74603); ?> (PHP INI Parsing Stack Buffer Overflow Vulnerability). (CVE-2017-11628)</li>
+  <li><?php bugfix(74101); ?> (Unserialize Heap Use-After-Free (READ: 1) in zval_get_type). (CVE-2017-12934)</li>
+  <li><?php bugfix(74111); ?> (Heap buffer overread (READ: 1) finish_nested_data from unserialize). (CVE-2017-12933)</li>
+  <li><?php bugfix(74819); ?> (wddx_deserialize() heap out-of-bound read via php_parse_date()). (CVE-2017-11145)</li>
 </ul></li>
 <li>Date:
 <ul>
@@ -922,7 +1314,7 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
 </ul></li>
 <li>Intl:
 <ul>
-  <li><?php bugfix(73473); ?> (Stack Buffer Overflow in msgfmt_parse_message).</li>
+  <li><?php bugfix(73473); ?> (Stack Buffer Overflow in msgfmt_parse_message). (CVE-2017-11362)</li>
   <li><?php bugfix(74705); ?> (Wrong reflection on Collator::getSortKey and collator_get_sort_key).</li>
 </ul></li>
 <li>Mbstring:
@@ -941,7 +1333,7 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
 <li>OpenSSL:
 <ul>
   <li><?php bugfix(74720); ?> (pkcs7_en/decrypt does not work if \x1a is used in content).</li>
-  <li><?php bugfix(74651); ?> (negative-size-param (-1) in memcpy in zif_openssl_seal()).</li>
+  <li><?php bugfix(74651); ?> (negative-size-param (-1) in memcpy in zif_openssl_seal()). (CVE-2017-11144)</li>
 </ul></li>
 <li>PDO_OCI:
 <ul>
@@ -983,10 +1375,10 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
   <li><?php bugfix(74738); ?> (Multiple [PATH=] and [HOST=] sections not properly parsed).</li>
   <li><?php bugfix(74658); ?> (Undefined constants in array properties result in broken properties).</li>
   <li>Fixed misparsing of abstract unix domain socket names.</li>
-  <li><?php bugfix(74101); ?>, bug #74614 (Unserialize Heap Use-After-Free (READ: 1) in zval_get_type).</li>
-  <li><?php bugfix(74111); ?> (Heap buffer overread (READ: 1) finish_nested_data from unserialize).</li>
-  <li><?php bugfix(74603); ?> (PHP INI Parsing Stack Buffer Overflow Vulnerability).</li>
-  <li><?php bugfix(74819); ?> (wddx_deserialize() heap out-of-bound read via php_parse_date()).</li>
+  <li><?php bugfix(74101); ?> (Unserialize Heap Use-After-Free (READ: 1) in zval_get_type). (CVE-2017-12934)</li>
+  <li><?php bugfix(74111); ?> (Heap buffer overread (READ: 1) finish_nested_data from unserialize). (CVE-2017-12933)</li>
+  <li><?php bugfix(74603); ?> (PHP INI Parsing Stack Buffer Overflow Vulnerability). (CVE-2017-11628)</li>
+  <li><?php bugfix(74819); ?> (wddx_deserialize() heap out-of-bound read via php_parse_date()). (CVE-2017-11145)</li>
 </ul></li>
 <li>DOM:
 <ul>
@@ -998,7 +1390,7 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
 </ul></li>
 <li>Intl:
 <ul>
-  <li><?php bugfix(73473); ?> (Stack Buffer Overflow in msgfmt_parse_message).</li>
+  <li><?php bugfix(73473); ?> (Stack Buffer Overflow in msgfmt_parse_message). (CVE-2017-11362)</li>
   <li><?php bugfix(74705); ?> (Wrong reflection on Collator::getSortKey and collator_get_sort_key).</li>
   <li><?php bugfix(73634); ?> (grapheme_strpos illegal memory access).</li>
 </ul></li>
@@ -1016,7 +1408,7 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
 </ul></li>
 <li>OpenSSL:
 <ul>
-  <li><?php bugfix(74651); ?> (negative-size-param (-1) in memcpy in zif_openssl_seal()).</li>
+  <li><?php bugfix(74651); ?> (negative-size-param (-1) in memcpy in zif_openssl_seal()). (CVE-2017-11144)</li>
 </ul></li>
 <li>PCRE:
 <ul>
@@ -1390,7 +1782,7 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
   <li><?php bugfix(74093); ?> (Maximum execution time of n+2 seconds exceed not written in error_log).</li>
   <li><?php bugfix(73989); ?> (PHP 7.1 Segfaults within Symfony test suite).</li>
   <li><?php bugfix(74084); ?> (Out of bound read - zend_mm_alloc_small).</li>
-  <li><?php bugfix(73807); ?> (Performance problem with processing large post request).</li>
+  <li><?php bugfix(73807); ?> (Performance problem with processing large post request). (CVE-2017-11142)</li>
   <li><?php bugfix(73998); ?> (array_key_exists fails on arrays created by get_object_vars).</li>
   <li><?php bugfix(73954); ?> (NAN check fails on Alpine Linux with musl).</li>
   <li><?php bugfix(73677); ?> (Generating phar.phar core dump with gcc ASAN enabled build).</li>
@@ -1451,7 +1843,7 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
 <ul>
   <li><?php bugfix(73989); ?> (PHP 7.1 Segfaults within Symfony test suite).</li>
   <li><?php bugfix(74084); ?> (Out of bound read - zend_mm_alloc_small).</li>
-  <li><?php bugfix(73807); ?> (Performance problem with processing large post request).</li>
+  <li><?php bugfix(73807); ?> (Performance problem with processing large post request). (CVE-2017-11142)</li>
   <li><?php bugfix(73998); ?> (array_key_exists fails on arrays created by get_object_vars).</li>
   <li><?php bugfix(73954); ?> (NAN check fails on Alpine Linux with musl).</li>
   <li><?php bugfix(74039); ?> (is_infinite(-INF) returns false).</li>
@@ -1768,7 +2160,7 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
 </ul></li>
 <li>Phar:
 <ul>
-  <li><?php bugfix(73773); ?> (Seg fault when loading hostile phar).</li>
+  <li><?php bugfix(73773); ?> (Seg fault when loading hostile phar). (CVE-2017-11147)</li>
   <li><?php bugfix(73768); ?> (Memory corruption when loading hostile phar). (CVE-2016-10160)</li>
   <li><?php bugfix(73764); ?> (Crash while loading hostile phar archive). (CVE-2016-10159)</li>
 </ul></li>
@@ -1822,6 +2214,7 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
 		<li><?php bugfix(73825); ?> (Heap out of bounds read on unserialize in finish_nested_data()). (CVE-2016-10161)</li>
 		<li><?php bugfix(73831); ?> (NULL Pointer Dereference while unserialize php object). (CVE-2016-10162)</li>
 		<li><?php bugfix(73832); ?> (Use of uninitialized memory in unserialize()). (CVE-2017-5340)</li>
+		<li><?php bugfix(73092); ?> (Unserialize use-after-free when resizing object's properties hash table). (CVE-2016-7479)</li>
 	</ul>
 	</li>
 	<li>
@@ -1892,7 +2285,7 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
 	</li>
 	<li>Phar:
 	<ul>
-		<li><?php bugfix(73773); ?> (Seg fault when loading hostile phar).</li>
+		<li><?php bugfix(73773); ?> (Seg fault when loading hostile phar). (CVE-2017-11147)</li>
 		<li><?php bugfix(73768); ?> (Memory corruption when loading hostile phar). (CVE-2016-10160)</li>
 		<li><?php bugfix(73764); ?> (Crash while loading hostile phar archive). (CVE-2016-10159)</li>
 	</ul></li>
