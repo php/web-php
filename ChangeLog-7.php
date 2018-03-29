@@ -7,6 +7,16 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
 
 <h1>PHP 7 ChangeLog</h1>
 
+<section class="version" id="7.0.29"><!-- {{{ 7.0.29 -->
+<h3>Version 7.0.29</h3>
+<b><?php release_date('29-Mar-2018'); ?></b>
+<ul><li>FPM:
+<ul>
+  <li><?php bugfix(75605); ?> (Dumpable FPM child processes allow bypassing opcache access controls).</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
 <section class="version" id="7.2.3"><!-- {{{ 7.2.3 -->
 <h3>Version 7.2.3</h3>
 <b><?php release_date('01-Mar-2018'); ?></b>
