@@ -7,6 +7,61 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
 
 <h1>PHP 7 ChangeLog</h1>
 
+<section class="version" id="7.2.4"><!-- {{{ 7.2.4 -->
+<h3>Version 7.2.4</h3>
+<b><?php release_date('29-Mar-2018'); ?></b>
+<ul><li>Core:
+<ul>
+  <li><?php bugfix(76025); ?> (Segfault while throwing exception in error_handler).</li>
+  <li><?php bugfix(76044); ?> ('date: illegal option -- -' in ./configure on FreeBSD).</li>
+</ul></li>
+<li>FPM:
+<ul>
+  <li><?php bugfix(75605); ?> (Dumpable FPM child processes allow bypassing opcache access controls).</li>
+</ul></li>
+<li>FTP:
+<ul>
+  <li>Fixed ftp_pasv arginfo.</li>
+</ul></li>
+<li>GD:
+<ul>
+  <li><?php bugfix(73957); ?> (signed integer conversion in imagescale()).</li>
+  <li><?php bugfix(76041); ?> (null pointer access crashed php).</li>
+  <li>Fixed imagesetinterpolation arginfo.</li>
+</ul></li>
+<li>iconv:
+<ul>
+  <li><?php bugfix(75867); ?> (Freeing uninitialized pointer).</li>
+</ul></li>
+<li>Mbstring:
+<ul>
+  <li><?php bugfix(62545); ?> (wrong unicode mapping in some charsets).</li>
+</ul></li>
+<li>Opcache:
+<ul>
+  <li><?php bugfix(75969); ?> (Assertion failure in live range DCE due to block pass misoptimization).</li>
+</ul></li>
+<li>OpenSSL:
+<ul>
+  <li>Fixed openssl_* arginfos.</li>
+</ul></li>
+<li>PCNTL:
+<ul>
+  <li><?php bugfix(75873); ?> (pcntl_wexitstatus returns incorrect on Big_Endian platform (s390x)).</li>
+</ul></li>
+<li>Phar:
+<ul>
+  <li><?php bugfix(76085); ?> (Segmentation fault in buildFromIterator when directory name contains a \n).</li>
+</ul></li>
+<li>Standard:
+<ul>
+  <li><?php bugfix(75961); ?> (Strange references behavior).</li>
+  <li>Fixed some arginfos.</li>
+  <li><?php bugfix(76068); ?> (parse_ini_string fails to parse "[foo]\nbar=1|&gt;baz" with segfault).</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
 <section class="version" id="7.0.29"><!-- {{{ 7.0.29 -->
 <h3>Version 7.0.29</h3>
 <b><?php release_date('29-Mar-2018'); ?></b>
