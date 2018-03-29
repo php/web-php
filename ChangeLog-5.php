@@ -8,6 +8,16 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 
 <h1>PHP 5 ChangeLog</h1>
 
+<section class="version" id="5.6.35"><!-- {{{ 5.6.35 -->
+<h3>Version 5.6.35</h3>
+<b><?php release_date('29-Mar-2018'); ?></b>
+<ul><li>FPM:
+<ul>
+  <li><?php bugfix(75605); ?> (Dumpable FPM child processes allow bypassing opcache access controls).</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
 <section class="version" id="5.6.34"><!-- {{{ 5.6.34 -->
 <h3>Version 5.6.34</h3>
 <b><?php release_date('01-Mar-2018'); ?></b>
