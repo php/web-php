@@ -7,6 +7,43 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
 
 <h1>PHP 7 ChangeLog</h1>
 
+<section class="version" id="7.1.16"><!-- {{{ 7.1.16 -->
+<h3>Version 7.1.16</h3>
+<b><?php release_date('29-Mar-2018'); ?></b>
+<ul><li>Core:
+<ul>
+  <li><?php bugfix(76025); ?> (Segfault while throwing exception in error_handler).</li>
+  <li><?php bugfix(76044); ?> ('date: illegal option -- -' in ./configure on FreeBSD).</li>
+</ul></li>
+<li>FPM:
+<ul>
+  <li><?php bugfix(75605); ?> (Dumpable FPM child processes allow bypassing opcache access controls).</li>
+</ul></li>
+<li>GD:
+<ul>
+  <li><?php bugfix(73957); ?> (signed integer conversion in imagescale()).</li>
+</ul></li>
+<li>ODBC:
+<ul>
+  <li><?php bugfix(76088); ?> (ODBC functions are not available by default on Windows).</li>
+</ul></li>
+<li>Opcache:
+<ul>
+  <li><?php bugfix(76074); ?> (opcache corrupts variable in for-loop).</li>
+</ul></li>
+<li>Phar:
+<ul>
+  <li><?php bugfix(76085); ?> (Segmentation fault in buildFromIterator when directory name contains a \n).</li>
+</ul></li>
+<li>Standard:
+<ul>
+  <li><?php bugfix(74139); ?> (mail.add_x_header default inconsistent with docs).</li>
+  <li><?php bugfix(76068); ?> (parse_ini_string fails to parse "[foo]\nbar=1|&gt;baz" with segfault).</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
+
 <section class="version" id="7.2.4"><!-- {{{ 7.2.4 -->
 <h3>Version 7.2.4</h3>
 <b><?php release_date('29-Mar-2018'); ?></b>
