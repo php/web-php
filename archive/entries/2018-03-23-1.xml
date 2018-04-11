@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom" xmlns:default="http://php.net/ns/news">
+  <title>International PHP Conference 2018 - Call for Papers</title>
+  <id>http://php.net/archive/2018.php#id2018-03-23-1</id>
+  <published>2018-03-23T15:44:54-04:00</published>
+  <updated>2018-03-23T15:44:54-04:00</updated>
+  <default:finalTeaserDate xmlns="http://php.net/ns/news">2018-04-18</default:finalTeaserDate>
+  <category term="cfp" label="Call for Papers"/>
+  <link href="http://php.net/conferences/index.php#id2018-03-23-1" rel="alternate" type="text/html"/>
+  <default:newsImage xmlns="http://php.net/ns/news" link="https://callforpapers.sandsmedia.com" title="International PHP Conference 2018 - Call for Papers">ipc-2018-fall.png</default:newsImage>
+  <link href="https://callforpapers.sandsmedia.com" rel="via" type="text/html"/>
+  <content type="xhtml">
+	 <div xmlns="http://www.w3.org/1999/xhtml"> 
+		 <p>IPC Spring will take place in June 4th to 8th in Berlin and we are looking very much forward to it!<br />
+			But at the same time we are already preparing for the fall edition of IPC 2018, that is going to take place together with the international JavaScript Conference again. The conferenceís date is October 15th to 19th and the location will be Munich again.</p>
+		 <p>The International PHP Conference is the worldís first PHP conference and stands since more than a decade for top-notch pragmatic expertise in PHP and web technologies. Internationally renowned experts from the PHP industry meet up with PHP users and developers from large and small companies.</p>
+		 <p>We are looking forward to your submissions for workshops, sessions &amp; keynotes. Please submit your proposals in English language.<br />
+		 	Please see our list below of topics which we'd love to see covered, but we are sure that you'll add also some extra stuff which is great and which we do not expect!
+		 </p>
+		 <p><strong>THE BASIC FACTS</strong></p>
+		 <ul>
+		  <li>Date: 15 - 19 October 2018</li>
+		  <li>Location &amp; Venue: Holiday Inn Munich City Centre</li>
+		  <li>Deadline for submissions: April 18th 2018</li>
+		  <li>URL for submissions: <a href="https://callforpapers.sandsmedia.com">https://callforpapers.sandsmedia.com</a></li>
+		 </ul>
+		 <p><strong>Spectrum of topics we'd like to see covered:</strong></p>
+		 <ul>
+			 <li>PHP Development</li>
+			 <li>Web Development</li>
+			 <li>Web Architecture</li>
+			 <li>Server &amp; Deployment</li>
+			 <li>Agile &amp; DevOps</li>
+			 <li>Performance &amp; Security</li>
+			 <li></lli>Testing &amp; Quality</li>
+		     <li>JavaScript</li>
+		 </ul>
+	  	<p>We are looking forward to your exciting submissions! For further information on International PHP Conferenceís sessions and speakers visit: <a href="https://phpconference.com">www.phpconference.com</a></p>
+	  </div>
+  </content>
+</entry>
