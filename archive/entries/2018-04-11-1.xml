@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom" xmlns:default="http://php.net/ns/news">
+  <title>CoderCruise 2018 - The Bahamas!</title>
+  <id>http://php.net/archive/2018.php#id2018-04-11-1</id>
+  <published>2018-04-11T13:40:58+00:00</published>
+  <updated>2018-04-11T13:40:58+00:00</updated>
+  <default:finalTeaserDate xmlns="http://php.net/ns/news">2018-08-30</default:finalTeaserDate>
+  <category term="conferences" label="Conference announcement"/>
+  <link href="http://php.net/conferences/index.php#id2018-04-11-1" rel="alternate" type="text/html"/>
+  <default:newsImage xmlns="http://php.net/ns/news" link="https://www.codercruise.com/" title="CoderCruise 2018">cclogo-horizontal-2018@60v-1.png</default:newsImage>
+  <link href="https://www.codercruise.com/" rel="via" type="text/html"/>
+  <content type="xhtml">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+     <p>The team behind the original php[cruise] is once again bringing a conference to the open seas. <a href="https://www.codercruise.com/">CoderCruise 2018</a> is be a premiere conference experience, giving you have an exclusive connection to your fellow community members. It is setting sail from Ft. Lauderdale on August 30th for an extended weekend 5-day cruise that also visits Half Moon Cay and Nassau!</p>
+     
+     <p>This year we've managed to negotiate a much cheaper overall rate for our participants, starting as low as $410 per person (including the 5-day cruise, food, drink, the conference, and all taxes and fees wrapped into one package!)</p>
+     
+     <p>We have a really <a href="https://www.codercruise.com/schedule/">exciting schedule</a> of talks that we've chosen this year from a <a href="https://www.codercruise.com/speakers/">fantastic selection of speakers</a>.  This is a family-friendly experience where we expect many attendees to bring their families, and we include the families in all of the activities that we have planned. We look forward to you joining us at <a href="https://www.codercruise.com/">CoderCruise 2018</a> this year!  See you in the Bahamas!</p>
+    </div>
+  </content>
+</entry>
