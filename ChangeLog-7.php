@@ -7,6 +7,28 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
 
 <h1>PHP 7 ChangeLog</h1>
 
+<section class="version" id="7.0.30"><!-- {{{ 7.0.30 -->
+<h3>Version 7.0.30</h3>
+<b><?php release_date('26-Apr-2018'); ?></b>
+<ul><li>Exif:
+<ul>
+  <li><?php bugfix(76130); ?> (Heap Buffer Overflow (READ: 1786) in exif_iif_add_value).</li>
+</ul></li>
+<li>iconv:
+<ul>
+  <li><?php bugfix(76249); ?> (stream filter convert.iconv leads to infinite loop on invalid sequence).</li>
+</ul></li>
+<li>LDAP:
+<ul>
+  <li><?php bugfix(76248); ?> (Malicious LDAP-Server Response causes Crash).</li>
+</ul></li>
+<li>Phar:
+<ul>
+  <li><?php bugfix(76129); ?> (fix for CVE-2018-5712 may not be complete).</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
 <section class="version" id="7.2.5"><!-- {{{ 7.2.5 -->
 <h3>Version 7.2.5</h3>
 <b><?php release_date('26-Apr-2018'); ?></b>
