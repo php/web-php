@@ -7,6 +7,75 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
 
 <h1>PHP 7 ChangeLog</h1>
 
+<section class="version" id="7.2.5"><!-- {{{ 7.2.5 -->
+<h3>Version 7.2.5</h3>
+<b><?php release_date('26-Apr-2018'); ?></b>
+<ul><li>Core:
+<ul>
+  <li><?php bugfix(75722); ?> (Convert valgrind detection to configure option).</li>
+</ul></li>
+<li>Date:
+<ul>
+  <li><?php bugfix(76131); ?> (mismatch arginfo for date_create).</li>
+</ul></li>
+<li>Exif:
+<ul>
+  <li><?php bugfix(76130); ?> (Heap Buffer Overflow (READ: 1786) in exif_iif_add_value).</li>
+</ul></li>
+<li>FPM:
+<ul>
+  <li><?php bugfix(68440); ?> (ERROR: failed to reload: execvp() failed: Argument list too long).</li>
+  <li>Fixed incorrect write to getenv result in FPM reload.</li>
+</ul></li>
+<li>GD:
+<ul>
+  <li><?php bugfix(52070); ?> (imagedashedline() - dashed line sometimes is not visible).</li>
+</ul></li>
+<li>iconv:
+<ul>
+  <li><?php bugfix(76249); ?> (stream filter convert.iconv leads to infinite loop on invalid sequence).</li>
+</ul></li>
+<li>intl:
+<ul>
+  <li><?php bugfix(76153); ?> (Intl compilation fails with icu4c 61.1).</li>
+</ul></li>
+<li>ldap:
+<ul>
+  <li><?php bugfix(76248); ?> (Malicious LDAP-Server Response causes Crash).</li>
+</ul></li>
+<li>mbstring:
+<ul>
+  <li><?php bugfix(75944); ?> (Wrong cp1251 detection).</li>
+  <li><?php bugfix(76113); ?> (mbstring does not build with Oniguruma 6.8.1).</li>
+</ul></li>
+<li>ODBC:
+<ul>
+  <li><?php bugfix(76088); ?> (ODBC functions are not available by default on Windows).</li>
+</ul></li>
+<li>Opcache:
+<ul>
+  <li><?php bugfix(76094); ?> (Access violation when using opcache).</li>
+</ul></li>
+<li>Phar:
+<ul>
+  <li><?php bugfix(76129); ?> (fix for CVE-2018-5712 may not be complete).</li>
+</ul></li>
+<li>phpdbg:
+<ul>
+  <li><?php bugfix(76143); ?> (Memory corruption: arbitrary NUL overwrite).</li>
+</ul></li>
+<li>SPL:
+<ul>
+  <li><?php bugfix(76131); ?> (mismatch arginfo for splarray constructor).</li>
+</ul></li>
+<li>standard:
+<ul>
+  <li><?php bugfix(74139); ?> (mail.add_x_header default inconsistent with docs).</li>
+  <li><?php bugfix(75996); ?> (incorrect url in header for mt_rand).</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
 <section class="version" id="7.1.16"><!-- {{{ 7.1.16 -->
 <h3>Version 7.1.16</h3>
 <b><?php release_date('29-Mar-2018'); ?></b>
