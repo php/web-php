@@ -28,7 +28,7 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
 </ul></li>
 <li>iconv:
 <ul>
-  <li><?php bugfix(76249); ?> (stream filter convert.iconv leads to infinite loop on invalid sequence).</li>
+  <li><?php bugfix(76249); ?> (stream filter convert.iconv leads to infinite loop on invalid sequence). (CVE-2018-10546)</li>
 </ul></li>
 <li>intl:
 <ul>
@@ -70,7 +70,7 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
 </ul></li>
 <li>iconv:
 <ul>
-  <li><?php bugfix(76249); ?> (stream filter convert.iconv leads to infinite loop on invalid sequence).</li>
+  <li><?php bugfix(76249); ?> (stream filter convert.iconv leads to infinite loop on invalid sequence). (CVE-2018-10546)</li>
 </ul></li>
 <li>LDAP:
 <ul>
@@ -109,7 +109,7 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
 </ul></li>
 <li>iconv:
 <ul>
-  <li><?php bugfix(76249); ?> (stream filter convert.iconv leads to infinite loop on invalid sequence).</li>
+  <li><?php bugfix(76249); ?> (stream filter convert.iconv leads to infinite loop on invalid sequence). (CVE-2018-10546)</li>
 </ul></li>
 <li>intl:
 <ul>
