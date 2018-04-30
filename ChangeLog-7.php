@@ -15,7 +15,7 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
 </ul></li>
 <li>Exif:
 <ul>
-  <li>Fixed bug#76130 (Heap Buffer Overflow (READ: 1786) in exif_iif_add_value).</li>
+  <li><?php bugfix(76130); ?> (Heap Buffer Overflow (READ: 1786) in exif_iif_add_value). (CVE-2018-10549)</li>
 </ul></li>
 <li>FPM:
 <ul>
@@ -66,7 +66,7 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
 <b><?php release_date('26-Apr-2018'); ?></b>
 <ul><li>Exif:
 <ul>
-  <li><?php bugfix(76130); ?> (Heap Buffer Overflow (READ: 1786) in exif_iif_add_value).</li>
+  <li><?php bugfix(76130); ?> (Heap Buffer Overflow (READ: 1786) in exif_iif_add_value). (CVE-2018-10549)</li>
 </ul></li>
 <li>iconv:
 <ul>
@@ -96,7 +96,7 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
 </ul></li>
 <li>Exif:
 <ul>
-  <li><?php bugfix(76130); ?> (Heap Buffer Overflow (READ: 1786) in exif_iif_add_value).</li>
+  <li><?php bugfix(76130); ?> (Heap Buffer Overflow (READ: 1786) in exif_iif_add_value). (CVE-2018-10549)</li>
 </ul></li>
 <li>FPM:
 <ul>
