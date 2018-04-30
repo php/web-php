@@ -25,7 +25,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 </ul></li>
 <li>Phar:
 <ul>
-  <li><?php bugfix(76129); ?> (fix for CVE-2018-5712 may not be complete).</li>
+  <li><?php bugfix(76129); ?> (fix for CVE-2018-5712 may not be complete). (CVE-2018-10547)</li>
 </ul></li>
 </ul>
 <!-- }}} --></section>
