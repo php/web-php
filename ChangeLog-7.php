@@ -36,7 +36,7 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
 </ul></li>
 <li>ldap:
 <ul>
-  <li><?php bugfix(76248); ?> (Malicious LDAP-Server Response causes Crash).</li>
+  <li><?php bugfix(76248); ?> (Malicious LDAP-Server Response causes Crash). (CVE-2018-10548)</li>
 </ul></li>
 <li>mbstring:
 <ul>
@@ -74,7 +74,7 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
 </ul></li>
 <li>LDAP:
 <ul>
-  <li><?php bugfix(76248); ?> (Malicious LDAP-Server Response causes Crash).</li>
+  <li><?php bugfix(76248); ?> (Malicious LDAP-Server Response causes Crash). (CVE-2018-10548)</li>
 </ul></li>
 <li>Phar:
 <ul>
@@ -117,7 +117,7 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
 </ul></li>
 <li>ldap:
 <ul>
-  <li><?php bugfix(76248); ?> (Malicious LDAP-Server Response causes Crash).</li>
+  <li><?php bugfix(76248); ?> (Malicious LDAP-Server Response causes Crash). (CVE-2018-10548)</li>
 </ul></li>
 <li>mbstring:
 <ul>
