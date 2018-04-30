@@ -162,7 +162,7 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
 </ul></li>
 <li>FPM:
 <ul>
-  <li><?php bugfix(75605); ?> (Dumpable FPM child processes allow bypassing opcache access controls).</li>
+  <li><?php bugfix(75605); ?> (Dumpable FPM child processes allow bypassing opcache access controls). (CVE-2018-10545)</li>
 </ul></li>
 <li>GD:
 <ul>
@@ -199,7 +199,7 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
 </ul></li>
 <li>FPM:
 <ul>
-  <li><?php bugfix(75605); ?> (Dumpable FPM child processes allow bypassing opcache access controls).</li>
+  <li><?php bugfix(75605); ?> (Dumpable FPM child processes allow bypassing opcache access controls). (CVE-2018-10545)</li>
 </ul></li>
 <li>FTP:
 <ul>
@@ -249,7 +249,7 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
 <b><?php release_date('29-Mar-2018'); ?></b>
 <ul><li>FPM:
 <ul>
-  <li><?php bugfix(75605); ?> (Dumpable FPM child processes allow bypassing opcache access controls).</li>
+  <li><?php bugfix(75605); ?> (Dumpable FPM child processes allow bypassing opcache access controls). (CVE-2018-10545)</li>
 </ul></li>
 </ul>
 <!-- }}} --></section>
