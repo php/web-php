@@ -8,12 +8,34 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 
 <h1>PHP 5 ChangeLog</h1>
 
+<section class="version" id="5.6.36"><!-- {{{ 5.6.36 -->
+<h3>Version 5.6.36</h3>
+<b><?php release_date('26-Apr-2018'); ?></b>
+<ul><li>Exif:
+<ul>
+  <li><?php bugfix(76130); ?> (Heap Buffer Overflow (READ: 1786) in exif_iif_add_value). (CVE-2018-10549)</li>
+</ul></li>
+<li>iconv:
+<ul>
+  <li><?php bugfix(76249); ?> (stream filter convert.iconv leads to infinite loop on invalid sequence). (CVE-2018-10546)</li>
+</ul></li>
+<li>LDAP:
+<ul>
+  <li><?php bugfix(76248); ?> (Malicious LDAP-Server Response causes Crash). (CVE-2018-10548)</li>
+</ul></li>
+<li>Phar:
+<ul>
+  <li><?php bugfix(76129); ?> (fix for CVE-2018-5712 may not be complete). (CVE-2018-10547)</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
 <section class="version" id="5.6.35"><!-- {{{ 5.6.35 -->
 <h3>Version 5.6.35</h3>
 <b><?php release_date('29-Mar-2018'); ?></b>
 <ul><li>FPM:
 <ul>
-  <li><?php bugfix(75605); ?> (Dumpable FPM child processes allow bypassing opcache access controls).</li>
+  <li><?php bugfix(75605); ?> (Dumpable FPM child processes allow bypassing opcache access controls). (CVE-2018-10545)</li>
 </ul></li>
 </ul>
 <!-- }}} --></section>

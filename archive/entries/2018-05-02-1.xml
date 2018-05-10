@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom" xmlns:default="http://php.net/ns/news">
+  <title>phpDay 2018</title>
+  <id>http://php.net/archive/2018.php#id2018-05-02-1</id>
+  <published>2018-05-02T14:39:18+02:00</published>
+  <updated>2018-05-02T14:39:18+02:00</updated>
+  <default:finalTeaserDate xmlns="http://php.net/ns/news">2018-05-11</default:finalTeaserDate>
+  <category term="conferences" label="Conference announcement"/>
+  <link href="http://php.net/conferences/index.php#id2018-05-02-1" rel="alternate" type="text/html"/>
+  <default:newsImage xmlns="http://php.net/ns/news" link="https://2018.phpday.it/" title="phpDay 2018">phpday-it.png</default:newsImage>
+  <link href="https://2018.phpday.it/" rel="via" type="text/html"/>
+  <content type="xhtml">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+      <p>The Italian PHP user group GrUSP is pleased to announce the <b><a href="https://2018.phpday.it/">15th edition</a></b> of <b>phpday</b>, taking place on May 11-12th, 2018 in Verona, Italy. </p>
+
+      <p>It is the first historic Italian conference dedicated solely to PHP development, technologies and management. It is aimed to IT managers, developers and innovators. Each year it renews the opportunity to link to new business partners.</p>
+
+      <p>Check out our great <a href="https://2018.phpday.it/schedule.html">schedule</a> and get your ticket now!</p>
+    </div>
+  </content>
+</entry>
