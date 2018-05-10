@@ -17,8 +17,8 @@
  */
 
 /* PHP 7.2 Release */
-$PHP_7_2_RC = false; // Current RC version (e.g., '7.2.1RC1') or false
-$PHP_7_2_RC_DATE = "12 Apr 2018";
+$PHP_7_2_RC = '7.2.6RC1'; // Current RC version (e.g., '7.2.1RC1') or false
+$PHP_7_2_RC_DATE = "10 May 2018";
 
 $PHP_7_2_VERSION         = "7.2.5";
 $PHP_7_2_DATE            = "26 Apr 2018";
