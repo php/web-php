@@ -5,6 +5,38 @@ include_once $_SERVER['DOCUMENT_ROOT'] . '/include/changelogs.inc';
 site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("changelog.css"), "layout_span" => 12));
 ?>
 
+<section class="version" id="7.2.6"><!-- {{{ 7.2.6 -->
+<h3>Version 7.2.6</h3>
+<b><?php release_date('24-May-2018'); ?></b>
+<ul><li>EXIF:
+<ul>
+  <li><?php bugfix(76164); ?> (exif_read_data zend_mm_heap corrupted).</li>
+</ul></li>
+<li>FPM:
+<ul>
+  <li><?php bugfix(76075); ?> --with-fpm-acl wrongly tries to find libacl on FreeBSD.</li>
+</ul></li>
+<li>intl:
+<ul>
+  <li><?php bugfix(74385); ?> (Locale::parseLocale() broken with some arguments).</li>
+</ul></li>
+<li>Opcache:
+<ul>
+  <li><?php bugfix(76205); ?> (PHP-FPM sporadic crash when running Infinitewp).</li>
+  <li><?php bugfix(76275); ?> (Assertion failure in file cache when unserializing empty try_catch_array).</li>
+  <li><?php bugfix(76281); ?> (Opcache causes incorrect "undefined variable" errors).</li>
+</ul></li>
+<li>Reflection:
+<ul>
+  <li>Fixed arginfo of array_replace(_recursive) and array_merge(_recursive).</li>
+</ul></li>
+<li>Session:
+<ul>
+  <li><?php bugfix(74892); ?> (Url Rewriting (trans_sid) not working on urls that start with "#").</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
 <h1>PHP 7 ChangeLog</h1>
 <section class="version" id="7.2.5"><!-- {{{ 7.2.5 -->
 <h3>Version 7.2.5</h3>
