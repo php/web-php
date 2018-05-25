@@ -5,6 +5,31 @@ include_once $_SERVER['DOCUMENT_ROOT'] . '/include/changelogs.inc';
 site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("changelog.css"), "layout_span" => 12));
 ?>
 
+<section class="version" id="7.1.18"><!-- {{{ 7.1.18 -->
+<h3>Version 7.1.18</h3>
+<b><?php release_date('24-May-2018'); ?></b>
+<ul><li>FPM:
+<ul>
+  <li><?php bugfix(76075); ?> --with-fpm-acl wrongly tries to find libacl on FreeBSD.</li>
+</ul></li>
+<li>intl:
+<ul>
+  <li><?php bugfix(74385); ?> (Locale::parseLocale() broken with some arguments).</li>
+</ul></li>
+<li>Opcache:
+<ul>
+  <li><?php bugfix(76205); ?> (PHP-FPM sporadic crash when running Infinitewp).</li>
+  <li><?php bugfix(76275); ?> (Assertion failure in file cache when unserializing empty try_catch_array).</li>
+  <li><?php bugfix(76281); ?> (Opcache causes incorrect "undefined variable" errors).</li>
+</ul></li>
+<li>Reflection:
+<ul>
+  <li>Fixed arginfo for array_replace(_recursive) and array_merge(_recursive).</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
+
 <section class="version" id="7.2.6"><!-- {{{ 7.2.6 -->
 <h3>Version 7.2.6</h3>
 <b><?php release_date('24-May-2018'); ?></b>
