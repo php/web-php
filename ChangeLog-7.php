@@ -4,6 +4,7 @@ include_once $_SERVER['DOCUMENT_ROOT'] . '/include/prepend.inc';
 include_once $_SERVER['DOCUMENT_ROOT'] . '/include/changelogs.inc';
 site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("changelog.css"), "layout_span" => 12));
 ?>
+<h1>PHP 7 ChangeLog</h1>
 
 <section class="version" id="7.1.18"><!-- {{{ 7.1.18 -->
 <h3>Version 7.1.18</h3>
@@ -28,7 +29,6 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
 </ul></li>
 </ul>
 <!-- }}} --></section>
-
 
 <section class="version" id="7.2.6"><!-- {{{ 7.2.6 -->
 <h3>Version 7.2.6</h3>
@@ -62,7 +62,6 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
 </ul>
 <!-- }}} --></section>
 
-<h1>PHP 7 ChangeLog</h1>
 <section class="version" id="7.2.5"><!-- {{{ 7.2.5 -->
 <h3>Version 7.2.5</h3>
 <b><?php release_date('26-Apr-2018'); ?></b>
