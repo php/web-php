@@ -15,7 +15,10 @@
  *     ),
  * );
  */
-
+/* PHP 7.3 Release */
+$PHP_7_3_RC  = '7.3.0alpha1';
+$PHP_7_3_RC_DATE = "7 Jun 2018";
+	
 /* PHP 7.2 Release */
 $PHP_7_2_RC = '7.2.7RC1'; // Current RC version (e.g., '7.2.1RC1') or false
 $PHP_7_2_RC_DATE = "7 Jun 2018";
@@ -164,10 +167,10 @@ $RELEASES = array(
 );
 
 $PHP_5_VERSION = $PHP_5_6_VERSION; // Some scripts require this set
-$PHP_5_DATE    = $PHP_5_6_DATE; // Used by buumpRelease script
+$PHP_5_DATE    = $PHP_5_6_DATE; // Used by bumpRelease script
 $PHP_5_RC_DATE = $PHP_5_6_RC_DATE; // Used by master
 
 $PHP_7_VERSION = $PHP_7_2_VERSION; // Some scripts require this set
-$PHP_7_DATE    = $PHP_7_2_DATE; // Used by buumpRelease script
+$PHP_7_DATE    = $PHP_7_2_DATE; // Used by bumpRelease script
 $PHP_7_RC_DATE = $PHP_7_2_RC_DATE; // Used by master
 
