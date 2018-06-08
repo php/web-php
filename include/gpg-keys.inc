@@ -9,6 +9,12 @@ uid                  Kalle Sommer Nielsen (PHP) &lt;kalle@php.net&gt;
 pub   rsa4096/118BCCB6 2018-06-05 [SC] [expires: 2022-06-04]
       Key fingerprint = CBAF 69F1 73A0 FEA4 B537  F470 D66C 9593 118B CCB6
 uid                  Christoph M. Becker &lt;cmb@php.net&gt;
+
+pub   2048D/5DA04B5D 2012-03-19
+      Key fingerprint = F382 5282 6ACD 957E F380  D39F 2F79 56BC 5DA0 4B5D
+uid                  Stanislav Malyshev (PHP key) &lt;smalyshev@gmail.com&gt;
+uid                  Stanislav Malyshev (PHP key) &lt;stas@php.net&gt;
+uid                  Stanislav Malyshev (PHP key) &lt;smalyshev@sugarcrm.com&gt;
 GPG
 ,
     "7.2" => <<< GPG
