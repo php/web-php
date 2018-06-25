@@ -6,6 +6,31 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
 ?>
 <h1>PHP 7 ChangeLog</h1>
 
+<section class="version" id="7.1.19"><!-- {{{ 7.1.19 -->
+<h3>Version 7.1.19</h3>
+<b><?php release_date('22-Jun-2018'); ?></b>
+<ul><li>CLI Server:
+<ul>
+  <li><?php bugfix(76333); ?> (PHP built-in server does not find files if root path contains special characters).</li>
+</ul></li>
+<li>OpenSSL:
+<ul>
+  <li><?php bugfix(76296); ?> (openssl_pkey_get_public does not respect open_basedir).</li>
+  <li><?php bugfix(76174); ?> (openssl extension fails to build with LibreSSL 2.7).</li>
+</ul></li>
+<li>SPL:
+<ul>
+  <li><?php bugfix(76367); ?> (NoRewindIterator segfault 11).</li>
+</ul></li>
+<li>Standard:
+<ul>
+  <li><?php bugfix(76335); ?> ("link(): Bad file descriptor" with non-ASCII path).</li>
+  <li><?php bugfix(76383); ?> (array_map on $GLOBALS returns IS_INDIRECT).</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
+
 <section class="version" id="7.2.7"><!-- {{{ 7.2.7 -->
 <h3>Version 7.2.7</h3>
 <b><?php release_date('21-Jun-2018'); ?></b>

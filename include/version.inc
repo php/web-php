@@ -32,15 +32,15 @@ $PHP_7_2_SHA256     = array(
 );
 
 /* PHP 7.1 Release */
-$PHP_7_1_RC = "7.1.19RC1"; // Current RC version (e.g., '5.6.7RC1') or false
+$PHP_7_1_RC = false; // Current RC version (e.g., '5.6.7RC1') or false
 $PHP_7_1_RC_DATE = "7 Jun 2018";
 
-$PHP_7_1_VERSION         = "7.1.18";
-$PHP_7_1_DATE            = "24 May 2018";
+$PHP_7_1_VERSION         = "7.1.19";
+$PHP_7_1_DATE            = "21 Jun 2018";
 $PHP_7_1_SHA256     = array(
-    "tar.bz2"       => "580e375515ede831a6d82e13c0ec25dd08b225c6d87dfc24d7cd5f3bd542bf8e",
-    "tar.gz"        => "07c24ae4dd59d81d3dc0ce89025ae667979150e2ee0e9e30dd89e04e31d510fb",
-    "tar.xz"        => "8bd91cea072ea5b368cc9b4533a1a683eb426abdacbf024bb6ffa9b799cd3b01",
+    "tar.bz2"       => "13c43e7be3040ad53f192b0770c7ed99e5b3e348dfc6674666179d557fd770f3",
+    "tar.gz"        => "e1ae477b72bed02cdcb04f0157b8f8767bd4f6030416ae06408b4f6d85ee66a1",
+    "tar.xz"        => "7cab88f269b90a8a38dbcccf3ec0d5c6eba86122431a53eaa94405bbb60370a8",
 );
 
 /* PHP 7.0 Release */
