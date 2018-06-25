@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom" xmlns:default="http://php.net/ns/news">
+  <title>php Central Europe Conference 2018</title>
+  <id>http://php.net/archive/2018.php#id2018-06-14-1</id>
+  <published>2018-06-14T20:49:21+02:00</published>
+  <updated>2018-06-14T20:49:21+02:00</updated>
+  <default:finalTeaserDate xmlns="http://php.net/ns/news">2018-06-30</default:finalTeaserDate>
+  <category term="cfp" label="Call for Papers"/>
+  <link href="http://php.net/conferences/index.php#id2018-06-14-1" rel="alternate" type="text/html"/>
+  <default:newsImage xmlns="http://php.net/ns/news" link="https://cfp.phpce.eu/" title="phpCE.eu">phpce-logo.png</default:newsImage>
+  <link href="https://cfp.phpce.eu/" rel="via" type="text/html"/>
+  <content type="xhtml">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+     <p>New season and new challenges! As conference organisers we understand perfectly that you can stay with peleton only when you focus on development. That is why phpCE, as an event aimed at a wide group of PHP programmers from Central Europe, leaves Poland for the first time. We are stronger than before thanks to the organisers of Brno PHP Conference and volunteers from the Pehapkaři group. Together we have been working for the success of this year’s edition and <strong>we are inviting you to Prague.</strong><br/></p>
+     <p style="text-align:center;font-size:120%">Our Special Guest this year will be <strong>Rasmus Lerdorf</strong>, The PHP Language Creator.</p>
+     <p><br/>Conference dates are: October 26-28th, 2018.</p>
+     <p>About venue: Clarion Congress Hotel Prague was opened in March 2008. Currently, it is one of the largest and most state-of-the-art congress hotels in the Czech Republic. Because of the large space of the congress facilities (up to 2,500 people), cutting-edge technical equipment, a corresponding accommodation capacity and, primarily, a comprehensive offer of services, the hotel became a popular venue for a number of specialist, social and sports events and meetings.</p>
+     <p>Our speaker package for this year's event includes:</p>
+     <ul>
+     <li>Full conference pass,</li>
+     <li>2 complimentary hotel nights,</li>
+     <li>Additional complimentary night (Thu/Fri) for speakers who decide to take part in our Opening Day for Speakers,</li>
+     <li>Reimbursement of airfare costs for international speakers (arriving outside Czech Rep.),</li>
+     <li>Lunch, dinner, receptions and all other activities included in regular conference.</li>
+     </ul>
+     <p>Our speaker package doesn't include, in particular:</p>
+     <ul>
+     <li>travel costs between your home and source airport,</li>
+     <li>travel costs between destination airport and Clarion hotel,</li>
+     <li>accommodation and meals other than listed above.</li>
+     </ul>
+     <p>We are awaiting for your submissions at our <a href="https://cfp.phpce.eu/">cfp.phpce.eu</a> website. Remember that C4P closes on Saturday, June 30th.</p>
+    </div>
+  </content>
+</entry>
