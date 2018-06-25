@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom" xmlns:default="http://php.net/ns/news">
+  <title>SymfonyLive London 2018</title>
+  <id>http://php.net/archive/2018.php#id2018-06-18-1</id>
+  <published>2018-06-18T10:37:31+02:00</published>
+  <updated>2018-06-18T10:37:31+02:00</updated>
+  <default:finalTeaserDate xmlns="http://php.net/ns/news">2018-09-28</default:finalTeaserDate>
+  <category term="conferences" label="Conference announcement"/>
+  <link href="http://php.net/conferences/index.php#id2018-06-18-1" rel="alternate" type="text/html"/>
+  <default:newsImage xmlns="http://php.net/ns/news" link="https://london2018.live.symfony.com/" title="SymfonyLive London 2018 Conference">symfony-live-london-2018.jpg</default:newsImage>
+  <link href="https://london2018.live.symfony.com/" rel="via" type="text/html"/>
+  <content type="xhtml">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+      <p>Symfony is proud to organize the 7th edition of the British Symfony
+      conference and to welcome the Symfony and PHP community from all over the UK.</p>
+
+      <p>From September 27th to 28th 2018, over 350 engineers, developers and IT
+      professionals will meet at Westminster, for
+      <a href="https://london2018.live.symfony.com/">SymfonyLive London 2018</a>.</p>
+
+      <p>Join us for 2 days of Symfony to share best practices, experience, knowledge,
+      make new contacts, and hear the latest developments with the framework!</p>
+    </div>
+  </content>
+</entry>
