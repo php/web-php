@@ -1,7 +1,5 @@
 <?php // -*- C++ -*-
 
-// $Id$
-
 /*
  This is a list of all manual languages hosted
  within PHP SVN modules (phpdoc-{lang})

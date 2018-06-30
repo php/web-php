@@ -1,5 +1,4 @@
 <?php
-// $Id$
 $_SERVER['BASE_PAGE'] = 'releases/5_6_8.php';
 include_once $_SERVER['DOCUMENT_ROOT'] . '/include/prepend.inc';
 site_header("PHP 5.6.8 Release Announcement");

@@ -1,7 +1,5 @@
 <?php // -*- C++ -*-
 
-// $Id$
-
 /*
 
  This file is included directly on all manual pages,

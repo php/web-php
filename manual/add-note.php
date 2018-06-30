@@ -1,6 +1,4 @@
 <?php
-// $Id$
-
 $ip_spam_lookup_url = 'http://www.dnsbl.info/dnsbl-database-check.php?IP=';
 
 $_SERVER['BASE_PAGE'] = 'manual/add-note.php';

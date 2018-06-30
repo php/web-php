@@ -1,5 +1,4 @@
 <?php
-// $Id$
 $_SERVER['BASE_PAGE'] = 'archive/2009.php';
 include_once $_SERVER['DOCUMENT_ROOT'] . '/include/prepend.inc';
 news_archive_sidebar();

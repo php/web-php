@@ -1,5 +1,4 @@
 <?php
-// $Id$
 /*
  This page is displayed if there is no alias to
  override the stats directory distributed by rsync,

@@ -1,5 +1,4 @@
 <?php
-// $Id$
 $_SERVER['BASE_PAGE'] = 'security-note.php';
 include_once $_SERVER['DOCUMENT_ROOT'] . '/include/prepend.inc';
 site_header("A Note on Security in PHP", array("current" => "docs"));

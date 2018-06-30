@@ -1,5 +1,4 @@
 <?php
-// $Id: $
 function search_results($res, $q, $profile='all', $per_page=10, $s=0, $l='en', $show_title=true, $show_foot=true, $show_attrib=true) {
 	$start_result = $s;
 	$end_result = $s + $res['ResultSet']['totalResultsReturned'] -1;

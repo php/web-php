@@ -1,7 +1,5 @@
 <?php // -*- C++ -*-
 
-// $Id$
-
 /*
 
  This script uses the local copy of the ip-to-country.com

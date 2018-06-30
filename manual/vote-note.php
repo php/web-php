@@ -1,6 +1,4 @@
 <?php
-// $Id$
-
 $_SERVER['BASE_PAGE'] = 'manual/vote-note.php';
 include_once $_SERVER['DOCUMENT_ROOT'] . '/include/prepend.inc';
 include_once $_SERVER['DOCUMENT_ROOT'] . '/include/posttohost.inc';

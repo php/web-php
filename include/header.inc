@@ -1,6 +1,4 @@
 <?php
-/* $Id$ */
-
 $css_files = array(
     '/fonts/Fira/fira.css',
     '/fonts/Font-Awesome/css/fontello.css',

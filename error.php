@@ -1,6 +1,4 @@
 <?php
-// $Id$
-
 /*
 
  This script handles all 401, 403 and 404 error redirects,

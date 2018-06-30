@@ -1,6 +1,4 @@
 <?php
-/* $Id$ */
-
 function bugfix($number) { 
     echo "Fixed bug "; bugl($number); 
 }
