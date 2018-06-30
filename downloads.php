@@ -1,5 +1,4 @@
 <?php // vim: et
-// $Id$
 $_SERVER['BASE_PAGE'] = 'downloads.php';
 include_once $_SERVER['DOCUMENT_ROOT'] . '/include/prepend.inc';
 include_once $_SERVER['DOCUMENT_ROOT'] . '/include/gpg-keys.inc';

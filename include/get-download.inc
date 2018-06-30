@@ -1,6 +1,4 @@
 <?php
-// $Id$
-
 // Try to make this page non-cached
 header_nocache();
 

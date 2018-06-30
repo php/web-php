@@ -1,6 +1,4 @@
 <?php
-// $Id$
-
 /*
   This script provides functions to print out
   error messages for users in case something is

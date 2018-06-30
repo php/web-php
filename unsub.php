@@ -1,5 +1,4 @@
 <?php
-// $Id$
 $_SERVER['BASE_PAGE'] = 'unsub.php';
 include_once $_SERVER['DOCUMENT_ROOT'] . '/include/prepend.inc';
 $SIDEBAR_DATA = '

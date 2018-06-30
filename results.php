@@ -1,5 +1,4 @@
 <?php
-// $Id$
 $_SERVER['BASE_PAGE'] = 'results.php';
 include $_SERVER['DOCUMENT_ROOT'] . '/include/prepend.inc';
 include $_SERVER['DOCUMENT_ROOT'] . '/include/results.inc';

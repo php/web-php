@@ -1,6 +1,4 @@
 <?php
-// $Id$
-
 $_SERVER['BASE_PAGE'] = 'mirroring-troubles.php';
 include_once $_SERVER['DOCUMENT_ROOT'] . '/include/prepend.inc';
 

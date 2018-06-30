@@ -1,6 +1,4 @@
 <?php
-// $Id$
-
 /*
 
  This page is either directly called from the browser, in

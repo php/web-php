@@ -1,7 +1,5 @@
 <?php // -*- C++ -*-
 
-// $Id$
-
 // Define $MIRRORS array, and some constants
 include $_SERVER['DOCUMENT_ROOT'] . '/include/mirrors.inc';
 

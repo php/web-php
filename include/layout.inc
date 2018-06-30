@@ -1,6 +1,4 @@
 <?php
-/* $Id$ */
-
 $_SERVER['STATIC_ROOT'] = $MYSITE;
 $_SERVER['MYSITE'] = $MYSITE;
 

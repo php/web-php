@@ -1,7 +1,5 @@
 <?php // -*- C++ -*-
 
-// $Id$
-
 // We need this for error reporting 
 include_once $_SERVER['DOCUMENT_ROOT'] . '/include/errors.inc';
 

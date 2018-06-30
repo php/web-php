@@ -1,6 +1,4 @@
 <?php
-// $Id$
-
 /*
  This page supports the PHP.net automoderation system
  with enabling users to confirm their emails via the web.

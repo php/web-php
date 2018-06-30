@@ -1,7 +1,5 @@
 <?php
 
-// $Id$
-
 // Try to remove anti-SPAM bits
 function clean_AntiSPAM($email)
 {

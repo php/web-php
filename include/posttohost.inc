@@ -1,7 +1,5 @@
 <?php
 
-// $Id$
-
 /*
  This code is used to post data to the central server which
  can store the data in database and/or mail notices or requests

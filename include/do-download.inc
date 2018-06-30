@@ -1,7 +1,5 @@
 <?php
 
-// $Id$
-
 /*
    This code redirects the user to the exact file to
    download, and logs the download if it's something
