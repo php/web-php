@@ -7,7 +7,7 @@
   <default:finalTeaserDate xmlns="http://php.net/ns/news">2018-10-11</default:finalTeaserDate>
   <category term="conferences" label="Conference announcement"/>
   <link href="http://php.net/conferences/index.php#id2018-06-25-2" rel="alternate" type="text/html"/>
-  <default:newsImage xmlns="http://php.net/ns/news" link="https://usa2018.live.symfony.com/" title="SymfonyLive USA 2018 Conference">symfony-live-usa-2018.jpg</default:newsImage>
+  <default:newsImage xmlns="http://php.net/ns/news" link="https://usa2018.live.symfony.com/" title="SymfonyLive USA 2018 Conference">symfony-live-usa-2018.png</default:newsImage>
   <link href="https://usa2018.live.symfony.com/" rel="via" type="text/html"/>
   <content type="xhtml">
     <div xmlns="http://www.w3.org/1999/xhtml">
