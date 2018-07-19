@@ -14,9 +14,9 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
   <li><?php bugfix(76423); ?> (Int Overflow lead to Heap OverFlow in exif_thumbnail_extract of exif.c).</li>
   <li><?php bugfix(76557); ?> (heap-buffer-overflow (READ of size 48) while reading exif data).</li>
 </ul></li>
-<li>ZIP:
+<li>Win32:
 <ul>
-  <li><?php bugfix(76461); ?> (OPSYS_Z_CPM defined instead of OPSYS_CPM).</li>
+  <li><?php bugfix(76459); ?> (windows linkinfo lacks openbasedir check).</li>
 </ul></li>
 </ul>
 <!-- }}} --></section>
