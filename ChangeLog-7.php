@@ -6,6 +6,21 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
 ?>
 <h1>PHP 7 ChangeLog</h1>
 
+<section class="version" id="7.0.31"><!-- {{{ 7.0.31 -->
+<h3>Version 7.0.31</h3>
+<b><?php release_date('19-Jul-2018'); ?></b>
+<ul><li>Exif:
+<ul>
+  <li><?php bugfix(76423); ?> (Int Overflow lead to Heap OverFlow in exif_thumbnail_extract of exif.c).</li>
+  <li><?php bugfix(76557); ?> (heap-buffer-overflow (READ of size 48) while reading exif data).</li>
+</ul></li>
+<li>ZIP:
+<ul>
+  <li><?php bugfix(76461); ?> (OPSYS_Z_CPM defined instead of OPSYS_CPM).</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
 <section class="version" id="7.2.8"><!-- {{{ 7.2.8 -->
 <h3>Version 7.2.8</h3>
 <b><?php release_date('19-Jul-2018'); ?></b>
