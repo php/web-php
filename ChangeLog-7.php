@@ -6,6 +6,74 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
 ?>
 <h1>PHP 7 ChangeLog</h1>
 
+<section class="version" id="7.2.8"><!-- {{{ 7.2.8 -->
+<h3>Version 7.2.8</h3>
+<b><?php release_date('19-Jul-2018'); ?></b>
+<ul><li>Core:
+<ul>
+  <li><?php bugfix(76534); ?> (PHP hangs on 'illegal string offset on string references with an error handler).</li>
+  <li><?php bugfix(76520); ?> (Object creation leaks memory when executed over HTTP).</li>
+  <li><?php bugfix(76502); ?> (Chain of mixed exceptions and errors does not serialize properly).</li>
+</ul></li>
+<li>Date:
+<ul>
+  <li><?php bugfix(76462); ?> (Undefined property: DateInterval::$f).</li>
+</ul></li>
+<li>EXIF:
+<ul>
+  <li><?php bugfix(76409); ?> (heap use after free in _php_stream_free).</li>
+  <li><?php bugfix(76423); ?> (Int Overflow lead to Heap OverFlow in exif_thumbnail_extract of exif.c).</li>
+  <li><?php bugfix(76557); ?> (heap-buffer-overflow (READ of size 48) while reading exif data).</li>
+</ul></li>
+<li>FPM:
+<ul>
+  <li><?php bugfix(73342); ?> (Vulnerability in php-fpm by changing stdin to non-blocking).</li>
+</ul></li>
+<li>GMP:
+<ul>
+  <li><?php bugfix(74670); ?> (Integer Underflow when unserializing GMP and possible other classes).</li>
+</ul></li>
+<li>intl:
+<ul>
+  <li><?php bugfix(76556); ?> (get_debug_info handler for BreakIterator shows wrong type).</li>
+</ul></li>
+<li>mbstring:
+<ul>
+  <li><?php bugfix(76532); ?> (Integer overflow and excessive memory usage in mb_strimwidth).</li>
+</ul></li>
+<li>Opcache:
+<ul>
+  <li><?php bugfix(76477); ?> (Opcache causes empty return value).</li>
+</ul></li>
+<li>PGSQL:
+<ul>
+  <li><?php bugfix(76548); ?> (pg_fetch_result did not fetch the next row).</li>
+</ul></li>
+<li>phpdbg:
+<ul>
+  <li>Fix arginfo wrt. optional/required parameters.</li>
+</ul></li>
+<li>Reflection:
+<ul>
+  <li><?php bugfix(76536); ?> (PHP crashes with core dump when throwing exception in error handler).</li>
+  <li><?php bugfix(75231); ?> (ReflectionProperty#getValue() incorrectly works with inherited classes).</li>
+</ul></li>
+<li>Standard:
+<ul>
+  <li><?php bugfix(76505); ?> (array_merge_recursive() is duplicating sub-array keys).</li>
+  <li><?php bugfix(71848); ?> (getimagesize with $imageinfo returns false).</li>
+</ul></li>
+<li>Win32:
+<ul>
+  <li><?php bugfix(76459); ?> (windows linkinfo lacks openbasedir check).</li>
+</ul></li>
+<li>ZIP:
+<ul>
+  <li><?php bugfix(76461); ?> (OPSYS_Z_CPM defined instead of OPSYS_CPM).</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
 <section class="version" id="7.1.19"><!-- {{{ 7.1.19 -->
 <h3>Version 7.1.19</h3>
 <b><?php release_date('22-Jun-2018'); ?></b>
