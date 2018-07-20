@@ -1919,6 +1919,39 @@ $OLDRELEASES = array (
   ),
   5 => 
   array (
+    '5.6.36' => 
+    array (
+      'announcement' => 
+      array (
+        'English' => '/releases/5_6_36.php',
+      ),
+      'source' => 
+      array (
+        0 => 
+        array (
+          'filename' => 'php-5.6.36.tar.bz2',
+          'name' => 'PHP 5.6.36 (tar.bz2)',
+          'sha256' => '626a0e3f5d8a0e686a2b930f0dd3a0601fe3dcb5e43dd0e8c3fab631e64e172a',
+          'date' => '26 Apr 2018',
+        ),
+        1 => 
+        array (
+          'filename' => 'php-5.6.36.tar.gz',
+          'name' => 'PHP 5.6.36 (tar.gz)',
+          'sha256' => '06086a8b6a9964ef8009c4d9176b4eeb0c564ea39c1213f015e24f3466d2d69f',
+          'date' => '26 Apr 2018',
+        ),
+        2 => 
+        array (
+          'filename' => 'php-5.6.36.tar.xz',
+          'name' => 'PHP 5.6.36 (tar.xz)',
+          'sha256' => '18f536bf548e909b4e980379d0c4e56d024b2b1eb1c9768fd169360491f1d6dd',
+          'date' => '26 Apr 2018',
+        ),
+      ),
+      'date' => '26 Apr 2018',
+      'museum' => false,
+    ),
     '5.6.35' => 
     array (
       'announcement' => 

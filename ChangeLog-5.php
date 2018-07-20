@@ -8,6 +8,21 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 
 <h1>PHP 5 ChangeLog</h1>
 
+<section class="version" id="5.6.37"><!-- {{{ 5.6.37 -->
+<h3>Version 5.6.37</h3>
+<b><?php release_date('19-Jul-2018'); ?></b>
+<ul><li>Exif:
+<ul>
+  <li><?php bugfix(76423); ?> (Int Overflow lead to Heap OverFlow in exif_thumbnail_extract of exif.c).</li>
+  <li><?php bugfix(76557); ?> (heap-buffer-overflow (READ of size 48) while reading exif data).</li>
+</ul></li>
+<li>Win32:
+<ul>
+  <li><?php bugfix(76459); ?> (windows linkinfo lacks openbasedir check).</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
 <section class="version" id="5.6.36"><!-- {{{ 5.6.36 -->
 <h3>Version 5.6.36</h3>
 <b><?php release_date('26-Apr-2018'); ?></b>
