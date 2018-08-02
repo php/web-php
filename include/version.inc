@@ -16,8 +16,8 @@
  * );
  */
 /* PHP 7.3 Release */
-$PHP_7_3_RC  = '7.3.0alpha4';
-$PHP_7_3_RC_DATE = "19 Jul 2018";
+$PHP_7_3_RC  = '7.3.0beta1';
+$PHP_7_3_RC_DATE = "02 Aug 2018";
 	
 /* PHP 7.2 Release */
 $PHP_7_2_RC = false; // Current RC version (e.g., '7.2.1RC1') or false
