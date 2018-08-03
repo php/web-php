@@ -21,7 +21,7 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
 <li>exif:
 <ul>
   <li><?php bugfix(76423); ?> (Int Overflow lead to Heap OverFlow in exif_thumbnail_extract of exif.c).</li>
-  <li><?php bugfix(76557); ?> (heap-buffer-overflow (READ of size 48) while reading exif data).</li>
+  <li><?php bugfix(76557); ?> (heap-buffer-overflow (READ of size 48) while reading exif data). (CVE-2018-14851)</li>
 </ul></li>
 <li>FPM:
 <ul>
@@ -71,7 +71,7 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
 <ul><li>Exif:
 <ul>
   <li><?php bugfix(76423); ?> (Int Overflow lead to Heap OverFlow in exif_thumbnail_extract of exif.c).</li>
-  <li><?php bugfix(76557); ?> (heap-buffer-overflow (READ of size 48) while reading exif data).</li>
+  <li><?php bugfix(76557); ?> (heap-buffer-overflow (READ of size 48) while reading exif data). (CVE-2018-14851)</li>
 </ul></li>
 <li>Win32:
 <ul>
@@ -97,7 +97,7 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
 <ul>
   <li><?php bugfix(76409); ?> (heap use after free in _php_stream_free).</li>
   <li><?php bugfix(76423); ?> (Int Overflow lead to Heap OverFlow in exif_thumbnail_extract of exif.c).</li>
-  <li><?php bugfix(76557); ?> (heap-buffer-overflow (READ of size 48) while reading exif data).</li>
+  <li><?php bugfix(76557); ?> (heap-buffer-overflow (READ of size 48) while reading exif data). (CVE-2018-14851)</li>
 </ul></li>
 <li>FPM:
 <ul>
