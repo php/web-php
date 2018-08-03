@@ -783,7 +783,7 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
 <ul>
   <li><?php bugfix(75511); ?> (fread not free unused buffer).</li>
   <li><?php bugfix(75514); ?> (mt_rand returns value outside [$min,$max]+ on 32-bit) (Remi)</li>
-  <li><?php bugfix(75535); ?> (Inappropriately parsing HTTP response leads to PHP segment fault).</li>
+  <li><?php bugfix(75535); ?> (Inappropriately parsing HTTP response leads to PHP segment fault). (CVE-2018-14884)</li>
   <li><?php bugfix(75409); ?> (accept EFAULT in addition to ENOSYS as indicator that getrandom() is missing).</li>
   <li><?php bugfix(73124); ?> (php_ini_scanned_files() not reporting correctly).</li>
   <li><?php bugfix(75574); ?> (putenv does not work properly if parameter contains non-ASCII unicode character).</li>
@@ -837,7 +837,7 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
 <ul>
   <li><?php bugfix(75511); ?> (fread not free unused buffer).</li>
   <li><?php bugfix(75514); ?> (mt_rand returns value outside [$min,$max]+ on 32-bit) (Remi)</li>
-  <li><?php bugfix(75535); ?> (Inappropriately parsing HTTP response leads to PHP segment fault).</li>
+  <li><?php bugfix(75535); ?> (Inappropriately parsing HTTP response leads to PHP segment fault). (CVE-2018-14884)</li>
   <li><?php bugfix(75409); ?> (accept EFAULT in addition to ENOSYS as indicator that getrandom() is missing).</li>
   <li><?php bugfix(73124); ?> (php_ini_scanned_files() not reporting correctly).</li>
   <li><?php bugfix(75574); ?> (putenv does not work properly if parameter contains non-ASCII unicode character).</li>
@@ -883,7 +883,7 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
 </ul></li>
 <li>Standard:
 <ul>
-  <li><?php bugfix(75535); ?> (Inappropriately parsing HTTP response leads to PHP segment fault).</li>
+  <li><?php bugfix(75535); ?> (Inappropriately parsing HTTP response leads to PHP segment fault). (CVE-2018-14884)</li>
   <li><?php bugfix(75409); ?> (accept EFAULT in addition to ENOSYS as indicator that getrandom() is missing).</li>
 </ul></li>
 <li>Zip:
