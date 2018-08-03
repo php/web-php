@@ -6,6 +6,74 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
 ?>
 <h1>PHP 7 ChangeLog</h1>
 
+<section class="version" id="7.2.8"><!-- {{{ 7.2.8 -->
+<h3>Version 7.2.8</h3>
+<b><?php release_date('19-Jul-2018'); ?></b>
+<ul><li>Core:
+<ul>
+  <li><?php bugfix(76534); ?> (PHP hangs on 'illegal string offset on string references with an error handler).</li>
+  <li><?php bugfix(76520); ?> (Object creation leaks memory when executed over HTTP).</li>
+  <li><?php bugfix(76502); ?> (Chain of mixed exceptions and errors does not serialize properly).</li>
+</ul></li>
+<li>Date:
+<ul>
+  <li><?php bugfix(76462); ?> (Undefined property: DateInterval::$f).</li>
+</ul></li>
+<li>EXIF:
+<ul>
+  <li><?php bugfix(76409); ?> (heap use after free in _php_stream_free).</li>
+  <li><?php bugfix(76423); ?> (Int Overflow lead to Heap OverFlow in exif_thumbnail_extract of exif.c).</li>
+  <li><?php bugfix(76557); ?> (heap-buffer-overflow (READ of size 48) while reading exif data). (CVE-2018-14851)</li>
+</ul></li>
+<li>FPM:
+<ul>
+  <li><?php bugfix(73342); ?> (Vulnerability in php-fpm by changing stdin to non-blocking).</li>
+</ul></li>
+<li>GMP:
+<ul>
+  <li><?php bugfix(74670); ?> (Integer Underflow when unserializing GMP and possible other classes).</li>
+</ul></li>
+<li>intl:
+<ul>
+  <li><?php bugfix(76556); ?> (get_debug_info handler for BreakIterator shows wrong type).</li>
+</ul></li>
+<li>mbstring:
+<ul>
+  <li><?php bugfix(76532); ?> (Integer overflow and excessive memory usage in mb_strimwidth).</li>
+</ul></li>
+<li>Opcache:
+<ul>
+  <li><?php bugfix(76477); ?> (Opcache causes empty return value).</li>
+</ul></li>
+<li>PGSQL:
+<ul>
+  <li><?php bugfix(76548); ?> (pg_fetch_result did not fetch the next row).</li>
+</ul></li>
+<li>phpdbg:
+<ul>
+  <li>Fix arginfo wrt. optional/required parameters.</li>
+</ul></li>
+<li>Reflection:
+<ul>
+  <li><?php bugfix(76536); ?> (PHP crashes with core dump when throwing exception in error handler).</li>
+  <li><?php bugfix(75231); ?> (ReflectionProperty#getValue() incorrectly works with inherited classes).</li>
+</ul></li>
+<li>Standard:
+<ul>
+  <li><?php bugfix(76505); ?> (array_merge_recursive() is duplicating sub-array keys).</li>
+  <li><?php bugfix(71848); ?> (getimagesize with $imageinfo returns false).</li>
+</ul></li>
+<li>Win32:
+<ul>
+  <li><?php bugfix(76459); ?> (windows linkinfo lacks openbasedir check).</li>
+</ul></li>
+<li>ZIP:
+<ul>
+  <li><?php bugfix(76461); ?> (OPSYS_Z_CPM defined instead of OPSYS_CPM).</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
 <section class="version" id="7.1.20"><!-- {{{ 7.1.20 -->
 <h3>Version 7.1.20</h3>
 <b><?php release_date('19-Jul-2018'); ?></b>
@@ -80,99 +148,6 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
 </ul>
 <!-- }}} --></section>
 
-<section class="version" id="7.2.8"><!-- {{{ 7.2.8 -->
-<h3>Version 7.2.8</h3>
-<b><?php release_date('19-Jul-2018'); ?></b>
-<ul><li>Core:
-<ul>
-  <li><?php bugfix(76534); ?> (PHP hangs on 'illegal string offset on string references with an error handler).</li>
-  <li><?php bugfix(76520); ?> (Object creation leaks memory when executed over HTTP).</li>
-  <li><?php bugfix(76502); ?> (Chain of mixed exceptions and errors does not serialize properly).</li>
-</ul></li>
-<li>Date:
-<ul>
-  <li><?php bugfix(76462); ?> (Undefined property: DateInterval::$f).</li>
-</ul></li>
-<li>EXIF:
-<ul>
-  <li><?php bugfix(76409); ?> (heap use after free in _php_stream_free).</li>
-  <li><?php bugfix(76423); ?> (Int Overflow lead to Heap OverFlow in exif_thumbnail_extract of exif.c).</li>
-  <li><?php bugfix(76557); ?> (heap-buffer-overflow (READ of size 48) while reading exif data). (CVE-2018-14851)</li>
-</ul></li>
-<li>FPM:
-<ul>
-  <li><?php bugfix(73342); ?> (Vulnerability in php-fpm by changing stdin to non-blocking).</li>
-</ul></li>
-<li>GMP:
-<ul>
-  <li><?php bugfix(74670); ?> (Integer Underflow when unserializing GMP and possible other classes).</li>
-</ul></li>
-<li>intl:
-<ul>
-  <li><?php bugfix(76556); ?> (get_debug_info handler for BreakIterator shows wrong type).</li>
-</ul></li>
-<li>mbstring:
-<ul>
-  <li><?php bugfix(76532); ?> (Integer overflow and excessive memory usage in mb_strimwidth).</li>
-</ul></li>
-<li>Opcache:
-<ul>
-  <li><?php bugfix(76477); ?> (Opcache causes empty return value).</li>
-</ul></li>
-<li>PGSQL:
-<ul>
-  <li><?php bugfix(76548); ?> (pg_fetch_result did not fetch the next row).</li>
-</ul></li>
-<li>phpdbg:
-<ul>
-  <li>Fix arginfo wrt. optional/required parameters.</li>
-</ul></li>
-<li>Reflection:
-<ul>
-  <li><?php bugfix(76536); ?> (PHP crashes with core dump when throwing exception in error handler).</li>
-  <li><?php bugfix(75231); ?> (ReflectionProperty#getValue() incorrectly works with inherited classes).</li>
-</ul></li>
-<li>Standard:
-<ul>
-  <li><?php bugfix(76505); ?> (array_merge_recursive() is duplicating sub-array keys).</li>
-  <li><?php bugfix(71848); ?> (getimagesize with $imageinfo returns false).</li>
-</ul></li>
-<li>Win32:
-<ul>
-  <li><?php bugfix(76459); ?> (windows linkinfo lacks openbasedir check).</li>
-</ul></li>
-<li>ZIP:
-<ul>
-  <li><?php bugfix(76461); ?> (OPSYS_Z_CPM defined instead of OPSYS_CPM).</li>
-</ul></li>
-</ul>
-<!-- }}} --></section>
-
-<section class="version" id="7.1.19"><!-- {{{ 7.1.19 -->
-<h3>Version 7.1.19</h3>
-<b><?php release_date('22-Jun-2018'); ?></b>
-<ul><li>CLI Server:
-<ul>
-  <li><?php bugfix(76333); ?> (PHP built-in server does not find files if root path contains special characters).</li>
-</ul></li>
-<li>OpenSSL:
-<ul>
-  <li><?php bugfix(76296); ?> (openssl_pkey_get_public does not respect open_basedir).</li>
-  <li><?php bugfix(76174); ?> (openssl extension fails to build with LibreSSL 2.7).</li>
-</ul></li>
-<li>SPL:
-<ul>
-  <li><?php bugfix(76367); ?> (NoRewindIterator segfault 11).</li>
-</ul></li>
-<li>Standard:
-<ul>
-  <li><?php bugfix(76335); ?> ("link(): Bad file descriptor" with non-ASCII path).</li>
-  <li><?php bugfix(76383); ?> (array_map on $GLOBALS returns IS_INDIRECT).</li>
-</ul></li>
-</ul>
-<!-- }}} --></section>
-
-
 <section class="version" id="7.2.7"><!-- {{{ 7.2.7 -->
 <h3>Version 7.2.7</h3>
 <b><?php release_date('21-Jun-2018'); ?></b>
@@ -201,26 +176,26 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
 </ul>
 <!-- }}} --></section>
 
-<section class="version" id="7.1.18"><!-- {{{ 7.1.18 -->
-<h3>Version 7.1.18</h3>
-<b><?php release_date('24-May-2018'); ?></b>
-<ul><li>FPM:
+<section class="version" id="7.1.19"><!-- {{{ 7.1.19 -->
+<h3>Version 7.1.19</h3>
+<b><?php release_date('22-Jun-2018'); ?></b>
+<ul><li>CLI Server:
 <ul>
-  <li><?php bugfix(76075); ?> --with-fpm-acl wrongly tries to find libacl on FreeBSD.</li>
+  <li><?php bugfix(76333); ?> (PHP built-in server does not find files if root path contains special characters).</li>
 </ul></li>
-<li>intl:
+<li>OpenSSL:
 <ul>
-  <li><?php bugfix(74385); ?> (Locale::parseLocale() broken with some arguments).</li>
+  <li><?php bugfix(76296); ?> (openssl_pkey_get_public does not respect open_basedir).</li>
+  <li><?php bugfix(76174); ?> (openssl extension fails to build with LibreSSL 2.7).</li>
 </ul></li>
-<li>Opcache:
+<li>SPL:
 <ul>
-  <li><?php bugfix(76205); ?> (PHP-FPM sporadic crash when running Infinitewp).</li>
-  <li><?php bugfix(76275); ?> (Assertion failure in file cache when unserializing empty try_catch_array).</li>
-  <li><?php bugfix(76281); ?> (Opcache causes incorrect "undefined variable" errors).</li>
+  <li><?php bugfix(76367); ?> (NoRewindIterator segfault 11).</li>
 </ul></li>
-<li>Reflection:
+<li>Standard:
 <ul>
-  <li>Fixed arginfo for array_replace(_recursive) and array_merge(_recursive).</li>
+  <li><?php bugfix(76335); ?> ("link(): Bad file descriptor" with non-ASCII path).</li>
+  <li><?php bugfix(76383); ?> (array_map on $GLOBALS returns IS_INDIRECT).</li>
 </ul></li>
 </ul>
 <!-- }}} --></section>
@@ -253,6 +228,30 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
 <li>Session:
 <ul>
   <li><?php bugfix(74892); ?> (Url Rewriting (trans_sid) not working on urls that start with "#").</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
+<section class="version" id="7.1.18"><!-- {{{ 7.1.18 -->
+<h3>Version 7.1.18</h3>
+<b><?php release_date('24-May-2018'); ?></b>
+<ul><li>FPM:
+<ul>
+  <li><?php bugfix(76075); ?> --with-fpm-acl wrongly tries to find libacl on FreeBSD.</li>
+</ul></li>
+<li>intl:
+<ul>
+  <li><?php bugfix(74385); ?> (Locale::parseLocale() broken with some arguments).</li>
+</ul></li>
+<li>Opcache:
+<ul>
+  <li><?php bugfix(76205); ?> (PHP-FPM sporadic crash when running Infinitewp).</li>
+  <li><?php bugfix(76275); ?> (Assertion failure in file cache when unserializing empty try_catch_array).</li>
+  <li><?php bugfix(76281); ?> (Opcache causes incorrect "undefined variable" errors).</li>
+</ul></li>
+<li>Reflection:
+<ul>
+  <li>Fixed arginfo for array_replace(_recursive) and array_merge(_recursive).</li>
 </ul></li>
 </ul>
 <!-- }}} --></section>
