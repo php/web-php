@@ -6,6 +6,42 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
 ?>
 <h1>PHP 7 ChangeLog</h1>
 
+<section class="version" id="7.2.9"><!-- {{{ 7.2.9 -->
+<h3>Version 7.2.9</h3>
+<b><?php release_date('16-Aug-2018'); ?></b>
+<ul><li>Calendar:
+<ul>
+  <li><?php bugfix(52974); ?> (jewish.c: compile error under Windows with GBK charset).</li>
+</ul></li>
+<li>Filter:
+<ul>
+  <li><?php bugfix(76366); ?> (References in sub-array for filtering breaks the filter).</li>
+</ul></li>
+<li>PDO_Firebird:
+<ul>
+  <li><?php bugfix(76488); ?> (Memory leak when fetching a BLOB field).</li>
+</ul></li>
+<li>PDO_PgSQL:
+<ul>
+  <li><?php bugfix(75402); ?> (Possible Memory Leak using PDO::CURSOR_SCROLL option).</li>
+</ul></li>
+<li>SQLite3:
+<ul>
+  <li>Fixed #76665 (SQLite3Stmt::bindValue() with SQLITE3_FLOAT doesn't juggle).</li>
+</ul></li>
+<li>Standard:
+<ul>
+  <li><?php bugfix(73817); ?> (Incorrect entries in get_html_translation_table).</li>
+  <li><?php bugfix(68553); ?> (array_column: null values in $index_key become incrementing keys in result).</li>
+  <li><?php bugfix(76643); ?> (Segmentation fault when using `output_add_rewrite_var`).</li>
+</ul></li>
+<li>Zip:
+<ul>
+  <li><?php bugfix(76524); ?> (ZipArchive memory leak (OVERWRITE flag and empty archive)).</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
 <section class="version" id="7.2.8"><!-- {{{ 7.2.8 -->
 <h3>Version 7.2.8</h3>
 <b><?php release_date('19-Jul-2018'); ?></b>
