@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom" xmlns:default="http://php.net/ns/news">
+  <title>php[world] 2018</title>
+  <id>http://php.net/archive/2018.php#id2018-08-16-2</id>
+  <published>2018-08-16T14:31:44+00:00</published>
+  <updated>2018-08-16T14:31:44+00:00</updated>
+  <default:finalTeaserDate xmlns="http://php.net/ns/news">2018-11-14</default:finalTeaserDate>
+  <category term="conferences" label="Conference announcement"/>
+  <link href="http://php.net/conferences/index.php#id2018-08-16-2" rel="alternate" type="text/html"/>
+  <default:newsImage xmlns="http://php.net/ns/news" link="https://world.phparch.com/" title="php[world] 2018">world2018blue-300px.png</default:newsImage>
+  <link href="https://world.phparch.com/" rel="via" type="text/html"/>
+  <content type="xhtml">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+     
+          <p>We are excited to announce the <a href="https://world.phparch.com/?utm_campaign=phpnet">5th annual php[world] conference</a>, produced by the publishers of <a href="https://www.phparch.com">php[architect] magazine</a>.  As always, it is taking place over two days in November (14th-15th) in the Washington D.C. area.</p>
+     
+          <p>This year we have streamlined our event <a href="https://world.phparch.com/schedule?utm_campaign=phpnet">schedule</a> to add in even more content for you! 40 sessions, 6 workshops, and 12 birds of a feather sessions are waiting for you at this year's php[world] conference.</p>
+     
+          <p>We also have two days before the conference full of full-day (and two-day) training classes taught by experts in their field.  Want to learn Laravel from the maintainers of Laravel Shift and Laravel Homestead?  How about all the new features coming to WordPress with Gutenberg from core WordPress contributors? This and more is available this year!</p>
+     
+          <p> We currently have <a href="https://world.phparch.com/register?utm_campaign=phpnet">tickets available</a> for purchase and look forward to seeing you this fall in D.C.</p>
+    </div>
+  </content>
+</entry>
