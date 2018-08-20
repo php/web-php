@@ -18,7 +18,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 </ul></li>
 <li>Win32:
 <ul>
-  <li><?php bugfix(76459); ?> (windows linkinfo lacks openbasedir check).</li>
+  <li><?php bugfix(76459); ?> (windows linkinfo lacks openbasedir check). (CVE-2018-15132)</li>
 </ul></li>
 </ul>
 <!-- }}} --></section>
