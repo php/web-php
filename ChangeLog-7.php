@@ -27,7 +27,7 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
 </ul></li>
 <li>SQLite3:
 <ul>
-  <li>Fixed #76665 (SQLite3Stmt::bindValue() with SQLITE3_FLOAT doesn't juggle).</li>
+  <li><?php bugfix(76665); ?> (SQLite3Stmt::bindValue() with SQLITE3_FLOAT doesn't juggle).</li>
 </ul></li>
 <li>Standard:
 <ul>
@@ -63,7 +63,7 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
 </ul></li>
 <li>SQLite3:
 <ul>
-  <li>Fixed #76665 (SQLite3Stmt::bindValue() with SQLITE3_FLOAT doesn't juggle).</li>
+  <li><?php bugfix(76665); ?> (SQLite3Stmt::bindValue() with SQLITE3_FLOAT doesn't juggle).</li>
 </ul></li>
 <li>Standard:
 <ul>
