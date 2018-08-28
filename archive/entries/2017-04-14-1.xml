@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom" xmlns:default="http://php.net/ns/news">
+  <title>Dutch PHP Conference 2017</title>
+  <id>http://php.net/archive/2017.php#id2017-04-14-1</id>
+  <published>2017-04-14T13:21:13+00:00</published>
+  <updated>2017-04-14T13:21:13+00:00</updated>
+  <default:finalTeaserDate xmlns="http://php.net/ns/news">2017-06-29</default:finalTeaserDate>
+  <category term="conferences" label="Conference announcement"/>
+  <link href="http://php.net/conferences/index.php#id2017-04-14-1" rel="alternate" type="text/html"/>
+  <default:newsImage xmlns="http://php.net/ns/news" link="https://www.phpconference.nl/" title="Dutch PHP Conference">DPC-logo.png</default:newsImage>
+  <link href="https://www.phpconference.nl/" rel="via" type="text/html"/>
+  <content type="xhtml">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+      <p>
+        We are glad to announce that we’ll be organizing the 11th edition of the Dutch PHP Conference, which will be
+        held in Amsterdam from June 29th to July 1st 2017. Thursday 29th will be the tutorial day and June 30th and July
+        1st will be the main conference days. DPC brings together the best speakers and PHP, Javascript and front-end
+        talent from Europe and beyond for three days of high-level technical sessions. Our
+        <a href="https://www.phpconference.nl/schedule" title="Schedule | Dutch PHP conference">schedule</a>
+        is already online and features a variety of talks on PHP, DevOps, Security &amp; privacy, microservices, JavaScript,
+        databases and much more; so come along to our two main conference days on June 30 and July 1 in Amsterdam.
+      </p>
+
+      <p>
+        <strong>In-depth tutorial sessions</strong><br/>
+        The tutorial day on Thursday June 29 at the same venue gives an opportunity for a smaller number of attendees to
+        spend some time with an expert, going in-depth on particular topics - topics like Docker, domain modelling, Mob
+        programming, ES6, Drupal8, Progressive Web Apps and more are all on offer. These are small groups so that
+        presenters can respond to individual questions, and as a result places are limited.
+      </p>
+
+      <p>
+        More information about the Dutch PHP Conference at
+        <a href="https://www.phpconference.nl/" title="Dutch PHP Conference">www.phpconference.nl</a>.
+      </p>
+    </div>
+  </content>
+</entry>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom" xmlns:default="http://php.net/ns/news">
+  <title>CakeFest 2017 NYC, the Official CakePHP Conference</title>
+  <id>http://php.net/archive/2017.php#id2017-02-21-1</id>
+  <published>2017-02-21T09:19:04+00:00</published>
+  <updated>2017-02-21T09:19:04+00:00</updated>
+  <default:finalTeaserDate xmlns="http://php.net/ns/news">2017-06-08</default:finalTeaserDate>
+  <category term="conferences" label="Conference announcement"/>
+  <category term="cfp" label="Call for Papers"/>
+  <link href="http://php.net/conferences/index.php#id2017-02-21-1" rel="alternate" type="text/html"/>
+  <default:newsImage xmlns="http://php.net/ns/news" link="https://cakefest.org" title="CakeFest 2017">cakefest-2017.png</default:newsImage>
+  <link href="https://cakefest.org" rel="via" type="text/html"/>
+  <content type="xhtml">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+     <p>
+       <a href="https://cakefest.org">CakeFest</a> is organized for developers,
+       managers and interested newcomers alike. Bringing a world of unique skill
+       and talent together in a celebration and learning environment around the
+       worlds most popular PHP framework.
+     </p>
+     <p>
+       Celebrating over eleven years of success in the PHP and web development
+       community, <a href="http://cakefest.org">CakePHP’s 2017 conference</a>
+       will be an event not to miss.
+     </p>
+     <p>
+       With two workshop days (8th/9th June) as well as two jam-packed conference
+       days (10th/11th June), this is an open source conference not to miss out on!
+     </p>
+     <p><a href="https://cakefest.org">CakeFest</a> is on the lookout for sponsors - keen for more information? Contact us via <a href="mailto:CakeFest@cakephp.org">CakeFest@cakephp.org</a> for more!</p>
+
+     <p>Are you a speaker looking for a new and interesting conference to speak at? <a href="https://cakefest.org">CakeFest 2017 NYC</a> is the place for you! A lot of things interest us, so why not come join in! CFP closes 15th March and Speakers will be announced before 31st March 2017</p>
+
+     <p><a href="https://cakefest.org/tickets">Tickets</a> are selling fast, so you better grab yours while you still can!</p>
+    </div>
+  </content>
+</entry>

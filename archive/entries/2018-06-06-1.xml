@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom" xmlns:default="http://php.net/ns/news">
+  <title>Southeast PHP Conference</title>
+  <id>http://php.net/archive/2018.php#id2018-06-06-1</id>
+  <published>2018-06-06T11:02:22+00:00</published>
+  <published>2018-06-06T11:02:22+00:00</published>
+  <default:finalTeaserDate xmlns="http://php.net/ns/news">2018-06-06</default:finalTeaserDate>
+  <category term="conferences" label="Conference announcement"/>
+  <link href="http://php.net/conferences/index.php#id2018-06-06-1" rel="alternate" type="text/html"/>
+  <default:newsImage xmlns="http://php.net/ns/news" link="https://southeastphp.com" title="Southeast PHP Conference">SouthEastPHPLogo.png</default:newsImage>
+  <link href="https://southeastphp.com" rel="via" type="text/html"/>
+  <content type="xhtml">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+      <p><a href="https://southeastphp.com">Southeast PHP</a> is a two-day, regional PHP conference that brings the community together to learn and grow. We're bringing the community conference to Nashville, TN which hasn't had a conference since the old PHP Community Conference back in 2011! We will have two full days of amazing talks from members of our community talking about security, framework-less php, deployment and more!</p>
+      <p>The conference is scheduled to run <strong>August 16th - August 17th</strong>, at the beautiful <a href="https://www.hotelpreston.com/">Hotel Preston</a>. We welcome developers and enthusiasts of all skill levels to come join us while we discuss the latest trends and technologies in our industry. You can use the code `SOUTHEAST` to reserve a room today!</p>
+      <p>We look forward to seeing you in Nashville, and making the first ever <a href="https://southeastphp.com">Southeast PHP Conference</a> a huge success.</p>
+    </div>
+  </content>
+</entry>

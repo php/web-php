@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom" xmlns:default="http://php.net/ns/news">
+	<title>SunshinePHP 2017 Schedule Announced</title>
+	<id>http://php.net/archive/2016.php#id2016-11-01-1</id>
+	<published>2016-11-01T00:00:01+00:00</published>
+	<updated>2016-11-01T12:23:00+00:00</updated>
+	<default:finalTeaserDate xmlns="http://php.net/ns/news">2016-11-01</default:finalTeaserDate>
+	<category term="conferences" label="Conference announcement"/>
+	<link href="http://php.net/conferences/index.php#id2016-11-01-1" rel="alternate" type="text/html"/>
+	<default:newsImage xmlns="http://php.net/ns/news" link="http://sunshinephp.com" title="SunshinePHP 2017">sunshinephp2017.png</default:newsImage>
+	<link href="http://sunshinephp.com" rel="via" type="text/html"/>
+	<content type="xhtml">
+		<div xmlns="http://www.w3.org/1999/xhtml">
+			<p>We are pleased to announce the <a href="http://sunshinephp.com/schedule" title="SunshinePHP Schedule">2017 SunshinePHP Schedule</a>. Our highly diverse lineup of 45 speakers will be delivering 5 keynotes, 8 in-depth 3-hour tutorials, and 40 talks 1-hour in length over this 3 day event.</p>
+
+			<p>SunshinePHP hit it's 5th year and will happen from February 2nd to 4th, 2017 in sunny Miami, Florida. As one of the largest community conferences in the U.S. the schedule is amazing this year. We will have a full tutorial day featuring 3-hour sessions followed by 2 days of 1-hour talks and inspirational keynotes.</p>
+
+			<p>In addition we will also have an Uncon for attendees to share unscheduled talks, a hack event, and plenty of other fun and/or educational activities.</p>
+
+			<p>So leave the February cold behind and come warm up in Miami, Florida for a few days of sharing and networking with other PHP folks.</p>
+
+			<p>Ticket sales ongoing at <a href="http://sunshinephp.com/register" title="SunshinePHP">SunshinePHP.com</a></p>
+		</div>
+	</content>
+</entry>

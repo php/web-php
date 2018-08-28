@@ -48,7 +48,7 @@ if (!isset($_SERVER["SERVER_ADDR"])) {
     $_SERVER["SERVER_ADDR"] = "127.0.0.1";
 }
 
-// As of PHP 5.3.0 multibyte sequence errors are no longer 
+// As of PHP 5.3.0 multibyte sequence errors are no longer
 // silent. Prior to that version this bitfield does not exist
 // so define it to prevent notices on older versions
 if (!defined("ENT_IGNORE")) {
@@ -209,27 +209,17 @@ function google_cse($default = '', $lang = 'en') {
   php.net's search functionality requires JavaScript to operate. Please enable
   JavaScript and reload to continue.
 </noscript>
-<div id="cse" style="width: 100%;"></div>
-<script src="//www.google.com/jsapi" type="text/javascript"></script>
-<script type="text/javascript"> 
-  document.getElementById("cse").innerHTML = "Loading...";
-  google.load('search', '1', {language : '<?php echo $lang; ?>', style : google.loader.themes.MINIMALIST});
-  google.setOnLoadCallback(function() {
-    var customSearchOptions = {};
-    var customSearchControl = new google.search.CustomSearchControl(
-      '011570197911755000456:fip9wopfz_u', customSearchOptions);
-    customSearchControl.setLinkTarget(google.search.Search.LINK_TARGET_SELF);
-    customSearchControl.setResultSetSize(google.search.Search.FILTERED_CSE_RESULTSET);
-    var options = new google.search.DrawOptions();
-    options.setAutoComplete(true);
-    customSearchControl.draw('cse', options);
-<?php
-    if ($default) {
-        echo "    customSearchControl.execute(" . json_encode($default) . ");";
-    }
-?>
-  }, true);
+<script>
+    (function() {
+        var cx = '011570197911755000456:fip9wopfz_u';
+        var gcse = document.createElement('script');
+        gcse.type = 'text/javascript';
+        gcse.async = true;
+        gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(gcse, s);
+    })();
 </script>
+<div class="gcse-search" data-linktarget></div>
 <?php
 }
-

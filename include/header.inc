@@ -18,7 +18,7 @@ if (isset($config["css_overwrite"])) {
 foreach($css_files as $filename) {
     // files that do not start with / are assumed to be located in the /styles
     // directory
-    if ($filename[0] !== DIRECTORY_SEPARATOR) {
+    if ($filename[0] !== '/') {
         $filename = "/styles/$filename";
     }
     $path = dirname(__DIR__) . $filename;
@@ -110,7 +110,7 @@ if (!isset($config["languages"])) {
 
 <nav id="head-nav" class="navbar navbar-fixed-top">
   <div class="navbar-inner clearfix">
-    <a href="/" class="brand"><img src="/images/logo.php" width="48" height="24" alt="php"></a>
+    <a href="/" class="brand"><img src="/images/logos/php-logo.svg" width="48" height="24" alt="php"></a>
     <div id="mainmenu-toggle-overlay"></div>
     <input type="checkbox" id="mainmenu-toggle">
     <ul class="nav">

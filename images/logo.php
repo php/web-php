@@ -70,13 +70,14 @@ function serve_compressed_if_available($logo) {
     readfile($logo);
 }
 
-switch ($_SERVER['QUERY_STRING']) {
-    case 'QA':
-    case 'qa':
-        $logo = './logos/qa.jpg';
-        break;
-    default:
-        $logo = './logos/php-logo.svg';
+$logo = './logos/php-logo.svg';
+if (isset($_SERVER['QUERY_STRING'])) {
+	switch ($_SERVER['QUERY_STRING']) {
+		case 'QA':
+		case 'qa':
+		    $logo = './logos/qa.jpg';
+		    break;
+	}
 }
 
 // xmas season, december and the first week of January

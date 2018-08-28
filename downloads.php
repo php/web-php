@@ -60,8 +60,10 @@ site_header("Downloads",
         <li>
           <?php download_link($rel['filename'], $rel['filename']); ?>
           <span class="releasedate"><?php echo date('d M Y', strtotime($rel['date'])); ?></span>
-          <span class="md5sum"><?php echo $rel['md5']; ?></span>
-          <span class="sha256"><?php echo $rel['sha256']; ?></span>
+          <?php
+            if (isset($rel['md5']))    echo '<span class="md5sum">', $rel['md5'], '</span>';
+            if (isset($rel['sha256'])) echo '<span class="sha256">', $rel['sha256'], '</span>';
+           ?>
           <?php if (isset($rel['note']) && $rel['note']): ?>
             <p>
               <strong>Note:</strong>
@@ -71,7 +73,7 @@ site_header("Downloads",
         </li>
       <?php endforeach; ?>
       <li>
-        <a href="http://windows.php.net/download#php-<?php echo urlencode($mver); ?>">
+        <a href="https://windows.php.net/download#php-<?php echo urlencode($mver); ?>">
           Windows downloads
         </a>
       </li>

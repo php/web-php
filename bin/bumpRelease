@@ -5,25 +5,41 @@ PHP_SAPI == 'cli' or die("Please run this script using the cli sapi");
 require "include/version.inc";
 require "include/releases.inc";
 
-$major = $argv[1];
+if ($_SERVER['argc'] < 1) {
+	fwrite(STDERR, "Usgae: {$_SERVER['argv'][0]} major_version [ minor_version ]\n");
+	exit(1);
+}
+
+$major = intval($_SERVER['argv'][1]);
 isset($RELEASES[$major]) or die("Unkown major version $major");
 
-list($k, $v) = each($RELEASES[$major]);
-
-$tmp = 'PHP_' .$major. '_DATE';
-$v["date"] = $$tmp;
-
-if (is_bool($v["announcement"]) && $v["announcement"]) {
-	$v["announcement"] = array("English" => "/releases/" . str_replace(".", "_", $k) . ".php");
+if (isset($_SERVER['argv'][2])) {
+	$minor = intval($_SERVER['argv'][2]);
+	$version_varname = "PHP_{$major}_{$minor}_VERSION";
+	isset($$version_varname) or die("Unknown minor version $major.$minor");
+	$version = $$version_varname;
+	$info = $RELEASES[$major][$version];
+} else {
+	// Calling without a minor will just grab the most recent minor.
+	list($version, $info) = each($RELEASES[$major]);
 }
-$v["museum"] = false;
-$a = array_merge(
-	array($k => $v),
+
+$info["date"] = ${"PHP_{$major}_DATE"};
+$info["museum"] = false;
+if (is_bool($info["announcement"]) && $info["announcement"]) {
+	$info["announcement"] = array("English" => "/releases/" . str_replace(".", "_", $version) . ".php");
+}
+
+$OLDRELEASES[$major] = array_merge(
+	array($version => $info),
 	$OLDRELEASES[$major]
 );
-$OLDRELEASES[$major] = $a;
 
-file_put_contents("include/releases.inc", array("<?php\n\$OLDRELEASES = ", var_export($OLDRELEASES, true), ";\n"));
+file_put_contents("include/releases.inc", [
+	"<?php\n\$OLDRELEASES = ",
+	var_export($OLDRELEASES, true),
+	";\n",
+]);
 
 echo "This was fun \o/\nI hope you remembered to run this script *before* updating include/version.inc... :)\n";
 

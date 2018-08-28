@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom" xmlns:default="http://php.net/ns/news">
+    <title>Midwest PHP 2017 Conference Call for Papers is Open</title>
+    <id>http://php.net/archive/2016.php#id2016-10-18-1</id>
+    <published>2016-10-18T10:46:00-06:00</published>
+    <updated>2016-10-18T10:46:00-06:00</updated>
+    <default:finalTeaserDate xmlns="http://php.net/ns/news">2016-11-15</default:finalTeaserDate>
+    <category term="conferences" label="Conference announcement"/>
+    <link href="http://php.net/conferences/index.php#id2016-10-18-1" rel="alternate" type="text/html"/>
+    <default:newsImage xmlns="http://php.net/ns/news" link="https://2017.midwestphp.org"
+                       title="Midwest PHP 2017 Conference">midwest2016.png</default:newsImage>
+    <link href="https://2017.midwestphp.org" rel="via" type="text/html"/>
+    <content type="html">
+        <div xmlns="http://www.w3.org/1999/xhtml">
+            <p>
+                The Midwest PHP conference is thrilled to announce the opening of their Call for Papers at
+                <a href="https://cfp.midwestphp.org">https://cfp.midwestphp.org</a> through November 15, 2016.
+            </p>
+
+            <p>
+                <a href="https://2017.midwestphp.org">Midwest PHP 2017 Conference</a>
+                 is launching into its fifth year at the Radisson Blu at Mall of America on March 17-18. With the growth of the
+                Midwest PHP conference this is the one conference you cannot afford to miss in 2017.</p>
+
+                <p>Make sure to allow follow the Midwest PHP Conference on twitter at
+                    <a href="https://twitter.com/midwestphp">https://twitter.com/midwestphp</a> or on facebook at
+                    <a href="https://www.facebook.com/midwestconf">https://www.facebook.com/midwestconf</a> to stay
+                    up to date with the lates news from Midwest PHP.</p>
+        </div>
+    </content>
+</entry>

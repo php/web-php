@@ -105,6 +105,7 @@ foreach (get_active_branches() as $major => $releases) {
             <li><a class='download-link' href='/downloads.php#v$version'>$version</a><span class='dot'>&middot;</span><a class='notes' href='/ChangeLog-$major.php#$version'>Release Notes</a><span class='dot'>&middot;</span><a class='notes' href='/migration$major$minor'>Upgrading</a></li>\n";
     }
 }
+$intro .= "</ul>\n";
 $intro .= <<<EOF
     </div>
   </div>

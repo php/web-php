@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom" xmlns:default="http://php.net/ns/news">
+  <title>PHPDetroit Conference 2018</title>
+  <id>http://php.net/archive/2018.php#id2018-03-01-4</id>
+  <published>2018-03-01T18:53:16+00:00</published>
+  <updated>2018-03-01T18:53:16+00:00</updated>
+  <default:finalTeaserDate xmlns="http://php.net/ns/news">2018-07-26</default:finalTeaserDate>
+  <category term="conferences" label="Conference announcement"/>
+  <link href="http://php.net/conferences/index.php#id2018-03-01-4" rel="alternate" type="text/html"/>
+  <default:newsImage xmlns="http://php.net/ns/news" link="https://phpdetroit.io" title="PHPDetroit Conference">phpdetroit.png</default:newsImage>
+  <link href="https://phpdetroit.io" rel="via" type="text/html"/>
+  <content type="xhtml">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+      <p><a href="https://phpdetroit.io">PHPDetroit</a> is a three-day, regional PHP conference that brings the community together to learn and grow. We're preceding the conference with a 2 track tutorial day that will feature 4 sessions covering various topics. We will also be running an UnCon alongside the main tracks on Friday and Saturday, where attendees can share unscheduled talks.</p>
+      <p>The conference is scheduled to run <strong>July 26th - July 28th</strong>, at the beautiful <a href="http://www.marriott.com/hotels/travel/dtwli-detroit-marriott-livonia/">Detroit Marriott Livonia.</a> We welcome developers and enthusiasts of all skill levels to come join us while we discuss the latest trends and technologies in our industry.</p>
+      <p>We look forward to seeing you in Detroit, and making the first ever <a href="https://phpdetroit.io">PHPDetroit Conference</a> a huge success.</p>
+    </div>
+  </content>
+</entry>

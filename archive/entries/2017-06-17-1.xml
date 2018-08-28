@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom" xmlns:default="http://php.net/ns/news">
+  <title>LaravelConf Taiwan 2017</title>
+  <id>http://php.net/archive/2017.php#id2017-06-17-1</id>
+  <published>2017-06-17T18:48:00+00:00</published>
+  <updated>2017-06-17T18:48:00+00:00</updated>
+  <default:finalTeaserDate xmlns="http://php.net/ns/news">2017-07-01</default:finalTeaserDate>
+  <category term="conferences" label="Conference announcement"/>
+  <link href="http://php.net/conferences/index.php#id2017-06-17-1" rel="alternate" type="text/html"/>
+  <default:newsImage xmlns="http://php.net/ns/news" link="https://laravelconf.tw/" title="LaravelConf Taiwan 2017">laravelConfTaiwan_2017.png</default:newsImage>
+  <link href="https://laravelconf.tw/" rel="via" type="text/html"/>
+  <content type="xhtml">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+     <p>The first Laravel conference in Taiwan awaits you at LaravelConf Taiwan 2017 at Taipei, Taiwan.</p>
+     <p><a href="https://laravelconf.tw/">LaravelConf Taiwan 2017</a> is for anyone who is passionate about building web-application, or anyone who is trying to make better experience on teamwork.</p>
+     <br />
+     <p>LaravelConf Taiwan 2017 brings Laravel developers and enthusiasts together and hosts one workshop, one case study and 12 sessions in multi-track conference on 29th, June to 1st, July 2017.</p>
+     <p>The workshop on the 29th, June 2017 is for hand-on training of beginners in Laravel.</p>
+     <p>The main sessions and case study takes place on the 1st, July 2017.</p>
+    <br />
+    <p><b>Our focus this year are:</b></p>
+    <ul>
+        <li>Laravel core concepts</li>
+        <li>More fluent teamwork by using Laravel</li>
+    </ul>
+    <br />
+    <p>Come to enjoy the knowledge and socialize with other Laravel artisan.</p>
+    <br />
+    <p>For more infromation: <a href="https://laravelconf.tw/">https://laravelconf.tw</a></p>
+    <p>Our facebook page: <a href="https://www.facebook.com/laravelconftw/">https://www.facebook.com/laravelconftw</a></p>
+    </div>
+  </content>
+</entry>

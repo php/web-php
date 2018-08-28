@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom" xmlns:default="http://php.net/ns/news">
+	<title>The 5th Annual China PHP Conference </title>
+  <id>http://php.net/archive/2017.php#id2017-05-22-1</id>
+  <published>2017-05-22T11:50:21+00:00</published>
+  <updated>2017-05-22T11:50:21+00:00</updated>
+  <default:finalTeaserDate xmlns="http://php.net/ns/news">2017-06-17</default:finalTeaserDate>
+  <category term="conferences" label="Conference announcement"/>
+  <link href="http://php.net/conferences/index.php#id2017-05-22-1" rel="alternate" type="text/html"/>
+  <default:newsImage xmlns="http://php.net/ns/news" link="http://www.phpconchina.com/"
+	  title="The 5th Annual China PHP Conference">shanghai2017.png</default:newsImage>
+  <link href="http://php.net/archive/2017.php#id2017-05-22-1" rel="via" type="text/html"/>
+  <content type="xhtml">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+		<p>The 5th Annual China PHP Conference – June 17 to 18, Shanghai</p>
+
+		<p>We will be hosting a 2-days event filled with high quality, technical sessions about PHP Core, PHP High Performance, PHP Engineering, and MySQL 5.7/8.0 more.</p>
+
+		<p>Don’t miss out on 2-great days sessions, delicious food, fantastic shows and countless networking opportunities to engage with speakers and delegates.</p>
+		<p>Go to <a href="http://www.phpconchina.com/">www.phpconchina.com</a> for tickets and more information.</p>
+    </div>
+  </content>
+</entry>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom" xmlns:default="http://php.net/ns/news">
+  <title>International PHP Conference 2017 - Call for Papers</title>
+  <id>http://php.net/archive/2016.php#id2016-11-02-1</id>
+  <published>2016-11-02T15:44:54-04:00</published>
+  <updated>2016-11-02T15:44:54-04:00</updated>
+  <default:finalTeaserDate xmlns="http://php.net/ns/news">2016-11-02</default:finalTeaserDate>
+  <category term="cfp" label="Call for Papers"/>
+  <link href="http://php.net/conferences/index.php#id2016-11-02-1" rel="alternate" type="text/html"/>
+  <default:newsImage xmlns="http://php.net/ns/news" link="https://callforpapers.sandsmedia.com" title="International PHP Conference 2017 - Call for Papers">ipc-2017.png</default:newsImage>
+  <link href="https://callforpapers.sandsmedia.com" rel="via" type="text/html"/>
+  <content type="xhtml">
+    <p>The International PHP Conference is the world's first PHP conference and stands since more than a decade for top-notch pragmatic expertise in PHP and web technologies. At the IPC, internationally renowned experts from the PHP industry meet up with PHP users and developers from large and small companies. Here is the place where concepts emerge and ideas are born - the IPC signifies knowledge transfer at highest level.</p>
+	<p>All delegates of the International PHP Conference have, in addition to PHP program, free access to the entire range of the <a href="https://webinale.de">webinale</a> taking place at the same time.</p>
+	<p>THE BASIC FACTS</p>
+	<ul>
+	  <li>Date: 29 May - 2 June 2017</li>
+	  <li>Location &amp; Venue: Maritim proArte Hotel Berlin</li>
+	  <li>Deadline for submissions: 14. November 2016</li>
+	  <li>URL for submissions: <a href="https://callforpapers.sandsmedia.com">https://callforpapers.sandsmedia.com</a></li>
+	</ul>
+	<p>Spectrum of topics we'd like to see covered:</p>
+	<ul>
+	  <li>PHP Development</li>
+	  <li>Testing &amp; Quality</li>
+	  <li>Architecture</li>
+	  <li>JavaScript</li>
+	  <li>Agile &amp; DevOps</li>
+	  <li>Web Design</li>
+	</ul>
+	<p>For further information on the International PHP Conference visit: <a href="https://phpconference.com">www.phpconference.com</a></p>
+  </content>
+</entry>

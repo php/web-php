@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom" xmlns:default="http://php.net/ns/news">
+  <title>PHP Developer Days 2018 • Dresden, Germany</title>
+  <id>http://php.net/archive/2018.php#id2018-04-09-1</id>
+  <published>2018-04-09T16:29:11+00:00</published>
+  <updated>2018-04-09T16:29:11+00:00</updated>
+  <default:finalTeaserDate xmlns="http://php.net/ns/news">2018-09-21</default:finalTeaserDate>
+  <category term="conferences" label="Conference announcement"/>
+  <link href="http://php.net/conferences/index.php#id2018-04-09-1" rel="alternate" type="text/html"/>
+  <default:newsImage xmlns="http://php.net/ns/news" link="https://2018.phpdd.org" title="PHPDD18 - PHP Developer Days 2018 • Dresden, Germany">phpdd18.png</default:newsImage>
+  <link href="https://2018.phpdd.org" rel="via" type="text/html"/>
+  <content type="xhtml">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+     <p>The 4th annual PHP community event – September 21st &amp; 22nd in Dresden, Germany</p>
+     <p>The PHP USERGROUP DRESDEN e.V. is proud to host an international 2-day event with workshops, a single track conference and awesome side events.</p>
+     <p>We are commited to creating a unique community experience - an event where everyone is among #<b>PHP</b>riends.</p>
+     <p>Our <a href="https://cfp.phpdd.org" target="_blank">Call for Papers</a> ends on April 30th, 2018.</p>
+    </div>
+  </content>
+</entry>

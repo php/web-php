@@ -324,6 +324,12 @@ EOT;
  address where <strong>foo</strong> is your Git user id. Feel free to use it!
 </p>
 
+<p>
+ If you get no resposne to an account request after a while, remember this is a 
+ manual process, then please contact the relevant mailing list that belongs to 
+ the part of PHP you requested access to.
+</p>
+
 <h2>Request a Git account</h2>
 
 <p class="warn">
@@ -336,6 +342,15 @@ EOT;
 <p class="warn">
  Also note that information provided here will be sent to a public
  mailing list.
+</p>
+<p class="warn">
+ Please do <strong>NOT</strong> submit account requests if you have not previously 
+ contributed any work such as patches to PHP.
+</p>
+<p class="warn">
+ If someone told you to fill in an account request because you are a developer of 
+ a certain extension, for example a <a href="http://pecl.php.net/">PECL</a> extension, 
+ then please state who told you to submit this request in the purpose text field below.
 </p>
 
 <?php
@@ -366,7 +381,7 @@ $purposes = array("Learning PHP", "Coding in PHP", "Reading the PHP source",
 
 foreach ($purposes as $i => $p) { ?>
   <input type="checkbox" name="purpose[<?php echo $i?>]" value="1" 
-	checked="checked"><?php echo $p; ?><br>
+	checked="checked" id="vcs-purpose-<?php echo $i; ?>"> <label for="vcs-purpose-<?php echo $i; ?>"><?php echo $p; ?></label><br>
 <?php } ?>
  </td>
 </tr>
@@ -376,7 +391,7 @@ foreach ($purposes as $i => $p) { ?>
 </tr>
 <tr>
 <th class="subr">Do you agree to follow the <a href="license/contrib-guidelines-code.php">contribution guidelines</a>?</th>
-<td><input type="checkbox" name="guidelines" value="1">Check the box if you agree.</td>
+<td><input type="checkbox" name="guidelines" value="1" id="vcs-guidelines"> <label for="vcs-guidelines">Check the box if you agree</label></td>
 </tr>
 <tr>
  <th class="subr">User ID:<br> <small>(single word, lower case)</small></th>

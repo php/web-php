@@ -7,9 +7,355 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 ?>
 
 <h1>PHP 5 ChangeLog</h1>
+
+<section class="version" id="5.6.37"><!-- {{{ 5.6.37 -->
+<h3>Version 5.6.37</h3>
+<b><?php release_date('19-Jul-2018'); ?></b>
+<ul><li>Exif:
+<ul>
+  <li><?php bugfix(76423); ?> (Int Overflow lead to Heap OverFlow in exif_thumbnail_extract of exif.c). (CVE-2018-14883)</li>
+  <li><?php bugfix(76557); ?> (heap-buffer-overflow (READ of size 48) while reading exif data). (CVE-2018-14851)</li>
+</ul></li>
+<li>Win32:
+<ul>
+  <li><?php bugfix(76459); ?> (windows linkinfo lacks openbasedir check). (CVE-2018-15132)</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
+<section class="version" id="5.6.36"><!-- {{{ 5.6.36 -->
+<h3>Version 5.6.36</h3>
+<b><?php release_date('26-Apr-2018'); ?></b>
+<ul><li>Exif:
+<ul>
+  <li><?php bugfix(76130); ?> (Heap Buffer Overflow (READ: 1786) in exif_iif_add_value). (CVE-2018-10549)</li>
+</ul></li>
+<li>iconv:
+<ul>
+  <li><?php bugfix(76249); ?> (stream filter convert.iconv leads to infinite loop on invalid sequence). (CVE-2018-10546)</li>
+</ul></li>
+<li>LDAP:
+<ul>
+  <li><?php bugfix(76248); ?> (Malicious LDAP-Server Response causes Crash). (CVE-2018-10548)</li>
+</ul></li>
+<li>Phar:
+<ul>
+  <li><?php bugfix(76129); ?> (fix for CVE-2018-5712 may not be complete). (CVE-2018-10547)</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
+<section class="version" id="5.6.35"><!-- {{{ 5.6.35 -->
+<h3>Version 5.6.35</h3>
+<b><?php release_date('29-Mar-2018'); ?></b>
+<ul><li>FPM:
+<ul>
+  <li><?php bugfix(75605); ?> (Dumpable FPM child processes allow bypassing opcache access controls). (CVE-2018-10545)</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
+<section class="version" id="5.6.34"><!-- {{{ 5.6.34 -->
+<h3>Version 5.6.34</h3>
+<b><?php release_date('01-Mar-2018'); ?></b>
+<ul><li>Standard:
+<ul>
+  <li><?php bugfix(75981); ?> (stack-buffer-overflow while parsing HTTP response). (CVE-2018-7584)</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
+<section class="version" id="5.6.33"><!-- {{{ 5.6.33 -->
+<h3>Version 5.6.33</h3>
+<b><?php release_date('04-Jan-2018'); ?></b>
+<ul><li>GD:
+<ul>
+  <li><?php bugfix(75571); ?> (Potential infinite loop in gdImageCreateFromGifCtx). (CVE-2018-5711)</li>
+</ul></li>
+<li>Phar:
+<ul>
+  <li><?php bugfix(74782); ?> (Reflected XSS in .phar 404 page). (CVE-2018-5712)</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
+<section class="version" id="5.6.32"><!-- {{{ 5.6.32 -->
+<h3>Version 5.6.32</h3>
+<b><?php release_date('26-Oct-2017'); ?></b>
+<ul><li>Date:
+<ul>
+  <li><?php bugfix(75055); ?> (Out-Of-Bounds Read in timelib_meridian()). (CVE-2017-16642)</li>
+</ul></li>
+<li>mcrypt:
+<ul>
+  <li><?php bugfix(72535); ?> (arcfour encryption stream filter crashes php).</li>
+</ul></li>
+<li>PCRE:
+<ul>
+  <li><?php bugfix(75207); ?> (applied upstream patch for CVE-2016-1283).</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
+<section class="version" id="5.6.31"><!-- {{{ 5.6.31 -->
+<h3>Version 5.6.31</h3>
+<b><?php release_date('06-Jul-2017'); ?></b>
+<ul><li>Core:
+<ul>
+  <li><?php bugfix(73807); ?> (Performance problem with processing large post request). (CVE-2017-11142)</li>
+  <li><?php bugfix(74111); ?> (Heap buffer overread (READ: 1) finish_nested_data from unserialize). (CVE-2017-12933)</li>
+  <li><?php bugfix(74603); ?> (PHP INI Parsing Stack Buffer Overflow Vulnerability). (CVE-2017-11628)</li>
+  <li><?php bugfix(74819); ?> (wddx_deserialize() heap out-of-bound read via php_parse_date()). (CVE-2017-11145)</li>
+</ul></li>
+<li>GD:
+<ul>
+  <li><?php bugfix(74435); ?> (Buffer over-read into uninitialized memory). (CVE-2017-7890)</li>
+</ul></li>
+<li>mbstring:
+<ul>
+  <li>Add oniguruma upstream fix (CVE-2017-9224, CVE-2017-9226, CVE-2017-9227, CVE-2017-9228, CVE-2017-9229)</li>
+</ul></li>
+<li>OpenSSL:
+<ul>
+  <li><?php bugfix(74651); ?> (negative-size-param (-1) in memcpy in zif_openssl_seal()). (CVE-2017-11144)</li>
+</ul></li>
+<li>PCRE:
+<ul>
+  <li><?php bugfix(74087); ?> (Segmentation fault in PHP7.1.1(compiled using the bundled PCRE library)).</li>
+</ul></li>
+<li>WDDX:
+<ul>
+  <li><?php bugfix(74145); ?> (wddx parsing empty boolean tag leads to SIGSEGV). (CVE-2017-11143)</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
+<section class="version" id="5.6.30"><!-- {{{ 5.6.30 -->
+<h3>Version 5.6.30</h3>
+<b><?php release_date('19-Jan-2017'); ?></b>
+<ul><li>EXIF:
+<ul>
+  <li><?php bugfix(73737); ?> (FPE when parsing a tag format). (CVE-2016-10158)</li>
+</ul></li>
+<li>GD:
+<ul>
+  <li><?php bugfix(73549); ?> (Use after free when stream is passed to imagepng).</li>
+  <li><?php bugfix(73868); ?> (DOS vulnerability in gdImageCreateFromGd2Ctx()). (CVE-2016-10167)</li>
+  <li><?php bugfix(73869); ?> (Signed Integer Overflow gd_io.c). (CVE-2016-10168)</li>
+</ul></li>
+<li>Intl:
+<ul>
+  <li><?php bugfix(68447); ?> (grapheme_extract take an extra trailing character).</li>
+</ul></li>
+<li>Phar:
+<ul>
+  <li><?php bugfix(73764); ?> (Crash while loading hostile phar archive). (CVE-2016-10159)</li>
+  <li><?php bugfix(73768); ?> (Memory corruption when loading hostile phar). (CVE-2016-10160)</li>
+  <li><?php bugfix(73773); ?> (Seg fault when loading hostile phar). (CVE-2017-11147)</li>
+</ul></li>
+<li>SQLite3:
+<ul>
+  <li>Reverted fix for bug <?php bugl(73530); ?> (Unsetting result set may reset other result set).</li>
+</ul></li>
+<li>Standard:
+<ul>
+  <li><?php bugfix(70213); ?> (Unserialize context shared on double class lookup).</li>
+  <li><?php bugfix(73825); ?> (Heap out of bounds read on unserialize in finish_nested_data()). (CVE-2016-10161)</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
+<section class="version" id="5.6.29"><!-- {{{ 5.6.29 -->
+<h3>Version 5.6.29</h3>
+<b><?php release_date('08-Dec-2016'); ?></b>
+<ul><li>Mysqlnd:
+<ul>
+  <li><?php bugfix(64526); ?> (Add missing mysqlnd.* parameters to php.ini-*).</li>
+</ul></li>
+<li>Opcache:
+<ul>
+  <li><?php bugfix(73402); ?> (Opcache segfault when using class constant to call a method).</li>
+  <li><?php bugfix(69090); ?> (check cached files permissions)</li>
+</ul></li>
+<li>OpenSSL:
+<ul>
+  <li><?php bugfix(72776); ?> (Invalid parameter in memcpy function trough openssl_pbkdf2).</li>
+</ul></li>
+<li>Postgres:
+<ul>
+  <li><?php bugfix(73498); ?> (Incorrect SQL generated for pg_copy_to()).</li>
+</ul></li>
+<li>SOAP:
+<ul>
+  <li><?php bugfix(73452); ?> (Segfault (Regression for #69152)).</li>
+</ul></li>
+<li>SQLite3:
+<ul>
+  <li><?php bugfix(73530); ?> (Unsetting result set may reset other result set).</li>
+</ul></li>
+<li>Standard:
+<ul>
+  <li><?php bugfix(73297); ?> (HTTP stream wrapper should ignore HTTP 100 Continue).</li>
+</ul></li>
+<li>WDDX:
+<ul>
+  <li><?php bugfix(73631); ?> (Invalid read when wddx decodes empty boolean element). (CVE-2016-9935)</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
+<section class="version" id="5.6.28"><!-- {{{ 5.6.28 -->
+<h3>Version 5.6.28</h3>
+<b><?php release_date('10-Nov-2016'); ?></b>
+<ul><li>Core:
+<ul>
+  <li><?php bugfix(73337); ?> (try/catch not working with two exceptions inside a same operation).</li>
+</ul></li>
+<li>Bz2:
+<ul>
+  <li><?php bugfix(73356); ?> (crash in bzcompress function).</li>
+</ul></li>
+<li>GD:
+<ul>
+  <li><?php bugfix(73213); ?> (Integer overflow in imageline() with antialiasing).</li>
+  <li><?php bugfix(73272); ?> (imagescale() is not affected by, but affects imagesetinterpolation()).</li>
+  <li><?php bugfix(73279); ?> (Integer overflow in gdImageScaleBilinearPalette()).</li>
+  <li><?php bugfix(73280); ?> (Stack Buffer Overflow in GD dynamicGetbuf).</li>
+  <li><?php bugfix(72482); ?> (Illegal write/read access caused by gdImageAALine overflow).</li>
+  <li><?php bugfix(72696); ?> (imagefilltoborder stackoverflow on truecolor images). (CVE-2016-9933)</li>
+</ul></li>
+<li>Imap:
+<ul>
+  <li><?php bugfix(73418); ?> (Integer Overflow in "_php_imap_mail" leads Heap Overflow).</li>
+</ul></li>
+<li>SPL:
+<ul>
+  <li><?php bugfix(73144); ?> (Use-after-free in ArrayObject Deserialization).</li>
+</ul></li>
+<li>SOAP:
+<ul>
+  <li><?php bugfix(73037); ?> (SoapServer reports Bad Request when gzipped).</li>
+</ul></li>
+<li>SQLite3:
+<ul>
+  <li><?php bugfix(73333); ?> (2147483647 is fetched as string).</li>
+</ul></li>
+<li>Standard:
+<ul>
+  <li><?php bugfix(73203); ?> (passing additional_parameters causes mail to fail).</li>
+  <li><?php bugfix(73188); ?> (use after free in userspace streams).</li>
+  <li><?php bugfix(73192); ?> (parse_url return wrong hostname).</li>
+</ul></li>
+<li>Wddx:
+<ul>
+  <li><?php bugfix(73331); ?> (NULL Pointer Dereference in WDDX Packet Deserialization with PDORow). (CVE-2016-9934)</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
+<section class="version" id="5.6.27"><!-- {{{ 5.6.27 -->
+<h3>Version 5.6.27</h3>
+<?php release_date('13-Oct-2016'); ?>
+<ul><li>Core:
+<ul>
+  <li><?php bugfix(73025); ?> (Heap Buffer Overflow in virtual_popen of zend_virtual_cwd.c).</li>
+  <li><?php bugfix(73058); ?> (crypt broken when salt is 'too' long).</li>
+  <li><?php bugfix(72703); ?> (Out of bounds global memory read in BF_crypt triggered by 
+password_verify).</li>
+  <li><?php bugfix(73189); ?> (Memcpy negative size parameter php_resolve_path).</li>
+  <li><?php bugfix(73147); ?> (Use After Free in unserialize()).</li>
+</ul></li>
+<li>BCmath:
+<ul>
+  <li><?php bugfix(73190); ?> (memcpy negative parameter _bc_new_num_ex).</li>
+</ul></li>
+<li>DOM:
+<ul>
+  <li><?php bugfix(73150); ?> (missing NULL check in dom_document_save_html).</li>
+</ul></li>
+<li>Ereg:
+<ul>
+  <li><?php bugfix(73284); ?> (heap overflow in php_ereg_replace function).</li>
+</ul></li>
+<li>Filter:
+<ul>
+  <li><?php bugfix(72972); ?> (Bad filter for the flags FILTER_FLAG_NO_RES_RANGE and 
+FILTER_FLAG_NO_PRIV_RANGE).</li>
+  <li><?php bugfix(67167); ?> (Wrong return value from FILTER_VALIDATE_BOOLEAN, FILTER_NULL_ON_FAILURE).</li>
+  <li><?php bugfix(73054); ?> (default option ignored when object passed to int filter).</li>
+</ul></li>
+<li>GD:
+<ul>
+  <li><?php bugfix(67325); ?> (imagetruecolortopalette: white is duplicated in palette).</li>
+  <li><?php bugfix(50194); ?> (imagettftext broken on transparent background w/o alphablending).</li>
+  <li><?php bugfix(73003); ?> (Integer Overflow in gdImageWebpCtx of gd_webp.c).</li>
+  <li><?php bugfix(53504); ?> (imagettfbbox gives incorrect values for bounding box).</li>
+  <li><?php bugfix(73157); ?> (imagegd2() ignores 3rd param if 4 are given).</li>
+  <li><?php bugfix(73155); ?> (imagegd2() writes wrong chunk sizes on boundaries).</li>
+  <li><?php bugfix(73159); ?> (imagegd2(): unrecognized formats may result in corrupted files).</li>
+  <li><?php bugfix(73161); ?> (imagecreatefromgd2() may leak memory).</li>
+</ul></li>
+<li>Intl:
+<ul>
+  <li><?php bugfix(73218); ?> (add mitigation for ICU int overflow).</li>
+</ul></li>
+<li>Imap:
+<ul>
+  <li><?php bugfix(73208); ?> (integer overflow in imap_8bit caused heap corruption).</li>
+</ul></li>
+<li>Mbstring:
+<ul>
+  <li><?php bugfix(72994); ?> (mbc_to_code() out of bounds read).</li>
+  <li><?php bugfix(66964); ?> (mb_convert_variables() cannot detect recursion).</li>
+  <li><?php bugfix(72992); ?> (mbstring.internal_encoding doesn't inherit default_charset).</li>
+  <li><?php bugfix(73082); ?> (string length overflow in mb_encode_* function).</li>
+</ul></li>
+<li>PCRE:
+<ul>
+  <li><?php bugfix(73174); ?> (heap overflow in php_pcre_replace_impl).</li>
+</ul></li>
+<li>Opcache:
+<ul>
+  <li><?php bugfix(72590); ?> (Opcache restart with kill_all_lockers does not work).</li>
+</ul></li>
+<li>OpenSSL:
+<ul>
+  <li><?php bugfix(73072); ?> (Invalid path SNI_server_certs causes segfault).</li>
+  <li><?php bugfix(73275); ?> (crash in openssl_encrypt function).</li>
+  <li><?php bugfix(73276); ?> (crash in openssl_random_pseudo_bytes function).</li>
+</ul></li>
+<li>Session:
+<ul>
+  <li><?php bugfix(68015); ?> (Session does not report invalid uid for files save handler).</li>
+  <li><?php bugfix(73100); ?> (session_destroy null dereference in ps_files_path_create).</li>
+</ul></li>
+<li>SimpleXML:
+<ul>
+  <li><?php bugfix(73293); ?> (NULL pointer dereference in SimpleXMLElement::asXML()).</li>
+</ul></li>
+<li>SPL:
+<ul>
+  <li><?php bugfix(73073); ?> (CachingIterator null dereference when convert to string).</li>
+</ul></li>
+<li>Standard:
+<ul>
+  <li><?php bugfix(73240); ?> (Write out of bounds at number_format).</li>
+  <li><?php bugfix(73017); ?> (memory corruption in wordwrap function).</li>
+</ul></li>
+<li>Stream:
+<ul>
+  <li><?php bugfix(73069); ?> (readfile() mangles files larger than 2G).</li>
+</ul></li>
+<li>Zip:
+<ul>
+  <li><?php bugfix(70752); ?> (Depacking with wrong password leaves 0 length files).</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
 <section class="version" id="5.6.26"><!-- {{{ 5.6.26 -->
 <h3>Version 5.6.26</h3>
-<b><?php release_date('15-Sep-2016'); ?></b>
+<?php release_date('15-Sep-2016'); ?>
 <ul><li>Core:
 <ul>
   <li><?php bugfix(72907); ?> (null pointer deref, segfault in gc_remove_zval_from_buffer (zend_gc.c:260)).</li>
@@ -106,7 +452,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 
 <section class="version" id="5.6.25"><!-- {{{ 5.6.25 -->
 <h3>Version 5.6.25</h3>
-<b><?php release_date('18-Aug-2016'); ?></b>
+<?php release_date('18-Aug-2016'); ?>
 <ul><li>Core:
 <ul>
   <li><?php bugfix(70436); ?> (Use After Free Vulnerability in unserialize()).</li>
@@ -164,6 +510,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
   <li><?php bugfix(72697); ?> (select_colors write out-of-bounds). (CVE-2016-7126)</li>
   <li><?php bugfix(72709); ?> (imagesetstyle() causes OOB read for empty $styles).</li>
   <li><?php bugfix(72730); ?> (imagegammacorrect allows arbitrary write access). (CVE-2016-7127)</li>
+  <li><?php bugfix(72494); ?> (imagecropauto out-of-bounds access)</li>
 </ul></li>
 <li>Intl:
 <ul>
@@ -232,7 +579,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 
 <section class="version" id="5.6.24"><!-- {{{ 5.6.24 -->
 <h3>Version 5.6.24</h3>
-<b><?php release_date('21-Jul-2016'); ?></b>
+<?php release_date('21-Jul-2016'); ?>
 <ul><li>Core:
 <ul>
   <li><?php bugfix(71936); ?> (Segmentation fault destroying HTTP_RAW_POST_DATA).</li>
@@ -246,6 +593,10 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 <ul>
   <li><?php bugfix(72447); ?> (Type Confusion in php_bz2_filter_create()).</li>
   <li><?php bugfix(72613); ?> (Inadequate error handling in bzread()). (CVE-2016-5399)</li>
+</ul></li>
+<li>Date:
+<ul>
+  <li><?php bugfix(66836); ?> (DateTime::createFromFormat 'U' with pre 1970 dates fails parsing).</li>
 </ul></li>
 <li>EXIF:
 <ul>
@@ -265,10 +616,6 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 <li>Intl:
 <ul>
   <li><?php bugfix(72533); ?> (locale_accept_from_http out-of-bounds access). (CVE-2016-6294)</li>
-</ul></li>
-<li>ODBC:
-<ul>
-  <li><?php bugfix(69975); ?> (PHP segfaults when accessing nvarchar(max) defined columns). (CVE-2015-8879)</li>
 </ul></li>
 <li>OpenSSL:
 <ul>
@@ -304,7 +651,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 
 <section class="version" id="5.5.38"><!-- {{{ 5.5.38 -->
 <h3>Version 5.5.38</h3>
-<b><?php release_date('21-Jul-2016'); ?></b>
+<?php release_date('21-Jul-2016'); ?>
 <ul><li>Core:
 <ul>
   <li><?php bugfix(70480); ?> (php_url_parse_ex() buffer overflow read). (CVE-2016-6288)</li>
@@ -352,7 +699,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 
 <section class="version" id="5.6.23"><!-- {{{ 5.6.23 -->
 <h3>Version 5.6.23</h3>
-<b><?php release_date('23-Jun-2016'); ?></b>
+<?php release_date('23-Jun-2016'); ?>
 <ul><li>Core:
 <ul>
   <li><?php bugfix(72268); ?> (Integer Overflow in nl2br()).</li>
@@ -366,7 +713,6 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 </ul></li>
 <li>GD:
 <ul>
-  <li><?php bugfix(66387); ?> (Stack overflow with imagefilltoborder). (CVE-2015-8874)</li>
   <li><?php bugfix(72298); ?> (pass2_no_dither out-of-bounds access).</li>
   <li><?php bugfix(72337); ?> (invalid dimensions can lead to crash).</li>
   <li><?php bugfix(72339); ?> (Integer Overflow in _gd2GetHeader() resulting in heap overflow). (CVE-2016-5766)</li>
@@ -391,7 +737,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 </ul></li>
 <li>Phar:
 <ul>
-  <li><?php bugfix(72321); ?> (invalid free in phar_extract_file()).</li>
+  <li><?php bugfix(72321); ?> (invalid free in phar_extract_file()). (CVE-2016-4473)</li>
 </ul></li>
 <li>SPL:
 <ul>
@@ -411,7 +757,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 
 <section class="version" id="5.5.37"><!-- {{{ 5.5.37 -->
 <h3>Version 5.5.37</h3>
-<b><?php release_date('23-Jun-2016'); ?></b>
+<?php release_date('23-Jun-2016'); ?>
 <ul><li>Core:
 <ul>
   <li><?php bugfix(72268); ?> (Integer Overflow in nl2br()).</li>
@@ -454,7 +800,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 
 <section class="version" id="5.6.22"><!-- {{{ 5.6.22 -->
 <h3>Version 5.6.22</h3>
-<b><?php release_date('26-May-2016'); ?></b>
+<?php release_date('26-May-2016'); ?>
 <ul><li>Core:
 <ul>
   <li><?php bugfix(72172); ?> (zend_hex_strtod should not use strlen).</li>
@@ -479,7 +825,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 
 <section class="version" id="5.5.36"><!-- {{{ 5.5.36 -->
 <h3>Version 5.5.36</h3>
-<b><?php release_date('26-May-2016'); ?></b>
+<?php release_date('26-May-2016'); ?>
 <ul><li>Core:
 <ul>
   <li><?php bugfix(72114); ?> (Integer underflow / arbitrary null write in fread/gzread). (CVE-2016-5096)</li>
@@ -502,7 +848,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 
 <section class="version" id="5.6.21"><!-- {{{ 5.6.21 -->
 <h3>Version 5.6.21</h3>
-<b><?php release_date('28-Apr-2016'); ?></b>
+<?php release_date('28-Apr-2016'); ?>
 <ul><li>Core:
 <ul>
   <li><?php bugfix(69537); ?> (__debugInfo with empty string for key gives error).</li>
@@ -572,7 +918,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 
 <section class="version" id="5.5.35"><!-- {{{ 5.5.35 -->
 <h3>Version 5.5.35</h3>
-<b><?php release_date('28-Apr-2016'); ?></b>
+<?php release_date('28-Apr-2016'); ?>
 <ul><li>BCMath:
 <ul>
   <li><?php bugfix(72093); ?> (bcpowmod accepts negative scale and corrupts _one_ definition). (CVE-2016-4537, CVE-2016-4538)</li>
@@ -598,7 +944,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 
 <section class="version" id="5.6.20"><!-- {{{ 5.6.20 -->
 <h3>Version 5.6.20</h3>
-<b><?php release_date('31-Mar-2016'); ?></b>
+<?php release_date('31-Mar-2016'); ?>
 <ul><li>CLI Server:
 <ul>
   <li><?php bugfix(69953); ?> (Support MKCALENDAR request method).</li>
@@ -650,7 +996,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 
 <section class="version" id="5.5.34"><!-- {{{ 5.5.34 -->
 <h3>Version 5.5.34</h3>
-<b><?php release_date('31-Mar-2016'); ?></b>
+<?php release_date('31-Mar-2016'); ?>
 <ul><li>Fileinfo:
 <ul>
   <li><?php bugfix(71527); ?> (Buffer over-write in finfo_open with malformed magic file). (CVE-2015-8865)</li>
@@ -676,7 +1022,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 
 <section class="version" id="5.6.19"><!-- {{{ 5.6.19 -->
 <h3>Version 5.6.19</h3>
-<b><?php release_date('03-Mar-2016'); ?></b>
+<?php release_date('03-Mar-2016'); ?>
 <ul><li>CLI server:
 <ul>
   <li><?php bugfix(71559); ?> (Built-in HTTP server, we can download file in web by bug).</li>
@@ -731,7 +1077,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 
 <section class="version" id="5.5.33"><!-- {{{ 5.5.33 -->
 <h3>Version 5.5.33</h3>
-<b><?php release_date('03-Mar-2016'); ?></b>
+<?php release_date('03-Mar-2016'); ?>
 <ul><li>Phar:
 <ul>
   <li><?php bugfix(71498); ?> (Out-of-Bound Read in phar_parse_zipfile()).</li>
@@ -745,7 +1091,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 
 <section class="version" id="5.6.18"><!-- {{{ 5.6.18 -->
 <h3>Version 5.6.18</h3>
-<b><?php release_date('04-Feb-2016'); ?></b>
+<?php release_date('04-Feb-2016'); ?>
 <ul><li>Core:
 <ul>
   <li>Added support for new HTTP 451 code.</li>
@@ -805,7 +1151,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 
 <section class="version" id="5.5.32"><!-- {{{ 5.5.32 -->
 <h3>Version 5.5.32</h3>
-<b><?php release_date('04-Feb-2016'); ?></b>
+<?php release_date('04-Feb-2016'); ?>
 <ul><li>Core:
 <ul>
   <li><?php bugfix(71039); ?> (exec functions ignore length but look for NULL termination).</li>
@@ -835,7 +1181,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 
 <section class="version" id="5.6.17"><!-- {{{ 5.6.17 -->
 <h3>Version 5.6.17</h3>
-<b><?php release_date('07-Jan-2016'); ?></b>
+<?php release_date('07-Jan-2016'); ?>
 <ul><li>Core:
 <ul>
   <li><?php bugfix(66909); ?> (configure fails utf8_to_mutf7 test).</li>
@@ -882,7 +1228,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 
 <section class="version" id="5.5.31"><!-- {{{ 5.5.31 -->
 <h3>Version 5.5.31</h3>
-<b><?php release_date('07-Jan-2016'); ?></b>
+<?php release_date('07-Jan-2016'); ?>
 <ul><li>FPM:
 <ul>
   <li><?php bugfix(70755); ?> (fpm_log.c memory leak and buffer overflow). (CVE-2016-5114)</li>
@@ -905,7 +1251,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 
 <section class="version" id="5.6.16"><!-- {{{ 5.6.16 -->
 <h3>Version 5.6.16</h3>
-<b><?php release_date('26-Nov-2015'); ?></b>
+<?php release_date('26-Nov-2015'); ?>
 <ul><li>Core:
 <ul>
   <li><?php bugfix(70828); ?> (php-fpm 5.6 with opcache crashes when referencing a non-existent constant).</li>
@@ -936,7 +1282,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 
 <section class="version" id="5.6.15"><!-- {{{ 5.6.15 -->
 <h3>Version 5.6.15</h3>
-<b><?php release_date('29-Oct-2015'); ?></b>
+<?php release_date('29-Oct-2015'); ?>
 <ul><li>Core:
 <ul>
   <li><?php bugfix(70681); ?> (Segfault when binding $this of internal instance method to null).</li>
@@ -967,8 +1313,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 
 <section class="version" id="5.6.14"><!-- {{{ 5.6.14 -->
 <h3>Version 5.6.14</h3>
-<b><?php release_date('01-Oct-2015'); ?></b>
-
+<?php release_date('01-Oct-2015'); ?>
 <ul><li>Core:
 <ul>
   <li><?php bugfix(70370); ?> (Bundled libtool.m4 doesn't handle FreeBSD 10 when building extensions).</li>
@@ -1027,7 +1372,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 
 <section class="version" id="5.5.30">
 <h3>Version 5.5.30</h3>
-<b><?php release_date('01-Oct-2015'); ?></b>
+<?php release_date('01-Oct-2015'); ?>
 <ul><li>Phar:
 <ul>
   <li><?php bugfix(69720); ?> (Null pointer dereference in phar_get_fp_offset()). (CVE-2015-7803)</li>
@@ -1151,7 +1496,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 
 <section class="version" id="5.4.45"><!-- {{{ 5.4.45 -->
 <h3>Version 5.4.45</h3>
-<b><?php release_date('03-Sep-2015'); ?></b>
+<?php release_date('03-Sep-2015'); ?>
 <ul><li>Core:
 <ul>
   <li><?php bugfix(70172); ?> (Use After Free Vulnerability in unserialize()). (CVE-2015-6834)</li>
@@ -1222,7 +1567,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 </ul></li>
 <li>ODBC:
 <ul>
-  <li><?php bugfix(69975); ?> (PHP segfaults when accessing nvarchar(max) defined columns).</li>
+  <li><?php bugfix(69975); ?> (PHP segfaults when accessing nvarchar(max) defined columns). (CVE-2015-8879)</li>
 </ul></li>
 <li>OpenSSL:
 <ul>
@@ -1254,7 +1599,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 
 <section class="version" id="5.5.28"><!-- {{{ 5.5.28 -->
 <h3>Version 5.5.28</h3>
-<b>06-Aug-2015</b>
+<?php release_date('06-Aug-2015'); ?>
 <ul><li>Core:
 <ul>
   <li><?php bugfix(69793); ?> (Remotely triggerable stack exhaustion via recursive method calls).</li>
@@ -1287,7 +1632,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 
 <section class="version" id="5.4.44"><!-- {{{ 5.4.44 -->
 <h3>Version 5.4.44</h3>
-<b>06-Aug-2015</b>
+<?php release_date('06-Aug-2015'); ?>
 <ul><li>Core:
 <ul>
   <li><?php bugfix(69793); ?> (Remotely triggerable stack exhaustion via recursive method calls).</li>
@@ -1380,7 +1725,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 
 <section class="version" id="5.5.27"><!-- {{{ 5.5.27 -->
 <h3>Version 5.5.27</h3>
-<b>09-Jul-2015</b>
+<?php release_date('09-Jul-2015'); ?>
 <ul><li>Core:
 <ul>
   <li><?php bugfix(69768); ?> (escapeshell*() doesn't cater to !).</li>
@@ -1431,7 +1776,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 
 <section class="version" id="5.4.43"><!-- {{{ 5.4.43 -->
 <h3>Version 5.4.43</h3>
-<b>09-Jul-2015</b>
+<?php release_date('09-Jul-2015'); ?>
 <ul><li>Core:
 <ul>
   <li><?php bugfix(69768); ?> (escapeshell*() doesn't cater to !).</li>
@@ -1490,10 +1835,6 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 <ul>
   <li><?php bugfix(69549); ?> (Memory leak with opcache.optimization_level=0xFFFFFFFF).</li>
 </ul></li>
-<li>PCRE:
-<ul>
-  <li>Upgraded pcrelib to 8.37. (CVE-2015-2325, CVE-2015-2326)</li>
-</ul></li>
 <li>Phar:
 <ul>
   <li><?php bugfix(69680); ?> (phar symlink in binary directory broken).</li>
@@ -1512,7 +1853,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 
 <section class="version" id="5.5.26"><!-- {{{ 5.5.26 -->
 <h3>Version 5.5.26</h3>
-<b>11-Jun-2015</b>
+<?php release_date('11-Jun-2015'); ?>
 <ul><li>Core:
 <ul>
   <li><?php bugfix(69566); ?> (Conditional jump or move depends on uninitialised value in extension trait).</li>
@@ -1571,7 +1912,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 
 <section class="version" id="5.4.42"><!-- {{{ 5.4.42 -->
 <h3>Version 5.4.42</h3>
-<b>11-Jun-2015</b>
+<?php release_date('11-Jun-2015'); ?>
 <ul><li>Core:
 <ul>
   <li>Improved fix for bug <?php bugl(69545); ?> (Integer overflow in ftp_genlist() resulting in heap overflow). (CVE-2015-4643)</li>
@@ -1645,7 +1986,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 
 <section class="version" id="5.5.25"><!-- {{{ 5.5.25 -->
 <h3>Version 5.5.25</h3>
-<b>14-May-2015</b>
+<?php release_date('14-May-2015'); ?>
 <ul><li>Core:
 <ul>
   <li><?php bugfix(69364); ?> (PHP Multipart/form-data remote dos Vulnerability). (CVE-2015-4024)</li>
@@ -1687,7 +2028,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 
 <section class="version" id="5.4.41"><!-- {{{ 5.4.41 -->
 <h3>Version 5.4.41</h3>
-<b>14-May-2015</b>
+<?php release_date('14-May-2015'); ?>
 <ul><li>Core:
 <ul>
   <li><?php bugfix(69364); ?> (PHP Multipart/form-data remote dos Vulnerability). (CVE-2015-4024)</li>
@@ -3520,7 +3861,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 </ul></li>
 <li>Zip:
 <ul>
-  <li>update libzip to version 1.11.2. PHP don't use any ilibzip private symbol anymore.</li>
+  <li>update libzip to version 0.11.2. PHP doesn't use any ilibzip private symbol anymore.</li>
   <li>new method ZipArchive::setPassword($password).</li>
   <li>add --with-libzip option to build with system libzip.</li>
   <li>new methods: ZipArchive::setExternalAttributesName($name, $opsys, $attr [, $flags]) ZipArchive::setExternalAttributesIndex($idx, $opsys, $attr [, $flags]) ZipArchive::getExternalAttributesName($name, &amp;$opsys, &amp;$attr [, $flags]) ZipArchive::getExternalAttributesIndex($idx, &amp;$opsys, &amp;$attr [, $flags])</li>
@@ -4294,6 +4635,8 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 <ul>
   <li><?php bugfix(45528); ?> (Allow the DateTimeZone constructor to accept timezones
     per offset too).</li>
+  <li><?php bugfix(44780); ?> (some time zone offsets not recognized by timezone_name_from_abbr)</li>
+  <li><?php bugfix(45543); ?> (DateTime::setTimezone can not set timezones without ID)</li>
 </ul></li>
 <li>Fileinfo:
 <ul>
@@ -4331,7 +4674,12 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 <section class="version" id="5.4.26"><!-- {{{ 5.4.26 -->
 <h3>Version 5.4.26</h3>
 <?php release_date('06-Mar-2014'); ?>
-<ul><li>JSON:
+<ul><li>Date:
+<ul>
+  <li><?php bugfix(44780); ?> (some time zone offsets not recognized by timezone_name_from_abbr)</li>
+  <li><?php bugfix(45543); ?> (DateTime::setTimezone can not set timezones without ID)</li>
+</ul></li>
+<li>JSON:
 <ul>
   <li><?php bugfix(65753); ?> (JsonSerializeable couldn't implement on module extension)</li>
 </ul></li>

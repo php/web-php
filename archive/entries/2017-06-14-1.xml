@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom" xmlns:default="http://php.net/ns/news">
+	<title>ZendCon 2017</title>
+	<id>http://php.net/archive/2017.php#id2017-06-14-1</id>
+	<published>2017-06-14T00:00:01+00:00</published>
+	<updated>2017-09-13T19:06:00+01:00</updated>
+	<default:finalTeaserDate xmlns="http://php.net/ns/news">2017-09-01</default:finalTeaserDate>
+	<category term="conferences" label="Conference announcement"/>
+	<link href="http://php.net/conferences/index.php#id2017-06-14-1" rel="alternate" type="text/html"/>
+	<default:newsImage xmlns="http://php.net/ns/news" link="http://zendcon.com" title="ZendCon 2017">zendcon2017.png</default:newsImage>
+	<link href="http://zendcon.com" rel="via" type="text/html"/>
+	<content type="xhtml">
+		<div xmlns="http://www.w3.org/1999/xhtml">
+
+			<p>With over 250 million PHP applications driven by a global community of more than 5 million active developers and all enterprises adopting open source software, ZendCon 2017 brings you a curated selection of the best experts, training, and networking opportunities to embrace this vast ecosystem.</p>
+
+			<p>Take advantage of unique opportunities to attend a wide variety of in-depth technical sessions, participate in exhibit hall activities, and connect with experts. Learn about the best in enterprise PHP and open source development, focusing on the latest for PHP 7, the evolution of frameworks and tools, API excellence, and innovation on many open source technologies related to the web.</p>
+
+			<p>Experience web development with the very best to accelerate great PHP.</p>
+
+			<p>Come and enjoy ZendCon 2017 at the Hard Rock Hotel &amp; Casino in Las Vegas.</p>
+
+			<p>Register Now at <a href="http://www.zendcon.com/register-now" title="ZendCon 2017">http://www.zendcon.com/register-now</a></p>
+		</div>
+	</content>
+</entry>

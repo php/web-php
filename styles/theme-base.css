@@ -402,30 +402,7 @@ hr {
 }
 
 .page-tools {
-  text-align: center;
-}
-
-@media (min-width:650px){
-  .page-tools {
-    float: right;
-    text-align: right;
-    position: relative;
-    z-index: 10;
-  }
-}
-
-@media (min-width:768px){
-  .page-tools {
-    float:none;
-    text-align:center;
-  }
-}
-
-@media (min-width:886px){
-  .page-tools {
-    float:right;
-    text-align:right;
-  }
+  text-align: right;
 }
 
 .page-tools #changelang-langs,

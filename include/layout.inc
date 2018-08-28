@@ -406,18 +406,15 @@ function print_news($news, $dog, $max = 5, $onlyyear = null, $return = false) {
     $count = 0;
     $news = $news ? $news : array(); // default to empty array (if no news)
     foreach($news as $item) {
-        $vevent = "";
         $ok = false;
 
         // Only print entries in the provided s/dog/cat/ egory
-        // If its a conference, use the hCalendar container
+        // If $dog is null, everything matches
         foreach($item["category"] as $category) {
-            if (in_array($category["term"], (array)$dog)) {
+            if (is_null($dog) || in_array($category["term"], (array)$dog)) {
                 $ok = true;
                 ++$count;
-            }
-            if ($category["term"] === "conferences" || $category["term"] === "cfp") {
-                $vevent = " vevent";
+                break;
             }
         }
         if ($count > $max) {

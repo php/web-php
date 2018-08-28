@@ -29,7 +29,7 @@ $BRANCHES = array(
 		'security' => '2016-07-21',
 	),
 	'5.6' => array(
-		'stable'   => '2016-12-31',
+		'stable'   => '2017-01-19',
 		'security' => '2018-12-31',
 	),
 );

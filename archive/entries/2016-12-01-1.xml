@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom" xmlns:default="http://php.net/ns/news">
+  <title>Web Summer Camp 2017</title>
+  <id>http://php.net/archive/2016.php#id2016-12-01-1</id>
+  <published>2016-12-01T14:20:42+00:00</published>
+  <updated>2016-12-01T14:20:42+00:00</updated>
+  <default:finalTeaserDate xmlns="http://php.net/ns/news">2017-03-31</default:finalTeaserDate>
+  <category term="cfp" label="Call for Papers"/>
+  <link href="http://php.net/conferences/index.php#id2016-12-01-1" rel="alternate" type="text/html"/>
+  <default:newsImage xmlns="http://php.net/ns/news" link="http://2017.websummercamp.com" title="Web Summer Camp">wsc.png</default:newsImage>
+  <link href="http://2017.websummercamp.com" rel="via" type="text/html"/>
+  <content type="xhtml">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+     <p>
+         Spend the last days of summer immersed in hands-on and engaging PHP and Symfony
+     workshops! Web Summer Camp will for the 6th time be a gathering place for
+     experts, experienced professionals, and young eager learners from all over
+     the world. <a href="http://2017.websummercamp.com/Call-for-Papers" title="Web Summer Camp 2017">Call for Papers</a>
+     and <a href="http://2017.websummercamp.com/Sponsor-us" title="Web Summer Camp 2017">Call for Sponsors</a> are open,
+     tickets are on the way! This is what it was like last year:
+     <a href="http://2016.websummercamp.com/PHP" title="Web Summer Camp 2016">http://2016.websummercamp.com/PHP</a>
+     </p>
+    </div>
+  </content>
+</entry>

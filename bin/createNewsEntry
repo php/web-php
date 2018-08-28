@@ -49,23 +49,36 @@ $categories = array(
 	array("frontpage"   => "PHP.net frontpage news"),
 	array("releases"    => "New PHP release"),
 	array("conferences" => "Conference announcement"),
-	array("cfp"         => "Call for Papers"),
+	array("cfp"   => "Call for Papers"),
 );
 $confs = array(2, 3);
 
+$imageRestriction = array(
+	'width' => 400,
+	'height' => 250
+);
+
 do {
+	$catVerified = false;
 	fwrite(STDOUT, "Categories:\n");
 	foreach($categories as $n => $category) {
-		fprintf(STDOUT, "\t%d: %s\t [%s]\n", $n, key($category), current($category));
+		fprintf(STDOUT, "\t%d: %-11s\t [%s]\n", $n, key($category), current($category));
 	}
 	fwrite(STDOUT, "Please select appropriate categories, seperated with space: ");
 
 	$cat = explode(" ", rtrim(fgets(STDIN)));
+	$cat = array_intersect(array_keys(array_values($categories)), $cat);
 
-	if ($cat) {
+	$intersect = array_intersect(array(2,3), $cat);
+	if ($cat && (count($intersect) < 2)) {
 		break;
 	}
-	fwrite(STDERR, "You have to pick at least one category\n");
+
+	if (count($intersect) == 2) {
+		fwrite(STDERR, "Pick either a CfP OR a conference\n");
+	} else {
+		fwrite(STDERR, "You have to pick at least one category\n");
+	}
 } while(1);
 
 
@@ -104,8 +117,6 @@ if ($conf) {
 foreach($cat as $n) {
 	if (isset($categories[$n])) {
 		ce($dom, "category", null, array("term" => key($categories[$n]), "label" => current($categories[$n])), $item);
-	} else {
-		fprintf(STDERR, "Unkown category %d\n", $n);
 	}
 }
 
@@ -113,11 +124,37 @@ ce($dom, "link", null, array("href" => "$href#id$id", "rel"  => "alternate", "ty
 
 fwrite(STDOUT, "Will a picture be accompanying this entry? ");
 $yn = fgets(STDIN);
+
+
 if (strtoupper($yn[0]) == "Y") {
+	$isValidImage = false;
+
 	do {
 		fwrite(STDOUT, "Enter the image name (note: the image has to exist in './images/news'): ");
 		$path = basename(rtrim(fgets(STDIN)));
-	} while(!file_exists("./images/news/$path"));
+
+		if (true === file_exists("./images/news/$path")) {
+			$isValidImage = true;
+
+			if (true === extension_loaded('gd')) {
+				$imageSizes = getimagesize("./images/news/$path");
+
+				if (
+					$imageSizes[0] > $imageRestriction['width'] ||
+					$imageSizes[1] > $imageRestriction['height']
+				) {
+					fwrite(STDOUT, "Provided image has a higher size than recommended (" . implode(' by ', $imageRestriction) . "). Continue? ");
+					$ynImg = fgets(STDIN);
+					if (strtoupper($ynImg[0]) == "Y") {
+						break;
+					} else {
+						$isValidImage = false;
+					}
+				}
+			}
+		}
+
+	} while($isValidImage !== true);
 
 	fwrite(STDOUT, "Image title: ");
 	$title = rtrim(fgets(STDIN));

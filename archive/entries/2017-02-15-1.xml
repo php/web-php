@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom" xmlns:default="http://php.net/ns/news">
+  <title>PHP Experience 2017</title>
+  <id>http://php.net/archive/2017.php#id2017-02-15-1</id>
+  <published>2017-02-15T02:35:13+00:00</published>
+  <updated>2017-02-15T02:35:13+00:00</updated>
+  <default:finalTeaserDate xmlns="http://php.net/ns/news">2017-03-27</default:finalTeaserDate>
+  <category term="conferences" label="Conference announcement"/>
+  <link href="http://php.net/conferences/index.php#id2017-02-15-1" rel="alternate" type="text/html"/>
+  <default:newsImage xmlns="http://php.net/ns/news" link="http://phpexperience2017.imasters.com.br/?paref=phpnet&amp;utm_campaign=phpnet" title="PHP Experience 2017 Logo">php-experience-2017_logo.png</default:newsImage>
+  <link href="http://phpexperience2017.imasters.com.br/?paref=phpnet&amp;utm_campaign=phpnet" rel="via" type="text/html"/>
+  <content type="html">
+      <p>iMasters PHP Experience 2017 brings together about 1,200 PHP developers in São Paulo, for <a href="http://phpexperience2017en.imasters.com.br/?paref=phpnet&amp;utm_campaign=phpnet">national and international lectures, workshops, community areas and various networking actions, divided into two days of great content</a>. In 2017 taking place from March 27-28 in São Paulo - Brazil.</p>
+      <p>Curatorship by <a href="http://phpsp.org.br/?paref=phpnet&amp;utm_campaign=phpnet">PHPSP - São Paulo PHP User Group</a>.</p>
+  </content>
+</entry>

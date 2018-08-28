@@ -1,12 +1,10 @@
 /* Plugins, etc, are on top. */
 
-String.prototype.escapeSelector = function()
-{
+String.prototype.escapeSelector = function() {
   return this.replace(/(.|#)([ #;&,.+*~\':"!^$\[\]\(\)=>|\/])/g, '$1' + '\\\\$2');
 };
 
-String.prototype.toInt = function()
-{
+String.prototype.toInt = function() {
   return parseInt(this);
 };
 
@@ -15,9 +13,9 @@ String.prototype.toInt = function()
 * Copyright (c) 2007-2013 Ariel Flesler - aflesler<a>gmail<d>com | http://flesler.blogspot.com
 * Dual licensed under MIT and GPL.
 * @author Ariel Flesler
-* @version 1.4.6
+* @version 2.1.2
 */
-(function($){var h=$.scrollTo=function(a,b,c){$(window).scrollTo(a,b,c)};h.defaults={axis:'xy',duration:parseFloat($.fn.jquery)>=1.3?0:1,limit:true};h.window=function(a){return $(window)._scrollable()};$.fn._scrollable=function(){return this.map(function(){var a=this,isWin=!a.nodeName||$.inArray(a.nodeName.toLowerCase(),['iframe','#document','html','body'])!=-1;if(!isWin)return a;var b=(a.contentWindow||a).document||a.ownerDocument||a;return/webkit/i.test(navigator.userAgent)||b.compatMode=='BackCompat'?b.body:b.documentElement})};$.fn.scrollTo=function(e,f,g){if(typeof f=='object'){g=f;f=0}if(typeof g=='function')g={onAfter:g};if(e=='max')e=9e9;g=$.extend({},h.defaults,g);f=f||g.duration;g.queue=g.queue&&g.axis.length>1;if(g.queue)f/=2;g.offset=both(g.offset);g.over=both(g.over);return this._scrollable().each(function(){if(e==null)return;var d=this,$elem=$(d),targ=e,toff,attr={},win=$elem.is('html,body');switch(typeof targ){case'number':case'string':if(/^([+-]=?)?\d+(\.\d+)?(px|%)?$/.test(targ)){targ=both(targ);break}targ=$(targ,this);if(!targ.length)return;case'object':if(targ.is||targ.style)toff=(targ=$(targ)).offset()}$.each(g.axis.split(''),function(i,a){var b=a=='x'?'Left':'Top',pos=b.toLowerCase(),key='scroll'+b,old=d[key],max=h.max(d,a);if(toff){attr[key]=toff[pos]+(win?0:old-$elem.offset()[pos]);if(g.margin){attr[key]-=parseInt(targ.css('margin'+b))||0;attr[key]-=parseInt(targ.css('border'+b+'Width'))||0}attr[key]+=g.offset[pos]||0;if(g.over[pos])attr[key]+=targ[a=='x'?'width':'height']()*g.over[pos]}else{var c=targ[pos];attr[key]=c.slice&&c.slice(-1)=='%'?parseFloat(c)/100*max:c}if(g.limit&&/^\d+$/.test(attr[key]))attr[key]=attr[key]<=0?0:Math.min(attr[key],max);if(!i&&g.queue){if(old!=attr[key])animate(g.onAfterFirst);delete attr[key]}});animate(g.onAfter);function animate(a){$elem.animate(attr,f,g.easing,a&&function(){a.call(this,targ,g)})}}).end()};h.max=function(a,b){var c=b=='x'?'Width':'Height',scroll='scroll'+c;if(!$(a).is('html,body'))return a[scroll]-$(a)[c.toLowerCase()]();var d='client'+c,html=a.ownerDocument.documentElement,body=a.ownerDocument.body;return Math.max(html[scroll],body[scroll])-Math.min(html[d],body[d])};function both(a){return typeof a=='object'?a:{top:a,left:a}}})(jQuery);
+;(function(f){"use strict";"function"===typeof define&&define.amd?define(["jquery"],f):"undefined"!==typeof module&&module.exports?module.exports=f(require("jquery")):f(jQuery)})(function($){"use strict";function n(a){return!a.nodeName||-1!==$.inArray(a.nodeName.toLowerCase(),["iframe","#document","html","body"])}function h(a){return $.isFunction(a)||$.isPlainObject(a)?a:{top:a,left:a}}var p=$.scrollTo=function(a,d,b){return $(window).scrollTo(a,d,b)};p.defaults={axis:"xy",duration:0,limit:!0};$.fn.scrollTo=function(a,d,b){"object"=== typeof d&&(b=d,d=0);"function"===typeof b&&(b={onAfter:b});"max"===a&&(a=9E9);b=$.extend({},p.defaults,b);d=d||b.duration;var u=b.queue&&1<b.axis.length;u&&(d/=2);b.offset=h(b.offset);b.over=h(b.over);return this.each(function(){function k(a){var k=$.extend({},b,{queue:!0,duration:d,complete:a&&function(){a.call(q,e,b)}});r.animate(f,k)}if(null!==a){var l=n(this),q=l?this.contentWindow||window:this,r=$(q),e=a,f={},t;switch(typeof e){case "number":case "string":if(/^([+-]=?)?\d+(\.\d+)?(px|%)?$/.test(e)){e= h(e);break}e=l?$(e):$(e,q);case "object":if(e.length===0)return;if(e.is||e.style)t=(e=$(e)).offset()}var v=$.isFunction(b.offset)&&b.offset(q,e)||b.offset;$.each(b.axis.split(""),function(a,c){var d="x"===c?"Left":"Top",m=d.toLowerCase(),g="scroll"+d,h=r[g](),n=p.max(q,c);t?(f[g]=t[m]+(l?0:h-r.offset()[m]),b.margin&&(f[g]-=parseInt(e.css("margin"+d),10)||0,f[g]-=parseInt(e.css("border"+d+"Width"),10)||0),f[g]+=v[m]||0,b.over[m]&&(f[g]+=e["x"===c?"width":"height"]()*b.over[m])):(d=e[m],f[g]=d.slice&& "%"===d.slice(-1)?parseFloat(d)/100*n:d);b.limit&&/^\d+$/.test(f[g])&&(f[g]=0>=f[g]?0:Math.min(f[g],n));!a&&1<b.axis.length&&(h===f[g]?f={}:u&&(k(b.onAfterFirst),f={}))});k(b.onAfter)}})};p.max=function(a,d){var b="x"===d?"Width":"Height",h="scroll"+b;if(!n(a))return a[h]-$(a)[b.toLowerCase()]();var b="client"+b,k=a.ownerDocument||a.document,l=k.documentElement,k=k.body;return Math.max(l[h],k[h])-Math.min(l[b],k[b])};$.Tween.propHooks.scrollLeft=$.Tween.propHooks.scrollTop={get:function(a){return $(a.elem)[a.prop]()}, set:function(a){var d=this.get(a);if(a.options.interrupt&&a._last&&a._last!==d)return $(a.elem).stop();var b=Math.round(a.now);d!==b&&($(a.elem)[a.prop](b),a._last=this.get(a))}};return p});
 /*}}}*/
 
 
@@ -33,18 +31,23 @@ PHP_NET.HEADER_HEIGHT = 52;
  * @param Function callback Function to execute after the animation is complete.
  * @return void
  */
-PHP_NET.scrollElementIntoView = function(element, animationDuration, callback){
+PHP_NET.scrollElementIntoView = function (element, animationDuration, callback) {
     animationDuration = animationDuration || 400;
     var destTop = $(element).offset().top - PHP_NET.HEADER_HEIGHT;
     var callbackCalled = false;
-    $('html, body').animate(
+    // Online sources claim that some browsers scroll body, others scroll html
+    // so we scroll both for compatibility. However, the callback function is
+    // called for each element so the callback function will trigger twice,
+    // once for html and once for body. This is why we track whether the
+    // callback has been called to prevent multiple executions.
+    $("html, body").animate(
         {scrollTop: destTop}, 
         animationDuration,
-        function(){
-            // prevents the callback to be called twice. temporary
-            // solution until further investigation is done
-            if(!callbackCalled) callback();
-            callbackCalled = true;
+        function () {
+            if (!callbackCalled) {
+                callbackCalled = true;
+                callback();
+            }
         }
     );
 };
@@ -52,47 +55,43 @@ PHP_NET.scrollElementIntoView = function(element, animationDuration, callback){
 /**
  * Enables "smooth scrolling to page anchor" for page <a> links.
  */
-$(document).ready(function(){    
-    $('a[href*=#]').click(function(e){
-        var urlTester = document.createElement("a");
-        urlTester.href = this.href;
-        urlTester.hash = location.hash;
-        var targetElement = document.getElementById(this.hash.substr(1));
-        // this <a> targets an id="" on this very page
-        // (the current URL and the target URL
-        // are identic not considering their #hash fragments)
-        if(urlTester.href == location.href && targetElement){
-            // temporarily disable the id="" attribute from such element
-            // so that UA's default scrolling is prevented
-            var wasID = targetElement.id;
-            targetElement.id = "";
-            PHP_NET.scrollElementIntoView(targetElement, null, function(){
-                // restore the id="" attribute to the element
-                targetElement.id = wasID;
-            });
+document.body.addEventListener("click", function (e) {
+    if (e.target && e.target.nodeName === "A") {
+        var href = e.target.getAttribute("href");
+        if (href && href[0] === "#") {
+            var id = href.slice(1);
+            var target = document.getElementById(id);
+            // temporarily remove the id="" attribute so that the UA's
+            // default scrolling is prevented
+            target.id = "";
+            if (target) {
+                PHP_NET.scrollElementIntoView(target, null, function () {
+                    // restore the id="" attribute
+                    target.id = id;
+                });
+            }
         }
-    });
+    }
 });
 
 /**
  * Enables "smooth scrolling to page anchor" when page was just loaded.
  */
-$(document).ready(function(){
-    var targetElm = location.hash ? document.getElementById(location.hash.substr(1)) : null;
-    // if the location.hash points to an element that is actually in the document
-    if(targetElm){
-        // temporarily disable the id="" attribute from such element so that UA's default scrolling is prevented
-        var wasID = targetElm.id;
-        targetElm.id = "";
-        // so when page is fully loaded and after some delay for a smoother result
-        $(window).load(function(){
-            setTimeout(function(){
-                // animate the scrolling so that the element is shown into viewport
-                PHP_NET.scrollElementIntoView(targetElm, null, function(){
-                    // finally restore the id="" attribute to the element
-                    targetElm.id = wasID;
-                });
-            }, 300);
+document.addEventListener("DOMContentLoaded", function () {
+    var target = (location.hash
+        ? document.getElementById(location.hash.slice(1))
+        : null
+    );
+    if (target) {
+        // temporarily remove the id="" attribute so that the UA's default
+        // scrolling is prevented
+        var id = target.id;
+        target.id = "";
+        window.addEventListener("load", function () {
+            PHP_NET.scrollElementIntoView(target, null, function() {
+                // restore the id="" attribute to the element
+                target.id = id;
+            });
         });
     }
 });
@@ -408,9 +407,9 @@ $(document).ready(function() {
     $('.refentry code.parameter').click(function(event)
     {
       var id = $(this).text().replace(/^[&$]{0,2}/g, '');
-      var offsetTop = $(
-        '.parameters .parameter:contains("' + id + '"), .options .parameter:contains("' + id + '")'
-      ).offset().top - 52;
+      var offsetTop = $('.parameters, .options').find('.parameter').filter(function() {
+          return $(this).text() === id; // https://bugs.php.net/bug.php?id=74493
+      }).offset().top - 52;
       $.scrollTo({top: offsetTop, left: 0}, 400);
     });
 

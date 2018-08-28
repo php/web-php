@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom" xmlns:default="http://php.net/ns/news">
+    <title>Madison PHP Conference 2017</title>
+    <id>http://php.net/archive/2017.php#id2017-02-24-1</id>
+    <published>2017-02-24T16:59:19+00:00</published>
+    <updated>2017-02-24T16:59:19+00:00</updated>
+    <default:finalTeaserDate xmlns="http://php.net/ns/news">2017-09-22</default:finalTeaserDate>
+    <category term="cfp" label="Call for Papers"/>
+    <link href="http://php.net/conferences/index.php#id2017-02-24-1" rel="alternate" type="text/html"/>
+    <default:newsImage xmlns="http://php.net/ns/news" link="http://www.madisonphpconference.com/" title="Madison PHP Conference Logo">madison-php-2016-conf-logo.png</default:newsImage>
+    <link href="http://2017.madisonphpconference.com/" rel="via" type="text/html"/>
+    <content type="xhtml">
+        <div xmlns="http://www.w3.org/1999/xhtml">
+            <p>Join us on Friday, September 22nd, 2017 for a full day of tutorials followed by three tracks of amazing talks on Saturday, September 23rd, 2017. Now in its fifth year, Madison PHP Conference in Madison, Wisconsin, USA focuses on PHP, related web technologies, and professional development - everything you need to energize your career. This event is organized by the locally-run <a href="http://www.madisonphp.com">Madison PHP user group</a> and is designed to offer something for attendees at all skill levels. <a href="http://www.madisonphpconference.com">Madison PHP Conference 2017</a> will be two days of networking, learning, sharing, and great fun!</p>
+            <p>The <a href="http://cfp.madisonphpconference.com">Call for Papers</a> will be open until April 30th, 2017. Madison PHP Conference offers reimbursement for travel and accommodations. To view the full speaker package and to submit a talk, please visit: <a href="http://cfp.madisonphpconference.com">http://cfp.madisonphpconference.com</a>.</p>
+            <p>Have you ever thought about giving a talk at a user group or at a conference but weren't sure what to talk about? Weren't sure how to format your slides? Weren't sure where to even start? Learn some tips for finding a topic, creating your talk, and engaging your audience at our speaker's workshop:<br />
+                <strong>Speaking at a Conference or User Group</strong><br />
+                Thursday, April 6, 2017 - 7:00 PM<br />
+                RSVP: <a href="https://www.meetup.com/madisonphp/events/233865912/">https://www.meetup.com/madisonphp/events/233865912/</a>
+            </p>
+
+        </div>
+    </content>
+</entry>

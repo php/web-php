@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom" xmlns:default="http://php.net/ns/news">
+  <title>CoderCruise 2018 - Call for Speakers</title>
+  <id>http://php.net/archive/2018.php#id2018-01-31-1</id>
+  <published>2018-01-31T21:00:37+00:00</published>
+  <updated>2018-01-31T21:00:37+00:00</updated>
+  <default:finalTeaserDate xmlns="http://php.net/ns/news">2018-02-28</default:finalTeaserDate>
+  <category term="cfp" label="Call for Papers"/>
+  <link href="http://php.net/conferences/index.php#id2018-01-31-1" rel="alternate" type="text/html"/>
+  <default:newsImage xmlns="http://php.net/ns/news" link="https://www.codercruise.com/" title="CoderCruise 2018">cclogo-horizontal-2018@60v-1.png</default:newsImage>
+  <link href="https://www.codercruise.com/" rel="via" type="text/html"/>
+  <content type="html">
+<p>Once again the team behind the original php[cruise] is bringing a conference to the open seas. <a href="https://www.codercruise.com/">CoderCruise 2018</a> will be a premiere conference experience, letting you have an exclusive connection to your fellow community members. It will set sail from Ft. Lauderdale on August 30th for a 5 day cruise that also visits Half Moon Cay and Nassau!</p>
+<p>Best of all, this year we've managed to negotiate a much cheaper overall rate for our participants, starting as low as $410 per person (including 5-day cruise, food, drink <b>and the conference!</b>)</p>
+<p>Our <a href="https://www.codercruise.com/call-for-speakers/">Call for Speakers</a> is open until <b>February 28th</b>, and we invite you to come give us your submissions. We want to hear from you, as do others!</p>
+</content>
+</entry>

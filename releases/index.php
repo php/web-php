@@ -96,6 +96,9 @@ $SIDEBAR_DATA = '
 </div>
 
 <p class="panel">
+ <a href="/ChangeLog-7.php">PHP 7 ChangeLog</a>
+</p>
+<p class="panel">
  <a href="/ChangeLog-5.php">PHP 5 ChangeLog</a>
 </p>
 <p class="panel">
@@ -180,6 +183,12 @@ function mk_rel($major, $ver, $date, $announcement, $source, $windows, $museum) 
 				download_link($src["filename"], $src["name"]); echo "<br>\n";
 				if (isset($src["md5"])) {
 					echo '<span class="md5sum">md5: ' .$src["md5"]. "</span>\n";
+					if (isset($src["sha256"])) {
+						echo '<br/>';
+					}
+				}
+				if (isset($src["sha256"])) {
+					echo '<span class="sha256sum">sha256: ' .$src["sha256"]. "</span>\n";
 				}
 			} else {
 				echo '<a href="'.$src['link'].'">'.$src['name'].'</a>';

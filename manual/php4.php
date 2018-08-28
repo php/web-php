@@ -26,15 +26,14 @@ site_header('PHP Version 4 Documentation');
  To download a copy of the manual for PHP 4, see the <a href="http://doc.php.net/archives/">
  documentation archives</a>. Please, remember, that archived version <strong>should not
  </strong> be used in everyday development, unless you are developing PHP 4 applications.
- This version lacks many topics connected with PHP 5 and it is not updated anymore.
+ This version lacks many topics connected with newer PHP versions and it is not updated anymore.
 </p>
 
-<h2>Migrating to PHP 5</h2>
+<h2>Migrating to supported PHP version</h2>
 <p>
- All users are strongly encouraged to upgrade their environments to PHP 5.
+ All users are strongly encouraged to upgrade their environments to  newest PHP version.
  Please, read our guides for <a href="http://php.net/manual/en/migration5.php">Migrating
- from PHP 4 to PHP 5.0.x</a> and <a href="http://php.net/manual/en/faq.migration5.php">
- Migrating from PHP 4 to PHP 5 FAQ</a>, for more information.
+ from PHP 4 to PHP 5.0.x</a> for more information.
 </p>
 
 <?php

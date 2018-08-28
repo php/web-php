@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom" xmlns:default="http://php.net/ns/news">
+  <title>DevCOnf 2017</title>
+  <id>http://php.net/archive/2017.php#id2017-05-18-1</id>
+  <published>2017-05-18T13:43:56+00:00</published>
+  <updated>2017-05-18T13:43:56+00:00</updated>
+  <default:finalTeaserDate xmlns="http://php.net/ns/news">2017-06-17</default:finalTeaserDate>
+  <category term="conferences" label="Conference announcement"/>
+  <link href="http://php.net/conferences/index.php#id2017-05-18-1" rel="alternate" type="text/html"/>
+  <default:newsImage xmlns="http://php.net/ns/news" link="http://devconf.ru" title="DevConf 2017">devconfru2012.png</default:newsImage>
+  <link href="http://devconf.ru" rel="via" type="text/html"/>
+  <content type="xhtml">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+     <p>
+      DevConf 2017 in Moscow, Russia on June 17-18.
+     </p>
+     <p>
+      DevConf is the ultimate meeting place for russian-speaking web-developers,
+      combining several language-specific conferences under one roof.
+      This year the conference will take place in <a href="http://devconf.ru/ru/members/location">Izmaylovo</a>.
+     </p>
+     <p>
+      DevConf 2017 will include the following sections:
+     </p>
+     <ul>
+      <li>DevConf::Backend();</li>
+      <li>DevConf::Frontend();</li>
+      <li>DevConf::Management();</li>
+      <li>DevConf::Storage();</li>
+      <li>DevConf::DevOps();</li>
+     </ul>
+     <p>
+      Special Events:
+     </p>
+     <ul>
+      <li>DevConf::YiiConf(); - June 16</li>
+      <li>Joomla Day - June 17</li>
+     </ul>
+     <p>
+      Each section will feature several talks from the active contributors/authors of the language.
+      Among the invited speakers are Valentin Bartenev (NGINX), Ilya Gusev (PHP7.1)
+      Dmitry Lenev (MySQL), Oleg Bartunov (Postgres),
+      Ivan Panchenko (Postgres), Grigory Kochanov (Oracle),
+      Vladimir Yldashev (Laravel), Anton Shramko (Rust),
+      Konstantin Osipov (Tarantool), Andrey Trifanov (Lua),
+      Ilya Alexeev (OpenStack), Ilya Klimov (VueJS),
+      Alexey Pirogov (Haskell), Alexey Ohrimenko (Angular),
+      Grigory Petrov (React VR), Adel Fayzrakhmanov (Toptal)
+      and speakers from other companies. See more details on the official website.
+     </p>
+    </div>
+  </content>
+</entry>

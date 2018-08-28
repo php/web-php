@@ -146,6 +146,10 @@ else {
          " Submit your event here, and after it has been approved, it will be listed in\n" .
          " our event calendar.\n</p>";
     echo "<p>Please note that conference submissions should be emailed to php-webmaster@lists.php.net</p>\n";
+    echo '<div class="warning">' . "\n" .
+         "<p>\n All submissions will be <strong>reviewed by human</strong>. Do not waste " .
+         "our and your own time on submitting events unrelated to PHP. Thank you.</p>\n" .
+         "</div>\n";
 }
 
 // Display errors if found

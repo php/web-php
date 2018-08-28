@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom" xmlns:default="http://php.net/ns/news">
+  <title>PHP South Coast 2017 - CFP opened</title>
+  <id>http://php.net/archive/2016.php#id2016-12-01-2</id>
+  <published>2016-12-01T22:48:54+00:00</published>
+  <updated>2016-12-01T22:48:54+00:00</updated>
+  <default:finalTeaserDate xmlns="http://php.net/ns/news">2017-01-31</default:finalTeaserDate>
+  <category term="cfp" label="Call for Papers"/>
+  <link href="http://php.net/conferences/index.php#id2016-12-01-2" rel="alternate" type="text/html"/>
+  <default:newsImage xmlns="http://php.net/ns/news" link="https://2017.phpsouthcoast.co.uk/" title="PHP South Coast">php-south-coast.png</default:newsImage>
+  <link href="https://2017.phpsouthcoast.co.uk/" rel="via" type="text/html"/>
+  <content type="xhtml">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+     The PHP South Coast team are pleased to announce the CFP for our 2017 conference is now open. We're eager to broaden the skill base of PHP developers with challenging new talks as well as introducing new and upcoming speakers from the PHP community. PHP South Coast is a not-for-profit community organised conference, a collaboration between six PHP user groups in the South UK. We'd love to see your talks, head to our <a href="https://cfp.phpsouthcoast.co.uk/">call for papers site</a> and let us know. Blind bird tickets are also available now, just head to the <a href="https://www.phpsouthcoast.co.uk/">PHP South Coast</a> website now for more information.
+    </div>
+  </content>
+</entry>
