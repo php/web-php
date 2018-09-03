@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom" xmlns:default="http://php.net/ns/news">
+  <title>PHP Day Curitiba 2018</title>
+  <id>http://php.net/archive/2018.php#id2018-09-03-1</id>
+  <published>2018-09-03T21:49:30+00:00</published>
+  <updated>2018-09-03T21:49:30+00:00</updated>
+  <default:finalTeaserDate xmlns="http://php.net/ns/news">2018-10-06</default:finalTeaserDate>
+  <category term="conferences" label="Conference announcement"/>
+  <link href="http://php.net/conferences/index.php#id2018-09-03-1" rel="alternate" type="text/html"/>
+  <default:newsImage xmlns="http://php.net/ns/news" link="http://www.phpdaycuritiba.com.br" title="PHP Day Curitiba 2018">php-day-curitiba-2018.jpg</default:newsImage>
+  <link href="http://www.phpdaycuritiba.com.br" rel="via" type="text/html"/>
+  <content type="xhtml">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+      <p>PHP Day Curitiba is an annual conference that has been shaking up the community of Paraná state, in southern Brazil. It'll be a single and full day of networking, learning, sharing, and great fun!</p>
+
+      <ul>
+       <li>+120 attendees</li>
+       <li>7 High quality talks</li>
+       <li>2 Keynote Speakers</li>
+       <li>Free Admission + Coffee-break + A lot of networking</li>
+      </ul>
+
+      <p>Save the date: <strong>Saturday, October 6th.</strong></p>
+
+      <p><a href="http://www.phpdaycuritiba.com.br">http://www.phpdaycuritiba.com.br</a></p>
+    </div>
+  </content>
+</entry>
