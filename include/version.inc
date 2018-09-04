@@ -16,12 +16,12 @@
  * );
  */
 /* PHP 7.3 Release */
-$PHP_7_3_RC  = '7.3.0beta2';
-$PHP_7_3_RC_DATE = "16 Aug 2018";
+$PHP_7_3_RC  = '7.3.0beta3';
+$PHP_7_3_RC_DATE = "30 Aug 2018";
 	
 /* PHP 7.2 Release */
-$PHP_7_2_RC = false; // Current RC version (e.g., '7.2.1RC1') or false
-$PHP_7_2_RC_DATE = "02 Aug 2018";
+$PHP_7_2_RC = '7.2.10RC1'; // Current RC version (e.g., '7.2.1RC1') or false
+$PHP_7_2_RC_DATE = "30 Aug 2018";
 
 $PHP_7_2_VERSION         = "7.2.9";
 $PHP_7_2_DATE            = "16 Aug 2018";
@@ -32,8 +32,8 @@ $PHP_7_2_SHA256     = array(
 );
 
 /* PHP 7.1 Release */
-$PHP_7_1_RC = false; // Current RC version (e.g., '5.6.7RC1') or false
-$PHP_7_1_RC_DATE = "2 Aug 2018";
+$PHP_7_1_RC = '7.1.22RC1'; // Current RC version (e.g., '5.6.7RC1') or false
+$PHP_7_1_RC_DATE = "30 Aug 2018";
 
 $PHP_7_1_VERSION         = "7.1.21";
 $PHP_7_1_DATE            = "17 Aug 2018";
