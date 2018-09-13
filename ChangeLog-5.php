@@ -8,6 +8,16 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 
 <h1>PHP 5 ChangeLog</h1>
 
+<section class="version" id="5.6.38"><!-- {{{ 5.6.38 -->
+<h3>Version 5.6.38</h3>
+<b><?php release_date('13-Sep-2018'); ?></b>
+<ul><li>Apache2:
+<ul>
+  <li><?php bugfix(76582); ?> (XSS due to the header Transfer-Encoding: chunked).</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
 <section class="version" id="5.6.37"><!-- {{{ 5.6.37 -->
 <h3>Version 5.6.37</h3>
 <b><?php release_date('19-Jul-2018'); ?></b>

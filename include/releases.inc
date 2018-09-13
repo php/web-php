@@ -2117,6 +2117,39 @@ $OLDRELEASES = array (
   ),
   5 => 
   array (
+    '5.6.37' => 
+    array (
+      'announcement' => 
+      array (
+        'English' => '/releases/5_6_37.php',
+      ),
+      'source' => 
+      array (
+        0 => 
+        array (
+          'filename' => 'php-5.6.37.tar.bz2',
+          'name' => 'PHP 5.6.37 (tar.bz2)',
+          'sha256' => '886ad63d05d94ea3e54322691aadea0cf1d4bcdb4450b02fe300e5b570788b23',
+          'date' => '19 Jul 2018',
+        ),
+        1 => 
+        array (
+          'filename' => 'php-5.6.37.tar.gz',
+          'name' => 'PHP 5.6.37 (tar.gz)',
+          'sha256' => 'b7ec077f35ef3a8cdd33c29124140b1761111a1429878b4c463bb20d2a31b184',
+          'date' => '19 Jul 2018',
+        ),
+        2 => 
+        array (
+          'filename' => 'php-5.6.37.tar.xz',
+          'name' => 'PHP 5.6.37 (tar.xz)',
+          'sha256' => '5000d82610f9134aaedef28854ec3591f68dedf26a17b8935727dac2843bd256',
+          'date' => '19 Jul 2018',
+        ),
+      ),
+      'date' => '19 Jul 2018',
+      'museum' => false,
+    ),
     '5.6.36' => 
     array (
       'announcement' => 
