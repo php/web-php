@@ -6,6 +6,75 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
 ?>
 <h1>PHP 7 ChangeLog</h1>
 
+<section class="version" id="7.2.10"><!-- {{{ 7.2.10 -->
+<h3>Version 7.2.10</h3>
+<b><?php release_date('13-Sep-2018'); ?></b>
+<ul><li>Core:
+<ul>
+  <li><?php bugfix(76754); ?> (parent private constant in extends class memory leak).</li>
+  <li><?php bugfix(72443); ?> (Generate enabled extension).</li>
+  <li><?php bugfix(75797); ?> (Memory leak when using class_alias() in non-debug mode).</li>
+</ul></li>
+<li>Apache2:
+<ul>
+  <li><?php bugfix(76582); ?> (Apache bucket brigade sometimes becomes invalid).</li>
+</ul></li>
+<li>Bz2:
+<ul>
+  <li>Fixed arginfo for bzcompress.</li>
+</ul></li>
+<li>gettext:
+<ul>
+  <li><?php bugfix(76517); ?> (incorrect restoring of LDFLAGS).</li>
+</ul></li>
+<li>iconv:
+<ul>
+  <li><?php bugfix(68180); ?> (iconv_mime_decode can return extra characters in a header).</li>
+  <li><?php bugfix(63839); ?> (iconv_mime_decode_headers function is skipping headers).</li>
+  <li><?php bugfix(60494); ?> (iconv_mime_decode does ignore special characters).</li>
+  <li><?php bugfix(55146); ?> (iconv_mime_decode_headers() skips some headers).</li>
+</ul></li>
+<li>intl:
+<ul>
+  <li><?php bugfix(74484); ?> (MessageFormatter::formatMessage memory corruption with 11+ named placeholders).</li>
+</ul></li>
+<li>libxml:
+<ul>
+  <li><?php bugfix(76777); ?> ("public id" parameter of libxml_set_external_entity_loader callback undefined).</li>
+</ul></li>
+<li>mbstring:
+<ul>
+  <li><?php bugfix(76704); ?> (mb_detect_order return value varies based on argument type).</li>
+</ul></li>
+<li>Opcache:
+<ul>
+  <li><?php bugfix(76747); ?> (Opcache treats path containing "test.pharma.tld" as a phar file).</li>
+</ul></li>
+<li>OpenSSL:
+<ul>
+  <li><?php bugfix(76705); ?> (unusable ssl =&gt; peer_fingerprint in stream_context_create()).</li>
+</ul></li>
+<li>phpdbg:
+<ul>
+  <li><?php bugfix(76595); ?> (phpdbg man page contains outdated information).</li>
+</ul></li>
+<li>SPL:
+<ul>
+  <li><?php bugfix(68825); ?> (Exception in DirectoryIterator::getLinkTarget()).</li>
+  <li><?php bugfix(68175); ?> (RegexIterator pregFlags are NULL instead of 0).</li>
+</ul></li>
+<li>Standard:
+<ul>
+  <li><?php bugfix(76778); ?> (array_reduce leaks memory if callback throws exception).</li>
+</ul></li>
+<li>zlib:
+<ul>
+  <li><?php bugfix(65988); ?> (Zlib version check fails when an include/zlib/ style dir is passed to the --with-zlib configure option).</li>
+  <li><?php bugfix(76709); ?> (Minimal required zlib library is 1.2.0.4).</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
 <section class="version" id="7.2.9"><!-- {{{ 7.2.9 -->
 <h3>Version 7.2.9</h3>
 <b><?php release_date('16-Aug-2018'); ?></b>
