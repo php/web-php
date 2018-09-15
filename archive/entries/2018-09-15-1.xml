@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom" xmlns:default="http://php.net/ns/news">
+  <title>ScotlandPHP Conference</title>
+  <id>http://php.net/archive/2018.php#id2018-09-15-1</id>
+  <published>2018-09-15T10:42:13+00:00</published>
+  <updated>2018-09-15T10:42:13+00:00</updated>
+  <default:finalTeaserDate xmlns="http://php.net/ns/news">2018-05-10</default:finalTeaserDate>
+  <category term="conferences" label="Conference announcement"/>
+  <link href="http://php.net/conferences/index.php#id2018-09-15-1" rel="alternate" type="text/html"/>
+  <default:newsImage xmlns="http://php.net/ns/news" link="https://scophp.co" title="ScotlandPHP Conference 2018">scotlandphp.png</default:newsImage>
+  <link href="https://scophp.co" rel="via" type="text/html"/>
+  <content type="xhtml">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+     The ScotlandPHP Conference is back!
+     Saturday 6th October 2018, EICC, Edinburgh
+
+     Join the worldwide PHP community for the third ScotlandPHP conference.
+     There will be 14 talks presented across 2 tracks, along with 4 workshops to help you enhance your current skills and find out what's next for PHP and beyond.
+     We're planning 2 social events so you can network with both the speakers and other attendees.
+     This year we'll be hosting the conference in the world-class Edinburgh International Conference Centre, right in the city-centre. <a href="http://www.eicc.co.uk/visiting/how-to-get-here/" target="_blank"></a>
+     We've curated an amazing selection of speakers talking about a wide range of topics of interest to PHP developers and the wider web-development community. <a href="https://conference.scotlandphp.co.uk/speakers" target="_blank">See the lineup here</a>
+    </div>
+  </content>
+</entry>
