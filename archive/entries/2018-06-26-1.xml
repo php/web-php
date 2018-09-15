@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom" xmlns:default="http://php.net/ns/news">
+  <title>ZendCon &amp; OpenEnterprise 2018</title>
+  <id>http://php.net/archive/2018.php#id2018-06-26-1</id>
+  <published>2018-06-26T08:41:29+00:00</published>
+  <updated>2018-06-26T08:41:29+00:00</updated>
+  <default:finalTeaserDate xmlns="http://php.net/ns/news">2018-10-01</default:finalTeaserDate>
+  <category term="conferences" label="Conference announcement"/>
+  <link href="http://php.net/conferences/index.php#id2018-06-26-1" rel="alternate" type="text/html"/>
+  <default:newsImage xmlns="http://php.net/ns/news" link="http://www.zendcon.com" title="ZendCon &amp; OpenEnterprise 2018">zcoe2018.png</default:newsImage>
+  <link href="http://www.zendcon.com" rel="via" type="text/html"/>
+  <content type="xhtml">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+      <p><a href="http://www.zendcon.com">ZendCon &amp; OpenEnterprise</a>, happening October 15 - 17th, 2018 in Las Vegas is
+          the premier technology conference designed to teach and share practical experiences from the front lines of
+          enterprise PHP and open source environments. Focused on solving real-world, enterprise-class problems, technical
+          business leaders, strategists, and developers will assemble to discuss case studies and best practices around
+          the application of PHP and open source to transform business.</p>
+    </div>
+  </content>
+</entry>

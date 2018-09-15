@@ -5,6 +5,18 @@ $GPG_KEYS = array(
       Key fingerprint = D620 173D 6924 BA1C 2244  C7C4 1B6B 6676 22FE 5A12
 uid                  Kalle Sommer Nielsen (PHP) &lt;kalle@php.net&gt;
 */
+    "7.3" => <<< GPG
+pub   rsa4096/118BCCB6 2018-06-05 [SC] [expires: 2022-06-04]
+      Key fingerprint = CBAF 69F1 73A0 FEA4 B537  F470 D66C 9593 118B CCB6
+uid                  Christoph M. Becker &lt;cmb@php.net&gt;
+
+pub   2048D/5DA04B5D 2012-03-19
+      Key fingerprint = F382 5282 6ACD 957E F380  D39F 2F79 56BC 5DA0 4B5D
+uid                  Stanislav Malyshev (PHP key) &lt;smalyshev@gmail.com&gt;
+uid                  Stanislav Malyshev (PHP key) &lt;stas@php.net&gt;
+uid                  Stanislav Malyshev (PHP key) &lt;smalyshev@sugarcrm.com&gt;
+GPG
+,
     "7.2" => <<< GPG
 pub   4096R/70D12172 2017-04-14 [expires: 2024-04-21]
       Key fingerprint = 1729 F839 38DA 44E2 7BA0  F4D3 DBDB 3974 70D1 2172
@@ -60,6 +72,12 @@ uid                  Julien Pauli &lt;jpauli@php.net&gt;
 pub   4096R/7267B52D 2012-03-20 [expires: 2016-03-19]
       Key fingerprint = 0B96 609E 270F 565C 1329  2B24 C13C 70B8 7267 B52D
 uid                  David Soria Parra &lt;dsp@php.net&gt;
+
+pub   2048D/5DA04B5D 2012-03-19
+      Key fingerprint = F382 5282 6ACD 957E F380  D39F 2F79 56BC 5DA0 4B5D
+uid                  Stanislav Malyshev (PHP key) &lt;smalyshev@gmail.com&gt;
+uid                  Stanislav Malyshev (PHP key) &lt;stas@php.net&gt;
+uid                  Stanislav Malyshev (PHP key) &lt;smalyshev@sugarcrm.com&gt;
 
 GPG
 ,

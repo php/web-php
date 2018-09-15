@@ -4,8 +4,724 @@ include_once $_SERVER['DOCUMENT_ROOT'] . '/include/prepend.inc';
 include_once $_SERVER['DOCUMENT_ROOT'] . '/include/changelogs.inc';
 site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("changelog.css"), "layout_span" => 12));
 ?>
-
 <h1>PHP 7 ChangeLog</h1>
+
+<section class="version" id="7.0.32"><!-- {{{ 7.0.32 -->
+<h3>Version 7.0.32</h3>
+<b><?php release_date('13-Sep-2018'); ?></b>
+<ul><li>Apache2:
+<ul>
+  <li><?php bugfix(76582); ?> (XSS due to the header Transfer-Encoding: chunked).</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
+<section class="version" id="7.1.22"><!-- {{{ 7.1.22 -->
+<h3>Version 7.1.22</h3>
+<b><?php release_date('13-Sep-2018'); ?></b>
+<ul><li>Core:
+<ul>
+  <li><?php bugfix(76754); ?> (parent private constant in extends class memory leak).</li>
+  <li><?php bugfix(72443); ?> (Generate enabled extension).</li>
+</ul></li>
+<li>Apache2:
+<ul>
+  <li><?php bugfix(76582); ?> (Apache bucket brigade sometimes becomes invalid).</li>
+</ul></li>
+<li>Bz2:
+<ul>
+  <li>Fixed arginfo for bzcompress.</li>
+</ul></li>
+<li>gettext:
+<ul>
+  <li><?php bugfix(76517); ?> (incorrect restoring of LDFLAGS).</li>
+</ul></li>
+<li>iconv:
+<ul>
+  <li><?php bugfix(68180); ?> (iconv_mime_decode can return extra characters in a header).</li>
+  <li><?php bugfix(63839); ?> (iconv_mime_decode_headers function is skipping headers).</li>
+  <li><?php bugfix(60494); ?> (iconv_mime_decode does ignore special characters).</li>
+  <li><?php bugfix(55146); ?> (iconv_mime_decode_headers() skips some headers).</li>
+</ul></li>
+<li>intl:
+<ul>
+  <li><?php bugfix(74484); ?> (MessageFormatter::formatMessage memory corruption with 11+ named placeholders).</li>
+</ul></li>
+<li>libxml:
+<ul>
+  <li><?php bugfix(76777); ?> ("public id" parameter of libxml_set_external_entity_loader callback undefined).</li>
+</ul></li>
+<li>mbstring:
+<ul>
+  <li><?php bugfix(76704); ?> (mb_detect_order return value varies based on argument type).</li>
+</ul></li>
+<li>Opcache:
+<ul>
+  <li><?php bugfix(76747); ?> (Opcache treats path containing "test.pharma.tld" as a phar file).</li>
+</ul></li>
+<li>OpenSSL:
+<ul>
+  <li><?php bugfix(76705); ?> (unusable ssl =&gt; peer_fingerprint in stream_context_create()).</li>
+</ul></li>
+<li>phpdbg:
+<ul>
+  <li><?php bugfix(76595); ?> (phpdbg man page contains outdated information).</li>
+</ul></li>
+<li>SPL:
+<ul>
+  <li><?php bugfix(68825); ?> (Exception in DirectoryIterator::getLinkTarget()).</li>
+  <li><?php bugfix(68175); ?> (RegexIterator pregFlags are NULL instead of 0).</li>
+</ul></li>
+<li>Standard:
+<ul>
+  <li><?php bugfix(76778); ?> (array_reduce leaks memory if callback throws exception).</li>
+</ul></li>
+<li>zlib:
+<ul>
+  <li><?php bugfix(65988); ?> (Zlib version check fails when an include/zlib/ style dir is passed to the --with-zlib configure option).</li>
+  <li><?php bugfix(76709); ?> (Minimal required zlib library is 1.2.0.4).</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
+<section class="version" id="7.2.10"><!-- {{{ 7.2.10 -->
+<h3>Version 7.2.10</h3>
+<b><?php release_date('13-Sep-2018'); ?></b>
+<ul><li>Core:
+<ul>
+  <li><?php bugfix(76754); ?> (parent private constant in extends class memory leak).</li>
+  <li><?php bugfix(72443); ?> (Generate enabled extension).</li>
+  <li><?php bugfix(75797); ?> (Memory leak when using class_alias() in non-debug mode).</li>
+</ul></li>
+<li>Apache2:
+<ul>
+  <li><?php bugfix(76582); ?> (Apache bucket brigade sometimes becomes invalid).</li>
+</ul></li>
+<li>Bz2:
+<ul>
+  <li>Fixed arginfo for bzcompress.</li>
+</ul></li>
+<li>gettext:
+<ul>
+  <li><?php bugfix(76517); ?> (incorrect restoring of LDFLAGS).</li>
+</ul></li>
+<li>iconv:
+<ul>
+  <li><?php bugfix(68180); ?> (iconv_mime_decode can return extra characters in a header).</li>
+  <li><?php bugfix(63839); ?> (iconv_mime_decode_headers function is skipping headers).</li>
+  <li><?php bugfix(60494); ?> (iconv_mime_decode does ignore special characters).</li>
+  <li><?php bugfix(55146); ?> (iconv_mime_decode_headers() skips some headers).</li>
+</ul></li>
+<li>intl:
+<ul>
+  <li><?php bugfix(74484); ?> (MessageFormatter::formatMessage memory corruption with 11+ named placeholders).</li>
+</ul></li>
+<li>libxml:
+<ul>
+  <li><?php bugfix(76777); ?> ("public id" parameter of libxml_set_external_entity_loader callback undefined).</li>
+</ul></li>
+<li>mbstring:
+<ul>
+  <li><?php bugfix(76704); ?> (mb_detect_order return value varies based on argument type).</li>
+</ul></li>
+<li>Opcache:
+<ul>
+  <li><?php bugfix(76747); ?> (Opcache treats path containing "test.pharma.tld" as a phar file).</li>
+</ul></li>
+<li>OpenSSL:
+<ul>
+  <li><?php bugfix(76705); ?> (unusable ssl =&gt; peer_fingerprint in stream_context_create()).</li>
+</ul></li>
+<li>phpdbg:
+<ul>
+  <li><?php bugfix(76595); ?> (phpdbg man page contains outdated information).</li>
+</ul></li>
+<li>SPL:
+<ul>
+  <li><?php bugfix(68825); ?> (Exception in DirectoryIterator::getLinkTarget()).</li>
+  <li><?php bugfix(68175); ?> (RegexIterator pregFlags are NULL instead of 0).</li>
+</ul></li>
+<li>Standard:
+<ul>
+  <li><?php bugfix(76778); ?> (array_reduce leaks memory if callback throws exception).</li>
+</ul></li>
+<li>zlib:
+<ul>
+  <li><?php bugfix(65988); ?> (Zlib version check fails when an include/zlib/ style dir is passed to the --with-zlib configure option).</li>
+  <li><?php bugfix(76709); ?> (Minimal required zlib library is 1.2.0.4).</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
+<section class="version" id="7.2.9"><!-- {{{ 7.2.9 -->
+<h3>Version 7.2.9</h3>
+<b><?php release_date('16-Aug-2018'); ?></b>
+<ul><li>Calendar:
+<ul>
+  <li><?php bugfix(52974); ?> (jewish.c: compile error under Windows with GBK charset).</li>
+</ul></li>
+<li>Filter:
+<ul>
+  <li><?php bugfix(76366); ?> (References in sub-array for filtering breaks the filter).</li>
+</ul></li>
+<li>PDO_Firebird:
+<ul>
+  <li><?php bugfix(76488); ?> (Memory leak when fetching a BLOB field).</li>
+</ul></li>
+<li>PDO_PgSQL:
+<ul>
+  <li><?php bugfix(75402); ?> (Possible Memory Leak using PDO::CURSOR_SCROLL option).</li>
+</ul></li>
+<li>SQLite3:
+<ul>
+  <li><?php bugfix(76665); ?> (SQLite3Stmt::bindValue() with SQLITE3_FLOAT doesn't juggle).</li>
+</ul></li>
+<li>Standard:
+<ul>
+  <li><?php bugfix(73817); ?> (Incorrect entries in get_html_translation_table).</li>
+  <li><?php bugfix(68553); ?> (array_column: null values in $index_key become incrementing keys in result).</li>
+  <li><?php bugfix(76643); ?> (Segmentation fault when using `output_add_rewrite_var`).</li>
+</ul></li>
+<li>Zip:
+<ul>
+  <li><?php bugfix(76524); ?> (ZipArchive memory leak (OVERWRITE flag and empty archive)).</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
+<section class="version" id="7.1.21"><!-- {{{ 7.1.21 -->
+<h3>Version 7.1.21</h3>
+<b><?php release_date('16-Aug-2018'); ?></b>
+<ul><li>Calendar:
+<ul>
+  <li><?php bugfix(52974); ?> (jewish.c: compile error under Windows with GBK charset).</li>
+</ul></li>
+<li>Filter:
+<ul>
+  <li><?php bugfix(76366); ?> (References in sub-array for filtering breaks the filter).</li>
+</ul></li>
+<li>PDO_Firebird:
+<ul>
+  <li><?php bugfix(76488); ?> (Memory leak when fetching a BLOB field).</li>
+</ul></li>
+<li>PDO_PgSQL:
+<ul>
+  <li><?php bugfix(75402); ?> (Possible Memory Leak using PDO::CURSOR_SCROLL option).</li>
+</ul></li>
+<li>SQLite3:
+<ul>
+  <li><?php bugfix(76665); ?> (SQLite3Stmt::bindValue() with SQLITE3_FLOAT doesn't juggle).</li>
+</ul></li>
+<li>Standard:
+<ul>
+  <li><?php bugfix(68553); ?> (array_column: null values in $index_key become incrementing keys in result).</li>
+  <li><?php bugfix(73817); ?> (Incorrect entries in get_html_translation_table).</li>
+  <li><?php bugfix(76643); ?> (Segmentation fault when using `output_add_rewrite_var`).</li>
+</ul></li>
+<li>Zip:
+<ul>
+  <li><?php bugfix(76524); ?> (ZipArchive memory leak (OVERWRITE flag and empty archive)).</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
+<section class="version" id="7.2.8"><!-- {{{ 7.2.8 -->
+<h3>Version 7.2.8</h3>
+<b><?php release_date('19-Jul-2018'); ?></b>
+<ul><li>Core:
+<ul>
+  <li><?php bugfix(76534); ?> (PHP hangs on 'illegal string offset on string references with an error handler).</li>
+  <li><?php bugfix(76520); ?> (Object creation leaks memory when executed over HTTP).</li>
+  <li><?php bugfix(76502); ?> (Chain of mixed exceptions and errors does not serialize properly).</li>
+</ul></li>
+<li>Date:
+<ul>
+  <li><?php bugfix(76462); ?> (Undefined property: DateInterval::$f).</li>
+</ul></li>
+<li>EXIF:
+<ul>
+  <li><?php bugfix(76409); ?> (heap use after free in _php_stream_free). (CVE-2018-12882)</li>
+  <li><?php bugfix(76423); ?> (Int Overflow lead to Heap OverFlow in exif_thumbnail_extract of exif.c). (CVE-2018-14883)</li>
+  <li><?php bugfix(76557); ?> (heap-buffer-overflow (READ of size 48) while reading exif data). (CVE-2018-14851)</li>
+</ul></li>
+<li>FPM:
+<ul>
+  <li><?php bugfix(73342); ?> (Vulnerability in php-fpm by changing stdin to non-blocking).</li>
+</ul></li>
+<li>GMP:
+<ul>
+  <li><?php bugfix(74670); ?> (Integer Underflow when unserializing GMP and possible other classes).</li>
+</ul></li>
+<li>intl:
+<ul>
+  <li><?php bugfix(76556); ?> (get_debug_info handler for BreakIterator shows wrong type).</li>
+</ul></li>
+<li>mbstring:
+<ul>
+  <li><?php bugfix(76532); ?> (Integer overflow and excessive memory usage in mb_strimwidth).</li>
+</ul></li>
+<li>Opcache:
+<ul>
+  <li><?php bugfix(76477); ?> (Opcache causes empty return value).</li>
+</ul></li>
+<li>PGSQL:
+<ul>
+  <li><?php bugfix(76548); ?> (pg_fetch_result did not fetch the next row).</li>
+</ul></li>
+<li>phpdbg:
+<ul>
+  <li>Fix arginfo wrt. optional/required parameters.</li>
+</ul></li>
+<li>Reflection:
+<ul>
+  <li><?php bugfix(76536); ?> (PHP crashes with core dump when throwing exception in error handler).</li>
+  <li><?php bugfix(75231); ?> (ReflectionProperty#getValue() incorrectly works with inherited classes).</li>
+</ul></li>
+<li>Standard:
+<ul>
+  <li><?php bugfix(76505); ?> (array_merge_recursive() is duplicating sub-array keys).</li>
+  <li><?php bugfix(71848); ?> (getimagesize with $imageinfo returns false).</li>
+</ul></li>
+<li>Win32:
+<ul>
+  <li><?php bugfix(76459); ?> (windows linkinfo lacks openbasedir check). (CVE-2018-15132)</li>
+</ul></li>
+<li>ZIP:
+<ul>
+  <li><?php bugfix(76461); ?> (OPSYS_Z_CPM defined instead of OPSYS_CPM).</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
+<section class="version" id="7.1.20"><!-- {{{ 7.1.20 -->
+<h3>Version 7.1.20</h3>
+<b><?php release_date('19-Jul-2018'); ?></b>
+<ul><li>Core:
+<ul>
+  <li><?php bugfix(76534); ?> (PHP hangs on 'illegal string offset on string references with an error handler).</li>
+  <li><?php bugfix(76502); ?> (Chain of mixed exceptions and errors does not serialize properly).</li>
+</ul></li>
+<li>Date:
+<ul>
+  <li><?php bugfix(76462); ?> (Undefined property: DateInterval::$f).</li>
+</ul></li>
+<li>exif:
+<ul>
+  <li><?php bugfix(76423); ?> (Int Overflow lead to Heap OverFlow in exif_thumbnail_extract of exif.c). (CVE-2018-14883)</li>
+  <li><?php bugfix(76557); ?> (heap-buffer-overflow (READ of size 48) while reading exif data). (CVE-2018-14851)</li>
+</ul></li>
+<li>FPM:
+<ul>
+  <li><?php bugfix(73342); ?> (Vulnerability in php-fpm by changing stdin to non-blocking).</li>
+</ul></li>
+<li>GMP:
+<ul>
+  <li><?php bugfix(74670); ?> (Integer Underflow when unserializing GMP and possible other classes).</li>
+</ul></li>
+<li>intl:
+<ul>
+  <li><?php bugfix(76556); ?> (get_debug_info handler for BreakIterator shows wrong type).</li>
+</ul></li>
+<li>mbstring:
+<ul>
+  <li><?php bugfix(76532); ?> (Integer overflow and excessive memory usage in mb_strimwidth).</li>
+</ul></li>
+<li>PGSQL:
+<ul>
+  <li><?php bugfix(76548); ?> (pg_fetch_result did not fetch the next row).</li>
+</ul></li>
+<li>phpdbg:
+<ul>
+  <li>Fix arginfo wrt. optional/required parameters.</li>
+</ul></li>
+<li>Reflection:
+<ul>
+  <li><?php bugfix(76536); ?> (PHP crashes with core dump when throwing exception in error handler).</li>
+  <li><?php bugfix(75231); ?> (ReflectionProperty#getValue() incorrectly works with inherited classes).</li>
+</ul></li>
+<li>Standard:
+<ul>
+  <li><?php bugfix(76505); ?> (array_merge_recursive() is duplicating sub-array keys).</li>
+  <li><?php bugfix(71848); ?> (getimagesize with $imageinfo returns false).</li>
+</ul></li>
+<li>Win32:
+<ul>
+  <li><?php bugfix(76459); ?> (windows linkinfo lacks openbasedir check). (CVE-2018-15132)</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
+
+<section class="version" id="7.0.31"><!-- {{{ 7.0.31 -->
+<h3>Version 7.0.31</h3>
+<b><?php release_date('19-Jul-2018'); ?></b>
+<ul><li>Exif:
+<ul>
+  <li><?php bugfix(76423); ?> (Int Overflow lead to Heap OverFlow in exif_thumbnail_extract of exif.c). (CVE-2018-14883)</li>
+  <li><?php bugfix(76557); ?> (heap-buffer-overflow (READ of size 48) while reading exif data). (CVE-2018-14851)</li>
+</ul></li>
+<li>Win32:
+<ul>
+  <li><?php bugfix(76459); ?> (windows linkinfo lacks openbasedir check). (CVE-2018-15132)</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
+<section class="version" id="7.2.7"><!-- {{{ 7.2.7 -->
+<h3>Version 7.2.7</h3>
+<b><?php release_date('21-Jun-2018'); ?></b>
+<ul><li>Core:
+<ul>
+  <li><?php bugfix(76337); ?> (segfault when opcache enabled + extension use zend_register_class_alias).</li>
+</ul></li>
+<li>CLI Server:
+<ul>
+  <li><?php bugfix(76333); ?> (PHP built-in server does not find files if root path contains special characters).</li>
+</ul></li>
+<li>OpenSSL:
+<ul>
+  <li><?php bugfix(76296); ?> (openssl_pkey_get_public does not respect open_basedir).</li>
+  <li><?php bugfix(76174); ?> (openssl extension fails to build with LibreSSL 2.7).</li>
+</ul></li>
+<li>SPL:
+<ul>
+  <li><?php bugfix(76367); ?> (NoRewindIterator segfault 11).</li>
+</ul></li>
+<li>Standard:
+<ul>
+  <li><?php bugfix(76410); ?> (SIGV in zend_mm_alloc_small).</li>
+  <li><?php bugfix(76335); ?> ("link(): Bad file descriptor" with non-ASCII path).</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
+<section class="version" id="7.1.19"><!-- {{{ 7.1.19 -->
+<h3>Version 7.1.19</h3>
+<b><?php release_date('22-Jun-2018'); ?></b>
+<ul><li>CLI Server:
+<ul>
+  <li><?php bugfix(76333); ?> (PHP built-in server does not find files if root path contains special characters).</li>
+</ul></li>
+<li>OpenSSL:
+<ul>
+  <li><?php bugfix(76296); ?> (openssl_pkey_get_public does not respect open_basedir).</li>
+  <li><?php bugfix(76174); ?> (openssl extension fails to build with LibreSSL 2.7).</li>
+</ul></li>
+<li>SPL:
+<ul>
+  <li><?php bugfix(76367); ?> (NoRewindIterator segfault 11).</li>
+</ul></li>
+<li>Standard:
+<ul>
+  <li><?php bugfix(76335); ?> ("link(): Bad file descriptor" with non-ASCII path).</li>
+  <li><?php bugfix(76383); ?> (array_map on $GLOBALS returns IS_INDIRECT).</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
+<section class="version" id="7.2.6"><!-- {{{ 7.2.6 -->
+<h3>Version 7.2.6</h3>
+<b><?php release_date('24-May-2018'); ?></b>
+<ul><li>EXIF:
+<ul>
+  <li><?php bugfix(76164); ?> (exif_read_data zend_mm_heap corrupted).</li>
+</ul></li>
+<li>FPM:
+<ul>
+  <li><?php bugfix(76075); ?> --with-fpm-acl wrongly tries to find libacl on FreeBSD.</li>
+</ul></li>
+<li>intl:
+<ul>
+  <li><?php bugfix(74385); ?> (Locale::parseLocale() broken with some arguments).</li>
+</ul></li>
+<li>Opcache:
+<ul>
+  <li><?php bugfix(76205); ?> (PHP-FPM sporadic crash when running Infinitewp).</li>
+  <li><?php bugfix(76275); ?> (Assertion failure in file cache when unserializing empty try_catch_array).</li>
+  <li><?php bugfix(76281); ?> (Opcache causes incorrect "undefined variable" errors).</li>
+</ul></li>
+<li>Reflection:
+<ul>
+  <li>Fixed arginfo of array_replace(_recursive) and array_merge(_recursive).</li>
+</ul></li>
+<li>Session:
+<ul>
+  <li><?php bugfix(74892); ?> (Url Rewriting (trans_sid) not working on urls that start with "#").</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
+<section class="version" id="7.1.18"><!-- {{{ 7.1.18 -->
+<h3>Version 7.1.18</h3>
+<b><?php release_date('24-May-2018'); ?></b>
+<ul><li>FPM:
+<ul>
+  <li><?php bugfix(76075); ?> --with-fpm-acl wrongly tries to find libacl on FreeBSD.</li>
+</ul></li>
+<li>intl:
+<ul>
+  <li><?php bugfix(74385); ?> (Locale::parseLocale() broken with some arguments).</li>
+</ul></li>
+<li>Opcache:
+<ul>
+  <li><?php bugfix(76205); ?> (PHP-FPM sporadic crash when running Infinitewp).</li>
+  <li><?php bugfix(76275); ?> (Assertion failure in file cache when unserializing empty try_catch_array).</li>
+  <li><?php bugfix(76281); ?> (Opcache causes incorrect "undefined variable" errors).</li>
+</ul></li>
+<li>Reflection:
+<ul>
+  <li>Fixed arginfo for array_replace(_recursive) and array_merge(_recursive).</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
+<section class="version" id="7.2.5"><!-- {{{ 7.2.5 -->
+<h3>Version 7.2.5</h3>
+<b><?php release_date('26-Apr-2018'); ?></b>
+<ul><li>Core:
+<ul>
+  <li><?php bugfix(75722); ?> (Convert valgrind detection to configure option).</li>
+</ul></li>
+<li>Date:
+<ul>
+  <li><?php bugfix(76131); ?> (mismatch arginfo for date_create).</li>
+</ul></li>
+<li>Exif:
+<ul>
+  <li><?php bugfix(76130); ?> (Heap Buffer Overflow (READ: 1786) in exif_iif_add_value). (CVE-2018-10549)</li>
+</ul></li>
+<li>FPM:
+<ul>
+  <li><?php bugfix(68440); ?> (ERROR: failed to reload: execvp() failed: Argument list too long).</li>
+  <li>Fixed incorrect write to getenv result in FPM reload.</li>
+</ul></li>
+<li>GD:
+<ul>
+  <li><?php bugfix(52070); ?> (imagedashedline() - dashed line sometimes is not visible).</li>
+</ul></li>
+<li>iconv:
+<ul>
+  <li><?php bugfix(76249); ?> (stream filter convert.iconv leads to infinite loop on invalid sequence). (CVE-2018-10546)</li>
+</ul></li>
+<li>intl:
+<ul>
+  <li><?php bugfix(76153); ?> (Intl compilation fails with icu4c 61.1).</li>
+</ul></li>
+<li>ldap:
+<ul>
+  <li><?php bugfix(76248); ?> (Malicious LDAP-Server Response causes Crash). (CVE-2018-10548)</li>
+</ul></li>
+<li>mbstring:
+<ul>
+  <li><?php bugfix(75944); ?> (Wrong cp1251 detection).</li>
+  <li><?php bugfix(76113); ?> (mbstring does not build with Oniguruma 6.8.1).</li>
+</ul></li>
+<li>ODBC:
+<ul>
+  <li><?php bugfix(76088); ?> (ODBC functions are not available by default on Windows).</li>
+</ul></li>
+<li>Opcache:
+<ul>
+  <li><?php bugfix(76094); ?> (Access violation when using opcache).</li>
+</ul></li>
+<li>Phar:
+<ul>
+  <li><?php bugfix(76129); ?> (fix for CVE-2018-5712 may not be complete). (CVE-2018-10547)</li>
+</ul></li>
+<li>phpdbg:
+<ul>
+  <li><?php bugfix(76143); ?> (Memory corruption: arbitrary NUL overwrite).</li>
+</ul></li>
+<li>SPL:
+<ul>
+  <li><?php bugfix(76131); ?> (mismatch arginfo for splarray constructor).</li>
+</ul></li>
+<li>standard:
+<ul>
+  <li><?php bugfix(74139); ?> (mail.add_x_header default inconsistent with docs).</li>
+  <li><?php bugfix(75996); ?> (incorrect url in header for mt_rand).</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
+<section class="version" id="7.1.17"><!-- {{{ 7.1.17 -->
+<h3>Version 7.1.17</h3>
+<b><?php release_date('26-Apr-2018'); ?></b>
+<ul><li>Date:
+<ul>
+  <li><?php bugfix(76131); ?> (mismatch arginfo for date_create).</li>
+</ul></li>
+<li>Exif:
+<ul>
+  <li><?php bugfix(76130); ?> (Heap Buffer Overflow (READ: 1786) in exif_iif_add_value). (CVE-2018-10549)</li>
+</ul></li>
+<li>FPM:
+<ul>
+  <li><?php bugfix(68440); ?> (ERROR: failed to reload: execvp() failed: Argument list too long).</li>
+  <li>Fixed incorrect write to getenv result in FPM reload.</li>
+</ul></li>
+<li>GD:
+<ul>
+  <li><?php bugfix(52070); ?> (imagedashedline() - dashed line sometimes is not visible).</li>
+</ul></li>
+<li>iconv:
+<ul>
+  <li><?php bugfix(76249); ?> (stream filter convert.iconv leads to infinite loop on invalid sequence). (CVE-2018-10546)</li>
+</ul></li>
+<li>intl:
+<ul>
+  <li><?php bugfix(76153); ?> (Intl compilation fails with icu4c 61.1).</li>
+</ul></li>
+<li>ldap:
+<ul>
+  <li><?php bugfix(76248); ?> (Malicious LDAP-Server Response causes Crash). (CVE-2018-10548)</li>
+</ul></li>
+<li>mbstring:
+<ul>
+  <li><?php bugfix(75944); ?> (Wrong cp1251 detection).</li>
+  <li><?php bugfix(76113); ?> (mbstring does not build with Oniguruma 6.8.1).</li>
+</ul></li>
+<li>Phar:
+<ul>
+  <li><?php bugfix(76129); ?> (fix for CVE-2018-5712 may not be complete). (CVE-2018-10547)</li>
+</ul></li>
+<li>phpdbg:
+<ul>
+  <li><?php bugfix(76143); ?> (Memory corruption: arbitrary NUL overwrite).</li>
+</ul></li>
+<li>SPL:
+<ul>
+  <li><?php bugfix(76131); ?> (mismatch arginfo for splarray constructor).</li>
+</ul></li>
+<li>standard:
+<ul>
+  <li><?php bugfix(75996); ?> (incorrect url in header for mt_rand).</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
+<section class="version" id="7.0.30"><!-- {{{ 7.0.30 -->
+<h3>Version 7.0.30</h3>
+<b><?php release_date('26-Apr-2018'); ?></b>
+<ul><li>Exif:
+<ul>
+  <li><?php bugfix(76130); ?> (Heap Buffer Overflow (READ: 1786) in exif_iif_add_value). (CVE-2018-10549)</li>
+</ul></li>
+<li>iconv:
+<ul>
+  <li><?php bugfix(76249); ?> (stream filter convert.iconv leads to infinite loop on invalid sequence). (CVE-2018-10546)</li>
+</ul></li>
+<li>LDAP:
+<ul>
+  <li><?php bugfix(76248); ?> (Malicious LDAP-Server Response causes Crash). (CVE-2018-10548)</li>
+</ul></li>
+<li>Phar:
+<ul>
+  <li><?php bugfix(76129); ?> (fix for CVE-2018-5712 may not be complete). (CVE-2018-10547)</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
+<section class="version" id="7.2.4"><!-- {{{ 7.2.4 -->
+<h3>Version 7.2.4</h3>
+<b><?php release_date('29-Mar-2018'); ?></b>
+<ul><li>Core:
+<ul>
+  <li><?php bugfix(76025); ?> (Segfault while throwing exception in error_handler).</li>
+  <li><?php bugfix(76044); ?> ('date: illegal option -- -' in ./configure on FreeBSD).</li>
+</ul></li>
+<li>FPM:
+<ul>
+  <li><?php bugfix(75605); ?> (Dumpable FPM child processes allow bypassing opcache access controls). (CVE-2018-10545)</li>
+</ul></li>
+<li>FTP:
+<ul>
+  <li>Fixed ftp_pasv arginfo.</li>
+</ul></li>
+<li>GD:
+<ul>
+  <li><?php bugfix(73957); ?> (signed integer conversion in imagescale()).</li>
+  <li><?php bugfix(76041); ?> (null pointer access crashed php).</li>
+  <li>Fixed imagesetinterpolation arginfo.</li>
+</ul></li>
+<li>iconv:
+<ul>
+  <li><?php bugfix(75867); ?> (Freeing uninitialized pointer).</li>
+</ul></li>
+<li>Mbstring:
+<ul>
+  <li><?php bugfix(62545); ?> (wrong unicode mapping in some charsets).</li>
+</ul></li>
+<li>Opcache:
+<ul>
+  <li><?php bugfix(75969); ?> (Assertion failure in live range DCE due to block pass misoptimization).</li>
+</ul></li>
+<li>OpenSSL:
+<ul>
+  <li>Fixed openssl_* arginfos.</li>
+</ul></li>
+<li>PCNTL:
+<ul>
+  <li><?php bugfix(75873); ?> (pcntl_wexitstatus returns incorrect on Big_Endian platform (s390x)).</li>
+</ul></li>
+<li>Phar:
+<ul>
+  <li><?php bugfix(76085); ?> (Segmentation fault in buildFromIterator when directory name contains a \n).</li>
+</ul></li>
+<li>Standard:
+<ul>
+  <li><?php bugfix(75961); ?> (Strange references behavior).</li>
+  <li>Fixed some arginfos.</li>
+  <li><?php bugfix(76068); ?> (parse_ini_string fails to parse "[foo]\nbar=1|&gt;baz" with segfault).</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
+<section class="version" id="7.1.16"><!-- {{{ 7.1.16 -->
+<h3>Version 7.1.16</h3>
+<b><?php release_date('29-Mar-2018'); ?></b>
+<ul><li>Core:
+<ul>
+  <li><?php bugfix(76025); ?> (Segfault while throwing exception in error_handler).</li>
+  <li><?php bugfix(76044); ?> ('date: illegal option -- -' in ./configure on FreeBSD).</li>
+</ul></li>
+<li>FPM:
+<ul>
+  <li><?php bugfix(75605); ?> (Dumpable FPM child processes allow bypassing opcache access controls). (CVE-2018-10545)</li>
+</ul></li>
+<li>GD:
+<ul>
+  <li><?php bugfix(73957); ?> (signed integer conversion in imagescale()).</li>
+</ul></li>
+<li>ODBC:
+<ul>
+  <li><?php bugfix(76088); ?> (ODBC functions are not available by default on Windows).</li>
+</ul></li>
+<li>Opcache:
+<ul>
+  <li><?php bugfix(76074); ?> (opcache corrupts variable in for-loop).</li>
+</ul></li>
+<li>Phar:
+<ul>
+  <li><?php bugfix(76085); ?> (Segmentation fault in buildFromIterator when directory name contains a \n).</li>
+</ul></li>
+<li>Standard:
+<ul>
+  <li><?php bugfix(74139); ?> (mail.add_x_header default inconsistent with docs).</li>
+  <li><?php bugfix(76068); ?> (parse_ini_string fails to parse "[foo]\nbar=1|&gt;baz" with segfault).</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
+<section class="version" id="7.0.29"><!-- {{{ 7.0.29 -->
+<h3>Version 7.0.29</h3>
+<b><?php release_date('29-Mar-2018'); ?></b>
+<ul><li>FPM:
+<ul>
+  <li><?php bugfix(75605); ?> (Dumpable FPM child processes allow bypassing opcache access controls). (CVE-2018-10545)</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
 
 <section class="version" id="7.2.3"><!-- {{{ 7.2.3 -->
 <h3>Version 7.2.3</h3>
@@ -286,7 +1002,7 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
 <ul>
   <li><?php bugfix(75511); ?> (fread not free unused buffer).</li>
   <li><?php bugfix(75514); ?> (mt_rand returns value outside [$min,$max]+ on 32-bit) (Remi)</li>
-  <li><?php bugfix(75535); ?> (Inappropriately parsing HTTP response leads to PHP segment fault).</li>
+  <li><?php bugfix(75535); ?> (Inappropriately parsing HTTP response leads to PHP segment fault). (CVE-2018-14884)</li>
   <li><?php bugfix(75409); ?> (accept EFAULT in addition to ENOSYS as indicator that getrandom() is missing).</li>
   <li><?php bugfix(73124); ?> (php_ini_scanned_files() not reporting correctly).</li>
   <li><?php bugfix(75574); ?> (putenv does not work properly if parameter contains non-ASCII unicode character).</li>
@@ -340,7 +1056,7 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
 <ul>
   <li><?php bugfix(75511); ?> (fread not free unused buffer).</li>
   <li><?php bugfix(75514); ?> (mt_rand returns value outside [$min,$max]+ on 32-bit) (Remi)</li>
-  <li><?php bugfix(75535); ?> (Inappropriately parsing HTTP response leads to PHP segment fault).</li>
+  <li><?php bugfix(75535); ?> (Inappropriately parsing HTTP response leads to PHP segment fault). (CVE-2018-14884)</li>
   <li><?php bugfix(75409); ?> (accept EFAULT in addition to ENOSYS as indicator that getrandom() is missing).</li>
   <li><?php bugfix(73124); ?> (php_ini_scanned_files() not reporting correctly).</li>
   <li><?php bugfix(75574); ?> (putenv does not work properly if parameter contains non-ASCII unicode character).</li>
@@ -386,7 +1102,7 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
 </ul></li>
 <li>Standard:
 <ul>
-  <li><?php bugfix(75535); ?> (Inappropriately parsing HTTP response leads to PHP segment fault).</li>
+  <li><?php bugfix(75535); ?> (Inappropriately parsing HTTP response leads to PHP segment fault). (CVE-2018-14884)</li>
   <li><?php bugfix(75409); ?> (accept EFAULT in addition to ENOSYS as indicator that getrandom() is missing).</li>
 </ul></li>
 <li>Zip:

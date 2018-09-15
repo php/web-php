@@ -48,7 +48,7 @@ if (!isset($_SERVER["SERVER_ADDR"])) {
     $_SERVER["SERVER_ADDR"] = "127.0.0.1";
 }
 
-// As of PHP 5.3.0 multibyte sequence errors are no longer 
+// As of PHP 5.3.0 multibyte sequence errors are no longer
 // silent. Prior to that version this bitfield does not exist
 // so define it to prevent notices on older versions
 if (!defined("ENT_IGNORE")) {
@@ -220,7 +220,6 @@ function google_cse($default = '', $lang = 'en') {
         s.parentNode.insertBefore(gcse, s);
     })();
 </script>
-<gcse:search></gcse:search>
+<div class="gcse-search" data-linktarget></div>
 <?php
 }
-

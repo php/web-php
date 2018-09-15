@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom" xmlns:default="http://php.net/ns/news">
+  <title>PHPConf.Asia 2018 - Call for Speakers</title>
+  <id>http://php.net/archive/2018.php#id2018-04-08-1</id>
+  <published>2018-04-08T19:09:50+00:00</published>
+  <updated>2018-04-08T19:09:50+00:00</updated>
+  <default:finalTeaserDate xmlns="http://php.net/ns/news">2018-06-02</default:finalTeaserDate>
+  <category term="cfp" label="Call for Papers"/>
+  <link href="http://php.net/conferences/index.php#id2018-04-08-1" rel="alternate" type="text/html"/>
+  <default:newsImage xmlns="http://php.net/ns/news" link="https://2018.phpconf.asia" title="PHPConf.Asia 2018">phpconfasia2018-logo.png</default:newsImage>
+  <link href="https://2018.phpconf.asia" rel="via" type="text/html"/>
+  <content type="xhtml">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+     <p><strong>Announcing <a href="https://2018.phpconf.asia" target="_blank">PHPConf.Asia 2018</a> - The Pan-Asian PHP Conference - CFP Opens Now</strong></p>
+     <p>The third pan-Asian PHP conference will take place between 26<sup>th</sup> to 29<sup>th</sup> September 2018 in <a href="https://en.wikipedia.org/wiki/Singapore" target="_blank">Singapore</a> - the Garden City of the East! This is a single track, 2 days <strong>Conference</strong> (27<sup>th</sup> to 28<sup>th</sup> September 2018). Followed by 1 day of <strong>Tutorials</strong> on 29<sup>th</sup> September 2018.</p>
+     <p>Come and meet with the fastest growing PHP communities in Asia. More than 300 attendees are expected in this single track conference.</p>
+     <p><a href="https://cfp.phpconf.asia/" target="_blank">CFP Opens Now!</a>. Hop over to <a href="https://2018.phpconf.asia" target="_blank">https://2018.phpconf.asia</a> for more details.</p>
+    </div>
+  </content>
+</entry>

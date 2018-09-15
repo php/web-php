@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom" xmlns:default="http://php.net/ns/news">
+  <title>SymfonyCon Lisbon 2018</title>
+  <id>http://php.net/archive/2018.php#id2018-06-25-4</id>
+  <published>2018-06-25T14:46:40+02:00</published>
+  <updated>2018-06-25T14:46:40+02:00</updated>
+  <default:finalTeaserDate xmlns="http://php.net/ns/news">2018-12-06</default:finalTeaserDate>
+  <category term="conferences" label="Conference announcement"/>
+  <link href="http://php.net/conferences/index.php#id2018-06-25-4" rel="alternate" type="text/html"/>
+  <default:newsImage xmlns="http://php.net/ns/news" link="https://lisbon2018.symfony.com/" title="SymfonyCon Lisbon 2018 Conference">symfony-con-lisbon-2018.png</default:newsImage>
+  <link href="https://lisbon2018.symfony.com/" rel="via" type="text/html"/>
+  <content type="xhtml">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+     <p>Symfony is proud to organize the sixth edition of the SymfonyCon, the
+     international Symfony conference. This year, to celebrate Symfony, we decided to
+     bring the entire community to Portugal and discover the amazing city of Lisbon.
+     If you like Symfony and share fun with professionals, this is where you want to
+     be on December!</p>
+
+     <p>We look forward to welcoming you to Lisbon, capital of Portugal and bordered
+     by the Atlantic Ocean. Join us for talks, workshops, discussions and other
+     serious work around Symfony and its environment, then sharing this very special
+     Portuguese atmosphere... And of course, celebrate the community reunion!</p>
+    </div>
+  </content>
+</entry>

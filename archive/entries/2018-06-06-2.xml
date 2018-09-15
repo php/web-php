@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom" xmlns:default="http://php.net/ns/news">
+  <title>Madison PHP Conference 2018</title>
+  <id>http://php.net/archive/2018.php#id2018-06-06-2</id>
+  <published>2018-06-06T20:10:02+00:00</published>
+  <updated>2018-06-06T20:10:02+00:00</updated>
+  <default:finalTeaserDate xmlns="http://php.net/ns/news">2018-06-01</default:finalTeaserDate>
+  <category term="cfp" label="Call for Papers"/>
+  <link href="http://php.net/conferences/index.php#id2018-06-06-2" rel="alternate" type="text/html"/>
+  <default:newsImage xmlns="http://php.net/ns/news" link="https://www.MadisonPHPConference.com" title="Madison PHP Conference">madison-php-logo.jpg</default:newsImage>
+  <link href="https://www.MadisonPHPConference.com" rel="via" type="text/html"/>
+  <content type="xhtml">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+     <p>Join us on Friday, November 2nd, 2018 for a full day of tutorials followed by multiple tracks of amazing talks on Saturday, November 3rd, 2018. Now in its sixth year, <a href="https://www.madisonphpconference.com">Madison PHP Conference</a> in Madison, Wisconsin, USA focuses on PHP, related web technologies, and professional development - everything you need to energize your career. This event is organized by the locally-run <a href="http://www.madisonphp.com">Madison PHP user group</a> and is designed to offer something for attendees at all skill levels. <a href="https://www.madisonphpconference.com">Madison PHP Conference 2018</a> will be two days of networking, learning, sharing, and great fun! </p>
+
+     <p>The <a href="https://cfp.madisonphpconference.com">Call for Papers</a> will be open until May 31st, 2018. Madison PHP Conference offers reimbursement for travel and accommodations. To view the full speaker package and to submit a talk, please visit: <a href="https://cfp.madisonphpconference.com">https://cfp.MadisonPHPConference.com</a>.</p>
+    </div>
+  </content>
+</entry>
