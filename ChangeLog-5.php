@@ -8,6 +8,63 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 
 <h1>PHP 5 ChangeLog</h1>
 
+<section class="version" id="5.6.38"><!-- {{{ 5.6.38 -->
+<h3>Version 5.6.38</h3>
+<b><?php release_date('13-Sep-2018'); ?></b>
+<ul><li>Apache2:
+<ul>
+  <li><?php bugfix(76582); ?> (XSS due to the header Transfer-Encoding: chunked).</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
+<section class="version" id="5.6.37"><!-- {{{ 5.6.37 -->
+<h3>Version 5.6.37</h3>
+<b><?php release_date('19-Jul-2018'); ?></b>
+<ul><li>Exif:
+<ul>
+  <li><?php bugfix(76423); ?> (Int Overflow lead to Heap OverFlow in exif_thumbnail_extract of exif.c). (CVE-2018-14883)</li>
+  <li><?php bugfix(76557); ?> (heap-buffer-overflow (READ of size 48) while reading exif data). (CVE-2018-14851)</li>
+</ul></li>
+<li>Win32:
+<ul>
+  <li><?php bugfix(76459); ?> (windows linkinfo lacks openbasedir check). (CVE-2018-15132)</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
+<section class="version" id="5.6.36"><!-- {{{ 5.6.36 -->
+<h3>Version 5.6.36</h3>
+<b><?php release_date('26-Apr-2018'); ?></b>
+<ul><li>Exif:
+<ul>
+  <li><?php bugfix(76130); ?> (Heap Buffer Overflow (READ: 1786) in exif_iif_add_value). (CVE-2018-10549)</li>
+</ul></li>
+<li>iconv:
+<ul>
+  <li><?php bugfix(76249); ?> (stream filter convert.iconv leads to infinite loop on invalid sequence). (CVE-2018-10546)</li>
+</ul></li>
+<li>LDAP:
+<ul>
+  <li><?php bugfix(76248); ?> (Malicious LDAP-Server Response causes Crash). (CVE-2018-10548)</li>
+</ul></li>
+<li>Phar:
+<ul>
+  <li><?php bugfix(76129); ?> (fix for CVE-2018-5712 may not be complete). (CVE-2018-10547)</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
+<section class="version" id="5.6.35"><!-- {{{ 5.6.35 -->
+<h3>Version 5.6.35</h3>
+<b><?php release_date('29-Mar-2018'); ?></b>
+<ul><li>FPM:
+<ul>
+  <li><?php bugfix(75605); ?> (Dumpable FPM child processes allow bypassing opcache access controls). (CVE-2018-10545)</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
 <section class="version" id="5.6.34"><!-- {{{ 5.6.34 -->
 <h3>Version 5.6.34</h3>
 <b><?php release_date('01-Mar-2018'); ?></b>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom" xmlns:default="http://php.net/ns/news">
+	<title>SunshinePHP 2019 CFP Started</title>
+	<id>http://php.net/archive/2018.php#id2018-08-14-1</id>
+	<published>2018-08-14T00:00:01+00:00</published>
+	<updated>2018-08-14T12:23:00+00:00</updated>
+	<default:finalTeaserDate xmlns="http://php.net/ns/news">2018-09-15</default:finalTeaserDate>
+	<category term="cfp" label="Call for Papers"/>
+	<link href="http://php.net/conferences/index.php#id2018-08-14-1" rel="alternate" type="text/html"/>
+	<default:newsImage xmlns="http://php.net/ns/news" link="http://sunshinephp.com" title="SunshinePHP 2019">sunshinephp2019.png</default:newsImage>
+	<link href="http://sunshinephp.com" rel="via" type="text/html"/>
+	<content type="xhtml">
+		<div xmlns="http://www.w3.org/1999/xhtml">
+			<p>We are happy to announce the CFP for SunshinePHP 2019 has launched at <a href="https://cfp.sunshinephp.com" title="SunshinePHP CFP">https://cfp.sunshinephp.com</a> where we will accept talk submissions until September 15th, 2018.</p>
+
+			<p>SunshinePHP hit it's 7th year and will happen from February 7th to 9th, 2019 in sunny Miami, Florida. As one of the largest community conferences in the U.S. there is no doubt the schedule will be amazing this year. We will have a full tutorial day featuring 3-hour sessions followed by 2 days of 1-hour talks and inspirational keynotes.</p>
+
+			<p>Ticket sales will start soon at <a href="http://sunshinephp.com/register" title="SunshinePHP">SunshinePHP.com</a></p>
+		</div>
+	</content>
+</entry>

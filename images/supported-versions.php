@@ -91,7 +91,7 @@ $height = $header_height + $footer_height + (count($branches) * $branch_height);
 			}
 
 			.branch-labels text {
-				alignment-baseline: central;
+				dominant-baseline: central;
 				text-anchor: middle;
 			}
 

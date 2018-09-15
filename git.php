@@ -44,7 +44,12 @@ site_header("Git Access", array("current" => "community"));
 </p>
 
 <ul>
- <li><i>autoconf</i>: 2.59+</li>
+ <li><i>autoconf</i>:
+  <ul>
+   <li><i>PHP 5.4 - 7.1</i>: 2.59+</li>
+   <li><i>PHP 7.2</i>: 2.64+</li>
+  </ul>
+ </li>
  <li><i>automake</i>: 1.4+</li>
  <li><i>libtool</i>: 1.4.x+ (except 1.4.2)</li>
  <li><i>re2c</i>: 0.13.4+</li>
@@ -108,6 +113,9 @@ site_header("Git Access", array("current" => "community"));
   <br>
   <strong>PHP 7.2</strong>:
   <code>git checkout PHP-7.2</code>
+  <br>
+  <strong>PHP 7.3</strong>:
+  <code>git checkout PHP-7.3</code>
   <br>
   <strong>PHP HEAD</strong>:
   <code>git checkout master</code>

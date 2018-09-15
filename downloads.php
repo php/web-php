@@ -73,7 +73,7 @@ site_header("Downloads",
         </li>
       <?php endforeach; ?>
       <li>
-        <a href="http://windows.php.net/download#php-<?php echo urlencode($mver); ?>">
+        <a href="https://windows.php.net/download#php-<?php echo urlencode($mver); ?>">
           Windows downloads
         </a>
       </li>

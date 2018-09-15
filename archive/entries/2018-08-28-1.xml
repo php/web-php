@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom" xmlns:default="http://php.net/ns/news">
+  <title>PHP UK Conference 2019 CFP is Open</title>
+  <id>http://php.net/archive/2018.php#id2018-08-28-1</id>
+  <published>2018-08-28T19:02:06+00:00</published>
+  <updated>2018-08-28T19:02:06+00:00</updated>
+  <default:finalTeaserDate xmlns="http://php.net/ns/news">2018-08-22</default:finalTeaserDate>
+  <category term="cfp" label="Call for Papers"/>
+  <link href="http://php.net/conferences/index.php#id2018-08-28-1" rel="alternate" type="text/html"/>
+  <default:newsImage xmlns="http://php.net/ns/news" link="https://phpconference.co.uk" title="PHP UK Conference - London">phpuk.png</default:newsImage>
+  <link href="https://phpconference.co.uk" rel="via" type="text/html"/>
+  <content type="xhtml">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+         <p>Dates announced for PHP UK 2019</p>
+         <p>We are pleased to announce that PHP UK is back in 2019 for our 14th annual conference. As always PHP UK will feature an optional workshop day followed by two days of amazing talks, plentiful networking opportunities and great social events.</p>
+         <p>
+           20th*, 21st &amp; 22nd February 2019<br/>
+           The Brewery, London
+         </p>
+         <p>Our Call for Papers is now open! <a href="https://phpconference.co.uk/speakers">Submit your papers until September 18th 2018.</a></p>
+         <p>We are looking for speakers and instructors to give talks and hands-on classroom sessions. We are seeking talks covering mainstream, advanced, niche or non-technical topics aimed at a multitude of skill levels.</p>
+         <p><a href="https://phpconference.co.uk/tickets">Early bird tickets are on sale now as well!</a></p>
+    </div>
+  </content>
+</entry>

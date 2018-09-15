@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom" xmlns:default="http://php.net/ns/news">
+  <title>ZendCon &amp; OpenEnterprise 2018 - Call for Speakers</title>
+  <id>http://php.net/archive/2018.php#id2018-04-29-1</id>
+  <published>2018-04-29T08:41:29+00:00</published>
+  <updated>2018-04-29T08:41:29+00:00</updated>
+  <default:finalTeaserDate xmlns="http://php.net/ns/news">2018-05-25</default:finalTeaserDate>
+  <category term="cfp" label="Call for Papers"/>
+  <link href="http://php.net/conferences/index.php#id2018-04-29-1" rel="alternate" type="text/html"/>
+  <default:newsImage xmlns="http://php.net/ns/news" link="http://www.zendcon.com" title="ZendCon 2018 &amp; OpenEnterprise 2018">zcoe2018.png</default:newsImage>
+  <link href="http://www.zendcon.com" rel="via" type="text/html"/>
+  <content type="xhtml">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+     <p><a href="http://www.zendcon.com/cfp/">The Call For Papers</a> for <a href="http://www.zendcon.com">ZendCon &amp; OpenEnterprise 2018</a> is now open!</p>
+     <p>ZendCon &amp; OpenEnterprise is the premier open source conference designed to teach and share practical experiences from the front lines of business critical and enterprise environments, giving you the opportunity to speak in front of technical business leaders, strategists, and developers seeking the best knowledge around the operational advantages of open source. This is your chance to tell everyone what you’ve learned and enrich our community of enterprise technology practitioners.</p>
+     <p><a href="http://www.zendcon.com/cfp/">The CFP</a> is open until May 25, 2018.</p>
+    </div>
+  </content>
+</entry>
