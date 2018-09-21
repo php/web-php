@@ -92,7 +92,7 @@ $OLDRELEASES = array (
         ),
         2 => 
         array (
-          'filename' => 'php-7.2.89tar.xz',
+          'filename' => 'php-7.2.9.tar.xz',
           'name' => 'PHP 7.2.9 (tar.xz)',
           'sha256' => '3585c1222e00494efee4f5a65a8e03a1e6eca3dfb834814236ee7f02c5248ae0',
           'date' => '16 Aug 2018',
