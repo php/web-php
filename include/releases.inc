@@ -3587,7 +3587,7 @@ $OLDRELEASES = array (
         1 => 
         array (
           'filename' => 'php-5.5.24.tar.gz',
-          'name' => 'PHP 5.6.24 (tar.gz)',
+          'name' => 'PHP 5.5.24 (tar.gz)',
           'sha256' => '43e6b83fe8151f8d2062ca4da915312fc92e47789801049231c705a8b29b05bc',
           'date' => '16 Apr 2015',
         ),
