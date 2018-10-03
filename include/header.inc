@@ -80,7 +80,7 @@ if (!isset($config["languages"])) {
 <?php endforeach ?>
 
 <?php foreach($CSS as $filename => $modified): ?>
-<link rel="stylesheet" type="text/css" href="<?php echo $MYSITE ?>cached.php?t=<?php echo $modified?>&amp;f=<?php echo $filename?>" media="screen">
+<link rel="stylesheet" type="text/css" href="/cached.php?t=<?php echo $modified?>&amp;f=<?php echo $filename?>" media="screen">
 <?php endforeach ?>
 
  <!--[if lte IE 7]>
