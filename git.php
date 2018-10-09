@@ -48,6 +48,7 @@ site_header("Git Access", array("current" => "community"));
   <ul>
    <li><i>PHP 5.4 - 7.1</i>: 2.59+</li>
    <li><i>PHP 7.2</i>: 2.64+</li>
+   <li><i>PHP 7.3</i>: 2.68+</li>
   </ul>
  </li>
  <li><i>automake</i>: 1.4+</li>
