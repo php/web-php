@@ -16,31 +16,31 @@
  * );
  */
 /* PHP 7.3 Release */
-$PHP_7_3_RC  = '7.3.0RC2';
-$PHP_7_3_RC_DATE = "28 Sep 2018";
+$PHP_7_3_RC  = '7.3.0RC3';
+$PHP_7_3_RC_DATE = "11 Oct 2018";
 	
 /* PHP 7.2 Release */
-$PHP_7_2_RC = '7.2.11RC1'; // Current RC version (e.g., '7.2.1RC1') or false
+$PHP_7_2_RC = false; // Current RC version (e.g., '7.2.1RC1') or false
 $PHP_7_2_RC_DATE = "27 Sep 2018";
 
-$PHP_7_2_VERSION         = "7.2.10";
-$PHP_7_2_DATE            = "13 Sep 2018";
+$PHP_7_2_VERSION         = "7.2.11";
+$PHP_7_2_DATE            = "11 Oct 2018";
 $PHP_7_2_SHA256     = array(
-    "tar.bz2"       => "01b6129a0921a1636b07da9bc598a876669e45a462cef4b5844fc26862dbda9d",
-    "tar.gz"        => "d2d908b49b6005e65dcc46cdc986603a19b7ff103119fce8ddd4648586d430a4",
-    "tar.xz"        => "01c2154a3a8e3c0818acbdbc1a956832c828a0380ce6d1d14fea495ea21804f0",
+    "tar.bz2"       => "4a0d7f402d07966b37a600796283f4ca4079d955d96d5bec024dd02009d8b4c5",
+    "tar.gz"        => "180c63a9647c0a50d438b6bd5c7a8e7a11bceee8ad613a59d3ef15151fc158d4",
+    "tar.xz"        => "da1a705c0bc46410e330fc6baa967666c8cd2985378fb9707c01a8e33b01d985",
 );
 
 /* PHP 7.1 Release */
-$PHP_7_1_RC = '7.1.23RC1'; // Current RC version (e.g., '5.6.7RC1') or false
+$PHP_7_1_RC = false; // Current RC version (e.g., '5.6.7RC1') or false
 $PHP_7_1_RC_DATE = "27 Sep 2018";
 
-$PHP_7_1_VERSION         = "7.1.22";
-$PHP_7_1_DATE            = "13 Sep 2018";
+$PHP_7_1_VERSION         = "7.1.23";
+$PHP_7_1_DATE            = "11 Oct 2018";
 $PHP_7_1_SHA256     = array(
-    'tar.bz2'       => 'c8e91f19c8aa810ae95f228ff31cf0e4805cb89f4c10870ee12c85491b26e763',
-    'tar.gz'        => '1d275115593a33315647094a5a4ee9bd73c7960c08686cee35dc2e683a68b157',
-    'tar.xz'        => '9194c9b3a592d8376fde837dde711ec01ee26f8607fc2884047ef6f7c089b15d',
+    'tar.bz2'       => '2d79aa86d8f0faa760a712a1d7be50b57838a9770c1dff34020876630c2ecc4b',
+    'tar.gz'        => 'b839a4de32e6770d10b87c2495c070d09277fe61008804b2992466f0dcc5f0fa',
+    'tar.xz'        => '227a3c76133c3dc1cec937989456cbd89ed00e68e7260c651900dbe1f5b798bc',
 );
 
 /* PHP 7.0 Release */

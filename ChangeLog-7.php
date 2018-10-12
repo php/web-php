@@ -6,6 +6,93 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
 ?>
 <h1>PHP 7 ChangeLog</h1>
 
+<section class="version" id="7.2.11"><!-- {{{ 7.2.11 -->
+<h3>Version 7.2.11</h3>
+<b><?php release_date('11-Oct-2018'); ?></b>
+<ul><li>Core:
+<ul>
+  <li><?php bugfix(76800); ?> (foreach inconsistent if array modified during loop).</li>
+  <li><?php bugfix(76901); ?> (method_exists on SPL iterator passthrough method corrupts memory).</li>
+</ul></li>
+<li>CURL:
+<ul>
+  <li><?php bugfix(76480); ?> (Use curl_multi_wait() so that timeouts are respected).</li>
+</ul></li>
+<li>iconv:
+<ul>
+  <li><?php bugfix(66828); ?> (iconv_mime_encode Q-encoding longer than it should be).</li>
+</ul></li>
+<li>Opcache:
+<ul>
+  <li><?php bugfix(76832); ?> (ZendOPcache.MemoryBase periodically deleted by the OS).</li>
+  <li><?php bugfix(76796); ?> (Compile-time evaluation of disabled function in opcache causes segfault).</li>
+</ul></li>
+<li>POSIX:
+<ul>
+  <li><?php bugfix(75696); ?> (posix_getgrnam fails to print details of group).</li>
+</ul></li>
+<li>Reflection:
+<ul>
+  <li><?php bugfix(74454); ?> (Wrong exception being thrown when using ReflectionMethod).</li>
+</ul></li>
+<li>Standard:
+<ul>
+  <li><?php bugfix(73457); ?> (Wrong error message when fopen FTP wrapped fails to open data connection).</li>
+  <li><?php bugfix(74764); ?> (Bindto IPv6 works with file_get_contents but fails with stream_socket_client).</li>
+  <li><?php bugfix(75533); ?> (array_reduce is slow when $carry is large array).</li>
+</ul></li>
+<li>XMLRPC:
+<ul>
+  <li><?php bugfix(76886); ?> (Can't build xmlrpc with expat).</li>
+</ul></li>
+<li>Zlib:
+<ul>
+  <li><?php bugfix(75273); ?> (php_zlib_inflate_filter() may not update bytes_consumed).</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
+<section class="version" id="7.1.23"><!-- {{{ 7.1.23 -->
+<h3>Version 7.1.23</h3>
+<b><?php release_date('11-Oct-2018'); ?></b>
+<ul><li>Core:
+<ul>
+  <li><?php bugfix(76901); ?> (method_exists on SPL iterator passthrough method corrupts memory).</li>
+  <li><?php bugfix(76846); ?> (Segfault in shutdown function after memory limit error).</li>
+</ul></li>
+<li>CURL:
+<ul>
+  <li><?php bugfix(76480); ?> (Use curl_multi_wait() so that timeouts are respected).</li>
+</ul></li>
+<li>iconv:
+<ul>
+  <li><?php bugfix(66828); ?> (iconv_mime_encode Q-encoding longer than it should be).</li>
+</ul></li>
+<li>Opcache:
+<ul>
+  <li><?php bugfix(76832); ?> (ZendOPcache.MemoryBase periodically deleted by the OS).</li>
+</ul></li>
+<li>POSIX:
+<ul>
+  <li><?php bugfix(75696); ?> (posix_getgrnam fails to print details of group).</li>
+</ul></li>
+<li>Reflection:
+<ul>
+  <li><?php bugfix(74454); ?> (Wrong exception being thrown when using ReflectionMethod).</li>
+</ul></li>
+<li>Standard:
+<ul>
+  <li><?php bugfix(73457); ?> (Wrong error message when fopen FTP wrapped fails to open data connection).</li>
+  <li><?php bugfix(74764); ?> (Bindto IPv6 works with file_get_contents but fails with stream_socket_client).</li>
+  <li><?php bugfix(75533); ?> (array_reduce is slow when $carry is large array).</li>
+</ul></li>
+<li>Zlib:
+<ul>
+  <li><?php bugfix(75273); ?> (php_zlib_inflate_filter() may not update bytes_consumed).</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
 <section class="version" id="7.0.32"><!-- {{{ 7.0.32 -->
 <h3>Version 7.0.32</h3>
 <b><?php release_date('13-Sep-2018'); ?></b>
