@@ -2,6 +2,72 @@
 $OLDRELEASES = array (
   7 => 
   array (
+    '7.1.22' => 
+    array (
+      'announcement' => 
+      array (
+        'English' => '/releases/7_1_22.php',
+      ),
+      'source' => 
+      array (
+        0 => 
+        array (
+          'filename' => 'php-7.1.22.tar.bz2',
+          'name' => 'PHP 7.1.22 (tar.bz2)',
+          'sha256' => 'c8e91f19c8aa810ae95f228ff31cf0e4805cb89f4c10870ee12c85491b26e763',
+          'date' => '13 Sep 2018',
+        ),
+        1 => 
+        array (
+          'filename' => 'php-7.1.22.tar.gz',
+          'name' => 'PHP 7.1.22 (tar.gz)',
+          'sha256' => '1d275115593a33315647094a5a4ee9bd73c7960c08686cee35dc2e683a68b157',
+          'date' => '13 Sep 2018',
+        ),
+        2 => 
+        array (
+          'filename' => 'php-7.1.22.tar.xz',
+          'name' => 'PHP 7.1.22 (tar.xz)',
+          'sha256' => '9194c9b3a592d8376fde837dde711ec01ee26f8607fc2884047ef6f7c089b15d',
+          'date' => '13 Sep 2018',
+        ),
+      ),
+      'date' => '13 Sep 2018',
+      'museum' => false,
+    ),
+    '7.2.10' => 
+    array (
+      'announcement' => 
+      array (
+        'English' => '/releases/7_2_10.php',
+      ),
+      'source' => 
+      array (
+        0 => 
+        array (
+          'filename' => 'php-7.2.10.tar.bz2',
+          'name' => 'PHP 7.2.10 (tar.bz2)',
+          'sha256' => '01b6129a0921a1636b07da9bc598a876669e45a462cef4b5844fc26862dbda9d',
+          'date' => '13 Sep 2018',
+        ),
+        1 => 
+        array (
+          'filename' => 'php-7.2.10.tar.gz',
+          'name' => 'PHP 7.2.10 (tar.gz)',
+          'sha256' => 'd2d908b49b6005e65dcc46cdc986603a19b7ff103119fce8ddd4648586d430a4',
+          'date' => '13 Sep 2018',
+        ),
+        2 => 
+        array (
+          'filename' => 'php-7.2.10.tar.xz',
+          'name' => 'PHP 7.2.10 (tar.xz)',
+          'sha256' => '01c2154a3a8e3c0818acbdbc1a956832c828a0380ce6d1d14fea495ea21804f0',
+          'date' => '13 Sep 2018',
+        ),
+      ),
+      'date' => '13 Sep 2018',
+      'museum' => false,
+    ),
     '7.1.21' => 
     array (
       'announcement' => 
