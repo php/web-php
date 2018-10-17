@@ -50,5 +50,3 @@ if (substr($abs, -3) == ".js" || substr($abs, -5) == ".json") {
 }
 
 readfile($abs);
-
-

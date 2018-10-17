@@ -40,4 +40,3 @@ function download_file($mirror, $file)
     echo " ";
     flush();
 }
-

@@ -84,4 +84,3 @@ foreach ($photos as $photo) {
 }
 
 print json_encode($elephpants);
-

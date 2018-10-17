@@ -229,4 +229,3 @@ PHP                                                                        NEWS
 
 - Fixed PDO objects binary incompatibility. (Dmitry)
 - Fixed bug #52211 (iconv() returns part of string on error). (Felipe)
-

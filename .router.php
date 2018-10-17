@@ -14,4 +14,3 @@ if (strncmp($_SERVER["DOCUMENT_ROOT"], $afilename, $len) == 0) {
     }
 }
 include_once "error.php";
-

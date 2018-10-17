@@ -135,4 +135,3 @@ site_header("The PHP mirrors problem and troubleshooting guide", array("current"
 
 <?php
 site_footer();
-

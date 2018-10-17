@@ -207,4 +207,3 @@ $arch->save("archive/archive.xml");
 
 fwrite(STDOUT, "File saved.\nPlease git diff $archivefile sanity-check the changes before committing\n");
 fwrite(STDOUT, "NOTE: Remeber to git add $file && git commit $file && git push!!\n");
-

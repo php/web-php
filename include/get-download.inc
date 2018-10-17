@@ -74,4 +74,3 @@ if ($size) {
 
 
 <?php site_footer();
-

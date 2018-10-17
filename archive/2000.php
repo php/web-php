@@ -166,4 +166,3 @@ site_header("News Archive - 2000", array("cache" => true));
 </p>
 
 <?php site_footer(array('elephpants' => true, 'sidebar' => $SIDEBAR_DATA));
-

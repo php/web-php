@@ -1486,4 +1486,3 @@ site_header("News Archive - 2013", array("cache" => true));
 <?php
 
 site_footer(array('elephpants' => true, 'sidebar' => $SIDEBAR_DATA));
-

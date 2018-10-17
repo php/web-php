@@ -138,4 +138,3 @@ $config = array(
 
 site_footer($config);
 }
-

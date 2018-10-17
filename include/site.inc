@@ -575,4 +575,3 @@ if (isset($_SERVER['MIRROR_STATS'])) {
 if (isset($_SERVER['BASE_PAGE'])) {
     $_SERVER['BASE_HREF'] = $MYSITE . $_SERVER['BASE_PAGE'];
 } else { unset($_SERVER['BASE_HREF']); }
-

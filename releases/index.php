@@ -237,4 +237,3 @@ foreach($OLDRELEASES as $major => $a) {
 }
 
 site_footer(array("sidebar" => $SIDEBAR_DATA));
-

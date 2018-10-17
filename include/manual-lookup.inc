@@ -222,4 +222,3 @@ function find_manual_page($lang, $keyword)
     //       all of the slow and unnecessary checks.
     return find_manual_page_slow($langs[0], $kw);
 }
-

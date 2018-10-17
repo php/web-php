@@ -706,4 +706,3 @@ function doc_toc_title($lang, $index, $file, $elm = "dt") {
 }
 
 /* vim: set et ts=4 sw=4 ft=php: : */
-

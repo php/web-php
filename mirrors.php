@@ -42,4 +42,3 @@ site_header("Mirror Sites", $header_config);
 
 <?php
 site_footer();
-

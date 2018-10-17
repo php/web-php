@@ -42,4 +42,3 @@ file_put_contents("include/releases.inc", [
 ]);
 
 echo "This was fun \o/\nI hope you remembered to run this script *before* updating include/version.inc... :)\n";
-

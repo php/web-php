@@ -55,4 +55,3 @@ site_footer(
         "sidebar" => $panels,
     )
 );
-

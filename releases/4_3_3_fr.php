@@ -46,5 +46,3 @@ am&eacute;liorations et ajouts :
 </p>
 
 <?php site_footer(); ?>
-
-

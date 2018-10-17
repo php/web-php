@@ -92,5 +92,3 @@ header('Last-Modified: ' . $tsstring);
 header('Expires: ' . date(DATE_RSS, $future));
 imgheader($logo);
 serve_compressed_if_available($logo);
-
-

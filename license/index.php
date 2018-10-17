@@ -154,4 +154,3 @@ For related projects, please refer to licensing information on the Project websi
 </ul>
 
 <?php site_footer(array('sidebar' => $SIDEBAR_DATA));
-
