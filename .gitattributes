@@ -1,2 +1,2 @@
-# iCalendar format needs to have CRLF end of lines style
-/backend/events/* eol=crlf
+# iCalendar needs CRLF line endings, Git will checkout CRLF in the working tree
+/backend/events/* text eol=crlf
