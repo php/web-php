@@ -17,7 +17,7 @@ large number of bug fixes.
 <ul>
   <li>Fixed crash in zip extract method (possible CWE-170).</li>
   <li>Paths with NULL in them (foo\0bar.txt) are now considered as invalid (CVE-2006-7243).</li>
-  <li>Fixed a possible double free in imap extension (Identified by Mateusz 
+  <li>Fixed a possible double free in imap extension (Identified by Mateusz
     Kocielski). (CVE-2010-4150).</li>
   <li>Fixed NULL pointer dereference in ZipArchive::getArchiveComment.
     (CVE-2010-3709).</li>
@@ -33,7 +33,7 @@ large number of bug fixes.
 </p>
 <ul>
   <li>Added stat support for zip stream.</li>
-  <li>Added follow_location (enabled by default) option for the http stream 
+  <li>Added follow_location (enabled by default) option for the http stream
     support.</li>
   <li>Added a 3rd parameter to get_html_translation_table. It now takes a charset hint, like htmlentities et al.</li>
   <li>Implemented FR #52348, added new constant ZEND_MULTIBYTE to detect

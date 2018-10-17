@@ -133,7 +133,7 @@ if (preg_match("!^get/([^/]+)$!", $URI, $what)) {
 // ============================================================================
 // Nice URLs for download files, so wget works completely well with download links
 if (preg_match("!^get/([^/]+)/from/([^/]+)(/mirror)?$!", $URI, $dlinfo)) {
-    
+
     $df = $dlinfo[1];
     if(strpos($df, "7-LATEST") !== false) {
         include_once $_SERVER['DOCUMENT_ROOT'] . "/include/version.inc";
@@ -145,20 +145,20 @@ if (preg_match("!^get/([^/]+)/from/([^/]+)(/mirror)?$!", $URI, $dlinfo)) {
         include_once $_SERVER['DOCUMENT_ROOT'] . "/include/version.inc";
         $df = str_replace("4-LATEST", $PHP_4_VERSION, $df);
     }
-    
+
     // Mirror selection page
     if ($dlinfo[2] == "a") {
         status_header(200);
         include_once $_SERVER['DOCUMENT_ROOT'] . "/include/get-download.inc";
         exit;
     }
-    
+
     // The same mirror is selected
     if ($dlinfo[2] == "this") { $mr = $MYSITE; }
-    
+
     // Some other mirror is selected
     else { $mr = "http://{$dlinfo[2]}/"; }
-    
+
     // Check if that mirror really exists if not, bail out
     if(!isset($MIRRORS[$mr])) {
         error_nomirror($mr);
@@ -192,7 +192,7 @@ if (!in_array($URI, array('mirror-info', 'error', 'mod')) &&
     file_exists($_SERVER['DOCUMENT_ROOT'] . "/$URI.php")) {
     mirror_redirect("/$URI.php");
 }
- 
+
 // Work with lowercased URI from now
 $URI = strtolower($URI);
 
@@ -223,13 +223,13 @@ if ($path = is_known_term($term)) {
 $manual_page_moves = array(
     // entry point changed
     'installation'               => 'install',
-    
+
     // was split among platforms (don't know where to redirect)
-    'install.apache'             => 'install', 
+    'install.apache'             => 'install',
     'install.apache2'            => 'install',
     'install.netscape-enterprise'=> 'install',
     'install.otherhttpd'         => 'install',
-    
+
     // moved to platform sections
     'install.caudium'            => 'install.unix.caudium',
     'install.commandline'        => 'install.unix.commandline',
@@ -336,7 +336,7 @@ $uri_aliases = array (
     "splat"        => "functions.arguments",
 
     "dowhile"      => "control-structures.do.while",
-    
+
     "tut"          => "tutorial",
     "tut.php"      => "tutorial", // BC
 
@@ -397,26 +397,26 @@ $uri_aliases = array (
     "namespace"    => "language.namespaces",
     "use"          => "language.namespaces.using",
     "iterator"     => "language.oop5.iterations",
-    
+
     "factory"      => "language.oop5.patterns",
     "singleton"    => "language.oop5.patterns",
 
     "trait"        => "language.oop5.traits",
     "traits"       => "language.oop5.traits",
-    
+
     "news.php"                     => "archive/index", // BC
     "readme.mirror"                => "mirroring", // BC
-    
+
     "php5"                         => "language.oop5",
     "zend_changes.txt"             => "language.oop5", // BC
     "zend2_example.phps"           => "language.oop5", // BC
     "zend_changes_php_5_0_0b2.txt" => "language.oop5", // BC
     "zend-engine-2"                => "language.oop5", // BC
     "zend-engine-2.php"            => "language.oop5", // BC
-    
+
     "news_php_5_0_0b2.txt"         => "ChangeLog-5", // BC
     "news_php_5_0_0b3.txt"         => "ChangeLog-5", // BC
-    
+
     "manual/about-notes.php" => "manual/add-note",   // BC
     "software/index.php"     => "software",          // BC
     "releases.php"           => "releases/index",    // BC
@@ -432,10 +432,10 @@ $uri_aliases = array (
     "regexp.reference.circudollar"    => "regexp.reference.anchors",
     "regexp.reference.squarebrackets" => "regexp.reference.character-classes",
     "regexp.reference.verticalbar"    => "regexp.reference.alternation",
-    
+
     # external shortcut aliases ;)
     "dochowto"     => "phpdochowto",
-    
+
     # CVS -> SVN
     "anoncvs.php"   => "git",
     "cvs-php.php"   => "git-php",

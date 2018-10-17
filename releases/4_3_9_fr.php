@@ -7,8 +7,8 @@ site_header("PHP 4.3.9 Release Announcement");
 <h1>Annonce de publication de PHP 4.3.9</h1>
 <p>[ <a href="/releases/4_3_9.php">English Version</a> ]</p>
 <p>
-L'&eacute;quipe de d&eacute;veloppement PHP a le plaisir de vous annoncer 
-la publication de <a href="/downloads.php">PHP 4.3.9</a>. C'est une version 
+L'&eacute;quipe de d&eacute;veloppement PHP a le plaisir de vous annoncer
+la publication de <a href="/downloads.php">PHP 4.3.9</a>. C'est une version
 de maintenance, destin&eacute;e &agrave; corriger une cinquantaine de bogues non-critiques,
 et corriger le traitement des valeurs GPC. Cette version inclut aussi la possibilité
 d'écrire des images GIF via la bibliothèque GD interne. Tous les utilisateurs
@@ -18,8 +18,8 @@ sont encouragés à utiliser cette version.
 <h2>Version de correction de bogues</h2>
 
 <p>
-En plus des fonctionnalités ci-dessus, PHP 4.3.9 contient notamment les corrections, 
-ajouts et am&eacute;liorations suivantes : 
+En plus des fonctionnalités ci-dessus, PHP 4.3.9 contient notamment les corrections,
+ajouts et am&eacute;liorations suivantes :
 </p>
 
 <ul>

@@ -10,7 +10,7 @@
   <default:newsImage xmlns="http://php.net/ns/news" link="https://phpconference.com" title="International PHP Conference 2019 - Spring Edition">ipc_se2019.png</default:newsImage>
   <link href="https://phpconference.com" rel="via" type="text/html"/>
   <content type="xhtml">
-	 <div xmlns="http://www.w3.org/1999/xhtml"> 
+	 <div xmlns="http://www.w3.org/1999/xhtml">
 		 <p>The <a href="https://phpconference.com">International PHP Conference</a> is the world's first PHP conference and stands since more than a decade for top-notch pragmatic expertise in PHP and web technologies. At the IPC, internationally renowned experts from the PHP industry meet up with PHP users and developers from large and small companies. Here is the place where concepts emerge and ideas are born - the IPC signifies knowledge transfer at highest level.</p>
 		 <p>All delegates of the International PHP Conference have, in addition to PHP program, free access to the entire range of the <a href="https://webinale.de">webinale</a> taking place at the same time.</p>
 		 <p>Basic facts:</p>

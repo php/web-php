@@ -7,7 +7,7 @@ site_header('PHP/FI Version 2.0 Documentation');
 <!--
 Documentation is like sex: when it is good, it is very, very good; and
 when it is bad, it is better than nothing.
-                ++ Dick Brandon 
+                ++ Dick Brandon
 -->
 
   <h1 style="text-align: center;">PHP/FI Version 2.0</h1>
@@ -1150,12 +1150,12 @@ leave off this option if you like.
   to create two tables. The <em>msqllog</em> shell script in the
   scripts directory will do this for you. Simply type:</p>
   <pre>
-    msqllog &lt;user id&gt; 
+    msqllog &lt;user id&gt;
 </pre>
 
   <p>or for mysql, type:</p>
   <pre>
-    mysqllog &lt;user id&gt; 
+    mysqllog &lt;user id&gt;
 </pre>
 
   <p>and the script will create the appropriate tables. You may
@@ -1526,7 +1526,7 @@ name in your browser unless the path or domain is different. So,
 for a shopping cart application you may want to keep a counter and
 pass this along. ie.
   <pre>
-    
+
     $Count++;
     SetCookie("Count",$Count, time()+3600);
     SetCookie("Cart[$Count]",$item, time()+3600);
@@ -1948,7 +1948,7 @@ echo "&lt;/TABLE&gt;\n";
 
 /* Close the Oracle connection. */
 Ora_Close($cursor);
- 
+
 /* Disconnect the logon data area. */
 Ora_Logoff($conn);
 &gt;
@@ -2342,7 +2342,7 @@ nibble, like 0?755:
   <pre>
     echo $a[0];
     echo $a[1];
-        
+
 </pre>
 
   <p>Arrays can be copied by a simple assignment. If $b is an
@@ -2666,7 +2666,7 @@ nibble, like 0?755:
       echo $count;
       if($count &lt;  10) {
         Test();
-      } 
+      }
     );
 </pre>
   <hr>
@@ -2721,8 +2721,8 @@ nibble, like 0?755:
           $a=0;
           while($a&lt;100) {
                   $a++;
-                  echo $list[$a];       
-          } 
+                  echo $list[$a];
+          }
         &gt;
 </pre>
 
@@ -2757,7 +2757,7 @@ nibble, like 0?755:
                 default;
                   echo "a is unknown";
                   break;
-          } 
+          }
         &gt;
 </pre>
 
@@ -4751,8 +4751,8 @@ nibble, like 0?755:
 
       <p>eg.</p>
       <pre>
-   mail("rasmus@lerdorf.on.ca", 
-        "My Subject", 
+   mail("rasmus@lerdorf.on.ca",
+        "My Subject",
         "Line 1\nLine 2\nLine 3");
 </pre>If a fourth string argument is passed, this string is
 inserted at the end of the header, example:
@@ -5212,7 +5212,7 @@ inserted at the end of the header, example:
       example:</p>
       <pre>
     &lt;?
-      $name = "bob";  
+      $name = "bob";
       $result = msql($database,"select * from table where firstname='$name'");
       $num = msql_numrows($result);
       echo "$num records found!&lt;p&gt;";
@@ -5523,7 +5523,7 @@ inserted at the end of the header, example:
       best illustrated with a complete example:</p>
       <pre>
     &lt;?
-      $name = "bob";  
+      $name = "bob";
       $result = mysql($database,"select * from table where firstname='$name'");
       $num = mysql_numrows($result);
       echo "$num records found!&lt;p&gt;";
@@ -5677,25 +5677,25 @@ inserted at the end of the header, example:
 
         /* This is the SQL query. */
         $query = "SELECT * FROM my_table where my_index = :indiana";
-        
+
         ........
 
         if (Ora_Parse($cursor, $query) &lt; 0) {
             echo("Parse failed!\n"
             Ora_Logoff($conn);
             exit;
-        } 
+        }
 
         if (Ora_Bind($cursor, "rc", ":indiana", strlen($rc)) &lt; 0) {
             echo("Binding failed!\n"
             Ora_Logoff($conn);
             exit;
-        } 
+        }
 
         /* Execute the SQL statement associated with $cursor and
         prepare storage for select-list items. */
         $ncols = Ora_Exec($cursor);
-        
+
         ......
 
 </pre>
@@ -6689,7 +6689,7 @@ second variable
    Knuth and Kant map to K530
    Lloyd and Ladd map to L300
    Lukasiewicz and Lissajous map to L222
-     
+
 </pre>
     </dd>
 
@@ -7036,7 +7036,7 @@ second variable
       <pre>
 &lt;?
     /*
-    ** assuming all the necessary variables for 
+    ** assuming all the necessary variables for
     ** connection is already set. please note, NO error checking is
     ** done. You should always check return code of a function.
     */
@@ -7491,7 +7491,7 @@ void Crypt(int mode) {
         Stack *s;
         char salt[8];
         char *enc;
-        
+
         salt[0] = '\0';
         if(mode) {
                 s = Pop();
@@ -7515,7 +7515,7 @@ void Crypt(int mode) {
 #if DEBUG
         Debug("Crypt returned [%s]\n",enc);
 #endif
-        Push(enc,STRING);       
+        Push(enc,STRING);
 
 #else
         Error("No crypt support compiled into this version");

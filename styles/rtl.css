@@ -1,15 +1,15 @@
 .para {
-    direction:rtl; 
+    direction:rtl;
 }
 .function {
-    direction:ltr; 
+    direction:ltr;
     unicode-bidi: bidi-override;
 }
 .refpurpose {
-    direction:rtl; 
+    direction:rtl;
 }
 .refnamediv {
-    direction:rtl; 
+    direction:rtl;
 }
 .sect1 {
     direction:rtl;
@@ -18,6 +18,6 @@
     text-align:right;
 }
 .phpcode {
-    direction:ltr; 
+    direction:ltr;
     unicode-bidi: bidi-override;
 }

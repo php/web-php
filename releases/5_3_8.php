@@ -16,7 +16,7 @@ the PHP 5.3.7 release:</p>
      which caused mysqlnd SSL connections to hang (Bug #55283).</li>
 </ul>
 
-<p>All PHP users should note that the PHP 5.2 series is NOT supported 
+<p>All PHP users should note that the PHP 5.2 series is NOT supported
 anymore. All users are strongly encouraged to upgrade to PHP 5.3.8.</p>
 
 

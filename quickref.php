@@ -5,11 +5,11 @@
  which case it will always show the full list of "functions"
  in the user's preferred language version of the PHP
  documentation.
- 
+
  In other cases this file is included from manual-lookup.php,
  which sets $notfound, so we know what function to search for,
  and display results for that search.
- 
+
 */
 
 // Ensure that our environment is set up
@@ -34,7 +34,7 @@ function quickref_table($functions, $sort = true)
     if ($sort) {
         asort($functions);
     }
-    
+
     // Print out all rows
     foreach ($functions as $file => $name) {
         echo "<li><a href=\"/manual/$LANG/$file\">$name</a></li>\n";
@@ -55,10 +55,10 @@ $p = 0;
 
 // Get all file names from the directory
 while (($entry = readdir($dirh)) !== FALSE) {
-    
+
     // Skip names starting with a dot
     if (substr($entry, 0, 1) == ".") { continue; }
-    
+
     // For function and class pages, get the name out
     if (preg_match('!^(function|class)\.(.+)\.php$!', $entry, $parts)) {
         $funcname = str_replace('-', '_', $parts[2]);
@@ -66,9 +66,9 @@ while (($entry = readdir($dirh)) !== FALSE) {
 
         // Compute similarity of the name to the requested one
         if (function_exists('similar_text') && !empty($notfound)) {
-            similar_text($funcname, $notfound, $p); 
+            similar_text($funcname, $notfound, $p);
 
-            // If $notfound is a substring of $funcname then overwrite the score 
+            // If $notfound is a substring of $funcname then overwrite the score
             // similar_text() gave it.
             if ($p < 70 && ($pos = strpos($funcname, $notfound)) !== FALSE) {
                 $p = 90 - $pos;
@@ -87,16 +87,16 @@ if (count($temp) > 0) {
 
     // Collect SHOW_CLOSE number of names from the top
     foreach ($temp as $file => $p) {
-        
+
         // Stop, if we found enough matches
         if (count($maybe) >= 30) { break; }
-        
+
         // If the two are more then 70% similar or $notfound is a substring
         // of $funcname, then the match is a very similar one
         if ($p >= 70 || (strpos($functions[$file], $notfound) !== FALSE)) {
             $maybe[$file] = '<b>' . $functions[$file] . '</b>';
         }
-        // Otherwise it is just similar 
+        // Otherwise it is just similar
         else {
             $maybe[$file] = $functions[$file];
         }
@@ -137,5 +137,5 @@ $config = array(
 );
 
 site_footer($config);
-} 
+}
 

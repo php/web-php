@@ -59,7 +59,7 @@ function format_interval($from, $to) {
 			$eolPeriod = 'today';
 		}
 		if ($times) {
-			$eolPeriod = implode(', ', 
+			$eolPeriod = implode(', ',
 										array_map(
 											function($t) {
 												return "$t[0] $t[1]" .
@@ -262,7 +262,7 @@ function get_final_release($branch) {
 	if (isset($GLOBALS['OLDRELEASES'][$major][$last])) {
 		return $GLOBALS['OLDRELEASES'][$major][$last];
 	}
-	
+
 	/* If there's only been one release on the branch, it won't be in
 	 * $OLDRELEASES yet, so let's check $RELEASES. */
 	if (isset($GLOBALS['RELEASES'][$major][$last])) {

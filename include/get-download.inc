@@ -8,14 +8,14 @@ if (!isset($df)) {
 }
 
 // Could be a normal download or a manual download file
-$possible_files = array($df, "manual/$df"); 
+$possible_files = array($df, "manual/$df");
 
 $site_config = array(
     'current' => 'downloads',
     'css'     => array('mirror.css')
 );
 
-// Find out what is the exact file requested 
+// Find out what is the exact file requested
 $file = FALSE;
 foreach ($possible_files as $name) {
     if (@file_exists($_SERVER['DOCUMENT_ROOT'] . '/distributions/' . $name)) {
@@ -23,7 +23,7 @@ foreach ($possible_files as $name) {
         break;
     }
 }
-    
+
 // Print out common header
 site_header('Get Download', $site_config);
 
@@ -34,7 +34,7 @@ if ($file === FALSE) {
         $info = "<p>
  The file you requested (<strong> " . htmlspecialchars($df, ENT_QUOTES, "UTF-8") . " </strong>) is not found on
  this server (<strong>{$MYSITE}</strong>). Please try another mirror listed below</p>";
-    
+
     echo <<<EOT
 <h1>Download not found</h1>
 {$info}

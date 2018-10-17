@@ -1,22 +1,22 @@
 <?php
-function bugfix($number) { 
-    echo "Fixed bug "; bugl($number); 
+function bugfix($number) {
+    echo "Fixed bug "; bugl($number);
 }
 
-function bugl($number) { 
-    echo "<a href=\"http://bugs.php.net/$number\">#$number</a>"; 
+function bugl($number) {
+    echo "<a href=\"http://bugs.php.net/$number\">#$number</a>";
 }
 
 function implemented($number) {
     echo "Implemented FR "; bugl($number);
 }
 
-function peclbugfix($number) { 
-    echo "Fixed PECL bug "; bugl($number); 
+function peclbugfix($number) {
+    echo "Fixed PECL bug "; bugl($number);
 }
 
-function peclbugl($number) { 
-    echo "<a href=\"http://pecl.php.net/bugs/bug.php?id=$number\">#$number</a>"; 
+function peclbugl($number) {
+    echo "<a href=\"http://pecl.php.net/bugs/bug.php?id=$number\">#$number</a>";
 }
 
 function githubissue($repo, $number) {

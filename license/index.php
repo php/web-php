@@ -31,17 +31,17 @@ site_header("License Information", array("current" => "help"));
   <a href="http://www.php.net/license/3_01.txt">PHP License v3.01</a>, copyright (c) the <a href="/credits.php">PHP Group</a>.
   <ul>
    <li>
-    This is an <a href="http://www.opensource.org/docs/osd">Open Source license</a>, 
+    This is an <a href="http://www.opensource.org/docs/osd">Open Source license</a>,
     certified by the Open Source Initiative.
    </li>
    <li>
-    The PHP license is a BSD-style license which does not have the "copyleft" 
+    The PHP license is a BSD-style license which does not have the "copyleft"
     restrictions associated with GPL.
    </li>
   </ul>
  </li>
  <li>
-  Some files have been contributed under other (compatible) licenses and carry 
+  Some files have been contributed under other (compatible) licenses and carry
   additional requirements and copyright information.<br>
   This is indicated in the license + copyright comment block at the top of the source file.
  </li>
@@ -95,14 +95,14 @@ OK?
 </p>
 
 <p>
-<strong>A.</strong> 
-We cannot really stop you from using PHP in the name of 
+<strong>A.</strong>
+We cannot really stop you from using PHP in the name of
 your project unless you include any code from the PHP distribution, in
-which case you would be violating the license. 
+which case you would be violating the license.
 See Clause 4 in the <a href="http://www.php.net/license/3_01.txt">
-PHP License v3.01</a>. 
-<br>But we would really prefer if people would come up with their own names 
-independent of the  PHP name. 
+PHP License v3.01</a>.
+<br>But we would really prefer if people would come up with their own names
+independent of the  PHP name.
 </p>
 
 <p>
@@ -145,7 +145,7 @@ PHP become as popular as possible.
 <h2>Licensing information for related projects</h2>
 
 <p>
-For related projects, please refer to licensing information on the Project websites:  
+For related projects, please refer to licensing information on the Project websites:
 </p>
 <ul>
   <li><a href="http://pecl.php.net/copyright.php">PECL</a></li>

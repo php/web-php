@@ -44,7 +44,7 @@ site_header("Get Involved", array("current" => "community"));
  Someone hoping to become involved in the maintenance and development of
  the source should be experienced in all of the areas mentioned above, as
  this creates a strong team; everyone knows how every other part of the
- project works. 
+ project works.
 </p>
 
 <p>

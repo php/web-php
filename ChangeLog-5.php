@@ -269,7 +269,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 <ul>
   <li><?php bugfix(73025); ?> (Heap Buffer Overflow in virtual_popen of zend_virtual_cwd.c).</li>
   <li><?php bugfix(73058); ?> (crypt broken when salt is 'too' long).</li>
-  <li><?php bugfix(72703); ?> (Out of bounds global memory read in BF_crypt triggered by 
+  <li><?php bugfix(72703); ?> (Out of bounds global memory read in BF_crypt triggered by
 password_verify).</li>
   <li><?php bugfix(73189); ?> (Memcpy negative size parameter php_resolve_path).</li>
   <li><?php bugfix(73147); ?> (Use After Free in unserialize()).</li>
@@ -288,7 +288,7 @@ password_verify).</li>
 </ul></li>
 <li>Filter:
 <ul>
-  <li><?php bugfix(72972); ?> (Bad filter for the flags FILTER_FLAG_NO_RES_RANGE and 
+  <li><?php bugfix(72972); ?> (Bad filter for the flags FILTER_FLAG_NO_RES_RANGE and
 FILTER_FLAG_NO_PRIV_RANGE).</li>
   <li><?php bugfix(67167); ?> (Wrong return value from FILTER_VALIDATE_BOOLEAN, FILTER_NULL_ON_FAILURE).</li>
   <li><?php bugfix(73054); ?> (default option ignored when object passed to int filter).</li>
@@ -2428,7 +2428,7 @@ FILTER_FLAG_NO_PRIV_RANGE).</li>
 </ul></li>
 <li>JSON :
 <ul>
-  <li>Fixed bug #64695 (JSON_NUMERIC_CHECK has issues with strings that are 
+  <li>Fixed bug #64695 (JSON_NUMERIC_CHECK has issues with strings that are
      numbers plus the letter e).</li>
 </ul></li>
 <li>ODBC:
@@ -3108,7 +3108,7 @@ FILTER_FLAG_NO_PRIV_RANGE).</li>
 <?php release_date('13-Nov-2014'); ?>
 <ul><li>Core:
 <ul>
-  <li><?php bugfix(68095); ?> (AddressSanitizer reports a heap buffer overflow in 
+  <li><?php bugfix(68095); ?> (AddressSanitizer reports a heap buffer overflow in
     php_getopt()).</li>
   <li><?php bugfix(68118); ?> ($a-&gt;foo .= 'test'; can leave $a-&gt;foo undefined).</li>
   <li><?php bugfix(68129); ?> (parse_url() - incomplete support for empty usernames
@@ -3118,7 +3118,7 @@ FILTER_FLAG_NO_PRIV_RANGE).</li>
 </ul></li>
 <li>cURL:
 <ul>
-  <li>Add CURL_SSLVERSION_TLSv1_0, CURL_SSLVERSION_TLSv1_1, and 
+  <li>Add CURL_SSLVERSION_TLSv1_0, CURL_SSLVERSION_TLSv1_1, and
     CURL_SSLVERSION_TLSv1_2 constants if supported by libcurl.</li>
 </ul></li>
 <li>Fileinfo:
@@ -3244,7 +3244,7 @@ FILTER_FLAG_NO_PRIV_RANGE).</li>
 </ul></li>
 <li>XMLRPC:
 <ul>
-  <li><?php bugfix(68027); ?> (Global buffer overflow in mkgmtime() function). 
+  <li><?php bugfix(68027); ?> (Global buffer overflow in mkgmtime() function).
     (CVE-2014-3668)</li>
 </ul></li>
 </ul>
@@ -3383,7 +3383,7 @@ FILTER_FLAG_NO_PRIV_RANGE).</li>
 </ul></li>
 <li>Zlib:
 <ul>
-  <li><?php bugfix(67724); ?> (chained zlib filters silently fail with large amounts of 
+  <li><?php bugfix(67724); ?> (chained zlib filters silently fail with large amounts of
     data).</li>
   <li><?php bugfix(67865); ?> (internal corruption phar error).</li>
 </ul></li>
@@ -4081,7 +4081,7 @@ FILTER_FLAG_NO_PRIV_RANGE).</li>
 </ul></li>
 <li>Intl:
 <ul>
-  <li><?php bugfix(66921); ?> (Wrong argument type hint for function 
+  <li><?php bugfix(66921); ?> (Wrong argument type hint for function
     intltz_from_date_time_zone).</li>
   <li><?php bugfix(67052); ?> (NumberFormatter::parse() resets LC_NUMERIC setting).</li>
 </ul></li>
@@ -4101,7 +4101,7 @@ FILTER_FLAG_NO_PRIV_RANGE).</li>
 </ul></li>
 <li>SPL:
 <ul>
-  <li><?php bugfix(67539); ?> (ArrayIterator use-after-free due to object change during 
+  <li><?php bugfix(67539); ?> (ArrayIterator use-after-free due to object change during
     sorting). (CVE-2014-4698)</li>
   <li><?php bugfix(67538); ?> (SPL Iterators use-after-free) (CVE-2014-4670).</li>
 </ul></li>
@@ -4221,7 +4221,7 @@ FILTER_FLAG_NO_PRIV_RANGE).</li>
   <li><?php bugfix(66127); ?> (Segmentation fault with ArrayObject unset).</li>
   <li><?php bugfix(67359); ?> (Segfault in recursiveDirectoryIterator).</li>
   <li><?php bugfix(67360); ?> (Missing element after ArrayObject::getIterator).</li>
-  <li><?php bugfix(67492); ?> (unserialize() SPL ArrayObject / SPLObjectStorage Type 
+  <li><?php bugfix(67492); ?> (unserialize() SPL ArrayObject / SPLObjectStorage Type
     Confusion). (CVE-2014-3515).</li>
 </ul></li>
 </ul>
@@ -4398,7 +4398,7 @@ FILTER_FLAG_NO_PRIV_RANGE).</li>
 <ul><li>Core:
 <ul>
   <li><?php bugfix(61019); ?> (Out of memory on command stream_get_contents).</li>
-  <li><?php bugfix(64330); ?> (stream_socket_server() creates wrong Abstract Namespace 
+  <li><?php bugfix(64330); ?> (stream_socket_server() creates wrong Abstract Namespace
     UNIX sockets).</li>
   <li><?php bugfix(66182); ?> (exit in stream filter produces segfault).</li>
   <li><?php bugfix(66736); ?> (fpassthru broken).</li>
@@ -4800,7 +4800,7 @@ FILTER_FLAG_NO_PRIV_RANGE).</li>
 </ul></li>
 <li>DOM:
 <ul>
-  <li><?php bugfix(65196); ?> (Passing DOMDocumentFragment to DOMDocument::saveHTML() 
+  <li><?php bugfix(65196); ?> (Passing DOMDocumentFragment to DOMDocument::saveHTML()
     Produces invalid Markup).</li>
 </ul></li>
 <li>Exif:
@@ -6579,7 +6579,7 @@ FILTER_FLAG_NO_PRIV_RANGE).</li>
   <li><?php bugfix(43177); ?> (Errors in eval()'ed code produce status code 500).</li>
 </ul></li>
 </ul>
- 
+
 <ul>
 <li>Filter:
 <ul>
@@ -6587,21 +6587,21 @@ FILTER_FLAG_NO_PRIV_RANGE).</li>
   <li><?php bugfix(54096); ?> (FILTER_VALIDATE_INT does not accept +0 and -0).</li>
 </ul></li>
 </ul>
- 
+
 <ul>
 <li>JSON:
 <ul>
   <li><?php bugfix(63737); ?> (json_decode does not properly decode with options parameter).</li>
 </ul></li>
 </ul>
- 
+
 <ul>
 <li>CLI server:
 <ul>
   <li>Update list of common mime types. Added webm, ogv, ogg.</li>
 </ul></li>
 </ul>
- 
+
 <ul>
 <li>cURL extension:
 <ul>
@@ -6623,7 +6623,7 @@ FILTER_FLAG_NO_PRIV_RANGE).</li>
   <li><?php bugfix(63762); ?> (Sigsegv when Exception::$trace is changed by user).</li>
 </ul></li>
 </ul>
- 
+
 <ul>
 <li>cURL extension:
 <ul>
@@ -6651,7 +6651,7 @@ FILTER_FLAG_NO_PRIV_RANGE).</li>
   <li><?php bugfix(61272); ?> (ob_start callback gets passed empty string).</li>
 </ul></li>
 </ul>
- 
+
 <ul>
 <li>Date:
 <ul>
@@ -7987,7 +7987,7 @@ FILTER_FLAG_NO_PRIV_RANGE).</li>
 <li>CLI Server
 <ul>
   <li><?php bugfix(61461); ?> (missing checks around malloc() calls).</li>
-  <li><?php implemented(60850); ?> (Built in web server does not set 
+  <li><?php implemented(60850); ?> (Built in web server does not set
     $_SERVER['SCRIPT_FILENAME'] when using router).</li>
 </ul></li>
 </ul>
@@ -8061,7 +8061,7 @@ FILTER_FLAG_NO_PRIV_RANGE).</li>
 <ul>
   <li><?php bugfix(61650); ?> (ini parser crashes when using ${xxxx} ini variables
     (without apache2)).</li>
-  <li><?php bugfix(61273); ?> (call_user_func_array with more than 16333 arguments 
+  <li><?php bugfix(61273); ?> (call_user_func_array with more than 16333 arguments
     leaks / crashes).</li>
   <li><?php bugfix(61165); ?> (Segfault - strip_tags()).</li>
   <li><?php bugfix(61095); ?> (Incorect lexing of 0x00*+&lt;NUM&gt;).</li>
@@ -8069,7 +8069,7 @@ FILTER_FLAG_NO_PRIV_RANGE).</li>
     invalid scanner mode).</li>
   <li><?php bugfix(61072); ?> (Memory leak when restoring an exception handler).</li>
   <li><?php bugfix(61058); ?> (array_fill leaks if start index is PHP_INT_MAX).</li>
-  <li><?php bugfix(61000); ?> (Exceeding max nesting level doesn't delete numerical 
+  <li><?php bugfix(61000); ?> (Exceeding max nesting level doesn't delete numerical
     vars).</li>
   <li><?php bugfix(60895); ?> (Possible invalid handler usage in windows random
     functions).</li>
@@ -8078,7 +8078,7 @@ FILTER_FLAG_NO_PRIV_RANGE).</li>
   <li><?php bugfix(60569); ?> (Nullbyte truncates Exception $message).</li>
   <li><?php bugfix(60227); ?> (header() cannot detect the multi-line header with CR).</li>
   <li><?php bugfix(60222); ?> (time_nanosleep() does validate input params).</li>
-  <li><?php bugfix(54374); ?> (Insufficient validating of upload name leading to 
+  <li><?php bugfix(54374); ?> (Insufficient validating of upload name leading to
     corrupted $_FILES indices). (CVE-2012-1172).</li>
   <li><?php bugfix(52719); ?> (array_walk_recursive crashes if third param of the
     function is by reference).</li>
@@ -8202,7 +8202,7 @@ FILTER_FLAG_NO_PRIV_RANGE).</li>
   <li><?php bugfix(61388); ?> (ReflectionObject:getProperties() issues invalid reads
     when get_properties returns a hash table with (inaccessible) dynamic
     numeric properties).</li>
-  <li><?php bugfix(60968); ?> (Late static binding doesn't work with 
+  <li><?php bugfix(60968); ?> (Late static binding doesn't work with
     ReflectionMethod::invokeArgs()).</li>
 </ul></li>
 </ul>
@@ -8212,7 +8212,7 @@ FILTER_FLAG_NO_PRIV_RANGE).</li>
 <ul>
   <li><?php bugfix(60860); ?> (session.save_handler=user without defined function core
     dumps).</li>
-  <li><?php bugfix(60634); ?> (Segmentation fault when trying to die() in 
+  <li><?php bugfix(60634); ?> (Segmentation fault when trying to die() in
     SessionHandler::write()).</li>
 </ul></li>
 </ul>
@@ -8223,7 +8223,7 @@ FILTER_FLAG_NO_PRIV_RANGE).</li>
   <li><?php bugfix(61423); ?> (gzip compression fails).</li>
   <li><?php bugfix(60887); ?> (SoapClient ignores user_agent option and sends no
     User-Agent header).</li>
-    <li><?php bugfix(60842); ?>, <?php bugfix(51775); ?> (Chunked response parsing error when 
+    <li><?php bugfix(60842); ?>, <?php bugfix(51775); ?> (Chunked response parsing error when
     chunksize length line is &gt; 10 bytes).</li>
   <li><?php bugfix(49853); ?> (Soap Client stream context header option ignored).</li>
 </ul></li>
@@ -8354,7 +8354,7 @@ FILTER_FLAG_NO_PRIV_RANGE).</li>
   <li>Added DTrace support.</li>
   <li>Added class member access on instantiation (e.g. (new foo)-&gt;bar()) support.</li>
   <li>&lt;?= is now always available regardless of the short_open_tag setting.</li>
-  <li>Implemented Zend Signal Handling (configurable option --enable-zend-signals, 
+  <li>Implemented Zend Signal Handling (configurable option --enable-zend-signals,
     off by default).</li>
   <li>Improved output layer, see README.NEW-OUTPUT-API for internals.</li>
   <li>Improved unix build system to allow building multiple PHP binary SAPIs and
@@ -8362,7 +8362,7 @@ FILTER_FLAG_NO_PRIV_RANGE).</li>
   <li>Implemented closure rebinding as parameter to bindTo.</li>
   <li>Improved the warning message of incompatible arguments.</li>
   <li>Improved ternary operator performance when returning arrays.
-  <li>Changed error handlers to only generate docref links when the docref_root 
+  <li>Changed error handlers to only generate docref links when the docref_root
     INI setting is not empty.</li>
   <li>Changed silent conversion of array to string to produce a notice.</li>
   <li>Changed default value of "default_charset" php.ini option from ISO-8859-1 to
@@ -8535,7 +8535,7 @@ FILTER_FLAG_NO_PRIV_RANGE).</li>
     been added.</li>
   <li>Added http_response_code() function. <?php bugl(52555); ?>.</li>
   <li><?php bugfix(55500); ?> (Corrupted $_FILES indices lead to security concern).</li>
-  <li><?php bugfix(54374); ?> (Insufficient validating of upload name leading to 
+  <li><?php bugfix(54374); ?> (Insufficient validating of upload name leading to
     corrupted $_FILES indices).</li>
 </ul></li>
 </ul>
@@ -8743,7 +8743,7 @@ FILTER_FLAG_NO_PRIV_RANGE).</li>
     than 4.1.</li>
   <li>ext/mysql, mysqli and pdo_mysql now use mysqlnd by default.</li>
   <li><?php bugfix(55473); ?> (mysql_pconnect leaks file descriptors on reconnect). </li>
-  <li><?php bugfix(55653); ?> (PS crash with libmysql when binding same variable as 
+  <li><?php bugfix(55653); ?> (PS crash with libmysql when binding same variable as
     param and out).</li>
 </ul></li>
 </ul>
@@ -8795,7 +8795,7 @@ FILTER_FLAG_NO_PRIV_RANGE).</li>
 <ul>
   <li><?php bugfix(53280); ?> (segfaults if query column count less than param count). </li>
   <li><?php bugfix(48877); ?> ("bindValue" and "bindParam" do not work for PDO Firebird).</li>
-  <li><?php bugfix(47415); ?> (segfaults when passing lowercased column name to 
+  <li><?php bugfix(47415); ?> (segfaults when passing lowercased column name to
     bindColumn).</li>
 </ul></li>
 </ul>
@@ -8939,7 +8939,7 @@ FILTER_FLAG_NO_PRIV_RANGE).</li>
 <ul>
 <li>Core:
 <ul>
-  <li>Fixed arbitrary remote code execution vulnerability reported by Stefan 
+  <li>Fixed arbitrary remote code execution vulnerability reported by Stefan
     Esser, CVE-2012-0830.</li>
 </ul>
 </li>
@@ -9423,13 +9423,13 @@ FILTER_FLAG_NO_PRIV_RANGE).</li>
   <li><?php bugfix(53037); ?> (FILTER_FLAG_EMPTY_STRING_NULL is not implemented). (Ilia)</li>
 </ul>
 </li>
-  
+
 <li>Interbase extension:
 <ul>
   <li><?php bugfix(54269); ?> (Short exception message buffer causes crash). (Felipe)</li>
 </ul>
 </li>
-  
+
 <li>intl extension:
 <ul>
   <li><?php implemented(54561); ?> (Expose ICU version info). (David Zuelke, Ilia)</li>
@@ -9655,7 +9655,7 @@ FILTER_FLAG_NO_PRIV_RANGE).</li>
   <li><?php bugfix(48607); ?> (fwrite() doesn't check reply from ftp server before exiting). (Ilia)</li>
 </ul>
 </li>
- 
+
 <li>Calendar extension:
 <ul>
   <li><?php bugfix(53574); ?> (Integer overflow in SdnToJulian, sometimes leading to segfault). (Gustavo)</li>
@@ -9667,7 +9667,7 @@ FILTER_FLAG_NO_PRIV_RANGE).</li>
   <li><?php implemented(39771); ?> (Made DOMDocument::saveHTML accept an optional DOMNode like DOMDocument::saveXML). (Gustavo)</li>
 </ul>
 </li>
-  
+
 <li>DateTime extension:
 <ul>
   <li>Fixed a bug in DateTime-&gt;modify() where absolute date/time statements had no effect. (Derick)</li>
@@ -9712,7 +9712,7 @@ FILTER_FLAG_NO_PRIV_RANGE).</li>
   <li><?php bugfix(53377); ?> (imap_mime_header_decode() doesn't ignore \t during long MIME header unfolding). (Adam)</li>
 </ul>
 </li>
-    
+
 <li>Intl extension:
 <ul>
   <li><?php bugfix(53612); ?> (Segmentation fault when using cloned several intl objects). (Gustavo)</li>
@@ -9765,7 +9765,7 @@ FILTER_FLAG_NO_PRIV_RANGE).</li>
   <li><?php bugfix(39199); ?> (Cannot load Lob data with more than 4000 bytes on ORACLE 10). (spatar at mail dot nnov dot ru)</li>
 </ul>
 </li>
-    
+
 <li>PDO PostgreSQL driver:
 <ul>
   <li><?php bugfix(53517); ?> (segfault in pgsql_stmt_execute() when postgres is down). (gyp at balabit dot hu)</li>
@@ -9920,10 +9920,10 @@ FILTER_FLAG_NO_PRIV_RANGE).</li>
 
 <li>Security enhancements:
 <ul>
-  <li>Fixed crash in zip extract method (possible CWE-170). 
+  <li>Fixed crash in zip extract method (possible CWE-170).
     (Maksymilian Arciemowicz, Pierre)</li>
   <li>Paths with NULL in them (foo\0bar.txt) are now considered as invalid. (Rasmus)</li>
-  <li>Fixed a possible double free in imap extension (Identified by Mateusz 
+  <li>Fixed a possible double free in imap extension (Identified by Mateusz
     Kocielski). (CVE-2010-4150). (Ilia)</li>
   <li>Fixed NULL pointer dereference in ZipArchive::getArchiveComment.
     (CVE-2010-3709). (Maksymilian Arciemowicz)</li>
@@ -9938,25 +9938,25 @@ FILTER_FLAG_NO_PRIV_RANGE).</li>
 <li>General improvements:
 <ul>
   <li>Added stat support for zip stream. (Pierre)</li>
-  <li>Added follow_location (enabled by default) option for the http stream 
+  <li>Added follow_location (enabled by default) option for the http stream
     support. (Pierre)</li>
   <li>Improved support for is_link and related functions on Windows. (Pierre)</li>
   <li>Added a 3rd parameter to get_html_translation_table. It now takes a charset
     hint, like htmlentities et al. (Gustavo)</li>
-</ul> 
+</ul>
 </li>
 <li>Implemented feature requests:
 <ul>
   <li><?php implemented(52348); ?>, added new constant ZEND_MULTIBYTE to detect
     zend multibyte at runtime. (Kalle)</li>
-  <li><?php implemented(52173); ?>, added functions pcntl_get_last_error() and 
+  <li><?php implemented(52173); ?>, added functions pcntl_get_last_error() and
      pcntl_strerror(). (nick dot telford at gmail dot com, Arnaud)</li>
   <li>Implemented symbolic links support for open_basedir checks. (Pierre)</li>
   <li><?php implemented(51804); ?>, SplFileInfo::getLinkTarget on Windows. (Pierre)</li>
   <li><?php implemented(50692); ?>, not uploaded files don't count towards
     max_file_uploads limit. As a side improvement, temporary files are not opened
     for empty uploads and, in debug mode, 0-length uploads. (Gustavo)</li>
-</ul>    
+</ul>
 </li>
 <li>Improved MySQLnd:
 <ul>
@@ -9972,7 +9972,7 @@ FILTER_FLAG_NO_PRIV_RANGE).</li>
   <li>Added '-t/--test' to php-fpm to check and validate FPM conf file. (fat)</li>
   <li>Added statistics about listening socket queue length for FPM.
     (andrei dot nigmatulin at gmail dot com, fat)</li>
-</ul>    
+</ul>
 </li>
 <li>Core:
 <ul>
@@ -9998,13 +9998,13 @@ FILTER_FLAG_NO_PRIV_RANGE).</li>
   <li><?php bugfix(53141); ?> (autoload misbehaves if called from closing session).
     (ladislav at marek dot su)</li>
   <li><?php bugfix(53021); ?> (In html_entity_decode, failure to convert numeric entities
-    with ENT_NOQUOTES and ISO-8859-1). Fixed and extended the fix of ENT_NOQUOTES 
+    with ENT_NOQUOTES and ISO-8859-1). Fixed and extended the fix of ENT_NOQUOTES
     in html_entity_decode that had introduced the bug (rev #185591) to other
     encodings. Additionaly, html_entity_decode() now doesn't decode &amp;#34; if
     ENT_NOQUOTES is given. (Gustavo)</li>
   <li><?php bugfix(52931); ?> (strripos not overloaded with function overloading enabled).
     (Felipe)</li>
-  <li><?php bugfix(52772); ?> (var_dump() doesn't check for the existence of 
+  <li><?php bugfix(52772); ?> (var_dump() doesn't check for the existence of
     get_class_name before calling it). (Kalle, Gustavo)</li>
   <li><?php bugfix(52534); ?> (var_export array with negative key). (Felipe)</li>
   <li><?php bugfix(52327); ?> (base64_decode() improper handling of leading padding in
@@ -10018,24 +10018,24 @@ FILTER_FLAG_NO_PRIV_RANGE).</li>
   <li><?php bugfix(49687); ?> (utf8_decode vulnerabilities and deficiencies in the number
     of reported malformed sequences). (CVE-2010-3870) (Gustavo)</li>
   <li><?php bugfix(49407); ?> (get_html_translation_table doesn't handle UTF-8). (Gustavo)</li>
-  <li><?php bugfix(48831); ?> (php -i has different output to php --ini). (Richard, 
+  <li><?php bugfix(48831); ?> (php -i has different output to php --ini). (Richard,
     Pierre)</li>
   <li><?php bugfix(47643); ?> (array_diff() takes over 3000 times longer than php 5.2.4).
     (Felipe)</li>
-  <li><?php bugfix(47168); ?> (printf of floating point variable prints maximum of 40 
+  <li><?php bugfix(47168); ?> (printf of floating point variable prints maximum of 40
     decimal places). (Ilia)</li>
   <li><?php bugfix(46587); ?> (mt_rand() does not check that max is greater than min).
     (Ilia)</li>
   <li><?php bugfix(29085); ?> (bad default include_path on Windows). (Pierre)</li>
   <li><?php bugfix(25927); ?> (get_html_translation_table calls the ' &amp;#39; instead of
     &amp;#039;). (Gustavo)</li>
-</ul>    
+</ul>
 </li>
 <li>Zend engine:
 <ul>
   <li>Reverted fix for bug <?php bugl(51176); ?> (Static calling in non-static method behaves
     like $this-&gt;). (Felipe)</li>
-  <li>Changed deprecated ini options on startup from E_WARNING to E_DEPRECATED. 
+  <li>Changed deprecated ini options on startup from E_WARNING to E_DEPRECATED.
     (Kalle)</li>
   <li>Fixed NULL dereference in lex_scan on zend multibyte builds where the script
     had a flex incompatible encoding and there was no converter. (Gustavo)</li>
@@ -10121,7 +10121,7 @@ FILTER_FLAG_NO_PRIV_RANGE).</li>
 </li>
 <li>GMP extension:
 <ul>
-  <li><?php bugfix(52906); ?> (gmp_mod returns negative result when non-negative is 
+  <li><?php bugfix(52906); ?> (gmp_mod returns negative result when non-negative is
     expected). (Stas)</li>
   <li><?php bugfix(52849); ?> (GNU MP invalid version match). (Adam)</li>
 </ul>
@@ -10138,7 +10138,7 @@ FILTER_FLAG_NO_PRIV_RANGE).</li>
     headers). (Adam)</li>
   <li><?php bugfix(52599); ?> (iconv output handler outputs incorrect content type
     when flags are used). (Ilia)</li>
-  <li><?php bugfix(51250); ?> (iconv_mime_decode() does not ignore malformed Q-encoded 
+  <li><?php bugfix(51250); ?> (iconv_mime_decode() does not ignore malformed Q-encoded
     words). (Ilia)</li>
 </ul>
 </li>
@@ -10172,7 +10172,7 @@ FILTER_FLAG_NO_PRIV_RANGE).</li>
 </li>
 <li>MySQL extension:
 <ul>
-  <li><?php bugfix(52636); ?> (php_mysql_fetch_hash writes long value into int). 
+  <li><?php bugfix(52636); ?> (php_mysql_fetch_hash writes long value into int).
     (Kalle, rein at basefarm dot no)</li>
 </ul>
 </li>
@@ -10198,7 +10198,7 @@ FILTER_FLAG_NO_PRIV_RANGE).</li>
 <li>MySQLnd:
 <ul>
   <li><?php bugfix(52613); ?> (crash in mysqlnd after hitting memory limit). (Andrey)</li>
-</ul> 
+</ul>
 </li>
 <li>ODBC extension:
 <ul>
@@ -10313,7 +10313,7 @@ FILTER_FLAG_NO_PRIV_RANGE).</li>
   <li><?php bugfix(53144); ?> (Segfault in SplObjectStorage::removeAll()). (Felipe)</li>
   <li><?php bugfix(53071); ?> (SPLObjectStorage defeats gc_collect_cycles). (Gustavo)</li>
   <li><?php bugfix(52573); ?> (SplFileObject::fscanf Segmentation fault). (Felipe)</li>
-  <li><?php bugfix(51763); ?> (SplFileInfo::getType() does not work symbolic link 
+  <li><?php bugfix(51763); ?> (SplFileInfo::getType() does not work symbolic link
     and directory). (Pierre)</li>
   <li><?php bugfix(50481); ?> (Storing many SPLFixedArray in an array crashes). (Felipe)</li>
   <li><?php bugfix(50579); ?> (RegexIterator::REPLACE doesn't work). (Felipe)</li>
@@ -10890,8 +10890,8 @@ FILTER_FLAG_NO_PRIV_RANGE).</li>
 	<ul>
 		<li>Added "max_file_uploads" INI directive, which can be set to limit the number of file uploads per-request to 20 by default, to prevent possible DOS via temporary file exhaustion. (Ilia)</li>
 		<li>Added missing sanity checks around exif processing. (Ilia)</li>
-		<li>Fixed a safe_mode bypass in tempnam(). (Rasmus)</li>  
-		<li>Fixed a open_basedir bypass in posix_mkfifo(). (Rasmus)</li> 
+		<li>Fixed a safe_mode bypass in tempnam(). (Rasmus)</li>
+		<li>Fixed a open_basedir bypass in posix_mkfifo(). (Rasmus)</li>
 		<li><?php bugfix(50063); ?> (safe_mode_include_dir fails). (Johannes, christian at elmerot dot se)</li>
 	</ul>
 </li>
@@ -11927,7 +11927,7 @@ FILTER_FLAG_NO_PRIV_RANGE).</li>
 <li><?php bugfix(43510); ?> (stream_get_meta_data() does not return same mode as used in fopen). (Jani)</li>
 <li><?php bugfix(42434); ?> (ImageLine w/ antialias = 1px shorter). (wojjie at gmail dot com, Kalle)</li>
 <li><?php bugfix(28038); ?> (Sent incorrect RCPT TO commands to SMTP server) (Garrett)</li>
-	
+
 </ul>
 
 <!-- }}} --></section>

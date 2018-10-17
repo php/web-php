@@ -15,7 +15,7 @@
  * up and running on your localhost without needing to generate all this
  * yourself from master.
 */
- 
+
 
 
 
@@ -25,7 +25,7 @@
 
 
 $CONF_TEASER = array (
-  'conference' => 
+  'conference' =>
   array (
     'http://php.net/conferences/index.php#id2015-10-15-3' => 'PhpConference Brasil 2015',
     'http://php.net/conferences/index.php#id2015-10-15-1' => 'PHP Frameworks Day 2015',

@@ -19,15 +19,15 @@ site_header("The PHP mirrors problem and troubleshooting guide", array("current"
  Mirroring a PHP.net server requires a few specific settings and
  considerations, and this document provides a list of problems with possible
  solutions. The mirror tools check for these problems and automatically
- disable the problematic mirrors. The [<strong>?</strong>] link within each 
+ disable the problematic mirrors. The [<strong>?</strong>] link within each
  title may be used to test this mirror.
 </p>
 
 <a name="multiviews"></a>
 <h3>MultiViews are on [<a href="/functions">?</a>]</h3>
 <p>
- Because the 'Options' directive may be ignored in VirtualHost, a 
- solution is to move the MultiViews option into a specific 
+ Because the 'Options' directive may be ignored in VirtualHost, a
+ solution is to move the MultiViews option into a specific
  directory and disable it from there. For example:
 </p>
 <pre class="info">
@@ -35,14 +35,14 @@ site_header("The PHP mirrors problem and troubleshooting guide", array("current"
     &lt;Directory /path/to/phpweb&gt;
       Options -Indexes -MultiViews
     &lt;/Directory&gt;
-   
+
     DocumentRoot /path/to/phpweb
     ServerName ....
     ....
-  &lt;/VirtualHost&gt; 
+  &lt;/VirtualHost&gt;
 </pre>
 <p>
- The <a href="mirroring.php#settings">mirror settings</a> example also 
+ The <a href="mirroring.php#settings">mirror settings</a> example also
  demonstrates this use. See also the Apache documentation that describes
  <a href="http://httpd.apache.org/docs/content-negotiation.html">
  Content Negotiation</a>.
@@ -52,20 +52,20 @@ site_header("The PHP mirrors problem and troubleshooting guide", array("current"
 <h3>Improper Content-Type [<a href="/manual/en/faq.html.php">?</a>]</h3>
 <p>
  Some pages are returning incorrect <code>Content-Type</code> headers. For example,
- xx.php.net/manual/en/faq.html.php should be returning <code>text/html</code> 
- instead of <code>application/x-httpd-php</code>. See also the Apache 
- documentation describing 
- <a href="http://httpd.apache.org/docs/content-negotiation.html">Content 
- Negotiation</a>. This problem might be specific to 
+ xx.php.net/manual/en/faq.html.php should be returning <code>text/html</code>
+ instead of <code>application/x-httpd-php</code>. See also the Apache
+ documentation describing
+ <a href="http://httpd.apache.org/docs/content-negotiation.html">Content
+ Negotiation</a>. This problem might be specific to
  <a href="http://apache.lexa.ru/">Russian Apache</a>.
 </p>
 
 <a name="manual-redirect"></a>
 <h3>Manual redirects [<a href="/manual/">?</a>]</h3>
 <p>
- By default, Apache inserts an alias for <code>/manual/</code> in the configuration 
- and this causes problems for mirrors. So for example if you find that 
- the manuals are listed on the documentation page but all of the links 
+ By default, Apache inserts an alias for <code>/manual/</code> in the configuration
+ and this causes problems for mirrors. So for example if you find that
+ the manuals are listed on the documentation page but all of the links
  open up a search page, you probably suffer from this problem and must
  remove that alias.
 </p>
@@ -73,16 +73,16 @@ site_header("The PHP mirrors problem and troubleshooting guide", array("current"
 <a name="shortcuts"></a>
 <h3>Broken manual shortcuts [<a href="/echo">?</a>]</h3>
 <p>
- If the shortcut features [e.g. xx.php.net/echo] are not working, be sure 
- the manual files are really under <code>DOCUMENT_ROOT</code> and that the English 
- manual files are present. Also make sure that you have a correct 
+ If the shortcut features [e.g. xx.php.net/echo] are not working, be sure
+ the manual files are really under <code>DOCUMENT_ROOT</code> and that the English
+ manual files are present. Also make sure that you have a correct
  ErrorDocument setting.
 </p>
 
 <a name="invalid-data"></a>
 <h3>Invalid data types [<a href="/testing">?</a>]</h3>
 <p>
- Invalid data is being received, and this is probably caused by improper error 
+ Invalid data is being received, and this is probably caused by improper error
  handler settings. See the <a href="mirroring.php">mirror guidelines</a>
  for how to setup the ErrorDocument.
 </p>
@@ -98,31 +98,31 @@ site_header("The PHP mirrors problem and troubleshooting guide", array("current"
 <a name="msi"></a>
 <h3>Mishandling of .msi files</h3>
 <p>
- When improperly set, users are not given a "download this file" prompt 
- when attempting to download the PHP Installer (a .msi file). Your web 
- server configuration should be adjusted to force .msi files as 
- 'application/octet-stream'. In Apache this may be done by using: 
+ When improperly set, users are not given a "download this file" prompt
+ when attempting to download the PHP Installer (a .msi file). Your web
+ server configuration should be adjusted to force .msi files as
+ 'application/octet-stream'. In Apache this may be done by using:
  <code>AddType application/octet-stream .msi</code>
 </p>
 
 <a name="unlisted"></a>
 <h3>An unlisted mirror</h3>
 <p>
- If you have an official mirror server but it's not listed on 
- <a href="/mirrors.php">mirrors.php</a> or available from 
+ If you have an official mirror server but it's not listed on
+ <a href="/mirrors.php">mirrors.php</a> or available from
  <a href="/my.php">my.php</a> then your mirror most likely failed the mirror
  tests and suffers from one of the problems listed here.  Mirrors that fail
- the tests are automatically removed from the listing for our user's 
- convenience. We send out weekly notifications to all disabled mirror 
+ the tests are automatically removed from the listing for our user's
+ convenience. We send out weekly notifications to all disabled mirror
  maintainers, and to the mirrors@lists.php.net mailing list.
 </p>
 
 <a name="slow"></a>
 <h3>Slow response time</h3>
 <p>
- Although this test is currently a little unfair (it's only based from the 
- USA), the response time of the server exceeds five seconds. Please confirm 
- the speed of these mirrors and we'll likely adjust the testing procedure. 
+ Although this test is currently a little unfair (it's only based from the
+ USA), the response time of the server exceeds five seconds. Please confirm
+ the speed of these mirrors and we'll likely adjust the testing procedure.
  This test will be performed from multiple locations in the future.
 </p>
 
@@ -133,6 +133,6 @@ site_header("The PHP mirrors problem and troubleshooting guide", array("current"
  a test for that. The www.php.net box then connects to a third-party search engine.
 </p>
 
-<?php 
+<?php
 site_footer();
 

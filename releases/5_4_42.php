@@ -7,7 +7,7 @@ site_header("PHP 5.4.42 Release Announcement");
 <h1>PHP 5.4.42 Release Announcement</h1>
 
 <p>The PHP development team announces the immediate availability of PHP
-5.4.42. Six security-related issues in PHP were fixed in this release, 
+5.4.42. Six security-related issues in PHP were fixed in this release,
 as well as several security issues in bundled sqlite library (CVE-2015-3414, CVE-2015-3415, CVE-2015-3416).
 
 All PHP 5.4 users are encouraged to upgrade to this version.

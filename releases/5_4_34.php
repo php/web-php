@@ -8,11 +8,11 @@ site_header("PHP 5.4.34 Release Announcement");
 
 <p>The PHP development team announces the immediate availability of PHP
 5.4.34. 6 security-related bugs were fixed in this release, including fixes for
-CVE-2014-3668, CVE-2014-3669 and CVE-2014-3670. Also, a fix for OpenSSL which 
+CVE-2014-3668, CVE-2014-3669 and CVE-2014-3670. Also, a fix for OpenSSL which
 produced regressions was reverted.
 
 All PHP 5.4 users are encouraged to upgrade to this version.
-</p>        
+</p>
 
 <p>For source downloads of PHP 5.4.34 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
 Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.

@@ -145,10 +145,10 @@ function mirror_status($site = FALSE)
 function count_mirrors($country = FALSE)
 {
     global $MIRRORS;
-    
+
     // This is a non-identified country
     if ($country == "NA") { return 0; }
-    
+
     // Count only the ones in the same country
     $count = 0;
     foreach ($MIRRORS as $murl => $mirror) {
@@ -168,7 +168,7 @@ function mirror_redirect($absoluteURI)
     if (!preg_match("!^[a-z]+://!", $absoluteURI)) {
         $absoluteURI = substr($MYSITE, 0, -1) . $absoluteURI;
     }
-    
+
     // Do a redirection, if headers are not sent
     if (!headers_sent()) {
         header("Location: $absoluteURI");
@@ -285,7 +285,7 @@ function fetch_contents($url, $headers = false) {
     if(function_exists('curl_exec')) {
         $ch = curl_init();
         curl_setopt($ch, CURLOPT_URL, $url);
-        curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1); 
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
         curl_setopt($ch, CURLOPT_HEADER, (int)$headers);
         curl_setopt($ch, CURLOPT_USERAGENT, "php.net");
 
@@ -358,7 +358,7 @@ function fetch_contents($url, $headers = false) {
         fputs($fd,"User-Agent: php.net\r\n");
         fputs($fd,"Connection: close\r\n\r\n");
 
-        while($line = fgets($fd)) { 
+        while($line = fgets($fd)) {
             if($body) {
                 $data .= $line;
             } elseif(strlen($line)<=2) {
@@ -420,7 +420,7 @@ function fetch_header($url, $header) {
     return isset($headers[$header]) ? $headers[$header] : null;
 }
 
-function get_available_sqlites() {	
+function get_available_sqlites() {
 
 	$allsqlites = array(1 => 'sqlite', 2 => 'sqlite3', 4 => 'pdo_sqlite', 8 => 'pdo_sqlite2');
 	$avail      = 0;
@@ -532,7 +532,7 @@ if (!isset($MIRRORS[$MYSITE])) {
         // Try the hostname [without www]. In case the main name above is
         // not found, we try to find the mirror with the name provided by
         // the browser (in the Host HTTP header).
- 
+
         $msite = str_replace("www.", "", $msite);
 
         // If the name without www. exists, use it

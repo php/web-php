@@ -48,7 +48,7 @@ upgrade to this release.
 </ul>
 
 <p>
-For users upgrading from PHP 5.0 and PHP 5.1, an upgrade guide is available 
+For users upgrading from PHP 5.0 and PHP 5.1, an upgrade guide is available
 <a href="/UPDATE_5_2.txt">here</a>, detailing the changes between those releases
 and PHP 5.2.3.
 </p>

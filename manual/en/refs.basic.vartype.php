@@ -4,40 +4,40 @@ $TOC = array();
 $PARENTS = array();
 include_once dirname(__FILE__) ."/toc/funcref.inc";
 $setup = array (
-  'home' => 
+  'home' =>
   array (
     0 => 'index.php',
     1 => 'PHP Manual',
   ),
-  'head' => 
+  'head' =>
   array (
     0 => 'UTF-8',
     1 => 'en',
   ),
-  'this' => 
+  'this' =>
   array (
     0 => 'refs.basic.vartype.php',
     1 => 'Variable and Type Related Extensions',
   ),
-  'up' => 
+  'up' =>
   array (
     0 => 'funcref.php',
     1 => 'Function Reference',
   ),
-  'prev' => 
+  'prev' =>
   array (
     0 => 'changelog.strings.php',
     1 => 'Changelog',
   ),
-  'next' => 
+  'next' =>
   array (
     0 => 'book.array.php',
     1 => 'Arrays',
   ),
-  'alternatives' => 
+  'alternatives' =>
   array (
   ),
-  'extra_header_links' => 
+  'extra_header_links' =>
   array (
     'rel' => 'alternate',
     'href' => '/manual/en/feeds/refs.basic.vartype.atom',
@@ -52,54 +52,6 @@ manual_header();
 ?>
 <div id="refs.basic.vartype" class="set">
    <h1 class="title">Variable and Type Related Extensions</h1>
-   
-
-
-
-
-
-
-
-   
-
-
-
-
-
-
-   
-
-
-
-
-
-
-
-   
-
-
-
-
-
-
-
-   
-
-
-
-
-
-
-
-   
-
-
-
-
-
-
-
-   
 
 
 
@@ -108,7 +60,6 @@ manual_header();
 
 
 
-   
 
 
 
@@ -116,7 +67,6 @@ manual_header();
 
 
 
-   
 
 
 
@@ -124,7 +74,57 @@ manual_header();
 
 
 
-   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

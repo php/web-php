@@ -10,7 +10,7 @@ site_header("PHP 5.4.36 Release Announcement");
 5.4.36. Two security-related bugs were fixed in this release, including the fix for CVE-2014-8142.
 
 All PHP 5.4 users are encouraged to upgrade to this version.
-</p>        
+</p>
 
 <p>For source downloads of PHP 5.4.36 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
 Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.

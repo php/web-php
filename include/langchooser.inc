@@ -10,11 +10,11 @@
  After this script run, $LANG is set to the preferred
  language, or is the empty string, if no manual is
  available on the current mirror site.
-  
+
  $EXPL_LANG will also be set to the explicitly provided
  language, or will not exist if there are only implications
  on the preferred language.
- 
+
  $UA_LANGS will contain the user agent language settings
  parsed as an array. The language names are corrected for
  php.net usage in this array. This is just to present to
@@ -46,7 +46,7 @@ function language_choose_code()
 
     // Default values for languages
     $explicitly_specified = ''; $selected = '';
-    
+
     // Specified for the request (GET/POST parameter)
     if (!empty($_REQUEST['lang']) && is_string($_REQUEST['lang'])) {
         $explicitly_specified = language_add(htmlspecialchars($_REQUEST['lang'], ENT_QUOTES, 'UTF-8'), $languages);
@@ -57,25 +57,25 @@ function language_choose_code()
 
     // Specified in a shortcut URL (eg. /en/echo or /pt_br/echo)
     if (preg_match("!^/(\\w{2}(_\\w{2})?)/!", htmlspecialchars($_SERVER['REQUEST_URI'],ENT_QUOTES, 'UTF-8'), $flang)) {
-        
+
         // Put language into preference list
         $rlang = language_add($flang[1], $languages);
-        
+
         // Set explicity specified language
         if (empty($explicitly_specified)) {
             $explicitly_specified = $rlang;
         }
-        
+
         // Drop out langauge specification from URL, as this is already handled
         $_SERVER['STRIPPED_URI'] = preg_replace(
             "!^/$flang[1]/!", "/", htmlspecialchars($_SERVER['REQUEST_URI'], ENT_QUOTES, 'UTF-8')
         );
-    
+
     }
 
     // Specified in a manual URL (eg. manual/en/ or manual/pt_br/)
     if (preg_match("!^/manual/(\\w{2}(_\\w{2})?)(/|$)!", htmlspecialchars($_SERVER['REQUEST_URI'], ENT_QUOTES, 'UTF-8'), $flang)) {
-        
+
         $flang = language_add($flang[1], $languages);
 
         // Set explicity specified language
@@ -86,12 +86,12 @@ function language_choose_code()
         // Set the language in a cookie for a year
         mirror_setcookie("LAST_LANG", $flang, 60*60*24*365);
     }
-    
+
     // Honor the users own language setting (if available)
     if (myphpnet_language()) {
         language_add(myphpnet_language(), $languages);
     }
-    
+
     // Put the last selected language in the priority order (if available)
     if (isset($_COOKIE['LAST_LANG'])) {
         language_add($_COOKIE['LAST_LANG'], $languages);
@@ -124,7 +124,7 @@ function language_choose_code()
 
     // For all languages found in the accept-language
     foreach ($browser_langs as $langdata) {
-    
+
         // Translation table for accept-language codes and phpdoc codes
         switch($langdata[0]) {
             case "pt-br" : $langdata[0] = 'pt_br'; break;
@@ -132,14 +132,14 @@ function language_choose_code()
             case "zh-hk" : $langdata[0] = 'hk'; break;
             case "zh-tw" : $langdata[0] = 'tw'; break;
         }
-        
+
         // We do not support flavors of languages (except the ones above)
         // This is not in conformance to the RFC, but it here for user
         // convinience reasons
         if (preg_match("!^(.+)-!", $langdata[0], $match)) {
             $langdata[0] = $match[1];
         }
-        
+
         // Add language to priority order
         $parsed_langs[] = language_add($langdata[0], $languages);
     }
@@ -163,7 +163,7 @@ function language_choose_code()
     }
 */
     $selected = $languages[0];
-    
+
     // Return with all found data
     return array($selected, $explicitly_specified, $parsed_langs);
 }
@@ -187,7 +187,7 @@ function language_add($langcode, &$langs)
         && !isset($INACTIVE_ONLINE_LANGUAGES[$langcode])) {
         $langs[] = $langcode;
     }
-    
+
     // Return with language code
     return $langcode;
 }

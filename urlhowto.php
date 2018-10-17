@@ -67,7 +67,7 @@ function a($href) {
 
 <p>
  If your URL can't be matched with a page name, a manual page
- is searched for your query. This is the case for the 
+ is searched for your query. This is the case for the
  <kbd><?php echo $MYSITE; ?>preg_match</kbd> URL. The following pages
  are searched for in the manual:</p>
 <ul>
@@ -127,7 +127,7 @@ function a($href) {
 </ul>
 
 <p>
- This kind of URL will bring up the manual page in 
+ This kind of URL will bring up the manual page in
  <a href="/my.php">your preferred language</a>. You can
  always override this setting by explicitly providing
  the language you want to get to. You can embed the language

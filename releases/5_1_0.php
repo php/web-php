@@ -57,7 +57,7 @@ In addition to new features, this release includes a number of important securit
 </p>
 
 <p>
-All users of PHP 5.0 and early adopters of 5.1 betas are strongly advised to upgrade to 5.1 as soon as 
+All users of PHP 5.0 and early adopters of 5.1 betas are strongly advised to upgrade to 5.1 as soon as
 possible. Furthermore, 5.1 branch obsoletes the 5.0 PHP branch.
 </p>
 

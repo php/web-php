@@ -87,7 +87,7 @@ class ManualNotesSorter {
 
 
     /*
-     * Not sure why, but using `$b['sort'] - $a['sort']` does not seem to 
+     * Not sure why, but using `$b['sort'] - $a['sort']` does not seem to
      * work properly.
      */
     private function factorSort($a, $b) {
@@ -109,7 +109,7 @@ class ManualNotesSorter {
         $note = array_shift($notes);
         $note['score'] = $net = ($note['votes']['up'] - $note['votes']['down']);
         $note['total'] = $totalVotes = ($note['votes']['up'] + $note['votes']['down']);
-        $note['rating'] = $totalVotes > 0 
+        $note['rating'] = $totalVotes > 0
             ? $note['votes']['up'] / $totalVotes
             : .5;
 
@@ -121,7 +121,7 @@ class ManualNotesSorter {
         foreach ($notes as &$note) {
             $note['score'] = $net = ($note['votes']['up'] - $note['votes']['down']);
             $note['total'] = $totalVotes = ($note['votes']['up'] + $note['votes']['down']);
-            $note['rating'] = $totalVotes > 0 
+            $note['rating'] = $totalVotes > 0
                 ? $note['votes']['up'] / $totalVotes
                 : .5;
             $age = $note['xwhen'];
@@ -241,7 +241,7 @@ function manual_note_display($date, $name, $text, $id, $votes = array('up'=>0,'d
     $datestr = relTime(new DateTime("@{$date}"));
     $fdatestr = date("Y-m-d h:i", $date);
     $text    = clean_note($text);
-    
+
     // Calculate note rating by up/down votes
     $vote = $votes['up'] - $votes['down'];
     $p = floor(($votes['up'] / (($votes['up'] + $votes['down']) ? $votes['up'] + $votes['down'] : 1)) * 100);
@@ -319,17 +319,17 @@ function manual_navigation_breadcrumbs(array $setup) {
         $menu[] = array(
             "title" => $parent[1],
             "link"  => $parent[0],
-        );  
-    }   
+        );
+    }
 
     // The index manual page has no parent..
     if ($setup["up"][0]) {
         $last_item = array(
             "title" => $setup["up"][1],
             "link"  => $setup["up"][0],
-        );  
+        );
         $menu[] = $last_item;
-    } 
+    }
     return $menu;
 }
 
@@ -340,7 +340,7 @@ function manual_navigation_related(array $setup) {
             "title" => manual_navigation_methodname($entry[1]),
             "link"  => $entry[0],
             "current" => $setup["this"][0] == $entry[0],
-        );      
+        );
     }
 
     // The index manual page has no parent..
@@ -385,7 +385,7 @@ function manual_setup($setup) {
     global $ACTIVE_ONLINE_LANGUAGES;
 
     //TODO: get rid of this hack to get the related items into manual_footer
-    global $__RELATED; 
+    global $__RELATED;
 
     if (!isset($setup["toc_deprecated"])) {
         $setup["toc_deprecated"] = array();
@@ -436,7 +436,7 @@ function manual_setup($setup) {
         "cache" => $lastmod,
     );
     site_header($setup["this"][1] . " - Manual ", $config);
-    
+
     $id = substr($setup['this'][0], 0, -4);
     $language_chooser = 'manual_language_chooser';
     echo <<<PAGE_TOOLS

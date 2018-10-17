@@ -4,7 +4,7 @@ include_once $_SERVER['DOCUMENT_ROOT'] . '/include/prepend.inc';
 site_header("PHP 7.2.11 Release Announcement");
 ?>
 <h1>PHP 7.2.11 Release Announcement</h1>
-     
+
 <p>The PHP development team announces the immediate availability of PHP 7.2.11.
 This is a bugfix release.</p>
 

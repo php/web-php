@@ -30,11 +30,11 @@ function load_check()
         header("Location: $user_mirror" . substr($_SERVER['REQUEST_URI'], 1));
         exit;
     }
-    
+
     $close_mirrors = array();
     $other_mirrors = array();
 
-    // Find potential close mirrors 
+    // Find potential close mirrors
     foreach ($MIRRORS as $murl => $mirror) {
         if ($murl != 'http://php.net/' && $murl != 'http://www.php.net/' && $mirror[7] == MIRROR_OK && $mirror[4] != MIRROR_SPECIAL) {
             if ($mirror[0] == $COUNTRY) {
@@ -76,7 +76,7 @@ function load_toobusy()
 function load_random_redirect($mirrors)
 {
     global $MYSITE;
-    
+
     $murl = $mirrors[array_rand($mirrors)];
     if ($murl != $MYSITE) {
         header("Location: $murl" . substr($_SERVER['REQUEST_URI'], 1));

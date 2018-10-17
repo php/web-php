@@ -9,28 +9,28 @@
     ?>
 <?php if (!empty($config['related_menu']) || !empty($config['related_menu_deprecated'])): ?>
     <aside class='layout-menu'>
-    
+
         <ul class='parent-menu-list'>
             <?php if (!empty($config['related_menu'])): ?>
             <?php foreach($config['related_menu'] as $section): ?>
             <li>
                 <a href="<?php echo $section['link']; ?>"><?php echo $section['title']; ?></a>
-    
+
                 <?php if ($section['children']): ?>
                     <ul class='child-menu-list'>
-    
+
                         <?php
                         foreach($section['children'] as $item):
                             $cleanTitle = $item['title'];
-                        ?>  
+                        ?>
                         <li class="<?php echo ($item['current']) ? 'current' : ''; ?>">
                             <a href="<?php echo $item['link']; ?>" title="<?php echo $cleanTitle; ?>"><?php echo $cleanTitle; ?></a>
                         </li>
                         <?php endforeach; ?>
-    
+
                     </ul>
                 <?php endif; ?>
-    
+
             </li>
             <?php endforeach; ?>
             <?php endif; ?>
@@ -58,7 +58,7 @@
 <?php endif; ?>
 
   </div><!-- layout -->
-         
+
   <footer>
     <div class="container footer-content">
       <div class="row-fluid">

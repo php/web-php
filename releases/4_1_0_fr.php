@@ -84,7 +84,7 @@ if (authenticate_user()) {
  Peut &ecirc;tre exploitable de la mani&egrave;re suivante, des utilisateurs
  distants peuvent simplement passer 'authenticated' comme variable
  d'un formulaire et m&ecirc;me si authenticate_user() retourne false,
- $authentiticated va actuellement contenir true. Ce"la semble etre un 
+ $authentiticated va actuellement contenir true. Ce"la semble etre un
  exemple tr&egrave;s simple, mais en r&eacute;alit&eacute;, bien des applications PHP
  sont exploitable par ce dysfonctionnement.
 </p>
@@ -144,7 +144,7 @@ function example1()
  durant la migration de vieux code vers le nouveau, et nous sommes s&ucirc;rs
  que cela vous simplifiera l'&eacute;criture de nouveaux codes.
  Une autre astuce est que le fait de cr&eacute;er de nouvelles entr&eacute;es dans
- $_SESSION va automatiquement les enregistrer comme variables de session, 
+ $_SESSION va automatiquement les enregistrer comme variables de session,
  comme si vous auriez appel&eacute; session_register(). Cette astuce est limit&eacute;e
  uniquement au module de gestion de session - par exemple, cr&eacute;er de
  nouvelles entr&eacute;s dans $_ENV ne va <strong>pas</strong> ex&eacute;cuter un put_env()
@@ -160,7 +160,7 @@ function example1()
  qu'ils devraient profiter des nouvelles fonctionnalit&eacute;s fournies
  avec PHP 4.1.0 qui font que cette transition est plus ais&eacute;e.
 </p>
- 
+
 <p>
  Dans la prochaine version "semi majeure" de PHP, de nouvelles installations
  de PHP devrait avoir register_globals mis &agrave; Off par d&eacute;faut. Ne vous en
@@ -174,7 +174,7 @@ function example1()
 <p>
  Note: Certains de ces tableaux ont d'anciens noms, exemple : $HTTP_GET_VARS.
  Ces noms fonctionnent toujours, mais nous encourageons les utilisateurs
- de migrer vers le nouveaux noms, plus courts et qui sont des versions 
+ de migrer vers le nouveaux noms, plus courts et qui sont des versions
  automatiquement globales.
 </p>
 

@@ -23,7 +23,7 @@ site_header("Documentation", array("current" => "docs"));
  Note, that many languages are just under translation, and
  the untranslated parts are still in English. Also some translated
  parts might be outdated. The translation teams are open to
- contributions. 
+ contributions.
 </p>
 
  <div class="warning">

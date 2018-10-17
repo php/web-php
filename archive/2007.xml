@@ -53,20 +53,20 @@ Visit <a href="http://www.prophp.com.br/phpconference.php">the website</a> for m
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml">
         <p>
-The PHP documentation team is pleased to announce the initial release of 
-the new build system that generates the PHP Manual. Written in PHP, PhD 
-(<em>[PH]P based [D]ocBook renderer</em>) builds are now available for 
-viewing at <a href="http://docs.php.net/">docs.php.net</a>. Everyone is 
-encouraged to test and use this system so 
-that <a href="http://bugs.php.net/">bugs</a> will be found and squashed. 
+The PHP documentation team is pleased to announce the initial release of
+the new build system that generates the PHP Manual. Written in PHP, PhD
+(<em>[PH]P based [D]ocBook renderer</em>) builds are now available for
+viewing at <a href="http://docs.php.net/">docs.php.net</a>. Everyone is
+encouraged to test and use this system so
+that <a href="http://bugs.php.net/">bugs</a> will be found and squashed.
       </p>
         <p>
-Once the new build system is stable, expect additional changes to the PHP 
-manual that will include an improved navigation system and styling for OOP 
-documentation. 
+Once the new build system is stable, expect additional changes to the PHP
+manual that will include an improved navigation system and styling for OOP
+documentation.
       </p>
         <p>
-Feel free to set this developmental mirror as your default by 
+Feel free to set this developmental mirror as your default by
 using <a href="/my.php">my.php</a>.
       </p>
       </div>
@@ -85,10 +85,10 @@ using <a href="/my.php">my.php</a>.
       <div xmlns="http://www.w3.org/1999/xhtml">
         <p>
 The PHP development team would like to announce the immediate
-<a href="/downloads.php#v5">availability of PHP 5.2.4</a>. 
-This release focuses on improving the stability of the PHP 5.2.X 
-branch with over 120 various bug fixes in addition to resolving 
-several low priority security bugs. All users of PHP are encouraged 
+<a href="/downloads.php#v5">availability of PHP 5.2.4</a>.
+This release focuses on improving the stability of the PHP 5.2.X
+branch with over 120 various bug fixes in addition to resolving
+several low priority security bugs. All users of PHP are encouraged
 to upgrade to this release.
 </p>
         <p>
@@ -156,7 +156,7 @@ Please see <a href="http://www.dcphpconference.com ">the website</a> for more de
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml">
         <p>
-The <a href="http://www.afup.org/">French AFUP</a> association is proud 
+The <a href="http://www.afup.org/">French AFUP</a> association is proud
 to announce the <a href="http://www.afup.org/pages/forumphp2007/">sixth annual PHP
 meeting in Paris</a>, on November 21st and 22nd, 2007. Developers and
 managers will gather to meet Rasmus Lerdorf, Andrei Zmievski and other
@@ -178,15 +178,15 @@ enterprise solutions and advanced techniques.
     <php:newsImage link="http://conf.phpquebec.com/en" title="PHP Québec 2008">phpquebec.2008.png</php:newsImage>
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml">
-        <p>PHP Quebec is pleased to announce the sixth edition of the <a href="http://conf.phpquebec.com/en">PHP Quebec Conference</a>. The Conference 
-will take place in Montreal, Canada between March 12th and 14th, 2008. We are 
-looking for speakers willing to share their expertise with Canadian and 
+        <p>PHP Quebec is pleased to announce the sixth edition of the <a href="http://conf.phpquebec.com/en">PHP Quebec Conference</a>. The Conference
+will take place in Montreal, Canada between March 12th and 14th, 2008. We are
+looking for speakers willing to share their expertise with Canadian and
 United States PHP professionals.
 </p>
         <p>
-The Conference features the PHPLab, where speakers and visitors will find 
-solutions to actual business problems. The two days of technical talks will 
-be dedicated to advanced software development techniques with PHP5 and PHP6, 
+The Conference features the PHPLab, where speakers and visitors will find
+solutions to actual business problems. The two days of technical talks will
+be dedicated to advanced software development techniques with PHP5 and PHP6,
 XML, web services, databases, etc.
 </p>
         <p>
@@ -212,7 +212,7 @@ For more information, visit the website: <a href="http://conf.phpquebec.com">htt
 php|architect is proud to announce <a href="http://works.phparch.com">php|works 2007</a>, which will take place in Atlanta Georgia (USA) on September 12-14, 2007.
 </p>
         <p>
-This year, the conference once again promises to be an excellent event for PHP developers of all levels, with <a href="http://works.phparch.com/c/schedule">talks from top PHP experts</a> such as Derick Rethans, Chris Shiflett, Andrei Zmievski, Sara Golemon, and many more (and plenty of new faces, as well). 
+This year, the conference once again promises to be an excellent event for PHP developers of all levels, with <a href="http://works.phparch.com/c/schedule">talks from top PHP experts</a> such as Derick Rethans, Chris Shiflett, Andrei Zmievski, Sara Golemon, and many more (and plenty of new faces, as well).
 </p>
       </div>
     </content>
@@ -238,7 +238,7 @@ This year, the conference once again promises to be an excellent event for PHP d
   continue until the end of this year only. After 2007-12-31 there will be no
   more releases of PHP 4.4. We will continue to make critical security fixes
   available on a case-by-case basis until 2008-08-08.  Please use the rest of
-  this year to make your application suitable to run on PHP 5. 
+  this year to make your application suitable to run on PHP 5.
 </p>
         <p>
   For documentation on migration for PHP 4 to PHP 5, we would like to point you
@@ -397,8 +397,8 @@ English and German.
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml">
         <p>
-The PHP development team would like to announce the immediate <a href="/downloads.php#v5">availability of PHP 5.2.3</a>. 
-This release continues to improve the security and the stability of 
+The PHP development team would like to announce the immediate <a href="/downloads.php#v5">availability of PHP 5.2.3</a>.
+This release continues to improve the security and the stability of
 the 5.X branch as well as addressing two regressions introduced
 by the previous 5.2 releases. These regressions relate to the timeout
 handling over non-blocking SSL connections and the lack of
@@ -570,7 +570,7 @@ three days of education, learning and networking - plus an additional
 tutorial day.  The 2007 conference will feature over 40 sessions, an
 exhibit hall featuring leading companies such as Adobe, IBM, PayPal and
 Zend, an UnConference area to stimulate impromptu discussions, and
-networking opportunities galore. 
+networking opportunities galore.
 </p>
         <p>
 ZendCon2007 will feature something for everyone – from novice to
@@ -581,7 +581,7 @@ business-critical PHP.  Meet the Zend development teams.  Learn more
 about Zend open source projects.
 </p>
         <p>
-ZendCon 2007 promises to be the largest gathering dedicated to PHP. 
+ZendCon 2007 promises to be the largest gathering dedicated to PHP.
 Plan to attend ZendCon 2007 and join the PHP community to network and
 learn from the best PHP minds from around the world.
 </p>
@@ -603,7 +603,7 @@ For more information please see <a href="http://www.zendcon.com/">http://www.zen
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml">
         <p>
-    The PHP team is once again proud to participate in the 
+    The PHP team is once again proud to participate in the
     <a href="http://code.google.com/soc/">Google Summer of Code</a>.
     Seven students will "flip bits instead of burgers" this summer:
 </p>
@@ -828,22 +828,22 @@ posted in the <a href="/downloads.php">download section</a>.</p>
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml">
         <p>
-PHP Québec is pleased to announce the <a href="http://conf.phpquebec.com/en/conf2007/">fifth edition of the PHP Québec Conference</a>. 
-The conference will take place in Montréal, Canada on March 14-15-16th 2007. It features 2 days of 
-<a href="http://conf.phpquebec.com/en/conf2007/horaire">technicals talks</a> and 
-an additional day of <a href="http://conf.phpquebec.com/en/conf2007/ateliers">workshop</a>. 
-Among the  speakers, the well know PHP experts such has:  Rasmus Lerdorf, Andrei 
+PHP Québec is pleased to announce the <a href="http://conf.phpquebec.com/en/conf2007/">fifth edition of the PHP Québec Conference</a>.
+The conference will take place in Montréal, Canada on March 14-15-16th 2007. It features 2 days of
+<a href="http://conf.phpquebec.com/en/conf2007/horaire">technicals talks</a> and
+an additional day of <a href="http://conf.phpquebec.com/en/conf2007/ateliers">workshop</a>.
+Among the  speakers, the well know PHP experts such has:  Rasmus Lerdorf, Andrei
 Zmievski, Derick Rethans, Ilia Alshanetsky, John Coggeshall, Damien Séguy, and many more.
 </p>
         <p>
-The conference has three distinct tracks : Advanced Techniques, Data 
-Availability, PHP: Beyound Theory. With over 35 sessions and workshops, the 
-PHP Québec Conference is great opportunity to learn about the latest 
-development and professional techniques to help you build high quality PHP 
+The conference has three distinct tracks : Advanced Techniques, Data
+Availability, PHP: Beyound Theory. With over 35 sessions and workshops, the
+PHP Québec Conference is great opportunity to learn about the latest
+development and professional techniques to help you build high quality PHP
 software and meet with PHP.
 </p>
         <p>
-Special prices are available for all Open Source community members and major 
+Special prices are available for all Open Source community members and major
 contributors.
 </p>
       </div>
@@ -904,15 +904,15 @@ in Portland, Oregon, and has a PHP track as usual. The Call for Papers closes Mo
       <div xmlns="http://www.w3.org/1999/xhtml">
         <p>
 The International PHP Conference 2007 Spring Edition will happen from May, 21st to 23rd 2007
-in Stuttgart. The Call for Papers has just been opened. You can find more information at 
+in Stuttgart. The Call for Papers has just been opened. You can find more information at
 <a href="http://phpconference.com/" title="International PHP Conference 2007 Spring Edition">http://phpconference.com/</a>.
-There's a pre-conference day on 21st of May with full day Power Workshops and 
-a Main Conference from 22nd to 23rd of May with 1 hour sessions. 
+There's a pre-conference day on 21st of May with full day Power Workshops and
+a Main Conference from 22nd to 23rd of May with 1 hour sessions.
 </p>
         <p>
-Please submit your session proposals at 
+Please submit your session proposals at
 <a href="http://phpconference.com/input" title="International PHP Conference 2007 Spring Edition - Call for Paper">http://phpconference.com/input</a>.
-They will be voted by the Chair board consisting of Björn Schotte (Head of Chair), 
+They will be voted by the Chair board consisting of Björn Schotte (Head of Chair),
 Christopher Kunz and Sebastian Meyen. The language for talks is both English and German.
 </p>
       </div>

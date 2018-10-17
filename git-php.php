@@ -290,7 +290,7 @@ EOT;
  through the <a href="http://pear.php.net/pepr/">PEPR system</a> on
  <a href="http://pear.php.net/">the PEAR website</a>. If you have a new PECL
  extension you wish to contribute, bring it up on the appropriate
- <a href="http://pecl.php.net/support.php">PECL mailing list</a> first. 
+ <a href="http://pecl.php.net/support.php">PECL mailing list</a> first.
 </p>
 
 <p>
@@ -325,8 +325,8 @@ EOT;
 </p>
 
 <p>
- If you get no resposne to an account request after a while, remember this is a 
- manual process, then please contact the relevant mailing list that belongs to 
+ If you get no resposne to an account request after a while, remember this is a
+ manual process, then please contact the relevant mailing list that belongs to
  the part of PHP you requested access to.
 </p>
 
@@ -344,12 +344,12 @@ EOT;
  mailing list.
 </p>
 <p class="warn">
- Please do <strong>NOT</strong> submit account requests if you have not previously 
+ Please do <strong>NOT</strong> submit account requests if you have not previously
  contributed any work such as patches to PHP.
 </p>
 <p class="warn">
- If someone told you to fill in an account request because you are a developer of 
- a certain extension, for example a <a href="http://pecl.php.net/">PECL</a> extension, 
+ If someone told you to fill in an account request because you are a developer of
+ a certain extension, for example a <a href="http://pecl.php.net/">PECL</a> extension,
  then please state who told you to submit this request in the purpose text field below.
 </p>
 
@@ -373,14 +373,14 @@ EOT;
  <th class="subr">For what purpose do you require a Git account:<br>
  (check all that apply)</th>
  <td>
-<?php 
+<?php
 $purposes = array("Learning PHP", "Coding in PHP", "Reading the PHP source",
 	"Using PHP extensions", "Creating experimental PHP extensions",
 	"Submitting a patch to PHP", "Adding notes to the documentation",
 	"Writing web pages with PHP", "Setting up a php.net mirror site");
 
 foreach ($purposes as $i => $p) { ?>
-  <input type="checkbox" name="purpose[<?php echo $i?>]" value="1" 
+  <input type="checkbox" name="purpose[<?php echo $i?>]" value="1"
 	checked="checked" id="vcs-purpose-<?php echo $i; ?>"> <label for="vcs-purpose-<?php echo $i; ?>"><?php echo $p; ?></label><br>
 <?php } ?>
  </td>

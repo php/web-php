@@ -6,7 +6,7 @@ site_header("PHP 5.3.19 Release Announcement");
 
 <h1>PHP 5.3.19 Release Announcement</h1>
 
-<p>The PHP development team announces the immediate availability of PHP 
+<p>The PHP development team announces the immediate availability of PHP
 5.3.19. About 10 bugs were fixed. All users of PHP are encouraged to upgrade to
 PHP 5.4.9. Alternatively, PHP 5.3.19 is recommended for those wishing to remain
 on the 5.3 series.</p>

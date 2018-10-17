@@ -17,7 +17,7 @@ if (empty($_POST['redirect']) && isset($_GET['redirect'])) {
     $_POST['redirect'] = $_GET['redirect'];
 }
 
-// Decide on whether all vars are present for processing 
+// Decide on whether all vars are present for processing
 $process = TRUE;
 $needed_vars = array('note', 'user', 'sect', 'redirect', 'action', 'func', 'arga', 'argb', 'answer');
 foreach ($needed_vars as $varname) {
@@ -30,21 +30,21 @@ foreach ($needed_vars as $varname) {
 // We have a submitted form to process
 if ($process) {
 
-    // Clean off leading and trailing whitespace 
+    // Clean off leading and trailing whitespace
     $user = trim($_POST['user']);
     $note = trim($_POST['note']);
-    
+
     // Convert all line-endings to unix format,
     // and don't allow out-of-control blank lines
     $note = str_replace("\r\n", "\n", $note);
     $note = str_replace("\r", "\n", $note);
     $note = preg_replace("/\n{2,}/", "\n\n", $note);
-    
+
     // Don't pass through example username
     if ($user == "user@example.com") {
         $user = "Anonymous";
     }
-    
+
     // We don't know of any error now
     $error = FALSE;
 
@@ -75,7 +75,7 @@ if ($process) {
 
     // Check if any line is too long
     else {
-    
+
         // Split the note by whitespace, and check length
         foreach (preg_split("/\\s+/", $note) as $chunk) {
             if (strlen($chunk) > 120) {
@@ -124,24 +124,24 @@ if ($process) {
         }
 
         // There was no error returned
-        else { 
+        else {
             echo '<p>Your submission was successful -- thanks for contributing! Note ',
                  'that it will not show up for up to a few hours on some of the <a ',
                  'href="/mirrors.php">mirrors</a>, but it will find its way to all of ',
                  'our mirrors in due time.</p>';
         }
-        
+
         // Print out common footer, and end page
         site_footer();
         exit();
     }
-    
+
     // There was an error, or a preview is needed
     else {
 
         // If there was an error, print out
         if ($error) { echo "<p class=\"formerror\">$error</p>\n"; }
-        
+
         // Print out preview of note
         echo '<p>This is what your entry will look like, roughly:</p>';
         echo '<div id="usernotes">';
@@ -151,7 +151,7 @@ if ($process) {
 }
 
 // Any needed variable was missing => display instructions
-else { 
+else {
 ?>
 
 <section id="add-note-usernotes" class="clearfix">
@@ -164,7 +164,7 @@ else {
         users ignoring this important section.
       </li>
       <li>
-        <em>Good notes rise to the top</em> as they are voted up; this makes 
+        <em>Good notes rise to the top</em> as they are voted up; this makes
         them easier to find.
       </li>
       <li>
@@ -296,7 +296,7 @@ else {
   <section>
     <h3>Email address conversion</h3>
     <p>
-      We have a simple conversion in place to convert the @ signs and dots in your 
+      We have a simple conversion in place to convert the @ signs and dots in your
       address. You may still want to include a part in the email address
       that is understandable only by humans as our conversion can be performed in
       the opposite direction. You may submit your email address as

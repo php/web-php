@@ -9,9 +9,9 @@
 function get_actual_download_file($file)
 {
     // Could be a normal download or a manual download file
-    $possible_files = array($file => TRUE, "manual/$file" => FALSE); 
-    
-    // Find out what is the exact file requested 
+    $possible_files = array($file => TRUE, "manual/$file" => FALSE);
+
+    // Find out what is the exact file requested
     $found = FALSE;
     foreach ($possible_files as $name => $log) {
         if (@file_exists($_SERVER['DOCUMENT_ROOT'] . '/distributions/' . $name)) {
@@ -26,7 +26,7 @@ function get_actual_download_file($file)
 function download_file($mirror, $file)
 {
     global $MYSITE;
-    
+
     // Redirect to the particular file
     if (!headers_sent()) {
         status_header(302);

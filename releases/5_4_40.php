@@ -7,7 +7,7 @@ site_header("PHP 5.4.40 Release Announcement");
 <h1>PHP 5.4.40 Release Announcement</h1>
 
 <p>The PHP development team announces the immediate availability of PHP
-5.4.40. 14 security-related bugs were fixed in this release, including 
+5.4.40. 14 security-related bugs were fixed in this release, including
 CVE-2014-9709, CVE-2015-2301, CVE-2015-2783, CVE-2015-1352.
 
 All PHP 5.4 users are encouraged to upgrade to this version.

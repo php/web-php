@@ -35,7 +35,7 @@
      </ul>
 
      <p>
-      For more information on the new features and other changes, you can read the 
+      For more information on the new features and other changes, you can read the
       <a href="https://github.com/php/php-src/blob/php-7.0.0alpha1/NEWS">NEWS file</a>, or the
       <a href="https://github.com/php/php-src/blob/php-7.0.0alpha1/UPGRADING">UPGRADING file</a>
       for a complete list of upgrading notes. These files can also be found in the release archive.

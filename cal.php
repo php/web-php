@@ -47,13 +47,13 @@ if ($id) {
 
 // Year, month and day specified, display a daily view
 elseif ($cy && $cm && $cd) {
-    
+
     // Check if date is valid
     if (checkdate($cm,$cd,$cy)) {
-        
+
         // Date integer for that day
         $date = mktime(0, 0, 1, $cm, $cd, $cy);
-        
+
         // Try to load events for that day, and display them all
         if ($events = load_events($date)) {
             $site_header_config = array('classes' => 'calendar calendar-day') + $site_header_config;
@@ -65,13 +65,13 @@ elseif ($cy && $cm && $cd) {
             }
             $begun = TRUE;
         }
-      
+
         // Unable to load events for that day
         else {
             $errors[] = "There are no events for the specified date (".date("F j, Y",$date).").";
         }
     }
-    
+
     // Wrong date specified
     else {
         $errors[] = "The specified date (".htmlentities("$cy/$cm/$cd", ENT_QUOTES | ENT_IGNORE, 'UTF-8').") was not valid.";
@@ -146,7 +146,7 @@ if (valid_year(date("Y", $nm))) {
 
 // Print out navigation links for previous and next month
 echo '<br><table id="calnav" width="100%" border="0" cellspacing="0" cellpadding="3">',
-     "\n<tr>", '<td align="left" width="33%">', $prev_link, '</td>', 
+     "\n<tr>", '<td align="left" width="33%">', $prev_link, '</td>',
      '<td align="center" width="33%">', strftime('<b>%B, %Y</b></td>', $bom),
      '<td align="right" width="33%">', $next_link, "</td></tr>\n</table>\n";
 
@@ -167,13 +167,13 @@ for ($days = $i = date("w",$bom); $i > 0; $i--) {
 
 // Print out all the days in this month
 for ($i = 1; $i <= date("t",$bom); $i++) {
-    
+
     // Print out day number and all events for the day
     echo '<td><a class="day" href="/cal.php', "?cm=$cm&amp;cd=$i&amp;cy=$cy",
          '">',$i,'</a>';
     display_events_for_day(date("Y-m-",$bom).sprintf("%02d",$i), $events);
     echo '</td>';
-    
+
     // Break HTML table row if at end of week
     if (++$days % 7 == 0) echo "</tr>\n<tr>";
 }
@@ -195,14 +195,14 @@ function date_for_recur($recur, $day, $bom, $eom)
 {
 
     // $day == 1 == 'Sunday' == date("w",'some sunday')+1
-  
+
     // ${recur}th $day of the month
     if ($recur > 0) {
         $bomd = date("w", $bom) + 1;
         $days = (($day - $bomd + 7) % 7) + (($recur - 1) * 7);
         return mktime(0,0,1, date("m",$bom), $days + 1, date("Y",$bom));
     }
-    
+
     // ${recur}th to last $day of the month
     else {
         $eomd = date("w",$eom) + 1;
@@ -216,10 +216,10 @@ function display_events_for_day($day, $events)
 {
     // For preservation of state in the links
     global $cm, $cy, $COUNTRY;
-    
+
     // For all events, try to find the events for this day
     foreach ($events as $event) {
-        
+
         // Multiday event, which still lasts, or the event starts today
         if (($event['type'] == 2 && $event['start'] <= $day && $event['end'] >= $day)
          || ($event['start'] == $day)) {
@@ -241,12 +241,12 @@ function load_event($id)
     // Open events CSV file, return on error
     $fp = @fopen("backend/events.csv",'r');
     if (!$fp) { return FALSE; }
-    
+
     // Read as we can, event by event
     while (!feof($fp)) {
-      
+
       $event = read_event($fp);
-      
+
       // Return with the event, if it's ID is the one
       // we search for (also close the file)
       if ($event !== FALSE && $event['id'] == $id) {
@@ -254,7 +254,7 @@ function load_event($id)
         return $event;
       }
     }
-    
+
     // Close file, and return sign of failure
     fclose($fp);
     return FALSE;
@@ -269,28 +269,28 @@ function load_events($from, $whole_month = FALSE)
     $bom = mktime(0, 0, 1, date("m",$from), 1, date("Y",$from));
     $eom = mktime(0, 0, 1, date("m",$from) + 1, 0, date("Y",$from));
     $to_date = date("Y-m-d", $whole_month ? $eom : $from);
-  
+
     // Set arrays to their default
     $events = $seen = array();
-    
-    // Try to open the events file for reading, return if unable to 
+
+    // Try to open the events file for reading, return if unable to
     $fp = @fopen("backend/events.csv",'r');
     if (!$fp) { return FALSE; }
-  
+
     // For all events, read in the event and check it if fits our scope
     while (!feof($fp)) {
-      
+
         // Read the event data into $event, or continue with next
         // line, if there was an error with this line
         if (($event = read_event($fp)) === FALSE) {
             continue;
         }
-    
+
         // Keep event's seen list up to date
         // (for repeating events with the same ID)
         if (!isset($seen[$event['id']])) { $seen[$event['id']] = 1; }
         else { continue; }
-    
+
         // Check if event is in our scope, depending on type
         switch ($event['type']) {
 
@@ -299,16 +299,16 @@ function load_events($from, $whole_month = FALSE)
                 $date = date_for_recur($event['recur'], $event['recur_day'], $bom, $eom);
                 $event['start'] = date("Y-m-d", $date);
                 // Fall through. Now it is just like a single-day event
-            
+
             // Single-day event
-            case 1: 
+            case 1:
                 if ($event['start'] >= $from_date && $event['start'] <= $to_date) {
                     $events[] = $event;
                 }
                 break;
 
             // Multi-day event
-            case 2: 
+            case 2:
                 if (($event['start'] >= $from_date && $event['start'] <= $to_date)
                  || ($event['end']   >= $from_date && $event['end']   <= $to_date)
                  || ($event['start'] <= $from_date && $event['end']   >= $to_date)) {
@@ -317,7 +317,7 @@ function load_events($from, $whole_month = FALSE)
                 break;
         }
     }
-    
+
     // Close file and return with results
     fclose($fp);
     return $events;
@@ -331,10 +331,10 @@ function read_event($fp)
     if (($linearr = fgetcsv($fp, 8192)) === FALSE) {
         return FALSE;
     }
-    
+
     // Corrupt line in CSV file
     if (count($linearr) < 13) { return FALSE; }
-   
+
     // Get components
     list(
         $day, $month, $year, $country,
@@ -343,7 +343,7 @@ function read_event($fp)
 
     // Get info on recurring event
     @list($recur, $recur_day) = explode(":", $recur, 2);
-    
+
     // Return with SQL-resultset like array
     return array(
         'id'        => $id,
@@ -366,12 +366,12 @@ function valid_year($year)
 {
     // Get current year and compare to one sent in
     $current_year = date("Y");
-    
+
     // We only allow this and the next year for displays
     if ($year != $current_year && $year != $current_year+1) {
         return FALSE;
     }
-    
+
     // The year is all right
     return TRUE;
 }

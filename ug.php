@@ -80,7 +80,7 @@ function print_ug_matches($matches) {
             $d = date(DATE_RSS, strtotime($data["event"]["STARTSAT"], $_SERVER["REQUEST_TIME"]));
             $url         = isset($data["event"]["URL"]) ? addslashes($data["event"]["URL"]) : "";
             $summary     = htmlspecialchars($data["event"]["SUMMARY"]);
-            /* The icalendar has all sorts of weird trailing slashes and totally weirdo 
+            /* The icalendar has all sorts of weird trailing slashes and totally weirdo
              * newlines making this look like geocities */
             //$description = nl2br(htmlspecialchars($data["event"]["DESCRIPTION"]), false);
             if ($url) { /* Google Calendar doesn't have this */

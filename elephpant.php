@@ -29,7 +29,7 @@ site_header("ElePHPant", array("current" => "footer"));
 </p>
 
 <p>
- For more information on the PHP Group and the PHP project, please see 
+ For more information on the PHP Group and the PHP project, please see
  <a href="http://php.net/">the PHP homepage</a>.
 </p>
 

@@ -52,7 +52,7 @@ if ($process) {
     if (blacklisted($uemail)) {
         $errors[] = 'An expected error has been encountered.  Please don\'t try again later.';
     }
-  
+
     $_POST['sdesc'] = trim($_POST['sdesc']);
     if (!$_POST['sdesc']) {
         $errors[] = "You must supply a short description of the event.";

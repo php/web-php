@@ -7,10 +7,10 @@ site_header("PHP 5.4.33 Release Announcement");
 <h1>PHP 5.4.33 Release Announcement</h1>
 
 <p>The PHP development team announces the immediate availability of PHP
-5.4.33. 10 bugs were fixed in this release. 
+5.4.33. 10 bugs were fixed in this release.
 
 All PHP 5.4 users are encouraged to upgrade to this version.
-</p>        
+</p>
 
 <p>
 This release is the last planned release that contains regular bugfixes. All the consequent releases

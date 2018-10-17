@@ -1,6 +1,6 @@
 <?php // -*- C++ -*-
 
-// We need this for error reporting 
+// We need this for error reporting
 include_once $_SERVER['DOCUMENT_ROOT'] . '/include/errors.inc';
 
 // Try to find some variations of keyword with $prefix in the $lang manual
@@ -71,7 +71,7 @@ function find_manual_page_slow($lang, $keyword)
 
     // Remove .. for security reasons
     $keyword = str_replace("..", "", $keyword);
-    
+
     // Try to find a manual page with the specified prefix
     foreach ($sections as $section) {
         $found = tryprefix($lang, $keyword, $section);
@@ -121,11 +121,11 @@ function find_manual_page($lang, $keyword)
         return find_manual_page_slow($lang, $keyword);
     }
     $kw = $keyword;
-    
+
     // Try the preferred language first, then the
     // English one in case no page is found
     $langs = ($lang != 'en') ? array($lang, 'en') : array('en');
-    
+
     // Reformat keyword, drop anything in parenthesis --- except a search for the underscore only. (Bug #63490)
     if ($keyword != '_') {
         $keyword = str_replace('_', '-', $keyword);
@@ -138,14 +138,14 @@ function find_manual_page($lang, $keyword)
     if (strlen($keyword) == 0) {
         return "";
     }
-    
+
     // If there is a dot in the $keyword, then a prefix
     // is specfied, so we need to carry that on into the SQL
     // search [eg. function.echo or function.mysql-close]
 
     // Check for all the languages
     foreach ($langs as $lang) {
-        
+
         // @todo consider alternative schemas for this data
         // @todo utilize phd to generate this data, instead of the current systems/gen-phpweb-sqlite-db.php
 
@@ -173,28 +173,28 @@ function find_manual_page($lang, $keyword)
                     return find_manual_page_slow($lang, $keyword);
             }
             $stm->execute(array($lang, "/manual/{$lang}/{$_keyword}", $keyword));
-    
+
         // Some partially specified URL is used
         } else {
-        
+
             // List a few variations, plus a metaphone version
             // FIXME: metaphone causes too many false positives, disable for now
             //        the similar_text() search fallback works fine (see quickref.php)
             //        if this change remains, adjust the gen-phpweb-sqlite script accordingly
-        
+
             $SQL = "SELECT name, prio FROM fs WHERE lang = :lang
                     AND keyword IN (?, ?, ?, ?) ORDER BY keyword = ? DESC, prio LIMIT 1";
-        
+
             $stm = $dbh->prepare($SQL);
             if ($stm) {
                 $stm->execute(array($lang, $keyword, str_replace('\\', '-', $keyword), str_replace(' ', '', $keyword), str_replace(' ', '-', $keyword), str_replace('-', '', $keyword), $keyword));
             }
         }
-        
+
         // Successful query
         if ($stm) {
             $r = $stm->fetch(PDO::FETCH_NUM);
-            
+
             if (isset($r[0])) {
                 if(isset($r[1]) && $r[1] > 10 && strlen($keyword) < 4) {
                     // "Match" found, but the keyword is so short
@@ -215,7 +215,7 @@ function find_manual_page($lang, $keyword)
             error_noservice();
         }
     }
-    
+
     // No match found
     // @todo refactor. find_manual_page_slow() performs many of the same searches already performed above,
     //       but uses file_exists() instead of sqlite. In other words, if sqlite was used, don't perform

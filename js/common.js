@@ -25,7 +25,7 @@ PHP_NET.HEADER_HEIGHT = 52;
 
 /**
  * Scrolls the page so that the given element will be shown into view.
- * 
+ *
  * @param HTMLElement element The element to show.
  * @param Number animationDuration Animation duration in milliseconds. Defaults to 400ms.
  * @param Function callback Function to execute after the animation is complete.
@@ -41,7 +41,7 @@ PHP_NET.scrollElementIntoView = function (element, animationDuration, callback) 
     // once for html and once for body. This is why we track whether the
     // callback has been called to prevent multiple executions.
     $("html, body").animate(
-        {scrollTop: destTop}, 
+        {scrollTop: destTop},
         animationDuration,
         function () {
             if (!callbackCalled) {
@@ -95,7 +95,7 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 });
-    
+
 Mousetrap.bind('up up down down left right left right b a enter', function() {
         $(".brand img").attr("src", "/images/php_konami.gif");
 });
@@ -403,7 +403,7 @@ $(document).ready(function() {
     $docsDivWithId.children("h1, h2, h3, h4").each(function(){
         $(this).append("<a class='genanchor' href='#" + $(this).parent().attr("id") + "'> ¶</a>");
     });
-    
+
     $('.refentry code.parameter').click(function(event)
     {
       var id = $(this).text().replace(/^[&$]{0,2}/g, '');
@@ -417,7 +417,7 @@ $(document).ready(function() {
         var $this = $(this);
         $this.append("<a class='genanchor' href='#" + $this.attr('id') + "'> ¶</a>");
     });
-	
+
     /* Don't load elephpants on browsers that don't support data: URIs.
      * Unfortunately, the Modernizr test is asynchronous, so we have to spin
      * until it actually gives us a yes or a no. */
@@ -509,15 +509,15 @@ $(document).ready(function() {
         scrollSpeed: 400,
         easingType: 'linear'
       };
-      
+
       var toTopHidden = true;
       var toTop = $('#' + settings.containerID);
-      
+
       toTop.click(function(e) {
         e.preventDefault();
         $.scrollTo(0, settings.scrollSpeed, {easing: settings.easingType});
       });
-      
+
       $(window).scroll(function() {
         var sd = $(this).scrollTop();
         if (sd > settings.min && toTopHidden)
@@ -530,7 +530,7 @@ $(document).ready(function() {
           toTop.fadeOut(settings.outDelay);
           toTopHidden = true;
         }
-      });   
+      });
 
     })();
 /*}}}*/
@@ -557,7 +557,7 @@ $(document).ready(function() {
           request.done(function(data) {
             if(data.success != null && data.success == true) {
               $("#V"+id).html("<div style=\"float: left; width: 16px; height: 16px; background-image: url(/images/notes-features.png); background-position:-32px 16px; margin-right: 8px; overflow: hidden;\" border=\"0\" alt=\"success\" title=\"Thank you for voting!\"></div>" + data.update);
-            
+
               flashMessage({text: 'Thank you for voting!'});
             }
             else {
@@ -566,7 +566,7 @@ $(document).ready(function() {
                 responsedata = data.msg;
               }
               $("#V"+id).html("<div style=\"float: left; width: 16px; height: 16px; background-image: url(/images/notes-features.png); background-position:-32px 0px; margin-right: 8px; overflow: hidden;\" border=\"0\" alt=\"fail\" title=\"" + responsedata + "\"></div>");
-              
+
               flashMessage({text: 'Unexpected error occured, please try again later!', type: 'error'});
             }
           });
@@ -574,7 +574,7 @@ $(document).ready(function() {
             $("#Vu"+id).show();
             $("#Vd"+id).show();
             $("#V"+id).html("<div style=\"float: left; width: 16px; height: 16px; background-image: url(/images/notes-features.png); background-position:-32px 0px; margin-right: 8px; overflow: hidden;\" border=\"0\" alt=\"fail\" title=\"Error :(\"></div>");
-            
+
             flashMessage({text: 'Something went wrong :(', type: 'error'});
           });
           request.always(function(data) {
@@ -606,10 +606,10 @@ $(document).ready(function() {
             "max": 0.75,
             "min": 0.35
         };
-  
+
         // This is a generic normalizaion algorithm:
         //   range.min + (value - domain.min)(range.max - range.min)/(domain.max-domain.min)
-        // Note that some of this computation is not dependent on the input value, so we 
+        // Note that some of this computation is not dependent on the input value, so we
         // compute it at object creation time.
         var multiplier = (this.range.max - this.range.min)/(this.domain.max - this.domain.min);
         this.normalize = function(value) {
@@ -620,7 +620,7 @@ $(document).ready(function() {
     $(usernotes).on('mouseenter mouseleave', '.note',  function(event) {
       var opacity = 1;
       var $note = $(this).find('.text');
-      if (event.type === 'mouseleave' && $note.data('opacity') !== undefined) { 
+      if (event.type === 'mouseleave' && $note.data('opacity') !== undefined) {
         opacity = $note.data('opacity');
       }
       $note.css('opacity', opacity);
@@ -654,16 +654,16 @@ $(function() {
   if ( ! document.getElementById('add-note-usernotes')) {
     return;
   }
-  
+
   $('#usernotes').animate({marginLeft: 0}, 1000);
-  
+
   $('#usernotes .note').removeAttr('style');
-    
+
   var times = [3, 7, 10];
   for (i in times) {
     times[i] = times[i] * 1000;
   }
-  
+
   var notes = [];
   notes[0] = $('#usernotes .bad');
   notes[1] = $('#usernotes .good');
@@ -673,7 +673,7 @@ $(function() {
   {
     notes[0].find('.usernotes-voted').css('border-top-color', '#001155');
     notes[1].find('.usernotes-voteu').css('border-bottom-color', '#001155');
-    
+
     var t = 1000;
     var i = 1;
     var timer = setInterval(function()
@@ -683,22 +683,22 @@ $(function() {
         clearTimeout(timer);
         return;
       }
-      
+
       notes[0].find('.tally').html( notes[0].find('.tally').html().toInt() - 1);
       notes[1].find('.tally').html( notes[1].find('.tally').html().toInt() + 1);
-      
+
       i++;
     }, t);
-    
+
     notes[0].find('.text').animate({opacity: 0.3}, (times[1] - times[0]));
-    
+
   }, times[0]);
-  
+
   setTimeout(function()
   {
     notes[2].find('.text').html("@BJORI DOESN'T LIKE SPAM").css('background-color', '#F9ECF2');
   }, times[1]);
-  
+
   setTimeout(function()
   {
     notes[0].fadeOut();
@@ -712,18 +712,18 @@ $(function() {
 /* {{{ Flash Messenger */
 function flashMessage(o)
 {
-  var defaults = { 
+  var defaults = {
     timeout: 6000,
     type: 'success',
     text: '',
     parent: '#flash-message'
   };
-  
+
   // Options are passed, set defaults and generate message
   if ( ! o.jquery)
   {
-    var options = $.extend(defaults, o); 
-  
+    var options = $.extend(defaults, o);
+
     var id = 'id_' + Math.random().toString().replace('0.', '');
 
     var message = $('<div>')
@@ -733,7 +733,7 @@ function flashMessage(o)
                   .html(options.text);
 
     $(options.parent).append(message);
-    
+
     var o = $('#' + id);
   }
   // jQuery object is passed, that means the message is pre-generated
@@ -759,11 +759,11 @@ function flashMessage(o)
       remove(o);
     }, options.timeout);
   }
-  
+
   o.on('click', function() {
     remove($(this));
   });
-  
+
   return true;
 }
 /* }}} */

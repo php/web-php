@@ -22,7 +22,7 @@
  		var settings = $.extend(defaults, options);
 		var containerIDhash = '#' + settings.containerID;
 		var containerHoverIDHash = '#'+settings.containerHoverID;
-		
+
 		$('body').append('<a href="#" id="'+settings.containerID+'" onclick="return false;">'+settings.text+'</a>');
 		$(containerIDhash).hide().click(function(){
 			$('html, body').animate({scrollTop:0}, settings.scrollSpeed, settings.easingType);
@@ -34,12 +34,12 @@
 				$(containerHoverIDHash, this).stop().animate({
 					'opacity': 1
 				}, 600, 'linear');
-			}, function() { 
+			}, function() {
 				$(containerHoverIDHash, this).stop().animate({
 					'opacity': 0
 				}, 700, 'linear');
 			});
-					
+
 		$(window).scroll(function() {
 			var sd = $(window).scrollTop();
 			if(typeof document.body.style.maxHeight === "undefined") {
@@ -48,9 +48,9 @@
 					'top': $(window).scrollTop() + $(window).height() - 50
 				});
 			}
-			if ( sd > settings.min ) 
+			if ( sd > settings.min )
 				$(containerIDhash).fadeIn(settings.inDelay);
-			else 
+			else
 				$(containerIDhash).fadeOut(settings.outDelay);
 		});
 

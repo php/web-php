@@ -227,7 +227,7 @@ function download_link($file, $title, $showsize = TRUE, $mirror = '')
             }
             echo ']';
         }
-        
+
     }
 }
 

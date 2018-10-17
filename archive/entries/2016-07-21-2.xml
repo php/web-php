@@ -22,7 +22,7 @@
 	Note that according to <a href="http://www.php.net/supported-versions.php">our release schedule</a>, PHP 5.5.38 is the last release of the PHP 5.5 branch.
 	There may be additional release if we discover important security issues that warrant it, otherwise this release will be the final one in the PHP 5.5 branch. If your PHP installation is based on PHP 5.5, it may be a good time to start making the plans for the upgrade to PHP 5.6 or PHP 7.0.
      </p>
-     
+
     </div>
   </content>
 </entry>

@@ -12,7 +12,7 @@ $SIDEBAR_DATA = '
 <h3>SVN repository mirroring</h3>
 <p>
  If you are interested in using a local copy of our
- SVN repository for yourself, we provide 
+ SVN repository for yourself, we provide
  <a href="/svnsync.php">svnsync instructions</a>
  separately.
 </p>
@@ -142,7 +142,7 @@ site_header(
 <pre class="info">
     rsync -avzC --timeout=600 --delete --delete-after \
       --include='distributions/*.exe' \
-      YOUR_RRN_HOSTNAME::phpweb /your/local/path 
+      YOUR_RRN_HOSTNAME::phpweb /your/local/path
 </pre>
 
 <a name="exclude"></a>
@@ -216,25 +216,25 @@ site_header(
      ServerAlias cc.php.net www.php.net the.cname.you.set.up.example.com
      ServerAdmin yourname@example.com
      UseCanonicalName On
-     
+
      # Webroot of PHP mirror site
      DocumentRoot /www/htdocs/phpweb
-     
+
      # Log server activity
      ErrorLog logs/error_log
      TransferLog logs/access_log
-     
+
      # Set directory index
      DirectoryIndex index.php index.html
-     
+
      # Handle errors with local error handler script
      ErrorDocument 401 /error.php
      ErrorDocument 403 /error.php
      ErrorDocument 404 /error.php
-     
+
      # Add types not specified by Apache by default
      AddType application/octet-stream .chm .bz2 .tgz .msi
-     AddType application/x-pilot .prc .pdb 
+     AddType application/x-pilot .prc .pdb
 
      # Set mirror's preferred language here
      SetEnv MIRROR_LANGUAGE "en"
@@ -247,7 +247,7 @@ site_header(
      # Apache2 has 'AddHandler type-map var' enabled by default.
      # Remove the comment sign on the line below if you have it enabled.
      # RemoveHandler var
-     
+
      # Turn spelling support off (which would break URL shortcuts)
      &lt;IfModule mod_speling.c&gt;
        CheckSpelling Off
@@ -255,15 +255,15 @@ site_header(
 
      # A few recommended PHP directives
      php_flag display_errors off
-     
+
      # If you have Russian Apache with mod_charset installed,
      # do not forget to search for this line in your existing
      # configuration, and comment it out:
-     # AddHandler strip-meta-http .htm .html 
-         
+     # AddHandler strip-meta-http .htm .html
+
 &lt;/VirtualHost&gt;
 </pre>
-   
+
 <p>
  You should only start to set up an Apache VirtualHost for an official
  mirror if you have <a href="#rule">contacted us first</a> and received
@@ -397,11 +397,11 @@ site_header(
 <h2>Mirror Setup Troubleshooting</h2>
 
 <p>
- The <a href="/mirroring-troubles.php">mirror troubleshooting guide</a> 
- contains information about the common and potential problems discovered 
- when setting up and maintaining a PHP.net mirror. Included are links that 
+ The <a href="/mirroring-troubles.php">mirror troubleshooting guide</a>
+ contains information about the common and potential problems discovered
+ when setting up and maintaining a PHP.net mirror. Included are links that
  perform many of the tests executed by the automated mirror management tools.
-</p> 
+</p>
 
 <h2>Data Registered About Official Mirrors</h2>
 

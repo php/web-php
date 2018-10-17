@@ -24,7 +24,7 @@ $credits = str_replace(
 if ($credits) {
     site_header("Credits", array("current" => "community", 'css' => array('credits.css')));
     echo $credits;
-    site_footer(); 
+    site_footer();
 }
 
 ?>

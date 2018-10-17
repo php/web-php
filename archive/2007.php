@@ -41,7 +41,7 @@ site_header("News Archive - 2007", array("cache" => true));
 <hr>
 <?php news_image("http://www.prophp.com.br/phpconference.php", "phpconfbrasil2007.png", "São Paulo 2007"); ?>
 <div class="newsItem">
-    
+
     <a name="2007-10-29-1" id="2007-10-29-1"><h1>PHP Conference Brasil 2007</h1></a>
 
     <div>
@@ -56,26 +56,26 @@ Visit <a href="http://www.prophp.com.br/phpconference.php">the website</a> for m
 <hr>
 <div class="newsItem">
 
-    
+
     <a name="2007-10-03-1" id="2007-10-03-1"><h1>The new documentation build system is ready for testing</h1></a>
     <div>
   <span class="newsdate">[03-Oct-2007]</span>
   <p>
-The PHP documentation team is pleased to announce the initial release of 
-the new build system that generates the PHP Manual. Written in PHP, PhD 
-(<em>[PH]P based [D]ocBook renderer</em>) builds are now available for 
-viewing at <a href="http://docs.php.net/">docs.php.net</a>. Everyone is 
-encouraged to test and use this system so 
-that <a href="http://bugs.php.net/">bugs</a> will be found and squashed. 
+The PHP documentation team is pleased to announce the initial release of
+the new build system that generates the PHP Manual. Written in PHP, PhD
+(<em>[PH]P based [D]ocBook renderer</em>) builds are now available for
+viewing at <a href="http://docs.php.net/">docs.php.net</a>. Everyone is
+encouraged to test and use this system so
+that <a href="http://bugs.php.net/">bugs</a> will be found and squashed.
       </p>
 
   <p>
-Once the new build system is stable, expect additional changes to the PHP 
-manual that will include an improved navigation system and styling for OOP 
-documentation. 
+Once the new build system is stable, expect additional changes to the PHP
+manual that will include an improved navigation system and styling for OOP
+documentation.
       </p>
   <p>
-Feel free to set this developmental mirror as your default by 
+Feel free to set this developmental mirror as your default by
 using <a href="/my.php">my.php</a>.
       </p>
 </div>
@@ -84,7 +84,7 @@ using <a href="/my.php">my.php</a>.
 <hr>
 <?php news_image("http://www.dcphpconference.com/", "dcphpconference.2007.png", "Washington DC 2007"); ?>
 <div class="newsItem">
-    
+
     <a name="2007-09-21-1" id="2007-09-21-1"><h1>DC PHP Conference 2007</h1></a>
 
     <div>
@@ -101,12 +101,12 @@ Please see <a href="http://www.dcphpconference.com ">the website</a> for more de
 <hr>
 <?php news_image("http://www.afup.org/pages/forumphp2007/", "afup2007.jpg", "Paris Forum 2007"); ?>
 <div class="newsItem">
-    
+
     <a name="2007-09-20-1" id="2007-09-20-1"><h1>Forum PHP Paris 2007</h1></a>
     <div>
   <span class="newsdate">[20-Sep-2007]</span>
   <p>
-The <a href="http://www.afup.org/">French AFUP</a> association is proud 
+The <a href="http://www.afup.org/">French AFUP</a> association is proud
 to announce the <a href="http://www.afup.org/pages/forumphp2007/">sixth annual PHP
 meeting in Paris</a>, on November 21st and 22nd, 2007. Developers and
 managers will gather to meet Rasmus Lerdorf, Andrei Zmievski and other
@@ -119,17 +119,17 @@ enterprise solutions and advanced techniques.
 
 <hr>
 <div class="newsItem">
-    
+
     <a name="2007-08-30-1" id="2007-08-30-1"><h1>PHP 5.2.4 Released</h1></a>
 
     <div>
   <span class="newsdate">[30-Aug-2007]</span>
   <p>
 The PHP development team would like to announce the immediate
-<a href="/downloads.php#v5">availability of PHP 5.2.4</a>. 
-This release focuses on improving the stability of the PHP 5.2.X 
-branch with over 120 various bug fixes in addition to resolving 
-several low priority security bugs. All users of PHP are encouraged 
+<a href="/downloads.php#v5">availability of PHP 5.2.4</a>.
+This release focuses on improving the stability of the PHP 5.2.X
+branch with over 120 various bug fixes in addition to resolving
+several low priority security bugs. All users of PHP are encouraged
 to upgrade to this release.
 </p>
   <p>
@@ -171,7 +171,7 @@ those releases and PHP 5.2.4.
 <hr>
 <?php news_image("http://www.zendcon.com/", "zendcon07_logo_s.jpg", "Zend/PHP Conference 2007"); ?>
 <div class="newsItem">
-    
+
     <a name="2007-07-25-1" id="2007-07-25-1"><h1>Zend/PHP Conference 2007</h1></a>
     <div>
   <span class="newsdate">[25-Jul-2007]</span>
@@ -184,7 +184,7 @@ three days of education, learning and networking - plus an additional
 tutorial day.  The 2007 conference will feature over 40 sessions, an
 exhibit hall featuring leading companies such as Adobe, IBM, PayPal and
 Zend, an UnConference area to stimulate impromptu discussions, and
-networking opportunities galore. 
+networking opportunities galore.
 </p>
   <p>
 ZendCon2007 will feature something for everyone – from novice to
@@ -195,7 +195,7 @@ business-critical PHP.  Meet the Zend development teams.  Learn more
 about Zend open source projects.
 </p>
   <p>
-ZendCon 2007 promises to be the largest gathering dedicated to PHP. 
+ZendCon 2007 promises to be the largest gathering dedicated to PHP.
 Plan to attend ZendCon 2007 and join the PHP community to network and
 learn from the best PHP minds from around the world.
 </p>
@@ -209,7 +209,7 @@ For more information please see <a href="http://www.zendcon.com/">http://www.zen
 <hr>
 <?php news_image("http://works.phparch.com/c/p/index", "phpworks2007.png", "php|works 2007"); ?>
 <div class="newsItem">
-    
+
     <a name="2007-07-16-01" id="2007-07-16-01"><h1>php|works 2007 in Atlanta</h1></a>
     <div>
   <span class="newsdate">[16-Jul-2007]</span>
@@ -218,14 +218,14 @@ php|architect is proud to announce <a href="http://works.phparch.com">php|works 
 
 </p>
   <p>
-This year, the conference once again promises to be an excellent event for PHP developers of all levels, with <a href="http://works.phparch.com/c/schedule">talks from top PHP experts</a> such as Derick Rethans, Chris Shiflett, Andrei Zmievski, Sara Golemon, and many more (and plenty of new faces, as well). 
+This year, the conference once again promises to be an excellent event for PHP developers of all levels, with <a href="http://works.phparch.com/c/schedule">talks from top PHP experts</a> such as Derick Rethans, Chris Shiflett, Andrei Zmievski, Sara Golemon, and many more (and plenty of new faces, as well).
 </p>
 </div>
 </div>
 
 <hr>
 <div class="newsItem">
-    
+
     <a name="2007-07-13-1" id="2007-07-13-1"><h1>PHP 4 end of life announcement</h1></a>
     <div>
 
@@ -241,7 +241,7 @@ This year, the conference once again promises to be an excellent event for PHP d
   continue until the end of this year only. After 2007-12-31 there will be no
   more releases of PHP 4.4. We will continue to make critical security fixes
   available on a case-by-case basis until 2008-08-08.  Please use the rest of
-  this year to make your application suitable to run on PHP 5. 
+  this year to make your application suitable to run on PHP 5.
 </p>
   <p>
 
@@ -255,14 +255,14 @@ This year, the conference once again promises to be an excellent event for PHP d
 
 <hr>
 <div class="newsItem">
-    
+
     <a name="2007-06-01-1" id="2007-06-01-1"><h1>PHP 5.2.3 Released</h1></a>
 
     <div>
   <span class="newsdate">[01-Jun-2007]</span>
   <p>
-The PHP development team would like to announce the immediate <a href="/downloads.php#v5">availability of PHP 5.2.3</a>. 
-This release continues to improve the security and the stability of 
+The PHP development team would like to announce the immediate <a href="/downloads.php#v5">availability of PHP 5.2.3</a>.
+This release continues to improve the security and the stability of
 the 5.X branch as well as addressing two regressions introduced
 by the previous 5.2 releases. These regressions relate to the timeout
 handling over non-blocking SSL connections and the lack of
@@ -299,7 +299,7 @@ those releases and PHP 5.2.3.
 <hr>
 <?php news_image("http://www.wtconferences.com/2007/?q=node/1", "wtlogo_s.png", "WebTech 2007"); ?>
 <div class="newsItem">
-    
+
     <a name="2007-05-19-1" id="2007-05-19-1"><h1>WebTech 2007</h1></a>
     <div>
 
@@ -322,7 +322,7 @@ those releases and PHP 5.2.3.
 
 <hr>
 <div class="newsItem">
-    
+
     <a name="2007-05-03-1" id="2007-05-03-1"><h1>PHP 5.2.2 and PHP 4.4.7 Released</h1></a>
     <div>
   <span class="newsdate">[03-May-2007]</span>
@@ -399,12 +399,12 @@ those releases and PHP 5.2.3.
 
 <hr>
 <div class="newsItem">
-    
+
     <a name="2007-04-14-1" id="2007-04-14-1"><h1>The PHP.net Google Summer of Code</h1></a>
     <div>
   <span class="newsdate">[14-Apr-2007]</span>
   <p>
-    The PHP team is once again proud to participate in the 
+    The PHP team is once again proud to participate in the
     <a href="http://code.google.com/soc/">Google Summer of Code</a>.
     Seven students will "flip bits instead of burgers" this summer:
 
@@ -470,7 +470,7 @@ those releases and PHP 5.2.3.
 
 <hr>
 <div class="newsItem">
-    
+
     <a name="2007-03-01-1" id="2007-03-01-1"><h1>PHP 4.4.6 Released</h1></a>
 
     <div>
@@ -496,7 +496,7 @@ those releases and PHP 5.2.3.
 
 <hr>
 <div class="newsItem">
-    
+
     <a name="2007-02-08-2" id="2007-02-08-2"><h1>PHP 5.2.1 and PHP 4.4.5 Released</h1></a>
 
     <div>
@@ -582,7 +582,7 @@ posted in the <a href="/downloads.php">download section</a>.</p>
 
 <hr>
 <div class="newsItem">
-    
+
     <a name="2007-02-08-1" id="2007-02-08-1"><h1>The front page has changed</h1></a>
     <div>
   <span class="newsdate">[08-Feb-2007]</span>
@@ -597,28 +597,28 @@ posted in the <a href="/downloads.php">download section</a>.</p>
 <hr>
 <?php news_image("http://conf.phpquebec.com/en/conf2007/", "conference_php_quebec.gif", "PHP Québec conference"); ?>
 <div class="newsItem">
-    
+
     <a name="2007-02-07-1" id="2007-02-07-1"><h1>PHP Québec conference 2007</h1></a>
     <div>
   <span class="newsdate">[07-Feb-2007]</span>
   <p>
-PHP Québec is pleased to announce the <a href="http://conf.phpquebec.com/en/conf2007/">fifth edition of the PHP Québec Conference</a>. 
-The conference will take place in Montréal, Canada on March 14-15-16th 2007. It features 2 days of 
+PHP Québec is pleased to announce the <a href="http://conf.phpquebec.com/en/conf2007/">fifth edition of the PHP Québec Conference</a>.
+The conference will take place in Montréal, Canada on March 14-15-16th 2007. It features 2 days of
 
-<a href="http://conf.phpquebec.com/en/conf2007/horaire">technicals talks</a> and 
-an additional day of <a href="http://conf.phpquebec.com/en/conf2007/ateliers">workshop</a>. 
-Among the  speakers, the well know PHP experts such has:  Rasmus Lerdorf, Andrei 
+<a href="http://conf.phpquebec.com/en/conf2007/horaire">technicals talks</a> and
+an additional day of <a href="http://conf.phpquebec.com/en/conf2007/ateliers">workshop</a>.
+Among the  speakers, the well know PHP experts such has:  Rasmus Lerdorf, Andrei
 Zmievski, Derick Rethans, Ilia Alshanetsky, John Coggeshall, Damien Séguy, and many more.
 </p>
   <p>
-The conference has three distinct tracks : Advanced Techniques, Data 
-Availability, PHP: Beyound Theory. With over 35 sessions and workshops, the 
-PHP Québec Conference is great opportunity to learn about the latest 
-development and professional techniques to help you build high quality PHP 
+The conference has three distinct tracks : Advanced Techniques, Data
+Availability, PHP: Beyound Theory. With over 35 sessions and workshops, the
+PHP Québec Conference is great opportunity to learn about the latest
+development and professional techniques to help you build high quality PHP
 software and meet with PHP.
 </p>
   <p>
-Special prices are available for all Open Source community members and major 
+Special prices are available for all Open Source community members and major
 contributors.
 </p>
 </div>
@@ -626,7 +626,7 @@ contributors.
 
 <hr>
 <div class="newsItem">
-    
+
     <a name="2007-02-03-1" id="2007-02-03-1"><h1>PHP Manual Updates</h1></a>
     <div>
   <span class="newsdate">[03-Feb-2007]</span>
@@ -646,7 +646,7 @@ contributors.
 <hr>
 <?php news_image("http://www.phpconference.co.uk/", "phplondon2007.png", "PHP London 2007"); ?>
 <div class="newsItem">
-    
+
     <a name="2007-01-18-1" id="2007-01-18-1"><h1>PHP London 2007</h1></a>
     <div>
   <span class="newsdate">[18-Jan-2007]</span>
@@ -660,7 +660,7 @@ After the success of 2006 the <a href="http://www.phplondon.org/">PHP London use
 <hr>
 <?php news_image("http://www.phparch.com/tek", "phptek2007.png", "php|tek 2007"); ?>
 <div class="newsItem">
-    
+
     <a name="2007-01-12-1" id="2007-01-12-1"><h1>Chicago php|tek 2007</h1></a>
     <div>
   <span class="newsdate">[12-Jan-2007]</span>

@@ -33,7 +33,7 @@ site_header("PHP 4.3.9 Release Announcement");
  <li>Fixed '\0' in Authenticate header passed via safe_mode.</li>
  <li>Allow bundled GD to compile against freetype 2.1.2.</li>
 
- 
+
  <li>All in all this release fixes over 50 bugs that have been discovered and resolved
  since the 4.3.8 release.</li>
 </ul>
