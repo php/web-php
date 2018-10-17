@@ -1,0 +1,2 @@
+# iCalendar format needs to have CRLF end of lines style
+/backend/events/* eol=crlf
