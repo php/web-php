@@ -51,7 +51,7 @@ site_header(
 </p>
 
 <p>
- Official mirror program participants are required to use PHP 5.3.21 or
+ Official mirror program participants are required to use PHP 5.4 or
  greater, but please note that we encourage maintainers to always use the
  latest stable versions of actively-developed branches.  Please note that
  we do, somewhat regularly (about once per year) require existing

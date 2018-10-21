@@ -24,5 +24,5 @@ To install a full official mirror please see [the mirroring guidelines](http://p
 
 ## Code requirements
 
-Code must function on a vanilla PHP 5.3 installation as some php.net mirrors still run PHP 5.3.
+Code must function on a vanilla PHP 5.4 installation as some php.net mirrors still run PHP 5.4.
 Please keep this in mind before filing a pull request.
