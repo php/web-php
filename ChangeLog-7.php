@@ -98,7 +98,7 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
 <b><?php release_date('13-Sep-2018'); ?></b>
 <ul><li>Apache2:
 <ul>
-  <li><?php bugfix(76582); ?> (XSS due to the header Transfer-Encoding: chunked).</li>
+  <li><?php bugfix(76582); ?> (XSS due to the header Transfer-Encoding: chunked). (CVE-2018-17082)</li>
 </ul></li>
 </ul>
 <!-- }}} --></section>
@@ -113,7 +113,7 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
 </ul></li>
 <li>Apache2:
 <ul>
-  <li><?php bugfix(76582); ?> (Apache bucket brigade sometimes becomes invalid).</li>
+  <li><?php bugfix(76582); ?> (XSS due to the header Transfer-Encoding: chunked). (CVE-2018-17082)</li>
 </ul></li>
 <li>Bz2:
 <ul>
@@ -182,7 +182,7 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
 </ul></li>
 <li>Apache2:
 <ul>
-  <li><?php bugfix(76582); ?> (Apache bucket brigade sometimes becomes invalid).</li>
+  <li><?php bugfix(76582); ?> (XSS due to the header Transfer-Encoding: chunked). (CVE-2018-17082)</li>
 </ul></li>
 <li>Bz2:
 <ul>
