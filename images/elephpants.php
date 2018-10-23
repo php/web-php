@@ -45,7 +45,7 @@ if (isset($_REQUEST['count'])) {
 }
 
 // read out photo metadata
-$path   = dirname(__FILE__) . '/elephpants';
+$path   = __DIR__ . '/elephpants';
 $json   = @file_get_contents($path . '/flickr.json');
 $photos = json_decode($json, true);
 

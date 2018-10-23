@@ -521,17 +521,17 @@ function site_header($title = '', $config = array())
         $shorturl = "http://php.net/" . $shortname;
     }
 
-    require dirname(__FILE__) ."/header.inc";
+    require __DIR__ ."/header.inc";
 }
 function site_footer($config = array())
 {
     global $MYSITE;
-    require dirname(__FILE__) . "/footer.inc";
+    require __DIR__ . "/footer.inc";
 }
 
 function get_news_changes()
 {
-    include dirname(__FILE__) . "/pregen-news.inc";
+    include __DIR__ . "/pregen-news.inc";
     $date = date_create($NEWS_ENTRIES[0]["updated"]);
     if (isset($_COOKIE["LAST_NEWS"]) && $_COOKIE["LAST_NEWS"] >= $date->getTimestamp()) {
         return false;
@@ -607,7 +607,7 @@ function get_usergroups_in($country, &$allcountries = array()) {
 }
 
 function news_toc($sections = null) {
-    include dirname(__FILE__) . "/pregen-news.inc";
+    include __DIR__ . "/pregen-news.inc";
     $items = array(
         "news" => array(
             "title" => "News",
@@ -640,12 +640,12 @@ function news_toc($sections = null) {
     }
 }
 function doc_toc($lang) {
-    $file = dirname(__FILE__) . "/../manual/$lang/toc/index.inc";
+    $file = __DIR__ . "/../manual/$lang/toc/index.inc";
     if (!file_exists($file)) {
         $lang = "en"; // Fallback on english if the translation doesn't exist
-        $file = dirname(__FILE__) . "/../manual/en/toc/index.inc";
+        $file = __DIR__ . "/../manual/en/toc/index.inc";
     }
-    require dirname(__FILE__) . "/../manual/$lang/toc/index.inc";
+    require __DIR__ . "/../manual/$lang/toc/index.inc";
 
     echo "<dl>\n";
     doc_toc_list($lang, $TOC, "getting-started");
@@ -687,7 +687,7 @@ function doc_toc($lang) {
 
 }
 function doc_toc_list($lang, $index, $file) {
-    include dirname(__FILE__) . "/../manual/$lang/toc/$file.inc";
+    include __DIR__ . "/../manual/$lang/toc/$file.inc";
 
     doc_toc_title($lang, $index, $file);
     foreach($TOC as $entry) {
