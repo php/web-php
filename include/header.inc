@@ -86,7 +86,7 @@ if (!isset($config["languages"])) {
  <![endif]-->
 
  <!--[if lte IE 8]>
- <script type="text/javascript">
+ <script>
   window.brokenIE = true;
  </script>
  <![endif]-->
@@ -96,7 +96,7 @@ if (!isset($config["languages"])) {
  <![endif]-->
 
  <!--[if IE]>
- <script type="text/javascript" src="<?php echo $MYSITE ?>js/ext/html5.js"></script>
+ <script src="<?php echo $MYSITE ?>js/ext/html5.js"></script>
  <![endif]-->
 
 <?php if (!empty($_SERVER["BASE_HREF"])): ?>
