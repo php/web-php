@@ -13,33 +13,36 @@ if (isset($_GET["serialize"]) || isset($_GET["json"])) {
 		$ver = (int)$_GET["version"];
 
 		if (isset($RELEASES[$ver])) {
-			list($version, $r) = each($RELEASES[$ver]);
+			$RELEASES = array_replace_recursive($RELEASES, $OLDRELEASES);
 
 			if (isset($_GET["max"])) {
 				$max = (int)$_GET["max"];
-				if ($max == -1) { $max = PHP_INT_MAX; }
-
-				$machineReadable = array($version => $r);
-
-				$count = 1;
-
-				/* check if other $RELEASES[$ver] are there */
-				/* e.g., 5_3, 5_4, and 5_5 all exist and have a release */
-				while(($z = each($RELEASES[$ver])) && $count++ < $max) {
-					$machineReadable[$z[0]] = $z[1];
-				}
-
-				foreach($OLDRELEASES[$ver] as $version => $release) {
-					if ($max <= $count++) {
-						break;
-					}
-
-					$machineReadable[$version] = $release;
-				}
+				$maxSet = true;
 			} else {
-				$r["version"] = $version;
+				$max = 1;
+				$maxSet = false;
+			}
 
-				$machineReadable = $r;
+			if ($max == -1) {
+				$max = PHP_INT_MAX;
+			}
+
+			$machineReadable = array();
+
+			$count = 0;
+
+			foreach ($RELEASES[$ver] as $version => $release) {
+				if ($max <= $count++) {
+					break;
+				}
+
+				$machineReadable[$version] = $release;
+			}
+
+			if (!$maxSet) {
+				$version = key($machineReadable);
+				$machineReadable = current($machineReadable);
+				$machineReadable["version"] = $version;
 			}
 		} else {
 			$machineReadable = array("error" => "Unknown version");
