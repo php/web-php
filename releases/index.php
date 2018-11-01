@@ -12,7 +12,6 @@ if (isset($_GET["serialize"]) || isset($_GET["json"])) {
 	if (isset($_GET["version"])) {
 		$versionArray = version_array($_GET["version"]);
 		$ver = $versionArray[0];
-		$length = count($versionArray);
 
 		if (isset($RELEASES[$ver])) {
 			$RELEASES = array_replace_recursive($RELEASES, $OLDRELEASES);
