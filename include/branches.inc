@@ -358,8 +358,6 @@ function compare_version($arrayA, $versionB)
 
 function version_array($version, $length = null)
 {
-	static $fill = array(0, 0);
-
 	$versionArray = array_map(
 		'intval',
 		explode('.', $version)
