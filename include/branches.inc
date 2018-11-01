@@ -359,24 +359,21 @@ function compare_version($arrayA, $versionB)
 function version_array($version, $length = null)
 {
 	static $fill = array(0, 0);
+
 	$versionArray = array_map(
 		'intval',
 		explode('.', $version)
 	);
-	if (is_int($length)) {
-		$versionArray = array_merge(
-			$versionArray,
-			$fill
-		);
-	} else {
-		$length = 3;
-	}
 
-	array_slice(
-		$versionArray,
-		0,
-		$length
-	);
+	if (is_int($length)) {
+		$versionArray = count($versionArray) < $length
+			? array_pad($versionArray, $length, 0)
+			: array_slice(
+				$versionArray,
+				0,
+				$length
+			);
+	}
 
 	return $versionArray;
 }
