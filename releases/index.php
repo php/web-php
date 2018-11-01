@@ -10,7 +10,9 @@ if (isset($_GET["serialize"]) || isset($_GET["json"])) {
 	$machineReadable = array();
 
 	if (isset($_GET["version"])) {
-		$ver = (int)$_GET["version"];
+		$versionArray = version_array($_GET["version"]);
+		$ver = $versionArray[0];
+		$length = count($versionArray);
 
 		if (isset($RELEASES[$ver])) {
 			$RELEASES = array_replace_recursive($RELEASES, $OLDRELEASES);
@@ -30,13 +32,15 @@ if (isset($_GET["serialize"]) || isset($_GET["json"])) {
 			$machineReadable = array();
 
 			$count = 0;
-
 			foreach ($RELEASES[$ver] as $version => $release) {
-				if ($max <= $count++) {
+				if ($max <= $count) {
 					break;
 				}
 
-				$machineReadable[$version] = $release;
+				if (compare_version($versionArray, $version) == 0) {
+					$machineReadable[$version] = $release;
+					$count++;
+				}
 			}
 
 			if (!$maxSet) {

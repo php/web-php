@@ -330,3 +330,53 @@ function get_branch_support_state($branch) {
 
 	return null;
 }
+
+function compare_version($arrayA, $versionB)
+{
+	static $sortValues = array(
+		true => 1,
+		false => -1,
+	);
+
+	$length = count($arrayA);
+	$arrayB = version_array($versionB, $length);
+
+	if (!is_array($arrayA) || !is_array($arrayB)) {
+		return $sortValues[$arrayA > $arrayB];
+	}
+
+	foreach ($arrayA as $index => $componentA) {
+		$componentA = $arrayA[$index];
+		$componentB = $arrayB[$index];
+		if ($componentA != $componentB) {
+			return $sortValues[$componentA > $componentB];
+		}
+	}
+
+	return 0;
+}
+
+function version_array($version, $length = null)
+{
+	static $fill = array(0, 0);
+	$versionArray = array_map(
+		'intval',
+		explode('.', $version)
+	);
+	if (is_int($length)) {
+		$versionArray = array_merge(
+			$versionArray,
+			$fill
+		);
+	} else {
+		$length = 3;
+	}
+
+	array_slice(
+		$versionArray,
+		0,
+		$length
+	);
+
+	return $versionArray;
+}
