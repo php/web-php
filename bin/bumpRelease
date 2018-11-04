@@ -21,7 +21,8 @@ if (isset($_SERVER['argv'][2])) {
 	$info = $RELEASES[$major][$version];
 } else {
 	// Calling without a minor will just grab the most recent minor.
-	list($version, $info) = each($RELEASES[$major]);
+	$version = key($RELEASES[$major]);
+	$info = current($RELEASES[$major]);
 }
 
 $info["date"] = ${"PHP_{$major}_DATE"};

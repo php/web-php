@@ -23,8 +23,7 @@ if (is_official_mirror()) {
 
     // Iterate through possible mirror provider logo types in priority order
     $types = array("gif", "jpg", "png");
-    while (list(,$ext) = each($types)) {
-
+    foreach ($types as $ext) {
         // Check if file exists for this type
         if (file_exists("backend/mirror." . $ext)) {
 

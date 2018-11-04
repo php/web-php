@@ -52,7 +52,8 @@ if (isset($_GET["serialize"]) || isset($_GET["json"])) {
 		}
 	} else {
 		foreach($RELEASES as $major => $release) {
-			list($version, $r) = each($release);
+			$version = key($release);
+			$r = current($release);
 			$r["version"] = $version;
 			$machineReadable[$major] = $r;
 		}

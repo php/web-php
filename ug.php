@@ -42,7 +42,11 @@ function ug_get_next_even_from_ical_array($ical) {
     $data = array();
     foreach($ical as $line) {
         if ($line == "BEGIN:VEVENT") {
-            do {
+            foreach ($ical as $n => $line) {
+                if ("END:VEVENT" == $line) {
+                    break;
+                }
+
                 if ($line[0] == " ") {
                     // data continued from previous key
                     $data[$lastkey] .= ltrim($line);
@@ -50,7 +54,8 @@ function ug_get_next_even_from_ical_array($ical) {
                     list($lastkey, $value) = explode(":", $line, 2);
                     $data[$lastkey] = $value;
                 }
-            } while((list($n, $line) = each($ical)) && $line != "END:VEVENT");
+            }
+
             break;
         }
     }
