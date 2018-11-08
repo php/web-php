@@ -28,7 +28,7 @@ if (isset($_GET["serialize"]) || isset($_GET["json"])) {
 				$max = PHP_INT_MAX;
 			}
 
-			$machineReadable = array();
+
 
 			$count = 0;
 			foreach ($RELEASES[$ver] as $version => $release) {
@@ -47,11 +47,12 @@ if (isset($_GET["serialize"]) || isset($_GET["json"])) {
 				$machineReadable = current($machineReadable);
 				$machineReadable["version"] = $version;
 			}
-		} else {
+		}
+
+		if (empty($machineReadable)) {
 			$machineReadable = array("error" => "Unknown version");
 		}
 	} else {
-		$machineReadable = array();
 		foreach($RELEASES as $major => $release) {
 			list($version, $r) = each($release);
 			$r["version"] = $version;
