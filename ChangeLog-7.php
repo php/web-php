@@ -6,6 +6,66 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
 ?>
 <h1>PHP 7 ChangeLog</h1>
 
+<section class="version" id="7.2.12"><!-- {{{ 7.2.12 -->
+<h3>Version 7.2.12</h3>
+<b><?php release_date('08-Nov-2018'); ?></b>
+<ul><li>Core:
+<ul>
+  <li><?php bugfix(76846); ?> (Segfault in shutdown function after memory limit error).</li>
+  <li><?php bugfix(76946); ?> (Cyclic reference in generator not detected).</li>
+  <li><?php bugfix(77035); ?> (The phpize and ./configure create redundant .deps file).</li>
+  <li><?php bugfix(77041); ?> (buildconf should output error messages to stderr) (Mizunashi Mana)</li>
+</ul></li>
+<li>Date:
+<ul>
+  <li>Upgraded timelib to 2017.08.</li>
+  <li><?php bugfix(75851); ?> (Year component overflow with date formats "c", "o", "r" and "y").</li>
+  <li><?php bugfix(77007); ?> (fractions in `diff()` are not correctly normalized).</li>
+</ul></li>
+<li>FCGI:
+<ul>
+  <li><?php bugfix(76948); ?> (Failed shutdown/reboot or end session in Windows).</li>
+  <li><?php bugfix(76954); ?> (apache_response_headers removes last character from header name).</li>
+</ul></li>
+<li>FTP:
+<ul>
+  <li><?php bugfix(76972); ?> (Data truncation due to forceful ssl socket shutdown).</li>
+</ul></li>
+<li>intl:
+<ul>
+  <li><?php bugfix(76942); ?> (U_ARGUMENT_TYPE_MISMATCH).</li>
+</ul></li>
+<li>Reflection:
+<ul>
+  <li><?php bugfix(76936); ?> (Objects cannot access their private attributes while handling reflection errors).</li>
+  <li><?php bugfix(66430); ?> (ReflectionFunction::invoke does not invoke closure with object scope).</li>
+</ul></li>
+<li>Sodium:
+<ul>
+  <li>Some base64 outputs were truncated; this is not the case any more.</li>
+  <li>block sizes &gt;= 256 bytes are now supposed by sodium_pad() even when an old version of libsodium has been installed.</li>
+  <li><?php bugfix(77008); ?> (sodium_pad() could read (but not return nor write) uninitialized memory when trying to pad an empty input).</li>
+</ul></li>
+<li>Standard:
+<ul>
+  <li><?php bugfix(76965); ?> (INI_SCANNER_RAW doesn't strip trailing whitespace).</li>
+</ul></li>
+<li>Tidy:
+<ul>
+  <li><?php bugfix(77027); ?> (tidy::getOptDoc() not available on Windows).</li>
+</ul></li>
+<li>XML:
+<ul>
+  <li><?php bugfix(30875); ?> (xml_parse_into_struct() does not resolve entities).</li>
+  <li>Add support for getting SKIP_TAGSTART and SKIP_WHITE options.</li>
+</ul></li>
+<li>XMLRPC:
+<ul>
+  <li><?php bugfix(75282); ?> (xmlrpc_encode_request() crashes).</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
 <section class="version" id="7.2.11"><!-- {{{ 7.2.11 -->
 <h3>Version 7.2.11</h3>
 <b><?php release_date('11-Oct-2018'); ?></b>
