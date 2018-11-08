@@ -28,8 +28,6 @@ if (isset($_GET["serialize"]) || isset($_GET["json"])) {
 				$max = PHP_INT_MAX;
 			}
 
-
-
 			$count = 0;
 			foreach ($RELEASES[$ver] as $version => $release) {
 				if ($max <= $count) {
