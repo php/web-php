@@ -40,7 +40,7 @@ if (isset($_GET["serialize"]) || isset($_GET["json"])) {
 				}
 			}
 
-			if (!$maxSet) {
+			if (!$maxSet && !empty($machineReadable)) {
 				$version = key($machineReadable);
 				$machineReadable = current($machineReadable);
 				$machineReadable["version"] = $version;
