@@ -32,7 +32,7 @@ $OLDRELEASES = array (
           'date' => '11 Oct 2018',
         ),
       ),
-      'date' => '08 Nov 2018',
+      'date' => '11 Oct 2018',
       'museum' => false,
     ),
     '7.2.11' => 
