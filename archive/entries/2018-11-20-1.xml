@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom" xmlns:default="http://php.net/ns/news">
+  <title>Dutch PHP Conference - CfP is open!</title>
+  <id>http://php.net/archive/2018.php#id2018-11-20-1</id>
+  <published>2018-11-20T14:00:23+00:00</published>
+  <updated>2018-11-20T14:00:23+00:00</updated>
+  <default:finalTeaserDate xmlns="http://php.net/ns/news">2019-01-28</default:finalTeaserDate>
+  <category term="cfp" label="Call for Papers"/>
+  <link href="http://php.net/conferences/index.php#id2018-11-20-1" rel="alternate" type="text/html"/>
+  <default:newsImage xmlns="http://php.net/ns/news" link="https://www.phpconference.nl" title="DPC 2019">dpc-2019.png</default:newsImage>
+  <link href="https://www.phpconference.nl" rel="via" type="text/html"/>
+  <content type="xhtml">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+     As always we’re excited about all kinds of different topics. You could say that as long as it’s somehow related to PHP and you’re really excited about it, we want to hear it! It doesn’t matter who you are, this event is all about technology. DPC has an established reputation as the best place to expand a developer’s skill set and improve existing practice, and that remains our focus this year.
+     The call for papers is open until January 28th. You can send in as many proposals as you like, so <a href="https://cfp.phpconference.nl">start submitting</a> your talks! If you are accepted as a speaker we’ll pay your travel costs, put you up in a hotel and give you a pass to the conference so you can join us during the event.
+     <a href="https://www.phpconference.nl">Conference website</a>
+     <ul>
+     <li>Date: June 6 - 8, 2019</li>
+     <li>Venue: RAI Amsterdam</li>
+     </ul>
+     
+    </div>
+  </content>
+</entry>
