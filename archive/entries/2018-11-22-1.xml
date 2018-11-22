@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+  <title>PHP 7.3.0RC6 Released</title>
+  <id>http://php.net/archive/2018.php#id2018-11-22-1</id>
+  <published>2018-11-22T12:22:47+01:00</published>
+  <updated>2018-11-22T12:22:47+01:00</updated>
+  <category term="frontpage" label="PHP.net frontpage news"/>
+  <link href="http://php.net/index.php#id2018-11-22-1" rel="alternate" type="text/html"/>
+  <link href="http://php.net/archive/2018.php#id2018-11-22-1" rel="via" type="text/html"/>
+  <content type="xhtml">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+      <p>
+        The PHP team is glad to announce the presumably last PHP 7.3.0 pre-release, PHP 7.3.0RC6.
+        The rough outline of the PHP 7.3 release cycle is specified in the
+        <a href="https://wiki.php.net/todo/php73">PHP Wiki</a>.
+      </p>
+
+      <p>
+        For source downloads of PHP 7.3.0RC6 please visit the <a href="https://downloads.php.net/~cmb/">download page</a>.
+        Windows sources and binaries can be found on <a href="https://windows.php.net/qa/">windows.php.net/qa/</a>.
+      </p>
+
+      <p>
+        Please carefully test this version and report any issues found in the <a href=" https://bugs.php.net">bug reporting system</a>.
+      </p>
+
+      <p>
+        <b>THIS IS A DEVELOPMENT PREVIEW - DO NOT USE IT IN PRODUCTION!</b>
+      </p>
+
+      <p>
+        For more information on the new features and other changes, you can read the
+        <a href="https://github.com/php/php-src/blob/php-7.3.0RC6/NEWS">NEWS</a> file,
+        or the <a href="https://github.com/php/php-src/blob/php-7.3.0RC6/UPGRADING">UPGRADING</a>
+        file for a complete list of upgrading notes. Internal changes are listed in the
+        <a href="https://github.com/php/php-src/blob/php-7.3.0RC6/UPGRADING.INTERNALS">UPGRADING.INTERNALS</a> file.
+        These files can also be found in the release archive.
+      </p>
+
+      <p>
+        The next release would be 7.3.0 (GA), planned for December 6th.
+      </p>
+
+      <p>
+        The signatures for the release can be found in <a href="https://gist.github.com/cmb69/6d9574612d0fb78b8549e42ec096a5a6">the manifest</a>
+        or on <a href="https://qa.php.net/">the QA site</a>.
+      </p>
+
+      <p>
+        Thank you for helping us make PHP better.
+      </p>
+    </div>
+  </content>
+</entry>
