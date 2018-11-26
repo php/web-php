@@ -58,8 +58,8 @@ if (count($_POST) && (!isset($_POST['purpose']) || !is_array($_POST['purpose']) 
     // Check for errors
     if (empty($_POST['id'])) {
         $error .= "You must supply a desired Git user id. <br>";
-    } elseif(!preg_match('!^[a-z]\w+$!', $_POST['id'])) {
-        $error .= "Your user id must be >1 char long, start with ".
+    } elseif(!preg_match('!^[a-z]\w+$!', $_POST['id']) || strlen($_POST['id']) > 16) {
+        $error .= "Your user id must be from 1-16 characters long, start with ".
                   "a letter and contain nothing but a-z, 0-9, and _ <br>";
     }
     if (empty($_POST['fullname'])) {
@@ -394,7 +394,7 @@ foreach ($purposes as $i => $p) { ?>
 <td><input type="checkbox" name="guidelines" value="1" id="vcs-guidelines"> <label for="vcs-guidelines">Check the box if you agree</label></td>
 </tr>
 <tr>
- <th class="subr">User ID:<br> <small>(single word, lower case)</small></th>
+ <th class="subr">User ID:<br> <small>(single word, lower case, max 16 characters)</small></th>
  <td><input type="text" size="10" name="id"
       class="max" value="<?php if (isset($_POST['id'])) echo clean($_POST['id']);?>"></td>
 </tr>
