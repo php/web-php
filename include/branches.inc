@@ -56,7 +56,7 @@ function format_interval($from, $to) {
 		} elseif ($diff->d) {
 			$times[] = array($diff->d,'day');
 		} else {
-			$eolPeriod = 'last day';
+			$eolPeriod = 'midnight';
 		}
 		if ($times) {
 			$eolPeriod = implode(', ',
