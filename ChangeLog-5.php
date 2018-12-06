@@ -7,6 +7,26 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 
 <h1>PHP 5 ChangeLog</h1>
 
+<section class="version" id="5.6.39"><!-- {{{ 5.6.39 -->
+<h3>Version 5.6.39</h3>
+<b><?php release_date('06-Dec-2018'); ?></b>
+<ul><li>Core:
+<ul>
+  <li><?php bugfix(77231); ?> (Segfault when using convert.quoted-printable-encode filter).</li>
+</ul></li>
+<li>IMAP:
+<ul>
+  <li><?php bugfix(77020); ?> (null pointer dereference in imap_mail).</li>
+  <li><?php bugfix(77153); ?> (imap_open allows to run arbitrary shell commands via mailbox parameter).</li>
+</ul></li>
+<li>Phar:
+<ul>
+  <li><?php bugfix(77022); ?> (PharData always creates new files with mode 0666).</li>
+  <li><?php bugfix(77143); ?> (Heap Buffer Overflow (READ: 4) in phar_parse_pharfile).</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
 <section class="version" id="5.6.38"><!-- {{{ 5.6.38 -->
 <h3>Version 5.6.38</h3>
 <b><?php release_date('13-Sep-2018'); ?></b>

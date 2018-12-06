@@ -67,12 +67,12 @@ $PHP_7_0_SHA256     = array(
 $PHP_5_6_RC = false; // Current RC version (e.g., '5.6.7RC1') or false
 $PHP_5_6_RC_DATE = "05 Jan 2017";
 
-$PHP_5_6_VERSION         = "5.6.38";
-$PHP_5_6_DATE            = "13 Sep 2018";
+$PHP_5_6_VERSION         = "5.6.39";
+$PHP_5_6_DATE            = "06 Dec 2018";
 $PHP_5_6_SHA256     = array(
-                       "tar.bz2"       => "d65b231bbdd63be4439ef5ced965cfd63e62983429dbd4dfcfb49981593ebc03",
-                       "tar.gz"        => "3b74d46cd79a45cce90c8059e09d8bd0beeb5de562cbb0cb42f96ff8fa665fd4",
-                       "tar.xz"        => "c2fac47dc6316bd230f0ea91d8a5498af122fb6a3eb43f796c9ea5f59b04aa1e",
+                       "tar.bz2"       => "b3db2345f50c010b01fe041b4e0f66c5aa28eb325135136f153e18da01583ad5",
+                       "tar.gz"        => "127b122b7d6c7f3c211c0ffa554979370c3131196137404a51a391d8e2e9c7bb",
+                       "tar.xz"        => "8147576001a832ff3d03cb2980caa2d6b584a10624f87ac459fcd3948c6e4a10",
 );
 
 $RELEASES = array(

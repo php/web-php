@@ -2249,6 +2249,39 @@ $OLDRELEASES = array (
   ),
   5 => 
   array (
+    '5.6.38' => 
+    array (
+      'announcement' => 
+      array (
+        'English' => '/releases/5_6_38.php',
+      ),
+      'source' => 
+      array (
+        0 => 
+        array (
+          'filename' => 'php-5.6.38.tar.bz2',
+          'name' => 'PHP 5.6.38 (tar.bz2)',
+          'sha256' => 'd65b231bbdd63be4439ef5ced965cfd63e62983429dbd4dfcfb49981593ebc03',
+          'date' => '13 Sep 2018',
+        ),
+        1 => 
+        array (
+          'filename' => 'php-5.6.38.tar.gz',
+          'name' => 'PHP 5.6.38 (tar.gz)',
+          'sha256' => '3b74d46cd79a45cce90c8059e09d8bd0beeb5de562cbb0cb42f96ff8fa665fd4',
+          'date' => '13 Sep 2018',
+        ),
+        2 => 
+        array (
+          'filename' => 'php-5.6.38.tar.xz',
+          'name' => 'PHP 5.6.38 (tar.xz)',
+          'sha256' => 'c2fac47dc6316bd230f0ea91d8a5498af122fb6a3eb43f796c9ea5f59b04aa1e',
+          'date' => '13 Sep 2018',
+        ),
+      ),
+      'date' => '13 Sep 2018',
+      'museum' => false,
+    ),
     '5.6.37' => 
     array (
       'announcement' => 
