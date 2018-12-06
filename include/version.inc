@@ -16,8 +16,16 @@
  * );
  */
 /* PHP 7.3 Release */
-$PHP_7_3_RC  = '7.3.0RC6';
+$PHP_7_3_RC  = false;
 $PHP_7_3_RC_DATE = "22 Nov 2018";
+
+$PHP_7_3_VERSION         = "7.3.0";
+$PHP_7_3_DATE            = "06 Dec 2018";
+$PHP_7_3_SHA256     = array(
+    "tar.bz2"       => "7a267daec9969a997c5c8028c350229646748e0fcc71e2f2dbb157ddcee87c67",
+    "tar.gz"        => "391bd0f91d9bdd01ab47ef9607bad8c65e35bc9bb098fb7777b2556e2c847b11",
+    "tar.xz"        => "7d195cad55af8b288c3919c67023a14ff870a73e3acc2165a6d17a4850a560b5",
+);
 
 /* PHP 7.2 Release */
 $PHP_7_2_RC = false; // Current RC version (e.g., '7.2.1RC1') or false
@@ -69,6 +77,29 @@ $PHP_5_6_SHA256     = array(
 
 $RELEASES = array(
     7 => array(
+        $PHP_7_3_VERSION => array(
+            "announcement" => true,
+            "source" => array(
+                array(
+                    "filename" => "php-$PHP_7_3_VERSION.tar.bz2",
+                    "name"     => "PHP $PHP_7_3_VERSION (tar.bz2)",
+                    "sha256"   => $PHP_7_3_SHA256["tar.bz2"],
+                    "date"     => $PHP_7_3_DATE,
+                ),
+                array(
+                    "filename" => "php-$PHP_7_3_VERSION.tar.gz",
+                    "name"     => "PHP $PHP_7_3_VERSION (tar.gz)",
+                    "sha256"   => $PHP_7_3_SHA256["tar.gz"],
+                    "date"     => $PHP_7_3_DATE,
+                ),
+                array(
+                    "filename" => "php-$PHP_7_3_VERSION.tar.xz",
+                    "name"     => "PHP $PHP_7_3_VERSION (tar.xz)",
+                    "sha256"   => $PHP_7_3_SHA256["tar.xz"],
+                    "date"     => $PHP_7_3_DATE,
+                ),
+            ),
+        ),
         $PHP_7_2_VERSION => array(
             "announcement" => true,
             "source" => array(

@@ -6,6 +6,331 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
 ?>
 <h1>PHP 7 ChangeLog</h1>
 
+<section class="version" id="7.3.0"><!-- {{{ 7.3.0 -->
+<h3>Version 7.3.0</h3>
+<b><?php release_date('06-Dec-2018'); ?></b>
+<ul><li>Core:
+<ul>
+  <li>Improved PHP GC.</li>
+  <li>Redesigned the old ext_skel program written in PHP, run: 'php ext_skel.php' for all options. This means there are no dependencies, thus making it work on Windows out of the box.</li>
+  <li>Removed support for BeOS.</li>
+  <li>Add PHP_VERSION to phpinfo() &lt;title/&gt;.</li>
+  <li>Add net_get_interfaces().</li>
+  <li>Implemented flexible heredoc and nowdoc syntax, per RFC https://wiki.php.net/rfc/flexible_heredoc_nowdoc_syntaxes.</li>
+  <li>Added support for references in list() and array destructuring, per RFC https://wiki.php.net/rfc/list_reference_assignment.</li>
+  <li>Improved effectiveness of ZEND_SECURE_ZERO for NetBSD and systems without native similar feature.</li>
+  <li>Added syslog.facility and syslog.ident INI entries for customizing syslog logging.</li>
+  <li><?php bugfix(75683); ?> (Memory leak in zend_register_functions() in ZTS mode).</li>
+  <li><?php bugfix(75031); ?> (support append mode in temp/memory streams).</li>
+  <li><?php bugfix(74860); ?> (Uncaught exceptions not being formatted properly when error_log set to "syslog").</li>
+  <li><?php bugfix(75220); ?> (Segfault when calling is_callable on parent).</li>
+  <li><?php bugfix(69954); ?> (broken links and unused config items in distributed ini files).</li>
+  <li><?php bugfix(74922); ?> (Composed class has fatal error with duplicate, equal const properties).</li>
+  <li><?php bugfix(63911); ?> (identical trait methods raise errors during composition).</li>
+  <li><?php bugfix(75677); ?> (Clang ignores fastcall calling convention on variadic function).</li>
+  <li><?php bugfix(54043); ?> (Remove inconsitency of internal exceptions and user defined exceptions).</li>
+  <li><?php bugfix(53033); ?> (Mathematical operations convert objects to integers).</li>
+  <li><?php bugfix(73108); ?> (Internal class cast handler uses integer instead of float).</li>
+  <li><?php bugfix(75765); ?> (Fatal error instead of Error exception when base class is not found).</li>
+  <li><?php bugfix(76198); ?> (Wording: "iterable" is not a scalar type).</li>
+  <li><?php bugfix(76137); ?> (config.guess/config.sub do not recognize RISC-V).</li>
+  <li><?php bugfix(76427); ?> (Segfault in zend_objects_store_put).</li>
+  <li><?php bugfix(76422); ?> (ftruncate fails on files &gt; 2GB).</li>
+  <li><?php bugfix(76509); ?> (Inherited static properties can be desynchronized from their parent by ref).</li>
+  <li><?php bugfix(76439); ?> (Changed behaviour in unclosed HereDoc).</li>
+  <li><?php bugfix(63217); ?> (Constant numeric strings become integers when used as ArrayAccess offset).</li>
+  <li><?php bugfix(33502); ?> (Some nullary functions don't check the number of arguments).</li>
+  <li><?php bugfix(76392); ?> (Error relocating sapi/cli/php: unsupported relocation type 37).</li>
+  <li>The declaration and use of case-insensitive constants has been deprecated.</li>
+  <li>Added syslog.filter INI entry for syslog filtering.</li>
+  <li><?php bugfix(76667); ?> (Segfault with divide-assign op and __get + __set).</li>
+  <li><?php bugfix(76030); ?> (RE2C_FLAGS rarely honoured) (Cristian Rodríguez)</li>
+  <li>Fixed broken zend_read_static_property (Laruence)</li>
+  <li><?php bugfix(76773); ?> (Traits used on the parent are ignored for child classes).</li>
+  <li><?php bugfix(76767); ?> (‘asm’ operand has impossible constraints in zend_operators.h).</li>
+  <li><?php bugfix(76752); ?> (Crash in ZEND_COALESCE_SPEC_TMP_HANDLER - assertion in _get_zval_ptr_tmp failed).</li>
+  <li><?php bugfix(76820); ?> (Z_COPYABLE invalid definition).</li>
+  <li><?php bugfix(76510); ?> (file_exists() stopped working for phar://).</li>
+  <li><?php bugfix(76869); ?> (Incorrect bypassing protected method accessibilty check).</li>
+  <li><?php bugfix(72635); ?> (Undefined class used by class constant in constexpr generates fatal error).</li>
+  <li><?php bugfix(76947); ?> (file_put_contents() blocks the directory of the file (__DIR__)).</li>
+  <li><?php bugfix(76979); ?> (define() error message does not mention resources as valid values).</li>
+  <li><?php bugfix(76825); ?> (Undefined symbols ___cpuid_count).</li>
+  <li><?php bugfix(77110); ?> (undefined symbol zend_string_equal_val in C++ build).</li>
+  <li><?php bugfix(77231); ?> (Segfault when using convert.quoted-printable-encode filter).</li>
+</ul></li>
+<li>BCMath:
+<ul>
+  <li>Implemented FR <?php bugl(67855); ?> (No way to get current scale in use).</li>
+  <li><?php bugfix(66364); ?> (BCMath bcmul ignores scale parameter).</li>
+  <li><?php bugfix(75164); ?> (split_bc_num() is pointless).</li>
+  <li><?php bugfix(75169); ?> (BCMath errors/warnings bypass PHP's error handling).</li>
+</ul></li>
+<li>CLI:
+<ul>
+  <li><?php bugfix(44217); ?> (Output after stdout/stderr closed cause immediate exit with status 0).</li>
+  <li><?php bugfix(77111); ?> (php-win.exe corrupts unicode symbols from cli parameters).</li>
+</ul></li>
+<li>cURL:
+<ul>
+  <li>Expose curl constants from curl 7.50 to 7.61.</li>
+  <li><?php bugfix(74125); ?> (Fixed finding CURL on systems with multiarch support).</li>
+</ul></li>
+<li>Date:
+<ul>
+  <li>Implemented FR <?php bugl(74668); ?>: Add DateTime::createFromImmutable() method.</li>
+  <li><?php bugfix(75222); ?> (DateInterval microseconds property always 0).</li>
+  <li><?php bugfix(68406); ?> (calling var_dump on a DateTimeZone object modifies it).</li>
+  <li><?php bugfix(76131); ?> (mismatch arginfo for date_create).</li>
+  <li>Updated timelib to 2018.01RC1 to address several bugs:</li>
+  <li><?php bugfix(75577); ?> (DateTime::createFromFormat does not accept 'v' format specifier).</li>
+  <li><?php bugfix(75642); ?> (Wrap around behaviour for microseconds is not working).</li>
+  <li><?php bugfix(77097); ?> (DateTime::diff gives wrong diff when the actual diff is less than 1 second).</li>
+</ul></li>
+<li>DBA:
+<ul>
+  <li><?php bugfix(75264); ?> (compiler warnings emitted).</li>
+</ul></li>
+<li>DOM:
+<ul>
+  <li><?php bugfix(76285); ?> (DOMDocument::formatOutput attribute sometimes ignored).</li>
+</ul></li>
+<li>Fileinfo:
+<ul>
+  <li><?php bugfix(77095); ?> (slowness regression in 7.2/7.3 (compared to 7.1)).</li>
+</ul></li>
+<li>Filter:
+<ul>
+  <li>Added the 'add_slashes' sanitization mode (FILTER_SANITIZE_ADD_SLASHES).</li>
+</ul></li>
+<li>FPM:
+<ul>
+  <li>Added fpm_get_status function.</li>
+  <li><?php bugfix(62596); ?> (getallheaders() missing with PHP-FPM).</li>
+  <li><?php bugfix(69031); ?> (Long messages into stdout/stderr are truncated incorrectly) - added new log related FPM configuration options: log_limit, log_buffering and decorate_workers_output.</li>
+</ul></li>
+<li>ftp:
+<ul>
+  <li><?php bugfix(77151); ?> (ftp_close(): SSL_read on shutdown).</li>
+</ul></li>
+<li>GD:
+<ul>
+  <li>Added support for WebP in imagecreatefromstring().</li>
+</ul></li>
+<li>GMP:
+<ul>
+  <li>Export internal structures and accessor helpers for GMP object.</li>
+  <li>Added gmp_binomial(n, k).</li>
+  <li>Added gmp_lcm(a, b).</li>
+  <li>Added gmp_perfect_power(a).</li>
+  <li>Added gmp_kronecker(a, b).</li>
+</ul></li>
+<li>iconv:
+<ul>
+  <li><?php bugfix(53891); ?> (iconv_mime_encode() fails to Q-encode UTF-8 string).</li>
+  <li><?php bugfix(77147); ?> (Fixing 60494 ignored ICONV_MIME_DECODE_CONTINUE_ON_ERROR).</li>
+</ul></li>
+<li>IMAP:
+<ul>
+  <li><?php bugfix(77153); ?> (imap_open allows to run arbitrary shell commands via mailbox parameter).</li>
+  <li><?php bugfix(77020); ?> (null pointer dereference in imap_mail).</li>
+</ul></li>
+<li>Interbase:
+<ul>
+  <li><?php bugfix(75453); ?> (Incorrect reflection for ibase_[p]connect).</li>
+  <li><?php bugfix(76443); ?> (php+php_interbase.dll crash on module_shutdown).</li>
+</ul></li>
+<li>intl:
+<ul>
+  <li><?php bugfix(75317); ?> (UConverter::setDestinationEncoding changes source instead of destination).</li>
+  <li><?php bugfix(76829); ?> (Incorrect validation of domain on idn_to_utf8() function).</li>
+</ul></li>
+<li>JSON:
+<ul>
+  <li>Added JSON_THROW_ON_ERROR flag.</li>
+</ul></li>
+<li>LDAP:
+<ul>
+  <li>Added ldap_exop_refresh helper for EXOP REFRESH operation with dds overlay.</li>
+  <li>Added full support for sending and parsing ldap controls.</li>
+  <li><?php bugfix(49876); ?> (Fix LDAP path lookup on 64-bit distros).</li>
+</ul></li>
+<li>libxml2:
+<ul>
+  <li><?php bugfix(75871); ?> (use pkg-config where available).</li>
+</ul></li>
+<li>litespeed:
+<ul>
+  <li><?php bugfix(75248); ?> (Binary directory doesn't get created when building only litespeed SAPI).</li>
+  <li><?php bugfix(75251); ?> (Missing program prefix and suffix).</li>
+</ul></li>
+<li>MBstring:
+<ul>
+  <li>Updated to Oniguruma 6.9.0.</li>
+  <li><?php bugfix(65544); ?> (mb title case conversion-first word in quotation isn't capitalized).</li>
+  <li><?php bugfix(71298); ?> (MB_CASE_TITLE misbehaves with curled apostrophe/quote).</li>
+  <li><?php bugfix(73528); ?> (Crash in zif_mb_send_mail).</li>
+  <li><?php bugfix(74929); ?> (mbstring functions version 7.1.1 are slow compared to 5.3 on Windows).</li>
+  <li><?php bugfix(76319); ?> (mb_strtolower with invalid UTF-8 causes segmentation fault).</li>
+  <li><?php bugfix(76574); ?> (use of undeclared identifiers INT_MAX and LONG_MAX).</li>
+  <li><?php bugfix(76594); ?> (Bus Error due to unaligned access in zend_ini.c OnUpdateLong).</li>
+  <li><?php bugfix(76706); ?> (mbstring.http_output_conv_mimetypes is ignored).</li>
+  <li><?php bugfix(76958); ?> (Broken UTF7-IMAP conversion).</li>
+  <li><?php bugfix(77025); ?> (mb_strpos throws Unknown encoding or conversion error).</li>
+  <li><?php bugfix(77165); ?> (mb_check_encoding crashes when argument given an empty array).</li>
+</ul></li>
+<li>Mysqlnd:
+<ul>
+  <li><?php bugfix(76386); ?> (Prepared Statement formatter truncates fractional seconds from date/time column).</li>
+</ul></li>
+<li>ODBC:
+<ul>
+  <li>Removed support for ODBCRouter.</li>
+  <li>Removed support for Birdstep.</li>
+  <li><?php bugfix(77079); ?> (odbc_fetch_object has incorrect type signature).</li>
+</ul></li>
+<li>Opcache:
+<ul>
+  <li><?php bugfix(76466); ?> (Loop variable confusion).</li>
+  <li><?php bugfix(76463); ?> (var has array key type but not value type).</li>
+  <li><?php bugfix(76446); ?> (zend_variables.c:73: zend_string_destroy: Assertion `!(zval_gc_flags((str)-&gt;gc)).</li>
+  <li><?php bugfix(76711); ?> (OPcache enabled triggers false-positive "Illegal string offset").</li>
+  <li><?php bugfix(77058); ?> (Type inference in opcache causes side effects).</li>
+  <li><?php bugfix(77092); ?> (array_diff_key() - segmentation fault).</li>
+</ul></li>
+<li>OpenSSL:
+<ul>
+  <li>Added openssl_pkey_derive function.</li>
+  <li>Add min_proto_version and max_proto_version ssl stream options as well as related constants for possible TLS protocol values.</li>
+</ul></li>
+<li>PCRE:
+<ul>
+  <li>Implemented https://wiki.php.net/rfc/pcre2-migration.</li>
+  <li>Upgrade PCRE2 to 10.32.</li>
+  <li><?php bugfix(75355); ?> (preg_quote() does not quote # control character).</li>
+  <li><?php bugfix(76512); ?> (\w no longer includes unicode characters).</li>
+  <li><?php bugfix(76514); ?> (Regression in preg_match makes it fail with PREG_JIT_STACKLIMIT_ERROR).</li>
+  <li><?php bugfix(76909); ?> (preg_match difference between 7.3 and &lt; 7.3).</li>
+</ul></li>
+<li>PDO_DBlib:
+<ul>
+  <li>Implemented FR <?php bugl(69592); ?> (allow 0-column rowsets to be skipped automatically).</li>
+  <li>Expose TDS version as \PDO::DBLIB_ATTR_TDS_VERSION attribute on \PDO instance.</li>
+  <li>Treat DATETIME2 columns like DATETIME.</li>
+  <li><?php bugfix(74243); ?> (allow locales.conf to drive datetime format).</li>
+</ul></li>
+<li>PDO_Firebird:
+<ul>
+  <li><?php bugfix(74462); ?> (PDO_Firebird returns only NULLs for results with boolean for FIREBIRD &gt;= 3.0).</li>
+</ul></li>
+<li>PDO_OCI:
+<ul>
+  <li><?php bugfix(74631); ?> (PDO_PCO with PHP-FPM: OCI environment initialized before PHP-FPM sets it up).</li>
+</ul></li>
+<li>PDO SQLite:
+<ul>
+  <li>Add support for additional open flags</li>
+</ul></li>
+<li>pgsql:
+<ul>
+  <li>Added new error constants for pg_result_error(): PGSQL_DIAG_SCHEMA_NAME, PGSQL_DIAG_TABLE_NAME, PGSQL_DIAG_COLUMN_NAME, PGSQL_DIAG_DATATYPE_NAME, PGSQL_DIAG_CONSTRAINT_NAME and PGSQL_DIAG_SEVERITY_NONLOCALIZED.</li>
+  <li><?php bugfix(77047); ?> (pg_convert has a broken regex for the 'TIME WITHOUT TIMEZONE' data type).</li>
+</ul></li>
+<li>phar:
+<ul>
+  <li><?php bugfix(74991); ?> (include_path has a 4096 char limit in some cases).</li>
+  <li><?php bugfix(65414); ?> (deal with leading slash when adding files correctly).</li>
+  <li><?php bugfix(77022); ?> (PharData always creates new files with mode 0666).</li>
+  <li><?php bugfix(77143); ?> (Heap Buffer Overflow (READ: 4) in phar_parse_pharfile).</li>
+</ul></li>
+<li>readline:
+<ul>
+  <li>Added completion_append_character and completion_suppress_append options to readline_info() if linked against libreadline.</li>
+</ul></li>
+<li>Session:
+<ul>
+  <li><?php bugfix(74941); ?> (session fails to start after having headers sent).</li>
+</ul></li>
+<li>SimpleXML:
+<ul>
+  <li><?php bugfix(54973); ?> (SimpleXML casts integers wrong).</li>
+  <li><?php bugfix(76712); ?> (Assignment of empty string creates extraneous text node).</li>
+</ul></li>
+<li>Sockets:
+<ul>
+  <li><?php bugfix(67619); ?> (Validate length on socket_write).</li>
+</ul></li>
+<li>SOAP:
+<ul>
+  <li><?php bugfix(75464); ?> (Wrong reflection on SoapClient::__setSoapHeaders).</li>
+  <li><?php bugfix(70469); ?> (SoapClient generates E_ERROR even if exceptions=1 is used).</li>
+  <li><?php bugfix(50675); ?> (SoapClient can't handle object references correctly).</li>
+  <li><?php bugfix(76348); ?> (WSDL_CACHE_MEMORY causes Segmentation fault).</li>
+  <li><?php bugfix(77141); ?> (Signedness issue in SOAP when precision=-1).</li>
+</ul></li>
+<li>SPL:
+<ul>
+  <li><?php bugfix(74977); ?> (Appending AppendIterator leads to segfault).</li>
+  <li><?php bugfix(75173); ?> (incorrect behavior of AppendIterator::append in foreach loop).</li>
+  <li><?php bugfix(74372); ?> (autoloading file with syntax error uses next autoloader, may hide parse error).</li>
+  <li><?php bugfix(75878); ?> (RecursiveTreeIterator::setPostfix has wrong signature).</li>
+  <li><?php bugfix(74519); ?> (strange behavior of AppendIterator).</li>
+  <li><?php bugfix(76131); ?> (mismatch arginfo for splarray constructor).</li>
+</ul></li>
+<li>SQLite3:
+<ul>
+  <li>Updated bundled libsqlite to 3.24.0.</li>
+</ul></li>
+<li>Standard:
+<ul>
+  <li>Added is_countable() function.</li>
+  <li>Added support for the SameSite cookie directive, including an alternative signature for setcookie(), setrawcookie() and session_set_cookie_params().</li>
+  <li>Remove superfluous warnings from inet_ntop()/inet_pton().</li>
+  <li><?php bugfix(75916); ?> (DNS_CAA record results contain garbage).</li>
+  <li>Fixed unserialize(), to disable creation of unsupported data structures through manually crafted strings.</li>
+  <li><?php bugfix(75409); ?> (accept EFAULT in addition to ENOSYS as indicator that getrandom() is missing).</li>
+  <li><?php bugfix(74719); ?> (fopen() should accept NULL as context).</li>
+  <li><?php bugfix(69948); ?> (path/domain are not sanitized in setcookie).</li>
+  <li><?php bugfix(75996); ?> (incorrect url in header for mt_rand).</li>
+  <li>Added hrtime() function, to get high resolution time.</li>
+  <li><?php bugfix(48016); ?> (stdClass::__setState is not defined although var_export() uses it).</li>
+  <li><?php bugfix(76136); ?> (stream_socket_get_name should enclose IPv6 in brackets).</li>
+  <li><?php bugfix(76688); ?> (Disallow excessive parameters after options array).</li>
+  <li><?php bugfix(76713); ?> (Segmentation fault caused by property corruption).</li>
+  <li><?php bugfix(76755); ?> (setcookie does not accept "double" type for expire time).</li>
+  <li><?php bugfix(76674); ?> (improve array_* failure messages exposing what was passed instead of an array).</li>
+  <li><?php bugfix(76803); ?> (ftruncate changes file pointer).</li>
+  <li><?php bugfix(76818); ?> (Memory corruption and segfault).</li>
+  <li><?php bugfix(77081); ?> (ftruncate() changes seek pointer in c mode).</li>
+</ul></li>
+<li>Testing:
+<ul>
+  <li>Implemented FR <?php bugl(62055); ?> (Make run-tests.php support --CGI-- sections).</li>
+</ul></li>
+<li>Tidy:
+<ul>
+  <li>Support using tidyp instead of tidy.</li>
+  <li><?php bugfix(74707); ?> (Tidy has incorrect ReflectionFunction param counts for functions taking tidy).</li>
+  <li>Fixed arginfo for tidy::__construct().</li>
+</ul></li>
+<li>Tokenizer:
+<ul>
+  <li><?php bugfix(76437); ?> (token_get_all with TOKEN_PARSE flag fails to recognise close tag).</li>
+  <li><?php bugfix(75218); ?> (Change remaining uncatchable fatal errors for parsing into ParseError).</li>
+  <li><?php bugfix(76538); ?> (token_get_all with TOKEN_PARSE flag fails to recognise close tag with newline).</li>
+  <li><?php bugfix(76991); ?> (Incorrect tokenization of multiple invalid flexible heredoc strings).</li>
+</ul></li>
+<li>XML:
+<ul>
+  <li><?php bugfix(71592); ?> (External entity processing never fails).</li>
+</ul></li>
+<li>Zlib:
+<ul>
+  <li>Added zlib/level context option for compress.zlib wrapper.</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
 <section class="version" id="7.2.12"><!-- {{{ 7.2.12 -->
 <h3>Version 7.2.12</h3>
 <b><?php release_date('08-Nov-2018'); ?></b>
