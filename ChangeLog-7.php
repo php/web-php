@@ -331,6 +331,113 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
 </ul>
 <!-- }}} --></section>
 
+<section class="version" id="7.2.13"><!-- {{{ 7.2.13 -->
+<h3>Version 7.2.13</h3>
+<b><?php release_date('06-Dec-2018'); ?></b>
+<ul><li>ftp:
+<ul>
+  <li><?php bugfix(77151); ?> (ftp_close(): SSL_read on shutdown).</li>
+</ul></li>
+<li>CLI:
+<ul>
+  <li><?php bugfix(77111); ?> (php-win.exe corrupts unicode symbols from cli parameters).</li>
+</ul></li>
+<li>Fileinfo:
+<ul>
+  <li><?php bugfix(77095); ?> (slowness regression in 7.2/7.3 (compared to 7.1)).</li>
+</ul></li>
+<li>iconv:
+<ul>
+  <li><?php bugfix(77147); ?> (Fixing 60494 ignored ICONV_MIME_DECODE_CONTINUE_ON_ERROR).</li>
+</ul></li>
+<li>Core:
+<ul>
+  <li><?php bugfix(77231); ?> (Segfault when using convert.quoted-printable-encode filter).</li>
+</ul></li>
+<li>IMAP:
+<ul>
+  <li><?php bugfix(77153); ?> (imap_open allows to run arbitrary shell commands via mailbox parameter).</li>
+</ul></li>
+<li>ODBC:
+<ul>
+  <li><?php bugfix(77079); ?> (odbc_fetch_object has incorrect type signature).</li>
+</ul></li>
+<li>Opcache:
+<ul>
+  <li><?php bugfix(77058); ?> (Type inference in opcache causes side effects).</li>
+  <li><?php bugfix(77092); ?> (array_diff_key() - segmentation fault).</li>
+</ul></li>
+<li>Phar:
+<ul>
+  <li><?php bugfix(77022); ?> (PharData always creates new files with mode 0666).</li>
+  <li><?php bugfix(77143); ?> (Heap Buffer Overflow (READ: 4) in phar_parse_pharfile).</li>
+</ul></li>
+<li>PGSQL:
+<ul>
+  <li><?php bugfix(77047); ?> (pg_convert has a broken regex for the 'TIME WITHOUT TIMEZONE' data type).</li>
+</ul></li>
+<li>SOAP:
+<ul>
+  <li><?php bugfix(50675); ?> (SoapClient can't handle object references correctly).</li>
+  <li><?php bugfix(76348); ?> (WSDL_CACHE_MEMORY causes Segmentation fault).</li>
+  <li><?php bugfix(77141); ?> (Signedness issue in SOAP when precision=-1).</li>
+</ul></li>
+<li>Sockets:
+<ul>
+  <li><?php bugfix(67619); ?> (Validate length on socket_write).</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
+<section class="version" id="7.1.25"><!-- {{{ 7.1.25 -->
+<h3>Version 7.1.25</h3>
+<b><?php release_date('06-Dec-2018'); ?></b>
+<ul><li>Core:
+<ul>
+  <li><?php bugfix(71041); ?> (zend_signal_startup() needs ZEND_API).</li>
+  <li><?php bugfix(77231); ?> (Segfault when using convert.quoted-printable-encode filter).</li>
+</ul></li>
+<li>ftp:
+<ul>
+  <li><?php bugfix(77151); ?> (ftp_close(): SSL_read on shutdown).</li>
+</ul></li>
+<li>iconv:
+<ul>
+  <li><?php bugfix(77147); ?> (Fixing 60494 ignored ICONV_MIME_DECODE_CONTINUE_ON_ERROR).</li>
+</ul></li>
+<li>IMAP:
+<ul>
+  <li><?php bugfix(77153); ?> (imap_open allows to run arbitrary shell commands via mailbox parameter).</li>
+</ul></li>
+<li>ODBC:
+<ul>
+  <li><?php bugfix(77079); ?> (odbc_fetch_object has incorrect type signature).</li>
+</ul></li>
+<li>Opcache:
+<ul>
+  <li><?php bugfix(77058); ?> (Type inference in opcache causes side effects).</li>
+</ul></li>
+<li>Phar:
+<ul>
+  <li><?php bugfix(77022); ?> (PharData always creates new files with mode 0666).</li>
+  <li><?php bugfix(77143); ?> (Heap Buffer Overflow (READ: 4) in phar_parse_pharfile).</li>
+</ul></li>
+<li>PGSQL:
+<ul>
+  <li><?php bugfix(77047); ?> (pg_convert has a broken regex for the 'TIME WITHOUT TIMEZONE' data type).</li>
+</ul></li>
+<li>SOAP:
+<ul>
+  <li><?php bugfix(76348); ?> (WSDL_CACHE_MEMORY causes Segmentation fault).</li>
+  <li><?php bugfix(77141); ?> (Signedness issue in SOAP when precision=-1).</li>
+</ul></li>
+<li>Sockets:
+<ul>
+  <li><?php bugfix(67619); ?> (Validate length on socket_write).</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
 <section class="version" id="7.2.12"><!-- {{{ 7.2.12 -->
 <h3>Version 7.2.12</h3>
 <b><?php release_date('08-Nov-2018'); ?></b>

@@ -31,24 +31,24 @@ $PHP_7_3_SHA256     = array(
 $PHP_7_2_RC = false; // Current RC version (e.g., '7.2.1RC1') or false
 $PHP_7_2_RC_DATE = "25 Oct 2018";
 
-$PHP_7_2_VERSION         = "7.2.12";
-$PHP_7_2_DATE            = "08 Nov 2018";
+$PHP_7_2_VERSION         = "7.2.13";
+$PHP_7_2_DATE            = "06 Dec 2018";
 $PHP_7_2_SHA256     = array(
-    "tar.bz2"       => "b724c4c20347b6105be109d98cc395a610174e8aadb506c82e8cb645b65ef6b6",
-    "tar.gz"        => "d7cabdf4e51db38121daf0d494dc074743b24b6c79e592037eeedd731f1719dd",
-    "tar.xz"        => "989c04cc879ee71a5e1131db867f3c5102f1f7565f805e2bb8bde33f93147fe1",
+    "tar.bz2"       => "5b4a46fb76491bcd3eee1213773382e570f6ecf9b22d623b24e2822298b3e92d",
+    "tar.gz"        => "e563cee406b1ec96649c22ed2b35796cfe4e9aa9afa6eab6be4cf2fe5d724744",
+    "tar.xz"        => "14b0429abdb46b65c843e5882c9a8c46b31dfbf279c747293b8ab950c2644a4b",
 );
 
 /* PHP 7.1 Release */
 $PHP_7_1_RC = false; // Current RC version (e.g., '5.6.7RC1') or false
 $PHP_7_1_RC_DATE = "25 Oct 2018";
 
-$PHP_7_1_VERSION         = "7.1.24";
-$PHP_7_1_DATE            = "08 Nov 2018";
+$PHP_7_1_VERSION         = "7.1.25";
+$PHP_7_1_DATE            = "06 Dec 2018";
 $PHP_7_1_SHA256     = array(
-    'tar.bz2'       => '66de24e73c7f6006f090c1b187d6b218c8fa6a513acca4ff5c14b695a7391e0b',
-    'tar.gz'        => '1e780b1af3eeb8fba9e5af6205c960184a0c3a0ef091aaa192e7b7d6b67405d0',
-    'tar.xz'        => 'e70dcec0ae28b6bc308b78972ec15aa850808819cc765f505aa51e5a7e2fa5d7',
+    'tar.bz2'       => '002cdc880ac7cfaede2c389204d366108847db0f3ac72edf1ba95c0577f9aaac',
+    'tar.gz'        => '7dc40e202140e8b4fb3d992c15a68d98dc06b805e6b218497d260abbe51f5958',
+    'tar.xz'        => '0fd8dad1903cd0b2d615a1fe4209f99e53b7292403c8ffa1919c0f4dd1eada88',
 );
 
 /* PHP 7.0 Release */
