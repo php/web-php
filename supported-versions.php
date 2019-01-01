@@ -10,7 +10,6 @@ site_header('Supported Versions', array('css' => array('supported-versions.css')
 // support lifetime, add it under a heading with an anchor, and add the anchor
 // and branch names to the array below ('x.y' => '#anchor-name').
 $VERSION_NOTES = array(
-	'5.6' => '#php-5.6',
 );
 ?>
 
@@ -115,15 +114,5 @@ include $_SERVER['DOCUMENT_ROOT'] . '/images/supported-versions.php';
 		</td>
 	</tr>
 </table>
-
-<h4>Version specific notes</h4>
-
-<h5 id="php-5.6">PHP 5.6</h5>
-
-<p>
-	As it is the final PHP 5 release, support for PHP 5.6 has been extended:
-	active support will run for an additional four months, and the security fix
-	period has been doubled from one to two years. Other releases are unaffected.
-</p>
 
 <?php site_footer(); ?>
