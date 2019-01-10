@@ -32,7 +32,7 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
 <ul>
   <li><?php bugfix(77195); ?> (Incorrect error handling of imagecreatefromjpeg()).</li>
   <li><?php bugfix(77198); ?> (auto cropping has insufficient precision).</li>
-  <li><?php bugfix(77200); ?> (imagecropauto(ÔÇª, GD_CROP_SIDES) crops left but not right).</li>
+  <li><?php bugfix(77200); ?> (imagecropauto(…, GD_CROP_SIDES) crops left but not right).</li>
   <li><?php bugfix(77269); ?> (efree() on uninitialized Heap data in imagescale leads to use-after-free).</li>
   <li><?php bugfix(77270); ?> (imagecolormatch Out Of Bounds Write on Heap).</li>
 </ul></li>
