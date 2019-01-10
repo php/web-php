@@ -6,6 +6,99 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
 ?>
 <h1>PHP 7 ChangeLog</h1>
 
+<section class="version" id="7.3.1"><!-- {{{ 7.3.1 -->
+<h3>Version 7.3.1</h3>
+<b><?php release_date('10-Jan-2019'); ?></b>
+<ul><li>Core:
+<ul>
+  <li><?php bugfix(76654); ?> (Build failure on Mac OS X on 32-bit Intel).</li>
+  <li><?php bugfix(71041); ?> (zend_signal_startup() needs ZEND_API).</li>
+  <li><?php bugfix(76046); ?> (PHP generates "FE_FREE" opcode on the wrong line).</li>
+  <li><?php bugfix(77291); ?> (magic methods inherited from a trait may be ignored).</li>
+</ul></li>
+<li>CURL:
+<ul>
+  <li><?php bugfix(77264); ?> (curl_getinfo returning microseconds, not seconds).</li>
+</ul></li>
+<li>COM:
+<ul>
+  <li><?php bugfix(77177); ?> (Serializing or unserializing COM objects crashes).</li>
+</ul></li>
+<li>Exif:
+<ul>
+  <li><?php bugfix(77184); ?> (Unsigned rational numbers are written out as signed rationals).</li>
+</ul></li>
+<li>GD:
+<ul>
+  <li><?php bugfix(77195); ?> (Incorrect error handling of imagecreatefromjpeg()).</li>
+  <li><?php bugfix(77198); ?> (auto cropping has insufficient precision).</li>
+  <li><?php bugfix(77200); ?> (imagecropauto(ÔÇª, GD_CROP_SIDES) crops left but not right).</li>
+  <li><?php bugfix(77269); ?> (efree() on uninitialized Heap data in imagescale leads to use-after-free).</li>
+  <li><?php bugfix(77270); ?> (imagecolormatch Out Of Bounds Write on Heap).</li>
+</ul></li>
+<li>MBString:
+<ul>
+  <li><?php bugfix(77367); ?> (Negative size parameter in mb_split).</li>
+  <li><?php bugfix(77370); ?> (Buffer overflow on mb regex functions - fetch_token).</li>
+  <li><?php bugfix(77371); ?> (heap buffer overflow in mb regex functions - compile_string_node).</li>
+  <li><?php bugfix(77381); ?> (heap buffer overflow in multibyte match_at).</li>
+  <li><?php bugfix(77382); ?> (heap buffer overflow due to incorrect length in expand_case_fold_string).</li>
+  <li><?php bugfix(77385); ?> (buffer overflow in fetch_token).</li>
+  <li><?php bugfix(77394); ?> (Buffer overflow in multibyte case folding - unicode).</li>
+  <li><?php bugfix(77418); ?> (Heap overflow in utf32be_mbc_to_code).</li>
+</ul></li>
+<li>OCI8:
+<ul>
+  <li><?php bugfix(76804); ?> (oci_pconnect with OCI_CRED_EXT not working).</li>
+  <li>Added oci_set_call_timeout() for call timeouts.</li>
+  <li>Added oci_set_db_operation() for the DBOP end-to-end-tracing attribute.</li>
+</ul></li>
+<li>Opcache:
+<ul>
+  <li><?php bugfix(77215); ?> (CFG assertion failure on multiple finalizing switch frees in one block).</li>
+  <li><?php bugfix(77275); ?> (OPcache optimization problem for ArrayAccess-&gt;offsetGet).</li>
+</ul></li>
+<li>PCRE:
+<ul>
+  <li><?php bugfix(77193); ?> (Infinite loop in preg_replace_callback).</li>
+</ul></li>
+<li>PDO:
+<ul>
+  <li>Handle invalid index passed to PDOStatement::fetchColumn() as error.</li>
+</ul></li>
+<li>Phar:
+<ul>
+  <li><?php bugfix(77247); ?> (heap buffer overflow in phar_detect_phar_fname_ext).</li>
+</ul></li>
+<li>Soap:
+<ul>
+  <li><?php bugfix(77088); ?> (Segfault when using SoapClient with null options).</li>
+</ul></li>
+<li>Sockets:
+<ul>
+  <li><?php bugfix(77136); ?> (Unsupported IPV6_RECVPKTINFO constants on macOS).</li>
+</ul></li>
+<li>Sodium:
+<ul>
+  <li><?php bugfix(77297); ?> (SodiumException segfaults on PHP 7.3).</li>
+</ul></li>
+<li>SPL:
+<ul>
+  <li><?php bugfix(77359); ?> (spl_autoload causes segfault).</li>
+  <li><?php bugfix(77360); ?> (class_uses causes segfault).</li>
+</ul></li>
+<li>SQLite3:
+<ul>
+  <li><?php bugfix(77051); ?> (Issue with re-binding on SQLite3).</li>
+</ul></li>
+<li>Xmlrpc:
+<ul>
+  <li><?php bugfix(77242); ?> (heap out of bounds read in xmlrpc_decode()).</li>
+  <li><?php bugfix(77380); ?> (Global out of bounds read in xmlrpc base64 code).</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
 <section class="version" id="7.2.14"><!-- {{{ 7.2.14 -->
 <h3>Version 7.2.14</h3>
 <b><?php release_date('10-Jan-2019'); ?></b>
