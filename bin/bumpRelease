@@ -6,7 +6,7 @@ require "include/version.inc";
 require "include/releases.inc";
 
 if ($_SERVER['argc'] < 1) {
-	fwrite(STDERR, "Usgae: {$_SERVER['argv'][0]} major_version [ minor_version ]\n");
+	fwrite(STDERR, "Usage: {$_SERVER['argv'][0]} major_version [ minor_version ]\n");
 	exit(1);
 }
 
