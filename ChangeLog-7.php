@@ -176,6 +176,44 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
 </ul>
 <!-- }}} --></section>
 
+<section class="version" id="7.1.26"><!-- {{{ 7.1.26 -->
+<h3>Version 7.1.26</h3>
+<b><?php release_date('10-Jan-2019'); ?></b>
+<ul><li>Core:
+<ul>
+  <li><?php bugfix(77369); ?> (memcpy with negative length via crafted DNS response).</li>
+</ul></li>
+<li>GD:
+<ul>
+  <li><?php bugfix(77269); ?> (efree() on uninitialized Heap data in imagescale leads to use-after-free).</li>
+  <li><?php bugfix(77270); ?> (imagecolormatch Out Of Bounds Write on Heap).</li>
+</ul></li>
+<li>IMAP:
+<ul>
+  <li><?php bugfix(77020); ?> (null pointer dereference in imap_mail).</li>
+</ul></li>
+<li>Mbstring:
+<ul>
+  <li><?php bugfix(77370); ?> (Buffer overflow on mb regex functions - fetch_token).</li>
+  <li><?php bugfix(77371); ?> (heap buffer overflow in mb regex functions - compile_string_node).</li>
+  <li><?php bugfix(77381); ?> (heap buffer overflow in multibyte match_at).</li>
+  <li><?php bugfix(77382); ?> (heap buffer overflow due to incorrect length in expand_case_fold_string).</li>
+  <li><?php bugfix(77385); ?> (buffer overflow in fetch_token).</li>
+  <li><?php bugfix(77394); ?> (Buffer overflow in multibyte case folding - unicode).</li>
+  <li><?php bugfix(77418); ?> (Heap overflow in utf32be_mbc_to_code).</li>
+</ul></li>
+<li>Phar:
+<ul>
+  <li><?php bugfix(77247); ?> (heap buffer overflow in phar_detect_phar_fname_ext).</li>
+</ul></li>
+<li>Xmlrpc:
+<ul>
+  <li><?php bugfix(77242); ?> (heap out of bounds read in xmlrpc_decode()).</li>
+  <li><?php bugfix(77380); ?> (Global out of bounds read in xmlrpc base64 code).</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
 <section class="version" id="7.0.33"><!-- {{{ 7.0.33 -->
 <h3>Version 7.0.33</h3>
 <b><?php release_date('06-Dec-2018'); ?></b>
