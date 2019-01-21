@@ -246,6 +246,7 @@ $inis = array(
 	'oci8.statement-cache-size'		=> 'oci8.configuration.php#ini.oci8.statement-cache-size',
 	'oci8.default-prefetch'			=> 'oci8.configuration.php#ini.oci8.default-prefetch',
 	'oci8.old-oci-close-semantics'	=> 'oci8.configuration.php#ini.oci8.old-oci-close-semantics',
+	'opcache.preload'				=> 'opcache.configuration.php#ini.opcache.preload',
 	'pgsql.allow-persistent'		=> 'pgsql.configuration.php#ini.pgsql.allow-persistent',
 	'pgsql.auto-reset-persistent'	=> 'pgsql.configuration.php#ini.pgsql.auto-reset-persistent',
 	'pgsql.max-persistent'			=> 'pgsql.configuration.php#ini.pgsql.max-persistent',
