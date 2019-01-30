@@ -25,6 +25,10 @@ uid                  Sara Golemon &lt;pollita@php.net&gt;
 pub   4096R/EE5AF27F 2017-05-24 [expires: 2024-05-22]
       Key fingerprint = B1B4 4D8F 021E 4E2D 6021  E995 DC9F F8D3 EE5A F27F
 uid                  Remi Collet &lt;remi@php.net&gt;
+
+pub   rsa4096/118BCCB6 2018-06-05 [SC] [expires: 2022-06-04]
+      Key fingerprint = CBAF 69F1 73A0 FEA4 B537  F470 D66C 9593 118B CCB6
+uid                  Christoph M. Becker &lt;cmb@php.net&gt;
 GPG
 ,
     "7.1" => <<< GPG
