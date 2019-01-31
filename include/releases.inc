@@ -2480,6 +2480,39 @@ $OLDRELEASES = array (
   ),
   5 => 
   array (
+    '5.6.40' => 
+    array (
+      'announcement' => 
+      array (
+        'English' => '/releases/5_6_40.php',
+      ),
+      'source' => 
+      array (
+        0 => 
+        array (
+          'filename' => 'php-5.6.40.tar.bz2',
+          'name' => 'PHP 5.6.40 (tar.bz2)',
+          'sha256' => 'ffd025d34623553ab2f7fd8fb21d0c9e6f9fa30dc565ca03a1d7b763023fba00',
+          'date' => '10 Jan 2019',
+        ),
+        1 => 
+        array (
+          'filename' => 'php-5.6.40.tar.gz',
+          'name' => 'PHP 5.6.40 (tar.gz)',
+          'sha256' => '56fb9878d12fdd921f6a0897e919f4e980d930160e154cbde2cc6d9206a27cac',
+          'date' => '10 Jan 2019',
+        ),
+        2 => 
+        array (
+          'filename' => 'php-5.6.40.tar.xz',
+          'name' => 'PHP 5.6.40 (tar.xz)',
+          'sha256' => '1369a51eee3995d7fbd1c5342e5cc917760e276d561595b6052b21ace2656d1c',
+          'date' => '10 Jan 2019',
+        ),
+      ),
+      'date' => '10 Jan 2019',
+      'museum' => false,
+    ),
     '5.6.39' => 
     array (
       'announcement' => 
