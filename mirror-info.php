@@ -2,7 +2,7 @@
 // Define $MYSITE and $LAST_UPDATED variables
 include_once $_SERVER['DOCUMENT_ROOT'] . '/include/prepend.inc';
 
-// Define $PHP_5_VERSION, $PHP_5_MD5 & $RELEASES variables
+// Define $PHP_7_3_VERSION, $PHP_7_3_SHA256 & $RELEASES variables
 include_once $_SERVER['DOCUMENT_ROOT'] . '/include/version.inc';
 
 // Text/plain content type for better readability in browsers
@@ -12,15 +12,15 @@ header("Content-type: text/plain; charset=utf-8");
 $mirror_stats = (int) (isset($_SERVER['MIRROR_STATS']) && $_SERVER['MIRROR_STATS'] == '1');
 
 // SHA256/MD5 check last release file (identifies rsync setup problems)
-$filename = $_SERVER['DOCUMENT_ROOT'] . '/distributions/' . $RELEASES[5][$PHP_5_6_VERSION]["source"][0]["filename"];
+$filename = $_SERVER['DOCUMENT_ROOT'] . '/distributions/' . $RELEASES[7][$PHP_7_3_VERSION]["source"][0]["filename"];
 if (!file_exists($filename)) {
 	$hash_ok = 0;
-} elseif (isset($PHP_5_6_SHA256["tar.bz2"]) &&
+} elseif (isset($PHP_7_3_SHA256["tar.bz2"]) &&
 		function_exists('hash_file') &&
 		in_array('sha256', hash_algos(), true)) {
-	$hash_ok = (int)(hash_file('sha256', $filename) === $PHP_5_6_SHA256["tar.bz2"]);
-} elseif (isset($PHP_5_6_MD5["tar.bz2"])) {
-	$hash_ok = (int)(md5_file($filename) === $PHP_5_6_MD5["tar.bz2"]);
+	$hash_ok = (int)(hash_file('sha256', $filename) === $PHP_7_3_SHA256["tar.bz2"]);
+} elseif (isset($PHP_7_3_MD5["tar.bz2"])) {
+	$hash_ok = (int)(md5_file($filename) === $PHP_7_3_MD5["tar.bz2"]);
 } else {
 	$hash_ok = 0;
 }
