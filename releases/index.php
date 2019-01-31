@@ -153,11 +153,6 @@ site_header("Releases", array(
  they are no longer supported</em>.
 </p>
 
-<p>
- <em>Note to Windows users: Only PHP 5.3+ versions are available as both VC6 and VC9 builds.
- All versions prior were built using VC6.</em>
-</p>
-
 <?php
 function mk_rel($major, $ver, $date, $announcement, $source, $windows, $museum) {
 	printf("<a id=\"%s\"></a>\n<h2>%1\$s</h2>\n<ul>\n <li>Released: %s</li>\n <li>Announcement: ", ($pos = strpos($ver, " ")) ? substr($ver, 0, $pos) : $ver, $date);
