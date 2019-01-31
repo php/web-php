@@ -51,18 +51,6 @@ $PHP_7_1_SHA256     = array(
     'tar.xz'        => '10b7ae634c12852fae52a22dc2262e5f12418ad59fd20da2d00d71a212235d31',
 );
 
-/* PHP 7.0 Release */
-$PHP_7_0_RC = false; // Current RC version (e.g., '5.6.7RC1') or false
-$PHP_7_0_RC_DATE = "07 December 2017";
-
-$PHP_7_0_VERSION         = "7.0.33";
-$PHP_7_0_DATE            = "06 Dec 2018";
-$PHP_7_0_SHA256     = array(
-                       "tar.bz2"       => "4933ea74298a1ba046b0246fe3771415c84dfb878396201b56cb5333abe86f07",
-                       "tar.gz"        => "d71a6ecb6b13dc53fed7532a7f8f949c4044806f067502f8fb6f9facbb40452a",
-                       "tar.xz"        => "ab8c5be6e32b1f8d032909dedaaaa4bbb1a209e519abb01a52ce3914f9a13d96",
-);
-
 /* PHP 5.6 Release */
 $PHP_5_6_RC = false; // Current RC version (e.g., '5.6.7RC1') or false
 $PHP_5_6_RC_DATE = "05 Jan 2017";
@@ -143,29 +131,6 @@ $RELEASES = array(
                     "name"     => "PHP $PHP_7_1_VERSION (tar.xz)",
                     "sha256"   => $PHP_7_1_SHA256["tar.xz"],
                     "date"     => $PHP_7_1_DATE,
-                ),
-            ),
-        ),
-        $PHP_7_0_VERSION => array(
-            "announcement" => true,
-            "source" => array(
-                array(
-                    "filename" => "php-$PHP_7_0_VERSION.tar.bz2",
-                    "name"     => "PHP $PHP_7_0_VERSION (tar.bz2)",
-                    "sha256"   => $PHP_7_0_SHA256["tar.bz2"],
-                    "date"     => $PHP_7_0_DATE,
-                ),
-                array(
-                    "filename" => "php-$PHP_7_0_VERSION.tar.gz",
-                    "name"     => "PHP $PHP_7_0_VERSION (tar.gz)",
-                    "sha256"   => $PHP_7_0_SHA256["tar.gz"],
-                    "date"     => $PHP_7_0_DATE,
-                ),
-                array(
-                    "filename" => "php-$PHP_7_0_VERSION.tar.xz",
-                    "name"     => "PHP $PHP_7_0_VERSION (tar.xz)",
-                    "sha256"   => $PHP_7_0_SHA256["tar.xz"],
-                    "date"     => $PHP_7_0_DATE,
                 ),
             ),
         ),
