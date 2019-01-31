@@ -166,6 +166,6 @@ $PHP_5_VERSION = $PHP_5_6_VERSION; // Some scripts require this set
 $PHP_5_DATE    = $PHP_5_6_DATE; // Used by bumpRelease script
 $PHP_5_RC_DATE = $PHP_5_6_RC_DATE; // Used by master
 
-$PHP_7_VERSION = $PHP_7_2_VERSION; // Some scripts require this set
-$PHP_7_DATE    = $PHP_7_2_DATE; // Used by bumpRelease script
-$PHP_7_RC_DATE = $PHP_7_2_RC_DATE; // Used by master
+$PHP_7_VERSION = $PHP_7_3_VERSION; // Some scripts require this set
+$PHP_7_DATE    = $PHP_7_3_DATE; // Used by bumpRelease script
+$PHP_7_RC_DATE = $PHP_7_3_RC_DATE; // Used by master
