@@ -32,6 +32,10 @@ $BRANCHES = array(
 		'stable'   => '2017-01-19',
 		'security' => '2018-12-31',
 	),
+	'7.0' => array(
+		'stable'   => '2018-01-04',
+		'security' => '2019-01-10',
+	),
 );
 
 /* Time to keep EOLed branches in the array returned by get_active_branches(),
