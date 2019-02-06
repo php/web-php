@@ -11,9 +11,8 @@
   <link href="https://2019.midwestphp.org" rel="via" type="text/html"/>
   <content type="xhtml">
     <div xmlns="http://www.w3.org/1999/xhtml">
-     The Midwest PHP Conference is hosted by the Minnesota PHP User Group community through the North Foundation in Bloomington, Minnesota from March 8th - 9th, 2019. This is our seventh year and each year the conference continues to become better. Our goal is to share best practices, ideas, and techniques about building state-of-the-art software applications.
-
-     The conference is at the Radisson Blu Mall of America in Bloomington, Minnesota. We can't think of a better place to connect with friends, old and new, than in a relaxed environment with entertainment at your front door, and inspiring talks from people doing amazing things.
+      <p>The Midwest PHP Conference is hosted by the Minnesota PHP User Group community through the North Foundation in Bloomington, Minnesota from March 8th - 9th, 2019. This is our seventh year and each year the conference continues to become better. Our goal is to share best practices, ideas, and techniques about building state-of-the-art software applications.</p>
+      <p>The conference is at the Radisson Blu Mall of America in Bloomington, Minnesota. We can't think of a better place to connect with friends, old and new, than in a relaxed environment with entertainment at your front door, and inspiring talks from people doing amazing things.</p>
     </div>
   </content>
 </entry>
