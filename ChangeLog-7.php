@@ -6,6 +6,152 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
 ?>
 <h1>PHP 7 ChangeLog</h1>
 
+<section class="version" id="7.2.15"><!-- {{{ 7.2.15 -->
+<h3>Version 7.2.15</h3>
+<b><?php release_date('07-Feb-2019'); ?></b>
+<ul><li>Core:
+<ul>
+  <li><?php bugfix(77339); ?> (__callStatic may get incorrect arguments).</li>
+  <li><?php bugfix(77494); ?> (Disabling class causes segfault on member access).</li>
+  <li><?php bugfix(77530); ?> (PHP crashes when parsing `(2)::class`).</li>
+</ul></li>
+<li>Curl:
+<ul>
+  <li><?php bugfix(76675); ?> (Segfault with H2 server push).</li>
+</ul></li>
+<li>GD:
+<ul>
+  <li><?php bugfix(73281); ?> (imagescale(…, IMG_BILINEAR_FIXED) can cause black border).</li>
+  <li><?php bugfix(73614); ?> (gdImageFilledArc() doesn't properly draw pies).</li>
+  <li><?php bugfix(77272); ?> (imagescale() may return image resource on failure).</li>
+  <li><?php bugfix(77391); ?> (1bpp BMPs may fail to be loaded).</li>
+  <li><?php bugfix(77479); ?> (imagewbmp() segfaults with very large images).</li>
+</ul></li>
+<li>ldap:
+<ul>
+  <li><?php bugfix(77440); ?> (ldap_bind using ldaps or ldap_start_tls()=exception in libcrypto-1_1-x64.dll).</li>
+</ul></li>
+<li>Mbstring:
+<ul>
+  <li><?php bugfix(77454); ?> (mb_scrub() silently truncates after a null byte).</li>
+</ul></li>
+<li>MySQLnd:
+<ul>
+  <li><?php bugfix(75684); ?> (In mysqlnd_ext_plugin.h the plugin methods family has no external visibility).</li>
+</ul></li>
+<li>Opcache:
+<ul>
+  <li><?php bugfix(77361); ?> (configure fails on 64-bit AIX when opcache enabled).</li>
+</ul></li>
+<li>OpenSSL:
+<ul>
+  <li><?php bugfix(77390); ?> (feof might hang on TLS streams in case of fragmented TLS records).</li>
+</ul></li>
+<li>PDO:
+<ul>
+  <li><?php bugfix(77273); ?> (array_walk_recursive corrupts value types leading to PDO failure).</li>
+</ul></li>
+<li>Sockets:
+<ul>
+  <li><?php bugfix(76839); ?> (socket_recvfrom may return an invalid 'from' address on MacOS).</li>
+</ul></li>
+<li>Standard:
+<ul>
+  <li><?php bugfix(77395); ?> (segfault about array_multisort).</li>
+  <li><?php bugfix(77439); ?> (parse_str segfaults when inserting item into existing array).</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
+<section class="version" id="7.3.2"><!-- {{{ 7.3.2 -->
+<h3>Version 7.3.2</h3>
+<b><?php release_date('07-Feb-2019'); ?></b>
+<ul><li>Core:
+<ul>
+  <li><?php bugfix(77369); ?> (memcpy with negative length via crafted DNS response).</li>
+  <li><?php bugfix(77387); ?> (Recursion detection broken when printing GLOBALS).</li>
+  <li><?php bugfix(77376); ?> ("undefined function" message no longer includes namespace).</li>
+  <li><?php bugfix(77357); ?> (base64_encode / base64_decode doest not work on nested VM).</li>
+  <li><?php bugfix(77339); ?> (__callStatic may get incorrect arguments).</li>
+  <li><?php bugfix(77317); ?> (__DIR__, __FILE__, realpath() reveal physical path for subst virtual drive).</li>
+  <li><?php bugfix(77263); ?> (Segfault when using 2 RecursiveFilterIterator).</li>
+  <li><?php bugfix(77447); ?> (PHP 7.3 built with ASAN crashes in zend_cpu_supports_avx2).</li>
+  <li><?php bugfix(77484); ?> (Zend engine crashes when calling realpath in invalid working dir).</li>
+</ul></li>
+<li>Curl:
+<ul>
+  <li><?php bugfix(76675); ?> (Segfault with H2 server push).</li>
+</ul></li>
+<li>Fileinfo:
+<ul>
+  <li><?php bugfix(77346); ?> (webm files incorrectly detected as application/octet-stream).</li>
+</ul></li>
+<li>FPM:
+<ul>
+  <li><?php bugfix(77430); ?> (php-fpm crashes with Main process exited, code=dumped, status=11/SEGV).</li>
+</ul></li>
+<li>GD:
+<ul>
+  <li><?php bugfix(73281); ?> (imagescale(…, IMG_BILINEAR_FIXED) can cause black border).</li>
+  <li><?php bugfix(73614); ?> (gdImageFilledArc() doesn't properly draw pies).</li>
+  <li><?php bugfix(77272); ?> (imagescale() may return image resource on failure).</li>
+  <li><?php bugfix(77391); ?> (1bpp BMPs may fail to be loaded).</li>
+  <li><?php bugfix(77479); ?> (imagewbmp() segfaults with very large images).</li>
+</ul></li>
+<li>ldap:
+<ul>
+  <li><?php bugfix(77440); ?> (ldap_bind using ldaps or ldap_start_tls()=exception in libcrypto-1_1-x64.dll).</li>
+</ul></li>
+<li>Mbstring:
+<ul>
+  <li><?php bugfix(77428); ?> (mb_ereg_replace() doesn't replace a substitution variable).</li>
+  <li><?php bugfix(77454); ?> (mb_scrub() silently truncates after a null byte).</li>
+</ul></li>
+<li>MySQLnd:
+<ul>
+  <li><?php bugfix(77308); ?> (Unbuffered queries memory leak).</li>
+  <li><?php bugfix(75684); ?> (In mysqlnd_ext_plugin.h the plugin methods family has no external visibility).</li>
+</ul></li>
+<li>Opcache:
+<ul>
+  <li><?php bugfix(77266); ?> (Assertion failed in dce_live_ranges).</li>
+  <li><?php bugfix(77257); ?> (value of variable assigned in a switch() construct gets lost).</li>
+  <li><?php bugfix(77434); ?> (php-fpm workers are segfaulting in zend_gc_addre).</li>
+  <li><?php bugfix(77361); ?> (configure fails on 64-bit AIX when opcache enabled).</li>
+  <li><?php bugfix(77287); ?> (Opcache literal compaction is incompatible with EXT opcodes).</li>
+</ul></li>
+<li>PCRE:
+<ul>
+  <li><?php bugfix(77338); ?> (get_browser with empty string).</li>
+</ul></li>
+<li>PDO:
+<ul>
+  <li><?php bugfix(77273); ?> (array_walk_recursive corrupts value types leading to PDO failure).</li>
+</ul></li>
+<li>PDO MySQL:
+<ul>
+  <li><?php bugfix(77289); ?> (PDO MySQL segfaults with persistent connection).</li>
+</ul></li>
+<li>SOAP:
+<ul>
+  <li><?php bugfix(77410); ?> (Segmentation Fault when executing method with an empty parameter).</li>
+</ul></li>
+<li>Sockets:
+<ul>
+  <li><?php bugfix(76839); ?> (socket_recvfrom may return an invalid 'from' address on MacOS).</li>
+</ul></li>
+<li>SPL:
+<ul>
+  <li><?php bugfix(77298); ?> (segfault occurs when add property to unserialized empty ArrayObject).</li>
+</ul></li>
+<li>Standard:
+<ul>
+  <li><?php bugfix(77395); ?> (segfault about array_multisort).</li>
+  <li><?php bugfix(77439); ?> (parse_str segfaults when inserting item into existing array).</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
 <section class="version" id="7.3.1"><!-- {{{ 7.3.1 -->
 <h3>Version 7.3.1</h3>
 <b><?php release_date('10-Jan-2019'); ?></b>
