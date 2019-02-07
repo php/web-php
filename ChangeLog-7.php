@@ -6,6 +6,63 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
 ?>
 <h1>PHP 7 ChangeLog</h1>
 
+<section class="version" id="7.2.15"><!-- {{{ 7.2.15 -->
+<h3>Version 7.2.15</h3>
+<b><?php release_date('07-Feb-2019'); ?></b>
+<ul><li>Core:
+<ul>
+  <li><?php bugfix(77339); ?> (__callStatic may get incorrect arguments).</li>
+  <li><?php bugfix(77494); ?> (Disabling class causes segfault on member access).</li>
+  <li><?php bugfix(77530); ?> (PHP crashes when parsing `(2)::class`).</li>
+</ul></li>
+<li>Curl:
+<ul>
+  <li><?php bugfix(76675); ?> (Segfault with H2 server push).</li>
+</ul></li>
+<li>GD:
+<ul>
+  <li><?php bugfix(73281); ?> (imagescale(…, IMG_BILINEAR_FIXED) can cause black border).</li>
+  <li><?php bugfix(73614); ?> (gdImageFilledArc() doesn't properly draw pies).</li>
+  <li><?php bugfix(77272); ?> (imagescale() may return image resource on failure).</li>
+  <li><?php bugfix(77391); ?> (1bpp BMPs may fail to be loaded).</li>
+  <li><?php bugfix(77479); ?> (imagewbmp() segfaults with very large images).</li>
+</ul></li>
+<li>ldap:
+<ul>
+  <li><?php bugfix(77440); ?> (ldap_bind using ldaps or ldap_start_tls()=exception in libcrypto-1_1-x64.dll).</li>
+</ul></li>
+<li>Mbstring:
+<ul>
+  <li><?php bugfix(77454); ?> (mb_scrub() silently truncates after a null byte).</li>
+</ul></li>
+<li>MySQLnd:
+<ul>
+  <li><?php bugfix(75684); ?> (In mysqlnd_ext_plugin.h the plugin methods family has no external visibility).</li>
+</ul></li>
+<li>Opcache:
+<ul>
+  <li><?php bugfix(77361); ?> (configure fails on 64-bit AIX when opcache enabled).</li>
+</ul></li>
+<li>OpenSSL:
+<ul>
+  <li><?php bugfix(77390); ?> (feof might hang on TLS streams in case of fragmented TLS records).</li>
+</ul></li>
+<li>PDO:
+<ul>
+  <li><?php bugfix(77273); ?> (array_walk_recursive corrupts value types leading to PDO failure).</li>
+</ul></li>
+<li>Sockets:
+<ul>
+  <li><?php bugfix(76839); ?> (socket_recvfrom may return an invalid 'from' address on MacOS).</li>
+</ul></li>
+<li>Standard:
+<ul>
+  <li><?php bugfix(77395); ?> (segfault about array_multisort).</li>
+  <li><?php bugfix(77439); ?> (parse_str segfaults when inserting item into existing array).</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
 <section class="version" id="7.3.2"><!-- {{{ 7.3.2 -->
 <h3>Version 7.3.2</h3>
 <b><?php release_date('07-Feb-2019'); ?></b>
