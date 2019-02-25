@@ -68,7 +68,7 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
 <b><?php release_date('07-Feb-2019'); ?></b>
 <ul><li>Core:
 <ul>
-  <li><?php bugfix(77369); ?> (memcpy with negative length via crafted DNS response).</li>
+  <li><?php bugfix(77369); ?> (memcpy with negative length via crafted DNS response). (CVE-2019-9022)</li>
   <li><?php bugfix(77387); ?> (Recursion detection broken when printing GLOBALS).</li>
   <li><?php bugfix(77376); ?> ("undefined function" message no longer includes namespace).</li>
   <li><?php bugfix(77357); ?> (base64_encode / base64_decode doest not work on nested VM).</li>
@@ -179,19 +179,19 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
   <li><?php bugfix(77195); ?> (Incorrect error handling of imagecreatefromjpeg()).</li>
   <li><?php bugfix(77198); ?> (auto cropping has insufficient precision).</li>
   <li><?php bugfix(77200); ?> (imagecropauto(…, GD_CROP_SIDES) crops left but not right).</li>
-  <li><?php bugfix(77269); ?> (efree() on uninitialized Heap data in imagescale leads to use-after-free).</li>
-  <li><?php bugfix(77270); ?> (imagecolormatch Out Of Bounds Write on Heap).</li>
+  <li><?php bugfix(77269); ?> (efree() on uninitialized Heap data in imagescale leads to use-after-free). (CVE-2016-10166)</li>
+  <li><?php bugfix(77270); ?> (imagecolormatch Out Of Bounds Write on Heap). (CVE-2019-6977)</li>
 </ul></li>
 <li>MBString:
 <ul>
-  <li><?php bugfix(77367); ?> (Negative size parameter in mb_split).</li>
-  <li><?php bugfix(77370); ?> (Buffer overflow on mb regex functions - fetch_token).</li>
-  <li><?php bugfix(77371); ?> (heap buffer overflow in mb regex functions - compile_string_node).</li>
-  <li><?php bugfix(77381); ?> (heap buffer overflow in multibyte match_at).</li>
-  <li><?php bugfix(77382); ?> (heap buffer overflow due to incorrect length in expand_case_fold_string).</li>
-  <li><?php bugfix(77385); ?> (buffer overflow in fetch_token).</li>
-  <li><?php bugfix(77394); ?> (Buffer overflow in multibyte case folding - unicode).</li>
-  <li><?php bugfix(77418); ?> (Heap overflow in utf32be_mbc_to_code).</li>
+  <li><?php bugfix(77367); ?> (Negative size parameter in mb_split). (CVE-2019-9025)</li>
+  <li><?php bugfix(77370); ?> (Buffer overflow on mb regex functions - fetch_token). (CVE-2019-9023)</li>
+  <li><?php bugfix(77371); ?> (heap buffer overflow in mb regex functions - compile_string_node). (CVE-2019-9023)</li>
+  <li><?php bugfix(77381); ?> (heap buffer overflow in multibyte match_at). (CVE-2019-9023)</li>
+  <li><?php bugfix(77382); ?> (heap buffer overflow due to incorrect length in expand_case_fold_string). (CVE-2019-9023)</li>
+  <li><?php bugfix(77385); ?> (buffer overflow in fetch_token). (CVE-2019-9023)</li>
+  <li><?php bugfix(77394); ?> (Buffer overflow in multibyte case folding - unicode). (CVE-2019-9023)</li>
+  <li><?php bugfix(77418); ?> (Heap overflow in utf32be_mbc_to_code). (CVE-2019-9023)</li>
 </ul></li>
 <li>OCI8:
 <ul>
@@ -214,7 +214,7 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
 </ul></li>
 <li>Phar:
 <ul>
-  <li><?php bugfix(77247); ?> (heap buffer overflow in phar_detect_phar_fname_ext).</li>
+  <li><?php bugfix(77247); ?> (heap buffer overflow in phar_detect_phar_fname_ext). (CVE-2019-9021)</li>
 </ul></li>
 <li>Soap:
 <ul>
@@ -239,8 +239,8 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
 </ul></li>
 <li>Xmlrpc:
 <ul>
-  <li><?php bugfix(77242); ?> (heap out of bounds read in xmlrpc_decode()).</li>
-  <li><?php bugfix(77380); ?> (Global out of bounds read in xmlrpc base64 code).</li>
+  <li><?php bugfix(77242); ?> (heap out of bounds read in xmlrpc_decode()). (CVE-2019-9020)</li>
+  <li><?php bugfix(77380); ?> (Global out of bounds read in xmlrpc base64 code). (CVE-2019-9024)</li>
 </ul></li>
 </ul>
 <!-- }}} --></section>
@@ -250,7 +250,7 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
 <b><?php release_date('10-Jan-2019'); ?></b>
 <ul><li>Core:
 <ul>
-  <li><?php bugfix(77369); ?> (memcpy with negative length via crafted DNS response).</li>
+  <li><?php bugfix(77369); ?> (memcpy with negative length via crafted DNS response). (CVE-2019-9022)</li>
   <li><?php bugfix(71041); ?> (zend_signal_startup() needs ZEND_API).</li>
   <li><?php bugfix(76046); ?> (PHP generates "FE_FREE" opcode on the wrong line).</li>
 </ul></li>
@@ -268,8 +268,8 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
 </ul></li>
 <li>GD:
 <ul>
-  <li><?php bugfix(77269); ?> (efree() on uninitialized Heap data in imagescale leads to use-after-free).</li>
-  <li><?php bugfix(77270); ?> (imagecolormatch Out Of Bounds Write on Heap).</li>
+  <li><?php bugfix(77269); ?> (efree() on uninitialized Heap data in imagescale leads to use-after-free). (CVE-2016-10166)</li>
+  <li><?php bugfix(77270); ?> (imagecolormatch Out Of Bounds Write on Heap). (CVE-2019-6977)</li>
   <li><?php bugfix(77195); ?> (Incorrect error handling of imagecreatefromjpeg()).</li>
   <li><?php bugfix(77198); ?> (auto cropping has insufficient precision).</li>
   <li><?php bugfix(77200); ?> (imagecropauto(…, GD_CROP_SIDES) crops left but not right).</li>
@@ -280,13 +280,13 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
 </ul></li>
 <li>Mbstring:
 <ul>
-  <li><?php bugfix(77370); ?> (Buffer overflow on mb regex functions - fetch_token).</li>
-  <li><?php bugfix(77371); ?> (heap buffer overflow in mb regex functions - compile_string_node).</li>
-  <li><?php bugfix(77381); ?> (heap buffer overflow in multibyte match_at).</li>
-  <li><?php bugfix(77382); ?> (heap buffer overflow due to incorrect length in expand_case_fold_string).</li>
-  <li><?php bugfix(77385); ?> (buffer overflow in fetch_token).</li>
-  <li><?php bugfix(77394); ?> (Buffer overflow in multibyte case folding - unicode).</li>
-  <li><?php bugfix(77418); ?> (Heap overflow in utf32be_mbc_to_code).</li>
+  <li><?php bugfix(77370); ?> (Buffer overflow on mb regex functions - fetch_token). (CVE-2019-9023)</li>
+  <li><?php bugfix(77371); ?> (heap buffer overflow in mb regex functions - compile_string_node). (CVE-2019-9023)</li>
+  <li><?php bugfix(77381); ?> (heap buffer overflow in multibyte match_at). (CVE-2019-9023)</li>
+  <li><?php bugfix(77382); ?> (heap buffer overflow due to incorrect length in expand_case_fold_string). (CVE-2019-9023)</li>
+  <li><?php bugfix(77385); ?> (buffer overflow in fetch_token). (CVE-2019-9023)</li>
+  <li><?php bugfix(77394); ?> (Buffer overflow in multibyte case folding - unicode). (CVE-2019-9023)</li>
+  <li><?php bugfix(77418); ?> (Heap overflow in utf32be_mbc_to_code). (CVE-2019-9023)</li>
 </ul></li>
 <li>OCI8:
 <ul>
@@ -304,7 +304,7 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
 </ul></li>
 <li>Phar:
 <ul>
-  <li><?php bugfix(77247); ?> (heap buffer overflow in phar_detect_phar_fname_ext).</li>
+  <li><?php bugfix(77247); ?> (heap buffer overflow in phar_detect_phar_fname_ext). (CVE-2019-9021)</li>
 </ul></li>
 <li>Sockets:
 <ul>
@@ -316,8 +316,8 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
 </ul></li>
 <li>Xmlrpc:
 <ul>
-  <li><?php bugfix(77242); ?> (heap out of bounds read in xmlrpc_decode()).</li>
-  <li><?php bugfix(77380); ?> (Global out of bounds read in xmlrpc base64 code).</li>
+  <li><?php bugfix(77242); ?> (heap out of bounds read in xmlrpc_decode()). (CVE-2019-9020)</li>
+  <li><?php bugfix(77380); ?> (Global out of bounds read in xmlrpc base64 code). (CVE-2019-9024)</li>
 </ul></li>
 </ul>
 <!-- }}} --></section>
@@ -327,12 +327,12 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
 <b><?php release_date('10-Jan-2019'); ?></b>
 <ul><li>Core:
 <ul>
-  <li><?php bugfix(77369); ?> (memcpy with negative length via crafted DNS response).</li>
+  <li><?php bugfix(77369); ?> (memcpy with negative length via crafted DNS response). (CVE-2019-9022)</li>
 </ul></li>
 <li>GD:
 <ul>
-  <li><?php bugfix(77269); ?> (efree() on uninitialized Heap data in imagescale leads to use-after-free).</li>
-  <li><?php bugfix(77270); ?> (imagecolormatch Out Of Bounds Write on Heap).</li>
+  <li><?php bugfix(77269); ?> (efree() on uninitialized Heap data in imagescale leads to use-after-free). (CVE-2016-10166)</li>
+  <li><?php bugfix(77270); ?> (imagecolormatch Out Of Bounds Write on Heap). (CVE-2019-6977)</li>
 </ul></li>
 <li>IMAP:
 <ul>
@@ -340,22 +340,22 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
 </ul></li>
 <li>Mbstring:
 <ul>
-  <li><?php bugfix(77370); ?> (Buffer overflow on mb regex functions - fetch_token).</li>
-  <li><?php bugfix(77371); ?> (heap buffer overflow in mb regex functions - compile_string_node).</li>
-  <li><?php bugfix(77381); ?> (heap buffer overflow in multibyte match_at).</li>
-  <li><?php bugfix(77382); ?> (heap buffer overflow due to incorrect length in expand_case_fold_string).</li>
-  <li><?php bugfix(77385); ?> (buffer overflow in fetch_token).</li>
-  <li><?php bugfix(77394); ?> (Buffer overflow in multibyte case folding - unicode).</li>
-  <li><?php bugfix(77418); ?> (Heap overflow in utf32be_mbc_to_code).</li>
+  <li><?php bugfix(77370); ?> (Buffer overflow on mb regex functions - fetch_token). (CVE-2019-9023)</li>
+  <li><?php bugfix(77371); ?> (heap buffer overflow in mb regex functions - compile_string_node). (CVE-2019-9023)</li>
+  <li><?php bugfix(77381); ?> (heap buffer overflow in multibyte match_at). (CVE-2019-9023)</li>
+  <li><?php bugfix(77382); ?> (heap buffer overflow due to incorrect length in expand_case_fold_string). (CVE-2019-9023)</li>
+  <li><?php bugfix(77385); ?> (buffer overflow in fetch_token). (CVE-2019-9023)</li>
+  <li><?php bugfix(77394); ?> (Buffer overflow in multibyte case folding - unicode). (CVE-2019-9023)</li>
+  <li><?php bugfix(77418); ?> (Heap overflow in utf32be_mbc_to_code). (CVE-2019-9023)</li>
 </ul></li>
 <li>Phar:
 <ul>
-  <li><?php bugfix(77247); ?> (heap buffer overflow in phar_detect_phar_fname_ext).</li>
+  <li><?php bugfix(77247); ?> (heap buffer overflow in phar_detect_phar_fname_ext). (CVE-2019-9021)</li>
 </ul></li>
 <li>Xmlrpc:
 <ul>
-  <li><?php bugfix(77242); ?> (heap out of bounds read in xmlrpc_decode()).</li>
-  <li><?php bugfix(77380); ?> (Global out of bounds read in xmlrpc base64 code).</li>
+  <li><?php bugfix(77242); ?> (heap out of bounds read in xmlrpc_decode()). (CVE-2019-9020)</li>
+  <li><?php bugfix(77380); ?> (Global out of bounds read in xmlrpc base64 code). (CVE-2019-9024)</li>
 </ul></li>
 </ul>
 <!-- }}} --></section>
@@ -370,12 +370,12 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
 <li>IMAP:
 <ul>
   <li><?php bugfix(77020); ?> (null pointer dereference in imap_mail).</li>
-  <li><?php bugfix(77153); ?> (imap_open allows to run arbitrary shell commands via mailbox parameter).</li>
+  <li><?php bugfix(77153); ?> (imap_open allows to run arbitrary shell commands via mailbox parameter). (CVE-2018-19518)</li>
 </ul></li>
 <li>Phar:
 <ul>
   <li><?php bugfix(77022); ?> (PharData always creates new files with mode 0666).</li>
-  <li><?php bugfix(77143); ?> (Heap Buffer Overflow (READ: 4) in phar_parse_pharfile).</li>
+  <li><?php bugfix(77143); ?> (Heap Buffer Overflow (READ: 4) in phar_parse_pharfile). (CVE-2018-20783)</li>
 </ul></li>
 </ul>
 <!-- }}} --></section>
@@ -506,7 +506,7 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
 </ul></li>
 <li>IMAP:
 <ul>
-  <li><?php bugfix(77153); ?> (imap_open allows to run arbitrary shell commands via mailbox parameter).</li>
+  <li><?php bugfix(77153); ?> (imap_open allows to run arbitrary shell commands via mailbox parameter). (CVE-2018-19518)</li>
   <li><?php bugfix(77020); ?> (null pointer dereference in imap_mail).</li>
 </ul></li>
 <li>Interbase:
@@ -615,7 +615,7 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
   <li><?php bugfix(74991); ?> (include_path has a 4096 char limit in some cases).</li>
   <li><?php bugfix(65414); ?> (deal with leading slash when adding files correctly).</li>
   <li><?php bugfix(77022); ?> (PharData always creates new files with mode 0666).</li>
-  <li><?php bugfix(77143); ?> (Heap Buffer Overflow (READ: 4) in phar_parse_pharfile).</li>
+  <li><?php bugfix(77143); ?> (Heap Buffer Overflow (READ: 4) in phar_parse_pharfile). (CVE-2018-20783)</li>
 </ul></li>
 <li>readline:
 <ul>
@@ -730,7 +730,7 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
 </ul></li>
 <li>IMAP:
 <ul>
-  <li><?php bugfix(77153); ?> (imap_open allows to run arbitrary shell commands via mailbox parameter).</li>
+  <li><?php bugfix(77153); ?> (imap_open allows to run arbitrary shell commands via mailbox parameter). (CVE-2018-19518)</li>
 </ul></li>
 <li>ODBC:
 <ul>
@@ -744,7 +744,7 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
 <li>Phar:
 <ul>
   <li><?php bugfix(77022); ?> (PharData always creates new files with mode 0666).</li>
-  <li><?php bugfix(77143); ?> (Heap Buffer Overflow (READ: 4) in phar_parse_pharfile).</li>
+  <li><?php bugfix(77143); ?> (Heap Buffer Overflow (READ: 4) in phar_parse_pharfile). (CVE-2018-20783)</li>
 </ul></li>
 <li>PGSQL:
 <ul>
@@ -781,7 +781,7 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
 </ul></li>
 <li>IMAP:
 <ul>
-  <li><?php bugfix(77153); ?> (imap_open allows to run arbitrary shell commands via mailbox parameter).</li>
+  <li><?php bugfix(77153); ?> (imap_open allows to run arbitrary shell commands via mailbox parameter). (CVE-2018-19518)</li>
 </ul></li>
 <li>ODBC:
 <ul>
@@ -794,7 +794,7 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
 <li>Phar:
 <ul>
   <li><?php bugfix(77022); ?> (PharData always creates new files with mode 0666).</li>
-  <li><?php bugfix(77143); ?> (Heap Buffer Overflow (READ: 4) in phar_parse_pharfile).</li>
+  <li><?php bugfix(77143); ?> (Heap Buffer Overflow (READ: 4) in phar_parse_pharfile). (CVE-2018-20783)</li>
 </ul></li>
 <li>PGSQL:
 <ul>
