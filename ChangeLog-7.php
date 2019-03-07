@@ -6,6 +6,32 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
 ?>
 <h1>PHP 7 ChangeLog</h1>
 
+<section class="version" id="7.1.27"><!-- {{{ 7.1.27 -->
+<h3>Version 7.1.27</h3>
+<b><?php release_date('07-Mar-2019'); ?></b>
+<ul><li>Core:
+<ul>
+  <li><?php bugfix(77630); ?> (rename() across the device may allow unwanted access during processing).</li>
+</ul></li>
+<li>EXIF:
+<ul>
+  <li><?php bugfix(77509); ?> (Uninitialized read in exif_process_IFD_in_TIFF).</li>
+  <li><?php bugfix(77540); ?> (Invalid Read on exif_process_SOFn).</li>
+  <li><?php bugfix(77563); ?> (Uninitialized read in exif_process_IFD_in_MAKERNOTE).</li>
+  <li><?php bugfix(77659); ?> (Uninitialized read in exif_process_IFD_in_MAKERNOTE).</li>
+</ul></li>
+<li>PHAR:
+<ul>
+  <li><?php bugfix(77396); ?> (Null Pointer Dereference in phar_create_or_parse_filename).</li>
+  <li><?php bugfix(77586); ?> (phar_tar_writeheaders_int() buffer overflow).</li>
+</ul></li>
+<li>SPL:
+<ul>
+  <li><?php bugfix(77431); ?> (openFile() silently truncates after a null byte).</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
 <section class="version" id="7.2.16"><!-- {{{ 7.2.16 -->
 <h3>Version 7.2.16</h3>
 <b><?php release_date('07-Mar-2019'); ?></b>

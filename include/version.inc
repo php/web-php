@@ -43,12 +43,12 @@ $PHP_7_2_SHA256     = array(
 $PHP_7_1_RC = false; // Current RC version (e.g., '5.6.7RC1') or false
 $PHP_7_1_RC_DATE = "25 Oct 2018";
 
-$PHP_7_1_VERSION         = "7.1.26";
-$PHP_7_1_DATE            = "10 Jan 2019";
+$PHP_7_1_VERSION         = "7.1.27";
+$PHP_7_1_DATE            = "07 Mar 2019";
 $PHP_7_1_SHA256     = array(
-    'tar.bz2'       => '5b351ca86bc7e4600778aaf1d61ab9e4e38864efa86ab4cc4d5b02ea7f542ae6',
-    'tar.gz'        => '069315d3c3f964fd165bbbb3c2fc56005813e2cf97bed05055318dcc4e775328',
-    'tar.xz'        => '10b7ae634c12852fae52a22dc2262e5f12418ad59fd20da2d00d71a212235d31',
+    'tar.bz2'       => 'dad7ecd30941911528e471c555a01911a68aa9219696bfc1e005f8b669f4ec4b',
+    'tar.gz'        => '353b9ed341048388cc95e6fa6dab587eee44a3d4d297989aa297936090864357',
+    'tar.xz'        => '25672a3a6060eff37c865a0c84e284da50b7ee8cd57174c78f0ae244b90a96a8',
 );
 
 $RELEASES = array(
