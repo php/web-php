@@ -6,6 +6,69 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
 ?>
 <h1>PHP 7 ChangeLog</h1>
 
+<section class="version" id="7.3.3"><!-- {{{ 7.3.3 -->
+<h3>Version 7.3.3</h3>
+<b><?php release_date('07-Mar-2019'); ?></b>
+<ul><li>Core:
+<ul>
+  <li><?php bugfix(77589); ?> (Core dump using parse_ini_string with numeric sections).</li>
+  <li><?php bugfix(77329); ?> (Buffer Overflow via overly long Error Messages).</li>
+  <li><?php bugfix(77494); ?> (Disabling class causes segfault on member access).</li>
+  <li><?php bugfix(77498); ?> (Custom extension Segmentation fault when declare static property).</li>
+  <li><?php bugfix(77530); ?> (PHP crashes when parsing `(2)::class`).</li>
+  <li><?php bugfix(77546); ?> (iptcembed broken function).</li>
+  <li><?php bugfix(77630); ?> (rename() across the device may allow unwanted access during processing).</li>
+</ul></li>
+<li>COM:
+<ul>
+  <li><?php bugfix(77621); ?> (Already defined constants are not properly reported).</li>
+  <li><?php bugfix(77626); ?> (Persistence confusion in php_com_import_typelib()).</li>
+</ul></li>
+<li>EXIF:
+<ul>
+  <li><?php bugfix(77509); ?> (Uninitialized read in exif_process_IFD_in_TIFF).</li>
+  <li><?php bugfix(77540); ?> (Invalid Read on exif_process_SOFn).</li>
+  <li><?php bugfix(77563); ?> (Uninitialized read in exif_process_IFD_in_MAKERNOTE).</li>
+  <li><?php bugfix(77659); ?> (Uninitialized read in exif_process_IFD_in_MAKERNOTE).</li>
+</ul></li>
+<li>Mbstring:
+<ul>
+  <li><?php bugfix(77514); ?> (mb_ereg_replace() with trailing backslash adds null byte).</li>
+</ul></li>
+<li>MySQL:
+<ul>
+  <li>Disabled LOCAL INFILE by default, can be enabled using php.ini directive mysqli.allow_local_infile for mysqli, or PDO::MYSQL_ATTR_LOCAL_INFILE attribute for pdo_mysql.</li>
+</ul></li>
+<li>OpenSSL:
+<ul>
+  <li><?php bugfix(77390); ?> (feof might hang on TLS streams in case of fragmented TLS records).</li>
+</ul></li>
+<li>PDO_OCI:
+<ul>
+  <li>Support Oracle Database tracing attributes ACTION, MODULE, CLIENT_INFO, and CLIENT_IDENTIFIER.</li>
+</ul></li>
+<li>PHAR:
+<ul>
+  <li><?php bugfix(77396); ?> (Null Pointer Dereference in phar_create_or_parse_filename).</li>
+  <li><?php bugfix(77586); ?> (phar_tar_writeheaders_int() buffer overflow).</li>
+</ul></li>
+<li>phpdbg:
+<ul>
+  <li><?php bugfix(76596); ?> (phpdbg support for display_errors=stderr).</li>
+</ul></li>
+<li>SPL:
+<ul>
+  <li><?php bugfix(51068); ?> (DirectoryIterator glob:// don't support current path relative queries).</li>
+  <li><?php bugfix(77431); ?> (openFile() silently truncates after a null byte).</li>
+</ul></li>
+<li>Standard:
+<ul>
+  <li><?php bugfix(77552); ?> (Unintialized php_stream_statbuf in stat functions).</li>
+  <li><?php bugfix(77612); ?> (setcookie() sets incorrect SameSite header if all of its options filled).</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
 <section class="version" id="7.2.15"><!-- {{{ 7.2.15 -->
 <h3>Version 7.2.15</h3>
 <b><?php release_date('07-Feb-2019'); ?></b>

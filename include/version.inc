@@ -16,15 +16,15 @@
  * );
  */
 /* PHP 7.3 Release */
-$PHP_7_3_RC  = '7.3.3RC1'; // Current RC version (e.g., '7.3.1RC1') or false
+$PHP_7_3_RC  = false; // Current RC version (e.g., '7.3.1RC1') or false
 $PHP_7_3_RC_DATE = "21 Feb 2019";
 
-$PHP_7_3_VERSION         = "7.3.2";
-$PHP_7_3_DATE            = "07 Feb 2019";
+$PHP_7_3_VERSION         = "7.3.3";
+$PHP_7_3_DATE            = "07 Mar 2019";
 $PHP_7_3_SHA256     = array(
-    "tar.bz2"       => "946f50dacbd2f61e643bb737021cbe8b1816e780ee7ad3e0cd999a1892ab0add",
-    "tar.gz"        => "4597294b00edc1c63a021b6c7838eb43384f62eeb9e392f0b91c38a3c090f499",
-    "tar.xz"        => "010b868b4456644ae227d05ad236c8b0a1f57dc6320e7e5ad75e86c5baf0a9a8",
+    "tar.bz2"       => "61969e943adfea79701a34b8e701edd3f95be829d16601a4aabeb05f83023ce6",
+    "tar.gz"        => "9bde40cbf8608ae9c595a6643a02cf0c692c131e2b3619af3fd2af8425d8e677",
+    "tar.xz"        => "6bb03e79a183d0cb059a6d117bbb2e0679cab667fb713a13c6a16f56bebab9b3",
 );
 
 /* PHP 7.2 Release */
