@@ -253,6 +253,7 @@ $inis = array(
 	'pgsql.max-links'				=> 'pgsql.configuration.php#ini.pgsql.max-links',
 	'pgsql.ignore-notice'			=> 'pgsql.configuration.php#ini.pgsql.ignore-notice',
 	'pgsql.log-notice'				=> 'pgsql.configuration.php#ini.pgsql.log-notice',
+	'sqlite3.extension_dir'			=> 'sqlite3.configuration.php#ini.sqlite3.extension-dir',
 	'sybct.allow-persistent'		=> 'sybase.configuration.php#ini.sybct.allow-persistent',
 	'sybct.max-persistent'			=> 'sybase.configuration.php#ini.sybct.max-persistent',
 	'sybct.max-links'				=> 'sybase.configuration.php#ini.sybct.max-links',
