@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom" xmlns:default="http://php.net/ns/news">
+  <title>PHP Russia 2019</title>
+  <id>http://php.net/archive/2019.php#id2019-03-12-2</id>
+  <published>2019-03-12T16:51:35+00:00</published>
+  <updated>2019-03-12T16:51:35+00:00</updated>
+  <default:finalTeaserDate xmlns="http://php.net/ns/news">2019-05-17</default:finalTeaserDate>
+  <category term="conferences" label="Conference announcement"/>
+  <link href="http://php.net/conferences/index.php#id2019-03-12-2" rel="alternate" type="text/html"/>
+
+  <default:newsImage xmlns="http://php.net/ns/news" link="https://cfp.phprussia.ru/" title="PHP Russia">php_russia_2019.png</default:newsImage>
+  <link href="https://cfp.phprussia.ru/" rel="via" type="text/html"/>
+  <content type="xhtml">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+      <p>PHP Russia is the only Russian confenrence focused on PHP. It will be held in Moscow Main topics are PHP ecosytem (PHP itself, standards, frameworks, libraries and OpenSource) and major players experience in building complex projects using best practices and modern approaches.</p>
+
+      <p>We expect 500+ attendees and 20+ speakers!</p>
+
+      <p>Our audience consists of applications developers, API developers, CTO’s, CEO’s, fullstack developers, etc.</p>
+
+      <p>The program is designed by the developer community, representatives of large companies from Runet and around the world, and by tech developers and community activists. The selection of talks is multi-layered and complex — the Program Committee selects the best talks from the received applications unanimously according to several criterias.</p>
+    </div>
+  </content>
+</entry>
