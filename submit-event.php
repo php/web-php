@@ -63,6 +63,9 @@ if ($process) {
     if (!$_POST['ldesc']) {
         $errors[] = "You must supply a long description of the event.";
     }
+    elseif (stripos($_POST['ldesc'], 'PHP') === false) {
+        $errors[] = "This does not look like a 'PHP' event";
+    }
 
     $valid_schemes = array('http','https','ftp');
 
@@ -114,7 +117,7 @@ if ($process) {
     }
 
     // Spam question
-    if ($_POST["sane"] != 3) {
+    if ($_POST["sane"] != 4) {
         $errors[] = "It's OK. I'm not real either";
     }
 
@@ -261,7 +264,7 @@ if ($process && count($errors) === 0) {
  </tr>
  <tr>
   <th class="subr">Are you real?</th>
-  <td><select name="sane"><?php display_options(array("I, Robot", "I used to be", "WTF?", "Yes", "No, but I'd still want to submit this"), "2"); ?></select></td>
+  <td><select name="sane"><?php display_options(array("I, Robot", "I used to be", "WTF?", "No, but I'd still want to submit this", "Yes"), "2"); ?></select></td>
  </tr>
 </table>
 </form>
