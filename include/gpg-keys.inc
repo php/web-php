@@ -5,6 +5,14 @@ $GPG_KEYS = array(
       Key fingerprint = D620 173D 6924 BA1C 2244  C7C4 1B6B 6676 22FE 5A12
 uid                  Kalle Sommer Nielsen (PHP) &lt;kalle@php.net&gt;
 */
+    "7.4" => <<< GPG
+pub   rsa3072 2019-03-25 [SC] [expires: 2021-03-24]
+      A78F 717F 0793 F15F 6285  3392 3A6F 9E81 27D3 0399
+uid           [ultimate] Derick Rethans (Personal Key) <derick@derickrethans.nl>
+uid           [ultimate] Derick Rethans <derick@php.net>
+sub   rsa3072 2019-03-25 [E] [expires: 2021-03-24]
+GPG
+,
     "7.3" => <<< GPG
 pub   rsa4096/118BCCB6 2018-06-05 [SC] [expires: 2022-06-04]
       Key fingerprint = CBAF 69F1 73A0 FEA4 B537  F470 D66C 9593 118B CCB6
