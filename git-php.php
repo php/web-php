@@ -6,7 +6,7 @@ include_once $_SERVER['DOCUMENT_ROOT'] . '/include/posttohost.inc';
 
 // Force the account requests to php.net
 if (!is_primary_site()) {
-    header('Location: http://php.net/'.$_SERVER['BASE_PAGE']);
+    header('Location: https://www.php.net/'.$_SERVER['BASE_PAGE']);
     exit;
 }
 
