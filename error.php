@@ -635,6 +635,16 @@ if (preg_match("!^manual/(.+)/function\.(.+)-(.+).php$!", $URI, $array)) {
     }
 }
 
+// ============================================================================
+// For manual pages for inactive languages, point visitors to the English page
+if (preg_match("!^manual/([^/]+)/([^/]+).php$!", $URI, $match) &&
+    isset($INACTIVE_ONLINE_LANGUAGES[$match[1]])) {
+    $try = find_manual_page("en", $match[2]);
+    if ($try) {
+        error_inactive_manual_page($INACTIVE_ONLINE_LANGUAGES[$match[1]], $try);
+    }
+}
+
 
 // ============================================================================
 // 404 page for manual pages (eg. not built language)

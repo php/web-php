@@ -34,6 +34,32 @@ function error_404_manual()
     exit;
 }
 
+// An error message page for manual pages from inactive languages
+function error_inactive_manual_page($lang_name, $en_page)
+{
+    global $MYSITE, $ACTIVE_ONLINE_LANGUAGES;
+    status_header(404);
+    site_header('Page gone', array("noindex"));
+    echo "<h1>Page gone</h1>\n" .
+         "<p>The " . htmlspecialchars($lang_name) . " manual page you are looking for (<strong>" .
+         htmlspecialchars(substr($MYSITE, 0, -1) . $_SERVER['REQUEST_URI']) .
+         "</strong>) is no longer available.</p>\n";
+    $en_url = htmlspecialchars(substr($MYSITE, 0, -1) . $en_page);
+    echo "<p>The English page is available at <a href=\"{$en_url}\">{$en_url}</a></p>\n";
+    echo "<p>Several other languages are also available:</p>\n";
+    echo "<ul>\n";
+    foreach ($ACTIVE_ONLINE_LANGUAGES as $alt_lang => $alt_lang_name) {
+        if ($alt_lang === "en") {
+            continue;
+        }
+        $alt_url = htmlspecialchars(substr($MYSITE, 0, -1) . str_replace("/en/", "/{$alt_lang}/", $en_page));
+        echo "<li><a href=\"{$alt_url}\">" . htmlspecialchars($alt_lang_name) . "</a></li>\n";
+    }
+    echo "</ul>\n";
+    site_footer();
+    exit;
+}
+
 // This service is not working right now
 function error_noservice()
 {
