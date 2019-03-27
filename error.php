@@ -475,11 +475,6 @@ $external_redirects = array(
     "release/5_3_0.php" => "/releases/5_3_0.php", // PHP 5.3.0 release announcement had a typo
     "ideas.php"   => "http://wiki.php.net/ideas", // BC
     "releases.atom" => "/releases/feed.php", // BC, No need to pre-generate it
-    // We used to do reST rendering of README files
-    "rest/readme.release_process"   => "http://git.php.net/?p=php-src.git;a=blob_plain;f=README.RELEASE_PROCESS;hb=HEAD",
-    "rest/readme.mailinglist_rules" => "http://git.php.net/?p=php-src.git;a=blob_plain;f=README.MAILINGLIST_RULES;hb=HEAD",
-    "rest/readme.git-rules"         => "http://git.php.net/?p=php-src.git;a=blob_plain;f=README.GIT-RULES;hb=HEAD",
-    "rest/coding_standards"         => "http://git.php.net/?p=php-src.git;a=blob_plain;f=CODING_STANDARDS;hb=HEAD",
     "spec"        => "https://github.com/php/php-langspec",
     "sunglasses"  => "https://www.youtube.com/watch?v=dQw4w9WgXcQ", // Temporary easter egg for bug#66144
 );
