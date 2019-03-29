@@ -32,8 +32,8 @@ $size = 0;
 // No downloadable file found
 if ($file === FALSE) {
         $info = "<p>
- The file you requested (<strong> " . htmlspecialchars($df, ENT_QUOTES, "UTF-8") . " </strong>) is not found on
- this server (<strong>{$MYSITE}</strong>). Please try another mirror listed below</p>";
+ The file you requested (<strong>" . htmlspecialchars($df, ENT_QUOTES, "UTF-8") . "</strong>) is not found on
+ this server (<strong>{$MYSITE}</strong>).</p>";
 
     echo <<<EOT
 <h1>Download not found</h1>
@@ -44,32 +44,8 @@ EOT;
     $local_file = $_SERVER['DOCUMENT_ROOT'] . '/distributions/' . $file;
     // Try to get filesize to display
     $size = @filesize($local_file);
-
-
-?>
-
-<h1>Choose mirror site for download</h1>
-
-<p>
- You have chosen to download the following file:
-<span class="download-file">
- <strong class="filename"><?php echo $df ?>
-</strong>
-<?php
-if ($size) {
-    echo '<small>(' . number_format($size, 0, '.', ',') . ' bytes)</small>';
 }
 ?>
-</span>
-</p>
-<?php
-}
-?>
-
-
-    <div class="mirrors-list">
-<?php print_full_mirror_list($df, $size); ?>
-    </div>
 </div>
 
 

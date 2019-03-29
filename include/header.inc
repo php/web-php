@@ -62,7 +62,7 @@ if (!isset($config["languages"])) {
  <link rel="alternate" type="application/atom+xml" href="<?php echo $MYSITE ?>feed.atom" title="PHP: Hypertext Preprocessor">
 
 <?php if (isset($_SERVER['BASE_PAGE'])): ?>
- <link rel="canonical" href="http://php.net/<?php echo $_SERVER['BASE_PAGE']?>">
+ <link rel="canonical" href="https://www.php.net/<?php echo $_SERVER['BASE_PAGE']?>">
 <?php if ($shortname): ?>
  <link rel="shorturl" href="<?php echo $shorturl ?>">
  <link rel="alternate" href="<?php echo $shorturl ?>" hreflang="x-default">

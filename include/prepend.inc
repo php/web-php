@@ -107,6 +107,9 @@ function myphpnet_load()
     if (!empty($_COOKIE['MYPHPNET'])) {
         $MYPHPNET = explode(",", $_COOKIE['MYPHPNET']);
     }
+
+    // Ignore site part, and always use https://www.php.net
+    $MYPHPNET[2] = 'https://www.php.net';
 }
 
 // Get or set preferred language code
@@ -143,22 +146,6 @@ function myphpnet_urlsearch($type = FALSE)
     elseif (isset($MYPHPNET[1]) && !empty($MYPHPNET[1])) {
         return $MYPHPNET[1];
     } else { return MYPHPNET_URL_NONE; }
-}
-
-// Set mirror site redirection
-function myphpnet_mirror($murl = FALSE)
-{
-    global $MYPHPNET;
-
-    // Set mirror URL if specified and if correct
-    if ($murl && ($murl == "AUTO" || mirror_status($murl) == MIRROR_OK)) {
-        $MYPHPNET[2] = $murl;
-    }
-
-    // Return code or NONE
-    elseif (isset($MYPHPNET[2])) {
-        return $MYPHPNET[2];
-    } else { return "NONE"; }
 }
 
 function myphpnet_showug($enable = null) {

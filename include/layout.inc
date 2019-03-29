@@ -181,13 +181,7 @@ function print_popup_link($url, $linktext=false, $windowprops="", $target=false,
 // Print a link for a downloadable file (including filesize)
 function download_link($file, $title, $showsize = TRUE, $mirror = '')
 {
-    // Construct the download link for this site or a mirror site
-    $download_link = "get/$file/from/a/mirror";
-    if ($mirror != '') {
-        $download_link = $mirror . $download_link;
-    } else {
-        $download_link = "/" . $download_link;
-    }
+    $download_link = "/distributions/" . $file;
 
     // Print out the download link
     print_link($download_link, $title);
@@ -204,12 +198,7 @@ function download_link($file, $title, $showsize = TRUE, $mirror = '')
 
         if(@file_exists($local_file.".asc")) {
             echo " ";
-            $sig_link = "get/$file.asc/from/a/mirror";
-            if ($mirror != '') {
-                $sig_link = $mirror . $sig_link;
-            } else {
-                $sig_link = "/" . $sig_link;
-            }
+            $sig_link = "/distributions/$file.asc";
             print_link($sig_link, "(sig)");
         }
 
@@ -518,7 +507,7 @@ function site_header($title = '', $config = array())
 
     // shorturl; http://wiki.snaplog.com/short_url
     if (isset($_SERVER['BASE_PAGE']) && $shortname = get_shortname($_SERVER["BASE_PAGE"])) {
-        $shorturl = "http://php.net/" . $shortname;
+        $shorturl = "https://www.php.net/" . $shortname;
     }
 
     require __DIR__ ."/header.inc";
