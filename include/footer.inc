@@ -67,7 +67,6 @@
         <li><a href="/my.php">My PHP.net</a></li>
         <li><a href="/contact.php">Contact</a></li>
         <li><a href="/sites.php">Other PHP.net sites</a></li>
-        <li><a href="/mirrors.php">Mirror sites</a></li>
         <li><a href="/privacy.php">Privacy policy</a></li>
       </ul>
       </div>

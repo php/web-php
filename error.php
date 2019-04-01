@@ -37,7 +37,7 @@ if ($URI == 'phpnetimprovedsearch.src') {
 // ============================================================================
 // BC: handle bugs.php moved completely to bugs.php.net
 if (preg_match("!^bugs.php\\?(.+)$!", $URI, $array)) {
-    mirror_redirect("http://bugs.php.net/?$array[1]");
+    mirror_redirect("https://bugs.php.net/?$array[1]");
 }
 
 // ============================================================================
@@ -140,18 +140,7 @@ if (preg_match("!^get/([^/]+)/from/([^/]+)(/mirror)?$!", $URI, $dlinfo)) {
         $df = str_replace("7-LATEST", $PHP_7_VERSION, $df);
     }
 
-    // Mirror selection page
-    if ($dlinfo[2] == "a") {
-        status_header(200);
-        include_once $_SERVER['DOCUMENT_ROOT'] . "/include/get-download.inc";
-        exit;
-    }
-
-    // The same mirror is selected
-    if ($dlinfo[2] == "this") { $mr = $MYSITE; }
-
-    // Some other mirror is selected
-    else { $mr = "http://{$dlinfo[2]}/"; }
+    $mr = "https://www.php.net/";
 
     // Check if that mirror really exists if not, bail out
     if(!isset($MIRRORS[$mr])) {

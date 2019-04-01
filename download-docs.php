@@ -109,7 +109,7 @@ foreach ($LANGUAGES as $langcode => $language) {
         if (file_exists($filepath)) {
 
             // Mirror selection download URL
-            $link_to = "/get/$filename/from/a/mirror";
+            $link_to = "/distributions/manual/$filename";
 
             // Try to get size and changed date
             $size    = @filesize($filepath);
@@ -151,7 +151,7 @@ if (file_exists($actual_file)) {
 }}} */
 
 if (count($found_formats) == 0) {
-    echo "<p class=\"tip\">This mirror has no documentation files for download.</p>";
+    echo "<p class=\"tip\">This site has no documentation files for download.</p>";
 } else {
 
     echo '<table border="0" cellpadding="4" cellspacing="2" class="standard">' . "\n" .

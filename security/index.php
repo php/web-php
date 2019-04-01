@@ -21,7 +21,7 @@ $SIDEBAR_DATA = <<< EOT
 
  <h3>Other links</h3>
  <ul>
-  <li><a href="http://php.net/manual/security">PHP manual on security</a></li>
+  <li><a href="https://www.php.net/manual/security">PHP manual on security</a></li>
   <li><a href="http://www.suhosin.org">Suhosin</a></li>
   <li><a href="http://phpsec.org/projects/guide/">PHP Security Consortium</a></li>
  </ul>

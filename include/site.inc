@@ -1,7 +1,24 @@
 <?php // -*- C++ -*-
 
-// Define $MIRRORS array, and some constants
-include $_SERVER['DOCUMENT_ROOT'] . '/include/mirrors.inc';
+// Define some constants, and $MIRRORS array
+// Mirror type constants
+define('MIRROR_DOWNLOAD', 0);
+define('MIRROR_STANDARD', 1);
+define('MIRROR_SPECIAL',  2);
+define('MIRROR_VIRTUAL',  3);
+
+// Mirror status constants
+define('MIRROR_OK',          0);
+define('MIRROR_NOTACTIVE',   1);
+define('MIRROR_OUTDATED',    2);
+define('MIRROR_DOESNOTWORK', 3);
+
+$MIRRORS = array(
+    "https://www.php.net/" => array(
+    "DEU", "MyraCloud", FALSE,
+    "https://myracloud.com/en/", MIRROR_SPECIAL, TRUE,
+    "en", MIRROR_OK),
+);
 
 // Define $COUNTRIES array
 include $_SERVER['DOCUMENT_ROOT'] . '/include/countries.inc';
@@ -12,7 +29,6 @@ include $_SERVER['DOCUMENT_ROOT'] . '/include/countries-alpha2.inc';
 // Define $COUNTRY_ALPHA_2_TO_3 array
 include $_SERVER['DOCUMENT_ROOT'] . '/include/countries_alpha_mapping.inc';
 
-
 // Define $LANGUAGES array
 include $_SERVER['DOCUMENT_ROOT'] . '/include/languages.inc';
 
@@ -22,16 +38,7 @@ function is_primary_site($site = FALSE)
 {
     global $MYSITE;
     if (!$site) { $site = $MYSITE; }
-    return ($site == "https://www.php.net/" || $site == "https://php.net/" );
-}
-
-// Returns true if the current (or specified)
-// site is the backup site of the primary site
-function is_backup_primary($site = FALSE)
-{
-    global $MYSITE;
-    if (!$site) { $site = $MYSITE; }
-    return $site == "http://download.php.net/";
+    return ($site == "https://www.php.net/" );
 }
 
 // Returns true if the current (or specified)
@@ -69,15 +76,6 @@ function have_stats($site = FALSE)
 }
 
 // Returns the current (or specified)
-// mirror site's country code
-function mirror_country($site = FALSE)
-{
-    global $MIRRORS, $MYSITE;
-    if (!$site) { $site = $MYSITE; }
-    return (isset($MIRRORS[$site]) ? $MIRRORS[$site][0] : FALSE);
-}
-
-// Returns the current (or specified)
 // mirror site's provider's name
 function mirror_provider($site = FALSE)
 {
@@ -85,9 +83,9 @@ function mirror_provider($site = FALSE)
     if (!$site) { $site = $MYSITE; }
 
     if (isset($MIRRORS[$site])) {
-	return $MIRRORS[$site][1];
+       return $MIRRORS[$site][1];
     } elseif (isset($MIRRORS[$_SERVER['SERVER_ADDR']])) {
-	return $MIRRORS[$_SERVER['SERVER_ADDR']][1];
+       return $MIRRORS[$_SERVER['SERVER_ADDR']][1];
     }
 
     return false;
@@ -125,39 +123,6 @@ function mirror_type($site = FALSE)
     return false;
 }
 
-// Returns the current (or specified)
-// mirror site's status (use the constants!)
-function mirror_status($site = FALSE)
-{
-    global $MIRRORS, $MYSITE;
-    if (!$site) { $site = $MYSITE; }
-
-    if (isset($MIRRORS[$site])) {
-        return $MIRRORS[$site][7];
-    } elseif (isset($MIRRORS[$_SERVER['SERVER_ADDR']])) {
-        return $MIRRORS[$_SERVER['SERVER_ADDR']][7];
-    }
-
-    return false;
-}
-
-// Count all mirrors or mirrors in a given country
-function count_mirrors($country = FALSE)
-{
-    global $MIRRORS;
-
-    // This is a non-identified country
-    if ($country == "NA") { return 0; }
-
-    // Count only the ones in the same country
-    $count = 0;
-    foreach ($MIRRORS as $murl => $mirror) {
-        if (mirror_status($murl)  != MIRROR_OK) { continue; }
-        if ($country === FALSE || mirror_country($murl) == $country) { $count++; }
-    }
-    return $count;
-}
-
 // Redirect to an URI on this mirror site or outside this site
 function mirror_redirect($absoluteURI)
 {
@@ -192,74 +157,6 @@ function mirror_setcookie($name, $content, $exptime)
     } else {
         return FALSE;
     }
-}
-
-function organise_mirrors($mirrors) {
-    // Lets group the mirrors by country code, for easy output on the page.
-    $retval = array();
-    foreach($mirrors as $key => $mirror) {
-
-        // If the mirror is not all right or it is virtual (not an official mirror), skip it
-        if (mirror_status($key) != MIRROR_OK || mirror_type($key) == MIRROR_VIRTUAL) { continue; }
-
-        if(!isset($grouped_mirrors[$mirror[0]])) {
-            $grouped_mirrors[$mirror[0]] = array();
-        }
-
-        $retval[$mirror[0]][] = array(
-            'url'            => $key,
-            'country_code'   => $mirror[0],
-            'provider_title' => $mirror[1],
-            'provider_url'   => $mirror[3]
-        );
-
-    }
-    return $retval;
-}
-function print_full_mirror_list($download_file = null, $direct_download = false) {
-    global $COUNTRIES, $COUNTRY, $MIRRORS;
-
-    $groupped = organise_mirrors($MIRRORS);
-    $close = count_mirrors($COUNTRY);
-    if ($close) {
-        $mnum = (($close > 1) ? "mirrors" : "mirror");
-        echo "<p>We have automatically detected the following $mnum to be close to you</p>";
-
-        if (isset($groupped[$COUNTRY])) {
-            print_mirror_box($COUNTRIES[$COUNTRY], $COUNTRY, $groupped[$COUNTRY], $download_file, $direct_download, true);
-            echo "<br>";
-        }
-    }
-    foreach($groupped as $mirrorcode => $country) {
-        print_mirror_box($COUNTRIES[$mirrorcode], $mirrorcode, $country, $download_file, $direct_download, false);
-    }
-}
-
-function print_mirror_box($countryname, $countrycode, $mirrors, $file = null, $direct_download = false, $homecountry = false) {
-?>
-    <div class="mirror <?php echo $homecountry ? "homecountry" : ""?>">
-            <div class="title"><?php echo $countryname; ?>
-                <img alt="<?php echo $countrycode; ?>"
-                     height="25"
-                     width="45"
-                     src="<?php echo $_SERVER['MYSITE'] . '/images/flags/beta/' . strtolower($countrycode) . '.png'; ?>">
-            </div>
-            <?php foreach($mirrors as $mirror): ?>
-<?php
-    $url = $mirror["url"];
-    $urltitle = substr($url, strpos($url, '//') + 2, -1);
-    if ($file) {
-        $what = $direct_download ? "this" : "a";
-        $url = $mirror["url"] . "get/$file/from/$what/mirror";
-    }
-?>
-            <div class="entry">
-                <div class="url"><a href="<?php echo htmlentities($url, ENT_QUOTES | ENT_IGNORE, 'UTF-8'); ?>" title="<?php echo clean($mirror['url']); ?>"><?php echo clean($urltitle); ?></a></div>
-                <div class="provider"><a href="<?php echo $mirror['provider_url']; ?>" title="<?php echo clean($mirror['provider_title']); ?>"><?php echo clean($mirror['provider_title']); ?></a></div>
-            </div>
-            <?php endforeach; ?>
-        </div>
-<?php
 }
 
 // Use this function to write out proper headers on
@@ -510,41 +407,9 @@ if($_SERVER["SERVER_PORT"] != '80' && $_SERVER["SERVER_PORT"] != 443) {
     $msite  =      'http://' . $_SERVER["SERVER_NAME"] . ':' . (int)$_SERVER["SERVER_PORT"] . '/';
 } else {
     $MYSITE = $proto . '://' . $_SERVER["SERVER_NAME"] . '/';
-    $msite  =      'http://' . $_SERVER["SERVER_NAME"] . '/';
+    $msite  =     'https://' . $_SERVER["SERVER_NAME"] . '/';
 }
 
-// If this site does not exist - it is most likely because
-// CC.php.net isn't in this array anymore.
-if (!isset($MIRRORS[$MYSITE])) {
-    if (isset($MIRRORS[$msite])) {
-        $MIRRORS[$MYSITE] = $MIRRORS[$msite];
-        unset($MIRRORS[$msite]);
-    }
-}
-
-if (!isset($MIRRORS[$MYSITE])) {
-    // Check if the IP address exists (a fix for the round-robin introduction)
-    if (isset($MIRRORS[$_SERVER['SERVER_ADDR']])) {
-        // Since it does, we know the servername is fine
-        $MYSITE = $proto . '://' . $_SERVER["SERVER_NAME"] . '/';
-    } else {
-
-        // Try the hostname [without www]. In case the main name above is
-        // not found, we try to find the mirror with the name provided by
-        // the browser (in the Host HTTP header).
-
-        $msite = str_replace("www.", "", $msite);
-
-        // If the name without www. exists, use it
-        if (isset($MIRRORS[$msite])) {
-            $MYSITE = str_replace("www.", "", $MYSITE);
-            if (!isset($MIRRORS[$MYSITE])) {
-                $MIRRORS[$MYSITE] = $MIRRORS[$msite];
-                unset($MIRRORS[$msite]);
-            }
-        }
-    }
-}
 
 // If the mirror is not registered with this name, provide defaults
 // (no country code, no search, no stats, English default language ...)

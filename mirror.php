@@ -38,7 +38,7 @@ if (is_official_mirror()) {
             );
 
             // Add size information depending on mirror type
-            if (is_primary_site() || is_backup_primary()) {
+            if (is_primary_site()) {
                 $MIRROR_IMAGE = resize_image($MIRROR_IMAGE, 125, 125);
             } else {
                 $MIRROR_IMAGE = resize_image($MIRROR_IMAGE, 120, 60);

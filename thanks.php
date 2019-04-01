@@ -1,6 +1,7 @@
 <?php
 $_SERVER['BASE_PAGE'] = 'thanks.php';
 include_once $_SERVER['DOCUMENT_ROOT'] . '/include/prepend.inc';
+include_once $_SERVER['DOCUMENT_ROOT'] . '/include/historical_mirrors.inc';
 site_header("Thanks", array("current" => "community"));
 ?>
 
@@ -104,11 +105,6 @@ site_header("Thanks", array("current" => "community"));
 </li>
 
 </ul>
-<p>
- And special thanks to all the companies who donate server space and
- bandwidth to host our international array of
- <a href="/mirrors.php">mirror sites</a>.
-</p>
 
 <h1>Thanks Emeritus</h1>
 
@@ -134,6 +130,22 @@ site_header("Thanks", array("current" => "community"));
  by donating a server and resources to enable us to build manuals
  and distribute our content via rsync.
 </li>
+</ul>
+
+<p>
+ And special thanks to all the companies who donated server space and
+ bandwidth to host our historical international array of mirror sites.
+</p>
+
+<ul>
+<?php
+$last_country = '';
+foreach ($historical_mirrors as $m) {
+?>
+ <li><?php echo $COUNTRIES[$m[0]]; ?>: <a href='<?php echo $m[3]; ?>'><?php echo $m[2]; ?></a></li>
+<?php
+}
+?>
 </ul>
 
 <p>PHP.net is very grateful for all their support.</p>
