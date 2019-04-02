@@ -49,6 +49,7 @@ $historical_mirrors = array(
 	array("LTU", "lt1.php.net", "UAB \"Interneto vizija\"", "http://serveriai.lt/"),
 	array("LUX", "lu1.php.net", "root eSolutions ISP", "http://www.root.lu"),
 	array("LVA", "lv1.php.net", "Māris Ozoliņš", "http://netparks.lv/"),
+	array("LVA", "lv1.php.net", "Kaspars Foigts", "https://laacz.lv/"),
 	array("MYS", "my1.php.net", "MaxDedicated", "http://www.maxdedicated.com/"),
 	array("MEX", "mx1.php.net", "uServers Mexico", "http://www.uservers.net/?in=php"),
 	array("MEX", "mx2.php.net", "Universidad Autónoma Metropolitana Azcapotzalco", "http://www.azc.uam.mx"),
