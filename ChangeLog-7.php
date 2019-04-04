@@ -6,6 +6,84 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
 ?>
 <h1>PHP 7 ChangeLog</h1>
 
+<section class="version" id="7.3.4"><!-- {{{ 7.3.4 -->
+<h3>Version 7.3.4</h3>
+<b><?php release_date('04-Apr-2019'); ?></b>
+<ul><li>Core:
+<ul>
+  <li><?php bugfix(77738); ?> (Nullptr deref in zend_compile_expr).</li>
+  <li><?php bugfix(77660); ?> (Segmentation fault on break 2147483648).</li>
+  <li><?php bugfix(77652); ?> (Anonymous classes can lose their interface information).</li>
+  <li><?php bugfix(77345); ?> (Stack Overflow caused by circular reference in garbage collection).</li>
+  <li><?php bugfix(76956); ?> (Wrong value for 'syslog.filter' documented in php.ini).</li>
+</ul></li>
+<li>Apache2Handler:
+<ul>
+  <li><?php bugfix(77648); ?> (BOM in sapi/apache2handler/php_functions.c).</li>
+</ul></li>
+<li>Bcmath:
+<ul>
+  <li><?php bugfix(77742); ?> (bcpow() implementation related to gcc compiler optimization).</li>
+</ul></li>
+<li>CLI Server:
+<ul>
+  <li><?php bugfix(77722); ?> (Incorrect IP set to $_SERVER['REMOTE_ADDR'] on the localhost).</li>
+</ul></li>
+<li>COM:
+<ul>
+  <li><?php bugfix(77578); ?> (Crash when php unload).</li>
+</ul></li>
+<li>EXIF:
+<ul>
+  <li><?php bugfix(77753); ?> (Heap-buffer-overflow in php_ifd_get32s).</li>
+  <li><?php bugfix(77831); ?> (Heap-buffer-overflow in exif_iif_add_value).</li>
+</ul></li>
+<li>FPM:
+<ul>
+  <li><?php bugfix(77677); ?> (FPM fails to build on AIX due to missing WCOREDUMP).</li>
+</ul></li>
+<li>GD:
+<ul>
+  <li><?php bugfix(77700); ?> (Writing truecolor images as GIF ignores interlace flag).</li>
+</ul></li>
+<li>MySQLi:
+<ul>
+  <li><?php bugfix(77597); ?> (mysqli_fetch_field hangs scripts).</li>
+</ul></li>
+<li>Opcache:
+<ul>
+  <li><?php bugfix(77743); ?> (Incorrect pi node insertion for jmpznz with identical successors).</li>
+</ul></li>
+<li>PCRE:
+<ul>
+  <li><?php bugfix(76127); ?> (preg_split does not raise an error on invalid UTF-8).</li>
+</ul></li>
+<li>Phar:
+<ul>
+  <li><?php bugfix(77697); ?> (Crash on Big_Endian platform).</li>
+</ul></li>
+<li>phpdbg:
+<ul>
+  <li><?php bugfix(77767); ?> (phpdbg break cmd aliases listed in help do not match actual aliases).</li>
+</ul></li>
+<li>sodium:
+<ul>
+  <li><?php bugfix(77646); ?> (sign_detached() strings not terminated).</li>
+</ul></li>
+<li>SQLite3:
+<ul>
+  <li>Added sqlite3.defensive INI directive.</li>
+</ul></li>
+<li>Standard:
+<ul>
+  <li><?php bugfix(77664); ?> (Segmentation fault when using undefined constant in custom wrapper).</li>
+  <li><?php bugfix(77669); ?> (Crash in extract() when overwriting extracted array).</li>
+  <li><?php bugfix(76717); ?> (var_export() does not create a parsable value for PHP_INT_MIN).</li>
+  <li><?php bugfix(77765); ?> (FTP stream wrapper should set the directory as executable).</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
 <section class="version" id="7.1.27"><!-- {{{ 7.1.27 -->
 <h3>Version 7.1.27</h3>
 <b><?php release_date('07-Mar-2019'); ?></b>
