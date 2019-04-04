@@ -84,6 +84,73 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
 </ul>
 <!-- }}} --></section>
 
+<section class="version" id="7.2.17"><!-- {{{ 7.2.17 -->
+<h3>Version 7.2.17</h3>
+<b><?php release_date('04-Apr-2019'); ?></b>
+<ul><li>Core:
+<ul>
+  <li><?php bugfix(77738); ?> (Nullptr deref in zend_compile_expr).</li>
+  <li><?php bugfix(77660); ?> (Segmentation fault on break 2147483648).</li>
+  <li><?php bugfix(77652); ?> (Anonymous classes can lose their interface information).</li>
+  <li><?php bugfix(77676); ?> (Unable to run tests when building shared extension on AIX).</li>
+</ul></li>
+<li>Bcmath:
+<ul>
+  <li><?php bugfix(77742); ?> (bcpow() implementation related to gcc compiler optimization).</li>
+</ul></li>
+<li>COM:
+<ul>
+  <li><?php bugfix(77578); ?> (Crash when php unload).</li>
+</ul></li>
+<li>Date:
+<ul>
+  <li><?php bugfix(50020); ?> (DateInterval:createDateFromString() silently fails).</li>
+  <li><?php bugfix(75113); ?> (Added DatePeriod::getRecurrences() method).</li>
+</ul></li>
+<li>EXIF:
+<ul>
+  <li><?php bugfix(77753); ?> (Heap-buffer-overflow in php_ifd_get32s).</li>
+  <li><?php bugfix(77831); ?> (Heap-buffer-overflow in exif_iif_add_value).</li>
+</ul></li>
+<li>FPM:
+<ul>
+  <li><?php bugfix(77677); ?> (FPM fails to build on AIX due to missing WCOREDUMP).</li>
+</ul></li>
+<li>GD:
+<ul>
+  <li><?php bugfix(77700); ?> (Writing truecolor images as GIF ignores interlace flag).</li>
+</ul></li>
+<li>MySQLi:
+<ul>
+  <li><?php bugfix(77597); ?> (mysqli_fetch_field hangs scripts).</li>
+</ul></li>
+<li>Opcache:
+<ul>
+  <li><?php bugfix(77691); ?> (Opcache passes wrong value for inline array push assignments).</li>
+  <li><?php bugfix(77743); ?> (Incorrect pi node insertion for jmpznz with identical successors).</li>
+</ul></li>
+<li>phpdbg:
+<ul>
+  <li><?php bugfix(77767); ?> (phpdbg break cmd aliases listed in help do not match actual aliases).</li>
+</ul></li>
+<li>sodium:
+<ul>
+  <li><?php bugfix(77646); ?> (sign_detached() strings not terminated).</li>
+</ul></li>
+<li>SQLite3:
+<ul>
+  <li>Added sqlite3.defensive INI directive.</li>
+</ul></li>
+<li>Standard:
+<ul>
+  <li><?php bugfix(77664); ?> (Segmentation fault when using undefined constant in custom wrapper).</li>
+  <li><?php bugfix(77669); ?> (Crash in extract() when overwriting extracted array).</li>
+  <li><?php bugfix(76717); ?> (var_export() does not create a parsable value for PHP_INT_MIN).</li>
+  <li><?php bugfix(77765); ?> (FTP stream wrapper should set the directory as executable).</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
 <section class="version" id="7.1.27"><!-- {{{ 7.1.27 -->
 <h3>Version 7.1.27</h3>
 <b><?php release_date('07-Mar-2019'); ?></b>
