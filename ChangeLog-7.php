@@ -170,14 +170,14 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
 <b><?php release_date('07-Mar-2019'); ?></b>
 <ul><li>Core:
 <ul>
-  <li><?php bugfix(77630); ?> (rename() across the device may allow unwanted access during processing).</li>
+  <li><?php bugfix(77630); ?> (rename() across the device may allow unwanted access during processing). (CVE-2019-9637)</li>
 </ul></li>
 <li>EXIF:
 <ul>
-  <li><?php bugfix(77509); ?> (Uninitialized read in exif_process_IFD_in_TIFF).</li>
-  <li><?php bugfix(77540); ?> (Invalid Read on exif_process_SOFn).</li>
-  <li><?php bugfix(77563); ?> (Uninitialized read in exif_process_IFD_in_MAKERNOTE).</li>
-  <li><?php bugfix(77659); ?> (Uninitialized read in exif_process_IFD_in_MAKERNOTE).</li>
+  <li><?php bugfix(77509); ?> (Uninitialized read in exif_process_IFD_in_TIFF). (CVE-2019-9641)</li>
+  <li><?php bugfix(77540); ?> (Invalid Read on exif_process_SOFn). (CVE-2019-9640)</li>
+  <li><?php bugfix(77563); ?> (Uninitialized read in exif_process_IFD_in_MAKERNOTE). (CVE-2019-9638)</li>
+  <li><?php bugfix(77659); ?> (Uninitialized read in exif_process_IFD_in_MAKERNOTE). (CVE-2019-9639)</li>
 </ul></li>
 <li>PHAR:
 <ul>
@@ -197,7 +197,7 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
 <ul><li>Core:
 <ul>
   <li><?php bugfix(77589); ?> (Core dump using parse_ini_string with numeric sections).</li>
-  <li><?php bugfix(77630); ?> (rename() across the device may allow unwanted access during processing).</li>
+  <li><?php bugfix(77630); ?> (rename() across the device may allow unwanted access during processing). (CVE-2019-9637)</li>
 </ul></li>
 <li>COM:
 <ul>
@@ -205,10 +205,10 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
 </ul></li>
 <li>EXIF:
 <ul>
-  <li><?php bugfix(77509); ?> (Uninitialized read in exif_process_IFD_in_TIFF).</li>
-  <li><?php bugfix(77540); ?> (Invalid Read on exif_process_SOFn).</li>
-  <li><?php bugfix(77563); ?> (Uninitialized read in exif_process_IFD_in_MAKERNOTE).</li>
-  <li><?php bugfix(77659); ?> (Uninitialized read in exif_process_IFD_in_MAKERNOTE).</li>
+  <li><?php bugfix(77509); ?> (Uninitialized read in exif_process_IFD_in_TIFF). (CVE-2019-9641)</li>
+  <li><?php bugfix(77540); ?> (Invalid Read on exif_process_SOFn). (CVE-2019-9640)</li>
+  <li><?php bugfix(77563); ?> (Uninitialized read in exif_process_IFD_in_MAKERNOTE). (CVE-2019-9638)</li>
+  <li><?php bugfix(77659); ?> (Uninitialized read in exif_process_IFD_in_MAKERNOTE). (CVE-2019-9639)</li>
 </ul></li>
 <li>PDO_OCI:
 <ul>
@@ -245,7 +245,7 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
   <li><?php bugfix(77498); ?> (Custom extension Segmentation fault when declare static property).</li>
   <li><?php bugfix(77530); ?> (PHP crashes when parsing `(2)::class`).</li>
   <li><?php bugfix(77546); ?> (iptcembed broken function).</li>
-  <li><?php bugfix(77630); ?> (rename() across the device may allow unwanted access during processing).</li>
+  <li><?php bugfix(77630); ?> (rename() across the device may allow unwanted access during processing). (CVE-2019-9637)</li>
 </ul></li>
 <li>COM:
 <ul>
@@ -254,10 +254,10 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
 </ul></li>
 <li>EXIF:
 <ul>
-  <li><?php bugfix(77509); ?> (Uninitialized read in exif_process_IFD_in_TIFF).</li>
-  <li><?php bugfix(77540); ?> (Invalid Read on exif_process_SOFn).</li>
-  <li><?php bugfix(77563); ?> (Uninitialized read in exif_process_IFD_in_MAKERNOTE).</li>
-  <li><?php bugfix(77659); ?> (Uninitialized read in exif_process_IFD_in_MAKERNOTE).</li>
+  <li><?php bugfix(77509); ?> (Uninitialized read in exif_process_IFD_in_TIFF). (CVE-2019-9641)</li>
+  <li><?php bugfix(77540); ?> (Invalid Read on exif_process_SOFn). (CVE-2019-9640)</li>
+  <li><?php bugfix(77563); ?> (Uninitialized read in exif_process_IFD_in_MAKERNOTE). (CVE-2019-9638)</li>
+  <li><?php bugfix(77659); ?> (Uninitialized read in exif_process_IFD_in_MAKERNOTE). (CVE-2019-9639)</li>
 </ul></li>
 <li>Mbstring:
 <ul>
