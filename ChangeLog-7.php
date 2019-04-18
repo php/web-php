@@ -10,8 +10,8 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
 <b><?php release_date('04-Apr-2019'); ?></b>
 <ul><li>EXIF:
 <ul>
-  <li><?php bugfix(77753); ?> (Heap-buffer-overflow in php_ifd_get32s).</li>
-  <li><?php bugfix(77831); ?> (Heap-buffer-overflow in exif_iif_add_value).</li>
+  <li><?php bugfix(77753); ?> (Heap-buffer-overflow in php_ifd_get32s). (CVE-2019-11034)</li>
+  <li><?php bugfix(77831); ?> (Heap-buffer-overflow in exif_iif_add_value). (CVE-2019-11035)</li>
 </ul></li>
 <li>SQLite3:
 <ul>
@@ -49,8 +49,8 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
 </ul></li>
 <li>EXIF:
 <ul>
-  <li><?php bugfix(77753); ?> (Heap-buffer-overflow in php_ifd_get32s).</li>
-  <li><?php bugfix(77831); ?> (Heap-buffer-overflow in exif_iif_add_value).</li>
+  <li><?php bugfix(77753); ?> (Heap-buffer-overflow in php_ifd_get32s). (CVE-2019-11034)</li>
+  <li><?php bugfix(77831); ?> (Heap-buffer-overflow in exif_iif_add_value). (CVE-2019-11035)</li>
 </ul></li>
 <li>FPM:
 <ul>
@@ -123,8 +123,8 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
 </ul></li>
 <li>EXIF:
 <ul>
-  <li><?php bugfix(77753); ?> (Heap-buffer-overflow in php_ifd_get32s).</li>
-  <li><?php bugfix(77831); ?> (Heap-buffer-overflow in exif_iif_add_value).</li>
+  <li><?php bugfix(77753); ?> (Heap-buffer-overflow in php_ifd_get32s). (CVE-2019-11034)</li>
+  <li><?php bugfix(77831); ?> (Heap-buffer-overflow in exif_iif_add_value). (CVE-2019-11035)</li>
 </ul></li>
 <li>FPM:
 <ul>
