@@ -62,7 +62,6 @@ if (isset($_POST['maillist'])) {
         if ($request != "subscribe" && $request != "unsubscribe") {
             $request = "subscribe";
         }
-        $sub = str_replace("@", "=", $_POST['email']);
         $remote_addr = i2c_realip();
 
         // Get in contact with master server to [un]subscribe the user
