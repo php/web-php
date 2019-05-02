@@ -5,6 +5,77 @@ include_once $_SERVER['DOCUMENT_ROOT'] . '/include/changelogs.inc';
 site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("changelog.css"), "layout_span" => 12));
 ?>
 <h1>PHP 7 ChangeLog</h1>
+<section class="version" id="7.3.5"><!-- {{{ 7.3.5 -->
+<h3>Version 7.3.5</h3>
+<b><?php release_date('02-May-2019'); ?></b>
+<ul><li>Core:
+<ul>
+  <li><?php bugfix(77903); ?> (ArrayIterator stops iterating after offsetSet call).</li>
+</ul></li>
+<li>CLI:
+<ul>
+  <li><?php bugfix(77794); ?> (Incorrect Date header format in built-in server).</li>
+</ul></li>
+<li>EXIF:
+<ul>
+  <li><?php bugfix(77950); ?> (Heap-buffer-overflow in _estrndup via exif_process_IFD_TAG).</li>
+</ul></li>
+<li>Interbase:
+<ul>
+  <li><?php bugfix(72175); ?> (Impossibility of creating multiple connections to Interbase with php 7.x).</li>
+</ul></li>
+<li>Intl:
+<ul>
+  <li><?php bugfix(77895); ?> (IntlDateFormatter::create fails in strict mode if $locale = null).</li>
+</ul></li>
+<li>litespeed:
+<ul>
+  <li>LiteSpeed SAPI 7.3.1, better process management, new API function litespeed_finish_request().</li>
+</ul></li>
+<li>LDAP:
+<ul>
+  <li><?php bugfix(77869); ?> (Core dump when using server controls) (mcmic)</li>
+</ul></li>
+<li>Mail:
+<ul>
+  <li><?php bugfix(77821); ?> (Potential heap corruption in TSendMail()).</li>
+</ul></li>
+<li>mbstring:
+<ul>
+  <li>Implemented FR <?php bugl(72777); ?> (Implement regex stack limits for mbregex functions).</li>
+</ul></li>
+<li>MySQLi:
+<ul>
+  <li><?php bugfix(77773); ?> (Unbuffered queries leak memory - MySQLi / mysqlnd).</li>
+</ul></li>
+<li>PCRE:
+<ul>
+  <li><?php bugfix(77827); ?> (preg_match does not ignore \r in regex flags).</li>
+</ul></li>
+<li>PDO:
+<ul>
+  <li><?php bugfix(77849); ?> (Disable cloning of PDO handle/connection objects).</li>
+</ul></li>
+<li>phpdbg:
+<ul>
+  <li><?php bugfix(76801); ?> (too many open files).</li>
+  <li><?php bugfix(77800); ?> (phpdbg segfaults on listing some conditional breakpoints).</li>
+  <li><?php bugfix(77805); ?> (phpdbg build fails when readline is shared).</li>
+</ul></li>
+<li>Reflection:
+<ul>
+  <li><?php bugfix(77772); ?> (ReflectionClass::getMethods(null) doesn't work).</li>
+  <li><?php bugfix(77882); ?> (Different behavior: always calls destructor).</li>
+</ul></li>
+<li>Standard:
+<ul>
+  <li><?php bugfix(77793); ?> (Segmentation fault in extract() when overwriting reference with itself).</li>
+  <li><?php bugfix(77844); ?> (Crash due to null pointer in parse_ini_string with INI_SCANNER_TYPED).</li>
+  <li><?php bugfix(77853); ?> (Inconsistent substr_compare behaviour with empty haystack).</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
 <section class="version" id="7.1.28"><!-- {{{ 7.1.28 -->
 <h3>Version 7.1.28</h3>
 <b><?php release_date('04-Apr-2019'); ?></b>
