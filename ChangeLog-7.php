@@ -5,6 +5,19 @@ include_once $_SERVER['DOCUMENT_ROOT'] . '/include/changelogs.inc';
 site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("changelog.css"), "layout_span" => 12));
 ?>
 <h1>PHP 7 ChangeLog</h1>
+<section class="version" id="7.1.29"><!-- {{{ 7.1.29 -->
+<h3>Version 7.1.29</h3>
+<b><?php release_date('02-May-2019'); ?></b>
+<ul><li>EXIF:
+<ul>
+  <li><?php bugfix(77950); ?> (Heap-buffer-overflow in _estrndup via exif_process_IFD_TAG).</li>
+</ul></li>
+<li>Mail:
+<ul>
+  <li><?php bugfix(77821); ?> (Potential heap corruption in TSendMail()).</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
 
 <section class="version" id="7.2.18"><!-- {{{ 7.2.18 -->
 <h3>Version 7.2.18</h3>
