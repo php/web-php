@@ -11,6 +11,11 @@ pub   rsa3072 2019-03-25 [SC] [expires: 2021-03-24]
 uid           [ultimate] Derick Rethans (Personal Key) <derick@derickrethans.nl>
 uid           [ultimate] Derick Rethans <derick@php.net>
 sub   rsa3072 2019-03-25 [E] [expires: 2021-03-24]
+
+pub   rsa4096 2019-05-29 [SC] [expires: 2021-05-28]
+      4267 0A7F E4D0 441C 8E46  3234 9E4F DC07 4A4E F02D
+uid           [ultimate] Peter Kokot <petk@php.net>
+sub   rsa4096 2019-05-29 [E] [expires: 2021-05-28]
 GPG
 ,
     "7.3" => <<< GPG
