@@ -8,13 +8,13 @@ uid                  Kalle Sommer Nielsen (PHP) &lt;kalle@php.net&gt;
     "7.4" => <<< GPG
 pub   rsa3072 2019-03-25 [SC] [expires: 2021-03-24]
       A78F 717F 0793 F15F 6285  3392 3A6F 9E81 27D3 0399
-uid           [ultimate] Derick Rethans (Personal Key) <derick@derickrethans.nl>
-uid           [ultimate] Derick Rethans <derick@php.net>
+uid           [ultimate] Derick Rethans (Personal Key) &lt;derick@derickrethans.nl&gt;
+uid           [ultimate] Derick Rethans &lt;derick@php.net&gt;
 sub   rsa3072 2019-03-25 [E] [expires: 2021-03-24]
 
 pub   rsa4096 2019-05-29 [SC] [expires: 2021-05-28]
       4267 0A7F E4D0 441C 8E46  3234 9E4F DC07 4A4E F02D
-uid           [ultimate] Peter Kokot <petk@php.net>
+uid           [ultimate] Peter Kokot &lt;petk@php.net&gt;
 sub   rsa4096 2019-05-29 [E] [expires: 2021-05-28]
 GPG
 ,
