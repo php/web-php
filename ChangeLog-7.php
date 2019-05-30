@@ -70,6 +70,59 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
 </ul>
 <!-- }}} --></section>
 
+<?php site_footer(); ?>
+<section class="version" id="7.2.19"><!-- {{{ 7.2.19 -->
+<h3>Version 7.2.19</h3>
+<b><?php release_date('30-May-2019'); ?></b>
+<ul><li>EXIF:
+<ul>
+  <li><?php bugfix(77988); ?> (heap-buffer-overflow on php_jpg_get16).</li>
+</ul></li>
+<li>FPM:
+<ul>
+  <li><?php bugfix(77934); ?> (php-fpm kill -USR2 not working).</li>
+  <li><?php bugfix(77921); ?> (static.php.net doesn't work anymore).</li>
+</ul></li>
+<li>GD:
+<ul>
+  <li><?php bugfix(77943); ?> (imageantialias($image, false); does not work).</li>
+  <li><?php bugfix(77973); ?> (Uninitialized read in gdImageCreateFromXbm).</li>
+</ul></li>
+<li>Iconv:
+<ul>
+  <li><?php bugfix(78069); ?> (Out-of-bounds read in iconv.c:_php_iconv_mime_decode() due to integer overflow).</li>
+</ul></li>
+<li>JSON:
+<ul>
+  <li><?php bugfix(77843); ?> (Use after free with json serializer).</li>
+</ul></li>
+<li>Opcache:
+<ul>
+  <li>Fixed possible crashes, because of inconsistent PCRE cache and opcache SHM reset.</li>
+</ul></li>
+<li>PDO_MySQL:
+<ul>
+  <li><?php bugfix(77944); ?> (Wrong meta pdo_type for bigint on LLP64).</li>
+</ul></li>
+<li>Reflection:
+<ul>
+  <li><?php bugfix(75186); ?> (Inconsistent reflection of Closure:::__invoke()).</li>
+</ul></li>
+<li>Session:
+<ul>
+  <li><?php bugfix(77911); ?> (Wrong warning for session.sid_bits_per_character).</li>
+</ul></li>
+<li>SPL:
+<ul>
+  <li><?php bugfix(77024); ?> (SplFileObject::__toString() may return array).</li>
+</ul></li>
+<li>SQLite:
+<ul>
+  <li><?php bugfix(77967); ?> (Bypassing open_basedir restrictions via file uris).</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
 <section class="version" id="7.1.29"><!-- {{{ 7.1.29 -->
 <h3>Version 7.1.29</h3>
 <b><?php release_date('02-May-2019'); ?></b>
@@ -7025,4 +7078,3 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
 </ul>
 <!-- }}} --></section>
 
-<?php site_footer(); ?>
