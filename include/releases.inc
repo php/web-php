@@ -2,6 +2,39 @@
 $OLDRELEASES = array (
   7 => 
   array (
+    '7.3.5' => 
+    array (
+      'announcement' => 
+      array (
+        'English' => '/releases/7_3_5.php',
+      ),
+      'source' => 
+      array (
+        0 => 
+        array (
+          'filename' => 'php-7.3.5.tar.bz2',
+          'name' => 'PHP 7.3.5 (tar.bz2)',
+          'sha256' => '4380b80ef98267c3823c3416eb05f7729ba7a33de6b3d14ec96013215d62c35e',
+          'date' => '02 May 2019',
+        ),
+        1 => 
+        array (
+          'filename' => 'php-7.3.5.tar.gz',
+          'name' => 'PHP 7.3.5 (tar.gz)',
+          'sha256' => 'c953749b7f3310a3a74f920ef698f6d1c04636d11656ac9ffb3ab10d34e30e1e',
+          'date' => '02 May 2019',
+        ),
+        2 => 
+        array (
+          'filename' => 'php-7.3.5.tar.xz',
+          'name' => 'PHP 7.3.5 (tar.xz)',
+          'sha256' => 'e1011838a46fd4a195c8453b333916622d7ff5bce4aca2d9d99afac142db2472',
+          'date' => '02 May 2019',
+        ),
+      ),
+      'date' => '02 May 2019',
+      'museum' => false,
+    ),
     '7.1.28' => 
     array (
       'announcement' => 
