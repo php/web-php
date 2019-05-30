@@ -10,15 +10,15 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
 <b><?php release_date('30-May-2019'); ?></b>
 <ul><li>EXIF:
 <ul>
-  <li><?php bugfix(77988); ?> (heap-buffer-overflow on php_jpg_get16).</li>
+  <li><?php bugfix(77988); ?> (heap-buffer-overflow on php_jpg_get16) (CVE-2019-11040).</li>
 </ul></li>
 <li>GD:
 <ul>
-  <li><?php bugfix(77973); ?> (Uninitialized read in gdImageCreateFromXbm).</li>
+  <li><?php bugfix(77973); ?> (Uninitialized read in gdImageCreateFromXbm) (CVE-2019-11038).</li>
 </ul></li>
 <li>Iconv:
 <ul>
-  <li><?php bugfix(78069); ?> (Out-of-bounds read in iconv.c:_php_iconv_mime_decode() due to integer overflow).</li>
+  <li><?php bugfix(78069); ?> (Out-of-bounds read in iconv.c:_php_iconv_mime_decode() due to integer overflow) (CVE-2019-11039).</li>
 </ul></li>
 <li>SQLite:
 <ul>
@@ -148,7 +148,7 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
 <b><?php release_date('02-May-2019'); ?></b>
 <ul><li>EXIF:
 <ul>
-  <li><?php bugfix(77950); ?> (Heap-buffer-overflow in _estrndup via exif_process_IFD_TAG).</li>
+  <li><?php bugfix(77950); ?> (Heap-buffer-overflow in _estrndup via exif_process_IFD_TAG) (CVE-2019-11036).</li>
 </ul></li>
 <li>Mail:
 <ul>
