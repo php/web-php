@@ -2277,8 +2277,6 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
 </ul>
 <!-- }}} --></section>
 
-<?php site_footer(); ?>
-
 <section class="version" id="7.0.29"><!-- {{{ 7.0.29 -->
 <h3>Version 7.0.29</h3>
 <b><?php release_date('29-Mar-2018'); ?></b>
@@ -7100,3 +7098,4 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
 </ul>
 <!-- }}} --></section>
 
+<?php site_footer(); ?>
