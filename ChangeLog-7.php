@@ -5,6 +5,27 @@ include_once $_SERVER['DOCUMENT_ROOT'] . '/include/changelogs.inc';
 site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("changelog.css"), "layout_span" => 12));
 ?>
 <h1>PHP 7 ChangeLog</h1>
+<section class="version" id="7.1.30"><!-- {{{ 7.1.30 -->
+<h3>Version 7.1.30</h3>
+<b><?php release_date('30-May-2019'); ?></b>
+<ul><li>EXIF:
+<ul>
+  <li><?php bugfix(77988); ?> (heap-buffer-overflow on php_jpg_get16).</li>
+</ul></li>
+<li>GD:
+<ul>
+  <li><?php bugfix(77973); ?> (Uninitialized read in gdImageCreateFromXbm).</li>
+</ul></li>
+<li>Iconv:
+<ul>
+  <li><?php bugfix(78069); ?> (Out-of-bounds read in iconv.c:_php_iconv_mime_decode() due to integer overflow).</li>
+</ul></li>
+<li>SQLite:
+<ul>
+  <li><?php bugfix(77967); ?> (Bypassing open_basedir restrictions via file uris).</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
 <section class="version" id="7.3.6"><!-- {{{ 7.3.6 -->
 <h3>Version 7.3.6</h3>
 <b><?php release_date('30-May-2019'); ?></b>
