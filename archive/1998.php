@@ -1,6 +1,6 @@
 <?php
 $_SERVER['BASE_PAGE'] = 'archive/1998.php';
-include_once $_SERVER['DOCUMENT_ROOT'] . '/include/prepend.inc';
+include_once __DIR__ . '/../include/prepend.inc';
 news_archive_sidebar();
 site_header("News Archive - 1998", array("cache" => true));
 ?>
