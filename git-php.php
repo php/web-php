@@ -1,8 +1,8 @@
 <?php
 $_SERVER['BASE_PAGE'] = 'git-php.php';
-include_once $_SERVER['DOCUMENT_ROOT'] . '/include/prepend.inc';
-include_once $_SERVER['DOCUMENT_ROOT'] . '/include/email-validation.inc';
-include_once $_SERVER['DOCUMENT_ROOT'] . '/include/posttohost.inc';
+include_once __DIR__ . '/include/prepend.inc';
+include_once __DIR__ . '/include/email-validation.inc';
+include_once __DIR__ . '/include/posttohost.inc';
 
 // Force the account requests to php.net
 if (!is_primary_site()) {

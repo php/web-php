@@ -21,16 +21,16 @@ $MIRRORS = array(
 );
 
 // Define $COUNTRIES array
-include $_SERVER['DOCUMENT_ROOT'] . '/include/countries.inc';
+include __DIR__ . '/countries.inc';
 
 // Define $COUNTRIES_ALPHA2 array
-include $_SERVER['DOCUMENT_ROOT'] . '/include/countries-alpha2.inc';
+include __DIR__ . '/countries-alpha2.inc';
 
 // Define $COUNTRY_ALPHA_2_TO_3 array
-include $_SERVER['DOCUMENT_ROOT'] . '/include/countries_alpha_mapping.inc';
+include __DIR__ . '/countries_alpha_mapping.inc';
 
 // Define $LANGUAGES array
-include $_SERVER['DOCUMENT_ROOT'] . '/include/languages.inc';
+include __DIR__ . '/languages.inc';
 
 // Returns true if the current (or specified)
 // site is the primary mirror site

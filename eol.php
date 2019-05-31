@@ -1,8 +1,8 @@
 <?php
 $_SERVER['BASE_PAGE'] = 'eol.php';
 
-include_once $_SERVER['DOCUMENT_ROOT'] . '/include/prepend.inc';
-include_once $_SERVER['DOCUMENT_ROOT'] . '/include/branches.inc';
+include_once __DIR__ . '/include/prepend.inc';
+include_once __DIR__ . '/include/branches.inc';
 
 // Notes for specific branches can be added here, and will appear in the table.
 $BRANCH_NOTES = array(

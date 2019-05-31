@@ -1,8 +1,8 @@
 <?php
 $_SERVER['BASE_PAGE'] = 'manual-lookup.php';
-include $_SERVER['DOCUMENT_ROOT'] . '/include/prepend.inc';
-include $_SERVER['DOCUMENT_ROOT'] . '/include/loadavg.inc';
-include $_SERVER['DOCUMENT_ROOT'] . '/include/manual-lookup.inc';
+include __DIR__ . '/include/prepend.inc';
+include __DIR__ . '/include/loadavg.inc';
+include __DIR__ . '/include/manual-lookup.inc';
 
 // BC code, so pattern and function can both be used as
 // parameters to specify the function name
@@ -35,6 +35,6 @@ if ($function) {
 
 // Fall back to a quick reference search
 $notfound = $function;
-include $_SERVER['DOCUMENT_ROOT'] . '/quickref.php';
+include __DIR__ . '/quickref.php';
 
 ?>

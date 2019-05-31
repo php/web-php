@@ -1,6 +1,6 @@
 <?php
 $_SERVER['BASE_PAGE'] = 'download-docs.php';
-include_once $_SERVER['DOCUMENT_ROOT'] . '/include/prepend.inc';
+include_once __DIR__ . '/include/prepend.inc';
 
 if (!empty($_GET['active_langs'])) {
     echo serialize($ACTIVE_ONLINE_LANGUAGES);

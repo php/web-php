@@ -1,8 +1,8 @@
 <?php
 $_SERVER['BASE_PAGE'] = 'supported-versions.php';
 
-include_once $_SERVER['DOCUMENT_ROOT'] . '/include/prepend.inc';
-include_once $_SERVER['DOCUMENT_ROOT'] . '/include/branches.inc';
+include_once __DIR__ . '/include/prepend.inc';
+include_once __DIR__ . '/include/branches.inc';
 
 site_header('Supported Versions', array('css' => array('supported-versions.css')));
 
@@ -85,7 +85,7 @@ $VERSION_NOTES = array(
  * ensuring that we have the same text formatting as the rest of the page. */
 
 $non_standalone = true;
-include $_SERVER['DOCUMENT_ROOT'] . '/images/supported-versions.php';
+include __DIR__ . '/images/supported-versions.php';
 ?>
 
 <h4>Key</h4>

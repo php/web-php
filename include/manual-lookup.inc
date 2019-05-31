@@ -1,7 +1,7 @@
 <?php // -*- C++ -*-
 
 // We need this for error reporting
-include_once $_SERVER['DOCUMENT_ROOT'] . '/include/errors.inc';
+include_once __DIR__ . '/errors.inc';
 
 // Try to find some variations of keyword with $prefix in the $lang manual
 function tryprefix($lang, $keyword, $prefix)

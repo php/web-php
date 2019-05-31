@@ -1,9 +1,9 @@
 <?php
 // Define $MYSITE and $LAST_UPDATED variables
-include_once $_SERVER['DOCUMENT_ROOT'] . '/include/prepend.inc';
+include_once __DIR__ . '/include/prepend.inc';
 
 // Define $PHP_7_3_VERSION, $PHP_7_3_SHA256 & $RELEASES variables
-include_once $_SERVER['DOCUMENT_ROOT'] . '/include/version.inc';
+include_once __DIR__ . '/include/version.inc';
 
 // Text/plain content type for better readability in browsers
 header("Content-type: text/plain; charset=utf-8");

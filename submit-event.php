@@ -1,8 +1,8 @@
 <?php
 $_SERVER['BASE_PAGE'] = 'submit-event.php';
-include_once $_SERVER['DOCUMENT_ROOT'] . '/include/prepend.inc';
-include_once $_SERVER['DOCUMENT_ROOT'] . '/include/posttohost.inc';
-include_once $_SERVER['DOCUMENT_ROOT'] . '/include/email-validation.inc';
+include_once __DIR__ . '/include/prepend.inc';
+include_once __DIR__ . '/include/posttohost.inc';
+include_once __DIR__ . '/include/email-validation.inc';
 site_header("Submit an Event", array("current" => "community"));
 
 // No errors, processing depends on POST data

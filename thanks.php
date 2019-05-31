@@ -1,7 +1,7 @@
 <?php
 $_SERVER['BASE_PAGE'] = 'thanks.php';
-include_once $_SERVER['DOCUMENT_ROOT'] . '/include/prepend.inc';
-include_once $_SERVER['DOCUMENT_ROOT'] . '/include/historical_mirrors.inc';
+include_once __DIR__ . '/include/prepend.inc';
+include_once __DIR__ . '/include/historical_mirrors.inc';
 site_header("Thanks", array("current" => "community"));
 ?>
 

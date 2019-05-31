@@ -1,6 +1,6 @@
 <?php
-include_once $_SERVER['DOCUMENT_ROOT'] . '/include/releases.inc';
-include_once $_SERVER['DOCUMENT_ROOT'] . '/include/version.inc';
+include_once __DIR__ . '/releases.inc';
+include_once __DIR__ . '/version.inc';
 
 /* Branch overrides. For situations where we've changed the exact dates for a
  * branch's active support and security fix EOLs, these can be reflected here.

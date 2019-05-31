@@ -73,21 +73,21 @@ if (get_magic_quotes_runtime()) {
 }
 
 // Site details (mirror site information)
-include $_SERVER['DOCUMENT_ROOT'] . '/include/site.inc';
+include __DIR__ . '/site.inc';
 
 // Choose language used for translated parts
-include $_SERVER['DOCUMENT_ROOT'] . '/include/langchooser.inc';
+include __DIR__ . '/langchooser.inc';
 
 // Get country of the user and set it in a cookie
-include $_SERVER['DOCUMENT_ROOT'] . '/include/ip-to-country.inc';
+include __DIR__ . '/ip-to-country.inc';
 
 // Common layout functions
-include $_SERVER['DOCUMENT_ROOT'] . '/include/layout.inc';
+include __DIR__ . '/layout.inc';
 
 // This file is generated on rsync.php.net and propagated
 // from there. It just defines $LAST_UPDATED, which is the
 // mirror's last updated time.
-include $_SERVER['DOCUMENT_ROOT'] . '/include/last_updated.inc';
+include __DIR__ . '/last_updated.inc';
 
 // -----------------------------------------------------------------------------
 

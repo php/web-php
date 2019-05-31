@@ -1,6 +1,6 @@
 <?php
 $_SERVER['BASE_PAGE'] = 'software.php';
-include_once $_SERVER['DOCUMENT_ROOT'] . '/include/prepend.inc';
+include_once __DIR__ . '/include/prepend.inc';
 site_header("PHP Software", array("current" => "help"));
 ?>
 

@@ -10,10 +10,10 @@
 */
 
 // Ensure that our environment is set up
-include_once $_SERVER['DOCUMENT_ROOT'] . '/include/prepend.inc';
-include_once $_SERVER['DOCUMENT_ROOT'] . '/include/languages.inc';
-include_once $_SERVER['DOCUMENT_ROOT'] . '/include/loadavg.inc';
-include_once $_SERVER['DOCUMENT_ROOT'] . '/include/errors.inc';
+include_once __DIR__ . '/include/prepend.inc';
+include_once __DIR__ . '/include/languages.inc';
+include_once __DIR__ . '/include/loadavg.inc';
+include_once __DIR__ . '/include/errors.inc';
 
 // Get URI for this request, strip leading slash
 // See langchooser.inc for more info on STRIPPED_URI
@@ -24,13 +24,13 @@ $URI = substr($_SERVER['STRIPPED_URI'], 1);
 // dependent, so the search results will show up in the sidebar)
 if ($URI == 'phpnetsearch.src') {
     status_header(200);
-    include_once $_SERVER['DOCUMENT_ROOT'] . '/include/mozsearch.inc';
+    include_once __DIR__ . '/include/mozsearch.inc';
     exit;
 }
 // FIXME: Nuke the old firefox search plugin
 if ($URI == 'phpnetimprovedsearch.src') {
     status_header(200);
-    include_once $_SERVER['DOCUMENT_ROOT'] . '/include/mozopensearch.inc';
+    include_once __DIR__ . '/include/mozopensearch.inc';
     exit;
 }
 
@@ -45,7 +45,7 @@ if (preg_match("!^bugs.php\\?(.+)$!", $URI, $array)) {
 if (preg_match("!^security/advisories/PHPSA-(\\d+)\\.php$!", $URI, $array)) {
     status_header(200);
     $_GET["id"] = $array[1];
-    include_once $_SERVER['DOCUMENT_ROOT'] . '/security/index.php';
+    include_once __DIR__ . '/security/index.php';
     exit;
 }
 
@@ -112,7 +112,7 @@ if (preg_match("!^manual/(\\w+)/(print|printwn|html)((/.+)|$)!", $URI, $array)) 
 // send them to the /releases page since that is likely to be most helpful.
 if (preg_match("!^distributions/.*!", $URI, $array)) {
     status_header(404);
-    include_once $_SERVER['DOCUMENT_ROOT'] . "/releases/index.php";
+    include_once __DIR__ . "/releases/index.php";
 }
 
 // ============================================================================
@@ -136,7 +136,7 @@ if (preg_match("!^get/([^/]+)/from/([^/]+)(/mirror)?$!", $URI, $dlinfo)) {
 
     $df = $dlinfo[1];
     if(strpos($df, "7-LATEST") !== false) {
-        include_once $_SERVER['DOCUMENT_ROOT'] . "/include/version.inc";
+        include_once __DIR__ . "/include/version.inc";
         $df = str_replace("7-LATEST", $PHP_7_VERSION, $df);
     }
 
@@ -596,17 +596,17 @@ if (isset($external_redirects[$URI])) {
 // will be capable of being included from anywhere
 if ($URI=='mirror-info') {
     status_header(200);
-    include_once $_SERVER['DOCUMENT_ROOT'] . "/$URI.php";
+    include_once __DIR__ . "/$URI.php";
     exit;
 }
 
 // ============================================================================
 // Try to find the page using the preferred language as a manual page
-include_once $_SERVER['DOCUMENT_ROOT'] . "/include/manual-lookup.inc";
+include_once __DIR__ . "/include/manual-lookup.inc";
 $try = find_manual_page($LANG, $URI);
 if ($try) {
     status_header(200);
-    include_once $_SERVER['DOCUMENT_ROOT'] . $try;
+    include_once __DIR__ . $try;
     exit;
 }
 // BC. The class methods are now classname.methodname

@@ -1,7 +1,7 @@
 <?php
 $_SERVER['BASE_PAGE'] = 'ChangeLog-4.php';
-include_once $_SERVER['DOCUMENT_ROOT'] . '/include/prepend.inc';
-include_once $_SERVER['DOCUMENT_ROOT'] . '/include/changelogs.inc';
+include_once __DIR__ . '/include/prepend.inc';
+include_once __DIR__ . '/include/changelogs.inc';
 site_header("PHP 4 ChangeLog", array("current" => "docs", "css" => array("changelog.css"), "layout_span" => 12));
 ?>
 

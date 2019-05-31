@@ -1,8 +1,8 @@
 <?php // vim: et
 $_SERVER['BASE_PAGE'] = 'gpg-keys.php';
-include_once $_SERVER['DOCUMENT_ROOT'] . '/include/prepend.inc';
-include_once $_SERVER['DOCUMENT_ROOT'] . '/include/gpg-keys.inc';
-include_once $_SERVER['DOCUMENT_ROOT'] . '/include/version.inc';
+include_once __DIR__ . '/include/prepend.inc';
+include_once __DIR__ . '/include/gpg-keys.inc';
+include_once __DIR__ . '/include/version.inc';
 
 site_header('GPG Keys');
 ?>
