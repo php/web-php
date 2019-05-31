@@ -1,6 +1,6 @@
 <?php
-include_once $_SERVER['DOCUMENT_ROOT'] . '/include/prepend.inc';
-include_once $_SERVER['DOCUMENT_ROOT'] . '/include/branches.inc';
+include_once __DIR__ . '/../include/prepend.inc';
+include_once __DIR__ . '/../include/branches.inc';
 
 // Sizing constants.
 $margin_left = 80;

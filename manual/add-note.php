@@ -2,10 +2,10 @@
 $ip_spam_lookup_url = 'http://www.dnsbl.info/dnsbl-database-check.php?IP=';
 
 $_SERVER['BASE_PAGE'] = 'manual/add-note.php';
-include_once $_SERVER['DOCUMENT_ROOT'] . '/include/prepend.inc';
-include_once $_SERVER['DOCUMENT_ROOT'] . '/include/posttohost.inc';
-include_once $_SERVER['DOCUMENT_ROOT'] . '/include/shared-manual.inc';
-include      $_SERVER['DOCUMENT_ROOT'] . '/manual/spam_challenge.php';
+include_once __DIR__ . '/../include/prepend.inc';
+include_once __DIR__ . '/../include/posttohost.inc';
+include_once __DIR__ . '/../include/shared-manual.inc';
+include      __DIR__ . '/spam_challenge.php';
 
 site_header("Add Manual Note", array( 'css' => 'add-note.css'));
 

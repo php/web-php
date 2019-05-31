@@ -1,5 +1,5 @@
 <?php
-include_once $_SERVER['DOCUMENT_ROOT'] . '/include/prepend.inc';
+include_once __DIR__ . '/../include/prepend.inc';
 
 $now = $_SERVER["REQUEST_TIME"];
 if (isset($_SERVER["HTTP_IF_MODIFIED_SINCE"])) {

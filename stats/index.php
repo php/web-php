@@ -5,7 +5,7 @@
  which means there is no local search is set up
 */
 $_SERVER['BASE_PAGE'] = 'stats/index.php';
-include_once $_SERVER['DOCUMENT_ROOT'] . '/include/prepend.inc';
+include_once __DIR__ . '/../include/prepend.inc';
 site_header("No Stats");
 ?>
 
