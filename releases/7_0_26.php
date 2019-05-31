@@ -1,6 +1,6 @@
 <?php
 $_SERVER['BASE_PAGE'] = 'releases/7_0_26.php';
-include_once $_SERVER['DOCUMENT_ROOT'] . '/include/prepend.inc';
+include_once __DIR__ . '/../include/prepend.inc';
 site_header("PHP 7.0.26 Release Announcement");
 ?>
 

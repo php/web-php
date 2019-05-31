@@ -1,6 +1,6 @@
 <?php
 $_SERVER['BASE_PAGE'] = 'releases/index.php';
-include_once $_SERVER['DOCUMENT_ROOT'] . '/include/prepend.inc';
+include_once __DIR__ . '/../include/prepend.inc';
 include_once $_SERVER["DOCUMENT_ROOT"] . "/include/branches.inc";
 
 if (isset($_GET["serialize"]) || isset($_GET["json"])) {

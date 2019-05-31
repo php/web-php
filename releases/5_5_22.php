@@ -1,6 +1,6 @@
 <?php
 $_SERVER['BASE_PAGE'] = 'releases/5_5_22.php';
-include_once $_SERVER['DOCUMENT_ROOT'] . '/include/prepend.inc';
+include_once __DIR__ . '/../include/prepend.inc';
 site_header("PHP 5.5.22 Release Announcement");
 ?>
 
