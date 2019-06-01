@@ -54,7 +54,7 @@ foreach($entries as $module => $items) {
 	echo "<li>$module:\n<ul>\n";
 	foreach($items as $item) {
 		// strip author
-		$item = preg_replace('/\.\s+\(.+?\)\s*$/', '.', $item);
+		$item = preg_replace('/\s+\([^()]+\)\s*$/', '', $item);
 		// encode HTML
 		$item = htmlspecialchars($item, ENT_NOQUOTES);
 		// convert bug numbers
