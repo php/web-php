@@ -10,7 +10,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 <a href="#PHP_5_6">5.6</a> |
 <a href="#PHP_5_5">5.5</a> | <a href="#PHP_5_4">5.4</a> |
 <a href="#PHP_5_3">5.3</a> | <a href="#PHP_5_2">5.2</a> |
-<a href="#PHP_5_1">5.1</a> | <a href="#PHP_5_0">5.0</a> |
+<a href="#PHP_5_1">5.1</a> | <a href="#PHP_5_0">5.0</a>
 
 <a name="PHP_5_6"/>
 <section class="version" id="5.6.40"><!-- {{{ 5.6.40 -->

@@ -6,7 +6,7 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
 ?>
 <h1>PHP 7 ChangeLog</h1>
 
-<a href="#PHP_7_3">7.3</a> | <a href="#PHP_7_2">7.2</a>
+<a href="#PHP_7_3">7.3</a> | <a href="#PHP_7_2">7.2</a> |
 <a href="#PHP_7_1">7.1</a> | <a href="#PHP_7_0">7.0</a>
 
 <a name="PHP_7_3"/>
