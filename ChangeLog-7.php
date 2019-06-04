@@ -9,7 +9,7 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
 <a href="#PHP_7_3">7.3</a> | <a href="#PHP_7_2">7.2</a>
 <a href="#PHP_7_1">7.1</a> | <a href="#PHP_7_0">7.0</a>
 
-<a name="PHP_7.3"/>
+<a name="PHP_7_3"/>
 <section class="version" id="7.3.6"><!-- {{{ 7.3.6 -->
 <h3>Version 7.3.6</h3>
 <b><?php release_date('30-May-2019'); ?></b>
@@ -793,7 +793,7 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
 </ul>
 <!-- }}} --></section>
 
-<a name="PHP_7.2"/>
+<a name="PHP_7_2"/>
 <section class="version" id="7.2.19"><!-- {{{ 7.2.19 -->
 <h3>Version 7.2.19</h3>
 <b><?php release_date('30-May-2019'); ?></b>
@@ -2132,7 +2132,7 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
 </ul>
 <!-- }}} --></section>
 
-<a name="PHP_7.1"/>
+<a name="PHP_7_1"/>
 <section class="version" id="7.1.30"><!-- {{{ 7.1.30 -->
 <h3>Version 7.1.30</h3>
 <b><?php release_date('30-May-2019'); ?></b>
@@ -4274,7 +4274,7 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
 </ul>
 <!-- }}} --></section>
 
-<a name="PHP_7.0"/>
+<a name="PHP_7_0"/>
 <section class="version" id="7.0.33"><!-- {{{ 7.0.33 -->
 <h3>Version 7.0.33</h3>
 <b><?php release_date('06-Dec-2018'); ?></b>
