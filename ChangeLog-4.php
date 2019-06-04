@@ -7,6 +7,10 @@ site_header("PHP 4 ChangeLog", array("current" => "docs", "css" => array("change
 
 <h1>PHP 4 ChangeLog</h1>
 
+<a href="#PHP_4_4">4.4</a> | <a href="#PHP_4_3">4.3</a>
+
+<a name="PHP_4_4"/>
+
 <section class="version" id="4.4.9"><!-- {{{ 4.4.9 -->
 <h3>Version 4.4.9</h3>
 <?php release_date("07-Aug-2008"); ?>
@@ -344,6 +348,8 @@ There is a <a href="release_4_4_1.php">separate announcement</a> available for t
 There is a <a href="release_4_4_0.php">separate announcement</a> available for this release.<br>
 
 <!-- }}} --></section>
+
+<a name="PHP_4_3"/>
 
 <section class="version" id="4.3.11"><!-- {{{ 4.3.11 -->
 <h3>Version 4.3.11</h3>
