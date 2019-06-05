@@ -34,6 +34,10 @@ $OLDRELEASES = array (
       ),
       'date' => '02 May 2019',
       'museum' => false,
+      'tags' => 
+      array (
+        0 => 'security',
+      ),
     ),
     '7.2.18' => 
     array (
@@ -67,6 +71,10 @@ $OLDRELEASES = array (
       ),
       'date' => '30 May 2019',
       'museum' => false,
+      'tags' => 
+      array (
+        0 => 'security',
+      ),
     ),
     '7.3.5' => 
     array (
@@ -100,6 +108,10 @@ $OLDRELEASES = array (
       ),
       'date' => '02 May 2019',
       'museum' => false,
+      'tags' => 
+      array (
+        0 => 'security',
+      ),
     ),
     '7.1.28' => 
     array (
@@ -133,6 +145,10 @@ $OLDRELEASES = array (
       ),
       'date' => '02 May 2019',
       'museum' => false,
+      'tags' => 
+      array (
+        0 => 'security',
+      ),
     ),
     '7.2.17' => 
     array (
@@ -166,6 +182,10 @@ $OLDRELEASES = array (
       ),
       'date' => '02 May 2019',
       'museum' => false,
+      'tags' => 
+      array (
+        0 => 'security',
+      ),
     ),
     '7.3.4' => 
     array (
@@ -199,6 +219,10 @@ $OLDRELEASES = array (
       ),
       'date' => '04 Apr 2019',
       'museum' => false,
+      'tags' => 
+      array (
+        0 => 'security',
+      ),
     ),
     '7.1.27' => 
     array (
@@ -232,6 +256,10 @@ $OLDRELEASES = array (
       ),
       'date' => '07 Mar 2019',
       'museum' => false,
+      'tags' => 
+      array (
+        0 => 'security',
+      ),
     ),
     '7.2.16' => 
     array (
@@ -265,6 +293,10 @@ $OLDRELEASES = array (
       ),
       'date' => '04 Apr 2019',
       'museum' => false,
+      'tags' => 
+      array (
+        0 => 'security',
+      ),
     ),
     '7.3.3' => 
     array (
@@ -298,6 +330,10 @@ $OLDRELEASES = array (
       ),
       'date' => '07 Mar 2019',
       'museum' => false,
+      'tags' => 
+      array (
+        0 => 'security',
+      ),
     ),
     '7.1.26' => 
     array (
@@ -331,6 +367,10 @@ $OLDRELEASES = array (
       ),
       'date' => '10 Jan 2019',
       'museum' => false,
+      'tags' => 
+      array (
+        0 => 'security',
+      ),
     ),
     '7.2.15' => 
     array (
@@ -430,6 +470,10 @@ $OLDRELEASES = array (
       ),
       'date' => '07 Feb 2019',
       'museum' => false,
+      'tags' => 
+      array (
+        0 => 'security',
+      ),
     ),
     '7.3.1' => 
     array (
@@ -463,6 +507,10 @@ $OLDRELEASES = array (
       ),
       'date' => '10 Jan 2019',
       'museum' => false,
+      'tags' => 
+      array (
+        0 => 'security',
+      ),
     ),
     '7.0.33' => 
     array (
@@ -496,6 +544,10 @@ $OLDRELEASES = array (
       ),
       'date' => '10 Jan 2019',
       'museum' => false,
+      'tags' => 
+      array (
+        0 => 'security',
+      ),
     ),
     '7.1.25' => 
     array (
@@ -529,6 +581,10 @@ $OLDRELEASES = array (
       ),
       'date' => '06 Dec 2018',
       'museum' => false,
+      'tags' => 
+      array (
+        0 => 'security',
+      ),
     ),
     '7.3.0' => 
     array (
@@ -595,6 +651,10 @@ $OLDRELEASES = array (
       ),
       'date' => '06 Dec 2018',
       'museum' => false,
+      'tags' => 
+      array (
+        0 => 'security',
+      ),
     ),
     '7.0.32' => 
     array (
@@ -628,6 +688,10 @@ $OLDRELEASES = array (
       ),
       'date' => '13 Sep 2018',
       'museum' => false,
+      'tags' => 
+      array (
+        0 => 'security',
+      ),
     ),
     '7.1.24' => 
     array (
@@ -793,6 +857,10 @@ $OLDRELEASES = array (
       ),
       'date' => '13 Sep 2018',
       'museum' => false,
+      'tags' => 
+      array (
+        0 => 'security',
+      ),
     ),
     '7.2.10' => 
     array (
@@ -826,6 +894,10 @@ $OLDRELEASES = array (
       ),
       'date' => '13 Sep 2018',
       'museum' => false,
+      'tags' => 
+      array (
+        0 => 'security',
+      ),
     ),
     '7.1.21' => 
     array (
@@ -892,6 +964,10 @@ $OLDRELEASES = array (
       ),
       'date' => '19 Jul 2018',
       'museum' => false,
+      'tags' => 
+      array (
+        0 => 'security',
+      ),
     ),
     '7.2.9' => 
     array (
@@ -958,6 +1034,10 @@ $OLDRELEASES = array (
       ),
       'date' => '16 Aug 2018',
       'museum' => false,
+      'tags' => 
+      array (
+        0 => 'security',
+      ),
     ),
     '7.2.8' => 
     array (
@@ -991,6 +1071,10 @@ $OLDRELEASES = array (
       ),
       'date' => '19 Jul 2018',
       'museum' => false,
+      'tags' => 
+      array (
+        0 => 'security',
+      ),
     ),
     '7.1.19' => 
     array (
@@ -1057,6 +1141,10 @@ $OLDRELEASES = array (
       ),
       'date' => '26 Apr 2018',
       'museum' => false,
+      'tags' => 
+      array (
+        0 => 'security',
+      ),
     ),
     '7.2.7' => 
     array (
@@ -1189,6 +1277,10 @@ $OLDRELEASES = array (
       ),
       'date' => '26 Apr 2018',
       'museum' => false,
+      'tags' => 
+      array (
+        0 => 'security',
+      ),
     ),
     '7.2.5' => 
     array (
@@ -1222,6 +1314,10 @@ $OLDRELEASES = array (
       ),
       'date' => '26 Apr 2018',
       'museum' => false,
+      'tags' => 
+      array (
+        0 => 'security',
+      ),
     ),
     '7.1.16' => 
     array (
@@ -1255,6 +1351,10 @@ $OLDRELEASES = array (
       ),
       'date' => '29 Mar 2018',
       'museum' => false,
+      'tags' => 
+      array (
+        0 => 'security',
+      ),
     ),
     '7.0.29' => 
     array (
@@ -1288,6 +1388,10 @@ $OLDRELEASES = array (
       ),
       'date' => '29 Mar 2018',
       'museum' => false,
+      'tags' => 
+      array (
+        0 => 'security',
+      ),
     ),
     '7.2.4' => 
     array (
@@ -1321,6 +1425,10 @@ $OLDRELEASES = array (
       ),
       'date' => '29 Mar 2018',
       'museum' => false,
+      'tags' => 
+      array (
+        0 => 'security',
+      ),
     ),
     '7.1.15' => 
     array (
@@ -1354,6 +1462,10 @@ $OLDRELEASES = array (
       ),
       'date' => '1 Mar 2018',
       'museum' => false,
+      'tags' => 
+      array (
+        0 => 'security',
+      ),
     ),
     '7.2.3' => 
     array (
@@ -1387,6 +1499,10 @@ $OLDRELEASES = array (
       ),
       'date' => '1 Mar 2018',
       'museum' => false,
+      'tags' => 
+      array (
+        0 => 'security',
+      ),
     ),
     '7.0.28' => 
     array (
@@ -1420,6 +1536,10 @@ $OLDRELEASES = array (
       ),
       'date' => '01 Mar 2018',
       'museum' => false,
+      'tags' => 
+      array (
+        0 => 'security',
+      ),
     ),
     '7.1.14' => 
     array (
@@ -1519,6 +1639,10 @@ $OLDRELEASES = array (
       ),
       'date' => '04 Jan 2018',
       'museum' => false,
+      'tags' => 
+      array (
+        0 => 'security',
+      ),
     ),
     '7.2.1' => 
     array (
@@ -1750,6 +1874,10 @@ $OLDRELEASES = array (
       ),
       'date' => '26 Oct 2017',
       'museum' => false,
+      'tags' => 
+      array (
+        0 => 'security',
+      ),
     ),
     '7.1.10' => 
     array (
@@ -1981,6 +2109,10 @@ $OLDRELEASES = array (
       ),
       'date' => '06 Jul 2017',
       'museum' => false,
+      'tags' => 
+      array (
+        0 => 'security',
+      ),
     ),
     '7.0.21' => 
     array (
@@ -2014,6 +2146,10 @@ $OLDRELEASES = array (
       ),
       'date' => '06 Jul 2017',
       'museum' => false,
+      'tags' => 
+      array (
+        0 => 'security',
+      ),
     ),
     '7.1.6' => 
     array (
@@ -2410,6 +2546,10 @@ $OLDRELEASES = array (
       ),
       'date' => '19 Jan 2017',
       'museum' => false,
+      'tags' => 
+      array (
+        0 => 'security',
+      ),
     ),
     '7.0.14' => 
     array (
@@ -2443,6 +2583,10 @@ $OLDRELEASES = array (
       ),
       'date' => '08 Dec 2016',
       'museum' => false,
+      'tags' => 
+      array (
+        0 => 'security',
+      ),
     ),
     '7.1.0' => 
     array (
@@ -2509,6 +2653,10 @@ $OLDRELEASES = array (
       ),
       'date' => '10 Nov 2016',
       'museum' => false,
+      'tags' => 
+      array (
+        0 => 'security',
+      ),
     ),
     '7.0.12' => 
     array (
@@ -2542,6 +2690,10 @@ $OLDRELEASES = array (
       ),
       'date' => '13 Oct 2016',
       'museum' => false,
+      'tags' => 
+      array (
+        0 => 'security',
+      ),
     ),
     '7.0.11' => 
     array (
@@ -2575,6 +2727,10 @@ $OLDRELEASES = array (
       ),
       'date' => '15 Sep 2016',
       'museum' => false,
+      'tags' => 
+      array (
+        0 => 'security',
+      ),
     ),
     '7.0.10' => 
     array (
@@ -2608,6 +2764,10 @@ $OLDRELEASES = array (
       ),
       'date' => '18 Aug 2016',
       'museum' => false,
+      'tags' => 
+      array (
+        0 => 'security',
+      ),
     ),
     '7.0.9' => 
     array (
@@ -2641,6 +2801,10 @@ $OLDRELEASES = array (
       ),
       'date' => '21 Jul 2016',
       'museum' => false,
+      'tags' => 
+      array (
+        0 => 'security',
+      ),
     ),
     '7.0.8' => 
     array (
@@ -2674,6 +2838,10 @@ $OLDRELEASES = array (
       ),
       'date' => '23 Jun 2016',
       'museum' => false,
+      'tags' => 
+      array (
+        0 => 'security',
+      ),
     ),
     '7.0.7' => 
     array (
@@ -2707,6 +2875,10 @@ $OLDRELEASES = array (
       ),
       'date' => '26 May 2016',
       'museum' => false,
+      'tags' => 
+      array (
+        0 => 'security',
+      ),
     ),
     '7.0.6' => 
     array (
@@ -2740,6 +2912,10 @@ $OLDRELEASES = array (
       ),
       'date' => '28 Apr 2016',
       'museum' => false,
+      'tags' => 
+      array (
+        0 => 'security',
+      ),
     ),
     '7.0.5' => 
     array (
@@ -2773,6 +2949,10 @@ $OLDRELEASES = array (
       ),
       'date' => '31 Mar 2016',
       'museum' => false,
+      'tags' => 
+      array (
+        0 => 'security',
+      ),
     ),
     '7.0.4' => 
     array (
@@ -2806,6 +2986,10 @@ $OLDRELEASES = array (
       ),
       'date' => '03 Mar 2016',
       'museum' => false,
+      'tags' => 
+      array (
+        0 => 'security',
+      ),
     ),
     '7.0.3' => 
     array (
@@ -2839,6 +3023,10 @@ $OLDRELEASES = array (
       ),
       'date' => '04 Feb 2016',
       'museum' => false,
+      'tags' => 
+      array (
+        0 => 'security',
+      ),
     ),
     '7.0.2' => 
     array (
@@ -2872,6 +3060,10 @@ $OLDRELEASES = array (
       ),
       'date' => '07 Jan 2015',
       'museum' => false,
+      'tags' => 
+      array (
+        0 => 'security',
+      ),
     ),
     '7.0.1' => 
     array (
