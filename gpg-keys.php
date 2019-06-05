@@ -2,7 +2,6 @@
 $_SERVER['BASE_PAGE'] = 'gpg-keys.php';
 include_once __DIR__ . '/include/prepend.inc';
 include_once __DIR__ . '/include/gpg-keys.inc';
-include_once __DIR__ . '/include/version.inc';
 
 site_header('GPG Keys');
 ?>

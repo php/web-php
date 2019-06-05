@@ -2,7 +2,7 @@
 // Define $MYSITE and $LAST_UPDATED variables
 include_once __DIR__ . '/include/prepend.inc';
 
-// Define $PHP_7_3_VERSION, $PHP_7_3_SHA256 & $RELEASES variables
+// Define release_get_latest() function.
 include_once __DIR__ . '/include/version.inc';
 
 // Text/plain content type for better readability in browsers
@@ -12,13 +12,15 @@ header("Content-type: text/plain; charset=utf-8");
 $mirror_stats = (int) (isset($_SERVER['MIRROR_STATS']) && $_SERVER['MIRROR_STATS'] == '1');
 
 // SHA256 check last release file (identifies rsync setup problems)
-$filename = $_SERVER['DOCUMENT_ROOT'] . '/distributions/' . $RELEASES[7][$PHP_7_3_VERSION]["source"][0]["filename"];
+[ , $latest ] = release_get_latest();
+$dist = $latest['source'][0];
+$filename = __DIR__ . "/distributions/{$dist['filename']}";
 if (!file_exists($filename)) {
 	$hash_ok = 0;
-} elseif (isset($PHP_7_3_SHA256["tar.bz2"]) &&
+} elseif (isset($dist['sha256']) &&
 		function_exists('hash_file') &&
 		in_array('sha256', hash_algos(), true)) {
-	$hash_ok = (int)(hash_file('sha256', $filename) === $PHP_7_3_SHA256["tar.bz2"]);
+	$hash_ok = (int)(hash_file('sha256', $filename) === $dist['sha256']);
 } else {
 	$hash_ok = 0;
 }
