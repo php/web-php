@@ -66,6 +66,12 @@ XML;
 
     $updated = date(DATE_ATOM, max($maxtime));
 
+    if (isset($release['tags'])) {
+        foreach ($release['tags'] as $tag) {
+            echo '        <php:tag>', htmlspecialchars($tag), "</php:tag>\n";
+        }
+    }
+
     echo <<< XML
         <updated>{$updated}</updated>
         <content src="{$id}" type="application/xhtml+xml"/>
