@@ -20,9 +20,9 @@ XML;
 
 /* FIX silly editor highlighting */?><?php
 
+// Flatten major versions out of RELEASES.
+$RELEASED_VERSIONS = array_reduce($RELEASES, 'array_merge', []);
 $FEED_UPDATED =  0;
-// $RELEASED_VERSIONS = array_merge($RELEASES[5], $RELEASES[7]);
-$RELEASED_VERSIONS = $RELEASES[7];
 krsort($RELEASED_VERSIONS);
 foreach ($RELEASED_VERSIONS as $version => $release) {
     $published = date(DATE_ATOM, strtotime($release["source"][0]["date"]));
