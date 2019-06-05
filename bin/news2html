@@ -6,11 +6,12 @@ PHP_SAPI == 'cli' or die("Please run this script using the cli sapi");
 $cmd = array_shift($_SERVER['argv']);
 
 if (count($_SERVER['argv']) < 2) {
-	echo "Use: $cmd /path/to/php-5.4.16/NEWS 5.4.16\n";
+	echo "Use: $cmd /path/to/php-5.4.16/NEWS 5.4.16 [path/to/ChangeLog.php]\n";
 	exit(1);
 }
 $news_file = array_shift($_SERVER['argv']);
 $version = array_shift($_SERVER['argv']);
+$changelog = @array_shift($_SERVER['argv']);
 
 // find NEWS entry
 $fp = fopen($news_file, "r");
@@ -50,6 +51,7 @@ while(($ln = fgets($fp)) !== false) {
 	}
 }
 
+if ($changelog) { ob_start(); }
 
 echo <<<HEAD
 <section class="version" id="$version"><!-- {{{ $version -->
@@ -76,3 +78,29 @@ foreach($entries as $module => $items) {
 	echo "</ul></li>\n";
 }
 echo "</ul>\n<!-- }}} --></section>\n\n";
+
+if ($changelog) {
+	$contents = ob_get_contents();
+	ob_end_clean();
+
+	$log = file_get_contents($changelog);
+	if (empty($log)) {
+		fprintf(STDERR, "Unable to read $changelog\n");
+		exit(1);
+	}
+
+	$parts = explode('.', $version, 3);
+	if (count($parts) < 2) {
+		fprintf(STDERR, "Unable to parse branch from $version\n");
+		exit(1);
+	}
+
+	$tag = "<a name=\"PHP_{$parts[0]}_{$parts[1]}\"></a>";
+	if (strpos($log, $tag) === false) {
+		fprintf(STDERR, "Unable to find branch tag in ChangeLog\n");
+		exit(1);
+	}
+
+	$log = str_replace($tag, "$tag\n\n$contents", $log);
+	file_put_contents($changelog, $log);
+}
