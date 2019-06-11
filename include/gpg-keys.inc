@@ -8,10 +8,10 @@ uid                  Kalle Sommer Nielsen (PHP) &lt;kalle@php.net&gt;
     "7.4" => <<< GPG
 sec   rsa4096 2019-06-11 [SC] [expires: 2029-06-08]
       5A52880781F755608BF815FC910DEB46F53EA312
-uid           [ultimate] Derick Rethans <gpg@derickrethans.nl>
-uid           [ultimate] Derick Rethans <derick@derickrethans.nl>
-uid           [ultimate] Derick Rethans (GitHub) <github@derickrethans.nl>
-uid           [ultimate] Derick Rethans (PHP) <derick@php.net>
+uid           [ultimate] Derick Rethans &lt;gpg@derickrethans.nl&gt;
+uid           [ultimate] Derick Rethans &lt;derick@derickrethans.nl&gt;
+uid           [ultimate] Derick Rethans (GitHub) &lt;github@derickrethans.nl&gt;
+uid           [ultimate] Derick Rethans (PHP) &lt;derick@php.net&gt;
 ssb   rsa4096 2019-06-11 [E] [expires: 2029-06-08]
 
 pub   rsa4096 2019-05-29 [SC] [expires: 2021-05-28]
