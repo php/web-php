@@ -79,10 +79,6 @@ site_header("Thanks", array("current" => "community"));
 </li>
 
 <li>
- <a href="http://facebook.com">Facebook</a> provides us with SSL certificates.
-</li>
-
-<li>
  <a href="http://krystal.co.uk">Krystal.co.uk</a> provides a server and bandwidth
  for the ci.qa.php.net build and quality assurance infrastructure.
 </li>
@@ -92,8 +88,8 @@ site_header("Thanks", array("current" => "community"));
 </li>
 
 <li>
- <a href="http://www.bauer-kirch.de/">Bauer + Kirch GmbH</a> provides a server and bandwidth
- for the php.net monitoring infrastructure.
+ <a href="https://www.bauer-kirch.de/">Bauer + Kirch GmbH</a> provides us with SSL certificates and
+ a server and bandwidth for the php.net monitoring infrastructure.
 </li>
 
 <li>
