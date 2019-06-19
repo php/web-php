@@ -14,7 +14,7 @@ $SIDEBAR_DATA = '
 <h3>More about Git</h3>
 <p>
  You can find more information about Git and download clients for most major
- platforms at <a href="http://git-scm.com/">the official Git site</a>.
+ platforms at <a href="https://git-scm.com/">the official Git site</a>.
 </p>
 
 <h3>Git access</h3>
@@ -134,7 +134,7 @@ if (count($_POST) && (!isset($_POST['purpose']) || !is_array($_POST['purpose']) 
 <p>
  If you are not familiar with Git, you should have a look at the various
  documentation resources available at
- <a href="http://git-scm.com/">the official Git site</a>.  This is also where
+ <a href="https://git-scm.com/">the official Git site</a>.  This is also where
  to get the most recent version of the Git client.
 </p>
 
@@ -156,7 +156,7 @@ if (count($_POST) && (!isset($_POST['purpose']) || !is_array($_POST['purpose']) 
  <a href="https://wiki.php.net/vcs/gitfaq">Git FAQ</a> pages on the Wiki are
  good starting points to learn how we use Git to develop PHP. Beyond that, you
  can familiarise yourself with Git in general via the
- <a href="http://git-scm.com/documentation">Git documentation</a> and the
+ <a href="https://git-scm.com/documentation">Git documentation</a> and the
  <a href="http://progit.org/">Pro Git</a> book.  They should all be executed
  from within the checked out tree. eg.  <code>cd php-src</code>.
 </p>

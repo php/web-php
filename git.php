@@ -5,7 +5,7 @@ $SIDEBAR_DATA = '
 <h3>What is Git?</h3>
 <p>
  You can find more information about Git and download clients for most major
- platforms at <a href="http://git-scm.com/">the official Git site</a>.
+ platforms at <a href="https://git-scm.com/">the official Git site</a>.
 </p>
 
 <p>
