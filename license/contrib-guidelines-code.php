@@ -36,7 +36,7 @@ site_header("License Information", array("current" => "help"));
   For related projects, please refer to the Project websites:
 </p>
 <ul>
-  <li><a href="http://pecl.php.net/copyright.php">PECL</a></li>
+  <li><a href="https://pecl.php.net/copyright.php">PECL</a></li>
   <li><a href="https://pear.php.net/copyright.php">PEAR</a></li>
   <li><a href="http://gtk.php.net/copyright.php">GTK</a></li>
 </ul>

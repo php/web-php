@@ -89,7 +89,7 @@ site_header("A Tourist's Guide", array("current" => "help"));
 </p>
 
 <h2 id="pecl" class="content-header">
- <a href="http://pecl.php.net/">pecl.php.net</a>:
+ <a href="https://pecl.php.net/">pecl.php.net</a>:
  The PHP Extension Community Library
 </h2>
 

@@ -21,7 +21,7 @@
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml">
         <p>Due to unfortunate circumstances Windows binaries for PECL extensions will no longer be available on http://pecl4win.php.net.</p>
-        <p>Work is being done to incorporate Windows binaries for PECL extensions into <a href="http://pecl.php.net">pecl.php.net</a> and will hopefully be ready during the 1st quarter 2009</p>
+        <p>Work is being done to incorporate Windows binaries for PECL extensions into <a href="https://pecl.php.net">pecl.php.net</a> and will hopefully be ready during the 1st quarter 2009</p>
       </div>
     </content>
   </entry>
