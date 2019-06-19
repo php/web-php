@@ -165,7 +165,7 @@ if (preg_match("!^get/([^/]+)/from/([^/]+)(/mirror)?$!", $URI, $dlinfo)) {
 
 // php.net/42 --> likely a bug number
 if (is_numeric($URI)) {
-    mirror_redirect("http://bugs.php.net/bug.php?id=$URI");
+    mirror_redirect("https://bugs.php.net/bug.php?id=$URI");
 }
 
 // ============================================================================

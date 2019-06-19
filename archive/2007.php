@@ -66,7 +66,7 @@ the new build system that generates the PHP Manual. Written in PHP, PhD
 (<em>[PH]P based [D]ocBook renderer</em>) builds are now available for
 viewing at <a href="http://docs.php.net/">docs.php.net</a>. Everyone is
 encouraged to test and use this system so
-that <a href="http://bugs.php.net/">bugs</a> will be found and squashed.
+that <a href="https://bugs.php.net/">bugs</a> will be found and squashed.
       </p>
 
   <p>
@@ -639,7 +639,7 @@ contributors.
     <li>... and more to come!</li>
   </ul>
 
-  <p>Please <a href="/about.howtohelp">help us improve the documentation</a> by <a href="http://bugs.php.net/">submitting bug reports</a>, and adding notes to undocumented functions.</p>
+  <p>Please <a href="/about.howtohelp">help us improve the documentation</a> by <a href="https://bugs.php.net/">submitting bug reports</a>, and adding notes to undocumented functions.</p>
 </div>
 </div>
 

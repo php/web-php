@@ -18,7 +18,7 @@ site_header("Contact", array("current" => "community"));
 
 <p>
  Please report problems you find on PHP.net and mirror sites in
- <a href="http://bugs.php.net/">the bug system</a>. Categorize the bug
+ <a href="https://bugs.php.net/">the bug system</a>. Categorize the bug
  as "PHP.net Website Problem". This allows us to follow the progress of
  the problem until it is fixed.
 </p>

@@ -148,7 +148,7 @@ site_header("News Archive - 2008", array("cache" => true));
          necessary backwards compatibility breaks are noted in the documentation. Please
          report any findings to the <a href="mailto:php-qa@lists.php.net">QA mailinglist</a>
 
-         or the <a href="http://bugs.php.net">bug tracker</a>.</p>
+         or the <a href="https://bugs.php.net">bug tracker</a>.</p>
         <p>There have been a great number of other additions and improvements since the last alpha,
         but here is a short overview of the most important changes:</p>
         <ul>
@@ -449,7 +449,7 @@ site_header("News Archive - 2008", array("cache" => true));
          participate in identifying bugs, but also in ensuring that all new features or
          necessary backwards compatibility breaks are noted in the documentation. Please
          report any findings to the <a href="mailto:php-qa@lists.php.net">QA mailinglist</a>
-         or the <a href="http://bugs.php.net">bug tracker</a>.</p>
+         or the <a href="https://bugs.php.net">bug tracker</a>.</p>
         <p>There have been a great number of other additions and improvements, but here is a short overview of the most important changes:</p>
         <ul>
 

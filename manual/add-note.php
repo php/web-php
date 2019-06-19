@@ -275,7 +275,7 @@ else {
 <div class='columns'>
 <ul>
   <li><strong>Bug reports &amp; Missing documentation</strong>
-    Instead <a href="http://bugs.php.net/report.php?bug_type=Documentation+problem<?php echo isset($_POST['sect']) ? '&amp;manpage=' . clean($_POST['sect']) : ''; ?>">report a bug</a>
+    Instead <a href="https://bugs.php.net/report.php?bug_type=Documentation+problem<?php echo isset($_POST['sect']) ? '&amp;manpage=' . clean($_POST['sect']) : ''; ?>">report a bug</a>
   for this manual page to the bug database.
   </li>
   <li><strong>Support questions or request for help</strong> See the <a href="/support.php">support page</a> for available options. In other words, do not ask questions within the user notes.</li>
@@ -364,8 +364,8 @@ else {?>
    <td colspan="2">
     <b>
      <a href="/support.php">Click here to go to the support pages.</a><br>
-     <a href="http://bugs.php.net/report.php?bug_type=Documentation+problem&amp;manpage=<?php echo clean($_POST['sect']); ?>">Click here to submit a bug report.</a><br>
-     <a href="http://bugs.php.net/report.php?bug_type=Documentation+problem&amp;manpage=<?php echo clean($_POST['sect']); ?>">Click here to request a feature.</a><br>
+     <a href="https://bugs.php.net/report.php?bug_type=Documentation+problem&amp;manpage=<?php echo clean($_POST['sect']); ?>">Click here to submit a bug report.</a><br>
+     <a href="https://bugs.php.net/report.php?bug_type=Documentation+problem&amp;manpage=<?php echo clean($_POST['sect']); ?>">Click here to request a feature.</a><br>
      (Again, please note, if you ask a question, report a bug, or request a feature,
      your note <i>will be deleted</i>.)
     </b>
