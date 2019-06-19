@@ -63,7 +63,7 @@ les versions 4.2.0 et 4.2.1 de PHP
  une correction pour cette vuln&eacute;rabilit&eacute;. Tous les utilisateurs des versions de PHP
  affect&eacute;es sont encourag&eacute;s &agrave; passer &agrave; cette nouvelle version. L'URL de
  t&eacute;l&eacute;chargement est :
- <a href="http://www.php.net/downloads.php">http://www.php.net/downloads.php</a>
+ <a href="https://www.php.net/downloads.php">https://www.php.net/downloads.php</a>
  sous forme de sources (tarballs), ex&eacute;cutable Windows et source patches
  pour les versions 4.2.0 et 4.2.1.
 </p>

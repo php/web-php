@@ -31,17 +31,17 @@ and includes a large number of new features and bug fixes.
 <b>Changes that affect compatibility:</b>
 </p>
 <ul>
-  <li><a href="http://www.php.net/manual/security.globals.php">Register globals</a>, <a href="http://www.php.net/manual/security.magicquotes.php">magic quotes</a> and <a href="http://www.php.net/manual/features.safe-mode.php">safe mode</a> were removed</li>
+  <li><a href="https://www.php.net/manual/security.globals.php">Register globals</a>, <a href="https://www.php.net/manual/security.magicquotes.php">magic quotes</a> and <a href="https://www.php.net/manual/features.safe-mode.php">safe mode</a> were removed</li>
   <li>The <a href="http://php.net/manual/control-structures.break.php">break</a>/<a href="http://php.net/manual/control-structures.continue.php">continue</a> $var syntax was removed</li>
-  <li>The ini option <a href="http://www.php.net/manual/ini.core.php#ini.allow-call-time-pass-reference">allow_call_time_pass_reference</a> was removed</li>
-  <li>The PHP <a href="http://www.php.net/manual/ini.core.php#ini.default-charset">default_charset</a> is now "UTF-8" within the distributed php.ini files, but still defaults to ""</li>
+  <li>The ini option <a href="https://www.php.net/manual/ini.core.php#ini.allow-call-time-pass-reference">allow_call_time_pass_reference</a> was removed</li>
+  <li>The PHP <a href="https://www.php.net/manual/ini.core.php#ini.default-charset">default_charset</a> is now "UTF-8" within the distributed php.ini files, but still defaults to ""</li>
 </ul>
 
 <p>
 <b>Extensions moved to <a href="http://pecl.php.net">PECL</a>:</b>
 </p>
 <ul>
-  <li><a href="http://www.php.net/manual/ref.sqlite.php">ext/sqlite</a> (<a href="http://www.php.net/manual/book.sqlite3.php">ext/sqlite3</a> and <a href="http://www.php.net/manual/ref.pdo-sqlite.php">ext/pdo_sqlite</a> are not affected)</li>
+  <li><a href="https://www.php.net/manual/ref.sqlite.php">ext/sqlite</a> (<a href="https://www.php.net/manual/book.sqlite3.php">ext/sqlite3</a> and <a href="https://www.php.net/manual/ref.pdo-sqlite.php">ext/pdo_sqlite</a> are not affected)</li>
 </ul>
 
 <p>

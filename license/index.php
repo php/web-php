@@ -28,7 +28,7 @@ site_header("License Information", array("current" => "help"));
 <ul>
  <li>
   PHP 4, PHP 5 and PHP 7 are distributed under the
-  <a href="http://www.php.net/license/3_01.txt">PHP License v3.01</a>, copyright (c) the <a href="/credits.php">PHP Group</a>.
+  <a href="https://www.php.net/license/3_01.txt">PHP License v3.01</a>, copyright (c) the <a href="/credits.php">PHP Group</a>.
   <ul>
    <li>
     This is an <a href="http://www.opensource.org/docs/osd">Open Source license</a>,
@@ -99,7 +99,7 @@ OK?
 We cannot really stop you from using PHP in the name of
 your project unless you include any code from the PHP distribution, in
 which case you would be violating the license.
-See Clause 4 in the <a href="http://www.php.net/license/3_01.txt">
+See Clause 4 in the <a href="https://www.php.net/license/3_01.txt">
 PHP License v3.01</a>.
 <br>But we would really prefer if people would come up with their own names
 independent of the  PHP name.

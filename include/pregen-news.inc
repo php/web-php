@@ -350,9 +350,9 @@ $NEWS_ENTRIES = array (
      All PHP 5.6 users are encouraged to upgrade to this version.
      </p>
 
-     <p>For source downloads of PHP 5.6.14 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+     <p>For source downloads of PHP 5.6.14 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
      Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-     The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.6.14">ChangeLog</a>.
+     The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-5.php#5.6.14">ChangeLog</a>.
      </p>
     </div>
   ',
@@ -360,9 +360,9 @@ $NEWS_ENTRIES = array (
      5.6.14. This is a security release. Two security bugs were fixed in this release.
 
      All PHP 5.6 users are encouraged to upgrade to this version.
-     </p><p>For source downloads of PHP 5.6.14 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+     </p><p>For source downloads of PHP 5.6.14 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
      Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-     The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.6.14">ChangeLog</a>.
+     The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-5.php#5.6.14">ChangeLog</a>.
      </p></div>',
   ),
   5 =>
@@ -406,9 +406,9 @@ $NEWS_ENTRIES = array (
      All PHP 5.5 users are encouraged to upgrade to this version.
      </p>
 
-     <p>For source downloads of PHP 5.5.30 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+     <p>For source downloads of PHP 5.5.30 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
      Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-     The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.5.30">ChangeLog</a>.
+     The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-5.php#5.5.30">ChangeLog</a>.
      </p>
     </div>
   ',
@@ -416,9 +416,9 @@ $NEWS_ENTRIES = array (
      5.5.30. This is a security release. Two security bugs were fixed in this release.
 
      All PHP 5.5 users are encouraged to upgrade to this version.
-     </p><p>For source downloads of PHP 5.5.30 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+     </p><p>For source downloads of PHP 5.5.30 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
      Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-     The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.5.30">ChangeLog</a>.
+     The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-5.php#5.5.30">ChangeLog</a>.
      </p></div>',
   ),
   6 =>
@@ -829,9 +829,9 @@ $NEWS_ENTRIES = array (
      All PHP 5.4 users are encouraged to upgrade to this version.
      </p>
 
-     <p>For source downloads of PHP 5.4.45 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+     <p>For source downloads of PHP 5.4.45 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
      Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-     The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.4.45">ChangeLog</a>.
+     The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-5.php#5.4.45">ChangeLog</a>.
      </p>
 
      <p>Please note that according to the <a href="http://php.net/supported-versions.php">PHP version support timelines</a>,
@@ -844,9 +844,9 @@ $NEWS_ENTRIES = array (
     'intro' => '<div><p>The PHP development team announces the immediate availability of PHP
      5.4.45. Ten security-related issues were fixed in this release.
      All PHP 5.4 users are encouraged to upgrade to this version.
-     </p><p>For source downloads of PHP 5.4.45 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+     </p><p>For source downloads of PHP 5.4.45 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
      Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-     The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.4.45">ChangeLog</a>.
+     The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-5.php#5.4.45">ChangeLog</a>.
      </p><p class=\'fullArticleLink\'><a href=\'http://php.net/archive/2015.php#id2015-09-04-4\' class>&hellip; read full article</a></p></div>',
   ),
   12 =>
@@ -890,9 +890,9 @@ $NEWS_ENTRIES = array (
      All PHP 5.5 users are encouraged to upgrade to this version.
      </p>
 
-     <p>For source downloads of PHP 5.5.29 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+     <p>For source downloads of PHP 5.5.29 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
      Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-     The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.5.29">ChangeLog</a>.
+     The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-5.php#5.5.29">ChangeLog</a>.
      </p>
 
     </div>
@@ -901,9 +901,9 @@ $NEWS_ENTRIES = array (
      5.5.29. This is a security release. Many security-related issues were fixed in this release.
 
      All PHP 5.5 users are encouraged to upgrade to this version.
-     </p><p>For source downloads of PHP 5.5.29 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+     </p><p>For source downloads of PHP 5.5.29 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
      Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-     The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.5.29">ChangeLog</a>.
+     The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-5.php#5.5.29">ChangeLog</a>.
      </p></div>',
   ),
   13 =>
@@ -948,9 +948,9 @@ $NEWS_ENTRIES = array (
      All PHP 5.6 users are encouraged to upgrade to this version.
      </p>
 
-     <p>For source downloads of PHP 5.6.13 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+     <p>For source downloads of PHP 5.6.13 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
      Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-     The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.6.13">ChangeLog</a>.
+     The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-5.php#5.6.13">ChangeLog</a>.
      </p>
 
     </div>
@@ -959,9 +959,9 @@ $NEWS_ENTRIES = array (
      5.6.13. 11 security-related issues were fixed in this release.
 
      All PHP 5.6 users are encouraged to upgrade to this version.
-     </p><p>For source downloads of PHP 5.6.13 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+     </p><p>For source downloads of PHP 5.6.13 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
      Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-     The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.6.13">ChangeLog</a>.
+     The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-5.php#5.6.13">ChangeLog</a>.
      </p></div>',
   ),
   14 =>
@@ -1271,9 +1271,9 @@ $NEWS_ENTRIES = array (
           All PHP 5.6 users are encouraged to upgrade to this version.
           </p>
 
-          <p>For source downloads of PHP 5.6.12 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+          <p>For source downloads of PHP 5.6.12 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
           Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-          The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.6.12">ChangeLog</a>.
+          The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-5.php#5.6.12">ChangeLog</a>.
           </p>
     </div>
   ',
@@ -1281,9 +1281,9 @@ $NEWS_ENTRIES = array (
           5.6.12. 12 security-related issues were fixed in this release.
 
           All PHP 5.6 users are encouraged to upgrade to this version.
-          </p><p>For source downloads of PHP 5.6.12 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+          </p><p>For source downloads of PHP 5.6.12 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
           Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-          The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.6.12">ChangeLog</a>.
+          The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-5.php#5.6.12">ChangeLog</a>.
           </p></div>',
   ),
   18 =>
@@ -1334,9 +1334,9 @@ $NEWS_ENTRIES = array (
           PHP 5.5 users that need further bugfixes are encouraged to upgrade to PHP 5.6.
           </p>
 
-          <p>For source downloads of PHP 5.5.28 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+          <p>For source downloads of PHP 5.5.28 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
           Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-          The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.5.28">ChangeLog</a>.
+          The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-5.php#5.5.28">ChangeLog</a>.
           </p>
     </div>
   ',
@@ -1391,9 +1391,9 @@ $NEWS_ENTRIES = array (
      All PHP 5.4 users are encouraged to upgrade to this version.
      </p>
 
-     <p>For source downloads of PHP 5.4.44 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+     <p>For source downloads of PHP 5.4.44 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
      Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-     The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.4.44">ChangeLog</a>.
+     The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-5.php#5.4.44">ChangeLog</a>.
      </p>
 
      <p>Please note that PHP 5.4 branch is nearing the end of its <a href="http://php.net/supported-versions.php">support timeframe</a>. Either September or October release, depending on discovered issues, will be the last official release of PHP 5.4.
@@ -1404,9 +1404,9 @@ $NEWS_ENTRIES = array (
     'intro' => '<div><p>The PHP development team announces the immediate availability of PHP
      5.4.44. 11 security-related issues were fixed in this release.
      All PHP 5.4 users are encouraged to upgrade to this version.
-     </p><p>For source downloads of PHP 5.4.44 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+     </p><p>For source downloads of PHP 5.4.44 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
      Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-     The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.4.44">ChangeLog</a>.
+     The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-5.php#5.4.44">ChangeLog</a>.
      </p><p class=\'fullArticleLink\'><a href=\'http://php.net/archive/2015.php#id2015-08-06-2\' class>&hellip; read full article</a></p></div>',
   ),
   20 =>
@@ -1732,9 +1732,9 @@ $NEWS_ENTRIES = array (
      All PHP 5.6 users are encouraged to upgrade to this version.
      </p>
 
-     <p>For source downloads of PHP 5.6.11 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+     <p>For source downloads of PHP 5.6.11 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
      Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-     The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.6.11">ChangeLog</a>.
+     The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-5.php#5.6.11">ChangeLog</a>.
      </p>
 
     </div>
@@ -1742,9 +1742,9 @@ $NEWS_ENTRIES = array (
     'intro' => '<div><p>The PHP development team announces the immediate availability of PHP
      5.6.11. Five security-related issues in PHP were fixed in this release, including CVE-2015-3152.
      All PHP 5.6 users are encouraged to upgrade to this version.
-     </p><p>For source downloads of PHP 5.6.11 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+     </p><p>For source downloads of PHP 5.6.11 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
      Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-     The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.6.11">ChangeLog</a>.
+     The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-5.php#5.6.11">ChangeLog</a>.
      </p></div>',
   ),
   24 =>
@@ -1795,9 +1795,9 @@ $NEWS_ENTRIES = array (
      PHP 5.5 users that need further bugfixes are encouraged to upgrade to PHP 5.6.
      </p>
 
-     <p>For source downloads of PHP 5.5.27 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+     <p>For source downloads of PHP 5.5.27 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
      Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-     The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.5.27">ChangeLog</a>.
+     The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-5.php#5.5.27">ChangeLog</a>.
      </p>
     </div>
   ',
@@ -1852,9 +1852,9 @@ $NEWS_ENTRIES = array (
      All PHP 5.4 users are encouraged to upgrade to this version.
      </p>
 
-     <p>For source downloads of PHP 5.4.43 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+     <p>For source downloads of PHP 5.4.43 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
      Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-     The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.4.43">ChangeLog</a>.
+     The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-5.php#5.4.43">ChangeLog</a>.
      </p>
 
      <p>Please note that PHP 5.4 branch is nearing the end of its <a href="http://php.net/supported-versions.php">support timeframe</a>.
@@ -1866,9 +1866,9 @@ $NEWS_ENTRIES = array (
     'intro' => '<div><p>The PHP development team announces the immediate availability of PHP
      5.4.43. Five security-related issues in PHP were fixed in this release, including CVE-2015-3152.
      All PHP 5.4 users are encouraged to upgrade to this version.
-     </p><p>For source downloads of PHP 5.4.43 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+     </p><p>For source downloads of PHP 5.4.43 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
      Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-     The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.4.43">ChangeLog</a>.
+     The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-5.php#5.4.43">ChangeLog</a>.
      </p><p class=\'fullArticleLink\'><a href=\'http://php.net/archive/2015.php#id2015-07-09-1\' class>&hellip; read full article</a></p></div>',
   ),
   26 =>
@@ -2308,9 +2308,9 @@ In 1995, Rasmus Lerdorf started creating PHP. 20 years later, 80% of websites in
      All PHP 5.4 users are encouraged to upgrade to this version.
      </p>
 
-     <p>For source downloads of PHP 5.4.42 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+     <p>For source downloads of PHP 5.4.42 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
      Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-     The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.4.42">ChangeLog</a>.
+     The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-5.php#5.4.42">ChangeLog</a>.
      </p>
     </div>
   ',
@@ -2319,9 +2319,9 @@ In 1995, Rasmus Lerdorf started creating PHP. 20 years later, 80% of websites in
      as well as several security issues in bundled sqlite library (CVE-2015-3414, CVE-2015-3415, CVE-2015-3416).
 
      All PHP 5.4 users are encouraged to upgrade to this version.
-     </p><p>For source downloads of PHP 5.4.42 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+     </p><p>For source downloads of PHP 5.4.42 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
      Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-     The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.4.42">ChangeLog</a>.
+     The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-5.php#5.4.42">ChangeLog</a>.
      </p></div>',
   ),
   34 =>
@@ -2455,9 +2455,9 @@ In 1995, Rasmus Lerdorf started creating PHP. 20 years later, 80% of websites in
      All PHP 5.6 users are encouraged to upgrade to this version.
      </p>
 
-     <p>For source downloads of PHP 5.6.10 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+     <p>For source downloads of PHP 5.6.10 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
      Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-     The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.6.10">ChangeLog</a>.
+     The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-5.php#5.6.10">ChangeLog</a>.
      </p>
     </div>
   ',
@@ -2466,9 +2466,9 @@ In 1995, Rasmus Lerdorf started creating PHP. 20 years later, 80% of websites in
      bundled libraries (CVE-2015-3414, CVE-2015-3415, CVE-2015-3416, CVE-2015-2325 and CVE-2015-2326).
 
      All PHP 5.6 users are encouraged to upgrade to this version.
-     </p><p>For source downloads of PHP 5.6.10 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+     </p><p>For source downloads of PHP 5.6.10 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
      Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-     The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.6.10">ChangeLog</a>.
+     The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-5.php#5.6.10">ChangeLog</a>.
      </p></div>',
   ),
   36 =>
@@ -2513,9 +2513,9 @@ In 1995, Rasmus Lerdorf started creating PHP. 20 years later, 80% of websites in
      All PHP 5.5 users are encouraged to upgrade to this version.
      </p>
 
-     <p>For source downloads of PHP 5.5.26 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+     <p>For source downloads of PHP 5.5.26 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
      Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-     The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.5.26">ChangeLog</a>.
+     The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-5.php#5.5.26">ChangeLog</a>.
      </p>
     </div>
   ',
@@ -2524,9 +2524,9 @@ In 1995, Rasmus Lerdorf started creating PHP. 20 years later, 80% of websites in
      bundled libraries (CVE-2015-3414, CVE-2015-3415, CVE-2015-3416, CVE-2015-2325 and CVE-2015-2326).
 
      All PHP 5.5 users are encouraged to upgrade to this version.
-     </p><p>For source downloads of PHP 5.5.26 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+     </p><p>For source downloads of PHP 5.5.26 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
      Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-     The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.5.26">ChangeLog</a>.
+     The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-5.php#5.5.26">ChangeLog</a>.
      </p></div>',
   ),
   37 =>
@@ -2733,7 +2733,7 @@ In 1995, Rasmus Lerdorf started creating PHP. 20 years later, 80% of websites in
   41 =>
   array (
     'title' => 'DevConf 2015',
-    'id' => 'http://www.php.net/archive/2015.php#id2015-05-25-1',
+    'id' => 'https://www.php.net/archive/2015.php#id2015-05-25-1',
     'published' => '2015-05-25T16:57:52+00:00',
     'updated' => '2015-05-25T16:57:52+00:00',
     'finalTeaserDate' => '2015-06-20',
@@ -2841,9 +2841,9 @@ In 1995, Rasmus Lerdorf started creating PHP. 20 years later, 80% of websites in
      All PHP 5.6 users are encouraged to upgrade to this version.
      </p>
 
-     <p>For source downloads of PHP 5.6.9 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+     <p>For source downloads of PHP 5.6.9 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
      Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-     The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.6.9">ChangeLog</a>.
+     The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-5.php#5.6.9">ChangeLog</a>.
    </p>
     </div>
   ',
@@ -2851,9 +2851,9 @@ In 1995, Rasmus Lerdorf started creating PHP. 20 years later, 80% of websites in
      5.6.9. Several bugs have been fixed.
 
      All PHP 5.6 users are encouraged to upgrade to this version.
-     </p><p>For source downloads of PHP 5.6.9 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+     </p><p>For source downloads of PHP 5.6.9 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
      Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-     The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.6.9">ChangeLog</a>.
+     The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-5.php#5.6.9">ChangeLog</a>.
    </p></div>',
   ),
   43 =>
@@ -2897,9 +2897,9 @@ In 1995, Rasmus Lerdorf started creating PHP. 20 years later, 80% of websites in
      All PHP 5.4 users are encouraged to upgrade to this version.
      </p>
 
-     <p>For source downloads of PHP 5.4.41 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+     <p>For source downloads of PHP 5.4.41 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
      Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-     The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.4.41">ChangeLog</a>.
+     The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-5.php#5.4.41">ChangeLog</a>.
      </p>
     </div>
   ',
@@ -2907,9 +2907,9 @@ In 1995, Rasmus Lerdorf started creating PHP. 20 years later, 80% of websites in
      5.4.41. Seven security-related issues were fixed in this version.
 
      All PHP 5.4 users are encouraged to upgrade to this version.
-     </p><p>For source downloads of PHP 5.4.41 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+     </p><p>For source downloads of PHP 5.4.41 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
      Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-     The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.4.41">ChangeLog</a>.
+     The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-5.php#5.4.41">ChangeLog</a>.
      </p></div>',
   ),
   44 =>
@@ -2953,9 +2953,9 @@ In 1995, Rasmus Lerdorf started creating PHP. 20 years later, 80% of websites in
      All PHP 5.5 users are encouraged to upgrade to this version.
      </p>
 
-     <p>For source downloads of PHP 5.5.25 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+     <p>For source downloads of PHP 5.5.25 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
      Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-     The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.5.25">ChangeLog</a>.
+     The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-5.php#5.5.25">ChangeLog</a>.
      </p>
     </div>
   ',
@@ -2963,9 +2963,9 @@ In 1995, Rasmus Lerdorf started creating PHP. 20 years later, 80% of websites in
      5.5.25. Several bugs have been fixed.
 
      All PHP 5.5 users are encouraged to upgrade to this version.
-     </p><p>For source downloads of PHP 5.5.25 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+     </p><p>For source downloads of PHP 5.5.25 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
      Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-     The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.5.25">ChangeLog</a>.
+     The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-5.php#5.5.25">ChangeLog</a>.
      </p></div>',
   ),
   45 =>
@@ -3074,9 +3074,9 @@ In 1995, Rasmus Lerdorf started creating PHP. 20 years later, 80% of websites in
      All PHP 5.4 users are encouraged to upgrade to this version.
      </p>
 
-     <p>For source downloads of PHP 5.4.40 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+     <p>For source downloads of PHP 5.4.40 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
      Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-     The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.4.40">ChangeLog</a>.
+     The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-5.php#5.4.40">ChangeLog</a>.
      </p>
     </div>
   ',
@@ -3085,9 +3085,9 @@ In 1995, Rasmus Lerdorf started creating PHP. 20 years later, 80% of websites in
      CVE-2014-9709, CVE-2015-2301, CVE-2015-2783, CVE-2015-1352.
 
      All PHP 5.4 users are encouraged to upgrade to this version.
-     </p><p>For source downloads of PHP 5.4.40 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+     </p><p>For source downloads of PHP 5.4.40 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
      Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-     The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.4.40">ChangeLog</a>.
+     The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-5.php#5.4.40">ChangeLog</a>.
      </p></div>',
   ),
   47 =>
@@ -3131,9 +3131,9 @@ In 1995, Rasmus Lerdorf started creating PHP. 20 years later, 80% of websites in
      All PHP 5.6 users are encouraged to upgrade to this version.
      </p>
 
-     <p>For source downloads of PHP 5.6.8 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+     <p>For source downloads of PHP 5.6.8 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
      Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-     The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.6.8">ChangeLog</a>.
+     The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-5.php#5.6.8">ChangeLog</a>.
      </p>
     </div>
   ',
@@ -3141,9 +3141,9 @@ In 1995, Rasmus Lerdorf started creating PHP. 20 years later, 80% of websites in
      5.6.8. Several bugs have been fixed some of them beeing security related, like CVE-2015-1351 and CVE-2015-1352.
 
      All PHP 5.6 users are encouraged to upgrade to this version.
-     </p><p>For source downloads of PHP 5.6.8 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+     </p><p>For source downloads of PHP 5.6.8 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
      Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-     The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.6.8">ChangeLog</a>.
+     The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-5.php#5.6.8">ChangeLog</a>.
      </p></div>',
   ),
   48 =>
@@ -3187,9 +3187,9 @@ In 1995, Rasmus Lerdorf started creating PHP. 20 years later, 80% of websites in
      All PHP 5.5 users are encouraged to upgrade to this version.
      </p>
 
-     <p>For source downloads of PHP 5.5.24 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+     <p>For source downloads of PHP 5.5.24 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
      Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-     The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.5.24">ChangeLog</a>.
+     The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-5.php#5.5.24">ChangeLog</a>.
      </p>
     </div>
   ',
@@ -3197,9 +3197,9 @@ In 1995, Rasmus Lerdorf started creating PHP. 20 years later, 80% of websites in
      5.5.24. Several bugs have been fixed some of them beeing security related, like CVE-2015-1351 and CVE-2015-1352.
 
      All PHP 5.5 users are encouraged to upgrade to this version.
-     </p><p>For source downloads of PHP 5.5.24 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+     </p><p>For source downloads of PHP 5.5.24 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
      Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-     The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.5.24">ChangeLog</a>.
+     The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-5.php#5.5.24">ChangeLog</a>.
      </p></div>',
   ),
   49 =>
@@ -3244,9 +3244,9 @@ In 1995, Rasmus Lerdorf started creating PHP. 20 years later, 80% of websites in
      All PHP 5.6 users are encouraged to upgrade to this version.
      </p>
 
-     <p>For source downloads of PHP 5.6.7 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+     <p>For source downloads of PHP 5.6.7 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
      Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-     The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.6.7">ChangeLog</a>.
+     The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-5.php#5.6.7">ChangeLog</a>.
      </p>
     </div>
   ',
@@ -3254,9 +3254,9 @@ In 1995, Rasmus Lerdorf started creating PHP. 20 years later, 80% of websites in
      5.6.7. Several bugs have been fixed as well as CVE-2015-0231, CVE-2015-2305 and CVE-2015-2331.
 
      All PHP 5.6 users are encouraged to upgrade to this version.
-     </p><p>For source downloads of PHP 5.6.7 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+     </p><p>For source downloads of PHP 5.6.7 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
      Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-     The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.6.7">ChangeLog</a>.
+     The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-5.php#5.6.7">ChangeLog</a>.
      </p></div>',
   ),
   50 =>
@@ -3300,9 +3300,9 @@ In 1995, Rasmus Lerdorf started creating PHP. 20 years later, 80% of websites in
      All PHP 5.5 users are encouraged to upgrade to this version.
      </p>
 
-     <p>For source downloads of PHP 5.5.23 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+     <p>For source downloads of PHP 5.5.23 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
      Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-     The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.5.23">ChangeLog</a>.
+     The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-5.php#5.5.23">ChangeLog</a>.
      </p>
     </div>
   ',
@@ -3310,9 +3310,9 @@ In 1995, Rasmus Lerdorf started creating PHP. 20 years later, 80% of websites in
      5.5.23. Several bugs have been fixed as well as CVE-2015-0231, CVE-2015-2305 and CVE-2015-2331.
 
      All PHP 5.5 users are encouraged to upgrade to this version.
-     </p><p>For source downloads of PHP 5.5.23 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+     </p><p>For source downloads of PHP 5.5.23 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
      Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-     The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.5.23">ChangeLog</a>.
+     The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-5.php#5.5.23">ChangeLog</a>.
      </p></div>',
   ),
   51 =>
@@ -3356,9 +3356,9 @@ In 1995, Rasmus Lerdorf started creating PHP. 20 years later, 80% of websites in
      All PHP 5.4 users are encouraged to upgrade to this version.
      </p>
 
-     <p>For source downloads of PHP 5.4.39 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+     <p>For source downloads of PHP 5.4.39 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
      Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-     The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.4.39">ChangeLog</a>.
+     The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-5.php#5.4.39">ChangeLog</a>.
      </p>
     </div>
   ',
@@ -3366,9 +3366,9 @@ In 1995, Rasmus Lerdorf started creating PHP. 20 years later, 80% of websites in
      5.4.39. Six security-related bugs were fixed in this release, including CVE-2015-0231, CVE-2015-2305 and CVE-2015-2331.
 
      All PHP 5.4 users are encouraged to upgrade to this version.
-     </p><p>For source downloads of PHP 5.4.39 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+     </p><p>For source downloads of PHP 5.4.39 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
      Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-     The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.4.39">ChangeLog</a>.
+     The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-5.php#5.4.39">ChangeLog</a>.
      </p></div>',
   ),
   52 =>
@@ -3649,9 +3649,9 @@ Presentation length is 45 minutes which includes question time. 3 hours workshop
      All PHP 5.6 users are encouraged to upgrade to this version.
      </p>
 
-     <p>For source downloads of PHP 5.6.6 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+     <p>For source downloads of PHP 5.6.6 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
      Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-     The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.6.6">ChangeLog</a>.
+     The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-5.php#5.6.6">ChangeLog</a>.
      </p>
     </div>
   ',
@@ -3659,9 +3659,9 @@ Presentation length is 45 minutes which includes question time. 3 hours workshop
      5.6.6. This release fixes several bugs and addresses CVE-2015-0235 and CVE-2015-0273.
 
      All PHP 5.6 users are encouraged to upgrade to this version.
-     </p><p>For source downloads of PHP 5.6.6 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+     </p><p>For source downloads of PHP 5.6.6 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
      Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-     The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.6.6">ChangeLog</a>.
+     The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-5.php#5.6.6">ChangeLog</a>.
      </p></div>',
   ),
   58 =>
@@ -3705,9 +3705,9 @@ Presentation length is 45 minutes which includes question time. 3 hours workshop
      All PHP 5.5 users are encouraged to upgrade to this version.
      </p>
 
-     <p>For source downloads of PHP 5.5.22 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+     <p>For source downloads of PHP 5.5.22 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
      Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-     The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.5.22">ChangeLog</a>.
+     The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-5.php#5.5.22">ChangeLog</a>.
      </p>
     </div>
   ',
@@ -3715,9 +3715,9 @@ Presentation length is 45 minutes which includes question time. 3 hours workshop
      5.5.22. This release fixes several bugs and addresses CVE-2015-0235 and CVE-2015-0273.
 
      All PHP 5.5 users are encouraged to upgrade to this version.
-     </p><p>For source downloads of PHP 5.5.22 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+     </p><p>For source downloads of PHP 5.5.22 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
      Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-     The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.5.22">ChangeLog</a>.
+     The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-5.php#5.5.22">ChangeLog</a>.
      </p></div>',
   ),
   59 =>
@@ -3761,9 +3761,9 @@ Presentation length is 45 minutes which includes question time. 3 hours workshop
      All PHP 5.4 users are encouraged to upgrade to this version.
      </p>
 
-     <p>For source downloads of PHP 5.4.38 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+     <p>For source downloads of PHP 5.4.38 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
      Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-     The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.4.38">ChangeLog</a>.
+     The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-5.php#5.4.38">ChangeLog</a>.
      </p>
     </div>
   ',
@@ -3771,9 +3771,9 @@ Presentation length is 45 minutes which includes question time. 3 hours workshop
      5.4.38. Seven security-related bugs were fixed in this release, including CVE-2015-0273 and mitigation for CVE-2015-0235.
 
      All PHP 5.4 users are encouraged to upgrade to this version.
-     </p><p>For source downloads of PHP 5.4.38 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+     </p><p>For source downloads of PHP 5.4.38 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
      Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-     The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.4.38">ChangeLog</a>.
+     The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-5.php#5.4.38">ChangeLog</a>.
      </p></div>',
   ),
   60 =>
@@ -3819,9 +3819,9 @@ Presentation length is 45 minutes which includes question time. 3 hours workshop
      All PHP 5.4 users are encouraged to upgrade to this version.
      </p>
 
-     <p>For source downloads of PHP 5.4.37 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+     <p>For source downloads of PHP 5.4.37 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
      Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-     The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.4.37">ChangeLog</a>.
+     The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-5.php#5.4.37">ChangeLog</a>.
      </p>
     </div>
   ',
@@ -3830,9 +3830,9 @@ Presentation length is 45 minutes which includes question time. 3 hours workshop
      and CVE-2015-0232.
 
      All PHP 5.4 users are encouraged to upgrade to this version.
-     </p><p>For source downloads of PHP 5.4.37 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+     </p><p>For source downloads of PHP 5.4.37 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
      Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-     The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.4.37">ChangeLog</a>.
+     The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-5.php#5.4.37">ChangeLog</a>.
      </p></div>',
   ),
   61 =>
@@ -3876,9 +3876,9 @@ Presentation length is 45 minutes which includes question time. 3 hours workshop
      All PHP 5.6 users are encouraged to upgrade to this version.
      </p>
 
-     <p>For source downloads of PHP 5.6.5 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+     <p>For source downloads of PHP 5.6.5 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
      Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-     The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.6.5">ChangeLog</a>.
+     The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-5.php#5.6.5">ChangeLog</a>.
      </p>
     </div>
   ',
@@ -3886,9 +3886,9 @@ Presentation length is 45 minutes which includes question time. 3 hours workshop
      5.6.5. This release fixes several bugs as well as CVE-2015-0231, CVE-2014-9427 and CVE-2015-0232.
 
      All PHP 5.6 users are encouraged to upgrade to this version.
-     </p><p>For source downloads of PHP 5.6.5 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+     </p><p>For source downloads of PHP 5.6.5 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
      Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-     The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.6.5">ChangeLog</a>.
+     The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-5.php#5.6.5">ChangeLog</a>.
      </p></div>',
   ),
   62 =>
@@ -3932,9 +3932,9 @@ Presentation length is 45 minutes which includes question time. 3 hours workshop
      All PHP 5.5 users are encouraged to upgrade to this version.
      </p>
 
-     <p>For source downloads of PHP 5.5.21 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+     <p>For source downloads of PHP 5.5.21 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
      Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-     The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.5.21">ChangeLog</a>.
+     The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-5.php#5.5.21">ChangeLog</a>.
      </p>
     </div>
   ',
@@ -3942,9 +3942,9 @@ Presentation length is 45 minutes which includes question time. 3 hours workshop
      5.5.21. This release fixes several bugs as well as CVE-2015-0231, CVE-2014-9427 and CVE-2015-0232.
 
      All PHP 5.5 users are encouraged to upgrade to this version.
-     </p><p>For source downloads of PHP 5.5.21 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+     </p><p>For source downloads of PHP 5.5.21 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
      Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-     The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.5.21">ChangeLog</a>.
+     The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-5.php#5.5.21">ChangeLog</a>.
      </p></div>',
   ),
   63 =>

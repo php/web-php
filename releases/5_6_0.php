@@ -40,9 +40,9 @@ This new version comes with new features, some backward incompatible changes and
  For users upgrading from PHP 5.5, <a href="http://php.net/migration56">a full migration guide</a> is available, detailing the changes between 5.5 and 5.6.0.
 </p>
 
-<p>For source downloads of PHP 5.6.0, please visit our <a href="http://www.php.net/downloads.php">downloads page</a>.
+<p>For source downloads of PHP 5.6.0, please visit our <a href="https://www.php.net/downloads.php">downloads page</a>.
 Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-The full list of changes is available in the <a href="http://www.php.net/ChangeLog-5.php#5.6.0">ChangeLog</a>.
+The full list of changes is available in the <a href="https://www.php.net/ChangeLog-5.php#5.6.0">ChangeLog</a>.
 </p>
 
 <?php site_footer(); ?>

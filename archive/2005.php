@@ -261,7 +261,7 @@ For changes in PHP 4.4.0 since PHP 4.3.11, please consult the
 </p>
 <hr>
 
-<?php news_image("http://www.php.net", "php10thbd.jpg", "PHP 10th anniversary cake"); ?>
+<?php news_image("https://www.php.net", "php10thbd.jpg", "PHP 10th anniversary cake"); ?>
 <h1>10 years since PHP 1.0 was released!</h1>
 <p>
  <span class="newsdate">[08-Jun-2005]</span>
@@ -521,7 +521,7 @@ For changes in PHP 4.4.0 since PHP 4.3.11, please consult the
 
 <hr>
 
-<?php news_image("http://www.php.net/", "php-logo.gif", "Programming Language of 2004"); ?>
+<?php news_image("https://www.php.net/", "php-logo.gif", "Programming Language of 2004"); ?>
 <h1>PHP awarded Programming Language of 2004</h1>
 
 <p>
