@@ -463,7 +463,7 @@ $external_redirects = array(
     "phpdochowto" => "http://doc.php.net/tutorial/",
     "rev"         => "http://doc.php.net/revcheck.php?p=graph&lang=$LANG",
     "release/5_3_0.php" => "/releases/5_3_0.php", // PHP 5.3.0 release announcement had a typo
-    "ideas.php"   => "http://wiki.php.net/ideas", // BC
+    "ideas.php"   => "https://wiki.php.net/ideas", // BC
     "releases.atom" => "/releases/feed.php", // BC, No need to pre-generate it
     "spec"        => "https://github.com/php/php-langspec",
     "sunglasses"  => "https://www.youtube.com/watch?v=dQw4w9WgXcQ", // Temporary easter egg for bug#66144
