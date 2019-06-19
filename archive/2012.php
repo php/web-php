@@ -841,7 +841,7 @@ site_header("News Archive - 2012", array("cache" => true));
       <p>
         A complete list of changes since the last release candidate can be
         found in the
-        <a href="http://git.php.net/?p=php-src.git;a=blob;f=NEWS;h=d647f8de7cf080b599a73e092d683273fbf744e8;hb=fa1437b144683eae4d253473c35e375f7b743811">NEWS</a>
+        <a href="https://git.php.net/?p=php-src.git;a=blob;f=NEWS;h=d647f8de7cf080b599a73e092d683273fbf744e8;hb=fa1437b144683eae4d253473c35e375f7b743811">NEWS</a>
         file.
       </p>
       <p>
@@ -870,7 +870,7 @@ site_header("News Archive - 2012", array("cache" => true));
      You can clone or fork the source from our
      <a href="https://github.com/php/php-src">GitHub mirror</a>, and we also
      now support pull requests made via GitHub. The source is also available
-     via <a href="http://git.php.net/">git.php.net</a>, and full instructions
+     via <a href="https://git.php.net/">git.php.net</a>, and full instructions
      on cloning the php-src tree can be found at
      <a href="https://www.php.net/git">php.net/git</a>.
     </p>
