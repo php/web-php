@@ -20,7 +20,7 @@ operation of this website, such as
 
 ## Setting up an official mirror
 
-To install a full official mirror please see [the mirroring guidelines](http://php.net/mirroring).
+To install a full official mirror please see [the mirroring guidelines](https://www.php.net/mirroring).
 
 ## Code requirements
 

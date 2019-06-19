@@ -493,7 +493,7 @@ site_header("News Archive - 2011", array("cache" => true));
         visit our <a href="/downloads.php">downloads page</a>, Windows binaries
     can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.</p>
     <p>
-         <strong>For more details on the crypt() blowfish security issue in pre 5.3.6 see <a href="http://php.net/security/crypt_blowfish">the crypt blowfish page</a></strong>
+         <strong>For more details on the crypt() blowfish security issue in pre 5.3.6 see <a href="https://www.php.net/security/crypt_blowfish">the crypt blowfish page</a></strong>
     </p>
     </div>
 
@@ -556,7 +556,7 @@ site_header("News Archive - 2011", array("cache" => true));
 
      <p><b>Security Enhancements and Fixes in PHP 5.3.7:</b></p>
      <ul>
-         <li>Updated crypt_blowfish to 1.2. (CVE-2011-2483) <a href="http://php.net/security/crypt_blowfish">(more info)</a></li>
+         <li>Updated crypt_blowfish to 1.2. (CVE-2011-2483) <a href="https://www.php.net/security/crypt_blowfish">(more info)</a></li>
          <li>Fixed crash in error_log(). Reported by Mateusz Kocielski</li>
          <li>Fixed buffer overflow on overlog salt in crypt().</li>
          <li>Fixed bug #54939 (File path injection vulnerability in RFC1867 File upload filename). Reported by Krzysztof Kotowicz. (CVE-2011-2202)</li>

@@ -149,10 +149,10 @@ function a($href) {
 
 <h2>PHP Developer shortcuts</h2>
 <ul>
- <li>Changelog information: <a href="http://php.net/changelog">http://php.net/changelog</a>
+ <li>Changelog information: <a href="https://www.php.net/changelog">https://www.php.net/changelog</a>
   (e.g. latest PHP changelog. php5news = latest PHP 5 NEWS, phptrunknews = latest PHP trunk NEWS)
  </li>
- <li>Bugs: <a href="http://php.net/42">http://php.net/42</a>
+ <li>Bugs: <a href="https://www.php.net/42">https://www.php.net/42</a>
   (any numeric value redirects to said bug # at bugs.php.net)
  </li>
 </ul>

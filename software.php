@@ -13,7 +13,7 @@ site_header("PHP Software", array("current" => "help"));
 
 <p>
  <?php echo make_image("logos/php-icon-white.gif", $alt = "php.net", "left") ?>&nbsp;
- <a href="http://php.net/">php.net</a><br>
+ <a href="https://www.php.net/">php.net</a><br>
  &nbsp;Main site for the PHP project.<br clear="left">
 </p>
 <p>

@@ -519,7 +519,7 @@ site_header("News Archive - 2002", array("cache" => true));
  <span class="newsdate">[23-Mar-2002]</span>
  Ever wondered what you can type in your browsers location
  field to access a php.net page? Many of you already know
- <a href="http://php.net/echo">http://php.net/echo</a>.
+ <a href="https://www.php.net/echo">https://www.php.net/echo</a>.
  We gathered some information about how the URLs are parsed,
  and what are your possibilities. Read it in our new
  <a href="urlhowto.php">URL Howto</a>.

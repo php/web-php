@@ -22,7 +22,7 @@ site_header("News Archive - 2008", array("cache" => true));
         <div>
         <p>Due to unfortunate circumstances Windows binaries for PECL extensions will no longer be available on http://pecl4win.php.net.</p>
         <p>Work is being done to incorporate Windows binaries for PECL extensions into <a href="http://pecl.php.net">pecl.php.net</a> and will hopefully be ready early 2009</p>
-        <p>If anyone is interested in the project please join the <a href="mailto:internals-win@lists.php.net">PHP Windows Development</a> <a href="http://php.net/mailinglist">mailinglist</a>.</p>
+        <p>If anyone is interested in the project please join the <a href="mailto:internals-win@lists.php.net">PHP Windows Development</a> <a href="https://www.php.net/mailinglist">mailinglist</a>.</p>
 
       </div>
 
@@ -137,11 +137,11 @@ site_header("News Archive - 2008", array("cache" => true));
         <p>The PHP development team is proud to announce the <a href="http://qa.php.net/">third alpha release</a>
 
         of the upcoming PHP 5.3.0 minor version update of PHP.
-        Several new features have already been documented in the <a href="http://php.net/docs.php">official documentation</a>,
+        Several new features have already been documented in the <a href="https://www.php.net/docs.php">official documentation</a>,
         others are listed on the <a href="http://wiki.php.net/doc/scratchpad/upgrade/53">wiki</a>
         in preparation of getting documented. It is imperative that more people
         join the effort to complete the documentation for PHP 5.3.0.
-        Please also review the <a href="http://php.net/php5news">NEWS</a> file.</p>
+        Please also review the <a href="https://www.php.net/php5news">NEWS</a> file.</p>
         <strong>THIS IS A DEVELOPMENT PREVIEW - DO NOT USE IT IN PRODUCTION!</strong>
         <p>The purpose of this alpha release is to encourage users to not only actively
          participate in identifying bugs, but also in ensuring that all new features or
@@ -152,7 +152,7 @@ site_header("News Archive - 2008", array("cache" => true));
         <p>There have been a great number of other additions and improvements since the last alpha,
         but here is a short overview of the most important changes:</p>
         <ul>
-          <li><a href="http://php.net/language.namespaces">Namespaces</a> (documentation has been updated to the current state)</li>
+          <li><a href="https://www.php.net/language.namespaces">Namespaces</a> (documentation has been updated to the current state)</li>
           <li>
 
             <a href="http://wiki.php.net/rfc/rounding">Rounding behavior</a>
@@ -442,7 +442,7 @@ site_header("News Archive - 2008", array("cache" => true));
     <div class="entry-content description">
         <abbr class="published newsdate" title="2008-08-01T08:50:37+02:00">[01-Aug-2008]</abbr>
         <div>
-        <p>The PHP development team is proud to announce the <a href="http://qa.php.net/">first alpha release</a> of the upcoming minor version update of PHP. <a href="http://windows.php.net/download/">Windows binaries</a> will be available starting with alpha2 (intermediate snapshots available at <a href="http://snaps.php.net">snaps.php.net</a>). The new version PHP 5.3 is expected to improve stability and performance as well as add new language syntax and extensions. Several new features have already been documented in the <a href="http://php.net/docs.php">official documentation</a>, others are listed on the <a href="http://wiki.php.net/doc/scratchpad/upgrade/53">wiki</a> in preparation of getting documented. Please also review the <a href="http://php.net/php5news">NEWS</a> file.</p>
+        <p>The PHP development team is proud to announce the <a href="http://qa.php.net/">first alpha release</a> of the upcoming minor version update of PHP. <a href="http://windows.php.net/download/">Windows binaries</a> will be available starting with alpha2 (intermediate snapshots available at <a href="http://snaps.php.net">snaps.php.net</a>). The new version PHP 5.3 is expected to improve stability and performance as well as add new language syntax and extensions. Several new features have already been documented in the <a href="https://www.php.net/docs.php">official documentation</a>, others are listed on the <a href="http://wiki.php.net/doc/scratchpad/upgrade/53">wiki</a> in preparation of getting documented. Please also review the <a href="https://www.php.net/php5news">NEWS</a> file.</p>
 
         <strong>THIS IS A DEVELOPMENT PREVIEW - DO NOT USE IT IN PRODUCTION!</strong>
         <p>The purpose of this alpha release is to encourage users to not only actively
@@ -453,18 +453,18 @@ site_header("News Archive - 2008", array("cache" => true));
         <p>There have been a great number of other additions and improvements, but here is a short overview of the most important changes:</p>
         <ul>
 
-          <li><a href="http://php.net/language.namespaces">Namespaces</a> (documentation maybe out dated)</li>
-          <li><a href="http://php.net/oop5.late-static-bindings">Late static binding</a> and <a href="http://php.net/language.oop5.overloading">__callStatic</a></li>
+          <li><a href="https://www.php.net/language.namespaces">Namespaces</a> (documentation maybe out dated)</li>
+          <li><a href="https://www.php.net/oop5.late-static-bindings">Late static binding</a> and <a href="https://www.php.net/language.oop5.overloading">__callStatic</a></li>
           <li>
             <a href="http://wiki.php.net/rfc/closures">Lambda functions and closures</a>
           </li>
 
-          <li>Addition of the <a href="http://php.net/book.intl">intl</a>, <a href="http://php.net/book.phar">phar</a> (phar is scheduled for some more work a head of alpha2), <a href="http://php.net/book.fileinfo">fileinfo </a> and <a href="http://php.net/book.sqlite3">sqlite3</a> extensions</li>
+          <li>Addition of the <a href="https://www.php.net/book.intl">intl</a>, <a href="https://www.php.net/book.phar">phar</a> (phar is scheduled for some more work a head of alpha2), <a href="https://www.php.net/book.fileinfo">fileinfo </a> and <a href="https://www.php.net/book.sqlite3">sqlite3</a> extensions</li>
           <li>Optional cyclic garbage collection</li>
 
           <li>Optional support for the <a href="http://forge.mysql.com/wiki/PHP_MYSQLND">MySQLnd</a> replacement driver for libmysql</li>
           <li>Windows older than Windows 2000 (Windows 98, NT4, etc.) are not supported anymore (<a href="http://wiki.php.net/internals/windows/releasenotes">details</a>)</li>
-          <li>New syntax features like <a href="http://php.net/language.types.string#language.types.string.syntax.nowdoc">NOWDOC</a>, limited GOTO, ternary short cut "?:"</li>
+          <li>New syntax features like <a href="https://www.php.net/language.types.string#language.types.string.syntax.nowdoc">NOWDOC</a>, limited GOTO, ternary short cut "?:"</li>
         </ul>
 
         <p>Several under the hood changes also require in depth testing with existing applications to ensure that any backwards compatibility breaks are minimized. This is especially important for users that require the undocumented Zend engine multibyte support.</p>

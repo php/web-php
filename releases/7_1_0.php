@@ -22,7 +22,7 @@ site_header("PHP 7.1.0 Release Announcement");
 
      <p>For source downloads of PHP 7.1.0 please visit our <a href="https://www.php.net/downloads">downloads</a> page, Windows binaries can be found on the <a href="http://windows.php.net/download">PHP for Windows</a> site. The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-7.php#7.1.0">ChangeLog</a>.</p>
 
-     <p>The <a href="http://php.net/manual/en/migration71.php">migration guide</a> is available in the PHP Manual. Please consult it for the detailed list of new features and backward incompatible changes.</p>
+     <p>The <a href="https://www.php.net/manual/en/migration71.php">migration guide</a> is available in the PHP Manual. Please consult it for the detailed list of new features and backward incompatible changes.</p>
 
      <p>Many thanks to all the contributors and supporters!</p>
 

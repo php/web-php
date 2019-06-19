@@ -344,7 +344,7 @@ site_header("News Archive - 2009", array("cache" => true));
      <p>
       The migration from CVS to Subversion is complete.  The web interface is at
       <a href="http://svn.php.net">svn.php.net</a>.  You can read about it at
-      <a href="http://php.net/svn.php">php.net/svn.php</a>,
+      <a href="https://www.php.net/svn.php">php.net/svn.php</a>,
       <a href="http://wiki.php.net/vcs/svnfaq">wiki.php.net/vcs/svnfaq</a>.  The
       URL to feed to your svn client is http://svn.php.net/repository.
      </p>
@@ -398,10 +398,10 @@ site_header("News Archive - 2009", array("cache" => true));
      <p>
       For those that would like to continue to make a difference by
       writing tests there are two options. You can simply continue by
-      submitting new tests to the <a href="http://php.net/mailinglists">QA mailing list</a>,
+      submitting new tests to the <a href="https://www.php.net/mailinglists">QA mailing list</a>,
       or, if you have written a significant number of tests you might
       consider applying for your own
-      <a href="http://php.net/cvs-php">PHP CVS (or SVN) ID</a>.
+      <a href="https://www.php.net/cvs-php">PHP CVS (or SVN) ID</a>.
       In your application you should reference the tests that you have
       written in support of your application.
      </p>
@@ -426,37 +426,37 @@ site_header("News Archive - 2009", array("cache" => true));
         <div>
      <p>
       The PHP development team is proud to announce the immediate release of PHP
-      <a href="http://php.net/downloads.php#v5.3.0">5.3.0</a>.
+      <a href="https://www.php.net/downloads.php#v5.3.0">5.3.0</a>.
       This release is a major improvement in the 5.X series, which includes a
       large number of new features and bug fixes.
      </p>
 
      <p>
       Some of the key new features include:
-      <a href="http://php.net/namespaces">namespaces</a>,
-      <a href="http://php.net/lsb">late static binding</a>,
-      <a href="http://php.net/closures">closures</a>,
-      optional <a href="http://php.net/gc_enable">garbage collection</a> for cyclic references,
-      new extensions (like <a href="http://php.net/phar">ext/phar</a>,
-      <a href="http://php.net/intl">ext/intl</a> and
-      <a href="http://php.net/fileinfo">ext/fileinfo</a>),
+      <a href="https://www.php.net/namespaces">namespaces</a>,
+      <a href="https://www.php.net/lsb">late static binding</a>,
+      <a href="https://www.php.net/closures">closures</a>,
+      optional <a href="https://www.php.net/gc_enable">garbage collection</a> for cyclic references,
+      new extensions (like <a href="https://www.php.net/phar">ext/phar</a>,
+      <a href="https://www.php.net/intl">ext/intl</a> and
+      <a href="https://www.php.net/fileinfo">ext/fileinfo</a>),
       over 140 bug fixes and much more.
      </p>
 
      <p>
       For users upgrading from PHP 5.2 there is a
-      <a href="http://php.net/migration53">migration guide</a>
+      <a href="https://www.php.net/migration53">migration guide</a>
       available here, detailing the changes between those
-      releases and <a href="http://php.net/downloads.php#v5.3.0">PHP 5.3.0</a>.
+      releases and <a href="https://www.php.net/downloads.php#v5.3.0">PHP 5.3.0</a>.
      </p>
 
      <p>
       Further details about the
-      <a href="http://php.net/downloads.php#v5.3.0">PHP 5.3.0</a> release
+      <a href="https://www.php.net/downloads.php#v5.3.0">PHP 5.3.0</a> release
       can be found in the
-      <a href="http://php.net/releases/5_3_0.php">release announcement</a>,
+      <a href="https://www.php.net/releases/5_3_0.php">release announcement</a>,
       and the full list of changes are available in the
-      <a href="http://php.net/ChangeLog-5.php">ChangeLog</a>.
+      <a href="https://www.php.net/ChangeLog-5.php">ChangeLog</a>.
      </p>
 
     </div>
@@ -514,9 +514,9 @@ site_header("News Archive - 2009", array("cache" => true));
       and stability improvements, and we hope only minimal changes are required
       for the next candidate or final stable releases. PHP 5.3.0 is a newly
       developed version of PHP featuring long-awaited features like
-      <a href="http://php.net/namespaces">namespaces</a>,
-      <a href="http://php.net/lsb">late static binding</a>,
-      <a href="http://php.net/closures">closures</a> and much more.
+      <a href="https://www.php.net/namespaces">namespaces</a>,
+      <a href="https://www.php.net/lsb">late static binding</a>,
+      <a href="https://www.php.net/closures">closures</a> and much more.
      </p>
      <p>
       Please download and test these release candidates, and report any issues
@@ -826,51 +826,51 @@ site_header("News Archive - 2009", array("cache" => true));
       <p>The PHP development team is proud to announce the availability of the first release candidate of PHP 5.3.0 (PHP 5.3.0RC1). This release marks the final phase in a major improvement in the 5.X series, which includes a large number of new features, bug fixes and security enhancements.</p>
       <p>The key features of the PHP 5.3 branch include:</p>
       <ul>
-        <li>Support for <a href="http://php.net/namespaces">namespaces</a></li>
+        <li>Support for <a href="https://www.php.net/namespaces">namespaces</a></li>
         <li>Under the hood performance improvements</li>
-        <li><a href="http://php.net/lsb">Late static binding</a></li>
+        <li><a href="https://www.php.net/lsb">Late static binding</a></li>
         <li><a href="http://docs.php.net/functions.anonymous">Lambda functions and closures</a></li>
         <li>
          Syntax additions:
-         <a href="http://php.net/manual/language.types.string.php#language.types.string.syntax.nowdoc">NOWDOC</a>, limited GOTO,
-         <a href="http://php.net/ternary#language.operators.comparison.ternary">ternary short cut "?:"</a> and
-         <a href="http://php.net/__callstatic">__callStatic()</a>
+         <a href="https://www.php.net/manual/language.types.string.php#language.types.string.syntax.nowdoc">NOWDOC</a>, limited GOTO,
+         <a href="https://www.php.net/ternary#language.operators.comparison.ternary">ternary short cut "?:"</a> and
+         <a href="https://www.php.net/__callstatic">__callStatic()</a>
         </li>
-        <li>Optional <a href="http://php.net/gc_enable">garbage collection</a> for cyclic references</li>
-        <li>Optional <a href="http://php.net/mysqli.mysqlnd">mysqlnd</a> PHP native replacement for libmysql</li>
+        <li>Optional <a href="https://www.php.net/gc_enable">garbage collection</a> for cyclic references</li>
+        <li>Optional <a href="https://www.php.net/mysqli.mysqlnd">mysqlnd</a> PHP native replacement for libmysql</li>
         <li>Improved <a href="http://windows.php.net">windows</a> support including VC6 and VC9 binaries</li>
         <li>More consistent float rounding</li>
         <li>Deprecation notices are now handle via E_DEPRECATED (part of E_ALL) instead of the E_STRICT error level</li>
-        <li>Several enhancements to enable more <a href="http://php.net/ini.sections">flexiblity in php.ini</a> (and ini parsing in general)</li>
+        <li>Several enhancements to enable more <a href="https://www.php.net/ini.sections">flexiblity in php.ini</a> (and ini parsing in general)</li>
         <li>New bundled extensions:
-         <a href="http://php.net/phar">ext/phar</a>,
-         <a href="http://php.net/intl">ext/intl</a>,
-         <a href="http://php.net/fileinfo">ext/fileinfo</a>,
-         <a href="http://php.net/sqlite3">ext/sqlite3</a>,
-         <a href="http://php.net/enchant">ext/enchant</a>
+         <a href="https://www.php.net/phar">ext/phar</a>,
+         <a href="https://www.php.net/intl">ext/intl</a>,
+         <a href="https://www.php.net/fileinfo">ext/fileinfo</a>,
+         <a href="https://www.php.net/sqlite3">ext/sqlite3</a>,
+         <a href="https://www.php.net/enchant">ext/enchant</a>
         </li>
         <li>Countless bug fixes and improvements to existing extensions in particular to:
-         <a href="http://php.net/openssl">ext/openssl</a>,
-         <a href="http://php.net/spl">ext/spl</a> and
-         <a href="http://php.net/datetime">ext/date</a>
+         <a href="https://www.php.net/openssl">ext/openssl</a>,
+         <a href="https://www.php.net/spl">ext/spl</a> and
+         <a href="https://www.php.net/datetime">ext/date</a>
         </li>
       </ul>
       <p>This release also drops several extensions and unifies usage of internal APIs. Users should be aware of the following known backwards compatibility breaks:</p>
       <ul>
         <li>Parameter parsing API unification will cause some functions to behave more or less strict when it comes to type juggling</li>
         <li>Removed the following extensions:
-         <a href="http://php.net/mhash">ext/mhash</a> (see <a href="http://php.net/hash">ext/hash</a>),
-         <a href="http://php.net/msql">ext/msql</a>,
-         <a href="http://php.net/pspell">ext/pspell</a> (see <a href="http://php.net/enchant">ext/enchant</a>),
-         <a href="http://php.net/sybase">ext/sybase</a> (see <a href="http://php.net/sybase">ext/sybase_ct</a>)
+         <a href="https://www.php.net/mhash">ext/mhash</a> (see <a href="https://www.php.net/hash">ext/hash</a>),
+         <a href="https://www.php.net/msql">ext/msql</a>,
+         <a href="https://www.php.net/pspell">ext/pspell</a> (see <a href="https://www.php.net/enchant">ext/enchant</a>),
+         <a href="https://www.php.net/sybase">ext/sybase</a> (see <a href="https://www.php.net/sybase">ext/sybase_ct</a>)
         </li>
         <li>Moved the following extensions to PECL:
-         <a href="http://php.net/ming">ext/ming</a>,
-         <a href="http://php.net/fbsql">ext/fbsql</a>,
-         <a href="http://php.net/ncurses">ext/ncurses</a>,
-         <a href="http://php.net/fdf">ext/fdf</a>
+         <a href="https://www.php.net/ming">ext/ming</a>,
+         <a href="https://www.php.net/fbsql">ext/fbsql</a>,
+         <a href="https://www.php.net/ncurses">ext/ncurses</a>,
+         <a href="https://www.php.net/fdf">ext/fdf</a>
         </li>
-        <li>Removed <a href="http://php.net/manual/ini.core.php#ini.zend.ze1-compatibility-mode">zend.ze1_compatibility_mode</a></li>
+        <li>Removed <a href="https://www.php.net/manual/ini.core.php#ini.zend.ze1-compatibility-mode">zend.ze1_compatibility_mode</a></li>
         <li>See the <a href="http://cvs.php.net/viewvc.cgi/php-src/UPGRADING?view=markup&amp;pathrev=PHP_5_3">upgrading guide</a> for other minor changes</li>
       </ul>
       <p>All users of PHP, especially those using earlier PHP 5 releases are advised to test this release as the final release of PHP 5.3.0 will eventually obsolete the 5.2 branch of PHP.</p>

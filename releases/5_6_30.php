@@ -14,7 +14,7 @@ site_header("PHP 5.6.30 Release Announcement");
      </p>
 
      <p>
-     According to <a href="http://php.net/supported-versions.php">our release calendar</a>, this PHP 5.6 version
+     According to <a href="https://www.php.net/supported-versions.php">our release calendar</a>, this PHP 5.6 version
      is the last planned release that contains regular bugfixes. All the consequent releases
      will contain only security-relevant fixes, for the term of two years.
      PHP 5.6 users that need further bugfixes are encouraged to upgrade to PHP 7.

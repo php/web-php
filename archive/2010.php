@@ -32,7 +32,7 @@ site_header("News Archive - 2010", array("cache" => true));
      </p>
 
      <p>To prepare for upgrading to PHP 5.3, now that PHP 5.2's support ended, a
-     migration guide available on <a href="/migration53">http://php.net/migration53</a>, details the changes between
+     migration guide available on <a href="/migration53">https://www.php.net/migration53</a>, details the changes between
      PHP 5.2 and PHP 5.3.</p>
 
      <p>For a full list of changes in PHP 5.2.16 see the ChangeLog at
@@ -88,7 +88,7 @@ site_header("News Archive - 2010", array("cache" => true));
 
      <p>
      For users upgrading from PHP 5.2 there is a migration guide
-     available <a href="http://php.net/migration53">here</a>, detailing
+     available <a href="https://www.php.net/migration53">here</a>, detailing
      the changes between those releases and PHP 5.3.
      </p>
 
@@ -142,7 +142,7 @@ site_header("News Archive - 2010", array("cache" => true));
      </ul>
 
      <p>To prepare for upgrading to PHP 5.3, now that PHP 5.2's support ended, a
-     migration guide available on <a href="/migration53">http://php.net/migration53</a>, details the changes between
+     migration guide available on <a href="/migration53">https://www.php.net/migration53</a>, details the changes between
      PHP 5.2 and PHP 5.3.</p>
 
      <p>For a full list of changes in PHP 5.2.15 see the ChangeLog at
@@ -423,7 +423,7 @@ class Bar {<br>
 
      <p>
      For users upgrading from PHP 5.2 there is a migration guide available on
-     <a href="/migration53">http://php.net/migration53</a>, detailing the changes between those
+     <a href="/migration53">https://www.php.net/migration53</a>, detailing the changes between those
      releases and PHP 5.3.
      </p>
      <p>
@@ -487,7 +487,7 @@ class Bar {<br>
      </ul>
 
      <p>To prepare for upgrading to PHP 5.3, now that PHP 5.2's support ended, a
-     migration guide available on <a href="/migration53">http://php.net/migration53</a>, details the changes between
+     migration guide available on <a href="/migration53">https://www.php.net/migration53</a>, details the changes between
      PHP 5.2 and PHP 5.3.</p>
      <p>For a full list of changes in PHP 5.2.14 see the ChangeLog at
      <a href="/ChangeLog-5.php#5.2.14">https://www.php.net/ChangeLog-5.php#5.2.14</a>.</p>
@@ -649,7 +649,7 @@ class Bar {<br>
 
      <p>
      For users upgrading from PHP 5.2 there is a migration guide
-     available <a href="http://php.net/migration53">here</a>, detailing
+     available <a href="https://www.php.net/migration53">here</a>, detailing
      the changes between those releases and PHP 5.3.
      </p>
 

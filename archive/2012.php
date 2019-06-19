@@ -14,7 +14,7 @@ site_header("News Archive - 2012", array("cache" => true));
 <hr>
 <div class="newsItem hentry">
     <div class="newsImage"></div>
-    <h2 class="summary entry-title"><a name="id2012-12-21-1" id="id2012-12-21-1" href="http://php.net/archive/2012.php#id2012-12-21-1" rel="bookmark" class="bookmark">PHP 5.5.0 Alpha2 released</a></h2>
+    <h2 class="summary entry-title"><a name="id2012-12-21-1" id="id2012-12-21-1" href="https://www.php.net/archive/2012.php#id2012-12-21-1" rel="bookmark" class="bookmark">PHP 5.5.0 Alpha2 released</a></h2>
     <div class="entry-content description">
         <abbr class="published newsdate" title="2012-12-21T16:19:14+00:00">21-Dec-2012</abbr>
         <div>
@@ -83,7 +83,7 @@ site_header("News Archive - 2012", array("cache" => true));
 </div>
 <div class="newsItem hentry">
     <div class="newsImage"></div>
-    <h2 class="summary entry-title"><a name="id2012-12-20-1" id="id2012-12-20-1" href="http://php.net/archive/2012.php#id2012-12-20-1" rel="bookmark" class="bookmark">PHP 5.4.10 and PHP 5.3.20 released!</a></h2>
+    <h2 class="summary entry-title"><a name="id2012-12-20-1" id="id2012-12-20-1" href="https://www.php.net/archive/2012.php#id2012-12-20-1" rel="bookmark" class="bookmark">PHP 5.4.10 and PHP 5.3.20 released!</a></h2>
     <div class="entry-content description">
         <abbr class="published newsdate" title="2012-12-20T11:38:49+00:00">20-Dec-2012</abbr>
         <div>
@@ -634,7 +634,7 @@ site_header("News Archive - 2012", array("cache" => true));
      in CGI-based setups (CVE-2012-2311). <i>Note: mod_php and php-fpm are not vulnerable to this attack.</i></p>
 
      <p>PHP 5.4.3 fixes a buffer overflow vulnerability in the
-     <a href="http://php.net/manual/function.apache-request-headers.php">apache_request_headers()</a> (CVE-2012-2329).
+     <a href="https://www.php.net/manual/function.apache-request-headers.php">apache_request_headers()</a> (CVE-2012-2329).
      The PHP 5.3 series is not vulnerable to this issue.</p>
 
      <p>For source downloads of PHP 5.4.3 and PHP 5.3.13 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
@@ -872,7 +872,7 @@ site_header("News Archive - 2012", array("cache" => true));
      now support pull requests made via GitHub. The source is also available
      via <a href="http://git.php.net/">git.php.net</a>, and full instructions
      on cloning the php-src tree can be found at
-     <a href="http://php.net/git">php.net/git</a>.
+     <a href="https://www.php.net/git">php.net/git</a>.
     </p>
 
     <p>
@@ -911,16 +911,16 @@ site_header("News Archive - 2012", array("cache" => true));
         <div>
      <p>
       The PHP development team is proud to announce the immediate availability of PHP
-      <a href="http://php.net/downloads.php#v5.4.0">5.4.0</a>.
+      <a href="https://www.php.net/downloads.php#v5.4.0">5.4.0</a>.
       This release is a major leap forward in the 5.x series, which includes a
       large number of new features and bug fixes.
      </p>
 
      <p>
       Some of the key new features include:
-      <a href="http://php.net/traits">traits</a>,
+      <a href="https://www.php.net/traits">traits</a>,
       <a href="http://docs.php.net/manual/en/language.types.array.php">a shortened array syntax</a>,
-      <a href="http://php.net/manual/en/features.commandline.webserver.php">
+      <a href="https://www.php.net/manual/en/features.commandline.webserver.php">
       a built-in webserver for testing purposes</a>
       and more. PHP 5.4.0 significantly improves performance, memory footprint and fixes over
       100 bugs.
@@ -928,18 +928,18 @@ site_header("News Archive - 2012", array("cache" => true));
 
      <p>
       For users upgrading from PHP 5.3 there is a
-      <a href="http://php.net/migration54">migration guide</a>
+      <a href="https://www.php.net/migration54">migration guide</a>
       available here, detailing the changes between those
-      releases and <a href="http://php.net/downloads.php#v5.4.0">PHP 5.4.0</a>.
+      releases and <a href="https://www.php.net/downloads.php#v5.4.0">PHP 5.4.0</a>.
      </p>
 
      <p>
       Further details about the
-      <a href="http://php.net/downloads.php#v5.4.0">PHP 5.4.0</a> release
+      <a href="https://www.php.net/downloads.php#v5.4.0">PHP 5.4.0</a> release
       can be found in the
-      <a href="http://php.net/releases/5_4_0.php">release announcement</a>,
+      <a href="https://www.php.net/releases/5_4_0.php">release announcement</a>,
       and the full list of changes are available in the
-      <a href="http://php.net/ChangeLog-5.php">ChangeLog</a>.
+      <a href="https://www.php.net/ChangeLog-5.php">ChangeLog</a>.
      </p>
      <p>
      Please note that it may take a while until the release is available

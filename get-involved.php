@@ -27,7 +27,7 @@ site_header("Get Involved", array("current" => "community"));
 
  <ol class="content-box listed">
   <li>Running test suites in <a href="http://qa.php.net/">RC</a>
-      and <a href="http://php.net/releases">release</a> distributions of PHP</li>
+      and <a href="https://www.php.net/releases">release</a> distributions of PHP</li>
   <li>Help finding and diagnosing failed tests, see
       the <a href="http://qa.php.net/write-test.php">phpt documentation</a></li>
   <li>Filing and resolving bug reports

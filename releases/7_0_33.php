@@ -16,7 +16,7 @@ Windows source and binaries can be found on <a href="http://windows.php.net/down
 The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-7.php#7.0.33">ChangeLog</a>.
 </p>
 
-<p>Please note that according to the <a href="http://php.net/supported-versions.php">PHP version support timelines</a>,
+<p>Please note that according to the <a href="https://www.php.net/supported-versions.php">PHP version support timelines</a>,
 PHP 7.0.33 is the last scheduled release of PHP 7.0 branch. There may be additional release if we discover
 important security issues that warrant it, otherwise this release will be the final one in the PHP 7.0 branch.
 If your PHP installation is based on PHP 7.0, it may be a good time to start making the plans for the upgrade

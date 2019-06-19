@@ -12,7 +12,7 @@ site_header("PHP 5.5.28 Release Announcement");
      </p>
 
      <p>
-     According to <a href="http://php.net/supported-versions.php">our release calendar</a>, this PHP 5.5 version
+     According to <a href="https://www.php.net/supported-versions.php">our release calendar</a>, this PHP 5.5 version
      is the first security release of the PHP 5.5 branch. This and all the following releases of this branch
 	 do not contain bugfixes that are not considered relevant for security.
      PHP 5.5 users that need further bugfixes are encouraged to upgrade to PHP 5.6.

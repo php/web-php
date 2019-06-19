@@ -21,7 +21,7 @@ site_header("PHP 5.3.29 Release Announcement");
      the <a href="https://www.php.net/ChangeLog-5.php#5.3.29">ChangeLog</a>.</p>
 
      <p>For helping your migration to newer versions please refer to our migration
-     guides for updates from <a href="http://php.net/migration54">PHP 5.3 to
-	     5.4</a> and from <a href="http://php.net/migration55">PHP 5.4 to 5.5</a>.</p>
+     guides for updates from <a href="https://www.php.net/migration54">PHP 5.3 to
+	     5.4</a> and from <a href="https://www.php.net/migration55">PHP 5.4 to 5.5</a>.</p>
 
 <?php site_footer(); ?>

@@ -51,7 +51,7 @@ site_header("News Archive - 2014", array("cache" => true));
 <article class="newsItem">
   <header>
     <div class="newsImage"></div>
-    <h2 class="newstitle"><a id="id2014-12-18-3" href="http://php.net/archive/2014.php#id2014-12-18-3" rel="bookmark" class="bookmark">PHP 5.4.36 Released</a></h2>
+    <h2 class="newstitle"><a id="id2014-12-18-3" href="https://www.php.net/archive/2014.php#id2014-12-18-3" rel="bookmark" class="bookmark">PHP 5.4.36 Released</a></h2>
   </header>
   <time class="newsdate" datetime="2014-12-18T18:15:29-08:00">18 Dec 2014</time>
   <div class="newscontent">
@@ -74,7 +74,7 @@ site_header("News Archive - 2014", array("cache" => true));
 <article class="newsItem">
   <header>
     <div class="newsImage"></div>
-    <h2 class="newstitle"><a id="id2014-12-18-2" href="http://php.net/archive/2014.php#id2014-12-18-2" rel="bookmark" class="bookmark">PHP 5.6.4 is available</a></h2>
+    <h2 class="newstitle"><a id="id2014-12-18-2" href="https://www.php.net/archive/2014.php#id2014-12-18-2" rel="bookmark" class="bookmark">PHP 5.6.4 is available</a></h2>
   </header>
   <time class="newsdate" datetime="2014-12-18T16:35:48-08:00">18 Dec 2014</time>
   <div class="newscontent">
@@ -96,7 +96,7 @@ site_header("News Archive - 2014", array("cache" => true));
 <article class="newsItem">
   <header>
     <div class="newsImage"></div>
-    <h2 class="newstitle"><a id="id2014-12-18-1" href="http://php.net/archive/2014.php#id2014-12-18-1" rel="bookmark" class="bookmark">PHP 5.5.20 is available</a></h2>
+    <h2 class="newstitle"><a id="id2014-12-18-1" href="https://www.php.net/archive/2014.php#id2014-12-18-1" rel="bookmark" class="bookmark">PHP 5.5.20 is available</a></h2>
   </header>
   <time class="newsdate" datetime="2014-12-18T16:10:55+00:00">18 Dec 2014</time>
   <div class="newscontent">
@@ -118,7 +118,7 @@ site_header("News Archive - 2014", array("cache" => true));
 <article class="newsItem">
   <header>
     <div class="newsImage"></div>
-    <h2 class="newstitle"><a id="id2014-11-13-3" href="http://php.net/archive/2014.php#id2014-11-13-3" rel="bookmark" class="bookmark">PHP 5.4.35 Released</a></h2>
+    <h2 class="newstitle"><a id="id2014-11-13-3" href="https://www.php.net/archive/2014.php#id2014-11-13-3" rel="bookmark" class="bookmark">PHP 5.4.35 Released</a></h2>
   </header>
   <time class="newsdate" datetime="2014-11-13T22:11:34-08:00">13 Nov 2014</time>
   <div class="newscontent">
@@ -140,7 +140,7 @@ site_header("News Archive - 2014", array("cache" => true));
 <article class="newsItem">
   <header>
     <div class="newsImage"></div>
-    <h2 class="newstitle"><a id="id2014-11-13-2" href="http://php.net/archive/2014.php#id2014-11-13-2" rel="bookmark" class="bookmark">PHP 5.6.3 is available</a></h2>
+    <h2 class="newstitle"><a id="id2014-11-13-2" href="https://www.php.net/archive/2014.php#id2014-11-13-2" rel="bookmark" class="bookmark">PHP 5.6.3 is available</a></h2>
   </header>
   <time class="newsdate" datetime="2014-11-13T15:15:58-08:00">13 Nov 2014</time>
   <div class="newscontent">
@@ -161,7 +161,7 @@ site_header("News Archive - 2014", array("cache" => true));
 <article class="newsItem">
   <header>
     <div class="newsImage"></div>
-    <h2 class="newstitle"><a id="id2014-11-13-1" href="http://php.net/archive/2014.php#id2014-11-13-1" rel="bookmark" class="bookmark">PHP 5.5.19 is available</a></h2>
+    <h2 class="newstitle"><a id="id2014-11-13-1" href="https://www.php.net/archive/2014.php#id2014-11-13-1" rel="bookmark" class="bookmark">PHP 5.5.19 is available</a></h2>
   </header>
   <time class="newsdate" datetime="2014-11-13T16:45:26+00:00">13 Nov 2014</time>
   <div class="newscontent">
@@ -300,7 +300,7 @@ site_header("News Archive - 2014", array("cache" => true));
 <article class="newsItem">
   <header>
     <div class="newsImage"></div>
-    <h2 class="newstitle"><a id="id2014-10-16-3" href="http://php.net/archive/2014.php#id2014-10-16-3" rel="bookmark" class="bookmark">PHP 5.6.2 is available</a></h2>
+    <h2 class="newstitle"><a id="id2014-10-16-3" href="https://www.php.net/archive/2014.php#id2014-10-16-3" rel="bookmark" class="bookmark">PHP 5.6.2 is available</a></h2>
   </header>
   <time class="newsdate" datetime="2014-10-16T16:26:14-07:00">16 Oct 2014</time>
   <div class="newscontent">
@@ -321,7 +321,7 @@ site_header("News Archive - 2014", array("cache" => true));
 <article class="newsItem">
   <header>
     <div class="newsImage"></div>
-    <h2 class="newstitle"><a id="id2014-10-16-2" href="http://php.net/archive/2014.php#id2014-10-16-2" rel="bookmark" class="bookmark">PHP 5.4.34 Released</a></h2>
+    <h2 class="newstitle"><a id="id2014-10-16-2" href="https://www.php.net/archive/2014.php#id2014-10-16-2" rel="bookmark" class="bookmark">PHP 5.4.34 Released</a></h2>
   </header>
   <time class="newsdate" datetime="2014-10-16T15:32:14-07:00">16 Oct 2014</time>
   <div class="newscontent">
@@ -345,7 +345,7 @@ site_header("News Archive - 2014", array("cache" => true));
 <article class="newsItem">
   <header>
     <div class="newsImage"></div>
-    <h2 class="newstitle"><a id="id2014-10-16-1" href="http://php.net/archive/2014.php#id2014-10-16-1" rel="bookmark" class="bookmark">PHP 5.5.18 is available</a></h2>
+    <h2 class="newstitle"><a id="id2014-10-16-1" href="https://www.php.net/archive/2014.php#id2014-10-16-1" rel="bookmark" class="bookmark">PHP 5.5.18 is available</a></h2>
   </header>
   <time class="newsdate" datetime="2014-10-16T13:32:40+00:00">16 Oct 2014</time>
   <div class="newscontent">
@@ -369,7 +369,7 @@ site_header("News Archive - 2014", array("cache" => true));
 <article class="newsItem">
   <header>
     <div class="newsImage"></div>
-    <h2 class="newstitle"><a id="id2014-10-02-1" href="http://php.net/archive/2014.php#id2014-10-02-1" rel="bookmark" class="bookmark">PHP 5.6.1 released</a></h2>
+    <h2 class="newstitle"><a id="id2014-10-02-1" href="https://www.php.net/archive/2014.php#id2014-10-02-1" rel="bookmark" class="bookmark">PHP 5.6.1 released</a></h2>
   </header>
   <time class="newsdate" datetime="2014-10-02T16:44:05-07:00">02 Oct 2014</time>
   <div class="newscontent">
@@ -424,7 +424,7 @@ site_header("News Archive - 2014", array("cache" => true));
 <article class="newsItem">
   <header>
     <div class="newsImage"></div>
-    <h2 class="newstitle"><a id="id2014-09-18-2" href="http://php.net/archive/2014.php#id2014-09-18-2" rel="bookmark" class="bookmark">PHP 5.4.33 Released</a></h2>
+    <h2 class="newstitle"><a id="id2014-09-18-2" href="https://www.php.net/archive/2014.php#id2014-09-18-2" rel="bookmark" class="bookmark">PHP 5.4.33 Released</a></h2>
   </header>
   <time class="newsdate" datetime="2014-09-18T20:03:36-07:00">18 Sep 2014</time>
   <div class="newscontent">
@@ -452,7 +452,7 @@ site_header("News Archive - 2014", array("cache" => true));
 <article class="newsItem">
   <header>
     <div class="newsImage"></div>
-    <h2 class="newstitle"><a id="id2014-09-18-1" href="http://php.net/archive/2014.php#id2014-09-18-1" rel="bookmark" class="bookmark">PHP 5.5.17 is available</a></h2>
+    <h2 class="newstitle"><a id="id2014-09-18-1" href="https://www.php.net/archive/2014.php#id2014-09-18-1" rel="bookmark" class="bookmark">PHP 5.5.17 is available</a></h2>
   </header>
   <time class="newsdate" datetime="2014-09-18T11:55:24+00:00">18 Sep 2014</time>
   <div class="newscontent">
@@ -474,7 +474,7 @@ site_header("News Archive - 2014", array("cache" => true));
 <article class="newsItem">
   <header>
     <div class="newsImage"></div>
-    <h2 class="newstitle"><a id="id2014-08-28-1" href="http://php.net/archive/2014.php#id2014-08-28-1" rel="bookmark" class="bookmark">PHP 5.6.0 released</a></h2>
+    <h2 class="newstitle"><a id="id2014-08-28-1" href="https://www.php.net/archive/2014.php#id2014-08-28-1" rel="bookmark" class="bookmark">PHP 5.6.0 released</a></h2>
   </header>
   <time class="newsdate" datetime="2014-08-28T08:14:28+00:00">28 Aug 2014</time>
   <div class="newscontent">
@@ -485,17 +485,17 @@ This new version comes with new features, some backward incompatible changes and
 
         <p><b>The main features of PHP 5.6.0 include:</b></p>
         <ul>
-         <li><a href="http://php.net/migration56.new-features#migration56.new-features.const-scalar-exprs">Constant scalar expressions</a>.</li>
-         <li><a href="http://php.net/functions.arguments#functions.variable-arg-list">Variadic functions</a> and argument unpacking using the <code>...</code> operator.</li>
-         <li><a href="http://php.net/language.operators.arithmetic">Exponentiation using the <code>**</code> operator</a>.</li>
-         <li><a href="http://php.net/migration56.new-features#migration56.new-features.use">Function and constant importing</a> with the <a href="http://php.net/language.namespaces.importing">use keyword</a>.</li>
+         <li><a href="https://www.php.net/migration56.new-features#migration56.new-features.const-scalar-exprs">Constant scalar expressions</a>.</li>
+         <li><a href="https://www.php.net/functions.arguments#functions.variable-arg-list">Variadic functions</a> and argument unpacking using the <code>...</code> operator.</li>
+         <li><a href="https://www.php.net/language.operators.arithmetic">Exponentiation using the <code>**</code> operator</a>.</li>
+         <li><a href="https://www.php.net/migration56.new-features#migration56.new-features.use">Function and constant importing</a> with the <a href="https://www.php.net/language.namespaces.importing">use keyword</a>.</li>
          <li><a href="http://phpdbg.com/docs">phpdbg</a> as an interactive integrated debugger SAPI.</li>
-         <li><a href="http://php.net/wrappers#wrappers.php.input">php://input</a> is now reusable, and <code>$HTTP_RAW_POST_DATA</code> is deprecated.</li>
-         <li><a href="http://php.net/book.gmp">GMP</a> objects now support operator overloading.</li>
+         <li><a href="https://www.php.net/wrappers#wrappers.php.input">php://input</a> is now reusable, and <code>$HTTP_RAW_POST_DATA</code> is deprecated.</li>
+         <li><a href="https://www.php.net/book.gmp">GMP</a> objects now support operator overloading.</li>
          <li>File uploads larger than 2 gigabytes in size are now accepted.</li>
         </ul>
 
-        <p>For a full list of new features, you may read <a href="http://php.net/migration56.new-features">the new features chapter of the migration guide</a>.</p>
+        <p>For a full list of new features, you may read <a href="https://www.php.net/migration56.new-features">the new features chapter of the migration guide</a>.</p>
 
         <p>
         <b>PHP 5.6.0 also introduces changes that affect compatibility:</b>
@@ -503,14 +503,14 @@ This new version comes with new features, some backward incompatible changes and
 
         <ul>
          <li>Array keys won't be overwritten when defining an array as a property of a class via an array literal.</li>
-         <li><a href="http://php.net/function.json-decode">json_decode()</a> is more strict in JSON syntax parsing.</li>
+         <li><a href="https://www.php.net/function.json-decode">json_decode()</a> is more strict in JSON syntax parsing.</li>
          <li>Stream wrappers now verify peer certificates and host names by default when using SSL/TLS.</li>
-         <li><a href="http://php.net/book.gmp">GMP</a> resources are now objects.</li>
-         <li><a href="http://php.net/book.mcrypt">Mcrypt</a> functions now require valid keys and IVs.</li>
+         <li><a href="https://www.php.net/book.gmp">GMP</a> resources are now objects.</li>
+         <li><a href="https://www.php.net/book.mcrypt">Mcrypt</a> functions now require valid keys and IVs.</li>
         </ul>
 
         <p>
-         For users upgrading from PHP 5.5, <a href="http://php.net/migration56">a full migration guide</a> is available, detailing the changes between 5.5 and 5.6.0.
+         For users upgrading from PHP 5.5, <a href="https://www.php.net/migration56">a full migration guide</a> is available, detailing the changes between 5.5 and 5.6.0.
         </p>
 
         <p>For source downloads of PHP 5.6.0, please visit our <a href="https://www.php.net/downloads.php">downloads page</a>.
@@ -573,7 +573,7 @@ This new version comes with new features, some backward incompatible changes and
 <article class="newsItem">
   <header>
     <div class="newsImage"></div>
-    <h2 class="newstitle"><a id="id2014-08-22-1" href="http://php.net/archive/2014.php#id2014-08-22-1" rel="bookmark" class="bookmark">PHP 5.5.16 is released</a></h2>
+    <h2 class="newstitle"><a id="id2014-08-22-1" href="https://www.php.net/archive/2014.php#id2014-08-22-1" rel="bookmark" class="bookmark">PHP 5.5.16 is released</a></h2>
   </header>
   <time class="newsdate" datetime="2014-08-22T07:59:58+00:00">22 Aug 2014</time>
   <div class="newscontent">
@@ -596,7 +596,7 @@ The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-5.
 <article class="newsItem">
   <header>
     <div class="newsImage"></div>
-    <h2 class="newstitle"><a id="id2014-08-21-1" href="http://php.net/archive/2014.php#id2014-08-21-1" rel="bookmark" class="bookmark">PHP 5.4.32 Released</a></h2>
+    <h2 class="newstitle"><a id="id2014-08-21-1" href="https://www.php.net/archive/2014.php#id2014-08-21-1" rel="bookmark" class="bookmark">PHP 5.4.32 Released</a></h2>
   </header>
   <time class="newsdate" datetime="2014-08-21T17:27:58-07:00">21 Aug 2014</time>
   <div class="newscontent">
@@ -619,7 +619,7 @@ The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-5.
 <article class="newsItem">
   <header>
     <div class="newsImage"></div>
-    <h2 class="newstitle"><a id="id2014-08-14-1" href="http://php.net/archive/2014.php#id2014-08-14-1" rel="bookmark" class="bookmark">Last 5.3 release ever available: PHP 5.3.29 - 5.3 now EOL</a></h2>
+    <h2 class="newstitle"><a id="id2014-08-14-1" href="https://www.php.net/archive/2014.php#id2014-08-14-1" rel="bookmark" class="bookmark">Last 5.3 release ever available: PHP 5.3.29 - 5.3 now EOL</a></h2>
   </header>
   <time class="newsdate" datetime="2014-08-14T14:26:40+02:00">14 Aug 2014</time>
   <div class="newscontent">
@@ -639,8 +639,8 @@ The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-5.
      the <a href="https://www.php.net/ChangeLog-5.php#5.3.29">ChangeLog</a>.</p>
 
      <p>For helping your migration to newer versions please refer to our migration
-     guides for updates from <a href="http://php.net/migration54">PHP 5.3 to
-	     5.4</a> and from <a href="http://php.net/migration55">PHP 5.4 to 5.5</a>.</p>
+     guides for updates from <a href="https://www.php.net/migration54">PHP 5.3 to
+	     5.4</a> and from <a href="https://www.php.net/migration55">PHP 5.4 to 5.5</a>.</p>
     </div>
 
   </div>
@@ -648,7 +648,7 @@ The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-5.
 <article class="newsItem">
   <header>
     <div class="newsImage"></div>
-    <h2 class="newstitle"><a id="id2014-08-14-2" href="http://php.net/archive/2014.php#id2014-08-14-2" rel="bookmark" class="bookmark">PHP 5.6.0RC4 is available</a></h2>
+    <h2 class="newstitle"><a id="id2014-08-14-2" href="https://www.php.net/archive/2014.php#id2014-08-14-2" rel="bookmark" class="bookmark">PHP 5.6.0RC4 is available</a></h2>
   </header>
   <time class="newsdate" datetime="2014-08-14T23:23:50-07:00">14 Aug 2014</time>
   <div class="newscontent">
@@ -807,7 +807,7 @@ The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-5.
 <article class="newsItem">
   <header>
     <div class="newsImage"></div>
-    <h2 class="newstitle"><a id="id2014-07-31-1" href="http://php.net/archive/2014.php#id2014-07-31-1" rel="bookmark" class="bookmark">PHP 5.6.0RC3 is available</a></h2>
+    <h2 class="newstitle"><a id="id2014-07-31-1" href="https://www.php.net/archive/2014.php#id2014-07-31-1" rel="bookmark" class="bookmark">PHP 5.6.0RC3 is available</a></h2>
   </header>
   <time class="newsdate" datetime="2014-07-31T13:50:59-07:00">31 Jul 2014</time>
   <div class="newscontent">
@@ -851,7 +851,7 @@ The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-5.
 <article class="newsItem">
   <header>
     <div class="newsImage"></div>
-    <h2 class="newstitle"><a id="id2014-07-24-2" href="http://php.net/archive/2014.php#id2014-07-24-2" rel="bookmark" class="bookmark">PHP 5.4.31 Released</a></h2>
+    <h2 class="newstitle"><a id="id2014-07-24-2" href="https://www.php.net/archive/2014.php#id2014-07-24-2" rel="bookmark" class="bookmark">PHP 5.4.31 Released</a></h2>
   </header>
   <time class="newsdate" datetime="2014-07-24T21:30:09-07:00">24 Jul 2014</time>
   <div class="newscontent">
@@ -873,7 +873,7 @@ The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-5.
 <article class="newsItem">
   <header>
     <div class="newsImage"></div>
-    <h2 class="newstitle"><a id="id2014-07-24-1" href="http://php.net/archive/2014.php#id2014-07-24-1" rel="bookmark" class="bookmark">PHP 5.5.15 is released</a></h2>
+    <h2 class="newstitle"><a id="id2014-07-24-1" href="https://www.php.net/archive/2014.php#id2014-07-24-1" rel="bookmark" class="bookmark">PHP 5.5.15 is released</a></h2>
   </header>
   <time class="newsdate" datetime="2014-07-24T09:01:34+00:00">24 Jul 2014</time>
   <div class="newscontent">
@@ -940,7 +940,7 @@ The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-5.
 <article class="newsItem">
   <header>
     <div class="newsImage"></div>
-    <h2 class="newstitle"><a id="id2014-07-03-1" href="http://php.net/archive/2014.php#id2014-07-03-1" rel="bookmark" class="bookmark">PHP 5.6.0RC2 is available</a></h2>
+    <h2 class="newstitle"><a id="id2014-07-03-1" href="https://www.php.net/archive/2014.php#id2014-07-03-1" rel="bookmark" class="bookmark">PHP 5.6.0RC2 is available</a></h2>
   </header>
   <time class="newsdate" datetime="2014-07-03T14:16:36-07:00">03 Jul 2014</time>
   <div class="newscontent">
@@ -984,7 +984,7 @@ The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-5.
 <article class="newsItem">
   <header>
     <div class="newsImage"></div>
-    <h2 class="newstitle"><a id="id2014-06-27-1" href="http://php.net/archive/2014.php#id2014-06-27-1" rel="bookmark" class="bookmark">PHP 5.5.14 is released</a></h2>
+    <h2 class="newstitle"><a id="id2014-06-27-1" href="https://www.php.net/archive/2014.php#id2014-06-27-1" rel="bookmark" class="bookmark">PHP 5.5.14 is released</a></h2>
   </header>
   <time class="newsdate" datetime="2014-06-27T09:40:44+00:00">27 Jun 2014</time>
   <div class="newscontent">
@@ -1016,7 +1016,7 @@ The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-5.
 <article class="newsItem">
   <header>
     <div class="newsImage"></div>
-    <h2 class="newstitle"><a id="id2014-06-26-1" href="http://php.net/archive/2014.php#id2014-06-26-1" rel="bookmark" class="bookmark">PHP 5.4.30 Released</a></h2>
+    <h2 class="newstitle"><a id="id2014-06-26-1" href="https://www.php.net/archive/2014.php#id2014-06-26-1" rel="bookmark" class="bookmark">PHP 5.4.30 Released</a></h2>
   </header>
   <time class="newsdate" datetime="2014-06-26T15:31:05-07:00">26 Jun 2014</time>
   <div class="newscontent">
@@ -1130,7 +1130,7 @@ The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-5.
 <article class="newsItem">
   <header>
     <div class="newsImage"></div>
-    <h2 class="newstitle"><a id="id2014-06-19-1" href="http://php.net/archive/2014.php#id2014-06-19-1" rel="bookmark" class="bookmark">PHP 5.6.0RC1 is available</a></h2>
+    <h2 class="newstitle"><a id="id2014-06-19-1" href="https://www.php.net/archive/2014.php#id2014-06-19-1" rel="bookmark" class="bookmark">PHP 5.6.0RC1 is available</a></h2>
   </header>
   <time class="newsdate" datetime="2014-06-19T15:22:27-07:00">19 Jun 2014</time>
   <div class="newscontent">
@@ -1174,7 +1174,7 @@ The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-5.
 <article class="newsItem">
   <header>
     <div class="newsImage"></div>
-    <h2 class="newstitle"><a id="id2014-06-05-1" href="http://php.net/archive/2014.php#id2014-06-05-1" rel="bookmark" class="bookmark">PHP 5.6.0beta4 Released</a></h2>
+    <h2 class="newstitle"><a id="id2014-06-05-1" href="https://www.php.net/archive/2014.php#id2014-06-05-1" rel="bookmark" class="bookmark">PHP 5.6.0beta4 Released</a></h2>
   </header>
   <time class="newsdate" datetime="2014-06-05T13:20:11-07:00">05 Jun 2014</time>
   <div class="newscontent">
@@ -1223,7 +1223,7 @@ The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-5.
 <article class="newsItem">
   <header>
     <div class="newsImage"></div>
-    <h2 class="newstitle"><a id="id2014-05-29-5" href="http://php.net/archive/2014.php#id2014-05-29-5" rel="bookmark" class="bookmark">PHP 5.4.29 Released</a></h2>
+    <h2 class="newstitle"><a id="id2014-05-29-5" href="https://www.php.net/archive/2014.php#id2014-05-29-5" rel="bookmark" class="bookmark">PHP 5.4.29 Released</a></h2>
   </header>
   <time class="newsdate" datetime="2014-05-29T15:53:48-07:00">29 May 2014</time>
   <div class="newscontent">
@@ -1244,7 +1244,7 @@ The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-5.
 <article class="newsItem">
   <header>
     <div class="newsImage"></div>
-    <h2 class="newstitle"><a id="id2014-05-29-3" href="http://php.net/archive/2014.php#id2014-05-29-3" rel="bookmark" class="bookmark">PHP 5.5.13 Released</a></h2>
+    <h2 class="newstitle"><a id="id2014-05-29-3" href="https://www.php.net/archive/2014.php#id2014-05-29-3" rel="bookmark" class="bookmark">PHP 5.5.13 Released</a></h2>
   </header>
   <time class="newsdate" datetime="2014-05-29T09:18:44+00:00">29 May 2014</time>
   <div class="newscontent">
@@ -1362,7 +1362,7 @@ The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-5.
 <article class="newsItem">
   <header>
     <div class="newsImage"></div>
-    <h2 class="newstitle"><a id="id2014-05-27-1" href="http://php.net/archive/2014.php#id2014-05-27-1" rel="bookmark" class="bookmark">PHP Next Generation</a></h2>
+    <h2 class="newstitle"><a id="id2014-05-27-1" href="https://www.php.net/archive/2014.php#id2014-05-27-1" rel="bookmark" class="bookmark">PHP Next Generation</a></h2>
   </header>
   <time class="newsdate" datetime="2014-05-27T17:28:16+00:00">27 May 2014</time>
   <div class="newscontent">
@@ -1381,7 +1381,7 @@ The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-5.
 <article class="newsItem">
   <header>
     <div class="newsImage"></div>
-    <h2 class="newstitle"><a id="id2014-05-15-1" href="http://php.net/archive/2014.php#id2014-05-15-1" rel="bookmark" class="bookmark">PHP 5.6.0beta3 Released</a></h2>
+    <h2 class="newstitle"><a id="id2014-05-15-1" href="https://www.php.net/archive/2014.php#id2014-05-15-1" rel="bookmark" class="bookmark">PHP 5.6.0beta3 Released</a></h2>
   </header>
   <time class="newsdate" datetime="2014-05-15T17:07:04+02:00">15 May 2014</time>
   <div class="newscontent">
@@ -1422,7 +1422,7 @@ The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-5.
 <article class="newsItem">
   <header>
     <div class="newsImage"></div>
-    <h2 class="newstitle"><a id="id2014-05-02-1" href="http://php.net/archive/2014.php#id2014-05-02-1" rel="bookmark" class="bookmark">PHP 5.6.0beta2 Released</a></h2>
+    <h2 class="newstitle"><a id="id2014-05-02-1" href="https://www.php.net/archive/2014.php#id2014-05-02-1" rel="bookmark" class="bookmark">PHP 5.6.0beta2 Released</a></h2>
   </header>
   <time class="newsdate" datetime="2014-05-02T08:42:52+02:00">02 May 2014</time>
   <div class="newscontent">
@@ -1472,7 +1472,7 @@ The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-5.
 <article class="newsItem">
   <header>
     <div class="newsImage"></div>
-    <h2 class="newstitle"><a id="id2014-05-01-1" href="http://php.net/archive/2014.php#id2014-05-01-1" rel="bookmark" class="bookmark">PHP 5.4.28 Released</a></h2>
+    <h2 class="newstitle"><a id="id2014-05-01-1" href="https://www.php.net/archive/2014.php#id2014-05-01-1" rel="bookmark" class="bookmark">PHP 5.4.28 Released</a></h2>
   </header>
   <time class="newsdate" datetime="2014-05-01T22:32:15-07:00">01 May 2014</time>
   <div class="newscontent">
@@ -1493,7 +1493,7 @@ The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-5.
 <article class="newsItem">
   <header>
     <div class="newsImage"></div>
-    <h2 class="newstitle"><a id="id2014-04-30-1" href="http://php.net/archive/2014.php#id2014-04-30-1" rel="bookmark" class="bookmark">PHP 5.5.12 Released</a></h2>
+    <h2 class="newstitle"><a id="id2014-04-30-1" href="https://www.php.net/archive/2014.php#id2014-04-30-1" rel="bookmark" class="bookmark">PHP 5.5.12 Released</a></h2>
   </header>
   <time class="newsdate" datetime="2014-04-30T09:01:48+00:00">30 Apr 2014</time>
   <div class="newscontent">
@@ -1514,7 +1514,7 @@ The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-5.
 <article class="newsItem">
   <header>
     <div class="newsImage"></div>
-    <h2 class="newstitle"><a id="id2014-04-11-1" href="http://php.net/archive/2014.php#id2014-04-11-1" rel="bookmark" class="bookmark">PHP 5.6.0beta1 Released</a></h2>
+    <h2 class="newstitle"><a id="id2014-04-11-1" href="https://www.php.net/archive/2014.php#id2014-04-11-1" rel="bookmark" class="bookmark">PHP 5.6.0beta1 Released</a></h2>
   </header>
   <time class="newsdate" datetime="2014-04-11T13:57:47+02:00">11 Apr 2014</time>
   <div class="newscontent">
@@ -1567,7 +1567,7 @@ The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-5.
 <article class="newsItem">
   <header>
     <div class="newsImage"></div>
-    <h2 class="newstitle"><a id="id2014-04-03-1" href="http://php.net/archive/2014.php#id2014-04-03-1" rel="bookmark" class="bookmark">PHP 5.4.27 Released</a></h2>
+    <h2 class="newstitle"><a id="id2014-04-03-1" href="https://www.php.net/archive/2014.php#id2014-04-03-1" rel="bookmark" class="bookmark">PHP 5.4.27 Released</a></h2>
   </header>
   <time class="newsdate" datetime="2014-04-03T15:54:41-07:00">03 Apr 2014</time>
   <div class="newscontent">
@@ -1589,7 +1589,7 @@ The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-5.
 <article class="newsItem">
   <header>
     <div class="newsImage"></div>
-    <h2 class="newstitle"><a id="id2014-04-02-1" href="http://php.net/archive/2014.php#id2014-04-02-1" rel="bookmark" class="bookmark">PHP 5.5.11 Released</a></h2>
+    <h2 class="newstitle"><a id="id2014-04-02-1" href="https://www.php.net/archive/2014.php#id2014-04-02-1" rel="bookmark" class="bookmark">PHP 5.5.11 Released</a></h2>
   </header>
   <time class="newsdate" datetime="2014-04-02T16:28:21+00:00">02 Apr 2014</time>
   <div class="newscontent">
@@ -1685,7 +1685,7 @@ The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-5.
 <article class="newsItem">
   <header>
     <div class="newsImage"></div>
-    <h2 class="newstitle"><a id="id2014-03-07-1" href="http://php.net/archive/2014.php#id2014-03-07-1" rel="bookmark" class="bookmark">PHP 5.4.26 Released</a></h2>
+    <h2 class="newstitle"><a id="id2014-03-07-1" href="https://www.php.net/archive/2014.php#id2014-03-07-1" rel="bookmark" class="bookmark">PHP 5.4.26 Released</a></h2>
   </header>
   <time class="newsdate" datetime="2014-03-07T07:16:31+02:00">07 Mar 2014</time>
   <div class="newscontent">
@@ -1706,7 +1706,7 @@ The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-5.
 <article class="newsItem">
   <header>
     <div class="newsImage"></div>
-    <h2 class="newstitle"><a id="id2014-03-06-2" href="http://php.net/archive/2014.php#id2014-03-06-2" rel="bookmark" class="bookmark">PHP 5.6.0alpha3 Released</a></h2>
+    <h2 class="newstitle"><a id="id2014-03-06-2" href="https://www.php.net/archive/2014.php#id2014-03-06-2" rel="bookmark" class="bookmark">PHP 5.6.0alpha3 Released</a></h2>
   </header>
   <time class="newsdate" datetime="2014-03-06T22:42:01+01:00">06 Mar 2014</time>
   <div class="newscontent">
@@ -1759,7 +1759,7 @@ The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-5.
 <article class="newsItem">
   <header>
     <div class="newsImage"></div>
-    <h2 class="newstitle"><a id="id2014-03-06-1" href="http://php.net/archive/2014.php#id2014-03-06-1" rel="bookmark" class="bookmark">PHP 5.5.10 Released</a></h2>
+    <h2 class="newstitle"><a id="id2014-03-06-1" href="https://www.php.net/archive/2014.php#id2014-03-06-1" rel="bookmark" class="bookmark">PHP 5.5.10 Released</a></h2>
   </header>
   <time class="newsdate" datetime="2014-03-06T08:58:58+00:00">06 Mar 2014</time>
   <div class="newscontent">
@@ -1781,7 +1781,7 @@ The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-5.
 <article class="newsItem">
   <header>
     <div class="newsImage"></div>
-    <h2 class="newstitle"><a id="id2014-02-13-1" href="http://php.net/archive/2014.php#id2014-02-13-1" rel="bookmark" class="bookmark">PHP 5.6.0alpha2 Released</a></h2>
+    <h2 class="newstitle"><a id="id2014-02-13-1" href="https://www.php.net/archive/2014.php#id2014-02-13-1" rel="bookmark" class="bookmark">PHP 5.6.0alpha2 Released</a></h2>
   </header>
   <time class="newsdate" datetime="2014-02-13T23:00:39+01:00">13 Feb 2014</time>
   <div class="newscontent">
@@ -1831,7 +1831,7 @@ The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-5.
 <article class="newsItem">
   <header>
     <div class="newsImage"></div>
-    <h2 class="newstitle"><a id="id2014-02-06-1" href="http://php.net/archive/2014.php#id2014-02-06-1" rel="bookmark" class="bookmark">PHP 5.4.25 Released</a></h2>
+    <h2 class="newstitle"><a id="id2014-02-06-1" href="https://www.php.net/archive/2014.php#id2014-02-06-1" rel="bookmark" class="bookmark">PHP 5.4.25 Released</a></h2>
   </header>
   <time class="newsdate" datetime="2014-02-06T21:14:31-08:00">06 Feb 2014</time>
   <div class="newscontent">
@@ -1852,7 +1852,7 @@ The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-5.
 <article class="newsItem">
   <header>
     <div class="newsImage"></div>
-    <h2 class="newstitle"><a id="id2014-02-05-4" href="http://php.net/archive/2014.php#id2014-02-05-1" rel="bookmark" class="bookmark">PHP 5.5.9 Released</a></h2>
+    <h2 class="newstitle"><a id="id2014-02-05-4" href="https://www.php.net/archive/2014.php#id2014-02-05-1" rel="bookmark" class="bookmark">PHP 5.5.9 Released</a></h2>
   </header>
   <time class="newsdate" datetime="2014-02-05T10:45:56+00:00">05 Feb 2014</time>
   <div class="newscontent">
@@ -1926,7 +1926,7 @@ The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-5.
 <article class="newsItem">
   <header>
     <div class="newsImage"></div>
-    <h2 class="newstitle"><a id="id2014-01-23-1" href="http://php.net/archive/2014.php#id2014-01-23-1" rel="bookmark" class="bookmark">PHP 5.6.0alpha1 Released</a></h2>
+    <h2 class="newstitle"><a id="id2014-01-23-1" href="https://www.php.net/archive/2014.php#id2014-01-23-1" rel="bookmark" class="bookmark">PHP 5.6.0alpha1 Released</a></h2>
   </header>
   <time class="newsdate" datetime="2014-01-23T23:24:10+01:00">23 Jan 2014</time>
   <div class="newscontent">
@@ -2054,7 +2054,7 @@ The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-5.
 <article class="newsItem">
   <header>
     <div class="newsImage"></div>
-    <h2 class="newstitle"><a id="id2014-01-10-2" href="http://php.net/archive/2014.php#id2014-01-10-2" rel="bookmark" class="bookmark">PHP 5.4.24 Released</a></h2>
+    <h2 class="newstitle"><a id="id2014-01-10-2" href="https://www.php.net/archive/2014.php#id2014-01-10-2" rel="bookmark" class="bookmark">PHP 5.4.24 Released</a></h2>
   </header>
   <time class="newsdate" datetime="2014-01-10T09:22:38-08:00">10 Jan 2014</time>
   <div class="newscontent">
@@ -2074,7 +2074,7 @@ The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-5.
 <article class="newsItem">
   <header>
     <div class="newsImage"></div>
-    <h2 class="newstitle"><a id="id2014-01-10-1" href="http://php.net/archive/2014.php#id2014-01-10-1" rel="bookmark" class="bookmark">PHP 5.5.8 Released</a></h2>
+    <h2 class="newstitle"><a id="id2014-01-10-1" href="https://www.php.net/archive/2014.php#id2014-01-10-1" rel="bookmark" class="bookmark">PHP 5.5.8 Released</a></h2>
   </header>
   <time class="newsdate" datetime="2014-01-10T09:24:43+00:00">10 Jan 2014</time>
   <div class="newscontent">

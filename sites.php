@@ -12,7 +12,7 @@ site_header("A Tourist's Guide", array("current" => "help"));
  Come with me, I'll show you.
 </p>
 
-<h2 id="www" class="content-header"><a href="http://php.net/">php.net</a>: Main Website</h2>
+<h2 id="www" class="content-header"><a href="https://www.php.net/">php.net</a>: Main Website</h2>
 
 <div class="content-box">
 <p>

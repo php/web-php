@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom" xmlns:php="http://php.net/ns/news">
+<feed xmlns="http://www.w3.org/2005/Atom" xmlns:php="https://www.php.net/ns/news">
   <title>PHP.net news &amp; announcements</title>
   <link href="https://www.php.net/feed.atom" rel="self"/>
   <icon>/images/news/php-logo.gif</icon>
   <updated>2008-12-10T19:49:46+01:00</updated>
-  <id>http://php.net/archive/2008.php</id>
+  <id>https://www.php.net/archive/2008.php</id>
   <author>
     <name>Webmaster</name>
-    <uri>http://php.net/contact</uri>
+    <uri>https://www.php.net/contact</uri>
     <email>php-webmaster@lists.php.net</email>
   </author>
   <entry>
@@ -130,11 +130,11 @@
       <div xmlns="http://www.w3.org/1999/xhtml">
         <p>The PHP development team is proud to announce the <a href="http://qa.php.net/">third alpha release</a>
         of the upcoming PHP 5.3.0 minor version update of PHP.
-        Several new features have already been documented in the <a href="http://php.net/docs.php">official documentation</a>,
+        Several new features have already been documented in the <a href="https://www.php.net/docs.php">official documentation</a>,
         others are listed on the <a href="http://wiki.php.net/doc/scratchpad/upgrade/53">wiki</a>
         in preparation of getting documented. It is imperative that more people
         join the effort to complete the documentation for PHP 5.3.0.
-        Please also review the <a href="http://php.net/php5news">NEWS</a> file.</p>
+        Please also review the <a href="https://www.php.net/php5news">NEWS</a> file.</p>
         <strong>THIS IS A DEVELOPMENT PREVIEW - DO NOT USE IT IN PRODUCTION!</strong>
         <p>The purpose of this alpha release is to encourage users to not only actively
          participate in identifying bugs, but also in ensuring that all new features or
@@ -144,7 +144,7 @@
         <p>There have been a great number of other additions and improvements since the last alpha,
         but here is a short overview of the most important changes:</p>
         <ul>
-          <li><a href="http://php.net/language.namespaces">Namespaces</a> (documentation has been updated to the current state)</li>
+          <li><a href="https://www.php.net/language.namespaces">Namespaces</a> (documentation has been updated to the current state)</li>
           <li>
             <a href="http://wiki.php.net/rfc/rounding">Rounding behavior</a>
           </li>
@@ -185,7 +185,7 @@
     <id>https://www.php.net/archive/2008.php#id2008-11-15-1</id>
     <published>2008-11-15T21:56:55-07:00</published>
     <updated>2008-11-15T21:56:55-07:00</updated>
-    <php:finalTeaserDate xmlns="http://php.net/ns/news">2008-12-09</php:finalTeaserDate>
+    <php:finalTeaserDate xmlns="https://www.php.net/ns/news">2008-12-09</php:finalTeaserDate>
     <php:newsImage link="http://www.afup.org/" title="Forum AFUP Paris 2008">afup2008.png</php:newsImage>
     <category term="conferences" label="Conference announcement"/>
     <link href="https://www.php.net/conferences/index.php#id2008-11-15-1" rel="alternate" type="text/html"/>
@@ -209,10 +209,10 @@
     <id>https://www.php.net/archive/2008.php#id2008-11-04-2</id>
     <published>2008-11-04T12:55:09+00:00</published>
     <updated>2008-11-04T12:55:09+00:00</updated>
-    <php:finalTeaserDate xmlns="http://php.net/ns/news">2008-11-22</php:finalTeaserDate>
+    <php:finalTeaserDate xmlns="https://www.php.net/ns/news">2008-11-22</php:finalTeaserDate>
     <category term="conferences" label="Conference announcement"/>
     <link href="https://www.php.net/conferences/index.php#id2008-11-04-2" rel="alternate" type="text/html"/>
-    <php:newsImage xmlns="http://php.net/ns/news" link="http://conference.phpnw.org.uk" title="PHPNW08 logo">phpnw08_logo.jpg</php:newsImage>
+    <php:newsImage xmlns="https://www.php.net/ns/news" link="http://conference.phpnw.org.uk" title="PHPNW08 logo">phpnw08_logo.jpg</php:newsImage>
     <link href="http://conference.phpnw.org.uk" rel="via" type="text/html"/>
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml">
@@ -251,7 +251,7 @@
     <id>https://www.php.net/archive/2008.php#id2008-11-04-1</id>
     <published>2008-11-04T00:04:17-08:00</published>
     <updated>2008-11-04T00:04:17-08:00</updated>
-    <php:finalTeaserDate xmlns="http://php.net/ns/news">2008-11-30</php:finalTeaserDate>
+    <php:finalTeaserDate xmlns="https://www.php.net/ns/news">2008-11-30</php:finalTeaserDate>
     <category term="cfp" label="Call for Papers"/>
     <link href="https://www.php.net/conferences/index.php#id2008-11-04-1" rel="alternate" type="text/html"/>
     <link href="https://www.php.net/archive/2008.php#id2008-11-04-1" rel="via" type="text/html"/>
@@ -283,7 +283,7 @@
     <id>https://www.php.net/archive/2008.php#id2008-09-16-1</id>
     <published>2008-09-16T10:12:12+02:00</published>
     <updated>2008-09-17T11:35:47+02:00</updated>
-    <php:finalTeaserDate xmlns="http://php.net/ns/news">2008-10-19</php:finalTeaserDate>
+    <php:finalTeaserDate xmlns="https://www.php.net/ns/news">2008-10-19</php:finalTeaserDate>
     <category term="cfp" label="Call for Papers"/>
     <link href="https://www.php.net/conferences/index.php#id2008-09-16-1" rel="alternate" type="text/html"/>
     <link href="https://www.php.net/archive/2008.php#id2008-09-16-1" rel="via" type="text/html"/>
@@ -309,10 +309,10 @@
     <id>https://www.php.net/archive/2008.php#id2008-09-10-1</id>
     <published>2008-09-10T15:08:49+02:00</published>
     <updated>2008-09-10T15:08:49+02:00</updated>
-    <php:finalTeaserDate xmlns="http://php.net/ns/news">2008-09-27</php:finalTeaserDate>
+    <php:finalTeaserDate xmlns="https://www.php.net/ns/news">2008-09-27</php:finalTeaserDate>
     <category term="conferences" label="Conference announcement"/>
     <link href="https://www.php.net/conferences/index.php#id2008-09-10-1" rel="alternate" type="text/html"/>
-    <php:newsImage xmlns="http://php.net/ns/news" link="http://phpconference.es/" title="Barcelona PHP Conference">PHPBarcelonaConference003.png</php:newsImage>
+    <php:newsImage xmlns="https://www.php.net/ns/news" link="http://phpconference.es/" title="Barcelona PHP Conference">PHPBarcelonaConference003.png</php:newsImage>
     <link href="http://phpconference.es/" rel="via" type="text/html"/>
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml">
@@ -349,10 +349,10 @@
     <id>https://www.php.net/archive/2008.php#id2008-09-08-1</id>
     <published>2008-09-08T12:31:08+02:00</published>
     <updated>2008-09-08T12:31:08+02:00</updated>
-    <php:finalTeaserDate xmlns="http://php.net/ns/news">2008-10-27</php:finalTeaserDate>
+    <php:finalTeaserDate xmlns="https://www.php.net/ns/news">2008-10-27</php:finalTeaserDate>
     <category term="conferences" label="Conference announcement"/>
     <link href="https://www.php.net/conferences/index.php#id2008-09-08-1" rel="alternate" type="text/html"/>
-    <php:newsImage xmlns="http://php.net/ns/news" link="http://www.phpconference.com/" title="International PHP Conference 2008">icp08.jpg</php:newsImage>
+    <php:newsImage xmlns="https://www.php.net/ns/news" link="http://www.phpconference.com/" title="International PHP Conference 2008">icp08.jpg</php:newsImage>
     <link href="http://www.phpconference.com/" rel="via" type="text/html"/>
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml">
@@ -396,7 +396,7 @@
     <title>php|works &amp; PyWorks 2008 - Atlanta</title>
     <link href="https://www.php.net/conferences/index.php#2008-09-03-1" rel="alternate" type="text/html"/>
     <link href="http://phpworks.mtacon.com/" rel="via" type="text/html"/>
-    <id>http://php.net/archive/2008.php#2008-09-03-1</id>
+    <id>https://www.php.net/archive/2008.php#2008-09-03-1</id>
     <published>2008-09-03T11:49:33+02:00</published>
     <updated>2008-09-03T11:49:33+02:00</updated>
     <category term="conferences" label="Conference announcement"/>
@@ -463,7 +463,7 @@
     <link href="https://www.php.net/archive/2008.php#id2008-08-01-1" rel="via" type="text/html"/>
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml">
-        <p>The PHP development team is proud to announce the <a href="http://qa.php.net/">first alpha release</a> of the upcoming minor version update of PHP. <a href="http://windows.php.net/download/">Windows binaries</a> will be available starting with alpha2 (intermediate snapshots available at <a href="http://snaps.php.net">snaps.php.net</a>). The new version PHP 5.3 is expected to improve stability and performance as well as add new language syntax and extensions. Several new features have already been documented in the <a href="http://php.net/docs.php">official documentation</a>, others are listed on the <a href="http://wiki.php.net/doc/scratchpad/upgrade/53">wiki</a> in preparation of getting documented. Please also review the <a href="http://php.net/php5news">NEWS</a> file.</p>
+        <p>The PHP development team is proud to announce the <a href="http://qa.php.net/">first alpha release</a> of the upcoming minor version update of PHP. <a href="http://windows.php.net/download/">Windows binaries</a> will be available starting with alpha2 (intermediate snapshots available at <a href="http://snaps.php.net">snaps.php.net</a>). The new version PHP 5.3 is expected to improve stability and performance as well as add new language syntax and extensions. Several new features have already been documented in the <a href="https://www.php.net/docs.php">official documentation</a>, others are listed on the <a href="http://wiki.php.net/doc/scratchpad/upgrade/53">wiki</a> in preparation of getting documented. Please also review the <a href="https://www.php.net/php5news">NEWS</a> file.</p>
         <strong>THIS IS A DEVELOPMENT PREVIEW - DO NOT USE IT IN PRODUCTION!</strong>
         <p>The purpose of this alpha release is to encourage users to not only actively
          participate in identifying bugs, but also in ensuring that all new features or
@@ -472,16 +472,16 @@
          or the <a href="https://bugs.php.net">bug tracker</a>.</p>
         <p>There have been a great number of other additions and improvements, but here is a short overview of the most important changes:</p>
         <ul>
-          <li><a href="http://php.net/language.namespaces">Namespaces</a> (documentation maybe out dated)</li>
-          <li><a href="http://php.net/oop5.late-static-bindings">Late static binding</a> and <a href="http://php.net/language.oop5.overloading">__callStatic</a></li>
+          <li><a href="https://www.php.net/language.namespaces">Namespaces</a> (documentation maybe out dated)</li>
+          <li><a href="https://www.php.net/oop5.late-static-bindings">Late static binding</a> and <a href="https://www.php.net/language.oop5.overloading">__callStatic</a></li>
           <li>
             <a href="http://wiki.php.net/rfc/closures">Lambda functions and closures</a>
           </li>
-          <li>Addition of the <a href="http://php.net/book.intl">intl</a>, <a href="http://php.net/book.phar">phar</a> (phar is scheduled for some more work a head of alpha2), <a href="http://php.net/book.fileinfo">fileinfo </a> and <a href="http://php.net/book.sqlite3">sqlite3</a> extensions</li>
+          <li>Addition of the <a href="https://www.php.net/book.intl">intl</a>, <a href="https://www.php.net/book.phar">phar</a> (phar is scheduled for some more work a head of alpha2), <a href="https://www.php.net/book.fileinfo">fileinfo </a> and <a href="https://www.php.net/book.sqlite3">sqlite3</a> extensions</li>
           <li>Optional cyclic garbage collection</li>
           <li>Optional support for the <a href="http://forge.mysql.com/wiki/PHP_MYSQLND">MySQLnd</a> replacement driver for libmysql</li>
           <li>Windows older than Windows 2000 (Windows 98, NT4, etc.) are not supported anymore (<a href="http://wiki.php.net/internals/windows/releasenotes">details</a>)</li>
-          <li>New syntax features like <a href="http://php.net/language.types.string#language.types.string.syntax.nowdoc">NOWDOC</a>, limited GOTO, ternary short cut "?:"</li>
+          <li>New syntax features like <a href="https://www.php.net/language.types.string#language.types.string.syntax.nowdoc">NOWDOC</a>, limited GOTO, ternary short cut "?:"</li>
         </ul>
         <p>Several under the hood changes also require in depth testing with existing applications to ensure that any backwards compatibility breaks are minimized. This is especially important for users that require the undocumented Zend engine multibyte support.</p>
         <p>The current <a href="http://wiki.php.net/todo/php53">release plan</a> states that there will be alpha/beta/RC releases in 2-3 week intervals with an expected stable release of PHP 5.3 between mid September and mid October of 2008.</p>
@@ -563,10 +563,10 @@
     <id>https://www.php.net/archive/2008.php#id2008-07-13-1</id>
     <published>2008-07-13T18:23:14+02:00</published>
     <updated>2008-07-13T18:23:14+02:00</updated>
-    <php:finalTeaserDate xmlns="http://php.net/ns/news">2008-09-15</php:finalTeaserDate>
+    <php:finalTeaserDate xmlns="https://www.php.net/ns/news">2008-09-15</php:finalTeaserDate>
     <category term="conferences" label="Conference announcement"/>
     <link href="https://www.php.net/conferences/index.php#id2008-07-13-1" rel="alternate" type="text/html"/>
-    <php:newsImage xmlns="http://php.net/ns/news" link="http://zendcon.com/" title="ZendCon 2008">zlogo.gif</php:newsImage>
+    <php:newsImage xmlns="https://www.php.net/ns/news" link="http://zendcon.com/" title="ZendCon 2008">zlogo.gif</php:newsImage>
     <link href="http://zendcon.com/" rel="via" type="text/html"/>
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml">
@@ -587,10 +587,10 @@
     <id>https://www.php.net/archive/2008.php#id2008-07-10-1</id>
     <published>2008-07-10T22:29:53+02:00</published>
     <updated>2008-07-10T22:29:53+02:00</updated>
-    <php:finalTeaserDate xmlns="http://php.net/ns/news">2008-07-25</php:finalTeaserDate>
+    <php:finalTeaserDate xmlns="https://www.php.net/ns/news">2008-07-25</php:finalTeaserDate>
     <category term="cfp" label="Call for Papers"/>
     <link href="https://www.php.net/conferences/index.php#id2008-07-10-1" rel="alternate" type="text/html"/>
-    <php:newsImage xmlns="http://php.net/ns/news" link="http://phpworks.mtacon.com/c/p/phpworks,cfp" title="php|works">phpworks2008.png</php:newsImage>
+    <php:newsImage xmlns="https://www.php.net/ns/news" link="http://phpworks.mtacon.com/c/p/phpworks,cfp" title="php|works">phpworks2008.png</php:newsImage>
     <link href="http://phpworks.mtacon.com/c/p/phpworks,cfp" rel="via" type="text/html"/>
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml">
@@ -606,7 +606,7 @@
     <id>https://www.php.net/archive/2008.php#id2008-05-17-1</id>
     <published>2008-05-17T16:50:56+02:00</published>
     <updated>2008-05-17T16:50:56+02:00</updated>
-    <php:finalTeaserDate xmlns="http://php.net/ns/news">2008-06-30</php:finalTeaserDate>
+    <php:finalTeaserDate xmlns="https://www.php.net/ns/news">2008-06-30</php:finalTeaserDate>
     <category term="cfp" label="Call for Papers"/>
     <link href="https://www.php.net/conferences/index.php#id2008-05-17-1" rel="alternate" type="text/html"/>
     <link href="https://www.php.net/archive/2008.php#id2008-05-17-1" rel="via" type="text/html"/>
@@ -664,7 +664,7 @@
     <id>https://www.php.net/archive/2008.php#id2008-05-13-1</id>
     <published>2008-05-13T11:56:55-07:00</published>
     <updated>2008-05-14T16:19:11-05:00</updated>
-    <php:finalTeaserDate xmlns="http://php.net/ns/news">2008-06-01</php:finalTeaserDate>
+    <php:finalTeaserDate xmlns="https://www.php.net/ns/news">2008-06-01</php:finalTeaserDate>
     <php:newsImage link="http://www.afup.org/" title="elePHPants">elephpants.jpg</php:newsImage>
     <category term="cfp" label="Call for Papers"/>
     <link href="https://www.php.net/conferences/index.php#id2008-05-13-1" rel="alternate" type="text/html"/>
@@ -797,7 +797,7 @@ and join the <a href="http://www.flickr.com/photos/tags/elephpant/">world of blu
     <id>https://www.php.net/archive/2008.php#id2008-04-13-2</id>
     <published>2008-04-13T21:56:55-07:00</published>
     <updated>2008-04-14T07:35:49+02:00</updated>
-    <php:finalTeaserDate xmlns="http://php.net/ns/news">2008-05-11</php:finalTeaserDate>
+    <php:finalTeaserDate xmlns="https://www.php.net/ns/news">2008-05-11</php:finalTeaserDate>
     <php:newsImage link="http://www.afup.org/" title="Forum AFUP Paris 2008">afup2008.png</php:newsImage>
     <category term="cfp" label="Call for Papers"/>
     <link href="https://www.php.net/conferences/index.php#id2008-04-13-2" rel="alternate" type="text/html"/>
@@ -828,7 +828,7 @@ and join the <a href="http://www.flickr.com/photos/tags/elephpant/">world of blu
     <title>PHP DC conference 2008</title>
     <link href="https://www.php.net/conferences/index.php#id2008-04-13-1" rel="alternate" type="text/html"/>
     <link href="http://www.dcphpconference.com/" rel="via" type="text/html"/>
-    <id>http://php.net/archive/2008.php#id2008-04-13-1</id>
+    <id>https://www.php.net/archive/2008.php#id2008-04-13-1</id>
     <published>2008-04-13T12:00:00-05:00</published>
     <updated>2008-04-13T12:00:00-05:00</updated>
     <category term="conferences" label="Conference announcement"/>
@@ -863,7 +863,7 @@ and join the <a href="http://www.flickr.com/photos/tags/elephpant/">world of blu
   </entry>
   <entry>
     <title>TestFest 2008</title>
-    <id>http://php.net/archive/2008.php#2008-03-30-1</id>
+    <id>https://www.php.net/archive/2008.php#2008-03-30-1</id>
     <published>2008-03-30T21:06:55+01:00</published>
     <updated>2008-03-30T21:06:55+01:00</updated>
     <category term="frontpage" label="PHP.net frontpage news"/>
@@ -898,10 +898,10 @@ and join the <a href="http://www.flickr.com/photos/tags/elephpant/">world of blu
     <id>https://www.php.net/archive/2008.php#id2008-03-20-1</id>
     <published>2008-03-20T20:24:29+01:00</published>
     <updated>2008-03-20T20:24:29+01:00</updated>
-    <php:finalTeaserDate xmlns="http://php.net/ns/news">2008-06-02</php:finalTeaserDate>
+    <php:finalTeaserDate xmlns="https://www.php.net/ns/news">2008-06-02</php:finalTeaserDate>
     <category term="cfp" label="Call for Papers"/>
     <link href="https://www.php.net/conferences/index.php#id2008-03-20-1" rel="alternate" type="text/html"/>
-    <php:newsImage xmlns="http://php.net/ns/news" link="http://froscon.de/" title="The Free and Open Source Conference">froscon.2008.png</php:newsImage>
+    <php:newsImage xmlns="https://www.php.net/ns/news" link="http://froscon.de/" title="The Free and Open Source Conference">froscon.2008.png</php:newsImage>
     <link href="http://froscon.de/" rel="via" type="text/html"/>
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml">
@@ -912,7 +912,7 @@ and join the <a href="http://www.flickr.com/photos/tags/elephpant/">world of blu
   </entry>
   <entry>
     <title>Google Summer of Code 2008</title>
-    <id>http://php.net/archive/2008.php#2008-03-19-1</id>
+    <id>https://www.php.net/archive/2008.php#2008-03-19-1</id>
     <published>2008-03-19T13:53:55-04:00</published>
     <updated>2008-03-19T13:53:55-04:00</updated>
     <category term="frontpage" label="PHP.net frontpage news"/>
@@ -930,7 +930,7 @@ and join the <a href="http://www.flickr.com/photos/tags/elephpant/">world of blu
     <title>php|tek 2008: Chicago</title>
     <link href="https://www.php.net/conferences/index.php#2008-02-19-1" rel="alternate" type="text/html"/>
     <link href="http://tek.phparch.com/" rel="via" type="text/html"/>
-    <id>http://php.net/archive/2008.php#2008-02-19-1</id>
+    <id>https://www.php.net/archive/2008.php#2008-02-19-1</id>
     <published>2008-02-19T11:45:00-05:00</published>
     <updated>2008-02-28T17:50:00-05:00</updated>
     <category term="conferences" label="Conference announcement"/>
@@ -955,7 +955,7 @@ For the past two years, php|architect's spring conference has sold out <em>weeks
     <title>PHP Québec conference 2008</title>
     <link href="https://www.php.net/conferences/index.php#2008-02-06-1" rel="alternate" type="text/html"/>
     <link href="http://conf.phpquebec.com/en/conf2008/" rel="via" type="text/html"/>
-    <id>http://php.net/archive/2008.php#2008-02-06-1</id>
+    <id>https://www.php.net/archive/2008.php#2008-02-06-1</id>
     <published>2008-02-06T19:23:51+01:00</published>
     <updated>2008-02-06T19:23:51+01:00</updated>
     <category term="conferences" label="Conference announcement"/>
@@ -984,13 +984,13 @@ visit the website: <a href="http://conf.phpquebec.com">http://conf.phpquebec.com
   </entry>
   <entry>
     <title>phplondon conference 2008</title>
-    <id>http://php.net/archive/2008.php#2008-01-10-1</id>
+    <id>https://www.php.net/archive/2008.php#2008-01-10-1</id>
     <published>2008-01-10T16:23:20+01:00</published>
     <updated>2008-01-10T16:23:20+01:00</updated>
-    <php:finalTeaserDate xmlns="http://php.net/ns/news">2008-02-29</php:finalTeaserDate>
+    <php:finalTeaserDate xmlns="https://www.php.net/ns/news">2008-02-29</php:finalTeaserDate>
     <category term="conferences" label="Conference announcement"/>
     <link href="https://www.php.net/conferences/index.php#2008-01-10-1" rel="alternate" type="text/html"/>
-    <php:newsImage xmlns="http://php.net/ns/news" link="http://www.phpconference.co.uk/" title="PHP London Conference 08">phplondon2008.png</php:newsImage>
+    <php:newsImage xmlns="https://www.php.net/ns/news" link="http://www.phpconference.co.uk/" title="PHP London Conference 08">phplondon2008.png</php:newsImage>
     <link href="http://www.phpconference.co.uk/" rel="via" type="text/html"/>
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml">
@@ -1005,7 +1005,7 @@ visit the website: <a href="http://conf.phpquebec.com">http://conf.phpquebec.com
   </entry>
   <entry>
     <title>PHP 4.4.8 Released</title>
-    <id>http://php.net/archive/2008.php#2008-01-03-1</id>
+    <id>https://www.php.net/archive/2008.php#2008-01-03-1</id>
     <published>2008-01-03T10:13:50+01:00</published>
     <updated>2008-01-03T10:13:50+01:00</updated>
     <category term="frontpage" label="PHP.net frontpage news"/>
@@ -1043,13 +1043,13 @@ releases to address security issues could be made until 2008-08-08.
   </entry>
   <entry>
     <title>DC PHP Conference 2008: Call For Papers Open</title>
-    <id>http://php.net/archive/2008.php#2008-01-03-2</id>
+    <id>https://www.php.net/archive/2008.php#2008-01-03-2</id>
     <published>2008-01-03T13:57:46+01:00</published>
     <updated>2008-01-03T13:57:46+01:00</updated>
-    <php:finalTeaserDate xmlns="http://php.net/ns/news">2008-03-15</php:finalTeaserDate>
+    <php:finalTeaserDate xmlns="https://www.php.net/ns/news">2008-03-15</php:finalTeaserDate>
     <category term="cfp" label="Call for Papers"/>
     <link href="https://www.php.net/conferences/index.php#2008-01-03-2" rel="alternate" type="text/html"/>
-    <php:newsImage xmlns="http://php.net/ns/news" link="http://dcphpconference.com/" title="DC PHP Conference 2008">dcphpconference.2008.png</php:newsImage>
+    <php:newsImage xmlns="https://www.php.net/ns/news" link="http://dcphpconference.com/" title="DC PHP Conference 2008">dcphpconference.2008.png</php:newsImage>
     <link href="http://dcphpconference.com/" rel="via" type="text/html"/>
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml">

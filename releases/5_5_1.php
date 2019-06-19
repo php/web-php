@@ -7,7 +7,7 @@ site_header("PHP 5.5.1 Release Announcement");
 <h1>PHP 5.5.1 Release Announcement</h1>
 <p>
 The PHP development team is proud to announce the immediate availability
-of PHP <a href="http://php.net/downloads.php#v5.5.1">5.5.1</a>.
+of PHP <a href="https://www.php.net/downloads.php#v5.5.1">5.5.1</a>.
 This release fixes several bugs.
 </p>
 

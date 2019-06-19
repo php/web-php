@@ -18,7 +18,7 @@ site_header("PHP 5.6.40 Release Announcement");
      The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-5.php#5.6.40">ChangeLog</a>.
      </p>
 
-     <p>Please note that according to the <a href="http://php.net/supported-versions.php">PHP version
+     <p>Please note that according to the <a href="https://www.php.net/supported-versions.php">PHP version
 support timelines</a>,
         PHP 5.6.40 is the last scheduled release of PHP 5.6 branch. There may be additional release if we
 discover
