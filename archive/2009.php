@@ -349,7 +349,7 @@ site_header("News Archive - 2009", array("cache" => true));
       URL to feed to your svn client is http://svn.php.net/repository.
      </p>
      <p>
-      There is also a <a href="http://github.com/php">github mirror</a>.  Please
+      There is also a <a href="https://github.com/php">github mirror</a>.  Please
       use that instead of trying to do a full git clone from the svn repository.  See
       the instructions at <a href="https://wiki.php.net/vcs/svnfaq#git">wiki.php.net/vcs/svnfaq#git</a>
      </p>
