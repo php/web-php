@@ -1,6 +1,6 @@
 ## Local development
 
-This is the git repo for the official www.php.net website.
+This is the git repo for the official [www.php.net](https://www.php.net) website.
 
 To setup a local mirror of the website:
 
