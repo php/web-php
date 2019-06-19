@@ -85,7 +85,7 @@ foreach ($ACTIVE_ONLINE_LANGUAGES as $langcode => $langname) {
   is hosted on the PHP-GTK website.
  </li>
  <li>
-  <a href="http://pear.php.net/manual/">Documentation of PEAR and the various
+  <a href="https://pear.php.net/manual/">Documentation of PEAR and the various
   packages</a> can be found on a separate server.
  </li>
  <li>

@@ -457,7 +457,7 @@ $external_redirects = array(
     "php72news"   => "https://git.php.net/?p=php-src.git;a=blob_plain;f=NEWS;hb=refs/heads/PHP-7.2",
     "php73news"   => "https://git.php.net/?p=php-src.git;a=blob_plain;f=NEWS;hb=refs/heads/PHP-7.3",
     "phptrunknews"=> "https://git.php.net/?p=php-src.git;a=blob_plain;f=NEWS;hb=refs/heads/master",
-    "pear"        => "http://pear.php.net/",
+    "pear"        => "https://pear.php.net/",
     "bugs"        => "https://bugs.php.net/",
     "bugstats"    => "https://bugs.php.net/stats.php",
     "phpdochowto" => "http://doc.php.net/tutorial/",

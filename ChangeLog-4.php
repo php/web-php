@@ -1265,7 +1265,7 @@ More information on this release on <a href="/releases.php#4.3.1">our Releases p
   <li>sapi/fhttpd</li>
   </ul>
 </li>
-<li>Moved extensions to PECL (http://pear.php.net/): (James, Derick)
+<li>Moved extensions to PECL (https://pear.php.net/): (James, Derick)
   <ul>
   <li>ext/vpopmail</li>
   <li>ext/cybermut</li>

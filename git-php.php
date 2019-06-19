@@ -283,8 +283,8 @@ EOT;
 
 <p>
  If you have a new PEAR package you wish to contribute, propose it
- through the <a href="http://pear.php.net/pepr/">PEPR system</a> on
- <a href="http://pear.php.net/">the PEAR website</a>. If you have a new PECL
+ through the <a href="https://pear.php.net/pepr/">PEPR system</a> on
+ <a href="https://pear.php.net/">the PEAR website</a>. If you have a new PECL
  extension you wish to contribute, bring it up on the appropriate
  <a href="http://pecl.php.net/support.php">PECL mailing list</a> first.
 </p>

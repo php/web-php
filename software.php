@@ -18,7 +18,7 @@ site_header("PHP Software", array("current" => "help"));
 </p>
 <p>
  <?php echo make_image("pear-icon.png", $alt = "pear.php.net", "left") ?>&nbsp;
- <a href="http://pear.php.net/">pear.php.net</a><br>
+ <a href="https://pear.php.net/">pear.php.net</a><br>
  &nbsp;The PEAR project where you can find reusable components for PHP .<br clear="left">
 </p>
 <p>
