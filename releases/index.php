@@ -112,7 +112,7 @@ $SIDEBAR_DATA = '
 </p>
 
 <div class="panel">
- <a href="http://museum.php.net/">PHP Museum</a>
+ <a href="https://museum.php.net/">PHP Museum</a>
 </div>
 
 <div class="panel">
@@ -202,10 +202,10 @@ function mk_rel($major, $ver, $date, $announcement, $source, $windows, $museum) 
 			if (!isset($src["filename"])) {
 				continue;
 			}
-			printf('<a href="http://museum.php.net/php%d/%s">%s</a>'."\n", $major, $src["filename"], $src["name"]);
+			printf('<a href="https://museum.php.net/php%d/%s">%s</a>'."\n", $major, $src["filename"], $src["name"]);
 		}
 		foreach($windows as $src) {
-			printf('<a href="http://museum.php.net/%s/%s">%s</a>'."\n", ($major == 5 ? "php5" : "win32"), $src["filename"], $src["name"]);
+			printf('<a href="https://museum.php.net/%s/%s">%s</a>'."\n", ($major == 5 ? "php5" : "win32"), $src["filename"], $src["name"]);
 		}
 	}
 
