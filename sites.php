@@ -231,7 +231,7 @@ XXX: The following sites are offline and should be re-added once they are back o
  has a wiki section and everyone is able to apply for wiki commit access.
 </p>
 
-<h2 id="people" class="content-header"><a href="http://people.php.net/">people.php.net</a>: The PHP Developers Profiles</h2>
+<h2 id="people" class="content-header"><a href="https://people.php.net/">people.php.net</a>: The PHP Developers Profiles</h2>
 
 <p class="content-box">
  A list of the developers behind PHP along with quick profiles for each of them.
