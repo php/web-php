@@ -66,7 +66,7 @@ if (isset($_POST['maillist'])) {
 
         // Get in contact with master server to [un]subscribe the user
         $result = posttohost(
-            "http://master.php.net/entry/subscribe.php",
+            "https://master.php.net/entry/subscribe.php",
             array(
                 "request"  => $request,
                 "email"    => $_POST['email'],
