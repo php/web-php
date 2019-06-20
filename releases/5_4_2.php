@@ -58,7 +58,7 @@ version into account.</p>
 
 <p>For source downloads of PHP 5.4.2 please visit
 our <a href="/downloads.php">downloads page</a>, Windows binaries can be found
-on <a href="http://windows.php.net/download/">windows.php.net/download/</a>. A
+on <a href="https://windows.php.net/download/">windows.php.net/download/</a>. A
 <a href="/ChangeLog-5.php#5.4.2">ChangeLog</a> exists.</p>
 
 <?php site_footer(); ?>

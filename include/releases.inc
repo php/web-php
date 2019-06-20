@@ -5532,7 +5532,7 @@ $OLDRELEASES = array (
         ),
         3 => 
         array (
-          'link' => 'http://windows.php.net/download/#php-5.5',
+          'link' => 'https://windows.php.net/download/#php-5.5',
           'name' => 'Windows 5.5.6 binaries and source',
         ),
       ),
@@ -5570,7 +5570,7 @@ $OLDRELEASES = array (
         ),
         3 => 
         array (
-          'link' => 'http://windows.php.net/download/#php-5.5',
+          'link' => 'https://windows.php.net/download/#php-5.5',
           'name' => 'Windows 5.5.5 binaries and source',
         ),
       ),
@@ -5608,7 +5608,7 @@ $OLDRELEASES = array (
         ),
         3 => 
         array (
-          'link' => 'http://windows.php.net/download/#php-5.5',
+          'link' => 'https://windows.php.net/download/#php-5.5',
           'name' => 'Windows 5.5.4 binaries and source',
         ),
       ),
@@ -5646,7 +5646,7 @@ $OLDRELEASES = array (
         ),
         3 => 
         array (
-          'link' => 'http://windows.php.net/download/#php-5.5',
+          'link' => 'https://windows.php.net/download/#php-5.5',
           'name' => 'Windows 5.5.3 binaries and source',
         ),
       ),
@@ -5684,7 +5684,7 @@ $OLDRELEASES = array (
         ),
         3 => 
         array (
-          'link' => 'http://windows.php.net/download/#php-5.5',
+          'link' => 'https://windows.php.net/download/#php-5.5',
           'name' => 'Windows 5.5.2 binaries and source',
         ),
       ),
@@ -5722,7 +5722,7 @@ $OLDRELEASES = array (
         ),
         3 => 
         array (
-          'link' => 'http://windows.php.net/download/#php-5.5',
+          'link' => 'https://windows.php.net/download/#php-5.5',
           'name' => 'Windows 5.5.1 binaries and source',
         ),
       ),
@@ -5760,7 +5760,7 @@ $OLDRELEASES = array (
         ),
         3 => 
         array (
-          'link' => 'http://windows.php.net/download/#php-5.5',
+          'link' => 'https://windows.php.net/download/#php-5.5',
           'name' => 'Windows 5.5.0 binaries and source',
         ),
       ),
@@ -5791,7 +5791,7 @@ $OLDRELEASES = array (
         ),
         2 => 
         array (
-          'link' => 'http://windows.php.net/download/#php-5.4',
+          'link' => 'https://windows.php.net/download/#php-5.4',
           'name' => 'Windows 5.4.45 binaries and source',
         ),
       ),
@@ -5822,7 +5822,7 @@ $OLDRELEASES = array (
         ),
         2 => 
         array (
-          'link' => 'http://windows.php.net/download/#php-5.4',
+          'link' => 'https://windows.php.net/download/#php-5.4',
           'name' => 'Windows 5.4.44 binaries and source',
         ),
       ),
@@ -5853,7 +5853,7 @@ $OLDRELEASES = array (
         ),
         2 => 
         array (
-          'link' => 'http://windows.php.net/download/#php-5.4',
+          'link' => 'https://windows.php.net/download/#php-5.4',
           'name' => 'Windows 5.4.43 binaries and source',
         ),
       ),
@@ -5884,7 +5884,7 @@ $OLDRELEASES = array (
         ),
         2 => 
         array (
-          'link' => 'http://windows.php.net/download/#php-5.4',
+          'link' => 'https://windows.php.net/download/#php-5.4',
           'name' => 'Windows 5.4.42 binaries and source',
         ),
       ),
@@ -5915,7 +5915,7 @@ $OLDRELEASES = array (
         ),
         2 => 
         array (
-          'link' => 'http://windows.php.net/download/#php-5.4',
+          'link' => 'https://windows.php.net/download/#php-5.4',
           'name' => 'Windows 5.4.41 binaries and source',
         ),
       ),
@@ -5946,7 +5946,7 @@ $OLDRELEASES = array (
         ),
         2 => 
         array (
-          'link' => 'http://windows.php.net/download/#php-5.4',
+          'link' => 'https://windows.php.net/download/#php-5.4',
           'name' => 'Windows 5.4.40 binaries and source',
         ),
       ),
@@ -5977,7 +5977,7 @@ $OLDRELEASES = array (
         ),
         2 => 
         array (
-          'link' => 'http://windows.php.net/download/#php-5.4',
+          'link' => 'https://windows.php.net/download/#php-5.4',
           'name' => 'Windows 5.4.39 binaries and source',
         ),
       ),
@@ -6008,7 +6008,7 @@ $OLDRELEASES = array (
         ),
         2 => 
         array (
-          'link' => 'http://windows.php.net/download/#php-5.4',
+          'link' => 'https://windows.php.net/download/#php-5.4',
           'name' => 'Windows 5.4.38 binaries and source',
         ),
       ),
@@ -6039,7 +6039,7 @@ $OLDRELEASES = array (
         ),
         2 => 
         array (
-          'link' => 'http://windows.php.net/download/#php-5.4',
+          'link' => 'https://windows.php.net/download/#php-5.4',
           'name' => 'Windows 5.4.37 binaries and source',
         ),
       ),
@@ -6070,7 +6070,7 @@ $OLDRELEASES = array (
         ),
         2 => 
         array (
-          'link' => 'http://windows.php.net/download/#php-5.4',
+          'link' => 'https://windows.php.net/download/#php-5.4',
           'name' => 'Windows 5.4.36 binaries and source',
         ),
       ),
@@ -6101,7 +6101,7 @@ $OLDRELEASES = array (
         ),
         2 => 
         array (
-          'link' => 'http://windows.php.net/download/#php-5.4',
+          'link' => 'https://windows.php.net/download/#php-5.4',
           'name' => 'Windows 5.4.35 binaries and source',
         ),
       ),
@@ -6132,7 +6132,7 @@ $OLDRELEASES = array (
         ),
         2 => 
         array (
-          'link' => 'http://windows.php.net/download/#php-5.4',
+          'link' => 'https://windows.php.net/download/#php-5.4',
           'name' => 'Windows 5.4.34 binaries and source',
         ),
       ),
@@ -6163,7 +6163,7 @@ $OLDRELEASES = array (
         ),
         2 => 
         array (
-          'link' => 'http://windows.php.net/download/#php-5.4',
+          'link' => 'https://windows.php.net/download/#php-5.4',
           'name' => 'Windows 5.4.33 binaries and source',
         ),
       ),
@@ -6194,7 +6194,7 @@ $OLDRELEASES = array (
         ),
         2 => 
         array (
-          'link' => 'http://windows.php.net/download/#php-5.4',
+          'link' => 'https://windows.php.net/download/#php-5.4',
           'name' => 'Windows 5.4.32 binaries and source',
         ),
       ),
@@ -6225,7 +6225,7 @@ $OLDRELEASES = array (
         ),
         2 => 
         array (
-          'link' => 'http://windows.php.net/download/#php-5.4',
+          'link' => 'https://windows.php.net/download/#php-5.4',
           'name' => 'Windows 5.4.31 binaries and source',
         ),
       ),
@@ -6256,7 +6256,7 @@ $OLDRELEASES = array (
         ),
         2 => 
         array (
-          'link' => 'http://windows.php.net/download/#php-5.4',
+          'link' => 'https://windows.php.net/download/#php-5.4',
           'name' => 'Windows 5.4.30 binaries and source',
         ),
       ),
@@ -6287,7 +6287,7 @@ $OLDRELEASES = array (
         ),
         2 => 
         array (
-          'link' => 'http://windows.php.net/download/#php-5.4',
+          'link' => 'https://windows.php.net/download/#php-5.4',
           'name' => 'Windows 5.4.29 binaries and source',
         ),
       ),
@@ -6318,7 +6318,7 @@ $OLDRELEASES = array (
         ),
         2 => 
         array (
-          'link' => 'http://windows.php.net/download/#php-5.4',
+          'link' => 'https://windows.php.net/download/#php-5.4',
           'name' => 'Windows 5.4.28 binaries and source',
         ),
       ),
@@ -6349,7 +6349,7 @@ $OLDRELEASES = array (
         ),
         2 => 
         array (
-          'link' => 'http://windows.php.net/download/#php-5.4',
+          'link' => 'https://windows.php.net/download/#php-5.4',
           'name' => 'Windows 5.4.27 binaries and source',
         ),
       ),
@@ -6380,7 +6380,7 @@ $OLDRELEASES = array (
         ),
         2 => 
         array (
-          'link' => 'http://windows.php.net/download/#php-5.4',
+          'link' => 'https://windows.php.net/download/#php-5.4',
           'name' => 'Windows 5.4.26 binaries and source',
         ),
       ),
@@ -6411,7 +6411,7 @@ $OLDRELEASES = array (
         ),
         2 => 
         array (
-          'link' => 'http://windows.php.net/download/#php-5.4',
+          'link' => 'https://windows.php.net/download/#php-5.4',
           'name' => 'Windows 5.4.25 binaries and source',
         ),
       ),
@@ -6442,7 +6442,7 @@ $OLDRELEASES = array (
         ),
         2 => 
         array (
-          'link' => 'http://windows.php.net/download/#php-5.4',
+          'link' => 'https://windows.php.net/download/#php-5.4',
           'name' => 'Windows 5.4.24 binaries and source',
         ),
       ),
@@ -6473,7 +6473,7 @@ $OLDRELEASES = array (
         ),
         2 => 
         array (
-          'link' => 'http://windows.php.net/download/#php-5.4',
+          'link' => 'https://windows.php.net/download/#php-5.4',
           'name' => 'Windows 5.4.23 binaries and source',
         ),
       ),
@@ -6504,7 +6504,7 @@ $OLDRELEASES = array (
         ),
         2 => 
         array (
-          'link' => 'http://windows.php.net/download/#php-5.4',
+          'link' => 'https://windows.php.net/download/#php-5.4',
           'name' => 'Windows 5.4.22 binaries and source',
         ),
       ),
@@ -6535,7 +6535,7 @@ $OLDRELEASES = array (
         ),
         2 => 
         array (
-          'link' => 'http://windows.php.net/download/#php-5.4',
+          'link' => 'https://windows.php.net/download/#php-5.4',
           'name' => 'Windows 5.4.21 binaries and source',
         ),
       ),
@@ -6566,7 +6566,7 @@ $OLDRELEASES = array (
         ),
         2 => 
         array (
-          'link' => 'http://windows.php.net/download/#php-5.4',
+          'link' => 'https://windows.php.net/download/#php-5.4',
           'name' => 'Windows 5.4.20 binaries and source',
         ),
       ),
@@ -6597,7 +6597,7 @@ $OLDRELEASES = array (
         ),
         2 => 
         array (
-          'link' => 'http://windows.php.net/download/#php-5.4',
+          'link' => 'https://windows.php.net/download/#php-5.4',
           'name' => 'Windows 5.4.19 binaries and source',
         ),
       ),
@@ -6628,7 +6628,7 @@ $OLDRELEASES = array (
         ),
         2 => 
         array (
-          'link' => 'http://windows.php.net/download/#php-5.4',
+          'link' => 'https://windows.php.net/download/#php-5.4',
           'name' => 'Windows 5.4.18 binaries and source',
         ),
       ),
@@ -6659,7 +6659,7 @@ $OLDRELEASES = array (
         ),
         2 => 
         array (
-          'link' => 'http://windows.php.net/download/#php-5.4',
+          'link' => 'https://windows.php.net/download/#php-5.4',
           'name' => 'Windows 5.4.17 binaries and source',
         ),
       ),
@@ -6690,7 +6690,7 @@ $OLDRELEASES = array (
         ),
         2 => 
         array (
-          'link' => 'http://windows.php.net/download/#php-5.4',
+          'link' => 'https://windows.php.net/download/#php-5.4',
           'name' => 'Windows 5.4.16 binaries and source',
         ),
       ),
@@ -6721,7 +6721,7 @@ $OLDRELEASES = array (
         ),
         2 => 
         array (
-          'link' => 'http://windows.php.net/download/#php-5.4',
+          'link' => 'https://windows.php.net/download/#php-5.4',
           'name' => 'Windows 5.4.15 binaries and source',
         ),
       ),
@@ -6752,7 +6752,7 @@ $OLDRELEASES = array (
         ),
         2 => 
         array (
-          'link' => 'http://windows.php.net/download/#php-5.4',
+          'link' => 'https://windows.php.net/download/#php-5.4',
           'name' => 'Windows 5.4.14 binaries and source',
         ),
       ),
@@ -6783,7 +6783,7 @@ $OLDRELEASES = array (
         ),
         2 => 
         array (
-          'link' => 'http://windows.php.net/download/#php-5.4',
+          'link' => 'https://windows.php.net/download/#php-5.4',
           'name' => 'Windows 5.4.13 binaries and source',
         ),
       ),
@@ -6814,7 +6814,7 @@ $OLDRELEASES = array (
         ),
         2 => 
         array (
-          'link' => 'http://windows.php.net/download/#php-5.4',
+          'link' => 'https://windows.php.net/download/#php-5.4',
           'name' => 'Windows 5.4.12 binaries and source',
         ),
       ),
@@ -6845,7 +6845,7 @@ $OLDRELEASES = array (
         ),
         2 => 
         array (
-          'link' => 'http://windows.php.net/download/#php-5.4',
+          'link' => 'https://windows.php.net/download/#php-5.4',
           'name' => 'Windows 5.4.11 binaries and source',
         ),
       ),
@@ -6876,7 +6876,7 @@ $OLDRELEASES = array (
         ),
         2 => 
         array (
-          'link' => 'http://windows.php.net/download/#php-5.4',
+          'link' => 'https://windows.php.net/download/#php-5.4',
           'name' => 'Windows 5.4.10 binaries and source',
         ),
       ),
@@ -6907,7 +6907,7 @@ $OLDRELEASES = array (
         ),
         2 => 
         array (
-          'link' => 'http://windows.php.net/download/#php-5.4',
+          'link' => 'https://windows.php.net/download/#php-5.4',
           'name' => 'Windows 5.4.9 binaries and source',
         ),
       ),
@@ -6938,7 +6938,7 @@ $OLDRELEASES = array (
         ),
         2 => 
         array (
-          'link' => 'http://windows.php.net/download/#php-5.4',
+          'link' => 'https://windows.php.net/download/#php-5.4',
           'name' => 'Windows 5.4.8 binaries and source',
         ),
       ),
@@ -6969,7 +6969,7 @@ $OLDRELEASES = array (
         ),
         2 => 
         array (
-          'link' => 'http://windows.php.net/download/#php-5.4',
+          'link' => 'https://windows.php.net/download/#php-5.4',
           'name' => 'Windows 5.4.7 binaries and source',
         ),
       ),
@@ -7000,7 +7000,7 @@ $OLDRELEASES = array (
         ),
         2 => 
         array (
-          'link' => 'http://windows.php.net/download/#php-5.4',
+          'link' => 'https://windows.php.net/download/#php-5.4',
           'name' => 'Windows 5.4.6 binaries and source',
         ),
       ),
@@ -7031,7 +7031,7 @@ $OLDRELEASES = array (
         ),
         2 => 
         array (
-          'link' => 'http://windows.php.net/download/#php-5.4',
+          'link' => 'https://windows.php.net/download/#php-5.4',
           'name' => 'Windows 5.4.5 binaries and source',
         ),
       ),
@@ -7062,7 +7062,7 @@ $OLDRELEASES = array (
         ),
         2 => 
         array (
-          'link' => 'http://windows.php.net/download/#php-5.4',
+          'link' => 'https://windows.php.net/download/#php-5.4',
           'name' => 'Windows 5.4.4 binaries and source',
         ),
       ),
@@ -7204,7 +7204,7 @@ $OLDRELEASES = array (
         ),
         3 => 
         array (
-          'link' => 'http://windows.php.net/download/#php-5.3',
+          'link' => 'https://windows.php.net/download/#php-5.3',
           'name' => 'Windows 5.3.29 binaries and source',
         ),
       ),
@@ -7235,7 +7235,7 @@ $OLDRELEASES = array (
         ),
         2 => 
         array (
-          'link' => 'http://windows.php.net/download/#php-5.3',
+          'link' => 'https://windows.php.net/download/#php-5.3',
           'name' => 'Windows 5.3.28 binaries and source',
         ),
       ),
@@ -7266,7 +7266,7 @@ $OLDRELEASES = array (
         ),
         2 => 
         array (
-          'link' => 'http://windows.php.net/download/#php-5.3',
+          'link' => 'https://windows.php.net/download/#php-5.3',
           'name' => 'Windows 5.3.27 binaries and source',
         ),
       ),
@@ -7297,7 +7297,7 @@ $OLDRELEASES = array (
         ),
         2 => 
         array (
-          'link' => 'http://windows.php.net/download/#php-5.3',
+          'link' => 'https://windows.php.net/download/#php-5.3',
           'name' => 'Windows 5.3.26 binaries and source',
         ),
       ),
@@ -7328,7 +7328,7 @@ $OLDRELEASES = array (
         ),
         2 => 
         array (
-          'link' => 'http://windows.php.net/download/#php-5.3',
+          'link' => 'https://windows.php.net/download/#php-5.3',
           'name' => 'Windows 5.3.25 binaries and source',
         ),
       ),
@@ -7359,7 +7359,7 @@ $OLDRELEASES = array (
         ),
         2 => 
         array (
-          'link' => 'http://windows.php.net/download/#php-5.3',
+          'link' => 'https://windows.php.net/download/#php-5.3',
           'name' => 'Windows 5.3.24 binaries and source',
         ),
       ),
@@ -7390,7 +7390,7 @@ $OLDRELEASES = array (
         ),
         2 => 
         array (
-          'link' => 'http://windows.php.net/download/#php-5.3',
+          'link' => 'https://windows.php.net/download/#php-5.3',
           'name' => 'Windows 5.3.23 binaries and source',
         ),
       ),
@@ -7421,7 +7421,7 @@ $OLDRELEASES = array (
         ),
         2 => 
         array (
-          'link' => 'http://windows.php.net/download/#php-5.3',
+          'link' => 'https://windows.php.net/download/#php-5.3',
           'name' => 'Windows 5.3.22 binaries and source',
         ),
       ),
@@ -7452,7 +7452,7 @@ $OLDRELEASES = array (
         ),
         2 => 
         array (
-          'link' => 'http://windows.php.net/download/#php-5.3',
+          'link' => 'https://windows.php.net/download/#php-5.3',
           'name' => 'Windows 5.3.21 binaries and source',
         ),
       ),
@@ -7483,7 +7483,7 @@ $OLDRELEASES = array (
         ),
         2 => 
         array (
-          'link' => 'http://windows.php.net/download/#php-5.3',
+          'link' => 'https://windows.php.net/download/#php-5.3',
           'name' => 'Windows 5.3.20 binaries and source',
         ),
       ),
@@ -7514,7 +7514,7 @@ $OLDRELEASES = array (
         ),
         2 => 
         array (
-          'link' => 'http://windows.php.net/download/#php-5.4',
+          'link' => 'https://windows.php.net/download/#php-5.4',
           'name' => 'Windows 5.3.19 binaries and source',
         ),
       ),
@@ -7545,7 +7545,7 @@ $OLDRELEASES = array (
         ),
         2 => 
         array (
-          'link' => 'http://windows.php.net/download/#php-5.3',
+          'link' => 'https://windows.php.net/download/#php-5.3',
           'name' => 'Windows 5.3.18 binaries and source',
         ),
       ),
@@ -7576,7 +7576,7 @@ $OLDRELEASES = array (
         ),
         2 => 
         array (
-          'link' => 'http://windows.php.net/download/#php-5.3',
+          'link' => 'https://windows.php.net/download/#php-5.3',
           'name' => 'Windows 5.3.17 binaries and source',
         ),
       ),
@@ -7607,7 +7607,7 @@ $OLDRELEASES = array (
         ),
         2 => 
         array (
-          'link' => 'http://windows.php.net/download/#php-5.3',
+          'link' => 'https://windows.php.net/download/#php-5.3',
           'name' => 'Windows 5.3.16 binaries and source',
         ),
       ),
@@ -7638,7 +7638,7 @@ $OLDRELEASES = array (
         ),
         2 => 
         array (
-          'link' => 'http://windows.php.net/download/#php-5.3',
+          'link' => 'https://windows.php.net/download/#php-5.3',
           'name' => 'Windows 5.3.15 binaries and source',
         ),
       ),
@@ -7669,7 +7669,7 @@ $OLDRELEASES = array (
         ),
         2 => 
         array (
-          'link' => 'http://windows.php.net/download/#php-5.3',
+          'link' => 'https://windows.php.net/download/#php-5.3',
           'name' => 'Windows 5.3.14 binaries and source',
         ),
       ),
