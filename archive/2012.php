@@ -823,7 +823,7 @@ site_header("News Archive - 2012", array("cache" => true));
         <div>
       <p>
         The PHP development team would like to announce the 2nd
-        <a href="http://qa.php.net">release candidate</a> of PHP 5.4.1.
+        <a href="https://qa.php.net">release candidate</a> of PHP 5.4.1.
          Windows binaries can be downloaded from the
         <a href="https://windows.php.net/qa/">Windows QA site</a>.
       </p>

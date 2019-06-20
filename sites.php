@@ -134,7 +134,7 @@ site_header("A Tourist's Guide", array("current" => "help"));
  before being made official. Documentation is built here four times a day.
 </p>
 
-<h2 id="qa" class="content-header"><a href="http://qa.php.net/">qa.php.net</a>: Quality Assurance Team</h2>
+<h2 id="qa" class="content-header"><a href="https://qa.php.net/">qa.php.net</a>: Quality Assurance Team</h2>
 
 <p class="content-box">
  The Quality Assurance team is one of the most important pieces of the PHP
