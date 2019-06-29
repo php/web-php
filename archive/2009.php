@@ -343,10 +343,10 @@ site_header("News Archive - 2009", array("cache" => true));
         <div>
      <p>
       The migration from CVS to Subversion is complete.  The web interface is at
-      <a href="http://svn.php.net">svn.php.net</a>.  You can read about it at
+      <a href="https://svn.php.net">svn.php.net</a>.  You can read about it at
       <a href="https://www.php.net/svn.php">php.net/svn.php</a>,
       <a href="https://wiki.php.net/vcs/svnfaq">wiki.php.net/vcs/svnfaq</a>.  The
-      URL to feed to your svn client is http://svn.php.net/repository.
+      URL to feed to your svn client is https://svn.php.net/repository.
      </p>
      <p>
       There is also a <a href="https://github.com/php">github mirror</a>.  Please

@@ -165,7 +165,7 @@ site_header("A Tourist's Guide", array("current" => "help"));
 </p>
 </div>
 
-<h2 id="svn" class="content-header"><a href="http://svn.php.net/">svn.php.net</a>: Archived SVN Repository</h2>
+<h2 id="svn" class="content-header"><a href="https://svn.php.net/">svn.php.net</a>: Archived SVN Repository</h2>
 
 <p class="content-box">
  The PHP project used to be organized under the SVN revision control system, but
@@ -181,7 +181,7 @@ XXX: The following sites are offline and should be re-added once they are back o
 
 <p class="content-box">
  The PHP project used to be organized under the CVS revision control system, but
- migrated to <a href="http://svn.php.net/">Subversion</a> (see above) in July of 2009.
+ migrated to <a href="https://svn.php.net/">Subversion</a> (see above) in July of 2009.
  The old CVS repository is archived here for posterity. It was formerly named
  cvs.php.net, but that now redirects to the SVN repository. This is not available
  via HTTP.
