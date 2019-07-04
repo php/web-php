@@ -1076,8 +1076,10 @@ fieldset {
     border: none;
     color: white;
     display: block;
-    padding: 0.3rem;
+    padding: 0.3rem 0.6rem;
     background: rgb(136, 146, 191);
+    font-size: 0.97rem;
+    text-shadow: 1px 1px 1px rgba(0,0,0,.4);
 }
 
 .tt-suggestion {

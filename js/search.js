@@ -323,8 +323,8 @@
                  * entered. */
 
                 // Precompile the templates we need for the fake entries.
-                var moreTemplate = Hogan.compile("<a class='more' href='{{ url }}'>&raquo; {{ num }} more result{{ plural }}</a>");
-                var searchTemplate = Hogan.compile("<a class='search' href='{{ url }}'>&raquo; Search php.net for {{ pattern }}</a>");
+                var moreTemplate = Hogan.compile("<a class='more' href='{{ url }}'>{{ num }} more result{{ plural }}</a>");
+                var searchTemplate = Hogan.compile("<a class='search' href='{{ url }}'>Search php.net for {{ pattern }}</a>");
 
                 /* Now we'll return the actual function that should be invoked
                  * when the user has typed something into the search box after
