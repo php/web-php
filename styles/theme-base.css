@@ -1087,6 +1087,17 @@ fieldset {
     border-bottom: 1px solid rgb(79, 91, 147);
 }
 
+.tt-dropdown-menu ::-webkit-scrollbar {
+    -webkit-appearance: none;
+    width: 9px;
+    height: 9px;
+}
+
+.tt-dropdown-menu ::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-color: #c3c4c4;
+}
+
 .tt-suggestion h4 {
     color: #333;
     margin: 0;
