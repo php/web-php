@@ -1028,8 +1028,6 @@ fieldset {
 }
 
 .tt-dropdown-menu .result-heading .collapsible {
-    background: url(../images/search-sprites.png) no-repeat left center;
-    background-position: 0 -15px;
     width: 30px;
     height: 13px;
     display: inline-block;
@@ -1037,6 +1035,19 @@ fieldset {
 
 .tt-dropdown-menu .result-heading .collapsible:hover {
     cursor: pointer;
+}
+
+.tt-dropdown-menu .result-heading .collapsible::before {
+    content: "";
+    border: 2px solid #E2E4EF;
+    border-left: 0;
+    border-top: 0;
+    width: 7px;
+    height: 7px;
+    display: block;
+    -webkit-transform: translate(8px, 1px) rotate(44deg);
+    -ms-transform: translate(8px, 1px) rotate(44deg);
+    transform: translate(8px, 1px) rotate(44deg);
 }
 
 .tt-dropdown-menu .result-heading .collapsible.closed {
