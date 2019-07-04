@@ -849,6 +849,47 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
 <!-- }}} --></section>
 
 <a name="PHP_7_2"></a>
+
+<section class="version" id="7.2.20"><!-- {{{ 7.2.20 -->
+<h3>Version 7.2.20</h3>
+<b><?php release_date('04-Jul-2019'); ?></b>
+<ul><li>Core:
+<ul>
+  <li><?php bugfix(76980); ?> (Interface gets skipped if autoloader throws an exception).</li>
+</ul></li>
+<li>DOM:
+<ul>
+  <li><?php bugfix(78025); ?> (segfault when accessing properties of DOMDocumentType).</li>
+</ul></li>
+<li>MySQLi:
+<ul>
+  <li><?php bugfix(77956); ?> (When mysqli.allow_local_infile = Off, use a meaningful error message).</li>
+  <li><?php bugfix(38546); ?> (bindParam incorrect processing of bool types).</li>
+</ul></li>
+<li>Opcache:
+<ul>
+  <li><?php bugfix(78106); ?> (Path resolution fails if opcache disabled during request).</li>
+</ul></li>
+<li>OpenSSL:
+<ul>
+  <li><?php bugfix(78079); ?> (openssl_encrypt_ccm.phpt fails with OpenSSL 1.1.1c).</li>
+</ul></li>
+<li>Sockets:
+<ul>
+  <li><?php bugfix(78038); ?> (Socket_select fails when resource array contains references).</li>
+</ul></li>
+<li>Standard:
+<ul>
+  <li><?php bugfix(77135); ?> (Extract with EXTR_SKIP should skip $this).</li>
+  <li><?php bugfix(77937); ?> (preg_match failed).</li>
+</ul></li>
+<li>Zip:
+<ul>
+  <li><?php bugfix(76345); ?> (zip.h not found).</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
 <section class="version" id="7.2.19"><!-- {{{ 7.2.19 -->
 <h3>Version 7.2.19</h3>
 <b><?php release_date('30-May-2019'); ?></b>
