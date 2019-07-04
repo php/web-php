@@ -55,7 +55,7 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
 <li>Standard:
 <ul>
   <li><?php bugfix(77135); ?> (Extract with EXTR_SKIP should skip $this).</li>
-  <li>Fixed bug ##77937	(preg_match failed).</li>
+  <li><?php bugfix(77937); ?> (preg_match failed).</li>
 </ul></li>
 <li>Zip:
 <ul>
