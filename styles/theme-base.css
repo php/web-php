@@ -182,15 +182,14 @@ textarea {
 .navbar-search {
   position: relative;
   float: left;
-  margin-top: .770rem;
-  margin-bottom: 0;
+  margin-top: .6rem;
   width:100%;
   -moz-box-sizing:border-box;
   box-sizing:border-box;
 }
 .navbar-search .search-query {
   margin-bottom: 0;
-  padding: .125rem .5rem;
+  padding: .32rem .5rem;
   -moz-box-sizing: border-box;
   box-sizing:border-box;
   width:100%;
