@@ -10,6 +10,61 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
 <a href="#PHP_7_1">7.1</a> | <a href="#PHP_7_0">7.0</a>
 
 <a name="PHP_7_3"></a>
+
+<section class="version" id="7.3.7"><!-- {{{ 7.3.7 -->
+<h3>Version 7.3.7</h3>
+<b><?php release_date('04-Jul-2019'); ?></b>
+<ul><li>Core:
+<ul>
+  <li><?php bugfix(76980); ?> (Interface gets skipped if autoloader throws an exception).</li>
+</ul></li>
+<li>DOM:
+<ul>
+  <li><?php bugfix(78025); ?> (segfault when accessing properties of DOMDocumentType).</li>
+</ul></li>
+<li>MySQLi:
+<ul>
+  <li><?php bugfix(77956); ?> (When mysqli.allow_local_infile = Off, use a meaningful error message).</li>
+  <li><?php bugfix(38546); ?> (bindParam incorrect processing of bool types).</li>
+</ul></li>
+<li>MySQLnd:
+<ul>
+  <li><?php bugfix(77955); ?> (Random segmentation fault in mysqlnd from php-fpm).</li>
+</ul></li>
+<li>Opcache:
+<ul>
+  <li><?php bugfix(78015); ?> (Incorrect evaluation of expressions involving partials arrays in SCCP).</li>
+  <li><?php bugfix(78106); ?> (Path resolution fails if opcache disabled during request).</li>
+</ul></li>
+<li>OpenSSL:
+<ul>
+  <li><?php bugfix(78079); ?> (openssl_encrypt_ccm.phpt fails with OpenSSL 1.1.1c).</li>
+</ul></li>
+<li>phpdbg:
+<ul>
+  <li><?php bugfix(78050); ?> (SegFault phpdbg + opcache on include file twice).</li>
+</ul></li>
+<li>Sockets:
+<ul>
+  <li><?php bugfix(78038); ?> (Socket_select fails when resource array contains references).</li>
+</ul></li>
+<li>Sodium:
+<ul>
+  <li><?php bugfix(78114); ?> (segfault when calling sodium_* functions from eval).</li>
+</ul></li>
+<li>Standard:
+<ul>
+  <li><?php bugfix(77135); ?> (Extract with EXTR_SKIP should skip $this).</li>
+  <li>Fixed bug ##77937	(preg_match failed).</li>
+</ul></li>
+<li>Zip:
+<ul>
+  <li><?php bugfix(76345); ?> (zip.h not found).</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
+
 <section class="version" id="7.3.6"><!-- {{{ 7.3.6 -->
 <h3>Version 7.3.6</h3>
 <b><?php release_date('30-May-2019'); ?></b>
