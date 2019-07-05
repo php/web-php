@@ -1010,19 +1010,18 @@ fieldset {
     box-shadow: 1px 0 1px -1px #C4C9DF inset, -1px 0 1px -1px #C4C9DF inset, 0 0 1px #4F5B93;
     color: #333333;
     padding-top: 3px;
-    margin-top: -3px;
+    margin-top: 0;
     min-width: 100%;
 }
 
 .tt-dropdown-menu .result-heading {
-    font-size:1.1rem;
-    border-bottom: 2px solid #4F5B93;
+    font-size: 0.95rem;
     color: #E2E4EF;
-    text-shadow:0 -1px 0 rgba(0,0,0,.25);
+    text-shadow: 1px 1px 1px rgba(0,0,0,.3);
     word-spacing:6px;
     margin: 0;
-    padding: 0.1rem 0.3rem;
-    line-height: 2.5rem;
+    padding: 0.1rem 0.5rem;
+    line-height: 1.9rem;
     background-color: rgb(136, 146, 191);
 }
 
@@ -1058,10 +1057,9 @@ fieldset {
 }
 
 .tt-dropdown-menu .result-count {
-    display: inline-block;
     float: right;
-    opacity: 0.6;
     text-align: right;
+    margin-right: 8px;
 }
 
 .tt-suggestions {
@@ -1083,9 +1081,8 @@ fieldset {
 
 .tt-suggestion {
     margin: 0;
-    padding: 3px;
-    background: rgb(226, 228, 239);
-    border-bottom: 1px solid rgb(79, 91, 147);
+    padding: 4px 9px;
+    border-bottom: 1px solid #c3c4c4;
 }
 
 .tt-dropdown-menu ::-webkit-scrollbar {
@@ -1105,7 +1102,7 @@ fieldset {
     overflow: hidden;
     text-overflow: ellipsis;
     font-size: 11pt;
-    line-height: 2rem;
+    line-height: 1.6rem;
     font-weight: normal;
 }
 
