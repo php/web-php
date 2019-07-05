@@ -180,6 +180,15 @@ textarea {
 .navbar .brand:focus {
     text-decoration: none;
 }
+.navbar .navbar-search-submit-btn {
+    width: 36px;
+    display: inline-block;
+    background: none;
+    border: 0;
+    position: absolute;
+    left: -28px;
+    top: 4px;
+}
 .navbar-search {
     position: relative;
     float: left;
@@ -1703,6 +1712,15 @@ div.soft-deprecation-notice blockquote.sidebar {
     .navbar .brand img {
         display: block;
         margin-left: 12px;
+    }
+
+    .navbar .navbar-search {
+        width: 90%;
+        margin-left: 10%;
+    }
+
+    .navbar .navbar-search-submit-btn {
+        left: -18px;
     }
 
     .navbar .nav {
