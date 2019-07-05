@@ -1034,12 +1034,11 @@ fieldset {
 .tt-dropdown-menu {
     background: none repeat scroll 0 0 #E2E4EF;
     border-bottom: 1px solid #C4C9DF;
-    border-radius: 0 0 2px 2px;
+    border-radius: 0 0 4px 4px;
     box-shadow: 1px 0 1px -1px #C4C9DF inset, -1px 0 1px -1px #C4C9DF inset, 0 0 1px #4F5B93;
     color: #333333;
-    padding-top: 3px;
-    margin-top: 0;
-    min-width: 100%;
+    min-width: 90%;
+    margin: 0 5%;
 }
 
 .tt-dropdown-menu .result-heading {
@@ -1740,10 +1739,6 @@ div.soft-deprecation-notice blockquote.sidebar {
 @media (min-width:768px) {
     #topsearch {
         float:right;
-    }
-
-    .navbar-search .search-query {
-        width:100%;
     }
 
     #intro .container {
