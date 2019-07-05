@@ -122,8 +122,8 @@ if (!isset($config["languages"])) {
     </ul>
     <form class="navbar-search" id="topsearch" action="/search.php">
       <input type="hidden" name="show" value="quickref">
-      <input type="search" name="pattern" class="search-query" placeholder="Search" id="navbar-search-field" accesskey="s">
-      <button type="submit" title="Search" class="navbar-search-submit-btn">
+      <input type="search" name="pattern" class="search-query" placeholder="Search" id="navbar-search-field" accesskey="s" required>
+      <button type="submit" title="Search" class="navbar-search-submit-btn" id="navbar-search-submit-btn">
         <img src="/images/search-icon.svg"> 
       </button>
     </form>

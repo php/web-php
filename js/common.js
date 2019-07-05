@@ -777,45 +777,29 @@ function getLanguage()
 }
 
 (function ToggleSearchBarAfterSearchTriggerWasCliked() {
-  var searchForm = document.getElementById('topsearch')
-  var searchField = document.getElementById('navbar-search-field')
-  var showSearchTrigger = document.getElementById('navbar-search-show-search-form')
+  var searchForm = document.getElementById('topsearch');
+  var searchField = document.getElementById('navbar-search-field');
+  var showSearchFeieldTrigger = document.getElementById('navbar-search-show-search-form');
+  var submitFormBtn = document.getElementById('navbar-search-submit-btn');
 
-  new NavbarSearchForm(searchForm, searchField, showSearchTrigger).listen()
+  (function init() {
+    showSearchFeieldTrigger.addEventListener('click', function (e) {
+      showSearchForm();
+      changeTriggerToSubmitSearchButton();
+    })
+  })();
 
-  function NavbarSearchForm(form, field, trigger) {
-      this.form = form
-      this.field = field
-      this.trigger = trigger
-      this.triggerIsClicked = false
+  var showSearchForm = function () {
+    searchForm.classList.add('navbar-search-show')
+    searchField.focus();
+  };
 
-      this.showSearchForm = function () {
-        this.form.classList.add('navbar-search-show')
-        this.field.focus()
-      }
-
-      this.listen = function () {
-        var that = this
-
-        this.trigger.addEventListener('click', function (e) {
-          that.showSearchForm()
-          that.changeTriggerToSubmitSearchButton()
-        })
-      }
-
-      this.searchFieldIsOpen = function () {
-        this.form.classList.contains('navbar-search-show')
-      }
-
-      this.changeTriggerToSubmitSearchButton = function () {
-        var that = this
-
-        this.trigger.addEventListener('click', function (e) {
-          e.preventDefault()
-          that.form.submit()
-        })
-      }
-  }
+  var changeTriggerToSubmitSearchButton = function () {
+    showSearchFeieldTrigger.addEventListener('click', function (e) {
+      e.preventDefault();
+      submitFormBtn.click();
+    })
+  };
 })();
 
 // vim: set ts=4 sw=4 et:
