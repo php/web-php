@@ -1666,14 +1666,13 @@ div.soft-deprecation-notice blockquote.sidebar {
     }
 
     #mainmenu-toggle-overlay {
-        background: #4F5B93 url(/images/mobile-menu.png) no-repeat center center;
+        background: url(/images/mobile-menu-thin.png) no-repeat center center;
         float: right;
         display: block;
         height: 32px;
         width: 34px;
         margin-top: 10px;
-        margin-right: 10px;
-        border-radius: 5px;
+        margin-right: 25px;
     }
 
     #mainmenu-toggle {
