@@ -1754,6 +1754,19 @@ div.soft-deprecation-notice blockquote.sidebar {
         transition: max-height 400ms;
     }
 
+    .navbar .nav > li > a::before {
+        content: none !important;
+    }
+
+    .navbar .nav > li > a {
+        padding: 8px 0;
+        border-top: 1px solid #424d80;
+    }
+
+    .navbar .nav > li:first-child {
+        margin-top: 10px;
+    }
+
     .navbar .nav > li, .footmenu > li {
         float: none;
         display: block;
