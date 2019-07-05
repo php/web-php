@@ -394,7 +394,6 @@ hr {
 }
 
 .navbar {
-  border-bottom:.25rem solid;
   overflow: visible;
   *position: relative;
   *z-index: 2;
@@ -1679,7 +1678,6 @@ div.soft-deprecation-notice blockquote.sidebar {
     float: none;
     display: block;
     text-align: center;
-
   }
 
   .navbar .nav > li a, .footmenu > li > a {

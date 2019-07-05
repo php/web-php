@@ -108,7 +108,7 @@ if (!isset($config["languages"])) {
 
 <nav id="head-nav" class="navbar navbar-fixed-top">
   <div class="navbar-inner clearfix">
-    <a href="/" class="brand"><img src="/images/logos/php-logo.svg" width="48" height="24" alt="php"></a>
+    <a href="/" class="brand"><img src="/images/logos/php-logo-white.svg" width="48" height="24" alt="php"></a>
     <div id="mainmenu-toggle-overlay"></div>
     <input type="checkbox" id="mainmenu-toggle">
     <ul class="nav">

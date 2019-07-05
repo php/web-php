@@ -243,9 +243,7 @@ div.warning a:focus {
   color: #999;
 }
 .navbar {
-  border-color:#4F5B93;
-  background:#8892BF;
-  box-shadow: 0 .25em .25em  rgba(0,0,0,.1);
+  background: #4F5B93;
 }
 .navbar .brand {
   color: #fff;
