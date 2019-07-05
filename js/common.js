@@ -776,4 +776,51 @@ function getLanguage()
     return document.documentElement.lang;
 }
 
+(function ToggleSearchBarAfterSearchTriggerWasCliked() {
+  var searchForm = document.getElementById('topsearch')
+  var searchField = document.getElementById('navbar-search-field')
+  var showSearchTrigger = document.getElementById('navbar-search-show-search-form')
+
+  new NavbarSearchForm(searchForm, searchField, showSearchTrigger).listen()
+
+  function NavbarSearchForm(form, field, trigger) {
+      this.form = form
+      this.field = field
+      this.trigger = trigger
+      this.triggerIsClicked = false
+
+      this.showSearchForm = function () {
+        this.form.classList.add('navbar-search-show')
+        this.field.focus()
+      }
+
+      this.listen = function () {
+        var that = this
+
+        this.trigger.addEventListener('click', function (e) {
+          that.showSearchForm()
+          that.changeTriggerToSubmitSearchButton()
+          that.animateTrigger()
+        })
+      }
+
+      this.animateTrigger = function () {
+        this.trigger.style.transform = 'rotateX(360deg)'
+      }
+
+      this.searchFieldIsOpen = function () {
+        this.form.classList.contains('navbar-search-show')
+      }
+
+      this.changeTriggerToSubmitSearchButton = function () {
+        var that = this
+
+        this.trigger.addEventListener('click', function (e) {
+          e.preventDefault()
+          that.form.submit()
+        })
+      }
+  }
+})();
+
 // vim: set ts=4 sw=4 et:

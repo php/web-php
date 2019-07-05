@@ -171,23 +171,30 @@ textarea {
 /* {{{ Navbar */
 .navbar .brand {
     margin-right:.75rem;
-    float: left;
-    display: block;
-    height: 1.5rem;
+    height: 1rem;
     padding: .75rem .75rem .75rem 1.5rem;
+    float: left;
 }
 .navbar .brand:hover,
 .navbar .brand:focus {
     text-decoration: none;
 }
-.navbar .navbar-search-submit-btn {
-    width: 36px;
+.navbar .navbar-search-submit-btn,
+.navbar-search-show-search-form {
+    width: 29px;
     display: inline-block;
     background: none;
     border: 0;
     position: absolute;
     left: -28px;
     top: 4px;
+    -webkit-transition: transform 200ms;
+    -o-transition: transform 200ms;
+    transition: transform 200ms;
+}
+.navbar .navbar-search-submit-btn img,
+.navbar-search-show-search-form img {
+    width: 19px;
 }
 .navbar-search {
     position: relative;
@@ -428,6 +435,8 @@ hr {
     overflow: visible;
     *position: relative;
     *z-index: 2;
+    min-height: 46px;
+    position: relative;
 }
 
 .page-tools {
@@ -1662,13 +1671,6 @@ div.soft-deprecation-notice blockquote.sidebar {
         width:auto;
     }
 
-    .navbar-search {
-        float:left;
-        clear: both;
-        margin-top: 0;
-        padding: 0px 10px 10px 10px;
-    }
-
     .navbar .nav {
         margin-right: 0;
     }
@@ -1683,7 +1685,7 @@ div.soft-deprecation-notice blockquote.sidebar {
         display: block;
         height: 32px;
         width: 34px;
-        margin-top: 10px;
+        margin-top: 8px;
         margin-right: 25px;
     }
 
@@ -1700,13 +1702,13 @@ div.soft-deprecation-notice blockquote.sidebar {
     }
 
     .navbar .brand {
-        float: left;
-        margin-bottom: 0.5rem;
-    }
-
-    .navbar-search {
-        margin-top: 0;
-        padding: 0px 10px 10px;
+        float: none;
+        position: absolute;
+        left: 50%;
+        top: 0;
+        transform: translateX(-50%);
+        margin: 0;
+        padding: .7rem;
     }
 
     .navbar .brand img {
@@ -1715,12 +1717,29 @@ div.soft-deprecation-notice blockquote.sidebar {
     }
 
     .navbar .navbar-search {
-        width: 90%;
-        margin-left: 10%;
+        width: 100%;
+        clear: both;
+        opacity: 0;
+        margin-top: 15px;
+        padding: 0px 10px 10px 10px;
+        -webkit-transition: opacity 100ms;
+        -o-transition: opacity 100ms;
+        transition: opacity 100ms;
+        position: absolute;
+    }
+
+    .navbar .navbar-search.navbar-search-show {
+        position: relative;
+        opacity: 1;
     }
 
     .navbar .navbar-search-submit-btn {
-        left: -18px;
+        display: none;
+    }
+
+    .navbar .navbar-search-show-search-form {
+        left: 14px;
+        top: 13px;
     }
 
     .navbar .nav {
