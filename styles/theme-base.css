@@ -188,9 +188,6 @@ textarea {
     position: absolute;
     left: -28px;
     top: 4px;
-    -webkit-transition: transform 200ms;
-    -o-transition: transform 200ms;
-    transition: transform 200ms;
 }
 .navbar .navbar-search-submit-btn img,
 .navbar-search-show-search-form img {

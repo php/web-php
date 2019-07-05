@@ -800,12 +800,7 @@ function getLanguage()
         this.trigger.addEventListener('click', function (e) {
           that.showSearchForm()
           that.changeTriggerToSubmitSearchButton()
-          that.animateTrigger()
         })
-      }
-
-      this.animateTrigger = function () {
-        this.trigger.style.transform = 'rotateX(360deg)'
       }
 
       this.searchFieldIsOpen = function () {
