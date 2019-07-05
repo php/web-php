@@ -1112,6 +1112,10 @@ fieldset {
     border-bottom: 1px solid #c3c4c4;
 }
 
+.tt-suggestion:last-child {
+    border-bottom: none;
+}
+
 .tt-dropdown-menu ::-webkit-scrollbar {
     -webkit-appearance: none;
     width: 9px;
