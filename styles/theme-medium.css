@@ -188,6 +188,8 @@ div.warning a:focus {
 /* {{{ Navbar */
 .navbar .nav > li > a {
     color: #E2E4EF;
+    font-family: Droid Sans,Helvetica Neue,sans-serif;
+    letter-spacing: 0.8px;
 }
 .navbar .nav > li > a::before {
     content: "";
@@ -240,9 +242,6 @@ div.warning a:focus {
 }
 .navbar .brand {
     color: #fff;
-}
-.navbar li a {
-    font-family: Arial, sans-serif;
 }
 .navbar li {
     position: relative;
