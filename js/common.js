@@ -796,7 +796,6 @@ function getLanguage()
 
   var changeTriggerToSubmitSearchButton = function () {
     showSearchFeieldTrigger.addEventListener('click', function (e) {
-      e.preventDefault();
       submitFormBtn.click();
     })
   };
