@@ -2,8 +2,8 @@
 <?php
 PHP_SAPI == 'cli' or die("Please run this script using the cli sapi");
 
-require "include/version.inc";
-require "include/releases.inc";
+require __DIR__ . "/../include/version.inc";
+require __DIR__ . "/../include/releases.inc";
 
 if ($_SERVER['argc'] < 1) {
 	fwrite(STDERR, "Usage: {$_SERVER['argv'][0]} major_version [ minor_version ]\n");
@@ -36,7 +36,7 @@ $OLDRELEASES[$major] = array_merge(
 	$OLDRELEASES[$major]
 );
 
-file_put_contents("include/releases.inc", [
+file_put_contents(__DIR__ . "/../include/releases.inc", [
 	"<?php\n\$OLDRELEASES = ",
 	var_export($OLDRELEASES, true),
 	";\n",
