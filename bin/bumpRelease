@@ -1,6 +1,6 @@
 #!/usr/local/bin/php
 <?php
-PHP_SAPI == 'cli' or die("Please run this script using the cli sapi");
+(PHP_SAPI === 'cli') or die("Please run this script using the cli sapi");
 
 require __DIR__ . "/../include/version.inc";
 require __DIR__ . "/../include/releases.inc";
