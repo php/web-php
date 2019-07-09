@@ -15,17 +15,42 @@ isset($RELEASES[$major]) or die("Unkown major version $major");
 
 if (isset($_SERVER['argv'][2])) {
 	$minor = intval($_SERVER['argv'][2]);
-	$version_varname = "PHP_{$major}_{$minor}_VERSION";
-	isset($$version_varname) or die("Unknown minor version $major.$minor");
-	$version = $$version_varname;
-	$info = $RELEASES[$major][$version];
+	$version_prefix = "{$major}.{$minor}.";
+	foreach ($RELEASES[$major] as $version => $info) {
+		if (strncmp($version, $version_prefix, strlen($version_prefix)) == 0) {
+			// Bleed $version and $info into outer scope.
+			break;
+		}
+	}
+	if (strncmp($version, $version_prefix, strlen($version_prefix))) {
+		fwrite(STDERR, "Unknown minor version $major.$minor\n");
+		exit(1);
+	}
 } else {
 	// Calling without a minor will just grab the most recent minor.
 	$version = key($RELEASES[$major]);
 	$info = current($RELEASES[$major]);
 }
 
-$info["date"] = ${"PHP_{$major}_DATE"};
+if (!isset($info['date'])) {
+	// Derive date from source dates.
+	$info['date'] = null;
+	foreach ($info['source'] as $source) {
+		if ($info['date'] === null) {
+			$info['date'] = $source['date'];
+			continue;
+		}
+		if ($info['date'] !== $source['date']) {
+			fwrite(STDERR, "Release has multiple differing dates in sources list. Unable to pick one.\n");
+			exit(1);
+		}
+	}
+	if ($info['date'] === null) {
+		fwrite(STDERR, "Unable to determine release date.\n");
+		exit(1);
+	}
+}
+
 $info["museum"] = false;
 if (is_bool($info["announcement"]) && $info["announcement"]) {
 	$info["announcement"] = array("English" => "/releases/" . str_replace(".", "_", $version) . ".php");
