@@ -66,12 +66,6 @@ unset($LAST_UPDATED);
 // Load the My PHP.net settings before any includes
 myphpnet_load();
 
-// TODO: Remove MQ dependencies from phpweb
-$MQ = get_magic_quotes_gpc();
-if (get_magic_quotes_runtime()) {
-    @set_magic_quotes_runtime(0);
-}
-
 // Site details (mirror site information)
 include __DIR__ . '/site.inc';
 

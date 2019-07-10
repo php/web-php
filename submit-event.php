@@ -31,13 +31,6 @@ foreach($vars as $varname) {
 // We need to process some form data
 if ($process) {
 
-    // Clean up magic quotes, if they were inserted
-    if ($MQ) {
-        foreach ($_POST as $k => $v) {
-            $_POST[$k] = stripslashes($v);
-        }
-    }
-
     // Clean and validate data
     if (!is_emailable_address($_POST['email'])) {
         $errors[] = 'You must supply a valid email address.';
