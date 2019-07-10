@@ -11,7 +11,10 @@
   <link href="https://lightningphp.org" rel="via" type="text/html"/>
   <content type="xhtml">
     <div xmlns="http://www.w3.org/1999/xhtml">
-     The inaugural Lightning PHP Conference - this one day event will be held in Tampa, Florida on Friday, October 4th, 2019. We look forward to an incredible day of learning, networking, and fun as we invite the PHP world to join us as part of our Lightning PHP community!
+     The inaugural <a href="https://lightningphp.org" title="Lightning PHP 2019">Lightning PHP Conference</a>
+     - this one day event will be held in Tampa, Florida on Friday, October 4th, 2019.
+     We look forward toanincredible day of learning, networking, and fun as we invite
+     the PHP world to join us as part of our Lightning PHP community!
     </div>
   </content>
 </entry>
