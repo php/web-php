@@ -29,7 +29,7 @@ $RELEASES = (function() {
     /* PHP 7.2 Release */
     $PHP_7_2_VERSION         = "7.2.20";
     $PHP_7_2_DATE            = "04 Jul 2019";
-    $PHP_7_2_TAGS            = ['']; // Set to ['security'] for security releases.
+    $PHP_7_2_TAGS            = []; // Set to ['security'] for security releases.
     $PHP_7_2_SHA256     = array(
         "tar.bz2"       => "9fb829e54e54c483ae8892d1db0f7d79115cc698f2f3591a8a5e58d9410dca84",
         "tar.gz"        => "d1dbf6f299514c9aa55b2995928b798b27c21811a0447f0688993cdf36be0749",
@@ -51,6 +51,7 @@ $RELEASES = (function() {
             $PHP_7_3_VERSION => array(
                 "announcement" => true,
                 "tags" => $PHP_7_3_TAGS,
+                "date" => $PHP_7_3_DATE,
                 "source" => array(
                     array(
                         "filename" => "php-$PHP_7_3_VERSION.tar.bz2",
@@ -75,6 +76,7 @@ $RELEASES = (function() {
             $PHP_7_2_VERSION => array(
                 "announcement" => true,
                 "tags" => $PHP_7_2_TAGS,
+                "date" => $PHP_7_2_DATE,
                 "source" => array(
                     array(
                         "filename" => "php-$PHP_7_2_VERSION.tar.bz2",
@@ -99,6 +101,7 @@ $RELEASES = (function() {
             $PHP_7_1_VERSION => array(
                 "announcement" => true,
                 "tags" => $PHP_7_1_TAGS,
+                "date" => $PHP_7_1_DATE,
                 "source" => array(
                     array(
                         "filename" => "php-$PHP_7_1_VERSION.tar.bz2",
