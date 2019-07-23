@@ -536,7 +536,7 @@ function get_news_changes()
 
     $date->modify("+1 week");
     if ($date->getTimestamp() > $_SERVER["REQUEST_TIME"]) {
-        $link = substr($NEWS_ENTRIES[0]["link"][0]["href"], 14); // Strip http://php.net
+        $link = preg_replace('~^(http://php.net/|https://www.php.net/)~', '', $NEWS_ENTRIES[0]["link"][0]["href"]);
         $title = $NEWS_ENTRIES[0]["title"];
         return "<a href='{$link}'>{$title}</a>";
     }
