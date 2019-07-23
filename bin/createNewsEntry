@@ -128,12 +128,12 @@ function getEntry(string $id): array {
 	if (array_intersect($entry['categories'], ['cfp', 'conferences'])) {
 		$entry['href'] = BASE . '/conferences/index.php';
 		$entry['conf-time'] = getConfTime();
+	} else {
+		$entry['href'] = BASE . '/index.php';
 	}
 
 	$entry['image'] = getImage();
 	$entry['content'] = getContent();
-
-	$entry['href'] = BASE . '/index.php';
 	$entry['archive'] = BASE . "/archive/" . date('Y', $_SERVER['REQUEST_TIME']) . ".php#$id";
 	$entry['via'] = $entry['image']['link'] ?? $entry['archive'];
 
