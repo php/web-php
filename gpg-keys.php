@@ -24,6 +24,8 @@ site_header('GPG Keys');
   </div>
 <?php endforeach ?>
 
+<h3 id="keyring" class="content-header">Keyring</h3>
+
 <p>
   You can download the keyring with all Release Manager public keys:
   <?php download_link('php-keyring.gpg', 'php-keyring.gpg'); ?>
