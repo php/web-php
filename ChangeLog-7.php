@@ -924,6 +924,73 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
 
 <a name="PHP_7_2"></a>
 
+<section class="version" id="7.2.21"><!-- {{{ 7.2.21 -->
+<h3>Version 7.2.21</h3>
+<b><?php release_date('01-Aug-2019'); ?></b>
+<ul><li>Date:
+<ul>
+  <li><?php bugfix(69044); ?> (discrepency between time and microtime).</li>
+</ul></li>
+<li>EXIF:
+<ul>
+  <li><?php bugfix(78256); ?> (heap-buffer-overflow on exif_process_user_comment). (CVE-2019-11042)</li>
+  <li><?php bugfix(78222); ?> (heap-buffer-overflow on exif_scan_thumbnail). (CVE-2019-11041)</li>
+</ul></li>
+<li>Fileinfo:
+<ul>
+  <li><?php bugfix(78183); ?> (finfo_file shows wrong mime-type for .tga file).</li>
+</ul></li>
+<li>FTP:
+<ul>
+  <li><?php bugfix(77124); ?> (FTP with SSL memory leak).</li>
+</ul></li>
+<li>Libxml:
+<ul>
+  <li><?php bugfix(78279); ?> (libxml_disable_entity_loader settings is shared between requests (cgi-fcgi)).</li>
+</ul></li>
+<li>LiteSpeed:
+<ul>
+  <li>Updated to LiteSpeed SAPI V7.4.3 (increased response header count limit from 100 to 1000, added crash handler to cleanly shutdown PHP request, added CloudLinux mod_lsapi mode).</li>
+  <li><?php bugfix(76058); ?> (After "POST data can't be buffered", using php://input makes huge tmp files).</li>
+</ul></li>
+<li>Openssl:
+<ul>
+  <li><?php bugfix(78231); ?> (Segmentation fault upon stream_socket_accept of exported socket-to-stream).</li>
+</ul></li>
+<li>OPcache:
+<ul>
+  <li><?php bugfix(78189); ?> (file cache strips last character of uname hash).</li>
+  <li><?php bugfix(78202); ?> (Opcache stats for cache hits are capped at 32bit NUM).</li>
+  <li><?php bugfix(78291); ?> (opcache_get_configuration doesn't list all directives).</li>
+</ul></li>
+<li>Phar:
+<ul>
+  <li><?php bugfix(77919); ?> (Potential UAF in Phar RSHUTDOWN).</li>
+</ul></li>
+<li>Phpdbg:
+<ul>
+  <li><?php bugfix(78297); ?> (Include unexistent file memory leak).</li>
+</ul></li>
+<li>PDO_Sqlite:
+<ul>
+  <li><?php bugfix(78192); ?> (SegFault when reuse statement after schema has changed).</li>
+</ul></li>
+<li>SQLite:
+<ul>
+  <li>Upgraded to SQLite 3.28.0.</li>
+</ul></li>
+<li>Standard:
+<ul>
+  <li><?php bugfix(78241); ?> (touch() does not handle dates after 2038 in PHP 64-bit).</li>
+  <li><?php bugfix(78269); ?> (password_hash uses weak options for argon2).</li>
+</ul></li>
+<li>XMLRPC:
+<ul>
+  <li><?php bugfix(78173); ?> (XML-RPC mutates immutable objects during encoding).</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
 <section class="version" id="7.2.20"><!-- {{{ 7.2.20 -->
 <h3>Version 7.2.20</h3>
 <b><?php release_date('04-Jul-2019'); ?></b>
