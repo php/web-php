@@ -2370,6 +2370,25 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
 <!-- }}} --></section>
 
 <a name="PHP_7_1"></a>
+<section class="version" id="7.1.31"><!-- {{{ 7.1.31 -->
+<h3>Version 7.1.31</h3>
+<b><?php release_date('01-Aug-2019'); ?></b>
+<ul><li>SQLite:
+<ul>
+  <li>Upgraded to SQLite 3.28.0.</li>
+</ul></li>
+<li>EXIF:
+<ul>
+  <li><?php bugfix(78256); ?> (heap-buffer-overflow on exif_process_user_comment). (CVE-2019-11042)</li>
+  <li><?php bugfix(78222); ?> (heap-buffer-overflow on exif_scan_thumbnail). (CVE-2019-11041)</li>
+</ul></li>
+<li>Phar:
+<ul>
+  <li><?php bugfix(77919); ?> (Potential UAF in Phar RSHUTDOWN).</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
 <section class="version" id="7.1.30"><!-- {{{ 7.1.30 -->
 <h3>Version 7.1.30</h3>
 <b><?php release_date('30-May-2019'); ?></b>
