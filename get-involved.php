@@ -33,7 +33,9 @@ site_header("Get Involved", array("current" => "community"));
   <li>Filing and resolving bug reports
       at <a href="http://bugs.php.net">bugs.php.net</a></li>
   <li>Help maintain and or translate documentation files
-      at <a href="http://edit.php.net">edit.php.net</a>. Check out our
+      at <a href="http://edit.php.net">edit.php.net</a>,
+      or submit <a href="https://github.com/php/doc-en/pulls">pull requests</a>
+      (only English for now). Check out our
       <a href="http://doc.php.net/tutorial/">guide for contributors</a>.</li>
  </ol>
 
