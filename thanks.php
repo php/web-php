@@ -1,6 +1,7 @@
 <?php
 $_SERVER['BASE_PAGE'] = 'thanks.php';
-include_once $_SERVER['DOCUMENT_ROOT'] . '/include/prepend.inc';
+include_once __DIR__ . '/include/prepend.inc';
+include_once __DIR__ . '/include/historical_mirrors.inc';
 site_header("Thanks", array("current" => "community"));
 ?>
 
@@ -78,10 +79,6 @@ site_header("Thanks", array("current" => "community"));
 </li>
 
 <li>
- <a href="http://facebook.com">Facebook</a> provides us with SSL certificates.
-</li>
-
-<li>
  <a href="http://krystal.co.uk">Krystal.co.uk</a> provides a server and bandwidth
  for the ci.qa.php.net build and quality assurance infrastructure.
 </li>
@@ -91,8 +88,8 @@ site_header("Thanks", array("current" => "community"));
 </li>
 
 <li>
- <a href="http://www.bauer-kirch.de/">Bauer + Kirch GmbH</a> provides a server and bandwidth
- for the php.net monitoring infrastructure.
+ <a href="https://www.bauer-kirch.de/">Bauer + Kirch GmbH</a> provides us with SSL certificates and
+ a server and bandwidth for the php.net monitoring infrastructure.
 </li>
 
 <li>
@@ -104,11 +101,6 @@ site_header("Thanks", array("current" => "community"));
 </li>
 
 </ul>
-<p>
- And special thanks to all the companies who donate server space and
- bandwidth to host our international array of
- <a href="/mirrors.php">mirror sites</a>.
-</p>
 
 <h1>Thanks Emeritus</h1>
 
@@ -134,6 +126,22 @@ site_header("Thanks", array("current" => "community"));
  by donating a server and resources to enable us to build manuals
  and distribute our content via rsync.
 </li>
+</ul>
+
+<p>
+ And special thanks to all the companies who donated server space and
+ bandwidth to host our historical international array of mirror sites.
+</p>
+
+<ul>
+<?php
+$last_country = '';
+foreach ($historical_mirrors as $m) {
+?>
+ <li><?php echo $COUNTRIES[$m[0]]; ?>: <a href='<?php echo $m[3]; ?>'><?php echo $m[2]; ?></a></li>
+<?php
+}
+?>
 </ul>
 
 <p>PHP.net is very grateful for all their support.</p>

@@ -1,13 +1,12 @@
 <?php
 $_SERVER['BASE_PAGE'] = 'releases/index.php';
-include_once $_SERVER['DOCUMENT_ROOT'] . '/include/prepend.inc';
-include_once $_SERVER["DOCUMENT_ROOT"] . "/include/branches.inc";
+include_once __DIR__ . '/../include/prepend.inc';
+include_once __DIR__ . "/../include/branches.inc";
 
 if (isset($_GET["serialize"]) || isset($_GET["json"])) {
-	$RELEASES[5][$PHP_5_6_VERSION]["date"] = $PHP_5_6_DATE;
-	$RELEASES                              = $RELEASES + $OLDRELEASES;
+	$RELEASES = $RELEASES + $OLDRELEASES;
 
-	$machineReadable = array();
+	$machineReadable = [];
 
 	if (isset($_GET["version"])) {
 		$versionArray = version_array($_GET["version"]);
@@ -16,14 +15,7 @@ if (isset($_GET["serialize"]) || isset($_GET["json"])) {
 		if (isset($RELEASES[$ver])) {
 			$combinedReleases = array_replace_recursive($RELEASES, $OLDRELEASES);
 
-			if (isset($_GET["max"])) {
-				$max = (int)$_GET["max"];
-				$maxSet = true;
-			} else {
-				$max = 1;
-				$maxSet = false;
-			}
-
+			$max = intval($_GET['max'] ?? 1);
 			if ($max == -1) {
 				$max = PHP_INT_MAX;
 			}
@@ -40,7 +32,7 @@ if (isset($_GET["serialize"]) || isset($_GET["json"])) {
 				}
 			}
 
-			if (!$maxSet && !empty($machineReadable)) {
+			if (!isset($_GET['max']) && !empty($machineReadable)) {
 				$version = key($machineReadable);
 				$machineReadable = current($machineReadable);
 				$machineReadable["version"] = $version;
@@ -70,21 +62,50 @@ if (isset($_GET["serialize"]) || isset($_GET["json"])) {
 }
 
 
-// Tarball list generated with:
-// cvs status -v php[34]/INSTALL |grep 'php_'|awk '{print $1}'|grep -Ev '(RC[0-9]*|rc[_0-9]*|REL|[ab][a0-9-]+|b..rc.|b.pl.|bazaar|pre|[ab])$'|sed -e 's,php_,,' -e 's,_,.,g'|sort -n|while read ver; do echo "        <option value=\"php-${ver}.tar.gz\">$ver</option>"; done
 
-// Show the two most recent EOLed branches.
-$eol = array();
-foreach (get_eol_branches() as $major => $branches) {
-	foreach ($branches as $branch => $detail) {
-		$eol[$detail['date']] = sprintf('<li>%s: %s</li>', $branch, date('j M Y', $detail['date']));
+// Human Readable.
+site_header("Releases", array(
+    'current' => 'downloads',
+    'css' => '/styles/releases.css',
+));
+
+echo "<h1>Unsupported Historical Releases</h1>\n\n";
+echo "<p>
+ We have collected all the official information and code available for
+ past PHP releases. You can find more details on the current release
+ on <a href=\"/downloads.php\">our downloads page</a>. Please note that
+ <em>older releases are listed for archival purposes only, and
+ they are no longer supported</em>.
+</p>\n";
+
+$active_majors = array_keys($RELEASES);
+$latest = max($active_majors);
+foreach($OLDRELEASES as $major => $a) {
+	echo '<a id="v' .$major. '"></a>';
+	if (!in_array($major, $active_majors)) {
+		echo "\n<br>\n";
+		echo "<p>Support for PHP $major has been <b style=\"color: red;\">discontinued</b> ";
+		echo "since <b>" . current($a)['date'] . '</b>.';
+		echo "Please consider upgrading to $latest.</p>\n";
+	}
+
+	$i = 0;
+	foreach($a as $ver => $release) {
+		$i++;
+		mk_rel(
+			$major,
+			$ver,
+			$release["date"],
+			$release["announcement"] ?? false,
+			$release["source"] ?? [],
+			$release["windows"] ?? [],
+			$release["museum"] ?? ($i >= 3)
+		);
 	}
 }
-krsort($eol);
-$eol = implode('', array_slice($eol, 0, 2));
 
-$SIDEBAR_DATA = '
-<div class="panel">
+site_footer(['sidebar' =>
+'<div class="panel">
   <a class="headline" href="/supported-versions.php">Supported Versions</a>
   <div class="body">
     Check the <a href="/supported-versions.php">supported versions</a> page for
@@ -96,7 +117,7 @@ $SIDEBAR_DATA = '
   <a class="headline" href="/eol.php">End of Life Dates</a>
   <div class="body">
     <p>The most recent branches to reach end of life status are:</p>
-    <ul>'.$eol.'</ul>
+    <ul>' . recentEOLBranchesHTML(2) . '</ul>
   </div>
 </div>
 
@@ -135,111 +156,87 @@ $SIDEBAR_DATA = '
     </ul>
   </div>
 </div>
-';
+']);
 
-site_header("Releases", array(
-    'current' => 'downloads',
-    'css' => '/styles/releases.css',
-));
-?>
+function recentEOLBranchesHTML(int $count): string {
+	$eol = array();
+	foreach (get_eol_branches() as $major => $branches) {
+		foreach ($branches as $branch => $detail) {
+			$detail_date = $detail['date'];
+			while (isset($eol[$detail_date])) $detail_date++;
+			$eol[$detail_date] = sprintf('<li>%s: %s</li>', $branch, date('j M Y', $detail_date));
+		}
+	}
+	krsort($eol);
+	return implode('', array_slice($eol, 0, 2));
+}
 
-<h1>Unsupported Historical Releases</h1>
+function mk_rel(int $major,
+				string $ver,
+				string $date,
+				/* bool | array */ $announcement,
+				array $source,
+				array $windows,
+				bool $museum) {
+	printf("<a id=\"%s\"></a>\n<h2>%1\$s</h2>\n<ul>\n <li>Released: %s</li>\n <li>Announcement: ",
+	       ($pos = strpos($ver, " ")) ? substr($ver, 0, $pos) : $ver,
+	       $date);
 
-<p>
- We have collected all the official information and code available for
- past PHP releases. You can find more details on the current release
- on <a href="/downloads.php">our downloads page</a>. Please note that
- <em>older releases are listed for archival purposes only, and
- they are no longer supported</em>.
-</p>
-
-<p>
- <em>Note to Windows users: Only PHP 5.3+ versions are available as both VC6 and VC9 builds.
- All versions prior were built using VC6.</em>
-</p>
-
-<?php
-function mk_rel($major, $ver, $date, $announcement, $source, $windows, $museum) {
-	printf("<a id=\"%s\"></a>\n<h2>%1\$s</h2>\n<ul>\n <li>Released: %s</li>\n <li>Announcement: ", ($pos = strpos($ver, " ")) ? substr($ver, 0, $pos) : $ver, $date);
 	if ($announcement) {
 		if (is_array($announcement)) {
 			foreach($announcement as $ann => $url) {
-				echo '<a href="'.$url.'">' .$ann. '</a> ';
+				echo "<a href=\"$url\">$ann</a> ";
 			}
 		} else {
 			$url = str_replace(".", "_", $ver);
-			echo '<a href="/releases/' .$url. '.php">English</a>';
+			echo "<a href=\"/releases/{$url}.php\">English</a>";
 		}
 	} else {
 		echo "None";
 	}
 	echo "</li>\n";
 
-	if ($major != 3) {
-		echo ' <li><a href="/ChangeLog-'.$major.'.php#' .$ver. '">ChangeLog</a></li>';
+	if ($major > 3) {
+		echo " <li><a href=\"/ChangeLog-{$major}.php#{$ver}\">ChangeLog</a></li>";
 	}
 	echo "\n <li>\n  Download:\n";
+	echo "<ul>\n";
 
 	if (!$museum) {
-		echo "<ul>\n";
 		foreach(array_merge($source, $windows) as $src) {
 			echo " <li>\n";
 			if (isset($src['filename'])) {
 				download_link($src["filename"], $src["name"]); echo "<br>\n";
-				if (isset($src["md5"])) {
-					echo '<span class="md5sum">md5: ' .$src["md5"]. "</span>\n";
-					if (isset($src["sha256"])) {
-						echo '<br/>';
+				$linebreak = '';
+				foreach (['md5', 'sha256'] as $cs) {
+					if (isset($src[$cs])) {
+						echo $linebreak;
+						echo "<span class=\"{$cs}sum\">{$cs}: {$src[$cs]}</span>\n";
+						$linebreak = "<br/>";
 					}
 				}
-				if (isset($src["sha256"])) {
-					echo '<span class="sha256sum">sha256: ' .$src["sha256"]. "</span>\n";
-				}
 			} else {
-				echo '<a href="'.$src['link'].'">'.$src['name'].'</a>';
+				echo "<a href=\"{$src['link']}\">{$src['name']}</a>";
 			}
 			echo " </li>\n";
 		}
-		echo "</ul>\n";
-	} else {
+
+	} else { /* $museum */
 		foreach($source as $src) {
 			if (!isset($src["filename"])) {
 				continue;
 			}
-			printf('<a href="http://museum.php.net/php%d/%s">%s</a>'."\n", $major, $src["filename"], $src["name"]);
+			printf('<li><a href="http://museum.php.net/php%d/%s">%s</a></li>',
+			       $major, $src["filename"], $src["name"]);
 		}
 		foreach($windows as $src) {
-			printf('<a href="http://museum.php.net/%s/%s">%s</a>'."\n", ($major == 5 ? "php5" : "win32"), $src["filename"], $src["name"]);
+			printf('<li><a href="http://museum.php.net/%s/%s">%s</a></li>',
+			       ($major == 5 ? "php5" : "win32"), $src["filename"], $src["name"]);
 		}
 	}
 
-	echo "  </li>\n";
-	echo " </ul>\n";
+	echo "</ul>\n";
+	echo "</li>\n";
+	echo "</ul>\n";
 }
 
-$latest = max(array_keys($OLDRELEASES));
-foreach($OLDRELEASES as $major => $a) {
-	echo '<a id="v' .$major. '"></a>';
-	if ($major != $latest) {
-		echo "\n<hr>\n";
-		if ($major == 4) {
-			echo '<p>Support for PHP 4 has been <b style="color: red;">discontinued</b> since 2007-12-31. Please consider upgrading to PHP 5.</p>'."\n";
-		}
-	}
-
-	$i = 0;
-	foreach($a as $ver => $release) {
-		$i++;
-		mk_rel(
-			$major,
-			$ver,
-			$release["date"],
-			isset($release["announcement"]) ? $release["announcement"] : false,
-			$release["source"],
-			(isset($release["windows"]) ? $release["windows"] : array()),
-			isset($release["museum"]) ? $release["museum"] : ($i<3 ? false : true)
-		);
-	}
-}
-
-site_footer(array("sidebar" => $SIDEBAR_DATA));

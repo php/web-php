@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom" xmlns:default="http://php.net/ns/news">
+  <title>CoderCruise 2019</title>
+  <id>http://php.net/archive/2019.php#id2019-04-16-1</id>
+  <published>2019-04-16T18:59:25+00:00</published>
+  <updated>2019-04-16T18:59:25+00:00</updated>
+  <default:finalTeaserDate xmlns="http://php.net/ns/news">2019-08-19</default:finalTeaserDate>
+  <category term="conferences" label="Conference announcement"/>
+  <link href="http://php.net/conferences/index.php#id2019-04-16-1" rel="alternate" type="text/html"/>
+  <default:newsImage xmlns="http://php.net/ns/news" link="https://www.codercruise.com/" title="CoderCruise 2019">codercruise2019.png</default:newsImage>
+  <link href="https://www.codercruise.com/" rel="via" type="text/html"/>
+  <content type="xhtml">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+     <p>We are excited to announce the speaker lineup for <a href="https://www.codercruise.com/?utm_campaign=ccphp19">CoderCruise 2019</a>.
+     Now for the 3rd year the team behind the original php[cruise] is bringing a conference to the open seas.
+          <a href="https://www.codercruise.com/?utm_campaign=ccphp19">CoderCruise 2019</a> is a premiere conference experience,
+          giving you an exclusive connection to your fellow community members. It will set sail from Port Canaveral on August 19th
+          for a 5 day cruise that also visits Princess Cays and Nassau!</p>
+          <p>Ticket sales are currently open and just like last year we've negotiated a low rate for our participants that is all inclusive,
+           <a href="https://www.codercruise.com/register/?utm_campaign=ccphp19">starting as low as $435</a> per person
+           (including 5-day cruise, food, drink <b>and the conference</b>!)</p>
+    </div>
+  </content>
+</entry>

@@ -5,6 +5,21 @@ $GPG_KEYS = array(
       Key fingerprint = D620 173D 6924 BA1C 2244  C7C4 1B6B 6676 22FE 5A12
 uid                  Kalle Sommer Nielsen (PHP) &lt;kalle@php.net&gt;
 */
+    "7.4" => <<< GPG
+sec   rsa4096 2019-06-11 [SC] [expires: 2029-06-08]
+      5A52880781F755608BF815FC910DEB46F53EA312
+uid           [ultimate] Derick Rethans &lt;gpg@derickrethans.nl&gt;
+uid           [ultimate] Derick Rethans &lt;derick@derickrethans.nl&gt;
+uid           [ultimate] Derick Rethans (GitHub) &lt;github@derickrethans.nl&gt;
+uid           [ultimate] Derick Rethans (PHP) &lt;derick@php.net&gt;
+ssb   rsa4096 2019-06-11 [E] [expires: 2029-06-08]
+
+pub   rsa4096 2019-05-29 [SC] [expires: 2021-05-28]
+      4267 0A7F E4D0 441C 8E46  3234 9E4F DC07 4A4E F02D
+uid           [ultimate] Peter Kokot &lt;petk@php.net&gt;
+sub   rsa4096 2019-05-29 [E] [expires: 2021-05-28]
+GPG
+,
     "7.3" => <<< GPG
 pub   rsa4096/118BCCB6 2018-06-05 [SC] [expires: 2022-06-04]
       Key fingerprint = CBAF 69F1 73A0 FEA4 B537  F470 D66C 9593 118B CCB6
@@ -25,6 +40,10 @@ uid                  Sara Golemon &lt;pollita@php.net&gt;
 pub   4096R/EE5AF27F 2017-05-24 [expires: 2024-05-22]
       Key fingerprint = B1B4 4D8F 021E 4E2D 6021  E995 DC9F F8D3 EE5A F27F
 uid                  Remi Collet &lt;remi@php.net&gt;
+
+pub   rsa4096/118BCCB6 2018-06-05 [SC] [expires: 2022-06-04]
+      Key fingerprint = CBAF 69F1 73A0 FEA4 B537  F470 D66C 9593 118B CCB6
+uid                  Christoph M. Becker &lt;cmb@php.net&gt;
 GPG
 ,
     "7.1" => <<< GPG

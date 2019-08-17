@@ -1,6 +1,6 @@
 <?php
 $_SERVER['BASE_PAGE'] = 'elephpant.php';
-include_once $_SERVER['DOCUMENT_ROOT'] . '/include/prepend.inc';
+include_once __DIR__ . '/include/prepend.inc';
 $SIDEBAR_DATA = '
 <a name="license"></a>
 <h3>PHP License</h3>

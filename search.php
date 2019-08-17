@@ -1,19 +1,12 @@
 <?php // vim: et
 $_SERVER['BASE_PAGE'] = 'search.php';
-include_once $_SERVER['DOCUMENT_ROOT'] . '/include/prepend.inc';
+include_once __DIR__ . '/include/prepend.inc';
 
 // ---------------------------------------------------------------------------
 
 $_FORM = &$_GET;
 
 // ---------------------------------------------------------------------------
-
-// If PHP added some slashes to quotes, get rid of them
-if ($MQ) {
-    foreach ($_FORM as $name => $value) {
-        $_FORM[$name] = stripslashes($value);
-    }
-}
 
 // We received something to search for
 if (!empty($_FORM['pattern'])) {

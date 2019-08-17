@@ -1,6 +1,6 @@
 <?php
 $_SERVER['BASE_PAGE'] = 'my.php';
-include_once $_SERVER['DOCUMENT_ROOT'] . '/include/prepend.inc';
+include_once __DIR__ . '/include/prepend.inc';
 
 // Try to make this page non-cached
 header_nocache();
@@ -58,10 +58,7 @@ if (isset($_POST["showug"])) {
     myphpnet_showug($_POST["showug"] == "enable");
 }
 
-// Set preferred mirror site, prepare mirror array
-if (isset($_POST['mirror'])) {
-    myphpnet_mirror($_POST['mirror']);
-}
+// Prepare mirror array
 $mirror_sites = $MIRRORS;
 $mirror_sites["NONE"] = array(7 => MIRROR_OK);
 
@@ -152,12 +149,10 @@ foreach ($langinfo as $lin => $lid) {
 <h2>Your country</h2>
 
 <p>
- The PHP.net site and mirror sites try to detect your country
+ The PHP.net site tries to detect your country
  using the <a href="http://www.directi.com/?site=ip-to-country">Directi
  Ip-to-Country Database</a>. This information is used to mark
- the events in your country specially and to offer close mirror
- sites if possible on the download page and on the mirror listing
- page.
+ the events in your country specially.
 </p>
 
 <div class="indent">
@@ -195,54 +190,6 @@ if ($type === MYPHPNET_URL_MANUAL) {
 > PHP Documentation search
 </div>
 
-<h2>Mirror site redirection</h2>
-
-<p>
- The php.net site redirects users to mirror sites in several cases
- automatically. It tries to find a close mirror first (a mirror in the
- user's country), and if no such mirror is found, it selects one mirror
- randomly. Here you can set one preferred mirror site for yourself in
- case you are not satisfied with the automatic selection.
-</p>
-
-<p>
- Please note that in case the site finds your preferred mirror site disabled
- for some reason, it will fall back to the automatic selection procedure, but
- will not alter your preferences, so next time when your selected server works,
- the redirections will lead you there.
-</p>
-
-<div class="indent">
- <select name="mirror">
-<?php
-$mirror = myphpnet_mirror();
-foreach ($mirror_sites as $murl => $mdata) {
-
-    // Skip inactive mirrors
-    if (mirror_status($murl) != MIRROR_OK ||
-        $murl == "http://www.php.net/" || $murl == 'http://php.net/') { continue; }
-
-    // Compute user friendly mirror name
-    if ($murl == "NONE") {
-        $mname = "Automatic selection (default)";
-    } else {
-        $tmpurl = " (" .substr($murl, strpos($murl, '//') + 2, -1). ")";
-        if (isset($COUNTRIES[$mdata[0]])) {
-            $mname = $COUNTRIES[$mdata[0]] . $tmpurl;
-        } else {
-            $mname = "Unknown" . $tmpurl;
-        }
-    }
-
-    // Print out mirror option with selection if needed
-    printf (
-        "  <option value=\"$murl\"%s>$mname</option>\n",
-        ($mirror == $murl ? ' selected="selected"' : '')
-    );
-}
-?>
- </select>
-</div>
 <br>
 <h2>User Group tips</h2>
 

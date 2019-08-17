@@ -1,13 +1,11 @@
 <?php
 $_SERVER['BASE_PAGE'] = 'mirroring-troubles.php';
-include_once $_SERVER['DOCUMENT_ROOT'] . '/include/prepend.inc';
+include_once __DIR__ . '/include/prepend.inc';
 
 $SIDEBAR_DATA = '
 <h3>Other mirror information</h3>
 <p>
- Properly working mirror sites are listed on <a href="/mirrors.php">our
- mirrors page</a> and set by <a href="/my.php">my.php</a>. See also the
- instructions for <a href="/mirroring.php">setting up a mirror</a>.
+ See also the instructions for <a href="/mirroring.php">setting up a mirror</a>.
 </p>
 ';
 
@@ -103,18 +101,6 @@ site_header("The PHP mirrors problem and troubleshooting guide", array("current"
  server configuration should be adjusted to force .msi files as
  'application/octet-stream'. In Apache this may be done by using:
  <code>AddType application/octet-stream .msi</code>
-</p>
-
-<a name="unlisted"></a>
-<h3>An unlisted mirror</h3>
-<p>
- If you have an official mirror server but it's not listed on
- <a href="/mirrors.php">mirrors.php</a> or available from
- <a href="/my.php">my.php</a> then your mirror most likely failed the mirror
- tests and suffers from one of the problems listed here.  Mirrors that fail
- the tests are automatically removed from the listing for our user's
- convenience. We send out weekly notifications to all disabled mirror
- maintainers, and to the mirrors@lists.php.net mailing list.
 </p>
 
 <a name="slow"></a>

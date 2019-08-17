@@ -1,6 +1,6 @@
 <?php
 $_SERVER['BASE_PAGE'] = 'git.php';
-include_once $_SERVER['DOCUMENT_ROOT'] . '/include/prepend.inc';
+include_once __DIR__ . '/include/prepend.inc';
 $SIDEBAR_DATA = '
 <h3>What is Git?</h3>
 <p>
@@ -56,7 +56,8 @@ site_header("Git Access", array("current" => "community"));
   <ul>
    <li><i>PHP 5.4</i>: 1.28, 1.35, 1.75, 2.0 to 2.6.4</li>
    <li><i>PHP 5.5 and 5.6</i>: 2.4 to 2.7</li>
-   <li><i>PHP 7</i>: 2.4+</li>
+   <li><i>PHP 7.0 - 7.3</i>: 2.4+</li>
+   <li><i>PHP 7.4</i>: 3.0.0+</li>
   </ul>
  </li>
 </ul>
@@ -101,12 +102,6 @@ site_header("Git Access", array("current" => "community"));
  <li>
   You can then check out the branch you want to build, for example:
   <br><br>
-  <strong>PHP 5.6</strong>:
-  <code>git checkout PHP-5.6</code>
-  <br>
-  <strong>PHP 7.0</strong>:
-  <code>git checkout PHP-7.0</code>
-  <br>
   <strong>PHP 7.1</strong>:
   <code>git checkout PHP-7.1</code>
   <br>
@@ -115,6 +110,9 @@ site_header("Git Access", array("current" => "community"));
   <br>
   <strong>PHP 7.3</strong>:
   <code>git checkout PHP-7.3</code>
+  <br>
+  <strong>PHP 7.4</strong>:
+  <code>git checkout PHP-7.4</code>
   <br>
   <strong>PHP HEAD</strong>:
   <code>git checkout master</code>

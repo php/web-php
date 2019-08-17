@@ -1,11 +1,13 @@
 <?php
 $_SERVER['BASE_PAGE'] = 'eol.php';
 
-include_once $_SERVER['DOCUMENT_ROOT'] . '/include/prepend.inc';
-include_once $_SERVER['DOCUMENT_ROOT'] . '/include/branches.inc';
+include_once __DIR__ . '/include/prepend.inc';
+include_once __DIR__ . '/include/branches.inc';
 
 // Notes for specific branches can be added here, and will appear in the table.
 $BRANCH_NOTES = array(
+	'7.0' => '<a href="/migration71">A guide is available for migrating from PHP 7.0 to 7.1.</a>',
+	'5.6' => '<a href="/migration70">A guide is available for migrating from PHP 5.6 to 7.0.</a>',
 	'5.5' => '<a href="/migration56">A guide is available for migrating from PHP 5.5 to 5.6.</a>',
 	'5.4' => '<a href="/migration55">A guide is available for migrating from PHP 5.4 to 5.5.</a>',
 	'5.3' => '<a href="/migration54">A guide is available for migrating from PHP 5.3 to 5.4.</a>',

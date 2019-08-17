@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom" xmlns:default="http://php.net/ns/news">
+  <title>php[tek] 2019</title>
+  <id>http://php.net/archive/2019.php#id2019-01-29-1</id>
+  <published>2019-01-29T17:59:31+00:00</published>
+  <updated>2019-01-29T17:59:31+00:00</updated>
+  <default:finalTeaserDate xmlns="http://php.net/ns/news">2019-05-21</default:finalTeaserDate>
+  <category term="conferences" label="Conference announcement"/>
+  <link href="http://php.net/conferences/index.php#id2019-01-29-1" rel="alternate" type="text/html"/>
+  <default:newsImage xmlns="http://php.net/ns/news" link="https://tek.phparch.com/" title="php[tek] 2019">phptek2019.jpg</default:newsImage>
+  <link href="https://tek.phparch.com/" rel="via" type="text/html"/>
+  <content type="xhtml">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+     <p>We are announcing some exciting changes to <a href="https://tek.phparch.com/?utm_campaign=phpnet2019">php[tek]</a> in 2019, our 14th consecutive year for this event!</p>
+     <p>Once again we'll be taking place in <a href="https://tek.phparch.com/venue/?utm_campaign=phpnet2019">Atlanta</a> in May, but this year we are moving to 3 full days of conference sessions: May 21-23</p>
+     <p>However, the significant change is in us creating a curated educational experience for our attendees, with all brand new talks being made just for this event.</p>
+     <p>You see this year we organized php[tek] into a <a href="https://tek.phparch.com/tracks/?utm_campaign=phpnet2019">series of tracks</a>, each dedicated to teaching you in-depth information about a specific topic. Leading these tracks are hand-selected <a href="https://tek.phparch.com/speakers/?utm_campaign=phpnet2019">track chairs</a>, chosen for their knowledge in the field and excellent presenters. They are all working together to create a unique curriculum to take your skills to the next level.</p>
+     <p>Each track’s design is a <a href="https://tek.phparch.com/schedule/?utm_campaign=phpnet2019">series of new talks</a> that flow together smoothly, and yet, you can drop in/out of a track throughout the day as needed.  Each session is in a 1-hr timeslot.  You can choose to sit in one room all day and learn a topic from beginning to end or bounce between the various tracks, putting together a unique learning experience tailored to your needs.  The choice is yours.</p>
+     <p>We hope that you <a href="https://tek.phparch.com/registration/?utm_campaign=phpnet2019">choose to join us </a>for this unique experience.  <a href="https://tek.phparch.com/registration/?utm_campaign=phpnet2019">Ticket sales are open</a> with a few different price points, and the earlier you buy, the more you save.</p>
+     <p>See you in Atlanta!</p>
+     
+    </div>
+  </content>
+</entry>

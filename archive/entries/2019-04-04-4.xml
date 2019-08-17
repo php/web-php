@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom" xmlns:default="http://php.net/ns/news">
+  <title>PHPConf.Asia 2019</title>
+  <id>http://php.net/archive/2019.php#id2019-04-04-4</id>
+  <published>2019-04-04T12:51:44+08:00</published>
+  <updated>2019-04-04T12:51:44+08:00</updated>
+  <default:finalTeaserDate xmlns="http://php.net/ns/news">2019-06-24</default:finalTeaserDate>
+  <category term="conferences" label="Conference announcement"/>
+  <link href="http://php.net/conferences/index.php#id2019-04-04-4" rel="alternate" type="text/html"/>
+  <default:newsImage xmlns="http://php.net/ns/news" link="https://2019.phpconf.asia" title="PHPConf.Asia">phpconfasia-logo.png</default:newsImage>
+  <link href="https://2019.phpconf.asia" rel="via" type="text/html"/>
+  <content type="xhtml">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+      <p><b>PHPConf.Asia 2019</b></p>
+      <p>Announcing PHPConf.Asia 2019 - The Pan-Asian PHP Conference - Ticket Sales are Open!</p>
+      <p>The fourth pan-Asian PHP conference will take place between 24th to 26th June 2019 in Singapore - the Garden City of the East! This is a single track, 2 days Conference (24th to 25th June 2019). Followed by 1 Workshop Day on 26th June 2019.</p>
+      <p>Come and meet with the fastest growing PHP communities in Asia. More than 200 attendees are expected in this single track conference.</p>
+      <p>Hop over to https://2019.phpconf.asia for more details!</p>
+    </div>
+  </content>
+</entry>

@@ -1,6 +1,6 @@
 <?php
-include_once $_SERVER['DOCUMENT_ROOT'] . '/include/releases.inc';
-include_once $_SERVER['DOCUMENT_ROOT'] . '/include/version.inc';
+include_once __DIR__ . '/releases.inc';
+include_once __DIR__ . '/version.inc';
 
 /* Branch overrides. For situations where we've changed the exact dates for a
  * branch's active support and security fix EOLs, these can be reflected here.
@@ -31,6 +31,10 @@ $BRANCHES = array(
 	'5.6' => array(
 		'stable'   => '2017-01-19',
 		'security' => '2018-12-31',
+	),
+	'7.0' => array(
+		'stable'   => '2018-01-04',
+		'security' => '2019-01-10',
 	),
 );
 
@@ -374,4 +378,27 @@ function version_array($version, $length = null)
 	}
 
 	return $versionArray;
+}
+
+function get_current_release_for_branch(int $major, ?int $minor): ?string {
+	global $RELEASES, $OLDRELEASES;
+
+	$prefix = "{$major}.";
+	if ($minor !== null) {
+		$prefix .= "{$minor}.";
+	}
+
+	foreach (($RELEASES[$major] ?? []) as $version => $_) {
+		if (!strncmp($prefix, $version, strlen($prefix))) {
+			return $version;
+		}
+	}
+
+	foreach (($OLDRELEASES[$major] ?? []) as $version => $_) {
+		if (!strncmp($prefix, $version, strlen($prefix))) {
+			return $version;
+		}
+	}
+
+	return NULL;
 }

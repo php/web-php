@@ -1,7 +1,7 @@
 <?php
 $_SERVER['BASE_PAGE'] = 'security/index.php';
 
-include_once $_SERVER['DOCUMENT_ROOT'] . '/include/prepend.inc';
+include_once __DIR__ . '/../include/prepend.inc';
 if(!isset($_COOKIE["MAGIC_COOKIE"])) {
     mirror_redirect("/manual/security");
     exit;
@@ -21,7 +21,7 @@ $SIDEBAR_DATA = <<< EOT
 
  <h3>Other links</h3>
  <ul>
-  <li><a href="http://php.net/manual/security">PHP manual on security</a></li>
+  <li><a href="https://www.php.net/manual/security">PHP manual on security</a></li>
   <li><a href="http://www.suhosin.org">Suhosin</a></li>
   <li><a href="http://phpsec.org/projects/guide/">PHP Security Consortium</a></li>
  </ul>

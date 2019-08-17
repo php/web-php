@@ -1,7 +1,7 @@
 <?php
 $_SERVER['BASE_PAGE'] = 'results.php';
-include $_SERVER['DOCUMENT_ROOT'] . '/include/prepend.inc';
-include $_SERVER['DOCUMENT_ROOT'] . '/include/results.inc';
+include __DIR__ . '/include/prepend.inc';
+include __DIR__ . '/include/results.inc';
 
 if (!isset($_GET['l']) || !is_string($_GET['l'])) {
   $_GET['l'] = null;

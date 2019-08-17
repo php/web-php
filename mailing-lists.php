@@ -1,8 +1,8 @@
 <?php
 $_SERVER['BASE_PAGE'] = 'mailing-lists.php';
-include_once $_SERVER['DOCUMENT_ROOT'] . '/include/prepend.inc';
-include_once $_SERVER['DOCUMENT_ROOT'] . '/include/posttohost.inc';
-include_once $_SERVER['DOCUMENT_ROOT'] . '/include/email-validation.inc';
+include_once __DIR__ . '/include/prepend.inc';
+include_once __DIR__ . '/include/posttohost.inc';
+include_once __DIR__ . '/include/email-validation.inc';
 
 $SIDEBAR_DATA = '
 <h3>Would like to unsubscribe yourself?</h3>
@@ -62,7 +62,6 @@ if (isset($_POST['maillist'])) {
         if ($request != "subscribe" && $request != "unsubscribe") {
             $request = "subscribe";
         }
-        $sub = str_replace("@", "=", $_POST['email']);
         $remote_addr = i2c_realip();
 
         // Get in contact with master server to [un]subscribe the user
@@ -173,7 +172,7 @@ if (isset($_POST['maillist'])) {
 </ul>
 <p>
  And make sure you have read our
- <a href="//git.php.net/?p=php-src.git;a=blob_plain;f=README.MAILINGLIST_RULES;hb=HEAD">Mailinglist Rules</a>.
+ <a href="//git.php.net/?p=php-src.git;a=blob_plain;f=docs/mailinglist-rules.md;hb=HEAD">Mailinglist Rules</a>.
 </p>
 <?php
 
@@ -308,7 +307,7 @@ function output_lists_table($mailing_lists)
                  "<th>Newsgroup</th><th>Normal</th><th>Digest</th></tr>\n";
         } else {
             echo '<tr align="center">';
-            echo '<td align="left"><strong>' . $listinfo[1] . '</strong><br><small>'. $listinfo[2] . '</small></td>';
+            echo '<td align="left"><strong>' . $listinfo[1] . '</strong> <small>&lt;<a href="mailto:' . $listinfo[0] . '@lists.php.net">' . $listinfo[0] . '@lists.php.net</a>&gt;</small><br><small>'. $listinfo[2] . '</small></td>';
             echo '<td>' . ($listinfo[3] ? 'yes' : 'no') . '</td>';
 
             // Let the list name defined with a string, if the
@@ -361,6 +360,17 @@ function output_lists_table($mailing_lists)
  might want to consider subscribing to the digest list instead (two messages
  per day), using the news server, or reading the mailing list using the
  archives.
+</p>
+
+<h2>Subscribe via Email</h2>
+
+<p>
+ If you experience trouble subscribing via the form above, you may also
+ subscribe by sending an email to the list server.
+ To subscribe to any mailing list, send an email to
+ <code><em>listname</em>-subscribe@lists.php.net</code>
+ (substituting the name of the list for <code><em>listname</em></code>
+ &mdash; for example, <code>php-general-subscribe@lists.php.net</code>).
 </p>
 
 <h2>Mailing list options</h2>

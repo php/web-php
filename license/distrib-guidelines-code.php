@@ -1,6 +1,6 @@
 <?php
 $_SERVER['BASE_PAGE'] = 'license/distrib-guidelines-code.php';
-include_once $_SERVER['DOCUMENT_ROOT'] . '/include/prepend.inc';
+include_once __DIR__ . '/../include/prepend.inc';
 site_header("License Information", array("current" => "help"));
 ?>
 <h2>PHP Distribution Guidelines</h2>

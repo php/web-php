@@ -34,6 +34,32 @@ function error_404_manual()
     exit;
 }
 
+// An error message page for manual pages from inactive languages
+function error_inactive_manual_page($lang_name, $en_page)
+{
+    global $MYSITE, $ACTIVE_ONLINE_LANGUAGES;
+    status_header(404);
+    site_header('Page gone', array("noindex"));
+    echo "<h1>Page gone</h1>\n" .
+         "<p>The " . htmlspecialchars($lang_name) . " manual page you are looking for (<strong>" .
+         htmlspecialchars(substr($MYSITE, 0, -1) . $_SERVER['REQUEST_URI']) .
+         "</strong>) is no longer available.</p>\n";
+    $en_url = htmlspecialchars(substr($MYSITE, 0, -1) . $en_page);
+    echo "<p>The English page is available at <a href=\"{$en_url}\">{$en_url}</a></p>\n";
+    echo "<p>Several other languages are also available:</p>\n";
+    echo "<ul>\n";
+    foreach ($ACTIVE_ONLINE_LANGUAGES as $alt_lang => $alt_lang_name) {
+        if ($alt_lang === "en") {
+            continue;
+        }
+        $alt_url = htmlspecialchars(substr($MYSITE, 0, -1) . str_replace("/en/", "/{$alt_lang}/", $en_page));
+        echo "<li><a href=\"{$alt_url}\">" . htmlspecialchars($alt_lang_name) . "</a></li>\n";
+    }
+    echo "</ul>\n";
+    site_footer();
+    exit;
+}
+
 // This service is not working right now
 function error_noservice()
 {
@@ -153,6 +179,9 @@ $inis = array(
 	'error-prepend-string'			=> 'errorfunc.configuration.php#ini.error-prepend-string',
 	'error-append-string'			=> 'errorfunc.configuration.php#ini.error-append-string',
 	'error-log'						=> 'errorfunc.configuration.php#ini.error-log',
+	'syslog.facility'				=> 'errorfunc.configuration.php#ini.syslog.facility',
+	'syslog.filter'					=> 'errorfunc.configuration.php#ini.syslog.filter',
+	'syslog.ident'					=> 'errorfunc.configuration.php#ini.syslog.ident',
 	'arg-separator.output'			=> 'ini.core.php#ini.arg-separator.output',
 	'arg-separator.input'			=> 'ini.core.php#ini.arg-separator.input',
 	'variables-order'				=> 'ini.core.php#ini.variables-order',
@@ -243,12 +272,14 @@ $inis = array(
 	'oci8.statement-cache-size'		=> 'oci8.configuration.php#ini.oci8.statement-cache-size',
 	'oci8.default-prefetch'			=> 'oci8.configuration.php#ini.oci8.default-prefetch',
 	'oci8.old-oci-close-semantics'	=> 'oci8.configuration.php#ini.oci8.old-oci-close-semantics',
+	'opcache.preload'				=> 'opcache.configuration.php#ini.opcache.preload',
 	'pgsql.allow-persistent'		=> 'pgsql.configuration.php#ini.pgsql.allow-persistent',
 	'pgsql.auto-reset-persistent'	=> 'pgsql.configuration.php#ini.pgsql.auto-reset-persistent',
 	'pgsql.max-persistent'			=> 'pgsql.configuration.php#ini.pgsql.max-persistent',
 	'pgsql.max-links'				=> 'pgsql.configuration.php#ini.pgsql.max-links',
 	'pgsql.ignore-notice'			=> 'pgsql.configuration.php#ini.pgsql.ignore-notice',
 	'pgsql.log-notice'				=> 'pgsql.configuration.php#ini.pgsql.log-notice',
+	'sqlite3.extension-dir'			=> 'sqlite3.configuration.php#ini.sqlite3.extension-dir',
 	'sybct.allow-persistent'		=> 'sybase.configuration.php#ini.sybct.allow-persistent',
 	'sybct.max-persistent'			=> 'sybase.configuration.php#ini.sybct.max-persistent',
 	'sybct.max-links'				=> 'sybase.configuration.php#ini.sybct.max-links',

@@ -20,8 +20,9 @@ XML;
 
 /* FIX silly editor highlighting */?><?php
 
+// Flatten major versions out of RELEASES.
+$RELEASED_VERSIONS = array_reduce($RELEASES, 'array_merge', []);
 $FEED_UPDATED =  0;
-$RELEASED_VERSIONS = array_merge($RELEASES[5], $RELEASES[7]);
 krsort($RELEASED_VERSIONS);
 foreach ($RELEASED_VERSIONS as $version => $release) {
     $published = date(DATE_ATOM, strtotime($release["source"][0]["date"]));
@@ -48,7 +49,7 @@ XML;
         $maxtime[] = $time = strtotime($source["date"]);
         $released = date(DATE_ATOM, $time);
 
-        echo "        <link rel=\"enclosure\" title=\"{$source["name"]}\" href=\"/get/{$source["filename"]}/from/this/mirror\">\n";
+        echo "        <link rel=\"enclosure\" title=\"{$source["name"]}\" href=\"/distributions/{$source["filename"]}\">\n";
         foreach (array('md5', 'sha256') as $hashAlgo) {
             if (isset($source[$hashAlgo])) {
                 echo "            <php:{$hashAlgo}>{$source[$hashAlgo]}</php:{$hashAlgo}>\n";
@@ -64,6 +65,12 @@ XML;
     }
 
     $updated = date(DATE_ATOM, max($maxtime));
+
+    if (isset($release['tags'])) {
+        foreach ($release['tags'] as $tag) {
+            echo '        <php:tag>', htmlspecialchars($tag), "</php:tag>\n";
+        }
+    }
 
     echo <<< XML
         <updated>{$updated}</updated>

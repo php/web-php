@@ -1,12 +1,12 @@
 <?php
 $_SERVER['BASE_PAGE'] = 'git-php.php';
-include_once $_SERVER['DOCUMENT_ROOT'] . '/include/prepend.inc';
-include_once $_SERVER['DOCUMENT_ROOT'] . '/include/email-validation.inc';
-include_once $_SERVER['DOCUMENT_ROOT'] . '/include/posttohost.inc';
+include_once __DIR__ . '/include/prepend.inc';
+include_once __DIR__ . '/include/email-validation.inc';
+include_once __DIR__ . '/include/posttohost.inc';
 
 // Force the account requests to php.net
 if (!is_primary_site()) {
-    header('Location: http://php.net/'.$_SERVER['BASE_PAGE']);
+    header('Location: https://www.php.net/'.$_SERVER['BASE_PAGE']);
     exit;
 }
 
@@ -237,10 +237,6 @@ EOT;
   <td class="sub">Writing web pages with PHP</td>
   <td>&nbsp;</td>
  </tr>
- <tr>
-  <td class="sub">Setting up a php.net mirror site</td>
-  <td>&nbsp;</td>
- </tr>
 </table>
 
 <h3 class="content-header">Contributing patches</h3>
@@ -325,7 +321,7 @@ EOT;
 </p>
 
 <p>
- If you get no resposne to an account request after a while, remember this is a
+ If you get no response to an account request after a while, remember this is a
  manual process, then please contact the relevant mailing list that belongs to
  the part of PHP you requested access to.
 </p>
@@ -377,7 +373,7 @@ EOT;
 $purposes = array("Learning PHP", "Coding in PHP", "Reading the PHP source",
 	"Using PHP extensions", "Creating experimental PHP extensions",
 	"Submitting a patch to PHP", "Adding notes to the documentation",
-	"Writing web pages with PHP", "Setting up a php.net mirror site");
+	"Writing web pages with PHP");
 
 foreach ($purposes as $i => $p) { ?>
   <input type="checkbox" name="purpose[<?php echo $i?>]" value="1"

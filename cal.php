@@ -1,6 +1,6 @@
 <?php
 $_SERVER['BASE_PAGE'] = 'cal.php';
-include_once $_SERVER['DOCUMENT_ROOT'] . '/include/prepend.inc';
+include_once __DIR__ . '/include/prepend.inc';
 
 $site_header_config = array(
     "current" => "community",

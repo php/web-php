@@ -1,7 +1,7 @@
 <?php
 $_SERVER['BASE_PAGE'] = 'conferences/index.php';
-include_once $_SERVER['DOCUMENT_ROOT'] . '/include/prepend.inc';
-include_once $_SERVER['DOCUMENT_ROOT'] . '/include/pregen-news.inc';
+include_once __DIR__ . '/../include/prepend.inc';
+include_once __DIR__ . '/../include/pregen-news.inc';
 
 
 mirror_setcookie("LAST_NEWS", $_SERVER["REQUEST_TIME"], 60*60*24*365);
@@ -29,7 +29,7 @@ $panels = '<p class="prepend"><a href="https://wiki.php.net/conferences">Want to
 
 
 foreach($frontpage as $entry) {
-    $link = substr($entry["id"], 15); // Strip http://php.net/
+    $link = preg_replace('~^(http://php.net/|https://www.php.net/)~', '', $entry["id"]);
     $id   = parse_url($entry["id"], PHP_URL_FRAGMENT);
     $date = date_format(date_create($entry["updated"]), 'Y-m-d');
     $content .= '<div class="newsentry">';

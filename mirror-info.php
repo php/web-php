@@ -1,9 +1,9 @@
 <?php
 // Define $MYSITE and $LAST_UPDATED variables
-include_once $_SERVER['DOCUMENT_ROOT'] . '/include/prepend.inc';
+include_once __DIR__ . '/include/prepend.inc';
 
-// Define $PHP_5_VERSION, $PHP_5_MD5 & $RELEASES variables
-include_once $_SERVER['DOCUMENT_ROOT'] . '/include/version.inc';
+// Define release_get_latest() function.
+include_once __DIR__ . '/include/version.inc';
 
 // Text/plain content type for better readability in browsers
 header("Content-type: text/plain; charset=utf-8");
@@ -11,16 +11,16 @@ header("Content-type: text/plain; charset=utf-8");
 // Provide information on local stats setup
 $mirror_stats = (int) (isset($_SERVER['MIRROR_STATS']) && $_SERVER['MIRROR_STATS'] == '1');
 
-// SHA256/MD5 check last release file (identifies rsync setup problems)
-$filename = $_SERVER['DOCUMENT_ROOT'] . '/distributions/' . $RELEASES[5][$PHP_5_6_VERSION]["source"][0]["filename"];
+// SHA256 check last release file (identifies rsync setup problems)
+[ , $latest ] = release_get_latest();
+$dist = $latest['source'][0];
+$filename = __DIR__ . "/distributions/{$dist['filename']}";
 if (!file_exists($filename)) {
 	$hash_ok = 0;
-} elseif (isset($PHP_5_6_SHA256["tar.bz2"]) &&
+} elseif (isset($dist['sha256']) &&
 		function_exists('hash_file') &&
 		in_array('sha256', hash_algos(), true)) {
-	$hash_ok = (int)(hash_file('sha256', $filename) === $PHP_5_6_SHA256["tar.bz2"]);
-} elseif (isset($PHP_5_6_MD5["tar.bz2"])) {
-	$hash_ok = (int)(md5_file($filename) === $PHP_5_6_MD5["tar.bz2"]);
+	$hash_ok = (int)(hash_file('sha256', $filename) === $dist['sha256']);
 } else {
 	$hash_ok = 0;
 }
@@ -30,21 +30,6 @@ if (!file_exists($filename)) {
 $sqlite = get_available_sqlites();
 
 $exts = join(get_loaded_extensions(), ',');
-
-if (isset($_GET["token"]) && md5($_GET["token"]) === "19a3ec370affe2d899755f005e5cd90e") {
-	$retval = run_self_tests();
-	$output = isset($_GET["output"]) ? $_GET["output"] : "php";
-	switch($output) {
-	case "human":
-		var_dump($retval);
-		break;
-
-	case "php":
-	default:
-		echo serialize($retval);
-	}
-	exit(0);
-}
 
 echo join('|', array(
     $MYSITE,            	// 0 : CNAME for mirror as accessed (CC, CC1, etc.)
@@ -60,59 +45,3 @@ echo join('|', array(
     $_SERVER['SERVER_ADDR'],	// 10: The IP address under which we're running
 ));
 
-function run_self_tests() {
-	global $MYSITE;
-	global $LAST_UPDATED, $sqlite, $mirror_stats, $hash_ok;
-
-	//$MYSITE = "http://sg.php.net/";
-	$content = fetch_contents($MYSITE . "manual/noalias.txt");
-	if (is_array($content) || trim($content) !== 'manual-noalias') {
-		return array(
-			"name" => "Apache manual alias",
-			"see"  => $MYSITE . "mirroring-troubles.php#manual-redirect",
-			"got"  => $content,
-		);
-	}
-
-	$ctype = fetch_header($MYSITE . "manual/en/faq.html.php", "content-type");
-	if (strpos($ctype, "text/html") === false) {
-		return array(
-			"name" => "Header weirdness. Pages named '.html.php' are returning wrong status headers",
-			"see"  => $MYSITE . "mirroring-troubles.php#content-type",
-			"got"  => var_export($ctype, true),
-		);
-	}
-
-	$ctype = fetch_header($MYSITE . "functions", "content-type");
-	if (is_array($ctype)) {
-		$ctype = current($ctype);
-	}
-	if (strpos($ctype, "text/html") === false) {
-		return array(
-			"name" => "MultiViews on",
-			"see"  => $MYSITE . "mirroring-troubles.php#multiviews",
-			"got"  => var_export($ctype, true),
-		);
-	}
-
-	$header = fetch_header($MYSITE . "manual/en/ref.var.php", 0);
-	list($ver, $status, $msg) = explode(" ", $header, 3);
-	if($status != 200) {
-		return array(
-			"name" => "Var Handler",
-			"see"  => $MYSITE . "mirroring-troubles.php#var",
-			"got"  => var_export($header, true),
-		);
-	}
-
-	return array(
-		"servername" => $MYSITE,
-		"version"    => phpversion(),
-		"updated"    => $LAST_UPDATED,
-		"sqlite"     => $sqlite,
-		"stats"      => $mirror_stats,
-		"language"   => default_language(),
-		"rsync"      => $hash_ok,
-	);
-
-}

@@ -66,28 +66,22 @@ unset($LAST_UPDATED);
 // Load the My PHP.net settings before any includes
 myphpnet_load();
 
-// TODO: Remove MQ dependencies from phpweb
-$MQ = get_magic_quotes_gpc();
-if (get_magic_quotes_runtime()) {
-    @set_magic_quotes_runtime(0);
-}
-
 // Site details (mirror site information)
-include $_SERVER['DOCUMENT_ROOT'] . '/include/site.inc';
+include __DIR__ . '/site.inc';
 
 // Choose language used for translated parts
-include $_SERVER['DOCUMENT_ROOT'] . '/include/langchooser.inc';
+include __DIR__ . '/langchooser.inc';
 
 // Get country of the user and set it in a cookie
-include $_SERVER['DOCUMENT_ROOT'] . '/include/ip-to-country.inc';
+include __DIR__ . '/ip-to-country.inc';
 
 // Common layout functions
-include $_SERVER['DOCUMENT_ROOT'] . '/include/layout.inc';
+include __DIR__ . '/layout.inc';
 
 // This file is generated on rsync.php.net and propagated
 // from there. It just defines $LAST_UPDATED, which is the
 // mirror's last updated time.
-include $_SERVER['DOCUMENT_ROOT'] . '/include/last_updated.inc';
+include __DIR__ . '/last_updated.inc';
 
 // -----------------------------------------------------------------------------
 
@@ -107,6 +101,9 @@ function myphpnet_load()
     if (!empty($_COOKIE['MYPHPNET'])) {
         $MYPHPNET = explode(",", $_COOKIE['MYPHPNET']);
     }
+
+    // Ignore site part, and always use https://www.php.net
+    $MYPHPNET[2] = 'https://www.php.net';
 }
 
 // Get or set preferred language code
@@ -143,22 +140,6 @@ function myphpnet_urlsearch($type = FALSE)
     elseif (isset($MYPHPNET[1]) && !empty($MYPHPNET[1])) {
         return $MYPHPNET[1];
     } else { return MYPHPNET_URL_NONE; }
-}
-
-// Set mirror site redirection
-function myphpnet_mirror($murl = FALSE)
-{
-    global $MYPHPNET;
-
-    // Set mirror URL if specified and if correct
-    if ($murl && ($murl == "AUTO" || mirror_status($murl) == MIRROR_OK)) {
-        $MYPHPNET[2] = $murl;
-    }
-
-    // Return code or NONE
-    elseif (isset($MYPHPNET[2])) {
-        return $MYPHPNET[2];
-    } else { return "NONE"; }
 }
 
 function myphpnet_showug($enable = null) {

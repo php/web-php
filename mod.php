@@ -6,7 +6,7 @@
 */
 
 $_SERVER['BASE_PAGE'] = 'mod.php';
-include_once $_SERVER['DOCUMENT_ROOT'] . '/include/prepend.inc';
+include_once __DIR__ . '/include/prepend.inc';
 
 site_header("Email confirmation", array("current" => "community"));
 

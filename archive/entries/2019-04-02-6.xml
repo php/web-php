@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom" xmlns:default="http://php.net/ns/news">
+  <title>SymfonyCon Amsterdam 2019</title>
+  <id>http://php.net/archive/2019.php#id2019-04-02-6</id>
+  <published>2019-04-02T10:28:14+00:00</published>
+  <updated>2019-04-02T10:28:14+00:00</updated>
+  <default:finalTeaserDate xmlns="http://php.net/ns/news">2019-11-21</default:finalTeaserDate>
+  <category term="conferences" label="Conference announcement"/>
+  <link href="http://php.net/conferences/index.php#id2019-04-02-6" rel="alternate" type="text/html"/>
+  <default:newsImage xmlns="http://php.net/ns/news" link="https://amsterdam2019.symfony.com/" title="SymfonyCon Amsterdam 2019 Conference">symfonycon-amsterdam-2019.png</default:newsImage>
+  <link href="https://amsterdam2019.symfony.com/" rel="via" type="text/html"/>
+  <content type="html">
+     &lt;p&gt;Symfony is proud to organize the seventh edition of the SymfonyCon, the
+     &lt;strong&gt;international Symfony conference&lt;/strong&gt;. This year, we decided to
+     bring the entire community to the Netherlands and discover the amazing city of
+     &lt;strong&gt;Amsterdam&lt;/strong&gt;. If you like Symfony and share fun with
+     professionals, this is where you want to be on November!&lt;/p&gt;
+
+     &lt;p&gt;We look forward to welcoming you to Amsterdam, capital of the Netherlands.
+     Join us for talks, workshops, discussions and other serious work around Symfony
+     and its environment. And of course, celebrate the community reunion!&lt;/p&gt;
+
+     &lt;p&gt;SymfonyCon Amsterdam is a 5-day event from November 19th to November 23rd:&lt;/p&gt;
+
+     &lt;p&gt;Two-day workshop: Tuesday, November 19th and Wednesday, November 20th&lt;/p&gt;
+     &lt;p&gt;Two-day conference: Thursday, November 21st and Friday, November 22nd&lt;/p&gt;
+     &lt;p&gt;One hackday: Saturday, November 23rd&lt;/p&gt;
+</content>
+</entry>

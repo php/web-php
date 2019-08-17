@@ -14,9 +14,9 @@
 
 // Ensure that our environment is set up
 $_SERVER['BASE_PAGE'] = 'quickref.php';
-include_once $_SERVER['DOCUMENT_ROOT'] . '/include/prepend.inc';
-include_once $_SERVER['DOCUMENT_ROOT'] . '/include/errors.inc';
-include $_SERVER['DOCUMENT_ROOT'] . '/include/results.inc';
+include_once __DIR__ . '/include/prepend.inc';
+include_once __DIR__ . '/include/errors.inc';
+include __DIR__ . '/include/results.inc';
 
 if (empty($notfound)) {
     mirror_redirect("/search.php");
