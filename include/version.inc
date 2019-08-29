@@ -27,13 +27,13 @@ $RELEASES = (function() {
     );
 
     /* PHP 7.2 Release */
-    $PHP_7_2_VERSION         = "7.2.21";
-    $PHP_7_2_DATE            = "01 Aug 2019";
+    $PHP_7_2_VERSION         = "7.2.22";
+    $PHP_7_2_DATE            = "29 Aug 2019";
     $PHP_7_2_TAGS            = ['security']; // Set to ['security'] for security releases.
     $PHP_7_2_SHA256     = array(
-        "tar.bz2"       => "343183a1be8336670171885c761d57ffcae99cbbcf1db43da7cb5565056b14ef",
-        "tar.gz"        => "8327682bee4a8fd2edf5bbfcc393d986b945bec433fc74458d05e766701b313c",
-        "tar.xz"        => "de06aff019d8f5079115795bd7d8eedd4cd03daecb62d58abb18f492dd995c95",
+        "tar.bz2"       => "c10a9883b586ada5ef1149f2571625b27efdcc3e70a04fbb9121979633b0f08a",
+        "tar.gz"        => "6e2ccc77484c27971d4550b7071a57b79bc910bfb2d4a74a57ae2c18b78c3dc7",
+        "tar.xz"        => "eb597fcf8dc0a6211a42a6346de4f63ee166829a6df6d8ed767fe14be8d1c3a3",
     );
 
     /* PHP 7.1 Release */
