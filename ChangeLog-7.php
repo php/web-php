@@ -11,6 +11,60 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
 
 <a name="PHP_7_3"></a>
 
+<section class="version" id="7.3.9"><!-- {{{ 7.3.9 -->
+<h3>Version 7.3.9</h3>
+<b><?php release_date('29-Aug-2019'); ?></b>
+<ul><li>Core:
+<ul>
+  <li><?php bugfix(78363); ?> (Buffer overflow in zendparse).</li>
+  <li><?php bugfix(78379); ?> (Cast to object confuses GC, causes crash).</li>
+  <li><?php bugfix(78412); ?> (Generator incorrectly reports non-releasable $this as GC child).</li>
+</ul></li>
+<li>Curl:
+<ul>
+  <li><?php bugfix(77946); ?> (Bad cURL resources returned by curl_multi_info_read()).</li>
+</ul></li>
+<li>Exif:
+<ul>
+  <li><?php bugfix(78333); ?> (Exif crash (bus error) due to wrong alignment and invalid cast).</li>
+</ul></li>
+<li>FPM:
+<ul>
+  <li><?php bugfix(77185); ?> (Use-after-free in FPM master event handling).</li>
+</ul></li>
+<li>Iconv:
+<ul>
+  <li><?php bugfix(78342); ?> (Bus error in configure test for iconv //IGNORE).</li>
+</ul></li>
+<li>LiteSpeed:
+<ul>
+  <li>Updated to LiteSpeed SAPI V7.5 (Fixed clean shutdown).</li>
+</ul></li>
+<li>MBString:
+<ul>
+  <li><?php bugfix(78380); ?> (Oniguruma 6.9.3 fixes CVEs). (CVE-2019-13224)</li>
+</ul></li>
+<li>MySQLnd:
+<ul>
+  <li><?php bugfix(78179); ?> (MariaDB server version incorrectly detected).</li>
+  <li><?php bugfix(78213); ?> (Empty row pocket).</li>
+</ul></li>
+<li>Opcache:
+<ul>
+  <li><?php bugfix(77191); ?> (Assertion failure in dce_live_ranges() when silencing is used).</li>
+</ul></li>
+<li>Standard:
+<ul>
+  <li><?php bugfix(69100); ?> (Bus error from stream_copy_to_stream (file -&gt; SSL stream) with invalid length).</li>
+  <li><?php bugfix(78282); ?> (atime and mtime mismatch).</li>
+  <li><?php bugfix(78326); ?> (improper memory deallocation on stream_get_contents() with fixed length buffer).</li>
+  <li><?php bugfix(78346); ?> (strip_tags no longer handling nested php tags).</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
+
+
 <section class="version" id="7.3.8"><!-- {{{ 7.3.8 -->
 <h3>Version 7.3.8</h3>
 <b><?php release_date('01-Aug-2019'); ?></b>
