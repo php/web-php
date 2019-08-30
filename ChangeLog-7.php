@@ -2467,6 +2467,20 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
 <!-- }}} --></section>
 
 <a name="PHP_7_1"></a>
+<section class="version" id="7.1.32"><!-- {{{ 7.1.32 -->
+<h3>Version 7.1.32</h3>
+<b><?php release_date('29-Aug-2019'); ?></b>
+<ul><li>mbstring:
+<ul>
+  <li>Fixed CVE-2019-13224 (don't allow different encodings for onig_new_deluxe) (stas)</li>
+</ul></li>
+<li>pcre:
+<ul>
+  <li><?php bugfix(75457); ?> (heap use-after-free in pcrelib) (cmb)</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
 <section class="version" id="7.1.31"><!-- {{{ 7.1.31 -->
 <h3>Version 7.1.31</h3>
 <b><?php release_date('01-Aug-2019'); ?></b>
