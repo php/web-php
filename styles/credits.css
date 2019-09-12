@@ -25,7 +25,7 @@ table tr:last-child td, table tr:last-child th {
     line-height: 2em;
 }
 
-th {
+th, td {
     text-align: left;
 }
 
