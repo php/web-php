@@ -65,14 +65,14 @@ foreach ($ACTIVE_ONLINE_LANGUAGES as $langcode => $langname) {
  </tr>
 </table>
 
-    <div>
-        <p>
-            Documentation for PHP 4 has been removed from the
-            manual, but there is archived version still available. For
-            more informations, please read <a href="/manual/php4.php">
-                Documentation for PHP 4</a>.
-        </p>
-    </div>
+<div>
+ <p>
+  Documentation for PHP 4 has been removed from the
+  manual, but there is archived version still available. For
+  more information, please read <a href="/manual/php4.php">
+  Documentation for PHP 4</a>.
+ </p>
+</div>
 
 <h2 class="content-header">More documentation</h2>
 <ul class="content-box listed">
