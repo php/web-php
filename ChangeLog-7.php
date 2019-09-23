@@ -200,6 +200,10 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
 <ul>
   <li>Implemented FR <?php bugl(72189); ?> (Add missing CURL_VERSION_* constants).</li>
 </ul></li>
+<li>Date:
+<ul>
+  <li><?php bugfix(77909); ?> (DatePeriod::__construct() with invalid recurrence count value).</li>
+</ul></li>
 <li>EXIF:
 <ul>
   <li><?php bugfix(77988); ?> (heap-buffer-overflow on php_jpg_get16) (CVE-2019-11040).</li>
@@ -1131,7 +1135,11 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
 <section class="version" id="7.2.19"><!-- {{{ 7.2.19 -->
 <h3>Version 7.2.19</h3>
 <b><?php release_date('30-May-2019'); ?></b>
-<ul><li>EXIF:
+<ul><li>Date:
+<ul>
+  <li><?php bugfix(77909); ?> (DatePeriod::__construct() with invalid recurrence count value).</li>
+</ul></li>
+<li>EXIF:
 <ul>
   <li><?php bugfix(77988); ?> (heap-buffer-overflow on php_jpg_get16) (CVE-2019-11040).</li>
 </ul></li>
