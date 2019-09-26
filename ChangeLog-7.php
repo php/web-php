@@ -11,6 +11,53 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
 
 <a name="PHP_7_3"></a>
 
+<section class="version" id="7.3.10"><!-- {{{ 7.3.10 -->
+<h3>Version 7.3.10</h3>
+<b><?php release_date('26-Sep-2019'); ?></b>
+<ul><li>Core:
+<ul>
+  <li><?php bugfix(78220); ?> (Can't access OneDrive folder).</li>
+  <li><?php bugfix(77922); ?> (Double release of doc comment on inherited shadow property).</li>
+  <li><?php bugfix(78441); ?> (Parse error due to heredoc identifier followed by digit).</li>
+  <li><?php bugfix(77812); ?> (Interactive mode does not support PHP 7.3-style heredoc).</li>
+</ul></li>
+<li>FastCGI:
+<ul>
+  <li><?php bugfix(78469); ?> (FastCGI on_accept hook is not called when using named pipes on Windows).</li>
+</ul></li>
+<li>FPM:
+<ul>
+  <li><?php bugfix(78334); ?> (fpm log prefix message includes wrong stdout/stderr notation).</li>
+</ul></li>
+<li>Intl:
+<ul>
+  <li>Ensure IDNA2003 rules are used with idn_to_ascii() and idn_to_utf8() when requested.</li>
+</ul></li>
+<li>MBString:
+<ul>
+  <li><?php bugfix(78559); ?> (Heap buffer overflow in mb_eregi).</li>
+</ul></li>
+<li>MySQLnd:
+<ul>
+  <li>Fixed connect_attr issues and added the _server_host connection attribute.</li>
+</ul></li>
+<li>ODBC:
+<ul>
+  <li><?php bugfix(78473); ?> (odbc_close() closes arbitrary resources).</li>
+</ul></li>
+<li>PDO_MySQL:
+<ul>
+  <li><?php bugfix(41997); ?> (SP call yields additional empty result set).</li>
+</ul></li>
+<li>sodium:
+<ul>
+  <li><?php bugfix(78510); ?> (Partially uninitialized buffer returned by sodium_crypto_generichash_init()).</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
+
+
 <section class="version" id="7.3.9"><!-- {{{ 7.3.9 -->
 <h3>Version 7.3.9</h3>
 <b><?php release_date('29-Aug-2019'); ?></b>
