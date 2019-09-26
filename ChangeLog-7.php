@@ -1029,6 +1029,43 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
 
 <a name="PHP_7_2"></a>
 
+<section class="version" id="7.2.23"><!-- {{{ 7.2.23 -->
+<h3>Version 7.2.23</h3>
+<b><?php release_date('26-Sep-2019'); ?></b>
+<ul><li>Core:
+<ul>
+  <li><?php bugfix(78220); ?> (Can't access OneDrive folder).</li>
+  <li><?php bugfix(78412); ?> (Generator incorrectly reports non-releasable $this as GC child).</li>
+</ul></li>
+<li>FastCGI:
+<ul>
+  <li><?php bugfix(78469); ?> (FastCGI on_accept hook is not called when using named pipes on Windows).</li>
+</ul></li>
+<li>MySQLnd:
+<ul>
+  <li>Fixed connect_attr issues and added the _server_host connection attribute.</li>
+</ul></li>
+<li>ODBC:
+<ul>
+  <li><?php bugfix(78473); ?> (odbc_close() closes arbitrary resources).</li>
+</ul></li>
+<li>PDO_MySQL:
+<ul>
+  <li><?php bugfix(41997); ?> (SP call yields additional empty result set).</li>
+</ul></li>
+<li>sodium:
+<ul>
+  <li><?php bugfix(78510); ?> (Partially uninitialized buffer returned by sodium_crypto_generichash_init()).</li>
+</ul></li>
+<li>SPL:
+<ul>
+  <li><?php bugfix(72884); ?> (SplObject isCloneable() returns true but errs on clone).</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
+
+
 <section class="version" id="7.2.22"><!-- {{{ 7.2.22 -->
 <h3>Version 7.2.22</h3>
 <b><?php release_date('29-Aug-2019'); ?></b>
