@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+  <title>PHP 7.4.0RC3 Released!</title>
+  <id>https://www.php.net/archive/2019.php#2019-10-03-1</id>
+  <published>2019-10-03T14:28:25+00:00</published>
+  <updated>2019-10-03T14:28:25+00:00</updated>
+  <link href="https://www.php.net/index.php#id2019-10-03-1" rel="alternate" type="text/html"/>
+  <link href="https://www.php.net/archive/2019.php#2019-10-03-1" rel="via" type="text/html"/>
+  <category term="frontpage" label="PHP.net frontpage news"/>
+  <content type="html">
+     &lt;p&gt;
+     The PHP team is glad to announce the third release candidate of PHP 7.4:
+     PHP 7.4.0RC3. This continues the PHP 7.4 release cycle, the rough outline of
+     which is specified in the &lt;a href="https://wiki.php.net/todo/php74"&gt;PHP
+     Wiki&lt;/a&gt;.
+     &lt;/p&gt;
+     
+     &lt;p&gt;
+     &lt;b&gt;Please DO NOT use this version in production, it is an early test
+     version.&lt;/b&gt;
+     &lt;/p&gt;
+     
+     &lt;p&gt;
+     For source downloads of PHP 7.4.0RC3 please visit the
+     &lt;a href="https://downloads.php.net/~derick"&gt;download page&lt;/a&gt;.
+     &lt;/p&gt;
+     
+     &lt;p&gt;
+     Please carefully test this version and report any issues found in the &lt;a
+     href="https://bugs.php.net"&gt;bug reporting system&lt;/a&gt;.
+     &lt;/p&gt;
+     
+     &lt;p&gt;
+     For more information on the new features and other changes, you can read the
+     &lt;a href="https://github.com/php/php-src/blob/php-7.4.0RC3/NEWS"&gt;NEWS&lt;/a&gt;
+     file, or the
+     &lt;a href="https://github.com/php/php-src/blob/php-7.4.0RC3/UPGRADING"&gt;UPGRADING&lt;/
+     file for a complete list of upgrading notes. These files can also be found in
+     the release archive.
+     &lt;/p&gt;
+     
+     &lt;p&gt;
+     The next release would be &lt;b&gt;7.4.0RC3&lt;/b&gt;, planned for October 3rd.
+     &lt;/p&gt;
+     
+     &lt;p&gt;
+     The signatures for the release can be found in
+     &lt;a href="https://gist.github.com/derickr/4eaedc5dfd3bc9ddfbff6f81e8c53ec1"&gt;the
+     manifest&lt;/a&gt; or on &lt;a href="https://qa.php.net/"&gt;the QA site&lt;/a&gt;.
+     &lt;/p&gt;
+     
+     &lt;p&gt;Thank you for helping us make PHP better.&lt;/p&gt;
+</content>
+</entry>
