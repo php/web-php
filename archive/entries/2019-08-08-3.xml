@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom" xmlns:default="http://php.net/ns/news">
+  <title>PHP Conference Japan 2019 CFP Started</title>
+  <id>https://www.php.net/archive/2019.php#2019-08-08-3</id>
+  <published>2019-08-08T11:33:52+00:00</published>
+  <updated>2019-08-08T11:33:52+00:00</updated>
+  <link href="https://www.php.net/conferences/index.php#id2019-08-08-3" rel="alternate" type="text/html"/>
+  <link href="http://phpcon.php.gr.jp/2019/" rel="via" type="text/html"/>
+  <default:finalTeaserDate xmlns="http://php.net/ns/news">2019-09-02</default:finalTeaserDate>
+  <category term="cfp" label="Call for Papers"/>
+  <default:newsImage xmlns="http://php.net/ns/news" link="http://phpcon.php.gr.jp/2019/" title="PHP Conference Japan 2019">phpconfjapan2019.png</default:newsImage>
+  <content type="xhtml">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+     <p><a href="http://phpcon.php.gr.jp/2019/" target="_blank">PHP Conference Japan 2019</a></p>
+     <p>Conference Date : 2019/12/1 in Tokyo/JAPAN</p>
+     <p>CFP Deadline : 2019/9/2 23:59:59 JST</p>
+     <p>We will announce you when your proposal is approved by mid ~ late September.</p>
+     <p><a href="https://fortee.jp/phpcon-2019/speaker/proposal/cfp" target="_blank">Submit your papers!!</a><br/>Unfortunately, this CfP system doesn\'t support English UI. 😢
+Please use browser translation feature to submit your proposal.
+Sorry for the inconvenience.</p>
+    </div>
+  </content>
+</entry>

@@ -8,10 +8,10 @@
   <link href="https://fwdays.com/en/event/php-fwdays-2020" rel="via" type="text/html"/>
   <default:finalTeaserDate xmlns="http://php.net/ns/news">2019-12-24</default:finalTeaserDate>
   <category term="conferences" label="Conference announcement"/>
-  <default:newsImage xmlns="http://php.net/ns/news" link="https://fwdays.com/en/event/php-fwdays-2020" title="PHP fwdays'20">phpfworksday-logo.png</default:newsImage>
+  <default:newsImage xmlns="http://php.net/ns/news" link="https://fwdays.com/en/event/php-fwdays-2020" title="PHP fwdays'20">fwdays.png</default:newsImage>
   <content type="xhtml">
     <div xmlns="http://www.w3.org/1999/xhtml">
-        <p>We are thrilled to announce the 8th edition of <a href="https://fwdays.com/en/event/php-fwdays-2020">PHP fwdays conference</a> &mdash; the biggest PHP conf of Eastern Europe, which will be held on <strong>May 30, 2020 in Kyiv, Ukraine</strong>.</p>
+        <p>We are thrilled to announce the 8th edition of <a href="https://fwdays.com/en/event/php-fwdays-2020">PHP fwdays conference</a> &#8212; the biggest PHP conf of Eastern Europe, which will be held on <strong>May 30, 2020 in Kyiv, Ukraine</strong>.</p>
         <p>Three parallel tracks and community discussions are all dedicated to PHP development, tools and issues to be solved. Join more than 900 developers from all over the world to learn, discuss and solve.</p>
         <p>You are welcome to submit the talk via <a href="https://php.cfp.fwdays.com/">Call For Papers</a> till December 24th and visit awesome Kyiv in summer!</p>
     </div>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom" xmlns:default="http://php.net/ns/news">
+  <title>PHP UK Conference 2020</title>
+  <id>https://www.php.net/archive/2019.php#2019-10-02-1</id>
+  <published>2019-10-02T21:09:40+00:00</published>
+  <updated>2019-10-02T21:09:40+00:00</updated>
+  <link href="https://www.php.net/conferences/index.php#id2019-10-02-1" rel="alternate" type="text/html"/>
+  <link href="http://phpconference.co.uk" rel="via" type="text/html"/>
+  <default:finalTeaserDate xmlns="http://php.net/ns/news">2020-02-19</default:finalTeaserDate>
+  <category term="conferences" label="Conference announcement"/>
+  <default:newsImage xmlns="http://php.net/ns/news" link="http://phpconference.co.uk" title="PHP UK Logo">phpuk.png</default:newsImage>
+  <content type="xhtml">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+     <p>Conference Dates: 19-21st February 2020</p>
+     <p>Call for papers deadline: 15th October 2019 at midnight UTC</p>
+     <p>PHP UK is pleased to announce the 15th Annual PHP UK conference; a 2-day event with 3 great tracks held at at The Brewery, in the heart of the City of London.</p>
+     <p>With over 700 delegates, speakers, and sponsors, PHP UK conference aims to deliver fantastic up-to-date content about PHP and related web technologies in a comfortable and professional setting. There are countless networking opportunities to engage with international speakers and delegates, which makes the event one you won't want to miss.</p>
+     <p><a target="blank" href="https://www.papercall.io/phpuk2020">Submit your talk here.</a></p>
+    </div>
+  </content>
+</entry>
