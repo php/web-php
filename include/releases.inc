@@ -2,6 +2,43 @@
 $OLDRELEASES = array (
   7 => 
   array (
+    '7.3.10' => 
+    array (
+      'announcement' => 
+      array (
+        'English' => '/releases/7_3_10.php',
+      ),
+      'tags' => 
+      array (
+        0 => 'security',
+      ),
+      'date' => '26 Sep 2019',
+      'source' => 
+      array (
+        0 => 
+        array (
+          'filename' => 'php-7.3.10.tar.bz2',
+          'name' => 'PHP 7.3.10 (tar.bz2)',
+          'sha256' => '506dd871c0fb8f00f872f53dd3b1dfa5f23a9edb4dfc521e5669c78a78c45448',
+          'date' => '26 Sep 2019',
+        ),
+        1 => 
+        array (
+          'filename' => 'php-7.3.10.tar.gz',
+          'name' => 'PHP 7.3.10 (tar.gz)',
+          'sha256' => 'fb670723a9b8fda31c89529f27e0dda289d8af4b6ce9f152c8010876639c0fb4',
+          'date' => '26 Sep 2019',
+        ),
+        2 => 
+        array (
+          'filename' => 'php-7.3.10.tar.xz',
+          'name' => 'PHP 7.3.10 (tar.xz)',
+          'sha256' => '42f00a15419e05771734b7159c8d39d639b8a5a6770413adfa2615f6f923d906',
+          'date' => '26 Sep 2019',
+        ),
+      ),
+      'museum' => false,
+    ),
     '7.2.23' => 
     array (
       'announcement' => 

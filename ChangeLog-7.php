@@ -11,6 +11,64 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
 
 <a name="PHP_7_3"></a>
 
+<section class="version" id="7.3.11"><!-- {{{ 7.3.11 -->
+<h3>Version 7.3.11</h3>
+<b><?php release_date('24-Oct-2019'); ?></b>
+<ul><li>Core:
+<ul>
+  <li><?php bugfix(78535); ?> (auto_detect_line_endings value not parsed as bool).</li>
+  <li><?php bugfix(78620); ?> (Out of memory error).</li>
+</ul></li>
+<li>Exif:
+<ul>
+  <li><?php bugfix(78442); ?> ('Illegal component' on exif_read_data since PHP7) (Kalle)</li>
+</ul></li>
+<li>FPM:
+<ul>
+  <li><?php bugfix(78599); ?> (env_path_info underflow in fpm_main.c can lead to RCE). (CVE-2019-11043)</li>
+  <li><?php bugfix(78413); ?> (request_terminate_timeout does not take effect after fastcgi_finish_request).</li>
+</ul></li>
+<li>MBString:
+<ul>
+  <li><?php bugfix(78633); ?> (Heap buffer overflow (read) in mb_eregi).</li>
+  <li><?php bugfix(78579); ?> (mb_decode_numericentity: args number inconsistency).</li>
+  <li><?php bugfix(78609); ?> (mb_check_encoding() no longer supports stringable objects).</li>
+</ul></li>
+<li>MySQLi:
+<ul>
+  <li><?php bugfix(76809); ?> (SSL settings aren't respected when persistent connections are used).</li>
+</ul></li>
+<li>Mysqlnd:
+<ul>
+  <li><?php bugfix(78525); ?> (Memory leak in pdo when reusing native prepared statements).</li>
+</ul></li>
+<li>PCRE:
+<ul>
+  <li><?php bugfix(78272); ?> (calling preg_match() before pcntl_fork() will freeze child process).</li>
+</ul></li>
+<li>PDO_MySQL:
+<ul>
+  <li><?php bugfix(78623); ?> (Regression caused by "SP call yields additional empty result set").</li>
+</ul></li>
+<li>Session:
+<ul>
+  <li><?php bugfix(78624); ?> (session_gc return value for user defined session handlers).</li>
+</ul></li>
+<li>Standard:
+<ul>
+  <li><?php bugfix(76342); ?> (file_get_contents waits twice specified timeout).</li>
+  <li><?php bugfix(78612); ?> (strtr leaks memory when integer keys are used and the subject string shorter).</li>
+  <li><?php bugfix(76859); ?> (stream_get_line skips data if used with data-generating filter).</li>
+</ul></li>
+<li>Zip:
+<ul>
+  <li><?php bugfix(78641); ?> (addGlob can modify given remove_path value).</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
+
+
 <section class="version" id="7.3.10"><!-- {{{ 7.3.10 -->
 <h3>Version 7.3.10</h3>
 <b><?php release_date('26-Sep-2019'); ?></b>
