@@ -2663,6 +2663,16 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
 <!-- }}} --></section>
 
 <a name="PHP_7_1"></a>
+<section class="version" id="7.1.33"><!-- {{{ 7.1.33 -->
+<h3>Version 7.1.33</h3>
+<b><?php release_date('24-Oct-2019'); ?></b>
+<ul><li>FPM:
+<ul>
+  <li><?php bugfix(78599); ?> (env_path_info underflow in fpm_main.c can lead to RCE). (CVE-2019-11043)</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
 <section class="version" id="7.1.32"><!-- {{{ 7.1.32 -->
 <h3>Version 7.1.32</h3>
 <b><?php release_date('29-Aug-2019'); ?></b>
