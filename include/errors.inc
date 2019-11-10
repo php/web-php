@@ -321,6 +321,7 @@ $inis = array(
 	'session.upload-progress.min-freq'      => 'session.configuration.php#ini.session.upload-progress.min-freq',
 	'url-rewriter.tags'				=> 'session.configuration.php#ini.url-rewriter.tags',
 	'assert.active'					=> 'info.configuration.php#ini.assert.active',
+	'assert.exception'				=> 'info.configuration.php#ini.assert.exception',
 	'assert.warning'				=> 'info.configuration.php#ini.assert.warning',
 	'assert.bail'					=> 'info.configuration.php#ini.assert.bail',
 	'assert.callback'				=> 'info.configuration.php#ini.assert.callback',
