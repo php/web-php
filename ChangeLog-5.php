@@ -2601,7 +2601,6 @@ FILTER_FLAG_NO_PRIV_RANGE).</li>
 <ul>
   <li><?php bugfix(72402); ?> (_php_mb_regex_ereg_replace_exec - double free). (CVE-2016-5768)</li>
 </ul></li>
-</ul></li>
 <li>mcrypt:
 <ul>
   <li><?php bugfix(72455); ?> (Heap Overflow due to integer overflows). (CVE-2016-5769)</li>
@@ -5276,6 +5275,7 @@ FILTER_FLAG_NO_PRIV_RANGE).</li>
 <ul>
   <li>Fixed possible read after end of buffer and use after free.</li>
 </ul></li>
+</ul>
 <!-- }}} --></section>
 
 <section class="version" id="5.4.35"><!-- {{{ 5.4.35 -->
