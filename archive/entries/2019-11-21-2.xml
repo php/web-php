@@ -10,8 +10,6 @@
   <category term="releases" label="New PHP release"/>
   <content type="xhtml">
     <div xmlns="http://www.w3.org/1999/xhtml">
-       <h1>PHP 7.2.25 Release Announcement</h1>
-     
        <p>The PHP development team announces the immediate availability of PHP
        7.2.25. This is a bug fix release.</p>
      
