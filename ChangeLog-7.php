@@ -1132,6 +1132,50 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
 
 <a name="PHP_7_2"></a>
 
+<section class="version" id="7.2.25"><!-- {{{ 7.2.25 -->
+<h3>Version 7.2.25</h3>
+<b><?php release_date('21-Nov-2019'); ?></b>
+<ul><li>Core:
+<ul>
+  <li><?php bugfix(78656); ?> (Parse errors classified as highest log-level).</li>
+  <li><?php bugfix(78752); ?> (Segfault if GC triggered while generator stack frame is being destroyed).</li>
+  <li><?php bugfix(78689); ?> (Closure::fromCallable() doesn't handle [Closure, '__invoke']).</li>
+</ul></li>
+<li>COM:
+<ul>
+  <li><?php bugfix(78694); ?> (Appending to a variant array causes segfault).</li>
+</ul></li>
+<li>Date:
+<ul>
+  <li><?php bugfix(70153); ?> (\DateInterval incorrectly unserialized).</li>
+  <li><?php bugfix(78751); ?> (Serialising DatePeriod converts DateTimeImmutable).</li>
+</ul></li>
+<li>Iconv:
+<ul>
+  <li><?php bugfix(78642); ?> (Wrong libiconv version displayed). (gedas at martynas, cmb).</li>
+</ul></li>
+<li>OpCache:
+<ul>
+  <li><?php bugfix(78654); ?> (Incorrectly computed opcache checksum on files with non-ascii characters).</li>
+  <li><?php bugfix(78747); ?> (OpCache corrupts custom extension result).</li>
+</ul></li>
+<li>OpenSSL:
+<ul>
+  <li><?php bugfix(78775); ?> (TLS issues from HTTP request affecting other encrypted connections).</li>
+</ul></li>
+<li>Reflection:
+<ul>
+  <li><?php bugfix(78697); ?> (ReflectionClass::ImplementsInterface - inaccurate error message with traits).</li>
+</ul></li>
+<li>Sockets:
+<ul>
+  <li><?php bugfix(78665); ?> (Multicasting may leak memory).</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
+
+
 <section class="version" id="7.2.24"><!-- {{{ 7.2.24 -->
 <h3>Version 7.2.24</h3>
 <b><?php release_date('24-Oct-2019'); ?></b>
