@@ -21,8 +21,8 @@ $RELEASES = (function() {
     $PHP_7_4_DATE            = "28 Nov 2019";
     $PHP_7_4_TAGS            = []; // Set to ['security'] for security releases.
     $PHP_7_4_SHA256     = array(
-        "tar.bz2"       => "004a1a8176176ee1b5c112e73d705977507803f425f9e48cb4a84f42b22abf22",
-        "tar.gz"        => "bf206be96a39e643180013df39ddcd0493966692a2422c4b7d3355b6a15a01c0",
+        "tar.gz"        => "004a1a8176176ee1b5c112e73d705977507803f425f9e48cb4a84f42b22abf22",
+        "tar.bz2"       => "bf206be96a39e643180013df39ddcd0493966692a2422c4b7d3355b6a15a01c0",
         "tar.xz"        => "9bb751b20e5d6cc1ea9b1ebf23ef2d5f07f99b2d9cc417bf1d70c04f8b20ec42",
     );
 
