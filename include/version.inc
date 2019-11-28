@@ -16,6 +16,16 @@
  * );
  */
 $RELEASES = (function() {
+    /* PHP 7.4 Release */
+    $PHP_7_4_VERSION         = "7.4.0";
+    $PHP_7_4_DATE            = "28 Nov 2019";
+    $PHP_7_4_TAGS            = []; // Set to ['security'] for security releases.
+    $PHP_7_4_SHA256     = array(
+        "tar.bz2"       => "004a1a8176176ee1b5c112e73d705977507803f425f9e48cb4a84f42b22abf22",
+        "tar.gz"        => "bf206be96a39e643180013df39ddcd0493966692a2422c4b7d3355b6a15a01c0",
+        "tar.xz"        => "9bb751b20e5d6cc1ea9b1ebf23ef2d5f07f99b2d9cc417bf1d70c04f8b20ec42",
+    );
+
     /* PHP 7.3 Release */
     $PHP_7_3_VERSION         = "7.3.12";
     $PHP_7_3_DATE            = "21 Nov 2019";
@@ -48,6 +58,31 @@ $RELEASES = (function() {
 
     return array(
         7 => array(
+            $PHP_7_4_VERSION => array(
+                "announcement" => true,
+                "tags" => $PHP_7_4_TAGS,
+                "date" => $PHP_7_4_DATE,
+                "source" => array(
+                    array(
+                        "filename" => "php-$PHP_7_4_VERSION.tar.bz2",
+                        "name"     => "PHP $PHP_7_4_VERSION (tar.bz2)",
+                        "sha256"   => $PHP_7_4_SHA256["tar.bz2"],
+                        "date"     => $PHP_7_4_DATE,
+                    ),
+                    array(
+                        "filename" => "php-$PHP_7_4_VERSION.tar.gz",
+                        "name"     => "PHP $PHP_7_4_VERSION (tar.gz)",
+                        "sha256"   => $PHP_7_4_SHA256["tar.gz"],
+                        "date"     => $PHP_7_4_DATE,
+                    ),
+                    array(
+                        "filename" => "php-$PHP_7_4_VERSION.tar.xz",
+                        "name"     => "PHP $PHP_7_4_VERSION (tar.xz)",
+                        "sha256"   => $PHP_7_4_SHA256["tar.xz"],
+                        "date"     => $PHP_7_4_DATE,
+                    ),
+                ),
+            ),
             $PHP_7_3_VERSION => array(
                 "announcement" => true,
                 "tags" => $PHP_7_3_TAGS,
