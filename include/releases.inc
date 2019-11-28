@@ -19,14 +19,14 @@ $OLDRELEASES = array (
         array (
           'filename' => 'php-7.4.0.tar.bz2',
           'name' => 'PHP 7.4.0 (tar.bz2)',
-          'sha256' => '004a1a8176176ee1b5c112e73d705977507803f425f9e48cb4a84f42b22abf22',
+          'sha256' => 'bf206be96a39e643180013df39ddcd0493966692a2422c4b7d3355b6a15a01c0',
           'date' => '28 Nov 2019',
         ),
         1 =>
         array (
           'filename' => 'php-7.4.0.tar.gz',
           'name' => 'PHP 7.4.0 (tar.gz)',
-          'sha256' => 'bf206be96a39e643180013df39ddcd0493966692a2422c4b7d3355b6a15a01c0',
+          'sha256' => '004a1a8176176ee1b5c112e73d705977507803f425f9e48cb4a84f42b22abf22',
           'date' => '28 Nov 2019',
         ),
         2 =>
