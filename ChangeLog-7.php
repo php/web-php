@@ -162,6 +162,7 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
   <ul>
     <li><?php bugfix(78342); ?> (Bus error in configure test for iconv //IGNORE).</li>
     <li><?php bugfix(78642); ?> (Wrong libiconv version displayed).</li>
+  </ul>
 
 <li>Libxml:
   <ul>
