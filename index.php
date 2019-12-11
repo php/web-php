@@ -97,7 +97,10 @@ $intro = <<<EOF
 EOF;
 
 $intro .= "<ul>\n";
-foreach (get_active_branches() as $major => $releases) {
+$active_branches = get_active_branches();
+krsort($active_branches);
+foreach ($active_branches as $major => $releases) {
+    krsort($releases);
     foreach ((array)$releases as $release) {
         $version = $release['version'];
         list($major, $minor, $_) = explode('.', $version);
