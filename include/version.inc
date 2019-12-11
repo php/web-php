@@ -46,16 +46,6 @@ $RELEASES = (function() {
         "tar.xz"        => "746efeedc38e6ff7b1ec1432440f5fa801537adf6cd21e4afb3f040e5b0760a9",
     );
 
-    /* PHP 7.1 Release */
-    $PHP_7_1_VERSION         = "7.1.33";
-    $PHP_7_1_DATE            = "24 Oct 2019";
-    $PHP_7_1_TAGS            = ['security'];
-    $PHP_7_1_SHA256     = array(
-        'tar.bz2'       => '95a5e5f2e2b79b376b737a82d9682c91891e60289fa24183463a2aca158f4f4b',
-        'tar.gz'        => '0055f368ffefe51d5a4483755bd17475e88e74302c08b727952831c5b2682ea2',
-        'tar.xz'        => 'bd7c0a9bd5433289ee01fd440af3715309faf583f75832b64fe169c100d52968',
-    );
-
     return array(
         7 => array(
             $PHP_7_4_VERSION => array(
@@ -130,31 +120,6 @@ $RELEASES = (function() {
                         "name"     => "PHP $PHP_7_2_VERSION (tar.xz)",
                         "sha256"   => $PHP_7_2_SHA256["tar.xz"],
                         "date"     => $PHP_7_2_DATE,
-                    ),
-                ),
-            ),
-            $PHP_7_1_VERSION => array(
-                "announcement" => true,
-                "tags" => $PHP_7_1_TAGS,
-                "date" => $PHP_7_1_DATE,
-                "source" => array(
-                    array(
-                        "filename" => "php-$PHP_7_1_VERSION.tar.bz2",
-                        "name"     => "PHP $PHP_7_1_VERSION (tar.bz2)",
-                        "sha256"   => $PHP_7_1_SHA256["tar.bz2"],
-                        "date"     => $PHP_7_1_DATE,
-                    ),
-                    array(
-                        "filename" => "php-$PHP_7_1_VERSION.tar.gz",
-                        "name"     => "PHP $PHP_7_1_VERSION (tar.gz)",
-                        "sha256"   => $PHP_7_1_SHA256["tar.gz"],
-                        "date"     => $PHP_7_1_DATE,
-                    ),
-                    array(
-                        "filename" => "php-$PHP_7_1_VERSION.tar.xz",
-                        "name"     => "PHP $PHP_7_1_VERSION (tar.xz)",
-                        "sha256"   => $PHP_7_1_SHA256["tar.xz"],
-                        "date"     => $PHP_7_1_DATE,
                     ),
                 ),
             ),
