@@ -11,12 +11,12 @@
   <default:newsImage xmlns="http://php.net/ns/news" link="https://www.phpwales.co.uk" title="PHP Wales 2020">php-wales-2020.png</default:newsImage>
   <content type="xhtml">
     <div xmlns="http://www.w3.org/1999/xhtml">
-        <h3>
+      <p>
         Held in the picturesque setting of <b>Central Cardiff</b>, accessible
         from local airports and train stations - <b>PHP Wales</b> will be
         bringing together around <b>400 PHP developers</b> from around the
         world.
-      </h3>
+      </p>
       <p>
         With your help we can put on our inaugural conference at PHPWales, bringing together 400
         developers from around the world. Spread over 2 days in the capital city of Wales (Cardiff).
