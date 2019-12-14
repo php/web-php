@@ -3065,12 +3065,12 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
 </ul></li>
 <li>PDO:
 <ul>
+  <li><?php bugfix(73234); ?> (Emulated statements let value dictate parameter type).</li>
   <li>Add "Sent SQL" to debug dump for emulated prepares.</li>
   <li>Add parameter types for national character set strings.</li>
 </ul></li>
 <li>PDO_DBlib:
 <ul>
-  <li><?php bugfix(73234); ?> (Emulated statements let value dictate parameter type).</li>
   <li><?php bugfix(73396); ?> (bigint columns are returned as strings).</li>
   <li>Expose DB-Library version as \PDO::DBLIB_ATTR_VERSION attribute on \PDO instance.</li>
   <li>Add test coverage for bug <?php bugl(72969); ?>.</li>
