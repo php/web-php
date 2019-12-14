@@ -113,6 +113,7 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
 <li>Filter:
   <ul>
     <li>The filter extension no longer has the --with-pcre-dir on Unix builds, allowing the extension to be once more compiled as shared using ./configure.</li>
+    <li>Added min_range and max_range options for FILTER_VALIDATE_FLOAT.</li>
   </ul>
 
 <li>FFI:
