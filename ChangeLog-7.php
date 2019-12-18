@@ -17,13 +17,13 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
 <b><?php release_date('19-Dec-2019'); ?></b>
 <ul><li>Bcmath:
 <ul>
-  <li><?php bugfix(78878); ?> (Buffer underflow in bc_shift_addsub).</li>
+  <li><?php bugfix(78878); ?> (Buffer underflow in bc_shift_addsub). (CVE-2019-11046).</li>
 </ul></li>
 <li>Core:
 <ul>
-  <li><?php bugfix(78862); ?> (link() silently truncates after a null byte on Windows).</li>
-  <li><?php bugfix(78863); ?> (DirectoryIterator class silently truncates after a null byte).</li>
-  <li><?php bugfix(78943); ?> (mail() may release string with refcount==1 twice).</li>
+  <li><?php bugfix(78862); ?> (link() silently truncates after a null byte on Windows). (CVE-2019-11044).</li>
+  <li><?php bugfix(78863); ?> (DirectoryIterator class silently truncates after a null byte). (CVE-2019-11045).</li>
+  <li><?php bugfix(78943); ?> (mail() may release string with refcount==1 twice). (CVE-2019-11049).</li>
   <li><?php bugfix(78810); ?> (RW fetches do not throw "uninitialized property" exception).</li>
   <li><?php bugfix(78868); ?> (Calling __autoload() with incorrect EG(fake_scope) value).</li>
   <li><?php bugfix(78296); ?> (is_file fails to detect file).</li>
@@ -39,8 +39,8 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
 </ul></li>
 <li>EXIF:
 <ul>
-  <li><?php bugfix(78793); ?> (Use-after-free in exif parsing under memory sanitizer).</li>
-  <li><?php bugfix(78910); ?> (Heap-buffer-overflow READ in exif).</li>
+  <li><?php bugfix(78793); ?> (Use-after-free in exif parsing under memory sanitizer). (CVE-2019-11050).</li>
+  <li><?php bugfix(78910); ?> (Heap-buffer-overflow READ in exif). (CVE-2019-11047).</li>
 </ul></li>
 <li>FPM:
 <ul>
