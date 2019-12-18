@@ -1652,6 +1652,45 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
 
 <a name="PHP_7_2"></a>
 
+<section class="version" id="7.2.26"><!-- {{{ 7.2.26 -->
+<h3>Version 7.2.26</h3>
+<b><?php release_date('19-Dec-2019'); ?></b>
+<ul><li>Bcmath:
+<ul>
+  <li><?php bugfix(78878); ?> (Buffer underflow in bc_shift_addsub). (CVE-2019-11046)</li>
+</ul></li>
+<li>Core:
+<ul>
+  <li><?php bugfix(78862); ?> (link() silently truncates after a null byte on Windows). (CVE-2019-11044)</li>
+  <li><?php bugfix(78863); ?> (DirectoryIterator class silently truncates after a null byte). (CVE-2019-11045)</li>
+</ul></li>
+<li>EXIF:
+<ul>
+  <li><?php bugfix(78793); ?> (Use-after-free in exif parsing under memory sanitizer). (CVE-2019-11050)</li>
+  <li><?php bugfix(78910); ?> (Heap-buffer-overflow READ in exif). (CVE-2019-11047)</li>
+</ul></li>
+<li>GD:
+<ul>
+  <li><?php bugfix(78849); ?> (GD build broken with -D SIGNED_COMPARE_SLOW).</li>
+</ul></li>
+<li>Intl:
+<ul>
+  <li><?php bugfix(78804); ?> (Segmentation fault in Locale::filterMatches).</li>
+</ul></li>
+<li>OPcache:
+<ul>
+  <li>Fixed $x = (bool)$x; with opcache (should emit undeclared variable notice).</li>
+</ul></li>
+<li>Standard:
+<ul>
+  <li><?php bugfix(78759); ?> (array_search in $GLOBALS).</li>
+  <li><?php bugfix(78833); ?> (Integer overflow in pack causes out-of-bound access).</li>
+  <li><?php bugfix(78814); ?> (strip_tags allows / in tag name =&gt; whitelist bypass).</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
+
 <section class="version" id="7.2.25"><!-- {{{ 7.2.25 -->
 <h3>Version 7.2.25</h3>
 <b><?php release_date('21-Nov-2019'); ?></b>
