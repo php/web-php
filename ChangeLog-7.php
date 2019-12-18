@@ -480,6 +480,57 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
 
 <a name="PHP_7_3"></a>
 
+<section class="version" id="7.3.13"><!-- {{{ 7.3.13 -->
+<h3>Version 7.3.13</h3>
+<b><?php release_date('19-Dec-2019'); ?></b>
+<ul><li>Bcmath:
+<ul>
+  <li><?php bugfix(78878); ?> (Buffer underflow in bc_shift_addsub). (CVE-2019-11046)</li>
+</ul></li>
+<li>Core:
+<ul>
+  <li><?php bugfix(78862); ?> (link() silently truncates after a null byte on Windows). (CVE-2019-11044)</li>
+  <li><?php bugfix(78863); ?> (DirectoryIterator class silently truncates after a null byte). (CVE-2019-11045)</li>
+  <li><?php bugfix(78943); ?> (mail() may release string with refcount==1 twice). (CVE-2019-11049)</li>
+  <li><?php bugfix(78787); ?> (Segfault with trait overriding inherited private shadow property).</li>
+  <li><?php bugfix(78868); ?> (Calling __autoload() with incorrect EG(fake_scope) value).</li>
+  <li><?php bugfix(78296); ?> (is_file fails to detect file).</li>
+</ul></li>
+<li>EXIF:
+<ul>
+  <li><?php bugfix(78793); ?> (Use-after-free in exif parsing under memory sanitizer). (CVE-2019-11050)</li>
+  <li><?php bugfix(78910); ?> (Heap-buffer-overflow READ in exif) (CVE-2019-11047).</li>
+</ul></li>
+<li>GD:
+<ul>
+  <li><?php bugfix(78849); ?> (GD build broken with -D SIGNED_COMPARE_SLOW).</li>
+</ul></li>
+<li>MBString:
+<ul>
+  <li>Upgraded bundled Oniguruma to 6.9.4.</li>
+</ul></li>
+<li>OPcache:
+<ul>
+  <li>Fixed potential ASLR related invalid opline handler issues.</li>
+  <li>Fixed $x = (bool)$x; with opcache (should emit undeclared variable notice).</li>
+</ul></li>
+<li>PCRE:
+<ul>
+  <li><?php bugfix(78853); ?> (preg_match() may return integer &gt; 1).</li>
+</ul></li>
+<li>Standard:
+<ul>
+  <li><?php bugfix(78759); ?> (array_search in $GLOBALS).</li>
+  <li><?php bugfix(77638); ?> (var_export'ing certain class instances segfaults).</li>
+  <li><?php bugfix(78840); ?> (imploding $GLOBALS crashes).</li>
+  <li><?php bugfix(78833); ?> (Integer overflow in pack causes out-of-bound access).</li>
+  <li><?php bugfix(78814); ?> (strip_tags allows / in tag name =&gt; whitelist bypass).</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
+
+
 <section class="version" id="7.3.12"><!-- {{{ 7.3.12 -->
 <h3>Version 7.3.12</h3>
 <b><?php release_date('21-Nov-2019'); ?></b>
