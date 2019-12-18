@@ -12,6 +12,74 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
 
 <a name="PHP_7_4"></a>
 
+<section class="version" id="7.4.1"><!-- {{{ 7.4.1 -->
+<h3>Version 7.4.1</h3>
+<b><?php release_date('19-Dec-2019'); ?></b>
+<ul><li>Bcmath:
+<ul>
+  <li><?php bugfix(78878); ?> (Buffer underflow in bc_shift_addsub).</li>
+</ul></li>
+<li>Core:
+<ul>
+  <li><?php bugfix(78862); ?> (link() silently truncates after a null byte on Windows).</li>
+  <li><?php bugfix(78863); ?> (DirectoryIterator class silently truncates after a null byte).</li>
+  <li><?php bugfix(78943); ?> (mail() may release string with refcount==1 twice).</li>
+  <li><?php bugfix(78810); ?> (RW fetches do not throw "uninitialized property" exception).</li>
+  <li><?php bugfix(78868); ?> (Calling __autoload() with incorrect EG(fake_scope) value).</li>
+  <li><?php bugfix(78296); ?> (is_file fails to detect file).</li>
+  <li><?php bugfix(78883); ?> (fgets(STDIN) fails on Windows).</li>
+  <li><?php bugfix(78898); ?> (call_user_func(['parent', ...]) fails while other succeed).</li>
+  <li><?php bugfix(78904); ?> (Uninitialized property triggers __get()).</li>
+  <li><?php bugfix(78926); ?> (Segmentation fault on Symfony cache:clear).</li>
+</ul></li>
+<li>GD:
+<ul>
+  <li><?php bugfix(78849); ?> (GD build broken with -D SIGNED_COMPARE_SLOW).</li>
+  <li><?php bugfix(78923); ?> (Artifacts when convoluting image with transparency).</li>
+</ul></li>
+<li>EXIF:
+<ul>
+  <li><?php bugfix(78793); ?> (Use-after-free in exif parsing under memory sanitizer).</li>
+  <li><?php bugfix(78910); ?> (Heap-buffer-overflow READ in exif).</li>
+</ul></li>
+<li>FPM:
+<ul>
+  <li><?php bugfix(76601); ?> (Partially working php-fpm ater incomplete reload).</li>
+  <li><?php bugfix(78889); ?> (php-fpm service fails to start).</li>
+  <li><?php bugfix(78916); ?> (php-fpm 7.4.0 don't send mail via mail()).</li>
+</ul></li>
+<li>Intl:
+<ul>
+  <li>Implemented FR <?php bugl(78912); ?> (INTL Support for accounting format).</li>
+</ul></li>
+<li>Mysqlnd:
+<ul>
+  <li><?php bugfix(78823); ?> (ZLIB_LIBS not added to EXTRA_LIBS).</li>
+</ul></li>
+<li>OPcache:
+<ul>
+  <li>Fixed $x = (bool)$x; with opcache (should emit undeclared variable notice).</li>
+  <li><?php bugfix(78935); ?> (Preloading removes classes that have dependencies).</li>
+</ul></li>
+<li>PCRE:
+<ul>
+  <li><?php bugfix(78853); ?> (preg_match() may return integer &gt; 1).</li>
+</ul></li>
+<li>Reflection:
+<ul>
+  <li><?php bugfix(78895); ?> (Reflection detects abstract non-static class as abstract static. IS_IMPLICIT_ABSTRACT is not longer used).</li>
+</ul></li>
+<li>Standard:
+<ul>
+  <li><?php bugfix(77638); ?> (var_export'ing certain class instances segfaults).</li>
+  <li><?php bugfix(78840); ?> (imploding $GLOBALS crashes).</li>
+  <li><?php bugfix(78833); ?> (Integer overflow in pack causes out-of-bound access).</li>
+  <li><?php bugfix(78814); ?> (strip_tags allows / in tag name =&gt; whitelist bypass).</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
+
 <section class="version" id="7.4.0"><!-- {{{ 7.4.0 -->
 <h3>Version 7.4.0</h3>
 <b><?php release_date('28-Nov-2019'); ?></b>
