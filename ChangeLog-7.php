@@ -14,7 +14,7 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
 
 <section class="version" id="7.4.1"><!-- {{{ 7.4.1 -->
 <h3>Version 7.4.1</h3>
-<b><?php release_date('19-Dec-2019'); ?></b>
+<b><?php release_date('18-Dec-2019'); ?></b>
 <ul><li>Bcmath:
 <ul>
   <li><?php bugfix(78878); ?> (Buffer underflow in bc_shift_addsub). (CVE-2019-11046).</li>
@@ -482,7 +482,7 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
 
 <section class="version" id="7.3.13"><!-- {{{ 7.3.13 -->
 <h3>Version 7.3.13</h3>
-<b><?php release_date('19-Dec-2019'); ?></b>
+<b><?php release_date('18-Dec-2019'); ?></b>
 <ul><li>Bcmath:
 <ul>
   <li><?php bugfix(78878); ?> (Buffer underflow in bc_shift_addsub). (CVE-2019-11046)</li>
@@ -1654,7 +1654,7 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
 
 <section class="version" id="7.2.26"><!-- {{{ 7.2.26 -->
 <h3>Version 7.2.26</h3>
-<b><?php release_date('19-Dec-2019'); ?></b>
+<b><?php release_date('18-Dec-2019'); ?></b>
 <ul><li>Bcmath:
 <ul>
   <li><?php bugfix(78878); ?> (Buffer underflow in bc_shift_addsub). (CVE-2019-11046)</li>
