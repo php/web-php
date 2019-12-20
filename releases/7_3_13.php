@@ -13,7 +13,7 @@ site_header("PHP 7.3.13 Release Announcement");
 
   <p>For source downloads of PHP 7.3.13 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
   Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
-  The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-7.php#7.3.12">ChangeLog</a>.
+  The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-7.php#7.3.13">ChangeLog</a>.
   </p>
 
 <?php site_footer(); ?>
