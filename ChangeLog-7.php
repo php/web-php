@@ -12,6 +12,100 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
 
 <a name="PHP_7_4"></a>
 
+<section class="version" id="7.4.2"><!-- {{{ 7.4.2 -->
+<h3>Version 7.4.2</h3>
+<b><?php release_date('23-Jan-2020'); ?></b>
+<ul><li>Core:
+<ul>
+  <li>Preloading support on Windows has been disabled.</li>
+  <li><?php bugfix(79022); ?> (class_exists returns True for classes that are not ready to be used).</li>
+  <li><?php bugfix(78929); ?> (plus signs in cookie values are converted to spaces).</li>
+  <li><?php bugfix(78973); ?> (Destructor during CV freeing causes segfault if opline never saved).</li>
+  <li><?php bugfix(78776); ?> (Abstract method implementation from trait does not check "static").</li>
+  <li><?php bugfix(78999); ?> (Cycle leak when using function result as temporary).</li>
+  <li><?php bugfix(79008); ?> (General performance regression with PHP 7.4 on Windows).</li>
+  <li><?php bugfix(79002); ?> (Serializing uninitialized typed properties with __sleep makes unserialize throw).</li>
+</ul></li>
+<li>CURL:
+<ul>
+  <li><?php bugfix(79033); ?> (Curl timeout error with specific url and post).</li>
+  <li><?php bugfix(79063); ?> (curl openssl does not respect PKG_CONFIG_PATH).</li>
+</ul></li>
+<li>Date:
+<ul>
+  <li><?php bugfix(79015); ?> (undefined-behavior in php_date.c).</li>
+</ul></li>
+<li>DBA:
+<ul>
+  <li><?php bugfix(78808); ?> ([LMDB] MDB_MAP_FULL: Environment mapsize limit reached).</li>
+</ul></li>
+<li>Exif:
+<ul>
+  <li><?php bugfix(79046); ?> (NaN to int cast undefined behavior in exif).</li>
+</ul></li>
+<li>Fileinfo:
+<ul>
+  <li><?php bugfix(74170); ?> (locale information change after mime_content_type).</li>
+</ul></li>
+<li>GD:
+<ul>
+  <li><?php bugfix(79067); ?> (gdTransformAffineCopy() may use unitialized values).</li>
+  <li><?php bugfix(79068); ?> (gdTransformAffineCopy() changes interpolation method).</li>
+</ul></li>
+<li>Libxml:
+<ul>
+  <li><?php bugfix(79029); ?> (Use After Free's in XMLReader / XMLWriter).</li>
+</ul></li>
+<li>Mbstring:
+<ul>
+  <li><?php bugfix(79037); ?> (global buffer-overflow in `mbfl_filt_conv_big5_wchar`). (CVE-2020-7060)</li>
+</ul></li>
+<li>OPcache:
+<ul>
+  <li><?php bugfix(78961); ?> (erroneous optimization of re-assigned $GLOBALS).</li>
+  <li><?php bugfix(78950); ?> (Preloading trait method with static variables).</li>
+  <li><?php bugfix(78903); ?> (Conflict in RTD key for closures results in crash).</li>
+  <li><?php bugfix(78986); ?> (Opcache segfaults when inheriting ctor from immutable into mutable class).</li>
+  <li><?php bugfix(79040); ?> (Warning Opcode handlers are unusable due to ASLR).</li>
+  <li><?php bugfix(79055); ?> (Typed property become unknown with OPcache file cache).</li>
+</ul></li>
+<li>Pcntl:
+<ul>
+  <li><?php bugfix(78402); ?> (Converting null to string in error message is bad DX).</li>
+</ul></li>
+<li>PDO_PgSQL:
+<ul>
+  <li><?php bugfix(78983); ?> (pdo_pgsql config.w32 cannot find libpq-fe.h).</li>
+  <li><?php bugfix(78980); ?> (pgsqlGetNotify() overlooks dead connection).</li>
+  <li><?php bugfix(78982); ?> (pdo_pgsql returns dead persistent connection).</li>
+</ul></li>
+<li>Session:
+<ul>
+  <li><?php bugfix(79091); ?> (heap use-after-free in session_create_id()).</li>
+  <li><?php bugfix(79031); ?> (Session unserialization problem).</li>
+</ul></li>
+<li>Shmop:
+<ul>
+  <li><?php bugfix(78538); ?> (shmop memory leak).</li>
+</ul></li>
+<li>Sqlite3:
+<ul>
+  <li><?php bugfix(79056); ?> (sqlite does not respect PKG_CONFIG_PATH during compilation).</li>
+</ul></li>
+<li>Spl:
+<ul>
+  <li><?php bugfix(78976); ?> (SplFileObject::fputcsv returns -1 on failure).</li>
+</ul></li>
+<li>Standard:
+<ul>
+  <li><?php bugfix(79099); ?> (OOB read in php_strip_tags_ex). (CVE-2020-7059)</li>
+  <li><?php bugfix(79000); ?> (Non-blocking socket stream reports EAGAIN as error).</li>
+  <li><?php bugfix(54298); ?> (Using empty additional_headers adding extraneous CRLF).</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
+
 <section class="version" id="7.4.1"><!-- {{{ 7.4.1 -->
 <h3>Version 7.4.1</h3>
 <b><?php release_date('18-Dec-2019'); ?></b>
