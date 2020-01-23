@@ -1828,7 +1828,7 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
 </ul></li>
 <li>Standard:
 <ul>
-  <li><?php bugfix(79099); ?> (OOB read in php_strip_tags_ex).</li>
+  <li><?php bugfix(79099); ?> (OOB read in php_strip_tags_ex). (CVE-2020-7059)</li>
 </ul></li>
 </ul>
 <!-- }}} --></section>
