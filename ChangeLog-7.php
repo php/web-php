@@ -1746,6 +1746,24 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
 
 <a name="PHP_7_2"></a>
 
+<section class="version" id="7.2.27"><!-- {{{ 7.2.27 -->
+<h3>Version 7.2.27</h3>
+<b><?php release_date('23-Jan-2020'); ?></b>
+<ul><li>Mbstring:
+<ul>
+  <li><?php bugfix(79037); ?> (global buffer-overflow in `mbfl_filt_conv_big5_wchar`). (CVE-2020-7060)</li>
+</ul></li>
+<li>Session:
+<ul>
+  <li><?php bugfix(79091); ?> (heap use-after-free in session_create_id()).</li>
+</ul></li>
+<li>Standard:
+<ul>
+  <li><?php bugfix(79099); ?> (OOB read in php_strip_tags_ex).</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
 <section class="version" id="7.2.26"><!-- {{{ 7.2.26 -->
 <h3>Version 7.2.26</h3>
 <b><?php release_date('18-Dec-2019'); ?></b>
