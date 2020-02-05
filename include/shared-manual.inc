@@ -396,6 +396,12 @@ function manual_setup($setup) {
     $_SERVER['BASE_PAGE'] = $base . $setup['this'][0];
     $_SERVER['BASE_HREF'] = $MYSITE . $_SERVER['BASE_PAGE'];
 
+    $timestamps = array(
+        filemtime($_SERVER["DOCUMENT_ROOT"] . "/" . $_SERVER["BASE_PAGE"]),
+        filemtime($_SERVER["DOCUMENT_ROOT"] . "/include/prepend.inc"),
+        filemtime($_SERVER["DOCUMENT_ROOT"] . "/styles/theme-base.css"),
+    );
+
     // Load user note for this page
     list($filename, $title) = $PGI['this'];
 
@@ -404,15 +410,11 @@ function manual_setup($setup) {
         $filename = substr($filename, 0, -4);
     }
     $USERNOTES = manual_notes_load($filename);
-    $note = current($USERNOTES);
-    $lastusernote = $note["xwhen"];
+    if ($USERNOTES) {
+        $note = current($USERNOTES);
+        $timestamps[] = $note["xwhen"];
+    }
 
-    $timestamps = array(
-        filemtime($_SERVER["DOCUMENT_ROOT"] . "/" . $_SERVER["BASE_PAGE"]),
-        filemtime($_SERVER["DOCUMENT_ROOT"] . "/include/prepend.inc"),
-        filemtime($_SERVER["DOCUMENT_ROOT"] . "/styles/theme-base.css"),
-        $lastusernote,
-    );
     $lastmod = max($timestamps);
 
     $breadcrumbs = manual_navigation_breadcrumbs($setup);
