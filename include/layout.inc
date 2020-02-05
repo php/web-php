@@ -73,7 +73,7 @@ function make_image($file, $alt = FALSE, $align = FALSE, $extras = FALSE,
                     $dir = '/images', $border = 0, $addsize = TRUE)
 {
     // If no / was provided at the start of $dir, add it
-    $webdir = $_SERVER['MYSITE'] . ($dir{0} == '/' ? '' : '/') . $dir;
+    $webdir = $_SERVER['MYSITE'] . ($dir[0] == '/' ? '' : '/') . $dir;
 
     // Get width and height values if possible
     if ($addsize && ($size = @getimagesize($_SERVER['DOCUMENT_ROOT'] . "$dir/$file"))) {
