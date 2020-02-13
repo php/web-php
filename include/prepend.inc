@@ -1,6 +1,7 @@
 <?php // -*- C++ -*-
 // Compress all pages, if ext/zlib is available on the mirror
-ini_set("zlib.output_compression", 1);
+// XXX Deactivated by sas, causes errors towards delivery machines
+// ini_set("zlib.output_compression", 1);
 
 // See http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.9
 // for cache control header descriptions (used in many places on the site).
