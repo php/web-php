@@ -11,6 +11,103 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
 <a href="#PHP_7_1">7.1</a> | <a href="#PHP_7_0">7.0</a>
 
 <a name="PHP_7_4"></a>
+<section class="version" id="7.4.3"><!-- {{{ 7.4.3 -->
+<h3>Version 7.4.3</h3>
+<b><?php release_date('20-Feb-2020'); ?></b>
+<ul><li>Core:
+<ul>
+  <li><?php bugfix(79146); ?> (cscript can fail to run on some systems).</li>
+  <li><?php bugfix(79155); ?> (Property nullability lost when using multiple property definition).</li>
+  <li><?php bugfix(78323); ?> (Code 0 is returned on invalid options).</li>
+  <li><?php bugfix(78989); ?> (Delayed variance check involving trait segfaults).</li>
+  <li><?php bugfix(79174); ?> (cookie values with spaces fail to round-trip).</li>
+  <li><?php bugfix(76047); ?> (Use-after-free when accessing already destructed backtrace arguments).</li>
+</ul></li>
+<li>COM:
+<ul>
+  <li><?php bugfix(79247); ?> (Garbage collecting variant objects segfaults).</li>
+</ul></li>
+<li>CURL:
+<ul>
+  <li><?php bugfix(79078); ?> (Hypothetical use-after-free in curl_multi_add_handle()).</li>
+</ul></li>
+<li>FFI:
+<ul>
+  <li><?php bugfix(79096); ?> (FFI Struct Segfault).</li>
+</ul></li>
+<li>IMAP:
+<ul>
+  <li><?php bugfix(79112); ?> (IMAP extension can't find OpenSSL libraries at configure time).</li>
+</ul></li>
+<li>Intl:
+<ul>
+  <li><?php bugfix(79212); ?> (NumberFormatter::format() may detect wrong type).</li>
+</ul></li>
+<li>Libxml:
+<ul>
+  <li><?php bugfix(79191); ?> (Error in SoapClient ctor disables DOMDocument::save()).</li>
+</ul></li>
+<li>MBString:
+<ul>
+  <li><?php bugfix(79149); ?> (SEGV in mb_convert_encoding with non-string encodings).</li>
+</ul></li>
+<li>MySQLi:
+<ul>
+  <li><?php bugfix(78666); ?> (Properties may emit a warning on var_dump()).</li>
+</ul></li>
+<li>MySQLnd:
+<ul>
+  <li><?php bugfix(79084); ?> (mysqlnd may fetch wrong column indexes with MYSQLI_BOTH).</li>
+  <li><?php bugfix(79011); ?> (MySQL caching_sha2_password Access denied for password with more than 20 chars).</li>
+</ul></li>
+<li>Opcache:
+<ul>
+  <li><?php bugfix(79114); ?> (Eval class during preload causes class to be only half available).</li>
+  <li><?php bugfix(79128); ?> (Preloading segfaults if preload_user is used).</li>
+  <li><?php bugfix(79193); ?> (Incorrect type inference for self::$field =&amp; $field).</li>
+</ul></li>
+<li>OpenSSL:
+<ul>
+  <li><?php bugfix(79145); ?> (openssl memory leak).</li>
+</ul></li>
+<li>Phar:
+<ul>
+  <li><?php bugfix(79082); ?> (Files added to tar with Phar::buildFromIterator have all-access permissions). (CVE-2020-7063)</li>
+  <li><?php bugfix(79171); ?> (heap-buffer-overflow in phar_extract_file). (CVE-2020-7061)</li>
+  <li><?php bugfix(76584); ?> (PharFileInfo::decompress not working).</li>
+</ul></li>
+<li>Reflection:
+<ul>
+  <li><?php bugfix(79115); ?> (ReflectionClass::isCloneable call reflected class __destruct).</li>
+</ul></li>
+<li>Session:
+<ul>
+  <li><?php bugfix(79221); ?> (Null Pointer Dereference in PHP Session Upload Progress). (CVE-2020-7062)</li>
+</ul></li>
+<li>Standard:
+<ul>
+  <li><?php bugfix(78902); ?> (Memory leak when using stream_filter_append).</li>
+  <li><?php bugfix(78969); ?> (PASSWORD_DEFAULT should match PASSWORD_BCRYPT instead of being null).</li>
+</ul></li>
+<li>Testing:
+<ul>
+  <li><?php bugfix(78090); ?> (bug45161.phpt takes forever to finish).</li>
+</ul></li>
+<li>XSL:
+<ul>
+  <li><?php bugfix(70078); ?> (XSL callbacks with nodes as parameter leak memory).</li>
+</ul></li>
+<li>Zip:
+<ul>
+  <li>Add ZipArchive::CM_LZMA2 and ZipArchive::CM_XZ constants (since libzip 1.6.0).</li>
+  <li>Add ZipArchive::RDONLY (since libzip 1.0.0).</li>
+  <li>Add ZipArchive::ER_* missing constants.</li>
+  <li>Add ZipArchive::LIBZIP_VERSION constant.</li>
+  <li><?php bugfix(73119); ?> (Wrong return for ZipArchive::addEmptyDir Method).</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
 
 <section class="version" id="7.4.2"><!-- {{{ 7.4.2 -->
 <h3>Version 7.4.2</h3>
