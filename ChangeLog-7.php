@@ -574,6 +574,75 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
 
 <a name="PHP_7_3"></a>
 
+<section class="version" id="7.3.15"><!-- {{{ 7.3.15 -->
+<h3>Version 7.3.15</h3>
+<b><?php release_date('20-Feb-2020'); ?></b>
+<ul><li>Core:
+<ul>
+  <li><?php bugfix(71876); ?> (Memory corruption htmlspecialchars(): charset `*' not supported).</li>
+  <li><?php bugfix(79146); ?> (cscript can fail to run on some systems).</li>
+  <li><?php bugfix(78323); ?> (Code 0 is returned on invalid options).</li>
+  <li><?php bugfix(76047); ?> (Use-after-free when accessing already destructed backtrace arguments).</li>
+</ul></li>
+<li>CURL:
+<ul>
+  <li><?php bugfix(79078); ?> (Hypothetical use-after-free in curl_multi_add_handle()).</li>
+</ul></li>
+<li>Intl:
+<ul>
+  <li><?php bugfix(79212); ?> (NumberFormatter::format() may detect wrong type).</li>
+</ul></li>
+<li>Libxml:
+<ul>
+  <li><?php bugfix(79191); ?> (Error in SoapClient ctor disables DOMDocument::save()).</li>
+</ul></li>
+<li>MBString:
+<ul>
+  <li><?php bugfix(79154); ?> (mb_convert_encoding() can modify $from_encoding).</li>
+</ul></li>
+<li>MySQLnd:
+<ul>
+  <li><?php bugfix(79084); ?> (mysqlnd may fetch wrong column indexes with MYSQLI_BOTH).</li>
+</ul></li>
+<li>OpenSSL:
+<ul>
+  <li><?php bugfix(79145); ?> (openssl memory leak).</li>
+</ul></li>
+<li>Phar:
+<ul>
+  <li><?php bugfix(79082); ?> (Files added to tar with Phar::buildFromIterator have all-access permissions). (CVE-2020-7063)</li>
+  <li><?php bugfix(79171); ?> (heap-buffer-overflow in phar_extract_file). (CVE-2020-7061)</li>
+  <li><?php bugfix(76584); ?> (PharFileInfo::decompress not working).</li>
+</ul></li>
+<li>Reflection:
+<ul>
+  <li><?php bugfix(79115); ?> (ReflectionClass::isCloneable call reflected class __destruct).</li>
+</ul></li>
+<li>Session:
+<ul>
+  <li><?php bugfix(79221); ?> (Null Pointer Dereference in PHP Session Upload Progress). (CVE-2020-7062)</li>
+</ul></li>
+<li>SPL:
+<ul>
+  <li><?php bugfix(79151); ?> (heap use after free caused by spl_dllist_it_helper_move_forward).</li>
+</ul></li>
+<li>Standard:
+<ul>
+  <li><?php bugfix(78902); ?> (Memory leak when using stream_filter_append).</li>
+</ul></li>
+<li>Testing:
+<ul>
+  <li><?php bugfix(78090); ?> (bug45161.phpt takes forever to finish).</li>
+</ul></li>
+<li>XSL:
+<ul>
+  <li><?php bugfix(70078); ?> (XSL callbacks with nodes as parameter leak memory).</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
+
+
 <section class="version" id="7.3.14"><!-- {{{ 7.3.14 -->
 <h3>Version 7.3.14</h3>
 <b><?php release_date('23-Jan-2020'); ?></b>
