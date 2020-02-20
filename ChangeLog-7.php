@@ -1815,6 +1815,24 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
 
 <a name="PHP_7_2"></a>
 
+<section class="version" id="7.2.28"><!-- {{{ 7.2.28 -->
+<h3>Version 7.2.28</h3>
+<b><?php release_date('20-Feb-2020'); ?></b>
+<ul><li>DOM:
+<ul>
+  <li><?php bugfix(77569); ?>: (Write Access Violation in DomImplementation).</li>
+</ul></li>
+<li>Phar:
+<ul>
+  <li><?php bugfix(79082); ?> (Files added to tar with Phar::buildFromIterator have all-access permissions). (CVE-2020-7063)</li>
+</ul></li>
+<li>Session:
+<ul>
+  <li><?php bugfix(79221); ?> (Null Pointer Dereference in PHP Session Upload Progress). (CVE-2020-7062)</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
 <section class="version" id="7.2.27"><!-- {{{ 7.2.27 -->
 <h3>Version 7.2.27</h3>
 <b><?php release_date('23-Jan-2020'); ?></b>
