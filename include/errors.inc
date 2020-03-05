@@ -431,6 +431,7 @@ $terms = array(
 	'include'		=> 'function.include.php',
 	'int'			=> 'language.types.integer.php',
 	'ip'			=> 'reserved.variables.server.php',
+	'iterable'		=> 'language.types.iterable.php',
 	'juggling'		=> 'language.types.type-juggling.php',
 	'location'		=> 'function.header.php',
 	'mail'			=> 'function.mail.php',
