@@ -2601,7 +2601,6 @@ FILTER_FLAG_NO_PRIV_RANGE).</li>
 <ul>
   <li><?php bugfix(72402); ?> (_php_mb_regex_ereg_replace_exec - double free). (CVE-2016-5768)</li>
 </ul></li>
-</ul></li>
 <li>mcrypt:
 <ul>
   <li><?php bugfix(72455); ?> (Heap Overflow due to integer overflows). (CVE-2016-5769)</li>
@@ -5276,6 +5275,7 @@ FILTER_FLAG_NO_PRIV_RANGE).</li>
 <ul>
   <li>Fixed possible read after end of buffer and use after free.</li>
 </ul></li>
+</ul>
 <!-- }}} --></section>
 
 <section class="version" id="5.4.35"><!-- {{{ 5.4.35 -->
@@ -7906,7 +7906,6 @@ FILTER_FLAG_NO_PRIV_RANGE).</li>
   <li><?php bugfix(67399); ?> (putenv with empty variable may lead to crash).</li>
   <li><?php bugfix(67492); ?> (unserialize() SPL ArrayObject / SPLObjectStorage Type Confusion) (CVE-2014-3515).</li>
   <li><?php bugfix(67498); ?> (phpinfo() Type Confusion Information Leak Vulnerability). (CVE-2014-4721)</li>
-</li>
 </ul></li>
 <li>COM:
 <ul>
@@ -9352,7 +9351,7 @@ FILTER_FLAG_NO_PRIV_RANGE).</li>
 <ul>
   <li>Reverted a change in timeout handling restoring PHP 5.3.6 behavior,
     as the new behavior caused mysqlnd SSL connections to hang (
-    bug <?php bugl(55283); ?></a>).
+    bug <?php bugl(55283); ?>).
     (Pierre, Andrey, Johannes)</li>
 </ul>
 </li>

@@ -6,16 +6,1202 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
 ?>
 <h1>PHP 7 ChangeLog</h1>
 
+<a href="#PHP_7_4">7.4</a> |
 <a href="#PHP_7_3">7.3</a> | <a href="#PHP_7_2">7.2</a> |
 <a href="#PHP_7_1">7.1</a> | <a href="#PHP_7_0">7.0</a>
 
+<a name="PHP_7_4"></a>
+<section class="version" id="7.4.3"><!-- {{{ 7.4.3 -->
+<h3>Version 7.4.3</h3>
+<b><?php release_date('20-Feb-2020'); ?></b>
+<ul><li>Core:
+<ul>
+  <li><?php bugfix(79146); ?> (cscript can fail to run on some systems).</li>
+  <li><?php bugfix(79155); ?> (Property nullability lost when using multiple property definition).</li>
+  <li><?php bugfix(78323); ?> (Code 0 is returned on invalid options).</li>
+  <li><?php bugfix(78989); ?> (Delayed variance check involving trait segfaults).</li>
+  <li><?php bugfix(79174); ?> (cookie values with spaces fail to round-trip).</li>
+  <li><?php bugfix(76047); ?> (Use-after-free when accessing already destructed backtrace arguments).</li>
+</ul></li>
+<li>COM:
+<ul>
+  <li><?php bugfix(79247); ?> (Garbage collecting variant objects segfaults).</li>
+</ul></li>
+<li>CURL:
+<ul>
+  <li><?php bugfix(79078); ?> (Hypothetical use-after-free in curl_multi_add_handle()).</li>
+</ul></li>
+<li>FFI:
+<ul>
+  <li><?php bugfix(79096); ?> (FFI Struct Segfault).</li>
+</ul></li>
+<li>IMAP:
+<ul>
+  <li><?php bugfix(79112); ?> (IMAP extension can't find OpenSSL libraries at configure time).</li>
+</ul></li>
+<li>Intl:
+<ul>
+  <li><?php bugfix(79212); ?> (NumberFormatter::format() may detect wrong type).</li>
+</ul></li>
+<li>Libxml:
+<ul>
+  <li><?php bugfix(79191); ?> (Error in SoapClient ctor disables DOMDocument::save()).</li>
+</ul></li>
+<li>MBString:
+<ul>
+  <li><?php bugfix(79149); ?> (SEGV in mb_convert_encoding with non-string encodings).</li>
+</ul></li>
+<li>MySQLi:
+<ul>
+  <li><?php bugfix(78666); ?> (Properties may emit a warning on var_dump()).</li>
+</ul></li>
+<li>MySQLnd:
+<ul>
+  <li><?php bugfix(79084); ?> (mysqlnd may fetch wrong column indexes with MYSQLI_BOTH).</li>
+  <li><?php bugfix(79011); ?> (MySQL caching_sha2_password Access denied for password with more than 20 chars).</li>
+</ul></li>
+<li>Opcache:
+<ul>
+  <li><?php bugfix(79114); ?> (Eval class during preload causes class to be only half available).</li>
+  <li><?php bugfix(79128); ?> (Preloading segfaults if preload_user is used).</li>
+  <li><?php bugfix(79193); ?> (Incorrect type inference for self::$field =&amp; $field).</li>
+</ul></li>
+<li>OpenSSL:
+<ul>
+  <li><?php bugfix(79145); ?> (openssl memory leak).</li>
+</ul></li>
+<li>Phar:
+<ul>
+  <li><?php bugfix(79082); ?> (Files added to tar with Phar::buildFromIterator have all-access permissions). (CVE-2020-7063)</li>
+  <li><?php bugfix(79171); ?> (heap-buffer-overflow in phar_extract_file). (CVE-2020-7061)</li>
+  <li><?php bugfix(76584); ?> (PharFileInfo::decompress not working).</li>
+</ul></li>
+<li>Reflection:
+<ul>
+  <li><?php bugfix(79115); ?> (ReflectionClass::isCloneable call reflected class __destruct).</li>
+</ul></li>
+<li>Session:
+<ul>
+  <li><?php bugfix(79221); ?> (Null Pointer Dereference in PHP Session Upload Progress). (CVE-2020-7062)</li>
+</ul></li>
+<li>Standard:
+<ul>
+  <li><?php bugfix(78902); ?> (Memory leak when using stream_filter_append).</li>
+  <li><?php bugfix(78969); ?> (PASSWORD_DEFAULT should match PASSWORD_BCRYPT instead of being null).</li>
+</ul></li>
+<li>Testing:
+<ul>
+  <li><?php bugfix(78090); ?> (bug45161.phpt takes forever to finish).</li>
+</ul></li>
+<li>XSL:
+<ul>
+  <li><?php bugfix(70078); ?> (XSL callbacks with nodes as parameter leak memory).</li>
+</ul></li>
+<li>Zip:
+<ul>
+  <li>Add ZipArchive::CM_LZMA2 and ZipArchive::CM_XZ constants (since libzip 1.6.0).</li>
+  <li>Add ZipArchive::RDONLY (since libzip 1.0.0).</li>
+  <li>Add ZipArchive::ER_* missing constants.</li>
+  <li>Add ZipArchive::LIBZIP_VERSION constant.</li>
+  <li><?php bugfix(73119); ?> (Wrong return for ZipArchive::addEmptyDir Method).</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
+
+<section class="version" id="7.4.2"><!-- {{{ 7.4.2 -->
+<h3>Version 7.4.2</h3>
+<b><?php release_date('23-Jan-2020'); ?></b>
+<ul><li>Core:
+<ul>
+  <li>Preloading support on Windows has been disabled.</li>
+  <li><?php bugfix(79022); ?> (class_exists returns True for classes that are not ready to be used).</li>
+  <li><?php bugfix(78929); ?> (plus signs in cookie values are converted to spaces).</li>
+  <li><?php bugfix(78973); ?> (Destructor during CV freeing causes segfault if opline never saved).</li>
+  <li><?php bugfix(78776); ?> (Abstract method implementation from trait does not check "static").</li>
+  <li><?php bugfix(78999); ?> (Cycle leak when using function result as temporary).</li>
+  <li><?php bugfix(79008); ?> (General performance regression with PHP 7.4 on Windows).</li>
+  <li><?php bugfix(79002); ?> (Serializing uninitialized typed properties with __sleep makes unserialize throw).</li>
+</ul></li>
+<li>CURL:
+<ul>
+  <li><?php bugfix(79033); ?> (Curl timeout error with specific url and post).</li>
+  <li><?php bugfix(79063); ?> (curl openssl does not respect PKG_CONFIG_PATH).</li>
+</ul></li>
+<li>Date:
+<ul>
+  <li><?php bugfix(79015); ?> (undefined-behavior in php_date.c).</li>
+</ul></li>
+<li>DBA:
+<ul>
+  <li><?php bugfix(78808); ?> ([LMDB] MDB_MAP_FULL: Environment mapsize limit reached).</li>
+</ul></li>
+<li>Exif:
+<ul>
+  <li><?php bugfix(79046); ?> (NaN to int cast undefined behavior in exif).</li>
+</ul></li>
+<li>Fileinfo:
+<ul>
+  <li><?php bugfix(74170); ?> (locale information change after mime_content_type).</li>
+</ul></li>
+<li>GD:
+<ul>
+  <li><?php bugfix(79067); ?> (gdTransformAffineCopy() may use unitialized values).</li>
+  <li><?php bugfix(79068); ?> (gdTransformAffineCopy() changes interpolation method).</li>
+</ul></li>
+<li>Libxml:
+<ul>
+  <li><?php bugfix(79029); ?> (Use After Free's in XMLReader / XMLWriter).</li>
+</ul></li>
+<li>Mbstring:
+<ul>
+  <li><?php bugfix(79037); ?> (global buffer-overflow in `mbfl_filt_conv_big5_wchar`). (CVE-2020-7060)</li>
+</ul></li>
+<li>OPcache:
+<ul>
+  <li><?php bugfix(78961); ?> (erroneous optimization of re-assigned $GLOBALS).</li>
+  <li><?php bugfix(78950); ?> (Preloading trait method with static variables).</li>
+  <li><?php bugfix(78903); ?> (Conflict in RTD key for closures results in crash).</li>
+  <li><?php bugfix(78986); ?> (Opcache segfaults when inheriting ctor from immutable into mutable class).</li>
+  <li><?php bugfix(79040); ?> (Warning Opcode handlers are unusable due to ASLR).</li>
+  <li><?php bugfix(79055); ?> (Typed property become unknown with OPcache file cache).</li>
+</ul></li>
+<li>Pcntl:
+<ul>
+  <li><?php bugfix(78402); ?> (Converting null to string in error message is bad DX).</li>
+</ul></li>
+<li>PDO_PgSQL:
+<ul>
+  <li><?php bugfix(78983); ?> (pdo_pgsql config.w32 cannot find libpq-fe.h).</li>
+  <li><?php bugfix(78980); ?> (pgsqlGetNotify() overlooks dead connection).</li>
+  <li><?php bugfix(78982); ?> (pdo_pgsql returns dead persistent connection).</li>
+</ul></li>
+<li>Session:
+<ul>
+  <li><?php bugfix(79091); ?> (heap use-after-free in session_create_id()).</li>
+  <li><?php bugfix(79031); ?> (Session unserialization problem).</li>
+</ul></li>
+<li>Shmop:
+<ul>
+  <li><?php bugfix(78538); ?> (shmop memory leak).</li>
+</ul></li>
+<li>Sqlite3:
+<ul>
+  <li><?php bugfix(79056); ?> (sqlite does not respect PKG_CONFIG_PATH during compilation).</li>
+</ul></li>
+<li>Spl:
+<ul>
+  <li><?php bugfix(78976); ?> (SplFileObject::fputcsv returns -1 on failure).</li>
+</ul></li>
+<li>Standard:
+<ul>
+  <li><?php bugfix(79099); ?> (OOB read in php_strip_tags_ex). (CVE-2020-7059)</li>
+  <li><?php bugfix(79000); ?> (Non-blocking socket stream reports EAGAIN as error).</li>
+  <li><?php bugfix(54298); ?> (Using empty additional_headers adding extraneous CRLF).</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
+
+<section class="version" id="7.4.1"><!-- {{{ 7.4.1 -->
+<h3>Version 7.4.1</h3>
+<b><?php release_date('18-Dec-2019'); ?></b>
+<ul><li>Bcmath:
+<ul>
+  <li><?php bugfix(78878); ?> (Buffer underflow in bc_shift_addsub). (CVE-2019-11046).</li>
+</ul></li>
+<li>Core:
+<ul>
+  <li><?php bugfix(78862); ?> (link() silently truncates after a null byte on Windows). (CVE-2019-11044).</li>
+  <li><?php bugfix(78863); ?> (DirectoryIterator class silently truncates after a null byte). (CVE-2019-11045).</li>
+  <li><?php bugfix(78943); ?> (mail() may release string with refcount==1 twice). (CVE-2019-11049).</li>
+  <li><?php bugfix(78810); ?> (RW fetches do not throw "uninitialized property" exception).</li>
+  <li><?php bugfix(78868); ?> (Calling __autoload() with incorrect EG(fake_scope) value).</li>
+  <li><?php bugfix(78296); ?> (is_file fails to detect file).</li>
+  <li><?php bugfix(78883); ?> (fgets(STDIN) fails on Windows).</li>
+  <li><?php bugfix(78898); ?> (call_user_func(['parent', ...]) fails while other succeed).</li>
+  <li><?php bugfix(78904); ?> (Uninitialized property triggers __get()).</li>
+  <li><?php bugfix(78926); ?> (Segmentation fault on Symfony cache:clear).</li>
+</ul></li>
+<li>GD:
+<ul>
+  <li><?php bugfix(78849); ?> (GD build broken with -D SIGNED_COMPARE_SLOW).</li>
+  <li><?php bugfix(78923); ?> (Artifacts when convoluting image with transparency).</li>
+</ul></li>
+<li>EXIF:
+<ul>
+  <li><?php bugfix(78793); ?> (Use-after-free in exif parsing under memory sanitizer). (CVE-2019-11050).</li>
+  <li><?php bugfix(78910); ?> (Heap-buffer-overflow READ in exif). (CVE-2019-11047).</li>
+</ul></li>
+<li>FPM:
+<ul>
+  <li><?php bugfix(76601); ?> (Partially working php-fpm ater incomplete reload).</li>
+  <li><?php bugfix(78889); ?> (php-fpm service fails to start).</li>
+  <li><?php bugfix(78916); ?> (php-fpm 7.4.0 don't send mail via mail()).</li>
+</ul></li>
+<li>Intl:
+<ul>
+  <li>Implemented FR <?php bugl(78912); ?> (INTL Support for accounting format).</li>
+</ul></li>
+<li>Mysqlnd:
+<ul>
+  <li><?php bugfix(78823); ?> (ZLIB_LIBS not added to EXTRA_LIBS).</li>
+</ul></li>
+<li>OPcache:
+<ul>
+  <li>Fixed $x = (bool)$x; with opcache (should emit undeclared variable notice).</li>
+  <li><?php bugfix(78935); ?> (Preloading removes classes that have dependencies).</li>
+</ul></li>
+<li>PCRE:
+<ul>
+  <li><?php bugfix(78853); ?> (preg_match() may return integer &gt; 1).</li>
+</ul></li>
+<li>Reflection:
+<ul>
+  <li><?php bugfix(78895); ?> (Reflection detects abstract non-static class as abstract static. IS_IMPLICIT_ABSTRACT is not longer used).</li>
+</ul></li>
+<li>Standard:
+<ul>
+  <li><?php bugfix(77638); ?> (var_export'ing certain class instances segfaults).</li>
+  <li><?php bugfix(78840); ?> (imploding $GLOBALS crashes).</li>
+  <li><?php bugfix(78833); ?> (Integer overflow in pack causes out-of-bound access).</li>
+  <li><?php bugfix(78814); ?> (strip_tags allows / in tag name =&gt; whitelist bypass).</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
+
+<section class="version" id="7.4.0"><!-- {{{ 7.4.0 -->
+<h3>Version 7.4.0</h3>
+<b><?php release_date('28-Nov-2019'); ?></b>
+<ul>
+<li>Core:
+  <ul>
+    <li>Implemented RFC: <a href="https://wiki.php.net/rfc/deprecate_curly_braces_array_access">Deprecate curly brace syntax for accessing array elements and string offsets</a>.</li>
+    <li>Implemented RFC: <a href="https://wiki.php.net/rfc/deprecations_php_7_4">Deprecations for PHP 7.4</a>.</li>
+    <li><?php bugfix(52752); ?> (Crash when lexing).</li>
+    <li><?php bugfix(60677); ?> (CGI doesn't properly validate shebang line contains #!).</li>
+    <li><?php bugfix(71030); ?> (Self-assignment in list() may have inconsistent behavior).</li>
+    <li><?php bugfix(72530); ?> (Use After Free in GC with Certain Destructors).</li>
+    <li><?php bugfix(75921); ?> (Inconsistent: No warning in some cases when stdObj is created on the fly).</li>
+    <li>Implemented FR <?php bugl(76148); ?> (Add array_key_exists() to the list of specially compiled functions).</li>
+    <li><?php bugfix(76430); ?> (__METHOD__ inconsistent outside of method).</li>
+    <li><?php bugfix(76451); ?> (Aliases during inheritance type checks affected by opcache).</li>
+    <li>Implemented FR <?php bugl(77230); ?> (Support custom CFLAGS and LDFLAGS from environment).</li>
+    <li><?php bugfix(77345); ?> (Stack Overflow caused by circular reference in garbage collection).</li>
+    <li><?php bugfix(77812); ?> (Interactive mode does not support PHP 7.3-style heredoc).</li>
+    <li><?php bugfix(77877); ?> (call_user_func() passes $this to static methods).</li>
+    <li><?php bugfix(78066); ?> (PHP eats the first byte of a program that comes from process substitution).</li>
+    <li><?php bugfix(78151); ?> (Segfault caused by indirect expressions in PHP 7.4a1).</li>
+    <li><?php bugfix(78154); ?> (SEND_VAR_NO_REF does not always send reference).</li>
+    <li><?php bugfix(78182); ?> (Segmentation fault during by-reference property assignment).</li>
+    <li><?php bugfix(78212); ?> (Segfault in built-in webserver).</li>
+    <li><?php bugfix(78220); ?> (Can't access OneDrive folder).</li>
+    <li><?php bugfix(78226); ?> (Unexpected __set behavior with typed properties).</li>
+    <li><?php bugfix(78239); ?> (Deprecation notice during string conversion converted to exception hangs).</li>
+    <li><?php bugfix(78335); ?> (Static properties/variables containing cycles report as leak).</li>
+    <li><?php bugfix(78340); ?> (Include of stream wrapper not reading whole file).</li>
+    <li><?php bugfix(78344); ?> (Segmentation fault on zend_check_protected).</li>
+    <li><?php bugfix(78356); ?> (Array returned from ArrayAccess is incorrectly unpacked as argument).</li>
+    <li><?php bugfix(78379); ?> (Cast to object confuses GC, causes crash).</li>
+    <li><?php bugfix(78386); ?> (fstat mode has unexpected value on PHP 7.4).</li>
+    <li><?php bugfix(78396); ?> (Second file_put_contents in Shutdown hangs script).</li>
+    <li><?php bugfix(78406); ?> (Broken file includes with user-defined stream filters).</li>
+    <li><?php bugfix(78438); ?> (Corruption when __unserializing deeply nested structures).</li>
+    <li><?php bugfix(78441); ?> (Parse error due to heredoc identifier followed by digit).</li>
+    <li><?php bugfix(78454); ?> (Consecutive numeric separators cause OOM error).</li>
+    <li><?php bugfix(78460); ?> (PEAR installation failure).</li>
+    <li><?php bugfix(78531); ?> (Crash when using undefined variable as object).</li>
+    <li><?php bugfix(78535); ?> (auto_detect_line_endings value not parsed as bool).</li>
+    <li><?php bugfix(78604); ?> (token_get_all() does not properly tokenize FOO&lt;?php with short_open_tag=0).</li>
+    <li><?php bugfix(78614); ?> (Does not compile with DTRACE anymore).</li>
+    <li><?php bugfix(78620); ?> (Out of memory error).</li>
+    <li><?php bugfix(78632); ?> (method_exists() in php74 works differently from php73 in checking priv. methods).</li>
+    <li><?php bugfix(78644); ?> (SEGFAULT in ZEND_UNSET_OBJ_SPEC_VAR_CONST_HANDLER).</li>
+    <li><?php bugfix(78658); ?> (Memory corruption using Closure::bindTo).</li>
+    <li><?php bugfix(78656); ?> (Parse errors classified as highest log-level).</li>
+    <li><?php bugfix(78662); ?> (stream_write bad error detection).</li>
+    <li><?php bugfix(78768); ?> (redefinition of typedef zend_property_info).</li>
+    <li><?php bugfix(78788); ?> (./configure generates invalid php_version.h).</li>
+    <li>Fixed incorrect usage of QM_ASSIGN instruction. It must not return IS_VAR. As a side effect, this allowed passing left hand list() "by reference", instead of compile-time error.</li>
+  </ul>
+
+<li>CLI:
+  <ul>
+    <li>The built-in CLI server now reports the request method in log files.</li>
+  </ul>
+
+<li>COM:
+  <ul>
+    <li>Deprecated registering of case-insensitive constants from typelibs.</li>
+    <li><?php bugfix(78650); ?> (new COM Crash).</li>
+    <li><?php bugfix(78694); ?> (Appending to a variant array causes segfault).</li>
+  </ul>
+
+<li>CURL:
+  <ul>
+    <li><?php bugfix(76480); ?> (Use curl_multi_wait() so that timeouts are respected).</li>
+    <li>Implemented FR <?php bugl(77711); ?> (CURLFile should support UNICODE filenames).</li>
+    <li>Deprecated CURLPIPE_HTTP1.</li>
+    <li>Deprecated $version parameter of curl_version().</li>
+  </ul>
+
+<li>Date:
+  <ul>
+    <li>Updated timelib to 2018.02.</li>
+    <li><?php bugfix(69044); ?> (discrepency between time and microtime).</li>
+    <li><?php bugfix(70153); ?> (\DateInterval incorrectly unserialized).</li>
+    <li><?php bugfix(75232); ?> (print_r of DateTime creating side-effect).</li>
+    <li><?php bugfix(78383); ?> (Casting a DateTime to array no longer returns its properties).</li>
+    <li><?php bugfix(78751); ?> (Serialising DatePeriod converts DateTimeImmutable).</li>
+  </ul>
+
+<li>Exif:
+  <ul>
+    <li><?php bugfix(78333); ?> (Exif crash (bus error) due to wrong alignment and invalid cast).</li>
+    <li><?php bugfix(78256); ?> (heap-buffer-overflow on exif_process_user_comment). (CVE-2019-11042)</li>
+    <li><?php bugfix(78222); ?> (heap-buffer-overflow on exif_scan_thumbnail). (CVE-2019-11041)</li>
+  </ul>
+
+<li>Fileinfo:
+  <ul>
+    <li><?php bugfix(78075); ?> (finfo_file treats JSON file as text/plain).</li>
+    <li><?php bugfix(78183); ?> (finfo_file shows wrong mime-type for .tga file).</li>
+  </ul>
+
+<li>Filter:
+  <ul>
+    <li>The filter extension no longer has the --with-pcre-dir on Unix builds, allowing the extension to be once more compiled as shared using ./configure.</li>
+    <li>Added min_range and max_range options for FILTER_VALIDATE_FLOAT.</li>
+  </ul>
+
+<li>FFI:
+  <ul>
+    <li>Added FFI extension.</li>
+    <li><?php bugfix(78488); ?> (OOB in ZEND_FUNCTION(ffi_trampoline)).</li>
+    <li><?php bugfix(78543); ?> (is_callable() on FFI\CData throws Exception).</li>
+    <li><?php bugfix(78716); ?> (Function name mangling is wrong for some parameter types).</li>
+    <li><?php bugfix(78762); ?> (Failing FFI::cast() may leak memory).</li>
+    <li><?php bugfix(78761); ?> (Zend memory heap corruption with preload and casting).</li>
+    <li>Implement FR <?php bugl(78270); ?> (Support __vectorcall convention with FFI).</li>
+    <li>Added missing FFI::isNull().</li>
+  </ul>
+
+<li>FPM:
+  <ul>
+    <li>Implemented FR <?php bugl(72510); ?> (systemd service should be hardened).</li>
+    <li><?php bugfix(74083); ?> (master PHP-fpm is stopped on multiple reloads).</li>
+    <li><?php bugfix(78334); ?> (fpm log prefix message includes wrong stdout/stderr notation).</li>
+    <li><?php bugfix(78599); ?> (env_path_info underflow in fpm_main.c can lead to RCE). (CVE-2019-11043)</li>
+  </ul>
+
+<li>GD:
+  <ul>
+    <li>Implemented the scatter filter (IMG_FILTER_SCATTER).</li>
+    <li>The bundled libgd behaves now like system libgd wrt. IMG_CROP_DEFAULT never falling back to IMG_CROP_SIDES.</li>
+    <li>The default $mode parameter of imagecropauto() has been changed to IMG_CROP_DEFAULT; passing -1 is now deprecated.</li>
+    <li>Added support for aspect ratio preserving scaling to a fixed height for imagescale().</li>
+    <li>Added TGA read support.</li>
+    <li><?php bugfix(73291); ?> (imagecropauto() $threshold differs from external libgd).</li>
+    <li><?php bugfix(76324); ?> (cannot detect recent versions of freetype with pkg-config).</li>
+    <li><?php bugfix(78314); ?> (missing freetype support/functions with external gd).</li>
+  </ul>
+
+<li>GMP:
+  <ul>
+    <li><?php bugfix(78574); ?> (broken shared build).</li>
+  </ul>
+
+<li>Hash:
+  <ul>
+    <li>Implemented RFC: <a href="https://wiki.php.net/rfc/permanent_hash_ext">The hash extension is now an integral part of PHP and cannot be disabled</a>.</li>
+    <li>Implemented FR <?php bugl(71890); ?> (crc32c checksum algorithm).</li>
+  </ul>
+
+<li>Iconv:
+  <ul>
+    <li><?php bugfix(78342); ?> (Bus error in configure test for iconv //IGNORE).</li>
+    <li><?php bugfix(78642); ?> (Wrong libiconv version displayed).</li>
+  </ul>
+
+<li>Libxml:
+  <ul>
+    <li><?php bugfix(78279); ?> (libxml_disable_entity_loader settings is shared between requests (cgi-fcgi)).</li>
+  </ul>
+
+<li>InterBase:
+  <ul>
+    <li>Unbundled the InterBase extension and moved it to PECL.</li>
+  </ul>
+
+<li>Intl:
+  <ul>
+    <li>Raised requirements to ICU ≥ 50.1.</li>
+    <li>Changed ResourceBundle to implement Countable.</li>
+    <li>Changed default of $variant parameter of idn_to_ascii() and idn_to_utf8().</li>
+  </ul>
+
+<li>LDAP:
+  <ul>
+    <li>Deprecated ldap_control_paged_result_response and ldap_control_paged_result</li>
+  </ul>
+
+<li>LiteSpeed:
+  <ul>
+    <li>Updated to LiteSpeed SAPI V7.5 (Fixed clean shutdown).</li>
+    <li>Updated to LiteSpeed SAPI V7.4.3 (increased response header count limit from 100 to 1000, added crash handler to cleanly shutdown PHP request, added CloudLinux mod_lsapi mode).</li>
+    <li><?php bugfix(76058); ?> (After "POST data can't be buffered", using php://input makes huge tmp files).</li>
+  </ul>
+
+<li>MBString:
+  <ul>
+    <li><?php bugfix(77907); ?> (mb-functions do not respect default_encoding).</li>
+    <li><?php bugfix(78579); ?> (mb_decode_numericentity: args number inconsistency).</li>
+    <li><?php bugfix(78609); ?> (mb_check_encoding() no longer supports stringable objects).</li>
+  </ul>
+
+<li>MySQLi:
+  <ul>
+    <li><?php bugfix(67348); ?> (Reading $dbc-&gt;stat modifies $dbc-&gt;affected_rows).</li>
+    <li><?php bugfix(76809); ?> (SSL settings aren't respected when persistent connections are used).</li>
+    <li><?php bugfix(78179); ?> (MariaDB server version incorrectly detected).</li>
+    <li><?php bugfix(78213); ?> (Empty row pocket).</li>
+  </ul>
+
+<li>MySQLnd:
+  <ul>
+    <li>Fixed connect_attr issues and added the _server_host connection attribute.</li>
+    <li><?php bugfix(60594); ?> (mysqlnd exposes 160 lines of stats in phpinfo).</li>
+  </ul>
+
+<li>ODBC:
+  <ul>
+    <li><?php bugfix(78473); ?> (odbc_close() closes arbitrary resources).</li>
+  </ul>
+
+<li>Opcache:
+  <ul>
+    <li>Implemented <a href="https://wiki.php.net/rfc/preload">preloading RFC</a>.</li>
+    <li>Add opcache.preload_user INI directive.</li>
+    <li>Added new INI directive opcache.cache_id (Windows only).</li>
+    <li><?php bugfix(78106); ?> (Path resolution fails if opcache disabled during request).</li>
+    <li><?php bugfix(78175); ?> (Preloading segfaults at preload time and at runtime).</li>
+    <li><?php bugfix(78202); ?> (Opcache stats for cache hits are capped at 32bit NUM).</li>
+    <li><?php bugfix(78271); ?> (Invalid result of if-else).</li>
+    <li><?php bugfix(78341); ?> (Failure to detect smart branch in DFA pass).</li>
+    <li><?php bugfix(78376); ?> (Incorrect preloading of constant static properties).</li>
+    <li><?php bugfix(78429); ?> (opcache_compile_file(__FILE__); segfaults).</li>
+    <li><?php bugfix(78512); ?> (Cannot make preload work).</li>
+    <li><?php bugfix(78514); ?> (Preloading segfaults with inherited typed property).</li>
+    <li><?php bugfix(78654); ?> (Incorrectly computed opcache checksum on files with non-ascii characters).</li>
+  </ul>
+
+<li>OpenSSL:
+  <ul>
+    <li>Added TLS 1.3 support to streams including new tlsv1.3 stream.</li>
+    <li>Added openssl_x509_verify function.</li>
+    <li>openssl_random_pseudo_bytes() now throws in error conditions.</li>
+    <li>Changed the default config path (Windows only).</li>
+    <li><?php bugfix(78231); ?> (Segmentation fault upon stream_socket_accept of exported socket-to-stream).</li>
+    <li><?php bugfix(78391); ?> (Assertion failure in openssl_random_pseudo_bytes).</li>
+    <li><?php bugfix(78775); ?> (TLS issues from HTTP request affecting other encrypted connections).</li>
+  </ul>
+
+<li>Pcntl:
+  <ul>
+    <li><?php bugfix(77335); ?> (PHP is preventing SIGALRM from specifying SA_RESTART).</li>
+  </ul>
+
+<li>PCRE:
+  <ul>
+    <li>Implemented FR <?php bugl(77094); ?> (Support flags in preg_replace_callback).</li>
+    <li><?php bugfix(72685); ?> (Repeated UTF-8 validation of same string in UTF-8 mode).</li>
+    <li><?php bugfix(73948); ?> (Preg_match_all should return NULLs on trailing optional capture groups).</li>
+    <li><?php bugfix(78338); ?> (Array cross-border reading in PCRE).</li>
+    <li><?php bugfix(78349); ?> (Bundled pcre2 library missing LICENCE file).</li>
+  </ul>
+
+<li>PDO:
+  <ul>
+    <li>Implemented FR <?php bugl(71885); ?> (Allow escaping question mark placeholders). https://wiki.php.net/rfc/pdo_escape_placeholders</li>
+    <li><?php bugfix(77849); ?> (Disable cloning of PDO handle/connection objects).</li>
+    <li>Implemented FR <?php bugl(78033); ?> (PDO - support username and password specified in DSN).</li>
+  </ul>
+
+<li>PDO_Firebird:
+  <ul>
+    <li>Implemented FR <?php bugl(65690); ?> (PDO_Firebird should also support dialect 1).</li>
+    <li>Implemented FR <?php bugl(77863); ?> (PDO firebird support type Boolean in input parameters).</li>
+  </ul>
+
+<li>PDO_MySQL:
+  <ul>
+    <li><?php bugfix(41997); ?> (SP call yields additional empty result set).</li>
+    <li><?php bugfix(78623); ?> (Regression caused by "SP call yields additional empty result set").</li>
+  </ul>
+
+<li>PDO_OCI:
+  <ul>
+    <li>Support Oracle Database tracing attributes ACTION, MODULE, CLIENT_INFO, and CLIENT_IDENTIFIER.</li>
+    <li>Implemented FR <?php bugl(76908); ?> (PDO_OCI getColumnMeta() not implemented).</li>
+  </ul>
+
+<li>PDO_SQLite:
+  <ul>
+    <li>Implemented sqlite_stmt_readonly in PDO_SQLite.</li>
+    <li>Raised requirements to SQLite 3.5.0.</li>
+    <li><?php bugfix(78192); ?> (SegFault when reuse statement after schema has changed).</li>
+    <li><?php bugfix(78348); ?> (Remove -lrt from pdo_sqlite.so).</li>
+  </ul>
+
+<li>Phar:
+  <ul>
+    <li><?php bugfix(77919); ?> (Potential UAF in Phar RSHUTDOWN).</li>
+  </ul>
+
+<li>phpdbg:
+  <ul>
+    <li><?php bugfix(76596); ?> (phpdbg support for display_errors=stderr).</li>
+    <li><?php bugfix(76801); ?> (too many open files).</li>
+    <li><?php bugfix(77800); ?> (phpdbg segfaults on listing some conditional breakpoints).</li>
+    <li><?php bugfix(77805); ?> (phpdbg build fails when readline is shared).</li>
+  </ul>
+
+<li>Recode:
+  <ul>
+    <li>Unbundled the recode extension.</li>
+  </ul>
+
+<li>Reflection:
+  <ul>
+    <li><?php bugfix(76737); ?> (Unserialized reflection objects are broken, they shouldn't be serializable).</li>
+    <li><?php bugfix(78263); ?> (\ReflectionReference::fromArrayElement() returns null while item is a reference).</li>
+    <li><?php bugfix(78410); ?> (Cannot "manually" unserialize class that is final and extends an internal one).</li>
+    <li><?php bugfix(78697); ?> (ReflectionClass::implementsInterface - inaccurate error message with traits).</li>
+    <li><?php bugfix(78774); ?> (ReflectionNamedType on Typed Properties Crash).</li>
+  </ul>
+
+<li>Session:
+  <ul>
+    <li><?php bugfix(78624); ?> (session_gc return value for user defined session handlers).</li>
+  </ul>
+
+<li>SimpleXML:
+  <ul>
+    <li>Implemented FR <?php bugl(65215); ?> (SimpleXMLElement could register as implementing Countable).</li>
+    <li><?php bugfix(75245); ?> (Don't set content of elements with only whitespaces).</li>
+  </ul>
+
+<li>Sockets:
+  <ul>
+    <li><?php bugfix(67619); ?> (Validate length on socket_write).</li>
+    <li><?php bugfix(78665); ?> (Multicasting may leak memory).</li>
+  </ul>
+
+<li>sodium:
+  <ul>
+    <li><?php bugfix(77646); ?> (sign_detached() strings not terminated).</li>
+    <li><?php bugfix(78510); ?> (Partially uninitialized buffer returned by sodium_crypto_generichash_init()).</li>
+    <li><?php bugfix(78516); ?> (password_hash(): Memory cost is not in allowed range).</li>
+  </ul>
+
+<li>SPL:
+  <ul>
+    <li><?php bugfix(77518); ?> (SeekableIterator::seek() should accept 'int' typehint as documented).</li>
+    <li><?php bugfix(78409); ?> (Segfault when creating instance of ArrayIterator without constructor).</li>
+    <li><?php bugfix(78436); ?> (Missing addref in SplPriorityQueue EXTR_BOTH mode).</li>
+    <li><?php bugfix(78456); ?> (Segfault when serializing SplDoublyLinkedList).</li>
+  </ul>
+
+<li>SQLite3:
+  <ul>
+    <li>Unbundled libsqlite.</li>
+    <li>Raised requirements to SQLite 3.7.4.</li>
+    <li>Forbid (un)serialization of SQLite3, SQLite3Stmt and SQLite3Result.</li>
+    <li>Added support for the SQLite @name notation.</li>
+    <li>Added SQLite3Stmt::getSQL() to retrieve the SQL of the statement.</li>
+    <li>Implement FR ##70950 (Make SQLite3 Online Backup API available).</li>
+  </ul>
+
+<li>Standard:
+  <ul>
+    <li>Implemented RFC <a href="https://wiki.php.net/rfc/password_registry">password hashing registry</a>.</li>
+    <li>Implemented RFC where password_hash() has <a href="https://wiki.php.net/rfc/sodium.argon.hash">argon2i(d) implementations</a> from ext/sodium when PHP is built without libargon.</li>
+    <li>Implemented FR <?php bugl(38301); ?> (field enclosure behavior in fputcsv).</li>
+    <li>Implemented FR <?php bugl(51496); ?> (fgetcsv should take empty string as an escape).</li>
+    <li><?php bugfix(73535); ?> (php_sockop_write() returns 0 on error, can be used to trigger Denial of Service).</li>
+    <li><?php bugfix(74764); ?> (Bindto IPv6 works with file_get_contents but fails with stream_socket_client).</li>
+    <li><?php bugfix(76859); ?> (stream_get_line skips data if used with data-generating filter).</li>
+    <li>Implemented FR <?php bugl(77377); ?> (No way to handle CTRL+C in Windows).</li>
+    <li><?php bugfix(77930); ?> (stream_copy_to_stream should use mmap more often).</li>
+    <li>Implemented FR <?php bugl(78177); ?> (Make proc_open accept command array).</li>
+    <li><?php bugfix(78208); ?> (password_needs_rehash() with an unknown algo should always return true).</li>
+    <li><?php bugfix(78241); ?> (touch() does not handle dates after 2038 in PHP 64-bit).</li>
+    <li><?php bugfix(78282); ?> (atime and mtime mismatch).</li>
+    <li><?php bugfix(78326); ?> (improper memory deallocation on stream_get_contents() with fixed length buffer).</li>
+    <li><?php bugfix(78346); ?> (strip_tags no longer handling nested php tags).</li>
+    <li><?php bugfix(78506); ?> (Error in a php_user_filter::filter() is not reported).</li>
+    <li><?php bugfix(78549); ?> (Stack overflow due to nested serialized input).</li>
+    <li><?php bugfix(78759); ?> (array_search in $GLOBALS).</li>
+  </ul>
+
+<li>Testing:
+  <ul>
+    <li><?php bugfix(78684); ?> (PCRE bug72463_2 test is sending emails on Linux).</li>
+  </ul>
+
+<li>Tidy:
+  <ul>
+    <li>Added TIDY_TAG_* constants for HTML5 elements.</li>
+    <li><?php bugfix(76736); ?> (wrong reflection for tidy_get_head, tidy_get_html, tidy_get_root, and tidy_getopt)</li>
+  </ul>
+
+<li>WDDX:
+  <ul>
+    <li>Deprecated and unbundled the WDDX extension.</li>
+  </ul>
+
+<li>Zip:
+  <ul>
+    <li><?php bugfix(78641); ?> (addGlob can modify given remove_path value).</li>
+  </ul>
+</ul>
+
+<!-- }}} --></section>
+
 <a name="PHP_7_3"></a>
+
+<section class="version" id="7.3.15"><!-- {{{ 7.3.15 -->
+<h3>Version 7.3.15</h3>
+<b><?php release_date('20-Feb-2020'); ?></b>
+<ul><li>Core:
+<ul>
+  <li><?php bugfix(71876); ?> (Memory corruption htmlspecialchars(): charset `*' not supported).</li>
+  <li><?php bugfix(79146); ?> (cscript can fail to run on some systems).</li>
+  <li><?php bugfix(78323); ?> (Code 0 is returned on invalid options).</li>
+  <li><?php bugfix(76047); ?> (Use-after-free when accessing already destructed backtrace arguments).</li>
+</ul></li>
+<li>CURL:
+<ul>
+  <li><?php bugfix(79078); ?> (Hypothetical use-after-free in curl_multi_add_handle()).</li>
+</ul></li>
+<li>Intl:
+<ul>
+  <li><?php bugfix(79212); ?> (NumberFormatter::format() may detect wrong type).</li>
+</ul></li>
+<li>Libxml:
+<ul>
+  <li><?php bugfix(79191); ?> (Error in SoapClient ctor disables DOMDocument::save()).</li>
+</ul></li>
+<li>MBString:
+<ul>
+  <li><?php bugfix(79154); ?> (mb_convert_encoding() can modify $from_encoding).</li>
+</ul></li>
+<li>MySQLnd:
+<ul>
+  <li><?php bugfix(79084); ?> (mysqlnd may fetch wrong column indexes with MYSQLI_BOTH).</li>
+</ul></li>
+<li>OpenSSL:
+<ul>
+  <li><?php bugfix(79145); ?> (openssl memory leak).</li>
+</ul></li>
+<li>Phar:
+<ul>
+  <li><?php bugfix(79082); ?> (Files added to tar with Phar::buildFromIterator have all-access permissions). (CVE-2020-7063)</li>
+  <li><?php bugfix(79171); ?> (heap-buffer-overflow in phar_extract_file). (CVE-2020-7061)</li>
+  <li><?php bugfix(76584); ?> (PharFileInfo::decompress not working).</li>
+</ul></li>
+<li>Reflection:
+<ul>
+  <li><?php bugfix(79115); ?> (ReflectionClass::isCloneable call reflected class __destruct).</li>
+</ul></li>
+<li>Session:
+<ul>
+  <li><?php bugfix(79221); ?> (Null Pointer Dereference in PHP Session Upload Progress). (CVE-2020-7062)</li>
+</ul></li>
+<li>SPL:
+<ul>
+  <li><?php bugfix(79151); ?> (heap use after free caused by spl_dllist_it_helper_move_forward).</li>
+</ul></li>
+<li>Standard:
+<ul>
+  <li><?php bugfix(78902); ?> (Memory leak when using stream_filter_append).</li>
+</ul></li>
+<li>Testing:
+<ul>
+  <li><?php bugfix(78090); ?> (bug45161.phpt takes forever to finish).</li>
+</ul></li>
+<li>XSL:
+<ul>
+  <li><?php bugfix(70078); ?> (XSL callbacks with nodes as parameter leak memory).</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
+
+
+<section class="version" id="7.3.14"><!-- {{{ 7.3.14 -->
+<h3>Version 7.3.14</h3>
+<b><?php release_date('23-Jan-2020'); ?></b>
+<ul><li>Core:
+<ul>
+  <li><?php bugfix(78999); ?> (Cycle leak when using function result as temporary).</li>
+</ul></li>
+<li>CURL:
+<ul>
+  <li><?php bugfix(79033); ?> (Curl timeout error with specific url and post).</li>
+</ul></li>
+<li>Date:
+<ul>
+  <li><?php bugfix(79015); ?> (undefined-behavior in php_date.c).</li>
+</ul></li>
+<li>DBA:
+<ul>
+  <li><?php bugfix(78808); ?> ([LMDB] MDB_MAP_FULL: Environment mapsize limit reached).</li>
+</ul></li>
+<li>Fileinfo:
+<ul>
+  <li><?php bugfix(74170); ?> (locale information change after mime_content_type).</li>
+</ul></li>
+<li>GD:
+<ul>
+  <li><?php bugfix(78923); ?> (Artifacts when convoluting image with transparency).</li>
+  <li><?php bugfix(79067); ?> (gdTransformAffineCopy() may use unitialized values).</li>
+  <li><?php bugfix(79068); ?> (gdTransformAffineCopy() changes interpolation method).</li>
+</ul></li>
+<li>Libxml:
+<ul>
+  <li><?php bugfix(79029); ?> (Use After Free's in XMLReader / XMLWriter).</li>
+</ul></li>
+<li>Mbstring:
+<ul>
+  <li><?php bugfix(79037); ?> (global buffer-overflow in `mbfl_filt_conv_big5_wchar`). (CVE-2020-7060)</li>
+</ul></li>
+<li>OPcache:
+<ul>
+  <li><?php bugfix(79040); ?> (Warning Opcode handlers are unusable due to ASLR).</li>
+</ul></li>
+<li>Pcntl:
+<ul>
+  <li><?php bugfix(78402); ?> (Converting null to string in error message is bad DX).</li>
+</ul></li>
+<li>PDO_PgSQL:
+<ul>
+  <li><?php bugfix(78983); ?> (pdo_pgsql config.w32 cannot find libpq-fe.h).</li>
+  <li><?php bugfix(78980); ?> (pgsqlGetNotify() overlooks dead connection).</li>
+  <li><?php bugfix(78982); ?> (pdo_pgsql returns dead persistent connection).</li>
+</ul></li>
+<li>Session:
+<ul>
+  <li><?php bugfix(79091); ?> (heap use-after-free in session_create_id()).</li>
+</ul></li>
+<li>Shmop:
+<ul>
+  <li><?php bugfix(78538); ?> (shmop memory leak).</li>
+</ul></li>
+<li>Standard:
+<ul>
+  <li><?php bugfix(79099); ?> (OOB read in php_strip_tags_ex). (CVE-2020-7059)</li>
+  <li><?php bugfix(54298); ?> (Using empty additional_headers adding extraneous CRLF).</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
+
+
+<section class="version" id="7.3.13"><!-- {{{ 7.3.13 -->
+<h3>Version 7.3.13</h3>
+<b><?php release_date('18-Dec-2019'); ?></b>
+<ul><li>Bcmath:
+<ul>
+  <li><?php bugfix(78878); ?> (Buffer underflow in bc_shift_addsub). (CVE-2019-11046)</li>
+</ul></li>
+<li>Core:
+<ul>
+  <li><?php bugfix(78862); ?> (link() silently truncates after a null byte on Windows). (CVE-2019-11044)</li>
+  <li><?php bugfix(78863); ?> (DirectoryIterator class silently truncates after a null byte). (CVE-2019-11045)</li>
+  <li><?php bugfix(78943); ?> (mail() may release string with refcount==1 twice). (CVE-2019-11049)</li>
+  <li><?php bugfix(78787); ?> (Segfault with trait overriding inherited private shadow property).</li>
+  <li><?php bugfix(78868); ?> (Calling __autoload() with incorrect EG(fake_scope) value).</li>
+  <li><?php bugfix(78296); ?> (is_file fails to detect file).</li>
+</ul></li>
+<li>EXIF:
+<ul>
+  <li><?php bugfix(78793); ?> (Use-after-free in exif parsing under memory sanitizer). (CVE-2019-11050)</li>
+  <li><?php bugfix(78910); ?> (Heap-buffer-overflow READ in exif) (CVE-2019-11047).</li>
+</ul></li>
+<li>GD:
+<ul>
+  <li><?php bugfix(78849); ?> (GD build broken with -D SIGNED_COMPARE_SLOW).</li>
+</ul></li>
+<li>MBString:
+<ul>
+  <li>Upgraded bundled Oniguruma to 6.9.4.</li>
+</ul></li>
+<li>OPcache:
+<ul>
+  <li>Fixed potential ASLR related invalid opline handler issues.</li>
+  <li>Fixed $x = (bool)$x; with opcache (should emit undeclared variable notice).</li>
+</ul></li>
+<li>PCRE:
+<ul>
+  <li><?php bugfix(78853); ?> (preg_match() may return integer &gt; 1).</li>
+</ul></li>
+<li>Standard:
+<ul>
+  <li><?php bugfix(78759); ?> (array_search in $GLOBALS).</li>
+  <li><?php bugfix(77638); ?> (var_export'ing certain class instances segfaults).</li>
+  <li><?php bugfix(78840); ?> (imploding $GLOBALS crashes).</li>
+  <li><?php bugfix(78833); ?> (Integer overflow in pack causes out-of-bound access).</li>
+  <li><?php bugfix(78814); ?> (strip_tags allows / in tag name =&gt; whitelist bypass).</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
+
+
+<section class="version" id="7.3.12"><!-- {{{ 7.3.12 -->
+<h3>Version 7.3.12</h3>
+<b><?php release_date('21-Nov-2019'); ?></b>
+<ul><li>Core:
+<ul>
+  <li><?php bugfix(78658); ?> (Memory corruption using Closure::bindTo).</li>
+  <li><?php bugfix(78656); ?> (Parse errors classified as highest log-level).</li>
+  <li><?php bugfix(78752); ?> (Segfault if GC triggered while generator stack frame is being destroyed).</li>
+  <li><?php bugfix(78689); ?> (Closure::fromCallable() doesn't handle [Closure, '__invoke']).</li>
+</ul></li>
+<li>COM:
+<ul>
+  <li><?php bugfix(78694); ?> (Appending to a variant array causes segfault).</li>
+</ul></li>
+<li>Date:
+<ul>
+  <li><?php bugfix(70153); ?> (\DateInterval incorrectly unserialized).</li>
+  <li><?php bugfix(78751); ?> (Serialising DatePeriod converts DateTimeImmutable).</li>
+</ul></li>
+<li>Iconv:
+<ul>
+  <li><?php bugfix(78642); ?> (Wrong libiconv version displayed).</li>
+</ul></li>
+<li>OpCache:
+<ul>
+  <li><?php bugfix(78654); ?> (Incorrectly computed opcache checksum on files with non-ascii characters).</li>
+  <li><?php bugfix(78747); ?> (OpCache corrupts custom extension result).</li>
+</ul></li>
+<li>OpenSSL:
+<ul>
+  <li><?php bugfix(78775); ?> (TLS issues from HTTP request affecting other encrypted connections).</li>
+</ul></li>
+<li>Reflection:
+<ul>
+  <li><?php bugfix(78697); ?> (ReflectionClass::ImplementsInterface - inaccurate error message with traits).</li>
+</ul></li>
+<li>Sockets:
+<ul>
+  <li><?php bugfix(78665); ?> (Multicasting may leak memory).</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
+
+
+<section class="version" id="7.3.11"><!-- {{{ 7.3.11 -->
+<h3>Version 7.3.11</h3>
+<b><?php release_date('24-Oct-2019'); ?></b>
+<ul><li>Core:
+<ul>
+  <li><?php bugfix(78535); ?> (auto_detect_line_endings value not parsed as bool).</li>
+  <li><?php bugfix(78620); ?> (Out of memory error).</li>
+</ul></li>
+<li>Exif:
+<ul>
+  <li><?php bugfix(78442); ?> ('Illegal component' on exif_read_data since PHP7) (Kalle)</li>
+</ul></li>
+<li>FPM:
+<ul>
+  <li><?php bugfix(78599); ?> (env_path_info underflow in fpm_main.c can lead to RCE). (CVE-2019-11043)</li>
+  <li><?php bugfix(78413); ?> (request_terminate_timeout does not take effect after fastcgi_finish_request).</li>
+</ul></li>
+<li>MBString:
+<ul>
+  <li><?php bugfix(78633); ?> (Heap buffer overflow (read) in mb_eregi).</li>
+  <li><?php bugfix(78579); ?> (mb_decode_numericentity: args number inconsistency).</li>
+  <li><?php bugfix(78609); ?> (mb_check_encoding() no longer supports stringable objects).</li>
+</ul></li>
+<li>MySQLi:
+<ul>
+  <li><?php bugfix(76809); ?> (SSL settings aren't respected when persistent connections are used).</li>
+</ul></li>
+<li>Mysqlnd:
+<ul>
+  <li><?php bugfix(78525); ?> (Memory leak in pdo when reusing native prepared statements).</li>
+</ul></li>
+<li>PCRE:
+<ul>
+  <li><?php bugfix(78272); ?> (calling preg_match() before pcntl_fork() will freeze child process).</li>
+</ul></li>
+<li>PDO_MySQL:
+<ul>
+  <li><?php bugfix(78623); ?> (Regression caused by "SP call yields additional empty result set").</li>
+</ul></li>
+<li>Session:
+<ul>
+  <li><?php bugfix(78624); ?> (session_gc return value for user defined session handlers).</li>
+</ul></li>
+<li>Standard:
+<ul>
+  <li><?php bugfix(76342); ?> (file_get_contents waits twice specified timeout).</li>
+  <li><?php bugfix(78612); ?> (strtr leaks memory when integer keys are used and the subject string shorter).</li>
+  <li><?php bugfix(76859); ?> (stream_get_line skips data if used with data-generating filter).</li>
+</ul></li>
+<li>Zip:
+<ul>
+  <li><?php bugfix(78641); ?> (addGlob can modify given remove_path value).</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
+
+
+<section class="version" id="7.3.10"><!-- {{{ 7.3.10 -->
+<h3>Version 7.3.10</h3>
+<b><?php release_date('26-Sep-2019'); ?></b>
+<ul><li>Core:
+<ul>
+  <li><?php bugfix(78220); ?> (Can't access OneDrive folder).</li>
+  <li><?php bugfix(77922); ?> (Double release of doc comment on inherited shadow property).</li>
+  <li><?php bugfix(78441); ?> (Parse error due to heredoc identifier followed by digit).</li>
+  <li><?php bugfix(77812); ?> (Interactive mode does not support PHP 7.3-style heredoc).</li>
+</ul></li>
+<li>FastCGI:
+<ul>
+  <li><?php bugfix(78469); ?> (FastCGI on_accept hook is not called when using named pipes on Windows).</li>
+</ul></li>
+<li>FPM:
+<ul>
+  <li><?php bugfix(78334); ?> (fpm log prefix message includes wrong stdout/stderr notation).</li>
+</ul></li>
+<li>Intl:
+<ul>
+  <li>Ensure IDNA2003 rules are used with idn_to_ascii() and idn_to_utf8() when requested.</li>
+</ul></li>
+<li>MBString:
+<ul>
+  <li><?php bugfix(78559); ?> (Heap buffer overflow in mb_eregi).</li>
+</ul></li>
+<li>MySQLnd:
+<ul>
+  <li>Fixed connect_attr issues and added the _server_host connection attribute.</li>
+</ul></li>
+<li>ODBC:
+<ul>
+  <li><?php bugfix(78473); ?> (odbc_close() closes arbitrary resources).</li>
+</ul></li>
+<li>PDO_MySQL:
+<ul>
+  <li><?php bugfix(41997); ?> (SP call yields additional empty result set).</li>
+</ul></li>
+<li>sodium:
+<ul>
+  <li><?php bugfix(78510); ?> (Partially uninitialized buffer returned by sodium_crypto_generichash_init()).</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
+
+
+<section class="version" id="7.3.9"><!-- {{{ 7.3.9 -->
+<h3>Version 7.3.9</h3>
+<b><?php release_date('29-Aug-2019'); ?></b>
+<ul><li>Core:
+<ul>
+  <li><?php bugfix(78363); ?> (Buffer overflow in zendparse).</li>
+  <li><?php bugfix(78379); ?> (Cast to object confuses GC, causes crash).</li>
+  <li><?php bugfix(78412); ?> (Generator incorrectly reports non-releasable $this as GC child).</li>
+</ul></li>
+<li>Curl:
+<ul>
+  <li><?php bugfix(77946); ?> (Bad cURL resources returned by curl_multi_info_read()).</li>
+</ul></li>
+<li>Exif:
+<ul>
+  <li><?php bugfix(78333); ?> (Exif crash (bus error) due to wrong alignment and invalid cast).</li>
+</ul></li>
+<li>FPM:
+<ul>
+  <li><?php bugfix(77185); ?> (Use-after-free in FPM master event handling).</li>
+</ul></li>
+<li>Iconv:
+<ul>
+  <li><?php bugfix(78342); ?> (Bus error in configure test for iconv //IGNORE).</li>
+</ul></li>
+<li>LiteSpeed:
+<ul>
+  <li>Updated to LiteSpeed SAPI V7.5 (Fixed clean shutdown).</li>
+</ul></li>
+<li>MBString:
+<ul>
+  <li><?php bugfix(78380); ?> (Oniguruma 6.9.3 fixes CVEs). (CVE-2019-13224)</li>
+</ul></li>
+<li>MySQLnd:
+<ul>
+  <li><?php bugfix(78179); ?> (MariaDB server version incorrectly detected).</li>
+  <li><?php bugfix(78213); ?> (Empty row pocket).</li>
+</ul></li>
+<li>Opcache:
+<ul>
+  <li><?php bugfix(77191); ?> (Assertion failure in dce_live_ranges() when silencing is used).</li>
+</ul></li>
+<li>Standard:
+<ul>
+  <li><?php bugfix(69100); ?> (Bus error from stream_copy_to_stream (file -&gt; SSL stream) with invalid length).</li>
+  <li><?php bugfix(78282); ?> (atime and mtime mismatch).</li>
+  <li><?php bugfix(78326); ?> (improper memory deallocation on stream_get_contents() with fixed length buffer).</li>
+  <li><?php bugfix(78346); ?> (strip_tags no longer handling nested php tags).</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
+
+
+<section class="version" id="7.3.8"><!-- {{{ 7.3.8 -->
+<h3>Version 7.3.8</h3>
+<b><?php release_date('01-Aug-2019'); ?></b>
+<ul><li>Core:
+<ul>
+  <li>Added syslog.filter=raw option.</li>
+  <li><?php bugfix(78212); ?> (Segfault in built-in webserver).</li>
+</ul></li>
+<li>Date:
+<ul>
+  <li><?php bugfix(69044); ?> (discrepency between time and microtime).</li>
+  <li>Updated timelib to 2018.02.</li>
+</ul></li>
+<li>EXIF:
+<ul>
+  <li><?php bugfix(78256); ?> (heap-buffer-overflow on exif_process_user_comment). (CVE-2019-11042)</li>
+  <li><?php bugfix(78222); ?> (heap-buffer-overflow on exif_scan_thumbnail). (CVE-2019-11041)</li>
+</ul></li>
+<li>FTP:
+<ul>
+  <li><?php bugfix(78039); ?> (FTP with SSL memory leak).</li>
+</ul></li>
+<li>Libxml:
+<ul>
+  <li><?php bugfix(78279); ?> (libxml_disable_entity_loader settings is shared between requests (cgi-fcgi)).</li>
+</ul></li>
+<li>LiteSpeed:
+<ul>
+  <li>Updated to LiteSpeed SAPI V7.4.3 (increased response header count limit from 100 to 1000, added crash handler to cleanly shutdown PHP request, added CloudLinux mod_lsapi mode).</li>
+  <li><?php bugfix(76058); ?> (After "POST data can't be buffered", using php://input makes huge tmp files).</li>
+</ul></li>
+<li>Openssl:
+<ul>
+  <li><?php bugfix(78231); ?> (Segmentation fault upon stream_socket_accept of exported socket-to-stream).</li>
+</ul></li>
+<li>Opcache:
+<ul>
+  <li><?php bugfix(78341); ?> (Failure to detect smart branch in DFA pass).</li>
+  <li><?php bugfix(78189); ?> (file cache strips last character of uname hash).</li>
+  <li><?php bugfix(78202); ?> (Opcache stats for cache hits are capped at 32bit NUM).</li>
+  <li><?php bugfix(78271); ?> (Invalid result of if-else).</li>
+  <li><?php bugfix(78291); ?> (opcache_get_configuration doesn't list all directives).</li>
+</ul></li>
+<li>PCRE:
+<ul>
+  <li><?php bugfix(78338); ?> (Array cross-border reading in PCRE).</li>
+  <li><?php bugfix(78197); ?> (PCRE2 version check in configure fails for "##.##-xxx" version strings).</li>
+</ul></li>
+<li>PDO_Sqlite:
+<ul>
+  <li><?php bugfix(78192); ?> (SegFault when reuse statement after schema has changed).</li>
+</ul></li>
+<li>Phar:
+<ul>
+  <li><?php bugfix(77919); ?> (Potential UAF in Phar RSHUTDOWN).</li>
+</ul></li>
+<li>Phpdbg:
+<ul>
+  <li><?php bugfix(78297); ?> (Include unexistent file memory leak).</li>
+</ul></li>
+<li>SQLite:
+<ul>
+  <li>Upgraded to SQLite 3.28.0.</li>
+</ul></li>
+<li>Standard:
+<ul>
+  <li><?php bugfix(78241); ?> (touch() does not handle dates after 2038 in PHP 64-bit).</li>
+  <li><?php bugfix(78269); ?> (password_hash uses weak options for argon2).</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
+
+
+<section class="version" id="7.3.7"><!-- {{{ 7.3.7 -->
+<h3>Version 7.3.7</h3>
+<b><?php release_date('04-Jul-2019'); ?></b>
+<ul><li>Core:
+<ul>
+  <li><?php bugfix(76980); ?> (Interface gets skipped if autoloader throws an exception).</li>
+</ul></li>
+<li>DOM:
+<ul>
+  <li><?php bugfix(78025); ?> (segfault when accessing properties of DOMDocumentType).</li>
+</ul></li>
+<li>MySQLi:
+<ul>
+  <li><?php bugfix(77956); ?> (When mysqli.allow_local_infile = Off, use a meaningful error message).</li>
+  <li><?php bugfix(38546); ?> (bindParam incorrect processing of bool types).</li>
+</ul></li>
+<li>MySQLnd:
+<ul>
+  <li><?php bugfix(77955); ?> (Random segmentation fault in mysqlnd from php-fpm).</li>
+</ul></li>
+<li>Opcache:
+<ul>
+  <li><?php bugfix(78015); ?> (Incorrect evaluation of expressions involving partials arrays in SCCP).</li>
+  <li><?php bugfix(78106); ?> (Path resolution fails if opcache disabled during request).</li>
+</ul></li>
+<li>OpenSSL:
+<ul>
+  <li><?php bugfix(78079); ?> (openssl_encrypt_ccm.phpt fails with OpenSSL 1.1.1c).</li>
+</ul></li>
+<li>phpdbg:
+<ul>
+  <li><?php bugfix(78050); ?> (SegFault phpdbg + opcache on include file twice).</li>
+</ul></li>
+<li>Sockets:
+<ul>
+  <li><?php bugfix(78038); ?> (Socket_select fails when resource array contains references).</li>
+</ul></li>
+<li>Sodium:
+<ul>
+  <li><?php bugfix(78114); ?> (segfault when calling sodium_* functions from eval).</li>
+</ul></li>
+<li>Standard:
+<ul>
+  <li><?php bugfix(77135); ?> (Extract with EXTR_SKIP should skip $this).</li>
+  <li><?php bugfix(77937); ?> (preg_match failed).</li>
+</ul></li>
+<li>Zip:
+<ul>
+  <li><?php bugfix(76345); ?> (zip.h not found).</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
+
 <section class="version" id="7.3.6"><!-- {{{ 7.3.6 -->
 <h3>Version 7.3.6</h3>
 <b><?php release_date('30-May-2019'); ?></b>
 <ul><li>cURL:
 <ul>
   <li>Implemented FR <?php bugl(72189); ?> (Add missing CURL_VERSION_* constants).</li>
+</ul></li>
+<li>Date:
+<ul>
+  <li><?php bugfix(77909); ?> (DatePeriod::__construct() with invalid recurrence count value).</li>
 </ul></li>
 <li>EXIF:
 <ul>
@@ -794,10 +1980,367 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
 <!-- }}} --></section>
 
 <a name="PHP_7_2"></a>
+
+<section class="version" id="7.2.28"><!-- {{{ 7.2.28 -->
+<h3>Version 7.2.28</h3>
+<b><?php release_date('20-Feb-2020'); ?></b>
+<ul><li>DOM:
+<ul>
+  <li><?php bugfix(77569); ?>: (Write Access Violation in DomImplementation).</li>
+</ul></li>
+<li>Phar:
+<ul>
+  <li><?php bugfix(79082); ?> (Files added to tar with Phar::buildFromIterator have all-access permissions). (CVE-2020-7063)</li>
+</ul></li>
+<li>Session:
+<ul>
+  <li><?php bugfix(79221); ?> (Null Pointer Dereference in PHP Session Upload Progress). (CVE-2020-7062)</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
+<section class="version" id="7.2.27"><!-- {{{ 7.2.27 -->
+<h3>Version 7.2.27</h3>
+<b><?php release_date('23-Jan-2020'); ?></b>
+<ul><li>Mbstring:
+<ul>
+  <li><?php bugfix(79037); ?> (global buffer-overflow in `mbfl_filt_conv_big5_wchar`). (CVE-2020-7060)</li>
+</ul></li>
+<li>Session:
+<ul>
+  <li><?php bugfix(79091); ?> (heap use-after-free in session_create_id()).</li>
+</ul></li>
+<li>Standard:
+<ul>
+  <li><?php bugfix(79099); ?> (OOB read in php_strip_tags_ex). (CVE-2020-7059)</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
+<section class="version" id="7.2.26"><!-- {{{ 7.2.26 -->
+<h3>Version 7.2.26</h3>
+<b><?php release_date('18-Dec-2019'); ?></b>
+<ul><li>Bcmath:
+<ul>
+  <li><?php bugfix(78878); ?> (Buffer underflow in bc_shift_addsub). (CVE-2019-11046)</li>
+</ul></li>
+<li>Core:
+<ul>
+  <li><?php bugfix(78862); ?> (link() silently truncates after a null byte on Windows). (CVE-2019-11044)</li>
+  <li><?php bugfix(78863); ?> (DirectoryIterator class silently truncates after a null byte). (CVE-2019-11045)</li>
+</ul></li>
+<li>EXIF:
+<ul>
+  <li><?php bugfix(78793); ?> (Use-after-free in exif parsing under memory sanitizer). (CVE-2019-11050)</li>
+  <li><?php bugfix(78910); ?> (Heap-buffer-overflow READ in exif). (CVE-2019-11047)</li>
+</ul></li>
+<li>GD:
+<ul>
+  <li><?php bugfix(78849); ?> (GD build broken with -D SIGNED_COMPARE_SLOW).</li>
+</ul></li>
+<li>Intl:
+<ul>
+  <li><?php bugfix(78804); ?> (Segmentation fault in Locale::filterMatches).</li>
+</ul></li>
+<li>OPcache:
+<ul>
+  <li>Fixed $x = (bool)$x; with opcache (should emit undeclared variable notice).</li>
+</ul></li>
+<li>Standard:
+<ul>
+  <li><?php bugfix(78759); ?> (array_search in $GLOBALS).</li>
+  <li><?php bugfix(78833); ?> (Integer overflow in pack causes out-of-bound access).</li>
+  <li><?php bugfix(78814); ?> (strip_tags allows / in tag name =&gt; whitelist bypass).</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
+
+<section class="version" id="7.2.25"><!-- {{{ 7.2.25 -->
+<h3>Version 7.2.25</h3>
+<b><?php release_date('21-Nov-2019'); ?></b>
+<ul><li>Core:
+<ul>
+  <li><?php bugfix(78656); ?> (Parse errors classified as highest log-level).</li>
+  <li><?php bugfix(78752); ?> (Segfault if GC triggered while generator stack frame is being destroyed).</li>
+  <li><?php bugfix(78689); ?> (Closure::fromCallable() doesn't handle [Closure, '__invoke']).</li>
+</ul></li>
+<li>COM:
+<ul>
+  <li><?php bugfix(78694); ?> (Appending to a variant array causes segfault).</li>
+</ul></li>
+<li>Date:
+<ul>
+  <li><?php bugfix(70153); ?> (\DateInterval incorrectly unserialized).</li>
+  <li><?php bugfix(78751); ?> (Serialising DatePeriod converts DateTimeImmutable).</li>
+</ul></li>
+<li>Iconv:
+<ul>
+  <li><?php bugfix(78642); ?> (Wrong libiconv version displayed). (gedas at martynas, cmb).</li>
+</ul></li>
+<li>OpCache:
+<ul>
+  <li><?php bugfix(78654); ?> (Incorrectly computed opcache checksum on files with non-ascii characters).</li>
+  <li><?php bugfix(78747); ?> (OpCache corrupts custom extension result).</li>
+</ul></li>
+<li>OpenSSL:
+<ul>
+  <li><?php bugfix(78775); ?> (TLS issues from HTTP request affecting other encrypted connections).</li>
+</ul></li>
+<li>Reflection:
+<ul>
+  <li><?php bugfix(78697); ?> (ReflectionClass::ImplementsInterface - inaccurate error message with traits).</li>
+</ul></li>
+<li>Sockets:
+<ul>
+  <li><?php bugfix(78665); ?> (Multicasting may leak memory).</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
+
+
+<section class="version" id="7.2.24"><!-- {{{ 7.2.24 -->
+<h3>Version 7.2.24</h3>
+<b><?php release_date('24-Oct-2019'); ?></b>
+<ul><li>Core:
+<ul>
+  <li><?php bugfix(78535); ?> (auto_detect_line_endings value not parsed as bool).</li>
+  <li><?php bugfix(78620); ?> (Out of memory error).</li>
+</ul></li>
+<li>Exif:
+<ul>
+  <li><?php bugfix(78442); ?> ('Illegal component' on exif_read_data since PHP7) (Kalle)</li>
+</ul></li>
+<li>FPM:
+<ul>
+  <li><?php bugfix(78599); ?> (env_path_info underflow in fpm_main.c can lead to RCE). (CVE-2019-11043)</li>
+</ul></li>
+<li>MBString:
+<ul>
+  <li><?php bugfix(78579); ?> (mb_decode_numericentity: args number inconsistency).</li>
+  <li><?php bugfix(78609); ?> (mb_check_encoding() no longer supports stringable objects).</li>
+</ul></li>
+<li>MySQLi:
+<ul>
+  <li><?php bugfix(76809); ?> (SSL settings aren't respected when persistent connections are used).</li>
+</ul></li>
+<li>PDO_MySQL:
+<ul>
+  <li><?php bugfix(78623); ?> (Regression caused by "SP call yields additional empty result set").</li>
+</ul></li>
+<li>Session:
+<ul>
+  <li><?php bugfix(78624); ?> (session_gc return value for user defined session handlers).</li>
+</ul></li>
+<li>Standard:
+<ul>
+  <li><?php bugfix(76342); ?> (file_get_contents waits twice specified timeout).</li>
+  <li><?php bugfix(78612); ?> (strtr leaks memory when integer keys are used and the subject string shorter).</li>
+  <li><?php bugfix(76859); ?> (stream_get_line skips data if used with data-generating filter).</li>
+</ul></li>
+<li>Zip:
+<ul>
+  <li><?php bugfix(78641); ?> (addGlob can modify given remove_path value).</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
+<section class="version" id="7.2.23"><!-- {{{ 7.2.23 -->
+<h3>Version 7.2.23</h3>
+<b><?php release_date('26-Sep-2019'); ?></b>
+<ul><li>Core:
+<ul>
+  <li><?php bugfix(78220); ?> (Can't access OneDrive folder).</li>
+  <li><?php bugfix(78412); ?> (Generator incorrectly reports non-releasable $this as GC child).</li>
+</ul></li>
+<li>FastCGI:
+<ul>
+  <li><?php bugfix(78469); ?> (FastCGI on_accept hook is not called when using named pipes on Windows).</li>
+</ul></li>
+<li>MySQLnd:
+<ul>
+  <li>Fixed connect_attr issues and added the _server_host connection attribute.</li>
+</ul></li>
+<li>ODBC:
+<ul>
+  <li><?php bugfix(78473); ?> (odbc_close() closes arbitrary resources).</li>
+</ul></li>
+<li>PDO_MySQL:
+<ul>
+  <li><?php bugfix(41997); ?> (SP call yields additional empty result set).</li>
+</ul></li>
+<li>sodium:
+<ul>
+  <li><?php bugfix(78510); ?> (Partially uninitialized buffer returned by sodium_crypto_generichash_init()).</li>
+</ul></li>
+<li>SPL:
+<ul>
+  <li><?php bugfix(72884); ?> (SplObject isCloneable() returns true but errs on clone).</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
+
+
+<section class="version" id="7.2.22"><!-- {{{ 7.2.22 -->
+<h3>Version 7.2.22</h3>
+<b><?php release_date('29-Aug-2019'); ?></b>
+<ul><li>Core:
+<ul>
+  <li><?php bugfix(78363); ?> (Buffer overflow in zendparse).</li>
+  <li><?php bugfix(78379); ?> (Cast to object confuses GC, causes crash).</li>
+</ul></li>
+<li>Curl:
+<ul>
+  <li><?php bugfix(77946); ?> (Bad cURL resources returned by curl_multi_info_read()).</li>
+</ul></li>
+<li>Exif:
+<ul>
+  <li><?php bugfix(78333); ?> (Exif crash (bus error) due to wrong alignment and invalid cast).</li>
+</ul></li>
+<li>Iconv:
+<ul>
+  <li><?php bugfix(78342); ?> (Bus error in configure test for iconv //IGNORE).</li>
+</ul></li>
+<li>LiteSpeed:
+<ul>
+  <li>Updated to LiteSpeed SAPI V7.5 (Fixed clean shutdown).</li>
+</ul></li>
+<li>MySQLnd:
+<ul>
+  <li><?php bugfix(78179); ?> (MariaDB server version incorrectly detected).</li>
+</ul></li>
+<li>Opcache:
+<ul>
+  <li><?php bugfix(77191); ?> (Assertion failure in dce_live_ranges() when silencing is used).</li>
+</ul></li>
+<li>Standard:
+<ul>
+  <li><?php bugfix(69100); ?> (Bus error from stream_copy_to_stream (file -&gt; SSL stream) with invalid length).</li>
+  <li><?php bugfix(78282); ?> (atime and mtime mismatch).</li>
+  <li><?php bugfix(78326); ?> (improper memory deallocation on stream_get_contents() with fixed length buffer).</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
+
+
+<section class="version" id="7.2.21"><!-- {{{ 7.2.21 -->
+<h3>Version 7.2.21</h3>
+<b><?php release_date('01-Aug-2019'); ?></b>
+<ul><li>Date:
+<ul>
+  <li><?php bugfix(69044); ?> (discrepency between time and microtime).</li>
+</ul></li>
+<li>EXIF:
+<ul>
+  <li><?php bugfix(78256); ?> (heap-buffer-overflow on exif_process_user_comment). (CVE-2019-11042)</li>
+  <li><?php bugfix(78222); ?> (heap-buffer-overflow on exif_scan_thumbnail). (CVE-2019-11041)</li>
+</ul></li>
+<li>Fileinfo:
+<ul>
+  <li><?php bugfix(78183); ?> (finfo_file shows wrong mime-type for .tga file).</li>
+</ul></li>
+<li>FTP:
+<ul>
+  <li><?php bugfix(77124); ?> (FTP with SSL memory leak).</li>
+</ul></li>
+<li>Libxml:
+<ul>
+  <li><?php bugfix(78279); ?> (libxml_disable_entity_loader settings is shared between requests (cgi-fcgi)).</li>
+</ul></li>
+<li>LiteSpeed:
+<ul>
+  <li>Updated to LiteSpeed SAPI V7.4.3 (increased response header count limit from 100 to 1000, added crash handler to cleanly shutdown PHP request, added CloudLinux mod_lsapi mode).</li>
+  <li><?php bugfix(76058); ?> (After "POST data can't be buffered", using php://input makes huge tmp files).</li>
+</ul></li>
+<li>Openssl:
+<ul>
+  <li><?php bugfix(78231); ?> (Segmentation fault upon stream_socket_accept of exported socket-to-stream).</li>
+</ul></li>
+<li>OPcache:
+<ul>
+  <li><?php bugfix(78189); ?> (file cache strips last character of uname hash).</li>
+  <li><?php bugfix(78202); ?> (Opcache stats for cache hits are capped at 32bit NUM).</li>
+  <li><?php bugfix(78291); ?> (opcache_get_configuration doesn't list all directives).</li>
+</ul></li>
+<li>Phar:
+<ul>
+  <li><?php bugfix(77919); ?> (Potential UAF in Phar RSHUTDOWN).</li>
+</ul></li>
+<li>Phpdbg:
+<ul>
+  <li><?php bugfix(78297); ?> (Include unexistent file memory leak).</li>
+</ul></li>
+<li>PDO_Sqlite:
+<ul>
+  <li><?php bugfix(78192); ?> (SegFault when reuse statement after schema has changed).</li>
+</ul></li>
+<li>SQLite:
+<ul>
+  <li>Upgraded to SQLite 3.28.0.</li>
+</ul></li>
+<li>Standard:
+<ul>
+  <li><?php bugfix(78241); ?> (touch() does not handle dates after 2038 in PHP 64-bit).</li>
+  <li><?php bugfix(78269); ?> (password_hash uses weak options for argon2).</li>
+</ul></li>
+<li>XMLRPC:
+<ul>
+  <li><?php bugfix(78173); ?> (XML-RPC mutates immutable objects during encoding).</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
+<section class="version" id="7.2.20"><!-- {{{ 7.2.20 -->
+<h3>Version 7.2.20</h3>
+<b><?php release_date('04-Jul-2019'); ?></b>
+<ul><li>Core:
+<ul>
+  <li><?php bugfix(76980); ?> (Interface gets skipped if autoloader throws an exception).</li>
+</ul></li>
+<li>DOM:
+<ul>
+  <li><?php bugfix(78025); ?> (segfault when accessing properties of DOMDocumentType).</li>
+</ul></li>
+<li>MySQLi:
+<ul>
+  <li><?php bugfix(77956); ?> (When mysqli.allow_local_infile = Off, use a meaningful error message).</li>
+  <li><?php bugfix(38546); ?> (bindParam incorrect processing of bool types).</li>
+</ul></li>
+<li>Opcache:
+<ul>
+  <li><?php bugfix(78106); ?> (Path resolution fails if opcache disabled during request).</li>
+</ul></li>
+<li>OpenSSL:
+<ul>
+  <li><?php bugfix(78079); ?> (openssl_encrypt_ccm.phpt fails with OpenSSL 1.1.1c).</li>
+</ul></li>
+<li>Sockets:
+<ul>
+  <li><?php bugfix(78038); ?> (Socket_select fails when resource array contains references).</li>
+</ul></li>
+<li>Standard:
+<ul>
+  <li><?php bugfix(77135); ?> (Extract with EXTR_SKIP should skip $this).</li>
+  <li><?php bugfix(77937); ?> (preg_match failed).</li>
+</ul></li>
+<li>Zip:
+<ul>
+  <li><?php bugfix(76345); ?> (zip.h not found).</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
 <section class="version" id="7.2.19"><!-- {{{ 7.2.19 -->
 <h3>Version 7.2.19</h3>
 <b><?php release_date('30-May-2019'); ?></b>
-<ul><li>EXIF:
+<ul><li>Date:
+<ul>
+  <li><?php bugfix(77909); ?> (DatePeriod::__construct() with invalid recurrence count value).</li>
+</ul></li>
+<li>EXIF:
 <ul>
   <li><?php bugfix(77988); ?> (heap-buffer-overflow on php_jpg_get16) (CVE-2019-11040).</li>
 </ul></li>
@@ -2045,12 +3588,12 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
 </ul></li>
 <li>PDO:
 <ul>
+  <li><?php bugfix(73234); ?> (Emulated statements let value dictate parameter type).</li>
   <li>Add "Sent SQL" to debug dump for emulated prepares.</li>
   <li>Add parameter types for national character set strings.</li>
 </ul></li>
 <li>PDO_DBlib:
 <ul>
-  <li><?php bugfix(73234); ?> (Emulated statements let value dictate parameter type).</li>
   <li><?php bugfix(73396); ?> (bigint columns are returned as strings).</li>
   <li>Expose DB-Library version as \PDO::DBLIB_ATTR_VERSION attribute on \PDO instance.</li>
   <li>Add test coverage for bug <?php bugl(72969); ?>.</li>
@@ -2133,6 +3676,49 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
 <!-- }}} --></section>
 
 <a name="PHP_7_1"></a>
+<section class="version" id="7.1.33"><!-- {{{ 7.1.33 -->
+<h3>Version 7.1.33</h3>
+<b><?php release_date('24-Oct-2019'); ?></b>
+<ul><li>FPM:
+<ul>
+  <li><?php bugfix(78599); ?> (env_path_info underflow in fpm_main.c can lead to RCE). (CVE-2019-11043)</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
+<section class="version" id="7.1.32"><!-- {{{ 7.1.32 -->
+<h3>Version 7.1.32</h3>
+<b><?php release_date('29-Aug-2019'); ?></b>
+<ul><li>mbstring:
+<ul>
+  <li>Fixed CVE-2019-13224 (don't allow different encodings for onig_new_deluxe) (stas)</li>
+</ul></li>
+<li>pcre:
+<ul>
+  <li><?php bugfix(75457); ?> (heap use-after-free in pcrelib) (cmb)</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
+<section class="version" id="7.1.31"><!-- {{{ 7.1.31 -->
+<h3>Version 7.1.31</h3>
+<b><?php release_date('01-Aug-2019'); ?></b>
+<ul><li>SQLite:
+<ul>
+  <li>Upgraded to SQLite 3.28.0.</li>
+</ul></li>
+<li>EXIF:
+<ul>
+  <li><?php bugfix(78256); ?> (heap-buffer-overflow on exif_process_user_comment). (CVE-2019-11042)</li>
+  <li><?php bugfix(78222); ?> (heap-buffer-overflow on exif_scan_thumbnail). (CVE-2019-11041)</li>
+</ul></li>
+<li>Phar:
+<ul>
+  <li><?php bugfix(77919); ?> (Potential UAF in Phar RSHUTDOWN).</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
 <section class="version" id="7.1.30"><!-- {{{ 7.1.30 -->
 <h3>Version 7.1.30</h3>
 <b><?php release_date('30-May-2019'); ?></b>

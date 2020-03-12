@@ -16,41 +16,67 @@
  * );
  */
 $RELEASES = (function() {
+    /* PHP 7.4 Release */
+    $PHP_7_4_VERSION         = "7.4.3";
+    $PHP_7_4_DATE            = "20 Feb 2020";
+    $PHP_7_4_TAGS            = ['security']; // Set to ['security'] for security releases.
+    $PHP_7_4_SHA256     = array(
+        "tar.gz"        => "58e421a1dba10da8542a014535cac77a78f0271afb901cc2bd363b881895a9ed",
+        "tar.bz2"       => "c1517ba49578fb2dcc64c73a3edc76d4fc507c4a7ac639981584cc7d3b4c6d14",
+        "tar.xz"        => "cf1f856d877c268124ded1ede40c9fb6142b125fdaafdc54f855120b8bc6982a",
+    );
+
     /* PHP 7.3 Release */
-    $PHP_7_3_VERSION         = "7.3.6";
-    $PHP_7_3_DATE            = "30 May 2019";
+    $PHP_7_3_VERSION         = "7.3.15";
+    $PHP_7_3_DATE            = "20 Feb 2020";
     $PHP_7_3_TAGS            = ['security']; // Set to ['security'] for security releases.
     $PHP_7_3_SHA256     = array(
-        "tar.bz2"       => "1e5ac8700154835c0910e3a814517da9b87bb4a82cc7011fea1a82096b6f6f77",
-        "tar.gz"        => "72fbf223ff8659a61eed08eebffb4ede0256e7a69d2151ae24affa5377b70bb8",
-        "tar.xz"        => "fefc8967daa30ebc375b2ab2857f97da94ca81921b722ddac86b29e15c54a164",
+        "tar.bz2"       => "8dbe1507ea0035f4211faa0db80fe95f39df0e39d8408223820fe9123487043d",
+        "tar.gz"        => "c606dd09de2edff1e6b6c5b9f0076214a59f6f1a3272e15d681ed16257737ef6",
+        "tar.xz"        => "de7ae7cf3d1dbb2824975b26b32991dac2b732886ec22075b8c53b261b018166",
     );
 
     /* PHP 7.2 Release */
-    $PHP_7_2_VERSION         = "7.2.19";
-    $PHP_7_2_DATE            = "30 May 2019";
+    $PHP_7_2_VERSION         = "7.2.28";
+    $PHP_7_2_DATE            = "20 Feb 2020";
     $PHP_7_2_TAGS            = ['security']; // Set to ['security'] for security releases.
     $PHP_7_2_SHA256     = array(
-        "tar.bz2"       => "ebd0b1f375fe07ed4925acc213d2f5ef76a61bd5de174e7b666b98421a90a099",
-        "tar.gz"        => "1cd2266a058f3224d3cba594540045542606996f026eeef96747f27f6b3d22b6",
-        "tar.xz"        => "4ffa2404a88d60e993a9fe69f829ebec3eb1e006de41b6048ce5e91bbeaa9282",
-    );
-
-    /* PHP 7.1 Release */
-    $PHP_7_1_VERSION         = "7.1.30";
-    $PHP_7_1_DATE            = "30 May 2019";
-    $PHP_7_1_TAGS            = ['security'];
-    $PHP_7_1_SHA256     = array(
-        'tar.bz2'       => '664850774fca19d2710b9aa35e9ae91214babbde9cd8d27fd3479cc97171ecb3',
-        'tar.gz'        => 'a604edf85d5dfc28e6ff3016dad3954c50b93db69afc42295178b4fdf42e026c',
-        'tar.xz'        => '6310599811536dbe87e4bcf212bf93196bdfaff519d0c821e4c0068efd096a7c',
+        "tar.bz2"       => "7c953a5b79db3d8d45c65014aef382a48e1c3435cf0c2574e942957f0cdd52a3",
+        "tar.gz"        => "ed5fede7602ccd8d1294b4e4aef7f92f4e3af58ab040bd349264b3f5dbef3261",
+        "tar.xz"        => "afe1863301da572dee2e0bad8014813bcced162f980ddc8ec8e41fd72263eb2d",
     );
 
     return array(
         7 => array(
+            $PHP_7_4_VERSION => array(
+                "announcement" => true,
+                "tags" => $PHP_7_4_TAGS,
+                "date" => $PHP_7_4_DATE,
+                "source" => array(
+                    array(
+                        "filename" => "php-$PHP_7_4_VERSION.tar.bz2",
+                        "name"     => "PHP $PHP_7_4_VERSION (tar.bz2)",
+                        "sha256"   => $PHP_7_4_SHA256["tar.bz2"],
+                        "date"     => $PHP_7_4_DATE,
+                    ),
+                    array(
+                        "filename" => "php-$PHP_7_4_VERSION.tar.gz",
+                        "name"     => "PHP $PHP_7_4_VERSION (tar.gz)",
+                        "sha256"   => $PHP_7_4_SHA256["tar.gz"],
+                        "date"     => $PHP_7_4_DATE,
+                    ),
+                    array(
+                        "filename" => "php-$PHP_7_4_VERSION.tar.xz",
+                        "name"     => "PHP $PHP_7_4_VERSION (tar.xz)",
+                        "sha256"   => $PHP_7_4_SHA256["tar.xz"],
+                        "date"     => $PHP_7_4_DATE,
+                    ),
+                ),
+            ),
             $PHP_7_3_VERSION => array(
                 "announcement" => true,
                 "tags" => $PHP_7_3_TAGS,
+                "date" => $PHP_7_3_DATE,
                 "source" => array(
                     array(
                         "filename" => "php-$PHP_7_3_VERSION.tar.bz2",
@@ -75,6 +101,7 @@ $RELEASES = (function() {
             $PHP_7_2_VERSION => array(
                 "announcement" => true,
                 "tags" => $PHP_7_2_TAGS,
+                "date" => $PHP_7_2_DATE,
                 "source" => array(
                     array(
                         "filename" => "php-$PHP_7_2_VERSION.tar.bz2",
@@ -93,30 +120,6 @@ $RELEASES = (function() {
                         "name"     => "PHP $PHP_7_2_VERSION (tar.xz)",
                         "sha256"   => $PHP_7_2_SHA256["tar.xz"],
                         "date"     => $PHP_7_2_DATE,
-                    ),
-                ),
-            ),
-            $PHP_7_1_VERSION => array(
-                "announcement" => true,
-                "tags" => $PHP_7_1_TAGS,
-                "source" => array(
-                    array(
-                        "filename" => "php-$PHP_7_1_VERSION.tar.bz2",
-                        "name"     => "PHP $PHP_7_1_VERSION (tar.bz2)",
-                        "sha256"   => $PHP_7_1_SHA256["tar.bz2"],
-                        "date"     => $PHP_7_1_DATE,
-                    ),
-                    array(
-                        "filename" => "php-$PHP_7_1_VERSION.tar.gz",
-                        "name"     => "PHP $PHP_7_1_VERSION (tar.gz)",
-                        "sha256"   => $PHP_7_1_SHA256["tar.gz"],
-                        "date"     => $PHP_7_1_DATE,
-                    ),
-                    array(
-                        "filename" => "php-$PHP_7_1_VERSION.tar.xz",
-                        "name"     => "PHP $PHP_7_1_VERSION (tar.xz)",
-                        "sha256"   => $PHP_7_1_SHA256["tar.xz"],
-                        "date"     => $PHP_7_1_DATE,
                     ),
                 ),
             ),

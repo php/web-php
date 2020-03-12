@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom" xmlns:default="http://php.net/ns/news">
+  <title>PHP fwdays'20</title>
+  <id>https://www.php.net/archive/2019.php#2019-07-31-2</id>
+  <published>2019-07-31T16:50:41+03:00</published>
+  <updated>2019-07-31T16:29:41+03:00</updated>
+  <link href="https://www.php.net/conferences/index.php#id2019-07-31-2" rel="alternate" type="text/html"/>
+  <link href="https://fwdays.com/en/event/php-fwdays-2020" rel="via" type="text/html"/>
+  <default:finalTeaserDate xmlns="http://php.net/ns/news">2019-12-24</default:finalTeaserDate>
+  <category term="conferences" label="Conference announcement"/>
+  <default:newsImage xmlns="http://php.net/ns/news" link="https://fwdays.com/en/event/php-fwdays-2020" title="PHP fwdays'20">fwdays.png</default:newsImage>
+  <content type="xhtml">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+        <p>We are thrilled to announce the 8th edition of <a href="https://fwdays.com/en/event/php-fwdays-2020">PHP fwdays conference</a> &#8212; the biggest PHP conf of Eastern Europe, which will be held on <strong>May 30, 2020 in Kyiv, Ukraine</strong>.</p>
+        <p>Three parallel tracks and community discussions are all dedicated to PHP development, tools and issues to be solved. Join more than 900 developers from all over the world to learn, discuss and solve.</p>
+        <p>You are welcome to submit the talk via <a href="https://php.cfp.fwdays.com/">Call For Papers</a> till December 24th and visit awesome Kyiv in summer!</p>
+    </div>
+  </content>
+</entry>

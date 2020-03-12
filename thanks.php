@@ -14,7 +14,7 @@ site_header("Thanks", array("current" => "community"));
 </li>
 
 <li>
- <a href="https://myracloud.com/de/ddos-schutz/">DDoS protection by myracloud</a>, along with hosting
+ <a href="https://www.myrasecurity.com/ddos-protection/">DDoS protection by Myra Security</a>, along with hosting
  www.php.net and git.php.net for us.
 </li>
 

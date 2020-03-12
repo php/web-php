@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom" xmlns:default="http://php.net/ns/news">
+  <title>PHP Conference Japan 2019</title>
+  <id>https://www.php.net/archive/2019.php#2019-08-08-2</id>
+  <published>2019-08-08T10:29:31+00:00</published>
+  <updated>2019-08-08T10:29:31+00:00</updated>
+  <link href="https://www.php.net/conferences/index.php#id2019-08-08-2" rel="alternate" type="text/html"/>
+  <link href="http://phpcon.php.gr.jp/2019/" rel="via" type="text/html"/>
+  <default:finalTeaserDate xmlns="http://php.net/ns/news">2019-12-01</default:finalTeaserDate>
+  <category term="conferences" label="Conference announcement"/>
+  <default:newsImage xmlns="http://php.net/ns/news" link="http://phpcon.php.gr.jp/2019/" title="PHP Conference Japan 2019">phpconfjapan2019.png</default:newsImage>
+  <content type="xhtml">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+     <p>About <a href="http://phpcon.php.gr.jp/2019/" target="_blank">PHP Conference Japan 2019</a></p>
+     <p>PHP Conference Japan is the biggest PHP festival in Japan held at Tokyo, with more than 1,500 attendees for 2018. This one day festival covers all topics of PHP from introductory seminar for early beginners to dedicated topics in details for wide variety of topics like frameworks, DevOps, security, or PHP internals.</p>
+     <p>Conference Date / Veue</p>
+     <p>2019/12/1<br/><a href="https://www.pio-ota.net/english/" target="_blank">Ota City Industrial Plaza (PiO) Reservation Center</a> </p>
+    </div>
+  </content>
+</entry>

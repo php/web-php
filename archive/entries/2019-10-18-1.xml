@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+  <title>PHP 7.4.0RC4 Released!</title>
+  <id>https://www.php.net/archive/2019.php#2019-10-18-1</id>
+  <published>2019-10-18T08:46:40+00:00</published>
+  <updated>2019-10-18T08:46:40+00:00</updated>
+  <link href="https://www.php.net/index.php#id2019-10-18-1" rel="alternate" type="text/html"/>
+  <link href="https://www.php.net/archive/2019.php#2019-10-18-1" rel="via" type="text/html"/>
+  <category term="frontpage" label="PHP.net frontpage news"/>
+  <content type="xhtml">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+     <p>
+     The PHP team is glad to announce the fourth release candidate of PHP 7.4:
+     PHP 7.4.0RC4. This continues the PHP 7.4 release cycle, the rough outline of
+     which is specified in the <a href="https://wiki.php.net/todo/php74">PHP
+     Wiki</a>.
+     </p>
+     
+     <p>
+     <b>Please DO NOT use this version in production, it is an early test
+     version.</b>
+     </p>
+     
+     <p>
+     For source downloads of PHP 7.4.0RC4 please visit the
+     <a href="https://downloads.php.net/~derick">download page</a>.
+     </p>
+     
+     <p>
+     Please carefully test this version and report any issues found in the <a href="https://bugs.php.net">bug reporting system</a>.
+     </p>
+     
+     <p>
+     For more information on the new features and other changes, you can read the
+     <a href="https://github.com/php/php-src/blob/php-7.4.0RC4/NEWS">NEWS</a>
+     file, or the
+     <a href="https://github.com/php/php-src/blob/php-7.4.0RC4/UPGRADING">UPGRADING</a>
+     file for a complete list of upgrading notes. These files can also be found in
+     the release archive.
+     </p>
+     
+     <p>
+     The next release would be <b>7.4.0RC5</b>, planned for October 31st.
+     </p>
+     
+     <p>
+     The signatures for the release can be found in
+     <a href="https://gist.github.com/derickr/5ad9dc1e880c8797a6f4af414d084c0f">the
+     manifest</a> or on <a href="https://qa.php.net/">the QA site</a>.
+     </p>
+     
+     <p>Thank you for helping us make PHP better.</p>
+    </div>
+  </content>
+</entry>
