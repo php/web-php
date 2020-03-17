@@ -4857,24 +4857,24 @@ $OLDRELEASES = array (
           'filename' => 'php-5.6.20.tar.bz2',
           'name' => 'PHP 5.6.20 (tar.bz2)',
           'sha256' => '5ac7bf7caec7a79b18cf458e786fd1609ad2da771224b80bc15cc6f01b22bf1f',
-          'date' => '31 Marc 2016',
+          'date' => '31 Mar 2016',
         ),
         1 => 
         array (
           'filename' => 'php-5.6.20.tar.gz',
           'name' => 'PHP 5.6.20 (tar.gz)',
           'sha256' => '9a7ec6e1080ee93dcbe7df3e49ea1c3c3da5fc2258aff763f39ab3786baf8d56',
-          'date' => '31 Marc 2016',
+          'date' => '31 Mar 2016',
         ),
         2 => 
         array (
           'filename' => 'php-5.6.20.tar.xz',
           'name' => 'PHP 5.6.20 (tar.xz)',
           'sha256' => '2b87d40213361112af49157a435e0d4cdfd334c9b7c731c8b844932b1f444e7a',
-          'date' => '31 Marc 2016',
+          'date' => '31 Mar 2016',
         ),
       ),
-      'date' => '31 Marc 2016',
+      'date' => '31 Mar 2016',
       'museum' => false,
     ),
     '5.5.34' => 
@@ -4923,24 +4923,24 @@ $OLDRELEASES = array (
           'filename' => 'php-5.6.19.tar.bz2',
           'name' => 'PHP 5.6.19 (tar.bz2)',
           'sha256' => '2a24a3f84971680ac0a4c71050067de4f76ee235aa4a041fae21bfa69975c168',
-          'date' => '03 Marc 2016',
+          'date' => '03 Mar 2016',
         ),
         1 => 
         array (
           'filename' => 'php-5.6.19.tar.gz',
           'name' => 'PHP 5.6.19 (tar.gz)',
           'sha256' => 'fce49cddac9337f0c83afbafac5acfb82ba9f876a5a880c88240feac8c9b7a22',
-          'date' => '03 Marc 2016',
+          'date' => '03 Mar 2016',
         ),
         2 => 
         array (
           'filename' => 'php-5.6.19.tar.xz',
           'name' => 'PHP 5.6.19 (tar.xz)',
           'sha256' => 'bb32337f93a00b71789f116bddafa8848139120e7fb6f4f98a84f52dbcb8329f',
-          'date' => '03 Marc 2016',
+          'date' => '03 Mar 2016',
         ),
       ),
-      'date' => '03 Marc 2016',
+      'date' => '03 Mar 2016',
       'museum' => false,
     ),
     '5.5.33' => 
