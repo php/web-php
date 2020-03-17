@@ -39,6 +39,43 @@ $OLDRELEASES = array (
       ),
       'museum' => false,
     ),
+    '7.3.14' => 
+    array (
+      'announcement' => 
+      array (
+        'English' => '/releases/7_3_14.php',
+      ),
+      'tags' => 
+      array (
+        0 => 'security',
+      ),
+      'date' => '23 Jan 2020',
+      'source' => 
+      array (
+        0 => 
+        array (
+          'filename' => 'php-7.3.14.tar.bz2',
+          'name' => 'PHP 7.3.14 (tar.bz2)',
+          'sha256' => 'b9dfcbbbc929ce67995f976de8636c5f46804593ecae6e110509329b9dc6c272',
+          'date' => '18 Dec 2019',
+        ),
+        1 => 
+        array (
+          'filename' => 'php-7.3.14.tar.gz',
+          'name' => 'PHP 7.3.14 (tar.gz)',
+          'sha256' => '6aff532a380b0f30c9e295b67dc91d023fee3b0ae14b4771468bf5dda4cbf108',
+          'date' => '18 Dec 2019',
+        ),
+        2 => 
+        array (
+          'filename' => 'php-7.3.14.tar.xz',
+          'name' => 'PHP 7.3.14 (tar.xz)',
+          'sha256' => 'cc05dd373ca5d36652800762f65c10e828a17de35aaf246262e3efa99d00cdb0',
+          'date' => '18 Dec 2019',
+        ),
+      ),
+      'museum' => false,
+    ),
     '7.2.27' => 
     array (
       'announcement' => 
