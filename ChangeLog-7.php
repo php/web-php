@@ -11,6 +11,99 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
 <a href="#PHP_7_1">7.1</a> | <a href="#PHP_7_0">7.0</a>
 
 <a name="PHP_7_4"></a>
+<section class="version" id="7.4.4"><!-- {{{ 7.4.4 -->
+<h3>Version 7.4.4</h3>
+<b><?php release_date('19-Mar-2020'); ?></b>
+<ul><li>Core:
+<ul>
+  <li><?php bugfix(79329); ?> (get_headers() silently truncates after a null byte) (CVE-2020-7066)</li>
+  <li><?php bugfix(79244); ?> (php crashes during parsing INI file).</li>
+  <li><?php bugfix(63206); ?> (restore_error_handler does not restore previous errors mask).</li>
+</ul></li>
+<li>COM:
+<ul>
+  <li><?php bugfix(66322); ?> (COMPersistHelper::SaveToFile can save to wrong location).</li>
+  <li><?php bugfix(79242); ?> (COM error constants don't match com_exception codes on x86).</li>
+  <li><?php bugfix(79247); ?> (Garbage collecting variant objects segfaults).</li>
+  <li><?php bugfix(79248); ?> (Traversing empty VT_ARRAY throws com_exception).</li>
+  <li><?php bugfix(79299); ?> (com_print_typeinfo prints duplicate variables).</li>
+  <li><?php bugfix(79332); ?> (php_istreams are never freed).</li>
+  <li><?php bugfix(79333); ?> (com_print_typeinfo() leaks memory).</li>
+</ul></li>
+<li>CURL:
+<ul>
+  <li><?php bugfix(79019); ?> (Copied cURL handles upload empty file).</li>
+  <li><?php bugfix(79013); ?> (Content-Length missing when posting a curlFile with curl).</li>
+</ul></li>
+<li>DOM:
+<ul>
+  <li><?php bugfix(77569); ?>: (Write Access Violation in DomImplementation).</li>
+  <li><?php bugfix(79271); ?> (DOMDocumentType::$childNodes is NULL).</li>
+</ul></li>
+<li>Enchant:
+<ul>
+  <li><?php bugfix(79311); ?> (enchant_dict_suggest() fails on big endian architecture).</li>
+</ul></li>
+<li>EXIF:
+<ul>
+  <li><?php bugfix(79282); ?> (Use-of-uninitialized-value in exif) (CVE-2020-7064).</li>
+</ul></li>
+<li>Fileinfo:
+<ul>
+  <li><?php bugfix(79283); ?> (Segfault in libmagic patch contains a buffer overflow).</li>
+</ul></li>
+<li>FPM:
+<ul>
+  <li><?php bugfix(77653); ?> (operator displayed instead of the real error message).</li>
+  <li><?php bugfix(79014); ?> (PHP-FPM &amp; Primary script unknown).</li>
+</ul></li>
+<li>MBstring:
+<ul>
+  <li><?php bugfix(79371); ?> (mb_strtolower (UTF-32LE): stack-buffer-overflow at php_unicode_tolower_full) (CVE-2020-7065).</li>
+</ul></li>
+<li>MySQLi:
+<ul>
+  <li><?php bugfix(64032); ?> (mysqli reports different client_version).</li>
+</ul></li>
+<li>MySQLnd:
+<ul>
+  <li>Implemented FR <?php bugl(79275); ?> (Support auth_plugin_caching_sha2_password on Windows).</li>
+</ul></li>
+<li>Opcache:
+<ul>
+  <li><?php bugfix(79252); ?> (preloading causes php-fpm to segfault during exit).</li>
+</ul></li>
+<li>PCRE:
+<ul>
+  <li><?php bugfix(79188); ?> (Memory corruption in preg_replace/preg_replace_callback and unicode).</li>
+  <li><?php bugfix(79241); ?> (Segmentation fault on preg_match()).</li>
+  <li><?php bugfix(79257); ?> (Duplicate named groups (?J) prefer last alternative even if not matched).</li>
+</ul></li>
+<li>PDO_ODBC:
+<ul>
+  <li><?php bugfix(79038); ?> (PDOStatement::nextRowset() leaks column values).</li>
+</ul></li>
+<li>Reflection:
+<ul>
+  <li><?php bugfix(79062); ?> (Property with heredoc default value returns false for getDocComment).</li>
+</ul></li>
+<li>SQLite3:
+<ul>
+  <li><?php bugfix(79294); ?> (::columnType() may fail after SQLite3Stmt::reset()).</li>
+</ul></li>
+<li>Standard:
+<ul>
+  <li><?php bugfix(79254); ?> (getenv() w/o arguments not showing changes).</li>
+  <li><?php bugfix(79265); ?> (Improper injection of Host header when using fopen for http requests).</li>
+</ul></li>
+<li>Zip:
+<ul>
+  <li><?php bugfix(79315); ?> (ZipArchive::addFile doesn't honor start/length parameters).</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
+
 <section class="version" id="7.4.3"><!-- {{{ 7.4.3 -->
 <h3>Version 7.4.3</h3>
 <b><?php release_date('20-Feb-2020'); ?></b>
