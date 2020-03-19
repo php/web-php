@@ -671,6 +671,70 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
 
 <a name="PHP_7_3"></a>
 
+<section class="version" id="7.3.16"><!-- {{{ 7.3.16 -->
+<h3>Version 7.3.16</h3>
+<b><?php release_date('19-Mar-2020'); ?></b>
+<ul><li>Core:
+<ul>
+  <li><?php bugfix(63206); ?> (restore_error_handler does not restore previous errors mask).</li>
+</ul></li>
+<li>COM:
+<ul>
+  <li><?php bugfix(66322); ?> (COMPersistHelper::SaveToFile can save to wrong location).</li>
+  <li><?php bugfix(79242); ?> (COM error constants don't match com_exception codes on x86).</li>
+  <li><?php bugfix(79248); ?> (Traversing empty VT_ARRAY throws com_exception).</li>
+  <li><?php bugfix(79299); ?> (com_print_typeinfo prints duplicate variables).</li>
+  <li><?php bugfix(79332); ?> (php_istreams are never freed).</li>
+  <li><?php bugfix(79333); ?> (com_print_typeinfo() leaks memory).</li>
+</ul></li>
+<li>DOM:
+<ul>
+  <li><?php bugfix(77569); ?>: (Write Access Violation in DomImplementation).</li>
+  <li><?php bugfix(79271); ?> (DOMDocumentType::$childNodes is NULL).</li>
+</ul></li>
+<li>Enchant:
+<ul>
+  <li><?php bugfix(79311); ?> (enchant_dict_suggest() fails on big endian architecture).</li>
+</ul></li>
+<li>EXIF:
+<ul>
+  <li><?php bugfix(79282); ?> (Use-of-uninitialized-value in exif). (CVE-2020-7064)</li>
+</ul></li>
+<li>MBstring:
+<ul>
+  <li><?php bugfix(79371); ?> (mb_strtolower (UTF-32LE): stack-buffer-overflow at php_unicode_tolower_full). (CVE-2020-7065)</li>
+</ul></li>
+<li>MySQLi:
+<ul>
+  <li><?php bugfix(64032); ?> (mysqli reports different client_version).</li>
+</ul></li>
+<li>PCRE:
+<ul>
+  <li><?php bugfix(79188); ?> (Memory corruption in preg_replace/preg_replace_callback and unicode).</li>
+</ul></li>
+<li>PDO_ODBC:
+<ul>
+  <li><?php bugfix(79038); ?> (PDOStatement::nextRowset() leaks column values).</li>
+</ul></li>
+<li>Reflection:
+<ul>
+  <li><?php bugfix(79062); ?> (Property with heredoc default value returns false for getDocComment).</li>
+</ul></li>
+<li>SQLite3:
+<ul>
+  <li><?php bugfix(79294); ?> (::columnType() may fail after SQLite3Stmt::reset()).</li>
+</ul></li>
+<li>Standard:
+<ul>
+  <li><?php bugfix(79329); ?> (get_headers() silently truncates after a null byte). (CVE-2020-7066)</li>
+  <li><?php bugfix(79254); ?> (getenv() w/o arguments not showing changes).</li>
+  <li><?php bugfix(79265); ?> (Improper injection of Host header when using fopen for http requests).</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
+
+
 <section class="version" id="7.3.15"><!-- {{{ 7.3.15 -->
 <h3>Version 7.3.15</h3>
 <b><?php release_date('20-Feb-2020'); ?></b>
