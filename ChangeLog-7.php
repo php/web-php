@@ -2045,6 +2045,20 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
 
 <a name="PHP_7_2"></a>
 
+<section class="version" id="7.2.29"><!-- {{{ 7.2.29 -->
+<h3>Version 7.2.29</h3>
+<b><?php release_date('19-Mar-2020'); ?></b>
+<ul><li>Core:
+<ul>
+  <li><?php bugfix(79329); ?> (get_headers() silently truncates after a null byte) (CVE-2020-7066) (cmb)</li>
+</ul></li>
+<li>EXIF:
+<ul>
+  <li><?php bugfix(79282); ?> (Use-of-uninitialized-value in exif) (CVE-2020-7064) (Nikita)</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
 <section class="version" id="7.2.28"><!-- {{{ 7.2.28 -->
 <h3>Version 7.2.28</h3>
 <b><?php release_date('20-Feb-2020'); ?></b>
