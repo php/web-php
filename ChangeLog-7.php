@@ -764,6 +764,63 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
 
 <a name="PHP_7_3"></a>
 
+<section class="version" id="7.3.17"><!-- {{{ 7.3.17 -->
+<h3>Version 7.3.17</h3>
+<b><?php release_date('16-Apr-2020'); ?></b>
+<ul><li>Core:
+<ul>
+  <li><?php bugfix(79364); ?> (When copy empty array, next key is unspecified).</li>
+  <li><?php bugfix(78210); ?> (Invalid pointer address).</li>
+</ul></li>
+<li>CURL:
+<ul>
+  <li><?php bugfix(79199); ?> (curl_copy_handle() memory leak).</li>
+</ul></li>
+<li>Date:
+<ul>
+  <li><?php bugfix(79396); ?> (DateTime hour incorrect during DST jump forward).</li>
+</ul></li>
+<li>Iconv:
+<ul>
+  <li><?php bugfix(79200); ?> (Some iconv functions cut Windows-1258).</li>
+</ul></li>
+<li>OPcache:
+<ul>
+  <li><?php bugfix(79412); ?> (Opcache chokes and uses 100% CPU on specific script).</li>
+</ul></li>
+<li>Session:
+<ul>
+  <li><?php bugfix(79413); ?> (session_create_id() fails for active sessions).</li>
+</ul></li>
+<li>Shmop:
+<ul>
+  <li><?php bugfix(79427); ?> (Integer Overflow in shmop_open()).</li>
+</ul></li>
+<li>SimpleXML:
+<ul>
+  <li><?php bugfix(61597); ?> (SXE properties may lack attributes and content).</li>
+</ul></li>
+<li>Spl:
+<ul>
+  <li><?php bugfix(75673); ?> (SplStack::unserialize() behavior).</li>
+  <li><?php bugfix(79393); ?> (Null coalescing operator failing with SplFixedArray).</li>
+</ul></li>
+<li>Standard:
+<ul>
+  <li><?php bugfix(79330); ?> (shell_exec() silently truncates after a null byte).</li>
+  <li><?php bugfix(79465); ?> (OOB Read in urldecode()). (CVE-2020-7067)</li>
+  <li><?php bugfix(79410); ?> (system() swallows last chunk if it is exactly 4095 bytes without newline).</li>
+</ul></li>
+<li>Zip:
+<ul>
+  <li><?php bugfix(79296); ?> (ZipArchive::open fails on empty file).</li>
+  <li><?php bugfix(79424); ?> (php_zip_glob uses gl_pathc after call to globfree).</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
+
+
 <section class="version" id="7.3.16"><!-- {{{ 7.3.16 -->
 <h3>Version 7.3.16</h3>
 <b><?php release_date('19-Mar-2020'); ?></b>
