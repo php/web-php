@@ -2,6 +2,43 @@
 $OLDRELEASES = array (
   7 => 
   array (
+    '7.2.29' => 
+    array (
+      'announcement' => 
+      array (
+        'English' => '/releases/7_2_29.php',
+      ),
+      'tags' => 
+      array (
+        0 => 'security',
+      ),
+      'date' => '19 Mar 2020',
+      'source' => 
+      array (
+        0 => 
+        array (
+          'filename' => 'php-7.2.29.tar.bz2',
+          'name' => 'PHP 7.2.29 (tar.bz2)',
+          'sha256' => 'eaa1f5503f2bf0c8569ec4ae80ffd8ca8cbc260f01c2503dd0e83dfc9cf0b923',
+          'date' => '19 Mar 2020',
+        ),
+        1 => 
+        array (
+          'filename' => 'php-7.2.29.tar.gz',
+          'name' => 'PHP 7.2.29 (tar.gz)',
+          'sha256' => 'ea5c96309394a03a38828cc182058be0c09dde1f00f35809622c2d05c50ee890',
+          'date' => '19 Mar 2020',
+        ),
+        2 => 
+        array (
+          'filename' => 'php-7.2.29.tar.xz',
+          'name' => 'PHP 7.2.29 (tar.xz)',
+          'sha256' => 'b117de74136bf4b439d663be9cf0c8e06a260c1f340f6b75ccadb609153a7fe8',
+          'date' => '19 Mar 2020',
+        ),
+      ),
+      'museum' => false,
+    ),
     '7.4.4' => 
     array (
       'announcement' => 

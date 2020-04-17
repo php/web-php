@@ -2260,6 +2260,20 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
 
 <a name="PHP_7_2"></a>
 
+<section class="version" id="7.2.30"><!-- {{{ 7.2.30 -->
+<h3>Version 7.2.30</h3>
+<b><?php release_date('16-Apr-2020'); ?></b>
+<ul><li>Standard:
+<ul>
+  <li><?php bugfix(79468); ?> (SIGSEGV when closing stream handle with a stream filter appended).</li>
+  <li><?php bugfix(79330); ?> (shell_exec() silently truncates after a null byte).</li>
+  <li><?php bugfix(79465); ?> (OOB Read in urldecode()).</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
+
+
 <section class="version" id="7.2.29"><!-- {{{ 7.2.29 -->
 <h3>Version 7.2.29</h3>
 <b><?php release_date('19-Mar-2020'); ?></b>
