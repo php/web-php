@@ -35,7 +35,11 @@ foreach($frontpage as $entry) {
     $content .= '<div class="newsentry">';
     $content .= '<h3 class="newstitle title"><a href="'. $MYSITE.$link .'" name="' . $id . '">' . $entry["title"] . '</a></h3>';
     $content .= '<div class="newsimage">';
-    $content .= sprintf('<a href="%s"><img src="/images/news/%s"></a>', $entry["newsImage"]["link"], $entry["newsImage"]["content"]);
+
+    if (isset($entry["newsImage"])) {
+        $content .= sprintf('<a href="%s"><img src="/images/news/%s"></a>', $entry["newsImage"]["link"], $entry["newsImage"]["content"]);
+    }
+
     $content .= '</div>';
     $content .= '<div class="newscontent">';
     $content .= $entry["content"];
