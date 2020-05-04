@@ -42,20 +42,15 @@ $TOC = array (
   ),
   8 =>
   array (
-    0 => 'features.safe-mode.php',
-    1 => 'Safe Mode',
-  ),
-  9 =>
-  array (
     0 => 'features.commandline.php',
     1 => 'Command line usage',
   ),
-  10 =>
+  9 =>
   array (
     0 => 'features.gc.php',
     1 => 'Garbage Collection',
   ),
-  11 =>
+  10 =>
   array (
     0 => 'features.dtrace.php',
     1 => 'DTrace Dynamic Tracing',
