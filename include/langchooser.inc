@@ -92,11 +92,6 @@ function language_choose_code()
         language_add(myphpnet_language(), $languages);
     }
 
-    // Put the last selected language in the priority order (if available)
-    if (isset($_COOKIE['LAST_LANG'])) {
-        language_add($_COOKIE['LAST_LANG'], $languages);
-    }
-
     // Specified by the user via the browser's Accept Language setting
     // Samples: "hu, en-us;q=0.66, en;q=0.33", "hu,en-us;q=0.5"
     $browser_langs = array(); $parsed_langs = array();
