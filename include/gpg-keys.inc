@@ -9,6 +9,11 @@ uid                  Kalle Sommer Nielsen (PHP) &lt;kalle@php.net&gt;
 pub   4096R/70D12172 2017-04-14 [expires: 2024-04-21]
       Key fingerprint = 1729 F839 38DA 44E2 7BA0  F4D3 DBDB 3974 70D1 2172
 uid                  Sara Golemon &lt;pollita@php.net&gt;
+
+pub   rsa4096 2020-05-09 [SC] [expires: 2024-05-08]
+      BFDD D286 4282 4F81 18EF  7790 9B67 A5C1 2229 118F
+uid           [ultimate] Gabriel Caruso (Release Manager) &lt;carusogabriel@php.net&gt;
+sub   rsa4096 2020-05-09 [E] [expires: 2024-05-08]
 GPG
 ,
 
