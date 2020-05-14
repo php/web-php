@@ -829,6 +829,51 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
 
 <a name="PHP_7_3"></a>
 
+<section class="version" id="7.3.18"><!-- {{{ 7.3.18 -->
+<h3>Version 7.3.18</h3>
+<b><?php release_date('14-May-2020'); ?></b>
+<ul><li>Core:
+<ul>
+  <li><?php bugfix(78875); ?> (Long filenames cause OOM and temp files are not cleaned). (CVE-2019-11048)</li>
+  <li><?php bugfix(78876); ?> (Long variables in multipart/form-data cause OOM and temp files are not cleaned). (CVE-2019-11048)</li>
+  <li><?php bugfix(79434); ?> (PHP 7.3 and PHP-7.4 crash with NULL-pointer dereference on !CS constant).</li>
+  <li><?php bugfix(79477); ?> (casting object into array creates references).</li>
+  <li><?php bugfix(79470); ?> (PHP incompatible with 3rd party file system on demand).</li>
+  <li><?php bugfix(78784); ?> (Unable to interact with files inside a VFS for Git repository).</li>
+</ul></li>
+<li>DOM:
+<ul>
+  <li><?php bugfix(78221); ?> (DOMNode::normalize() doesn't remove empty text nodes).</li>
+</ul></li>
+<li>FCGI:
+<ul>
+  <li><?php bugfix(79491); ?> (Search for .user.ini extends up to root dir).</li>
+</ul></li>
+<li>MBString:
+<ul>
+  <li><?php bugfix(79441); ?> (Segfault in mb_chr() if internal encoding is unsupported).</li>
+</ul></li>
+<li>OpenSSL:
+<ul>
+  <li><?php bugfix(79497); ?> (stream_socket_client() throws an unknown error sometimes with &lt;1s timeout).</li>
+</ul></li>
+<li>Phar:
+<ul>
+  <li><?php bugfix(79503); ?> (Memory leak on duplicate metadata).</li>
+</ul></li>
+<li>SimpleXML:
+<ul>
+  <li><?php bugfix(79528); ?> (Different object of the same xml between 7.4.5 and 7.4.4).</li>
+</ul></li>
+<li>Standard:
+<ul>
+  <li><?php bugfix(79468); ?> (SIGSEGV when closing stream handle with a stream filter appended).</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
+
+
 <section class="version" id="7.3.17"><!-- {{{ 7.3.17 -->
 <h3>Version 7.3.17</h3>
 <b><?php release_date('16-Apr-2020'); ?></b>
