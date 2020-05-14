@@ -3,6 +3,7 @@ $_SERVER['BASE_PAGE'] = 'releases/7_4_2.php';
 include_once __DIR__ . '/../include/prepend.inc';
 site_header("PHP 7.4.2 Release Announcement");
 ?>
+<h1>PHP 7.4.2 Release Announcement</h1>
 
   <p>The PHP development team announces the immediate availability of PHP
   7.4.2. This is a security release which also contains several bug fixes.</p>
