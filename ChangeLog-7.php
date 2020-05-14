@@ -2260,6 +2260,17 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
 
 <a name="PHP_7_2"></a>
 
+<section class="version" id="7.2.31"><!-- {{{ 7.2.31 -->
+<h3>Version 7.2.31</h3>
+<b><?php release_date('14-May-2020'); ?></b>
+<ul><li>Core:
+<ul>
+  <li><?php bugfix(78875); ?> (Long filenames cause OOM and temp files are not cleaned). (CVE-2019-11048)</li>
+  <li><?php bugfix(78876); ?> (Long variables in multipart/form-data cause OOM and temp files are not cleaned). (CVE-2019-11048)</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
 <section class="version" id="7.2.30"><!-- {{{ 7.2.30 -->
 <h3>Version 7.2.30</h3>
 <b><?php release_date('16-Apr-2020'); ?></b>
