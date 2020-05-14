@@ -11,6 +11,65 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
 <a href="#PHP_7_1">7.1</a> | <a href="#PHP_7_0">7.0</a>
 
 <a name="PHP_7_4"></a>
+<section class="version" id="7.4.6"><!-- {{{ 7.4.6 -->
+<h3>Version 7.4.6</h3>
+<b><?php release_date('14-May-2020'); ?></b>
+<ul><li>Core:
+<ul>
+  <li><?php bugfix(78434); ?> (Generator yields no items after valid() call).</li>
+  <li><?php bugfix(79477); ?> (casting object into array creates references).</li>
+  <li><?php bugfix(79514); ?> (Memory leaks while including unexistent file).</li>
+  <li><?php bugfix(79470); ?> (PHP incompatible with 3rd party file system on demand).</li>
+  <li><?php bugfix(78784); ?> (Unable to interact with files inside a VFS for Git repository).</li>
+  <li><?php bugfix(78875); ?> (Long variables cause OOM and temp files are not cleaned).</li>
+  <li><?php bugfix(78876); ?> (Long variables cause OOM and temp files are not cleaned).</li>
+</ul></li>
+<li>DOM:
+<ul>
+  <li><?php bugfix(78221); ?> (DOMNode::normalize() doesn't remove empty text nodes).</li>
+</ul></li>
+<li>EXIF:
+<ul>
+  <li><?php bugfix(79336); ?> (ext/exif/tests/bug79046.phpt fails on Big endian arch).</li>
+</ul></li>
+<li>FCGI:
+<ul>
+  <li><?php bugfix(79491); ?> (Search for .user.ini extends up to root dir).</li>
+</ul></li>
+<li>MBString:
+<ul>
+  <li><?php bugfix(79441); ?> (Segfault in mb_chr() if internal encoding is unsupported).</li>
+</ul></li>
+<li>OpenSSL:
+<ul>
+  <li><?php bugfix(79497); ?> (stream_socket_client() throws an unknown error sometimes with &lt;1s timeout).</li>
+</ul></li>
+<li>PCRE:
+<ul>
+  <li>Upgraded to PCRE2 10.34.</li>
+</ul></li>
+<li>Phar:
+<ul>
+  <li><?php bugfix(79503); ?> (Memory leak on duplicate metadata).</li>
+</ul></li>
+<li>SimpleXML:
+<ul>
+  <li><?php bugfix(79528); ?> (Different object of the same xml between 7.4.5 and 7.4.4).</li>
+</ul></li>
+<li>SPL:
+<ul>
+  <li><?php bugfix(69264); ?> (__debugInfo() ignored while extending SPL classes).</li>
+  <li><?php bugfix(67369); ?> (ArrayObject serialization drops the iterator class).</li>
+</ul></li>
+<li>Standard:
+<ul>
+  <li><?php bugfix(79468); ?> (SIGSEGV when closing stream handle with a stream filter appended).</li>
+  <li><?php bugfix(79447); ?> (Serializing uninitialized typed properties with __sleep should not throw).</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
+
 <section class="version" id="7.4.5"><!-- {{{ 7.4.5 -->
 <h3>Version 7.4.5</h3>
 <b><?php release_date('16-Apr-2020'); ?></b>
