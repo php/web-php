@@ -27,7 +27,7 @@ $RELEASES = (function() {
     );
 
     /* PHP 7.3 Release */
-    $PHP_7_3_VERSION         = "7.3.19";
+    $PHP_7_3_VERSION         = "7.3.18";
     $PHP_7_3_DATE            = "14 May 2020";
     $PHP_7_3_TAGS            = ['security']; // Set to ['security'] for security releases.
     $PHP_7_3_SHA256     = array(
