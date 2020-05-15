@@ -21,8 +21,8 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
   <li><?php bugfix(79514); ?> (Memory leaks while including unexistent file).</li>
   <li><?php bugfix(79470); ?> (PHP incompatible with 3rd party file system on demand).</li>
   <li><?php bugfix(78784); ?> (Unable to interact with files inside a VFS for Git repository).</li>
-  <li><?php bugfix(78875); ?> (Long variables cause OOM and temp files are not cleaned).</li>
-  <li><?php bugfix(78876); ?> (Long variables cause OOM and temp files are not cleaned).</li>
+  <li><?php bugfix(78875); ?> (Long variables cause OOM and temp files are not cleaned). (CVE-2019-11048).</li>
+  <li><?php bugfix(78876); ?> (Long variables in multipart/form-data cause OOM and temp files are not cleaned). (CVE-2019-11048).</li>
 </ul></li>
 <li>DOM:
 <ul>
