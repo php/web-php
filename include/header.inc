@@ -122,6 +122,37 @@ if (!isset($config["languages"])) {
       <input type="search" name="pattern" class="search-query" placeholder="Search" accesskey="s">
     </form>
   </div>
+    <?php if (!empty($config['breadcrumbs'])): ?>
+        <div id="breadcrumbs" class="clearfix">
+            <div id="breadcrumbs-inner">
+                <?php if (isset($config['next'])): ?>
+                    <div class="next">
+                        <a href="<?php echo $config['next'][0]; ?>">
+                            <?php echo $config['next'][1]; ?> &raquo;
+                        </a>
+                    </div>
+                <?php endif; ?>
+                <?php if (isset($config['prev'])): ?>
+                    <div class="prev">
+                        <a href="<?php echo $config['prev'][0]; ?>">
+                            &laquo; <?php echo $config['prev'][1]; ?>
+                        </a>
+                    </div>
+                <?php endif; ?>
+                <ul>
+                    <?php
+                    $breadcrumbs = $config['breadcrumbs'];
+                    $last = array_pop($breadcrumbs);
+                    foreach ($breadcrumbs as $crumb) {
+                        echo "      <li><a href='{$crumb['link']}'>{$crumb['title']}</a></li>";
+                    }
+                    echo "      <li><a href='{$last['link']}'>{$last['title']}</a></li>";
+
+                    ?>
+                </ul>
+            </div>
+        </div>
+    <?php endif; ?>
   <div id="flash-message"></div>
 </nav>
 <?php if (!empty($config["headsup"])): ?>
