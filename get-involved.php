@@ -26,15 +26,15 @@ site_header("Get Involved", array("current" => "community"));
 <h3 class="content-title" id="ways-to-contribute">Four Best Ways to Contribute</h3>
 
  <ol class="content-box listed">
-  <li>Running test suites in <a href="http://qa.php.net/">RC</a>
-      and <a href="http://php.net/releases">release</a> distributions of PHP</li>
+  <li>Running test suites in <a href="https://qa.php.net/">RC</a>
+      and <a href="https://php.net/releases">release</a> distributions of PHP</li>
   <li>Help finding and diagnosing failed tests, see
-      the <a href="http://qa.php.net/write-test.php">phpt documentation</a></li>
+      the <a href="https://qa.php.net/write-test.php">phpt documentation</a></li>
   <li>Filing and resolving bug reports
-      at <a href="http://bugs.php.net">bugs.php.net</a></li>
+      at <a href="https://bugs.php.net">bugs.php.net</a></li>
   <li>Help maintain and or translate documentation files
-      at <a href="http://edit.php.net">edit.php.net</a>. Check out our
-      <a href="http://doc.php.net/tutorial/">guide for contributors</a>.</li>
+      at <a href="https://edit.php.net">edit.php.net</a>. Check out our
+      <a href="https://doc.php.net/tutorial/">guide for contributors</a>.</li>
  </ol>
 
 <h3 class="content-header" id="php-src">Development of the PHP source</h3>
