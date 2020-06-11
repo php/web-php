@@ -888,6 +888,36 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
 
 <a name="PHP_7_3"></a>
 
+<section class="version" id="7.3.19"><!-- {{{ 7.3.19 -->
+<h3>Version 7.3.19</h3>
+<b><?php release_date('11-Jun-2020'); ?></b>
+<ul><li>Core:
+<ul>
+  <li><?php bugfix(79566); ?> (Private SHM is not private on Windows).</li>
+  <li><?php bugfix(79489); ?> (.user.ini does not inherit).</li>
+</ul></li>
+<li>GD:
+<ul>
+  <li><?php bugfix(79615); ?> (Wrong GIF header written in GD GIFEncode).</li>
+</ul></li>
+<li>MySQLnd:
+<ul>
+  <li><?php bugfix(79596); ?> (MySQL FLOAT truncates to int some locales).</li>
+</ul></li>
+<li>Opcache:
+<ul>
+  <li><?php bugfix(79535); ?> (PHP crashes with specific opcache.optimization_level).</li>
+  <li><?php bugfix(79588); ?> (Boolean opcache settings ignore on/off values).</li>
+</ul></li>
+<li>Standard:
+<ul>
+  <li><?php bugfix(79561); ?> (dns_get_record() fails with DNS_ALL).</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
+
+
 <section class="version" id="7.3.18"><!-- {{{ 7.3.18 -->
 <h3>Version 7.3.18</h3>
 <b><?php release_date('14-May-2020'); ?></b>
