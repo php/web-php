@@ -17,13 +17,13 @@
  */
 $RELEASES = (function() {
     /* PHP 7.4 Release */
-    $PHP_7_4_VERSION         = "7.4.6";
-    $PHP_7_4_DATE            = "14 May 2020";
-    $PHP_7_4_TAGS            = ['security']; // Set to ['security'] for security releases.
+    $PHP_7_4_VERSION         = "7.4.7";
+    $PHP_7_4_DATE            = "11 June 2020";
+    $PHP_7_4_TAGS            = []; // Set to ['security'] for security releases.
     $PHP_7_4_SHA256     = array(
-        "tar.gz"        => "2a37bab4e308c4e3867083137b7cce4a3f1d996ae231b383c1a83609cec3fed0",
-        "tar.bz2"       => "a6ed9475695d2056322a3f2c00fee61a122a7fce138a0e25694320c5dd1d2348",
-        "tar.xz"        => "d740322f84f63019622b9f369d64ea5ab676547d2bdcf12be77a5a4cffd06832",
+        "tar.gz"        => "a554a510190e726ebe7157fb00b4aceabdb50c679430510a3b93cbf5d7546e44",
+        "tar.bz2"       => "800e0d01f359c8ec41540925c0d4a24c34d5f21ef6addd6d82ff4a52be23d87a",
+        "tar.xz"        => "53558f8f24cd8ab6fa0ea252ca8198e2650160649681ce5230c1df1dc2b52faf",
     );
 
     /* PHP 7.3 Release */

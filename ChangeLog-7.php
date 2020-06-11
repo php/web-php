@@ -11,6 +11,38 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
 <a href="#PHP_7_1">7.1</a> | <a href="#PHP_7_0">7.0</a>
 
 <a name="PHP_7_4"></a>
+<section class="version" id="7.4.7"><!-- {{{ 7.4.7 -->
+<h3>Version 7.4.7</h3>
+<b><?php release_date('11-Jun-2020'); ?></b>
+<ul><li>Core:
+<ul>
+  <li><?php bugfix(79599); ?> (coredump in set_error_handler).</li>
+  <li><?php bugfix(79566); ?> (Private SHM is not private on Windows).</li>
+  <li><?php bugfix(79489); ?> (.user.ini does not inherit).</li>
+  <li><?php bugfix(79600); ?> (Regression in 7.4.6 when yielding an array based generator).</li>
+  <li><?php bugfix(79657); ?> ("yield from" hangs when invalid value encountered).</li>
+</ul></li>
+<li>FFI:
+<ul>
+  <li><?php bugfix(79571); ?> (FFI: var_dumping unions may segfault).</li>
+</ul></li>
+<li>GD:
+<ul>
+  <li><?php bugfix(79615); ?> (Wrong GIF header written in GD GIFEncode).</li>
+</ul></li>
+<li>Opcache:
+<ul>
+  <li><?php bugfix(79588); ?> (Boolean opcache settings ignore on/off values).</li>
+  <li><?php bugfix(79548); ?> (Preloading segfault with inherited method using static variable).</li>
+  <li><?php bugfix(79603); ?> (RTD collision with opcache).</li>
+</ul></li>
+<li>Standard:
+<ul>
+  <li><?php bugfix(79561); ?> (dns_get_record() fails with DNS_ALL).</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
 <section class="version" id="7.4.6"><!-- {{{ 7.4.6 -->
 <h3>Version 7.4.6</h3>
 <b><?php release_date('14-May-2020'); ?></b>
