@@ -1,0 +1,48 @@
+#!/usr/bin/env php
+<?php
+PHP_SAPI == 'cli' or die("Please run this script using the cli sapi");
+
+require(__DIR__ . '/../include/news_entry.inc');
+use phpweb\news\Entry;
+
+if (!file_exists(Entry::ARCHIVE_FILE_ABS)) {
+	fwrite(STDERR, "Can't find " . Entry::ARCHIVE_FILE_REL . ", are you sure you are in phpweb/?\n");
+	exit(1);
+}
+
+$opts = getopt('v:',['security']);
+if (!isset($opts['v'])) {
+	echo "Usage: {$_SERVER['argv'][0]} -v 8.0.8 [ --security ]\n";
+	exit(0);
+}
+$version = $opts['v'];
+if (!preg_match('/^(\d+)\.(\d+)\.\d+?$/', $version, $matches)) {
+	fwrite(STDERR, "Unable to parse version identifier\n");
+	exit(1);
+}
+$major = $matches[1];
+$branch = "{$major}.{$matches[2]}";
+$security = isset($opts['security']) ? 'security' : 'bug fix';
+
+// Create content.
+$template = <<<EOD
+<p>The PHP development team announces the immediate availability of PHP $version. This is a $security release.</p>
+
+<p>All PHP $branch users are encouraged to upgrade to this version.</p>
+
+<p>For source downloads of PHP $version please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
+Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
+The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-{$major}.php#{$version}">ChangeLog</a>.
+</p>
+EOD;
+
+$entry = (new Entry)
+	->setTitle("PHP $version Released!")
+	->setCategories(['releases','frontpage'])
+	->setContent($template);
+
+$entry->save()->updateArchiveXML();
+
+fwrite(STDOUT, "File saved.\nPlease git diff " . Entry::ARCHIVE_FILE_REL . " and sanity-check the changes before committing\n");
+fwrite(STDOUT, "NOTE: Remeber to git add " . Entry::ARCHIVE_ENTRIES_REL . $entry->getId() . ".xml !!\n");
+
