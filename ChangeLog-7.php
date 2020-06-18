@@ -30,6 +30,10 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
 <ul>
   <li><?php bugfix(79615); ?> (Wrong GIF header written in GD GIFEncode).</li>
 </ul></li>
+<li>MySQLnd:
+<ul>
+  <li><?php bugfix(79596); ?> (MySQL FLOAT truncates to int some locales).</li>
+</ul></li>
 <li>Opcache:
 <ul>
   <li><?php bugfix(79588); ?> (Boolean opcache settings ignore on/off values).</li>
