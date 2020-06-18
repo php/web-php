@@ -10,13 +10,17 @@ if (!file_exists(Entry::ARCHIVE_FILE_ABS)) {
 	exit(1);
 }
 
-$opts = getopt('v:',['security']);
+$opts = getopt('v:r',['security']);
 if (!isset($opts['v'])) {
-	echo "Usage: {$_SERVER['argv'][0]} -v 8.0.8 [ --security ]\n";
+	echo "Usage: {$_SERVER['argv'][0]} -v 8.0.8 [ -r ] [ --security ]\n";
+	echo "Create a standard stable-release news entry in archive/entries/\n\n";
+	echo "  -v x.y.z     Version of PHP being announced\n";
+	echo "  -r           Create a matching releases/x_y_z.php file\n";
+	echo "  --security   This is a security release (default: bug fix)\n";
 	exit(0);
 }
 $version = $opts['v'];
-if (!preg_match('/^(\d+)\.(\d+)\.\d+?$/', $version, $matches)) {
+if (!preg_match('/^(\d+)\.(\d+)\.\d+$/', $version, $matches)) {
 	fwrite(STDERR, "Unable to parse version identifier\n");
 	exit(1);
 }
@@ -36,13 +40,31 @@ The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-{$
 </p>
 EOD;
 
+// Mint the news XML entry.
 $entry = (new Entry)
 	->setTitle("PHP $version Released!")
 	->setCategories(['releases','frontpage'])
 	->setContent($template);
 
 $entry->save()->updateArchiveXML();
+$addedFiles = [Entry::ARCHIVE_ENTRIES_REL . $entry->getId() . '.xml'];
 
-fwrite(STDOUT, "File saved.\nPlease git diff " . Entry::ARCHIVE_FILE_REL . " and sanity-check the changes before committing\n");
-fwrite(STDOUT, "NOTE: Remeber to git add " . Entry::ARCHIVE_ENTRIES_REL . $entry->getId() . ".xml !!\n");
+// Mint the releases/x_y_z.php archive.
+const RELEASES_REL = 'releases/';
+const RELEASES_ABS = __DIR__ . '/../' . RELEASES_REL;
+if (isset($opts['r'])) {
+	$release = strtr($version, '.', '_') . '.php';
+	file_put_contents(RELEASES_ABS . $release, "<?php
+\$_SERVER['BASE_PAGE'] = 'releases/$version.php';
+include_once __DIR__ . '/../include/prepend.inc';
+site_header('PHP $version Release Announcement');
+?>
+$template
+<?php site_footer();");
+	$addedFiles[] = RELEASES_REL . $release;
+}
+
+echo "News entry created.\n";
+echo "Please sanity check changes to " . Entry::ARCHIVE_FILE_REL . " and add the newly created file(s):\n";
+foreach ($addedFiles as $file) { echo "  git add $file\n"; }
 
