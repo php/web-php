@@ -19,18 +19,18 @@ site_header("Thanks", array("current" => "community"));
 </li>
 
 <li>
- <a href="http://www.streamservice.nl">Stream Service</a>
+ <a href="https://sinnerg.nl">SinnerG</a>
  provides servers and bandwidth for svn.php.net, gtk.php.net, people.php.net
  and europe.rsync.php.net.
 </li>
 
 <li>
- <a href="http://www.directi.com/">Directi</a> provides
+ <a href="https://directi.com/">Directi</a> provides
  IP address to country lookup information.
 </li>
 
 <li>
- <a href="https://www.digitalocean.com/">DigitalOcean</a> provides
+ <a href="https://digitalocean.com/">DigitalOcean</a> provides
  VMs for a number of PHP services.
 </li>
 
@@ -40,32 +40,32 @@ site_header("Thanks", array("current" => "community"));
 </li>
 
 <li>
- <a href="http://www.rackspace.com/">Rackspace</a> provides
+ <a href="https://rackspace.com/">Rackspace</a> provides
  the server and bandwidth for various php.net services.
 </li>
 
 <li>
- <a href="http://www.servercentral.net/">Server Central</a> provides
+ <a href="https://www.servercentral.net/">Server Central</a> provides
  a box and connection which runs various services and sites for php.net
 </li>
 
 <li>
- <a href="http://www.spry.com/">Spry VPS Hosting</a> provides a server and
+ <a href="https://www.spry.com/">Spry VPS Hosting</a> provides a server and
  bandwidth for various php.net services.
 </li>
 
 <li>
- <a href="http://www.osuosl.org/">OSU Open Source Lab</a> provides a server and
+ <a href="https://www.osuosl.org/">OSU Open Source Lab</a> provides a server and
  bandwidth for various php.net services.
 </li>
 
 <li>
- <a href="http://www.nexcess.net/">NEXCESS.NET</a> provides a server and bandwidth
+ <a href="https://nexcess.net/">NEXCESS.NET</a> provides a server and bandwidth
  for various php.net services.
 </li>
 
 <li>
- <a href="http://www.eukhost.com/">EUKhost</a> provides a server and bandwidth
+ <a href="https://eukhost.com/">EUKhost</a> provides a server and bandwidth
  for various php.net services.
 </li>
 
@@ -75,16 +75,16 @@ site_header("Thanks", array("current" => "community"));
 </li>
 
 <li>
- <a href="http://www.redpill-linpro.com">Redpill Linpro</a> provides managed servers and bandwidth for various php.net services.
+ <a href="https://redpill-linpro.com">Redpill Linpro</a> provides managed servers and bandwidth for various php.net services.
 </li>
 
 <li>
- <a href="http://krystal.co.uk">Krystal.co.uk</a> provides a server and bandwidth
+ <a href="https://krystal.co.uk">Krystal.co.uk</a> provides a server and bandwidth
  for the ci.qa.php.net build and quality assurance infrastructure.
 </li>
 
 <li>
- <a href="http://servergrove.com/">ServerGrove</a> provides managed servers and bandwidth for various php.net services.
+ <a href="https://servergrove.com/">ServerGrove</a> provides managed servers and bandwidth for various php.net services.
 </li>
 
 <li>
@@ -110,19 +110,19 @@ site_header("Thanks", array("current" => "community"));
 </p>
 <ul>
 <li>
- <a href="http://www.yahoo.com/">Yahoo! Inc.</a> provided us with many many
+ <a href="https://yahoo.com/">Yahoo! Inc.</a> provided us with many many
  terabytes of bandwidth and hosting for www.php.net, and svn.php.net and git.php.net
  for many years.
 </li>
 
 <li>
- <a href="http://www.synacor.com">Synacor</a> provided us with many
+ <a href="https://synacor.com">Synacor</a> provided us with many
  terabytes of bandwidth and hosting for www.php.net and others for
  many years.
 </li>
 
 <li>
- <a href="http://www.vasoftware.com">VA Software Corp.</a> helped us
+ <a href="https://vasoftware.com">VA Software Corp.</a> helped us
  by donating a server and resources to enable us to build manuals
  and distribute our content via rsync.
 </li>
