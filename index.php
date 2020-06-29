@@ -45,22 +45,15 @@ mirror_setcookie("LAST_NEWS", $_SERVER["REQUEST_TIME"], 60*60*24*365);
 
 
 $content = "<div class='home-content'>";
-$releasenews = 0;
 $frontpage = array();
 foreach($NEWS_ENTRIES as $entry) {
-    $maybe = false;
     foreach($entry["category"] as $category) {
-        if ($category["term"] == "releases") {
-            if ($releasenews++ > 5) {
-                continue 2;
+        if ($category["term"] == "frontpage") {
+            $frontpage[] = $entry;
+            if (count($frontpage) >= 25) {
+                break 2;
             }
         }
-        if ($category["term"] == "frontpage") {
-            $maybe = $entry;
-        }
-    }
-    if ($maybe) {
-        $frontpage[] = $maybe;
     }
 }
 foreach($frontpage as $entry) {
