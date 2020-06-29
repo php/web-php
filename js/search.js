@@ -11,12 +11,13 @@
      * @constructor
      * @param {String} label The label to show the user.
      */
-    var Backend = function (label) {
+    let Backend = function (label) {
         this.label = label;
         this.elements = {};
     };
 
     /**
+  
      * Adds an item to the backend.
      *
      * @param {String} id     The item ID. It would help if this was unique.
@@ -38,7 +39,7 @@
      *
      * @return {Array}
      */
-    Backend.prototype.toTypeaheadArray = function () {
+    Backend.prototype.toTypeaheadArray = () => {
         var array = [];
 
         $.each(this.elements, function (_, element) {
@@ -112,7 +113,7 @@
          *
          * @return {Boolean}
          */
-        var canCache = function () {
+        var canCache = () => {
             try {
                 return ('localStorage' in window && window['localStorage'] !== null && "JSON" in window && window["JSON"] !== null);
             } catch (e) {
