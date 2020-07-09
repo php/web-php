@@ -2472,6 +2472,18 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
 
 <a name="PHP_7_2"></a>
 
+<section class="version" id="7.2.32"><!-- {{{ 7.2.32 -->
+<h3>Version 7.2.32</h3>
+<b><?php release_date('09-Jul-2020'); ?></b>
+<ul><li>Windows:
+<ul>
+  <li>Rebuild of official Windows binaries with patched libcurl. No PHP source changes.</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
+
+
 <section class="version" id="7.2.31"><!-- {{{ 7.2.31 -->
 <h3>Version 7.2.31</h3>
 <b><?php release_date('14-May-2020'); ?></b>
