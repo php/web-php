@@ -924,6 +924,48 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
 
 <a name="PHP_7_3"></a>
 
+<section class="version" id="7.3.20"><!-- {{{ 7.3.20 -->
+<h3>Version 7.3.20</h3>
+<b><?php release_date('09-Jul-2020'); ?></b>
+<ul><li>Core:
+<ul>
+  <li><?php bugfix(79650); ?> (php-win.exe 100% cpu lockup).</li>
+  <li><?php bugfix(79668); ?> (get_defined_functions(true) may miss functions).</li>
+  <li>Fixed possibly unsupported timercmp() usage.</li>
+</ul></li>
+<li>Exif:
+<ul>
+  <li><?php bugfix(79687); ?> (Sony picture - PHP Warning - Make, Model, MakerNotes).</li>
+</ul></li>
+<li>Filter:
+<ul>
+  <li><?php bugfix(73527); ?> (Invalid memory access in php_filter_strip).</li>
+</ul></li>
+<li>GD:
+<ul>
+  <li><?php bugfix(79676); ?> (imagescale adds black border with IMG_BICUBIC).</li>
+</ul></li>
+<li>OpenSSL:
+<ul>
+  <li><?php bugfix(62890); ?> (default_socket_timeout=-1 causes connection to timeout).</li>
+</ul></li>
+<li>PDO SQLite:
+<ul>
+  <li><?php bugfix(79664); ?> (PDOStatement::getColumnMeta fails on empty result set).</li>
+</ul></li>
+<li>SPL:
+<ul>
+  <li><?php bugfix(79710); ?> (Reproducible segfault in error_handler during GC involved an SplFileObject).</li>
+</ul></li>
+<li>Standard:
+<ul>
+  <li><?php bugfix(74267); ?> (segfault with streams and invalid data).</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
+
+
 <section class="version" id="7.3.19"><!-- {{{ 7.3.19 -->
 <h3>Version 7.3.19</h3>
 <b><?php release_date('11-Jun-2020'); ?></b>
