@@ -11,6 +11,62 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
 <a href="#PHP_7_1">7.1</a> | <a href="#PHP_7_0">7.0</a>
 
 <a name="PHP_7_4"></a>
+
+<section class="version" id="7.4.8"><!-- {{{ 7.4.8 -->
+<h3>Version 7.4.8</h3>
+<b><?php release_date('09-Jul-2020'); ?></b>
+<ul><li>Core:
+<ul>
+  <li><?php bugfix(79649); ?> (Altering disable_functions from module init corrupts memory).</li>
+  <li><?php bugfix(79595); ?> (zend_init_fpu() alters FPU precision).</li>
+  <li><?php bugfix(79650); ?> (php-win.exe 100% cpu lockup).</li>
+  <li><?php bugfix(79668); ?> (get_defined_functions(true) may miss functions).</li>
+  <li><?php bugfix(79657); ?> ("yield from" hangs when invalid value encountered).</li>
+  <li><?php bugfix(79683); ?> (Fake reflection scope affects __toString()).</li>
+  <li>Fixed possibly unsupported timercmp() usage.</li>
+</ul></li>
+<li>Exif:
+<ul>
+  <li><?php bugfix(79687); ?> (Sony picture - PHP Warning - Make, Model, MakerNotes).</li>
+</ul></li>
+<li>Fileinfo:
+<ul>
+  <li><?php bugfix(79681); ?> (mime_content_type/finfo returning incorrect mimetype).</li>
+</ul></li>
+<li>Filter:
+<ul>
+  <li><?php bugfix(73527); ?> (Invalid memory access in php_filter_strip).</li>
+</ul></li>
+<li>GD:
+<ul>
+  <li><?php bugfix(79676); ?> (imagescale adds black border with IMG_BICUBIC).</li>
+</ul></li>
+<li>OpenSSL:
+<ul>
+  <li><?php bugfix(62890); ?> (default_socket_timeout=-1 causes connection to timeout).</li>
+</ul></li>
+<li>PDO SQLite:
+<ul>
+  <li><?php bugfix(79664); ?> (PDOStatement::getColumnMeta fails on empty result set).</li>
+</ul></li>
+<li>phpdbg:
+<ul>
+  <li><?php bugfix(73926); ?> (phpdbg will not accept input on restart execution).</li>
+  <li><?php bugfix(73927); ?> (phpdbg fails with windows error prompt at "watch array").</li>
+  <li>Fixed several mostly Windows related phpdbg bugs.</li>
+</ul></li>
+<li>SPL:
+<ul>
+  <li><?php bugfix(79710); ?> (Reproducible segfault in error_handler during GC involved an SplFileObject).</li>
+</ul></li>
+<li>Standard:
+<ul>
+  <li><?php bugfix(74267); ?> (segfault with streams and invalid data).</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
+
 <section class="version" id="7.4.7"><!-- {{{ 7.4.7 -->
 <h3>Version 7.4.7</h3>
 <b><?php release_date('11-Jun-2020'); ?></b>

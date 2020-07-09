@@ -17,13 +17,13 @@
  */
 $RELEASES = (function() {
     /* PHP 7.4 Release */
-    $PHP_7_4_VERSION         = "7.4.7";
-    $PHP_7_4_DATE            = "11 June 2020";
-    $PHP_7_4_TAGS            = []; // Set to ['security'] for security releases.
+    $PHP_7_4_VERSION         = "7.4.8";
+    $PHP_7_4_DATE            = "09 Jul 2020";
+    $PHP_7_4_TAGS            = ['security']; // Set to ['security'] for security releases.
     $PHP_7_4_SHA256     = array(
-        "tar.gz"        => "a554a510190e726ebe7157fb00b4aceabdb50c679430510a3b93cbf5d7546e44",
-        "tar.bz2"       => "800e0d01f359c8ec41540925c0d4a24c34d5f21ef6addd6d82ff4a52be23d87a",
-        "tar.xz"        => "53558f8f24cd8ab6fa0ea252ca8198e2650160649681ce5230c1df1dc2b52faf",
+        "tar.gz"        => "649f6bcdb60dc38d5edd7f3a7b2905d15d88c1d13e40307e8972ede347cea6ba",
+        "tar.bz2"       => "6a48d3a605c003b088984ceb53be5df1e698b8b35ddacadd12fe50f49c0e8062",
+        "tar.xz"        => "642843890b732e8af01cb661e823ae01472af1402f211c83009c9b3abd073245",
     );
 
     /* PHP 7.3 Release */
@@ -38,7 +38,7 @@ $RELEASES = (function() {
 
     /* PHP 7.2 Release */
     $PHP_7_2_VERSION         = "7.2.32";
-    $PHP_7_2_DATE            = "9 July 2020";
+    $PHP_7_2_DATE            = "09 Jul 2020";
     $PHP_7_2_TAGS            = ['security']; // Set to ['security'] for security releases.
     $PHP_7_2_SHA256     = array(
         "tar.bz2"       => "715c0a4274ad17ce449cd0f16b8a7428936e3ba80002d0948a8699a6f75d98a7",
