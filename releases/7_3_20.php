@@ -3,6 +3,8 @@ $_SERVER['BASE_PAGE'] = 'releases/7_3_20.php';
 include_once __DIR__ . '/../include/prepend.inc';
 site_header('PHP 7.3.20 Release Announcement');
 ?>
+<h1>PHP 7.3.20 Release Announcement</h1>
+
 <p>The PHP development team announces the immediate availability of PHP 7.3.20. This is a security release impacting the
 <a href="https://windows.php.net/">official Windows builds</a> of PHP.</p>
 
