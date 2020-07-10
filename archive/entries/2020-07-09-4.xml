@@ -16,7 +16,7 @@ href="https://windows.php.net/">official Windows builds</a> of PHP.</p>
 
 <p>For windows users running an official build, this release contains a
 patched version of <a href="https://curl.haxx.se">libcurl</a> addressing
-<a href="https://curl.haxx.se/docs/CVE-2020-8169.html">CVE-2020-8159</a>.</p>
+<a href="https://curl.haxx.se/docs/CVE-2020-8169.html">CVE-2020-8169</a>.</p>
 
 <p>For all other consumers of PHP, this is a bug fix release.</p>
 
