@@ -5,12 +5,26 @@ $GPG_KEYS = array(
       Key fingerprint = D620 173D 6924 BA1C 2244  C7C4 1B6B 6676 22FE 5A12
 uid                  Kalle Sommer Nielsen (PHP) &lt;kalle@php.net&gt;
 */
+    "8.0" => <<< GPG
+pub   4096R/70D12172 2017-04-14 [expires: 2024-04-21]
+      Key fingerprint = 1729 F839 38DA 44E2 7BA0  F4D3 DBDB 3974 70D1 2172
+uid                  Sara Golemon &lt;pollita@php.net&gt;
+
+pub   rsa4096 2020-05-09 [SC] [expires: 2024-05-08]
+      BFDD D286 4282 4F81 18EF  7790 9B67 A5C1 2229 118F
+uid           [ultimate] Gabriel Caruso (Release Manager) &lt;carusogabriel@php.net&gt;
+sub   rsa4096 2020-05-09 [E] [expires: 2024-05-08]
+GPG
+,
+
     "7.4" => <<< GPG
-pub   rsa3072 2019-03-25 [SC] [expires: 2021-03-24]
-      A78F 717F 0793 F15F 6285  3392 3A6F 9E81 27D3 0399
-uid           [ultimate] Derick Rethans (Personal Key) &lt;derick@derickrethans.nl&gt;
-uid           [ultimate] Derick Rethans &lt;derick@php.net&gt;
-sub   rsa3072 2019-03-25 [E] [expires: 2021-03-24]
+sec   rsa4096 2019-06-11 [SC] [expires: 2029-06-08]
+      5A52880781F755608BF815FC910DEB46F53EA312
+uid           [ultimate] Derick Rethans &lt;gpg@derickrethans.nl&gt;
+uid           [ultimate] Derick Rethans &lt;derick@derickrethans.nl&gt;
+uid           [ultimate] Derick Rethans (GitHub) &lt;github@derickrethans.nl&gt;
+uid           [ultimate] Derick Rethans (PHP) &lt;derick@php.net&gt;
+ssb   rsa4096 2019-06-11 [E] [expires: 2029-06-08]
 
 pub   rsa4096 2019-05-29 [SC] [expires: 2021-05-28]
       4267 0A7F E4D0 441C 8E46  3234 9E4F DC07 4A4E F02D

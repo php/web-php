@@ -362,6 +362,17 @@ function output_lists_table($mailing_lists)
  archives.
 </p>
 
+<h2>Subscribe via Email</h2>
+
+<p>
+ If you experience trouble subscribing via the form above, you may also
+ subscribe by sending an email to the list server.
+ To subscribe to any mailing list, send an email to
+ <code><em>listname</em>-subscribe@lists.php.net</code>
+ (substituting the name of the list for <code><em>listname</em></code>
+ &mdash; for example, <code>php-general-subscribe@lists.php.net</code>).
+</p>
+
 <h2>Mailing list options</h2>
 
 <p>

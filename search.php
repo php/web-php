@@ -8,13 +8,6 @@ $_FORM = &$_GET;
 
 // ---------------------------------------------------------------------------
 
-// If PHP added some slashes to quotes, get rid of them
-if ($MQ) {
-    foreach ($_FORM as $name => $value) {
-        $_FORM[$name] = stripslashes($value);
-    }
-}
-
 // We received something to search for
 if (!empty($_FORM['pattern'])) {
 

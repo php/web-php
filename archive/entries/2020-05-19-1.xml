@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom" xmlns:default="http://php.net/ns/news">
+  <title>DPC2020 - Workshop day</title>
+  <id>https://www.php.net/archive/2020.php#2020-05-19-1</id>
+  <published>2020-05-19T13:40:53+02:00</published>
+  <updated>2020-05-19T13:40:53+02:00</updated>
+  <link href="https://www.php.net/conferences/index.php#id2020-05-19-1" rel="alternate" type="text/html"/>
+  <link href="https://www.phpconference.nl" rel="via" type="text/html"/>
+  <default:finalTeaserDate xmlns="http://php.net/ns/news">2020-06-25</default:finalTeaserDate>
+  <category term="conferences" label="Conference announcement"/>
+  <default:newsImage xmlns="http://php.net/ns/news" link="https://www.phpconference.nl" title="Logo dpc 2020">dpc_2020.png</default:newsImage>
+  <content type="xhtml">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+     <p>In addition to our online conference day Friday June 26, 2020, we are happy to also announce  a pre-conference workshop day on Thursday June 25, featuring 4 workshops from Matthias Noback, Arne Blankerts, Andreas Heigl and Ondrej Mirtes! These online workshops are in small groups and provide an opportunity to spend time with an expert, going in-depth on a specific topic.
+       Available virtual seats are limited so if you’re excited about joining us, buy your ticket and reserve your spot. To make sure this online format works for all attendees, you have to commit to some prerequisites during registration.</p>
+
+      <p><a href="https://www.phpconference.nl">https://www.phpconference.nl</a></p>
+    </div>
+  </content>
+</entry>

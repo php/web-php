@@ -93,13 +93,12 @@ if ($process) {
                    (isset($_SERVER['HTTP_VIA']) ? $_SERVER['HTTP_VIA'] : '');
 
         // Post the variables to the central user note script
-        // ($MQ is defined in prepend.inc)
         $result = posttohost(
             "http://master.php.net/entry/user-note.php",
             array(
-                'user'    => ($MQ ? stripslashes($user) : $user),
-                'note'    => ($MQ ? stripslashes($note) : $note),
-                'sect'    => ($MQ ? stripslashes($_POST['sect']) : $_POST['sect']),
+                'user'    => $user,
+                'note'    => $note,
+                'sect'    => $_POST['sect'],
                 'ip'      => $_SERVER['REMOTE_ADDR'],
                 'redirip' => $redirip
             )
@@ -145,7 +144,7 @@ if ($process) {
         // Print out preview of note
         echo '<p>This is what your entry will look like, roughly:</p>';
         echo '<div id="usernotes">';
-        manual_note_display(time(), ($MQ ? stripslashes($user) : $user), ($MQ ? stripslashes($note) : $note), FALSE);
+        manual_note_display(time(), $user, $note, FALSE);
         echo '</div><br><br>';
     }
 }

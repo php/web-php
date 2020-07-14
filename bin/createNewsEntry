@@ -1,160 +1,141 @@
 #!/usr/bin/env php
 <?php
 PHP_SAPI == 'cli' or die("Please run this script using the cli sapi");
-$BASE = "http://php.net";
 
-function ce(DOMDocument $d, $name, $value, array $attrs = array(), DOMNode $to = null) {
-	if ($value) {
-		$n = $d->createElement($name, $value);
-	} else {
-		$n = $d->createElement($name);
-	}
-	foreach($attrs as $k => $v) {
-		$n->setAttribute($k, $v);
-	}
-	if ($to) {
-		return $to->appendChild($n);
-	}
-	return $n;
-}
+require(__DIR__ . '/../include/news_entry.inc');
+use phpweb\news\Entry;
 
-$archivefile = "archive/archive.xml";
-file_exists($archivefile) or die("Can't find $archivefile, are you sure you are in phpweb/?\n");
-
-$filename = date("Y-m-d", $_SERVER["REQUEST_TIME"]);
-$count = 0;
-do {
-  ++$count;
-  $id        = $filename. "-" . $count;
-  $basename  = $id .".xml";
-  $file      = "archive/entries/" . $basename;
-  $xincluded = "entries/" . $basename;
-  fprintf(STDOUT, "Trying $file\n");
-} while (file_exists($file));
-
-$dom = new DOMDocument("1.0", "utf-8");
-$dom->formatOutput = true;
-$dom->preserveWhiteSpace = false;
-
-$item = $dom->createElementNs("http://www.w3.org/2005/Atom", "entry");
-
-do {
-	fwrite(STDOUT, "Please type in the title: ");
-	$title = rtrim(fgets(STDIN));
-} while(strlen($title)<3);
-
-ce($dom, "title", $title, array(), $item);
-
-$categories = array(
-	array("frontpage"   => "PHP.net frontpage news"),
-	array("releases"    => "New PHP release"),
-	array("conferences" => "Conference announcement"),
-	array("cfp"   => "Call for Papers"),
-);
-$confs = array(2, 3);
-
-$imageRestriction = array(
+$imageRestriction = [
 	'width' => 400,
 	'height' => 250
-);
+];
 
-do {
-	$catVerified = false;
+// Create an entry!
+if (!file_exists(Entry::ARCHIVE_FILE_ABS)) {
+	fwrite(STDERR, "Can't find " . Entry::ARCHIVE_FILE_REL . ", are you sure you are in phpweb/?\n");
+	exit(1);
+}
+
+if ($_SERVER['argc'] > 1) {
+	// getopt based non-interactive mode
+	$entry = parseOptions();
+} else {
+	// Classic interactive prompts
+	$entry = getEntry();
+}
+
+$entry->save()->updateArchiveXML();
+
+fwrite(STDOUT, "File saved.\nPlease git diff " . Entry::ARCHIVE_FILE_REL . " and sanity-check the changes before committing\n");
+fwrite(STDOUT, "NOTE: Remeber to git add " . Entry::ARCHIVE_ENTRIES_REL . $entry->getId() . ".xml !!\n");
+
+// Implementation functions
+
+function getEntry(): Entry {
+	$entry = new Entry;
+	$entry->setTitle(getTitle());
+	$entry->setCategories(selectCategories());
+	if ($entry->isConference()) {
+		$entry->setConfTime(getConfTime());
+	}
+
+	$image = getImage();
+	$entry->setImage($image['path'] ?? '', $image['title'] ?? '', $image['link'] ?? '');
+
+	$entry->setContent(getContent());
+
+	return $entry;
+}
+
+function getTitle(): string {
+	do {
+		fwrite(STDOUT, "Please type in the title: ");
+		$title = rtrim(fgets(STDIN));
+	} while(strlen($title)<3);
+
+	return $title;
+}
+
+function selectCategories(): array { for(;;) {
+	$ids = array_keys(Entry::CATEGORIES);
+
 	fwrite(STDOUT, "Categories:\n");
-	foreach($categories as $n => $category) {
-		fprintf(STDOUT, "\t%d: %-11s\t [%s]\n", $n, key($category), current($category));
+	foreach($ids as $n => $id) {
+		fprintf(STDOUT, "\t%d: %-11s\t [%s]\n", $n, Entry::CATEGORIES[$id], $id);
 	}
 	fwrite(STDOUT, "Please select appropriate categories, seperated with space: ");
 
-	$cat = explode(" ", rtrim(fgets(STDIN)));
-	$cat = array_intersect(array_keys(array_values($categories)), $cat);
+	// Filter to 0..n-1, then map to short names.
+	$cat = array_map(
+		function ($c) use ($ids) {
+			return $ids[$c];
+		},
+		array_filter(
+			explode(" ", rtrim(fgets(STDIN))),
+			function ($c) {
+				return is_numeric($c) && ($c >= 0) && ($c < count(Entry::CATEGORIES));
+			})
+	);
 
-	$intersect = array_intersect(array(2,3), $cat);
-	if ($cat && (count($intersect) < 2)) {
-		break;
-	}
-
-	if (count($intersect) == 2) {
+	// Special case, we don't allow items in both 'cfp' and 'conferences'.
+	if (count(array_intersect($cat, ['cfp', 'conferences'])) >= 2) {
 		fwrite(STDERR, "Pick either a CfP OR a conference\n");
-	} else {
+		continue;
+	}
+
+	if (count($cat) == 0) {
 		fwrite(STDERR, "You have to pick at least one category\n");
+		continue;
 	}
-} while(1);
 
+	return $cat;
+}}
 
-$via = $archive = $BASE . "/archive/" .date("Y", $_SERVER["REQUEST_TIME"]).".php#id" .$id;
+function getConfTime(): int { for(;;) {
+	fwrite(STDOUT, "When does the conference start/cfp end? (strtotime() compatible syntax): ");
 
-ce($dom, "id", $archive, array(), $item);
-ce($dom, "published", date(DATE_ATOM), array(), $item);
-ce($dom, "updated", date(DATE_ATOM), array(), $item);
-
-
-$conf = false;
-foreach($cat as $keys) {
-	if (in_array($keys, $confs)) {
-		$conf = true;
-		break;
-	}
-}
-if ($conf) {
-	/* /conferences news item */
-	$href = $BASE . "/conferences/index.php";
-
-	do {
-		fwrite(STDOUT, "When does the conference start/cfp end? (strtotime() compatible syntax): ");
-		$t = strtotime(fgets(STDIN));
-		if ($t) {
-			break;
-		}
-
+	$t = strtotime(fgets(STDIN));
+	if (!$t) {
 		fwrite(STDERR, "I told you I would run it through strtotime()!\n");
-	} while(1);
-	$item->appendChild($dom->createElementNs("http://php.net/ns/news", "finalTeaserDate", date("Y-m-d", $t)));
-} else {
-	$href = $BASE . "/index.php";
-}
-
-foreach($cat as $n) {
-	if (isset($categories[$n])) {
-		ce($dom, "category", null, array("term" => key($categories[$n]), "label" => current($categories[$n])), $item);
+		continue;
 	}
-}
 
-ce($dom, "link", null, array("href" => "$href#id$id", "rel"  => "alternate", "type" => "text/html"), $item);
+	return $t;
+}}
 
-fwrite(STDOUT, "Will a picture be accompanying this entry? ");
-$yn = fgets(STDIN);
+function getImage(): ?array {
+	global $imageRestriction;
+
+	fwrite(STDOUT, "Will a picture be accompanying this entry? ");
+	$yn = fgets(STDIN);
 
 
-if (strtoupper($yn[0]) == "Y") {
-	$isValidImage = false;
+	if (strtoupper($yn[0]) !== "Y") {
+		return NULL;
+	}
 
-	do {
+	for ($isValidImage = false; !$isValidImage;) {
 		fwrite(STDOUT, "Enter the image name (note: the image has to exist in './images/news'): ");
 		$path = basename(rtrim(fgets(STDIN)));
 
-		if (true === file_exists("./images/news/$path")) {
+		if (true === file_exists(Entry::PHPWEB . "/images/news/$path")) {
 			$isValidImage = true;
 
-			if (true === extension_loaded('gd')) {
-				$imageSizes = getimagesize("./images/news/$path");
+			if (extension_loaded('gd')) {
+				break;
+			}
 
-				if (
-					$imageSizes[0] > $imageRestriction['width'] ||
-					$imageSizes[1] > $imageRestriction['height']
-				) {
-					fwrite(STDOUT, "Provided image has a higher size than recommended (" . implode(' by ', $imageRestriction) . "). Continue? ");
-					$ynImg = fgets(STDIN);
-					if (strtoupper($ynImg[0]) == "Y") {
-						break;
-					} else {
-						$isValidImage = false;
-					}
+			$imageSizes = getimagesize("./images/news/$path");
+
+			if (($imageSizes[0] > $imageRestriction['width']) || ($imageSizes[1] > $imageRestriction['height'])) {
+				fwrite(STDOUT, "Provided image has a higher size than recommended (" . implode(' by ', $imageRestriction) . "). Continue? ");
+				$ynImg = fgets(STDIN);
+				if (strtoupper($ynImg[0]) !== "Y") {
+					$isValidImage = false;
 				}
 			}
 		}
-
-	} while($isValidImage !== true);
+	}
 
 	fwrite(STDOUT, "Image title: ");
 	$title = rtrim(fgets(STDIN));
@@ -162,48 +143,113 @@ if (strtoupper($yn[0]) == "Y") {
 	fwrite(STDOUT, "Link (when clicked on the image): ");
 	$via = rtrim(fgets(STDIN));
 
-	$image = $item->appendChild($dom->createElementNs("http://php.net/ns/news", "newsImage", $path));
-	$image->setAttribute("link", $via);
-	$image->setAttribute("title", $title);
-}
-ce($dom, "link", null, array("href" => $via, "rel"  => "via", "type" => "text/html"), $item);
-
-$content = ce($dom, "content", null, array(), $item);
-
-fwrite(STDOUT, "And at last; paste/write your news item here.\nTo end it, hit <enter>.<enter>\n");
-$news = "\n";
-while(($line = rtrim(fgets(STDIN))) != ".") {
-	$news .= "     $line\n";
+	return [
+		'title' => $title,
+		'link' => $via,
+		'path' => $path,
+	];
 }
 
-$tdoc = new DOMDocument("1.0", "utf-8");
-$tdoc->formatOutput = true;
-if ($tdoc->loadXML('<div>'.$news.'    </div>')) {
-	$content->setAttribute("type", "xhtml");
-	$div = $content->appendChild($dom->createElement("div"));
-	$div->setAttribute("xmlns", "http://www.w3.org/1999/xhtml");
-	foreach($tdoc->firstChild->childNodes as $node) {
-		$div->appendChild($dom->importNode($node, true));
+function getContent(): string {
+	fwrite(STDOUT, "And at last; paste/write your news item here.\nTo end it, hit <enter>.<enter>\n");
+	$news = "\n";
+	while(($line = rtrim(fgets(STDIN))) != ".") {
+		$news .= "     $line\n";
 	}
-} else {
-	fwrite(STDERR, "There is something wrong with your xhtml, falling back to html");
-	$content->setAttribute("type", "html");
-	$content->nodeValue = $news;
+
+	return $news;
 }
 
-$dom->appendChild($item);
-$dom->save($file);
-$arch = new DOMDocument("1.0", "utf-8");
-$arch->formatOutput = true;
-$arch->preserveWhiteSpace = false;
-$arch->load("archive/archive.xml");
+function updateArchiveXML(string $id, string $archiveFile): void {
+	$arch = new DOMDocument("1.0", "utf-8");
+	$arch->formatOutput = true;
+	$arch->preserveWhiteSpace = false;
+	$arch->load($archiveFile);
 
-$first = $arch->createElementNs("http://www.w3.org/2001/XInclude", "xi:include");
-$first->setAttribute("href", $xincluded);
+	$first = $arch->createElementNs("http://www.w3.org/2001/XInclude", "xi:include");
+	$first->setAttribute("href", "entries/{$id}.xml");
 
-$second = $arch->getElementsByTagNameNs("http://www.w3.org/2001/XInclude", "include")->item(0);
-$arch->documentElement->insertBefore($first, $second);
-$arch->save("archive/archive.xml");
+	$second = $arch->getElementsByTagNameNs("http://www.w3.org/2001/XInclude", "include")->item(0);
+	$arch->documentElement->insertBefore($first, $second);
+	$arch->save($archiveFile);
+}
 
-fwrite(STDOUT, "File saved.\nPlease git diff $archivefile sanity-check the changes before committing\n");
-fwrite(STDOUT, "NOTE: Remeber to git add $file && git commit $file && git push!!\n");
+function parseOptions(): Entry {
+	$opts = getopt('h', [
+		'help',
+		'title:',
+		'category:',
+		'conf-time:',
+		'image-path:',
+		'image-title:',
+		'image-link:',
+		'content:',
+		'content-file:',
+	]);
+	if (isset($opts['h']) || isset($opts['help'])) {
+		echo "Usage: {$_SERVER['argv'][0]} --title 'Name of event' --category cfp ( --content 'text' | --content-file '-') [...options]\n\n";
+		echo "  --title 'value'        The title of the entry (required)\n";
+		echo "  --category 'value'     'frontpage', 'release', 'cfp', or 'conference' (required; may repeat)\n";
+		echo "  --conf-time 'value'    When the event will be occurign (cfp and conference categories only)\n";
+		echo "  --content 'value'      Text content for the entry, may include XHTML\n";
+		echo "  --content-file 'value' Name of file to load content from, may not be specified with --content\n";
+		echo "  --image-path 'value'   Basename of image file in " . Entry::IMAGE_PATH_REL . "\n";
+		echo "  --image-title 'value'  Title for the image provided\n";
+		echo "  --image-link 'value'   URI to direct to when clicking the image\n";
+		exit(0);
+	}
+
+	$entry = new Entry;
+	if (!isset($opts['title'])) {
+		fwrite(STDERR, "--title required\n");
+		exit(1);
+	}
+	$entry->setTitle($opts['title']);
+
+	if (empty($opts['category'])) {
+		fwrite(STDERR, "--category required\n");
+		exit(1);
+	}
+	if (is_string($opts['category'])) {
+		$opts['category'] = [ $opts['category'] ];
+	}
+	foreach ($opts['category'] as $cat) {
+		$entry->addCategory($cat);
+	}
+	if ($entry->isConference()) {
+		if (empty($opts['conf-time'])) {
+			fwrite(STDERR, "--conf-time required for conferences\n");
+			exit(1);
+		}
+		$t = strtotime($opts['conf-time']);
+		if (!is_int($t)) {
+			fwrite(STDERR, "Error parsing --conf-time\n");
+			exit(1);
+		}
+		$entry->setConfTime($t);
+	} elseif (!empty($opts['conf-time'])) {
+		fwrite(STDERR, "--conf-time not allowed with non-conference events\n");
+		exit(1);
+	}
+
+	$entry->setImage($opts['image-path'] ?? '', $opts['image-title'] ?? '', $opts['image-link'] ?? '');
+
+	if (isset($opts['content'])) {
+		if (isset($opts['content-file'])) {
+			fwrite(STDERR, "--content and --content-file may not be specified together\n");
+			exit(1);
+		}
+		$entry->setContent($opts['content']);
+	} elseif (isset($opts['content-file'])) {
+		if ($opts['content-file'] === '-') {
+			$entry->setContent(stream_get_contents(STDIN));
+		} else {
+			$entry->setContent(file_get_contents($opts['content-file']));
+		}
+	} else {
+		fwrite(STDERR, "--content or --content-file required\n");
+		exit(1);
+	}
+
+	return $entry;
+}

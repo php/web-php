@@ -29,13 +29,17 @@ $panels = '<p class="prepend"><a href="https://wiki.php.net/conferences">Want to
 
 
 foreach($frontpage as $entry) {
-    $link = substr($entry["id"], 15); // Strip http://php.net/
+    $link = preg_replace('~^(http://php.net/|https://www.php.net/)~', '', $entry["id"]);
     $id   = parse_url($entry["id"], PHP_URL_FRAGMENT);
     $date = date_format(date_create($entry["updated"]), 'Y-m-d');
     $content .= '<div class="newsentry">';
     $content .= '<h3 class="newstitle title"><a href="'. $MYSITE.$link .'" name="' . $id . '">' . $entry["title"] . '</a></h3>';
     $content .= '<div class="newsimage">';
-    $content .= sprintf('<a href="%s"><img src="/images/news/%s"></a>', $entry["newsImage"]["link"], $entry["newsImage"]["content"]);
+
+    if (isset($entry["newsImage"])) {
+        $content .= sprintf('<a href="%s"><img src="/images/news/%s"></a>', $entry["newsImage"]["link"], $entry["newsImage"]["content"]);
+    }
+
     $content .= '</div>';
     $content .= '<div class="newscontent">';
     $content .= $entry["content"];

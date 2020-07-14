@@ -17,12 +17,7 @@ operation of this website, such as
  - User contributed notes for manual pages
  - A "router" for the builtin PHP webserver
 
-
-## Setting up an official mirror
-
-To install a full official mirror please see [the mirroring guidelines](http://php.net/mirroring).
-
 ## Code requirements
 
-Code must function on a vanilla PHP 5.3 installation as some php.net mirrors still run PHP 5.3.
+Code must function on a vanilla PHP 7.2 installation. 
 Please keep this in mind before filing a pull request.

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom" xmlns:default="http://php.net/ns/news">
+  <title>PHPBenelux Conference 2020</title>
+  <id>https://www.php.net/archive/2019.php#2019-12-18-4</id>
+  <published>2019-12-18T13:36:24+00:00</published>
+  <updated>2019-12-18T13:36:24+00:00</updated>
+  <link href="https://www.php.net/conferences/index.php#id2019-12-18-4" rel="alternate" type="text/html"/>
+  <link href="https://conference.phpbenelux.eu/?ref=php_net" rel="via" type="text/html"/>
+  <default:finalTeaserDate xmlns="http://php.net/ns/news">2020-01-24</default:finalTeaserDate>
+  <category term="conferences" label="Conference announcement"/>
+  <default:newsImage xmlns="http://php.net/ns/news" link="https://conference.phpbenelux.eu/?ref=php_net" title="PHPBenelux Conference 2020">phpbenelux_conference_2020.png</default:newsImage>
+  <content type="xhtml">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+      <p>PHPBenelux Conference is the annual event for the PHP community from Belgium, the Netherlands, Luxembourg and beyond where great content is delivered by experts from all parts of the world and knowledge shared during our amazing socials.</p>
+     
+      <p>Make sure you join us on January 24 and 25, 2020 for our 11th edition of the conference. With a stellar line-up of speakers we bring you amazing knowledge in our legendary venue in Antwerp, Belgium. Get <a href="https://shop.phpbenelux.eu" title="PHPBenelux Ticket Shop">your tickets</a> today!</p>
+     
+      <p>Looking forward seeing you all there!</p>
+     
+    </div>
+  </content>
+</entry>

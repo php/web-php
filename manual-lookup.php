@@ -21,10 +21,6 @@ if(!empty($_GET['scope']) && is_string($_GET['scope'])) {
 
 // Prepare data for search
 if ($function) {
-    if ($MQ) {
-        $function = stripslashes($function);
-    }
-
     $function = strtolower($function);
 
     // Try to find appropriate manual page

@@ -1,6 +1,7 @@
 <?php // -*- C++ -*-
 // Compress all pages, if ext/zlib is available on the mirror
-ini_set("zlib.output_compression", 1);
+// XXX Deactivated by sas, causes errors towards delivery machines
+// ini_set("zlib.output_compression", 1);
 
 // See http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.9
 // for cache control header descriptions (used in many places on the site).
@@ -65,12 +66,6 @@ unset($LAST_UPDATED);
 
 // Load the My PHP.net settings before any includes
 myphpnet_load();
-
-// TODO: Remove MQ dependencies from phpweb
-$MQ = get_magic_quotes_gpc();
-if (get_magic_quotes_runtime()) {
-    @set_magic_quotes_runtime(0);
-}
 
 // Site details (mirror site information)
 include __DIR__ . '/site.inc';
