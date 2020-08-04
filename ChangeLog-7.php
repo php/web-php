@@ -17,11 +17,9 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
 <b><?php release_date('09-Jul-2020'); ?></b>
 <ul><li>Core:
 <ul>
-  <li><?php bugfix(79649); ?> (Altering disable_functions from module init corrupts memory).</li>
   <li><?php bugfix(79595); ?> (zend_init_fpu() alters FPU precision).</li>
   <li><?php bugfix(79650); ?> (php-win.exe 100% cpu lockup).</li>
   <li><?php bugfix(79668); ?> (get_defined_functions(true) may miss functions).</li>
-  <li><?php bugfix(79657); ?> ("yield from" hangs when invalid value encountered).</li>
   <li><?php bugfix(79683); ?> (Fake reflection scope affects __toString()).</li>
   <li>Fixed possibly unsupported timercmp() usage.</li>
 </ul></li>
