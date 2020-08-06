@@ -2526,6 +2526,20 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
 
 <a name="PHP_7_2"></a>
 
+<section class="version" id="7.2.33"><!-- {{{ 7.2.33 -->
+<h3>Version 7.2.33</h3>
+<b><?php release_date('06-Aug-2020'); ?></b>
+<ul><li>Core:
+<ul>
+  <li><?php bugfix(79877); ?> (getimagesize function silently truncates after a null byte) (cmb)</li>
+</ul></li>
+<li>Phar:
+<ul>
+  <li><?php bugfix(79797); ?> (Use of freed hash key in the phar_parse_zipfile function). (CVE-2020-7068)</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
 <section class="version" id="7.2.32"><!-- {{{ 7.2.32 -->
 <h3>Version 7.2.32</h3>
 <b><?php release_date('09-Jul-2020'); ?></b>
