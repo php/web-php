@@ -978,6 +978,55 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
 
 <a name="PHP_7_3"></a>
 
+<section class="version" id="7.3.21"><!-- {{{ 7.3.21 -->
+<h3>Version 7.3.21</h3>
+<b><?php release_date('06-Aug-2020'); ?></b>
+<ul><li>Apache:
+<ul>
+  <li><?php bugfix(79030); ?> (Upgrade apache2handler's php_apache_sapi_get_request_time to return usec).</li>
+</ul></li>
+<li>Core:
+<ul>
+  <li><?php bugfix(79877); ?> (getimagesize function silently truncates after a null byte).</li>
+  <li><?php bugfix(79778); ?> (Assertion failure if dumping closure with unresolved static variable).</li>
+  <li><?php bugfix(79792); ?> (HT iterators not removed if empty array is destroyed).</li>
+</ul></li>
+<li>COM:
+<ul>
+  <li><?php bugfix(63208); ?> (BSTR to PHP string conversion not binary safe).</li>
+  <li><?php bugfix(63527); ?> (DCOM does not work with Username, Password parameter).</li>
+</ul></li>
+<li>Curl:
+<ul>
+  <li><?php bugfix(79741); ?> (curl_setopt CURLOPT_POSTFIELDS asserts on object with declared properties).</li>
+</ul></li>
+<li>Fileinfo:
+<ul>
+  <li><?php bugfix(79756); ?> (finfo_file crash (FILEINFO_MIME)).</li>
+</ul></li>
+<li>FTP:
+<ul>
+  <li><?php bugfix(55857); ?> (ftp_size on large files).</li>
+</ul></li>
+<li>Mbstring:
+<ul>
+  <li><?php bugfix(79787); ?> (mb_strimwidth does not trim string).</li>
+</ul></li>
+<li>Phar:
+<ul>
+  <li><?php bugfix(79797); ?> (Use of freed hash key in the phar_parse_zipfile function). (CVE-2020-7068)</li>
+</ul></li>
+<li>Standard:
+<ul>
+  <li><?php bugfix(70362); ?> (Can't copy() large 'data://' with open_basedir).</li>
+  <li><?php bugfix(79817); ?> (str_replace() does not handle INDIRECT elements).</li>
+  <li><?php bugfix(78008); ?> (dns_check_record() always return true on Alpine).</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
+
+
 <section class="version" id="7.3.20"><!-- {{{ 7.3.20 -->
 <h3>Version 7.3.20</h3>
 <b><?php release_date('09-Jul-2020'); ?></b>
