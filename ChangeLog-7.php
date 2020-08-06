@@ -12,6 +12,64 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
 
 <a name="PHP_7_4"></a>
 
+<section class="version" id="7.4.9"><!-- {{{ 7.4.9 -->
+<h3>Version 7.4.9</h3>
+<b><?php release_date('06-Aug-2020'); ?></b>
+<ul><li>Apache:
+<ul>
+  <li><?php bugfix(79030); ?> (Upgrade apache2handler's php_apache_sapi_get_request_time to return usec).</li>
+</ul></li>
+<li>COM:
+<ul>
+  <li><?php bugfix(63208); ?> (BSTR to PHP string conversion not binary safe).</li>
+  <li><?php bugfix(63527); ?> (DCOM does not work with Username, Password parameter).</li>
+</ul></li>
+<li>Core:
+<ul>
+  <li><?php bugfix(79740); ?> (serialize() and unserialize() methods can not be called statically).</li>
+  <li><?php bugfix(79783); ?> (Segfault in php_str_replace_common).</li>
+  <li><?php bugfix(79778); ?> (Assertion failure if dumping closure with unresolved static variable).</li>
+  <li><?php bugfix(79779); ?> (Assertion failure when assigning property of string offset by reference).</li>
+  <li><?php bugfix(79792); ?> (HT iterators not removed if empty array is destroyed).</li>
+  <li><?php bugfix(78598); ?> (Changing array during undef index RW error segfaults).</li>
+  <li><?php bugfix(79784); ?> (Use after free if changing array during undef var during array write fetch).</li>
+  <li><?php bugfix(79793); ?> (Use after free if string used in undefined index warning is changed).</li>
+  <li><?php bugfix(79862); ?> (Public non-static property in child should take priority over private static).</li>
+  <li><?php bugfix(79877); ?> (getimagesize function silently truncates after a null byte) (cmb)</li>
+</ul></li>
+<li>Fileinfo:
+<ul>
+  <li><?php bugfix(79756); ?> (finfo_file crash (FILEINFO_MIME)).</li>
+</ul></li>
+<li>FTP:
+<ul>
+  <li><?php bugfix(55857); ?> (ftp_size on large files).</li>
+</ul></li>
+<li>Mbstring:
+<ul>
+  <li><?php bugfix(79787); ?> (mb_strimwidth does not trim string).</li>
+</ul></li>
+<li>Phar:
+<ul>
+  <li><?php bugfix(79797); ?> (Use of freed hash key in the phar_parse_zipfile function). (CVE-2020-7068)</li>
+</ul></li>
+<li>Reflection:
+<ul>
+  <li><?php bugfix(79487); ?> (::getStaticProperties() ignores property modifications).</li>
+  <li><?php bugfix(69804); ?> (::getStaticPropertyValue() throws on protected props).</li>
+  <li><?php bugfix(79820); ?> (Use after free when type duplicated into ReflectionProperty gets resolved).</li>
+</ul></li>
+<li>Standard:
+<ul>
+  <li><?php bugfix(70362); ?> (Can't copy() large 'data://' with open_basedir).</li>
+  <li><?php bugfix(78008); ?> (dns_check_record() always return true on Alpine).</li>
+  <li><?php bugfix(79839); ?> (array_walk() does not respect property types).</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
+
+
 <section class="version" id="7.4.8"><!-- {{{ 7.4.8 -->
 <h3>Version 7.4.8</h3>
 <b><?php release_date('09-Jul-2020'); ?></b>

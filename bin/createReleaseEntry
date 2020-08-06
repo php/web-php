@@ -60,11 +60,12 @@ include_once __DIR__ . '/../include/prepend.inc';
 site_header('PHP $version Release Announcement');
 ?>
 $template
-<?php site_footer();");
+<?php site_footer();
+");
 	$addedFiles[] = RELEASES_REL . $release;
 }
 
 echo "News entry created.\n";
-echo "Please sanity check changes to " . Entry::ARCHIVE_FILE_REL . " and add the newly created file(s):\n";
-foreach ($addedFiles as $file) { echo "  git add $file\n"; }
-
+echo "Please sanity check changes to " . Entry::ARCHIVE_FILE_REL . " and add the newly created file(s):\ngit add";
+foreach ($addedFiles as $file) { echo " $file"; }
+echo "\n";
