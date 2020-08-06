@@ -10,7 +10,7 @@
   <content type="xhtml">
     <div xmlns="http://www.w3.org/1999/xhtml">
       <p>
-        The PHP team is pleased to announce the second testing release of PHP 8.0.0, Alpha 3.
+        The PHP team is pleased to announce the third testing release of PHP 8.0.0, Alpha 3.
         This continues the PHP 8.0 release cycle, the rough outline of which is specified in the
         <a href="https://wiki.php.net/todo/php80">PHP Wiki</a>.
       </p>
