@@ -318,6 +318,8 @@ $uri_aliases = array (
     "**"           => "language.operators.arithmetic",
     "..."          => "functions.arguments",
     "splat"        => "functions.arguments",
+    "arrow"        => "functions.arrow",
+    "fn"           => "functions.arrow",
 
     "dowhile"      => "control-structures.do.while",
 
