@@ -1528,6 +1528,11 @@ div.soft-deprecation-notice blockquote.sidebar {
   body {
     margin:3.25rem 0 0;
   }
+  /* add a top-margin to all elements which get referenced by anchor-urls, so they are not covered by the fixed header */
+  [id] {
+    scroll-margin-top: 3.25rem;
+  }
+
   #breadcrumbs {
     display:block;
   }
