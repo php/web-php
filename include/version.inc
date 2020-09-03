@@ -17,7 +17,7 @@
  */
 $RELEASES = (function() {
     /* PHP 7.4 Release */
-    $PHP_7_4_VERSION         = "7.4.9";
+    $PHP_7_4_VERSION         = "7.4.10";
     $PHP_7_4_DATE            = "03 Sep 2020";
     $PHP_7_4_TAGS            = []; // Set to ['security'] for security releases.
     $PHP_7_4_SHA256     = array(
