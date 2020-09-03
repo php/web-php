@@ -12,6 +12,63 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
 
 <a name="PHP_7_4"></a>
 
+<section class="version" id="7.4.10"><!-- {{{ 7.4.10 -->
+<h3>Version 7.4.10</h3>
+<b><?php release_date('03-Sep-2020'); ?></b>
+<ul><li>Core:
+<ul>
+  <li><?php bugfix(79884); ?> (PHP_CONFIG_FILE_PATH is meaningless).</li>
+  <li><?php bugfix(77932); ?> (File extensions are case-sensitive).</li>
+  <li><?php bugfix(79806); ?> (realpath() erroneously resolves link to link).</li>
+  <li><?php bugfix(79895); ?> (PHP_CHECK_GCC_ARG does not allow flags with equal sign).</li>
+  <li><?php bugfix(79919); ?> (Stack use-after-scope in define()).</li>
+  <li><?php bugfix(79934); ?> (CRLF-only line in heredoc causes parsing error).</li>
+  <li><?php bugfix(79947); ?> (Memory leak on invalid offset type in compound assignment).</li>
+</ul></li>
+<li>COM:
+<ul>
+  <li><?php bugfix(48585); ?> (com_load_typelib holds reference, fails on second call).</li>
+</ul></li>
+<li>Exif:
+<ul>
+  <li><?php bugfix(75785); ?> (Many errors from exif_read_data).</li>
+</ul></li>
+<li>Gettext:
+<ul>
+  <li><?php bugfix(70574); ?> (Tests fail due to relying on Linux fallback behavior for gettext()).</li>
+</ul></li>
+<li>LDAP:
+<ul>
+  <li>Fixed memory leaks.</li>
+</ul></li>
+<li>OPcache:
+<ul>
+  <li><?php bugfix(73060); ?> (php failed with error after temp folder cleaned up).</li>
+  <li><?php bugfix(79917); ?> (File cache segfault with a static variable in inherited method).</li>
+</ul></li>
+<li>PDO:
+<ul>
+  <li><?php bugfix(64705); ?> (errorInfo property of PDOException is null when PDO::__construct() fails).</li>
+</ul></li>
+<li>Session:
+<ul>
+  <li><?php bugfix(79724); ?> (Return type does not match in ext/session/mod_mm.c).</li>
+</ul></li>
+<li>Standard:
+<ul>
+  <li><?php bugfix(79930); ?> (array_merge_recursive() crashes when called with array with single reference).</li>
+  <li><?php bugfix(79944); ?> (getmxrr always returns true on Alpine linux).</li>
+  <li><?php bugfix(79951); ?> (Memory leak in str_replace of empty string).</li>
+</ul></li>
+<li>XML:
+<ul>
+  <li><?php bugfix(79922); ?> (Crash after multiple calls to xml_parser_free()).</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
+
+
 <section class="version" id="7.4.9"><!-- {{{ 7.4.9 -->
 <h3>Version 7.4.9</h3>
 <b><?php release_date('06-Aug-2020'); ?></b>
