@@ -17,6 +17,9 @@ operation of this website, such as
  - User contributed notes for manual pages
  - A "router" for the builtin PHP webserver
 
+How to set up a full local mirror is described in our Wiki:
+https://wiki.php.net/web/mirror
+
 ## Code requirements
 
 Code must function on a vanilla PHP 7.2 installation. 
