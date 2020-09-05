@@ -67,10 +67,11 @@ foreach ($ACTIVE_ONLINE_LANGUAGES as $langcode => $langname) {
 
 <div>
  <p>
-  Documentation for PHP 4 has been removed from the
-  manual, but there is archived version still available. For
+  Documentation for PHP 4 and PHP 5 has been removed from the
+  manual, but there are still archived versions still. For
   more information, please read <a href="/manual/php4.php">
-  Documentation for PHP 4</a>.
+  Documentation for PHP 4</a> and <a href="manual/php5.php">
+  Documentation for 5</a>, respectively.
  </p>
 </div>
 
