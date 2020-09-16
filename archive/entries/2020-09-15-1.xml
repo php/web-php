@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom" xmlns:default="http://php.net/ns/news">
+  <title>PHP Conference Japan 2020 CFP Started</title>
+  <id>https://www.php.net/archive/2020.php#2020-09-15-1</id>
+  <published>2020-09-15T15:24:57+00:00</published>
+  <updated>2020-09-15T15:24:57+00:00</updated>
+  <link href="https://www.php.net/conferences/index.php#id2020-09-15-1" rel="alternate" type="text/html"/>
+  <link href="http://phpcon.php.gr.jp/2020/" rel="via" type="text/html"/>
+  <default:finalTeaserDate xmlns="http://php.net/ns/news">2020-10-05</default:finalTeaserDate>
+  <category term="cfp" label="Call for Papers"/>
+  <default:newsImage xmlns="http://php.net/ns/news" link="http://phpcon.php.gr.jp/2020/" title="PHP Conference Japan 2020">phpconfjapan2020.png</default:newsImage>
+  <content type="xhtml">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+          <p><a href="http://phpcon.php.gr.jp/2020/" target="_blank">PHP Conference Japan 2020</a></p>
+          <p>Conference Date : 2020/12/12 10:00-20:00 JST. at Online</p>
+          <p>CFP Deadline : 2020/10/05 23:59:59 JST</p>
+          <p>We will announce you when your proposal is approved by mid ~ late October.</p>
+          <p><a href="https://fortee.jp/phpcon-2020/speaker/proposal/cfp" target="_blank">Submit your papers!!</a><br/>Unfortunately, this CfP system does not support English UI. 😢
+     Please use browser translation feature to submit your proposal.
+     Sorry for the inconvenience.</p>
+    </div>
+  </content>
+</entry>
