@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom" xmlns:default="http://php.net/ns/news">
+  <title>PHP Conference China 2020</title>
+  <id>https://www.php.net/archive/2020.php#2020-09-21-1</id>
+  <published>2020-09-21T05:48:58+00:00</published>
+  <updated>2020-09-21T05:48:58+00:00</updated>
+  <link href="https://www.php.net/conferences/index.php#id2020-09-21-1" rel="alternate" type="text/html"/>
+  <link href="http://www.phpconchina.com/?o=php" rel="via" type="text/html"/>
+  <default:finalTeaserDate xmlns="http://php.net/ns/news">2020-10-17</default:finalTeaserDate>
+  <category term="conferences" label="Conference announcement"/>
+  <default:newsImage xmlns="http://php.net/ns/news" link="http://www.phpconchina.com/?o=php" title="phpconchina 2020">phpconchina2020.jpg</default:newsImage>
+  <content type="xhtml">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+     The 8th PHP conference  china will be held in Shanghai, China on October 17-18, 2020. This event filled with high quality, technical sessions about PHP Core, PHP High Performance, PHP Engineering, AI and Blockchain more.<br/>
+     Don’t miss out on 2-great days sessions, delicious food, fantastic shows, and countless networking opportunities to engage with speakers and delegates.<br/>
+     Go to <a href="http://www.phpconchina.com/?o=php">www.phpconchina.com</a> for tickets and more information.
+    </div>
+  </content>
+</entry>
