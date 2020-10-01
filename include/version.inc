@@ -28,7 +28,7 @@ $RELEASES = (function() {
 
     /* PHP 7.3 Release */
     $PHP_7_3_VERSION         = "7.3.23";
-    $PHP_7_3_DATE            = "03 Sep 2020";
+    $PHP_7_3_DATE            = "01 Oct 2020";
     $PHP_7_3_TAGS            = ['']; // Set to ['security'] for security releases.
     $PHP_7_3_SHA256     = array(
         "tar.bz2"       => "fd6666ad4605508042c6964151379475daea36c43e03b11b1e79d4ae6b04c04c",
