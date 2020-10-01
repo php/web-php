@@ -2741,6 +2741,20 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
 
 <a name="PHP_7_2"></a>
 
+<section class="version" id="7.2.34"><!-- {{{ 7.2.34 -->
+<h3>Version 7.2.34</h3>
+<b><?php release_date('01-Oct-2020'); ?></b>
+<ul><li>Core:
+<ul>
+  <li><?php bugfix(79699); ?> (PHP parses encoded cookie names so malicious `__Host-` cookies can be sent). (CVE-2020-7070)</li>
+</ul></li>
+<li>OpenSSL:
+<ul>
+  <li><?php bugfix(79601); ?> (Wrong ciphertext/tag in AES-CCM encryption for a 12 bytes IV). (CVE-2020-7069)</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
 <section class="version" id="7.2.33"><!-- {{{ 7.2.33 -->
 <h3>Version 7.2.33</h3>
 <b><?php release_date('06-Aug-2020'); ?></b>
