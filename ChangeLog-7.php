@@ -12,6 +12,51 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
 
 <a name="PHP_7_4"></a>
 
+<section class="version" id="7.4.11"><!-- {{{ 7.4.11 -->
+<h3>Version 7.4.11</h3>
+<b><?php release_date('01-Oct-2020'); ?></b>
+<ul><li>Core:
+<ul>
+  <li><?php bugfix(79699); ?> (PHP parses encoded cookie names so malicious `__Host-` cookies can be sent). (CVE-2020-7070)</li>
+  <li><?php bugfix(79979); ?> (passing value to by-ref param via CUFA crashes).</li>
+  <li><?php bugfix(80037); ?> (Typed property must not be accessed before initialization when __get() declared).</li>
+  <li><?php bugfix(80048); ?> (Bug #69100 has not been fixed for Windows).</li>
+  <li><?php bugfix(80049); ?> (Memleak when coercing integers to string via variadic argument).</li>
+</ul></li>
+<li>Calendar:
+<ul>
+  <li><?php bugfix(80007); ?> (Potential type confusion in unixtojd() parameter parsing).</li>
+</ul></li>
+<li>COM:
+<ul>
+  <li><?php bugfix(64130); ?> (COM obj parameters passed by reference are not updated).</li>
+</ul></li>
+<li>OPcache:
+<ul>
+  <li><?php bugfix(80002); ?> (calc free space for new interned string is wrong).</li>
+  <li><?php bugfix(80046); ?> (FREE for SWITCH_STRING optimized away).</li>
+  <li><?php bugfix(79825); ?> (opcache.file_cache causes SIGSEGV when custom opcode handlers changed).</li>
+</ul></li>
+<li>OpenSSL:
+<ul>
+  <li><?php bugfix(79601); ?> (Wrong ciphertext/tag in AES-CCM encryption for a 12 bytes IV). (CVE-2020-7069)</li>
+</ul></li>
+<li>PDO:
+<ul>
+  <li><?php bugfix(80027); ?> (Terrible performance using $query-&gt;fetch on queries with many bind parameters (Matteo)</li>
+</ul></li>
+<li>Standard:
+<ul>
+  <li><?php bugfix(79986); ?> (str_ireplace bug with diacritics characters).</li>
+  <li><?php bugfix(80077); ?> (getmxrr test bug).</li>
+  <li><?php bugfix(72941); ?> (Modifying bucket-&gt;data by-ref has no effect any longer).</li>
+  <li><?php bugfix(80067); ?> (Omitting the port in bindto setting errors).</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
+
+
 <section class="version" id="7.4.10"><!-- {{{ 7.4.10 -->
 <h3>Version 7.4.10</h3>
 <b><?php release_date('03-Sep-2020'); ?></b>
