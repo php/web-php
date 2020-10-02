@@ -43,7 +43,11 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
 </ul></li>
 <li>PDO:
 <ul>
-  <li><?php bugfix(80027); ?> (Terrible performance using $query-&gt;fetch on queries with many bind parameters (Matteo)</li>
+  <li><?php bugfix(80027); ?> (Terrible performance using $query-&gt;fetch on queries with many bind parameters). (Matteo)</li>
+</ul></li>
+<li>SOAP:
+<ul>
+  <li><?php bugfix(47021); ?> (SoapClient stumbles over WSDL delivered with "Transfer-Encoding: chunked"). (Matteo)</li>
 </ul></li>
 <li>Standard:
 <ul>
@@ -1166,7 +1170,11 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
 </ul></li>
 <li>PDO:
 <ul>
-  <li><?php bugfix(80027); ?> (Terrible performance using $query-&gt;fetch on queries with many bind parameters (Matteo)</li>
+  <li><?php bugfix(80027); ?> (Terrible performance using $query-&gt;fetch on queries with many bind parameters). (Matteo)</li>
+</ul></li>
+<li>SOAP:
+<ul>
+  <li><?php bugfix(47021); ?> (SoapClient stumbles over WSDL delivered with "Transfer-Encoding: chunked"). (Matteo)</li>
 </ul></li>
 <li>Standard:
 <ul>
