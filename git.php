@@ -57,7 +57,7 @@ site_header("Git Access", array("current" => "community"));
    <li><i>PHP 5.4</i>: 1.28, 1.35, 1.75, 2.0 to 2.6.4</li>
    <li><i>PHP 5.5 and 5.6</i>: 2.4 to 2.7</li>
    <li><i>PHP 7.0 - 7.3</i>: 2.4+</li>
-   <li><i>PHP 7.4</i>: 3.0.0+</li>
+   <li><i>PHP 7.4 - PHP 8.0</i>: 3.0.0+</li>
   </ul>
  </li>
 </ul>
@@ -113,6 +113,10 @@ site_header("Git Access", array("current" => "community"));
   <br>
   <strong>PHP 7.4</strong>:
   <code>git checkout PHP-7.4</code>
+  <br>
+  <br>
+  <strong>PHP 8.0</strong>:
+  <code>git checkout PHP-8.0</code>
   <br>
   <strong>PHP HEAD</strong>:
   <code>git checkout master</code>
