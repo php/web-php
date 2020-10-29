@@ -1142,6 +1142,62 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
 
 <a name="PHP_7_3"></a>
 
+<section class="version" id="7.3.24"><!-- {{{ 7.3.24 -->
+<h3>Version 7.3.24</h3>
+<b><?php release_date('29-Oct-2020'); ?></b>
+<ul><li>Core:
+<ul>
+  <li><?php bugfix(79423); ?> (copy command is limited to size of file it can copy).</li>
+</ul></li>
+<li>Calendar:
+<ul>
+  <li><?php bugfix(80185); ?> (jdtounix() fails after 2037).</li>
+</ul></li>
+<li>IMAP:
+<ul>
+  <li><?php bugfix(80213); ?> (imap_mail_compose() segfaults on certain $bodies).</li>
+  <li><?php bugfix(80215); ?> (imap_mail_compose() may modify by-val parameters).</li>
+  <li><?php bugfix(80220); ?> (imap_mail_compose() may leak memory).</li>
+  <li><?php bugfix(80223); ?> (imap_mail_compose() leaks envelope on malformed bodies).</li>
+  <li><?php bugfix(80216); ?> (imap_mail_compose() does not validate types/encodings).</li>
+  <li><?php bugfix(80226); ?> (imap_sort() leaks sortpgm memory).</li>
+</ul></li>
+<li>MySQLnd:
+<ul>
+  <li><?php bugfix(80115); ?> (mysqlnd.debug doesn't recognize absolute paths with slashes).</li>
+  <li><?php bugfix(80107); ?> (mysqli_query() fails for ~16 MB long query when compression is enabled).</li>
+</ul></li>
+<li>ODBC:
+<ul>
+  <li><?php bugfix(78470); ?> (odbc_specialcolumns() no longer accepts $nullable).</li>
+  <li><?php bugfix(80147); ?> (BINARY strings may not be properly zero-terminated).</li>
+  <li><?php bugfix(80150); ?> (Failure to fetch error message).</li>
+  <li><?php bugfix(80152); ?> (odbc_execute() moves internal pointer of $params).</li>
+  <li><?php bugfix(46050); ?> (odbc_next_result corrupts prepared resource).</li>
+</ul></li>
+<li>OPcache:
+<ul>
+  <li><?php bugfix(80083); ?> (Optimizer pass 6 removes variables used for ibm_db2 data binding).</li>
+</ul></li>
+<li>PDO_ODBC:
+<ul>
+  <li><?php bugfix(67465); ?> (NULL Pointer dereference in odbc_handle_preparer).</li>
+</ul></li>
+<li>Standard:
+<ul>
+  <li><?php bugfix(80114); ?> (parse_url does not accept URLs with port 0).</li>
+  <li><?php bugfix(76943); ?> (Inconsistent stream_wrapper_restore() errors).</li>
+  <li><?php bugfix(76735); ?> (Incorrect message in fopen on invalid mode).</li>
+</ul></li>
+<li>Tidy:
+<ul>
+  <li><?php bugfix(77040); ?> (tidyNode::isHtml() is completely broken).</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
+
+
 <section class="version" id="7.3.23"><!-- {{{ 7.3.23 -->
 <h3>Version 7.3.23</h3>
 <b><?php release_date('01-Oct-2020'); ?></b>
