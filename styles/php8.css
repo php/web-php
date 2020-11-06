@@ -1,0 +1,354 @@
+#layout-content:only-child {
+  width: 100% !important;
+}
+
+@media (max-width: 979px) and (min-width: 768px) {
+  .navbar-search {
+    width: 30% !important;
+    max-width: calc(100% - 605px) !important;
+  }
+}
+
+.php8 {
+  vertical-align: middle;
+}
+
+.php8__section {
+  padding: 96px 1.5rem;
+  margin: 0 -1.5rem;
+}
+
+.php8__section_dark {
+  padding-left: calc((100% - (810px - 3rem))/2);
+  padding-right: calc((100% - (810px - 3rem))/2);
+  background-color: #4F5B93;
+  color: #fff;
+}
+
+.php8__section_dark * {
+  color: #fff;
+}
+
+.php8__section_light {
+  background-color: #fff;
+}
+
+@media (max-width: 920px) {
+  .php8__section {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+}
+
+.php8__section_header {
+  padding-top: 64px;
+  margin-top: -1.5rem;
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+.php8__section_footer {
+  margin-bottom: -1.5rem;
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+.php8__logo {
+  vertical-align: middle;
+}
+
+.php8__logo img {
+  max-width: 90%;
+}
+
+.php8__title {
+  margin-top: 16px;
+  font-size: 60px;
+  font-weight: 900;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.07;
+  letter-spacing: -1.5px;
+}
+
+@media (max-width: 480px) {
+  .php8__title {
+    font-size: 50px;
+  }
+}
+
+.php8__title-text {
+  vertical-align: middle;
+}
+
+.php8__title-img {
+  width: 0.9666666666667em;
+  height: 0.9666666666667em;
+  margin-left: 2px;
+  vertical-align: middle;
+}
+
+.php8__subtitle {
+  margin-top: 48px;
+  font-size: 28px;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.43;
+  letter-spacing: normal;
+  text-align: center;
+}
+
+@media (max-width: 480px) {
+  .php8__subtitle {
+    font-size: 24px;
+  }
+}
+
+.php8__h2 {
+  font-size: 31px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.29;
+  letter-spacing: -0.5px;
+  color: #27282c;
+}
+
+.php8__h2::after {
+  display: none;
+}
+
+.php8__h2_margin-top {
+  margin-top: 48px;
+}
+
+.php8__section_dark .php8__h2 {
+  color: #fff;
+}
+
+.php8__button-wrapper {
+  margin-top: 33px;
+}
+
+.php8__button {
+  display: inline-block;
+  padding: 16px 46px;
+  border-radius: 30px;
+  border: none;
+  background-color: #4F5B93;
+  color: #fff !important;
+  text-decoration: none !important;
+  font-size: 20px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.4;
+  letter-spacing: normal;
+  text-align: center;
+}
+
+@media (max-width: 640px) {
+  .php8__button {
+    padding: 16px 36px;
+  }
+}
+
+.php8__button_light {
+  background-color: #fff !important;
+  color: #27282c !important;
+}
+
+.php8__footer-content {
+  margin-top: 64px;
+  text-align: left;
+  font-size: 15px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.6;
+  letter-spacing: normal;
+}
+
+#layout-content .php8__section_dark  a:link,
+#layout-content .php8__section_dark a:visited {
+  color: #fff;
+  transition: opacity 0.2s;
+}
+
+#layout-content .php8__section_dark a:hover,
+#layout-content .php8__section_dark a:focus {
+  color: #fff;
+  border-color: #fff;
+  opacity: 0.85;
+}
+
+.php8 p:last-child {
+  margin-bottom: 0;
+}
+
+.display-block-lg {
+  display: block;
+}
+.display-none-lg {
+  display: none;
+}
+
+@media (max-width: 1000px) {
+  .display-block-md {
+    display: block;
+  }
+  .display-none-md {
+    display: none;
+  }
+}
+
+@media (max-width: 640px) {
+  .display-block-sm {
+    display: block;
+  }
+  .display-none-sm {
+    display: none;
+  }
+}
+
+.php8__rfc {
+  font-size: 15px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.6;
+  letter-spacing: normal;
+  vertical-align: middle;
+  color: #505c90;
+  border-bottom-color: currentColor;
+}
+
+.php8__compare ~ .php8__compare {
+  margin-top: 58px;
+}
+
+.php8__compare-main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+@media (max-width: 810px) {
+  .php8__compare-main {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+}
+
+.php8__compare-block {
+  position: relative;
+  -ms-flex-preferred-size: calc((100% - 68px)/2);
+  flex-basis: calc((100% - 68px)/2);
+  text-align: left;
+}
+
+.php8__compare-label {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  padding: 6px 16px 4px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.33;
+  letter-spacing: normal;
+  text-align: center;
+  color: rgba(39, 40, 44, 0.7);
+  background-color: rgba(39, 40, 44, 0.05);
+}
+
+.php8__compare-label_new {
+  background-color: #505c90;
+  color: #fff;
+}
+
+.php8__code {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  padding: 50px 76px 38px !important;
+  box-sizing: border-box;
+  margin: 0 !important;
+}
+
+@media (max-width: 1000px) {
+  .php8__code {
+    padding-left: 50px !important;
+    padding-right: 50px !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .php8__code {
+    padding-left: 12px !important;
+    padding-right: 12px !important;
+  }
+}
+
+.php8__compare-arrow {
+  height: 36px;
+  width: 20px;
+  margin: auto;
+  background: url("/images/icon_arrow.svg") scroll no-repeat center center / contain transparent;
+}
+
+@media (max-width: 810px) {
+  .php8__compare-arrow {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    transform: rotate(90deg);
+  }
+}
+
+.php8__section ul {
+
+}
+
+.php8__section li ~ li {
+  margin-top: 24px;
+}
+
+.php8__columns {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+@media (max-width: 768px) {
+  .php8__columns {
+    display: block;
+  }
+}
+
+.php8__column {
+  -ms-flex-preferred-size: calc((100% - 68px)/2);
+  flex-basis: calc((100% - 68px)/2);
+}
+
+@media (max-width: 768px) {
+  .php8__column {
+    width: 100%;
+  }
+}

@@ -116,6 +116,11 @@ if (!isset($config["languages"])) {
       <li class="<?php echo $curr == "docs" ? "active" : ""?>"><a href="/docs.php">Documentation</a></li>
       <li class="<?php echo $curr == "community" ? "active" : ""?>"><a href="/get-involved" >Get Involved</a></li>
       <li class="<?php echo $curr == "help" ? "active" : ""?>"><a href="/support">Help</a></li>
+      <li class="<?php echo $curr == "php8" ? "active" : "" ?>">
+        <a href="/php8">
+          <img src="/images/logos/logo_php8.svg" alt="php8" height="22" width="60">
+        </a>
+      </li>
     </ul>
     <form class="navbar-search" id="topsearch" action="/search.php">
       <input type="hidden" name="show" value="quickref">

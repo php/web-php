@@ -213,6 +213,9 @@ textarea {
   float: none;
   padding: .75rem;
 }
+.navbar .nav > li > a > img {
+  vertical-align: middle;
+}
 @-ms-viewport {
   width: device-width;
 }
