@@ -6,31 +6,33 @@ site_header("php 8", array("current" => "php8"));
 ?>
 <link rel="stylesheet" href="/styles/php8.css">
 <div class="php8">
-  <div class="php8__section php8__section_dark php8__section_header center">
-    <div class="php8__logo">
-      <img src="/images/logos/logo_php8.svg" alt="" height="126" width="343">
-    </div>
-    <div class="php8__title">
-      <span class="php8__title-text">released!</span>
-      <img class="php8__title-img" src="/images/party-popper.png" srcset="/images/party-popper@2x.png 2x, /images/party-popper@2x.png 3x" alt="" width="58" height="58">
-    </div>
-    <div class="php8__subtitle">
-      PHP 8.0 is a major update of the PHP language. It contains many new features and optimizations. Including named
-      arguments, union types, attributes, constructor property promotion, match expression, nullsafe operator, JIT, and
-      improvements in type system, error handling, and consistency.
+  <div class="php8-section php8-section_dark php8-section_header center">
+    <div class="php8-section__inner">
+      <div class="php8-logo">
+        <img src="/images/logos/logo_php8.svg" alt="" height="126" width="343">
+      </div>
+      <div class="php8-title">
+        <span class="php8-title__text">released!</span>
+        <img class="php8-title__img" src="/images/party-popper.png" srcset="/images/party-popper@2x.png 2x, /images/party-popper@2x.png 3x" alt="" width="58" height="58">
+      </div>
+      <div class="php8-subtitle">
+        PHP 8.0 is a major update of the PHP language. It contains many new features and optimizations. Including named
+        arguments, union types, attributes, constructor property promotion, match expression, nullsafe operator, JIT, and
+        improvements in type system, error handling, and consistency.
+      </div>
     </div>
   </div>
 
-  <div class="php8__section center">
-    <div class="php8__compare">
-      <h2 class="php8__h2">
+  <div class="php8-section center">
+    <div class="php8-compare">
+      <h2 class="php8-h2">
         Named arguments
-        <a class="php8__rfc" href="https://wiki.php.net/rfc/named_params">RFC</a>
+        <a class="php8-rfc" href="https://wiki.php.net/rfc/named_params">RFC</a>
       </h2>
-      <div class="php8__compare-main">
-        <div class="php8__compare-block example-contents">
-          <div class="php8__compare-label">PHP 7</div>
-          <div class="php8__code phpcode">
+      <div class="php8-compare__main">
+        <div class="php8-compare__block example-contents">
+          <div class="php8-compare__label">PHP 7</div>
+          <div class="php8-code phpcode">
             <code>
               <span class="default">htmlspecialchars</span>(<span class="default">$string</span>,
               <span class="default">ENT_COMPAT | ENT_HTML401</span>, <span class="string">'UTF-8'</span>,
@@ -38,10 +40,10 @@ site_header("php 8", array("current" => "php8"));
             </code>
           </div>
         </div>
-        <div class="php8__compare-arrow"></div>
-        <div class="php8__compare-block example-contents">
-          <div class="php8__compare-label php8__compare-label_new">PHP 8</div>
-          <div class="php8__code phpcode">
+        <div class="php8-compare__arrow"></div>
+        <div class="php8-compare__block example-contents">
+          <div class="php8-compare__label php8-compare__label_new">PHP 8</div>
+          <div class="php8-code phpcode">
             <code>
               <span class="methodname"><strong>htmlspecialchars</strong></span>(<span class="parameter">$string</span>,
               double_encode: <span class="initializer">false</span>);
@@ -51,15 +53,15 @@ site_header("php 8", array("current" => "php8"));
       </div>
     </div>
 
-    <div class="php8__compare">
-      <h2 class="php8__h2">
+    <div class="php8-compare">
+      <h2 class="php8-h2">
         Attributes
-        <a class="php8__rfc" href="https://wiki.php.net/rfc/attributes_v2">RFC</a>
+        <a class="php8-rfc" href="https://wiki.php.net/rfc/attributes_v2">RFC</a>
       </h2>
-      <div class="php8__compare-main">
-        <div class="php8__compare-block example-contents">
-          <div class="php8__compare-label">PHP 7</div>
-          <div class="php8__code phpcode">
+      <div class="php8-compare__main">
+        <div class="php8-compare__block example-contents">
+          <div class="php8-compare__label">PHP 7</div>
+          <div class="php8-code phpcode">
             <code>
               <span class="comment">/**</span><br>
               <span class="comment">* @Route("/api/posts/{id}", methods={"GET", "HEAD"})</span><br>
@@ -69,10 +71,10 @@ site_header("php 8", array("current" => "php8"));
             </code>
           </div>
         </div>
-        <div class="php8__compare-arrow"></div>
-        <div class="php8__compare-block example-contents">
-          <div class="php8__compare-label php8__compare-label_new">PHP 8</div>
-          <div class="php8__code phpcode">
+        <div class="php8-compare__arrow"></div>
+        <div class="php8-compare__block example-contents">
+          <div class="php8-compare__label php8-compare__label_new">PHP 8</div>
+          <div class="php8-code phpcode">
             <code>
               #[Route(<span class="string">"/api/posts/{id}"</span>,
               methods: [<span class="string">"GET"</span>, <span class="string">"HEAD"</span>])]<br>
@@ -84,15 +86,15 @@ site_header("php 8", array("current" => "php8"));
       </div>
     </div>
 
-    <div class="php8__compare">
-      <h2 class="php8__h2">
+    <div class="php8-compare">
+      <h2 class="php8-h2">
         Constructor property promotion
-        <a class="php8__rfc" href="https://wiki.php.net/rfc/constructor_promotion">RFC</a>
+        <a class="php8-rfc" href="https://wiki.php.net/rfc/constructor_promotion">RFC</a>
       </h2>
-      <div class="php8__compare-main">
-        <div class="php8__compare-block example-contents">
-          <div class="php8__compare-label">PHP 7</div>
-          <div class="php8__code phpcode">
+      <div class="php8-compare__main">
+        <div class="php8-compare__block example-contents">
+          <div class="php8-compare__label">PHP 7</div>
+          <div class="php8-code phpcode">
             <code>
               <span class="keyword">class</span> Point {<br>
               &nbsp;&nbsp;<span class="keyword">public</span> <span class="keyword">float</span> $x;<br>
@@ -112,10 +114,10 @@ site_header("php 8", array("current" => "php8"));
             </code>
           </div>
         </div>
-        <div class="php8__compare-arrow"></div>
-        <div class="php8__compare-block example-contents">
-          <div class="php8__compare-label php8__compare-label_new">PHP 8</div>
-          <div class="php8__code phpcode">
+        <div class="php8-compare__arrow"></div>
+        <div class="php8-compare__block example-contents">
+          <div class="php8-compare__label php8-compare__label_new">PHP 8</div>
+          <div class="php8-code phpcode">
             <code>
               <span class="keyword">class</span> Point {<br>
               &nbsp;&nbsp;<span class="keyword">public</span> <span class="keyword">function</span> __construct(<br>
@@ -130,15 +132,15 @@ site_header("php 8", array("current" => "php8"));
       </div>
     </div>
 
-    <div class="php8__compare">
-      <h2 class="php8__h2">
+    <div class="php8-compare">
+      <h2 class="php8-h2">
         Union types
-        <a class="php8__rfc" href="https://wiki.php.net/rfc/union_types_v2">RFC</a>
+        <a class="php8-rfc" href="https://wiki.php.net/rfc/union_types_v2">RFC</a>
       </h2>
-      <div class="php8__compare-main">
-        <div class="php8__compare-block example-contents">
-          <div class="php8__compare-label">PHP 7</div>
-          <div class="php8__code phpcode">
+      <div class="php8-compare__main">
+        <div class="php8-compare__block example-contents">
+          <div class="php8-compare__label">PHP 7</div>
+          <div class="php8-code phpcode">
             <code>
               <span class="keyword">class</span> Number {<br>
               &nbsp;&nbsp;<span class="comment">/** @var int|float */</span><br>
@@ -156,10 +158,10 @@ site_header("php 8", array("current" => "php8"));
             </code>
           </div>
         </div>
-        <div class="php8__compare-arrow"></div>
-        <div class="php8__compare-block example-contents">
-          <div class="php8__compare-label php8__compare-label_new">PHP 8</div>
-          <div class="php8__code phpcode">
+        <div class="php8-compare__arrow"></div>
+        <div class="php8-compare__block example-contents">
+          <div class="php8-compare__label php8-compare__label_new">PHP 8</div>
+          <div class="php8-code phpcode">
             <code>
               <span class="keyword">class</span> Number {<br>
               &nbsp;&nbsp;<span class="keyword">public</span> function __construct(<br>
@@ -174,15 +176,15 @@ site_header("php 8", array("current" => "php8"));
       </div>
     </div>
 
-    <div class="php8__compare">
-      <h2 class="php8__h2">
+    <div class="php8-compare">
+      <h2 class="php8-h2">
         Match expression
-        <a class="php8__rfc" href="https://wiki.php.net/rfc/match_expression_v2">RFC</a>
+        <a class="php8-rfc" href="https://wiki.php.net/rfc/match_expression_v2">RFC</a>
       </h2>
-      <div class="php8__compare-main">
-        <div class="php8__compare-block example-contents">
-          <div class="php8__compare-label">PHP 7</div>
-          <div class="php8__code phpcode">
+      <div class="php8-compare__main">
+        <div class="php8-compare__block example-contents">
+          <div class="php8-compare__label">PHP 7</div>
+          <div class="php8-code phpcode">
             <code>
               <span class="keyword">switch</span> (8.0) {<br>
               &nbsp;&nbsp;<span class="keyword">case</span> <span class="string">'8.0'</span>:<br>
@@ -197,10 +199,10 @@ site_header("php 8", array("current" => "php8"));
             </code>
           </div>
         </div>
-        <div class="php8__compare-arrow"></div>
-        <div class="php8__compare-block example-contents">
-          <div class="php8__compare-label php8__compare-label_new">PHP 8</div>
-          <div class="php8__code phpcode">
+        <div class="php8-compare__arrow"></div>
+        <div class="php8-compare__block example-contents">
+          <div class="php8-compare__label php8-compare__label_new">PHP 8</div>
+          <div class="php8-code phpcode">
             <code>
               <span class="keyword">echo</span> match (8.0) {<br>
               &nbsp;&nbsp;<span class="string">'8.0'</span> => <span class="string">"Oh no!"</span>,<br>
@@ -213,15 +215,15 @@ site_header("php 8", array("current" => "php8"));
       </div>
     </div>
 
-    <div class="php8__compare">
-      <h2 class="php8__h2">
+    <div class="php8-compare">
+      <h2 class="php8-h2">
         Nullsafe operator
-        <a class="php8__rfc" href="https://wiki.php.net/rfc/nullsafe_operator">RFC</a>
+        <a class="php8-rfc" href="https://wiki.php.net/rfc/nullsafe_operator">RFC</a>
       </h2>
-      <div class="php8__compare-main">
-        <div class="php8__compare-block example-contents">
-          <div class="php8__compare-label">PHP 7</div>
-          <div class="php8__code phpcode">
+      <div class="php8-compare__main">
+        <div class="php8-compare__block example-contents">
+          <div class="php8-compare__label">PHP 7</div>
+          <div class="php8-code phpcode">
             <code>
               $country =  <span class="keyword">null</span>;<br>
               <br>
@@ -239,10 +241,10 @@ site_header("php 8", array("current" => "php8"));
             </code>
           </div>
         </div>
-        <div class="php8__compare-arrow"></div>
-        <div class="php8__compare-block example-contents">
-          <div class="php8__compare-label php8__compare-label_new">PHP 8</div>
-          <div class="php8__code phpcode">
+        <div class="php8-compare__arrow"></div>
+        <div class="php8-compare__block example-contents">
+          <div class="php8-compare__label php8-compare__label_new">PHP 8</div>
+          <div class="php8-code phpcode">
             <code>
               $country = $session?->user?->getAddress()?->country;
             </code>
@@ -251,24 +253,24 @@ site_header("php 8", array("current" => "php8"));
       </div>
     </div>
 
-    <div class="php8__compare">
-      <h2 class="php8__h2">
+    <div class="php8-compare">
+      <h2 class="php8-h2">
         Saner string to number comparisons
-        <a class="php8__rfc" href="https://wiki.php.net/rfc/string_to_number_comparison">RFC</a>
+        <a class="php8-rfc" href="https://wiki.php.net/rfc/string_to_number_comparison">RFC</a>
       </h2>
-      <div class="php8__compare-main">
-        <div class="php8__compare-block example-contents">
-          <div class="php8__compare-label">PHP 7</div>
-          <div class="php8__code phpcode">
+      <div class="php8-compare__main">
+        <div class="php8-compare__block example-contents">
+          <div class="php8-compare__label">PHP 7</div>
+          <div class="php8-code phpcode">
             <code>
               0 == <span class="string">'foobar'</span> <span class="comment">// true</span>
             </code>
           </div>
         </div>
-        <div class="php8__compare-arrow"></div>
-        <div class="php8__compare-block example-contents">
-          <div class="php8__compare-label php8__compare-label_new">PHP 8</div>
-          <div class="php8__code phpcode">
+        <div class="php8-compare__arrow"></div>
+        <div class="php8-compare__block example-contents">
+          <div class="php8-compare__label php8-compare__label_new">PHP 8</div>
+          <div class="php8-code phpcode">
             <code>
               0 == <span class="string">'foobar'</span> <span class="comment">// false</span>
             </code>
@@ -277,15 +279,15 @@ site_header("php 8", array("current" => "php8"));
       </div>
     </div>
 
-    <div class="php8__compare">
-      <h2 class="php8__h2">
+    <div class="php8-compare">
+      <h2 class="php8-h2">
         Consistent type errors for internal functions
-        <a class="php8__rfc" href="https://wiki.php.net/rfc/consistent_type_errors">RFC</a>
+        <a class="php8-rfc" href="https://wiki.php.net/rfc/consistent_type_errors">RFC</a>
       </h2>
-      <div class="php8__compare-main">
-        <div class="php8__compare-block example-contents">
-          <div class="php8__compare-label">PHP 7</div>
-          <div class="php8__code phpcode">
+      <div class="php8-compare__main">
+        <div class="php8-compare__block example-contents">
+          <div class="php8-compare__label">PHP 7</div>
+          <div class="php8-code phpcode">
             <code>
               strlen([]); <span class="comment">// Warning: strlen() expects parameter 1 to be string, array given</span><br>
               <br>
@@ -293,10 +295,10 @@ site_header("php 8", array("current" => "php8"));
             </code>
           </div>
         </div>
-        <div class="php8__compare-arrow"></div>
-        <div class="php8__compare-block example-contents">
-          <div class="php8__compare-label php8__compare-label_new">PHP 8</div>
-          <div class="php8__code phpcode">
+        <div class="php8-compare__arrow"></div>
+        <div class="php8-compare__block example-contents">
+          <div class="php8-compare__label php8-compare__label_new">PHP 8</div>
+          <div class="php8-code phpcode">
             <code>
               strlen([]); <span class="comment">// TypeError: strlen(): Argument #1 ($str) must be of type string, array given</span><br>
               <br>
@@ -308,10 +310,10 @@ site_header("php 8", array("current" => "php8"));
     </div>
   </div>
 
-  <div class="php8__section php8__section_light">
-    <h2 class="php8__h2">Other syntax tweaks and improvements</h2>
-    <div class="php8__columns">
-      <div class="php8__column">
+  <div class="php8-section php8-section_light">
+    <h2 class="php8-h2">Other syntax tweaks and improvements</h2>
+    <div class="php8-columns">
+      <div class="php8-column">
         <ul>
           <li>
             Allow trailing comma in parameter list <a href="https://wiki.php.net/rfc/trailing_comma_in_parameter_list">RFC</a>
@@ -325,7 +327,7 @@ site_header("php 8", array("current" => "php8"));
           </li>
         </ul>
       </div>
-      <div class="php8__column">
+      <div class="php8-column">
         <ul>
           <li>
             Treat namespaced names as single token <a href="https://wiki.php.net/rfc/namespaced_names_as_token">RFC</a>
@@ -339,9 +341,9 @@ site_header("php 8", array("current" => "php8"));
         </ul>
       </div>
     </div>
-    <div class="php8__columns">
-      <div class="php8__column">
-        <h2 class="php8__h2 php8__h2_margin-top">Type system and error handling improvements</h2>
+    <div class="php8-columns">
+      <div class="php8-column">
+        <h2 class="php8-h2 php8-h2_margin-top">Type system and error handling improvements</h2>
         <ul>
           <li>
             Saner string to number comparisons <a href="https://wiki.php.net/rfc/string_to_number_comparison">RFC</a>
@@ -384,8 +386,8 @@ site_header("php 8", array("current" => "php8"));
           </li>
         </ul>
       </div>
-      <div class="php8__column">
-        <h2 class="php8__h2 php8__h2_margin-top">New Classes, Interfaces, and Functions</h2>
+      <div class="php8-column">
+        <h2 class="php8-h2 php8-h2_margin-top">New Classes, Interfaces, and Functions</h2>
         <ul>
           <li>
             <a href="https://wiki.php.net/rfc/weak_maps">Weak Map</a> class
@@ -415,25 +417,27 @@ site_header("php 8", array("current" => "php8"));
     </div>
   </div>
 
-  <div class="php8__section php8__section_dark php8__section_footer center">
-    <h2 class="php8__h2">
-      Get free performance improvement.<br class="display-none-lg display-block-md">
-      Get better syntax.<br class="display-block-lg display-none-md display-block-sm">
-      Get more strictness.
-    </h2>
-    <div class="php8__button-wrapper">
-      <a class="php8__button php8__button_light" href="#">Go update to PHP 8!</a>
-    </div>
-    <div class="php8__footer-content">
-      <p>
-        For source downloads of PHP 8 please visit our <a href="http://www.php.net/downloads">downloads</a> page.
-        Windows binaries can be found on the <a href="http://windows.php.net/download">PHP for Windows</a> site.
-        The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-8.php">ChangeLog</a>.
-      </p>
-      <p>
-        The <a href="http://php.net/manual/en/migration8.php">migration guide</a> is available in the PHP Manual. Please
-        consult it for the detailed list of new features and backward-incompatible changes.
-      </p>
+  <div class="php8-section php8-section_dark php8-section_footer php8-footer center">
+    <div class="php8-section__inner">
+      <h2 class="php8-h2">
+        Get free performance improvement.<br class="display-none-lg display-block-md">
+        Get better syntax.<br class="display-block-lg display-none-md display-block-sm">
+        Get more strictness.
+      </h2>
+      <div class="php8-button-wrapper">
+        <a class="php8-button php8-button_light" href="#">Go update to PHP 8!</a>
+      </div>
+      <div class="php8-footer__content">
+        <p>
+          For source downloads of PHP 8 please visit our <a href="http://www.php.net/downloads">downloads</a> page.
+          Windows binaries can be found on the <a href="http://windows.php.net/download">PHP for Windows</a> site.
+          The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-8.php">ChangeLog</a>.
+        </p>
+        <p>
+          The <a href="http://php.net/manual/en/migration8.php">migration guide</a> is available in the PHP Manual. Please
+          consult it for the detailed list of new features and backward-incompatible changes.
+        </p>
+      </div>
     </div>
   </div>
 </div>
