@@ -101,6 +101,7 @@
 }
 
 .php8-h2 {
+  display: inline-block;
   font-size: 31px;
   font-weight: bold;
   font-stretch: normal;
@@ -108,6 +109,7 @@
   line-height: 1.29;
   letter-spacing: -0.5px;
   color: #27282c;
+  overflow: visible;
 }
 
 .php8-h2::after {
@@ -342,4 +344,20 @@
   .php8-column {
     width: 100%;
   }
+}
+
+.php8-anchor {
+  display: none;
+  float: left;
+  height: 30px;
+  width: 30px;
+  margin-top: 4px;
+  margin-left: -30px;
+  background: url("/images/anchor.svg") scroll no-repeat left center / 21px 16px transparent;
+  text-decoration: none;
+  border-bottom: none;
+}
+
+h2:hover .php8-anchor {
+  display: block;
 }
