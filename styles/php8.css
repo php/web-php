@@ -9,10 +9,6 @@
   }
 }
 
-.php8 {
-  vertical-align: middle;
-}
-
 .php8-section {
   padding: 96px 1.5rem;
   margin: 0 -1.5rem;
@@ -23,8 +19,8 @@
   color: #fff;
 }
 
-.php8-section__inner {
-  width: 810px;
+.php8-section__content {
+  width: 820px;
   max-width: 100%;
   margin: 0 auto;
 }
@@ -46,6 +42,10 @@
 .php8-section_footer {
   margin-bottom: -1.5rem;
   font-family: Helvetica, Arial, sans-serif;
+}
+
+.php8-section img {
+  max-width: 100%;
 }
 
 .php8-logo {
@@ -121,11 +121,12 @@
 }
 
 .php8-section_dark .php8-h2 {
+  display: block;
   color: #fff;
 }
 
 .php8-button-wrapper {
-  margin-top: 33px;
+  margin-top: 34px;
 }
 
 .php8-button {
@@ -180,7 +181,7 @@
   opacity: 0.85;
 }
 
-.php8 p:last-child {
+.php8-section p:last-child {
   margin-bottom: 0;
 }
 
@@ -301,7 +302,7 @@
   height: 36px;
   width: 20px;
   margin: auto;
-  background: url("/images/icon_arrow.svg") scroll no-repeat center center / contain transparent;
+  background: url("/images/php8/icon_arrow.svg") scroll no-repeat center center / contain transparent;
 }
 
 @media (max-width: 810px) {
@@ -310,10 +311,6 @@
     margin-bottom: 10px;
     transform: rotate(90deg);
   }
-}
-
-.php8-section ul {
-
 }
 
 .php8-section li ~ li {
@@ -353,7 +350,7 @@
   width: 30px;
   margin-top: 4px;
   margin-left: -30px;
-  background: url("/images/anchor.svg") scroll no-repeat left center / 21px 16px transparent;
+  background: url("/images/php8/anchor.svg") scroll no-repeat left center / 21px 16px transparent;
   text-decoration: none;
   border-bottom: none;
 }
