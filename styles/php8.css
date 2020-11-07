@@ -343,7 +343,7 @@
   }
 }
 
-.php8-anchor {
+.php8-h2 .genanchor {
   display: none;
   float: left;
   height: 30px;
@@ -353,8 +353,9 @@
   background: url("/images/php8/anchor.svg") scroll no-repeat left center / 21px 16px transparent;
   text-decoration: none;
   border-bottom: none;
+  font-size: 0;
 }
 
-h2:hover .php8-anchor {
+.php8-h2:hover .genanchor {
   display: block;
 }

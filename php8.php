@@ -24,7 +24,6 @@ site_header("PHP 8", array("current" => "php8", 'css' => array('php8.css')));
 <section class="php8-section center">
   <div class="php8-compare">
     <h2 class="php8-h2" id="named-arguments">
-      <a class="php8-anchor" href="#named-arguments"></a>
       Named arguments
       <a class="php8-rfc" href="https://wiki.php.net/rfc/named_params">RFC</a>
     </h2>
@@ -47,7 +46,6 @@ site_header("PHP 8", array("current" => "php8", 'css' => array('php8.css')));
 
   <div class="php8-compare">
     <h2 class="php8-h2" id="attributes">
-      <a class="php8-anchor" href="#attributes"></a>
       Attributes
       <a class="php8-rfc" href="https://wiki.php.net/rfc/attributes_v2">RFC</a>
     </h2>
@@ -76,7 +74,6 @@ class User
 
   <div class="php8-compare">
     <h2 class="php8-h2" id="constructor-property-promotion">
-      <a class="php8-anchor" href="#constructor-property-promotion"></a>
       Constructor property promotion
       <a class="php8-rfc" href="https://wiki.php.net/rfc/constructor_promotion">RFC</a>
     </h2>
@@ -119,7 +116,6 @@ class User
 
   <div class="php8-compare">
     <h2 class="php8-h2" id="union-types">
-      <a class="php8-anchor" href="#union-types"></a>
       Union types
       <a class="php8-rfc" href="https://wiki.php.net/rfc/union_types_v2">RFC</a>
     </h2>
@@ -160,7 +156,6 @@ new Number('NaN'); // TypeError</pre>
 
   <div class="php8-compare">
     <h2 class="php8-h2" id="match-expression">
-      <a class="php8-anchor" href="#match-expression"></a>
       Match expression
       <a class="php8-rfc" href="https://wiki.php.net/rfc/match_expression_v2">RFC</a>
     </h2>
@@ -196,7 +191,6 @@ echo $result;
 
   <div class="php8-compare">
     <h2 class="php8-h2" id="nullsafe-operator">
-      <a class="php8-anchor" href="#nullsafe-operator"></a>
       Nullsafe operator
       <a class="php8-rfc" href="https://wiki.php.net/rfc/nullsafe_operator">RFC</a>
     </h2>
@@ -231,7 +225,6 @@ if ($session !== null) {
 
   <div class="php8-compare">
     <h2 class="php8-h2" id="saner-string-to-number-comparisons">
-      <a class="php8-anchor" href="#saner-string-to-number-comparisons"></a>
       Saner string to number comparisons
       <a class="php8-rfc" href="https://wiki.php.net/rfc/string_to_number_comparison">RFC</a>
     </h2>
@@ -254,7 +247,6 @@ if ($session !== null) {
 
   <div class="php8-compare">
     <h2 class="php8-h2" id="consistent-type-errors-for-internal-functions">
-      <a class="php8-anchor" href="#consistent-type-errors-for-internal-functions"></a>
       Consistent type errors for internal functions
       <a class="php8-rfc" href="https://wiki.php.net/rfc/consistent_type_errors">RFC</a>
     </h2>
@@ -291,7 +283,7 @@ array_chunk([], -1); // ValueError: array_chunk(): Argument #2 ($length) must be
     <img src="/images/php8/jit.png" alt="Just-In-Time compilation">
   </p>
 
-  <h2 class="php8-h2">Other syntax tweaks and improvements</h2>
+  <h2 class="php8-h2 php8-h2_margin-top">Other syntax tweaks and improvements</h2>
   <div class="php8-columns">
     <div class="php8-column">
       <ul>
