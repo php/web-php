@@ -2,7 +2,7 @@
 $_SERVER['BASE_PAGE'] = 'php8.php';
 include_once __DIR__ . '/include/prepend.inc';
 
-site_header("PHP 8", array("current" => "php8", 'css' => array('php8.css')));
+site_header("PHP 8.0", array("current" => "php8", 'css' => array('php8.css')));
 ?>
 <section class="php8-section php8-section_dark php8-section_header center">
   <div class="php8-section__content">
@@ -254,7 +254,7 @@ if ($session !== null) {
       <div class="php8-compare__block example-contents">
         <div class="php8-compare__label">PHP 7</div>
         <div class="php8-code phpcode">
-<pre>\t\t strlen([]); // Warning: strlen() expects parameter 1 to be string, array given
+<pre>strlen([]); // Warning: strlen() expects parameter 1 to be string, array given
 
 array_chunk([], -1); // Warning: array_chunk(): Size parameter expected to be greater than 0</pre>
         </div>
