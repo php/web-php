@@ -72,17 +72,6 @@
   }
 }
 
-.php8-title__text {
-  vertical-align: middle;
-}
-
-.php8-title__img {
-  width: 0.9666666666667em;
-  height: 0.9666666666667em;
-  margin-left: 2px;
-  vertical-align: middle;
-}
-
 .php8-subtitle {
   margin-top: 48px;
   font-size: 28px;
@@ -268,6 +257,11 @@
 .php8-compare__label_new {
   background-color: #505c90;
   color: #fff;
+}
+
+.php8-compare__content {
+  text-align: left;
+  margin-top: 24px;
 }
 
 .php8-code {

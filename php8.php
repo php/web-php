@@ -9,10 +9,7 @@ site_header("PHP 8.0", array("current" => "php8", 'css' => array('php8.css')));
     <div class="php8-logo">
       <img src="/images/php8/logo_php8.svg" alt="php8" height="126" width="343">
     </div>
-    <div class="php8-title">
-      <span class="php8-title__text">released!</span>
-      <img class="php8-title__img" src="/images/php8/party-popper.png" srcset="/images/php8/party-popper@2x.png 2x, /images/php8/party-popper@2x.pngx.png 3x" alt="" width="58" height="58">
-    </div>
+    <div class="php8-title">released!</div>
     <div class="php8-subtitle">
       PHP 8.0 is a major update of the PHP language. It contains many new features and optimizations. Including named
       arguments, union types, attributes, constructor property promotion, match expression, nullsafe operator, JIT, and
@@ -42,6 +39,12 @@ site_header("PHP 8.0", array("current" => "php8", 'css' => array('php8.css')));
         </div>
       </div>
     </div>
+    <div class="php8-compare__content">
+      <ul>
+        <li>Specify only needed parameters, skipping optional ones.</li>
+        <li>Arguments are order-independent and self-documented.</li>
+      </ul>
+    </div>
   </div>
 
   <div class="php8-compare">
@@ -69,6 +72,9 @@ class User
 {</pre>
         </div>
       </div>
+    </div>
+    <div class="php8-compare__content">
+      <p>Instead of PHPDoc annotations, you can use structured metadata with native PHP syntax.</p>
     </div>
   </div>
 
@@ -112,6 +118,9 @@ class User
         </div>
       </div>
     </div>
+    <div class="php8-compare__content">
+      <p>Less boilerplate code for defining and initializing properties.</p>
+    </div>
   </div>
 
   <div class="php8-compare">
@@ -152,6 +161,10 @@ new Number('NaN'); // TypeError</pre>
         </div>
       </div>
     </div>
+    <div class="php8-compare__content">
+      <p>Instead of PHPDoc annotations for a combination of types, you can use native union types declarations that
+        are validated at runtime.</p>
+    </div>
   </div>
 
   <div class="php8-compare">
@@ -187,6 +200,14 @@ echo $result;
         </div>
       </div>
     </div>
+    <div class="php8-compare__content">
+      <p>The new match is similar to switch and has the following features:</p>
+      <ul>
+        <li>Match is an expression, meaning its result can be stored in a variable or returned.</li>
+        <li>Match arms only support single-line expressions and do not need a break; statement.</li>
+        <li>Match does strict comparisons.</li>
+      </ul>
+    </div>
   </div>
 
   <div class="php8-compare">
@@ -221,6 +242,11 @@ if ($session !== null) {
         </div>
       </div>
     </div>
+    <div class="php8-compare__content">
+      <p>Instead of null check conditions, you can now use a chain of calls with the new nullsafe operator. When the
+        evaluation of one element in the chain fails the execution of the entire chain is aborted and the entire chain
+        evaluates to null.</p>
+    </div>
   </div>
 
   <div class="php8-compare">
@@ -242,6 +268,10 @@ if ($session !== null) {
           <pre>0 == 'foobar' // false</pre>
         </div>
       </div>
+    </div>
+    <div class="php8-compare__content">
+      <p>When comparing to a numeric string, PHP 8 uses a number comparison. Otherwise, it converts the number to
+        string and uses a string comparison.</p>
     </div>
   </div>
 
@@ -268,6 +298,9 @@ array_chunk([], -1); // Warning: array_chunk(): Size parameter expected to be gr
 array_chunk([], -1); // ValueError: array_chunk(): Argument #2 ($length) must be greater than 0</pre>
         </div>
       </div>
+    </div>
+    <div class="php8-compare__content">
+      <p>Most of the internal functions now throw Fatal Error exception if parameter validation fails.</p>
     </div>
   </div>
 </section>
