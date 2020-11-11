@@ -67,6 +67,10 @@ $formats = array(
   are not complete, and contain English parts.
  </li>
  <li>
+  If you are looking for PHP 5 documentation, please read
+  <a href="/manual/php5.php">this explanation</a>.
+ </li>
+ <li>
   If you are looking for PHP 4 documentation, please read
   <a href="/manual/php4.php">this explanation</a>.
  </li>
