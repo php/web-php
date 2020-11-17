@@ -1,19 +1,42 @@
 <?php
-$_SERVER['BASE_PAGE'] = 'releases/8_0_x.php';
+$_SERVER['BASE_PAGE'] = 'releases/8_0_x_ru.php';
 include_once __DIR__ . '/../include/prepend.inc';
 
-if ($LANG !== 'ru' && file_exists('8_0_x_' . $LANG . '.php')) {
-    header("Location: /releases/8_0_x_" . $LANG . '.php');
+if ($LANG === 'en') {
+    header("Location: /releases/8_0_x.php?lang=$LANG");
+    exit();
+}
+
+if ($LANG !== 'ru' && file_exists("8_0_x_$LANG.php")) {
+    header("Location: /releases/8_0_x_$LANG.php?lang=$LANG");
+    exit();
 }
 
 site_header("PHP 8.0.0, релиз", array(
-        "current" => "php_8_0_x",
+        "current" => "php_8_0_x_ru",
         'css' => array('php8.css'),
         'meta_tags' => array(
             'og:image' => $MYSITE . 'images/php8/php_8_released.png'
         )
 ));
 ?>
+
+<section>
+    <div class="page-tools">
+        <div class="change-language">
+            <form action="" method="get" id="changelang" name="changelang">
+                <fieldset>
+                    <label for="changelang-langs">Change language:</label>
+                    <select onchange="document.changelang.submit()" name="lang" id="changelang-langs">
+                        <option value="en">English</option>
+                        <option value="ru" selected>Русский</option>
+                    </select>
+                </fieldset>
+            </form>
+        </div>
+    </div>
+</section>
+
 <section class="php8-section php8-section_dark php8-section_header center">
   <div class="php8-section__content">
     <div class="php8-logo">
