@@ -17,9 +17,9 @@ site_header("PHP 8.0.0 Release Announcement", array(
     </div>
     <div class="php8-title">released!</div>
     <div class="php8-subtitle">
-      PHP 8.0 is a major update of the PHP language.<br class="display-none-md"> It contains many new features and optimizations. Including named
-      arguments, union types, attributes, constructor property promotion, match expression, nullsafe operator, JIT, and
-      improvements in type system, error handling, and consistency.
+      PHP 8.0 is a major update of the PHP language.<br class="display-none-md"> It contains many new features and
+      optimizations including named arguments, union types, attributes, constructor property promotion, match
+      expression, nullsafe operator, JIT, and improvements in the type system, error handling, and consistency.
     </div>
     <div class="php8-button-wrapper center">
       <a class="php8-button php8-button_light" href="#">Go update to PHP 8!</a>
@@ -50,7 +50,7 @@ site_header("PHP 8.0.0 Release Announcement", array(
     </div>
     <div class="php8-compare__content">
       <ul>
-        <li>Specify only needed parameters, skipping optional ones.</li>
+        <li>Specify only required parameters, skipping optional ones.</li>
         <li>Arguments are order-independent and self-documented.</li>
       </ul>
     </div>
@@ -83,7 +83,7 @@ class User
       </div>
     </div>
     <div class="php8-compare__content">
-      <p>Instead of PHPDoc annotations, you can use structured metadata with native PHP syntax.</p>
+      <p>Instead of PHPDoc annotations, you can now use structured metadata with native PHP syntax.</p>
     </div>
   </div>
 
@@ -171,8 +171,8 @@ new Number('NaN'); // TypeError</pre>
       </div>
     </div>
     <div class="php8-compare__content">
-      <p>Instead of PHPDoc annotations for a combination of types, you can use native union types declarations that
-        are validated at runtime.</p>
+      <p>Instead of PHPDoc annotations for a combination of types, you can use native union type declarations that are
+        validated at runtime.</p>
     </div>
   </div>
 
@@ -213,7 +213,7 @@ echo $result;
       <p>The new match is similar to switch and has the following features:</p>
       <ul>
         <li>Match is an expression, meaning its result can be stored in a variable or returned.</li>
-        <li>Match arms only support single-line expressions and do not need a break; statement.</li>
+        <li>Match branches only support single-line expressions and do not need a break; statement.</li>
         <li>Match does strict comparisons.</li>
       </ul>
     </div>
@@ -253,7 +253,7 @@ if ($session !== null) {
     </div>
     <div class="php8-compare__content">
       <p>Instead of null check conditions, you can now use a chain of calls with the new nullsafe operator. When the
-        evaluation of one element in the chain fails the execution of the entire chain is aborted and the entire chain
+        evaluation of one element in the chain fails, the execution of the entire chain is aborted and the entire chain
         evaluates to null.</p>
     </div>
   </div>
@@ -279,7 +279,7 @@ if ($session !== null) {
       </div>
     </div>
     <div class="php8-compare__content">
-      <p>When comparing to a numeric string, PHP 8 uses a number comparison. Otherwise, it converts the number to
+      <p>When comparing to a numeric string, PHP 8 uses a number comparison. Otherwise, it converts the number to a
         string and uses a string comparison.</p>
     </div>
   </div>
@@ -309,7 +309,7 @@ array_chunk([], -1); // ValueError: array_chunk(): Argument #2 ($length) must be
       </div>
     </div>
     <div class="php8-compare__content">
-      <p>Most of the internal functions now throw Fatal Error exception if parameter validation fails.</p>
+      <p>Most of the internal functions now throw a Fatal Error exception if parameter validation fails.</p>
     </div>
   </div>
 </section>
@@ -317,9 +317,9 @@ array_chunk([], -1); // ValueError: array_chunk(): Argument #2 ($length) must be
 <section class="php8-section php8-section_light">
   <h2 class="php8-h2">Just-In-Time compilation</h2>
   <p>
-    PHP 8 introduces two JIT compilation engines. The more promising, tracing JIT shows about 3 times speed-up on
-    synthetic benchmarks and 1.5-2 times improvement on some specific long-running apps. Typical apps performance is on
-    par with PHP 7.4.
+    PHP 8 introduces two JIT compilation engines. Tracing JIT, the most promising of the two, shows about 3 times better
+    performance on synthetic benchmarks and 1.5–2 times improvement on some specific long-running applications. Typical
+    application performance is on par with PHP 7.4.
   </p>
   <p>
     <img src="/images/php8/jit.png" alt="Just-In-Time compilation">
@@ -331,26 +331,26 @@ array_chunk([], -1); // ValueError: array_chunk(): Argument #2 ($length) must be
       <ul>
         <li>
           Allow trailing comma in parameter list <a href="https://wiki.php.net/rfc/trailing_comma_in_parameter_list">RFC</a>
-          and closure use lists <a href="https://wiki.php.net/rfc/trailing_comma_in_closure_use_list">RFC</a>
+          and closure use lists <a href="https://wiki.php.net/rfc/trailing_comma_in_closure_use_list">RFC</a>.
         </li>
         <li>
-          Non-capturing catches <a href="http://TODO">RFC</a>
+          Non-capturing catches <a href="http://TODO">RFC</a>.
         </li>
         <li>
-          Variable Syntax Tweaks <a href="https://wiki.php.net/rfc/variable_syntax_tweaks">RFC</a>
+          Variable Syntax Tweaks <a href="https://wiki.php.net/rfc/variable_syntax_tweaks">RFC</a>.
         </li>
       </ul>
     </div>
     <div class="php8-column">
       <ul>
         <li>
-          Treat namespaced names as single token <a href="https://wiki.php.net/rfc/namespaced_names_as_token">RFC</a>
+          Treat namespaced names as single token <a href="https://wiki.php.net/rfc/namespaced_names_as_token">RFC</a>.
         </li>
         <li>
-          Throw expression <a href="https://wiki.php.net/rfc/throw_expression">RFC</a>
+          Throw expression <a href="https://wiki.php.net/rfc/throw_expression">RFC</a>.
         </li>
         <li>
-          Allow ::class on objects <a href="https://wiki.php.net/rfc/class_name_literal_on_object">RFC</a>
+          Allow ::class on objects <a href="https://wiki.php.net/rfc/class_name_literal_on_object">RFC</a>.
         </li>
       </ul>
     </div>
@@ -360,43 +360,43 @@ array_chunk([], -1); // ValueError: array_chunk(): Argument #2 ($length) must be
       <h2 class="php8-h2 php8-h2_margin-top">Type system and error handling improvements</h2>
       <ul>
         <li>
-          Saner string to number comparisons <a href="https://wiki.php.net/rfc/string_to_number_comparison">RFC</a>
+          Saner string to number comparisons <a href="https://wiki.php.net/rfc/string_to_number_comparison">RFC</a>.
         </li>
         <li>
           Stricter type checks for arithmetic/bitwise operators
-          <a href="https://wiki.php.net/rfc/arithmetic_operator_type_checks">RFC</a>
+          <a href="https://wiki.php.net/rfc/arithmetic_operator_type_checks">RFC</a>.
         </li>
         <li>
-          Abstract trait method validation <a href="http://TODO">RFC</a>
+          Abstract trait method validation <a href="http://TODO">RFC</a>.
         </li>
         <li>
           Correct signatures of magic methods <a href="https://wiki.php.net/rfc/magic-methods-signature">RFC</a>
         </li>
         <li>
-          Reclassified engine warnings <a href="https://wiki.php.net/rfc/engine_warnings">RFC</a>
+          Reclassified engine warnings <a href="https://wiki.php.net/rfc/engine_warnings">RFC</a>.
         </li>
         <li>
-          Fatal error for incompatible method signatures <a href="https://wiki.php.net/rfc/lsp_errors">RFC</a>
+          Fatal error for incompatible method signatures <a href="https://wiki.php.net/rfc/lsp_errors">RFC</a>.
         </li>
         <li>
-          The @ operator no longer silences fatal errors
+          The @ operator no longer silences fatal errors.
         </li>
         <li>
-          Inheritance with private methods <a href="https://wiki.php.net/rfc/inheritance_private_methods">RFC</a>
+          Inheritance with private methods <a href="https://wiki.php.net/rfc/inheritance_private_methods">RFC</a>.
         </li>
         <li>
-          Mixed type <a href="https://wiki.php.net/rfc/mixed_type_v2">RFC</a>
+          Mixed type <a href="https://wiki.php.net/rfc/mixed_type_v2">RFC</a>.
         </li>
         <li>
-          Static return type <a href="">RFC</a>
+          Static return type <a href="">RFC</a>.
         </li>
         <li>
           Types for internal functions
-          <a href="https://externals.io/message/106522">RFC</a>
+          <a href="https://externals.io/message/106522">RFC</a>.
         </li>
         <li>
           Curl objects instead of resources
-          <a href="https://php.watch/versions/8.0/resource-CurlHandle">RFC</a>
+          <a href="https://php.watch/versions/8.0/resource-CurlHandle">RFC</a>.
         </li>
       </ul>
     </div>
@@ -436,20 +436,20 @@ array_chunk([], -1); // ValueError: array_chunk(): Argument #2 ($length) must be
     <h2 class="php8-h2 center">
       Get free performance improvement.<br class="display-none-lg display-block-md">
       Get better syntax.<br class="display-block-lg display-none-md display-block-sm">
-      Get more strictness.
+      Get more type safety.
     </h2>
     <div class="php8-button-wrapper center">
       <a class="php8-button php8-button_light" href="#">Go update to PHP 8!</a>
     </div>
     <div class="php8-footer__content">
       <p>
-        For source downloads of PHP 8 please visit our <a href="http://www.php.net/downloads">downloads</a> page.
+        For source downloads of PHP 8 please visit the <a href="http://www.php.net/downloads">downloads</a> page.
         Windows binaries can be found on the <a href="http://windows.php.net/download">PHP for Windows</a> site.
         The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-8.php">ChangeLog</a>.
       </p>
       <p>
         The <a href="http://php.net/manual/en/migration8.php">migration guide</a> is available in the PHP Manual. Please
-        consult it for the detailed list of new features and backward-incompatible changes.
+        consult it for a detailed list of new features and backward-incompatible changes.
       </p>
     </div>
   </div>
