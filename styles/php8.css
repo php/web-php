@@ -25,6 +25,10 @@
   margin: 0 auto;
 }
 
+.php8-section_header .php8-section__content {
+  width: 1050px;
+}
+
 .php8-section_dark * {
   color: #fff;
 }
@@ -115,7 +119,7 @@
 }
 
 .php8-button-wrapper {
-  margin-top: 34px;
+  margin-top: 48px;
 }
 
 .php8-button {
@@ -260,8 +264,16 @@
 }
 
 .php8-compare__content {
-  text-align: left;
+  display: inline-block;
+  max-width: 820px;
   margin-top: 24px;
+  text-align: left;
+}
+
+@media (max-width: 810px) {
+  .php8-compare__content {
+    display: block;
+  }
 }
 
 .php8-code {
