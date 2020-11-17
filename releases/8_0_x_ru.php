@@ -2,11 +2,11 @@
 $_SERVER['BASE_PAGE'] = 'releases/8_0_x.php';
 include_once __DIR__ . '/../include/prepend.inc';
 
-if ($LANG !== 'en' && file_exists('8_0_x_' . $LANG . '.php')) {
+if ($LANG !== 'ru' && file_exists('8_0_x_' . $LANG . '.php')) {
     header("Location: /releases/8_0_x_" . $LANG . '.php');
 }
 
-site_header("PHP 8.0.0 Release Announcement", array(
+site_header("PHP 8.0.0, релиз", array(
         "current" => "php_8_0_x",
         'css' => array('php8.css'),
         'meta_tags' => array(
@@ -19,14 +19,14 @@ site_header("PHP 8.0.0 Release Announcement", array(
     <div class="php8-logo">
       <img src="/images/php8/logo_php8.svg" alt="php8" height="126" width="343">
     </div>
-    <div class="php8-title">released!</div>
+    <div class="php8-title">релизнут!</div>
     <div class="php8-subtitle">
-      PHP 8.0 is a major update of the PHP language.<br class="display-none-md"> It contains many new features and
-      optimizations including named arguments, union types, attributes, constructor property promotion, match
-      expression, nullsafe operator, JIT, and improvements in the type system, error handling, and consistency.
+      PHP 8.0 — большое обновление PHP.<br class="display-none-md"> Оно содержит множество новых возможностей и
+      оптимизаций, включая именованные аргументы, union type, атрибуты, constructor property promotion, выражение match,
+      nullsafe оператор, JIT и улучшения в системе типов, обработке ошибок и консистентности.
     </div>
     <div class="php8-button-wrapper center">
-      <a class="php8-button php8-button_light" href="#">Go update to PHP 8!</a>
+      <a class="php8-button php8-button_light" href="#">Переходите на PHP 8!</a>
     </div>
   </div>
 </section>
@@ -34,7 +34,7 @@ site_header("PHP 8.0.0 Release Announcement", array(
 <section class="php8-section center">
   <div class="php8-compare">
     <h2 class="php8-h2" id="named-arguments">
-      Named arguments
+      Именованные аргументы
       <a class="php8-rfc" href="https://wiki.php.net/rfc/named_params">RFC</a>
     </h2>
     <div class="php8-compare__main">
@@ -54,15 +54,15 @@ site_header("PHP 8.0.0 Release Announcement", array(
     </div>
     <div class="php8-compare__content">
       <ul>
-        <li>Specify only required parameters, skipping optional ones.</li>
-        <li>Arguments are order-independent and self-documented.</li>
+        <li>Указывайте только необходимые параметры, пропускайте опциональные.</li>
+        <li>Порядок аргументов не важен, аргументы самодокументируемы.</li>
       </ul>
     </div>
   </div>
 
   <div class="php8-compare">
     <h2 class="php8-h2" id="attributes">
-      Attributes
+      Атрибуты
       <a class="php8-rfc" href="https://wiki.php.net/rfc/attributes_v2">RFC</a>
     </h2>
     <div class="php8-compare__main">
@@ -87,7 +87,7 @@ class User
       </div>
     </div>
     <div class="php8-compare__content">
-      <p>Instead of PHPDoc annotations, you can now use structured metadata with native PHP syntax.</p>
+      <p>Вместо аннотаций PHPDoc вы можете использовать структурные метаданные в с нативным PHP синтаксисом.</p>
     </div>
   </div>
 
@@ -443,7 +443,7 @@ array_chunk([], -1); // ValueError: array_chunk(): Argument #2 ($length) must be
       Get more type safety.
     </h2>
     <div class="php8-button-wrapper center">
-      <a class="php8-button php8-button_light" href="#">Go update to PHP 8!</a>
+      <a class="php8-button php8-button_light" href="#">Переходите на PHP 8!</a>
     </div>
     <div class="php8-footer__content">
       <p>
