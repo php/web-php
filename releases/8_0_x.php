@@ -2,7 +2,13 @@
 $_SERVER['BASE_PAGE'] = 'releases/8_0_x.php';
 include_once __DIR__ . '/../include/prepend.inc';
 
-site_header("PHP 8.0.0 Release Announcement", array("current" => "php_8_0_x", 'css' => array('php8.css')));
+site_header("PHP 8.0.0 Release Announcement", array(
+        "current" => "php_8_0_x",
+        'css' => array('php8.css'),
+        'meta_tags' => array(
+            'og:image' => $MYSITE . 'images/php8/php_8_released.png'
+        )
+));
 ?>
 <section class="php8-section php8-section_dark php8-section_header center">
   <div class="php8-section__content">
