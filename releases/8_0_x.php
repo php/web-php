@@ -1,8 +1,8 @@
 <?php
-$_SERVER['BASE_PAGE'] = 'php8.php';
-include_once __DIR__ . '/include/prepend.inc';
+$_SERVER['BASE_PAGE'] = 'releases/8_0_x.php';
+include_once __DIR__ . '/../include/prepend.inc';
 
-site_header("PHP 8.0", array("current" => "php8", 'css' => array('php8.css')));
+site_header("PHP 8.0.0 Release Announcement", array("current" => "php_8_0_x", 'css' => array('php8.css')));
 ?>
 <section class="php8-section php8-section_dark php8-section_header center">
   <div class="php8-section__content">
@@ -11,9 +11,12 @@ site_header("PHP 8.0", array("current" => "php8", 'css' => array('php8.css')));
     </div>
     <div class="php8-title">released!</div>
     <div class="php8-subtitle">
-      PHP 8.0 is a major update of the PHP language. It contains many new features and optimizations. Including named
+      PHP 8.0 is a major update of the PHP language.<br class="display-none-md"> It contains many new features and optimizations. Including named
       arguments, union types, attributes, constructor property promotion, match expression, nullsafe operator, JIT, and
       improvements in type system, error handling, and consistency.
+    </div>
+    <div class="php8-button-wrapper center">
+      <a class="php8-button php8-button_light" href="#">Go update to PHP 8!</a>
     </div>
   </div>
 </section>
