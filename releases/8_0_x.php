@@ -3,8 +3,7 @@ $_SERVER['BASE_PAGE'] = 'releases/8_0_x.php';
 include_once __DIR__ . '/../include/prepend.inc';
 
 if ($LANG !== 'en' && file_exists("8_0_x_$LANG.php")) {
-    header("Location: /releases/8_0_x_$LANG.php?lang=$LANG");
-    exit();
+    mirror_redirect("/releases/8_0_x_$LANG.php?lang=$LANG");
 }
 
 site_header("PHP 8.0.0 Release Announcement", array(
@@ -18,15 +17,7 @@ site_header("PHP 8.0.0 Release Announcement", array(
 <section>
     <div class="page-tools">
         <div class="change-language">
-            <form action="" method="get" id="changelang" name="changelang">
-                <fieldset>
-                    <label for="changelang-langs">Change language:</label>
-                    <select onchange="document.changelang.submit()" name="lang" id="changelang-langs">
-                        <option value="en" selected>English</option>
-                        <option value="ru">Русский</option>
-                    </select>
-                </fieldset>
-            </form>
+            <?php echo release_language_chooser($LANG); ?>
         </div>
     </div>
 </section>
