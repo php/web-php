@@ -38,6 +38,7 @@
 }
 
 .php8-section_header {
+  position: relative;
   padding-top: 64px;
   margin-top: -1.5rem;
   font-family: Helvetica, Arial, sans-serif;
@@ -364,4 +365,60 @@
 
 .php8-h2:hover .genanchor {
   display: block;
+}
+
+.page-tools {
+  position: absolute;
+  top: 28px;
+  right: 28px;
+}
+
+@media (max-width: 1000px) {
+  .page-tools {
+    top: 16px;
+    right: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .page-tools {
+    top: 0;
+  }
+}
+
+.change-language {
+  font-size: 15px;
+  color: #fff;
+  line-height: 1.6;
+}
+
+.change-language label {
+  display: inline-block;
+  margin-left: 16px;
+  vertical-align: middle;
+}
+
+@media (max-width: 480px) {
+  .change-language label {
+    margin-top: 8px;
+  }
+}
+
+.change-language select {
+  min-width: 178px;
+  margin-left: 16px;
+  vertical-align: middle;
+}
+
+@media (max-width: 480px) {
+  .change-language select {
+    margin-top: 8px;
+  }
+}
+
+.change-language select,
+.change-language option {
+  padding: 4px 5px;
+  color: rgba(39, 40, 44, 0.7);
+  line-height: 1.33;
 }

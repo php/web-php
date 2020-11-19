@@ -20,16 +20,12 @@ site_header("PHP 8.0.0, релиз", array(
         )
 ));
 ?>
-
-<section>
-    <div class="page-tools">
-        <div class="change-language">
-            <?php echo release_language_chooser($LANG); ?>
-        </div>
-    </div>
-</section>
-
 <section class="php8-section php8-section_dark php8-section_header center">
+  <div class="page-tools">
+    <div class="change-language">
+        <?php echo release_language_chooser($LANG); ?>
+    </div>
+  </div>
   <div class="php8-section__content">
     <div class="php8-logo">
       <img src="/images/php8/logo_php8.svg" alt="php8" height="126" width="343">
