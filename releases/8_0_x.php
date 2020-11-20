@@ -440,9 +440,7 @@ array_chunk([], -1); // ValueError: array_chunk(): Argument #2 ($length) must be
 <section class="php8-section php8-section_dark php8-section_footer php8-footer">
   <div class="php8-section__content">
     <h2 class="php8-h2 center">
-      Get free performance improvement.<br class="display-none-lg display-block-md">
-      Get better syntax.<br class="display-block-lg display-none-md display-block-sm">
-      Get more type safety.
+      Better performance, better syntax, improved type safety.
     </h2>
     <div class="php8-button-wrapper center">
       <a class="php8-button php8-button_light" href="#">Go update to PHP 8!</a>
