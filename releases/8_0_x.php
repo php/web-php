@@ -46,14 +46,20 @@ site_header("PHP 8.0.0 Release Announcement", array(
       <div class="php8-compare__block example-contents">
         <div class="php8-compare__label">PHP 7</div>
         <div class="php8-code phpcode">
-          <pre>htmlspecialchars($string, ENT_COMPAT | ENT_HTML401, 'UTF-8', false);</pre>
+            <?php highlight_php_trimmed(
+                'htmlspecialchars($string, ENT_COMPAT | ENT_HTML401, \'UTF-8\', false);'
+            );?>
         </div>
+
+
       </div>
       <div class="php8-compare__arrow"></div>
       <div class="php8-compare__block example-contents">
         <div class="php8-compare__label php8-compare__label_new">PHP 8</div>
         <div class="php8-code phpcode">
-          <pre>htmlspecialchars($string, double_encode: false);</pre>
+            <?php highlight_php_trimmed(
+                'htmlspecialchars($string, double_encode: false);'
+            );?>
         </div>
       </div>
     </div>
