@@ -33,8 +33,8 @@ site_header("PHP 8.0.0, релиз", array(
     <div class="php8-title">релизнут!</div>
     <div class="php8-subtitle">
       PHP 8.0 — большое обновление PHP.<br class="display-none-md"> Оно содержит множество новых возможностей и
-      оптимизаций, включая именованные аргументы, union type, атрибуты, constructor property promotion, выражение match,
-      nullsafe оператор, JIT и улучшения в системе типов, обработке ошибок и консистентности.
+      оптимизаций, включая именованные аргументы, union type, атрибуты, упрощённое определение свойств в конструкторе, выражение match,
+      оператор nullsafe, JIT и улучшения в системе типов, обработке ошибок и консистентности.
     </div>
     <div class="php8-button-wrapper center">
       <a class="php8-button php8-button_light" href="#">Переходите на PHP 8!</a>
@@ -65,7 +65,7 @@ site_header("PHP 8.0.0, релиз", array(
     </div>
     <div class="php8-compare__content">
       <ul>
-        <li>Указывайте только необходимые параметры, пропускайте опциональные.</li>
+        <li>Указывайте только необходимые параметры, пропускайте необязательные.</li>
         <li>Порядок аргументов не важен, аргументы самодокументируемы.</li>
       </ul>
     </div>
@@ -98,13 +98,13 @@ class User
       </div>
     </div>
     <div class="php8-compare__content">
-      <p>Вместо аннотаций PHPDoc вы можете использовать структурные метаданные в с нативным PHP синтаксисом.</p>
+      <p>Вместо аннотаций PHPDoc вы можете использовать структурные метаданные с нативным синтаксисом PHP.</p>
     </div>
   </div>
 
   <div class="php8-compare">
     <h2 class="php8-h2" id="constructor-property-promotion">
-      Constructor property promotion
+      Упрощённое определение свойств в конструкторе
       <a class="php8-rfc" href="https://wiki.php.net/rfc/constructor_promotion">RFC</a>
     </h2>
     <div class="php8-compare__main">
@@ -168,7 +168,7 @@ class User
  }
 }
 
-new Number('NaN'); // Ok</pre>
+new Number('NaN'); // Нет ошибки</pre>
         </div>
       </div>
       <div class="php8-compare__arrow"></div>
@@ -218,7 +218,7 @@ echo $result;
         <div class="php8-code phpcode">
 <pre>echo match (8.0) {
  '8.0' => "О нет!",
- 8.0 => "This is what I expected",
+ 8.0 => "То, что я и ожидал",
 };
 //> То, что я и ожидал</pre>
         </div>
@@ -227,9 +227,9 @@ echo $result;
     <div class="php8-compare__content">
       <p>Новое выражение match похоже на оператор switch со следующими особенностями:</p>
       <ul>
-        <li>Match — это выражение, его результат может быть сохранен в переменной или возвращён.</li>
+        <li>Match — это выражение, его результат может быть сохранён в переменной или возвращён.</li>
         <li>Условия match поддерживают только однострочные выражения, для которых не требуется управляющая конструкция break;.</li>
-        <li>Выражение match использует строге сравнение.</li>
+        <li>Выражение match использует строгое сравнение.</li>
       </ul>
     </div>
   </div>
@@ -359,7 +359,7 @@ array_chunk([], -1); // ValueError: array_chunk(): Argument #2 ($length) must be
     <div class="php8-column">
       <ul>
         <li>
-          Treat namespaced names as single token <a href="https://wiki.php.net/rfc/namespaced_names_as_token">RFC</a>.
+          Имена в пространстве имен рассматриваются как единый токен <a href="https://wiki.php.net/rfc/namespaced_names_as_token">RFC</a>.
         </li>
         <li>
           Выражение Throw <a href="https://wiki.php.net/rfc/throw_expression">RFC</a>.
@@ -455,10 +455,10 @@ array_chunk([], -1); // ValueError: array_chunk(): Argument #2 ($length) must be
       <p>
         Для загрузки исходного кода PHP 8 посетите страницу <a href="http://www.php.net/downloads">downloads</a>.
         Бинарные файлы Windows находятся на сайте <a href="http://windows.php.net/download">PHP для Windows</a>.
-        Список изменений представлен в  <a href="http://www.php.net/ChangeLog-8.php">ChangeLog</a>.
+        Список изменений представлен в <a href="http://www.php.net/ChangeLog-8.php">ChangeLog</a>.
       </p>
       <p>
-        <a href="http://php.net/manual/ru/migration8.php">Руководство по миграции </a> доступно в разделе документация. Пожалуйста,
+        <a href="http://php.net/manual/ru/migration8.php">Руководство по миграции</a> доступно в разделе документация. Пожалуйста,
         изучите его для получения подробного списка новых функций и обратно несовместимых изменений.
       </p>
     </div>
