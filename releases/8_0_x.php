@@ -343,7 +343,7 @@ array_chunk([], -1); // ValueError: array_chunk(): Argument #2 ($length) must be
           and closure use lists <a href="https://wiki.php.net/rfc/trailing_comma_in_closure_use_list">RFC</a>.
         </li>
         <li>
-          Non-capturing catches <a href="http://TODO">RFC</a>.
+          Non-capturing catches <a href="https://wiki.php.net/rfc/non-capturing_catches">RFC</a>.
         </li>
         <li>
           Variable Syntax Tweaks <a href="https://wiki.php.net/rfc/variable_syntax_tweaks">RFC</a>.
@@ -369,14 +369,11 @@ array_chunk([], -1); // ValueError: array_chunk(): Argument #2 ($length) must be
       <h2 class="php8-h2 php8-h2_margin-top">Type system and error handling improvements</h2>
       <ul>
         <li>
-          Saner string to number comparisons <a href="https://wiki.php.net/rfc/string_to_number_comparison">RFC</a>.
-        </li>
-        <li>
           Stricter type checks for arithmetic/bitwise operators
           <a href="https://wiki.php.net/rfc/arithmetic_operator_type_checks">RFC</a>.
         </li>
         <li>
-          Abstract trait method validation <a href="http://TODO">RFC</a>.
+          Abstract trait method validation <a href="https://wiki.php.net/rfc/abstract_trait_method_validation">RFC</a>.
         </li>
         <li>
           Correct signatures of magic methods <a href="https://wiki.php.net/rfc/magic-methods-signature">RFC</a>
