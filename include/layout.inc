@@ -46,6 +46,17 @@ function highlight_php($code, $return = FALSE)
     else { echo $highlighted; }
 }
 
+// Same as highlight_php() but does not require '<?php' in $code
+function highlight_php_trimmed($code, $return = false)
+{
+    $code = "<?php\n" . $code;
+    $highlighted_code = highlight_php($code, true);
+    $highlighted_code = preg_replace("/\&lt;\?php(\<br \/\>)+/", '', $highlighted_code, 1);
+
+    if ($return) { return $highlighted_code; }
+    else { echo $highlighted_code; }
+}
+
 // Stats pages still need this
 function commonHeader($title) { site_header($title); }
 
