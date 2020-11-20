@@ -332,8 +332,8 @@ array_chunk([], -1); // ValueError: array_chunk(): Argument #2 ($length) must be
 <section class="php8-section php8-section_light">
   <h2 class="php8-h2">Компиляция Just-In-Time</h2>
   <p>
-    PHP 8 представляет два механизма JIT-компиляции. Трассировка JIT, наиболее перспективная из них, на синтетических бенчмарках показывает 
-    улучшение производительности примерно в 3 раза и в 1,5–2 раза на некоторых долго работающих приложениях. Стандартная 
+    PHP 8 представляет два механизма JIT-компиляции. Трассировка JIT, наиболее перспективная из них, на синтетических бенчмарках показывает
+    улучшение производительности примерно в 3 раза и в 1,5–2 раза на некоторых долго работающих приложениях. Стандартная
     производительность приложения находится на одном уровне с PHP 7.4.
   </p>
   <p>
@@ -345,8 +345,8 @@ array_chunk([], -1); // ValueError: array_chunk(): Argument #2 ($length) must be
     <div class="php8-column">
       <ul>
         <li>
-          Allow trailing comma in parameter list <a href="https://wiki.php.net/rfc/trailing_comma_in_parameter_list">RFC</a>
-          and closure use lists <a href="https://wiki.php.net/rfc/trailing_comma_in_closure_use_list">RFC</a>.
+          Разрешена запятая в конце списка параметров <a href="https://wiki.php.net/rfc/trailing_comma_in_parameter_list">RFC</a>
+          и в списке use замыканий <a href="https://wiki.php.net/rfc/trailing_comma_in_closure_use_list">RFC</a>.
         </li>
         <li>
           Блок catch без указания переменной <a href="https://wiki.php.net/rfc/non-capturing_catches">RFC</a>.
@@ -394,20 +394,20 @@ array_chunk([], -1); // ValueError: array_chunk(): Argument #2 ($length) must be
           Оператор @ больше не подавляет фатальные ошибки.
         </li>
         <li>
-          Inheritance with private methods <a href="https://wiki.php.net/rfc/inheritance_private_methods">RFC</a>.
+          Наследование с private методами <a href="https://wiki.php.net/rfc/inheritance_private_methods">RFC</a>.
         </li>
         <li>
-          Mixed type <a href="https://wiki.php.net/rfc/mixed_type_v2">RFC</a>.
+          Новый тип mixed <a href="https://wiki.php.net/rfc/mixed_type_v2">RFC</a>.
         </li>
         <li>
           Возвращаемый тип static <a href="https://wiki.php.net/rfc/static_return_type">RFC</a>.
         </li>
         <li>
-          Types for internal functions
+          Типы для стандартных функций
           <a href="https://externals.io/message/106522">RFC</a>.
         </li>
         <li>
-          Curl objects instead of resources
+          Объекты вместо ресурсов для cURL
           <a href="https://php.watch/versions/8.0/resource-CurlHandle">RFC</a>.
         </li>
       </ul>
@@ -446,9 +446,7 @@ array_chunk([], -1); // ValueError: array_chunk(): Argument #2 ($length) must be
 <section class="php8-section php8-section_dark php8-section_footer php8-footer">
   <div class="php8-section__content">
     <h2 class="php8-h2 center">
-      Бесплатное улучшение производительности.<br class="display-none-lg display-block-md">
-      Улучшенный синтаксис.<br class="display-block-lg display-none-md display-block-sm">
-      Повышение безопасности типов.
+      Выше производительность, лучше синтаксис, надежнее система типов.
     </h2>
     <div class="php8-button-wrapper center">
       <a class="php8-button php8-button_light" href="#">Переходите на PHP 8!</a>
