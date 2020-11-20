@@ -362,7 +362,7 @@ array_chunk([], -1); // ValueError: array_chunk(): Argument #2 ($length) must be
           Treat namespaced names as single token <a href="https://wiki.php.net/rfc/namespaced_names_as_token">RFC</a>.
         </li>
         <li>
-          Throw expression <a href="https://wiki.php.net/rfc/throw_expression">RFC</a>.
+          Выражение Throw <a href="https://wiki.php.net/rfc/throw_expression">RFC</a>.
         </li>
         <li>
           Добавление ::class для объектов <a href="https://wiki.php.net/rfc/class_name_literal_on_object">RFC</a>.
@@ -374,9 +374,6 @@ array_chunk([], -1); // ValueError: array_chunk(): Argument #2 ($length) must be
     <div class="php8-column">
       <h2 class="php8-h2 php8-h2_margin-top">Улучшения в системе типов и обработке ошибок</h2>
       <ul>
-        <li>
-          Улучшенное сравнение строк и чисел <a href="https://wiki.php.net/rfc/string_to_number_comparison">RFC</a>.
-        </li>
         <li>
           Более строгие проверки типов для арифметических/побитовых операторов
           <a href="https://wiki.php.net/rfc/arithmetic_operator_type_checks">RFC</a>.
@@ -458,9 +455,9 @@ array_chunk([], -1); // ValueError: array_chunk(): Argument #2 ($length) must be
     </div>
     <div class="php8-footer__content">
       <p>
-        For source downloads of PHP 8 please visit the <a href="http://www.php.net/downloads">downloads</a> page.
+        Для загрузки исходного кода PHP 8 посетите страницу <a href="http://www.php.net/downloads">downloads</a>.
         Бинарные файлы Windows находятся на сайте <a href="http://windows.php.net/download">PHP для Windows</a>.
-        The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-8.php">ChangeLog</a>.
+        Список изменений представлен в  <a href="http://www.php.net/ChangeLog-8.php">ChangeLog</a>.
       </p>
       <p>
         <a href="http://php.net/manual/ru/migration8.php">Руководство по миграции </a> доступно в разделе документация. Пожалуйста,
