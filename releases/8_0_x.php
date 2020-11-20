@@ -98,7 +98,7 @@ class User
       </div>
     </div>
     <div class="php8-compare__content">
-      <p>Instead of PHPDoc annotations, you can now use structured metadata with native PHP syntax.</p>
+      <p>Instead of PHPDoc annotations, you can now use structured metadata with PHP's native syntax.</p>
     </div>
   </div>
 
@@ -143,7 +143,7 @@ class User
       </div>
     </div>
     <div class="php8-compare__content">
-      <p>Less boilerplate code for defining and initializing properties.</p>
+      <p>Less boilerplate code to define and initialize properties.</p>
     </div>
   </div>
 
@@ -268,7 +268,7 @@ if ($session !== null) {
     </div>
     <div class="php8-compare__content">
       <p>Instead of null check conditions, you can now use a chain of calls with the new nullsafe operator. When the
-        evaluation of one element in the chain fails, the execution of the entire chain is aborted and the entire chain
+        evaluation of one element in the chain fails, the execution of the entire chain aborts and the entire chain
         evaluates to null.</p>
     </div>
   </div>
@@ -324,7 +324,7 @@ array_chunk([], -1); // ValueError: array_chunk(): Argument #2 ($length) must be
       </div>
     </div>
     <div class="php8-compare__content">
-      <p>Most of the internal functions now throw a Fatal Error exception if parameter validation fails.</p>
+      <p>Most of the internal functions now throw a Fatal Error exception if the validation of the parameters fails.</p>
     </div>
   </div>
 </section>
@@ -345,7 +345,7 @@ array_chunk([], -1); // ValueError: array_chunk(): Argument #2 ($length) must be
     <div class="php8-column">
       <ul>
         <li>
-          Allow trailing comma in parameter list <a href="https://wiki.php.net/rfc/trailing_comma_in_parameter_list">RFC</a>
+          Allow a trailing comma in parameter lists <a href="https://wiki.php.net/rfc/trailing_comma_in_parameter_list">RFC</a>
           and closure use lists <a href="https://wiki.php.net/rfc/trailing_comma_in_closure_use_list">RFC</a>.
         </li>
         <li>
@@ -362,7 +362,7 @@ array_chunk([], -1); // ValueError: array_chunk(): Argument #2 ($length) must be
           Treat namespaced names as single token <a href="https://wiki.php.net/rfc/namespaced_names_as_token">RFC</a>.
         </li>
         <li>
-          Throw expression <a href="https://wiki.php.net/rfc/throw_expression">RFC</a>.
+          Throw is now an expression <a href="https://wiki.php.net/rfc/throw_expression">RFC</a>.
         </li>
         <li>
           Allow ::class on objects <a href="https://wiki.php.net/rfc/class_name_literal_on_object">RFC</a>.
@@ -400,7 +400,7 @@ array_chunk([], -1); // ValueError: array_chunk(): Argument #2 ($length) must be
           Mixed type <a href="https://wiki.php.net/rfc/mixed_type_v2">RFC</a>.
         </li>
         <li>
-          Static return type <a href="">RFC</a>.
+          Static return type <a href="https://wiki.php.net/rfc/static_return_type">RFC</a>.
         </li>
         <li>
           Types for internal functions
