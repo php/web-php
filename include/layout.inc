@@ -698,7 +698,7 @@ function doc_toc_title($lang, $index, $file, $elm = "dt") {
 function release_language_chooser($currentlang) {
     $LANGUAGES = array(
         'en'    => 'English',
-//        'pt_BR' => 'Brazilian Portuguese',
+        'pt_BR' => 'Brazilian Portuguese',
 //        'zh'    => 'Chinese (Simplified)',
 //        'nl'    => 'Dutch',
 //        'fr'    => 'French',
