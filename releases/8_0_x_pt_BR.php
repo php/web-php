@@ -4,12 +4,10 @@ include_once __DIR__ . '/../include/prepend.inc';
 
 if ($LANG === 'en') {
     mirror_redirect("/releases/8_0_x.php?lang=$LANG");
-    exit();
 }
 
 if ($LANG !== 'pt_BR' && file_exists("8_0_x_$LANG.php")) {
     mirror_redirect("/releases/8_0_x_$LANG.php?lang=$LANG");
-    exit();
 }
 
 site_header("PHP 8.0.0 Release Announcement", array(
@@ -70,7 +68,7 @@ site_header("PHP 8.0.0 Release Announcement", array(
             </div>
             <div class="php8-compare__content">
                 <ul>
-                    <li>Especifique apenas os parâmetros obrigatórios, ignorando os opcionais.</li>
+                    <li>Especifique apenas os parâmetros obrigatórios, pulando os opcionais.</li>
                     <li>Os argumentos são independentes da ordem e autodocumentados.</li>
                 </ul>
             </div>
@@ -107,7 +105,7 @@ class User
                 </div>
             </div>
             <div class="php8-compare__content">
-                <p>Em vez de anotações PHPDoc, agora você pode usar metadados estruturados com sintaxe PHP nativa.</p>
+                <p>Em vez de anotações PHPDoc, agora você pode usar metadados estruturados com a sintaxe nativa do PHP.</p>
             </div>
         </div>
 
@@ -156,7 +154,7 @@ class User
                 </div>
             </div>
             <div class="php8-compare__content">
-                <p>Menos código para definir e inicializar propriedades.</p>
+                <p>Menos código boilerplate para definir e inicializar propriedades.</p>
             </div>
         </div>
 
@@ -301,25 +299,21 @@ if ($session !== null) {
 
         <div class="php8-compare">
             <h2 class="php8-h2" id="saner-string-to-number-comparisons">
-                Comparações mais claras entre strings e números
+                Comparações mais inteligentes entre strings e números
                 <a class="php8-rfc" href="https://wiki.php.net/rfc/string_to_number_comparison">RFC</a>
             </h2>
             <div class="php8-compare__main">
                 <div class="php8-compare__block example-contents">
                     <div class="php8-compare__label">PHP 7</div>
                     <div class="php8-code phpcode">
-                        <?php highlight_php_trimmed(
-                            '0 == \'foobar\' // true'
-                        );?>
+                        <pre>0 == 'foobar' // true</pre>
                     </div>
                 </div>
                 <div class="php8-compare__arrow"></div>
                 <div class="php8-compare__block example-contents">
                     <div class="php8-compare__label php8-compare__label_new">PHP 8</div>
                     <div class="php8-code phpcode">
-                        <?php highlight_php_trimmed(
-                            '0 == \'foobar\' // false'
-                        );?>
+                        <pre>0 == 'foobar' // false</pre>
                     </div>
                 </div>
             </div>
@@ -358,7 +352,7 @@ array_chunk([], -1); // ValueError: array_chunk(): Argument #2 ($length) must be
                 </div>
             </div>
             <div class="php8-compare__content">
-                <p>A maioria das funções internas agora lança uma exceção Fatal Error se a validação do parâmetro falhar.</p>
+                <p>A maioria das funções internas agora lançam uma exceção Fatal Error se a validação do parâmetro falhar.</p>
             </div>
         </div>
     </section>
@@ -366,7 +360,7 @@ array_chunk([], -1); // ValueError: array_chunk(): Argument #2 ($length) must be
     <section class="php8-section php8-section_light">
         <h2 class="php8-h2">Compilação Just-In-Time</h2>
         <p>
-            PHP 8 apresenta dois engines de compilação JIT. Tracing JIT, o mais promissor dos dois, mostra desempenho cerca de
+            PHP 8 apresenta dois motores de compilação JIT. Tracing JIT, o mais promissor dos dois, mostra desempenho cerca de
             3 vezes melhor em benchmarks sintéticos e melhoria de 1,5 a 2 vezes em alguns aplicativos específicos de longa
             execução. O desempenho típico das aplicações está no mesmo nível do PHP 7.4.
         </p>
@@ -384,7 +378,7 @@ array_chunk([], -1); // ValueError: array_chunk(): Argument #2 ($length) must be
                         <a href="https://wiki.php.net/rfc/trailing_comma_in_closure_use_list">RFC</a>.
                     </li>
                     <li>
-                        Catches sem captura de exceção <a href="http://TODO">RFC</a>.
+                        Catches sem variável na captura de exceção <a href="https://wiki.php.net/rfc/non-capturing_catches">RFC</a>.
                     </li>
                     <li>
                         Ajustes de sintaxe para variáveis <a href="https://wiki.php.net/rfc/variable_syntax_tweaks">RFC</a>.
@@ -415,13 +409,14 @@ array_chunk([], -1); // ValueError: array_chunk(): Argument #2 ($length) must be
                         <a href="https://wiki.php.net/rfc/arithmetic_operator_type_checks">RFC</a>.
                     </li>
                     <li>
-                        Validação de método abstrato em traits <a href="https://wiki.php.net/rfc/abstract_trait_method_validation">RFC</a>.
+                        Validação de método abstrato em traits
+                        <a href="https://wiki.php.net/rfc/abstract_trait_method_validation">RFC</a>.
                     </li>
                     <li>
                         Assinaturas corretas de métodos mágicos <a href="https://wiki.php.net/rfc/magic-methods-signature">RFC</a>
                     </li>
                     <li>
-                        Avisos de engine reclassificados <a href="https://wiki.php.net/rfc/engine_warnings">RFC</a>.
+                        Avisos de motor reclassificados <a href="https://wiki.php.net/rfc/engine_warnings">RFC</a>.
                     </li>
                     <li>
                         Erro fatal para assinaturas de método incompatíveis <a href="https://wiki.php.net/rfc/lsp_errors">RFC</a>.
@@ -491,7 +486,7 @@ array_chunk([], -1); // ValueError: array_chunk(): Argument #2 ($length) must be
             </div>
             <div class="php8-footer__content">
                 <p>
-                    Para downloads de código-fonte do PHP 8, visite a página de
+                    Para downloads do código-fonte do PHP 8, visite a página de
                     <a href="http://www.php.net/downloads">downloads</a>.
                     Os binários do Windows podem ser encontrados na página <a href="http://windows.php.net/download">PHP para
                         Windows</a>.
