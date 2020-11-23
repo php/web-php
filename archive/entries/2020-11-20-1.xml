@@ -11,7 +11,7 @@
   <default:newsImage xmlns="http://php.net/ns/news" link="https://laracon.eu/online/" title="Laracon EU Online 2021">laracon-online-2021.jpg</default:newsImage>
   <content type="xhtml">
     <div xmlns="http://www.w3.org/1999/xhtml">
-      A full week for Laravel developers with a series of cutting edge presentations, webinars and networking events. Discover January 18-22th on https://laracon.eu/online/
+      A full week for Laravel developers with a series of cutting edge presentations, webinars and networking events. Discover January 18-22th on <a href="https://laracon.eu/online/">https://laracon.eu/online/</a>
     </div>
   </content>
 </entry>
