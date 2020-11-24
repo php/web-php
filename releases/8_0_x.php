@@ -31,7 +31,7 @@ site_header("PHP 8.0.0 Release Announcement", array(
       expression, nullsafe operator, JIT, and improvements in the type system, error handling, and consistency.
     </div>
     <div class="php8-button-wrapper center">
-      <a class="php8-button php8-button_light" href="#">Go update to PHP 8!</a>
+      <a class="php8-button php8-button_light" href="/downloads">Go update to PHP 8!</a>
     </div>
   </div>
 </section>
@@ -473,7 +473,7 @@ array_chunk([], -1); // ValueError: array_chunk(): Argument #2 ($length) must be
       Better performance, better syntax, improved type safety.
     </h2>
     <div class="php8-button-wrapper center">
-      <a class="php8-button php8-button_light" href="#">Go update to PHP 8!</a>
+      <a class="php8-button php8-button_light" href="/downloads">Go update to PHP 8!</a>
     </div>
     <div class="php8-footer__content">
       <p>
@@ -482,7 +482,7 @@ array_chunk([], -1); // ValueError: array_chunk(): Argument #2 ($length) must be
         The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-8.php">ChangeLog</a>.
       </p>
       <p>
-        The <a href="http://php.net/manual/en/migration8.php">migration guide</a> is available in the PHP Manual. Please
+        The <a href="/manual/en/migration80.php">migration guide</a> is available in the PHP Manual. Please
         consult it for a detailed list of new features and backward-incompatible changes.
       </p>
     </div>
