@@ -364,86 +364,82 @@ array_chunk([], -1); // ValueError: array_chunk(): Argument #2 ($length) must be
             3 vezes melhor em benchmarks sintéticos e melhoria de 1,5 a 2 vezes em alguns aplicativos específicos de longa
             execução. O desempenho típico das aplicações está no mesmo nível do PHP 7.4.
         </p>
+        <h3 class="php8-h3">
+          Relative JIT contribution to PHP 8 performance
+        </h3>
         <p>
-            <img src="/images/php8/jit.png" alt="Just-In-Time compilation">
+            <img src="/images/php8/scheme.svg" width="900" alt="Just-In-Time compilation">
         </p>
 
-        <h2 class="php8-h2 php8-h2_margin-top">Outros ajustes e melhorias de sintaxe</h2>
-        <div class="php8-columns">
-            <div class="php8-column">
-                <ul>
-                    <li>
-                        Permitir vírgula no final da lista de parâmetros
-                        <a href="https://wiki.php.net/rfc/trailing_comma_in_parameter_list">RFC</a> e listas de uso em closures
-                        <a href="https://wiki.php.net/rfc/trailing_comma_in_closure_use_list">RFC</a>.
-                    </li>
-                    <li>
-                        Catches sem variável na captura de exceção <a href="https://wiki.php.net/rfc/non-capturing_catches">RFC</a>.
-                    </li>
-                    <li>
-                        Ajustes de sintaxe para variáveis <a href="https://wiki.php.net/rfc/variable_syntax_tweaks">RFC</a>.
-                    </li>
-                </ul>
-            </div>
-            <div class="php8-column">
-                <ul>
-                    <li>
-                        Tratamento de nomes de namespace como token único
-                        <a href="https://wiki.php.net/rfc/namespaced_names_as_token">RFC</a>.
-                    </li>
-                    <li>
-                        Throw como expressão <a href="https://wiki.php.net/rfc/throw_expression">RFC</a>.
-                    </li>
-                    <li>
-                        Permitir ::class em objetos <a href="https://wiki.php.net/rfc/class_name_literal_on_object">RFC</a>.
-                    </li>
-                </ul>
-            </div>
-        </div>
         <div class="php8-columns">
             <div class="php8-column">
                 <h2 class="php8-h2 php8-h2_margin-top">Melhorias no sistema de tipo e tratamento de erros</h2>
                 <ul>
                     <li>
                         Verificações de tipo mais rígidas para operadores aritméticos / bit a bit
-                        <a href="https://wiki.php.net/rfc/arithmetic_operator_type_checks">RFC</a>.
+                        <a href="https://wiki.php.net/rfc/arithmetic_operator_type_checks">RFC</a>
                     </li>
                     <li>
                         Validação de método abstrato em traits
-                        <a href="https://wiki.php.net/rfc/abstract_trait_method_validation">RFC</a>.
+                        <a href="https://wiki.php.net/rfc/abstract_trait_method_validation">RFC</a>
                     </li>
                     <li>
                         Assinaturas corretas de métodos mágicos <a href="https://wiki.php.net/rfc/magic-methods-signature">RFC</a>
                     </li>
                     <li>
-                        Avisos de motor reclassificados <a href="https://wiki.php.net/rfc/engine_warnings">RFC</a>.
+                        Avisos de motor reclassificados <a href="https://wiki.php.net/rfc/engine_warnings">RFC</a>
                     </li>
                     <li>
-                        Erro fatal para assinaturas de método incompatíveis <a href="https://wiki.php.net/rfc/lsp_errors">RFC</a>.
+                        Erro fatal para assinaturas de método incompatíveis <a href="https://wiki.php.net/rfc/lsp_errors">RFC</a>
                     </li>
                     <li>
                         O operador @ não silencia mais os erros fatais.
                     </li>
                     <li>
-                        Herança com métodos privados <a href="https://wiki.php.net/rfc/inheritance_private_methods">RFC</a>.
+                        Herança com métodos privados <a href="https://wiki.php.net/rfc/inheritance_private_methods">RFC</a>
                     </li>
                     <li>
-                        Tipo mixed <a href="https://wiki.php.net/rfc/mixed_type_v2">RFC</a>.
+                        Tipo mixed <a href="https://wiki.php.net/rfc/mixed_type_v2">RFC</a>
                     </li>
                     <li>
-                        Tipo de retorno static <a href="">RFC</a>.
+                        Tipo de retorno static <a href="">RFC</a>
                     </li>
                     <li>
                         Tipagem de funções internas
-                        <a href="https://externals.io/message/106522">RFC</a>.
+                        <a href="https://externals.io/message/106522">RFC</a>
                     </li>
                     <li>
                         Objetos curl em vez de recursos
-                        <a href="https://php.watch/versions/8.0/resource-CurlHandle">RFC</a>.
+                        <a href="https://php.watch/versions/8.0/resource-CurlHandle">RFC</a>
                     </li>
                 </ul>
             </div>
             <div class="php8-column">
+              <h2 class="php8-h2 php8-h2_margin-top">Outros ajustes e melhorias de sintaxe</h2>
+                <ul>
+                    <li>
+                      Permitir vírgula no final da lista de parâmetros
+                      <a href="https://wiki.php.net/rfc/trailing_comma_in_parameter_list">RFC</a> e listas de uso em closures
+                      <a href="https://wiki.php.net/rfc/trailing_comma_in_closure_use_list">RFC</a>
+                    </li>
+                    <li>
+                      Catches sem variável na captura de exceção <a href="https://wiki.php.net/rfc/non-capturing_catches">RFC</a>
+                    </li>
+                    <li>
+                      Ajustes de sintaxe para variáveis <a href="https://wiki.php.net/rfc/variable_syntax_tweaks">RFC</a>
+                    </li>
+                    <li>
+                      Tratamento de nomes de namespace como token único
+                      <a href="https://wiki.php.net/rfc/namespaced_names_as_token">RFC</a>
+                    </li>
+                    <li>
+                      Throw como expressão <a href="https://wiki.php.net/rfc/throw_expression">RFC</a>
+                    </li>
+                    <li>
+                      Permitir ::class em objetos <a href="https://wiki.php.net/rfc/class_name_literal_on_object">RFC</a>
+                    </li>
+                </ul>
+
                 <h2 class="php8-h2 php8-h2_margin-top">Novas classes, interfaces e funções</h2>
                 <ul>
                     <li>

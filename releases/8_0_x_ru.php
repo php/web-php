@@ -368,83 +368,79 @@ array_chunk([], -1); // ValueError: array_chunk(): Argument #2 ($length) must be
     улучшение производительности примерно в 3 раза и в 1,5–2 раза на некоторых долго работающих приложениях. Стандартная
     производительность приложения находится на одном уровне с PHP 7.4.
   </p>
+  <h3 class="php8-h3">
+    Relative JIT contribution to PHP 8 performance
+  </h3>
   <p>
-    <img src="/images/php8/jit.png" alt="Ккомпиляция Just-In-Time">
+    <img src="/images/php8/scheme.svg" width="900" alt="Ккомпиляция Just-In-Time">
   </p>
 
-  <h2 class="php8-h2 php8-h2_margin-top">Прочие улучшения синтаксиса</h2>
-  <div class="php8-columns">
-    <div class="php8-column">
-      <ul>
-        <li>
-          Разрешена запятая в конце списка параметров <a href="https://wiki.php.net/rfc/trailing_comma_in_parameter_list">RFC</a>
-          и в списке use замыканий <a href="https://wiki.php.net/rfc/trailing_comma_in_closure_use_list">RFC</a>.
-        </li>
-        <li>
-          Блок catch без указания переменной <a href="https://wiki.php.net/rfc/non-capturing_catches">RFC</a>.
-        </li>
-        <li>
-          Изменения синтаксиса переменных <a href="https://wiki.php.net/rfc/variable_syntax_tweaks">RFC</a>.
-        </li>
-      </ul>
-    </div>
-    <div class="php8-column">
-      <ul>
-        <li>
-          Имена в пространстве имен рассматриваются как единый токен <a href="https://wiki.php.net/rfc/namespaced_names_as_token">RFC</a>.
-        </li>
-        <li>
-          Выражение Throw <a href="https://wiki.php.net/rfc/throw_expression">RFC</a>.
-        </li>
-        <li>
-          Добавление ::class для объектов <a href="https://wiki.php.net/rfc/class_name_literal_on_object">RFC</a>.
-        </li>
-      </ul>
-    </div>
-  </div>
   <div class="php8-columns">
     <div class="php8-column">
       <h2 class="php8-h2 php8-h2_margin-top">Улучшения в системе типов и обработке ошибок</h2>
       <ul>
         <li>
           Более строгие проверки типов для арифметических/побитовых операторов
-          <a href="https://wiki.php.net/rfc/arithmetic_operator_type_checks">RFC</a>.
+          <a href="https://wiki.php.net/rfc/arithmetic_operator_type_checks">RFC</a>
         </li>
         <li>
-          Проверка методов абстрактных трейтов <a href="https://wiki.php.net/rfc/abstract_trait_method_validation">RFC</a>.
+          Проверка методов абстрактных трейтов <a href="https://wiki.php.net/rfc/abstract_trait_method_validation">RFC</a>
         </li>
         <li>
           Правильные сигнатуры магических методов <a href="https://wiki.php.net/rfc/magic-methods-signature">RFC</a>
         </li>
         <li>
-          Реклассификация предупреждений движка <a href="https://wiki.php.net/rfc/engine_warnings">RFC</a>.
+          Реклассификация предупреждений движка <a href="https://wiki.php.net/rfc/engine_warnings">RFC</a>
         </li>
         <li>
-          Фатальная ошибка при несовместимости сигнатур методов <a href="https://wiki.php.net/rfc/lsp_errors">RFC</a>.
+          Фатальная ошибка при несовместимости сигнатур методов <a href="https://wiki.php.net/rfc/lsp_errors">RFC</a>
         </li>
         <li>
           Оператор @ больше не подавляет фатальные ошибки.
         </li>
         <li>
-          Наследование с private методами <a href="https://wiki.php.net/rfc/inheritance_private_methods">RFC</a>.
+          Наследование с private методами <a href="https://wiki.php.net/rfc/inheritance_private_methods">RFC</a>
         </li>
         <li>
-          Новый тип mixed <a href="https://wiki.php.net/rfc/mixed_type_v2">RFC</a>.
+          Новый тип mixed <a href="https://wiki.php.net/rfc/mixed_type_v2">RFC</a>
         </li>
         <li>
-          Возвращаемый тип static <a href="https://wiki.php.net/rfc/static_return_type">RFC</a>.
+          Возвращаемый тип static <a href="https://wiki.php.net/rfc/static_return_type">RFC</a>
         </li>
         <li>
           Типы для стандартных функций
-          <a href="https://externals.io/message/106522">RFC</a>.
+          <a href="https://externals.io/message/106522">RFC</a>
         </li>
         <li>
           Объекты вместо ресурсов для cURL
-          <a href="https://php.watch/versions/8.0/resource-CurlHandle">RFC</a>.
+          <a href="https://php.watch/versions/8.0/resource-CurlHandle">RFC</a>
         </li>
       </ul>
     </div>
     <div class="php8-column">
+      <h2 class="php8-h2 php8-h2_margin-top">Прочие улучшения синтаксиса</h2>
+      <ul>
+        <li>
+          Разрешена запятая в конце списка параметров <a href="https://wiki.php.net/rfc/trailing_comma_in_parameter_list">RFC</a>
+          и в списке use замыканий <a href="https://wiki.php.net/rfc/trailing_comma_in_closure_use_list">RFC</a>
+        </li>
+        <li>
+          Блок catch без указания переменной <a href="https://wiki.php.net/rfc/non-capturing_catches">RFC</a>
+        </li>
+        <li>
+          Изменения синтаксиса переменных <a href="https://wiki.php.net/rfc/variable_syntax_tweaks">RFC</a>
+        </li>
+        <li>
+          Имена в пространстве имен рассматриваются как единый токен <a href="https://wiki.php.net/rfc/namespaced_names_as_token">RFC</a>
+        </li>
+        <li>
+          Выражение Throw <a href="https://wiki.php.net/rfc/throw_expression">RFC</a>
+        </li>
+        <li>
+          Добавление ::class для объектов <a href="https://wiki.php.net/rfc/class_name_literal_on_object">RFC</a>
+        </li>
+      </ul>
+
       <h2 class="php8-h2 php8-h2_margin-top">Новые классы, интерфейсы и функции</h2>
       <ul>
         <li>
