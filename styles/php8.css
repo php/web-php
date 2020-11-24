@@ -106,7 +106,8 @@
   overflow: visible;
 }
 
-.php8-h2::after {
+.php8-h2::after,
+.php8-h3::after {
   display: none;
 }
 
