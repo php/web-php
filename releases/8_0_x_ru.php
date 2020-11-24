@@ -37,7 +37,7 @@ site_header("PHP 8.0.0, релиз", array(
       оператор nullsafe, JIT и улучшения в системе типов, обработке ошибок и консистентности.
     </div>
     <div class="php8-button-wrapper center">
-      <a class="php8-button php8-button_light" href="#">Переходите на PHP 8!</a>
+      <a class="php8-button php8-button_light" href="/downloads">Переходите на PHP 8!</a>
     </div>
   </div>
 </section>
@@ -112,7 +112,7 @@ class User
 
   <div class="php8-compare">
     <h2 class="php8-h2" id="constructor-property-promotion">
-      Упрощённое определение свойств в конструкторе
+      Объявление свойств в конструкторе
       <a class="php8-rfc" href="https://wiki.php.net/rfc/constructor_promotion">RFC</a>
     </h2>
     <div class="php8-compare__main">
@@ -202,7 +202,7 @@ new Number(\'NaN\'); // TypeError'
       </div>
     </div>
     <div class="php8-compare__content">
-      <p>Вместо аннотаций PHPDoc для комбинации типов вы можете использовать собственные объявления union type, которые
+      <p>Вместо аннотаций PHPDoc для объединенных типов вы можете использовать объявления union type, которые
         проверяются во время выполнения.</p>
     </div>
   </div>
@@ -477,7 +477,7 @@ array_chunk([], -1); // ValueError: array_chunk(): Argument #2 ($length) must be
       Выше производительность, лучше синтаксис, надежнее система типов.
     </h2>
     <div class="php8-button-wrapper center">
-      <a class="php8-button php8-button_light" href="#">Переходите на PHP 8!</a>
+      <a class="php8-button php8-button_light" href="/downloads">Переходите на PHP 8!</a>
     </div>
     <div class="php8-footer__content">
       <p>
@@ -486,8 +486,8 @@ array_chunk([], -1); // ValueError: array_chunk(): Argument #2 ($length) must be
         Список изменений представлен в <a href="http://www.php.net/ChangeLog-8.php">ChangeLog</a>.
       </p>
       <p>
-        <a href="http://php.net/manual/ru/migration8.php">Руководство по миграции</a> доступно в разделе документация. Пожалуйста,
-        изучите его для получения подробного списка новых функций и обратно несовместимых изменений.
+        <a href="/manual/ru/migration80.php">Руководство по миграции</a> доступно в разделе документации. Пожалуйста,
+        изучите его для получения подробного списка новых возможностей и обратно несовместимых изменений.
       </p>
     </div>
   </div>

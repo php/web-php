@@ -36,7 +36,7 @@ site_header("PHP 8.0.0 Release Announcement", array(
                 erros e consistência.
             </div>
             <div class="php8-button-wrapper center">
-                <a class="php8-button php8-button_light" href="#">Atualize para o PHP 8!</a>
+                <a class="php8-button php8-button_light" href="/downloads">Atualize para o PHP 8!</a>
             </div>
         </div>
     </section>
@@ -478,7 +478,7 @@ array_chunk([], -1); // ValueError: array_chunk(): Argument #2 ($length) must be
                 Obtenha mais segurança de tipos.
             </h2>
             <div class="php8-button-wrapper center">
-                <a class="php8-button php8-button_light" href="#">Atualize para o PHP 8!</a>
+                <a class="php8-button php8-button_light" href="/downloads">Atualize para o PHP 8!</a>
             </div>
             <div class="php8-footer__content">
                 <p>
@@ -489,7 +489,7 @@ array_chunk([], -1); // ValueError: array_chunk(): Argument #2 ($length) must be
                     A lista de mudanças é registrada no <a href="http://www.php.net/ChangeLog-8.php">ChangeLog</a>.
                 </p>
                 <p>
-                    O <a href="http://php.net/manual/en/migration8.php">guia de migração</a> está disponível no Manual do PHP.
+                    O <a href="/manual/pt_BR/migration80.php">guia de migração</a> está disponível no Manual do PHP.
                     Consulte-o para obter uma lista detalhada de novos recursos e alterações incompatíveis com versões anteriores.
                 </p>
             </div>
