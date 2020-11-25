@@ -18,7 +18,6 @@ site_header("PHP 8.0.0 Release Announcement", array(
     )
 ));
 ?>
-
 <section class="php8-section php8-section_dark php8-section_header center">
   <div class="page-tools">
     <div class="change-language">
@@ -56,8 +55,6 @@ site_header("PHP 8.0.0 Release Announcement", array(
                 'htmlspecialchars($string, ENT_COMPAT | ENT_HTML401, \'UTF-8\', false);'
             );?>
         </div>
-
-
       </div>
       <div class="php8-compare__arrow"></div>
       <div class="php8-compare__block example-contents">
@@ -123,19 +120,19 @@ class User
         <div class="php8-code phpcode">
             <?php highlight_php_trimmed(
                 'class Point {
-public float $x;
-public float $y;
-public float $z;
+  public float $x;
+  public float $y;
+  public float $z;
 
-public function __construct(
-  float $x = 0.0,
-  float $y = 0.0,
-  float $z = 0.0,
-) {
-  $this->x = $x;
-  $this->y = $y;
-  $this->z = $z;
-}
+  public function __construct(
+    float $x = 0.0,
+    float $y = 0.0,
+    float $z = 0.0,
+  ) {
+    $this->x = $x;
+    $this->y = $y;
+    $this->z = $z;
+  }
 }'
             );?>
         </div>
@@ -146,11 +143,11 @@ public function __construct(
         <div class="php8-code phpcode">
             <?php highlight_php_trimmed(
                 'class Point {
-public function __construct(
-  public float $x = 0.0,
-  public float $y = 0.0,
-  public float $z = 0.0,
-) {}
+  public function __construct(
+    public float $x = 0.0,
+    public float $y = 0.0,
+    public float $z = 0.0,
+  ) {}
 }'
             );?>
         </div>
@@ -172,15 +169,15 @@ public function __construct(
         <div class="php8-code phpcode">
             <?php highlight_php_trimmed(
                 'class Number {
-/** @var int|float */
-private $number;
+  /** @var int|float */
+  private $number;
 
-/**
- * @param float|int $number
- */
-public function __construct($number) {
-  $this->number = $number;
-}
+  /**
+   * @param float|int $number
+   */
+  public function __construct($number) {
+    $this->number = $number;
+  }
 }
 
 new Number(\'NaN\'); // Ok'
@@ -193,9 +190,9 @@ new Number(\'NaN\'); // Ok'
         <div class="php8-code phpcode">
             <?php highlight_php_trimmed(
                 'class Number {
-public function __construct(
-  private int|float $number
-) {}
+  public function __construct(
+    private int|float $number
+  ) {}
 }
 
 new Number(\'NaN\'); // TypeError'
@@ -220,12 +217,12 @@ new Number(\'NaN\'); // TypeError'
         <div class="php8-code phpcode">
             <?php highlight_php_trimmed(
                 'switch (8.0) {
-case \'8.0\':
-  $result = "Oh no!";
-  break;
-case 8.0:
-  $result = "This is what I expected";
-  break;
+  case \'8.0\':
+    $result = "Oh no!";
+    break;
+  case 8.0:
+    $result = "This is what I expected";
+    break;
 }
 echo $result;
 //> Oh no!'
@@ -270,15 +267,15 @@ echo $result;
                 '$country =  null;
 
 if ($session !== null) {
-$user = $session->user;
+  $user = $session->user;
 
-if ($user !== null) {
-  $address = $user->getAddress();
-
-  if ($address !== null) {
-    $country = $address->country;
+  if ($user !== null) {
+    $address = $user->getAddress();
+  
+    if ($address !== null) {
+      $country = $address->country;
+    }
   }
-}
 }'
             );?>
         </div>
@@ -490,7 +487,7 @@ array_chunk([], -1); // ValueError: array_chunk(): Argument #2 ($length) must be
         Die Liste der Änderungen ist im <a href="http://www.php.net/ChangeLog-8.php">ChangeLog</a> festgehalten.
       </p>
       <p>
-        Der <a href="/manual/en/migration8.php">Migration Guide</a> ist im PHP Manual verfügbar. Lies dort
+        Der <a href="/manual/de/migration80.php">Migration Guide</a> ist im PHP Manual verfügbar. Lies dort
         nach für detaillierte Informationen zu den neuen Funktionen und inkompatiblen Änderungen zu vorherigen PHP
         Versionen.
       </p>
