@@ -54,7 +54,8 @@ function highlight_php_trimmed($code, $return = false)
     $highlighted_code = preg_replace("/\&lt;\?php(\<br \/\>)+/", '', $highlighted_code, 1);
 
     if ($return) { return $highlighted_code; }
-    else { echo $highlighted_code; }
+
+    echo $highlighted_code;
 }
 
 // Stats pages still need this
