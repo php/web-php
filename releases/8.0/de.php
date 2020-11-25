@@ -1,21 +1,21 @@
 <?php
-$_SERVER['BASE_PAGE'] = 'releases/8_0_x_ru.php';
-include_once __DIR__ . '/../include/prepend.inc';
+$_SERVER['BASE_PAGE'] = 'releases/8.0/de.php';
+include_once __DIR__ . '/../../include/prepend.inc';
 
 if ($LANG === 'en') {
-    mirror_redirect('/releases/8_0_x.php?lang=' . urlencode($LANG));
+    mirror_redirect('/releases/8.0/en.php?lang=en');
 }
 
-if (($LANG !== 'ru') && file_exists(__DIR__ . '/8_0_x_' . basename($LANG) . '.php')) {
-    mirror_redirect('/releases/8_0_x_' . urlencode($LANG) . '.php?lang=' . urlencode($LANG));
+if (($LANG !== 'de') && file_exists(__DIR__ . basename($LANG) . '.php')) {
+    mirror_redirect('/releases/8.0/' . urlencode($LANG) . '.php?lang=' . urlencode($LANG));
 }
 
-site_header("PHP 8.0.0, релиз", array(
-        "current" => "php_8_0_x_ru",
-        'css' => array('php8.css'),
-        'meta_tags' => array(
-            'og:image' => $MYSITE . 'images/php8/php_8_released.png'
-        )
+site_header("PHP 8.0.0 Release Announcement", array(
+    "current" => "php8",
+    'css' => array('php8.css'),
+    'meta_tags' => array(
+        'og:image' => $MYSITE . 'images/php8/php_8_released.png'
+    )
 ));
 ?>
 <section class="php8-section php8-section_dark php8-section_header center">
@@ -28,14 +28,15 @@ site_header("PHP 8.0.0, релиз", array(
     <div class="php8-logo">
       <img src="/images/php8/logo_php8.svg" alt="php8" height="126" width="343">
     </div>
-    <div class="php8-title">релизнут!</div>
+    <div class="php8-title">Released!</div>
     <div class="php8-subtitle">
-      PHP 8.0 — большое обновление PHP.<br class="display-none-md"> Оно содержит множество новых возможностей и
-      оптимизаций, включая именованные аргументы, union type, атрибуты, упрощённое определение свойств в конструкторе, выражение match,
-      оператор nullsafe, JIT и улучшения в системе типов, обработке ошибок и консистентности.
+      PHP 8.0 ist ein Major-Update der Sprache PHP.<br class="display-none-md"> Es beinhaltet viele neue Funktionen
+      und Optimierungen wie beispielsweise Named Arguments, Union Types, Attribute, Constructor Property Promotion,
+      Match Ausdrücke, Nullsafe Operator, JIT und Verbesserungen des Typen-Systems, der Fehlerbehandlung und der
+      Konsistenz.
     </div>
     <div class="php8-button-wrapper center">
-      <a class="php8-button php8-button_light" href="/downloads">Переходите на PHP 8!</a>
+      <a class="php8-button php8-button_light" href="/downloads">Wechsle jetzt zu PHP 8!</a>
     </div>
   </div>
 </section>
@@ -43,7 +44,7 @@ site_header("PHP 8.0.0, релиз", array(
 <section class="php8-section center">
   <div class="php8-compare">
     <h2 class="php8-h2" id="named-arguments">
-      Именованные аргументы
+      Named Arguments
       <a class="php8-rfc" href="https://wiki.php.net/rfc/named_params">RFC</a>
     </h2>
     <div class="php8-compare__main">
@@ -67,15 +68,15 @@ site_header("PHP 8.0.0, релиз", array(
     </div>
     <div class="php8-compare__content">
       <ul>
-        <li>Указывайте только необходимые параметры, пропускайте необязательные.</li>
-        <li>Порядок аргументов не важен, аргументы самодокументируемы.</li>
+        <li>Gib nur notwendige Parameter an, überspringe optionale.</li>
+        <li>Parameter sind unabhängig von der Reihenfolge und selbstdokumentierend.</li>
       </ul>
     </div>
   </div>
 
   <div class="php8-compare">
     <h2 class="php8-h2" id="attributes">
-      Атрибуты
+      Attribute
       <a class="php8-rfc" href="https://wiki.php.net/rfc/attributes_v2">RFC</a>
     </h2>
     <div class="php8-compare__main">
@@ -104,13 +105,13 @@ class User
       </div>
     </div>
     <div class="php8-compare__content">
-      <p>Вместо аннотаций PHPDoc вы можете использовать структурные метаданные с нативным синтаксисом PHP.</p>
+      <p>Anstelle von PHPDoc Annotations kannst du nun struktirierte Meta-Daten in nativer PHP Syntax nutzen.</p>
     </div>
   </div>
 
   <div class="php8-compare">
     <h2 class="php8-h2" id="constructor-property-promotion">
-      Объявление свойств в конструкторе
+      Constructor Property Promotion
       <a class="php8-rfc" href="https://wiki.php.net/rfc/constructor_promotion">RFC</a>
     </h2>
     <div class="php8-compare__main">
@@ -153,14 +154,14 @@ class User
       </div>
     </div>
     <div class="php8-compare__content">
-      <p>Меньше шаблонного кода для определения и инициализации свойств.</p>
+      <p>Weniger Codewiederholungen für das Definieren und Initialisieren von Objektattributen.</p>
     </div>
   </div>
 
   <div class="php8-compare">
     <h2 class="php8-h2" id="union-types">
-      Union types
-      <a class="php8-rfc" href="https://wiki.php.net/rfc/union_types_v2">RFC</a> <a class="php8-rfc" href="/manual/ru/language.types.declarations.php#language.types.declarations.union">Doc</a>
+      Union Types
+      <a class="php8-rfc" href="https://wiki.php.net/rfc/union_types_v2">RFC</a> <a class="php8-rfc" href="/manual/en/language.types.declarations.php#language.types.declarations.union">Doc</a>
     </h2>
     <div class="php8-compare__main">
       <div class="php8-compare__block example-contents">
@@ -179,7 +180,7 @@ class User
   }
 }
 
-new Number(\'NaN\'); // Нет ошибки'
+new Number(\'NaN\'); // Ok'
             );?>
         </div>
       </div>
@@ -200,14 +201,14 @@ new Number(\'NaN\'); // TypeError'
       </div>
     </div>
     <div class="php8-compare__content">
-      <p>Вместо аннотаций PHPDoc для объединенных типов вы можете использовать объявления union type, которые
-        проверяются во время выполнения.</p>
+      <p>Anstelle von PHPDoc Annotations für kombinierte Typen kannst du native Union-Type-Deklarationen verwenden,
+         welche zur Laufzeit validiert werden.</p>
     </div>
   </div>
 
   <div class="php8-compare">
     <h2 class="php8-h2" id="match-expression">
-      Выражение Match
+      Match Ausdruck
       <a class="php8-rfc" href="https://wiki.php.net/rfc/match_expression_v2">RFC</a>
     </h2>
     <div class="php8-compare__main">
@@ -217,14 +218,14 @@ new Number(\'NaN\'); // TypeError'
             <?php highlight_php_trimmed(
                 'switch (8.0) {
   case \'8.0\':
-    $result = "О нет!";
+    $result = "Oh no!";
     break;
   case 8.0:
-    $result = "То, что я и ожидал";
+    $result = "This is what I expected";
     break;
 }
 echo $result;
-//> О нет!'
+//> Oh no!'
             );?>
         </div>
       </div>
@@ -234,27 +235,28 @@ echo $result;
         <div class="php8-code phpcode">
             <?php highlight_php_trimmed(
                 'echo match (8.0) {
-  \'8.0\' => "О нет!",
-  8.0 => "То, что я и ожидал",
+\'8.0\' => "Oh no!",
+8.0 => "This is what I expected",
 };
-//> То, что я и ожидал'
+//> This is what I expected'
             );?>
         </div>
       </div>
     </div>
     <div class="php8-compare__content">
-      <p>Новое выражение match похоже на оператор switch со следующими особенностями:</p>
+      <p>Der neue Match Ausdruck ist ähnlich wie die Switch Anweisung und bietet folgende Funktionen:</p>
       <ul>
-        <li>Match — это выражение, его результат может быть сохранён в переменной или возвращён.</li>
-        <li>Условия match поддерживают только однострочные выражения, для которых не требуется управляющая конструкция break;.</li>
-        <li>Выражение match использует строгое сравнение.</li>
+        <li>Match ist ein Ausruck. Das heißt, das Ergebnis kann in einer Variable gespeichert werden oder zurückgegeben
+            werden.</li>
+        <li>Match Zweige unterstützen nur einzeilige Ausdrücke und benötigen keinen break; Ausdruck.</li>
+        <li>Match führt strikte Vergleiche durch.</li>
       </ul>
     </div>
   </div>
 
   <div class="php8-compare">
     <h2 class="php8-h2" id="nullsafe-operator">
-     Оператор Nullsafe
+      Nullsafe Operator
       <a class="php8-rfc" href="https://wiki.php.net/rfc/nullsafe_operator">RFC</a>
     </h2>
     <div class="php8-compare__main">
@@ -289,15 +291,15 @@ if ($session !== null) {
       </div>
     </div>
     <div class="php8-compare__content">
-      <p>Вместо проверки на null вы можете использовать последовательность вызовов с новым оператором Nullsafe. Когда
-       один из элементов в последовательности возвращает null, выполнение прерывается и вся последовательность
-        возвращает null.</p>
+      <p>Anstelle von Null-Checks kannst du Funktionsaufrufe nun direkt mit dem neuen Nullsafe Operator
+         aneinanderreihen. Wenn ein Funktionsaufruf innerhalb der Kette Null zurückliefert, wird die weitere
+         Ausführung abgebrochen und die gesamte Kette wird zu Null ausgewertet.</p>
     </div>
   </div>
 
   <div class="php8-compare">
     <h2 class="php8-h2" id="saner-string-to-number-comparisons">
-      Улучшенное сравнение строк и чисел
+      Vernünftige String-zu-Zahl Vergleiche
       <a class="php8-rfc" href="https://wiki.php.net/rfc/string_to_number_comparison">RFC</a>
     </h2>
     <div class="php8-compare__main">
@@ -320,14 +322,14 @@ if ($session !== null) {
       </div>
     </div>
     <div class="php8-compare__content">
-      <p>При сравнении с числовой строкой PHP 8 использует сравнение чисел. В противном случае число преобразуется в
-        строку и используется сравнение строк.</p>
+      <p>Wenn eine Zahl mit einem numerischen String verglichen wird, benutzt PHP 8 einen Zahlen-Vergleich. Andernfalls
+         wird die Zahl zu einem String konvertiert und ein String-Vergleich durchgeführt.</p>
     </div>
   </div>
 
   <div class="php8-compare">
     <h2 class="php8-h2" id="consistent-type-errors-for-internal-functions">
-      Ошибки согласованности типов для встроенных функций
+      Konsistente Typen-Fehler für interne Funktionen
       <a class="php8-rfc" href="https://wiki.php.net/rfc/consistent_type_errors">RFC</a>
     </h2>
     <div class="php8-compare__main">
@@ -354,98 +356,99 @@ array_chunk([], -1); // ValueError: array_chunk(): Argument #2 ($length) must be
       </div>
     </div>
     <div class="php8-compare__content">
-      <p>Большинство внутренних функций теперь выбрасывают исключение Fatal Error, если при проверке параметра возникает ошибка.</p>
+      <p>Die meisten internen Funktionen erzeugen nun eine Fatal Error Exception wenn die Typenvalidierung der Parameter
+         fehlschlägt.</p>
     </div>
   </div>
 </section>
 
 <section class="php8-section php8-section_light">
-  <h2 class="php8-h2">Компиляция Just-In-Time</h2>
+  <h2 class="php8-h2">Just-In-Time Compiler</h2>
   <p>
-    PHP 8 представляет два механизма JIT-компиляции. Трассировка JIT, наиболее перспективная из них, на синтетических бенчмарках показывает
-    улучшение производительности примерно в 3 раза и в 1,5–2 раза на некоторых долго работающих приложениях. Стандартная
-    производительность приложения находится на одном уровне с PHP 7.4.
+    PHP 8 führt zwei JIT Compiler Engines ein. Tracing-JIT, der vielversprechendere der beiden, zeigt eine bis zu drei
+    mal bessere Performance in synthetischen Benchmarks und eine 1,5 bis zweifache Verbesserung in einigen speziellen,
+    langlaufenden Anwendungen. Die Performance einer typischen Anwendung ist auf dem Niveau von PHP 7.4.
   </p>
   <h3 class="php8-h3">
-    Relative JIT contribution to PHP 8 performance
+    Relativer Beitrag des JIT Compilers zur Performance von PHP 8
   </h3>
   <p>
-    <img src="/images/php8/scheme.svg" width="900" alt="Ккомпиляция Just-In-Time">
+    <img src="/images/php8/scheme.svg" width="900" alt="Just-In-Time compilation">
   </p>
 
   <div class="php8-columns">
     <div class="php8-column">
-      <h2 class="php8-h2 php8-h2_margin-top">Улучшения в системе типов и обработке ошибок</h2>
+      <h2 class="php8-h2 php8-h2_margin-top">Verbesserungen am Typen-System und an der Fehlerbehandlung</h2>
       <ul>
         <li>
-          Более строгие проверки типов для арифметических/побитовых операторов
+          Striktere Typen-Checks für arithmetische/bitweise Operatoren
           <a href="https://wiki.php.net/rfc/arithmetic_operator_type_checks">RFC</a>
         </li>
         <li>
-          Проверка методов абстрактных трейтов <a href="https://wiki.php.net/rfc/abstract_trait_method_validation">RFC</a>
+          Validierung abstrakter Methoden in einem Trait <a href="https://wiki.php.net/rfc/abstract_trait_method_validation">RFC</a>
         </li>
         <li>
-          Правильные сигнатуры магических методов <a href="https://wiki.php.net/rfc/magic-methods-signature">RFC</a>
+          Korrekte Signaturen magischer Funktionen <a href="https://wiki.php.net/rfc/magic-methods-signature">RFC</a>
         </li>
         <li>
-          Реклассификация предупреждений движка <a href="https://wiki.php.net/rfc/engine_warnings">RFC</a>
+          Neue Klassifizierung von Engine-Warnings <a href="https://wiki.php.net/rfc/engine_warnings">RFC</a>
         </li>
         <li>
-          Фатальная ошибка при несовместимости сигнатур методов <a href="https://wiki.php.net/rfc/lsp_errors">RFC</a>
+          Inkompatiblen Methoden-Signaturen erzeugen einen Fatal Error <a href="https://wiki.php.net/rfc/lsp_errors">RFC</a>
         </li>
         <li>
-          Оператор @ больше не подавляет фатальные ошибки.
+          Der @ Operator unterdrückt keine Fatal Errors mehr.
         </li>
         <li>
-          Наследование с private методами <a href="https://wiki.php.net/rfc/inheritance_private_methods">RFC</a>
+          Vererbung mit privaten Methoden <a href="https://wiki.php.net/rfc/inheritance_private_methods">RFC</a>
         </li>
         <li>
-          Новый тип mixed <a href="https://wiki.php.net/rfc/mixed_type_v2">RFC</a>
+          Mixed Typ <a href="https://wiki.php.net/rfc/mixed_type_v2">RFC</a>
         </li>
         <li>
-          Возвращаемый тип static <a href="https://wiki.php.net/rfc/static_return_type">RFC</a>
+          Static als Rückgabetyp <a href="https://wiki.php.net/rfc/static_return_type">RFC</a>
         </li>
         <li>
-          Типы для стандартных функций
+          Typen für interne Funktionen
           <a href="https://externals.io/message/106522">RFC</a>
         </li>
         <li>
-          Объекты вместо ресурсов для cURL
+          Curl verwendet nun Objekte anstelle des resource Typs
           <a href="https://php.watch/versions/8.0/resource-CurlHandle">RFC</a>
         </li>
       </ul>
     </div>
     <div class="php8-column">
-      <h2 class="php8-h2 php8-h2_margin-top">Прочие улучшения синтаксиса</h2>
+      <h2 class="php8-h2 php8-h2_margin-top">Weitere Syntax-Anpassungen und Verbesserungen</h2>
       <ul>
         <li>
-          Разрешена запятая в конце списка параметров <a href="https://wiki.php.net/rfc/trailing_comma_in_parameter_list">RFC</a>
-          и в списке use замыканий <a href="https://wiki.php.net/rfc/trailing_comma_in_closure_use_list">RFC</a>
+          Erlauben eines Abschließenden Kommas in Parameter-Listen <a href="https://wiki.php.net/rfc/trailing_comma_in_parameter_list">RFC</a>
+          und Closure Use Listen <a href="https://wiki.php.net/rfc/trailing_comma_in_closure_use_list">RFC</a>.
         </li>
         <li>
-          Блок catch без указания переменной <a href="https://wiki.php.net/rfc/non-capturing_catches">RFC</a>
+          Catches ohne Exception-Variable <a href="https://wiki.php.net/rfc/non-capturing_catches">RFC</a>
         </li>
         <li>
-          Изменения синтаксиса переменных <a href="https://wiki.php.net/rfc/variable_syntax_tweaks">RFC</a>
+          Anpassungen an der Syntax für Variablen <a href="https://wiki.php.net/rfc/variable_syntax_tweaks">RFC</a>
         </li>
         <li>
-          Имена в пространстве имен рассматриваются как единый токен <a href="https://wiki.php.net/rfc/namespaced_names_as_token">RFC</a>
+          Namespaces werden als ein Token ausgewertet <a href="https://wiki.php.net/rfc/namespaced_names_as_token">RFC</a>
         </li>
         <li>
-          Выражение Throw <a href="https://wiki.php.net/rfc/throw_expression">RFC</a>
+          Throw ist jetzt ein Ausdruck <a href="https://wiki.php.net/rfc/throw_expression">RFC</a>
         </li>
         <li>
-          Добавление ::class для объектов <a href="https://wiki.php.net/rfc/class_name_literal_on_object">RFC</a>
+          Nutzung von ::class auf Objekten <a href="https://wiki.php.net/rfc/class_name_literal_on_object">RFC</a>
         </li>
       </ul>
 
-      <h2 class="php8-h2 php8-h2_margin-top">Новые классы, интерфейсы и функции</h2>
+      <h2 class="php8-h2 php8-h2_margin-top">Neue Klassen, Interfaces, und Funktionen</h2>
       <ul>
         <li>
-          Класс <a href="https://wiki.php.net/rfc/weak_maps">Weak Map</a>
+          <a href="https://wiki.php.net/rfc/weak_maps">Weak Map</a> Klasse
         </li>
         <li>
-          Интерфейс <a href="https://wiki.php.net/rfc/stringable">Stringable</a>
+          <a href="https://wiki.php.net/rfc/stringable">Stringable</a> Interface
         </li>
         <li>
           <a href="https://wiki.php.net/rfc/str_contains">str_contains()</a>,
@@ -462,7 +465,7 @@ array_chunk([], -1); // ValueError: array_chunk(): Argument #2 ($length) must be
           <a href="https://github.com/php/php-src/pull/5427">get_resource_id()</a>
         </li>
         <li>
-          Объектно-ориентированная функция <a href="https://wiki.php.net/rfc/token_as_object">token_get_all()</a>
+          <a href="https://wiki.php.net/rfc/token_as_object">token_get_all()</a> mit einer Objekt-Implementierung
         </li>
       </ul>
     </div>
@@ -472,20 +475,21 @@ array_chunk([], -1); // ValueError: array_chunk(): Argument #2 ($length) must be
 <section class="php8-section php8-section_dark php8-section_footer php8-footer">
   <div class="php8-section__content">
     <h2 class="php8-h2 center">
-      Выше производительность, лучше синтаксис, надежнее система типов.
+      Bessere Performance, bessere Syntax, optimierte Typsicherheit.
     </h2>
     <div class="php8-button-wrapper center">
-      <a class="php8-button php8-button_light" href="/downloads">Переходите на PHP 8!</a>
+      <a class="php8-button php8-button_light" href="/downloads">Wechsle jetzt zu PHP 8!</a>
     </div>
     <div class="php8-footer__content">
       <p>
-        Для загрузки исходного кода PHP 8 посетите страницу <a href="http://www.php.net/downloads">downloads</a>.
-        Бинарные файлы Windows находятся на сайте <a href="http://windows.php.net/download">PHP для Windows</a>.
-        Список изменений представлен в <a href="http://www.php.net/ChangeLog-8.php">ChangeLog</a>.
+        Für den direkten Code-Download von PHP 8 schaue bitte auf der <a href="http://www.php.net/downloads">Downloads</a> Seite vorbei.
+        Windows Pakete können auf der <a href="http://windows.php.net/download">PHP for Windows</a> Seite gefunden werden.
+        Die Liste der Änderungen ist im <a href="http://www.php.net/ChangeLog-8.php">ChangeLog</a> festgehalten.
       </p>
       <p>
-        <a href="/manual/ru/migration80.php">Руководство по миграции</a> доступно в разделе документации. Пожалуйста,
-        изучите его для получения подробного списка новых возможностей и обратно несовместимых изменений.
+        Der <a href="/manual/de/migration80.php">Migration Guide</a> ist im PHP Manual verfügbar. Lies dort
+        nach für detaillierte Informationen zu den neuen Funktionen und inkompatiblen Änderungen zu vorherigen PHP
+        Versionen.
       </p>
     </div>
   </div>
