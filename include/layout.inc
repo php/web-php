@@ -710,7 +710,6 @@ function release_language_chooser($currentlang) {
     $LANGUAGES = array(
         'en'    => 'English',
         'pt_BR' => 'Brazilian Portuguese',
-        'nl'    => 'Dutch',
         'de'    => 'German',
         'ru'    => 'Russian',
     );
