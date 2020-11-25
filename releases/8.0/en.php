@@ -2,7 +2,7 @@
 $_SERVER['BASE_PAGE'] = 'releases/8.0/en.php';
 include_once __DIR__ . '/../../include/prepend.inc';
 
-if (($LANG !== 'en') && file_exists(__DIR__ . basename($LANG) . '.php')) {
+if (($LANG !== 'en') && file_exists(__DIR__ . '/' . basename($LANG) . '.php')) {
     mirror_redirect('/releases/8.0/' . urlencode($LANG) . '.php?lang=' . urlencode($LANG));
 }
 

@@ -6,7 +6,7 @@ if ($LANG === 'en') {
     mirror_redirect('/releases/8.0/en.php?lang=en');
 }
 
-if (($LANG !== 'pt_BR') && file_exists(__DIR__ . basename($LANG) . '.php')) {
+if (($LANG !== 'pt_BR') && file_exists(__DIR__ . '/' . basename($LANG) . '.php')) {
     mirror_redirect('/releases/8.0/' . urlencode($LANG) . '.php?lang=' . urlencode($LANG));
 }
 
