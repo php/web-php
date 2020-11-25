@@ -3,11 +3,11 @@ $_SERVER['BASE_PAGE'] = 'releases/8_0_x.php';
 include_once __DIR__ . '/../include/prepend.inc';
 
 if ($LANG === 'en') {
-    mirror_redirect("/releases/8_0_x.php?lang=$LANG");
+    mirror_redirect('/releases/8_0_x.php?lang=' . urlencode($LANG));
 }
 
-if ($LANG !== 'pt_BR' && file_exists("8_0_x_$LANG.php")) {
-    mirror_redirect("/releases/8_0_x_$LANG.php?lang=$LANG");
+if (($LANG !== 'pt_BR') && file_exists(__DIR__ . '/8_0_x_' . basename($LANG) . '.php')) {
+    mirror_redirect('/releases/8_0_x_' . urlencode($LANG) . '.php?lang=' . urlencode($LANG));
 }
 
 site_header("PHP 8.0.0 Release Announcement", array(
