@@ -103,9 +103,7 @@ if (!isset($config["languages"])) {
  <base href="<?php echo $_SERVER["BASE_HREF"] ?>">
 <?php endif ?>
 
-<?php if (isset($config['meta_tags'])) foreach($config['meta_tags'] as $property => $content): ?>
- <meta property="<?php echo $property; ?>" content="<?php echo $content; ?>" />
-<?php endforeach ?>
+<?php if (isset($config['meta_tags'])) { echo $config['meta_tags']; } ?>
 
 </head>
 <body class="<?php print $curr; ?> <?php echo $classes; ?>">

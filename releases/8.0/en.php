@@ -6,12 +6,26 @@ if (($LANG !== 'en') && file_exists(__DIR__ . '/' . basename($LANG) . '.php')) {
     mirror_redirect('/releases/8.0/' . urlencode($LANG) . '.php?lang=' . urlencode($LANG));
 }
 
+$meta_image_path = $MYSITE . 'images/php8/php_8_released.png';
+$meta_description = 'PHP 8.0 is a major update of the PHP language. It contains many new features and optimizations including named arguments, union types, attributes, constructor property promotion, match expression, nullsafe operator, JIT, and improvements in the type system, error handling, and consistency.';
 site_header("PHP 8.0.0 Release Announcement", array(
         "current" => "php8",
         'css' => array('php8.css'),
-        'meta_tags' => array(
-            'og:image' => $MYSITE . 'images/php8/php_8_released.png'
-        )
+        'meta_tags' => <<<META
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:site" content="@official_php" />
+<meta name="twitter:title" content="PHP 8.0 Released" />
+<meta name="twitter:description" content="{$meta_description}" />
+<meta name="twitter:creator" content="@official_php" />
+<meta name="twitter:image:src" content="{$meta_image_path}" />
+
+<meta itemprop="name" content="PHP 8.0 Released" />
+<meta itemprop="description" content="{$meta_description}" />
+<meta itemprop="image" content="{$meta_image_path}" />
+
+<meta property="og:image" content="{$meta_image_path}" />
+<meta property="og:description" content="{$meta_description}" />
+META
 ));
 ?>
 <section class="php8-section php8-section_dark php8-section_header center">
@@ -24,7 +38,7 @@ site_header("PHP 8.0.0 Release Announcement", array(
     <div class="php8-logo">
       <img src="/images/php8/logo_php8.svg" alt="php8" height="126" width="343">
     </div>
-    <div class="php8-title">released!</div>
+    <div class="php8-title">Released!</div>
     <div class="php8-subtitle">
       PHP 8.0 is a major update of the PHP language.<br class="display-none-md"> It contains many new features and
       optimizations including named arguments, union types, attributes, constructor property promotion, match
