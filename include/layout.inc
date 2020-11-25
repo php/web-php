@@ -714,7 +714,6 @@ function release_language_chooser($currentlang) {
     );
 
     // Print out the form with all the options
-    $othersel = ' selected="selected"';
     $format_options = function () use ($currentlang, $LANGUAGES) {
         $out = '';
         $tab = str_repeat('  ', 6);
