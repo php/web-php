@@ -712,6 +712,7 @@ function release_language_chooser($currentlang) {
         'en'    => 'English',
         'pt_BR' => 'Brazilian Portuguese',
         'de'    => 'German',
+        'fr' => 'French',
         'ru'    => 'Russian',
     );
 
