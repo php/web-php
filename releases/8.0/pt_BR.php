@@ -98,11 +98,13 @@ META
                     <div class="php8-compare__label">PHP 7</div>
                     <div class="php8-code phpcode">
                         <?php highlight_php_trimmed(
-                            '/**
-* @Route("/api/posts/{id}", methods={"GET", "HEAD"})
-*/
-class User
-{'
+                            'class PostsController
+{
+    /**
+     * @Route("/api/posts/{id}", methods={"GET"})
+     */
+    public function get($id) { /* ... */ }
+}'
                         );?>
                     </div>
                 </div>
@@ -111,9 +113,11 @@ class User
                     <div class="php8-compare__label php8-compare__label_new">PHP 8</div>
                     <div class="php8-code phpcode">
                         <?php highlight_php_trimmed(
-                            '#[Route("/api/posts/{id}", methods: ["GET", "HEAD"])]
-class User
-{'
+                            'class PostsController
+{
+    #[Route("/api/posts/{id}", methods: ["GET"])]
+    public function get($id) { /* ... */ }
+}'
                         );?>
                     </div>
                 </div>
