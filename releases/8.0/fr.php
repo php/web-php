@@ -7,7 +7,7 @@ if (($LANG !== 'fr') && file_exists(__DIR__ . '/' . basename($LANG) . '.php')) {
 }
 
 $meta_image_path = $MYSITE . 'images/php8/php_8_released.png';
-$meta_description = "PHP 8.0 est une mise à jour majeure du langage PHP. Elle contient beaucoup de nouvelle fonctionnalités et d'optimisations, incluant les arguments nommées, les types d'union, attributs, promotion de propriétés de constructeur, l'expression match, l'opérateur nullsafe, JIT (Compilation à la Volée), et des améliorations dans le système de typage, la gestion d'erreur, et de cohérence.";
+$meta_description = "PHP 8.0 est une mise à jour majeure du langage PHP. Elle contient beaucoup de nouvelle fonctionnalités et d'optimisations, incluant les arguments nommés, les types d'union, attributs, promotion de propriétés de constructeur, l'expression match, l'opérateur nullsafe, JIT (Compilation à la Volée), et des améliorations dans le système de typage, la gestion d'erreur, et de cohérence.";
 site_header("Annonce de la Sortie de PHP 8.0.0", array(
         "current" => "php8",
         'css' => array('php8.css'),
@@ -41,8 +41,8 @@ META
     <div class="php8-title">Released!</div>
     <div class="php8-subtitle">
       PHP 8.0 est une mise à jour majeure du langage PHP.<br class="display-none-md">
-      Elle contient beaucoup de nouvelle fonctionnalités et d'optimisations, incluant les arguments nommées,
-      les types d'union, attributs, promotion de propriétés de constructeur, l'expression match, l'opérateur
+      Elle contient beaucoup de nouvelles fonctionnalités et d'optimisations, incluant les arguments nommés,
+      les types d'union, attributs, promotion de propriété de constructeur, l'expression match, l'opérateur
       nullsafe, JIT (Compilation à la Volée), et des améliorations dans le système de typage, la gestion
       d'erreur, et de cohérence.
     </div>
@@ -55,7 +55,7 @@ META
 <section class="php8-section center">
   <div class="php8-compare">
     <h2 class="php8-h2" id="named-arguments">
-      Arguments nommées
+      Arguments nommés
       <a class="php8-rfc" href="https://wiki.php.net/rfc/named_params">RFC</a>
     </h2>
     <div class="php8-compare__main">
@@ -82,7 +82,7 @@ META
     <div class="php8-compare__content">
       <ul>
         <li>Spécifiez uniquement les paramètres requis, omettant ceux optionnels.</li>
-        <li>Les arguments sont indépendant de l'ordre et auto-documenté.</li>
+        <li>Les arguments sont indépendants de l'ordre et auto-documentés.</li>
       </ul>
     </div>
   </div>
@@ -215,7 +215,7 @@ new Number(\'NaN\'); // TypeError'
     </div>
     <div class="php8-compare__content">
       <p>
-          Au lieux d'annotation PHPDoc pour une combinaison de type, vous pouvez utiliser les déclarations de types
+          Au lieu d'annotation PHPDoc pour une combinaison de type, vous pouvez utiliser les déclarations de types
           d'union native qui sont validées lors de l'exécution.
       </p>
     </div>
@@ -262,7 +262,7 @@ echo $result;
       <p>La nouvelle instruction match est similaire à switch et a les fonctionnalités suivantes :</p>
       <ul>
         <li>Match est une expression, signifiant que son résultat peut être enregistré dans une variable ou retourné.</li>
-        <li>Les branches de match supporte uniquement les expressions d'une seule ligne, et n'a pas besoin d'une déclaration break;.</li>
+        <li>Les branches de match supportent uniquement les expressions d'une seule ligne, et n'a pas besoin d'une déclaration break;.</li>
         <li>Match fait des comparaisons strictes.</li>
       </ul>
     </div>
@@ -306,9 +306,9 @@ if ($session !== null) {
     </div>
     <div class="php8-compare__content">
       <p>
-          Au lieux de faire des vérifications conditionnelles de nul, vous pouvez utilisé une chaîne d'appel
+          Au lieu de faire des vérifications conditionnelles de nul, vous pouvez utiliser une chaîne d'appel
           avec le nouvel opérateur nullsafe. Qui lorsque l'évaluation d'un élément de la chaîne échoue, l'exécution
-          de la chaîne complète est terminé et la chaîne entière évalue à null.
+          de la chaîne complète est terminée et la chaîne entière évalue à null.
       </p>
     </div>
   </div>
@@ -339,8 +339,8 @@ if ($session !== null) {
     </div>
     <div class="php8-compare__content">
       <p>
-          Lors de la comparaison avec une chaîne numérique, PHP 8 utilisé une comparaison de nombre.
-          Sinon, il convertie le nombre à une chaîne de caractère et utilise une comparaison de chaîne de caractères.
+          Lors de la comparaison avec une chaîne numérique, PHP 8 utilise une comparaison de nombre.
+          Sinon, il convertit le nombre à une chaîne de caractères et utilise une comparaison de chaîne de caractères.
       </p>
     </div>
   </div>
@@ -374,7 +374,7 @@ array_chunk([], -1); // ValueError: array_chunk(): Argument #2 ($length) must be
       </div>
     </div>
     <div class="php8-compare__content">
-      <p>La plupart des fonctions internes lance désormais une exception Error si la validation du paramètre échoue.</p>
+      <p>La plupart des fonctions internes lancent désormais une exception Error si la validation du paramètre échoue.</p>
     </div>
   </div>
 </section>
@@ -382,10 +382,10 @@ array_chunk([], -1); // ValueError: array_chunk(): Argument #2 ($length) must be
 <section class="php8-section php8-section_light">
   <h2 class="php8-h2">Compilation Juste-à-Temps (JIT)</h2>
   <p>
-    PHP 8 introduit deux moteur de compilation JIT (juste à temps/compilation à la volée).
+    PHP 8 introduit deux moteurs de compilation JIT (juste à temps/compilation à la volée).
     Le Tracing JIT, le plus prometteur des deux, montre environ 3 fois plus de performances sur des benchmarks
     synthétiques et 1,5-2 fois plus de performances sur certaines applications à longue durée d'exécution.
-    Généralement les performances des applications sont identique à PHP 7.4.
+    Généralement les performances des applications sont identiques à PHP 7.4.
   </p>
   <h3 class="php8-h3">
     Contribution relative du JIT à la performance de PHP 8
@@ -399,7 +399,7 @@ array_chunk([], -1); // ValueError: array_chunk(): Argument #2 ($length) must be
       <h2 class="php8-h2 php8-h2_margin-top">Amélioration du système de typage et de la gestion d'erreur</h2>
       <ul>
         <li>
-            Vérification de type plus sévère pour les opérateurs arithmétique et bit à bit
+            Vérification de type plus sévère pour les opérateurs arithmétiques et bit à bit
           <a href="https://wiki.php.net/rfc/arithmetic_operator_type_checks">RFC</a>
         </li>
         <li>
@@ -442,7 +442,7 @@ array_chunk([], -1); // ValueError: array_chunk(): Argument #2 ($length) must be
       </ul>
     </div>
     <div class="php8-column">
-      <h2 class="php8-h2 php8-h2_margin-top">Autres ajustement de syntaxes et améliorations</h2>
+      <h2 class="php8-h2 php8-h2_margin-top">Autres ajustements de syntaxe et améliorations</h2>
       <ul>
         <li>
             Autorisation des virgules trainantes dans les listes de paramètres <a href="https://wiki.php.net/rfc/trailing_comma_in_parameter_list">RFC</a>
@@ -498,20 +498,20 @@ array_chunk([], -1); // ValueError: array_chunk(): Argument #2 ($length) must be
 <section class="php8-section php8-section_dark php8-section_footer php8-footer">
   <div class="php8-section__content">
     <h2 class="php8-h2 center">
-      Meilleurs performances, meilleur syntaxe, amélioration de la sécurité de type.
+      Meilleures performances, meilleure syntaxe, amélioration de la sécurité de type.
     </h2>
     <div class="php8-button-wrapper center">
       <a class="php8-button php8-button_light" href="/downloads">Migrez à PHP 8 maintenant!</a>
     </div>
     <div class="php8-footer__content">
       <p>
-        Pour le téléchargements des sources de PHP 8 veuillez visiter la page de <a href="http://www.php.net/downloads">téléchargement</a>.
-        Les binaires Windows peuvent être trouvé sur le site de <a href="http://windows.php.net/download">PHP pour Windows</a>.
-        La liste de changement est notés dans le <a href="http://www.php.net/ChangeLog-8.php">ChangeLog</a>.
+        Pour le téléchargement des sources de PHP 8 veuillez visiter la page de <a href="http://www.php.net/downloads">téléchargement</a>.
+        Les binaires Windows peuvent être trouvés sur le site de <a href="http://windows.php.net/download">PHP pour Windows</a>.
+        La liste des changements est notée dans le <a href="http://www.php.net/ChangeLog-8.php">ChangeLog</a>.
       </p>
       <p>
         Le <a href="/manual/fr/migration80.php">guide de migration</a> est disponible dans le manuel PHP.
-        Veuillez le consulter pour une liste détailler des nouvelles fonctionnalités et changement non rétrocompatible.
+        Veuillez le consulter pour une liste détailler des nouvelles fonctionnalités et changements non rétrocompatibles.
       </p>
     </div>
   </div>
