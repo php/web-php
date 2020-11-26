@@ -366,7 +366,7 @@ array_chunk([], -1); // ValueError: array_chunk(): Argument #2 ($length) must be
                 </div>
             </div>
             <div class="php8-compare__content">
-                <p>A maioria das funções internas agora lançam uma exceção Fatal Error se a validação do parâmetro falhar.</p>
+                <p>A maioria das funções internas agora lançam uma exceção Error se a validação do parâmetro falhar.</p>
             </div>
         </div>
     </section>
@@ -420,11 +420,17 @@ array_chunk([], -1); // ValueError: array_chunk(): Argument #2 ($length) must be
                     </li>
                     <li>
                         Tipagem de funções internas
-                        <a href="https://externals.io/message/106522">RFC</a>
+                        <a href="https://externals.io/message/106522">discussão por email</a>
                     </li>
                     <li>
-                        Objetos curl em vez de recursos
-                        <a href="https://php.watch/versions/8.0/resource-CurlHandle">RFC</a>
+                        Objetos opacos em vez de recursos para
+                        <a href="https://php.watch/versions/8.0/resource-CurlHandle">Curl</a>,
+                        <a href="https://php.watch/versions/8.0/gdimage">Gd</a>,
+                        <a href="https://php.watch/versions/8.0/sockets-sockets-addressinfo">Sockets</a>,
+                        <a href="https://php.watch/versions/8.0/OpenSSL-resource">OpenSSL</a>,
+                        <a href="https://php.watch/versions/8.0/xmlwriter-resource">XMLWriter</a>, e
+                        <a href="https://php.watch/versions/8.0/xmlwriter-resource">XML</a>
+                        extensões
                     </li>
                 </ul>
             </div>

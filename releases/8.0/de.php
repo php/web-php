@@ -370,7 +370,7 @@ array_chunk([], -1); // ValueError: array_chunk(): Argument #2 ($length) must be
       </div>
     </div>
     <div class="php8-compare__content">
-      <p>Die meisten internen Funktionen erzeugen nun eine Fatal Error Exception wenn die Typenvalidierung der Parameter
+      <p>Die meisten internen Funktionen erzeugen nun eine Error Exception wenn die Typenvalidierung der Parameter
          fehlschlägt.</p>
     </div>
   </div>
@@ -424,11 +424,17 @@ array_chunk([], -1); // ValueError: array_chunk(): Argument #2 ($length) must be
         </li>
         <li>
           Typen für interne Funktionen
-          <a href="https://externals.io/message/106522">RFC</a>
+          <a href="https://externals.io/message/106522">E-Mail-Thread</a>
         </li>
         <li>
-          Curl verwendet nun Objekte anstelle des resource Typs
-          <a href="https://php.watch/versions/8.0/resource-CurlHandle">RFC</a>
+            Undurchsichtige Objekte anstelle von des resource Typs für
+            <a href="https://php.watch/versions/8.0/resource-CurlHandle">Curl</a>,
+            <a href="https://php.watch/versions/8.0/gdimage">Gd</a>,
+            <a href="https://php.watch/versions/8.0/sockets-sockets-addressinfo">Sockets</a>,
+            <a href="https://php.watch/versions/8.0/OpenSSL-resource">OpenSSL</a>,
+            <a href="https://php.watch/versions/8.0/xmlwriter-resource">XMLWriter</a>, und
+            <a href="https://php.watch/versions/8.0/xmlwriter-resource">XML</a>
+            extension
         </li>
       </ul>
     </div>
