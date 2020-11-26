@@ -7,7 +7,7 @@ if (($LANG !== 'fr') && file_exists(__DIR__ . '/' . basename($LANG) . '.php')) {
 }
 
 $meta_image_path = $MYSITE . 'images/php8/php_8_released.png';
-$meta_description = "PHP 8.0 est une mise à jour majeure du langage PHP. Elle contient beaucoup de nouvelle fonctionnalités et d'optimisations, incluant les arguments nommées, les types d'union, attributs, promotion de propriétés de constructeur, l'expression match, l'opérateur nullsafe, JIT (Compilation à la Volée), et des améliorations dans le système de typage, la gestion d'erreur, et de cohérence.";
+$meta_description = "PHP 8.0 est une mise à jour majeure du langage PHP. Elle contient beaucoup de nouvelle fonctionnalités et d'optimisations, incluant les arguments nommés, les types d'union, attributs, promotion de propriétés de constructeur, l'expression match, l'opérateur nullsafe, JIT (Compilation à la Volée), et des améliorations dans le système de typage, la gestion d'erreur, et de cohérence.";
 site_header("Annonce de la Sortie de PHP 8.0.0", array(
         "current" => "php8",
         'css' => array('php8.css'),
@@ -55,7 +55,7 @@ META
 <section class="php8-section center">
   <div class="php8-compare">
     <h2 class="php8-h2" id="named-arguments">
-      Arguments nommées
+      Arguments nommés
       <a class="php8-rfc" href="https://wiki.php.net/rfc/named_params">RFC</a>
     </h2>
     <div class="php8-compare__main">
@@ -82,7 +82,7 @@ META
     <div class="php8-compare__content">
       <ul>
         <li>Spécifiez uniquement les paramètres requis, omettant ceux optionnels.</li>
-        <li>Les arguments sont indépendant de l'ordre et auto-documenté.</li>
+        <li>Les arguments sont indépendants de l'ordre et auto-documentés.</li>
       </ul>
     </div>
   </div>
@@ -262,7 +262,7 @@ echo $result;
       <p>La nouvelle instruction match est similaire à switch et a les fonctionnalités suivantes :</p>
       <ul>
         <li>Match est une expression, signifiant que son résultat peut être enregistré dans une variable ou retourné.</li>
-        <li>Les branches de match supporte uniquement les expressions d'une seule ligne, et n'a pas besoin d'une déclaration break;.</li>
+        <li>Les branches de match supportent uniquement les expressions d'une seule ligne, et n'a pas besoin d'une déclaration break;.</li>
         <li>Match fait des comparaisons strictes.</li>
       </ul>
     </div>
@@ -308,7 +308,7 @@ if ($session !== null) {
       <p>
           Au lieu de faire des vérifications conditionnelles de nul, vous pouvez utiliser une chaîne d'appel
           avec le nouvel opérateur nullsafe. Qui lorsque l'évaluation d'un élément de la chaîne échoue, l'exécution
-          de la chaîne complète est terminé et la chaîne entière évalue à null.
+          de la chaîne complète est terminée et la chaîne entière évalue à null.
       </p>
     </div>
   </div>
