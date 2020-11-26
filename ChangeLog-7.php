@@ -12,6 +12,71 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
 
 <a name="PHP_7_4"></a>
 
+<section class="version" id="7.4.13"><!-- {{{ 7.4.13 -->
+<h3>Version 7.4.13</h3>
+<b><?php release_date('26-Nov-2020'); ?></b>
+<ul><li>Core:
+<ul>
+  <li><?php bugfix(80280); ?> (ADD_EXTENSION_DEP() fails for ext/standard and ext/date).</li>
+  <li><?php bugfix(80258); ?> (Windows Deduplication Enabled, randon permission errors).</li>
+</ul></li>
+<li>COM:
+<ul>
+  <li><?php bugfix(62474); ?> (com_event_sink crashes on certain arguments).</li>
+</ul></li>
+<li>DOM:
+<ul>
+  <li><?php bugfix(80268); ?> (loadHTML() truncates at NUL bytes).</li>
+</ul></li>
+<li>FFI:
+<ul>
+  <li><?php bugfix(79177); ?> (FFI doesn't handle well PHP exceptions within callback).</li>
+</ul></li>
+<li>IMAP:
+<ul>
+  <li><?php bugfix(64076); ?> (imap_sort() does not return FALSE on failure).</li>
+  <li><?php bugfix(76618); ?> (segfault on imap_reopen).</li>
+  <li><?php bugfix(80239); ?> (imap_rfc822_write_address() leaks memory).</li>
+  <li>Fixed minor regression caused by fixing bug #80220.</li>
+  <li><?php bugfix(80242); ?> (imap_mail_compose() segfaults for multipart with rfc822).</li>
+</ul></li>
+<li>MySQLi:
+<ul>
+  <li><?php bugfix(79375); ?> (mysqli_store_result does not report error from lock wait timeout).</li>
+  <li><?php bugfix(76525); ?> (mysqli::commit does not throw if MYSQLI_REPORT_ERROR enabled and mysqlnd used).</li>
+  <li><?php bugfix(72413); ?> (mysqlnd segfault (fetch_row second parameter typemismatch)).</li>
+</ul></li>
+<li>ODBC:
+<ul>
+  <li><?php bugfix(44618); ?> (Fetching may rely on uninitialized data).</li>
+</ul></li>
+<li>Opcache:
+<ul>
+  <li><?php bugfix(79643); ?> (PHP with Opcache crashes when a file with specific name is included).</li>
+  <li>Fixed run-time binding of preloaded dynamically declared function.</li>
+</ul></li>
+<li>OpenSSL:
+<ul>
+  <li><?php bugfix(79983); ?> (openssl_encrypt / openssl_decrypt fail with OCB mode).</li>
+</ul></li>
+<li>PDO MySQL:
+<ul>
+  <li><?php bugfix(66528); ?> (No PDOException or errorCode if database becomes unavailable before PDO::commit).</li>
+  <li><?php bugfix(65825); ?> (PDOStatement::fetch() does not throw exception on broken server connection).</li>
+</ul></li>
+<li>SNMP:
+<ul>
+  <li><?php bugfix(70461); ?> (disable md5 code when it is not supported in net-snmp).</li>
+</ul></li>
+<li>Standard:
+<ul>
+  <li><?php bugfix(80266); ?> (parse_url silently drops port number 0).</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
+
+
 <section class="version" id="7.4.12"><!-- {{{ 7.4.12 -->
 <h3>Version 7.4.12</h3>
 <b><?php release_date('29-Oct-2020'); ?></b>
