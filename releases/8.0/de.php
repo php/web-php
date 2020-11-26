@@ -126,7 +126,7 @@ class User
   <div class="php8-compare">
     <h2 class="php8-h2" id="constructor-property-promotion">
       Constructor Property Promotion
-      <a class="php8-rfc" href="https://wiki.php.net/rfc/constructor_promotion">RFC</a>
+      <a class="php8-rfc" href="https://wiki.php.net/rfc/constructor_promotion">RFC</a> <a class="php8-rfc" href="/manual/de/language.oop5.decon.php#language.oop5.decon.constructor.promotion">Doc</a>
     </h2>
     <div class="php8-compare__main">
       <div class="php8-compare__block example-contents">
@@ -175,7 +175,7 @@ class User
   <div class="php8-compare">
     <h2 class="php8-h2" id="union-types">
       Union Types
-      <a class="php8-rfc" href="https://wiki.php.net/rfc/union_types_v2">RFC</a> <a class="php8-rfc" href="/manual/en/language.types.declarations.php#language.types.declarations.union">Doc</a>
+      <a class="php8-rfc" href="https://wiki.php.net/rfc/union_types_v2">RFC</a> <a class="php8-rfc" href="/manual/de/language.types.declarations.php#language.types.declarations.union">Doc</a>
     </h2>
     <div class="php8-compare__main">
       <div class="php8-compare__block example-contents">
@@ -223,7 +223,7 @@ new Number(\'NaN\'); // TypeError'
   <div class="php8-compare">
     <h2 class="php8-h2" id="match-expression">
       Match Ausdruck
-      <a class="php8-rfc" href="https://wiki.php.net/rfc/match_expression_v2">RFC</a>
+      <a class="php8-rfc" href="https://wiki.php.net/rfc/match_expression_v2">RFC</a> <a class="php8-rfc" href="/manual/de/control-structures.match.php">Doc</a>
     </h2>
     <div class="php8-compare__main">
       <div class="php8-compare__block example-contents">
@@ -370,7 +370,7 @@ array_chunk([], -1); // ValueError: array_chunk(): Argument #2 ($length) must be
       </div>
     </div>
     <div class="php8-compare__content">
-      <p>Die meisten internen Funktionen erzeugen nun eine Fatal Error Exception wenn die Typenvalidierung der Parameter
+      <p>Die meisten internen Funktionen erzeugen nun eine Error Exception wenn die Typenvalidierung der Parameter
          fehlschlägt.</p>
     </div>
   </div>
@@ -424,11 +424,17 @@ array_chunk([], -1); // ValueError: array_chunk(): Argument #2 ($length) must be
         </li>
         <li>
           Typen für interne Funktionen
-          <a href="https://externals.io/message/106522">RFC</a>
+          <a href="https://externals.io/message/106522">E-Mail-Thread</a>
         </li>
         <li>
-          Curl verwendet nun Objekte anstelle des resource Typs
-          <a href="https://php.watch/versions/8.0/resource-CurlHandle">RFC</a>
+            Objekte ohne Methoden anstelle des resource Typs für
+            <a href="https://php.watch/versions/8.0/resource-CurlHandle">Curl</a>,
+            <a href="https://php.watch/versions/8.0/gdimage">Gd</a>,
+            <a href="https://php.watch/versions/8.0/sockets-sockets-addressinfo">Sockets</a>,
+            <a href="https://php.watch/versions/8.0/OpenSSL-resource">OpenSSL</a>,
+            <a href="https://php.watch/versions/8.0/xmlwriter-resource">XMLWriter</a>, und
+            <a href="https://php.watch/versions/8.0/xmlwriter-resource">XML</a>
+            Extension
         </li>
       </ul>
     </div>
