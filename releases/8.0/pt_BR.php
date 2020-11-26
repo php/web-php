@@ -126,7 +126,7 @@ class User
         <div class="php8-compare">
             <h2 class="php8-h2" id="constructor-property-promotion">
                 Promoção de propriedade de construtor
-                <a class="php8-rfc" href="https://wiki.php.net/rfc/constructor_promotion">RFC</a>
+                <a class="php8-rfc" href="https://wiki.php.net/rfc/constructor_promotion">RFC</a> <a class="php8-rfc" href="/manual/pt_BR/language.oop5.decon.php#language.oop5.decon.constructor.promotion">Doc</a>
             </h2>
             <div class="php8-compare__main">
                 <div class="php8-compare__block example-contents">
@@ -175,7 +175,7 @@ class User
         <div class="php8-compare">
             <h2 class="php8-h2" id="union-types">
                 União de tipos
-                <a class="php8-rfc" href="https://wiki.php.net/rfc/union_types_v2">RFC</a> <a class="php8-rfc" href="/manual/en/language.types.declarations.php#language.types.declarations.union">Doc</a>
+                <a class="php8-rfc" href="https://wiki.php.net/rfc/union_types_v2">RFC</a> <a class="php8-rfc" href="/manual/pt_BR/language.types.declarations.php#language.types.declarations.union">Doc</a>
             </h2>
             <div class="php8-compare__main">
                 <div class="php8-compare__block example-contents">
@@ -223,7 +223,7 @@ new Number(\'NaN\'); // TypeError'
         <div class="php8-compare">
             <h2 class="php8-h2" id="match-expression">
                 Expressão match
-                <a class="php8-rfc" href="https://wiki.php.net/rfc/match_expression_v2">RFC</a>
+                <a class="php8-rfc" href="https://wiki.php.net/rfc/match_expression_v2">RFC</a> <a class="php8-rfc" href="/manual/pt_BR/control-structures.match.php">Doc</a>
             </h2>
             <div class="php8-compare__main">
                 <div class="php8-compare__block example-contents">
@@ -366,7 +366,7 @@ array_chunk([], -1); // ValueError: array_chunk(): Argument #2 ($length) must be
                 </div>
             </div>
             <div class="php8-compare__content">
-                <p>A maioria das funções internas agora lançam uma exceção Fatal Error se a validação do parâmetro falhar.</p>
+                <p>A maioria das funções internas agora lançam uma exceção Error se a validação do parâmetro falhar.</p>
             </div>
         </div>
     </section>
@@ -420,11 +420,17 @@ array_chunk([], -1); // ValueError: array_chunk(): Argument #2 ($length) must be
                     </li>
                     <li>
                         Tipagem de funções internas
-                        <a href="https://externals.io/message/106522">RFC</a>
+                        <a href="https://externals.io/message/106522">Discussão por email</a>
                     </li>
                     <li>
-                        Objetos curl em vez de recursos
-                        <a href="https://php.watch/versions/8.0/resource-CurlHandle">RFC</a>
+                        Objetos opacos em vez de recursos para
+                        <a href="https://php.watch/versions/8.0/resource-CurlHandle">Curl</a>,
+                        <a href="https://php.watch/versions/8.0/gdimage">Gd</a>,
+                        <a href="https://php.watch/versions/8.0/sockets-sockets-addressinfo">Sockets</a>,
+                        <a href="https://php.watch/versions/8.0/OpenSSL-resource">OpenSSL</a>,
+                        <a href="https://php.watch/versions/8.0/xmlwriter-resource">XMLWriter</a>, e
+                        <a href="https://php.watch/versions/8.0/xmlwriter-resource">XML</a>
+                        extensões
                     </li>
                 </ul>
             </div>

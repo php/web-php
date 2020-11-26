@@ -123,7 +123,7 @@ class User
   <div class="php8-compare">
     <h2 class="php8-h2" id="constructor-property-promotion">
       Constructor property promotion
-      <a class="php8-rfc" href="https://wiki.php.net/rfc/constructor_promotion">RFC</a>
+      <a class="php8-rfc" href="https://wiki.php.net/rfc/constructor_promotion">RFC</a> <a class="php8-rfc" href="/manual/en/language.oop5.decon.php#language.oop5.decon.constructor.promotion">Doc</a>
     </h2>
     <div class="php8-compare__main">
       <div class="php8-compare__block example-contents">
@@ -220,7 +220,7 @@ new Number(\'NaN\'); // TypeError'
   <div class="php8-compare">
     <h2 class="php8-h2" id="match-expression">
       Match expression
-      <a class="php8-rfc" href="https://wiki.php.net/rfc/match_expression_v2">RFC</a>
+      <a class="php8-rfc" href="https://wiki.php.net/rfc/match_expression_v2">RFC</a> <a class="php8-rfc" href="/manual/en/control-structures.match.php">Doc</a>
     </h2>
     <div class="php8-compare__main">
       <div class="php8-compare__block example-contents">
@@ -366,7 +366,7 @@ array_chunk([], -1); // ValueError: array_chunk(): Argument #2 ($length) must be
       </div>
     </div>
     <div class="php8-compare__content">
-      <p>Most of the internal functions now throw a Fatal Error exception if the validation of the parameters fails.</p>
+      <p>Most of the internal functions now throw an Error exception if the validation of the parameters fails.</p>
     </div>
   </div>
 </section>
@@ -419,11 +419,17 @@ array_chunk([], -1); // ValueError: array_chunk(): Argument #2 ($length) must be
         </li>
         <li>
           Types for internal functions
-          <a href="https://externals.io/message/106522">RFC</a>
+          <a href="https://externals.io/message/106522">Email thread</a>
         </li>
         <li>
-          Curl objects instead of resources
-          <a href="https://php.watch/versions/8.0/resource-CurlHandle">RFC</a>
+          Opaque objects instead of resources for
+            <a href="https://php.watch/versions/8.0/resource-CurlHandle">Curl</a>,
+            <a href="https://php.watch/versions/8.0/gdimage">Gd</a>,
+            <a href="https://php.watch/versions/8.0/sockets-sockets-addressinfo">Sockets</a>,
+            <a href="https://php.watch/versions/8.0/OpenSSL-resource">OpenSSL</a>,
+            <a href="https://php.watch/versions/8.0/xmlwriter-resource">XMLWriter</a>, and
+            <a href="https://php.watch/versions/8.0/xmlwriter-resource">XML</a>
+            extensions
         </li>
       </ul>
     </div>

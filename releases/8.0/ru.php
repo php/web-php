@@ -125,7 +125,7 @@ class User
   <div class="php8-compare">
     <h2 class="php8-h2" id="constructor-property-promotion">
       Объявление свойств в конструкторе
-      <a class="php8-rfc" href="https://wiki.php.net/rfc/constructor_promotion">RFC</a>
+      <a class="php8-rfc" href="https://wiki.php.net/rfc/constructor_promotion">RFC</a> <a class="php8-rfc" href="/manual/ru/language.oop5.decon.php#language.oop5.decon.constructor.promotion">Doc</a>
     </h2>
     <div class="php8-compare__main">
       <div class="php8-compare__block example-contents">
@@ -222,7 +222,7 @@ new Number(\'NaN\'); // TypeError'
   <div class="php8-compare">
     <h2 class="php8-h2" id="match-expression">
       Выражение Match
-      <a class="php8-rfc" href="https://wiki.php.net/rfc/match_expression_v2">RFC</a>
+      <a class="php8-rfc" href="https://wiki.php.net/rfc/match_expression_v2">RFC</a> <a class="php8-rfc" href="/manual/ru/control-structures.match.php">Doc</a>
     </h2>
     <div class="php8-compare__main">
       <div class="php8-compare__block example-contents">
@@ -368,7 +368,7 @@ array_chunk([], -1); // ValueError: array_chunk(): Argument #2 ($length) must be
       </div>
     </div>
     <div class="php8-compare__content">
-      <p>Большинство внутренних функций теперь выбрасывают исключение Fatal Error, если при проверке параметра возникает ошибка.</p>
+      <p>Большинство внутренних функций теперь выбрасывают исключение Error, если при проверке параметра возникает ошибка.</p>
     </div>
   </div>
 </section>
@@ -421,11 +421,17 @@ array_chunk([], -1); // ValueError: array_chunk(): Argument #2 ($length) must be
         </li>
         <li>
           Типы для стандартных функций
-          <a href="https://externals.io/message/106522">RFC</a>
+          <a href="https://externals.io/message/106522">E-mail Тема</a>
         </li>
         <li>
-          Объекты вместо ресурсов для cURL
-          <a href="https://php.watch/versions/8.0/resource-CurlHandle">RFC</a>
+            Непрозрачные объекты вместо ресурсов для
+            <a href="https://php.watch/versions/8.0/resource-CurlHandle">Curl</a>,
+            <a href="https://php.watch/versions/8.0/gdimage">Gd</a>,
+            <a href="https://php.watch/versions/8.0/sockets-sockets-addressinfo">Sockets</a>,
+            <a href="https://php.watch/versions/8.0/OpenSSL-resource">OpenSSL</a>,
+            <a href="https://php.watch/versions/8.0/xmlwriter-resource">XMLWriter</a>, e
+            <a href="https://php.watch/versions/8.0/xmlwriter-resource">XML</a>
+            расширения
         </li>
       </ul>
     </div>
