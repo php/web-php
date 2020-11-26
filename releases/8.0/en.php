@@ -123,7 +123,7 @@ class User
   <div class="php8-compare">
     <h2 class="php8-h2" id="constructor-property-promotion">
       Constructor property promotion
-      <a class="php8-rfc" href="https://wiki.php.net/rfc/constructor_promotion">RFC</a>
+      <a class="php8-rfc" href="https://wiki.php.net/rfc/constructor_promotion">RFC</a> <a class="php8-rfc" href="/manual/en/language.oop5.decon.php#language.oop5.decon.constructor.promotion">Doc</a>
     </h2>
     <div class="php8-compare__main">
       <div class="php8-compare__block example-contents">
@@ -220,7 +220,7 @@ new Number(\'NaN\'); // TypeError'
   <div class="php8-compare">
     <h2 class="php8-h2" id="match-expression">
       Match expression
-      <a class="php8-rfc" href="https://wiki.php.net/rfc/match_expression_v2">RFC</a>
+      <a class="php8-rfc" href="https://wiki.php.net/rfc/match_expression_v2">RFC</a> <a class="php8-rfc" href="/manual/en/control-structures.match.php">Doc</a>
     </h2>
     <div class="php8-compare__main">
       <div class="php8-compare__block example-contents">
