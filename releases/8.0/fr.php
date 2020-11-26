@@ -340,7 +340,7 @@ if ($session !== null) {
     <div class="php8-compare__content">
       <p>
           Lors de la comparaison avec une chaîne numérique, PHP 8 utilise une comparaison de nombre.
-          Sinon, il convertie le nombre à une chaîne de caractère et utilise une comparaison de chaîne de caractères.
+          Sinon, il convertit le nombre à une chaîne de caractères et utilise une comparaison de chaîne de caractères.
       </p>
     </div>
   </div>
@@ -399,7 +399,7 @@ array_chunk([], -1); // ValueError: array_chunk(): Argument #2 ($length) must be
       <h2 class="php8-h2 php8-h2_margin-top">Amélioration du système de typage et de la gestion d'erreur</h2>
       <ul>
         <li>
-            Vérification de type plus sévère pour les opérateurs arithmétique et bit à bit
+            Vérification de type plus sévère pour les opérateurs arithmétiques et bit à bit
           <a href="https://wiki.php.net/rfc/arithmetic_operator_type_checks">RFC</a>
         </li>
         <li>
@@ -442,7 +442,7 @@ array_chunk([], -1); // ValueError: array_chunk(): Argument #2 ($length) must be
       </ul>
     </div>
     <div class="php8-column">
-      <h2 class="php8-h2 php8-h2_margin-top">Autres ajustement de syntaxes et améliorations</h2>
+      <h2 class="php8-h2 php8-h2_margin-top">Autres ajustements de syntaxe et améliorations</h2>
       <ul>
         <li>
             Autorisation des virgules trainantes dans les listes de paramètres <a href="https://wiki.php.net/rfc/trailing_comma_in_parameter_list">RFC</a>
@@ -498,7 +498,7 @@ array_chunk([], -1); // ValueError: array_chunk(): Argument #2 ($length) must be
 <section class="php8-section php8-section_dark php8-section_footer php8-footer">
   <div class="php8-section__content">
     <h2 class="php8-h2 center">
-      Meilleurs performances, meilleur syntaxe, amélioration de la sécurité de type.
+      Meilleures performances, meilleure syntaxe, amélioration de la sécurité de type.
     </h2>
     <div class="php8-button-wrapper center">
       <a class="php8-button php8-button_light" href="/downloads">Migrez à PHP 8 maintenant!</a>
@@ -506,8 +506,8 @@ array_chunk([], -1); // ValueError: array_chunk(): Argument #2 ($length) must be
     <div class="php8-footer__content">
       <p>
         Pour le téléchargement des sources de PHP 8 veuillez visiter la page de <a href="http://www.php.net/downloads">téléchargement</a>.
-        Les binaires Windows peuvent être trouvé sur le site de <a href="http://windows.php.net/download">PHP pour Windows</a>.
-        La liste de changement est notés dans le <a href="http://www.php.net/ChangeLog-8.php">ChangeLog</a>.
+        Les binaires Windows peuvent être trouvés sur le site de <a href="http://windows.php.net/download">PHP pour Windows</a>.
+        La liste des changements est notée dans le <a href="http://www.php.net/ChangeLog-8.php">ChangeLog</a>.
       </p>
       <p>
         Le <a href="/manual/fr/migration80.php">guide de migration</a> est disponible dans le manuel PHP.
