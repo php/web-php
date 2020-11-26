@@ -427,14 +427,14 @@ array_chunk([], -1); // ValueError: array_chunk(): Argument #2 ($length) must be
           <a href="https://externals.io/message/106522">E-Mail-Thread</a>
         </li>
         <li>
-            Undurchsichtige Objekte anstelle von des resource Typs für
+            Objekte ohne Methoden anstelle des resource Typs für
             <a href="https://php.watch/versions/8.0/resource-CurlHandle">Curl</a>,
             <a href="https://php.watch/versions/8.0/gdimage">Gd</a>,
             <a href="https://php.watch/versions/8.0/sockets-sockets-addressinfo">Sockets</a>,
             <a href="https://php.watch/versions/8.0/OpenSSL-resource">OpenSSL</a>,
             <a href="https://php.watch/versions/8.0/xmlwriter-resource">XMLWriter</a>, und
             <a href="https://php.watch/versions/8.0/xmlwriter-resource">XML</a>
-            extension
+            Extension
         </li>
       </ul>
     </div>
