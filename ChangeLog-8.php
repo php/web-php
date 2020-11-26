@@ -68,7 +68,7 @@ site_header("PHP 8 ChangeLog", array("current" => "docs", "css" => array("change
   <li><?php bugfix(80258); ?> (Windows Deduplication Enabled, randon permission errors).</li>
   <li><?php bugfix(80280); ?> (ADD_EXTENSION_DEP() fails for ext/standard and ext/date).</li>
   <li><?php bugfix(80334); ?> (assert() vs named parameters - confusing error).</li>
-  <li><?php bugfix(8055); ?> (Abstract trait methods returning "self" cannot be fulfilled by traits).</li>
+  <li><?php bugfix(80055); ?> (Abstract trait methods returning "self" cannot be fulfilled by traits).</li>
   <li>Fixed faulty generator cleanup with yield from.</li>
   <li>Implement #[Attr] Attribute syntax as per final vote in RFC https://wiki.php.net/rfc/shorter_attribute_syntax_change</li>
   <li>Implemented FR <?php bugl(47074); ?> (phpinfo() reports "On" as 1 for the some extensions).</li>
