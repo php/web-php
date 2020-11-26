@@ -420,7 +420,7 @@ array_chunk([], -1); // ValueError: array_chunk(): Argument #2 ($length) must be
                     </li>
                     <li>
                         Tipagem de funções internas
-                        <a href="https://externals.io/message/106522">discussão por email</a>
+                        <a href="https://externals.io/message/106522">Discussão por email</a>
                     </li>
                     <li>
                         Objetos opacos em vez de recursos para
