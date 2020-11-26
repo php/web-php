@@ -16,6 +16,16 @@
  * );
  */
 $RELEASES = (function() {
+    /* PHP 8.0 Release */
+    $PHP_8_0_VERSION         = "8.0.0";
+    $PHP_8_0_DATE            = "26 Nov 2020";
+    $PHP_8_0_TAGS            = []; // Set to ['security'] for security releases.
+    $PHP_8_0_SHA256     = array(
+        "tar.gz"        => "3ed7b48d64357d3e8fa9e828dbe7416228f84105b8290c2f9779cd66be31ea71",
+        "tar.bz2"       => "5e832dc37eabf444410b4ea6fb3d66b72e44e7407a3b49caa5746edcf71b9d09",
+        "tar.xz"        => "b5278b3eef584f0c075d15666da4e952fa3859ee509d6b0cc2ed13df13f65ebb",
+    );
+
     /* PHP 7.4 Release */
     $PHP_7_4_VERSION         = "7.4.13";
     $PHP_7_4_DATE            = "26 Nov 2020";
@@ -47,6 +57,33 @@ $RELEASES = (function() {
     );
 
     return array(
+        8 => array(
+            $PHP_8_0_VERSION => array(
+                "announcement" => true,
+                "tags" => $PHP_8_0_TAGS,
+                "date" => $PHP_8_0_DATE,
+                "source" => array(
+                    array(
+                        "filename" => "php-$PHP_8_0_VERSION.tar.bz2",
+                        "name"     => "PHP $PHP_8_0_VERSION (tar.bz2)",
+                        "sha256"   => $PHP_8_0_SHA256["tar.bz2"],
+                        "date"     => $PHP_8_0_DATE,
+                    ),
+                    array(
+                        "filename" => "php-$PHP_8_0_VERSION.tar.gz",
+                        "name"     => "PHP $PHP_8_0_VERSION (tar.gz)",
+                        "sha256"   => $PHP_8_0_SHA256["tar.gz"],
+                        "date"     => $PHP_8_0_DATE,
+                    ),
+                    array(
+                        "filename" => "php-$PHP_8_0_VERSION.tar.xz",
+                        "name"     => "PHP $PHP_9_0_VERSION (tar.xz)",
+                        "sha256"   => $PHP_8_0_SHA256["tar.xz"],
+                        "date"     => $PHP_8_0_DATE,
+                    ),
+                ),
+			),
+		),
         7 => array(
             $PHP_7_4_VERSION => array(
                 "announcement" => true,
