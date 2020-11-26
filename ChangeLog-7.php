@@ -1272,6 +1272,51 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
 
 <a name="PHP_7_3"></a>
 
+<section class="version" id="7.3.25"><!-- {{{ 7.3.25 -->
+<h3>Version 7.3.25</h3>
+<b><?php release_date('26-Nov-2020'); ?></b>
+<ul><li>Core:
+<ul>
+  <li><?php bugfix(80280); ?> (ADD_EXTENSION_DEP() fails for ext/standard and ext/date).</li>
+  <li><?php bugfix(80258); ?> (Windows Deduplication Enabled, randon permission errors).</li>
+</ul></li>
+<li>COM:
+<ul>
+  <li><?php bugfix(62474); ?> (com_event_sink crashes on certain arguments).</li>
+</ul></li>
+<li>DOM:
+<ul>
+  <li><?php bugfix(80268); ?> (loadHTML() truncates at NUL bytes).</li>
+</ul></li>
+<li>IMAP:
+<ul>
+  <li><?php bugfix(64076); ?> (imap_sort() does not return FALSE on failure).</li>
+  <li><?php bugfix(76618); ?> (segfault on imap_reopen).</li>
+  <li><?php bugfix(80239); ?> (imap_rfc822_write_address() leaks memory).</li>
+  <li>Fixed minor regression caused by fixing bug #80220.</li>
+  <li><?php bugfix(80242); ?> (imap_mail_compose() segfaults for multipart with rfc822).</li>
+</ul></li>
+<li>Intl:
+<ul>
+  <li><?php bugfix(80310); ?> (ext-intl with icu4c 68.1: use of undeclared identifier 'TRUE').</li>
+</ul></li>
+<li>ODBC:
+<ul>
+  <li><?php bugfix(44618); ?> (Fetching may rely on uninitialized data).</li>
+</ul></li>
+<li>SNMP:
+<ul>
+  <li><?php bugfix(70461); ?> (disable md5 code when it is not supported in net-snmp).</li>
+</ul></li>
+<li>Standard:
+<ul>
+  <li><?php bugfix(80266); ?> (parse_url silently drops port number 0).</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
+
+
 <section class="version" id="7.3.24"><!-- {{{ 7.3.24 -->
 <h3>Version 7.3.24</h3>
 <b><?php release_date('29-Oct-2020'); ?></b>
