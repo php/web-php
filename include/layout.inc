@@ -714,6 +714,7 @@ function release_language_chooser($currentlang) {
         'de'    => 'German',
         'fr' => 'French',
         'ru'    => 'Russian',
+        'zh'    => 'Chinese Simplified',
     );
 
     // Print out the form with all the options
