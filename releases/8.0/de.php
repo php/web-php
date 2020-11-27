@@ -123,7 +123,7 @@ META
       </div>
     </div>
     <div class="php8-compare__content">
-      <p>Anstelle von PHPDoc Annotations kannst du nun struktirierte Meta-Daten in nativer PHP Syntax nutzen.</p>
+      <p>Anstelle von PHPDoc Annotations kannst du nun strukturierte Meta-Daten in nativer PHP Syntax nutzen.</p>
     </div>
   </div>
 
