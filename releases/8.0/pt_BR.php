@@ -1,41 +1,21 @@
 <?php
 $_SERVER['BASE_PAGE'] = 'releases/8.0/pt_BR.php';
-include_once __DIR__ . '/../../include/prepend.inc';
+include_once __DIR__ . '/common.php';
 
-if ($LANG === 'en') {
-    mirror_redirect('/releases/8.0/en.php?lang=en');
-}
+releases\php80\language_redirect('pt_BR');
+releases\php80\common_header(
+    'PHP 8.0 é uma atualização importante da linguagem PHP. ' .
+    'Ela contém muitos novos recursos e otimizações, ' .
+    'incluindo argumentos nomeados, união de tipos, atributos, ' .
+    'promoção de propriedade do construtor, expressão match, ' .
+    'operador nullsafe, JIT e melhorias no sistema de tipos, ' .
+    'tratamento de erros e consistência.');
 
-if (($LANG !== 'pt_BR') && file_exists(__DIR__ . '/' . basename($LANG) . '.php')) {
-    mirror_redirect('/releases/8.0/' . urlencode($LANG) . '.php?lang=' . urlencode($LANG));
-}
-
-$meta_image_path = $MYSITE . 'images/php8/php_8_released.png';
-$meta_description = 'PHP 8.0 é uma atualização importante da linguagem PHP. Ela contém muitos novos recursos e otimizações, incluindo argumentos nomeados, união de tipos, atributos, promoção de propriedade do construtor, expressão match, operador nullsafe, JIT e melhorias no sistema de tipos, tratamento de erros e consistência.';
-site_header("PHP 8.0.0 Release Announcement", array(
-    "current" => "php8",
-    'css' => array('php8.css'),
-    'meta_tags' => <<<META
-<meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:site" content="@official_php" />
-<meta name="twitter:title" content="PHP 8.0 Released" />
-<meta name="twitter:description" content="{$meta_description}" />
-<meta name="twitter:creator" content="@official_php" />
-<meta name="twitter:image:src" content="{$meta_image_path}" />
-
-<meta itemprop="name" content="PHP 8.0 Released" />
-<meta itemprop="description" content="{$meta_description}" />
-<meta itemprop="image" content="{$meta_image_path}" />
-
-<meta property="og:image" content="{$meta_image_path}" />
-<meta property="og:description" content="{$meta_description}" />
-META
-));
 ?>
     <section class="php8-section php8-section_dark php8-section_header center">
         <div class="page-tools">
             <div class="change-language">
-                <?php echo release_language_chooser($LANG); ?>
+                <?php releases\php80\language_chooser('pt_BR'); ?>
             </div>
         </div>
         <div class="php8-section__content">

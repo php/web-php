@@ -706,41 +706,4 @@ function doc_toc_title($lang, $index, $file, $elm = "dt") {
     echo "<$elm><a href='/manual/$lang/$link'>$title</a></$elm>\n";
 }
 
-
-function release_language_chooser($currentlang) {
-    $LANGUAGES = array(
-        'en'    => 'English',
-        'pt_BR' => 'Brazilian Portuguese',
-        'de'    => 'German',
-        'fr' => 'French',
-        'ru'    => 'Russian',
-        'zh'    => 'Chinese Simplified',
-    );
-
-    // Print out the form with all the options
-    $format_options = function () use ($currentlang, $LANGUAGES) {
-        $out = '';
-        $tab = str_repeat('  ', 6);
-        foreach ($LANGUAGES as $lang => $text) {
-            $selected = '';
-            if ($lang == $currentlang) {
-                $selected = ' selected="selected"';
-            }
-            $out .= "$tab<option value='$lang'$selected>$text</option>\n";
-        }
-        return trim($out);
-    };
-    $r = <<<CHANGE_LANG
-      <form action="" method="get" id="changelang" name="changelang">
-        <fieldset>
-          <label for="changelang-langs">Change language:</label>
-          <select onchange="document.changelang.submit()" name="lang" id="changelang-langs">
-            {$format_options()}
-          </select>
-        </fieldset>
-      </form>
-CHANGE_LANG;
-    return trim($r);
-}
-
 /* vim: set et ts=4 sw=4 ft=php: : */

@@ -1,35 +1,18 @@
 <?php
-$_SERVER['BASE_PAGE'] = 'releases/8.0/en.php';
-include_once __DIR__ . '/../../include/prepend.inc';
+$_SERVER['BASE_PAGE'] = 'releases/8.0/zh.php';
+include_once __DIR__ . '/common.php';
 
-if (($LANG !== 'zh') && file_exists(__DIR__ . '/' . basename($LANG) . '.php')) {
-    mirror_redirect('/releases/8.0/' . urlencode($LANG) . '.php?lang=' . urlencode($LANG));
-}
+releases\php80\language_redirect('zh');
+releases\php80\common_header(
+    'PHP 8.0 是 PHP 语言的一个主版本更新。它包含了很多新功能与优化项，' .
+    '包括命名参数、联合类型、注解、构造器属性提升、match 表达式、' .
+    'Nullsafe 运算符、JIT，并改进了类型系统、错误处理、语法一致性。');
 
-$meta_image_path = $MYSITE . 'images/php8/php_8_released.png';
-$meta_description = 'PHP 8.0 是 PHP 语言的一个主版本更新。它包含了很多新功能与优化项，包括命名参数、联合类型、注解、构造器属性提升、match 表达式、Nullsafe 运算符、JIT，并改进了类型系统、错误处理、语法一致性。';
-site_header("PHP 8.0.0 发布公告", array(
-        "current" => "php8",
-        'css' => array('php8.css'),
-        'meta_tags' => <<<META
-<meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:site" content="@official_php" />
-<meta name="twitter:title" content="PHP 8.0 已发布" />
-<meta name="twitter:description" content="{$meta_description}" />
-<meta name="twitter:creator" content="@official_php" />
-<meta name="twitter:image:src" content="{$meta_image_path}" />
-<meta itemprop="name" content="PHP 8.0 Released" />
-<meta itemprop="description" content="{$meta_description}" />
-<meta itemprop="image" content="{$meta_image_path}" />
-<meta property="og:image" content="{$meta_image_path}" />
-<meta property="og:description" content="{$meta_description}" />
-META
-));
 ?>
 <section class="php8-section php8-section_dark php8-section_header center">
   <div class="page-tools">
     <div class="change-language">
-        <?php echo release_language_chooser($LANG); ?>
+        <?php releases\php80\language_chooser('zh'); ?>
     </div>
   </div>
   <div class="php8-section__content">
