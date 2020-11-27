@@ -306,7 +306,7 @@ if ($session !== null) {
     </div>
     <div class="php8-compare__content">
       <p>
-          Au lieu de faire des vérifications conditionnelles de nul, vous pouvez utiliser une chaîne d'appel
+          Au lieu de faire des vérifications conditionnelles de null, vous pouvez utiliser une chaîne d'appel
           avec le nouvel opérateur nullsafe. Qui lorsque l'évaluation d'un élément de la chaîne échoue, l'exécution
           de la chaîne complète est terminée et la chaîne entière évalue à null.
       </p>
