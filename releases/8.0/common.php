@@ -60,6 +60,7 @@ function language_chooser(string $currentLang): void {
         'en'    => 'English',
         'pt_BR' => 'Brazilian Portuguese',
         'de'    => 'German',
+        'es'    => 'Spanish',
         'fr'    => 'French',
         'ru'    => 'Russian',
         'zh'    => 'Chinese Simplified',
