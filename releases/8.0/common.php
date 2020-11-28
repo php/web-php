@@ -64,6 +64,7 @@ function language_chooser(string $currentLang): void {
         'it'    => 'Italiano',
         'pt_BR' => 'Português do Brasil',
         'ru'    => 'Русский',
+        'tr'    => 'Turkish',
         'zh'    => '简体中文',
     ];
 
