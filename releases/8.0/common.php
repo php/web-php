@@ -63,6 +63,7 @@ function language_chooser(string $currentLang): void {
         'es'    => 'Spanish',
         'fr'    => 'French',
         'ru'    => 'Russian',
+        'tr'    => 'Turkish',
         'zh'    => 'Chinese Simplified',
     ];
 
