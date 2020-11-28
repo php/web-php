@@ -1865,6 +1865,11 @@ aside.tips div.inner {
   border: 0;
   padding: 10px;
 }
+
+.newsimage.conference img {
+  max-width: 400px;
+  max-height: 200px;
+}
 /* }}} */
 
 /* {{{ Logo Downloads */
