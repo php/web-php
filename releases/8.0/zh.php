@@ -418,7 +418,7 @@ array_chunk([], -1); // ValueError: array_chunk(): Argument #2 ($length) must be
           闭包 use 列表中的末尾逗号 <a href="https://wiki.php.net/rfc/trailing_comma_in_closure_use_list">RFC</a>
         </li>
         <li>
-          无捕获的 catche <a href="https://wiki.php.net/rfc/non-capturing_catches">RFC</a>
+          无变量捕获的 catch <a href="https://wiki.php.net/rfc/non-capturing_catches">RFC</a>
         </li>
         <li>
           变量语法的调整 <a href="https://wiki.php.net/rfc/variable_syntax_tweaks">RFC</a>
