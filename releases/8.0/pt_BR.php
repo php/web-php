@@ -304,14 +304,18 @@ if ($session !== null) {
                 <div class="php8-compare__block example-contents">
                     <div class="php8-compare__label">PHP 7</div>
                     <div class="php8-code phpcode">
-                        <pre>0 == 'foobar' // true</pre>
+                        <?php highlight_php_trimmed(
+                            '0 == \'foobar\' // true'
+                        );?>
                     </div>
                 </div>
                 <div class="php8-compare__arrow"></div>
                 <div class="php8-compare__block example-contents">
                     <div class="php8-compare__label php8-compare__label_new">PHP 8</div>
                     <div class="php8-code phpcode">
-                        <pre>0 == 'foobar' // false</pre>
+                        <?php highlight_php_trimmed(
+                            '0 == \'foobar\' // false'
+                        );?>
                     </div>
                 </div>
             </div>

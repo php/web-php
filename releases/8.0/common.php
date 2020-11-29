@@ -58,13 +58,14 @@ META
 function language_chooser(string $currentLang): void {
     $LANGUAGES = [
         'en'    => 'English',
-        'pt_BR' => 'Brazilian Portuguese',
-        'de'    => 'German',
-        'es'    => 'Spanish',
-        'fr'    => 'French',
-        'ru'    => 'Russian',
-        'tr'    => 'Turkish',
-        'zh'    => 'Chinese Simplified',
+        'de'    => 'Deutsch',
+        'es'    => 'Español',
+        'fr'    => 'Français',
+        'it'    => 'Italiano',
+        'pt_BR' => 'Português do Brasil',
+        'ru'    => 'Русский',
+        'tr'    => 'Türkçe',
+        'zh'    => '简体中文',
     ];
 
     // Print out the form with all the options
