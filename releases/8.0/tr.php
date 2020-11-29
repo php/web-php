@@ -25,7 +25,7 @@ releases\php80\common_header(
                 PHP 8.0, PHP dili için önemli bir güncellemedir.<br class="display-none-md">
 
                 <p>Optimizasyonlar ve yeni özellikler: Adlandırılmış Değişkenler, Union Types, Attributes, Kurucularda
-                    Özellik Tanımı, Match Deyimi, Nullsafe Operatorü, JIT(Anında Derleme) yanında
+                    Özellik Tanımı, Match İfadesi, Nullsafe Operatorü, JIT(Anında Derleme) yanında
                     tip sistemi, hata işleme ve tutarlılıkta iyileştirmeler içerir.</p>
             </div>
             <div class="php8-button-wrapper center">
@@ -63,7 +63,7 @@ releases\php80\common_header(
             </div>
             <div class="php8-compare__content">
                 <ul>
-                    <li>İsteğe bağlı parametreler atlanabiliyor ve yalnızca gerekli olanlar belirtilebiliyor.</li>
+                    <li>Opsiyonel parametreleri atlayabiliyor ve yalnızca zorunlu olanları belirtebiliyorsunuz.</li>
                     <li>Parametrelerin sırası önemli değil ve kendi kendilerini dokümante ediyorlar.</li>
                 </ul>
             </div>
@@ -201,13 +201,13 @@ new Number(\'NaN\'); // TypeError'
             </div>
             <div class="php8-compare__content">
                 <p>Değişken türlerinin kombinasyonu için PHPDoc açıklamaları yerine çalışma zamanında doğrulanan
-                    birleşim türleri(union type) tanımlamaları kullanılabiliyor.</p>
+                    birleşim türleri (union types) tanımlamaları kullanılabiliyor.</p>
             </div>
         </div>
 
         <div class="php8-compare">
             <h2 class="php8-h2" id="match-expression">
-                Match Deyimi
+                Match İfadesi
                 <a class="php8-rfc" href="https://wiki.php.net/rfc/match_expression_v2">RFC</a> <a class="php8-rfc" href="/manual/en/control-structures.match.php">Doc</a>
             </h2>
             <div class="php8-compare__main">
@@ -243,11 +243,11 @@ echo $result;
                 </div>
             </div>
             <div class="php8-compare__content">
-                <p>Yeni match deyimi switch'e çok benzer ve aşağıdaki özelliklere sahiptir:</p>
+                <p>Yeni match ifadesi switch'e çok benzer ve aşağıdaki özelliklere sahiptir:</p>
                 <ul>
                     <li>Match bir ifadedir, sonucu bir değişkende saklanabilir veya döndürülebilir.</li>
                     <li>Match'in karşılıkları tek satır ifadeleri destekler ve break; kullanılması gerekmez.</li>
-                    <li>Match katı tip(strict) karşılaştırma yapar.</li>
+                    <li>Match katı (strict) tip karşılaştırma yapar.</li>
                 </ul>
             </div>
         </div>
@@ -327,7 +327,7 @@ if ($session !== null) {
 
         <div class="php8-compare">
             <h2 class="php8-h2" id="consistent-type-errors-for-internal-functions">
-                Dahili Fonksiyonlar için Tutarlı Hata Türleri
+                Dahili İşlevler için Tutarlı Hata Türleri
                 <a class="php8-rfc" href="https://wiki.php.net/rfc/consistent_type_errors">RFC</a>
             </h2>
             <div class="php8-compare__main">
@@ -354,7 +354,7 @@ array_chunk([], -1); // ValueError: array_chunk(): Argument #2 ($length) must be
                 </div>
             </div>
             <div class="php8-compare__content">
-                <p>Artık dahili fonksiyon parametreleri doğrulanamazsa Error exception fırlatıyorlar.</p>
+                <p>Artık dahili işlevlere gönderilen parametreler doğrulanamazsa Error exception fırlatıyorlar.</p>
             </div>
         </div>
     </section>
@@ -364,7 +364,7 @@ array_chunk([], -1); // ValueError: array_chunk(): Argument #2 ($length) must be
         <p>
             PHP 8, iki JIT derleme motoru sunuyor. Tracing JIT, ikisi arasında en yetenekli olanı. Karşılaştırmalarda
             yaklaşık 3 kat daha iyi performans ve uzun süre işlem yapan bazı uygulamalarda 1,5–2 kat iyileşme gösteriyor.
-            Normal uygulamalarda performansı PHP 7.4 ile aynı.</p>
+            Normal uygulamalarda performansı PHP 7.4 ile aynı.
         </p>
         <h3 class="php8-h3">
             PHP 8 performasına JIT katkısının karşılaştırması
@@ -406,7 +406,7 @@ array_chunk([], -1); // ValueError: array_chunk(): Argument #2 ($length) must be
                         Static return tipi <a href="https://wiki.php.net/rfc/static_return_type">RFC</a>
                     </li>
                     <li>
-                        Dahili fonksiyonlar için tip açıklamaları
+                        Dahili işlevler için tip açıklamaları
                         <a href="https://externals.io/message/106522">E-posta konusu</a>
                     </li>
                     <li>
@@ -437,7 +437,7 @@ array_chunk([], -1); // ValueError: array_chunk(): Argument #2 ($length) must be
                         İsim alanındaki tanımları tek bir belirteç olarak değerlendirme <a href="https://wiki.php.net/rfc/namespaced_names_as_token">RFC</a>
                     </li>
                     <li>
-                        Throw deyimi artık bir ifade(expression) <a href="https://wiki.php.net/rfc/throw_expression">RFC</a>
+                        Throw deyimi artık bir ifade (expression) <a href="https://wiki.php.net/rfc/throw_expression">RFC</a>
                     </li>
                     <li>
                         Nesnelerde ::class kullanılabilmesi <a href="https://wiki.php.net/rfc/class_name_literal_on_object">RFC</a>
