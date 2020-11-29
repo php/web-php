@@ -66,6 +66,7 @@ function language_chooser(string $currentLang): void {
         'ru'    => 'Русский',
         'tr'    => 'Turkish',
         'zh'    => '简体中文',
+        'bn'    => 'বাংলা',
     ];
 
     // Print out the form with all the options
