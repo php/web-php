@@ -193,8 +193,8 @@ new Number(\'NaN\'); // TypeError'
       </div>
     </div>
     <div class="php8-compare__content">
-      <p>相对于以前的 PHPDoc 声明类型的组合，
-      现在可以用原生支持的联合类型声明取而代之，可在实际运行中验证。</p>
+      <p>相较于以前的 PHPDoc 声明类型的组合，
+      现在可以用原生支持的联合类型声明取而代之，并在运行时得到校验。</p>
     </div>
   </div>
 
