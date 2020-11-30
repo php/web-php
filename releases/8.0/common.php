@@ -4,25 +4,7 @@ namespace releases\php80;
 include_once __DIR__ . '/../../include/prepend.inc';
 
 function language_redirect(string $currentLang): void {
-    global $LANG;
-
-    // At the time of writing, $LANG is safely ^\w{2}(-\w{2})?$
-    // However, since it may be user-sourced,
-    // be extra careful about how we use it.
-    $baseLANG = basename($LANG);
-    $urlLANG = urlencode($LANG);
-
-    if ($LANG === $currentLang) {
-        // We're on the right page for our language. Stay here.
-        return;
-    }
-
-    if (file_exists(__DIR__ . "/$baseLANG.php")) {
-        \mirror_redirect("/releases/8.0/$urlLANG.php?lang=$urlLANG");
-        exit;
-    }
-
-    // We don't have a translation as requested,
+    // We don't use the general language selection of php.net,
     // so soldier on with this one.
     return;
 }
@@ -73,7 +55,7 @@ function language_chooser(string $currentLang): void {
       <form action="" method="get" id="changelang" name="changelang">
         <fieldset>
           <label for="changelang-langs">Change language:</label>
-          <select onchange="document.changelang.submit()" name="lang" id="changelang-langs">
+          <select onchange="location = this.value + \'.php\'" name="lang" id="changelang-langs">
 ';
 
     $tab = '            ';
