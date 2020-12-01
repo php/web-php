@@ -298,7 +298,7 @@ if ($session !== null) {
 
   <div class="php8-compare">
     <h2 class="php8-h2" id="saner-string-to-number-comparisons">
-      Verstandige tekst met nummer vergelijkingen
+      Verstandigere tekst met nummer vergelijkingen
       <a class="php8-rfc" href="https://wiki.php.net/rfc/string_to_number_comparison">RFC</a>
     </h2>
     <div class="php8-compare__main">
@@ -408,7 +408,7 @@ array_chunk([], -1); // ValueError: array_chunk(): Argument #2 ($length) must be
         </li>
         <li>
           Types voor interne functies
-          <a href="https://externals.io/message/106522">Email thread</a>
+          <a href="https://externals.io/message/106522">Email draadje</a>
         </li>
         <li>
           Opaque objects in plaats van resources voor
