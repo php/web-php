@@ -3,13 +3,13 @@ $_SERVER['BASE_PAGE'] = 'releases/8.0/tr.php';
 include_once __DIR__ . '/common.php';
 
 releases\php80\language_redirect('tr');
-
 releases\php80\common_header(
     'PHP 8.0, PHP dili için önemli bir güncellemedir. Optimizasyonlar ve yeni özellikler: Adlandırılmış ' .
     'Değişkenler, Union Types, Attributes, Kurucularda Özellik Tanımı, Match İfadesi, Nullsafe Operatorü, ' .
     'JIT(Anında Derleme) yanında tip sistemi, hata işleme ve tutarlılıkta iyileştirmeler içerir.');
 
 ?>
+
 <section class="php8-section php8-section_dark php8-section_header center">
   <div class="page-tools">
     <div class="change-language">
@@ -77,13 +77,12 @@ releases\php80\common_header(
         <div class="php8-compare__label">PHP 7</div>
         <div class="php8-code phpcode">
             <?php highlight_php_trimmed(
-                'class PostsController
-{
-    /**
-     * @Route("/api/posts/{id}", methods={"GET"})
-     */
-    public function get($id) { /* ... */ }
-}'
+                'class PostsController {
+                  /**
+                   * @Route("/api/posts/{id}", methods={"GET"})
+                   */
+                  public function get($id) { /* ... */ }
+                }'
             );?>
         </div>
       </div>
@@ -92,11 +91,10 @@ releases\php80\common_header(
         <div class="php8-compare__label php8-compare__label_new">PHP 8</div>
         <div class="php8-code phpcode">
             <?php highlight_php_trimmed(
-                'class PostsController
-{
-    #[Route("/api/posts/{id}", methods: ["GET"])]
-    public function get($id) { /* ... */ }
-}'
+                'class PostsController {
+                    #[Route("/api/posts/{id}", methods: ["GET"])]
+                    public function get($id) { /* ... */ }
+                }'
             );?>
         </div>
       </div>
@@ -117,20 +115,20 @@ releases\php80\common_header(
         <div class="php8-code phpcode">
             <?php highlight_php_trimmed(
                 'class Point {
-  public float $x;
-  public float $y;
-  public float $z;
+                  public float $x;
+                  public float $y;
+                  public float $z;
 
-  public function __construct(
-    float $x = 0.0,
-    float $y = 0.0,
-    float $z = 0.0,
-  ) {
-    $this->x = $x;
-    $this->y = $y;
-    $this->z = $z;
-  }
-}'
+                  public function __construct(
+                    float $x = 0.0,
+                    float $y = 0.0,
+                    float $z = 0.0,
+                  ) {
+                    $this->x = $x;
+                    $this->y = $y;
+                    $this->z = $z;
+                  }
+                }'
             );?>
         </div>
       </div>
@@ -140,12 +138,12 @@ releases\php80\common_header(
         <div class="php8-code phpcode">
             <?php highlight_php_trimmed(
                 'class Point {
-  public function __construct(
-    public float $x = 0.0,
-    public float $y = 0.0,
-    public float $z = 0.0,
-  ) {}
-}'
+                  public function __construct(
+                    public float $x = 0.0,
+                    public float $y = 0.0,
+                    public float $z = 0.0,
+                  ) {}
+                }'
             );?>
         </div>
       </div>
@@ -166,18 +164,18 @@ releases\php80\common_header(
         <div class="php8-code phpcode">
             <?php highlight_php_trimmed(
                 'class Number {
-  /** @var int|float */
-  private $number;
+                  /** @var int|float */
+                  private $number;
 
-  /**
-   * @param float|int $number
-   */
-  public function __construct($number) {
-    $this->number = $number;
-  }
-}
+                  /**
+                   * @param float|int $number
+                   */
+                  public function __construct($number) {
+                    $this->number = $number;
+                  }
+                }
 
-new Number(\'NaN\'); // Ok'
+                new Number(\'NaN\'); // Ok'
             );?>
         </div>
       </div>
@@ -187,12 +185,12 @@ new Number(\'NaN\'); // Ok'
         <div class="php8-code phpcode">
             <?php highlight_php_trimmed(
                 'class Number {
-  public function __construct(
-    private int|float $number
-  ) {}
-}
+                  public function __construct(
+                    private int|float $number
+                  ) {}
+                }
 
-new Number(\'NaN\'); // TypeError'
+                new Number(\'NaN\'); // TypeError'
             );?>
         </div>
       </div>
@@ -214,15 +212,15 @@ new Number(\'NaN\'); // TypeError'
         <div class="php8-code phpcode">
             <?php highlight_php_trimmed(
                 'switch (8.0) {
-  case \'8.0\':
-    $result = "Oh no!";
-    break;
-  case 8.0:
-    $result = "This is what I expected";
-    break;
-}
-echo $result;
-//> Oh no!'
+                  case \'8.0\':
+                    $result = "Oh no!";
+                    break;
+                  case 8.0:
+                    $result = "This is what I expected";
+                    break;
+                }
+                echo $result;
+                //> Oh no!'
             );?>
         </div>
       </div>
@@ -232,10 +230,10 @@ echo $result;
         <div class="php8-code phpcode">
             <?php highlight_php_trimmed(
                 'echo match (8.0) {
-  \'8.0\' => "Oh no!",
-  8.0 => "This is what I expected",
-};
-//> This is what I expected'
+                  \'8.0\' => "Oh no!",
+                  8.0 => "This is what I expected",
+                };
+                //> This is what I expected'
             );?>
         </div>
       </div>
@@ -262,17 +260,17 @@ echo $result;
             <?php highlight_php_trimmed(
                 '$country =  null;
 
-if ($session !== null) {
-  $user = $session->user;
+                if ($session !== null) {
+                  $user = $session->user;
 
-  if ($user !== null) {
-    $address = $user->getAddress();
-  
-    if ($address !== null) {
-      $country = $address->country;
-    }
-  }
-}'
+                  if ($user !== null) {
+                    $address = $user->getAddress();
+                  
+                    if ($address !== null) {
+                      $country = $address->country;
+                    }
+                  }
+                }'
             );?>
         </div>
       </div>
@@ -334,8 +332,7 @@ if ($session !== null) {
         <div class="php8-code phpcode">
             <?php highlight_php_trimmed(
                 'strlen([]); // Warning: strlen() expects parameter 1 to be string, array given
-
-array_chunk([], -1); // Warning: array_chunk(): Size parameter expected to be greater than 0'
+                array_chunk([], -1); // Warning: array_chunk(): Size parameter expected to be greater than 0'
             );?>
         </div>
       </div>
@@ -345,8 +342,7 @@ array_chunk([], -1); // Warning: array_chunk(): Size parameter expected to be gr
         <div class="php8-code phpcode">
             <?php highlight_php_trimmed(
                 'strlen([]); // TypeError: strlen(): Argument #1 ($str) must be of type string, array given
-
-array_chunk([], -1); // ValueError: array_chunk(): Argument #2 ($length) must be greater than 0'
+                array_chunk([], -1); // ValueError: array_chunk(): Argument #2 ($length) must be greater than 0'
             );?>
         </div>
       </div>
@@ -422,7 +418,7 @@ array_chunk([], -1); // ValueError: array_chunk(): Argument #2 ($length) must be
       <h2 class="php8-h2 php8-h2_margin-top">Diğer PHP sözdizimi düzenlemeleri ve iyileştirmeleri</h2>
       <ul>
         <li>
-          Parametre ve closure listelerinin sonunda virgül kullanılabilmesi <a href="https://wiki.php.net/rfc/trailing_comma_in_parameter_list">RFC</a>
+          Parametre ve kapatma(closure) listelerinin sonunda virgül kullanılabilmesi <a href="https://wiki.php.net/rfc/trailing_comma_in_parameter_list">RFC</a>
           <a href="https://wiki.php.net/rfc/trailing_comma_in_closure_use_list">RFC</a>
         </li>
         <li>
@@ -493,8 +489,5 @@ array_chunk([], -1); // ValueError: array_chunk(): Argument #2 ($length) must be
     </div>
   </div>
 </section>
-
-
-
 
 <?php site_footer();
