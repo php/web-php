@@ -215,14 +215,14 @@ new Number(\'NaN\'); // TypeError'
             <?php highlight_php_trimmed(
                 'switch (8.0) {
   case \'8.0\':
-    $result = "Oh no!";
+    $result = "Oh nein!";
     break;
   case 8.0:
-    $result = "This is what I expected";
+    $result = "Das hatte ich erwartet";
     break;
 }
 echo $result;
-//> Oh no!'
+//> Oh nein!'
             );?>
         </div>
       </div>
@@ -232,10 +232,10 @@ echo $result;
         <div class="php8-code phpcode">
             <?php highlight_php_trimmed(
                 'echo match (8.0) {
-\'8.0\' => "Oh no!",
-8.0 => "This is what I expected",
+  \'8.0\' => "Oh nein!",
+  8.0 => "Das hatte ich erwartet",
 };
-//> This is what I expected'
+//> Das hatte ich erwartet'
             );?>
         </div>
       </div>
