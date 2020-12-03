@@ -5,11 +5,11 @@ include_once __DIR__ . '/common.php';
 releases\php80\language_redirect('bn');
 
 releases\php80\common_header(
-    'PHP 8.0 is a major update of the PHP language. ' .
-    'It contains many new features and optimizations including ' .
+    'PHP 8.0 হচ্ছে PHP প্রোগ্রামিং ভাষার একটি গুরুত্বপুর্ণ সংস্করণ। ' .
+    'এটিতে অনেক নতুন সুবিধা ও অপটিমাইজেশন রয়েছে। যেমন : ' .
     'named arguments, union types, attributes, constructor property promotion, ' .
-    'match expression, nullsafe operator, JIT, and ' .
-    'improvements in the type system, error handling, and consistency.');
+    'match expression, nullsafe operator, JIT, ' .
+    'ডাটা টাইপ ব্যবস্থার উন্নতি, ইরর ব্যবস্থাপনা, এবং অন্যান্য সামঞ্জস্যপূর্ণ পরিবর্তন।');
 
 ?>
 <section class="php8-section php8-section_dark php8-section_header center">
