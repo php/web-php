@@ -69,7 +69,7 @@ releases\php80\common_header(
   <div class="php8-compare">
     <h2 class="php8-h2" id="attributes">
       注解
-      <a class="php8-rfc" href="https://wiki.php.net/rfc/attributes_v2">RFC</a>
+      <a class="php8-rfc" href="https://wiki.php.net/rfc/attributes_v2">RFC</a> <a class="php8-rfc" href="/manual/zh/language.attributes.php">Doc</a>
     </h2>
     <div class="php8-compare__main">
       <div class="php8-compare__block example-contents">
