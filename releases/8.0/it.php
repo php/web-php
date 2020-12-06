@@ -471,6 +471,9 @@ array_chunk([], -1); // ValueError: array_chunk(): Argument #2 ($length) must be
         <li>
           Classe <a href="https://wiki.php.net/rfc/token_as_object">PhpToken</a> come alternativa a token_get_all()
         </li>
+        <li>
+          <a href="https://wiki.php.net/rfc/dom_living_standard_api">New DOM Traversal and Manipulation APIs</a>
+        </li>
       </ul>
     </div>
   </div>

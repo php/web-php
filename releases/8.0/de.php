@@ -470,6 +470,9 @@ array_chunk([], -1); // ValueError: array_chunk(): Argument #2 ($length) must be
         <li>
           <a href="https://wiki.php.net/rfc/token_as_object">token_get_all()</a> mit einer Objekt-Implementierung
         </li>
+        <li>
+          <a href="https://wiki.php.net/rfc/dom_living_standard_api">Neue APIs für DOM-Traversal and -Manipulation</a>
+        </li>
       </ul>
     </div>
   </div>

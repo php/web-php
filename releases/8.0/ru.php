@@ -468,6 +468,9 @@ array_chunk([], -1); // ValueError: array_chunk(): Argument #2 ($length) must be
         <li>
           Объектно-ориентированная функция <a href="https://wiki.php.net/rfc/token_as_object">token_get_all()</a>
         </li>
+        <li>
+          <a href="https://wiki.php.net/rfc/dom_living_standard_api">Новые API для обходения и обработки DOM</a>
+        </li>
       </ul>
     </div>
   </div>
