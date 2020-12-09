@@ -6800,7 +6800,7 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
   <ul>
     <li>Implemented asynchronous signal handling without TICKS.</li>
     <li>Added pcntl_signal_get_handler() that returns the current signal handler for a particular signal. Addresses FR <?php bugl(72409); ?>.</li>
-    <li>Add signinfo to pcntl_signal() handler args (Bishop Bettini, David Walker)</li>
+    <li>Add siginfo to pcntl_signal() handler args (Bishop Bettini, David Walker)</li>
   </ul></li>
 <li>PCRE:
   <ul>
