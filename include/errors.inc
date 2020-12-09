@@ -521,7 +521,7 @@ define('LEGACY_MANUAL_VERSIONS', [4, 5]);
  * @param string $uri
  * @return array<string, string>
  */
-function get_legacy_manual_urls($uri)
+function get_legacy_manual_urls(string $uri): array
 {
     $legacy_urls = [];
     foreach (LEGACY_MANUAL_VERSIONS as $php_version) {
@@ -534,11 +534,7 @@ function get_legacy_manual_urls($uri)
     return $legacy_urls;
 }
 
-/**
- * @param string $url
- * @return int
- */
-function get_http_status_code($url)
+function get_http_status_code(string $url): int
 {
     $ch = curl_init($url);
     curl_setopt($ch, CURLOPT_NOBODY, true);
@@ -546,13 +542,14 @@ function get_http_status_code($url)
     curl_exec($ch);
     $status_code = curl_getinfo($ch, CURLINFO_HTTP_CODE);
     curl_close($ch);
+
     return $status_code;
 }
 
 /**
  * @param array<string, string> $legacy_urls URLs to legacy manuals, indexed by major PHP version
  */
-function fallback_to_legacy_manuals($legacy_urls)
+function fallback_to_legacy_manuals(array $legacy_urls): void
 {
     global $MYSITE;
     status_header(404);
@@ -579,12 +576,7 @@ HTML;
     exit;
 }
 
-/**
- * @param string $uri Example: manual/en/ini.sect.safe-mode.php
- * @param int $php_version Example: 5
- * @return string
- */
-function convert_manual_uri_to_legacy($uri, $php_version)
+function convert_manual_uri_to_legacy(string $uri, int $php_version): string
 {
     $parts = explode('/', $uri);
 
