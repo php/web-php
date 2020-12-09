@@ -523,16 +523,33 @@ define('LEGACY_MANUAL_VERSIONS', [4, 5]);
  */
 function get_legacy_manual_urls(string $uri): array
 {
-    $legacy_urls = [];
-    foreach (LEGACY_MANUAL_VERSIONS as $php_version) {
-        $candidate_url = convert_manual_uri_to_legacy($uri, $php_version);
-        if (get_http_status_code($candidate_url) === 200) {
-            $legacy_urls[$php_version] = $candidate_url;
+    return cache_legacy_urls(function($uri) {
+        $legacy_urls = [];
+        foreach (LEGACY_MANUAL_VERSIONS as $php_version) {
+            $candidate_url = convert_manual_uri_to_legacy($uri, $php_version);
+            if (get_http_status_code($candidate_url) === 200) {
+                $legacy_urls[$php_version] = $candidate_url;
+            }
         }
+        return $legacy_urls;
+    }, $uri);
+}
+
+function cache_legacy_urls(callable $get_uncached_value, string $uri): array
+{
+    $filename = $_SERVER["DOCUMENT_ROOT"] . "/manual/legacyurls.json";
+    $uris = json_decode(file_get_contents($filename), true);
+    if (array_key_exists($uri, $uris)) {
+        return $uris[$uri];
     }
+
+    $legacy_urls = $get_uncached_value($uri);
+    $uris[$uri] = $legacy_urls;
+    file_put_contents($filename, json_encode($uris));
 
     return $legacy_urls;
 }
+
 
 function get_http_status_code(string $url): int
 {
