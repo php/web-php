@@ -515,52 +515,31 @@ $snippets = array(
 
 }
 
-
-define('LEGACY_MANUAL_VERSIONS', [4, 5]);
 /**
  * @param string $uri
  * @return array<string, string>
  */
 function get_legacy_manual_urls(string $uri): array
 {
-    return cache_legacy_urls(function($uri) {
-        $legacy_urls = [];
-        foreach (LEGACY_MANUAL_VERSIONS as $php_version) {
-            $candidate_url = convert_manual_uri_to_legacy($uri, $php_version);
-            if (get_http_status_code($candidate_url) === 200) {
-                $legacy_urls[$php_version] = $candidate_url;
-            }
-        }
-        return $legacy_urls;
-    }, $uri);
-}
-
-function cache_legacy_urls(callable $get_uncached_value, string $uri): array
-{
     $filename = $_SERVER["DOCUMENT_ROOT"] . "/manual/legacyurls.json";
-    $uris = json_decode(file_get_contents($filename), true);
-    if (array_key_exists($uri, $uris)) {
-        return $uris[$uri];
+    $pages_ids = json_decode(file_get_contents($filename), true);
+    $page_id = preg_replace_callback('/^manual\/.*\/(.*?)(\.php)?$/', function (array $matches): string {
+        if (count($matches) !== 3) {
+            return '';
+        }
+        return $matches[1] ;
+    }, $uri);
+
+    if (!isset($pages_ids[$page_id])) {
+        return [];
     }
 
-    $legacy_urls = $get_uncached_value($uri);
-    $uris[$uri] = $legacy_urls;
-    file_put_contents($filename, json_encode($uris));
+    $legacy_urls = [];
+    foreach ($pages_ids[$page_id] as $php_version) {
+        $legacy_urls[$php_version] = convert_manual_uri_to_legacy($uri, $php_version);
+    }
 
     return $legacy_urls;
-}
-
-
-function get_http_status_code(string $url): int
-{
-    $ch = curl_init($url);
-    curl_setopt($ch, CURLOPT_NOBODY, true);
-    curl_setopt($ch, CURLOPT_FOLLOWLOCATION, true);
-    curl_exec($ch);
-    $status_code = curl_getinfo($ch, CURLINFO_HTTP_CODE);
-    curl_close($ch);
-
-    return $status_code;
 }
 
 /**
