@@ -703,4 +703,11 @@ function getLanguage()
     return document.documentElement.lang;
 }
 
+(function ($) {
+    $('#legacy-links a').each(function () {
+        let $link = $(this);
+        $link.attr('href', $link.attr('href') + window.location.hash)
+    });
+})(jQuery);
+
 // vim: set ts=4 sw=4 et:

@@ -636,6 +636,10 @@ if (preg_match("!^manual/([^/]+)/([^/]+).php$!", $URI, $match) &&
 // ============================================================================
 // 404 page for manual pages (eg. not built language)
 if (strpos($URI, "manual/") === 0) {
+    $legacy_manual_urls = get_legacy_manual_urls($URI);
+    if (count($legacy_manual_urls) > 0) {
+        fallback_to_legacy_manuals($legacy_manual_urls);
+    }
     error_404_manual();
 }
 

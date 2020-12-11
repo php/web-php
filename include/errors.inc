@@ -514,3 +514,67 @@ $snippets = array(
 	return isset($snippets[$term]) ? $snippets[$term] : false;
 
 }
+
+/**
+ * @param string $uri
+ * @return array<string, string>
+ */
+function get_legacy_manual_urls(string $uri): array
+{
+    $filename = $_SERVER["DOCUMENT_ROOT"] . "/manual/legacyurls.json";
+    $pages_ids = json_decode(file_get_contents($filename), true);
+    $page_id = preg_replace_callback('/^manual\/.*\/(.*?)(\.php)?$/', function (array $matches): string {
+        if (count($matches) !== 3) {
+            return '';
+        }
+        return $matches[1] ;
+    }, $uri);
+
+    if (!isset($pages_ids[$page_id])) {
+        return [];
+    }
+
+    $legacy_urls = [];
+    foreach ($pages_ids[$page_id] as $php_version) {
+        $legacy_urls[$php_version] = convert_manual_uri_to_legacy($uri, $php_version);
+    }
+
+    return $legacy_urls;
+}
+
+/**
+ * @param array<string, string> $legacy_urls URLs to legacy manuals, indexed by major PHP version
+ */
+function fallback_to_legacy_manuals(array $legacy_urls): void
+{
+    global $MYSITE;
+    status_header(404);
+    site_header('404 Not Found', array("noindex"));
+
+    $original_url = htmlspecialchars(substr($MYSITE, 0, -1) . $_SERVER['REQUEST_URI']);
+    $legacy_links = '';
+    foreach ($legacy_urls as $php_version => $url) {
+        $legacy_links .= '<li><a href="' . $url . '">PHP ' . $php_version . ' legacy manual</a></li>';
+    }
+
+    echo <<<HTML
+<h1>Not Found</h1>
+<p>The manual page you are looking for (<strong>$original_url</strong>) is not available.</p>
+
+<p>However, this page exists in a legacy manual for the following PHP versions.</p>
+<ul id="legacy-links">$legacy_links</ul>
+<p>Please note that legacy manuals are maintained by Zend and not the PHP Documentation Group. Any questions about their content should be reported via the "Report a Bug" links on the appropriate pages.</p>
+
+<p>If you were looking for this page in the current PHP version and believe this to be a mistake, please check back later, or if the problem persists, <a href="/contact.php">contact the webmasters</a>.</p>
+HTML;
+
+    site_footer();
+    exit;
+}
+
+function convert_manual_uri_to_legacy(string $uri, int $php_version): string
+{
+    $parts = explode('/', $uri);
+
+    return sprintf('https://php-legacy-docs.zend.com/manual/php%s/%s/%s', $php_version, $parts[1], $parts[2]);
+}
