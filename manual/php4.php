@@ -7,12 +7,12 @@ site_header('PHP Version 4 Documentation');
 <h1>Documentation for PHP 4</h1>
 
 <h2>Introduction</h2>
- <p>
-  The PHP 4 documentation was removed from the PHP Manual in August 2014,
-  approximately six years after PHP 4 reached its end of life. However, we have
-  provided downloadable copies of the manual for anyone who would need it, as well
-  as a link to a hosted third-party version.
- </p>
+<p>
+ The PHP 4 documentation was removed from the PHP Manual in August 2014,
+ approximately six years after PHP 4 reached its end of life. However, we have
+ provided downloadable copies of the manual for anyone who would need it, as well
+ as a link to a hosted third-party version.
+</p>
 
 <h2>PHP 4 Manual</h2>
 <p>
