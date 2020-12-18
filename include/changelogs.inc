@@ -4,7 +4,7 @@ function bugfix($number) {
 }
 
 function bugl($number) {
-    echo "<a href=\"http://bugs.php.net/$number\">#$number</a>";
+    echo "<a href=\"https://bugs.php.net/$number\">#$number</a>";
 }
 
 function implemented($number) {
@@ -16,7 +16,7 @@ function peclbugfix($number) {
 }
 
 function peclbugl($number) {
-    echo "<a href=\"http://pecl.php.net/bugs/bug.php?id=$number\">#$number</a>";
+    echo "<a href=\"https://pecl.php.net/bugs/bug.php?id=$number\">#$number</a>";
 }
 
 function githubissue($repo, $number) {

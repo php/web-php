@@ -5,7 +5,7 @@ $SIDEBAR_DATA = '
 <h3>What is Git?</h3>
 <p>
  You can find more information about Git and download clients for most major
- platforms at <a href="http://git-scm.com/">the official Git site</a>.
+ platforms at <a href="https://git-scm.com/">the official Git site</a>.
 </p>
 
 <p>
@@ -79,9 +79,9 @@ site_header("Git Access", array("current" => "community"));
   <br><br>
 
   Alternatively, you can retrieve the source code from
-  <a href="http://git.php.net/">git.php.net</a> with this command:
+  <a href="https://git.php.net/">git.php.net</a> with this command:
   <br><br>
-  <code>git clone http://git.php.net/repository/php-src.git</code>
+  <code>git clone https://git.php.net/repository/php-src.git</code>
   <br><br>
 
   You can also download a snapshot from GitHub:<br><br>
@@ -148,7 +148,7 @@ site_header("Git Access", array("current" => "community"));
 <p>
  There are many other things, such as the XML source code
  for the documentation, available via Git. See
- <a href="http://git.php.net/">the web-based view of the Git
+ <a href="https://git.php.net/">the web-based view of the Git
  server</a> to see what is available.
 </p>
 

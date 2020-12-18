@@ -19512,7 +19512,7 @@ the upgrade
   341 => 
   array (
     'title' => 'PhpConference Brasil 2015',
-    'id' => 'http://php.net/archive/2015.php#id2015-10-15-3',
+    'id' => 'https://www.php.net/archive/2015.php#id2015-10-15-3',
     'published' => '2015-10-15T22:00:00-03:00',
     'updated' => '2015-10-15T22:00:00-03:00',
     'finalTeaserDate' => '2015-12-02',
@@ -19528,7 +19528,7 @@ the upgrade
     array (
       0 => 
       array (
-        'href' => 'http://php.net/conferences/index.php#id2015-10-15-3',
+        'href' => 'https://www.php.net/conferences/index.php#id2015-10-15-3',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
@@ -19541,7 +19541,7 @@ the upgrade
     ),
     'newsImage' => 
     array (
-      'xmlns' => 'http://php.net/ns/news',
+      'xmlns' => 'https://www.php.net/ns/news',
       'link' => 'http://phpconference.com.br',
       'title' => 'PhpConference Brasil 2015',
       'content' => 'phpconfbrasil2015.png',
@@ -19587,7 +19587,7 @@ the upgrade
   342 => 
   array (
     'title' => 'PHP 7.0.0 RC 5 Released',
-    'id' => 'http://php.net/archive/2015.php#id2015-10-15-2',
+    'id' => 'https://www.php.net/archive/2015.php#id2015-10-15-2',
     'published' => '2015-10-15T13:00:00+01:00',
     'updated' => '2015-10-15T13:00:00+01:00',
     'category' => 
@@ -19607,13 +19607,13 @@ the upgrade
     array (
       0 => 
       array (
-        'href' => 'http://php.net/index.php#id2015-10-15-2',
+        'href' => 'https://www.php.net/index.php#id2015-10-15-2',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
       1 => 
       array (
-        'href' => 'http://php.net/archive/2015.php#id2015-10-15-2',
+        'href' => 'https://www.php.net/archive/2015.php#id2015-10-15-2',
         'rel' => 'via',
         'type' => 'text/html',
       ),
@@ -19650,7 +19650,7 @@ the upgrade
      <p>
       For more information on the new features and other changes, you can read the
       <a href="https://github.com/php/php-src/blob/php-7.0.0RC5/NEWS">NEWS file</a>, or the
-      <a href="http://php.net/manual/migration70.php">migration guide</a>
+      <a href="https://www.php.net/manual/migration70.php">migration guide</a>
       for a complete list of upgrading notes. NEWS and UPGRADING files can also be found in
       the release archive.
      </p>
@@ -19658,7 +19658,7 @@ the upgrade
      <p>
       For source downloads of PHP 7.0.0 RC 5 please visit
       the <a href="https://downloads.php.net/ab/">download page</a>, Windows source and binaries
-      can be found on <a href="http://windows.php.net/qa/">windows.php.net/qa/</a>.
+      can be found on <a href="https://windows.php.net/qa/">windows.php.net/qa/</a>.
      </p>
 
      <p>
@@ -19676,12 +19676,12 @@ the upgrade
         PHP 7.0.0 RC 5. This is the tenth pre-release of the new PHP 7
         major series. All users of PHP are encouraged to test this version carefully,
         and report any bugs and incompatibilities in <a href="https://bugs.php.net">the bug tracking system</a>.
-     </p><strong>THIS IS A DEVELOPMENT PREVIEW - DO <u>NOT</u> USE IT IN PRODUCTION!</strong><p class=\'fullArticleLink\'><a href=\'http://php.net/archive/2015.php#id2015-10-15-2\' class>&hellip; read full article</a></p></div>',
+     </p><strong>THIS IS A DEVELOPMENT PREVIEW - DO <u>NOT</u> USE IT IN PRODUCTION!</strong><p class=\'fullArticleLink\'><a href=\'https://www.php.net/archive/2015.php#id2015-10-15-2\' class>&hellip; read full article</a></p></div>',
   ),
   343 => 
   array (
     'title' => 'PHP Frameworks Day 2015',
-    'id' => 'http://php.net/archive/2015.php#id2015-10-15-1',
+    'id' => 'https://www.php.net/archive/2015.php#id2015-10-15-1',
     'published' => '2015-10-15T12:05:32-04:00',
     'updated' => '2015-10-15T12:05:32-04:00',
     'finalTeaserDate' => '2015-10-19',
@@ -19697,7 +19697,7 @@ the upgrade
     array (
       0 => 
       array (
-        'href' => 'http://php.net/conferences/index.php#id2015-10-15-1',
+        'href' => 'https://www.php.net/conferences/index.php#id2015-10-15-1',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
@@ -19710,7 +19710,7 @@ the upgrade
     ),
     'newsImage' => 
     array (
-      'xmlns' => 'http://php.net/ns/news',
+      'xmlns' => 'https://www.php.net/ns/news',
       'link' => 'http://frameworksdays.com/event/php-frameworks-day-2015',
       'title' => 'PHP Frameworks Day 2015',
       'content' => 'phpfworksday-logo.png',
@@ -19744,7 +19744,7 @@ the upgrade
   344 => 
   array (
     'title' => 'SunshinePHP 2016',
-    'id' => 'http://php.net/archive/2015.php#id2015-10-07-1',
+    'id' => 'https://www.php.net/archive/2015.php#id2015-10-07-1',
     'published' => '2015-10-07T12:05:32-04:00',
     'updated' => '2015-10-07T12:05:32-04:00',
     'finalTeaserDate' => '2016-02-04',
@@ -19760,7 +19760,7 @@ the upgrade
     array (
       0 => 
       array (
-        'href' => 'http://php.net/conferences/index.php#id2015-10-07-1',
+        'href' => 'https://www.php.net/conferences/index.php#id2015-10-07-1',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
@@ -19773,7 +19773,7 @@ the upgrade
     ),
     'newsImage' => 
     array (
-      'xmlns' => 'http://php.net/ns/news',
+      'xmlns' => 'https://www.php.net/ns/news',
       'link' => 'http://2016.sunshinephp.com',
       'title' => 'SunshinePHP 2016',
       'content' => 'sunshine2015.gif',
@@ -19797,7 +19797,7 @@ the upgrade
   345 => 
   array (
     'title' => 'PHP 5.6.14 is available',
-    'id' => 'http://php.net/archive/2015.php#id2015-10-01-3',
+    'id' => 'https://www.php.net/archive/2015.php#id2015-10-01-3',
     'published' => '2015-10-01T16:32:14-07:00',
     'updated' => '2015-10-01T16:32:14-07:00',
     'category' => 
@@ -19817,13 +19817,13 @@ the upgrade
     array (
       0 => 
       array (
-        'href' => 'http://php.net/index.php#id2015-10-01-3',
+        'href' => 'https://www.php.net/index.php#id2015-10-01-3',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
       1 => 
       array (
-        'href' => 'http://php.net/archive/2015.php#id2015-10-01-3',
+        'href' => 'https://www.php.net/archive/2015.php#id2015-10-01-3',
         'rel' => 'via',
         'type' => 'text/html',
       ),
@@ -19835,9 +19835,9 @@ the upgrade
      All PHP 5.6 users are encouraged to upgrade to this version.
      </p>
 
-     <p>For source downloads of PHP 5.6.14 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-     The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.6.14">ChangeLog</a>.
+     <p>For source downloads of PHP 5.6.14 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
+     Windows binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
+     The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-5.php#5.6.14">ChangeLog</a>.
      </p>
     </div>
   ',
@@ -19845,15 +19845,15 @@ the upgrade
      5.6.14. This is a security release. Two security bugs were fixed in this release.
 
      All PHP 5.6 users are encouraged to upgrade to this version.
-     </p><p>For source downloads of PHP 5.6.14 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-     The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.6.14">ChangeLog</a>.
+     </p><p>For source downloads of PHP 5.6.14 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
+     Windows binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
+     The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-5.php#5.6.14">ChangeLog</a>.
      </p></div>',
   ),
   346 => 
   array (
     'title' => 'PHP 5.5.30 is available',
-    'id' => 'http://php.net/archive/2015.php#id2015-10-01-2',
+    'id' => 'https://www.php.net/archive/2015.php#id2015-10-01-2',
     'published' => '2015-10-01T15:44:13+00:00',
     'updated' => '2015-10-01T15:44:13+00:00',
     'category' => 
@@ -19873,13 +19873,13 @@ the upgrade
     array (
       0 => 
       array (
-        'href' => 'http://php.net/index.php#id2015-10-01-2',
+        'href' => 'https://www.php.net/index.php#id2015-10-01-2',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
       1 => 
       array (
-        'href' => 'http://php.net/archive/2015.php#id2015-10-01-2',
+        'href' => 'https://www.php.net/archive/2015.php#id2015-10-01-2',
         'rel' => 'via',
         'type' => 'text/html',
       ),
@@ -19891,9 +19891,9 @@ the upgrade
      All PHP 5.5 users are encouraged to upgrade to this version.
      </p>
 
-     <p>For source downloads of PHP 5.5.30 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-     The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.5.30">ChangeLog</a>.
+     <p>For source downloads of PHP 5.5.30 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
+     Windows binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
+     The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-5.php#5.5.30">ChangeLog</a>.
      </p>
     </div>
   ',
@@ -19901,15 +19901,15 @@ the upgrade
      5.5.30. This is a security release. Two security bugs were fixed in this release.
 
      All PHP 5.5 users are encouraged to upgrade to this version.
-     </p><p>For source downloads of PHP 5.5.30 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-     The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.5.30">ChangeLog</a>.
+     </p><p>For source downloads of PHP 5.5.30 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
+     Windows binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
+     The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-5.php#5.5.30">ChangeLog</a>.
      </p></div>',
   ),
   347 => 
   array (
     'title' => 'PHP 7.0.0 RC 4 Released',
-    'id' => 'http://php.net/archive/2015.php#id2015-10-01-1',
+    'id' => 'https://www.php.net/archive/2015.php#id2015-10-01-1',
     'published' => '2015-10-01T13:00:00+01:00',
     'updated' => '2015-10-01T13:00:00+01:00',
     'category' => 
@@ -19929,13 +19929,13 @@ the upgrade
     array (
       0 => 
       array (
-        'href' => 'http://php.net/index.php#id2015-10-01-1',
+        'href' => 'https://www.php.net/index.php#id2015-10-01-1',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
       1 => 
       array (
-        'href' => 'http://php.net/archive/2015.php#id2015-10-01-1',
+        'href' => 'https://www.php.net/archive/2015.php#id2015-10-01-1',
         'rel' => 'via',
         'type' => 'text/html',
       ),
@@ -19972,7 +19972,7 @@ the upgrade
      <p>
       For more information on the new features and other changes, you can read the
       <a href="https://github.com/php/php-src/blob/php-7.0.0RC4/NEWS">NEWS file</a>, or the
-      <a href="http://php.net/manual/migration70.php">migration guide</a>
+      <a href="https://www.php.net/manual/migration70.php">migration guide</a>
       for a complete list of upgrading notes. NEWS and UPGRADING files can also be found in
       the release archive.
      </p>
@@ -19980,7 +19980,7 @@ the upgrade
      <p>
       For source downloads of PHP 7.0.0 RC 4 please visit
       the <a href="https://downloads.php.net/ab/">download page</a>, Windows source and binaries
-      can be found on <a href="http://windows.php.net/qa/">windows.php.net/qa/</a>.
+      can be found on <a href="https://windows.php.net/qa/">windows.php.net/qa/</a>.
      </p>
 
      <p>
@@ -19998,12 +19998,12 @@ the upgrade
         PHP 7.0.0 RC 4. This is the ninth pre-release of the new PHP 7
         major series. All users of PHP are encouraged to test this version carefully,
         and report any bugs and incompatibilities in <a href="https://bugs.php.net">the bug tracking system</a>.
-     </p><strong>THIS IS A DEVELOPMENT PREVIEW - DO <u>NOT</u> USE IT IN PRODUCTION!</strong><p class=\'fullArticleLink\'><a href=\'http://php.net/archive/2015.php#id2015-10-01-1\' class>&hellip; read full article</a></p></div>',
+     </p><strong>THIS IS A DEVELOPMENT PREVIEW - DO <u>NOT</u> USE IT IN PRODUCTION!</strong><p class=\'fullArticleLink\'><a href=\'https://www.php.net/archive/2015.php#id2015-10-01-1\' class>&hellip; read full article</a></p></div>',
   ),
   348 => 
   array (
     'title' => 'PHPBenelux Conference 2016',
-    'id' => 'http://php.net/archive/2015.php#id2015-09-30-1',
+    'id' => 'https://www.php.net/archive/2015.php#id2015-09-30-1',
     'published' => '2015-09-30T09:56:51-04:00',
     'updated' => '2015-09-30T09:56:51-04:00',
     'finalTeaserDate' => '2015-10-14',
@@ -20024,7 +20024,7 @@ the upgrade
     array (
       0 => 
       array (
-        'href' => 'http://php.net/conferences/index.php#id2015-09-30-1',
+        'href' => 'https://www.php.net/conferences/index.php#id2015-09-30-1',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
@@ -20037,7 +20037,7 @@ the upgrade
     ),
     'newsImage' => 
     array (
-      'xmlns' => 'http://php.net/ns/news',
+      'xmlns' => 'https://www.php.net/ns/news',
       'link' => 'https://conference.phpbenelux.eu/',
       'title' => 'PHPBenelux Conference 2016',
       'content' => 'phpconf_logo_2.png',
@@ -20085,7 +20085,7 @@ the upgrade
   349 => 
   array (
     'title' => 'PHP 7.0.0 RC 3 Released',
-    'id' => 'http://php.net/archive/2015.php#id2015-09-17-2',
+    'id' => 'https://www.php.net/archive/2015.php#id2015-09-17-2',
     'published' => '2015-09-17T12:30:00+01:00',
     'updated' => '2015-09-17T12:30:00+01:00',
     'category' => 
@@ -20105,13 +20105,13 @@ the upgrade
     array (
       0 => 
       array (
-        'href' => 'http://php.net/index.php#id2015-09-17-2',
+        'href' => 'https://www.php.net/index.php#id2015-09-17-2',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
       1 => 
       array (
-        'href' => 'http://php.net/archive/2015.php#id2015-09-17-2',
+        'href' => 'https://www.php.net/archive/2015.php#id2015-09-17-2',
         'rel' => 'via',
         'type' => 'text/html',
       ),
@@ -20161,7 +20161,7 @@ the upgrade
      <p>
       For source downloads of PHP 7.0.0 RC 3 please visit
       the <a href="https://downloads.php.net/ab/">download page</a>, Windows source and binaries
-      can be found on <a href="http://windows.php.net/qa/">windows.php.net/qa/</a>.
+      can be found on <a href="https://windows.php.net/qa/">windows.php.net/qa/</a>.
      </p>
 
      <p>
@@ -20179,12 +20179,12 @@ the upgrade
         PHP 7.0.0 RC 3. This is the eighth pre-release of the new PHP 7
         major series. All users of PHP are encouraged to test this version carefully,
         and report any bugs and incompatibilities in <a href="https://bugs.php.net">the bug tracking system</a>.
-     </p><strong>THIS IS A DEVELOPMENT PREVIEW - DO <u>NOT</u> USE IT IN PRODUCTION!</strong><p class=\'fullArticleLink\'><a href=\'http://php.net/archive/2015.php#id2015-09-17-2\' class>&hellip; read full article</a></p></div>',
+     </p><strong>THIS IS A DEVELOPMENT PREVIEW - DO <u>NOT</u> USE IT IN PRODUCTION!</strong><p class=\'fullArticleLink\'><a href=\'https://www.php.net/archive/2015.php#id2015-09-17-2\' class>&hellip; read full article</a></p></div>',
   ),
   350 => 
   array (
     'title' => 'PHPConf Taiwan 2015',
-    'id' => 'http://php.net/archive/2015.php#id2015-09-15-1',
+    'id' => 'https://www.php.net/archive/2015.php#id2015-09-15-1',
     'published' => '2015-09-15T16:25:12+00:00',
     'updated' => '2015-09-30T09:09:09+01:00',
     'finalTeaserDate' => '2015-10-09',
@@ -20200,7 +20200,7 @@ the upgrade
     array (
       0 => 
       array (
-        'href' => 'http://php.net/conferences/index.php#id2015-09-15-1',
+        'href' => 'https://www.php.net/conferences/index.php#id2015-09-15-1',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
@@ -20213,7 +20213,7 @@ the upgrade
     ),
     'newsImage' => 
     array (
-      'xmlns' => 'http://php.net/ns/news',
+      'xmlns' => 'https://www.php.net/ns/news',
       'link' => 'http://2015.phpconf.tw',
       'title' => 'PHPConf Taiwan 2015',
       'content' => 'phpconf_taiwan_2015.png',
@@ -20228,7 +20228,7 @@ the upgrade
   351 => 
   array (
     'title' => 'PHPConf.Asia 2015',
-    'id' => 'http://php.net/archive/2015.php#id2015-09-04-5',
+    'id' => 'https://www.php.net/archive/2015.php#id2015-09-04-5',
     'published' => '2015-09-04T11:29:00+08:00',
     'updated' => '2015-09-04T11:29:00+08:00',
     'finalTeaserDate' => '2015-09-22',
@@ -20244,7 +20244,7 @@ the upgrade
     array (
       0 => 
       array (
-        'href' => 'http://php.net/conferences/index.php#id2015-09-04-5',
+        'href' => 'https://www.php.net/conferences/index.php#id2015-09-04-5',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
@@ -20257,7 +20257,7 @@ the upgrade
     ),
     'newsImage' => 
     array (
-      'xmlns' => 'http://php.net/ns/news',
+      'xmlns' => 'https://www.php.net/ns/news',
       'link' => 'http://phpconf.asia',
       'title' => 'PHPConf.Asia 2015',
       'content' => 'phpconfasia2015-logo.png',
@@ -20277,7 +20277,7 @@ the upgrade
   352 => 
   array (
     'title' => 'PHP 5.4.45 Released',
-    'id' => 'http://php.net/archive/2015.php#id2015-09-04-4',
+    'id' => 'https://www.php.net/archive/2015.php#id2015-09-04-4',
     'published' => '2015-09-04T12:37:46-07:00',
     'updated' => '2015-09-04T12:37:46-07:00',
     'category' => 
@@ -20297,13 +20297,13 @@ the upgrade
     array (
       0 => 
       array (
-        'href' => 'http://php.net/index.php#id2015-09-04-4',
+        'href' => 'https://www.php.net/index.php#id2015-09-04-4',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
       1 => 
       array (
-        'href' => 'http://php.net/archive/2015.php#id2015-09-04-4',
+        'href' => 'https://www.php.net/archive/2015.php#id2015-09-04-4',
         'rel' => 'via',
         'type' => 'text/html',
       ),
@@ -20314,12 +20314,12 @@ the upgrade
      All PHP 5.4 users are encouraged to upgrade to this version.
      </p>
 
-     <p>For source downloads of PHP 5.4.45 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-     The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.4.45">ChangeLog</a>.
+     <p>For source downloads of PHP 5.4.45 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
+     Windows binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
+     The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-5.php#5.4.45">ChangeLog</a>.
      </p>
 
-     <p>Please note that according to the <a href="http://php.net/supported-versions.php">PHP version support timelines</a>,
+     <p>Please note that according to the <a href="https://www.php.net/supported-versions.php">PHP version support timelines</a>,
      PHP 5.4.45 is the last scheduled release of PHP 5.4 branch. There may be additional release if we discover
      important security issues that warrant it, otherwise this release will be the final one in the PHP 5.4 branch.
      If your PHP installation is based on PHP 5.4, it may be a good time to start making the plans for the upgrade to PHP 5.5 or PHP 5.6.
@@ -20329,15 +20329,15 @@ the upgrade
     'intro' => '<div><p>The PHP development team announces the immediate availability of PHP
      5.4.45. Ten security-related issues were fixed in this release.
      All PHP 5.4 users are encouraged to upgrade to this version.
-     </p><p>For source downloads of PHP 5.4.45 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-     The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.4.45">ChangeLog</a>.
-     </p><p class=\'fullArticleLink\'><a href=\'http://php.net/archive/2015.php#id2015-09-04-4\' class>&hellip; read full article</a></p></div>',
+     </p><p>For source downloads of PHP 5.4.45 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
+     Windows binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
+     The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-5.php#5.4.45">ChangeLog</a>.
+     </p><p class=\'fullArticleLink\'><a href=\'https://www.php.net/archive/2015.php#id2015-09-04-4\' class>&hellip; read full article</a></p></div>',
   ),
   353 => 
   array (
     'title' => 'PHP 5.5.29 is available',
-    'id' => 'http://php.net/archive/2015.php#id2015-09-04-3',
+    'id' => 'https://www.php.net/archive/2015.php#id2015-09-04-3',
     'published' => '2015-09-04T16:00:38+00:00',
     'updated' => '2015-09-04T16:00:38+00:00',
     'category' => 
@@ -20357,13 +20357,13 @@ the upgrade
     array (
       0 => 
       array (
-        'href' => 'http://php.net/index.php#id2015-09-04-3',
+        'href' => 'https://www.php.net/index.php#id2015-09-04-3',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
       1 => 
       array (
-        'href' => 'http://php.net/archive/2015.php#id2015-09-04-3',
+        'href' => 'https://www.php.net/archive/2015.php#id2015-09-04-3',
         'rel' => 'via',
         'type' => 'text/html',
       ),
@@ -20375,9 +20375,9 @@ the upgrade
      All PHP 5.5 users are encouraged to upgrade to this version.
      </p>
 
-     <p>For source downloads of PHP 5.5.29 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-     The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.5.29">ChangeLog</a>.
+     <p>For source downloads of PHP 5.5.29 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
+     Windows binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
+     The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-5.php#5.5.29">ChangeLog</a>.
      </p>
 
     </div>
@@ -20386,15 +20386,15 @@ the upgrade
      5.5.29. This is a security release. Many security-related issues were fixed in this release.
 
      All PHP 5.5 users are encouraged to upgrade to this version.
-     </p><p>For source downloads of PHP 5.5.29 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-     The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.5.29">ChangeLog</a>.
+     </p><p>For source downloads of PHP 5.5.29 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
+     Windows binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
+     The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-5.php#5.5.29">ChangeLog</a>.
      </p></div>',
   ),
   354 => 
   array (
     'title' => 'PHP 5.6.13 is available',
-    'id' => 'http://php.net/archive/2015.php#id2015-09-04-2',
+    'id' => 'https://www.php.net/archive/2015.php#id2015-09-04-2',
     'published' => '2015-09-04T08:40:46-07:00',
     'updated' => '2015-09-04T08:40:46-07:00',
     'category' => 
@@ -20414,13 +20414,13 @@ the upgrade
     array (
       0 => 
       array (
-        'href' => 'http://php.net/index.php#id2015-09-04-2',
+        'href' => 'https://www.php.net/index.php#id2015-09-04-2',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
       1 => 
       array (
-        'href' => 'http://php.net/archive/2015.php#id2015-09-04-2',
+        'href' => 'https://www.php.net/archive/2015.php#id2015-09-04-2',
         'rel' => 'via',
         'type' => 'text/html',
       ),
@@ -20433,9 +20433,9 @@ the upgrade
      All PHP 5.6 users are encouraged to upgrade to this version.
      </p>
 
-     <p>For source downloads of PHP 5.6.13 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-     The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.6.13">ChangeLog</a>.
+     <p>For source downloads of PHP 5.6.13 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
+     Windows binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
+     The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-5.php#5.6.13">ChangeLog</a>.
      </p>
 
     </div>
@@ -20444,15 +20444,15 @@ the upgrade
      5.6.13. 11 security-related issues were fixed in this release.
 
      All PHP 5.6 users are encouraged to upgrade to this version.
-     </p><p>For source downloads of PHP 5.6.13 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-     The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.6.13">ChangeLog</a>.
+     </p><p>For source downloads of PHP 5.6.13 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
+     Windows binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
+     The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-5.php#5.6.13">ChangeLog</a>.
      </p></div>',
   ),
   355 => 
   array (
     'title' => 'PHP 7.0.0 RC 2 Released',
-    'id' => 'http://php.net/archive/2015.php#id2015-09-04-1',
+    'id' => 'https://www.php.net/archive/2015.php#id2015-09-04-1',
     'published' => '2015-09-04T11:30:00+01:00',
     'updated' => '2015-09-04T11:30:00+01:00',
     'category' => 
@@ -20472,13 +20472,13 @@ the upgrade
     array (
       0 => 
       array (
-        'href' => 'http://php.net/index.php#id2015-09-04-1',
+        'href' => 'https://www.php.net/index.php#id2015-09-04-1',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
       1 => 
       array (
-        'href' => 'http://php.net/archive/2015.php#id2015-09-04-1',
+        'href' => 'https://www.php.net/archive/2015.php#id2015-09-04-1',
         'rel' => 'via',
         'type' => 'text/html',
       ),
@@ -20522,7 +20522,7 @@ the upgrade
      <p>
       For source downloads of PHP 7.0.0 RC 2 please visit
       the <a href="https://downloads.php.net/ab/">download page</a>, Windows source and binaries
-      can be found on <a href="http://windows.php.net/qa/">windows.php.net/qa/</a>.
+      can be found on <a href="https://windows.php.net/qa/">windows.php.net/qa/</a>.
      </p>
 
      <p>
@@ -20540,12 +20540,12 @@ the upgrade
         PHP 7.0.0 RC 2. This is the seventh pre-release of the new PHP 7
         major series. All users of PHP are encouraged to test this version carefully,
         and report any bugs and incompatibilities in <a href="https://bugs.php.net">the bug tracking system</a>.
-     </p><strong>THIS IS A DEVELOPMENT PREVIEW - DO <u>NOT</u> USE IT IN PRODUCTION!</strong><p class=\'fullArticleLink\'><a href=\'http://php.net/archive/2015.php#id2015-09-04-1\' class>&hellip; read full article</a></p></div>',
+     </p><strong>THIS IS A DEVELOPMENT PREVIEW - DO <u>NOT</u> USE IT IN PRODUCTION!</strong><p class=\'fullArticleLink\'><a href=\'https://www.php.net/archive/2015.php#id2015-09-04-1\' class>&hellip; read full article</a></p></div>',
   ),
   356 => 
   array (
     'title' => 'International PHP Conference 2015',
-    'id' => 'http://php.net/archive/2015.php#id2015-08-31-1',
+    'id' => 'https://www.php.net/archive/2015.php#id2015-08-31-1',
     'published' => '2015-08-31T11:33:03+02:00',
     'updated' => '2015-08-31T11:33:03+02:00',
     'finalTeaserDate' => '2015-10-25',
@@ -20561,7 +20561,7 @@ the upgrade
     array (
       0 => 
       array (
-        'href' => 'http://php.net/conferences/index.php#id2015-08-31-1',
+        'href' => 'https://www.php.net/conferences/index.php#id2015-08-31-1',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
@@ -20574,7 +20574,7 @@ the upgrade
     ),
     'newsImage' => 
     array (
-      'xmlns' => 'http://php.net/ns/news',
+      'xmlns' => 'https://www.php.net/ns/news',
       'link' => 'https://phpconference.com',
       'title' => 'International PHP Conference 2015',
       'content' => 'ipc2015-logo.png',
@@ -20625,7 +20625,7 @@ the upgrade
   357 => 
   array (
     'title' => 'PHP 7.0.0 RC 1 Released',
-    'id' => 'http://php.net/archive/2015.php#id2015-08-21-1',
+    'id' => 'https://www.php.net/archive/2015.php#id2015-08-21-1',
     'published' => '2015-08-21T10:10:00+01:00',
     'updated' => '2015-08-21T10:10:00+01:00',
     'category' => 
@@ -20645,13 +20645,13 @@ the upgrade
     array (
       0 => 
       array (
-        'href' => 'http://php.net/index.php#id2015-08-21-1',
+        'href' => 'https://www.php.net/index.php#id2015-08-21-1',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
       1 => 
       array (
-        'href' => 'http://php.net/archive/2015.php#id2015-08-21-1',
+        'href' => 'https://www.php.net/archive/2015.php#id2015-08-21-1',
         'rel' => 'via',
         'type' => 'text/html',
       ),
@@ -20695,7 +20695,7 @@ the upgrade
      <p>
       For source downloads of PHP 7.0.0 RC 1 please visit
       the <a href="https://downloads.php.net/ab/">download page</a>, Windows source and binaries
-      can be found on <a href="http://windows.php.net/qa/">windows.php.net/qa/</a>.
+      can be found on <a href="https://windows.php.net/qa/">windows.php.net/qa/</a>.
      </p>
 
      <p>
@@ -20713,12 +20713,12 @@ the upgrade
         PHP 7.0.0 RC 1. This is the sixth pre-release of the new PHP 7
         major series. All users of PHP are encouraged to test this version carefully,
         and report any bugs and incompatibilities in <a href="https://bugs.php.net">the bug tracking system</a>.
-     </p><strong>THIS IS A DEVELOPMENT PREVIEW - DO <u>NOT</u> USE IT IN PRODUCTION!</strong><p class=\'fullArticleLink\'><a href=\'http://php.net/archive/2015.php#id2015-08-21-1\' class>&hellip; read full article</a></p></div>',
+     </p><strong>THIS IS A DEVELOPMENT PREVIEW - DO <u>NOT</u> USE IT IN PRODUCTION!</strong><p class=\'fullArticleLink\'><a href=\'https://www.php.net/archive/2015.php#id2015-08-21-1\' class>&hellip; read full article</a></p></div>',
   ),
   358 => 
   array (
     'title' => 'PHP 5.6.12 is available',
-    'id' => 'http://php.net/archive/2015.php#id2015-08-06-4',
+    'id' => 'https://www.php.net/archive/2015.php#id2015-08-06-4',
     'published' => '2015-08-06T23:30:25-07:00',
     'updated' => '2015-08-06T23:30:25-07:00',
     'category' => 
@@ -20738,13 +20738,13 @@ the upgrade
     array (
       0 => 
       array (
-        'href' => 'http://php.net/index.php#id2015-08-06-4',
+        'href' => 'https://www.php.net/index.php#id2015-08-06-4',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
       1 => 
       array (
-        'href' => 'http://php.net/archive/2015.php#id2015-08-06-4',
+        'href' => 'https://www.php.net/archive/2015.php#id2015-08-06-4',
         'rel' => 'via',
         'type' => 'text/html',
       ),
@@ -20756,9 +20756,9 @@ the upgrade
           All PHP 5.6 users are encouraged to upgrade to this version.
           </p>
 
-          <p>For source downloads of PHP 5.6.12 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-          Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-          The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.6.12">ChangeLog</a>.
+          <p>For source downloads of PHP 5.6.12 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
+          Windows binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
+          The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-5.php#5.6.12">ChangeLog</a>.
           </p>
     </div>
   ',
@@ -20766,15 +20766,15 @@ the upgrade
           5.6.12. 12 security-related issues were fixed in this release.
 
           All PHP 5.6 users are encouraged to upgrade to this version.
-          </p><p>For source downloads of PHP 5.6.12 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-          Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-          The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.6.12">ChangeLog</a>.
+          </p><p>For source downloads of PHP 5.6.12 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
+          Windows binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
+          The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-5.php#5.6.12">ChangeLog</a>.
           </p></div>',
   ),
   359 => 
   array (
     'title' => 'PHP 5.5.28 Released',
-    'id' => 'http://php.net/archive/2015.php#id2015-08-06-3',
+    'id' => 'https://www.php.net/archive/2015.php#id2015-08-06-3',
     'published' => '2015-08-06T21:59:41-07:00',
     'updated' => '2015-08-06T21:59:41-07:00',
     'category' => 
@@ -20794,13 +20794,13 @@ the upgrade
     array (
       0 => 
       array (
-        'href' => 'http://php.net/index.php#id2015-08-06-3',
+        'href' => 'https://www.php.net/index.php#id2015-08-06-3',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
       1 => 
       array (
-        'href' => 'http://php.net/archive/2015.php#id2015-08-06-3',
+        'href' => 'https://www.php.net/archive/2015.php#id2015-08-06-3',
         'rel' => 'via',
         'type' => 'text/html',
       ),
@@ -20813,15 +20813,15 @@ the upgrade
           </p>
 
           <p>
-          According to <a href="http://php.net/supported-versions.php">our release calendar</a>, this PHP 5.5 version
+          According to <a href="https://www.php.net/supported-versions.php">our release calendar</a>, this PHP 5.5 version
           is the first security release of the PHP 5.5 branch. This and all the following releases of this branch
      	 do not contain bugfixes that are not considered relevant for security.
           PHP 5.5 users that need further bugfixes are encouraged to upgrade to PHP 5.6.
           </p>
 
-          <p>For source downloads of PHP 5.5.28 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-          Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-          The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.5.28">ChangeLog</a>.
+          <p>For source downloads of PHP 5.5.28 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
+          Windows binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
+          The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-5.php#5.5.28">ChangeLog</a>.
           </p>
     </div>
   ',
@@ -20830,16 +20830,16 @@ the upgrade
 
           All PHP 5.5 users are encouraged to upgrade to this version.
           </p><p>
-          According to <a href="http://php.net/supported-versions.php">our release calendar</a>, this PHP 5.5 version
+          According to <a href="https://www.php.net/supported-versions.php">our release calendar</a>, this PHP 5.5 version
           is the first security release of the PHP 5.5 branch. This and all the following releases of this branch
      	 do not contain bugfixes that are not considered relevant for security.
           PHP 5.5 users that need further bugfixes are encouraged to upgrade to PHP 5.6.
-          </p><p class=\'fullArticleLink\'><a href=\'http://php.net/archive/2015.php#id2015-08-06-3\' class>&hellip; read full article</a></p></div>',
+          </p><p class=\'fullArticleLink\'><a href=\'https://www.php.net/archive/2015.php#id2015-08-06-3\' class>&hellip; read full article</a></p></div>',
   ),
   360 => 
   array (
     'title' => 'PHP 5.4.44 Released',
-    'id' => 'http://php.net/archive/2015.php#id2015-08-06-2',
+    'id' => 'https://www.php.net/archive/2015.php#id2015-08-06-2',
     'published' => '2015-08-06T21:58:57-07:00',
     'updated' => '2015-08-06T21:58:57-07:00',
     'category' => 
@@ -20859,13 +20859,13 @@ the upgrade
     array (
       0 => 
       array (
-        'href' => 'http://php.net/index.php#id2015-08-06-2',
+        'href' => 'https://www.php.net/index.php#id2015-08-06-2',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
       1 => 
       array (
-        'href' => 'http://php.net/archive/2015.php#id2015-08-06-2',
+        'href' => 'https://www.php.net/archive/2015.php#id2015-08-06-2',
         'rel' => 'via',
         'type' => 'text/html',
       ),
@@ -20876,12 +20876,12 @@ the upgrade
      All PHP 5.4 users are encouraged to upgrade to this version.
      </p>
 
-     <p>For source downloads of PHP 5.4.44 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-     The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.4.44">ChangeLog</a>.
+     <p>For source downloads of PHP 5.4.44 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
+     Windows binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
+     The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-5.php#5.4.44">ChangeLog</a>.
      </p>
 
-     <p>Please note that PHP 5.4 branch is nearing the end of its <a href="http://php.net/supported-versions.php">support timeframe</a>. Either September or October release, depending on discovered issues, will be the last official release of PHP 5.4.
+     <p>Please note that PHP 5.4 branch is nearing the end of its <a href="https://www.php.net/supported-versions.php">support timeframe</a>. Either September or October release, depending on discovered issues, will be the last official release of PHP 5.4.
      If your PHP installation is based on PHP 5.4, it may be a good time to start making the plans for the upgrade.
      </p>
     </div>
@@ -20889,15 +20889,15 @@ the upgrade
     'intro' => '<div><p>The PHP development team announces the immediate availability of PHP
      5.4.44. 11 security-related issues were fixed in this release.
      All PHP 5.4 users are encouraged to upgrade to this version.
-     </p><p>For source downloads of PHP 5.4.44 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-     The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.4.44">ChangeLog</a>.
-     </p><p class=\'fullArticleLink\'><a href=\'http://php.net/archive/2015.php#id2015-08-06-2\' class>&hellip; read full article</a></p></div>',
+     </p><p>For source downloads of PHP 5.4.44 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
+     Windows binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
+     The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-5.php#5.4.44">ChangeLog</a>.
+     </p><p class=\'fullArticleLink\'><a href=\'https://www.php.net/archive/2015.php#id2015-08-06-2\' class>&hellip; read full article</a></p></div>',
   ),
   361 => 
   array (
     'title' => 'PHP 7.0.0 Beta 3 Released',
-    'id' => 'http://php.net/archive/2015.php#id2015-08-06-1',
+    'id' => 'https://www.php.net/archive/2015.php#id2015-08-06-1',
     'published' => '2015-08-06T17:20:00+01:00',
     'updated' => '2015-08-06T17:20:00+01:00',
     'category' => 
@@ -20917,13 +20917,13 @@ the upgrade
     array (
       0 => 
       array (
-        'href' => 'http://php.net/index.php#id2015-08-06-1',
+        'href' => 'https://www.php.net/index.php#id2015-08-06-1',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
       1 => 
       array (
-        'href' => 'http://php.net/archive/2015.php#id2015-08-06-1',
+        'href' => 'https://www.php.net/archive/2015.php#id2015-08-06-1',
         'rel' => 'via',
         'type' => 'text/html',
       ),
@@ -20967,7 +20967,7 @@ the upgrade
      <p>
       For source downloads of PHP 7.0.0 Beta 3 please visit
       the <a href="https://downloads.php.net/ab/">download page</a>, Windows source and binaries
-      can be found on <a href="http://windows.php.net/qa/">windows.php.net/qa/</a>.
+      can be found on <a href="https://windows.php.net/qa/">windows.php.net/qa/</a>.
      </p>
 
      <p>
@@ -20985,12 +20985,12 @@ the upgrade
         PHP 7.0.0 Beta 3. This is the fifth pre-release of the new PHP 7
         major series. All users of PHP are encouraged to test this version carefully,
         and report any bugs and incompatibilities in <a href="https://bugs.php.net">the bug tracking system</a>.
-     </p><strong>THIS IS A DEVELOPMENT PREVIEW - DO <u>NOT</u> USE IT IN PRODUCTION!</strong><p class=\'fullArticleLink\'><a href=\'http://php.net/archive/2015.php#id2015-08-06-1\' class>&hellip; read full article</a></p></div>',
+     </p><strong>THIS IS A DEVELOPMENT PREVIEW - DO <u>NOT</u> USE IT IN PRODUCTION!</strong><p class=\'fullArticleLink\'><a href=\'https://www.php.net/archive/2015.php#id2015-08-06-1\' class>&hellip; read full article</a></p></div>',
   ),
   362 => 
   array (
     'title' => 'PHP 7.0.0 Beta 2 Released',
-    'id' => 'http://php.net/archive/2015.php#id2015-07-24-1',
+    'id' => 'https://www.php.net/archive/2015.php#id2015-07-24-1',
     'published' => '2015-07-24T02:40:00+01:00',
     'updated' => '2015-07-24T02:00:40+01:00',
     'category' => 
@@ -21010,13 +21010,13 @@ the upgrade
     array (
       0 => 
       array (
-        'href' => 'http://php.net/index.php#id2015-07-24-1',
+        'href' => 'https://www.php.net/index.php#id2015-07-24-1',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
       1 => 
       array (
-        'href' => 'http://php.net/archive/2015.php#id2015-07-24-1',
+        'href' => 'https://www.php.net/archive/2015.php#id2015-07-24-1',
         'rel' => 'via',
         'type' => 'text/html',
       ),
@@ -21060,7 +21060,7 @@ the upgrade
      <p>
       For source downloads of PHP 7.0.0 Beta 2 please visit
       the <a href="https://downloads.php.net/ab/">download page</a>, Windows source and binaries
-      can be found on <a href="http://windows.php.net/qa/">windows.php.net/qa/</a>.
+      can be found on <a href="https://windows.php.net/qa/">windows.php.net/qa/</a>.
      </p>
 
      <p>
@@ -21078,12 +21078,12 @@ the upgrade
         PHP 7.0.0 Beta 2. This is the fourth pre-release of the new PHP 7
         major series. All users of PHP are encouraged to test this version carefully,
         and report any bugs and incompatibilities in <a href="https://bugs.php.net">the bug tracking system</a>.
-     </p><strong>THIS IS A DEVELOPMENT PREVIEW - DO <u>NOT</u> USE IT IN PRODUCTION!</strong><p class=\'fullArticleLink\'><a href=\'http://php.net/archive/2015.php#id2015-07-24-1\' class>&hellip; read full article</a></p></div>',
+     </p><strong>THIS IS A DEVELOPMENT PREVIEW - DO <u>NOT</u> USE IT IN PRODUCTION!</strong><p class=\'fullArticleLink\'><a href=\'https://www.php.net/archive/2015.php#id2015-07-24-1\' class>&hellip; read full article</a></p></div>',
   ),
   363 => 
   array (
     'title' => 'PHP 7.0.0 Beta 1 Released',
-    'id' => 'http://php.net/archive/2015.php#id2015-07-10-4',
+    'id' => 'https://www.php.net/archive/2015.php#id2015-07-10-4',
     'published' => '2015-07-10T23:30:00+01:00',
     'updated' => '2015-07-10T23:30:00+01:00',
     'category' => 
@@ -21103,13 +21103,13 @@ the upgrade
     array (
       0 => 
       array (
-        'href' => 'http://php.net/index.php#id2015-07-10-4',
+        'href' => 'https://www.php.net/index.php#id2015-07-10-4',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
       1 => 
       array (
-        'href' => 'http://php.net/archive/2015.php#id2015-07-10-4',
+        'href' => 'https://www.php.net/archive/2015.php#id2015-07-10-4',
         'rel' => 'via',
         'type' => 'text/html',
       ),
@@ -21157,7 +21157,7 @@ the upgrade
      <p>
       For source downloads of PHP 7.0.0 Beta 1 please visit
       the <a href="https://downloads.php.net/ab/">download page</a>, Windows source and binaries
-      can be found on <a href="http://windows.php.net/qa/">windows.php.net/qa/</a>.
+      can be found on <a href="https://windows.php.net/qa/">windows.php.net/qa/</a>.
      </p>
 
      <p>
@@ -21175,12 +21175,12 @@ the upgrade
         PHP 7.0.0 Beta 1. This is the third pre-release of the new PHP 7
         major series. All users of PHP are encouraged to test this version carefully,
         and report any bugs and incompatibilities in <a href="https://bugs.php.net">the bug tracking system</a>.
-     </p><strong>THIS IS A DEVELOPMENT PREVIEW - DO <u>NOT</u> USE IT IN PRODUCTION!</strong><p class=\'fullArticleLink\'><a href=\'http://php.net/archive/2015.php#id2015-07-10-4\' class>&hellip; read full article</a></p></div>',
+     </p><strong>THIS IS A DEVELOPMENT PREVIEW - DO <u>NOT</u> USE IT IN PRODUCTION!</strong><p class=\'fullArticleLink\'><a href=\'https://www.php.net/archive/2015.php#id2015-07-10-4\' class>&hellip; read full article</a></p></div>',
   ),
   364 => 
   array (
     'title' => 'PHP 5.6.11 is available',
-    'id' => 'http://php.net/archive/2015.php#id2015-07-10-3',
+    'id' => 'https://www.php.net/archive/2015.php#id2015-07-10-3',
     'published' => '2015-07-10T02:52:09-07:00',
     'updated' => '2015-07-10T02:52:09-07:00',
     'category' => 
@@ -21200,13 +21200,13 @@ the upgrade
     array (
       0 => 
       array (
-        'href' => 'http://php.net/index.php#id2015-07-10-3',
+        'href' => 'https://www.php.net/index.php#id2015-07-10-3',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
       1 => 
       array (
-        'href' => 'http://php.net/archive/2015.php#id2015-07-10-3',
+        'href' => 'https://www.php.net/archive/2015.php#id2015-07-10-3',
         'rel' => 'via',
         'type' => 'text/html',
       ),
@@ -21217,9 +21217,9 @@ the upgrade
      All PHP 5.6 users are encouraged to upgrade to this version.
      </p>
 
-     <p>For source downloads of PHP 5.6.11 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-     The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.6.11">ChangeLog</a>.
+     <p>For source downloads of PHP 5.6.11 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
+     Windows binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
+     The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-5.php#5.6.11">ChangeLog</a>.
      </p>
 
     </div>
@@ -21227,15 +21227,15 @@ the upgrade
     'intro' => '<div><p>The PHP development team announces the immediate availability of PHP
      5.6.11. Five security-related issues in PHP were fixed in this release, including CVE-2015-3152.
      All PHP 5.6 users are encouraged to upgrade to this version.
-     </p><p>For source downloads of PHP 5.6.11 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-     The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.6.11">ChangeLog</a>.
+     </p><p>For source downloads of PHP 5.6.11 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
+     Windows binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
+     The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-5.php#5.6.11">ChangeLog</a>.
      </p></div>',
   ),
   365 => 
   array (
     'title' => 'PHP 5.5.27 released',
-    'id' => 'http://php.net/archive/2015.php#id2015-07-10-2',
+    'id' => 'https://www.php.net/archive/2015.php#id2015-07-10-2',
     'published' => '2015-07-10T09:24:47+00:00',
     'updated' => '2015-07-10T09:24:47+00:00',
     'category' => 
@@ -21255,13 +21255,13 @@ the upgrade
     array (
       0 => 
       array (
-        'href' => 'http://php.net/index.php#id2015-07-10-2',
+        'href' => 'https://www.php.net/index.php#id2015-07-10-2',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
       1 => 
       array (
-        'href' => 'http://php.net/archive/2015.php#id2015-07-10-2',
+        'href' => 'https://www.php.net/archive/2015.php#id2015-07-10-2',
         'rel' => 'via',
         'type' => 'text/html',
       ),
@@ -21274,15 +21274,15 @@ the upgrade
      </p>
 
      <p>
-     According to <a href="http://php.net/supported-versions.php">our release calendar</a>, this PHP 5.5 version
+     According to <a href="https://www.php.net/supported-versions.php">our release calendar</a>, this PHP 5.5 version
      is the last planned release that contains regular bugfixes. All the consequent releases
      will contain only security-relevant fixes, for the term of one year.
      PHP 5.5 users that need further bugfixes are encouraged to upgrade to PHP 5.6.
      </p>
 
-     <p>For source downloads of PHP 5.5.27 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-     The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.5.27">ChangeLog</a>.
+     <p>For source downloads of PHP 5.5.27 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
+     Windows binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
+     The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-5.php#5.5.27">ChangeLog</a>.
      </p>
     </div>
   ',
@@ -21291,16 +21291,16 @@ the upgrade
 
      All PHP 5.5 users are encouraged to upgrade to this version.
      </p><p>
-     According to <a href="http://php.net/supported-versions.php">our release calendar</a>, this PHP 5.5 version
+     According to <a href="https://www.php.net/supported-versions.php">our release calendar</a>, this PHP 5.5 version
      is the last planned release that contains regular bugfixes. All the consequent releases
      will contain only security-relevant fixes, for the term of one year.
      PHP 5.5 users that need further bugfixes are encouraged to upgrade to PHP 5.6.
-     </p><p class=\'fullArticleLink\'><a href=\'http://php.net/archive/2015.php#id2015-07-10-2\' class>&hellip; read full article</a></p></div>',
+     </p><p class=\'fullArticleLink\'><a href=\'https://www.php.net/archive/2015.php#id2015-07-10-2\' class>&hellip; read full article</a></p></div>',
   ),
   366 => 
   array (
     'title' => 'PHP 5.4.43 Released',
-    'id' => 'http://php.net/archive/2015.php#id2015-07-09-1',
+    'id' => 'https://www.php.net/archive/2015.php#id2015-07-09-1',
     'published' => '2015-07-09T21:09:50-07:00',
     'updated' => '2015-07-09T21:09:50-07:00',
     'category' => 
@@ -21320,13 +21320,13 @@ the upgrade
     array (
       0 => 
       array (
-        'href' => 'http://php.net/index.php#id2015-07-09-1',
+        'href' => 'https://www.php.net/index.php#id2015-07-09-1',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
       1 => 
       array (
-        'href' => 'http://php.net/archive/2015.php#id2015-07-09-1',
+        'href' => 'https://www.php.net/archive/2015.php#id2015-07-09-1',
         'rel' => 'via',
         'type' => 'text/html',
       ),
@@ -21337,12 +21337,12 @@ the upgrade
      All PHP 5.4 users are encouraged to upgrade to this version.
      </p>
 
-     <p>For source downloads of PHP 5.4.43 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-     The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.4.43">ChangeLog</a>.
+     <p>For source downloads of PHP 5.4.43 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
+     Windows binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
+     The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-5.php#5.4.43">ChangeLog</a>.
      </p>
 
-     <p>Please note that PHP 5.4 branch is nearing the end of its <a href="http://php.net/supported-versions.php">support timeframe</a>.
+     <p>Please note that PHP 5.4 branch is nearing the end of its <a href="https://www.php.net/supported-versions.php">support timeframe</a>.
      If your PHP installations is based on PHP 5.4, it may be a good time to start making the plans for the upgrade.
      </p>
 
@@ -21351,15 +21351,15 @@ the upgrade
     'intro' => '<div><p>The PHP development team announces the immediate availability of PHP
      5.4.43. Five security-related issues in PHP were fixed in this release, including CVE-2015-3152.
      All PHP 5.4 users are encouraged to upgrade to this version.
-     </p><p>For source downloads of PHP 5.4.43 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-     The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.4.43">ChangeLog</a>.
-     </p><p class=\'fullArticleLink\'><a href=\'http://php.net/archive/2015.php#id2015-07-09-1\' class>&hellip; read full article</a></p></div>',
+     </p><p>For source downloads of PHP 5.4.43 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
+     Windows binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
+     The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-5.php#5.4.43">ChangeLog</a>.
+     </p><p class=\'fullArticleLink\'><a href=\'https://www.php.net/archive/2015.php#id2015-07-09-1\' class>&hellip; read full article</a></p></div>',
   ),
   367 => 
   array (
     'title' => 'Pacific Northwest PHP Conference 2015',
-    'id' => 'http://php.net/archive/2015.php#id2015-07-10-1',
+    'id' => 'https://www.php.net/archive/2015.php#id2015-07-10-1',
     'published' => '2015-07-10T02:00:00+01:00',
     'updated' => '2015-07-10T02:00:00+01:00',
     'finalTeaserDate' => '2015-07-20',
@@ -21375,7 +21375,7 @@ the upgrade
     array (
       0 => 
       array (
-        'href' => 'http://php.net/conferences/index.php#id2015-07-10-1',
+        'href' => 'https://www.php.net/conferences/index.php#id2015-07-10-1',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
@@ -21388,7 +21388,7 @@ the upgrade
     ),
     'newsImage' => 
     array (
-      'xmlns' => 'http://php.net/ns/news',
+      'xmlns' => 'https://www.php.net/ns/news',
       'link' => 'http://www.pnwphp.com/',
       'title' => 'Pacific Northwest PHP Conference 2015',
       'content' => 'pnw-php-2015.png',
@@ -21416,7 +21416,7 @@ the upgrade
   368 => 
   array (
     'title' => 'PHPKonf İstanbul PHP Conference 2015',
-    'id' => 'http://php.net/archive/2015.php#id2015-07-04-1',
+    'id' => 'https://www.php.net/archive/2015.php#id2015-07-04-1',
     'published' => '2015-07-04T10:00:00+00:00',
     'updated' => '2015-07-04T10:00:00+00:00',
     'finalTeaserDate' => '2015-07-25',
@@ -21432,7 +21432,7 @@ the upgrade
     array (
       0 => 
       array (
-        'href' => 'http://php.net/conferences/index.php#id2015-07-04-1',
+        'href' => 'https://www.php.net/conferences/index.php#id2015-07-04-1',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
@@ -21445,7 +21445,7 @@ the upgrade
     ),
     'newsImage' => 
     array (
-      'xmlns' => 'http://php.net/ns/news',
+      'xmlns' => 'https://www.php.net/ns/news',
       'link' => 'http://phpkonf.org/',
       'title' => 'PHPKonf İstanbul PHP Conference 2015',
       'content' => 'phpkonf_2015.png',
@@ -21461,7 +21461,7 @@ the upgrade
   369 => 
   array (
     'title' => 'php[world] 2015 Schedule Announced',
-    'id' => 'http://php.net/archive/2015.php#id2015-06-29-1',
+    'id' => 'https://www.php.net/archive/2015.php#id2015-06-29-1',
     'published' => '2015-06-29T15:58:16+00:00',
     'updated' => '2015-06-29T15:58:16+00:00',
     'finalTeaserDate' => '2015-11-16',
@@ -21477,7 +21477,7 @@ the upgrade
     array (
       0 => 
       array (
-        'href' => 'http://php.net/conferences/index.php#id2015-06-29-1',
+        'href' => 'https://www.php.net/conferences/index.php#id2015-06-29-1',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
@@ -21490,7 +21490,7 @@ the upgrade
     ),
     'newsImage' => 
     array (
-      'xmlns' => 'http://php.net/ns/news',
+      'xmlns' => 'https://www.php.net/ns/news',
       'link' => 'https://world.phparch.com/',
       'title' => 'php[world] 2015',
       'content' => '2015.world.logo.png',
@@ -21513,7 +21513,7 @@ the upgrade
   370 => 
   array (
     'title' => 'AFUP ForumPHP 2015',
-    'id' => 'http://php.net/archive/2015.php#id2015-06-27-1',
+    'id' => 'https://www.php.net/archive/2015.php#id2015-06-27-1',
     'published' => '2015-06-27T09:03:03+00:00',
     'updated' => '2015-06-27T09:03:03+00:00',
     'finalTeaserDate' => '2015-08-15',
@@ -21529,7 +21529,7 @@ the upgrade
     array (
       0 => 
       array (
-        'href' => 'http://php.net/conferences/index.php#id2015-06-27-1',
+        'href' => 'https://www.php.net/conferences/index.php#id2015-06-27-1',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
@@ -21542,7 +21542,7 @@ the upgrade
     ),
     'newsImage' => 
     array (
-      'xmlns' => 'http://php.net/ns/news',
+      'xmlns' => 'https://www.php.net/ns/news',
       'link' => 'http://www.afup.org/pages/forumphp2015/appel-a-conferenciers-en.php',
       'title' => 'forumphp-afup-2015',
       'content' => 'forumphp-afup-2015.png',
@@ -21563,7 +21563,7 @@ In 1995, Rasmus Lerdorf started creating PHP. 20 years later, 80% of websites in
   371 => 
   array (
     'title' => 'PHP 7.0.0 Alpha 2 Released',
-    'id' => 'http://php.net/archive/2015.php#id2015-06-25-1',
+    'id' => 'https://www.php.net/archive/2015.php#id2015-06-25-1',
     'published' => '2015-06-25T12:00:00+01:00',
     'updated' => '2015-06-25T12:00:00+01:00',
     'category' => 
@@ -21583,13 +21583,13 @@ In 1995, Rasmus Lerdorf started creating PHP. 20 years later, 80% of websites in
     array (
       0 => 
       array (
-        'href' => 'http://php.net/index.php#id2015-06-25-1',
+        'href' => 'https://www.php.net/index.php#id2015-06-25-1',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
       1 => 
       array (
-        'href' => 'http://php.net/archive/2015.php#id2015-06-25-1',
+        'href' => 'https://www.php.net/archive/2015.php#id2015-06-25-1',
         'rel' => 'via',
         'type' => 'text/html',
       ),
@@ -21634,7 +21634,7 @@ In 1995, Rasmus Lerdorf started creating PHP. 20 years later, 80% of websites in
      <p>
       For source downloads of PHP 7.0.0 Alpha 2 please visit
       the <a href="https://downloads.php.net/ab/">download page</a>, Windows source and binaries
-      can be found on <a href="http://windows.php.net/qa/">windows.php.net/qa/</a>.
+      can be found on <a href="https://windows.php.net/qa/">windows.php.net/qa/</a>.
      </p>
 
      <p>
@@ -21652,12 +21652,12 @@ In 1995, Rasmus Lerdorf started creating PHP. 20 years later, 80% of websites in
         PHP 7.0.0 Alpha 2. This is the second pre-release of the new PHP 7
         major series. All users of PHP are encouraged to test this version carefully,
         and report any bugs and incompatibilities in <a href="https://bugs.php.net">the bug tracking system</a>.
-     </p><strong>THIS IS A DEVELOPMENT PREVIEW - DO <u>NOT</u> USE IT IN PRODUCTION!</strong><p class=\'fullArticleLink\'><a href=\'http://php.net/archive/2015.php#id2015-06-25-1\' class>&hellip; read full article</a></p></div>',
+     </p><strong>THIS IS A DEVELOPMENT PREVIEW - DO <u>NOT</u> USE IT IN PRODUCTION!</strong><p class=\'fullArticleLink\'><a href=\'https://www.php.net/archive/2015.php#id2015-06-25-1\' class>&hellip; read full article</a></p></div>',
   ),
   372 => 
   array (
     'title' => 'Madison PHP Conference 2015',
-    'id' => 'http://php.net/archive/2015.php#id2015-06-23-1',
+    'id' => 'https://www.php.net/archive/2015.php#id2015-06-23-1',
     'published' => '2015-06-23T11:00:00+00:00',
     'updated' => '2015-06-23T11:00:00+00:00',
     'finalTeaserDate' => '2015-11-14',
@@ -21678,7 +21678,7 @@ In 1995, Rasmus Lerdorf started creating PHP. 20 years later, 80% of websites in
     array (
       0 => 
       array (
-        'href' => 'http://php.net/conferences/index.php#id2015-06-23-1',
+        'href' => 'https://www.php.net/conferences/index.php#id2015-06-23-1',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
@@ -21691,7 +21691,7 @@ In 1995, Rasmus Lerdorf started creating PHP. 20 years later, 80% of websites in
     ),
     'newsImage' => 
     array (
-      'xmlns' => 'http://php.net/ns/news',
+      'xmlns' => 'https://www.php.net/ns/news',
       'link' => 'http://www.madisonphpconference.com/',
       'title' => 'Madison PHP Conference 2015',
       'content' => 'madison-php-2013.png',
@@ -21707,7 +21707,7 @@ In 1995, Rasmus Lerdorf started creating PHP. 20 years later, 80% of websites in
   373 => 
   array (
     'title' => 'ZendCon 2015',
-    'id' => 'http://php.net/archive/2015.php#id2015-06-19-1',
+    'id' => 'https://www.php.net/archive/2015.php#id2015-06-19-1',
     'published' => '2015-06-19T10:00:00+00:00',
     'updated' => '2015-06-19T10:00:00+00:00',
     'finalTeaserDate' => '2015-10-19',
@@ -21723,7 +21723,7 @@ In 1995, Rasmus Lerdorf started creating PHP. 20 years later, 80% of websites in
     array (
       0 => 
       array (
-        'href' => 'http://php.net/conferences/index.php#id2015-06-19-1',
+        'href' => 'https://www.php.net/conferences/index.php#id2015-06-19-1',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
@@ -21736,7 +21736,7 @@ In 1995, Rasmus Lerdorf started creating PHP. 20 years later, 80% of websites in
     ),
     'newsImage' => 
     array (
-      'xmlns' => 'http://php.net/ns/news',
+      'xmlns' => 'https://www.php.net/ns/news',
       'link' => 'http://www.zendcon.com/',
       'title' => 'ZendCon 2015',
       'content' => 'ZendCon15.png',
@@ -21754,7 +21754,7 @@ In 1995, Rasmus Lerdorf started creating PHP. 20 years later, 80% of websites in
   374 => 
   array (
     'title' => 'PHP 5.4.42 Released',
-    'id' => 'http://php.net/archive/2015.php#id2015-06-11-4',
+    'id' => 'https://www.php.net/archive/2015.php#id2015-06-11-4',
     'published' => '2015-06-11T20:43:05-07:00',
     'updated' => '2015-06-11T20:43:05-07:00',
     'category' => 
@@ -21774,13 +21774,13 @@ In 1995, Rasmus Lerdorf started creating PHP. 20 years later, 80% of websites in
     array (
       0 => 
       array (
-        'href' => 'http://php.net/index.php#id2015-06-11-4',
+        'href' => 'https://www.php.net/index.php#id2015-06-11-4',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
       1 => 
       array (
-        'href' => 'http://php.net/archive/2015.php#id2015-06-11-4',
+        'href' => 'https://www.php.net/archive/2015.php#id2015-06-11-4',
         'rel' => 'via',
         'type' => 'text/html',
       ),
@@ -21793,9 +21793,9 @@ In 1995, Rasmus Lerdorf started creating PHP. 20 years later, 80% of websites in
      All PHP 5.4 users are encouraged to upgrade to this version.
      </p>
 
-     <p>For source downloads of PHP 5.4.42 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-     The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.4.42">ChangeLog</a>.
+     <p>For source downloads of PHP 5.4.42 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
+     Windows binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
+     The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-5.php#5.4.42">ChangeLog</a>.
      </p>
     </div>
   ',
@@ -21804,15 +21804,15 @@ In 1995, Rasmus Lerdorf started creating PHP. 20 years later, 80% of websites in
      as well as several security issues in bundled sqlite library (CVE-2015-3414, CVE-2015-3415, CVE-2015-3416).
 
      All PHP 5.4 users are encouraged to upgrade to this version.
-     </p><p>For source downloads of PHP 5.4.42 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-     The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.4.42">ChangeLog</a>.
+     </p><p>For source downloads of PHP 5.4.42 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
+     Windows binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
+     The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-5.php#5.4.42">ChangeLog</a>.
      </p></div>',
   ),
   375 => 
   array (
     'title' => 'PHP 7.0.0 Alpha 1 Released',
-    'id' => 'http://php.net/archive/2015.php#id2015-06-11-3',
+    'id' => 'https://www.php.net/archive/2015.php#id2015-06-11-3',
     'published' => '2015-06-11T23:24:10+01:00',
     'updated' => '2015-06-12T17:07:56+01:00',
     'category' => 
@@ -21832,13 +21832,13 @@ In 1995, Rasmus Lerdorf started creating PHP. 20 years later, 80% of websites in
     array (
       0 => 
       array (
-        'href' => 'http://php.net/index.php#id2015-06-11-3',
+        'href' => 'https://www.php.net/index.php#id2015-06-11-3',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
       1 => 
       array (
-        'href' => 'http://php.net/archive/2015.php#id2015-06-11-3',
+        'href' => 'https://www.php.net/archive/2015.php#id2015-06-11-3',
         'rel' => 'via',
         'type' => 'text/html',
       ),
@@ -21878,7 +21878,7 @@ In 1995, Rasmus Lerdorf started creating PHP. 20 years later, 80% of websites in
      <p>
       For source downloads of PHP 7.0.0 Alpha 1 please visit
       the <a href="https://downloads.php.net/ab/">download page</a>, Windows sources and binaries
-      can be found on <a href="http://windows.php.net/qa/">windows.php.net/qa/</a>.
+      can be found on <a href="https://windows.php.net/qa/">windows.php.net/qa/</a>.
      </p>
 
      <p>
@@ -21896,12 +21896,12 @@ In 1995, Rasmus Lerdorf started creating PHP. 20 years later, 80% of websites in
         PHP 7.0.0 Alpha 1. This release marks the beginning of the PHP 7 major series.
         All users of PHP are encouraged to test this version carefully,
         and report any bugs and incompatibilities in <a href="https://bugs.php.net">the bug tracking system</a>.
-     </p><strong>THIS IS A DEVELOPMENT PREVIEW - DO <u>NOT</u> USE IT IN PRODUCTION!</strong><p class=\'fullArticleLink\'><a href=\'http://php.net/archive/2015.php#id2015-06-11-3\' class>&hellip; read full article</a></p></div>',
+     </p><strong>THIS IS A DEVELOPMENT PREVIEW - DO <u>NOT</u> USE IT IN PRODUCTION!</strong><p class=\'fullArticleLink\'><a href=\'https://www.php.net/archive/2015.php#id2015-06-11-3\' class>&hellip; read full article</a></p></div>',
   ),
   376 => 
   array (
     'title' => 'PHP 5.6.10 is available',
-    'id' => 'http://php.net/archive/2015.php#id2015-06-11-2',
+    'id' => 'https://www.php.net/archive/2015.php#id2015-06-11-2',
     'published' => '2015-06-11T11:34:42-07:00',
     'updated' => '2015-06-11T11:34:42-07:00',
     'category' => 
@@ -21921,13 +21921,13 @@ In 1995, Rasmus Lerdorf started creating PHP. 20 years later, 80% of websites in
     array (
       0 => 
       array (
-        'href' => 'http://php.net/index.php#id2015-06-11-2',
+        'href' => 'https://www.php.net/index.php#id2015-06-11-2',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
       1 => 
       array (
-        'href' => 'http://php.net/archive/2015.php#id2015-06-11-2',
+        'href' => 'https://www.php.net/archive/2015.php#id2015-06-11-2',
         'rel' => 'via',
         'type' => 'text/html',
       ),
@@ -21940,9 +21940,9 @@ In 1995, Rasmus Lerdorf started creating PHP. 20 years later, 80% of websites in
      All PHP 5.6 users are encouraged to upgrade to this version.
      </p>
 
-     <p>For source downloads of PHP 5.6.10 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-     The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.6.10">ChangeLog</a>.
+     <p>For source downloads of PHP 5.6.10 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
+     Windows binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
+     The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-5.php#5.6.10">ChangeLog</a>.
      </p>
     </div>
   ',
@@ -21951,15 +21951,15 @@ In 1995, Rasmus Lerdorf started creating PHP. 20 years later, 80% of websites in
      bundled libraries (CVE-2015-3414, CVE-2015-3415, CVE-2015-3416, CVE-2015-2325 and CVE-2015-2326).
 
      All PHP 5.6 users are encouraged to upgrade to this version.
-     </p><p>For source downloads of PHP 5.6.10 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-     The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.6.10">ChangeLog</a>.
+     </p><p>For source downloads of PHP 5.6.10 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
+     Windows binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
+     The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-5.php#5.6.10">ChangeLog</a>.
      </p></div>',
   ),
   377 => 
   array (
     'title' => 'PHP 5.5.26 is available',
-    'id' => 'http://php.net/archive/2015.php#id2015-06-11-1',
+    'id' => 'https://www.php.net/archive/2015.php#id2015-06-11-1',
     'published' => '2015-06-11T15:39:10+00:00',
     'updated' => '2015-06-11T15:39:10+00:00',
     'category' => 
@@ -21979,13 +21979,13 @@ In 1995, Rasmus Lerdorf started creating PHP. 20 years later, 80% of websites in
     array (
       0 => 
       array (
-        'href' => 'http://php.net/index.php#id2015-06-11-1',
+        'href' => 'https://www.php.net/index.php#id2015-06-11-1',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
       1 => 
       array (
-        'href' => 'http://php.net/archive/2015.php#id2015-06-11-1',
+        'href' => 'https://www.php.net/archive/2015.php#id2015-06-11-1',
         'rel' => 'via',
         'type' => 'text/html',
       ),
@@ -21998,9 +21998,9 @@ In 1995, Rasmus Lerdorf started creating PHP. 20 years later, 80% of websites in
      All PHP 5.5 users are encouraged to upgrade to this version.
      </p>
 
-     <p>For source downloads of PHP 5.5.26 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-     The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.5.26">ChangeLog</a>.
+     <p>For source downloads of PHP 5.5.26 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
+     Windows binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
+     The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-5.php#5.5.26">ChangeLog</a>.
      </p>
     </div>
   ',
@@ -22009,15 +22009,15 @@ In 1995, Rasmus Lerdorf started creating PHP. 20 years later, 80% of websites in
      bundled libraries (CVE-2015-3414, CVE-2015-3415, CVE-2015-3416, CVE-2015-2325 and CVE-2015-2326).
 
      All PHP 5.5 users are encouraged to upgrade to this version.
-     </p><p>For source downloads of PHP 5.5.26 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-     The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.5.26">ChangeLog</a>.
+     </p><p>For source downloads of PHP 5.5.26 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
+     Windows binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
+     The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-5.php#5.5.26">ChangeLog</a>.
      </p></div>',
   ),
   378 => 
   array (
     'title' => 'PHP Barcelona Conference 2015',
-    'id' => 'http://php.net/archive/2015.php#id2015-06-01-1',
+    'id' => 'https://www.php.net/archive/2015.php#id2015-06-01-1',
     'published' => '2015-06-01T23:45:28-04:00',
     'updated' => '2015-06-01T23:45:28-04:00',
     'finalTeaserDate' => '2015-10-30',
@@ -22038,7 +22038,7 @@ In 1995, Rasmus Lerdorf started creating PHP. 20 years later, 80% of websites in
     array (
       0 => 
       array (
-        'href' => 'http://php.net/conferences/index.php#id2015-06-01-1',
+        'href' => 'https://www.php.net/conferences/index.php#id2015-06-01-1',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
@@ -22051,7 +22051,7 @@ In 1995, Rasmus Lerdorf started creating PHP. 20 years later, 80% of websites in
     ),
     'newsImage' => 
     array (
-      'xmlns' => 'http://php.net/ns/news',
+      'xmlns' => 'https://www.php.net/ns/news',
       'link' => 'http://2015.phpconference.es/',
       'title' => 'PHP Barcelona Conference 2015',
       'content' => 'phpbarcelonaconference15.png',
@@ -22067,7 +22067,7 @@ In 1995, Rasmus Lerdorf started creating PHP. 20 years later, 80% of websites in
   379 => 
   array (
     'title' => 'php[world] 2015 Call for Speakers',
-    'id' => 'http://php.net/archive/2015.php#id2015-05-27-3',
+    'id' => 'https://www.php.net/archive/2015.php#id2015-05-27-3',
     'published' => '2015-05-27T23:48:38-04:00',
     'updated' => '2015-05-27T23:48:38-04:00',
     'finalTeaserDate' => '2015-06-06',
@@ -22083,7 +22083,7 @@ In 1995, Rasmus Lerdorf started creating PHP. 20 years later, 80% of websites in
     array (
       0 => 
       array (
-        'href' => 'http://php.net/conferences/index.php#id2015-05-27-3',
+        'href' => 'https://www.php.net/conferences/index.php#id2015-05-27-3',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
@@ -22096,7 +22096,7 @@ In 1995, Rasmus Lerdorf started creating PHP. 20 years later, 80% of websites in
     ),
     'newsImage' => 
     array (
-      'xmlns' => 'http://php.net/ns/news',
+      'xmlns' => 'https://www.php.net/ns/news',
       'link' => 'https://world.phparch.com/call-for-papers/',
       'title' => 'php[world] 2015',
       'content' => '2015.world.logo.png',
@@ -22115,7 +22115,7 @@ In 1995, Rasmus Lerdorf started creating PHP. 20 years later, 80% of websites in
   380 => 
   array (
     'title' => 'PHP Craft Johannesburg',
-    'id' => 'http://php.net/archive/2015.php#id2015-05-27-2',
+    'id' => 'https://www.php.net/archive/2015.php#id2015-05-27-2',
     'published' => '2015-05-27T23:45:28-04:00',
     'updated' => '2015-05-27T23:45:28-04:00',
     'finalTeaserDate' => '2015-06-17',
@@ -22136,7 +22136,7 @@ In 1995, Rasmus Lerdorf started creating PHP. 20 years later, 80% of websites in
     array (
       0 => 
       array (
-        'href' => 'http://php.net/conferences/index.php#id2015-05-27-2',
+        'href' => 'https://www.php.net/conferences/index.php#id2015-05-27-2',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
@@ -22149,7 +22149,7 @@ In 1995, Rasmus Lerdorf started creating PHP. 20 years later, 80% of websites in
     ),
     'newsImage' => 
     array (
-      'xmlns' => 'http://php.net/ns/news',
+      'xmlns' => 'https://www.php.net/ns/news',
       'link' => 'http://phpsouthafrica.com/',
       'title' => 'PHP CRAFT',
       'content' => 'PHPCraftLogo.png',
@@ -22166,7 +22166,7 @@ In 1995, Rasmus Lerdorf started creating PHP. 20 years later, 80% of websites in
   381 => 
   array (
     'title' => 'China PHP Conference 2015',
-    'id' => 'http://php.net/archive/2015.php#id2015-05-27-1',
+    'id' => 'https://www.php.net/archive/2015.php#id2015-05-27-1',
     'published' => '2015-05-27T23:36:31-04:00',
     'updated' => '2015-05-27T23:36:31-04:00',
     'finalTeaserDate' => '2015-06-06',
@@ -22182,7 +22182,7 @@ In 1995, Rasmus Lerdorf started creating PHP. 20 years later, 80% of websites in
     array (
       0 => 
       array (
-        'href' => 'http://php.net/conferences/index.php#id2015-05-27-1',
+        'href' => 'https://www.php.net/conferences/index.php#id2015-05-27-1',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
@@ -22195,7 +22195,7 @@ In 1995, Rasmus Lerdorf started creating PHP. 20 years later, 80% of websites in
     ),
     'newsImage' => 
     array (
-      'xmlns' => 'http://php.net/ns/news',
+      'xmlns' => 'https://www.php.net/ns/news',
       'link' => 'http://www.phpconchina.com/',
       'title' => 'PHPCON China',
       'content' => '2015.conchina.jpg',
@@ -22218,7 +22218,7 @@ In 1995, Rasmus Lerdorf started creating PHP. 20 years later, 80% of websites in
   382 => 
   array (
     'title' => 'DevConf 2015',
-    'id' => 'http://www.php.net/archive/2015.php#id2015-05-25-1',
+    'id' => 'https://www.php.net/archive/2015.php#id2015-05-25-1',
     'published' => '2015-05-25T16:57:52+00:00',
     'updated' => '2015-05-25T16:57:52+00:00',
     'finalTeaserDate' => '2015-06-20',
@@ -22234,7 +22234,7 @@ In 1995, Rasmus Lerdorf started creating PHP. 20 years later, 80% of websites in
     array (
       0 => 
       array (
-        'href' => 'http://php.net/conferences/index.php#id2015-05-25-1',
+        'href' => 'https://www.php.net/conferences/index.php#id2015-05-25-1',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
@@ -22247,7 +22247,7 @@ In 1995, Rasmus Lerdorf started creating PHP. 20 years later, 80% of websites in
     ),
     'newsImage' => 
     array (
-      'xmlns' => 'http://php.net/ns/news',
+      'xmlns' => 'https://www.php.net/ns/news',
       'link' => 'http://devconf.ru',
       'title' => 'DevConf 2015',
       'content' => 'devconfru2012.png',
@@ -22288,7 +22288,7 @@ In 1995, Rasmus Lerdorf started creating PHP. 20 years later, 80% of websites in
   383 => 
   array (
     'title' => 'PHP 5.6.9 is available',
-    'id' => 'http://php.net/archive/2015.php#id2015-05-14-3',
+    'id' => 'https://www.php.net/archive/2015.php#id2015-05-14-3',
     'published' => '2015-05-14T23:20:57-07:00',
     'updated' => '2015-05-14T23:20:57-07:00',
     'category' => 
@@ -22308,13 +22308,13 @@ In 1995, Rasmus Lerdorf started creating PHP. 20 years later, 80% of websites in
     array (
       0 => 
       array (
-        'href' => 'http://php.net/index.php#id2015-05-14-3',
+        'href' => 'https://www.php.net/index.php#id2015-05-14-3',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
       1 => 
       array (
-        'href' => 'http://php.net/archive/2015.php#id2015-05-14-3',
+        'href' => 'https://www.php.net/archive/2015.php#id2015-05-14-3',
         'rel' => 'via',
         'type' => 'text/html',
       ),
@@ -22326,9 +22326,9 @@ In 1995, Rasmus Lerdorf started creating PHP. 20 years later, 80% of websites in
      All PHP 5.6 users are encouraged to upgrade to this version.
      </p>
 
-     <p>For source downloads of PHP 5.6.9 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-     The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.6.9">ChangeLog</a>.
+     <p>For source downloads of PHP 5.6.9 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
+     Windows binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
+     The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-5.php#5.6.9">ChangeLog</a>.
    </p>
     </div>
   ',
@@ -22336,15 +22336,15 @@ In 1995, Rasmus Lerdorf started creating PHP. 20 years later, 80% of websites in
      5.6.9. Several bugs have been fixed.
 
      All PHP 5.6 users are encouraged to upgrade to this version.
-     </p><p>For source downloads of PHP 5.6.9 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-     The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.6.9">ChangeLog</a>.
+     </p><p>For source downloads of PHP 5.6.9 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
+     Windows binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
+     The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-5.php#5.6.9">ChangeLog</a>.
    </p></div>',
   ),
   384 => 
   array (
     'title' => 'PHP 5.4.41 Released',
-    'id' => 'http://php.net/archive/2015.php#id2015-05-14-2',
+    'id' => 'https://www.php.net/archive/2015.php#id2015-05-14-2',
     'published' => '2015-05-14T21:35:21-07:00',
     'updated' => '2015-05-14T21:35:21-07:00',
     'category' => 
@@ -22364,13 +22364,13 @@ In 1995, Rasmus Lerdorf started creating PHP. 20 years later, 80% of websites in
     array (
       0 => 
       array (
-        'href' => 'http://php.net/index.php#id2015-05-14-2',
+        'href' => 'https://www.php.net/index.php#id2015-05-14-2',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
       1 => 
       array (
-        'href' => 'http://php.net/archive/2015.php#id2015-05-14-2',
+        'href' => 'https://www.php.net/archive/2015.php#id2015-05-14-2',
         'rel' => 'via',
         'type' => 'text/html',
       ),
@@ -22382,9 +22382,9 @@ In 1995, Rasmus Lerdorf started creating PHP. 20 years later, 80% of websites in
      All PHP 5.4 users are encouraged to upgrade to this version.
      </p>
 
-     <p>For source downloads of PHP 5.4.41 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-     The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.4.41">ChangeLog</a>.
+     <p>For source downloads of PHP 5.4.41 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
+     Windows binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
+     The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-5.php#5.4.41">ChangeLog</a>.
      </p>
     </div>
   ',
@@ -22392,15 +22392,15 @@ In 1995, Rasmus Lerdorf started creating PHP. 20 years later, 80% of websites in
      5.4.41. Seven security-related issues were fixed in this version.
 
      All PHP 5.4 users are encouraged to upgrade to this version.
-     </p><p>For source downloads of PHP 5.4.41 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-     The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.4.41">ChangeLog</a>.
+     </p><p>For source downloads of PHP 5.4.41 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
+     Windows binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
+     The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-5.php#5.4.41">ChangeLog</a>.
      </p></div>',
   ),
   385 => 
   array (
     'title' => 'PHP 5.5.25 is available',
-    'id' => 'http://php.net/archive/2015.php#id2015-05-14-1',
+    'id' => 'https://www.php.net/archive/2015.php#id2015-05-14-1',
     'published' => '2015-05-14T17:06:54+00:00',
     'updated' => '2015-05-14T17:06:54+00:00',
     'category' => 
@@ -22420,13 +22420,13 @@ In 1995, Rasmus Lerdorf started creating PHP. 20 years later, 80% of websites in
     array (
       0 => 
       array (
-        'href' => 'http://php.net/index.php#id2015-05-14-1',
+        'href' => 'https://www.php.net/index.php#id2015-05-14-1',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
       1 => 
       array (
-        'href' => 'http://php.net/archive/2015.php#id2015-05-14-1',
+        'href' => 'https://www.php.net/archive/2015.php#id2015-05-14-1',
         'rel' => 'via',
         'type' => 'text/html',
       ),
@@ -22438,9 +22438,9 @@ In 1995, Rasmus Lerdorf started creating PHP. 20 years later, 80% of websites in
      All PHP 5.5 users are encouraged to upgrade to this version.
      </p>
 
-     <p>For source downloads of PHP 5.5.25 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-     The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.5.25">ChangeLog</a>.
+     <p>For source downloads of PHP 5.5.25 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
+     Windows binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
+     The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-5.php#5.5.25">ChangeLog</a>.
      </p>
     </div>
   ',
@@ -22448,15 +22448,15 @@ In 1995, Rasmus Lerdorf started creating PHP. 20 years later, 80% of websites in
      5.5.25. Several bugs have been fixed.
 
      All PHP 5.5 users are encouraged to upgrade to this version.
-     </p><p>For source downloads of PHP 5.5.25 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-     The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.5.25">ChangeLog</a>.
+     </p><p>For source downloads of PHP 5.5.25 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
+     Windows binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
+     The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-5.php#5.5.25">ChangeLog</a>.
      </p></div>',
   ),
   386 => 
   array (
     'title' => '2015 Northeast PHP Conference',
-    'id' => 'http://php.net/archive/2015.php#id2015-05-06-1',
+    'id' => 'https://www.php.net/archive/2015.php#id2015-05-06-1',
     'published' => '2015-05-06T00:32:35+02:00',
     'updated' => '2015-07-23T21:13:00+02:00',
     'finalTeaserDate' => '2015-08-23',
@@ -22477,7 +22477,7 @@ In 1995, Rasmus Lerdorf started creating PHP. 20 years later, 80% of websites in
     array (
       0 => 
       array (
-        'href' => 'http://php.net/conferences/index.php#id2015-05-06-1',
+        'href' => 'https://www.php.net/conferences/index.php#id2015-05-06-1',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
@@ -22490,7 +22490,7 @@ In 1995, Rasmus Lerdorf started creating PHP. 20 years later, 80% of websites in
     ),
     'newsImage' => 
     array (
-      'xmlns' => 'http://php.net/ns/news',
+      'xmlns' => 'https://www.php.net/ns/news',
       'link' => 'http://2015.northeastphp.org',
       'title' => '2015 Northeast PHP Conference',
       'content' => 'northeast_logo_2015.png',
@@ -22520,7 +22520,7 @@ In 1995, Rasmus Lerdorf started creating PHP. 20 years later, 80% of websites in
   387 => 
   array (
     'title' => 'PHP 5.4.40 Released',
-    'id' => 'http://php.net/archive/2015.php#id2015-04-16-3',
+    'id' => 'https://www.php.net/archive/2015.php#id2015-04-16-3',
     'published' => '2015-04-16T13:43:02-07:00',
     'updated' => '2015-04-16T13:43:02-07:00',
     'category' => 
@@ -22540,13 +22540,13 @@ In 1995, Rasmus Lerdorf started creating PHP. 20 years later, 80% of websites in
     array (
       0 => 
       array (
-        'href' => 'http://php.net/index.php#id2015-04-16-3',
+        'href' => 'https://www.php.net/index.php#id2015-04-16-3',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
       1 => 
       array (
-        'href' => 'http://php.net/archive/2015.php#id2015-04-16-3',
+        'href' => 'https://www.php.net/archive/2015.php#id2015-04-16-3',
         'rel' => 'via',
         'type' => 'text/html',
       ),
@@ -22559,9 +22559,9 @@ In 1995, Rasmus Lerdorf started creating PHP. 20 years later, 80% of websites in
      All PHP 5.4 users are encouraged to upgrade to this version.
      </p>
 
-     <p>For source downloads of PHP 5.4.40 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-     The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.4.40">ChangeLog</a>.
+     <p>For source downloads of PHP 5.4.40 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
+     Windows binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
+     The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-5.php#5.4.40">ChangeLog</a>.
      </p>
     </div>
   ',
@@ -22570,15 +22570,15 @@ In 1995, Rasmus Lerdorf started creating PHP. 20 years later, 80% of websites in
      CVE-2014-9709, CVE-2015-2301, CVE-2015-2783, CVE-2015-1352.
 
      All PHP 5.4 users are encouraged to upgrade to this version.
-     </p><p>For source downloads of PHP 5.4.40 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-     The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.4.40">ChangeLog</a>.
+     </p><p>For source downloads of PHP 5.4.40 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
+     Windows binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
+     The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-5.php#5.4.40">ChangeLog</a>.
      </p></div>',
   ),
   388 => 
   array (
     'title' => 'PHP 5.6.8 is available',
-    'id' => 'http://php.net/archive/2015.php#id2015-04-16-2',
+    'id' => 'https://www.php.net/archive/2015.php#id2015-04-16-2',
     'published' => '2015-04-16T10:50:30-07:00',
     'updated' => '2015-04-16T10:50:30-07:00',
     'category' => 
@@ -22598,13 +22598,13 @@ In 1995, Rasmus Lerdorf started creating PHP. 20 years later, 80% of websites in
     array (
       0 => 
       array (
-        'href' => 'http://php.net/index.php#id2015-04-16-2',
+        'href' => 'https://www.php.net/index.php#id2015-04-16-2',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
       1 => 
       array (
-        'href' => 'http://php.net/archive/2015.php#id2015-04-16-2',
+        'href' => 'https://www.php.net/archive/2015.php#id2015-04-16-2',
         'rel' => 'via',
         'type' => 'text/html',
       ),
@@ -22616,9 +22616,9 @@ In 1995, Rasmus Lerdorf started creating PHP. 20 years later, 80% of websites in
      All PHP 5.6 users are encouraged to upgrade to this version.
      </p>
 
-     <p>For source downloads of PHP 5.6.8 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-     The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.6.8">ChangeLog</a>.
+     <p>For source downloads of PHP 5.6.8 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
+     Windows binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
+     The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-5.php#5.6.8">ChangeLog</a>.
      </p>
     </div>
   ',
@@ -22626,15 +22626,15 @@ In 1995, Rasmus Lerdorf started creating PHP. 20 years later, 80% of websites in
      5.6.8. Several bugs have been fixed some of them beeing security related, like CVE-2015-1351 and CVE-2015-1352.
 
      All PHP 5.6 users are encouraged to upgrade to this version.
-     </p><p>For source downloads of PHP 5.6.8 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-     The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.6.8">ChangeLog</a>.
+     </p><p>For source downloads of PHP 5.6.8 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
+     Windows binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
+     The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-5.php#5.6.8">ChangeLog</a>.
      </p></div>',
   ),
   389 => 
   array (
     'title' => 'PHP 5.5.24 is available',
-    'id' => 'http://php.net/archive/2015.php#id2015-04-16-1',
+    'id' => 'https://www.php.net/archive/2015.php#id2015-04-16-1',
     'published' => '2015-04-16T15:25:09+00:00',
     'updated' => '2015-04-16T15:25:09+00:00',
     'category' => 
@@ -22654,13 +22654,13 @@ In 1995, Rasmus Lerdorf started creating PHP. 20 years later, 80% of websites in
     array (
       0 => 
       array (
-        'href' => 'http://php.net/index.php#id2015-04-16-1',
+        'href' => 'https://www.php.net/index.php#id2015-04-16-1',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
       1 => 
       array (
-        'href' => 'http://php.net/archive/2015.php#id2015-04-16-1',
+        'href' => 'https://www.php.net/archive/2015.php#id2015-04-16-1',
         'rel' => 'via',
         'type' => 'text/html',
       ),
@@ -22672,9 +22672,9 @@ In 1995, Rasmus Lerdorf started creating PHP. 20 years later, 80% of websites in
      All PHP 5.5 users are encouraged to upgrade to this version.
      </p>
 
-     <p>For source downloads of PHP 5.5.24 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-     The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.5.24">ChangeLog</a>.
+     <p>For source downloads of PHP 5.5.24 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
+     Windows binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
+     The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-5.php#5.5.24">ChangeLog</a>.
      </p>
     </div>
   ',
@@ -22682,15 +22682,15 @@ In 1995, Rasmus Lerdorf started creating PHP. 20 years later, 80% of websites in
      5.5.24. Several bugs have been fixed some of them beeing security related, like CVE-2015-1351 and CVE-2015-1352.
 
      All PHP 5.5 users are encouraged to upgrade to this version.
-     </p><p>For source downloads of PHP 5.5.24 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-     The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.5.24">ChangeLog</a>.
+     </p><p>For source downloads of PHP 5.5.24 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
+     Windows binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
+     The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-5.php#5.5.24">ChangeLog</a>.
      </p></div>',
   ),
   390 => 
   array (
     'title' => 'PHP 5.6.7 is available',
-    'id' => 'http://php.net/archive/2015.php#id2015-03-20-2',
+    'id' => 'https://www.php.net/archive/2015.php#id2015-03-20-2',
     'published' => '2015-03-20T04:21:46-07:00',
     'updated' => '2015-03-20T04:21:46-07:00',
     'category' => 
@@ -22710,13 +22710,13 @@ In 1995, Rasmus Lerdorf started creating PHP. 20 years later, 80% of websites in
     array (
       0 => 
       array (
-        'href' => 'http://php.net/index.php#id2015-03-20-2',
+        'href' => 'https://www.php.net/index.php#id2015-03-20-2',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
       1 => 
       array (
-        'href' => 'http://php.net/archive/2015.php#id2015-03-20-2',
+        'href' => 'https://www.php.net/archive/2015.php#id2015-03-20-2',
         'rel' => 'via',
         'type' => 'text/html',
       ),
@@ -22729,9 +22729,9 @@ In 1995, Rasmus Lerdorf started creating PHP. 20 years later, 80% of websites in
      All PHP 5.6 users are encouraged to upgrade to this version.
      </p>
 
-     <p>For source downloads of PHP 5.6.7 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-     The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.6.7">ChangeLog</a>.
+     <p>For source downloads of PHP 5.6.7 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
+     Windows binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
+     The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-5.php#5.6.7">ChangeLog</a>.
      </p>
     </div>
   ',
@@ -22739,15 +22739,15 @@ In 1995, Rasmus Lerdorf started creating PHP. 20 years later, 80% of websites in
      5.6.7. Several bugs have been fixed as well as CVE-2015-0231, CVE-2015-2305 and CVE-2015-2331.
 
      All PHP 5.6 users are encouraged to upgrade to this version.
-     </p><p>For source downloads of PHP 5.6.7 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-     The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.6.7">ChangeLog</a>.
+     </p><p>For source downloads of PHP 5.6.7 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
+     Windows binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
+     The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-5.php#5.6.7">ChangeLog</a>.
      </p></div>',
   ),
   391 => 
   array (
     'title' => 'PHP 5.5.23 is available',
-    'id' => 'http://php.net/archive/2015.php#id2015-03-20-1',
+    'id' => 'https://www.php.net/archive/2015.php#id2015-03-20-1',
     'published' => '2015-03-20T09:11:37+00:00',
     'updated' => '2015-03-20T09:11:37+00:00',
     'category' => 
@@ -22767,13 +22767,13 @@ In 1995, Rasmus Lerdorf started creating PHP. 20 years later, 80% of websites in
     array (
       0 => 
       array (
-        'href' => 'http://php.net/index.php#id2015-03-20-1',
+        'href' => 'https://www.php.net/index.php#id2015-03-20-1',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
       1 => 
       array (
-        'href' => 'http://php.net/archive/2015.php#id2015-03-20-1',
+        'href' => 'https://www.php.net/archive/2015.php#id2015-03-20-1',
         'rel' => 'via',
         'type' => 'text/html',
       ),
@@ -22785,9 +22785,9 @@ In 1995, Rasmus Lerdorf started creating PHP. 20 years later, 80% of websites in
      All PHP 5.5 users are encouraged to upgrade to this version.
      </p>
 
-     <p>For source downloads of PHP 5.5.23 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-     The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.5.23">ChangeLog</a>.
+     <p>For source downloads of PHP 5.5.23 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
+     Windows binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
+     The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-5.php#5.5.23">ChangeLog</a>.
      </p>
     </div>
   ',
@@ -22795,15 +22795,15 @@ In 1995, Rasmus Lerdorf started creating PHP. 20 years later, 80% of websites in
      5.5.23. Several bugs have been fixed as well as CVE-2015-0231, CVE-2015-2305 and CVE-2015-2331.
 
      All PHP 5.5 users are encouraged to upgrade to this version.
-     </p><p>For source downloads of PHP 5.5.23 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-     The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.5.23">ChangeLog</a>.
+     </p><p>For source downloads of PHP 5.5.23 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
+     Windows binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
+     The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-5.php#5.5.23">ChangeLog</a>.
      </p></div>',
   ),
   392 => 
   array (
     'title' => 'PHP 5.4.39 Released',
-    'id' => 'http://php.net/archive/2015.php#id2015-03-19-2',
+    'id' => 'https://www.php.net/archive/2015.php#id2015-03-19-2',
     'published' => '2015-03-19T23:01:55-07:00',
     'updated' => '2015-03-19T23:01:55-07:00',
     'category' => 
@@ -22823,13 +22823,13 @@ In 1995, Rasmus Lerdorf started creating PHP. 20 years later, 80% of websites in
     array (
       0 => 
       array (
-        'href' => 'http://php.net/index.php#id2015-03-19-2',
+        'href' => 'https://www.php.net/index.php#id2015-03-19-2',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
       1 => 
       array (
-        'href' => 'http://php.net/archive/2015.php#id2015-03-19-2',
+        'href' => 'https://www.php.net/archive/2015.php#id2015-03-19-2',
         'rel' => 'via',
         'type' => 'text/html',
       ),
@@ -22841,9 +22841,9 @@ In 1995, Rasmus Lerdorf started creating PHP. 20 years later, 80% of websites in
      All PHP 5.4 users are encouraged to upgrade to this version.
      </p>
 
-     <p>For source downloads of PHP 5.4.39 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-     The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.4.39">ChangeLog</a>.
+     <p>For source downloads of PHP 5.4.39 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
+     Windows binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
+     The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-5.php#5.4.39">ChangeLog</a>.
      </p>
     </div>
   ',
@@ -22851,15 +22851,15 @@ In 1995, Rasmus Lerdorf started creating PHP. 20 years later, 80% of websites in
      5.4.39. Six security-related bugs were fixed in this release, including CVE-2015-0231, CVE-2015-2305 and CVE-2015-2331.
 
      All PHP 5.4 users are encouraged to upgrade to this version.
-     </p><p>For source downloads of PHP 5.4.39 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-     The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.4.39">ChangeLog</a>.
+     </p><p>For source downloads of PHP 5.4.39 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
+     Windows binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
+     The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-5.php#5.4.39">ChangeLog</a>.
      </p></div>',
   ),
   393 => 
   array (
     'title' => 'PHP Tour Luxembourg',
-    'id' => 'http://php.net/archive/2015.php#id2015-03-19-1',
+    'id' => 'https://www.php.net/archive/2015.php#id2015-03-19-1',
     'published' => '2015-03-19T15:33:43+00:00',
     'updated' => '2015-03-19T15:33:43+00:00',
     'finalTeaserDate' => '2015-05-12',
@@ -22875,7 +22875,7 @@ In 1995, Rasmus Lerdorf started creating PHP. 20 years later, 80% of websites in
     array (
       0 => 
       array (
-        'href' => 'http://php.net/conferences/index.php#id2015-03-19-1',
+        'href' => 'https://www.php.net/conferences/index.php#id2015-03-19-1',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
@@ -22888,7 +22888,7 @@ In 1995, Rasmus Lerdorf started creating PHP. 20 years later, 80% of websites in
     ),
     'newsImage' => 
     array (
-      'xmlns' => 'http://php.net/ns/news',
+      'xmlns' => 'https://www.php.net/ns/news',
       'link' => 'http://www.afup.org/pages/phptourluxembourg2015/apropos-en.php',
       'title' => 'PHP Tour Luxembourg',
       'content' => 'phptour2015.png',
@@ -22909,7 +22909,7 @@ Presentation length is 45 minutes which includes question time. 3 hours workshop
   394 => 
   array (
     'title' => 'Italian phpDay 2015',
-    'id' => 'http://php.net/archive/2015.php#id2015-03-18-1',
+    'id' => 'https://www.php.net/archive/2015.php#id2015-03-18-1',
     'published' => '2015-03-18T19:55:00+01:00',
     'updated' => '2015-03-18T19:55:00+01:00',
     'finalTeaserDate' => '2015-05-15',
@@ -22925,7 +22925,7 @@ Presentation length is 45 minutes which includes question time. 3 hours workshop
     array (
       0 => 
       array (
-        'href' => 'http://php.net/conferences/index.php#id2015-03-18-1',
+        'href' => 'https://www.php.net/conferences/index.php#id2015-03-18-1',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
@@ -22938,7 +22938,7 @@ Presentation length is 45 minutes which includes question time. 3 hours workshop
     ),
     'newsImage' => 
     array (
-      'xmlns' => 'http://php.net/ns/news',
+      'xmlns' => 'https://www.php.net/ns/news',
       'link' => 'http://2015.phpday.it/',
       'title' => 'Italian phpDay 2015',
       'content' => 'phpday2012.png',
@@ -22954,7 +22954,7 @@ Presentation length is 45 minutes which includes question time. 3 hours workshop
   395 => 
   array (
     'title' => 'Bulgaria PHP Conference',
-    'id' => 'http://php.net/archive/2015.php#id2015-02-25-3',
+    'id' => 'https://www.php.net/archive/2015.php#id2015-02-25-3',
     'published' => '2015-02-25T12:53:27+01:00',
     'updated' => '2015-02-25T12:53:27+01:00',
     'finalTeaserDate' => '2015-03-16',
@@ -22975,7 +22975,7 @@ Presentation length is 45 minutes which includes question time. 3 hours workshop
     array (
       0 => 
       array (
-        'href' => 'http://php.net/conferences/index.php#id2015-02-25-3',
+        'href' => 'https://www.php.net/conferences/index.php#id2015-02-25-3',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
@@ -22988,7 +22988,7 @@ Presentation length is 45 minutes which includes question time. 3 hours workshop
     ),
     'newsImage' => 
     array (
-      'xmlns' => 'http://php.net/ns/news',
+      'xmlns' => 'https://www.php.net/ns/news',
       'link' => 'http://bgphp.org/',
       'title' => 'Bulgaria PHP Conference',
       'content' => 'conference-phpbulgaria2015.png',
@@ -23006,7 +23006,7 @@ Presentation length is 45 minutes which includes question time. 3 hours workshop
   396 => 
   array (
     'title' => 'Lone Star PHP 2015',
-    'id' => 'http://php.net/archive/2015.php#id2015-02-25-2',
+    'id' => 'https://www.php.net/archive/2015.php#id2015-02-25-2',
     'published' => '2015-02-25T11:21:44+01:00',
     'updated' => '2015-02-25T11:21:44+01:00',
     'finalTeaserDate' => '2015-04-16',
@@ -23022,7 +23022,7 @@ Presentation length is 45 minutes which includes question time. 3 hours workshop
     array (
       0 => 
       array (
-        'href' => 'http://php.net/conferences/index.php#id2015-02-25-2',
+        'href' => 'https://www.php.net/conferences/index.php#id2015-02-25-2',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
@@ -23035,7 +23035,7 @@ Presentation length is 45 minutes which includes question time. 3 hours workshop
     ),
     'newsImage' => 
     array (
-      'xmlns' => 'http://php.net/ns/news',
+      'xmlns' => 'https://www.php.net/ns/news',
       'link' => 'http://lonestarphp.com/',
       'title' => 'Lone Star PHP 2015',
       'content' => 'conference-logo-lonestar2015.png',
@@ -23051,7 +23051,7 @@ Presentation length is 45 minutes which includes question time. 3 hours workshop
   397 => 
   array (
     'title' => 'SOLIDay 2015',
-    'id' => 'http://php.net/archive/2015.php#id2015-02-25-1',
+    'id' => 'https://www.php.net/archive/2015.php#id2015-02-25-1',
     'published' => '2015-02-25T11:14:34+01:00',
     'updated' => '2015-02-25T11:14:34+01:00',
     'finalTeaserDate' => '2015-05-30',
@@ -23067,7 +23067,7 @@ Presentation length is 45 minutes which includes question time. 3 hours workshop
     array (
       0 => 
       array (
-        'href' => 'http://php.net/conferences/index.php#id2015-02-25-1',
+        'href' => 'https://www.php.net/conferences/index.php#id2015-02-25-1',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
@@ -23080,7 +23080,7 @@ Presentation length is 45 minutes which includes question time. 3 hours workshop
     ),
     'newsImage' => 
     array (
-      'xmlns' => 'http://php.net/ns/news',
+      'xmlns' => 'https://www.php.net/ns/news',
       'link' => 'http://soliday.phpsrbija.rs/',
       'title' => 'SOLIDay 2015',
       'content' => 'conference-solid-day.png',
@@ -23096,7 +23096,7 @@ Presentation length is 45 minutes which includes question time. 3 hours workshop
   398 => 
   array (
     'title' => 'PHP 5.6.6 is available',
-    'id' => 'http://php.net/archive/2015.php#id2015-02-19-2',
+    'id' => 'https://www.php.net/archive/2015.php#id2015-02-19-2',
     'published' => '2015-02-19T12:43:52-08:00',
     'updated' => '2015-02-19T12:43:52-08:00',
     'category' => 
@@ -23116,13 +23116,13 @@ Presentation length is 45 minutes which includes question time. 3 hours workshop
     array (
       0 => 
       array (
-        'href' => 'http://php.net/index.php#id2015-02-19-2',
+        'href' => 'https://www.php.net/index.php#id2015-02-19-2',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
       1 => 
       array (
-        'href' => 'http://php.net/archive/2015.php#id2015-02-19-2',
+        'href' => 'https://www.php.net/archive/2015.php#id2015-02-19-2',
         'rel' => 'via',
         'type' => 'text/html',
       ),
@@ -23134,9 +23134,9 @@ Presentation length is 45 minutes which includes question time. 3 hours workshop
      All PHP 5.6 users are encouraged to upgrade to this version.
      </p>
 
-     <p>For source downloads of PHP 5.6.6 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-     The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.6.6">ChangeLog</a>.
+     <p>For source downloads of PHP 5.6.6 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
+     Windows binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
+     The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-5.php#5.6.6">ChangeLog</a>.
      </p>
     </div>
   ',
@@ -23144,15 +23144,15 @@ Presentation length is 45 minutes which includes question time. 3 hours workshop
      5.6.6. This release fixes several bugs and addresses CVE-2015-0235 and CVE-2015-0273.
 
      All PHP 5.6 users are encouraged to upgrade to this version.
-     </p><p>For source downloads of PHP 5.6.6 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-     The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.6.6">ChangeLog</a>.
+     </p><p>For source downloads of PHP 5.6.6 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
+     Windows binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
+     The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-5.php#5.6.6">ChangeLog</a>.
      </p></div>',
   ),
   399 => 
   array (
     'title' => 'PHP 5.5.22 is available',
-    'id' => 'http://php.net/archive/2015.php#id2015-02-19-1',
+    'id' => 'https://www.php.net/archive/2015.php#id2015-02-19-1',
     'published' => '2015-02-19T12:45:19+00:00',
     'updated' => '2015-02-19T12:45:19+00:00',
     'category' => 
@@ -23172,13 +23172,13 @@ Presentation length is 45 minutes which includes question time. 3 hours workshop
     array (
       0 => 
       array (
-        'href' => 'http://php.net/index.php#id2015-02-19-1',
+        'href' => 'https://www.php.net/index.php#id2015-02-19-1',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
       1 => 
       array (
-        'href' => 'http://php.net/archive/2015.php#id2015-02-19-1',
+        'href' => 'https://www.php.net/archive/2015.php#id2015-02-19-1',
         'rel' => 'via',
         'type' => 'text/html',
       ),
@@ -23190,9 +23190,9 @@ Presentation length is 45 minutes which includes question time. 3 hours workshop
      All PHP 5.5 users are encouraged to upgrade to this version.
      </p>
 
-     <p>For source downloads of PHP 5.5.22 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-     The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.5.22">ChangeLog</a>.
+     <p>For source downloads of PHP 5.5.22 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
+     Windows binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
+     The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-5.php#5.5.22">ChangeLog</a>.
      </p>
     </div>
   ',
@@ -23200,15 +23200,15 @@ Presentation length is 45 minutes which includes question time. 3 hours workshop
      5.5.22. This release fixes several bugs and addresses CVE-2015-0235 and CVE-2015-0273.
 
      All PHP 5.5 users are encouraged to upgrade to this version.
-     </p><p>For source downloads of PHP 5.5.22 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-     The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.5.22">ChangeLog</a>.
+     </p><p>For source downloads of PHP 5.5.22 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
+     Windows binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
+     The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-5.php#5.5.22">ChangeLog</a>.
      </p></div>',
   ),
   400 => 
   array (
     'title' => 'PHP 5.4.38 Released',
-    'id' => 'http://php.net/archive/2015.php#id2015-02-18-1',
+    'id' => 'https://www.php.net/archive/2015.php#id2015-02-18-1',
     'published' => '2015-02-18T23:56:18-08:00',
     'updated' => '2015-02-18T23:56:18-08:00',
     'category' => 
@@ -23228,13 +23228,13 @@ Presentation length is 45 minutes which includes question time. 3 hours workshop
     array (
       0 => 
       array (
-        'href' => 'http://php.net/index.php#id2015-02-18-1',
+        'href' => 'https://www.php.net/index.php#id2015-02-18-1',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
       1 => 
       array (
-        'href' => 'http://php.net/archive/2015.php#id2015-02-18-1',
+        'href' => 'https://www.php.net/archive/2015.php#id2015-02-18-1',
         'rel' => 'via',
         'type' => 'text/html',
       ),
@@ -23246,9 +23246,9 @@ Presentation length is 45 minutes which includes question time. 3 hours workshop
      All PHP 5.4 users are encouraged to upgrade to this version.
      </p>
 
-     <p>For source downloads of PHP 5.4.38 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-     The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.4.38">ChangeLog</a>.
+     <p>For source downloads of PHP 5.4.38 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
+     Windows binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
+     The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-5.php#5.4.38">ChangeLog</a>.
      </p>
     </div>
   ',
@@ -23256,15 +23256,15 @@ Presentation length is 45 minutes which includes question time. 3 hours workshop
      5.4.38. Seven security-related bugs were fixed in this release, including CVE-2015-0273 and mitigation for CVE-2015-0235.
 
      All PHP 5.4 users are encouraged to upgrade to this version.
-     </p><p>For source downloads of PHP 5.4.38 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-     The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.4.38">ChangeLog</a>.
+     </p><p>For source downloads of PHP 5.4.38 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
+     Windows binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
+     The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-5.php#5.4.38">ChangeLog</a>.
      </p></div>',
   ),
   401 => 
   array (
     'title' => 'PHP 5.4.37 Released',
-    'id' => 'http://php.net/archive/2015.php#id2015-01-22-3',
+    'id' => 'https://www.php.net/archive/2015.php#id2015-01-22-3',
     'published' => '2015-01-22T20:20:52-08:00',
     'updated' => '2015-01-22T20:20:52-08:00',
     'category' => 
@@ -23284,13 +23284,13 @@ Presentation length is 45 minutes which includes question time. 3 hours workshop
     array (
       0 => 
       array (
-        'href' => 'http://php.net/index.php#id2015-01-22-3',
+        'href' => 'https://www.php.net/index.php#id2015-01-22-3',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
       1 => 
       array (
-        'href' => 'http://php.net/archive/2015.php#id2015-01-22-3',
+        'href' => 'https://www.php.net/archive/2015.php#id2015-01-22-3',
         'rel' => 'via',
         'type' => 'text/html',
       ),
@@ -23304,9 +23304,9 @@ Presentation length is 45 minutes which includes question time. 3 hours workshop
      All PHP 5.4 users are encouraged to upgrade to this version.
      </p>
 
-     <p>For source downloads of PHP 5.4.37 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-     The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.4.37">ChangeLog</a>.
+     <p>For source downloads of PHP 5.4.37 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
+     Windows binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
+     The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-5.php#5.4.37">ChangeLog</a>.
      </p>
     </div>
   ',
@@ -23315,15 +23315,15 @@ Presentation length is 45 minutes which includes question time. 3 hours workshop
      and CVE-2015-0232.
 
      All PHP 5.4 users are encouraged to upgrade to this version.
-     </p><p>For source downloads of PHP 5.4.37 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-     The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.4.37">ChangeLog</a>.
+     </p><p>For source downloads of PHP 5.4.37 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
+     Windows binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
+     The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-5.php#5.4.37">ChangeLog</a>.
      </p></div>',
   ),
   402 => 
   array (
     'title' => 'PHP 5.6.5 is available',
-    'id' => 'http://php.net/archive/2015.php#id2015-01-22-2',
+    'id' => 'https://www.php.net/archive/2015.php#id2015-01-22-2',
     'published' => '2015-01-22T12:31:59-08:00',
     'updated' => '2015-01-22T12:31:59-08:00',
     'category' => 
@@ -23343,13 +23343,13 @@ Presentation length is 45 minutes which includes question time. 3 hours workshop
     array (
       0 => 
       array (
-        'href' => 'http://php.net/index.php#id2015-01-22-2',
+        'href' => 'https://www.php.net/index.php#id2015-01-22-2',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
       1 => 
       array (
-        'href' => 'http://php.net/archive/2015.php#id2015-01-22-2',
+        'href' => 'https://www.php.net/archive/2015.php#id2015-01-22-2',
         'rel' => 'via',
         'type' => 'text/html',
       ),
@@ -23361,9 +23361,9 @@ Presentation length is 45 minutes which includes question time. 3 hours workshop
      All PHP 5.6 users are encouraged to upgrade to this version.
      </p>
 
-     <p>For source downloads of PHP 5.6.5 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-     The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.6.5">ChangeLog</a>.
+     <p>For source downloads of PHP 5.6.5 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
+     Windows binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
+     The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-5.php#5.6.5">ChangeLog</a>.
      </p>
     </div>
   ',
@@ -23371,15 +23371,15 @@ Presentation length is 45 minutes which includes question time. 3 hours workshop
      5.6.5. This release fixes several bugs as well as CVE-2015-0231, CVE-2014-9427 and CVE-2015-0232.
 
      All PHP 5.6 users are encouraged to upgrade to this version.
-     </p><p>For source downloads of PHP 5.6.5 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-     The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.6.5">ChangeLog</a>.
+     </p><p>For source downloads of PHP 5.6.5 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
+     Windows binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
+     The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-5.php#5.6.5">ChangeLog</a>.
      </p></div>',
   ),
   403 => 
   array (
     'title' => 'PHP 5.5.21 is released',
-    'id' => 'http://php.net/archive/2015.php#id2015-01-22-1',
+    'id' => 'https://www.php.net/archive/2015.php#id2015-01-22-1',
     'published' => '2015-01-22T16:04:04+00:00',
     'updated' => '2015-01-22T16:04:04+00:00',
     'category' => 
@@ -23399,13 +23399,13 @@ Presentation length is 45 minutes which includes question time. 3 hours workshop
     array (
       0 => 
       array (
-        'href' => 'http://php.net/index.php#id2015-01-22-1',
+        'href' => 'https://www.php.net/index.php#id2015-01-22-1',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
       1 => 
       array (
-        'href' => 'http://php.net/archive/2015.php#id2015-01-22-1',
+        'href' => 'https://www.php.net/archive/2015.php#id2015-01-22-1',
         'rel' => 'via',
         'type' => 'text/html',
       ),
@@ -23417,9 +23417,9 @@ Presentation length is 45 minutes which includes question time. 3 hours workshop
      All PHP 5.5 users are encouraged to upgrade to this version.
      </p>
 
-     <p>For source downloads of PHP 5.5.21 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-     The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.5.21">ChangeLog</a>.
+     <p>For source downloads of PHP 5.5.21 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
+     Windows binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
+     The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-5.php#5.5.21">ChangeLog</a>.
      </p>
     </div>
   ',
@@ -23427,15 +23427,15 @@ Presentation length is 45 minutes which includes question time. 3 hours workshop
      5.5.21. This release fixes several bugs as well as CVE-2015-0231, CVE-2014-9427 and CVE-2015-0232.
 
      All PHP 5.5 users are encouraged to upgrade to this version.
-     </p><p>For source downloads of PHP 5.5.21 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-     The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.5.21">ChangeLog</a>.
+     </p><p>For source downloads of PHP 5.5.21 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
+     Windows binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
+     The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-5.php#5.5.21">ChangeLog</a>.
      </p></div>',
   ),
   404 => 
   array (
     'title' => 'Dutch PHP Conference 2015',
-    'id' => 'http://php.net/archive/2015.php#id2015-01-16-1',
+    'id' => 'https://www.php.net/archive/2015.php#id2015-01-16-1',
     'published' => '2015-01-16T10:07:58+01:00',
     'updated' => '2015-01-16T10:07:58+01:00',
     'finalTeaserDate' => '2015-02-22',
@@ -23451,7 +23451,7 @@ Presentation length is 45 minutes which includes question time. 3 hours workshop
     array (
       0 => 
       array (
-        'href' => 'http://php.net/conferences/index.php#id2015-01-16-1',
+        'href' => 'https://www.php.net/conferences/index.php#id2015-01-16-1',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
@@ -23464,7 +23464,7 @@ Presentation length is 45 minutes which includes question time. 3 hours workshop
     ),
     'newsImage' => 
     array (
-      'xmlns' => 'http://php.net/ns/news',
+      'xmlns' => 'https://www.php.net/ns/news',
       'link' => 'http://www.phpconference.nl/',
       'title' => 'Dutch PHP Conference 2015',
       'content' => 'dpc-2015.png',
@@ -23480,7 +23480,7 @@ Presentation length is 45 minutes which includes question time. 3 hours workshop
   405 => 
   array (
     'title' => 'Midwest PHP 2015',
-    'id' => 'http://php.net/archive/2015.php#id2015-01-10-1',
+    'id' => 'https://www.php.net/archive/2015.php#id2015-01-10-1',
     'published' => '2015-01-10T05:09:25+01:00',
     'updated' => '2015-01-10T05:09:25+01:00',
     'finalTeaserDate' => '2015-03-14',
@@ -23496,7 +23496,7 @@ Presentation length is 45 minutes which includes question time. 3 hours workshop
     array (
       0 => 
       array (
-        'href' => 'http://php.net/conferences/index.php#id2015-01-10-1',
+        'href' => 'https://www.php.net/conferences/index.php#id2015-01-10-1',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
@@ -23509,7 +23509,7 @@ Presentation length is 45 minutes which includes question time. 3 hours workshop
     ),
     'newsImage' => 
     array (
-      'xmlns' => 'http://php.net/ns/news',
+      'xmlns' => 'https://www.php.net/ns/news',
       'link' => 'http://2015.midwestphp.org/',
       'title' => 'Midwest PHP 2015',
       'content' => 'midwest2015.png',
@@ -23523,7 +23523,7 @@ Presentation length is 45 minutes which includes question time. 3 hours workshop
   406 => 
   array (
     'title' => 'ConFoo 2015 - Become a Master',
-    'id' => 'http://php.net/archive/2015.php#id2015-01-06-1',
+    'id' => 'https://www.php.net/archive/2015.php#id2015-01-06-1',
     'published' => '2015-01-06T18:15:50+00:00',
     'updated' => '2015-01-06T18:15:50+00:00',
     'finalTeaserDate' => '2015-02-18',
@@ -23539,7 +23539,7 @@ Presentation length is 45 minutes which includes question time. 3 hours workshop
     array (
       0 => 
       array (
-        'href' => 'http://php.net/conferences/index.php#id2015-01-06-1',
+        'href' => 'https://www.php.net/conferences/index.php#id2015-01-06-1',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
@@ -23552,7 +23552,7 @@ Presentation length is 45 minutes which includes question time. 3 hours workshop
     ),
     'newsImage' => 
     array (
-      'xmlns' => 'http://php.net/ns/news',
+      'xmlns' => 'https://www.php.net/ns/news',
       'link' => 'http://confoo.ca',
       'title' => 'Become a master: improve your skills at ConFoo',
       'content' => 'confoo-2015.jpg',

@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <entry xmlns="http://www.w3.org/2005/Atom">
   <title>PHP 7.2.0 Alpha 2 Released</title>
-  <id>http://php.net/archive/2017.php#id2017-06-22-1</id>
+  <id>https://www.php.net/archive/2017.php#id2017-06-22-1</id>
   <published>2017-06-22T11:00:00+00:00</published>
   <updated>2017-06-22T11:00:00+00:00</updated>
   <category term="frontpage" label="PHP.net frontpage news"/>
   <category term="releases" label="New PHP release"/>
-  <link href="http://php.net/index.php#id2017-06-22-1" rel="alternate" type="text/html"/>
-  <link href="http://php.net/archive/2017.php#id2017-06-22-1" rel="via" type="text/html"/>
+  <link href="https://www.php.net/index.php#id2017-06-22-1" rel="alternate" type="text/html"/>
+  <link href="https://www.php.net/archive/2017.php#id2017-06-22-1" rel="via" type="text/html"/>
   <content type="xhtml">
     <div xmlns="http://www.w3.org/1999/xhtml">
      <p>The PHP development team announces the immediate availability of PHP 7.2.0 Alpha 2.
@@ -24,7 +24,7 @@
      for a complete list of upgrading notes. These files can also be found in the release archive.</p>
 
      <p>For source downloads of PHP 7.2.0 Alpha 2 please visit the <a href="https://downloads.php.net/~pollita/">download</a> page,
-     Windows sources and binaries can be found on <a href="http://windows.php.net/qa/">windows.php.net/qa/</a>.</p>
+     Windows sources and binaries can be found on <a href="https://windows.php.net/qa/">windows.php.net/qa/</a>.</p>
 
      <p>The third and final alpha will be released on the 6th of July. You can also read the full list of planned releases on our
      <a href="https://wiki.php.net/todo/php72#timetable">wiki</a>.</p>

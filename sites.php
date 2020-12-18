@@ -12,7 +12,7 @@ site_header("A Tourist's Guide", array("current" => "help"));
  Come with me, I'll show you.
 </p>
 
-<h2 id="www" class="content-header"><a href="http://php.net/">php.net</a>: Main Website</h2>
+<h2 id="www" class="content-header"><a href="https://www.php.net/">php.net</a>: Main Website</h2>
 
 <div class="content-box">
 <p>
@@ -25,7 +25,7 @@ site_header("A Tourist's Guide", array("current" => "help"));
  This is the home of the <a href="/downloads.php">download page</a>, for
  everyone to get the latest version of the PHP source code and binaries
  for Windows. The current and next-to-current versions are available there.
- (There is also a <a href="http://museum.php.net/">PHP Museum</a>, which has
+ (There is also a <a href="https://museum.php.net/">PHP Museum</a>, which has
  all of the source distributions since June 1996.)
 </p>
 
@@ -76,7 +76,7 @@ site_header("A Tourist's Guide", array("current" => "help"));
 </p>
 
 <h2 id="pear" class="content-header">
- <a href="http://pear.php.net/">pear.php.net</a>:
+ <a href="https://pear.php.net/">pear.php.net</a>:
  The PHP Extension and Application Repository
 </h2>
 
@@ -89,7 +89,7 @@ site_header("A Tourist's Guide", array("current" => "help"));
 </p>
 
 <h2 id="pecl" class="content-header">
- <a href="http://pecl.php.net/">pecl.php.net</a>:
+ <a href="https://pecl.php.net/">pecl.php.net</a>:
  The PHP Extension Community Library
 </h2>
 
@@ -134,7 +134,7 @@ site_header("A Tourist's Guide", array("current" => "help"));
  before being made official. Documentation is built here four times a day.
 </p>
 
-<h2 id="qa" class="content-header"><a href="http://qa.php.net/">qa.php.net</a>: Quality Assurance Team</h2>
+<h2 id="qa" class="content-header"><a href="https://qa.php.net/">qa.php.net</a>: Quality Assurance Team</h2>
 
 <p class="content-box">
  The Quality Assurance team is one of the most important pieces of the PHP
@@ -143,14 +143,14 @@ site_header("A Tourist's Guide", array("current" => "help"));
  process.
 </p>
 
-<h2 id="git" class="content-header"><a href="http://git.php.net/">git.php.net</a>: Git Repository</h2>
+<h2 id="git" class="content-header"><a href="https://git.php.net/">git.php.net</a>: Git Repository</h2>
 
 <div class="content-box">
 <p>
  The PHP project is organized with a Git server, and this website is the web
  interface to it. There you can browse the history (and latest versions) of the
  source code for all of the PHP projects. For example, the
- <a href="http://git.php.net/?p=php-src.git;a=summary">php-src</a> module is
+ <a href="https://git.php.net/?p=php-src.git;a=summary">php-src</a> module is
  the repository for the source code to the latest version of PHP itself.
  Checking out the source code can be done <a href="git.php">anonymously</a>.
 </p>
@@ -165,11 +165,11 @@ site_header("A Tourist's Guide", array("current" => "help"));
 </p>
 </div>
 
-<h2 id="svn" class="content-header"><a href="http://svn.php.net/">svn.php.net</a>: Archived SVN Repository</h2>
+<h2 id="svn" class="content-header"><a href="https://svn.php.net/">svn.php.net</a>: Archived SVN Repository</h2>
 
 <p class="content-box">
  The PHP project used to be organized under the SVN revision control system, but
- migrated to <a href="http://git.php.net/">Git</a> (see above) in March 2012.
+ migrated to <a href="https://git.php.net/">Git</a> (see above) in March 2012.
  The old SVN repository is archived here for posterity, however it's still used for
  i.e. documentation files.
 </p>
@@ -181,7 +181,7 @@ XXX: The following sites are offline and should be re-added once they are back o
 
 <p class="content-box">
  The PHP project used to be organized under the CVS revision control system, but
- migrated to <a href="http://svn.php.net/">Subversion</a> (see above) in July of 2009.
+ migrated to <a href="https://svn.php.net/">Subversion</a> (see above) in July of 2009.
  The old CVS repository is archived here for posterity. It was formerly named
  cvs.php.net, but that now redirects to the SVN repository. This is not available
  via HTTP.
@@ -231,7 +231,7 @@ XXX: The following sites are offline and should be re-added once they are back o
  has a wiki section and everyone is able to apply for wiki commit access.
 </p>
 
-<h2 id="people" class="content-header"><a href="http://people.php.net/">people.php.net</a>: The PHP Developers Profiles</h2>
+<h2 id="people" class="content-header"><a href="https://people.php.net/">people.php.net</a>: The PHP Developers Profiles</h2>
 
 <p class="content-box">
  A list of the developers behind PHP along with quick profiles for each of them.

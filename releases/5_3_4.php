@@ -44,7 +44,7 @@ large number of bug fixes.
 
 <p>
 For users upgrading from PHP 5.2 there is a migration guide
-available <a href="http://php.net/migration53">here</a>, detailing
+available <a href="https://www.php.net/migration53">here</a>, detailing
 the changes between those releases and PHP 5.3.
 </p>
 

@@ -157,7 +157,7 @@ site_header("News Archive - 2002", array("cache" => true));
  browser specific magic you can now use our
  <a href="/sidebars.php">Search Bar</a> from the major browsers. Please help
  us to test this new service, and provide feedback via
- <a href="http://bugs.php.net/">the bug system</a> (categorize your bug
+ <a href="https://bugs.php.net/">the bug system</a> (categorize your bug
  as a PHP.net website bug please).
 </p>
 
@@ -519,7 +519,7 @@ site_header("News Archive - 2002", array("cache" => true));
  <span class="newsdate">[23-Mar-2002]</span>
  Ever wondered what you can type in your browsers location
  field to access a php.net page? Many of you already know
- <a href="http://php.net/echo">http://php.net/echo</a>.
+ <a href="https://www.php.net/echo">https://www.php.net/echo</a>.
  We gathered some information about how the URLs are parsed,
  and what are your possibilities. Read it in our new
  <a href="urlhowto.php">URL Howto</a>.

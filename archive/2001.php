@@ -161,9 +161,9 @@ site_header("News Archive - 2001", array("cache" => true));
  <span class="newsdate">[29-Jul-2001]</span>
  You don't need to go online anymore, to access the PHP FAQ,
  because we integrated it for you in the PHP Manual, so you can
- <a href="http://www.php.net/docs.php">download it</a> in
+ <a href="https://www.php.net/docs.php">download it</a> in
  various formats with the Manual packages, and
- <a href="http://www.php.net/manual/en/faq.php">annotate
+ <a href="https://www.php.net/manual/en/faq.php">annotate
  the pages online</a>, as you wish.
 </p>
 

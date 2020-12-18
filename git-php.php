@@ -14,7 +14,7 @@ $SIDEBAR_DATA = '
 <h3>More about Git</h3>
 <p>
  You can find more information about Git and download clients for most major
- platforms at <a href="http://git-scm.com/">the official Git site</a>.
+ platforms at <a href="https://git-scm.com/">the official Git site</a>.
 </p>
 
 <h3>Git access</h3>
@@ -87,7 +87,7 @@ if (count($_POST) && (!isset($_POST['purpose']) || !is_array($_POST['purpose']) 
     // Post the request if there is no error
     if (!$error) {
         $error = posttohost(
-            "http://master.php.net/entry/svn-account.php",
+            "https://master.php.net/entry/svn-account.php",
             array(
                 "username" => $cleaned['id'],
                 "name"     => $cleaned['fullname'],
@@ -134,7 +134,7 @@ if (count($_POST) && (!isset($_POST['purpose']) || !is_array($_POST['purpose']) 
 <p>
  If you are not familiar with Git, you should have a look at the various
  documentation resources available at
- <a href="http://git-scm.com/">the official Git site</a>.  This is also where
+ <a href="https://git-scm.com/">the official Git site</a>.  This is also where
  to get the most recent version of the Git client.
 </p>
 
@@ -156,7 +156,7 @@ if (count($_POST) && (!isset($_POST['purpose']) || !is_array($_POST['purpose']) 
  <a href="https://wiki.php.net/vcs/gitfaq">Git FAQ</a> pages on the Wiki are
  good starting points to learn how we use Git to develop PHP. Beyond that, you
  can familiarise yourself with Git in general via the
- <a href="http://git-scm.com/documentation">Git documentation</a> and the
+ <a href="https://git-scm.com/documentation">Git documentation</a> and the
  <a href="http://progit.org/">Pro Git</a> book.  They should all be executed
  from within the checked out tree. eg.  <code>cd php-src</code>.
 </p>
@@ -283,10 +283,10 @@ EOT;
 
 <p>
  If you have a new PEAR package you wish to contribute, propose it
- through the <a href="http://pear.php.net/pepr/">PEPR system</a> on
- <a href="http://pear.php.net/">the PEAR website</a>. If you have a new PECL
+ through the <a href="https://pear.php.net/pepr/">PEPR system</a> on
+ <a href="https://pear.php.net/">the PEAR website</a>. If you have a new PECL
  extension you wish to contribute, bring it up on the appropriate
- <a href="http://pecl.php.net/support.php">PECL mailing list</a> first.
+ <a href="https://pecl.php.net/support.php">PECL mailing list</a> first.
 </p>
 
 <p>
@@ -314,7 +314,7 @@ EOT;
  patient!), gives you access to a number of things. First, and most
  importantly, it gives you access to modify those parts of the PHP Git tree for
  which you have requested and been granted access. It also allows you to comment
- on and close bugs in our <a href="http://bugs.php.net/">bug database</a>, and
+ on and close bugs in our <a href="https://bugs.php.net/">bug database</a>, and
  allows you to modify the documentation notes in the <a href="/manual/">annotated
  manual</a>. Your Git account also translates into a foo@php.net forwarding email
  address where <strong>foo</strong> is your Git user id. Feel free to use it!
@@ -345,7 +345,7 @@ EOT;
 </p>
 <p class="warn">
  If someone told you to fill in an account request because you are a developer of
- a certain extension, for example a <a href="http://pecl.php.net/">PECL</a> extension,
+ a certain extension, for example a <a href="https://pecl.php.net/">PECL</a> extension,
  then please state who told you to submit this request in the purpose text field below.
 </p>
 
