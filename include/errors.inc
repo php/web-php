@@ -524,7 +524,7 @@ function get_legacy_manual_urls(string $uri): array
     $filename = $_SERVER["DOCUMENT_ROOT"] . "/manual/legacyurls.json";
     $pages_ids = json_decode(file_get_contents($filename), true);
     $page_id = preg_replace_callback('/^manual\/.*\/(.*?)(\.php)?$/', function (array $matches): string {
-        if (count($matches) !== 3) {
+        if (count($matches) < 2) {
             return '';
         }
         return $matches[1] ;
