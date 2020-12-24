@@ -365,10 +365,10 @@ array_chunk([], -1); // ValueError: array_chunk(): Argument #2 ($length) must be
     производительность приложения находится на одном уровне с PHP 7.4.
   </p>
   <h3 class="php8-h3">
-    Relative JIT contribution to PHP 8 performance
+    Относительный вклад JIT в производительность PHP 8
   </h3>
   <p>
-    <img src="/images/php8/scheme.svg" width="900" alt="Ккомпиляция Just-In-Time">
+    <img src="/images/php8/scheme.svg" width="900" alt="Компиляция Just-In-Time">
   </p>
 
   <div class="php8-columns">
