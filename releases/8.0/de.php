@@ -243,8 +243,7 @@ echo $result;
     <div class="php8-compare__content">
       <p>Der neue Match Ausdruck ist ähnlich wie die Switch Anweisung und bietet folgende Funktionen:</p>
       <ul>
-        <li>Match ist ein Ausruck. Das heißt, das Ergebnis kann in einer Variable gespeichert werden oder zurückgegeben
-            werden.</li>
+        <li>Da Match ein Ausdruck ist, kann sein Ergebnis in einer Variable gespeichert oder ausgegeben werden.</li>
         <li>Match Zweige unterstützen nur einzeilige Ausdrücke und benötigen keinen break; Ausdruck.</li>
         <li>Match führt strikte Vergleiche durch.</li>
       </ul>
@@ -425,7 +424,7 @@ array_chunk([], -1); // ValueError: array_chunk(): Argument #2 ($length) must be
       <h2 class="php8-h2 php8-h2_margin-top">Weitere Syntax-Anpassungen und Verbesserungen</h2>
       <ul>
         <li>
-          Erlauben eines Abschließenden Kommas in Parameter-Listen <a href="https://wiki.php.net/rfc/trailing_comma_in_parameter_list">RFC</a>
+          Erlauben eines abschließenden Kommas in Parameter-Listen <a href="https://wiki.php.net/rfc/trailing_comma_in_parameter_list">RFC</a>
           und Closure Use Listen <a href="https://wiki.php.net/rfc/trailing_comma_in_closure_use_list">RFC</a>.
         </li>
         <li>
@@ -489,7 +488,7 @@ array_chunk([], -1); // ValueError: array_chunk(): Argument #2 ($length) must be
     <div class="php8-footer__content">
       <p>
         Für den direkten Code-Download von PHP 8 schaue bitte auf der <a href="http://www.php.net/downloads">Downloads</a> Seite vorbei.
-        Windows Pakete können auf der <a href="http://windows.php.net/download">PHP for Windows</a> Seite gefunden werden.
+        Windows Pakete können auf der <a href="http://windows.php.net/download">PHP für Windows</a> Seite gefunden werden.
         Die Liste der Änderungen ist im <a href="http://www.php.net/ChangeLog-8.php">ChangeLog</a> festgehalten.
       </p>
       <p>
