@@ -447,7 +447,7 @@ function manual_setup($setup) {
       {$language_chooser($config['lang'], $config['thispage'])}
     </div>
     <div class="edit-bug">
-      <a href="https://edit.php.net/?project=PHP&amp;perm={$config['lang']}/{$config['thispage']}">Edit</a>
+      <a href="https://github.com/php/doc-{$config['lang']}/pulls">Submit a Pull Request</a>
       <a href="https://bugs.php.net/report.php?bug_type=Documentation+problem&amp;manpage=$id">Report a Bug</a>
     </div>
   </div>
