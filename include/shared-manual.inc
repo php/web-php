@@ -441,13 +441,14 @@ function manual_setup($setup) {
 
     $id = substr($setup['this'][0], 0, -4);
     $language_chooser = 'manual_language_chooser';
+    $repo = str_replace('_', '-', strtolower($config['lang'])); // pt_BR etc.
     echo <<<PAGE_TOOLS
   <div class="page-tools">
     <div class="change-language">
       {$language_chooser($config['lang'], $config['thispage'])}
     </div>
     <div class="edit-bug">
-      <a href="https://github.com/php/doc-{$config['lang']}/pulls">Submit a Pull Request</a>
+      <a href="https://github.com/php/doc-{$repo}">Submit a Pull Request</a>
       <a href="https://bugs.php.net/report.php?bug_type=Documentation+problem&amp;manpage=$id">Report a Bug</a>
     </div>
   </div>
