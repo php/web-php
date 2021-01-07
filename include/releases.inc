@@ -1,5 +1,44 @@
 <?php
 $OLDRELEASES = array (
+  8 => 
+    array (
+    '8.0.0' => 
+    array (
+      'announcement' => 
+      array (
+        'English' => '/releases/8_0_0.php',
+      ),
+      'tags' => 
+      array (
+      ),
+      'date' => '26 Nov 2020',
+      'source' => 
+      array (
+        0 => 
+        array (
+          'filename' => 'php-8.0.0.tar.gz',
+          'name' => 'PHP 8.0.0 (tar.gz)',
+          'sha256' => '3ed7b48d64357d3e8fa9e828dbe7416228f84105b8290c2f9779cd66be31ea71',
+          'date' => '26 Nov 2020',
+        ),
+        1 => 
+        array (
+          'filename' => 'php-8.0.0.tar.bz2',
+          'name' => 'PHP 8.0.0 (tar.bz2)',
+          'sha256' => '5e832dc37eabf444410b4ea6fb3d66b72e44e7407a3b49caa5746edcf71b9d09',
+          'date' => '26 Nov 2020',
+        ),
+        2 => 
+        array (
+          'filename' => 'php-8.0.0.tar.xz',
+          'name' => 'PHP 8.0.0 (tar.xz)',
+          'sha256' => 'b5278b3eef584f0c075d15666da4e952fa3859ee509d6b0cc2ed13df13f65ebb',
+          'date' => '26 Nov 2020',
+        ),
+      ),
+      'museum' => false,
+    ),
+  ),
   7 => 
   array (
     '7.3.25' => 
