@@ -12,6 +12,69 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
 
 <a name="PHP_7_4"></a>
 
+<section class="version" id="7.4.14"><!-- {{{ 7.4.14 -->
+<h3>Version 7.4.14</h3>
+<b><?php release_date('07-Jan-2021'); ?></b>
+<ul><li>Core:
+<ul>
+  <li><?php bugfix(74558); ?> (Can't rebind closure returned by Closure::fromCallable()).</li>
+  <li><?php bugfix(80345); ?> (PHPIZE configuration has outdated PHP_RELEASE_VERSION).</li>
+  <li><?php bugfix(72964); ?> (White space not unfolded for CC/Bcc headers).</li>
+  <li><?php bugfix(80362); ?> (Running dtrace scripts can cause php to crash).</li>
+  <li><?php bugfix(80393); ?> (Build of PHP extension fails due to configuration gap with libtool).</li>
+  <li><?php bugfix(80402); ?> (configure filtering out -lpthread).</li>
+  <li><?php bugfix(77069); ?> (stream filter loses final block of data).</li>
+</ul></li>
+<li>Fileinfo:
+<ul>
+  <li><?php bugfix(77961); ?> (finfo_open crafted magic parsing SIGABRT).</li>
+</ul></li>
+<li>FPM:
+<ul>
+  <li><?php bugfix(69625); ?> (FPM returns 200 status on request without SCRIPT_FILENAME env).</li>
+</ul></li>
+<li>Intl:
+<ul>
+  <li><?php bugfix(80425); ?> (MessageFormatAdapter::getArgTypeList redefined).</li>
+</ul></li>
+<li>OpenSSL:
+<ul>
+  <li><?php bugfix(80368); ?> (OpenSSL extension fails to build against LibreSSL due to lack of OCB support).</li>
+</ul></li>
+<li>Phar:
+<ul>
+  <li><?php bugfix(73809); ?> (Phar Zip parse crash - mmap fail).</li>
+  <li><?php bugfix(75102); ?> (`PharData` says invalid checksum for valid tar).</li>
+  <li><?php bugfix(77322); ?> (PharData::addEmptyDir('/') Possible integer overflow).</li>
+</ul></li>
+<li>PDO MySQL:
+<ul>
+  <li><?php bugfix(80458); ?> (PDOStatement::fetchAll() throws for upsert queries).</li>
+  <li><?php bugfix(63185); ?> (nextRowset() ignores MySQL errors with native prepared statements).</li>
+  <li><?php bugfix(78152); ?> (PDO::exec() - Bad error handling with multiple commands).</li>
+  <li><?php bugfix(70066); ?> (Unexpected "Cannot execute queries while other unbuffered queries").</li>
+  <li><?php bugfix(71145); ?> (Multiple statements in init command triggers unbuffered query error).</li>
+  <li><?php bugfix(76815); ?> (PDOStatement cannot be GCed/closeCursor-ed when a PROCEDURE resultset SIGNAL).</li>
+</ul></li>
+<li>Standard:
+<ul>
+  <li><?php bugfix(77423); ?> (FILTER_VALIDATE_URL accepts URLs with invalid userinfo). (CVE-2020-7071)</li>
+  <li><?php bugfix(80366); ?> (Return Value of zend_fstat() not Checked).</li>
+  <li><?php bugfix(80411); ?> (References to null-serialized object break serialize()).</li>
+</ul></li>
+<li>Tidy:
+<ul>
+  <li><?php bugfix(77594); ?> (ob_tidyhandler is never reset).</li>
+</ul></li>
+<li>Zlib:
+<ul>
+  <li>Fixed #48725 (Support for flushing in zlib stream).</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
+
+
 <section class="version" id="7.4.13"><!-- {{{ 7.4.13 -->
 <h3>Version 7.4.13</h3>
 <b><?php release_date('26-Nov-2020'); ?></b>
