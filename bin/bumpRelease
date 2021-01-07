@@ -30,7 +30,7 @@ if (is_bool($info["announcement"]) && $info["announcement"]) {
 
 $OLDRELEASES[$major] = array_merge(
 	array($version => $info),
-	$OLDRELEASES[$major]
+	$OLDRELEASES[$major] ?? []
 );
 
 file_put_contents(__DIR__ . "/../include/releases.inc", [
