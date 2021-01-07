@@ -1335,6 +1335,19 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
 
 <a name="PHP_7_3"></a>
 
+<section class="version" id="7.3.26"><!-- {{{ 7.3.26 -->
+<h3>Version 7.3.26</h3>
+<b><?php release_date('07-Jan-2021'); ?></b>
+<ul><li>Standard:
+<ul>
+  <li><?php bugfix(77423); ?> (FILTER_VALIDATE_URL accepts URLs with invalid userinfo). (CVE-2020-7071)</li>
+  <li><?php bugfix(80457); ?> (stream_get_contents() fails with maxlength=-1 or default).</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
+
+
 <section class="version" id="7.3.25"><!-- {{{ 7.3.25 -->
 <h3>Version 7.3.25</h3>
 <b><?php release_date('26-Nov-2020'); ?></b>
