@@ -10,6 +10,104 @@ site_header("PHP 8 ChangeLog", array("current" => "docs", "css" => array("change
 
 <a name="PHP_8_0"></a>
 
+<section class="version" id="8.0.1"><!-- {{{ 8.0.1 -->
+<h3>Version 8.0.1</h3>
+<b><?php release_date('07-Jan-2021'); ?></b>
+<ul><li>Core:
+<ul>
+  <li><?php bugfix(80345); ?> (PHPIZE configuration has outdated PHP_RELEASE_VERSION).</li>
+  <li><?php bugfix(72964); ?> (White space not unfolded for CC/Bcc headers).</li>
+  <li><?php bugfix(80391); ?> (Iterable not covariant to mixed).</li>
+  <li><?php bugfix(80393); ?> (Build of PHP extension fails due to configuration gap with libtool).</li>
+  <li><?php bugfix(77069); ?> (stream filter loses final block of data).</li>
+</ul></li>
+<li>Fileinfo:
+<ul>
+  <li><?php bugfix(77961); ?> (finfo_open crafted magic parsing SIGABRT).</li>
+</ul></li>
+<li>FPM:
+<ul>
+  <li><?php bugfix(69625); ?> (FPM returns 200 status on request without SCRIPT_FILENAME env).</li>
+</ul></li>
+<li>IMAP:
+<ul>
+  <li><?php bugfix(80438); ?> (imap_msgno() incorrectly warns and return false on valid UIDs in PHP 8).</li>
+  <li>Fix a regression with valid UIDs in imap_savebody().</li>
+  <li>Make warnings for invalid message numbers/UIDs between functions consistent.</li>
+</ul></li>
+<li>Intl:
+<ul>
+  <li><?php bugfix(80425); ?> (MessageFormatAdapter::getArgTypeList redefined).</li>
+</ul></li>
+<li>Opcache:
+<ul>
+  <li><?php bugfix(80404); ?> (Incorrect range inference result when division results in float).</li>
+  <li><?php bugfix(80377); ?> (Opcache misses executor_globals).</li>
+  <li><?php bugfix(80433); ?> (Unable to disable the use of the AVX command when using JIT).</li>
+  <li><?php bugfix(80447); ?> (Strange out of memory error when running with JIT).</li>
+  <li><?php bugfix(80480); ?> (Segmentation fault with JIT enabled).</li>
+  <li><?php bugfix(80506); ?> (Immediate SIGSEGV upon ini_set("opcache.jit_debug", 1)).</li>
+</ul></li>
+<li>OpenSSL:
+<ul>
+  <li><?php bugfix(80368); ?> (OpenSSL extension fails to build against LibreSSL due to lack of OCB support).</li>
+</ul></li>
+<li>PDO MySQL:
+<ul>
+  <li><?php bugfix(80458); ?> (PDOStatement::fetchAll() throws for upsert queries).</li>
+  <li><?php bugfix(63185); ?> (nextRowset() ignores MySQL errors with native prepared statements).</li>
+  <li><?php bugfix(78152); ?> (PDO::exec() - Bad error handling with multiple commands).</li>
+  <li><?php bugfix(66878); ?> (Multiple rowsets not returned unless PDO statement object is unset()).</li>
+  <li><?php bugfix(70066); ?> (Unexpected "Cannot execute queries while other unbuffered queries").</li>
+  <li><?php bugfix(71145); ?> (Multiple statements in init command triggers unbuffered query error).</li>
+  <li><?php bugfix(76815); ?> (PDOStatement cannot be GCed/closeCursor-ed when a PROCEDURE resultset SIGNAL).</li>
+  <li><?php bugfix(79872); ?> (Can't execute query with pending result sets).</li>
+  <li><?php bugfix(79131); ?> (PDO does not throw an exception when parameter values are missing).</li>
+  <li><?php bugfix(72368); ?> (PdoStatement-&gt;execute() fails but does not throw an exception).</li>
+  <li><?php bugfix(62889); ?> (LOAD DATA INFILE broken).</li>
+  <li><?php bugfix(67004); ?> (Executing PDOStatement::fetch() more than once prevents releasing resultset).</li>
+  <li><?php bugfix(79132); ?> (PDO re-uses parameter values from earlier calls to execute()).</li>
+</ul></li>
+<li>Phar:
+<ul>
+  <li><?php bugfix(73809); ?> (Phar Zip parse crash - mmap fail).</li>
+  <li><?php bugfix(75102); ?> (`PharData` says invalid checksum for valid tar).</li>
+  <li><?php bugfix(77322); ?> (PharData::addEmptyDir('/') Possible integer overflow).</li>
+</ul></li>
+<li>Phpdbg:
+<ul>
+  <li><?php bugfix(76813); ?> (Access violation near NULL on source operand).</li>
+</ul></li>
+<li>SPL:
+<ul>
+  <li><?php bugfix(62004); ?> (SplFileObject: fgets after seek returns wrong line).</li>
+</ul></li>
+<li>Standard:
+<ul>
+  <li><?php bugfix(80366); ?> (Return Value of zend_fstat() not Checked).</li>
+  <li><?php bugfix(77423); ?> (FILTER_VALIDATE_URL accepts URLs with invalid userinfo). (CVE-2020-7071)</li>
+</ul></li>
+<li>Tidy:
+<ul>
+  <li><?php bugfix(77594); ?> (ob_tidyhandler is never reset).</li>
+</ul></li>
+<li>Tokenizer:
+<ul>
+  <li><?php bugfix(80462); ?> (Nullsafe operator tokenize with TOKEN_PARSE flag fails).</li>
+</ul></li>
+<li>XML:
+<ul>
+  <li>XmlParser opaque object renamed to XMLParser for consistency with other XML objects.</li>
+</ul></li>
+<li>Zlib:
+<ul>
+  <li><?php bugfix(48725); ?> (Support for flushing in zlib stream).</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
+
+
 <section class="version" id="8.0.0"><!-- {{{ 8.0.0 -->
 <h3>Version 8.0.0</h3>
 <b><?php release_date('26-Nov-2020'); ?></b>
