@@ -79,7 +79,7 @@ site_header("Thanks", array("current" => "community"));
 </li>
 
 <li>
- <a href="https://krystal.co.uk">Krystal.co.uk</a> provides a server and bandwidth
+ <a href="https://krystal.uk">Krystal.uk</a> provides a server and bandwidth
  for the ci.qa.php.net build and quality assurance infrastructure.
 </li>
 
