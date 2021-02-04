@@ -12,6 +12,43 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
 
 <a name="PHP_7_4"></a>
 
+<section class="version" id="7.4.15"><!-- {{{ 7.4.15 -->
+<h3>Version 7.4.15</h3>
+<b><?php release_date('04-Feb-2021'); ?></b>
+<ul><li>Core:
+<ul>
+  <li><?php bugfix(80523); ?> (bogus parse error on &gt;4GB source code).</li>
+  <li><?php bugfix(80384); ?> (filter buffers entire read until file closed).</li>
+</ul></li>
+<li>Curl:
+<ul>
+  <li><?php bugfix(80595); ?> (Resetting POSTFIELDS to empty array breaks request).</li>
+</ul></li>
+<li>Date:
+<ul>
+  <li><?php bugfix(80376); ?> (last day of the month causes runway cpu usage.</li>
+</ul></li>
+<li>MySQLi:
+<ul>
+  <li><?php bugfix(67983); ?> (mysqlnd with MYSQLI_OPT_INT_AND_FLOAT_NATIVE fails to interpret bit columns).</li>
+  <li><?php bugfix(64638); ?> (Fetching resultsets from stored procedure with cursor fails).</li>
+  <li><?php bugfix(72862); ?> (segfault using prepared statements on stored procedures that use a cursor).</li>
+  <li><?php bugfix(77935); ?> (Crash in mysqlnd_fetch_stmt_row_cursor when calling an SP with a cursor).</li>
+</ul></li>
+<li>Phar:
+<ul>
+  <li><?php bugfix(77565); ?> (Incorrect locator detection in ZIP-based phars).</li>
+  <li><?php bugfix(69279); ?> (Compressed ZIP Phar extractTo() creates garbage files).</li>
+</ul></li>
+<li>SOAP:
+<ul>
+  <li><?php bugfix(80672); ?> (Null Dereference in SoapClient). (CVE-2021-21702)</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
+
+
 <section class="version" id="7.4.14"><!-- {{{ 7.4.14 -->
 <h3>Version 7.4.14</h3>
 <b><?php release_date('07-Jan-2021'); ?></b>
