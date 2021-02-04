@@ -10,6 +10,82 @@ site_header("PHP 8 ChangeLog", array("current" => "docs", "css" => array("change
 
 <a name="PHP_8_0"></a>
 
+<section class="version" id="8.0.2"><!-- {{{ 8.0.2 -->
+<h3>Version 8.0.2</h3>
+<b><?php release_date('04-Feb-2021'); ?></b>
+<ul><li>Core:
+<ul>
+  <li><?php bugfix(80523); ?> (bogus parse error on &gt;4GB source code).</li>
+  <li><?php bugfix(80384); ?> (filter buffers entire read until file closed).</li>
+  <li><?php bugfix(80596); ?> (Invalid union type TypeError in anonymous classes).</li>
+  <li><?php bugfix(80617); ?> (GCC throws warning about type narrowing in ZEND_TYPE_INIT_CODE).</li>
+</ul></li>
+<li>BCMath:
+<ul>
+  <li><?php bugfix(80545); ?> (bcadd('a', 'a') doesn't throw an exception).</li>
+</ul></li>
+<li>Curl:
+<ul>
+  <li><?php bugfix(80595); ?> (Resetting POSTFIELDS to empty array breaks request).</li>
+</ul></li>
+<li>Date:
+<ul>
+  <li><?php bugfix(80376); ?> (last day of the month causes runway cpu usage).</li>
+</ul></li>
+<li>DOM:
+<ul>
+  <li><?php bugfix(80537); ?> (Wrong parameter type in DOMElement::removeAttributeNode stub).</li>
+</ul></li>
+<li>Filter:
+<ul>
+  <li><?php bugfix(80584); ?> (0x and 0X are considered valid hex numbers by filter_var()).</li>
+</ul></li>
+<li>GMP:
+<ul>
+  <li><?php bugfix(80560); ?> (Strings containing only a base prefix return 0 object).</li>
+</ul></li>
+<li>Intl:
+<ul>
+  <li><?php bugfix(80644); ?> (Missing resource causes subsequent get() calls to fail).</li>
+</ul></li>
+<li>MySQLi:
+<ul>
+  <li><?php bugfix(67983); ?> (mysqlnd with MYSQLI_OPT_INT_AND_FLOAT_NATIVE fails to interpret bit columns).</li>
+  <li><?php bugfix(64638); ?> (Fetching resultsets from stored procedure with cursor fails).</li>
+  <li><?php bugfix(72862); ?> (segfault using prepared statements on stored procedures that use a cursor).</li>
+  <li><?php bugfix(77935); ?> (Crash in mysqlnd_fetch_stmt_row_cursor when calling an SP with a cursor).</li>
+</ul></li>
+<li>ODBC:
+<ul>
+  <li><?php bugfix(80592); ?> (all floats are the same in ODBC parameters).</li>
+</ul></li>
+<li>Opcache:
+<ul>
+  <li><?php bugfix(80422); ?> (php_opcache.dll crashes when using Apache 2.4 with JIT).</li>
+</ul></li>
+<li>PDO_Firebird:
+<ul>
+  <li><?php bugfix(80521); ?> (Parameters with underscores no longer recognized).</li>
+</ul></li>
+<li>Phar:
+<ul>
+  <li><?php bugfix(76929); ?> (zip-based phar does not respect phar.require_hash).</li>
+  <li><?php bugfix(77565); ?> (Incorrect locator detection in ZIP-based phars).</li>
+  <li><?php bugfix(69279); ?> (Compressed ZIP Phar extractTo() creates garbage files).</li>
+</ul></li>
+<li>Phpdbg:
+<ul>
+  <li>Reverted fix for bug #76813 (Access violation near NULL on source operand).</li>
+</ul></li>
+<li>SOAP:
+<ul>
+  <li><?php bugfix(80672); ?> (Null Dereference in SoapClient). (CVE-2021-21702)</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
+
+
 <section class="version" id="8.0.1"><!-- {{{ 8.0.1 -->
 <h3>Version 8.0.1</h3>
 <b><?php release_date('07-Jan-2021'); ?></b>
