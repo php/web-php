@@ -1335,6 +1335,18 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
 
 <a name="PHP_7_3"></a>
 
+<section class="version" id="7.3.27"><!-- {{{ 7.3.27 -->
+<h3>Version 7.3.27</h3>
+<b><?php release_date('04-Feb-2021'); ?></b>
+<ul><li>SOAP:
+<ul>
+  <li><?php bugfix(80672); ?> (Null Dereference in SoapClient). (CVE-2021-21702)</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
+
+
 <section class="version" id="7.3.26"><!-- {{{ 7.3.26 -->
 <h3>Version 7.3.26</h3>
 <b><?php release_date('07-Jan-2021'); ?></b>
