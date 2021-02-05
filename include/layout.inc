@@ -196,12 +196,7 @@ function download_link($file, $title, $showsize = TRUE, $mirror = '')
     $download_link = "/distributions/" . $file;
 
     // Print out the download link
-    if (strpos($download_link, 'php-8.0.2.tar') !== false) {
-        // Temporary hacky fix to caching issue. :(
-        print_link("{$download_link}?a=1", $title);
-    } else {
-        print_link($download_link, $title);
-    }
+    print_link($download_link, $title);
 
     // Size display is required
     if ($showsize) {
