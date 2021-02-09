@@ -123,7 +123,7 @@ $OLDRELEASES = array (
       array (
         0 => 'security',
       ),
-      'date' => '07 Dec 2021',
+      'date' => '07 Jan 2021',
       'source' => 
       array (
         0 => 
@@ -131,21 +131,21 @@ $OLDRELEASES = array (
           'filename' => 'php-7.3.26.tar.gz',
           'name' => 'PHP 7.3.26 (tar.gz)',
           'sha256' => '2b55c2a54d1825e7c3feaf44cf42cdf782b8d5c611314172fbf8e234960b6a99',
-          'date' => '07 Dec 2021',
+          'date' => '07 Jan 2021',
         ),
         1 => 
         array (
           'filename' => 'php-7.3.26.tar.bz2',
           'name' => 'PHP 7.3.26 (tar.bz2)',
           'sha256' => '371e5a7c8154fd3c52b14baace5f7d04c4bbb8e841d356c54a2b6a688db39d4e',
-          'date' => '07 Dec 2021',
+          'date' => '07 Jan 2021',
         ),
         2 => 
         array (
           'filename' => 'php-7.3.26.tar.xz',
           'name' => 'PHP 7.3.26 (tar.xz)',
           'sha256' => 'd93052f4cb2882090b6a37fd1e0c764be1605a2461152b7f6b8f04fa48875208',
-          'date' => '07 Dec 2021',
+          'date' => '07 Jan 2021',
         ),
       ),
       'museum' => false,
