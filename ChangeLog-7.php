@@ -12,6 +12,52 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
 
 <a name="PHP_7_4"></a>
 
+<section class="version" id="7.4.16"><!-- {{{ 7.4.16 -->
+<h3>Version 7.4.16</h3>
+<b><?php release_date('04-Mar-2021'); ?></b>
+<ul><li>Core:
+<ul>
+  <li>Fixed #80706 (mail(): Headers after Bcc headers may be ignored).</li>
+</ul></li>
+<li>MySQLnd:
+<ul>
+  <li><?php bugfix(78680); ?> (mysqlnd's mysql_clear_password does not transmit null-terminated password).</li>
+</ul></li>
+<li>MySQLi:
+<ul>
+  <li><?php bugfix(74779); ?> (x() and y() truncating floats to integers).</li>
+</ul></li>
+<li>OPcache:
+<ul>
+  <li><?php bugfix(80682); ?> (opcache doesn't honour pcre.jit option).</li>
+</ul></li>
+<li>OpenSSL:
+<ul>
+  <li><?php bugfix(80747); ?> (Providing RSA key size &lt; 512 generates key that crash PHP).</li>
+</ul></li>
+<li>Phar:
+<ul>
+  <li><?php bugfix(75850); ?> (Unclear error message wrt. __halt_compiler() w/o semicolon) (cmb)</li>
+  <li><?php bugfix(70091); ?> (Phar does not mark UTF-8 filenames in ZIP archives).</li>
+  <li><?php bugfix(53467); ?> (Phar cannot compress large archives).</li>
+</ul></li>
+<li>SPL:
+<ul>
+  <li>Fixed bug#80719 (Iterating after failed ArrayObject::setIteratorClass() causes Segmentation fault).</li>
+</ul></li>
+<li>Standard:
+<ul>
+  <li><?php bugfix(80654); ?> (file_get_contents() maxlen fails above (2**31)-1 bytes).</li>
+</ul></li>
+<li>Zip:
+<ul>
+  <li><?php bugfix(80648); ?> (Fix for bug 79296 should be based on runtime version).</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
+
+
 <section class="version" id="7.4.15"><!-- {{{ 7.4.15 -->
 <h3>Version 7.4.15</h3>
 <b><?php release_date('04-Feb-2021'); ?></b>

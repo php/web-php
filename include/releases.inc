@@ -77,6 +77,42 @@ $OLDRELEASES = array (
   ),
   7 => 
   array (
+    '7.4.15' => 
+    array (
+      'announcement' => 
+      array (
+        'English' => '/releases/7_4_15.php',
+      ),
+      'tags' => 
+      array (
+      ),
+      'date' => '04 Feb 2021',
+      'source' => 
+      array (
+        0 => 
+        array (
+          'filename' => 'php-7.4.15.tar.gz',
+          'name' => 'PHP 7.4.15 (tar.gz)',
+          'sha256' => 'c7403988b69212335dec79e869abe9dbb23d60ea7f6eb16fd6ff99ed6b5f1c87',
+          'date' => '04 Feb 2021',
+        ),
+        1 => 
+        array (
+          'filename' => 'php-7.4.15.tar.bz2',
+          'name' => 'PHP 7.4.15 (tar.bz2)',
+          'sha256' => '1bd7be0293446c3d3cbe3c9fae6045119af0798fb0869db61932796dc23a7757',
+          'date' => '04 Feb 2021',
+        ),
+        2 => 
+        array (
+          'filename' => 'php-7.4.15.tar.xz',
+          'name' => 'PHP 7.4.15 (tar.xz)',
+          'sha256' => '9b859c65f0cf7b3eff9d4a28cfab719fb3d36a1db3c20d874a79b5ec44d43cb8',
+          'date' => '04 Feb 2021',
+        ),
+      ),
+      'museum' => false,
+    ),
     '7.4.14' => 
     array (
       'announcement' => 
