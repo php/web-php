@@ -10,6 +10,65 @@ site_header("PHP 8 ChangeLog", array("current" => "docs", "css" => array("change
 
 <a name="PHP_8_0"></a>
 
+<section class="version" id="8.0.3"><!-- {{{ 8.0.3 -->
+<h3>Version 8.0.3</h3>
+<b><?php release_date('04-Mar-2021'); ?></b>
+<ul><li>Core:
+<ul>
+  <li>Fixed #80706 (mail(): Headers after Bcc headers may be ignored).</li>
+</ul></li>
+<li>DOM:
+<ul>
+  <li><?php bugfix(80600); ?> (DOMChildNode::remove() doesn't work on CharacterData nodes).</li>
+</ul></li>
+<li>Gettext:
+<ul>
+  <li><?php bugfix(53251); ?> (bindtextdomain with null dir doesn't return old value).</li>
+</ul></li>
+<li>MySQLnd:
+<ul>
+  <li><?php bugfix(78680); ?> (mysqlnd's mysql_clear_password does not transmit null-terminated password).</li>
+  <li><?php bugfix(80713); ?> (SegFault when disabling ATTR_EMULATE_PREPARES and MySQL 8.0).</li>
+</ul></li>
+<li>MySQLi:
+<ul>
+  <li><?php bugfix(74779); ?> (x() and y() truncating floats to integers).</li>
+</ul></li>
+<li>Opcache:
+<ul>
+  <li><?php bugfix(80634); ?> (write_property handler of internal classes is skipped on preloaded JITted code).</li>
+  <li><?php bugfix(80682); ?> (opcache doesn't honour pcre.jit option).</li>
+  <li><?php bugfix(80742); ?> (Opcache JIT makes some boolean logic unexpectedly be true).</li>
+  <li><?php bugfix(80745); ?> (JIT produces Assert failure and UNKNOWN:0 var_dumps in code involving bitshifts).</li>
+</ul></li>
+<li>OpenSSL:
+<ul>
+  <li><?php bugfix(80747); ?> (Providing RSA key size &lt; 512 generates key that crash PHP).</li>
+</ul></li>
+<li>Phar:
+<ul>
+  <li><?php bugfix(75850); ?> (Unclear error message wrt. __halt_compiler() w/o semicolon) (cmb)</li>
+  <li><?php bugfix(70091); ?> (Phar does not mark UTF-8 filenames in ZIP archives).</li>
+  <li><?php bugfix(53467); ?> (Phar cannot compress large archives).</li>
+</ul></li>
+<li>Socket:
+<ul>
+  <li><?php bugfix(80723); ?> (Different sockets compare as equal (regression in 8.0)).</li>
+</ul></li>
+<li>SPL:
+<ul>
+  <li>Fixed bug#80719 (Iterating after failed ArrayObject::setIteratorClass() causes Segmentation fault).</li>
+</ul></li>
+<li>Standard:
+<ul>
+  <li><?php bugfix(80654); ?> (file_get_contents() maxlen fails above (2**31)-1 bytes).</li>
+  <li><?php bugfix(80718); ?> (ext/standard/dl.c fallback code path with syntax error).</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
+
+
 <section class="version" id="8.0.2"><!-- {{{ 8.0.2 -->
 <h3>Version 8.0.2</h3>
 <b><?php release_date('04-Feb-2021'); ?></b>
