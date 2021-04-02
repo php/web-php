@@ -72,16 +72,10 @@ site_header("Git Access", array("current" => "community"));
 <ol>
  <li>
   You can retrieve the PHP source code from our
-  <a href="https://github.com/php/php-src.git">GitHub mirror</a> with this
+  <a href="https://github.com/php/php-src.git">GitHub</a> with this
   command:
   <br><br>
   <code>git clone https://github.com/php/php-src.git</code>
-  <br><br>
-
-  Alternatively, you can retrieve the source code from
-  <a href="http://git.php.net/">git.php.net</a> with this command:
-  <br><br>
-  <code>git clone http://git.php.net/repository/php-src.git</code>
   <br><br>
 
   You can also download a snapshot from GitHub:<br><br>
@@ -148,7 +142,7 @@ site_header("Git Access", array("current" => "community"));
 <p>
  There are many other things, such as the XML source code
  for the documentation, available via Git. See
- <a href="http://git.php.net/">the web-based view of the Git
+ <a href="https://github.com/php/">the web-based view of the Git
  server</a> to see what is available.
 </p>
 
@@ -164,12 +158,9 @@ site_header("Git Access", array("current" => "community"));
 <h2>PHP manual</h2>
 
 <p>
- The PHP manual is still currently hosted on SVN, although it will be migrated
- to Git in the future. To checkout the latest English version of the PHP
+ The PHP manual is hosted on Git. To checkout the latest English version of the PHP
  manual:<br>
- <code>svn checkout https://svn.php.net/repository/phpdoc/modules/doc-en ./phpdoc-en</code>
- <br><br>
- You can also check the <a href="https://wiki.php.net/vcs/svnfaq">SVN FAQ on the wiki</a>.
+ <code>git clone https://github.com/php/doc-en.git ./phpdoc-en</code>
 </p>
 
 <h2>Historical issues</h2>

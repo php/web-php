@@ -143,21 +143,16 @@ site_header("A Tourist's Guide", array("current" => "help"));
  process.
 </p>
 
-<h2 id="git" class="content-header"><a href="http://git.php.net/">git.php.net</a>: Git Repository</h2>
+<h2 id="git" class="content-header"><a href="https://github.com/php/">github.com/php/</a>: Git Repository</h2>
 
 <div class="content-box">
 <p>
  The PHP project is organized with a Git server, and this website is the web
  interface to it. There you can browse the history (and latest versions) of the
  source code for all of the PHP projects. For example, the
- <a href="http://git.php.net/?p=php-src.git;a=summary">php-src</a> module is
+ <a href="https://github.com/php/php-src">php-src</a> module is
  the repository for the source code to the latest version of PHP itself.
  Checking out the source code can be done <a href="git.php">anonymously</a>.
-</p>
-<p>
- The Git repository is also mirrored on
- <a href="https://github.com/php/php-src">GitHub</a>, for those who would
- prefer to use GitHub's interface.
 </p>
 <p>
  Using <a href="http://lxr.php.net/">OpenGrok</a> is another option to view the
@@ -169,7 +164,7 @@ site_header("A Tourist's Guide", array("current" => "help"));
 
 <p class="content-box">
  The PHP project used to be organized under the SVN revision control system, but
- migrated to <a href="http://git.php.net/">Git</a> (see above) in March 2012.
+ migrated to <a href="https://github.com/php/">Git</a> (see above) in March 2012.
  The old SVN repository is archived here for posterity, however it's still used for
  i.e. documentation files.
 </p>

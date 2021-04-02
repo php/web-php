@@ -172,7 +172,7 @@ if (isset($_POST['maillist'])) {
 </ul>
 <p>
  And make sure you have read our
- <a href="//git.php.net/?p=php-src.git;a=blob_plain;f=docs/mailinglist-rules.md;hb=HEAD">Mailinglist Rules</a>.
+ <a href="https://github.com/php/php-src/raw/master/docs/mailinglist-rules.md">Mailinglist Rules</a>.
 </p>
 <?php
 
