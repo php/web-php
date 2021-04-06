@@ -277,21 +277,21 @@ VOTEDIV;
         $admin = "\n  <span class=\"admin\">\n   " .
 
         make_popup_link(
-            'https://master.php.net/manage/user-notes.php?action=edit+' . $id,
+            'https://main.php.net/manage/user-notes.php?action=edit+' . $id,
             '<img src="/images/notes-edit@2x.png" height="12" width="12" alt="edit note">',
             'admin',
             'scrollbars=yes,width=650,height=400'
         ) . "\n   " .
 
         make_popup_link(
-            'https://master.php.net/manage/user-notes.php?action=reject+' . $id,
+            'https://main.php.net/manage/user-notes.php?action=reject+' . $id,
             '<img src="/images/notes-reject@2x.png" height="12" width="12" alt="reject note">',
             'admin',
             'scrollbars=no,width=300,height=200'
         ) . "\n   " .
 
         make_popup_link(
-            'https://master.php.net/manage/user-notes.php?action=delete+' . $id,
+            'https://main.php.net/manage/user-notes.php?action=delete+' . $id,
             '<img src="/images/notes-delete@2x.png" height="12" width="12" alt="delete note">',
             'admin',
             'scrollbars=no,width=300,height=200'

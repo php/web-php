@@ -64,9 +64,9 @@ if (isset($_POST['maillist'])) {
         }
         $remote_addr = i2c_realip();
 
-        // Get in contact with master server to [un]subscribe the user
+        // Get in contact with main server to [un]subscribe the user
         $result = posttohost(
-            "http://master.php.net/entry/subscribe.php",
+            "http://main.php.net/entry/subscribe.php",
             array(
                 "request"  => $request,
                 "email"    => $_POST['email'],
