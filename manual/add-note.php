@@ -94,7 +94,7 @@ if ($process) {
 
         // Post the variables to the central user note script
         $result = posttohost(
-            "http://master.php.net/entry/user-note.php",
+            "https://main.php.net/entry/user-note.php",
             array(
                 'user'    => $user,
                 'note'    => $note,

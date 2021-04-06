@@ -12,7 +12,7 @@ $headerset = false;
 $BACKpage = htmlspecialchars(isset($_REQUEST['page']) ? $_REQUEST['page'] : '');
 $BACKid = htmlspecialchars(isset($_REQUEST['id']) ? $_REQUEST['id'] : '');
 $link = "/{$BACKpage}#{$BACKid}";
-$master_url = "http://master.php.net/entry/user-notes-vote.php";
+$master_url = "https://main.php.net/entry/user-notes-vote.php";
 
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
