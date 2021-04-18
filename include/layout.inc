@@ -500,9 +500,6 @@ function site_header($title = '', $config = array())
 
 
     $config["headsup"] = get_news_changes();
-    if (!$config["headsup"]) {
-        $config["headsup"] = get_near_usergroups();
-    }
 
     $lang = language_convert($config["lang"]);
     $curr = $config["current"];
@@ -552,59 +549,6 @@ function get_news_changes()
         $title = $NEWS_ENTRIES[0]["title"];
         return "<a href='{$link}'>{$title}</a>";
     }
-}
-function get_near_usergroups()
-{
-    global $COUNTRIES, $COUNTRY;
-
-    if (!myphpnet_showug()) {
-        return false;
-    }
-    if ($_SERVER["BASE_PAGE"] == "ug.php") {
-        return false;
-    }
-    if (isset($_COOKIE["LAST_UG"]) && $_COOKIE["LAST_UG"] >= $_SERVER["REQUEST_TIME"]) {
-        if (!isset($_GET["showug"])) {
-            return false;
-        }
-    }
-
-    $ugs = get_usergroups_in($COUNTRY);
-    $count = count($ugs);
-    if (!$count) {
-        return false;
-    }
-
-    return sprintf("There %s %d <a href='/ug.php?cc=%s'>PHP User Group%s in %s</a>, are you a member of your local UG?",
-        $count == 1 ? "is" : "are",
-        $count,
-        $COUNTRY,
-        $count == 1 ? "" : "s",
-        $COUNTRIES[$COUNTRY]
-    );
-
-
-}
-function get_usergroups_in($country, &$allcountries = array()) {
-    global $COUNTRY_ALPHA_2_TO_3;
-
-    $filename = $_SERVER["DOCUMENT_ROOT"] . "/backend/usergroups.json";
-
-    $matches = array();
-    $data = json_decode(file_get_contents($filename), true);
-    foreach($data["groups"] as $group) {
-        if (isset($group["country"])) {
-            $allcountries[$COUNTRY_ALPHA_2_TO_3[$group["country"]]] = 1;
-            if ($group["country"] == $country) {
-                $matches[] = $group;
-            }
-        }
-    }
-    usort($matches, function($first, $second){
-        return strnatcasecmp($first['name'], $second['name']);
-    });
-
-    return $matches;
 }
 
 function news_toc($sections = null) {
