@@ -35,7 +35,6 @@ header("Content-type: text/html; charset=utf-8");
         $headers = str_replace(array("\r", "\n", "\0"), "", $headers);
         header("Access-Control-Allow-Headers: $headers");
     }
-}
 })();
 
 /* Clickjacking workaround. Nothing should be in a frame so it could technically be 'deny'
