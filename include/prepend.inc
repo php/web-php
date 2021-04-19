@@ -12,7 +12,11 @@ header("Content-language: en");
 header("Content-type: text/html; charset=utf-8");
 
 /* Fix Silly Same Origin Policies */
-if (isset($_SERVER["HTTP_ORIGIN"])) {
+(function() {
+    if (!isset($_SERVER["HTTP_ORIGIN"])) {
+        return;
+    }
+
     $host = parse_url($_SERVER["HTTP_ORIGIN"]);
     if (strncmp(strrev($host["host"]), strrev("php.net"), strlen("php.net")) != 0) {
         if ($host["host"] != $_SERVER["SERVER_NAME"]) {
@@ -32,6 +36,8 @@ if (isset($_SERVER["HTTP_ORIGIN"])) {
         header("Access-Control-Allow-Headers: $headers");
     }
 }
+})();
+
 /* Clickjacking workaround. Nothing should be in a frame so it could technically be 'deny'
  * but it doesn't make any difference anyway */
 header("X-Frame-Options: SAMEORIGIN");
