@@ -91,21 +91,7 @@ The following official GnuPG keys of the current PHP Release Manager can be used
 to verify the tags:
 </p>
 
-<?php foreach ($RELEASES as $MAJOR => $major_releases): /* major releases loop start */
-        $releases = array_slice($major_releases, 0, $SHOW_COUNT);
-?>
-<?php foreach ($releases as $v => $_): ?>
-  <?php $branch = implode('.', array_slice(explode('.', $v), 0, 2)); ?>
-  <?php if (isset($GPG_KEYS[$branch])): ?>
-    <h3 id="gpg-<?php echo $branch; ?>" class="content-header">PHP <?php echo $branch; ?></h3>
-    <div class="content-box">
-      <pre>
-<?php echo $GPG_KEYS[$branch]; ?>
-      </pre>
-    </div>
-  <?php endif ?>
-<?php endforeach ?>
-<?php endforeach; /* major releases loop end */ ?>
+<?php gpg_key_show_keys(true /* activeOnly */); ?>
 
 <p>
   <a href="gpg-keys.php">

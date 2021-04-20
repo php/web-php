@@ -1,132 +1,148 @@
 ﻿<?php
+require __DIR__ . '/branches.inc';
+
 // GPG keys used for signing releases.
-$GPG_KEYS = array(
-/*pub   2048R/22FE5A12 2015-07-07 [expires: 2020-07-05]
-      Key fingerprint = D620 173D 6924 BA1C 2244  C7C4 1B6B 6676 22FE 5A12
-uid                  Kalle Sommer Nielsen (PHP) &lt;kalle@php.net&gt;
-*/
-    "8.0" => <<< GPG
-pub   4096R/70D12172 2017-04-14 [expires: 2024-04-21]
-      Key fingerprint = 1729 F839 38DA 44E2 7BA0  F4D3 DBDB 3974 70D1 2172
-uid                  Sara Golemon &lt;pollita@php.net&gt;
 
-pub   rsa4096 2020-05-09 [SC] [expires: 2024-05-08]
-      BFDD D286 4282 4F81 18EF  7790 9B67 A5C1 2229 118F
-uid           [ultimate] Gabriel Caruso (Release Manager) &lt;carusogabriel@php.net&gt;
-sub   rsa4096 2020-05-09 [E] [expires: 2024-05-08]
-GPG
-,
+function gpg_key_get(string $rm): ?string {
+    switch ($rm) {
+        case 'ab':
+            return
+                "pub   2048R/9C0D5763 2015-06-09 [expires: 2024-06-06]\n" .
+                "      Key fingerprint = 1A4E 8B72 77C4 2E53 DBA9  C7B9 BCAA 30EA 9C0D 5763\n" .
+                "uid                  Anatol Belski <ab@php.net>";
 
-    "7.4" => <<< GPG
-sec   rsa4096 2019-06-11 [SC] [expires: 2029-06-08]
-      5A52880781F755608BF815FC910DEB46F53EA312
-uid           [ultimate] Derick Rethans &lt;gpg@derickrethans.nl&gt;
-uid           [ultimate] Derick Rethans &lt;derick@derickrethans.nl&gt;
-uid           [ultimate] Derick Rethans (GitHub) &lt;github@derickrethans.nl&gt;
-uid           [ultimate] Derick Rethans (PHP) &lt;derick@php.net&gt;
-ssb   rsa4096 2019-06-11 [E] [expires: 2029-06-08]
+        case 'carusogabriel':
+            return
+                "pub   rsa4096 2020-05-09 [SC] [expires: 2024-05-08]\n" .
+                "      BFDD D286 4282 4F81 18EF  7790 9B67 A5C1 2229 118F\n" .
+                "uid           [ultimate] Gabriel Caruso (Release Manager) <carusogabriel@php.net>\n" .
+                "sub   rsa4096 2020-05-09 [E] [expires: 2024-05-08]";
 
-pub   rsa4096 2019-05-29 [SC] [expires: 2021-05-28]
-      4267 0A7F E4D0 441C 8E46  3234 9E4F DC07 4A4E F02D
-uid           [ultimate] Peter Kokot &lt;petk@php.net&gt;
-sub   rsa4096 2019-05-29 [E] [expires: 2021-05-28]
-GPG
-,
-    "7.3" => <<< GPG
-pub   rsa4096/118BCCB6 2018-06-05 [SC] [expires: 2022-06-04]
-      Key fingerprint = CBAF 69F1 73A0 FEA4 B537  F470 D66C 9593 118B CCB6
-uid                  Christoph M. Becker &lt;cmb@php.net&gt;
+        case 'cmb':
+            return
+                "pub   rsa4096/118BCCB6 2018-06-05 [SC] [expires: 2022-06-04]\n" .
+                "      Key fingerprint = CBAF 69F1 73A0 FEA4 B537  F470 D66C 9593 118B CCB6\n" .
+                "uid                  Christoph M. Becker <cmb@php.net>";
 
-pub   2048D/5DA04B5D 2012-03-19
-      Key fingerprint = F382 5282 6ACD 957E F380  D39F 2F79 56BC 5DA0 4B5D
-uid                  Stanislav Malyshev (PHP key) &lt;smalyshev@gmail.com&gt;
-uid                  Stanislav Malyshev (PHP key) &lt;stas@php.net&gt;
-uid                  Stanislav Malyshev (PHP key) &lt;smalyshev@sugarcrm.com&gt;
-GPG
-,
-    "7.2" => <<< GPG
-pub   4096R/70D12172 2017-04-14 [expires: 2024-04-21]
-      Key fingerprint = 1729 F839 38DA 44E2 7BA0  F4D3 DBDB 3974 70D1 2172
-uid                  Sara Golemon &lt;pollita@php.net&gt;
+        case 'davey':
+            return
+                "pub   4096R/7BD5DCD0 2016-05-07\n" .
+                "      Key fingerprint = A917 B1EC DA84 AEC2 B568 FED6 F50A BC80 7BD5 DCD0\n" .
+                "uid                  Davey Shafik <davey@php.net>";
 
-pub   4096R/EE5AF27F 2017-05-24 [expires: 2024-05-22]
-      Key fingerprint = B1B4 4D8F 021E 4E2D 6021  E995 DC9F F8D3 EE5A F27F
-uid                  Remi Collet &lt;remi@php.net&gt;
+        case 'derick':
+            return
+                "sec   rsa4096 2019-06-11 [SC] [expires: 2029-06-08]\n" .
+                "      5A52880781F755608BF815FC910DEB46F53EA312\n" .
+                "uid           [ultimate] Derick Rethans <gpg@derickrethans.nl>\n" .
+                "uid           [ultimate] Derick Rethans <derick@derickrethans.nl>\n" .
+                "uid           [ultimate] Derick Rethans (GitHub) <github@derickrethans.nl>\n" .
+                "uid           [ultimate] Derick Rethans (PHP) <derick@php.net>\n" .
+                "ssb   rsa4096 2019-06-11 [E] [expires: 2029-06-08]";
 
-pub   rsa4096/118BCCB6 2018-06-05 [SC] [expires: 2022-06-04]
-      Key fingerprint = CBAF 69F1 73A0 FEA4 B537  F470 D66C 9593 118B CCB6
-uid                  Christoph M. Becker &lt;cmb@php.net&gt;
-GPG
-,
-    "7.1" => <<< GPG
-pub   4096R/7BD5DCD0 2016-05-07
-      Key fingerprint = A917 B1EC DA84 AEC2 B568 FED6 F50A BC80 7BD5 DCD0
-uid                  Davey Shafik &lt;davey@php.net&gt;
+        case 'dsp':
+            return
+                "pub   4096R/7267B52D 2012-03-20 [expires: 2016-03-19]\n" .
+                "      Key fingerprint = 0B96 609E 270F 565C 1329  2B24 C13C 70B8 7267 B52D\n" .
+                "uid                  David Soria Parra <dsp@php.net>";
 
-pub   2048R/31CBD89E 2016-12-08
-      Key fingerprint = 5289 95BF EDFB A719 1D46  839E F9BA 0ADA 31CB D89E
-uid                  Joe Watkins &lt;krakjoe@php.net&gt;
+        case 'johannes':
+            return
+                "pub   2048R/FC9C83D7 2012-03-18 [expires: 2017-03-17]\n" .
+                "      Key fingerprint = 0A95 E9A0 2654 2D53 835E  3F3A 7DEC 4E69 FC9C 83D7\n" .
+                "uid                  Johannes Schlüter <johannes@schlueters.de>\n" .
+                "uid                  Johannes Schlüter <johannes@php.net>";
 
-pub   4096R/70D12172 2017-04-14 [expires: 2024-04-21]
-      Key fingerprint = 1729 F839 38DA 44E2 7BA0  F4D3 DBDB 3974 70D1 2172
-uid                  Sara Golemon &lt;pollita@php.net&gt;
+        case 'jpauli':
+            return
+                "pub   2048R/90D90EC1 2013-07-18 [expire : 2016-07-17]\n" .
+                "      Key fingerprint = 0BD7 8B5F 9750 0D45 0838  F95D FE85 7D9A 90D9 0EC1\n" .
+                "uid                  Julien Pauli <jpauli@php.net>";
 
-GPG
-,
-    "7.0" => <<< GPG
-pub   2048R/9C0D5763 2015-06-09 [expires: 2024-06-06]
-      Key fingerprint = 1A4E 8B72 77C4 2E53 DBA9  C7B9 BCAA 30EA 9C0D 5763
-uid                  Anatol Belski &lt;ab@php.net&gt;
+        case 'krakjoe':
+            return
+                "pub   2048R/31CBD89E 2016-12-08\n" .
+                "      Key fingerprint = 5289 95BF EDFB A719 1D46  839E F9BA 0ADA 31CB D89E\n" .
+                "uid                  Joe Watkins <krakjoe@php.net>";
 
-pub   2048R/33CFC8B3 2014-01-14 [expires: 2020-01-13]
-      Key fingerprint = 6E4F 6AB3 21FD C07F 2C33  2E3A C2BF 0BC4 33CF C8B3
-uid                  Ferenc Kovacs &lt;tyrael@php.net&gt;
+        case 'petk':
+            return
+                "pub   rsa4096 2019-05-29 [SC] [expires: 2021-05-28]\n" .
+                "      4267 0A7F E4D0 441C 8E46  3234 9E4F DC07 4A4E F02D\n" .
+                "uid           [ultimate] Peter Kokot <petk@php.net>\n" .
+                "sub   rsa4096 2019-05-29 [E] [expires: 2021-05-28]";
 
-GPG
-,
-    "5.6" => <<< GPG
-pub   2048R/33CFC8B3 2014-01-14 [expires: 2020-01-13]
-      Key fingerprint = 6E4F 6AB3 21FD C07F 2C33  2E3A C2BF 0BC4 33CF C8B3
-uid                  Ferenc Kovacs &lt;tyrael@php.net&gt;
+        case 'pollita':
+            return
+                "pub   4096R/70D12172 2017-04-14 [expires: 2024-04-21]\n" .
+                "      Key fingerprint = 1729 F839 38DA 44E2 7BA0  F4D3 DBDB 3974 70D1 2172\n" .
+                "uid                  Sara Golemon <pollita@php.net>";
 
-pub   2048R/90D90EC1 2013-07-18 [expire : 2016-07-17]
-      Key fingerprint = 0BD7 8B5F 9750 0D45 0838  F95D FE85 7D9A 90D9 0EC1
-uid                  Julien Pauli &lt;jpauli@php.net&gt;
+        case 'remi':
+            return
+                "pub   4096R/EE5AF27F 2017-05-24 [expires: 2024-05-22]\n" .
+                "      Key fingerprint = B1B4 4D8F 021E 4E2D 6021  E995 DC9F F8D3 EE5A F27F\n" .
+                "uid                  Remi Collet <remi@php.net>";
 
-GPG
-,
-    "5.5" => <<< GPG
-pub   2048R/90D90EC1 2013-07-18 [expire : 2016-07-17]
-      Key fingerprint = 0BD7 8B5F 9750 0D45 0838  F95D FE85 7D9A 90D9 0EC1
-uid                  Julien Pauli &lt;jpauli@php.net&gt;
+        case 'stas':
+            return
+                "pub   2048D/5DA04B5D 2012-03-19\n" .
+                "      Key fingerprint = F382 5282 6ACD 957E F380  D39F 2F79 56BC 5DA0 4B5D\n" .
+                "uid                  Stanislav Malyshev (PHP key) <smalyshev@gmail.com>\n" .
+                "uid                  Stanislav Malyshev (PHP key) <stas@php.net>\n" .
+                "uid                  Stanislav Malyshev (PHP key) <smalyshev@sugarcrm.com>";
 
-pub   4096R/7267B52D 2012-03-20 [expires: 2016-03-19]
-      Key fingerprint = 0B96 609E 270F 565C 1329  2B24 C13C 70B8 7267 B52D
-uid                  David Soria Parra &lt;dsp@php.net&gt;
+        case 'tyrael':
+            return
+                "pub   2048R/33CFC8B3 2014-01-14 [expires: 2020-01-13]\n" .
+                "      Key fingerprint = 6E4F 6AB3 21FD C07F 2C33  2E3A C2BF 0BC4 33CF C8B3\n" .
+                "uid                  Ferenc Kovacs <tyrael@php.net>";
 
-pub   2048D/5DA04B5D 2012-03-19
-      Key fingerprint = F382 5282 6ACD 957E F380  D39F 2F79 56BC 5DA0 4B5D
-uid                  Stanislav Malyshev (PHP key) &lt;smalyshev@gmail.com&gt;
-uid                  Stanislav Malyshev (PHP key) &lt;stas@php.net&gt;
-uid                  Stanislav Malyshev (PHP key) &lt;smalyshev@sugarcrm.com&gt;
+        default:
+            return null;
+    }
+}
 
-GPG
-,
-    "5.4" => <<< GPG
-pub   2048D/5DA04B5D 2012-03-19
-      Key fingerprint = F382 5282 6ACD 957E F380  D39F 2F79 56BC 5DA0 4B5D
-uid                  Stanislav Malyshev (PHP key) &lt;smalyshev@gmail.com&gt;
-uid                  Stanislav Malyshev (PHP key) &lt;stas@php.net&gt;
-uid                  Stanislav Malyshev (PHP key) &lt;smalyshev@sugarcrm.com&gt;
-GPG
-,
-    "5.3" => <<< GPG
-pub   4096R/7267B52D 2012-03-20 [expires: 2016-03-19]
-      Key fingerprint = 0B96 609E 270F 565C 1329  2B24 C13C 70B8 7267 B52D
-uid                  David Soria Parra &lt;dsp@php.net&gt;
-pub   2048R/FC9C83D7 2012-03-18 [expires: 2017-03-17]
-      Key fingerprint = 0A95 E9A0 2654 2D53 835E  3F3A 7DEC 4E69 FC9C 83D7
-uid                  Johannes Schlüter &lt;johannes@schlueters.de&gt;
-uid                  Johannes Schlüter &lt;johannes@php.net&gt;
-GPG
-);
+function gpg_key_get_branches(bool $activeOnly): array {
+    $branches = [
+        '8.0' => [ 'pollita', 'carusogabriel' ],
+        '7.4' => [ 'derick', 'petk' ],
+        '7.3' => [ 'cmb', 'stas' ],
+        '7.2' => [ 'pollita', 'remi', 'cmb' ],
+        '7.1' => [ 'davey', 'krakjoe', 'pollita' ],
+        '7.0' => [ 'ab', 'tyrael' ],
+        '5.6' => [ 'tyrael', 'jpauli' ],
+        '5.5' => [ 'jpauli', 'dsp', 'stas' ],
+        '5.4' => [ 'stas' ],
+        '5.3' => [ 'dsp', 'johannes' ],
+    ];
+
+    if (!$activeOnly) { return $branches; }
+
+    $active = get_active_branches();
+    return array_filter($branches, function($branch) use ($active) {
+        [$major] = explode('.', $branch, 2);
+        return isset($active[$major][$branch]);
+    }, ARRAY_FILTER_USE_KEY);
+}
+
+function gpg_key_show_keys(bool $activeOnly): void {
+    $branches = gpg_key_get_branches($activeOnly);
+
+    foreach (gpg_key_get_branches($activeOnly) as $branch => $rms) {
+        $keys = array_filter(
+            array_map(function($rm) { return gpg_key_get($rm); }, $rms),
+            function($key) { return $key !== null; });
+        if (empty($keys)) { continue; }
+
+        $branch = htmlentities($branch, ENT_QUOTES, 'UTF-8');
+        $keys = htmlentities(implode("\n\n", $keys), ENT_QUOTES, 'UTF-8');
+
+        echo "<h3 id='gpg-$branch' class='content-header'>PHP $branch</h3>\n";
+        echo "<div class='content-box'>\n";
+        echo "  <pre>\n";
+        echo $keys, "\n";
+        echo "  </pre>\n";
+        echo "</div>\n\n\n";
+    }
+}
