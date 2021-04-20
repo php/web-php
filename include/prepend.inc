@@ -11,6 +11,9 @@
 header("Content-language: en");
 header("Content-type: text/html; charset=utf-8");
 
+// Opt out of FLoC
+header("Permissions-Policy: interest-cohort=()");
+
 /* Fix Silly Same Origin Policies */
 (function() {
     if (!isset($_SERVER["HTTP_ORIGIN"])) {
