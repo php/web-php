@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom" xmlns:default="http://php.net/ns/news">
+  <title>phpday 2021 digital edition</title>
+  <id>https://www.php.net/archive/2021.php#2021-04-22-1</id>
+  <published>2021-04-22T09:24:11+02:00</published>
+  <updated>2021-04-22T09:24:11+02:00</updated>
+  <link href="https://www.php.net/conferences/index.php#id2021-04-22-1" rel="alternate" type="text/html"/>
+  <link href="https://2021.phpday.it/" rel="via" type="text/html"/>
+  <default:finalTeaserDate xmlns="http://php.net/ns/news">2021-06-08</default:finalTeaserDate>
+  <category term="conferences" label="Conference announcement"/>
+  <default:newsImage xmlns="http://php.net/ns/news" link="https://2021.phpday.it/" title="phpday 2021, june 8-9 2021">phpday2021.png</default:newsImage>
+  <content type="xhtml">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+      <p>The Italian PHP user group GrUSP is pleased to announce the <b><a href="https://2021.phpday.it/">18th edition</a></b> of <b>phpday</b>, in its digital edition, taking place on June 8-9th, 2021. </p>
+      <p>It is the first historic Italian conference dedicated to PHP development, technologies and management. It is aimed to IT managers, developers and innovators. Each year it renews the opportunity to link to new business partners.</p>
+      <p>Our <a href="https://cfp.phpday.it/">CFP</a> will be open until Apr 25th and the speaker line up will be announced soon after.</p>
+      <p>Don't miss the opportunity to take part to this amazing event with international speakers from all over the world</p>
+      <p>Follow us on <a href="https://twitter.com/phpday">twitter</a> and <a href="http://facebook.com/phpday/">facebook</a></p>
+    </div>
+  </content>
+</entry>
