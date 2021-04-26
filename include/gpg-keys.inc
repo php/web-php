@@ -78,6 +78,13 @@ function gpg_key_get(string $rm): ?string {
                 "      Key fingerprint = 1729 F839 38DA 44E2 7BA0  F4D3 DBDB 3974 70D1 2172\n" .
                 "uid                  Sara Golemon <pollita@php.net>";
 
+        case 'ramsey':
+            return
+                "pub   rsa4096 2021-04-26 [SC] [expires: 2024-11-26]\n" .
+                "      39B6 4134 3D8C 104B 2B14  6DC3 F9C3 9DC0 B969 8544\n" .
+                "uid           [ultimate] Ben Ramsey <ramsey@php.net>\n" .
+                "sub   rsa4096 2021-04-26 [E] [expires: 2024-11-26]";
+
         case 'remi':
             return
                 "pub   4096R/EE5AF27F 2017-05-24 [expires: 2024-05-22]\n" .
@@ -105,6 +112,7 @@ function gpg_key_get(string $rm): ?string {
 
 function gpg_key_get_branches(bool $activeOnly): array {
     $branches = [
+        '8.1' => [ 'krakjoe', 'ramsey' ],
         '8.0' => [ 'pollita', 'carusogabriel' ],
         '7.4' => [ 'derick', 'petk' ],
         '7.3' => [ 'cmb', 'stas' ],
