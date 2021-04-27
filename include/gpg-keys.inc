@@ -65,6 +65,13 @@ function gpg_key_get(string $rm): ?string {
                 "      Key fingerprint = 5289 95BF EDFB A719 1D46  839E F9BA 0ADA 31CB D89E\n" .
                 "uid                  Joe Watkins <krakjoe@php.net>";
 
+        case 'patrickallaert':
+            return
+                "pub   rsa4096 2021-04-01 [SC]\n" .
+                "      F1F6 9223 8FBC 1666 E5A5  CCD4 199F 9DFE F6FF BAFD\n" .
+                "uid           [ultimate] Patrick Allaert <patrickallaert@php.net>\n" .
+                "sub   rsa4096 2021-04-01 [E]";
+
         case 'petk':
             return
                 "pub   rsa4096 2019-05-29 [SC] [expires: 2021-05-28]\n" .
