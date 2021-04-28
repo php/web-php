@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom" xmlns:default="http://php.net/ns/news">
+  <title>Web Summer Camp 2021</title>
+  <id>https://www.php.net/archive/2021.php#2021-04-28-1</id>
+  <published>2021-04-28T10:33:02+02:00</published>
+  <updated>2021-04-28T10:33:02+02:00</updated>
+  <link href="https://www.php.net/conferences/index.php#id2021-04-28-1" rel="alternate" type="text/html"/>
+  <link href="https://2021.websummercamp.com/" rel="via" type="text/html"/>
+  <default:finalTeaserDate xmlns="http://php.net/ns/news">2021-09-02</default:finalTeaserDate>
+  <category term="conferences" label="Conference announcement"/>
+  <default:newsImage xmlns="http://php.net/ns/news" link="https://2021.websummercamp.com/" title="Web Summer Camp logo">websc.svg</default:newsImage>
+  <content type="xhtml">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+<p>Web Summer Camp is a conference with hands-on workshops for web developers, designers and decision-makers. Besides 2 tracks about UX/PM processes and web technologies there will be 3 tracks for non-beginner developers with hands-on workshops on topics related to JavaScript, PHP and Symfony. Take home practical knowhow on relevant tools and techniques useful in your every day work and join us in person this summer on the Croatian coast.</p>
+
+<p>All the information on this year's event you can find <a href="https://2021.websummercamp.com/">on our web site</a>.</p>
+    </div>
+  </content>
+</entry>
