@@ -10,6 +10,103 @@ site_header("PHP 8 ChangeLog", array("current" => "docs", "css" => array("change
 
 <a name="PHP_8_0"></a>
 
+<section class="version" id="8.0.5"><!-- {{{ 8.0.5 -->
+<h3>Version 8.0.5</h3>
+<b><?php release_date('29-Apr-2021'); ?></b>
+<ul><li>Core:
+<ul>
+  <li><?php bugfix(75776); ?> (Flushing streams with compression filter is broken).</li>
+  <li><?php bugfix(80811); ?> (Function exec without $output but with $restult_code parameter crashes).</li>
+  <li><?php bugfix(80814); ?> (threaded mod_php won't load on FreeBSD: No space available for static Thread Local Storage).</li>
+  <li>Changed PowerPC CPU registers used by Zend VM to work around GCC bug. Old registers (r28/r29) might be clobbered by _restgpr routine used for return from C function compiled with -Os.</li>
+</ul></li>
+<li>Dba:
+<ul>
+  <li><?php bugfix(80817); ?> (dba_popen() may cause segfault during RSHUTDOWN).</li>
+</ul></li>
+<li>DOM:
+<ul>
+  <li><?php bugfix(66783); ?> (UAF when appending DOMDocument to element).</li>
+</ul></li>
+<li>FFI:
+<ul>
+  <li><?php bugfix(80847); ?> (CData structs with fields of type struct can't be passed as C function argument).</li>
+</ul></li>
+<li>FPM:
+<ul>
+  <li><?php bugfix(80024); ?> (Duplication of info about inherited socket after pool removing).</li>
+</ul></li>
+<li>FTP:
+<ul>
+  <li><?php bugfix(80880); ?> (SSL_read on shutdown, ftp/proc_open).</li>
+</ul></li>
+<li>IMAP:
+<ul>
+  <li><?php bugfix(80800); ?> (imap_open() fails when the flags parameter includes CL_EXPUNGE).</li>
+  <li><?php bugfix(80710); ?> (imap_mail_compose() header injection).</li>
+</ul></li>
+<li>Intl:
+<ul>
+  <li><?php bugfix(80763); ?> (msgfmt_format() does not accept DateTime references).</li>
+</ul></li>
+<li>LibXML:
+<ul>
+  <li><?php bugfix(73533); ?> (Invalid memory access in php_libxml_xmlCheckUTF8).</li>
+  <li><?php bugfix(51903); ?> (simplexml_load_file() doesn't use HTTP headers).</li>
+</ul></li>
+<li>MySQLnd:
+<ul>
+  <li><?php bugfix(80837); ?> (Calling stmt_store_result after fetch doesn't throw an error).</li>
+</ul></li>
+<li>Opcache:
+<ul>
+  <li><?php bugfix(80839); ?> (PHP problem with JIT).</li>
+  <li><?php bugfix(80861); ?> (erronous array key overflow in 2D array with JIT).</li>
+  <li><?php bugfix(80786); ?> (PHP crash using JIT).</li>
+  <li><?php bugfix(80782); ?> (DASM_S_RANGE_VREG on PHP_INT_MIN-1).</li>
+</ul></li>
+<li>Pcntl:
+<ul>
+  <li><?php bugfix(79812); ?> (Potential integer overflow in pcntl_exec()).</li>
+</ul></li>
+<li>PCRE:
+<ul>
+  <li><?php bugfix(80866); ?> (preg_split ignores limit flag when pattern with \K has 0-width fullstring match).</li>
+</ul></li>
+<li>PDO_ODBC:
+<ul>
+  <li><?php bugfix(80783); ?> (PDO ODBC truncates BLOB records at every 256th byte).</li>
+</ul></li>
+<li>PDO_pgsql:
+<ul>
+  <li><?php bugfix(80892); ?> (PDO::PARAM_INT is treated the same as PDO::PARAM_STR).</li>
+</ul></li>
+<li>Session:
+<ul>
+  <li><?php bugfix(80889); ?> (Cannot set save handler when save_handler is invalid).</li>
+  <li><?php bugfix(80774); ?> (session_name() problem with backslash).</li>
+</ul></li>
+<li>SOAP:
+<ul>
+  <li><?php bugfix(69668); ?> (SOAP special XML characters in namespace URIs not encoded).</li>
+</ul></li>
+<li>Standard:
+<ul>
+  <li><?php bugfix(80915); ?> (Taking a reference to $_SERVER hides its values from phpinfo()).</li>
+  <li><?php bugfix(80914); ?> ('getdir' accidentally defined as an alias of 'dir').</li>
+  <li><?php bugfix(80771); ?> (phpinfo(INFO_CREDITS) displays nothing in CLI).</li>
+  <li><?php bugfix(78719); ?> (http wrapper silently ignores long Location headers).</li>
+  <li><?php bugfix(80838); ?> (HTTP wrapper waits for HTTP 1 response after HTTP 101).</li>
+</ul></li>
+<li>Zip:
+<ul>
+  <li><?php bugfix(80825); ?> (ZipArchive::isCompressionMethodSupported does not exist).</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
+
+
 <section class="version" id="8.0.3"><!-- {{{ 8.0.3 -->
 <h3>Version 8.0.3</h3>
 <b><?php release_date('04-Mar-2021'); ?></b>
