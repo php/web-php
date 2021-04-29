@@ -1418,6 +1418,18 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
 
 <a name="PHP_7_3"></a>
 
+<section class="version" id="7.3.28"><!-- {{{ 7.3.28 -->
+<h3>Version 7.3.28</h3>
+<b><?php release_date('29-Apr-2021'); ?></b>
+<ul><li>Imap:
+<ul>
+  <li><?php bugfix(80710); ?> (imap_mail_compose() header injection).</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
+
+
 <section class="version" id="7.3.27"><!-- {{{ 7.3.27 -->
 <h3>Version 7.3.27</h3>
 <b><?php release_date('04-Feb-2021'); ?></b>
