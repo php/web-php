@@ -12,6 +12,121 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
 
 <a name="PHP_7_4"></a>
 
+<section class="version" id="7.4.18"><!-- {{{ 7.4.18 -->
+<h3>Version 7.4.18</h3>
+<b><?php release_date('29-Apr-2021'); ?></b>
+<ul><li>Core:
+<ul>
+  <li><?php bugfix(80781); ?> (Error handler that throws ErrorException infinite loop).</li>
+  <li><?php bugfix(75776); ?> (Flushing streams with compression filter is broken). (cmb) 04 Mar 2021, php 7.4.16</li>
+  <li>Fixed #80706 (mail(): Headers after Bcc headers may be ignored).</li>
+</ul></li>
+<li>Dba:
+<ul>
+  <li><?php bugfix(80817); ?> (dba_popen() may cause segfault during RSHUTDOWN).</li>
+</ul></li>
+<li>DOM:
+<ul>
+  <li><?php bugfix(66783); ?> (UAF when appending DOMDocument to element).</li>
+</ul></li>
+<li>FPM:
+<ul>
+  <li><?php bugfix(80024); ?> (Duplication of info about inherited socket after pool removing).</li>
+</ul></li>
+<li>FTP:
+<ul>
+  <li><?php bugfix(80880); ?> (SSL_read on shutdown, ftp/proc_open).</li>
+</ul></li>
+<li>Imap:
+<ul>
+  <li><?php bugfix(80710); ?> (imap_mail_compose() header injection).</li>
+</ul></li>
+<li>Intl:
+<ul>
+  <li><?php bugfix(80763); ?> (msgfmt_format() does not accept DateTime references).</li>
+</ul></li>
+<li>LibXML:
+<ul>
+  <li><?php bugfix(51903); ?> (simplexml_load_file() doesn't use HTTP headers).</li>
+  <li><?php bugfix(73533); ?> (Invalid memory access in php_libxml_xmlCheckUTF8).</li>
+</ul></li>
+<li>MySQLnd:
+<ul>
+  <li><?php bugfix(80713); ?> (SegFault when disabling ATTR_EMULATE_PREPARES and MySQL 8.0).</li>
+  <li><?php bugfix(80837); ?> (Calling stmt_store_result after fetch doesn't throw an error).</li>
+  <li><?php bugfix(78680); ?> (mysqlnd's mysql_clear_password does not transmit null-terminated password).</li>
+</ul></li>
+<li>Opcache:
+<ul>
+  <li><?php bugfix(80805); ?> (create simple class and get error in opcache.so).</li>
+  <li><?php bugfix(80950); ?> (Variables become null in if statements).</li>
+</ul></li>
+<li>Pcntl:
+<ul>
+  <li><?php bugfix(79812); ?> (Potential integer overflow in pcntl_exec()).</li>
+</ul></li>
+<li>PCRE:
+<ul>
+  <li><?php bugfix(80866); ?> (preg_split ignores limit flag when pattern with \K has 0-width fullstring match).</li>
+</ul></li>
+<li>PDO_ODBC:
+<ul>
+  <li><?php bugfix(80783); ?> (PDO ODBC truncates BLOB records at every 256th byte).</li>
+</ul></li>
+<li>PDO_pgsql:
+<ul>
+  <li><?php bugfix(80892); ?> (PDO::PARAM_INT is treated the same as PDO::PARAM_STR).</li>
+</ul></li>
+<li>phpdbg:
+<ul>
+  <li><?php bugfix(80757); ?> (Exit code is 0 when could not open file).</li>
+</ul></li>
+<li>Session:
+<ul>
+  <li><?php bugfix(80774); ?> (session_name() problem with backslash).</li>
+  <li><?php bugfix(80889); ?> (Cannot set save handler when save_handler is invalid).</li>
+</ul></li>
+<li>SOAP:
+<ul>
+  <li><?php bugfix(69668); ?> (SOAP special XML characters in namespace URIs not encoded).</li>
+</ul></li>
+<li>Standard:
+<ul>
+  <li><?php bugfix(78719); ?> (http wrapper silently ignores long Location headers).</li>
+  <li><?php bugfix(80771); ?> (phpinfo(INFO_CREDITS) displays nothing in CLI).</li>
+  <li><?php bugfix(80838); ?> (HTTP wrapper waits for HTTP 1 response after HTTP 101).</li>
+  <li><?php bugfix(80915); ?> (Taking a reference to $_SERVER hides its values from phpinfo()).</li>
+  <li><?php bugfix(80654); ?> (file_get_contents() maxlen fails above (2**31)-1 bytes).</li>
+</ul></li>
+<li>MySQLi:
+<ul>
+  <li><?php bugfix(74779); ?> (x() and y() truncating floats to integers).</li>
+</ul></li>
+<li>OPcache:
+<ul>
+  <li><?php bugfix(80682); ?> (opcache doesn't honour pcre.jit option).</li>
+</ul></li>
+<li>OpenSSL:
+<ul>
+  <li><?php bugfix(80747); ?> (Providing RSA key size &lt; 512 generates key that crash PHP).</li>
+</ul></li>
+<li>Phar:
+<ul>
+  <li><?php bugfix(75850); ?> (Unclear error message wrt. __halt_compiler() w/o semicolon) (cmb)</li>
+  <li><?php bugfix(70091); ?> (Phar does not mark UTF-8 filenames in ZIP archives).</li>
+  <li><?php bugfix(53467); ?> (Phar cannot compress large archives).</li>
+</ul></li>
+<li>SPL:
+<ul>
+  <li>Fixed bug#80719 (Iterating after failed ArrayObject::setIteratorClass() causes Segmentation fault).</li>
+</ul></li>
+<li>Zip:
+<ul>
+  <li><?php bugfix(80648); ?> (Fix for bug 79296 should be based on runtime version).</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
 <section class="version" id="7.4.16"><!-- {{{ 7.4.16 -->
 <h3>Version 7.4.16</h3>
 <b><?php release_date('04-Mar-2021'); ?></b>

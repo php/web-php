@@ -1,34 +1,34 @@
 <?php
 $OLDRELEASES = array (
-  8 =>
+  8 => 
   array (
-    '8.0.5' =>
+    '8.0.5' => 
     array (
-      'announcement' =>
+      'announcement' => 
       array (
         'English' => '/releases/8_0_5.php',
       ),
-      'tags' =>
+      'tags' => 
       array (
       ),
       'date' => '29 Apr 2021',
-      'source' =>
+      'source' => 
       array (
-        0 =>
+        0 => 
         array (
           'filename' => 'php-8.0.5.tar.gz',
           'name' => 'PHP 8.0.5 (tar.gz)',
           'sha256' => '50aeac6fe9c2b5577d534369392ebb89c3e7a342b20ef538832b1df996cccb2a',
           'date' => '29 Apr 2021',
         ),
-        1 =>
+        1 => 
         array (
           'filename' => 'php-8.0.5.tar.bz2',
           'name' => 'PHP 8.0.5 (tar.bz2)',
           'sha256' => '195d934febefaac3b19ac586679149759324a434411ae8aca6f7d87553ef08e0',
           'date' => '29 Apr 2021',
         ),
-        2 =>
+        2 => 
         array (
           'filename' => 'php-8.0.5.tar.xz',
           'name' => 'PHP 8.0.5 (tar.xz)',
@@ -149,6 +149,42 @@ $OLDRELEASES = array (
   ),
   7 => 
   array (
+    '7.4.16' => 
+    array (
+      'announcement' => 
+      array (
+        'English' => '/releases/7_4_16.php',
+      ),
+      'tags' => 
+      array (
+      ),
+      'date' => '04 Mar 2021',
+      'source' => 
+      array (
+        0 => 
+        array (
+          'filename' => 'php-7.4.16.tar.gz',
+          'name' => 'PHP 7.4.16 (tar.gz)',
+          'sha256' => 'ef2d2b463fc3444895ec599337b663a8832c6ade148d9832417e59aa2b9e93da',
+          'date' => '04 Mar 2021',
+        ),
+        1 => 
+        array (
+          'filename' => 'php-7.4.16.tar.bz2',
+          'name' => 'PHP 7.4.16 (tar.bz2)',
+          'sha256' => '85710f007cfd0fae94e13a02a3a036f4e81ef43693260cae8a2e1ca93659ce3e',
+          'date' => '04 Mar 2021',
+        ),
+        2 => 
+        array (
+          'filename' => 'php-7.4.16.tar.xz',
+          'name' => 'PHP 7.4.16 (tar.xz)',
+          'sha256' => '1c16cefaf88ded4c92eed6a8a41eb682bb2ef42429deb55f1c4ba159053fb98b',
+          'date' => '04 Mar 2021',
+        ),
+      ),
+      'museum' => false,
+    ),
     '7.3.27' => 
     array (
       'announcement' => 
