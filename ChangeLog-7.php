@@ -12,6 +12,18 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
 
 <a name="PHP_7_4"></a>
 
+<section class="version" id="7.4.19"><!-- {{{ 7.4.19 -->
+<h3>Version 7.4.19</h3>
+<b><?php release_date('06-May-2021'); ?></b>
+<ul><li>PDO_pgsql:
+<ul>
+  <li>Reverted bug fix for #80892 (PDO::PARAM_INT is treated the same as PDO::PARAM_STR).</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
+
+
 <section class="version" id="7.4.18"><!-- {{{ 7.4.18 -->
 <h3>Version 7.4.18</h3>
 <b><?php release_date('29-Apr-2021'); ?></b>
