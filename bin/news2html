@@ -69,8 +69,8 @@ foreach($entries as $module => $items) {
 		$item = htmlspecialchars($item, ENT_NOQUOTES);
 		// convert bug numbers
 		$item = preg_replace(
-			array('/Fixed bug #([0-9]+)/', '/Fixed PECL bug #([0-9]+)/', '/FR #([0-9]+)/'),
-			array('<?php bugfix(\1); ?>', '<?php peclbugfix(\1); ?>', 'FR <?php bugl(\1); ?>'),
+			array('/Fixed bug #([0-9]+)/', '/Fixed PECL bug #([0-9]+)/', '/Implemented FR #([0-9]+)/', '/GitHub PR #([0-9]+)/'),
+			array('<?php bugfix(\1); ?>', '<?php peclbugfix(\1); ?>', '<?php implemented(\1); ?>', '<?php githubissuel(\'php/php-src\',\1); ?>'),
 			$item
 		);
 		echo "  <li>$item</li>\n";

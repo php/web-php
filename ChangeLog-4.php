@@ -33,7 +33,7 @@ site_header("PHP 4 ChangeLog", array("current" => "docs", "css" => array("change
 <li>Improved fix for MOPB-02-2007.</li>
 <li>Fixed an integer overflow inside chunk_split(). Identified by Gerhard Wagner.</li>
 <li>Fixed integer overlow in str[c]spn().</li>
-<li>Fixed regression in glob when open_basedir is on introduced by #41655 fix.</li>
+<li>Fixed regression in glob when open_basedir is on introduced by <?php bugl(41655); ?> fix.</li>
 <li>Fixed money_format() not to accept multiple %i or %n tokens.</li>
 <li>Added "max_input_nesting_level" php.ini option to limit nesting level of input variables. Fix for MOPB-03-2007.</li>
 <li>Fixed INFILE LOCAL option handling with MySQL - now not allowed when open_basedir or safe_mode is active.</li>
@@ -201,7 +201,7 @@ There is a <a href="release_4_4_3.php">separate announcement</a> available for t
 <li><?php bugfix(35571); ?> (Fixed crash in Apache 2 SAPI when more then one php script is loaded via SSI include).</li>
 <li><?php bugfix(35536); ?> (mysql_field_type() doesn't handle NEWDECIMAL).</li>
 <li><?php bugfix(35410); ?> (wddx_deserialize() doesn't handle large ints as keys properly).</li>
-<li><?php bugfix(35341); ?> (Fix for bug #33760 breaks build with older curl).</li>
+<li><?php bugfix(35341); ?> (Fix for bug <?php bugl(33760); ?> breaks build with older curl).</li>
 <li><?php bugfix(35278); ?> (Multiple virtual() calls crash Apache 2 php module).</li>
 <li><?php bugfix(35257); ?> (Calling ob_flush after creating an ob callback causes segfault).</li>
 <li><?php bugfix(35079); ?> (stream_set_blocking(true) toggles, not enables blocking).</li>
@@ -244,7 +244,7 @@ There is a <a href="release_4_4_2.php">separate announcement</a> available for t
 <li>Fixed potential GLOBALS overwrite via import_request_variables().</li>
 <li>Fixed possible GLOBALS variable override when register_globals are ON.</li>
 <li>Fixed possible register_globals toggle via parse_str().</li>
-<li>Added "new_link" parameter to mssql_connect(). Bug #34369.</li>
+<li>Added "new_link" parameter to mssql_connect(). Bug <?php bugl(34369); ?>.</li>
 <li><?php bugfix(34850); ?> (--program-suffix and --program-prefix not included in man page names).</li>
 <li><?php bugfix(34790); ?> (preg_match_all(), named capturing groups, variable assignment/return =&gt; crash).</li>
 <li><?php bugfix(34742); ?> (ftp wrapper failures caused from segmented command transfer).</li>
@@ -722,7 +722,7 @@ There is a <a href="release_4_3_6.php">separate announcement</a> available for t
 <li><?php bugfix(26847); ?> (memory leak in mail() when to/subject contain only spaces). (Ilia)</li>
 <li><?php bugfix(26814); ?> (When included file has a parse error, terminate script execution). (Ilia)</li>
 <li><?php bugfix(26777); ?> (ext/interbase: Let DB handle NULL params). (Ard)</li>
-<li><?php bugfix(26772); ?>, #26967 (file operations return NULL instead of FALSE). (Wez, Ilia)</li>
+<li><?php bugfix(26772); ?>, <?php bugl(26967); ?> (file operations return NULL instead of FALSE). (Wez, Ilia)</li>
 <li><?php bugfix(26758); ?> (FastCGI exits immediately with status 255). (Ilia, tcarter at noggin dot com dot au)</li>
 <li><?php bugfix(26755); ?> (CLI now overrides php.ini settings and switches off output buffering). (Edin)</li>
 <li><?php bugfix(26753); ?> (zend_fetch_list_dtor_id() doesn't check NULL strings). (Jani, Markus dot Lidel at shadowconnect dot com)</li>
