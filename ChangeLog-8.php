@@ -231,7 +231,7 @@ site_header("PHP 8 ChangeLog", array("current" => "docs", "css" => array("change
 </ul></li>
 <li>Phpdbg:
 <ul>
-  <li>Reverted fix for bug <?php bugl(80600); ?> (Access violation near NULL on source operand).</li>
+  <li>Reverted fix for bug <?php bugl(76813); ?> (Access violation near NULL on source operand).</li>
 </ul></li>
 <li>SOAP:
 <ul>
