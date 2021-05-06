@@ -18,8 +18,7 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
 <ul><li>Core:
 <ul>
   <li><?php bugfix(80781); ?> (Error handler that throws ErrorException infinite loop).</li>
-  <li><?php bugfix(75776); ?> (Flushing streams with compression filter is broken). (cmb) 04 Mar 2021, php 7.4.16</li>
-  <li>Fixed #80706 (mail(): Headers after Bcc headers may be ignored).</li>
+  <li><?php bugfix(75776); ?> (Flushing streams with compression filter is broken).</li>
 </ul></li>
 <li>Dba:
 <ul>
@@ -132,7 +131,7 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
 <b><?php release_date('04-Mar-2021'); ?></b>
 <ul><li>Core:
 <ul>
-  <li>Fixed #80706 (mail(): Headers after Bcc headers may be ignored).</li>
+  <li><?php bugfix(80706); ?> (mail(): Headers after Bcc headers may be ignored).</li>
 </ul></li>
 <li>MySQLnd:
 <ul>
