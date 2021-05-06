@@ -253,7 +253,7 @@ use-after-free). (CVE-2016-10166)</li>
 </ul></li>
 <li>SOAP:
 <ul>
-  <li><?php bugfix(73452); ?> (Segfault (Regression for #69152)).</li>
+  <li><?php bugfix(73452); ?> (Segfault (Regression for <?php bugl(69152); ?>)).</li>
 </ul></li>
 <li>SQLite3:
 <ul>
@@ -950,7 +950,7 @@ FILTER_FLAG_NO_PRIV_RANGE).</li>
 </ul></li>
 <li>PDO MySQL:
 <ul>
-  <li><?php bugfix(71569); ?> (#70389 fix causes segmentation fault).</li>
+  <li><?php bugfix(71569); ?> (<?php bugl(70389); ?> fix causes segmentation fault).</li>
 </ul></li>
 <li>Phar:
 <ul>
@@ -2872,7 +2872,7 @@ FILTER_FLAG_NO_PRIV_RANGE).</li>
 </ul></li>
 <li>PCRE:
 <ul>
-  <li>Fixed Bug #53823 (preg_replace: * qualifier on unicode replace garbles the string).</li>
+  <li><?php bugfix(53823); ?> (preg_replace: * qualifier on unicode replace garbles the string).</li>
   <li><?php bugfix(69864); ?> (Segfault in preg_replace_callback).</li>
 </ul></li>
 <li>PDO_pgsql:
@@ -2888,7 +2888,7 @@ FILTER_FLAG_NO_PRIV_RANGE).</li>
 </ul></li>
 <li>SimpleXML:
 <ul>
-  <li>Refactored the fix for bug #66084 (simplexml_load_string() mangles empty node name).</li>
+  <li>Refactored the fix for bug <?php bugl(66084); ?> (simplexml_load_string() mangles empty node name).</li>
 </ul></li>
 <li>SPL:
 <ul>
@@ -3137,7 +3137,7 @@ FILTER_FLAG_NO_PRIV_RANGE).</li>
 </ul></li>
 <li>JSON :
 <ul>
-  <li>Fixed bug #64695 (JSON_NUMERIC_CHECK has issues with strings that are
+  <li><?php bugfix(64695); ?> (JSON_NUMERIC_CHECK has issues with strings that are
      numbers plus the letter e).</li>
 </ul></li>
 <li>ODBC:
@@ -4032,7 +4032,7 @@ FILTER_FLAG_NO_PRIV_RANGE).</li>
 </ul></li>
 <li>Readline:
 <ul>
-  <li><?php bugfix(66412); ?> (readline_clear_history() with libedit causes segfault after #65714).</li>
+  <li><?php bugfix(66412); ?> (readline_clear_history() with libedit causes segfault after <?php bugl(65714); ?>).</li>
 </ul></li>
 <li>Session:
 <ul>
@@ -6683,7 +6683,7 @@ FILTER_FLAG_NO_PRIV_RANGE).</li>
 <ul>
 <li>mbstring
 <ul>
-  <li>Allow passing null as a default value to mb_substr() and mb_strcut(). Patch by Alexander Moskaliov via GitHub PR #133.</li>
+  <li>Allow passing null as a default value to mb_substr() and mb_strcut(). Patch by Alexander Moskaliov via GitHub PR <?php githubissuel('php/php-src', 133); ?>.</li>
 </ul></li>
 </ul>
 
@@ -12937,8 +12937,8 @@ FILTER_FLAG_NO_PRIV_RANGE).</li>
 <li>Added php_pdo_sqlite_external.dll, a version of the PDO SQLite driver that links against an external sqlite3.dll. This provides Windows users to upgrade their sqlite3 version outside of the PHP release cycle. (Wez, Edin)</li>
 <li>Added linenumbers to array returned by token_get_all(). (Johannes)</li>
 
-<li>Implement #40947, allow a single filter as argument for filter_var_array (Pierre)</li>
-<li>Implement #39867 (openssl PKCS#12 support) (Marc Delling, Pierre)</li>
+<li><?php implemented(40947); ?>, allow a single filter as argument for filter_var_array (Pierre)</li>
+<li><?php implemented(39867); ?> (openssl PKCS#12 support) (Marc Delling, Pierre)</li>
 
 <li>Upgraded SQLite 3 to version 3.3.16 (Ilia)</li>
 <li>Upgraded libraries bundled in the Windows distribution. (Edin)

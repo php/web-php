@@ -112,7 +112,7 @@ site_header("PHP 8 ChangeLog", array("current" => "docs", "css" => array("change
 <b><?php release_date('04-Mar-2021'); ?></b>
 <ul><li>Core:
 <ul>
-  <li>Fixed #80706 (mail(): Headers after Bcc headers may be ignored).</li>
+  <li><?php bugfix(80706); ?> (mail(): Headers after Bcc headers may be ignored).</li>
 </ul></li>
 <li>DOM:
 <ul>
@@ -154,7 +154,7 @@ site_header("PHP 8 ChangeLog", array("current" => "docs", "css" => array("change
 </ul></li>
 <li>SPL:
 <ul>
-  <li>Fixed bug#80719 (Iterating after failed ArrayObject::setIteratorClass() causes Segmentation fault).</li>
+  <li><?php bugfix(80719); ?> (Iterating after failed ArrayObject::setIteratorClass() causes Segmentation fault).</li>
 </ul></li>
 <li>Standard:
 <ul>
@@ -231,7 +231,7 @@ site_header("PHP 8 ChangeLog", array("current" => "docs", "css" => array("change
 </ul></li>
 <li>Phpdbg:
 <ul>
-  <li>Reverted fix for bug #76813 (Access violation near NULL on source operand).</li>
+  <li>Reverted fix for bug <?php bugl(80600); ?> (Access violation near NULL on source operand).</li>
 </ul></li>
 <li>SOAP:
 <ul>
@@ -401,8 +401,8 @@ site_header("PHP 8 ChangeLog", array("current" => "docs", "css" => array("change
   <li><?php bugfix(80055); ?> (Abstract trait methods returning "self" cannot be fulfilled by traits).</li>
   <li>Fixed faulty generator cleanup with yield from.</li>
   <li>Implement #[Attr] Attribute syntax as per final vote in RFC https://wiki.php.net/rfc/shorter_attribute_syntax_change</li>
-  <li>Implemented FR <?php bugl(47074); ?> (phpinfo() reports "On" as 1 for the some extensions).</li>
-  <li>Implemented FR <?php bugl(72089); ?> (require() throws fatal error instead of exception).</li>
+  <li><?php implemented(47074); ?> (phpinfo() reports "On" as 1 for the some extensions).</li>
+  <li><?php implemented(72089); ?> (require() throws fatal error instead of exception).</li>
   <li>Removed the pdo_odbc.db2_instance_name php.ini directive.</li>
   <li>Use SSE2 instructions do locale independent strtolower.</li>
 </ul></li>
@@ -423,7 +423,7 @@ site_header("PHP 8 ChangeLog", array("current" => "docs", "css" => array("change
   <li><?php bugfix(65547); ?> (Default value for sunrise/sunset zenith still wrong).</li>
   <li><?php bugfix(69044); ?> (discrepancy between time and microtime).</li>
   <li><?php bugfix(80057); ?> (DateTimeImmutable::createFromFormat() does not populate time).</li>
-  <li>Implemented FR <?php bugl(79903); ?> (datetime: new format "p", same as "P" but returning "Z" for UTC).</li>
+  <li><?php implemented(79903); ?> (datetime: new format "p", same as "P" but returning "Z" for UTC).</li>
 </ul></li>
 <li>Enchant:
 <ul>
@@ -467,7 +467,7 @@ site_header("PHP 8 ChangeLog", array("current" => "docs", "css" => array("change
   <li><?php bugfix(80226); ?> (imap_sort() leaks sortpgm memory).</li>
   <li><?php bugfix(80239); ?> (imap_rfc822_write_address() leaks memory).</li>
   <li><?php bugfix(80242); ?> (imap_mail_compose() segfaults for multipart with rfc822).</li>
-  <li>Fixed minor regression caused by fixing bug #80220.</li>
+  <li>Fixed minor regression caused by fixing bug <?php bugl(80220); ?>.</li>
 </ul></li>
 <li>Iconv:
 <ul>
@@ -506,7 +506,7 @@ site_header("PHP 8 ChangeLog", array("current" => "docs", "css" => array("change
 </ul></li>
 <li>Mysqlnd:
 <ul>
-  <li>Fixed #60594 (mysqlnd exposes 160 lines of stats in phpinfo).</li>
+  <li><?php bugfix(60594); ?> (mysqlnd exposes 160 lines of stats in phpinfo).</li>
 </ul></li>
 <li>OCI8:
 <ul>
@@ -577,7 +577,7 @@ site_header("PHP 8 ChangeLog", array("current" => "docs", "css" => array("change
   <li><?php bugfix(80190); ?> (ReflectionMethod::getReturnType() does not handle static as part of union type).</li>
   <li><?php bugfix(80299); ?> (ReflectionFunction-&gt;invokeArgs confused in arguments).</li>
   <li><?php bugfix(80370); ?> (getAttributes segfault on dynamic properties).</li>
-  <li>Implement #79628 (Add $filter parameter for ReflectionClass::getConstants and ReflectionClass::getReflectionConstants) (carusogabriel)</li>
+  <li><?php implemented(79628); ?> (Add $filter parameter for ReflectionClass::getConstants and ReflectionClass::getReflectionConstants) (carusogabriel)</li>
   <li>Implement ReflectionProperty::hasDefaultValue and Reflection::getDefaultValue (beberlei)</li>
 </ul></li>
 <li>SNMP:
@@ -627,7 +627,7 @@ site_header("PHP 8 ChangeLog", array("current" => "docs", "css" => array("change
   <li><?php bugfix(80256); ?> (file_get_contents strip first line with chunked encoding redirect).</li>
   <li><?php bugfix(80266); ?> (parse_url silently drops port number 0).</li>
   <li><?php bugfix(80290); ?> (Double free when ASSERT_CALLBACK is used with a dynamic message).</li>
-  <li>Implemented FR <?php bugl(78638); ?> (__PHP_Incomplete_Class should be final).</li>
+  <li><?php implemented(78638); ?> (__PHP_Incomplete_Class should be final).</li>
   <li>Made quoting of cmd execution functions consistent.</li>
 </ul></li>
 <li>Tidy:
@@ -645,7 +645,7 @@ site_header("PHP 8 ChangeLog", array("current" => "docs", "css" => array("change
 <li>XMLWriter:
 <ul>
   <li>Changed functions to accept/return XMLWriter objects instead of resources.</li>
-  <li>Implemented FR <?php bugl(79344); ?> (xmlwriter_write_attribute_ns: $prefix should be nullable).</li>
+  <li><?php implemented(79344); ?> (xmlwriter_write_attribute_ns: $prefix should be nullable).</li>
   <li>Removed return types from XMLWriter stubs.</li>
 </ul></li>
 <li>Zip:
@@ -661,7 +661,7 @@ site_header("PHP 8 ChangeLog", array("current" => "docs", "css" => array("change
   <li>Add optional "flags" parameter to ZipArchive::addEmptyDir, addFile and addFromString methods.</li>
   <li><?php bugfix(50678); ?> (files extracted by ZipArchive class lost their original modified time).</li>
   <li><?php bugfix(72374); ?> (remove_path strips first char of filename).</li>
-  <li>Implemented FR <?php bugl(77960); ?> (add compression / encryption options for ZipArchive::addGlob and ZipArchive::addPattern).</li>
+  <li><?php implemented(77960); ?> (add compression / encryption options for ZipArchive::addGlob and ZipArchive::addPattern).</li>
   <li>ZipArchive::status and ZipArchive::statusSys properties and ZipArchive::getStatusString() method stay valid after the archive is closed.</li>
 </ul></li>
 <li>Zlib:
