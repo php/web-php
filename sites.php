@@ -155,7 +155,7 @@ site_header("A Tourist's Guide", array("current" => "help"));
  Checking out the source code can be done <a href="git.php">anonymously</a>.
 </p>
 <p>
- Using <a href="http://lxr.php.net/">OpenGrok</a> is another option to view the
+ Using <a href="https://heap.space/">OpenGrok</a> is another option to view the
  source code, and it offers additional features like search and cross referencing.
 </p>
 </div>

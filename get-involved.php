@@ -54,6 +54,8 @@ site_header("Get Involved", array("current" => "community"));
 
 <h3 class="content-title" id="references">Useful links for developers</h3>
 <ul class="content-box listed">
+    <li><a href="https://heap.space">lxr</a> - an online interface to the
+       PHP source, providing search facilities useful for programmers and researchers</li>
     <li><a href="https://wiki.php.net/rfc/howto">The RFC process</a> - the process
         by which developers can suggest and discuss new ideas with the community</li>
     <li><a href="/build-setup.php">Developer Setup Help</a> - some helpful information
@@ -63,13 +65,6 @@ site_header("Get Involved", array("current" => "community"));
 </ul>
 
 <?php
-/*
-XXX: lxr is offline and should be re-added once its are back online in a more permanent state (Kalle, 17/10/2017)
-
-     <li><a href="http://lxr.php.net">lxr</a> - an online interface to the
-       PHP source, providing search facilities useful for programmers and researchers</li>
-
-*/
 
 $SIDEBAR_DATA ='
 <div class="panel">
