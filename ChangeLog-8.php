@@ -10,18 +10,6 @@ site_header("PHP 8 ChangeLog", array("current" => "docs", "css" => array("change
 
 <a name="PHP_8_0"></a>
 
-<section class="version" id="8.0.6"><!-- {{{ 8.0.6 -->
-<h3>Version 8.0.6</h3>
-<b><?php release_date('06-May-2021'); ?></b>
-<ul><li>PDO_pgsql:
-<ul>
-  <li>Revert "<?php bugfix(80892); ?> (PDO::PARAM_INT is treated the same as PDO::PARAM_STR)"</li>
-</ul></li>
-</ul>
-<!-- }}} --></section>
-
-
-
 <section class="version" id="8.0.5"><!-- {{{ 8.0.5 -->
 <h3>Version 8.0.5</h3>
 <b><?php release_date('29-Apr-2021'); ?></b>
