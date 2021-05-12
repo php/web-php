@@ -86,7 +86,6 @@ site_header("Information About This PHP Mirror Site", array("current" => "commun
 
 <ul>
  <li>Default language is <?php echo $LANGUAGES[default_language()]; ?></li>
- <li>Local visitor statistics are <?php echo have_stats() ? "available" : "not available"; ?></li>
 </ul>
 
 <h2>Mirror Status</h2>
