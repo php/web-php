@@ -319,6 +319,9 @@ $uri_aliases = array (
     "splat"        => "functions.arguments",
     "arrow"        => "functions.arrow",
     "fn"           => "functions.arrow",
+    "?:"           => "language.operators.comparison",
+    "??"           => "language.operators.comparison",
+    "??="          => "language.operators.assignment",
 
     "dowhile"      => "control-structures.do.while",
 
