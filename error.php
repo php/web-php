@@ -12,7 +12,6 @@
 // Ensure that our environment is set up
 include_once __DIR__ . '/include/prepend.inc';
 include_once __DIR__ . '/include/languages.inc';
-include_once __DIR__ . '/include/loadavg.inc';
 include_once __DIR__ . '/include/errors.inc';
 
 // Get URI for this request, strip leading slash
