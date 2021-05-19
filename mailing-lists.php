@@ -42,7 +42,7 @@ $SIDEBAR_DATA = '
 site_header("Mailing Lists", array("current" => "help"));
 
 // Some mailing list is selected for [un]subscription
-if (isset($_POST['maillist'])) {
+if (isset($_POST['action'])) {
 
     // No error found yet
     $error = "";
@@ -51,6 +51,12 @@ if (isset($_POST['maillist'])) {
     if (empty($_POST['email']) || $_POST['email'] == 'user@example.com' ||
         $_POST['email'] == 'fake@from.net' || !is_emailable_address($_POST['email'])) {
         $error = "You forgot to specify an email address to be added to the list, or specified an invalid address." .
+                 "<br>Please go back and try again.";
+    }
+
+    // Check if any mailing list was selected
+    else if (empty($_POST['maillist'])) {
+        $error = "You need to select at least one mailing list to subscribe to." .
                  "<br>Please go back and try again.";
     }
 
