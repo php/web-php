@@ -66,15 +66,6 @@ function have_search($site = FALSE)
     return (isset($MIRRORS[$site]) ? $MIRRORS[$site][5] : FALSE);
 }
 
-// Returns true if the current (or specified) mirror
-// site is registered to have local stats support
-function have_stats($site = FALSE)
-{
-    global $MIRRORS, $MYSITE;
-    if (!$site) { $site = $MYSITE; }
-    return (isset($MIRRORS[$site]) ? $MIRRORS[$site][2] : FALSE);
-}
-
 // Returns the current (or specified)
 // mirror site's provider's name
 function mirror_provider($site = FALSE)
@@ -428,11 +419,6 @@ if (isset($_SERVER['MIRROR_LANGUAGE'])) {
 // set is definitely not supported
 if (!isset($LANGUAGES[$MIRRORS[$MYSITE][6]])) {
     $MIRRORS[$MYSITE][6] = "en";
-}
-
-// Override central stats information if specified in vhost
-if (isset($_SERVER['MIRROR_STATS'])) {
-    $MIRRORS[$MYSITE][2] = TRUE;
 }
 
 // Provide base href information to make relative links on
