@@ -319,9 +319,10 @@ $uri_aliases = array (
     "splat"        => "functions.arguments",
     "arrow"        => "functions.arrow",
     "fn"           => "functions.arrow",
-    "?:"           => "language.operators.comparison",
-    "??"           => "language.operators.comparison",
-    "??="          => "language.operators.assignment",
+    // ?:, ??, ??=
+    // These shortcuts can not be captured here since they
+    // don't actually produce a 404 error.
+    // Instead, we have a small check in index.php directly.
 
     "dowhile"      => "control-structures.do.while",
 

@@ -1,4 +1,17 @@
 <?php // vim: et
+(function($uri) {
+    // Special redirect cases not able to be captured in error.php
+    $shortcuts = [
+        '/?:'    => '/language.operators.comparison#language.operators.comparison.ternary',
+        '/??'    => '/language.operators.comparison#language.operators.comparison.coalesce',
+        '/??='   => '/language.operators.assignment#language.operators.assignment.other',
+    ];
+    if (isset($shortcuts[$uri])) {
+        header("Location: {$shortcuts[$uri]}");
+        exit;
+    }
+})($_SERVER['REQUEST_URI'] ?? '');
+
 // Get the modification date of this PHP file
 $timestamps = array(@getlastmod());
 
