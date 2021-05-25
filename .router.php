@@ -4,7 +4,7 @@ $_SERVER["SERVER_ADDR"] = $_SERVER["HTTP_HOST"];
 $filename = $_SERVER["PATH_INFO"] ?? $_SERVER["SCRIPT_NAME"];
 
 if (!file_exists($_SERVER["DOCUMENT_ROOT"] . $filename)) {
-    include_once "error.php";
+    require_once __DIR__ . '/error.php';
 
     return;
 }
