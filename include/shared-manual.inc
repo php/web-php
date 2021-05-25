@@ -449,7 +449,7 @@ function manual_setup($setup) {
     </div>
     <div class="edit-bug">
       <a href="https://github.com/php/doc-{$repo}">Submit a Pull Request</a>
-      <a href="https://bugs.php.net/report.php?bug_type=Documentation+problem&amp;manpage=$id">Report a Bug</a>
+      <a href="https://github.com/php/doc-en/issues/new?body=From%20manual%20page:%20https:%2F%2Fphp.net%2F$id%0A%0A---">Report a Bug</a>
     </div>
   </div>
 PAGE_TOOLS;
