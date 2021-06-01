@@ -310,6 +310,7 @@ $inis = array(
 	'session.entropy-file'			=> 'session.configuration.php#ini.session.entropy-file',
 	'session.cache-limiter'			=> 'session.configuration.php#ini.session.cache-limiter',
 	'session.cache-expire'			=> 'session.configuration.php#ini.session.cache-expire',
+	'session.sid-length'			=> 'session.configuration.php#ini.session.sid-length',
 	'session.use-trans-sid'			=> 'session.configuration.php#ini.session.use-trans-sid',
 	'session.hash-function'			=> 'session.configuration.php#ini.session.hash-function',
 	'session.hash-bits-per-character'       => 'session.configuration.php#ini.session.hash-bits-per-character',
