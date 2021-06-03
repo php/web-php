@@ -12,6 +12,71 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
 
 <a name="PHP_7_4"></a>
 
+<section class="version" id="7.4.20"><!-- {{{ 7.4.20 -->
+<h3>Version 7.4.20</h3>
+<b><?php release_date('03-Jun-2021'); ?></b>
+<ul><li>Core:
+<ul>
+  <li><?php bugfix(80929); ?> (Method name corruption related to repeated calls to call_user_func_array).</li>
+  <li><?php bugfix(80960); ?> (opendir() warning wrong info when failed on Windows).</li>
+  <li><?php bugfix(67792); ?> (HTTP Authorization schemes are treated as case-sensitive).</li>
+  <li><?php bugfix(80972); ?> (Memory exhaustion on invalid string offset).</li>
+</ul></li>
+<li>FPM:
+<ul>
+  <li><?php bugfix(65800); ?> (Events port mechanism).</li>
+</ul></li>
+<li>FTP:
+<ul>
+  <li><?php bugfix(80901); ?> (Info leak in ftp extension).</li>
+  <li><?php bugfix(79100); ?> (Wrong FTP error messages).</li>
+</ul></li>
+<li>GD:
+<ul>
+  <li><?php bugfix(81032); ?> (GD install is affected by external libgd installation).</li>
+</ul></li>
+<li>MBString:
+<ul>
+  <li><?php bugfix(81011); ?> (mb_convert_encoding removes references from arrays).</li>
+</ul></li>
+<li>ODBC:
+<ul>
+  <li><?php bugfix(80460); ?> (ODBC doesn't account for SQL_NO_TOTAL indicator).</li>
+</ul></li>
+<li>PDO_MySQL:
+<ul>
+  <li><?php bugfix(81037); ?> (PDO discards error message text from prepared statement).</li>
+</ul></li>
+<li>PDO_ODBC:
+<ul>
+  <li><?php bugfix(44643); ?> (bound parameters ignore explicit type definitions).</li>
+</ul></li>
+<li>pgsql:
+<ul>
+  <li>Fixed php_pgsql_fd_cast() wrt. php_stream_can_cast().</li>
+</ul></li>
+<li>SPL:
+<ul>
+  <li><?php bugfix(80933); ?> (SplFileObject::DROP_NEW_LINE is broken for NUL and CR).</li>
+</ul></li>
+<li>Opcache:
+<ul>
+  <li><?php bugfix(80900); ?> (switch statement behavior inside function).</li>
+  <li><?php bugfix(81015); ?> (Opcache optimization assumes wrong part of ternary operator in if-condition).</li>
+</ul></li>
+<li>XMLReader:
+<ul>
+  <li><?php bugfix(73246); ?> (XMLReader: encoding length not checked).</li>
+</ul></li>
+<li>Zip:
+<ul>
+  <li><?php bugfix(80863); ?> (ZipArchive::extractTo() ignores references).</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
+
+
 <section class="version" id="7.4.19"><!-- {{{ 7.4.19 -->
 <h3>Version 7.4.19</h3>
 <b><?php release_date('06-May-2021'); ?></b>
