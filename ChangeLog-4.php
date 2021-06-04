@@ -3881,4 +3881,6 @@ More information on this release on <a href="/releases.php#4.0.0">our Releases p
 <li>First public beta of PHP 4.0</li>
 </ul>
 
-<?php site_footer(); ?>
+<?php
+
+site_footer(['sidebar' => changelog_sidebar(4)]);

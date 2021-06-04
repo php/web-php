@@ -753,4 +753,6 @@ site_header("PHP 8 ChangeLog", array("current" => "docs", "css" => array("change
 </ul>
 <!-- }}} --></section>
 
-<?php site_footer();
+<?php
+
+site_footer(['sidebar' => changelog_sidebar(8)]);

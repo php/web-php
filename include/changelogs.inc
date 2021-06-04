@@ -34,4 +34,15 @@ function release_date($in) {
     echo "<time class='releasedate' datetime='{$for_tools}'>{$human_readable}</time>";
 }
 
-?>
+function changelog_sidebar(?int $current = null): string {
+	$majors = [8, 7, 5, 4];
+	$ret = "<div class=\"panel\">ChangeLogs<div class=\"body\"><ul>\n";
+	foreach ($majors as $major) {
+		if ($major === $current) {
+			$ret .= "  <li><b>PHP {$major}.x</b></li>\n";
+		} else {
+			$ret .= "  <li><a href=\"/ChangeLog-{$major}.php\">PHP {$major}.x</a></li>\n";
+		}
+	}
+	return $ret .= "</ul></body></body>\n";
+}

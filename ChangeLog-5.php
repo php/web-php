@@ -15957,4 +15957,6 @@ contents). (Zeev)</li>
 </ul>
 <!-- }}} --></section>
 
-<?php site_footer(); ?>
+<?php
+
+site_footer(['sidebar' => changelog_sidebar(5)]);
