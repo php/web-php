@@ -3880,6 +3880,7 @@ More information on this release on <a href="/releases.php#4.0.0">our Releases p
 <ul>
 <li>First public beta of PHP 4.0</li>
 </ul>
+</section>
 
 <?php
 
