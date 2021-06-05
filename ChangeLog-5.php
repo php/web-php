@@ -2,16 +2,10 @@
 $_SERVER['BASE_PAGE'] = 'ChangeLog-5.php';
 include_once __DIR__ . '/include/prepend.inc';
 include_once __DIR__ . '/include/changelogs.inc';
-site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("changelog.css"), "layout_span" => 12));
+
+$MINOR_VERSIONS = ['5.6', '5.5', '5.4', '5.3', '5.2', '5.1', '5.0'];
+changelog_header(5, $MINOR_VERSIONS);
 ?>
-
-<h1>PHP 5 ChangeLog</h1>
-
-<a href="#PHP_5_6">5.6</a> |
-<a href="#PHP_5_5">5.5</a> | <a href="#PHP_5_4">5.4</a> |
-<a href="#PHP_5_3">5.3</a> | <a href="#PHP_5_2">5.2</a> |
-<a href="#PHP_5_1">5.1</a> | <a href="#PHP_5_0">5.0</a>
-
 <a name="PHP_5_6"></a>
 <section class="version" id="5.6.40"><!-- {{{ 5.6.40 -->
 <h3>Version 5.6.40</h3>
@@ -15959,4 +15953,4 @@ contents). (Zeev)</li>
 
 <?php
 
-site_footer(['sidebar' => changelog_sidebar(5)]);
+changelog_footer(5, $MINOR_VERSIONS);

@@ -2,15 +2,10 @@
 $_SERVER['BASE_PAGE'] = 'ChangeLog-4.php';
 include_once __DIR__ . '/include/prepend.inc';
 include_once __DIR__ . '/include/changelogs.inc';
-site_header("PHP 4 ChangeLog", array("current" => "docs", "css" => array("changelog.css"), "layout_span" => 12));
+
+$MINOR_VERSIONS = ['4.4', '4.3', '4.2', '4.1', '4.0'];
+changelog_header(4, $MINOR_VERSIONS);
 ?>
-
-<h1>PHP 4 ChangeLog</h1>
-
-<a href="#PHP_4_4">4.4</a> |
-<a href="#PHP_4_3">4.3</a> | <a href="#PHP_4_2">4.2</a> |
-<a href="#PHP_4_1">4.1</a> | <a href="#PHP_4_0">4.0</a>
-
 <a name="PHP_4_4"></a>
 
 <section class="version" id="4.4.9"><!-- {{{ 4.4.9 -->
@@ -3884,4 +3879,4 @@ More information on this release on <a href="/releases.php#4.0.0">our Releases p
 
 <?php
 
-site_footer(['sidebar' => changelog_sidebar(4)]);
+changelog_footer(4, $MINOR_VERSIONS);

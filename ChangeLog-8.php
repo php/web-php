@@ -2,12 +2,10 @@
 $_SERVER['BASE_PAGE'] = 'ChangeLog-8.php';
 include_once __DIR__ . '/include/prepend.inc';
 include_once __DIR__ . '/include/changelogs.inc';
-site_header("PHP 8 ChangeLog", array("current" => "docs", "css" => array("changelog.css"), "layout_span" => 12));
+
+$MINOR_VERSIONS = ['8.0'];
+changelog_header(8, $MINOR_VERSIONS);
 ?>
-<h1>PHP 8 ChangeLog</h1>
-
-<a href="#PHP_8_0">8.0</a>
-
 <a name="PHP_8_0"></a>
 
 <section class="version" id="8.0.7"><!-- {{{ 8.0.7 -->
@@ -754,5 +752,4 @@ site_header("PHP 8 ChangeLog", array("current" => "docs", "css" => array("change
 <!-- }}} --></section>
 
 <?php
-
-site_footer(['sidebar' => changelog_sidebar(8)]);
+changelog_footer(8, $MINOR_VERSIONS);

@@ -2,14 +2,10 @@
 $_SERVER['BASE_PAGE'] = 'ChangeLog-7.php';
 include_once __DIR__ . '/include/prepend.inc';
 include_once __DIR__ . '/include/changelogs.inc';
-site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("changelog.css"), "layout_span" => 12));
+
+$MINOR_VERSIONS = ['7.4', '7.3', '7.2', '7.1', '7.0'];
+changelog_header(7, $MINOR_VERSIONS);
 ?>
-<h1>PHP 7 ChangeLog</h1>
-
-<a href="#PHP_7_4">7.4</a> |
-<a href="#PHP_7_3">7.3</a> | <a href="#PHP_7_2">7.2</a> |
-<a href="#PHP_7_1">7.1</a> | <a href="#PHP_7_0">7.0</a>
-
 <a name="PHP_7_4"></a>
 
 <section class="version" id="7.4.20"><!-- {{{ 7.4.20 -->
@@ -10232,5 +10228,4 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
 <!-- }}} --></section>
 
 <?php
-
-site_footer(['sidebar' => changelog_sidebar(7)]);
+changelog_footer(7, $MINOR_VERSIONS);
