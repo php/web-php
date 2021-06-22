@@ -7,7 +7,7 @@
   <default:finalTeaserDate xmlns="http://php.net/ns/news">2021-10-25</default:finalTeaserDate>
   <category term="conferences" label="Conference announcement"/>
   <link href="http://php.net/conferences/index.php#id2021-06-21-1" rel="alternate" type="text/html"/>
-  <default:newsImage xmlns="http://php.net/ns/news" link="https://phpconference.com/munich/" title="International PHP Conference Munich 2021">IPC_BER_Hybrid_Logo_250.png</default:newsImage>
+  <default:newsImage xmlns="http://php.net/ns/news" link="https://phpconference.com/munich/" title="International PHP Conference Munich 2021">IPC_MUN_Hybrid_Logo_250.png</default:newsImage>
   <link href="https://phpconference.com/munich/" rel="via" type="text/html"/>
   <content type="xhtml">
     <div xmlns="http://www.w3.org/1999/xhtml">
