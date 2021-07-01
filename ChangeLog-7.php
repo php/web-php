@@ -8,6 +8,41 @@ changelog_header(7, $MINOR_VERSIONS);
 ?>
 <a name="PHP_7_4"></a>
 
+<section class="version" id="7.4.21"><!-- {{{ 7.4.21 -->
+<h3>Version 7.4.21</h3>
+<b><?php release_date('01-Jul-2021'); ?></b>
+<ul><li>Core:
+<ul>
+  <li><?php bugfix(81068); ?> (Double free in realpath_cache_clean()).</li>
+  <li><?php bugfix(76359); ?> (open_basedir bypass through adding "..").</li>
+  <li><?php bugfix(81090); ?> (Typed property performance degradation with .= operator).</li>
+  <li><?php bugfix(81070); ?> (Integer underflow in memory limit comparison).</li>
+  <li><?php bugfix(81122); ?> (SSRF bypass in FILTER_VALIDATE_URL). (CVE-2021-21705)</li>
+</ul></li>
+<li>Bzip2:
+<ul>
+  <li><?php bugfix(81092); ?> (fflush before stream_filter_remove corrupts stream).</li>
+</ul></li>
+<li>OpenSSL:
+<ul>
+  <li><?php bugfix(76694); ?> (native Windows cert verification uses CN as sever name).</li>
+</ul></li>
+<li>PDO_Firebird:
+<ul>
+  <li><?php bugfix(76448); ?> (Stack buffer overflow in firebird_info_cb). (CVE-2021-21704)</li>
+  <li><?php bugfix(76449); ?> (SIGSEGV in firebird_handle_doer). (CVE-2021-21704)</li>
+  <li><?php bugfix(76450); ?> (SIGSEGV in firebird_stmt_execute). (CVE-2021-21704)</li>
+  <li><?php bugfix(76452); ?> (Crash while parsing blob data in firebird_fetch_blob). (CVE-2021-21704)</li>
+</ul></li>
+<li>Standard:
+<ul>
+  <li><?php bugfix(81048); ?> (phpinfo(INFO_VARIABLES) "Array to string conversion").</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
+
+
 <section class="version" id="7.4.20"><!-- {{{ 7.4.20 -->
 <h3>Version 7.4.20</h3>
 <b><?php release_date('03-Jun-2021'); ?></b>
