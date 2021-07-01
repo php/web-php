@@ -24,9 +24,9 @@ $RELEASES = (function() {
         'date'    => '01 Jul 2021',
         'tags'    => [], // Set to ['security'] for security releases.
         'sha256' => [
-            'tar.gz'  => 'e6092620eb3da03644b7b4fe5dc0a16e7e9d04de383e3858124afb3a8cb3fe3c',
-            'tar.bz2' => 'bcb8a0127674a6f51b062ec553a6d7fb031640e3a94094ad5b9e9302d365b21a',
-            'tar.xz'  => 'cbae837b40ad2a936dc26b7d03f0763db8961ab5b481ba232faefa104982198a',
+            'tar.gz'  => '084a1e8020e86fb99b663d195fd9ac98a9f37dfcb9ecb5c159054cdb8f388945',
+            'tar.bz2' => '14bd77d71a98943e14b324da83e31b572781df583cda9650a184fae3214cd16f',
+            'tar.xz'  => 'dc1668d324232dec1d05175ec752dade92d29bb3004275118bc3f7fc7cbfbb1c',
         ]
     ];
 
