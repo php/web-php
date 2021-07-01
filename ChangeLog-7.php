@@ -1605,6 +1605,25 @@ changelog_header(7, $MINOR_VERSIONS);
 
 <a name="PHP_7_3"></a>
 
+<section class="version" id="7.3.29"><!-- {{{ 7.3.29 -->
+<h3>Version 7.3.29</h3>
+<b><?php release_date('01-Jul-2021'); ?></b>
+<ul><li>Core:
+<ul>
+  <li><?php bugfix(81122); ?>: SSRF bypass in FILTER_VALIDATE_URL. (CVE-2021-21705)</li>
+</ul></li>
+<li>PDO_Firebird:
+<ul>
+  <li><?php bugfix(76448); ?>: Stack buffer overflow in firebird_info_cb. (CVE-2021-21704)</li>
+  <li><?php bugfix(76449); ?>: SIGSEGV in firebird_handle_doer. (CVE-2021-21704)</li>
+  <li><?php bugfix(76450); ?>: SIGSEGV in firebird_stmt_execute. (CVE-2021-21704)</li>
+  <li><?php bugfix(76452); ?>: Crash while parsing blob data in firebird_fetch_blob. (CVE-2021-21704)</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
+
+
 <section class="version" id="7.3.28"><!-- {{{ 7.3.28 -->
 <h3>Version 7.3.28</h3>
 <b><?php release_date('29-Apr-2021'); ?></b>
