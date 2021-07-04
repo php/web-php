@@ -507,13 +507,8 @@ $snippets = array(
 		See also the list of <a href="/extensions">PHP extensions</a>',
 	);
 
-	$term = strtolower(trim($term));
-	if (isset($term[0]) && $term[0] === '$') {
-		$term = ltrim($term, '$');
-	}
-
-	return isset($snippets[$term]) ? $snippets[$term] : false;
-
+	$term = ltrim(strtolower(trim($term)), '$');
+	return $snippets[$term] ?? false;
 }
 
 /**
