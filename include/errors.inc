@@ -123,8 +123,8 @@ The most commonly searched terms have also been added.
 TODO: Determine if we want to continue 301 -OR- make these official URLs.
 ******************************************************************************/
 
-function is_known_ini ($ini) {
-$inis = array(
+function is_known_ini (string $ini): ?string {
+	$inis = [
 	'engine'						=> 'apache.configuration.php#ini.engine',
 	'short-open-tag'				=> 'ini.core.php#ini.short-open-tag',
 	'asp-tags'						=> 'ini.core.php#ini.asp-tags',
@@ -345,13 +345,13 @@ $inis = array(
 	'soap.wsdl-cache-enabled'		=> 'soap.configuration.php#ini.soap.wsdl-cache-enabled',
 	'soap.wsdl-cache-dir'			=> 'soap.configuration.php#ini.soap.wsdl-cache-dir',
 	'soap.wsdl-cache-ttl'			=> 'soap.configuration.php#ini.soap.wsdl-cache-ttl',
-	);
+	];
 
-	return isset($inis[$ini]) ? $inis[$ini] : false;
+	return $inis[$ini] ?? null;
 }
 
-function is_known_variable($variable) {
-$variables = array(
+function is_known_variable(string $variable): ?string {
+	$variables = [
 	// Variables
 	'globals'		=> 'reserved.variables.globals.php',
 	'-server'		=> 'reserved.variables.server.php',
@@ -375,18 +375,13 @@ $variables = array(
 	'http-post-files'		=> 'reserved.variables.files.php',
 	'http-cookie-vars'		=> 'reserved.variables.cookies.php',
 	'http-env-vars'			=> 'reserved.variables.env.php',
-	);
+	];
 
-	if ($variable[0] === '$') {
-		$variable = ltrim($variable, '$');
-	}
-
-	return isset($variables[$variable]) ? $variables[$variable] : false;
-
+	return $variables[ltrim($variable, '$')] ?? null;
 }
 
-function is_known_term ($term) {
-$terms = array(
+function is_known_term (string $term): ?string {
+	$terms = [
 	'<>'			=> 'language.operators.comparison.php',
 	'=='			=> 'language.operators.comparison.php',
 	'==='			=> 'language.operators.comparison.php',
@@ -458,9 +453,9 @@ $terms = array(
 	'timestamp'		=> 'function.time.php',
 	'try'			=> 'language.exceptions.php',
 	'upload'		=> 'features.file-upload.php',
-	);
+	];
 
-	return isset($terms[$term]) ? $terms[$term] : false;
+	return $terms[$term] ?? null;
 }
 
 /*
@@ -473,8 +468,8 @@ Search snippet provider: A dirty proof-of-concept:
 	It should also take into account vague searches, such as 'global' and 'str'. The search works well enough for,
 	most terms, so something like $_SERVER isn't really needed but it's defined below anyways...
 */
-function is_known_snippet($term) {
-$snippets = array(
+function is_known_snippet(string $term): ?string {
+	$snippets = [
 	'global'	=> '
 		The <b>global</b> keyword is used to manipulate <a href="/language.variables.scope">variable scope</a>, and
 		there is also the concept of <a href="/language.variables.superglobals">super globals</a> in PHP,
@@ -497,10 +492,10 @@ $snippets = array(
 		<a href="/language.functions">function is defined</a>, or
 		<a href="/about.prototypes">how to read a function prototype</a>.
 		See also the list of <a href="/extensions">PHP extensions</a>',
-	);
+	];
 
 	$term = ltrim(strtolower(trim($term)), '$');
-	return $snippets[$term] ?? false;
+	return $snippets[$term] ?? null;
 }
 
 /**
