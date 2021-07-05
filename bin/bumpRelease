@@ -24,7 +24,7 @@ if ($info === null) {
 }
 
 $info["museum"] = false;
-if (is_bool($info["announcement"]) && $info["announcement"]) {
+if ($info["announcement"] === true) {
 	$info["announcement"] = array("English" => "/releases/" . str_replace(".", "_", $version) . ".php");
 }
 
