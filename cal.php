@@ -129,25 +129,43 @@ $bom = mktime(0, 0, 1, $cm,   1, $cy);
 $eom = mktime(0, 0, 1, $cm+1, 0, $cy);
 
 // Link to previous month (but do not link to too early dates)
-$lm = mktime(0, 0, 1, $cm, 0, $cy);
-if (valid_year(date("Y", $lm))) {
-   $prev_link = '<a href="/cal.php' . strftime('?cm=%m&amp;cy=%Y">%B, %Y</a>', $lm);
-} else {
-   $prev_link = '&nbsp;';
-}
+$prev_link = (function() use ($cm, $cy) {
+    $lm = mktime(0, 0, 1, $cm, 0, $cy);
+    $year = date('Y', $lm);
+    if (!valid_year($year)) {
+        return '&nbsp;';
+    }
+
+    $month = date('m', $lm);
+    $monthName = date('F', $lm);
+    return sprintf('<a href="/cal.php?cm=%s&amp;cy=%s">%s, %s</a>',
+                   urlencode($month),
+                   urlencode($year),
+                   htmlentities($monthName),
+                   htmlentities($year));
+})();
 
 // Link to next month (but do not link to too early dates)
-$nm = mktime(0, 0, 1, $cm+1, 1, $cy);
-if (valid_year(date("Y", $nm))) {
-   $next_link = '<a href="/cal.php' . strftime('?cm=%m&amp;cy=%Y">%B, %Y</a>', $nm);
-} else {
-   $next_link = '&nbsp;';
-}
+$next_link = (function() use ($cm, $cy) {
+    $nm = mktime(0, 0, 1, $cm+1, 1, $cy);
+    $year = date('Y', $nm);
+    if (!valid_year($year)) {
+        return '&nbsp;';
+    }
+
+    $month = date('m', $nm);
+    $monthName = date('F', $nm);
+    return sprintf('<a href="/cal.php?cm=%s&amp;cy=%s">%s, %s</a>',
+                   urlencode($month),
+                   urlencode($year),
+                   htmlentities($monthName),
+                   htmlentities($year));
+})();
 
 // Print out navigation links for previous and next month
 echo '<br><table id="calnav" width="100%" border="0" cellspacing="0" cellpadding="3">',
      "\n<tr>", '<td align="left" width="33%">', $prev_link, '</td>',
-     '<td align="center" width="33%">', strftime('<b>%B, %Y</b></td>', $bom),
+     '<td align="center" width="33%"><b>', htmlentities(date('F, Y', $bom)), '</b></td>',
      '<td align="right" width="33%">', $next_link, "</td></tr>\n</table>\n";
 
 // Begin the calendar table

@@ -91,7 +91,7 @@ site_header("Information About This PHP Mirror Site", array("current" => "commun
 <h2>Mirror Status</h2>
 
 <ul>
- <li>The site was last updated at <?php echo strftime("%c %Z", $LAST_UPDATED); ?></li>
+ <li>The site was last updated at <?php echo date('r', $LAST_UPDATED); ?></li>
 </ul>
 
 <?php site_footer(); ?>
