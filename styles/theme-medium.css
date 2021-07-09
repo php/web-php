@@ -445,7 +445,8 @@ aside.tips a:focus {
 
 /* {{{ Breadcrumbs */
 #breadcrumbs {
-    color: #999;
+  color: #999;
+  background: #333 url(/images/bg-texture-00.svg);
 }
 /* }}} */
 
