@@ -248,6 +248,7 @@ echo $result;
         <li>Match is an expression, meaning its result can be stored in a variable or returned.</li>
         <li>Match branches only support single-line expressions and do not need a break; statement.</li>
         <li>Match does strict comparisons.</li>
+        <li>Match throws an <code>UnhandledMatchError</code> if no match is found and no <code>default</code> is provided.</li>
       </ul>
     </div>
   </div>
@@ -289,8 +290,8 @@ if ($session !== null) {
       </div>
     </div>
     <div class="php8-compare__content">
-      <p>Instead of null check conditions, you can now use a chain of calls with the new nullsafe operator. When the
-        evaluation of one element in the chain fails, the execution of the entire chain aborts and the entire chain
+      <p>Instead of null check conditions, you can now use a chain of calls with the new nullsafe operator. When one
+        element in the chain evaluates to null, the execution of the entire chain aborts and the entire chain
         evaluates to null.</p>
     </div>
   </div>
