@@ -27,7 +27,7 @@ site_header("License Information", array("current" => "help"));
 
 <ul>
  <li>
-  PHP 4, PHP 5 and PHP 7 are distributed under the
+  Starting with PHP 4, versions of the PHP software are distributed under the
   <a href="http://www.php.net/license/3_01.txt">PHP License v3.01</a>, copyright (c) the <a href="/credits.php">PHP Group</a>.
   <ul>
    <li>
