@@ -14,7 +14,7 @@ site_header("News Archive - 2012", array("cache" => true));
 <hr>
 <div class="newsItem hentry">
     <div class="newsImage"></div>
-    <h2 class="summary entry-title"><a name="id2012-12-21-1" id="id2012-12-21-1" href="http://php.net/archive/2012.php#id2012-12-21-1" rel="bookmark" class="bookmark">PHP 5.5.0 Alpha2 released</a></h2>
+    <h2 class="summary entry-title"><a id="id2012-12-21-1" href="http://php.net/archive/2012.php#id2012-12-21-1" rel="bookmark" class="bookmark">PHP 5.5.0 Alpha2 released</a></h2>
     <div class="entry-content description">
         <abbr class="published newsdate" title="2012-12-21T16:19:14+00:00">21-Dec-2012</abbr>
         <div>
@@ -65,7 +65,7 @@ site_header("News Archive - 2012", array("cache" => true));
 </div>
 <div class="newsItem hentry vevent">
     <div class="newsImage"><a href="http://conference.phpbenelux.eu/2013/"><img src="/images/news/phpbenelux_conference_logo-01-e1344277762627.png" alt="PHPBenelux Conference 2013" width="450" height="118" style="float: right;"></a></div>
-    <h2 class="summary entry-title"><a name="id2012-12-20-2" id="id2012-12-20-2" href="http://conference.phpbenelux.eu/2013/" rel="bookmark" class="bookmark">PHPBenelux Conference 2013</a></h2>
+    <h2 class="summary entry-title"><a id="id2012-12-20-2" href="http://conference.phpbenelux.eu/2013/" rel="bookmark" class="bookmark">PHPBenelux Conference 2013</a></h2>
     <div class="entry-content description">
         <abbr class="published newsdate" title="2012-12-20T12:16:46-08:00">20-Dec-2012</abbr>
         <div>
@@ -83,7 +83,7 @@ site_header("News Archive - 2012", array("cache" => true));
 </div>
 <div class="newsItem hentry">
     <div class="newsImage"></div>
-    <h2 class="summary entry-title"><a name="id2012-12-20-1" id="id2012-12-20-1" href="http://php.net/archive/2012.php#id2012-12-20-1" rel="bookmark" class="bookmark">PHP 5.4.10 and PHP 5.3.20 released!</a></h2>
+    <h2 class="summary entry-title"><a id="id2012-12-20-1" href="http://php.net/archive/2012.php#id2012-12-20-1" rel="bookmark" class="bookmark">PHP 5.4.10 and PHP 5.3.20 released!</a></h2>
     <div class="entry-content description">
         <abbr class="published newsdate" title="2012-12-20T11:38:49+00:00">20-Dec-2012</abbr>
         <div>
@@ -98,7 +98,7 @@ site_header("News Archive - 2012", array("cache" => true));
 </div>
 <div class="newsItem hentry vevent">
     <div class="newsImage"><a href="http://tek13.phparch.com/"><img src="/images/news/tek13_badge.png" alt="php[tek] 2013" width="300" height="140" style="float: right;" ></a></div>
-    <h2 class="summary entry-title"><a name="id2012-12-19-1" id="id2012-12-19-1" href="http://tek13.phparch.com/" rel="bookmark" class="bookmark">php[tek] 2013 Conference</a></h2>
+    <h2 class="summary entry-title"><a id="id2012-12-19-1" href="http://tek13.phparch.com/" rel="bookmark" class="bookmark">php[tek] 2013 Conference</a></h2>
     <div class="entry-content description">
         <abbr class="published newsdate" title="2012-12-19T14:57:57-08:00">19-Dec-2012</abbr>
         <div>
@@ -117,7 +117,7 @@ site_header("News Archive - 2012", array("cache" => true));
 </div>
 <div class="newsItem hentry">
     <div class="newsImage"></div>
-    <h2 class="summary entry-title"><a name="id2012-11-22-1" id="id2012-11-22-1" href="http://www.php.net/archive/2012.php#id2012-11-22-1" rel="bookmark" class="bookmark">PHP 5.4.9 and PHP 5.3.19 released!</a></h2>
+    <h2 class="summary entry-title"><a id="id2012-11-22-1" href="http://www.php.net/archive/2012.php#id2012-11-22-1" rel="bookmark" class="bookmark">PHP 5.4.9 and PHP 5.3.19 released!</a></h2>
     <div class="entry-content description">
         <abbr class="published newsdate" title="2012-11-22T17:54:29+01:00">22-Nov-2012</abbr>
         <div>
@@ -130,7 +130,7 @@ site_header("News Archive - 2012", array("cache" => true));
 </div>
 <div class="newsItem hentry">
     <div class="newsImage"></div>
-    <h2 class="summary entry-title"><a name="id2012-11-15-1" id="id2012-11-15-1" href="http://www.php.net/archive/2012.php#id2012-11-15-1" rel="bookmark" class="bookmark">PHP 5.5.0 Alpha1 released</a></h2>
+    <h2 class="summary entry-title"><a id="id2012-11-15-1" href="http://www.php.net/archive/2012.php#id2012-11-15-1" rel="bookmark" class="bookmark">PHP 5.5.0 Alpha1 released</a></h2>
     <div class="entry-content description">
         <abbr class="published newsdate" title="2012-11-15T14:10:06+00:00">15-Nov-2012</abbr>
         <div>
@@ -177,7 +177,7 @@ site_header("News Archive - 2012", array("cache" => true));
 </div>
 <div class="newsItem hentry vevent">
     <div class="newsImage"><a href="http://sunshinephp.com/"><img src="/images/news/sunshine2013.png" alt="SunshinePHP Developer Conference" width="180" height="180" style="float: right;"></a></div>
-    <h2 class="summary entry-title"><a name="id2012-11-03-1" id="id2012-11-03-1" href="http://sunshinephp.com/" rel="bookmark" class="bookmark">SunshinePHP Developer Conference</a></h2>
+    <h2 class="summary entry-title"><a id="id2012-11-03-1" href="http://sunshinephp.com/" rel="bookmark" class="bookmark">SunshinePHP Developer Conference</a></h2>
     <div class="entry-content description">
         <abbr class="published newsdate" title="2012-11-03T13:04:07-07:00">03-Nov-2012</abbr>
         <div>
@@ -203,7 +203,7 @@ site_header("News Archive - 2012", array("cache" => true));
 </div>
 <div class="newsItem hentry vevent">
     <div class="newsImage"><a href="http://phpconference.co.uk/"><img src="/images/news/phpuk2013.jpeg" alt="PHP UK 2013" width="161" height="107" style="float: right;"></a></div>
-    <h2 class="summary entry-title"><a name="id2012-11-02-1" id="id2012-11-02-1" href="http://phpconference.co.uk/" rel="bookmark" class="bookmark">PHP UK Conference</a></h2>
+    <h2 class="summary entry-title"><a id="id2012-11-02-1" href="http://phpconference.co.uk/" rel="bookmark" class="bookmark">PHP UK Conference</a></h2>
     <div class="entry-content description">
         <abbr class="published newsdate" title="2012-11-02T09:39:14-07:00">02-Nov-2012</abbr>
         <div>
@@ -225,7 +225,7 @@ site_header("News Archive - 2012", array("cache" => true));
 </div>
 <div class="newsItem hentry">
     <div class="newsImage"></div>
-    <h2 class="summary entry-title"><a name="id2012-10-18-1" id="id2012-10-18-1" href="http://www.php.net/archive/2012.php#id2012-10-18-1" rel="bookmark" class="bookmark">PHP 5.4.8 and PHP 5.3.18 released!</a></h2>
+    <h2 class="summary entry-title"><a id="id2012-10-18-1" href="http://www.php.net/archive/2012.php#id2012-10-18-1" rel="bookmark" class="bookmark">PHP 5.4.8 and PHP 5.3.18 released!</a></h2>
     <div class="entry-content description">
         <abbr class="published newsdate" title="2012-10-18T17:35:45+00:00">18-Oct-2012</abbr>
         <div>
@@ -261,7 +261,7 @@ site_header("News Archive - 2012", array("cache" => true));
 </div>
 <div class="newsItem hentry vevent">
     <div class="newsImage"><a href="http://truenorthphp.ca/"><img src="/images/news/truenorth2012.jpg" alt="True North 2012" width="363" height="173" style="float: right;"></a></div>
-    <h2 class="summary entry-title"><a name="id2012-10-13-2" id="id2012-10-13-2" href="http://truenorthphp.ca/" rel="bookmark" class="bookmark">True North PHP</a></h2>
+    <h2 class="summary entry-title"><a id="id2012-10-13-2" href="http://truenorthphp.ca/" rel="bookmark" class="bookmark">True North PHP</a></h2>
     <div class="entry-content description">
         <abbr class="published newsdate" title="2012-10-13T17:00:14-07:00">13-Oct-2012</abbr>
         <div>
@@ -283,7 +283,7 @@ site_header("News Archive - 2012", array("cache" => true));
 </div>
 <div class="newsItem hentry vevent">
     <div class="newsImage"><a href="http://www.web-developer-conference.de/"><img src="/images/news/Logo_WDC_2013.jpg" alt="WDC2013" width="400" height="97" style="float: right;"></a></div>
-    <h2 class="summary entry-title"><a name="id2012-10-13-1" id="id2012-10-13-1" href="http://www.web-developer-conference.de/" rel="bookmark" class="bookmark">Web Developer Conference (WDC) 2013</a></h2>
+    <h2 class="summary entry-title"><a id="id2012-10-13-1" href="http://www.web-developer-conference.de/" rel="bookmark" class="bookmark">Web Developer Conference (WDC) 2013</a></h2>
     <div class="entry-content description">
         <abbr class="published newsdate" title="2012-10-13T16:17:20-07:00">13-Oct-2012</abbr>
         <div>
@@ -300,7 +300,7 @@ site_header("News Archive - 2012", array("cache" => true));
 </div>
 <div class="newsItem hentry vevent">
     <div class="newsImage"><a href="http://www.midwestphp.com/"><img src="/images/news/rsz_midwestphpconference_customlogodesign_rl3.jpg" alt="Midwest PHP Conference" width="180" height="180" style="float: right;"></a></div>
-    <h2 class="summary entry-title"><a name="id2012-10-05-1" id="id2012-10-05-1" href="http://www.midwestphp.com/" rel="bookmark" class="bookmark">Midwest PHP Conference</a></h2>
+    <h2 class="summary entry-title"><a id="id2012-10-05-1" href="http://www.midwestphp.com/" rel="bookmark" class="bookmark">Midwest PHP Conference</a></h2>
     <div class="entry-content description">
         <abbr class="published newsdate" title="2012-10-05T15:43:04-07:00">05-Oct-2012</abbr>
         <div>
@@ -316,7 +316,7 @@ site_header("News Archive - 2012", array("cache" => true));
 </div>
 <div class="newsItem hentry">
     <div class="newsImage"></div>
-    <h2 class="summary entry-title"><a name="id2012-09-13-1" id="id2012-09-13-1" href="http://www.php.net/archive/2012.php#id2012-09-13-1" rel="bookmark" class="bookmark">PHP 5.4.7 and PHP 5.3.17 released!</a></h2>
+    <h2 class="summary entry-title"><a id="id2012-09-13-1" href="http://www.php.net/archive/2012.php#id2012-09-13-1" rel="bookmark" class="bookmark">PHP 5.4.7 and PHP 5.3.17 released!</a></h2>
     <div class="entry-content description">
         <abbr class="published newsdate" title="2012-09-13T15:29:37+00:00">13-Sep-2012</abbr>
         <div>
@@ -351,7 +351,7 @@ site_header("News Archive - 2012", array("cache" => true));
 </div>
 <div class="newsItem hentry vevent">
     <div class="newsImage"><a href="http://codeconnexx.com/"><img src="/images/news/codeconnexx.com-1.jpg" alt="CodeConnexx" width="472" height="144" style="float: right;"></a></div>
-    <h2 class="summary entry-title"><a name="id2012-09-11-1" id="id2012-09-11-1" href="http://codeconnexx.com/" rel="bookmark" class="bookmark">CodeConnexx</a></h2>
+    <h2 class="summary entry-title"><a id="id2012-09-11-1" href="http://codeconnexx.com/" rel="bookmark" class="bookmark">CodeConnexx</a></h2>
     <div class="entry-content description">
         <abbr class="published newsdate" title="2012-09-11T12:33:16-05:00">11-Sep-2012</abbr>
         <div>
@@ -369,7 +369,7 @@ site_header("News Archive - 2012", array("cache" => true));
 </div>
 <div class="newsItem hentry vevent">
     <div class="newsImage"><a href="http://phpconference.com/"><img src="/images/news/icp2012.jpg" alt="IPC 2012" width="396" height="254" style="float: right;"></a></div>
-    <h2 class="summary entry-title"><a name="id2012-09-05-1" id="id2012-09-05-1" href="http://phpconference.com/" rel="bookmark" class="bookmark">International PHP Conference 2012</a></h2>
+    <h2 class="summary entry-title"><a id="id2012-09-05-1" href="http://phpconference.com/" rel="bookmark" class="bookmark">International PHP Conference 2012</a></h2>
     <div class="entry-content description">
         <abbr class="published newsdate" title="2012-09-05T18:41:44+01:00">05-Sep-2012</abbr>
         <div>
@@ -393,7 +393,7 @@ site_header("News Archive - 2012", array("cache" => true));
 </div>
 <div class="newsItem hentry vevent">
     <div class="newsImage"><a href="http://confoo.ca/en"><img src="/images/news/confoo-2013-php.jpg" alt="ConFoo Web Techno Conference. February 25 - March  1, 2013 | Montreal, Canada" width="180" height="250" style="float: right;"></a></div>
-    <h2 class="summary entry-title"><a name="id2012-08-29-1" id="id2012-08-29-1" href="http://confoo.ca/en" rel="bookmark" class="bookmark">ConFoo 2013 - Call for Papers is Now Open!</a></h2>
+    <h2 class="summary entry-title"><a id="id2012-08-29-1" href="http://confoo.ca/en" rel="bookmark" class="bookmark">ConFoo 2013 - Call for Papers is Now Open!</a></h2>
     <div class="entry-content description">
         <abbr class="published newsdate" title="2012-08-29T14:50:10+00:00">29-Aug-2012</abbr>
         <div>
@@ -411,7 +411,7 @@ site_header("News Archive - 2012", array("cache" => true));
 </div>
 <div class="newsItem hentry vevent">
     <div class="newsImage"><a href="http://conference.phpnw.org.uk/phpnw12"><img src="/images/news/phpnw12_details_200x1441.png" alt="PHPNW12" width="200" height="144" style="float: right;"></a></div>
-    <h2 class="summary entry-title"><a name="id2012-08-21-1" id="id2012-08-21-1" href="http://conference.phpnw.org.uk/phpnw12" rel="bookmark" class="bookmark">PHPNW12 - PHP North West 2012</a></h2>
+    <h2 class="summary entry-title"><a id="id2012-08-21-1" href="http://conference.phpnw.org.uk/phpnw12" rel="bookmark" class="bookmark">PHPNW12 - PHP North West 2012</a></h2>
     <div class="entry-content description">
         <abbr class="published newsdate" title="2012-08-21T19:59:32+02:00">21-Aug-2012</abbr>
         <div>
@@ -449,7 +449,7 @@ site_header("News Archive - 2012", array("cache" => true));
 </div>
 <div class="newsItem hentry vevent">
     <div class="newsImage"><a href="http://www.zendcon.com/"><img src="/images/news/zendCon12.jpeg" alt="ZendCon 2012" width="247" height="104" style="float: right;"></a></div>
-    <h2 class="summary entry-title"><a name="id2012-08-16-2" id="id2012-08-16-2" href="http://www.zendcon.com/" rel="bookmark" class="bookmark">ZendCon 2012</a></h2>
+    <h2 class="summary entry-title"><a id="id2012-08-16-2" href="http://www.zendcon.com/" rel="bookmark" class="bookmark">ZendCon 2012</a></h2>
     <div class="entry-content description">
         <abbr class="published newsdate" title="2012-08-16T23:31:43+01:00">16-Aug-2012</abbr>
         <div>
@@ -487,7 +487,7 @@ site_header("News Archive - 2012", array("cache" => true));
 </div>
 <div class="newsItem hentry">
     <div class="newsImage"></div>
-    <h2 class="summary entry-title"><a name="id2012-08-16-1" id="id2012-08-16-1" href="http://www.php.net/archive/2012.php#id2012-08-16-1" rel="bookmark" class="bookmark">PHP 5.4.6 and PHP 5.3.16 released!</a></h2>
+    <h2 class="summary entry-title"><a id="id2012-08-16-1" href="http://www.php.net/archive/2012.php#id2012-08-16-1" rel="bookmark" class="bookmark">PHP 5.4.6 and PHP 5.3.16 released!</a></h2>
     <div class="entry-content description">
         <abbr class="published newsdate" title="2012-08-16T19:30:09+00:00">16-Aug-2012</abbr>
         <div>
@@ -502,7 +502,7 @@ site_header("News Archive - 2012", array("cache" => true));
 </div>
 <div class="newsItem hentry vevent">
     <div class="newsImage"><a href="http://london2012.live.symfony.com/"><img src="/images/news/sfl_london.png" alt="Sf Live London" width="212" height="214" style="float: right;"></a></div>
-    <h2 class="summary entry-title"><a name="id2012-08-15-1" id="id2012-08-15-1" href="http://london2012.live.symfony.com/" rel="bookmark" class="bookmark">Symfony Live London</a></h2>
+    <h2 class="summary entry-title"><a id="id2012-08-15-1" href="http://london2012.live.symfony.com/" rel="bookmark" class="bookmark">Symfony Live London</a></h2>
     <div class="entry-content description">
         <abbr class="published newsdate" title="2012-08-15T15:01:17+01:00">15-Aug-2012</abbr>
         <div>
@@ -528,7 +528,7 @@ site_header("News Archive - 2012", array("cache" => true));
 </div>
 <div class="newsItem hentry vevent">
     <div class="newsImage"><a href="http://www.web-developer-conference.de"><img src="/images/news/wdc-2012.jpg" alt="The Web Developer Conference" width="216" height="59" style="float: right;"></a></div>
-    <h2 class="summary entry-title"><a name="id2012-07-27-1" id="id2012-07-27-1" href="http://www.web-developer-conference.de" rel="bookmark" class="bookmark">The Web Developer Conference</a></h2>
+    <h2 class="summary entry-title"><a id="id2012-07-27-1" href="http://www.web-developer-conference.de" rel="bookmark" class="bookmark">The Web Developer Conference</a></h2>
     <div class="entry-content description">
         <abbr class="published newsdate" title="2012-07-27T17:15:23+01:00">27-Jul-2012</abbr>
         <div>
@@ -549,7 +549,7 @@ site_header("News Archive - 2012", array("cache" => true));
 </div>
 <div class="newsItem hentry">
     <div class="newsImage"></div>
-    <h2 class="summary entry-title"><a name="id2012-07-19-1" id="id2012-07-19-1" href="http://www.php.net/archive/2012.php#id2012-07-19-1" rel="bookmark" class="bookmark">PHP 5.4.5 and PHP 5.3.15 released!</a></h2>
+    <h2 class="summary entry-title"><a id="id2012-07-19-1" href="http://www.php.net/archive/2012.php#id2012-07-19-1" rel="bookmark" class="bookmark">PHP 5.4.5 and PHP 5.3.15 released!</a></h2>
     <div class="entry-content description">
         <abbr class="published newsdate" title="2012-07-19T23:50:47+02:00">19-Jul-2012</abbr>
         <div>
@@ -569,7 +569,7 @@ site_header("News Archive - 2012", array("cache" => true));
 </div>
 <div class="newsItem hentry vevent">
     <div class="newsImage"><a href="http://www.northeastphp.org/"><img src="/images/news/NENA_logo.png" alt="Northeast PHP Conference" width="352" height="191" style="float: right;"></a></div>
-    <h2 class="summary entry-title"><a name="id2012-06-27-1" id="id2012-06-27-1" href="http://www.northeastphp.org/" rel="bookmark" class="bookmark">Northeast PHP Conference</a></h2>
+    <h2 class="summary entry-title"><a id="id2012-06-27-1" href="http://www.northeastphp.org/" rel="bookmark" class="bookmark">Northeast PHP Conference</a></h2>
     <div class="entry-content description">
         <abbr class="published newsdate" title="2012-06-27T16:20:12+01:00">27-Jun-2012</abbr>
         <div>
@@ -598,7 +598,7 @@ site_header("News Archive - 2012", array("cache" => true));
 </div>
 <div class="newsItem hentry">
     <div class="newsImage"></div>
-    <h2 class="summary entry-title"><a name="id2012-06-14-1" id="id2012-06-14-1" href="http://www.php.net/archive/2012.php#id2012-06-14-1" rel="bookmark" class="bookmark">PHP 5.4.4 and PHP 5.3.14 released!</a></h2>
+    <h2 class="summary entry-title"><a id="id2012-06-14-1" href="http://www.php.net/archive/2012.php#id2012-06-14-1" rel="bookmark" class="bookmark">PHP 5.4.4 and PHP 5.3.14 released!</a></h2>
     <div class="entry-content description">
         <abbr class="published newsdate" title="2012-06-14T14:36:29+02:00">14-Jun-2012</abbr>
         <div>
@@ -622,7 +622,7 @@ site_header("News Archive - 2012", array("cache" => true));
 </div>
 <div class="newsItem hentry">
     <div class="newsImage"></div>
-    <h2 class="summary entry-title"><a name="id2012-05-08-1" id="id2012-05-08-1" href="http://www.php.net/archive/2012.php#id2012-05-08-1" rel="bookmark" class="bookmark">PHP 5.4.3 and PHP 5.3.13 Released!</a></h2>
+    <h2 class="summary entry-title"><a id="id2012-05-08-1" href="http://www.php.net/archive/2012.php#id2012-05-08-1" rel="bookmark" class="bookmark">PHP 5.4.3 and PHP 5.3.13 Released!</a></h2>
     <div class="entry-content description">
         <abbr class="published newsdate" title="2012-05-08T19:44:07+02:00">08-May-2012</abbr>
         <div>
@@ -646,7 +646,7 @@ site_header("News Archive - 2012", array("cache" => true));
 </div>
 <div class="newsItem hentry">
     <div class="newsImage"></div>
-    <h2 class="summary entry-title"><a name="id2012-05-06-1" id="id2012-05-06-1" href="http://www.php.net/archive/2012.php#id2012-05-06-1" rel="bookmark" class="bookmark">PHP 5.3.12 and 5.4.2 and the CGI flaw (CVE-2012-1823)</a></h2>
+    <h2 class="summary entry-title"><a id="id2012-05-06-1" href="http://www.php.net/archive/2012.php#id2012-05-06-1" rel="bookmark" class="bookmark">PHP 5.3.12 and 5.4.2 and the CGI flaw (CVE-2012-1823)</a></h2>
     <div class="entry-content description">
         <abbr class="published newsdate" title="2012-05-06T23:00:36+02:00">06-May-2012</abbr>
         <div>
@@ -681,7 +681,7 @@ site_header("News Archive - 2012", array("cache" => true));
 </div>
 <div class="newsItem hentry">
     <div class="newsImage"></div>
-    <h2 class="summary entry-title"><a name="id2012-05-03-1" id="id2012-05-03-1" href="http://www.php.net/archive/2012.php#id2012-05-03-1" rel="bookmark" class="bookmark">PHP 5.3.12 and PHP 5.4.2 Released!</a></h2>
+    <h2 class="summary entry-title"><a id="id2012-05-03-1" href="http://www.php.net/archive/2012.php#id2012-05-03-1" rel="bookmark" class="bookmark">PHP 5.3.12 and PHP 5.4.2 Released!</a></h2>
     <div class="entry-content description">
         <abbr class="published newsdate" title="2012-05-03T18:00:36+02:00">03-May-2012</abbr>
         <div>
@@ -745,7 +745,7 @@ site_header("News Archive - 2012", array("cache" => true));
 </div>
 <div class="newsItem hentry vevent">
     <div class="newsImage"><a href="http://devconf.ru"><img src="/images/news/devconfru2012.png" alt="DevConf 2012" width="373" height="86" style="float: right;"></a></div>
-    <h2 class="summary entry-title"><a name="id2012-04-27-1" id="id2012-04-27-1" href="http://devconf.ru" rel="bookmark" class="bookmark">DevConf 2012</a></h2>
+    <h2 class="summary entry-title"><a id="id2012-04-27-1" href="http://devconf.ru" rel="bookmark" class="bookmark">DevConf 2012</a></h2>
     <div class="entry-content description">
         <abbr class="published newsdate" title="2012-04-27T05:20:52+00:00">27-Apr-2012</abbr>
         <div>
@@ -780,7 +780,7 @@ site_header("News Archive - 2012", array("cache" => true));
 </div>
 <div class="newsItem hentry">
     <div class="newsImage"></div>
-    <h2 class="summary entry-title"><a name="id2012-04-26-1" id="id2012-04-26-1" href="http://www.php.net/archive/2012.php#id2012-04-26-1" rel="bookmark" class="bookmark">PHP 5.3.11 And PHP 5.4.1 Released!</a></h2>
+    <h2 class="summary entry-title"><a id="id2012-04-26-1" href="http://www.php.net/archive/2012.php#id2012-04-26-1" rel="bookmark" class="bookmark">PHP 5.3.11 And PHP 5.4.1 Released!</a></h2>
     <div class="entry-content description">
         <abbr class="published newsdate" title="2012-04-26T10:50:38+00:00">26-Apr-2012</abbr>
         <div>
@@ -817,7 +817,7 @@ site_header("News Archive - 2012", array("cache" => true));
 </div>
 <div class="newsItem hentry">
     <div class="newsImage"></div>
-    <h2 class="summary entry-title"><a name="id2012-04-13-1" id="id2012-04-13-1" href="http://www.php.net/archive/2012.php#id2012-04-13-1" rel="bookmark" class="bookmark">PHP 5.4.1RC2 Released for Testing</a></h2>
+    <h2 class="summary entry-title"><a id="id2012-04-13-1" href="http://www.php.net/archive/2012.php#id2012-04-13-1" rel="bookmark" class="bookmark">PHP 5.4.1RC2 Released for Testing</a></h2>
     <div class="entry-content description">
         <abbr class="published newsdate" title="2012-04-13T13:37:44+02:00">13-Apr-2012</abbr>
         <div>
@@ -861,7 +861,7 @@ site_header("News Archive - 2012", array("cache" => true));
 </div>
 <div class="newsItem hentry">
     <div class="newsImage"></div>
-    <h2 class="summary entry-title"><a name="id2012-03-20-1" id="id2012-03-20-1" href="http://www.php.net/archive/2012.php#id2012-03-20-1" rel="bookmark" class="bookmark">PHP migrates to Git</a></h2>
+    <h2 class="summary entry-title"><a id="id2012-03-20-1" href="http://www.php.net/archive/2012.php#id2012-03-20-1" rel="bookmark" class="bookmark">PHP migrates to Git</a></h2>
     <div class="entry-content description">
         <abbr class="published newsdate" title="2012-03-20T10:25:52+08:00">20-Mar-2012</abbr>
         <div>
@@ -904,7 +904,7 @@ site_header("News Archive - 2012", array("cache" => true));
 </div>
 <div class="newsItem hentry">
     <div class="newsImage"></div>
-    <h2 class="summary entry-title"><a name="id2012-03-01-1" id="id2012-03-01-1" href="http://www.php.net/archive/2012.php#id2012-03-01-1" rel="bookmark" class="bookmark">PHP 5.4.0 released!</a></h2>
+    <h2 class="summary entry-title"><a id="id2012-03-01-1" href="http://www.php.net/archive/2012.php#id2012-03-01-1" rel="bookmark" class="bookmark">PHP 5.4.0 released!</a></h2>
     <div class="entry-content description">
         <abbr class="published newsdate" title="2012-03-01T19:40:35+01:00">01-Mar-2012</abbr>
         <div>
@@ -950,7 +950,7 @@ site_header("News Archive - 2012", array("cache" => true));
 </div>
 <div class="newsItem hentry">
     <div class="newsImage"></div>
-    <h2 class="summary entry-title"><a name="id2012-02-02-1" id="id2012-02-02-1" href="http://www.php.net/archive/2012.php#id2012-02-02-1" rel="bookmark" class="bookmark">PHP 5.3.10 Released!</a></h2>
+    <h2 class="summary entry-title"><a id="id2012-02-02-1" href="http://www.php.net/archive/2012.php#id2012-02-02-1" rel="bookmark" class="bookmark">PHP 5.3.10 Released!</a></h2>
     <div class="entry-content description">
         <abbr class="published newsdate" title="2012-02-02T20:32:47+01:00">02-Feb-2012</abbr>
         <div>
@@ -976,7 +976,7 @@ site_header("News Archive - 2012", array("cache" => true));
 </div>
 <div class="newsItem hentry vevent">
     <div class="newsImage"></div>
-    <h2 class="summary entry-title"><a name="id2012-01-20-1" id="id2012-01-20-1" href="http://confoo.ca/" rel="bookmark" class="bookmark">ConFoo 2012</a></h2>
+    <h2 class="summary entry-title"><a id="id2012-01-20-1" href="http://confoo.ca/" rel="bookmark" class="bookmark">ConFoo 2012</a></h2>
     <div class="entry-content description">
         <abbr class="published newsdate" title="2012-01-20T05:20:52+00:00">20-Jan-2012</abbr>
         <div>
@@ -1005,7 +1005,7 @@ site_header("News Archive - 2012", array("cache" => true));
 </div>
 <div class="newsItem hentry">
     <div class="newsImage"></div>
-    <h2 class="summary entry-title"><a name="id2012-01-10-1" id="id2012-01-10-1" href="http://www.php.net/archive/2012.php#id2012-01-11-1" rel="bookmark" class="bookmark">PHP 5.3.9 Released!</a></h2>
+    <h2 class="summary entry-title"><a id="id2012-01-10-1" href="http://www.php.net/archive/2012.php#id2012-01-11-1" rel="bookmark" class="bookmark">PHP 5.3.9 Released!</a></h2>
     <div class="entry-content description">
         <abbr class="published newsdate" title="2012-01-10T22:29:58+01:00">10-Jan-2012</abbr>
         <div>
@@ -1043,7 +1043,7 @@ site_header("News Archive - 2012", array("cache" => true));
 </div>
 <div class="newsItem hentry vevent">
     <div class="newsImage"><a href="http://conference.phpbenelux.eu/2012"><img src="/images/news/phpbnl2012.png" alt="PHPBenelux 2012" width="347" height="68" style="float: right;"></a></div>
-    <h2 class="summary entry-title"><a name="id2012-01-07-1" id="id2012-01-07-1" href="http://conference.phpbenelux.eu/2012" rel="bookmark" class="bookmark">PHPBenelux 2012</a></h2>
+    <h2 class="summary entry-title"><a id="id2012-01-07-1" href="http://conference.phpbenelux.eu/2012" rel="bookmark" class="bookmark">PHPBenelux 2012</a></h2>
     <div class="entry-content description">
         <abbr class="published newsdate" title="2012-01-07T14:47:25+01:00">07-Jan-2012</abbr>
         <div>

@@ -6,7 +6,7 @@ include_once __DIR__ . '/include/changelogs.inc';
 $MINOR_VERSIONS = ['5.6', '5.5', '5.4', '5.3', '5.2', '5.1', '5.0'];
 changelog_header(5, $MINOR_VERSIONS);
 ?>
-<a name="PHP_5_6"></a>
+<a id="PHP_5_6"></a>
 <section class="version" id="5.6.40"><!-- {{{ 5.6.40 -->
 <h3>Version 5.6.40</h3>
 <b><?php release_date('10-Jan-2019'); ?></b>
@@ -2524,7 +2524,7 @@ FILTER_FLAG_NO_PRIV_RANGE).</li>
 </ul>
 <!-- }}} --></section>
 
-<a name="PHP_5_5"></a>
+<a id="PHP_5_5"></a>
 <section class="version" id="5.5.38"><!-- {{{ 5.5.38 -->
 <h3>Version 5.5.38</h3>
 <?php release_date('21-Jul-2016'); ?>
@@ -4980,7 +4980,7 @@ FILTER_FLAG_NO_PRIV_RANGE).</li>
 
 <!-- }}} --></section>
 
-<a name="PHP_5_4"></a>
+<a id="PHP_5_4"></a>
 <section class="version" id="5.4.45"><!-- {{{ 5.4.45 -->
 <h3>Version 5.4.45</h3>
 <?php release_date('03-Sep-2015'); ?>
@@ -7884,7 +7884,7 @@ FILTER_FLAG_NO_PRIV_RANGE).</li>
 
 <!-- }}} --></section>
 
-<a name="PHP_5_3"></a>
+<a id="PHP_5_3"></a>
 <section class="version" id="5.3.29"><!-- {{{ 5.3.29 -->
 <h3>Version 5.3.29</h3>
 <?php release_date('14-Aug-2014'); ?>
@@ -11608,7 +11608,7 @@ FILTER_FLAG_NO_PRIV_RANGE).</li>
 </ul>
 <!-- }}} --></section>
 
-<a name="PHP_5_2"></a>
+<a id="PHP_5_2"></a>
 <section class="version" id="5.2.17"><!-- {{{ 5.2.17 -->
 <h3>Version 5.2.17</h3>
 <?php release_date('06-Jan-2011'); ?>
@@ -13706,7 +13706,7 @@ FILTER_FLAG_NO_PRIV_RANGE).</li>
 </ul>
 <!-- }}} --></section>
 
-<a name="PHP_5_1"></a>
+<a id="PHP_5_1"></a>
 <section class="version" id="5.1.6"><!-- {{{ 5.1.6 -->
 <h3>Version 5.1.6</h3>
 <?php release_date('24-Aug-2006'); ?>
@@ -14647,7 +14647,7 @@ FILTER_FLAG_NO_PRIV_RANGE).</li>
 
 <!-- }}} --></section>
 
-<a name="PHP_5_0"></a>
+<a id="PHP_5_0"></a>
 <section class="version" id="5.0.5"><!-- {{{ 5.0.5 -->
 <h3>Version 5.0.5</h3>
 <?php release_date('05-Sep-2005'); ?>

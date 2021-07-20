@@ -4,7 +4,7 @@ include_once __DIR__ . '/include/prepend.inc';
 site_header("Contact", array("current" => "community"));
 ?>
 
-<a name="ads"></a>
+<a id="ads"></a>
 <h1>Advertising at PHP.net and mirror sites</h1>
 
 <p>
@@ -13,7 +13,7 @@ site_header("Contact", array("current" => "community"));
  deals.
 </p>
 
-<a name="contact"></a>
+<a id="contact"></a>
 <h1>Contact</h1>
 
 <p>

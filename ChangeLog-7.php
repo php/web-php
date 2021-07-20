@@ -6,7 +6,7 @@ include_once __DIR__ . '/include/changelogs.inc';
 $MINOR_VERSIONS = ['7.4', '7.3', '7.2', '7.1', '7.0'];
 changelog_header(7, $MINOR_VERSIONS);
 ?>
-<a name="PHP_7_4"></a>
+<a id="PHP_7_4"></a>
 
 <section class="version" id="7.4.21"><!-- {{{ 7.4.21 -->
 <h3>Version 7.4.21</h3>
@@ -1638,7 +1638,7 @@ changelog_header(7, $MINOR_VERSIONS);
 
 <!-- }}} --></section>
 
-<a name="PHP_7_3"></a>
+<a id="PHP_7_3"></a>
 
 <section class="version" id="7.3.29"><!-- {{{ 7.3.29 -->
 <h3>Version 7.3.29</h3>
@@ -3489,7 +3489,7 @@ changelog_header(7, $MINOR_VERSIONS);
 </ul>
 <!-- }}} --></section>
 
-<a name="PHP_7_2"></a>
+<a id="PHP_7_2"></a>
 
 <section class="version" id="7.2.34"><!-- {{{ 7.2.34 -->
 <h3>Version 7.2.34</h3>
@@ -5264,7 +5264,7 @@ changelog_header(7, $MINOR_VERSIONS);
 </ul>
 <!-- }}} --></section>
 
-<a name="PHP_7_1"></a>
+<a id="PHP_7_1"></a>
 <section class="version" id="7.1.33"><!-- {{{ 7.1.33 -->
 <h3>Version 7.1.33</h3>
 <b><?php release_date('24-Oct-2019'); ?></b>
@@ -7449,7 +7449,7 @@ changelog_header(7, $MINOR_VERSIONS);
 </ul>
 <!-- }}} --></section>
 
-<a name="PHP_7_0"></a>
+<a id="PHP_7_0"></a>
 <section class="version" id="7.0.33"><!-- {{{ 7.0.33 -->
 <h3>Version 7.0.33</h3>
 <b><?php release_date('06-Dec-2018'); ?></b>
