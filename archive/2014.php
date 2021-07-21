@@ -1306,27 +1306,27 @@ The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.p
   </header>
   <time class="newsdate" datetime="2014-05-29T03:11:15+02:00">29 May 2014</time>
   <div class="newscontent">
-    <p xmlns="http://www.w3.org/2005/Atom">We’re pleased to announce the 10th annual ZendCon which will be held October 27-30th, 2014 in Santa Clara, CA. ZendCon 2014 has a long history of being one of the “must attend” PHP conferences as community members from around the world have come together to learn and share information about the latest trends and technologies in professional PHP development. Our main topics this year are:</p>
+    <p>We’re pleased to announce the 10th annual ZendCon which will be held October 27-30th, 2014 in Santa Clara, CA. ZendCon 2014 has a long history of being one of the “must attend” PHP conferences as community members from around the world have come together to learn and share information about the latest trends and technologies in professional PHP development. Our main topics this year are:</p>
 
-     <ul xmlns="http://www.w3.org/2005/Atom">
+     <ul>
         <li>PHP Best Practices and Tooling</li>
         <li>Continuous Delivery and DevOps</li>
         <li>Application Architecture - APIs, Mobile, Cloud Services</li>
     </ul>
 
-    <p xmlns="http://www.w3.org/2005/Atom">
+    <p>
         We would welcome submission of any talk included in the wide variety of
         topics related to PHP and tools commonly used by PHP developers. We are
         looking for submissions for:
     </p>
 
-    <ul xmlns="http://www.w3.org/2005/Atom">
+    <ul>
         <li>Pre-conference tutorials on October 27 - 3 hour intensive session</li>
         <li>Breakout sessions on October 28, 29 and 30 - 1 hour sessions including Q&amp;A</li>
         <li>Keynote sessions on October 28-30 – 1 hour sessions with topics appealing to the entire audience</li>
     </ul>
 
-    <p xmlns="http://www.w3.org/2005/Atom">
+    <p>
         For those interested in speaking, please head out to
         <a href="http://cfp.zendcon.com">http://cfp.zendcon.com</a> to
         submit on or before June 16th, 2014.
@@ -1629,6 +1629,7 @@ The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.p
       </p>
       <p>
         Conference numbers
+      </p>
         <ul>
           <li>Expecting more than 700 attendees</li>
           <li>Full exclusivity of a highly recognized venue in Buenos Aires, giving us
@@ -1637,8 +1638,9 @@ The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.p
             day at a farm (called the "Gaucho day") to improve networking opportunities.</li>
           <li>Organized social activities for both conference days.</li>
         </ul>
-        More info: <a href="http://www.phpconference.com.ar">www.phpconference.com.ar</a>
-      </p>
+        <p>
+         More info: <a href="http://www.phpconference.com.ar">www.phpconference.com.ar</a>
+        </p>
     </div>
 
   </div>

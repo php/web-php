@@ -90,10 +90,16 @@ using <a href="/my.php">my.php</a>.
     <div>
   <span class="newsdate">[21-Sep-2007]</span>
   <p>
-November 7th - 9th, Join us at the 2nd Annual DC PHP Conference. The event will take place at George Washington University's Cafritz Conference Center in the heart of Washington DC. The three day conference begins November 7th and 8th with general sessions, and ends November 9th with tutorials. This year's conference will host some of the PHP Community's top speakers and developers and focus on three primary tracks:
-<ul><li>Scalability</li><li>Security</li><li>The Art of PHP</li></ul>
-Please see <a href="http://www.dcphpconference.com ">the website</a> for more details and to register. Early registration is available until mid-October.
-	</p>
+   November 7th - 9th, Join us at the 2nd Annual DC PHP Conference. The event will take place at George Washington University's Cafritz Conference Center in the heart of Washington DC. The three day conference begins November 7th and 8th with general sessions, and ends November 9th with tutorials. This year's conference will host some of the PHP Community's top speakers and developers and focus on three primary tracks:
+  </p>
+  <ul>
+   <li>Scalability</li>
+   <li>Security</li>
+   <li>The Art of PHP</li>
+  </ul>
+  <p>
+   Please see <a href="http://www.dcphpconference.com ">the website</a> for more details and to register. Early registration is available until mid-October.
+  </p>
 
 </div>
 </div>

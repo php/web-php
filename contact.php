@@ -26,6 +26,7 @@ site_header("Contact", array("current" => "community"));
  For security related issues (in PHP or our websites) please contact
  <a href="mailto:security@php.net">security@php.net</a>.
  Please note that the following are <b>NOT</b> security issues:
+</p>
  <ul>
   <li><b>Requests for help with using PHP.</b> Please use the
       <a href="mailto:php-general@lists.php.net">PHP General</a> mailing list.</li>
@@ -38,7 +39,6 @@ site_header("Contact", array("current" => "community"));
       The servers are donated hardware and bandwidth.
       Your bug reports and patches are appreciated, but we can not pay you for them.</li>
  </ul>
-</p>
 <p>
  If you have problems setting up PHP or using some functionality,
  or especially a program written in PHP, please ask your question on a

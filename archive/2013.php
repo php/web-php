@@ -353,11 +353,11 @@ site_header("News Archive - 2013", array("cache" => true));
   <h2 class="summary entry-title"><a name="id2013-08-22-1" id="id2013-08-22-1" href="http://php.net/archive/2013.php#id2013-08-22-1" rel="bookmark" class="bookmark">PHP 5.4.19 and PHP 5.5.3 Released!</a></h2>
   <div class="entry-content description">
     <abbr class="published newsdate" title="2013-08-22T16:06:05-07:00">22-Aug-2013</abbr>
-    <p xmlns="http://www.w3.org/2005/Atom">The PHP development team announces the immediate availability of PHP
+    <p>The PHP development team announces the immediate availability of PHP
     5.4.19 and PHP 5.5.3. These releases fix a bug in the patch for CVE-2013-4248 in OpenSSL module and
     compile failure with ZTS enabled in PHP 5.4. All PHP users are encouraged to upgrade to either PHP 5.5.3 or PHP 5.4.19.</p>
 
-    <p xmlns="http://www.w3.org/2005/Atom">For source downloads of PHP 5.4.19 and PHP 5.5.3 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+    <p>For source downloads of PHP 5.4.19 and PHP 5.5.3 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
     Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
     The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.4.19">ChangeLog</a>.
     </p>

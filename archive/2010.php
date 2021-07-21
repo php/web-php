@@ -555,19 +555,18 @@ class Bar {<br>
     <li>Open Source Trainer/ Educationist</li>
    </ul>
    <p><strong>We invite you to submit a proposal on one of the topics below:</strong></p>
-   <p>
-    <ul>
-     <li>Cloud Computing: Tools and Platforms, Cloudnomics, Cloud for
-      Dummies &amp; Others</li>
-     <li>PHP: PHP 5 &amp; 6, PHP Security, Frameworks, Architecture / QA &amp; Best
-      Practices</li>
-     <li>Drupal: Best Practices, Module Development, Theme Development,
-      Scaling/ Management/ Performance &amp; Others</li>
-     <li>Databases: MySQL, NoSQL, CouchDB, PostgreSQL, Ingres, SQLite &amp; Others</li>
-     <li>Java Script</li>
-     <li>Developer / Tools &amp; Techniques</li>
-    </ul>
-   </p>
+   <ul>
+    <li>Cloud Computing: Tools and Platforms, Cloudnomics, Cloud for
+     Dummies &amp; Others</li>
+    <li>PHP: PHP 5 &amp; 6, PHP Security, Frameworks, Architecture / QA &amp; Best
+     Practices</li>
+    <li>Drupal: Best Practices, Module Development, Theme Development,
+     Scaling/ Management/ Performance &amp; Others</li>
+    <li>Databases: MySQL, NoSQL, CouchDB, PostgreSQL, Ingres, SQLite &amp; Others</li>
+    <li>Java Script</li>
+    <li>Developer / Tools &amp; Techniques</li>
+   </ul>
+
    <p><strong>Types of Presentation</strong></p>
    <ul>
     <li>45 minute Session</li>
@@ -576,18 +575,16 @@ class Bar {<br>
     <li>Full Day tutorial / workshop</li>
    </ul>
    <p><strong>Your proposals Should</strong></p>
-   <p>
-    <ul>
-     <li>be Free of Marketing talks / self promotion / company promotion:
-      Please speak about ideas/ technology/ business and not about
-      yourself or your company. Talk about Open Source Projects/
-      Products and not strictly commercial closed source products.</li>
-     <li>Clearly identify your target audience and what are the
-      pre-requisites while submitting the proposal</li>
-     <li>Have a clear title and limit the scope of your proposal to
-      something specific rather than trying to cover too much</li>
-    </ul>
-   </p>
+   <ul>
+    <li>be Free of Marketing talks / self promotion / company promotion:
+     Please speak about ideas/ technology/ business and not about
+     yourself or your company. Talk about Open Source Projects/
+     Products and not strictly commercial closed source products.</li>
+    <li>Clearly identify your target audience and what are the
+     pre-requisites while submitting the proposal</li>
+    <li>Have a clear title and limit the scope of your proposal to
+     something specific rather than trying to cover too much</li>
+   </ul>
    <p><strong>Speaker Benefits</strong></p>
    <p>OSI Days offers its speakers tremendous opportunities for exposure and
     recognition as an industry leader. Your session will attract many
