@@ -90,11 +90,6 @@
 }
 
 /* Event styling. */
-.vevent {
-    padding:3px;
-    width:100%;
-    border-collapse: collapse;
-}
 .vevent .url {
     border: 0;
     display: block;
@@ -106,13 +101,6 @@
 
 .vevent .url b {
     font-weight: normal;
-}
-
-.vevent tr {
-    background: #ddd;
-}
-.vevent tr.description {
-    background: #eee;
 }
 
 /* Single day view: let's try putting the events into columns. */

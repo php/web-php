@@ -306,14 +306,14 @@ if (isset($_POST['action'])) {
 // Print out a table for a given list array
 function output_lists_table($mailing_lists)
 {
-    echo '<table class="standard mailing-lists">', "\n";
+    echo '<table cellpadding="5" border="0" class="standard mailing-lists">', "\n";
     foreach ($mailing_lists as $listinfo) {
         if (!is_array($listinfo)) {
             echo "<tr><th>{$listinfo}</th><th>Moderated</th><th>Archive</th>" .
                  "<th>Newsgroup</th><th>Normal</th><th>Digest</th></tr>\n";
         } else {
-            echo '<tr class="centered-text">';
-            echo '<td class="left-aligned"><strong>' . $listinfo[1] . '</strong> <small>&lt;<a href="mailto:' . $listinfo[0] . '@lists.php.net">' . $listinfo[0] . '@lists.php.net</a>&gt;</small><br><small>'. $listinfo[2] . '</small></td>';
+            echo '<tr align="center">';
+            echo '<td align="left"><strong>' . $listinfo[1] . '</strong> <small>&lt;<a href="mailto:' . $listinfo[0] . '@lists.php.net">' . $listinfo[0] . '@lists.php.net</a>&gt;</small><br><small>'. $listinfo[2] . '</small></td>';
             echo '<td>' . ($listinfo[3] ? 'yes' : 'no') . '</td>';
 
             // Let the list name defined with a string, if the
@@ -345,9 +345,8 @@ function output_lists_table($mailing_lists)
 <?php output_lists_table($internals_mailing_lists); ?>
 
 <p class="center">
- <label><strong>Email:</strong>
-     <input type="text" name="email" size="40" value="user@example.com">
- </label>
+ <strong>Email:</strong>
+ <input type="text" name="email" size="40" value="user@example.com">
  <input type="submit" name="action" value="Subscribe">
  <input type="submit" name="action" value="Unsubscribe">
 </p>

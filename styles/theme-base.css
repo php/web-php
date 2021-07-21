@@ -22,8 +22,7 @@
   clear: both;
 }
 .hide-text {
-  font-size: 0;
-  line-height: 0;
+  font: 0/0 a;
   color: transparent;
   text-shadow: none;
   background-color: transparent;
@@ -687,6 +686,7 @@ table td {
 
 table.standard {
     border-collapse: collapse;
+    border-style: hidden;
     border:1px solid #d9d9d9;
 }
 
@@ -725,12 +725,6 @@ table.standard tr th.sub {
 table.standard td.subr,
 table.standard th.subr {
     text-align: right;
-}
-table.standard td.centered-text {
-    text-align: center;
-}
-table.standard td.left-aligned {
-    text-align: left;
 }
 
 /* {{{ Search results. */
@@ -1165,7 +1159,7 @@ fieldset {
 .content-box pre {
     background: white;
     border: solid 1px rgb(214, 214, 214);
-    margin: 0;
+    margin: 0px;
     padding: 0.75rem;
     overflow: auto;
     font: normal 0.875rem/1.5rem "Source Code Pro", monospace;
@@ -1489,8 +1483,8 @@ div.soft-deprecation-notice {
 }
 div.soft-deprecation-notice blockquote.sidebar {
     padding: 10px;
-    margin: 0;
-    border: 0 solid;
+    margin: 0px;
+    border: 0px solid;
 }
 
 #breadcrumbs {
@@ -1617,7 +1611,7 @@ div.soft-deprecation-notice blockquote.sidebar {
     float:left;
     clear: both;
     margin-top: 0;
-    padding: 0 10px 10px 10px;
+    padding: 0px 10px 10px 10px;
   }
 
   .navbar .nav {
@@ -1658,7 +1652,7 @@ div.soft-deprecation-notice blockquote.sidebar {
 
   .navbar-search {
     margin-top: 0;
-    padding: 0 10px 10px;
+    padding: 0px 10px 10px;
   }
 
   .navbar .brand img {
@@ -1697,7 +1691,7 @@ div.soft-deprecation-notice blockquote.sidebar {
   }
 
   #flash-message {
-    margin-top: 0 !important;
+    margin-top: 0px !important;
     top: 0;
   }
 
@@ -1742,7 +1736,7 @@ div.soft-deprecation-notice blockquote.sidebar {
   color: #E6E6E6;
 }
 #goto .search .results {
-  text-shadow: 0 2px 3px #555;
+  text-shadow: 0px 2px 3px #555;
   font-size: 2rem;
   line-height: 1;
 }
@@ -1752,7 +1746,7 @@ div.soft-deprecation-notice blockquote.sidebar {
 }
 #goto .search .text {
   color: #222;
-  text-shadow: 0 2px 3px #555;
+  text-shadow: 0px 2px 3px #555;
   font-size: 10rem;
   line-height: .7;
 }
