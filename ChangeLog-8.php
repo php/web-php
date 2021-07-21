@@ -6,7 +6,7 @@ include_once __DIR__ . '/include/changelogs.inc';
 $MINOR_VERSIONS = ['8.0'];
 changelog_header(8, $MINOR_VERSIONS);
 ?>
-<a name="PHP_8_0"></a>
+<a id="PHP_8_0"></a>
 
 <section class="version" id="8.0.8"><!-- {{{ 8.0.8 -->
 <h3>Version 8.0.8</h3>

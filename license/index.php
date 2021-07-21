@@ -22,7 +22,7 @@ site_header("License Information", array("current" => "help"));
 
 <h1>PHP Licensing</h1>
 
-<a name="code-lic"></a>
+<a id="code-lic"></a>
 <h2>PHP Codebase</h2>
 
 <ul>
@@ -54,7 +54,7 @@ site_header("License Information", array("current" => "help"));
  </li>
 </ul>
 
-<a name="doc-lic"></a>
+<a id="doc-lic"></a>
 <h2>PHP Documentation</h2>
 
 <ul>
@@ -67,21 +67,21 @@ site_header("License Information", array("current" => "help"));
  <li>Practical Information: <a href="http://doc.php.net/tutorial/">Documentation HOWTO</a></li>
 </ul>
 
-<a name="web-lic"></a>
+<a id="web-lic"></a>
 <h2>PHP Website</h2>
 
 <ul>
  <li>The Website copyright can be viewed here: <a href="/copyright.php">Website Copyright</a></li>
 </ul>
 
-<a name="logo-lic"></a>
+<a id="logo-lic"></a>
 <h2>PHP Logo</h2>
 
 <ul>
  <li>The Logo license terms can be viewed on the <a href="/download-logos.php">Logo and Icon Download page</a></li>
 </ul>
 
-<a name="faq-lic"></a>
+<a id="faq-lic"></a>
 <h2>Frequently Asked Questions</h2>
 
 <!-- Selected FAQ points from former page on License Information [v 1.13] -->
@@ -141,7 +141,7 @@ release PHP under a much more loose license (Apache-style), to help
 PHP become as popular as possible.
 </p>
 
-<a name="other-lic"></a>
+<a id="other-lic"></a>
 <h2>Licensing information for related projects</h2>
 
 <p>

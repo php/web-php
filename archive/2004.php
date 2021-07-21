@@ -254,7 +254,7 @@ site_header("News Archive - 2004", array("cache" => true));
 <hr>
 
 <?php news_image("/downloads.php#v5", "php-version5.gif", "PHP 5"); ?>
-<a name="5.0.1"></a>
+<a id="5.0.1"></a>
 <h1>PHP 5.0.1 Released!</h1>
 <p>
  <span class="newsdate">[12-Aug-2004]</span>
@@ -287,7 +287,7 @@ site_header("News Archive - 2004", array("cache" => true));
 <hr>
 
 <?php news_image("/downloads.php#v5", "php-version5.gif", "PHP 5"); ?>
-<a name="5.0.0"></a>
+<a id="5.0.0"></a>
 <h1>PHP 5.0.0 Released!</h1>
 <p>
  <span class="newsdate">[13-Jul-2004]</span>
@@ -520,7 +520,7 @@ site_header("News Archive - 2004", array("cache" => true));
 <hr>
 
 <?php news_image("/downloads.php#5", "php-version5.gif", "PHP 5"); ?>
-<a name="5.0.0RC1"></a>
+<a id="5.0.0RC1"></a>
 <h1>PHP 5 Release Candidate 1 Released!</h1>
 <p>
  <span class="newsdate">[18-Mar-2004]</span>
