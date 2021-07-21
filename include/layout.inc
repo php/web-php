@@ -42,10 +42,9 @@ function highlight_php($code, $return = FALSE)
         $highlighted
     ) . '</div>';
 
-    if (! $return) {
-        echo $highlighted;
-    }
-    return $highlighted;
+    if ($return) { return $highlighted; }
+    else { echo $highlighted; }
+    return null;
 }
 
 // Same as highlight_php() but does not require '<?php' in $code
@@ -55,10 +54,9 @@ function highlight_php_trimmed($code, $return = false)
     $highlighted_code = highlight_php($code, true);
     $highlighted_code = preg_replace("/\&lt;\?php(\<br \/\>)+/", '', $highlighted_code, 1);
 
-    if (!$return) {
-        echo $highlighted_code;
-    }
-    return $highlighted_code;
+    if ($return) { return $highlighted_code; }
+    else { echo $highlighted_code; }
+    return null;
 }
 
 // Stats pages still need this
