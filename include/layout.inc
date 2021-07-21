@@ -51,7 +51,7 @@ function highlight_php_trimmed($code, $return = false)
 {
     $code = "<?php\n" . $code;
     $highlighted_code = highlight_php($code, true);
-    $highlighted_code = preg_replace("/\&lt;\?php(\<br \/\>)+/", '', $highlighted_code, 1);
+    $highlighted_code = preg_replace("/&lt;\?php(<br \/>)+/", '', $highlighted_code, 1);
 
     if ($return) { return $highlighted_code; }
 
@@ -259,8 +259,8 @@ function clean_note($text)
 
     // Turn urls into links
     $text = preg_replace(
-        '!((mailto:|(https?|ftp|nntp|news):\/\/).*?)(\s|<|\)|"|\\\\|\'|$)!',
-        '<a href="\1" rel="nofollow" target="_blank">\1</a>\4',
+        '!((mailto:|(https?|ftp|nntp|news)://).*?)(\s|<|\)|"|\\\\|\'|$)!',
+        '<a href="$1" rel="nofollow" target="_blank">$1</a>$4',
         $text
     );
 
