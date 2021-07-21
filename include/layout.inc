@@ -42,8 +42,10 @@ function highlight_php($code, $return = FALSE)
         $highlighted
     ) . '</div>';
 
-    if ($return) { return $highlighted; }
-    else { echo $highlighted; }
+    if (! $return) {
+        echo $highlighted;
+    }
+    return $highlighted;
 }
 
 // Same as highlight_php() but does not require '<?php' in $code
@@ -53,9 +55,10 @@ function highlight_php_trimmed($code, $return = false)
     $highlighted_code = highlight_php($code, true);
     $highlighted_code = preg_replace("/\&lt;\?php(\<br \/\>)+/", '', $highlighted_code, 1);
 
-    if ($return) { return $highlighted_code; }
-
-    echo $highlighted_code;
+    if (!$return) {
+        echo $highlighted_code;
+    }
+    return $highlighted_code;
 }
 
 // Stats pages still need this
@@ -321,8 +324,8 @@ function display_event($event, $include_date = 1)
         $eday = (isset($event['end']) && !empty($event['end'])) ? strtotime($event['end']) : 0;
     }
 ?>
-<table border="0" cellspacing="0" cellpadding="3" width="100%" class="vevent">
- <tr bgcolor="#dddddd"><td>
+<table class="vevent">
+ <tr><td>
 <?php
 
     // Print out date if needed
@@ -367,7 +370,7 @@ function display_event($event, $include_date = 1)
     echo ' (<span class="location">' , $COUNTRIES[$event['country']] , '</span>)';
 ?>
  </td></tr>
- <tr bgcolor="#eeeeee" class="description"><td>
+ <tr class="description"><td>
 <?php
 
     // Print long description
@@ -549,6 +552,7 @@ function get_news_changes()
         $title = $NEWS_ENTRIES[0]["title"];
         return "<a href='{$link}'>{$title}</a>";
     }
+    return false;
 }
 
 function news_toc($sections = null) {
