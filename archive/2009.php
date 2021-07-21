@@ -609,7 +609,7 @@ site_header("News Archive - 2009", array("cache" => true));
       The <a href="http://www.afup.org/" title="AFUP">AFUP</a> (Association française des utilisateurs PHP)
       organizes on <abbr title="2009-11-11" class="dtstart">November 11th</abbr> and <abbr title="2009-11-12" class="dtstart">November 12th</abbr>
       at the <a href="http://www.cite-sciences.fr/" title="Cit&#xE9; des Sciences">Cité des Sciences</a> in Paris, France,
-      the <a href="#" title="Forum PHP">Forum PHP</a> for its 9th edition.
+      the Forum PHP for its 9th edition.
       </p>
       <p>
        The PHP Forum 2009 will welcome as a partner alongside the AFUP,
