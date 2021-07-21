@@ -1,4 +1,4 @@
-<?php
+<?php /** @noinspection HtmlUnknownTarget  */
 $_SERVER['BASE_PAGE'] = 'copyright.php';
 include_once __DIR__ . '/include/prepend.inc';
 $SIDEBAR_DATA = '

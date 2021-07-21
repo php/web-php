@@ -1,4 +1,4 @@
-<?php
+<?php /** @noinspection HtmlUnknownTarget  */
 $_SERVER['BASE_PAGE'] = 'ChangeLog-4.php';
 include_once __DIR__ . '/include/prepend.inc';
 include_once __DIR__ . '/include/changelogs.inc';

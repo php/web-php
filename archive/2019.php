@@ -6,6 +6,10 @@ include_once __DIR__ . '/../include/pregen-news.inc';
 news_archive_sidebar();
 site_header("News Archive - 2019");
 //site_header("News Archive - 2019", array("cache" => true));
+/**
+ * @var array $NEWS_ENTRIES
+ * @var string $SIDEBAR_DATA
+ */
 ?>
 
 <h1>News Archive - 2019</h1>

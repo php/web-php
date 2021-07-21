@@ -2,6 +2,10 @@
 $_SERVER['BASE_PAGE'] = 'conferences/index.php';
 include_once __DIR__ . '/../include/prepend.inc';
 include_once __DIR__ . '/../include/pregen-news.inc';
+/**
+ * @var string $MYSITE
+ * @var array $NEWS_ENTRIES
+ */
 
 
 mirror_setcookie("LAST_NEWS", $_SERVER["REQUEST_TIME"], 60*60*24*365);
@@ -37,7 +41,8 @@ foreach($frontpage as $entry) {
     $content .= '<div class="newsimage">';
 
     if (isset($entry["newsImage"])) {
-        $content .= sprintf('<a href="%s"><img src="/images/news/%s"></a>', $entry["newsImage"]["link"], $entry["newsImage"]["content"]);
+        /** @noinspection HtmlUnknownTarget */
+        $content .= sprintf('<a href="%s"><img src="/images/news/%s" alt="News"></a>', $entry["newsImage"]["link"], $entry["newsImage"]["content"]);
     }
 
     $content .= '</div>';
@@ -46,6 +51,7 @@ foreach($frontpage as $entry) {
     $content .= '</div>';
     $content .= '</div>';
 
+    /** @noinspection HtmlUnknownTarget */
     $panels .= sprintf('<p class="panel"><a href="%s">%s</a></p>', $entry["newsImage"]["link"], $entry["title"]);
 }
 $content .= "</div>";

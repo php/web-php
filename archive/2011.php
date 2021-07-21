@@ -1,8 +1,11 @@
-<?php
+<?php /** @noinspection HtmlUnknownTarget, HtmlUnknownAnchorTarget  */
 $_SERVER['BASE_PAGE'] = 'archive/2011.php';
 include_once __DIR__ . '/../include/prepend.inc';
 news_archive_sidebar();
 site_header("News Archive - 2011", array("cache" => true));
+/**
+ * @var string $SIDEBAR_DATA
+ */
 ?>
 
 <h1>News Archive - 2011</h1>

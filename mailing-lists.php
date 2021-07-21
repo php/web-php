@@ -3,6 +3,9 @@ $_SERVER['BASE_PAGE'] = 'mailing-lists.php';
 include_once __DIR__ . '/include/prepend.inc';
 include_once __DIR__ . '/include/posttohost.inc';
 include_once __DIR__ . '/include/email-validation.inc';
+/**
+ * @var string $MYSITE
+ */
 
 $SIDEBAR_DATA = '
 <h3>Would like to unsubscribe yourself?</h3>

@@ -1,4 +1,8 @@
 <?php
+/**
+ * @var array $NEWS_ENTRIES
+ * @var string $SIDEBAR_DATA
+ */
 
 $_SERVER['BASE_PAGE'] = 'archive/2015.php';
 include_once __DIR__ . '/../include/prepend.inc';

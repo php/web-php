@@ -2,6 +2,7 @@
 $_SERVER['BASE_PAGE'] = 'license/index.php';
 include_once __DIR__ . '/../include/prepend.inc';
 
+/** @noinspection HtmlUnknownAnchorTarget */
 $SIDEBAR_DATA = <<<EOF
 <aside>
   <h3>Contents</h3>

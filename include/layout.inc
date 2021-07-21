@@ -1,4 +1,7 @@
 <?php
+/**
+ * @var string $MYSITE
+ */
 $_SERVER['STATIC_ROOT'] = $MYSITE;
 $_SERVER['MYSITE'] = $MYSITE;
 
@@ -81,6 +84,7 @@ function resize_image($img, $width = 1, $height = 1)
 }
 
 // Return an <img> tag for a given image file available on the server
+/** @noinspection PhpUnusedParameterInspection */
 function make_image($file, $alt = FALSE, $align = FALSE, $extras = FALSE,
                     $dir = '/images', $border = 0, $addsize = TRUE)
 {
@@ -105,7 +109,8 @@ function make_image($file, $alt = FALSE, $align = FALSE, $extras = FALSE,
     }
 
     // Return with image built up
-    return sprintf('<img src="%s/%s" alt="%s"%s%s%s>',
+    /** @noinspection HtmlUnknownTarget,HtmlUnknownAttribute */
+    return sprintf('<img src="%s/%s" alt="%s" %s%s%s>',
         $webdir,
         $file,
         ($alt    ? $alt : ''),
@@ -154,7 +159,8 @@ function make_submit($file, $alt = FALSE, $align = FALSE, $extras = FALSE,
 // Return a hiperlink to something within the site
 function make_link ($url, $linktext = FALSE, $target = FALSE, $extras = FALSE)
 {
-    return sprintf("<a href=\"%s\"%s%s>%s</a>",
+    /** @noinspection HtmlUnknownTarget,HtmlUnknownAttribute */
+    return sprintf("<a href=\"%s\" %s%s>%s</a>",
         $url,
         ($target   ? ' target="' . $target . '"' : ''),
         ($extras   ? ' ' . $extras               : ''),
@@ -172,7 +178,8 @@ function print_link($url, $linktext = FALSE, $target = FALSE, $extras = FALSE)
 // return a hyperlink to something, within the site, that pops up a new window
 //
 function make_popup_link ($url, $linktext=false, $target=false, $windowprops="", $extras=false) {
-    return sprintf("<a href=\"%s\" target=\"%s\" onclick=\"window.open('%s','%s','%s');return false;\"%s>%s</a>",
+    /** @noinspection HtmlUnknownTarget,HtmlUnknownAttribute */
+    return sprintf("<a href=\"%s\" target=\"%s\" onclick=\"window.open('%s','%s','%s');return false;\" %s>%s</a>",
         htmlspecialchars($url, ENT_QUOTES | ENT_IGNORE),
         ($target ? $target : "_new"),
         htmlspecialchars($url, ENT_QUOTES | ENT_IGNORE),
@@ -191,6 +198,7 @@ function print_popup_link($url, $linktext=false, $windowprops="", $target=false,
 }
 
 // Print a link for a downloadable file (including filesize)
+/** @noinspection PhpUnusedParameterInspection */
 function download_link($file, $title, $showsize = TRUE, $mirror = '')
 {
     $download_link = "/distributions/" . $file;
@@ -258,6 +266,7 @@ function clean_note($text)
     $text = highlight_php(trim($text), TRUE);
 
     // Turn urls into links
+    /** @noinspection HtmlUnknownTarget */
     $text = preg_replace(
         '!((mailto:|(https?|ftp|nntp|news):\/\/).*?)(\s|<|\)|"|\\\\|\'|$)!',
         '<a href="\1" rel="nofollow" target="_blank">\1</a>\4',
@@ -483,6 +492,7 @@ EOT;
 
 function site_header($title = '', $config = array())
 {
+    /** @noinspection PhpUnusedLocalVariableInspection */
     global $MYSITE;
 
     $defaults = array(
@@ -501,28 +511,38 @@ function site_header($title = '', $config = array())
 
     $config["headsup"] = get_news_changes();
 
-    $lang = language_convert($config["lang"]);
-    $curr = $config["current"];
+    /** @noinspection PhpUnusedLocalVariableInspection */
+    $lang    = language_convert($config["lang"]);
+
+    /** @noinspection PhpUnusedLocalVariableInspection */
+    $curr    = $config["current"];
+
     $classes = $config['classes'];
 
     if (isset($_COOKIE["MD"]) || isset($_GET["MD"])) {
+        /** @noinspection PhpUnusedLocalVariableInspection */
         $classes .= "markdown-content";
         $config["css_overwrite"] = array("/styles/i-love-markdown.css");
     }
 
     if (empty($title)) {
+        /** @noinspection PhpUnusedLocalVariableInspection */
         $title = "Hypertext Preprocessor";
     }
 
     // shorturl; http://wiki.snaplog.com/short_url
     if (isset($_SERVER['BASE_PAGE']) && $shortname = get_shortname($_SERVER["BASE_PAGE"])) {
+        /** @noinspection PhpUnusedLocalVariableInspection */
         $shorturl = "https://www.php.net/" . $shortname;
     }
 
     require __DIR__ ."/header.inc";
 }
+
+/** @noinspection PhpUnusedParameterInspection */
 function site_footer($config = array())
 {
+    /** @noinspection PhpUnusedLocalVariableInspection */
     global $MYSITE;
     require __DIR__ . "/footer.inc";
 }
@@ -530,6 +550,9 @@ function site_footer($config = array())
 function get_news_changes()
 {
     include __DIR__ . "/pregen-news.inc";
+    /**
+     * @var array $NEWS_ENTRIES;
+     */
     $date = date_create($NEWS_ENTRIES[0]["updated"]);
     if (isset($_COOKIE["LAST_NEWS"]) && $_COOKIE["LAST_NEWS"] >= $date->getTimestamp()) {
         return false;
@@ -553,6 +576,9 @@ function get_news_changes()
 
 function news_toc($sections = null) {
     include __DIR__ . "/pregen-news.inc";
+    /**
+     * @var array $NEWS_ENTRIES
+     */
     $items = array(
         "news" => array(
             "title" => "News",
@@ -585,9 +611,14 @@ function news_toc($sections = null) {
     }
 }
 function doc_toc($lang) {
+    /**
+     * @var array $TOC
+     */
     $file = __DIR__ . "/../manual/$lang/toc/index.inc";
     if (!file_exists($file)) {
         $lang = "en"; // Fallback on english if the translation doesn't exist
+
+        /** @noinspection PhpUnusedLocalVariableInspection */
         $file = __DIR__ . "/../manual/en/toc/index.inc";
     }
     require __DIR__ . "/../manual/$lang/toc/index.inc";
@@ -632,6 +663,9 @@ function doc_toc($lang) {
 
 }
 function doc_toc_list($lang, $index, $file) {
+    /**
+     * @var array $TOC
+     */
     include __DIR__ . "/../manual/$lang/toc/$file.inc";
 
     doc_toc_title($lang, $index, $file);

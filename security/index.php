@@ -129,6 +129,7 @@ if(is_resource($fp)) {
         }
         $title = ucfirst(strtr($field, "-", " "));
         // Turn urls into links (stolen from master/manage/user-notes.php)
+        /** @noinspection HtmlUnknownTarget */
         $data = preg_replace(
             '!((mailto:|(http|ftp|nntp|news):\/\/).*?)(\s|<|\)|"|\\|\'|$)!',
             '<a href="\1" target="_blank">\1</a>\4',
