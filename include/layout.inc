@@ -321,8 +321,8 @@ function display_event($event, $include_date = 1)
         $eday = (isset($event['end']) && !empty($event['end'])) ? strtotime($event['end']) : 0;
     }
 ?>
-<table border="0" cellspacing="0" cellpadding="3" width="100%" class="vevent">
- <tr bgcolor="#dddddd"><td>
+<table class="vevent">
+ <tr><td>
 <?php
 
     // Print out date if needed
@@ -367,7 +367,7 @@ function display_event($event, $include_date = 1)
     echo ' (<span class="location">' , $COUNTRIES[$event['country']] , '</span>)';
 ?>
  </td></tr>
- <tr bgcolor="#eeeeee" class="description"><td>
+ <tr class="description"><td>
 <?php
 
     // Print long description
