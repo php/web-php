@@ -345,7 +345,7 @@ function output_lists_table($mailing_lists)
 <?php output_lists_table($internals_mailing_lists); ?>
 
 <p class="center">
- <label for="email"><strong>Email:</strong>
+ <label><strong>Email:</strong>
      <input type="text" name="email" size="40" value="user@example.com">
  </label>
  <input type="submit" name="action" value="Subscribe">
