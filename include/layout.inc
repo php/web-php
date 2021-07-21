@@ -248,7 +248,7 @@ function sect_to_file($string) {
 }
 
 function clean($var) {
-  return htmlspecialchars(get_magic_quotes_gpc() ? stripslashes($var) : $var, ENT_QUOTES);
+  return htmlspecialchars( $var, ENT_QUOTES);
 }
 
 // Clean out the content of one user note for printing to HTML
