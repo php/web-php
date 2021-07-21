@@ -579,17 +579,16 @@ site_header("News Archive - 2009", array("cache" => true));
         <div>
      <p>CodeWorks 2009 is a series of <em>two-day conferences for PHP developers</em> and IT managers organized and run by the publishers of <a href="http://phparch.com/">php|architect Magazine</a>.</p>
      <p>CodeWorks will travel to <a href="http://cw.mtacon.com/main/s/about/locations">seven locations</a> across the United States between <abbr title="2009-09-22" class="dtstart">September 22nd</abbr> and <abbr title="2009-10-06" class="dtend">October 5th</abbr> included. Each two-day event includes a day of <em>in-depth tutorials</em>  and a day of <em>conference talks</em> arranged across three different tracks, all presented by the <em>best experts</em> in the business.</p>
-     <p>These locations include:
-      <ul>
-       <li>San Francisco, CA (9/22-9/23)</li>
-       <li>Los Angeles, CA (9/24-9/25)</li>
-       <li>Dallas, TX (9/26-9/27)</li>
-       <li>Atlanta, GA (9/28-9/29)</li>
-       <li>Miami, FL (9/30-10/1)</li>
-       <li>Washington, DC/Baltimore Area (10/2-10/3)</li>
-       <li>New York, NY (10/4-10/5)</li>
-      </ul>
-     </p>
+     <p>These locations include:</p>
+     <ul>
+      <li>San Francisco, CA (9/22-9/23)</li>
+      <li>Los Angeles, CA (9/24-9/25)</li>
+      <li>Dallas, TX (9/26-9/27)</li>
+      <li>Atlanta, GA (9/28-9/29)</li>
+      <li>Miami, FL (9/30-10/1)</li>
+      <li>Washington, DC/Baltimore Area (10/2-10/3)</li>
+      <li>New York, NY (10/4-10/5)</li>
+     </ul>
      <p>If PHP is your work, your passion or your hobby, CodeWorks is a great way to learn and connect with the greatest community of professionals in the world—and with <a href="http://cw.mtacon.com/signup/index">prices as low as $99</a> and a generous <a href="http://cw.mtacon.com/signup/s/discounts">discount program</a>, a uniquely affordable opportunity for everyone.</p>
      <p>Remember, each event is <em>limited to 300 attendees</em> and prices increase the closer we get to each event. <a href="http://cw.mtacon.com/signup/index">Get your tickets today</a> before we run out or the price goes up!</p>
      <p>For more information, visit <a href="http://cw.mtacon.com/">http://cw.mtacon.com</a>.</p>
@@ -721,12 +720,12 @@ site_header("News Archive - 2009", array("cache" => true));
      </p>
      <p>
       The phpDay will have three channels:
-      <ul>
-       <li>Developers: development approach and techniques</li>
-       <li>Community: focus on open source software and frameworks</li>
-       <li>Enterprise: real case studies for business and enterprises</li>
-      </ul>
      </p>
+     <ul>
+      <li>Developers: development approach and techniques</li>
+      <li>Community: focus on open source software and frameworks</li>
+      <li>Enterprise: real case studies for business and enterprises</li>
+     </ul>
      <p>
       For the benefit of our international visitors, there will be an
       entiretrack in english, so come and join us in the beautiful city of

@@ -332,6 +332,7 @@ site_header("News Archive - 2011", array("cache" => true));
      </p>
      <p>
      Conference Tickets:
+     </p>
      <ul>
      <li>1-day: € 399,– plus vat/tax before 7th of September 2011
      (later booking € 499,– plus vat/tax)</li>
@@ -341,7 +342,6 @@ site_header("News Archive - 2011", array("cache" => true));
      (later booking € 1.099,– plus vat/tax)
      </li>
      </ul>
-     </p>
      <p>
      Information and booking via the website: <a href="http://www.web-devcon.de">http://www.web-devcon.de</a>
      </p>
@@ -527,13 +527,12 @@ site_header("News Archive - 2011", array("cache" => true));
      The Zend PHP Conference (ZendCon) is the largest gathering of the PHP Community and brings together PHP developers and IT managers from around the world to discuss PHP best practices and explore new technologies.
      </p>
 
-     <p>This year’s conference will be held on October 17-20, 2011 at the Convention Center in Santa Clara, California. The conference will include a variety of technical sessions and in-depth tutorials in the following areas:
+     <p>This year’s conference will be held on October 17-20, 2011 at the Convention Center in Santa Clara, California. The conference will include a variety of technical sessions and in-depth tutorials in the following areas:</p>
      <ul>
      <li>Cloud Computing - build applications, not infrastructure.<br>Learn about the latest developments in PHP Cloud infrastructure, management and application services</li>
      <li>Mobile and User Experience - go beyond the browser<br>Learn how to build engaging mobile apps with the latest PHP technologies and tools</li>
      <li>Enterprise and Professional PHP - master your craft<br>Explore PHP best practices, new technologies and practical tips with industry experts</li>
      </ul>
-     </p>
      <p>
      For more details and to register for ZendCon, visit the website at: http://www.zendcon.com/
      </p>
@@ -607,7 +606,7 @@ site_header("News Archive - 2011", array("cache" => true));
      anymore. All users are strongly encouraged to upgrade to PHP 5.3.7.</p>
     </div>
 
-    <p xmlns="http://www.w3.org/2005/Atom">For a full list of changes in PHP 5.3.7, see the
+    <p>For a full list of changes in PHP 5.3.7, see the
      <a href="/ChangeLog-5.php#5.3.7">ChangeLog</a>. For source downloads
      please visit our <a href="/downloads.php">downloads page</a>, Windows
      binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.</p>

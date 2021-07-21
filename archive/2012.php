@@ -459,7 +459,6 @@ site_header("News Archive - 2012", array("cache" => true));
      <p>
      This year promises to be the best ZendCon ever! We are planning a fun new exhibit hall, some great parties including a hackathon and, of course, oodles of excellent PHP content!
      </p>
-     <p>
      <ul>
      <li>Learn PHP best practices for architecture, design and development</li>
      <li>Discover new advances in the PHP language and how to best harness them</li>
@@ -468,21 +467,13 @@ site_header("News Archive - 2012", array("cache" => true));
      <li>Discover how to deploy and scale large PHP applications</li>
      <li>Explore new technologies like NoSQL and Cloud Computing</li>
      </ul>
-     </p>
-     <p>
-     <ul>
-     <li>What: PHP 2012 (ZendCon)
-     </li>
-     <li>When: Mon Oct 22- Thurs Oct 25
-     </li>
-     <li>Where: Santa Clara, CA
-     </li>
-     <li>Tickets: Early reg discount until Sept 8
-     </li>
-     </ul>
-     </p>
-    </div>
 
+     <ul>
+     <li>What: PHP 2012 (ZendCon)</li>
+     <li>When: Mon Oct 22- Thurs Oct 25</li>
+     <li>Where: Santa Clara, CA</li>
+     <li>Tickets: Early reg discount until Sept 8</li>
+     </ul>
     </div>
 </div>
 <div class="newsItem hentry">
@@ -584,14 +575,12 @@ site_header("News Archive - 2012", array("cache" => true));
      <p>
          Check out the <a href="http://www.northeastphp.org/">Northeast PHP website</a> for a listing of the talks and speakers lined up.
      </p>
-     <p>
-         <ul>
-             <li><strong>What:</strong> Northeast PHP Conference</li>
-             <li><strong>When:</strong> Sat-Sun August 11-12, 2012 8am-5pm</li>
-             <li><strong>*Where:</strong> Microsoft NERD</li>
-             <li><strong>*Tickets:</strong> Tickets go on sale June 28th!</li>
-         </ul>
-     </p>
+     <ul>
+         <li><strong>What:</strong> Northeast PHP Conference</li>
+         <li><strong>When:</strong> Sat-Sun August 11-12, 2012 8am-5pm</li>
+         <li><strong>*Where:</strong> Microsoft NERD</li>
+         <li><strong>*Tickets:</strong> Tickets go on sale June 28th!</li>
+     </ul>
     </div>
 
     </div>
@@ -656,9 +645,8 @@ site_header("News Archive - 2012", array("cache" => true));
     instead of <strong>"$@"</strong> to pass parameters to php-cgi which causes a number of
     issues. Again, people using mod_php or php-fpm are not affected.</p>
 
-    <p>
-    One way to address these CGI issues is to reject the request if the query string
-    contains a '-' and no '='. It can be done using Apache's mod_rewrite like this:
+    <p>One way to address these CGI issues is to reject the request if the query string
+    contains a '-' and no '='. It can be done using Apache's mod_rewrite like this:</p>
 
     <pre>
     RewriteCond %{QUERY_STRING} ^[^=]*$
@@ -666,7 +654,7 @@ site_header("News Archive - 2012", array("cache" => true));
     RewriteRule .? - [F,L]
     </pre>
 
-    Note that this will block otherwise safe requests like ?top-40 so if you
+    <p>Note that this will block otherwise safe requests like ?top-40 so if you
     have query parameters that look like that, adjust your regex accordingly.</p>
 
     <p>Another set of releases are planned for Tuesday, May, 8th. These
