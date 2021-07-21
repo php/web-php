@@ -43,7 +43,8 @@ function highlight_php($code, $return = FALSE)
     ) . '</div>';
 
     if ($return) { return $highlighted; }
-    else { echo $highlighted; }
+    echo $highlighted;
+    return null;
 }
 
 // Same as highlight_php() but does not require '<?php' in $code
@@ -54,8 +55,8 @@ function highlight_php_trimmed($code, $return = false)
     $highlighted_code = preg_replace("/\&lt;\?php(\<br \/\>)+/", '', $highlighted_code, 1);
 
     if ($return) { return $highlighted_code; }
-
     echo $highlighted_code;
+    return null;
 }
 
 // Stats pages still need this
@@ -549,6 +550,7 @@ function get_news_changes()
         $title = $NEWS_ENTRIES[0]["title"];
         return "<a href='{$link}'>{$title}</a>";
     }
+    return false;
 }
 
 function news_toc($sections = null) {
