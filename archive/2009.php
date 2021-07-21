@@ -606,14 +606,14 @@ site_header("News Archive - 2009", array("cache" => true));
         <abbr class="published newsdate" title="2009-05-29T11:47:20+02:00">[29-May-2009]</abbr>
         <div>
       <p>
-      The <a href="http://www.afup.org/" alt="AFUP">AFUP</a> (Association française des utilisateurs PHP)
+      The <a href="http://www.afup.org/" title="AFUP">AFUP</a> (Association française des utilisateurs PHP)
       organizes on <abbr title="2009-11-11" class="dtstart">November 11th</abbr> and <abbr title="2009-11-12" class="dtstart">November 12th</abbr>
-      at the <a href="http://www.cite-sciences.fr/" alt="Cit&#xE9; des Sciences">Cité des Sciences</a> in Paris, France,
-      the <a href="" alt="Forum PHP">Forum PHP</a> for its 9th edition.
+      at the <a href="http://www.cite-sciences.fr/" title="Cit&#xE9; des Sciences">Cité des Sciences</a> in Paris, France,
+      the <a href="#" title="Forum PHP">Forum PHP</a> for its 9th edition.
       </p>
       <p>
        The PHP Forum 2009 will welcome as a partner alongside the AFUP,
-       the association <a href="http://www.lemug.fr/" alt="LeMug">LeMug.fr</a> (MySQL User Group).
+       the association <a href="http://www.lemug.fr/" title="LeMug">LeMug.fr</a> (MySQL User Group).
       </p>
       <p>
        On this occasion, AFUP decided to extend the pre-registration at preferential rates, and

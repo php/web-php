@@ -198,7 +198,7 @@
       <p>
 	Set in Paris, on December 8th and 9th 2008, by the
 	Association Française des Utilisateurs de PHP (French PHP User Group,
-	<a href="http://www.afup.org/" alt="AFUP">http://www.afup.org/</a>),
+	<a href="http://www.afup.org/" title="AFUP">http://www.afup.org/</a>),
 	the Forum PHP 2008 focuses on the themas of Professional Web Services,
 	and PHP large scale projects.
     </p>
@@ -358,7 +358,7 @@
       <div xmlns="http://www.w3.org/1999/xhtml">
         <h3>The premiere PHP Conference – Celebrate the 14th event with us!</h3>
         <p>
-       Today the ICP is <emphasis>the</emphasis> reference whenever substructures of existing technologies
+       Today the ICP is <em>the</em> reference whenever substructures of existing technologies
        should be extended or the basis for new developments should be created. Thus, you
        do not only profit from the concentrated know-how of worldwide acknowledged,
        international PHP-experts but also from the professional transfer of knowledge
@@ -995,11 +995,11 @@ visit the website: <a href="http://conf.phpquebec.com">http://conf.phpquebec.com
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml">
         <p><abbr class="dtstart" title="2008-02-29">February 29th</abbr> (Leap Year Day). phplondon.org  announce their third
-            annual <a href="http://www.phpconference.co.uk" alt="phplondon.org community conference" class="url">community conference</a>
+            annual <a href="http://www.phpconference.co.uk" title="phplondon.org community conference" class="url">community conference</a>
             to be held at Inmarsat, Old Street, London.</p>
         <p>This year the conference will run two tracks and include speakers such as Derick Rethans, Wez Furlong, Scott MacVicar and Zoe Slattery.</p>
         <p>We will also be holding an extended presentation and discussion on frameworks for PHP.</p>
-        <p>Visit our <a href=" http://www.phpconference.co.uk" alt="phplondon.org community conference">conference site</a> to register. Early bird discount is available until 1st February 2008.</p>
+        <p>Visit our <a href=" http://www.phpconference.co.uk" title="phplondon.org community conference">conference site</a> to register. Early bird discount is available until 1st February 2008.</p>
       </div>
     </content>
   </entry>
