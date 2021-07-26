@@ -14,7 +14,7 @@ site_header("News Archive - 2007", array("cache" => true));
 <hr>
 
 <div class="newsItem">
-    <a name="2007-11-08-1" id="2007-11-08-1"><h1>PHP 5.2.5 Released</h1></a>
+    <a id="2007-11-08-1"><h1>PHP 5.2.5 Released</h1></a>
     <div>
   <span class="newsdate">[09-Nov-2007]</span>
   <p>        The PHP development team would like to announce the immediate        <a href="/downloads.php#v5">availability of PHP 5.2.5</a>.        This release focuses on improving the stability of the PHP 5.2.x        branch with over 60 bug fixes, several of which are security related.        All users of PHP are encouraged to upgrade to this release.</p>
@@ -42,7 +42,7 @@ site_header("News Archive - 2007", array("cache" => true));
 <?php news_image("http://www.prophp.com.br/phpconference.php", "phpconfbrasil2007.png", "São Paulo 2007"); ?>
 <div class="newsItem">
 
-    <a name="2007-10-29-1" id="2007-10-29-1"><h1>PHP Conference Brasil 2007</h1></a>
+    <a id="2007-10-29-1"><h1>PHP Conference Brasil 2007</h1></a>
 
     <div>
   <span class="newsdate">[29-Oct-2007]</span>
@@ -57,7 +57,7 @@ Visit <a href="http://www.prophp.com.br/phpconference.php">the website</a> for m
 <div class="newsItem">
 
 
-    <a name="2007-10-03-1" id="2007-10-03-1"><h1>The new documentation build system is ready for testing</h1></a>
+    <a id="2007-10-03-1"><h1>The new documentation build system is ready for testing</h1></a>
     <div>
   <span class="newsdate">[03-Oct-2007]</span>
   <p>
@@ -85,7 +85,7 @@ using <a href="/my.php">my.php</a>.
 <?php news_image("http://www.dcphpconference.com/", "dcphpconference.2007.png", "Washington DC 2007"); ?>
 <div class="newsItem">
 
-    <a name="2007-09-21-1" id="2007-09-21-1"><h1>DC PHP Conference 2007</h1></a>
+    <a id="2007-09-21-1"><h1>DC PHP Conference 2007</h1></a>
 
     <div>
   <span class="newsdate">[21-Sep-2007]</span>
@@ -102,7 +102,7 @@ Please see <a href="http://www.dcphpconference.com ">the website</a> for more de
 <?php news_image("http://www.afup.org/pages/forumphp2007/", "afup2007.jpg", "Paris Forum 2007"); ?>
 <div class="newsItem">
 
-    <a name="2007-09-20-1" id="2007-09-20-1"><h1>Forum PHP Paris 2007</h1></a>
+    <a id="2007-09-20-1"><h1>Forum PHP Paris 2007</h1></a>
     <div>
   <span class="newsdate">[20-Sep-2007]</span>
   <p>
@@ -120,7 +120,7 @@ enterprise solutions and advanced techniques.
 <hr>
 <div class="newsItem">
 
-    <a name="2007-08-30-1" id="2007-08-30-1"><h1>PHP 5.2.4 Released</h1></a>
+    <a id="2007-08-30-1"><h1>PHP 5.2.4 Released</h1></a>
 
     <div>
   <span class="newsdate">[30-Aug-2007]</span>
@@ -172,7 +172,7 @@ those releases and PHP 5.2.4.
 <?php news_image("http://www.zendcon.com/", "zendcon07_logo_s.jpg", "Zend/PHP Conference 2007"); ?>
 <div class="newsItem">
 
-    <a name="2007-07-25-1" id="2007-07-25-1"><h1>Zend/PHP Conference 2007</h1></a>
+    <a id="2007-07-25-1"><h1>Zend/PHP Conference 2007</h1></a>
     <div>
   <span class="newsdate">[25-Jul-2007]</span>
 
@@ -210,7 +210,7 @@ For more information please see <a href="http://www.zendcon.com/">http://www.zen
 <?php news_image("http://works.phparch.com/c/p/index", "phpworks2007.png", "php|works 2007"); ?>
 <div class="newsItem">
 
-    <a name="2007-07-16-01" id="2007-07-16-01"><h1>php|works 2007 in Atlanta</h1></a>
+    <a id="2007-07-16-01"><h1>php|works 2007 in Atlanta</h1></a>
     <div>
   <span class="newsdate">[16-Jul-2007]</span>
   <p>
@@ -226,7 +226,7 @@ This year, the conference once again promises to be an excellent event for PHP d
 <hr>
 <div class="newsItem">
 
-    <a name="2007-07-13-1" id="2007-07-13-1"><h1>PHP 4 end of life announcement</h1></a>
+    <a id="2007-07-13-1"><h1>PHP 4 end of life announcement</h1></a>
     <div>
 
   <span class="newsdate">[13-Jul-2007]</span>
@@ -256,7 +256,7 @@ This year, the conference once again promises to be an excellent event for PHP d
 <hr>
 <div class="newsItem">
 
-    <a name="2007-06-01-1" id="2007-06-01-1"><h1>PHP 5.2.3 Released</h1></a>
+    <a id="2007-06-01-1"><h1>PHP 5.2.3 Released</h1></a>
 
     <div>
   <span class="newsdate">[01-Jun-2007]</span>
@@ -300,7 +300,7 @@ those releases and PHP 5.2.3.
 <?php news_image("http://www.wtconferences.com/2007/?q=node/1", "wtlogo_s.png", "WebTech 2007"); ?>
 <div class="newsItem">
 
-    <a name="2007-05-19-1" id="2007-05-19-1"><h1>WebTech 2007</h1></a>
+    <a id="2007-05-19-1"><h1>WebTech 2007</h1></a>
     <div>
 
   <span class="newsdate">[19-May-2007]</span>
@@ -323,7 +323,7 @@ those releases and PHP 5.2.3.
 <hr>
 <div class="newsItem">
 
-    <a name="2007-05-03-1" id="2007-05-03-1"><h1>PHP 5.2.2 and PHP 4.4.7 Released</h1></a>
+    <a id="2007-05-03-1"><h1>PHP 5.2.2 and PHP 4.4.7 Released</h1></a>
     <div>
   <span class="newsdate">[03-May-2007]</span>
 
@@ -400,7 +400,7 @@ those releases and PHP 5.2.3.
 <hr>
 <div class="newsItem">
 
-    <a name="2007-04-14-1" id="2007-04-14-1"><h1>The PHP.net Google Summer of Code</h1></a>
+    <a id="2007-04-14-1"><h1>The PHP.net Google Summer of Code</h1></a>
     <div>
   <span class="newsdate">[14-Apr-2007]</span>
   <p>
@@ -471,7 +471,7 @@ those releases and PHP 5.2.3.
 <hr>
 <div class="newsItem">
 
-    <a name="2007-03-01-1" id="2007-03-01-1"><h1>PHP 4.4.6 Released</h1></a>
+    <a id="2007-03-01-1"><h1>PHP 4.4.6 Released</h1></a>
 
     <div>
   <span class="newsdate">[01-Mar-2007]</span>
@@ -497,7 +497,7 @@ those releases and PHP 5.2.3.
 <hr>
 <div class="newsItem">
 
-    <a name="2007-02-08-2" id="2007-02-08-2"><h1>PHP 5.2.1 and PHP 4.4.5 Released</h1></a>
+    <a id="2007-02-08-2"><h1>PHP 5.2.1 and PHP 4.4.5 Released</h1></a>
 
     <div>
   <span class="newsdate">[08-Feb-2007]</span>
@@ -583,7 +583,7 @@ posted in the <a href="/downloads.php">download section</a>.</p>
 <hr>
 <div class="newsItem">
 
-    <a name="2007-02-08-1" id="2007-02-08-1"><h1>The front page has changed</h1></a>
+    <a id="2007-02-08-1"><h1>The front page has changed</h1></a>
     <div>
   <span class="newsdate">[08-Feb-2007]</span>
   <p>
@@ -598,7 +598,7 @@ posted in the <a href="/downloads.php">download section</a>.</p>
 <?php news_image("http://conf.phpquebec.com/en/conf2007/", "conference_php_quebec.gif", "PHP Québec conference"); ?>
 <div class="newsItem">
 
-    <a name="2007-02-07-1" id="2007-02-07-1"><h1>PHP Québec conference 2007</h1></a>
+    <a id="2007-02-07-1"><h1>PHP Québec conference 2007</h1></a>
     <div>
   <span class="newsdate">[07-Feb-2007]</span>
   <p>
@@ -627,7 +627,7 @@ contributors.
 <hr>
 <div class="newsItem">
 
-    <a name="2007-02-03-1" id="2007-02-03-1"><h1>PHP Manual Updates</h1></a>
+    <a id="2007-02-03-1"><h1>PHP Manual Updates</h1></a>
     <div>
   <span class="newsdate">[03-Feb-2007]</span>
   <p>The PHP documentation team is proud to present to the PHP community a few fixes and tweaks to the <a href="/manual/en/">PHP Manual</a>, including:</p>
@@ -647,7 +647,7 @@ contributors.
 <?php news_image("http://www.phpconference.co.uk/", "phplondon2007.png", "PHP London 2007"); ?>
 <div class="newsItem">
 
-    <a name="2007-01-18-1" id="2007-01-18-1"><h1>PHP London 2007</h1></a>
+    <a id="2007-01-18-1"><h1>PHP London 2007</h1></a>
     <div>
   <span class="newsdate">[18-Jan-2007]</span>
   <p>
@@ -661,7 +661,7 @@ After the success of 2006 the <a href="http://www.phplondon.org/">PHP London use
 <?php news_image("http://www.phparch.com/tek", "phptek2007.png", "php|tek 2007"); ?>
 <div class="newsItem">
 
-    <a name="2007-01-12-1" id="2007-01-12-1"><h1>Chicago php|tek 2007</h1></a>
+    <a id="2007-01-12-1"><h1>Chicago php|tek 2007</h1></a>
     <div>
   <span class="newsdate">[12-Jan-2007]</span>
   <p>

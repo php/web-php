@@ -23,7 +23,7 @@ $SIDEBAR_DATA = '
  lists</a> on their own pages.
 </p> 
 
-<a name="local"></a>
+<a id="local"></a>
 <h3>Local Mailing Lists and Newsgroups</h3>
 
 <ul class="toc">

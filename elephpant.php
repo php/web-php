@@ -2,7 +2,7 @@
 $_SERVER['BASE_PAGE'] = 'elephpant.php';
 include_once __DIR__ . '/include/prepend.inc';
 $SIDEBAR_DATA = '
-<a name="license"></a>
+<a id="license"></a>
 <h3>PHP License</h3>
 <p>
  For information on the PHP License (i.e. using the PHP language),
@@ -12,7 +12,7 @@ $SIDEBAR_DATA = '
 site_header("ElePHPant", array("current" => "footer"));
 ?>
 
-<a name="copyright"></a>
+<a id="copyright"></a>
 <h1>ElePHPant</h1>
 
 <p>
