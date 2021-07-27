@@ -6,7 +6,7 @@ include_once __DIR__ . '/include/changelogs.inc';
 $MINOR_VERSIONS = ['4.4', '4.3', '4.2', '4.1', '4.0'];
 changelog_header(4, $MINOR_VERSIONS);
 ?>
-<a name="PHP_4_4"></a>
+<a id="PHP_4_4"></a>
 
 <section class="version" id="4.4.9"><!-- {{{ 4.4.9 -->
 <h3>Version 4.4.9</h3>
@@ -346,7 +346,7 @@ There is a <a href="release_4_4_0.php">separate announcement</a> available for t
 
 <!-- }}} --></section>
 
-<a name="PHP_4_3"></a>
+<a id="PHP_4_3"></a>
 
 <section class="version" id="4.3.11"><!-- {{{ 4.3.11 -->
 <h3>Version 4.3.11</h3>
@@ -1754,7 +1754,7 @@ More information on this release on <a href="/releases.php#4.3.0">our Releases p
 
 <!-- }}} --></section>
 
-<a name="PHP_4_2"></a>
+<a id="PHP_4_2"></a>
 
 <section class="version" id="4.2.3"><!-- {{{ 4.2.3 -->
 <h3>Version 4.2.3</h3>
@@ -2076,7 +2076,7 @@ More information on this release on <a href="/releases.php#4.2.0">our Releases p
 
 <!-- }}} --></section>
 
-<a name="PHP_4_1"></a>
+<a id="PHP_4_1"></a>
 
 <section class="version" id="4.1.2"><!-- {{{ 4.1.2 -->
 <h3>Version 4.1.2</h3>
@@ -2327,7 +2327,7 @@ More information on this release on <a href="/releases.php#4.1.0">our Releases p
 
 <!-- }}} --></section>
 
-<a name="PHP_4_0"></a>
+<a id="PHP_4_0"></a>
 
 <section class="version" id="4.0.6"><!-- {{{ 4.0.6 -->
 <h3>Version 4.0.6</h3>

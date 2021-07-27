@@ -1,5 +1,5 @@
 <?php
-$_SERVER['BASE_PAGE'] = 'get-involved.php';
+$_SERVER['BASE_PAGE'] = 'build-setup.php';
 include_once __DIR__ . '/include/prepend.inc';
 
 $SIDEBAR_DATA ='

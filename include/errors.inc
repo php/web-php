@@ -88,34 +88,26 @@ function error_nomirror($mirror) {
 }
 
 // Send out a proper status header
-function status_header($num)
+function status_header(int $status): bool
 {
-    // Set status text
-    switch ($num) {
-        case 200: $status = "OK"; break;
-        case 301: $status = "Moved Permanently"; break;
-        case 302: $status = "Found"; break;
-        case 404: $status = "Not Found"; break;
-        default: return FALSE;
-    }
+	$text = [
+		200 => 'OK',
+		301 => 'Moved Permanently',
+		302 => 'Found',
+		404 => 'Not Found',
+	];
+	if (!isset($text[$status])) {
+		return false;
+	}
 
-    // Figure out HTTP protocol version - use 1.1 answer for 1.1 request,
-    // answer with HTTP/1.0 for any other (ancient or futuristic) user
-    switch (strtoupper($_SERVER['SERVER_PROTOCOL'])) {
-        case 'HTTP/1.0':
-            @header("HTTP/1.0 $num $status");
-            break;
+	// Only respond with HTTP/1.0 for a 1.0 request specifically.
+	// Respond with 1.1 for anything else.
+	$proto = strcasecmp($_SERVER['SERVER_PROTOCOL'], 'HTTP/1.0') ? '1.1' : '1.0';
 
-        case 'HTTP/1.1':
-        default:
-            @header("HTTP/1.1 $num $status");
-            break;
-    }
+	@header("HTTP/$proto $status {$text[$status]}");
+    @header("Status: $status {$text[$status]}", true, $status);
 
-    // BC code for PHP < 4.3.0
-    @header("Status: $num $status", TRUE, $num);
-
-    return TRUE;
+    return true;
 }
 
 /******************************************************************************
@@ -131,8 +123,8 @@ The most commonly searched terms have also been added.
 TODO: Determine if we want to continue 301 -OR- make these official URLs.
 ******************************************************************************/
 
-function is_known_ini ($ini) {
-$inis = array(
+function is_known_ini (string $ini): ?string {
+	$inis = [
 	'engine'						=> 'apache.configuration.php#ini.engine',
 	'short-open-tag'				=> 'ini.core.php#ini.short-open-tag',
 	'asp-tags'						=> 'ini.core.php#ini.asp-tags',
@@ -353,13 +345,13 @@ $inis = array(
 	'soap.wsdl-cache-enabled'		=> 'soap.configuration.php#ini.soap.wsdl-cache-enabled',
 	'soap.wsdl-cache-dir'			=> 'soap.configuration.php#ini.soap.wsdl-cache-dir',
 	'soap.wsdl-cache-ttl'			=> 'soap.configuration.php#ini.soap.wsdl-cache-ttl',
-	);
+	];
 
-	return isset($inis[$ini]) ? $inis[$ini] : false;
+	return $inis[$ini] ?? null;
 }
 
-function is_known_variable($variable) {
-$variables = array(
+function is_known_variable(string $variable): ?string {
+	$variables = [
 	// Variables
 	'globals'		=> 'reserved.variables.globals.php',
 	'-server'		=> 'reserved.variables.server.php',
@@ -383,18 +375,13 @@ $variables = array(
 	'http-post-files'		=> 'reserved.variables.files.php',
 	'http-cookie-vars'		=> 'reserved.variables.cookies.php',
 	'http-env-vars'			=> 'reserved.variables.env.php',
-	);
+	];
 
-	if ($variable[0] === '$') {
-		$variable = ltrim($variable, '$');
-	}
-
-	return isset($variables[$variable]) ? $variables[$variable] : false;
-
+	return $variables[ltrim($variable, '$')] ?? null;
 }
 
-function is_known_term ($term) {
-$terms = array(
+function is_known_term (string $term): ?string {
+	$terms = [
 	'<>'			=> 'language.operators.comparison.php',
 	'=='			=> 'language.operators.comparison.php',
 	'==='			=> 'language.operators.comparison.php',
@@ -466,9 +453,9 @@ $terms = array(
 	'timestamp'		=> 'function.time.php',
 	'try'			=> 'language.exceptions.php',
 	'upload'		=> 'features.file-upload.php',
-	);
+	];
 
-	return isset($terms[$term]) ? $terms[$term] : false;
+	return $terms[$term] ?? null;
 }
 
 /*
@@ -481,8 +468,8 @@ Search snippet provider: A dirty proof-of-concept:
 	It should also take into account vague searches, such as 'global' and 'str'. The search works well enough for,
 	most terms, so something like $_SERVER isn't really needed but it's defined below anyways...
 */
-function is_known_snippet($term) {
-$snippets = array(
+function is_known_snippet(string $term): ?string {
+	$snippets = [
 	'global'	=> '
 		The <b>global</b> keyword is used to manipulate <a href="/language.variables.scope">variable scope</a>, and
 		there is also the concept of <a href="/language.variables.superglobals">super globals</a> in PHP,
@@ -505,15 +492,10 @@ $snippets = array(
 		<a href="/language.functions">function is defined</a>, or
 		<a href="/about.prototypes">how to read a function prototype</a>.
 		See also the list of <a href="/extensions">PHP extensions</a>',
-	);
+	];
 
-	$term = strtolower(trim($term));
-	if (isset($term[0]) && $term[0] === '$') {
-		$term = ltrim($term, '$');
-	}
-
-	return isset($snippets[$term]) ? $snippets[$term] : false;
-
+	$term = ltrim(strtolower(trim($term)), '$');
+	return $snippets[$term] ?? null;
 }
 
 /**

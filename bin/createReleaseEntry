@@ -55,7 +55,7 @@ const RELEASES_ABS = __DIR__ . '/../' . RELEASES_REL;
 if (isset($opts['r'])) {
 	$release = strtr($version, '.', '_') . '.php';
 	file_put_contents(RELEASES_ABS . $release, "<?php
-\$_SERVER['BASE_PAGE'] = 'releases/$version.php';
+\$_SERVER['BASE_PAGE'] = 'releases/$release';
 include_once __DIR__ . '/../include/prepend.inc';
 site_header('PHP $version Release Announcement');
 ?>

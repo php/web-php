@@ -23,7 +23,7 @@ $SIDEBAR_DATA = '
  lists</a> on their own pages.
 </p> 
 
-<a name="local"></a>
+<a id="local"></a>
 <h3>Local Mailing Lists and Newsgroups</h3>
 
 <ul class="toc">
@@ -72,7 +72,7 @@ if (isset($_POST['action'])) {
 
         // Get in contact with main server to [un]subscribe the user
         $result = posttohost(
-            "http://main.php.net/entry/subscribe.php",
+            "https://main.php.net/entry/subscribe.php",
             array(
                 "request"  => $request,
                 "email"    => $_POST['email'],

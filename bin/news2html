@@ -95,7 +95,7 @@ if ($changelog) {
 		exit(1);
 	}
 
-	$tag = "<a name=\"PHP_{$parts[0]}_{$parts[1]}\"></a>";
+	$tag = "<a id=\"PHP_{$parts[0]}_{$parts[1]}\"></a>";
 	if (strpos($log, $tag) === false) {
 		fprintf(STDERR, "Unable to find branch tag in ChangeLog\n");
 		exit(1);
