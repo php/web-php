@@ -43,7 +43,7 @@ changelog_header(8, $MINOR_VERSIONS);
 </ul></li>
 <li>OpenSSL:
 <ul>
-  <li><?php bugfix(76694); ?> (native Windows cert verification uses CN as sever name).</li>
+  <li><?php bugfix(76694); ?> (native Windows cert verification uses CN as server name).</li>
 </ul></li>
 <li>MySQLnd:
 <ul>
