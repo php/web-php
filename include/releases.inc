@@ -293,6 +293,42 @@ $OLDRELEASES = array (
   ),
   7 => 
   array (
+    '7.4.21' => 
+    array (
+      'announcement' => 
+      array (
+        'English' => '/releases/7_4_21.php',
+      ),
+      'tags' => 
+      array (
+      ),
+      'date' => '01 Jul 2021',
+      'source' => 
+      array (
+        0 => 
+        array (
+          'filename' => 'php-7.4.21.tar.gz',
+          'name' => 'PHP 7.4.21 (tar.gz)',
+          'sha256' => '4b9623accbe4b8923a801212f371f784069535009185e7bf7e4dec66bbea61db',
+          'date' => '01 Jul 2021',
+        ),
+        1 => 
+        array (
+          'filename' => 'php-7.4.21.tar.bz2',
+          'name' => 'PHP 7.4.21 (tar.bz2)',
+          'sha256' => '36ec6102e757e2c2b7742057a700bbff77c76fa0ccbe9c860398c3d24e32822a',
+          'date' => '01 Jul 2021',
+        ),
+        2 => 
+        array (
+          'filename' => 'php-7.4.21.tar.xz',
+          'name' => 'PHP 7.4.21 (tar.xz)',
+          'sha256' => 'cf43384a7806241bc2ff22022619baa4abb9710f12ec1656d0173de992e32a90',
+          'date' => '01 Jul 2021',
+        ),
+      ),
+      'museum' => false,
+    ),
     '7.4.20' => 
     array (
       'announcement' => 
