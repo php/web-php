@@ -8,6 +8,47 @@ changelog_header(8, $MINOR_VERSIONS);
 ?>
 <a id="PHP_8_0"></a>
 
+<section class="version" id="8.0.9"><!-- {{{ 8.0.9 -->
+<h3>Version 8.0.9</h3>
+<b><?php release_date('29-Jul-2021'); ?></b>
+<ul><li>Core:
+<ul>
+  <li><?php bugfix(81145); ?> (copy() and stream_copy_to_stream() fail for +4GB files).</li>
+  <li><?php bugfix(81163); ?> (incorrect handling of indirect vars in __sleep).</li>
+  <li><?php bugfix(81159); ?> (Object to int warning when using an object as a string offset).</li>
+  <li><?php bugfix(80728); ?> (PHP built-in web server resets timeout when it can kill the process).</li>
+  <li><?php bugfix(73630); ?> (Built-in Weberver - overwrite $_SERVER['request_uri']).</li>
+  <li><?php bugfix(80173); ?> (Using return value of zend_assign_to_variable() is not safe).</li>
+  <li><?php bugfix(73226); ?> (--r[fcez] always return zero exit code).</li>
+</ul></li>
+<li>Intl:
+<ul>
+  <li><?php bugfix(72809); ?> (Locale::lookup() wrong result with canonicalize option).</li>
+  <li><?php bugfix(68471); ?> (IntlDateFormatter fails for "GMT+00:00" timezone).</li>
+  <li><?php bugfix(74264); ?> (grapheme_strrpos() broken for negative offsets).</li>
+</ul></li>
+<li>OpenSSL:
+<ul>
+  <li><?php bugfix(52093); ?> (openssl_csr_sign truncates $serial).</li>
+</ul></li>
+<li>PCRE:
+<ul>
+  <li><?php bugfix(81101); ?> (PCRE2 10.37 shows unexpected result).</li>
+  <li><?php bugfix(81243); ?> (Too much memory is allocated for preg_replace()).</li>
+</ul></li>
+<li>Reflection:
+<ul>
+  <li><?php bugfix(81208); ?> (Segmentation fault while create newInstance from attribute).</li>
+</ul></li>
+<li>Standard:
+<ul>
+  <li><?php bugfix(81223); ?> (flock() only locks first byte of file).</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
+
+
 <section class="version" id="8.0.8"><!-- {{{ 8.0.8 -->
 <h3>Version 8.0.8</h3>
 <b><?php release_date('01-Jul-2021'); ?></b>
