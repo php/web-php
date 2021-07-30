@@ -117,6 +117,7 @@ h1.refname {
 .methodname strong,
 .methodname a,
 .classsynopsis .classname,
+.classsynopsis .interfacename,
 .parameter {
     color: #369;
 }
