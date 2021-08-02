@@ -383,6 +383,8 @@ function is_known_variable(string $variable): ?string {
 function is_known_term (string $term): ?string {
 	$terms = [
 	'<>'			=> 'language.operators.comparison.php',
+	'<=>'			=> 'language.operators.comparison.php',
+	'spaceship'		=> 'language.operators.comparison.php',
 	'=='			=> 'language.operators.comparison.php',
 	'==='			=> 'language.operators.comparison.php',
 	'@'				=> 'language.operators.errorcontrol.php',
