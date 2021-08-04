@@ -17,7 +17,7 @@ changelog_header(8, $MINOR_VERSIONS);
   <li><?php bugfix(81163); ?> (incorrect handling of indirect vars in __sleep).</li>
   <li><?php bugfix(81159); ?> (Object to int warning when using an object as a string offset).</li>
   <li><?php bugfix(80728); ?> (PHP built-in web server resets timeout when it can kill the process).</li>
-  <li><?php bugfix(73630); ?> (Built-in Weberver - overwrite $_SERVER['request_uri']).</li>
+  <li><?php bugfix(73630); ?> (Built-in Webserver - overwrite $_SERVER['request_uri']).</li>
   <li><?php bugfix(80173); ?> (Using return value of zend_assign_to_variable() is not safe).</li>
   <li><?php bugfix(73226); ?> (--r[fcez] always return zero exit code).</li>
 </ul></li>
