@@ -442,14 +442,25 @@ function manual_setup($setup) {
     $id = substr($setup['this'][0], 0, -4);
     $language_chooser = 'manual_language_chooser';
     $repo = strtolower($config['lang']); // pt_BR etc.
+
+    $edit_url = "https://github.com/php/doc-{$repo}";
+    // If the documentation source information is available (generated using
+    // doc-base/configure.php and PhD) then try and make a source-specific URL.
+    if (isset($setup['source'])) {
+        $source_lang = $setup['source']['lang'];
+        if ($source_lang === $repo || $source_lang === 'base') {
+            $edit_url = "https://github.com/php/doc-{$source_lang}/blob/master/{$setup['source']['path']}";
+        }
+    }
+
     echo <<<PAGE_TOOLS
   <div class="page-tools">
     <div class="change-language">
       {$language_chooser($config['lang'], $config['thispage'])}
     </div>
     <div class="edit-bug">
-      <a href="https://github.com/php/doc-{$repo}">Submit a Pull Request</a>
-      <a href="https://github.com/php/doc-en/issues/new?body=From%20manual%20page:%20https:%2F%2Fphp.net%2F$id%0A%0A---">Report a Bug</a>
+      <a href="{$edit_url}">Submit a Pull Request</a>
+      <a href="https://github.com/php/doc-{$repo}/issues/new?body=From%20manual%20page:%20https:%2F%2Fphp.net%2F$id%0A%0A---">Report a Bug</a>
     </div>
   </div>
 PAGE_TOOLS;
