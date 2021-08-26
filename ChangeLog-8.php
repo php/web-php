@@ -8,6 +8,83 @@ changelog_header(8, $MINOR_VERSIONS);
 ?>
 <a id="PHP_8_0"></a>
 
+<section class="version" id="8.0.10"><!-- {{{ 8.0.10 -->
+<h3>Version 8.0.10</h3>
+<b><?php release_date('26-Aug-2021'); ?></b>
+<ul><li>Core:
+<ul>
+  <li><?php bugfix(72595); ?> (php_output_handler_append illegal write access).</li>
+  <li><?php bugfix(66719); ?> (Weird behaviour when using get_called_class() with call_user_func()).</li>
+  <li><?php bugfix(81305); ?> (Built-in Webserver Drops Requests With "Upgrade" Header).</li>
+</ul></li>
+<li>BCMath:
+<ul>
+  <li><?php bugfix(78238); ?> (BCMath returns "-0").</li>
+</ul></li>
+<li>CGI:
+<ul>
+  <li><?php bugfix(80849); ?> (HTTP Status header truncation).</li>
+</ul></li>
+<li>Date:
+<ul>
+  <li><?php bugfix(64975); ?> (Error parsing when AM/PM not at the end).</li>
+  <li><?php bugfix(78984); ?> (DateTimeZone accepting invalid UTC timezones).</li>
+  <li><?php bugfix(79580); ?> (date_create_from_format misses leap year).</li>
+  <li><?php bugfix(80409); ?> (DateTime::modify() loses time with 'weekday' parameter).</li>
+</ul></li>
+<li>GD:
+<ul>
+  <li><?php bugfix(51498); ?> (imagefilledellipse does not work for large circles).</li>
+</ul></li>
+<li>MySQLi:
+<ul>
+  <li><?php bugfix(74544); ?> (Integer overflow in mysqli_real_escape_string()).</li>
+</ul></li>
+<li>Opcache:
+<ul>
+  <li><?php bugfix(81225); ?> (Wrong result with pow operator with JIT enabled).</li>
+  <li><?php bugfix(81249); ?> (Intermittent property assignment failure with JIT enabled).</li>
+  <li><?php bugfix(81206); ?> (Multiple PHP processes crash with JIT enabled).</li>
+  <li><?php bugfix(81272); ?> (Segfault in var[] after array_slice with JIT).</li>
+  <li>Fixed Bug #81255 (Memory leak in PHPUnit with functional JIT).</li>
+  <li>Fixed Bug #80959 (infinite loop in building cfg during JIT compilation) (Nikita, Dmitry)</li>
+  <li><?php bugfix(81226); ?> (Integer overflow behavior is different with JIT enabled).</li>
+</ul></li>
+<li>OpenSSL:
+<ul>
+  <li><?php bugfix(81327); ?> (Error build openssl extension on php 7.4.22).</li>
+</ul></li>
+<li>PDO_ODBC:
+<ul>
+  <li><?php bugfix(81252); ?> (PDO_ODBC doesn't account for SQL_NO_TOTAL).</li>
+</ul></li>
+<li>Phar:
+<ul>
+  <li><?php bugfix(81211); ?>: Symlinks are followed when creating PHAR archive (cmb)</li>
+</ul></li>
+<li>Shmop:
+<ul>
+  <li><?php bugfix(81283); ?> (shmop can't read beyond 2147483647 bytes).</li>
+</ul></li>
+<li>SimpleXML:
+<ul>
+  <li><?php bugfix(81325); ?> (Segfault in zif_simplexml_import_dom).</li>
+</ul></li>
+<li>Standard:
+<ul>
+  <li><?php bugfix(72146); ?> (Integer overflow on substr_replace).</li>
+  <li><?php bugfix(81265); ?> (getimagesize returns 0 for 256px ICO images).</li>
+  <li><?php bugfix(74960); ?> (Heap buffer overflow via str_repeat).</li>
+</ul></li>
+<li>Streams:
+<ul>
+  <li><?php bugfix(81294); ?> (Segfault when removing a filter).</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
+
+
 <section class="version" id="8.0.9"><!-- {{{ 8.0.9 -->
 <h3>Version 8.0.9</h3>
 <b><?php release_date('29-Jul-2021'); ?></b>
