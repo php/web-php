@@ -329,6 +329,42 @@ $OLDRELEASES = array (
   ),
   7 => 
   array (
+    '7.4.22' => 
+    array (
+      'announcement' => 
+      array (
+        'English' => '/releases/7_4_22.php',
+      ),
+      'tags' => 
+      array (
+      ),
+      'date' => '29 Jul 2021',
+      'source' => 
+      array (
+        0 => 
+        array (
+          'filename' => 'php-7.4.22.tar.gz',
+          'name' => 'PHP 7.4.22 (tar.gz)',
+          'sha256' => '4ca2642b99a822237d7f84dc19682be702ad0e2d5d282f7646d84b746d454e34',
+          'date' => '29 Jul 2021',
+        ),
+        1 => 
+        array (
+          'filename' => 'php-7.4.22.tar.bz2',
+          'name' => 'PHP 7.4.22 (tar.bz2)',
+          'sha256' => '5022bbca661bc1ab5dfaee72873bcd0f0980d9dd34f980a682029496f51caae1',
+          'date' => '29 Jul 2021',
+        ),
+        2 => 
+        array (
+          'filename' => 'php-7.4.22.tar.xz',
+          'name' => 'PHP 7.4.22 (tar.xz)',
+          'sha256' => '8e078cd7d2f49ac3fcff902490a5bb1addc885e7e3b0d8dd068f42c68297bde8',
+          'date' => '29 Jul 2021',
+        ),
+      ),
+      'museum' => false,
+    ),
     '7.3.29' => 
     array (
       'announcement' => 

@@ -8,6 +8,62 @@ changelog_header(7, $MINOR_VERSIONS);
 ?>
 <a id="PHP_7_4"></a>
 
+<section class="version" id="7.4.23"><!-- {{{ 7.4.23 -->
+<h3>Version 7.4.23</h3>
+<b><?php release_date('26-Aug-2021'); ?></b>
+<ul><li>Core:
+<ul>
+  <li><?php bugfix(72595); ?> (php_output_handler_append illegal write access).</li>
+  <li><?php bugfix(66719); ?> (Weird behaviour when using get_called_class() with call_user_func()).</li>
+  <li><?php bugfix(81305); ?> (Built-in Webserver Drops Requests With "Upgrade" Header).</li>
+</ul></li>
+<li>BCMath:
+<ul>
+  <li><?php bugfix(78238); ?> (BCMath returns "-0").</li>
+</ul></li>
+<li>CGI:
+<ul>
+  <li><?php bugfix(80849); ?> (HTTP Status header truncation).</li>
+</ul></li>
+<li>GD:
+<ul>
+  <li><?php bugfix(51498); ?> (imagefilledellipse does not work for large circles).</li>
+</ul></li>
+<li>MySQLi:
+<ul>
+  <li><?php bugfix(74544); ?> (Integer overflow in mysqli_real_escape_string()).</li>
+</ul></li>
+<li>OpenSSL:
+<ul>
+  <li><?php bugfix(81327); ?> (Error build openssl extension on php 7.4.22).</li>
+</ul></li>
+<li>PDO_ODBC:
+<ul>
+  <li><?php bugfix(81252); ?> (PDO_ODBC doesn't account for SQL_NO_TOTAL).</li>
+</ul></li>
+<li>Phar:
+<ul>
+  <li><?php bugfix(81211); ?>: Symlinks are followed when creating PHAR archive.(cmb)</li>
+</ul></li>
+<li>Shmop:
+<ul>
+  <li><?php bugfix(81283); ?> (shmop can't read beyond 2147483647 bytes).</li>
+</ul></li>
+<li>Standard:
+<ul>
+  <li><?php bugfix(72146); ?> (Integer overflow on substr_replace).</li>
+  <li><?php bugfix(81265); ?> (getimagesize returns 0 for 256px ICO images).</li>
+  <li><?php bugfix(74960); ?> (Heap buffer overflow via str_repeat).</li>
+</ul></li>
+<li>Streams:
+<ul>
+  <li><?php bugfix(81294); ?> (Segfault when removing a filter).</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
+
+
 <section class="version" id="7.4.22"><!-- {{{ 7.4.22 -->
 <h3>Version 7.4.22</h3>
 <b><?php release_date('29-Jul-2021'); ?></b>

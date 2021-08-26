@@ -32,13 +32,13 @@ $RELEASES = (function() {
 
     /* PHP 7.4 Release */
     $data['7.4'] = [
-        'version' => '7.4.22',
-        'date'    => '29 Jul 2021',
-        'tags'    => [], // Set to ['security'] for security releases
+        'version' => '7.4.23',
+        'date'    => '26 Aug 2021',
+        'tags'    => ['security'], // Set to ['security'] for security releases
         'sha256'  => [
-            'tar.gz'  => '4ca2642b99a822237d7f84dc19682be702ad0e2d5d282f7646d84b746d454e34',
-            'tar.bz2' => '5022bbca661bc1ab5dfaee72873bcd0f0980d9dd34f980a682029496f51caae1',
-            'tar.xz'  => '8e078cd7d2f49ac3fcff902490a5bb1addc885e7e3b0d8dd068f42c68297bde8',
+            'tar.gz'  => '2aaa481678ad4d2992e7bcf161e0e98c7268f4979f7ca8b3d97dd6de19c205d6',
+            'tar.bz2' => 'd1e094fe6e4f832e0a64be9c69464ba5d593fb216f914efa8bbb084e0a7a5727',
+            'tar.xz'  => 'cea52313fcffe56343bcd3c66dbb23cd5507dc559cc2e3547cf8f5452e88a05d',
         ]
     ];
 
