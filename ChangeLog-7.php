@@ -1676,6 +1676,18 @@ changelog_header(7, $MINOR_VERSIONS);
 
 <a id="PHP_7_3"></a>
 
+<section class="version" id="7.3.30"><!-- {{{ 7.3.30 -->
+<h3>Version 7.3.30</h3>
+<b><?php release_date('26-Aug-2021'); ?></b>
+<ul><li>Phar:
+<ul>
+  <li><?php bugfix(81211); ?>: Symlinks are followed when creating PHAR archive.</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
+
+
 <section class="version" id="7.3.29"><!-- {{{ 7.3.29 -->
 <h3>Version 7.3.29</h3>
 <b><?php release_date('01-Jul-2021'); ?></b>
