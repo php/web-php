@@ -25,7 +25,7 @@ $RELEASES = (function() {
         'tags'    => ['security'], // Set to ['security'] for security releases.
         'sha256' => [
             'tar.gz'  => '4612dca9afe8148801648839175ab588097ace66658c6859e9f283ecdeaf84b3',
-            'tar.bz2' => '4612dca9afe8148801648839175ab588097ace66658c6859e9f283ecdeaf84b3',
+            'tar.bz2' => 'c94547271410900845b084ec2bcb3466af363eeca92cb24bd611dcbdc26f1587',
             'tar.xz'  => '66dc4d1bc86d9c1bc255b51b79d337ed1a7a035cf71230daabbf9a4ca35795eb',
         ]
     ];
