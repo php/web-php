@@ -11,17 +11,13 @@
   <default:newsImage xmlns="http://php.net/ns/news" link="https://fwdays.com/en/event/php-fwdays-2021" title="PHP Fwdays 2021">fwdays.png</default:newsImage>
   <content type="xhtml">
     <div xmlns="http://www.w3.org/1999/xhtml">
-     PHP fwdays'21 — the biggest and the most popular conference in Ukraine for PHP developers.
+     <a href="https://fwdays.com/en/event/php-fwdays-2021">PHP fwdays'21</a> — the biggest and the most popular conference in Ukraine for PHP developers.
      At the 9th PHP fwdays'21 conference local and international PHP experts will share their experience.
      
      Learn about fault tolerant workflow orchestration on PHP, switching to AWS Lambda with Laravel Vapor, optimizing your test suites, moving to production with async approach with Swoole and much more, check the programm.
      
-     https://fwdays.com/en/event/php-fwdays-2021
-     
-     The main conference day will be held on September 4 at 11 a.m. (UTC+3) online. And we will have weekdays with additional formats. Live translation is free.
-     
-     
-     
+     The main conference day will be held on September 4 at 11 a.m. (UTC+3) online. 
+     And we will have weekdays with additional formats. Live translation is free.
     </div>
   </content>
 </entry>
