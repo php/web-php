@@ -46,8 +46,8 @@ changelog_header(8, $MINOR_VERSIONS);
   <li><?php bugfix(81249); ?> (Intermittent property assignment failure with JIT enabled).</li>
   <li><?php bugfix(81206); ?> (Multiple PHP processes crash with JIT enabled).</li>
   <li><?php bugfix(81272); ?> (Segfault in var[] after array_slice with JIT).</li>
-  <li>Fixed Bug #81255 (Memory leak in PHPUnit with functional JIT).</li>
-  <li>Fixed Bug #80959 (infinite loop in building cfg during JIT compilation) (Nikita, Dmitry)</li>
+  <li><?php bugfix(81255); ?> (Memory leak in PHPUnit with functional JIT).</li>
+  <li><?php bugfix(80959); ?> (Infinite loop in building cfg during JIT compilation) (Nikita, Dmitry)</li>
   <li><?php bugfix(81226); ?> (Integer overflow behavior is different with JIT enabled).</li>
 </ul></li>
 <li>OpenSSL:
