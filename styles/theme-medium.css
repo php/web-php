@@ -410,6 +410,8 @@ aside.tips h3 {
 aside.tips a {
   color:#ccc;
   border-bottom:1px dotted #666;
+  display:inline-block;
+  vertical-align:top;
 }
 aside.tips .panel > a:after,
 aside.tips .panel > span:after {
