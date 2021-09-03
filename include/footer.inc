@@ -71,6 +71,11 @@
 <?php if (!empty($_SERVER['BASE_PAGE'])): ?>
         <li><a href="https://github.com/php/web-php/blob/master/<?php echo urlencode($_SERVER['BASE_PAGE']); ?>">View Source</a></li>
 <?php endif; ?>
+        <li>(PageGen <?php $tt = number_format(rtrim(sprintf("%.20f", (microtime(true) - $_SERVER['REQUEST_TIME_FLOAT'])), "0"),6,'.',',');
+                     if (strpos(($tt."0"), "0") != 0) {
+                         $tt = number_format($tt,2,'.',',');
+                     }
+                     echo $tt; ?> Seconds)</li>
       </ul>
       </div>
     </div>
