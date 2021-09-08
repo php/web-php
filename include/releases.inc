@@ -2,6 +2,150 @@
 $OLDRELEASES = array (
   8 => 
   array (
+    '8.0.9' => 
+    array (
+      'announcement' => 
+      array (
+        'English' => '/releases/8_0_9.php',
+      ),
+      'tags' => 
+      array (
+      ),
+      'date' => '29 Jul 2021',
+      'source' => 
+      array (
+        0 => 
+        array (
+          'filename' => 'php-8.0.9.tar.gz',
+          'name' => 'PHP 8.0.9 (tar.gz)',
+          'sha256' => '1f0d72e90ab6ad0ae13329a96b281f71bc592563ce4e3a4c816b8da4b5854fb4',
+          'date' => '29 Jul 2021',
+        ),
+        1 => 
+        array (
+          'filename' => 'php-8.0.9.tar.bz2',
+          'name' => 'PHP 8.0.9 (tar.bz2)',
+          'sha256' => '6ac8edebd295ddc43fb010653c43ccf203cd7cdc40981b210ed5275994040806',
+          'date' => '29 Jul 2021',
+        ),
+        2 => 
+        array (
+          'filename' => 'php-8.0.9.tar.xz',
+          'name' => 'PHP 8.0.9 (tar.xz)',
+          'sha256' => '71a01b2b56544e20e28696ad5b366e431a0984eaa39aa5e35426a4843e172010',
+          'date' => '29 Jul 2021',
+        ),
+      ),
+      'museum' => false,
+    ),
+    '8.0.8' => 
+    array (
+      'announcement' => 
+      array (
+        'English' => '/releases/8_0_8.php',
+      ),
+      'tags' => 
+      array (
+      ),
+      'date' => '01 Jul 2021',
+      'source' => 
+      array (
+        0 => 
+        array (
+          'filename' => 'php-8.0.8.tar.gz',
+          'name' => 'PHP 8.0.8 (tar.gz)',
+          'sha256' => '084a1e8020e86fb99b663d195fd9ac98a9f37dfcb9ecb5c159054cdb8f388945',
+          'date' => '01 Jul 2021',
+        ),
+        1 => 
+        array (
+          'filename' => 'php-8.0.8.tar.bz2',
+          'name' => 'PHP 8.0.8 (tar.bz2)',
+          'sha256' => '14bd77d71a98943e14b324da83e31b572781df583cda9650a184fae3214cd16f',
+          'date' => '01 Jul 2021',
+        ),
+        2 => 
+        array (
+          'filename' => 'php-8.0.8.tar.xz',
+          'name' => 'PHP 8.0.8 (tar.xz)',
+          'sha256' => 'dc1668d324232dec1d05175ec752dade92d29bb3004275118bc3f7fc7cbfbb1c',
+          'date' => '01 Jul 2021',
+        ),
+      ),
+      'museum' => false,
+    ),
+    '8.0.7' => 
+    array (
+      'announcement' => 
+      array (
+        'English' => '/releases/8_0_7.php',
+      ),
+      'tags' => 
+      array (
+      ),
+      'date' => '03 Jun 2021',
+      'source' => 
+      array (
+        0 => 
+        array (
+          'filename' => 'php-8.0.7.tar.gz',
+          'name' => 'PHP 8.0.7 (tar.gz)',
+          'sha256' => '1e7462455bec8062ef3fc7c74f1f496417cb80aa374ce11edb35015de248c3c1',
+          'date' => '03 Jun 2021',
+        ),
+        1 => 
+        array (
+          'filename' => 'php-8.0.7.tar.bz2',
+          'name' => 'PHP 8.0.7 (tar.bz2)',
+          'sha256' => '72b2f2c96f35748b1d6e8a71af4ead439b17129aefe611eb0baf1bd313635f79',
+          'date' => '03 Jun 2021',
+        ),
+        2 => 
+        array (
+          'filename' => 'php-8.0.7.tar.xz',
+          'name' => 'PHP 8.0.7 (tar.xz)',
+          'sha256' => 'd5fc2e4fc780a32404d88c360e3e0009bc725d936459668e9c2ac992f2d83654',
+          'date' => '03 Jun 2021',
+        ),
+      ),
+      'museum' => false,
+    ),
+    '8.0.6' => 
+    array (
+      'announcement' => 
+      array (
+        'English' => '/releases/8_0_6.php',
+      ),
+      'tags' => 
+      array (
+      ),
+      'date' => '06 May 2021',
+      'source' => 
+      array (
+        0 => 
+        array (
+          'filename' => 'php-8.0.6.tar.gz',
+          'name' => 'PHP 8.0.6 (tar.gz)',
+          'sha256' => '51a3dcea6deb8ab82ad035d15baa7f5398980f576ac1968313ef149f7cf20100',
+          'date' => '06 May 2021',
+        ),
+        1 => 
+        array (
+          'filename' => 'php-8.0.6.tar.bz2',
+          'name' => 'PHP 8.0.6 (tar.bz2)',
+          'sha256' => '26a8a9dad66012039deb0bcf151c6e22ab1e4b6a91508383ff705da41289526e',
+          'date' => '06 May 2021',
+        ),
+        2 => 
+        array (
+          'filename' => 'php-8.0.6.tar.xz',
+          'name' => 'PHP 8.0.6 (tar.xz)',
+          'sha256' => 'e9871d3b6c391fe9e89f86f6334852dcc10eeaaa8d5565beb8436e7f0cf30e20',
+          'date' => '06 May 2021',
+        ),
+      ),
+      'museum' => false,
+    ),
     '8.0.5' => 
     array (
       'announcement' => 
@@ -185,6 +329,224 @@ $OLDRELEASES = array (
   ),
   7 => 
   array (
+    '7.4.22' => 
+    array (
+      'announcement' => 
+      array (
+        'English' => '/releases/7_4_22.php',
+      ),
+      'tags' => 
+      array (
+      ),
+      'date' => '29 Jul 2021',
+      'source' => 
+      array (
+        0 => 
+        array (
+          'filename' => 'php-7.4.22.tar.gz',
+          'name' => 'PHP 7.4.22 (tar.gz)',
+          'sha256' => '4ca2642b99a822237d7f84dc19682be702ad0e2d5d282f7646d84b746d454e34',
+          'date' => '29 Jul 2021',
+        ),
+        1 => 
+        array (
+          'filename' => 'php-7.4.22.tar.bz2',
+          'name' => 'PHP 7.4.22 (tar.bz2)',
+          'sha256' => '5022bbca661bc1ab5dfaee72873bcd0f0980d9dd34f980a682029496f51caae1',
+          'date' => '29 Jul 2021',
+        ),
+        2 => 
+        array (
+          'filename' => 'php-7.4.22.tar.xz',
+          'name' => 'PHP 7.4.22 (tar.xz)',
+          'sha256' => '8e078cd7d2f49ac3fcff902490a5bb1addc885e7e3b0d8dd068f42c68297bde8',
+          'date' => '29 Jul 2021',
+        ),
+      ),
+      'museum' => false,
+    ),
+    '7.3.29' => 
+    array (
+      'announcement' => 
+      array (
+        'English' => '/releases/7_3_29.php',
+      ),
+      'tags' => 
+      array (
+        0 => 'security',
+      ),
+      'date' => '01 Jul 2021',
+      'source' => 
+      array (
+        0 => 
+        array (
+          'filename' => 'php-7.3.29.tar.gz',
+          'name' => 'PHP 7.3.29 (tar.gz)',
+          'sha256' => 'ba4de3955b0cbd33baee55a83568acc4347605e210a54b5654e4c1e09b544659',
+          'date' => '01 Jul 2021',
+        ),
+        1 => 
+        array (
+          'filename' => 'php-7.3.29.tar.bz2',
+          'name' => 'PHP 7.3.29 (tar.bz2)',
+          'sha256' => 'a83a2878140bd86935f0046bbfe92672c8ab688fbe4ccf9704add6b9605ee4d0',
+          'date' => '01 Jul 2021',
+        ),
+        2 => 
+        array (
+          'filename' => 'php-7.3.29.tar.xz',
+          'name' => 'PHP 7.3.29 (tar.xz)',
+          'sha256' => '7db2834511f3d86272dca3daee3f395a5a4afce359b8342aa6edad80e12eb4d0',
+          'date' => '01 Jul 2021',
+        ),
+      ),
+      'museum' => false,
+    ),
+    '7.4.21' => 
+    array (
+      'announcement' => 
+      array (
+        'English' => '/releases/7_4_21.php',
+      ),
+      'tags' => 
+      array (
+      ),
+      'date' => '01 Jul 2021',
+      'source' => 
+      array (
+        0 => 
+        array (
+          'filename' => 'php-7.4.21.tar.gz',
+          'name' => 'PHP 7.4.21 (tar.gz)',
+          'sha256' => '4b9623accbe4b8923a801212f371f784069535009185e7bf7e4dec66bbea61db',
+          'date' => '01 Jul 2021',
+        ),
+        1 => 
+        array (
+          'filename' => 'php-7.4.21.tar.bz2',
+          'name' => 'PHP 7.4.21 (tar.bz2)',
+          'sha256' => '36ec6102e757e2c2b7742057a700bbff77c76fa0ccbe9c860398c3d24e32822a',
+          'date' => '01 Jul 2021',
+        ),
+        2 => 
+        array (
+          'filename' => 'php-7.4.21.tar.xz',
+          'name' => 'PHP 7.4.21 (tar.xz)',
+          'sha256' => 'cf43384a7806241bc2ff22022619baa4abb9710f12ec1656d0173de992e32a90',
+          'date' => '01 Jul 2021',
+        ),
+      ),
+      'museum' => false,
+    ),
+    '7.4.20' => 
+    array (
+      'announcement' => 
+      array (
+        'English' => '/releases/7_4_20.php',
+      ),
+      'tags' => 
+      array (
+      ),
+      'date' => '03 Jun 2021',
+      'source' => 
+      array (
+        0 => 
+        array (
+          'filename' => 'php-7.4.20.tar.gz',
+          'name' => 'PHP 7.4.20 (tar.gz)',
+          'sha256' => '84b09e4617e960b36dfa15fdbf2e3cd7141a2e877216ea29391b12ae86963cf4',
+          'date' => '03 Jun 2021',
+        ),
+        1 => 
+        array (
+          'filename' => 'php-7.4.20.tar.bz2',
+          'name' => 'PHP 7.4.20 (tar.bz2)',
+          'sha256' => '0ada6bc635e530fa7a4eb55e639dc070077108e5c9885f750b47007fd267b634',
+          'date' => '03 Jun 2021',
+        ),
+        2 => 
+        array (
+          'filename' => 'php-7.4.20.tar.xz',
+          'name' => 'PHP 7.4.20 (tar.xz)',
+          'sha256' => '1fa46ca6790d780bf2cb48961df65f0ca3640c4533f0bca743cd61b71cb66335',
+          'date' => '03 Jun 2021',
+        ),
+      ),
+      'museum' => false,
+    ),
+    '7.3.28' => 
+    array (
+      'announcement' => 
+      array (
+        'English' => '/releases/7_3_28.php',
+      ),
+      'tags' => 
+      array (
+        0 => 'security',
+      ),
+      'date' => '29 Apr 2021',
+      'source' => 
+      array (
+        0 => 
+        array (
+          'filename' => 'php-7.3.28.tar.gz',
+          'name' => 'PHP 7.3.28 (tar.gz)',
+          'sha256' => '1f0d9b94e1b11518ffabd19b646c2fee95ea42ca9cd8d337f8d07986fdceede1',
+          'date' => '29 Apr 2021',
+        ),
+        1 => 
+        array (
+          'filename' => 'php-7.3.28.tar.bz2',
+          'name' => 'PHP 7.3.28 (tar.bz2)',
+          'sha256' => '8f636e644594388436ea05ff34c9eb135e6dc119c1130199e9488d5795439964',
+          'date' => '29 Apr 2021',
+        ),
+        2 => 
+        array (
+          'filename' => 'php-7.3.28.tar.xz',
+          'name' => 'PHP 7.3.28 (tar.xz)',
+          'sha256' => 'a2a84dbec8c1eee3f46c5f249eaaa2ecb3f9e7a6f5d0604d2df44ff8d4904dbe',
+          'date' => '29 Apr 2021',
+        ),
+      ),
+      'museum' => false,
+    ),
+    '7.4.19' => 
+    array (
+      'announcement' => 
+      array (
+        'English' => '/releases/7_4_19.php',
+      ),
+      'tags' => 
+      array (
+      ),
+      'date' => '06 May 2021',
+      'source' => 
+      array (
+        0 => 
+        array (
+          'filename' => 'php-7.4.19.tar.gz',
+          'name' => 'PHP 7.4.19 (tar.gz)',
+          'sha256' => 'd7062457ba9f8334ab8ae7e4fea8efe27e2506763551b25db9e6ab9beea8ed6f',
+          'date' => '06 May 2021',
+        ),
+        1 => 
+        array (
+          'filename' => 'php-7.4.19.tar.bz2',
+          'name' => 'PHP 7.4.19 (tar.bz2)',
+          'sha256' => '25d09b8145b284d870431c1b40aba7944e4bf1836278538f8e29780e7f85ddea',
+          'date' => '06 May 2021',
+        ),
+        2 => 
+        array (
+          'filename' => 'php-7.4.19.tar.xz',
+          'name' => 'PHP 7.4.19 (tar.xz)',
+          'sha256' => '6c17172c4a411ccb694d9752de899bb63c72a0a3ebe5089116bc13658a1467b2',
+          'date' => '06 May 2021',
+        ),
+      ),
+      'museum' => false,
+    ),
     '7.4.18' => 
     array (
       'announcement' => 

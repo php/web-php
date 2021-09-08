@@ -29,7 +29,7 @@ if (!file_exists($filename)) {
 // Gets all available sqlite versions for possible future sqlite wrapper
 $sqlite = get_available_sqlites();
 
-$exts = join(get_loaded_extensions(), ',');
+$exts = implode(',', get_loaded_extensions());
 
 echo join('|', array(
     $MYSITE,            	// 0 : CNAME for mirror as accessed (CC, CC1, etc.)

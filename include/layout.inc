@@ -43,7 +43,8 @@ function highlight_php($code, $return = FALSE)
     ) . '</div>';
 
     if ($return) { return $highlighted; }
-    else { echo $highlighted; }
+    echo $highlighted;
+    return null;
 }
 
 // Same as highlight_php() but does not require '<?php' in $code
@@ -54,8 +55,8 @@ function highlight_php_trimmed($code, $return = false)
     $highlighted_code = preg_replace("/\&lt;\?php(\<br \/\>)+/", '', $highlighted_code, 1);
 
     if ($return) { return $highlighted_code; }
-
     echo $highlighted_code;
+    return null;
 }
 
 // Stats pages still need this
@@ -248,7 +249,7 @@ function sect_to_file($string) {
 }
 
 function clean($var) {
-  return htmlspecialchars(get_magic_quotes_gpc() ? stripslashes($var) : $var, ENT_QUOTES);
+  return htmlspecialchars($var, ENT_QUOTES);
 }
 
 // Clean out the content of one user note for printing to HTML
@@ -295,7 +296,7 @@ function display_event($event, $include_date = 1)
 
     // Weekday names array
     for ($i = 1; $i <= 7; $i++) {
-        $days[$i] = strftime('%A', mktime(12, 0, 0, 4, $i, 2012));
+        $days[$i] = date('l', mktime(12, 0, 0, 4, $i, 2012));
     }
 
     // Recurring possibilities
@@ -549,6 +550,7 @@ function get_news_changes()
         $title = $NEWS_ENTRIES[0]["title"];
         return "<a href='{$link}'>{$title}</a>";
     }
+    return false;
 }
 
 function news_toc($sections = null) {

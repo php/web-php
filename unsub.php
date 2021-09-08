@@ -159,7 +159,7 @@ site_header("Unsubscribing", array("current" => "community"));
  </dd>
 </dl>
 
-<a name="unsubdiff"></a>
+<a id="unsubdiff"></a>
 <h2>Unsubscribe with a different email address</h2>
 
 <p>

@@ -14,7 +14,7 @@ site_header("News Archive - 2009", array("cache" => true));
 <hr>
 <div class="newsItem hentry">
     <div class="newsImage"></div>
-    <h1 class="summary entry-title"><a name="id2009-12-17-1" id="id2009-12-17-1" href="http://www.php.net/archive/2009.php#id2009-12-17-1" rel="bookmark" class="bookmark">PHP 5.2.12 Released!</a></h1>
+    <h1 class="summary entry-title"><a id="id2009-12-17-1" href="http://www.php.net/archive/2009.php#id2009-12-17-1" rel="bookmark" class="bookmark">PHP 5.2.12 Released!</a></h1>
     <div class="entry-content description">
         <abbr class="published newsdate" title="2009-12-17T07:41:36-05:00">[17-Dec-2009]</abbr>
         <div>
@@ -46,7 +46,7 @@ site_header("News Archive - 2009", array("cache" => true));
 <hr>
 <div class="newsItem hentry vevent">
     <div class="newsImage"><?php news_image("http://www.phpconference.co.uk/", "phpukconf2010.png", "PHP UK Conference 2010"); ?></div>
-    <h1 class="summary entry-title"><a name="id2009-12-09-1" id="id2009-12-09-1" href="http://www.phpconference.co.uk/" rel="bookmark" class="bookmark">PHP UK Conference 2010</a></h1>
+    <h1 class="summary entry-title"><a id="id2009-12-09-1" href="http://www.phpconference.co.uk/" rel="bookmark" class="bookmark">PHP UK Conference 2010</a></h1>
     <div class="entry-content description">
         <abbr class="published newsdate" title="2009-12-09T14:38:07+01:00">[09-Dec-2009]</abbr>
         <div>
@@ -107,7 +107,7 @@ site_header("News Archive - 2009", array("cache" => true));
 <hr>
 <div class="newsItem hentry">
     <div class="newsImage"></div>
-    <h1 class="summary entry-title"><a name="id2009-11-19-1" id="id2009-11-19-1" href="http://www.php.net/archive/2009.php#id2009-11-19-1" rel="bookmark" class="bookmark">PHP 5.3.1 Released!</a></h1>
+    <h1 class="summary entry-title"><a id="id2009-11-19-1" href="http://www.php.net/archive/2009.php#id2009-11-19-1" rel="bookmark" class="bookmark">PHP 5.3.1 Released!</a></h1>
     <div class="entry-content description">
         <abbr class="published newsdate" title="2009-11-19T17:41:11+00:00">[19-Nov-2009]</abbr>
         <div>
@@ -133,7 +133,7 @@ site_header("News Archive - 2009", array("cache" => true));
 <hr>
 <div class="newsItem hentry vevent">
     <div class="newsImage"><?php news_image("http://www.phpconference.com/", "ipc09.png", "International PHP Conference"); ?></div>
-    <h1 class="summary entry-title"><a name="id2009-10-21-1" id="id2009-10-21-1" href="http://www.phpconference.com/" rel="bookmark" class="bookmark">International PHP Conference</a></h1>
+    <h1 class="summary entry-title"><a id="id2009-10-21-1" href="http://www.phpconference.com/" rel="bookmark" class="bookmark">International PHP Conference</a></h1>
     <div class="entry-content description">
         <abbr class="published newsdate" title="2009-10-21T20:15:30+02:00">[21-Oct-2009]</abbr>
         <div>
@@ -149,7 +149,7 @@ site_header("News Archive - 2009", array("cache" => true));
 <hr>
 <div class="newsItem hentry vevent">
     <div class="newsImage"><?php news_image("http://www.phpworld-kongress.de", "phpworldkongress09.gif", "PHP World Kongress"); ?></div>
-    <h1 class="summary entry-title"><a name="id2009-10-01-1" id="id2009-10-01-1" href="http://www.phpworld-kongress.de" rel="bookmark" class="bookmark">PHP World Kongress</a></h1>
+    <h1 class="summary entry-title"><a id="id2009-10-01-1" href="http://www.phpworld-kongress.de" rel="bookmark" class="bookmark">PHP World Kongress</a></h1>
     <div class="entry-content description">
         <abbr class="published newsdate" title="2009-10-01T21:19:01+02:00">[01-Oct-2009]</abbr>
         <div>
@@ -177,7 +177,7 @@ site_header("News Archive - 2009", array("cache" => true));
 <hr>
 <div class="newsItem hentry vevent">
     <div class="newsImage"><?php news_image("http://phpconference.es/", "phpbarcelonaconference2009small1.jpg", "PHP Barcelona"); ?></div>
-    <h1 class="summary entry-title"><a name="id2009-09-28-1" id="id2009-09-28-1" href="http://phpconference.es/" rel="bookmark" class="bookmark">PHP Barcelona Conference 2009</a></h1>
+    <h1 class="summary entry-title"><a id="id2009-09-28-1" href="http://phpconference.es/" rel="bookmark" class="bookmark">PHP Barcelona Conference 2009</a></h1>
     <div class="entry-content description">
         <abbr class="published newsdate" title="2009-09-28T21:27:54+02:00">[28-Sep-2009]</abbr>
         <div>
@@ -192,7 +192,7 @@ site_header("News Archive - 2009", array("cache" => true));
 <hr>
 <div class="newsItem hentry">
     <div class="newsImage"></div>
-    <h1 class="summary entry-title"><a name="id2009-09-17-1" id="id2009-09-17-1" href="http://www.php.net/archive/2009.php#id2009-09-17-1" rel="bookmark" class="bookmark">PHP 5.2.11 Released!</a></h1>
+    <h1 class="summary entry-title"><a id="id2009-09-17-1" href="http://www.php.net/archive/2009.php#id2009-09-17-1" rel="bookmark" class="bookmark">PHP 5.2.11 Released!</a></h1>
     <div class="entry-content description">
         <abbr class="published newsdate" title="2009-09-17T21:45:06-04:00">[17-Sep-2009]</abbr>
         <div>
@@ -222,7 +222,7 @@ site_header("News Archive - 2009", array("cache" => true));
 <hr>
 <div class="newsItem hentry vevent">
     <div class="newsImage"><?php news_image("http://zendcon.com", "ZendCon09-logo.gif", "ZendCon 2009"); ?></div>
-    <h1 class="summary entry-title"><a name="id2009-08-26-1" id="id2009-08-26-1" href="http://zendcon.com" rel="bookmark" class="bookmark">ZendCon 2009!</a></h1>
+    <h1 class="summary entry-title"><a id="id2009-08-26-1" href="http://zendcon.com" rel="bookmark" class="bookmark">ZendCon 2009!</a></h1>
     <div class="entry-content description">
         <abbr class="published newsdate" title="2009-08-26T10:19:35+02:00">[26-Aug-2009]</abbr>
         <div>
@@ -250,7 +250,7 @@ site_header("News Archive - 2009", array("cache" => true));
 <hr>
 <div class="newsItem hentry">
     <div class="newsImage"></div>
-    <h1 class="summary entry-title"><a name="id2009-07-30-1" id="id2009-07-30-1" href="http://www.php.net/archive/2009.php#id2009-07-30-1" rel="bookmark" class="bookmark">PHP TestFest 2009 Winners</a></h1>
+    <h1 class="summary entry-title"><a id="id2009-07-30-1" href="http://www.php.net/archive/2009.php#id2009-07-30-1" rel="bookmark" class="bookmark">PHP TestFest 2009 Winners</a></h1>
     <div class="entry-content description">
         <abbr class="published newsdate" title="2009-07-30T12:41:28+02:00">[30-Jul-2009]</abbr>
         <div>
@@ -302,7 +302,7 @@ site_header("News Archive - 2009", array("cache" => true));
 <hr>
 <div class="newsItem hentry vevent">
     <div class="newsImage"><?php news_image("http://conference.phpnw.org.uk/", "phpnw09_blk_300x110.png", "PHP NW 2009"); ?></div>
-    <h1 class="summary entry-title"><a name="id2009-07-21-1" id="id2009-07-21-1" href="http://conference.phpnw.org.uk/" rel="bookmark" class="bookmark">PHP North West Conference</a></h1>
+    <h1 class="summary entry-title"><a id="id2009-07-21-1" href="http://conference.phpnw.org.uk/" rel="bookmark" class="bookmark">PHP North West Conference</a></h1>
     <div class="entry-content description">
         <abbr class="published newsdate" title="2009-07-21T15:37:06-07:00">[21-Jul-2009]</abbr>
         <div>
@@ -337,7 +337,7 @@ site_header("News Archive - 2009", array("cache" => true));
 <hr>
 <div class="newsItem hentry">
     <div class="newsImage"></div>
-    <h1 class="summary entry-title"><a name="id2009-07-16-1" id="id2009-07-16-1" href="http://www.php.net/archive/2009.php#id2009-07-16-1" rel="bookmark" class="bookmark">Subversion Migration Complete</a></h1>
+    <h1 class="summary entry-title"><a id="id2009-07-16-1" href="http://www.php.net/archive/2009.php#id2009-07-16-1" rel="bookmark" class="bookmark">Subversion Migration Complete</a></h1>
     <div class="entry-content description">
         <abbr class="published newsdate" title="2009-07-16T19:00:00-09:00">[16-Jul-2009]</abbr>
         <div>
@@ -365,7 +365,7 @@ site_header("News Archive - 2009", array("cache" => true));
 <hr>
 <div class="newsItem hentry">
     <div class="newsImage"></div>
-    <h1 class="summary entry-title"><a name="id2009-07-09-1" id="id2009-07-09-1" href="http://www.php.net/archive/2009.php#id2009-07-09-1" rel="bookmark" class="bookmark">2009 PHP TestFest</a></h1>
+    <h1 class="summary entry-title"><a id="id2009-07-09-1" href="http://www.php.net/archive/2009.php#id2009-07-09-1" rel="bookmark" class="bookmark">2009 PHP TestFest</a></h1>
     <div class="entry-content description">
         <abbr class="published newsdate" title="2009-07-09T10:04:07+02:00">[09-Jul-2009]</abbr>
         <div>
@@ -420,7 +420,7 @@ site_header("News Archive - 2009", array("cache" => true));
 <hr>
 <div class="newsItem hentry">
     <div class="newsImage"></div>
-    <h1 class="summary entry-title"><a name="id2009-06-30-1" id="id2009-06-30-1" href="http://www.php.net/archive/2009.php#id2009-06-30-1" rel="bookmark" class="bookmark">PHP 5.3.0 Released!</a></h1>
+    <h1 class="summary entry-title"><a id="id2009-06-30-1" href="http://www.php.net/archive/2009.php#id2009-06-30-1" rel="bookmark" class="bookmark">PHP 5.3.0 Released!</a></h1>
     <div class="entry-content description">
         <abbr class="published newsdate" title="2009-06-30T11:47:17+02:00">[30-Jun-2009]</abbr>
         <div>
@@ -467,7 +467,7 @@ site_header("News Archive - 2009", array("cache" => true));
 <hr>
 <div class="newsItem hentry vevent">
     <div class="newsImage"><?php news_image("http://www.phprio.org/phpnrio09", "phpnrio09.png", "PHP Rio"); ?></div>
-    <h1 class="summary entry-title"><a name="id2009-06-21-1" id="id2009-06-21-1" href="http://www.php.net/archive/2009.php#id2009-06-21-1" rel="bookmark" class="bookmark">PHP'n Rio conference</a></h1>
+    <h1 class="summary entry-title"><a id="id2009-06-21-1" href="http://www.php.net/archive/2009.php#id2009-06-21-1" rel="bookmark" class="bookmark">PHP'n Rio conference</a></h1>
     <div class="entry-content description">
         <abbr class="published newsdate" title="2009-06-21T10:45:52-07:00">[21-Jun-2009]</abbr>
         <div>
@@ -504,7 +504,7 @@ site_header("News Archive - 2009", array("cache" => true));
 <hr>
 <div class="newsItem hentry">
     <div class="newsImage"></div>
-    <h1 class="summary entry-title"><a name="id2009-06-19-1" id="id2009-06-19-1" href="http://www.php.net/archive/2009.php#id2009-06-19-1" rel="bookmark" class="bookmark">PHP 5.3.0RC4 Release Announcements</a></h1>
+    <h1 class="summary entry-title"><a id="id2009-06-19-1" href="http://www.php.net/archive/2009.php#id2009-06-19-1" rel="bookmark" class="bookmark">PHP 5.3.0RC4 Release Announcements</a></h1>
     <div class="entry-content description">
         <abbr class="published newsdate" title="2009-06-19T11:02:05+02:00">[19-Jun-2009]</abbr>
         <div>
@@ -534,7 +534,7 @@ site_header("News Archive - 2009", array("cache" => true));
 <hr>
 <div class="newsItem hentry">
     <div class="newsImage"></div>
-    <h1 class="summary entry-title"><a name="id2009-06-18-1" id="id2009-06-18-1" href="http://www.php.net/archive/2009.php#id2009-06-18-1" rel="bookmark" class="bookmark">PHP 5.2.10 Released!</a></h1>
+    <h1 class="summary entry-title"><a id="id2009-06-18-1" href="http://www.php.net/archive/2009.php#id2009-06-18-1" rel="bookmark" class="bookmark">PHP 5.2.10 Released!</a></h1>
     <div class="entry-content description">
         <abbr class="published newsdate" title="2009-06-18T18:18:28-04:00">[18-Jun-2009]</abbr>
         <div>
@@ -562,7 +562,7 @@ site_header("News Archive - 2009", array("cache" => true));
 <hr>
 <div class="newsItem hentry">
     <div class="newsImage"></div>
-    <h1 class="summary entry-title"><a name="id2009-06-12-1" id="id2009-06-12-1" href="http://www.php.net/archive/2009.php#id2009-06-12-1" rel="bookmark" class="bookmark">PHP 5.2.10RC2 and PHP 5.3.0RC3 Release Announcements</a></h1>
+    <h1 class="summary entry-title"><a id="id2009-06-12-1" href="http://www.php.net/archive/2009.php#id2009-06-12-1" rel="bookmark" class="bookmark">PHP 5.2.10RC2 and PHP 5.3.0RC3 Release Announcements</a></h1>
     <div class="entry-content description">
         <abbr class="published newsdate" title="2009-06-12T17:39:42+02:00">[12-Jun-2009]</abbr>
         <div>     <p>      The PHP development team is proud to announce the second release candidate of PHP 5.2.10 (PHP 5.2.10RC2) and      the third release candidate of PHP 5.3.0 (PHP 5.3.0RC3).      These RCs focuses on bug fixes and stability improvements, and we hope only minimal changes are required      for the next candidate or final stable releases.     </p>     <p>      PHP 5.2.10 is a pure maintenance release for providing bugfixes and stability updates. PHP 5.3.0      is a newly developed version of PHP featuring long-awaited features like namespaces, late      static binding, closures and much more.     </p>     <p>      Please download and test these release candidates, and report any issues found.      Downloads and further information is available at <a href="http://qa.php.net/">qa.php.net</a>.      See also the work in progress <a href="http://wiki.php.net/doc/scratchpad/upgrade/53">5.3 upgrade guide</a>.     </p></div>
@@ -573,7 +573,7 @@ site_header("News Archive - 2009", array("cache" => true));
 <hr>
 <div class="newsItem hentry vevent">
     <div class="newsImage"><?php news_image("http://cw.mtacon.com/", "codeworks2009.png", "CodeWorks Conference"); ?></div>
-    <h1 class="summary entry-title"><a name="id2009-06-03-1" id="id2009-06-03-1" href="http://cw.mtacon.com/" rel="bookmark" class="bookmark">CodeWorks Conference</a></h1>
+    <h1 class="summary entry-title"><a id="id2009-06-03-1" href="http://cw.mtacon.com/" rel="bookmark" class="bookmark">CodeWorks Conference</a></h1>
     <div class="entry-content description">
         <abbr class="published newsdate" title="2009-06-03T14:01:20+02:00">[03-Jun-2009]</abbr>
         <div>
@@ -601,7 +601,7 @@ site_header("News Archive - 2009", array("cache" => true));
 <hr>
 <div class="newsItem hentry vevent">
     <div class="newsImage"><?php news_image("http://www.afup.org/", "forumphp2009.jpg", "Forum PHP Paris"); ?></div>
-    <h1 class="summary entry-title"><a name="id2009-05-29-1" id="id2009-05-29-1" href="http://www.afup.org/" rel="bookmark" class="bookmark">Forum PHP Paris 2009</a></h1>
+    <h1 class="summary entry-title"><a id="id2009-05-29-1" href="http://www.afup.org/" rel="bookmark" class="bookmark">Forum PHP Paris 2009</a></h1>
     <div class="entry-content description">
         <abbr class="published newsdate" title="2009-05-29T11:47:20+02:00">[29-May-2009]</abbr>
         <div>
@@ -631,7 +631,7 @@ site_header("News Archive - 2009", array("cache" => true));
 <hr>
 <div class="newsItem hentry">
     <div class="newsImage"></div>
-    <h1 class="summary entry-title"><a name="id2009-05-09-1" id="id2009-05-09-1" href="http://www.php.net/archive/2009.php#id2009-05-09-1" rel="bookmark" class="bookmark">TestFest 2009</a></h1>
+    <h1 class="summary entry-title"><a id="id2009-05-09-1" href="http://www.php.net/archive/2009.php#id2009-05-09-1" rel="bookmark" class="bookmark">TestFest 2009</a></h1>
     <div class="entry-content description">
         <abbr class="published newsdate" title="2009-05-09T21:45:38+02:00">[09-May-2009]</abbr>
         <div>
@@ -679,7 +679,7 @@ site_header("News Archive - 2009", array("cache" => true));
 <hr>
 <div class="newsItem hentry">
     <div class="newsImage"></div>
-    <h1 class="summary entry-title"><a name="id2009-05-07-1" id="id2009-05-07-1" href="http://www.php.net/archive/2009.php#id2009-05-07-1" rel="bookmark" class="bookmark">PHP 5.3.0RC2 Release Announcement</a></h1>
+    <h1 class="summary entry-title"><a id="id2009-05-07-1" href="http://www.php.net/archive/2009.php#id2009-05-07-1" rel="bookmark" class="bookmark">PHP 5.3.0RC2 Release Announcement</a></h1>
     <div class="entry-content description">
         <abbr class="published newsdate" title="2009-05-07T20:20:39+02:00">[07-May-2009]</abbr>
         <div>
@@ -706,7 +706,7 @@ site_header("News Archive - 2009", array("cache" => true));
 <hr>
 <div class="newsItem hentry vevent">
     <div class="newsImage"><?php news_image("http://www.phpday.it/", "phpday-it-2009.png", "phpDay Italy"); ?></div>
-    <h1 class="summary entry-title"><a name="id2009-04-17-1" id="id2009-04-17-1" href="http://www.phpday.it/" rel="bookmark" class="bookmark">phpDay Italy</a></h1>
+    <h1 class="summary entry-title"><a id="id2009-04-17-1" href="http://www.phpday.it/" rel="bookmark" class="bookmark">phpDay Italy</a></h1>
     <div class="entry-content description">
         <abbr class="published newsdate" title="2009-04-17T11:42:32+02:00">[17-Apr-2009]</abbr>
         <div>
@@ -744,7 +744,7 @@ site_header("News Archive - 2009", array("cache" => true));
 <hr>
 <div class="newsItem hentry">
     <div class="newsImage"></div>
-    <h1 class="summary entry-title"><a name="id2009-04-08-1" id="id2009-04-08-1" href="http://www.php.net/archive/2009.php#id2009-04-08-1" rel="bookmark" class="bookmark">PHP 5.2.9-2 (Windows) released</a></h1>
+    <h1 class="summary entry-title"><a id="id2009-04-08-1" href="http://www.php.net/archive/2009.php#id2009-04-08-1" rel="bookmark" class="bookmark">PHP 5.2.9-2 (Windows) released</a></h1>
     <div class="entry-content description">
         <abbr class="published newsdate" title="2009-04-08T13:49:16+02:00">[08-Apr-2009]</abbr>
         <div>
@@ -761,7 +761,7 @@ site_header("News Archive - 2009", array("cache" => true));
 <hr>
 <div class="newsItem hentry vevent">
     <div class="newsImage"><?php news_image("http://phpconference.nl/", "dpc09_banner.jpg", "DPC09"); ?></div>
-    <h1 class="summary entry-title"><a name="id2009-04-06-1" id="id2009-04-06-1" href="http://phpconference.nl/" rel="bookmark" class="bookmark">DPC09</a></h1>
+    <h1 class="summary entry-title"><a id="id2009-04-06-1" href="http://phpconference.nl/" rel="bookmark" class="bookmark">DPC09</a></h1>
     <div class="entry-content description">
         <abbr class="published newsdate" title="2009-04-06T21:36:59+02:00">[06-Apr-2009]</abbr>
         <div>
@@ -796,7 +796,7 @@ site_header("News Archive - 2009", array("cache" => true));
 <hr>
 <div class="newsItem hentry">
     <div class="newsImage"></div>
-    <h1 class="summary entry-title"><a name="id2009-03-27-1" id="id2009-03-27-1" href="http://www.php.net/archive/2009.php#id2009-03-27-1" rel="bookmark" class="bookmark">Google Summer of Code 2009</a></h1>
+    <h1 class="summary entry-title"><a id="id2009-03-27-1" href="http://www.php.net/archive/2009.php#id2009-03-27-1" rel="bookmark" class="bookmark">Google Summer of Code 2009</a></h1>
     <div class="entry-content description">
         <abbr class="published newsdate" title="2009-03-27T15:34:48-07:00">[27-Mar-2009]</abbr>
         <div>
@@ -819,7 +819,7 @@ site_header("News Archive - 2009", array("cache" => true));
 <hr>
 <div class="newsItem hentry">
     <div class="newsImage"></div>
-    <h1 class="summary entry-title"><a name="id2009-03-24-1" id="id2009-03-24-1" href="http://www.php.net/archive/2009.php#id2009-03-24-1" rel="bookmark" class="bookmark">PHP 5.3.0RC1 Release Announcement</a></h1>
+    <h1 class="summary entry-title"><a id="id2009-03-24-1" href="http://www.php.net/archive/2009.php#id2009-03-24-1" rel="bookmark" class="bookmark">PHP 5.3.0RC1 Release Announcement</a></h1>
     <div class="entry-content description">
         <abbr class="published newsdate" title="2009-03-24T21:16:11+01:00">[24-Mar-2009]</abbr>
         <div>
@@ -885,7 +885,7 @@ site_header("News Archive - 2009", array("cache" => true));
 <hr>
 <div class="newsItem hentry">
     <div class="newsImage"></div>
-    <h1 class="summary entry-title"><a name="id2009-03-10-1" id="id2009-03-10-1" href="http://www.php.net/archive/2009.php#id2009-03-10-1" rel="bookmark" class="bookmark">5.2.9-1 (for Windows) released</a></h1>
+    <h1 class="summary entry-title"><a id="id2009-03-10-1" href="http://www.php.net/archive/2009.php#id2009-03-10-1" rel="bookmark" class="bookmark">5.2.9-1 (for Windows) released</a></h1>
     <div class="entry-content description">
         <abbr class="published newsdate" title="2009-03-10T23:16:11+01:00">[10-Mar-2009]</abbr>
         <div>
@@ -901,7 +901,7 @@ site_header("News Archive - 2009", array("cache" => true));
 <hr>
 <div class="newsItem hentry">
     <div class="newsImage"></div>
-    <h1 class="summary entry-title"><a name="id2009-02-26-1" id="id2009-02-26-1" href="http://www.php.net/archive/2009.php#id2009-02-26-1" rel="bookmark" class="bookmark">PHP 5.2.9 Released!</a></h1>
+    <h1 class="summary entry-title"><a id="id2009-02-26-1" href="http://www.php.net/archive/2009.php#id2009-02-26-1" rel="bookmark" class="bookmark">PHP 5.2.9 Released!</a></h1>
     <div class="entry-content description">
         <abbr class="published newsdate" title="2009-02-26T18:24:50-05:00">[26-Feb-2009]</abbr>
         <div>
@@ -919,7 +919,7 @@ site_header("News Archive - 2009", array("cache" => true));
 <hr>
 <div class="newsItem hentry vevent">
     <div class="newsImage"></div>
-    <h1 class="summary entry-title"><a name="id2009-02-20-1" id="id2009-02-20-1" href="http://www.php.net/archive/2009.php#id2009-02-20-1" rel="bookmark" class="bookmark">php|tek 2009</a></h1>
+    <h1 class="summary entry-title"><a id="id2009-02-20-1" href="http://www.php.net/archive/2009.php#id2009-02-20-1" rel="bookmark" class="bookmark">php|tek 2009</a></h1>
     <div class="entry-content description">
         <abbr class="published newsdate" title="2009-02-20T18:59:30+01:00">[20-Feb-2009]</abbr>
         <div>
@@ -936,7 +936,7 @@ site_header("News Archive - 2009", array("cache" => true));
 <hr>
 <div class="newsItem hentry vevent">
     <div class="newsImage"></div>
-    <h1 class="summary entry-title"><a name="id2009-02-18-1" id="id2009-02-18-1" href="http://www.php.net/archive/2009.php#id2009-02-18-1" rel="bookmark" class="bookmark">2009 PHP Quebec Conference</a></h1>
+    <h1 class="summary entry-title"><a id="id2009-02-18-1" href="http://www.php.net/archive/2009.php#id2009-02-18-1" rel="bookmark" class="bookmark">2009 PHP Quebec Conference</a></h1>
     <div class="entry-content description">
         <abbr class="published newsdate" title="2009-02-18T02:10:11-08:00">[18-Feb-2009]</abbr>
         <div>

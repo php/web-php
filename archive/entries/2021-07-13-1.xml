@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom" xmlns:default="http://php.net/ns/news">
+  <title>PHP Conference Japan 2021 Online</title>
+  <id>https://www.php.net/archive/2021.php#2021-07-13-1</id>
+  <published>2021-07-13T16:45:56+00:00</published>
+  <updated>2021-07-13T16:45:56+00:00</updated>
+  <link href="https://www.php.net/conferences/index.php#id2021-07-13-1" rel="alternate" type="text/html"/>
+  <default:newsImage xmlns="http://php.net/ns/news" link="https://phpcon.php.gr.jp/2021/" title="PHP Conference Japan 2021 Online">phpconfjapan2021.png</default:newsImage>
+  <link href="https://www.php.net/archive/2021.php#2021-07-13-1" rel="via" type="text/html"/>
+  <default:finalTeaserDate xmlns="http://php.net/ns/news">2021-10-02</default:finalTeaserDate>
+  <category term="conferences" label="Conference announcement"/>
+  <content type="xhtml">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+     <p>
+     We are excited to announce the <a href="http://phpcon.php.gr.jp/2021/" target="_blank">PHP Conference Japan 2021</a>. 🎉 <br/>
+     It will be 2 days online conference this year.
+     </p>
+     <ul>
+     <li>Conference Date : 2021/10/2 (SAT), 3 (SUN) 10:00-20:00 JST</li>
+     <li>Venue: Online</li>
+     <li>Ticket: Free</li>
+     <li>CFP Deadline : 2021/08/08 23:59:59 JST</li>
+     </ul>
+     <p>
+     <a href="https://fortee.jp/phpcon-2021/speaker/proposal/cfp" target="_blank">Submit your papers!!</a><br/>
+     Unfortunately, this CfP system does not support English UI. 😢 Please use browser translation feature to submit your proposal. Sorry for the inconvenience.
+     </p>
+     <p>
+     🐘🐘🐘 One more thing 🐘🐘🐘<br/>
+     The <a href="https://twitter.com/hashtag/%E3%81%82%E3%81%AA%E3%81%9F%E3%81%AE%E8%A1%97%E3%81%AEelePHPant" target="_blank">#あなたの街のelePHPant hashtag event</a> that was held last year will be held again this year! We look forward to your contributions. Please take some selfies with your elePHPant and tweet them with hashtags below:<br/>
+     #あなたの街のelePHPant #my_hometown_with_elePHPant #phpcon2021 #elePHPant
+     </p>
+    </div>
+  </content>
+</entry>

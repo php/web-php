@@ -87,7 +87,7 @@ site_header(
  Otherwise known as IRC. Here you can usually find experienced PHP people
  sitting around doing nothing on various channels with php in their names.
  Note that there is no official IRC channel. Check
- <a href="http://www.freenode.net/">freenode</a> or any other major network
+ <a href="https://libera.chat/">Libera.Chat</a> or any other major network
  (<a href="http://www.efnet.org/">EFNet</a>,
  <a href="http://www.quakenet.org">QuakeNet</a>,
  <a href="http://www.ircnet.com/">IRCNet</a>,

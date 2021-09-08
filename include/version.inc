@@ -20,37 +20,37 @@ $RELEASES = (function() {
 
     /* PHP 8.0 Release */
     $data['8.0'] = [
-        'version' => '8.0.6',
-        'date'    => '06 May 2021',
-        'tags'    => [], // Set to ['security'] for security releases.
+        'version' => '8.0.10',
+        'date'    => '26 Aug 2021',
+        'tags'    => ['security'], // Set to ['security'] for security releases.
         'sha256' => [
-            'tar.gz'  => '51a3dcea6deb8ab82ad035d15baa7f5398980f576ac1968313ef149f7cf20100',
-            'tar.bz2' => '26a8a9dad66012039deb0bcf151c6e22ab1e4b6a91508383ff705da41289526e',
-            'tar.xz'  => 'e9871d3b6c391fe9e89f86f6334852dcc10eeaaa8d5565beb8436e7f0cf30e20',
+            'tar.gz'  => '4612dca9afe8148801648839175ab588097ace66658c6859e9f283ecdeaf84b3',
+            'tar.bz2' => 'c94547271410900845b084ec2bcb3466af363eeca92cb24bd611dcbdc26f1587',
+            'tar.xz'  => '66dc4d1bc86d9c1bc255b51b79d337ed1a7a035cf71230daabbf9a4ca35795eb',
         ]
     ];
 
     /* PHP 7.4 Release */
     $data['7.4'] = [
-        'version' => '7.4.19',
-        'date'    => '06 May 2021',
-        'tags'    => [], // Set to ['security'] for security releases
+        'version' => '7.4.23',
+        'date'    => '26 Aug 2021',
+        'tags'    => ['security'], // Set to ['security'] for security releases
         'sha256'  => [
-            'tar.gz'  => 'd7062457ba9f8334ab8ae7e4fea8efe27e2506763551b25db9e6ab9beea8ed6f',
-            'tar.bz2' => '25d09b8145b284d870431c1b40aba7944e4bf1836278538f8e29780e7f85ddea',
-            'tar.xz'  => '6c17172c4a411ccb694d9752de899bb63c72a0a3ebe5089116bc13658a1467b2',
+            'tar.gz'  => '2aaa481678ad4d2992e7bcf161e0e98c7268f4979f7ca8b3d97dd6de19c205d6',
+            'tar.bz2' => 'd1e094fe6e4f832e0a64be9c69464ba5d593fb216f914efa8bbb084e0a7a5727',
+            'tar.xz'  => 'cea52313fcffe56343bcd3c66dbb23cd5507dc559cc2e3547cf8f5452e88a05d',
         ]
     ];
 
     /* PHP 7.3 Release */
     $data['7.3'] = [
-        'version' => '7.3.28',
-        'date'    => '29 Apr 2021',
+        'version' => '7.3.30',
+        'date'    => '26 Aug 2021',
         'tags'      => ['security'],
         'sha256'  => [
-            'tar.gz'  => '1f0d9b94e1b11518ffabd19b646c2fee95ea42ca9cd8d337f8d07986fdceede1',
-            'tar.bz2' => '8f636e644594388436ea05ff34c9eb135e6dc119c1130199e9488d5795439964',
-            'tar.xz'  => 'a2a84dbec8c1eee3f46c5f249eaaa2ecb3f9e7a6f5d0604d2df44ff8d4904dbe',
+            'tar.gz'  => '3810a9b631eb7f236ecf02b9a78bab8d957b6cfdb1646a29e3b34e01d36c0510',
+            'tar.bz2' => 'ccc532e660761df9b5509b9b913d2dc049b0a9954108fe212aeeb8bc2556b502',
+            'tar.xz'  => '0ebfd656df0f3b1ea37ff2887f8f2d1a71cd160fb0292547c0ee0a99e58ffd1b',
         ]
     ];
 

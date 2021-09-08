@@ -2,15 +2,203 @@
 $_SERVER['BASE_PAGE'] = 'ChangeLog-7.php';
 include_once __DIR__ . '/include/prepend.inc';
 include_once __DIR__ . '/include/changelogs.inc';
-site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("changelog.css"), "layout_span" => 12));
+
+$MINOR_VERSIONS = ['7.4', '7.3', '7.2', '7.1', '7.0'];
+changelog_header(7, $MINOR_VERSIONS);
 ?>
-<h1>PHP 7 ChangeLog</h1>
+<a id="PHP_7_4"></a>
 
-<a href="#PHP_7_4">7.4</a> |
-<a href="#PHP_7_3">7.3</a> | <a href="#PHP_7_2">7.2</a> |
-<a href="#PHP_7_1">7.1</a> | <a href="#PHP_7_0">7.0</a>
+<section class="version" id="7.4.23"><!-- {{{ 7.4.23 -->
+<h3>Version 7.4.23</h3>
+<b><?php release_date('26-Aug-2021'); ?></b>
+<ul><li>Core:
+<ul>
+  <li><?php bugfix(72595); ?> (php_output_handler_append illegal write access).</li>
+  <li><?php bugfix(66719); ?> (Weird behaviour when using get_called_class() with call_user_func()).</li>
+  <li><?php bugfix(81305); ?> (Built-in Webserver Drops Requests With "Upgrade" Header).</li>
+</ul></li>
+<li>BCMath:
+<ul>
+  <li><?php bugfix(78238); ?> (BCMath returns "-0").</li>
+</ul></li>
+<li>CGI:
+<ul>
+  <li><?php bugfix(80849); ?> (HTTP Status header truncation).</li>
+</ul></li>
+<li>GD:
+<ul>
+  <li><?php bugfix(51498); ?> (imagefilledellipse does not work for large circles).</li>
+</ul></li>
+<li>MySQLi:
+<ul>
+  <li><?php bugfix(74544); ?> (Integer overflow in mysqli_real_escape_string()).</li>
+</ul></li>
+<li>OpenSSL:
+<ul>
+  <li><?php bugfix(81327); ?> (Error build openssl extension on php 7.4.22).</li>
+</ul></li>
+<li>PDO_ODBC:
+<ul>
+  <li><?php bugfix(81252); ?> (PDO_ODBC doesn't account for SQL_NO_TOTAL).</li>
+</ul></li>
+<li>Phar:
+<ul>
+  <li><?php bugfix(81211); ?>: Symlinks are followed when creating PHAR archive.(cmb)</li>
+</ul></li>
+<li>Shmop:
+<ul>
+  <li><?php bugfix(81283); ?> (shmop can't read beyond 2147483647 bytes).</li>
+</ul></li>
+<li>Standard:
+<ul>
+  <li><?php bugfix(72146); ?> (Integer overflow on substr_replace).</li>
+  <li><?php bugfix(81265); ?> (getimagesize returns 0 for 256px ICO images).</li>
+  <li><?php bugfix(74960); ?> (Heap buffer overflow via str_repeat).</li>
+</ul></li>
+<li>Streams:
+<ul>
+  <li><?php bugfix(81294); ?> (Segfault when removing a filter).</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
 
-<a name="PHP_7_4"></a>
+
+
+<section class="version" id="7.4.22"><!-- {{{ 7.4.22 -->
+<h3>Version 7.4.22</h3>
+<b><?php release_date('29-Jul-2021'); ?></b>
+<ul><li>Core:
+<ul>
+  <li><?php bugfix(81145); ?> (copy() and stream_copy_to_stream() fail for +4GB files).</li>
+  <li><?php bugfix(81163); ?> (incorrect handling of indirect vars in __sleep).</li>
+  <li><?php bugfix(80728); ?> (PHP built-in web server resets timeout when it can kill the process).</li>
+  <li><?php bugfix(73630); ?> (Built-in Webserver - overwrite $_SERVER['request_uri']).</li>
+  <li><?php bugfix(80173); ?> (Using return value of zend_assign_to_variable() is not safe).</li>
+  <li><?php bugfix(73226); ?> (--r[fcez] always return zero exit code).</li>
+</ul></li>
+<li>Intl:
+<ul>
+  <li><?php bugfix(72809); ?> (Locale::lookup() wrong result with canonicalize option).</li>
+  <li><?php bugfix(68471); ?> (IntlDateFormatter fails for "GMT+00:00" timezone).</li>
+  <li><?php bugfix(74264); ?> (grapheme_strrpos() broken for negative offsets).</li>
+</ul></li>
+<li>OpenSSL:
+<ul>
+  <li><?php bugfix(52093); ?> (openssl_csr_sign truncates $serial).</li>
+</ul></li>
+<li>PCRE:
+<ul>
+  <li><?php bugfix(81101); ?> (PCRE2 10.37 shows unexpected result).</li>
+  <li><?php bugfix(81243); ?> (Too much memory is allocated for preg_replace()).</li>
+</ul></li>
+<li>Standard:
+<ul>
+  <li><?php bugfix(81223); ?> (flock() only locks first byte of file).</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
+
+
+<section class="version" id="7.4.21"><!-- {{{ 7.4.21 -->
+<h3>Version 7.4.21</h3>
+<b><?php release_date('01-Jul-2021'); ?></b>
+<ul><li>Core:
+<ul>
+  <li><?php bugfix(81068); ?> (Double free in realpath_cache_clean()).</li>
+  <li><?php bugfix(76359); ?> (open_basedir bypass through adding "..").</li>
+  <li><?php bugfix(81090); ?> (Typed property performance degradation with .= operator).</li>
+  <li><?php bugfix(81070); ?> (Integer underflow in memory limit comparison).</li>
+  <li><?php bugfix(81122); ?> (SSRF bypass in FILTER_VALIDATE_URL). (CVE-2021-21705)</li>
+</ul></li>
+<li>Bzip2:
+<ul>
+  <li><?php bugfix(81092); ?> (fflush before stream_filter_remove corrupts stream).</li>
+</ul></li>
+<li>OpenSSL:
+<ul>
+  <li><?php bugfix(76694); ?> (native Windows cert verification uses CN as server name).</li>
+</ul></li>
+<li>PDO_Firebird:
+<ul>
+  <li><?php bugfix(76448); ?> (Stack buffer overflow in firebird_info_cb). (CVE-2021-21704)</li>
+  <li><?php bugfix(76449); ?> (SIGSEGV in firebird_handle_doer). (CVE-2021-21704)</li>
+  <li><?php bugfix(76450); ?> (SIGSEGV in firebird_stmt_execute). (CVE-2021-21704)</li>
+  <li><?php bugfix(76452); ?> (Crash while parsing blob data in firebird_fetch_blob). (CVE-2021-21704)</li>
+</ul></li>
+<li>Standard:
+<ul>
+  <li><?php bugfix(81048); ?> (phpinfo(INFO_VARIABLES) "Array to string conversion").</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
+
+
+<section class="version" id="7.4.20"><!-- {{{ 7.4.20 -->
+<h3>Version 7.4.20</h3>
+<b><?php release_date('03-Jun-2021'); ?></b>
+<ul><li>Core:
+<ul>
+  <li><?php bugfix(80929); ?> (Method name corruption related to repeated calls to call_user_func_array).</li>
+  <li><?php bugfix(80960); ?> (opendir() warning wrong info when failed on Windows).</li>
+  <li><?php bugfix(67792); ?> (HTTP Authorization schemes are treated as case-sensitive).</li>
+  <li><?php bugfix(80972); ?> (Memory exhaustion on invalid string offset).</li>
+</ul></li>
+<li>FPM:
+<ul>
+  <li><?php bugfix(65800); ?> (Events port mechanism).</li>
+</ul></li>
+<li>FTP:
+<ul>
+  <li><?php bugfix(80901); ?> (Info leak in ftp extension).</li>
+  <li><?php bugfix(79100); ?> (Wrong FTP error messages).</li>
+</ul></li>
+<li>GD:
+<ul>
+  <li><?php bugfix(81032); ?> (GD install is affected by external libgd installation).</li>
+</ul></li>
+<li>MBString:
+<ul>
+  <li><?php bugfix(81011); ?> (mb_convert_encoding removes references from arrays).</li>
+</ul></li>
+<li>ODBC:
+<ul>
+  <li><?php bugfix(80460); ?> (ODBC doesn't account for SQL_NO_TOTAL indicator).</li>
+</ul></li>
+<li>PDO_MySQL:
+<ul>
+  <li><?php bugfix(81037); ?> (PDO discards error message text from prepared statement).</li>
+</ul></li>
+<li>PDO_ODBC:
+<ul>
+  <li><?php bugfix(44643); ?> (bound parameters ignore explicit type definitions).</li>
+</ul></li>
+<li>pgsql:
+<ul>
+  <li>Fixed php_pgsql_fd_cast() wrt. php_stream_can_cast().</li>
+</ul></li>
+<li>SPL:
+<ul>
+  <li><?php bugfix(80933); ?> (SplFileObject::DROP_NEW_LINE is broken for NUL and CR).</li>
+</ul></li>
+<li>Opcache:
+<ul>
+  <li><?php bugfix(80900); ?> (switch statement behavior inside function).</li>
+  <li><?php bugfix(81015); ?> (Opcache optimization assumes wrong part of ternary operator in if-condition).</li>
+</ul></li>
+<li>XMLReader:
+<ul>
+  <li><?php bugfix(73246); ?> (XMLReader: encoding length not checked).</li>
+</ul></li>
+<li>Zip:
+<ul>
+  <li><?php bugfix(80863); ?> (ZipArchive::extractTo() ignores references).</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
+
 
 <section class="version" id="7.4.19"><!-- {{{ 7.4.19 -->
 <h3>Version 7.4.19</h3>
@@ -1542,7 +1730,38 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
 
 <!-- }}} --></section>
 
-<a name="PHP_7_3"></a>
+<a id="PHP_7_3"></a>
+
+<section class="version" id="7.3.30"><!-- {{{ 7.3.30 -->
+<h3>Version 7.3.30</h3>
+<b><?php release_date('26-Aug-2021'); ?></b>
+<ul><li>Phar:
+<ul>
+  <li><?php bugfix(81211); ?>: Symlinks are followed when creating PHAR archive.</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
+
+
+<section class="version" id="7.3.29"><!-- {{{ 7.3.29 -->
+<h3>Version 7.3.29</h3>
+<b><?php release_date('01-Jul-2021'); ?></b>
+<ul><li>Core:
+<ul>
+  <li><?php bugfix(81122); ?>: SSRF bypass in FILTER_VALIDATE_URL. (CVE-2021-21705)</li>
+</ul></li>
+<li>PDO_Firebird:
+<ul>
+  <li><?php bugfix(76448); ?>: Stack buffer overflow in firebird_info_cb. (CVE-2021-21704)</li>
+  <li><?php bugfix(76449); ?>: SIGSEGV in firebird_handle_doer. (CVE-2021-21704)</li>
+  <li><?php bugfix(76450); ?>: SIGSEGV in firebird_stmt_execute. (CVE-2021-21704)</li>
+  <li><?php bugfix(76452); ?>: Crash while parsing blob data in firebird_fetch_blob. (CVE-2021-21704)</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
+
 
 <section class="version" id="7.3.28"><!-- {{{ 7.3.28 -->
 <h3>Version 7.3.28</h3>
@@ -3374,7 +3593,7 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
 </ul>
 <!-- }}} --></section>
 
-<a name="PHP_7_2"></a>
+<a id="PHP_7_2"></a>
 
 <section class="version" id="7.2.34"><!-- {{{ 7.2.34 -->
 <h3>Version 7.2.34</h3>
@@ -5149,7 +5368,7 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
 </ul>
 <!-- }}} --></section>
 
-<a name="PHP_7_1"></a>
+<a id="PHP_7_1"></a>
 <section class="version" id="7.1.33"><!-- {{{ 7.1.33 -->
 <h3>Version 7.1.33</h3>
 <b><?php release_date('24-Oct-2019'); ?></b>
@@ -7334,7 +7553,7 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
 </ul>
 <!-- }}} --></section>
 
-<a name="PHP_7_0"></a>
+<a id="PHP_7_0"></a>
 <section class="version" id="7.0.33"><!-- {{{ 7.0.33 -->
 <h3>Version 7.0.33</h3>
 <b><?php release_date('06-Dec-2018'); ?></b>
@@ -10166,4 +10385,5 @@ site_header("PHP 7 ChangeLog", array("current" => "docs", "css" => array("change
 </ul>
 <!-- }}} --></section>
 
-<?php site_footer(); ?>
+<?php
+changelog_footer(7, $MINOR_VERSIONS);
