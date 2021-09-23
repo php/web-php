@@ -1732,6 +1732,18 @@ changelog_header(7, $MINOR_VERSIONS);
 
 <a id="PHP_7_3"></a>
 
+<section class="version" id="7.3.31"><!-- {{{ 7.3.31 -->
+<h3>Version 7.3.31</h3>
+<b><?php release_date('23-Sep-2021'); ?></b>
+<ul><li>Zip:
+<ul>
+  <li><?php bugfix(81420); ?> (ZipArchive::extractTo extracts outside of destination). (CVE-2021-21706)</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
+
+
 <section class="version" id="7.3.30"><!-- {{{ 7.3.30 -->
 <h3>Version 7.3.30</h3>
 <b><?php release_date('26-Aug-2021'); ?></b>

@@ -329,6 +329,43 @@ $OLDRELEASES = array (
   ),
   7 => 
   array (
+    '7.3.30' => 
+    array (
+      'announcement' => 
+      array (
+        'English' => '/releases/7_3_30.php',
+      ),
+      'tags' => 
+      array (
+        0 => 'security',
+      ),
+      'date' => '26 Aug 2021',
+      'source' => 
+      array (
+        0 => 
+        array (
+          'filename' => 'php-7.3.30.tar.gz',
+          'name' => 'PHP 7.3.30 (tar.gz)',
+          'sha256' => '3810a9b631eb7f236ecf02b9a78bab8d957b6cfdb1646a29e3b34e01d36c0510',
+          'date' => '26 Aug 2021',
+        ),
+        1 => 
+        array (
+          'filename' => 'php-7.3.30.tar.bz2',
+          'name' => 'PHP 7.3.30 (tar.bz2)',
+          'sha256' => 'ccc532e660761df9b5509b9b913d2dc049b0a9954108fe212aeeb8bc2556b502',
+          'date' => '26 Aug 2021',
+        ),
+        2 => 
+        array (
+          'filename' => 'php-7.3.30.tar.xz',
+          'name' => 'PHP 7.3.30 (tar.xz)',
+          'sha256' => '0ebfd656df0f3b1ea37ff2887f8f2d1a71cd160fb0292547c0ee0a99e58ffd1b',
+          'date' => '26 Aug 2021',
+        ),
+      ),
+      'museum' => false,
+    ),
     '7.4.22' => 
     array (
       'announcement' => 
