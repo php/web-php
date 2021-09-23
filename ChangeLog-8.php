@@ -8,6 +8,50 @@ changelog_header(8, $MINOR_VERSIONS);
 ?>
 <a id="PHP_8_0"></a>
 
+<section class="version" id="8.0.11"><!-- {{{ 8.0.11 -->
+<h3>Version 8.0.11</h3>
+<b><?php release_date('23-Sep-2021'); ?></b>
+<ul><li>Core:
+<ul>
+  <li><?php bugfix(81302); ?> (Stream position after stream filter removed).</li>
+  <li><?php bugfix(81346); ?> (Non-seekable streams don't update position after write).</li>
+  <li><?php bugfix(73122); ?> (Integer Overflow when concatenating strings).</li>
+</ul></li>
+<li>GD:
+<ul>
+  <li><?php bugfix(53580); ?> (During resize gdImageCopyResampled cause colors change).</li>
+</ul></li>
+<li>Opcache:
+<ul>
+  <li><?php bugfix(81353); ?> (segfault with preloading and statically bound closure).</li>
+</ul></li>
+<li>Shmop:
+<ul>
+  <li><?php bugfix(81407); ?> (shmop_open won't attach and causes php to crash).</li>
+</ul></li>
+<li>Standard:
+<ul>
+  <li><?php bugfix(71542); ?> (disk_total_space does not work with relative paths).</li>
+  <li><?php bugfix(81400); ?> (Unterminated string in dns_get_record() results).</li>
+</ul></li>
+<li>SysVMsg:
+<ul>
+  <li><?php bugfix(78819); ?> (Heap Overflow in msg_send).</li>
+</ul></li>
+<li>XML:
+<ul>
+  <li><?php bugfix(81351); ?> (xml_parse may fail, but has no error code).</li>
+</ul></li>
+<li>Zip:
+<ul>
+  <li><?php bugfix(80833); ?> (ZipArchive::getStream doesn't use setPassword).</li>
+  <li><?php bugfix(81420); ?> (ZipArchive::extractTo extracts outside of destination).</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
+
+
 <section class="version" id="8.0.10"><!-- {{{ 8.0.10 -->
 <h3>Version 8.0.10</h3>
 <b><?php release_date('26-Aug-2021'); ?></b>
