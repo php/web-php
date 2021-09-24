@@ -30,22 +30,14 @@ abbr {
 
 h1, h2, h3, h4, h5, h6 {
   font-weight: 500;
-  color:#333
+  color:#333;
 }
-header.title,
-h1:after,
-h2:after,
-h3:after {
-  display:table;
-  width:100%;
-  content:" ";
-  margin-top:-1px;
+
+header.title, h1, h2, h3 {
   border-bottom:1px dotted;
 }
-.title h1:after,
-.title h2:after,
-.title h3:after {
-  display:none;
+header.title h2 {
+  border:none;
 }
 
 a:link,
