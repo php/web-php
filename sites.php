@@ -134,7 +134,7 @@ site_header("A Tourist's Guide", array("current" => "help"));
  before being made official. Documentation is built here four times a day.
 </p>
 
-<h2 id="qa" class="content-header"><a href="http://qa.php.net/">qa.php.net</a>: Quality Assurance Team</h2>
+<h2 id="qa" class="content-header"><a href="https://qa.php.net/">qa.php.net</a>: Quality Assurance Team</h2>
 
 <p class="content-box">
  The Quality Assurance team is one of the most important pieces of the PHP
@@ -160,7 +160,7 @@ site_header("A Tourist's Guide", array("current" => "help"));
 </p>
 </div>
 
-<h2 id="svn" class="content-header"><a href="http://svn.php.net/">svn.php.net</a>: Archived SVN Repository</h2>
+<h2 id="svn" class="content-header"><a href="https://svn.php.net/">svn.php.net</a>: Archived SVN Repository</h2>
 
 <p class="content-box">
  The PHP project used to be organized under the SVN revision control system, but
@@ -226,7 +226,7 @@ XXX: The following sites are offline and should be re-added once they are back o
  has a wiki section and everyone is able to apply for wiki commit access.
 </p>
 
-<h2 id="people" class="content-header"><a href="http://people.php.net/">people.php.net</a>: The PHP Developers Profiles</h2>
+<h2 id="people" class="content-header"><a href="https://people.php.net/">people.php.net</a>: The PHP Developers Profiles</h2>
 
 <p class="content-box">
  A list of the developers behind PHP along with quick profiles for each of them.
