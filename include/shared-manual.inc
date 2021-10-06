@@ -452,6 +452,7 @@ function manual_setup($setup) {
             $edit_url = "https://github.com/php/doc-{$source_lang}/blob/master/{$setup['source']['path']}";
         }
     }
+    $__RELATED['edit_url'] = $edit_url;
 
     echo <<<PAGE_TOOLS
   <div class="page-tools">
@@ -513,7 +514,8 @@ function manual_footer() {
     echo "</section>";
     $config = array(
         'related_menu' => $__RELATED['toc'],
-        'related_menu_deprecated' => $__RELATED['toc_deprecated']
+        'related_menu_deprecated' => $__RELATED['toc_deprecated'],
+        'view_source' => $__RELATED['edit_url'],
     );
     site_footer($config);
 }
