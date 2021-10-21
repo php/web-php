@@ -9,7 +9,7 @@
   <category term="releases" label="New PHP release"/>
   <category term="frontpage" label="PHP.net frontpage news"/>
   <content type="xhtml">
-    <div xmlns="http://www.w3.org/1999/xhtml"><p>The PHP development team announces the immediate availability of PHP 8.0.12. This is a bug fix release.</p>
+    <div xmlns="http://www.w3.org/1999/xhtml"><p>The PHP development team announces the immediate availability of PHP 8.0.12. This is a security fix release.</p>
 
 <p>All PHP 8.0 users are encouraged to upgrade to this version.</p>
 
