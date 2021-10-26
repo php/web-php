@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom" xmlns:default="http://php.net/ns/news">
+  <title>PHP workshop for 2 days with Showare, Sylius, PHPUnit and Codeception in Duisburg</title>
+  <id>https://www.php.net/archive/2021.php#2021-10-26-1</id>
+  <published>2021-10-26T14:18:02+02:00</published>
+  <updated>2021-10-26T14:18:02+02:00</updated>
+  <link href="https://www.php.net/conferences/index.php#id2021-10-26-1" rel="alternate" type="text/html"/>
+  <link href="https://www.php.net/archive/2021.php#2021-10-26-1" rel="via" type="text/html"/>
+  <default:finalTeaserDate xmlns="http://php.net/ns/news">2021-11-16</default:finalTeaserDate>
+  <category term="conferences" label="Conference announcement"/>
+  <content type="xhtml">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+     We will do live coding workshop for 2 days with core developers in Duisburg. Together with the wireless keyboard we will learn about Symfony entities in Shopware plugin, PHPUnit integration tests, headless API in Sylius and Codeception testing. Website will be translated fully the next days. Here is the event page https://nevercodealone.de/de/nca-conference-duisburg
+     
+    </div>
+  </content>
+</entry>
