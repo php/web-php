@@ -10,7 +10,9 @@
   <category term="conferences" label="Conference announcement"/>
   <content type="xhtml">
     <div xmlns="http://www.w3.org/1999/xhtml">
-     We will do live coding workshop for 2 days with core developers in Duisburg. Together with the wireless keyboard we will learn about Symfony entities in Shopware plugin, PHPUnit integration tests, headless API in Sylius and Codeception testing. Website will be translated fully the next days. Here is the event page https://nevercodealone.de/de/nca-conference-duisburg
+     We will do live coding workshop for 2 days with core developers in Duisburg.
+     Together with the wireless keyboard we will learn about Symfony entities in Shopware plugin, PHPUnit integration tests, headless API in Sylius and Codeception testing.
+     See the <a href="https://nevercodealone.de/nca-conference-duisburg">event page</a> for more details.
      
     </div>
   </content>
