@@ -1820,6 +1820,18 @@ changelog_header(7, $MINOR_VERSIONS);
 
 <a id="PHP_7_3"></a>
 
+<section class="version" id="7.3.32"><!-- {{{ 7.3.32 -->
+<h3>Version 7.3.32</h3>
+<b><?php release_date('28-Oct-2021'); ?></b>
+<ul><li>FPM:
+<ul>
+  <li><?php bugfix(81026); ?> (PHP-FPM oob R/W in root process leading to privilege escalation). (CVE-2021-21703)</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
+
+
 <section class="version" id="7.3.31"><!-- {{{ 7.3.31 -->
 <h3>Version 7.3.31</h3>
 <b><?php release_date('23-Sep-2021'); ?></b>
