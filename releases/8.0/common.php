@@ -50,6 +50,7 @@ function language_chooser(string $currentLang): void {
         'ru'    => 'Русский',
         'tr'    => 'Türkçe',
         'zh'    => '简体中文',
+        'ka'    => 'ქართული'
     ];
 
     // Print out the form with all the options
