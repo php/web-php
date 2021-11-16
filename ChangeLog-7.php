@@ -8,6 +8,51 @@ changelog_header(7, $MINOR_VERSIONS);
 ?>
 <a id="PHP_7_4"></a>
 
+<section class="version" id="7.4.25"><!-- {{{ 7.4.25 -->
+<h3>Version 7.4.25</h3>
+<b><?php release_date('21-Oct-2021'); ?></b>
+<ul><li>DOM:
+<ul>
+  <li><?php bugfix(81433); ?> (DOMElement::setIdAttribute() called twice may remove ID).</li>
+</ul></li>
+<li>FFI:
+<ul>
+  <li><?php bugfix(79576); ?> ("TYPE *" shows unhelpful message when type is not defined).</li>
+</ul></li>
+<li>Fileinfo:
+<ul>
+  <li><?php bugfix(78987); ?> (High memory usage during encoding detection).</li>
+</ul></li>
+<li>Filter:
+<ul>
+  <li><?php bugfix(61700); ?> (FILTER_FLAG_IPV6/FILTER_FLAG_NO_PRIV|RES_RANGE failing).</li>
+</ul></li>
+<li>FPM:
+<ul>
+  <li><?php bugfix(81026); ?> (PHP-FPM oob R/W in root process leading to privilege escalation) (CVE-2021-21703).</li>
+</ul></li>
+<li>SPL:
+<ul>
+  <li><?php bugfix(80663); ?> (Recursive SplFixedArray::setSize() may cause double-free).</li>
+</ul></li>
+<li>Streams:
+<ul>
+  <li><?php bugfix(81475); ?> (stream_isatty emits warning with attached stream wrapper).</li>
+</ul></li>
+<li>XML:
+<ul>
+  <li><?php bugfix(70962); ?> (XML_OPTION_SKIP_WHITE strips embedded whitespace).</li>
+</ul></li>
+<li>Zip:
+<ul>
+  <li><?php bugfix(81490); ?> (ZipArchive::extractTo() may leak memory).</li>
+  <li><?php bugfix(77978); ?> (Dirname ending in colon unzips to wrong dir).</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
+
+
 <section class="version" id="7.4.24"><!-- {{{ 7.4.24 -->
 <h3>Version 7.4.24</h3>
 <b><?php release_date('23-Sep-2021'); ?></b>
@@ -1774,6 +1819,18 @@ changelog_header(7, $MINOR_VERSIONS);
 <!-- }}} --></section>
 
 <a id="PHP_7_3"></a>
+
+<section class="version" id="7.3.32"><!-- {{{ 7.3.32 -->
+<h3>Version 7.3.32</h3>
+<b><?php release_date('28-Oct-2021'); ?></b>
+<ul><li>FPM:
+<ul>
+  <li><?php bugfix(81026); ?> (PHP-FPM oob R/W in root process leading to privilege escalation). (CVE-2021-21703)</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
+
 
 <section class="version" id="7.3.31"><!-- {{{ 7.3.31 -->
 <h3>Version 7.3.31</h3>

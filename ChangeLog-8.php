@@ -8,6 +8,73 @@ changelog_header(8, $MINOR_VERSIONS);
 ?>
 <a id="PHP_8_0"></a>
 
+<section class="version" id="8.0.12"><!-- {{{ 8.0.12 -->
+<h3>Version 8.0.12</h3>
+<b><?php release_date('21-Oct-2021'); ?></b>
+<ul><li>CLI:
+<ul>
+  <li><?php bugfix(81496); ?> (Server logs incorrect request method).</li>
+</ul></li>
+<li>Core:
+<ul>
+  <li><?php bugfix(81435); ?> (Observer current_observed_frame may point to an old (overwritten) frame).</li>
+  <li><?php bugfix(81380); ?> (Observer may not be initialized properly).</li>
+</ul></li>
+<li>DOM:
+<ul>
+  <li><?php bugfix(81433); ?> (DOMElement::setIdAttribute() called twice may remove ID).</li>
+</ul></li>
+<li>FFI:
+<ul>
+  <li><?php bugfix(79576); ?> ("TYPE *" shows unhelpful message when type is not defined).</li>
+</ul></li>
+<li>FPM:
+<ul>
+  <li><?php bugfix(81026); ?> (PHP-FPM oob R/W in root process leading to privilege escalation) (CVE-2021-21703).</li>
+</ul></li>
+<li>Fileinfo:
+<ul>
+  <li><?php bugfix(78987); ?> (High memory usage during encoding detection).</li>
+</ul></li>
+<li>Filter:
+<ul>
+  <li><?php bugfix(61700); ?> (FILTER_FLAG_IPV6/FILTER_FLAG_NO_PRIV|RES_RANGE failing).</li>
+</ul></li>
+<li>Opcache:
+<ul>
+  <li><?php bugfix(81472); ?> (Cannot support large linux major/minor device number when read /proc/self/maps).</li>
+</ul></li>
+<li>Reflection:
+<ul>
+  <li>ReflectionAttribute is no longer final.</li>
+</ul></li>
+<li>SPL:
+<ul>
+  <li><?php bugfix(80663); ?> (Recursive SplFixedArray::setSize() may cause double-free).</li>
+  <li><?php bugfix(81477); ?> (LimitIterator + SplFileObject regression in 8.0.1).</li>
+</ul></li>
+<li>Standard:
+<ul>
+  <li><?php bugfix(69751); ?> (Change Error message of sprintf/printf for missing/typo position specifier).</li>
+</ul></li>
+<li>Streams:
+<ul>
+  <li><?php bugfix(81475); ?> (stream_isatty emits warning with attached stream wrapper).</li>
+</ul></li>
+<li>XML:
+<ul>
+  <li><?php bugfix(70962); ?> (XML_OPTION_SKIP_WHITE strips embedded whitespace).</li>
+</ul></li>
+<li>Zip:
+<ul>
+  <li><?php bugfix(81490); ?> (ZipArchive::extractTo() may leak memory).</li>
+  <li><?php bugfix(77978); ?> (Dirname ending in colon unzips to wrong dir).</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
+
+
 <section class="version" id="8.0.11"><!-- {{{ 8.0.11 -->
 <h3>Version 8.0.11</h3>
 <b><?php release_date('23-Sep-2021'); ?></b>
