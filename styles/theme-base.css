@@ -1541,7 +1541,6 @@ div.soft-deprecation-notice blockquote.sidebar {
     display:block;
   }
   .navbar-search,
-  #intro .download,
   #intro .background,
   aside.tips,
   .layout-menu {
@@ -1549,7 +1548,7 @@ div.soft-deprecation-notice blockquote.sidebar {
     float: left;
   }
 
-  #intro .blurb, #layout-content {
+  #layout-content {
     float:left;
     width:75%;
   }
@@ -1565,11 +1564,11 @@ div.soft-deprecation-notice blockquote.sidebar {
 
 
 @media (min-width: 768px) and (max-width: 979px) {
-    #intro .download, aside.tips, .navbar-search {
+    aside.tips, .navbar-search {
         width: 30% !important;
     }
 
-    #intro .blurb, #layout-content {
+    #layout-content {
         width: 70% !important;
     }
 }

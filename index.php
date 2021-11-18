@@ -93,16 +93,16 @@ $content .= '<p class="archive"><a href="/archive/">Older News Entries</a></p>';
 $content .= "</div>";
 
 $intro = <<<EOF
-  <div class="row clearfix">
-    <div class="blurb">
-      <p>PHP is a popular general-purpose scripting language that is especially suited to web development.</p>
-      <p>Fast, flexible and pragmatic, PHP powers everything from your blog to the most popular websites in the world.</p>
+  <div class="hero">
+    <img class="hero-logo" src="/images/logos/php-logo-white.svg" width="240" height="120">
+    <p class="hero-text">A <strong>popular general-purpose scripting language</strong> that is especially suited to web development.<br />Fast, flexible and pragmatic, PHP powers everything from your blog to the most popular websites in the world.</p>
+    <div class="hero-actions">
+      <a href="/manual/en/getting-started.php" class="hero-btn hero-btn-primary">Get Started</a>
+      <a href="/downloads.php" class="hero-btn hero-btn-secondary">Download</a>
     </div>
-    <div class="download">
-      <h3>Download</h3>
 EOF;
 
-$intro .= "<ul>\n";
+$intro .= "<ul class='hero-versions'>\n";
 $active_branches = get_active_branches();
 krsort($active_branches);
 foreach ($active_branches as $major => $releases) {
@@ -111,12 +111,11 @@ foreach ($active_branches as $major => $releases) {
         $version = $release['version'];
         list($major, $minor, $_) = explode('.', $version);
         $intro .= "
-            <li><a class='download-link' href='/downloads.php#v$version'>$version</a><span class='dot'>&middot;</span><a class='notes' href='/ChangeLog-$major.php#$version'>Release Notes</a><span class='dot'>&middot;</span><a class='notes' href='/migration$major$minor'>Upgrading</a></li>\n";
+            <li class='hero-version'><a class='hero-version-link' href='/downloads.php#v$version'>$version</a> &middot; <a class='notes' href='/ChangeLog-$major.php#$version'>Changelog</a> &middot; <a class='notes' href='/migration$major$minor'>Upgrading</a></li>\n";
     }
 }
 $intro .= "</ul>\n";
 $intro .= <<<EOF
-    </div>
   </div>
 EOF;
 

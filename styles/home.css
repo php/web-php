@@ -1,74 +1,141 @@
 /* Home Page */
 
-#intro p {
-  color:#fff;
+
+/* Hero */
+
+#intro .container {
+  padding: 0 24px;
+}
+
+.hero {
+  width: 100%;
+  flex: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 32px 0;
+}
+
+.hero-logo {
+  width: 100%;
+  max-width: 240px;
+  margin-bottom: 24px;
+}
+
+.hero-text {
+  margin-top: 0;
+  margin-bottom: 28px;
+  color:#E6E6E6;
+  line-height: 1.5;
+  text-align: center;
   text-rendering: optimizeLegibility;
 }
-#intro p,
-#intro ul {
-    text-shadow:0 1px 2px rgba(0,0,0,.5);
-    font-size:1.125rem;
+
+.hero-actions {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 24px;
 }
 
-#intro ul a {
-    word-spacing: 0;
+.hero-btn {
+  padding: 16px 46px;
+  margin-bottom: 12px;
+  border-radius: 30px;
+  text-align: center;
+  display: inline-block;
+  border: none;
+  font-size: 20px;
+  transition: background-color 0.2s;
 }
 
-#intro .row .blurb p:first-child {
-  margin-top:1.5rem;
-}
-#intro .row .blurb,
-#intro .row .download {
-  display:table-cell;
-  float:none;
-  padding:0 1.5rem;
+.hero-btn-primary {
+  background-color: #4f5b93;
+  color: #fff !important;
 }
 
-#intro h3 {
-  margin:1.5rem 0 0;
-  color:#E6E6E6;
-}
-#intro h3:after {
-  display:none;
+.hero-btn-primary:hover, .hero-btn-primary:focus {
+  background-color: #465081;
 }
 
-#intro .row {
-  position:relative;
-  display:table-row;
+.hero-btn-secondary {
+  background-color: transparent;
+  color: #b8c0e9 !important;
+  border: 1px solid #6773ad;
 }
 
-#intro ul {
+.hero-btn-secondary:hover, .hero-btn-secondary:focus {
+  background-color: #6773ad20;
+  border: 1px solid #6773ad;
+}
+
+.hero-versions {
+  margin: 0;
   list-style:none;
-  word-spacing:.25rem;
-  margin-left:0;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
-#intro .dot {
-    display: inline-block;
-    width: 5px;
-    padding: 0 5px;
+.hero-version {
+  margin-bottom: 8px;
 }
 
-#intro .download {
-}
-#intro .download a.notes {
-    font-size:.75em;
+.hero-versions a.notes {
+    font-size:.875rem;
     white-space:nowrap;
 }
-#intro .download a {
+
+.hero-versions a {
     color:#ccc;
     border:0;
 }
-#intro .download a:hover,
-#intro .download a:focus {
+
+.hero-versions a:hover,
+.hero-versions a:focus {
   border-bottom:1px dotted;
 }
 
-#intro .download a.download-link {
-    color:#fff;
-    width: 50px;
+.hero-version-link {
+    color:#fff !important;
     display: inline-block;
 }
+
+@media (min-width: 540px) {
+  .hero-actions {
+    flex-direction: row;
+    width: auto;
+  }
+
+  .hero-btn-secondary {
+    margin-left: 8px;
+  }
+}
+
+@media (min-width: 768px) {
+  .hero {
+    margin: 60px 0;
+  }
+
+  .hero-versions {
+    display: flex;
+  }
+
+  .hero-version {
+    font-size: 1.125rem;
+    padding: 0 1.5rem;
+  }
+
+  .hero-version:not(:first-child) {
+    border-left: 1px dotted #666;
+  }
+
+  .hero-text {
+    font-size: 18px;
+  }
+}
+
+
+/* Layout */
 
 #layout-content {
   border-right:.25rem solid #666;
@@ -82,42 +149,25 @@ p.archive {
 	text-align: right;
 }
 
-@media (min-width: 480px) and (max-width: 768px) {
-    #intro .download {
-        width: 35%;
-    }
-
-    #intro .blurb {
-        width: 65%;
-    }
-}
-
 @media (min-width: 768px) {
     .navbar-search,
-    #intro .download,
     #intro .background,
     aside.tips,
     .layout-menu {
         width: 25%;
     }
 
-    #intro .blurb, #layout-content {
+    #layout-content {
         width: 75%;
     }
 }
 
-@media (min-width: 480px) and (max-width: 590px) {
-    #intro .dot {
-        display: none;
-    }
-}
-
 @media (min-width: 768px) and (max-width: 784px) {
-    #intro .download, aside.tips, .navbar-search {
+    aside.tips, .navbar-search {
         width: 30%;
     }
 
-    #intro .blurb, #layout-content {
+    #layout-content {
         width:70%;
     }
 }
