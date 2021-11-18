@@ -44,13 +44,13 @@ $RELEASES = (function() {
 
     /* PHP 7.3 Release */
     $data['7.3'] = [
-        'version' => '7.3.32',
-        'date'    => '28 Oct 2021',
+        'version' => '7.3.33',
+        'date'    => '18 Nov 2021',
         'tags'      => ['security'],
         'sha256'  => [
-            'tar.gz'  => '4739160cbd8f5d4529429ac01e181cba9705a515666002e76e4e34891c034fcb',
-            'tar.bz2' => '7c158b306e53434f1e0a88647aa561814308aaff8713ed7d237ed8f1399c216f',
-            'tar.xz'  => '94effa250b80f031e77fbd98b6950c441157a2a8f9e076ee68e02f5b0b7a3fd9',
+            'tar.gz'  => '9a369c32c6f52036b0a890f290327f148a1904ee66aa56e2c9a7546da6525ec8',
+            'tar.bz2' => 'f412487d7d953437e7978a0d7b6ec99bf4a85cf3378014438a8577b89535451a',
+            'tar.xz'  => '166eaccde933381da9516a2b70ad0f447d7cec4b603d07b9a916032b215b90cc',
         ]
     ];
 

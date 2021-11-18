@@ -1856,6 +1856,18 @@ changelog_header(7, $MINOR_VERSIONS);
 
 <a id="PHP_7_3"></a>
 
+<section class="version" id="7.3.33"><!-- {{{ 7.3.33 -->
+<h3>Version 7.3.33</h3>
+<b><?php release_date('18-Nov-2021'); ?></b>
+<ul><li>XML:
+<ul>
+  <li><?php bugfix(79971); ?> (special character is breaking the path in xml function). (CVE-2021-21707)</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
+
+
 <section class="version" id="7.3.32"><!-- {{{ 7.3.32 -->
 <h3>Version 7.3.32</h3>
 <b><?php release_date('28-Oct-2021'); ?></b>
