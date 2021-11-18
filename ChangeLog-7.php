@@ -8,6 +8,42 @@ changelog_header(7, $MINOR_VERSIONS);
 ?>
 <a id="PHP_7_4"></a>
 
+<section class="version" id="7.4.26"><!-- {{{ 7.4.26 -->
+<h3>Version 7.4.26</h3>
+<b><?php release_date('18-Nov-2021'); ?></b>
+<ul><li>Core:
+<ul>
+  <li><?php bugfix(81518); ?> (Header injection via default_mimetype / default_charset).</li>
+</ul></li>
+<li>Date:
+<ul>
+  <li><?php bugfix(81500); ?> (Interval serialization regression since 7.3.14 / 7.4.2).</li>
+</ul></li>
+<li>MBString:
+<ul>
+  <li><?php bugfix(76167); ?> (mbstring may use pointer from some previous request).</li>
+</ul></li>
+<li>MySQLi:
+<ul>
+  <li><?php bugfix(81494); ?> (Stopped unbuffered query does not throw error).</li>
+</ul></li>
+<li>PCRE:
+<ul>
+  <li><?php bugfix(81424); ?> (PCRE2 10.35 JIT performance regression).</li>
+</ul></li>
+<li>Streams:
+<ul>
+  <li><?php bugfix(54340); ?> (Memory corruption with user_filter).</li>
+</ul></li>
+<li>XML:
+<ul>
+  <li><?php bugfix(79971); ?> (special character is breaking the path in xml function). (CVE-2021-21707)</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
+
+
 <section class="version" id="7.4.25"><!-- {{{ 7.4.25 -->
 <h3>Version 7.4.25</h3>
 <b><?php release_date('21-Oct-2021'); ?></b>
