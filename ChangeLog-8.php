@@ -8,6 +8,46 @@ changelog_header(8, $MINOR_VERSIONS);
 ?>
 <a id="PHP_8_0"></a>
 
+<section class="version" id="8.0.13"><!-- {{{ 8.0.13 -->
+<h3>Version 8.0.13</h3>
+<b><?php release_date('18-Nov-2021'); ?></b>
+<ul><li>Core:
+<ul>
+  <li><?php bugfix(81518); ?> (Header injection via default_mimetype / default_charset).</li>
+</ul></li>
+<li>Date:
+<ul>
+  <li><?php bugfix(81500); ?> (Interval serialization regression since 7.3.14 / 7.4.2).</li>
+</ul></li>
+<li>DBA:
+<ul>
+  <li><?php bugfix(81588); ?> (TokyoCabinet driver leaks memory).</li>
+</ul></li>
+<li>MBString:
+<ul>
+  <li><?php bugfix(76167); ?> (mbstring may use pointer from some previous request).</li>
+</ul></li>
+<li>Opcache:
+<ul>
+  <li><?php bugfix(81512); ?> (Unexpected behavior with arrays and JIT).</li>
+</ul></li>
+<li>PCRE:
+<ul>
+  <li><?php bugfix(81424); ?> (PCRE2 10.35 JIT performance regression).</li>
+</ul></li>
+<li>XML:
+<ul>
+  <li><?php bugfix(79971); ?> (special character is breaking the path in xml function). (CVE-2021-21707)</li>
+</ul></li>
+<li>XMLReader:
+<ul>
+  <li><?php bugfix(81521); ?> (XMLReader::getParserProperty may throw with a valid property).</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
+
+
 <section class="version" id="8.0.12"><!-- {{{ 8.0.12 -->
 <h3>Version 8.0.12</h3>
 <b><?php release_date('21-Oct-2021'); ?></b>
