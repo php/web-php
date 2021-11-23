@@ -1,8 +1,17 @@
 <?php
 
 use function releases\php81\common_header;
+use function releases\php81\language_chooser;
 use function releases\php81\language_redirect;
 use function releases\php81\message;
+
+if (!isset($lang)) {
+    $lang = 'en';
+}
+
+$_SERVER['BASE_PAGE'] = 'releases/8.1/' . $lang . '.php';
+
+include_once __DIR__ . '/common.php';
 
 language_redirect($lang);
 
@@ -12,7 +21,7 @@ common_header(message('common_header', $lang));
 <section class="php8-section php8-section_dark php8-section_header center">
     <div class="page-tools">
         <div class="change-language">
-            <?php releases\php81\language_chooser($lang); ?>
+            <?php language_chooser($lang); ?>
         </div>
     </div>
     <div class="php8-section__content">
@@ -109,7 +118,8 @@ PHP
             <div class="php8-compare__block example-contents">
                 <div class="php8-compare__label php8-compare__label_new">PHP 8.1</div>
                 <div class="php8-code phpcode">
-                    <?php highlight_php_trimmed(<<<'PHP'
+                    <?php highlight_php_trimmed(
+                            <<<'PHP'
 class BlogData
 {
     public readonly Status $status;
@@ -119,7 +129,8 @@ class BlogData
         $this->status = $status;
     }
 }
-PHP);?>
+PHP
+                    );?>
                 </div>
             </div>
         </div>
