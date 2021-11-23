@@ -8,7 +8,7 @@ return [
     'documentation' => 'Doc',
 
     'enumerations_title' => 'Enumerations',
-    'enumerations_content' => 'Use instead of set of constants and get validation out of the box.',
+    'enumerations_content' => 'Use enum instead of a set of constants and get validation out of the box.',
 
     'readonly_properties_title' => 'Readonly Properties',
     'readonly_properties_content' => '<p>Readonly properties cannot be changed after initialization, i.e. after a value is assigned to them.<br>They are a great way to model value objects and data-transfer objects.</p>',
@@ -18,7 +18,7 @@ return [
 
     'new_in_initializers_title' => 'New in initializers',
     'new_in_initializers_content' => '<p>Objects can now be used as default parameter values, static variables, and global constants, as well as in attribute arguments.</p>
-            <p>This effectively makes possible to use <strong>nested attributes</strong>.</p>',
+            <p>This effectively makes it possible to use <strong>nested attributes</strong>.</p>',
 
     'pure_intersection_types_title' => 'Pure Intersection Types',
     'pure_intersection_types_content' => '<p>Use intersection types on any type declarations when you need to require a value to satisfy multiple type constraints at the same time.</p>
@@ -34,7 +34,7 @@ return [
     'octal_numeral_notation_content' => '<p>It is now possible to write octal numbers with the explicit <code>0o</code> prefix.</p>',
 
     'fibers_title' => 'Fibers',
-    'fibers_content' => '<p>Fibers are primitives for implementing light weight cooperative concurrency. Basically they are a means of creating code blocks that can be paused and resumed, much like threads. The main difference is that they are never preempted and that the scheduling must be done by a common library and not the OS.</p>',
+    'fibers_content' => '<p>Fibers are primitives for implementing lightweight cooperative concurrency. Basically, they are a means of creating code blocks that can be paused and resumed, much like threads. The main difference is that they are never preempted and that the scheduling must be done by a common library and not the OS.</p>',
 
     'array_unpacking_title' => 'Array unpacking support for string-keyed arrays',
     'array_unpacking_content' => '<p>PHP supported unpacking inside arrays through the spread operator before, but only if the arrays had integer keys. Now it is possible to unpack arrays with string keys too.</p>',
