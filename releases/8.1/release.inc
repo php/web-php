@@ -561,7 +561,7 @@ PHP
     </div>
 
     <div class="php8-column">
-        <h2 class="php8-h2" id="deprecations_and_bc_breaks"><?= message('bc_tilte', $lang) ?></h2>
+        <h2 class="php8-h2" id="deprecations_and_bc_breaks"><?= message('bc_title', $lang) ?></h2>
         <div class="php8-compare__content">
             <ul>
                 <li><?= message('bc_null_to_not_nullable', $lang) ?></li>
