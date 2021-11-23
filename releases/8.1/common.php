@@ -1,6 +1,7 @@
 <?php declare(strict_types=1);
 
 namespace releases\php81;
+
 include_once __DIR__ . '/../../include/prepend.inc';
 
 function language_redirect(string $currentLang): void {
@@ -40,6 +41,7 @@ META
 function language_chooser(string $currentLang): void {
     $LANGUAGES = [
         'en'    => 'English',
+        'ru'    => 'Русский',
     ];
 
     // Print out the form with all the options
@@ -62,3 +64,12 @@ function language_chooser(string $currentLang): void {
 ';
 }
 
+function message($code, $language = 'en')
+{
+    $original = require __DIR__ . '/languages/en.php';
+    if (($language !== 'en') && file_exists(__DIR__ . '/languages/' . $language . '.php')) {
+        $translation = require __DIR__ . '/languages/' . $language . '.php';
+    }
+
+    return $translation[$code] ?? $original[$code] ?? $code;
+}
