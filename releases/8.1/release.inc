@@ -464,7 +464,13 @@ PHP
                 <div class="php8-code phpcode">
                     <?php highlight_php_trimmed(
                         <<<'PHP'
-@TODO
+$httpClient->request('https://example.com/')
+        ->then(function (Response $response) {
+            return $response->getBody()->buffer();
+        })
+        ->then(function (string $responseBody) {
+            print json_decode($responseBody)['code'];
+        });
 PHP
 
                     );?>
@@ -476,7 +482,8 @@ PHP
                 <div class="php8-code phpcode">
                     <?php highlight_php_trimmed(
                         <<<'PHP'
-@TODO
+$response = $httpClient->request('https://example.com/');
+print json_decode($response->getBody()->buffer())['code'];
 PHP
                     );?>
                 </div>
