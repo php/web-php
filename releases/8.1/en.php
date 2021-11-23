@@ -302,7 +302,7 @@ PHP
   <div class="php8-compare">
     <h2 class="php8-h2" id="never_return_type">
         Never return type
-      <a class="php8-rfc" href="https://wiki.php.net/rfc/noreturn_type">RFC</a>
+      <a class="php8-rfc" href="https://wiki.php.net/rfc/noreturn_type">RFC</a> <a class="php8-rfc" href="/manual/en/language.types.declarations.php#language.types.declarations.never">Doc</a>
     </h2>
     <div class="php8-compare__main">
       <div class="php8-compare__block example-contents">
