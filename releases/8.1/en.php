@@ -578,7 +578,7 @@ PHP
     </div>
     <div class="php8-footer__content">
       <p>
-        For source downloads of PHP 8 please visit the <a href="https://www.php.net/downloads">downloads</a> page.
+        For source downloads of PHP 8.1 please visit the <a href="https://www.php.net/downloads">downloads</a> page.
         Windows binaries can be found on the <a href="https://windows.php.net/download">PHP for Windows</a> site.
         The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-8.php#PHP_8_1">ChangeLog</a>.
       </p>
