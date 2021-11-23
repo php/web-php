@@ -218,45 +218,51 @@ PHP
         </div>
       </div>
     </div>
-    <div class="php8-compare__main">
-      <div class="php8-compare__block example-contents">
-        <div class="php8-compare__label">PHP ≤8.0</div>
-        <div class="php8-code phpcode">
-            <?php highlight_php_trimmed(
-                <<<'PHP'
-class User {
-    #[\Assert\All(
-        new \Assert\NotNull,
-        new \Assert\Length(min: 6))
-    ]
-    public string $name = '';
-}
-PHP
-            );?>
-        </div>
-      </div>
-      <div class="php8-compare__arrow"></div>
-      <div class="php8-compare__block example-contents">
-        <div class="php8-compare__label php8-compare__label_new">PHP 8.1</div>
-        <div class="php8-code phpcode">
-            <?php highlight_php_trimmed(
-                <<<'PHP'
-class User {
-    #[\Assert\All(
-        new \Assert\NotNull,
-        new \Assert\Length(min: 6))
-    ]
-    public string $name = '';
-}
-PHP
-            );?>
-        </div>
-      </div>
-    </div>
+
     <div class="php8-compare__content">
       <p>Objects can now be used as default parameter values, static variables, and global constants, as well as in attribute arguments.</p>
       <p>This effectively makes possible to use <strong>nested attributes</strong>.</p>
+        <p></p>
     </div>
+    <div class="php8-compare__main">
+          <div class="php8-compare__block example-contents">
+              <div class="php8-compare__label">PHP ≤8.0</div>
+              <div class="php8-code phpcode">
+                  <?php highlight_php_trimmed(
+                      <<<'PHP'
+class User 
+{
+    /**
+     * @Assert\All({
+     *     @Assert\NotNull,
+     *     @Assert\Length(min=5)
+     * })
+     */
+    public string $name = '';
+}
+PHP
+                  );?>
+              </div>
+          </div>
+          <div class="php8-compare__arrow"></div>
+          <div class="php8-compare__block example-contents">
+              <div class="php8-compare__label php8-compare__label_new">PHP 8.1</div>
+              <div class="php8-code phpcode">
+                  <?php highlight_php_trimmed(
+                      <<<'PHP'
+class User 
+{
+    #[\Assert\All(
+        new \Assert\NotNull,
+        new \Assert\Length(min: 6))
+    ]
+    public string $name = '';
+}
+PHP
+                  );?>
+              </div>
+          </div>
+      </div>
   </div>
 
   <div class="php8-compare">
