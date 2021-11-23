@@ -40,7 +40,7 @@ common_header(message('common_header', $lang));
     <div class="php8-compare">
         <h2 class="php8-h2" id="enumerations">
             <?= message('enumerations_title', $lang) ?>
-            <a class="php8-rfc" href="https://wiki.php.net/rfc/enumerations">RFC</a> <a class="php8-rfc" href="/manual/en/language.enumerations.php"><?= message('documentation', $lang) ?></a>
+            <a class="php8-rfc" href="https://wiki.php.net/rfc/enumerations">RFC</a> <a class="php8-rfc" href="/manual/<?= $lang ?>/language.enumerations.php"><?= message('documentation', $lang) ?></a>
         </h2>
         <div class="php8-compare__main">
             <div class="php8-compare__block example-contents">
@@ -318,7 +318,7 @@ PHP
     <div class="php8-compare">
         <h2 class="php8-h2" id="never_return_type">
             <?= message('never_return_type_title', $lang) ?>
-            <a class="php8-rfc" href="https://wiki.php.net/rfc/noreturn_type">RFC</a> <a class="php8-rfc" href="/manual/en/language.types.declarations.php#language.types.declarations.never"><?= message('documentation', $lang) ?></a>
+            <a class="php8-rfc" href="https://wiki.php.net/rfc/noreturn_type">RFC</a> <a class="php8-rfc" href="/manual/<?= $lang ?>/language.types.declarations.php#language.types.declarations.never"><?= message('documentation', $lang) ?></a>
         </h2>
         <div class="php8-compare__main">
             <div class="php8-compare__block example-contents">
