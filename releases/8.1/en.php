@@ -555,7 +555,7 @@ PHP
             <li>Implicit incompatible float to int conversion is deprecated.</li>
             <li>finfo Extension: <code>file_info</code> resource are migrated to existing finfo objects.</li>
             <li>IMAP: imap resources are <code>IMAP\Connection</code> class objects.</li>
-            <li>FTP Extension: Connection resources are FTP\Connection class objects.</li>
+            <li>FTP Extension: Connection resources are <code>FTP\Connection</code> class objects.</li>
             <li>GD Extension: Font identifiers are <code>GdFont</code> class objects.</li>
             <li>LDAP: resources migrated to <code>LDAP\Connection</code>, <code>LDAP\Result</code>, and <code>LDAP\ResultEntry</code> objects.</li>
             <li>PostgreSQL: resources migrated to <code>PgSql\Connection</code>, <code>PgSql\Result</code>, and <code>PgSql\Lob</code> objects.</li>
