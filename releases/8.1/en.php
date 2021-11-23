@@ -516,8 +516,8 @@ PHP
   </div>
 </section>
 
-<section class="php8-section center php8-section_light">
-    <div class="php8-compare">
+<section class="php8-section center php8-section_light php8-columns">
+    <div class="php8-column">
       <h2 class="php8-h2" id="performance_improvements">Performance Improvements</h2>
       <div class="php8-compare__content">
           <p>The result (relative to PHP-8.0)
