@@ -541,8 +541,8 @@ PHP
       </div>
     </div>
 
-    <div class="php8-compare">
-      <h2 class="php8-h2 php8-h2_margin-top" id="deprecations_and_bc_breaks">Deprecations and backward compatibility breaks</h2>
+    <div class="php8-column">
+      <h2 class="php8-h2" id="deprecations_and_bc_breaks">Deprecations and backward compatibility breaks</h2>
       <div class="php8-compare__content">
         <ul>
             <li>Passing null to non-nullable internal function parameters is deprecated.</li>
