@@ -294,7 +294,7 @@ PHP
       </div>
     </div>
     <div class="php8-compare__content">
-      <p>Use intersection types шт any type declarations when you need to require a value to satisfy multiple type constraints at the same time instead of a single one.</p>
+      <p>Use intersection types on any type declarations when you need to require a value to satisfy multiple type constraints at the same time.</p>
       <p>It is not currently possible to mix intersection and union types together such as <code>A&B|C</code>.</p>
     </div>
   </div>
