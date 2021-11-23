@@ -594,7 +594,7 @@ PHP
             <a class="php8-button php8-button_light" href="/downloads"><?= message('upgrade_now', $lang) ?></a>
         </div>
         <div class="php8-footer__content">
-            <?= message('footer_content') ?>
+            <?= message('footer_content', $lang) ?>
         </div>
     </div>
 </section>
