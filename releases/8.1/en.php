@@ -574,7 +574,7 @@ PHP
       Better performance, better syntax, improved type safety.
     </h2>
     <div class="php8-button-wrapper center">
-      <a class="php8-button php8-button_light" href="/downloads">Upgrade to PHP 8 now!</a>
+      <a class="php8-button php8-button_light" href="/downloads">Upgrade to PHP 8.1 now!</a>
     </div>
     <div class="php8-footer__content">
       <p>
