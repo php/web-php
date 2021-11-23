@@ -557,11 +557,11 @@ PHP
             <li>IMAP: imap resources are <code>IMAP\Connection</code> class objects.</li>
             <li>FTP Extension: Connection resources are FTP\Connection class objects.</li>
             <li>GD Extension: Font identifiers are <code>GdFont</code> class objects.</li>
-            <li>LDAP: resources migrated to LDAP\Connection, LDAP\Result, and LDAP\ResultEntry objects.</li>
-            <li>PostgreSQL: resources migrated to \PgSql\Connection, \PgSql\Result, and \PgSql\Lob objects.</li>
-            <li>Pspell: pspell, pspell config resources are PSpell\Dictionary, PSpell\Config class objects.</li>
-            <li>New fsync and fdatasync functions.</li>
-            <li>New array_is_list function.</li>
+            <li>LDAP: resources migrated to <code>LDAP\Connection</code>, <code>LDAP\Result</code>, and <code>LDAP\ResultEntry</code> objects.</li>
+            <li>PostgreSQL: resources migrated to <code>PgSql\Connection</code>, <code>PgSql\Result</code>, and <code>PgSql\Lob</code> objects.</li>
+            <li>Pspell: pspell, pspell config resources are <code>PSpell\Dictionary</code>, <code>PSpell\Config</code> class objects.</li>
+            <li>New <code>fsync</code> and <code>fdatasync</code> functions.</li>
+            <li>New <code>array_is_list</code> function.</li>
             <li>New Sodium XChaCha20 functions.</li>
         </ul>
       </div>
