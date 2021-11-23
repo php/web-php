@@ -468,7 +468,7 @@ PHP
       </div>
     </div>
     <div class="php8-compare__content">
-      <p>Fibers are primitives for implementing light weight cooperative concurrency. Basically they are a means of creating code blocks that can be paused and resumed, much like threads. The main difference is that they are never preempted and that the scheduling must be done by the programmer and not the VM.</p>
+      <p>Fibers are primitives for implementing light weight cooperative concurrency. Basically they are a means of creating code blocks that can be paused and resumed, much like threads. The main difference is that they are never preempted and that the scheduling must be done by a common library and not the OS.</p>
     </div>
   </div>
 
