@@ -35,7 +35,7 @@ releases\php81\common_header(
   <div class="php8-compare">
     <h2 class="php8-h2" id="enumerations">
         Enumerations
-      <a class="php8-rfc" href="https://wiki.php.net/rfc/enumerations">RFC</a>
+      <a class="php8-rfc" href="https://wiki.php.net/rfc/enumerations">RFC</a> <a class="php8-rfc" href="/manual/en/language.enumerations.php">Doc</a>
     </h2>
     <div class="php8-compare__main">
       <div class="php8-compare__block example-contents">
