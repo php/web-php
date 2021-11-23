@@ -27,7 +27,7 @@ function common_header(string $description): void {
 <meta name="twitter:creator" content="@official_php" />
 <meta name="twitter:image:src" content="{$meta_image_path}" />
 
-<meta itemprop="name" content="PHP 8.0 Released" />
+<meta itemprop="name" content="PHP 8.1 Released" />
 <meta itemprop="description" content="{$meta_description}" />
 <meta itemprop="image" content="{$meta_image_path}" />
 
