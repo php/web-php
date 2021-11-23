@@ -554,7 +554,7 @@ PHP
             <li>MySQLi: Default error mode set to exceptions.</li>
             <li>Implicit incompatible float to int conversion is deprecated.</li>
             <li>finfo Extension: <code>file_info</code> resource are migrated to existing finfo objects.</li>
-            <li>IMAP: imap resources are IMAP\Connection class objects.</li>
+            <li>IMAP: imap resources are <code>IMAP\Connection</code> class objects.</li>
             <li>FTP Extension: Connection resources are FTP\Connection class objects.</li>
             <li>GD Extension: Font identifiers are GdFont class objects.</li>
             <li>LDAP: resources migrated to LDAP\Connection, LDAP\Result, and LDAP\ResultEntry objects.</li>
