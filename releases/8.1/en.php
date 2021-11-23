@@ -118,9 +118,12 @@ PHP
             <?php highlight_php_trimmed(<<<'PHP'
 class BlogData
 {
-    public function __construct(
-        public readonly Status $status
-    ) {}
+    public readonly Status $status;
+   
+    public function __construct(Status $status) 
+    {
+        $this->status = $status;
+    }
 }
 PHP);?>
         </div>
@@ -180,13 +183,14 @@ PHP
         <div class="php8-code phpcode">
             <?php highlight_php_trimmed(
                 <<<'PHP'
-class Service {
+class Service 
+{
     private Logger $logger;
  
     public function __construct(
         ?Logger $logger = null,
     ) {
-        $this->logger = $logger ?? new NullLogger;
+        $this->logger = $logger ?? new NullLogger();
     }
 }
 PHP
@@ -199,10 +203,15 @@ PHP
         <div class="php8-code phpcode">
             <?php highlight_php_trimmed(
                 <<<'PHP'
-class Service {
+class Service 
+{
+    private Logger $logger;
+    
     public function __construct(
-        private Logger $logger = new NullLogger,
-    ) {}
+        Logger $logger = new NullLogger(),
+    ) {
+        $this->logger = $logger;
+    }
 }
 PHP
             );?>
