@@ -543,9 +543,7 @@ PHP
         <h2 class="php8-h2" id="performance_improvements"><?= message('performance_title', $lang) ?></h2>
         <div class="php8-compare__content">
             <div class="center">
-                <strong>Symfony Demo App request time</strong><br>
-                25 consecutive runs, 250 requests (sec)<br>
-                (less is better)<br>
+                <?= message('performance_chart', $lang) ?>
                 <img src="/images/php8/php81_performance.svg" alt="">
             </div>
             <p><?= message('performance_results', $lang) ?></p>

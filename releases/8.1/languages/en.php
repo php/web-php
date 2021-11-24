@@ -40,6 +40,9 @@ return [
     'array_unpacking_content' => '<p>PHP supported unpacking inside arrays through the spread operator before, but only if the arrays had integer keys. Now it is possible to unpack arrays with string keys too.</p>',
 
     'performance_title' => 'Performance Improvements',
+    'performance_chart' => '<strong>Symfony Demo App request time</strong><br>
+                25 consecutive runs, 250 requests (sec)<br>
+                (less is better)<br>',
     'performance_results' => 'The result (relative to PHP 8.0):<br />
               - 3.5 % WordPress speedup<br />
               - 27.0% Symfony Demo speedup',
