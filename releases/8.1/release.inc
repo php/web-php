@@ -544,9 +544,13 @@ PHP
         <div class="php8-compare__content">
             <div class="center">
                 <?= message('performance_chart', $lang) ?>
-                <img src="/images/php8/php81_performance.svg" alt="">
+                <div class="php8-chart__table">
+                    <img src="/images/php8/php81_performance.svg" alt="">
+                </div>
             </div>
-            <p><?= message('performance_results', $lang) ?></p>
+            <div class="php8-chart__results">
+                <?= message('performance_results', $lang) ?>
+            </div>
             <h3 class="php8-h3"><?= message('performance_related_functions_title', $lang) ?></h3>
             <ul>
                 <li><?= message('performance_jit_arm64', $lang) ?></li>
