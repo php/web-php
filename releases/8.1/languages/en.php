@@ -40,11 +40,11 @@ return [
     'array_unpacking_content' => '<p>PHP supported unpacking inside arrays through the spread operator before, but only if the arrays had integer keys. Now it is possible to unpack arrays with string keys too.</p>',
 
     'performance_title' => 'Performance Improvements',
-    'performance_results' => 'The result (relative to PHP-8.0):<br />
-              - 3.5 % Wordpress speedup<br />
+    'performance_results' => 'The result (relative to PHP 8.0):<br />
+              - 3.5 % WordPress speedup<br />
               - 27.0% Symfony Demo speedup',
     'performance_related_functions_title' => 'Performance related features in PHP 8.1:',
-    'performance_jit_arm64' => 'JIT backend for ARM64(AArch64)',
+    'performance_jit_arm64' => 'JIT backend for ARM64 (AArch64)',
     'performance_inheritance_cache' => 'Inheritance cache (avoid relinking classes in each request)',
     'performance_fast_class_name_resolution' => 'Fast class name resolution (avoid lowercasing and hash lookup)',
     'performance_timelib_date_improvements' => 'timelib and ext/date performance improvements',
