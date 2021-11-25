@@ -54,7 +54,7 @@ class Status
     const PUBLISHED = 'published';
     const ARCHIVED = 'archived';
 }
-acceptStatus(string $status) {...}
+function acceptStatus(string $status) {...}
 PHP
 
                     );?>
