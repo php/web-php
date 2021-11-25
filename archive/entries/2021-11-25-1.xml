@@ -14,7 +14,6 @@
 
 <p>PHP 8.1 comes with numerous improvements and new features such as:</p>
 
-<p>Take a look at the <a href="https://www.php.net/releases/8.1/">PHP 8.1 Announcement Addendum</a> for more information.</p>
 <ul>
   <li><a href="https://www.php.net/manual/en/language.enumerations.php">Enumerations</a></li>
   <li><a href="https://wiki.php.net/rfc/readonly_properties_v2">Readonly properties</a></li>
