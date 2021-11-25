@@ -283,7 +283,7 @@ function count_and_iterate(Iterator $value) {
         throw new TypeError('value must be Countable');
     }
 
-    foreach($value as $val) {
+    foreach ($value as $val) {
         echo $val;
     }
 
@@ -301,7 +301,7 @@ PHP
                     <?php highlight_php_trimmed(
                         <<<'PHP'
 function count_and_iterate(Iterator&Countable $value) {
-    foreach($value as $val) {
+    foreach ($value as $val) {
         echo $val;
     }
 

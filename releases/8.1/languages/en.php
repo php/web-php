@@ -21,7 +21,7 @@ return [
             <p>This effectively makes it possible to use <strong>nested attributes</strong>.</p>',
 
     'pure_intersection_types_title' => 'Pure Intersection Types',
-    'pure_intersection_types_content' => '<p>Use intersection types when you need to require a value to satisfy multiple type constraints at the same time.</p>
+    'pure_intersection_types_content' => '<p>Use intersection types when a value needs to satisfy multiple type constraints at the same time.</p>
             <p>It is not currently possible to mix intersection and union types together such as <code>A&B|C</code>.</p>',
 
     'never_return_type_title' => 'Never return type',
