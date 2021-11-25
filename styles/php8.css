@@ -272,6 +272,10 @@
   text-align: left;
 }
 
+.php8-compare__content--spaced {
+  margin-bottom: 24px;
+}
+
 @media (max-width: 810px) {
   .php8-compare__content {
     display: block;

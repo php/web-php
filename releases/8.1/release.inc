@@ -142,7 +142,7 @@ PHP
     <div class="php8-compare">
         <h2 class="php8-h2" id="first_class_callable_syntax">
             <?= message('first_class_callable_syntax_title', $lang) ?>
-            <a class="php8-rfc" href="https://wiki.php.net/rfc/first_class_callable_syntax">RFC</a>
+            <a class="php8-rfc" href="https://wiki.php.net/rfc/first_class_callable_syntax">RFC</a> <a class="php8-rfc" href="/manual/<?= $lang ?>/migration81.new-features.php#migration81.new-features.core.callable-syntax"><?= message('documentation', $lang) ?></a>
         </h2>
         <div class="php8-compare__main">
             <div class="php8-compare__block example-contents">
@@ -223,7 +223,7 @@ PHP
             </div>
         </div>
 
-        <div class="php8-compare__content">
+        <div class="php8-compare__content php8-compare__content--spaced">
             <?= message('new_in_initializers_content', $lang) ?>
         </div>
         <div class="php8-compare__main">
@@ -422,7 +422,7 @@ PHP
     <div class="php8-compare">
         <h2 class="php8-h2" id="explicit_octal_numeral_notation">
             <?= message('octal_numeral_notation_title', $lang) ?>
-            <a class="php8-rfc" href="https://wiki.php.net/rfc/explicit_octal_notation">RFC</a>
+            <a class="php8-rfc" href="https://wiki.php.net/rfc/explicit_octal_notation">RFC</a> <a class="php8-rfc" href="/manual/<?= $lang ?>/migration81.new-features.php#migration81.new-features.core.octal-literal-prefix"><?= message('documentation', $lang) ?></a>
         </h2>
         <div class="php8-compare__main">
             <div class="php8-compare__block example-contents">
