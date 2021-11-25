@@ -570,12 +570,20 @@ PHP
     </div>
 
     <div class="php8-column">
-        <h2 class="php8-h2" id="deprecations_and_bc_breaks"><?= message('bc_title', $lang) ?></h2>
+        <h2 class="php8-h2" id="other_new_things"><?= message('other_new_title', $lang) ?></h2>
+        <div class="php8-compare__content">
+            <ul>
+                <li><?= message('other_new_returntypewillchange', $lang) ?></li>
+                <li><?= message('other_new_fsync_fdatasync', $lang) ?></li>
+                <li><?= message('other_new_array_is_list', $lang) ?></li>
+                <li><?= message('other_new_sodium_xchacha20', $lang) ?></li>
+            </ul>
+        </div>
+        <h2 class="php8-h2 php8-h2_margin-top" id="deprecations_and_bc_breaks"><?= message('bc_title', $lang) ?></h2>
         <div class="php8-compare__content">
             <ul>
                 <li><?= message('bc_null_to_not_nullable', $lang) ?></li>
                 <li><?= message('bc_return_types', $lang) ?></li>
-                <li><?= message('bc_returntypewillchange', $lang) ?></li>
                 <li><?= message('bc_serializable_deprecated', $lang) ?></li>
                 <li><?= message('bc_html_entity_encode_decode', $lang) ?></li>
                 <li><?= message('bc_globals_restrictions', $lang) ?></li>
@@ -588,9 +596,6 @@ PHP
                 <li><?= message('bc_ldap_objects', $lang) ?></li>
                 <li><?= message('bc_postgresql_objects', $lang) ?></li>
                 <li><?= message('bc_pspell_objects', $lang) ?></li>
-                <li><?= message('bc_fsync_fdatasync', $lang) ?></li>
-                <li><?= message('bc_array_is_list', $lang) ?></li>
-                <li><?= message('bc_sodium_xchacha20', $lang) ?></li>
             </ul>
         </div>
     </div>

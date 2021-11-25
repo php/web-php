@@ -62,10 +62,15 @@ return [
         <code>strtr()</code>, <code>strnatcmp()</code>, <code>dechex()</code>).',
     'performance_jit' => 'Улучшения и исправления JIT.',
 
+    'other_new_title' => 'Новые классы, интерфейсы и функции',
+    'other_new_returntypewillchange' => 'Добавлен новый атрибут <code>#[ReturnTypeWillChange]</code>.',
+    'other_new_fsync_fdatasync' => 'Добавлены функции <code>fsync</code> и <code>fdatasync</code>.',
+    'other_new_array_is_list' => 'Добавлена новая функция <code>array_is_list</code>.',
+    'other_new_sodium_xchacha20' => 'Новые функции Sodium XChaCha20.',
+
     'bc_title' => 'Устаревшая функциональность и изменения в обратной совместимости',
     'bc_null_to_not_nullable' => 'Передача значения <code>NULL</code> параметрам встроенных функций, не допускающим значение <code>NULL</code>, объявлена устаревшей.',
     'bc_return_types' => 'Предварительные типы возвращаемых значений во встроенных методах классов PHP',
-    'bc_returntypewillchange' => 'Добавлен новый атрибут <code>#[ReturnTypeWillChange]</code>.',
     'bc_serializable_deprecated' => 'Интерфейс <code>Serializable</code> объявлен устаревшим.',
     'bc_html_entity_encode_decode' => 'Функции по кодированию/декодированию HTML-сущностей преобразуют одинарные кавычки и заменяют недопустимые символы на символ замены Юникода.',
     'bc_globals_restrictions' => 'Ограничения использования переменной <code>$GLOBALS</code>.',
@@ -78,9 +83,6 @@ return [
     'bc_ldap_objects' => 'LDAP: ресурсы теперь представлены как объекты <code>LDAP\Connection</code>, <code>LDAP\Result</code> и <code>LDAP\ResultEntry</code>.',
     'bc_postgresql_objects' => 'PostgreSQL: ресурсы теперь представлены как объекты <code>PgSql\Connection</code>, <code>PgSql\Result</code> и <code>PgSql\Lob</code>.',
     'bc_pspell_objects' => 'Pspell: ресурсы <code>pspell</code>, <code>pspell config</code> теперь представлены как объекты <code>PSpell\Dictionary</code>, <code>PSpell\Config</code>.',
-    'bc_fsync_fdatasync' => 'Добавлены функции <code>fsync</code> и <code>fdatasync</code>.',
-    'bc_array_is_list' => 'Добавлена новая функция <code>array_is_list</code>.',
-    'bc_sodium_xchacha20' => 'Новые функции Sodium XChaCha20.',
 
     'footer_title' => 'Выше производительность, лучше синтаксис, надёжнее система типов.',
     'footer_content' => '<p>

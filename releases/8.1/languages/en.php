@@ -56,10 +56,15 @@ return [
     'performance_internal_functions' => 'Some internal functions optimization (get_declared_classes(), explode(), strtr(), strnatcmp(), dechex())',
     'performance_jit' => 'JIT improvements and fixes',
 
+    'other_new_title' => 'New Classes, Interfaces, and Functions',
+    'other_new_returntypewillchange' => 'New <code>#[ReturnTypeWillChange]</code> attribute.',
+    'other_new_fsync_fdatasync' => 'New <code>fsync</code> and <code>fdatasync</code> functions.',
+    'other_new_array_is_list' => 'New <code>array_is_list</code> function.',
+    'other_new_sodium_xchacha20' => 'New Sodium XChaCha20 functions.',
+
     'bc_title' => 'Deprecations and backward compatibility breaks',
     'bc_null_to_not_nullable' => 'Passing null to non-nullable internal function parameters is deprecated.',
     'bc_return_types' => 'Tentative return types in PHP built-in class methods',
-    'bc_returntypewillchange' => 'New <code>#[ReturnTypeWillChange]</code> attribute.',
     'bc_serializable_deprecated' => '<code>Serializable</code> interface deprecated.',
     'bc_html_entity_encode_decode' => 'HTML entity en/decode functions process single quotes and substitute by default.',
     'bc_globals_restrictions' => '<code>$GLOBALS</code> variable restrictions.',
@@ -72,9 +77,6 @@ return [
     'bc_ldap_objects' => 'LDAP: resources migrated to <code>LDAP\Connection</code>, <code>LDAP\Result</code>, and <code>LDAP\ResultEntry</code> objects.',
     'bc_postgresql_objects' => 'PostgreSQL: resources migrated to <code>PgSql\Connection</code>, <code>PgSql\Result</code>, and <code>PgSql\Lob</code> objects.',
     'bc_pspell_objects' => 'Pspell: pspell, pspell config resources migrated to <code>PSpell\Dictionary</code>, <code>PSpell\Config</code> class objects.',
-    'bc_fsync_fdatasync' => 'New <code>fsync</code> and <code>fdatasync</code> functions.',
-    'bc_array_is_list' => 'New <code>array_is_list</code> function.',
-    'bc_sodium_xchacha20' => 'New Sodium XChaCha20 functions.',
 
     'footer_title' => 'Better performance, better syntax, improved type safety.',
     'footer_content' => '<p>
