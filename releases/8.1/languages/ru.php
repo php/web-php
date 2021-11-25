@@ -48,9 +48,9 @@ return [
     'performance_chart' => '<strong>Время запроса демо-приложения Symfony</strong><br>
                 25 последовательных прогонов, 250 запросов (сек)<br>
                 (чем меньше тем лучше)<br>',
-    'performance_results' => 'Результат (относительно PHP 8.0):<br />
-              - Ускорение WordPress на 3.5%<br />
-              - Ускорение демо-приложения Symfony на 23.0%',
+    'performance_results_title' => 'Результат (относительно PHP 8.0):',
+    'performance_results_symfony' => 'Ускорение демо-приложения Symfony на 23.0%',
+    'performance_results_wordpress' => 'Ускорение WordPress на 3.5%',
     'performance_related_functions_title' => 'Функциональность с улучшенной производительностью в PHP 8.1:',
     'performance_jit_arm64' => 'Бэкенд JIT для ARM64 (AArch64).',
     'performance_inheritance_cache' => 'Кеш наследования (избегайте повторного связывания классов в каждом запросе).',

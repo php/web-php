@@ -550,9 +550,11 @@ PHP
                     <img src="/images/php8/php81_performance.svg" alt="">
                 </div>
             </div>
-            <div class="php8-chart__results">
-                <?= message('performance_results', $lang) ?>
-            </div>
+            <h3 class="php8-h3"><?= message('performance_results_title', $lang) ?></h3>
+            <ul>
+                <li><?= message('performance_results_symfony', $lang) ?></li>
+                <li><?= message('performance_results_wordpress', $lang) ?></li>
+            </ul>
             <h3 class="php8-h3"><?= message('performance_related_functions_title', $lang) ?></h3>
             <ul>
                 <li><?= message('performance_jit_arm64', $lang) ?></li>
