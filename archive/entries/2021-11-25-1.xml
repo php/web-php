@@ -3,14 +3,14 @@
   <title>PHP 8.1.0 Released!</title>
   <id>https://www.php.net/archive/2021.php#2021-11-25-1</id>
   <published>2021-11-25T17:43:08+01:00</published>
-  <updated>2021-11-25T17:43:08+01:00</updated>
+  <updated>2021-11-25T18:32:33+00:00</updated>
   <link href="https://www.php.net/index.php#id2021-11-25-1" rel="alternate" type="text/html"/>
   <link href="https://www.php.net/archive/2021.php#2021-11-25-1" rel="via" type="text/html"/>
   <category term="releases" label="New PHP release"/>
   <category term="frontpage" label="PHP.net frontpage news"/>
   <content type="xhtml">
     <div xmlns="http://www.w3.org/1999/xhtml">
-<p>The PHP development team announces the immediate availability of PHP 8.1.0. This release marks the latest major release of the PHP language.</p>
+<p>The PHP development team announces the immediate availability of PHP 8.1.0. This release marks the latest minor release of the PHP language.</p>
 
 <p>PHP 8.1 comes with numerous improvements and new features such as:</p>
 
