@@ -44,8 +44,8 @@ return [
                 25 consecutive runs, 250 requests (sec)<br>
                 (less is better)<br>',
     'performance_results' => 'The result (relative to PHP 8.0):<br />
-              - 3.5 % WordPress speedup<br />
-              - 27.0% Symfony Demo speedup',
+              - 3.5% WordPress speedup<br />
+              - 23.0% Symfony Demo speedup',
     'performance_related_functions_title' => 'Performance related features in PHP 8.1:',
     'performance_jit_arm64' => 'JIT backend for ARM64 (AArch64)',
     'performance_inheritance_cache' => 'Inheritance cache (avoid relinking classes in each request)',
