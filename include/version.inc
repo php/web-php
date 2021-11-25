@@ -18,6 +18,18 @@
 $RELEASES = (function() {
     $data = [];
 
+    /* PHP 8.1 Release */
+    $data['8.1'] = [
+        'version' => '8.1.0',
+        'date'    => '25 Nov 2021',
+        'tags'    => [], // Set to ['security'] for security releases.
+        'sha256' => [
+            'tar.gz'  => '848705043ea4a6e022246ae12a1bff6afcf5c73ea98c6ac4d2108d6028c5c125',
+            'tar.bz2' => '0725ed2baea125496a898455d501a77460218b2a0cfad773fa9322f491b82b61',
+            'tar.xz'  => 'a1317eff0723a2b3d3122bbfe107a1158570ea2822dc35a5fb360086db0f6bbc',
+        ]
+    ];
+
     /* PHP 8.0 Release */
     $data['8.0'] = [
         'version' => '8.0.13',
