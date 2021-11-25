@@ -72,7 +72,7 @@ enum Status
     case Published;
     case Archived;
 }
-acceptStatus(Status $status) {...}
+function acceptStatus(Status $status) {...}
 PHP
 
                     );?>
