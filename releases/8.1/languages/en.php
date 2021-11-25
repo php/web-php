@@ -1,9 +1,9 @@
 <?php
 
 return [
-    'common_header' => 'PHP 8.1 is a major update of the PHP language. enums, readonly properties, first-class callable syntax, fibers, intersection types, performance improvements and more.',
+    'common_header' => 'PHP 8.1 is a major update of the PHP language. Enums, readonly properties, first-class callable syntax, fibers, intersection types, performance improvements and more.',
     'main_title' => 'Released!',
-    'main_subtitle' => 'PHP 8.1 is a major update of the PHP language.<br class="display-none-md"> It contains many new features and optimizations including enums, readonly&nbsp;properties, first-class&nbsp;callable&nbsp;syntax, fibers, intersection&nbsp;types, performance improvements and more.',
+    'main_subtitle' => 'PHP 8.1 is a major update of the PHP language.<br class="display-none-md"> It contains many new features, including enums, readonly&nbsp;properties, first-class&nbsp;callable&nbsp;syntax, fibers, intersection&nbsp;types, performance improvements and more.',
     'upgrade_now' => 'Upgrade to PHP 8.1 now!',
     'documentation' => 'Doc',
 
@@ -21,7 +21,7 @@ return [
             <p>This effectively makes it possible to use <strong>nested attributes</strong>.</p>',
 
     'pure_intersection_types_title' => 'Pure Intersection Types',
-    'pure_intersection_types_content' => '<p>Use intersection types on any type declarations when you need to require a value to satisfy multiple type constraints at the same time.</p>
+    'pure_intersection_types_content' => '<p>Use intersection types when you need to require a value to satisfy multiple type constraints at the same time.</p>
             <p>It is not currently possible to mix intersection and union types together such as <code>A&B|C</code>.</p>',
 
     'never_return_type_title' => 'Never return type',
@@ -58,14 +58,14 @@ return [
 
     'bc_title' => 'Deprecations and backward compatibility breaks',
     'bc_null_to_not_nullable' => 'Passing null to non-nullable internal function parameters is deprecated.',
-    'bc_return_types' => 'Return types in PHP built-in class methods and deprecation notices.',
+    'bc_return_types' => 'Tentative return types in PHP built-in class methods',
     'bc_returntypewillchange' => 'New <code>#[ReturnTypeWillChange]</code> attribute.',
     'bc_serializable_deprecated' => '<code>Serializable</code> interface deprecated.',
     'bc_html_entity_encode_decode' => 'HTML entity en/decode functions process single quotes and substitute by default.',
     'bc_globals_restrictions' => '<code>$GLOBALS</code> variable restrictions.',
     'bc_mysqli_exceptions' => 'MySQLi: Default error mode set to exceptions.',
     'bc_float_to_int_conversion' => 'Implicit incompatible float to int conversion is deprecated.',
-    'bc_finfo_objects' => 'finfo Extension: <code>file_info</code> resource are migrated to existing finfo objects.',
+    'bc_finfo_objects' => 'finfo Extension: <code>file_info</code> resources are migrated to existing finfo objects.',
     'bc_imap_objects' => 'IMAP: imap resources are <code>IMAP\Connection</code> class objects.',
     'bc_ftp_objects' => 'FTP Extension: Connection resources are <code>FTP\Connection</code> class objects.',
     'bc_gd_objects' => 'GD Extension: Font identifiers are <code>GdFont</code> class objects.',
