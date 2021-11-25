@@ -278,9 +278,11 @@ PHP
                 <div class="php8-code phpcode">
                     <?php highlight_php_trimmed(
                         <<<'PHP'
-interface CountableIterator extends Iterator, Countable {}
+function count_and_iterate(Iterator $value) {
+    if (!($value instanceof Countable)) {
+        throw new TypeError('value must be Countable');
+    }
 
-function count_and_iterate(CountableIterator $value) {
     foreach($value as $val) {
         echo $val;
     }
