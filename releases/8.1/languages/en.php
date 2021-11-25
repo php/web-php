@@ -34,7 +34,7 @@ return [
     'octal_numeral_notation_content' => '<p>It is now possible to write octal numbers with the explicit <code>0o</code> prefix.</p>',
 
     'fibers_title' => 'Fibers',
-    'fibers_content' => '<p>Fibers are primitives for implementing lightweight cooperative concurrency. They are a means of creating code blocks that can be paused and resumed. Fibers do not provide asynchronous capabilities per se. Still, they can be used in async frameworks, and packages to simplify API.</p><p>See the example above of how a code with promises could be rewritten when the fibers are available.</p>',
+    'fibers_content' => '<p>Fibers are primitives for implementing lightweight cooperative concurrency. They are a means of creating code blocks that can be paused and resumed like Generators, but from anywhere in the stack. Fibers themselves don\'t magically provide concurrency, there still needs to be an event loop. However, they allow blocking and non-blocking implementations to share the same API.</p><p>Fibers allow getting rid of the boilerplate code previously seen with <code>Promise::then()</code> or Generator based coroutines. Libraries will generally build further abstractions around Fibers, so there\'s no need to interact with them directly.</p>',
 
     'array_unpacking_title' => 'Array unpacking support for string-keyed arrays',
     'array_unpacking_content' => '<p>PHP supported unpacking inside arrays through the spread operator before, but only if the arrays had integer keys. Now it is possible to unpack arrays with string keys too.</p>',
