@@ -44,7 +44,7 @@ common_header(message('common_header', $lang));
         </h2>
         <div class="php8-compare__main">
             <div class="php8-compare__block example-contents">
-                <div class="php8-compare__label">PHP ≤ 8.1</div>
+                <div class="php8-compare__label">PHP &lt; 8.1</div>
                 <div class="php8-code phpcode">
                     <?php highlight_php_trimmed(
                         <<<'PHP'
@@ -91,7 +91,7 @@ PHP
         </h2>
         <div class="php8-compare__main">
             <div class="php8-compare__block example-contents">
-                <div class="php8-compare__label">PHP ≤ 8.1</div>
+                <div class="php8-compare__label">PHP &lt; 8.1</div>
                 <div class="php8-code phpcode">
                     <?php highlight_php_trimmed(
                         <<<'PHP'
@@ -146,7 +146,7 @@ PHP
         </h2>
         <div class="php8-compare__main">
             <div class="php8-compare__block example-contents">
-                <div class="php8-compare__label">PHP ≤ 8.1</div>
+                <div class="php8-compare__label">PHP &lt; 8.1</div>
                 <div class="php8-code phpcode">
                     <?php highlight_php_trimmed(
                         <<<'PHP'
@@ -183,7 +183,7 @@ PHP
         </h2>
         <div class="php8-compare__main">
             <div class="php8-compare__block example-contents">
-                <div class="php8-compare__label">PHP ≤ 8.1</div>
+                <div class="php8-compare__label">PHP &lt; 8.1</div>
                 <div class="php8-code phpcode">
                     <?php highlight_php_trimmed(
                         <<<'PHP'
@@ -228,7 +228,7 @@ PHP
         </div>
         <div class="php8-compare__main">
             <div class="php8-compare__block example-contents">
-                <div class="php8-compare__label">PHP ≤ 8.1</div>
+                <div class="php8-compare__label">PHP &lt; 8.1</div>
                 <div class="php8-code phpcode">
                     <?php highlight_php_trimmed(
                         <<<'PHP'
@@ -274,7 +274,7 @@ PHP
         </h2>
         <div class="php8-compare__main">
             <div class="php8-compare__block example-contents">
-                <div class="php8-compare__label">PHP ≤ 8.1</div>
+                <div class="php8-compare__label">PHP &lt; 8.1</div>
                 <div class="php8-code phpcode">
                     <?php highlight_php_trimmed(
                         <<<'PHP'
@@ -324,7 +324,7 @@ PHP
         </h2>
         <div class="php8-compare__main">
             <div class="php8-compare__block example-contents">
-                <div class="php8-compare__label">PHP ≤ 8.1</div>
+                <div class="php8-compare__label">PHP &lt; 8.1</div>
                 <div class="php8-code phpcode">
                     <?php highlight_php_trimmed(
                         <<<'PHP'
@@ -375,7 +375,7 @@ PHP
         </h2>
         <div class="php8-compare__main">
             <div class="php8-compare__block example-contents">
-                <div class="php8-compare__label">PHP ≤ 8.1</div>
+                <div class="php8-compare__label">PHP &lt; 8.1</div>
                 <div class="php8-code phpcode">
                     <?php highlight_php_trimmed(
                         <<<'PHP'
@@ -426,7 +426,7 @@ PHP
         </h2>
         <div class="php8-compare__main">
             <div class="php8-compare__block example-contents">
-                <div class="php8-compare__label">PHP ≤ 8.1</div>
+                <div class="php8-compare__label">PHP &lt; 8.1</div>
                 <div class="php8-code phpcode">
                     <?php highlight_php_trimmed(
                         <<<'PHP'
@@ -462,7 +462,7 @@ PHP
         </h2>
         <div class="php8-compare__main">
             <div class="php8-compare__block example-contents">
-                <div class="php8-compare__label">PHP ≤ 8.1</div>
+                <div class="php8-compare__label">PHP &lt; 8.1</div>
                 <div class="php8-code phpcode">
                     <?php highlight_php_trimmed(
                         <<<'PHP'
@@ -503,7 +503,7 @@ PHP
         </h2>
         <div class="php8-compare__main">
             <div class="php8-compare__block example-contents">
-                <div class="php8-compare__label">PHP ≤ 8.1</div>
+                <div class="php8-compare__label">PHP &lt; 8.1</div>
                 <div class="php8-code phpcode">
                     <?php highlight_php_trimmed(
                         <<<'PHP'
