@@ -68,9 +68,9 @@ PHP
                         <<<'PHP'
 enum Status
 {
-    case draft;
-    case published;
-    case archived;
+    case Draft;
+    case Published;
+    case Archived;
 }
 acceptStatus(Status $status) {...}
 PHP
