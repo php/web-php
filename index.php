@@ -183,7 +183,7 @@ $SIDEBAR = <<< SIDEBAR_DATA
 $announcements
     <p class='panel'><a href='/cal.php'>User Group Events</a></p>
     <p class='panel'><a href='/thanks.php'>Special Thanks</a></p>
-    <p class='panel social-media'>
+    <div class='panel social-media'>
       <span class='headline'>Social media</span>
       <div class='body'>
         <ul>
@@ -195,7 +195,7 @@ $announcements
           </li>
         </ul>
       </div>
-    </p>
+    </div>
 
 SIDEBAR_DATA;
 
