@@ -6,7 +6,7 @@
 
 return [
     'common_header' => 'PHP 8.1 — большое обновление языка PHP: перечисления, readonly-свойства, callback-функции как объекты первого класса, файберы, пересечение типов, улучшения производительности и многое другое.',
-    'main_title' => 'релизнут!',
+    'main_title' => 'готов!',
     'main_subtitle' => 'PHP 8.1 — большое обновление языка PHP.<br class="display-none-md"> Оно содержит множество новых возможностей, включая перечисления, readonly-свойства, callback-функции как объекты первого класса, файберы, пересечение&nbsp;типов, улучшения производительности и многое другое.',
     'upgrade_now' => 'Переходите на PHP 8.1!',
     'documentation' => 'Документация',
@@ -46,15 +46,15 @@ return [
 
     'performance_title' => 'Улучшения производительности',
     'performance_chart' => '<strong>Время запроса демо-приложения Symfony</strong><br>
-                25 последовательных прогонов, 250 запросов (сек)<br>
+                25 последовательных запусков по 250 запросов (сек)<br>
                 (чем меньше тем лучше)<br>',
     'performance_results_title' => 'Результат (относительно PHP 8.0):',
-    'performance_results_symfony' => 'Ускорение демо-приложения Symfony на 23.0%',
-    'performance_results_wordpress' => 'Ускорение WordPress на 3.5%',
+    'performance_results_symfony' => 'Ускорение демо-приложения Symfony на 23,0%',
+    'performance_results_wordpress' => 'Ускорение WordPress на 3,5%',
     'performance_related_functions_title' => 'Функциональность с улучшенной производительностью в PHP 8.1:',
     'performance_jit_arm64' => 'Бэкенд JIT для ARM64 (AArch64).',
-    'performance_inheritance_cache' => 'Кеш наследования (избегайте повторного связывания классов в каждом запросе).',
-    'performance_fast_class_name_resolution' => 'Быстрое разрешение имени класса (избегайте строчных букв и поиска по хешу).',
+    'performance_inheritance_cache' => 'Кеш наследования (не требуется связывать классы при каждом запросе).',
+    'performance_fast_class_name_resolution' => 'Ускорено разрешение имени класса (исключены преобразование регистра имени и поиск по хешу).',
     'performance_timelib_date_improvements' => 'Улучшения производительности <code>timelib</code> и <code>ext/date</code>.',
     'performance_spl' => 'Улучшения итераторов файловой системы SPL.',
     'performance_serialize_unserialize' => 'Оптимизация функций <code>serialize()</code>/<code>unserialize()</code>.',
@@ -72,17 +72,17 @@ return [
     'bc_null_to_not_nullable' => 'Передача значения <code>NULL</code> параметрам встроенных функций, не допускающим значение <code>NULL</code>, объявлена устаревшей.',
     'bc_return_types' => 'Предварительные типы возвращаемых значений во встроенных методах классов PHP',
     'bc_serializable_deprecated' => 'Интерфейс <code>Serializable</code> объявлен устаревшим.',
-    'bc_html_entity_encode_decode' => 'Функции по кодированию/декодированию HTML-сущностей преобразуют одинарные кавычки и заменяют недопустимые символы на символ замены Юникода.',
-    'bc_globals_restrictions' => 'Ограничения использования переменной <code>$GLOBALS</code>.',
-    'bc_mysqli_exceptions' => 'MySQLi: Режим ошибок по умолчанию установлен на выбрасывание исключения.',
-    'bc_float_to_int_conversion' => 'Неявное несовместимое преобразование числа с плавающей точкой к целому числу объявлено устаревшим.',
-    'bc_finfo_objects' => 'Модуль finfo: ресурсы <code>file_info</code> теперь представлены как объекты <code>finfo</code>.',
-    'bc_imap_objects' => 'IMAP: ресурсы <code>imap</code> теперь представлены как объекты <code>IMAP\Connection</code>.',
-    'bc_ftp_objects' => 'Модуль FTP: ресурсы <code>Connection</code> теперь представлены как объекты <code>FTP\Connection</code>.',
-    'bc_gd_objects' => 'Модуль GD: <code>Font identifiers</code> теперь представлены как объекты <code>GdFont</code>.',
-    'bc_ldap_objects' => 'LDAP: ресурсы теперь представлены как объекты <code>LDAP\Connection</code>, <code>LDAP\Result</code> и <code>LDAP\ResultEntry</code>.',
-    'bc_postgresql_objects' => 'PostgreSQL: ресурсы теперь представлены как объекты <code>PgSql\Connection</code>, <code>PgSql\Result</code> и <code>PgSql\Lob</code>.',
-    'bc_pspell_objects' => 'Pspell: ресурсы <code>pspell</code>, <code>pspell config</code> теперь представлены как объекты <code>PSpell\Dictionary</code>, <code>PSpell\Config</code>.',
+    'bc_html_entity_encode_decode' => 'Функции по кодированию/декодированию HTML-сущностей по умолчанию преобразуют одинарные кавычки и заменяют недопустимые символы на символ замены Юникода.',
+    'bc_globals_restrictions' => 'Ограничены способы использования переменной <code>$GLOBALS</code>.',
+    'bc_mysqli_exceptions' => 'Модуль MySQLi: режим ошибок по умолчанию установлен на выбрасывание исключения.',
+    'bc_float_to_int_conversion' => 'Неявное преобразование числа с плавающей точкой к целому с потерей ненулевой дробной части объявлено устаревшим.',
+    'bc_finfo_objects' => 'Модуль finfo: ресурсы <code>file_info</code> заменены на объекты <code>finfo</code>.',
+    'bc_imap_objects' => 'Модуль IMAP: ресурсы <code>imap</code> заменены на объекты <code>IMAP\Connection</code>.',
+    'bc_ftp_objects' => 'Модуль FTP: ресурсы <code>Connection</code> заменены на объекты <code>FTP\Connection</code>.',
+    'bc_gd_objects' => 'Модуль GD: <code>Font identifiers</code> заменены на объекты <code>GdFont</code>.',
+    'bc_ldap_objects' => 'Модуль LDAP: ресурсы заменены на объекты <code>LDAP\Connection</code>, <code>LDAP\Result</code> и <code>LDAP\ResultEntry</code>.',
+    'bc_postgresql_objects' => 'Модуль PostgreSQL: ресурсы заменены на объекты <code>PgSql\Connection</code>, <code>PgSql\Result</code> и <code>PgSql\Lob</code>.',
+    'bc_pspell_objects' => 'Модуль Pspell: ресурсы <code>pspell</code>, <code>pspell config</code> заменены на объекты <code>PSpell\Dictionary</code>, <code>PSpell\Config</code>.',
 
     'footer_title' => 'Выше производительность, лучше синтаксис, надёжнее система типов.',
     'footer_content' => '<p>
