@@ -167,6 +167,11 @@ if (is_numeric($URI)) {
     mirror_redirect("http://bugs.php.net/bug.php?id=$URI");
 }
 
+// php.net/GH-123 -> php-src GH issue #123
+if (preg_match('/^GH-(\d+)$/', $URI, $matches)) {
+    mirror_redirect("https://github.com/php/php-src/issues/" . $matches[1]);
+}
+
 // ============================================================================
 // Redirect if the entered URI was a PHP page name (except some pages,
 // which we display in the mirror's language or the explicitly specified
