@@ -42,6 +42,7 @@ function language_chooser(string $currentLang): void {
     $LANGUAGES = [
         'en'    => 'English',
         'ru'    => 'Русский',
+        'zh'    => '简体中文',
         'ka'    => 'ქართული'
     ];
 
