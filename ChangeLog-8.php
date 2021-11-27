@@ -37,40 +37,27 @@ changelog_header(8, $MINOR_VERSIONS);
   <li><?php bugfix(81163); ?> (__sleep allowed to return non-array).</li>
   <li><?php bugfix(75474); ?> (function scope static variables are not bound to a unique function).</li>
   <li><?php bugfix(53826); ?> (__callStatic fired in base class through a parent call if the method is private).</li>
+  <li><?php bugfix(81076); ?> (incorrect debug info on Closures with implicit binds).</li>
 </ul></li>
-<li>FPM:
+<li>CLI:
 <ul>
-  <li>Added openmetrics status format.</li>
-  <li>Enable process renaming on macOS.</li>
-  <li>Added pm.max_spawn_rate option to configure max spawn child processes rate.</li>
-  <li><?php bugfix(81513); ?> (Future possibility for heap overflow in FPM zlog).</li>
-  <li><?php bugfix(81026); ?> (PHP-FPM oob R/W in root process leading to privilege escalation) (CVE-2021-21703).</li>
-  <li><?php bugfix(65800); ?> (Events port mechanism).</li>
+  <li><?php bugfix(81496); ?> (Server logs incorrect request method).</li>
 </ul></li>
-<li>Reflection:
+<li>COM:
 <ul>
-  <li>Implement ReflectionFunctionAbstract::getClosureUsedVariables (krakjoe)</li>
-  <li><?php bugfix(81611); ?> (ArgumentCountError when getting default value from ReflectionParameter with new).</li>
-  <li><?php bugfix(81630); ?> (PHP 8.1: ReflectionClass-&gt;getTraitAliases() crashes with Internal error).</li>
-  <li><?php bugfix(81457); ?> (Enum: ReflectionMethod-&gt;getDeclaringClass() return a ReflectionClass).</li>
-  <li><?php bugfix(81474); ?> (Make ReflectionEnum and related class non-final).</li>
-  <li><?php bugfix(80821); ?> (ReflectionProperty::getDefaultValue() returns current value for statics).</li>
-  <li><?php bugfix(80564); ?> (ReflectionProperty::__toString() renders current value, not default value).</li>
-  <li><?php bugfix(80097); ?> (ReflectionAttribute is not a Reflector).</li>
-  <li><?php bugfix(81200); ?> (no way to determine if Closure is static).</li>
+  <li>Dispatch using LANG_NEUTRAL instead of LOCALE_SYSTEM_DEFAULT.</li>
 </ul></li>
-<li>XML:
+<li>Curl:
 <ul>
-  <li><?php bugfix(79971); ?> (special character is breaking the path in xml function). (CVE-2021-21707)</li>
-  <li><?php bugfix(70962); ?> (XML_OPTION_SKIP_WHITE strips embedded whitespace).</li>
+  <li><?php bugfix(81085); ?> (Support CURLOPT_SSLCERT_BLOB for cert strings).</li>
 </ul></li>
 <li>Date:
 <ul>
-  <li>Speed up finding timezone offset information.</li>
   <li><?php bugfix(81458); ?> (Regression Incorrect difference after timezone change).</li>
   <li><?php bugfix(81500); ?> (Interval serialization regression since 7.3.14 / 7.4.2).</li>
   <li><?php bugfix(81504); ?> (Incorrect timezone transition details for POSIX data).</li>
   <li><?php bugfix(80998); ?> (Missing second with inverted interval).</li>
+  <li>Speed up finding timezone offset information.</li>
   <li><?php bugfix(79580); ?> (date_create_from_format misses leap year).</li>
   <li><?php bugfix(80963); ?> (DateTimeZone::getTransitions() truncated).</li>
   <li><?php bugfix(80974); ?> (Wrong diff between 2 dates in different timezones).</li>
@@ -78,7 +65,7 @@ changelog_header(8, $MINOR_VERSIONS);
   <li><?php bugfix(81097); ?> (DateTimeZone silently falls back to UTC when providing an offset with seconds).</li>
   <li><?php bugfix(81106); ?> (Regression in 8.1: add() now truncate -&gt;f).</li>
   <li><?php bugfix(81273); ?> (Date interval calculation not correct).</li>
-  <li><?php bugfix(52480); ?> (Incorrect difference using DateInterval)</li>
+  <li><?php bugfix(52480); ?> (Incorrect difference using DateInterval).</li>
   <li><?php bugfix(62326); ?> (date_diff() function returns false result).</li>
   <li><?php bugfix(64992); ?> (dst not handled past 2038).</li>
   <li><?php bugfix(65003); ?> (Wrong date diff).</li>
@@ -94,7 +81,7 @@ changelog_header(8, $MINOR_VERSIONS);
   <li><?php bugfix(75167); ?> (DateTime::add does only care about backward DST transition, not forward).</li>
   <li><?php bugfix(76032); ?> (DateTime-&gt;diff having issues with leap days for timezones ahead of UTC).</li>
   <li><?php bugfix(76374); ?> (Date difference varies according day time).</li>
-  <li><?php bugfix(77571); ?> (DateTime's diff DateInterval incorrect in timezones from UTC+01:00 to UTC+12:00.</li>
+  <li><?php bugfix(77571); ?> (DateTime's diff DateInterval incorrect in timezones from UTC+01:00 to UTC+12:00).</li>
   <li><?php bugfix(78452); ?> (diff makes wrong in hour for Asia/Tehran).</li>
   <li><?php bugfix(79452); ?> (DateTime::diff() generates months differently between time zones).</li>
   <li><?php bugfix(79698); ?> (timelib mishandles future timestamps (triggered by 'zic -b slim')).</li>
@@ -103,77 +90,9 @@ changelog_header(8, $MINOR_VERSIONS);
   <li><?php bugfix(80664); ?> (DateTime objects behave incorrectly around DST transition).</li>
   <li><?php bugfix(80913); ?> (DateTime(Immutable)::sub around DST yield incorrect time).</li>
 </ul></li>
-<li>GD:
-<ul>
-  <li>Convert resource&lt;gd font&gt; to object \GdFont.</li>
-  <li><?php bugfix(71316); ?> (libpng warning from imagecreatefromstring).</li>
-</ul></li>
-<li>Standard:
-<ul>
-  <li><?php bugfix(81076); ?> (incorrect debug info on Closures with implicit binds).</li>
-  <li><?php bugfix(81441); ?> (gethostbyaddr('::1') returns ip instead of name after calling some other method).</li>
-  <li><?php bugfix(81491); ?> (Incorrectly using libsodium for argon2 hashing).</li>
-  <li><?php bugfix(66588); ?> (SplFileObject::fgetcsv incorrectly returns a row on premature EOF).</li>
-  <li><?php bugfix(81142); ?> (PHP 7.3+ memory leak when unserialize() is used on an associative array).</li>
-  <li><?php bugfix(81111); ?> (Serialization is unexpectedly allowed on anonymous classes with __serialize()).</li>
-  <li><?php bugfix(81137); ?> (hrtime breaks build on OSX before Sierra).</li>
-</ul></li>
 <li>DBA:
 <ul>
   <li><?php bugfix(81588); ?> (TokyoCabinet driver leaks memory).</li>
-</ul></li>
-<li>JSON:
-<ul>
-  <li><?php bugfix(81532); ?> (Change of $depth behaviour in json_encode() on PHP 8.1).</li>
-</ul></li>
-<li>MBString:
-<ul>
-  <li><?php bugfix(76167); ?> (mbstring may use pointer from some previous request).</li>
-  <li><?php bugfix(81390); ?> (mb_detect_encoding() regression).</li>
-</ul></li>
-<li>CLI:
-<ul>
-  <li><?php bugfix(81496); ?> (Server logs incorrect request method).</li>
-</ul></li>
-<li>PCRE:
-<ul>
-  <li><?php bugfix(81424); ?> (PCRE2 10.35 JIT performance regression).</li>
-  <li>Bundled PCRE2 is 10.37.</li>
-</ul></li>
-<li>PgSQL:
-<ul>
-  <li>Convert resource&lt;pgsql link&gt; to object \PgSql\Connection.</li>
-  <li>Convert resource&lt;pgsql result&gt; to object \PgSql\Result.</li>
-  <li>Convert resource&lt;pgsql large object&gt; to object \PgSql\Lob.</li>
-  <li><?php bugfix(81509); ?> (pg_end_copy still expects a resource).</li>
-</ul></li>
-<li>OpenSSL:
-<ul>
-  <li>Bump minimal OpenSSL version to 1.0.2.</li>
-  <li><?php bugfix(81502); ?> ($tag argument of openssl_decrypt() should accept null/empty string).</li>
-</ul></li>
-<li>Streams:
-<ul>
-  <li><?php bugfix(81475); ?> (stream_isatty emits warning with attached stream wrapper).</li>
-</ul></li>
-<li>Zip:
-<ul>
-  <li><?php bugfix(81490); ?> (ZipArchive::extractTo() may leak memory).</li>
-  <li><?php bugfix(77978); ?> (Dirname ending in colon unzips to wrong dir).</li>
-  <li><?php bugfix(81420); ?> (ZipArchive::extractTo extracts outside of destination). (CVE-2021-21706)</li>
-  <li><?php bugfix(80833); ?> (ZipArchive::getStream doesn't use setPassword).</li>
-</ul></li>
-<li>Filter:
-<ul>
-  <li><?php bugfix(61700); ?> (FILTER_FLAG_IPV6/FILTER_FLAG_NO_PRIV|RES_RANGE failing).</li>
-</ul></li>
-<li>SPL:
-<ul>
-  <li><?php bugfix(80663); ?> (Recursive SplFixedArray::setSize() may cause double-free).</li>
-  <li><?php bugfix(81477); ?> (LimitIterator + SplFileObject regression in 8.0.1).</li>
-  <li><?php bugfix(81112); ?> (Special json_encode behavior for SplFixedArray).</li>
-  <li><?php bugfix(80945); ?> ("Notice: Undefined index" on unset() ArrayObject non-existing key).</li>
-  <li><?php bugfix(80724); ?> (FilesystemIterator::FOLLOW_SYMLINKS remove KEY_AS_FILE from bitmask).</li>
 </ul></li>
 <li>DOM:
 <ul>
@@ -183,63 +102,36 @@ changelog_header(8, $MINOR_VERSIONS);
 <ul>
   <li><?php bugfix(79576); ?> ("TYPE *" shows unhelpful message when type is not defined).</li>
 </ul></li>
-<li>Shmop:
+<li>Filter:
 <ul>
-  <li><?php bugfix(81407); ?> (shmop_open won't attach and causes php to crash).</li>
+  <li><?php bugfix(61700); ?> (FILTER_FLAG_IPV6/FILTER_FLAG_NO_PRIV|RES_RANGE failing).</li>
 </ul></li>
-<li>Opcache:
+<li>FPM:
 <ul>
-  <li><?php bugfix(81409); ?> (Incorrect JIT code for ADD with a reference to array).</li>
-  <li><?php bugfix(81255); ?> (Memory leak in PHPUnit with functional JIT)</li>
-  <li><?php bugfix(80959); ?> (infinite loop in building cfg during JIT compilation).</li>
-  <li><?php bugfix(81225); ?> (Wrong result with pow operator with JIT enabled).</li>
-  <li><?php bugfix(81249); ?> (Intermittent property assignment failure with JIT enabled).</li>
-  <li><?php bugfix(81256); ?> (Assertion `zv != ((void *)0)' failed for "preload" with JIT).</li>
-  <li><?php bugfix(81133); ?> (building opcache with phpize fails).</li>
-  <li><?php bugfix(81136); ?> (opcache header not installed).</li>
-</ul></li>
-<li>COM:
-<ul>
-  <li>Dispatch using LANG_NEUTRAL instead of LOCALE_SYSTEM_DEFAULT.</li>
-</ul></li>
-<li>Mbstring:
-<ul>
-  <li><?php bugfix(81349); ?> (mb_detect_encoding misdetcts ASCII in some cases).</li>
-  <li><?php bugfix(81298); ?> (mb_detect_encoding() segfaults when 7bit encoding is specified).</li>
-</ul></li>
-<li>Phar:
-<ul>
-  <li>Use SHA256 by default for signature.</li>
-  <li>Add support for OpenSSL_SHA256 and OpenSSL_SHA512 signature.</li>
-</ul></li>
-<li>SNMP:
-<ul>
-  <li>Implement SHA256 and SHA512 for security protocol.</li>
-</ul></li>
-<li>MySQLnd:
-<ul>
-  <li><?php bugfix(63327); ?> (Crash (Bus Error) in mysqlnd due to wrong alignment).</li>
-</ul></li>
-<li>SimpleXML:
-<ul>
-  <li><?php bugfix(81325); ?> (Segfault in zif_simplexml_import_dom).</li>
-</ul></li>
-<li>Curl:
-<ul>
-  <li><?php bugfix(81085); ?> (Support CURLOPT_SSLCERT_BLOB for cert strings).</li>
-</ul></li>
-<li>phpdbg:
-<ul>
-  <li><?php bugfix(81135); ?> (unknown help topic causes assertion failure).</li>
+  <li><?php bugfix(81513); ?> (Future possibility for heap overflow in FPM zlog).</li>
+  <li><?php bugfix(81026); ?> (PHP-FPM oob R/W in root process leading to privilege escalation) (CVE-2021-21703).</li>
+  <li>Added openmetrics status format.</li>
+  <li>Enable process renaming on macOS.</li>
+  <li>Added pm.max_spawn_rate option to configure max spawn child processes rate.</li>
+  <li><?php bugfix(65800); ?> (Events port mechanism).</li>
 </ul></li>
 <li>FTP:
 <ul>
   <li>Convert resource&lt;ftp&gt; to object \FTP\Connection.</li>
 </ul></li>
+<li>GD:
+<ul>
+  <li><?php bugfix(71316); ?> (libpng warning from imagecreatefromstring).</li>
+  <li>Convert resource&lt;gd font&gt; to object \GdFont.</li>
+</ul></li>
 <li>hash:
 <ul>
   <li><?php implemented(68109); ?> (Add MurmurHash V3).</li>
   <li><?php implemented(73385); ?> (Add xxHash support).</li>
+</ul></li>
+<li>JSON:
+<ul>
+  <li><?php bugfix(81532); ?> (Change of $depth behaviour in json_encode() on PHP 8.1).</li>
 </ul></li>
 <li>LDAP:
 <ul>
@@ -247,29 +139,54 @@ changelog_header(8, $MINOR_VERSIONS);
   <li>Convert resource&lt;ldap result&gt; to object \LDAP\Result.</li>
   <li>Convert resource&lt;ldap result entry&gt; to object \LDAP\ResultEntry.</li>
 </ul></li>
+<li>MBString:
+<ul>
+  <li><?php bugfix(76167); ?> (mbstring may use pointer from some previous request).</li>
+  <li><?php bugfix(81390); ?> (mb_detect_encoding() regression).</li>
+  <li><?php bugfix(81349); ?> (mb_detect_encoding misdetcts ASCII in some cases).</li>
+  <li><?php bugfix(81298); ?> (mb_detect_encoding() segfaults when 7bit encoding is specified).</li>
+</ul></li>
 <li>MySQLi:
 <ul>
   <li><?php bugfix(70372); ?> (Emulate mysqli_fetch_all() for libmysqlclient).</li>
   <li><?php bugfix(80330); ?> (Replace language in APIs and source code/docs).</li>
   <li><?php bugfix(80329); ?> (Add option to specify LOAD DATA LOCAL white list folder (including libmysql)).</li>
 </ul></li>
-<li>OPcache:
+<li>MySQLnd:
 <ul>
+  <li><?php bugfix(63327); ?> (Crash (Bus Error) in mysqlnd due to wrong alignment).</li>
+  <li><?php bugfix(80761); ?> (PDO uses too much memory).</li>
+</ul></li>
+<li>Opcache:
+<ul>
+  <li><?php bugfix(81409); ?> (Incorrect JIT code for ADD with a reference to array).</li>
+  <li><?php bugfix(81255); ?> (Memory leak in PHPUnit with functional JIT).</li>
+  <li><?php bugfix(80959); ?> (infinite loop in building cfg during JIT compilation).</li>
+  <li><?php bugfix(81225); ?> (Wrong result with pow operator with JIT enabled).</li>
+  <li><?php bugfix(81249); ?> (Intermittent property assignment failure with JIT enabled).</li>
+  <li><?php bugfix(81256); ?> (Assertion `zv != ((void *)0)' failed for "preload" with JIT).</li>
+  <li><?php bugfix(81133); ?> (building opcache with phpize fails).</li>
+  <li><?php bugfix(81136); ?> (opcache header not installed).</li>
   <li>Added inheritance cache.</li>
+</ul></li>
+<li>OpenSSL:
+<ul>
+  <li><?php bugfix(81502); ?> ($tag argument of openssl_decrypt() should accept null/empty string).</li>
+  <li>Bump minimal OpenSSL version to 1.0.2.</li>
+</ul></li>
+<li>PCRE:
+<ul>
+  <li><?php bugfix(81424); ?> (PCRE2 10.35 JIT performance regression).</li>
+  <li>Bundled PCRE2 is 10.37.</li>
 </ul></li>
 <li>PDO:
 <ul>
-  <li><?php bugfix(80908); ?> (PDO::lastInsertId() return wrong).</li>
+  <li><?php bugfix(40913); ?> (PDO_MYSQL: PDO::PARAM_LOB does not bind to a stream for fetching a BLOB).</li>
 </ul></li>
 <li>PDO MySQL:
 <ul>
-  <li><?php bugfix(40913); ?> (PDO_MYSQL: PDO::PARAM_LOB does not bind to a stream for fetching a BLOB).</li>
-  <li><?php bugfix(77627); ?> (method_exists on Closure::__invoke inconsistency).</li>
-  <li><?php bugfix(80761); ?> (PDO uses too much memory).</li>
-</ul></li>
-<li>PDO PgSQL:
-<ul>
-  <li><?php bugfix(81343); ?> (pdo_pgsql: Inconsitent boolean conversion after calling closeCursor()).</li>
+  <li><?php bugfix(80908); ?> (PDO::lastInsertId() return wrong).</li>
+  <li><?php bugfix(81037); ?> (PDO discards error message text from prepared statement).</li>
 </ul></li>
 <li>PDO OCI:
 <ul>
@@ -277,12 +194,31 @@ changelog_header(8, $MINOR_VERSIONS);
 </ul></li>
 <li>PDO ODBC:
 <ul>
-  <li><?php bugfix(81037); ?> (PDO discards error message text from prepared statement).</li>
+  <li>Implement PDO_ATTR_SERVER_VERSION and PDO_ATTR_SERVER_INFO for PDO::getAttribute().</li>
+</ul></li>
+<li>PDO PgSQL:
+<ul>
+  <li><?php bugfix(81343); ?> (pdo_pgsql: Inconsitent boolean conversion after calling closeCursor()).</li>
 </ul></li>
 <li>PDO SQLite:
 <ul>
-  <li>Implement PDO_ATTR_SERVER_VERSION and PDO_ATTR_SERVER_INFO for PDO::getAttribute().</li>
   <li><?php bugfix(38334); ?> (Proper data-type support for PDO_SQLITE).</li>
+</ul></li>
+<li>PgSQL:
+<ul>
+  <li><?php bugfix(81509); ?> (pg_end_copy still expects a resource).</li>
+  <li>Convert resource&lt;pgsql link&gt; to object \PgSql\Connection.</li>
+  <li>Convert resource&lt;pgsql result&gt; to object \PgSql\Result.</li>
+  <li>Convert resource&lt;pgsql large object&gt; to object \PgSql\Lob.</li>
+</ul></li>
+<li>Phar:
+<ul>
+  <li>Use SHA256 by default for signature.</li>
+  <li>Add support for OpenSSL_SHA256 and OpenSSL_SHA512 signature.</li>
+</ul></li>
+<li>phpdbg:
+<ul>
+  <li><?php bugfix(81135); ?> (unknown help topic causes assertion failure).</li>
 </ul></li>
 <li>PSpell:
 <ul>
@@ -293,10 +229,68 @@ changelog_header(8, $MINOR_VERSIONS);
 <ul>
   <li><?php bugfix(72998); ?> (invalid read in readline completion).</li>
 </ul></li>
+<li>Reflection:
+<ul>
+  <li><?php bugfix(81611); ?> (ArgumentCountError when getting default value from ReflectionParameter with new).</li>
+  <li><?php bugfix(81630); ?> (PHP 8.1: ReflectionClass-&gt;getTraitAliases() crashes with Internal error).</li>
+  <li><?php bugfix(81457); ?> (Enum: ReflectionMethod-&gt;getDeclaringClass() return a ReflectionClass).</li>
+  <li><?php bugfix(81474); ?> (Make ReflectionEnum and related class non-final).</li>
+  <li><?php bugfix(80821); ?> (ReflectionProperty::getDefaultValue() returns current value for statics).</li>
+  <li><?php bugfix(80564); ?> (ReflectionProperty::__toString() renders current value, not default value).</li>
+  <li><?php bugfix(80097); ?> (ReflectionAttribute is not a Reflector).</li>
+  <li><?php bugfix(81200); ?> (no way to determine if Closure is static).</li>
+  <li>Implement ReflectionFunctionAbstract::getClosureUsedVariables.</li>
+</ul></li>
+<li>Shmop:
+<ul>
+  <li><?php bugfix(81407); ?> (shmop_open won't attach and causes php to crash).</li>
+</ul></li>
+<li>SimpleXML:
+<ul>
+  <li><?php bugfix(81325); ?> (Segfault in zif_simplexml_import_dom).</li>
+</ul></li>
+<li>SNMP:
+<ul>
+  <li>Implement SHA256 and SHA512 for security protocol.</li>
+</ul></li>
 <li>Sodium:
 <ul>
   <li>Added the XChaCha20 stream cipher functions.</li>
   <li>Added the Ristretto255 functions, which are available in libsodium 1.0.18.</li>
+</ul></li>
+<li>SPL:
+<ul>
+  <li><?php bugfix(66588); ?> (SplFileObject::fgetcsv incorrectly returns a row on premature EOF).</li>
+  <li><?php bugfix(80663); ?> (Recursive SplFixedArray::setSize() may cause double-free).</li>
+  <li><?php bugfix(81477); ?> (LimitIterator + SplFileObject regression in 8.0.1).</li>
+  <li><?php bugfix(81112); ?> (Special json_encode behavior for SplFixedArray).</li>
+  <li><?php bugfix(80945); ?> ("Notice: Undefined index" on unset() ArrayObject non-existing key).</li>
+  <li><?php bugfix(80724); ?> (FilesystemIterator::FOLLOW_SYMLINKS remove KEY_AS_FILE from bitmask).</li>
+</ul></li>
+<li>Standard:
+<ul>
+  <li><?php bugfix(81441); ?> (gethostbyaddr('::1') returns ip instead of name after calling some other method).</li>
+  <li><?php bugfix(81491); ?> (Incorrectly using libsodium for argon2 hashing).</li>
+  <li><?php bugfix(81142); ?> (PHP 7.3+ memory leak when unserialize() is used on an associative array).</li>
+  <li><?php bugfix(81111); ?> (Serialization is unexpectedly allowed on anonymous classes with __serialize()).</li>
+  <li><?php bugfix(81137); ?> (hrtime breaks build on OSX before Sierra).</li>
+  <li><?php bugfix(77627); ?> (method_exists on Closure::__invoke inconsistency).</li>
+</ul></li>
+<li>Streams:
+<ul>
+  <li><?php bugfix(81475); ?> (stream_isatty emits warning with attached stream wrapper).</li>
+</ul></li>
+<li>XML:
+<ul>
+  <li><?php bugfix(79971); ?> (special character is breaking the path in xml function) (CVE-2021-21707).</li>
+  <li><?php bugfix(70962); ?> (XML_OPTION_SKIP_WHITE strips embedded whitespace).</li>
+</ul></li>
+<li>Zip:
+<ul>
+  <li><?php bugfix(81490); ?> (ZipArchive::extractTo() may leak memory).</li>
+  <li><?php bugfix(77978); ?> (Dirname ending in colon unzips to wrong dir).</li>
+  <li><?php bugfix(81420); ?> (ZipArchive::extractTo extracts outside of destination) (CVE-2021-21706).</li>
+  <li><?php bugfix(80833); ?> (ZipArchive::getStream doesn't use setPassword).</li>
 </ul></li>
 </ul>
 <!-- }}} --></section>
