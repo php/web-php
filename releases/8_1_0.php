@@ -5,7 +5,7 @@ site_header('PHP 8.1.0 Release Announcement');
 ?>
 <h1>PHP 8.1.0 Release Announcement</h1>
 
-<p>The PHP development team announces the immediate availability of PHP 8.1.0. This release marks the latest major release of the PHP language.</p>
+<p>The PHP development team announces the immediate availability of PHP 8.1.0. This release marks the latest minor release of the PHP language.</p>
 
 <p>PHP 8.1 comes with numerous improvements and new features such as:</p>
 <ul>
