@@ -276,6 +276,10 @@
   margin-bottom: 24px;
 }
 
+.php8-compare__content--block {
+  display: block;
+}
+
 @media (max-width: 810px) {
   .php8-compare__content {
     display: block;

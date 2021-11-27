@@ -571,7 +571,7 @@ PHP
 
     <div class="php8-column">
         <h2 class="php8-h2" id="other_new_things"><?= message('other_new_title', $lang) ?></h2>
-        <div class="php8-compare__content">
+        <div class="php8-compare__content php8-compare__content--block">
             <ul>
                 <li><?= message('other_new_returntypewillchange', $lang) ?></li>
                 <li><?= message('other_new_fsync_fdatasync', $lang) ?></li>
