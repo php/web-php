@@ -41,6 +41,7 @@ META
 function language_chooser(string $currentLang): void {
     $LANGUAGES = [
         'en'    => 'English',
+        'es'    => 'Español',
         'ru'    => 'Русский',
         'zh'    => '简体中文',
         'ka'    => 'ქართული'
