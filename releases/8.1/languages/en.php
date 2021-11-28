@@ -1,9 +1,9 @@
 <?php
 
 return [
-    'common_header' => 'PHP 8.1 is a major update of the PHP language. Enums, readonly properties, first-class callable syntax, fibers, intersection types, performance improvements and more.',
+    'common_header' => 'PHP 8.1 is a minor update of the PHP language. Enums, readonly properties, first-class callable syntax, fibers, intersection types, performance improvements and more.',
     'main_title' => 'Released!',
-    'main_subtitle' => 'PHP 8.1 is a major update of the PHP language.<br class="display-none-md"> It contains many new features, including enums, readonly&nbsp;properties, first-class&nbsp;callable&nbsp;syntax, fibers, intersection&nbsp;types, performance improvements and more.',
+    'main_subtitle' => 'PHP 8.1 is a minor update of the PHP language.<br class="display-none-md"> It contains many new features, including enums, readonly&nbsp;properties, first-class&nbsp;callable&nbsp;syntax, fibers, intersection&nbsp;types, performance improvements and more.',
     'upgrade_now' => 'Upgrade to PHP 8.1 now!',
     'documentation' => 'Doc',
 
