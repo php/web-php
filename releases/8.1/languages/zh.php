@@ -45,19 +45,19 @@ return [
 
 	'performance_title' => '性能改进',
 	'performance_chart' => '<strong>Symfony Demo App 请求时间</strong><br>
-                25 次连续运行, 250 次请求（秒）<br>
-                (越少越好)<br>',
+                25 次连续运行，250 次请求（秒）<br>
+                （越少越好）<br>',
 	'performance_results_title' => '结果（相对于 PHP 8.0）：',
 	'performance_results_symfony' => 'Symfony Demo 有 23.0% 的提升',
 	'performance_results_wordpress' => 'WordPress 有 3.5% 的提升',
 	'performance_related_functions_title' => 'PHP 8.1 中与性能相关的特性：',
-	'performance_jit_arm64' => 'ARM64 的 JIT 后端 (AArch64)',
+	'performance_jit_arm64' => 'ARM64 的 JIT 后端 （AArch64）',
 	'performance_inheritance_cache' => '继承缓存（避免在每个请求中重新链接类）',
 	'performance_fast_class_name_resolution' => '快速解析类名（避免小写和哈希查找）',
 	'performance_timelib_date_improvements' => 'timelib 和 ext/date 性能改进',
 	'performance_spl' => 'SPL 文件系统迭代器改进',
 	'performance_serialize_unserialize' => 'serialize/unserialize 优化',
-	'performance_internal_functions' => '一些内部函数优化（get_declared_classes(), explode(), strtr(), strnatcmp(), dechex()）',
+	'performance_internal_functions' => '一些内部函数优化（get_declared_classes()、explode()、strtr()、strnatcmp() 和 dechex()）',
 	'performance_jit' => 'JIT 的改进和修复',
 
 	'other_new_title' => '新的类、接口和函数',
