@@ -123,6 +123,7 @@ changelog_header(8, $MINOR_VERSIONS);
 <ul>
   <li><?php bugfix(71316); ?> (libpng warning from imagecreatefromstring).</li>
   <li>Convert resource&lt;gd font&gt; to object \GdFont.</li>
+  <li>Added support for Avif images</li>
 </ul></li>
 <li>hash:
 <ul>
