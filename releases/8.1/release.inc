@@ -458,7 +458,7 @@ PHP
     <div class="php8-compare">
         <h2 class="php8-h2" id="fibers">
             <?= message('fibers_title', $lang) ?>
-            <a class="php8-rfc" href="https://wiki.php.net/rfc/fibers">RFC</a>
+            <a class="php8-rfc" href="https://wiki.php.net/rfc/fibers">RFC</a> <a class="php8-rfc" href="/manual/<?= $lang ?>/language.fibers.php"><?= message('documentation', $lang) ?></a>
         </h2>
         <div class="php8-compare__main">
             <div class="php8-compare__block example-contents">
