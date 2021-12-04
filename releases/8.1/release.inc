@@ -87,7 +87,7 @@ PHP
     <div class="php8-compare">
         <h2 class="php8-h2" id="readonly_properties">
             <?= message('readonly_properties_title', $lang) ?>
-            <a class="php8-rfc" href="https://wiki.php.net/rfc/readonly_properties_v2">RFC</a>
+            <a class="php8-rfc" href="https://wiki.php.net/rfc/readonly_properties_v2">RFC</a> <a class="php8-rfc" href="/manual/<?= $lang ?>/language.oop5.properties.php#language.oop5.properties.readonly-properties"><?= message('documentation', $lang) ?></a>
         </h2>
         <div class="php8-compare__main">
             <div class="php8-compare__block example-contents">
@@ -499,7 +499,7 @@ PHP
     <div class="php8-compare">
         <h2 class="php8-h2" id="array_unpacking_support_for_string_keyed_arrays">
             <?= message('array_unpacking_title', $lang) ?>
-            <a class="php8-rfc" href="https://wiki.php.net/rfc/array_unpacking_string_keys">RFC</a>
+            <a class="php8-rfc" href="https://wiki.php.net/rfc/array_unpacking_string_keys">RFC</a> <a class="php8-rfc" href="/manual/<?= $lang ?>/language.types.array.php#language.types.array.unpacking"><?= message('documentation', $lang) ?></a>
         </h2>
         <div class="php8-compare__main">
             <div class="php8-compare__block example-contents">
