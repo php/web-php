@@ -371,7 +371,7 @@ PHP
     <div class="php8-compare">
         <h2 class="php8-h2" id="final_class_constants">
             <?= message('final_class_constants_title', $lang) ?>
-            <a class="php8-rfc" href="https://wiki.php.net/rfc/final_class_const">RFC</a>
+            <a class="php8-rfc" href="https://wiki.php.net/rfc/final_class_const">RFC</a> <a class="php8-rfc" href="/manual/<?= $lang ?>/language.oop5.final.php#language.oop5.final.example.php81"><?= message('documentation', $lang) ?></a>
         </h2>
         <div class="php8-compare__main">
             <div class="php8-compare__block example-contents">
