@@ -6,6 +6,7 @@ include_once __DIR__ . '/include/branches.inc';
 
 // Notes for specific branches can be added here, and will appear in the table.
 $BRANCH_NOTES = array(
+    '7.3' => '<a href="/migration74">A guide is available for migrating from PHP 7.3 to 7.4.</a>',
 	'7.2' => '<a href="/migration73">A guide is available for migrating from PHP 7.2 to 7.3.</a>',
 	'7.1' => '<a href="/migration72">A guide is available for migrating from PHP 7.1 to 7.2.</a>',
 	'7.0' => '<a href="/migration71">A guide is available for migrating from PHP 7.0 to 7.1.</a>',
