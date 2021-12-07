@@ -54,18 +54,6 @@ $RELEASES = (function() {
         ]
     ];
 
-    /* PHP 7.3 Release */
-    $data['7.3'] = [
-        'version' => '7.3.33',
-        'date'    => '18 Nov 2021',
-        'tags'      => ['security'],
-        'sha256'  => [
-            'tar.gz'  => '9a369c32c6f52036b0a890f290327f148a1904ee66aa56e2c9a7546da6525ec8',
-            'tar.bz2' => 'f412487d7d953437e7978a0d7b6ec99bf4a85cf3378014438a8577b89535451a',
-            'tar.xz'  => '166eaccde933381da9516a2b70ad0f447d7cec4b603d07b9a916032b215b90cc',
-        ]
-    ];
-
     $ret = [];
     foreach ($data as $release) {
         $version = $release['version'];
