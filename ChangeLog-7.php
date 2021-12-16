@@ -8,6 +8,39 @@ changelog_header(7, $MINOR_VERSIONS);
 ?>
 <a id="PHP_7_4"></a>
 
+<section class="version" id="7.4.27"><!-- {{{ 7.4.27 -->
+<h3>Version 7.4.27</h3>
+<b><?php release_date('16-Dec-2021'); ?></b>
+<ul><li>Core:
+<ul>
+  <li><?php bugfix(81626); ?> (Error on use static:: in __сallStatic() wrapped to Closure::fromCallable()).</li>
+</ul></li>
+<li>FPM:
+<ul>
+  <li><?php bugfix(81513); ?> (Future possibility for heap overflow in FPM zlog).</li>
+</ul></li>
+<li>GD:
+<ul>
+  <li><?php bugfix(71316); ?> (libpng warning from imagecreatefromstring).</li>
+</ul></li>
+<li>OpenSSL:
+<ul>
+  <li><?php bugfix(75725); ?> (./configure: detecting RAND_egd).</li>
+</ul></li>
+<li>PCRE:
+<ul>
+  <li><?php bugfix(74604); ?> (Out of bounds in php_pcre_replace_impl).</li>
+</ul></li>
+<li>Standard:
+<ul>
+  <li><?php bugfix(81618); ?> (dns_get_record fails on FreeBSD for missing type).</li>
+  <li><?php bugfix(81659); ?> (stream_get_contents() may unnecessarily overallocate).</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
+
+
 <section class="version" id="7.4.26"><!-- {{{ 7.4.26 -->
 <h3>Version 7.4.26</h3>
 <b><?php release_date('18-Nov-2021'); ?></b>
