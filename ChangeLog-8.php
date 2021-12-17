@@ -300,6 +300,50 @@ changelog_header(8, $MINOR_VERSIONS);
 
 <a id="PHP_8_0"></a>
 
+<section class="version" id="8.0.14"><!-- {{{ 8.0.14 -->
+<h3>Version 8.0.14</h3>
+<b><?php release_date('16-Dec-2021'); ?></b>
+<ul><li>Core:
+<ul>
+  <li><?php bugfix(81582); ?> (Stringable not implicitly declared if __toString() came from a trait).</li>
+  <li><?php bugfix(81591); ?> (Fatal Error not properly logged in particular cases).</li>
+  <li><?php bugfix(81626); ?> (Error on use static:: in __сallStatic() wrapped to Closure::fromCallable()).</li>
+  <li><?php bugfix(81631); ?> (::class with dynamic class name may yield wrong line number).</li>
+</ul></li>
+<li>FPM:
+<ul>
+  <li><?php bugfix(81513); ?> (Future possibility for heap overflow in FPM zlog).</li>
+</ul></li>
+<li>GD:
+<ul>
+  <li><?php bugfix(71316); ?> (libpng warning from imagecreatefromstring).</li>
+</ul></li>
+<li>IMAP:
+<ul>
+  <li><?php bugfix(81649); ?> (imap_(un)delete accept sequences, not single numbers).</li>
+</ul></li>
+<li>OpenSSL:
+<ul>
+  <li><?php bugfix(75725); ?> (./configure: detecting RAND_egd).</li>
+</ul></li>
+<li>PCRE:
+<ul>
+  <li><?php bugfix(74604); ?> (Out of bounds in php_pcre_replace_impl).</li>
+</ul></li>
+<li>SPL:
+<ul>
+  <li><?php bugfix(81587); ?> (MultipleIterator Segmentation fault w/ SimpleXMLElement attached).</li>
+</ul></li>
+<li>Standard:
+<ul>
+  <li><?php bugfix(81618); ?> (dns_get_record fails on FreeBSD for missing type).</li>
+  <li><?php bugfix(81659); ?> (stream_get_contents() may unnecessarily overallocate).</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
+
+
 <section class="version" id="8.0.13"><!-- {{{ 8.0.13 -->
 <h3>Version 8.0.13</h3>
 <b><?php release_date('18-Nov-2021'); ?></b>
