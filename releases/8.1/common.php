@@ -46,7 +46,8 @@ function language_chooser(string $currentLang): void {
         'pt_BR' => 'Português do Brasil',
         'ru'    => 'Русский',
         'zh'    => '简体中文',
-        'ka'    => 'ქართული'
+        'ka'    => 'ქართული',
+        'ja'    => '日本語',
     ];
 
     // Print out the form with all the options
