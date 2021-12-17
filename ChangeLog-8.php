@@ -8,6 +8,27 @@ changelog_header(8, $MINOR_VERSIONS);
 ?>
 <a id="PHP_8_1"></a>
 
+<section class="version" id="8.1.1"><!-- {{{ 8.1.1 -->
+<h3>Version 8.1.1</h3>
+<b><?php release_date('02-Dec-2021'); ?></b>
+<ul><li>IMAP:
+<ul>
+  <li><?php bugfix(81649); ?> (imap_(un)delete accept sequences, not single numbers).</li>
+</ul></li>
+<li>PCRE:
+<ul>
+  <li>Update bundled PCRE2 to 10.39.</li>
+  <li><?php bugfix(74604); ?> (Out of bounds in php_pcre_replace_impl).</li>
+</ul></li>
+<li>Standard:
+<ul>
+  <li><?php bugfix(81659); ?> (stream_get_contents() may unnecessarily overallocate).</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
+
+
 <section class="version" id="8.1.0"><!-- {{{ 8.1.0 -->
 <h3>Version 8.1.0</h3>
 <b><?php release_date('25-Nov-2021'); ?></b>
