@@ -41,7 +41,7 @@ return [
     'fibers_content' => '<p>Fibras são primitivos para implementar concorrência cooperativa leve. Elas são meios de criar blocos de código que podem ser pausados e retomados como Geradores, mas de qualquer lugar da pilha de execução. Fibras em si não fornecem concorrência magicamente, um laço de eventos ainda é necessário. No entanto, elas permitem que implementações bloqueantes e não bloqueantes compartilhem a mesma API.</p><p>Fibras permitem livrar-se de código boilerplate visto anteriormente com <code>Promise::then()</code> ou corrotinas baseadas em Geradores. Bibliotecas geralmente constróem abstrações adicionais em torno das Fibras, então não há necessidade de interagir com elas diretamente.</p>',
 
     'array_unpacking_title' => 'Suporte a desempacotamento de array para arrays com chaves string',
-    'array_unpacking_content' => '<p>PHP já suportava o desempacotamento dentro de arrays através do operador de propagação, mas somente se o array tivesse chaves de inteiro. Agora também é possível desempacotar arrays com chaves string.</p>',
+    'array_unpacking_content' => '<p>PHP já suportava o desempacotamento dentro de arrays através do operador de espalhamento, mas somente se o array tivesse chaves de inteiro. Agora também é possível desempacotar arrays com chaves string.</p>',
 
     'performance_title' => 'Melhorias de Performance',
     'performance_chart' => '<strong>Tempo de requisição do App Demo Symfony</strong><br>
