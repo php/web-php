@@ -142,7 +142,7 @@ PHP
     <div class="php8-compare">
         <h2 class="php8-h2" id="first_class_callable_syntax">
             <?= message('first_class_callable_syntax_title', $lang) ?>
-            <a class="php8-rfc" href="https://wiki.php.net/rfc/first_class_callable_syntax">RFC</a> <a class="php8-rfc" href="/manual/<?= $lang ?>/migration81.new-features.php#migration81.new-features.core.callable-syntax"><?= message('documentation', $lang) ?></a>
+            <a class="php8-rfc" href="https://wiki.php.net/rfc/first_class_callable_syntax">RFC</a> <a class="php8-rfc" href="/manual/<?= $lang ?>/functions.first_class_callable_syntax.php"><?= message('documentation', $lang) ?></a>
         </h2>
         <div class="php8-compare__main">
             <div class="php8-compare__block example-contents">
