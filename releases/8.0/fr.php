@@ -159,7 +159,7 @@ class User
   <div class="php8-compare">
     <h2 class="php8-h2" id="union-types">
       Types d'union
-      <a class="php8-rfc" href="https://wiki.php.net/rfc/union_types_v2">RFC</a> <a class="php8-rfc" href="/manual/fr/language.types.declarations.php#language.types.declarations.union">Doc</a>
+      <a class="php8-rfc" href="https://wiki.php.net/rfc/union_types_v2">RFC</a> <a class="php8-rfc" href="/manual/fr/language.types.declarations.php#language.types.declarations.composite.union">Doc</a>
     </h2>
     <div class="php8-compare__main">
       <div class="php8-compare__block example-contents">

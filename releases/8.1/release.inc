@@ -270,7 +270,7 @@ PHP
     <div class="php8-compare">
         <h2 class="php8-h2" id="pure_intersection_types">
             <?= message('pure_intersection_types_title', $lang) ?>
-            <a class="php8-rfc" href="https://wiki.php.net/rfc/pure-intersection-types">RFC</a>
+            <a class="php8-rfc" href="https://wiki.php.net/rfc/pure-intersection-types">RFC</a> <a class="php8-rfc" href="/manual/<?= $lang ?>/language.types.declarations.php#language.types.declarations.composite.intersection"><?= message('documentation', $lang) ?></a>
         </h2>
         <div class="php8-compare__main">
             <div class="php8-compare__block example-contents">
