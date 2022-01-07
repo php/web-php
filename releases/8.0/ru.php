@@ -158,7 +158,7 @@ releases\php80\common_header(
   <div class="php8-compare">
     <h2 class="php8-h2" id="union-types">
       Тип Union
-      <a class="php8-rfc" href="https://wiki.php.net/rfc/union_types_v2">RFC</a> <a class="php8-rfc" href="/manual/ru/language.types.declarations.php#language.types.declarations.union">Документация</a>
+      <a class="php8-rfc" href="https://wiki.php.net/rfc/union_types_v2">RFC</a> <a class="php8-rfc" href="/manual/ru/language.types.declarations.php#language.types.declarations.composite.union">Документация</a>
     </h2>
     <div class="php8-compare__main">
       <div class="php8-compare__block example-contents">
