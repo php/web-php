@@ -17,7 +17,7 @@ site_header("Copyright", array("current" => "footer"));
 
 <p>
  The code, text, PHP logo, and graphical elements on this website
- and the mirror websites (the "Site") are Copyright &copy; 2001-<?php echo date("Y") ?>
+ and the mirror websites (the "Site") are Copyright &copy; 2001&ndash;<?php echo date("Y") ?>
  the <a href="/credits.php">PHP Group</a>. All rights reserved.
 </p>
 

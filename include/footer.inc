@@ -63,7 +63,7 @@
     <div class="container footer-content">
       <div class="row-fluid">
       <ul class="footmenu">
-        <li><a href="/copyright.php">Copyright &copy; 2001-<?php echo date('Y'); ?> The PHP Group</a></li>
+        <li><a href="/copyright.php">Copyright &copy; 2001&ndash;<?php echo date('Y'); ?> The PHP Group</a></li>
         <li><a href="/my.php">My PHP.net</a></li>
         <li><a href="/contact.php">Contact</a></li>
         <li><a href="/sites.php">Other PHP.net sites</a></li>
