@@ -245,6 +245,38 @@ $manual_page_moves = array(
 
     // Refactored
     'regexp.reference'           => 'regexp.introduction',
+
+    // Renamed classes and methods
+    'class.oci-lob'             => 'class.ocilob',
+    'oci-lob.append'            => 'ocilob.append',
+    'oci-lob.close'             => 'ocilob.close',
+    'oci-lob.eof'               => 'ocilob.eof',
+    'oci-lob.erase'             => 'ocilob.erase',
+    'oci-lob.export'            => 'ocilob.export',
+    'oci-lob.flush'             => 'ocilob.flush',
+    'oci-lob.free'              => 'ocilob.free',
+    'oci-lob.getbuffering'      => 'ocilob.getbuffering',
+    'oci-lob.import'            => 'ocilob.import',
+    'oci-lob.load'              => 'ocilob.load',
+    'oci-lob.read'              => 'ocilob.read',
+    'oci-lob.rewind'            => 'ocilob.rewind',
+    'oci-lob.save'              => 'ocilob.save',
+    'oci-lob.seek'              => 'ocilob.seek',
+    'oci-lob.setbuffering'      => 'ocilob.setbuffering',
+    'oci-lob.size'              => 'ocilob.size',
+    'oci-lob.tell'              => 'ocilob.tell',
+    'oci-lob.truncate'          => 'ocilob.truncate',
+    'oci-lob.write'             => 'ocilob.write',
+    'oci-lob.writetemporary'    => 'ocilob.writetemporary',
+    'class.oci-collection'      => 'class.ocicollection',
+    'oci-collection.append'     => 'ocicollection.append',
+    'oci-collection.assign'     => 'ocicollection.assign',
+    'oci-collection.assignelem' => 'ocicollection.assignelem',
+    'oci-collection.free'       => 'ocicollection.free',
+    'oci-collection.getelem'    => 'ocicollection.getelem',
+    'oci-collection.max'        => 'ocicollection.max',
+    'oci-collection.size'       => 'ocicollection.size',
+    'oci-collection.trim'       => 'ocicollection.trim',
 );
 
 if (isset($manual_page_moves[$URI])) {
