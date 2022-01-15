@@ -245,8 +245,18 @@ $manual_page_moves = array(
 
     // Refactored
     'regexp.reference'           => 'regexp.introduction',
+);
 
-    // Renamed classes and methods
+if (isset($manual_page_moves[$URI])) {
+    status_header(301);
+    mirror_redirect("/" . $manual_page_moves[$URI]);
+} elseif (preg_match("!^manual/([^/]+)/([^/]+).php$!", $URI, $match) &&
+          isset($manual_page_moves[$match[2]])) {
+    status_header(301);
+    mirror_redirect("/manual/$match[1]/" . $manual_page_moves[$match[2]] . ".php");
+}
+
+$manual_redirections = array(
     'class.oci-lob'             => 'class.ocilob',
     'oci-lob.append'            => 'ocilob.append',
     'oci-lob.close'             => 'ocilob.close',
@@ -279,13 +289,9 @@ $manual_page_moves = array(
     'oci-collection.trim'       => 'ocicollection.trim',
 );
 
-if (isset($manual_page_moves[$URI])) {
+if (preg_match("!^manual/([^/]+)/([^/]+)$!", $URI, $match) && isset($manual_redirections[$match[2]])) {
     status_header(301);
-    mirror_redirect("/" . $manual_page_moves[$URI]);
-} elseif (preg_match("!^manual/([^/]+)/([^/]+).php$!", $URI, $match) &&
-          isset($manual_page_moves[$match[2]])) {
-    status_header(301);
-    mirror_redirect("/manual/$match[1]/" . $manual_page_moves[$match[2]] . ".php");
+    mirror_redirect("/manual/$match[1]/" . $manual_redirections[$match[2]]);
 }
 
 // ============================================================================
