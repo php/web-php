@@ -321,6 +321,52 @@ changelog_header(8, $MINOR_VERSIONS);
 
 <a id="PHP_8_0"></a>
 
+<section class="version" id="8.0.15"><!-- {{{ 8.0.15 -->
+<h3>Version 8.0.15</h3>
+<b><?php release_date('20-Jan-2022'); ?></b>
+<ul><li>Core:
+<ul>
+  <li><?php bugfix(81656); ?> (GCC-11 silently ignores -R).</li>
+  <li><?php bugfix(81585); ?> (cached_chunks are not counted to real_size on shutdown).</li>
+</ul></li>
+<li>Filter:
+<ul>
+  <li>Fixed FILTER_FLAG_NO_RES_RANGE flag.</li>
+</ul></li>
+<li>Hash:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src',7759); ?> (Incorrect return types for hash() and hash_hmac()).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src',7826); ?> (Inconsistent argument name in hash_hmac_file and hash_file).</li>
+</ul></li>
+<li>MySQLnd:
+<ul>
+  <li>Fixed bug where large bigints may be truncated.</li>
+</ul></li>
+<li>OCI8:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src',7765); ?> (php_oci_cleanup_global_handles segfaults at second call).</li>
+</ul></li>
+<li>OPcache:
+<ul>
+  <li><?php bugfix(81679); ?> (Tracing JIT crashes on reattaching).</li>
+</ul></li>
+<li>PDO_PGSQL:
+<ul>
+  <li>Fixed error message allocation of PDO PgSQL.</li>
+</ul></li>
+<li>Sockets:
+<ul>
+  <li>Avoid void* arithmetic in sockets/multicast.c on NetBSD.</li>
+</ul></li>
+<li>Spl:
+<ul>
+  <li><?php bugfix(75917); ?> (SplFileObject::seek broken with CSV flags).</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
+
+
 <section class="version" id="8.0.14"><!-- {{{ 8.0.14 -->
 <h3>Version 8.0.14</h3>
 <b><?php release_date('16-Dec-2021'); ?></b>
