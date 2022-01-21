@@ -8,6 +8,83 @@ changelog_header(8, $MINOR_VERSIONS);
 ?>
 <a id="PHP_8_1"></a>
 
+<section class="version" id="8.1.2"><!-- {{{ 8.1.2 -->
+<h3>Version 8.1.2</h3>
+<b><?php release_date('20-Jan-2022'); ?></b>
+<ul><li>Core:
+<ul>
+  <li><?php bugfix(81216); ?> (Nullsafe operator leaks dynamic property name).</li>
+  <li><?php bugfix(81684); ?> (Using null coalesce assignment with $GLOBALS["x"] produces opcode error).</li>
+  <li><?php bugfix(81656); ?> (GCC-11 silently ignores -R).</li>
+  <li><?php bugfix(81683); ?> (Misleading "access type ... must be public" error message on final or abstract interface methods).</li>
+  <li><?php bugfix(81585); ?> (cached_chunks are not counted to real_size on shutdown).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src',7757); ?> (Multi-inherited final constant causes fatal error).</li>
+  <li>Fixed zend_fibers.c build with ZEND_FIBER_UCONTEXT.</li>
+  <li>Added riscv64 support for fibers.</li>
+</ul></li>
+<li>Filter:
+<ul>
+  <li>Fixed FILTER_FLAG_NO_RES_RANGE flag.</li>
+</ul></li>
+<li>Hash:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src',7759); ?> (Incorrect return types for hash() and hash_hmac()).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src',7826); ?> (Inconsistent argument name in hash_hmac_file and hash_file).</li>
+</ul></li>
+<li>MBString:
+<ul>
+  <li><?php bugfix(81693); ?> (mb_check_encoding(7bit) segfaults).</li>
+</ul></li>
+<li>MySQLi:
+<ul>
+  <li><?php bugfix(81658); ?> (MYSQL_OPT_LOAD_DATA_LOCAL_DIR not available in MariaDB).</li>
+  <li>Introduced MYSQLI_IS_MARIADB.</li>
+  <li>Fixed bug <?php githubissuel('php/php-src',7746); ?> (mysqli_sql_exception-&gt;getSqlState()).</li>
+</ul></li>
+<li>MySQLnd:
+<ul>
+  <li>Fixed bug where large bigints may be truncated.</li>
+</ul></li>
+<li>OCI8:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src',7765); ?> (php_oci_cleanup_global_handles segfaults at second call).</li>
+</ul></li>
+<li>OPcache:
+<ul>
+  <li><?php bugfix(81679); ?> (Tracing JIT crashes on reattaching).</li>
+</ul></li>
+<li>Readline:
+<ul>
+  <li><?php bugfix(81598); ?> (Cannot input unicode characters in PHP 8 interactive shell).</li>
+</ul></li>
+<li>Reflection:
+<ul>
+  <li><?php bugfix(81681); ?> (ReflectionEnum throwing exceptions).</li>
+</ul></li>
+<li>PDO_PGSQL:
+<ul>
+  <li>Fixed error message allocation of PDO PgSQL.</li>
+</ul></li>
+<li>Sockets:
+<ul>
+  <li>Avoid void* arithmetic in sockets/multicast.c on NetBSD.</li>
+  <li>Fixed ext/sockets build on Haiku.</li>
+</ul></li>
+<li>Spl:
+<ul>
+  <li><?php bugfix(75917); ?> (SplFileObject::seek broken with CSV flags).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src',7809); ?> (Cloning a faked SplFileInfo object may segfault).</li>
+</ul></li>
+<li>Standard:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src',7748); ?> (gethostbyaddr outputs binary string).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src',7815); ?> (php_uname doesn't recognise latest Windows versions).</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
+
+
 <section class="version" id="8.1.1"><!-- {{{ 8.1.1 -->
 <h3>Version 8.1.1</h3>
 <b><?php release_date('02-Dec-2021'); ?></b>
