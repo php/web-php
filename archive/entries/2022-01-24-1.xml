@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom" xmlns:default="http://php.net/ns/news">
+  <title>phpday 2022</title>
+  <id>https://www.php.net/archive/2022.php#2022-01-24-1</id>
+  <published>2022-01-24T16:41:44+01:00</published>
+  <updated>2022-01-24T16:41:44+01:00</updated>
+  <link href="https://www.php.net/conferences/index.php#id2022-01-24-1" rel="alternate" type="text/html"/>
+  <link href="https://2022.phpday.it/" rel="via" type="text/html"/>
+  <default:finalTeaserDate xmlns="http://php.net/ns/news">2022-02-02</default:finalTeaserDate>
+  <category term="cfp" label="Call for Papers"/>
+  <default:newsImage xmlns="http://php.net/ns/news" link="https://2022.phpday.it/" title="phpday 2022: Verona + online - May 19-20">phpday2022.png</default:newsImage>
+  <content type="xhtml">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+           <p>The Italian PHP user group GrUSP is pleased to announce the <b><a href="https://2022.phpday.it/">19th edition</a></b> of <b>phpday</b>, taking place on May 19-20th, 2022. This edition is going to be hybrid: it takes place in Verona (Italy) and will also be accessible online!</p>
+           <p>phpday is one the first historic European conferences dedicated to PHP development, technologies and management.</p>
+           <p>Our <a href="https://cfp.phpday.it/">CFP</a> will be open until Feb 2nd and the speaker line up will be announced soon after.</p>
+           <p>Don't miss the opportunity to take part to this amazing event with international speakers from all over the world</p>
+           <p>Follow us on <a href="https://twitter.com/phpday">Twitter</a> and <a href="http://facebook.com/phpday/">Facebook</a></p>
+    </div>
+  </content>
+</entry>
