@@ -8,6 +8,18 @@ changelog_header(7, $MINOR_VERSIONS);
 ?>
 <a id="PHP_7_4"></a>
 
+<section class="version" id="7.4.28"><!-- {{{ 7.4.28 -->
+<h3>Version 7.4.28</h3>
+<b><?php release_date('17-Feb-2022'); ?></b>
+<ul><li>Filter:
+<ul>
+  <li>Fix #81708: UAF due to php_filter_float() failing for ints (CVE-2021-21708)</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
+
+
 <section class="version" id="7.4.27"><!-- {{{ 7.4.27 -->
 <h3>Version 7.4.27</h3>
 <b><?php release_date('16-Dec-2021'); ?></b>

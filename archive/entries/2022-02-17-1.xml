@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+  <title>PHP 7.4.28 Released!</title>
+  <id>https://www.php.net/archive/2022.php#2022-02-17-1</id>
+  <published>2022-02-17T14:37:30+00:00</published>
+  <updated>2022-02-17T14:37:30+00:00</updated>
+  <link href="https://www.php.net/index.php#id2022-02-17-1" rel="alternate" type="text/html"/>
+  <link href="https://www.php.net/archive/2022.php#2022-02-17-1" rel="via" type="text/html"/>
+  <category term="releases" label="New PHP release"/>
+  <category term="frontpage" label="PHP.net frontpage news"/>
+  <content type="xhtml">
+    <div xmlns="http://www.w3.org/1999/xhtml"><p>The PHP development team announces the immediate availability of PHP 7.4.28. This is a security release.</p>
+
+<p>All PHP 7.4 users are encouraged to upgrade to this version.</p>
+
+<p>For source downloads of PHP 7.4.28 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
+Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
+The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-7.php#7.4.28">ChangeLog</a>.
+</p>    </div>
+  </content>
+</entry>
