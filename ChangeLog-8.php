@@ -8,6 +8,54 @@ changelog_header(8, $MINOR_VERSIONS);
 ?>
 <a id="PHP_8_1"></a>
 
+<section class="version" id="8.1.3"><!-- {{{ 8.1.3 -->
+<h3>Version 8.1.3</h3>
+<b><?php release_date('17-Feb-2022'); ?></b>
+<ul><li>Core:
+<ul>
+  <li><?php bugfix(81430); ?> (Attribute instantiation leaves dangling pointer).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src',7896); ?> (Environment vars may be mangled on Windows).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src',7883); ?> (Segfault when INI file is not readable).</li>
+</ul></li>
+<li>FFI:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src',7867); ?> (FFI::cast() from pointer to array is broken).</li>
+</ul></li>
+<li>Filter:
+<ul>
+  <li>Fix #81708: UAF due to php_filter_float() failing for ints. (CVE-2021-21708)</li>
+</ul></li>
+<li>FPM:
+<ul>
+  <li>Fixed memory leak on invalid port.</li>
+  <li>Fixed bug <?php githubissuel('php/php-src',7842); ?> (Invalid OpenMetrics response format returned by FPM status page.</li>
+</ul></li>
+<li>MBString:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src',7902); ?> (mb_send_mail may delimit headers with LF only).</li>
+</ul></li>
+<li>MySQLnd:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src',7972); ?> (MariaDB version prefix 5.5.5- is not stripped).</li>
+</ul></li>
+<li>pcntl:
+<ul>
+  <li>Fixed pcntl_rfork build for DragonFlyBSD.</li>
+</ul></li>
+<li>Sockets:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src',7978); ?> (sockets extension compilation errors).</li>
+</ul></li>
+<li>Standard:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src',7899); ?> (Regression in unpack for negative int value).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src',7875); ?> (mails are sent even if failure to log throws exception).</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
+
+
 <section class="version" id="8.1.2"><!-- {{{ 8.1.2 -->
 <h3>Version 8.1.2</h3>
 <b><?php release_date('20-Jan-2022'); ?></b>
