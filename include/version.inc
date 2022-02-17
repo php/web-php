@@ -32,13 +32,13 @@ $RELEASES = (function() {
 
     /* PHP 8.0 Release */
     $data['8.0'] = [
-        'version' => '8.0.15',
-        'date'    => '20 Jan 2022',
-        'tags'    => [], // Set to ['security'] for security releases.
+        'version' => '8.0.16',
+        'date'    => '17 Feb 2022',
+        'tags'    => ['security'], // Set to ['security'] for security releases.
         'sha256' => [
-            'tar.gz'  => '47f0be6188b05390bb457eb1968ea19463acada79650afc35ec763348d5c2370',
-            'tar.bz2' => '881171c90aba746d28df768f3d99fa3261999e506415be4c7352078a64fe59dc',
-            'tar.xz'  => '5f33544061d37d805a2a9ce791f081ef08a7155bd7ba2362e69bba2d06b0f8b2',
+            'tar.gz'  => 'ce0ea32ff9c5af18cfb70197b40caf55824400dc8d5b4258a783ec9168baa5b1',
+            'tar.bz2' => 'f49f8181ee29463a0d23a0c65969e92d58fee8ac564df917cff58e48d65e1849',
+            'tar.xz'  => 'f27a2f25259e8c51e42dfd74e24a546ee521438ad7d9f6c6e794aa91f38bab0a',
         ]
     ];
 
@@ -46,7 +46,7 @@ $RELEASES = (function() {
     $data['7.4'] = [
         'version' => '7.4.28',
         'date'    => '17 Feb 2022',
-        'tags'    => [], // Set to ['security'] for security releases
+        'tags'    => ['security'], // Set to ['security'] for security releases
         'sha256'  => [
             'tar.gz'  => 'a04014cd1646b90547907e2e0ac5371594533960de317b6c7ac70bcb42db92fb',
             'tar.bz2' => '2085086a863444b0e39547de1a4969fd1c40a0c188eb58fab2938b649b0c4b58',
