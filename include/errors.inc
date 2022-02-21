@@ -146,6 +146,7 @@ function is_known_ini (string $ini): ?string {
 	'open-basedir'					=> 'ini.core.php#ini.open-basedir',
 	'disable-functions'				=> 'ini.core.php#ini.disable-functions',
 	'disable-classes'				=> 'ini.core.php#ini.disable-classes',
+	'zend.assertions'				=> 'ini.core.php#ini.zend.assertions',
 	'syntax-highlighting'			=> 'misc.configuration.php#ini.syntax-highlighting',
 	'ignore-user-abort'				=> 'misc.configuration.php#ini.ignore-user-abort',
 	'realpath-cache-size'			=> 'ini.core.php#ini.realpath-cache-size',
