@@ -1574,7 +1574,7 @@ div.soft-deprecation-notice blockquote.sidebar {
         width: 30% !important;
     }
 
-    #layout-content {
+    #layout-content:not(:only-child) {
         width: 70% !important;
     }
 }
