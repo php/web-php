@@ -31,6 +31,10 @@
   text-rendering: optimizeLegibility;
 }
 
+.hero-text strong {
+  font-weight: 500;
+}
+
 .hero-actions {
   width: 100%;
   display: flex;
