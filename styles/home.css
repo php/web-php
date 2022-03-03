@@ -75,12 +75,15 @@
 .hero-versions {
   margin: 0;
   list-style:none;
+  display: flex;
+  flex-direction: column;
   flex-wrap: wrap;
+  align-items: center;
   justify-content: center;
 }
 
 .hero-version {
-  margin-bottom: 8px;
+  margin-bottom: 12px;
 }
 
 .hero-versions a.notes {
@@ -114,13 +117,13 @@
   }
 }
 
-@media (min-width: 768px) {
+@media (min-width: 992px) {
   .hero {
     margin: 60px 0;
   }
 
   .hero-versions {
-    display: flex;
+    flex-direction: row;
   }
 
   .hero-version {
