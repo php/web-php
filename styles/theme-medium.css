@@ -86,14 +86,16 @@ h1.refname {
 .interfacename a,
 .fieldsynopsis .type,
 .methodsynopsis .type,
-.constructorsynopsis .type {
+.constructorsynopsis .type,
+.destructorsynopsis .type {
   color:#693;
 }
 
 .classsynopsisinfo .modifier,
 .fieldsynopsis .modifier,
 .methodsynopsis .modifier,
-.constructorsynopsis .modifier {
+.constructorsynopsis .modifier,
+.destructorsynopsis .modifier {
   color: #936;
 }
 
