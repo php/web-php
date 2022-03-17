@@ -446,6 +446,47 @@ changelog_header(8, $MINOR_VERSIONS);
 
 <a id="PHP_8_0"></a>
 
+<section class="version" id="8.0.17"><!-- {{{ 8.0.17 -->
+<h3>Version 8.0.17</h3>
+<b><?php release_date('17-Mar-2022'); ?></b>
+<ul><li>Core:
+<ul>
+  <li>Fixed Haiku ZTS build.</li>
+</ul></li>
+<li>GD:
+<ul>
+  <li>Fixed libpng warning when loading interlaced images.</li>
+</ul></li>
+<li>FPM:
+<ul>
+  <li><?php bugfix(76109); ?> (Unsafe access to fpm scoreboard).</li>
+</ul></li>
+<li>Iconv:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src',7953); ?> (ob_clean() only does not set Content-Encoding).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src',7980); ?> (Unexpected result for iconv_mime_decode).</li>
+</ul></li>
+<li>MySQLnd:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src',8058); ?> (NULL pointer dereference in mysqlnd package).</li>
+</ul></li>
+<li>OPcache:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src',8074); ?> (Wrong type inference of range() result).</li>
+</ul></li>
+<li>Reflection:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src',8080); ?> (ReflectionClass::getConstants() depends on def. order).</li>
+</ul></li>
+<li>Zlib:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src',7953); ?> (ob_clean() only does not set Content-Encoding).</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
+
+
 <section class="version" id="8.0.16"><!-- {{{ 8.0.16 -->
 <h3>Version 8.0.16</h3>
 <b><?php release_date('17-Feb-2022'); ?></b>

@@ -2,6 +2,43 @@
 $OLDRELEASES = array (
   8 => 
   array (
+    '8.0.16' => 
+    array (
+      'announcement' => 
+      array (
+        'English' => '/releases/8_0_16.php',
+      ),
+      'tags' => 
+      array (
+        0 => 'security',
+      ),
+      'date' => '17 Feb 2022',
+      'source' => 
+      array (
+        0 => 
+        array (
+          'filename' => 'php-8.0.16.tar.gz',
+          'name' => 'PHP 8.0.16 (tar.gz)',
+          'sha256' => 'ce0ea32ff9c5af18cfb70197b40caf55824400dc8d5b4258a783ec9168baa5b1',
+          'date' => '17 Feb 2022',
+        ),
+        1 => 
+        array (
+          'filename' => 'php-8.0.16.tar.bz2',
+          'name' => 'PHP 8.0.16 (tar.bz2)',
+          'sha256' => 'f49f8181ee29463a0d23a0c65969e92d58fee8ac564df917cff58e48d65e1849',
+          'date' => '17 Feb 2022',
+        ),
+        2 => 
+        array (
+          'filename' => 'php-8.0.16.tar.xz',
+          'name' => 'PHP 8.0.16 (tar.xz)',
+          'sha256' => 'f27a2f25259e8c51e42dfd74e24a546ee521438ad7d9f6c6e794aa91f38bab0a',
+          'date' => '17 Feb 2022',
+        ),
+      ),
+      'museum' => false,
+    ),
     '8.1.2' => 
     array (
       'announcement' => 
