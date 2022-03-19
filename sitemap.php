@@ -16,6 +16,7 @@ site_header("Sitemap", array("current" => "help"));
  <li><a href="/ChangeLog-4.php">PHP 4 ChangeLog</a></li>
  <li><a href="/ChangeLog-5.php">PHP 5 ChangeLog</a></li>
  <li><a href="/ChangeLog-7.php">PHP 7 ChangeLog</a></li>
+ <li><a href="/ChangeLog-8.php">PHP 8 ChangeLog</a></li>
 </ul>
 
 <h2>Getting PHP</h2>
