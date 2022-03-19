@@ -256,7 +256,7 @@ class User
 {
     #[\Assert\All(
         new \Assert\NotNull,
-        new \Assert\Length(min: 6))
+        new \Assert\Length(min: 5))
     ]
     public string $name = '';
 }
