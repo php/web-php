@@ -385,7 +385,6 @@ $uri_aliases = array (
     "_"            => "function.gettext",
     "cli"          => "features.commandline",
 
-    "oop4"         => "language.oop",
     "oop"          => "language.oop5",
     "enum"         => "language.enumerations",
     "enums"        => "language.enumerations",
