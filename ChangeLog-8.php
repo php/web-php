@@ -8,6 +8,61 @@ changelog_header(8, $MINOR_VERSIONS);
 ?>
 <a id="PHP_8_1"></a>
 
+<section class="version" id="8.1.5"><!-- {{{ 8.1.5 -->
+<h3>Version 8.1.5</h3>
+<b><?php release_date('14-Apr-2022'); ?></b>
+<ul><li>Core:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src',8176); ?> (Enum values in property initializers leak).</li>
+  <li>Fixed freeing of internal attribute arguments.</li>
+  <li>Fixed bug <?php githubissuel('php/php-src',8070); ?> (memory leak of internal function attribute hash).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src',8160); ?> (ZTS support on Alpine is broken).</li>
+</ul></li>
+<li>Filter:
+<ul>
+  <li>Fixed signedness confusion in php_filter_validate_domain().</li>
+</ul></li>
+<li>Intl:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src',8115); ?> (Can't catch arg type deprecation when instantiating Intl classes).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src',8142); ?> (Compilation error on cygwin).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src',7734); ?> (Fix IntlPartsIterator key off-by-one error and first key).</li>
+</ul></li>
+<li>MBString:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src',8208); ?> (mb_encode_mimeheader: $indent functionality broken).</li>
+</ul></li>
+<li>MySQLi:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src',8068); ?> (mysqli_fetch_object creates inaccessible properties).</li>
+</ul></li>
+<li>Pcntl:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src',8142); ?> (Compilation error on cygwin).</li>
+</ul></li>
+<li>PgSQL:
+<ul>
+  <li>Fixed result_type related stack corruption on LLP64 architectures.</li>
+  <li>Fixed bug <?php githubissuel('php/php-src',8253); ?> (pg_insert() fails for references).</li>
+</ul></li>
+<li>Sockets:
+<ul>
+  <li>Fixed Solaris builds.</li>
+</ul></li>
+<li>SPL:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src',8121); ?> (SplFileObject - seek and key with csv file inconsistent).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src',8192); ?> (Cannot override DirectoryIterator::current() without return typehint in 8.1).</li>
+</ul></li>
+<li>Standard:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src',8048); ?> (Force macOS to use statfs).</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
+
+
 <section class="version" id="8.1.4"><!-- {{{ 8.1.4 -->
 <h3>Version 8.1.4</h3>
 <b><?php release_date('17-Mar-2022'); ?></b>
