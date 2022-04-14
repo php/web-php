@@ -8,6 +8,24 @@ changelog_header(7, $MINOR_VERSIONS);
 ?>
 <a id="PHP_7_4"></a>
 
+<section class="version" id="7.4.29"><!-- {{{ 7.4.29 -->
+<h3>Version 7.4.29</h3>
+<b><?php release_date('14-Apr-2022'); ?></b>
+<ul><li>Core:
+<ul>
+  <li>No source changes to this release. This update allows for re-building the
+  Windows binaries against upgraded dependencies which have received security
+  updates.</li>
+</ul></li>
+<li>Date:
+<ul>
+  <li>Updated to latest IANA timezone database (2022a).</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
+
+
 <section class="version" id="7.4.28"><!-- {{{ 7.4.28 -->
 <h3>Version 7.4.28</h3>
 <b><?php release_date('17-Feb-2022'); ?></b>
