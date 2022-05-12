@@ -548,6 +548,57 @@ changelog_header(8, $MINOR_VERSIONS);
 
 <a id="PHP_8_0"></a>
 
+<section class="version" id="8.0.19"><!-- {{{ 8.0.19 -->
+<h3>Version 8.0.19</h3>
+<b><?php release_date('12-May-2022'); ?></b>
+<ul><li>Core:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src',8289); ?> (Exceptions thrown within a yielded from iterator are not rethrown into the generator).</li>
+</ul></li>
+<li>Date:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src',7979); ?> (DatePeriod iterator advances when checking if valid).</li>
+</ul></li>
+<li>FFI:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src',8433); ?> (Assigning function pointers to structs in FFI leaks).</li>
+</ul></li>
+<li>FPM:
+<ul>
+  <li><?php bugfix(76003); ?> (FPM /status reports wrong number of active processe).</li>
+  <li><?php bugfix(77023); ?> (FPM cannot shutdown processes).</li>
+  <li>Fixed comment in kqueue remove callback log message.</li>
+</ul></li>
+<li>Iconv:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src',8218); ?> (ob_end_clean does not reset Content-Encoding header).</li>
+</ul></li>
+<li>Intl:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src',8364); ?> (msgfmt_format $values may not support references).</li>
+</ul></li>
+<li>MySQLi:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src',8267); ?> (MySQLi uses unsupported format specifier on Windows).</li>
+</ul></li>
+<li>SPL:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src',8366); ?> (ArrayIterator may leak when calling __construct()).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src',8273); ?> (SplFileObject: key() returns wrong value).</li>
+</ul></li>
+<li>Streams:
+<ul>
+  <li>Fixed php://temp does not preserve file-position when switched to temporary file.</li>
+</ul></li>
+<li>zlib:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src',8218); ?> (ob_end_clean does not reset Content-Encoding header).</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
+
+
 <section class="version" id="8.0.18"><!-- {{{ 8.0.18 -->
 <h3>Version 8.0.18</h3>
 <b><?php release_date('14-Apr-2022'); ?></b>
