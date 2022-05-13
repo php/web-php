@@ -8,6 +8,11 @@ if (isset($_GET["serialize"]) || isset($_GET["json"])) {
 
 	$machineReadable = [];
 
+	$supportedVersions = [];
+	foreach (get_active_branches(false) as $major => $releases) {
+		$supportedVersions[$major] = array_keys($releases);
+	}
+
 	if (isset($_GET["version"])) {
 		$versionArray = version_array($_GET["version"]);
 		$ver = $versionArray[0];
@@ -27,6 +32,9 @@ if (isset($_GET["serialize"]) || isset($_GET["json"])) {
 				}
 
 				if (compare_version($versionArray, $version) == 0) {
+					if (!isset($_GET['max'])) {
+						$release['supported_versions'] = $supportedVersions[$ver] ?? [];
+					}
 					$machineReadable[$version] = $release;
 					$count++;
 				}
@@ -47,6 +55,7 @@ if (isset($_GET["serialize"]) || isset($_GET["json"])) {
 			$version = key($release);
 			$r = current($release);
 			$r["version"] = $version;
+			$r['supported_versions'] = $supportedVersions[$major] ?? [];
 			$machineReadable[$major] = $r;
 		}
 	}
