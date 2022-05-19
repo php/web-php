@@ -94,10 +94,10 @@ function gpg_key_get(string $rm): ?string {
 
         case 'ramsey':
             return
-                "pub   rsa4096 2021-04-26 [SC] [expires: 2024-11-26]\n" .
+                "pub   rsa4096 2021-04-26 [SC] [expires: 2025-11-24]\n" .
                 "      39B6 4134 3D8C 104B 2B14  6DC3 F9C3 9DC0 B969 8544\n" .
                 "uid           [ultimate] Ben Ramsey <ramsey@php.net>\n" .
-                "sub   rsa4096 2021-04-26 [E] [expires: 2024-11-26]";
+                "sub   rsa4096 2021-04-26 [E] [expires: 2025-11-24]";
 
         case 'remi':
             return
