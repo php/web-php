@@ -79,6 +79,13 @@ function gpg_key_get(string $rm): ?string {
                 "uid           [ultimate] Peter Kokot <petk@php.net>\n" .
                 "sub   rsa4096 2019-05-29 [E] [expires: 2021-05-28]";
 
+        case 'pierrick':
+            return
+                "pub   rsa4096 2021-04-01 [SC]\n" .
+                "      1198 C011 7593 497A 5EC5  C199 286A F1F9 8974 69DC\n" .
+                "uid           [ultimate] Pierrick Charron <pierrick@php.net>\n" .
+                "sub   rsa4096 2021-04-01 [E]";
+
         case 'pollita':
             return
                 "pub   4096R/70D12172 2017-04-14 [expires: 2024-04-21]\n" .
@@ -119,6 +126,7 @@ function gpg_key_get(string $rm): ?string {
 
 function gpg_key_get_branches(bool $activeOnly): array {
     $branches = [
+        '8.2' => [ 'pierrick', 'ramsey' ],
         '8.1' => [ 'krakjoe', 'ramsey', 'patrickallaert' ],
         '8.0' => [ 'pollita', 'carusogabriel' ],
         '7.4' => [ 'derick', 'petk' ],
