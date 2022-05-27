@@ -360,7 +360,7 @@
 
                         dropdown.append(searchTemplate.render({
                             pattern: pattern,
-                            url: "/search.php?pattern=" + escape(pattern)
+                            url: "/search.php?pattern=" + pattern
                         }));
 
                         /* If the dropdown is hidden (because there are no
