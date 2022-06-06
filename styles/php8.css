@@ -285,6 +285,7 @@
   }
 }
 
+.php8-h2 code,
 .php8-compare__content code {
   color: rgba(39, 40, 44, 0.7);
   background-color: rgba(39, 40, 44, 0.05);
