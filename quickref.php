@@ -112,7 +112,7 @@ site_header("Manual Quick Reference", $head_options+array("current" => "help"));
 
 // Note: $notfound is defined (with htmlspecialchars) inside manual-lookup.php
 $notfound_enc = urlencode($notfound);
-
+$full_site_search_url = "/search.php?show=all&amp;pattern={$notfound_enc}";
 
 if ($snippet = is_known_snippet($notfound)) {
     echo "<h1>Related snippet found for '{$notfound}'</h1>";
@@ -126,14 +126,14 @@ if ($snippet = is_known_snippet($notfound)) {
 <?php if (!empty($notfound) && count($maybe) > 0) { ?>
 
 <p>
- <b><?php echo $notfound; ?></b> doesn't exist. Closest matches:
+    <b><?php echo $notfound; ?></b> function doesn't exist.
 </p>
-
+    <p>Try a <a href="<?php echo $full_site_search_url; ?>">full site search</a> or check closest matches:</p>
 <?php
 quickref_table($maybe, false);
 
 $config = array(
-    "sidebar" => '<p class="panel"><a href="/search.php?show=all&amp;pattern=' . $notfound_enc . '">Full website search</a>',
+    "sidebar" => '<p class="panel"><a href="' . $full_site_search_url . '">Full website search</a>',
 );
 
 site_footer($config);
