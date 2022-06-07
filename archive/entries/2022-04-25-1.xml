@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom" xmlns:default="http://php.net/ns/news">
+  <title>Dutch PHP Conference 2022 - Schedule</title>
+  <id>https://www.php.net/archive/2022.php#2022-04-25-1</id>
+  <published>2022-04-25T10:11:25+00:00</published>
+  <updated>2022-04-25T10:11:25+00:00</updated>
+  <link href="https://www.php.net/conferences/index.php#id2022-04-25-1" rel="alternate" type="text/html"/>
+  <link href="https://www.phpconference.nl/" rel="via" type="text/html"/>
+  <default:finalTeaserDate xmlns="http://php.net/ns/news">2022-06-24</default:finalTeaserDate>
+  <category term="conferences" label="Conference announcement"/>
+  <default:newsImage xmlns="http://php.net/ns/news" link="https://www.phpconference.nl/" title="DPC">DPC-logo.png</default:newsImage>
+  <content type="xhtml">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+     <p>
+       We are thrilled to present the schedule of the Dutch PHP Conference 2022. This conference is a <strong>FREE</strong> Online Edition, full of high-level technical sessions. Last year we welcomed visitors from a whopping 55+ countries! We hope to host another great and globally online edition of DPC this year.
+     </p>
+     <p>
+       <a href="https://www.phpconference.nl/">You can register now</a>!
+     </p>
+     <p>
+       We look forward to virtually meeting you on June 24! Mark those calendars!
+     </p>
+    </div>
+  </content>
+</entry>

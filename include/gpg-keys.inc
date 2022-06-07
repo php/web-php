@@ -79,6 +79,13 @@ function gpg_key_get(string $rm): ?string {
                 "uid           [ultimate] Peter Kokot <petk@php.net>\n" .
                 "sub   rsa4096 2019-05-29 [E] [expires: 2021-05-28]";
 
+        case 'pierrick':
+            return
+                "pub   rsa4096 2021-04-01 [SC]\n" .
+                "      1198 C011 7593 497A 5EC5  C199 286A F1F9 8974 69DC\n" .
+                "uid           [ultimate] Pierrick Charron <pierrick@php.net>\n" .
+                "sub   rsa4096 2021-04-01 [E]";
+
         case 'pollita':
             return
                 "pub   4096R/70D12172 2017-04-14 [expires: 2024-04-21]\n" .
@@ -87,16 +94,25 @@ function gpg_key_get(string $rm): ?string {
 
         case 'ramsey':
             return
-                "pub   rsa4096 2021-04-26 [SC] [expires: 2024-11-26]\n" .
+                "pub   rsa4096 2021-04-26 [SC] [expires: 2025-11-24]\n" .
                 "      39B6 4134 3D8C 104B 2B14  6DC3 F9C3 9DC0 B969 8544\n" .
                 "uid           [ultimate] Ben Ramsey <ramsey@php.net>\n" .
-                "sub   rsa4096 2021-04-26 [E] [expires: 2024-11-26]";
+                "sub   rsa4096 2021-04-26 [E] [expires: 2025-11-24]";
 
         case 'remi':
             return
                 "pub   4096R/EE5AF27F 2017-05-24 [expires: 2024-05-22]\n" .
                 "      Key fingerprint = B1B4 4D8F 021E 4E2D 6021  E995 DC9F F8D3 EE5A F27F\n" .
                 "uid                  Remi Collet <remi@php.net>";
+
+        case 'sergey':
+            return
+                "pub   rsa4096 2021-03-26 [SC] [expires: 2030-03-26]\n" .
+                "      E609 13E4 DF20 9907 D8E3  0D96 659A 97C9 CF2A 795A\n" .
+                "uid           [ultimate] Sergey Panteleev <sergey@php.net>\n".
+                "uid           [ultimate] Sergey Panteleev <sergey@s-panteleev.ru>\n".
+                "uid           [ultimate] Sergey Panteleev <sergey@sergeypanteleev.com>\n".
+                "sub   rsa4096 2021-03-26 [E] [expires: 2025-03-26]";
 
         case 'stas':
             return
@@ -119,6 +135,7 @@ function gpg_key_get(string $rm): ?string {
 
 function gpg_key_get_branches(bool $activeOnly): array {
     $branches = [
+        '8.2' => [ 'pierrick', 'ramsey', 'sergey' ],
         '8.1' => [ 'krakjoe', 'ramsey', 'patrickallaert' ],
         '8.0' => [ 'pollita', 'carusogabriel' ],
         '7.4' => [ 'derick', 'petk' ],

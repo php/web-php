@@ -20,25 +20,25 @@ $RELEASES = (function() {
 
     /* PHP 8.1 Release */
     $data['8.1'] = [
-        'version' => '8.1.4',
-        'date'    => '17 Mar 2022',
+        'version' => '8.1.6',
+        'date'    => '12 May 2022',
         'tags'    => [], // Set to ['security'] for security releases.
         'sha256' => [
-            'tar.gz'  => 'a9951c1c8fd5d2eefde28de0f646c344eb61d751319d220713a6da26f986abde',
-            'tar.bz2' => 'b3f688cb69758523838b8e7f509aaef0152133d9b84a84a0b7cf68eeafc1df76',
-            'tar.xz'  => '05a8c0ac30008154fb38a305560543fc172ba79fb957084a99b8d3b10d5bdb4b',
+            'tar.gz'  => 'e847745fd66fc8c57fac993a609fefcded93fddccd225f0620a26bb5ae5753c3',
+            'tar.bz2' => '7b353304b7407554f70d3e101a226a1fc22decae5c4c42ed270c4e389bfa1b66',
+            'tar.xz'  => 'da38d65bb0d5dd56f711cd478204f2b62a74a2c2b0d2d523a78d6eb865b2364c',
         ]
     ];
 
     /* PHP 8.0 Release */
     $data['8.0'] = [
-        'version' => '8.0.17',
-        'date'    => '17 Mar 2022',
+        'version' => '8.0.19',
+        'date'    => '12 May 2022',
         'tags'    => [], // Set to ['security'] for security releases.
         'sha256' => [
-            'tar.gz'  => 'bdbd792901c156c4d1710c9d266732d3c17f6ff63850d6660b9d8d3411188424',
-            'tar.bz2' => '52811ee2dde71660ca32737a4ac696c24591eb22e846dd8e09ee77122660283f',
-            'tar.xz'  => '4e7d94bb3d144412cb8b2adeb599fb1c6c1d7b357b0d0d0478dc5ef53532ebc5',
+            'tar.gz'  => '48e57634d350bcab4745d25d9d94ffa474649bf4f7e879fad163226c0d107bb5',
+            'tar.bz2' => 'eba0e67fdaf6904b2e4b84e064be0a0d61b2cb64a23f81a0ca9b1a51bc3a8330',
+            'tar.xz'  => 'ba62219c4b0486cbb2a04f0796749a46b0ee1f5a142ed454212b4e2460cb0fab',
         ]
     ];
 
