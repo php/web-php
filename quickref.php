@@ -128,7 +128,7 @@ if ($snippet = is_known_snippet($notfound)) {
 <p>
     <b><?php echo $notfound; ?></b> function doesn't exist.
 </p>
-    <p>Try a <a href="<?php echo $full_site_search_url; ?>">full site search</a> or check closest matches:</p>
+    <p>Try a <a href="<?php echo $full_site_search_url; ?>">full website search</a> or check closest matches:</p>
 <?php
 quickref_table($maybe, false);
 
