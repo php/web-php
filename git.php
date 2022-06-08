@@ -96,20 +96,14 @@ site_header("Git Access", array("current" => "community"));
  <li>
   You can then check out the branch you want to build, for example:
   <br><br>
-  <strong>PHP 7.1</strong>:
-  <code>git checkout PHP-7.1</code>
-  <br>
-  <strong>PHP 7.2</strong>:
-  <code>git checkout PHP-7.2</code>
-  <br>
-  <strong>PHP 7.3</strong>:
-  <code>git checkout PHP-7.3</code>
-  <br>
   <strong>PHP 7.4</strong>:
   <code>git checkout PHP-7.4</code>
   <br>
   <strong>PHP 8.0</strong>:
   <code>git checkout PHP-8.0</code>
+  <br>
+  <strong>PHP 8.1</strong>:
+  <code>git checkout PHP-8.1</code>
   <br>
   <strong>PHP HEAD</strong>:
   <code>git checkout master</code>
