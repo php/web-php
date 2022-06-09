@@ -676,6 +676,60 @@ changelog_header(8, $MINOR_VERSIONS);
 
 <a id="PHP_8_0"></a>
 
+<section class="version" id="8.0.20"><!-- {{{ 8.0.20 -->
+<h3>Version 8.0.20</h3>
+<b><?php release_date('09-Jun-2022'); ?></b>
+<ul><li>CLI:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src',8575); ?> (CLI closes standard streams too early).</li>
+</ul></li>
+<li>Core:
+<ul>
+  <li>Fixed Haiku ZTS builds.</li>
+</ul></li>
+<li>Date:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src',8471); ?> (Segmentation fault when converting immutable and mutable DateTime instances created using reflection).</li>
+</ul></li>
+<li>FPM:
+<ul>
+  <li>Fixed ACL build check on MacOS.</li>
+  <li><?php bugfix(72185); ?>: php-fpm writes empty fcgi record causing nginx 502.</li>
+</ul></li>
+<li>Mysqlnd:
+<ul>
+  <li><?php bugfix(81719); ?>: mysqlnd/pdo password buffer overflow. (CVE-2022-31626)</li>
+</ul></li>
+<li>OPcache:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src',8466); ?> (ini_get() is optimized out when the option does not exist).</li>
+</ul></li>
+<li>Pcntl:
+<ul>
+  <li>Fixed Haiku build.</li>
+</ul></li>
+<li>Pgsql:
+<ul>
+  <li><?php bugfix(81720); ?>: Uninitialized array in pg_query_params(). (CVE-2022-31625)</li>
+</ul></li>
+<li>Soap:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src',8578); ?> (Error on wrong parameter on SoapHeader constructor).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src',8538); ?> (SoapClient may strip parts of nmtokens).</li>
+</ul></li>
+<li>SPL:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src',8235); ?> (iterator_count() may run indefinitely).</li>
+</ul></li>
+<li>Zip:
+<ul>
+  <li>Fixed type for index in ZipArchive::replaceFile.</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
+
+
 <section class="version" id="8.0.19"><!-- {{{ 8.0.19 -->
 <h3>Version 8.0.19</h3>
 <b><?php release_date('12-May-2022'); ?></b>
