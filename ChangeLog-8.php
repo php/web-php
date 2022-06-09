@@ -8,6 +8,69 @@ changelog_header(8, $MINOR_VERSIONS);
 ?>
 <a id="PHP_8_1"></a>
 
+<section class="version" id="8.1.7"><!-- {{{ 8.1.7 -->
+<h3>Version 8.1.7</h3>
+<b><?php release_date('09-Jun-2022'); ?></b>
+<ul><li>CLI:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src',8575); ?> (CLI closes standard streams too early).</li>
+</ul></li>
+<li>Date:
+<ul>
+  <li><?php bugfix(51934); ?> (strtotime plurals / incorrect time).</li>
+  <li><?php bugfix(51987); ?> (Datetime fails to parse an ISO 8601 ordinal date (extended format)).</li>
+  <li><?php bugfix(66019); ?> (DateTime object does not support short ISO 8601 time format - YYYY-MM-DDTHH) (cmb, Derick)</li>
+  <li><?php bugfix(68549); ?> (Timezones and offsets are not properly used when working with dates) (Derick, Roel Harbers)</li>
+  <li><?php bugfix(81565); ?> (date parsing fails when provided with timezones including seconds).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src',7758); ?> (Problems with negative timestamps and fractions).</li>
+</ul></li>
+<li>FPM:
+<ul>
+  <li>Fixed ACL build check on MacOS.</li>
+  <li><?php bugfix(72185); ?>: php-fpm writes empty fcgi record causing nginx 502.</li>
+</ul></li>
+<li>mysqlnd:
+<ul>
+  <li><?php bugfix(81719); ?>: mysqlnd/pdo password buffer overflow. (CVE-2022-31626)</li>
+</ul></li>
+<li>OPcache:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src',8461); ?> (tracing JIT crash after function/method change).</li>
+</ul></li>
+<li>OpenSSL:
+<ul>
+  <li><?php bugfix(79589); ?> (error:14095126:SSL routines:ssl3_read_n:unexpected eof while reading).</li>
+</ul></li>
+<li>Pcntl:
+<ul>
+  <li>Fixed Haiku build.</li>
+</ul></li>
+<li>pgsql:
+<ul>
+  <li><?php bugfix(81720); ?>: Uninitialized array in pg_query_params(). (CVE-2022-31625)</li>
+</ul></li>
+<li>Soap:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src',8578); ?> (Error on wrong parameter on SoapHeader constructor).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src',8538); ?> (SoapClient may strip parts of nmtokens).</li>
+</ul></li>
+<li>SPL:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src',8235); ?> (iterator_count() may run indefinitely).</li>
+</ul></li>
+<li>Standard:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src',8185); ?> (Crash during unloading of extension after dl() in ZTS).</li>
+</ul></li>
+<li>Zip:
+<ul>
+  <li>Fixed type for index in ZipArchive::replaceFile.</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
+
+
 <section class="version" id="8.1.6"><!-- {{{ 8.1.6 -->
 <h3>Version 8.1.6</h3>
 <b><?php release_date('12-May-2022'); ?></b>
