@@ -875,6 +875,43 @@ $OLDRELEASES = array (
   ),
   7 => 
   array (
+    '7.4.29' => 
+    array (
+      'announcement' => 
+      array (
+        'English' => '/releases/7_4_29.php',
+      ),
+      'tags' => 
+      array (
+        0 => 'security',
+      ),
+      'date' => '14 Apr 2022',
+      'source' => 
+      array (
+        0 => 
+        array (
+          'filename' => 'php-7.4.29.tar.gz',
+          'name' => 'PHP 7.4.29 (tar.gz)',
+          'sha256' => 'f73f89873bb9447cb99eb4863cf0a0deab4481cb8acf7552c0e70647e6885854',
+          'date' => '14 Apr 2022',
+        ),
+        1 => 
+        array (
+          'filename' => 'php-7.4.29.tar.bz2',
+          'name' => 'PHP 7.4.29 (tar.bz2)',
+          'sha256' => '7dde58a02b225c25130c6e2ae2cbba7254bb0340f7fe17291478176d866f9482',
+          'date' => '14 Apr 2022',
+        ),
+        2 => 
+        array (
+          'filename' => 'php-7.4.29.tar.xz',
+          'name' => 'PHP 7.4.29 (tar.xz)',
+          'sha256' => '7d0f07869f33311ff3fe1138dc0d6c0d673c37fcb737eaed2c6c10a949f1aed6',
+          'date' => '14 Apr 2022',
+        ),
+      ),
+      'museum' => false,
+    ),
     '7.4.28' => 
     array (
       'announcement' => 

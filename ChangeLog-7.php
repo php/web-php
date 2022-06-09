@@ -8,6 +8,22 @@ changelog_header(7, $MINOR_VERSIONS);
 ?>
 <a id="PHP_7_4"></a>
 
+<section class="version" id="7.4.30"><!-- {{{ 7.4.30 -->
+<h3>Version 7.4.30</h3>
+<b><?php release_date('09-Jun-2022'); ?></b>
+<ul><li>mysqlnd:
+<ul>
+  <li><?php bugfix(81719); ?>: mysqlnd/pdo password buffer overflow. (CVE-2022-31626)</li>
+</ul></li>
+<li>pgsql:
+<ul>
+  <li><?php bugfix(81720); ?>: Uninitialized array in pg_query_params(). (CVE-2022-31625)</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
+
+
 <section class="version" id="7.4.29"><!-- {{{ 7.4.29 -->
 <h3>Version 7.4.29</h3>
 <b><?php release_date('14-Apr-2022'); ?></b>
