@@ -19,8 +19,8 @@ changelog_header(8, $MINOR_VERSIONS);
 <ul>
   <li><?php bugfix(51934); ?> (strtotime plurals / incorrect time).</li>
   <li><?php bugfix(51987); ?> (Datetime fails to parse an ISO 8601 ordinal date (extended format)).</li>
-  <li><?php bugfix(66019); ?> (DateTime object does not support short ISO 8601 time format - YYYY-MM-DDTHH) (cmb, Derick)</li>
-  <li><?php bugfix(68549); ?> (Timezones and offsets are not properly used when working with dates) (Derick, Roel Harbers)</li>
+  <li><?php bugfix(66019); ?> (DateTime object does not support short ISO 8601 time format - YYYY-MM-DDTHH)</li>
+  <li><?php bugfix(68549); ?> (Timezones and offsets are not properly used when working with dates)</li>
   <li><?php bugfix(81565); ?> (date parsing fails when provided with timezones including seconds).</li>
   <li>Fixed bug <?php githubissuel('php/php-src',7758); ?> (Problems with negative timestamps and fractions).</li>
 </ul></li>
@@ -1154,7 +1154,7 @@ changelog_header(8, $MINOR_VERSIONS);
 </ul></li>
 <li>Phar:
 <ul>
-  <li><?php bugfix(81211); ?>: Symlinks are followed when creating PHAR archive (cmb)</li>
+  <li><?php bugfix(81211); ?>: Symlinks are followed when creating PHAR archive</li>
 </ul></li>
 <li>Shmop:
 <ul>
@@ -1501,7 +1501,7 @@ changelog_header(8, $MINOR_VERSIONS);
 </ul></li>
 <li>Phar:
 <ul>
-  <li><?php bugfix(75850); ?> (Unclear error message wrt. __halt_compiler() w/o semicolon) (cmb)</li>
+  <li><?php bugfix(75850); ?> (Unclear error message wrt. __halt_compiler() w/o semicolon)</li>
   <li><?php bugfix(70091); ?> (Phar does not mark UTF-8 filenames in ZIP archives).</li>
   <li><?php bugfix(53467); ?> (Phar cannot compress large archives).</li>
 </ul></li>
