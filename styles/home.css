@@ -42,7 +42,8 @@
 }
 
 .hero-btn {
-  padding: 16px 46px;
+  box-sizing: border-box;
+  padding: 16px 32px;
   margin-bottom: 12px;
   border-radius: 30px;
   text-align: center;
@@ -110,6 +111,10 @@
   .hero-actions {
     flex-direction: row;
     width: auto;
+  }
+
+  .hero-btn {
+    min-width: 188px;
   }
 
   .hero-btn-secondary {
