@@ -120,9 +120,8 @@ $intro .= <<<EOF
 EOF;
 
 // Write out common header
-$meta_image_path = \htmlspecialchars(
-    \filter_var($MYSITE . 'images/meta-image.png', \FILTER_VALIDATE_URL));
-$meta_description = \htmlspecialchars("PHP is a popular general-purpose scripting language that powers everything from your blog to the most popular websites in the world.");
+$meta_image_path = $MYSITE . 'images/meta-image.png';
+$meta_description = "PHP is a popular general-purpose scripting language that powers everything from your blog to the most popular websites in the world.";
 
 site_header("Hypertext Preprocessor",
     array(
