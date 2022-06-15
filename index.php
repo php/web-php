@@ -120,6 +120,9 @@ $intro .= <<<EOF
 EOF;
 
 // Write out common header
+$meta_image_path = $MYSITE . 'images/meta-image.png';
+$meta_description = "PHP is a popular general-purpose scripting language that powers everything from your blog to the most popular websites in the world.";
+
 site_header("Hypertext Preprocessor",
     array(
         'current' => 'home',
@@ -146,7 +149,24 @@ site_header("Hypertext Preprocessor",
 
         ),
         'css' => array('home.css'),
-        'intro' => $intro
+        'intro' => $intro,
+        'meta_tags' => <<<META
+<meta name="Description" content="{$meta_description}" />
+
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:site" content="@official_php" />
+<meta name="twitter:title" content="PHP: Hypertext Preprocessor" />
+<meta name="twitter:description" content="{$meta_description}" />
+<meta name="twitter:creator" content="@official_php" />
+<meta name="twitter:image:src" content="{$meta_image_path}" />
+
+<meta itemprop="name" content="PHP: Hypertext Preprocessor" />
+<meta itemprop="description" content="$meta_description" />
+<meta itemprop="image" content="{$meta_image_path}" />
+
+<meta property="og:image" content="{$meta_image_path}" />
+<meta property="og:description" content="$meta_description" />
+META
     )
 );
 
