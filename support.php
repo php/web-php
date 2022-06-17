@@ -21,9 +21,9 @@ $SIDEBAR_DATA ='
 
 site_header(
     'Getting Help',
-    array(
+    [
         'current' => 'help',
-    )
+    ]
 );
 ?>
 
@@ -107,4 +107,4 @@ site_header(
  questions.
 </p>
 
-<?php site_footer(array('sidebar' => $SIDEBAR_DATA)); ?>
+<?php site_footer(['sidebar' => $SIDEBAR_DATA]); ?>

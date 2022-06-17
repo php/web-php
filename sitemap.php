@@ -1,7 +1,7 @@
 <?php
 $_SERVER['BASE_PAGE'] = 'sitemap.php';
 include_once __DIR__ . '/include/prepend.inc';
-site_header("Sitemap", array("current" => "help"));
+site_header("Sitemap", ["current" => "help"]);
 ?>
 
 <h1>PHP.net Sitemap</h1>

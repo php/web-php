@@ -17,7 +17,7 @@ $master_url = "https://main.php.net/entry/user-notes-vote.php";
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
   if (isset($_SERVER['HTTP_X_JSON']) && $_SERVER['HTTP_X_JSON'] == 'On' && !empty($_REQUEST['id']) && !empty($_REQUEST['page']) && ($N = manual_notes_load($_REQUEST['page'])) && array_key_exists($_REQUEST['id'], $N) && !empty($_REQUEST['vote']) && ($_REQUEST['vote'] === 'up' || $_REQUEST['vote'] === 'down')) {
-    $response = array();
+    $response = [];
     $update = $N[$_REQUEST['id']]['votes']['up'] - $N[$_REQUEST['id']]['votes']['down'];
     $hash = substr(md5($_REQUEST['page']), 0, 16);
     $notes_file = $_SERVER['DOCUMENT_ROOT'] . "/backend/notes/" .
@@ -27,12 +27,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
       $response["msg"] = "Invalid request.";
     }
     else {
-      $data = array(
+      $data = [
           "noteid" => $_REQUEST['id'],
           "sect" => $_REQUEST['page'],
           "vote" => $_REQUEST['vote'],
           "ip" => $_SERVER['REMOTE_ADDR']
-      );
+      ];
       if (($r = posttohost($master_url, $data)) === null || strpos($r,"failed to open socket to") !== false) {
         $response["success"] = false;
         $response["msg"] = "Could not process your request at this time. Please try again later...";
@@ -71,12 +71,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $notes_file = $_SERVER['DOCUMENT_ROOT'] . "/backend/notes/" .
             substr($hash, 0, 2) . "/$hash";
         if (file_exists($notes_file)) {
-          $data = array(
+          $data = [
               "noteid" => $_REQUEST['id'],
               "sect" => $_REQUEST['page'],
               "vote" => $_REQUEST['vote'],
               "ip" => $_SERVER['REMOTE_ADDR'],
-          );
+          ];
           if (($r = posttohost($master_url, $data)) !== null && strpos($r,"failed to open socket to") === false) {
             $r = json_decode($r);
             if (json_last_error() == JSON_ERROR_NONE && isset($r->status) && $r->status && isset($r->votes)) {

@@ -2,11 +2,11 @@
 $_SERVER['BASE_PAGE'] = 'cal.php';
 include_once __DIR__ . '/include/prepend.inc';
 
-$site_header_config = array(
+$site_header_config = [
     "current" => "community",
-    "css" => array('calendar.css'),
+    "css" => ['calendar.css'],
     "layout_span" => 12,
-);
+];
 
 /*
  This script serves three different forms of the calendar data:
@@ -18,7 +18,7 @@ $site_header_config = array(
  a fallback to display the actual month/year.
 */
 
-$begun = FALSE; $errors = array();
+$begun = FALSE; $errors = [];
 $id = isset($_GET['id']) ? (int) $_GET['id'] : 0;
 $cy = isset($_GET['cy']) ? (int) $_GET['cy'] : 0;
 $cm = isset($_GET['cm']) ? (int) $_GET['cm'] : 0;
@@ -56,7 +56,7 @@ elseif ($cy && $cm && $cd) {
 
         // Try to load events for that day, and display them all
         if ($events = load_events($date)) {
-            $site_header_config = array('classes' => 'calendar calendar-day') + $site_header_config;
+            $site_header_config = ['classes' => 'calendar calendar-day'] + $site_header_config;
             site_header("Events: ".date("F j, Y", $date), $site_header_config);
             echo "<h2>", date("F j, Y", $date), "</h2>\n";
             foreach ($events as $event) {
@@ -289,7 +289,7 @@ function load_events($from, $whole_month = FALSE)
     $to_date = date("Y-m-d", $whole_month ? $eom : $from);
 
     // Set arrays to their default
-    $events = $seen = array();
+    $events = $seen = [];
 
     // Try to open the events file for reading, return if unable to
     $fp = @fopen("backend/events.csv",'r');
@@ -363,7 +363,7 @@ function read_event($fp)
     @list($recur, $recur_day) = explode(":", $recur, 2);
 
     // Return with SQL-resultset like array
-    return array(
+    return [
         'id'        => $id,
         'type'      => $tipo,
         'start'     => $sdato,
@@ -375,7 +375,7 @@ function read_event($fp)
         'ldesc'     => base64_decode($ldesc),
         'country'   => $country,
         'category'  => $category,
-    );
+    ];
 }
 
 // We would not like to allow any year to be viewed, because

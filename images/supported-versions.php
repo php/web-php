@@ -12,7 +12,7 @@ $footer_height = 24;
 
 function branches_to_show() {
 	// Basically: show all 5.3+ branches with EOL dates > min_date().
-	$branches = array();
+	$branches = [];
 
 	// Flatten out the majors.
 	foreach (get_all_branches() as $major => $major_branches) {

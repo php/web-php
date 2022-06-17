@@ -1,7 +1,7 @@
 <?php
 $_SERVER['BASE_PAGE'] = 'security-note.php';
 include_once __DIR__ . '/include/prepend.inc';
-site_header("A Note on Security in PHP", array("current" => "docs"));
+site_header("A Note on Security in PHP", ["current" => "docs"]);
 ?>
 
 <h1>A Note on Security in PHP</h1>

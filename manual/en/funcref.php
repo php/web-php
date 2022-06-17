@@ -1,49 +1,49 @@
 <?php
 include_once __DIR__ . '/../../include/shared-manual.inc';
-$TOC = array();
-$PARENTS = array();
+$TOC = [];
+$PARENTS = [];
 include_once __DIR__ ."/toc/index.inc";
-$setup = array (
+$setup =  [
   'home' =>
-  array (
+   [
     0 => 'index.php',
     1 => 'PHP Manual',
-  ),
+  ],
   'head' =>
-  array (
+   [
     0 => 'UTF-8',
     1 => 'en',
-  ),
+  ],
   'this' =>
-  array (
+   [
     0 => 'funcref.php',
     1 => 'Function Reference',
-  ),
+  ],
   'up' =>
-  array (
+   [
     0 => 'index.php',
     1 => 'PHP Manual',
-  ),
+  ],
   'prev' =>
-  array (
+   [
     0 => 'features.dtrace.systemtap.php',
     1 => 'Using SystemTap with PHP DTrace Static Probes',
-  ),
+  ],
   'next' =>
-  array (
+   [
     0 => 'refs.basic.php.php',
     1 => 'Affecting PHP\'s Behaviour',
-  ),
+  ],
   'alternatives' =>
-  array (
-  ),
+   [
+  ],
   'extra_header_links' =>
-  array (
+   [
     'rel' => 'alternate',
     'href' => '/manual/en/feeds/funcref.atom',
     'type' => 'application/atom+xml',
-  ),
-);
+  ],
+];
 $setup["toc"] = $TOC;
 $setup["parents"] = $PARENTS;
 manual_setup($setup);

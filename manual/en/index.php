@@ -1,49 +1,49 @@
 <?php
 include_once __DIR__ . '/../../include/shared-manual.inc';
-$TOC = array();
-$PARENTS = array();
+$TOC = [];
+$PARENTS = [];
 
-$setup = array (
+$setup =  [
   'home' =>
-  array (
+   [
     0 => 'index.php',
     1 => 'PHP Manual',
-  ),
+  ],
   'head' =>
-  array (
+   [
     0 => 'UTF-8',
     1 => 'en',
-  ),
+  ],
   'this' =>
-  array (
+   [
     0 => 'index.php',
     1 => 'PHP Manual',
-  ),
+  ],
   'up' =>
-  array (
+   [
     0 => NULL,
     1 => NULL,
-  ),
+  ],
   'prev' =>
-  array (
+   [
     0 => NULL,
     1 => NULL,
-  ),
+  ],
   'next' =>
-  array (
+   [
     0 => NULL,
     1 => NULL,
-  ),
+  ],
   'alternatives' =>
-  array (
-  ),
+   [
+  ],
   'extra_header_links' =>
-  array (
+   [
     'rel' => 'alternate',
     'href' => '/manual/en/feeds/index.atom',
     'type' => 'application/atom+xml',
-  ),
-);
+  ],
+];
 $setup["toc"] = $TOC;
 $setup["parents"] = $PARENTS;
 manual_setup($setup);

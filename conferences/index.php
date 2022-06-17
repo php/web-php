@@ -5,14 +5,14 @@ include_once __DIR__ . '/../include/pregen-news.inc';
 
 
 mirror_setcookie("LAST_NEWS", $_SERVER["REQUEST_TIME"], 60*60*24*365);
-site_header("PHP Conferences around the world", array(
+site_header("PHP Conferences around the world", [
     'headtags' => '<link rel="alternate" type="application/atom+xml" title="PHP: Conference announcements" href="' . $MYSITE . 'feed.atom">',
     'current'  => 'community',
-    'css' => array('home.css'),
-));
+    'css' => ['home.css'],
+]);
 
 $content = "<div class='home-content'>";
-$frontpage = array();
+$frontpage = [];
 foreach($NEWS_ENTRIES as $entry) {
     foreach($entry["category"] as $category) {
         if ($category["term"] == "cfp") {
@@ -53,9 +53,9 @@ $content .= "</div>";
 echo $content;
 
 site_footer(
-    array(
+    [
         "atom" => "/feed.atom",
         "elephpants" => true,
         "sidebar" => $panels,
-    )
+    ]
 );

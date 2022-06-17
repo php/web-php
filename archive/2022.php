@@ -18,4 +18,4 @@ site_header("News Archive - 2022");
 <?php
 
 print_news($NEWS_ENTRIES, null, 500, 2022);
-site_footer(array('elephpants' => true, 'sidebar' => $SIDEBAR_DATA));
+site_footer(['elephpants' => true, 'sidebar' => $SIDEBAR_DATA]);

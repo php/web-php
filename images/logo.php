@@ -49,7 +49,7 @@ function get_accepted_encodings() {
             return trim($x);
         }, $encodings);
     }
-    return array();
+    return [];
 }
 
 

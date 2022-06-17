@@ -18,11 +18,11 @@ if (!isset($LANGUAGES[$lang])) {
 // HTTP status line is passed on, signifies an error
 site_header(
     'Search results',
-    array(
+    [
         'noindex',
         'current' => 'help',
         'layout_span' => 12,
-    )
+    ]
 );
 
 echo '<h1>Search results</h1>';

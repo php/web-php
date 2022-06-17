@@ -2,7 +2,7 @@
 $_SERVER['BASE_PAGE'] = 'docs.php';
 include_once __DIR__ . '/include/prepend.inc';
 
-site_header("Documentation", array("current" => "docs"));
+site_header("Documentation", ["current" => "docs"]);
 
 ?>
 

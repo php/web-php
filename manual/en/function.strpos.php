@@ -1,43 +1,43 @@
 <?php
 include_once __DIR__ . '/../../include/shared-manual.inc';
-$TOC = array();
-$PARENTS = array();
+$TOC = [];
+$PARENTS = [];
 include_once __DIR__ ."/toc/ref.strings.inc";
-$setup = array (
+$setup =  [
   'home' =>
-  array (
+   [
     0 => 'index.php',
     1 => 'PHP Manual',
-  ),
+  ],
   'head' =>
-  array (
+   [
     0 => 'UTF-8',
     1 => 'en',
-  ),
+  ],
   'this' =>
-  array (
+   [
     0 => 'function.strpos.php',
     1 => 'strpos',
-  ),
+  ],
   'up' =>
-  array (
+   [
     0 => 'ref.strings.php',
     1 => 'String Functions',
-  ),
+  ],
   'prev' =>
-  array (
+   [
     0 => 'function.strpbrk.php',
     1 => 'strpbrk',
-  ),
+  ],
   'next' =>
-  array (
+   [
     0 => 'function.strrchr.php',
     1 => 'strrchr',
-  ),
+  ],
   'alternatives' =>
-  array (
-  ),
-);
+   [
+  ],
+];
 $setup["toc"] = $TOC;
 $setup["parents"] = $PARENTS;
 manual_setup($setup);

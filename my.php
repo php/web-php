@@ -7,7 +7,7 @@ header_nocache();
 
 // Languages array copy and options to list
 $langs   = $ACTIVE_ONLINE_LANGUAGES;
-$options = array();
+$options = [];
 
 // We have post data, and it is an available language
 if (isset($_POST['my_lang']) && isset($langs[$_POST['my_lang']])) {
@@ -60,11 +60,11 @@ if (isset($_POST["showug"])) {
 
 // Prepare mirror array
 $mirror_sites = $MIRRORS;
-$mirror_sites["NONE"] = array(7 => MIRROR_OK);
+$mirror_sites["NONE"] = [7 => MIRROR_OK];
 
 myphpnet_save();
 
-site_header("My PHP.net", array("current" => "community"));
+site_header("My PHP.net", ["current" => "community"]);
 ?>
 
 <form action="/my.php" method="post">
@@ -104,7 +104,7 @@ site_header("My PHP.net", array("current" => "community"));
 <?php
 
 // Data for the language settings table
-$langinfo = array(
+$langinfo = [
 
     "Your preferred language" =>
     $langpref,
@@ -119,7 +119,7 @@ $langinfo = array(
     default_language(),
 
     "Default" => "en"
-);
+];
 
 // Write a row for all settings
 foreach ($langinfo as $lin => $lid) {
