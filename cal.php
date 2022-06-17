@@ -129,7 +129,7 @@ $bom = mktime(0, 0, 1, $cm,   1, $cy);
 $eom = mktime(0, 0, 1, $cm+1, 0, $cy);
 
 // Link to previous month (but do not link to too early dates)
-$prev_link = (function() use ($cm, $cy) {
+$prev_link = (static function() use ($cm, $cy) {
     $lm = mktime(0, 0, 1, $cm, 0, $cy);
     $year = date('Y', $lm);
     if (!valid_year($year)) {
@@ -146,7 +146,7 @@ $prev_link = (function() use ($cm, $cy) {
 })();
 
 // Link to next month (but do not link to too early dates)
-$next_link = (function() use ($cm, $cy) {
+$next_link = (static function() use ($cm, $cy) {
     $nm = mktime(0, 0, 1, $cm+1, 1, $cy);
     $year = date('Y', $nm);
     if (!valid_year($year)) {
