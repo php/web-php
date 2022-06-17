@@ -31,5 +31,3 @@ if ($function) {
 // Fall back to a quick reference search
 $notfound = $function;
 include __DIR__ . '/quickref.php';
-
-?>

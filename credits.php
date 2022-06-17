@@ -26,5 +26,3 @@ if ($credits) {
     echo $credits;
     site_footer();
 }
-
-?>
