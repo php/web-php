@@ -1,6 +1,6 @@
 ## Local development
 
-This is the git repo for the official www.php.net website.
+This is the git repository for the official www.php.net website.
 
 To setup a local mirror of the website:
 
@@ -9,7 +9,7 @@ To setup a local mirror of the website:
 	$ php -S localhost:8080 .router.php
 
 
-This repo includes most (generated) files that are required for normal
+This repository includes most (generated) files that are required for normal
 operation of this website, such as
 
  - News & events data
