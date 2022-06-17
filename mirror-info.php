@@ -44,4 +44,3 @@ echo join('|', array(
     gethostname(),		// 9 : The configured hostname of the local system
     $_SERVER['SERVER_ADDR'],	// 10: The IP address under which we're running
 ));
-
