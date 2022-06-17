@@ -257,7 +257,7 @@ function display_events_for_day($day, $events)
 function load_event($id)
 {
     // Open events CSV file, return on error
-    $fp = @fopen("backend/events.csv",'r');
+    $fp = @fopen("backend/events.csv",'rb');
     if (!$fp) { return FALSE; }
 
     // Read as we can, event by event
@@ -292,7 +292,7 @@ function load_events($from, $whole_month = FALSE)
     $events = $seen = array();
 
     // Try to open the events file for reading, return if unable to
-    $fp = @fopen("backend/events.csv",'r');
+    $fp = @fopen("backend/events.csv",'rb');
     if (!$fp) { return FALSE; }
 
     // For all events, read in the event and check it if fits our scope

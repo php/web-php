@@ -33,7 +33,7 @@ site_header("PHP Security center");
 echo "<h1>PHP Security Center</h1>\n";
 
 $dbfile = $_SERVER['DOCUMENT_ROOT'] . '/security/vulndb.txt';
-$fp = @fopen($dbfile, "rt");
+$fp = @fopen($dbfile, "rb");
 if(is_resource($fp)) {
     $RECORDS = array();
     $record_no = 1;
