@@ -88,9 +88,8 @@ if ($process) {
     // No error was found, and the submit action is required
     if (!$error && strtolower($_POST['action']) != "preview") {
 
-        $redirip = isset($_SERVER['HTTP_X_FORWARDED_FOR']) ?
-                   $_SERVER['HTTP_X_FORWARDED_FOR'] :
-                   (isset($_SERVER['HTTP_VIA']) ? $_SERVER['HTTP_VIA'] : '');
+        $redirip = $_SERVER['HTTP_X_FORWARDED_FOR'] ??
+                   ($_SERVER['HTTP_VIA'] ?? '');
 
         // Post the variables to the central user note script
         $result = posttohost(
