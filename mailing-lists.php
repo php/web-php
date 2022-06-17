@@ -55,7 +55,7 @@ if (isset($_POST['action'])) {
     }
 
     // Check if any mailing list was selected
-    else if (empty($_POST['maillist'])) {
+    elseif (empty($_POST['maillist'])) {
         $error = "You need to select at least one mailing list to subscribe to." .
                  "<br>Please go back and try again.";
     }
