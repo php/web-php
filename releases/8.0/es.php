@@ -1,4 +1,4 @@
-<?php
+<?php declare(strict_types=1);
 $_SERVER['BASE_PAGE'] = 'releases/8.0/es.php';
 include_once __DIR__ . '/common.php';
 

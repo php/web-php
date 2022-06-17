@@ -1,4 +1,5 @@
-<?php // vim: et
+<?php declare(strict_types=1);
+// vim: et
 (function($uri) {
     // Special redirect cases not able to be captured in error.php
     $shortcuts = [

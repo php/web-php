@@ -1,4 +1,4 @@
-<?php
+<?php declare(strict_types=1);
 $_SERVER['BASE_PAGE'] = 'releases/7_0_9.php';
 include_once __DIR__ . '/../include/prepend.inc';
 site_header("PHP 7.0.9 Release Announcement");

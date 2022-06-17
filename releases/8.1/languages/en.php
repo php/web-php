@@ -1,4 +1,4 @@
-<?php
+<?php declare(strict_types=1);
 
 return [
     'common_header' => 'PHP 8.1 is a major update of the PHP language. Enums, readonly properties, first-class callable syntax, fibers, intersection types, performance improvements and more.',

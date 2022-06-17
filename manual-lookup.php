@@ -1,4 +1,4 @@
-<?php
+<?php declare(strict_types=1);
 $_SERVER['BASE_PAGE'] = 'manual-lookup.php';
 include __DIR__ . '/include/prepend.inc';
 include __DIR__ . '/include/manual-lookup.inc';

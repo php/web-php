@@ -1,4 +1,4 @@
-<?php
+<?php declare(strict_types=1);
 $_SERVER['BASE_PAGE'] = 'results.php';
 include __DIR__ . '/include/prepend.inc';
 include __DIR__ . '/include/results.inc';

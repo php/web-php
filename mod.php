@@ -1,4 +1,4 @@
-<?php
+<?php declare(strict_types=1);
 /*
  This page supports the PHP.net automoderation system
  with enabling users to confirm their emails via the web.

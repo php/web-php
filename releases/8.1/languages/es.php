@@ -1,4 +1,4 @@
-<?php
+<?php declare(strict_types=1);
 
 /**
  * En-revision: 20b1bbed844a4609f3400ef0cd4e6be6fea323af

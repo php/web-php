@@ -1,4 +1,4 @@
-<?php
+<?php declare(strict_types=1);
 $_SERVER['BASE_PAGE'] = 'license/index.php';
 include_once __DIR__ . '/../include/prepend.inc';
 

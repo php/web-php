@@ -1,4 +1,4 @@
-<?php
+<?php declare(strict_types=1);
 
 $refresh = isset($_GET['refresh']) ? true : false;
 

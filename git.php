@@ -1,4 +1,4 @@
-<?php
+<?php declare(strict_types=1);
 $_SERVER['BASE_PAGE'] = 'git.php';
 include_once __DIR__ . '/include/prepend.inc';
 $SIDEBAR_DATA = '

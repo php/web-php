@@ -1,4 +1,4 @@
-<?php
+<?php declare(strict_types=1);
 /*
   Yes, we know this can be used to view the source for any file
   in the docroot directory. This is intentional and not an LFI

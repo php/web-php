@@ -1,4 +1,4 @@
-<?php
+<?php declare(strict_types=1);
 header("Content-Type: application/atom+xml");
 
 include __DIR__ . "/../include/version.inc";

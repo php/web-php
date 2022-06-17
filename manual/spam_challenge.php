@@ -1,4 +1,4 @@
-<?php
+<?php declare(strict_types=1);
 // simple and stupid SPAM protection (using little challenges)
 
 $nums = array('zero', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine');

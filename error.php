@@ -1,4 +1,4 @@
-<?php
+<?php declare(strict_types=1);
 /*
 
  This script handles all 401, 403 and 404 error redirects,

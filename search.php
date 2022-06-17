@@ -1,4 +1,5 @@
-<?php // vim: et
+<?php declare(strict_types=1);
+// vim: et
 $_SERVER['BASE_PAGE'] = 'search.php';
 include_once __DIR__ . '/include/prepend.inc';
 

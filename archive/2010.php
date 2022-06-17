@@ -1,4 +1,4 @@
-<?php
+<?php declare(strict_types=1);
 $_SERVER['BASE_PAGE'] = 'archive/2010.php';
 include_once __DIR__ . '/../include/prepend.inc';
 news_archive_sidebar();

@@ -1,4 +1,4 @@
-<?php
+<?php declare(strict_types=1);
 $_SERVER['BASE_PAGE'] = 'ChangeLog-8.php';
 include_once __DIR__ . '/include/prepend.inc';
 include_once __DIR__ . '/include/changelogs.inc';

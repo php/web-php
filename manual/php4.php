@@ -1,4 +1,4 @@
-<?php
+<?php declare(strict_types=1);
 $_SERVER['BASE_PAGE'] = 'manual/php4.php';
 include_once __DIR__ . '/../include/prepend.inc';
 site_header('PHP Version 4 Documentation');

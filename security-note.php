@@ -1,4 +1,4 @@
-<?php
+<?php declare(strict_types=1);
 $_SERVER['BASE_PAGE'] = 'security-note.php';
 include_once __DIR__ . '/include/prepend.inc';
 site_header("A Note on Security in PHP", array("current" => "docs"));

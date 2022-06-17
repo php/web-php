@@ -1,4 +1,4 @@
-<?php
+<?php declare(strict_types=1);
 /*
 
  This page is either directly called from the browser, in

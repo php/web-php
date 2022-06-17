@@ -1,4 +1,4 @@
-<?php
+<?php declare(strict_types=1);
 // $Id$
 $_SERVER['BASE_PAGE'] = 'releases/7_3_0.php';
 include_once __DIR__ . '/../include/prepend.inc';

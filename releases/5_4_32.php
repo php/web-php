@@ -1,4 +1,4 @@
-<?php
+<?php declare(strict_types=1);
 $_SERVER['BASE_PAGE'] = 'releases/5_4_32.php';
 include_once __DIR__ . '/../include/prepend.inc';
 site_header("PHP 5.4.32 Release Announcement");

@@ -1,4 +1,4 @@
-<?php
+<?php declare(strict_types=1);
 $_SERVER['BASE_PAGE'] = 'releases/8_0_1.php';
 include_once __DIR__ . '/../include/prepend.inc';
 site_header('PHP 8.0.1 Release Announcement');

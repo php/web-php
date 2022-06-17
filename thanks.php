@@ -1,4 +1,4 @@
-<?php
+<?php declare(strict_types=1);
 $_SERVER['BASE_PAGE'] = 'thanks.php';
 include_once __DIR__ . '/include/prepend.inc';
 include_once __DIR__ . '/include/historical_mirrors.inc';

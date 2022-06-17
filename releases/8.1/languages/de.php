@@ -1,4 +1,4 @@
-<?php
+<?php declare(strict_types=1);
 
 return [
     'common_header' => 'PHP 8.1 ist ein Minor-Update der Sprache PHP und beinhaltet viele neue Features und Verbesserungen. Unter anderem Enumerations, Readonly-Properties, First-Class Callable Syntax, Fibers, Intersection-Types, Performance-Optimierungen.',
