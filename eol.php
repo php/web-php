@@ -43,8 +43,8 @@ site_header('Unsupported Branches');
 		</tr>
 	</thead>
 	<tbody>
-		<?php foreach (get_eol_branches() as $major => $branches): ?>
-			<?php foreach ($branches as $branch => $detail): ?>
+		<?php foreach (get_eol_branches() as $major => $branches) { ?>
+			<?php foreach ($branches as $branch => $detail) { ?>
 				<?php $eolDate = get_branch_security_eol_date($branch) ?>
 				<?php $eolPeriod = format_interval($eolDate, null) ?>
 					<tr>
@@ -64,8 +64,8 @@ site_header('Unsupported Branches');
 							<?php echo isset($BRANCH_NOTES[$branch]) ? $BRANCH_NOTES[$branch] : ''; ?>
 					</td>
 				</tr>
-			<?php endforeach ?>
-		<?php endforeach ?>
+			<?php } ?>
+		<?php } ?>
 	</tbody>
 </table>
 

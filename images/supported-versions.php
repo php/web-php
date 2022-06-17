@@ -118,19 +118,19 @@ $height = $header_height + $footer_height + (count($branches) * $branch_height);
 
 	<!-- Branch labels -->
 	<g class="branch-labels">
-		<?php foreach ($branches as $branch => $version): ?>
+		<?php foreach ($branches as $branch => $version) { ?>
 			<g class="<?php echo get_branch_support_state($branch) ?>">
 				<rect x="0" y="<?php echo $version['top'] ?>" width="<?php echo 0.5 * $margin_left ?>" height="<?php echo $branch_height ?>" />
 				<text x="<?php echo 0.25 * $margin_left ?>" y="<?php echo $version['top'] + (0.5 * $branch_height) ?>">
 					<?php echo htmlspecialchars($branch) ?>
 				</text>
 			</g>
-		<?php endforeach ?>
+		<?php } ?>
 	</g>
 
 	<!-- Branch blocks -->
 	<g class="branches">
-		<?php foreach ($branches as $branch => $version): ?>
+		<?php foreach ($branches as $branch => $version) { ?>
 			<?php
 			$x_release = date_horiz_coord(get_branch_release_date($branch));
 			$x_bug = date_horiz_coord(get_branch_bug_eol_date($branch));
@@ -138,17 +138,17 @@ $height = $header_height + $footer_height + (count($branches) * $branch_height);
 			?>
 			<rect class="stable" x="<?php echo $x_release ?>" y="<?php echo $version['top'] ?>" width="<?php echo $x_bug - $x_release ?>" height="<?php echo $branch_height ?>" />
 			<rect class="security" x="<?php echo $x_bug ?>" y="<?php echo $version['top'] ?>" width="<?php echo $x_eol - $x_bug ?>" height="<?php echo $branch_height ?>" />
-		<?php endforeach ?>
+		<?php } ?>
 	</g>
 
 	<!-- Year lines -->
 	<g class="years">
-		<?php foreach ($years as $date): ?>
+		<?php foreach ($years as $date) { ?>
 			<line x1="<?php echo date_horiz_coord($date) ?>" y1="<?php echo $header_height ?>" x2="<?php echo date_horiz_coord($date) ?>" y2="<?php echo $header_height + (count($branches) * $branch_height) ?>" />
 			<text x="<?php echo date_horiz_coord($date) ?>" y="<?php echo 0.8 * $header_height; ?>">
 				<?php echo $date->format('j M Y') ?>
 			</text>
-		<?php endforeach ?>
+		<?php } ?>
 	</g>
 
 	<!-- Today -->

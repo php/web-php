@@ -46,9 +46,9 @@ $VERSION_NOTES = array(
 		</tr>
 	</thead>
 	<tbody>
-		<?php foreach (get_active_branches(false) as $major => $releases): ?>
+		<?php foreach (get_active_branches(false) as $major => $releases) { ?>
 			<?php ksort($releases) ?>
-			<?php foreach ($releases as $branch => $release): ?>
+			<?php foreach ($releases as $branch => $release) { ?>
 				<?php
 				$state = get_branch_support_state($branch);
 				$initial = get_branch_release_date($branch);
@@ -58,9 +58,9 @@ $VERSION_NOTES = array(
 				<tr class="<?php echo $state ?>">
 					<td>
 						<a href="/downloads.php#v<?php echo htmlspecialchars($release['version']) ?>"><?php echo htmlspecialchars($branch) ?></a>
-						<?php if (isset($VERSION_NOTES[$branch])): ?>
+						<?php if (isset($VERSION_NOTES[$branch])) { ?>
 							<a class="version-notes" href="<?php echo htmlspecialchars($VERSION_NOTES[$branch]) ?>">*</a>
-						<?php endif ?>
+						<?php } ?>
 					</td>
 					<td><?php echo htmlspecialchars($initial->format('j M Y')) ?></td>
 					<td class="collapse-phone"><em><?php echo htmlspecialchars(format_interval($initial, null)) ?></em></td>
@@ -69,8 +69,8 @@ $VERSION_NOTES = array(
 					<td><?php echo htmlspecialchars($eol->format('j M Y')) ?></td>
 					<td class="collapse-phone"><em><?php echo htmlspecialchars(format_interval($eol, null)) ?></em></td>
 				</tr>
-			<?php endforeach ?>
-		<?php endforeach ?>
+			<?php } ?>
+		<?php } ?>
 	</tbody>
 </table>
 
