@@ -304,7 +304,7 @@ if (isset($_POST['action'])) {
   );
 
 // Print out a table for a given list array
-function output_lists_table($mailing_lists)
+function output_lists_table($mailing_lists): void
 {
     echo '<table cellpadding="5" border="0" class="standard mailing-lists">', "\n";
     foreach ($mailing_lists as $listinfo) {
