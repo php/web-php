@@ -31,7 +31,7 @@ $sqlite = get_available_sqlites();
 
 $exts = implode(',', get_loaded_extensions());
 
-echo join('|', array(
+echo implode('|', array(
     $MYSITE,            	// 0 : CNAME for mirror as accessed (CC, CC1, etc.)
     phpversion(),       	// 1 : PHP version overview
     $LAST_UPDATED,      	// 2 : Update problems
