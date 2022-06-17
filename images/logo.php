@@ -45,9 +45,7 @@ function imgheader($filename) {
 function get_accepted_encodings() {
     if (isset($_SERVER['HTTP_ACCEPT_ENCODING'])) {
         $encodings = explode(',', $_SERVER['HTTP_ACCEPT_ENCODING']);
-        return array_map(function ($x) {
-            return trim($x);
-        }, $encodings);
+        return array_map(fn ($x) => trim($x), $encodings);
     }
     return array();
 }
