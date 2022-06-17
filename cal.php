@@ -354,13 +354,13 @@ function read_event($fp)
     if (count($linearr) < 13) { return FALSE; }
 
     // Get components
-    list(
+    [
         $day, $month, $year, $country,
         $sdesc, $id, $ldesc, $url, $recur, $tipo, $sdato, $edato, $category
-    ) = $linearr;
+    ] = $linearr;
 
     // Get info on recurring event
-    @list($recur, $recur_day) = explode(":", $recur, 2);
+    @[$recur, $recur_day] = explode(":", $recur, 2);
 
     // Return with SQL-resultset like array
     return array(

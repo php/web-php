@@ -109,7 +109,7 @@ foreach ($active_branches as $major => $releases) {
     krsort($releases);
     foreach ((array)$releases as $release) {
         $version = $release['version'];
-        list($major, $minor, $_) = explode('.', $version);
+        [$major, $minor, $_] = explode('.', $version);
         $intro .= "
             <li class='hero-version'><a class='hero-version-link' href='/downloads.php#v$version'>$version</a> &middot; <a class='notes' href='/ChangeLog-$major.php#$version'>Changelog</a> &middot; <a class='notes' href='/migration$major$minor'>Upgrading</a></li>\n";
     }
