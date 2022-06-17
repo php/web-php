@@ -7,7 +7,7 @@ site_header("Submit an Event", array("current" => "community"));
 
 // No errors, processing depends on POST data
 $errors = array();
-$process = (boolean) count($_POST);
+$process = (bool) count($_POST);
 
 // Avoid E_NOTICE errors on incoming vars if not set
 $vars = array(
