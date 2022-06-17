@@ -36,7 +36,7 @@ if (isset($_GET["serialize"]) || isset($_GET["json"])) {
 						$release['supported_versions'] = $supportedVersions[$ver] ?? [];
 					}
 					$machineReadable[$version] = $release;
-					$count++;
+					++$count;
 				}
 			}
 
@@ -100,7 +100,7 @@ foreach($OLDRELEASES as $major => $a) {
 
 	$i = 0;
 	foreach($a as $ver => $release) {
-		$i++;
+		++$i;
 		mk_rel(
 			$major,
 			$ver,
@@ -172,7 +172,7 @@ function recentEOLBranchesHTML(int $count): string {
 	foreach (get_eol_branches() as $major => $branches) {
 		foreach ($branches as $branch => $detail) {
 			$detail_date = $detail['date'];
-			while (isset($eol[$detail_date])) $detail_date++;
+			while (isset($eol[$detail_date])) ++$detail_date;
 			$eol[$detail_date] = sprintf('<li>%s: %s</li>', $branch, date('j M Y', $detail_date));
 		}
 	}

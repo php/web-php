@@ -43,7 +43,7 @@ if(is_resource($fp)) {
                 $RECORDS[$record_no]["id"] = $record_no;
             }
             $field = null;
-            $record_no++;
+            ++$record_no;
             continue;
         }
         if(preg_match("/^([-\w]+):\s*(.*)/", $s, $m)) {

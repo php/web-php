@@ -151,10 +151,10 @@ else {
 if (count($errors)) { display_errors($errors); }
 
 // Generate days and months arrays for form
-for ($i = 1; $i <= 7; $i++) {
+for ($i = 1; $i <= 7; ++$i) {
     $days[$i] = date('l', mktime(12, 0, 0, 4, $i));
 }
-for ($i = 1; $i <= 12; $i++) {
+for ($i = 1; $i <= 12; ++$i) {
     $months[$i] = date('F', mktime(12, 0, 0, $i, 1));
 }
 

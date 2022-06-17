@@ -74,7 +74,7 @@ foreach ($photos as $photo) {
         continue;
     }
 
-    $got++;
+    ++$got;
     // add photo to response array.
     $elephpants[] = array(
         'title' => $photo['title'],

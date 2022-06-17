@@ -173,18 +173,18 @@ echo '<table id="cal" width="100%" border="1" cellspacing="0" cellpadding="3">',
      "\n",'<tr>',"\n";
 
 // Print out headers for weekdays
-for ($i = 0; $i < 7; $i++) {
+for ($i = 0; $i < 7; ++$i) {
     echo '<th width="14%">', date("l",mktime(0,0,1,4,$i+1,2001)), "</th>\n";
 }
 echo "</tr>\n<tr>";
 
 // Generate the requisite number of blank days to get things started
-for ($days = $i = date("w",$bom); $i > 0; $i--) {
+for ($days = $i = date("w",$bom); $i > 0; --$i) {
     echo '<td class="notaday">&nbsp;</td>';
 }
 
 // Print out all the days in this month
-for ($i = 1; $i <= date("t",$bom); $i++) {
+for ($i = 1; $i <= date("t",$bom); ++$i) {
 
     // Print out day number and all events for the day
     echo '<td><a class="day" href="/cal.php', "?cm=$cm&amp;cd=$i&amp;cy=$cy",
@@ -197,7 +197,7 @@ for ($i = 1; $i <= date("t",$bom); $i++) {
 }
 
 // Generate the requisite number of blank days to wrap things up
-for (; $days % 7; $days++) {
+for (; $days % 7; ++$days) {
     echo '<td class="notaday">&nbsp;</td>';
 }
 
