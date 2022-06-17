@@ -248,4 +248,3 @@ function mk_rel(int $major,
 	echo "</li>\n";
 	echo "</ul>\n";
 }
-
