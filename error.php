@@ -134,7 +134,7 @@ if (preg_match("!^get/([^/]+)$!", $URI, $what)) {
 if (preg_match("!^get/([^/]+)/from/([^/]+)(/mirror)?$!", $URI, $dlinfo)) {
 
     $df = $dlinfo[1];
-    if(strpos($df, "7-LATEST") !== false) {
+    if(str_contains($df, "7-LATEST")  ) {
         include_once __DIR__ . "/include/version.inc";
         [ $latest ] = release_get_latest();
         $df = str_replace("7-LATEST", $latest, $df);
@@ -684,7 +684,7 @@ if (preg_match("!^manual/([^/]+)/([^/]+).php$!", $URI, $match) &&
 
 // ============================================================================
 // 404 page for manual pages (eg. not built language)
-if (strpos($URI, "manual/") === 0) {
+if (str_starts_with($URI, "manual/")  ) {
     $legacy_manual_urls = get_legacy_manual_urls($URI);
     if (count($legacy_manual_urls) > 0) {
         fallback_to_legacy_manuals($legacy_manual_urls);

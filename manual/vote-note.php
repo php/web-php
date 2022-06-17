@@ -33,7 +33,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
           "vote" => $_REQUEST['vote'],
           "ip" => $_SERVER['REMOTE_ADDR']
       );
-      if (($r = posttohost($master_url, $data)) === null || strpos($r,"failed to open socket to") !== false) {
+      if (($r = posttohost($master_url, $data)) === null || str_contains($r,"failed to open socket to")  ) {
         $response["success"] = false;
         $response["msg"] = "Could not process your request at this time. Please try again later...";
       }
@@ -77,7 +77,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
               "vote" => $_REQUEST['vote'],
               "ip" => $_SERVER['REMOTE_ADDR'],
           );
-          if (($r = posttohost($master_url, $data)) !== null && strpos($r,"failed to open socket to") === false) {
+          if (($r = posttohost($master_url, $data)) !== null && !str_contains($r,"failed to open socket to")  ) {
             $r = json_decode($r);
             if (json_last_error() == JSON_ERROR_NONE && isset($r->status) && $r->status && isset($r->votes)) {
               $thankyou = true;

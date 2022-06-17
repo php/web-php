@@ -93,7 +93,7 @@ if (count($temp) > 0) {
 
         // If the two are more then 70% similar or $notfound is a substring
         // of $funcname, then the match is a very similar one
-        if ($p >= 70 || (strpos($functions[$file], $notfound) !== FALSE)) {
+        if ($p >= 70 || (str_contains($functions[$file], $notfound)  )) {
             $maybe[$file] = '<b>' . $functions[$file] . '</b>';
         }
         // Otherwise it is just similar
