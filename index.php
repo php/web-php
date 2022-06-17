@@ -43,9 +43,9 @@ if (isset($_SERVER["HTTP_IF_MODIFIED_SINCE"]) &&
     exit();
 }
 // Inform the user agent what is our last modification date
-else {
+ 
     header("Last-Modified: " . $tsstring);
-}
+
 
 $_SERVER['BASE_PAGE'] = 'index.php';
 include_once 'include/prepend.inc';
