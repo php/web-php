@@ -39,7 +39,7 @@ $challenges = array(
 // generate a challenge
 function gen_challenge() {
 	global $challenges, $nums;
-	$c = $challenges[rand(0, sizeof($challenges)-1)];
+	$c = $challenges[rand(0, count($challenges)-1)];
 
 	$a  = rand(0, 9);
 	$an = $nums[$a];
