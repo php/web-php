@@ -9,8 +9,8 @@ include      __DIR__ . '/spam_challenge.php';
 $error = false;
 $thankyou = false;
 $headerset = false;
-$BACKpage = htmlspecialchars(isset($_REQUEST['page']) ? $_REQUEST['page'] : '');
-$BACKid = htmlspecialchars(isset($_REQUEST['id']) ? $_REQUEST['id'] : '');
+$BACKpage = htmlspecialchars($_REQUEST['page'] ?? '');
+$BACKid = htmlspecialchars($_REQUEST['id'] ?? '');
 $link = "/{$BACKpage}#{$BACKid}";
 $master_url = "https://main.php.net/entry/user-notes-vote.php";
 
