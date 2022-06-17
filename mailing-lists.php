@@ -189,50 +189,50 @@ if (isset($_POST['action'])) {
     array (
       'php-announce', 'Announcements',
       'Announcements of new PHP releases are sent to this very low-volume list',
-      TRUE, FALSE, FALSE, "php.announce"
+      true, false, false, "php.announce"
     ),
     array (
       'php-general', 'General user list',
       'This is a high volume list for general PHP support; ask PHP questions here',
-      FALSE, TRUE, TRUE, "php.general"
+      false, true, true, "php.general"
     ),
     array (
       'php-windows', 'Windows PHP users list',
       'Using PHP on Microsoft Windows',
-      FALSE, TRUE, TRUE, "php.windows"
+      false, true, true, "php.windows"
     ),
 
     'Subject specific lists for PHP users',
     array (
       'php-install', 'Installation issues and problems',
       'How to install PHP with particular configurations and servers',
-      FALSE, TRUE, TRUE, "php.install"
+      false, true, true, "php.install"
     ),
     array (
       'php-db', 'Databases and PHP',
       'This list is for the discussion of PHP database topics',
-      FALSE, TRUE, TRUE, "php.db"
+      false, true, true, "php.db"
     ),
     array (
       'php-i18n', 'Unicode and Internationalization',
       'Unicode support, Internationalization (i18n) and localization (l10n) issues and features',
-      FALSE, TRUE, TRUE, "php.i18n"
+      false, true, true, "php.i18n"
     ),
     array (
       'php-evangelism', 'PHP evangelism mailing list',
       'A list for people interested in promoting PHP and learning good reasons to support PHP in the enterprise',
-      TRUE, TRUE, TRUE, "php.evangelism"
+      true, true, true, "php.evangelism"
     ),
     array (
       'soap', 'PHP SOAP list',
       'List for the SOAP developers',
-      FALSE, FALSE, FALSE, 'php.soap'
+      false, false, false, 'php.soap'
     ),
     'Non-English language mailing lists',
     array (
       'php-es', 'Spanish PHP Mailing list',
       'List for Spanish speaking people interested in PHP',
-      FALSE, FALSE, FALSE, 'php.general.es'
+      false, false, false, 'php.general.es'
     ),
 
   );
@@ -244,37 +244,37 @@ if (isset($_POST['action'])) {
     array (
       'internals', 'Internals list',
       'A medium volume list for those who want to help out with the development of PHP',
-      FALSE, 'php-internals', TRUE, "php.internals"
+      false, 'php-internals', true, "php.internals"
     ),
     array (
       'internals-win', 'Windows Internals list',
       'A low volume list for those who want to help out with the development of PHP on Windows',
-      FALSE, FALSE, TRUE, "php.internals.win"
+      false, false, true, "php.internals.win"
     ),
     array (
       'php-cvs', 'Git commit list',
       'All commits to internals (php-src) and the Zend Engine are posted to this list automatically',
-      TRUE, TRUE, FALSE, "php.cvs"
+      true, true, false, "php.cvs"
     ),
     array (
       'git-pulls', 'Git pull requests',
       'Pull requests from Github',
-      FALSE, FALSE, FALSE, "php.git-pulls"
+      false, false, false, "php.git-pulls"
     ),
     array (
       'php-qa', 'Quality Assurance list',
       'List for the members of the PHP-QA Team',
-      FALSE, TRUE, FALSE, "php.qa"
+      false, true, false, "php.qa"
     ),
     array (
       'php-bugs', 'General bugs',
       'General bug activity are posted here',
-      FALSE, FALSE, FALSE, "php.bugs"
+      false, false, false, "php.bugs"
     ),
     array (
       'standards', 'PHP Standardization and interoperability list',
       'Development of language standards',
-      FALSE, FALSE, FALSE, "php.standards"
+      false, false, false, "php.standards"
     ),
 
     'PHP internal website mailing lists',
@@ -282,24 +282,24 @@ if (isset($_POST['action'])) {
       'php-webmaster', 'PHP php.net internal infrastructure discussion',
       'List for discussing and maintaining the php.net web infrastructure.<br>
        For general PHP support questions, see "General Mailing Lists" or the <a href="/support.php">support page</a>',
-      FALSE, FALSE, FALSE, "php.webmaster"
+      false, false, false, "php.webmaster"
     ),
 
     'PHP documentation mailing lists',
     array (
       'phpdoc', 'Documentation discussion',
       'List for discussing the PHP documentation',
-      FALSE, TRUE, FALSE, "php.doc"
+      false, true, false, "php.doc"
     ),
     array (
       'doc-cvs', 'Documentation changes and commits',
       'Changes to the documentation are posted here',
-      TRUE, "php-doc-cvs", FALSE, "php.doc.cvs"
+      true, "php-doc-cvs", false, "php.doc.cvs"
     ),
     array (
       'doc-bugs', 'Documentation bugs',
       'Documentation bug activity (translations, sources, and build system) are posted here',
-      TRUE, 'php-doc-bugs', FALSE, "php.doc.bugs"
+      true, 'php-doc-bugs', false, "php.doc.bugs"
     ),
   );
 
@@ -319,9 +319,9 @@ function output_lists_table($mailing_lists)
             // Let the list name defined with a string, if the
             // list is archived under a different name then php.net
             // uses for it (for backward compatibilty for example)
-            if ($listinfo[4] !== FALSE) {
-                $larchive = ($listinfo[4] === TRUE ? $listinfo[0] : $listinfo[4]);
-            } else { $larchive = FALSE; }
+            if ($listinfo[4] !== false) {
+                $larchive = ($listinfo[4] === true ? $listinfo[0] : $listinfo[4]);
+            } else { $larchive = false; }
             echo '<td>' . ($larchive ? "<a href=\"http://marc.info/?l={$larchive}\">yes</a>" : 'n/a') . '</td>';
             echo '<td>' . ($listinfo[6] ? "<a href=\"news://news.php.net/{$listinfo[6]}\">yes</a> <a href=\"http://news.php.net/group.php?group={$listinfo[6]}\">http</a>" : 'n/a') . '</td>';
             echo '<td><input name="maillist" type="radio" value="' . $listinfo[0] . '"></td>';

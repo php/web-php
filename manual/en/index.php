@@ -21,18 +21,18 @@ $setup = array (
   ),
   'up' =>
   array (
-    0 => NULL,
-    1 => NULL,
+    0 => null,
+    1 => null,
   ),
   'prev' =>
   array (
-    0 => NULL,
-    1 => NULL,
+    0 => null,
+    1 => null,
   ),
   'next' =>
   array (
-    0 => NULL,
-    1 => NULL,
+    0 => null,
+    1 => null,
   ),
   'alternatives' =>
   array (
