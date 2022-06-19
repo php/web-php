@@ -24,7 +24,7 @@ if (empty($notfound)) {
 
 // Print out the table of found (or all) functions. The HTML comments are
 // needed to support MyCroft search (Mozilla browser family and Sherlock for MacOSX)
-function quickref_table($functions, $sort = true)
+function quickref_table($functions, $sort = true): void
 {
     global $LANG;
 

@@ -230,7 +230,7 @@ function date_for_recur($recur, $day, $bom, $eom)
 }
 
 // Display a <div> for each of the events that are on a given day
-function display_events_for_day($day, $events)
+function display_events_for_day($day, $events): void
 {
     // For preservation of state in the links
     global $cm, $cy, $COUNTRY;

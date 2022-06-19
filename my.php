@@ -10,7 +10,7 @@ $langs   = $ACTIVE_ONLINE_LANGUAGES;
 $options = array();
 
 // We have post data, and it is an available language
-if (isset($_POST['my_lang']) && isset($langs[$_POST['my_lang']])) {
+if (isset($_POST['my_lang'], $langs[$_POST['my_lang']])) {
 
     // Set the language preference
     myphpnet_language($_POST['my_lang']);
@@ -47,7 +47,7 @@ foreach ($langs as $code => $name) {
 
 // Assemble form from collected data
 $langpref = "<select name=\"my_lang\">\n" .
-            join("", $options) . "</select>\n";
+            implode("", $options) . "</select>\n";
 
 // Save URL shortcut fallback setting
 if (isset($_POST['urlsearch'])) {

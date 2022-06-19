@@ -53,7 +53,7 @@ function get_accepted_encodings() {
 }
 
 
-function serve_compressed_if_available($logo) {
+function serve_compressed_if_available($logo): void {
     $encodings = get_accepted_encodings();
     if (!empty($encodings)) {
         foreach ($encodings as $encoding) {

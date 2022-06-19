@@ -1,5 +1,5 @@
 <?php // vim: et
-(static function($uri) {
+(static function($uri): void {
     // Special redirect cases not able to be captured in error.php
     $shortcuts = [
         '/?:'    => '/language.operators.comparison#language.operators.comparison.ternary',

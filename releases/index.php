@@ -186,7 +186,7 @@ function mk_rel(int $major,
 				/* bool | array */ $announcement,
 				array $source,
 				array $windows,
-				bool $museum) {
+				bool $museum): void {
 	printf("<a id=\"%s\"></a>\n<h2>%1\$s</h2>\n<ul>\n <li>Released: %s</li>\n <li>Announcement: ",
 	       ($pos = strpos($ver, " ")) ? substr($ver, 0, $pos) : $ver,
 	       $date);
@@ -248,4 +248,3 @@ function mk_rel(int $major,
 	echo "</li>\n";
 	echo "</ul>\n";
 }
-

@@ -61,7 +61,7 @@ site_header('Unsupported Branches');
 							</a>
 						</td>
 						<td>
-							<?php echo isset($BRANCH_NOTES[$branch]) ? $BRANCH_NOTES[$branch] : ''; ?>
+							<?php echo $BRANCH_NOTES[$branch] ?? ''; ?>
 					</td>
 				</tr>
 			<?php endforeach ?>

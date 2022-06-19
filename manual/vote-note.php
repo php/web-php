@@ -9,8 +9,8 @@ include      __DIR__ . '/spam_challenge.php';
 $error = false;
 $thankyou = false;
 $headerset = false;
-$BACKpage = htmlspecialchars(isset($_REQUEST['page']) ? $_REQUEST['page'] : '');
-$BACKid = htmlspecialchars(isset($_REQUEST['id']) ? $_REQUEST['id'] : '');
+$BACKpage = htmlspecialchars($_REQUEST['page'] ?? '');
+$BACKid = htmlspecialchars($_REQUEST['id'] ?? '');
 $link = "/{$BACKpage}#{$BACKid}";
 $master_url = "https://main.php.net/entry/user-notes-vote.php";
 
@@ -42,7 +42,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         if (json_last_error() == JSON_ERROR_NONE && isset($r->status) && $r->status && isset($r->votes)) {
           $response["success"] = true;
           $response["update"] = (int)$r->votes;
-        } elseif (json_last_error() == JSON_ERROR_NONE && isset($r->status) && isset($r->message) && $r->status == false) {
+        } elseif (json_last_error() == JSON_ERROR_NONE && isset($r->status, $r->message) && $r->status == false) {
           $response["success"] = false;
           $response["msg"] = $r->message;
         } else {
@@ -54,7 +54,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     echo json_encode($response);
     exit;
   }
-  elseif (!empty($_REQUEST['id']) && !empty($_REQUEST['page']) && ($N = manual_notes_load($_REQUEST['page'])) && array_key_exists($_REQUEST['id'], $N) && !empty($_REQUEST['vote']) && ($_REQUEST['vote'] === 'up' || $_REQUEST['vote'] === 'down')) {
+  if (!empty($_REQUEST['id']) && !empty($_REQUEST['page']) && ($N = manual_notes_load($_REQUEST['page'])) && array_key_exists($_REQUEST['id'], $N) && !empty($_REQUEST['vote']) && ($_REQUEST['vote'] === 'up' || $_REQUEST['vote'] === 'down')) {
     if (!empty($_POST['challenge']) && !empty($_POST['func']) || empty($_POST['arga']) || empty($_POST['argb'])) {
       if (!test_answer($_POST['func'], $_POST['arga'], $_POST['argb'], $_POST['challenge'])) {
         $error = "Incorrect answer! Please try again.";

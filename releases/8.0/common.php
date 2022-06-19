@@ -72,4 +72,3 @@ function language_chooser(string $currentLang): void {
       </form>
 ';
 }
-

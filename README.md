@@ -1,15 +1,26 @@
 ## Local development
 
-This is the git repo for the official www.php.net website.
+This is the git repository for the official www.php.net website.
 
-To setup a local mirror of the website:
+To setup a local mirror of the website, clone the repository:
 
-    $ git clone https://github.com/php/web-php.git
-	$ cd web-php
-	$ php -S localhost:8080 .router.php
+```
+git clone https://github.com/php/web-php.git
+```
 
+Change into `web-php`:
 
-This repo includes most (generated) files that are required for normal
+```
+cd web-php
+```
+
+Start the built-in web server:
+
+```
+php -S localhost:8080 .router.php
+```
+
+This repository includes most (generated) files that are required for normal
 operation of this website, such as
 
  - News & events data

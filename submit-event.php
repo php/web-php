@@ -265,7 +265,7 @@ if ($process && count($errors) === 0) {
 site_footer();
 
 // Display an option list with one selected
-function display_options($options, $current)
+function display_options($options, $current): void
 {
     foreach ($options as $k => $v) {
         echo '<option value="', $k, '"',
