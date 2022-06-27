@@ -2,7 +2,6 @@
 $_SERVER['BASE_PAGE'] = 'releases/8.0/ru.php';
 include_once __DIR__ . '/common.php';
 
-releases\php80\language_redirect('ru');
 releases\php80\common_header(
     'PHP 8.0 — большое обновление языка PHP. ' .
     'Оно содержит множество новых возможностей и оптимизаций, ' .

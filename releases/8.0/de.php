@@ -2,7 +2,6 @@
 $_SERVER['BASE_PAGE'] = 'releases/8.0/de.php';
 include_once __DIR__ . '/common.php';
 
-releases\php80\language_redirect('de');
 releases\php80\common_header(
     'PHP 8.0 ist ein Major-Update der Sprache PHP. ' .
     'Es beinhaltet viele neue Funktionen und Optimierungen wie beispielsweise ' .
