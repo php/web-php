@@ -27,14 +27,8 @@ site_header("Documentation", array("current" => "docs"));
 </p>
 </div>
 
-<table class="standard">
- <tr>
-  <th>Formats</th>
-  <th>Destinations</th>
- </tr>
- <tr>
-  <th class="sub">View Online</th>
-  <td>
+<p>
+  View Online:
 <?php
 
 // List all manual languages viewable online
@@ -54,16 +48,11 @@ foreach ($ACTIVE_ONLINE_LANGUAGES as $langcode => $langname) {
 }
 
 ?>
-  </td>
- </tr>
- <tr>
-  <th class="sub">Downloads</th>
-  <td>
-   For downloadable formats, please visit our
-   <a href="download-docs.php">documentation downloads</a> page.
-  </td>
- </tr>
-</table>
+</p>
+<p>
+ For downloadable formats, please visit our
+ <a href="download-docs.php">documentation downloads</a> page.
+</p>
 
 <div>
  <p>
