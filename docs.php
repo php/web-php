@@ -15,11 +15,6 @@ site_header("Documentation", array("current" => "docs"));
 </p>
 
 <p>
- More information about php.net URL shortcuts by visiting our
- <a href="urlhowto.php">URL howto page</a>.
-</p>
-
-<p>
  Note, that many languages are just under translation, and
  the untranslated parts are still in English. Also some translated
  parts might be outdated. The translation teams are open to
@@ -52,6 +47,11 @@ foreach ($ACTIVE_ONLINE_LANGUAGES as $langcode => $langname) {
 <p>
  For downloadable formats, please visit our
  <a href="download-docs.php">documentation downloads</a> page.
+</p>
+
+<p>
+ Information about php.net URL shortcuts can be found by visiting our
+ <a href="urlhowto.php">Navigation tips &amp; tricks page</a>.
 </p>
 
 <h2 class="content-header">More documentation</h2>
