@@ -31,7 +31,6 @@ class ManualNotesSorter {
     private $minAge;
 
     private $voteFactor;
-    private $ratingFactor;
     private $ageFactor;
 
     private $voteWeight = 38;
