@@ -524,7 +524,6 @@ function site_header($title = '', $config = array())
 }
 function site_footer($config = array())
 {
-    global $MYSITE;
     require __DIR__ . "/footer.inc";
 }
 
