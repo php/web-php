@@ -706,7 +706,6 @@ table.standard th {
 
 table.standard td {
     padding: 5px 10px;
-    vertical-align: middle;
 }
 
 table.standard tr:nth-child(even) td.subr,
