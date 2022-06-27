@@ -7,7 +7,7 @@ if(!isset($_COOKIE["MAGIC_COOKIE"])) {
     exit;
 }
 
-$SIDEBAR_DATA = <<< EOT
+$SIDEBAR_DATA = <<<EOT
 <br>
 <div id="securitySidebar">
  <h3><a href="/security/">Security Center?</a></h3>
@@ -134,7 +134,7 @@ if(is_resource($fp)) {
             '<a href="\1" target="_blank">\1</a>\4',
             $data
         );
-        echo <<< EOT
+        echo <<<EOT
  <div class="row $field">
   <div class="title">$title</div>
   <div class="data">$data</div>

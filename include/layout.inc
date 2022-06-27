@@ -453,7 +453,7 @@ function print_news($news, $dog, $max = 5, $onlyyear = null, $return = false) {
             continue;
         }
 
-        echo <<< EOT
+        echo <<<EOT
 <article class="newsItem">
   <header>
     <div class="newsImage">{$image}</div>
