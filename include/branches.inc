@@ -339,32 +339,22 @@ function get_branch_support_state($branch) {
 	return null;
 }
 
-function compare_version($arrayA, $versionB)
+function compare_version(array $arrayA, string $versionB)
 {
-	static $sortValues = array(
-		true => 1,
-		false => -1,
-	);
-
-	$length = count($arrayA);
-	$arrayB = version_array($versionB, $length);
-
-	if (!is_array($arrayA) || !is_array($arrayB)) {
-		return $sortValues[$arrayA > $arrayB];
-	}
+	$arrayB = version_array($versionB, count($arrayA));
 
 	foreach ($arrayA as $index => $componentA) {
 		$componentA = $arrayA[$index];
 		$componentB = $arrayB[$index];
 		if ($componentA != $componentB) {
-			return $sortValues[$componentA > $componentB];
+			return $componentA > $componentB ? 1 : -1;
 		}
 	}
 
 	return 0;
 }
 
-function version_array($version, $length = null)
+function version_array(string $version, ?int $length = null)
 {
 	$versionArray = array_map(
 		'intval',
