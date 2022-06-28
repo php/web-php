@@ -439,7 +439,6 @@ function manual_setup($setup) {
     site_header($setup["this"][1] . " - Manual ", $config);
 
     $id = substr($setup['this'][0], 0, -4);
-    $language_chooser = 'manual_language_chooser';
     $repo = strtolower($config['lang']); // pt_BR etc.
 
     $edit_url = "https://github.com/php/doc-{$repo}";
@@ -452,10 +451,12 @@ function manual_setup($setup) {
         }
     }
 
+    $languageChooser = manual_language_chooser($config['lang'], $config['thispage']);
+
     echo <<<PAGE_TOOLS
   <div class="page-tools">
     <div class="change-language">
-      {$language_chooser($config['lang'], $config['thispage'])}
+      {$languageChooser}
     </div>
     <div class="edit-bug">
       <a href="{$edit_url}">Submit a Pull Request</a>
