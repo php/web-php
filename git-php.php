@@ -80,7 +80,7 @@ if (count($_POST) && (!isset($_POST['purpose']) || !is_array($_POST['purpose']) 
     if (empty($_POST['group']) || $_POST['group'] === 'none' || !isset($groups[$_POST['group']])) {
         $error .= "You did not fill out where to send the request. <br>";
     }
-    if (!isset($_POST['guidelines']) || !$_POST['guidelines']) {
+    if (empty($_POST['guidelines'])) {
         $error .= "You did not agree to follow the contribution guidelines. <br>";
     }
 

@@ -15,7 +15,7 @@ $vars = array(
     'emonth', 'eyear', 'recur', 'recur_day'
 );
 foreach ($vars as $varname) {
-    if (!isset($_POST[$varname]) || empty($_POST[$varname])) {
+    if (empty($_POST[$varname])) {
         $_POST[$varname] = 0;
     }
 }

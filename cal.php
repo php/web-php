@@ -86,8 +86,8 @@ if ($cm && $cy && !checkdate($cm,1,$cy)) {
 }
 
 // Give defaults for the month and day values if they were invalid
-if (!isset($cm) || $cm == 0) { $cm = date("m"); }
-if (!isset($cy) || $cy == 0) { $cy = date("Y"); }
+if (empty($cm)) { $cm = date("m"); }
+if (empty($cy)) { $cy = date("Y"); }
 
 // Start of the month date
 $date = mktime(0, 0, 1, $cm, 1, $cy);
