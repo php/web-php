@@ -15,11 +15,6 @@ site_header("Documentation", array("current" => "docs"));
 </p>
 
 <p>
- More information about php.net URL shortcuts by visiting our
- <a href="urlhowto.php">URL howto page</a>.
-</p>
-
-<p>
  Note, that many languages are just under translation, and
  the untranslated parts are still in English. Also some translated
  parts might be outdated. The translation teams are open to
@@ -54,15 +49,10 @@ foreach ($ACTIVE_ONLINE_LANGUAGES as $langcode => $langname) {
  <a href="download-docs.php">documentation downloads</a> page.
 </p>
 
-<div>
- <p>
-  Documentation for PHP 4 and PHP 5 has been removed from the
-  manual, but there are still archived versions still. For
-  more information, please read <a href="/manual/php4.php">
-  Documentation for PHP 4</a> and <a href="manual/php5.php">
-  Documentation for 5</a>, respectively.
- </p>
-</div>
+<p>
+ Information about php.net URL shortcuts can be found by visiting our
+ <a href="urlhowto.php">Navigation tips &amp; tricks page</a>.
+</p>
 
 <h2 class="content-header">More documentation</h2>
 <ul class="content-box listed">
@@ -81,8 +71,14 @@ foreach ($ACTIVE_ONLINE_LANGUAGES as $langcode => $langname) {
  <li>
   You can still read a copy of the original <a href="/manual/phpfi2.php">PHP/FI
   2.0 Manual</a> on our site, which we only host for historical purposes.
-  The same applies to the <a href="/manual/php3.php">PHP 3 Manual</a>, and
-  the <a href="/manual/php4.php">PHP 4 Manual</a>.
+  The same applies to the <a href="/manual/php3.php">PHP 3 Manual</a>.
+ </li>
+ <li>
+  The PHP 4 and PHP 5 documentation has been removed from the
+  manual, but archived versions still exist. For
+  more information, please read <a href="/manual/php4.php">
+  Documentation for PHP 4</a> and <a href="manual/php5.php">
+  Documentation for 5</a>, respectively.
  </li>
 </ul>
 
