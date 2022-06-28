@@ -20,14 +20,10 @@ $MIRRORS = array(
     "en", MIRROR_OK),
 );
 
-// Define $COUNTRIES array
-include __DIR__ . '/countries.inc';
-
-// Define $COUNTRIES_ALPHA2 array
-include __DIR__ . '/countries-alpha2.inc';
-
-// Define $COUNTRY_ALPHA_2_TO_3 array
-include __DIR__ . '/countries_alpha_mapping.inc';
+/**
+ * @var array<string, string> $COUNTRIES
+ */
+$COUNTRIES = include __DIR__ . '/countries.inc';
 
 // Define $LANGUAGES array
 include __DIR__ . '/languages.inc';
