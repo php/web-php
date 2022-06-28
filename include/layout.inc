@@ -192,44 +192,39 @@ function print_popup_link($url, $linktext=false, $windowprops="", $target=false,
 }
 
 // Print a link for a downloadable file (including filesize)
-function download_link($file, $title, $showsize = TRUE)
+function download_link($file, $title)
 {
     $download_link = "/distributions/" . $file;
 
     // Print out the download link
     print_link($download_link, $title);
 
-    // Size display is required
-    if ($showsize) {
+    // We have a full path or a relative to the distributions dir
+    if ($tmp = strrchr($file, "/")) {
+        $local_file = substr($tmp, 1, strlen($tmp));
+    } else {
+        $local_file = "distributions/$file";
+    }
 
-        // We have a full path or a relative to the distributions dir
-        if ($tmp = strrchr($file, "/")) {
-            $local_file = substr($tmp, 1, strlen($tmp));
+    if(@file_exists($local_file.".asc")) {
+        echo " ";
+        $sig_link = "/distributions/$file.asc";
+        print_link($sig_link, "(sig)");
+    }
+
+    // Try to get the size of the file
+    $size = @filesize($local_file);
+
+    // Print out size in bytes (if size is
+    // less then 1Kb, or else in Kb)
+    if ($size) {
+        echo ' [';
+        if ($size < 1024) {
+            echo number_format($size, 0, '.', ',') . 'b';
         } else {
-            $local_file = "distributions/$file";
+            echo number_format($size/1024, 0, '.', ',') . 'Kb';
         }
-
-        if(@file_exists($local_file.".asc")) {
-            echo " ";
-            $sig_link = "/distributions/$file.asc";
-            print_link($sig_link, "(sig)");
-        }
-
-        // Try to get the size of the file
-        $size = @filesize($local_file);
-
-        // Print out size in bytes (if size is
-        // less then 1Kb, or else in Kb)
-        if ($size) {
-            echo ' [';
-            if ($size < 1024) {
-                echo number_format($size, 0, '.', ',') . 'b';
-            } else {
-                echo number_format($size/1024, 0, '.', ',') . 'Kb';
-            }
-            echo ']';
-        }
-
+        echo ']';
     }
 }
 
