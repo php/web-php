@@ -119,7 +119,7 @@ function get_all_branches() {
 	}
 
 	krsort($branches);
-	foreach ($branches as $major => &$branch) {
+	foreach ($branches as &$branch) {
 		krsort($branch);
 	}
 
@@ -218,7 +218,7 @@ function get_eol_branches($always_include = null) {
 	}
 
 	krsort($branches);
-	foreach ($branches as $major => &$branch) {
+	foreach ($branches as &$branch) {
 		krsort($branch);
 	}
 
