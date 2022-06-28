@@ -59,15 +59,6 @@ function default_language($site = false)
     return (isset($MIRRORS[$site]) ? $MIRRORS[$site][6] : false);
 }
 
-// Returns true if the current (or specified) mirror
-// site is registered to have local search support
-function have_search($site = false)
-{
-    global $MIRRORS, $MYSITE;
-    if (!$site) { $site = $MYSITE; }
-    return (isset($MIRRORS[$site]) ? $MIRRORS[$site][5] : false);
-}
-
 // Returns the current (or specified)
 // mirror site's provider's name
 function mirror_provider($site = false)
