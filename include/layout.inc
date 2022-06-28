@@ -220,9 +220,9 @@ function download_link($file, $title)
     if ($size) {
         echo ' [';
         if ($size < 1024) {
-            echo number_format($size, 0, '.', ',') . 'b';
+            echo number_format($size) . 'b';
         } else {
-            echo number_format($size/1024, 0, '.', ',') . 'Kb';
+            echo number_format($size/1024) . 'Kb';
         }
         echo ']';
     }
