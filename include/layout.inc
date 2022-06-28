@@ -152,20 +152,9 @@ function make_submit($file, $alt = false, $align = false, $extras = false,
 }
 
 // Return a hiperlink to something within the site
-function make_link ($url, $linktext = false, $target = false, $extras = false)
+function make_link (string $url, string $linktext = ''): string
 {
-    return sprintf("<a href=\"%s\"%s%s>%s</a>",
-        $url,
-        ($target   ? ' target="' . $target . '"' : ''),
-        ($extras   ? ' ' . $extras               : ''),
-        ($linktext ?: $url)
-    );
-}
-
-// Print a hyperlink to something, within the site
-function print_link($url, $linktext = false, $target = false, $extras = false)
-{
-    echo make_link($url, $linktext, $target, $extras);
+    return sprintf("<a href=\"%s\">%s</a>", $url, $linktext ?: $url);
 }
 
 // make_popup_link()
@@ -196,7 +185,7 @@ function download_link($file, $title)
     $download_link = "/distributions/" . $file;
 
     // Print out the download link
-    print_link($download_link, $title);
+    echo make_link($download_link, $title);
 
     // We have a full path or a relative to the distributions dir
     if ($tmp = strrchr($file, "/")) {
@@ -208,7 +197,7 @@ function download_link($file, $title)
     if (@file_exists($local_file . ".asc")) {
         echo " ";
         $sig_link = "/distributions/$file.asc";
-        print_link($sig_link, "(sig)");
+        echo make_link($sig_link, "(sig)");
     }
 
     // Try to get the size of the file

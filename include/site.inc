@@ -15,9 +15,15 @@ const MIRROR_DOESNOTWORK = 3;
 
 $MIRRORS = [
     "https://www.php.net/" => [
-        "DEU", "MyraCloud", false,
-        "https://myracloud.com/en/", MIRROR_SPECIAL, true,
-        "en", MIRROR_OK],
+        "DEU",
+        "MyraCloud",
+        false,
+        "https://myracloud.com/en/",
+        MIRROR_SPECIAL,
+        true,
+        "en",
+        MIRROR_OK
+    ]
 ];
 
 /**
