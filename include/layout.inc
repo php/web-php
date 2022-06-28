@@ -83,7 +83,7 @@ function resize_image($img, $width = 1, $height = 1)
 
 // Return an <img> tag for a given image file available on the server
 function make_image($file, $alt = FALSE, $align = FALSE, $extras = FALSE,
-                    $dir = '/images', $border = 0, $addsize = TRUE)
+                    $dir = '/images', $addsize = TRUE)
 {
     // If no / was provided at the start of $dir, add it
     $webdir = $_SERVER['MYSITE'] . ($dir[0] == '/' ? '' : '/') . $dir;
@@ -118,9 +118,9 @@ function make_image($file, $alt = FALSE, $align = FALSE, $extras = FALSE,
 
 // Print an <img> tag out for a given file
 function print_image($file, $alt = FALSE, $align = FALSE, $extras = FALSE,
-                     $dir = '/images', $border = 0)
+                     $dir = '/images')
 {
-    echo make_image($file, $alt, $align, $extras, $dir, $border);
+    echo make_image($file, $alt, $align, $extras, $dir);
 }
 
 // Shortcut to usual news image printing (right floating
@@ -141,7 +141,7 @@ function make_submit($file, $alt = FALSE, $align = FALSE, $extras = FALSE,
     // Get an image without size info and convert the
     // border attribute to use CSS, as border="" is not
     // supported on <input> elements in [X]HTML
-    $img = make_image($file, $alt, $align, $extras, $dir, 0, FALSE);
+    $img = make_image($file, $alt, $align, $extras, $dir, FALSE);
     $img = str_replace(
         "border=\"$border\"",
         "style=\"border: {$border}px;\"",
