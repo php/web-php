@@ -188,10 +188,7 @@ function myphpnet_save()
 
 }
 
-// Default: Default search.
-// Lang: Not yet implemented (TODO: Compare google lang codes with ours. We did this for bing already, so maybe it's an easy fix)
-// TODO: Possible $default escaping issues
-function google_cse($default = '', $lang = 'en') {
+function google_cse() {
 ?>
 <noscript>
   php.net's search functionality requires JavaScript to operate. Please enable
