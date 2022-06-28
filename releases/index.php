@@ -169,7 +169,7 @@ site_footer(['sidebar' =>
 
 function recentEOLBranchesHTML(): string {
 	$eol = array();
-	foreach (get_eol_branches() as $major => $branches) {
+	foreach (get_eol_branches() as $branches) {
 		foreach ($branches as $branch => $detail) {
 			$detail_date = $detail['date'];
 			while (isset($eol[$detail_date])) $detail_date++;
