@@ -86,11 +86,13 @@ function format_interval($from, $to) {
 	return $eolPeriod;
 }
 
-function version_number_to_branch($version) {
+function version_number_to_branch(string $version): ?string {
 	$parts = explode('.', $version);
 	if (count($parts) > 1) {
 		return "$parts[0].$parts[1]";
 	}
+
+	return null;
 }
 
 function get_all_branches() {
