@@ -192,7 +192,7 @@ function print_popup_link($url, $linktext=false, $windowprops="", $target=false,
 }
 
 // Print a link for a downloadable file (including filesize)
-function download_link($file, $title, $showsize = TRUE, $mirror = '')
+function download_link($file, $title, $showsize = TRUE)
 {
     $download_link = "/distributions/" . $file;
 
