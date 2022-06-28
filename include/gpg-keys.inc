@@ -159,8 +159,6 @@ function gpg_key_get_branches(bool $activeOnly): array {
 }
 
 function gpg_key_show_keys(bool $activeOnly): void {
-    $branches = gpg_key_get_branches($activeOnly);
-
     foreach (gpg_key_get_branches($activeOnly) as $branch => $rms) {
         $keys = array_filter(
             array_map(function($rm) { return gpg_key_get($rm); }, $rms),
