@@ -383,7 +383,6 @@ else {?>
    <th class="subr">Answer to this simple question (SPAM challenge):<br>
    <?php $c = gen_challenge(); echo $c[3]; ?>?</th>
    <td><input type="text" name="answer" size="60" maxlength="10"> (Example: nine)</td>
-  </td>
   </tr>
   <tr>
    <th colspan="2">
