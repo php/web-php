@@ -126,7 +126,7 @@ site_footer(['sidebar' =>
   <a class="headline" href="/eol.php">End of Life Dates</a>
   <div class="body">
     <p>The most recent branches to reach end of life status are:</p>
-    <ul>' . recentEOLBranchesHTML(2) . '</ul>
+    <ul>' . recentEOLBranchesHTML() . '</ul>
   </div>
 </div>
 
@@ -167,9 +167,9 @@ site_footer(['sidebar' =>
 </div>
 ']);
 
-function recentEOLBranchesHTML(int $count): string {
+function recentEOLBranchesHTML(): string {
 	$eol = array();
-	foreach (get_eol_branches() as $major => $branches) {
+	foreach (get_eol_branches() as $branches) {
 		foreach ($branches as $branch => $detail) {
 			$detail_date = $detail['date'];
 			while (isset($eol[$detail_date])) $detail_date++;
