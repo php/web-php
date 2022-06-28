@@ -254,13 +254,11 @@ function clean_note($text)
     $text = highlight_php(trim($text), TRUE);
 
     // Turn urls into links
-    $text = preg_replace(
+    return preg_replace(
         '!((mailto:|(https?|ftp|nntp|news):\/\/).*?)(\s|<|\)|"|\\\\|\'|$)!',
         '<a href="\1" rel="nofollow" target="_blank">\1</a>\4',
         $text
     );
-
-    return $text;
 }
 
 function display_errors($errors)
