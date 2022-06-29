@@ -29,7 +29,7 @@ use phpweb\UserNotes\Sorter;
 // Print out all user notes for this manual page
 function manual_notes($notes) {
     // Get needed values
-    list($filename, $title) = $GLOBALS['PGI']['this'];
+    list($filename) = $GLOBALS['PGI']['this'];
 
     // Drop file extension from the name
     if (substr($filename, -4) == '.php') {
@@ -45,44 +45,38 @@ function manual_notes($notes) {
                    '&amp;redirect=' . $_SERVER['BASE_HREF'];
     $addnotesnippet = make_link(
         $addnotelink,
-        "<img src='/images/notes-add@2x.png' alt='add a note' width='12' height='12'> <small>add a note</small>"
+        "＋<small>add a note</small>"
     );
 
     $num_notes = count($notes);
+    $noteCountHtml = '';
     if ($num_notes) {
-        $num_notes = "<span class=\"count\">$num_notes note" . ($num_notes == 1 ? '' : 's') . "</span>";
-    } else {
-        $num_notes = null;
+        $noteCountHtml = "<span class=\"count\">$num_notes note" . ($num_notes == 1 ? '' : 's') . "</span>";
     }
 
     echo <<<END_USERNOTE_HEADER
-
 <section id="usernotes">
  <div class="head">
   <span class="action">{$addnotesnippet}</span>
-  <h3 class="title">User Contributed Notes {$num_notes}</h3>
+  <h3 class="title">User Contributed Notes {$noteCountHtml}</h3>
  </div>
 END_USERNOTE_HEADER;
 
     // If we have no notes, then inform the user
-    if (sizeof($notes) == 0) {
+    if ($num_notes === 0) {
         echo "\n <div class=\"note\">There are no user contributed notes for this page.</div>";
-    }
-
-    // If we have notes, print them out
-    else {
+    } else {
+        // If we have notes, print them out
         echo '<div id="allnotes">';
-
         foreach($notes as $note) {
             manual_note_display(
                 $note['xwhen'], $note['user'], $note['note'], $note['id'], $note['votes']
             );
         }
         echo "</div>\n";
-        echo "\n <div class=\"foot\">$addnotesnippet</div>\n";
+        echo "<div class=\"foot\">$addnotesnippet</div>\n";
     }
-
-    // #usernotes gets closed by the footer
+    echo "</section>";
 }
 // Get user notes from the appropriate text dump
 function manual_notes_load($id)
@@ -402,7 +396,6 @@ function manual_footer() {
     global $USERNOTES, $__RELATED;
 
     manual_notes($USERNOTES);
-    echo "</section>";
     $config = array(
         'related_menu' => $__RELATED['toc'],
         'related_menu_deprecated' => $__RELATED['toc_deprecated']
