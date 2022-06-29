@@ -21,6 +21,9 @@ class Sorter {
 
     private $ageWeight = 2;
 
+    /**
+     * @param UserNote[] $notes
+     */
     public function sort(array &$notes) {
         // First we make a pass over the data to get the min and max values
         // for data normalization.
@@ -36,80 +39,58 @@ class Sorter {
         $this->ageFactor *= $this->ageWeight;
 
         // Second we loop through to calculate sort priority using the above numbers
-        $this->calcSortPriority($notes);
+        $prio = $this->calcSortPriority($notes);
 
         // Third we sort the data.
-        uasort($notes, [$this, 'factorSort']);
+        uasort($notes, function ($a, $b) use ($prio) {
+            return $prio[$b->id] <=> $prio[$a->id];
+        });
     }
 
-    private function calcVotePriority(array $note) {
-        return ($note['score'] - $this->minVote) * $this->voteFactor + .3;
+    private function calcVotePriority(UserNote $note) {
+        return ($note->upvotes - $note->downvotes - $this->minVote) * $this->voteFactor + .3;
     }
 
-    private function calcRatingPriority(array $note) {
-        if ($note['total'] <= 2) {
-            return 0.5;
-        }
-
-        return $note['rating'];
+    private function calcRatingPriority(UserNote $note) {
+        return $note->upvotes + $note->downvotes <= 2 ? 0.5 : $this->calcRating($note);
     }
 
-    private function calcSortPriority(array &$notes) {
-        foreach ($notes as &$note) {
-            $prio = [
-                'vote' => $this->calcVotePriority($note) * $this->voteWeight,
-                'rating' => $this->calcRatingPriority($note) * $this->ratingWeight,
-                'age' => ($note['xwhen'] - $this->minAge) * $this->ageFactor
-            ];
-            $note['sort'] = $prio['value'] = array_sum($prio);
-        }
+    private function calcRating(UserNote $note) {
+        $totalVotes = $note->upvotes + $note->downvotes;
+        return $totalVotes > 0 ? $note->upvotes / $totalVotes : .5;
     }
 
-    /*
-     * Not sure why, but using `$b['sort'] - $a['sort']` does not seem to
-     * work properly.
+    /**
+     * @param UserNote[] $notes
      */
-    private function factorSort($a, $b) {
-        if ($a['sort'] < $b['sort']) {
-            return 1;
+    private function calcSortPriority(array $notes): array {
+        $prio = [];
+        foreach ($notes as $note) {
+            $prio[$note->id] = ($this->calcVotePriority($note) * $this->voteWeight)
+                + ($this->calcRatingPriority($note) * $this->ratingWeight)
+                + (($note->ts - $this->minAge) * $this->ageFactor);
         }
-
-        if ($a['sort'] == $b['sort']) {
-            return 0;
-        }
-
-        return -1;
+        return $prio;
     }
 
-    private function findMinMaxValues(array &$notes) {
-        $count = count($notes);
-        if ($count <= 0) {
+    /**
+     * @param UserNote[] $notes
+     */
+    private function findMinMaxValues(array $notes) {
+        if ($notes === []) {
             return;
         }
-        $note = array_shift($notes);
-        $note['score'] = $net = ($note['votes']['up'] - $note['votes']['down']);
-        $note['total'] = $totalVotes = ($note['votes']['up'] + $note['votes']['down']);
-        $note['rating'] = $totalVotes > 0
-            ? $note['votes']['up'] / $totalVotes
-            : .5;
 
-        $this->minVote = $this->maxVote = $net;
-        $this->minAge = $this->maxAge = $age = $note['xwhen'];
+        $first = array_shift($notes);
 
-        $first = $note;
+        $this->minVote = $this->maxVote = ($first->upvotes - $first->downvotes);
+        $this->minAge = $this->maxAge = $first->ts;
 
-        foreach ($notes as &$note) {
-            $note['score'] = $net = ($note['votes']['up'] - $note['votes']['down']);
-            $note['total'] = $totalVotes = ($note['votes']['up'] + $note['votes']['down']);
-            $note['rating'] = $totalVotes > 0
-                ? $note['votes']['up'] / $totalVotes
-                : .5;
-            $age = $note['xwhen'];
-            $this->maxVote = max($this->maxVote, $net);
-            $this->minVote = min($this->minVote, $net);
-            $this->maxAge = max($this->maxAge, $age);
-            $this->minAge = min($this->minAge, $age);
+        foreach ($notes as $note) {
+            $this->maxVote = max($this->maxVote, ($note->upvotes - $note->downvotes));
+            $this->minVote = min($this->minVote, ($note->upvotes - $note->downvotes));
+            $this->maxAge = max($this->maxAge, $note->ts);
+            $this->minAge = min($this->minAge, $note->ts);
         }
-        array_unshift($notes, $first);
     }
 }
