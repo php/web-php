@@ -1,6 +1,6 @@
 <?php
 
-namespace phpweb\Notes;
+namespace phpweb\UserNotes;
 
 class Sorter {
     private $maxVote;
