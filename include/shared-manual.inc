@@ -153,7 +153,7 @@ function manual_notes($notes) {
                    '&amp;redirect=' . $_SERVER['BASE_HREF'];
     $addnotesnippet = make_link(
         $addnotelink,
-        "<img src='/images/notes-add@2x.png' alt='add a note' width='12' height='12'> <small>add a note</small>"
+        "＋<small>add a note</small>"
     );
 
     $num_notes = count($notes);
