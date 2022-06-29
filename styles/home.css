@@ -59,7 +59,7 @@
 }
 
 .hero-btn-primary:hover, .hero-btn-primary:focus {
-  background-color: #465081;
+  background-color: #793862;
 }
 
 .hero-btn-secondary {
@@ -69,8 +69,9 @@
 }
 
 .hero-btn-secondary:hover, .hero-btn-secondary:focus {
-  background-color: #6773ad20;
-  border: 1px solid #6773ad;
+  background-color: #793862;
+  border-color: #793862;
+  color: #fff !important;
 }
 
 .hero-versions {
