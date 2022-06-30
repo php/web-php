@@ -248,6 +248,7 @@ $manual_page_moves = [
 
     // Refactored
     'regexp.reference' => 'regexp.introduction',
+    "security" => "manual/security",
 ];
 
 if (isset($manual_page_moves[$URI])) {
