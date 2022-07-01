@@ -8,7 +8,7 @@ function plus($a, $b) {
 }
 
 function gen_plus($a) {
-	return rand(0, 9 - $a);
+	return random_int(0, 9 - $a);
 }
 
 function minus($a, $b) {
@@ -16,7 +16,7 @@ function minus($a, $b) {
 }
 
 function gen_minus($a) {
-	return rand(0, $a);
+	return random_int(0, $a);
 }
 
 function print_infix($name, $a, $b) {
@@ -39,11 +39,11 @@ $challenges = array(
 // generate a challenge
 function gen_challenge() {
 	global $challenges, $nums;
-	$c = $challenges[rand(0, count($challenges)-1)];
+	$c = $challenges[random_int(0, count($challenges)-1)];
 
-	$a  = rand(0, 9);
+	$a  = random_int(0, 9);
 	$an = $nums[$a];
-	$b  = isset($c[2]) ? $c[2]($a) : rand(0, 9);
+	$b  = isset($c[2]) ? $c[2]($a) : random_int(0, 9);
 	$bn = $nums[$b];
 
 	return array($c[0], $an, $bn, $c[1]($c[0], $an, $bn));
