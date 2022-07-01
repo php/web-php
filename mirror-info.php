@@ -33,7 +33,7 @@ $exts = implode(',', get_loaded_extensions());
 
 echo implode('|', array(
     $MYSITE,            	// 0 : CNAME for mirror as accessed (CC, CC1, etc.)
-    phpversion(),       	// 1 : PHP version overview
+    PHP_VERSION,       	// 1 : PHP version overview
     $LAST_UPDATED,      	// 2 : Update problems
     $sqlite,            	// 3 : SQLite support?
     $mirror_stats,      	// 4 : Optional local stats support
