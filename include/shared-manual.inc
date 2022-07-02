@@ -391,7 +391,6 @@ CHANGE_LANG;
     return trim($r);
 }
 
-function manual_header(){}
 function manual_footer() {
     global $USERNOTES, $__RELATED;
 
