@@ -226,7 +226,7 @@ function i2c_realip()
     }
 
     // Return with the found IP or the remote address
-    return ($ip ? $ip : $_SERVER['REMOTE_ADDR']);
+    return $ip ?: $_SERVER['REMOTE_ADDR'];
 }
 
 /* vim: set et ts=4 sw=4 ft=php: : */

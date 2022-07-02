@@ -109,7 +109,7 @@ function make_image($file, $alt = FALSE, $align = FALSE, $extras = FALSE,
     return sprintf('<img src="%s/%s" alt="%s"%s%s%s>',
         $webdir,
         $file,
-        ($alt    ? $alt : ''),
+        ($alt ?: ''),
         $sizeparams,
         $align,
         ($extras ? ' ' . $extras              : '')
@@ -159,7 +159,7 @@ function make_link ($url, $linktext = FALSE, $target = FALSE, $extras = FALSE)
         $url,
         ($target   ? ' target="' . $target . '"' : ''),
         ($extras   ? ' ' . $extras               : ''),
-        ($linktext ? $linktext                   : $url)
+        ($linktext ?: $url)
     );
 }
 
@@ -175,12 +175,12 @@ function print_link($url, $linktext = FALSE, $target = FALSE, $extras = FALSE)
 function make_popup_link ($url, $linktext=false, $target=false, $windowprops="", $extras=false) {
     return sprintf("<a href=\"%s\" target=\"%s\" onclick=\"window.open('%s','%s','%s');return false;\"%s>%s</a>",
         htmlspecialchars($url, ENT_QUOTES | ENT_IGNORE),
-        ($target ? $target : "_new"),
+        ($target ?: "_new"),
         htmlspecialchars($url, ENT_QUOTES | ENT_IGNORE),
-        ($target ? $target : "_new"),
+        ($target ?: "_new"),
                 $windowprops,
         ($extras ? ' '.$extras : ''),
-        ($linktext ? $linktext : $url)
+        ($linktext ?: $url)
     );
 }
 
@@ -396,7 +396,7 @@ function news_archive_sidebar()
 function print_news($news, $dog, $max = 5, $onlyyear = null, $return = false) {
     $retval = array();
     $count = 0;
-    $news = $news ? $news : array(); // default to empty array (if no news)
+    $news = $news ?: array(); // default to empty array (if no news)
     foreach($news as $item) {
         $ok = false;
 
