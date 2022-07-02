@@ -230,8 +230,7 @@ function download_link($file, $title)
 
 function sect_to_file($string) {
     $string = strtolower($string);
-    $string = str_replace(' ','-',$string);
-    $string = str_replace('_','-',$string);
+    $string = str_replace([' ', '_'], '-', $string);
     $func = "function.$string.php";
     $chap = "ref.$string.php";
     $feat = "features.$string.php";

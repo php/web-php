@@ -36,8 +36,7 @@ if ($process) {
 
     // Convert all line-endings to unix format,
     // and don't allow out-of-control blank lines
-    $note = str_replace("\r\n", "\n", $note);
-    $note = str_replace("\r", "\n", $note);
+    $note = str_replace(["\r\n", "\r"], "\n", $note);
     $note = preg_replace("/\n{2,}/", "\n\n", $note);
 
     // Don't pass through example username
