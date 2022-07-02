@@ -329,13 +329,17 @@ function get_branch_support_state($branch) {
 
 		if ($now >= $security) {
 			return 'eol';
-		} elseif ($now >= $bug) {
-			return 'security';
-		} elseif ($now >= $initial) {
-			return 'stable';
-		} else {
-			return 'future';
 		}
+
+		if ($now >= $bug) {
+			return 'security';
+		}
+
+		if ($now >= $initial) {
+			return 'stable';
+		}
+
+		return 'future';
 	}
 
 	return null;
