@@ -22,7 +22,7 @@ class Sorter {
     private $ageWeight = 2;
 
     /**
-     * @param UserNote[] $notes
+     * @param array<string, UserNote> $notes
      */
     public function sort(array &$notes) {
         // First we make a pass over the data to get the min and max values
@@ -61,7 +61,7 @@ class Sorter {
     }
 
     /**
-     * @param UserNote[] $notes
+     * @param array<string, UserNote> $notes
      */
     private function calcSortPriority(array $notes): array {
         $prio = [];
@@ -74,7 +74,7 @@ class Sorter {
     }
 
     /**
-     * @param UserNote[] $notes
+     * @param array<string, UserNote> $notes
      */
     private function findMinMaxValues(array $notes) {
         if ($notes === []) {

@@ -30,7 +30,7 @@ use phpweb\UserNotes\UserNote;
 /**
  * Print out all user notes for this manual page
  *
- * @param UserNote[] $notes
+ * @param array<string, UserNote> $notes
  */
 function manual_notes($notes):void {
     // Get needed values
@@ -85,7 +85,7 @@ END_USERNOTE_HEADER;
 /**
  * Get user notes from the appropriate text dump
  *
- * @return UserNote[]
+ * @return array<string, UserNote>
  */
 function manual_notes_load(string $id): array
 {

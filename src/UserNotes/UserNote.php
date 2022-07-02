@@ -2,7 +2,7 @@
 
 namespace phpweb\UserNotes;
 
-class UserNote
+final class UserNote
 {
     /** @var string $id */
     public $id;
@@ -30,8 +30,7 @@ class UserNote
         string $text,
         int $upvotes = 0,
         int $downvotes = 0
-    )
-    {
+    ) {
         $this->id = $id;
         $this->sect = $sect;
         $this->rate = $rate;
