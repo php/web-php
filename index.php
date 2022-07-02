@@ -187,13 +187,13 @@ echo $content;
 // Prepare announcements.
 if (is_array($CONF_TEASER)) {
     $conftype = array(
-        'conference' => 'Upcoming conferences',
+        'conference' => 'Upcoming Conferences',
         'cfp'        => 'Conferences calling for papers',
     );
     $announcements = "";
     foreach($CONF_TEASER as $category => $entries) {
 		if ($entries) {
-            $announcements .= '<div class="panel">';
+            $announcements .= '<div class="panel upcoming-conferences">';
             $announcements .= '  <a href="/conferences" class="headline" title="' . $conftype[$category] . '">' . $conftype[$category] .'</a>';
             $announcements .= '<div class="body"><ul>';
             foreach (array_slice($entries, 0, 4) as $url => $title) {
@@ -211,8 +211,8 @@ if (is_array($CONF_TEASER)) {
 $SIDEBAR = <<< SIDEBAR_DATA
 
 $announcements
-    <p class='panel'><a href='/cal.php'>User Group Events</a></p>
-    <p class='panel'><a href='/thanks.php'>Special Thanks</a></p>
+    <p class='panel'><a href='/cal.php' class="headline">User Group Events</a></p>
+    <p class='panel'><a href='/thanks.php' class="headline">Special Thanks</a></p>
     <div class='panel social-media'>
       <span class='headline'>Social media</span>
       <div class='body'>

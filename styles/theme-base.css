@@ -576,11 +576,6 @@ pre.info {
     -moz-box-sizing:border-box;
     box-sizing:border-box;
 }
-#layout-content {
-  padding:1.5rem;
-  -moz-box-sizing:border-box;
-  box-sizing:border-box;
-}
 #layout-content:only-child {
   width:100%;
 }
@@ -1180,7 +1175,7 @@ fieldset {
   clear:both;
 }
 header.title {
-  margin-bottom:1.5rem;
+  margin-bottom: .75rem;
 }
 .title a {
   border:0;
@@ -1532,11 +1527,11 @@ div.soft-deprecation-notice blockquote.sidebar {
     transform: translateZ(0);
   }
   body {
-    margin:3.25rem 0 0;
+    margin: 4rem 0 0;
   }
   /* add a top-margin to all elements which get referenced by anchor-urls, so they are not covered by the fixed header */
   [id] {
-    scroll-margin-top: 3.25rem;
+    scroll-margin-top: 4rem;
   }
 
   #breadcrumbs {
@@ -1787,7 +1782,6 @@ aside.tips {
   -moz-box-sizing:border-box;
   box-sizing:border-box;
   padding:1.5rem;
-  color:#ccc;
 }
 aside.tips p {
   margin-top:0;
@@ -1796,17 +1790,18 @@ aside.tips .panel {
     margin:0 0 1.5rem;
 }
 aside.tips .panel .body {
-  font-size:.875rem;
-  margin-top:1.5rem;
+  font-size: .875rem;
+  margin-top: 1rem;
 }
 
 aside.tips .panel .headline {
   display: block;
-  border-bottom:0;
+  border-bottom: 0;
   line-height: 1.5rem;
-  font-size:1.125rem;
-  color:#E6E6E6;
+  font-size: 1.125rem;
   text-rendering: optimizeLegibility;
+  color: #666A8B;
+  font-weight: 500;
 }
 /* Announcement Area */
 
@@ -1847,11 +1842,15 @@ aside.tips div.inner {
   margin:0;
 }
 .newsentry {
-  margin: 0 0 3rem;
+  margin: 0 0 2rem;
   position: relative;
+  background: #f9f9f9;
+  border: 1px solid #e9e9e9;
+  border-radius: 5px;
+  padding: .5rem 1rem 1rem 1rem;
 }
-.newsentry h2 {
-  font-weight:normal;
+.newsentry p:last-of-type {
+    margin-bottom: 0;
 }
 .newsentry h2 .release-state {
   float: right;

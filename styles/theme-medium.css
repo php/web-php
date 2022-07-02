@@ -13,14 +13,10 @@
 
 
 html {
-  color: #CCC;
+  color: #2D2F3D;
 }
 #layout-content {
-  background:#F2F2F2;
-  color:#2D2F3D;
-}
-#layout-content:not(:only-child) {
-  border-right:.25rem solid #666;
+  color: #2D2F3D;
 }
 
 abbr {
@@ -29,7 +25,7 @@ abbr {
 
 h1, h2, h3, h4, h5, h6 {
   font-weight: 500;
-  color:#333
+  color: #2D2F3D;
 }
 header.title,
 h1:after,
@@ -39,8 +35,9 @@ h3:after {
   width:100%;
   content:" ";
   margin-top:-1px;
-  border-bottom:1px dotted;
+  border-bottom: 2px solid;
 }
+
 .title h1:after,
 .title h2:after,
 .title h3:after {
@@ -49,7 +46,7 @@ h3:after {
 
 a:link,
 a:visited {
-  color: #ccc;
+  color: #8C92BE;
 }
 #layout-content a:link,
 #layout-content a:visited {
@@ -107,11 +104,10 @@ h1.refname {
 }
 
 .title a,
-.title {
-  color: #793862;
-}
-.title time {
-  color: #333;
+.title time,
+.title,
+.title a:visited {
+  color: #666A8B !important;
 }
 
 .methodname b,
@@ -402,27 +398,24 @@ aside.tips div.border {
 aside.tips h3 {
   color:#E6E6E6;
 }
-aside.tips a {
-  color:#ccc;
-  border-bottom:1px dotted #666;
-}
 aside.tips .panel > a:after,
 aside.tips .panel > span:after {
   content:" ";
   display:block;
-  border-bottom:1px dotted #666;
+  border-bottom: 2px solid #666A8B;
+  padding-top: .5rem;
 }
 aside.tips .panel > a {
   display:block;
   border-bottom: none;
 }
 aside.tips .panel > a:hover:after {
-  border-color:#AE508D;
+  border-color: #666A8B;
 }
 aside.tips a:hover,
 aside.tips a:focus {
-  color:#AE508D;
-  border-color:#AE508D;
+  color: #666A8B;
+  border-color: #666A8B;
 }
 
 .soft-deprecation-notice {
