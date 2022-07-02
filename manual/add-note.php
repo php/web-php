@@ -341,7 +341,7 @@ else {
 if (empty($_POST['user'])) { $_POST['user'] = "user@example.com"; }
 
 // There is no section to add note to
-if (!isset($_POST['sect']) || !isset($_POST['redirect'])) {
+if (!isset($_POST['sect'], $_POST['redirect'])) {
     echo '<p class="formerror">To add a note, you must click on the "Add Note" button (the plus sign)  ',
          'on the bottom of a manual page so we know where to add the note!</p>';
 }
