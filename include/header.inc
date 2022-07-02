@@ -115,7 +115,7 @@ if (!isset($config["languages"])) {
 
 <nav id="head-nav" class="navbar navbar-fixed-top">
   <div class="navbar-inner clearfix">
-    <a href="/" class="brand"><img src="/images/logos/php-logo.svg" width="48" height="24" alt="php"></a>
+    <a href="/" class="brand"><img src="/images/logos/php-logo-white.svg" alt="PHP Logo"></a>
     <div id="mainmenu-toggle-overlay"></div>
     <input type="checkbox" id="mainmenu-toggle">
     <ul class="nav">
@@ -181,9 +181,17 @@ if (!isset($config["languages"])) {
 
 
 <?php if (!empty($config['intro'])):?>
-<div id="intro" class="clearfix">
+<div id="intro" class="clearfix intro">
   <div class="container">
     <?php echo $config['intro'];?>
+  </div>
+</div>
+<?php endif;?>
+
+<?php if (!empty($config['subintro'])):?>
+<div id="subintro" class="clearfix subintro">
+  <div class="container">
+    <?php echo $config['subintro'];?>
   </div>
 </div>
 <?php endif;?>

@@ -3,23 +3,72 @@
 
 /* Hero */
 
-#intro .container {
+.intro .container {
   padding: 0 24px;
+}
+
+.intro {
+    background-image: url(/images/hero.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top center;
+}
+
+.subintro {
+    background: #2D2F3D;
+}
+.subintro-text {
+    color: #FFFFFF;
+    margin: 1rem 1.5rem;
+    letter-spacing: .5px;
+    line-height: 1.75;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.subintro-text p:last-of-type {
+    margin-bottom: 0;
 }
 
 .hero {
   width: 100%;
   flex: none;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: 32px 0;
+  flex-direction: row;
+  align-items: end;
+  margin: 2rem 0;
+  gap: 5rem
+}
+
+.hero > * {
+    z-index: 10;
+}
+
+.hero-logo-container {
+    overflow: visible;
+    position: relative;
+}
+
+.hero-logo-container::before {
+    z-index: 1;
+    content: "";
+    position: absolute;
+    height: 100%;
+    top: 0;
+    left: -5000px;
+    right: 0;
+    transform: skew(-15deg);
+    background: rgba(45, 47, 61, .7);
+    border-radius: 10px;
 }
 
 .hero-logo {
+  position: relative;
+  z-index: 10;
   width: 100%;
   max-width: 240px;
-  margin-bottom: 24px;
+    margin: 1.5rem;
 }
 
 .hero-text {
@@ -34,6 +83,11 @@
   font-weight: 500;
 }
 
+.hero-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 .hero-actions {
   width: 100%;
   display: flex;
@@ -43,19 +97,18 @@
 
 .hero-btn {
   box-sizing: border-box;
-  padding: 16px 32px;
-  margin-bottom: 12px;
+  padding: .75rem 1rem;
   border-radius: 30px;
   text-align: center;
   display: inline-block;
-  border: none;
-  font-size: 20px;
+  border: 2px solid #BBC3FF;
+  font-size: 1.15rem;
   transition: background-color 0.2s;
 }
 
 .hero-btn-primary {
-  background-color: #4f5b93;
-  color: #fff !important;
+  background-color: #8C92BE;
+  color: #FFFFFF !important;
 }
 
 .hero-btn-primary:hover, .hero-btn-primary:focus {
@@ -63,9 +116,8 @@
 }
 
 .hero-btn-secondary {
-  background-color: transparent;
-  color: #b8c0e9 !important;
-  border: 1px solid #6773ad;
+  background-color: rgba(0, 0, 0, .3);
+  color: #FFFFFF !important;
 }
 
 .hero-btn-secondary:hover, .hero-btn-secondary:focus {
@@ -82,30 +134,45 @@
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
+  gap: 1rem;
 }
 
 .hero-version {
-  margin-bottom: 12px;
+    margin-bottom: 0;
+    background: #2D2F3D;
+    border-radius: 200rem;
+    padding: .3rem 1rem .3rem .5rem;
+    display: flex;
+    align-items: center;
+    gap: .5rem;
 }
 
 .hero-versions a.notes {
-    font-size:.875rem;
     white-space:nowrap;
 }
 
 .hero-versions a {
-    color:#ccc;
-    border:0;
+    color: #FFFFFF;
+    font-size: .9rem;
+    border: 0;
 }
 
-.hero-versions a:hover,
-.hero-versions a:focus {
-  border-bottom:1px dotted;
+.hero-versions a:hover {
+    color: #BBC3FF;
 }
 
-.hero-version-link {
-    color:#fff !important;
+.hero-versions .hero-version-link {
+    color: #2D2F3D;
     display: inline-block;
+    background: #BBC3FF;
+    border-radius: 2rem;
+    padding: .1rem .5rem;
+    line-height: normal;
+}
+
+.hero-versions .hero-version-link:hover {
+    color: #FFFFFF;
+    background: #8C92BE;
 }
 
 @media (min-width: 540px) {
@@ -134,11 +201,6 @@
 
   .hero-version {
     font-size: 1.125rem;
-    padding: 0 1.5rem;
-  }
-
-  .hero-version:not(:first-child) {
-    border-left: 1px dotted #666;
   }
 
   .hero-text {
@@ -163,7 +225,7 @@ p.archive {
 
 @media (min-width: 768px) {
     .navbar-search,
-    #intro .background,
+    .intro .background,
     aside.tips,
     .layout-menu {
         width: 25%;

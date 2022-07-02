@@ -13,12 +13,11 @@
 
 
 html {
-  background: #333 url('/images/bg-texture-00.svg');
   color: #CCC;
 }
 #layout-content {
   background:#F2F2F2;
-  color:#333;
+  color:#2D2F3D;
 }
 #layout-content:not(:only-child) {
   border-right:.25rem solid #666;
@@ -202,9 +201,7 @@ div.warning a:focus {
 }
 .navbar .brand,
 .navbar .nav > li > a {
-  color: #E2E4EF;
-  border:0;
-  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+  color: #BBC3FF;
 }
 .navbar .brand:hover,
 .navbar .nav > li > a:hover,
@@ -224,13 +221,14 @@ div.warning a:focus {
   background-color: #4F5B93;
 }
 .navbar .navbar-search .search-query {
-  background-color: #fff;
-  color: #333;
-  text-shadow: 0 1px 0 #fff;
-  border:0;
-  border-radius:2px;
-  box-shadow: inset 0 1px 2px rgba(0,0,0,.2);
+  background: #FFFFFF url('data:image/svg+xml;utf-8,<svg class="w-6 h-6" fill="none" stroke="silver" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>') no-repeat center right .5rem;
+  background-size: 1rem;
+  color: #2D2F3D;
+  border: 3px solid #BBC3FF;
+  border-radius: 20rem;
 }
+
+
 .navbar .navbar-search .search-query:focus {
   box-shadow: inset 0 1px 2px rgba(0,0,0,.2);
 }
@@ -244,15 +242,10 @@ div.warning a:focus {
   color: #999;
 }
 .navbar {
-  border-color:#4F5B93;
-  background:#8892BF;
-  box-shadow: 0 .25em .25em  rgba(0,0,0,.1);
+  background: #2D2F3D;
 }
 .navbar .brand {
   color: #fff;
-}
-.navbar a {
-  text-shadow: 0 1px 0 #fff;
 }
 
 /* }}} */

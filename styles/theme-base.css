@@ -174,7 +174,7 @@ textarea {
   float: left;
   display: block;
   height: 1.5rem;
-  padding: .75rem .75rem .75rem 1.5rem;
+  padding: 1.25rem .75rem 1.25rem 1.5rem;
 }
 .navbar .brand:hover,
 .navbar .brand:focus {
@@ -183,7 +183,7 @@ textarea {
 .navbar-search {
   position: relative;
   float: left;
-  margin-top: .770rem;
+  margin-top: 1.02rem;
   margin-bottom: 0;
   width:100%;
   -moz-box-sizing:border-box;
@@ -191,7 +191,7 @@ textarea {
 }
 .navbar-search .search-query {
   margin-bottom: 0;
-  padding: .125rem .5rem;
+  padding: .25rem .5rem;
   -moz-box-sizing: border-box;
   box-sizing:border-box;
   width:100%;
@@ -211,7 +211,7 @@ textarea {
 }
 .navbar .nav > li > a {
   float: none;
-  padding: .75rem;
+  padding: 1.25rem .85rem;
 }
 .navbar .nav > li > a > img {
   vertical-align: middle;
@@ -236,13 +236,14 @@ textarea {
   display: inherit !important;
 }
 
-#intro .container {
+.intro .container,
+.subintro .container {
   margin:0 auto;
   display:table;
 }
 
 @media (max-width: 480px) {
-  #intro .download-php { margin: 0; }
+  .intro .download-php { margin: 0; }
 }
 @media (min-width: 768px) and (max-width: 979px) {
   .hidden-desktop {
@@ -391,15 +392,16 @@ hr {
 
 .navbar .brand img {
     padding:0;
-    opacity:.75;
     border: 0;
+    width: 48px;
+    height: 24px;
 }
 .navbar a {
     border:0;
 }
 
 .navbar {
-  border-bottom:.25rem solid;
+  border-bottom: 0;
   overflow: visible;
   *position: relative;
   *z-index: 2;
@@ -565,8 +567,7 @@ pre.info {
 
 
 #layout {
-    margin: 0 auto 1.5rem;
-    clear:both;
+    margin: 1.5rem auto;
 }
 
 .layout-menu {
@@ -1541,7 +1542,7 @@ div.soft-deprecation-notice blockquote.sidebar {
     display:block;
   }
   .navbar-search,
-  #intro .background,
+  .intro .background,
   aside.tips,
   .layout-menu {
     width: 25%;
@@ -1574,7 +1575,8 @@ div.soft-deprecation-notice blockquote.sidebar {
 }
 
 @media (min-width: 1200px) {
-  #intro .container,
+  .intro .container,
+  .subintro .container,
   .navbar-inner,
   #breadcrumbs-inner,
   #goto div,
@@ -1585,7 +1587,8 @@ div.soft-deprecation-notice blockquote.sidebar {
   }
 }
 @media (min-width: 1500px) {
-  #intro .container,
+  .intro .container,
+  .subintro .container,
   .navbar-inner,
   #breadcrumbs-inner,
   #goto div,
@@ -1617,7 +1620,7 @@ div.soft-deprecation-notice blockquote.sidebar {
     margin-right: 0;
   }
 
-  #intro .download-php {
+  .intro .download-php {
     margin: 0 !important;
   }
 
@@ -1703,13 +1706,14 @@ div.soft-deprecation-notice blockquote.sidebar {
   .navbar-search .search-query {
     width:100%;
   }
-  #intro .container {
+  .intro .container,
+  .subintro .container {
     position:relative;
   }
 }
 
 @media (max-width: 979px) and (min-width: 768px) {
-  #intro .download-php a.btn-pop {
+  .intro .download-php a.btn-pop {
     padding-right:.375rem;
   }
 }

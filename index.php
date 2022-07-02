@@ -94,12 +94,14 @@ $content .= "</div>";
 
 $intro = <<<EOF
   <div class="hero">
-    <img class="hero-logo" src="/images/logos/php-logo-white.svg" width="240" height="120">
-    <p class="hero-text">A <strong>popular general-purpose scripting language</strong> that is especially suited to web development.<br />Fast, flexible and pragmatic, PHP powers everything from your blog to the most popular websites in the world.</p>
-    <div class="hero-actions">
-      <a href="/releases/8.1/index.php" class="hero-btn hero-btn-primary">What's new in 8.1</a>
-      <a href="/downloads.php" class="hero-btn hero-btn-secondary">Download</a>
+    <div class="hero-logo-container">
+        <img class="hero-logo" src="/images/logos/php-logo-white.svg" width="240" height="120" alt="PHP Logo">
     </div>
+    <div class="hero-content">
+        <div class="hero-actions">
+          <a href="/releases/8.1/index.php" class="hero-btn hero-btn-primary">What's new in 8.1</a>
+          <a href="/downloads.php" class="hero-btn hero-btn-secondary">Download</a>
+        </div>
 EOF;
 
 $intro .= "<ul class='hero-versions'>\n";
@@ -111,12 +113,20 @@ foreach ($active_branches as $major => $releases) {
         $version = $release['version'];
         list($major, $minor, $_) = explode('.', $version);
         $intro .= "
-            <li class='hero-version'><a class='hero-version-link' href='/downloads.php#v$version'>$version</a> &middot; <a class='notes' href='/ChangeLog-$major.php#$version'>Changelog</a> &middot; <a class='notes' href='/migration$major$minor'>Upgrading</a></li>\n";
+            <li class='hero-version'><a class='hero-version-link' href='/downloads.php#v$version'>$version</a><a class='notes' href='/ChangeLog-$major.php#$version'>Changelog</a> &middot; <a class='notes' href='/migration$major$minor'>Upgrading</a></li>\n";
     }
 }
 $intro .= "</ul>\n";
 $intro .= <<<EOF
+    </div>
   </div>
+EOF;
+
+$subintro = <<<EOF
+    <div class="subintro-text">
+        <img src="/images/elephpants/elephpant.svg" alt="Elephpant" width="55" height="38">
+        <p>A <strong>popular general-purpose scripting language</strong> that is especially suited to web development.<br />Fast, flexible and pragmatic, PHP powers everything from your blog to the most popular websites in the world.</p>
+    </div>
 EOF;
 
 // Write out common header
@@ -150,6 +160,7 @@ site_header("Hypertext Preprocessor",
         ),
         'css' => array('home.css'),
         'intro' => $intro,
+        'subintro' => $subintro,
         'meta_tags' => <<<META
 <meta name="Description" content="{$meta_description}" />
 
