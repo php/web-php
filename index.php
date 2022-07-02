@@ -185,7 +185,7 @@ if (is_array($CONF_TEASER)) {
             $announcements .= '  <a href="/conferences" class="headline" title="' . $conftype[$category] . '">' . $conftype[$category] .'</a>';
             $announcements .= '<div class="body"><ul>';
             foreach (array_slice($entries, 0, 4) as $url => $title) {
-                $title = preg_replace("'([A-Za-z0-9])([\s\:\-\,]*?)call for(.*?)$'i", "$1", $title);
+                $title = preg_replace("'([A-Za-z0-9])([\s:\-,]*?)call for(.*?)$'i", "$1", $title);
                 $announcements .= "<li><a href='$url' title='$title'>$title</a></li>";
             }
             $announcements .= '</ul></div>';
