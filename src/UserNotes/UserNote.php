@@ -2,6 +2,10 @@
 
 namespace phpweb\UserNotes;
 
+/**
+ * @readonly
+ * @psalm-immutable
+ */
 final class UserNote
 {
     /** @var string $id */
