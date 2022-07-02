@@ -213,6 +213,7 @@ textarea {
   float: none;
   padding: 1.25rem .85rem;
 }
+
 .navbar .nav > li > a > img {
   vertical-align: middle;
 }
@@ -1604,7 +1605,11 @@ div.soft-deprecation-notice blockquote.sidebar {
 }
 
 
-@media (max-width:767px) {
+@media (max-width: 767px) {
+  .navbar .nav > li > a {
+      padding: .5rem .5rem;
+  }
+
   .navbar-fixed-top .container {
     width:auto;
   }
@@ -1649,7 +1654,6 @@ div.soft-deprecation-notice blockquote.sidebar {
 
   .navbar .brand {
     float: left;
-    margin-bottom: 0.5rem;
   }
 
   .navbar-search {
@@ -1659,7 +1663,6 @@ div.soft-deprecation-notice blockquote.sidebar {
 
   .navbar .brand img {
     display: block;
-    margin-left: 12px;
   }
 
   .navbar .nav {
