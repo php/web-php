@@ -222,7 +222,6 @@ function get_shortname($page) {
             if (strpos($shorturl, $section) === 0) {
                 // We can make it even shorter
                 return substr($shorturl, strlen($section), -4);
-                break;
             }
         }
 
