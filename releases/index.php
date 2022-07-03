@@ -20,7 +20,7 @@ if (isset($_GET["serialize"]) || isset($_GET["json"])) {
 		if (isset($RELEASES[$ver])) {
 			$combinedReleases = array_replace_recursive($RELEASES, $OLDRELEASES);
 
-			$max = intval($_GET['max'] ?? 1);
+			$max = (int) ($_GET['max'] ?? 1);
 			if ($max == -1) {
 				$max = PHP_INT_MAX;
 			}

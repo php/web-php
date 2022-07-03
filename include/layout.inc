@@ -52,7 +52,7 @@ function highlight_php_trimmed($code, $return = false)
 {
     $code = "<?php\n" . $code;
     $highlighted_code = highlight_php($code, true);
-    $highlighted_code = preg_replace("/\&lt;\?php(\<br \/\>)+/", '', $highlighted_code, 1);
+    $highlighted_code = preg_replace("!&lt;\?php(<br />)+!", '', $highlighted_code, 1);
 
     if ($return) { return $highlighted_code; }
     echo $highlighted_code;
@@ -109,7 +109,7 @@ function make_image($file, $alt = FALSE, $align = FALSE, $extras = FALSE,
     return sprintf('<img src="%s/%s" alt="%s"%s%s%s>',
         $webdir,
         $file,
-        ($alt    ? $alt : ''),
+        ($alt ?: ''),
         $sizeparams,
         $align,
         ($extras ? ' ' . $extras              : '')
@@ -159,7 +159,7 @@ function make_link ($url, $linktext = FALSE, $target = FALSE, $extras = FALSE)
         $url,
         ($target   ? ' target="' . $target . '"' : ''),
         ($extras   ? ' ' . $extras               : ''),
-        ($linktext ? $linktext                   : $url)
+        ($linktext ?: $url)
     );
 }
 
@@ -175,12 +175,12 @@ function print_link($url, $linktext = FALSE, $target = FALSE, $extras = FALSE)
 function make_popup_link ($url, $linktext=false, $target=false, $windowprops="", $extras=false) {
     return sprintf("<a href=\"%s\" target=\"%s\" onclick=\"window.open('%s','%s','%s');return false;\"%s>%s</a>",
         htmlspecialchars($url, ENT_QUOTES | ENT_IGNORE),
-        ($target ? $target : "_new"),
+        ($target ?: "_new"),
         htmlspecialchars($url, ENT_QUOTES | ENT_IGNORE),
-        ($target ? $target : "_new"),
+        ($target ?: "_new"),
                 $windowprops,
         ($extras ? ' '.$extras : ''),
-        ($linktext ? $linktext : $url)
+        ($linktext ?: $url)
     );
 }
 
@@ -230,8 +230,7 @@ function download_link($file, $title)
 
 function sect_to_file($string) {
     $string = strtolower($string);
-    $string = str_replace(' ','-',$string);
-    $string = str_replace('_','-',$string);
+    $string = str_replace([' ', '_'], '-', $string);
     $func = "function.$string.php";
     $chap = "ref.$string.php";
     $feat = "features.$string.php";
@@ -255,7 +254,7 @@ function clean_note($text)
 
     // Turn urls into links
     return preg_replace(
-        '!((mailto:|(https?|ftp|nntp|news):\/\/).*?)(\s|<|\)|"|\\\\|\'|$)!',
+        '!((mailto:|(https?|ftp|nntp|news)://).*?)(\s|<|\)|"|\\\\|\'|$)!',
         '<a href="\1" rel="nofollow" target="_blank">\1</a>\4',
         $text
     );
@@ -397,7 +396,7 @@ function news_archive_sidebar()
 function print_news($news, $dog, $max = 5, $onlyyear = null, $return = false) {
     $retval = array();
     $count = 0;
-    $news = $news ? $news : array(); // default to empty array (if no news)
+    $news = $news ?: array(); // default to empty array (if no news)
     foreach($news as $item) {
         $ok = false;
 

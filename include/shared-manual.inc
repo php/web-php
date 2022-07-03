@@ -129,7 +129,7 @@ function manual_note_display($date, $name, $text, $id, $votes = array('up'=>0,'d
 
     // Calculate note rating by up/down votes
     $vote = $votes['up'] - $votes['down'];
-    $p = floor(($votes['up'] / (($votes['up'] + $votes['down']) ? $votes['up'] + $votes['down'] : 1)) * 100);
+    $p = floor(($votes['up'] / (($votes['up'] + $votes['down']) ?: 1)) * 100);
     $rate = !$p && !($votes['up'] + $votes['down']) ? "no votes..." : "$p% like this...";
 
     // Vote User Notes Div

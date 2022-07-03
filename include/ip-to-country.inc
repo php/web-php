@@ -95,12 +95,12 @@ function i2c_search_in_index($ip)
 
     // Read in granularity from index file and
     // convert current IP to something useful
-    $granularity = intval(fgets($dbidx, 64));
+    $granularity = (int) fgets($dbidx, 64);
     if (!$granularity) {
         // The file is empty (demo file)
         return false;
     }
-    $ip_chunk = intval($ip / $granularity);
+    $ip_chunk = (int) ($ip / $granularity);
 
     // Loop till we can read the file
     while (!feof($dbidx)) {
@@ -217,7 +217,7 @@ function i2c_realip()
     }
 
     // Return with the found IP or the remote address
-    return ($ip ? $ip : $_SERVER['REMOTE_ADDR']);
+    return $ip ?: $_SERVER['REMOTE_ADDR'];
 }
 
 /* vim: set et ts=4 sw=4 ft=php: : */

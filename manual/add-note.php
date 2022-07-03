@@ -36,8 +36,7 @@ if ($process) {
 
     // Convert all line-endings to unix format,
     // and don't allow out-of-control blank lines
-    $note = str_replace("\r\n", "\n", $note);
-    $note = str_replace("\r", "\n", $note);
+    $note = str_replace(["\r\n", "\r"], "\n", $note);
     $note = preg_replace("/\n{2,}/", "\n\n", $note);
 
     // Don't pass through example username
@@ -135,17 +134,14 @@ if ($process) {
     }
 
     // There was an error, or a preview is needed
-    else {
+    // If there was an error, print out
+    if ($error) { echo "<p class=\"formerror\">$error</p>\n"; }
 
-        // If there was an error, print out
-        if ($error) { echo "<p class=\"formerror\">$error</p>\n"; }
-
-        // Print out preview of note
-        echo '<p>This is what your entry will look like, roughly:</p>';
-        echo '<div id="usernotes">';
-        manual_note_display(time(), $user, $note, FALSE);
-        echo '</div><br><br>';
-    }
+    // Print out preview of note
+    echo '<p>This is what your entry will look like, roughly:</p>';
+    echo '<div id="usernotes">';
+    manual_note_display(time(), $user, $note, FALSE);
+    echo '</div><br><br>';
 }
 
 // Any needed variable was missing => display instructions
@@ -345,7 +341,7 @@ else {
 if (empty($_POST['user'])) { $_POST['user'] = "user@example.com"; }
 
 // There is no section to add note to
-if (!isset($_POST['sect']) || !isset($_POST['redirect'])) {
+if (!isset($_POST['sect'], $_POST['redirect'])) {
     echo '<p class="formerror">To add a note, you must click on the "Add Note" button (the plus sign)  ',
          'on the bottom of a manual page so we know where to add the note!</p>';
 }

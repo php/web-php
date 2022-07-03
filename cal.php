@@ -222,11 +222,10 @@ function date_for_recur($recur, $day, $bom, $eom)
     }
 
     // ${recur}th to last $day of the month
-    else {
-        $eomd = date("w",$eom) + 1;
-        $days = (($eomd - $day + 7) % 7) + ((abs($recur) - 1) * 7);
-        return mktime(0,0,1, date("m",$bom)+1, -$days, date("Y",$bom));
-    }
+    $eomd = date("w",$eom) + 1;
+    $days = (($eomd - $day + 7) % 7) + ((abs($recur) - 1) * 7);
+
+    return mktime(0, 0, 1, date("m", $bom)+1, -$days, date("Y", $bom));
 }
 
 // Display a <div> for each of the events that are on a given day

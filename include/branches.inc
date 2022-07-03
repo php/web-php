@@ -162,7 +162,7 @@ function get_active_branches($include_recent_eols = true) {
  * must be in $RELEASES _and_ must be the full version number, not the branch:
  * ie provide array('5.3.29'), not array('5.3'). */
 function get_eol_branches($always_include = null) {
-	$always_include = $always_include ? $always_include : array();
+	$always_include = $always_include ?: array();
 	$branches = array();
 	$now = new DateTime;
 
@@ -329,13 +329,17 @@ function get_branch_support_state($branch) {
 
 		if ($now >= $security) {
 			return 'eol';
-		} elseif ($now >= $bug) {
-			return 'security';
-		} elseif ($now >= $initial) {
-			return 'stable';
-		} else {
-			return 'future';
 		}
+
+		if ($now >= $bug) {
+			return 'security';
+		}
+
+		if ($now >= $initial) {
+			return 'stable';
+		}
+
+		return 'future';
 	}
 
 	return null;

@@ -71,7 +71,9 @@ function mirror_provider($site = FALSE)
 
     if (isset($MIRRORS[$site])) {
        return $MIRRORS[$site][1];
-    } elseif (isset($MIRRORS[$_SERVER['SERVER_ADDR']])) {
+    }
+
+    if (isset($MIRRORS[$_SERVER['SERVER_ADDR']])) {
        return $MIRRORS[$_SERVER['SERVER_ADDR']][1];
     }
 
@@ -87,7 +89,9 @@ function mirror_provider_url($site = FALSE)
 
     if (isset($MIRRORS[$site])) {
         return $MIRRORS[$site][3];
-    } elseif (isset($MIRRORS[$_SERVER['SERVER_ADDR']])) {
+    }
+
+    if (isset($MIRRORS[$_SERVER['SERVER_ADDR']])) {
         return $MIRRORS[$_SERVER['SERVER_ADDR']][3];
     }
 
@@ -103,7 +107,9 @@ function mirror_type($site = FALSE)
 
     if (isset($MIRRORS[$site])) {
         return $MIRRORS[$site][4];
-    } elseif (isset($MIRRORS[$_SERVER['SERVER_ADDR']])) {
+    }
+
+    if (isset($MIRRORS[$_SERVER['SERVER_ADDR']])) {
         return $MIRRORS[$_SERVER['SERVER_ADDR']][4];
     }
 
@@ -138,12 +144,12 @@ function mirror_setcookie($name, $content, $exptime)
     if (!headers_sent()) {
         if (is_official_mirror()) {
             return setcookie($name, $content, time() + $exptime, '/', '.php.net');
-        } else {
-            return setcookie($name, $content, time() + $exptime, '/');
         }
-    } else {
-        return FALSE;
+
+        return setcookie($name, $content, time() + $exptime, '/');
     }
+
+    return FALSE;
 }
 
 // Use this function to write out proper headers on
@@ -216,7 +222,6 @@ function get_shortname($page) {
             if (strpos($shorturl, $section) === 0) {
                 // We can make it even shorter
                 return substr($shorturl, strlen($section), -4);
-                break;
             }
         }
 

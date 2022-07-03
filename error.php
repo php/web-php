@@ -116,7 +116,7 @@ if (preg_match("!^distributions/.*!", $URI, $array)) {
 
 // ============================================================================
 // The trailing slash only causes problems from now on
-$URI = preg_replace('!/+$!', '', $URI);
+$URI = rtrim($URI, '/');
 
 // ============================================================================
 // Some nice URLs for getting something for download
@@ -700,4 +700,3 @@ mirror_redirect(
 /*
  * vim: set et ts=4 sw=4 ft=php: :
  */
-?>

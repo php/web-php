@@ -84,8 +84,7 @@ foreach($entries as $module => $items) {
 echo "</ul>\n<!-- }}} --></section>\n\n";
 
 if ($changelog) {
-	$contents = ob_get_contents();
-	ob_end_clean();
+	$contents = ob_get_clean();
 
 	$log = file_get_contents($changelog);
 	if (empty($log)) {

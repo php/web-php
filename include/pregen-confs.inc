@@ -36,5 +36,4 @@ $CONF_TEASER = array (
     'http://php.net/conferences/index.php#id2015-06-19-1' => 'ZendCon 2015',
     'http://php.net/conferences/index.php#id2015-06-01-1' => 'PHP Barcelona Conference 2015',
   ),
-)
-?>
+);

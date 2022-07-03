@@ -39,10 +39,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
       }
       else {
         $r = json_decode($r);
-        if (json_last_error() == JSON_ERROR_NONE && isset($r->status) && $r->status && isset($r->votes)) {
+        if (isset($r->status, $r->votes) && $r->status) {
           $response["success"] = true;
           $response["update"] = (int)$r->votes;
-        } elseif (json_last_error() == JSON_ERROR_NONE && isset($r->status, $r->message) && $r->status == false) {
+        } elseif (isset($r->status, $r->message) && !$r->status) {
           $response["success"] = false;
           $response["msg"] = $r->message;
         } else {
@@ -79,7 +79,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
           );
           if (($r = posttohost($master_url, $data)) !== null && strpos($r,"failed to open socket to") === false) {
             $r = json_decode($r);
-            if (json_last_error() == JSON_ERROR_NONE && isset($r->status) && $r->status && isset($r->votes)) {
+            if (isset($r->status, $r->votes) && $r->status) {
               $thankyou = true;
             } else {
               $error = "Invalid request.";

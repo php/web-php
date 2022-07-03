@@ -45,9 +45,9 @@ class Sorter {
     private function calcRatingPriority(array $note) {
         if ($note['total'] <= 2) {
             return 0.5;
-        } else {
-            return $note['rating'];
         }
+
+        return $note['rating'];
     }
 
 
@@ -70,11 +70,13 @@ class Sorter {
     private function factorSort($a, $b) {
         if ($a['sort'] < $b['sort']) {
             return 1;
-        } elseif ($a['sort'] == $b['sort']) {
-            return 0;
-        } else {
-            return -1;
         }
+
+        if ($a['sort'] == $b['sort']) {
+            return 0;
+        }
+
+        return -1;
     }
 
 
