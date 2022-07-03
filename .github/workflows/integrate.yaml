@@ -27,7 +27,7 @@ jobs:
         uses: "shivammathur/setup-php@v2"
         with:
           coverage: "none"
-          extensions: "none, curl, json, mbstring, tokenizer"
+          extensions: "none, curl, dom, json, mbstring, tokenizer, xml, xmlwriter"
           php-version: "${{ matrix.php-version }}"
 
       - name: "Set up problem matchers for PHP"
@@ -73,14 +73,30 @@ jobs:
         uses: "shivammathur/setup-php@v2"
         with:
           coverage: "none"
-          extensions: "none, curl"
+          extensions: "none, curl, dom, json, mbstring, tokenizer, xml, xmlwriter"
           php-version: "${{ matrix.php-version }}"
 
       - name: "Set up problem matchers for PHP"
         run: "echo \"::add-matcher::${{ runner.tool_cache }}/php.json\""
 
+      - name: "Set up problem matchers for phpunit/phpunit"
+        run: "echo \"::add-matcher::${{ runner.tool_cache }}/phpunit.json\""
+
+      - name: "Determine composer cache directory"
+        run: "echo \"COMPOSER_CACHE_DIR=$(composer config cache-dir)\" >> $GITHUB_ENV"
+
+      - name: "Cache dependencies installed with composer"
+        uses: "actions/cache@v3"
+        with:
+          path: "${{ env.COMPOSER_CACHE_DIR }}"
+          key: "php-${{ matrix.php-version }}-composer-${{ hashFiles('composer.lock') }}"
+          restore-keys: "php-${{ matrix.php-version }}-composer-"
+
+      - name: "Install dependencies with composer"
+        run: "composer install --ansi --no-interaction --no-progress"
+
       - name: "Start built-in web server for PHP"
         run: "php -S ${{ env.HTTP_HOST }} .router.php &"
 
-      - name: "Run tests"
-        run: "php tests/run-tests.php -j3 -q --show-diff"
+      - name: "Run phpunit/phpunit"
+        run: "vendor/bin/phpunit --colors=always --configuration=tests/phpunit.xml"

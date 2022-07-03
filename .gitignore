@@ -1,3 +1,4 @@
+/.build/
 /vendor/
 
 backend/mirror.gif
