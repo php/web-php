@@ -366,19 +366,19 @@ else {?>
    </td>
   </tr>
   <tr>
-   <th class="subr">Your email address (or name):</th>
-   <td><input type="text" name="user" size="60" maxlength="40" value="<?php echo clean($_POST['user']); ?>"></td>
+   <th class="subr"><label for="form-user">Your email address (or name)</label>:</th>
+   <td><input id="form-user" type="text" name="user" size="60" maxlength="40" required value="<?php echo clean($_POST['user']); ?>"></td>
   </tr>
   <tr>
-   <th class="subr">Your notes:</th>
-   <td><textarea name="note" rows="20" cols="60" wrap="virtual"><?php if (isset($_POST['note'])) { echo clean($_POST['note']); } ?></textarea>
+   <th class="subr"><label for="form-note">Your notes</label>:</th>
+   <td><textarea id="form-note" name="note" rows="20" cols="60" wrap="virtual" required maxlength="4095" minlength="32"><?php if (isset($_POST['note'])) { echo clean($_POST['note']); } ?></textarea>
    <br>
   </td>
   </tr>
   <tr>
-   <th class="subr">Answer to this simple question (SPAM challenge):<br>
+   <th class="subr"><label for="form-answer">Answer to this simple question (SPAM challenge)</label>:<br>
    <?php $c = gen_challenge(); echo $c[3]; ?>?</th>
-   <td><input type="text" name="answer" size="60" maxlength="10"> (Example: nine)</td>
+   <td><input id="form-answer" type="text" name="answer" size="60" maxlength="10" required> (Example: nine)</td>
   </tr>
   <tr>
    <th colspan="2">

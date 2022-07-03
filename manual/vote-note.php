@@ -114,8 +114,8 @@ else {
   <div style="background-color: #f5f5ff; border: 1px solid black; padding: 15px; width: 90%; margin: auto;">
    <form action="" method="post">
     <div>
-    <p>Please answer this simple SPAM challenge: <strong><?php $c = gen_challenge(); echo $c[3]; ?></strong>?<br>
-    <input type="text" name="challenge" maxlength="10"> (Example: nine)</p>
+    <p><label for="form-challenge">Please answer this simple SPAM challenge</label>: <strong><?php $c = gen_challenge(); echo $c[3]; ?></strong>?<br>
+    <input id="form-challenge" type="text" name="challenge" maxlength="10" required> (Example: nine)</p>
     <p><input type="submit" value="Vote" name="votenote"></p>
     </div>
     <input type="hidden" name="func" value="<?php echo $c[0]; ?>">
@@ -166,8 +166,8 @@ if (!$headerset) {
   <div style="background-color: #f5f5ff; border: 1px solid black; padding: 15px; width: 90%; margin: auto;">
    <form action="" method="post">
     <div>
-    <p>Please answer this simple SPAM challenge: <strong><?php $c = gen_challenge(); echo $c[3]; ?></strong>?<br>
-    <input type="text" name="challenge" maxlength="10"> (Example: nine)</p>
+    <p><label for="form-challenge">Please answer this simple SPAM challenge</label>: <strong><?php $c = gen_challenge(); echo $c[3]; ?></strong>?<br>
+    <input id="form-challenge" type="text" name="challenge" maxlength="10" required> (Example: nine)</p>
     <p><input type="submit" value="Vote" name="votenote"></p>
     </div>
     <input type="hidden" name="func" value="<?php echo $c[0]; ?>">
