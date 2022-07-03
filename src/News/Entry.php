@@ -21,9 +21,6 @@ class Entry {
 
 
 	protected $title = '';
-	public function getTitle(): string {
-		return $this->title;
-	}
 
 	public function setTitle(string $title): self {
 		$this->title = $title;
@@ -49,9 +46,7 @@ class Entry {
 		}
 		return $this;
 	}
-	public function getCategories(): array {
-		return $this->categories;
-	}
+
 	public function isConference(): bool {
 		return (bool)array_intersect($this->categories, ['cfp', 'conferences']);
 	}
@@ -60,9 +55,6 @@ class Entry {
 	public function setConfTime(int $time): self {
 		$this->conf_time = $time;
 		return $this;
-	}
-	public function getConfTime(): int {
-		return $this->conf_time;
 	}
 
 	protected $image = [];
@@ -80,9 +72,6 @@ class Entry {
 		];
 		return $this;
 	}
-	public function getImage(): array {
-		return $this->image;
-	}
 
 	protected $content = '';
 	public function setContent(string $content): self {
@@ -91,9 +80,6 @@ class Entry {
 		}
 		$this->content = $content;
 		return $this;
-	}
-	public function getContent(): string {
-		return $this->content;
 	}
 
 	protected $id = '';
