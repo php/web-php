@@ -60,10 +60,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $error = "Incorrect answer! Please try again.";
       }
       else {
-        if ($_REQUEST['vote'] == 'up') {
+        if ($_REQUEST['vote'] === 'up') {
           $N[$_REQUEST['id']]['votes']['up']++;
         }
-        elseif ($_REQUEST['vote'] == 'down') {
+        elseif ($_REQUEST['vote'] === 'down') {
           $N[$_REQUEST['id']]['votes']['down']++;
         }
         $update = $N[$_REQUEST['id']]['votes']['up'] - $N[$_REQUEST['id']]['votes']['down'];

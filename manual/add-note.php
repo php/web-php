@@ -40,7 +40,7 @@ if ($process) {
     $note = preg_replace("/\n{2,}/", "\n\n", $note);
 
     // Don't pass through example username
-    if ($user == "user@example.com") {
+    if ($user === "user@example.com") {
         $user = "Anonymous";
     }
 
@@ -85,7 +85,7 @@ if ($process) {
     }
 
     // No error was found, and the submit action is required
-    if (!$error && strtolower($_POST['action']) != "preview") {
+    if (!$error && strtolower($_POST['action']) !== "preview") {
 
         $redirip = $_SERVER['HTTP_X_FORWARDED_FOR'] ??
                    ($_SERVER['HTTP_VIA'] ?? '');

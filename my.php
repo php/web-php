@@ -55,7 +55,7 @@ if (isset($_POST['urlsearch'])) {
 }
 
 if (isset($_POST["showug"])) {
-    myphpnet_showug($_POST["showug"] == "enable");
+    myphpnet_showug($_POST["showug"] === "enable");
 }
 
 // Prepare mirror array
