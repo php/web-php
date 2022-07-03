@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<phpunit
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="../vendor/phpunit/phpunit/phpunit.xsd"
+    beStrictAboutChangesToGlobalState="true"
+    beStrictAboutCoverageMetadata="true"
+    beStrictAboutOutputDuringTests="true"
+    beStrictAboutTestsThatDoNotTestAnything="true"
+    bootstrap="../src/autoload.php"
+    cacheDirectory="../.build/phpunit/cache/"
+    cacheResult="true"
+    colors="true"
+    columns="max"
+    displayDetailsOnIncompleteTests="true"
+    displayDetailsOnSkippedTests="true"
+    displayDetailsOnTestsThatTriggerDeprecations="true"
+    displayDetailsOnTestsThatTriggerErrors="true"
+    displayDetailsOnTestsThatTriggerNotices="true"
+    displayDetailsOnTestsThatTriggerWarnings="true"
+    executionOrder="random"
+    requireCoverageMetadata="true"
+    stopOnError="false"
+    stopOnFailure="false"
+    stopOnIncomplete="false"
+    stopOnSkipped="false"
+>
+    <coverage includeUncoveredFiles="true"/>
+    <source>
+        <include>
+            <directory suffix=".php">../src/</directory>
+        </include>
+    </source>
+    <testsuites>
+        <testsuite name="end-to-end">
+            <directory suffix=".phpt">.</directory>
+        </testsuite>
+    </testsuites>
+</phpunit>
