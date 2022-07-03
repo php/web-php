@@ -23,7 +23,7 @@ $PGI = array(); $SIDEBAR_DATA = '';
 // User note display functions
 // =============================================================================
 
-require_once __DIR__ . '/../src/UserNotes/Sorter.php';
+require_once __DIR__ . '/../autoload.php';
 use phpweb\UserNotes\Sorter;
 
 // Print out all user notes for this manual page
