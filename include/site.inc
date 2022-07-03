@@ -2,16 +2,16 @@
 
 // Define some constants, and $MIRRORS array
 // Mirror type constants
-define('MIRROR_DOWNLOAD', 0);
-define('MIRROR_STANDARD', 1);
-define('MIRROR_SPECIAL',  2);
-define('MIRROR_VIRTUAL',  3);
+const MIRROR_DOWNLOAD = 0;
+const MIRROR_STANDARD = 1;
+const MIRROR_SPECIAL = 2;
+const MIRROR_VIRTUAL = 3;
 
 // Mirror status constants
-define('MIRROR_OK',          0);
-define('MIRROR_NOTACTIVE',   1);
-define('MIRROR_OUTDATED',    2);
-define('MIRROR_DOESNOTWORK', 3);
+const MIRROR_OK = 0;
+const MIRROR_NOTACTIVE = 1;
+const MIRROR_OUTDATED = 2;
+const MIRROR_DOESNOTWORK = 3;
 
 $MIRRORS = array(
     "https://www.php.net/" => array(
