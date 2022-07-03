@@ -1,5 +1,7 @@
 --TEST--
 sort no notes
+--INI--
+precision=-1
 --FILE--
 <?php
 require_once __DIR__ . "/../src/UserNotes/Sorter.php";

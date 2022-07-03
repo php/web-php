@@ -1,5 +1,7 @@
 --TEST--
 sort some notes
+--INI--
+precision=-1
 --FILE--
 <?php
 require_once __DIR__ . "/../src/UserNotes/Sorter.php";
@@ -49,9 +51,9 @@ array(4) {
     ["total"]=>
     int(17)
     ["rating"]=>
-    float(0.82352941176471)
+    float(0.8235294117647058)
     ["sort"]=>
-    float(87.411764705882)
+    float(87.41176470588235)
   }
   [3]=>
   array(7) {
@@ -66,9 +68,9 @@ array(4) {
     ["total"]=>
     int(17)
     ["rating"]=>
-    float(0.82352941176471)
+    float(0.8235294117647058)
     ["sort"]=>
-    float(87.411764705882)
+    float(87.41176470588235)
   }
   [1]=>
   array(7) {
@@ -85,7 +87,7 @@ array(4) {
     ["rating"]=>
     float(0.5)
     ["sort"]=>
-    float(45.492313503873)
+    float(45.49231350387337)
   }
   [0]=>
   array(7) {
