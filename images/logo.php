@@ -1,6 +1,6 @@
 <?php
 
-$refresh = isset($_GET['refresh']) ? true : false;
+$refresh = isset($_GET['refresh']);
 
 // Be 100% sure the timezone is set
 if (ini_get('date.timezone') === '' && function_exists('date_default_timezone_set')) {
