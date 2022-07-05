@@ -10,7 +10,7 @@ $notes = [];
 
 $sorter = new phpweb\UserNotes\Sorter();
 $sorter->sort($notes);
-var_dump(array_map(function (array $note) {
+var_dump(array_map(function (array $note): array {
     return [
         "ts" => $note["xwhen"],
         "upvotes" => $note["votes"]["up"],
