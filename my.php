@@ -10,7 +10,7 @@ $langs   = $ACTIVE_ONLINE_LANGUAGES;
 $options = array();
 
 // We have post data, and it is an available language
-if (isset($_POST['my_lang']) && isset($langs[$_POST['my_lang']])) {
+if (isset($_POST['my_lang'], $langs[$_POST['my_lang']])) {
 
     // Set the language preference
     myphpnet_language($_POST['my_lang']);
@@ -46,8 +46,8 @@ foreach ($langs as $code => $name) {
 }
 
 // Assemble form from collected data
-$langpref = "<select name=\"my_lang\">\n" .
-            join("", $options) . "</select>\n";
+$langpref = "<select id=\"form-my_lang\" name=\"my_lang\">\n" .
+            implode("", $options) . "</select>\n";
 
 // Save URL shortcut fallback setting
 if (isset($_POST['urlsearch'])) {
@@ -55,7 +55,7 @@ if (isset($_POST['urlsearch'])) {
 }
 
 if (isset($_POST["showug"])) {
-    myphpnet_showug($_POST["showug"] == "enable");
+    myphpnet_showug($_POST["showug"] === "enable");
 }
 
 // Prepare mirror array
@@ -106,7 +106,7 @@ site_header("My PHP.net", array("current" => "community"));
 // Data for the language settings table
 $langinfo = array(
 
-    "Your preferred language" =>
+    "<label for=\"form-my_lang\">Your preferred language</label>" =>
     $langpref,
 
     "Last seen language" =>
@@ -176,18 +176,18 @@ if (i2c_valid_country()) {
 </p>
 
 <div class="indent">
- Your setting: <input type="radio" name="urlsearch" value="quickref"
+ Your setting: <input id="form-urlsearch-quickref" type="radio" name="urlsearch" value="quickref"
 <?php
 $type = myphpnet_urlsearch();
 if ($type === MYPHPNET_URL_NONE || $type === MYPHPNET_URL_FUNC) {
     echo ' checked="checked"';
 }
-echo '> Function list search <input type="radio" name="urlsearch" value="manual"';
+echo '> <label for="form-urlsearch-quickref">Function list search</label> <input id="form-urlsearch-manual" type="radio" name="urlsearch" value="manual"';
 if ($type === MYPHPNET_URL_MANUAL) {
     echo ' checked="checked"';
 }
 ?>
-> PHP Documentation search
+> <label for="form-urlsearch-manual">PHP Documentation search</label>
 </div>
 
 <br>

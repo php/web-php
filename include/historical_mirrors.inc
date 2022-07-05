@@ -87,4 +87,3 @@ $historical_mirrors = array(
 	array("USA", "us3.php.net", "C7 Data Centers", "https://www.c7.com/"),
 	array("VNM", "vn1.php.net", "DigiStar Co., Ltd", "http://www.digistar.vn/"),
 );
-?>

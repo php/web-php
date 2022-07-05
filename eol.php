@@ -17,7 +17,7 @@ $BRANCH_NOTES = array(
 	'5.2' => '<a href="/migration53">A guide is available for migrating from PHP 5.2 to 5.3.</a>',
 	'5.1' => '<a href="/migration52">A guide is available for migrating from PHP 5.1 to 5.2.</a>',
 	'5.0' => '<a href="/migration51">A guide is available for migrating from PHP 5.0 to 5.1.</a>',
-	'4.4' => '<a href="/migration5">A guide is available for migrating from PHP 4 to PHP 5.0.</a><br>The end of life for PHP 4.4 also marks the end of life for PHP 4 as a whole.',
+	'4.4' => '<a href="/migration5">A guide is available for migrating from PHP 4 to PHP 5.0.</a>',
 );
 
 site_header('Unsupported Branches');
@@ -61,7 +61,7 @@ site_header('Unsupported Branches');
 							</a>
 						</td>
 						<td>
-							<?php echo isset($BRANCH_NOTES[$branch]) ? $BRANCH_NOTES[$branch] : ''; ?>
+							<?php echo $BRANCH_NOTES[$branch] ?? ''; ?>
 					</td>
 				</tr>
 			<?php endforeach ?>

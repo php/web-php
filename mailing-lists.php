@@ -55,7 +55,7 @@ if (isset($_POST['action'])) {
     }
 
     // Check if any mailing list was selected
-    else if (empty($_POST['maillist'])) {
+    elseif (empty($_POST['maillist'])) {
         $error = "You need to select at least one mailing list to subscribe to." .
                  "<br>Please go back and try again.";
     }
@@ -304,7 +304,7 @@ if (isset($_POST['action'])) {
   );
 
 // Print out a table for a given list array
-function output_lists_table($mailing_lists)
+function output_lists_table($mailing_lists): void
 {
     echo '<table cellpadding="5" border="0" class="standard mailing-lists">', "\n";
     foreach ($mailing_lists as $listinfo) {
@@ -325,7 +325,7 @@ function output_lists_table($mailing_lists)
             echo '<td>' . ($larchive ? "<a href=\"http://marc.info/?l={$larchive}\">yes</a>" : 'n/a') . '</td>';
             echo '<td>' . ($listinfo[6] ? "<a href=\"news://news.php.net/{$listinfo[6]}\">yes</a> <a href=\"http://news.php.net/group.php?group={$listinfo[6]}\">http</a>" : 'n/a') . '</td>';
             echo '<td><input name="maillist" type="radio" value="' . $listinfo[0] . '"></td>';
-            echo '<td>' . ($listinfo[5] ? '<input name="maillist" type="radio" value="' . $listinfo[0] . '-digest">' : 'n/a' ) . '</td>';
+            echo '<td>' . ($listinfo[5] ? '<input name="maillist" type="radio" value="' . $listinfo[0] . '-digest">' : 'n/a') . '</td>';
             echo "</tr>\n";
         }
     }

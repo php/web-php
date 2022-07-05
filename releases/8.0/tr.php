@@ -2,8 +2,6 @@
 $_SERVER['BASE_PAGE'] = 'releases/8.0/tr.php';
 include_once __DIR__ . '/common.php';
 
-releases\php80\language_redirect('tr');
-
 releases\php80\common_header(
     'PHP 8.0, PHP dili için önemli bir güncellemedir. Optimizasyonlar ve yeni özellikler: Adlandırılmış ' .
     'Değişkenler, Union Types, Attributes, Kurucularda Özellik Tanımı, Match İfadesi, Nullsafe Operatorü, ' .

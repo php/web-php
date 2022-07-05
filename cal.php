@@ -86,8 +86,8 @@ if ($cm && $cy && !checkdate($cm,1,$cy)) {
 }
 
 // Give defaults for the month and day values if they were invalid
-if (!isset($cm) || $cm == 0) { $cm = date("m"); }
-if (!isset($cy) || $cy == 0) { $cy = date("Y"); }
+if (empty($cm)) { $cm = date("m"); }
+if (empty($cy)) { $cy = date("Y"); }
 
 // Start of the month date
 $date = mktime(0, 0, 1, $cm, 1, $cy);
@@ -222,15 +222,14 @@ function date_for_recur($recur, $day, $bom, $eom)
     }
 
     // ${recur}th to last $day of the month
-    else {
-        $eomd = date("w",$eom) + 1;
-        $days = (($eomd - $day + 7) % 7) + ((abs($recur) - 1) * 7);
-        return mktime(0,0,1, date("m",$bom)+1, -$days, date("Y",$bom));
-    }
+    $eomd = date("w",$eom) + 1;
+    $days = (($eomd - $day + 7) % 7) + ((abs($recur) - 1) * 7);
+
+    return mktime(0, 0, 1, date("m", $bom)+1, -$days, date("Y", $bom));
 }
 
 // Display a <div> for each of the events that are on a given day
-function display_events_for_day($day, $events)
+function display_events_for_day($day, $events): void
 {
     // For preservation of state in the links
     global $cm, $cy, $COUNTRY;
