@@ -495,7 +495,7 @@ div.elephpants img:focus {
 }
 .mirror .title img {
 	position: absolute;
-	right: 0px;
+	right: 0;
 }
 .mirror .title {
 	font-size: 1.4em;
