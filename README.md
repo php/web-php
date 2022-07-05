@@ -33,5 +33,5 @@ https://wiki.php.net/web/mirror
 
 ## Code requirements
 
-Code must function on a vanilla PHP 7.2 installation. 
+Code must function on a vanilla PHP 7.3 installation. 
 Please keep this in mind before filing a pull request.
