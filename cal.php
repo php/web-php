@@ -75,14 +75,14 @@ elseif ($cy && $cm && $cd) {
     // Wrong date specified
     else {
         $errors[] = "The specified date (".htmlentities("$cy/$cm/$cd", ENT_QUOTES | ENT_IGNORE, 'UTF-8').") was not valid.";
-        unset($cm, $cd, $cy);  
+        unset($cm, $cd, $cy);
     }
 }
 
 // Check if month and year is valid
 if ($cm && $cy && !checkdate($cm,1,$cy)) {
     $errors[] = "The specified year and month (".htmlentities("$cy, $cm", ENT_QUOTES | ENT_IGNORE, 'UTF-8').") are not valid.";
-    unset($cm, $cy); 
+    unset($cm, $cy);
 }
 
 // Give defaults for the month and day values if they were invalid
