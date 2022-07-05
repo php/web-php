@@ -20,7 +20,7 @@ if (isset($_GET["serialize"]) || isset($_GET["json"])) {
 		if (isset($RELEASES[$ver])) {
 			$combinedReleases = array_replace_recursive($RELEASES, $OLDRELEASES);
 
-			$max = intval($_GET['max'] ?? 1);
+			$max = (int) ($_GET['max'] ?? 1);
 			if ($max == -1) {
 				$max = PHP_INT_MAX;
 			}
@@ -126,7 +126,7 @@ site_footer(['sidebar' =>
   <a class="headline" href="/eol.php">End of Life Dates</a>
   <div class="body">
     <p>The most recent branches to reach end of life status are:</p>
-    <ul>' . recentEOLBranchesHTML(2) . '</ul>
+    <ul>' . recentEOLBranchesHTML() . '</ul>
   </div>
 </div>
 
@@ -167,9 +167,9 @@ site_footer(['sidebar' =>
 </div>
 ']);
 
-function recentEOLBranchesHTML(int $count): string {
+function recentEOLBranchesHTML(): string {
 	$eol = array();
-	foreach (get_eol_branches() as $major => $branches) {
+	foreach (get_eol_branches() as $branches) {
 		foreach ($branches as $branch => $detail) {
 			$detail_date = $detail['date'];
 			while (isset($eol[$detail_date])) ++$detail_date;
@@ -186,7 +186,7 @@ function mk_rel(int $major,
 				/* bool | array */ $announcement,
 				array $source,
 				array $windows,
-				bool $museum) {
+				bool $museum): void {
 	printf("<a id=\"%s\"></a>\n<h2>%1\$s</h2>\n<ul>\n <li>Released: %s</li>\n <li>Announcement: ",
 	       ($pos = strpos($ver, " ")) ? substr($ver, 0, $pos) : $ver,
 	       $date);
@@ -248,4 +248,3 @@ function mk_rel(int $major,
 	echo "</li>\n";
 	echo "</ul>\n";
 }
-

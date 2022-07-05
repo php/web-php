@@ -48,7 +48,6 @@ $setup["toc"] = $TOC;
 $setup["parents"] = $PARENTS;
 manual_setup($setup);
 
-manual_header();
 ?>
 <div id="index" class="set">
  <h1 class="title">PHP Manual</h1>

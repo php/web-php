@@ -2,7 +2,6 @@
 $_SERVER['BASE_PAGE'] = 'releases/8.0/zh.php';
 include_once __DIR__ . '/common.php';
 
-releases\php80\language_redirect('zh');
 releases\php80\common_header(
     'PHP 8.0 是 PHP 语言的一个主版本更新。它包含了很多新功能与优化项，' .
     '包括命名参数、联合类型、注解、构造器属性提升、match 表达式、' .

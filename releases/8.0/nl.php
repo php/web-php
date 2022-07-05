@@ -2,8 +2,6 @@
 $_SERVER['BASE_PAGE'] = 'releases/8.0/nl.php';
 include_once __DIR__ . '/common.php';
 
-releases\php80\language_redirect('nl');
-
 releases\php80\common_header(
     'PHP 8.0 is een omvangrijke update van de PHP programmeertaal. ' .
     'Het bevat veel nieuwe mogelijkheden en optimalisaties, waaronder ' .

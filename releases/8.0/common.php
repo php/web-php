@@ -3,12 +3,6 @@
 namespace releases\php80;
 include_once __DIR__ . '/../../include/prepend.inc';
 
-function language_redirect(string $currentLang): void {
-    // We don't use the general language selection of php.net,
-    // so soldier on with this one.
-    return;
-}
-
 function common_header(string $description): void {
     global $MYSITE;
 
@@ -72,4 +66,3 @@ function language_chooser(string $currentLang): void {
       </form>
 ';
 }
-

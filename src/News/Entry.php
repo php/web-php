@@ -1,6 +1,6 @@
 <?php
 
-namespace phpweb\news;
+namespace phpweb\News;
 
 class Entry {
 	const CATEGORIES = [
@@ -11,7 +11,7 @@ class Entry {
 	];
 
 	const WEBROOT = "https://www.php.net";
-	const PHPWEB = __DIR__ . '/../';
+	const PHPWEB = __DIR__ . '/../../';
 	const ARCHIVE_FILE_REL = 'archive/archive.xml';
 	const ARCHIVE_FILE_ABS = self::PHPWEB . self::ARCHIVE_FILE_REL;
 	const ARCHIVE_ENTRIES_REL = 'archive/entries/';

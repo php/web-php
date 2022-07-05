@@ -7,7 +7,7 @@ site_header("Submit an Event", array("current" => "community"));
 
 // No errors, processing depends on POST data
 $errors = array();
-$process = (boolean) count($_POST);
+$process = [] !== $_POST;
 
 // Avoid E_NOTICE errors on incoming vars if not set
 $vars = array(
@@ -15,7 +15,7 @@ $vars = array(
     'emonth', 'eyear', 'recur', 'recur_day'
 );
 foreach ($vars as $varname) {
-    if (!isset($_POST[$varname]) || empty($_POST[$varname])) {
+    if (empty($_POST[$varname])) {
         $_POST[$varname] = 0;
     }
 }
@@ -265,7 +265,7 @@ if ($process && count($errors) === 0) {
 site_footer();
 
 // Display an option list with one selected
-function display_options($options, $current)
+function display_options($options, $current): void
 {
     foreach ($options as $k => $v) {
         echo '<option value="', $k, '"',

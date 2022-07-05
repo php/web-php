@@ -102,11 +102,11 @@ function language_choose_code()
         $browser_accept = explode(",", $_SERVER['HTTP_ACCEPT_LANGUAGE']);
 
         // Go through all language preference specs
-        for ($i = 0; $i < count($browser_accept); $i++) {
+        foreach ($browser_accept as $value) {
             // The language part is either a code or a code with a quality
             // We cannot do anything with a * code, so it is skipped
             // If the quality is missing, it is assumed to be 1 according to the RFC
-            if (preg_match("!([a-z-]+)(;q=([0-9\\.]+))?!", trim($browser_accept[$i]), $found)) {
+            if (preg_match("!([a-z-]+)(;q=([0-9\\.]+))?!", trim($value), $found)) {
                 $quality = (isset($found[3]) ? (float) $found[3] : 1.0);
                 $browser_langs[] = array($found[1], $quality);
             }

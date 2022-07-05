@@ -9,8 +9,8 @@ include      __DIR__ . '/spam_challenge.php';
 $error = false;
 $thankyou = false;
 $headerset = false;
-$BACKpage = htmlspecialchars(isset($_REQUEST['page']) ? $_REQUEST['page'] : '');
-$BACKid = htmlspecialchars(isset($_REQUEST['id']) ? $_REQUEST['id'] : '');
+$BACKpage = htmlspecialchars($_REQUEST['page'] ?? '');
+$BACKid = htmlspecialchars($_REQUEST['id'] ?? '');
 $link = "/{$BACKpage}#{$BACKid}";
 $master_url = "https://main.php.net/entry/user-notes-vote.php";
 
@@ -39,10 +39,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
       }
       else {
         $r = json_decode($r);
-        if (json_last_error() == JSON_ERROR_NONE && isset($r->status) && $r->status && isset($r->votes)) {
+        if (isset($r->status, $r->votes) && $r->status) {
           $response["success"] = true;
           $response["update"] = (int)$r->votes;
-        } elseif (json_last_error() == JSON_ERROR_NONE && isset($r->status) && isset($r->message) && $r->status == false) {
+        } elseif (isset($r->status, $r->message) && !$r->status) {
           $response["success"] = false;
           $response["msg"] = $r->message;
         } else {
@@ -54,16 +54,16 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     echo json_encode($response);
     exit;
   }
-  elseif (!empty($_REQUEST['id']) && !empty($_REQUEST['page']) && ($N = manual_notes_load($_REQUEST['page'])) && array_key_exists($_REQUEST['id'], $N) && !empty($_REQUEST['vote']) && ($_REQUEST['vote'] === 'up' || $_REQUEST['vote'] === 'down')) {
+  if (!empty($_REQUEST['id']) && !empty($_REQUEST['page']) && ($N = manual_notes_load($_REQUEST['page'])) && array_key_exists($_REQUEST['id'], $N) && !empty($_REQUEST['vote']) && ($_REQUEST['vote'] === 'up' || $_REQUEST['vote'] === 'down')) {
     if (!empty($_POST['challenge']) && !empty($_POST['func']) || empty($_POST['arga']) || empty($_POST['argb'])) {
       if (!test_answer($_POST['func'], $_POST['arga'], $_POST['argb'], $_POST['challenge'])) {
         $error = "Incorrect answer! Please try again.";
       }
       else {
-        if ($_REQUEST['vote'] == 'up') {
+        if ($_REQUEST['vote'] === 'up') {
           ++$N[$_REQUEST['id']]['votes']['up'];
         }
-        elseif ($_REQUEST['vote'] == 'down') {
+        elseif ($_REQUEST['vote'] === 'down') {
           ++$N[$_REQUEST['id']]['votes']['down'];
         }
         $update = $N[$_REQUEST['id']]['votes']['up'] - $N[$_REQUEST['id']]['votes']['down'];
@@ -79,7 +79,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
           );
           if (($r = posttohost($master_url, $data)) !== null && strpos($r,"failed to open socket to") === false) {
             $r = json_decode($r);
-            if (json_last_error() == JSON_ERROR_NONE && isset($r->status) && $r->status && isset($r->votes)) {
+            if (isset($r->status, $r->votes) && $r->status) {
               $thankyou = true;
             } else {
               $error = "Invalid request.";
@@ -114,8 +114,8 @@ else {
   <div style="background-color: #f5f5ff; border: 1px solid black; padding: 15px; width: 90%; margin: auto;">
    <form action="" method="post">
     <div>
-    <p>Please answer this simple SPAM challenge: <strong><?php $c = gen_challenge(); echo $c[3]; ?></strong>?<br>
-    <input type="text" name="challenge" maxlength="10"> (Example: nine)</p>
+    <p><label for="form-challenge">Please answer this simple SPAM challenge</label>: <strong><?php $c = gen_challenge(); echo $c[3]; ?></strong>?<br>
+    <input id="form-challenge" type="text" name="challenge" maxlength="10" required> (Example: nine)</p>
     <p><input type="submit" value="Vote" name="votenote"></p>
     </div>
     <input type="hidden" name="func" value="<?php echo $c[0]; ?>">
@@ -166,8 +166,8 @@ if (!$headerset) {
   <div style="background-color: #f5f5ff; border: 1px solid black; padding: 15px; width: 90%; margin: auto;">
    <form action="" method="post">
     <div>
-    <p>Please answer this simple SPAM challenge: <strong><?php $c = gen_challenge(); echo $c[3]; ?></strong>?<br>
-    <input type="text" name="challenge" maxlength="10"> (Example: nine)</p>
+    <p><label for="form-challenge">Please answer this simple SPAM challenge</label>: <strong><?php $c = gen_challenge(); echo $c[3]; ?></strong>?<br>
+    <input id="form-challenge" type="text" name="challenge" maxlength="10" required> (Example: nine)</p>
     <p><input type="submit" value="Vote" name="votenote"></p>
     </div>
     <input type="hidden" name="func" value="<?php echo $c[0]; ?>">

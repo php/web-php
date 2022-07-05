@@ -42,16 +42,6 @@ $groups = array(
 
 // We have a form submitted, and the user have read all the comments
 if (count($_POST) && (!isset($_POST['purpose']) || !is_array($_POST['purpose']) || !count($_POST['purpose']))) {
-    // Clean up incoming POST vars
-    if (function_exists('get_magic_quotes_gpc') && @get_magic_quotes_gpc()) {
-        foreach ($_POST as $k => $v) {
-            $cleaned[$k] = stripslashes($v);
-        }
-    }
-    else {
-        $cleaned = $_POST;
-    }
-
     // No error found yet
     $error = "";
 
@@ -71,7 +61,7 @@ if (count($_POST) && (!isset($_POST['purpose']) || !is_array($_POST['purpose']) 
     if (empty($_POST['password'])) {
         $error .= "You must supply a desired password. <br>";
     }
-    if (empty($_POST['email']) || !is_emailable_address($cleaned['email'])) {
+    if (empty($_POST['email']) || !is_emailable_address($_POST['email'])) {
         $error .= "You must supply a proper email address. <br>";
     }
     if (empty($_POST['yesno']) || $_POST['yesno'] != 'yes') {
@@ -80,7 +70,7 @@ if (count($_POST) && (!isset($_POST['purpose']) || !is_array($_POST['purpose']) 
     if (empty($_POST['group']) || $_POST['group'] === 'none' || !isset($groups[$_POST['group']])) {
         $error .= "You did not fill out where to send the request. <br>";
     }
-    if (!isset($_POST['guidelines']) || !$_POST['guidelines']) {
+    if (empty($_POST['guidelines'])) {
         $error .= "You did not agree to follow the contribution guidelines. <br>";
     }
 
@@ -89,13 +79,13 @@ if (count($_POST) && (!isset($_POST['purpose']) || !is_array($_POST['purpose']) 
         $error = posttohost(
             "https://main.php.net/entry/svn-account.php",
             array(
-                "username" => $cleaned['id'],
-                "name"     => $cleaned['fullname'],
-                "email"    => $cleaned['email'],
-                "passwd"   => $cleaned['password'],
-                "note"     => $cleaned['realpurpose'],
-                "yesno"    => $cleaned['yesno'],
-                "group"    => $cleaned['group'],
+                "username" => $_POST['id'],
+                "name"     => $_POST['fullname'],
+                "email"    => $_POST['email'],
+                "passwd"   => $_POST['password'],
+                "note"     => $_POST['realpurpose'],
+                "yesno"    => $_POST['yesno'],
+                "group"    => $_POST['group'],
             )
         );
         // Error while posting

@@ -48,7 +48,6 @@ $setup["toc"] = $TOC;
 $setup["parents"] = $PARENTS;
 manual_setup($setup);
 
-manual_header();
 ?>
 <div id="class.exception" class="reference">
  <h1 class="title">Exception</h1>

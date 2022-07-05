@@ -42,7 +42,6 @@ $setup["toc"] = $TOC;
 $setup["parents"] = $PARENTS;
 manual_setup($setup);
 
-manual_header();
 ?>
 <div id="function.strpos" class="refentry">
  <div class="refnamediv">
