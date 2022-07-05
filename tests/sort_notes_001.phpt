@@ -4,7 +4,7 @@ sort some notes
 precision=-1
 --FILE--
 <?php
-require_once __DIR__ . "/../src/UserNotes/Sorter.php";
+require_once __DIR__ . "/../autoload.php";
 
 $notes = [
     [
