@@ -1,3 +1,5 @@
+[![Integrate](https://github.com/php/web-php/actions/workflows/integrate.yaml/badge.svg)](https://github.com/php/web-php/actions/workflows/integrate.yaml)
+
 ## Local development
 
 This is the git repository for the official www.php.net website.
