@@ -31,9 +31,9 @@ $sqlite = get_available_sqlites();
 
 $exts = implode(',', get_loaded_extensions());
 
-echo join('|', array(
+echo implode('|', array(
     $MYSITE,            	// 0 : CNAME for mirror as accessed (CC, CC1, etc.)
-    phpversion(),       	// 1 : PHP version overview
+    PHP_VERSION,       	// 1 : PHP version overview
     $LAST_UPDATED,      	// 2 : Update problems
     $sqlite,            	// 3 : SQLite support?
     $mirror_stats,      	// 4 : Optional local stats support
@@ -44,4 +44,3 @@ echo join('|', array(
     gethostname(),		// 9 : The configured hostname of the local system
     $_SERVER['SERVER_ADDR'],	// 10: The IP address under which we're running
 ));
-

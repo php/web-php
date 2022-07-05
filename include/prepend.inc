@@ -131,9 +131,9 @@ function myphpnet_language($langcode = FALSE)
     return false;
 }
 
-define("MYPHPNET_URL_NONE", FALSE);
-define("MYPHPNET_URL_FUNC", 'quickref');
-define("MYPHPNET_URL_MANUAL", 'manual');
+const MYPHPNET_URL_NONE = false;
+const MYPHPNET_URL_FUNC = 'quickref';
+const MYPHPNET_URL_MANUAL = 'manual';
 
 // Set URL search fallback preference
 function myphpnet_urlsearch($type = FALSE)

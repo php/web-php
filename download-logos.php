@@ -13,13 +13,13 @@ $SIDEBAR_DATA = '
 site_header("Download Logos", array("current" => "downloads"));
 
 // Print recommended star cell
-function print_star()
+function print_star(): void
 {
     echo "<td class=\"star\"><span class=\"star\" title=\"recommended\">*</span></td>\n";
 }
 
 // Provide a random bgcolor setting for a cell
-function random_bgcolor($min, $max)
+function random_bgcolor($min, $max): void
 {
     echo "style=\"background-color: #" .
          sprintf('%02x%02x%02x', mt_rand($min, $max)*51, mt_rand($min, $max)*51, mt_rand($min, $max)*51) .

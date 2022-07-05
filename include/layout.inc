@@ -52,7 +52,7 @@ function highlight_php_trimmed($code, $return = false)
 {
     $code = "<?php\n" . $code;
     $highlighted_code = highlight_php($code, true);
-    $highlighted_code = preg_replace("/\&lt;\?php(\<br \/\>)+/", '', $highlighted_code, 1);
+    $highlighted_code = preg_replace("!&lt;\?php(<br />)+!", '', $highlighted_code, 1);
 
     if ($return) { return $highlighted_code; }
     echo $highlighted_code;
@@ -83,7 +83,7 @@ function resize_image($img, $width = 1, $height = 1)
 
 // Return an <img> tag for a given image file available on the server
 function make_image($file, $alt = FALSE, $align = FALSE, $extras = FALSE,
-                    $dir = '/images', $border = 0, $addsize = TRUE)
+                    $dir = '/images', $addsize = TRUE)
 {
     // If no / was provided at the start of $dir, add it
     $webdir = $_SERVER['MYSITE'] . ($dir[0] == '/' ? '' : '/') . $dir;
@@ -109,7 +109,7 @@ function make_image($file, $alt = FALSE, $align = FALSE, $extras = FALSE,
     return sprintf('<img src="%s/%s" alt="%s"%s%s%s>',
         $webdir,
         $file,
-        ($alt    ? $alt : ''),
+        ($alt ?: ''),
         $sizeparams,
         $align,
         ($extras ? ' ' . $extras              : '')
@@ -118,9 +118,9 @@ function make_image($file, $alt = FALSE, $align = FALSE, $extras = FALSE,
 
 // Print an <img> tag out for a given file
 function print_image($file, $alt = FALSE, $align = FALSE, $extras = FALSE,
-                     $dir = '/images', $border = 0)
+                     $dir = '/images')
 {
-    echo make_image($file, $alt, $align, $extras, $dir, $border);
+    echo make_image($file, $alt, $align, $extras, $dir);
 }
 
 // Shortcut to usual news image printing (right floating
@@ -141,7 +141,7 @@ function make_submit($file, $alt = FALSE, $align = FALSE, $extras = FALSE,
     // Get an image without size info and convert the
     // border attribute to use CSS, as border="" is not
     // supported on <input> elements in [X]HTML
-    $img = make_image($file, $alt, $align, $extras, $dir, 0, FALSE);
+    $img = make_image($file, $alt, $align, $extras, $dir, FALSE);
     $img = str_replace(
         "border=\"$border\"",
         "style=\"border: {$border}px;\"",
@@ -159,7 +159,7 @@ function make_link ($url, $linktext = FALSE, $target = FALSE, $extras = FALSE)
         $url,
         ($target   ? ' target="' . $target . '"' : ''),
         ($extras   ? ' ' . $extras               : ''),
-        ($linktext ? $linktext                   : $url)
+        ($linktext ?: $url)
     );
 }
 
@@ -175,12 +175,12 @@ function print_link($url, $linktext = FALSE, $target = FALSE, $extras = FALSE)
 function make_popup_link ($url, $linktext=false, $target=false, $windowprops="", $extras=false) {
     return sprintf("<a href=\"%s\" target=\"%s\" onclick=\"window.open('%s','%s','%s');return false;\"%s>%s</a>",
         htmlspecialchars($url, ENT_QUOTES | ENT_IGNORE),
-        ($target ? $target : "_new"),
+        ($target ?: "_new"),
         htmlspecialchars($url, ENT_QUOTES | ENT_IGNORE),
-        ($target ? $target : "_new"),
+        ($target ?: "_new"),
                 $windowprops,
         ($extras ? ' '.$extras : ''),
-        ($linktext ? $linktext : $url)
+        ($linktext ?: $url)
     );
 }
 
@@ -192,51 +192,45 @@ function print_popup_link($url, $linktext=false, $windowprops="", $target=false,
 }
 
 // Print a link for a downloadable file (including filesize)
-function download_link($file, $title, $showsize = TRUE, $mirror = '')
+function download_link($file, $title)
 {
     $download_link = "/distributions/" . $file;
 
     // Print out the download link
     print_link($download_link, $title);
 
-    // Size display is required
-    if ($showsize) {
+    // We have a full path or a relative to the distributions dir
+    if ($tmp = strrchr($file, "/")) {
+        $local_file = substr($tmp, 1, strlen($tmp));
+    } else {
+        $local_file = "distributions/$file";
+    }
 
-        // We have a full path or a relative to the distributions dir
-        if ($tmp = strrchr($file, "/")) {
-            $local_file = substr($tmp, 1, strlen($tmp));
+    if(@file_exists($local_file.".asc")) {
+        echo " ";
+        $sig_link = "/distributions/$file.asc";
+        print_link($sig_link, "(sig)");
+    }
+
+    // Try to get the size of the file
+    $size = @filesize($local_file);
+
+    // Print out size in bytes (if size is
+    // less then 1Kb, or else in Kb)
+    if ($size) {
+        echo ' [';
+        if ($size < 1024) {
+            echo number_format($size) . 'b';
         } else {
-            $local_file = "distributions/$file";
+            echo number_format($size/1024) . 'Kb';
         }
-
-        if(@file_exists($local_file.".asc")) {
-            echo " ";
-            $sig_link = "/distributions/$file.asc";
-            print_link($sig_link, "(sig)");
-        }
-
-        // Try to get the size of the file
-        $size = @filesize($local_file);
-
-        // Print out size in bytes (if size is
-        // less then 1Kb, or else in Kb)
-        if ($size) {
-            echo ' [';
-            if ($size < 1024) {
-                echo number_format($size, 0, '.', ',') . 'b';
-            } else {
-                echo number_format($size/1024, 0, '.', ',') . 'Kb';
-            }
-            echo ']';
-        }
-
+        echo ']';
     }
 }
 
 function sect_to_file($string) {
     $string = strtolower($string);
-    $string = str_replace(' ','-',$string);
-    $string = str_replace('_','-',$string);
+    $string = str_replace([' ', '_'], '-', $string);
     $func = "function.$string.php";
     $chap = "ref.$string.php";
     $feat = "features.$string.php";
@@ -259,13 +253,11 @@ function clean_note($text)
     $text = highlight_php(trim($text), TRUE);
 
     // Turn urls into links
-    $text = preg_replace(
-        '!((mailto:|(https?|ftp|nntp|news):\/\/).*?)(\s|<|\)|"|\\\\|\'|$)!',
+    return preg_replace(
+        '!((mailto:|(https?|ftp|nntp|news)://).*?)(\s|<|\)|"|\\\\|\'|$)!',
         '<a href="\1" rel="nofollow" target="_blank">\1</a>\4',
         $text
     );
-
-    return $text;
 }
 
 function display_errors($errors)
@@ -404,7 +396,7 @@ function news_archive_sidebar()
 function print_news($news, $dog, $max = 5, $onlyyear = null, $return = false) {
     $retval = array();
     $count = 0;
-    $news = $news ? $news : array(); // default to empty array (if no news)
+    $news = $news ?: array(); // default to empty array (if no news)
     foreach($news as $item) {
         $ok = false;
 
@@ -524,7 +516,6 @@ function site_header($title = '', $config = array())
 }
 function site_footer($config = array())
 {
-    global $MYSITE;
     require __DIR__ . "/footer.inc";
 }
 

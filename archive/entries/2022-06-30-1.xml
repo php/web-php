@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom" xmlns:default="http://php.net/ns/news">
+  <title>SymfonyCon Disneyland Paris 2022</title>
+  <id>https://www.php.net/archive/2022.php#2022-06-30-1</id>
+  <published>2022-06-30T17:14:43+00:00</published>
+  <updated>2022-06-30T17:14:43+00:00</updated>
+  <link href="https://www.php.net/conferences/index.php#id2022-06-30-1" rel="alternate" type="text/html"/>
+  <link href="https://live.symfony.com/2022-paris-con/" rel="via" type="text/html"/>
+  <default:finalTeaserDate xmlns="http://php.net/ns/news">2022-11-15</default:finalTeaserDate>
+  <category term="conferences" label="Conference announcement"/>
+  <default:newsImage xmlns="http://php.net/ns/news" link="https://live.symfony.com/2022-paris-con/" title="SymfonyCon Disneyland Paris 2022">symfonycon-disneyland-paris-2022.png</default:newsImage>
+  <content type="xhtml">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+      <p>
+        <a href="https://live.symfony.com/2022-paris-con/">SymfonyCon Disneyland Paris 2022</a> is the global Symfony conference in English for PHP developers from all around the World. Two days of workshops (November 15-16) followed by two days (November 17-18) full of talks on PHP, Symfony and its ecosystem.
+      </p>
+      <p>
+        Each ticket includes an invitation for two people to the exclusive party (20:00 - 23:30, November 17) where conference attendees will enjoy Walt Disney Studios Park open exclusively for them. Enjoy this special moment with your family or friends. We've also negotiated a discounted rate in one of the Disney's hotels.
+      </p>
+      <p>
+        Check out <a href="https://live.symfony.com/2022-paris-con/">all the conference details</a>
+      </p>
+    </div>
+  </content>
+</entry>

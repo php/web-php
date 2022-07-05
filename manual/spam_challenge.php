@@ -39,8 +39,7 @@ $challenges = array(
 // generate a challenge
 function gen_challenge() {
 	global $challenges, $nums;
-	$c = $challenges[mt_rand(0, sizeof($challenges)-1)];
-
+	$c  = $challenges[mt_rand(0, count($challenges)-1)];
 	$a  = mt_rand(0, 9);
 	$an = $nums[$a];
 	$b  = isset($c[2]) ? $c[2]($a) : mt_rand(0, 9);
@@ -68,6 +67,3 @@ function test_answer($name, $an, $bn, $answer) {
 
 	return ($nums[$c[0]($a, $b)] === $answer);
 }
-
-
-?>

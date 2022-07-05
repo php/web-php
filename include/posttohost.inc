@@ -18,7 +18,5 @@ function posttohost($url, $data)
 
     $ctx = stream_context_create(array('http' => $opts));
 
-    $response_body = file_get_contents($url, false, $ctx);
-
-    return $response_body;
+    return file_get_contents($url, false, $ctx);
 }

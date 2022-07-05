@@ -1,6 +1,6 @@
 <?php
 
-$refresh = isset($_GET['refresh']) ? true : false;
+$refresh = isset($_GET['refresh']);
 
 // Be 100% sure the timezone is set
 if (ini_get('date.timezone') === '' && function_exists('date_default_timezone_set')) {
@@ -53,7 +53,7 @@ function get_accepted_encodings() {
 }
 
 
-function serve_compressed_if_available($logo) {
+function serve_compressed_if_available($logo): void {
     $encodings = get_accepted_encodings();
     if (!empty($encodings)) {
         foreach ($encodings as $encoding) {
