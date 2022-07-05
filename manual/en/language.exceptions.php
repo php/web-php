@@ -48,7 +48,6 @@ $setup["toc"] = $TOC;
 $setup["parents"] = $PARENTS;
 manual_setup($setup);
 
-manual_header();
 ?>
 <div id="language.exceptions" class="chapter">
   <h1>Exceptions</h1>

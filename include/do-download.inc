@@ -25,8 +25,6 @@ function get_actual_download_file($file)
 // Download a file from a mirror site
 function download_file($mirror, $file)
 {
-    global $MYSITE;
-
     // Redirect to the particular file
     if (!headers_sent()) {
         status_header(302);

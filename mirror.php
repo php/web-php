@@ -33,8 +33,7 @@ if (is_official_mirror()) {
                 htmlspecialchars(mirror_provider()),
                 false,
                 false,
-                'backend',
-                0
+                'backend'
             );
 
             // Add size information depending on mirror type

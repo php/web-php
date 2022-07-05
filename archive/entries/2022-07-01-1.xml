@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom" xmlns:default="http://php.net/ns/news">
+  <title>SymfonyWorld Online 2022 Winter Edition</title>
+  <id>https://www.php.net/archive/2022.php#2022-07-01-1</id>
+  <published>2022-07-01T17:33:43+00:00</published>
+  <updated>2022-07-01T17:33:43+00:00</updated>
+  <link href="https://www.php.net/conferences/index.php#id2022-07-01-1" rel="alternate" type="text/html"/>
+  <link href="https://live.symfony.com/2022-world-winter/" rel="via" type="text/html"/>
+  <default:finalTeaserDate xmlns="http://php.net/ns/news">2022-12-06</default:finalTeaserDate>
+  <category term="conferences" label="Conference announcement"/>
+  <default:newsImage xmlns="http://php.net/ns/news" link="https://live.symfony.com/2022-world-winter/" title="SymfonyWorld Online 2022 Winter Edition">symfonyworld-online-winter-edition-2022.png</default:newsImage>
+  <content type="xhtml">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+      <p>
+        <a href="https://live.symfony.com/2022-world-winter/">SymfonyWorld Online 2022 Winter Edition</a> is the global Symfony conference in English for PHP developers from all around the World. Two days of online workshops (December 6-7) followed by two days (December 8-9) full of online talks on PHP, Symfony and its ecosystem.
+      </p>
+      <p>
+        Check out <a href="https://live.symfony.com/2022-world-winter/">all the conference details</a>
+      </p>
+    </div>
+  </content>
+</entry>

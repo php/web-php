@@ -48,7 +48,6 @@ $setup["toc"] = $TOC;
 $setup["parents"] = $PARENTS;
 manual_setup($setup);
 
-manual_header();
 ?>
 <div id="refs.basic.vartype" class="set">
    <h1 class="title">Variable and Type Related Extensions</h1>

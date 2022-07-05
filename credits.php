@@ -5,8 +5,7 @@ include_once __DIR__ . '/include/prepend.inc';
 // Put credits information to $credits
 ob_start();
 phpcredits();
-$credits = ob_get_contents();
-ob_end_clean();
+$credits = ob_get_clean();
 
 // Strip all but the body and drop styles
 preg_match('!<body.*?>(.*)</body>!ims', $credits, $m);
@@ -26,5 +25,3 @@ if ($credits) {
     echo $credits;
     site_footer();
 }
-
-?>

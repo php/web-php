@@ -2,8 +2,9 @@
 <?php
 PHP_SAPI == 'cli' or die("Please run this script using the cli sapi");
 
-require(__DIR__ . '/../include/news_entry.inc');
-use phpweb\news\Entry;
+require_once __DIR__ . '/../autoload.php';
+
+use phpweb\News\Entry;
 
 $imageRestriction = [
 	'width' => 400,

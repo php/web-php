@@ -15,7 +15,7 @@ function branches_to_show() {
 	$branches = array();
 
 	// Flatten out the majors.
-	foreach (get_all_branches() as $major => $major_branches) {
+	foreach (get_all_branches() as $major_branches) {
 		foreach ($major_branches as $branch => $version) {
 			if (version_compare($branch, '5.3', 'ge') && get_branch_security_eol_date($branch) > min_date()) {
 				$branches[$branch] = $version;

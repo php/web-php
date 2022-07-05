@@ -36,12 +36,11 @@ if ($process) {
 
     // Convert all line-endings to unix format,
     // and don't allow out-of-control blank lines
-    $note = str_replace("\r\n", "\n", $note);
-    $note = str_replace("\r", "\n", $note);
+    $note = str_replace(["\r\n", "\r"], "\n", $note);
     $note = preg_replace("/\n{2,}/", "\n\n", $note);
 
     // Don't pass through example username
-    if ($user == "user@example.com") {
+    if ($user === "user@example.com") {
         $user = "Anonymous";
     }
 
@@ -86,11 +85,10 @@ if ($process) {
     }
 
     // No error was found, and the submit action is required
-    if (!$error && strtolower($_POST['action']) != "preview") {
+    if (!$error && strtolower($_POST['action']) !== "preview") {
 
-        $redirip = isset($_SERVER['HTTP_X_FORWARDED_FOR']) ?
-                   $_SERVER['HTTP_X_FORWARDED_FOR'] :
-                   (isset($_SERVER['HTTP_VIA']) ? $_SERVER['HTTP_VIA'] : '');
+        $redirip = $_SERVER['HTTP_X_FORWARDED_FOR'] ??
+                   ($_SERVER['HTTP_VIA'] ?? '');
 
         // Post the variables to the central user note script
         $result = posttohost(
@@ -108,13 +106,13 @@ if ($process) {
         if ($result) {
             if (strpos($result, '[TOO MANY NOTES]') !== false) {
                 print "<p class=\"formerror\">As a security precaution, we only allow a certain number of notes to be submitted per minute. At this time, this number has been exceeded. Please re-submit your note in about a minute.</p>";
-            } else if (($pos = strpos($result, '[SPAMMER]')) !== false) {
+            } elseif (($pos = strpos($result, '[SPAMMER]')) !== false) {
                 $ip       = trim(substr($result, $pos+9));
                 $spam_url = $ip_spam_lookup_url . $ip;
                 print '<p class="formerror">Your IP is listed in one of the spammers lists we use, which aren\'t controlled by us. More information is available at <a href="'.$spam_url.'">'.$spam_url.'</a>.</p>';
-            } else if (strpos($result, '[SPAM WORD]') !== false) {
+            } elseif (strpos($result, '[SPAM WORD]') !== false) {
                 echo '<p class="formerror">Your note contains a prohibited (usually SPAM) word. Please remove it and try again.</p>';
-            } else if (strpos($result, '[CLOSED]') !== false) {
+            } elseif (strpos($result, '[CLOSED]') !== false) {
                 echo '<p class="formerror">Due to some technical problems this service isn\'t currently working. Please try again later. Sorry for any inconvenience.</p>';
             } else {
                 echo "<!-- $result -->";
@@ -135,18 +133,14 @@ if ($process) {
         exit();
     }
 
-    // There was an error, or a preview is needed
-    else {
+    // If there was an error, print out
+    if ($error) { echo "<p class=\"formerror\">$error</p>\n"; }
 
-        // If there was an error, print out
-        if ($error) { echo "<p class=\"formerror\">$error</p>\n"; }
-
-        // Print out preview of note
-        echo '<p>This is what your entry will look like, roughly:</p>';
-        echo '<div id="usernotes">';
-        manual_note_display(time(), $user, $note, false);
-        echo '</div><br><br>';
-    }
+    // Print out preview of note
+    echo '<p>This is what your entry will look like, roughly:</p>';
+    echo '<div id="usernotes">';
+    manual_note_display(time(), $user, $note, false);
+    echo '</div><br><br>';
 }
 
 // Any needed variable was missing => display instructions
@@ -346,7 +340,7 @@ else {
 if (empty($_POST['user'])) { $_POST['user'] = "user@example.com"; }
 
 // There is no section to add note to
-if (!isset($_POST['sect']) || !isset($_POST['redirect'])) {
+if (!isset($_POST['sect'], $_POST['redirect'])) {
     echo '<p class="formerror">To add a note, you must click on the "Add Note" button (the plus sign)  ',
          'on the bottom of a manual page so we know where to add the note!</p>';
 }
@@ -371,20 +365,19 @@ else {?>
    </td>
   </tr>
   <tr>
-   <th class="subr">Your email address (or name):</th>
-   <td><input type="text" name="user" size="60" maxlength="40" value="<?php echo clean($_POST['user']); ?>"></td>
+   <th class="subr"><label for="form-user">Your email address (or name)</label>:</th>
+   <td><input id="form-user" type="text" name="user" size="60" maxlength="40" required value="<?php echo clean($_POST['user']); ?>"></td>
   </tr>
   <tr>
-   <th class="subr">Your notes:</th>
-   <td><textarea name="note" rows="20" cols="60" wrap="virtual"><?php if (isset($_POST['note'])) { echo clean($_POST['note']); } ?></textarea>
+   <th class="subr"><label for="form-note">Your notes</label>:</th>
+   <td><textarea id="form-note" name="note" rows="20" cols="60" wrap="virtual" required maxlength="4095" minlength="32"><?php if (isset($_POST['note'])) { echo clean($_POST['note']); } ?></textarea>
    <br>
   </td>
   </tr>
   <tr>
-   <th class="subr">Answer to this simple question (SPAM challenge):<br>
+   <th class="subr"><label for="form-answer">Answer to this simple question (SPAM challenge)</label>:<br>
    <?php $c = gen_challenge(); echo $c[3]; ?>?</th>
-   <td><input type="text" name="answer" size="60" maxlength="10"> (Example: nine)</td>
-  </td>
+   <td><input id="form-answer" type="text" name="answer" size="60" maxlength="10" required> (Example: nine)</td>
   </tr>
   <tr>
    <th colspan="2">
