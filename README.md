@@ -35,3 +35,7 @@ https://wiki.php.net/web/mirror
 
 Code must function on a vanilla PHP 7.3 installation. 
 Please keep this in mind before filing a pull request.
+
+## Contributing
+
+Please have a look at [`CONTRIBUTING.md`](.github/CONTRIBUTING.md).
