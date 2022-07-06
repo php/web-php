@@ -131,7 +131,7 @@ class Entry {
 		self::ce($dom, "id", $archive, [], $item);
 		self::ce($dom, "published", date(DATE_ATOM), [], $item);
 		self::ce($dom, "updated", date(DATE_ATOM), [], $item);
-		self::ce($dom, "link", null, ['href' => "{$href}#id{$this->id}", "rel"  => "alternate", "type" => "text/html"], $item);
+		self::ce($dom, "link", null, ['href' => "{$href}#{$this->id}", "rel"  => "alternate", "type" => "text/html"], $item);
 		self::ce($dom, "link", null, ['href' => $link, 'rel'  => 'via', 'type' => 'text/html'], $item);
 
 		if (!empty($this->conf_time)) {
