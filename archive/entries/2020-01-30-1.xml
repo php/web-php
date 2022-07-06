@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom" xmlns:default="http://php.net/ns/news">
+  <title>php[tek] 2020</title>
+  <id>https://www.php.net/archive/2020.php#2020-01-30-1</id>
+  <published>2020-01-30T21:15:27+00:00</published>
+  <updated>2020-04-20T13:46:00+00:00</updated>
+  <link href="https://www.php.net/conferences/index.php#id2020-01-30-1" rel="alternate" type="text/html"/>
+  <link href="https://tek.phparch.com/?utm_source=phpnet&amp;utm_medium=web&amp;utm_campaign=phpnet" rel="via" type="text/html"/>
+  <default:finalTeaserDate xmlns="http://php.net/ns/news">2020-05-20</default:finalTeaserDate>
+  <category term="conferences" label="Conference announcement"/>
+  <default:newsImage xmlns="http://php.net/ns/news" link="https://tek.phparch.com/?utm_source=phpnet&amp;utm_medium=web&amp;utm_campaign=phpnet" title="php[tek] 2020">tek2020-320w.png</default:newsImage>
+  <content type="xhtml">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+     <p><b>UPDATE:</b> Due to COVID-19, php[tek]2020 has been cancelled.
+     The organizers hope that everyone stays safe and well during this unprecedented time.</p>
+
+     <p>
+     <del>
+     The 15th annual
+     <a href="https://tek.phparch.com/?utm_source=phpnet&amp;utm_medium=web&amp;utm_campaign=phpnet">php[tek] conference</a>
+     will be taking place <strong>May 20-21</strong> in <strong>Nashville, TN</strong> at
+     <a href="https://tek.phparch.com/venue/?utm_source=phpnet&amp;utm_medium=web&amp;utm_campaign=phpnet">The Inn at Opryland</a> (A Gaylord Property).
+     </del>
+     </p>
+     
+     <p>
+     A fantastic group of
+     <a href="https://tek.phparch.com/speakers/?utm_source=phpnet&amp;utm_medium=web&amp;utm_campaign=phpnet">speakers</a> from companies such as
+     Google, Red Hat, Pantheon, Microsoft, Magento and SensioLabs will be offering a
+     <a href="https://tek.phparch.com/schedule/?utm_source=phpnet&amp;utm_medium=web&amp;utm_campaign=phpnet">schedule of sessions</a> that are sure to inspire you, broken up into three dedicated tracks:
+     </p>
+     
+     <ul>
+         <li>Tech Leadership</li>
+         <li>PHP Development</li>
+         <li>Web Technologies</li>
+     </ul>
+     
+     <p>
+     There are pre-conference activities as well, including an optional workshop day on May 19, and three different full-day training classes
+     on May 18 on Laravel, Symfony 5, and Kubernetes.
+     </p>
+     
+     <p>
+     <a href="https://tek.phparch.com/?utm_source=phpnet&amp;utm_medium=web&amp;utm_campaign=phpnet">Join the experts</a> in Nashville this May and expand your horizons while we explore PHP's role as an enterprise powerhouse.
+     </p>
+    </div>
+  </content>
+</entry>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom" xmlns:default="http://php.net/ns/news">
+  <title>DPC21 Schedule</title>
+  <id>https://www.php.net/archive/2021.php#2021-04-04-1</id>
+  <published>2021-04-04T15:11:02+00:00</published>
+  <updated>2021-04-04T15:11:02+00:00</updated>
+  <link href="https://www.php.net/conferences/index.php#id2021-04-04-1" rel="alternate" type="text/html"/>
+  <link href="https://www.phpconference.nl" rel="via" type="text/html"/>
+  <default:finalTeaserDate xmlns="http://php.net/ns/news">2021-06-17</default:finalTeaserDate>
+  <category term="conferences" label="Conference announcement"/>
+  <default:newsImage xmlns="http://php.net/ns/news" link="https://www.phpconference.nl" title="DPC21 Schedule">dpc21-schedule.png</default:newsImage>
+  <content type="xhtml">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+      <p><em>Join us for 2 full days of Insights, Inspiration &amp; Exclusive talks around PHP and Web Technology!</em></p>
+      <p>June 17 and 18, 2021 - DPC Online edition</p>
+      <p>In light of health and safety recommendations from public health authorities, and our assessment of the duration of this pandemic, we will be organising the DPC conference as an 100% online event on June 17 &amp; 18, 2021.</p>
+      <p><strong>Master Classes &amp; Exclusive talks</strong></p>
+      <p>Join our pre-conference Workshop day Thursday June 17 with master classes from the PHP &amp; Web Tech community. These online workshops are in small groups and provide an opportunity to spend time with an expert, going in-depth on a specific topic.</p>
+      <p>Followed by the main Conference day Friday June 18 full of interesting brand new live streamed talks!</p>
+      <a href="https://www.phpconference.nl" title="DPC21">https://www.phpconference.nl</a>
+    </div>
+  </content>
+</entry>

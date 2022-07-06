@@ -1,7 +1,5 @@
 <?php
 
-// $Id$
-
 /*
  This code is used to post data to the central server which
  can store the data in database and/or mail notices or requests
@@ -20,7 +18,5 @@ function posttohost($url, $data)
 
     $ctx = stream_context_create(array('http' => $opts));
 
-    $response_body = file_get_contents($url, false, $ctx);
-
-    return $response_body;
+    return file_get_contents($url, false, $ctx);
 }

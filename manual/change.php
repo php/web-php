@@ -1,6 +1,5 @@
 <?php
-// $Id$
-include_once $_SERVER['DOCUMENT_ROOT'] . '/include/prepend.inc';
+include_once __DIR__ . '/../include/prepend.inc';
 
 $page = isset($_GET['page']) ? htmlspecialchars($_GET['page'], ENT_QUOTES, 'UTF-8') : '';
 $page = strtr($page, array("\r"=>"","\n"=>""));

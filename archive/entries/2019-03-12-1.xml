@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom" xmlns:default="http://php.net/ns/news">
+  <title>Web Summer Camp 2019</title>
+  <id>http://php.net/archive/2019.php#id2019-03-12-1</id>
+  <published>2019-03-12T11:48:51+00:00</published>
+  <updated>2019-03-12T11:48:51+00:00</updated>
+  <default:finalTeaserDate xmlns="http://php.net/ns/news">2019-08-28</default:finalTeaserDate>
+  <category term="conferences" label="Conference announcement"/>
+  <link href="http://php.net/conferences/index.php#id2019-03-12-1" rel="alternate" type="text/html"/>
+  <default:newsImage xmlns="http://php.net/ns/news" link="http://websummercamp.com" title="Web Summer Camp logo">wsc.png</default:newsImage>
+  <link href="http://websummercamp.com" rel="via" type="text/html"/>
+  <content type="xhtml">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+     With days getting longer and our jackets lighter, we start to look forward to meeting you all once again in Rovinj. For the 8th time in a row, we are organizing our <a href="https://2019.websummercamp.com/">learn &amp; fun summer event</a>. Mark your calendar for August 28th - 30th and join us in beautiful Rovinj.
+
+     This year you can expect hands-on and engaging workshops related to <b>PHP</b>, <b>Symfony</b>, Javascript and Project Management, as well as fun and relaxing after-workshop programme for attendees and their companions.
+
+     If you feel your workshop could add value to the event, we encourage you to <a href="https://sessionize.com/web-summer-camp-2019/">submit your proposal</a> by April 30th. All the information on this year's topics of our interest you can find <a href="https://2019.websummercamp.com/call-for-papers">here</a>.
+
+     And while waiting for Early Bird tickets sale to start, here is a short reminder on <a href="https://www.netgenlabs.com/Blog/Why-Web-Summer-Camp-of-all-events">Why Web Summer Camp of all events</a>.
+
+     Summer is coming, follow us on <a href="https://twitter.com/websummercamp">@websummercamp</a> and stay tuned!
+    </div>
+  </content>
+</entry>

@@ -1,9 +1,8 @@
 <?php
-// $Id$
 $_SERVER['BASE_PAGE'] = 'mailing-lists.php';
-include_once $_SERVER['DOCUMENT_ROOT'] . '/include/prepend.inc';
-include_once $_SERVER['DOCUMENT_ROOT'] . '/include/posttohost.inc';
-include_once $_SERVER['DOCUMENT_ROOT'] . '/include/email-validation.inc';
+include_once __DIR__ . '/include/prepend.inc';
+include_once __DIR__ . '/include/posttohost.inc';
+include_once __DIR__ . '/include/email-validation.inc';
 
 $SIDEBAR_DATA = '
 <h3>Would like to unsubscribe yourself?</h3>
@@ -24,7 +23,7 @@ $SIDEBAR_DATA = '
  lists</a> on their own pages.
 </p> 
 
-<a name="local"></a>
+<a id="local"></a>
 <h3>Local Mailing Lists and Newsgroups</h3>
 
 <ul class="toc">
@@ -43,32 +42,37 @@ $SIDEBAR_DATA = '
 site_header("Mailing Lists", array("current" => "help"));
 
 // Some mailing list is selected for [un]subscription
-if (isset($_POST['maillist'])) {
-    
+if (isset($_POST['action'])) {
+
     // No error found yet
     $error = "";
-    
+
     // Check email address
     if (empty($_POST['email']) || $_POST['email'] == 'user@example.com' ||
         $_POST['email'] == 'fake@from.net' || !is_emailable_address($_POST['email'])) {
         $error = "You forgot to specify an email address to be added to the list, or specified an invalid address." .
                  "<br>Please go back and try again.";
     }
-    
+
+    // Check if any mailing list was selected
+    elseif (empty($_POST['maillist'])) {
+        $error = "You need to select at least one mailing list to subscribe to." .
+                 "<br>Please go back and try again.";
+    }
+
     // Seems to be a valid email address
     else {
- 
+
         // Decide on request mode, email address part and IP address
         $request = strtolower($_POST['action']);
         if ($request != "subscribe" && $request != "unsubscribe") {
             $request = "subscribe";
         }
-        $sub = str_replace("@", "=", $_POST['email']);
         $remote_addr = i2c_realip();
 
-        // Get in contact with master server to [un]subscribe the user
+        // Get in contact with main server to [un]subscribe the user
         $result = posttohost(
-            "http://master.php.net/entry/subscribe.php",
+            "https://main.php.net/entry/subscribe.php",
             array(
                 "request"  => $request,
                 "email"    => $_POST['email'],
@@ -77,14 +81,14 @@ if (isset($_POST['maillist'])) {
                 "referer"  => $MYSITE . "mailing-lists.php"
             )
         );
-        
+
         // Provide error if unable to [un]subscribe
         if ($result) {
             $error = "We were unable to subscribe you due to some technical problems.<br>" .
                      "Please try again later.";
         }
     }
-    
+
     // Give error information or success report
     if (!empty($error)) {
         echo "<p class=\"formerror\">$error</p>";
@@ -174,7 +178,7 @@ if (isset($_POST['maillist'])) {
 </ul>
 <p>
  And make sure you have read our
- <a href="//git.php.net/?p=php-src.git;a=blob_plain;f=README.MAILINGLIST_RULES;hb=HEAD">Mailinglist Rules</a>.
+ <a href="https://github.com/php/php-src/blob/master/docs/mailinglist-rules.md">Mailinglist Rules</a>.
 </p>
 <?php
 
@@ -218,7 +222,7 @@ if (isset($_POST['maillist'])) {
       'php-evangelism', 'PHP evangelism mailing list',
       'A list for people interested in promoting PHP and learning good reasons to support PHP in the enterprise',
       TRUE, TRUE, TRUE, "php.evangelism"
-    ),	
+    ),
     array (
       'soap', 'PHP SOAP list',
       'List for the SOAP developers',
@@ -230,7 +234,7 @@ if (isset($_POST['maillist'])) {
       'List for Spanish speaking people interested in PHP',
       FALSE, FALSE, FALSE, 'php.general.es'
     ),
-  
+
   );
 
   // array of lists (list, name, short desc., moderated, archive, digest, newsgroup)
@@ -300,16 +304,16 @@ if (isset($_POST['maillist'])) {
   );
 
 // Print out a table for a given list array
-function output_lists_table($mailing_lists)
+function output_lists_table($mailing_lists): void
 {
     echo '<table cellpadding="5" border="0" class="standard mailing-lists">', "\n";
-    while ( list(, $listinfo) = each($mailing_lists)) {
+    foreach ($mailing_lists as $listinfo) {
         if (!is_array($listinfo)) {
             echo "<tr><th>{$listinfo}</th><th>Moderated</th><th>Archive</th>" .
                  "<th>Newsgroup</th><th>Normal</th><th>Digest</th></tr>\n";
         } else {
             echo '<tr align="center">';
-            echo '<td align="left"><strong>' . $listinfo[1] . '</strong><br><small>'. $listinfo[2] . '</small></td>';
+            echo '<td align="left"><strong>' . $listinfo[1] . '</strong> <small>&lt;<a href="mailto:' . $listinfo[0] . '@lists.php.net">' . $listinfo[0] . '@lists.php.net</a>&gt;</small><br><small>'. $listinfo[2] . '</small></td>';
             echo '<td>' . ($listinfo[3] ? 'yes' : 'no') . '</td>';
 
             // Let the list name defined with a string, if the
@@ -321,7 +325,7 @@ function output_lists_table($mailing_lists)
             echo '<td>' . ($larchive ? "<a href=\"http://marc.info/?l={$larchive}\">yes</a>" : 'n/a') . '</td>';
             echo '<td>' . ($listinfo[6] ? "<a href=\"news://news.php.net/{$listinfo[6]}\">yes</a> <a href=\"http://news.php.net/group.php?group={$listinfo[6]}\">http</a>" : 'n/a') . '</td>';
             echo '<td><input name="maillist" type="radio" value="' . $listinfo[0] . '"></td>';
-            echo '<td>' . ($listinfo[5] ? '<input name="maillist" type="radio" value="' . $listinfo[0] . '-digest">' : 'n/a' ) . '</td>';
+            echo '<td>' . ($listinfo[5] ? '<input name="maillist" type="radio" value="' . $listinfo[0] . '-digest">' : 'n/a') . '</td>';
             echo "</tr>\n";
         }
     }
@@ -361,7 +365,18 @@ function output_lists_table($mailing_lists)
  messages per day. If your mailbox can't handle this sort of traffic you
  might want to consider subscribing to the digest list instead (two messages
  per day), using the news server, or reading the mailing list using the
- archives. 
+ archives.
+</p>
+
+<h2>Subscribe via Email</h2>
+
+<p>
+ If you experience trouble subscribing via the form above, you may also
+ subscribe by sending an email to the list server.
+ To subscribe to any mailing list, send an email to
+ <code><em>listname</em>-subscribe@lists.php.net</code>
+ (substituting the name of the list for <code><em>listname</em></code>
+ &mdash; for example, <code>php-general-subscribe@lists.php.net</code>).
 </p>
 
 <h2>Mailing list options</h2>

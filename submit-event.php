@@ -1,14 +1,13 @@
 <?php
-// $Id$
 $_SERVER['BASE_PAGE'] = 'submit-event.php';
-include_once $_SERVER['DOCUMENT_ROOT'] . '/include/prepend.inc';
-include_once $_SERVER['DOCUMENT_ROOT'] . '/include/posttohost.inc';
-include_once $_SERVER['DOCUMENT_ROOT'] . '/include/email-validation.inc';
+include_once __DIR__ . '/include/prepend.inc';
+include_once __DIR__ . '/include/posttohost.inc';
+include_once __DIR__ . '/include/email-validation.inc';
 site_header("Submit an Event", array("current" => "community"));
 
 // No errors, processing depends on POST data
 $errors = array();
-$process = (boolean) count($_POST);
+$process = [] !== $_POST;
 
 // Avoid E_NOTICE errors on incoming vars if not set
 $vars = array(
@@ -16,7 +15,7 @@ $vars = array(
     'emonth', 'eyear', 'recur', 'recur_day'
 );
 foreach ($vars as $varname) {
-    if (!isset($_POST[$varname]) || empty($_POST[$varname])) {
+    if (empty($_POST[$varname])) {
         $_POST[$varname] = 0;
     }
 }
@@ -32,13 +31,6 @@ foreach($vars as $varname) {
 // We need to process some form data
 if ($process) {
 
-    // Clean up magic quotes, if they were inserted
-    if ($MQ) {
-        foreach ($_POST as $k => $v) {
-            $_POST[$k] = stripslashes($v);
-        }
-    }
-
     // Clean and validate data
     if (!is_emailable_address($_POST['email'])) {
         $errors[] = 'You must supply a valid email address.';
@@ -53,7 +45,7 @@ if ($process) {
     if (blacklisted($uemail)) {
         $errors[] = 'An expected error has been encountered.  Please don\'t try again later.';
     }
-  
+
     $_POST['sdesc'] = trim($_POST['sdesc']);
     if (!$_POST['sdesc']) {
         $errors[] = "You must supply a short description of the event.";
@@ -63,6 +55,9 @@ if ($process) {
     $_POST['ldesc'] = preg_replace("/(style|on\\w+?)\s*=[^>]*/i", "", $_POST['ldesc']);
     if (!$_POST['ldesc']) {
         $errors[] = "You must supply a long description of the event.";
+    }
+    elseif (stripos($_POST['ldesc'], 'PHP') === false) {
+        $errors[] = "This does not look like a 'PHP' event";
     }
 
     $valid_schemes = array('http','https','ftp');
@@ -115,13 +110,13 @@ if ($process) {
     }
 
     // Spam question
-    if ($_POST["sane"] != 3) {
+    if ($_POST["sane"] != 4) {
         $errors[] = "It's OK. I'm not real either";
     }
 
     if (isset($_POST['action']) && $_POST['action'] === 'Submit' && empty($errors)) {
-        // Submit to master.php.net
-        $result = posttohost("http://master.php.net/entry/event.php", $_POST);
+        // Submit to main.php.net
+        $result = posttohost("http://main.php.net/entry/event.php", $_POST);
         if ($result) {
             $errors[] = "There was an error processing your submission: $result";
         }
@@ -157,10 +152,10 @@ if (count($errors)) { display_errors($errors); }
 
 // Generate days and months arrays for form
 for ($i = 1; $i <= 7; $i++) {
-    $days[$i] = strftime('%A', mktime(12, 0, 0, 4, $i));
+    $days[$i] = date('l', mktime(12, 0, 0, 4, $i));
 }
 for ($i = 1; $i <= 12; $i++) {
-    $months[$i] = strftime('%B', mktime(12, 0, 0, $i, 1));
+    $months[$i] = date('F', mktime(12, 0, 0, $i, 1));
 }
 
 // Possibilities to recur
@@ -262,7 +257,7 @@ if ($process && count($errors) === 0) {
  </tr>
  <tr>
   <th class="subr">Are you real?</th>
-  <td><select name="sane"><?php display_options(array("I, Robot", "I used to be", "WTF?", "Yes", "No, but I'd still want to submit this"), "2"); ?></select></td>
+  <td><select name="sane"><?php display_options(array("I, Robot", "I used to be", "WTF?", "No, but I'd still want to submit this", "Yes"), "2"); ?></select></td>
  </tr>
 </table>
 </form>
@@ -270,7 +265,7 @@ if ($process && count($errors) === 0) {
 site_footer();
 
 // Display an option list with one selected
-function display_options($options, $current)
+function display_options($options, $current): void
 {
     foreach ($options as $k => $v) {
         echo '<option value="', $k, '"',

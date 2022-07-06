@@ -1,8 +1,7 @@
 <?php
-// $Id$
 $_SERVER['BASE_PAGE'] = 'results.php';
-include $_SERVER['DOCUMENT_ROOT'] . '/include/prepend.inc';
-include $_SERVER['DOCUMENT_ROOT'] . '/include/results.inc';
+include __DIR__ . '/include/prepend.inc';
+include __DIR__ . '/include/results.inc';
 
 if (!isset($_GET['l']) || !is_string($_GET['l'])) {
   $_GET['l'] = null;
@@ -28,7 +27,6 @@ site_header(
 
 echo '<h1>Search results</h1>';
 
-google_cse($query, $lang); 
+google_cse($query, $lang);
 
 site_footer();
-

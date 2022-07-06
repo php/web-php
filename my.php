@@ -1,7 +1,6 @@
 <?php
-// $Id$
 $_SERVER['BASE_PAGE'] = 'my.php';
-include_once $_SERVER['DOCUMENT_ROOT'] . '/include/prepend.inc';
+include_once __DIR__ . '/include/prepend.inc';
 
 // Try to make this page non-cached
 header_nocache();
@@ -11,15 +10,15 @@ $langs   = $ACTIVE_ONLINE_LANGUAGES;
 $options = array();
 
 // We have post data, and it is an available language
-if (isset($_POST['my_lang']) && isset($langs[$_POST['my_lang']])) {
-    
+if (isset($_POST['my_lang'], $langs[$_POST['my_lang']])) {
+
     // Set the language preference
     myphpnet_language($_POST['my_lang']);
-    
+
     // Add this as first option, selected
     $options[] = '<option value="' . $_POST['my_lang'] . '" selected>' .
                  $langs[$_POST['my_lang']] . "</option>\n";
-    
+
     // Remove, so it is not listed two times
     unset($langs[$_POST['my_lang']]);
 }
@@ -30,7 +29,7 @@ elseif (isset($langs[myphpnet_language()])) {
     // Add this as first option, selected
     $options[] = '<option value="' . myphpnet_language() . '" selected>' .
                  $langs[myphpnet_language()] . "</option>\n";
-    
+
     // Remove, so it is not listed two times
     unset($langs[myphpnet_language()]);
 }
@@ -47,22 +46,19 @@ foreach ($langs as $code => $name) {
 }
 
 // Assemble form from collected data
-$langpref = "<select name=\"my_lang\">\n" .
-            join("", $options) . "</select>\n";
-            
+$langpref = "<select id=\"form-my_lang\" name=\"my_lang\">\n" .
+            implode("", $options) . "</select>\n";
+
 // Save URL shortcut fallback setting
 if (isset($_POST['urlsearch'])) {
     myphpnet_urlsearch($_POST['urlsearch']);
 }
 
 if (isset($_POST["showug"])) {
-    myphpnet_showug($_POST["showug"] == "enable");
+    myphpnet_showug($_POST["showug"] === "enable");
 }
 
-// Set preferred mirror site, prepare mirror array
-if (isset($_POST['mirror'])) {
-    myphpnet_mirror($_POST['mirror']);
-}
+// Prepare mirror array
 $mirror_sites = $MIRRORS;
 $mirror_sites["NONE"] = array(7 => MIRROR_OK);
 
@@ -109,19 +105,19 @@ site_header("My PHP.net", array("current" => "community"));
 
 // Data for the language settings table
 $langinfo = array(
-    
-    "Your preferred language" =>
+
+    "<label for=\"form-my_lang\">Your preferred language</label>" =>
     $langpref,
-    
+
     "Last seen language" =>
     (isset($_COOKIE['LAST_LANG']) ? htmlentities($_COOKIE['LAST_LANG'], ENT_QUOTES | ENT_IGNORE, 'UTF-8') : "None"),
-    
+
     "Your Accept-Language browser setting" =>
     (isset($_SERVER['HTTP_ACCEPT_LANGUAGE']) ? htmlentities($_SERVER['HTTP_ACCEPT_LANGUAGE'], ENT_QUOTES | ENT_IGNORE, 'UTF-8') : "None"),
-    
+
     "The mirror's default language" =>
     default_language(),
-    
+
     "Default" => "en"
 );
 
@@ -153,12 +149,10 @@ foreach ($langinfo as $lin => $lid) {
 <h2>Your country</h2>
 
 <p>
- The PHP.net site and mirror sites try to detect your country
+ The PHP.net site tries to detect your country
  using the <a href="http://www.directi.com/?site=ip-to-country">Directi
  Ip-to-Country Database</a>. This information is used to mark
- the events in your country specially and to offer close mirror
- sites if possible on the download page and on the mirror listing
- page.
+ the events in your country specially.
 </p>
 
 <div class="indent">
@@ -182,68 +176,20 @@ if (i2c_valid_country()) {
 </p>
 
 <div class="indent">
- Your setting: <input type="radio" name="urlsearch" value="quickref"
+ Your setting: <input id="form-urlsearch-quickref" type="radio" name="urlsearch" value="quickref"
 <?php
 $type = myphpnet_urlsearch();
 if ($type === MYPHPNET_URL_NONE || $type === MYPHPNET_URL_FUNC) {
     echo ' checked="checked"';
 }
-echo '> Function list search <input type="radio" name="urlsearch" value="manual"';
+echo '> <label for="form-urlsearch-quickref">Function list search</label> <input id="form-urlsearch-manual" type="radio" name="urlsearch" value="manual"';
 if ($type === MYPHPNET_URL_MANUAL) {
     echo ' checked="checked"';
 }
 ?>
-> PHP Documentation search
+> <label for="form-urlsearch-manual">PHP Documentation search</label>
 </div>
 
-<h2>Mirror site redirection</h2>
-
-<p>
- The php.net site redirects users to mirror sites in several cases
- automatically. It tries to find a close mirror first (a mirror in the
- user's country), and if no such mirror is found, it selects one mirror
- randomly. Here you can set one preferred mirror site for yourself in
- case you are not satisfied with the automatic selection.
-</p>
-
-<p>
- Please note that in case the site finds your preferred mirror site disabled
- for some reason, it will fall back to the automatic selection procedure, but
- will not alter your preferences, so next time when your selected server works,
- the redirections will lead you there. 
-</p>
-
-<div class="indent">
- <select name="mirror">
-<?php
-$mirror = myphpnet_mirror();
-foreach ($mirror_sites as $murl => $mdata) {
-    
-    // Skip inactive mirrors
-    if (mirror_status($murl) != MIRROR_OK ||
-        $murl == "http://www.php.net/" || $murl == 'http://php.net/') { continue; }
-    
-    // Compute user friendly mirror name
-    if ($murl == "NONE") {
-        $mname = "Automatic selection (default)";
-    } else {
-        $tmpurl = " (" .substr($murl, strpos($murl, '//') + 2, -1). ")";
-        if (isset($COUNTRIES[$mdata[0]])) {
-            $mname = $COUNTRIES[$mdata[0]] . $tmpurl;
-        } else {
-            $mname = "Unknown" . $tmpurl;
-        }
-    }
-    
-    // Print out mirror option with selection if needed
-    printf (
-        "  <option value=\"$murl\"%s>$mname</option>\n",
-        ($mirror == $murl ? ' selected="selected"' : '')
-    );
-}
-?>
- </select>
-</div>
 <br>
 <h2>User Group tips</h2>
 

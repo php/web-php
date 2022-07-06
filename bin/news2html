@@ -3,46 +3,56 @@
 PHP_SAPI == 'cli' or die("Please run this script using the cli sapi");
 
 // get args
-if($argc < 3) {
-	echo "Use: $argv[0] /path/to/php-5.4.16/NEWS 5.4.16\n";
+$cmd = array_shift($_SERVER['argv']);
+
+if (count($_SERVER['argv']) < 2) {
+	echo "Use: $cmd /path/to/php-5.4.16/NEWS 5.4.16 [path/to/ChangeLog.php]\n";
 	exit(1);
 }
+$news_file = array_shift($_SERVER['argv']);
+$version = array_shift($_SERVER['argv']);
+$changelog = @array_shift($_SERVER['argv']);
+
 // find NEWS entry
-$fp = fopen($argv[1], "r");
+$fp = fopen($news_file, "r");
 if(!$fp) {
-	die("Can not open $argv[1]");
+	die("Can not open {$news_file}\n");
 }
-$version = $argv[2];
+
 $inside = false;
-$entries = array();
+$entries = [];
 while(($ln = fgets($fp)) !== false) {
-	if(preg_match("/(.. ... ....),? PHP $version/", $ln, $m)) {
+	if (preg_match("/(.. ... ....),? PHP $version/", $ln, $m)) {
 		// got entry start
 		$inside = true;
 		$date = strtr($m[1], " ", "-");
 		continue;
 	}
-	if($inside) {
-		if(preg_match('/,? PHP \d+.\d+.\d+/', $ln)) {
-			// next entry - we're done
-			break;
-		}
-		if($ln == "\n") {
-			$module = 'Core';
-			continue;
-		}
- 		if($ln[0] == '-') {
-			// module
-			$module = trim(substr($ln, 1), " \t\n:");
-		} elseif(preg_match('/^\s+\.\s/',$ln)) {
-			$entries[$module][] = trim(preg_replace('/^\s+\.\s+/', '', $ln));
-		} else {
-			// continued line
-			$c = count($entries[$module])-1;
-			$entries[$module][$c] = trim($entries[$module][$c] )." ".trim($ln);
-		}
+	if (!$inside) { continue; }
+
+	if (preg_match('/,? PHP \d+.\d+.\d+/', $ln)) {
+		// next entry - we're done
+		break;
+	}
+
+	if ($ln == "\n") {
+		$module = 'Core';
+		continue;
+	}
+	if ($ln[0] == '-') {
+		// module
+		$module = trim(substr($ln, 1), " \t\n:");
+	} elseif (preg_match('/^\s+\.\s/',$ln)) {
+		$entries[$module][] = trim(preg_replace('/^\s+\.\s+/', '', $ln));
+	} else {
+		// continued line
+		$c = count($entries[$module])-1;
+		$entries[$module][$c] = trim($entries[$module][$c] )." ".trim($ln);
 	}
 }
+
+if ($changelog) { ob_start(); }
+
 echo <<<HEAD
 <section class="version" id="$version"><!-- {{{ $version -->
 <h3>Version $version</h3>
@@ -50,21 +60,50 @@ echo <<<HEAD
 <ul>
 HEAD;
 
+$bug_map = [
+    '/Fixed bug #([0-9]+)/'      => '<?php bugfix(\1); ?'.'>',
+    '/Fixed PECL bug #([0-9]+)/' => '<?php peclbugfix(\1); ?'.'>',
+    '/Implemented FR #([0-9]+)/' => '<?php implemented(\1); ?'.'>',
+    '/GitHub PR #([0-9]+)/'      => '<?php githubissuel(\'php/php-src\',\1); ?'.'>',
+    '/GH-([0-9]+)/'              => '<?php githubissuel(\'php/php-src\',\1); ?'.'>',
+];
+
 foreach($entries as $module => $items) {
 	echo "<li>$module:\n<ul>\n";
 	foreach($items as $item) {
 		// strip author
-		$item = preg_replace('/\.\s+\(.+?\)\s*$/', '.', $item);
+		$item = preg_replace('/(\.(\s+\(CVE-\d+-\d+\))?)\s+\(.+?\)\s*$/', '\\1', $item);
 		// encode HTML
 		$item = htmlspecialchars($item, ENT_NOQUOTES);
 		// convert bug numbers
-		$item = preg_replace(
-			array('/Fixed bug #([0-9]+)/', '/Fixed PECL bug #([0-9]+)/', '/FR #([0-9]+)/'),
-			array('<?php bugfix(\1); ?>', '<?php peclbugfix(\1); ?>', 'FR <?php bugl(\1); ?>'),
-			$item
-		);
+		$item = preg_replace(array_keys($bug_map), array_values($bug_map), $item);
 		echo "  <li>$item</li>\n";
 	}
 	echo "</ul></li>\n";
 }
 echo "</ul>\n<!-- }}} --></section>\n\n";
+
+if ($changelog) {
+	$contents = ob_get_clean();
+
+	$log = file_get_contents($changelog);
+	if (empty($log)) {
+		fprintf(STDERR, "Unable to read $changelog\n");
+		exit(1);
+	}
+
+	$parts = explode('.', $version, 3);
+	if (count($parts) < 2) {
+		fprintf(STDERR, "Unable to parse branch from $version\n");
+		exit(1);
+	}
+
+	$tag = "<a id=\"PHP_{$parts[0]}_{$parts[1]}\"></a>";
+	if (strpos($log, $tag) === false) {
+		fprintf(STDERR, "Unable to find branch tag in ChangeLog\n");
+		exit(1);
+	}
+
+	$log = str_replace($tag, "$tag\n\n$contents", $log);
+	file_put_contents($changelog, $log);
+}

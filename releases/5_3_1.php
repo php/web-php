@@ -1,7 +1,6 @@
 <?php
-// $Id: 5_2_0.php,v 1.4 2007/01/16 16:04:05 bjori Exp $
 $_SERVER['BASE_PAGE'] = 'releases/5_3_1.php';
-include_once $_SERVER['DOCUMENT_ROOT'] . '/include/prepend.inc';
+include_once __DIR__ . '/../include/prepend.inc';
 site_header("PHP 5.3.1 Release Announcement");
 ?>
 
@@ -21,7 +20,7 @@ large number of bug fixes.
   <li>Fixed a safe_mode bypass in tempnam().</li>
   <li>Fixed a open_basedir bypass in posix_mkfifo().</li>
   <li>Fixed bug #50063 (safe_mode_include_dir fails).</li>
-  <li>Fixed bug #44683 (popen crashes when an invalid mode is passed).</li> 
+  <li>Fixed bug #44683 (popen crashes when an invalid mode is passed).</li>
 </ul>
 
 <p>

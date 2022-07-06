@@ -1,7 +1,6 @@
 <?php
-// $Id$
 $_SERVER['BASE_PAGE'] = 'license/index.php';
-include_once $_SERVER['DOCUMENT_ROOT'] . '/include/prepend.inc';
+include_once __DIR__ . '/../include/prepend.inc';
 
 $SIDEBAR_DATA = <<<EOF
 <aside>
@@ -23,26 +22,26 @@ site_header("License Information", array("current" => "help"));
 
 <h1>PHP Licensing</h1>
 
-<a name="code-lic"></a>
+<a id="code-lic"></a>
 <h2>PHP Codebase</h2>
 
 <ul>
  <li>
-  PHP 4, PHP 5 and PHP 7 are distributed under the
+  Starting with PHP 4, versions of the PHP software are distributed under the
   <a href="http://www.php.net/license/3_01.txt">PHP License v3.01</a>, copyright (c) the <a href="/credits.php">PHP Group</a>.
   <ul>
    <li>
-    This is an <a href="http://www.opensource.org/docs/osd">Open Source license</a>, 
+    This is an <a href="http://www.opensource.org/docs/osd">Open Source license</a>,
     certified by the Open Source Initiative.
    </li>
    <li>
-    The PHP license is a BSD-style license which does not have the "copyleft" 
+    The PHP license is a BSD-style license which does not have the "copyleft"
     restrictions associated with GPL.
    </li>
   </ul>
  </li>
  <li>
-  Some files have been contributed under other (compatible) licenses and carry 
+  Some files have been contributed under other (compatible) licenses and carry
   additional requirements and copyright information.<br>
   This is indicated in the license + copyright comment block at the top of the source file.
  </li>
@@ -55,7 +54,7 @@ site_header("License Information", array("current" => "help"));
  </li>
 </ul>
 
-<a name="doc-lic"></a>
+<a id="doc-lic"></a>
 <h2>PHP Documentation</h2>
 
 <ul>
@@ -68,21 +67,21 @@ site_header("License Information", array("current" => "help"));
  <li>Practical Information: <a href="http://doc.php.net/tutorial/">Documentation HOWTO</a></li>
 </ul>
 
-<a name="web-lic"></a>
+<a id="web-lic"></a>
 <h2>PHP Website</h2>
 
 <ul>
  <li>The Website copyright can be viewed here: <a href="/copyright.php">Website Copyright</a></li>
 </ul>
 
-<a name="logo-lic"></a>
+<a id="logo-lic"></a>
 <h2>PHP Logo</h2>
 
 <ul>
  <li>The Logo license terms can be viewed on the <a href="/download-logos.php">Logo and Icon Download page</a></li>
 </ul>
 
-<a name="faq-lic"></a>
+<a id="faq-lic"></a>
 <h2>Frequently Asked Questions</h2>
 
 <!-- Selected FAQ points from former page on License Information [v 1.13] -->
@@ -96,14 +95,14 @@ OK?
 </p>
 
 <p>
-<strong>A.</strong> 
-We cannot really stop you from using PHP in the name of 
+<strong>A.</strong>
+We cannot really stop you from using PHP in the name of
 your project unless you include any code from the PHP distribution, in
-which case you would be violating the license. 
+which case you would be violating the license.
 See Clause 4 in the <a href="http://www.php.net/license/3_01.txt">
-PHP License v3.01</a>. 
-<br>But we would really prefer if people would come up with their own names 
-independent of the  PHP name. 
+PHP License v3.01</a>.
+<br>But we would really prefer if people would come up with their own names
+independent of the  PHP name.
 </p>
 
 <p>
@@ -142,11 +141,11 @@ release PHP under a much more loose license (Apache-style), to help
 PHP become as popular as possible.
 </p>
 
-<a name="other-lic"></a>
+<a id="other-lic"></a>
 <h2>Licensing information for related projects</h2>
 
 <p>
-For related projects, please refer to licensing information on the Project websites:  
+For related projects, please refer to licensing information on the Project websites:
 </p>
 <ul>
   <li><a href="http://pecl.php.net/copyright.php">PECL</a></li>
@@ -155,4 +154,3 @@ For related projects, please refer to licensing information on the Project websi
 </ul>
 
 <?php site_footer(array('sidebar' => $SIDEBAR_DATA));
-

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom" xmlns:default="http://php.net/ns/news">
+  <title>PHP fwdays 2019</title>
+  <id>http://php.net/archive/2019.php#id2019-05-27-1</id>
+  <published>2019-05-27T23:30:01+02:00</published>
+  <updated>2019-05-27T23:30:01+02:00</updated>
+  <default:finalTeaserDate xmlns="http://php.net/ns/news">2019-06-01</default:finalTeaserDate>
+  <category term="conferences" label="Conference announcement"/>
+  <link href="http://php.net/conferences/index.php#id2019-05-27-1" rel="alternate" type="text/html"/>
+  <default:newsImage xmlns="http://php.net/ns/news" link="https://fwdays.com/event/php-fwdays-2019" title="php fwdays 2019">fwdays.png</default:newsImage>
+  <link href="https://fwdays.com/event/php-fwdays-2019" rel="via" type="text/html"/>
+  <content type="xhtml">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+     <p>We are excited to announce the 7th edition of <a href="https://fwdays.com/en/event/php-fwdays-2019">PHP fwdays</a> conference - the biggest PHP conf of Ukraine, which will be held on June 1st, 2019 in Kyiv.</p>
+     <p>
+      Three parallel tracks and community discussions are all dedicated to PHP development, tools and issues to be solved. Meet our Keynote speaker Fabien Potencier, together with Marco Pivetta, Michelle Sanver, Tomáš Votruba, Nikola Poša, and 12 international and local speakers. <br/>
+      Join more than 800 developers from all over the world to learn, discuss and solve.
+     </p>
+     <p>Check out the <a href="https://fwdays.com/en/event/php-fwdays-2019#program-event">final agenda</a> and get a ticket right away!</p>
+    </div>
+  </content>
+</entry>

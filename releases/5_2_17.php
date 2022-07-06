@@ -1,7 +1,6 @@
 <?php
-// $Id$
-               $_SERVER['BASE_PAGE'] = 'releases/5.2.17.php';
-include_once $_SERVER['DOCUMENT_ROOT'] . '/include/prepend.inc';
+$_SERVER['BASE_PAGE'] = 'releases/5_2_17.php';
+include_once __DIR__ . '/../include/prepend.inc';
 site_header("PHP 5.2.17 Release Announcement");
 ?>
 
@@ -9,7 +8,7 @@ site_header("PHP 5.2.17 Release Announcement");
 <p>
 The PHP development team would like to announce the immediate
 availability of PHP 5.2.17.</p>
- 
+
 <p>This release resolves a critical issue, reported as PHP bug #53632,
 where conversions from string to double might cause the PHP interpreter
 to hang on systems using x87 FPU registers.</p>

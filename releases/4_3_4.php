@@ -1,7 +1,6 @@
 <?php
-// $Id$
 $_SERVER['BASE_PAGE'] = 'releases/4_3_4.php';
-include_once $_SERVER['DOCUMENT_ROOT'] . '/include/prepend.inc';
+include_once __DIR__ . '/../include/prepend.inc';
 site_header("PHP 4.3.4 Release Announcement");
 ?>
 
@@ -11,7 +10,7 @@ site_header("PHP 4.3.4 Release Announcement");
 
 <p>
  After a lengthy QA process, <a href="/downloads.php">PHP 4.3.4</a> is finally out!<br>
- This is a medium size maintenance release, with a fair number of bug fixes. All users 
+ This is a medium size maintenance release, with a fair number of bug fixes. All users
  are encouraged to upgrade to 4.3.4.
 </p>
 

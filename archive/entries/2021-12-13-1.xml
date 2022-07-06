@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom" xmlns:default="http://php.net/ns/news">
+  <title>The Online PHP Conference 2022</title>
+  <id>https://www.php.net/archive/2021.php#2021-12-13-1</id>
+  <published>2021-12-13T12:00:00+00:00</published>
+  <updated>2021-12-13T12:00:00+00:00</updated>
+  <link href="https://www.php.net/conferences/index.php#id2021-12-13-1" rel="alternate" type="text/html"/>
+  <link href="https://2022.phpconference.online/" rel="via" type="text/html"/>
+  <default:finalTeaserDate xmlns="http://php.net/ns/news">2022-01-21</default:finalTeaserDate>
+  <category term="conferences" label="Conference announcement"/>
+  <content type="xhtml">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+      <p>The Online PHP Conference 2022 takes place January 17-21, 2022. This time we interpret the term "conference" literally: over the course of a week, we dedicate each morning to a topic that we will discuss together with invited experts in an interactive discussion. The topics are Remote Teams, Data Privacy and Data Security, Supply Chain Management, Cloud and Operations, and Green IT. The discussions will be held in German.</p>
+      <p><a href="https://2022.phpconference.online/">https://2022.phpconference.online/</a></p>
+    </div>
+  </content>
+</entry>

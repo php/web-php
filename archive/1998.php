@@ -1,7 +1,6 @@
 <?php
-// $Id$
 $_SERVER['BASE_PAGE'] = 'archive/1998.php';
-include_once $_SERVER['DOCUMENT_ROOT'] . '/include/prepend.inc';
+include_once __DIR__ . '/../include/prepend.inc';
 news_archive_sidebar();
 site_header("News Archive - 1998", array("cache" => true));
 ?>
@@ -56,7 +55,7 @@ site_header("News Archive - 1998", array("cache" => true));
  some dramatic enhancements. It is more than twice as fast, it uses less
  memory, it has a more consistent language implementation and a much wider
  set of expressions and language features than PHP/FI 2.0. An included
- conversion program will help you migrate your PHP 2 scripts to PHP 3. 
+ conversion program will help you migrate your PHP 2 scripts to PHP 3.
 </p>
 <p>
  <a href="http://cvs.php.net/co.php/phpweb/Attic/release-3.0.txt?sa=1&amp;login=2&amp;r=1.2">Read
@@ -93,4 +92,3 @@ site_header("News Archive - 1998", array("cache" => true));
 </p>
 
 <?php site_footer(array('elephpants' => true, 'sidebar' => $SIDEBAR_DATA));
-

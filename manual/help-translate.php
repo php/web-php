@@ -1,9 +1,7 @@
 <?php
-// $Id$
-
 $_SERVER['BASE_PAGE'] = 'manual/help-translate.php';
-include_once $_SERVER['DOCUMENT_ROOT'] . '/include/prepend.inc';
-include_once $_SERVER['DOCUMENT_ROOT'] . '/include/shared-manual.inc';
+include_once __DIR__ . '/../include/prepend.inc';
+include_once __DIR__ . '/../include/shared-manual.inc';
 site_header("Help translate the PHP Manual");
 ?>
 

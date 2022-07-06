@@ -1,7 +1,6 @@
 <?php
-// $Id: 5_2_0.php,v 1.4 2007/01/16 16:04:05 bjori Exp $
 $_SERVER['BASE_PAGE'] = 'releases/5_5_0.php';
-include_once $_SERVER['DOCUMENT_ROOT'] . '/include/prepend.inc';
+include_once __DIR__ . '/../include/prepend.inc';
 site_header("PHP 5.5.0 Release Announcement");
 ?>
 

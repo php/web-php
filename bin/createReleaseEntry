@@ -1,0 +1,74 @@
+#!/usr/bin/env php
+<?php
+PHP_SAPI == 'cli' or die("Please run this script using the cli sapi");
+
+require_once __DIR__ . '/../autoload.php';
+
+use phpweb\News\Entry;
+
+if (!file_exists(Entry::ARCHIVE_FILE_ABS)) {
+	fwrite(STDERR, "Can't find " . Entry::ARCHIVE_FILE_REL . ", are you sure you are in phpweb/?\n");
+	exit(1);
+}
+
+$opts = getopt('v:r',['security']);
+if (!isset($opts['v'])) {
+	echo "Usage: {$_SERVER['argv'][0]} -v 8.0.8 [ -r ] [ --security ]\n";
+	echo "Create a standard stable-release news entry in archive/entries/\n\n";
+	echo "  -v x.y.z     Version of PHP being announced\n";
+	echo "  -r           Create a matching releases/x_y_z.php file\n";
+	echo "  --security   This is a security release (default: bug fix)\n";
+	exit(0);
+}
+$version = $opts['v'];
+if (!preg_match('/^(\d+)\.(\d+)\.\d+$/', $version, $matches)) {
+	fwrite(STDERR, "Unable to parse version identifier\n");
+	exit(1);
+}
+$major = $matches[1];
+$branch = "{$major}.{$matches[2]}";
+$security = isset($opts['security']) ? 'security' : 'bug fix';
+
+// Create content.
+$template = <<<EOD
+<p>The PHP development team announces the immediate availability of PHP $version. This is a $security release.</p>
+
+<p>All PHP $branch users are encouraged to upgrade to this version.</p>
+
+<p>For source downloads of PHP $version please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
+Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
+The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-{$major}.php#{$version}">ChangeLog</a>.
+</p>
+EOD;
+
+// Mint the news XML entry.
+$entry = (new Entry)
+	->setTitle("PHP $version Released!")
+	->setCategories(['releases','frontpage'])
+	->setContent($template);
+
+$entry->save()->updateArchiveXML();
+$addedFiles = [Entry::ARCHIVE_ENTRIES_REL . $entry->getId() . '.xml'];
+
+// Mint the releases/x_y_z.php archive.
+const RELEASES_REL = 'releases/';
+const RELEASES_ABS = __DIR__ . '/../' . RELEASES_REL;
+if (isset($opts['r'])) {
+	$release = strtr($version, '.', '_') . '.php';
+	file_put_contents(RELEASES_ABS . $release, "<?php
+\$_SERVER['BASE_PAGE'] = 'releases/$release';
+include_once __DIR__ . '/../include/prepend.inc';
+site_header('PHP $version Release Announcement');
+?>
+<h1>PHP $version Release Announcement</h1>
+
+$template
+<?php site_footer();
+");
+	$addedFiles[] = RELEASES_REL . $release;
+}
+
+echo "News entry created.\n";
+echo "Please sanity check changes to " . Entry::ARCHIVE_FILE_REL . " and add the newly created file(s):\ngit add";
+foreach ($addedFiles as $file) { echo " $file"; }
+echo "\n";

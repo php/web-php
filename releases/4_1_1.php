@@ -1,7 +1,6 @@
 <?php
-// $Id$
 $_SERVER['BASE_PAGE'] = 'releases/4_1_1.php';
-include_once $_SERVER['DOCUMENT_ROOT'] . '/include/prepend.inc';
+include_once __DIR__ . '/../include/prepend.inc';
 site_header("PHP 4.1.1 Release Announcement");
 ?>
 

@@ -1,7 +1,6 @@
 <?php
-// $Id$
 $_SERVER['BASE_PAGE'] = 'sitemap.php';
-include_once $_SERVER['DOCUMENT_ROOT'] . '/include/prepend.inc';
+include_once __DIR__ . '/include/prepend.inc';
 site_header("Sitemap", array("current" => "help"));
 ?>
 
@@ -17,6 +16,7 @@ site_header("Sitemap", array("current" => "help"));
  <li><a href="/ChangeLog-4.php">PHP 4 ChangeLog</a></li>
  <li><a href="/ChangeLog-5.php">PHP 5 ChangeLog</a></li>
  <li><a href="/ChangeLog-7.php">PHP 7 ChangeLog</a></li>
+ <li><a href="/ChangeLog-8.php">PHP 8 ChangeLog</a></li>
 </ul>
 
 <h2>Getting PHP</h2>
@@ -80,21 +80,11 @@ site_header("Sitemap", array("current" => "help"));
 <!-- <li><a href="/svnsync.php">Maintaining a Local SVN Repository</a></li> -->
 </ul>
 
-<h2>Mirror sites</h2>
+<h2>Site information</h2>
 
 <ul>
- <li>Mirror site information
-  <ul>
-   <li><a href="/mirrors.php">List of Mirror Sites</a></li>
-   <li><a href="/mirror.php">Information About this Mirror Site</a></li>
-  </ul>
- </li>
- <li>Mirroring
-  <ul>
-   <li><a href="/mirroring.php">Mirroring PHP.net</a></li>
-   <li><a href="/mirroring-stats.php">Mirroring - stats service</a></li>
-  </ul>
- </li>
+ <li><a href="/mirror.php">Information About this Site</a></li>
+ <li><a href="/mirroring.php">Mirroring PHP.net locally</a></li>
 </ul>
 
 <h2>Other pages</h2>

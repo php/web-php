@@ -9,28 +9,28 @@
     ?>
 <?php if (!empty($config['related_menu']) || !empty($config['related_menu_deprecated'])): ?>
     <aside class='layout-menu'>
-    
+
         <ul class='parent-menu-list'>
             <?php if (!empty($config['related_menu'])): ?>
             <?php foreach($config['related_menu'] as $section): ?>
             <li>
                 <a href="<?php echo $section['link']; ?>"><?php echo $section['title']; ?></a>
-    
+
                 <?php if ($section['children']): ?>
                     <ul class='child-menu-list'>
-    
+
                         <?php
                         foreach($section['children'] as $item):
                             $cleanTitle = $item['title'];
-                        ?>  
+                        ?>
                         <li class="<?php echo ($item['current']) ? 'current' : ''; ?>">
                             <a href="<?php echo $item['link']; ?>" title="<?php echo $cleanTitle; ?>"><?php echo $cleanTitle; ?></a>
                         </li>
                         <?php endforeach; ?>
-    
+
                     </ul>
                 <?php endif; ?>
-    
+
             </li>
             <?php endforeach; ?>
             <?php endif; ?>
@@ -58,7 +58,7 @@
 <?php endif; ?>
 
   </div><!-- layout -->
-         
+
   <footer>
     <div class="container footer-content">
       <div class="row-fluid">
@@ -67,8 +67,10 @@
         <li><a href="/my.php">My PHP.net</a></li>
         <li><a href="/contact.php">Contact</a></li>
         <li><a href="/sites.php">Other PHP.net sites</a></li>
-        <li><a href="/mirrors.php">Mirror sites</a></li>
         <li><a href="/privacy.php">Privacy policy</a></li>
+<?php if (!empty($_SERVER['BASE_PAGE'])): ?>
+        <li><a href="https://github.com/php/web-php/blob/master/<?php echo urlencode($_SERVER['BASE_PAGE']); ?>">View Source</a></li>
+<?php endif; ?>
       </ul>
       </div>
     </div>
@@ -83,12 +85,12 @@
     ?>
 
  <!-- External and third party libraries. -->
- <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js" integrity="sha384-aBL3Lzi6c9LNDGvpHkZrrm3ZVsIwohDD7CDozL0pk8FwCrfmV7H9w8j3L7ikEv6h" crossorigin="anonymous"></script>
 <?php
  $jsfiles = array("ext/modernizr.js", "ext/hogan-2.0.0.min.js", "ext/typeahead.min.js", "ext/mousetrap.min.js", "search.js", "common.js");
  foreach ($jsfiles as $filename) {
-   $path = dirname(dirname(__FILE__)).'/js/'.$filename;
-   echo '<script type="text/javascript" src="' . $MYSITE . 'cached.php?t=' . @filemtime($path) . '&amp;f=/js/' . $filename . '"></script>'."\n";
+   $path = dirname(__DIR__).'/js/'.$filename;
+   echo '<script src="/cached.php?t=' . @filemtime($path) . '&amp;f=/js/' . $filename . '"></script>'."\n";
  }
 ?>
 
@@ -96,4 +98,3 @@
 
 </body>
 </html>
-

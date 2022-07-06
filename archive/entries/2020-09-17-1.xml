@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+  <title>PHP 8.0.0 Beta 4 available for testing</title>
+  <id>https://www.php.net/archive/2020.php#2020-09-17-1</id>
+  <published>2020-09-17T14:25:00+00:00</published>
+  <updated>2020-09-17T14:25:00+00:00</updated>
+  <link href="https://www.php.net/index.php#id2020-09-17-1" rel="alternate" type="text/html"/>
+  <link href="https://www.php.net/archive/2020.php#2020-09-17-1" rel="via" type="text/html"/>
+  <category term="frontpage" label="PHP.net frontpage news"/>
+  <content type="xhtml">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+      <p>
+        The PHP team is pleased to announce the seventh testing release of PHP 8.0.0, Beta 4.
+        This point in the release cycle would normally be RC1, however we're still finalizing
+        development of the JIT and squaring away named arguments, so we've opted for an extra
+        beta release with plans to start the RC cycle in two weeks.
+      </p>
+
+      <p>
+        At this time, we're not planning to adjust the GA date,
+        however this may change during the course of the RC cycle.
+        The updated release schedule can, as always, be found on the
+        <a href="https://wiki.php.net/todo/php80">PHP Wiki</a>.
+      </p>
+
+      <p>For source downloads of PHP 8.0.0 Beta 4 please visit the <a href="https://downloads.php.net/~pollita">download page</a>.</p>
+
+      <p>Please carefully test this version and report any issues found in the <a href="http://bugs.php.net">bug reporting system</a>.</p>
+
+      <p><b>Please DO NOT use this version in production, it is an early test version.</b></p>
+
+      <p>
+        For more information on the new features and other changes, you can read the
+        <a href="https://github.com/php/php-src/blob/php-8.0.0beta4/NEWS">NEWS</a> file,
+        or the <a href="https://github.com/php/php-src/blob/php-8.0.0beta4/UPGRADING">UPGRADING</a>
+        file for a complete list of upgrading notes. These files can also be found in the release archive.
+      </p>
+
+      <p>The next release will be the Release Candidate 1, planned for Oct 1 2020.</p>
+
+      <p>The signatures for the release can be found in <a href="https://gist.github.com/sgolemon/ddef47870381cae12120d41f59374847">the manifest</a> or on <a href="https://qa.php.net/">the QA site</a>.</p>
+
+      <p>Thank you for helping us make PHP better.</p>
+    </div>
+  </content>
+</entry>

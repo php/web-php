@@ -1,9 +1,8 @@
 <?php // vim: et
-// $Id$
 $_SERVER['BASE_PAGE'] = 'downloads.php';
-include_once $_SERVER['DOCUMENT_ROOT'] . '/include/prepend.inc';
-include_once $_SERVER['DOCUMENT_ROOT'] . '/include/gpg-keys.inc';
-include_once $_SERVER['DOCUMENT_ROOT'] . '/include/version.inc';
+include_once __DIR__ . '/include/prepend.inc';
+include_once __DIR__ . '/include/gpg-keys.inc';
+include_once __DIR__ . '/include/version.inc';
 
 // Try to make this page non-cached
 header_nocache();
@@ -40,11 +39,11 @@ site_header("Downloads",
     )
 );
 ?>
-<?php foreach ($RELEASES as $MAJOR => $major_releases): /* major releases loop start */
+<?php $i = 0; foreach ($RELEASES as $MAJOR => $major_releases): /* major releases loop start */
         $releases = array_slice($major_releases, 0, $SHOW_COUNT);
 ?>
 <a id="v<?php echo $MAJOR; ?>"></a>
-<?php $i = 0; foreach ($releases as $v => $a): ?>
+<?php foreach ($releases as $v => $a): ?>
   <?php $mver = substr($v, 0, strrpos($v, '.')); ?>
   <?php $stable = $i++ === 0 ? "Current Stable" : "Old Stable"; ?>
 
@@ -92,21 +91,7 @@ The following official GnuPG keys of the current PHP Release Manager can be used
 to verify the tags:
 </p>
 
-<?php foreach ($RELEASES as $MAJOR => $major_releases): /* major releases loop start */
-        $releases = array_slice($major_releases, 0, $SHOW_COUNT);
-?>
-<?php foreach ($releases as $v => $_): ?>
-  <?php $branch = implode('.', array_slice(explode('.', $v), 0, 2)); ?>
-  <?php if (isset($GPG_KEYS[$branch])): ?>
-    <h3 id="gpg-<?php echo $branch; ?>" class="content-header">PHP <?php echo $branch; ?></h3>
-    <div class="content-box">
-      <pre>
-<?php echo $GPG_KEYS[$branch]; ?>
-      </pre>
-    </div>
-  <?php endif ?>
-<?php endforeach ?>
-<?php endforeach; /* major releases loop end */ ?>
+<?php gpg_key_show_keys(true /* activeOnly */); ?>
 
 <p>
   <a href="gpg-keys.php">

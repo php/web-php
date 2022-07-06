@@ -1,18 +1,23 @@
 <?php
 $_SERVER['BASE_PAGE'] = 'eol.php';
 
-include_once $_SERVER['DOCUMENT_ROOT'] . '/include/prepend.inc';
-include_once $_SERVER['DOCUMENT_ROOT'] . '/include/branches.inc';
+include_once __DIR__ . '/include/prepend.inc';
+include_once __DIR__ . '/include/branches.inc';
 
 // Notes for specific branches can be added here, and will appear in the table.
 $BRANCH_NOTES = array(
+    '7.3' => '<a href="/migration74">A guide is available for migrating from PHP 7.3 to 7.4.</a>',
+	'7.2' => '<a href="/migration73">A guide is available for migrating from PHP 7.2 to 7.3.</a>',
+	'7.1' => '<a href="/migration72">A guide is available for migrating from PHP 7.1 to 7.2.</a>',
+	'7.0' => '<a href="/migration71">A guide is available for migrating from PHP 7.0 to 7.1.</a>',
+	'5.6' => '<a href="/migration70">A guide is available for migrating from PHP 5.6 to 7.0.</a>',
 	'5.5' => '<a href="/migration56">A guide is available for migrating from PHP 5.5 to 5.6.</a>',
 	'5.4' => '<a href="/migration55">A guide is available for migrating from PHP 5.4 to 5.5.</a>',
 	'5.3' => '<a href="/migration54">A guide is available for migrating from PHP 5.3 to 5.4.</a>',
 	'5.2' => '<a href="/migration53">A guide is available for migrating from PHP 5.2 to 5.3.</a>',
 	'5.1' => '<a href="/migration52">A guide is available for migrating from PHP 5.1 to 5.2.</a>',
 	'5.0' => '<a href="/migration51">A guide is available for migrating from PHP 5.0 to 5.1.</a>',
-	'4.4' => '<a href="/migration5">A guide is available for migrating from PHP 4 to PHP 5.0.</a><br>The end of life for PHP 4.4 also marks the end of life for PHP 4 as a whole.',
+	'4.4' => '<a href="/migration5">A guide is available for migrating from PHP 4 to PHP 5.0.</a>',
 );
 
 site_header('Unsupported Branches');
@@ -56,7 +61,7 @@ site_header('Unsupported Branches');
 							</a>
 						</td>
 						<td>
-							<?php echo isset($BRANCH_NOTES[$branch]) ? $BRANCH_NOTES[$branch] : ''; ?>
+							<?php echo $BRANCH_NOTES[$branch] ?? ''; ?>
 					</td>
 				</tr>
 			<?php endforeach ?>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom" xmlns:default="http://php.net/ns/news">
+  <title>Dutch PHP Conference 2020 – Online Edition</title>
+  <id>https://www.php.net/archive/2020.php#2020-04-14-1</id>
+  <published>2020-04-14T10:09:26+02:00</published>
+  <updated>2020-04-14T10:09:26+02:00</updated>
+  <link href="https://www.php.net/conferences/index.php#id2020-04-14-1" rel="alternate" type="text/html"/>
+  <link href="https://www.phpconference.nl" rel="via" type="text/html"/>
+  <default:finalTeaserDate xmlns="http://php.net/ns/news">2020-06-26</default:finalTeaserDate>
+  <category term="conferences" label="Conference announcement"/>
+  <default:newsImage xmlns="http://php.net/ns/news" link="https://www.phpconference.nl" title="Logo dpc 20202">dpc_2020.png</default:newsImage>
+  <content type="xhtml">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+      <p>Due to the COVID-19 pandemic we have transformed Dutch PHP Conference 2020 to an online event. On June 26th we will offer a 1-day, single-track event free of charge for all attendees! So mark your calendar for Friday, June 26th and we hope to virtually meet you at the online edition of DPC!</p>
+
+      <p><a href="https://www.phpconference.nl">https://www.phpconference.nl</a></p>
+    </div>
+  </content>
+</entry>

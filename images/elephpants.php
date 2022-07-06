@@ -1,5 +1,5 @@
 <?php
-include_once $_SERVER['DOCUMENT_ROOT'] . '/include/prepend.inc';
+include_once __DIR__ . '/../include/prepend.inc';
 
 $now = $_SERVER["REQUEST_TIME"];
 if (isset($_SERVER["HTTP_IF_MODIFIED_SINCE"])) {
@@ -21,12 +21,12 @@ header("Expires: " . date(DATE_RSS, $future));
  Simple script to serve elephpant images in json format.
  This script is called directly by the browser to feed the
  javascript generated banner of elephpant images.
- 
+
  The structure of the response data is:
- 
+
  [{
-     title: <image title>, 
-     url:   <link to image on flickr>, 
+     title: <image title>,
+     url:   <link to image on flickr>,
      data:  <base64 encoded image>
  },{
      ...
@@ -35,7 +35,7 @@ header("Expires: " . date(DATE_RSS, $future));
 
 // determine how many images to serve.
 if (isset($_REQUEST['count'])) {
-    $count = min(intval($_REQUEST['count']), 50);
+    $count = min((int) $_REQUEST['count'], 50);
 } else {
     header('HTTP/1.1 400', true, 400);
     print json_encode(array(
@@ -45,7 +45,7 @@ if (isset($_REQUEST['count'])) {
 }
 
 // read out photo metadata
-$path   = dirname(__FILE__) . '/elephpants';
+$path   = __DIR__ . '/elephpants';
 $json   = @file_get_contents($path . '/flickr.json');
 $photos = json_decode($json, true);
 
@@ -73,7 +73,7 @@ foreach ($photos as $photo) {
     if (!is_readable($path . '/' . $photo['filename'])) {
         continue;
     }
-    
+
     $got++;
     // add photo to response array.
     $elephpants[] = array(
@@ -84,4 +84,3 @@ foreach ($photos as $photo) {
 }
 
 print json_encode($elephpants);
-

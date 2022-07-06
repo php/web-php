@@ -1,7 +1,6 @@
 <?php
-// $Id$
 $_SERVER['BASE_PAGE'] = 'releases/5_4_35.php';
-include_once $_SERVER['DOCUMENT_ROOT'] . '/include/prepend.inc';
+include_once __DIR__ . '/../include/prepend.inc';
 site_header("PHP 5.4.35 Release Announcement");
 ?>
 
@@ -11,7 +10,7 @@ site_header("PHP 5.4.35 Release Announcement");
 5.4.35. 4 security-related bugs were fixed in this release, including the fix for CVE-2014-3710.
 
 All PHP 5.4 users are encouraged to upgrade to this version.
-</p>        
+</p>
 
 <p>For source downloads of PHP 5.4.35 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
 Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.

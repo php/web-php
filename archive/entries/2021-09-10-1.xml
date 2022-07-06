@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom" xmlns:default="http://php.net/ns/news">
+  <title>PHP Russia 2022</title>
+  <id>https://www.php.net/archive/2021.php#2021-09-10-1</id>
+  <published>2021-09-10T09:31:22+00:00</published>
+  <updated>2022-07-05T05:00:00+00:00</updated>
+  <link href="https://www.php.net/conferences/index.php#id2021-09-10-1" rel="alternate" type="text/html"/>
+  <link href="https://phprussia.ru/moscow/2022" rel="via" type="text/html"/>
+  <default:finalTeaserDate xmlns="http://php.net/ns/news">2022-11-24</default:finalTeaserDate>
+  <category term="conferences" label="Conference announcement"/>
+  <default:newsImage xmlns="http://php.net/ns/news" link="https://phprussia.ru/moscow/2022" title="PHP Russia 2022">php_russia_2022.jpg</default:newsImage>
+  <content type="xhtml">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+        <p>PHP Russia is the only Russian conference focused on PHP. It will be held in Moscow November 24-25, 2022. Main topics are PHP ecosystem (PHP itself, standards, frameworks, libraries and OpenSource) and major players experience in building complex projects using best practices and modern approaches.</p>
+        <p>We expect 600+ attendees and 20+ speakers!</p>
+        <p>Our audience consists of applications developers, API developers, CTO’s, CEO’s, fullstack developers, etc.</p>
+        <p>The program is designed by the developer community, representatives of large companies from Runet and around the world, and by tech developers and community activists. The selection of talks is multi-layered and complex — the Program Committee selects the best talks from the received applications unanimously according to several criteria.</p>
+    </div>
+  </content>
+</entry>

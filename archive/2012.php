@@ -1,7 +1,6 @@
 <?php
-// $Id: 2010.php 293613 2010-01-16 13:38:42Z bjori $
 $_SERVER['BASE_PAGE'] = 'archive/2012.php';
-include_once $_SERVER['DOCUMENT_ROOT'] . '/include/prepend.inc';
+include_once __DIR__ . '/../include/prepend.inc';
 news_archive_sidebar();
 site_header("News Archive - 2012", array("cache" => true));
 ?>
@@ -15,7 +14,7 @@ site_header("News Archive - 2012", array("cache" => true));
 <hr>
 <div class="newsItem hentry">
     <div class="newsImage"></div>
-    <h2 class="summary entry-title"><a name="id2012-12-21-1" id="id2012-12-21-1" href="http://php.net/archive/2012.php#id2012-12-21-1" rel="bookmark" class="bookmark">PHP 5.5.0 Alpha2 released</a></h2>
+    <h2 class="summary entry-title"><a id="id2012-12-21-1" href="http://php.net/archive/2012.php#id2012-12-21-1" rel="bookmark" class="bookmark">PHP 5.5.0 Alpha2 released</a></h2>
     <div class="entry-content description">
         <abbr class="published newsdate" title="2012-12-21T16:19:14+00:00">21-Dec-2012</abbr>
         <div>
@@ -61,12 +60,12 @@ site_header("News Archive - 2012", array("cache" => true));
         Thank you for helping us making PHP better.
      </p>
     </div>
-  
+
     </div>
 </div>
 <div class="newsItem hentry vevent">
     <div class="newsImage"><a href="http://conference.phpbenelux.eu/2013/"><img src="/images/news/phpbenelux_conference_logo-01-e1344277762627.png" alt="PHPBenelux Conference 2013" width="450" height="118" style="float: right;"></a></div>
-    <h2 class="summary entry-title"><a name="id2012-12-20-2" id="id2012-12-20-2" href="http://conference.phpbenelux.eu/2013/" rel="bookmark" class="bookmark">PHPBenelux Conference 2013</a></h2>
+    <h2 class="summary entry-title"><a id="id2012-12-20-2" href="http://conference.phpbenelux.eu/2013/" rel="bookmark" class="bookmark">PHPBenelux Conference 2013</a></h2>
     <div class="entry-content description">
         <abbr class="published newsdate" title="2012-12-20T12:16:46-08:00">20-Dec-2012</abbr>
         <div>
@@ -79,12 +78,12 @@ site_header("News Archive - 2012", array("cache" => true));
      <a href="http://conference.phpbenelux.eu/2013/">http://conference.phpbenelux.eu/2013/</a> for more information.
      </p>
     </div>
-  
+
     </div>
 </div>
 <div class="newsItem hentry">
     <div class="newsImage"></div>
-    <h2 class="summary entry-title"><a name="id2012-12-20-1" id="id2012-12-20-1" href="http://php.net/archive/2012.php#id2012-12-20-1" rel="bookmark" class="bookmark">PHP 5.4.10 and PHP 5.3.20 released!</a></h2>
+    <h2 class="summary entry-title"><a id="id2012-12-20-1" href="http://php.net/archive/2012.php#id2012-12-20-1" rel="bookmark" class="bookmark">PHP 5.4.10 and PHP 5.3.20 released!</a></h2>
     <div class="entry-content description">
         <abbr class="published newsdate" title="2012-12-20T11:38:49+00:00">20-Dec-2012</abbr>
         <div>
@@ -94,12 +93,12 @@ site_header("News Archive - 2012", array("cache" => true));
        <p>The list of changes are recorded in the <a href="/ChangeLog-5.php">ChangeLog</a>.</p>
      </div>
     </div>
-  
+
     </div>
 </div>
 <div class="newsItem hentry vevent">
     <div class="newsImage"><a href="http://tek13.phparch.com/"><img src="/images/news/tek13_badge.png" alt="php[tek] 2013" width="300" height="140" style="float: right;" ></a></div>
-    <h2 class="summary entry-title"><a name="id2012-12-19-1" id="id2012-12-19-1" href="http://tek13.phparch.com/" rel="bookmark" class="bookmark">php[tek] 2013 Conference</a></h2>
+    <h2 class="summary entry-title"><a id="id2012-12-19-1" href="http://tek13.phparch.com/" rel="bookmark" class="bookmark">php[tek] 2013 Conference</a></h2>
     <div class="entry-content description">
         <abbr class="published newsdate" title="2012-12-19T14:57:57-08:00">19-Dec-2012</abbr>
         <div>
@@ -107,18 +106,18 @@ site_header("News Archive - 2012", array("cache" => true));
      year again at it's traditional location in Chicago, IL.  This year's
      dates are from May 14th - 17th, 2013.  It will again be a 3-track
      conference with a focus on the community.</p>
-     
+
      <p>The <a href="http://tek13.phparch.com/call-for-papers/">Call for
      Papers</a> has been announced and will be running until January 15th,
      2013.   Conference registration will open on January 1st.  We look
      forward to seeing many of you there this year!</p>
     </div>
-  
+
     </div>
 </div>
 <div class="newsItem hentry">
     <div class="newsImage"></div>
-    <h2 class="summary entry-title"><a name="id2012-11-22-1" id="id2012-11-22-1" href="http://www.php.net/archive/2012.php#id2012-11-22-1" rel="bookmark" class="bookmark">PHP 5.4.9 and PHP 5.3.19 released!</a></h2>
+    <h2 class="summary entry-title"><a id="id2012-11-22-1" href="http://www.php.net/archive/2012.php#id2012-11-22-1" rel="bookmark" class="bookmark">PHP 5.4.9 and PHP 5.3.19 released!</a></h2>
     <div class="entry-content description">
         <abbr class="published newsdate" title="2012-11-22T17:54:29+01:00">22-Nov-2012</abbr>
         <div>
@@ -126,12 +125,12 @@ site_header("News Archive - 2012", array("cache" => true));
      <p>For source downloads of PHP 5.4.9 and PHP 5.3.19 please visit our <a href="/downloads.php">downloads page</a>, Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.</p>
      <p>The list of changes are recorded in the <a href="/ChangeLog-5.php">ChangeLog</a>.</p>
     </div>
-  
+
     </div>
 </div>
 <div class="newsItem hentry">
     <div class="newsImage"></div>
-    <h2 class="summary entry-title"><a name="id2012-11-15-1" id="id2012-11-15-1" href="http://www.php.net/archive/2012.php#id2012-11-15-1" rel="bookmark" class="bookmark">PHP 5.5.0 Alpha1 released</a></h2>
+    <h2 class="summary entry-title"><a id="id2012-11-15-1" href="http://www.php.net/archive/2012.php#id2012-11-15-1" rel="bookmark" class="bookmark">PHP 5.5.0 Alpha1 released</a></h2>
     <div class="entry-content description">
         <abbr class="published newsdate" title="2012-11-15T14:10:06+00:00">15-Nov-2012</abbr>
         <div>
@@ -173,12 +172,12 @@ site_header("News Archive - 2012", array("cache" => true));
      </p>
 
     </div>
-  
+
     </div>
 </div>
 <div class="newsItem hentry vevent">
     <div class="newsImage"><a href="http://sunshinephp.com/"><img src="/images/news/sunshine2013.png" alt="SunshinePHP Developer Conference" width="180" height="180" style="float: right;"></a></div>
-    <h2 class="summary entry-title"><a name="id2012-11-03-1" id="id2012-11-03-1" href="http://sunshinephp.com/" rel="bookmark" class="bookmark">SunshinePHP Developer Conference</a></h2>
+    <h2 class="summary entry-title"><a id="id2012-11-03-1" href="http://sunshinephp.com/" rel="bookmark" class="bookmark">SunshinePHP Developer Conference</a></h2>
     <div class="entry-content description">
         <abbr class="published newsdate" title="2012-11-03T13:04:07-07:00">03-Nov-2012</abbr>
         <div>
@@ -199,12 +198,12 @@ site_header("News Archive - 2012", array("cache" => true));
          consider each submission.
      </p>
     </div>
-  
+
     </div>
 </div>
 <div class="newsItem hentry vevent">
     <div class="newsImage"><a href="http://phpconference.co.uk/"><img src="/images/news/phpuk2013.jpeg" alt="PHP UK 2013" width="161" height="107" style="float: right;"></a></div>
-    <h2 class="summary entry-title"><a name="id2012-11-02-1" id="id2012-11-02-1" href="http://phpconference.co.uk/" rel="bookmark" class="bookmark">PHP UK Conference</a></h2>
+    <h2 class="summary entry-title"><a id="id2012-11-02-1" href="http://phpconference.co.uk/" rel="bookmark" class="bookmark">PHP UK Conference</a></h2>
     <div class="entry-content description">
         <abbr class="published newsdate" title="2012-11-02T09:39:14-07:00">02-Nov-2012</abbr>
         <div>
@@ -221,12 +220,12 @@ site_header("News Archive - 2012", array("cache" => true));
          Our call for papers is open until November the 22nd and we would love to hear from you!
      </p>
     </div>
-  
+
     </div>
 </div>
 <div class="newsItem hentry">
     <div class="newsImage"></div>
-    <h2 class="summary entry-title"><a name="id2012-10-18-1" id="id2012-10-18-1" href="http://www.php.net/archive/2012.php#id2012-10-18-1" rel="bookmark" class="bookmark">PHP 5.4.8 and PHP 5.3.18 released!</a></h2>
+    <h2 class="summary entry-title"><a id="id2012-10-18-1" href="http://www.php.net/archive/2012.php#id2012-10-18-1" rel="bookmark" class="bookmark">PHP 5.4.8 and PHP 5.3.18 released!</a></h2>
     <div class="entry-content description">
         <abbr class="published newsdate" title="2012-10-18T17:35:45+00:00">18-Oct-2012</abbr>
         <div>
@@ -236,33 +235,33 @@ site_header("News Archive - 2012", array("cache" => true));
       All users of PHP are encouraged to upgrade to PHP 5.4.8,
       or at least 5.3.18.
      </p>
-     
+
      <p>
       Key enhancements in these releases include:
      </p>
-     
+
      <ul>
          <li>Fixed bug #63111 (is_callable() lies for abstract static method)</li>
        <li>Fixed bug #61442 (exception threw in __autoload can not be catched)</li>
      </ul>
-     
+
      <p>
       For source downloads of PHP 5.4.8 and PHP 5.3.18 please visit
       our <a href="/downloads.php">downloads page</a>, Windows binaries
       can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
      </p>
-     
+
      <p>
       The list of changes are recorded in the <a href="/ChangeLog-5.php">ChangeLog</a>.
      </p>
-     
+
     </div>
-  
+
     </div>
 </div>
 <div class="newsItem hentry vevent">
     <div class="newsImage"><a href="http://truenorthphp.ca/"><img src="/images/news/truenorth2012.jpg" alt="True North 2012" width="363" height="173" style="float: right;"></a></div>
-    <h2 class="summary entry-title"><a name="id2012-10-13-2" id="id2012-10-13-2" href="http://truenorthphp.ca/" rel="bookmark" class="bookmark">True North PHP</a></h2>
+    <h2 class="summary entry-title"><a id="id2012-10-13-2" href="http://truenorthphp.ca/" rel="bookmark" class="bookmark">True North PHP</a></h2>
     <div class="entry-content description">
         <abbr class="published newsdate" title="2012-10-13T17:00:14-07:00">13-Oct-2012</abbr>
         <div>
@@ -272,19 +271,19 @@ site_header("News Archive - 2012", array("cache" => true));
      that Toronto has an awesome PHP community and deserves an equally
      awesome conference.
      </p>
-     
+
      <p>
      Come out November 2-3, 2012 and hear both local talent and
      internationally known members of the PHP community share their thoughts
      and tools they use to build the web.
      </p>
     </div>
-  
+
     </div>
 </div>
 <div class="newsItem hentry vevent">
     <div class="newsImage"><a href="http://www.web-developer-conference.de/"><img src="/images/news/Logo_WDC_2013.jpg" alt="WDC2013" width="400" height="97" style="float: right;"></a></div>
-    <h2 class="summary entry-title"><a name="id2012-10-13-1" id="id2012-10-13-1" href="http://www.web-developer-conference.de/" rel="bookmark" class="bookmark">Web Developer Conference (WDC) 2013</a></h2>
+    <h2 class="summary entry-title"><a id="id2012-10-13-1" href="http://www.web-developer-conference.de/" rel="bookmark" class="bookmark">Web Developer Conference (WDC) 2013</a></h2>
     <div class="entry-content description">
         <abbr class="published newsdate" title="2012-10-13T16:17:20-07:00">13-Oct-2012</abbr>
         <div>
@@ -296,12 +295,12 @@ site_header("News Archive - 2012", array("cache" => true));
      the website via <a href="http://www.web-developer-conference.de">www.web-developer-conference.de</a>.
      </p>
     </div>
-  
+
     </div>
 </div>
 <div class="newsItem hentry vevent">
     <div class="newsImage"><a href="http://www.midwestphp.com/"><img src="/images/news/rsz_midwestphpconference_customlogodesign_rl3.jpg" alt="Midwest PHP Conference" width="180" height="180" style="float: right;"></a></div>
-    <h2 class="summary entry-title"><a name="id2012-10-05-1" id="id2012-10-05-1" href="http://www.midwestphp.com/" rel="bookmark" class="bookmark">Midwest PHP Conference</a></h2>
+    <h2 class="summary entry-title"><a id="id2012-10-05-1" href="http://www.midwestphp.com/" rel="bookmark" class="bookmark">Midwest PHP Conference</a></h2>
     <div class="entry-content description">
         <abbr class="published newsdate" title="2012-10-05T15:43:04-07:00">05-Oct-2012</abbr>
         <div>
@@ -312,47 +311,47 @@ site_header("News Archive - 2012", array("cache" => true));
          frameworks, databases, third party tools and components, and web development.
      </p>
     </div>
-  
+
     </div>
 </div>
 <div class="newsItem hentry">
     <div class="newsImage"></div>
-    <h2 class="summary entry-title"><a name="id2012-09-13-1" id="id2012-09-13-1" href="http://www.php.net/archive/2012.php#id2012-09-13-1" rel="bookmark" class="bookmark">PHP 5.4.7 and PHP 5.3.17 released!</a></h2>
+    <h2 class="summary entry-title"><a id="id2012-09-13-1" href="http://www.php.net/archive/2012.php#id2012-09-13-1" rel="bookmark" class="bookmark">PHP 5.4.7 and PHP 5.3.17 released!</a></h2>
     <div class="entry-content description">
         <abbr class="published newsdate" title="2012-09-13T15:29:37+00:00">13-Sep-2012</abbr>
         <div>
      <p>
-      The PHP development team announces the immediate availability of 
-      PHP 5.4.7 and PHP 5.3.17. These releases fix over 20 bugs. 
-      All users of PHP are encouraged to upgrade to PHP 5.4.7, 
+      The PHP development team announces the immediate availability of
+      PHP 5.4.7 and PHP 5.3.17. These releases fix over 20 bugs.
+      All users of PHP are encouraged to upgrade to PHP 5.4.7,
       or at least 5.3.17.
      </p>
-     
+
      <p>
       Key enhancements in these releases include:
      </p>
-     
+
      <ul>
        <li>Fixed bug #62955 (Only one directive is loaded from "Per Directory Values" Windows registry).</li>
        <li>Fixed bug #62460 (php binaries installed as binary.dSYM).</li>
      </ul>
-     
+
      <p>
-      For source downloads of PHP 5.4.7 and PHP 5.3.17 please visit 
-      our <a href="/downloads.php">downloads page</a>, Windows binaries 
+      For source downloads of PHP 5.4.7 and PHP 5.3.17 please visit
+      our <a href="/downloads.php">downloads page</a>, Windows binaries
       can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
      </p>
-     
+
      <p>
       The list of changes are recorded in the <a href="/ChangeLog-5.php">ChangeLog</a>.
      </p>
     </div>
-  
+
     </div>
 </div>
 <div class="newsItem hentry vevent">
     <div class="newsImage"><a href="http://codeconnexx.com/"><img src="/images/news/codeconnexx.com-1.jpg" alt="CodeConnexx" width="472" height="144" style="float: right;"></a></div>
-    <h2 class="summary entry-title"><a name="id2012-09-11-1" id="id2012-09-11-1" href="http://codeconnexx.com/" rel="bookmark" class="bookmark">CodeConnexx</a></h2>
+    <h2 class="summary entry-title"><a id="id2012-09-11-1" href="http://codeconnexx.com/" rel="bookmark" class="bookmark">CodeConnexx</a></h2>
     <div class="entry-content description">
         <abbr class="published newsdate" title="2012-09-11T12:33:16-05:00">11-Sep-2012</abbr>
         <div>
@@ -365,12 +364,12 @@ site_header("News Archive - 2012", array("cache" => true));
      childcare will be available for those who need it. We hope you can join us!
      </p>
     </div>
-  
+
     </div>
 </div>
 <div class="newsItem hentry vevent">
     <div class="newsImage"><a href="http://phpconference.com/"><img src="/images/news/icp2012.jpg" alt="IPC 2012" width="396" height="254" style="float: right;"></a></div>
-    <h2 class="summary entry-title"><a name="id2012-09-05-1" id="id2012-09-05-1" href="http://phpconference.com/" rel="bookmark" class="bookmark">International PHP Conference 2012</a></h2>
+    <h2 class="summary entry-title"><a id="id2012-09-05-1" href="http://phpconference.com/" rel="bookmark" class="bookmark">International PHP Conference 2012</a></h2>
     <div class="entry-content description">
         <abbr class="published newsdate" title="2012-09-05T18:41:44+01:00">05-Sep-2012</abbr>
         <div>
@@ -389,30 +388,30 @@ site_header("News Archive - 2012", array("cache" => true));
      Community and enterprise projects profit from its international reputation and impulses given from the developer community.
      </p>
     </div>
-  
+
     </div>
 </div>
 <div class="newsItem hentry vevent">
     <div class="newsImage"><a href="http://confoo.ca/en"><img src="/images/news/confoo-2013-php.jpg" alt="ConFoo Web Techno Conference. February 25 - March  1, 2013 | Montreal, Canada" width="180" height="250" style="float: right;"></a></div>
-    <h2 class="summary entry-title"><a name="id2012-08-29-1" id="id2012-08-29-1" href="http://confoo.ca/en" rel="bookmark" class="bookmark">ConFoo 2013 - Call for Papers is Now Open!</a></h2>
+    <h2 class="summary entry-title"><a id="id2012-08-29-1" href="http://confoo.ca/en" rel="bookmark" class="bookmark">ConFoo 2013 - Call for Papers is Now Open!</a></h2>
     <div class="entry-content description">
         <abbr class="published newsdate" title="2012-08-29T14:50:10+00:00">29-Aug-2012</abbr>
         <div>
      <p>ConFoo is one of the most important developer-oriented conferences loaded with PHP content. ConFoo 2013 will be held on February 25 through March 1 in Montreal, Canada.</p>
-     
+
      <p>The team just opened its call for papers. Candidates can submit proposals <b>until September 23</b>. Consult the <a href="http://confoo.ca/en/call-for-papers">call for papers</a> page for details and to start submitting. That page also explains what expenses ConFoo can cover for speakers. You can even get <a href="http://confoo.ca/en/call-for-papers/guidelines">advice</a> on how to write proposals.</p>
-     
+
      <p>The call for papers is public, meaning that all proposals get published on the website for others to vote and comment on. This approach allows the organizers to pick subjects that have most interest in the community. The comments are only visible to speakers and organizers to avoid influencing the votes.</p>
-     
+
      <p>To stay in touch via Twitter, follow <a href="http://twitter.com/confooca">@confooca</a> and use the <a href="http://twitter.com/#!/search/%23confoo">#confoo</a> tag. You can also help promote the event with these cool <a href="http://confoo.ca/en/propaganda">badges</a> for your site.</p>
-     
+
     </div>
-  
+
     </div>
 </div>
 <div class="newsItem hentry vevent">
     <div class="newsImage"><a href="http://conference.phpnw.org.uk/phpnw12"><img src="/images/news/phpnw12_details_200x1441.png" alt="PHPNW12" width="200" height="144" style="float: right;"></a></div>
-    <h2 class="summary entry-title"><a name="id2012-08-21-1" id="id2012-08-21-1" href="http://conference.phpnw.org.uk/phpnw12" rel="bookmark" class="bookmark">PHPNW12 - PHP North West 2012</a></h2>
+    <h2 class="summary entry-title"><a id="id2012-08-21-1" href="http://conference.phpnw.org.uk/phpnw12" rel="bookmark" class="bookmark">PHPNW12 - PHP North West 2012</a></h2>
     <div class="entry-content description">
         <abbr class="published newsdate" title="2012-08-21T19:59:32+02:00">21-Aug-2012</abbr>
         <div>
@@ -445,12 +444,12 @@ site_header("News Archive - 2012", array("cache" => true));
       been waiting.
      </p>
     </div>
-  
+
     </div>
 </div>
 <div class="newsItem hentry vevent">
     <div class="newsImage"><a href="http://www.zendcon.com/"><img src="/images/news/zendCon12.jpeg" alt="ZendCon 2012" width="247" height="104" style="float: right;"></a></div>
-    <h2 class="summary entry-title"><a name="id2012-08-16-2" id="id2012-08-16-2" href="http://www.zendcon.com/" rel="bookmark" class="bookmark">ZendCon 2012</a></h2>
+    <h2 class="summary entry-title"><a id="id2012-08-16-2" href="http://www.zendcon.com/" rel="bookmark" class="bookmark">ZendCon 2012</a></h2>
     <div class="entry-content description">
         <abbr class="published newsdate" title="2012-08-16T23:31:43+01:00">16-Aug-2012</abbr>
         <div>
@@ -483,27 +482,27 @@ site_header("News Archive - 2012", array("cache" => true));
      </ul>
      </p>
     </div>
-  
+
     </div>
 </div>
 <div class="newsItem hentry">
     <div class="newsImage"></div>
-    <h2 class="summary entry-title"><a name="id2012-08-16-1" id="id2012-08-16-1" href="http://www.php.net/archive/2012.php#id2012-08-16-1" rel="bookmark" class="bookmark">PHP 5.4.6 and PHP 5.3.16 released!</a></h2>
+    <h2 class="summary entry-title"><a id="id2012-08-16-1" href="http://www.php.net/archive/2012.php#id2012-08-16-1" rel="bookmark" class="bookmark">PHP 5.4.6 and PHP 5.3.16 released!</a></h2>
     <div class="entry-content description">
         <abbr class="published newsdate" title="2012-08-16T19:30:09+00:00">16-Aug-2012</abbr>
         <div>
 	    <p>The PHP development team announces the immediate availability of PHP 5.4.6 and PHP 5.3.16. These releases fix over 20 bugs. All users of PHP are encouraged to upgrade to PHP 5.4.6, or at least 5.3.16.</p>
-     
+
      <p>For source downloads of PHP 5.4.6 and PHP 5.3.16 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
           Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
           The list of changes are recorded in the <a href="http://www.php.net/ChangeLog-5.php">ChangeLog</a>.</p>
     </div>
-  
+
     </div>
 </div>
 <div class="newsItem hentry vevent">
     <div class="newsImage"><a href="http://london2012.live.symfony.com/"><img src="/images/news/sfl_london.png" alt="Sf Live London" width="212" height="214" style="float: right;"></a></div>
-    <h2 class="summary entry-title"><a name="id2012-08-15-1" id="id2012-08-15-1" href="http://london2012.live.symfony.com/" rel="bookmark" class="bookmark">Symfony Live London</a></h2>
+    <h2 class="summary entry-title"><a id="id2012-08-15-1" href="http://london2012.live.symfony.com/" rel="bookmark" class="bookmark">Symfony Live London</a></h2>
     <div class="entry-content description">
         <abbr class="published newsdate" title="2012-08-15T15:01:17+01:00">15-Aug-2012</abbr>
         <div>
@@ -524,12 +523,12 @@ site_header("News Archive - 2012", array("cache" => true));
      developer looking to find out more, this event will have something to make
      you glad you came along.</p>
     </div>
-  
+
     </div>
 </div>
 <div class="newsItem hentry vevent">
     <div class="newsImage"><a href="http://www.web-developer-conference.de"><img src="/images/news/wdc-2012.jpg" alt="The Web Developer Conference" width="216" height="59" style="float: right;"></a></div>
-    <h2 class="summary entry-title"><a name="id2012-07-27-1" id="id2012-07-27-1" href="http://www.web-developer-conference.de" rel="bookmark" class="bookmark">The Web Developer Conference</a></h2>
+    <h2 class="summary entry-title"><a id="id2012-07-27-1" href="http://www.web-developer-conference.de" rel="bookmark" class="bookmark">The Web Developer Conference</a></h2>
     <div class="entry-content description">
         <abbr class="published newsdate" title="2012-07-27T17:15:23+01:00">27-Jul-2012</abbr>
         <div>
@@ -545,12 +544,12 @@ site_header("News Archive - 2012", array("cache" => true));
           <a href="http://www.web-developer-conference.de">the conference website</a>.
           </p>
     </div>
-  
+
     </div>
 </div>
 <div class="newsItem hentry">
     <div class="newsImage"></div>
-    <h2 class="summary entry-title"><a name="id2012-07-19-1" id="id2012-07-19-1" href="http://www.php.net/archive/2012.php#id2012-07-19-1" rel="bookmark" class="bookmark">PHP 5.4.5 and PHP 5.3.15 released!</a></h2>
+    <h2 class="summary entry-title"><a id="id2012-07-19-1" href="http://www.php.net/archive/2012.php#id2012-07-19-1" rel="bookmark" class="bookmark">PHP 5.4.5 and PHP 5.3.15 released!</a></h2>
     <div class="entry-content description">
         <abbr class="published newsdate" title="2012-07-19T23:50:47+02:00">19-Jul-2012</abbr>
         <div>
@@ -559,18 +558,18 @@ site_header("News Archive - 2012", array("cache" => true));
      bugs and includes a fix for a security related overflow issue in the
      stream implementation. All users of PHP are encouraged to upgrade to
      PHP 5.4.5 or PHP 5.3.15.</p>
-     
+
      <p>For source downloads of PHP 5.4.5 and PHP 5.3.15 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
      Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes are recorded in the <a href="http://www.php.net/ChangeLog-5.php">ChangeLog</a>.</p>
-     
+
     </div>
-  
+
     </div>
 </div>
 <div class="newsItem hentry vevent">
     <div class="newsImage"><a href="http://www.northeastphp.org/"><img src="/images/news/NENA_logo.png" alt="Northeast PHP Conference" width="352" height="191" style="float: right;"></a></div>
-    <h2 class="summary entry-title"><a name="id2012-06-27-1" id="id2012-06-27-1" href="http://www.northeastphp.org/" rel="bookmark" class="bookmark">Northeast PHP Conference</a></h2>
+    <h2 class="summary entry-title"><a id="id2012-06-27-1" href="http://www.northeastphp.org/" rel="bookmark" class="bookmark">Northeast PHP Conference</a></h2>
     <div class="entry-content description">
         <abbr class="published newsdate" title="2012-06-27T16:20:12+01:00">27-Jun-2012</abbr>
         <div>
@@ -594,36 +593,36 @@ site_header("News Archive - 2012", array("cache" => true));
          </ul>
      </p>
     </div>
-  
+
     </div>
 </div>
 <div class="newsItem hentry">
     <div class="newsImage"></div>
-    <h2 class="summary entry-title"><a name="id2012-06-14-1" id="id2012-06-14-1" href="http://www.php.net/archive/2012.php#id2012-06-14-1" rel="bookmark" class="bookmark">PHP 5.4.4 and PHP 5.3.14 released!</a></h2>
+    <h2 class="summary entry-title"><a id="id2012-06-14-1" href="http://www.php.net/archive/2012.php#id2012-06-14-1" rel="bookmark" class="bookmark">PHP 5.4.4 and PHP 5.3.14 released!</a></h2>
     <div class="entry-content description">
         <abbr class="published newsdate" title="2012-06-14T14:36:29+02:00">14-Jun-2012</abbr>
         <div>
      <p>The PHP development team would like to announce the immediate
       availability of PHP 5.4.4 and PHP 5.3.14. All users of PHP are
       encouraged to upgrade to PHP 5.4.4 or PHP 5.3.14.</p>
-     
+
       <p>The release fixes multiple security issues: A weakness in the DES
       implementation of <a href="http://docs.php.net/crypt">crypt</a> and a
       heap overflow issue in the phar extension</p>
-     
+
      <p>PHP 5.4.4 and PHP 5.3.14 fixes over 30 bugs. Please note that the
      use of <i>php://fd</i> streams is now restricted to the CLI SAPI</p>
-     
+
       <p>For source downloads of PHP 5.4.4 and PHP 5.3.14 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
       Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
       The list of changes are recorded in the <a href="http://www.php.net/ChangeLog-5.php">ChangeLog</a>.</p>
     </div>
-  
+
     </div>
 </div>
 <div class="newsItem hentry">
     <div class="newsImage"></div>
-    <h2 class="summary entry-title"><a name="id2012-05-08-1" id="id2012-05-08-1" href="http://www.php.net/archive/2012.php#id2012-05-08-1" rel="bookmark" class="bookmark">PHP 5.4.3 and PHP 5.3.13 Released!</a></h2>
+    <h2 class="summary entry-title"><a id="id2012-05-08-1" href="http://www.php.net/archive/2012.php#id2012-05-08-1" rel="bookmark" class="bookmark">PHP 5.4.3 and PHP 5.3.13 Released!</a></h2>
     <div class="entry-content description">
         <abbr class="published newsdate" title="2012-05-08T19:44:07+02:00">08-May-2012</abbr>
         <div>
@@ -642,12 +641,12 @@ site_header("News Archive - 2012", array("cache" => true));
      Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes are recorded in the <a href="http://www.php.net/ChangeLog-5.php">ChangeLog</a>.</p>
     </div>
-  
+
     </div>
 </div>
 <div class="newsItem hentry">
     <div class="newsImage"></div>
-    <h2 class="summary entry-title"><a name="id2012-05-06-1" id="id2012-05-06-1" href="http://www.php.net/archive/2012.php#id2012-05-06-1" rel="bookmark" class="bookmark">PHP 5.3.12 and 5.4.2 and the CGI flaw (CVE-2012-1823)</a></h2>
+    <h2 class="summary entry-title"><a id="id2012-05-06-1" href="http://www.php.net/archive/2012.php#id2012-05-06-1" rel="bookmark" class="bookmark">PHP 5.3.12 and 5.4.2 and the CGI flaw (CVE-2012-1823)</a></h2>
     <div class="entry-content description">
         <abbr class="published newsdate" title="2012-05-06T23:00:36+02:00">06-May-2012</abbr>
         <div>
@@ -669,7 +668,7 @@ site_header("News Archive - 2012", array("cache" => true));
 
     Note that this will block otherwise safe requests like ?top-40 so if you
     have query parameters that look like that, adjust your regex accordingly.</p>
-    
+
     <p>Another set of releases are planned for Tuesday, May, 8th. These
     releases will fix the CGI flaw and another CGI-related issue in
     apache_request_header (5.4 only).</p>
@@ -677,76 +676,76 @@ site_header("News Archive - 2012", array("cache" => true));
     <p>We apologize for the inconvenience created with these releases and the
     (lack of) communication around them.</p>
     </div>
-  
+
     </div>
 </div>
 <div class="newsItem hentry">
     <div class="newsImage"></div>
-    <h2 class="summary entry-title"><a name="id2012-05-03-1" id="id2012-05-03-1" href="http://www.php.net/archive/2012.php#id2012-05-03-1" rel="bookmark" class="bookmark">PHP 5.3.12 and PHP 5.4.2 Released!</a></h2>
+    <h2 class="summary entry-title"><a id="id2012-05-03-1" href="http://www.php.net/archive/2012.php#id2012-05-03-1" rel="bookmark" class="bookmark">PHP 5.3.12 and PHP 5.4.2 Released!</a></h2>
     <div class="entry-content description">
         <abbr class="published newsdate" title="2012-05-03T18:00:36+02:00">03-May-2012</abbr>
         <div>
-     
+
      <p>There is a vulnerability in certain CGI-based setups <b>(Apache+mod_php and nginx+php-fpm are not affected)</b>
      that has gone unnoticed for at least 8 years. <a href="http://tools.ietf.org/html/draft-robinson-www-interface-00#section-7">Section
      7 of the CGI spec</a> states:</p>
-     
+
      <cite>
         Some systems support a method for supplying a [sic] array of strings to the
         CGI script. This is only used in the case of an `indexed' query. This
         is identified by a "GET" or "HEAD" HTTP request with a URL search
         string not containing any unencoded "=" characters.
      </cite>
-     
+
      <p>So, requests that do not have a "=" in the query string are treated
      differently from those who do in some CGI implementations. For PHP this
      means that a request containing ?-s may dump the PHP source code for the
      page, but a request that has ?-s&amp;=1 is fine.</p>
-     
+
      <p>A large number of sites run PHP as either an Apache module through
      mod_php or using php-fpm under nginx. Neither of these setups are
      vulnerable to this. Straight shebang-style CGI also does not appear to
      be vulnerable.</p>
-     
+
      <p>If you are using Apache mod_cgi to run PHP you may be vulnerable. To see
      if you are, just add ?-s to the end of any of your URLs. If you see your
      source code, you are vulnerable. If your site renders normally, you are not.</p>
-     
+
      <p>To fix this, update to PHP 5.3.12 or PHP 5.4.2. </p>
-     
+
      <p>We recognize that since CGI is a rather outdated way to run PHP, it may not be feasible to
      upgrade these sites to a modern version of PHP. An alternative is to
      configure your web server to not let these types of requests with query
      strings starting with a "-" and not containing a "=" through. Adding a
      rule like this should not break any sites. For Apache using mod_rewrite
      it would look like this:</p>
-     
+
      <pre>
          RewriteCond %{QUERY_STRING} ^(%2d|-)[^=]+$ [NC]
          RewriteRule ^(.*) $1? [L]
      </pre>
-     
+
      <p>If you are writing your own rule, be sure to take the urlencoded ?%2ds
      version into account.</p>
-     
+
      <p>Making a bad week worse, we had a bug in our bug system that toggled the
      private flag of a bug report to public on a comment to the bug report
      causing this issue to go public before we had time to test solutions to
      the level we would like. Please report any issues via <a href="https://bugs.php.net/">bugs.php.net</a>.</p>
-     
+
      <p>For source downloads of PHP 5.3.12 and PHP 5.4.2 please visit
      our <a href="/downloads.php">downloads page</a>, Windows binaries can be found
      on <a href="http://windows.php.net/download/">windows.php.net/download/</a>. A
      <a href="/ChangeLog-5.php#5.4.2">ChangeLog</a> exists.</p>
-     
+
 
     </div>
-  
+
     </div>
 </div>
 <div class="newsItem hentry vevent">
     <div class="newsImage"><a href="http://devconf.ru"><img src="/images/news/devconfru2012.png" alt="DevConf 2012" width="373" height="86" style="float: right;"></a></div>
-    <h2 class="summary entry-title"><a name="id2012-04-27-1" id="id2012-04-27-1" href="http://devconf.ru" rel="bookmark" class="bookmark">DevConf 2012</a></h2>
+    <h2 class="summary entry-title"><a id="id2012-04-27-1" href="http://devconf.ru" rel="bookmark" class="bookmark">DevConf 2012</a></h2>
     <div class="entry-content description">
         <abbr class="published newsdate" title="2012-04-27T05:20:52+00:00">27-Apr-2012</abbr>
         <div>
@@ -754,8 +753,8 @@ site_header("News Archive - 2012", array("cache" => true));
       DevConf 2012 in Moscow, Russia on Jun 9 - Jun 10
      </p>
 	 <p>
-      DevConf is the ultimate meeting place for russian-speaking web-developers, 
-      combining several language-specific conferences under one roof.  
+      DevConf is the ultimate meeting place for russian-speaking web-developers,
+      combining several language-specific conferences under one roof.
      </p>
 	 <p>
       This year DevConf will include the following sections:
@@ -768,57 +767,57 @@ site_header("News Archive - 2012", array("cache" => true));
       <li>DevConf::Javascript();</li>
      </ul>
      <p>
-       Each section will feature several talks from the active contributors/authors of the language. 
-       Among the invited speakers are Derick Rethans (<a href="http://xdebug.org">XDebug</a> creator), 
-	   David Soria Parra (active PHP contributor), Andrey Aksyonov (author of <a href="http://sphinxsearch.com">Sphinx</a>), 
-	   Alexander Makarov (one of the main contributors to <a href="http://www.yiiframework.com">Yii</a>), 
-	   Sergey Petrunya (of <a href="http://mariadb.org">MariaDB</a> fame), Ilya Alekseev (<a href="http://openstack.org">OpenStack</a> Nova contributor) 
+       Each section will feature several talks from the active contributors/authors of the language.
+       Among the invited speakers are Derick Rethans (<a href="http://xdebug.org">XDebug</a> creator),
+	   David Soria Parra (active PHP contributor), Andrey Aksyonov (author of <a href="http://sphinxsearch.com">Sphinx</a>),
+	   Alexander Makarov (one of the main contributors to <a href="http://www.yiiframework.com">Yii</a>),
+	   Sergey Petrunya (of <a href="http://mariadb.org">MariaDB</a> fame), Ilya Alekseev (<a href="http://openstack.org">OpenStack</a> Nova contributor)
 	   and many others, see more details on <a href="http://devconf.ru">the official website</a>.
      </p>
     </div>
-  
+
     </div>
 </div>
 <div class="newsItem hentry">
     <div class="newsImage"></div>
-    <h2 class="summary entry-title"><a name="id2012-04-26-1" id="id2012-04-26-1" href="http://www.php.net/archive/2012.php#id2012-04-26-1" rel="bookmark" class="bookmark">PHP 5.3.11 And PHP 5.4.1 Released!</a></h2>
+    <h2 class="summary entry-title"><a id="id2012-04-26-1" href="http://www.php.net/archive/2012.php#id2012-04-26-1" rel="bookmark" class="bookmark">PHP 5.3.11 And PHP 5.4.1 Released!</a></h2>
     <div class="entry-content description">
         <abbr class="published newsdate" title="2012-04-26T10:50:38+00:00">26-Apr-2012</abbr>
         <div>
      <p>The PHP development team announces the immediate availability of PHP 5.3.11 and PHP 5.4.1. These releases focuses on improving the stability of the current PHP branches with over 60 bug fixes, some of which are security related.</p>
-     
+
      <p>Security Enhancements for both PHP 5.3.11 and PHP 5.4.1:</p>
-     
+
      <ul>
      <li>Fixed bug #54374 (Insufficient validating of upload name leading to corrupted $_FILES indices). (CVE-2012-1172).</li>
      <li>Add open_basedir checks to readline_write_history and readline_read_history.</li>
      </ul>
-     
+
      <p>Security Enhancement affecting PHP 5.3.11 only:</p>
-     
+
      <ul>
      <li>Fixed bug #61043 (Regression in magic_quotes_gpc fix for CVE-2012-0831).</li>
      </ul>
-     
+
      <p>Key enhancements in these releases include:</p>
-     
+
      <ul>
      <li>Added debug info handler to DOM objects.</li>
      <li>Fixed bug #61172 (Add Apache 2.4 support).</li>
      </ul>
-     
+
      <p>For a full list of changes in PHP 5.3.11 and PHP 5.4.1, see the <a href="/ChangeLog-5.php">ChangeLog</a>. For source downloads please visit
      our <a href="/downloads.php">downloads page</a>, Windows binaries can be found
      on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.</p>
-     
+
      <p>All users of PHP are strongly encouraged to upgrade to PHP 5.3.11 or PHP 5.4.1.</p>
     </div>
-  
+
     </div>
 </div>
 <div class="newsItem hentry">
     <div class="newsImage"></div>
-    <h2 class="summary entry-title"><a name="id2012-04-13-1" id="id2012-04-13-1" href="http://www.php.net/archive/2012.php#id2012-04-13-1" rel="bookmark" class="bookmark">PHP 5.4.1RC2 Released for Testing</a></h2>
+    <h2 class="summary entry-title"><a id="id2012-04-13-1" href="http://www.php.net/archive/2012.php#id2012-04-13-1" rel="bookmark" class="bookmark">PHP 5.4.1RC2 Released for Testing</a></h2>
     <div class="entry-content description">
         <abbr class="published newsdate" title="2012-04-13T13:37:44+02:00">13-Apr-2012</abbr>
         <div>
@@ -842,7 +841,7 @@ site_header("News Archive - 2012", array("cache" => true));
       <p>
         A complete list of changes since the last release candidate can be
         found in the
-        <a href="http://git.php.net/?p=php-src.git;a=blob;f=NEWS;h=d647f8de7cf080b599a73e092d683273fbf744e8;hb=fa1437b144683eae4d253473c35e375f7b743811">NEWS</a>
+        <a href="https://github.com/php/php-src/raw/fa1437b144683eae4d253473c35e375f7b743811/NEWS">NEWS</a>
         file.
       </p>
       <p>
@@ -857,21 +856,20 @@ site_header("News Archive - 2012", array("cache" => true));
         PHP 5.4.1 final will be released on April 26.
       </p>
     </div>
-  
+
     </div>
 </div>
 <div class="newsItem hentry">
     <div class="newsImage"></div>
-    <h2 class="summary entry-title"><a name="id2012-03-20-1" id="id2012-03-20-1" href="http://www.php.net/archive/2012.php#id2012-03-20-1" rel="bookmark" class="bookmark">PHP migrates to Git</a></h2>
+    <h2 class="summary entry-title"><a id="id2012-03-20-1" href="http://www.php.net/archive/2012.php#id2012-03-20-1" rel="bookmark" class="bookmark">PHP migrates to Git</a></h2>
     <div class="entry-content description">
         <abbr class="published newsdate" title="2012-03-20T10:25:52+08:00">20-Mar-2012</abbr>
         <div>
     <p>
      The migration of the PHP source code from Subversion to Git is complete.
      You can clone or fork the source from our
-     <a href="https://github.com/php/php-src">GitHub mirror</a>, and we also
-     now support pull requests made via GitHub. The source is also available
-     via <a href="http://git.php.net/">git.php.net</a>, and full instructions
+     <a href="https://github.com/php/php-src">GitHub</a>, and we also
+     now support pull requests made via GitHub, and full instructions
      on cloning the php-src tree can be found at
      <a href="http://php.net/git">php.net/git</a>.
     </p>
@@ -901,12 +899,12 @@ site_header("News Archive - 2012", array("cache" => true));
      the conversion. Let the forking begin!
     </p>
    </div>
-  
+
     </div>
 </div>
 <div class="newsItem hentry">
     <div class="newsImage"></div>
-    <h2 class="summary entry-title"><a name="id2012-03-01-1" id="id2012-03-01-1" href="http://www.php.net/archive/2012.php#id2012-03-01-1" rel="bookmark" class="bookmark">PHP 5.4.0 released!</a></h2>
+    <h2 class="summary entry-title"><a id="id2012-03-01-1" href="http://www.php.net/archive/2012.php#id2012-03-01-1" rel="bookmark" class="bookmark">PHP 5.4.0 released!</a></h2>
     <div class="entry-content description">
         <abbr class="published newsdate" title="2012-03-01T19:40:35+01:00">01-Mar-2012</abbr>
         <div>
@@ -947,38 +945,38 @@ site_header("News Archive - 2012", array("cache" => true));
      on all mirrors.
      </p>
     </div>
-  
+
     </div>
 </div>
 <div class="newsItem hentry">
     <div class="newsImage"></div>
-    <h2 class="summary entry-title"><a name="id2012-02-02-1" id="id2012-02-02-1" href="http://www.php.net/archive/2012.php#id2012-02-02-1" rel="bookmark" class="bookmark">PHP 5.3.10 Released!</a></h2>
+    <h2 class="summary entry-title"><a id="id2012-02-02-1" href="http://www.php.net/archive/2012.php#id2012-02-02-1" rel="bookmark" class="bookmark">PHP 5.3.10 Released!</a></h2>
     <div class="entry-content description">
         <abbr class="published newsdate" title="2012-02-02T20:32:47+01:00">02-Feb-2012</abbr>
         <div>
      <p>The PHP development team would like to announce the immediate
      availability of PHP 5.3.10. This release delivers a critical security
      fix.</p>
-     
+
      <p>Security Fixes in PHP 5.3.10:</p>
-     
+
      <ul>
        <li>Fixed arbitrary remote code execution vulnerability reported by Stefan
          Esser, CVE-2012-0830.</li>
      </ul>
-     
+
      <p>All users are strongly encouraged to upgrade to PHP 5.3.10.</p>
-     
+
      <p>For source downloads please visit
             our <a href="/downloads.php">downloads page</a>, Windows binaries can be found
             on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.</p>
     </div>
-  
+
     </div>
 </div>
 <div class="newsItem hentry vevent">
     <div class="newsImage"></div>
-    <h2 class="summary entry-title"><a name="id2012-01-20-1" id="id2012-01-20-1" href="http://confoo.ca/" rel="bookmark" class="bookmark">ConFoo 2012</a></h2>
+    <h2 class="summary entry-title"><a id="id2012-01-20-1" href="http://confoo.ca/" rel="bookmark" class="bookmark">ConFoo 2012</a></h2>
     <div class="entry-content description">
         <abbr class="published newsdate" title="2012-01-20T05:20:52+00:00">20-Jan-2012</abbr>
         <div>
@@ -996,18 +994,18 @@ site_header("News Archive - 2012", array("cache" => true));
       <li>160 presentations focusing on core competencies improvement;</li>
      </ul>
      <p>
-      Don't miss this great opportunity and <a href="http://confoo.ca/en/register">register today</a>! 
+      Don't miss this great opportunity and <a href="http://confoo.ca/en/register">register today</a>!
       Also check out our two <a href="http://confoo.ca/en/2012/training">training days</a>
       around PHP, HTML5, Symfony2 and security topics right before the
       conference.
      </p>
     </div>
-  
+
     </div>
 </div>
 <div class="newsItem hentry">
     <div class="newsImage"></div>
-    <h2 class="summary entry-title"><a name="id2012-01-10-1" id="id2012-01-10-1" href="http://www.php.net/archive/2012.php#id2012-01-11-1" rel="bookmark" class="bookmark">PHP 5.3.9 Released!</a></h2>
+    <h2 class="summary entry-title"><a id="id2012-01-10-1" href="http://www.php.net/archive/2012.php#id2012-01-11-1" rel="bookmark" class="bookmark">PHP 5.3.9 Released!</a></h2>
     <div class="entry-content description">
         <abbr class="published newsdate" title="2012-01-10T22:29:58+01:00">10-Jan-2012</abbr>
         <div>
@@ -1015,24 +1013,24 @@ site_header("News Archive - 2012", array("cache" => true));
      availability of PHP 5.3.9. This release focuses on improving the
      stability of the PHP 5.3.x branch with over 90 bug fixes, some of
      which are security related.</p>
-     
+
      <p>Security Enhancements and Fixes in PHP 5.3.9:</p>
-     
+
      <ul>
        <li>Added max_input_vars directive to prevent attacks based on hash collisions. (CVE-2011-4885)</li>
        <li>Fixed bug #60150 (Integer overflow during the parsing of invalid exif
          header). (CVE-2011-4566)</li>
      </ul>
-     
+
      <p>Key enhancements in PHP 5.3.9 include:</p>
-     
+
      <ul>
        <li>Fixed bug #55475 (is_a() triggers autoloader, new optional 3rd argument to
          is_a and is_subclass_of).</li>
        <li>Fixed bug #55609 (mysqlnd cannot be built shared)</li>
        <li>Many changes to the FPM SAPI module</li>
      </ul>
-     
+
      <p>For a full list of changes in PHP 5.3.9, see the <a href="/ChangeLog-5.php#5.3.9">ChangeLog</a>. For source downloads please visit
        our <a href="/downloads.php">downloads page</a>, Windows binaries can be found
        on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.</p>
@@ -1040,12 +1038,12 @@ site_header("News Archive - 2012", array("cache" => true));
      <p>All users are strongly encouraged to upgrade to PHP 5.3.9.</p>
 
     </div>
-  
+
     </div>
 </div>
 <div class="newsItem hentry vevent">
     <div class="newsImage"><a href="http://conference.phpbenelux.eu/2012"><img src="/images/news/phpbnl2012.png" alt="PHPBenelux 2012" width="347" height="68" style="float: right;"></a></div>
-    <h2 class="summary entry-title"><a name="id2012-01-07-1" id="id2012-01-07-1" href="http://conference.phpbenelux.eu/2012" rel="bookmark" class="bookmark">PHPBenelux 2012</a></h2>
+    <h2 class="summary entry-title"><a id="id2012-01-07-1" href="http://conference.phpbenelux.eu/2012" rel="bookmark" class="bookmark">PHPBenelux 2012</a></h2>
     <div class="entry-content description">
         <abbr class="published newsdate" title="2012-01-07T14:47:25+01:00">07-Jan-2012</abbr>
         <div>
@@ -1062,7 +1060,7 @@ site_header("News Archive - 2012", array("cache" => true));
      There are some tickets still available, get them at <a href="http://shop.phpbenelux.eu">http://shop.phpbenelux.eu</a>.
      </p>
     </div>
-  
+
     </div>
 </div>
 

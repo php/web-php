@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom" xmlns:default="http://php.net/ns/news">
+  <title>LaravelConf Taiwan 2019 announcement</title>
+  <id>http://php.net/archive/2019.php#id2019-06-19-1</id>
+  <published>2019-06-19T22:46:22+08:00</published>
+  <updated>2019-06-19T22:46:22+08:00</updated>
+  <default:finalTeaserDate xmlns="http://php.net/ns/news">2019-07-13</default:finalTeaserDate>
+  <category term="conferences" label="Conference announcement"/>
+  <link href="http://php.net/conferences/index.php#id2019-06-19-1" rel="alternate" type="text/html"/>
+  <default:newsImage xmlns="http://php.net/ns/news" link="https://laravelconf.tw/" title="LaravelConf Taiwan 2019">laravel_conf_taiwan_2019.jpg</default:newsImage>
+  <link href="https://laravelconf.tw/" rel="via" type="text/html"/>
+  <content type="xhtml">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+      <p>The third Laravel conference in Taiwan awaits you at LaravelConf Taiwan 2019 at Taipei, Taiwan.</p>
+      <p><a href="https://laravelconf.tw/">LaravelConf Taiwan 2019</a> is for anyone who is passionate about building web applications, or anyone who is sharing better experiences about PHP developments.</p>
+      <br />
+      <p>LaravelConf Taiwan 2019 brings PHP developers, Laravel framework lovers, and experts together and hosts 10 sessions in multiple track conference on July 13, 2019.</p>
+     <br />
+     <p><b>Our focus this year is:</b></p>
+     <ul>
+         <li>Laravel core concepts</li>
+         <li>The best practices about tracing source code</li>
+         <li>The best practices about editor usage</li>
+         <li>The best practices about system architecture</li>
+         <li>The magic things about Laravel packages</li>
+     </ul>
+     <br />
+     <p>Come to enjoy the knowledge and socialize with other Laravel artisans.</p>
+     <br />
+     <p>For more infromation: <a href="https://laravelconf.tw/">https://laravelconf.tw</a></p>
+     <p>Our facebook page: <a href="https://www.facebook.com/laravelconftw/">https://www.facebook.com/laravelconftw</a></p>
+     </div>
+  </content>
+</entry>

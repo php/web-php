@@ -1,7 +1,6 @@
 <?php
-// $Id$
 $_SERVER['BASE_PAGE'] = 'releases/4_3_10.php';
-include_once $_SERVER['DOCUMENT_ROOT'] . '/include/prepend.inc';
+include_once __DIR__ . '/../include/prepend.inc';
 site_header("Annonce de PHP 4.3.11");
 ?>
 
@@ -12,7 +11,7 @@ L'&eacute;quipe de d&eacute;veloppement PHP a le plaisir de vous annoncer la pub
 </p>
 <p>
 Tous les utilisateurs sont encouragés à utiliser cette version.
-</p> 
+</p>
 
 <h2>Version de correction de bogues</h2>
 <ul>

@@ -1,20 +1,19 @@
 <?php
-// $Id$
 $_SERVER['BASE_PAGE'] = 'releases/4_3_10.php';
-include_once $_SERVER['DOCUMENT_ROOT'] . '/include/prepend.inc';
+include_once __DIR__ . '/../include/prepend.inc';
 site_header("PHP 4.3.10 Release Announcement");
 ?>
 
 <h1>Annonce de publication de PHP 4.3.10</h1>
 <p>[ <a href="/releases/4_3_10.php">English Version</a> ]</p>
 <p>
-L'&eacute;quipe de d&eacute;veloppement PHP a le plaisir de vous annoncer 
-la publication de <a href="/downloads.php">PHP 4.3.10</a>. C'est une version 
-de maintenance, destin&eacute;e &agrave; corriger une trentaine de bogues 
+L'&eacute;quipe de d&eacute;veloppement PHP a le plaisir de vous annoncer
+la publication de <a href="/downloads.php">PHP 4.3.10</a>. C'est une version
+de maintenance, destin&eacute;e &agrave; corriger une trentaine de bogues
 non-critiques et ainsi que plusieurs problèmes de sécurité sérieux.
 </p>
 <p>
-Cela inclut notamment: 
+Cela inclut notamment:
 </p>
 <p>
 <a href="http://www.cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2004-1018">CAN-2004-1018</a> - shmop_write() écrit hors des limites de la mémoire.<br>
@@ -26,12 +25,12 @@ Cela inclut notamment:
 <a href="http://www.cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2004-1065">CAN-2004-1065</a> - dépassement de capacité avec exif_read_data()  sur un long nom de section.<br>
 magic_quotes_gpc peut mener à la lecture d'un dossier via le téléchargement de fichiers.
 </p>
-<p>Tous les utilisateurs sont encouragés à utiliser cette version.</p> 
+<p>Tous les utilisateurs sont encouragés à utiliser cette version.</p>
 
 <h2>Version de correction de bogues</h2>
 
 <p>
-En plus des fonctionnalités ci-dessus, PHP 4.3.9 contient notamment les corrections, ajouts et am&eacute;liorations suivantes : 
+En plus des fonctionnalités ci-dessus, PHP 4.3.9 contient notamment les corrections, ajouts et am&eacute;liorations suivantes :
 </p>
 
 <ul>

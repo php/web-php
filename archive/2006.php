@@ -1,7 +1,6 @@
 <?php
-// $Id$
 $_SERVER['BASE_PAGE'] = 'archive/2006.php';
-include_once $_SERVER['DOCUMENT_ROOT'] . '/include/prepend.inc';
+include_once __DIR__ . '/../include/prepend.inc';
 news_archive_sidebar();
 site_header("News Archive - 2006", array("cache" => true));
 ?>
@@ -22,7 +21,7 @@ site_header("News Archive - 2006", array("cache" => true));
 </p>
 
 <p>
- It will be a 
+ It will be a
  great opportunity to establish a sustainable Brazilian PHP community and to
  exchange ideas among our professionals.
  More info is available at
@@ -47,7 +46,7 @@ site_header("News Archive - 2006", array("cache" => true));
  the 5.1 branch of PHP.
 </p>
 <p>
- For users upgrading from PHP 5.0 and PHP 5.1 there is an upgrading guide 
+ For users upgrading from PHP 5.0 and PHP 5.1 there is an upgrading guide
  available <a href="/UPDATE_5_2.txt">here</a>, detailing the changes between those releases
  and PHP 5.2.0.
 </p>
@@ -60,10 +59,10 @@ site_header("News Archive - 2006", array("cache" => true));
 <p>
 <span class="newsdate">[04-Oct-2006]</span>
 The <a href="http://afup.org/">French AFUP association</a> is proud to announce
-the <a href="http://afup.org/forumphp/">fifth annual PHP</a> meeting 
-in Paris, on November 9th and 10th, 2006. Developers and managers will gather 
-to meet Rasmus Lerdorf, Andrei Zmievski and other prominent community experts 
-for two days of sessions, packed with enterprise solutions and 
+the <a href="http://afup.org/forumphp/">fifth annual PHP</a> meeting
+in Paris, on November 9th and 10th, 2006. Developers and managers will gather
+to meet Rasmus Lerdorf, Andrei Zmievski and other prominent community experts
+for two days of sessions, packed with enterprise solutions and
 advanced techniques (in French).
 </p>
 
@@ -98,7 +97,7 @@ advanced techniques (in French).
 <p>
  <span class="newsdate">[24-Aug-2006]</span>
  The PHP development team would like to announce the immediate availability of
- PHP <a href="/downloads.php#v5">5.1.6</a>. This release contains a fix for 
+ PHP <a href="/downloads.php#v5">5.1.6</a>. This release contains a fix for
  memory_limit restriction on 64 bit systems that was not included in PHP 5.1.5.
 </p>
 
@@ -141,7 +140,7 @@ advanced techniques (in French).
 Further details about this release can be found in the release announcements
 (<a href="/release_5_1_5.php">5.1.5</a> and
 <a href="/release_4_4_4.php">4.4.4</a>), and the full list of changes is
-available in the ChangeLogs (<a href="/ChangeLog-4.php#4.4.4">PHP 4</a>, 
+available in the ChangeLogs (<a href="/ChangeLog-4.php#4.4.4">PHP 4</a>,
 <a href="/ChangeLog-5.php#5.1.5">PHP 5</a>).
 </p>
 
@@ -196,8 +195,8 @@ is available in the <a href="/ChangeLog-4.php#4.4.3">PHP 4 ChangeLog</a>.
 <p>
  <span class="newsdate">[26-May-2006]</span>
 PHP is very pleased to announce that seven students have been chosen for the
-Google 'Summer of Code'. Through this project, Google provides student developers with 
-a stipend to create new open source programs or to help currently established 
+Google 'Summer of Code'. Through this project, Google provides student developers with
+a stipend to create new open source programs or to help currently established
 projects like PHP. The students are each mentored by members of our community,
 who will look after the students and their projects step by step.
 </p>
@@ -213,22 +212,22 @@ The students, their projects and their assigned mentors can be viewed
 <h1>NYPHPCon 2006 Program Announced</h1>
 <p>
  <span class="newsdate">[16-May-2006]</span>
- We are pleased to announce the speaker, tutorial and keynote program for 
- NYPHPCon 2006.  The <a href="http://www.nyphpcon.com">New York PHP 
- Conference &amp; Expo 2006</a> is taking place in New York City, at the 
- historic New Yorker Hotel, June 14-16, 2006.  There will be three full 
+ We are pleased to announce the speaker, tutorial and keynote program for
+ NYPHPCon 2006.  The <a href="http://www.nyphpcon.com">New York PHP
+ Conference &amp; Expo 2006</a> is taking place in New York City, at the
+ historic New Yorker Hotel, June 14-16, 2006.  There will be three full
  days of sessions, tutorials, exhibits, and networking events.
 </p>
 <p>
 We are also pleased to host the <a href="http://www.nyphpcon.com/mashup.php">
 IBM Mashup Contest</a> and <a href="http://www.nyphpcon.com/OraclePHPfest.pdf">
-Oracle PHPFest</a>, and a special 
-<a href="http://www.nyphpcon.com/conference_glance.php#Training">PHP 
+Oracle PHPFest</a>, and a special
+<a href="http://www.nyphpcon.com/conference_glance.php#Training">PHP
 Training package</a> at this event.
 </p>
 <p>
-NYPHPCon 2006 focuses on the The PHP Business Community, with two 
-featured parallel tracks plus tutorials: 
+NYPHPCon 2006 focuses on the The PHP Business Community, with two
+featured parallel tracks plus tutorials:
 <a href="http://www.nyphpcon.com/conference_glance.php#SpeakerSessions">
 Business Strategy and Technical Solutions</a>.  Over 400 are expected to attend,
 including business and technical professionals from around the world.
@@ -243,7 +242,7 @@ including business and technical professionals from around the world.
  available to address these issues. All PHP users are encouraged to upgrade to this release as soon as possible.
 </p>
 <p>
-Further details about this release can be found in the <a href="/release_5_1_4.php">release announcement</a> 
+Further details about this release can be found in the <a href="/release_5_1_4.php">release announcement</a>
 and the full list of changes is available in the <a href="/ChangeLog-5.php#5.1.4">PHP 5 ChangeLog</a>.
 <br>
 <b>The tarballs were updated to include the PEAR's phar file, previously missing from the release.</b>
@@ -275,7 +274,7 @@ and the full list of changes is available in the <a href="/ChangeLog-5.php#5.1.4
 <li>Over 120 various bug fixes.</li>
 </ul>
 <p>
-Further details about this release can be found in the <a href="/release_5_1_3.php">release announcement</a> 
+Further details about this release can be found in the <a href="/release_5_1_3.php">release announcement</a>
 and the full list of changes is available in the <a href="/ChangeLog-5.php#5.1.3">PHP 5 ChangeLog</a>.
 </p>
 
@@ -341,26 +340,26 @@ and the full list of changes is available in the <a href="/ChangeLog-5.php#5.1.3
 <h1>PHP Quebec 2006</h1>
 <p>
  <span class="newsdate">[26-Feb-2006]</span>
-The <a href="http://www.phpquebec.com/">PHP Quebec team</a> is pleased to 
-announce the 4th edition of the <a href="http://conf.phpquebec.com/en/conf2006/">PHP Quebec Conference</a>. 
-This year, the conference will be held at the Montreal Plaza Hotel 
-from March 29th to 31st. It features 2 days of technical learning and an 
-additional day of workshop. Among the speakers, the well known PHP Experts 
-such has Rasmus Lerdorf, Andrei Zmeivski, Derick Rethans and Ilia 
-Alshanetsky. 
+The <a href="http://www.phpquebec.com/">PHP Quebec team</a> is pleased to
+announce the 4th edition of the <a href="http://conf.phpquebec.com/en/conf2006/">PHP Quebec Conference</a>.
+This year, the conference will be held at the Montreal Plaza Hotel
+from March 29th to 31st. It features 2 days of technical learning and an
+additional day of workshop. Among the speakers, the well known PHP Experts
+such has Rasmus Lerdorf, Andrei Zmeivski, Derick Rethans and Ilia
+Alshanetsky.
 </p>
 <p>
-The conference will have three distinct tracks of session: Advanced 
-Techniques, Professional Development and Databases. With over 31 
-sessions, including workshops, the PHP Québec Conference is great opportunity 
-to learn about the latest PHP techniques and professional development 
-techniques to help you build high quality PHP software. The conference will 
-also present the various storage solutions available such has IBM DB2, 
+The conference will have three distinct tracks of session: Advanced
+Techniques, Professional Development and Databases. With over 31
+sessions, including workshops, the PHP Québec Conference is great opportunity
+to learn about the latest PHP techniques and professional development
+techniques to help you build high quality PHP software. The conference will
+also present the various storage solutions available such has IBM DB2,
 PostgreSQL, SQLite and MySQL.
 </p>
 <p>
 Early bird pricing are available until march 3rd.<br>
-Learn more about this <a 
+Learn more about this <a
 href="http://conf.phpquebec.com/en/conf2006/">exciting conference</a>.
 </p>
 
@@ -441,7 +440,7 @@ discount is available until March 1st</a>.
 <li>Over 30 various bug fixes.</li>
 </ul>
 <p>
-Further details about this release can be found in the <a href="/release_4_4_2.php">release announcement</a> 
+Further details about this release can be found in the <a href="/release_4_4_2.php">release announcement</a>
 and the full list of changes is available in the <a href="/ChangeLog-4.php#4.4.2">PHP 4 ChangeLog</a>.
 </p>
 
@@ -463,7 +462,7 @@ and the full list of changes is available in the <a href="/ChangeLog-4.php#4.4.2
 <li>Over 85 various bug fixes.</li>
 </ul>
 <p>
-Further details about this release can be found in the <a href="/release_5_1_2.php">release announcement</a> 
+Further details about this release can be found in the <a href="/release_5_1_2.php">release announcement</a>
 and the full list of changes is available in the <a href="/ChangeLog-5.php#5.1.2">PHP 5 ChangeLog</a>.
 </p>
 

@@ -3,18 +3,18 @@
   Yes, we know this can be used to view the source for any file
   in the docroot directory. This is intentional and not an LFI
   vulnerability. The source code for everything in the docroot
-  is publicly available at 
+  is publicly available at
 
     https://github.com/php/web-php
 
   so there is no vulnerability here. You can't use this to view
   anything that is private.
-*/  
+*/
 $_SERVER['BASE_PAGE'] = 'cached.php';
 include_once 'include/prepend.inc';
 
 if (!isset($_GET["f"])) {
-    header("Location: http://php.net/");
+    header("Location: https://www.php.net/");
     exit;
 }
 $pwd = realpath($_SERVER["DOCUMENT_ROOT"]);
@@ -22,7 +22,7 @@ $abs = $pwd. "/" .(string)$_GET["f"];
 $abs = realpath($abs);
 
 if (strncmp($abs, $pwd, strlen($pwd)) != 0) {
-    header("Location: http://php.net/" . strtr($_GET["f"],array("\r"=>"","\n"=>"")));
+    header("Location: https://www.php.net/" . strtr($_GET["f"],array("\r"=>"","\n"=>"")));
     exit;
 }
 
@@ -50,5 +50,3 @@ if (substr($abs, -3) == ".js" || substr($abs, -5) == ".json") {
 }
 
 readfile($abs);
-
-

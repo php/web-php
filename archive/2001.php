@@ -1,7 +1,6 @@
 <?php
-// $Id$
 $_SERVER['BASE_PAGE'] = 'archive/2001.php';
-include_once $_SERVER['DOCUMENT_ROOT'] . '/include/prepend.inc';
+include_once __DIR__ . '/../include/prepend.inc';
 news_archive_sidebar();
 site_header("News Archive - 2001", array("cache" => true));
 ?>
@@ -34,7 +33,7 @@ site_header("News Archive - 2001", array("cache" => true));
  After one week our Windows HTML Help Manual Survey is over now. We received nearly six hundred
  processable forms with many wishes and comments. Thanks for you all, who contributed to making
  the best help system for PHP on Windows. You can get more information about the ongoing
- project, including the detailed results of the survey at 
+ project, including the detailed results of the survey at
  <a href="http://weblabor.hu/php-doc-chm/">the project's own page</a>.
 </p>
 
@@ -44,13 +43,13 @@ site_header("News Archive - 2001", array("cache" => true));
 
 <p>
  <span class="newsdate">[18-Oct-2001]</span>
- <a href="http://gtk.php.net/">PHP-GTK</a> 
+ <a href="http://gtk.php.net/">PHP-GTK</a>
  <a href="http://gtk.php.net/docs.php">documentation</a> is starting
  to be more filled out. The manual is now rebuilt every night and
- <a href="http://gtk.php.net/download-docs.php">downloadable versions</a> 
+ <a href="http://gtk.php.net/download-docs.php">downloadable versions</a>
  of it in different formats are also available. If you have been working with
  PHP-GTK and would like to contribute to the documentation effort, please
- let us know. 
+ let us know.
 </p>
 
 <hr>
@@ -265,14 +264,14 @@ site_header("News Archive - 2001", array("cache" => true));
  <li>Stig Bakken on <a href="http://conf.php.net/pear">The PHP Extension and Application Repository</a></li>
  <li>Daniel Beckham and Brian Moon on <a href="http://dealnews.com/apachecon/">Caching Dynamic Web Content to Increase Dependability and Performance</a></li>
  <li>Rasmus Lerdorf's <a href="http://conf.php.net/ac2">Introduction to PHP</a></li>
- <li>Zeev Suraski on <a href="http://conf.php.net/pres/other/internals/">PHP 4 Internals</a></li> 
+ <li>Zeev Suraski on <a href="http://conf.php.net/pres/other/internals/">PHP 4 Internals</a></li>
  <li>Nathan Wallace with <a href="http://www.e-gineer.com/articles/php-hackers-paradise-revisited.phtml">PHP: Hackers Paradise Revisited</a></li>
 </ul>
 
 <hr>
 
 <h1>ApacheCon 2001</h1>
-<p> 
+<p>
  <span class="newsdate">[07-Mar-2001]</span>
  Registration for <a href="http://apachecon.com/2001/US/">ApacheCon 2001</a>
  in Santa Clara on April 4-6, 2001 is underway! There's sessions about PHP from

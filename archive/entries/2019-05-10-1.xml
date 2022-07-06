@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom" xmlns:default="http://php.net/ns/news">
+  <title>php[world] 2019 Call for Speakers</title>
+  <id>http://php.net/archive/2019.php#id2019-05-10-1</id>
+  <published>2019-05-10T13:18:25+00:00</published>
+  <updated>2019-05-10T13:18:25+00:00</updated>
+  <default:finalTeaserDate xmlns="http://php.net/ns/news">2019-06-07</default:finalTeaserDate>
+  <category term="cfp" label="Call for Papers"/>
+  <link href="http://php.net/conferences/index.php#id2019-05-10-1" rel="alternate" type="text/html"/>
+  <default:newsImage xmlns="http://php.net/ns/news" link="https://world.phparch.com/?utm_campaign=phpnetworld2019" title="php[world] 2019">world2019-400px.png</default:newsImage>
+  <link href="https://world.phparch.com/?utm_campaign=phpnetworld2019" rel="via" type="text/html"/>
+  <content type="xhtml">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+     <p>We are excited to announce the <a href="https://sessionize.com/phpworld-2019?utm_campaign=phpnetworld2019">Call for Speakers</a> for php[world] 2019!  Taking place this year at the Sheraton Tyson's Corner on <b>October 23-24</b> (with full-day training options on the 22nd.)</p>
+     <p>At it’s heart, <a href="https://world.phparch.com/?utm_campaign=phpnetworld2019">php[world] 2019</a> is the Washington D.C. area conference for programmers who use the PHP programming language. We’ve been running annually since 2014.</p>
+     <p>PHP as a language and a community has been rapidly changing in the last few years. A staggering 83% of the Web runs on PHP, and those websites are built on frameworks such as Drupal, WordPress, Magento, Symfony, Laravel and Laminas (formerly Zend Framework), each of which has their own strong community. We created a conference designed to appeal to all these communities and bring them together to learn from each other and collaborate across projects.</p>
+     <p>We offer <a href="https://sessionize.com/phpworld-2019?utm_campaign=phpnetworld2019">full travel assistance</a> for speakers (flight and hotel), and have a commitment to <a href="https://world.phparch.com/diversity/?utm_campaign=phpnetworld2019">increasing the diversity</a> of our event both for speakers and attendees.
+     </p>
+    </div>
+  </content>
+</entry>

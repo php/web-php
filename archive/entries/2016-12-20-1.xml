@@ -11,7 +11,7 @@
   <default:newsImage xmlns="http://php.net/ns/news" link="http://conf2017.phpsrbija.rs" title="PHPSerbia Conference 2017">phpsrb17.png</default:newsImage>
   <link href="http://conf2017.phpsrbija.rs/" rel="via" type="text/html"/>
   <content type="xhtml">
-    <div xmlns="http://www.w3.org/1999/xhtml">    
+    <div xmlns="http://www.w3.org/1999/xhtml">
         <p>Conference that delivers high-value technical content about PHP and related web technologies, architecture, best practices and testing. Two days of amazing talks by some of the most prominent experts and professionals in the PHP world in a comfortable and professional setting.</p>
 
         <p>At PHPSerbia Conference, you’ll have the unique opportunity to learn about the latest development trends and innovations, as well as to network with fellow attendees and the speakers.</p>

@@ -1,7 +1,6 @@
 <?php
-// $Id$
 $_SERVER['BASE_PAGE'] = 'releases/4_3_7.php';
-include_once $_SERVER['DOCUMENT_ROOT'] . '/include/prepend.inc';
+include_once __DIR__ . '/../include/prepend.inc';
 site_header("Annonce de publication de PHP 4.3.7");
 ?>
 
@@ -10,8 +9,8 @@ site_header("Annonce de publication de PHP 4.3.7");
 <p>[ <a href="/releases/4_3_7.php">English Version</a> ]</p>
 
 <p>
-L'&eacute;quipe de d&eacute;veloppement PHP a le plaisir de vous annoncer 
-la publication de <a href="/downloads.php">PHP 4.3.7</a>. C'est une version 
+L'&eacute;quipe de d&eacute;veloppement PHP a le plaisir de vous annoncer
+la publication de <a href="/downloads.php">PHP 4.3.7</a>. C'est une version
 de maintenance, destin&eacute;e &agrave; corriger des bogues non-critiques,
 corriger une vuln&eacute;rabilit&eacute; de validation dans les fonctions escapeshellcmd() et
 escapeshellarg() sur la plate-forme Windows. Les utilisateurs de PHP sont encourag&eacute;s
@@ -21,7 +20,7 @@ escapeshellarg() sur la plate-forme Windows. Les utilisateurs de PHP sont encour
 <h2>Version de correction de bogues</h2>
 
 <p>
- PHP 4.3.7 contient notamment les corrections, ajouts et am&eacute;liorations suivantes : 
+ PHP 4.3.7 contient notamment les corrections, ajouts et am&eacute;liorations suivantes :
 </p>
 
 <ul>

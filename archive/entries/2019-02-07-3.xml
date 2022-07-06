@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom" xmlns:default="http://php.net/ns/news">
+  <title>PHP.Barcelona 2019</title>
+  <id>http://php.net/archive/2019.php#id2019-02-07-3</id>
+  <published>2019-02-07T15:22:17+00:00</published>
+  <updated>2019-02-07T15:22:17+00:00</updated>
+  <default:finalTeaserDate xmlns="http://php.net/ns/news">2019-11-12</default:finalTeaserDate>
+  <category term="conferences" label="Conference announcement"/>
+  <link href="http://php.net/conferences/index.php#id2019-02-07-3" rel="alternate" type="text/html"/>
+  <default:newsImage xmlns="http://php.net/ns/news" link="https://php.barcelona/" title="PHP.Barcelona 2019">php.barcelona.png</default:newsImage>
+  <link href="https://php.barcelona/" rel="via" type="text/html"/>
+  <content type="xhtml">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+     <p>What an incredible 2018 and 2019 for the PHP community! Part of the PHP Core Team that was working for Zend left. Some found excellent companies and they are rocking most than ever, like Nikita at JetBrains. PHP 7.4 is about to be released, and PHP 8 has been branched. Lavarel and Symfony have healthy growth. JIT is part of the imminent future, and I/O non-blocking frameworks are getting more often adopted in production.</p>
+     <p>We've crafted the best PHP conference possible just for you. To allow you to see the future and get ready before nobody else. You'll gather top-notch speakers and an awesome community eager to share a lot of knowledge. All of this will take place in the very center of the gorgeous city of Barcelona in an excellent venue. What are you waiting for? Go get your tickets <a href="https://php.barcelona/tickets" target="_blank">here</a>!</p>
+    </div>
+  </content>
+</entry>

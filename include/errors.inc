@@ -1,6 +1,4 @@
 <?php
-// $Id$
-
 /*
   This script provides functions to print out
   error messages for users in case something is
@@ -36,6 +34,32 @@ function error_404_manual()
     exit;
 }
 
+// An error message page for manual pages from inactive languages
+function error_inactive_manual_page($lang_name, $en_page)
+{
+    global $MYSITE, $ACTIVE_ONLINE_LANGUAGES;
+    status_header(404);
+    site_header('Page gone', array("noindex"));
+    echo "<h1>Page gone</h1>\n" .
+         "<p>The " . htmlspecialchars($lang_name) . " manual page you are looking for (<strong>" .
+         htmlspecialchars(substr($MYSITE, 0, -1) . $_SERVER['REQUEST_URI']) .
+         "</strong>) is no longer available.</p>\n";
+    $en_url = htmlspecialchars(substr($MYSITE, 0, -1) . $en_page);
+    echo "<p>The English page is available at <a href=\"{$en_url}\">{$en_url}</a></p>\n";
+    echo "<p>Several other languages are also available:</p>\n";
+    echo "<ul>\n";
+    foreach ($ACTIVE_ONLINE_LANGUAGES as $alt_lang => $alt_lang_name) {
+        if ($alt_lang === "en") {
+            continue;
+        }
+        $alt_url = htmlspecialchars(substr($MYSITE, 0, -1) . str_replace("/en/", "/{$alt_lang}/", $en_page));
+        echo "<li><a href=\"{$alt_url}\">" . htmlspecialchars($alt_lang_name) . "</a></li>\n";
+    }
+    echo "</ul>\n";
+    site_footer();
+    exit;
+}
+
 // This service is not working right now
 function error_noservice()
 {
@@ -64,34 +88,26 @@ function error_nomirror($mirror) {
 }
 
 // Send out a proper status header
-function status_header($num)
+function status_header(int $status): bool
 {
-    // Set status text
-    switch ($num) {
-        case 200: $status = "OK"; break;
-        case 301: $status = "Moved Permanently"; break;
-        case 302: $status = "Found"; break;
-        case 404: $status = "Not Found"; break;
-        default: return FALSE;
-    }
+	$text = [
+		200 => 'OK',
+		301 => 'Moved Permanently',
+		302 => 'Found',
+		404 => 'Not Found',
+	];
+	if (!isset($text[$status])) {
+		return false;
+	}
 
-    // Figure out HTTP protocol version - use 1.1 answer for 1.1 request,
-    // answer with HTTP/1.0 for any other (ancient or futuristic) user
-    switch (strtoupper($_SERVER['SERVER_PROTOCOL'])) {
-        case 'HTTP/1.0':
-            @header("HTTP/1.0 $num $status");
-            break;
+	// Only respond with HTTP/1.0 for a 1.0 request specifically.
+	// Respond with 1.1 for anything else.
+	$proto = strcasecmp($_SERVER['SERVER_PROTOCOL'], 'HTTP/1.0') ? '1.1' : '1.0';
 
-        case 'HTTP/1.1':
-        default:
-            @header("HTTP/1.1 $num $status");
-            break;
-    }
-    
-    // BC code for PHP < 4.3.0
-    @header("Status: $num $status", TRUE, $num);
-    
-    return TRUE;
+	@header("HTTP/$proto $status {$text[$status]}");
+    @header("Status: $status {$text[$status]}", true, $status);
+
+    return true;
 }
 
 /******************************************************************************
@@ -107,8 +123,8 @@ The most commonly searched terms have also been added.
 TODO: Determine if we want to continue 301 -OR- make these official URLs.
 ******************************************************************************/
 
-function is_known_ini ($ini) {
-$inis = array(
+function is_known_ini (string $ini): ?string {
+	$inis = [
 	'engine'						=> 'apache.configuration.php#ini.engine',
 	'short-open-tag'				=> 'ini.core.php#ini.short-open-tag',
 	'asp-tags'						=> 'ini.core.php#ini.asp-tags',
@@ -130,6 +146,7 @@ $inis = array(
 	'open-basedir'					=> 'ini.core.php#ini.open-basedir',
 	'disable-functions'				=> 'ini.core.php#ini.disable-functions',
 	'disable-classes'				=> 'ini.core.php#ini.disable-classes',
+	'zend.assertions'				=> 'ini.core.php#ini.zend.assertions',
 	'syntax-highlighting'			=> 'misc.configuration.php#ini.syntax-highlighting',
 	'ignore-user-abort'				=> 'misc.configuration.php#ini.ignore-user-abort',
 	'realpath-cache-size'			=> 'ini.core.php#ini.realpath-cache-size',
@@ -155,6 +172,9 @@ $inis = array(
 	'error-prepend-string'			=> 'errorfunc.configuration.php#ini.error-prepend-string',
 	'error-append-string'			=> 'errorfunc.configuration.php#ini.error-append-string',
 	'error-log'						=> 'errorfunc.configuration.php#ini.error-log',
+	'syslog.facility'				=> 'errorfunc.configuration.php#ini.syslog.facility',
+	'syslog.filter'					=> 'errorfunc.configuration.php#ini.syslog.filter',
+	'syslog.ident'					=> 'errorfunc.configuration.php#ini.syslog.ident',
 	'arg-separator.output'			=> 'ini.core.php#ini.arg-separator.output',
 	'arg-separator.input'			=> 'ini.core.php#ini.arg-separator.input',
 	'variables-order'				=> 'ini.core.php#ini.variables-order',
@@ -245,12 +265,14 @@ $inis = array(
 	'oci8.statement-cache-size'		=> 'oci8.configuration.php#ini.oci8.statement-cache-size',
 	'oci8.default-prefetch'			=> 'oci8.configuration.php#ini.oci8.default-prefetch',
 	'oci8.old-oci-close-semantics'	=> 'oci8.configuration.php#ini.oci8.old-oci-close-semantics',
+	'opcache.preload'				=> 'opcache.configuration.php#ini.opcache.preload',
 	'pgsql.allow-persistent'		=> 'pgsql.configuration.php#ini.pgsql.allow-persistent',
 	'pgsql.auto-reset-persistent'	=> 'pgsql.configuration.php#ini.pgsql.auto-reset-persistent',
 	'pgsql.max-persistent'			=> 'pgsql.configuration.php#ini.pgsql.max-persistent',
 	'pgsql.max-links'				=> 'pgsql.configuration.php#ini.pgsql.max-links',
 	'pgsql.ignore-notice'			=> 'pgsql.configuration.php#ini.pgsql.ignore-notice',
 	'pgsql.log-notice'				=> 'pgsql.configuration.php#ini.pgsql.log-notice',
+	'sqlite3.extension-dir'			=> 'sqlite3.configuration.php#ini.sqlite3.extension-dir',
 	'sybct.allow-persistent'		=> 'sybase.configuration.php#ini.sybct.allow-persistent',
 	'sybct.max-persistent'			=> 'sybase.configuration.php#ini.sybct.max-persistent',
 	'sybct.max-links'				=> 'sybase.configuration.php#ini.sybct.max-links',
@@ -281,6 +303,7 @@ $inis = array(
 	'session.entropy-file'			=> 'session.configuration.php#ini.session.entropy-file',
 	'session.cache-limiter'			=> 'session.configuration.php#ini.session.cache-limiter',
 	'session.cache-expire'			=> 'session.configuration.php#ini.session.cache-expire',
+	'session.sid-length'			=> 'session.configuration.php#ini.session.sid-length',
 	'session.use-trans-sid'			=> 'session.configuration.php#ini.session.use-trans-sid',
 	'session.hash-function'			=> 'session.configuration.php#ini.session.hash-function',
 	'session.hash-bits-per-character'       => 'session.configuration.php#ini.session.hash-bits-per-character',
@@ -292,6 +315,7 @@ $inis = array(
 	'session.upload-progress.min-freq'      => 'session.configuration.php#ini.session.upload-progress.min-freq',
 	'url-rewriter.tags'				=> 'session.configuration.php#ini.url-rewriter.tags',
 	'assert.active'					=> 'info.configuration.php#ini.assert.active',
+	'assert.exception'				=> 'info.configuration.php#ini.assert.exception',
 	'assert.warning'				=> 'info.configuration.php#ini.assert.warning',
 	'assert.bail'					=> 'info.configuration.php#ini.assert.bail',
 	'assert.callback'				=> 'info.configuration.php#ini.assert.callback',
@@ -322,13 +346,13 @@ $inis = array(
 	'soap.wsdl-cache-enabled'		=> 'soap.configuration.php#ini.soap.wsdl-cache-enabled',
 	'soap.wsdl-cache-dir'			=> 'soap.configuration.php#ini.soap.wsdl-cache-dir',
 	'soap.wsdl-cache-ttl'			=> 'soap.configuration.php#ini.soap.wsdl-cache-ttl',
-	);
-	
-	return isset($inis[$ini]) ? $inis[$ini] : false;
+	];
+
+	return $inis[$ini] ?? null;
 }
 
-function is_known_variable($variable) {
-$variables = array(
+function is_known_variable(string $variable): ?string {
+	$variables = [
 	// Variables
 	'globals'		=> 'reserved.variables.globals.php',
 	'-server'		=> 'reserved.variables.server.php',
@@ -352,19 +376,16 @@ $variables = array(
 	'http-post-files'		=> 'reserved.variables.files.php',
 	'http-cookie-vars'		=> 'reserved.variables.cookies.php',
 	'http-env-vars'			=> 'reserved.variables.env.php',
-	);
+	];
 
-	if ($variable[0] === '$') {
-		$variable = ltrim($variable, '$');
-	}
-
-	return isset($variables[$variable]) ? $variables[$variable] : false;
-
+	return $variables[ltrim($variable, '$')] ?? null;
 }
 
-function is_known_term ($term) {
-$terms = array(
+function is_known_term (string $term): ?string {
+	$terms = [
 	'<>'			=> 'language.operators.comparison.php',
+	'<=>'			=> 'language.operators.comparison.php',
+	'spaceship'		=> 'language.operators.comparison.php',
 	'=='			=> 'language.operators.comparison.php',
 	'==='			=> 'language.operators.comparison.php',
 	'@'				=> 'language.operators.errorcontrol.php',
@@ -401,6 +422,7 @@ $terms = array(
 	'include'		=> 'function.include.php',
 	'int'			=> 'language.types.integer.php',
 	'ip'			=> 'reserved.variables.server.php',
+	'iterable'		=> 'language.types.iterable.php',
 	'juggling'		=> 'language.types.type-juggling.php',
 	'location'		=> 'function.header.php',
 	'mail'			=> 'function.mail.php',
@@ -434,36 +456,36 @@ $terms = array(
 	'timestamp'		=> 'function.time.php',
 	'try'			=> 'language.exceptions.php',
 	'upload'		=> 'features.file-upload.php',
-	);
-	
-	return isset($terms[$term]) ? $terms[$term] : false;
+	];
+
+	return $terms[$term] ?? null;
 }
 
 /*
-Search snippet provider: A dirty proof-of-concept: 
+Search snippet provider: A dirty proof-of-concept:
 	This will probably live in sqlite one day, and be more intelligent (tagging?)
 	This is a 100% hack currently, and let's hope temporary does not become permanent (Hello year 2014!)
 	And this is English only today... we should add translation support via the manual, generated by PhD
-	
+
 	This really is a proof-of-concept, where the choices below are the most popular searched terms at php.net
 	It should also take into account vague searches, such as 'global' and 'str'. The search works well enough for,
 	most terms, so something like $_SERVER isn't really needed but it's defined below anyways...
 */
-function is_known_snippet($term) {
-$snippets = array(
+function is_known_snippet(string $term): ?string {
+	$snippets = [
 	'global'	=> '
 		The <b>global</b> keyword is used to manipulate <a href="/language.variables.scope">variable scope</a>, and
 		there is also the concept of <a href="/language.variables.superglobals">super globals</a> in PHP,
 		which are special variables with a global scope.',
 	'string'	=> '
-		There is the <a href="/language.types.string">string type</a>, which is a scalar, 
+		There is the <a href="/language.types.string">string type</a>, which is a scalar,
 		and also many <a href="/ref.strings">string functions.</a>',
 	'str'		=> '
-		Many <a href="/ref.strings">string functions</a> begin with <b>str</b>, 
+		Many <a href="/ref.strings">string functions</a> begin with <b>str</b>,
 		and there is also the <a href="/language.types.string">string type</a>.',
 	'_server'	=> '
-		<a href="/reserved.variables.server">$_SERVER</a> 
-		is a <a href="/language.variables.superglobals">super global</a>, 
+		<a href="/reserved.variables.server">$_SERVER</a>
+		is a <a href="/language.variables.superglobals">super global</a>,
 		and is home to many predefined variables that are typically provided by a web server',
 	'class'		=> '
 		A <a href="/language.oop5">class</a> is an OOP (Object Oriented Programming) concept,
@@ -473,13 +495,72 @@ $snippets = array(
 		<a href="/language.functions">function is defined</a>, or
 		<a href="/about.prototypes">how to read a function prototype</a>.
 		See also the list of <a href="/extensions">PHP extensions</a>',
-	);
+	];
 
-	$term = strtolower(trim($term));
-	if (isset($term[0]) && $term[0] === '$') {
-		$term = ltrim($term, '$');
-	}
+	$term = ltrim(strtolower(trim($term)), '$');
+	return $snippets[$term] ?? null;
+}
 
-	return isset($snippets[$term]) ? $snippets[$term] : false;
+/**
+ * @param string $uri
+ * @return array<string, string>
+ */
+function get_legacy_manual_urls(string $uri): array
+{
+    $filename = $_SERVER["DOCUMENT_ROOT"] . "/manual/legacyurls.json";
+    $pages_ids = json_decode(file_get_contents($filename), true);
+    $page_id = preg_replace_callback('/^manual\/.*\/(.*?)(\.php)?$/', function (array $matches): string {
+        if (count($matches) < 2) {
+            return '';
+        }
+        return $matches[1] ;
+    }, $uri);
 
+    if (!isset($pages_ids[$page_id])) {
+        return [];
+    }
+
+    $legacy_urls = [];
+    foreach ($pages_ids[$page_id] as $php_version) {
+        $legacy_urls[$php_version] = convert_manual_uri_to_legacy($uri, $php_version);
+    }
+
+    return $legacy_urls;
+}
+
+/**
+ * @param array<string, string> $legacy_urls URLs to legacy manuals, indexed by major PHP version
+ */
+function fallback_to_legacy_manuals(array $legacy_urls): void
+{
+    global $MYSITE;
+    status_header(404);
+    site_header('404 Not Found', array("noindex"));
+
+    $original_url = htmlspecialchars(substr($MYSITE, 0, -1) . $_SERVER['REQUEST_URI']);
+    $legacy_links = '';
+    foreach ($legacy_urls as $php_version => $url) {
+        $legacy_links .= '<li><a href="' . $url . '">PHP ' . $php_version . ' legacy manual</a></li>';
+    }
+
+    echo <<<HTML
+<h1>Not Found</h1>
+<p>The manual page you are looking for (<strong>$original_url</strong>) is not available.</p>
+
+<p>However, this page exists in a legacy manual for the following PHP versions.</p>
+<ul id="legacy-links">$legacy_links</ul>
+<p>Please note that legacy manuals are maintained by Zend and not the PHP Documentation Group. Any questions about their content should be reported via the "Report a Bug" links on the appropriate pages.</p>
+
+<p>If you were looking for this page in the current PHP version and believe this to be a mistake, please check back later, or if the problem persists, <a href="/contact.php">contact the webmasters</a>.</p>
+HTML;
+
+    site_footer();
+    exit;
+}
+
+function convert_manual_uri_to_legacy(string $uri, int $php_version): string
+{
+    $parts = explode('/', $uri);
+
+    return sprintf('https://php-legacy-docs.zend.com/manual/php%s/%s/%s', $php_version, $parts[1], $parts[2]);
 }

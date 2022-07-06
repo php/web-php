@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom" xmlns:default="http://php.net/ns/news">
+  <title>CakeFest 2022: The Official CakePHP Conference</title>
+  <id>https://www.php.net/archive/2022.php#2022-05-05-1</id>
+  <published>2022-05-05T13:29:17+00:00</published>
+  <updated>2022-05-05T13:29:17+00:00</updated>
+  <link href="https://www.php.net/conferences/index.php#id2022-05-05-1" rel="alternate" type="text/html"/>
+  <link href="https://cakefest.org" rel="via" type="text/html"/>
+  <default:finalTeaserDate xmlns="http://php.net/ns/news">2022-09-29</default:finalTeaserDate>
+  <category term="conferences" label="Conference announcement"/>
+  <default:newsImage xmlns="http://php.net/ns/news" link="https://cakefest.org" title="CakeFest 2022: The Official CakePHP Conference">cakefest-2017.png</default:newsImage>
+  <content type="xhtml">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+      <p>
+        <a href="https://cakefest.org">CakeFest 2022</a> - our annual conference dedicated to CakePHP will be virtual this year allowing bakers from all over the world to attend, from home! Two full days of CakePHP knowledge. Day 1 is workshops and day 2 will be a full day of talks on CakePHP related technologies. These events are an ideal way to learn as both beginners and advanced users.
+      </p>
+      <p>
+        Date: September 29 &amp; 30<br/>
+        Time: 12:00pm UTC
+      </p>
+      <p>
+        Check out details at: <a href="https://cakefest.org">CakeFest.org</a>
+      </p>
+    </div>
+  </content>
+</entry>

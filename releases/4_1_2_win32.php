@@ -1,7 +1,6 @@
 <?php
-// $Id$
 $_SERVER['BASE_PAGE'] = 'releases/4_1_2_win32.php';
-include_once $_SERVER['DOCUMENT_ROOT'] . '/include/prepend.inc';
+include_once __DIR__ . '/../include/prepend.inc';
 site_header("PHP 4.1.2 Windows (Win32) Release Announcement");
 ?>
 
@@ -49,7 +48,7 @@ site_header("PHP 4.1.2 Windows (Win32) Release Announcement");
 </p>
 
 <p>
- More information can be found <a href="http://security.e-matters.de/advisories/012002.html">here</a> 
+ More information can be found <a href="http://security.e-matters.de/advisories/012002.html">here</a>
  relating to the form upload exploit that caused the release of 4.1.2 initially.
 </p>
 

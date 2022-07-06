@@ -1,7 +1,6 @@
 <?php
-// $Id$
 $_SERVER['BASE_PAGE'] = 'git.php';
-include_once $_SERVER['DOCUMENT_ROOT'] . '/include/prepend.inc';
+include_once __DIR__ . '/include/prepend.inc';
 $SIDEBAR_DATA = '
 <h3>What is Git?</h3>
 <p>
@@ -48,16 +47,17 @@ site_header("Git Access", array("current" => "community"));
   <ul>
    <li><i>PHP 5.4 - 7.1</i>: 2.59+</li>
    <li><i>PHP 7.2</i>: 2.64+</li>
+   <li><i>PHP 7.3</i>: 2.68+</li>
   </ul>
  </li>
- <li><i>automake</i>: 1.4+</li>
  <li><i>libtool</i>: 1.4.x+ (except 1.4.2)</li>
  <li><i>re2c</i>: 0.13.4+</li>
  <li id="bison"><i>bison</i>:
   <ul>
    <li><i>PHP 5.4</i>: 1.28, 1.35, 1.75, 2.0 to 2.6.4</li>
    <li><i>PHP 5.5 and 5.6</i>: 2.4 to 2.7</li>
-   <li><i>PHP 7</i>: 2.4+</li>
+   <li><i>PHP 7.0 - 7.3</i>: 2.4+</li>
+   <li><i>PHP 7.4 - PHP 8.0</i>: 3.0.0+</li>
   </ul>
  </li>
 </ul>
@@ -72,16 +72,10 @@ site_header("Git Access", array("current" => "community"));
 <ol>
  <li>
   You can retrieve the PHP source code from our
-  <a href="https://github.com/php/php-src.git">GitHub mirror</a> with this
+  <a href="https://github.com/php/php-src.git">GitHub</a> with this
   command:
   <br><br>
   <code>git clone https://github.com/php/php-src.git</code>
-  <br><br>
-
-  Alternatively, you can retrieve the source code from
-  <a href="http://git.php.net/">git.php.net</a> with this command:
-  <br><br>
-  <code>git clone http://git.php.net/repository/php-src.git</code>
   <br><br>
 
   You can also download a snapshot from GitHub:<br><br>
@@ -102,20 +96,14 @@ site_header("Git Access", array("current" => "community"));
  <li>
   You can then check out the branch you want to build, for example:
   <br><br>
-  <strong>PHP 5.6</strong>:
-  <code>git checkout PHP-5.6</code>
+  <strong>PHP 7.4</strong>:
+  <code>git checkout PHP-7.4</code>
   <br>
-  <strong>PHP 7.0</strong>:
-  <code>git checkout PHP-7.0</code>
+  <strong>PHP 8.0</strong>:
+  <code>git checkout PHP-8.0</code>
   <br>
-  <strong>PHP 7.1</strong>:
-  <code>git checkout PHP-7.1</code>
-  <br>
-  <strong>PHP 7.2</strong>:
-  <code>git checkout PHP-7.2</code>
-  <br>
-  <strong>PHP 7.3</strong>:
-  <code>git checkout PHP-7.3</code>
+  <strong>PHP 8.1</strong>:
+  <code>git checkout PHP-8.1</code>
   <br>
   <strong>PHP HEAD</strong>:
   <code>git checkout master</code>
@@ -124,7 +112,7 @@ site_header("Git Access", array("current" => "community"));
 
  <li>
   <div class="tip" style="margin: 10px 0 10px 20px;">
-   <p>Note that certain combinations of autoconf, automake and libtool may not
+   <p>Note that certain combinations of autoconf and libtool may not
    work when used together, particularly with historical versions of PHP. See
    <a href="#buildconf_fail">below</a> for details.<br>
    Also, certain versions of autoconf may generate warnings of <code>AC_PROG_CPP
@@ -148,7 +136,7 @@ site_header("Git Access", array("current" => "community"));
 <p>
  There are many other things, such as the XML source code
  for the documentation, available via Git. See
- <a href="http://git.php.net/">the web-based view of the Git
+ <a href="https://github.com/php/">the web-based view of the Git
  server</a> to see what is available.
 </p>
 
@@ -164,17 +152,14 @@ site_header("Git Access", array("current" => "community"));
 <h2>PHP manual</h2>
 
 <p>
- The PHP manual is still currently hosted on SVN, although it will be migrated
- to Git in the future. To checkout the latest English version of the PHP
+ The PHP manual is hosted on Git. To checkout the latest English version of the PHP
  manual:<br>
- <code>svn checkout https://svn.php.net/repository/phpdoc/modules/doc-en ./phpdoc-en</code>
- <br><br>
- You can also check the <a href="https://wiki.php.net/vcs/svnfaq">SVN FAQ on the wiki</a>.
+ <code>git clone https://github.com/php/doc-en.git ./phpdoc-en</code>
 </p>
 
 <h2>Historical issues</h2>
 
-<h3 id="buildconf_fail">autoconf, automake and libtool information for PHP 5.3 and below</h3>
+<h3 id="buildconf_fail">autoconf and libtool information for PHP 5.3 and below</h3>
 
 <p>
  There seem to be problems with libtool 1.4.2. It is suggested
@@ -189,6 +174,8 @@ site_header("Git Access", array("current" => "community"));
  <li>autoconf 2.13, automake 1.4 and libtool 1.4.3</li>
  <li>autoconf 2.13, automake 1.5 and libtool 1.4.3</li>
 </ul>
+
+<p>Since PHP 4.3 automake and its aclocal program are no longer needed to build PHP.</p>
 
 <p>
  If you have multiple versions of autoconf installed on your computer, as is

@@ -12,7 +12,7 @@
     <div xmlns="http://www.w3.org/1999/xhtml">
       <p>
         The PHP development team announces the immediate availability of
-        PHP 7.0.0 Beta 1. This is the third pre-release of the new PHP 7 
+        PHP 7.0.0 Beta 1. This is the third pre-release of the new PHP 7
         major series. All users of PHP are encouraged to test this version carefully,
         and report any bugs and incompatibilities in <a href="https://bugs.php.net">the bug tracking system</a>.
      </p>
@@ -20,10 +20,10 @@
      <strong>THIS IS A DEVELOPMENT PREVIEW - DO <u>NOT</u> USE IT IN PRODUCTION!</strong>
 
      <p>
-     Beta 1 marks the feature complete phase. From now on, fundamental 
-     changes are not to be expected. What's more, this release brings 
-     over 200 commits with about 25 reported bug fixes, as well as security, 
-     stability and other improvements. However it was delayed to catch up with 
+     Beta 1 marks the feature complete phase. From now on, fundamental
+     changes are not to be expected. What's more, this release brings
+     over 200 commits with about 25 reported bug fixes, as well as security,
+     stability and other improvements. However it was delayed to catch up with
      the latest OpenSSL release issued on July 9th.
      </p>
 
@@ -43,7 +43,7 @@
      </ul>
 
      <p>
-      For more information on the new features and other changes, you can read the 
+      For more information on the new features and other changes, you can read the
       <a href="https://github.com/php/php-src/blob/php-7.0.0beta1/NEWS">NEWS file</a>, or the
       <a href="https://github.com/php/php-src/blob/php-7.0.0beta1/UPGRADING">UPGRADING file</a>
       for a complete list of upgrading notes. These files can also be found in the release archive.
@@ -56,7 +56,7 @@
      </p>
 
      <p>
-      The next release will be Beta 2, which is to be released on the 23rd of July. You can also 
+      The next release will be Beta 2, which is to be released on the 23rd of July. You can also
       read the full list of planned releases on our <a href="https://wiki.php.net/todo/php70#timetable">wiki</a>.
      </p>
 

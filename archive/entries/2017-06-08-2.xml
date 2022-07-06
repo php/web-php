@@ -13,7 +13,7 @@
      <p>The PHP development team announces the immediate availability of PHP 7.2.0 Alpha 1.
      This release marks the beginning of the second minor release in the PHP 7.x series.
      All users of PHP are encouraged to test this version carefully,
-     and report any bugs and incompatibilities in the 
+     and report any bugs and incompatibilities in the
      <a href="https://bugs.php.net/">bug tracking system</a>.</p>
 
      <p><strong>THIS IS A DEVELOPMENT PREVIEW - DO NOT USE IT IN PRODUCTION!</strong></p>

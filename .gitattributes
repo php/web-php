@@ -1,0 +1,2 @@
+# iCalendar needs CRLF line endings, Git index and working tree will have CRLF
+/backend/events/* -text

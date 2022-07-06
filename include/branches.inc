@@ -1,6 +1,6 @@
 <?php
-include_once $_SERVER['DOCUMENT_ROOT'] . '/include/releases.inc';
-include_once $_SERVER['DOCUMENT_ROOT'] . '/include/version.inc';
+include_once __DIR__ . '/releases.inc';
+include_once __DIR__ . '/version.inc';
 
 /* Branch overrides. For situations where we've changed the exact dates for a
  * branch's active support and security fix EOLs, these can be reflected here.
@@ -32,6 +32,10 @@ $BRANCHES = array(
 		'stable'   => '2017-01-19',
 		'security' => '2018-12-31',
 	),
+	'7.0' => array(
+		'stable'   => '2018-01-04',
+		'security' => '2019-01-10',
+	),
 );
 
 /* Time to keep EOLed branches in the array returned by get_active_branches(),
@@ -56,10 +60,10 @@ function format_interval($from, $to) {
 		} elseif ($diff->d) {
 			$times[] = array($diff->d,'day');
 		} else {
-			$eolPeriod = 'today';
+			$eolPeriod = 'midnight';
 		}
 		if ($times) {
-			$eolPeriod = implode(', ', 
+			$eolPeriod = implode(', ',
 										array_map(
 											function($t) {
 												return "$t[0] $t[1]" .
@@ -82,11 +86,13 @@ function format_interval($from, $to) {
 	return $eolPeriod;
 }
 
-function version_number_to_branch($version) {
+function version_number_to_branch(string $version): ?string {
 	$parts = explode('.', $version);
 	if (count($parts) > 1) {
 		return "$parts[0].$parts[1]";
 	}
+
+	return null;
 }
 
 function get_all_branches() {
@@ -115,7 +121,7 @@ function get_all_branches() {
 	}
 
 	krsort($branches);
-	foreach ($branches as $major => &$branch) {
+	foreach ($branches as &$branch) {
 		krsort($branch);
 	}
 
@@ -129,10 +135,14 @@ function get_active_branches($include_recent_eols = true) {
 	foreach ($GLOBALS['RELEASES'] as $major => $releases) {
 		foreach ($releases as $version => $release) {
 			if ($branch = version_number_to_branch($version)) {
-        $threshold = get_branch_security_eol_date($branch);
-        if ($include_recent_eols) {
-          $threshold->add($GLOBALS['KEEP_EOL']);
-        }
+				$threshold = get_branch_security_eol_date($branch);
+				if ($threshold === null) {
+					// No EOL date available, assume it is ancient.
+					continue;
+				}
+				if ($include_recent_eols) {
+					$threshold->add($GLOBALS['KEEP_EOL']);
+				}
 				if ($now < $threshold) {
 					$branches[$major][$branch] = $release;
 					$branches[$major][$branch]['version'] = $version;
@@ -152,7 +162,7 @@ function get_active_branches($include_recent_eols = true) {
  * must be in $RELEASES _and_ must be the full version number, not the branch:
  * ie provide array('5.3.29'), not array('5.3'). */
 function get_eol_branches($always_include = null) {
-	$always_include = $always_include ? $always_include : array();
+	$always_include = $always_include ?: array();
 	$branches = array();
 	$now = new DateTime;
 
@@ -210,7 +220,7 @@ function get_eol_branches($always_include = null) {
 	}
 
 	krsort($branches);
-	foreach ($branches as $major => &$branch) {
+	foreach ($branches as &$branch) {
 		krsort($branch);
 	}
 
@@ -262,7 +272,7 @@ function get_final_release($branch) {
 	if (isset($GLOBALS['OLDRELEASES'][$major][$last])) {
 		return $GLOBALS['OLDRELEASES'][$major][$last];
 	}
-	
+
 	/* If there's only been one release on the branch, it won't be in
 	 * $OLDRELEASES yet, so let's check $RELEASES. */
 	if (isset($GLOBALS['RELEASES'][$major][$last])) {
@@ -319,14 +329,76 @@ function get_branch_support_state($branch) {
 
 		if ($now >= $security) {
 			return 'eol';
-		} elseif ($now >= $bug) {
-			return 'security';
-		} elseif ($now >= $initial) {
-			return 'stable';
-		} else {
-			return 'future';
 		}
+
+		if ($now >= $bug) {
+			return 'security';
+		}
+
+		if ($now >= $initial) {
+			return 'stable';
+		}
+
+		return 'future';
 	}
 
 	return null;
+}
+
+function compare_version(array $arrayA, string $versionB)
+{
+	$arrayB = version_array($versionB, count($arrayA));
+
+	foreach ($arrayA as $index => $componentA) {
+		$componentA = $arrayA[$index];
+		$componentB = $arrayB[$index];
+		if ($componentA != $componentB) {
+			return $componentA > $componentB ? 1 : -1;
+		}
+	}
+
+	return 0;
+}
+
+function version_array(string $version, ?int $length = null)
+{
+	$versionArray = array_map(
+		'intval',
+		explode('.', $version)
+	);
+
+	if (is_int($length)) {
+		$versionArray = count($versionArray) < $length
+			? array_pad($versionArray, $length, 0)
+			: array_slice(
+				$versionArray,
+				0,
+				$length
+			);
+	}
+
+	return $versionArray;
+}
+
+function get_current_release_for_branch(int $major, ?int $minor): ?string {
+	global $RELEASES, $OLDRELEASES;
+
+	$prefix = "{$major}.";
+	if ($minor !== null) {
+		$prefix .= "{$minor}.";
+	}
+
+	foreach (($RELEASES[$major] ?? []) as $version => $_) {
+		if (!strncmp($prefix, $version, strlen($prefix))) {
+			return $version;
+		}
+	}
+
+	foreach (($OLDRELEASES[$major] ?? []) as $version => $_) {
+		if (!strncmp($prefix, $version, strlen($prefix))) {
+			return $version;
+		}
+	}
+
+	return NULL;
 }

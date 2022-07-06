@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom" xmlns:default="http://php.net/ns/news">
+  <title>Dutch PHP Conference 2021 - Call for Papers</title>
+  <id>https://www.php.net/archive/2021.php#2021-01-23-1</id>
+  <published>2021-01-23T10:20:22+00:00</published>
+  <updated>2021-01-23T10:20:22+00:00</updated>
+  <link href="https://www.php.net/conferences/index.php#id2021-01-23-1" rel="alternate" type="text/html"/>
+  <link href="https://www.phpconference.nl/" rel="via" type="text/html"/>
+  <default:finalTeaserDate xmlns="http://php.net/ns/news">2021-02-28</default:finalTeaserDate>
+  <category term="cfp" label="Call for Papers"/>
+  <default:newsImage xmlns="http://php.net/ns/news" link="https://www.phpconference.nl/" title="Dutch PHP Conference 2021">dpc-2021.png</default:newsImage>
+  <content type="xhtml">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+     <p>In light of health and safety recommendations from public health authorities, and our assessment of the duration of this pandemic, we will be organising the DPC conference as an 100% online event on June 17 &amp; 18, 2021.  Call for papers DPC21 is now open! You can submit your papers up to and including February 28th and as many proposals as you like, so please start submitting! Check out =&gt; <a href="https://cfp.phpconference.nl" title="DPC21 CFP">https://cfp.phpconference.nl</a> for content briefing and more info.</p>
+    </div>
+  </content>
+</entry>

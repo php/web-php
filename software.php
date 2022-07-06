@@ -1,7 +1,6 @@
 <?php
-// $Id$
 $_SERVER['BASE_PAGE'] = 'software.php';
-include_once $_SERVER['DOCUMENT_ROOT'] . '/include/prepend.inc';
+include_once __DIR__ . '/include/prepend.inc';
 site_header("PHP Software", array("current" => "help"));
 ?>
 
@@ -9,7 +8,7 @@ site_header("PHP Software", array("current" => "help"));
 
 <p>
  This page contains a list of sites where you can find software distributed
- under the <a href="/license/3_01.txt">PHP license</a>.  
+ under the <a href="/license/3_01.txt">PHP license</a>.
 </p>
 
 <p>

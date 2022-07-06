@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom" xmlns:default="http://php.net/ns/news">
+  <title>Laracon EU Online 2021</title>
+  <id>https://www.php.net/archive/2020.php#2020-11-23-1</id>
+  <published>2020-11-23T13:55:06+01:00</published>
+  <updated>2020-11-23T13:55:06+01:00</updated>
+  <link href="https://www.php.net/conferences/index.php#id2020-11-23-1" rel="alternate" type="text/html"/>
+  <link href="https://laracon.eu/online/" rel="via" type="text/html"/>
+  <default:finalTeaserDate xmlns="http://php.net/ns/news">2021-01-18</default:finalTeaserDate>
+  <category term="conferences" label="Conference announcement"/>
+  <default:newsImage xmlns="http://php.net/ns/news" link="https://laracon.eu/online/" title="Laracon EU Online 2021">laracon-online-2021.jpg</default:newsImage>
+  <content type="xhtml">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+      A full week for Laravel developers with a series of cutting edge presentations, webinars and networking events. Discover January 18-22th on https://laracon.eu/online/
+    </div>
+  </content>
+</entry>

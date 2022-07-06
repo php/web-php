@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom" xmlns:default="http://php.net/ns/news">
+  <title>The PHP Online Conference</title>
+  <id>https://www.php.net/archive/2020.php#2020-04-29-1</id>
+  <published>2020-04-29T16:17:40+00:00</published>
+  <updated>2020-04-29T16:17:40+00:00</updated>
+  <link href="https://www.php.net/conferences/index.php#id2020-04-29-1" rel="alternate" type="text/html"/>
+  <link href="https://thephp.cc/news/2020/04/the-online-php-conference" rel="via" type="text/html"/>
+  <default:finalTeaserDate xmlns="http://php.net/ns/news">2020-05-27</default:finalTeaserDate>
+  <category term="conferences" label="Conference announcement"/>
+  <content type="xhtml">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+      <p>We – Sebastian Bergmann, Arne Blankerts, and Stefan Priebsch – are taking our conference contributions that were scheduled for the spring conference season online. Without further ado, we announce "The Online PHP Conference" that will take place on Tuesday, May 26 2020, and Wednesday, May 27, 2020 with a pre-conference workshop on Monday, May 25 2020. Grab your favourite browser and come along as we invite you into our homes.</p>
+
+      <p><a href="https://thephp.cc/news/2020/04/the-online-php-conference">https://thephp.cc/news/2020/04/the-online-php-conference</a></p>
+    </div>
+  </content>
+</entry>

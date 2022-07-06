@@ -1,7 +1,7 @@
 <?php
 $_SERVER['BASE_PAGE'] = 'releases/active.php';
 
-include_once $_SERVER['DOCUMENT_ROOT'] . '/include/prepend.inc';
+include_once __DIR__ . '/../include/prepend.inc';
 include_once $_SERVER['DOCUMENT_ROOT'] . '/include/branches.inc';
 
 header('Content-Type: application/json; charset=UTF-8');

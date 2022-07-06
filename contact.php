@@ -1,11 +1,10 @@
 <?php
-// $Id$
 $_SERVER['BASE_PAGE'] = 'contact.php';
-include_once $_SERVER['DOCUMENT_ROOT'] . '/include/prepend.inc';
+include_once __DIR__ . '/include/prepend.inc';
 site_header("Contact", array("current" => "community"));
 ?>
 
-<a name="ads"></a>
+<a id="ads"></a>
 <h1>Advertising at PHP.net and mirror sites</h1>
 
 <p>
@@ -14,7 +13,7 @@ site_header("Contact", array("current" => "community"));
  deals.
 </p>
 
-<a name="contact"></a>
+<a id="contact"></a>
 <h1>Contact</h1>
 
 <p>
@@ -26,6 +25,19 @@ site_header("Contact", array("current" => "community"));
 <p>
  For security related issues (in PHP or our websites) please contact
  <a href="mailto:security@php.net">security@php.net</a>.
+ Please note that the following are <b>NOT</b> security issues:
+ <ul>
+  <li><b>Requests for help with using PHP.</b> Please use the
+      <a href="mailto:php-general@lists.php.net">PHP General</a> mailing list.</li>
+  <li><b>Source code to the PHP website(s) being publicly readable.</b>
+      This is <i>on purpose</i>.
+      All of the php.net websites are available publicly on github.
+      For example, you can find this site at <a href="https://github.com/php/web-php">github.com/php/web-php</a>.</li>
+  <li><b>Requests for bug bounty payments.</b>
+      PHP is run by volunteers with literally zero budget.
+      The servers are donated hardware and bandwidth.
+      Your bug reports and patches are appreciated, but we can not pay you for them.</li>
+ </ul>
 </p>
 <p>
  If you have problems setting up PHP or using some functionality,

@@ -1,5 +1,4 @@
 <?php
-// $Id: $
 function search_results($res, $q, $profile='all', $per_page=10, $s=0, $l='en', $show_title=true, $show_foot=true, $show_attrib=true) {
 	$start_result = $s;
 	$end_result = $s + $res['ResultSet']['totalResultsReturned'] -1;
@@ -29,9 +28,9 @@ function search_results($res, $q, $profile='all', $per_page=10, $s=0, $l='en', $
 		'bugs'     => '<img src="'. $php_img_dir .'/php_bug.gif" height="32" width="32" style="float:left; margin-left:-40px;"/>',
 		'gtk'      => '<img src="'. $php_img_dir .'/logos/php-gtk-white.gif" height="26" width="32" style="float:left; margin-left:-40px;"/>'
 	);
-                
+
 	foreach($res['ResultSet']['Result'] as $i => $hit) {
-		$cnt = $pos + $i; 
+		$cnt = $pos + $i;
 
 		$d = date('j M Y', $hit['ModificationDate']);
 		$cachelink = '';
@@ -93,4 +92,3 @@ EOB;
 	echo '</ul></div>';
 	endif;
 }
-?>

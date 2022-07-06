@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+  <title>PHP 7.2.21 Released</title>
+  <id>https://www.php.net/archive/2019.php#2019-08-01-2</id>
+  <published>2019-08-01T08:43:45+00:00</published>
+  <updated>2019-08-01T08:43:45+00:00</updated>
+  <link href="https://www.php.net/index.php#id2019-08-01-2" rel="alternate" type="text/html"/>
+  <link href="https://www.php.net/archive/2019.php#2019-08-01-2" rel="via" type="text/html"/>
+  <category term="frontpage" label="PHP.net frontpage news"/>
+  <category term="releases" label="New PHP release"/>
+  <content type="xhtml">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+     <p>The PHP development team announces the immediate availability of PHP
+     7.2.21. This is a security release which also contains several minor bug fixes.</p>
+
+     <p>All PHP 7.2 users are encouraged to upgrade to this version.</p>
+
+     <p>For source downloads of PHP 7.2.21 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+     Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
+     The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.2.21">ChangeLog</a>.
+     </p>
+    </div>
+  </content>
+</entry>

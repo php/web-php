@@ -23,79 +23,6 @@ var PHP_NET = {};
 
 PHP_NET.HEADER_HEIGHT = 52;
 
-/**
- * Scrolls the page so that the given element will be shown into view.
- * 
- * @param HTMLElement element The element to show.
- * @param Number animationDuration Animation duration in milliseconds. Defaults to 400ms.
- * @param Function callback Function to execute after the animation is complete.
- * @return void
- */
-PHP_NET.scrollElementIntoView = function (element, animationDuration, callback) {
-    animationDuration = animationDuration || 400;
-    var destTop = $(element).offset().top - PHP_NET.HEADER_HEIGHT;
-    var callbackCalled = false;
-    // Online sources claim that some browsers scroll body, others scroll html
-    // so we scroll both for compatibility. However, the callback function is
-    // called for each element so the callback function will trigger twice,
-    // once for html and once for body. This is why we track whether the
-    // callback has been called to prevent multiple executions.
-    $("html, body").animate(
-        {scrollTop: destTop}, 
-        animationDuration,
-        function () {
-            if (!callbackCalled) {
-                callbackCalled = true;
-                callback();
-            }
-        }
-    );
-};
-
-/**
- * Enables "smooth scrolling to page anchor" for page <a> links.
- */
-document.body.addEventListener("click", function (e) {
-    if (e.target && e.target.nodeName === "A") {
-        var href = e.target.getAttribute("href");
-        if (href && href[0] === "#") {
-            var id = href.slice(1);
-            var target = document.getElementById(id);
-            // temporarily remove the id="" attribute so that the UA's
-            // default scrolling is prevented
-            target.id = "";
-            if (target) {
-                PHP_NET.scrollElementIntoView(target, null, function () {
-                    // restore the id="" attribute
-                    target.id = id;
-                });
-            }
-        }
-    }
-});
-
-/**
- * Enables "smooth scrolling to page anchor" when page was just loaded.
- */
-document.addEventListener("DOMContentLoaded", function () {
-    var target = (location.hash
-        ? document.getElementById(location.hash.slice(1))
-        : null
-    );
-    if (target) {
-        // temporarily remove the id="" attribute so that the UA's default
-        // scrolling is prevented
-        var id = target.id;
-        target.id = "";
-        window.addEventListener("load", function () {
-            PHP_NET.scrollElementIntoView(target, null, function() {
-                // restore the id="" attribute to the element
-                target.id = id;
-            });
-        });
-    }
-});
-    
 Mousetrap.bind('up up down down left right left right b a enter', function() {
         $(".brand img").attr("src", "/images/php_konami.gif");
 });
@@ -403,12 +330,12 @@ $(document).ready(function() {
     $docsDivWithId.children("h1, h2, h3, h4").each(function(){
         $(this).append("<a class='genanchor' href='#" + $(this).parent().attr("id") + "'> ¶</a>");
     });
-    
+
     $('.refentry code.parameter').click(function(event)
     {
-      var id = $(this).text().replace(/^[&$]{0,2}/g, '');
+      var id = $(this).text().replace(/^&?(\.\.\.)?\$?/g, '');
       var offsetTop = $('.parameters, .options').find('.parameter').filter(function() {
-          return $(this).text() === id; // https://bugs.php.net/bug.php?id=74493
+        return $(this).text().trim() === id; // https://bugs.php.net/bug.php?id=74493
       }).offset().top - 52;
       $.scrollTo({top: offsetTop, left: 0}, 400);
     });
@@ -417,7 +344,7 @@ $(document).ready(function() {
         var $this = $(this);
         $this.append("<a class='genanchor' href='#" + $this.attr('id') + "'> ¶</a>");
     });
-	
+
     /* Don't load elephpants on browsers that don't support data: URIs.
      * Unfortunately, the Modernizr test is asynchronous, so we have to spin
      * until it actually gives us a yes or a no. */
@@ -509,15 +436,15 @@ $(document).ready(function() {
         scrollSpeed: 400,
         easingType: 'linear'
       };
-      
+
       var toTopHidden = true;
       var toTop = $('#' + settings.containerID);
-      
+
       toTop.click(function(e) {
         e.preventDefault();
         $.scrollTo(0, settings.scrollSpeed, {easing: settings.easingType});
       });
-      
+
       $(window).scroll(function() {
         var sd = $(this).scrollTop();
         if (sd > settings.min && toTopHidden)
@@ -530,7 +457,7 @@ $(document).ready(function() {
           toTop.fadeOut(settings.outDelay);
           toTopHidden = true;
         }
-      });   
+      });
 
     })();
 /*}}}*/
@@ -557,7 +484,7 @@ $(document).ready(function() {
           request.done(function(data) {
             if(data.success != null && data.success == true) {
               $("#V"+id).html("<div style=\"float: left; width: 16px; height: 16px; background-image: url(/images/notes-features.png); background-position:-32px 16px; margin-right: 8px; overflow: hidden;\" border=\"0\" alt=\"success\" title=\"Thank you for voting!\"></div>" + data.update);
-            
+
               flashMessage({text: 'Thank you for voting!'});
             }
             else {
@@ -566,7 +493,7 @@ $(document).ready(function() {
                 responsedata = data.msg;
               }
               $("#V"+id).html("<div style=\"float: left; width: 16px; height: 16px; background-image: url(/images/notes-features.png); background-position:-32px 0px; margin-right: 8px; overflow: hidden;\" border=\"0\" alt=\"fail\" title=\"" + responsedata + "\"></div>");
-              
+
               flashMessage({text: 'Unexpected error occured, please try again later!', type: 'error'});
             }
           });
@@ -574,7 +501,7 @@ $(document).ready(function() {
             $("#Vu"+id).show();
             $("#Vd"+id).show();
             $("#V"+id).html("<div style=\"float: left; width: 16px; height: 16px; background-image: url(/images/notes-features.png); background-position:-32px 0px; margin-right: 8px; overflow: hidden;\" border=\"0\" alt=\"fail\" title=\"Error :(\"></div>");
-            
+
             flashMessage({text: 'Something went wrong :(', type: 'error'});
           });
           request.always(function(data) {
@@ -606,10 +533,10 @@ $(document).ready(function() {
             "max": 0.75,
             "min": 0.35
         };
-  
+
         // This is a generic normalizaion algorithm:
         //   range.min + (value - domain.min)(range.max - range.min)/(domain.max-domain.min)
-        // Note that some of this computation is not dependent on the input value, so we 
+        // Note that some of this computation is not dependent on the input value, so we
         // compute it at object creation time.
         var multiplier = (this.range.max - this.range.min)/(this.domain.max - this.domain.min);
         this.normalize = function(value) {
@@ -620,7 +547,7 @@ $(document).ready(function() {
     $(usernotes).on('mouseenter mouseleave', '.note',  function(event) {
       var opacity = 1;
       var $note = $(this).find('.text');
-      if (event.type === 'mouseleave' && $note.data('opacity') !== undefined) { 
+      if (event.type === 'mouseleave' && $note.data('opacity') !== undefined) {
         opacity = $note.data('opacity');
       }
       $note.css('opacity', opacity);
@@ -654,16 +581,16 @@ $(function() {
   if ( ! document.getElementById('add-note-usernotes')) {
     return;
   }
-  
+
   $('#usernotes').animate({marginLeft: 0}, 1000);
-  
+
   $('#usernotes .note').removeAttr('style');
-    
+
   var times = [3, 7, 10];
   for (i in times) {
     times[i] = times[i] * 1000;
   }
-  
+
   var notes = [];
   notes[0] = $('#usernotes .bad');
   notes[1] = $('#usernotes .good');
@@ -673,7 +600,7 @@ $(function() {
   {
     notes[0].find('.usernotes-voted').css('border-top-color', '#001155');
     notes[1].find('.usernotes-voteu').css('border-bottom-color', '#001155');
-    
+
     var t = 1000;
     var i = 1;
     var timer = setInterval(function()
@@ -683,22 +610,22 @@ $(function() {
         clearTimeout(timer);
         return;
       }
-      
+
       notes[0].find('.tally').html( notes[0].find('.tally').html().toInt() - 1);
       notes[1].find('.tally').html( notes[1].find('.tally').html().toInt() + 1);
-      
+
       i++;
     }, t);
-    
+
     notes[0].find('.text').animate({opacity: 0.3}, (times[1] - times[0]));
-    
+
   }, times[0]);
-  
+
   setTimeout(function()
   {
     notes[2].find('.text').html("@BJORI DOESN'T LIKE SPAM").css('background-color', '#F9ECF2');
   }, times[1]);
-  
+
   setTimeout(function()
   {
     notes[0].fadeOut();
@@ -712,18 +639,18 @@ $(function() {
 /* {{{ Flash Messenger */
 function flashMessage(o)
 {
-  var defaults = { 
+  var defaults = {
     timeout: 6000,
     type: 'success',
     text: '',
     parent: '#flash-message'
   };
-  
+
   // Options are passed, set defaults and generate message
   if ( ! o.jquery)
   {
-    var options = $.extend(defaults, o); 
-  
+    var options = $.extend(defaults, o);
+
     var id = 'id_' + Math.random().toString().replace('0.', '');
 
     var message = $('<div>')
@@ -733,7 +660,7 @@ function flashMessage(o)
                   .html(options.text);
 
     $(options.parent).append(message);
-    
+
     var o = $('#' + id);
   }
   // jQuery object is passed, that means the message is pre-generated
@@ -759,11 +686,11 @@ function flashMessage(o)
       remove(o);
     }, options.timeout);
   }
-  
+
   o.on('click', function() {
     remove($(this));
   });
-  
+
   return true;
 }
 /* }}} */
@@ -775,5 +702,12 @@ function getLanguage()
 {
     return document.documentElement.lang;
 }
+
+(function ($) {
+    $('#legacy-links a').each(function () {
+        let $link = $(this);
+        $link.attr('href', $link.attr('href') + window.location.hash)
+    });
+})(jQuery);
 
 // vim: set ts=4 sw=4 et:

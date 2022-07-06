@@ -7,7 +7,7 @@ if (!isset($_GET["lang"])) {
 if (empty($_SERVER["DOCUMENT_ROOT"])) {
     $_SERVER["DOCUMENT_ROOT"] = __DIR__ . "/../";
 }
-include $_SERVER['DOCUMENT_ROOT'] . '/include/prepend.inc';
+include __DIR__ . '/../include/prepend.inc';
 if (!isset($ACTIVE_ONLINE_LANGUAGES[$_GET["lang"]])) {
     header("Location: http://php.net");
 }
@@ -69,4 +69,3 @@ foreach($js as $k => $item) {
 
 
 echo json_encode($index);
-

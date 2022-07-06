@@ -1,6 +1,4 @@
 <?php
-/* $Id$ */
-
 $_SERVER['STATIC_ROOT'] = $MYSITE;
 $_SERVER['MYSITE'] = $MYSITE;
 
@@ -45,7 +43,20 @@ function highlight_php($code, $return = FALSE)
     ) . '</div>';
 
     if ($return) { return $highlighted; }
-    else { echo $highlighted; }
+    echo $highlighted;
+    return null;
+}
+
+// Same as highlight_php() but does not require '<?php' in $code
+function highlight_php_trimmed($code, $return = false)
+{
+    $code = "<?php\n" . $code;
+    $highlighted_code = highlight_php($code, true);
+    $highlighted_code = preg_replace("!&lt;\?php(<br />)+!", '', $highlighted_code, 1);
+
+    if ($return) { return $highlighted_code; }
+    echo $highlighted_code;
+    return null;
 }
 
 // Stats pages still need this
@@ -72,10 +83,10 @@ function resize_image($img, $width = 1, $height = 1)
 
 // Return an <img> tag for a given image file available on the server
 function make_image($file, $alt = FALSE, $align = FALSE, $extras = FALSE,
-                    $dir = '/images', $border = 0, $addsize = TRUE)
+                    $dir = '/images', $addsize = TRUE)
 {
     // If no / was provided at the start of $dir, add it
-    $webdir = $_SERVER['MYSITE'] . ($dir{0} == '/' ? '' : '/') . $dir;
+    $webdir = $_SERVER['MYSITE'] . ($dir[0] == '/' ? '' : '/') . $dir;
 
     // Get width and height values if possible
     if ($addsize && ($size = @getimagesize($_SERVER['DOCUMENT_ROOT'] . "$dir/$file"))) {
@@ -98,7 +109,7 @@ function make_image($file, $alt = FALSE, $align = FALSE, $extras = FALSE,
     return sprintf('<img src="%s/%s" alt="%s"%s%s%s>',
         $webdir,
         $file,
-        ($alt    ? $alt : ''),
+        ($alt ?: ''),
         $sizeparams,
         $align,
         ($extras ? ' ' . $extras              : '')
@@ -107,9 +118,9 @@ function make_image($file, $alt = FALSE, $align = FALSE, $extras = FALSE,
 
 // Print an <img> tag out for a given file
 function print_image($file, $alt = FALSE, $align = FALSE, $extras = FALSE,
-                     $dir = '/images', $border = 0)
+                     $dir = '/images')
 {
-    echo make_image($file, $alt, $align, $extras, $dir, $border);
+    echo make_image($file, $alt, $align, $extras, $dir);
 }
 
 // Shortcut to usual news image printing (right floating
@@ -130,7 +141,7 @@ function make_submit($file, $alt = FALSE, $align = FALSE, $extras = FALSE,
     // Get an image without size info and convert the
     // border attribute to use CSS, as border="" is not
     // supported on <input> elements in [X]HTML
-    $img = make_image($file, $alt, $align, $extras, $dir, 0, FALSE);
+    $img = make_image($file, $alt, $align, $extras, $dir, FALSE);
     $img = str_replace(
         "border=\"$border\"",
         "style=\"border: {$border}px;\"",
@@ -148,7 +159,7 @@ function make_link ($url, $linktext = FALSE, $target = FALSE, $extras = FALSE)
         $url,
         ($target   ? ' target="' . $target . '"' : ''),
         ($extras   ? ' ' . $extras               : ''),
-        ($linktext ? $linktext                   : $url)
+        ($linktext ?: $url)
     );
 }
 
@@ -164,12 +175,12 @@ function print_link($url, $linktext = FALSE, $target = FALSE, $extras = FALSE)
 function make_popup_link ($url, $linktext=false, $target=false, $windowprops="", $extras=false) {
     return sprintf("<a href=\"%s\" target=\"%s\" onclick=\"window.open('%s','%s','%s');return false;\"%s>%s</a>",
         htmlspecialchars($url, ENT_QUOTES | ENT_IGNORE),
-        ($target ? $target : "_new"),
+        ($target ?: "_new"),
         htmlspecialchars($url, ENT_QUOTES | ENT_IGNORE),
-        ($target ? $target : "_new"),
+        ($target ?: "_new"),
                 $windowprops,
         ($extras ? ' '.$extras : ''),
-        ($linktext ? $linktext : $url)
+        ($linktext ?: $url)
     );
 }
 
@@ -181,62 +192,45 @@ function print_popup_link($url, $linktext=false, $windowprops="", $target=false,
 }
 
 // Print a link for a downloadable file (including filesize)
-function download_link($file, $title, $showsize = TRUE, $mirror = '')
+function download_link($file, $title)
 {
-    // Construct the download link for this site or a mirror site
-    $download_link = "get/$file/from/a/mirror";
-    if ($mirror != '') {
-        $download_link = $mirror . $download_link;
-    } else {
-        $download_link = "/" . $download_link;
-    }
+    $download_link = "/distributions/" . $file;
 
     // Print out the download link
     print_link($download_link, $title);
 
-    // Size display is required
-    if ($showsize) {
+    // We have a full path or a relative to the distributions dir
+    if ($tmp = strrchr($file, "/")) {
+        $local_file = substr($tmp, 1, strlen($tmp));
+    } else {
+        $local_file = "distributions/$file";
+    }
 
-        // We have a full path or a relative to the distributions dir
-        if ($tmp = strrchr($file, "/")) {
-            $local_file = substr($tmp, 1, strlen($tmp));
+    if(@file_exists($local_file.".asc")) {
+        echo " ";
+        $sig_link = "/distributions/$file.asc";
+        print_link($sig_link, "(sig)");
+    }
+
+    // Try to get the size of the file
+    $size = @filesize($local_file);
+
+    // Print out size in bytes (if size is
+    // less then 1Kb, or else in Kb)
+    if ($size) {
+        echo ' [';
+        if ($size < 1024) {
+            echo number_format($size) . 'b';
         } else {
-            $local_file = "distributions/$file";
+            echo number_format($size/1024) . 'Kb';
         }
-
-        if(@file_exists($local_file.".asc")) {
-            echo " ";
-            $sig_link = "get/$file.asc/from/a/mirror";
-            if ($mirror != '') {
-                $sig_link = $mirror . $sig_link;
-            } else {
-                $sig_link = "/" . $sig_link;
-            }
-            print_link($sig_link, "(sig)");
-        }
-
-        // Try to get the size of the file
-        $size = @filesize($local_file);
-
-        // Print out size in bytes (if size is
-        // less then 1Kb, or else in Kb)
-        if ($size) {
-            echo ' [';
-            if ($size < 1024) {
-                echo number_format($size, 0, '.', ',') . 'b';
-            } else {
-                echo number_format($size/1024, 0, '.', ',') . 'Kb';
-            }
-            echo ']';
-        }
-        
+        echo ']';
     }
 }
 
 function sect_to_file($string) {
     $string = strtolower($string);
-    $string = str_replace(' ','-',$string);
-    $string = str_replace('_','-',$string);
+    $string = str_replace([' ', '_'], '-', $string);
     $func = "function.$string.php";
     $chap = "ref.$string.php";
     $feat = "features.$string.php";
@@ -249,7 +243,7 @@ function sect_to_file($string) {
 }
 
 function clean($var) {
-  return htmlspecialchars(get_magic_quotes_gpc() ? stripslashes($var) : $var, ENT_QUOTES);
+  return htmlspecialchars($var, ENT_QUOTES);
 }
 
 // Clean out the content of one user note for printing to HTML
@@ -259,13 +253,11 @@ function clean_note($text)
     $text = highlight_php(trim($text), TRUE);
 
     // Turn urls into links
-    $text = preg_replace(
-        '!((mailto:|(https?|ftp|nntp|news):\/\/).*?)(\s|<|\)|"|\\\\|\'|$)!',
+    return preg_replace(
+        '!((mailto:|(https?|ftp|nntp|news)://).*?)(\s|<|\)|"|\\\\|\'|$)!',
         '<a href="\1" rel="nofollow" target="_blank">\1</a>\4',
         $text
     );
-
-    return $text;
 }
 
 function display_errors($errors)
@@ -296,7 +288,7 @@ function display_event($event, $include_date = 1)
 
     // Weekday names array
     for ($i = 1; $i <= 7; $i++) {
-        $days[$i] = strftime('%A', mktime(12, 0, 0, 4, $i, 2012));
+        $days[$i] = date('l', mktime(12, 0, 0, 4, $i, 2012));
     }
 
     // Recurring possibilities
@@ -404,7 +396,7 @@ function news_archive_sidebar()
 function print_news($news, $dog, $max = 5, $onlyyear = null, $return = false) {
     $retval = array();
     $count = 0;
-    $news = $news ? $news : array(); // default to empty array (if no news)
+    $news = $news ?: array(); // default to empty array (if no news)
     foreach($news as $item) {
         $ok = false;
 
@@ -501,9 +493,6 @@ function site_header($title = '', $config = array())
 
 
     $config["headsup"] = get_news_changes();
-    if (!$config["headsup"]) {
-        $config["headsup"] = get_near_usergroups();
-    }
 
     $lang = language_convert($config["lang"]);
     $curr = $config["current"];
@@ -520,20 +509,19 @@ function site_header($title = '', $config = array())
 
     // shorturl; http://wiki.snaplog.com/short_url
     if (isset($_SERVER['BASE_PAGE']) && $shortname = get_shortname($_SERVER["BASE_PAGE"])) {
-        $shorturl = "http://php.net/" . $shortname;
+        $shorturl = "https://www.php.net/" . $shortname;
     }
 
-    require dirname(__FILE__) ."/header.inc";
+    require __DIR__ ."/header.inc";
 }
 function site_footer($config = array())
 {
-    global $MYSITE;
-    require dirname(__FILE__) . "/footer.inc";
+    require __DIR__ . "/footer.inc";
 }
 
 function get_news_changes()
 {
-    include dirname(__FILE__) . "/pregen-news.inc";
+    include __DIR__ . "/pregen-news.inc";
     $date = date_create($NEWS_ENTRIES[0]["updated"]);
     if (isset($_COOKIE["LAST_NEWS"]) && $_COOKIE["LAST_NEWS"] >= $date->getTimestamp()) {
         return false;
@@ -549,67 +537,15 @@ function get_news_changes()
 
     $date->modify("+1 week");
     if ($date->getTimestamp() > $_SERVER["REQUEST_TIME"]) {
-        $link = substr($NEWS_ENTRIES[0]["link"][0]["href"], 14); // Strip http://php.net
+        $link = preg_replace('~^(http://php.net/|https://www.php.net/)~', '/', $NEWS_ENTRIES[0]["link"][0]["href"]);
         $title = $NEWS_ENTRIES[0]["title"];
         return "<a href='{$link}'>{$title}</a>";
     }
-}
-function get_near_usergroups()
-{
-    global $COUNTRIES, $COUNTRY;
-
-    if (!myphpnet_showug()) {
-        return false;
-    }
-    if ($_SERVER["BASE_PAGE"] == "ug.php") {
-        return false;
-    }
-    if (isset($_COOKIE["LAST_UG"]) && $_COOKIE["LAST_UG"] >= $_SERVER["REQUEST_TIME"]) {
-        if (!isset($_GET["showug"])) {
-            return false;
-        }
-    }
-
-    $ugs = get_usergroups_in($COUNTRY);
-    $count = count($ugs);
-    if (!$count) {
-        return false;
-    }
-
-    return sprintf("There %s %d <a href='/ug.php?cc=%s'>PHP User Group%s in %s</a>, are you a member of your local UG?",
-        $count == 1 ? "is" : "are",
-        $count,
-        $COUNTRY,
-        $count == 1 ? "" : "s",
-        $COUNTRIES[$COUNTRY]
-    );
-
-
-}
-function get_usergroups_in($country, &$allcountries = array()) {
-    global $COUNTRY_ALPHA_2_TO_3;
-
-    $filename = $_SERVER["DOCUMENT_ROOT"] . "/backend/usergroups.json";
-
-    $matches = array();
-    $data = json_decode(file_get_contents($filename), true);
-    foreach($data["groups"] as $group) {
-        if (isset($group["country"])) {
-            $allcountries[$COUNTRY_ALPHA_2_TO_3[$group["country"]]] = 1;
-            if ($group["country"] == $country) {
-                $matches[] = $group;
-            }
-        }
-    }
-    usort($matches, function($first, $second){
-        return strnatcasecmp($first['name'], $second['name']);
-    });
-
-    return $matches;
+    return false;
 }
 
 function news_toc($sections = null) {
-    include dirname(__FILE__) . "/pregen-news.inc";
+    include __DIR__ . "/pregen-news.inc";
     $items = array(
         "news" => array(
             "title" => "News",
@@ -642,12 +578,12 @@ function news_toc($sections = null) {
     }
 }
 function doc_toc($lang) {
-    $file = dirname(__FILE__) . "/../manual/$lang/toc/index.inc";
+    $file = __DIR__ . "/../manual/$lang/toc/index.inc";
     if (!file_exists($file)) {
         $lang = "en"; // Fallback on english if the translation doesn't exist
-        $file = dirname(__FILE__) . "/../manual/en/toc/index.inc";
+        $file = __DIR__ . "/../manual/en/toc/index.inc";
     }
-    require dirname(__FILE__) . "/../manual/$lang/toc/index.inc";
+    require __DIR__ . "/../manual/$lang/toc/index.inc";
 
     echo "<dl>\n";
     doc_toc_list($lang, $TOC, "getting-started");
@@ -689,7 +625,7 @@ function doc_toc($lang) {
 
 }
 function doc_toc_list($lang, $index, $file) {
-    include dirname(__FILE__) . "/../manual/$lang/toc/$file.inc";
+    include __DIR__ . "/../manual/$lang/toc/$file.inc";
 
     doc_toc_title($lang, $index, $file);
     foreach($TOC as $entry) {
@@ -708,4 +644,3 @@ function doc_toc_title($lang, $index, $file, $elm = "dt") {
 }
 
 /* vim: set et ts=4 sw=4 ft=php: : */
-

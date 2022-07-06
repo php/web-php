@@ -1,8 +1,8 @@
 <?php
 
 $_SERVER['BASE_PAGE'] = 'archive/2014.php';
-include_once $_SERVER['DOCUMENT_ROOT'] . '/include/prepend.inc';
-include_once $_SERVER['DOCUMENT_ROOT'] . '/include/pregen-news.inc';
+include_once __DIR__ . '/../include/prepend.inc';
+include_once __DIR__ . '/../include/pregen-news.inc';
 news_archive_sidebar();
 site_header("News Archive - 2014", array("cache" => true));
 ?>
@@ -26,7 +26,7 @@ site_header("News Archive - 2014", array("cache" => true));
      <p> We’re pleased to announce our first conference, PHP South Coast 2015!</p>
      <p> Taking place on the south coast of England in Summer 2015, where community members from around the world will come together to learn and share information about the latest trends and technologies in professional PHP development.</p>
     </div>
-  
+
   </div>
 </article>
 <article class="newsItem">
@@ -38,14 +38,14 @@ site_header("News Archive - 2014", array("cache" => true));
   <div class="newscontent">
     <div>
      <p>Bulgaria Web Summit 2015 is an event about (almost) everything a modern web person should know: {Programming, IoT, UX, UI, Fun, Privacy}. This year we will have strong PHP presense to support the growth of Bulgarian PHP community.  The event will take place on the 18th of April  at the conference area of the Inter Expo Centre.</p>
-     
+
      <p>The purpose of this meeting is to discuss the new tendencies in this direction and to popularize the internet technologies in the spheres of business, education, and services. The range of subjects includes technologies like PHP, JavaScript, CSS, Privacy and others.</p>
-     
+
      <p>Join us and have fun while learning something new.</p>
      <p>Twitter: <a href="https://twitter.com/bgwebsummit">@bgwebsummit</a></p>
-     
+
     </div>
-  
+
   </div>
 </article>
 <article class="newsItem">
@@ -58,17 +58,17 @@ site_header("News Archive - 2014", array("cache" => true));
     <div>
      <p>The PHP development team announces the immediate availability of PHP
      5.4.36. Two security-related bugs were fixed in this release, including the fix for CVE-2014-8142.
-     
+
      All PHP 5.4 users are encouraged to upgrade to this version.
      </p>
-     
+
      <p>For source downloads of PHP 5.4.36 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
      Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.4.36">ChangeLog</a>.
      </p>
-     
+
     </div>
-  
+
   </div>
 </article>
 <article class="newsItem">
@@ -90,7 +90,7 @@ site_header("News Archive - 2014", array("cache" => true));
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.6.4">ChangeLog</a>.
      </p>
     </div>
-  
+
   </div>
 </article>
 <article class="newsItem">
@@ -112,7 +112,7 @@ site_header("News Archive - 2014", array("cache" => true));
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.5.20">ChangeLog</a>.
      </p>
     </div>
-  
+
   </div>
 </article>
 <article class="newsItem">
@@ -125,16 +125,16 @@ site_header("News Archive - 2014", array("cache" => true));
     <div>
      <p>The PHP development team announces the immediate availability of PHP
      5.4.35. 4 security-related bugs were fixed in this release, including the fix for CVE-2014-3710.
-     
+
      All PHP 5.4 users are encouraged to upgrade to this version.
      </p>
-     
+
      <p>For source downloads of PHP 5.4.35 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
      Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.4.35">ChangeLog</a>.
      </p>
     </div>
-  
+
   </div>
 </article>
 <article class="newsItem">
@@ -155,7 +155,7 @@ site_header("News Archive - 2014", array("cache" => true));
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.6.3">ChangeLog</a>.
      </p>
     </div>
-  
+
   </div>
 </article>
 <article class="newsItem">
@@ -176,7 +176,7 @@ site_header("News Archive - 2014", array("cache" => true));
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.5.19">ChangeLog</a>.
      </p>
     </div>
-  
+
   </div>
 </article>
 <article class="newsItem">
@@ -188,21 +188,21 @@ site_header("News Archive - 2014", array("cache" => true));
   <div class="newscontent">
     <div>
 	<p>The International PHP Conference is an opportunity for all those involved in the PHP and the Web developer community to learn about the latest trends and technologies. The conference takes place in the center of Berlin which is often considered the "Silicon Valley of Europe". We have some of the best speakers in the world and a tremendous opportunity to get involved in a wonderful networking atmosphere to get in contact with your peers.</p>
-         
+
         <p>The conference will provide the latest know how for building modern and innovative web applications and everything you need for digital success. The conference will explore key topics and core technologies for web developers and decision makers. We will show you how to scale your applications and explain the details of Continuous Integration or evaluate different approaches to NoSQL.</p>
-         
+
         <p>Attendees will have the opportuntiy to meet World Class speakers, core developers and consultants. In addition to having the the chance to meet international known PHP and Web experts at this conference, you will also be given the chance to evaluate your code.</p>
-         
+
         <p>This Conference has been around for ten years and it is definitely a must go event for the PHP Community!</p>
         <p>
         Basic facts: <br/><br/>
-         
+
         Date: June 7th - 11th, 2015 <br/>
         Location: Maritim proArte, Berlin <br/>
         </p>
 
         <p>HIGHLIGHTS</p>
-        <ul> 
+        <ul>
             <li><strong>90+</strong> best practice sessions</li>
             <li><strong>Cool PHP &amp; the Gang: 60+</strong> international top speakers</li>
             <li>Hands-on Power Workshop Days</li>
@@ -212,7 +212,7 @@ site_header("News Archive - 2014", array("cache" => true));
             <li><strong>Free Swag:</strong> Developer backpack, T-Shirt, magazines etc.</li>
             <li>Exclusive <strong>community events</strong></li>
         </ul>
-         
+
         <p>Topics:</p>
         <ul>
             <li>Core PHP /PHPNG</li>
@@ -233,7 +233,7 @@ site_header("News Archive - 2014", array("cache" => true));
             <li>Data Stores</li>
         </ul>
     </div>
-  
+
   </div>
 </article>
 <article class="newsItem">
@@ -269,7 +269,7 @@ site_header("News Archive - 2014", array("cache" => true));
         <a href="https://twitter.com/hashtag/phpuceu" title="PHP Unconference Europe on Twitter">#phpuceu</a>
       </p>
     </div>
-  
+
   </div>
 </article>
 <article class="newsItem">
@@ -294,7 +294,7 @@ site_header("News Archive - 2014", array("cache" => true));
          NOTE: Yes, there will be elePHPants!
      </p>
     </div>
-  
+
   </div>
 </article>
 <article class="newsItem">
@@ -315,7 +315,7 @@ site_header("News Archive - 2014", array("cache" => true));
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.6.2">ChangeLog</a>.
      </p>
     </div>
-  
+
   </div>
 </article>
 <article class="newsItem">
@@ -330,16 +330,16 @@ site_header("News Archive - 2014", array("cache" => true));
      5.4.34. 6 security-related bugs were fixed in this release, including fixes for
      CVE-2014-3668, CVE-2014-3669 and CVE-2014-3670. Also, a fix for OpenSSL which
      produced regressions was reverted.
-     
+
      All PHP 5.4 users are encouraged to upgrade to this version.
      </p>
-     
+
      <p>For source downloads of PHP 5.4.34 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
      Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.4.34">ChangeLog</a>.
      </p>
     </div>
-  
+
   </div>
 </article>
 <article class="newsItem">
@@ -354,16 +354,16 @@ site_header("News Archive - 2014", array("cache" => true));
      5.5.18. Several bugs were fixed in this release. A regression in OpenSSL introduced in PHP 5.5.17 has
      also been addressed in this release.
      PHP 5.5.18 also fixes 4 CVEs in different components.
-     
+
      All PHP 5.5 users are encouraged to upgrade to this version.
      </p>
-     
+
      <p>For source downloads of PHP 5.5.18 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
      Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.5.18">ChangeLog</a>.
      </p>
     </div>
-  
+
   </div>
 </article>
 <article class="newsItem">
@@ -385,7 +385,7 @@ site_header("News Archive - 2014", array("cache" => true));
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.6.1">ChangeLog</a>.
      </p>
     </div>
-  
+
   </div>
 </article>
 <article class="newsItem">
@@ -406,19 +406,19 @@ site_header("News Archive - 2014", array("cache" => true));
          ideas, get valuable knowledge, collaborate with your peers and enjoy
          this amazing adventure.
      </p>
-     
+
      <p>
          With more than 200 delegates expected over two days, this will be the
          highlight of our 2015 calendar. We will be welcoming some amazing
          international and local speakers to share their knowledge.
      </p>
-     
+
      <p>
          <a href="http://www.phpconference.com.au">http://www.phpconference.com.au</a>
          <a href="https://twitter.com/hashtag/PHPOZ15">#phpoz15</a>
      </p>
     </div>
-  
+
   </div>
 </article>
 <article class="newsItem">
@@ -431,22 +431,22 @@ site_header("News Archive - 2014", array("cache" => true));
     <div>
      <p>The PHP development team announces the immediate availability of PHP
      5.4.33. 10 bugs were fixed in this release.
-     
+
      All PHP 5.4 users are encouraged to upgrade to this version.
      </p>
-     
+
      <p>
      This release is the last planned release that contains regular bugfixes. All the consequent releases
      will contain only security-relevant fixes, for the term of one year.
      PHP 5.4 users that need further bugfixes are encouraged to upgrade to PHP 5.6 or PHP 5.5.
      </p>
-     
+
      <p>For source downloads of PHP 5.4.33 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
      Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.4.33">ChangeLog</a>.
      </p>
     </div>
-  
+
   </div>
 </article>
 <article class="newsItem">
@@ -459,16 +459,16 @@ site_header("News Archive - 2014", array("cache" => true));
     <div>
       <p>The PHP development team announces the immediate availability of PHP
      5.5.17. Several bugs were fixed in this release.
-     
+
      All PHP 5.5 users are encouraged to upgrade to this version.
      </p>
-     
+
      <p>For source downloads of PHP 5.5.17 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
      Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.5.17">ChangeLog</a>.
      </p>
     </div>
-  
+
   </div>
 </article>
 <article class="newsItem">
@@ -518,7 +518,7 @@ This new version comes with new features, some backward incompatible changes and
         The full list of changes is available in the <a href="http://www.php.net/ChangeLog-5.php#5.6.0">ChangeLog</a>.
         </p>
     </div>
-  
+
   </div>
 </article>
 <article class="newsItem">
@@ -567,7 +567,7 @@ This new version comes with new features, some backward incompatible changes and
          forward to seeing you in D.C.!
      </p>
     </div>
-  
+
   </div>
 </article>
 <article class="newsItem">
@@ -590,7 +590,7 @@ Windows binaries can be found on <a href="http://windows.php.net/download/">wind
 The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.5.16">ChangeLog</a>.
 </p>
     </div>
-  
+
   </div>
 </article>
 <article class="newsItem">
@@ -604,16 +604,16 @@ The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.p
      <p>The PHP development team announces the immediate availability of PHP
      5.4.32. 16 bugs were fixed in this release, including the following security-related issues:
      CVE-2014-2497, CVE-2014-3538, CVE-2014-3587, CVE-2014-3597, CVE-2014-4670, CVE-2014-4698, CVE-2014-5120.
-     
+
      All PHP 5.4 users are encouraged to upgrade to this version.
      </p>
-     
+
      <p>For source downloads of PHP 5.4.32 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
      Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.4.32">ChangeLog</a>.
      </p>
     </div>
-  
+
   </div>
 </article>
 <article class="newsItem">
@@ -630,19 +630,19 @@ The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.p
      encouraged to upgrade to the current stable version of PHP 5.5 or
      previous stable version of PHP 5.4, which are supported till at least
      2016 and 2015 respectively.</p>
-     
+
      <p>PHP 5.3.29 contains about 25 potentially security related fixes
 	     backported from PHP 5.4 and 5.5.</p>
-     
+
      <p>For source downloads of PHP 5.3.29, please visit our <a href="http://www.php.net/downloads.php">downloads page</a>. Windows
      binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>. The list of changes is recorded in
      the <a href="http://www.php.net/ChangeLog-5.php#5.3.29">ChangeLog</a>.</p>
-     
+
      <p>For helping your migration to newer versions please refer to our migration
      guides for updates from <a href="http://php.net/migration54">PHP 5.3 to
 	     5.4</a> and from <a href="http://php.net/migration55">PHP 5.4 to 5.5</a>.</p>
     </div>
-  
+
   </div>
 </article>
 <article class="newsItem">
@@ -687,7 +687,7 @@ The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.p
         Thank you for helping us make PHP better.
       </p>
     </div>
-  
+
   </div>
 </article>
 <article class="newsItem">
@@ -722,7 +722,7 @@ The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.p
         speakers is available <a href="http://cakefest.org/schedule">here</a>.
       </p>
     </div>
-  
+
   </div>
 </article>
 <article class="newsItem">
@@ -766,7 +766,7 @@ The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.p
         both energize and get you excited about the future of PHP.
       </p>
     </div>
-  
+
   </div>
 </article>
 <article class="newsItem">
@@ -801,7 +801,7 @@ The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.p
         Looking forward to see you there :-)
       </p>
     </div>
-  
+
   </div>
 </article>
 <article class="newsItem">
@@ -845,7 +845,7 @@ The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.p
         Thank you for helping us make PHP better.
       </p>
     </div>
-  
+
   </div>
 </article>
 <article class="newsItem">
@@ -858,16 +858,16 @@ The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.p
     <div>
      <p>The PHP development team announces the immediate availability of PHP
      5.4.31. Over 10 bugs were fixed in this release.
-     
+
      All PHP 5.4 users are encouraged to upgrade to this version.
      </p>
-     
+
      <p>For source downloads of PHP 5.4.31 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
      Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.4.31">ChangeLog</a>.
      </p>
     </div>
-  
+
   </div>
 </article>
 <article class="newsItem">
@@ -889,7 +889,7 @@ Windows binaries can be found on <a href="http://windows.php.net/download/">wind
 The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.5.15">ChangeLog</a>.
 </p>
     </div>
-  
+
   </div>
 </article>
 <article class="newsItem">
@@ -903,29 +903,29 @@ The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.p
      <p>
      Cape Town's 2nd Annual PHP Conference is here... 2nd – 4th October 2014
      </p>
-     
+
      <p>
      We are excited to announce our 2nd Annual
      <a href="http://www.phpsouthafrica.com/">PHP Cape Town Conference</a>, 3 Days
      at The Cape Town Stadium overlooking the Atlantic Ocean - yip insane views.
      </p>
-     
+
      <p>
      Keeping with our winning formula of international speakers combined with some
      great local talent to learn off. With over 300 delegates expected, you do not
      want to miss this one.
      </p>
-     
+
      <p>
      PHP Cape Town 2013 SOLD OUT in less than 4 weeks and it will happen again.
      </p>
-     
+
      <p>
      If you're PHP-Curious or Skilled Developer we would like you to share in the
      experience. Thank You to the PHP Cape Town Community for volunteering and
      helping out. Call for Papers will close 20th July 2014.
      </p>
-     
+
      <ul>
        <li>12 Speakers</li>
        <li>6 Practical Workshop Sessions</li>
@@ -934,7 +934,7 @@ The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.p
        <li>Prize Draws</li>
      </ul>
     </div>
-  
+
   </div>
 </article>
 <article class="newsItem">
@@ -978,7 +978,7 @@ The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.p
         Thank you for helping us make PHP better.
       </p>
     </div>
-  
+
   </div>
 </article>
 <article class="newsItem">
@@ -999,10 +999,10 @@ The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.p
         <p>Please, note that this release also fixes a backward compatibility issue that has been
         detected in the PHP 5.5.13 release. Still, the fix in PHP 5.5.14 may break some very rare
         situations. As this tiny compatibility break involves security, and as security is our primary
-        concern, we had to fix it. This concerns 
+        concern, we had to fix it. This concerns
         <a href="https://bugs.php.net/bug.php?id=67072">bug 67072</a>. For more information about
         this bug and its actual resolution, please visit our
-        <a href="http://git.php.net/?p=php-src.git;a=blob_plain;f=UPGRADING;hb=refs/heads/PHP-5.5">upgrading guide</a>.
+        <a href="https://github.com/php/php-src/raw/PHP-5.5/UPGRADING">upgrading guide</a>.
         We apologize for any inconvenience you may have experienced with this behavior.</p>
 
         <p>For source downloads of PHP 5.5.14, please visit our <a href="http://www.php.net/downloads.php">downloads page</a>.
@@ -1010,7 +1010,7 @@ The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.p
         The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.5.14">ChangeLog</a>.
         </p>
     </div>
-  
+
   </div>
 </article>
 <article class="newsItem">
@@ -1025,26 +1025,26 @@ The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.p
      5.4.30. Over 20 bugs were fixed in this release, including the following security issues:
      CVE-2014-3981, CVE-2014-0207, CVE-2014-3478, CVE-2014-3479, CVE-2014-3480, CVE-2014-3487,
      CVE-2014-4049, CVE-2014-3515.
-     
+
      All PHP 5.4 users are encouraged to upgrade to this version.
      </p>
-     
+
      <p>Please, note that this release also fixes a backward compatibility issue that has been
      detected in the PHP 5.4.29 release. Still, the fix in PHP 5.4.30 may break some very rare
      situations. As this tiny compatibility break involves security, and as security is our primary
      concern, we had to fix it. This concerns
      <a href="https://bugs.php.net/bug.php?id=67072">bug 67072</a>. For more information about
      this bug and its actual resolution, please refer to our
-     <a href="http://git.php.net/?p=php-src.git;a=blob_plain;f=UPGRADING;hb=refs/heads/PHP-5.4">upgrading guide</a>, section 4a.
+     <a href="https://github.com/php/php-src/raw/PHP-5.4/UPGRADING">upgrading guide</a>, section 4a.
      We apologize for any inconvenience you may have experienced with this behavior.</p>
-     
-     
+
+
      <p>For source downloads of PHP 5.4.30 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
      Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.4.30">ChangeLog</a>.
      </p>
     </div>
-  
+
   </div>
 </article>
 <article class="newsItem">
@@ -1083,7 +1083,7 @@ The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.p
        and see you soon in Munich!
      </p>
     </div>
-  
+
   </div>
 </article>
 <article class="newsItem">
@@ -1100,15 +1100,15 @@ The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.p
      Victoria Business School located in the coolest little capital in the world,
      Wellington - New Zealand.
      </p>
-     
-     
+
+
      <p>
      This conference promises to be one of the most important IT events connecting
      the Oceania PHP Community, with highly recognized speakers presenting two
      concurrent tracks including over 22 talks exploring PHP trends and other web
      technologies to both inspire and challenge you.
      </p>
-     
+
      <p>
      A tutorial day on Wednesday 27th August provides an opportunity to spend some
      time with experts, going in-depth on particular topics. This is an opportunity
@@ -1116,7 +1116,7 @@ The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.p
      leading IT companies from all over New Zealand, Australia and the global PHP
      community.
      </p>
-     
+
      <p>
      Our main topics are: SilverStripe, Apigility, Zend Framework 2, Laravel,
      Symfony, Scaling PHP, Performance Testing, Web optimization, AngularJS, Apache
@@ -1124,7 +1124,7 @@ The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.p
      Arduino and PHP and much more.
      </p>
     </div>
-  
+
   </div>
 </article>
 <article class="newsItem">
@@ -1168,7 +1168,7 @@ The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.p
         Thank you for helping us make PHP better.
       </p>
     </div>
-  
+
   </div>
 </article>
 <article class="newsItem">
@@ -1217,7 +1217,7 @@ The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.p
         Thank you for helping us make PHP better.
       </p>
     </div>
-  
+
   </div>
 </article>
 <article class="newsItem">
@@ -1232,13 +1232,13 @@ The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.p
      5.4.29. 16 bugs were fixed in this release, including two security issues in fileinfo extension.
      All PHP 5.4 users are encouraged to upgrade to this version.
      </p>
-     
+
      <p>For source downloads of PHP 5.4.29 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
      Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.4.29">ChangeLog</a>.
      </p>
     </div>
-  
+
   </div>
 </article>
 <article class="newsItem">
@@ -1260,7 +1260,7 @@ The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.p
         The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.5.13">ChangeLog</a>.
         </p>
     </div>
-  
+
   </div>
 </article>
 <article class="newsItem">
@@ -1291,12 +1291,12 @@ The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.p
      </ul>
      <p>
       Each section will feature several talks from the active contributors/authors of the language.
-	  Among the invited speakers are Dmitry Stogov (Zend), Shawn McCool (Laravel), Dmitry Vyukov (Google), 
-      Sveta Smirnova (Oracle), Andrey Aksyonov (Sphinx), Anatoly Panov (Badoo) and many others, 
+	  Among the invited speakers are Dmitry Stogov (Zend), Shawn McCool (Laravel), Dmitry Vyukov (Google),
+      Sveta Smirnova (Oracle), Andrey Aksyonov (Sphinx), Anatoly Panov (Badoo) and many others,
       see more details on <a href="http://devconf.ru">the official website</a>.
      </p>
     </div>
-  
+
   </div>
 </article>
 <article class="newsItem">
@@ -1307,31 +1307,31 @@ The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.p
   <time class="newsdate" datetime="2014-05-29T03:11:15+02:00">29 May 2014</time>
   <div class="newscontent">
     <p xmlns="http://www.w3.org/2005/Atom">We’re pleased to announce the 10th annual ZendCon which will be held October 27-30th, 2014 in Santa Clara, CA. ZendCon 2014 has a long history of being one of the “must attend” PHP conferences as community members from around the world have come together to learn and share information about the latest trends and technologies in professional PHP development. Our main topics this year are:</p>
-     
+
      <ul xmlns="http://www.w3.org/2005/Atom">
         <li>PHP Best Practices and Tooling</li>
         <li>Continuous Delivery and DevOps</li>
         <li>Application Architecture - APIs, Mobile, Cloud Services</li>
     </ul>
-    
+
     <p xmlns="http://www.w3.org/2005/Atom">
         We would welcome submission of any talk included in the wide variety of
         topics related to PHP and tools commonly used by PHP developers. We are
         looking for submissions for:
     </p>
-    
+
     <ul xmlns="http://www.w3.org/2005/Atom">
         <li>Pre-conference tutorials on October 27 - 3 hour intensive session</li>
         <li>Breakout sessions on October 28, 29 and 30 - 1 hour sessions including Q&amp;A</li>
         <li>Keynote sessions on October 28-30 – 1 hour sessions with topics appealing to the entire audience</li>
     </ul>
-    
+
     <p xmlns="http://www.w3.org/2005/Atom">
         For those interested in speaking, please head out to
-        <a href="http://cfp.zendcon.com">http://cfp.zendcon.com</a> to 
+        <a href="http://cfp.zendcon.com">http://cfp.zendcon.com</a> to
         submit on or before June 16th, 2014.
     </p>
-    
+
   </div>
 </article>
 <article class="newsItem">
@@ -1343,20 +1343,20 @@ The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.p
   <div class="newscontent">
     <div>
      <p>2nd Annual China PHP Conference – August 2 to 3, Shanghai!</p>
-     
+
      <p>ThinkInLAMP will be hosting a 2-day event filled with high quality,
      technical sessions about PHP Core, PHP High Performance, PHP Engineering,
      and more PHP. During this conference, you will hear from Xinchen Hui, a PHP
      core developer.
      </p>
-     
+
      <p>Don’t miss out on 2 great days of sessions, delicious food, fantastic shows,
      and countless networking opportunities to engage with speakers and
      delegates. For tickets and more information, see: <a href="http://www.phpconchina.com/">www.phpconchina.com</a></p>
-     
-     
+
+
     </div>
-  
+
   </div>
 </article>
 <article class="newsItem">
@@ -1375,7 +1375,7 @@ The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.p
      <p>The name "Next Generation" was optimistically presumptuous; in reality phpng is an internal project that we are working on, it is not a production ready branch that anyone should deploy, or judge as they would a release of PHP.</p>
      <p>The work on phpng, the doors it opens, the conversations it has started, the collaboration it is inspiring, are all worth getting excited about. But, we need to stay grounded, honest, and open; and say that there is much work to do in order to make the "Next Generation" a reality, this is only the start.</p>
     </div>
-  
+
   </div>
 </article>
 <article class="newsItem">
@@ -1416,7 +1416,7 @@ The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.p
         Thank you for helping us make PHP better.
      </p>
     </div>
-  
+
   </div>
 </article>
 <article class="newsItem">
@@ -1466,7 +1466,7 @@ The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.p
         Thank you for helping us make PHP better.
      </p>
     </div>
-  
+
   </div>
 </article>
 <article class="newsItem">
@@ -1487,7 +1487,7 @@ The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.p
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.4.28">ChangeLog</a>.
      </p>
     </div>
-  
+
   </div>
 </article>
 <article class="newsItem">
@@ -1508,7 +1508,7 @@ The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.p
         The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.5.12">ChangeLog</a>.
         </p>
     </div>
-  
+
   </div>
 </article>
 <article class="newsItem">
@@ -1561,7 +1561,7 @@ The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.p
         Thank you for helping us make PHP better.
      </p>
     </div>
-  
+
   </div>
 </article>
 <article class="newsItem">
@@ -1583,7 +1583,7 @@ The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.p
      </p>
 
     </div>
-  
+
   </div>
 </article>
 <article class="newsItem">
@@ -1604,7 +1604,7 @@ The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.p
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.5.11">ChangeLog</a>.
      </p>
     </div>
-  
+
   </div>
 </article>
 <article class="newsItem">
@@ -1640,7 +1640,7 @@ The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.p
         More info: <a href="http://www.phpconference.com.ar">www.phpconference.com.ar</a>
       </p>
     </div>
-  
+
   </div>
 </article>
 <article class="newsItem">
@@ -1679,7 +1679,7 @@ The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.p
      tutorial day on 26th June in Amsterdam!
      </p>
     </div>
-  
+
   </div>
 </article>
 <article class="newsItem">
@@ -1700,7 +1700,7 @@ The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.p
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.4.26">ChangeLog</a>.
      </p>
     </div>
-  
+
   </div>
 </article>
 <article class="newsItem">
@@ -1753,7 +1753,7 @@ The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.p
         Thank you for helping us make PHP better.
      </p>
     </div>
-  
+
   </div>
 </article>
 <article class="newsItem">
@@ -1775,7 +1775,7 @@ The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.p
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.5.10">ChangeLog</a>.
      </p>
     </div>
-  
+
   </div>
 </article>
 <article class="newsItem">
@@ -1825,7 +1825,7 @@ The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.p
         Thank you for helping us make PHP better.
      </p>
     </div>
-  
+
   </div>
 </article>
 <article class="newsItem">
@@ -1846,7 +1846,7 @@ The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.p
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.4.25">ChangeLog</a>.
      </p>
     </div>
-  
+
   </div>
 </article>
 <article class="newsItem">
@@ -1866,7 +1866,7 @@ The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.p
      The list of changes can be found in the <a href="http://www.php.net/ChangeLog-5.php#5.5.9">ChangeLog</a>.
    </p>
     </div>
-  
+
   </div>
 </article>
 <article class="newsItem">
@@ -1890,7 +1890,7 @@ The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.p
      <a href="http://www.midwestphp.org/registration/">Register for your spot at MidwestPHP</a> today!
      </p>
     </div>
-  
+
   </div>
 </article>
 <article class="newsItem">
@@ -1920,7 +1920,7 @@ The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.p
       So make sure to <a href="http://tek.phparch.com/pricing-and-registration/">register
      soon</a> in order to save $200 off the total price!</p>
     </div>
-  
+
   </div>
 </article>
 <article class="newsItem">
@@ -1973,7 +1973,7 @@ The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.p
         Thank you for helping us making PHP better.
      </p>
     </div>
-  
+
   </div>
 </article>
 <article class="newsItem">
@@ -2014,7 +2014,7 @@ The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.p
      We look forward to seeing you in Berlin!
      </p>
     </div>
-  
+
   </div>
 </article>
 <article class="newsItem">
@@ -2048,7 +2048,7 @@ The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.p
      interaction.
      </p>
     </div>
-  
+
   </div>
 </article>
 <article class="newsItem">
@@ -2088,11 +2088,10 @@ The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.p
      The list of changes can be found in the <a href="http://www.php.net/ChangeLog-5.php#5.5.8">ChangeLog</a>.
    </p>
     </div>
-  
+
   </div>
 </article>
 <?php
 
 /* %s/<a href="\(.*\)"><img src="\/images\/news\/\(.*\)" alt="\(.*\)" width.*><\/a>/<?php news_image("\1", "\2", "\3"); ?>/g */
 site_footer(array('elephpants' => true, 'sidebar' => $SIDEBAR_DATA));
-

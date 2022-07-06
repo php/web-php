@@ -1,6 +1,4 @@
 <?php
-// $Id$
-
 /*
 
  This script handles all 401, 403 and 404 error redirects,
@@ -12,10 +10,9 @@
 */
 
 // Ensure that our environment is set up
-include_once $_SERVER['DOCUMENT_ROOT'] . '/include/prepend.inc';
-include_once $_SERVER['DOCUMENT_ROOT'] . '/include/languages.inc';
-include_once $_SERVER['DOCUMENT_ROOT'] . '/include/loadavg.inc';
-include_once $_SERVER['DOCUMENT_ROOT'] . '/include/errors.inc';
+include_once __DIR__ . '/include/prepend.inc';
+include_once __DIR__ . '/include/languages.inc';
+include_once __DIR__ . '/include/errors.inc';
 
 // Get URI for this request, strip leading slash
 // See langchooser.inc for more info on STRIPPED_URI
@@ -26,20 +23,20 @@ $URI = substr($_SERVER['STRIPPED_URI'], 1);
 // dependent, so the search results will show up in the sidebar)
 if ($URI == 'phpnetsearch.src') {
     status_header(200);
-    include_once $_SERVER['DOCUMENT_ROOT'] . '/include/mozsearch.inc';
+    include_once __DIR__ . '/include/mozsearch.inc';
     exit;
 }
 // FIXME: Nuke the old firefox search plugin
 if ($URI == 'phpnetimprovedsearch.src') {
     status_header(200);
-    include_once $_SERVER['DOCUMENT_ROOT'] . '/include/mozopensearch.inc';
+    include_once __DIR__ . '/include/mozopensearch.inc';
     exit;
 }
 
 // ============================================================================
 // BC: handle bugs.php moved completely to bugs.php.net
 if (preg_match("!^bugs.php\\?(.+)$!", $URI, $array)) {
-    mirror_redirect("http://bugs.php.net/?$array[1]");
+    mirror_redirect("https://bugs.php.net/?$array[1]");
 }
 
 // ============================================================================
@@ -47,7 +44,7 @@ if (preg_match("!^bugs.php\\?(.+)$!", $URI, $array)) {
 if (preg_match("!^security/advisories/PHPSA-(\\d+)\\.php$!", $URI, $array)) {
     status_header(200);
     $_GET["id"] = $array[1];
-    include_once $_SERVER['DOCUMENT_ROOT'] . '/security/index.php';
+    include_once __DIR__ . '/security/index.php';
     exit;
 }
 
@@ -114,12 +111,12 @@ if (preg_match("!^manual/(\\w+)/(print|printwn|html)((/.+)|$)!", $URI, $array)) 
 // send them to the /releases page since that is likely to be most helpful.
 if (preg_match("!^distributions/.*!", $URI, $array)) {
     status_header(404);
-    include_once $_SERVER['DOCUMENT_ROOT'] . "/releases/index.php";
+    include_once __DIR__ . "/releases/index.php";
 }
 
 // ============================================================================
 // The trailing slash only causes problems from now on
-$URI = preg_replace('!/+$!', '', $URI);
+$URI = rtrim($URI, '/');
 
 // ============================================================================
 // Some nice URLs for getting something for download
@@ -135,32 +132,16 @@ if (preg_match("!^get/([^/]+)$!", $URI, $what)) {
 // ============================================================================
 // Nice URLs for download files, so wget works completely well with download links
 if (preg_match("!^get/([^/]+)/from/([^/]+)(/mirror)?$!", $URI, $dlinfo)) {
-    
+
     $df = $dlinfo[1];
     if(strpos($df, "7-LATEST") !== false) {
-        include_once $_SERVER['DOCUMENT_ROOT'] . "/include/version.inc";
-        $df = str_replace("7-LATEST", $PHP_7_VERSION, $df);
-    } elseif(strpos($df, "5-LATEST") !== false) {
-        include_once $_SERVER['DOCUMENT_ROOT'] . "/include/version.inc";
-        $df = str_replace("5-LATEST", $PHP_5_VERSION, $df);
-    } elseif(strpos($df, "4-LATEST") !== false) {
-        include_once $_SERVER['DOCUMENT_ROOT'] . "/include/version.inc";
-        $df = str_replace("4-LATEST", $PHP_4_VERSION, $df);
+        include_once __DIR__ . "/include/version.inc";
+        [ $latest ] = release_get_latest();
+        $df = str_replace("7-LATEST", $latest, $df);
     }
-    
-    // Mirror selection page
-    if ($dlinfo[2] == "a") {
-        status_header(200);
-        include_once $_SERVER['DOCUMENT_ROOT'] . "/include/get-download.inc";
-        exit;
-    }
-    
-    // The same mirror is selected
-    if ($dlinfo[2] == "this") { $mr = $MYSITE; }
-    
-    // Some other mirror is selected
-    else { $mr = "http://{$dlinfo[2]}/"; }
-    
+
+    $mr = "https://www.php.net/";
+
     // Check if that mirror really exists if not, bail out
     if(!isset($MIRRORS[$mr])) {
         error_nomirror($mr);
@@ -168,7 +149,7 @@ if (preg_match("!^get/([^/]+)/from/([^/]+)(/mirror)?$!", $URI, $dlinfo)) {
     }
 
     // Start the download process
-    include $_SERVER['DOCUMENT_ROOT'] . "/include/do-download.inc";
+    include __DIR__ . "/include/do-download.inc";
     $filename = get_actual_download_file($df);
     if ($filename) {
         status_header(200);
@@ -176,7 +157,7 @@ if (preg_match("!^get/([^/]+)/from/([^/]+)(/mirror)?$!", $URI, $dlinfo)) {
     } else {
         status_header(404);
         /* The file didn't exist on this server.. ask the user to pick another mirror */
-        include $_SERVER['DOCUMENT_ROOT'] . "/include/get-download.inc";
+        include __DIR__ . "/include/get-download.inc";
     }
     exit;
 }
@@ -184,6 +165,11 @@ if (preg_match("!^get/([^/]+)/from/([^/]+)(/mirror)?$!", $URI, $dlinfo)) {
 // php.net/42 --> likely a bug number
 if (is_numeric($URI)) {
     mirror_redirect("http://bugs.php.net/bug.php?id=$URI");
+}
+
+// php.net/GH-123 -> php-src GH issue #123
+if (preg_match('/^GH-(\d+)$/', $URI, $matches)) {
+    mirror_redirect("https://github.com/php/php-src/issues/" . $matches[1]);
 }
 
 // ============================================================================
@@ -194,7 +180,7 @@ if (!in_array($URI, array('mirror-info', 'error', 'mod')) &&
     file_exists($_SERVER['DOCUMENT_ROOT'] . "/$URI.php")) {
     mirror_redirect("/$URI.php");
 }
- 
+
 // Work with lowercased URI from now
 $URI = strtolower($URI);
 
@@ -225,13 +211,13 @@ if ($path = is_known_term($term)) {
 $manual_page_moves = array(
     // entry point changed
     'installation'               => 'install',
-    
+
     // was split among platforms (don't know where to redirect)
-    'install.apache'             => 'install', 
+    'install.apache'             => 'install',
     'install.apache2'            => 'install',
     'install.netscape-enterprise'=> 'install',
     'install.otherhttpd'         => 'install',
-    
+
     // moved to platform sections
     'install.caudium'            => 'install.unix.caudium',
     'install.commandline'        => 'install.unix.commandline',
@@ -270,6 +256,44 @@ if (isset($manual_page_moves[$URI])) {
     mirror_redirect("/manual/$match[1]/" . $manual_page_moves[$match[2]] . ".php");
 }
 
+$manual_redirections = array(
+    'class.oci-lob'             => 'class.ocilob',
+    'oci-lob.append'            => 'ocilob.append',
+    'oci-lob.close'             => 'ocilob.close',
+    'oci-lob.eof'               => 'ocilob.eof',
+    'oci-lob.erase'             => 'ocilob.erase',
+    'oci-lob.export'            => 'ocilob.export',
+    'oci-lob.flush'             => 'ocilob.flush',
+    'oci-lob.free'              => 'ocilob.free',
+    'oci-lob.getbuffering'      => 'ocilob.getbuffering',
+    'oci-lob.import'            => 'ocilob.import',
+    'oci-lob.load'              => 'ocilob.load',
+    'oci-lob.read'              => 'ocilob.read',
+    'oci-lob.rewind'            => 'ocilob.rewind',
+    'oci-lob.save'              => 'ocilob.save',
+    'oci-lob.seek'              => 'ocilob.seek',
+    'oci-lob.setbuffering'      => 'ocilob.setbuffering',
+    'oci-lob.size'              => 'ocilob.size',
+    'oci-lob.tell'              => 'ocilob.tell',
+    'oci-lob.truncate'          => 'ocilob.truncate',
+    'oci-lob.write'             => 'ocilob.write',
+    'oci-lob.writetemporary'    => 'ocilob.writetemporary',
+    'class.oci-collection'      => 'class.ocicollection',
+    'oci-collection.append'     => 'ocicollection.append',
+    'oci-collection.assign'     => 'ocicollection.assign',
+    'oci-collection.assignelem' => 'ocicollection.assignelem',
+    'oci-collection.free'       => 'ocicollection.free',
+    'oci-collection.getelem'    => 'ocicollection.getelem',
+    'oci-collection.max'        => 'ocicollection.max',
+    'oci-collection.size'       => 'ocicollection.size',
+    'oci-collection.trim'       => 'ocicollection.trim',
+);
+
+if (preg_match("!^manual/([^/]+)/([^/]+)$!", $URI, $match) && isset($manual_redirections[$match[2]])) {
+    status_header(301);
+    mirror_redirect("/manual/$match[1]/" . $manual_redirections[$match[2]]);
+}
+
 // ============================================================================
 // Define shortcuts for PHP files, manual pages and external redirects
 $uri_aliases = array (
@@ -281,7 +305,7 @@ $uri_aliases = array (
     "documentation" => "docs",
     "mailinglists"  => "mailing-lists",
     "mailinglist"   => "mailing-lists",
-    "changelog"     => "ChangeLog-5",
+    "changelog"     => "ChangeLog-7",
     "gethelp"       => "support",
     "help"          => "support",
     "unsubscribe"   => "unsub",
@@ -336,9 +360,15 @@ $uri_aliases = array (
     "**"           => "language.operators.arithmetic",
     "..."          => "functions.arguments",
     "splat"        => "functions.arguments",
+    "arrow"        => "functions.arrow",
+    "fn"           => "functions.arrow",
+    // ?:, ??, ??=
+    // These shortcuts can not be captured here since they
+    // don't actually produce a 404 error.
+    // Instead, we have a small check in index.php directly.
 
     "dowhile"      => "control-structures.do.while",
-    
+
     "tut"          => "tutorial",
     "tut.php"      => "tutorial", // BC
 
@@ -355,8 +385,9 @@ $uri_aliases = array (
     "_"            => "function.gettext",
     "cli"          => "features.commandline",
 
-    "oop4"         => "language.oop",
     "oop"          => "language.oop5",
+    "enum"         => "language.enumerations",
+    "enums"        => "language.enumerations",
 
     "const"        => "language.constants.syntax",
     "class"        => "language.oop5.basic",
@@ -399,26 +430,26 @@ $uri_aliases = array (
     "namespace"    => "language.namespaces",
     "use"          => "language.namespaces.using",
     "iterator"     => "language.oop5.iterations",
-    
+
     "factory"      => "language.oop5.patterns",
     "singleton"    => "language.oop5.patterns",
 
     "trait"        => "language.oop5.traits",
     "traits"       => "language.oop5.traits",
-    
+
     "news.php"                     => "archive/index", // BC
     "readme.mirror"                => "mirroring", // BC
-    
+
     "php5"                         => "language.oop5",
     "zend_changes.txt"             => "language.oop5", // BC
     "zend2_example.phps"           => "language.oop5", // BC
     "zend_changes_php_5_0_0b2.txt" => "language.oop5", // BC
     "zend-engine-2"                => "language.oop5", // BC
     "zend-engine-2.php"            => "language.oop5", // BC
-    
+
     "news_php_5_0_0b2.txt"         => "ChangeLog-5", // BC
     "news_php_5_0_0b3.txt"         => "ChangeLog-5", // BC
-    
+
     "manual/about-notes.php" => "manual/add-note",   // BC
     "software/index.php"     => "software",          // BC
     "releases.php"           => "releases/index",    // BC
@@ -434,10 +465,10 @@ $uri_aliases = array (
     "regexp.reference.circudollar"    => "regexp.reference.anchors",
     "regexp.reference.squarebrackets" => "regexp.reference.character-classes",
     "regexp.reference.verticalbar"    => "regexp.reference.alternation",
-    
+
     # external shortcut aliases ;)
     "dochowto"     => "phpdochowto",
-    
+
     # CVS -> SVN
     "anoncvs.php"   => "git",
     "cvs-php.php"   => "git-php",
@@ -464,16 +495,19 @@ $uri_aliases = array (
 );
 
 $external_redirects = array(
-    "php4news"    => "https://git.php.net/?p=php-src.git;a=blob_plain;f=NEWS;hb=refs/heads/PHP-4.4",
-    "php5news"    => "https://git.php.net/?p=php-src.git;a=blob_plain;f=NEWS;hb=refs/heads/PHP-5.6",
-    "php53news"   => "https://git.php.net/?p=php-src.git;a=blob_plain;f=NEWS;hb=refs/heads/PHP-5.3",
-    "php54news"   => "https://git.php.net/?p=php-src.git;a=blob_plain;f=NEWS;hb=refs/heads/PHP-5.4",
-    "php55news"   => "https://git.php.net/?p=php-src.git;a=blob_plain;f=NEWS;hb=refs/heads/PHP-5.5",
-    "php56news"   => "https://git.php.net/?p=php-src.git;a=blob_plain;f=NEWS;hb=refs/heads/PHP-5.6",
-    "php70news"   => "https://git.php.net/?p=php-src.git;a=blob_plain;f=NEWS;hb=refs/heads/PHP-7.0",
-    "php71news"   => "https://git.php.net/?p=php-src.git;a=blob_plain;f=NEWS;hb=refs/heads/PHP-7.1",
-    "php72news"   => "https://git.php.net/?p=php-src.git;a=blob_plain;f=NEWS;hb=refs/heads/PHP-7.2",
-    "phptrunknews"=> "https://git.php.net/?p=php-src.git;a=blob_plain;f=NEWS;hb=refs/heads/master",
+    "php4news"    => "https://github.com/php/php-src/raw/PHP-4.4/NEWS",
+    "php5news"    => "https://github.com/php/php-src/raw/PHP-5.6/NEWS",
+    "php53news"   => "https://github.com/php/php-src/raw/PHP-5.3/NEWS",
+    "php54news"   => "https://github.com/php/php-src/raw/PHP-5.4/NEWS",
+    "php55news"   => "https://github.com/php/php-src/raw/PHP-5.5/NEWS",
+    "php56news"   => "https://github.com/php/php-src/raw/PHP-5.6/NEWS",
+    "php70news"   => "https://github.com/php/php-src/raw/PHP-7.0/NEWS",
+    "php71news"   => "https://github.com/php/php-src/raw/PHP-7.1/NEWS",
+    "php72news"   => "https://github.com/php/php-src/raw/PHP-7.2/NEWS",
+    "php73news"   => "https://github.com/php/php-src/raw/PHP-7.3/NEWS",
+    "php74news"   => "https://github.com/php/php-src/raw/PHP-7.4/NEWS",
+    "php80news"   => "https://github.com/php/php-src/raw/PHP-8.0/NEWS",
+    "phptrunknews"=> "https://github.com/php/php-src/raw/master/NEWS",
     "pear"        => "http://pear.php.net/",
     "bugs"        => "https://bugs.php.net/",
     "bugstats"    => "https://bugs.php.net/stats.php",
@@ -482,11 +516,6 @@ $external_redirects = array(
     "release/5_3_0.php" => "/releases/5_3_0.php", // PHP 5.3.0 release announcement had a typo
     "ideas.php"   => "http://wiki.php.net/ideas", // BC
     "releases.atom" => "/releases/feed.php", // BC, No need to pre-generate it
-    // We used to do reST rendering of README files
-    "rest/readme.release_process"   => "http://git.php.net/?p=php-src.git;a=blob_plain;f=README.RELEASE_PROCESS;hb=HEAD",
-    "rest/readme.mailinglist_rules" => "http://git.php.net/?p=php-src.git;a=blob_plain;f=README.MAILINGLIST_RULES;hb=HEAD",
-    "rest/readme.git-rules"         => "http://git.php.net/?p=php-src.git;a=blob_plain;f=README.GIT-RULES;hb=HEAD",
-    "rest/coding_standards"         => "http://git.php.net/?p=php-src.git;a=blob_plain;f=CODING_STANDARDS;hb=HEAD",
     "spec"        => "https://github.com/php/php-langspec",
     "sunglasses"  => "https://www.youtube.com/watch?v=dQw4w9WgXcQ", // Temporary easter egg for bug#66144
 );
@@ -494,7 +523,6 @@ $external_redirects = array(
 // Temporary hack to fix bug #49956 for mysqli -- Please don't hate me for this. Data taken from mysqli/summary.xml
 $mysqli_redirects = array(
     "mysqli_affected_rows"  => "mysqli.affected-rows",
-    "mysqli_get_client_info"  => "mysqli.client-info",
     "mysqli_get_client_version"  => "mysqli.client-version",
     "mysqli_connect_errno"  => "mysqli.connect-errno",
     "mysqli_connect_error"  => "mysqli.connect-error",
@@ -503,7 +531,6 @@ $mysqli_redirects = array(
     "mysqli_field_count"  => "mysqli.field-count",
     "mysqli_get_host_info"  => "mysqli.host-info",
     "mysqli_get_proto_info"  => "mysqli.protocol-version",
-    "mysqli_get_server_info"  => "mysqli.server-info",
     "mysqli_get_server_version"  => "mysqli.server-version",
     "mysqli_info"  => "mysqli.info",
     "mysqli_insert_id"  => "mysqli.insert-id",
@@ -554,7 +581,6 @@ $mysqli_redirects = array(
     "mysqli_stmt_error"  => "mysqli-stmt.error",
     "mysqli_stmt_field_count"  => "mysqli-stmt.field-count",
     "mysqli_stmt_insert_id"  => "mysqli-stmt.insert-id",
-    "mysqli_stmt_num_rows"  => "mysqli-stmt.num-rows",
     "mysqli_stmt_param_count"  => "mysqli-stmt.param-count",
     "mysqli_stmt_sqlstate"  => "mysqli-stmt.sqlstate",
     "mysqli_stmt_attr_get"  => "mysqli-stmt.attr-get",
@@ -619,17 +645,17 @@ if (isset($external_redirects[$URI])) {
 // will be capable of being included from anywhere
 if ($URI=='mirror-info') {
     status_header(200);
-    include_once $_SERVER['DOCUMENT_ROOT'] . "/$URI.php";
+    include_once __DIR__ . "/$URI.php";
     exit;
 }
 
 // ============================================================================
 // Try to find the page using the preferred language as a manual page
-include_once $_SERVER['DOCUMENT_ROOT'] . "/include/manual-lookup.inc";
+include_once __DIR__ . "/include/manual-lookup.inc";
 $try = find_manual_page($LANG, $URI);
 if ($try) {
     status_header(200);
-    include_once $_SERVER['DOCUMENT_ROOT'] . $try;
+    include_once __DIR__ . $try;
     exit;
 }
 // BC. The class methods are now classname.methodname
@@ -642,10 +668,24 @@ if (preg_match("!^manual/(.+)/function\.(.+)-(.+).php$!", $URI, $array)) {
     }
 }
 
+// ============================================================================
+// For manual pages for inactive languages, point visitors to the English page
+if (preg_match("!^manual/([^/]+)/([^/]+).php$!", $URI, $match) &&
+    isset($INACTIVE_ONLINE_LANGUAGES[$match[1]])) {
+    $try = find_manual_page("en", $match[2]);
+    if ($try) {
+        error_inactive_manual_page($INACTIVE_ONLINE_LANGUAGES[$match[1]], $try);
+    }
+}
+
 
 // ============================================================================
 // 404 page for manual pages (eg. not built language)
 if (strpos($URI, "manual/") === 0) {
+    $legacy_manual_urls = get_legacy_manual_urls($URI);
+    if (count($legacy_manual_urls) > 0) {
+        fallback_to_legacy_manuals($legacy_manual_urls);
+    }
     error_404_manual();
 }
 
@@ -660,4 +700,3 @@ mirror_redirect(
 /*
  * vim: set et ts=4 sw=4 ft=php: :
  */
-?>

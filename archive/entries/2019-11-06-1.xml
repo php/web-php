@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom" xmlns:default="http://php.net/ns/news">
+  <title>Midwest PHP Call For Papers Open</title>
+  <id>https://www.php.net/archive/2019.php#2019-11-06-1</id>
+  <published>2019-11-06T19:47:55+00:00</published>
+  <updated>2019-11-06T19:47:55+00:00</updated>
+  <link href="https://www.php.net/conferences/index.php#id2019-11-06-1" rel="alternate" type="text/html"/>
+  <link href="https://midwestphp.org" rel="via" type="text/html"/>
+  <default:finalTeaserDate xmlns="http://php.net/ns/news">2019-11-30</default:finalTeaserDate>
+  <category term="cfp" label="Call for Papers"/>
+  <default:newsImage xmlns="http://php.net/ns/news" link="https://midwestphp.org" title="Midwest PHP 2020">midwest-php-logo.png</default:newsImage>
+  <content type="xhtml">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+     The Call for Papers for Midwest PHP in beautiful Minneapolis, MN from April 2-4 will be closing on November 30th, 2019.  This year's conference takes place in one of the most famous parts of downtown in the newly remodeled Marriott City Center hotel.  With 4 tracks, over 60 talks, 500 expected attendees, 2 after parties, and 4 headline keynotes including the founder of Postman.
+     
+     For our speakers, travel and lodging is covered, and you'll also receive access to all four tracks of the conference (with some other surprises still to be announced).  Apply to speak at https://cfp.midwestphp.org/
+     
+     Or take advantage of our free beginner track, Pro tracks, and Enterprise track by getting your ticket at https://midwestphp.org
+     
+    </div>
+  </content>
+</entry>

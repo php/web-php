@@ -1,6 +1,4 @@
 <?php
-/* $Id$ */
-
 $css_files = array(
     '/fonts/Fira/fira.css',
     '/fonts/Font-Awesome/css/fontello.css',
@@ -54,17 +52,22 @@ if (!isset($config["languages"])) {
 <head>
 
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>PHP: <?php echo $title ?></title>
 
- <link rel="shortcut icon" href="<?php echo $MYSITE ?>favicon.ico">
+ <link rel="icon" type="image/svg+xml" sizes="any" href="<?php echo $MYSITE ?>favicon.svg?v=2">
+ <link rel="icon" type="image/png" sizes="196x196" href="<?php echo $MYSITE ?>favicon-196x196.png?v=2">
+ <link rel="icon" type="image/png" sizes="32x32" href="<?php echo $MYSITE ?>favicon-32x32.png?v=2">
+ <link rel="icon" type="image/png" sizes="16x16" href="<?php echo $MYSITE ?>favicon-16x16.png?v=2">
+ <link rel="shortcut icon" href="<?php echo $MYSITE ?>favicon.ico?v=2">
+
  <link rel="search" type="application/opensearchdescription+xml" href="http://php.net/phpnetimprovedsearch.src" title="Add PHP.net search">
  <link rel="alternate" type="application/atom+xml" href="<?php echo $MYSITE ?>releases/feed.php" title="PHP Release feed">
  <link rel="alternate" type="application/atom+xml" href="<?php echo $MYSITE ?>feed.atom" title="PHP: Hypertext Preprocessor">
 
 <?php if (isset($_SERVER['BASE_PAGE'])): ?>
- <link rel="canonical" href="http://php.net/<?php echo $_SERVER['BASE_PAGE']?>">
+ <link rel="canonical" href="https://www.php.net/<?php echo $_SERVER['BASE_PAGE']?>">
 <?php if ($shortname): ?>
  <link rel="shorturl" href="<?php echo $shorturl ?>">
  <link rel="alternate" href="<?php echo $shorturl ?>" hreflang="x-default">
@@ -80,7 +83,7 @@ if (!isset($config["languages"])) {
 <?php endforeach ?>
 
 <?php foreach($CSS as $filename => $modified): ?>
-<link rel="stylesheet" type="text/css" href="<?php echo $MYSITE ?>cached.php?t=<?php echo $modified?>&amp;f=<?php echo $filename?>" media="screen">
+<link rel="stylesheet" type="text/css" href="/cached.php?t=<?php echo $modified?>&amp;f=<?php echo $filename?>" media="screen">
 <?php endforeach ?>
 
  <!--[if lte IE 7]>
@@ -88,7 +91,7 @@ if (!isset($config["languages"])) {
  <![endif]-->
 
  <!--[if lte IE 8]>
- <script type="text/javascript">
+ <script>
   window.brokenIE = true;
  </script>
  <![endif]-->
@@ -98,12 +101,14 @@ if (!isset($config["languages"])) {
  <![endif]-->
 
  <!--[if IE]>
- <script type="text/javascript" src="<?php echo $MYSITE ?>js/ext/html5.js"></script>
+ <script src="<?php echo $MYSITE ?>js/ext/html5.js"></script>
  <![endif]-->
 
 <?php if (!empty($_SERVER["BASE_HREF"])): ?>
  <base href="<?php echo $_SERVER["BASE_HREF"] ?>">
 <?php endif ?>
+
+<?php if (isset($config['meta_tags'])) { echo $config['meta_tags']; } ?>
 
 </head>
 <body class="<?php print $curr; ?> <?php echo $classes; ?>">
@@ -118,6 +123,11 @@ if (!isset($config["languages"])) {
       <li class="<?php echo $curr == "docs" ? "active" : ""?>"><a href="/docs.php">Documentation</a></li>
       <li class="<?php echo $curr == "community" ? "active" : ""?>"><a href="/get-involved" >Get Involved</a></li>
       <li class="<?php echo $curr == "help" ? "active" : ""?>"><a href="/support">Help</a></li>
+      <li class="<?php echo $curr === "php8" ? "active" : "" ?>">
+        <a href="/releases/8.1/index.php">
+          <img src="/images/php8/logo_php8_1.svg" alt="php8.1" height="22" width="60">
+        </a>
+      </li>
     </ul>
     <form class="navbar-search" id="topsearch" action="/search.php">
       <input type="hidden" name="show" value="quickref">

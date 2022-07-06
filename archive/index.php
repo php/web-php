@@ -1,6 +1,5 @@
 <?php
-// $Id$
-include_once $_SERVER['DOCUMENT_ROOT'] . '/include/prepend.inc';
+include_once __DIR__ . '/../include/prepend.inc';
 $i = 0;
 do {
 	$y = date("Y")-$i;
@@ -10,6 +9,5 @@ do {
 	}
 } while(++$i<3);
 
-include_once $_SERVER['DOCUMENT_ROOT'] . '/include/errors.inc';
+include_once __DIR__ . '/../include/errors.inc';
 error_noservice();
-

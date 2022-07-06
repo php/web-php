@@ -10,8 +10,8 @@
   <content type="xhtml">
     <div xmlns="http://www.w3.org/1999/xhtml">
      <p>
-      The PHP team is glad to announce the release of the third PHP 7.3.0 version, PHP 7.3.0 Alpha 3. 
-      The rough outline of the PHP 7.3 release cycle is specified in the 
+      The PHP team is glad to announce the release of the third PHP 7.3.0 version, PHP 7.3.0 Alpha 3.
+      The rough outline of the PHP 7.3 release cycle is specified in the
       <a href="https://wiki.php.net/todo/php73">PHP Wiki</a>.
      </p>
 

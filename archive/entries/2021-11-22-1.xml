@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+  <title>PHP Foundation Announced</title>
+  <id>https://www.php.net/archive/2021.php#2021-11-22-1</id>
+  <published>2021-11-22T22:13:41+00:00</published>
+  <updated>2021-11-22T22:13:41+00:00</updated>
+  <link href="https://www.php.net/index.php#id2021-11-22-1" rel="alternate" type="text/html"/>
+  <link href="https://www.php.net/archive/2021.php#2021-11-22-1" rel="via" type="text/html"/>
+  <category term="frontpage" label="PHP.net frontpage news"/>
+  <content type="xhtml">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+      <p>
+        <a href="https://opencollective.com/phpfoundation">The PHP Foundation</a> has been
+        <a href="https://blog.jetbrains.com/phpstorm/2021/11/the-php-foundation/">announced</a>
+        as an entity for funding the work of developing the PHP language.
+      </p>
+      <p>
+        For more information regarding the structure and purpose of the foundation,
+        please check out the blog post at:
+        <a href="https://blog.jetbrains.com/phpstorm/2021/11/the-php-foundation/">jetbrains.com</a>.
+      </p>
+    </div>
+  </content>
+</entry>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom" xmlns:default="http://php.net/ns/news">
+  <title>PHP Russia 2020</title>
+  <id>https://www.php.net/archive/2020.php#2020-01-11-1</id>
+  <published>2020-01-11T17:37:37+00:00</published>
+  <updated>2020-01-11T17:37:37+00:00</updated>
+  <link href="https://www.php.net/conferences/index.php#id2020-01-11-1" rel="alternate" type="text/html"/>
+  <link href="https://phprussia.ru/en/2020" rel="via" type="text/html"/>
+  <default:finalTeaserDate xmlns="http://php.net/ns/news">2020-05-13</default:finalTeaserDate>
+  <category term="conferences" label="Conference announcement"/>
+  <default:newsImage xmlns="http://php.net/ns/news" link="https://phprussia.ru/en/2020" title="PHP Russia 2020">php_russia_2020.png</default:newsImage>
+  <content type="xhtml">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+     
+     <p>PHP Russia is the only Russian confenrence focused on PHP. It will be held in Moscow 13th May 2020. Main topics are PHP ecosytem (PHP itself, standards, frameworks, libraries and OpenSource) and major players experience in building complex projects using best practices and modern approaches.</p>
+
+      <p>We expect 600+ attendees and 20+ speakers!</p>
+
+      <p>Our audience consists of applications developers, API developers, CTO’s, CEO’s, fullstack developers, etc.</p>
+
+      <p>The program is designed by the developer community, representatives of large companies from Runet and around the world, and by tech developers and community activists. The selection of talks is multi-layered and complex — the Program Committee selects the best talks from the received applications unanimously according to several criteria.</p>
+    </div>
+  </content>
+</entry>

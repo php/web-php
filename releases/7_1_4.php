@@ -1,12 +1,11 @@
 <?php
-// $Id$
 $_SERVER['BASE_PAGE'] = 'releases/7_1_4.php';
-include_once $_SERVER['DOCUMENT_ROOT'] . '/include/prepend.inc';
+include_once __DIR__ . '/../include/prepend.inc';
 site_header("PHP 7.1.4 Release Announcement");
 ?>
 
     <h1>PHP 7.1.4 Release Announcement</h1>
-     
+
     <p>The PHP development team announces the immediate availability of PHP
 	7.1.4. Several bugs have been fixed.
 

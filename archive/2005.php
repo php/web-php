@@ -1,7 +1,6 @@
 <?php
-// $Id$
 $_SERVER['BASE_PAGE'] = 'archive/2005.php';
-include_once $_SERVER['DOCUMENT_ROOT'] . '/include/prepend.inc';
+include_once __DIR__ . '/../include/prepend.inc';
 news_archive_sidebar();
 site_header("News Archive - 2005", array("cache" => true));
 ?>
@@ -18,7 +17,7 @@ site_header("News Archive - 2005", array("cache" => true));
 <p>
  <span class="newsdate">[28-Nov-2005]</span>
  The PHP Development Team would like to announce the immediate release of <a href="/downloads.php">PHP 5.1.1</a>.<br>
- This is a regression correction release aimed at addressing several issues introduced by PHP 5.1.0, the core changes as follows: 
+ This is a regression correction release aimed at addressing several issues introduced by PHP 5.1.0, the core changes as follows:
 <ul>
 <li>Native date class is withdrawn to prevent namespace conflict with PEAR's date package.</li>
 <li>Fixed fatal parse error when the last line of the script is a PHP comment.</li>
@@ -95,7 +94,7 @@ The complete details about all of the changes can be found in the
 <p>
  <span class="newsdate">[20-Sep-2005]</span>
  The final program for the Zend / PHP Conference (October 18-21, 2005 in
- San Francisco) 
+ San Francisco)
  <a href="http://zend.kbconferences.com/speakerschedule.php">is now available</a>.
  The conference theme is "Power Your
  Business With PHP" and features keynote addresses from Marc Andreessen,
@@ -198,8 +197,8 @@ The complete details about all of the changes can be found in the
 <h1>PHP 4.4.0 Released</h1>
 <p>
  <span class="newsdate">[11-Jul-2005]</span>
- The PHP Development Team would like to announce the immediate release of 
- <a href="/downloads.php#v4">PHP 4.4.0</a>. 
+ The PHP Development Team would like to announce the immediate release of
+ <a href="/downloads.php#v4">PHP 4.4.0</a>.
  This is a maintenance release that addresses a serious memory corruption
  problem within PHP concerning references. If references were used in a wrong
  way, PHP could create memory corruptions which would not always surface or
@@ -265,7 +264,7 @@ For changes in PHP 4.4.0 since PHP 4.3.11, please consult the
 <?php news_image("http://www.php.net", "php10thbd.jpg", "PHP 10th anniversary cake"); ?>
 <h1>10 years since PHP 1.0 was released!</h1>
 <p>
- <span class="newsdate">[08-Jun-2005]</span> 
+ <span class="newsdate">[08-Jun-2005]</span>
  <a href="http://groups.google.ch/groups?selm=3r7pgp%24aa1%40ionews.io.org&amp;oe=UTF-8&amp;output=gplain">It
  has been 10 years since Rasmus released the first version of PHP</a>.
  To everyone that has helped to shape PHP into what it is today; from the
@@ -293,7 +292,7 @@ For changes in PHP 4.4.0 since PHP 4.3.11, please consult the
 
 <hr>
 
-<?php news_image("http://www.phpwest.com/", "phpwest.gif", "PHP West Conferences"); ?> 
+<?php news_image("http://www.phpwest.com/", "phpwest.gif", "PHP West Conferences"); ?>
 
 <h1>PHP West Security Conference in Vancouver, BC</h1>
 <p>
@@ -314,7 +313,7 @@ For changes in PHP 4.4.0 since PHP 4.3.11, please consult the
 
 <hr>
 
-<?php news_image("http://conf.phpquebec.org/en/cdrom2005/", "cdrom_phpquebec_2005.gif", "PHP Québec CD ROM 2005"); ?> 
+<?php news_image("http://conf.phpquebec.org/en/cdrom2005/", "cdrom_phpquebec_2005.gif", "PHP Québec CD ROM 2005"); ?>
 
 <h1>PHP Applications gathering</h1>
 <p>
@@ -337,10 +336,10 @@ For changes in PHP 4.4.0 since PHP 4.3.11, please consult the
 <h1>PHP 5.0.4 and 4.3.11 Released</h1>
 <p>
  <span class="newsdate">[31-Mar-2005]</span>
- The PHP Development Team would like to announce the immediate release of 
- <a href="/downloads.php#v5">PHP 5.0.4</a> and <a href="/downloads.php#v4">4.3.11</a>. 
- These are maintenance releases that in addition to non-critical bug fixes 
- address several security issues. All Users of PHP are strongly 
+ The PHP Development Team would like to announce the immediate release of
+ <a href="/downloads.php#v5">PHP 5.0.4</a> and <a href="/downloads.php#v4">4.3.11</a>.
+ These are maintenance releases that in addition to non-critical bug fixes
+ address several security issues. All Users of PHP are strongly
  encouraged to upgrade to one of these releases as soon as possible.
 </p>
 <p>
@@ -375,14 +374,14 @@ For changes in PHP 4.4.0 since PHP 4.3.11, please consult the
  PHP Québec is proud to present an extended conference in Montréal, Québec,
  covering the latest innovations in PHP, MySQL and Apache. From March 30th
  until April 1st, major AMP contributors will talk about Security, Web Services,
- PHP 5 and great achievements with PHP in North America. The 4 tracks 
+ PHP 5 and great achievements with PHP in North America. The 4 tracks
  are available at <a
  href="http://conf.phpquebec.com/en/conf2005/horaire">the PHP Québec site</a>.
 </p>
 <p>
  PHP Certification exams by Zend are included with every admission ticket to
- the conference. The certification center will also provide MySQL and Linux 
- certification from MySQL AB, LPI and Savoir Faire Linux. The 
+ the conference. The certification center will also provide MySQL and Linux
+ certification from MySQL AB, LPI and Savoir Faire Linux. The
  <a href="http://conf.phpquebec.com/en/conf2005/certifications">examination center</a>
  is open to everyone.
 </p>
@@ -464,7 +463,7 @@ For changes in PHP 4.4.0 since PHP 4.3.11, please consult the
 
 <p>
  <span class="newsdate">[27-Jan-2005]</span>
- Circle August 1-5 on your calendar and join in at the 
+ Circle August 1-5 on your calendar and join in at the
  <a href="http://conferences.oreillynet.com/os2005/">O'Reilly
  Open Source Convention</a> in beautiful Portland, Oregon. OSCON 2005
  will be at the Oregon Convention Center, where there will be

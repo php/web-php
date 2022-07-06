@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+  <title>PHP releases on hold</title>
+  <id>https://www.php.net/archive/2021.php#2021-03-30-1</id>
+  <published>2021-03-30T19:14:46+00:00</published>
+  <updated>2021-03-30T19:14:46+00:00</updated>
+  <link href="https://www.php.net/index.php#id2021-03-30-1" rel="alternate" type="text/html"/>
+  <link href="https://www.php.net/archive/2021.php#2021-03-30-1" rel="via" type="text/html"/>
+  <category term="frontpage" label="PHP.net frontpage news"/>
+  <category term="releases" label="New PHP release"/>
+  <content type="xhtml">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+     <p>
+     As <a href="https://news-web.php.net/php.internals/113838">announced</a>
+     on the php.internals mailing list, a pair of
+     <a href="https://github.com/php/php-src/commit/c730aa26bd52829a49f2ad284b181b7e82a68d7d">malicious</a>
+     <a href="https://github.com/php/php-src/commit/2b0f239b211c7544ebc7a4cd2c977a5b7a11ed8a">commits</a>
+     were made in the PHP source code repository over the weekend.
+     <i>These commits were immediately noticed and reverted,
+     and thus <b>never reached end users</b>.</i>
+     The investigation into the root cause and exact scope of the
+     compromise is still ongoing, therefore releases will be put
+     on hold for two weeks assuming no further issues are discovered.
+     </p>
+     
+     <p>
+     Thank you for bearing with us while we endeavor to ensure that
+     PHP is a stable and reliable platform for web development.
+     </p>
+    </div>
+  </content>
+</entry>

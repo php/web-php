@@ -1,7 +1,5 @@
 <?php
 
-// $Id$
-
 // Try to remove anti-SPAM bits
 function clean_AntiSPAM($email)
 {
@@ -20,7 +18,7 @@ function is_emailable_address($email)
 
     $host = substr($email, strrpos($email, '@') + 1);
     // addresses from our mailing-list servers
-    $host_regex = "!(lists\.php\.net|chek[^\.*]\.com)!i";
+    $host_regex = "!(lists\.php\.net|chek[^.*]\.com)!i";
     if (preg_match($host_regex, $host)) {
         return false;
     }

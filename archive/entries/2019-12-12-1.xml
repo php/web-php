@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom" xmlns:default="http://php.net/ns/news">
+  <title>PHPWales 2020 - June 3rd to June 4th</title>
+  <id>https://www.php.net/archive/2019.php#2019-12-12-1</id>
+  <published>2019-12-12T09:04:51+01:00</published>
+  <updated>2019-12-12T09:04:51+01:00</updated>
+  <link href="https://www.php.net/conferences/index.php#id2019-12-12-1" rel="alternate" type="text/html"/>
+  <link href="https://www.phpwales.co.uk" rel="via" type="text/html"/>
+  <default:finalTeaserDate xmlns="http://php.net/ns/news">2020-06-03</default:finalTeaserDate>
+  <category term="conferences" label="Conference announcement"/>
+  <default:newsImage xmlns="http://php.net/ns/news" link="https://www.phpwales.co.uk" title="PHP Wales 2020">php-wales-2020.png</default:newsImage>
+  <content type="xhtml">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+      <p>
+        Held in the picturesque setting of <b>Central Cardiff</b>, accessible
+        from local airports and train stations - <b>PHP Wales</b> will be
+        bringing together around <b>400 PHP developers</b> from around the
+        world.
+      </p>
+      <p>
+        With your help we can put on our inaugural conference at PHPWales, bringing together 400
+        developers from around the world. Spread over 2 days in the capital city of Wales (Cardiff).
+        Hosted in the Cardiff City Hall be sure to come along for the chance to learn from some of
+        the best in the industry.
+        With this being our first run, we wanted to set the theme to ensure the message was clear.
+        Our theme is community, inclusion, and the importance of these. We have all seen when a
+        community goes bad, or individuals are excluded from a community for one reason or
+        another. We want to remind people that we are all one community of developers - but for
+        these 2 days we are uniting under the banner of PHP.  
+      </p>
+    </div>
+  </content>
+</entry>

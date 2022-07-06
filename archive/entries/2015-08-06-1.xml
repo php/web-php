@@ -12,7 +12,7 @@
     <div xmlns="http://www.w3.org/1999/xhtml">
       <p>
         The PHP development team announces the immediate availability of
-        PHP 7.0.0 Beta 3. This is the fifth pre-release of the new PHP 7 
+        PHP 7.0.0 Beta 3. This is the fifth pre-release of the new PHP 7
         major series. All users of PHP are encouraged to test this version carefully,
         and report any bugs and incompatibilities in <a href="https://bugs.php.net">the bug tracking system</a>.
      </p>
@@ -39,7 +39,7 @@
      </ul>
 
      <p>
-      For more information on the new features and other changes, you can read the 
+      For more information on the new features and other changes, you can read the
       <a href="https://github.com/php/php-src/blob/php-7.0.0beta3/NEWS">NEWS file</a>, or the
       <a href="https://github.com/php/php-src/blob/php-7.0.0beta3/UPGRADING">UPGRADING file</a>
       for a complete list of upgrading notes. These files can also be found in the release archive.
@@ -52,7 +52,7 @@
      </p>
 
      <p>
-      The next release will be RC 1, which is to be released on the 20th of August. You can also 
+      The next release will be RC 1, which is to be released on the 20th of August. You can also
       read the full list of planned releases on our <a href="https://wiki.php.net/todo/php70#timetable">wiki</a>.
      </p>
 

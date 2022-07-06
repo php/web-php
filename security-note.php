@@ -1,7 +1,6 @@
 <?php
-// $Id$
 $_SERVER['BASE_PAGE'] = 'security-note.php';
-include_once $_SERVER['DOCUMENT_ROOT'] . '/include/prepend.inc';
+include_once __DIR__ . '/include/prepend.inc';
 site_header("A Note on Security in PHP", array("current" => "docs"));
 ?>
 
@@ -15,7 +14,7 @@ site_header("A Note on Security in PHP", array("current" => "docs"));
  not be safe to pass to another.
 </p>
 <p>
- A recent Web Worm known as NeverEverSanity exposed a mistake in the input
+ Long ago, a Web Worm known as NeverEverSanity exposed a mistake in the input
  validation in the popular phpBB message board application.  Their
  highlighting code didn't account for double-urlencoded input correctly.
  Without proper input validation of untrusted user data combined with any
@@ -38,20 +37,20 @@ site_header("A Note on Security in PHP", array("current" => "docs"));
  some javascript that the next user then views.
 </p>
 <p>
- For Local exploits we mostly hear about open_basedir or safemode problems
- on shared virtual hosts.  These two features are there as a convenience to
+ For Local exploits we mostly hear about open_basedir problems
+ on shared virtual hosts.  This feature is there as a convenience to
  system administrators and should in no way be thought of as a complete
  security framework.  With all the 3rd-party libraries you can hook into
  PHP and all the creative ways you can trick these libraries into accessing
- files, it is impossible to guarantee security with these directives.  The
+ files, it is impossible to guarantee security with this directive.  The
  Oracle and Curl extensions both have ways to go through the library and
  read a local file, for example.  Short of modifying these 3rd-party
  libraries, which would be difficult for the closed-source Oracle library,
  there really isn't much PHP can do about this.
 </p>
 <p>
- When you have PHP by itself with only a small set of extensions safemode
- and open_basedir are generally enough to frustrate the average bad guy,
+ When you have PHP by itself with only a small set of extensions
+ open_basedir is generally enough to frustrate the average bad guy,
  but for critical security situations you should be using OS-level security
  by running multiple web servers each as their own user id and ideally in
  separate jailed/chroot'ed filesystems.  Better yet, use completely

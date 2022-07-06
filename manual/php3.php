@@ -1,7 +1,6 @@
 <?php
-// $Id$
 $_SERVER['BASE_PAGE'] = 'manual/php3.php';
-include_once $_SERVER['DOCUMENT_ROOT'] . '/include/prepend.inc';
+include_once __DIR__ . '/../include/prepend.inc';
 site_header('PHP Version 3 Documentation');
 ?>
 
@@ -75,13 +74,13 @@ site_header('PHP Version 3 Documentation');
  </dd>
  <dd>
   <p>
-   <em>--with-mck[=DIR]</em> includes Cybercash MCK support. DIR is the cybercash mck build directory, 
+   <em>--with-mck[=DIR]</em> includes Cybercash MCK support. DIR is the cybercash mck build directory,
    defaults to /usr/src/mck-3.2.0.3-linux
   </p>
  </dd>
  <dd>
   <p>
-   <em>--with-mod-dav=DIR</em> includes DAV support through Apache's mod_dav, DIR is mod_dav's 
+   <em>--with-mod-dav=DIR</em> includes DAV support through Apache's mod_dav, DIR is mod_dav's
    installation directory (Apache module version only).
   </p>
  </dd>
@@ -105,8 +104,8 @@ site_header('PHP Version 3 Documentation');
  </dd>
  <dd>
   <p>
-   Multiple calls to setcookie() in the same script will be performed 
-   in reverse order. And put the insert before the delete when trying 
+   Multiple calls to setcookie() in the same script will be performed
+   in reverse order. And put the insert before the delete when trying
    to delete one cookie before inserting another.
   </p>
  </dd>
@@ -222,7 +221,7 @@ site_header('PHP Version 3 Documentation');
  <dd>
   <p>
    The HTTP PUT method is allowed for saving files, which are handled similarly to POST method
-   file saves. <em>$PHP_PUT_FILENAME</em> holds the location of the temporary file created, which 
+   file saves. <em>$PHP_PUT_FILENAME</em> holds the location of the temporary file created, which
    must be moved during the request else it will be deleted.
   </p>
  </dd>

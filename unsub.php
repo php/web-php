@@ -1,7 +1,6 @@
 <?php
-// $Id$
 $_SERVER['BASE_PAGE'] = 'unsub.php';
-include_once $_SERVER['DOCUMENT_ROOT'] . '/include/prepend.inc';
+include_once __DIR__ . '/include/prepend.inc';
 $SIDEBAR_DATA = '
 <h3>Other PHP related mailing lists</h3>
 
@@ -150,17 +149,17 @@ site_header("Unsubscribing", array("current" => "community"));
 
  <dt><a href="http://www.washington.edu/pine/">Pine</a></dt>
  <dd>
-  From the main Pine menu, type 'S' for 'Setup', then 'C' for 'Config'. 
+  From the main Pine menu, type 'S' for 'Setup', then 'C' for 'Config'.
   Use the space bar and down arrow to scroll until you reach the
   <code>[ ] enable-full-header-cmd</code> option. Type 'X' in the box
   to toggle the option on. Type 'E' to exit 'Config', and 'Y' to save
   changes. The next time you read a message, type 'H' and the full
   headers will be displayed at the top of the message. Type 'H' again
-  to hide the headers. 
+  to hide the headers.
  </dd>
 </dl>
 
-<a name="unsubdiff"></a>
+<a id="unsubdiff"></a>
 <h2>Unsubscribe with a different email address</h2>
 
 <p>

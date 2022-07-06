@@ -1,7 +1,6 @@
 <?php
-// $Id$
 $_SERVER['BASE_PAGE'] = 'releases/5_2_7.php';
-include_once $_SERVER['DOCUMENT_ROOT'] . '/include/prepend.inc';
+include_once __DIR__ . '/../include/prepend.inc';
 site_header("PHP 5.2.7 Release Announcement");
 ?>
 
@@ -9,7 +8,7 @@ site_header("PHP 5.2.7 Release Announcement");
 <p>
 The PHP development team would like to announce the immediate
 availability of PHP 5.2.7. This release focuses on improving the stability of
-the PHP 5.2.x branch with over 120 bug fixes, several of which are security related. 
+the PHP 5.2.x branch with over 120 bug fixes, several of which are security related.
 All users of PHP are encouraged to upgrade to this release.
 </p>
 
@@ -18,7 +17,7 @@ All users of PHP are encouraged to upgrade to this release.
 </p>
 <ul>
 	<li>Upgraded PCRE to version 7.8 (Fixes CVE-2008-2371)</li>
-	<li>Fixed missing initialization of BG(page_uid) and BG(page_gid), reported by Maksymilian Arciemowicz.</li>		
+	<li>Fixed missing initialization of BG(page_uid) and BG(page_gid), reported by Maksymilian Arciemowicz.</li>
 	<li>Fixed incorrect php_value order for Apache configuration, reported by Maksymilian Arciemowicz.</li>
 	<li>Fixed a crash inside gd with invalid fonts (Fixes CVE-2008-3658).</li>
 	<li>Fixed a possible overflow inside memnstr (Fixes CVE-2008-3659).</li>
@@ -42,7 +41,7 @@ All users of PHP are encouraged to upgrade to this release.
 </ul>
 
 <p>
-For users upgrading from PHP 5.0 and PHP 5.1, an upgrade guide is available 
+For users upgrading from PHP 5.0 and PHP 5.1, an upgrade guide is available
 <a href="/UPDATE_5_2.txt">here</a>, detailing the changes between those releases
 and PHP 5.2.7.
 </p>

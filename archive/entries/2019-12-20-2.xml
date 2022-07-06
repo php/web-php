@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom" xmlns:default="http://php.net/ns/news">
+  <title>Dutch PHP Conference 2020 </title>
+  <id>https://www.php.net/archive/2019.php#2019-12-20-2</id>
+  <published>2019-12-20T14:48:33+00:00</published>
+  <updated>2019-12-20T14:48:33+00:00</updated>
+  <link href="https://www.php.net/conferences/index.php#id2019-12-20-2" rel="alternate" type="text/html"/>
+  <link href="https://www.phpconference.nl/" rel="via" type="text/html"/>
+  <default:finalTeaserDate xmlns="http://php.net/ns/news">2020-01-28</default:finalTeaserDate>
+  <category term="cfp" label="Call for Papers"/>
+  <default:newsImage xmlns="http://php.net/ns/news" link="https://www.phpconference.nl/" title="DPC logo">dpc_2020.png</default:newsImage>
+  <content type="xhtml">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+     <p>Submit your talks no later than January 28th, 2020
+         We are looking for high-quality, technical sessions from speakers who can cover advanced topics and keep our demanding audience inspired. Submissions are accepted up to and including January 28th, 2020. This is your chance to share. Submit your talks now!</p>
+     
+      <p><a href="https://cfp.phpconference.nl">https://www.phpconference.nl</a></p>
+    </div>
+  </content>
+</entry>

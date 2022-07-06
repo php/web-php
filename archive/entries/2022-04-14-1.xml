@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+  <title>PHP 7.4.29 Released!</title>
+  <id>https://www.php.net/archive/2022.php#2022-04-14-1</id>
+  <published>2022-04-14T08:22:12+00:00</published>
+  <updated>2022-04-14T08:22:12+00:00</updated>
+  <link href="https://www.php.net/index.php#id2022-04-14-1" rel="alternate" type="text/html"/>
+  <link href="https://www.php.net/archive/2022.php#2022-04-14-1" rel="via" type="text/html"/>
+  <category term="releases" label="New PHP release"/>
+  <category term="frontpage" label="PHP.net frontpage news"/>
+  <content type="xhtml">
+    <div xmlns="http://www.w3.org/1999/xhtml"><p>The PHP development team announces the immediate availability of PHP 7.4.29. This is a security release for Windows users.</p>
+
+<p>This is primarily a release for Windows users due to necessarily
+upgrades to the OpenSSL and zlib dependencies in which security issues
+have been found. All PHP 7.4 on Windows users are encouraged to upgrade
+to this version.</p>
+
+<p>For source downloads of PHP 7.4.29 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
+Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
+The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-7.php#7.4.29">ChangeLog</a>.
+</p>    </div>
+  </content>
+</entry>

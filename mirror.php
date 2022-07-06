@@ -1,7 +1,6 @@
 <?php
-// $Id$
 $_SERVER['BASE_PAGE'] = 'mirror.php';
-include_once $_SERVER['DOCUMENT_ROOT'] . '/include/prepend.inc';
+include_once __DIR__ . '/include/prepend.inc';
 $SIDEBAR_DATA = '
 <h3>More mirror sites</h3>
 <p>
@@ -24,8 +23,7 @@ if (is_official_mirror()) {
 
     // Iterate through possible mirror provider logo types in priority order
     $types = array("gif", "jpg", "png");
-    while (list(,$ext) = each($types)) {
-
+    foreach ($types as $ext) {
         // Check if file exists for this type
         if (file_exists("backend/mirror." . $ext)) {
 
@@ -35,12 +33,11 @@ if (is_official_mirror()) {
                 htmlspecialchars(mirror_provider()),
                 FALSE,
                 FALSE,
-                'backend',
-                0
+                'backend'
             );
 
             // Add size information depending on mirror type
-            if (is_primary_site() || is_backup_primary()) {
+            if (is_primary_site()) {
                 $MIRROR_IMAGE = resize_image($MIRROR_IMAGE, 125, 125);
             } else {
                 $MIRROR_IMAGE = resize_image($MIRROR_IMAGE, 120, 60);
@@ -88,13 +85,12 @@ site_header("Information About This PHP Mirror Site", array("current" => "commun
 
 <ul>
  <li>Default language is <?php echo $LANGUAGES[default_language()]; ?></li>
- <li>Local visitor statistics are <?php echo have_stats() ? "available" : "not available"; ?></li>
 </ul>
 
 <h2>Mirror Status</h2>
 
 <ul>
- <li>The site was last updated at <?php echo strftime("%c %Z", $LAST_UPDATED); ?></li>
+ <li>The site was last updated at <?php echo date('r', $LAST_UPDATED); ?></li>
 </ul>
 
 <?php site_footer(); ?>

@@ -1,19 +1,69 @@
 <?php
-// $Id$
 $_SERVER['BASE_PAGE'] = 'ChangeLog-5.php';
-include_once $_SERVER['DOCUMENT_ROOT'] . '/include/prepend.inc';
-include_once $_SERVER['DOCUMENT_ROOT'] . '/include/changelogs.inc';
-site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("changelog.css"), "layout_span" => 12));
-?>
+include_once __DIR__ . '/include/prepend.inc';
+include_once __DIR__ . '/include/changelogs.inc';
 
-<h1>PHP 5 ChangeLog</h1>
+$MINOR_VERSIONS = ['5.6', '5.5', '5.4', '5.3', '5.2', '5.1', '5.0'];
+changelog_header(5, $MINOR_VERSIONS);
+?>
+<a id="PHP_5_6"></a>
+<section class="version" id="5.6.40"><!-- {{{ 5.6.40 -->
+<h3>Version 5.6.40</h3>
+<b><?php release_date('10-Jan-2019'); ?></b>
+<ul><li>GD:
+<ul>
+  <li><?php bugfix(77269); ?> (efree() on uninitialized Heap data in imagescale leads to 
+use-after-free). (CVE-2016-10166)</li>
+  <li><?php bugfix(77270); ?> (imagecolormatch Out Of Bounds Write on Heap). (CVE-2019-6977)</li>
+</ul></li>
+<li>Mbstring:
+<ul>
+  <li><?php bugfix(77370); ?> (Buffer overflow on mb regex functions - fetch_token). (CVE-2019-9023)</li>
+  <li><?php bugfix(77371); ?> (heap buffer overflow in mb regex functions - compile_string_node). (CVE-2019-9023)</li>
+  <li><?php bugfix(77381); ?> (heap buffer overflow in multibyte match_at). (CVE-2019-9023)</li>
+  <li><?php bugfix(77382); ?> (heap buffer overflow due to incorrect length in expand_case_fold_string). (CVE-2019-9023)</li>
+  <li><?php bugfix(77385); ?> (buffer overflow in fetch_token). (CVE-2019-9023)</li>
+  <li><?php bugfix(77394); ?> (Buffer overflow in multibyte case folding - unicode). (CVE-2019-9023)</li>
+  <li><?php bugfix(77418); ?> (Heap overflow in utf32be_mbc_to_code). (CVE-2019-9023)</li>
+</ul></li>
+<li>Phar:
+<ul>
+  <li><?php bugfix(77247); ?> (heap buffer overflow in phar_detect_phar_fname_ext). (CVE-2019-9021)</li>
+</ul></li>
+<li>Xmlrpc:
+<ul>
+  <li><?php bugfix(77242); ?> (heap out of bounds read in xmlrpc_decode()). (CVE-2019-9020)</li>
+  <li><?php bugfix(77380); ?> (Global out of bounds read in xmlrpc base64 code). (CVE-2019-9024)</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
+<section class="version" id="5.6.39"><!-- {{{ 5.6.39 -->
+<h3>Version 5.6.39</h3>
+<b><?php release_date('06-Dec-2018'); ?></b>
+<ul><li>Core:
+<ul>
+  <li><?php bugfix(77231); ?> (Segfault when using convert.quoted-printable-encode filter).</li>
+</ul></li>
+<li>IMAP:
+<ul>
+  <li><?php bugfix(77020); ?> (null pointer dereference in imap_mail).</li>
+  <li><?php bugfix(77153); ?> (imap_open allows to run arbitrary shell commands via mailbox parameter). (CVE-2018-19518)</li>
+</ul></li>
+<li>Phar:
+<ul>
+  <li><?php bugfix(77022); ?> (PharData always creates new files with mode 0666).</li>
+  <li><?php bugfix(77143); ?> (Heap Buffer Overflow (READ: 4) in phar_parse_pharfile). (CVE-2018-20783)</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
 
 <section class="version" id="5.6.38"><!-- {{{ 5.6.38 -->
 <h3>Version 5.6.38</h3>
 <b><?php release_date('13-Sep-2018'); ?></b>
 <ul><li>Apache2:
 <ul>
-  <li><?php bugfix(76582); ?> (XSS due to the header Transfer-Encoding: chunked).</li>
+  <li><?php bugfix(76582); ?> (XSS due to the header Transfer-Encoding: chunked). (CVE-2018-17082)</li>
 </ul></li>
 </ul>
 <!-- }}} --></section>
@@ -197,7 +247,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 </ul></li>
 <li>SOAP:
 <ul>
-  <li><?php bugfix(73452); ?> (Segfault (Regression for #69152)).</li>
+  <li><?php bugfix(73452); ?> (Segfault (Regression for <?php bugl(69152); ?>)).</li>
 </ul></li>
 <li>SQLite3:
 <ul>
@@ -270,7 +320,7 @@ site_header("PHP 5 ChangeLog", array("current" => "docs", "css" => array("change
 <ul>
   <li><?php bugfix(73025); ?> (Heap Buffer Overflow in virtual_popen of zend_virtual_cwd.c).</li>
   <li><?php bugfix(73058); ?> (crypt broken when salt is 'too' long).</li>
-  <li><?php bugfix(72703); ?> (Out of bounds global memory read in BF_crypt triggered by 
+  <li><?php bugfix(72703); ?> (Out of bounds global memory read in BF_crypt triggered by
 password_verify).</li>
   <li><?php bugfix(73189); ?> (Memcpy negative size parameter php_resolve_path).</li>
   <li><?php bugfix(73147); ?> (Use After Free in unserialize()).</li>
@@ -289,7 +339,7 @@ password_verify).</li>
 </ul></li>
 <li>Filter:
 <ul>
-  <li><?php bugfix(72972); ?> (Bad filter for the flags FILTER_FLAG_NO_RES_RANGE and 
+  <li><?php bugfix(72972); ?> (Bad filter for the flags FILTER_FLAG_NO_RES_RANGE and
 FILTER_FLAG_NO_PRIV_RANGE).</li>
   <li><?php bugfix(67167); ?> (Wrong return value from FILTER_VALIDATE_BOOLEAN, FILTER_NULL_ON_FAILURE).</li>
   <li><?php bugfix(73054); ?> (default option ignored when object passed to int filter).</li>
@@ -659,54 +709,6 @@ FILTER_FLAG_NO_PRIV_RANGE).</li>
 </ul>
 <!-- }}} --></section>
 
-<section class="version" id="5.5.38"><!-- {{{ 5.5.38 -->
-<h3>Version 5.5.38</h3>
-<?php release_date('21-Jul-2016'); ?>
-<ul><li>Core:
-<ul>
-  <li><?php bugfix(70480); ?> (php_url_parse_ex() buffer overflow read). (CVE-2016-6288)</li>
-  <li><?php bugfix(72513); ?> (Stack-based buffer overflow vulnerability in virtual_file_ex). (CVE-2016-6289)</li>
-  <li><?php bugfix(72562); ?> (Use After Free in unserialize() with Unexpected Session Deserialization). (CVE-2016-6290)</li>
-  <li><?php bugfix(72573); ?> (HTTP_PROXY is improperly trusted by some PHP libraries and applications). (CVE-2016-5385)</li>
-</ul></li>
-<li>BZip2:
-<ul>
-  <li><?php bugfix(72613); ?> (Inadequate error handling in bzread()). (CVE-2016-5399)</li>
-</ul></li>
-<li>EXIF:
-<ul>
-  <li><?php bugfix(72603); ?> (Out of bound read in exif_process_IFD_in_MAKERNOTE). (CVE-2016-6291)</li>
-  <li><?php bugfix(72618); ?> (NULL Pointer Dereference in exif_process_user_comment). (CVE-2016-6292)</li>
-</ul></li>
-<li>GD:
-<ul>
-  <li><?php bugfix(72512); ?> (gdImageTrueColorToPaletteBody allows arbitrary write/read access).</li>
-  <li><?php bugfix(72519); ?> (imagegif/output out-of-bounds access).</li>
-  <li><?php bugfix(72558); ?> (Integer overflow error within _gdContributionsAlloc()). (CVE-2016-6207)</li>
-</ul></li>
-<li>Intl:
-<ul>
-  <li><?php bugfix(72533); ?> (locale_accept_from_http out-of-bounds access). (CVE-2016-6294)</li>
-</ul></li>
-<li>ODBC:
-<ul>
-  <li><?php bugfix(69975); ?> (PHP segfaults when accessing nvarchar(max) defined columns). (CVE-2015-8879)</li>
-</ul></li>
-<li>SNMP:
-<ul>
-  <li><?php bugfix(72479); ?> (Use After Free Vulnerability in SNMP with GC and unserialize()). (CVE-2016-6295)</li>
-</ul></li>
-<li>Xmlrpc:
-<ul>
-  <li><?php bugfix(72606); ?> (heap-buffer-overflow (write) simplestring_addn simplestring.c). (CVE-2016-6296)</li>
-</ul></li>
-<li>Zip:
-<ul>
-  <li><?php bugfix(72520); ?> (Stack-based buffer overflow vulnerability in php_stream_zip_opener). (CVE-2016-6297)</li>
-</ul></li>
-</ul>
-<!-- }}} --></section>
-
 <section class="version" id="5.6.23"><!-- {{{ 5.6.23 -->
 <h3>Version 5.6.23</h3>
 <?php release_date('23-Jun-2016'); ?>
@@ -765,49 +767,6 @@ FILTER_FLAG_NO_PRIV_RANGE).</li>
 </ul>
 <!-- }}} --></section>
 
-<section class="version" id="5.5.37"><!-- {{{ 5.5.37 -->
-<h3>Version 5.5.37</h3>
-<?php release_date('23-Jun-2016'); ?>
-<ul><li>Core:
-<ul>
-  <li><?php bugfix(72268); ?> (Integer Overflow in nl2br()).</li>
-  <li><?php bugfix(72275); ?> (Integer Overflow in json_encode()/json_decode()/ json_utf8_to_utf16()).</li>
-  <li><?php bugfix(72400); ?> (Integer Overflow in addcslashes/addslashes).</li>
-  <li><?php bugfix(72403); ?> (Integer Overflow in Length of String-typed ZVAL).</li>
-</ul></li>
-<li>GD:
-<ul>
-  <li><?php bugfix(66387); ?> (Stack overflow with imagefilltoborder). (CVE-2015-8874)</li>
-  <li><?php bugfix(72298); ?> (pass2_no_dither out-of-bounds access).</li>
-  <li><?php bugfix(72339); ?> (Integer Overflow in _gd2GetHeader() resulting in heap overflow). (CVE-2016-5766)</li>
-  <li><?php bugfix(72407); ?> (NULL Pointer Dereference at _gdScaleVert).</li>
-  <li><?php bugfix(72446); ?> (Integer Overflow in gdImagePaletteToTrueColor() resulting in heap overflow). (CVE-2016-5767)</li>
-</ul></li>
-<li>mbstring:
-<ul>
-  <li><?php bugfix(72402); ?> (_php_mb_regex_ereg_replace_exec - double free). (CVE-2016-5768)</li>
-</ul></li>
-</ul></li>
-<li>mcrypt:
-<ul>
-  <li><?php bugfix(72455); ?> (Heap Overflow due to integer overflows). (CVE-2016-5769)</li>
-</ul></li>
-<li>SPL:
-<ul>
-  <li><?php bugfix(72262); ?> (int/size_t confusion in SplFileObject::fread). (CVE-2016-5770)</li>
-  <li><?php bugfix(72433); ?> (Use After Free Vulnerability in PHP's GC algorithm and unserialize). (CVE-2016-5771)</li>
-</ul></li>
-<li>WDDX:
-<ul>
-  <li><?php bugfix(72340); ?> (Double Free Courruption in wddx_deserialize). (CVE-2016-5772)</li>
-</ul></li>
-<li>zip:
-<ul>
-  <li><?php bugfix(72434); ?> (ZipArchive class Use After Free Vulnerability in PHP's GC algorithm and unserialize). (CVE-2016-5773)</li>
-</ul></li>
-</ul>
-<!-- }}} --></section>
-
 <section class="version" id="5.6.22"><!-- {{{ 5.6.22 -->
 <h3>Version 5.6.22</h3>
 <?php release_date('26-May-2016'); ?>
@@ -829,29 +788,6 @@ FILTER_FLAG_NO_PRIV_RANGE).</li>
 <li>Postgres:
 <ul>
 <li><?php bugfix(72151); ?> (mysqli_fetch_object changed behaviour). Patch to <?php bugl(71820) ?> is reverted.</li>
-</ul></li>
-</ul>
-<!-- }}} --></section>
-
-<section class="version" id="5.5.36"><!-- {{{ 5.5.36 -->
-<h3>Version 5.5.36</h3>
-<?php release_date('26-May-2016'); ?>
-<ul><li>Core:
-<ul>
-  <li><?php bugfix(72114); ?> (Integer underflow / arbitrary null write in fread/gzread). (CVE-2016-5096)</li>
-  <li><?php bugfix(72135); ?> (Integer Overflow in php_html_entities). (CVE-2016-5094)</li>
-</ul></li>
-<li>GD:
-<ul>
-  <li><?php bugfix(72227); ?> (imagescale out-of-bounds read). (CVE-2013-7456)</li>
-</ul></li>
-<li>Intl:
-<ul>
-  <li><?php bugfix(72241); ?> (get_icu_value_internal out-of-bounds read). (CVE-2016-5093)</li>
-</ul></li>
-<li>Phar:
-<ul>
-  <li><?php bugfix(71331); ?> (Uninitialized pointer in phar_make_dirstream()). (CVE-2016-4343)</li>
 </ul></li>
 </ul>
 <!-- }}} --></section>
@@ -926,32 +862,6 @@ FILTER_FLAG_NO_PRIV_RANGE).</li>
 </ul>
 <!-- }}} --></section>
 
-<section class="version" id="5.5.35"><!-- {{{ 5.5.35 -->
-<h3>Version 5.5.35</h3>
-<?php release_date('28-Apr-2016'); ?>
-<ul><li>BCMath:
-<ul>
-  <li><?php bugfix(72093); ?> (bcpowmod accepts negative scale and corrupts _one_ definition). (CVE-2016-4537, CVE-2016-4538)</li>
-</ul></li>
-<li>Exif:
-<ul>
-  <li><?php bugfix(72094); ?> (Out of bounds heap read access in exif header processing). (CVE-2016-4542, CVE-2016-4543, CVE-2016-4544)</li>
-</ul></li>
-<li>GD:
-<ul>
-  <li><?php bugfix(71912); ?> (libgd: signedness vulnerability). (CVE-2016-3074)</li>
-</ul></li>
-<li>Intl:
-<ul>
-  <li><?php bugfix(72061); ?> (Out-of-bounds reads in zif_grapheme_stripos with negative offset). (CVE-2016-4540, CVE-2016-4541)</li>
-</ul></li>
-<li>XML:
-<ul>
-  <li><?php bugfix(72099); ?> (xml_parse_into_struct segmentation fault). (CVE-2016-4539)</li>
-</ul></li>
-</ul>
-<!-- }}} --></section>
-
 <section class="version" id="5.6.20"><!-- {{{ 5.6.20 -->
 <h3>Version 5.6.20</h3>
 <?php release_date('31-Mar-2016'); ?>
@@ -1004,32 +914,6 @@ FILTER_FLAG_NO_PRIV_RANGE).</li>
 </ul>
 <!-- }}} --></section>
 
-<section class="version" id="5.5.34"><!-- {{{ 5.5.34 -->
-<h3>Version 5.5.34</h3>
-<?php release_date('31-Mar-2016'); ?>
-<ul><li>Fileinfo:
-<ul>
-  <li><?php bugfix(71527); ?> (Buffer over-write in finfo_open with malformed magic file). (CVE-2015-8865)</li>
-</ul></li>
-<li>Mbstring:
-<ul>
-  <li><?php bugfix(71906); ?> (AddressSanitizer: negative-size-param (-1) in mbfl_strcut). (CVE-2016-4073)</li>
-</ul></li>
-<li>ODBC:
-<ul>
-  <li><?php bugfix(71860); ?> (Invalid memory write in phar on filename with \0 in name). (CVE-2016-4072)</li>
-</ul></li>
-<li>SNMP:
-<ul>
-  <li><?php bugfix(71704); ?> (php_snmp_error() Format String Vulnerability). (CVE-2016-4071)</li>
-</ul></li>
-<li>Standard:
-<ul>
-  <li><?php bugfix(71798); ?> (Integer Overflow in php_raw_url_encode). (CVE-2016-4070)</li>
-</ul></li>
-</ul>
-<!-- }}} --></section>
-
 <section class="version" id="5.6.19"><!-- {{{ 5.6.19 -->
 <h3>Version 5.6.19</h3>
 <?php release_date('03-Mar-2016'); ?>
@@ -1060,7 +944,7 @@ FILTER_FLAG_NO_PRIV_RANGE).</li>
 </ul></li>
 <li>PDO MySQL:
 <ul>
-  <li><?php bugfix(71569); ?> (#70389 fix causes segmentation fault).</li>
+  <li><?php bugfix(71569); ?> (<?php bugl(70389); ?> fix causes segmentation fault).</li>
 </ul></li>
 <li>Phar:
 <ul>
@@ -1081,20 +965,6 @@ FILTER_FLAG_NO_PRIV_RANGE).</li>
 <li>Zip:
 <ul>
   <li><?php bugfix(71561); ?> (NULL pointer dereference in Zip::ExtractTo).</li>
-</ul></li>
-</ul>
-<!-- }}} --></section>
-
-<section class="version" id="5.5.33"><!-- {{{ 5.5.33 -->
-<h3>Version 5.5.33</h3>
-<?php release_date('03-Mar-2016'); ?>
-<ul><li>Phar:
-<ul>
-  <li><?php bugfix(71498); ?> (Out-of-Bound Read in phar_parse_zipfile()).</li>
-</ul></li>
-<li>WDDX:
-<ul>
-  <li><?php bugfix(71587); ?> (Use-After-Free / Double-Free in WDDX Deserialize).</li>
 </ul></li>
 </ul>
 <!-- }}} --></section>
@@ -1159,36 +1029,6 @@ FILTER_FLAG_NO_PRIV_RANGE).</li>
 </ul>
 <!-- }}} --></section>
 
-<section class="version" id="5.5.32"><!-- {{{ 5.5.32 -->
-<h3>Version 5.5.32</h3>
-<?php release_date('04-Feb-2016'); ?>
-<ul><li>Core:
-<ul>
-  <li><?php bugfix(71039); ?> (exec functions ignore length but look for NULL termination).</li>
-  <li><?php bugfix(71323); ?> (Output of stream_get_meta_data can be falsified by its input).</li>
-  <li><?php bugfix(71459); ?> (Integer overflow in iptcembed()).</li>
-</ul></li>
-<li>GD:
-<ul>
-  <li>Improved fix for bug <?php bugl(70976) ?>.</li>
-</ul></li>
-<li>PCRE:
-<ul>
-  <li>Upgraded bundled PCRE library to 8.38. (CVE-2015-8383, CVE-2015-8386, CVE-2015-8387, CVE-2015-8389, CVE-2015-8390, CVE-2015-8391, CVE-2015-8393, CVE-2015-8394)</li>
-</ul></li>
-<li>Phar:
-<ul>
-  <li><?php bugfix(71354); ?> (Heap corruption in tar/zip/phar parser). (CVE-2016-4342)</li>
-  <li><?php bugfix(71391); ?> (NULL Pointer Dereference in phar_tar_setupmetadata()).</li>
-  <li><?php bugfix(71488); ?> (Stack overflow when decompressing tar archives). (CVE-2016-2554)</li>
-</ul></li>
-<li>WDDX:
-<ul>
-  <li><?php bugfix(71335); ?> (Type Confusion in WDDX Packet Deserialization).</li>
-</ul></li>
-</ul>
-<!-- }}} --></section>
-
 <section class="version" id="5.6.17"><!-- {{{ 5.6.17 -->
 <h3>Version 5.6.17</h3>
 <?php release_date('07-Jan-2016'); ?>
@@ -1223,29 +1063,6 @@ FILTER_FLAG_NO_PRIV_RANGE).</li>
 <li>PDO_Firebird:
 <ul>
   <li><?php bugfix(60052); ?> (Integer returned as a 64bit integer on X64_86).</li>
-</ul></li>
-<li>WDDX:
-<ul>
-  <li><?php bugfix(70661); ?> (Use After Free Vulnerability in WDDX Packet Deserialization).</li>
-  <li><?php bugfix(70741); ?> (Session WDDX Packet Deserialization Type Confusion Vulnerability).</li>
-</ul></li>
-<li>XMLRPC:
-<ul>
-  <li><?php bugfix(70728); ?> (Type Confusion Vulnerability in PHP_to_XMLRPC_worker()).</li>
-</ul></li>
-</ul>
-<!-- }}} --></section>
-
-<section class="version" id="5.5.31"><!-- {{{ 5.5.31 -->
-<h3>Version 5.5.31</h3>
-<?php release_date('07-Jan-2016'); ?>
-<ul><li>FPM:
-<ul>
-  <li><?php bugfix(70755); ?> (fpm_log.c memory leak and buffer overflow). (CVE-2016-5114)</li>
-</ul></li>
-<li>GD:
-<ul>
-  <li><?php bugfix(70976); ?> (Memory Read via gdImageRotateInterpolated Array Index Out of Bounds). (CVE-2016-1903)</li>
 </ul></li>
 <li>WDDX:
 <ul>
@@ -1380,17 +1197,6 @@ FILTER_FLAG_NO_PRIV_RANGE).</li>
 </ul>
 <!-- }}} --></section>
 
-<section class="version" id="5.5.30">
-<h3>Version 5.5.30</h3>
-<?php release_date('01-Oct-2015'); ?>
-<ul><li>Phar:
-<ul>
-  <li><?php bugfix(69720); ?> (Null pointer dereference in phar_get_fp_offset()). (CVE-2015-7803)</li>
-  <li><?php bugfix(70433); ?> (Uninitialized pointer in phar_make_dirstream when zip entry filename is "/"). (CVE-2015-7804)</li>
-</ul></li>
-</ul>
-</section>
-
 <section class="version" id="5.6.13"><!-- {{{ 5.6.13 -->
 <h3>Version 5.6.13</h3>
 <?php release_date('03-Sep-2015'); ?>
@@ -1452,86 +1258,6 @@ FILTER_FLAG_NO_PRIV_RANGE).</li>
 <ul>
   <li><?php bugfix(70052); ?> (getimagesize() fails for very large and very small WBMP).</li>
   <li><?php bugfix(70157); ?> (parse_ini_string() segmentation fault with INI_SCANNER_TYPED).</li>
-</ul></li>
-<li>XSLT:
-<ul>
-  <li><?php bugfix(69782); ?> (NULL pointer dereference). (CVE-2015-6837, CVE-2015-6838)</li>
-</ul></li>
-<li>ZIP:
-<ul>
-  <li><?php bugfix(70350); ?> (ZipArchive::extractTo allows for directory traversal when creating directories). (CVE-2014-9767)</li>
-</ul></li>
-</ul>
-<!-- }}} --></section>
-
-<section class="version" id="5.5.29"><!-- {{{ 5.5.29 -->
-<h3>Version 5.5.29</h3>
-<?php release_date('03-Sep-2015'); ?>
-<ul><li>Core:
-<ul>
-  <li><?php bugfix(70172); ?> (Use After Free Vulnerability in unserialize()). (CVE-2015-6834)</li>
-  <li><?php bugfix(70219); ?> (Use after free vulnerability in session deserializer). (CVE-2015-6835)</li>
-</ul></li>
-<li>EXIF:
-<ul>
-  <li><?php bugfix(70385); ?> (Buffer over-read in exif_read_data with TIFF IFD tag byte value of 32 bytes).</li>
-</ul></li>
-<li>hash:
-<ul>
-  <li><?php bugfix(70312); ?> (HAVAL gives wrong hashes in specific cases).</li>
-</ul></li>
-<li>PCRE:
-<ul>
-  <li><?php bugfix(70345); ?> (Multiple vulnerabilities related to PCRE functions).</li>
-</ul></li>
-<li>SOAP:
-<ul>
-  <li><?php bugfix(70388); ?> (SOAP serialize_function_call() type confusion / RCE). (CVE-2015-6836)</li>
-</ul></li>
-<li>SPL:
-<ul>
-  <li><?php bugfix(70365); ?> (Use-after-free vulnerability in unserialize() with SplObjectStorage). (CVE-2015-6834)</li>
-  <li><?php bugfix(70366); ?> (Use-after-free vulnerability in unserialize() with SplDoublyLinkedList). (CVE-2015-6834)</li>
-</ul></li>
-<li>XSLT:
-<ul>
-  <li><?php bugfix(69782); ?> (NULL pointer dereference). (CVE-2015-6837, CVE-2015-6838)</li>
-</ul></li>
-<li>ZIP:
-<ul>
-  <li><?php bugfix(70350); ?> (ZipArchive::extractTo allows for directory traversal when creating directories). (CVE-2014-9767)</li>
-</ul></li>
-</ul>
-<!-- }}} --></section>
-
-<section class="version" id="5.4.45"><!-- {{{ 5.4.45 -->
-<h3>Version 5.4.45</h3>
-<?php release_date('03-Sep-2015'); ?>
-<ul><li>Core:
-<ul>
-  <li><?php bugfix(70172); ?> (Use After Free Vulnerability in unserialize()). (CVE-2015-6834)</li>
-  <li><?php bugfix(70219); ?> (Use after free vulnerability in session deserializer). (CVE-2015-6835)</li>
-</ul></li>
-<li>EXIF:
-<ul>
-  <li><?php bugfix(70385); ?> (Buffer over-read in exif_read_data with TIFF IFD tag byte value of 32 bytes).</li>
-</ul></li>
-<li>hash:
-<ul>
-  <li><?php bugfix(70312); ?> (HAVAL gives wrong hashes in specific cases).</li>
-</ul></li>
-<li>PCRE:
-<ul>
-  <li><?php bugfix(70345); ?> (Multiple vulnerabilities related to PCRE functions).</li>
-</ul></li>
-<li>SOAP:
-<ul>
-  <li><?php bugfix(70388); ?> (SOAP serialize_function_call() type confusion / RCE). (CVE-2015-6836)</li>
-</ul></li>
-<li>SPL:
-<ul>
-  <li><?php bugfix(70365); ?> (Use-after-free vulnerability in unserialize() with SplObjectStorage). (CVE-2015-6834)</li>
-  <li><?php bugfix(70366); ?> (Use-after-free vulnerability in unserialize() with SplDoublyLinkedList). (CVE-2015-6834)</li>
 </ul></li>
 <li>XSLT:
 <ul>
@@ -1607,71 +1333,6 @@ FILTER_FLAG_NO_PRIV_RANGE).</li>
 </ul>
 <!-- }}} --></section>
 
-<section class="version" id="5.5.28"><!-- {{{ 5.5.28 -->
-<h3>Version 5.5.28</h3>
-<?php release_date('06-Aug-2015'); ?>
-<ul><li>Core:
-<ul>
-  <li><?php bugfix(69793); ?> (Remotely triggerable stack exhaustion via recursive method calls).</li>
-  <li><?php bugfix(69892); ?> (Different arrays compare indentical due to integer key truncation).</li>
-  <li><?php bugfix(70002); ?> (TS issues with temporary dir handling).</li>
-  <li><?php bugfix(70121); ?> (unserialize() could lead to unexpected methods execution / NULL pointer deref).</li>
-</ul></li>
-<li>OpenSSL:
-<ul>
-  <li><?php bugfix(70014); ?> (openssl_random_pseudo_bytes() is not cryptographically secure). (CVE-2015-8867)</li>
-</ul></li>
-<li>Phar:
-<ul>
-  <li>Improved fix for bug <?php bugl(69441) ?>.</li>
-  <li><?php bugfix(70019); ?> (Files extracted from archive may be placed outside of destination directory). (CVE-2015-6833)</li>
-</ul></li>
-<li>SOAP:
-<ul>
-  <li><?php bugfix(70081); ?> (SoapClient info leak / null pointer dereference via multiple type confusions).</li>
-</ul></li>
-<li>SPL:
-<ul>
-  <li><?php bugfix(70068); ?> (Dangling pointer in the unserialization of ArrayObject items). (CVE-2015-6832)</li>
-  <li><?php bugfix(70166); ?> (Use After Free Vulnerability in unserialize() with SPLArrayObject). (CVE-2015-6831)</li>
-  <li><?php bugfix(70168); ?> (Use After Free Vulnerability in unserialize() with SplObjectStorage). (CVE-2015-6831)</li>
-  <li><?php bugfix(70169); ?> (Use After Free Vulnerability in unserialize() with SplDoublyLinkedList). (CVE-2015-6831)</li>
-</ul></li>
-</ul>
-<!-- }}} --></section>
-
-<section class="version" id="5.4.44"><!-- {{{ 5.4.44 -->
-<h3>Version 5.4.44</h3>
-<?php release_date('06-Aug-2015'); ?>
-<ul><li>Core:
-<ul>
-  <li><?php bugfix(69793); ?> (Remotely triggerable stack exhaustion via recursive method calls).</li>
-  <li><?php bugfix(69892); ?> (Different arrays compare indentical due to integer key truncation).</li>
-  <li><?php bugfix(70121); ?> (unserialize() could lead to unexpected methods execution / NULL pointer deref).</li>
-</ul></li>
-<li>OpenSSL:
-<ul>
-  <li><?php bugfix(70014); ?> (openssl_random_pseudo_bytes() is not cryptographically secure). (CVE-2015-8867)</li>
-</ul></li>
-<li>Phar:
-<ul>
-  <li>Improved fix for bug <?php bugl(69441) ?>.</li>
-  <li><?php bugfix(70019); ?> (Files extracted from archive may be placed outside of destination directory). (CVE-2015-6833)</li>
-</ul></li>
-<li>SOAP:
-<ul>
-  <li><?php bugfix(70081); ?> (SoapClient info leak / null pointer dereference via multiple type confusions).</li>
-</ul></li>
-<li>SPL:
-<ul>
-  <li><?php bugfix(70068); ?> (Dangling pointer in the unserialization of ArrayObject items). (CVE-2015-6832)</li>
-  <li><?php bugfix(70166); ?> (Use After Free Vulnerability in unserialize() with SPLArrayObject). (CVE-2015-6831)</li>
-  <li><?php bugfix(70168); ?> (Use After Free Vulnerability in unserialize() with SplObjectStorage). (CVE-2015-6831)</li>
-  <li><?php bugfix(70169); ?> (Use After Free Vulnerability in unserialize() with SplDoublyLinkedList). (CVE-2015-6831)</li>
-</ul></li>
-</ul>
-<!-- }}} --></section>
-
 <section class="version" id="5.6.11"><!-- {{{ 5.6.11 -->
 <h3>Version 5.6.11</h3>
 <?php release_date('10-Jul-2015'); ?>
@@ -1733,77 +1394,6 @@ FILTER_FLAG_NO_PRIV_RANGE).</li>
 </ul>
 <!-- }}} --></section>
 
-<section class="version" id="5.5.27"><!-- {{{ 5.5.27 -->
-<h3>Version 5.5.27</h3>
-<?php release_date('09-Jul-2015'); ?>
-<ul><li>Core:
-<ul>
-  <li><?php bugfix(69768); ?> (escapeshell*() doesn't cater to !).</li>
-  <li><?php bugfix(69703); ?> (Use __builtin_clzl on PowerPC).</li>
-  <li><?php bugfix(69732); ?> (can induce segmentation fault with basic php code).</li>
-  <li><?php bugfix(69642); ?> (Windows 10 reported as Windows 8).</li>
-  <li><?php bugfix(69551); ?> (parse_ini_file() and parse_ini_string() segmentation fault).</li>
-  <li><?php bugfix(69781); ?> (phpinfo() reports Professional Editions of Windows 7/8/8.1/10 as "Business").</li>
-  <li><?php bugfix(69835); ?> (phpinfo() does not report many Windows SKUs).</li>
-  <li><?php bugfix(69892); ?> (Different arrays compare indentical due to integer key truncation).</li>
-  <li><?php bugfix(69874); ?> (Can't set empty additional_headers for mail()), regression from fix to bug <?php bugl(68776); ?>.</li>
-</ul></li>
-<li>GD:
-<ul>
-  <li><?php bugfix(61221); ?> (imagegammacorrect function loses alpha channel).</li>
-</ul></li>
-<li>Mysqlnd:
-<ul>
-  <li><?php bugfix(69669); ?> (mysqlnd is vulnerable to BACKRONYM). (CVE-2015-3152)</li>
-</ul></li>
-<li>PCRE:
-<ul>
-  <li>Fixed Bug #53823 (preg_replace: * qualifier on unicode replace garbles the string).</li>
-  <li><?php bugfix(69864); ?> (Segfault in preg_replace_callback).</li>
-</ul></li>
-<li>PDO_pgsql:
-<ul>
-  <li><?php bugfix(69752); ?> (PDOStatement::execute() leaks memory with DML Statements when closeCuror() is u).</li>
-  <li><?php bugfix(69362); ?> (PDO-pgsql fails to connect if password contains a leading single quote).</li>
-  <li><?php bugfix(69344); ?> (PDO PgSQL Incorrect binding numeric array with gaps).</li>
-</ul></li>
-<li>Phar:
-<ul>
-  <li><?php bugfix(69958); ?> (Segfault in Phar::convertToData on invalid file). (CVE-2015-5589)</li>
-  <li><?php bugfix(69923); ?> (Buffer overflow and stack smashing error in phar_fix_filepath). (CVE-2015-5590)</li>
-</ul></li>
-<li>SimpleXML:
-<ul>
-  <li>Refactored the fix for bug #66084 (simplexml_load_string() mangles empty node name).</li>
-</ul></li>
-<li>SPL:
-<ul>
-  <li><?php bugfix(69737); ?> (Segfault when SplMinHeap::compare produces fatal error).</li>
-  <li><?php bugfix(67805); ?> (SplFileObject setMaxLineLength).</li>
-</ul></li>
-</ul>
-<!-- }}} --></section>
-
-<section class="version" id="5.4.43"><!-- {{{ 5.4.43 -->
-<h3>Version 5.4.43</h3>
-<?php release_date('09-Jul-2015'); ?>
-<ul><li>Core:
-<ul>
-  <li><?php bugfix(69768); ?> (escapeshell*() doesn't cater to !).</li>
-  <li><?php bugfix(69874); ?> (Can't set empty additional_headers for mail()), regression from fix to bug <?php bugl(68776); ?>.</li>
-</ul></li>
-<li>Mysqlnd:
-<ul>
-  <li><?php bugfix(69669); ?> (mysqlnd is vulnerable to BACKRONYM). (CVE-2015-3152)</li>
-</ul></li>
-<li>Phar:
-<ul>
-  <li><?php bugfix(69958); ?> (Segfault in Phar::convertToData on invalid file). (CVE-2015-5589)</li>
-  <li><?php bugfix(69923); ?> (Buffer overflow and stack smashing error in phar_fix_filepath). (CVE-2015-5590)</li>
-</ul></li>
-</ul>
-<!-- }}} --></section>
-
 <section class="version" id="5.6.10"><!-- {{{ 5.6.10 -->
 <h3>Version 5.6.10</h3>
 <?php release_date('11-Jun-2015'); ?>
@@ -1861,93 +1451,6 @@ FILTER_FLAG_NO_PRIV_RANGE).</li>
 </ul>
 <!-- }}} --></section>
 
-<section class="version" id="5.5.26"><!-- {{{ 5.5.26 -->
-<h3>Version 5.5.26</h3>
-<?php release_date('11-Jun-2015'); ?>
-<ul><li>Core:
-<ul>
-  <li><?php bugfix(69566); ?> (Conditional jump or move depends on uninitialised value in extension trait).</li>
-  <li><?php bugfix(66048); ?> (temp. directory is cached during multiple requests).</li>
-  <li><?php bugfix(69628); ?> (complex GLOB_BRACE fails on Windows).</li>
-  <li><?php bugfix(69646); ?> (OS command injection vulnerability in escapeshellarg). (CVE-2015-4642)</li>
-  <li><?php bugfix(69719); ?> (Incorrect handling of paths with NULs). (CVE-2015-4598)</li>
-</ul></li>
-<li>FTP:
-<ul>
-  <li>Improved fix for bug <?php bugl(69545); ?> (Integer overflow in ftp_genlist() resulting in heap overflow). (CVE-2015-4643)</li>
-</ul></li>
-<li>GD:
-<ul>
-  <li><?php bugfix(69479); ?> (GD fails to build with newer libvpx).</li>
-</ul></li>
-<li>Iconv:
-<ul>
-  <li><?php bugfix(48147); ?> (iconv with //IGNORE cuts the string).</li>
-</ul></li>
-<li>Litespeed SAPI:
-<ul>
-  <li><?php bugfix(68812); ?> (Unchecked return value).</li>
-</ul></li>
-<li>Mail:
-<ul>
-  <li><?php bugfix(68776); ?> (mail() does not have mail header injection prevention for additional headers).</li>
-</ul></li>
-<li>MCrypt:
-<ul>
-  <li>Added file descriptor caching to mcrypt_create_iv().</li>
-</ul></li>
-<li>Opcache:
-<ul>
-  <li><?php bugfix(69549); ?> (Memory leak with opcache.optimization_level=0xFFFFFFFF).</li>
-</ul></li>
-<li>PCRE:
-<ul>
-  <li>Upgraded pcrelib to 8.37. (CVE-2015-2325, CVE-2015-2326)</li>
-</ul></li>
-<li>Phar:
-<ul>
-  <li><?php bugfix(69680); ?> (phar symlink in binary directory broken).</li>
-</ul></li>
-<li>Postgres:
-<ul>
-  <li><?php bugfix(69667); ?> (segfault in php_pgsql_meta_data). (CVE-2015-4644)</li>
-</ul></li>
-<li>Sqlite3:
-<ul>
-  <li>Upgrade bundled sqlite to 3.8.10.2. (CVE-2015-3414, CVE-2015-3415,
-    CVE-2015-3416)</li>
-</ul></li>
-</ul>
-<!-- }}} --></section>
-
-<section class="version" id="5.4.42"><!-- {{{ 5.4.42 -->
-<h3>Version 5.4.42</h3>
-<?php release_date('11-Jun-2015'); ?>
-<ul><li>Core:
-<ul>
-  <li>Improved fix for bug <?php bugl(69545); ?> (Integer overflow in ftp_genlist() resulting in heap overflow). (CVE-2015-4643)</li>
-  <li><?php bugfix(69646); ?> (OS command injection vulnerability in escapeshellarg). (CVE-2015-4642)</li>
-  <li><?php bugfix(69719); ?> (Incorrect handling of paths with NULs). (CVE-2015-4598)</li>
-</ul></li>
-<li>Litespeed SAPI:
-<ul>
-  <li><?php bugfix(68812); ?> (Unchecked return value).</li>
-</ul></li>
-<li>Mail:
-<ul>
-  <li><?php bugfix(68776); ?> (mail() does not have mail header injection prevention for additional headers).</li>
-</ul></li>
-<li>Postgres:
-<ul>
-  <li><?php bugfix(69667); ?> (segfault in php_pgsql_meta_data). (CVE-2015-4644)</li>
-</ul></li>
-<li>Sqlite3:
-<ul>
-  <li>Upgrade bundled sqlite to 3.8.10.2. (CVE-2015-3414, CVE-2015-3415, CVE-2015-3416)</li>
-</ul></li>
-</ul>
-<!-- }}} --></section>
-
 <section class="version" id="5.6.9"><!-- {{{ 5.6.9 -->
 <h3>Version 5.6.9</h3>
 <?php release_date('14-May-2015'); ?>
@@ -1978,77 +1481,6 @@ FILTER_FLAG_NO_PRIV_RANGE).</li>
 <li>OpenSSL:
 <ul>
   <li><?php bugfix(69402); ?> (Reading empty SSL stream hangs until timeout).</li>
-</ul></li>
-<li>PCNTL:
-<ul>
-  <li><?php bugfix(68598); ?> (pcntl_exec() should not allow null char). (CVE-2015-4026)</li>
-</ul></li>
-<li>PCRE:
-<ul>
-  <li>Upgraded pcrelib to 8.37. (CVE-2015-2325, CVE-2015-2326)</li>
-</ul></li>
-<li>Phar:
-<ul>
-  <li><?php bugfix(69453); ?> (Memory Corruption in phar_parse_tarfile when entry filename starts with null). (CVE-2015-4021)</li>
-</ul></li>
-</ul>
-<!-- }}} --></section>
-
-<section class="version" id="5.5.25"><!-- {{{ 5.5.25 -->
-<h3>Version 5.5.25</h3>
-<?php release_date('14-May-2015'); ?>
-<ul><li>Core:
-<ul>
-  <li><?php bugfix(69364); ?> (PHP Multipart/form-data remote dos Vulnerability). (CVE-2015-4024)</li>
-  <li><?php bugfix(69403); ?> (str_repeat() sign mismatch based memory corruption).</li>
-  <li><?php bugfix(69418); ?> (CVE-2006-7243 fix regressions in 5.4+). (CVE-2015-4025)</li>
-  <li><?php bugfix(69522); ?> (heap buffer overflow in unpack()).</li>
-  <li><?php bugfix(69467); ?> (Wrong checked for the interface by using Trait).</li>
-  <li><?php bugfix(69420); ?> (Invalid read in zend_std_get_method).</li>
-  <li><?php bugfix(60022); ?> ("use statement [...] has no effect" depends on leading backslash).</li>
-  <li><?php bugfix(67314); ?> (Segmentation fault in gc_remove_zval_from_buffer).</li>
-  <li><?php bugfix(68652); ?> (segmentation fault in destructor).</li>
-  <li><?php bugfix(69419); ?> (Returning compatible sub generator produces a warning).</li>
-  <li><?php bugfix(69472); ?> (php_sys_readlink ignores misc errors from GetFinalPathNameByHandleA).</li>
-</ul></li>
-<li>FTP:
-<ul>
-  <li><?php bugfix(69545); ?> (Integer overflow in ftp_genlist() resulting in heap overflow). (CVE-2015-4022)</li>
-</ul></li>
-<li>ODBC:
-<ul>
-  <li><?php bugfix(69354); ?> (Incorrect use of SQLColAttributes with ODBC 3.0).</li>
-  <li><?php bugfix(69474); ?> (ODBC: Query with same field name from two tables returns incorrect result).</li>
-  <li><?php bugfix(69381); ?> (out of memory with sage odbc driver).</li>
-</ul></li>
-<li>OpenSSL:
-<ul>
-  <li><?php bugfix(69402); ?> (Reading empty SSL stream hangs until timeout).</li>
-</ul></li>
-<li>PCNTL:
-<ul>
-  <li><?php bugfix(68598); ?> (pcntl_exec() should not allow null char). (CVE-2015-4026)</li>
-</ul></li>
-<li>Phar:
-<ul>
-  <li><?php bugfix(69453); ?> (Memory Corruption in phar_parse_tarfile when entry filename starts with null). (CVE-2015-4021)</li>
-</ul></li>
-</ul>
-<!-- }}} --></section>
-
-<section class="version" id="5.4.41"><!-- {{{ 5.4.41 -->
-<h3>Version 5.4.41</h3>
-<?php release_date('14-May-2015'); ?>
-<ul><li>Core:
-<ul>
-  <li><?php bugfix(69364); ?> (PHP Multipart/form-data remote dos Vulnerability). (CVE-2015-4024)</li>
-  <li><?php bugfix(69403); ?> (str_repeat() sign mismatch based memory corruption).</li>
-  <li><?php bugfix(69418); ?> (CVE-2006-7243 fix regressions in 5.4+). (CVE-2015-4025)</li>
-  <li><?php bugfix(69522); ?> (heap buffer overflow in unpack()).</li>
-</ul></li>
-<li>FTP:
-<ul>
-  <li><?php bugfix(69545); ?> (Integer overflow in ftp_genlist() resulting in heap overflow). (CVE-2015-4022)</li>
 </ul></li>
 <li>PCNTL:
 <ul>
@@ -2160,154 +1592,6 @@ FILTER_FLAG_NO_PRIV_RANGE).</li>
 </ul>
 <!-- }}} --></section>
 
-<section class="version" id="5.5.24"><!-- {{{ 5.5.24 -->
-<h3>Version 5.5.24</h3>
-<?php release_date('16-Apr-2015'); ?>
-<ul><li>Apache2handler:
-<ul>
-  <li><?php bugfix(69218); ?> (potential remote code execution with apache 2.4 apache2handler). (CVE-2015-3330)</li>
-</ul></li>
-<li>Core:
-<ul>
-  <li><?php bugfix(66609); ?> (php crashes with __get() and ++ operator in some cases).</li>
-  <li><?php bugfix(67626); ?> (User exceptions not properly handled in streams).</li>
-  <li><?php bugfix(68021); ?> (get_browser() browser_name_regex returns non-utf-8 characters).</li>
-  <li><?php bugfix(68917); ?> (parse_url fails on some partial urls).</li>
-  <li><?php bugfix(69134); ?> (Per Directory Values overrides PHP_INI_SYSTEM configuration options).</li>
-  <li>Additional fix for bug <?php bugl(69152); ?> (Type confusion vulnerability in exception::getTraceAsString).</li>
-  <li><?php bugfix(69212); ?> (Leaking VIA_HANDLER func when exception thrown in __call/... arg passing).</li>
-  <li><?php bugfix(69221); ?> (Segmentation fault when using a generator in combination with an Iterator).</li>
-  <li><?php bugfix(69337); ?> (php_stream_url_wrap_http_ex() type-confusion vulnerability).</li>
-  <li><?php bugfix(69353); ?> (Missing null byte checks for paths in various PHP extensions). (CVE-2015-3411, CVE-2015-3412)</li>
-</ul></li>
-<li>cURL:
-<ul>
-  <li><?php implemented(69278); ?> (HTTP2 support).</li>
-  <li><?php bugfix(68739); ?> (Missing break / control flow).</li>
-  <li><?php bugfix(69316); ?> (Use-after-free in php_curl related to CURLOPT_FILE/_INFILE/_WRITEHEADER).</li>
-</ul></li>
-<li>Date:
-<ul>
-  <li>Export date_get_immutable_ce so that it can be used by extensions.</li>
-  <li><?php bugfix(69336); ?> (Issues with "last day of &lt;monthname&gt;").</li>
-</ul></li>
-<li>Enchant:
-<ul>
-  <li><?php bugfix(65406); ?> (Enchant broker plugins are in the wrong place in windows builds).</li>
-</ul></li>
-<li>Ereg:
-<ul>
-  <li><?php bugfix(68740); ?> (NULL Pointer Dereference).</li>
-</ul></li>
-<li>Fileinfo:
-<ul>
-  <li><?php bugfix(68819); ?> (Fileinfo on specific file causes spurious OOM and/or segfault). (CVE-2015-4604, CVE-2015-4605)</li>
-</ul></li>
-<li>Filter:
-<ul>
-  <li><?php bugfix(69202); ?> (FILTER_FLAG_STRIP_BACKTICK ignored unless other flags are used).</li>
-  <li><?php bugfix(69203); ?> (FILTER_FLAG_STRIP_HIGH doesn't strip ASCII 127).</li>
-</ul></li>
-<li>Mbstring:
-<ul>
-  <li><?php bugfix(68846); ?> (False detection of CJK Unified Ideographs Extension E).</li>
-</ul></li>
-<li>ODBC:
-<ul>
-  <li><?php bugfix(69354); ?> (Incorrect use of SQLColAttributes with ODBC 3.0).</li>
-</ul></li>
-<li>OPCache:
-<ul>
-  <li><?php bugfix(69281); ?> (opcache_is_script_cached no longer works).</li>
-  <li><?php bugfix(68677); ?> (Use After Free). (CVE-2015-1351)</li>
-</ul></li>
-<li>OpenSSL:
-<ul>
-  <li><?php bugfix(67403); ?> (Add signatureType to openssl_x509_parse).</li>
-  <li>Add a check for RAND_egd to allow compiling against LibreSSL.</li>
-</ul></li>
-<li>Phar:
-<ul>
-  <li><?php bugfix(64343); ?> (PharData::extractTo fails for tarball created by BSD tar).</li>
-  <li><?php bugfix(64931); ?> (phar_add_file is too restrictive on filename).</li>
-  <li><?php bugfix(65467); ?> (Call to undefined method cli_arg_typ_string).</li>
-  <li><?php bugfix(67761); ?> (Phar::mapPhar fails for Phars inside a path containing ".tar").</li>
-  <li><?php bugfix(69324); ?> (Buffer Over-read in unserialize when parsing Phar). (CVE-2015-2783, CVE-2015-3307)</li>
-  <li><?php bugfix(69441); ?> (Buffer Overflow when parsing tar/zip/phar in phar_set_inode). (CVE-2015-3329)</li>
-</ul></li>
-<li>Postgres:
-<ul>
-  <li><?php bugfix(68741); ?> (Null pointer dereference). (CVE-2015-1352)</li>
-</ul></li>
-<li>SOAP:
-<ul>
-  <li><?php bugfix(69152); ?> (Type Confusion Infoleak Vulnerability in unserialize() with SoapFault). (CVE-2015-4599)</li>
-  <li><?php bugfix(69293); ?> (NEW segfault when using SoapClient::__setSoapHeader (bisected, regression)).</li>
-</ul></li>
-<li>SPL:
-<ul>
-  <li><?php bugfix(69227); ?> (Use after free in zval_scan caused by spl_object_storage_get_gc).</li>
-</ul></li>
-<li>SQLITE:
-<ul>
-  <li><?php bugfix(68760); ?> (SQLITE segfaults if custom collator throws an exception).</li>
-  <li><?php bugfix(69287); ?> (Upgrade bundled sqlite to 3.8.8.3).</li>
-  <li><?php bugfix(66550); ?> (SQLite prepared statement use-after-free).</li>
-</ul></li>
-</ul>
-<!-- }}} --></section>
-
-<section class="version" id="5.4.40"><!-- {{{ 5.4.40 -->
-<h3>Version 5.4.40</h3>
-<?php release_date('16-Apr-2015'); ?>
-<ul><li>Apache2handler:
-<ul>
-  <li><?php bugfix(69218); ?> (potential remote code execution with apache 2.4 apache2handler). (CVE-2015-3330)</li>
-</ul></li>
-<li>Core:
-<ul>
-  <li>Additional fix for bug <?php bugl(69152); ?> (Type confusion vulnerability in exception::getTraceAsString).</li>
-  <li><?php bugfix(69337); ?> (php_stream_url_wrap_http_ex() type-confusion vulnerability).</li>
-  <li><?php bugfix(69353); ?> (Missing null byte checks for paths in various PHP extensions). (CVE-2015-3411, CVE-2015-3412)</li>
-</ul></li>
-<li>cURL:
-<ul>
-  <li><?php bugfix(69316); ?> (Use-after-free in php_curl related to CURLOPT_FILE/_INFILE/_WRITEHEADER).</li>
-</ul></li>
-<li>Ereg:
-<ul>
-  <li><?php bugfix(68740); ?> (NULL Pointer Dereference).</li>
-</ul></li>
-<li>Fileinfo:
-<ul>
-  <li><?php bugfix(68819); ?> (Fileinfo on specific file causes spurious OOM and/or segfault). (CVE-2015-4604, CVE-2015-4605)</li>
-</ul></li>
-<li>GD:
-<ul>
-  <li><?php bugfix(68601); ?> (buffer read overflow in gd_gif_in.c). (CVE-2014-9709)</li>
-</ul></li>
-<li>Phar:
-<ul>
-  <li><?php bugfix(68901); ?> (use after free). (CVE-2015-2301)</li>
-  <li><?php bugfix(69324); ?> (Buffer Over-read in unserialize when parsing Phar). (CVE-2015-2783, CVE-2015-3307)</li>
-  <li><?php bugfix(69441); ?> (Buffer Overflow when parsing tar/zip/phar in phar_set_inode). (CVE-2015-3329)</li>
-</ul></li>
-<li>Postgres:
-<ul>
-  <li><?php bugfix(68741); ?> (Null pointer deference). (CVE-2015-1352)</li>
-</ul></li>
-<li>SOAP:
-<ul>
-  <li><?php bugfix(69152); ?> (Type Confusion Infoleak Vulnerability in unserialize() with SoapFault). (CVE-2015-4599)</li>
-  <li><?php bugfix(69293); ?> (NEW segfault when using SoapClient::__setSoapHeader (bisected, regression)).</li>
-</ul></li>
-<li>Sqlite3:
-<ul>
-  <li><?php bugfix(66550); ?> (SQLite prepared statement use-after-free).</li>
-</ul></li>
-</ul>
-<!-- }}} --></section>
-
 <section class="version" id="5.6.7"><!-- {{{ 5.6.7 -->
 <h3>Version 5.6.7</h3>
 <?php release_date('19-Mar-2015'); ?>
@@ -2381,111 +1665,6 @@ FILTER_FLAG_NO_PRIV_RANGE).</li>
 <ul>
   <li><?php bugfix(69108); ?> ("Segmentation fault" when (de)serializing SplObjectStorage).</li>
   <li><?php bugfix(68557); ?> (RecursiveDirectoryIterator::seek(0) broken after calling getChildren()).</li>
-</ul></li>
-<li>ZIP:
-<ul>
-  <li><?php bugfix(69253); ?> (ZIP Integer Overflow leads to writing past heap boundary). (CVE-2015-2331)</li>
-</ul></li>
-</ul>
-<!-- }}} --></section>
-
-<section class="version" id="5.5.23"><!-- {{{ 5.5.23 -->
-<h3>Version 5.5.23</h3>
-<?php release_date('19-Mar-2015'); ?>
-<ul><li>Core:
-<ul>
-  <li><?php bugfix(69174); ?> (leaks when unused inner class use traits precedence).</li>
-  <li><?php bugfix(69139); ?> (Crash in gc_zval_possible_root on unserialize).</li>
-  <li><?php bugfix(69121); ?> (Segfault in get_current_user when script owner is not in passwd with ZTS build).</li>
-  <li><?php bugfix(65593); ?> (Segfault when calling ob_start from output buffering callback).</li>
-  <li><?php bugfix(69017); ?> (Fail to push to the empty array with the constant value defined in class scope).</li>
-  <li><?php bugfix(68986); ?> (pointer returned by php_stream_fopen_temporary_file not validated in memory.c).</li>
-  <li><?php bugfix(68166); ?> (Exception with invalid character causes segv).</li>
-  <li><?php bugfix(69141); ?> (Missing arguments in reflection info for some builtin functions).</li>
-  <li><?php bugfix(68976); ?> (Use After Free Vulnerability in unserialize()). (CVE-2015-2787)</li>
-  <li><?php bugfix(69134); ?> (Per Directory Values overrides PHP_INI_SYSTEM configuration options).</li>
-  <li><?php bugfix(69207); ?> (move_uploaded_file allows nulls in path). (CVE-2015-2348)</li>
-</ul></li>
-<li>CGI:
-<ul>
-  <li><?php bugfix(69015); ?> (php-cgi's getopt does not see $argv).</li>
-</ul></li>
-<li>CLI:
-<ul>
-  <li><?php bugfix(67741); ?> (auto_prepend_file messes up __LINE__).</li>
-</ul></li>
-<li>cURL:
-<ul>
-  <li><?php bugfix(69088); ?> (PHP_MINIT_FUNCTION does not fully initialize cURL on Win32).</li>
-  <li>Add CURLPROXY_SOCKS4A and CURLPROXY_SOCKS5_HOSTNAME constants if supported by libcurl.</li>
-</ul></li>
-<li>Ereg:
-<ul>
-  <li><?php bugfix(69248); ?> (heap overflow vulnerability in regcomp.c). (CVE-2015-2305)</li>
-</ul></li>
-<li>FPM:
-<ul>
-  <li><?php bugfix(68822); ?> (request time is reset too early).</li>
-</ul></li>
-<li>JSON :
-<ul>
-  <li>Fixed bug #64695 (JSON_NUMERIC_CHECK has issues with strings that are 
-     numbers plus the letter e).</li>
-</ul></li>
-<li>ODBC:
-<ul>
-  <li><?php bugfix(68964); ?> (Allowed memory size exhausted with odbc_exec).</li>
-</ul></li>
-<li>Opcache:
-<ul>
-  <li><?php bugfix(69125); ?> (Array numeric string as key).</li>
-  <li><?php bugfix(69038); ?> (switch(SOMECONSTANT) misbehaves).</li>
-</ul></li>
-<li>OpenSSL:
-<ul>
-  <li><?php bugfix(61285); ?>, <?php bugl(68329); ?>, <?php bugl(68046); ?>, <?php bugl(41631); ?> (encrypted streams don't observe socket timeouts).</li>
-</ul></li>
-<li>pgsql:
-<ul>
-  <li><?php bugfix(68638); ?> (pg_update() fails to store infinite values).</li>
-</ul></li>
-<li>Readline:
-<ul>
-  <li><?php bugfix(69054); ?> (Null dereference in readline_(read|write)_history() without parameters).</li>
-</ul></li>
-<li>SOAP:
-<ul>
-  <li><?php bugfix(69085); ?> (SoapClient's __call() type confusion through unserialize()). (CVE-2015-4147, CVE-2015-4148)</li>
-</ul></li>
-<li>SPL:
-<ul>
-  <li><?php bugfix(69108); ?> ("Segmentation fault" when (de)serializing SplObjectStorage).</li>
-  <li><?php bugfix(68557); ?> (RecursiveDirectoryIterator::seek(0) broken after calling getChildren()).</li>
-</ul></li>
-<li>ZIP:
-<ul>
-  <li><?php bugfix(69253); ?> (ZIP Integer Overflow leads to writing past heap boundary). (CVE-2015-2331)</li>
-</ul></li>
-</ul>
-<!-- }}} --></section>
-
-
-<section class="version" id="5.4.39"><!-- {{{ 5.4.39 -->
-<h3>Version 5.4.39</h3>
-<?php release_date('19-Mar-2015'); ?>
-<ul><li>Core:
-<ul>
-  <li><?php bugfix(68976); ?> (Use After Free Vulnerability in unserialize()). (CVE-2015-2787)</li>
-  <li><?php bugfix(69134); ?> (Per Directory Values overrides PHP_INI_SYSTEM configuration options).</li>
-  <li><?php bugfix(69207); ?> (move_uploaded_file allows nulls in path). (CVE-2015-2348)</li>
-</ul></li>
-<li>Ereg:
-<ul>
-  <li><?php bugfix(69248); ?> (heap overflow vulnerability in regcomp.c). (CVE-2015-2305)</li>
-</ul></li>
-<li>SOAP:
-<ul>
-  <li><?php bugfix(69085); ?> (SoapClient's __call() type confusion through unserialize()). (CVE-2015-4147, CVE-2015-4148)</li>
 </ul></li>
 <li>ZIP:
 <ul>
@@ -2572,104 +1751,6 @@ FILTER_FLAG_NO_PRIV_RANGE).</li>
 <li>Streams:
 <ul>
   <li>Fixed bug which caused call after final close on streams filter.</li>
-</ul></li>
-</ul>
-<!-- }}} --></section>
-
-<section class="version" id="5.5.22"><!-- {{{ 5.5.22 -->
-<h3>Version 5.5.22</h3>
-<?php release_date('19-Feb-2015'); ?>
-<ul><li>Core:
-<ul>
-  <li><?php bugfix(67068); ?> (getClosure returns somethings that's not a closure).</li>
-  <li><?php bugfix(68925); ?> (Mitigation for CVE-2015-0235 – GHOST: glibc gethostbyname buffer overflow).</li>
-  <li><?php bugfix(68942); ?> (Use after free vulnerability in unserialize() with DateTimeZone). (CVE-2015-0273)</li>
-  <li>Added NULL byte protection to exec, system and passthru.</li>
-  <li>Removed support for multi-line headers, as they are deprecated by RFC 7230.</li>
-</ul></li>
-<li>Date:
-<ul>
-  <li><?php bugfix(45081); ?> (strtotime incorrectly interprets SGT time zone).</li>
-</ul></li>
-<li>Dba:
-<ul>
-  <li><?php bugfix(68711); ?> (useless comparisons).</li>
-</ul></li>
-<li>Enchant:
-<ul>
-  <li><?php bugfix(68552); ?> (heap buffer overflow in enchant_broker_request_dict()). (CVE-2014-9705)</li>
-</ul></li>
-<li>Fileinfo:
-<ul>
-  <li><?php bugfix(68827); ?> (Double free with disabled ZMM).</li>
-</ul></li>
-<li>FPM:
-<ul>
-  <li><?php bugfix(66479); ?> (Wrong response to FCGI_GET_VALUES).</li>
-  <li><?php bugfix(68571); ?> (core dump when webserver close the socket).</li>
-</ul></li>
-<li>Libxml:
-<ul>
-  <li><?php bugfix(64938); ?> (libxml_disable_entity_loader setting is shared between threads). (CVE-2015-8866)</li>
-</ul></li>
-<li>PDO_mysql:
-<ul>
-  <li><?php bugfix(68750); ?> (PDOMysql with mysqlnd does not allow the usage of named pipes).</li>
-</ul></li>
-<li>Phar:
-<ul>
-  <li><?php bugfix(68901); ?> (use after free). (CVE-2015-2301)</li>
-</ul></li>
-<li>Pgsql:
-<ul>
-  <li><?php bugfix(65199); ?> (pg_copy_from() modifies input array variable).</li>
-</ul></li>
-<li>Sqlite3:
-<ul>
-  <li><?php bugfix(68260); ?> (SQLite3Result::fetchArray declares wrong required_num_args).</li>
-</ul></li>
-<li>Mysqli:
-<ul>
-  <li><?php bugfix(68114); ?> (linker error on some OS X machines with fixed width decimal support).</li>
-  <li><?php bugfix(68657); ?> (Reading 4 byte floats with Mysqli and libmysqlclient has rounding errors).</li>
-</ul></li>
-<li>Session:
-<ul>
-  <li><?php bugfix(68941); ?> (mod_files.sh is a bash-script).</li>
-  <li><?php bugfix(66623); ?> (no EINTR check on flock).</li>
-  <li><?php bugfix(68063); ?> (Empty session IDs do still start sessions).</li>
-</ul></li>
-<li>Standard:
-<ul>
-  <li><?php bugfix(65272); ?> (flock() out parameter not set correctly in windows).</li>
-  <li><?php bugfix(69033); ?> (Request may get env. variables from previous requests if PHP works as FastCGI).</li>
-</ul></li>
-<li>Streams:
-<ul>
-  <li>Fixed bug which caused call after final close on streams filter.</li>
-</ul></li>
-</ul>
-<!-- }}} --></section>
-
-
-<section class="version" id="5.4.38"><!-- {{{ 5.4.38 -->
-<h3>Version 5.4.38</h3>
-<?php release_date('19-Feb-2015'); ?>
-<ul><li>Core:
-<ul>
-  <li>Removed support for multi-line headers, as they are deprecated by RFC 7230.</li>
-  <li>Added NULL byte protection to exec, system and passthru.</li>
-  <li><?php bugfix(68925); ?> (Mitigation for CVE-2015-0235 – GHOST: glibc gethostbyname buffer overflow).</li>
-  <li><?php bugfix(67827); ?> (broken detection of system crypt sha256/sha512 support).</li>
-  <li><?php bugfix(68942); ?> (Use after free vulnerability in unserialize() with DateTimeZone). (CVE-2015-0273)</li>
-</ul></li>
-<li>Enchant:
-<ul>
-  <li><?php bugfix(68552); ?> (heap buffer overflow in enchant_broker_request_dict()). (CVE-2014-9705)</li>
-</ul></li>
-<li>SOAP:
-<ul>
-  <li><?php bugfix(67427); ?> (SoapServer cannot handle large messages).</li>
 </ul></li>
 </ul>
 <!-- }}} --></section>
@@ -2780,138 +1861,6 @@ FILTER_FLAG_NO_PRIV_RANGE).</li>
 </ul>
 <!-- }}} --></section>
 
-<section class="version" id="5.5.21"><!-- {{{ 5.5.21 -->
-<h3>Version 5.5.21</h3>
-<?php release_date('22-Jan-2015'); ?>
-<ul><li>Core:
-<ul>
-  <li>Upgraded crypt_blowfish to version 1.3.</li>
-  <li><?php bugfix(60704); ?> (unlink() bug with some files path).</li>
-  <li><?php bugfix(65419); ?> (Inside trait, self::class != __CLASS__).</li>
-  <li><?php bugfix(65576); ?> (Constructor from trait conflicts with inherited constructor).</li>
-  <li><?php bugfix(55541); ?> (errors spawn MessageBox, which blocks test automation).</li>
-  <li><?php bugfix(68297); ?> (Application Popup provides too few information).</li>
-  <li><?php bugfix(65769); ?> (localeconv() broken in TS builds).</li>
-  <li><?php bugfix(65230); ?> (setting locale randomly broken).</li>
-  <li><?php bugfix(66764); ?> (configure doesn't define EXPANDED_DATADIR / PHP_DATADIR correctly).</li>
-  <li><?php bugfix(68583); ?> (Crash in timeout thread).</li>
-  <li><?php bugfix(68676); ?> (Explicit Double Free). (CVE-2014-9425)</li>
-  <li><?php bugfix(68710); ?> (Use After Free Vulnerability in PHP's unserialize()). (CVE-2015-0231)</li>
-</ul></li>
-<li>CGI:
-<ul>
-  <li><?php bugfix(68618); ?> (out of bounds read crashes php-cgi). (CVE-2014-9427)</li>
-</ul></li>
-<li>CLI server:
-<ul>
-  <li><?php bugfix(68745); ?> (Invalid HTTP requests make web server segfault).</li>
-</ul></li>
-<li>cURL:
-<ul>
-  <li><?php bugfix(67643); ?> (curl_multi_getcontent returns '' when CURLOPT_RETURNTRANSFER isn't set).</li>
-</ul></li>
-<li>EXIF:
-<ul>
-  <li><?php bugfix(68799); ?> (Free called on uninitialized pointer). (CVE-2015-0232)</li>
-</ul></li>
-<li>Fileinfo:
-<ul>
-  <li><?php bugfix(68671); ?> (incorrect expression in libmagic).</li>
-  <li><?php bugfix(68735); ?> (fileinfo out-of-bounds memory access). (CVE-2014-9652)</li>
-  <li>Removed readelf.c and related code from libmagic sources.</li>
-</ul></li>
-<li>FPM:
-<ul>
-  <li><?php bugfix(68751); ?> (listen.allowed_clients is broken).</li>
-</ul></li>
-<li>GD:
-<ul>
-  <li><?php bugfix(68601); ?> (buffer read overflow in gd_gif_in.c). (CVE-2014-9709)</li>
-</ul></li>
-<li>Mbstring:
-<ul>
-  <li><?php bugfix(68504); ?> (--with-libmbfl configure option not present on Windows).</li>
-</ul></li>
-<li>Mcrypt:
-<ul>
-  <li>Fixed possible read after end of buffer and use after free.</li>
-</ul></li>
-<li>Opcache:
-<ul>
-  <li><?php bugfix(67111); ?> (Memory leak when using "continue 2" inside two foreach loops).</li>
-</ul></li>
-<li>OpenSSL:
-<ul>
-  <li><?php bugfix(55618); ?> (use case-insensitive cert name matching).</li>
-</ul></li>
-<li>Pcntl:
-<ul>
-  <li><?php bugfix(60509); ?> (pcntl_signal doesn't decrease ref-count of old handler
-    when setting SIG_DFL).</li>
-</ul></li>
-<li>PCRE:
-<ul>
-  <li><?php bugfix(66679); ?> (Alignment Bug in PCRE 8.34 upstream).</li>
-</ul></li>
-<li>pgsql:
-<ul>
-  <li><?php bugfix(68697); ?> (lo_export return -1 on failure).</li>
-</ul></li>
-<li>PDO:
-<ul>
-  <li><?php bugfix(68371); ?> (PDO#getAttribute() cannot be called with platform-specific
-    attribute names).</li>
-</ul></li>
-<li>PDO_mysql:
-<ul>
-  <li><?php bugfix(68424); ?> (Add new PDO mysql connection attr to control multi
-    statements option).</li>
-</ul></li>
-<li>SPL:
-<ul>
-  <li><?php bugfix(66405); ?> (RecursiveDirectoryIterator::CURRENT_AS_PATHNAME
-    breaks the RecursiveIterator).</li>
-  <li><?php bugfix(65213); ?> (cannot cast SplFileInfo to boolean).</li>
-  <li><?php bugfix(68479); ?> (Added escape parameter to SplFileObject::fputcsv).</li>
-</ul></li>
-<li>SQLite:
-<ul>
-  <li><?php bugfix(68120); ?> (Update bundled libsqlite to 3.8.7.2).</li>
-</ul></li>
-<li>Streams:
-<ul>
-  <li><?php bugfix(68532); ?> (convert.base64-encode omits padding bytes).</li>
-</ul></li>
-</ul>
-<!-- }}} --></section>
-
-<section class="version" id="5.4.37"><!-- {{{ 5.4.37 -->
-<h3>Version 5.4.37</h3>
-<?php release_date('22-Jan-2015'); ?>
-<ul><li>Core:
-<ul>
-  <li><?php bugfix(68710); ?> (Use After Free Vulnerability in PHP's unserialize()). (CVE-2015-0231)</li>
-</ul></li>
-<li>CGI:
-<ul>
-  <li><?php bugfix(68618); ?> (out of bounds read crashes php-cgi). (CVE-2014-9427)</li>
-</ul></li>
-<li>EXIF:
-<ul>
-  <li><?php bugfix(68799); ?> (Free called on uninitialized pointer). (CVE-2015-0232)</li>
-</ul></li>
-<li>Fileinfo:
-<ul>
-  <li>Removed readelf.c and related code from libmagic sources.</li>
-  <li><?php bugfix(68735); ?> (fileinfo out-of-bounds memory access). (CVE-2014-9652)</li>
-</ul></li>
-<li>OpenSSL:
-<ul>
-  <li><?php bugfix(55618); ?> (use case-insensitive cert name matching).</li>
-</ul></li>
-</ul>
-<!-- }}} --></section>
-
 <section class="version" id="5.6.4"><!-- {{{ 5.6.4 -->
 <h3>Version 5.6.4</h3>
 <?php release_date('18-Dec-2014'); ?>
@@ -2970,71 +1919,6 @@ FILTER_FLAG_NO_PRIV_RANGE).</li>
   <li><?php bugfix(53829); ?> (Compiling PHP with large file support will replace function gzopen by gzopen64).</li>
 </ul></li>
 </ul>
-<!-- }}} --></section>
-
-<section class="version" id="5.5.20"><!-- {{{ 5.5.20 -->
-<h3>Version 5.5.20</h3>
-<?php release_date('18-Dec-2014'); ?>
-<ul><li>Core:
-<ul>
-  <li><?php bugfix(68091); ?> (Some Zend headers lack appropriate extern "C" blocks).</li>
-  <li><?php bugfix(68185); ?> ("Inconsistent insteadof definition."- incorrectly triggered).</li>
-  <li><?php bugfix(68370); ?> ("unset($this)" can make the program crash).</li>
-  <li><?php bugfix(68545); ?> (NULL pointer dereference in unserialize.c).</li>
-  <li><?php bugfix(68594); ?> (Use after free vulnerability in unserialize()). (CVE-2014-8142)</li>
-</ul></li>
-<li>Date:
-<ul>
-  <li>Fixed day_of_week function as it could sometimes return negative values internally.</li>
-</ul></li>
-<li>FPM:
-<ul>
-  <li><?php bugfix(68381); ?> (fpm_unix_init_main ignores log_level).</li>
-  <li><?php bugfix(68420); ?> (listen=9000 listens to ipv6 localhost instead of all addresses).</li>
-  <li><?php bugfix(68421); ?> (access.format='%R' doesn't log ipv6 address).</li>
-  <li><?php bugfix(68423); ?> (PHP-FPM will no longer load all pools).</li>
-  <li><?php bugfix(68428); ?> (listen.allowed_clients is IPv4 only).</li>
-  <li><?php bugfix(68452); ?> (php-fpm man page is oudated).</li>
-  <li><?php bugfix(68458); ?> (Change pm.start_servers default warning to notice).</li>
-  <li><?php bugfix(68463); ?> (listen.allowed_clients can silently result in no allowed access).</li>
-  <li><?php bugfix(68391); ?> (php-fpm conf files loading order).</li>
-  <li><?php bugfix(68478); ?> (access.log don't use prefix).</li>
-</ul></li>
-<li>Mcrypt:
-<ul>
-  <li>Fixed possible read after end of buffer and use after free.</li>
-</ul></li>
-<li>PDO_pgsql:
-<ul>
-  <li><?php bugfix(66584); ?> (Segmentation fault on statement deallocation).</li>
-  <li><?php bugfix(67462); ?> (PDO_PGSQL::beginTransaction() wrongly throws exception
-  when not in transaction).</li>
-  <li><?php bugfix(68351); ?> (PDO::PARAM_BOOL and ATTR_EMULATE_PREPARES misbehaving).</li>
-</ul></li>
-<li>SOAP:
-<ul>
-  <li><?php bugfix(68361); ?> (Segmentation fault on SoapClient::__getTypes).</li>
-</ul></li>
-<li>zlib:
-<ul>
-  <li><?php bugfix(53829); ?> (Compiling PHP with large file support will replace
-    function gzopen by gzopen64).</li>
-</ul></li>
-</ul>
-<!-- }}} --></section>
-<section class="version" id="5.4.36"><!-- {{{ 5.4.36 -->
-<h3>Version 5.4.36</h3>
-<?php release_date('18-Dec-2014'); ?>
-<ul><li>Core:
-<ul>
-  <li>Upgraded crypt_blowfish to version 1.3.</li>
-  <li><?php bugfix(68545); ?> (NULL pointer dereference in unserialize.c).</li>
-  <li><?php bugfix(68594); ?> (Use after free vulnerability in unserialize()). (CVE-2014-8142)</li>
-</ul>
-<li>Mcrypt:
-<ul>
-  <li>Fixed possible read after end of buffer and use after free.</li>
-</ul></li>
 <!-- }}} --></section>
 
 <section class="version" id="5.6.3"><!-- {{{ 5.6.3 -->
@@ -3104,83 +1988,6 @@ FILTER_FLAG_NO_PRIV_RANGE).</li>
 </ul>
 <!-- }}} --></section>
 
-<section class="version" id="5.5.19"><!-- {{{ 5.5.19 -->
-<h3>Version 5.5.19</h3>
-<?php release_date('13-Nov-2014'); ?>
-<ul><li>Core:
-<ul>
-  <li><?php bugfix(68095); ?> (AddressSanitizer reports a heap buffer overflow in 
-    php_getopt()).</li>
-  <li><?php bugfix(68118); ?> ($a-&gt;foo .= 'test'; can leave $a-&gt;foo undefined).</li>
-  <li><?php bugfix(68129); ?> (parse_url() - incomplete support for empty usernames
-    and passwords).</li>
-  <li><?php bugfix(68365); ?> (zend_mm_heap corrupted after memory overflow in
-    zend_hash_copy).</li>
-</ul></li>
-<li>cURL:
-<ul>
-  <li>Add CURL_SSLVERSION_TLSv1_0, CURL_SSLVERSION_TLSv1_1, and 
-    CURL_SSLVERSION_TLSv1_2 constants if supported by libcurl.</li>
-</ul></li>
-<li>Fileinfo:
-<ul>
-  <li><?php bugfix(66242); ?> (libmagic: don't assume char is signed).</li>
-  <li><?php bugfix(68283); ?> (fileinfo: out-of-bounds read in elf note headers).
-    (CVE-2014-3710)</li>
-</ul></li>
-<li>FPM:
-<ul>
-  <li><?php implemented(55508); ?> (listen and listen.allowed_clients should take IPv6
-    addresses.</li>
-</ul></li>
-<li>GD:
-<ul>
-  <li><?php bugfix(65171); ?>imagescale() fails without height param</li>
-</ul></li>
-<li>GMP:
-<ul>
-  <li><?php bugfix(63595); ?> (GMP memory management conflicts with other libraries
-    using GMP).</li>
-</ul></li>
-<li>Mysqli:
-<ul>
-  <li><?php bugfix(68114); ?> (linker error on some OS X machines with fixed width
-    decimal support).</li>
-</ul></li>
-<li>ODBC:
-<ul>
-  <li><?php bugfix(68087); ?> (ODBC not correctly reading DATE column when preceded by
-    a VARCHAR column)</li>
-</ul></li>
-<li>SPL:
-<ul>
-  <li><?php bugfix(68128); ?> (Regression in RecursiveRegexIterator)</li>
-</ul></li>
-</ul>
-<!-- }}} --></section>
-
-<section class="version" id="5.4.35"><!-- {{{ 5.4.35 -->
-<h3>Version 5.4.35</h3>
-<?php release_date('13-Nov-2014'); ?>
-<ul><li>Core:
-<ul>
-  <li><?php bugfix(68365); ?> (zend_mm_heap corrupted after memory overflow in zend_hash_copy).</li>
-</ul></li>
-<li>Fileinfo:
-<ul>
-  <li><?php bugfix(68283); ?> (fileinfo: out-of-bounds read in elf note headers). (CVE-2014-3710)</li>
-</ul></li>
-<li>GMP:
-<ul>
-  <li><?php bugfix(63595); ?> (GMP memory management conflicts with other libraries using GMP).</li>
-</ul></li>
-<li>PDO_pgsql:
-<ul>
-  <li><?php bugfix(66584); ?> (Segmentation fault on statement deallocation).</li>
-</ul></li>
-</ul>
-<!-- }}} --></section>
-
 <section class="version" id="5.6.2"><!-- {{{ 5.6.2 -->
 <h3>Version 5.6.2</h3>
 <?php release_date('16-Oct-2014'); ?>
@@ -3195,85 +2002,6 @@ FILTER_FLAG_NO_PRIV_RANGE).</li>
 <li>EXIF:
 <ul>
   <li><?php bugfix(68113); ?> (Heap corruption in exif_thumbnail()). (CVE-2014-3670)</li>
-</ul></li>
-<li>XMLRPC:
-<ul>
-  <li><?php bugfix(68027); ?> (Global buffer overflow in mkgmtime() function). (CVE-2014-3668)</li>
-</ul></li>
-</ul>
-<!-- }}} --></section>
-
-<section class="version" id="5.5.18"><!-- {{{ 5.5.18 -->
-<h3>Version 5.5.18</h3>
-<?php release_date('16-Oct-2014'); ?>
-<ul><li>Core:
-<ul>
-  <li><?php bugfix(67985); ?> (Incorrect last used array index copied to new array after
-    unset).</li>
-  <li><?php bugfix(67739); ?> (Windows 8.1/Server 2012 R2 OS build number reported
-    as 6.2 (instead of 6.3)).</li>
-  <li><?php bugfix(67633); ?> (A foreach on an array returned from a function not doing
-    copy-on-write).</li>
-  <li><?php bugfix(51800); ?> (proc_open on Windows hangs forever).</li>
-  <li><?php bugfix(68044); ?> (Integer overflow in unserialize() (32-bits only)).
-    (CVE-2014-3669)</li>
-</ul></li>
-<li>cURL:
-<ul>
-  <li><?php bugfix(68089); ?> (NULL byte injection - cURL lib).</li>
-</ul></li>
-<li>Exif:
-<ul>
-  <li><?php bugfix(68113); ?> (Heap corruption in exif_thumbnail()). (CVE-2014-3670)</li>
-</ul></li>
-<li>FPM:
-<ul>
-  <li><?php bugfix(65641); ?> (PHP-FPM incorrectly defines the SCRIPT_NAME variable
-    when using Apache, mod_proxy-fcgi and ProxyPass).</li>
-</ul></li>
-<li>OpenSSL:
-<ul>
-  <li>Revert regression introduced by fix of bug <?php bugl(41631); ?>.</li>
-</ul></li>
-<li>Reflection:
-<ul>
-  <li><?php bugfix(68103); ?> (Duplicate entry in Reflection for class alias).</li>
-</ul></li>
-<li>Session:
-<ul>
-  <li><?php bugfix(67972); ?> (SessionHandler Invalid memory read create_sid()).</li>
-</ul></li>
-<li>XMLRPC:
-<ul>
-  <li><?php bugfix(68027); ?> (Global buffer overflow in mkgmtime() function). 
-    (CVE-2014-3668)</li>
-</ul></li>
-</ul>
-<!-- }}} --></section>
-
-<section class="version" id="5.4.34"><!-- {{{ 5.4.34 -->
-<h3>Version 5.4.34</h3>
-<?php release_date('16-Oct-2014'); ?>
-<ul><li>Fileinfo:
-<ul>
-  <li><?php bugfix(66242); ?> (libmagic: don't assume char is signed).</li>
-</ul></li>
-<li>Core:
-<ul>
-  <li><?php bugfix(67985); ?> (Incorrect last used array index copied to new array after unset).</li>
-  <li><?php bugfix(68044); ?> (Integer overflow in unserialize() (32-bits only)). (CVE-2014-3669)</li>
-</ul></li>
-<li>cURL:
-<ul>
-  <li><?php bugfix(68089); ?> (NULL byte injection - cURL lib).</li>
-</ul></li>
-<li>EXIF:
-<ul>
-  <li><?php bugfix(68113); ?> (Heap corruption in exif_thumbnail()). (CVE-2014-3670)</li>
-</ul></li>
-<li>OpenSSL:
-<ul>
-  <li>Reverted fixes for bug <?php bugl(41631); ?>, due to regressions.</li>
 </ul></li>
 <li>XMLRPC:
 <ul>
@@ -3336,94 +2064,6 @@ FILTER_FLAG_NO_PRIV_RANGE).</li>
 <li>Sysvsem:
 <ul>
   <li><?php implemented(67990); ?> (Add optional nowait argument to sem_acquire).</li>
-</ul></li>
-</ul>
-<!-- }}} --></section>
-
-<section class="version" id="5.5.17"><!-- {{{ 5.5.17 -->
-<h3>Version 5.5.17</h3>
-<?php release_date('18-Sep-2014'); ?>
-<ul><li>Core:
-<ul>
-  <li><?php bugfix(47358); ?> (glob returns error, should be empty array()).</li>
-  <li><?php bugfix(65463); ?> (SIGSEGV during zend_shutdown()).</li>
-  <li><?php bugfix(66036); ?> (Crash on SIGTERM in apache process).</li>
-  <li><?php bugfix(67878); ?> (program_prefix not honoured in man pages).</li>
-</ul></li>
-<li>COM:
-<ul>
-  <li><?php bugfix(41577); ?> (DOTNET is successful once per server run).</li>
-</ul></li>
-<li>Date:
-<ul>
-  <li><?php bugfix(66091); ?> (memory leaks in DateTime constructor).</li>
-  <li><?php bugfix(66985); ?> (Some timezones are no longer valid in PHP 5.5.10).</li>
-  <li><?php bugfix(67109); ?> (First uppercase letter breaks date string parsing).</li>
-</ul></li>
-<li>FPM:
-<ul>
-  <li><?php bugfix(67606); ?> (FPM with mod_fastcgi/apache2.4 is broken).</li>
-</ul></li>
-<li>GD:
-<ul>
-  <li>Made fontFetch's path parser thread-safe.</li>
-</ul></li>
-<li>MySQLi:
-<ul>
-  <li><?php bugfix(67839); ?> (mysqli does not handle 4-byte floats correctly).</li>
-</ul></li>
-<li>OpenSSL:
-<ul>
-  <li><?php bugfix(41631); ?> (socket timeouts not honored in blocking SSL reads).</li>
-  <li><?php bugfix(67850); ?> (extension won't build if openssl compiled without SSLv3).</li>
-</ul></li>
-<li>SPL:
-<ul>
-  <li><?php bugfix(67813); ?> (CachingIterator::__construct InvalidArgumentException
-    wrong message).</li>
-</ul></li>
-<li>Zlib:
-<ul>
-  <li><?php bugfix(67724); ?> (chained zlib filters silently fail with large amounts of 
-    data).</li>
-  <li><?php bugfix(67865); ?> (internal corruption phar error).</li>
-</ul></li>
-</ul>
-<!-- }}} --></section>
-
-<section class="version" id="5.4.33"><!-- {{{ 5.4.33 -->
-<h3>Version 5.4.33</h3>
-<?php release_date('18-Sep-2014'); ?>
-<ul><li>Core:
-<ul>
-  <li><?php bugfix(47358); ?> (glob returns error, should be empty array()).</li>
-  <li><?php bugfix(65463); ?> (SIGSEGV during zend_shutdown()).</li>
-  <li><?php bugfix(66036); ?> (Crash on SIGTERM in apache process).</li>
-</ul></li>
-<li>OpenSSL:
-<ul>
-  <li><?php bugfix(41631); ?> (socket timeouts not honored in blocking SSL reads).</li>
-</ul></li>
-<li>Date:
-<ul>
-  <li><?php bugfix(66091); ?> (memory leaks in DateTime constructor).</li>
-</ul></li>
-<li>FPM:
-<ul>
-  <li><?php bugfix(67606); ?> (FPM with mod_fastcgi/apache2.4 is broken).</li>
-</ul></li>
-<li>GD:
-<ul>
-  <li>Made fontFetch's path parser thread-safe.</li>
-</ul></li>
-<li>Wddx:
-<ul>
-  <li><?php bugfix(67873); ?> (Segfaults in php_wddx_serialize_var).</li>
-</ul></li>
-<li>Zlib:
-<ul>
-  <li><?php bugfix(67724); ?> (chained zlib filters silently fail with large amounts of data).</li>
-  <li><?php bugfix(67865); ?> (internal corruption phar error).</li>
 </ul></li>
 </ul>
 <!-- }}} --></section>
@@ -3884,6 +2524,1039 @@ FILTER_FLAG_NO_PRIV_RANGE).</li>
 </ul>
 <!-- }}} --></section>
 
+<a id="PHP_5_5"></a>
+<section class="version" id="5.5.38"><!-- {{{ 5.5.38 -->
+<h3>Version 5.5.38</h3>
+<?php release_date('21-Jul-2016'); ?>
+<ul><li>Core:
+<ul>
+  <li><?php bugfix(70480); ?> (php_url_parse_ex() buffer overflow read). (CVE-2016-6288)</li>
+  <li><?php bugfix(72513); ?> (Stack-based buffer overflow vulnerability in virtual_file_ex). (CVE-2016-6289)</li>
+  <li><?php bugfix(72562); ?> (Use After Free in unserialize() with Unexpected Session Deserialization). (CVE-2016-6290)</li>
+  <li><?php bugfix(72573); ?> (HTTP_PROXY is improperly trusted by some PHP libraries and applications). (CVE-2016-5385)</li>
+</ul></li>
+<li>BZip2:
+<ul>
+  <li><?php bugfix(72613); ?> (Inadequate error handling in bzread()). (CVE-2016-5399)</li>
+</ul></li>
+<li>EXIF:
+<ul>
+  <li><?php bugfix(72603); ?> (Out of bound read in exif_process_IFD_in_MAKERNOTE). (CVE-2016-6291)</li>
+  <li><?php bugfix(72618); ?> (NULL Pointer Dereference in exif_process_user_comment). (CVE-2016-6292)</li>
+</ul></li>
+<li>GD:
+<ul>
+  <li><?php bugfix(72512); ?> (gdImageTrueColorToPaletteBody allows arbitrary write/read access).</li>
+  <li><?php bugfix(72519); ?> (imagegif/output out-of-bounds access).</li>
+  <li><?php bugfix(72558); ?> (Integer overflow error within _gdContributionsAlloc()). (CVE-2016-6207)</li>
+</ul></li>
+<li>Intl:
+<ul>
+  <li><?php bugfix(72533); ?> (locale_accept_from_http out-of-bounds access). (CVE-2016-6294)</li>
+</ul></li>
+<li>ODBC:
+<ul>
+  <li><?php bugfix(69975); ?> (PHP segfaults when accessing nvarchar(max) defined columns). (CVE-2015-8879)</li>
+</ul></li>
+<li>SNMP:
+<ul>
+  <li><?php bugfix(72479); ?> (Use After Free Vulnerability in SNMP with GC and unserialize()). (CVE-2016-6295)</li>
+</ul></li>
+<li>Xmlrpc:
+<ul>
+  <li><?php bugfix(72606); ?> (heap-buffer-overflow (write) simplestring_addn simplestring.c). (CVE-2016-6296)</li>
+</ul></li>
+<li>Zip:
+<ul>
+  <li><?php bugfix(72520); ?> (Stack-based buffer overflow vulnerability in php_stream_zip_opener). (CVE-2016-6297)</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
+<section class="version" id="5.5.37"><!-- {{{ 5.5.37 -->
+<h3>Version 5.5.37</h3>
+<?php release_date('23-Jun-2016'); ?>
+<ul><li>Core:
+<ul>
+  <li><?php bugfix(72268); ?> (Integer Overflow in nl2br()).</li>
+  <li><?php bugfix(72275); ?> (Integer Overflow in json_encode()/json_decode()/ json_utf8_to_utf16()).</li>
+  <li><?php bugfix(72400); ?> (Integer Overflow in addcslashes/addslashes).</li>
+  <li><?php bugfix(72403); ?> (Integer Overflow in Length of String-typed ZVAL).</li>
+</ul></li>
+<li>GD:
+<ul>
+  <li><?php bugfix(66387); ?> (Stack overflow with imagefilltoborder). (CVE-2015-8874)</li>
+  <li><?php bugfix(72298); ?> (pass2_no_dither out-of-bounds access).</li>
+  <li><?php bugfix(72339); ?> (Integer Overflow in _gd2GetHeader() resulting in heap overflow). (CVE-2016-5766)</li>
+  <li><?php bugfix(72407); ?> (NULL Pointer Dereference at _gdScaleVert).</li>
+  <li><?php bugfix(72446); ?> (Integer Overflow in gdImagePaletteToTrueColor() resulting in heap overflow). (CVE-2016-5767)</li>
+</ul></li>
+<li>mbstring:
+<ul>
+  <li><?php bugfix(72402); ?> (_php_mb_regex_ereg_replace_exec - double free). (CVE-2016-5768)</li>
+</ul></li>
+<li>mcrypt:
+<ul>
+  <li><?php bugfix(72455); ?> (Heap Overflow due to integer overflows). (CVE-2016-5769)</li>
+</ul></li>
+<li>SPL:
+<ul>
+  <li><?php bugfix(72262); ?> (int/size_t confusion in SplFileObject::fread). (CVE-2016-5770)</li>
+  <li><?php bugfix(72433); ?> (Use After Free Vulnerability in PHP's GC algorithm and unserialize). (CVE-2016-5771)</li>
+</ul></li>
+<li>WDDX:
+<ul>
+  <li><?php bugfix(72340); ?> (Double Free Courruption in wddx_deserialize). (CVE-2016-5772)</li>
+</ul></li>
+<li>zip:
+<ul>
+  <li><?php bugfix(72434); ?> (ZipArchive class Use After Free Vulnerability in PHP's GC algorithm and unserialize). (CVE-2016-5773)</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
+<section class="version" id="5.5.36"><!-- {{{ 5.5.36 -->
+<h3>Version 5.5.36</h3>
+<?php release_date('26-May-2016'); ?>
+<ul><li>Core:
+<ul>
+  <li><?php bugfix(72114); ?> (Integer underflow / arbitrary null write in fread/gzread). (CVE-2016-5096)</li>
+  <li><?php bugfix(72135); ?> (Integer Overflow in php_html_entities). (CVE-2016-5094)</li>
+</ul></li>
+<li>GD:
+<ul>
+  <li><?php bugfix(72227); ?> (imagescale out-of-bounds read). (CVE-2013-7456)</li>
+</ul></li>
+<li>Intl:
+<ul>
+  <li><?php bugfix(72241); ?> (get_icu_value_internal out-of-bounds read). (CVE-2016-5093)</li>
+</ul></li>
+<li>Phar:
+<ul>
+  <li><?php bugfix(71331); ?> (Uninitialized pointer in phar_make_dirstream()). (CVE-2016-4343)</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
+<section class="version" id="5.5.35"><!-- {{{ 5.5.35 -->
+<h3>Version 5.5.35</h3>
+<?php release_date('28-Apr-2016'); ?>
+<ul><li>BCMath:
+<ul>
+  <li><?php bugfix(72093); ?> (bcpowmod accepts negative scale and corrupts _one_ definition). (CVE-2016-4537, CVE-2016-4538)</li>
+</ul></li>
+<li>Exif:
+<ul>
+  <li><?php bugfix(72094); ?> (Out of bounds heap read access in exif header processing). (CVE-2016-4542, CVE-2016-4543, CVE-2016-4544)</li>
+</ul></li>
+<li>GD:
+<ul>
+  <li><?php bugfix(71912); ?> (libgd: signedness vulnerability). (CVE-2016-3074)</li>
+</ul></li>
+<li>Intl:
+<ul>
+  <li><?php bugfix(72061); ?> (Out-of-bounds reads in zif_grapheme_stripos with negative offset). (CVE-2016-4540, CVE-2016-4541)</li>
+</ul></li>
+<li>XML:
+<ul>
+  <li><?php bugfix(72099); ?> (xml_parse_into_struct segmentation fault). (CVE-2016-4539)</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
+<section class="version" id="5.5.34"><!-- {{{ 5.5.34 -->
+<h3>Version 5.5.34</h3>
+<?php release_date('31-Mar-2016'); ?>
+<ul><li>Fileinfo:
+<ul>
+  <li><?php bugfix(71527); ?> (Buffer over-write in finfo_open with malformed magic file). (CVE-2015-8865)</li>
+</ul></li>
+<li>Mbstring:
+<ul>
+  <li><?php bugfix(71906); ?> (AddressSanitizer: negative-size-param (-1) in mbfl_strcut). (CVE-2016-4073)</li>
+</ul></li>
+<li>ODBC:
+<ul>
+  <li><?php bugfix(71860); ?> (Invalid memory write in phar on filename with \0 in name). (CVE-2016-4072)</li>
+</ul></li>
+<li>SNMP:
+<ul>
+  <li><?php bugfix(71704); ?> (php_snmp_error() Format String Vulnerability). (CVE-2016-4071)</li>
+</ul></li>
+<li>Standard:
+<ul>
+  <li><?php bugfix(71798); ?> (Integer Overflow in php_raw_url_encode). (CVE-2016-4070)</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
+<section class="version" id="5.5.33"><!-- {{{ 5.5.33 -->
+<h3>Version 5.5.33</h3>
+<?php release_date('03-Mar-2016'); ?>
+<ul><li>Phar:
+<ul>
+  <li><?php bugfix(71498); ?> (Out-of-Bound Read in phar_parse_zipfile()).</li>
+</ul></li>
+<li>WDDX:
+<ul>
+  <li><?php bugfix(71587); ?> (Use-After-Free / Double-Free in WDDX Deserialize).</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
+<section class="version" id="5.5.32"><!-- {{{ 5.5.32 -->
+<h3>Version 5.5.32</h3>
+<?php release_date('04-Feb-2016'); ?>
+<ul><li>Core:
+<ul>
+  <li><?php bugfix(71039); ?> (exec functions ignore length but look for NULL termination).</li>
+  <li><?php bugfix(71323); ?> (Output of stream_get_meta_data can be falsified by its input).</li>
+  <li><?php bugfix(71459); ?> (Integer overflow in iptcembed()).</li>
+</ul></li>
+<li>GD:
+<ul>
+  <li>Improved fix for bug <?php bugl(70976) ?>.</li>
+</ul></li>
+<li>PCRE:
+<ul>
+  <li>Upgraded bundled PCRE library to 8.38. (CVE-2015-8383, CVE-2015-8386, CVE-2015-8387, CVE-2015-8389, CVE-2015-8390, CVE-2015-8391, CVE-2015-8393, CVE-2015-8394)</li>
+</ul></li>
+<li>Phar:
+<ul>
+  <li><?php bugfix(71354); ?> (Heap corruption in tar/zip/phar parser). (CVE-2016-4342)</li>
+  <li><?php bugfix(71391); ?> (NULL Pointer Dereference in phar_tar_setupmetadata()).</li>
+  <li><?php bugfix(71488); ?> (Stack overflow when decompressing tar archives). (CVE-2016-2554)</li>
+</ul></li>
+<li>WDDX:
+<ul>
+  <li><?php bugfix(71335); ?> (Type Confusion in WDDX Packet Deserialization).</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
+<section class="version" id="5.5.31"><!-- {{{ 5.5.31 -->
+<h3>Version 5.5.31</h3>
+<?php release_date('07-Jan-2016'); ?>
+<ul><li>FPM:
+<ul>
+  <li><?php bugfix(70755); ?> (fpm_log.c memory leak and buffer overflow). (CVE-2016-5114)</li>
+</ul></li>
+<li>GD:
+<ul>
+  <li><?php bugfix(70976); ?> (Memory Read via gdImageRotateInterpolated Array Index Out of Bounds). (CVE-2016-1903)</li>
+</ul></li>
+<li>WDDX:
+<ul>
+  <li><?php bugfix(70661); ?> (Use After Free Vulnerability in WDDX Packet Deserialization).</li>
+  <li><?php bugfix(70741); ?> (Session WDDX Packet Deserialization Type Confusion Vulnerability).</li>
+</ul></li>
+<li>XMLRPC:
+<ul>
+  <li><?php bugfix(70728); ?> (Type Confusion Vulnerability in PHP_to_XMLRPC_worker()).</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
+<section class="version" id="5.5.30">
+<h3>Version 5.5.30</h3>
+<?php release_date('01-Oct-2015'); ?>
+<ul><li>Phar:
+<ul>
+  <li><?php bugfix(69720); ?> (Null pointer dereference in phar_get_fp_offset()). (CVE-2015-7803)</li>
+  <li><?php bugfix(70433); ?> (Uninitialized pointer in phar_make_dirstream when zip entry filename is "/"). (CVE-2015-7804)</li>
+</ul></li>
+</ul>
+</section>
+
+<section class="version" id="5.5.29"><!-- {{{ 5.5.29 -->
+<h3>Version 5.5.29</h3>
+<?php release_date('03-Sep-2015'); ?>
+<ul><li>Core:
+<ul>
+  <li><?php bugfix(70172); ?> (Use After Free Vulnerability in unserialize()). (CVE-2015-6834)</li>
+  <li><?php bugfix(70219); ?> (Use after free vulnerability in session deserializer). (CVE-2015-6835)</li>
+</ul></li>
+<li>EXIF:
+<ul>
+  <li><?php bugfix(70385); ?> (Buffer over-read in exif_read_data with TIFF IFD tag byte value of 32 bytes).</li>
+</ul></li>
+<li>hash:
+<ul>
+  <li><?php bugfix(70312); ?> (HAVAL gives wrong hashes in specific cases).</li>
+</ul></li>
+<li>PCRE:
+<ul>
+  <li><?php bugfix(70345); ?> (Multiple vulnerabilities related to PCRE functions).</li>
+</ul></li>
+<li>SOAP:
+<ul>
+  <li><?php bugfix(70388); ?> (SOAP serialize_function_call() type confusion / RCE). (CVE-2015-6836)</li>
+</ul></li>
+<li>SPL:
+<ul>
+  <li><?php bugfix(70365); ?> (Use-after-free vulnerability in unserialize() with SplObjectStorage). (CVE-2015-6834)</li>
+  <li><?php bugfix(70366); ?> (Use-after-free vulnerability in unserialize() with SplDoublyLinkedList). (CVE-2015-6834)</li>
+</ul></li>
+<li>XSLT:
+<ul>
+  <li><?php bugfix(69782); ?> (NULL pointer dereference). (CVE-2015-6837, CVE-2015-6838)</li>
+</ul></li>
+<li>ZIP:
+<ul>
+  <li><?php bugfix(70350); ?> (ZipArchive::extractTo allows for directory traversal when creating directories). (CVE-2014-9767)</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
+<section class="version" id="5.5.28"><!-- {{{ 5.5.28 -->
+<h3>Version 5.5.28</h3>
+<?php release_date('06-Aug-2015'); ?>
+<ul><li>Core:
+<ul>
+  <li><?php bugfix(69793); ?> (Remotely triggerable stack exhaustion via recursive method calls).</li>
+  <li><?php bugfix(69892); ?> (Different arrays compare indentical due to integer key truncation).</li>
+  <li><?php bugfix(70002); ?> (TS issues with temporary dir handling).</li>
+  <li><?php bugfix(70121); ?> (unserialize() could lead to unexpected methods execution / NULL pointer deref).</li>
+</ul></li>
+<li>OpenSSL:
+<ul>
+  <li><?php bugfix(70014); ?> (openssl_random_pseudo_bytes() is not cryptographically secure). (CVE-2015-8867)</li>
+</ul></li>
+<li>Phar:
+<ul>
+  <li>Improved fix for bug <?php bugl(69441) ?>.</li>
+  <li><?php bugfix(70019); ?> (Files extracted from archive may be placed outside of destination directory). (CVE-2015-6833)</li>
+</ul></li>
+<li>SOAP:
+<ul>
+  <li><?php bugfix(70081); ?> (SoapClient info leak / null pointer dereference via multiple type confusions).</li>
+</ul></li>
+<li>SPL:
+<ul>
+  <li><?php bugfix(70068); ?> (Dangling pointer in the unserialization of ArrayObject items). (CVE-2015-6832)</li>
+  <li><?php bugfix(70166); ?> (Use After Free Vulnerability in unserialize() with SPLArrayObject). (CVE-2015-6831)</li>
+  <li><?php bugfix(70168); ?> (Use After Free Vulnerability in unserialize() with SplObjectStorage). (CVE-2015-6831)</li>
+  <li><?php bugfix(70169); ?> (Use After Free Vulnerability in unserialize() with SplDoublyLinkedList). (CVE-2015-6831)</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
+<section class="version" id="5.5.27"><!-- {{{ 5.5.27 -->
+<h3>Version 5.5.27</h3>
+<?php release_date('09-Jul-2015'); ?>
+<ul><li>Core:
+<ul>
+  <li><?php bugfix(69768); ?> (escapeshell*() doesn't cater to !).</li>
+  <li><?php bugfix(69703); ?> (Use __builtin_clzl on PowerPC).</li>
+  <li><?php bugfix(69732); ?> (can induce segmentation fault with basic php code).</li>
+  <li><?php bugfix(69642); ?> (Windows 10 reported as Windows 8).</li>
+  <li><?php bugfix(69551); ?> (parse_ini_file() and parse_ini_string() segmentation fault).</li>
+  <li><?php bugfix(69781); ?> (phpinfo() reports Professional Editions of Windows 7/8/8.1/10 as "Business").</li>
+  <li><?php bugfix(69835); ?> (phpinfo() does not report many Windows SKUs).</li>
+  <li><?php bugfix(69892); ?> (Different arrays compare indentical due to integer key truncation).</li>
+  <li><?php bugfix(69874); ?> (Can't set empty additional_headers for mail()), regression from fix to bug <?php bugl(68776); ?>.</li>
+</ul></li>
+<li>GD:
+<ul>
+  <li><?php bugfix(61221); ?> (imagegammacorrect function loses alpha channel).</li>
+</ul></li>
+<li>Mysqlnd:
+<ul>
+  <li><?php bugfix(69669); ?> (mysqlnd is vulnerable to BACKRONYM). (CVE-2015-3152)</li>
+</ul></li>
+<li>PCRE:
+<ul>
+  <li><?php bugfix(53823); ?> (preg_replace: * qualifier on unicode replace garbles the string).</li>
+  <li><?php bugfix(69864); ?> (Segfault in preg_replace_callback).</li>
+</ul></li>
+<li>PDO_pgsql:
+<ul>
+  <li><?php bugfix(69752); ?> (PDOStatement::execute() leaks memory with DML Statements when closeCuror() is u).</li>
+  <li><?php bugfix(69362); ?> (PDO-pgsql fails to connect if password contains a leading single quote).</li>
+  <li><?php bugfix(69344); ?> (PDO PgSQL Incorrect binding numeric array with gaps).</li>
+</ul></li>
+<li>Phar:
+<ul>
+  <li><?php bugfix(69958); ?> (Segfault in Phar::convertToData on invalid file). (CVE-2015-5589)</li>
+  <li><?php bugfix(69923); ?> (Buffer overflow and stack smashing error in phar_fix_filepath). (CVE-2015-5590)</li>
+</ul></li>
+<li>SimpleXML:
+<ul>
+  <li>Refactored the fix for bug <?php bugl(66084); ?> (simplexml_load_string() mangles empty node name).</li>
+</ul></li>
+<li>SPL:
+<ul>
+  <li><?php bugfix(69737); ?> (Segfault when SplMinHeap::compare produces fatal error).</li>
+  <li><?php bugfix(67805); ?> (SplFileObject setMaxLineLength).</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
+<section class="version" id="5.5.26"><!-- {{{ 5.5.26 -->
+<h3>Version 5.5.26</h3>
+<?php release_date('11-Jun-2015'); ?>
+<ul><li>Core:
+<ul>
+  <li><?php bugfix(69566); ?> (Conditional jump or move depends on uninitialised value in extension trait).</li>
+  <li><?php bugfix(66048); ?> (temp. directory is cached during multiple requests).</li>
+  <li><?php bugfix(69628); ?> (complex GLOB_BRACE fails on Windows).</li>
+  <li><?php bugfix(69646); ?> (OS command injection vulnerability in escapeshellarg). (CVE-2015-4642)</li>
+  <li><?php bugfix(69719); ?> (Incorrect handling of paths with NULs). (CVE-2015-4598)</li>
+</ul></li>
+<li>FTP:
+<ul>
+  <li>Improved fix for bug <?php bugl(69545); ?> (Integer overflow in ftp_genlist() resulting in heap overflow). (CVE-2015-4643)</li>
+</ul></li>
+<li>GD:
+<ul>
+  <li><?php bugfix(69479); ?> (GD fails to build with newer libvpx).</li>
+</ul></li>
+<li>Iconv:
+<ul>
+  <li><?php bugfix(48147); ?> (iconv with //IGNORE cuts the string).</li>
+</ul></li>
+<li>Litespeed SAPI:
+<ul>
+  <li><?php bugfix(68812); ?> (Unchecked return value).</li>
+</ul></li>
+<li>Mail:
+<ul>
+  <li><?php bugfix(68776); ?> (mail() does not have mail header injection prevention for additional headers).</li>
+</ul></li>
+<li>MCrypt:
+<ul>
+  <li>Added file descriptor caching to mcrypt_create_iv().</li>
+</ul></li>
+<li>Opcache:
+<ul>
+  <li><?php bugfix(69549); ?> (Memory leak with opcache.optimization_level=0xFFFFFFFF).</li>
+</ul></li>
+<li>PCRE:
+<ul>
+  <li>Upgraded pcrelib to 8.37. (CVE-2015-2325, CVE-2015-2326)</li>
+</ul></li>
+<li>Phar:
+<ul>
+  <li><?php bugfix(69680); ?> (phar symlink in binary directory broken).</li>
+</ul></li>
+<li>Postgres:
+<ul>
+  <li><?php bugfix(69667); ?> (segfault in php_pgsql_meta_data). (CVE-2015-4644)</li>
+</ul></li>
+<li>Sqlite3:
+<ul>
+  <li>Upgrade bundled sqlite to 3.8.10.2. (CVE-2015-3414, CVE-2015-3415,
+    CVE-2015-3416)</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
+<section class="version" id="5.5.25"><!-- {{{ 5.5.25 -->
+<h3>Version 5.5.25</h3>
+<?php release_date('14-May-2015'); ?>
+<ul><li>Core:
+<ul>
+  <li><?php bugfix(69364); ?> (PHP Multipart/form-data remote dos Vulnerability). (CVE-2015-4024)</li>
+  <li><?php bugfix(69403); ?> (str_repeat() sign mismatch based memory corruption).</li>
+  <li><?php bugfix(69418); ?> (CVE-2006-7243 fix regressions in 5.4+). (CVE-2015-4025)</li>
+  <li><?php bugfix(69522); ?> (heap buffer overflow in unpack()).</li>
+  <li><?php bugfix(69467); ?> (Wrong checked for the interface by using Trait).</li>
+  <li><?php bugfix(69420); ?> (Invalid read in zend_std_get_method).</li>
+  <li><?php bugfix(60022); ?> ("use statement [...] has no effect" depends on leading backslash).</li>
+  <li><?php bugfix(67314); ?> (Segmentation fault in gc_remove_zval_from_buffer).</li>
+  <li><?php bugfix(68652); ?> (segmentation fault in destructor).</li>
+  <li><?php bugfix(69419); ?> (Returning compatible sub generator produces a warning).</li>
+  <li><?php bugfix(69472); ?> (php_sys_readlink ignores misc errors from GetFinalPathNameByHandleA).</li>
+</ul></li>
+<li>FTP:
+<ul>
+  <li><?php bugfix(69545); ?> (Integer overflow in ftp_genlist() resulting in heap overflow). (CVE-2015-4022)</li>
+</ul></li>
+<li>ODBC:
+<ul>
+  <li><?php bugfix(69354); ?> (Incorrect use of SQLColAttributes with ODBC 3.0).</li>
+  <li><?php bugfix(69474); ?> (ODBC: Query with same field name from two tables returns incorrect result).</li>
+  <li><?php bugfix(69381); ?> (out of memory with sage odbc driver).</li>
+</ul></li>
+<li>OpenSSL:
+<ul>
+  <li><?php bugfix(69402); ?> (Reading empty SSL stream hangs until timeout).</li>
+</ul></li>
+<li>PCNTL:
+<ul>
+  <li><?php bugfix(68598); ?> (pcntl_exec() should not allow null char). (CVE-2015-4026)</li>
+</ul></li>
+<li>Phar:
+<ul>
+  <li><?php bugfix(69453); ?> (Memory Corruption in phar_parse_tarfile when entry filename starts with null). (CVE-2015-4021)</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
+<section class="version" id="5.5.24"><!-- {{{ 5.5.24 -->
+<h3>Version 5.5.24</h3>
+<?php release_date('16-Apr-2015'); ?>
+<ul><li>Apache2handler:
+<ul>
+  <li><?php bugfix(69218); ?> (potential remote code execution with apache 2.4 apache2handler). (CVE-2015-3330)</li>
+</ul></li>
+<li>Core:
+<ul>
+  <li><?php bugfix(66609); ?> (php crashes with __get() and ++ operator in some cases).</li>
+  <li><?php bugfix(67626); ?> (User exceptions not properly handled in streams).</li>
+  <li><?php bugfix(68021); ?> (get_browser() browser_name_regex returns non-utf-8 characters).</li>
+  <li><?php bugfix(68917); ?> (parse_url fails on some partial urls).</li>
+  <li><?php bugfix(69134); ?> (Per Directory Values overrides PHP_INI_SYSTEM configuration options).</li>
+  <li>Additional fix for bug <?php bugl(69152); ?> (Type confusion vulnerability in exception::getTraceAsString).</li>
+  <li><?php bugfix(69212); ?> (Leaking VIA_HANDLER func when exception thrown in __call/... arg passing).</li>
+  <li><?php bugfix(69221); ?> (Segmentation fault when using a generator in combination with an Iterator).</li>
+  <li><?php bugfix(69337); ?> (php_stream_url_wrap_http_ex() type-confusion vulnerability).</li>
+  <li><?php bugfix(69353); ?> (Missing null byte checks for paths in various PHP extensions). (CVE-2015-3411, CVE-2015-3412)</li>
+</ul></li>
+<li>cURL:
+<ul>
+  <li><?php implemented(69278); ?> (HTTP2 support).</li>
+  <li><?php bugfix(68739); ?> (Missing break / control flow).</li>
+  <li><?php bugfix(69316); ?> (Use-after-free in php_curl related to CURLOPT_FILE/_INFILE/_WRITEHEADER).</li>
+</ul></li>
+<li>Date:
+<ul>
+  <li>Export date_get_immutable_ce so that it can be used by extensions.</li>
+  <li><?php bugfix(69336); ?> (Issues with "last day of &lt;monthname&gt;").</li>
+</ul></li>
+<li>Enchant:
+<ul>
+  <li><?php bugfix(65406); ?> (Enchant broker plugins are in the wrong place in windows builds).</li>
+</ul></li>
+<li>Ereg:
+<ul>
+  <li><?php bugfix(68740); ?> (NULL Pointer Dereference).</li>
+</ul></li>
+<li>Fileinfo:
+<ul>
+  <li><?php bugfix(68819); ?> (Fileinfo on specific file causes spurious OOM and/or segfault). (CVE-2015-4604, CVE-2015-4605)</li>
+</ul></li>
+<li>Filter:
+<ul>
+  <li><?php bugfix(69202); ?> (FILTER_FLAG_STRIP_BACKTICK ignored unless other flags are used).</li>
+  <li><?php bugfix(69203); ?> (FILTER_FLAG_STRIP_HIGH doesn't strip ASCII 127).</li>
+</ul></li>
+<li>Mbstring:
+<ul>
+  <li><?php bugfix(68846); ?> (False detection of CJK Unified Ideographs Extension E).</li>
+</ul></li>
+<li>ODBC:
+<ul>
+  <li><?php bugfix(69354); ?> (Incorrect use of SQLColAttributes with ODBC 3.0).</li>
+</ul></li>
+<li>OPCache:
+<ul>
+  <li><?php bugfix(69281); ?> (opcache_is_script_cached no longer works).</li>
+  <li><?php bugfix(68677); ?> (Use After Free). (CVE-2015-1351)</li>
+</ul></li>
+<li>OpenSSL:
+<ul>
+  <li><?php bugfix(67403); ?> (Add signatureType to openssl_x509_parse).</li>
+  <li>Add a check for RAND_egd to allow compiling against LibreSSL.</li>
+</ul></li>
+<li>Phar:
+<ul>
+  <li><?php bugfix(64343); ?> (PharData::extractTo fails for tarball created by BSD tar).</li>
+  <li><?php bugfix(64931); ?> (phar_add_file is too restrictive on filename).</li>
+  <li><?php bugfix(65467); ?> (Call to undefined method cli_arg_typ_string).</li>
+  <li><?php bugfix(67761); ?> (Phar::mapPhar fails for Phars inside a path containing ".tar").</li>
+  <li><?php bugfix(69324); ?> (Buffer Over-read in unserialize when parsing Phar). (CVE-2015-2783, CVE-2015-3307)</li>
+  <li><?php bugfix(69441); ?> (Buffer Overflow when parsing tar/zip/phar in phar_set_inode). (CVE-2015-3329)</li>
+</ul></li>
+<li>Postgres:
+<ul>
+  <li><?php bugfix(68741); ?> (Null pointer dereference). (CVE-2015-1352)</li>
+</ul></li>
+<li>SOAP:
+<ul>
+  <li><?php bugfix(69152); ?> (Type Confusion Infoleak Vulnerability in unserialize() with SoapFault). (CVE-2015-4599)</li>
+  <li><?php bugfix(69293); ?> (NEW segfault when using SoapClient::__setSoapHeader (bisected, regression)).</li>
+</ul></li>
+<li>SPL:
+<ul>
+  <li><?php bugfix(69227); ?> (Use after free in zval_scan caused by spl_object_storage_get_gc).</li>
+</ul></li>
+<li>SQLITE:
+<ul>
+  <li><?php bugfix(68760); ?> (SQLITE segfaults if custom collator throws an exception).</li>
+  <li><?php bugfix(69287); ?> (Upgrade bundled sqlite to 3.8.8.3).</li>
+  <li><?php bugfix(66550); ?> (SQLite prepared statement use-after-free).</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
+
+<section class="version" id="5.5.23"><!-- {{{ 5.5.23 -->
+<h3>Version 5.5.23</h3>
+<?php release_date('19-Mar-2015'); ?>
+<ul><li>Core:
+<ul>
+  <li><?php bugfix(69174); ?> (leaks when unused inner class use traits precedence).</li>
+  <li><?php bugfix(69139); ?> (Crash in gc_zval_possible_root on unserialize).</li>
+  <li><?php bugfix(69121); ?> (Segfault in get_current_user when script owner is not in passwd with ZTS build).</li>
+  <li><?php bugfix(65593); ?> (Segfault when calling ob_start from output buffering callback).</li>
+  <li><?php bugfix(69017); ?> (Fail to push to the empty array with the constant value defined in class scope).</li>
+  <li><?php bugfix(68986); ?> (pointer returned by php_stream_fopen_temporary_file not validated in memory.c).</li>
+  <li><?php bugfix(68166); ?> (Exception with invalid character causes segv).</li>
+  <li><?php bugfix(69141); ?> (Missing arguments in reflection info for some builtin functions).</li>
+  <li><?php bugfix(68976); ?> (Use After Free Vulnerability in unserialize()). (CVE-2015-2787)</li>
+  <li><?php bugfix(69134); ?> (Per Directory Values overrides PHP_INI_SYSTEM configuration options).</li>
+  <li><?php bugfix(69207); ?> (move_uploaded_file allows nulls in path). (CVE-2015-2348)</li>
+</ul></li>
+<li>CGI:
+<ul>
+  <li><?php bugfix(69015); ?> (php-cgi's getopt does not see $argv).</li>
+</ul></li>
+<li>CLI:
+<ul>
+  <li><?php bugfix(67741); ?> (auto_prepend_file messes up __LINE__).</li>
+</ul></li>
+<li>cURL:
+<ul>
+  <li><?php bugfix(69088); ?> (PHP_MINIT_FUNCTION does not fully initialize cURL on Win32).</li>
+  <li>Add CURLPROXY_SOCKS4A and CURLPROXY_SOCKS5_HOSTNAME constants if supported by libcurl.</li>
+</ul></li>
+<li>Ereg:
+<ul>
+  <li><?php bugfix(69248); ?> (heap overflow vulnerability in regcomp.c). (CVE-2015-2305)</li>
+</ul></li>
+<li>FPM:
+<ul>
+  <li><?php bugfix(68822); ?> (request time is reset too early).</li>
+</ul></li>
+<li>JSON :
+<ul>
+  <li><?php bugfix(64695); ?> (JSON_NUMERIC_CHECK has issues with strings that are
+     numbers plus the letter e).</li>
+</ul></li>
+<li>ODBC:
+<ul>
+  <li><?php bugfix(68964); ?> (Allowed memory size exhausted with odbc_exec).</li>
+</ul></li>
+<li>Opcache:
+<ul>
+  <li><?php bugfix(69125); ?> (Array numeric string as key).</li>
+  <li><?php bugfix(69038); ?> (switch(SOMECONSTANT) misbehaves).</li>
+</ul></li>
+<li>OpenSSL:
+<ul>
+  <li><?php bugfix(61285); ?>, <?php bugl(68329); ?>, <?php bugl(68046); ?>, <?php bugl(41631); ?> (encrypted streams don't observe socket timeouts).</li>
+</ul></li>
+<li>pgsql:
+<ul>
+  <li><?php bugfix(68638); ?> (pg_update() fails to store infinite values).</li>
+</ul></li>
+<li>Readline:
+<ul>
+  <li><?php bugfix(69054); ?> (Null dereference in readline_(read|write)_history() without parameters).</li>
+</ul></li>
+<li>SOAP:
+<ul>
+  <li><?php bugfix(69085); ?> (SoapClient's __call() type confusion through unserialize()). (CVE-2015-4147, CVE-2015-4148)</li>
+</ul></li>
+<li>SPL:
+<ul>
+  <li><?php bugfix(69108); ?> ("Segmentation fault" when (de)serializing SplObjectStorage).</li>
+  <li><?php bugfix(68557); ?> (RecursiveDirectoryIterator::seek(0) broken after calling getChildren()).</li>
+</ul></li>
+<li>ZIP:
+<ul>
+  <li><?php bugfix(69253); ?> (ZIP Integer Overflow leads to writing past heap boundary). (CVE-2015-2331)</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
+<section class="version" id="5.5.22"><!-- {{{ 5.5.22 -->
+<h3>Version 5.5.22</h3>
+<?php release_date('19-Feb-2015'); ?>
+<ul><li>Core:
+<ul>
+  <li><?php bugfix(67068); ?> (getClosure returns somethings that's not a closure).</li>
+  <li><?php bugfix(68925); ?> (Mitigation for CVE-2015-0235 – GHOST: glibc gethostbyname buffer overflow).</li>
+  <li><?php bugfix(68942); ?> (Use after free vulnerability in unserialize() with DateTimeZone). (CVE-2015-0273)</li>
+  <li>Added NULL byte protection to exec, system and passthru.</li>
+  <li>Removed support for multi-line headers, as they are deprecated by RFC 7230.</li>
+</ul></li>
+<li>Date:
+<ul>
+  <li><?php bugfix(45081); ?> (strtotime incorrectly interprets SGT time zone).</li>
+</ul></li>
+<li>Dba:
+<ul>
+  <li><?php bugfix(68711); ?> (useless comparisons).</li>
+</ul></li>
+<li>Enchant:
+<ul>
+  <li><?php bugfix(68552); ?> (heap buffer overflow in enchant_broker_request_dict()). (CVE-2014-9705)</li>
+</ul></li>
+<li>Fileinfo:
+<ul>
+  <li><?php bugfix(68827); ?> (Double free with disabled ZMM).</li>
+</ul></li>
+<li>FPM:
+<ul>
+  <li><?php bugfix(66479); ?> (Wrong response to FCGI_GET_VALUES).</li>
+  <li><?php bugfix(68571); ?> (core dump when webserver close the socket).</li>
+</ul></li>
+<li>Libxml:
+<ul>
+  <li><?php bugfix(64938); ?> (libxml_disable_entity_loader setting is shared between threads). (CVE-2015-8866)</li>
+</ul></li>
+<li>PDO_mysql:
+<ul>
+  <li><?php bugfix(68750); ?> (PDOMysql with mysqlnd does not allow the usage of named pipes).</li>
+</ul></li>
+<li>Phar:
+<ul>
+  <li><?php bugfix(68901); ?> (use after free). (CVE-2015-2301)</li>
+</ul></li>
+<li>Pgsql:
+<ul>
+  <li><?php bugfix(65199); ?> (pg_copy_from() modifies input array variable).</li>
+</ul></li>
+<li>Sqlite3:
+<ul>
+  <li><?php bugfix(68260); ?> (SQLite3Result::fetchArray declares wrong required_num_args).</li>
+</ul></li>
+<li>Mysqli:
+<ul>
+  <li><?php bugfix(68114); ?> (linker error on some OS X machines with fixed width decimal support).</li>
+  <li><?php bugfix(68657); ?> (Reading 4 byte floats with Mysqli and libmysqlclient has rounding errors).</li>
+</ul></li>
+<li>Session:
+<ul>
+  <li><?php bugfix(68941); ?> (mod_files.sh is a bash-script).</li>
+  <li><?php bugfix(66623); ?> (no EINTR check on flock).</li>
+  <li><?php bugfix(68063); ?> (Empty session IDs do still start sessions).</li>
+</ul></li>
+<li>Standard:
+<ul>
+  <li><?php bugfix(65272); ?> (flock() out parameter not set correctly in windows).</li>
+  <li><?php bugfix(69033); ?> (Request may get env. variables from previous requests if PHP works as FastCGI).</li>
+</ul></li>
+<li>Streams:
+<ul>
+  <li>Fixed bug which caused call after final close on streams filter.</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
+<section class="version" id="5.5.21"><!-- {{{ 5.5.21 -->
+<h3>Version 5.5.21</h3>
+<?php release_date('22-Jan-2015'); ?>
+<ul><li>Core:
+<ul>
+  <li>Upgraded crypt_blowfish to version 1.3.</li>
+  <li><?php bugfix(60704); ?> (unlink() bug with some files path).</li>
+  <li><?php bugfix(65419); ?> (Inside trait, self::class != __CLASS__).</li>
+  <li><?php bugfix(65576); ?> (Constructor from trait conflicts with inherited constructor).</li>
+  <li><?php bugfix(55541); ?> (errors spawn MessageBox, which blocks test automation).</li>
+  <li><?php bugfix(68297); ?> (Application Popup provides too few information).</li>
+  <li><?php bugfix(65769); ?> (localeconv() broken in TS builds).</li>
+  <li><?php bugfix(65230); ?> (setting locale randomly broken).</li>
+  <li><?php bugfix(66764); ?> (configure doesn't define EXPANDED_DATADIR / PHP_DATADIR correctly).</li>
+  <li><?php bugfix(68583); ?> (Crash in timeout thread).</li>
+  <li><?php bugfix(68676); ?> (Explicit Double Free). (CVE-2014-9425)</li>
+  <li><?php bugfix(68710); ?> (Use After Free Vulnerability in PHP's unserialize()). (CVE-2015-0231)</li>
+</ul></li>
+<li>CGI:
+<ul>
+  <li><?php bugfix(68618); ?> (out of bounds read crashes php-cgi). (CVE-2014-9427)</li>
+</ul></li>
+<li>CLI server:
+<ul>
+  <li><?php bugfix(68745); ?> (Invalid HTTP requests make web server segfault).</li>
+</ul></li>
+<li>cURL:
+<ul>
+  <li><?php bugfix(67643); ?> (curl_multi_getcontent returns '' when CURLOPT_RETURNTRANSFER isn't set).</li>
+</ul></li>
+<li>EXIF:
+<ul>
+  <li><?php bugfix(68799); ?> (Free called on uninitialized pointer). (CVE-2015-0232)</li>
+</ul></li>
+<li>Fileinfo:
+<ul>
+  <li><?php bugfix(68671); ?> (incorrect expression in libmagic).</li>
+  <li><?php bugfix(68735); ?> (fileinfo out-of-bounds memory access). (CVE-2014-9652)</li>
+  <li>Removed readelf.c and related code from libmagic sources.</li>
+</ul></li>
+<li>FPM:
+<ul>
+  <li><?php bugfix(68751); ?> (listen.allowed_clients is broken).</li>
+</ul></li>
+<li>GD:
+<ul>
+  <li><?php bugfix(68601); ?> (buffer read overflow in gd_gif_in.c). (CVE-2014-9709)</li>
+</ul></li>
+<li>Mbstring:
+<ul>
+  <li><?php bugfix(68504); ?> (--with-libmbfl configure option not present on Windows).</li>
+</ul></li>
+<li>Mcrypt:
+<ul>
+  <li>Fixed possible read after end of buffer and use after free.</li>
+</ul></li>
+<li>Opcache:
+<ul>
+  <li><?php bugfix(67111); ?> (Memory leak when using "continue 2" inside two foreach loops).</li>
+</ul></li>
+<li>OpenSSL:
+<ul>
+  <li><?php bugfix(55618); ?> (use case-insensitive cert name matching).</li>
+</ul></li>
+<li>Pcntl:
+<ul>
+  <li><?php bugfix(60509); ?> (pcntl_signal doesn't decrease ref-count of old handler
+    when setting SIG_DFL).</li>
+</ul></li>
+<li>PCRE:
+<ul>
+  <li><?php bugfix(66679); ?> (Alignment Bug in PCRE 8.34 upstream).</li>
+</ul></li>
+<li>pgsql:
+<ul>
+  <li><?php bugfix(68697); ?> (lo_export return -1 on failure).</li>
+</ul></li>
+<li>PDO:
+<ul>
+  <li><?php bugfix(68371); ?> (PDO#getAttribute() cannot be called with platform-specific
+    attribute names).</li>
+</ul></li>
+<li>PDO_mysql:
+<ul>
+  <li><?php bugfix(68424); ?> (Add new PDO mysql connection attr to control multi
+    statements option).</li>
+</ul></li>
+<li>SPL:
+<ul>
+  <li><?php bugfix(66405); ?> (RecursiveDirectoryIterator::CURRENT_AS_PATHNAME
+    breaks the RecursiveIterator).</li>
+  <li><?php bugfix(65213); ?> (cannot cast SplFileInfo to boolean).</li>
+  <li><?php bugfix(68479); ?> (Added escape parameter to SplFileObject::fputcsv).</li>
+</ul></li>
+<li>SQLite:
+<ul>
+  <li><?php bugfix(68120); ?> (Update bundled libsqlite to 3.8.7.2).</li>
+</ul></li>
+<li>Streams:
+<ul>
+  <li><?php bugfix(68532); ?> (convert.base64-encode omits padding bytes).</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
+
+<section class="version" id="5.5.20"><!-- {{{ 5.5.20 -->
+<h3>Version 5.5.20</h3>
+<?php release_date('18-Dec-2014'); ?>
+<ul><li>Core:
+<ul>
+  <li><?php bugfix(68091); ?> (Some Zend headers lack appropriate extern "C" blocks).</li>
+  <li><?php bugfix(68185); ?> ("Inconsistent insteadof definition."- incorrectly triggered).</li>
+  <li><?php bugfix(68370); ?> ("unset($this)" can make the program crash).</li>
+  <li><?php bugfix(68545); ?> (NULL pointer dereference in unserialize.c).</li>
+  <li><?php bugfix(68594); ?> (Use after free vulnerability in unserialize()). (CVE-2014-8142)</li>
+</ul></li>
+<li>Date:
+<ul>
+  <li>Fixed day_of_week function as it could sometimes return negative values internally.</li>
+</ul></li>
+<li>FPM:
+<ul>
+  <li><?php bugfix(68381); ?> (fpm_unix_init_main ignores log_level).</li>
+  <li><?php bugfix(68420); ?> (listen=9000 listens to ipv6 localhost instead of all addresses).</li>
+  <li><?php bugfix(68421); ?> (access.format='%R' doesn't log ipv6 address).</li>
+  <li><?php bugfix(68423); ?> (PHP-FPM will no longer load all pools).</li>
+  <li><?php bugfix(68428); ?> (listen.allowed_clients is IPv4 only).</li>
+  <li><?php bugfix(68452); ?> (php-fpm man page is oudated).</li>
+  <li><?php bugfix(68458); ?> (Change pm.start_servers default warning to notice).</li>
+  <li><?php bugfix(68463); ?> (listen.allowed_clients can silently result in no allowed access).</li>
+  <li><?php bugfix(68391); ?> (php-fpm conf files loading order).</li>
+  <li><?php bugfix(68478); ?> (access.log don't use prefix).</li>
+</ul></li>
+<li>Mcrypt:
+<ul>
+  <li>Fixed possible read after end of buffer and use after free.</li>
+</ul></li>
+<li>PDO_pgsql:
+<ul>
+  <li><?php bugfix(66584); ?> (Segmentation fault on statement deallocation).</li>
+  <li><?php bugfix(67462); ?> (PDO_PGSQL::beginTransaction() wrongly throws exception
+  when not in transaction).</li>
+  <li><?php bugfix(68351); ?> (PDO::PARAM_BOOL and ATTR_EMULATE_PREPARES misbehaving).</li>
+</ul></li>
+<li>SOAP:
+<ul>
+  <li><?php bugfix(68361); ?> (Segmentation fault on SoapClient::__getTypes).</li>
+</ul></li>
+<li>zlib:
+<ul>
+  <li><?php bugfix(53829); ?> (Compiling PHP with large file support will replace
+    function gzopen by gzopen64).</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
+<section class="version" id="5.5.19"><!-- {{{ 5.5.19 -->
+<h3>Version 5.5.19</h3>
+<?php release_date('13-Nov-2014'); ?>
+<ul><li>Core:
+<ul>
+  <li><?php bugfix(68095); ?> (AddressSanitizer reports a heap buffer overflow in
+    php_getopt()).</li>
+  <li><?php bugfix(68118); ?> ($a-&gt;foo .= 'test'; can leave $a-&gt;foo undefined).</li>
+  <li><?php bugfix(68129); ?> (parse_url() - incomplete support for empty usernames
+    and passwords).</li>
+  <li><?php bugfix(68365); ?> (zend_mm_heap corrupted after memory overflow in
+    zend_hash_copy).</li>
+</ul></li>
+<li>cURL:
+<ul>
+  <li>Add CURL_SSLVERSION_TLSv1_0, CURL_SSLVERSION_TLSv1_1, and
+    CURL_SSLVERSION_TLSv1_2 constants if supported by libcurl.</li>
+</ul></li>
+<li>Fileinfo:
+<ul>
+  <li><?php bugfix(66242); ?> (libmagic: don't assume char is signed).</li>
+  <li><?php bugfix(68283); ?> (fileinfo: out-of-bounds read in elf note headers).
+    (CVE-2014-3710)</li>
+</ul></li>
+<li>FPM:
+<ul>
+  <li><?php implemented(55508); ?> (listen and listen.allowed_clients should take IPv6
+    addresses.</li>
+</ul></li>
+<li>GD:
+<ul>
+  <li><?php bugfix(65171); ?>imagescale() fails without height param</li>
+</ul></li>
+<li>GMP:
+<ul>
+  <li><?php bugfix(63595); ?> (GMP memory management conflicts with other libraries
+    using GMP).</li>
+</ul></li>
+<li>Mysqli:
+<ul>
+  <li><?php bugfix(68114); ?> (linker error on some OS X machines with fixed width
+    decimal support).</li>
+</ul></li>
+<li>ODBC:
+<ul>
+  <li><?php bugfix(68087); ?> (ODBC not correctly reading DATE column when preceded by
+    a VARCHAR column)</li>
+</ul></li>
+<li>SPL:
+<ul>
+  <li><?php bugfix(68128); ?> (Regression in RecursiveRegexIterator)</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
+<section class="version" id="5.5.18"><!-- {{{ 5.5.18 -->
+<h3>Version 5.5.18</h3>
+<?php release_date('16-Oct-2014'); ?>
+<ul><li>Core:
+<ul>
+  <li><?php bugfix(67985); ?> (Incorrect last used array index copied to new array after
+    unset).</li>
+  <li><?php bugfix(67739); ?> (Windows 8.1/Server 2012 R2 OS build number reported
+    as 6.2 (instead of 6.3)).</li>
+  <li><?php bugfix(67633); ?> (A foreach on an array returned from a function not doing
+    copy-on-write).</li>
+  <li><?php bugfix(51800); ?> (proc_open on Windows hangs forever).</li>
+  <li><?php bugfix(68044); ?> (Integer overflow in unserialize() (32-bits only)).
+    (CVE-2014-3669)</li>
+</ul></li>
+<li>cURL:
+<ul>
+  <li><?php bugfix(68089); ?> (NULL byte injection - cURL lib).</li>
+</ul></li>
+<li>Exif:
+<ul>
+  <li><?php bugfix(68113); ?> (Heap corruption in exif_thumbnail()). (CVE-2014-3670)</li>
+</ul></li>
+<li>FPM:
+<ul>
+  <li><?php bugfix(65641); ?> (PHP-FPM incorrectly defines the SCRIPT_NAME variable
+    when using Apache, mod_proxy-fcgi and ProxyPass).</li>
+</ul></li>
+<li>OpenSSL:
+<ul>
+  <li>Revert regression introduced by fix of bug <?php bugl(41631); ?>.</li>
+</ul></li>
+<li>Reflection:
+<ul>
+  <li><?php bugfix(68103); ?> (Duplicate entry in Reflection for class alias).</li>
+</ul></li>
+<li>Session:
+<ul>
+  <li><?php bugfix(67972); ?> (SessionHandler Invalid memory read create_sid()).</li>
+</ul></li>
+<li>XMLRPC:
+<ul>
+  <li><?php bugfix(68027); ?> (Global buffer overflow in mkgmtime() function).
+    (CVE-2014-3668)</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
+<section class="version" id="5.5.17"><!-- {{{ 5.5.17 -->
+<h3>Version 5.5.17</h3>
+<?php release_date('18-Sep-2014'); ?>
+<ul><li>Core:
+<ul>
+  <li><?php bugfix(47358); ?> (glob returns error, should be empty array()).</li>
+  <li><?php bugfix(65463); ?> (SIGSEGV during zend_shutdown()).</li>
+  <li><?php bugfix(66036); ?> (Crash on SIGTERM in apache process).</li>
+  <li><?php bugfix(67878); ?> (program_prefix not honoured in man pages).</li>
+</ul></li>
+<li>COM:
+<ul>
+  <li><?php bugfix(41577); ?> (DOTNET is successful once per server run).</li>
+</ul></li>
+<li>Date:
+<ul>
+  <li><?php bugfix(66091); ?> (memory leaks in DateTime constructor).</li>
+  <li><?php bugfix(66985); ?> (Some timezones are no longer valid in PHP 5.5.10).</li>
+  <li><?php bugfix(67109); ?> (First uppercase letter breaks date string parsing).</li>
+</ul></li>
+<li>FPM:
+<ul>
+  <li><?php bugfix(67606); ?> (FPM with mod_fastcgi/apache2.4 is broken).</li>
+</ul></li>
+<li>GD:
+<ul>
+  <li>Made fontFetch's path parser thread-safe.</li>
+</ul></li>
+<li>MySQLi:
+<ul>
+  <li><?php bugfix(67839); ?> (mysqli does not handle 4-byte floats correctly).</li>
+</ul></li>
+<li>OpenSSL:
+<ul>
+  <li><?php bugfix(41631); ?> (socket timeouts not honored in blocking SSL reads).</li>
+  <li><?php bugfix(67850); ?> (extension won't build if openssl compiled without SSLv3).</li>
+</ul></li>
+<li>SPL:
+<ul>
+  <li><?php bugfix(67813); ?> (CachingIterator::__construct InvalidArgumentException
+    wrong message).</li>
+</ul></li>
+<li>Zlib:
+<ul>
+  <li><?php bugfix(67724); ?> (chained zlib filters silently fail with large amounts of
+    data).</li>
+  <li><?php bugfix(67865); ?> (internal corruption phar error).</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
 <section class="version" id="5.5.16"><!-- {{{ 5.5.16 -->
 <h3>Version 5.5.16</h3>
 <?php release_date('21-Aug-2014'); ?>
@@ -3941,119 +3614,6 @@ FILTER_FLAG_NO_PRIV_RANGE).</li>
 </ul>
 <!-- }}} --></section>
 
-<section class="version" id="5.4.32"><!-- {{{ 5.4.32 -->
-<h3>Version 5.4.32</h3>
-<?php release_date('21-Aug-2014'); ?>
-<ul><li>Core:
-<ul>
-  <li><?php bugfix(67717); ?> (segfault in dns_get_record) (CVE-2014-3597).</li>
-  <li><?php bugfix(67693); ?> (incorrect push to the empty array)</li>
-</ul></li>
-<li>COM:
-<ul>
-  <li>Fixed missing type checks in com_event_sink.</li>
-</ul></li>
-<li>Fileinfo:
-<ul>
-  <li><?php bugfix(67705); ?> (extensive backtracking in rule regular expression). (CVE-2014-3538)</li>
-  <li><?php bugfix(67716); ?> (Segfault in cdf.c) (CVE-2014-3587).</li>
-</ul></li>
-<li>GD:
-<ul>
-  <li><?php bugfix(66901); ?> (php-gd 'c_color' NULL pointer dereference). (CVE-2014-2497)</li>
-  <li><?php bugfix(67730); ?> (Null byte injection possible with imagexxx functions) (CVE-2014-5120).</li>
-</ul></li>
-<li>Milter:
-<ul>
-  <li><?php bugfix(67715); ?> (php-milter does not build and crashes randomly).</li>
-</ul></li>
-<li>OpenSSL:
-<ul>
-  <li>Fixed missing type checks in OpenSSL options (Yussuf Khalil, Stas).</li>
-</ul></li>
-<li>Readline:
-<ul>
-  <li><?php bugfix(55496); ?> (Interactive mode doesn't force a newline before the prompt).</li>
-  <li><?php bugfix(67496); ?> (Save command history when exiting interactive shell with control-c).</li>
-</ul></li>
-<li>Sessions:
-<ul>
-  <li>Fixed missing type checks in php_session_create_id.</li>
-</ul></li>
-<li>SPL:
-<ul>
-  <li><?php bugfix(67539); ?> (ArrayIterator use-after-free due to object change during sorting) (CVE-2014-4698).</li>
-  <li><?php bugfix(67538); ?> (SPL Iterators use-after-free) (CVE-2014-4670).</li>
-</ul></li>
-<li>ODBC:
-<ul>
-  <li><?php bugfix(60616); ?> (odbc_fetch_into returns junk data at end of multi-byte char fields).</li>
-</ul></li>
-</ul>
-<!-- }}} --></section>
-
-<section class="version" id="5.3.29"><!-- {{{ 5.3.29 -->
-<h3>Version 5.3.29</h3>
-<?php release_date('14-Aug-2014'); ?>
-<ul><li>Core:
-<ul>
-  <li><?php bugfix(66127); ?> (Segmentation fault with ArrayObject unset).</li>
-  <li><?php bugfix(67247); ?> (spl_fixedarray_resize integer overflow).</li>
-  <li><?php bugfix(67249); ?> (printf out-of-bounds read).</li>
-  <li><?php bugfix(67250); ?> (iptcparse out-of-bounds read).</li>
-  <li><?php bugfix(67252); ?> (convert_uudecode out-of-bounds read).</li>
-  <li><?php bugfix(67359); ?> (Segfault in recursiveDirectoryIterator).</li>
-  <li><?php bugfix(67390); ?> (insecure temporary file use in the configure script). (CVE-2014-3981)</li>
-  <li><?php bugfix(67399); ?> (putenv with empty variable may lead to crash).</li>
-  <li><?php bugfix(67492); ?> (unserialize() SPL ArrayObject / SPLObjectStorage Type Confusion) (CVE-2014-3515).</li>
-  <li><?php bugfix(67498); ?> (phpinfo() Type Confusion Information Leak Vulnerability). (CVE-2014-4721)</li>
-</li>
-</ul></li>
-<li>COM:
-<ul>
-  <li>Fixed missing type checks in com_event_sink.</li>
-</ul></li>
-<li>Date:
-<ul>
-  <li><?php bugfix(66060); ?> (Heap buffer over-read in DateInterval). (CVE-2013-6712)</li>
-  <li><?php bugfix(67251); ?> (date_parse_from_format out-of-bounds read).</li>
-  <li><?php bugfix(67253); ?> (timelib_meridian_with_check out-of-bounds read).</li>
-</ul></li>
-<li>Exif:
-<ul>
-  <li><?php bugfix(65873); ?> (Integer overflow in exif_read_data()).</li>
-</ul></li>
-<li>Fileinfo:
-<ul>
-  <li><?php bugfix(66307); ?> (Fileinfo crashes with powerpoint files).</li>
-  <li><?php bugfix(67326); ?> (fileinfo: cdf_read_short_sector insufficient boundary check). (CVE-2014-0207)</li>
-  <li><?php bugfix(67327); ?> (fileinfo: CDF infinite loop in nelements DoS). (CVE-2014-0238)</li>
-  <li><?php bugfix(67328); ?> (fileinfo: fileinfo: numerous file_printf calls resulting in performance degradation). (CVE-2014-0237)</li>
-  <li><?php bugfix(67410); ?> (fileinfo: mconvert incorrect handling of truncated pascal string size) (CVE-2014-3478).</li>
-  <li><?php bugfix(67411); ?> (fileinfo: cdf_check_stream_offset insufficient boundary check) (CVE-2014-3479).</li>
-  <li><?php bugfix(67412); ?> (fileinfo: cdf_count_chain insufficient boundary check) (CVE-2014-3480).</li>
-  <li><?php bugfix(67413); ?> (fileinfo: cdf_read_property_info insufficient boundary check) (CVE-2014-3487).</li>
-</ul></li>
-<li>Intl:
-<ul>
-  <li><?php bugfix(67349); ?> (Locale::parseLocale Double Free).</li>
-  <li><?php bugfix(67397); ?> (Buffer overflow in locale_get_display_name and uloc_getDisplayName (libicu 4.8.1)).</li>
-</ul></li>
-<li>Network:
-<ul>
-  <li><?php bugfix(67432); ?> (Fix potential segfault in dns_get_record()). (CVE-2014-4049)</li>
-</ul></li>
-<li>OpenSSL:
-<ul>
-  <li>Fixed missing type checks in OpenSSL options.</li>
-</ul></li>
-<li>Session:
-<ul>
-  <li>Fixed missing type checks in php_session_create_id.</li>
-</ul></li>
-</ul>
-<!-- }}} --></section>
-
 <section class="version" id="5.5.15"><!-- {{{ 5.5.15 -->
 <h3>Version 5.5.15</h3>
 <?php release_date('24-Jul-2014'); ?>
@@ -4082,7 +3642,7 @@ FILTER_FLAG_NO_PRIV_RANGE).</li>
 </ul></li>
 <li>Intl:
 <ul>
-  <li><?php bugfix(66921); ?> (Wrong argument type hint for function 
+  <li><?php bugfix(66921); ?> (Wrong argument type hint for function
     intltz_from_date_time_zone).</li>
   <li><?php bugfix(67052); ?> (NumberFormatter::parse() resets LC_NUMERIC setting).</li>
 </ul></li>
@@ -4102,7 +3662,7 @@ FILTER_FLAG_NO_PRIV_RANGE).</li>
 </ul></li>
 <li>SPL:
 <ul>
-  <li><?php bugfix(67539); ?> (ArrayIterator use-after-free due to object change during 
+  <li><?php bugfix(67539); ?> (ArrayIterator use-after-free due to object change during
     sorting). (CVE-2014-4698)</li>
   <li><?php bugfix(67538); ?> (SPL Iterators use-after-free) (CVE-2014-4670).</li>
 </ul></li>
@@ -4112,48 +3672,6 @@ FILTER_FLAG_NO_PRIV_RANGE).</li>
 </ul></li>
 </ul>
 <!-- }}} --></section>
-
-<section class="version" id="5.4.31"><!-- {{{ 5.4.31 -->
-<h3>Version 5.4.31</h3>
-<?php release_date('24-Jul-2014'); ?>
-<ul><li>Core:
-<ul>
-  <li><?php bugfix(67428); ?> (header('Location: foo') will override a 308-399 response code).</li>
-  <li><?php bugfix(67436); ?> (Autoloader isn't called if two method definitions don't match).</li>
-  <li><?php bugfix(67091); ?> (make install fails to install libphp5.so on FreeBSD 10.0).</li>
-  <li><?php bugfix(67151); ?> (strtr with empty array crashes).</li>
-  <li><?php bugfix(67407); ?> (Windows 8.1/Server 2012 R2 reported as Windows 8/Server 2012).</li>
-</ul></li>
-<li>CLI server:
-<ul>
-  <li><?php implemented(67429); ?> (CLI server is missing some new HTTP response codes).</li>
-  <li><?php bugfix(66830); ?> (Empty header causes PHP built-in web server to hang).</li>
-</ul></li>
-<li>FPM:
-<ul>
-  <li><?php bugfix(67530); ?> (error_log=syslog ignored).</li>
-  <li><?php bugfix(67531); ?> (syslog cannot be set in pool configuration).</li>
-</ul></li>
-<li>Intl:
-<ul>
-  <li><?php bugfix(67052); ?> (NumberFormatter::parse() resets LC_NUMERIC setting).</li>
-</ul></li>
-<li>pgsql:
-<ul>
-  <li><?php bugfix(67550); ?> (Error in code "form" instead of "from", pgsql.c, line 756), which affected builds against libpq &lt; 7.3.</li>
-</ul></li>
-<li>Phar:
-<ul>
-  <li><?php bugfix(67587); ?> (Redirection loop on nginx with FPM).</li>
-</ul></li>
-<li>Streams:
-<ul>
-  <li><?php bugfix(67430); ?> (http:// wrapper doesn't follow 308 redirects).</li>
-</ul></li>
-</ul>
-<!-- }}} --></section>
-
-
 <section class="version" id="5.5.14"><!-- {{{ 5.5.14 -->
 <h3>Version 5.5.14</h3>
 <?php release_date('26-Jun-2014'); ?>
@@ -4222,64 +3740,8 @@ FILTER_FLAG_NO_PRIV_RANGE).</li>
   <li><?php bugfix(66127); ?> (Segmentation fault with ArrayObject unset).</li>
   <li><?php bugfix(67359); ?> (Segfault in recursiveDirectoryIterator).</li>
   <li><?php bugfix(67360); ?> (Missing element after ArrayObject::getIterator).</li>
-  <li><?php bugfix(67492); ?> (unserialize() SPL ArrayObject / SPLObjectStorage Type 
+  <li><?php bugfix(67492); ?> (unserialize() SPL ArrayObject / SPLObjectStorage Type
     Confusion). (CVE-2014-3515).</li>
-</ul></li>
-</ul>
-<!-- }}} --></section>
-
-<section class="version" id="5.4.30"><!-- {{{ 5.4.30 -->
-<h3>Version 5.4.30</h3>
-<?php release_date('26-Jun-2014'); ?>
-<ul><li>Core:
-<ul>
-  <li>Fixed BC break introduced by patch for bug <?php bugl(67072); ?>.</li>
-  <li><?php bugfix(66622); ?> (Closures do not correctly capture the late bound class (static::) in some cases).</li>
-  <li><?php bugfix(67390); ?> (insecure temporary file use in the configure script) (CVE-2014-3981).</li>
-  <li><?php bugfix(67399); ?> (putenv with empty variable may lead to crash).</li>
-  <li><?php bugfix(67498); ?> (phpinfo() Type Confusion Information Leak Vulnerability). (CVE-2014-4721)</li>
-</ul></li>
-<li>CLI server:
-<ul>
-  <li><?php bugfix(67406); ?> (built-in web-server segfaults on startup).</li>
-</ul></li>
-<li>Date:
-<ul>
-  <li><?php bugfix(67308); ?> (Serialize of DateTime truncates fractions of second).</li>
-  <li>Fixed regression in fix for bug <?php bugl(67118); ?> (constructor can't be called twice).</li>
-</ul></li>
-<li>Fileinfo:
-<ul>
-  <li><?php bugfix(67326); ?> (fileinfo: cdf_read_short_sector insufficient boundary check) (CVE-2014-0207).</li>
-  <li><?php bugfix(67410); ?> (fileinfo: mconvert incorrect handling of truncated pascal string size) (CVE-2014-3478).</li>
-  <li><?php bugfix(67411); ?> (fileinfo: cdf_check_stream_offset insufficient boundary check) (CVE-2014-3479).</li>
-  <li><?php bugfix(67412); ?> (fileinfo: cdf_count_chain insufficient boundary check) (CVE-2014-3480).</li>
-  <li><?php bugfix(67413); ?> (fileinfo: cdf_read_property_info insufficient boundary check) (CVE-2014-3487).</li>
-</ul></li>
-<li>Intl:
-<ul>
-  <li><?php bugfix(67349); ?> (Locale::parseLocale Double Free).</li>
-  <li><?php bugfix(67397); ?> (Buffer overflow in locale_get_display_name and uloc_getDisplayName (libicu 4.8.1)).</li>
-</ul></li>
-<li>Network:
-<ul>
-  <li><?php bugfix(67432); ?> (Fix potential segfault in dns_get_record()) (CVE-2014-4049).</li>
-</ul></li>
-<li>OpenSSL:
-<ul>
-  <li><?php bugfix(65698); ?> (certificates validity parsing does not work past 2050).</li>
-  <li><?php bugfix(66636); ?> (openssl_x509_parse warning with V_ASN1_GENERALIZEDTIME).</li>
-</ul></li>
-<li>SOAP:
-<ul>
-  <li><?php implemented(49898); ?> (Add SoapClient::__getCookies()).</li>
-</ul></li>
-<li>SPL:
-<ul>
-  <li><?php bugfix(66127); ?> (Segmentation fault with ArrayObject unset).</li>
-  <li><?php bugfix(67359); ?> (Segfault in recursiveDirectoryIterator).</li>
-  <li><?php bugfix(67360); ?> (Missing element after ArrayObject::getIterator).</li>
-  <li><?php bugfix(67492); ?> (unserialize() SPL ArrayObject / SPLObjectStorage Type Confusion) (CVE-2014-3515).</li>
 </ul></li>
 </ul>
 <!-- }}} --></section>
@@ -4349,57 +3811,13 @@ FILTER_FLAG_NO_PRIV_RANGE).</li>
 </ul>
 <!-- }}} --></section>
 
-<section class="version" id="5.4.29"><!-- {{{ 5.4.29 -->
-<h3>Version 5.4.29</h3>
-<?php release_date('29-May-2014'); ?>
-<ul><li>COM:
-<ul>
-  <li><?php bugfix(66431); ?> (Special Character via COM Interface (CP_UTF8)).</li>
-</ul></li>
-<li>Core:
-<ul>
-  <li><?php bugfix(65701); ?> (copy() doesn't work when destination filename is created by tempnam()).</li>
-  <li><?php bugfix(67072); ?> (Echoing unserialized "SplFileObject" crash).</li>
-  <li><?php bugfix(67245); ?> (usage of memcpy() with overlapping src and dst in zend_exceptions.c).</li>
-  <li><?php bugfix(67247); ?> (spl_fixedarray_resize integer overflow).</li>
-  <li><?php bugfix(67249); ?> (printf out-of-bounds read).</li>
-  <li><?php bugfix(67250); ?> (iptcparse out-of-bounds read).</li>
-  <li><?php bugfix(67252); ?> (convert_uudecode out-of-bounds read). (Stas)</li>
-</ul></li>
-<li>Fileinfo:
-<ul>
-  <li><?php bugfix(66307); ?> (Fileinfo crashes with powerpoint files).</li>
-  <li><?php bugfix(67327); ?> (fileinfo: CDF infinite loop in nelements DoS). (CVE-2014-0238)</li>
-  <li><?php bugfix(67328); ?> (fileinfo: fileinfo: numerous file_printf calls resulting in performance degradation). (CVE-2014-0237)</li>
-</ul></li>
-<li>Date:
-<ul>
-  <li><?php bugfix(67118); ?> (DateTime constructor crash with invalid data).</li>
-  <li><?php bugfix(67251); ?> (date_parse_from_format out-of-bounds read).</li>
-  <li><?php bugfix(67253); ?> (timelib_meridian_with_check out-of-bounds read).</li>
-</ul></li>
-<li>DOM:
-<ul>
-  <li><?php bugfix(67081); ?> (DOMDocumentType-&gt;internalSubset returns entire DOCTYPE tag, not only the subset).</li>
-</ul></li>
-<li>FPM:
-<ul>
-  <li><?php bugfix(66908); ?> (php-fpm reload leaks epoll_create() file descriptor).</li>
-</ul></li>
-<li>Phar:
-<ul>
-  <li><?php bugfix(64498); ?> ($phar-&gt;buildFromDirectory can't compress file with an accent in its name).</li>
-</ul></li>
-</ul>
-<!-- }}} --></section>
-
 <section class="version" id="5.5.12"><!-- {{{ 5.5.12 -->
 <h3>Version 5.5.12</h3>
 <?php release_date('01-May-2014'); ?>
 <ul><li>Core:
 <ul>
   <li><?php bugfix(61019); ?> (Out of memory on command stream_get_contents).</li>
-  <li><?php bugfix(64330); ?> (stream_socket_server() creates wrong Abstract Namespace 
+  <li><?php bugfix(64330); ?> (stream_socket_server() creates wrong Abstract Namespace
     UNIX sockets).</li>
   <li><?php bugfix(66182); ?> (exit in stream filter produces segfault).</li>
   <li><?php bugfix(66736); ?> (fpassthru broken).</li>
@@ -4465,67 +3883,6 @@ FILTER_FLAG_NO_PRIV_RANGE).</li>
 <ul>
   <li>Fixed Apache log issue caused by APR's lack of support for %zu
     (APR issue https://issues.apache.org/bugzilla/show_bug.cgi?id=56120)</li>
-</ul></li>
-</ul>
-<!-- }}} --></section>
-
-<section class="version" id="5.4.28"><!-- {{{ 5.4.28 -->
-<h3>Version 5.4.28</h3>
-<?php release_date('01-May-2014'); ?>
-<ul><li>Core:
-<ul>
-  <li><?php bugfix(61019); ?> (Out of memory on command stream_get_contents).</li>
-  <li><?php bugfix(64330); ?> (stream_socket_server() creates wrong Abstract Namespace UNIX sockets).</li>
-  <li><?php bugfix(66171); ?> (Symlinks and session handler allow open_basedir bypass).</li>
-  <li><?php bugfix(66182); ?> (exit in stream filter produces segfault).</li>
-  <li><?php bugfix(66736); ?> (fpassthru broken).</li>
-  <li><?php bugfix(67024); ?> (getimagesize should recognize BMP files with negative height).</li>
-</ul></li>
-<li>cURL:
-<ul>
-  <li><?php bugfix(66562); ?> (curl_exec returns differently than curl_multi_getcontent).</li>
-</ul></li>
-<li>Date:
-<ul>
-  <li><?php bugfix(66721); ?> (__wakeup of DateTime segfaults when invalid object data is supplied).</li>
-</ul></li>
-<li>Embed:
-<ul>
-  <li><?php bugfix(65715); ?> (php5embed.lib isn't provided anymore).</li>
-</ul></li>
-<li>Fileinfo:
-<ul>
-  <li><?php bugfix(66987); ?> (Memory corruption in fileinfo ext / bigendian).</li>
-</ul></li>
-<li>FPM:
-<ul>
-  <li><?php bugfix(66482); ?> (unknown entry 'priority' in php-fpm.conf).</li>
-  <li><?php bugfix(67060); ?> (sapi/fpm: possible privilege escalation due to insecure default configuration) (CVE-2014-0185).</li>
-</ul></li>
-<li>JSON:
-<ul>
-  <li><?php bugfix(66021); ?> (Blank line inside empty array/object when JSON_PRETTY_PRINT is set).</li>
-</ul></li>
-<li>LDAP:
-<ul>
-  <li>Fixed issue with null bytes in LDAP bindings.</li>
-</ul></li>
-<li>OpenSSL:
-<ul>
-  <li><?php bugfix(66942); ?> (memory leak in openssl_seal()).</li>
-  <li><?php bugfix(66952); ?> (memory leak in openssl_open()).</li>
-</ul></li>
-<li>SimpleXML:
-<ul>
-  <li><?php bugfix(66084); ?> (simplexml_load_string() mangles empty node name) (Anatol)</li>
-</ul></li>
-<li>XSL:
-<ul>
-  <li><?php bugfix(53965); ?> (&lt;xsl:include&gt; cannot find files with relative paths when loaded with "file://").</li>
-</ul></li>
-<li>Apache2 Handler SAPI:
-<ul>
-  <li>Fixed Apache log issue caused by APR's lack of support for %zu (APR issue <a href="https://issues.apache.org/bugzilla/show_bug.cgi?id=56120">56120</a>).</li>
 </ul></li>
 </ul>
 <!-- }}} --></section>
@@ -4599,41 +3956,6 @@ FILTER_FLAG_NO_PRIV_RANGE).</li>
 </ul>
 <!-- }}} --></section>
 
-<section class="version" id="5.4.27"><!-- {{{ 5.4.27 -->
-<h3>Version 5.4.27</h3>
-<?php release_date('03-Apr-2014'); ?>
-<ul><li>Core:
-<ul>
-  <li><?php bugfix(60602); ?> (proc_open() changes environment array)</li>
-</ul></li>
-<li>Fileinfo:
-<ul>
-  <li><?php bugfix(66946); ?> (fileinfo: extensive backtracking in awk rule regular expression). (CVE-2013-7345)</li>
-</ul></li>
-<li>FPM:
-<ul>
-  <li>Added clear_env configuration directive to disable clearenv() call.</li>
-</ul></li>
-<li>GMP:
-<ul>
-  <li><?php bugfix(66872); ?> (invalid argument crashes gmp_testbit)</li>
-</ul></li>
-<li>Mail:
-<ul>
-  <li><?php bugfix(66535); ?> (Don't add newline after X-PHP-Originating-Script)</li>
-</ul></li>
-<li>MySQLi:
-<ul>
-  <li><?php bugfix(66762); ?> (Segfault in mysqli_stmt::bind_result() when link closed)</li>
-</ul></li>
-<li>Openssl:
-<ul>
-  <li><?php bugfix(66833); ?> (Default disgest algo is still MD5, switch to SHA1)</li>
-</ul></li>
-</ul>
-<!-- }}} --></section>
-
-
 <section class="version" id="5.5.10"><!-- {{{ 5.5.10 -->
 <h3>Version 5.5.10</h3>
 <?php release_date('06-Mar-2014'); ?>
@@ -4681,38 +4003,6 @@ FILTER_FLAG_NO_PRIV_RANGE).</li>
 </ul>
 <!-- }}} --></section>
 
-<section class="version" id="5.4.26"><!-- {{{ 5.4.26 -->
-<h3>Version 5.4.26</h3>
-<?php release_date('06-Mar-2014'); ?>
-<ul><li>Date:
-<ul>
-  <li><?php bugfix(44780); ?> (some time zone offsets not recognized by timezone_name_from_abbr)</li>
-  <li><?php bugfix(45543); ?> (DateTime::setTimezone can not set timezones without ID)</li>
-</ul></li>
-<li>JSON:
-<ul>
-  <li><?php bugfix(65753); ?> (JsonSerializeable couldn't implement on module extension)</li>
-</ul></li>
-<li>Fileinfo:
-<ul>
-  <li><?php bugfix(66731); ?> (file: infinite recursion) (CVE-2014-1943).</li>
-  <li><?php bugfix(66820); ?> (out-of-bounds memory access in fileinfo) (CVE-2014-2270).</li>
-</ul></li>
-<li>LDAP:
-<ul>
-  <li>Implemented ldap_modify_batch (https://wiki.php.net/rfc/ldap_modify_batch).</li>
-</ul></li>
-<li>Openssl:
-<ul>
-  <li><?php bugfix(66501); ?> (Add EC key support to php_openssl_is_private_key).</li>
-</ul></li>
-<li>Pgsql:
-<ul>
-  <li>Added warning for dangerous client encoding and remove possible injections for pg_insert()/pg_update()/pg_delete()/pg_select().</li>
-</ul></li>
-</ul>
-<!-- }}} --></section>
-
 <section class="version" id="5.5.9"><!-- {{{ 5.5.9 -->
 <h3>Version 5.5.9</h3>
 <?php release_date('06-Feb-2014'); ?>
@@ -4736,7 +4026,7 @@ FILTER_FLAG_NO_PRIV_RANGE).</li>
 </ul></li>
 <li>Readline:
 <ul>
-  <li><?php bugfix(66412); ?> (readline_clear_history() with libedit causes segfault after #65714).</li>
+  <li><?php bugfix(66412); ?> (readline_clear_history() with libedit causes segfault after <?php bugl(65714); ?>).</li>
 </ul></li>
 <li>Session:
 <ul>
@@ -4754,29 +4044,6 @@ FILTER_FLAG_NO_PRIV_RANGE).</li>
 <li>Zend Engine:
 <ul>
   <li><?php bugfix(66009); ?> (Failed compilation of PHP extension with C++ std library using VS 2012).</li>
-</ul></li>
-</ul>
-<!-- }}} --></section>
-
-<section class="version" id="5.4.25"><!-- {{{ 5.4.25 -->
-<h3>Version 5.4.25</h3>
-<?php release_date('06-Feb-2014'); ?>
-<ul><li>Core:
-<ul>
-  <li><?php bugfix(66286); ?> (Incorrect object comparison with inheritance).</li>
-  <li><?php bugfix(66509); ?> (copy() arginfo has changed starting from 5.4).</li>
-</ul></li>
-<li>mysqlnd:
-<ul>
-  <li><?php bugfix(66283); ?> (Segmentation fault after memory_limit).</li>
-</ul></li>
-<li>PDO_pgsql:
-<ul>
-  <li><?php bugfix(62479); ?> (PDO-psql cannot connect if password contains spaces).</li>
-</ul></li>
-<li>Session:
-<ul>
-  <li><?php bugfix(66481); ?> (Calls to session_name() segfault when session.name is null).</li>
 </ul></li>
 </ul>
 <!-- }}} --></section>
@@ -4801,7 +4068,7 @@ FILTER_FLAG_NO_PRIV_RANGE).</li>
 </ul></li>
 <li>DOM:
 <ul>
-  <li><?php bugfix(65196); ?> (Passing DOMDocumentFragment to DOMDocument::saveHTML() 
+  <li><?php bugfix(65196); ?> (Passing DOMDocumentFragment to DOMDocument::saveHTML()
     Produces invalid Markup).</li>
 </ul></li>
 <li>Exif:
@@ -4853,57 +4120,6 @@ FILTER_FLAG_NO_PRIV_RANGE).</li>
 </ul>
 <!-- }}} --></section>
 
-<section class="version" id="5.4.24"><!-- {{{ 5.4.24 -->
-<h3>Version 5.4.24</h3>
-<?php release_date('09-Jan-2014'); ?>
-<ul><li>Core:
-<ul>
-  <li>Added validation of class names in the autoload process.</li>
-  <li>Fixed invalid C code in zend_strtod.c.</li>
-  <li><?php bugfix(61645); ?> (fopen and O_NONBLOCK).</li>
-</ul></li>
-<li>Date:
-<ul>
-  <li><?php bugfix(66060); ?> (Heap buffer over-read in DateInterval, CVE-2013-6712).</li>
-  <li><?php bugfix(63391); ?> (Incorrect/inconsistent day of week prior to the year 1600).</li>
-  <li><?php bugfix(61599); ?> (Wrong Day of Week).</li>
-</ul></li>
-<li>DOM:
-<ul>
-  <li><?php bugfix(65196); ?> (Passing DOMDocumentFragment to DOMDocument::saveHTML() Produces invalid Markup).</li>
-</ul></li>
-<li>Exif:
-<ul>
-  <li><?php bugfix(65873); ?> (Integer overflow in exif_read_data()).</li>
-</ul></li>
-<li>Filter:
-<ul>
-  <li><?php bugfix(66229); ?> (128.0.0.0/16 isn't reserved any longer).</li>
-</ul></li>
-<li>GD:
-<ul>
-  <li><?php bugfix(64405); ?> (Use freetype-config for determining freetype2 dir(s)).</li>
-</ul></li>
-<li>PDO_odbc:
-<ul>
-  <li><?php bugfix(66311); ?> (Stack smashing protection kills PDO/ODBC queries).</li>
-</ul></li>
-<li>SNMP:
-<ul>
-  <li>Fixed SNMP_ERR_TOOBIG handling for bulk walk operations.</li>
-</ul></li>
-<li>XSL:
-<ul>
-  <li><?php bugfix(49634); ?> (Segfault throwing an exception in a XSL registered function).</li>
-</ul></li>
-<li>ZIP:
-<ul>
-  <li><?php bugfix(66321); ?> (ZipArchive::open() ze_obj-&gt;filename_len not real).</li>
-</ul></li>
-</ul>
-<!-- }}} --></section>
-
-
 <section class="version" id="5.5.7"><!-- {{{ 5.5.7 -->
 <h3>Version 5.5.7</h3>
 <?php release_date('12-Dec-2013'); ?>
@@ -4931,49 +4147,6 @@ FILTER_FLAG_NO_PRIV_RANGE).</li>
 <li>Openssl:
 <ul>
   <li>Fixed memory corruption in openssl_x509_parse() (CVE-2013-6420).</li>
-</ul></li>
-</ul>
-<!-- }}} --></section>
-
-<section class="version" id="5.4.23"><!-- {{{ 5.4.23 -->
-<h3>Version 5.4.23</h3>
-<?php release_date('12-Dec-2013'); ?>
-<ul><li>Core:
-<ul>
-  <li><?php bugfix(66094); ?> (unregister_tick_function tries to cast a Closure to a string).</li>
-  <li><?php bugfix(65947); ?> (basename is no more working after fgetcsv in certain situation).</li>
-</ul></li>
-<li>JSON:
-<ul>
-  <li>Fixed whitespace part of <?php bugl(64874); ?> ("json_decode handles whitespace and case-sensitivity incorrectly").</li>
-</ul></li>
-<li>MySQLi:
-<ul>
-  <li><?php bugfix(66043); ?> (Segfault calling bind_param() on mysqli).</li>
-</ul></li>
-<li>mysqlnd:
-<ul>
-  <li><?php bugfix(66124); ?> (mysqli under mysqlnd loses precision when bind_param with 'i').</li>
-  <li><?php bugfix(66141); ?> (mysqlnd quote function is wrong with NO_BACKSLASH_ESCAPES after failed query).</li>
-</ul></li>
-<li>OpenSSL:
-<ul>
-  <li>Fixed memory corruption in openssl_x509_parse() (CVE-2013-6420). (Stefan Esser).</li>
-</ul></li>
-<li>PDO:
-<ul>
-  <li><?php bugfix(65946); ?> (sql_parser permanently converts values bound to strings).</li>
-</ul></li>
-</ul>
-<!-- }}} --></section>
-
-<section class="version" id="5.3.28"><!-- {{{ 5.3.28 -->
-<h3>Version 5.3.28</h3>
-<?php release_date('12-Dec-2013'); ?>
-<ul><li>Openssl:
-<ul>
-  <li>Fixed handling null bytes in subjectAltName (CVE-2013-4248).</li>
-  <li>Fixed memory corruption in openssl_x509_parse() (CVE-2013-6420). (Stefan Esser).</li>
 </ul></li>
 </ul>
 <!-- }}} --></section>
@@ -5022,46 +4195,6 @@ FILTER_FLAG_NO_PRIV_RANGE).</li>
 </ul></li>
 </ul>
 <!-- }}} --></section>
-
-<section class="version" id="5.4.22"><!-- {{{ 5.4.22 -->
-<h3>Version 5.4.22</h3>
-<?php release_date('14-Nov-2013'); ?>
-<ul><li>Core:
-<ul>
-  <li><?php bugfix(65911); ?> (scope resolution operator - strange behavior with $this).</li>
-</ul></li>
-<li>CLI server:
-<ul>
-  <li><?php bugfix(65818); ?> (Segfault with built-in webserver and chunked transfer encoding).</li>
-</ul></li>
-<li>Exif:
-<ul>
-  <li>Fixed crash on unknown encoding.</li>
-</ul></li>
-<li>FTP:
-<ul>
-  <li><?php bugfix(65667); ?> (ftp_nb_continue produces segfault).</li>
-</ul></li>
-<li>ODBC:
-<ul>
-  <li><?php bugfix(65950); ?> (Field name truncation if the field name is bigger than 32 characters).</li>
-</ul></li>
-<li>Sockets:
-<ul>
-  <li><?php bugfix(65808); ?> (the socket_connect() won't work with IPv6 address).</li>
-</ul></li>
-<li>Standard:
-<ul>
-  <li><?php bugfix(64760); ?> (var_export() does not use full precision for floating-point numbers).</li>
-</ul></li>
-<li>XMLReader:
-<ul>
-  <li><?php bugfix(51936); ?> (Crash with clone XMLReader).</li>
-  <li><?php bugfix(64230); ?> (XMLReader does not suppress errors).</li>
-</ul></li>
-</ul>
-<!-- }}} --></section>
-
 
 <section class="version" id="5.5.5"><!-- {{{ 5.5.5 -->
 <h3>Version 5.5.5</h3>
@@ -5139,46 +4272,6 @@ FILTER_FLAG_NO_PRIV_RANGE).</li>
 </ul>
 <!-- }}} --></section>
 
-<section class="version" id="5.4.21"><!-- {{{ 5.4.21 -->
-<h3>Version 5.4.21</h3>
-<?php release_date('17-Oct-2013'); ?>
-<ul><li>Core:
-<ul>
-  <li><?php bugfix(65322); ?> (compile time errors won't trigger auto loading).</li>
-</ul></li>
-<li>CLI server:
-<ul>
-  <li><?php bugfix(65633); ?> (built-in server treat some http headers as case-sensitive).</li>
-</ul></li>
-<li>Datetime:
-<ul>
-  <li><?php bugfix(64157); ?> (DateTime::createFromFormat() reports confusing error message).</li>
-</ul></li>
-<li>DBA extension:
-<ul>
-  <li><?php bugfix(65708); ?> (dba functions cast $key param to string in-place, bypassing copy on write).</li>
-</ul></li>
-<li>Filter:
-<ul>
-  <li>Add RFC 6598 IPs to reserved addresses.</li>
-  <li><?php bugfix(64441); ?> (FILTER_VALIDATE_URL rejects fully qualified domain names).</li>
-</ul></li>
-<li>IMAP:
-<ul>
-  <li><?php bugfix(65721); ?> (configure script broken in 5.5.4 and 5.4.20 when enabling imap).</li>
-</ul></li>
-<li>Standard:
-<ul>
-  <li><?php bugfix(61548); ?> (content-type must appear at the end of headers for 201 Location to work in http).</li>
-</ul></li>
-<li>Build system:
-<ul>
-  <li><?php bugfix(62396); ?> ('make test' crashes starting with 5.3.14 (missing gzencode())).</li>
-</ul></li>
-</ul>
-<!-- }}} -->
-</section>
-
 <section class="version" id="5.5.4"><!-- {{{ 5.5.4 -->
 <h3>Version 5.5.4</h3>
 <?php release_date('19-Sep-2013'); ?>
@@ -5223,94 +4316,10 @@ FILTER_FLAG_NO_PRIV_RANGE).</li>
 </ul>
 <!-- }}} --></section>
 
-<section class="version" id="5.4.20"><!-- {{{ 5.4.20 -->
-<h3>Version 5.4.20</h3>
-<?php release_date('19-Sep-2013'); ?>
-<ul><li>Core:
-<ul>
-  <li><?php bugfix(60598); ?> (cli/apache sapi segfault on objects manipulation).</li>
-  <li><?php bugfix(65579); ?> (Using traits with get_class_methods causes segfault).</li>
-  <li><?php bugfix(65490); ?> (Duplicate calls to get lineno &amp; filename for DTRACE_FUNCTION_*).</li>
-  <li><?php bugfix(65483); ?> (quoted-printable encode stream filter incorrectly encoding spaces).</li>
-  <li><?php bugfix(65481); ?> (shutdown segfault due to serialize).</li>
-  <li><?php bugfix(65470); ?> (Segmentation fault in zend_error() with --enable-dtrace).</li>
-  <li><?php bugfix(65372); ?> (Segfault in gc_zval_possible_root when return reference fails).</li>
-  <li><?php bugfix(65304); ?> (Use of max int in array_sum).</li>
-  <li><?php bugfix(65291); ?> (get_defined_constants() causes PHP to crash in a very limited case).</li>
-  <li><?php bugfix(65225); ?> (PHP_BINARY incorrectly set).</li>
-  <li>Improved fix for bug <?php bugl(63186); ?> (compile failure on netbsd).</li>
-  <li><?php bugfix(62692); ?> (PHP fails to build with DTrace).</li>
-  <li><?php bugfix(61759); ?> (class_alias() should accept classes with leading backslashes).</li>
-  <li><?php bugfix(61345); ?> (CGI mode - make install don't work).</li>
-  <li>Cherry-picked some DTrace build commits (allowing builds on Linux, bug <?php bugl(62691); ?> and bug <?php bugl(63706); ?>) from PHP 5.5 branch.</li>
-  <li><?php bugfix(61268); ?> (--enable-dtrace leads make to clobber Zend/zend_dtrace.d)</li>
-</ul></li>
-<li>cURL:
-<ul>
-  <li><?php bugfix(65458); ?> (curl memory leak).</li>
-</ul></li>
-<li>Datetime:
-<ul>
-  <li><?php bugfix(65554); ?> (createFromFormat broken when weekday name is followed by some delimiters)</li>
-  <li><?php bugfix(65564); ?> (stack-buffer-overflow in DateTimeZone stuff caught by AddressSanitizer)</li>
-</ul></li>
-<li>Openssl:
-<ul>
-  <li><?php bugfix(64802); ?> (openssl_x509_parse fails to parse subject properly in some cases).</li>
-</ul></li>
-<li>Session:
-<ul>
-  <li><?php bugfix(62129); ?> (rfc1867 crashes php even though turned off).</li>
-  <li><?php bugfix(50308); ?> (session id not appended properly for empty anchor tags).</li>
-  <li>Fixed possible buffer overflow under Windows. Note: Not a security fix.</li>
-  <li>Changed session.auto_start to PHP_INI_PERDIR.</li>
-</ul></li>
-<li>SOAP:
-<ul>
-  <li><?php bugfix(65018); ?> (SoapHeader problems with SoapServer).</li>
-</ul></li>
-<li>SPL:
-<ul>
-  <li><?php bugfix(65328); ?> (Segfault when getting SplStack object Value).</li>
-</ul></li>
-<li>PDO:
-<ul>
-  <li><?php bugfix(64953); ?> (Postgres prepared statement positional parameter casting).</li>
-</ul></li>
-<li>Phar:
-<ul>
-  <li><?php bugfix(65028); ?> (Phar::buildFromDirectory creates corrupt archives for some specific contents).</li>
-</ul></li>
-<li>Pgsql:
-<ul>
-  <li><?php bugfix(65336); ?> (pg_escape_literal/identifier() silently returns false).</li>
-  <li><?php bugfix(62978); ?> (Disallow possible SQL injections with pg_select()/pg_update() /pg_delete()/pg_insert()).</li>
-</ul></li>
-<li>Zlib:
-<ul>
-  <li><?php bugfix(65391); ?> (Unable to send vary header user-agent when ob_start('ob_gzhandler') is called).</li>
-</ul></li>
-</ul>
-<!-- }}} --></section>
-
 <section class="version" id="5.5.3"><!-- {{{ 5.5.3 -->
 <h3>Version 5.5.3</h3>
 <?php release_date('22-Aug-2013'); ?>
 <ul><li>Openssl:
-<ul>
-  <li>Fixed UMR in fix for CVE-2013-4248.</li>
-</ul></li>
-</ul>
-<!-- }}} --></section>
-
-<section class="version" id="5.4.19"><!-- {{{ 5.4.19 -->
-<h3>Version 5.4.19</h3>
-<?php release_date('22-Aug-2013'); ?>
-<ul><li>Core:
-<ul>
-  <li><?php bugfix(64503); ?> (Compilation fails with error: conflicting types for 'zendparse').</li>
-</ul></li>
-<li>Openssl:
 <ul>
   <li>Fixed UMR in fix for CVE-2013-4248.</li>
 </ul></li>
@@ -5379,106 +4388,6 @@ FILTER_FLAG_NO_PRIV_RANGE).</li>
 </ul></li>
 </ul>
 <!-- }}} --></section>
-
-<section class="version" id="5.4.18"><!-- {{{ 5.4.18 -->
-<h3>Version 5.4.18</h3>
-<?php release_date('15-Aug-2013'); ?>
-<ul><li>Core:
-<ul>
-  <li>Fixed value of FILTER_SANITIZE_FULL_SPECIAL_CHARS constant (previously was erroneously set to FILTER_SANITIZE_SPECIAL_CHARS value).</li>
-  <li><?php bugfix(65254); ?> (Exception not catchable when exception thrown in autoload with a namespace).</li>
-  <li><?php bugfix(65108); ?> (is_callable() triggers Fatal Error).</li>
-  <li><?php bugfix(65088); ?> (Generated configure script is malformed on OpenBSD).</li>
-  <li><?php bugfix(62964); ?> (Possible XSS on "Registered stream filters" info).</li>
-  <li><?php bugfix(62672); ?> (Error on serialize of ArrayObject).</li>
-  <li><?php bugfix(62475); ?> (variant_* functions causes crash when null given as an argument).</li>
-  <li><?php bugfix(60732); ?> (php_error_docref links to invalid pages).</li>
-  <li><?php bugfix(65226); ?> (chroot() does not get enabled).</li>
-</ul></li>
-<li>CGI:
-<ul>
-  <li><?php bugfix(65143); ?> (Missing php-cgi man page).</li>
-</ul></li>
-<li>CLI server:
-<ul>
-  <li><?php bugfix(65066); ?> (Cli server not responsive when responding with 422 http status code).</li>
-</ul></li>
-<li>CURL:
-<ul>
-  <li><?php bugfix(62665); ?> (curl.cainfo doesn't appear in php.ini).</li>
-</ul></li>
-<li>FPM:
-<ul>
-  <li><?php bugfix(63983); ?> (enabling FPM borks compile on FreeBSD).</li>
-</ul></li>
-<li>FTP:
-<ul>
-  <li><?php bugfix(65228); ?> (FTPs memory leak with SSL).</li>
-</ul></li>
-<li>GMP:
-<ul>
-  <li><?php bugfix(65227); ?> (Memory leak in gmp_cmp second parameter).</li>
-</ul></li>
-<li>Imap:
-<ul>
-  <li><?php bugfix(64467); ?> (Segmentation fault after imap_reopen failure).</li>
-</ul></li>
-<li>Intl:
-<ul>
-  <li><?php bugfix(62759); ?> (Buggy grapheme_substr() on edge case).</li>
-  <li><?php bugfix(61860); ?> (Offsets may be wrong for grapheme_stri* functions).</li>
-</ul></li>
-<li>mysqlnd:
-<ul>
-  <li>Fixed segfault in mysqlnd when doing long prepare. </li>
-</ul></li>
-<li>ODBC:
-<ul>
-  <li><?php bugfix(61387); ?> (NULL valued anonymous column causes segfault in odbc_fetch_array).</li>
-</ul></li>
-<li>Openssl:
-<ul>
-  <li>Fixed handling null bytes in subjectAltName (CVE-2013-4248).</li>
-</ul></li>
-<li>PDO:
-<ul>
-  <li>Allowed PDO_OCI to compile with Oracle Database 12c client libraries.</li>
-</ul></li>
-<li>PDO_dblib:
-<ul>
-  <li><?php bugfix(65219); ?> (PDO/dblib not working anymore ("use dbName" not sent)).</li>
-</ul></li>
-<li>PDO_pgsql:
-<ul>
-  <li>Fixed meta data retrieve when OID is larger than 2^31.</li>
-</ul></li>
-<li>Phar:
-<ul>
-  <li><?php bugfix(65142); ?> (Missing phar man page).</li>
-</ul></li>
-<li>Session:
-<ul>
-  <li><?php bugfix(62535); ?> ($_SESSION[$key]["cancel_upload"] doesn't work as documented).</li>
-  <li><?php bugfix(35703); ?> (when session_name("123") consist only digits, should warning).</li>
-  <li><?php bugfix(49175); ?> (mod_files.sh does not support hash bits).</li>
-</ul></li>
-<li>Sockets:
-<ul>
-  <li><?php implemented(63472); ?> (Setting SO_BINDTODEVICE with socket_set_option).</li>
-</ul></li>
-<li>SPL:
-<ul>
-  <li><?php bugfix(65136); ?> (RecursiveDirectoryIterator segfault).</li>
-  <li><?php bugfix(61828); ?> (Memleak when calling Directory(Recursive)Iterator /Spl(Temp)FileObject ctor twice).</li>
-  <li><?php bugfix(60560); ?> (SplFixedArray un-/serialize, getSize(), count() return 0, keys are strings).</li>
-</ul></li>
-<li>XML:
-<ul>
-  <li><?php bugfix(65236); ?> (heap corruption in xml parser). (CVE-2013-4113)</li>
-</ul></li>
-</ul>
-<!-- }}} --></section>
-
 
 <section class="version" id="5.5.1"><!-- {{{ 5.5.1 -->
 <h3>Version 5.5.1</h3>
@@ -5558,103 +4467,6 @@ FILTER_FLAG_NO_PRIV_RANGE).</li>
 <li>CGI/FastCGI SAPI:
 <ul>
   <li>Added PHP_FCGI_BACKLOG, overrides the default listen backlog.</li>
-</ul></li>
-</ul>
-<!-- }}} --></section>
-
-<section class="version" id="5.3.27"><!-- {{{ 5.3.27 -->
-<h3>Version 5.3.27</h3>
-<?php release_date('11-Jul-2013'); ?>
-<ul><li>Core:
-<ul>
-  <li><?php bugfix(64966); ?> (segfault in zend_do_fcall_common_helper_SPEC).</li>
-  <li><?php bugfix(64960); ?> (Segfault in gc_zval_possible_root).</li>
-  <li><?php bugfix(64934); ?> (Apache2 TS crash with get_browser()).</li>
-  <li><?php bugfix(63186); ?> (compile failure on netbsd).</li>
-</ul></li>
-<li>DateTime:
-<ul>
-  <li><?php bugfix(53437); ?> (Crash when using unserialized DatePeriod instance).</li>
-</ul></li>
-<li>PDO_firebird:
-<ul>
-  <li><?php bugfix(64037); ?> (Firebird return wrong value for numeric field).</li>
-  <li><?php bugfix(62024); ?> (Cannot insert second row with null using parametrized query).</li>
-</ul></li>
-<li>PDO_pgsql:
-<ul>
-  <li><?php bugfix(64949); ?> (Buffer overflow in _pdo_pgsql_error).</li>
-</ul></li>
-<li>pgsql:
-<ul>
-  <li><?php bugfix(64609); ?> (pg_convert enum type support).</li>
-</ul></li>
-<li>SPL:
-<ul>
-  <li><?php bugfix(64997); ?> (Segfault while using RecursiveIteratorIterator on 64-bits systems).</li>
-</ul></li>
-<li>XML:
-<ul>
-  <li><?php bugfix(65236); ?> (heap corruption in xml parser). (CVE-2013-4113)</li>
-</ul></li>
-</ul>
-<!-- }}} --></section>
-
-<section class="version" id="5.4.17"><!-- {{{ 5.4.17 -->
-<h3>Version 5.4.17</h3>
-<?php release_date('04-Jul-2013'); ?>
-<ul><li>Core:
-<ul>
-  <li><?php bugfix(64988); ?> (Class loading order affects E_STRICT warning).</li>
-  <li><?php bugfix(64966); ?> (segfault in zend_do_fcall_common_helper_SPEC).</li>
-  <li><?php bugfix(64960); ?> (Segfault in gc_zval_possible_root).</li>
-  <li><?php bugfix(64936); ?> (doc comments picked up from previous scanner run).</li>
-  <li><?php bugfix(64934); ?> (Apache2 TS crash with get_browser()).</li>
-  <li><?php bugfix(64166); ?> (quoted-printable-encode stream filter incorrectly discarding whitespace).</li>
-</ul></li>
-<li>DateTime:
-<ul>
-  <li><?php bugfix(53437); ?> (Crash when using unserialized DatePeriod instance).</li>
-</ul></li>
-<li>FPM:
-<ul>
-  <li><?php bugfix(64915); ?> (error_log ignored when daemonize=0).</li>
-  <li><?php implemented(64764); ?> (add support for FPM init.d script).</li>
-</ul></li>
-<li>PDO:
-<ul>
-  <li><?php bugfix(63176); ?> (Segmentation fault when instantiate 2 persistent PDO to the same db server).</li>
-</ul></li>
-<li>PDO_DBlib:
-<ul>
-  <li><?php bugfix(63638); ?> (Cannot connect to SQL Server 2008 with PDO dblib).</li>
-  <li><?php bugfix(64338); ?> (pdo_dblib can't connect to Azure SQL).</li>
-  <li><?php bugfix(64808); ?> (FreeTDS PDO getColumnMeta on a prepared but not executed statement crashes).</li>
-</ul></li>
-<li>PDO_firebird:
-<ul>
-  <li><?php bugfix(64037); ?> (Firebird return wrong value for numeric field).</li>
-  <li><?php bugfix(62024); ?> (Cannot insert second row with null using parametrized query).</li>
-</ul></li>
-<li>PDO_mysql:
-<ul>
-  <li><?php bugfix(48724); ?> (getColumnMeta() doesn't return native_type for BIT, TINYINT and YEAR).</li>
-</ul></li>
-<li>PDO_pgsql:
-<ul>
-  <li><?php bugfix(64949); ?> (Buffer overflow in _pdo_pgsql_error).</li>
-</ul></li>
-<li>pgsql:
-<ul>
-  <li><?php bugfix(64609); ?> (pg_convert enum type support).</li>
-</ul></li>
-<li>Readline:
-<ul>
-  <li>Implement FR <?php bugl(55694); ?> (Expose additional readline variable to prevent default filename completion).</li>
-</ul></li>
-<li>SPL:
-<ul>
-  <li><?php bugfix(64997); ?> (Segfault while using RecursiveIteratorIterator on 64-bits systems).</li>
 </ul></li>
 </ul>
 <!-- }}} --></section>
@@ -6168,6 +4980,1135 @@ FILTER_FLAG_NO_PRIV_RANGE).</li>
 
 <!-- }}} --></section>
 
+<a id="PHP_5_4"></a>
+<section class="version" id="5.4.45"><!-- {{{ 5.4.45 -->
+<h3>Version 5.4.45</h3>
+<?php release_date('03-Sep-2015'); ?>
+<ul><li>Core:
+<ul>
+  <li><?php bugfix(70172); ?> (Use After Free Vulnerability in unserialize()). (CVE-2015-6834)</li>
+  <li><?php bugfix(70219); ?> (Use after free vulnerability in session deserializer). (CVE-2015-6835)</li>
+</ul></li>
+<li>EXIF:
+<ul>
+  <li><?php bugfix(70385); ?> (Buffer over-read in exif_read_data with TIFF IFD tag byte value of 32 bytes).</li>
+</ul></li>
+<li>hash:
+<ul>
+  <li><?php bugfix(70312); ?> (HAVAL gives wrong hashes in specific cases).</li>
+</ul></li>
+<li>PCRE:
+<ul>
+  <li><?php bugfix(70345); ?> (Multiple vulnerabilities related to PCRE functions).</li>
+</ul></li>
+<li>SOAP:
+<ul>
+  <li><?php bugfix(70388); ?> (SOAP serialize_function_call() type confusion / RCE). (CVE-2015-6836)</li>
+</ul></li>
+<li>SPL:
+<ul>
+  <li><?php bugfix(70365); ?> (Use-after-free vulnerability in unserialize() with SplObjectStorage). (CVE-2015-6834)</li>
+  <li><?php bugfix(70366); ?> (Use-after-free vulnerability in unserialize() with SplDoublyLinkedList). (CVE-2015-6834)</li>
+</ul></li>
+<li>XSLT:
+<ul>
+  <li><?php bugfix(69782); ?> (NULL pointer dereference). (CVE-2015-6837, CVE-2015-6838)</li>
+</ul></li>
+<li>ZIP:
+<ul>
+  <li><?php bugfix(70350); ?> (ZipArchive::extractTo allows for directory traversal when creating directories). (CVE-2014-9767)</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
+
+<section class="version" id="5.4.44"><!-- {{{ 5.4.44 -->
+<h3>Version 5.4.44</h3>
+<?php release_date('06-Aug-2015'); ?>
+<ul><li>Core:
+<ul>
+  <li><?php bugfix(69793); ?> (Remotely triggerable stack exhaustion via recursive method calls).</li>
+  <li><?php bugfix(69892); ?> (Different arrays compare indentical due to integer key truncation).</li>
+  <li><?php bugfix(70121); ?> (unserialize() could lead to unexpected methods execution / NULL pointer deref).</li>
+</ul></li>
+<li>OpenSSL:
+<ul>
+  <li><?php bugfix(70014); ?> (openssl_random_pseudo_bytes() is not cryptographically secure). (CVE-2015-8867)</li>
+</ul></li>
+<li>Phar:
+<ul>
+  <li>Improved fix for bug <?php bugl(69441) ?>.</li>
+  <li><?php bugfix(70019); ?> (Files extracted from archive may be placed outside of destination directory). (CVE-2015-6833)</li>
+</ul></li>
+<li>SOAP:
+<ul>
+  <li><?php bugfix(70081); ?> (SoapClient info leak / null pointer dereference via multiple type confusions).</li>
+</ul></li>
+<li>SPL:
+<ul>
+  <li><?php bugfix(70068); ?> (Dangling pointer in the unserialization of ArrayObject items). (CVE-2015-6832)</li>
+  <li><?php bugfix(70166); ?> (Use After Free Vulnerability in unserialize() with SPLArrayObject). (CVE-2015-6831)</li>
+  <li><?php bugfix(70168); ?> (Use After Free Vulnerability in unserialize() with SplObjectStorage). (CVE-2015-6831)</li>
+  <li><?php bugfix(70169); ?> (Use After Free Vulnerability in unserialize() with SplDoublyLinkedList). (CVE-2015-6831)</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
+<section class="version" id="5.4.43"><!-- {{{ 5.4.43 -->
+<h3>Version 5.4.43</h3>
+<?php release_date('09-Jul-2015'); ?>
+<ul><li>Core:
+<ul>
+  <li><?php bugfix(69768); ?> (escapeshell*() doesn't cater to !).</li>
+  <li><?php bugfix(69874); ?> (Can't set empty additional_headers for mail()), regression from fix to bug <?php bugl(68776); ?>.</li>
+</ul></li>
+<li>Mysqlnd:
+<ul>
+  <li><?php bugfix(69669); ?> (mysqlnd is vulnerable to BACKRONYM). (CVE-2015-3152)</li>
+</ul></li>
+<li>Phar:
+<ul>
+  <li><?php bugfix(69958); ?> (Segfault in Phar::convertToData on invalid file). (CVE-2015-5589)</li>
+  <li><?php bugfix(69923); ?> (Buffer overflow and stack smashing error in phar_fix_filepath). (CVE-2015-5590)</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
+<section class="version" id="5.4.42"><!-- {{{ 5.4.42 -->
+<h3>Version 5.4.42</h3>
+<?php release_date('11-Jun-2015'); ?>
+<ul><li>Core:
+<ul>
+  <li>Improved fix for bug <?php bugl(69545); ?> (Integer overflow in ftp_genlist() resulting in heap overflow). (CVE-2015-4643)</li>
+  <li><?php bugfix(69646); ?> (OS command injection vulnerability in escapeshellarg). (CVE-2015-4642)</li>
+  <li><?php bugfix(69719); ?> (Incorrect handling of paths with NULs). (CVE-2015-4598)</li>
+</ul></li>
+<li>Litespeed SAPI:
+<ul>
+  <li><?php bugfix(68812); ?> (Unchecked return value).</li>
+</ul></li>
+<li>Mail:
+<ul>
+  <li><?php bugfix(68776); ?> (mail() does not have mail header injection prevention for additional headers).</li>
+</ul></li>
+<li>Postgres:
+<ul>
+  <li><?php bugfix(69667); ?> (segfault in php_pgsql_meta_data). (CVE-2015-4644)</li>
+</ul></li>
+<li>Sqlite3:
+<ul>
+  <li>Upgrade bundled sqlite to 3.8.10.2. (CVE-2015-3414, CVE-2015-3415, CVE-2015-3416)</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
+<section class="version" id="5.4.41"><!-- {{{ 5.4.41 -->
+<h3>Version 5.4.41</h3>
+<?php release_date('14-May-2015'); ?>
+<ul><li>Core:
+<ul>
+  <li><?php bugfix(69364); ?> (PHP Multipart/form-data remote dos Vulnerability). (CVE-2015-4024)</li>
+  <li><?php bugfix(69403); ?> (str_repeat() sign mismatch based memory corruption).</li>
+  <li><?php bugfix(69418); ?> (CVE-2006-7243 fix regressions in 5.4+). (CVE-2015-4025)</li>
+  <li><?php bugfix(69522); ?> (heap buffer overflow in unpack()).</li>
+</ul></li>
+<li>FTP:
+<ul>
+  <li><?php bugfix(69545); ?> (Integer overflow in ftp_genlist() resulting in heap overflow). (CVE-2015-4022)</li>
+</ul></li>
+<li>PCNTL:
+<ul>
+  <li><?php bugfix(68598); ?> (pcntl_exec() should not allow null char). (CVE-2015-4026)</li>
+</ul></li>
+<li>PCRE:
+<ul>
+  <li>Upgraded pcrelib to 8.37. (CVE-2015-2325, CVE-2015-2326)</li>
+</ul></li>
+<li>Phar:
+<ul>
+  <li><?php bugfix(69453); ?> (Memory Corruption in phar_parse_tarfile when entry filename starts with null). (CVE-2015-4021)</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
+<section class="version" id="5.4.40"><!-- {{{ 5.4.40 -->
+<h3>Version 5.4.40</h3>
+<?php release_date('16-Apr-2015'); ?>
+<ul><li>Apache2handler:
+<ul>
+  <li><?php bugfix(69218); ?> (potential remote code execution with apache 2.4 apache2handler). (CVE-2015-3330)</li>
+</ul></li>
+<li>Core:
+<ul>
+  <li>Additional fix for bug <?php bugl(69152); ?> (Type confusion vulnerability in exception::getTraceAsString).</li>
+  <li><?php bugfix(69337); ?> (php_stream_url_wrap_http_ex() type-confusion vulnerability).</li>
+  <li><?php bugfix(69353); ?> (Missing null byte checks for paths in various PHP extensions). (CVE-2015-3411, CVE-2015-3412)</li>
+</ul></li>
+<li>cURL:
+<ul>
+  <li><?php bugfix(69316); ?> (Use-after-free in php_curl related to CURLOPT_FILE/_INFILE/_WRITEHEADER).</li>
+</ul></li>
+<li>Ereg:
+<ul>
+  <li><?php bugfix(68740); ?> (NULL Pointer Dereference).</li>
+</ul></li>
+<li>Fileinfo:
+<ul>
+  <li><?php bugfix(68819); ?> (Fileinfo on specific file causes spurious OOM and/or segfault). (CVE-2015-4604, CVE-2015-4605)</li>
+</ul></li>
+<li>GD:
+<ul>
+  <li><?php bugfix(68601); ?> (buffer read overflow in gd_gif_in.c). (CVE-2014-9709)</li>
+</ul></li>
+<li>Phar:
+<ul>
+  <li><?php bugfix(68901); ?> (use after free). (CVE-2015-2301)</li>
+  <li><?php bugfix(69324); ?> (Buffer Over-read in unserialize when parsing Phar). (CVE-2015-2783, CVE-2015-3307)</li>
+  <li><?php bugfix(69441); ?> (Buffer Overflow when parsing tar/zip/phar in phar_set_inode). (CVE-2015-3329)</li>
+</ul></li>
+<li>Postgres:
+<ul>
+  <li><?php bugfix(68741); ?> (Null pointer deference). (CVE-2015-1352)</li>
+</ul></li>
+<li>SOAP:
+<ul>
+  <li><?php bugfix(69152); ?> (Type Confusion Infoleak Vulnerability in unserialize() with SoapFault). (CVE-2015-4599)</li>
+  <li><?php bugfix(69293); ?> (NEW segfault when using SoapClient::__setSoapHeader (bisected, regression)).</li>
+</ul></li>
+<li>Sqlite3:
+<ul>
+  <li><?php bugfix(66550); ?> (SQLite prepared statement use-after-free).</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
+<section class="version" id="5.4.39"><!-- {{{ 5.4.39 -->
+<h3>Version 5.4.39</h3>
+<?php release_date('19-Mar-2015'); ?>
+<ul><li>Core:
+<ul>
+  <li><?php bugfix(68976); ?> (Use After Free Vulnerability in unserialize()). (CVE-2015-2787)</li>
+  <li><?php bugfix(69134); ?> (Per Directory Values overrides PHP_INI_SYSTEM configuration options).</li>
+  <li><?php bugfix(69207); ?> (move_uploaded_file allows nulls in path). (CVE-2015-2348)</li>
+</ul></li>
+<li>Ereg:
+<ul>
+  <li><?php bugfix(69248); ?> (heap overflow vulnerability in regcomp.c). (CVE-2015-2305)</li>
+</ul></li>
+<li>SOAP:
+<ul>
+  <li><?php bugfix(69085); ?> (SoapClient's __call() type confusion through unserialize()). (CVE-2015-4147, CVE-2015-4148)</li>
+</ul></li>
+<li>ZIP:
+<ul>
+  <li><?php bugfix(69253); ?> (ZIP Integer Overflow leads to writing past heap boundary). (CVE-2015-2331)</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
+<section class="version" id="5.4.38"><!-- {{{ 5.4.38 -->
+<h3>Version 5.4.38</h3>
+<?php release_date('19-Feb-2015'); ?>
+<ul><li>Core:
+<ul>
+  <li>Removed support for multi-line headers, as they are deprecated by RFC 7230.</li>
+  <li>Added NULL byte protection to exec, system and passthru.</li>
+  <li><?php bugfix(68925); ?> (Mitigation for CVE-2015-0235 – GHOST: glibc gethostbyname buffer overflow).</li>
+  <li><?php bugfix(67827); ?> (broken detection of system crypt sha256/sha512 support).</li>
+  <li><?php bugfix(68942); ?> (Use after free vulnerability in unserialize() with DateTimeZone). (CVE-2015-0273)</li>
+</ul></li>
+<li>Enchant:
+<ul>
+  <li><?php bugfix(68552); ?> (heap buffer overflow in enchant_broker_request_dict()). (CVE-2014-9705)</li>
+</ul></li>
+<li>SOAP:
+<ul>
+  <li><?php bugfix(67427); ?> (SoapServer cannot handle large messages).</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
+<section class="version" id="5.4.37"><!-- {{{ 5.4.37 -->
+<h3>Version 5.4.37</h3>
+<?php release_date('22-Jan-2015'); ?>
+<ul><li>Core:
+<ul>
+  <li><?php bugfix(68710); ?> (Use After Free Vulnerability in PHP's unserialize()). (CVE-2015-0231)</li>
+</ul></li>
+<li>CGI:
+<ul>
+  <li><?php bugfix(68618); ?> (out of bounds read crashes php-cgi). (CVE-2014-9427)</li>
+</ul></li>
+<li>EXIF:
+<ul>
+  <li><?php bugfix(68799); ?> (Free called on uninitialized pointer). (CVE-2015-0232)</li>
+</ul></li>
+<li>Fileinfo:
+<ul>
+  <li>Removed readelf.c and related code from libmagic sources.</li>
+  <li><?php bugfix(68735); ?> (fileinfo out-of-bounds memory access). (CVE-2014-9652)</li>
+</ul></li>
+<li>OpenSSL:
+<ul>
+  <li><?php bugfix(55618); ?> (use case-insensitive cert name matching).</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
+
+<section class="version" id="5.4.36"><!-- {{{ 5.4.36 -->
+<h3>Version 5.4.36</h3>
+<?php release_date('18-Dec-2014'); ?>
+<ul><li>Core:
+<ul>
+  <li>Upgraded crypt_blowfish to version 1.3.</li>
+  <li><?php bugfix(68545); ?> (NULL pointer dereference in unserialize.c).</li>
+  <li><?php bugfix(68594); ?> (Use after free vulnerability in unserialize()). (CVE-2014-8142)</li>
+</ul>
+<li>Mcrypt:
+<ul>
+  <li>Fixed possible read after end of buffer and use after free.</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
+<section class="version" id="5.4.35"><!-- {{{ 5.4.35 -->
+<h3>Version 5.4.35</h3>
+<?php release_date('13-Nov-2014'); ?>
+<ul><li>Core:
+<ul>
+  <li><?php bugfix(68365); ?> (zend_mm_heap corrupted after memory overflow in zend_hash_copy).</li>
+</ul></li>
+<li>Fileinfo:
+<ul>
+  <li><?php bugfix(68283); ?> (fileinfo: out-of-bounds read in elf note headers). (CVE-2014-3710)</li>
+</ul></li>
+<li>GMP:
+<ul>
+  <li><?php bugfix(63595); ?> (GMP memory management conflicts with other libraries using GMP).</li>
+</ul></li>
+<li>PDO_pgsql:
+<ul>
+  <li><?php bugfix(66584); ?> (Segmentation fault on statement deallocation).</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
+<section class="version" id="5.4.34"><!-- {{{ 5.4.34 -->
+<h3>Version 5.4.34</h3>
+<?php release_date('16-Oct-2014'); ?>
+<ul><li>Fileinfo:
+<ul>
+  <li><?php bugfix(66242); ?> (libmagic: don't assume char is signed).</li>
+</ul></li>
+<li>Core:
+<ul>
+  <li><?php bugfix(67985); ?> (Incorrect last used array index copied to new array after unset).</li>
+  <li><?php bugfix(68044); ?> (Integer overflow in unserialize() (32-bits only)). (CVE-2014-3669)</li>
+</ul></li>
+<li>cURL:
+<ul>
+  <li><?php bugfix(68089); ?> (NULL byte injection - cURL lib).</li>
+</ul></li>
+<li>EXIF:
+<ul>
+  <li><?php bugfix(68113); ?> (Heap corruption in exif_thumbnail()). (CVE-2014-3670)</li>
+</ul></li>
+<li>OpenSSL:
+<ul>
+  <li>Reverted fixes for bug <?php bugl(41631); ?>, due to regressions.</li>
+</ul></li>
+<li>XMLRPC:
+<ul>
+  <li><?php bugfix(68027); ?> (Global buffer overflow in mkgmtime() function). (CVE-2014-3668)</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
+<section class="version" id="5.4.33"><!-- {{{ 5.4.33 -->
+<h3>Version 5.4.33</h3>
+<?php release_date('18-Sep-2014'); ?>
+<ul><li>Core:
+<ul>
+  <li><?php bugfix(47358); ?> (glob returns error, should be empty array()).</li>
+  <li><?php bugfix(65463); ?> (SIGSEGV during zend_shutdown()).</li>
+  <li><?php bugfix(66036); ?> (Crash on SIGTERM in apache process).</li>
+</ul></li>
+<li>OpenSSL:
+<ul>
+  <li><?php bugfix(41631); ?> (socket timeouts not honored in blocking SSL reads).</li>
+</ul></li>
+<li>Date:
+<ul>
+  <li><?php bugfix(66091); ?> (memory leaks in DateTime constructor).</li>
+</ul></li>
+<li>FPM:
+<ul>
+  <li><?php bugfix(67606); ?> (FPM with mod_fastcgi/apache2.4 is broken).</li>
+</ul></li>
+<li>GD:
+<ul>
+  <li>Made fontFetch's path parser thread-safe.</li>
+</ul></li>
+<li>Wddx:
+<ul>
+  <li><?php bugfix(67873); ?> (Segfaults in php_wddx_serialize_var).</li>
+</ul></li>
+<li>Zlib:
+<ul>
+  <li><?php bugfix(67724); ?> (chained zlib filters silently fail with large amounts of data).</li>
+  <li><?php bugfix(67865); ?> (internal corruption phar error).</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
+<section class="version" id="5.4.32"><!-- {{{ 5.4.32 -->
+<h3>Version 5.4.32</h3>
+<?php release_date('21-Aug-2014'); ?>
+<ul><li>Core:
+<ul>
+  <li><?php bugfix(67717); ?> (segfault in dns_get_record) (CVE-2014-3597).</li>
+  <li><?php bugfix(67693); ?> (incorrect push to the empty array)</li>
+</ul></li>
+<li>COM:
+<ul>
+  <li>Fixed missing type checks in com_event_sink.</li>
+</ul></li>
+<li>Fileinfo:
+<ul>
+  <li><?php bugfix(67705); ?> (extensive backtracking in rule regular expression). (CVE-2014-3538)</li>
+  <li><?php bugfix(67716); ?> (Segfault in cdf.c) (CVE-2014-3587).</li>
+</ul></li>
+<li>GD:
+<ul>
+  <li><?php bugfix(66901); ?> (php-gd 'c_color' NULL pointer dereference). (CVE-2014-2497)</li>
+  <li><?php bugfix(67730); ?> (Null byte injection possible with imagexxx functions) (CVE-2014-5120).</li>
+</ul></li>
+<li>Milter:
+<ul>
+  <li><?php bugfix(67715); ?> (php-milter does not build and crashes randomly).</li>
+</ul></li>
+<li>OpenSSL:
+<ul>
+  <li>Fixed missing type checks in OpenSSL options (Yussuf Khalil, Stas).</li>
+</ul></li>
+<li>Readline:
+<ul>
+  <li><?php bugfix(55496); ?> (Interactive mode doesn't force a newline before the prompt).</li>
+  <li><?php bugfix(67496); ?> (Save command history when exiting interactive shell with control-c).</li>
+</ul></li>
+<li>Sessions:
+<ul>
+  <li>Fixed missing type checks in php_session_create_id.</li>
+</ul></li>
+<li>SPL:
+<ul>
+  <li><?php bugfix(67539); ?> (ArrayIterator use-after-free due to object change during sorting) (CVE-2014-4698).</li>
+  <li><?php bugfix(67538); ?> (SPL Iterators use-after-free) (CVE-2014-4670).</li>
+</ul></li>
+<li>ODBC:
+<ul>
+  <li><?php bugfix(60616); ?> (odbc_fetch_into returns junk data at end of multi-byte char fields).</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
+<section class="version" id="5.4.31"><!-- {{{ 5.4.31 -->
+<h3>Version 5.4.31</h3>
+<?php release_date('24-Jul-2014'); ?>
+<ul><li>Core:
+<ul>
+  <li><?php bugfix(67428); ?> (header('Location: foo') will override a 308-399 response code).</li>
+  <li><?php bugfix(67436); ?> (Autoloader isn't called if two method definitions don't match).</li>
+  <li><?php bugfix(67091); ?> (make install fails to install libphp5.so on FreeBSD 10.0).</li>
+  <li><?php bugfix(67151); ?> (strtr with empty array crashes).</li>
+  <li><?php bugfix(67407); ?> (Windows 8.1/Server 2012 R2 reported as Windows 8/Server 2012).</li>
+</ul></li>
+<li>CLI server:
+<ul>
+  <li><?php implemented(67429); ?> (CLI server is missing some new HTTP response codes).</li>
+  <li><?php bugfix(66830); ?> (Empty header causes PHP built-in web server to hang).</li>
+</ul></li>
+<li>FPM:
+<ul>
+  <li><?php bugfix(67530); ?> (error_log=syslog ignored).</li>
+  <li><?php bugfix(67531); ?> (syslog cannot be set in pool configuration).</li>
+</ul></li>
+<li>Intl:
+<ul>
+  <li><?php bugfix(67052); ?> (NumberFormatter::parse() resets LC_NUMERIC setting).</li>
+</ul></li>
+<li>pgsql:
+<ul>
+  <li><?php bugfix(67550); ?> (Error in code "form" instead of "from", pgsql.c, line 756), which affected builds against libpq &lt; 7.3.</li>
+</ul></li>
+<li>Phar:
+<ul>
+  <li><?php bugfix(67587); ?> (Redirection loop on nginx with FPM).</li>
+</ul></li>
+<li>Streams:
+<ul>
+  <li><?php bugfix(67430); ?> (http:// wrapper doesn't follow 308 redirects).</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
+
+<section class="version" id="5.4.30"><!-- {{{ 5.4.30 -->
+<h3>Version 5.4.30</h3>
+<?php release_date('26-Jun-2014'); ?>
+<ul><li>Core:
+<ul>
+  <li>Fixed BC break introduced by patch for bug <?php bugl(67072); ?>.</li>
+  <li><?php bugfix(66622); ?> (Closures do not correctly capture the late bound class (static::) in some cases).</li>
+  <li><?php bugfix(67390); ?> (insecure temporary file use in the configure script) (CVE-2014-3981).</li>
+  <li><?php bugfix(67399); ?> (putenv with empty variable may lead to crash).</li>
+  <li><?php bugfix(67498); ?> (phpinfo() Type Confusion Information Leak Vulnerability). (CVE-2014-4721)</li>
+</ul></li>
+<li>CLI server:
+<ul>
+  <li><?php bugfix(67406); ?> (built-in web-server segfaults on startup).</li>
+</ul></li>
+<li>Date:
+<ul>
+  <li><?php bugfix(67308); ?> (Serialize of DateTime truncates fractions of second).</li>
+  <li>Fixed regression in fix for bug <?php bugl(67118); ?> (constructor can't be called twice).</li>
+</ul></li>
+<li>Fileinfo:
+<ul>
+  <li><?php bugfix(67326); ?> (fileinfo: cdf_read_short_sector insufficient boundary check) (CVE-2014-0207).</li>
+  <li><?php bugfix(67410); ?> (fileinfo: mconvert incorrect handling of truncated pascal string size) (CVE-2014-3478).</li>
+  <li><?php bugfix(67411); ?> (fileinfo: cdf_check_stream_offset insufficient boundary check) (CVE-2014-3479).</li>
+  <li><?php bugfix(67412); ?> (fileinfo: cdf_count_chain insufficient boundary check) (CVE-2014-3480).</li>
+  <li><?php bugfix(67413); ?> (fileinfo: cdf_read_property_info insufficient boundary check) (CVE-2014-3487).</li>
+</ul></li>
+<li>Intl:
+<ul>
+  <li><?php bugfix(67349); ?> (Locale::parseLocale Double Free).</li>
+  <li><?php bugfix(67397); ?> (Buffer overflow in locale_get_display_name and uloc_getDisplayName (libicu 4.8.1)).</li>
+</ul></li>
+<li>Network:
+<ul>
+  <li><?php bugfix(67432); ?> (Fix potential segfault in dns_get_record()) (CVE-2014-4049).</li>
+</ul></li>
+<li>OpenSSL:
+<ul>
+  <li><?php bugfix(65698); ?> (certificates validity parsing does not work past 2050).</li>
+  <li><?php bugfix(66636); ?> (openssl_x509_parse warning with V_ASN1_GENERALIZEDTIME).</li>
+</ul></li>
+<li>SOAP:
+<ul>
+  <li><?php implemented(49898); ?> (Add SoapClient::__getCookies()).</li>
+</ul></li>
+<li>SPL:
+<ul>
+  <li><?php bugfix(66127); ?> (Segmentation fault with ArrayObject unset).</li>
+  <li><?php bugfix(67359); ?> (Segfault in recursiveDirectoryIterator).</li>
+  <li><?php bugfix(67360); ?> (Missing element after ArrayObject::getIterator).</li>
+  <li><?php bugfix(67492); ?> (unserialize() SPL ArrayObject / SPLObjectStorage Type Confusion) (CVE-2014-3515).</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
+<section class="version" id="5.4.29"><!-- {{{ 5.4.29 -->
+<h3>Version 5.4.29</h3>
+<?php release_date('29-May-2014'); ?>
+<ul><li>COM:
+<ul>
+  <li><?php bugfix(66431); ?> (Special Character via COM Interface (CP_UTF8)).</li>
+</ul></li>
+<li>Core:
+<ul>
+  <li><?php bugfix(65701); ?> (copy() doesn't work when destination filename is created by tempnam()).</li>
+  <li><?php bugfix(67072); ?> (Echoing unserialized "SplFileObject" crash).</li>
+  <li><?php bugfix(67245); ?> (usage of memcpy() with overlapping src and dst in zend_exceptions.c).</li>
+  <li><?php bugfix(67247); ?> (spl_fixedarray_resize integer overflow).</li>
+  <li><?php bugfix(67249); ?> (printf out-of-bounds read).</li>
+  <li><?php bugfix(67250); ?> (iptcparse out-of-bounds read).</li>
+  <li><?php bugfix(67252); ?> (convert_uudecode out-of-bounds read). (Stas)</li>
+</ul></li>
+<li>Fileinfo:
+<ul>
+  <li><?php bugfix(66307); ?> (Fileinfo crashes with powerpoint files).</li>
+  <li><?php bugfix(67327); ?> (fileinfo: CDF infinite loop in nelements DoS). (CVE-2014-0238)</li>
+  <li><?php bugfix(67328); ?> (fileinfo: fileinfo: numerous file_printf calls resulting in performance degradation). (CVE-2014-0237)</li>
+</ul></li>
+<li>Date:
+<ul>
+  <li><?php bugfix(67118); ?> (DateTime constructor crash with invalid data).</li>
+  <li><?php bugfix(67251); ?> (date_parse_from_format out-of-bounds read).</li>
+  <li><?php bugfix(67253); ?> (timelib_meridian_with_check out-of-bounds read).</li>
+</ul></li>
+<li>DOM:
+<ul>
+  <li><?php bugfix(67081); ?> (DOMDocumentType-&gt;internalSubset returns entire DOCTYPE tag, not only the subset).</li>
+</ul></li>
+<li>FPM:
+<ul>
+  <li><?php bugfix(66908); ?> (php-fpm reload leaks epoll_create() file descriptor).</li>
+</ul></li>
+<li>Phar:
+<ul>
+  <li><?php bugfix(64498); ?> ($phar-&gt;buildFromDirectory can't compress file with an accent in its name).</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
+<section class="version" id="5.4.28"><!-- {{{ 5.4.28 -->
+<h3>Version 5.4.28</h3>
+<?php release_date('01-May-2014'); ?>
+<ul><li>Core:
+<ul>
+  <li><?php bugfix(61019); ?> (Out of memory on command stream_get_contents).</li>
+  <li><?php bugfix(64330); ?> (stream_socket_server() creates wrong Abstract Namespace UNIX sockets).</li>
+  <li><?php bugfix(66171); ?> (Symlinks and session handler allow open_basedir bypass).</li>
+  <li><?php bugfix(66182); ?> (exit in stream filter produces segfault).</li>
+  <li><?php bugfix(66736); ?> (fpassthru broken).</li>
+  <li><?php bugfix(67024); ?> (getimagesize should recognize BMP files with negative height).</li>
+</ul></li>
+<li>cURL:
+<ul>
+  <li><?php bugfix(66562); ?> (curl_exec returns differently than curl_multi_getcontent).</li>
+</ul></li>
+<li>Date:
+<ul>
+  <li><?php bugfix(66721); ?> (__wakeup of DateTime segfaults when invalid object data is supplied).</li>
+</ul></li>
+<li>Embed:
+<ul>
+  <li><?php bugfix(65715); ?> (php5embed.lib isn't provided anymore).</li>
+</ul></li>
+<li>Fileinfo:
+<ul>
+  <li><?php bugfix(66987); ?> (Memory corruption in fileinfo ext / bigendian).</li>
+</ul></li>
+<li>FPM:
+<ul>
+  <li><?php bugfix(66482); ?> (unknown entry 'priority' in php-fpm.conf).</li>
+  <li><?php bugfix(67060); ?> (sapi/fpm: possible privilege escalation due to insecure default configuration) (CVE-2014-0185).</li>
+</ul></li>
+<li>JSON:
+<ul>
+  <li><?php bugfix(66021); ?> (Blank line inside empty array/object when JSON_PRETTY_PRINT is set).</li>
+</ul></li>
+<li>LDAP:
+<ul>
+  <li>Fixed issue with null bytes in LDAP bindings.</li>
+</ul></li>
+<li>OpenSSL:
+<ul>
+  <li><?php bugfix(66942); ?> (memory leak in openssl_seal()).</li>
+  <li><?php bugfix(66952); ?> (memory leak in openssl_open()).</li>
+</ul></li>
+<li>SimpleXML:
+<ul>
+  <li><?php bugfix(66084); ?> (simplexml_load_string() mangles empty node name) (Anatol)</li>
+</ul></li>
+<li>XSL:
+<ul>
+  <li><?php bugfix(53965); ?> (&lt;xsl:include&gt; cannot find files with relative paths when loaded with "file://").</li>
+</ul></li>
+<li>Apache2 Handler SAPI:
+<ul>
+  <li>Fixed Apache log issue caused by APR's lack of support for %zu (APR issue <a href="https://issues.apache.org/bugzilla/show_bug.cgi?id=56120">56120</a>).</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
+<section class="version" id="5.4.27"><!-- {{{ 5.4.27 -->
+<h3>Version 5.4.27</h3>
+<?php release_date('03-Apr-2014'); ?>
+<ul><li>Core:
+<ul>
+  <li><?php bugfix(60602); ?> (proc_open() changes environment array)</li>
+</ul></li>
+<li>Fileinfo:
+<ul>
+  <li><?php bugfix(66946); ?> (fileinfo: extensive backtracking in awk rule regular expression). (CVE-2013-7345)</li>
+</ul></li>
+<li>FPM:
+<ul>
+  <li>Added clear_env configuration directive to disable clearenv() call.</li>
+</ul></li>
+<li>GMP:
+<ul>
+  <li><?php bugfix(66872); ?> (invalid argument crashes gmp_testbit)</li>
+</ul></li>
+<li>Mail:
+<ul>
+  <li><?php bugfix(66535); ?> (Don't add newline after X-PHP-Originating-Script)</li>
+</ul></li>
+<li>MySQLi:
+<ul>
+  <li><?php bugfix(66762); ?> (Segfault in mysqli_stmt::bind_result() when link closed)</li>
+</ul></li>
+<li>Openssl:
+<ul>
+  <li><?php bugfix(66833); ?> (Default disgest algo is still MD5, switch to SHA1)</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
+<section class="version" id="5.4.26"><!-- {{{ 5.4.26 -->
+<h3>Version 5.4.26</h3>
+<?php release_date('06-Mar-2014'); ?>
+<ul><li>Date:
+<ul>
+  <li><?php bugfix(44780); ?> (some time zone offsets not recognized by timezone_name_from_abbr)</li>
+  <li><?php bugfix(45543); ?> (DateTime::setTimezone can not set timezones without ID)</li>
+</ul></li>
+<li>JSON:
+<ul>
+  <li><?php bugfix(65753); ?> (JsonSerializeable couldn't implement on module extension)</li>
+</ul></li>
+<li>Fileinfo:
+<ul>
+  <li><?php bugfix(66731); ?> (file: infinite recursion) (CVE-2014-1943).</li>
+  <li><?php bugfix(66820); ?> (out-of-bounds memory access in fileinfo) (CVE-2014-2270).</li>
+</ul></li>
+<li>LDAP:
+<ul>
+  <li>Implemented ldap_modify_batch (https://wiki.php.net/rfc/ldap_modify_batch).</li>
+</ul></li>
+<li>Openssl:
+<ul>
+  <li><?php bugfix(66501); ?> (Add EC key support to php_openssl_is_private_key).</li>
+</ul></li>
+<li>Pgsql:
+<ul>
+  <li>Added warning for dangerous client encoding and remove possible injections for pg_insert()/pg_update()/pg_delete()/pg_select().</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
+
+<section class="version" id="5.4.25"><!-- {{{ 5.4.25 -->
+<h3>Version 5.4.25</h3>
+<?php release_date('06-Feb-2014'); ?>
+<ul><li>Core:
+<ul>
+  <li><?php bugfix(66286); ?> (Incorrect object comparison with inheritance).</li>
+  <li><?php bugfix(66509); ?> (copy() arginfo has changed starting from 5.4).</li>
+</ul></li>
+<li>mysqlnd:
+<ul>
+  <li><?php bugfix(66283); ?> (Segmentation fault after memory_limit).</li>
+</ul></li>
+<li>PDO_pgsql:
+<ul>
+  <li><?php bugfix(62479); ?> (PDO-psql cannot connect if password contains spaces).</li>
+</ul></li>
+<li>Session:
+<ul>
+  <li><?php bugfix(66481); ?> (Calls to session_name() segfault when session.name is null).</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
+<section class="version" id="5.4.24"><!-- {{{ 5.4.24 -->
+<h3>Version 5.4.24</h3>
+<?php release_date('09-Jan-2014'); ?>
+<ul><li>Core:
+<ul>
+  <li>Added validation of class names in the autoload process.</li>
+  <li>Fixed invalid C code in zend_strtod.c.</li>
+  <li><?php bugfix(61645); ?> (fopen and O_NONBLOCK).</li>
+</ul></li>
+<li>Date:
+<ul>
+  <li><?php bugfix(66060); ?> (Heap buffer over-read in DateInterval, CVE-2013-6712).</li>
+  <li><?php bugfix(63391); ?> (Incorrect/inconsistent day of week prior to the year 1600).</li>
+  <li><?php bugfix(61599); ?> (Wrong Day of Week).</li>
+</ul></li>
+<li>DOM:
+<ul>
+  <li><?php bugfix(65196); ?> (Passing DOMDocumentFragment to DOMDocument::saveHTML() Produces invalid Markup).</li>
+</ul></li>
+<li>Exif:
+<ul>
+  <li><?php bugfix(65873); ?> (Integer overflow in exif_read_data()).</li>
+</ul></li>
+<li>Filter:
+<ul>
+  <li><?php bugfix(66229); ?> (128.0.0.0/16 isn't reserved any longer).</li>
+</ul></li>
+<li>GD:
+<ul>
+  <li><?php bugfix(64405); ?> (Use freetype-config for determining freetype2 dir(s)).</li>
+</ul></li>
+<li>PDO_odbc:
+<ul>
+  <li><?php bugfix(66311); ?> (Stack smashing protection kills PDO/ODBC queries).</li>
+</ul></li>
+<li>SNMP:
+<ul>
+  <li>Fixed SNMP_ERR_TOOBIG handling for bulk walk operations.</li>
+</ul></li>
+<li>XSL:
+<ul>
+  <li><?php bugfix(49634); ?> (Segfault throwing an exception in a XSL registered function).</li>
+</ul></li>
+<li>ZIP:
+<ul>
+  <li><?php bugfix(66321); ?> (ZipArchive::open() ze_obj-&gt;filename_len not real).</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
+<section class="version" id="5.4.23"><!-- {{{ 5.4.23 -->
+<h3>Version 5.4.23</h3>
+<?php release_date('12-Dec-2013'); ?>
+<ul><li>Core:
+<ul>
+  <li><?php bugfix(66094); ?> (unregister_tick_function tries to cast a Closure to a string).</li>
+  <li><?php bugfix(65947); ?> (basename is no more working after fgetcsv in certain situation).</li>
+</ul></li>
+<li>JSON:
+<ul>
+  <li>Fixed whitespace part of <?php bugl(64874); ?> ("json_decode handles whitespace and case-sensitivity incorrectly").</li>
+</ul></li>
+<li>MySQLi:
+<ul>
+  <li><?php bugfix(66043); ?> (Segfault calling bind_param() on mysqli).</li>
+</ul></li>
+<li>mysqlnd:
+<ul>
+  <li><?php bugfix(66124); ?> (mysqli under mysqlnd loses precision when bind_param with 'i').</li>
+  <li><?php bugfix(66141); ?> (mysqlnd quote function is wrong with NO_BACKSLASH_ESCAPES after failed query).</li>
+</ul></li>
+<li>OpenSSL:
+<ul>
+  <li>Fixed memory corruption in openssl_x509_parse() (CVE-2013-6420). (Stefan Esser).</li>
+</ul></li>
+<li>PDO:
+<ul>
+  <li><?php bugfix(65946); ?> (sql_parser permanently converts values bound to strings).</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
+<section class="version" id="5.4.22"><!-- {{{ 5.4.22 -->
+<h3>Version 5.4.22</h3>
+<?php release_date('14-Nov-2013'); ?>
+<ul><li>Core:
+<ul>
+  <li><?php bugfix(65911); ?> (scope resolution operator - strange behavior with $this).</li>
+</ul></li>
+<li>CLI server:
+<ul>
+  <li><?php bugfix(65818); ?> (Segfault with built-in webserver and chunked transfer encoding).</li>
+</ul></li>
+<li>Exif:
+<ul>
+  <li>Fixed crash on unknown encoding.</li>
+</ul></li>
+<li>FTP:
+<ul>
+  <li><?php bugfix(65667); ?> (ftp_nb_continue produces segfault).</li>
+</ul></li>
+<li>ODBC:
+<ul>
+  <li><?php bugfix(65950); ?> (Field name truncation if the field name is bigger than 32 characters).</li>
+</ul></li>
+<li>Sockets:
+<ul>
+  <li><?php bugfix(65808); ?> (the socket_connect() won't work with IPv6 address).</li>
+</ul></li>
+<li>Standard:
+<ul>
+  <li><?php bugfix(64760); ?> (var_export() does not use full precision for floating-point numbers).</li>
+</ul></li>
+<li>XMLReader:
+<ul>
+  <li><?php bugfix(51936); ?> (Crash with clone XMLReader).</li>
+  <li><?php bugfix(64230); ?> (XMLReader does not suppress errors).</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
+<section class="version" id="5.4.21"><!-- {{{ 5.4.21 -->
+<h3>Version 5.4.21</h3>
+<?php release_date('17-Oct-2013'); ?>
+<ul><li>Core:
+<ul>
+  <li><?php bugfix(65322); ?> (compile time errors won't trigger auto loading).</li>
+</ul></li>
+<li>CLI server:
+<ul>
+  <li><?php bugfix(65633); ?> (built-in server treat some http headers as case-sensitive).</li>
+</ul></li>
+<li>Datetime:
+<ul>
+  <li><?php bugfix(64157); ?> (DateTime::createFromFormat() reports confusing error message).</li>
+</ul></li>
+<li>DBA extension:
+<ul>
+  <li><?php bugfix(65708); ?> (dba functions cast $key param to string in-place, bypassing copy on write).</li>
+</ul></li>
+<li>Filter:
+<ul>
+  <li>Add RFC 6598 IPs to reserved addresses.</li>
+  <li><?php bugfix(64441); ?> (FILTER_VALIDATE_URL rejects fully qualified domain names).</li>
+</ul></li>
+<li>IMAP:
+<ul>
+  <li><?php bugfix(65721); ?> (configure script broken in 5.5.4 and 5.4.20 when enabling imap).</li>
+</ul></li>
+<li>Standard:
+<ul>
+  <li><?php bugfix(61548); ?> (content-type must appear at the end of headers for 201 Location to work in http).</li>
+</ul></li>
+<li>Build system:
+<ul>
+  <li><?php bugfix(62396); ?> ('make test' crashes starting with 5.3.14 (missing gzencode())).</li>
+</ul></li>
+</ul>
+<!-- }}} -->
+</section>
+
+<section class="version" id="5.4.20"><!-- {{{ 5.4.20 -->
+<h3>Version 5.4.20</h3>
+<?php release_date('19-Sep-2013'); ?>
+<ul><li>Core:
+<ul>
+  <li><?php bugfix(60598); ?> (cli/apache sapi segfault on objects manipulation).</li>
+  <li><?php bugfix(65579); ?> (Using traits with get_class_methods causes segfault).</li>
+  <li><?php bugfix(65490); ?> (Duplicate calls to get lineno &amp; filename for DTRACE_FUNCTION_*).</li>
+  <li><?php bugfix(65483); ?> (quoted-printable encode stream filter incorrectly encoding spaces).</li>
+  <li><?php bugfix(65481); ?> (shutdown segfault due to serialize).</li>
+  <li><?php bugfix(65470); ?> (Segmentation fault in zend_error() with --enable-dtrace).</li>
+  <li><?php bugfix(65372); ?> (Segfault in gc_zval_possible_root when return reference fails).</li>
+  <li><?php bugfix(65304); ?> (Use of max int in array_sum).</li>
+  <li><?php bugfix(65291); ?> (get_defined_constants() causes PHP to crash in a very limited case).</li>
+  <li><?php bugfix(65225); ?> (PHP_BINARY incorrectly set).</li>
+  <li>Improved fix for bug <?php bugl(63186); ?> (compile failure on netbsd).</li>
+  <li><?php bugfix(62692); ?> (PHP fails to build with DTrace).</li>
+  <li><?php bugfix(61759); ?> (class_alias() should accept classes with leading backslashes).</li>
+  <li><?php bugfix(61345); ?> (CGI mode - make install don't work).</li>
+  <li>Cherry-picked some DTrace build commits (allowing builds on Linux, bug <?php bugl(62691); ?> and bug <?php bugl(63706); ?>) from PHP 5.5 branch.</li>
+  <li><?php bugfix(61268); ?> (--enable-dtrace leads make to clobber Zend/zend_dtrace.d)</li>
+</ul></li>
+<li>cURL:
+<ul>
+  <li><?php bugfix(65458); ?> (curl memory leak).</li>
+</ul></li>
+<li>Datetime:
+<ul>
+  <li><?php bugfix(65554); ?> (createFromFormat broken when weekday name is followed by some delimiters)</li>
+  <li><?php bugfix(65564); ?> (stack-buffer-overflow in DateTimeZone stuff caught by AddressSanitizer)</li>
+</ul></li>
+<li>Openssl:
+<ul>
+  <li><?php bugfix(64802); ?> (openssl_x509_parse fails to parse subject properly in some cases).</li>
+</ul></li>
+<li>Session:
+<ul>
+  <li><?php bugfix(62129); ?> (rfc1867 crashes php even though turned off).</li>
+  <li><?php bugfix(50308); ?> (session id not appended properly for empty anchor tags).</li>
+  <li>Fixed possible buffer overflow under Windows. Note: Not a security fix.</li>
+  <li>Changed session.auto_start to PHP_INI_PERDIR.</li>
+</ul></li>
+<li>SOAP:
+<ul>
+  <li><?php bugfix(65018); ?> (SoapHeader problems with SoapServer).</li>
+</ul></li>
+<li>SPL:
+<ul>
+  <li><?php bugfix(65328); ?> (Segfault when getting SplStack object Value).</li>
+</ul></li>
+<li>PDO:
+<ul>
+  <li><?php bugfix(64953); ?> (Postgres prepared statement positional parameter casting).</li>
+</ul></li>
+<li>Phar:
+<ul>
+  <li><?php bugfix(65028); ?> (Phar::buildFromDirectory creates corrupt archives for some specific contents).</li>
+</ul></li>
+<li>Pgsql:
+<ul>
+  <li><?php bugfix(65336); ?> (pg_escape_literal/identifier() silently returns false).</li>
+  <li><?php bugfix(62978); ?> (Disallow possible SQL injections with pg_select()/pg_update() /pg_delete()/pg_insert()).</li>
+</ul></li>
+<li>Zlib:
+<ul>
+  <li><?php bugfix(65391); ?> (Unable to send vary header user-agent when ob_start('ob_gzhandler') is called).</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
+<section class="version" id="5.4.19"><!-- {{{ 5.4.19 -->
+<h3>Version 5.4.19</h3>
+<?php release_date('22-Aug-2013'); ?>
+<ul><li>Core:
+<ul>
+  <li><?php bugfix(64503); ?> (Compilation fails with error: conflicting types for 'zendparse').</li>
+</ul></li>
+<li>Openssl:
+<ul>
+  <li>Fixed UMR in fix for CVE-2013-4248.</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
+<section class="version" id="5.4.18"><!-- {{{ 5.4.18 -->
+<h3>Version 5.4.18</h3>
+<?php release_date('15-Aug-2013'); ?>
+<ul><li>Core:
+<ul>
+  <li>Fixed value of FILTER_SANITIZE_FULL_SPECIAL_CHARS constant (previously was erroneously set to FILTER_SANITIZE_SPECIAL_CHARS value).</li>
+  <li><?php bugfix(65254); ?> (Exception not catchable when exception thrown in autoload with a namespace).</li>
+  <li><?php bugfix(65108); ?> (is_callable() triggers Fatal Error).</li>
+  <li><?php bugfix(65088); ?> (Generated configure script is malformed on OpenBSD).</li>
+  <li><?php bugfix(62964); ?> (Possible XSS on "Registered stream filters" info).</li>
+  <li><?php bugfix(62672); ?> (Error on serialize of ArrayObject).</li>
+  <li><?php bugfix(62475); ?> (variant_* functions causes crash when null given as an argument).</li>
+  <li><?php bugfix(60732); ?> (php_error_docref links to invalid pages).</li>
+  <li><?php bugfix(65226); ?> (chroot() does not get enabled).</li>
+</ul></li>
+<li>CGI:
+<ul>
+  <li><?php bugfix(65143); ?> (Missing php-cgi man page).</li>
+</ul></li>
+<li>CLI server:
+<ul>
+  <li><?php bugfix(65066); ?> (Cli server not responsive when responding with 422 http status code).</li>
+</ul></li>
+<li>CURL:
+<ul>
+  <li><?php bugfix(62665); ?> (curl.cainfo doesn't appear in php.ini).</li>
+</ul></li>
+<li>FPM:
+<ul>
+  <li><?php bugfix(63983); ?> (enabling FPM borks compile on FreeBSD).</li>
+</ul></li>
+<li>FTP:
+<ul>
+  <li><?php bugfix(65228); ?> (FTPs memory leak with SSL).</li>
+</ul></li>
+<li>GMP:
+<ul>
+  <li><?php bugfix(65227); ?> (Memory leak in gmp_cmp second parameter).</li>
+</ul></li>
+<li>Imap:
+<ul>
+  <li><?php bugfix(64467); ?> (Segmentation fault after imap_reopen failure).</li>
+</ul></li>
+<li>Intl:
+<ul>
+  <li><?php bugfix(62759); ?> (Buggy grapheme_substr() on edge case).</li>
+  <li><?php bugfix(61860); ?> (Offsets may be wrong for grapheme_stri* functions).</li>
+</ul></li>
+<li>mysqlnd:
+<ul>
+  <li>Fixed segfault in mysqlnd when doing long prepare. </li>
+</ul></li>
+<li>ODBC:
+<ul>
+  <li><?php bugfix(61387); ?> (NULL valued anonymous column causes segfault in odbc_fetch_array).</li>
+</ul></li>
+<li>Openssl:
+<ul>
+  <li>Fixed handling null bytes in subjectAltName (CVE-2013-4248).</li>
+</ul></li>
+<li>PDO:
+<ul>
+  <li>Allowed PDO_OCI to compile with Oracle Database 12c client libraries.</li>
+</ul></li>
+<li>PDO_dblib:
+<ul>
+  <li><?php bugfix(65219); ?> (PDO/dblib not working anymore ("use dbName" not sent)).</li>
+</ul></li>
+<li>PDO_pgsql:
+<ul>
+  <li>Fixed meta data retrieve when OID is larger than 2^31.</li>
+</ul></li>
+<li>Phar:
+<ul>
+  <li><?php bugfix(65142); ?> (Missing phar man page).</li>
+</ul></li>
+<li>Session:
+<ul>
+  <li><?php bugfix(62535); ?> ($_SESSION[$key]["cancel_upload"] doesn't work as documented).</li>
+  <li><?php bugfix(35703); ?> (when session_name("123") consist only digits, should warning).</li>
+  <li><?php bugfix(49175); ?> (mod_files.sh does not support hash bits).</li>
+</ul></li>
+<li>Sockets:
+<ul>
+  <li><?php implemented(63472); ?> (Setting SO_BINDTODEVICE with socket_set_option).</li>
+</ul></li>
+<li>SPL:
+<ul>
+  <li><?php bugfix(65136); ?> (RecursiveDirectoryIterator segfault).</li>
+  <li><?php bugfix(61828); ?> (Memleak when calling Directory(Recursive)Iterator /Spl(Temp)FileObject ctor twice).</li>
+  <li><?php bugfix(60560); ?> (SplFixedArray un-/serialize, getSize(), count() return 0, keys are strings).</li>
+</ul></li>
+<li>XML:
+<ul>
+  <li><?php bugfix(65236); ?> (heap corruption in xml parser). (CVE-2013-4113)</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
+
+<section class="version" id="5.4.17"><!-- {{{ 5.4.17 -->
+<h3>Version 5.4.17</h3>
+<?php release_date('04-Jul-2013'); ?>
+<ul><li>Core:
+<ul>
+  <li><?php bugfix(64988); ?> (Class loading order affects E_STRICT warning).</li>
+  <li><?php bugfix(64966); ?> (segfault in zend_do_fcall_common_helper_SPEC).</li>
+  <li><?php bugfix(64960); ?> (Segfault in gc_zval_possible_root).</li>
+  <li><?php bugfix(64936); ?> (doc comments picked up from previous scanner run).</li>
+  <li><?php bugfix(64934); ?> (Apache2 TS crash with get_browser()).</li>
+  <li><?php bugfix(64166); ?> (quoted-printable-encode stream filter incorrectly discarding whitespace).</li>
+</ul></li>
+<li>DateTime:
+<ul>
+  <li><?php bugfix(53437); ?> (Crash when using unserialized DatePeriod instance).</li>
+</ul></li>
+<li>FPM:
+<ul>
+  <li><?php bugfix(64915); ?> (error_log ignored when daemonize=0).</li>
+  <li><?php implemented(64764); ?> (add support for FPM init.d script).</li>
+</ul></li>
+<li>PDO:
+<ul>
+  <li><?php bugfix(63176); ?> (Segmentation fault when instantiate 2 persistent PDO to the same db server).</li>
+</ul></li>
+<li>PDO_DBlib:
+<ul>
+  <li><?php bugfix(63638); ?> (Cannot connect to SQL Server 2008 with PDO dblib).</li>
+  <li><?php bugfix(64338); ?> (pdo_dblib can't connect to Azure SQL).</li>
+  <li><?php bugfix(64808); ?> (FreeTDS PDO getColumnMeta on a prepared but not executed statement crashes).</li>
+</ul></li>
+<li>PDO_firebird:
+<ul>
+  <li><?php bugfix(64037); ?> (Firebird return wrong value for numeric field).</li>
+  <li><?php bugfix(62024); ?> (Cannot insert second row with null using parametrized query).</li>
+</ul></li>
+<li>PDO_mysql:
+<ul>
+  <li><?php bugfix(48724); ?> (getColumnMeta() doesn't return native_type for BIT, TINYINT and YEAR).</li>
+</ul></li>
+<li>PDO_pgsql:
+<ul>
+  <li><?php bugfix(64949); ?> (Buffer overflow in _pdo_pgsql_error).</li>
+</ul></li>
+<li>pgsql:
+<ul>
+  <li><?php bugfix(64609); ?> (pg_convert enum type support).</li>
+</ul></li>
+<li>Readline:
+<ul>
+  <li>Implement FR <?php bugl(55694); ?> (Expose additional readline variable to prevent default filename completion).</li>
+</ul></li>
+<li>SPL:
+<ul>
+  <li><?php bugfix(64997); ?> (Segfault while using RecursiveIteratorIterator on 64-bits systems).</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
 <section class="version" id="5.4.16"><!-- {{{ 5.4.16 -->
 <h3>Version 5.4.16</h3>
 <?php release_date('06-Jun-2013'); ?>
@@ -6228,50 +6169,6 @@ FILTER_FLAG_NO_PRIV_RANGE).</li>
 </ul>
 <!-- }}} --></section>
 
-<section class="version" id="5.3.26"><!-- {{{ 5.3.26 -->
-<h3>Version 5.3.26</h3>
-<?php release_date('06-Jun-2013'); ?>
-<ul>
-<li>Core:
-<ul>
- <li><?php bugfix(64879); ?> (Heap based buffer overflow in quoted_printable_encode, CVE-2013-2110).</li>
-</ul>
-</li>
-<li>Calendar:
-<ul>
- <li><?php bugfix(64895); ?> (Integer overflow in SndToJewish).</li>
-</ul>
-</li>
-<li>FPM:
-<ul>
- <li>Fixed some possible memory or resource leaks and possible null dereference detected by code coverity scan.</li>
- <li>Log a warning when a syscall fails.</li>
-</ul>
-</li>
-<li>MySQLi:
-<ul>
- <li><?php bugfix(64726); ?> (Segfault when calling fetch_object on a use_result and DB pointer has closed).</li>
-</ul>
-</li>
-<li>Phar:
-<ul>
- <li><?php bugfix(64214); ?> (PHAR PHPTs intermittently crash when run on DFS, SMB or with non std tmp dir).</li>
-</ul>
-</li>
-<li>Streams:
-<ul>
- <li><?php bugfix(64770); ?> (stream_select() fails with pipes returned by proc_open() on Windows x64).</li>
-</ul>
-</li>
-<li>Zend Engine:
-<ul>
- <li><?php bugfix(64821); ?> (Custom Exception crash when internal properties overridden).</li>
-</ul>
-</li>
-</ul>
-<!-- }}} --></section>
-
-
 <section class="version" id="5.4.15"><!-- {{{ 5.4.15 -->
 <h3>Version 5.4.15</h3>
 <?php release_date('09-May-2013'); ?>
@@ -6298,30 +6195,6 @@ FILTER_FLAG_NO_PRIV_RANGE).</li>
 </ul></li>
 </ul>
 <!-- }}} --></section>
-
-
-<section class="version" id="5.3.25"><!-- {{{ 5.3.25 -->
-<h3>Version 5.3.25</h3>
-<?php release_date('09-May-2013'); ?>
-<ul>
-<li>Core:
-<ul>
-  <li> <?php bugfix(64578); ?> (debug_backtrace in set_error_handler corrupts zend heap: segfault). </li>
-  <li> <?php bugfix(64458); ?> (dns_get_record result with string of length -1). </li>
-  <li> <?php bugfix(47675); ?> (fd leak on Solaris).</li>
-  <li> <?php bugfix(64577); ?> (fd leak on Solaris).</li>
-</ul></li>
-<li>Streams:
-<ul>
-  <li> Fixed Windows x64 version of stream_socket_pair() and improved error handling.</li>
-</ul></li>
-<li>Zip:
-<ul>
-  <li> <?php bugfix(64342); ?> (ZipArchive::addFile() has to check for file existence).</li>
-</ul></li>
-</ul>
-<!-- }}} --></section>
-
 
 <section class="version" id="5.4.14"><!-- {{{ 5.4.14 -->
 <h3>Version 5.4.14</h3>
@@ -6353,39 +6226,6 @@ FILTER_FLAG_NO_PRIV_RANGE).</li>
 <li>Zip:
 <ul>
  <li><?php bugfix(64452); ?> (Zip crash intermittently). (Anatol)</li>
-</ul></li>
-</ul>
-<!-- }}} --></section>
-
-<section class="version" id="5.3.24"><!-- {{{ 5.3.24 -->
-<h3>Version 5.3.24</h3>
-<?php release_date('11-Apr-2013'); ?>
-<ul>
-<li>Core:
-<ul>
- <li><?php bugfix(64370); ?> (microtime(true) less than $_SERVER['REQUEST_TIME_FLOAT']).</li>
- <li><?php bugfix(63914); ?> (zend_do_fcall_common_helper_SPEC does not handle exceptions properly).</li>
- <li><?php bugfix(62343); ?> (Show class_alias In get_declared_classes()).</li>
-</ul></li>
-
-<li>PCRE:
-<ul>
- <li>Merged PCRE 8.32.</li>
-</ul></li>
-
-<li>mysqlnd:
-<ul>
- <li><?php bugfix(63530); ?> (mysqlnd_stmt::bind_one_parameter crashes, uses wrong alloc for stmt->param_bind).</li>
-</ul></li>
-
-<li>DateTime:
-<ul>
- <li><?php bugfix(62852); ?> (Unserialize Invalid Date causes crash).</li>
-</ul></li>
-
-<li>Zip:
-<ul>
- <li><?php bugfix(64452); ?> (Zip crash intermittently).</li>
 </ul></li>
 </ul>
 <!-- }}} --></section>
@@ -6438,30 +6278,6 @@ FILTER_FLAG_NO_PRIV_RANGE).</li>
 <li>SNMP:
 <ul>
  <li><?php bugfix(64124); ?> (IPv6 malformed).</li>
-</ul></li>
-</ul>
-<!-- }}} --></section>
-
-<section class="version" id="5.3.23"><!-- {{{ 5.3.23 -->
-<h3>Version 5.3.23</h3>
-<?php release_date('14-March-2013'); ?>
-<ul>
-<li>Phar:
-<ul>
- <li>Fixed timestamp update on Phar contents modification.</li>
-</ul></li>
-<li>SOAP
-<ul>
- <li>Added check that soap.wsdl_cache_dir conforms to open_basedir
-    (CVE-2013-1635). </li>
- <li>Disabled external entities loading (CVE-2013-1643, CVE-2013-1824).</li>
-</ul></li>
-<li>SPL:
-<ul>
- <li><?php bugfix(64264); ?> (SPLFixedArray toArray problem). </li>
- <li><?php bugfix(64228); ?> (RecursiveDirectoryIterator always assumes SKIP_DOTS).</li>
- <li><?php bugfix(64106); ?> (Segfault on SplFixedArray[][x] = y when extended). </li>
- <li><?php bugfix(52861); ?> (unset fails with ArrayObject and deep arrays).</li>
 </ul></li>
 </ul>
 <!-- }}} --></section>
@@ -6530,45 +6346,6 @@ FILTER_FLAG_NO_PRIV_RANGE).</li>
 </ul>
 <!-- }}} --></section>
 
-<section class="version" id="5.3.22"><!-- {{{ 5.3.22 -->
-<h3>Version 5.3.22</h3>
-<?php release_date('21-February-2013'); ?>
-<ul>
-<li>Zend Engine:
-<ul>
-  <li><?php bugfix(64099); ?> (Wrong TSRM usage in zend_Register_class alias).</li>
-  <li><?php bugfix(63899); ?> (Use after scope error in zend_compile).</li>
-</ul></li>
-</ul>
-
-<ul>
-<li>Core:
-<ul>
-  <li><?php bugfix(63943); ?> (Bad warning text from strpos() on empty needle).</li>
-</ul></li>
-</ul>
-
-<ul>
-<li>Date:
-<ul>
-  <li><?php bugfix(55397); ?> (comparsion of incomplete DateTime causes SIGSEGV).</li>
-</ul></li>
-</ul>
-
-<ul>
-<li>FPM:
-<ul>
-  <li><?php bugfix(63999); ?> (php with fpm fails to build on Solaris 10 or 11).</li>
-</ul></li>
-</ul>
-
-<ul>
-<li>SPL:
-<ul>
-  <li><?php bugfix(64106); ?> (Segfault on SplFixedArray[][x] = y when extended). </li>
-</ul></li>
-</ul>
-<!-- }}} --></section>
 
 <section class="version" id="5.4.11"><!-- {{{ 5.4.11 -->
 <h3>Version 5.4.11</h3>
@@ -6580,7 +6357,7 @@ FILTER_FLAG_NO_PRIV_RANGE).</li>
   <li><?php bugfix(43177); ?> (Errors in eval()'ed code produce status code 500).</li>
 </ul></li>
 </ul>
- 
+
 <ul>
 <li>Filter:
 <ul>
@@ -6588,21 +6365,21 @@ FILTER_FLAG_NO_PRIV_RANGE).</li>
   <li><?php bugfix(54096); ?> (FILTER_VALIDATE_INT does not accept +0 and -0).</li>
 </ul></li>
 </ul>
- 
+
 <ul>
 <li>JSON:
 <ul>
   <li><?php bugfix(63737); ?> (json_decode does not properly decode with options parameter).</li>
 </ul></li>
 </ul>
- 
+
 <ul>
 <li>CLI server:
 <ul>
   <li>Update list of common mime types. Added webm, ogv, ogg.</li>
 </ul></li>
 </ul>
- 
+
 <ul>
 <li>cURL extension:
 <ul>
@@ -6614,28 +6391,6 @@ FILTER_FLAG_NO_PRIV_RANGE).</li>
 </ul></li>
 </ul>
 <!-- }}} --></section>
-
-<section class="version" id="5.3.21"><!-- {{{ 5.3.21 -->
-<h3>Version 5.3.21</h3>
-<?php release_date('17-January-2013'); ?>
-<ul>
-<li>Zend Engine:
-<ul>
-  <li><?php bugfix(63762); ?> (Sigsegv when Exception::$trace is changed by user).</li>
-</ul></li>
-</ul>
- 
-<ul>
-<li>cURL extension:
-<ul>
-  <li>Fixed bug (segfault due to libcurl connection caching).</li>
-  <li><?php bugfix(63795); ?> (CURL &gt;= 7.28.0 no longer support value 1 for CURLOPT_SSL_VERIFYHOST).</li>
-  <li><?php bugfix(63352); ?> (Can't enable hostname validation when using curl stream wrappers).</li>
-  <li><?php bugfix(55438); ?> (Curlwapper is not sending http header randomly).</li>
-</ul></li>
-</ul>
-<!-- }}} --></section>
-
 
 
 <section class="version" id="5.4.10"><!-- {{{ 5.4.10 -->
@@ -6652,7 +6407,7 @@ FILTER_FLAG_NO_PRIV_RANGE).</li>
   <li><?php bugfix(61272); ?> (ob_start callback gets passed empty string).</li>
 </ul></li>
 </ul>
- 
+
 <ul>
 <li>Date:
 <ul>
@@ -6737,85 +6492,6 @@ FILTER_FLAG_NO_PRIV_RANGE).</li>
   <li><?php bugfix(49341); ?> (Add SO_REUSEPORT support for socket_set_option()).</li>
 </ul></li>
 </ul>
-<!-- }}} --></section>
-
-<section class="version" id="5.3.20"><!-- {{{ 5.3.20 -->
-<h3>Version 5.3.20</h3>
-<?php release_date('20-December-2012'); ?>
-<ul>
-<li>Zend Engine:
-<ul>
-  <li><?php bugfix(63635); ?> (Segfault in gc_collect_cycles).</li>
-  <li><?php bugfix(63512); ?> (parse_ini_file() with INI_SCANNER_RAW removes quotes from value).</li>
-  <li><?php bugfix(63468); ?> (wrong called method as callback with inheritance).</li>
-</ul></li>
-</ul>
-
-<ul>
-<li>Core:
-<ul>
-  <li><?php bugfix(63451); ?> (config.guess file does not have AIX 7 defined, shared objects are not created).</li>
-  <li><?php bugfix(63377); ?> (Segfault on output buffer).</li>
-</ul></li>
-</ul>
-
-<ul>
-<li>Apache2 Handler SAPI:
-<ul>
-  <li>Enabled Apache 2.4 configure option for Windows.</li>
-</ul></li>
-</ul>
-
-<ul>
-<li>Date:
-<ul>
-  <li><?php bugfix(63435); ?> (Datetime::format('u') sometimes wrong by 1 microsecond).</li>
-</ul></li>
-</ul>
-
-<ul>
-<li>Fileinfo:
-<ul>
-  <li><?php bugfix(63248); ?> (Load multiple magic files from a directory under Windows).</li>
-  <li><?php bugfix(63590); ?> (Different results in TS and NTS under Windows).</li>
-</ul></li>
-</ul>
-
-<ul>
-<li>FPM:
-<ul>
-  <li><?php bugfix(63581); ?> (Possible null dereference and buffer overflow).</li>
-</ul></li>
-</ul>
-
-<ul>
-<li>Imap:
-<ul>
-  <li><?php bugfix(63126); ?> (DISABLE_AUTHENTICATOR ignores array).</li>
-</ul></li>
-</ul>
-
-<ul>
-<li>MySQLnd:
-<ul>
-  <li><?php bugfix(63398); ?> (Segfault when polling closed link).</li>
-</ul></li>
-</ul>
-
-<ul>
-<li>Reflection:
-<ul>
-  <li><?php bugfix(63614); ?> (Fatal error on Reflection).</li>
-</ul></li>
-</ul>
-
-<ul>
-<li>SOAP:
-<ul>
-  <li><?php bugfix(63271); ?> (SOAP wsdl cache is not enabled after initial requests).</li>
-</ul></li>
-</ul>
-
 <!-- }}} --></section>
 
 
@@ -6914,83 +6590,6 @@ FILTER_FLAG_NO_PRIV_RANGE).</li>
 </ul>
 <!-- }}} --></section>
 
-<section class="version" id="5.3.19"><!-- {{{ 5.3.19 -->
-<h3>Version 5.3.19</h3>
-<?php release_date('22-November-2012'); ?>
-<ul>
-<li>Core:
-<ul>
-  <li><?php bugfix(63241); ?> (PHP fails to open Windows deduplicated files).</li>
-  <li><?php bugfix(62444); ?> (Handle leak in is_readable on windows).</li>
-</ul></li>
-</ul>
-
-<ul>
-<li>Libxml:
-<ul>
-  <li><?php bugfix(63389); ?> (Missing context check on libxml_set_streams_context() causes memleak).</li>
-</ul></li>
-</ul>
-
-<ul>
-<li>Mbstring:
-<ul>
-  <li><?php bugfix(63447); ?> (max_input_vars doesn't filter variables when
-    mbstring.encoding_translation = On).</li>
-</ul></li>
-</ul>
-
-<ul>
-<li>MySQL:
-<ul>
-  <li>Fixed compilation failure on mixed 32/64 bit systems.</li>
-</ul></li>
-</ul>
-
-<ul>
-<li>OCI8:
-<ul>
-  <li><?php bugfix(63265); ?> (Add ORA-00028 to the PHP_OCI_HANDLE_ERROR macro)</li>
-</ul></li>
-</ul>
-
-<ul>
-<li>PCRE:
-<ul>
-  <li><?php bugfix(63055); ?> (Segfault in zend_gc with SF2 testsuite).</li>
-  <li><?php bugfix(63284); ?> (Upgrade PCRE to 8.31).</li>
-</ul></li>
-</ul>
-
-<ul>
-<li>PDO:
-<ul>
-  <li><?php bugfix(63235); ?> (buffer overflow in use of SQLGetDiagRec).</li>
-</ul></li>
-</ul>
-
-<ul>
-<li>PDO_pgsql:
-<ul>
-  <li><?php bugfix(62593); ?> (Emulate prepares behave strangely with PARAM_BOOL).</li>
-</ul></li>
-</ul>
-
-<ul>
-<li>Phar:
-<ul>
-  <li><?php bugfix(63297); ?> (Phar fails to write an openssl based signature).</li>
-</ul></li>
-</ul>
-
-<ul>
-<li>Streams:
-<ul>
-  <li><?php bugfix(63240); ?> (stream_get_line() return contains delimiter string).</li>
-</ul></li>
-</ul>
-<!-- }}} --></section>
-
 <section class="version" id="5.4.8"><!-- {{{ 5.4.8 -->
 <h3>Version 5.4.8</h3>
 <?php release_date('18-October-2012'); ?>
@@ -7078,7 +6677,7 @@ FILTER_FLAG_NO_PRIV_RANGE).</li>
 <ul>
 <li>mbstring
 <ul>
-  <li>Allow passing null as a default value to mb_substr() and mb_strcut(). Patch by Alexander Moskaliov via GitHub PR #133.</li>
+  <li>Allow passing null as a default value to mb_substr() and mb_strcut(). Patch by Alexander Moskaliov via GitHub PR <?php githubissuel('php/php-src', 133); ?>.</li>
 </ul></li>
 </ul>
 
@@ -7093,62 +6692,6 @@ FILTER_FLAG_NO_PRIV_RANGE).</li>
 <li>Socket
 <ul>
   <li><?php bugfix(63000); ?> (MCAST_JOIN_GROUP on OSX is broken, merge of PR 185 by Igor Wiedler).</li>
-</ul></li>
-</ul>
-<!-- }}} --></section>
-
-<section class="version" id="5.3.18"><!-- {{{ 5.3.18 -->
-<h3>Version 5.3.18</h3>
-<?php release_date('18-October-2012'); ?>
-<ul>
-<li>Core
-<ul>
-  <li><?php bugfix(63111); ?> (is_callable() lies for abstract static method).</li>
-  <li><?php bugfix(63093); ?> (Segfault while load extension failed in zts-build).</li>
-  <li><?php bugfix(62976); ?> (Notice: could not be converted to int when comparing some builtin classes).</li>
-  <li><?php bugfix(61767); ?> (Shutdown functions not called in certain error situation).</li>
-  <li><?php bugfix(61442); ?> (exception threw in __autoload can not be catched).</li>
-  <li><?php bugfix(60909); ?> (custom error handler throwing Exception + fatal error = no shutdown function).</li>
-</ul></li>
-</ul>
-
-<ul>
-<li>cURL
-<ul>
-  <li><?php bugfix(62085); ?> (file_get_contents a remote file by Curl wrapper will cause cpu Soaring).</li>
-</ul></li>
-</ul>
-
-<ul>
-<li>FPM
-<ul>
-  <li><?php bugfix(62954); ?> (startup problems fpm / php-fpm).</li>
-  <li><?php bugfix(62886); ?> (PHP-FPM may segfault/hang on startup).</li>
-  <li><?php bugfix(63085); ?> (Systemd integration and daemonize).</li>
-  <li><?php bugfix(62947); ?> (Unneccesary warnings on FPM).</li>
-  <li><?php bugfix(62887); ?> (Only /status?plain&amp;full gives "last request cpu").</li>
-  <li><?php bugfix(62216); ?> (Add PID to php-fpm init.d script).</li>
-</ul></li>
-</ul>
-
-<ul>
-<li>Intl
-<ul>
-  <li><?php bugfix(62915); ?> (defective cloning in several intl classes).</li>
-</ul></li>
-</ul>
-
-<ul>
-<li>SOAP
-<ul>
-  <li><?php bugfix(50997); ?> (SOAP Error when trying to submit 2nd Element of a choice).</li>
-</ul></li>
-</ul>
-
-<ul>
-<li>SPL
-<ul>
-  <li><?php bugfix(62987) ?> (Assigning to ArrayObject[null][something] overrides all undefined variables).</li>
 </ul></li>
 </ul>
 <!-- }}} --></section>
@@ -7258,78 +6801,6 @@ FILTER_FLAG_NO_PRIV_RANGE).</li>
 </ul>
 <!-- }}} --></section>
 
-<section class="version" id="5.3.17"><!-- {{{ 5.3.17 -->
-<h3>Version 5.3.17</h3>
-<?php release_date('13-September-2012'); ?>
-<ul>
-<li>Core
-<ul>
-    <li>Fixed bug (segfault while build with zts and GOTO vm-kind)</li>
-    <li><?php bugfix(62955); ?> (Only one directive is loaded from "Per Directory Values" Windows registry)</li>
-    <li><?php bugfix(62763); ?> (register_shutdown_function and extending class)</li>
-    <li><?php bugfix(62744); ?> (dangling pointers made by zend_disable_class)</li>
-    <li><?php bugfix(62716); ?> (munmap() is called with the incorrect length)</li>
-    <li><?php bugfix(62460); ?> (php binaries installed as binary.dSYM)</li>
-</ul></li>
-</ul>
-
-<ul>
-<li>CURL
-<ul>
-    <li><?php bugfix(62839); ?> (curl_copy_handle segfault with CURLOPT_FILE)</li>
-</ul></li>
-</ul>
-
-<ul>
-<li>DateTime
-<ul>
-    <li><?php bugfix(62852); ?> (Unserialize invalid DateTime causes crash)</li>
-</ul></li>
-</ul>
-
-<ul>
-<li>Intl
-<ul>
-    <li>Fix null pointer dereferences in some classes of ext/intl</li>
-</ul></li>
-</ul>
-
-<ul>
-<li>MySQLnd
-<ul>
-    <li><?php bugfix(62885); ?> (mysqli_poll - Segmentation fault)</li>
-</ul></li>
-</ul>
-
-<ul>
-<li>PDO
-<ul>
-    <li><?php bugfix(62685); ?> (Wrong return datatype in PDO::inTransaction())</li>
-</ul></li>
-</ul>
-
-<ul>
-<li>Session
-<ul>
-    <li>Fixed bug (segfault due to retval is not initialized)</li>
-</ul></li>
-</ul>
-
-<ul>
-<li>SPL
-<ul>
-    <li><?php bugfix(62904); ?> (Crash when cloning an object which inherits SplFixedArray)</li>
-</ul></li>
-</ul>
-
-<ul>
-<li>Enchant
-<ul>
-    <li><?php bugfix(62838); ?> (enchant_dict_quick_check() destroys zval, but fails to initialize it)</li>
-</ul></li>
-</ul>
-<!-- }}} --></section>
-
 <section class="version" id="5.4.6"><!-- {{{ 5.4.6 -->
 <h3>Version 5.4.6</h3>
 <?php release_date('16-August-2012'); ?>
@@ -7425,71 +6896,6 @@ FILTER_FLAG_NO_PRIV_RANGE).</li>
 <li>Zlib
 <ul>
   <li><?php bugfix(55544); ?> (ob_gzhandler always conflicts with zlib.output_compression).</li>
-</ul></li>
-</ul>
-<!-- }}} --></section>
-
-<section class="version" id="5.3.16"><!-- {{{ 5.3.16 -->
-<h3>Version 5.3.16</h3>
-<?php release_date('16-August-2012'); ?>
-<ul>
-<li>Core
-<ul>
-  <li><?php bugfix(62763); ?> (register_shutdown_function and extending class).</li>
-  <li><?php bugfix(62744); ?> (dangling pointers made by zend_disable_class).</li>
-  <li><?php bugfix(62716); ?> (munmap() is called with the incorrect length).</li>
-  <li><?php bugfix(62460); ?> (php binaries installed as binary.dSYM).</li>
-  <li><?php bugfix(60194); ?> (--with-zend-multibyte and --enable-debug reports LEAK with run-test.php).</li>
-</ul></li>
-</ul>
-
-<ul>
-<li>CURL
-<ul>
-  <li><?php bugfix(62839); ?> (curl_copy_handle segfault with CURLOPT_FILE).</li>
-  <li><?php bugfix(62499); ?> (curl_setopt($ch, CURLOPT_COOKIEFILE, "") returns false).</li>
-</ul></li>
-</ul>
-
-<ul>
-<li>DateTime
-<ul>
-  <li><?php bugfix(62500); ?> (Segfault in DateInterval class when extended).</li>
-</ul></li>
-</ul>
-
-<ul>
-<li>Enchant
-<ul>
-  <li><?php bugfix(62838); ?> (enchant_dict_quick_check() destroys zval, but fails to initialize it).</li>
-</ul></li>
-</ul>
-
-<ul>
-<li>PDO
-<ul>
-  <li><?php bugfix(62685); ?> (Wrong return datatype in PDO::inTransaction()).</li>
-</ul></li>
-</ul>
-
-<ul>
-<li>Reflection
-<ul>
-  <li><?php bugfix(62715); ?> (ReflectionParameter::isDefaultValueAvailable() wrong result).</li>
-</ul></li>
-</ul>
-
-<ul>
-<li>Session
-<ul>
-  <li>Fixed bug (segfault due to retval is not initialized).</li>
-</ul></li>
-</ul>
-
-<ul>
-<li>SPL
-<ul>
-  <li><?php bugfix(62616); ?> (ArrayIterator::count() from IteratorIterator instance gives Segmentation fault).</li>
 </ul></li>
 </ul>
 <!-- }}} --></section>
@@ -7614,116 +7020,6 @@ FILTER_FLAG_NO_PRIV_RANGE).</li>
 <li>Zip
 <ul>
   <li>Upgraded libzip to 0.10.</li>
-</ul></li>
-</ul>
-<!-- }}} --></section>
-
-<section class="version" id="5.3.15"><!-- {{{ 5.3.15 -->
-<h3>Version 5.3.15</h3>
-<?php release_date('19-July-2012'); ?>
-<ul>
-<li>Zend Engine
-<ul>
-  <li><?php bugfix(51094); ?> (parse_ini_file() with INI_SCANNER_RAW cuts a value that includes a semi-colon)</li>
-</ul></li>
-</ul>
-
-<ul>
-<li>COM
-<ul>
-  <li><?php bugfix(62146); ?> com_dotnet cannot be built shared</li>
-</ul></li>
-</ul>
-
-<ul>
-<li>Core
-<ul>
-  <li>Fixed potential overflow in _php_stream_scandir, CVE-2012-2688</li>
-  <li><?php bugfix(62432); ?> (ReflectionMethod random corrupt memory on high concurrent)</li>
-  <li><?php bugfix(62443); ?> (Crypt SHA256/512 Segfaults With Malformed Salt)</li>
-</ul></li>
-</ul>
-
-<ul>
-<li>Fileinfo
-<ul>
-  <li>Fixed magic file regex support</li>
-</ul></li>
-</ul>
-
-<ul>
-<li>FPM
-<ul>
-  <li><?php bugfix(61045); ?> (fpm don't send error log to fastcgi clients)</li>
-  <li><?php bugfix(61835); ?> (php-fpm is not allowed to run as root)</li>
-  <li><?php bugfix(61295); ?> (php-fpm should not fail with commented 'user' for non-root start)</li>
-  <li><?php bugfix(61026); ?> (FPM pools can listen on the same address)</li>
-  <li><?php bugfix(62033); ?> (php-fpm exits with status 0 on some failures to start)</li>
-  <li><?php bugfix(62153); ?> (when using unix sockets, multiples FPM instances can be launched without errors)</li>
-  <li><?php bugfix(62160); ?> (Add process.priority to set nice(2) priorities)</li>
-  <li><?php bugfix(61218); ?> (FPM drops connection while receiving some binary values in FastCGI requests)</li>
-  <li><?php bugfix(62205); ?> (php-fpm segfaults (null passed to strstr))</li>
-</ul></li>
-</ul>
-
-<ul>
-<li>Intl
-<ul>
-  <li><?php bugfix(62083); ?> (grapheme_extract() memory leaks)</li>
-  <li><?php bugfix(62081); ?> (IntlDateFormatter constructor leaks memory when called twice)</li>
-  <li><?php bugfix(62070); ?> (Collator::getSortKey() returns garbage)</li>
-  <li><?php bugfix(62017); ?> (datefmt_create with incorrectly encoded timezone leaks pattern)</li>
-  <li><?php bugfix(60785); ?> (memory leak in IntlDateFormatter constructor)</li>
-</ul></li>
-</ul>
-
-<ul>
-<li>JSON
-<ul>
-  <li>Reverted fix for bug <?php bugl(61537); ?></li>
-</ul></li>
-</ul>
-
-<ul>
-<li>Phar
-<ul>
-  <li><?php bugfix(62227); ?> (Invalid phar stream path causes crash)</li>
-</ul></li>
-</ul>
-
-<ul>
-<li>Reflection
-<ul>
-  <li><?php bugfix(62384); ?> (Attempting to invoke a Closure more than once causes segfault)</li>
-  <li><?php bugfix(62202); ?> (ReflectionParameter::getDefaultValue() memory leaks with constant)</li>
-</ul></li>
-</ul>
-
-<ul>
-<li>SPL
-<ul>
-  <li><?php bugfix(62262); ?> (RecursiveArrayIterator does not implement Countable)</li>
-</ul></li>
-</ul>
-
-<ul>
-<li>SQLite
-<ul>
-  <li>Fixed open_basedir bypass, CVE-2012-3365</li>
-</ul></li>
-</ul>
-
-<ul>
-<li>XML Write
-<ul>
-  <li><?php bugfix(62064); ?> (memory leak in the XML Writer module)</li>
-</ul></li>
-</ul>
-
-<ul>
-<li>Zip
-<ul>
-  <li>Upgraded libzip to 0.10</li>
 </ul></li>
 </ul>
 <!-- }}} --></section>
@@ -7854,110 +7150,12 @@ FILTER_FLAG_NO_PRIV_RANGE).</li>
 </ul>
 <!-- }}} --></section>
 
-<section class="version" id="5.3.14"><!-- {{{ 5.3.14 -->
-<h3>Version 5.3.14</h3>
-<?php release_date('06-June-2012'); ?>
-<ul>
-<li>CLI SAPI
-<ul>
-  <li><?php bugfix(61546); ?> (functions related to current script failed when chdir() in cli sapi)</li>
-</ul></li>
-</ul>
-
-<ul>
-<li>Core
-<ul>
-  <li>Fixed CVE-2012-2143</li>
-  <li><?php bugfix(62005); ?> (unexpected behavior when incrementally assigning to a member of a null object)</li>
-  <li><?php bugfix(61730); ?> (Segfault from array_walk modifying an array passed by reference)</li>
-  <li>Fixed missing bound check in iptcparse()</li>
-  <li><?php bugfix(61764); ?> ('I' unpacks n as signed if n &gt; 2^31-1 on LP64)</li>
-  <li><?php bugfix(54197); ?> ([PATH=] sections incompatibility with user_ini.filename set to null)</li>
-  <li><?php bugfix(61713); ?> (Logic error in charset detection for htmlentities)</li>
-  <li><?php bugfix(61991); ?> (long overflow in realpath_cache_get())</li>
-  <li>Changed php://fd to be available only for CLI.</li>
-</ul></li>
-</ul>
-
-<ul>
-<li>CURL
-<ul>
-  <li><?php bugfix(61948); ?> (CURLOPT_COOKIEFILE '' raises open_basedir restriction)</li>
-</ul></li>
-</ul>
-
-<ul>
-<li>COM
-<ul>
-  <li><?php bugfix(62146); ?> com_dotnet cannot be built shared</li>
-</ul></li>
-</ul>
-
-<ul>
-<li>Fileinfo
-<ul>
-  <li><?php bugfix(61812); ?> (Uninitialised value used in libmagic)</li>
-</ul></li>
-</ul>
-
-<ul>
-<li>Iconv
-<ul>
-  <li>Fixed a bug that iconv extension fails to link to the correct library when another extension makes use of a library that links to the iconv library. See <a href="https://bugs.gentoo.org/show_bug.cgi?id=364139">https://bugs.gentoo.org/show_bug.cgi?id=364139</a> for detail</li>
-</ul></li>
-</ul>
-
-<ul>
-<li>Intl
-<ul>
-  <li><?php bugfix(62082); ?> (Memory corruption in internal function get_icu_disp_value_src_php()</li>
-</ul></li>
-</ul>
-
-<ul>
-<li>JSON
-<ul>
-  <li><?php bugfix(61537); ?> (json_encode() incorrectly truncates/discards information)</li>
-</ul></li>
-</ul>
-
-<ul>
-<li>PDO
-<ul>
-  <li><?php bugfix(61755); ?> (A parsing bug in the prepared statements can lead to access violations). (CVE-2012-3450)</li>
-</ul></li>
-</ul>
-
-<ul>
-<li>Phar
-<ul>
-<li><?php bugfix(61065); ?> (Secunia SA44335) (CVE-2012-2386)</li>
-</ul></li>
-</ul>
-
-<ul>
-<li>Streams
-<ul>
-  <li><?php bugfix(61961); ?> (file_get_contents leaks when access empty file with maxlen set)</li>
-</ul></li>
-</ul>
-<!-- }}} --></section>
-
 <section class="version" id="5.4.3"><!-- {{{ 5.4.3 -->
 <h3>Version 5.4.3</h3>
 <?php release_date('08-May-2012'); ?>
 
 <ul>
   <li><?php bugfix(61807); ?> Buffer Overflow in apache_request_headers, CVE-2012-2329.</li>
-  <li><?php bugfix(61910); ?> Improve fix for PHP-CGI query string parameter vulnerability, CVE-2012-2311.</li>
-</ul>
-<!-- }}} --></section>
-
-<section class="version" id="5.3.13"><!-- {{{ 5.3.13 -->
-<h3>Version 5.3.13</h3>
-<?php release_date('08-May-2012'); ?>
-
-<ul>
   <li><?php bugfix(61910); ?> Improve fix for PHP-CGI query string parameter vulnerability, CVE-2012-2311.</li>
 </ul>
 <!-- }}} --></section>
@@ -7971,14 +7169,7 @@ FILTER_FLAG_NO_PRIV_RANGE).</li>
 </ul>
 <!-- }}} --></section>
 
-<section class="version" id="5.3.12"><!-- {{{ 5.3.12 -->
-<h3>Version 5.3.12</h3>
-<?php release_date('03-May-2012'); ?>
 
-<ul>
-  <li><?php bugfix(61910); ?> Fix PHP-CGI query string parameter vulnerability, CVE-2012-1823.</li>
-</ul>
-<!-- }}} --></section>
 
 <section class="version" id="5.4.1"><!-- {{{ 5.4.1 -->
 <h3>Version 5.4.1</h3>
@@ -7988,7 +7179,7 @@ FILTER_FLAG_NO_PRIV_RANGE).</li>
 <li>CLI Server
 <ul>
   <li><?php bugfix(61461); ?> (missing checks around malloc() calls).</li>
-  <li><?php implemented(60850); ?> (Built in web server does not set 
+  <li><?php implemented(60850); ?> (Built in web server does not set
     $_SERVER['SCRIPT_FILENAME'] when using router).</li>
 </ul></li>
 </ul>
@@ -8049,246 +7240,6 @@ FILTER_FLAG_NO_PRIV_RANGE).</li>
   <li><?php bugfix(60222); ?> (time_nanosleep() does validate input params).</li>
   <li><?php bugfix(60106); ?> (stream_socket_server silently truncates long unix socket
     paths).</li>
-</ul></li>
-</ul>
-<!-- }}} --></section>
-
-<section class="version" id="5.3.11"><!-- {{{ 5.3.11 -->
-<h3>Version 5.3.11</h3>
-<?php release_date('26-Apr-2012'); ?>
-
-<ul>
-<li>Core
-<ul>
-  <li><?php bugfix(61650); ?> (ini parser crashes when using ${xxxx} ini variables
-    (without apache2)).</li>
-  <li><?php bugfix(61273); ?> (call_user_func_array with more than 16333 arguments 
-    leaks / crashes).</li>
-  <li><?php bugfix(61165); ?> (Segfault - strip_tags()).</li>
-  <li><?php bugfix(61095); ?> (Incorect lexing of 0x00*+&lt;NUM&gt;).</li>
-  <li><?php bugfix(61087); ?> (Memory leak in parse_ini_file when specifying
-    invalid scanner mode).</li>
-  <li><?php bugfix(61072); ?> (Memory leak when restoring an exception handler).</li>
-  <li><?php bugfix(61058); ?> (array_fill leaks if start index is PHP_INT_MAX).</li>
-  <li><?php bugfix(61000); ?> (Exceeding max nesting level doesn't delete numerical 
-    vars).</li>
-  <li><?php bugfix(60895); ?> (Possible invalid handler usage in windows random
-    functions).</li>
-  <li><?php bugfix(60825); ?> (Segfault when running symfony 2 tests).</li>
-  <li><?php bugfix(60801); ?> (strpbrk() mishandles NUL byte).</li>
-  <li><?php bugfix(60569); ?> (Nullbyte truncates Exception $message).</li>
-  <li><?php bugfix(60227); ?> (header() cannot detect the multi-line header with CR).</li>
-  <li><?php bugfix(60222); ?> (time_nanosleep() does validate input params).</li>
-  <li><?php bugfix(54374); ?> (Insufficient validating of upload name leading to 
-    corrupted $_FILES indices). (CVE-2012-1172).</li>
-  <li><?php bugfix(52719); ?> (array_walk_recursive crashes if third param of the
-    function is by reference).</li>
-  <li>Improve performance of set_exception_handler while doing reset.</li>
-  <li><?php bugfix(51860); ?> (Include fails with toplevel symlink to /).</li>
-</ul></li>
-</ul>
-
-<ul>
-<li>DOM
-<ul>
-  <li>Added debug info handler to DOM objects.</li>
-</ul></li>
-</ul>
-
-<ul>
-<li>FPM
-<ul>
-  <li><?php bugfix(61430); ?> (Transposed memset() params in sapi/fpm/fpm/fpm_shm.)</li>
-  <li><?php bugfix(60811); ?> (php-fpm compilation problem).</li>
-</ul></li>
-</ul>
-
-<ul>
-<li>Fileinfo
-<ul>
-  <li>Upgraded libmagic to 5.</li>
-  <li><?php bugfix(61565); ?> where php_stream_open_wrapper_ex tries to open a
-    directory descriptor under windows.</li>
-  <li><?php bugfix(61566); ?> failure caused by the posix lseek and read versions
-    under windows in cdf_read().</li>
-  <li><?php bugfix(61173); ?> (Unable to detect error from finfo constructor).</li>
-</ul></li>
-</ul>
-
-<ul>
-<li>Firebird Database extension (ibase)
-<ul>
-  <li><?php bugfix(60802); ?> (ibase_trans() gives segfault when passing params).</li>
-</ul></li>
-</ul>
-
-<ul>
-<li>Ibase
-<ul>
-  <li><?php bugfix(60947); ?> (Segmentation fault while executing ibase_db_info).</li>
-</ul></li>
-</ul>
-
-<ul>
-<li>Installation
-<ul>
-  <li><?php bugfix(61172); ?> (Add Apache 2.4 support).</li>
-</ul></li>
-</ul>
-
-<ul>
-<li>mysqli
-<ul>
-  <li><?php bugfix(61003); ?> (mysql_stat() require a valid connection).</li>
-</ul></li>
-</ul>
-
-<ul>
-<li>PDO_mysql
-<ul>
-  <li><?php bugfix(61207); ?> (PDO::nextRowset() after a multi-statement query doesn't
-    always work).</li>
-  <li><?php bugfix(61194); ?> (PDO should export compression flag with myslqnd).</li>
-</ul></li>
-</ul>
-
-<ul>
-<li>PDO_odbc
-<ul>
-  <li><?php bugfix(61212); ?> (PDO ODBC Segfaults on SQL_SUCESS_WITH_INFO).</li>
-</ul></li>
-</ul>
-
-<ul>
-<li>PDO_pgsql
-<ul>
-  <li><?php bugfix(61267); ?> (pdo_pgsql's PDO::exec() returns the number of SELECTed
-    rows on postgresql &gt;= 9).</li>
-</ul></li>
-</ul>
-
-<ul>
-<li>PDO_Sqlite extension
-<ul>
-  <li>Add createCollation support.</li>
-</ul></li>
-</ul>
-
-<ul>
-<li>pgsql
-<ul>
-  <li><?php bugfix(60718); ?> (Compile problem with libpq (PostgreSQL 7.3 or less).</li>
-</ul></li>
-</ul>
-
-<ul>
-<li>Phar
-<ul>
-  <li><?php bugfix(61184); ?> (Phar::webPhar() generates headers with trailing NUL
-    bytes).</li>
-</ul></li>
-</ul>
-
-<ul>
-<li>Readline
-<ul>
-  <li><?php bugfix(61088); ?> (Memory leak in readline_callback_handler_install).</li>
-  <li>Add open_basedir checks to readline_write_history and readline_read_history.</li>
-</ul></li>
-</ul>
-
-<ul>
-<li>Reflection
-<ul>
-  <li><?php bugfix(61388); ?> (ReflectionObject:getProperties() issues invalid reads
-    when get_properties returns a hash table with (inaccessible) dynamic
-    numeric properties).</li>
-  <li><?php bugfix(60968); ?> (Late static binding doesn't work with 
-    ReflectionMethod::invokeArgs()).</li>
-</ul></li>
-</ul>
-
-<ul>
-<li>Session
-<ul>
-  <li><?php bugfix(60860); ?> (session.save_handler=user without defined function core
-    dumps).</li>
-  <li><?php bugfix(60634); ?> (Segmentation fault when trying to die() in 
-    SessionHandler::write()).</li>
-</ul></li>
-</ul>
-
-<ul>
-<li>SOAP
-<ul>
-  <li><?php bugfix(61423); ?> (gzip compression fails).</li>
-  <li><?php bugfix(60887); ?> (SoapClient ignores user_agent option and sends no
-    User-Agent header).</li>
-    <li><?php bugfix(60842); ?>, <?php bugfix(51775); ?> (Chunked response parsing error when 
-    chunksize length line is &gt; 10 bytes).</li>
-  <li><?php bugfix(49853); ?> (Soap Client stream context header option ignored).</li>
-</ul></li>
-</ul>
-
-<ul>
-<li>SPL
-<ul>
-  <li>Fixed memory leak when calling SplFileInfo's constructor twice.</li>
-  <li><?php bugfix(61418); ?> (Segmentation fault when DirectoryIterator's or
-    FilesystemIterator's iterators are requested more than once without
-    having had its dtor callback called in between).</li>
-  <li><?php bugfix(61347); ?> (inconsistent isset behavior of Arrayobject).</li>
-  <li><?php bugfix(61326); ?> (ArrayObject comparison).</li>
-</ul></li>
-</ul>
-
-<ul>
-<li>SQLite3 extension
-<ul>
-  <li>Add createCollation() method.</li>
-</ul></li>
-</ul>
-
-<ul>
-<li>Streams
-<ul>
-  <li><?php bugfix(61371); ?> (stream_context_create() causes memory leaks on use
-    streams_socket_create).</li>
-  <li><?php bugfix(61253); ?> (Wrappers opened with errors concurrency problem on ZTS).</li>
-  <li><?php bugfix(61115); ?> (stream related segfault on fatal error in
-    php_stream_context_link).</li>
-  <li><?php bugfix(60817); ?> (stream_get_line() reads from stream even when there is
-    already sufficient data buffered). stream_get_line() now behaves more like
-    fgets(), as is documented.</li>
-  <li>Further fix for bug <?php bugfix(60455); ?> (stream_get_line misbehaves if EOF is not
-    detected together with the last read).</li>
-  <li><?php bugfix(60106); ?> (stream_socket_server silently truncates long unix
-    socket paths).</li>
-</ul></li>
-</ul>
-
-<ul>
-<li>Tidy
-<ul>
-  <li><?php bugfix(54682); ?> (tidy null pointer dereference).</li>
-</ul></li>
-</ul>
-
-<ul>
-<li>XMLRPC
-<ul>
-  <li><?php bugfix(61264); ?> (xmlrpc_parse_method_descriptions leaks temporary
-    variable).</li>
-  <li><?php bugfix(61097); ?> (Memory leak in xmlrpc functions copying zvals).</li>
-</ul></li>
-</ul>
-
-<ul>
-<li>Zlib
-<ul>
-  <li><?php bugfix(61306); ?> (initialization of global inappropriate for ZTS).</li>
-  <li><?php bugfix(61287); ?> (A particular string fails to decompress).</li>
-  <li><?php bugfix(61139); ?> (gzopen leaks when specifying invalid mode).</li>
 </ul></li>
 </ul>
 <!-- }}} --></section>
@@ -8355,7 +7306,7 @@ FILTER_FLAG_NO_PRIV_RANGE).</li>
   <li>Added DTrace support.</li>
   <li>Added class member access on instantiation (e.g. (new foo)-&gt;bar()) support.</li>
   <li>&lt;?= is now always available regardless of the short_open_tag setting.</li>
-  <li>Implemented Zend Signal Handling (configurable option --enable-zend-signals, 
+  <li>Implemented Zend Signal Handling (configurable option --enable-zend-signals,
     off by default).</li>
   <li>Improved output layer, see README.NEW-OUTPUT-API for internals.</li>
   <li>Improved unix build system to allow building multiple PHP binary SAPIs and
@@ -8363,7 +7314,7 @@ FILTER_FLAG_NO_PRIV_RANGE).</li>
   <li>Implemented closure rebinding as parameter to bindTo.</li>
   <li>Improved the warning message of incompatible arguments.</li>
   <li>Improved ternary operator performance when returning arrays.
-  <li>Changed error handlers to only generate docref links when the docref_root 
+  <li>Changed error handlers to only generate docref links when the docref_root
     INI setting is not empty.</li>
   <li>Changed silent conversion of array to string to produce a notice.</li>
   <li>Changed default value of "default_charset" php.ini option from ISO-8859-1 to
@@ -8536,7 +7487,7 @@ FILTER_FLAG_NO_PRIV_RANGE).</li>
     been added.</li>
   <li>Added http_response_code() function. <?php bugl(52555); ?>.</li>
   <li><?php bugfix(55500); ?> (Corrupted $_FILES indices lead to security concern).</li>
-  <li><?php bugfix(54374); ?> (Insufficient validating of upload name leading to 
+  <li><?php bugfix(54374); ?> (Insufficient validating of upload name leading to
     corrupted $_FILES indices).</li>
 </ul></li>
 </ul>
@@ -8744,7 +7695,7 @@ FILTER_FLAG_NO_PRIV_RANGE).</li>
     than 4.1.</li>
   <li>ext/mysql, mysqli and pdo_mysql now use mysqlnd by default.</li>
   <li><?php bugfix(55473); ?> (mysql_pconnect leaks file descriptors on reconnect). </li>
-  <li><?php bugfix(55653); ?> (PS crash with libmysql when binding same variable as 
+  <li><?php bugfix(55653); ?> (PS crash with libmysql when binding same variable as
     param and out).</li>
 </ul></li>
 </ul>
@@ -8796,7 +7747,7 @@ FILTER_FLAG_NO_PRIV_RANGE).</li>
 <ul>
   <li><?php bugfix(53280); ?> (segfaults if query column count less than param count). </li>
   <li><?php bugfix(48877); ?> ("bindValue" and "bindParam" do not work for PDO Firebird).</li>
-  <li><?php bugfix(47415); ?> (segfaults when passing lowercased column name to 
+  <li><?php bugfix(47415); ?> (segfaults when passing lowercased column name to
     bindColumn).</li>
 </ul></li>
 </ul>
@@ -8933,6 +7884,1106 @@ FILTER_FLAG_NO_PRIV_RANGE).</li>
 
 <!-- }}} --></section>
 
+<a id="PHP_5_3"></a>
+<section class="version" id="5.3.29"><!-- {{{ 5.3.29 -->
+<h3>Version 5.3.29</h3>
+<?php release_date('14-Aug-2014'); ?>
+<ul><li>Core:
+<ul>
+  <li><?php bugfix(66127); ?> (Segmentation fault with ArrayObject unset).</li>
+  <li><?php bugfix(67247); ?> (spl_fixedarray_resize integer overflow).</li>
+  <li><?php bugfix(67249); ?> (printf out-of-bounds read).</li>
+  <li><?php bugfix(67250); ?> (iptcparse out-of-bounds read).</li>
+  <li><?php bugfix(67252); ?> (convert_uudecode out-of-bounds read).</li>
+  <li><?php bugfix(67359); ?> (Segfault in recursiveDirectoryIterator).</li>
+  <li><?php bugfix(67390); ?> (insecure temporary file use in the configure script). (CVE-2014-3981)</li>
+  <li><?php bugfix(67399); ?> (putenv with empty variable may lead to crash).</li>
+  <li><?php bugfix(67492); ?> (unserialize() SPL ArrayObject / SPLObjectStorage Type Confusion) (CVE-2014-3515).</li>
+  <li><?php bugfix(67498); ?> (phpinfo() Type Confusion Information Leak Vulnerability). (CVE-2014-4721)</li>
+</ul></li>
+<li>COM:
+<ul>
+  <li>Fixed missing type checks in com_event_sink.</li>
+</ul></li>
+<li>Date:
+<ul>
+  <li><?php bugfix(66060); ?> (Heap buffer over-read in DateInterval). (CVE-2013-6712)</li>
+  <li><?php bugfix(67251); ?> (date_parse_from_format out-of-bounds read).</li>
+  <li><?php bugfix(67253); ?> (timelib_meridian_with_check out-of-bounds read).</li>
+</ul></li>
+<li>Exif:
+<ul>
+  <li><?php bugfix(65873); ?> (Integer overflow in exif_read_data()).</li>
+</ul></li>
+<li>Fileinfo:
+<ul>
+  <li><?php bugfix(66307); ?> (Fileinfo crashes with powerpoint files).</li>
+  <li><?php bugfix(67326); ?> (fileinfo: cdf_read_short_sector insufficient boundary check). (CVE-2014-0207)</li>
+  <li><?php bugfix(67327); ?> (fileinfo: CDF infinite loop in nelements DoS). (CVE-2014-0238)</li>
+  <li><?php bugfix(67328); ?> (fileinfo: fileinfo: numerous file_printf calls resulting in performance degradation). (CVE-2014-0237)</li>
+  <li><?php bugfix(67410); ?> (fileinfo: mconvert incorrect handling of truncated pascal string size) (CVE-2014-3478).</li>
+  <li><?php bugfix(67411); ?> (fileinfo: cdf_check_stream_offset insufficient boundary check) (CVE-2014-3479).</li>
+  <li><?php bugfix(67412); ?> (fileinfo: cdf_count_chain insufficient boundary check) (CVE-2014-3480).</li>
+  <li><?php bugfix(67413); ?> (fileinfo: cdf_read_property_info insufficient boundary check) (CVE-2014-3487).</li>
+</ul></li>
+<li>Intl:
+<ul>
+  <li><?php bugfix(67349); ?> (Locale::parseLocale Double Free).</li>
+  <li><?php bugfix(67397); ?> (Buffer overflow in locale_get_display_name and uloc_getDisplayName (libicu 4.8.1)).</li>
+</ul></li>
+<li>Network:
+<ul>
+  <li><?php bugfix(67432); ?> (Fix potential segfault in dns_get_record()). (CVE-2014-4049)</li>
+</ul></li>
+<li>OpenSSL:
+<ul>
+  <li>Fixed missing type checks in OpenSSL options.</li>
+</ul></li>
+<li>Session:
+<ul>
+  <li>Fixed missing type checks in php_session_create_id.</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
+<section class="version" id="5.3.28"><!-- {{{ 5.3.28 -->
+<h3>Version 5.3.28</h3>
+<?php release_date('12-Dec-2013'); ?>
+<ul><li>Openssl:
+<ul>
+  <li>Fixed handling null bytes in subjectAltName (CVE-2013-4248).</li>
+  <li>Fixed memory corruption in openssl_x509_parse() (CVE-2013-6420). (Stefan Esser).</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
+<section class="version" id="5.3.27"><!-- {{{ 5.3.27 -->
+<h3>Version 5.3.27</h3>
+<?php release_date('11-Jul-2013'); ?>
+<ul><li>Core:
+<ul>
+  <li><?php bugfix(64966); ?> (segfault in zend_do_fcall_common_helper_SPEC).</li>
+  <li><?php bugfix(64960); ?> (Segfault in gc_zval_possible_root).</li>
+  <li><?php bugfix(64934); ?> (Apache2 TS crash with get_browser()).</li>
+  <li><?php bugfix(63186); ?> (compile failure on netbsd).</li>
+</ul></li>
+<li>DateTime:
+<ul>
+  <li><?php bugfix(53437); ?> (Crash when using unserialized DatePeriod instance).</li>
+</ul></li>
+<li>PDO_firebird:
+<ul>
+  <li><?php bugfix(64037); ?> (Firebird return wrong value for numeric field).</li>
+  <li><?php bugfix(62024); ?> (Cannot insert second row with null using parametrized query).</li>
+</ul></li>
+<li>PDO_pgsql:
+<ul>
+  <li><?php bugfix(64949); ?> (Buffer overflow in _pdo_pgsql_error).</li>
+</ul></li>
+<li>pgsql:
+<ul>
+  <li><?php bugfix(64609); ?> (pg_convert enum type support).</li>
+</ul></li>
+<li>SPL:
+<ul>
+  <li><?php bugfix(64997); ?> (Segfault while using RecursiveIteratorIterator on 64-bits systems).</li>
+</ul></li>
+<li>XML:
+<ul>
+  <li><?php bugfix(65236); ?> (heap corruption in xml parser). (CVE-2013-4113)</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
+<section class="version" id="5.3.26"><!-- {{{ 5.3.26 -->
+<h3>Version 5.3.26</h3>
+<?php release_date('06-Jun-2013'); ?>
+<ul>
+<li>Core:
+<ul>
+ <li><?php bugfix(64879); ?> (Heap based buffer overflow in quoted_printable_encode, CVE-2013-2110).</li>
+</ul>
+</li>
+<li>Calendar:
+<ul>
+ <li><?php bugfix(64895); ?> (Integer overflow in SndToJewish).</li>
+</ul>
+</li>
+<li>FPM:
+<ul>
+ <li>Fixed some possible memory or resource leaks and possible null dereference detected by code coverity scan.</li>
+ <li>Log a warning when a syscall fails.</li>
+</ul>
+</li>
+<li>MySQLi:
+<ul>
+ <li><?php bugfix(64726); ?> (Segfault when calling fetch_object on a use_result and DB pointer has closed).</li>
+</ul>
+</li>
+<li>Phar:
+<ul>
+ <li><?php bugfix(64214); ?> (PHAR PHPTs intermittently crash when run on DFS, SMB or with non std tmp dir).</li>
+</ul>
+</li>
+<li>Streams:
+<ul>
+ <li><?php bugfix(64770); ?> (stream_select() fails with pipes returned by proc_open() on Windows x64).</li>
+</ul>
+</li>
+<li>Zend Engine:
+<ul>
+ <li><?php bugfix(64821); ?> (Custom Exception crash when internal properties overridden).</li>
+</ul>
+</li>
+</ul>
+<!-- }}} --></section>
+
+<section class="version" id="5.3.25"><!-- {{{ 5.3.25 -->
+<h3>Version 5.3.25</h3>
+<?php release_date('09-May-2013'); ?>
+<ul>
+<li>Core:
+<ul>
+  <li> <?php bugfix(64578); ?> (debug_backtrace in set_error_handler corrupts zend heap: segfault). </li>
+  <li> <?php bugfix(64458); ?> (dns_get_record result with string of length -1). </li>
+  <li> <?php bugfix(47675); ?> (fd leak on Solaris).</li>
+  <li> <?php bugfix(64577); ?> (fd leak on Solaris).</li>
+</ul></li>
+<li>Streams:
+<ul>
+  <li> Fixed Windows x64 version of stream_socket_pair() and improved error handling.</li>
+</ul></li>
+<li>Zip:
+<ul>
+  <li> <?php bugfix(64342); ?> (ZipArchive::addFile() has to check for file existence).</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
+<section class="version" id="5.3.24"><!-- {{{ 5.3.24 -->
+<h3>Version 5.3.24</h3>
+<?php release_date('11-Apr-2013'); ?>
+<ul>
+<li>Core:
+<ul>
+ <li><?php bugfix(64370); ?> (microtime(true) less than $_SERVER['REQUEST_TIME_FLOAT']).</li>
+ <li><?php bugfix(63914); ?> (zend_do_fcall_common_helper_SPEC does not handle exceptions properly).</li>
+ <li><?php bugfix(62343); ?> (Show class_alias In get_declared_classes()).</li>
+</ul></li>
+
+<li>PCRE:
+<ul>
+ <li>Merged PCRE 8.32.</li>
+</ul></li>
+
+<li>mysqlnd:
+<ul>
+ <li><?php bugfix(63530); ?> (mysqlnd_stmt::bind_one_parameter crashes, uses wrong alloc for stmt->param_bind).</li>
+</ul></li>
+
+<li>DateTime:
+<ul>
+ <li><?php bugfix(62852); ?> (Unserialize Invalid Date causes crash).</li>
+</ul></li>
+
+<li>Zip:
+<ul>
+ <li><?php bugfix(64452); ?> (Zip crash intermittently).</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
+<section class="version" id="5.3.23"><!-- {{{ 5.3.23 -->
+<h3>Version 5.3.23</h3>
+<?php release_date('14-March-2013'); ?>
+<ul>
+<li>Phar:
+<ul>
+ <li>Fixed timestamp update on Phar contents modification.</li>
+</ul></li>
+<li>SOAP
+<ul>
+ <li>Added check that soap.wsdl_cache_dir conforms to open_basedir
+    (CVE-2013-1635). </li>
+ <li>Disabled external entities loading (CVE-2013-1643, CVE-2013-1824).</li>
+</ul></li>
+<li>SPL:
+<ul>
+ <li><?php bugfix(64264); ?> (SPLFixedArray toArray problem). </li>
+ <li><?php bugfix(64228); ?> (RecursiveDirectoryIterator always assumes SKIP_DOTS).</li>
+ <li><?php bugfix(64106); ?> (Segfault on SplFixedArray[][x] = y when extended). </li>
+ <li><?php bugfix(52861); ?> (unset fails with ArrayObject and deep arrays).</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
+<section class="version" id="5.3.22"><!-- {{{ 5.3.22 -->
+<h3>Version 5.3.22</h3>
+<?php release_date('21-February-2013'); ?>
+<ul>
+<li>Zend Engine:
+<ul>
+  <li><?php bugfix(64099); ?> (Wrong TSRM usage in zend_Register_class alias).</li>
+  <li><?php bugfix(63899); ?> (Use after scope error in zend_compile).</li>
+</ul></li>
+</ul>
+
+<ul>
+<li>Core:
+<ul>
+  <li><?php bugfix(63943); ?> (Bad warning text from strpos() on empty needle).</li>
+</ul></li>
+</ul>
+
+<ul>
+<li>Date:
+<ul>
+  <li><?php bugfix(55397); ?> (comparsion of incomplete DateTime causes SIGSEGV).</li>
+</ul></li>
+</ul>
+
+<ul>
+<li>FPM:
+<ul>
+  <li><?php bugfix(63999); ?> (php with fpm fails to build on Solaris 10 or 11).</li>
+</ul></li>
+</ul>
+
+<ul>
+<li>SPL:
+<ul>
+  <li><?php bugfix(64106); ?> (Segfault on SplFixedArray[][x] = y when extended). </li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
+<section class="version" id="5.3.21"><!-- {{{ 5.3.21 -->
+<h3>Version 5.3.21</h3>
+<?php release_date('17-January-2013'); ?>
+<ul>
+<li>Zend Engine:
+<ul>
+  <li><?php bugfix(63762); ?> (Sigsegv when Exception::$trace is changed by user).</li>
+</ul></li>
+</ul>
+
+<ul>
+<li>cURL extension:
+<ul>
+  <li>Fixed bug (segfault due to libcurl connection caching).</li>
+  <li><?php bugfix(63795); ?> (CURL &gt;= 7.28.0 no longer support value 1 for CURLOPT_SSL_VERIFYHOST).</li>
+  <li><?php bugfix(63352); ?> (Can't enable hostname validation when using curl stream wrappers).</li>
+  <li><?php bugfix(55438); ?> (Curlwapper is not sending http header randomly).</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
+<section class="version" id="5.3.20"><!-- {{{ 5.3.20 -->
+<h3>Version 5.3.20</h3>
+<?php release_date('20-December-2012'); ?>
+<ul>
+<li>Zend Engine:
+<ul>
+  <li><?php bugfix(63635); ?> (Segfault in gc_collect_cycles).</li>
+  <li><?php bugfix(63512); ?> (parse_ini_file() with INI_SCANNER_RAW removes quotes from value).</li>
+  <li><?php bugfix(63468); ?> (wrong called method as callback with inheritance).</li>
+</ul></li>
+</ul>
+
+<ul>
+<li>Core:
+<ul>
+  <li><?php bugfix(63451); ?> (config.guess file does not have AIX 7 defined, shared objects are not created).</li>
+  <li><?php bugfix(63377); ?> (Segfault on output buffer).</li>
+</ul></li>
+</ul>
+
+<ul>
+<li>Apache2 Handler SAPI:
+<ul>
+  <li>Enabled Apache 2.4 configure option for Windows.</li>
+</ul></li>
+</ul>
+
+<ul>
+<li>Date:
+<ul>
+  <li><?php bugfix(63435); ?> (Datetime::format('u') sometimes wrong by 1 microsecond).</li>
+</ul></li>
+</ul>
+
+<ul>
+<li>Fileinfo:
+<ul>
+  <li><?php bugfix(63248); ?> (Load multiple magic files from a directory under Windows).</li>
+  <li><?php bugfix(63590); ?> (Different results in TS and NTS under Windows).</li>
+</ul></li>
+</ul>
+
+<ul>
+<li>FPM:
+<ul>
+  <li><?php bugfix(63581); ?> (Possible null dereference and buffer overflow).</li>
+</ul></li>
+</ul>
+
+<ul>
+<li>Imap:
+<ul>
+  <li><?php bugfix(63126); ?> (DISABLE_AUTHENTICATOR ignores array).</li>
+</ul></li>
+</ul>
+
+<ul>
+<li>MySQLnd:
+<ul>
+  <li><?php bugfix(63398); ?> (Segfault when polling closed link).</li>
+</ul></li>
+</ul>
+
+<ul>
+<li>Reflection:
+<ul>
+  <li><?php bugfix(63614); ?> (Fatal error on Reflection).</li>
+</ul></li>
+</ul>
+
+<ul>
+<li>SOAP:
+<ul>
+  <li><?php bugfix(63271); ?> (SOAP wsdl cache is not enabled after initial requests).</li>
+</ul></li>
+</ul>
+
+<!-- }}} --></section>
+
+<section class="version" id="5.3.19"><!-- {{{ 5.3.19 -->
+<h3>Version 5.3.19</h3>
+<?php release_date('22-November-2012'); ?>
+<ul>
+<li>Core:
+<ul>
+  <li><?php bugfix(63241); ?> (PHP fails to open Windows deduplicated files).</li>
+  <li><?php bugfix(62444); ?> (Handle leak in is_readable on windows).</li>
+</ul></li>
+</ul>
+
+<ul>
+<li>Libxml:
+<ul>
+  <li><?php bugfix(63389); ?> (Missing context check on libxml_set_streams_context() causes memleak).</li>
+</ul></li>
+</ul>
+
+<ul>
+<li>Mbstring:
+<ul>
+  <li><?php bugfix(63447); ?> (max_input_vars doesn't filter variables when
+    mbstring.encoding_translation = On).</li>
+</ul></li>
+</ul>
+
+<ul>
+<li>MySQL:
+<ul>
+  <li>Fixed compilation failure on mixed 32/64 bit systems.</li>
+</ul></li>
+</ul>
+
+<ul>
+<li>OCI8:
+<ul>
+  <li><?php bugfix(63265); ?> (Add ORA-00028 to the PHP_OCI_HANDLE_ERROR macro)</li>
+</ul></li>
+</ul>
+
+<ul>
+<li>PCRE:
+<ul>
+  <li><?php bugfix(63055); ?> (Segfault in zend_gc with SF2 testsuite).</li>
+  <li><?php bugfix(63284); ?> (Upgrade PCRE to 8.31).</li>
+</ul></li>
+</ul>
+
+<ul>
+<li>PDO:
+<ul>
+  <li><?php bugfix(63235); ?> (buffer overflow in use of SQLGetDiagRec).</li>
+</ul></li>
+</ul>
+
+<ul>
+<li>PDO_pgsql:
+<ul>
+  <li><?php bugfix(62593); ?> (Emulate prepares behave strangely with PARAM_BOOL).</li>
+</ul></li>
+</ul>
+
+<ul>
+<li>Phar:
+<ul>
+  <li><?php bugfix(63297); ?> (Phar fails to write an openssl based signature).</li>
+</ul></li>
+</ul>
+
+<ul>
+<li>Streams:
+<ul>
+  <li><?php bugfix(63240); ?> (stream_get_line() return contains delimiter string).</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
+<section class="version" id="5.3.18"><!-- {{{ 5.3.18 -->
+<h3>Version 5.3.18</h3>
+<?php release_date('18-October-2012'); ?>
+<ul>
+<li>Core
+<ul>
+  <li><?php bugfix(63111); ?> (is_callable() lies for abstract static method).</li>
+  <li><?php bugfix(63093); ?> (Segfault while load extension failed in zts-build).</li>
+  <li><?php bugfix(62976); ?> (Notice: could not be converted to int when comparing some builtin classes).</li>
+  <li><?php bugfix(61767); ?> (Shutdown functions not called in certain error situation).</li>
+  <li><?php bugfix(61442); ?> (exception threw in __autoload can not be catched).</li>
+  <li><?php bugfix(60909); ?> (custom error handler throwing Exception + fatal error = no shutdown function).</li>
+</ul></li>
+</ul>
+
+<ul>
+<li>cURL
+<ul>
+  <li><?php bugfix(62085); ?> (file_get_contents a remote file by Curl wrapper will cause cpu Soaring).</li>
+</ul></li>
+</ul>
+
+<ul>
+<li>FPM
+<ul>
+  <li><?php bugfix(62954); ?> (startup problems fpm / php-fpm).</li>
+  <li><?php bugfix(62886); ?> (PHP-FPM may segfault/hang on startup).</li>
+  <li><?php bugfix(63085); ?> (Systemd integration and daemonize).</li>
+  <li><?php bugfix(62947); ?> (Unneccesary warnings on FPM).</li>
+  <li><?php bugfix(62887); ?> (Only /status?plain&amp;full gives "last request cpu").</li>
+  <li><?php bugfix(62216); ?> (Add PID to php-fpm init.d script).</li>
+</ul></li>
+</ul>
+
+<ul>
+<li>Intl
+<ul>
+  <li><?php bugfix(62915); ?> (defective cloning in several intl classes).</li>
+</ul></li>
+</ul>
+
+<ul>
+<li>SOAP
+<ul>
+  <li><?php bugfix(50997); ?> (SOAP Error when trying to submit 2nd Element of a choice).</li>
+</ul></li>
+</ul>
+
+<ul>
+<li>SPL
+<ul>
+  <li><?php bugfix(62987) ?> (Assigning to ArrayObject[null][something] overrides all undefined variables).</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
+<section class="version" id="5.3.17"><!-- {{{ 5.3.17 -->
+<h3>Version 5.3.17</h3>
+<?php release_date('13-September-2012'); ?>
+<ul>
+<li>Core
+<ul>
+    <li>Fixed bug (segfault while build with zts and GOTO vm-kind)</li>
+    <li><?php bugfix(62955); ?> (Only one directive is loaded from "Per Directory Values" Windows registry)</li>
+    <li><?php bugfix(62763); ?> (register_shutdown_function and extending class)</li>
+    <li><?php bugfix(62744); ?> (dangling pointers made by zend_disable_class)</li>
+    <li><?php bugfix(62716); ?> (munmap() is called with the incorrect length)</li>
+    <li><?php bugfix(62460); ?> (php binaries installed as binary.dSYM)</li>
+</ul></li>
+</ul>
+
+<ul>
+<li>CURL
+<ul>
+    <li><?php bugfix(62839); ?> (curl_copy_handle segfault with CURLOPT_FILE)</li>
+</ul></li>
+</ul>
+
+<ul>
+<li>DateTime
+<ul>
+    <li><?php bugfix(62852); ?> (Unserialize invalid DateTime causes crash)</li>
+</ul></li>
+</ul>
+
+<ul>
+<li>Intl
+<ul>
+    <li>Fix null pointer dereferences in some classes of ext/intl</li>
+</ul></li>
+</ul>
+
+<ul>
+<li>MySQLnd
+<ul>
+    <li><?php bugfix(62885); ?> (mysqli_poll - Segmentation fault)</li>
+</ul></li>
+</ul>
+
+<ul>
+<li>PDO
+<ul>
+    <li><?php bugfix(62685); ?> (Wrong return datatype in PDO::inTransaction())</li>
+</ul></li>
+</ul>
+
+<ul>
+<li>Session
+<ul>
+    <li>Fixed bug (segfault due to retval is not initialized)</li>
+</ul></li>
+</ul>
+
+<ul>
+<li>SPL
+<ul>
+    <li><?php bugfix(62904); ?> (Crash when cloning an object which inherits SplFixedArray)</li>
+</ul></li>
+</ul>
+
+<ul>
+<li>Enchant
+<ul>
+    <li><?php bugfix(62838); ?> (enchant_dict_quick_check() destroys zval, but fails to initialize it)</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
+<section class="version" id="5.3.16"><!-- {{{ 5.3.16 -->
+<h3>Version 5.3.16</h3>
+<?php release_date('16-August-2012'); ?>
+<ul>
+<li>Core
+<ul>
+  <li><?php bugfix(62763); ?> (register_shutdown_function and extending class).</li>
+  <li><?php bugfix(62744); ?> (dangling pointers made by zend_disable_class).</li>
+  <li><?php bugfix(62716); ?> (munmap() is called with the incorrect length).</li>
+  <li><?php bugfix(62460); ?> (php binaries installed as binary.dSYM).</li>
+  <li><?php bugfix(60194); ?> (--with-zend-multibyte and --enable-debug reports LEAK with run-test.php).</li>
+</ul></li>
+</ul>
+
+<ul>
+<li>CURL
+<ul>
+  <li><?php bugfix(62839); ?> (curl_copy_handle segfault with CURLOPT_FILE).</li>
+  <li><?php bugfix(62499); ?> (curl_setopt($ch, CURLOPT_COOKIEFILE, "") returns false).</li>
+</ul></li>
+</ul>
+
+<ul>
+<li>DateTime
+<ul>
+  <li><?php bugfix(62500); ?> (Segfault in DateInterval class when extended).</li>
+</ul></li>
+</ul>
+
+<ul>
+<li>Enchant
+<ul>
+  <li><?php bugfix(62838); ?> (enchant_dict_quick_check() destroys zval, but fails to initialize it).</li>
+</ul></li>
+</ul>
+
+<ul>
+<li>PDO
+<ul>
+  <li><?php bugfix(62685); ?> (Wrong return datatype in PDO::inTransaction()).</li>
+</ul></li>
+</ul>
+
+<ul>
+<li>Reflection
+<ul>
+  <li><?php bugfix(62715); ?> (ReflectionParameter::isDefaultValueAvailable() wrong result).</li>
+</ul></li>
+</ul>
+
+<ul>
+<li>Session
+<ul>
+  <li>Fixed bug (segfault due to retval is not initialized).</li>
+</ul></li>
+</ul>
+
+<ul>
+<li>SPL
+<ul>
+  <li><?php bugfix(62616); ?> (ArrayIterator::count() from IteratorIterator instance gives Segmentation fault).</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
+<section class="version" id="5.3.15"><!-- {{{ 5.3.15 -->
+<h3>Version 5.3.15</h3>
+<?php release_date('19-July-2012'); ?>
+<ul>
+<li>Zend Engine
+<ul>
+  <li><?php bugfix(51094); ?> (parse_ini_file() with INI_SCANNER_RAW cuts a value that includes a semi-colon)</li>
+</ul></li>
+</ul>
+
+<ul>
+<li>COM
+<ul>
+  <li><?php bugfix(62146); ?> com_dotnet cannot be built shared</li>
+</ul></li>
+</ul>
+
+<ul>
+<li>Core
+<ul>
+  <li>Fixed potential overflow in _php_stream_scandir, CVE-2012-2688</li>
+  <li><?php bugfix(62432); ?> (ReflectionMethod random corrupt memory on high concurrent)</li>
+  <li><?php bugfix(62443); ?> (Crypt SHA256/512 Segfaults With Malformed Salt)</li>
+</ul></li>
+</ul>
+
+<ul>
+<li>Fileinfo
+<ul>
+  <li>Fixed magic file regex support</li>
+</ul></li>
+</ul>
+
+<ul>
+<li>FPM
+<ul>
+  <li><?php bugfix(61045); ?> (fpm don't send error log to fastcgi clients)</li>
+  <li><?php bugfix(61835); ?> (php-fpm is not allowed to run as root)</li>
+  <li><?php bugfix(61295); ?> (php-fpm should not fail with commented 'user' for non-root start)</li>
+  <li><?php bugfix(61026); ?> (FPM pools can listen on the same address)</li>
+  <li><?php bugfix(62033); ?> (php-fpm exits with status 0 on some failures to start)</li>
+  <li><?php bugfix(62153); ?> (when using unix sockets, multiples FPM instances can be launched without errors)</li>
+  <li><?php bugfix(62160); ?> (Add process.priority to set nice(2) priorities)</li>
+  <li><?php bugfix(61218); ?> (FPM drops connection while receiving some binary values in FastCGI requests)</li>
+  <li><?php bugfix(62205); ?> (php-fpm segfaults (null passed to strstr))</li>
+</ul></li>
+</ul>
+
+<ul>
+<li>Intl
+<ul>
+  <li><?php bugfix(62083); ?> (grapheme_extract() memory leaks)</li>
+  <li><?php bugfix(62081); ?> (IntlDateFormatter constructor leaks memory when called twice)</li>
+  <li><?php bugfix(62070); ?> (Collator::getSortKey() returns garbage)</li>
+  <li><?php bugfix(62017); ?> (datefmt_create with incorrectly encoded timezone leaks pattern)</li>
+  <li><?php bugfix(60785); ?> (memory leak in IntlDateFormatter constructor)</li>
+</ul></li>
+</ul>
+
+<ul>
+<li>JSON
+<ul>
+  <li>Reverted fix for bug <?php bugl(61537); ?></li>
+</ul></li>
+</ul>
+
+<ul>
+<li>Phar
+<ul>
+  <li><?php bugfix(62227); ?> (Invalid phar stream path causes crash)</li>
+</ul></li>
+</ul>
+
+<ul>
+<li>Reflection
+<ul>
+  <li><?php bugfix(62384); ?> (Attempting to invoke a Closure more than once causes segfault)</li>
+  <li><?php bugfix(62202); ?> (ReflectionParameter::getDefaultValue() memory leaks with constant)</li>
+</ul></li>
+</ul>
+
+<ul>
+<li>SPL
+<ul>
+  <li><?php bugfix(62262); ?> (RecursiveArrayIterator does not implement Countable)</li>
+</ul></li>
+</ul>
+
+<ul>
+<li>SQLite
+<ul>
+  <li>Fixed open_basedir bypass, CVE-2012-3365</li>
+</ul></li>
+</ul>
+
+<ul>
+<li>XML Write
+<ul>
+  <li><?php bugfix(62064); ?> (memory leak in the XML Writer module)</li>
+</ul></li>
+</ul>
+
+<ul>
+<li>Zip
+<ul>
+  <li>Upgraded libzip to 0.10</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
+<section class="version" id="5.3.14"><!-- {{{ 5.3.14 -->
+<h3>Version 5.3.14</h3>
+<?php release_date('06-June-2012'); ?>
+<ul>
+<li>CLI SAPI
+<ul>
+  <li><?php bugfix(61546); ?> (functions related to current script failed when chdir() in cli sapi)</li>
+</ul></li>
+</ul>
+
+<ul>
+<li>Core
+<ul>
+  <li>Fixed CVE-2012-2143</li>
+  <li><?php bugfix(62005); ?> (unexpected behavior when incrementally assigning to a member of a null object)</li>
+  <li><?php bugfix(61730); ?> (Segfault from array_walk modifying an array passed by reference)</li>
+  <li>Fixed missing bound check in iptcparse()</li>
+  <li><?php bugfix(61764); ?> ('I' unpacks n as signed if n &gt; 2^31-1 on LP64)</li>
+  <li><?php bugfix(54197); ?> ([PATH=] sections incompatibility with user_ini.filename set to null)</li>
+  <li><?php bugfix(61713); ?> (Logic error in charset detection for htmlentities)</li>
+  <li><?php bugfix(61991); ?> (long overflow in realpath_cache_get())</li>
+  <li>Changed php://fd to be available only for CLI.</li>
+</ul></li>
+</ul>
+
+<ul>
+<li>CURL
+<ul>
+  <li><?php bugfix(61948); ?> (CURLOPT_COOKIEFILE '' raises open_basedir restriction)</li>
+</ul></li>
+</ul>
+
+<ul>
+<li>COM
+<ul>
+  <li><?php bugfix(62146); ?> com_dotnet cannot be built shared</li>
+</ul></li>
+</ul>
+
+<ul>
+<li>Fileinfo
+<ul>
+  <li><?php bugfix(61812); ?> (Uninitialised value used in libmagic)</li>
+</ul></li>
+</ul>
+
+<ul>
+<li>Iconv
+<ul>
+  <li>Fixed a bug that iconv extension fails to link to the correct library when another extension makes use of a library that links to the iconv library. See <a href="https://bugs.gentoo.org/show_bug.cgi?id=364139">https://bugs.gentoo.org/show_bug.cgi?id=364139</a> for detail</li>
+</ul></li>
+</ul>
+
+<ul>
+<li>Intl
+<ul>
+  <li><?php bugfix(62082); ?> (Memory corruption in internal function get_icu_disp_value_src_php()</li>
+</ul></li>
+</ul>
+
+<ul>
+<li>JSON
+<ul>
+  <li><?php bugfix(61537); ?> (json_encode() incorrectly truncates/discards information)</li>
+</ul></li>
+</ul>
+
+<ul>
+<li>PDO
+<ul>
+  <li><?php bugfix(61755); ?> (A parsing bug in the prepared statements can lead to access violations). (CVE-2012-3450)</li>
+</ul></li>
+</ul>
+
+<ul>
+<li>Phar
+<ul>
+<li><?php bugfix(61065); ?> (Secunia SA44335) (CVE-2012-2386)</li>
+</ul></li>
+</ul>
+
+<ul>
+<li>Streams
+<ul>
+  <li><?php bugfix(61961); ?> (file_get_contents leaks when access empty file with maxlen set)</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
+<section class="version" id="5.3.13"><!-- {{{ 5.3.13 -->
+<h3>Version 5.3.13</h3>
+<?php release_date('08-May-2012'); ?>
+
+<ul>
+  <li><?php bugfix(61910); ?> Improve fix for PHP-CGI query string parameter vulnerability, CVE-2012-2311.</li>
+</ul>
+<!-- }}} --></section>
+
+<section class="version" id="5.3.12"><!-- {{{ 5.3.12 -->
+<h3>Version 5.3.12</h3>
+<?php release_date('03-May-2012'); ?>
+
+<ul>
+  <li><?php bugfix(61910); ?> Fix PHP-CGI query string parameter vulnerability, CVE-2012-1823.</li>
+</ul>
+<!-- }}} --></section>
+
+<section class="version" id="5.3.11"><!-- {{{ 5.3.11 -->
+<h3>Version 5.3.11</h3>
+<?php release_date('26-Apr-2012'); ?>
+
+<ul>
+<li>Core
+<ul>
+  <li><?php bugfix(61650); ?> (ini parser crashes when using ${xxxx} ini variables
+    (without apache2)).</li>
+  <li><?php bugfix(61273); ?> (call_user_func_array with more than 16333 arguments
+    leaks / crashes).</li>
+  <li><?php bugfix(61165); ?> (Segfault - strip_tags()).</li>
+  <li><?php bugfix(61095); ?> (Incorect lexing of 0x00*+&lt;NUM&gt;).</li>
+  <li><?php bugfix(61087); ?> (Memory leak in parse_ini_file when specifying
+    invalid scanner mode).</li>
+  <li><?php bugfix(61072); ?> (Memory leak when restoring an exception handler).</li>
+  <li><?php bugfix(61058); ?> (array_fill leaks if start index is PHP_INT_MAX).</li>
+  <li><?php bugfix(61000); ?> (Exceeding max nesting level doesn't delete numerical
+    vars).</li>
+  <li><?php bugfix(60895); ?> (Possible invalid handler usage in windows random
+    functions).</li>
+  <li><?php bugfix(60825); ?> (Segfault when running symfony 2 tests).</li>
+  <li><?php bugfix(60801); ?> (strpbrk() mishandles NUL byte).</li>
+  <li><?php bugfix(60569); ?> (Nullbyte truncates Exception $message).</li>
+  <li><?php bugfix(60227); ?> (header() cannot detect the multi-line header with CR).</li>
+  <li><?php bugfix(60222); ?> (time_nanosleep() does validate input params).</li>
+  <li><?php bugfix(54374); ?> (Insufficient validating of upload name leading to
+    corrupted $_FILES indices). (CVE-2012-1172).</li>
+  <li><?php bugfix(52719); ?> (array_walk_recursive crashes if third param of the
+    function is by reference).</li>
+  <li>Improve performance of set_exception_handler while doing reset.</li>
+  <li><?php bugfix(51860); ?> (Include fails with toplevel symlink to /).</li>
+</ul></li>
+</ul>
+
+<ul>
+<li>DOM
+<ul>
+  <li>Added debug info handler to DOM objects.</li>
+</ul></li>
+</ul>
+
+<ul>
+<li>FPM
+<ul>
+  <li><?php bugfix(61430); ?> (Transposed memset() params in sapi/fpm/fpm/fpm_shm.)</li>
+  <li><?php bugfix(60811); ?> (php-fpm compilation problem).</li>
+</ul></li>
+</ul>
+
+<ul>
+<li>Fileinfo
+<ul>
+  <li>Upgraded libmagic to 5.</li>
+  <li><?php bugfix(61565); ?> where php_stream_open_wrapper_ex tries to open a
+    directory descriptor under windows.</li>
+  <li><?php bugfix(61566); ?> failure caused by the posix lseek and read versions
+    under windows in cdf_read().</li>
+  <li><?php bugfix(61173); ?> (Unable to detect error from finfo constructor).</li>
+</ul></li>
+</ul>
+
+<ul>
+<li>Firebird Database extension (ibase)
+<ul>
+  <li><?php bugfix(60802); ?> (ibase_trans() gives segfault when passing params).</li>
+</ul></li>
+</ul>
+
+<ul>
+<li>Ibase
+<ul>
+  <li><?php bugfix(60947); ?> (Segmentation fault while executing ibase_db_info).</li>
+</ul></li>
+</ul>
+
+<ul>
+<li>Installation
+<ul>
+  <li><?php bugfix(61172); ?> (Add Apache 2.4 support).</li>
+</ul></li>
+</ul>
+
+<ul>
+<li>mysqli
+<ul>
+  <li><?php bugfix(61003); ?> (mysql_stat() require a valid connection).</li>
+</ul></li>
+</ul>
+
+<ul>
+<li>PDO_mysql
+<ul>
+  <li><?php bugfix(61207); ?> (PDO::nextRowset() after a multi-statement query doesn't
+    always work).</li>
+  <li><?php bugfix(61194); ?> (PDO should export compression flag with myslqnd).</li>
+</ul></li>
+</ul>
+
+<ul>
+<li>PDO_odbc
+<ul>
+  <li><?php bugfix(61212); ?> (PDO ODBC Segfaults on SQL_SUCESS_WITH_INFO).</li>
+</ul></li>
+</ul>
+
+<ul>
+<li>PDO_pgsql
+<ul>
+  <li><?php bugfix(61267); ?> (pdo_pgsql's PDO::exec() returns the number of SELECTed
+    rows on postgresql &gt;= 9).</li>
+</ul></li>
+</ul>
+
+<ul>
+<li>PDO_Sqlite extension
+<ul>
+  <li>Add createCollation support.</li>
+</ul></li>
+</ul>
+
+<ul>
+<li>pgsql
+<ul>
+  <li><?php bugfix(60718); ?> (Compile problem with libpq (PostgreSQL 7.3 or less).</li>
+</ul></li>
+</ul>
+
+<ul>
+<li>Phar
+<ul>
+  <li><?php bugfix(61184); ?> (Phar::webPhar() generates headers with trailing NUL
+    bytes).</li>
+</ul></li>
+</ul>
+
+<ul>
+<li>Readline
+<ul>
+  <li><?php bugfix(61088); ?> (Memory leak in readline_callback_handler_install).</li>
+  <li>Add open_basedir checks to readline_write_history and readline_read_history.</li>
+</ul></li>
+</ul>
+
+<ul>
+<li>Reflection
+<ul>
+  <li><?php bugfix(61388); ?> (ReflectionObject:getProperties() issues invalid reads
+    when get_properties returns a hash table with (inaccessible) dynamic
+    numeric properties).</li>
+  <li><?php bugfix(60968); ?> (Late static binding doesn't work with
+    ReflectionMethod::invokeArgs()).</li>
+</ul></li>
+</ul>
+
+<ul>
+<li>Session
+<ul>
+  <li><?php bugfix(60860); ?> (session.save_handler=user without defined function core
+    dumps).</li>
+  <li><?php bugfix(60634); ?> (Segmentation fault when trying to die() in
+    SessionHandler::write()).</li>
+</ul></li>
+</ul>
+
+<ul>
+<li>SOAP
+<ul>
+  <li><?php bugfix(61423); ?> (gzip compression fails).</li>
+  <li><?php bugfix(60887); ?> (SoapClient ignores user_agent option and sends no
+    User-Agent header).</li>
+    <li><?php bugfix(60842); ?>, <?php bugfix(51775); ?> (Chunked response parsing error when
+    chunksize length line is &gt; 10 bytes).</li>
+  <li><?php bugfix(49853); ?> (Soap Client stream context header option ignored).</li>
+</ul></li>
+</ul>
+
+<ul>
+<li>SPL
+<ul>
+  <li>Fixed memory leak when calling SplFileInfo's constructor twice.</li>
+  <li><?php bugfix(61418); ?> (Segmentation fault when DirectoryIterator's or
+    FilesystemIterator's iterators are requested more than once without
+    having had its dtor callback called in between).</li>
+  <li><?php bugfix(61347); ?> (inconsistent isset behavior of Arrayobject).</li>
+  <li><?php bugfix(61326); ?> (ArrayObject comparison).</li>
+</ul></li>
+</ul>
+
+<ul>
+<li>SQLite3 extension
+<ul>
+  <li>Add createCollation() method.</li>
+</ul></li>
+</ul>
+
+<ul>
+<li>Streams
+<ul>
+  <li><?php bugfix(61371); ?> (stream_context_create() causes memory leaks on use
+    streams_socket_create).</li>
+  <li><?php bugfix(61253); ?> (Wrappers opened with errors concurrency problem on ZTS).</li>
+  <li><?php bugfix(61115); ?> (stream related segfault on fatal error in
+    php_stream_context_link).</li>
+  <li><?php bugfix(60817); ?> (stream_get_line() reads from stream even when there is
+    already sufficient data buffered). stream_get_line() now behaves more like
+    fgets(), as is documented.</li>
+  <li>Further fix for bug <?php bugfix(60455); ?> (stream_get_line misbehaves if EOF is not
+    detected together with the last read).</li>
+  <li><?php bugfix(60106); ?> (stream_socket_server silently truncates long unix
+    socket paths).</li>
+</ul></li>
+</ul>
+
+<ul>
+<li>Tidy
+<ul>
+  <li><?php bugfix(54682); ?> (tidy null pointer dereference).</li>
+</ul></li>
+</ul>
+
+<ul>
+<li>XMLRPC
+<ul>
+  <li><?php bugfix(61264); ?> (xmlrpc_parse_method_descriptions leaks temporary
+    variable).</li>
+  <li><?php bugfix(61097); ?> (Memory leak in xmlrpc functions copying zvals).</li>
+</ul></li>
+</ul>
+
+<ul>
+<li>Zlib
+<ul>
+  <li><?php bugfix(61306); ?> (initialization of global inappropriate for ZTS).</li>
+  <li><?php bugfix(61287); ?> (A particular string fails to decompress).</li>
+  <li><?php bugfix(61139); ?> (gzopen leaks when specifying invalid mode).</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
 <section class="version" id="5.3.10"><!-- {{{ 5.3.10 -->
 <h3>Version 5.3.10</h3>
 <?php release_date('02-Feb-2012'); ?>
@@ -8940,7 +8991,7 @@ FILTER_FLAG_NO_PRIV_RANGE).</li>
 <ul>
 <li>Core:
 <ul>
-  <li>Fixed arbitrary remote code execution vulnerability reported by Stefan 
+  <li>Fixed arbitrary remote code execution vulnerability reported by Stefan
     Esser, CVE-2012-0830.</li>
 </ul>
 </li>
@@ -9294,7 +9345,7 @@ FILTER_FLAG_NO_PRIV_RANGE).</li>
 <ul>
   <li>Reverted a change in timeout handling restoring PHP 5.3.6 behavior,
     as the new behavior caused mysqlnd SSL connections to hang (
-    bug <?php bugl(55283); ?></a>).
+    bug <?php bugl(55283); ?>).
     (Pierre, Andrey, Johannes)</li>
 </ul>
 </li>
@@ -9424,13 +9475,13 @@ FILTER_FLAG_NO_PRIV_RANGE).</li>
   <li><?php bugfix(53037); ?> (FILTER_FLAG_EMPTY_STRING_NULL is not implemented). (Ilia)</li>
 </ul>
 </li>
-  
+
 <li>Interbase extension:
 <ul>
   <li><?php bugfix(54269); ?> (Short exception message buffer causes crash). (Felipe)</li>
 </ul>
 </li>
-  
+
 <li>intl extension:
 <ul>
   <li><?php implemented(54561); ?> (Expose ICU version info). (David Zuelke, Ilia)</li>
@@ -9656,7 +9707,7 @@ FILTER_FLAG_NO_PRIV_RANGE).</li>
   <li><?php bugfix(48607); ?> (fwrite() doesn't check reply from ftp server before exiting). (Ilia)</li>
 </ul>
 </li>
- 
+
 <li>Calendar extension:
 <ul>
   <li><?php bugfix(53574); ?> (Integer overflow in SdnToJulian, sometimes leading to segfault). (Gustavo)</li>
@@ -9668,7 +9719,7 @@ FILTER_FLAG_NO_PRIV_RANGE).</li>
   <li><?php implemented(39771); ?> (Made DOMDocument::saveHTML accept an optional DOMNode like DOMDocument::saveXML). (Gustavo)</li>
 </ul>
 </li>
-  
+
 <li>DateTime extension:
 <ul>
   <li>Fixed a bug in DateTime-&gt;modify() where absolute date/time statements had no effect. (Derick)</li>
@@ -9713,7 +9764,7 @@ FILTER_FLAG_NO_PRIV_RANGE).</li>
   <li><?php bugfix(53377); ?> (imap_mime_header_decode() doesn't ignore \t during long MIME header unfolding). (Adam)</li>
 </ul>
 </li>
-    
+
 <li>Intl extension:
 <ul>
   <li><?php bugfix(53612); ?> (Segmentation fault when using cloned several intl objects). (Gustavo)</li>
@@ -9766,7 +9817,7 @@ FILTER_FLAG_NO_PRIV_RANGE).</li>
   <li><?php bugfix(39199); ?> (Cannot load Lob data with more than 4000 bytes on ORACLE 10). (spatar at mail dot nnov dot ru)</li>
 </ul>
 </li>
-    
+
 <li>PDO PostgreSQL driver:
 <ul>
   <li><?php bugfix(53517); ?> (segfault in pgsql_stmt_execute() when postgres is down). (gyp at balabit dot hu)</li>
@@ -9888,29 +9939,6 @@ FILTER_FLAG_NO_PRIV_RANGE).</li>
 
 <!-- }}} --></section>
 
-<section class="version" id="5.2.17"><!-- {{{ 5.2.17 -->
-<h3>Version 5.2.17</h3>
-<?php release_date('06-Jan-2011'); ?>
-<ul>
-
-<li><?php bugfix(53632); ?> (PHP hangs on numeric value 2.2250738585072011e-308). (CVE-2010-4645) (Rasmus, Scott)</li>
-
-</ul>
-
-<!-- }}} --></section>
-
-<section class="version" id="5.2.16"><!-- {{{ 5.2.16 -->
-<h3>Version 5.2.16</h3>
-<?php release_date('16-Dec-2010'); ?>
-<ul>
-
-<li><?php bugfix(53517); ?> (segfault in pgsql_stmt_execute() when postgres is down). (gyp at balabit dot hu)</li>
-<li><?php bugfix(53516); ?> (Regression in open_basedir handling). (Ilia)</li>
-
-</ul>
-
-<!-- }}} --></section>
-
 <section class="version" id="5.3.4"><!-- {{{ 5.3.4 -->
 <h3>Version 5.3.4</h3>
 <?php release_date('09-Dec-2010'); ?>
@@ -9921,10 +9949,10 @@ FILTER_FLAG_NO_PRIV_RANGE).</li>
 
 <li>Security enhancements:
 <ul>
-  <li>Fixed crash in zip extract method (possible CWE-170). 
+  <li>Fixed crash in zip extract method (possible CWE-170).
     (Maksymilian Arciemowicz, Pierre)</li>
   <li>Paths with NULL in them (foo\0bar.txt) are now considered as invalid. (Rasmus)</li>
-  <li>Fixed a possible double free in imap extension (Identified by Mateusz 
+  <li>Fixed a possible double free in imap extension (Identified by Mateusz
     Kocielski). (CVE-2010-4150). (Ilia)</li>
   <li>Fixed NULL pointer dereference in ZipArchive::getArchiveComment.
     (CVE-2010-3709). (Maksymilian Arciemowicz)</li>
@@ -9939,25 +9967,25 @@ FILTER_FLAG_NO_PRIV_RANGE).</li>
 <li>General improvements:
 <ul>
   <li>Added stat support for zip stream. (Pierre)</li>
-  <li>Added follow_location (enabled by default) option for the http stream 
+  <li>Added follow_location (enabled by default) option for the http stream
     support. (Pierre)</li>
   <li>Improved support for is_link and related functions on Windows. (Pierre)</li>
   <li>Added a 3rd parameter to get_html_translation_table. It now takes a charset
     hint, like htmlentities et al. (Gustavo)</li>
-</ul> 
+</ul>
 </li>
 <li>Implemented feature requests:
 <ul>
   <li><?php implemented(52348); ?>, added new constant ZEND_MULTIBYTE to detect
     zend multibyte at runtime. (Kalle)</li>
-  <li><?php implemented(52173); ?>, added functions pcntl_get_last_error() and 
+  <li><?php implemented(52173); ?>, added functions pcntl_get_last_error() and
      pcntl_strerror(). (nick dot telford at gmail dot com, Arnaud)</li>
   <li>Implemented symbolic links support for open_basedir checks. (Pierre)</li>
   <li><?php implemented(51804); ?>, SplFileInfo::getLinkTarget on Windows. (Pierre)</li>
   <li><?php implemented(50692); ?>, not uploaded files don't count towards
     max_file_uploads limit. As a side improvement, temporary files are not opened
     for empty uploads and, in debug mode, 0-length uploads. (Gustavo)</li>
-</ul>    
+</ul>
 </li>
 <li>Improved MySQLnd:
 <ul>
@@ -9973,7 +10001,7 @@ FILTER_FLAG_NO_PRIV_RANGE).</li>
   <li>Added '-t/--test' to php-fpm to check and validate FPM conf file. (fat)</li>
   <li>Added statistics about listening socket queue length for FPM.
     (andrei dot nigmatulin at gmail dot com, fat)</li>
-</ul>    
+</ul>
 </li>
 <li>Core:
 <ul>
@@ -9999,13 +10027,13 @@ FILTER_FLAG_NO_PRIV_RANGE).</li>
   <li><?php bugfix(53141); ?> (autoload misbehaves if called from closing session).
     (ladislav at marek dot su)</li>
   <li><?php bugfix(53021); ?> (In html_entity_decode, failure to convert numeric entities
-    with ENT_NOQUOTES and ISO-8859-1). Fixed and extended the fix of ENT_NOQUOTES 
+    with ENT_NOQUOTES and ISO-8859-1). Fixed and extended the fix of ENT_NOQUOTES
     in html_entity_decode that had introduced the bug (rev #185591) to other
     encodings. Additionaly, html_entity_decode() now doesn't decode &amp;#34; if
     ENT_NOQUOTES is given. (Gustavo)</li>
   <li><?php bugfix(52931); ?> (strripos not overloaded with function overloading enabled).
     (Felipe)</li>
-  <li><?php bugfix(52772); ?> (var_dump() doesn't check for the existence of 
+  <li><?php bugfix(52772); ?> (var_dump() doesn't check for the existence of
     get_class_name before calling it). (Kalle, Gustavo)</li>
   <li><?php bugfix(52534); ?> (var_export array with negative key). (Felipe)</li>
   <li><?php bugfix(52327); ?> (base64_decode() improper handling of leading padding in
@@ -10019,24 +10047,24 @@ FILTER_FLAG_NO_PRIV_RANGE).</li>
   <li><?php bugfix(49687); ?> (utf8_decode vulnerabilities and deficiencies in the number
     of reported malformed sequences). (CVE-2010-3870) (Gustavo)</li>
   <li><?php bugfix(49407); ?> (get_html_translation_table doesn't handle UTF-8). (Gustavo)</li>
-  <li><?php bugfix(48831); ?> (php -i has different output to php --ini). (Richard, 
+  <li><?php bugfix(48831); ?> (php -i has different output to php --ini). (Richard,
     Pierre)</li>
   <li><?php bugfix(47643); ?> (array_diff() takes over 3000 times longer than php 5.2.4).
     (Felipe)</li>
-  <li><?php bugfix(47168); ?> (printf of floating point variable prints maximum of 40 
+  <li><?php bugfix(47168); ?> (printf of floating point variable prints maximum of 40
     decimal places). (Ilia)</li>
   <li><?php bugfix(46587); ?> (mt_rand() does not check that max is greater than min).
     (Ilia)</li>
   <li><?php bugfix(29085); ?> (bad default include_path on Windows). (Pierre)</li>
   <li><?php bugfix(25927); ?> (get_html_translation_table calls the ' &amp;#39; instead of
     &amp;#039;). (Gustavo)</li>
-</ul>    
+</ul>
 </li>
 <li>Zend engine:
 <ul>
   <li>Reverted fix for bug <?php bugl(51176); ?> (Static calling in non-static method behaves
     like $this-&gt;). (Felipe)</li>
-  <li>Changed deprecated ini options on startup from E_WARNING to E_DEPRECATED. 
+  <li>Changed deprecated ini options on startup from E_WARNING to E_DEPRECATED.
     (Kalle)</li>
   <li>Fixed NULL dereference in lex_scan on zend multibyte builds where the script
     had a flex incompatible encoding and there was no converter. (Gustavo)</li>
@@ -10122,7 +10150,7 @@ FILTER_FLAG_NO_PRIV_RANGE).</li>
 </li>
 <li>GMP extension:
 <ul>
-  <li><?php bugfix(52906); ?> (gmp_mod returns negative result when non-negative is 
+  <li><?php bugfix(52906); ?> (gmp_mod returns negative result when non-negative is
     expected). (Stas)</li>
   <li><?php bugfix(52849); ?> (GNU MP invalid version match). (Adam)</li>
 </ul>
@@ -10139,7 +10167,7 @@ FILTER_FLAG_NO_PRIV_RANGE).</li>
     headers). (Adam)</li>
   <li><?php bugfix(52599); ?> (iconv output handler outputs incorrect content type
     when flags are used). (Ilia)</li>
-  <li><?php bugfix(51250); ?> (iconv_mime_decode() does not ignore malformed Q-encoded 
+  <li><?php bugfix(51250); ?> (iconv_mime_decode() does not ignore malformed Q-encoded
     words). (Ilia)</li>
 </ul>
 </li>
@@ -10173,7 +10201,7 @@ FILTER_FLAG_NO_PRIV_RANGE).</li>
 </li>
 <li>MySQL extension:
 <ul>
-  <li><?php bugfix(52636); ?> (php_mysql_fetch_hash writes long value into int). 
+  <li><?php bugfix(52636); ?> (php_mysql_fetch_hash writes long value into int).
     (Kalle, rein at basefarm dot no)</li>
 </ul>
 </li>
@@ -10199,7 +10227,7 @@ FILTER_FLAG_NO_PRIV_RANGE).</li>
 <li>MySQLnd:
 <ul>
   <li><?php bugfix(52613); ?> (crash in mysqlnd after hitting memory limit). (Andrey)</li>
-</ul> 
+</ul>
 </li>
 <li>ODBC extension:
 <ul>
@@ -10314,7 +10342,7 @@ FILTER_FLAG_NO_PRIV_RANGE).</li>
   <li><?php bugfix(53144); ?> (Segfault in SplObjectStorage::removeAll()). (Felipe)</li>
   <li><?php bugfix(53071); ?> (SPLObjectStorage defeats gc_collect_cycles). (Gustavo)</li>
   <li><?php bugfix(52573); ?> (SplFileObject::fscanf Segmentation fault). (Felipe)</li>
-  <li><?php bugfix(51763); ?> (SplFileInfo::getType() does not work symbolic link 
+  <li><?php bugfix(51763); ?> (SplFileInfo::getType() does not work symbolic link
     and directory). (Pierre)</li>
   <li><?php bugfix(50481); ?> (Storing many SPLFixedArray in an array crashes). (Felipe)</li>
   <li><?php bugfix(50579); ?> (RegexIterator::REPLACE doesn't work). (Felipe)</li>
@@ -10354,34 +10382,6 @@ FILTER_FLAG_NO_PRIV_RANGE).</li>
   <li><?php bugfix(52926); ?> (zlib fopen wrapper does not use context). (Gustavo)</li>
 </ul>
 </li>
-</ul>
-
-<!-- }}} --></section>
-
-<section class="version" id="5.2.15"><!-- {{{ 5.2.15 -->
-<h3>Version 5.2.15</h3>
-<?php release_date('08-Dec-2010'); ?>
-<ul>
-
-<li>Fixed extract() to do not overwrite $GLOBALS and $this when using EXTR_OVERWRITE. (jorto at redhat dot com)</li>
-<li>Fixed crash in zip extract method (possible CWE-170).  (Maksymilian Arciemowicz, Pierre)</li>
-<li>Fixed a possible double free in imap extension (Identified by Mateusz  Kocielski). (CVE-2010-4150). (Ilia)</li>
-<li>Fixed possible flaw in open_basedir (CVE-2010-3436). (Pierre)</li>
-<li>Fixed possible crash in mssql_fetch_batch(). (Kalle)</li>
-<li>Fixed NULL pointer dereference in ZipArchive::getArchiveComment. (CVE-2010-3709). (Maksymilian Arciemowicz)</li>
-
-<li><?php bugfix(53492); ?> (fix crash if anti-aliasing steps are invalid). (Pierre)</li>
-<li><?php bugfix(53323); ?> (pdo_firebird getAttribute() crash). (preeves at ibphoenix dot com)</li>
-<li><?php bugfix(52929); ?> (Segfault in filter_var with FILTER_VALIDATE_EMAIL with large amount of data). (CVE-2010-3709). (Adam)</li>
-<li><?php bugfix(52879); ?> (Objects unreferenced in __get, __set, __isset or __unset can be freed too early). (mail_ben_schmidt at yahoo dot com dot au, Dmitry)</li>
-<li><?php bugfix(52772); ?> (var_dump() doesn't check for the existence of  get_class_name before calling it). (Kalle, Gustavo)</li>
-<li><?php bugfix(52546); ?> (pdo_dblib segmentation fault when iterating MONEY values). (Felipe, Adam)</li>
-<li><?php bugfix(52436); ?> (Compile error if systems do not have stdint.h) (Sriram Natarajan)</li>
-<li><?php bugfix(52390); ?> (mysqli_report() should be per-request setting). (Kalle)</li>
-<li><?php bugfix(51008); ?> (Zend/tests/bug45877.phpt fails). (Dmitry)</li>
-<li><?php bugfix(47643); ?> (array_diff() takes over 3000 times longer than php 5.2.4). (Felipe)</li>
-<li><?php bugfix(44248); ?> (RFC2616 transgression while HTTPS request through proxy with SoapClient object). (Dmitry)</li>
-
 </ul>
 
 <!-- }}} --></section>
@@ -10569,93 +10569,6 @@ FILTER_FLAG_NO_PRIV_RANGE).</li>
 
 <!-- }}} --></section>
 
-<section class="version" id="5.2.14"><!-- {{{ 5.2.14 -->
-<h3>Version 5.2.14</h3>
-<?php release_date('22-Jul-2010'); ?>
-<ul>
-<li>Reverted bug fix <?php bugl(49521) ?> (PDO fetchObject sets values before calling constructor). (Felipe)</li>
-</ul>
-<ul>
-<li>Updated timezone database to version 2010.5. (Derick)</li>
-<li>Upgraded bundled PCRE to version 8.02. (Ilia)</li>
-</ul>
-<ul>
-<li>Rewrote var_export() to use smart_str rather than output buffering, revents  data disclosure if a fatal error occurs (CVE-2010-2531). (Scott)</li>
-<li>Fixed a possible interruption array leak in strrchr(). Reported by Péter Veres. (CVE-2010-2484) (Felipe)</li>
-<li>Fixed a possible interruption array leak in strchr(), strstr(), substr(), chunk_split(), strtok(), addcslashes(), str_repeat(), trim(). (Felipe)</li>
-<li>Fixed a possible memory corruption in substr_replace() (Dmitry)</li>
-<li>Fixed SplObjectStorage unserialization problems (CVE-2010-2225). (Stas)</li>
-<li>Fixed a possible stack exaustion inside fnmatch(). Reporeted by Stefan Esser (Ilia)</li>
-<li>Reset error state in PDO::beginTransaction() reset error state. (Ilia)</li>
-<li>Fixed a NULL pointer dereference when processing invalid XML-RPC requests (Fixes CVE-2010-0397, bug <?php bugl(51288); ?>). (Raphael Geissert)</li>
-<li>Fixed handling of session variable serialization on certain prefix characters. Reported by Stefan Esser (Ilia)</li>
-<li>Fixed a possible arbitrary memory access inside sqlite extension. Reported by Mateusz Kocielski. (Ilia)  </li>
-<li>Fixed a crash when calling an inexistent method of a class that inherits  PDOStatement if instantiated directly instead of doing by the PDO methods. (Felipe)</li>
-</ul>
-<ul>
-<li><?php bugfix(52317); ?> (Segmentation fault when using mail() on a rhel 4.x (only 64 bit)). (Adam)</li>
-<li><?php bugfix(52238); ?> (Crash when an Exception occured in iterator_to_array). (Johannes)</li>
-<li><?php bugfix(52237); ?> (Crash when passing the reference of the property of a non-object). (Dmitry)</li>
-<li><?php bugfix(52163); ?> (SplFileObject::fgetss() fails due to parameter that can't be set). (Felipe)</li>
-<li><?php bugfix(52162); ?> (custom request header variables with numbers are removed). (Sriram Natarajan)</li>
-<li><?php bugfix(52160); ?> (Invalid E_STRICT redefined constructor error). (Felipe)</li>
-<li><?php bugfix(52061); ?> (memory_limit above 2G). (Felipe)</li>
-<li><?php bugfix(52041); ?> (Memory leak when writing on uninitialized variable returned from function). (Dmitry)</li>
-<li><?php bugfix(52037); ?> (Concurrent builds fail in install-programs). (seanius at debian dot org, Kalle)</li>
-<li><?php bugfix(52019); ?> (make lcov doesn't support TESTS variable anymore). (Patrick)</li>
-<li><?php bugfix(52010); ?> (open_basedir restrictions mismatch on vacuum command). (Ilia, Felipe)</li>
-<li><?php bugfix(51943); ?> (AIX: Several files are out of ANSI spec). (Kalle, coreystup at gmail dot com)</li>
-<li><?php bugfix(51911); ?> (ReflectionParameter::getDefaultValue() memory leaks with constant array). (Felipe)</li>
-<li><?php bugfix(51905); ?> (ReflectionParameter fails if default value is an array with an access to self::). (Felipe)</li>
-<li><?php bugfix(51822); ?> (Segfault with strange __destruct() for static class variables). (Dmitry)</li>
-<li><?php bugfix(51671); ?> (imagefill does not work correctly for small images). (Pierre)</li>
-<li><?php bugfix(51670); ?> (getColumnMeta causes segfault when re-executing query after calling nextRowset). (Pierrick)</li>
-<li><?php bugfix(51629); ?> (CURLOPT_FOLLOWLOCATION error message is misleading). (Pierre)</li>
-<li><?php bugfix(51617); ?> (PDO PGSQL still broken against PostGreSQL &lt;7.4). (Felipe, wdierkes at 5dollarwhitebox dot org)</li>
-<li><?php bugfix(51615); ?> (PHP crash with wrong HTML in SimpleXML). (Felipe)</li>
-<li><?php bugfix(51609); ?> (pg_copy_to: Invalid results when using fourth parameter). (Felipe)</li>
-<li><?php bugfix(51608); ?> (pg_copy_to: WARNING: nonstandard use of \\ in a string literal). (cbandy at jbandy dot com)</li>
-<li><?php bugfix(51607); ?> (pg_copy_from does not allow schema in the tablename argument). (cbandy at jbandy dot com)</li>
-<li><?php bugfix(51604); ?> (newline in end of header is shown in start of message). (Daniel Egeberg)</li>
-<li><?php bugfix(51562); ?> (query timeout in mssql can not be changed per query). (ejsmont dot artur at gmail dot com)</li>
-<li><?php bugfix(51552); ?> (debug_backtrace() causes segmentation fault and/or memory issues). (Dmitry)</li>
-<li><?php bugfix(51532); ?> (Wrong prototype for SplFileObject::fscanf()). (Etienne)</li>
-<li><?php bugfix(51445); ?> (var_dump() invalid/slow *RECURSION* detection). (Felipe)</li>
-<li><?php bugfix(51393); ?> (DateTime::createFromFormat() fails if format string contains timezone). (Adam)</li>
-<li><?php bugfix(51374); ?> (Wrongly initialized object properties). (Etienne)</li>
-<li><?php bugfix(51338); ?> (URL-Rewriter is still enabled if use_only_cookies is on). (Ilia, j dot jeising at gmail dot com)</li>
-<li><?php bugfix(51273); ?> (Faultstring property does not exist when the faultstring is empty) (Ilia, dennis at transip dot nl)</li>
-<li><?php bugfix(51269); ?> (zlib.output_compression Overwrites Vary Header). (Adam)</li>
-<li><?php bugfix(51263); ?> (imagettftext and rotated text uses wrong baseline)  (cschneid at cschneid dot com, Takeshi Abe)</li>
-<li><?php bugfix(51237); ?> (milter SAPI crash on startup). (igmar at palsenberg dot com)</li>
-<li><?php bugfix(51213); ?> (pdo_mssql is trimming value of the money column). (Ilia, alexr at oplot dot com)</li>
-<li><?php bugfix(51192); ?> (FILTER_VALIDATE_URL will invalidate a hostname that includes '-'). (Adam, solar at azrael dot ws).</li>
-<li><?php bugfix(51190); ?> (ftp_put() returns false when transfer was successful). (Ilia)</li>
-<li><?php bugfix(51183); ?> (ext/date/php_date.c fails to compile with Sun Studio). (Sriram Natarajan)</li>
-<li><?php bugfix(51171); ?> (curl_setopt() doesn't output any errors or warnings when an invalid option is provided). (Ilia)</li>
-<li><?php bugfix(51128); ?> (imagefill() doesn't work with large images). (Pierre)</li>
-<li><?php bugfix(51086); ?> (DBA DB4 doesn't work with Berkeley DB 4.8). (Chris Jones)</li>
-<li><?php bugfix(51062); ?> (DBA DB4 uses mismatched headers and libraries). (Chris Jones)</li>
-<li><?php bugfix(51023); ?> (filter doesn't detect int overflows with GCC 4.4). (Raphael Geissert)</li>
-<li><?php bugfix(50762); ?> (in WSDL mode Soap Header handler function only being called if defined in WSDL). (mephius at gmail dot com)</li>
-<li><?php bugfix(50698); ?> (SoapClient should handle wsdls with some incompatiable endpoints). (Justin Dearing)</li>
-<li><?php bugfix(50383); ?> (Exceptions thrown in __call() / __callStatic() do not include file and line in trace). (Felipe)</li>
-<li><?php bugfix(49730); ?> (Firebird - new PDO() returns NULL). (Felipe)</li>
-<li><?php bugfix(49723); ?> (LimitIterator with empty SeekableIterator). (Etienne)</li>
-<li><?php bugfix(49576); ?> (FILTER_VALIDATE_EMAIL filter needs updating) (Rasmus)</li>
-<li><?php bugfix(49320); ?> (PDO returns null when SQLite connection fails). (Felipe)</li>
-<li><?php bugfix(49267); ?> (Linking fails for iconv). (Moriyosh)</li>
-<li><?php bugfix(48601); ?> (xpath() returns FALSE for legitimate query). (Rob)</li>
-<li><?php bugfix(48289); ?> (iconv_mime_encode() quoted-printable scheme is broken).
-  (Adam, patch from hiroaki dot kawai at gmail dot com).</li>
-<li><?php bugfix(43314); ?> (iconv_mime_encode(), broken Q scheme). (Rasmus)</li>
-<li><?php bugfix(33210); ?> (getimagesize() fails to detect width/height on certain
-  JPEGs). (Ilia)</li>
-<li><?php bugfix(23229); ?> (syslog() truncates messages). (Adam)</li>
-</ul>
-
-<!-- }}} --></section>
-
 <section class="version" id="5.3.2"><!-- {{{ 5.3.2 -->
 <h3>Version 5.3.2</h3>
 <?php release_date('04-Mar-2010'); ?>
@@ -10819,70 +10732,6 @@ FILTER_FLAG_NO_PRIV_RANGE).</li>
 </ul>
 <!-- }}} --></section>
 
-<section class="version" id="5.2.13"><!-- {{{ 5.2.13 -->
-<h3>Version 5.2.13</h3>
-<?php release_date('25-Feb-2010'); ?>
-<ul>
-<li>Security Fixes
-	<ul>
-		<li>Improved LCG entropy. (Rasmus, Samy Kamkar)</li>
-		<li>Fixed safe_mode validation inside tempnam() when the directory path does not end with a /). (Martin Jansen)</li>
-		<li>Fixed a possible open_basedir/safe_mode bypass in the session extension identified by Grzegorz Stachowiak. (Ilia)</li>
-	</ul>
-</li>
-
-<li>Updated timezone database to version 2010.2. (Derick)</li>
-<li>Upgraded bundled PCRE to version 7.9. (Ilia)</li>
-
-<li>Removed automatic file descriptor unlocking happening on shutdown and/or  stream close (on all OSes excluding Windows). (Tony, Ilia)</li>
-
-<li>Changed tidyNode class to disallow manual node creation. (Pierrick)</li>
-
-<li>Added missing host validation for HTTP urls inside FILTER_VALIDATE_URL. (Ilia)</li>
-
-<li>Fixed bug in bundled libgd causing spurious horizontal lines drawn by  gdImageFilledPolygon (libgd #100). (Takeshi Abe)</li>
-<li>Fixed build of mysqli with MySQL 5.5.0-m2. (Andrey)</li>
-
-<li><?php bugfix(50940); ?> (Custom content-length set incorrectly in Apache sapis). (Brian France, Rasmus)</li>
-<li><?php bugfix(50930); ?> (Wrong date by php_date.c patch with ancient gcc/glibc versions). (Derick)</li>
-<li><?php bugfix(50859); ?> (build fails with openssl 1.0 due to md2 deprecation). (Ilia, hanno at hboeck dot de)</li>
-<li><?php bugfix(50847); ?> (strip_tags() removes all tags greater then 1023 bytes long). (Ilia)</li>
-<li><?php bugfix(50832); ?> (HTTP fopen wrapper does not support passwordless HTTP authentication). (Jani)</li>
-<li><?php bugfix(50823); ?> (ReflectionFunction::isDeprecated producing &quot;cannot be called statically&quot; error). (Jani, Felipe)</li>
-<li><?php bugfix(50791); ?> (Compile failure: Bad logic in defining fopencookie emulation). (Jani)</li>
-<li><?php bugfix(50787); ?> (stream_set_write_buffer() has no effect on socket streams). (vnegrier at optilian dot com, Ilia)</li>
-<li><?php bugfix(50772); ?> (mysqli constructor without parameters does not return a working mysqli object). (Andrey)</li>
-<li><?php bugfix(50761); ?> (system.multiCall crashes in xmlrpc extension). (hiroaki dot kawai at gmail dot com, Ilia)</li>
-<li><?php bugfix(50732); ?> (exec() adds single byte twice to $output array). (Ilia)</li>
-<li><?php bugfix(50728); ?> (All PDOExceptions hardcode 'code' property to 0). (Joey, Ilia)</li>
-<li><?php bugfix(50727); ?> (Accessing mysqli->affected_rows on no connection causes segfault). (Andrey, Johannes)</li>
-<li><?php bugfix(50680); ?> (strtotime() does not support eighth ordinal number). (Ilia)</li>
-<li><?php bugfix(50661); ?> (DOMDocument::loadXML does not allow UTF-16). (Rob)</li>
-<li><?php bugfix(50657); ?> (copy() with an empty (zero-byte) HTTP source succeeds but returns false). (Ilia)</li>
-<li><?php bugfix(50636); ?> (MySQLi_Result sets values before calling constructor). (Pierrick)</li>
-<li><?php bugfix(50632); ?> (filter_input() does not return default value if the variable does not exist). (Ilia)</li>
-<li><?php bugfix(50576); ?> (XML_OPTION_SKIP_TAGSTART option has no effect). (Pierrick)</li>
-<li><?php bugfix(50575); ?> (PDO_PGSQL LOBs are not compatible with PostgreSQL 8.5). (Matteo)</li>
-<li><?php bugfix(50558); ?> (Broken object model when extending tidy). (Pierrick)</li>
-<li><?php bugfix(50540); ?> (Crash while running ldap_next_reference test cases). (Sriram)</li>
-<li><?php bugfix(50508); ?> (compile failure: Conflicting HEADER type declarations). (Jani)</li>
-<li><?php bugfix(50394); ?> (Reference argument converted to value in __call). (Stas)</li>
-<li><?php bugfix(49851); ?> (http wrapper breaks on 1024 char long headers). (Ilia)</li>
-<li><?php bugfix(49600); ?> (imageTTFText text shifted right). (Takeshi Abe)</li>
-<li><?php bugfix(49585); ?> (date_format buffer not long enough for >4 digit years). (Derick, Adam)</li>
-<li><?php bugfix(49463); ?> (setAttributeNS fails setting default namespace). (Rob)</li>
-<li><?php bugfix(48667); ?> (Implementing Iterator and IteratorAggregate). (Etienne)</li>
-<li><?php bugfix(48590); ?> (SoapClient does not honor max_redirects). (Sriram)</li>
-<li><?php bugfix(48190); ?> (Content-type parameter &quot;boundary&quot; is not case-insensitive in HTTP uploads). (Ilia)</li>
-<li><?php bugfix(47601); ?> (defined() requires class to exist when testing for class constants). (Ilia)</li>
-<li><?php bugfix(47409); ?> (extract() problem with array containing word &quot;this&quot;). (Ilia, chrisstocktonaz at gmail dot com)</li>
-<li><?php bugfix(47002); ?> (Field truncation when reading from dbase dbs with more then 1024 fields). (Ilia, sjoerd-php at linuxonly dot nl)</li>
-<li><?php bugfix(45599); ?> (strip_tags() truncates rest of string with invalid attribute). (Ilia, hradtke)  </li>
-<li><?php bugfix(44827); ?> (define() allows :: in constant names). (Ilia)</li>
-
-</ul>
-<!-- }}} --></section>
-
 <section class="version" id="5.3.1"><!-- {{{ 5.3.1 -->
 <h3>Version 5.3.1</h3>
 <?php release_date('19-Nov-2009'); ?>
@@ -10891,8 +10740,8 @@ FILTER_FLAG_NO_PRIV_RANGE).</li>
 	<ul>
 		<li>Added "max_file_uploads" INI directive, which can be set to limit the number of file uploads per-request to 20 by default, to prevent possible DOS via temporary file exhaustion. (Ilia)</li>
 		<li>Added missing sanity checks around exif processing. (Ilia)</li>
-		<li>Fixed a safe_mode bypass in tempnam(). (Rasmus)</li>  
-		<li>Fixed a open_basedir bypass in posix_mkfifo(). (Rasmus)</li> 
+		<li>Fixed a safe_mode bypass in tempnam(). (Rasmus)</li>
+		<li>Fixed a open_basedir bypass in posix_mkfifo(). (Rasmus)</li>
 		<li><?php bugfix(50063); ?> (safe_mode_include_dir fails). (Johannes, christian at elmerot dot se)</li>
 	</ul>
 </li>
@@ -11757,7 +11606,209 @@ FILTER_FLAG_NO_PRIV_RANGE).</li>
 	<li><?php bugfix(35980); ?> (touch() works on files but not on directories). (Pierre)</li>
 
 </ul>
+<!-- }}} --></section>
 
+<a id="PHP_5_2"></a>
+<section class="version" id="5.2.17"><!-- {{{ 5.2.17 -->
+<h3>Version 5.2.17</h3>
+<?php release_date('06-Jan-2011'); ?>
+<ul>
+
+<li><?php bugfix(53632); ?> (PHP hangs on numeric value 2.2250738585072011e-308). (CVE-2010-4645) (Rasmus, Scott)</li>
+
+</ul>
+
+<!-- }}} --></section>
+
+<section class="version" id="5.2.16"><!-- {{{ 5.2.16 -->
+<h3>Version 5.2.16</h3>
+<?php release_date('16-Dec-2010'); ?>
+<ul>
+
+<li><?php bugfix(53517); ?> (segfault in pgsql_stmt_execute() when postgres is down). (gyp at balabit dot hu)</li>
+<li><?php bugfix(53516); ?> (Regression in open_basedir handling). (Ilia)</li>
+
+</ul>
+
+<!-- }}} --></section>
+
+<section class="version" id="5.2.15"><!-- {{{ 5.2.15 -->
+<h3>Version 5.2.15</h3>
+<?php release_date('08-Dec-2010'); ?>
+<ul>
+
+<li>Fixed extract() to do not overwrite $GLOBALS and $this when using EXTR_OVERWRITE. (jorto at redhat dot com)</li>
+<li>Fixed crash in zip extract method (possible CWE-170).  (Maksymilian Arciemowicz, Pierre)</li>
+<li>Fixed a possible double free in imap extension (Identified by Mateusz  Kocielski). (CVE-2010-4150). (Ilia)</li>
+<li>Fixed possible flaw in open_basedir (CVE-2010-3436). (Pierre)</li>
+<li>Fixed possible crash in mssql_fetch_batch(). (Kalle)</li>
+<li>Fixed NULL pointer dereference in ZipArchive::getArchiveComment. (CVE-2010-3709). (Maksymilian Arciemowicz)</li>
+
+<li><?php bugfix(53492); ?> (fix crash if anti-aliasing steps are invalid). (Pierre)</li>
+<li><?php bugfix(53323); ?> (pdo_firebird getAttribute() crash). (preeves at ibphoenix dot com)</li>
+<li><?php bugfix(52929); ?> (Segfault in filter_var with FILTER_VALIDATE_EMAIL with large amount of data). (CVE-2010-3709). (Adam)</li>
+<li><?php bugfix(52879); ?> (Objects unreferenced in __get, __set, __isset or __unset can be freed too early). (mail_ben_schmidt at yahoo dot com dot au, Dmitry)</li>
+<li><?php bugfix(52772); ?> (var_dump() doesn't check for the existence of  get_class_name before calling it). (Kalle, Gustavo)</li>
+<li><?php bugfix(52546); ?> (pdo_dblib segmentation fault when iterating MONEY values). (Felipe, Adam)</li>
+<li><?php bugfix(52436); ?> (Compile error if systems do not have stdint.h) (Sriram Natarajan)</li>
+<li><?php bugfix(52390); ?> (mysqli_report() should be per-request setting). (Kalle)</li>
+<li><?php bugfix(51008); ?> (Zend/tests/bug45877.phpt fails). (Dmitry)</li>
+<li><?php bugfix(47643); ?> (array_diff() takes over 3000 times longer than php 5.2.4). (Felipe)</li>
+<li><?php bugfix(44248); ?> (RFC2616 transgression while HTTPS request through proxy with SoapClient object). (Dmitry)</li>
+
+</ul>
+
+<!-- }}} --></section>
+
+<section class="version" id="5.2.14"><!-- {{{ 5.2.14 -->
+<h3>Version 5.2.14</h3>
+<?php release_date('22-Jul-2010'); ?>
+<ul>
+<li>Reverted bug fix <?php bugl(49521) ?> (PDO fetchObject sets values before calling constructor). (Felipe)</li>
+</ul>
+<ul>
+<li>Updated timezone database to version 2010.5. (Derick)</li>
+<li>Upgraded bundled PCRE to version 8.02. (Ilia)</li>
+</ul>
+<ul>
+<li>Rewrote var_export() to use smart_str rather than output buffering, revents  data disclosure if a fatal error occurs (CVE-2010-2531). (Scott)</li>
+<li>Fixed a possible interruption array leak in strrchr(). Reported by Péter Veres. (CVE-2010-2484) (Felipe)</li>
+<li>Fixed a possible interruption array leak in strchr(), strstr(), substr(), chunk_split(), strtok(), addcslashes(), str_repeat(), trim(). (Felipe)</li>
+<li>Fixed a possible memory corruption in substr_replace() (Dmitry)</li>
+<li>Fixed SplObjectStorage unserialization problems (CVE-2010-2225). (Stas)</li>
+<li>Fixed a possible stack exaustion inside fnmatch(). Reporeted by Stefan Esser (Ilia)</li>
+<li>Reset error state in PDO::beginTransaction() reset error state. (Ilia)</li>
+<li>Fixed a NULL pointer dereference when processing invalid XML-RPC requests (Fixes CVE-2010-0397, bug <?php bugl(51288); ?>). (Raphael Geissert)</li>
+<li>Fixed handling of session variable serialization on certain prefix characters. Reported by Stefan Esser (Ilia)</li>
+<li>Fixed a possible arbitrary memory access inside sqlite extension. Reported by Mateusz Kocielski. (Ilia)  </li>
+<li>Fixed a crash when calling an inexistent method of a class that inherits  PDOStatement if instantiated directly instead of doing by the PDO methods. (Felipe)</li>
+</ul>
+<ul>
+<li><?php bugfix(52317); ?> (Segmentation fault when using mail() on a rhel 4.x (only 64 bit)). (Adam)</li>
+<li><?php bugfix(52238); ?> (Crash when an Exception occured in iterator_to_array). (Johannes)</li>
+<li><?php bugfix(52237); ?> (Crash when passing the reference of the property of a non-object). (Dmitry)</li>
+<li><?php bugfix(52163); ?> (SplFileObject::fgetss() fails due to parameter that can't be set). (Felipe)</li>
+<li><?php bugfix(52162); ?> (custom request header variables with numbers are removed). (Sriram Natarajan)</li>
+<li><?php bugfix(52160); ?> (Invalid E_STRICT redefined constructor error). (Felipe)</li>
+<li><?php bugfix(52061); ?> (memory_limit above 2G). (Felipe)</li>
+<li><?php bugfix(52041); ?> (Memory leak when writing on uninitialized variable returned from function). (Dmitry)</li>
+<li><?php bugfix(52037); ?> (Concurrent builds fail in install-programs). (seanius at debian dot org, Kalle)</li>
+<li><?php bugfix(52019); ?> (make lcov doesn't support TESTS variable anymore). (Patrick)</li>
+<li><?php bugfix(52010); ?> (open_basedir restrictions mismatch on vacuum command). (Ilia, Felipe)</li>
+<li><?php bugfix(51943); ?> (AIX: Several files are out of ANSI spec). (Kalle, coreystup at gmail dot com)</li>
+<li><?php bugfix(51911); ?> (ReflectionParameter::getDefaultValue() memory leaks with constant array). (Felipe)</li>
+<li><?php bugfix(51905); ?> (ReflectionParameter fails if default value is an array with an access to self::). (Felipe)</li>
+<li><?php bugfix(51822); ?> (Segfault with strange __destruct() for static class variables). (Dmitry)</li>
+<li><?php bugfix(51671); ?> (imagefill does not work correctly for small images). (Pierre)</li>
+<li><?php bugfix(51670); ?> (getColumnMeta causes segfault when re-executing query after calling nextRowset). (Pierrick)</li>
+<li><?php bugfix(51629); ?> (CURLOPT_FOLLOWLOCATION error message is misleading). (Pierre)</li>
+<li><?php bugfix(51617); ?> (PDO PGSQL still broken against PostGreSQL &lt;7.4). (Felipe, wdierkes at 5dollarwhitebox dot org)</li>
+<li><?php bugfix(51615); ?> (PHP crash with wrong HTML in SimpleXML). (Felipe)</li>
+<li><?php bugfix(51609); ?> (pg_copy_to: Invalid results when using fourth parameter). (Felipe)</li>
+<li><?php bugfix(51608); ?> (pg_copy_to: WARNING: nonstandard use of \\ in a string literal). (cbandy at jbandy dot com)</li>
+<li><?php bugfix(51607); ?> (pg_copy_from does not allow schema in the tablename argument). (cbandy at jbandy dot com)</li>
+<li><?php bugfix(51604); ?> (newline in end of header is shown in start of message). (Daniel Egeberg)</li>
+<li><?php bugfix(51562); ?> (query timeout in mssql can not be changed per query). (ejsmont dot artur at gmail dot com)</li>
+<li><?php bugfix(51552); ?> (debug_backtrace() causes segmentation fault and/or memory issues). (Dmitry)</li>
+<li><?php bugfix(51532); ?> (Wrong prototype for SplFileObject::fscanf()). (Etienne)</li>
+<li><?php bugfix(51445); ?> (var_dump() invalid/slow *RECURSION* detection). (Felipe)</li>
+<li><?php bugfix(51393); ?> (DateTime::createFromFormat() fails if format string contains timezone). (Adam)</li>
+<li><?php bugfix(51374); ?> (Wrongly initialized object properties). (Etienne)</li>
+<li><?php bugfix(51338); ?> (URL-Rewriter is still enabled if use_only_cookies is on). (Ilia, j dot jeising at gmail dot com)</li>
+<li><?php bugfix(51273); ?> (Faultstring property does not exist when the faultstring is empty) (Ilia, dennis at transip dot nl)</li>
+<li><?php bugfix(51269); ?> (zlib.output_compression Overwrites Vary Header). (Adam)</li>
+<li><?php bugfix(51263); ?> (imagettftext and rotated text uses wrong baseline)  (cschneid at cschneid dot com, Takeshi Abe)</li>
+<li><?php bugfix(51237); ?> (milter SAPI crash on startup). (igmar at palsenberg dot com)</li>
+<li><?php bugfix(51213); ?> (pdo_mssql is trimming value of the money column). (Ilia, alexr at oplot dot com)</li>
+<li><?php bugfix(51192); ?> (FILTER_VALIDATE_URL will invalidate a hostname that includes '-'). (Adam, solar at azrael dot ws).</li>
+<li><?php bugfix(51190); ?> (ftp_put() returns false when transfer was successful). (Ilia)</li>
+<li><?php bugfix(51183); ?> (ext/date/php_date.c fails to compile with Sun Studio). (Sriram Natarajan)</li>
+<li><?php bugfix(51171); ?> (curl_setopt() doesn't output any errors or warnings when an invalid option is provided). (Ilia)</li>
+<li><?php bugfix(51128); ?> (imagefill() doesn't work with large images). (Pierre)</li>
+<li><?php bugfix(51086); ?> (DBA DB4 doesn't work with Berkeley DB 4.8). (Chris Jones)</li>
+<li><?php bugfix(51062); ?> (DBA DB4 uses mismatched headers and libraries). (Chris Jones)</li>
+<li><?php bugfix(51023); ?> (filter doesn't detect int overflows with GCC 4.4). (Raphael Geissert)</li>
+<li><?php bugfix(50762); ?> (in WSDL mode Soap Header handler function only being called if defined in WSDL). (mephius at gmail dot com)</li>
+<li><?php bugfix(50698); ?> (SoapClient should handle wsdls with some incompatiable endpoints). (Justin Dearing)</li>
+<li><?php bugfix(50383); ?> (Exceptions thrown in __call() / __callStatic() do not include file and line in trace). (Felipe)</li>
+<li><?php bugfix(49730); ?> (Firebird - new PDO() returns NULL). (Felipe)</li>
+<li><?php bugfix(49723); ?> (LimitIterator with empty SeekableIterator). (Etienne)</li>
+<li><?php bugfix(49576); ?> (FILTER_VALIDATE_EMAIL filter needs updating) (Rasmus)</li>
+<li><?php bugfix(49320); ?> (PDO returns null when SQLite connection fails). (Felipe)</li>
+<li><?php bugfix(49267); ?> (Linking fails for iconv). (Moriyosh)</li>
+<li><?php bugfix(48601); ?> (xpath() returns FALSE for legitimate query). (Rob)</li>
+<li><?php bugfix(48289); ?> (iconv_mime_encode() quoted-printable scheme is broken).
+  (Adam, patch from hiroaki dot kawai at gmail dot com).</li>
+<li><?php bugfix(43314); ?> (iconv_mime_encode(), broken Q scheme). (Rasmus)</li>
+<li><?php bugfix(33210); ?> (getimagesize() fails to detect width/height on certain
+  JPEGs). (Ilia)</li>
+<li><?php bugfix(23229); ?> (syslog() truncates messages). (Adam)</li>
+</ul>
+
+<!-- }}} --></section>
+
+<section class="version" id="5.2.13"><!-- {{{ 5.2.13 -->
+<h3>Version 5.2.13</h3>
+<?php release_date('25-Feb-2010'); ?>
+<ul>
+<li>Security Fixes
+	<ul>
+		<li>Improved LCG entropy. (Rasmus, Samy Kamkar)</li>
+		<li>Fixed safe_mode validation inside tempnam() when the directory path does not end with a /). (Martin Jansen)</li>
+		<li>Fixed a possible open_basedir/safe_mode bypass in the session extension identified by Grzegorz Stachowiak. (Ilia)</li>
+	</ul>
+</li>
+
+<li>Updated timezone database to version 2010.2. (Derick)</li>
+<li>Upgraded bundled PCRE to version 7.9. (Ilia)</li>
+
+<li>Removed automatic file descriptor unlocking happening on shutdown and/or  stream close (on all OSes excluding Windows). (Tony, Ilia)</li>
+
+<li>Changed tidyNode class to disallow manual node creation. (Pierrick)</li>
+
+<li>Added missing host validation for HTTP urls inside FILTER_VALIDATE_URL. (Ilia)</li>
+
+<li>Fixed bug in bundled libgd causing spurious horizontal lines drawn by  gdImageFilledPolygon (libgd #100). (Takeshi Abe)</li>
+<li>Fixed build of mysqli with MySQL 5.5.0-m2. (Andrey)</li>
+
+<li><?php bugfix(50940); ?> (Custom content-length set incorrectly in Apache sapis). (Brian France, Rasmus)</li>
+<li><?php bugfix(50930); ?> (Wrong date by php_date.c patch with ancient gcc/glibc versions). (Derick)</li>
+<li><?php bugfix(50859); ?> (build fails with openssl 1.0 due to md2 deprecation). (Ilia, hanno at hboeck dot de)</li>
+<li><?php bugfix(50847); ?> (strip_tags() removes all tags greater then 1023 bytes long). (Ilia)</li>
+<li><?php bugfix(50832); ?> (HTTP fopen wrapper does not support passwordless HTTP authentication). (Jani)</li>
+<li><?php bugfix(50823); ?> (ReflectionFunction::isDeprecated producing &quot;cannot be called statically&quot; error). (Jani, Felipe)</li>
+<li><?php bugfix(50791); ?> (Compile failure: Bad logic in defining fopencookie emulation). (Jani)</li>
+<li><?php bugfix(50787); ?> (stream_set_write_buffer() has no effect on socket streams). (vnegrier at optilian dot com, Ilia)</li>
+<li><?php bugfix(50772); ?> (mysqli constructor without parameters does not return a working mysqli object). (Andrey)</li>
+<li><?php bugfix(50761); ?> (system.multiCall crashes in xmlrpc extension). (hiroaki dot kawai at gmail dot com, Ilia)</li>
+<li><?php bugfix(50732); ?> (exec() adds single byte twice to $output array). (Ilia)</li>
+<li><?php bugfix(50728); ?> (All PDOExceptions hardcode 'code' property to 0). (Joey, Ilia)</li>
+<li><?php bugfix(50727); ?> (Accessing mysqli->affected_rows on no connection causes segfault). (Andrey, Johannes)</li>
+<li><?php bugfix(50680); ?> (strtotime() does not support eighth ordinal number). (Ilia)</li>
+<li><?php bugfix(50661); ?> (DOMDocument::loadXML does not allow UTF-16). (Rob)</li>
+<li><?php bugfix(50657); ?> (copy() with an empty (zero-byte) HTTP source succeeds but returns false). (Ilia)</li>
+<li><?php bugfix(50636); ?> (MySQLi_Result sets values before calling constructor). (Pierrick)</li>
+<li><?php bugfix(50632); ?> (filter_input() does not return default value if the variable does not exist). (Ilia)</li>
+<li><?php bugfix(50576); ?> (XML_OPTION_SKIP_TAGSTART option has no effect). (Pierrick)</li>
+<li><?php bugfix(50575); ?> (PDO_PGSQL LOBs are not compatible with PostgreSQL 8.5). (Matteo)</li>
+<li><?php bugfix(50558); ?> (Broken object model when extending tidy). (Pierrick)</li>
+<li><?php bugfix(50540); ?> (Crash while running ldap_next_reference test cases). (Sriram)</li>
+<li><?php bugfix(50508); ?> (compile failure: Conflicting HEADER type declarations). (Jani)</li>
+<li><?php bugfix(50394); ?> (Reference argument converted to value in __call). (Stas)</li>
+<li><?php bugfix(49851); ?> (http wrapper breaks on 1024 char long headers). (Ilia)</li>
+<li><?php bugfix(49600); ?> (imageTTFText text shifted right). (Takeshi Abe)</li>
+<li><?php bugfix(49585); ?> (date_format buffer not long enough for >4 digit years). (Derick, Adam)</li>
+<li><?php bugfix(49463); ?> (setAttributeNS fails setting default namespace). (Rob)</li>
+<li><?php bugfix(48667); ?> (Implementing Iterator and IteratorAggregate). (Etienne)</li>
+<li><?php bugfix(48590); ?> (SoapClient does not honor max_redirects). (Sriram)</li>
+<li><?php bugfix(48190); ?> (Content-type parameter &quot;boundary&quot; is not case-insensitive in HTTP uploads). (Ilia)</li>
+<li><?php bugfix(47601); ?> (defined() requires class to exist when testing for class constants). (Ilia)</li>
+<li><?php bugfix(47409); ?> (extract() problem with array containing word &quot;this&quot;). (Ilia, chrisstocktonaz at gmail dot com)</li>
+<li><?php bugfix(47002); ?> (Field truncation when reading from dbase dbs with more then 1024 fields). (Ilia, sjoerd-php at linuxonly dot nl)</li>
+<li><?php bugfix(45599); ?> (strip_tags() truncates rest of string with invalid attribute). (Ilia, hradtke)  </li>
+<li><?php bugfix(44827); ?> (define() allows :: in constant names). (Ilia)</li>
+
+</ul>
 <!-- }}} --></section>
 
 <section class="version" id="5.2.12"><!-- {{{ 5.2.12 -->
@@ -11928,7 +11979,7 @@ FILTER_FLAG_NO_PRIV_RANGE).</li>
 <li><?php bugfix(43510); ?> (stream_get_meta_data() does not return same mode as used in fopen). (Jani)</li>
 <li><?php bugfix(42434); ?> (ImageLine w/ antialias = 1px shorter). (wojjie at gmail dot com, Kalle)</li>
 <li><?php bugfix(28038); ?> (Sent incorrect RCPT TO commands to SMTP server) (Garrett)</li>
-	
+
 </ul>
 
 <!-- }}} --></section>
@@ -12880,8 +12931,8 @@ FILTER_FLAG_NO_PRIV_RANGE).</li>
 <li>Added php_pdo_sqlite_external.dll, a version of the PDO SQLite driver that links against an external sqlite3.dll. This provides Windows users to upgrade their sqlite3 version outside of the PHP release cycle. (Wez, Edin)</li>
 <li>Added linenumbers to array returned by token_get_all(). (Johannes)</li>
 
-<li>Implement #40947, allow a single filter as argument for filter_var_array (Pierre)</li>
-<li>Implement #39867 (openssl PKCS#12 support) (Marc Delling, Pierre)</li>
+<li><?php implemented(40947); ?>, allow a single filter as argument for filter_var_array (Pierre)</li>
+<li><?php implemented(39867); ?> (openssl PKCS#12 support) (Marc Delling, Pierre)</li>
 
 <li>Upgraded SQLite 3 to version 3.3.16 (Ilia)</li>
 <li>Upgraded libraries bundled in the Windows distribution. (Edin)
@@ -13652,12 +13703,10 @@ FILTER_FLAG_NO_PRIV_RANGE).</li>
 <li><?php peclbugfix(8816); ?> (issue in php_oci_statement_fetch with more than one  piecewise column) (jeff at badtz-maru dot com, Tony)</li>
 <li><?php peclbugfix(8112); ?> (OCI8 persistent connections misbehave when Apache  process times out). (Tony)</li>
 <li><?php peclbugfix(7755); ?> (error selecting DOUBLE fields with PDO_ODBC). (&quot;slaws&quot;, Wez)</li>
-
 </ul>
-
-
 <!-- }}} --></section>
 
+<a id="PHP_5_1"></a>
 <section class="version" id="5.1.6"><!-- {{{ 5.1.6 -->
 <h3>Version 5.1.6</h3>
 <?php release_date('24-Aug-2006'); ?>
@@ -14598,6 +14647,7 @@ FILTER_FLAG_NO_PRIV_RANGE).</li>
 
 <!-- }}} --></section>
 
+<a id="PHP_5_0"></a>
 <section class="version" id="5.0.5"><!-- {{{ 5.0.5 -->
 <h3>Version 5.0.5</h3>
 <?php release_date('05-Sep-2005'); ?>
@@ -15901,5 +15951,6 @@ contents). (Zeev)</li>
 </ul>
 <!-- }}} --></section>
 
-<?php site_footer(); ?>
+<?php
 
+changelog_footer(5, $MINOR_VERSIONS);

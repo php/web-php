@@ -1,8 +1,8 @@
 <?php
 
 $_SERVER['BASE_PAGE'] = 'archive/2015.php';
-include_once $_SERVER['DOCUMENT_ROOT'] . '/include/prepend.inc';
-include_once $_SERVER['DOCUMENT_ROOT'] . '/include/pregen-news.inc';
+include_once __DIR__ . '/../include/prepend.inc';
+include_once __DIR__ . '/../include/pregen-news.inc';
 news_archive_sidebar();
 site_header("News Archive - 2015");
 //site_header("News Archive - 2015", array("cache" => true));
@@ -22,4 +22,3 @@ print_news($NEWS_ENTRIES, array("conferences", "cfp", "frontpage", "nofrontpage"
 
 /* %s/<a href="\(.*\)"><img src="\/images\/news\/\(.*\)" alt="\(.*\)" width.*><\/a>/<?php news_image("\1", "\2", "\3"); ?>/g */
 site_footer(array('elephpants' => true, 'sidebar' => $SIDEBAR_DATA));
-

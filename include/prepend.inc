@@ -1,8 +1,7 @@
 <?php // -*- C++ -*-
 // Compress all pages, if ext/zlib is available on the mirror
-ini_set("zlib.output_compression", 1);
-
-// $Id$
+// XXX Deactivated by sas, causes errors towards delivery machines
+// ini_set("zlib.output_compression", 1);
 
 // See http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.9
 // for cache control header descriptions (used in many places on the site).
@@ -12,8 +11,15 @@ ini_set("zlib.output_compression", 1);
 header("Content-language: en");
 header("Content-type: text/html; charset=utf-8");
 
+// Opt out of FLoC
+header("Permissions-Policy: interest-cohort=()");
+
 /* Fix Silly Same Origin Policies */
-if (isset($_SERVER["HTTP_ORIGIN"])) {
+(function() {
+    if (!isset($_SERVER["HTTP_ORIGIN"])) {
+        return;
+    }
+
     $host = parse_url($_SERVER["HTTP_ORIGIN"]);
     if (strncmp(strrev($host["host"]), strrev("php.net"), strlen("php.net")) != 0) {
         if ($host["host"] != $_SERVER["SERVER_NAME"]) {
@@ -32,7 +38,8 @@ if (isset($_SERVER["HTTP_ORIGIN"])) {
         $headers = str_replace(array("\r", "\n", "\0"), "", $headers);
         header("Access-Control-Allow-Headers: $headers");
     }
-}
+})();
+
 /* Clickjacking workaround. Nothing should be in a frame so it could technically be 'deny'
  * but it doesn't make any difference anyway */
 header("X-Frame-Options: SAMEORIGIN");
@@ -68,28 +75,22 @@ unset($LAST_UPDATED);
 // Load the My PHP.net settings before any includes
 myphpnet_load();
 
-// TODO: Remove MQ dependencies from phpweb
-$MQ = get_magic_quotes_gpc();
-if (get_magic_quotes_runtime()) {
-    @set_magic_quotes_runtime(0);
-}
-
 // Site details (mirror site information)
-include $_SERVER['DOCUMENT_ROOT'] . '/include/site.inc';
+include __DIR__ . '/site.inc';
 
 // Choose language used for translated parts
-include $_SERVER['DOCUMENT_ROOT'] . '/include/langchooser.inc';
+include __DIR__ . '/langchooser.inc';
 
 // Get country of the user and set it in a cookie
-include $_SERVER['DOCUMENT_ROOT'] . '/include/ip-to-country.inc';
+include __DIR__ . '/ip-to-country.inc';
 
 // Common layout functions
-include $_SERVER['DOCUMENT_ROOT'] . '/include/layout.inc';
+include __DIR__ . '/layout.inc';
 
 // This file is generated on rsync.php.net and propagated
 // from there. It just defines $LAST_UPDATED, which is the
 // mirror's last updated time.
-include $_SERVER['DOCUMENT_ROOT'] . '/include/last_updated.inc';
+include __DIR__ . '/last_updated.inc';
 
 // -----------------------------------------------------------------------------
 
@@ -109,6 +110,9 @@ function myphpnet_load()
     if (!empty($_COOKIE['MYPHPNET'])) {
         $MYPHPNET = explode(",", $_COOKIE['MYPHPNET']);
     }
+
+    // Ignore site part, and always use https://www.php.net
+    $MYPHPNET[2] = 'https://www.php.net';
 }
 
 // Get or set preferred language code
@@ -127,9 +131,9 @@ function myphpnet_language($langcode = FALSE)
     return false;
 }
 
-define("MYPHPNET_URL_NONE", FALSE);
-define("MYPHPNET_URL_FUNC", 'quickref');
-define("MYPHPNET_URL_MANUAL", 'manual');
+const MYPHPNET_URL_NONE = false;
+const MYPHPNET_URL_FUNC = 'quickref';
+const MYPHPNET_URL_MANUAL = 'manual';
 
 // Set URL search fallback preference
 function myphpnet_urlsearch($type = FALSE)
@@ -145,22 +149,6 @@ function myphpnet_urlsearch($type = FALSE)
     elseif (isset($MYPHPNET[1]) && !empty($MYPHPNET[1])) {
         return $MYPHPNET[1];
     } else { return MYPHPNET_URL_NONE; }
-}
-
-// Set mirror site redirection
-function myphpnet_mirror($murl = FALSE)
-{
-    global $MYPHPNET;
-
-    // Set mirror URL if specified and if correct
-    if ($murl && ($murl == "AUTO" || mirror_status($murl) == MIRROR_OK)) {
-        $MYPHPNET[2] = $murl;
-    }
-
-    // Return code or NONE
-    elseif (isset($MYPHPNET[2])) {
-        return $MYPHPNET[2];
-    } else { return "NONE"; }
 }
 
 function myphpnet_showug($enable = null) {

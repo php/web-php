@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom" xmlns:default="http://php.net/ns/news">
+  <title>PHP.RUHR 2020 - Web Development &amp; Digital Commerce</title>
+  <id>https://www.php.net/archive/2020.php#2020-06-24-1</id>
+  <published>2020-06-24T15:56:11+00:00</published>
+  <updated>2020-06-24T15:56:11+00:00</updated>
+  <link href="https://www.php.net/conferences/index.php#id2020-06-24-1" rel="alternate" type="text/html"/>
+  <link href="https://2020.php.ruhr/" rel="via" type="text/html"/>
+  <default:finalTeaserDate xmlns="http://php.net/ns/news">2020-11-04</default:finalTeaserDate>
+  <category term="conferences" label="Conference announcement"/>
+  <default:newsImage xmlns="http://php.net/ns/news" link="https://2020.php.ruhr/" title="PHP.RUHR 2020">php-ruhr-2020.png</default:newsImage>
+  <content type="xhtml">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+          <p><b>PHP.RUHR 2020 – Web Development &amp; Digital Commerce</b></p>
+     <p>Don't miss the seventh episode of one of the most outstanding PHP and web development conferences in Europe from <b>Nov 4 to 6, 2020</b> in the stunning atmosphere of Germany's largest football stadium in <b>Dortmund</b>, which is world famous for its legendary "yellow wall".</p>
+     <p>Nov 4 - Workshop Day<br/>
+     Nov 5 - Conference day 1 + networking evening<br/>
+     Nov 6 - Conference Day 2</p>
+             <p>Our <b>call for papers</b> is open until July 2020: <a href="https://cfp.php.ruhr/" target="_blank">https://cfp.php.ruhr/</a><br/>
+     Conference tickets will be available soon.</p>
+     <p>This year's conference will be a very special one, because for the first time we will have a hybrid concept, which means that there will be visitors on site and there will be video streaming. Anyway, all participants will be able to get in touch with the speakers and with each other. Furthermore, there will be additional digital booths for sponsors.</p>
+     <p>The conference is part of the Dortmund Digital Week #diwodo20 from Nov 2 to 6, 2020, which in 2019 attracted more than 6,500 visitors in total.  For a whole week, there will be lots of talks and workshops on the latest trends and technologies in the field of digitization.</p>
+     <p>Join us and visit Dortmund - the city and the surrounding Ruhr area are also known for their numerous tourist attractions.</p>
+    </div>
+  </content>
+</entry>

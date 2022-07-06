@@ -1,7 +1,6 @@
 <?php
-// $Id$
 $_SERVER['BASE_PAGE'] = 'releases/4_2_2_fr.php';
-include_once $_SERVER['DOCUMENT_ROOT'] . '/include/prepend.inc';
+include_once __DIR__ . '/../include/prepend.inc';
 site_header("Annonce de publication de PHP 4.2.2", array("lang" => "fr"));
 ?>
 
@@ -39,7 +38,7 @@ les versions 4.2.0 et 4.2.1 de PHP
  les donn&eacute;es d'entr&eacute;e, ce qui conduit &agrave; une
  vuln&eacute;rabilit&eacute;.
 </p>
-   
+
 <p>
  La vuln&eacute;rabilit&eacute; est exploitable par quiconque peut envoyer des requ&ecirc;tes
  HTTP POST &agrave; un serveur web utilisant PHP versions 4.2.0 et 4.2.1. Des
@@ -76,21 +75,21 @@ les versions 4.2.0 et 4.2.1 de PHP
  affect&eacute;, il est possible de simplement interdire les requ&ecirc;tes POST sur le
  serveur.
 </p>
-   
+
 <p>
  Sous Apache, par exemple, il est possible d'utiliser le code suivant
  dans le fichier de configuration principal, ou avec un fichier .htaccess
  plac&eacute; suffisamment pr&egrave;s de la racine :
 </p>
 
-<pre>   
+<pre>
 &lt;Limit POST&gt;
    Order deny,allow
    Deny from all
 &lt;/Limit&gt;
 </pre>
-      
-<p>    
+
+<p>
  Notez qu'une autre configuration ou/et un autre fichier .htaccess avec
  certains param&egrave;tres, peuvent annuler l'effet de l'exemple ci-dessus.
 </p>
@@ -101,5 +100,5 @@ les versions 4.2.0 et 4.2.1 de PHP
  Le PHP Group remercie Stefan Esser de e-matters GmbH pour la d&eacute;couverte
  de cette vuln&eacute;rabilit&eacute;.
 </p>
-   
+
 <?php site_footer(); ?>

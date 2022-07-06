@@ -1,7 +1,6 @@
 <?php
-// $Id: index.php 230994 2007-03-01 17:10:22Z bjori $
 $_SERVER['BASE_PAGE'] = 'security/index.php';
-include_once $_SERVER['DOCUMENT_ROOT'] . '/include/prepend.inc';
+include_once __DIR__ . '/../include/prepend.inc';
 
 site_header("CRYPT_BLOWFISH security fix details");
 ?>
@@ -65,4 +64,3 @@ announcement</a> for more information.
 
 <?php
 site_footer();
-

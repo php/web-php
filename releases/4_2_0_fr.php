@@ -1,7 +1,6 @@
 <?php
-// $Id$
 $_SERVER['BASE_PAGE'] = 'releases/4_2_0_fr.php';
-include_once $_SERVER['DOCUMENT_ROOT'] . '/include/prepend.inc';
+include_once __DIR__ . '/../include/prepend.inc';
 site_header("Annonce de publication de PHP 4.2.0", array("lang" => "fr"));
 ?>
 
@@ -47,7 +46,7 @@ site_header("Annonce de publication de PHP 4.2.0", array("lang" => "fr"));
  support&eacute; par le PHP group sur ces plates-formes. Sp&eacute;cifiquement,
  compiler PHP comme module Apache dynamiquement charg&eacute; n'est pas
  encore support&eacute;. PHP 4.3.0, dont la publication est pr&eacute;vue pour
- Ao&ucirc;t 2002, sera la premi&egrave;re version qui supportera officiellement 
+ Ao&ucirc;t 2002, sera la premi&egrave;re version qui supportera officiellement
  Mac OS X. Cette version, aussi bien pour les futures versions de
  Mac OS X et Apache, sera totalement synchronis&eacute; avec les autres
  plates-formes PHP.

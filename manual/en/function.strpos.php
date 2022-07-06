@@ -1,40 +1,40 @@
 <?php
-include_once $_SERVER['DOCUMENT_ROOT'] . '/include/shared-manual.inc';
+include_once __DIR__ . '/../../include/shared-manual.inc';
 $TOC = array();
 $PARENTS = array();
-include_once dirname(__FILE__) ."/toc/ref.strings.inc";
+include_once __DIR__ ."/toc/ref.strings.inc";
 $setup = array (
-  'home' => 
+  'home' =>
   array (
     0 => 'index.php',
     1 => 'PHP Manual',
   ),
-  'head' => 
+  'head' =>
   array (
     0 => 'UTF-8',
     1 => 'en',
   ),
-  'this' => 
+  'this' =>
   array (
     0 => 'function.strpos.php',
     1 => 'strpos',
   ),
-  'up' => 
+  'up' =>
   array (
     0 => 'ref.strings.php',
     1 => 'String Functions',
   ),
-  'prev' => 
+  'prev' =>
   array (
     0 => 'function.strpbrk.php',
     1 => 'strpbrk',
   ),
-  'next' => 
+  'next' =>
   array (
     0 => 'function.strrchr.php',
     1 => 'strrchr',
   ),
-  'alternatives' => 
+  'alternatives' =>
   array (
   ),
 );
@@ -42,7 +42,6 @@ $setup["toc"] = $TOC;
 $setup["parents"] = $PARENTS;
 manual_setup($setup);
 
-manual_header();
 ?>
 <div id="function.strpos" class="refentry">
  <div class="refnamediv">
@@ -50,7 +49,7 @@ manual_header();
   <p class="verinfo">(PHP 4, PHP 5)</p><p class="refpurpose"><span class="refname">strpos</span> &mdash; <span class="dc-title">Find the position of the first occurrence of a substring in a string</span></p>
 
  </div>
- 
+
  <div class="refsect1 description" id="refsect1-function.strpos-description">
   <h3 class="title">Description</h3>
   <div class="methodsynopsis dc-description">

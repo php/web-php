@@ -1,7 +1,6 @@
 <?php
-// $Id$
 $_SERVER['BASE_PAGE'] = 'archive/2008.php';
-include_once $_SERVER['DOCUMENT_ROOT'] . '/include/prepend.inc';
+include_once __DIR__ . '/../include/prepend.inc';
 news_archive_sidebar();
 site_header("News Archive - 2008", array("cache" => true));
 ?>
@@ -16,7 +15,7 @@ site_header("News Archive - 2008", array("cache" => true));
 
 <div class="newsItem hentry">
     <div class="newsImage"></div>
-    <h1 class="summary entry-title"><a name="id2008-12-10-1" id="id2008-12-10-1" href="http://www.php.net/archive/2008.php#id2008-12-10-1" rel="bookmark" class="bookmark">Windows PECL binaries</a></h1>
+    <h1 class="summary entry-title"><a id="id2008-12-10-1" href="http://www.php.net/archive/2008.php#id2008-12-10-1" rel="bookmark" class="bookmark">Windows PECL binaries</a></h1>
     <div class="entry-content description">
         <abbr class="published newsdate" title="2008-12-10T19:50:38+01:00">[10-Dec-2008]</abbr>
 
@@ -26,28 +25,28 @@ site_header("News Archive - 2008", array("cache" => true));
         <p>If anyone is interested in the project please join the <a href="mailto:internals-win@lists.php.net">PHP Windows Development</a> <a href="http://php.net/mailinglist">mailinglist</a>.</p>
 
       </div>
-    
+
     </div>
 </div>
 
 <hr>
 <div class="newsItem hentry">
     <div class="newsImage"></div>
-    <h1 class="summary entry-title"><a name="id2008-12-08-1" id="id2008-12-08-1" href="http://www.php.net/archive/2008.php#id2008-12-08-1" rel="bookmark" class="bookmark">PHP 5.2.8 Released!</a></h1>
+    <h1 class="summary entry-title"><a id="id2008-12-08-1" href="http://www.php.net/archive/2008.php#id2008-12-08-1" rel="bookmark" class="bookmark">PHP 5.2.8 Released!</a></h1>
     <div class="entry-content description">
         <abbr class="published newsdate" title="2008-12-08T15:58:43-05:00">[08-Dec-2008]</abbr>
 
         <div>
         <p>The PHP Development Team would like to announce the immediate availability of PHP 5.2.8. This release addresses a regression introduced by 5.2.7 in regard to the magic_quotes functionality, which was broken by an incorrect fix to the filter extension. All users who have upgraded to 5.2.7 are encouraged to upgrade to this release.  Alternatively you can apply a work-around for the bug by changing "filter.default_flags=0" in php.ini.</p>
       </div>
-    
+
     </div>
 </div>
 
 <hr>
 <div class="newsItem hentry">
     <div class="newsImage"></div>
-    <h1 class="summary entry-title"><a name="id2008-12-07-1" id="id2008-12-07-1" href="http://www.php.net/archive/2008.php#id2008-12-07-1" rel="bookmark" class="bookmark">PHP 5.2.7 has been removed from distribution</a></h1>
+    <h1 class="summary entry-title"><a id="id2008-12-07-1" href="http://www.php.net/archive/2008.php#id2008-12-07-1" rel="bookmark" class="bookmark">PHP 5.2.7 has been removed from distribution</a></h1>
 
     <div class="entry-content description">
         <abbr class="published newsdate" title="2008-12-07T22:01:14-08:00">[07-Dec-2008]</abbr>
@@ -60,14 +59,14 @@ site_header("News Archive - 2008", array("cache" => true));
        </p>
 
       </div>
-    
+
     </div>
 </div>
 
 <hr>
 <div class="newsItem hentry">
     <div class="newsImage"></div>
-    <h1 class="summary entry-title"><a name="id2008-12-04-3" id="id2008-12-04-3" href="http://www.php.net/archive/2008.php#id2008-12-04-3" rel="bookmark" class="bookmark">PHP 5.2.7 Released</a></h1>
+    <h1 class="summary entry-title"><a id="id2008-12-04-3" href="http://www.php.net/archive/2008.php#id2008-12-04-3" rel="bookmark" class="bookmark">PHP 5.2.7 Released</a></h1>
     <div class="entry-content description">
         <abbr class="published newsdate" title="2008-12-04T20:44:17-05:00">[04-Dec-2008]</abbr>
 
@@ -123,7 +122,7 @@ site_header("News Archive - 2008", array("cache" => true));
        Added missing zip security fix
       </p>
      </div>
-    
+
     </div>
 </div>
 
@@ -131,7 +130,7 @@ site_header("News Archive - 2008", array("cache" => true));
 
 <div class="newsItem hentry">
     <div class="newsImage"></div>
-    <h1 class="summary entry-title"><a name="id2008-12-04-2" id="id2008-12-04-2" href="http://www.php.net/archive/2008.php#id2008-12-04-2" rel="bookmark" class="bookmark">PHP 5.3 alpha3 released!</a></h1>
+    <h1 class="summary entry-title"><a id="id2008-12-04-2" href="http://www.php.net/archive/2008.php#id2008-12-04-2" rel="bookmark" class="bookmark">PHP 5.3 alpha3 released!</a></h1>
     <div class="entry-content description">
         <abbr class="published newsdate" title="2008-12-04T17:00:32+01:00">[04-Dec-2008]</abbr>
         <div>
@@ -169,14 +168,14 @@ site_header("News Archive - 2008", array("cache" => true));
         <p>The current <a href="http://wiki.php.net/todo/php53">release plan</a> expects
         a stable release sometime around the end of Q1 2009.</p>
       </div>
-    
+
     </div>
 </div>
 
 <hr>
 <div class="newsItem hentry">
     <div class="newsImage"></div>
-    <h1 class="summary entry-title"><a name="id2008-12-04-1" id="id2008-12-04-1" href="http://www.php.net/archive/2008.php#id2008-12-04-1" rel="bookmark" class="bookmark">PHP Advent 2008</a></h1>
+    <h1 class="summary entry-title"><a id="id2008-12-04-1" href="http://www.php.net/archive/2008.php#id2008-12-04-1" rel="bookmark" class="bookmark">PHP Advent 2008</a></h1>
     <div class="entry-content description">
         <abbr class="published newsdate" title="2008-12-04T09:30:00-05:00">[04-Dec-2008]</abbr>
         <div>
@@ -189,14 +188,14 @@ site_header("News Archive - 2008", array("cache" => true));
         or <a href="http://twitter.com/phpadvent">following us on Twitter</a>.
         Happy holidays.</p>
       </div>
-    
+
     </div>
 </div>
 
 <hr>
 <div class="newsItem hentry vevent">
     <div class="newsImage"><?php news_image("http://www.afup.org/", "afup2008.png", "Forum AFUP Paris 2008"); ?></div>
-    <h1 class="summary entry-title"><a name="id2008-11-15-1" id="id2008-11-15-1" href="http://www.php.net/archive/2008.php#id2008-11-15-1" rel="bookmark" class="bookmark">Forum PHP Paris 2008</a></h1>
+    <h1 class="summary entry-title"><a id="id2008-11-15-1" href="http://www.php.net/archive/2008.php#id2008-11-15-1" rel="bookmark" class="bookmark">Forum PHP Paris 2008</a></h1>
 
     <div class="entry-content description">
         <abbr class="published newsdate" title="2008-11-15T21:56:55-07:00">[15-Nov-2008]</abbr>
@@ -211,7 +210,7 @@ site_header("News Archive - 2008", array("cache" => true));
   the Forum PHP 2008 focuses on the themas of Professional Web Services,
   and PHP large scale projects.
     </p>
-    
+
     </div>
 
 </div>
@@ -219,7 +218,7 @@ site_header("News Archive - 2008", array("cache" => true));
 <hr>
 <div class="newsItem hentry vevent">
     <div class="newsImage"><?php news_image("http://conference.phpnw.org.uk", "phpnw08_logo.jpg", "PHPNW08 logo"); ?></div>
-    <h1 class="summary entry-title"><a name="id2008-11-04-2" id="id2008-11-04-2" href="http://conference.phpnw.org.uk" rel="bookmark" class="bookmark">PHPNW08 - November 22nd - Manchester, UK</a></h1>
+    <h1 class="summary entry-title"><a id="id2008-11-04-2" href="http://conference.phpnw.org.uk" rel="bookmark" class="bookmark">PHPNW08 - November 22nd - Manchester, UK</a></h1>
     <div class="entry-content description">
         <abbr class="published newsdate" title="2008-11-04T12:55:09+00:00">[04-Nov-2008]</abbr>
         <div>
@@ -254,14 +253,14 @@ site_header("News Archive - 2008", array("cache" => true));
        <a href="http://conference.phpnw.org.uk/phpnw08/register/" class="url">http://conference.phpnw.org.uk/phpnw08/register/</a>.
       </p>
       </div>
-    
+
     </div>
 </div>
 
 <hr>
 <div class="newsItem hentry vevent">
     <div class="newsImage"></div>
-    <h1 class="summary entry-title"><a name="id2008-09-16-1" id="id2008-09-16-1" href="http://www.php.net/archive/2008.php#id2008-09-16-1" rel="bookmark" class="bookmark">PHP Quebec 2009</a></h1>
+    <h1 class="summary entry-title"><a id="id2008-09-16-1" href="http://www.php.net/archive/2008.php#id2008-09-16-1" rel="bookmark" class="bookmark">PHP Quebec 2009</a></h1>
     <div class="entry-content description">
         <abbr class="published newsdate" title="2008-09-16T10:12:12+02:00">[16-Sep-2008]</abbr>
         <p>
@@ -280,14 +279,14 @@ site_header("News Archive - 2008", array("cache" => true));
   Organizers will prioritize new and original topics in English or French. For more information, visit the website:
   <a href="http://conf.phpquebec.com/en" title="2009 PHP QuebecConference">http://conf.phpquebec.com</a>
 </p>
-    
+
     </div>
 </div>
 
 <hr>
 <div class="newsItem hentry vevent">
     <div class="newsImage"><?php news_image("http://phpconference.es/", "PHPBarcelonaConference003.png", "Barcelona PHP Conference"); ?></div>
-    <h1 class="summary entry-title"><a name="id2008-09-10-1" id="id2008-09-10-1" href="http://phpconference.es/" rel="bookmark" class="bookmark">Barcelona PHP Conference 2008</a></h1>
+    <h1 class="summary entry-title"><a id="id2008-09-10-1" href="http://phpconference.es/" rel="bookmark" class="bookmark">Barcelona PHP Conference 2008</a></h1>
 
     <div class="entry-content description">
         <abbr class="published newsdate" title="2008-09-10T15:08:49+02:00">[10-Sep-2008]</abbr>
@@ -320,14 +319,14 @@ site_header("News Archive - 2008", array("cache" => true));
        </p>
 
       </div>
-    
+
     </div>
 </div>
 
 <hr>
 <div class="newsItem hentry vevent">
     <div class="newsImage"><?php news_image("http://www.phpconference.com/", "icp08.jpg", "International PHP Conference 2008"); ?></div>
-    <h1 class="summary entry-title"><a name="id2008-09-08-1" id="id2008-09-08-1" href="http://www.phpconference.com/" rel="bookmark" class="bookmark">International PHP Conference 2008 October 27-31st Mainz, Germany</a></h1>
+    <h1 class="summary entry-title"><a id="id2008-09-08-1" href="http://www.phpconference.com/" rel="bookmark" class="bookmark">International PHP Conference 2008 October 27-31st Mainz, Germany</a></h1>
     <div class="entry-content description">
         <abbr class="published newsdate" title="2008-09-08T12:31:08+02:00">[08-Sep-2008]</abbr>
 
@@ -369,14 +368,14 @@ site_header("News Archive - 2008", array("cache" => true));
           <small>** With Student ID. Limited seating available</small>
         </p>
       </div>
-    
+
     </div>
 </div>
 
 <hr>
 <div class="newsItem hentry vevent">
     <div class="newsImage"><?php news_image("http://phpworks.mtacon.com/", "phppyworks.png", "php|works / PyWorks 2008: Chicago"); ?></div>
-    <h1 class="summary entry-title"><a name="2008-09-03-1" id="2008-09-03-1" href="http://phpworks.mtacon.com/" rel="bookmark" class="bookmark">php|works &amp; PyWorks 2008 - Atlanta</a></h1>
+    <h1 class="summary entry-title"><a id="2008-09-03-1" href="http://phpworks.mtacon.com/" rel="bookmark" class="bookmark">php|works &amp; PyWorks 2008 - Atlanta</a></h1>
 
     <div class="entry-content description">
         <abbr class="published newsdate" title="2008-09-03T11:49:33+02:00">[03-Sep-2008]</abbr>
@@ -399,14 +398,14 @@ site_header("News Archive - 2008", array("cache" => true));
           Join us to hear <a href="http://phpworks.mtacon.com/c/schedule">top speakers</a> such as Derick Rethans (eZ Systems), Chris Shiflett (OmniTI), Mike Potter (Adobe) and more.
         </p>
       </div>
-    
+
     </div>
 </div>
 
 <hr>
 <div class="newsItem hentry">
     <div class="newsImage"></div>
-    <h1 class="summary entry-title"><a name="id2008-08-07-1" id="id2008-08-07-1" href="http://www.php.net/archive/2008.php#id2008-08-07-1" rel="bookmark" class="bookmark">PHP 4.4.9 released!</a></h1>
+    <h1 class="summary entry-title"><a id="id2008-08-07-1" href="http://www.php.net/archive/2008.php#id2008-08-07-1" rel="bookmark" class="bookmark">PHP 4.4.9 released!</a></h1>
 
     <div class="entry-content description">
         <abbr class="published newsdate" title="2008-08-07T20:12:42+02:00">[07-Aug-2008]</abbr>
@@ -431,7 +430,7 @@ site_header("News Archive - 2008", array("cache" => true));
         </ul>
         <p> For a full list of changes in PHP 4.4.9, see the <a href="/ChangeLog-4.php#4.4.9">ChangeLog</a>.</p>
       </div>
-    
+
     </div>
 </div>
 
@@ -439,7 +438,7 @@ site_header("News Archive - 2008", array("cache" => true));
 <div class="newsItem hentry">
     <div class="newsImage"></div>
 
-    <h1 class="summary entry-title"><a name="id2008-08-01-1" id="id2008-08-01-1" href="http://www.php.net/archive/2008.php#id2008-08-01-1" rel="bookmark" class="bookmark">PHP 5.3 alpha1 released!</a></h1>
+    <h1 class="summary entry-title"><a id="id2008-08-01-1" href="http://www.php.net/archive/2008.php#id2008-08-01-1" rel="bookmark" class="bookmark">PHP 5.3 alpha1 released!</a></h1>
     <div class="entry-content description">
         <abbr class="published newsdate" title="2008-08-01T08:50:37+02:00">[01-Aug-2008]</abbr>
         <div>
@@ -471,7 +470,7 @@ site_header("News Archive - 2008", array("cache" => true));
         <p>Several under the hood changes also require in depth testing with existing applications to ensure that any backwards compatibility breaks are minimized. This is especially important for users that require the undocumented Zend engine multibyte support.</p>
         <p>The current <a href="http://wiki.php.net/todo/php53">release plan</a> states that there will be alpha/beta/RC releases in 2-3 week intervals with an expected stable release of PHP 5.3 between mid September and mid October of 2008.</p>
       </div>
-    
+
     </div>
 </div>
 
@@ -479,7 +478,7 @@ site_header("News Archive - 2008", array("cache" => true));
 <div class="newsItem hentry">
 
     <div class="newsImage"></div>
-    <h1 class="summary entry-title"><a name="id2008-07-30-1" id="id2008-07-30-1" href="http://www.php.net/archive/2008.php#id2008-07-30-1" rel="bookmark" class="bookmark">TestFest 2008 wrap-up</a></h1>
+    <h1 class="summary entry-title"><a id="id2008-07-30-1" href="http://www.php.net/archive/2008.php#id2008-07-30-1" rel="bookmark" class="bookmark">TestFest 2008 wrap-up</a></h1>
     <div class="entry-content description">
         <abbr class="published newsdate" title="2008-07-30T00:23:14+01:00">[30-Jul-2008]</abbr>
         <div>
@@ -504,14 +503,14 @@ site_header("News Archive - 2008", array("cache" => true));
         <p>We will provide Nexen with the email addresses of the winners, so that they can arrange to get the elePHPants shipped. Also for those people wondering, you can continue to submit tests on the <a href="http://testfest.php.net">TestFest submission site</a>. A bit thank you to all participants and TestFest organizers! Without the countless people that helped organize local events, implement the infrastructure and submissions reviewers, the TestFest would have obviously not worked out as well as it has. We will surely do similar events in the future based on the big success of TestFest 2008.</p>
       </div>
 
-    
+
     </div>
 </div>
 
 <hr>
 <div class="newsItem hentry">
     <div class="newsImage"></div>
-    <h1 class="summary entry-title"><a name="id2008-07-29-1" id="id2008-07-29-1" href="http://www.php.net/archive/2008.php#id2008-07-29-1" rel="bookmark" class="bookmark">Manual restructure and license change</a></h1>
+    <h1 class="summary entry-title"><a id="id2008-07-29-1" href="http://www.php.net/archive/2008.php#id2008-07-29-1" rel="bookmark" class="bookmark">Manual restructure and license change</a></h1>
     <div class="entry-content description">
         <abbr class="published newsdate" title="2008-07-29T23:50:37+02:00">[29-Jul-2008]</abbr>
         <div>
@@ -548,7 +547,7 @@ site_header("News Archive - 2008", array("cache" => true));
         <a href="http://creativecommons.org/licenses/by/3.0/" rel="license">CreativeCommons Attribution license</a>.
        </p>
       </div>
-    
+
     </div>
 </div>
 
@@ -556,7 +555,7 @@ site_header("News Archive - 2008", array("cache" => true));
 <div class="newsItem hentry vevent">
     <div class="newsImage"><?php news_image("http://zendcon.com/", "zlogo.gif", "ZendCon 2008"); ?></div>
 
-    <h1 class="summary entry-title"><a name="id2008-07-13-1" id="id2008-07-13-1" href="http://zendcon.com/" rel="bookmark" class="bookmark">ZendCon 2008 - September 15-18 - Santa Clara, CA-US</a></h1>
+    <h1 class="summary entry-title"><a id="id2008-07-13-1" href="http://zendcon.com/" rel="bookmark" class="bookmark">ZendCon 2008 - September 15-18 - Santa Clara, CA-US</a></h1>
     <div class="entry-content description">
         <abbr class="published newsdate" title="2008-07-13T18:23:14+02:00">[13-Jul-2008]</abbr>
         <div>
@@ -572,7 +571,7 @@ site_header("News Archive - 2008", array("cache" => true));
 
         <p>For more information and to register for the biggest PHP even of the year, visit <a href="http://zendcon.com/">http://zendcon.com/</a></p>
       </div>
-    
+
     </div>
 </div>
 
@@ -580,7 +579,7 @@ site_header("News Archive - 2008", array("cache" => true));
 
 <div class="newsItem hentry vevent">
     <div class="newsImage"><?php news_image("http://www.afup.org/", "elephpants.jpg", "elePHPants"); ?></div>
-    <h1 class="summary entry-title"><a name="id2008-05-13-1" id="id2008-05-13-1" href="http://www.php.net/archive/2008.php#id2008-05-13-1" rel="bookmark" class="bookmark">Call for PUG, for elePHPants, 2008 generation</a></h1>
+    <h1 class="summary entry-title"><a id="id2008-05-13-1" href="http://www.php.net/archive/2008.php#id2008-05-13-1" rel="bookmark" class="bookmark">Call for PUG, for elePHPants, 2008 generation</a></h1>
     <div class="entry-content description">
         <abbr class="published newsdate" title="2008-05-13T11:56:55-07:00">[13-May-2008]</abbr>
 
@@ -601,14 +600,14 @@ and join the <a href="http://www.flickr.com/photos/tags/elephpant/">world of blu
     </p>
 
       </div>
-    
+
     </div>
 </div>
 
 <hr>
 <div class="newsItem hentry">
     <div class="newsImage"></div>
-    <h1 class="summary entry-title"><a name="id2008-04-22-1" id="id2008-04-22-1" href="http://www.php.net/archive/2008.php#id2008-04-22-1" rel="bookmark" class="bookmark">Google Summer of Code: php.net students</a></h1>
+    <h1 class="summary entry-title"><a id="id2008-04-22-1" href="http://www.php.net/archive/2008.php#id2008-04-22-1" rel="bookmark" class="bookmark">Google Summer of Code: php.net students</a></h1>
     <div class="entry-content description">
         <abbr class="published newsdate" title="2008-04-22T20:04:48+02:00">[22-Apr-2008]</abbr>
 
@@ -682,14 +681,14 @@ and join the <a href="http://www.flickr.com/photos/tags/elephpant/">world of blu
          program, but he will be replaced by <span class="vcard"><span class="fn">Rudy Nappée</span></span> working on the same application.</p>
 
       </div>
-    
+
     </div>
 </div>
 
 <hr>
 <div class="newsItem hentry">
     <div class="newsImage"></div>
-    <h1 class="summary entry-title"><a name="id2008-05-01-1" id="id2008-05-01-1" href="http://www.php.net/archive/2008.php#id2008-05-01-1" rel="bookmark" class="bookmark">PHP 5.2.6 Released</a></h1>
+    <h1 class="summary entry-title"><a id="id2008-05-01-1" href="http://www.php.net/archive/2008.php#id2008-05-01-1" rel="bookmark" class="bookmark">PHP 5.2.6 Released</a></h1>
     <div class="entry-content description">
         <abbr class="published newsdate" title="2008-05-01T19:27:58-04:00">[01-May-2008]</abbr>
 
@@ -715,7 +714,7 @@ and join the <a href="http://www.flickr.com/photos/tags/elephpant/">world of blu
         <p><strong>Update (<abbr class="updated" title="2008-05-03T09:56:38+02:00">May 3rd</abbr>):</strong> The Windows archives were missing the <a href="/xsl">XSL</a>
          and <a href="/imap">IMAP</a> extensions.</p>
       </div>
-    
+
     </div>
 
 </div>
@@ -723,7 +722,7 @@ and join the <a href="http://www.flickr.com/photos/tags/elephpant/">world of blu
 <hr>
 <div class="newsItem hentry vevent">
     <div class="newsImage"><?php news_image("http://www.afup.org/", "afup2008.png", "Forum AFUP Paris 2008"); ?></div>
-    <h1 class="summary entry-title"><a name="id2008-04-13-2" id="id2008-04-13-2" href="http://www.php.net/archive/2008.php#id2008-04-13-2" rel="bookmark" class="bookmark">Call for speakers for Forum PHP Paris 2008</a></h1>
+    <h1 class="summary entry-title"><a id="id2008-04-13-2" href="http://www.php.net/archive/2008.php#id2008-04-13-2" rel="bookmark" class="bookmark">Call for speakers for Forum PHP Paris 2008</a></h1>
     <div class="entry-content description">
         <abbr class="published newsdate" title="2008-04-13T21:56:55-07:00">[13-Apr-2008]</abbr>
         <p>The AFUP, Association Française des Utilisateurs de PHP,
@@ -748,14 +747,14 @@ and join the <a href="http://www.flickr.com/photos/tags/elephpant/">world of blu
     Proposals will be reviewed after the deadline has passed. Additional information may be asked where needed. Proposals will be chosen according to their layout, relevancy for a professional audience and the overall homegeneity of the forum. Every candidate will be personnally notified of the status of their proposal. The decision is final. Priority will be given to sessions in French.
     </p>
 
-    
+
     </div>
 </div>
 
 <hr>
 <div class="newsItem hentry vevent">
     <div class="newsImage"><?php news_image("http://www.dcphpconference.com/", "dcphpconference.2008.png", "PHP DC conference 2008"); ?></div>
-    <h1 class="summary entry-title"><a name="id2008-04-13-1" id="id2008-04-13-1" href="http://www.dcphpconference.com/" rel="bookmark" class="bookmark">PHP DC conference 2008</a></h1>
+    <h1 class="summary entry-title"><a id="id2008-04-13-1" href="http://www.dcphpconference.com/" rel="bookmark" class="bookmark">PHP DC conference 2008</a></h1>
     <div class="entry-content description">
         <abbr class="published newsdate" title="2008-04-13T12:00:00-05:00">[13-Apr-2008]</abbr>
         <div>
@@ -784,7 +783,7 @@ and join the <a href="http://www.flickr.com/photos/tags/elephpant/">world of blu
     Early discounted registration rates affective until April 15, 2008
     </p>
       </div>
-    
+
     </div>
 </div>
 
@@ -792,7 +791,7 @@ and join the <a href="http://www.flickr.com/photos/tags/elephpant/">world of blu
 <div class="newsItem hentry">
     <div class="newsImage"></div>
 
-    <h1 class="summary entry-title"><a name="2008-03-30-1" id="2008-03-30-1" href="http://www.php.net/archive/2008.php#2008-03-30-1" rel="bookmark" class="bookmark">TestFest 2008</a></h1>
+    <h1 class="summary entry-title"><a id="2008-03-30-1" href="http://www.php.net/archive/2008.php#2008-03-30-1" rel="bookmark" class="bookmark">TestFest 2008</a></h1>
     <div class="entry-content description">
         <abbr class="published newsdate" title="2008-03-30T21:06:55+01:00">[30-Mar-2008]</abbr>
         <div>
@@ -817,14 +816,14 @@ and join the <a href="http://www.flickr.com/photos/tags/elephpant/">world of blu
         additional details on the TestFest on how to get involved, either as a
         UG or by setting up the necessary infrastructure.</p>
       </div>
-    
+
     </div>
 </div>
 
 <hr>
 <div class="newsItem hentry">
     <div class="newsImage"></div>
-    <h1 class="summary entry-title"><a name="2008-03-19-1" id="2008-03-19-1" href="http://www.php.net/archive/2008.php#2008-03-19-1" rel="bookmark" class="bookmark">Google Summer of Code 2008</a></h1>
+    <h1 class="summary entry-title"><a id="2008-03-19-1" href="http://www.php.net/archive/2008.php#2008-03-19-1" rel="bookmark" class="bookmark">Google Summer of Code 2008</a></h1>
     <div class="entry-content description">
         <abbr class="published newsdate" title="2008-03-19T13:53:55-04:00">[19-Mar-2008]</abbr>
         <div>
@@ -833,14 +832,14 @@ and join the <a href="http://www.flickr.com/photos/tags/elephpant/">world of blu
         <p>We would like to take this opportunity to say thanks to Google Inc. for this privilege to participate once again, and would like to invite everyone to look at our list of ideas: <a href="http://wiki.php.net/gsoc/2008">http://wiki.php.net/gsoc/2008</a>. Students are of course more than welcome to come up with their own ideas for their proposals and we will consider each and every application that we will receive.</p>
         <p>So once again, thanks to everyone who is involved in this magnificent journey and we hope to see many of you great students and open source passionate join us in our most enjoyable <a href="http://code.google.com/soc/2008">Google Summer of Code</a> projects.</p>
       </div>
-    
+
     </div>
 </div>
 
 <hr>
 <div class="newsItem hentry vevent">
     <div class="newsImage"><?php news_image("http://tek.phparch.com/", "phptek_2008.png", "php|tek 2008: Chicago"); ?></div>
-    <h1 class="summary entry-title"><a name="2008-02-19-1" id="2008-02-19-1" href="http://tek.phparch.com/" rel="bookmark" class="bookmark">php|tek 2008: Chicago</a></h1>
+    <h1 class="summary entry-title"><a id="2008-02-19-1" href="http://tek.phparch.com/" rel="bookmark" class="bookmark">php|tek 2008: Chicago</a></h1>
     <div class="entry-content description">
         <abbr class="published newsdate" title="2008-02-19T11:45:00-05:00">[19-Feb-2008]</abbr>
         <div>
@@ -857,14 +856,14 @@ The PHP Community meets <abbr class="dtstart" title="2008-05-20">May 20</abbr>-<
 For the past two years, php|architect's spring conference has sold out <em>weeks</em> before the start date, so if you're interested in attending, don't delay, and be sure to <a href="http://tek.phparch.com/c/p/signup">sign up</a> ASAP!
 </p>
       </div>
-    
+
     </div>
 </div>
 
 <hr>
 <div class="newsItem hentry vevent">
     <div class="newsImage"><?php news_image("http://conf.phpquebec.com/en/conf2008/", "conference_php_quebec.gif", "PHP Québec conference 2008"); ?></div>
-    <h1 class="summary entry-title"><a name="2008-02-06-1" id="2008-02-06-1" href="http://conf.phpquebec.com/en/conf2008/" rel="bookmark" class="bookmark">PHP Québec conference 2008</a></h1>
+    <h1 class="summary entry-title"><a id="2008-02-06-1" href="http://conf.phpquebec.com/en/conf2008/" rel="bookmark" class="bookmark">PHP Québec conference 2008</a></h1>
     <div class="entry-content description">
         <abbr class="published newsdate" title="2008-02-06T19:23:51+01:00">[06-Feb-2008]</abbr>
         <div>
@@ -887,14 +886,14 @@ many more.
 Take note that online registration ends on March 7th. For more information,
 visit the website: <a href="http://conf.phpquebec.com">http://conf.phpquebec.com</a></p>
       </div>
-    
+
     </div>
 </div>
 
 <hr>
 <div class="newsItem hentry vevent">
     <div class="newsImage"><?php news_image("http://www.phpconference.co.uk/", "phplondon2008.png", "PHP London Conference 08"); ?></div>
-    <h1 class="summary entry-title"><a name="2008-01-10-1" id="2008-01-10-1" href="http://www.phpconference.co.uk/" rel="bookmark" class="bookmark">phplondon conference 2008</a></h1>
+    <h1 class="summary entry-title"><a id="2008-01-10-1" href="http://www.phpconference.co.uk/" rel="bookmark" class="bookmark">phplondon conference 2008</a></h1>
 
     <div class="entry-content description">
         <abbr class="published newsdate" title="2008-01-10T16:23:20+01:00">[10-Jan-2008]</abbr>
@@ -907,14 +906,14 @@ visit the website: <a href="http://conf.phpquebec.com">http://conf.phpquebec.com
         <p>We will also be holding an extended presentation and discussion on frameworks for PHP.</p>
         <p>Visit our <a href=" http://www.phpconference.co.uk" title="phplondon.org community conference">conference site</a> to register. Early bird discount is available until 1st February 2008.</p>
       </div>
-    
+
     </div>
 </div>
 
 <hr>
 <div class="newsItem hentry">
     <div class="newsImage"></div>
-    <h1 class="summary entry-title"><a name="2008-01-03-1" id="2008-01-03-1" href="http://www.php.net/archive/2008.php#2008-01-03-1" rel="bookmark" class="bookmark">PHP 4.4.8 Released</a></h1>
+    <h1 class="summary entry-title"><a id="2008-01-03-1" href="http://www.php.net/archive/2008.php#2008-01-03-1" rel="bookmark" class="bookmark">PHP 4.4.8 Released</a></h1>
     <div class="entry-content description">
         <abbr class="published newsdate" title="2008-01-03T10:13:50+01:00">[03-Jan-2008]</abbr>
 
@@ -947,7 +946,7 @@ releases to address security issues could be made until 2008-08-08.
 </p>
       </div>
 
-    
+
     </div>
 </div>
 

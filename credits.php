@@ -1,13 +1,11 @@
 <?php
-// $Id$
 $_SERVER['BASE_PAGE'] = 'credits.php';
-include_once $_SERVER['DOCUMENT_ROOT'] . '/include/prepend.inc';
+include_once __DIR__ . '/include/prepend.inc';
 
 // Put credits information to $credits
 ob_start();
 phpcredits();
-$credits = ob_get_contents();
-ob_end_clean();
+$credits = ob_get_clean();
 
 // Strip all but the body and drop styles
 preg_match('!<body.*?>(.*)</body>!ims', $credits, $m);
@@ -25,7 +23,5 @@ $credits = str_replace(
 if ($credits) {
     site_header("Credits", array("current" => "community", 'css' => array('credits.css')));
     echo $credits;
-    site_footer(); 
+    site_footer();
 }
-
-?>

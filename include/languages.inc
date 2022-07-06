@@ -1,7 +1,5 @@
 <?php // -*- C++ -*-
 
-// $Id$
-
 /*
  This is a list of all manual languages hosted
  within PHP SVN modules (phpdoc-{lang})
@@ -79,6 +77,7 @@ $INACTIVE_ONLINE_LANGUAGES = array(
     'pl'    => 'Polish',
     'pt'    => 'Portuguese',
     'fa'    => 'Persian',
+    'ro'    => 'Romanian',
     'sr'    => 'Serbian',
     'sk'    => 'Slovak',
     'sl'    => 'Slovenian',

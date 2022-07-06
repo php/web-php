@@ -1,7 +1,6 @@
 <?php
-// $Id$
 $_SERVER['BASE_PAGE'] = 'archive/2002.php';
-include_once $_SERVER['DOCUMENT_ROOT'] . '/include/prepend.inc';
+include_once __DIR__ . '/../include/prepend.inc';
 news_archive_sidebar();
 site_header("News Archive - 2002", array("cache" => true));
 ?>
@@ -78,7 +77,7 @@ site_header("News Archive - 2002", array("cache" => true));
  users ever in one location. Designed for both the MySQL developer and
  the corporate decision maker, this is the place to learn about the
  latest in MySQL technology, discover new business opportunities, take a
- pulse on industry direction and commune with like minds. 
+ pulse on industry direction and commune with like minds.
  More information on <a href="http://www.mysql.com/events/uc2003/">the
  event's website</a>.
 </p>
@@ -168,7 +167,7 @@ site_header("News Archive - 2002", array("cache" => true));
 <p>
  <span class="newsdate">[28-Oct-2002]</span>
  For the first time the Open Source projects comprising the popular LAMP
- platform (Linux, Apache, MySQL and PHP) will be present at the 
+ platform (Linux, Apache, MySQL and PHP) will be present at the
  <a href="http://www.linuxworldexpo.de">LinuxWorld Expo</a>
  with its own booth.
 </p>
@@ -244,7 +243,7 @@ site_header("News Archive - 2002", array("cache" => true));
 
 <h1>PHPCon 2002 (California, Oct 24-25)</h1>
 <p>
- <span class="newsdate">[05-Sept-2002]</span> 
+ <span class="newsdate">[05-Sept-2002]</span>
  <a href="http://www.php-con.com" title="PHPCon 2002">PHPCon 2002</a>, a
  2-day technical conference devoted entirely to PHP, announced today the
  launch of the PHPCon 2002 website, online registration, and a call for
@@ -306,7 +305,7 @@ site_header("News Archive - 2002", array("cache" => true));
  Management, and Jani has been one of the largest contributors to QA and
  support of the Bug database.  The Programmers' Choice winner is Greg
  Allen, who was the lead developer and founding member of the PostNuke
- project. More details are available at 
+ project. More details are available at
  <a href="http://www.ActiveState.com/ActiveAwards2002">http://www.ActiveState.com/ActiveAwards2002</a>
 </p>
 
@@ -355,7 +354,7 @@ site_header("News Archive - 2002", array("cache" => true));
 <p>
  <span class="newsdate">[30-Jun-2002]</span>
  The second alpha release of PHP w/ Zend Engine 2 is <a href="/downloads.php">now
- available</a>. It is based on the current PHP 4 CVS (4.3.0-dev) and includes the new 
+ available</a>. It is based on the current PHP 4 CVS (4.3.0-dev) and includes the new
  scripting engine which greatly improves the object model, adds exception
  handling and provides a much better infrastructure for the integration
  of external technologies like Java or .NET. For more details and
@@ -391,14 +390,14 @@ site_header("News Archive - 2002", array("cache" => true));
 <?php news_image("http://www.linuxtag.org/2002/deutsch/showitem.php3?item=30&amp;lang=en", "linuxtag3.gif", "LinuxTag"); ?>
 
 <h1>LinuxTag 2002: 6 - 9th June, Karlsruhe, Germany</h1>
-<p> 
- <span class="newsdate">[23-May-2002]</span> PHP will be attending 
- <a href="http://www.linuxtag.org/2002/deutsch/showitem.php3?item=30&amp;lang=en">LinuxTag</a> 
+<p>
+ <span class="newsdate">[23-May-2002]</span> PHP will be attending
+ <a href="http://www.linuxtag.org/2002/deutsch/showitem.php3?item=30&amp;lang=en">LinuxTag</a>
  again this year. The combined efforts of the PHP Verein, the Apache Software Foundation and
  MySQL AB,  will create a "(L)AMP" day, focusing on web development with  the 3 core
  technologies. During the day there will be many <a
  href="http://www.linuxtag.org/2002/deutsch/showitem.php3?item=293&amp;lang=en">interesting
- workshops</a>, which are free to enter. Make time to visit the (L)AMP booth also, which will 
+ workshops</a>, which are free to enter. Make time to visit the (L)AMP booth also, which will
  be hosting several <a href="http://www.phpug.de/index_ka109.php">PHP related projects</a>
  (text in German).
 </p>
@@ -512,7 +511,7 @@ site_header("News Archive - 2002", array("cache" => true));
  More information can be found at
  <a href="http://www.phpmag.de/">www.phpmag.de</a>.
 </p>
- 
+
 <hr>
 
 <h1>New PHP.net URL Howto</h1>
@@ -592,7 +591,7 @@ site_header("News Archive - 2002", array("cache" => true));
  <span class="newsdate">[10-Jan-2002]</span>
  You can find an overview of all slides of the sessions from the
  International PHP Conference 2001 on the
- <a href="http://www.phpconference.de/2001/slides_en.php">conference slides page</a>. 
+ <a href="http://www.phpconference.de/2001/slides_en.php">conference slides page</a>.
  It is still not too late to check out some photos from the conference:
 </p>
 

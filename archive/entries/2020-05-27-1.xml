@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom" xmlns:default="http://php.net/ns/news">
+  <title>LaravelConf Taiwan 2020 CFP Started</title>
+  <id>https://www.php.net/archive/2020.php#2020-05-27-1</id>
+  <published>2020-05-27T22:34:59+08:00</published>
+  <updated>2020-05-27T22:34:59+08:00</updated>
+  <link href="https://www.php.net/conferences/index.php#id2020-05-27-1" rel="alternate" type="text/html"/>
+  <link href="https://forms.gle/8D75GEqyQWFL4Ram7" rel="via" type="text/html"/>
+  <default:finalTeaserDate xmlns="http://php.net/ns/news">2020-06-30</default:finalTeaserDate>
+  <category term="cfp" label="Call for Papers"/>
+  <default:newsImage xmlns="http://php.net/ns/news" link="https://forms.gle/8D75GEqyQWFL4Ram7" title="laravel_conf_taiwan_2020_cfp">laravel_conf_taiwan_2020_cfp.jpg</default:newsImage>
+  <content type="xhtml">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+     <p>We're excited to announce the call for papers is open for LaravelConf Taiwan 2020.</p>
+     <p>This year, we focus on "Serverless" cloud architecture.</p>
+     <p>The event will be taking place July 25 in Taiwan and we also have the Webinar track.</p>
+     <p>And we encourage PHP developers <a href="https://forms.gle/EwHQ5bXCoSaAy6KH8">submit your proposals</a></p>
+     <p>We don't limit related Serverless topics. Here are some suggestions about talk ideas are as follows:</p>
+
+     <ul>
+     <li>Alternate PHP run-times and async PHP</li>
+     <li>PHP internals</li>
+     <li>Development principles</li>
+     <li>Security</li>
+     <li>Testing (unit, functional, etc.)</li>
+     <li>Continuous Integration/Delivery</li>
+     <li>Framework-related topics</li>
+     <li>Professional development</li>
+     <li>Developer's tools</li>
+     <li>Infrastructure solutions</li>
+     </ul>
+
+     <p>Interested in being a part of the LaravelConf Taiwan 2020?</p>
+     <p>Submitting your proposals via this <a href="https://forms.gle/EwHQ5bXCoSaAy6KH8">form</a> right now :)</p>
+
+     <p>The Call for Speakers ends on June 30th. Read all the details and <a href="https://forms.gle/EwHQ5bXCoSaAy6KH8">submit your proposals</a> to us today!</p>
+     </div>
+</content>
+</entry>

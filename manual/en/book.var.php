@@ -1,43 +1,43 @@
 <?php
-include_once $_SERVER['DOCUMENT_ROOT'] . '/include/shared-manual.inc';
+include_once __DIR__ . '/../../include/shared-manual.inc';
 $TOC = array();
 $PARENTS = array();
-include_once dirname(__FILE__) ."/toc/refs.basic.vartype.inc";
+include_once __DIR__ ."/toc/refs.basic.vartype.inc";
 $setup = array (
-  'home' => 
+  'home' =>
   array (
     0 => 'index.php',
     1 => 'PHP Manual',
   ),
-  'head' => 
+  'head' =>
   array (
     0 => 'UTF-8',
     1 => 'en',
   ),
-  'this' => 
+  'this' =>
   array (
     0 => 'book.var.php',
     1 => 'Variable handling',
   ),
-  'up' => 
+  'up' =>
   array (
     0 => 'refs.basic.vartype.php',
     1 => 'Variable and Type Related Extensions',
   ),
-  'prev' => 
+  'prev' =>
   array (
     0 => 'class.reflectionexception.php',
     1 => 'ReflectionException',
   ),
-  'next' => 
+  'next' =>
   array (
     0 => 'intro.var.php',
     1 => 'Introduction',
   ),
-  'alternatives' => 
+  'alternatives' =>
   array (
   ),
-  'extra_header_links' => 
+  'extra_header_links' =>
   array (
     'rel' => 'alternate',
     'href' => '/manual/en/feeds/book.var.atom',
@@ -48,15 +48,11 @@ $setup["toc"] = $TOC;
 $setup["parents"] = $PARENTS;
 manual_setup($setup);
 
-manual_header();
 ?>
 <div id="book.var" class="book">
- 
+
  <h1 class="title">Variable handling</h1>
 
- 
-
- 
 
 
 
@@ -64,7 +60,6 @@ manual_header();
 
 
 
- 
 
 
 
@@ -72,7 +67,11 @@ manual_header();
 
 
 
- 
+
+
+
+
+
 
 
 

@@ -1,7 +1,6 @@
 <?php
-// $Id$
 $_SERVER['BASE_PAGE'] = 'download-logos.php';
-include_once $_SERVER['DOCUMENT_ROOT'] . '/include/prepend.inc';
+include_once __DIR__ . '/include/prepend.inc';
 $SIDEBAR_DATA = '
 <h3>More PHP artwork</h3>
 <p>
@@ -14,13 +13,13 @@ $SIDEBAR_DATA = '
 site_header("Download Logos", array("current" => "downloads"));
 
 // Print recommended star cell
-function print_star()
+function print_star(): void
 {
     echo "<td class=\"star\"><span class=\"star\" title=\"recommended\">*</span></td>\n";
 }
 
 // Provide a random bgcolor setting for a cell
-function random_bgcolor($min, $max)
+function random_bgcolor($min, $max): void
 {
     echo "style=\"background-color: #" .
          sprintf('%02x%02x%02x', rand($min, $max)*51, rand($min, $max)*51, rand($min, $max)*51) .

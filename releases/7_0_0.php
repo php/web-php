@@ -1,16 +1,16 @@
 <?php
 $_SERVER['BASE_PAGE'] = 'releases/7_0_0.php';
-include_once $_SERVER['DOCUMENT_ROOT'] . '/include/prepend.inc';
+include_once __DIR__ . '/../include/prepend.inc';
 site_header("PHP 7.0.0 Release Announcement");
 ?>
 
      <h1>PHP 7.0.0 Release Announcement</h1>
-     
+
      <p>The PHP development team announces the immediate availability of PHP
      7.0.0. This release marks the start of the new major PHP 7 series.
      </p>
      <p>
-     PHP 7.0.0 comes with a new version of the Zend Engine, numerous improvements 
+     PHP 7.0.0 comes with a new version of the Zend Engine, numerous improvements
      and new features such as
      </p>
      <ul>
@@ -53,5 +53,5 @@ site_header("PHP 7.0.0 Release Announcement");
 
      <p>Congratulations everyone to this spectacular day for the PHP world!</p>
      <p>Grateful thanks to all the contributors and supporters!</p>
-     
+
 <?php site_footer(); ?>

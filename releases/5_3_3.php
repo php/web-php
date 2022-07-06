@@ -1,14 +1,13 @@
 <?php
-// $Id $
 $_SERVER['BASE_PAGE'] = 'releases/5_3_3.php';
-include_once $_SERVER['DOCUMENT_ROOT'] . '/include/prepend.inc';
+include_once __DIR__ . '/../include/prepend.inc';
 site_header("PHP 5.3.3 Release Announcement");
 ?>
 
 <h1>PHP 5.3.3 Release Announcement</h1>
 <p>
 The PHP development team would like to announce the immediate
-availability of PHP 5.3.3. This release focuses on improving the  
+availability of PHP 5.3.3. This release focuses on improving the
 stability and security of the PHP 5.3.x branch with over 100 bug
 fixes, some of which are security related. All users are encouraged
 to upgrade to this release.

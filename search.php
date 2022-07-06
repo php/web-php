@@ -1,20 +1,12 @@
 <?php // vim: et
-// $Id$
 $_SERVER['BASE_PAGE'] = 'search.php';
-include_once $_SERVER['DOCUMENT_ROOT'] . '/include/prepend.inc';
+include_once __DIR__ . '/include/prepend.inc';
 
 // ---------------------------------------------------------------------------
 
 $_FORM = &$_GET;
 
 // ---------------------------------------------------------------------------
-
-// If PHP added some slashes to quotes, get rid of them
-if ($MQ) {
-    foreach ($_FORM as $name => $value) {
-        $_FORM[$name] = stripslashes($value);
-    }
-}
 
 // We received something to search for
 if (!empty($_FORM['pattern'])) {
@@ -25,7 +17,7 @@ if (!empty($_FORM['pattern'])) {
 
     // Never allow a comma in the show string, that would confuse our JS
     $_FORM['show'] = str_replace(",", "", $_FORM['show']);
-    
+
     $ucp = urlencode($_FORM['pattern']);
 
     // Do redirections for external search engines
@@ -50,7 +42,7 @@ if (!empty($_FORM['pattern'])) {
     }
 }
 
-// No pattern provided, print search page 
+// No pattern provided, print search page
 else {
 
     // Print out common header

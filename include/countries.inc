@@ -1,5 +1,5 @@
 <?php
-$COUNTRIES = array(
+return array(
 'AFG' => 'Afghanistan',
 'ALB' => 'Albania',
 'DZA' => 'Algeria',
@@ -167,7 +167,7 @@ $COUNTRIES = array(
 'QAT' => 'Qatar',
 'KOR' => 'Republic of Korea',
 'MDA' => 'Republic of Moldova',
-'REU' => 'Réunion',
+'REU' => 'RÃ©union',
 'ROU' => 'Romania',
 'RUS' => 'Russian Federation',
 'RWA' => 'Rwanda',
@@ -233,4 +233,3 @@ $COUNTRIES = array(
 'ZMB' => 'Zambia',
 'ZWE' => 'Zimbabwe',
 );
-
