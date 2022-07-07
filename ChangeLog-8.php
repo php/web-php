@@ -676,6 +676,62 @@ changelog_header(8, $MINOR_VERSIONS);
 
 <a id="PHP_8_0"></a>
 
+<section class="version" id="8.0.21"><!-- {{{ 8.0.21 -->
+<h3>Version 8.0.21</h3>
+<b><?php release_date('07-Jul-2022'); ?></b>
+<ul><li>Core:
+<ul>
+  <li>Fixed potential use after free in php_binary_init().</li>
+</ul></li>
+<li>CLI:
+<ul>
+  <li>Fixed <?php githubissuel('php/php-src',8827); ?> (Intentionally closing std handles no longer possible).</li>
+</ul></li>
+<li>COM:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src',8778); ?> (Integer arithmethic with large number variants fails).</li>
+</ul></li>
+<li>Curl:
+<ul>
+  <li>Fixed CURLOPT_TLSAUTH_TYPE is not treated as a string option.</li>
+</ul></li>
+<li>Date:
+<ul>
+  <li><?php bugfix(74671); ?> (DST timezone abbreviation has incorrect offset).</li>
+  <li><?php bugfix(77243); ?> (Weekdays are calculated incorrectly for negative years).</li>
+  <li><?php bugfix(78139); ?> (timezone_open accepts invalid timezone string argument).</li>
+</ul></li>
+<li>FPM:
+<ul>
+  <li><?php bugfix(67764); ?> (fpm: syslog.ident don't work).</li>
+</ul></li>
+<li>MBString:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src',8685); ?> (pcre not ready at mbstring startup).</li>
+</ul></li>
+<li>ODBC:
+<ul>
+  <li>Fixed handling of single-key connection strings.</li>
+</ul></li>
+<li>OpenSSL:
+<ul>
+  <li><?php bugfix(50293); ?> (Several openssl functions ignore the VCWD).</li>
+  <li><?php bugfix(81713); ?> (NULL byte injection in several OpenSSL functions working with certificates).</li>
+</ul></li>
+<li>PDO_ODBC:
+<ul>
+  <li>Fixed errorInfo() result on successful PDOStatement-&gt;execute().</li>
+  <li>Fixed handling of single-key connection strings.</li>
+</ul></li>
+<li>Zip:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src',8781); ?> (ZipArchive::close deletes zip file without updating stat cache).</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
+
+
 <section class="version" id="8.0.20"><!-- {{{ 8.0.20 -->
 <h3>Version 8.0.20</h3>
 <b><?php release_date('09-Jun-2022'); ?></b>
