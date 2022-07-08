@@ -24,7 +24,7 @@ function githubissue($repo, $number) {
 }
 
 function githubissuel($repo, $number) {
-    echo "<a href=\"https://github.com/$repo/issues/$number\">#$number</a>";
+    echo "<a href=\"https://github.com/$repo/issues/$number\">GH-$number</a>";
 }
 
 function release_date($in) {
