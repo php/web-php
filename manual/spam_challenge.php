@@ -1,7 +1,7 @@
 <?php
 // simple and stupid SPAM protection (using little challenges)
 
-$nums = array('zero', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine');
+const NUMS = array('zero', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine');
 
 function plus($a, $b) {
 	return $a + $b;
@@ -27,7 +27,7 @@ function print_prefix($name, $a, $b) {
 	return "$name($a, $b)";
 }
 
-$challenges = array(
+const CHALLENGES = array(
 	// name, print, generator
 	array('max',   'print_prefix'),
 	array('min',   'print_prefix'),
@@ -35,16 +35,14 @@ $challenges = array(
 	array('plus',  'print_infix', 'gen_plus'),
 );
 
-
 // generate a challenge
 function gen_challenge() {
-	global $challenges, $nums;
-	$c = $challenges[rand(0, count($challenges)-1)];
+	$c = CHALLENGES[rand(0, count(CHALLENGES)-1)];
 
 	$a  = rand(0, 9);
-	$an = $nums[$a];
+	$an = NUMS[$a];
 	$b  = isset($c[2]) ? $c[2]($a) : rand(0, 9);
-	$bn = $nums[$b];
+	$bn = NUMS[$b];
 
 	return array($c[0], $an, $bn, $c[1]($c[0], $an, $bn));
 }
@@ -52,19 +50,17 @@ function gen_challenge() {
 
 // test an answer for validity
 function test_answer($name, $an, $bn, $answer) {
-	global $challenges, $nums;
-
-	foreach ($challenges as $x) {
+	foreach (CHALLENGES as $x) {
 		if ($x[0] === $name) {
 			$c = $x;
 			break;
 		}
 	}
 
-	$a = array_search($an, $nums);
-	$b = array_search($bn, $nums);
+	$a = array_search($an, NUMS);
+	$b = array_search($bn, NUMS);
 
 	if (empty($c) || $a === false || $b === false) return false;
 
-	return ($nums[$c[0]($a, $b)] === $answer);
+	return (NUMS[$c[0]($a, $b)] === $answer);
 }
