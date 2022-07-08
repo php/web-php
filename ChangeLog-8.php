@@ -74,10 +74,6 @@ changelog_header(8, $MINOR_VERSIONS);
 <ul>
   <li>Fixed handling of single-key connection strings.</li>
 </ul></li>
-<li>SPL:
-<ul>
-  <li>Fixed bug <?php githubissuel('php/php-src',8563); ?> (Different results for seek() on SplFileObject and SplTempFileObject).</li>
-</ul></li>
 <li>Zip:
 <ul>
   <li>Fixed bug <?php githubissuel('php/php-src',8781); ?> (ZipArchive::close deletes zip file without updating stat cache).</li>
