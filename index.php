@@ -196,7 +196,7 @@ if (is_array($CONF_TEASER)) {
     $announcements = '';
 }
 
-$SIDEBAR = <<< SIDEBAR_DATA
+$SIDEBAR = <<<SIDEBAR_DATA
 
 $announcements
     <p class='panel'><a href='/cal.php'>User Group Events</a></p>

@@ -201,7 +201,7 @@ site_header("A Tourist's Guide", array("current" => "help"));
 
 <?php
 
-$SIDEBAR = <<< SIDEBAR_DATA
+$SIDEBAR = <<<SIDEBAR_DATA
 
 <p class='panel'><a href="#www">Main Website</a></p>
 <p class='panel'><a href="#talks">Conference Materials</a></p>

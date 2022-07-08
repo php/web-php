@@ -3,7 +3,7 @@ header("Content-Type: application/atom+xml");
 
 include __DIR__ . "/../include/version.inc";
 
-echo <<< XML
+echo <<<XML
 <?xml version="1.0" encoding="UTF-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom" xmlns:php="http://php.net/ns/releases">
     <title>PHP.net releases</title>
@@ -32,7 +32,7 @@ foreach ($RELEASED_VERSIONS as $version => $release) {
         $id = "http://qa.php.net/#$version";
     }
 
-    echo <<< XML
+    echo <<<XML
     <entry>
         <title>PHP {$version} released!</title>
         <id>{$id}</id>
@@ -56,7 +56,7 @@ XML;
             }
         }
 
-        echo <<< XML
+        echo <<<XML
             <php:releaseDate>{$released}</php:releaseDate>
         </link>
 
@@ -72,7 +72,7 @@ XML;
         }
     }
 
-    echo <<< XML
+    echo <<<XML
         <updated>{$updated}</updated>
         <content src="{$id}" type="application/xhtml+xml"/>
     </entry>
@@ -84,7 +84,7 @@ XML;
 
 $FEED_UPDATED = date(DATE_ATOM, max($FEED_UPDATED));
 
-echo <<< XML
+echo <<<XML
     <updated>{$FEED_UPDATED}</updated>
 </feed>
 XML;
