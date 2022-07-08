@@ -118,7 +118,7 @@ Having said that, here are the organizational rules:
 5. Test your changes before committing them. We mean it. Really. To do so use
 
    ```
-   php tests/run-tests.php -q --show-diff`.
+   php tests/run-tests.php -q --show-diff
    ```
 
 6. Use reasonable commit messages.
