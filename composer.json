@@ -10,6 +10,11 @@
     "require": {
         "php": "^7.3"
     },
+    "autoload": {
+        "psr-4": {
+            "phpweb\\": "src/"
+        }
+    },
     "config": {
         "platform": {
             "php": "7.3.19"
