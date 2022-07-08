@@ -1,0 +1,19 @@
+{
+    "name": "php/web-php",
+    "description": "The www.php.net site.",
+    "license": "proprietary",
+    "type": "project",
+    "homepage": "https://www.php.net/",
+    "support": {
+        "source": "https://github.com/php/web-php"
+    },
+    "require": {
+        "php": "^7.3"
+    },
+    "config": {
+        "platform": {
+            "php": "7.3.19"
+        },
+        "sort-packages": true
+    }
+}
