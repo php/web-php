@@ -21,7 +21,6 @@ var_dump(array_map(function (array $note): array {
         "sort" => $note["sort"],
     ];
 }, $notes));
-?>
 --EXPECT--
 array(0) {
 }
