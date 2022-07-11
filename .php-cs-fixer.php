@@ -9,6 +9,8 @@ $finder = $config->getFinder()
     ->in(__DIR__)
     ->name(__FILE__);
 
-$config->setRules([]);
+$config->setRules([
+    '@PSR12' => true,
+]);
 
 return $config;
