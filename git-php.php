@@ -158,7 +158,7 @@ if (count($_POST) && (!isset($_POST['purpose']) || !is_array($_POST['purpose']) 
 } // endif: no data or checkread not checked
 
 else {
-	if (count($_POST)) {
+    if (count($_POST)) {
         print <<<EOT
 <div class="warning">
 <p>
@@ -361,9 +361,9 @@ EOT;
  <td>
 <?php
 $purposes = array("Learning PHP", "Coding in PHP", "Reading the PHP source",
-	"Using PHP extensions", "Creating experimental PHP extensions",
-	"Submitting a patch to PHP", "Adding notes to the documentation",
-	"Writing web pages with PHP");
+    "Using PHP extensions", "Creating experimental PHP extensions",
+    "Submitting a patch to PHP", "Adding notes to the documentation",
+    "Writing web pages with PHP");
 
 foreach ($purposes as $i => $p) { ?>
   <input type="checkbox" name="purpose[<?php echo $i?>]" value="1"

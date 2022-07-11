@@ -16,13 +16,13 @@ $mirror_stats = (int) (isset($_SERVER['MIRROR_STATS']) && $_SERVER['MIRROR_STATS
 $dist = $latest['source'][0];
 $filename = __DIR__ . "/distributions/{$dist['filename']}";
 if (!file_exists($filename)) {
-	$hash_ok = 0;
+    $hash_ok = 0;
 } elseif (isset($dist['sha256']) &&
-		function_exists('hash_file') &&
-		in_array('sha256', hash_algos(), true)) {
-	$hash_ok = (int)(hash_file('sha256', $filename) === $dist['sha256']);
+        function_exists('hash_file') &&
+        in_array('sha256', hash_algos(), true)) {
+    $hash_ok = (int)(hash_file('sha256', $filename) === $dist['sha256']);
 } else {
-	$hash_ok = 0;
+    $hash_ok = 0;
 }
 
 // Does this mirror have sqlite?

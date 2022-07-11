@@ -180,7 +180,7 @@ if (is_array($CONF_TEASER)) {
     );
     $announcements = "";
     foreach($CONF_TEASER as $category => $entries) {
-		if ($entries) {
+        if ($entries) {
             $announcements .= '<div class="panel">';
             $announcements .= '  <a href="/conferences" class="headline" title="' . $conftype[$category] . '">' . $conftype[$category] .'</a>';
             $announcements .= '<div class="body"><ul>';
