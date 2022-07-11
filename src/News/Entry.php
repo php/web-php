@@ -3,21 +3,21 @@
 namespace phpweb\News;
 
 class Entry {
-	const CATEGORIES = [
+	public const CATEGORIES = [
 		'frontpage'   => 'PHP.net frontpage news',
 		'releases'    => 'New PHP release',
 		'conferences' => 'Conference announcement',
 		'cfp'         => 'Call for Papers',
 	];
 
-	const WEBROOT = "https://www.php.net";
-	const PHPWEB = __DIR__ . '/../../';
-	const ARCHIVE_FILE_REL = 'archive/archive.xml';
-	const ARCHIVE_FILE_ABS = self::PHPWEB . self::ARCHIVE_FILE_REL;
-	const ARCHIVE_ENTRIES_REL = 'archive/entries/';
-	const ARCHIVE_ENTRIES_ABS = self::PHPWEB . self::ARCHIVE_ENTRIES_REL;
-	const IMAGE_PATH_REL = 'images/news/';
-	const IMAGE_PATH_ABS = self::PHPWEB . self::IMAGE_PATH_REL;
+	public const WEBROOT = "https://www.php.net";
+	public const PHPWEB = __DIR__ . '/../../';
+	public const ARCHIVE_FILE_REL = 'archive/archive.xml';
+	public const ARCHIVE_FILE_ABS = self::PHPWEB . self::ARCHIVE_FILE_REL;
+	public const ARCHIVE_ENTRIES_REL = 'archive/entries/';
+	public const ARCHIVE_ENTRIES_ABS = self::PHPWEB . self::ARCHIVE_ENTRIES_REL;
+	public const IMAGE_PATH_REL = 'images/news/';
+	public const IMAGE_PATH_ABS = self::PHPWEB . self::IMAGE_PATH_REL;
 
 
 	protected $title = '';
