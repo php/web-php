@@ -72,12 +72,12 @@ function serve_compressed_if_available($logo): void {
 
 $logo = './logos/php-logo.svg';
 if (isset($_SERVER['QUERY_STRING'])) {
-	switch ($_SERVER['QUERY_STRING']) {
-		case 'QA':
-		case 'qa':
-		    $logo = './logos/qa.jpg';
-		    break;
-	}
+    switch ($_SERVER['QUERY_STRING']) {
+        case 'QA':
+        case 'qa':
+            $logo = './logos/qa.jpg';
+            break;
+    }
 }
 
 // xmas season, december and the first week of January
