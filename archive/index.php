@@ -7,7 +7,7 @@ do {
         mirror_redirect("/archive/$y.php");
         break;
     }
-} while(++$i<3);
+} while (++$i<3);
 
 include_once __DIR__ . '/../include/errors.inc';
 error_noservice();

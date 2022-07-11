@@ -197,7 +197,7 @@ if ($type === MYPHPNET_URL_MANUAL) {
 We are experimenting with listing nearby user groups. This feature is highly experimental
 and will very likely change a lot and be broken at times.
 </p>
-<label for="showugenable">Enable UG tips</label> <input type="radio" name="showug" id="showugenable" value="enable" <?php    echo myphpnet_showug() ? "checked=checked" : "" ?>><br>
+<label for="showugenable">Enable UG tips</label> <input type="radio" name="showug" id="showugenable" value="enable" <?php echo myphpnet_showug() ? "checked=checked" : "" ?>><br>
 <label for="showugdisable">Disable UG tips</label> <input type="radio" name="showug" id="showugdisable" value="disable" <?php echo myphpnet_showug() ? "" : "checked=checked" ?>>
 
 <p class="center">

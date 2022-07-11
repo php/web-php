@@ -18,7 +18,7 @@ echo <<<XML
 
 XML;
 
-/* FIX silly editor highlighting */?><?php
+/* FIX silly editor highlighting */ ?><?php
 
 // Flatten major versions out of RELEASES.
 $RELEASED_VERSIONS = array_reduce($RELEASES, 'array_merge', []);

@@ -12,7 +12,7 @@ if (!empty($_GET['function']) && is_string($_GET['function'])) {
     $function = htmlspecialchars($_GET['pattern'], ENT_QUOTES, 'UTF-8');
 }
 
-if(!empty($_GET['scope']) && is_string($_GET['scope'])) {
+if (!empty($_GET['scope']) && is_string($_GET['scope'])) {
     $scope = htmlspecialchars($_GET['scope'], ENT_QUOTES, 'UTF-8');
 } else {
     $scope = '';

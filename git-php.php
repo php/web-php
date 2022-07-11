@@ -48,7 +48,7 @@ if (count($_POST) && (!isset($_POST['purpose']) || !is_array($_POST['purpose']) 
     // Check for errors
     if (empty($_POST['id'])) {
         $error .= "You must supply a desired Git user id. <br>";
-    } elseif(!preg_match('!^[a-z]\w+$!', $_POST['id']) || strlen($_POST['id']) > 16) {
+    } elseif (!preg_match('!^[a-z]\w+$!', $_POST['id']) || strlen($_POST['id']) > 16) {
         $error .= "Your user id must be from 1-16 characters long, start with ".
                   "a letter and contain nothing but a-z, 0-9, and _ <br>";
     }
@@ -398,7 +398,7 @@ foreach ($purposes as $i => $p) { ?>
  <td>
   <select name="group">
 <?php
-foreach($groups as $group => $name) {
+foreach ($groups as $group => $name) {
   $selected = (isset($_POST["group"]) && $_POST["group"] == $group) ? ' selected="selected"' : '';
   echo "<option value='$group'$selected>$name</option>\n";
 }

@@ -143,7 +143,7 @@ class Entry {
             $content->setAttribute("type", "xhtml");
             $div = $content->appendChild($dom->createElement("div"));
             $div->setAttribute("xmlns", "http://www.w3.org/1999/xhtml");
-            foreach($tdoc->firstChild->childNodes as $node) {
+            foreach ($tdoc->firstChild->childNodes as $node) {
                 $div->appendChild($dom->importNode($node, true));
             }
         } else {
@@ -184,7 +184,7 @@ class Entry {
         } else {
             $n = $d->createElement($name);
         }
-        foreach($attrs as $k => $v) {
+        foreach ($attrs as $k => $v) {
             $n->setAttribute($k, $v);
         }
         if ($to) {

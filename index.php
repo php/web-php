@@ -1,5 +1,5 @@
 <?php // vim: et
-(function($uri): void {
+(function ($uri): void {
     // Special redirect cases not able to be captured in error.php
     $shortcuts = [
         '/?:'    => '/language.operators.comparison#language.operators.comparison.ternary',
@@ -58,8 +58,8 @@ mirror_setcookie("LAST_NEWS", $_SERVER["REQUEST_TIME"], 60*60*24*365);
 
 $content = "<div class='home-content'>";
 $frontpage = array();
-foreach($NEWS_ENTRIES as $entry) {
-    foreach($entry["category"] as $category) {
+foreach ($NEWS_ENTRIES as $entry) {
+    foreach ($entry["category"] as $category) {
         if ($category["term"] == "frontpage") {
             $frontpage[] = $entry;
             if (count($frontpage) >= 25) {
@@ -68,7 +68,7 @@ foreach($NEWS_ENTRIES as $entry) {
         }
     }
 }
-foreach($frontpage as $entry) {
+foreach ($frontpage as $entry) {
     $link = preg_replace('~^(http://php.net/|https://www.php.net/)~', '', $entry["id"]);
     $id   = parse_url($entry["id"], PHP_URL_FRAGMENT);
     $date = date_create($entry['updated']);
@@ -179,7 +179,7 @@ if (is_array($CONF_TEASER)) {
         'cfp'        => 'Conferences calling for papers',
     );
     $announcements = "";
-    foreach($CONF_TEASER as $category => $entries) {
+    foreach ($CONF_TEASER as $category => $entries) {
         if ($entries) {
             $announcements .= '<div class="panel">';
             $announcements .= '  <a href="/conferences" class="headline" title="' . $conftype[$category] . '">' . $conftype[$category] .'</a>';

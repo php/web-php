@@ -1323,7 +1323,7 @@ function run_all_tests(array $test_files, array $env, $redir_tested = null): voi
     if ($file_cache !== null) {
         /* Automatically skip opcache tests in --file-cache mode,
          * because opcache generally doesn't expect those to run under file cache */
-        $test_files = array_filter($test_files, function($test) {
+        $test_files = array_filter($test_files, function ($test) {
             return !is_string($test) || false === strpos($test, 'ext/opcache');
         });
     }

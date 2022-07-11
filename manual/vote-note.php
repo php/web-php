@@ -3,7 +3,7 @@ $_SERVER['BASE_PAGE'] = 'manual/vote-note.php';
 include_once __DIR__ . '/../include/prepend.inc';
 include_once __DIR__ . '/../include/posttohost.inc';
 include_once __DIR__ . '/../include/shared-manual.inc';
-include      __DIR__ . '/spam_challenge.php';
+include __DIR__ . '/spam_challenge.php';
 
 // Initialize global variables
 $error = false;
