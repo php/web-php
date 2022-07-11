@@ -63,7 +63,7 @@ about what you're working on, you can contact us via the
 - Run
 
   ```
-  php tests/run-tests.php -q --show-diff
+  make tests
   ```
 
   to check your change doesn't break other features.
@@ -118,7 +118,7 @@ Having said that, here are the organizational rules:
 5. Test your changes before committing them. We mean it. Really. To do so use
 
    ```
-   php tests/run-tests.php -q --show-diff
+   make tests
    ```
 
 6. Use reasonable commit messages.
