@@ -67,6 +67,13 @@ about what you're working on, you can contact us via the
   ```
 
   to check your change doesn't break other features.
+- Run
+
+  ```
+  make coding-standards
+  ```
+
+  to automatically fix coding standard issues.
 - Review the change once more just before submitting it.
 
 ## What happens after submitting contribution?
@@ -119,6 +126,12 @@ Having said that, here are the organizational rules:
 
    ```
    make tests
+   ```
+
+5. Fix coding standard issues before committing code. To do so use
+
+   ```
+   make coding-standards
    ```
 
 6. Use reasonable commit messages.
