@@ -20,12 +20,12 @@ foreach ($vars as $varname) {
     }
 }
 $vars = array(
-	'type', 'country', 'category', 'email', 'url', 'ldesc', 'sdesc'
+    'type', 'country', 'category', 'email', 'url', 'ldesc', 'sdesc'
 );
-foreach($vars as $varname) {
-	if (!isset($_POST[$varname])) {
-		$_POST[$varname] = "";
-	}
+foreach ($vars as $varname) {
+    if (!isset($_POST[$varname])) {
+        $_POST[$varname] = "";
+    }
 }
 
 // We need to process some form data
@@ -55,8 +55,7 @@ if ($process) {
     $_POST['ldesc'] = preg_replace("/(style|on\\w+?)\s*=[^>]*/i", "", $_POST['ldesc']);
     if (!$_POST['ldesc']) {
         $errors[] = "You must supply a long description of the event.";
-    }
-    elseif (stripos($_POST['ldesc'], 'PHP') === false) {
+    } elseif (stripos($_POST['ldesc'], 'PHP') === false) {
         $errors[] = "This does not look like a 'PHP' event";
     }
 
@@ -68,8 +67,7 @@ if ($process) {
 
     if (!$_POST['url']) {
         $errors[] = "You must supply a URL with more information about the event.";
-    }
-    elseif (empty($pu['host']) || !in_array($pu['scheme'], $valid_schemes)) {
+    } elseif (empty($pu['host']) || !in_array($pu['scheme'], $valid_schemes)) {
         $errors[] = "The URL you supplied was invalid.";
     }
 
@@ -82,9 +80,8 @@ if ($process) {
     }
 
     if (!checkdate($_POST['smonth'], $_POST['sday'], $_POST['syear'])) {
-      $errors[] = "You must specify a valid start date.";
-    }
-    else {
+        $errors[] = "You must specify a valid start date.";
+    } else {
         $sdate = mktime(0, 0, 1, $_POST['smonth'], $_POST['sday'], $_POST['syear']);
         if ($sdate < time()) {
             $errors[] = "You must specify a start date that is in the future.";
@@ -93,14 +90,12 @@ if ($process) {
 
     if ($_POST['type'] == 'multi' && !checkdate($_POST['emonth'], $_POST['eday'], $_POST['eyear'])) {
         $errors[] = "You must specify a valid end date for a multi-day event.";
-    }
-    elseif ($_POST['type'] == 'multi' && checkdate($_POST['smonth'], $_POST['sday'], $_POST['syear'])) {
+    } elseif ($_POST['type'] == 'multi' && checkdate($_POST['smonth'], $_POST['sday'], $_POST['syear'])) {
         $sdate = mktime(0, 0, 1, $_POST['smonth'], $_POST['sday'], $_POST['syear']);
         $edate = mktime(0, 0, 1, $_POST['emonth'], $_POST['eday'], $_POST['eyear']);
         if ($edate < time()) {
             $errors[] = "You must specify an end date that is in the future.";
-        }
-        elseif ($edate < $sdate) {
+        } elseif ($edate < $sdate) {
             $errors[] = "You must specify an end date that is after the start date.";
         }
     }
@@ -148,7 +143,9 @@ else {
 }
 
 // Display errors if found
-if (count($errors)) { display_errors($errors); }
+if (count($errors)) {
+    display_errors($errors);
+}
 
 // Generate days and months arrays for form
 for ($i = 1; $i <= 7; $i++) {
@@ -185,7 +182,9 @@ if ($process && count($errors) === 0) {
    <select name="smonth"><option></option><?php display_options($months, $_POST['smonth'])?></select>
    <input type="text" name="sday" size="2" maxlength="2" value="<?php echo htmlentities($_POST['sday'], ENT_QUOTES | ENT_IGNORE, 'UTF-8')?>">
    <input type="text" name="syear" size="4" maxlength="4" value="<?php echo $_POST['syear'] ? htmlentities($_POST['syear'], ENT_QUOTES | ENT_IGNORE, 'UTF-8') : date("Y")?>">
-   <input type="radio" id="single" name="type" value="single"<?php if ($_POST['type'] == 'single' || !$_POST['type']) echo ' checked="checked"';?>>
+   <input type="radio" id="single" name="type" value="single"<?php if ($_POST['type'] == 'single' || !$_POST['type']) {
+    echo ' checked="checked"';
+}?>>
    <label for="single">One day (no end-date required)</label>
   </td>
  </tr>
@@ -195,7 +194,9 @@ if ($process && count($errors) === 0) {
    <select name="emonth"><option></option><?php display_options($months, $_POST['emonth'])?></select>
    <input type="text" name="eday" size="2" maxlength="2" value="<?php echo htmlentities($_POST['eday'], ENT_QUOTES | ENT_IGNORE, 'UTF-8')?>">
    <input type="text" name="eyear" size="4" maxlength="4" value="<?php echo $_POST['eyear'] ? htmlentities($_POST['eyear'], ENT_QUOTES | ENT_IGNORE, 'UTF-8') : date("Y")?>">
-   <input type="radio" id="multi" name="type" value="multi"<?php if ($_POST['type'] == 'multi') echo ' checked="checked"';?>>
+   <input type="radio" id="multi" name="type" value="multi"<?php if ($_POST['type'] == 'multi') {
+    echo ' checked="checked"';
+}?>>
    <label for="multi">Multi-day event</label>
   </td>
  </tr>
@@ -204,7 +205,9 @@ if ($process && count($errors) === 0) {
   <td>
    <select name="recur"><option></option><?php display_options($re, $_POST['recur'])?></select>
    <select name="recur_day"><option></option><?php display_options($days, $_POST['recur_day'])?></select>
-   <input type="radio" id="recur" name="type" value="recur"<?php if ($_POST['type'] == 'recur') echo ' checked="checked"';?>>
+   <input type="radio" id="recur" name="type" value="recur"<?php if ($_POST['type'] == 'recur') {
+    echo ' checked="checked"';
+}?>>
    <label for="recur">Recurring (every month)</label>
   </td>
  </tr>

@@ -1,13 +1,18 @@
-<?php declare(strict_types=1);
+<?php
+
+declare(strict_types=1);
 
 namespace releases\php80;
+
 include_once __DIR__ . '/../../include/prepend.inc';
 
-function common_header(string $description): void {
+function common_header(string $description): void
+{
     global $MYSITE;
 
     $meta_image_path = \htmlspecialchars(
-        \filter_var($MYSITE . 'images/php8/php_8_released.png', \FILTER_VALIDATE_URL));
+        \filter_var($MYSITE . 'images/php8/php_8_released.png', \FILTER_VALIDATE_URL)
+    );
     $meta_description = \htmlspecialchars($description);
 
     \site_header("PHP 8.0.0 Release Announcement", [
@@ -31,7 +36,8 @@ META
         ]);
 }
 
-function language_chooser(string $currentLang): void {
+function language_chooser(string $currentLang): void
+{
     $LANGUAGES = [
         'en'    => 'English',
         'de'    => 'Deutsch',

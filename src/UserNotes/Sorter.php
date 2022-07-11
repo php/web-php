@@ -2,7 +2,8 @@
 
 namespace phpweb\UserNotes;
 
-class Sorter {
+class Sorter
+{
     private $maxVote;
     private $minVote;
     private $maxAge;
@@ -15,7 +16,8 @@ class Sorter {
     private $ratingWeight = 60;
     private $ageWeight = 2;
 
-    function sort(array &$notes) {
+    public function sort(array &$notes)
+    {
         // First we make a pass over the data to get the min and max values
         // for data normalization.
         $this->findMinMaxValues($notes);
@@ -37,12 +39,14 @@ class Sorter {
     }
 
 
-    private function calcVotePriority(array $note) {
+    private function calcVotePriority(array $note)
+    {
         return ($note['score'] - $this->minVote) * $this->voteFactor + .3;
     }
 
 
-    private function calcRatingPriority(array $note) {
+    private function calcRatingPriority(array $note)
+    {
         if ($note['total'] <= 2) {
             return 0.5;
         }
@@ -51,7 +55,8 @@ class Sorter {
     }
 
 
-    private function calcSortPriority(array &$notes) {
+    private function calcSortPriority(array &$notes)
+    {
         foreach ($notes as &$note) {
             $prio = array(
                 'vote' => $this->calcVotePriority($note) * $this->voteWeight,
@@ -67,7 +72,8 @@ class Sorter {
      * Not sure why, but using `$b['sort'] - $a['sort']` does not seem to
      * work properly.
      */
-    private function factorSort($a, $b) {
+    private function factorSort($a, $b)
+    {
         if ($a['sort'] < $b['sort']) {
             return 1;
         }
@@ -80,7 +86,8 @@ class Sorter {
     }
 
 
-    private function findMinMaxValues(array &$notes) {
+    private function findMinMaxValues(array &$notes)
+    {
         $count = count($notes);
         if ($count <= 0) {
             return;

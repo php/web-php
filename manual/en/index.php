@@ -3,42 +3,42 @@ include_once __DIR__ . '/../../include/shared-manual.inc';
 $TOC = array();
 $PARENTS = array();
 
-$setup = array (
+$setup = array(
   'home' =>
-  array (
+  array(
     0 => 'index.php',
     1 => 'PHP Manual',
   ),
   'head' =>
-  array (
+  array(
     0 => 'UTF-8',
     1 => 'en',
   ),
   'this' =>
-  array (
+  array(
     0 => 'index.php',
     1 => 'PHP Manual',
   ),
   'up' =>
-  array (
-    0 => NULL,
-    1 => NULL,
+  array(
+    0 => null,
+    1 => null,
   ),
   'prev' =>
-  array (
-    0 => NULL,
-    1 => NULL,
+  array(
+    0 => null,
+    1 => null,
   ),
   'next' =>
-  array (
-    0 => NULL,
-    1 => NULL,
+  array(
+    0 => null,
+    1 => null,
   ),
   'alternatives' =>
-  array (
+  array(
   ),
   'extra_header_links' =>
-  array (
+  array(
     'rel' => 'alternate',
     'href' => '/manual/en/feeds/index.atom',
     'type' => 'application/atom+xml',

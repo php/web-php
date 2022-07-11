@@ -889,8 +889,10 @@ More .INIs  : " , (function_exists(\'php_ini_scanned_files\') ? str_replace("\n"
     @unlink($info_file);
 
     // load list of enabled extensions
-    save_text($info_file,
-        '<?php echo str_replace("Zend OPcache", "opcache", implode(",", get_loaded_extensions())); ?>');
+    save_text(
+        $info_file,
+        '<?php echo str_replace("Zend OPcache", "opcache", implode(",", get_loaded_extensions())); ?>'
+    );
     $exts_to_test = explode(',', `$php $pass_options $info_params $no_file_cache "$info_file"`);
     // check for extensions that need special handling and regenerate
     $info_params_ex = [
@@ -1112,10 +1114,14 @@ function test_sort($a, $b): int
     $a = test_name($a);
     $b = test_name($b);
 
-    $ta = strpos($a, TEST_PHP_SRCDIR . "/tests") === 0 ? 1 + (strpos($a,
-            TEST_PHP_SRCDIR . "/tests/run-test") === 0 ? 1 : 0) : 0;
-    $tb = strpos($b, TEST_PHP_SRCDIR . "/tests") === 0 ? 1 + (strpos($b,
-            TEST_PHP_SRCDIR . "/tests/run-test") === 0 ? 1 : 0) : 0;
+    $ta = strpos($a, TEST_PHP_SRCDIR . "/tests") === 0 ? 1 + (strpos(
+        $a,
+        TEST_PHP_SRCDIR . "/tests/run-test"
+    ) === 0 ? 1 : 0) : 0;
+    $tb = strpos($b, TEST_PHP_SRCDIR . "/tests") === 0 ? 1 + (strpos(
+        $b,
+        TEST_PHP_SRCDIR . "/tests/run-test"
+    ) === 0 ? 1 : 0) : 0;
 
     if ($ta == $tb) {
         return strcmp($a, $b);
@@ -1302,7 +1308,7 @@ function system_with_timeout(
     }
     if ($stat["exitcode"] > 128 && $stat["exitcode"] < 160) {
         $data .= "\nTermsig=" . ($stat["exitcode"] - 128) . "\n";
-    } else if (defined('PHP_WINDOWS_VERSION_MAJOR') && (($stat["exitcode"] >> 28) & 0b1111) === 0b1100) {
+    } elseif (defined('PHP_WINDOWS_VERSION_MAJOR') && (($stat["exitcode"] >> 28) & 0b1111) === 0b1100) {
         // https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-erref/87fba13e-bf06-450e-83b1-9241dc81e781
         $data .= "\nTermsig=" . $stat["exitcode"] . "\n";
     }
@@ -1323,7 +1329,7 @@ function run_all_tests(array $test_files, array $env, $redir_tested = null): voi
     if ($file_cache !== null) {
         /* Automatically skip opcache tests in --file-cache mode,
          * because opcache generally doesn't expect those to run under file cache */
-        $test_files = array_filter($test_files, function($test) {
+        $test_files = array_filter($test_files, function ($test) {
             return !is_string($test) || false === strpos($test, 'ext/opcache');
         });
     }
@@ -1543,7 +1549,7 @@ function run_all_tests_parallel(array $test_files, array $env, $redir_tested): v
     // Tests waiting due to conflicts. Map from conflict key to array.
     $waitingTests = [];
 
-escape:
+    escape:
     while ($test_files || $sequentialTests || $testsInProgress > 0) {
         $toRead = array_values($workerSocks);
         $toWrite = null;
@@ -3370,7 +3376,7 @@ function show_result(
     if (!$SHOW_ONLY_GROUPS || in_array($result, $SHOW_ONLY_GROUPS)) {
         if ($colorize) {
             /* Use ANSI escape codes for coloring test result */
-            switch ( $result ) {
+            switch ($result) {
                 case 'PASS': // Light Green
                     $color = "\e[1;32m{$result}\e[0m"; break;
                 case 'FAIL':
@@ -3390,7 +3396,6 @@ function show_result(
     } elseif (!$SHOW_ONLY_GROUPS) {
         clear_show_test();
     }
-
 }
 
 function junit_init(): void
@@ -3726,7 +3731,10 @@ class RuntestsValgrind
         }
         $this->version = $version;
         $this->header = sprintf(
-            "%s (%s)", trim($header), $this->tool);
+            "%s (%s)",
+            trim($header),
+            $this->tool
+        );
         $this->version_3_3_0 = version_compare($version, '3.3.0', '>=');
         $this->version_3_8_0 = version_compare($version, '3.8.0', '>=');
     }

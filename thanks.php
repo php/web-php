@@ -137,7 +137,7 @@ site_header("Thanks", array("current" => "community"));
 <?php
 $last_country = '';
 foreach ($historical_mirrors as $m) {
-?>
+    ?>
  <li><?php echo $COUNTRIES[$m[0]]; ?>: <a href='<?php echo $m[3]; ?>'><?php echo $m[2]; ?></a></li>
 <?php
 }

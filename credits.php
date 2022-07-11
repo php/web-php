@@ -1,4 +1,5 @@
 <?php
+
 $_SERVER['BASE_PAGE'] = 'credits.php';
 include_once __DIR__ . '/include/prepend.inc';
 

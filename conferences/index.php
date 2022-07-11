@@ -1,4 +1,5 @@
 <?php
+
 $_SERVER['BASE_PAGE'] = 'conferences/index.php';
 include_once __DIR__ . '/../include/prepend.inc';
 include_once __DIR__ . '/../include/pregen-news.inc';
@@ -13,8 +14,8 @@ site_header("PHP Conferences around the world", array(
 
 $content = "<div class='home-content'>";
 $frontpage = array();
-foreach($NEWS_ENTRIES as $entry) {
-    foreach($entry["category"] as $category) {
+foreach ($NEWS_ENTRIES as $entry) {
+    foreach ($entry["category"] as $category) {
         if ($category["term"] == "cfp") {
             $frontpage[] = $entry;
             break;
@@ -28,7 +29,7 @@ foreach($NEWS_ENTRIES as $entry) {
 $panels = '<p class="prepend"><a href="https://wiki.php.net/conferences">Want to see your conference appear here?</a></p>';
 
 
-foreach($frontpage as $entry) {
+foreach ($frontpage as $entry) {
     $link = preg_replace('~^(http://php.net/|https://www.php.net/)~', '', $entry["id"]);
     $id   = parse_url($entry["id"], PHP_URL_FRAGMENT);
     $date = date_format(date_create($entry["updated"]), 'Y-m-d');

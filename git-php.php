@@ -48,7 +48,7 @@ if (count($_POST) && (!isset($_POST['purpose']) || !is_array($_POST['purpose']) 
     // Check for errors
     if (empty($_POST['id'])) {
         $error .= "You must supply a desired Git user id. <br>";
-    } elseif(!preg_match('!^[a-z]\w+$!', $_POST['id']) || strlen($_POST['id']) > 16) {
+    } elseif (!preg_match('!^[a-z]\w+$!', $_POST['id']) || strlen($_POST['id']) > 16) {
         $error .= "Your user id must be from 1-16 characters long, start with ".
                   "a letter and contain nothing but a-z, 0-9, and _ <br>";
     }
@@ -97,9 +97,8 @@ if (count($_POST) && (!isset($_POST['purpose']) || !is_array($_POST['purpose']) 
     // Some error was found, while checking or submitting the data
     if ($error) {
         echo "<div class=\"warning\"><p>$error</p></div>";
-    }
-    else {
-?>
+    } else {
+        ?>
 <p>
  Thank you. Your request has been sent. You should hear something within the
  next week or so. If you haven't heard anything by around <?php echo date('l, F jS', time()+604800); ?>
@@ -158,7 +157,7 @@ if (count($_POST) && (!isset($_POST['purpose']) || !is_array($_POST['purpose']) 
 } // endif: no data or checkread not checked
 
 else {
-	if (count($_POST)) {
+    if (count($_POST)) {
         print <<<EOT
 <div class="warning">
 <p>
@@ -167,8 +166,7 @@ else {
 </p>
 </div>
 EOT;
-    }
-?>
+    } ?>
 
 <div class="content-box">
 <p>
@@ -348,12 +346,16 @@ EOT;
 <tr>
  <th class="subr">Full Name:</th>
  <td><input type="text" size="50" name="fullname"
-      class="max" value="<?php if (isset($_POST['fullname'])) echo clean($_POST['fullname']);?>"></td>
+      class="max" value="<?php if (isset($_POST['fullname'])) {
+    echo clean($_POST['fullname']);
+}?>"></td>
 </tr>
 <tr>
  <th class="subr">Email:</th>
  <td><input type="text" size="50" name="email"
-      class="max" value="<?php if (isset($_POST['email'])) echo clean($_POST['email']);?>"></td>
+      class="max" value="<?php if (isset($_POST['email'])) {
+    echo clean($_POST['email']);
+}?>"></td>
 </tr>
 <tr>
  <th class="subr">For what purpose do you require a Git account:<br>
@@ -361,9 +363,9 @@ EOT;
  <td>
 <?php
 $purposes = array("Learning PHP", "Coding in PHP", "Reading the PHP source",
-	"Using PHP extensions", "Creating experimental PHP extensions",
-	"Submitting a patch to PHP", "Adding notes to the documentation",
-	"Writing web pages with PHP");
+    "Using PHP extensions", "Creating experimental PHP extensions",
+    "Submitting a patch to PHP", "Adding notes to the documentation",
+    "Writing web pages with PHP");
 
 foreach ($purposes as $i => $p) { ?>
   <input type="checkbox" name="purpose[<?php echo $i?>]" value="1"
@@ -373,7 +375,9 @@ foreach ($purposes as $i => $p) { ?>
 </tr>
 <tr>
  <th class="subr">If your intended purpose is not in the list, <br>please state it here:</th>
- <td><textarea cols="50" rows="5" name="realpurpose" class="max"><?php if (isset($_POST['realpurpose'])) echo clean($_POST['realpurpose']);?></textarea></td>
+ <td><textarea cols="50" rows="5" name="realpurpose" class="max"><?php if (isset($_POST['realpurpose'])) {
+    echo clean($_POST['realpurpose']);
+}?></textarea></td>
 </tr>
 <tr>
 <th class="subr">Do you agree to follow the <a href="license/contrib-guidelines-code.php">contribution guidelines</a>?</th>
@@ -382,12 +386,16 @@ foreach ($purposes as $i => $p) { ?>
 <tr>
  <th class="subr">User ID:<br> <small>(single word, lower case, max 16 characters)</small></th>
  <td><input type="text" size="10" name="id"
-      class="max" value="<?php if (isset($_POST['id'])) echo clean($_POST['id']);?>"></td>
+      class="max" value="<?php if (isset($_POST['id'])) {
+    echo clean($_POST['id']);
+}?>"></td>
 </tr>
 <tr>
  <th class="subr">Requested Password:</th>
  <td><input type="password" size="10" name="password"
-      class="max" value="<?php if (isset($_POST['password'])) echo clean($_POST['password']);?>"></td>
+      class="max" value="<?php if (isset($_POST['password'])) {
+    echo clean($_POST['password']);
+}?>"></td>
 </tr>
 <tr>
  <th class="subr">Did you fill this form out correctly (yes/no)?</th>
@@ -398,9 +406,9 @@ foreach ($purposes as $i => $p) { ?>
  <td>
   <select name="group">
 <?php
-foreach($groups as $group => $name) {
-  $selected = (isset($_POST["group"]) && $_POST["group"] == $group) ? ' selected="selected"' : '';
-  echo "<option value='$group'$selected>$name</option>\n";
+foreach ($groups as $group => $name) {
+    $selected = (isset($_POST["group"]) && $_POST["group"] == $group) ? ' selected="selected"' : '';
+    echo "<option value='$group'$selected>$name</option>\n";
 }
 ?>
   </select>

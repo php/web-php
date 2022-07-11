@@ -58,7 +58,6 @@ else {
  action is required on your part.
 </p>
 THANKS;
-
 }
 
 site_footer();

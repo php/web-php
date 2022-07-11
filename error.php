@@ -122,9 +122,9 @@ $URI = rtrim($URI, '/');
 // Some nice URLs for getting something for download
 if (preg_match("!^get/([^/]+)$!", $URI, $what)) {
     switch ($what[1]) {
-        case "php"           : $URI = "downloads"; break;
-        case "docs"          : // intentional
-        case "documentation" : $URI = "download-docs"; break;
+        case "php": $URI = "downloads"; break;
+        case "docs": // intentional
+        case "documentation": $URI = "download-docs"; break;
     }
 }
 
@@ -132,9 +132,8 @@ if (preg_match("!^get/([^/]+)$!", $URI, $what)) {
 // ============================================================================
 // Nice URLs for download files, so wget works completely well with download links
 if (preg_match("!^get/([^/]+)/from/([^/]+)(/mirror)?$!", $URI, $dlinfo)) {
-
     $df = $dlinfo[1];
-    if(strpos($df, "7-LATEST") !== false) {
+    if (strpos($df, "7-LATEST") !== false) {
         include_once __DIR__ . "/include/version.inc";
         [ $latest ] = release_get_latest();
         $df = str_replace("7-LATEST", $latest, $df);
@@ -143,7 +142,7 @@ if (preg_match("!^get/([^/]+)/from/([^/]+)(/mirror)?$!", $URI, $dlinfo)) {
     $mr = "https://www.php.net/";
 
     // Check if that mirror really exists if not, bail out
-    if(!isset($MIRRORS[$mr])) {
+    if (!isset($MIRRORS[$mr])) {
         error_nomirror($mr);
         exit;
     }
@@ -296,7 +295,7 @@ if (preg_match("!^manual/([^/]+)/([^/]+)$!", $URI, $match) && isset($manual_redi
 
 // ============================================================================
 // Define shortcuts for PHP files, manual pages and external redirects
-$uri_aliases = array (
+$uri_aliases = array(
 
     # PHP page shortcuts
     "download"      => "downloads",

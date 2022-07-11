@@ -61,7 +61,6 @@ XML;
         </link>
 
 XML;
-
     }
 
     $updated = date(DATE_ATOM, max($maxtime));

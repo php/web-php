@@ -3,42 +3,42 @@ include_once __DIR__ . '/../../include/shared-manual.inc';
 $TOC = array();
 $PARENTS = array();
 include_once __DIR__ ."/toc/langref.inc";
-$setup = array (
+$setup = array(
   'home' =>
-  array (
+  array(
     0 => 'index.php',
     1 => 'PHP Manual',
   ),
   'head' =>
-  array (
+  array(
     0 => 'UTF-8',
     1 => 'en',
   ),
   'this' =>
-  array (
+  array(
     0 => 'language.exceptions.php',
     1 => 'Exceptions',
   ),
   'up' =>
-  array (
+  array(
     0 => 'langref.php',
     1 => 'Language Reference',
   ),
   'prev' =>
-  array (
+  array(
     0 => 'language.namespaces.faq.php',
     1 => 'FAQ: things you need to know about namespaces',
   ),
   'next' =>
-  array (
+  array(
     0 => 'language.exceptions.extending.php',
     1 => 'Extending Exceptions',
   ),
   'alternatives' =>
-  array (
+  array(
   ),
   'extra_header_links' =>
-  array (
+  array(
     'rel' => 'alternate',
     'href' => '/manual/en/feeds/language.exceptions.atom',
     'type' => 'application/atom+xml',

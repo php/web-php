@@ -39,7 +39,7 @@ return [
 
     'fibers_title' => 'Fibers',
     'fibers_content' => '<p>Fibers es la forma primitiva para la implementación ligera de concurrencia. Son un medio para crear bloques de código que se puedan pausarse y reanudarse como generadores (Generators), pero desde cualquier lugar de la pila. Los Fibers en sí mismo, no proporcionan la concurrecia mágicamente, todavía se necesita tener un bucle de eventos. Sin embargo, permiten que las implementaciones de bloqueo y no-bloqueo compartan la misma API.</p><p>Los Fibers permiten deshacerse del código repetitivo visto anteriormente con <code>Promise::then()</code> o las corutinas basadas en el generador (Generator). Las bibliotecas generalmente construirán más abstracciones alrededor de Fibers, por lo que no hay necesidad de interactuar con ellas directamente.</p>',
-    
+
     'array_unpacking_title' => 'Soporte de desestructuración de Arrays',
     'array_unpacking_content' => '<p>PHP soportaba la desestructuración de Arrays, pero solo si el Array tenía keys de tipo integer. Ahora también es posible la desestructuración de Arrays con keys de tipo string.</p>',
 

@@ -93,13 +93,12 @@ $filepath = $filename = '';
 
 // Go through all possible manual languages
 foreach ($LANGUAGES as $langcode => $language) {
-    if(isset($INACTIVE_ONLINE_LANGUAGES[$langcode]) && $MYSITE !== 'http://docs.php.net/') {
-       continue;
+    if (isset($INACTIVE_ONLINE_LANGUAGES[$langcode]) && $MYSITE !== 'http://docs.php.net/') {
+        continue;
     }
 
     // Go through all possible manual formats
     foreach ($formats as $formatname => $extension) {
-
         $filepath = $_SERVER['DOCUMENT_ROOT'] . '/distributions/manual/';
         if ($formatname === 'HTML Help file (with user notes)') {
             $filename = "php_enhanced_$langcode.$extension";
@@ -120,7 +119,7 @@ foreach ($LANGUAGES as $langcode => $language) {
             $changed = @filemtime($filepath);
 
             // Size available, collect information
-            if ($size !== FALSE) {
+            if ($size !== false) {
                 $files[$langcode][$formatname] = array(
                     $link_to,
                     (int) ($size/1024),
@@ -157,13 +156,14 @@ if (file_exists($actual_file)) {
 if (count($found_formats) == 0) {
     echo "<p class=\"tip\">This site has no documentation files for download.</p>";
 } else {
-
     echo '<table border="0" cellpadding="4" cellspacing="2" class="standard">' . "\n" .
          "<tr>\n  <th>&nbsp;</th>\n";
 
     // Print out the name of the formats
     foreach ($formats as $formatname => $extension) {
-        if (!isset($found_formats[$formatname])) { continue; }
+        if (!isset($found_formats[$formatname])) {
+            continue;
+        }
         echo "  <th valign=\"bottom\">$formatname</th>\n";
     }
 
@@ -172,8 +172,11 @@ if (count($found_formats) == 0) {
     foreach ($files as $langcode => $lang_files) {
 
         // See if current language is the preferred one
-        if ($langcode == $LANG) { $preflang = TRUE; }
-        else { $preflang = FALSE; }
+        if ($langcode == $LANG) {
+            $preflang = true;
+        } else {
+            $preflang = false;
+        }
 
         // Highlight manual in preferred language
         if ($preflang) {
@@ -187,13 +190,14 @@ if (count($found_formats) == 0) {
         foreach ($formats as $formatname => $extension) {
 
             // Skip if no file found
-            if (!isset($found_formats[$formatname])) { continue; }
+            if (!isset($found_formats[$formatname])) {
+                continue;
+            }
 
             echo "<td align=\"center\"$cellclass>";
             if (!isset($lang_files[$formatname])) {
                 echo "&nbsp;";
             } else {
-
                 $fileinfo = $lang_files[$formatname];
                 echo "<a href=\"$fileinfo[0]\"";
 
@@ -213,7 +217,6 @@ if (count($found_formats) == 0) {
 
             // End table cell
             echo "</td>\n";
-
         }
 
         // End table row

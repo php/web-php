@@ -13,19 +13,19 @@ changelog_header(8, $MINOR_VERSIONS);
 <b><?php release_date('07-Jul-2022'); ?></b>
 <ul><li>Core:
 <ul>
-  <li>Fixed bug <?php githubissuel('php/php-src',8338); ?> (Intel CET is disabled unintentionally).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 8338); ?> (Intel CET is disabled unintentionally).</li>
   <li>Fixed leak in Enum::from/tryFrom for internal enums when using JIT</li>
   <li>Fixed calling internal methods with a static return type from extension code.</li>
-  <li>Fixed bug <?php githubissuel('php/php-src',8655); ?> (Casting an object to array does not unwrap refcount=1 references).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 8655); ?> (Casting an object to array does not unwrap refcount=1 references).</li>
   <li>Fixed potential use after free in php_binary_init().</li>
 </ul></li>
 <li>CLI:
 <ul>
-  <li>Fixed <?php githubissuel('php/php-src',8827); ?> (Intentionally closing std handles no longer possible).</li>
+  <li>Fixed <?php githubissuel('php/php-src', 8827); ?> (Intentionally closing std handles no longer possible).</li>
 </ul></li>
 <li>COM:
 <ul>
-  <li>Fixed bug <?php githubissuel('php/php-src',8778); ?> (Integer arithmethic with large number variants fails).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 8778); ?> (Integer arithmethic with large number variants fails).</li>
 </ul></li>
 <li>Curl:
 <ul>
@@ -54,7 +54,7 @@ changelog_header(8, $MINOR_VERSIONS);
 <ul>
   <li>mb_detect_encoding recognizes all letters in Czech alphabet</li>
   <li>mb_detect_encoding recognizes all letters in Hungarian alphabet</li>
-  <li>Fixed bug <?php githubissuel('php/php-src',8685); ?> (pcre not ready at mbstring startup).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 8685); ?> (pcre not ready at mbstring startup).</li>
   <li>Backwards-compatible mappings for 0x5C/0x7E in Shift-JIS are restored, after they had been changed in 8.1.0.</li>
 </ul></li>
 <li>ODBC:
@@ -63,7 +63,7 @@ changelog_header(8, $MINOR_VERSIONS);
 </ul></li>
 <li>OPcache:
 <ul>
-  <li>Fixed bug <?php githubissuel('php/php-src',8591); ?> (tracing JIT crash after private instance method change).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 8591); ?> (tracing JIT crash after private instance method change).</li>
 </ul></li>
 <li>OpenSSL:
 <ul>
@@ -76,7 +76,7 @@ changelog_header(8, $MINOR_VERSIONS);
 </ul></li>
 <li>Zip:
 <ul>
-  <li>Fixed bug <?php githubissuel('php/php-src',8781); ?> (ZipArchive::close deletes zip file without updating stat cache).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 8781); ?> (ZipArchive::close deletes zip file without updating stat cache).</li>
 </ul></li>
 </ul>
 <!-- }}} --></section>
@@ -88,7 +88,7 @@ changelog_header(8, $MINOR_VERSIONS);
 <b><?php release_date('09-Jun-2022'); ?></b>
 <ul><li>CLI:
 <ul>
-  <li>Fixed bug <?php githubissuel('php/php-src',8575); ?> (CLI closes standard streams too early).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 8575); ?> (CLI closes standard streams too early).</li>
 </ul></li>
 <li>Date:
 <ul>
@@ -97,7 +97,7 @@ changelog_header(8, $MINOR_VERSIONS);
   <li><?php bugfix(66019); ?> (DateTime object does not support short ISO 8601 time format - YYYY-MM-DDTHH)</li>
   <li><?php bugfix(68549); ?> (Timezones and offsets are not properly used when working with dates)</li>
   <li><?php bugfix(81565); ?> (date parsing fails when provided with timezones including seconds).</li>
-  <li>Fixed bug <?php githubissuel('php/php-src',7758); ?> (Problems with negative timestamps and fractions).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 7758); ?> (Problems with negative timestamps and fractions).</li>
 </ul></li>
 <li>FPM:
 <ul>
@@ -110,7 +110,7 @@ changelog_header(8, $MINOR_VERSIONS);
 </ul></li>
 <li>OPcache:
 <ul>
-  <li>Fixed bug <?php githubissuel('php/php-src',8461); ?> (tracing JIT crash after function/method change).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 8461); ?> (tracing JIT crash after function/method change).</li>
 </ul></li>
 <li>OpenSSL:
 <ul>
@@ -126,16 +126,16 @@ changelog_header(8, $MINOR_VERSIONS);
 </ul></li>
 <li>Soap:
 <ul>
-  <li>Fixed bug <?php githubissuel('php/php-src',8578); ?> (Error on wrong parameter on SoapHeader constructor).</li>
-  <li>Fixed bug <?php githubissuel('php/php-src',8538); ?> (SoapClient may strip parts of nmtokens).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 8578); ?> (Error on wrong parameter on SoapHeader constructor).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 8538); ?> (SoapClient may strip parts of nmtokens).</li>
 </ul></li>
 <li>SPL:
 <ul>
-  <li>Fixed bug <?php githubissuel('php/php-src',8235); ?> (iterator_count() may run indefinitely).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 8235); ?> (iterator_count() may run indefinitely).</li>
 </ul></li>
 <li>Standard:
 <ul>
-  <li>Fixed bug <?php githubissuel('php/php-src',8185); ?> (Crash during unloading of extension after dl() in ZTS).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 8185); ?> (Crash during unloading of extension after dl() in ZTS).</li>
 </ul></li>
 <li>Zip:
 <ul>
@@ -151,21 +151,21 @@ changelog_header(8, $MINOR_VERSIONS);
 <b><?php release_date('12-May-2022'); ?></b>
 <ul><li>Core:
 <ul>
-  <li>Fixed bug <?php githubissuel('php/php-src',8310); ?> (Registry settings are no longer recognized).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 8310); ?> (Registry settings are no longer recognized).</li>
   <li>Fixed potential race condition during resource ID allocation.</li>
-  <li>Fixed bug <?php githubissuel('php/php-src',8133); ?> (Preloading of constants containing arrays with enums segfaults).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 8133); ?> (Preloading of constants containing arrays with enums segfaults).</li>
   <li>Fixed Haiku ZTS builds.</li>
 </ul></li>
 <li>Date:
 <ul>
-  <li>Fixed bug <?php githubissuel('php/php-src',7752); ?> (DateTimeZone::getTransitions() returns insufficient data).</li>
-  <li>Fixed bug <?php githubissuel('php/php-src',8108); ?> (Timezone doesn't work as intended).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 7752); ?> (DateTimeZone::getTransitions() returns insufficient data).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 8108); ?> (Timezone doesn't work as intended).</li>
   <li><?php bugfix(81660); ?> (DateTimeZone::getTransitions() returns invalid data).</li>
-  <li>Fixed bug <?php githubissuel('php/php-src',8289); ?> (Exceptions thrown within a yielded from iterator are not rethrown into the generator).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 8289); ?> (Exceptions thrown within a yielded from iterator are not rethrown into the generator).</li>
 </ul></li>
 <li>FFI:
 <ul>
-  <li>Fixed bug <?php githubissuel('php/php-src',8433); ?> (Assigning function pointers to structs in FFI leaks).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 8433); ?> (Assigning function pointers to structs in FFI leaks).</li>
 </ul></li>
 <li>FPM:
 <ul>
@@ -179,11 +179,11 @@ changelog_header(8, $MINOR_VERSIONS);
 </ul></li>
 <li>Iconv:
 <ul>
-  <li>Fixed bug <?php githubissuel('php/php-src',8218); ?> (ob_end_clean does not reset Content-Encoding header).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 8218); ?> (ob_end_clean does not reset Content-Encoding header).</li>
 </ul></li>
 <li>Intl:
 <ul>
-  <li>Fixed bug <?php githubissuel('php/php-src',8364); ?> (msgfmt_format $values may not support references).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 8364); ?> (msgfmt_format $values may not support references).</li>
 </ul></li>
 <li>MBString:
 <ul>
@@ -191,12 +191,12 @@ changelog_header(8, $MINOR_VERSIONS);
 </ul></li>
 <li>MySQLi:
 <ul>
-  <li>Fixed bug <?php githubissuel('php/php-src',8267); ?> (MySQLi uses unsupported format specifier on Windows).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 8267); ?> (MySQLi uses unsupported format specifier on Windows).</li>
 </ul></li>
 <li>SPL:
 <ul>
-  <li>Fixed bug <?php githubissuel('php/php-src',8366); ?> (ArrayIterator may leak when calling __construct()).</li>
-  <li>Fixed bug <?php githubissuel('php/php-src',8273); ?> (SplFileObject: key() returns wrong value).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 8366); ?> (ArrayIterator may leak when calling __construct()).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 8273); ?> (SplFileObject: key() returns wrong value).</li>
 </ul></li>
 <li>Streams:
 <ul>
@@ -204,7 +204,7 @@ changelog_header(8, $MINOR_VERSIONS);
 </ul></li>
 <li>zlib:
 <ul>
-  <li>Fixed bug <?php githubissuel('php/php-src',8218); ?> (ob_end_clean does not reset Content-Encoding header).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 8218); ?> (ob_end_clean does not reset Content-Encoding header).</li>
 </ul></li>
 </ul>
 <!-- }}} --></section>
@@ -216,10 +216,10 @@ changelog_header(8, $MINOR_VERSIONS);
 <b><?php release_date('14-Apr-2022'); ?></b>
 <ul><li>Core:
 <ul>
-  <li>Fixed bug <?php githubissuel('php/php-src',8176); ?> (Enum values in property initializers leak).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 8176); ?> (Enum values in property initializers leak).</li>
   <li>Fixed freeing of internal attribute arguments.</li>
-  <li>Fixed bug <?php githubissuel('php/php-src',8070); ?> (memory leak of internal function attribute hash).</li>
-  <li>Fixed bug <?php githubissuel('php/php-src',8160); ?> (ZTS support on Alpine is broken).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 8070); ?> (memory leak of internal function attribute hash).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 8160); ?> (ZTS support on Alpine is broken).</li>
 </ul></li>
 <li>Filter:
 <ul>
@@ -227,26 +227,26 @@ changelog_header(8, $MINOR_VERSIONS);
 </ul></li>
 <li>Intl:
 <ul>
-  <li>Fixed bug <?php githubissuel('php/php-src',8115); ?> (Can't catch arg type deprecation when instantiating Intl classes).</li>
-  <li>Fixed bug <?php githubissuel('php/php-src',8142); ?> (Compilation error on cygwin).</li>
-  <li>Fixed bug <?php githubissuel('php/php-src',7734); ?> (Fix IntlPartsIterator key off-by-one error and first key).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 8115); ?> (Can't catch arg type deprecation when instantiating Intl classes).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 8142); ?> (Compilation error on cygwin).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 7734); ?> (Fix IntlPartsIterator key off-by-one error and first key).</li>
 </ul></li>
 <li>MBString:
 <ul>
-  <li>Fixed bug <?php githubissuel('php/php-src',8208); ?> (mb_encode_mimeheader: $indent functionality broken).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 8208); ?> (mb_encode_mimeheader: $indent functionality broken).</li>
 </ul></li>
 <li>MySQLi:
 <ul>
-  <li>Fixed bug <?php githubissuel('php/php-src',8068); ?> (mysqli_fetch_object creates inaccessible properties).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 8068); ?> (mysqli_fetch_object creates inaccessible properties).</li>
 </ul></li>
 <li>Pcntl:
 <ul>
-  <li>Fixed bug <?php githubissuel('php/php-src',8142); ?> (Compilation error on cygwin).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 8142); ?> (Compilation error on cygwin).</li>
 </ul></li>
 <li>PgSQL:
 <ul>
   <li>Fixed result_type related stack corruption on LLP64 architectures.</li>
-  <li>Fixed bug <?php githubissuel('php/php-src',8253); ?> (pg_insert() fails for references).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 8253); ?> (pg_insert() fails for references).</li>
 </ul></li>
 <li>Sockets:
 <ul>
@@ -254,12 +254,12 @@ changelog_header(8, $MINOR_VERSIONS);
 </ul></li>
 <li>SPL:
 <ul>
-  <li>Fixed bug <?php githubissuel('php/php-src',8121); ?> (SplFileObject - seek and key with csv file inconsistent).</li>
-  <li>Fixed bug <?php githubissuel('php/php-src',8192); ?> (Cannot override DirectoryIterator::current() without return typehint in 8.1).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 8121); ?> (SplFileObject - seek and key with csv file inconsistent).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 8192); ?> (Cannot override DirectoryIterator::current() without return typehint in 8.1).</li>
 </ul></li>
 <li>Standard:
 <ul>
-  <li>Fixed bug <?php githubissuel('php/php-src',8048); ?> (Force macOS to use statfs).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 8048); ?> (Force macOS to use statfs).</li>
 </ul></li>
 </ul>
 <!-- }}} --></section>
@@ -272,12 +272,12 @@ changelog_header(8, $MINOR_VERSIONS);
 <ul><li>Core:
 <ul>
   <li>Fixed Haiku ZTS build.</li>
-  <li>Fixed bug <?php githubissuel('php/php-src',8059); ?> arginfo not regenerated for extension.</li>
-  <li>Fixed bug <?php githubissuel('php/php-src',8083); ?> Segfault when dumping uncalled fake closure with static variables.</li>
-  <li>Fixed bug <?php githubissuel('php/php-src',7958); ?> (Nested CallbackFilterIterator is leaking memory).</li>
-  <li>Fixed bug <?php githubissuel('php/php-src',8074); ?> (Wrong type inference of range() result).</li>
-  <li>Fixed bug <?php githubissuel('php/php-src',8140); ?> (Wrong first class callable by name optimization).</li>
-  <li>Fixed bug <?php githubissuel('php/php-src',8082); ?> (op_arrays with temporary run_time_cache leak memory when observed).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 8059); ?> arginfo not regenerated for extension.</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 8083); ?> Segfault when dumping uncalled fake closure with static variables.</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 7958); ?> (Nested CallbackFilterIterator is leaking memory).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 8074); ?> (Wrong type inference of range() result).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 8140); ?> (Wrong first class callable by name optimization).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 8082); ?> (op_arrays with temporary run_time_cache leak memory when observed).</li>
 </ul></li>
 <li>GD:
 <ul>
@@ -289,24 +289,24 @@ changelog_header(8, $MINOR_VERSIONS);
 </ul></li>
 <li>Iconv:
 <ul>
-  <li>Fixed bug <?php githubissuel('php/php-src',7953); ?> (ob_clean() only does not set Content-Encoding).</li>
-  <li>Fixed bug <?php githubissuel('php/php-src',7980); ?> (Unexpected result for iconv_mime_decode).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 7953); ?> (ob_clean() only does not set Content-Encoding).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 7980); ?> (Unexpected result for iconv_mime_decode).</li>
 </ul></li>
 <li>MBString:
 <ul>
-  <li>Fixed bug <?php githubissuel('php/php-src',8128); ?> (mb_check_encoding wrong result for 7bit).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 8128); ?> (mb_check_encoding wrong result for 7bit).</li>
 </ul></li>
 <li>MySQLnd:
 <ul>
-  <li>Fixed bug <?php githubissuel('php/php-src',8058); ?> (NULL pointer dereference in mysqlnd package).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 8058); ?> (NULL pointer dereference in mysqlnd package).</li>
 </ul></li>
 <li>Reflection:
 <ul>
-  <li>Fixed bug <?php githubissuel('php/php-src',8080); ?> (ReflectionClass::getConstants() depends on def. order).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 8080); ?> (ReflectionClass::getConstants() depends on def. order).</li>
 </ul></li>
 <li>Zlib:
 <ul>
-  <li>Fixed bug <?php githubissuel('php/php-src',7953); ?> (ob_clean() only does not set Content-Encoding).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 7953); ?> (ob_clean() only does not set Content-Encoding).</li>
 </ul></li>
 </ul>
 <!-- }}} --></section>
@@ -319,12 +319,12 @@ changelog_header(8, $MINOR_VERSIONS);
 <ul><li>Core:
 <ul>
   <li><?php bugfix(81430); ?> (Attribute instantiation leaves dangling pointer).</li>
-  <li>Fixed bug <?php githubissuel('php/php-src',7896); ?> (Environment vars may be mangled on Windows).</li>
-  <li>Fixed bug <?php githubissuel('php/php-src',7883); ?> (Segfault when INI file is not readable).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 7896); ?> (Environment vars may be mangled on Windows).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 7883); ?> (Segfault when INI file is not readable).</li>
 </ul></li>
 <li>FFI:
 <ul>
-  <li>Fixed bug <?php githubissuel('php/php-src',7867); ?> (FFI::cast() from pointer to array is broken).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 7867); ?> (FFI::cast() from pointer to array is broken).</li>
 </ul></li>
 <li>Filter:
 <ul>
@@ -333,15 +333,15 @@ changelog_header(8, $MINOR_VERSIONS);
 <li>FPM:
 <ul>
   <li>Fixed memory leak on invalid port.</li>
-  <li>Fixed bug <?php githubissuel('php/php-src',7842); ?> (Invalid OpenMetrics response format returned by FPM status page.</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 7842); ?> (Invalid OpenMetrics response format returned by FPM status page.</li>
 </ul></li>
 <li>MBString:
 <ul>
-  <li>Fixed bug <?php githubissuel('php/php-src',7902); ?> (mb_send_mail may delimit headers with LF only).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 7902); ?> (mb_send_mail may delimit headers with LF only).</li>
 </ul></li>
 <li>MySQLnd:
 <ul>
-  <li>Fixed bug <?php githubissuel('php/php-src',7972); ?> (MariaDB version prefix 5.5.5- is not stripped).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 7972); ?> (MariaDB version prefix 5.5.5- is not stripped).</li>
 </ul></li>
 <li>pcntl:
 <ul>
@@ -349,12 +349,12 @@ changelog_header(8, $MINOR_VERSIONS);
 </ul></li>
 <li>Sockets:
 <ul>
-  <li>Fixed bug <?php githubissuel('php/php-src',7978); ?> (sockets extension compilation errors).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 7978); ?> (sockets extension compilation errors).</li>
 </ul></li>
 <li>Standard:
 <ul>
-  <li>Fixed bug <?php githubissuel('php/php-src',7899); ?> (Regression in unpack for negative int value).</li>
-  <li>Fixed bug <?php githubissuel('php/php-src',7875); ?> (mails are sent even if failure to log throws exception).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 7899); ?> (Regression in unpack for negative int value).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 7875); ?> (mails are sent even if failure to log throws exception).</li>
 </ul></li>
 </ul>
 <!-- }}} --></section>
@@ -371,7 +371,7 @@ changelog_header(8, $MINOR_VERSIONS);
   <li><?php bugfix(81656); ?> (GCC-11 silently ignores -R).</li>
   <li><?php bugfix(81683); ?> (Misleading "access type ... must be public" error message on final or abstract interface methods).</li>
   <li><?php bugfix(81585); ?> (cached_chunks are not counted to real_size on shutdown).</li>
-  <li>Fixed bug <?php githubissuel('php/php-src',7757); ?> (Multi-inherited final constant causes fatal error).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 7757); ?> (Multi-inherited final constant causes fatal error).</li>
   <li>Fixed zend_fibers.c build with ZEND_FIBER_UCONTEXT.</li>
   <li>Added riscv64 support for fibers.</li>
 </ul></li>
@@ -381,8 +381,8 @@ changelog_header(8, $MINOR_VERSIONS);
 </ul></li>
 <li>Hash:
 <ul>
-  <li>Fixed bug <?php githubissuel('php/php-src',7759); ?> (Incorrect return types for hash() and hash_hmac()).</li>
-  <li>Fixed bug <?php githubissuel('php/php-src',7826); ?> (Inconsistent argument name in hash_hmac_file and hash_file).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 7759); ?> (Incorrect return types for hash() and hash_hmac()).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 7826); ?> (Inconsistent argument name in hash_hmac_file and hash_file).</li>
 </ul></li>
 <li>MBString:
 <ul>
@@ -392,7 +392,7 @@ changelog_header(8, $MINOR_VERSIONS);
 <ul>
   <li><?php bugfix(81658); ?> (MYSQL_OPT_LOAD_DATA_LOCAL_DIR not available in MariaDB).</li>
   <li>Introduced MYSQLI_IS_MARIADB.</li>
-  <li>Fixed bug <?php githubissuel('php/php-src',7746); ?> (mysqli_sql_exception-&gt;getSqlState()).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 7746); ?> (mysqli_sql_exception-&gt;getSqlState()).</li>
 </ul></li>
 <li>MySQLnd:
 <ul>
@@ -400,7 +400,7 @@ changelog_header(8, $MINOR_VERSIONS);
 </ul></li>
 <li>OCI8:
 <ul>
-  <li>Fixed bug <?php githubissuel('php/php-src',7765); ?> (php_oci_cleanup_global_handles segfaults at second call).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 7765); ?> (php_oci_cleanup_global_handles segfaults at second call).</li>
 </ul></li>
 <li>OPcache:
 <ul>
@@ -426,12 +426,12 @@ changelog_header(8, $MINOR_VERSIONS);
 <li>Spl:
 <ul>
   <li><?php bugfix(75917); ?> (SplFileObject::seek broken with CSV flags).</li>
-  <li>Fixed bug <?php githubissuel('php/php-src',7809); ?> (Cloning a faked SplFileInfo object may segfault).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 7809); ?> (Cloning a faked SplFileInfo object may segfault).</li>
 </ul></li>
 <li>Standard:
 <ul>
-  <li>Fixed bug <?php githubissuel('php/php-src',7748); ?> (gethostbyaddr outputs binary string).</li>
-  <li>Fixed bug <?php githubissuel('php/php-src',7815); ?> (php_uname doesn't recognise latest Windows versions).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 7748); ?> (gethostbyaddr outputs binary string).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 7815); ?> (php_uname doesn't recognise latest Windows versions).</li>
 </ul></li>
 </ul>
 <!-- }}} --></section>
@@ -760,11 +760,11 @@ changelog_header(8, $MINOR_VERSIONS);
 </ul></li>
 <li>CLI:
 <ul>
-  <li>Fixed <?php githubissuel('php/php-src',8827); ?> (Intentionally closing std handles no longer possible).</li>
+  <li>Fixed <?php githubissuel('php/php-src', 8827); ?> (Intentionally closing std handles no longer possible).</li>
 </ul></li>
 <li>COM:
 <ul>
-  <li>Fixed bug <?php githubissuel('php/php-src',8778); ?> (Integer arithmethic with large number variants fails).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 8778); ?> (Integer arithmethic with large number variants fails).</li>
 </ul></li>
 <li>Curl:
 <ul>
@@ -782,7 +782,7 @@ changelog_header(8, $MINOR_VERSIONS);
 </ul></li>
 <li>MBString:
 <ul>
-  <li>Fixed bug <?php githubissuel('php/php-src',8685); ?> (pcre not ready at mbstring startup).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 8685); ?> (pcre not ready at mbstring startup).</li>
 </ul></li>
 <li>ODBC:
 <ul>
@@ -800,7 +800,7 @@ changelog_header(8, $MINOR_VERSIONS);
 </ul></li>
 <li>Zip:
 <ul>
-  <li>Fixed bug <?php githubissuel('php/php-src',8781); ?> (ZipArchive::close deletes zip file without updating stat cache).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 8781); ?> (ZipArchive::close deletes zip file without updating stat cache).</li>
 </ul></li>
 </ul>
 <!-- }}} --></section>
@@ -812,7 +812,7 @@ changelog_header(8, $MINOR_VERSIONS);
 <b><?php release_date('09-Jun-2022'); ?></b>
 <ul><li>CLI:
 <ul>
-  <li>Fixed bug <?php githubissuel('php/php-src',8575); ?> (CLI closes standard streams too early).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 8575); ?> (CLI closes standard streams too early).</li>
 </ul></li>
 <li>Core:
 <ul>
@@ -820,7 +820,7 @@ changelog_header(8, $MINOR_VERSIONS);
 </ul></li>
 <li>Date:
 <ul>
-  <li>Fixed bug <?php githubissuel('php/php-src',8471); ?> (Segmentation fault when converting immutable and mutable DateTime instances created using reflection).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 8471); ?> (Segmentation fault when converting immutable and mutable DateTime instances created using reflection).</li>
 </ul></li>
 <li>FPM:
 <ul>
@@ -833,7 +833,7 @@ changelog_header(8, $MINOR_VERSIONS);
 </ul></li>
 <li>OPcache:
 <ul>
-  <li>Fixed bug <?php githubissuel('php/php-src',8466); ?> (ini_get() is optimized out when the option does not exist).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 8466); ?> (ini_get() is optimized out when the option does not exist).</li>
 </ul></li>
 <li>Pcntl:
 <ul>
@@ -845,12 +845,12 @@ changelog_header(8, $MINOR_VERSIONS);
 </ul></li>
 <li>Soap:
 <ul>
-  <li>Fixed bug <?php githubissuel('php/php-src',8578); ?> (Error on wrong parameter on SoapHeader constructor).</li>
-  <li>Fixed bug <?php githubissuel('php/php-src',8538); ?> (SoapClient may strip parts of nmtokens).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 8578); ?> (Error on wrong parameter on SoapHeader constructor).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 8538); ?> (SoapClient may strip parts of nmtokens).</li>
 </ul></li>
 <li>SPL:
 <ul>
-  <li>Fixed bug <?php githubissuel('php/php-src',8235); ?> (iterator_count() may run indefinitely).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 8235); ?> (iterator_count() may run indefinitely).</li>
 </ul></li>
 <li>Zip:
 <ul>
@@ -866,15 +866,15 @@ changelog_header(8, $MINOR_VERSIONS);
 <b><?php release_date('12-May-2022'); ?></b>
 <ul><li>Core:
 <ul>
-  <li>Fixed bug <?php githubissuel('php/php-src',8289); ?> (Exceptions thrown within a yielded from iterator are not rethrown into the generator).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 8289); ?> (Exceptions thrown within a yielded from iterator are not rethrown into the generator).</li>
 </ul></li>
 <li>Date:
 <ul>
-  <li>Fixed bug <?php githubissuel('php/php-src',7979); ?> (DatePeriod iterator advances when checking if valid).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 7979); ?> (DatePeriod iterator advances when checking if valid).</li>
 </ul></li>
 <li>FFI:
 <ul>
-  <li>Fixed bug <?php githubissuel('php/php-src',8433); ?> (Assigning function pointers to structs in FFI leaks).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 8433); ?> (Assigning function pointers to structs in FFI leaks).</li>
 </ul></li>
 <li>FPM:
 <ul>
@@ -884,20 +884,20 @@ changelog_header(8, $MINOR_VERSIONS);
 </ul></li>
 <li>Iconv:
 <ul>
-  <li>Fixed bug <?php githubissuel('php/php-src',8218); ?> (ob_end_clean does not reset Content-Encoding header).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 8218); ?> (ob_end_clean does not reset Content-Encoding header).</li>
 </ul></li>
 <li>Intl:
 <ul>
-  <li>Fixed bug <?php githubissuel('php/php-src',8364); ?> (msgfmt_format $values may not support references).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 8364); ?> (msgfmt_format $values may not support references).</li>
 </ul></li>
 <li>MySQLi:
 <ul>
-  <li>Fixed bug <?php githubissuel('php/php-src',8267); ?> (MySQLi uses unsupported format specifier on Windows).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 8267); ?> (MySQLi uses unsupported format specifier on Windows).</li>
 </ul></li>
 <li>SPL:
 <ul>
-  <li>Fixed bug <?php githubissuel('php/php-src',8366); ?> (ArrayIterator may leak when calling __construct()).</li>
-  <li>Fixed bug <?php githubissuel('php/php-src',8273); ?> (SplFileObject: key() returns wrong value).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 8366); ?> (ArrayIterator may leak when calling __construct()).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 8273); ?> (SplFileObject: key() returns wrong value).</li>
 </ul></li>
 <li>Streams:
 <ul>
@@ -905,7 +905,7 @@ changelog_header(8, $MINOR_VERSIONS);
 </ul></li>
 <li>zlib:
 <ul>
-  <li>Fixed bug <?php githubissuel('php/php-src',8218); ?> (ob_end_clean does not reset Content-Encoding header).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 8218); ?> (ob_end_clean does not reset Content-Encoding header).</li>
 </ul></li>
 </ul>
 <!-- }}} --></section>
@@ -918,8 +918,8 @@ changelog_header(8, $MINOR_VERSIONS);
 <ul><li>Core:
 <ul>
   <li>Fixed freeing of internal attribute arguments.</li>
-  <li>Fixed bug <?php githubissuel('php/php-src',8070); ?> (memory leak of internal function attribute hash).</li>
-  <li>Fixed bug <?php githubissuel('php/php-src',8160); ?> (ZTS support on Alpine is broken).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 8070); ?> (memory leak of internal function attribute hash).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 8160); ?> (ZTS support on Alpine is broken).</li>
 </ul></li>
 <li>Filter:
 <ul>
@@ -927,24 +927,24 @@ changelog_header(8, $MINOR_VERSIONS);
 </ul></li>
 <li>Intl:
 <ul>
-  <li>Fixed bug <?php githubissuel('php/php-src',8142); ?> (Compilation error on cygwin).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 8142); ?> (Compilation error on cygwin).</li>
 </ul></li>
 <li>MBString:
 <ul>
-  <li>Fixed bug <?php githubissuel('php/php-src',8208); ?> (mb_encode_mimeheader: $indent functionality broken).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 8208); ?> (mb_encode_mimeheader: $indent functionality broken).</li>
 </ul></li>
 <li>MySQLi:
 <ul>
-  <li>Fixed bug <?php githubissuel('php/php-src',8068); ?> (mysqli_fetch_object creates inaccessible properties).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 8068); ?> (mysqli_fetch_object creates inaccessible properties).</li>
 </ul></li>
 <li>Pcntl:
 <ul>
-  <li>Fixed bug <?php githubissuel('php/php-src',8142); ?> (Compilation error on cygwin).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 8142); ?> (Compilation error on cygwin).</li>
 </ul></li>
 <li>PgSQL:
 <ul>
   <li>Fixed result_type related stack corruption on LLP64 architectures.</li>
-  <li>Fixed bug <?php githubissuel('php/php-src',8253); ?> (pg_insert() fails for references).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 8253); ?> (pg_insert() fails for references).</li>
 </ul></li>
 <li>Sockets:
 <ul>
@@ -952,11 +952,11 @@ changelog_header(8, $MINOR_VERSIONS);
 </ul></li>
 <li>SPL:
 <ul>
-  <li>Fixed bug <?php githubissuel('php/php-src',8121); ?> (SplFileObject - seek and key with csv file inconsistent).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 8121); ?> (SplFileObject - seek and key with csv file inconsistent).</li>
 </ul></li>
 <li>Standard:
 <ul>
-  <li>Fixed bug <?php githubissuel('php/php-src',8048); ?> (Force macOS to use statfs).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 8048); ?> (Force macOS to use statfs).</li>
 </ul></li>
 </ul>
 <!-- }}} --></section>
@@ -980,24 +980,24 @@ changelog_header(8, $MINOR_VERSIONS);
 </ul></li>
 <li>Iconv:
 <ul>
-  <li>Fixed bug <?php githubissuel('php/php-src',7953); ?> (ob_clean() only does not set Content-Encoding).</li>
-  <li>Fixed bug <?php githubissuel('php/php-src',7980); ?> (Unexpected result for iconv_mime_decode).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 7953); ?> (ob_clean() only does not set Content-Encoding).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 7980); ?> (Unexpected result for iconv_mime_decode).</li>
 </ul></li>
 <li>MySQLnd:
 <ul>
-  <li>Fixed bug <?php githubissuel('php/php-src',8058); ?> (NULL pointer dereference in mysqlnd package).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 8058); ?> (NULL pointer dereference in mysqlnd package).</li>
 </ul></li>
 <li>OPcache:
 <ul>
-  <li>Fixed bug <?php githubissuel('php/php-src',8074); ?> (Wrong type inference of range() result).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 8074); ?> (Wrong type inference of range() result).</li>
 </ul></li>
 <li>Reflection:
 <ul>
-  <li>Fixed bug <?php githubissuel('php/php-src',8080); ?> (ReflectionClass::getConstants() depends on def. order).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 8080); ?> (ReflectionClass::getConstants() depends on def. order).</li>
 </ul></li>
 <li>Zlib:
 <ul>
-  <li>Fixed bug <?php githubissuel('php/php-src',7953); ?> (ob_clean() only does not set Content-Encoding).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 7953); ?> (ob_clean() only does not set Content-Encoding).</li>
 </ul></li>
 </ul>
 <!-- }}} --></section>
@@ -1010,11 +1010,11 @@ changelog_header(8, $MINOR_VERSIONS);
 <ul><li>Core:
 <ul>
   <li><?php bugfix(81430); ?> (Attribute instantiation leaves dangling pointer).</li>
-  <li>Fixed bug <?php githubissuel('php/php-src',7896); ?> (Environment vars may be mangled on Windows).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 7896); ?> (Environment vars may be mangled on Windows).</li>
 </ul></li>
 <li>FFI:
 <ul>
-  <li>Fixed bug <?php githubissuel('php/php-src',7867); ?> (FFI::cast() from pointer to array is broken).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 7867); ?> (FFI::cast() from pointer to array is broken).</li>
 </ul></li>
 <li>Filter:
 <ul>
@@ -1026,20 +1026,20 @@ changelog_header(8, $MINOR_VERSIONS);
 </ul></li>
 <li>MBString:
 <ul>
-  <li>Fixed bug <?php githubissuel('php/php-src',7902); ?> (mb_send_mail may delimit headers with LF only).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 7902); ?> (mb_send_mail may delimit headers with LF only).</li>
 </ul></li>
 <li>MySQLnd:
 <ul>
-  <li>Fixed bug <?php githubissuel('php/php-src',7972); ?> (MariaDB version prefix 5.5.5- is not stripped).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 7972); ?> (MariaDB version prefix 5.5.5- is not stripped).</li>
 </ul></li>
 <li>Sockets:
 <ul>
   <li>Fixed ext/sockets build on Haiku.</li>
-  <li>Fixed bug <?php githubissuel('php/php-src',7978); ?> (sockets extension compilation errors).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 7978); ?> (sockets extension compilation errors).</li>
 </ul></li>
 <li>Standard:
 <ul>
-  <li>Fixed bug <?php githubissuel('php/php-src',7875); ?> (mails are sent even if failure to log throws exception).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 7875); ?> (mails are sent even if failure to log throws exception).</li>
 </ul></li>
 </ul>
 <!-- }}} --></section>
@@ -1060,8 +1060,8 @@ changelog_header(8, $MINOR_VERSIONS);
 </ul></li>
 <li>Hash:
 <ul>
-  <li>Fixed bug <?php githubissuel('php/php-src',7759); ?> (Incorrect return types for hash() and hash_hmac()).</li>
-  <li>Fixed bug <?php githubissuel('php/php-src',7826); ?> (Inconsistent argument name in hash_hmac_file and hash_file).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 7759); ?> (Incorrect return types for hash() and hash_hmac()).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 7826); ?> (Inconsistent argument name in hash_hmac_file and hash_file).</li>
 </ul></li>
 <li>MySQLnd:
 <ul>
@@ -1069,7 +1069,7 @@ changelog_header(8, $MINOR_VERSIONS);
 </ul></li>
 <li>OCI8:
 <ul>
-  <li>Fixed bug <?php githubissuel('php/php-src',7765); ?> (php_oci_cleanup_global_handles segfaults at second call).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 7765); ?> (php_oci_cleanup_global_handles segfaults at second call).</li>
 </ul></li>
 <li>OPcache:
 <ul>

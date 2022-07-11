@@ -18,11 +18,11 @@ if (empty($_POST['redirect']) && isset($_GET['redirect'])) {
 }
 
 // Decide on whether all vars are present for processing
-$process = TRUE;
+$process = true;
 $needed_vars = array('note', 'user', 'sect', 'redirect', 'action', 'func', 'arga', 'argb', 'answer');
 foreach ($needed_vars as $varname) {
     if (empty($_POST[$varname])) {
-        $process = FALSE;
+        $process = false;
         break;
     }
 }
@@ -45,7 +45,7 @@ if ($process) {
     }
 
     // We don't know of any error now
-    $error = FALSE;
+    $error = false;
 
     // No note specified
     if (strlen($note) == 0) {
@@ -86,7 +86,6 @@ if ($process) {
 
     // No error was found, and the submit action is required
     if (!$error && strtolower($_POST['action']) !== "preview") {
-
         $redirip = $_SERVER['HTTP_X_FORWARDED_FOR'] ??
                    ($_SERVER['HTTP_VIA'] ?? '');
 
@@ -104,15 +103,15 @@ if ($process) {
 
         // If there is any non-header result, then it is an error
         if ($result) {
-            if (strpos($result, '[TOO MANY NOTES]') !== FALSE) {
+            if (strpos($result, '[TOO MANY NOTES]') !== false) {
                 print "<p class=\"formerror\">As a security precaution, we only allow a certain number of notes to be submitted per minute. At this time, this number has been exceeded. Please re-submit your note in about a minute.</p>";
-            } elseif (($pos = strpos($result, '[SPAMMER]')) !== FALSE) {
+            } elseif (($pos = strpos($result, '[SPAMMER]')) !== false) {
                 $ip       = trim(substr($result, $pos+9));
                 $spam_url = $ip_spam_lookup_url . $ip;
                 print '<p class="formerror">Your IP is listed in one of the spammers lists we use, which aren\'t controlled by us. More information is available at <a href="'.$spam_url.'">'.$spam_url.'</a>.</p>';
-            } elseif (strpos($result, '[SPAM WORD]') !== FALSE) {
+            } elseif (strpos($result, '[SPAM WORD]') !== false) {
                 echo '<p class="formerror">Your note contains a prohibited (usually SPAM) word. Please remove it and try again.</p>';
-            } elseif (strpos($result, '[CLOSED]') !== FALSE) {
+            } elseif (strpos($result, '[CLOSED]') !== false) {
                 echo '<p class="formerror">Due to some technical problems this service isn\'t currently working. Please try again later. Sorry for any inconvenience.</p>';
             } else {
                 echo "<!-- $result -->";
@@ -135,18 +134,20 @@ if ($process) {
 
     // There was an error, or a preview is needed
     // If there was an error, print out
-    if ($error) { echo "<p class=\"formerror\">$error</p>\n"; }
+    if ($error) {
+        echo "<p class=\"formerror\">$error</p>\n";
+    }
 
     // Print out preview of note
     echo '<p>This is what your entry will look like, roughly:</p>';
     echo '<div id="usernotes">';
-    manual_note_display(time(), $user, $note, FALSE);
+    manual_note_display(time(), $user, $note, false);
     echo '</div><br><br>';
 }
 
 // Any needed variable was missing => display instructions
 else {
-?>
+    ?>
 
 <section id="add-note-usernotes" class="clearfix">
   <h1>Adding a note to the manual</h1>
@@ -338,7 +339,9 @@ else {
 }
 
 // If the user name was not specified, provide a default
-if (empty($_POST['user'])) { $_POST['user'] = "user@example.com"; }
+if (empty($_POST['user'])) {
+    $_POST['user'] = "user@example.com";
+}
 
 // There is no section to add note to
 if (!isset($_POST['sect'], $_POST['redirect'])) {
@@ -371,7 +374,9 @@ else {?>
   </tr>
   <tr>
    <th class="subr"><label for="form-note">Your notes</label>:</th>
-   <td><textarea id="form-note" name="note" rows="20" cols="60" wrap="virtual" required maxlength="4095" minlength="32"><?php if (isset($_POST['note'])) { echo clean($_POST['note']); } ?></textarea>
+   <td><textarea id="form-note" name="note" rows="20" cols="60" wrap="virtual" required maxlength="4095" minlength="32"><?php if (isset($_POST['note'])) {
+    echo clean($_POST['note']);
+} ?></textarea>
    <br>
   </td>
   </tr>

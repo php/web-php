@@ -8,7 +8,8 @@ releases\php80\common_header(
     'მათ შორის დასახელებული არგუმენტები, union type, ატრიბუტები, ' .
     'თვისებების გამარტივებული განსაზღვრა კონსტრუქტორში, გამოსახულება match, ' .
     'ოპერატორი nullsafe, JIT და გაუმჯობესებები ტიპის სისტემაში, ' .
-    'შეცდომების დამუშავება და თანმიმდევრულობა.');
+    'შეცდომების დამუშავება და თანმიმდევრულობა.'
+);
 
 ?>
 <section class="php8-section php8-section_dark php8-section_header center">
@@ -44,8 +45,8 @@ releases\php80\common_header(
         <div class="php8-compare__label">PHP 7</div>
         <div class="php8-code phpcode">
             <?php highlight_php_trimmed(
-                'htmlspecialchars($string, ENT_COMPAT | ENT_HTML401, \'UTF-8\', false);'
-            );?>
+    'htmlspecialchars($string, ENT_COMPAT | ENT_HTML401, \'UTF-8\', false);'
+);?>
         </div>
 
 
@@ -55,8 +56,8 @@ releases\php80\common_header(
         <div class="php8-compare__label php8-compare__label_new">PHP 8</div>
         <div class="php8-code phpcode">
             <?php highlight_php_trimmed(
-                'htmlspecialchars($string, double_encode: false);'
-            );?>
+    'htmlspecialchars($string, double_encode: false);'
+);?>
         </div>
       </div>
     </div>
@@ -78,14 +79,14 @@ releases\php80\common_header(
         <div class="php8-compare__label">PHP 7</div>
         <div class="php8-code phpcode">
             <?php highlight_php_trimmed(
-                'class PostsController
+    'class PostsController
 {
     /**
      * @Route("/api/posts/{id}", methods={"GET"})
      */
     public function get($id) { /* ... */ }
 }'
-            );?>
+);?>
         </div>
       </div>
       <div class="php8-compare__arrow"></div>
@@ -93,12 +94,12 @@ releases\php80\common_header(
         <div class="php8-compare__label php8-compare__label_new">PHP 8</div>
         <div class="php8-code phpcode">
             <?php highlight_php_trimmed(
-                'class PostsController
+    'class PostsController
 {
     #[Route("/api/posts/{id}", methods: ["GET"])]
     public function get($id) { /* ... */ }
 }'
-            );?>
+);?>
         </div>
       </div>
     </div>
@@ -117,7 +118,7 @@ releases\php80\common_header(
         <div class="php8-compare__label">PHP 7</div>
         <div class="php8-code phpcode">
             <?php highlight_php_trimmed(
-                'class Point {
+    'class Point {
   public float $x;
   public float $y;
   public float $z;
@@ -132,7 +133,7 @@ releases\php80\common_header(
     $this->z = $z;
   }
 }'
-            );?>
+);?>
         </div>
       </div>
       <div class="php8-compare__arrow"></div>
@@ -140,14 +141,14 @@ releases\php80\common_header(
         <div class="php8-compare__label php8-compare__label_new">PHP 8</div>
         <div class="php8-code phpcode">
             <?php highlight_php_trimmed(
-                'class Point {
+    'class Point {
   public function __construct(
     public float $x = 0.0,
     public float $y = 0.0,
     public float $z = 0.0,
   ) {}
 }'
-            );?>
+);?>
         </div>
       </div>
     </div>
@@ -166,7 +167,7 @@ releases\php80\common_header(
         <div class="php8-compare__label">PHP 7</div>
         <div class="php8-code phpcode">
             <?php highlight_php_trimmed(
-                'class Number {
+    'class Number {
   /** @var int|float */
   private $number;
 
@@ -179,7 +180,7 @@ releases\php80\common_header(
 }
 
 new Number(\'NaN\'); // შეცდომები არაა'
-            );?>
+);?>
         </div>
       </div>
       <div class="php8-compare__arrow"></div>
@@ -187,14 +188,14 @@ new Number(\'NaN\'); // შეცდომები არაა'
         <div class="php8-compare__label php8-compare__label_new">PHP 8</div>
         <div class="php8-code phpcode">
             <?php highlight_php_trimmed(
-                'class Number {
+    'class Number {
   public function __construct(
     private int|float $number
   ) {}
 }
 
 new Number(\'NaN\'); // TypeError'
-            );?>
+);?>
         </div>
       </div>
     </div>
@@ -214,7 +215,7 @@ new Number(\'NaN\'); // TypeError'
         <div class="php8-compare__label">PHP 7</div>
         <div class="php8-code phpcode">
             <?php highlight_php_trimmed(
-                'switch (8.0) {
+    'switch (8.0) {
   case \'8.0\':
     $result = "ოოო არა!";
     break;
@@ -224,7 +225,7 @@ new Number(\'NaN\'); // TypeError'
 }
 echo $result;
 //> ოოო არა!'
-            );?>
+);?>
         </div>
       </div>
       <div class="php8-compare__arrow"></div>

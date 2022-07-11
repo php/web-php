@@ -1,4 +1,5 @@
 <?php
+
 $_SERVER['BASE_PAGE'] = 'manual-lookup.php';
 include __DIR__ . '/include/prepend.inc';
 include __DIR__ . '/include/manual-lookup.inc';
@@ -12,10 +13,10 @@ if (!empty($_GET['function']) && is_string($_GET['function'])) {
     $function = htmlspecialchars($_GET['pattern'], ENT_QUOTES, 'UTF-8');
 }
 
-if(!empty($_GET['scope']) && is_string($_GET['scope'])) {
-	$scope = htmlspecialchars($_GET['scope'], ENT_QUOTES, 'UTF-8');
+if (!empty($_GET['scope']) && is_string($_GET['scope'])) {
+    $scope = htmlspecialchars($_GET['scope'], ENT_QUOTES, 'UTF-8');
 } else {
-	$scope = '';
+    $scope = '';
 }
 
 // Prepare data for search

@@ -25,7 +25,8 @@ $SIDEBAR_DATA = '
 <p class="panel"><a href="/releases/">Old archives</a></p>
 ';
 
-site_header("Downloads",
+site_header(
+    "Downloads",
     array(
         'link' => array(
             array(
@@ -60,8 +61,12 @@ site_header("Downloads",
           <?php download_link($rel['filename'], $rel['filename']); ?>
           <span class="releasedate"><?php echo date('d M Y', strtotime($rel['date'])); ?></span>
           <?php
-            if (isset($rel['md5']))    echo '<span class="md5sum">', $rel['md5'], '</span>';
-            if (isset($rel['sha256'])) echo '<span class="sha256">', $rel['sha256'], '</span>';
+            if (isset($rel['md5'])) {
+                echo '<span class="md5sum">', $rel['md5'], '</span>';
+            }
+            if (isset($rel['sha256'])) {
+                echo '<span class="sha256">', $rel['sha256'], '</span>';
+            }
            ?>
           <?php if (isset($rel['note']) && $rel['note']): ?>
             <p>

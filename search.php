@@ -1,4 +1,6 @@
-<?php // vim: et
+<?php
+
+// vim: et
 $_SERVER['BASE_PAGE'] = 'search.php';
 include_once __DIR__ . '/include/prepend.inc';
 
@@ -10,7 +12,6 @@ $_FORM = &$_GET;
 
 // We received something to search for
 if (!empty($_FORM['pattern'])) {
-
     if (empty($_FORM['show'])) {
         $_FORM['show'] = 'all';
     }
