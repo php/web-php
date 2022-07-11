@@ -9,6 +9,8 @@ $finder = $config->getFinder()
     ->in(__DIR__)
     ->name(__FILE__);
 
-$config->setRules([]);
+$config->setRules([
+    'no_trailing_whitespace' => true,
+]);
 
 return $config;
