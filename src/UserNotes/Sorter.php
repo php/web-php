@@ -15,7 +15,7 @@ class Sorter {
     private $ratingWeight = 60;
     private $ageWeight = 2;
 
-    function sort(array &$notes) {
+    public function sort(array &$notes) {
         // First we make a pass over the data to get the min and max values
         // for data normalization.
         $this->findMinMaxValues($notes);
