@@ -11,6 +11,7 @@ $finder = $config->getFinder()
 
 $config->setRules([
     'no_trailing_whitespace' => true,
+    'whitespace_after_comma_in_array' => true,
 ]);
 
 return $config;

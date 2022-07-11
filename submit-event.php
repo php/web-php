@@ -60,7 +60,7 @@ if ($process) {
         $errors[] = "This does not look like a 'PHP' event";
     }
 
-    $valid_schemes = array('http','https','ftp');
+    $valid_schemes = array('http', 'https', 'ftp');
 
     $_POST['url'] = trim($_POST['url']);
     $pu = parse_url($_POST['url']);
