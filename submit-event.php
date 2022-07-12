@@ -22,7 +22,7 @@ foreach ($vars as $varname) {
 $vars = array(
     'type', 'country', 'category', 'email', 'url', 'ldesc', 'sdesc'
 );
-foreach($vars as $varname) {
+foreach ($vars as $varname) {
     if (!isset($_POST[$varname])) {
         $_POST[$varname] = "";
     }

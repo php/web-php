@@ -51,7 +51,7 @@ $s = file_get_contents($indexfile);
 $js = json_decode($s, true);
 
 $index = array();
-foreach($js as $item) {
+foreach ($js as $item) {
     if ($item[0]) {
         /* key: ID/filename, 0=>*/
         $index[$item[1]] = array($item[0], "", $item[2]);
@@ -61,7 +61,7 @@ foreach($js as $item) {
 $s = file_get_contents($descfile);
 $js = json_decode($s, true);
 
-foreach($js as $k => $item) {
+foreach ($js as $k => $item) {
     if ($item && isset($index[$k])) {
         $index[$k][1] = $item;
     }

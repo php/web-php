@@ -51,7 +51,7 @@ if (isset($_GET["serialize"]) || isset($_GET["json"])) {
             $machineReadable = array("error" => "Unknown version");
         }
     } else {
-        foreach($RELEASES as $major => $release) {
+        foreach ($RELEASES as $major => $release) {
             $version = key($release);
             $r = current($release);
             $r["version"] = $version;
@@ -89,7 +89,7 @@ echo "<p>
 
 $active_majors = array_keys($RELEASES);
 $latest = max($active_majors);
-foreach($OLDRELEASES as $major => $a) {
+foreach ($OLDRELEASES as $major => $a) {
     echo '<a id="v' .$major. '"></a>';
     if (!in_array($major, $active_majors)) {
         echo "\n<br>\n";
@@ -99,7 +99,7 @@ foreach($OLDRELEASES as $major => $a) {
     }
 
     $i = 0;
-    foreach($a as $ver => $release) {
+    foreach ($a as $ver => $release) {
         $i++;
         mk_rel(
             $major,
@@ -193,7 +193,7 @@ function mk_rel(int $major,
 
     if ($announcement) {
         if (is_array($announcement)) {
-            foreach($announcement as $ann => $url) {
+            foreach ($announcement as $ann => $url) {
                 echo "<a href=\"$url\">$ann</a> ";
             }
         } else {
@@ -212,7 +212,7 @@ function mk_rel(int $major,
     echo "<ul>\n";
 
     if (!$museum) {
-        foreach(array_merge($source, $windows) as $src) {
+        foreach (array_merge($source, $windows) as $src) {
             echo " <li>\n";
             if (isset($src['filename'])) {
                 download_link($src["filename"], $src["name"]); echo "<br>\n";
@@ -231,14 +231,14 @@ function mk_rel(int $major,
         }
 
     } else { /* $museum */
-        foreach($source as $src) {
+        foreach ($source as $src) {
             if (!isset($src["filename"])) {
                 continue;
             }
             printf('<li><a href="http://museum.php.net/php%d/%s">%s</a></li>',
                    $major, $src["filename"], $src["name"]);
         }
-        foreach($windows as $src) {
+        foreach ($windows as $src) {
             printf('<li><a href="http://museum.php.net/%s/%s">%s</a></li>',
                    ($major == 5 ? "php5" : "win32"), $src["filename"], $src["name"]);
         }

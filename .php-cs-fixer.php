@@ -12,6 +12,7 @@ $finder = $config->getFinder()
 $config->setRules([
     'indentation_type' => true,
     'no_trailing_whitespace' => true,
+    'single_space_after_construct' => true,
     'visibility_required' => true,
     'whitespace_after_comma_in_array' => true,
 ]);

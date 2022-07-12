@@ -134,7 +134,7 @@ if (preg_match("!^get/([^/]+)$!", $URI, $what)) {
 if (preg_match("!^get/([^/]+)/from/([^/]+)(/mirror)?$!", $URI, $dlinfo)) {
 
     $df = $dlinfo[1];
-    if(strpos($df, "7-LATEST") !== false) {
+    if (strpos($df, "7-LATEST") !== false) {
         include_once __DIR__ . "/include/version.inc";
         [ $latest ] = release_get_latest();
         $df = str_replace("7-LATEST", $latest, $df);
@@ -143,7 +143,7 @@ if (preg_match("!^get/([^/]+)/from/([^/]+)(/mirror)?$!", $URI, $dlinfo)) {
     $mr = "https://www.php.net/";
 
     // Check if that mirror really exists if not, bail out
-    if(!isset($MIRRORS[$mr])) {
+    if (!isset($MIRRORS[$mr])) {
         error_nomirror($mr);
         exit;
     }
