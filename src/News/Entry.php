@@ -22,12 +22,20 @@ class Entry {
 
     protected $title = '';
 
+    protected $categories = [];
+
+    protected $conf_time = 0;
+
+    protected $image = [];
+
+    protected $content = '';
+
+    protected $id = '';
+
     public function setTitle(string $title): self {
         $this->title = $title;
         return $this;
     }
-
-    protected $categories = [];
     public function setCategories(array $cats): self {
         foreach ($cats as $cat) {
             if (!isset(self::CATEGORIES[$cat])) {
@@ -50,14 +58,10 @@ class Entry {
     public function isConference(): bool {
         return (bool)array_intersect($this->categories, ['cfp', 'conferences']);
     }
-
-    protected $conf_time = 0;
     public function setConfTime(int $time): self {
         $this->conf_time = $time;
         return $this;
     }
-
-    protected $image = [];
     public function setImage(string $path, string $title, ?string $link): self {
         if (basename($path) !== $path) {
             throw new \Exception('path must be a simple file name under ' . self::IMAGE_PATH_REL);
@@ -72,27 +76,12 @@ class Entry {
         ];
         return $this;
     }
-
-    protected $content = '';
     public function setContent(string $content): self {
         if (empty($content)) {
             throw new \Exception('Content must not be empty');
         }
         $this->content = $content;
         return $this;
-    }
-
-    protected $id = '';
-    private static function selectNextId(): string {
-        $filename = date("Y-m-d", $_SERVER["REQUEST_TIME"]);
-        $count = 0;
-        do {
-            ++$count;
-            $id = $filename . "-" . $count;
-            $basename  = "{$id}.xml";
-        } while (file_exists(self::ARCHIVE_ENTRIES_ABS . $basename));
-
-        return $id;
     }
     public function getId(): string {
         return $this->id;
@@ -176,6 +165,17 @@ class Entry {
         $arch->save(self::ARCHIVE_FILE_ABS);
 
         return $this;
+    }
+    private static function selectNextId(): string {
+        $filename = date("Y-m-d", $_SERVER["REQUEST_TIME"]);
+        $count = 0;
+        do {
+            ++$count;
+            $id = $filename . "-" . $count;
+            $basename  = "{$id}.xml";
+        } while (file_exists(self::ARCHIVE_ENTRIES_ABS . $basename));
+
+        return $id;
     }
 
     private static function ce(\DOMDocument $d, string $name, $value, array $attrs = [], ?\DOMNode $to = null) {
