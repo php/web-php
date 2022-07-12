@@ -11,9 +11,9 @@ function common_header(string $description): void {
     $meta_description = \htmlspecialchars($description);
 
     \site_header("PHP 8.0.0 Release Announcement", [
-            'current' => 'php8',
-            'css' => ['php8.css'],
-            'meta_tags' => <<<META
+        'current' => 'php8',
+        'css' => ['php8.css'],
+        'meta_tags' => <<<META
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:site" content="@official_php" />
 <meta name="twitter:title" content="PHP 8.0 Released" />
@@ -28,7 +28,7 @@ function common_header(string $description): void {
 <meta property="og:image" content="{$meta_image_path}" />
 <meta property="og:description" content="{$meta_description}" />
 META
-        ]);
+    ]);
 }
 
 function language_chooser(string $currentLang): void {

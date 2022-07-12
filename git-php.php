@@ -27,11 +27,11 @@ $SIDEBAR_DATA = '
 site_header("Using Git for PHP Development", array("current" => "community"));
 
 $groups = array(
-  "none" => "Choose One",
-  "php"  => "PHP Group",
-  "pear" => "PEAR Group",
-  "pecl" => "PECL Group",
-  "doc"  => "Doc Group",
+    "none" => "Choose One",
+    "php"  => "PHP Group",
+    "pear" => "PEAR Group",
+    "pecl" => "PECL Group",
+    "doc"  => "Doc Group",
 );
 
 ?>
