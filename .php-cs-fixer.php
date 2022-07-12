@@ -33,6 +33,7 @@ $config
         ],
         'indentation_type' => true,
         'line_ending' => true,
+        'method_argument_space' => true,
         'new_with_parentheses' => true,
         'no_extra_blank_lines' => true,
         'no_trailing_whitespace' => true,
