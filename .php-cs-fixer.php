@@ -14,6 +14,7 @@ $finder = $config->getFinder()
 $config->setRules([
     'array_indentation' => true,
     'indentation_type' => true,
+    'line_ending' => true,
     'no_trailing_whitespace' => true,
     'ordered_class_elements' => true,
     'single_space_after_construct' => true,
