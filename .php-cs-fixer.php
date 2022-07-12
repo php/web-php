@@ -7,6 +7,7 @@ $config = new PhpCsFixer\Config();
 $finder = $config->getFinder()
     ->ignoreDotFiles(false)
     ->in(__DIR__)
+    ->exclude('manual/en/')
     ->name(__FILE__);
 
 $config->setRules([
