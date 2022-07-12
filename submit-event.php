@@ -160,10 +160,10 @@ for ($i = 1; $i <= 12; $i++) {
 
 // Possibilities to recur
 $re = array(
-     1 => 'First',
-     2 => 'Second',
-     3 => 'Third',
-     4 => 'Fourth',
+    1 => 'First',
+    2 => 'Second',
+    3 => 'Third',
+    4 => 'Fourth',
     -1 => 'Last',
     -2 => '2nd Last',
     -3 => '3rd Last'
