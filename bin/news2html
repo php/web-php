@@ -64,8 +64,8 @@ $bug_map = [
     '/Fixed bug #([0-9]+)/'      => '<?php bugfix(\1); ?'.'>',
     '/Fixed PECL bug #([0-9]+)/' => '<?php peclbugfix(\1); ?'.'>',
     '/Implemented FR #([0-9]+)/' => '<?php implemented(\1); ?'.'>',
-    '/GitHub PR #([0-9]+)/'      => '<?php githubissuel(\'php/php-src\',\1); ?'.'>',
-    '/GH-([0-9]+)/'              => '<?php githubissuel(\'php/php-src\',\1); ?'.'>',
+    '/GitHub PR #([0-9]+)/'      => '<?php githubissuel(\'php/php-src\', \1); ?'.'>',
+    '/GH-([0-9]+)/'              => '<?php githubissuel(\'php/php-src\', \1); ?'.'>',
 ];
 
 foreach($entries as $module => $items) {
