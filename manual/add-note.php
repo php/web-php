@@ -5,7 +5,7 @@ $_SERVER['BASE_PAGE'] = 'manual/add-note.php';
 include_once __DIR__ . '/../include/prepend.inc';
 include_once __DIR__ . '/../include/posttohost.inc';
 include_once __DIR__ . '/../include/shared-manual.inc';
-include __DIR__ . '/spam_challenge.php';
+include_once __DIR__ . '/spam_challenge.php';
 
 site_header("Add Manual Note", array( 'css' => 'add-note.css'));
 
