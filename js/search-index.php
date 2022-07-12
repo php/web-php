@@ -45,8 +45,6 @@ header("Last-Modified: " . $tsstring);
 header("Content-Type: application/javascript");
 /* }}} */
 
-
-
 $s = file_get_contents($indexfile);
 $js = json_decode($s, true);
 
@@ -66,6 +64,5 @@ foreach ($js as $k => $item) {
         $index[$k][1] = $item;
     }
 }
-
 
 echo json_encode($index);

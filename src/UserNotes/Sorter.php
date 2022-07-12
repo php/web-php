@@ -36,11 +36,9 @@ class Sorter {
         uasort($notes, array($this, 'factorSort'));
     }
 
-
     private function calcVotePriority(array $note) {
         return ($note['score'] - $this->minVote) * $this->voteFactor + .3;
     }
-
 
     private function calcRatingPriority(array $note) {
         if ($note['total'] <= 2) {
@@ -49,7 +47,6 @@ class Sorter {
 
         return $note['rating'];
     }
-
 
     private function calcSortPriority(array &$notes) {
         foreach ($notes as &$note) {
@@ -61,7 +58,6 @@ class Sorter {
             $note['sort'] = $prio['value'] = array_sum($prio);
         }
     }
-
 
     /*
      * Not sure why, but using `$b['sort'] - $a['sort']` does not seem to
@@ -78,7 +74,6 @@ class Sorter {
 
         return -1;
     }
-
 
     private function findMinMaxValues(array &$notes) {
         $count = count($notes);
