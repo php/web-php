@@ -41,7 +41,6 @@ function imgheader($filename) {
     header("Content-Type: $hdr");
 }
 
-
 function get_accepted_encodings() {
     if (isset($_SERVER['HTTP_ACCEPT_ENCODING'])) {
         $encodings = explode(',', $_SERVER['HTTP_ACCEPT_ENCODING']);
@@ -51,7 +50,6 @@ function get_accepted_encodings() {
     }
     return array();
 }
-
 
 function serve_compressed_if_available($logo): void {
     $encodings = get_accepted_encodings();

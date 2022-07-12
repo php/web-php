@@ -32,7 +32,6 @@ if (isset($_GET["t"])) {
     $time = filemtime($abs);
 }
 
-
 $tsstring = gmdate("D, d M Y H:i:s ", $time) . "GMT";
 if (isset($_SERVER["HTTP_IF_MODIFIED_SINCE"]) &&
     ($_SERVER["HTTP_IF_MODIFIED_SINCE"] == $tsstring)) {

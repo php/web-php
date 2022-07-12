@@ -113,7 +113,6 @@ site_header("Manual Quick Reference", $head_options+array("current" => "help"));
 // Note: $notfound is defined (with htmlspecialchars) inside manual-lookup.php
 $notfound_enc = urlencode($notfound);
 
-
 if ($snippet = is_known_snippet($notfound)) {
     echo "<h1>Related snippet found for '{$notfound}'</h1>";
     echo "<p>{$snippet}</p>";

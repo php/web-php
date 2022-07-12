@@ -70,8 +70,6 @@ if (isset($_GET["serialize"]) || isset($_GET["json"])) {
     return;
 }
 
-
-
 // Human Readable.
 site_header("Releases", array(
     'current' => 'downloads',

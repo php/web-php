@@ -47,7 +47,6 @@ function gen_challenge() {
     return array($c[0], $an, $bn, $c[1]($c[0], $an, $bn));
 }
 
-
 // test an answer for validity
 function test_answer($name, $an, $bn, $answer) {
     foreach (CHALLENGES as $x) {

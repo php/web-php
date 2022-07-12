@@ -19,7 +19,6 @@ class Entry {
     public const IMAGE_PATH_REL = 'images/news/';
     public const IMAGE_PATH_ABS = self::PHPWEB . self::IMAGE_PATH_REL;
 
-
     protected $title = '';
 
     protected $categories = [];
