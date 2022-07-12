@@ -7,7 +7,7 @@ include_once __DIR__ . '/../include/posttohost.inc';
 include_once __DIR__ . '/../include/shared-manual.inc';
 include __DIR__ . '/spam_challenge.php';
 
-site_header("Add Manual Note", array( 'css' => 'add-note.css'));
+site_header("Add Manual Note", array('css' => 'add-note.css'));
 
 // Copy over "sect" and "redirect" from GET to POST
 if (empty($_POST['sect']) && isset($_GET['sect'])) {
