@@ -178,10 +178,13 @@ function recentEOLBranchesHTML(): string {
     return implode('', array_slice($eol, 0, 2));
 }
 
+/**
+ * @param bool|array $announcement
+ */
 function mk_rel(int $major,
                 string $ver,
                 string $date,
-                /* bool | array */ $announcement,
+                $announcement,
                 array $source,
                 array $windows,
                 bool $museum): void {
