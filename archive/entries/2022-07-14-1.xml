@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom" xmlns:default="http://php.net/ns/news">
+    <title>Longhorn PHP 2022 - CFP Open</title>
+    <id>https://www.php.net/archive/2022.php#2022-07-14-1</id>
+    <published>2022-07-14T01:00:00+00:00</published>
+    <updated>2021-07-14T01:00:00+00:00</updated>
+    <link href="https://www.php.net/conferences/index.php#2022-07-14-1" rel="alternate" type="text/html"/>
+    <link href="https://www.longhornphp.com" rel="via" type="text/html"/>
+    <default:finalTeaserDate xmlns="http://php.net/ns/news">2022-08-11</default:finalTeaserDate>
+    <category term="cfp" label="Call for Papers"/>
+    <default:newsImage xmlns="http://php.net/ns/news" link="https://www.longhornphp.com" title="Longhorn PHP">longhornphp.png</default:newsImage>
+    <content type="xhtml">
+        <div xmlns="http://www.w3.org/1999/xhtml">
+            <p>Howdy, y'all! 🤠</p>
+
+            <p><strong>Longhorn PHP</strong> is returning for its 4th year in Austin, TX! We are a community-run conference for PHP developers in Texas and beyond. We are excited to bring PHP developers from all backgrounds together again for 3 days of fun and education.</p>
+
+            <p>We are currently <a href="https://cfp.longhornphp.com/">accepting submissions for 50 minute talks and 3 hour tutorials</a>. Talk ideas will be accepted until August 11, 2022.</p>
+
+            <p>While the <a href="https://cfp.longhornphp.com/">CFP is open</a>, we also have our Blind Bird tickets available for sale. <a href="https://www.longhornphp.com" target="_blank">Register now!</a></p>
+
+            <p>Follow us on <a href="https://twitter.com/longhornphp" target="_blank">Twitter</a>, or signup for emails at <a href="https://www.longhornphp.com">longhornphp.com</a> to get notified with important conference updates.</p>
+        </div>
+    </content>
+</entry>
