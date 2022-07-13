@@ -345,75 +345,62 @@ $(document).ready(function() {
         $this.append("<a class='genanchor' href='#" + $this.attr('id') + "'> ¶</a>");
     });
 
-    /* Don't load elephpants on browsers that don't support data: URIs.
-     * Unfortunately, the Modernizr test is asynchronous, so we have to spin
-     * until it actually gives us a yes or a no. */
-    var initElephpants = function () {
-        if (typeof Modernizr.datauri !== "undefined") {
-            var $elephpants = $(".elephpants");
+    (function () {
+        var $elephpants = $(".elephpants");
 
-            if (Modernizr.datauri) {
-                var $elephpantsImages = $elephpants.find('.images');
-                // load the elephpant images if elephpants div is in the dom.
-                $elephpantsImages.first().each(function (idx, node) {
+        var $elephpantsImages = $elephpants.find('.images');
+        // load the elephpant images if elephpants div is in the dom.
+        $elephpantsImages.first().each(function (idx, node) {
 
-                    // function to fetch and insert images.
-                    var fetchImages = function() {
+            // function to fetch and insert images.
+            var fetchImages = function() {
 
-                        // determine how many elephpants are required to fill the
-                        // viewport and subtract for any images we already have.
-                        var count = Math.ceil($(document).width() / 75)
-                                  - $elephpantsImages.find("img").length;
+                // determine how many elephpants are required to fill the
+                // viewport and subtract for any images we already have.
+                var count = Math.ceil($(document).width() / 75)
+                            - $elephpantsImages.find("img").length;
 
-                        // early exit if we don't need any images.
-                        if (count < 1) {
-                            return;
+                // early exit if we don't need any images.
+                if (count < 1) {
+                    return;
+                }
+
+                // do the fetch.
+                $.ajax({
+                    url:      '/images/elephpants.php?count=' + count,
+                    dataType: 'json',
+                    success:  function(data) {
+                        var photo, image;
+                        for (photo in data) {
+                            photo = data[photo];
+                            link  = $('<a>');
+                            link.attr('href',    photo.url);
+                            link.attr('title',   photo.title);
+                            image = $('<img>');
+                            image.attr('src',    'data:image/jpeg;base64,' + photo.data);
+                            $(node).append(link.append(image));
                         }
-
-                        // do the fetch.
-                        $.ajax({
-                            url:      '/images/elephpants.php?count=' + count,
-                            dataType: 'json',
-                            success:  function(data) {
-                                var photo, image;
-                                for (photo in data) {
-                                    photo = data[photo];
-                                    link  = $('<a>');
-                                    link.attr('href',    photo.url);
-                                    link.attr('title',   photo.title);
-                                    image = $('<img>');
-                                    image.attr('src',    'data:image/jpeg;base64,' + photo.data);
-                                    $(node).append(link.append(image));
-                                }
-                            },
-                            error:    function() {
-                                $elephpants.hide();
-                            }
-                        });
-
+                    },
+                    error:    function() {
+                        $elephpants.hide();
                     }
-
-                    // begin by fetching the images we need now.
-                    fetchImages();
-
-                    // fetch more if viewport gets larger.
-                    var deferred = null;
-                    $(window).resize(function() {
-                        window.clearTimeout(deferred);
-                        deferred = window.setTimeout(function(){
-                            fetchImages();
-                        }, 250);
-                    });
                 });
-            } else {
-                $elephpants.hide();
+
             }
-        } else {
-            // Modernizr is still testing; check again in 100 ms.
-            window.setTimeout(initElephpants, 100);
-        }
-    };
-    initElephpants();
+
+            // begin by fetching the images we need now.
+            fetchImages();
+
+            // fetch more if viewport gets larger.
+            var deferred = null;
+            $(window).resize(function() {
+                window.clearTimeout(deferred);
+                deferred = window.setTimeout(function(){
+                    fetchImages();
+                }, 250);
+            });
+        });
+    })();
 
     // We have <p> tags generated with nothing in them and it requires a PHD change, meanwhile this fixes it.
     $refsect1.find('p').each(function() {
