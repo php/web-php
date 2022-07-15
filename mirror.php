@@ -31,8 +31,8 @@ if (is_official_mirror()) {
             $MIRROR_IMAGE = make_image(
                 'mirror.' . $ext,
                 htmlspecialchars(mirror_provider()),
-                FALSE,
-                FALSE,
+                false,
+                false,
                 'backend'
             );
 
