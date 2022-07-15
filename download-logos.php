@@ -10,7 +10,7 @@ $SIDEBAR_DATA = '
  under a GPL license.
 </p>
 ';
-site_header("Download Logos", array("current" => "downloads"));
+site_header("Download Logos", ["current" => "downloads"]);
 
 // Print recommended star cell
 function print_star(): void

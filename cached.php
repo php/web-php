@@ -22,7 +22,7 @@ $abs = $pwd. "/" .(string)$_GET["f"];
 $abs = realpath($abs);
 
 if (strncmp($abs, $pwd, strlen($pwd)) != 0) {
-    header("Location: https://www.php.net/" . strtr($_GET["f"],array("\r"=>"", "\n"=>"")));
+    header("Location: https://www.php.net/" . strtr($_GET["f"],["\r"=>"", "\n"=>""]));
     exit;
 }
 

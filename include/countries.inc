@@ -1,5 +1,5 @@
 <?php
-return array(
+return [
     'AFG' => 'Afghanistan',
     'ALB' => 'Albania',
     'DZA' => 'Algeria',
@@ -232,4 +232,4 @@ return array(
     'YEM' => 'Yemen',
     'ZMB' => 'Zambia',
     'ZWE' => 'Zimbabwe',
-);
+];

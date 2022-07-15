@@ -17,7 +17,7 @@ $SIDEBAR_DATA = <<<EOF
 </aside>
 EOF;
 
-site_header("License Information", array("current" => "help"));
+site_header("License Information", ["current" => "help"]);
 ?>
 
 <h1>PHP Licensing</h1>
@@ -153,4 +153,4 @@ For related projects, please refer to licensing information on the Project websi
   <li><a href="http://gtk.php.net/copyright.php">GTK</a></li>
 </ul>
 
-<?php site_footer(array('sidebar' => $SIDEBAR_DATA));
+<?php site_footer(['sidebar' => $SIDEBAR_DATA]);

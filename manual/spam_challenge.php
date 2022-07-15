@@ -1,7 +1,7 @@
 <?php
 // simple and stupid SPAM protection (using little challenges)
 
-const NUMS = array('zero', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine');
+const NUMS = ['zero', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine'];
 
 function plus($a, $b) {
     return $a + $b;
@@ -27,13 +27,13 @@ function print_prefix($name, $a, $b) {
     return "$name($a, $b)";
 }
 
-const CHALLENGES = array(
+const CHALLENGES = [
     // name, print, generator
-    array('max',   'print_prefix'),
-    array('min',   'print_prefix'),
-    array('minus', 'print_infix', 'gen_minus'),
-    array('plus',  'print_infix', 'gen_plus'),
-);
+    ['max',   'print_prefix'],
+    ['min',   'print_prefix'],
+    ['minus', 'print_infix', 'gen_minus'],
+    ['plus',  'print_infix', 'gen_plus'],
+];
 
 // generate a challenge
 function gen_challenge() {
@@ -44,7 +44,7 @@ function gen_challenge() {
     $b  = isset($c[2]) ? $c[2]($a) : rand(0, 9);
     $bn = NUMS[$b];
 
-    return array($c[0], $an, $bn, $c[1]($c[0], $an, $bn));
+    return [$c[0], $an, $bn, $c[1]($c[0], $an, $bn)];
 }
 
 // test an answer for validity

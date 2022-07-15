@@ -10,7 +10,7 @@ function error_404()
 {
     global $MYSITE;
     status_header(404);
-    site_header('404 Not Found', array("noindex"));
+    site_header('404 Not Found', ["noindex"]);
     echo "<h1>Not Found</h1>\n<p><strong>" .
          htmlspecialchars(substr($MYSITE, 0, -1) . $_SERVER['REQUEST_URI']) .
          "</strong> not found on this server.</p>\n";
@@ -23,7 +23,7 @@ function error_404_manual()
 {
     global $MYSITE;
     status_header(404);
-    site_header('404 Not Found', array("noindex"));
+    site_header('404 Not Found', ["noindex"]);
     echo "<h1>Not Found</h1>\n" .
          "<p>The manual page you are looking for (<strong>" .
          htmlspecialchars(substr($MYSITE, 0, -1) . $_SERVER['REQUEST_URI']) .
@@ -39,7 +39,7 @@ function error_inactive_manual_page($lang_name, $en_page)
 {
     global $MYSITE, $ACTIVE_ONLINE_LANGUAGES;
     status_header(404);
-    site_header('Page gone', array("noindex"));
+    site_header('Page gone', ["noindex"]);
     echo "<h1>Page gone</h1>\n" .
          "<p>The " . htmlspecialchars($lang_name) . " manual page you are looking for (<strong>" .
          htmlspecialchars(substr($MYSITE, 0, -1) . $_SERVER['REQUEST_URI']) .
@@ -64,7 +64,7 @@ function error_inactive_manual_page($lang_name, $en_page)
 function error_noservice()
 {
     global $MYSITE;
-    site_header('Service not working', array("noindex"));
+    site_header('Service not working', ["noindex"]);
     echo "<h1>Service not working</h1>\n" .
          "<p>The service you tried to access with <strong>" .
          htmlspecialchars(substr($MYSITE, 0, -1) . $_SERVER['REQUEST_URI']) .
@@ -77,7 +77,7 @@ function error_noservice()
 
 // There is no such mirror
 function error_nomirror($mirror) {
-    site_header("No such mirror", array("noindex"));
+    site_header("No such mirror", ["noindex"]);
     echo "<h1>No such mirror</h1>\n<p>The mirror you tried to access (" .
          htmlspecialchars($mirror) .
          ") is not registered php.net mirror. Please check back later," .
@@ -535,7 +535,7 @@ function fallback_to_legacy_manuals(array $legacy_urls): void
 {
     global $MYSITE;
     status_header(404);
-    site_header('404 Not Found', array("noindex"));
+    site_header('404 Not Found', ["noindex"]);
 
     $original_url = htmlspecialchars(substr($MYSITE, 0, -1) . $_SERVER['REQUEST_URI']);
     $legacy_links = '';

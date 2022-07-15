@@ -12,7 +12,7 @@ function search_results($res, $q, $profile='all', $per_page=10, $s=0, $l='en', $
     $pos = $res['ResultSet']['firstResultPosition'];
 
     $php_img_dir = 'http://www.php.net/images';
-    $types = array(
+    $types = [
         'pear'     => '<img src="'. $php_img_dir .'/pear_item.gif" height="19" width="17" style="float:left; margin-left:-30px;"/>',
         'pecl'     => '<img src="'. $php_img_dir .'/pecl_item.gif" height="19" width="17" style="float:left; margin-left:-30px;"/>',
         'pecl4win' => '<img src="'. $php_img_dir .'/pecl_item_win.gif" height="22" width="21" style="float:left; margin-left:-31px;"/>',
@@ -27,7 +27,7 @@ function search_results($res, $q, $profile='all', $per_page=10, $s=0, $l='en', $
         'doc'      => '<img src="'. $php_img_dir .'/logos/php-icon-white.gif" height="32" width="32" style="float:left; margin-left:-40px;"/>',
         'bugs'     => '<img src="'. $php_img_dir .'/php_bug.gif" height="32" width="32" style="float:left; margin-left:-40px;"/>',
         'gtk'      => '<img src="'. $php_img_dir .'/logos/php-gtk-white.gif" height="26" width="32" style="float:left; margin-left:-40px;"/>'
-    );
+    ];
 
     foreach($res['ResultSet']['Result'] as $i => $hit) {
         $cnt = $pos + $i;
@@ -45,7 +45,7 @@ function search_results($res, $q, $profile='all', $per_page=10, $s=0, $l='en', $
         if($type=='pecl' && strstr($displayurl,"/bugs/")) $type = "peclbugs";
         if($type=='pear' && strstr($displayurl,"/bugs/")) $type = "pearbugs";
         if($type=='smarty') continue;
-        $display_title = str_replace(array('PHP:', '&amp;'), array('', '&'), $hit['Title']);
+        $display_title = str_replace(['PHP:', '&amp;'], ['', '&'], $hit['Title']);
 
         // Fall back to the PHP logo for unknown hits
         if (!isset($types[$type])) {

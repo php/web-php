@@ -2,7 +2,7 @@
 $_SERVER['BASE_PAGE'] = 'archive/2005.php';
 include_once __DIR__ . '/../include/prepend.inc';
 news_archive_sidebar();
-site_header("News Archive - 2005", array("cache" => true));
+site_header("News Archive - 2005", ["cache" => true]);
 ?>
 
 <h1>News Archive - 2005</h1>
@@ -536,4 +536,4 @@ For changes in PHP 4.4.0 since PHP 4.3.11, please consult the
  Congratulations to us all!
 </p>
 
-<?php site_footer(array('elephpants' => true, 'sidebar' => $SIDEBAR_DATA));
+<?php site_footer(['elephpants' => true, 'sidebar' => $SIDEBAR_DATA]);

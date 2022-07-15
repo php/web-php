@@ -16,7 +16,7 @@
 include_once __DIR__ . '/prepend.inc';
 
 // Set variable defaults
-$PGI = array(); $SIDEBAR_DATA = '';
+$PGI = []; $SIDEBAR_DATA = '';
 
 // =============================================================================
 // User note display functions
@@ -81,7 +81,7 @@ END_USERNOTE_HEADER;
 function manual_notes_load($id)
 {
     // Initialize values
-    $notes = array();
+    $notes = [];
     $hash = substr(md5($id), 0, 16);
     $notes_file = $_SERVER['DOCUMENT_ROOT'] . "/backend/notes/" .
                   substr($hash, 0, 2) . "/$hash";
@@ -96,15 +96,15 @@ function manual_notes_load($id)
             $line = chop(fgets($fp, 12288));
             if ($line == "") { continue; }
             @list($id, $sect, $rate, $ts, $user, $note, $up, $down) = explode("|", $line);
-            $notes[$id] = array(
+            $notes[$id] = [
                 "id"    => $id,
                 "sect"  => $sect,
                 "rate"  => $rate,
                 "xwhen" => $ts,
                 "user"  => $user,
-                "note"  => base64_decode($note, false),
-                "votes"  => array("up"=> (int)$up, "down"=> (int)$down)
-            );
+                "note"  => base64_decode($note, true),
+                "votes"  => ["up"=> (int)$up, "down"=> (int)$down]
+            ];
         }
         fclose($fp);
     }
@@ -112,7 +112,7 @@ function manual_notes_load($id)
 }
 
 // Print out one user note entry
-function manual_note_display($date, $name, $text, $id, $votes = array('up'=>0, 'down'=>0), $voteOption = true)
+function manual_note_display($date, $name, $text, $id, $votes = ['up'=>0, 'down'=>0], $voteOption = true)
 {
     if ($name) {
         $name = "\n  <strong class=\"user\"><em>" . htmlspecialchars($name) . "</em></strong>";
@@ -197,54 +197,54 @@ USER_NOTE_TEXT;
 }
 
 function manual_navigation_breadcrumbs(array $setup) {
-    $menu = array();
+    $menu = [];
     foreach (array_reverse($setup["parents"]) as $parent) {
-        $menu[] = array(
+        $menu[] = [
             "title" => $parent[1],
             "link"  => $parent[0],
-        );
+        ];
     }
 
     // The index manual page has no parent..
     if ($setup["up"][0]) {
-        $last_item = array(
+        $last_item = [
             "title" => $setup["up"][1],
             "link"  => $setup["up"][0],
-        );
+        ];
         $menu[] = $last_item;
     }
     return $menu;
 }
 
 function manual_navigation_related(array $setup) {
-    $siblings = array();
+    $siblings = [];
     foreach ($setup['toc'] as $entry) {
-        $siblings[] = array(
+        $siblings[] = [
             "title" => manual_navigation_methodname($entry[1]),
             "link"  => $entry[0],
             "current" => $setup["this"][0] == $entry[0],
-        );
+        ];
     }
 
     // The index manual page has no parent..
     if ($setup["up"][0]) {
-        $last_item = array(
+        $last_item = [
             "title" => $setup["up"][1],
             "link"  => $setup["up"][0],
-        );
-        $siblings = array(array_merge($last_item, array("children" => $siblings)));
+        ];
+        $siblings = [array_merge($last_item, ["children" => $siblings])];
     }
     return $siblings;
 }
 
 function manual_navigation_deprecated(array $setup) {
-    $methods = array();
+    $methods = [];
     foreach ((array)$setup['toc_deprecated'] as $entry) {
-        $methods[] = array(
+        $methods[] = [
             "title" => manual_navigation_methodname($entry[1]),
             "link"  => $entry[0],
             "current" => $setup["this"][0] == $entry[0],
-        );
+        ];
     }
 
     return $methods;
@@ -258,7 +258,7 @@ function manual_navigation_methodname($methodname) {
     }
 
     // Add zero-width spaces to allow line-breaks at various characters
-    return str_replace(array('-', '_'), array('-&#8203;', '_&#8203;'), $methodname);
+    return str_replace(['-', '_'], ['-&#8203;', '_&#8203;'], $methodname);
 }
 
 // Set up variables important for this page
@@ -271,7 +271,7 @@ function manual_setup($setup) {
     global $__RELATED;
 
     if (!isset($setup["toc_deprecated"])) {
-        $setup["toc_deprecated"] = array();
+        $setup["toc_deprecated"] = [];
     }
     $PGI = $setup;
     // Set base href for this manual page
@@ -279,11 +279,11 @@ function manual_setup($setup) {
     $_SERVER['BASE_PAGE'] = $base . $setup['this'][0];
     $_SERVER['BASE_HREF'] = $MYSITE . $_SERVER['BASE_PAGE'];
 
-    $timestamps = array(
+    $timestamps = [
         filemtime($_SERVER["DOCUMENT_ROOT"] . "/" . $_SERVER["BASE_PAGE"]),
         filemtime($_SERVER["DOCUMENT_ROOT"] . "/include/prepend.inc"),
         filemtime($_SERVER["DOCUMENT_ROOT"] . "/styles/theme-base.css"),
-    );
+    ];
 
     // Load user note for this page
     list($filename, $title) = $PGI['this'];
@@ -304,22 +304,22 @@ function manual_setup($setup) {
     $__RELATED['toc'] = manual_navigation_related($setup);
     $__RELATED['toc_deprecated'] = manual_navigation_deprecated($setup);
 
-    $config = array(
+    $config = [
         "current" => "docs",
         "breadcrumbs" => $breadcrumbs,
         "languages"   => array_keys($ACTIVE_ONLINE_LANGUAGES),
-        "meta-navigation" => array(
+        "meta-navigation" => [
             "contents" => $base . $setup["home"][0],
             "index"    => $base . $setup["up"][0],
             "prev"     => $base . $setup["prev"][0],
             "next"     => $base . $setup["next"][0],
-        ),
+        ],
         "lang" => $setup["head"][1],
         "thispage" => $setup["this"][0],
         "prev" => $setup["prev"],
         "next" => $setup["next"],
         "cache" => $lastmod,
-    );
+    ];
     site_header($setup["this"][1] . " - Manual ", $config);
 
     $id = substr($setup['this'][0], 0, -4);
@@ -353,10 +353,10 @@ PAGE_TOOLS;
 function manual_language_chooser($currentlang, $currentpage) {
     global $ACTIVE_ONLINE_LANGUAGES;
 
-    $links = array();
+    $links = [];
 
     foreach ($ACTIVE_ONLINE_LANGUAGES as $lang => $name) {
-        $links[] = array("$lang/$currentpage", $name, $lang);
+        $links[] = ["$lang/$currentpage", $name, $lang];
     }
 
     // Print out the form with all the options
@@ -393,10 +393,10 @@ function manual_footer() {
     global $USERNOTES, $__RELATED;
 
     manual_notes($USERNOTES);
-    $config = array(
+    $config = [
         'related_menu' => $__RELATED['toc'],
         'related_menu_deprecated' => $__RELATED['toc_deprecated']
-    );
+    ];
     site_footer($config);
 }
 
@@ -404,13 +404,13 @@ function manual_footer() {
 function relTime(DateTime $date) {
     $current = new DateTime;
     $diff = $current->diff($date);
-    $units = array("year" => $diff->format("%y"),
+    $units = ["year" => $diff->format("%y"),
         "month" => $diff->format("%m"),
         "day" => $diff->format("%d"),
         "hour" => $diff->format("%h"),
         "minute" => $diff->format("%i"),
         "second" => $diff->format("%s"),
-    );
+    ];
     $out = "just now...";
     foreach ($units as $unit => $amount) {
         if (empty($amount)) {

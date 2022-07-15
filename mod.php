@@ -8,7 +8,7 @@
 $_SERVER['BASE_PAGE'] = 'mod.php';
 include_once __DIR__ . '/include/prepend.inc';
 
-site_header("Email confirmation", array("current" => "community"));
+site_header("Email confirmation", ["current" => "community"]);
 
 // Only run on main php.net box.
 if (!is_primary_site()) {
@@ -24,7 +24,7 @@ ERROR;
 }
 
 // These sites are handled by automoderation
-$sites = array("php.net", "lists.php.net");
+$sites = ["php.net", "lists.php.net"];
 
 // Get data from the URL
 list($none, $site, $token, $sender) = explode("/", $_SERVER["PATH_INFO"]);

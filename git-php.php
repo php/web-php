@@ -24,15 +24,15 @@ $SIDEBAR_DATA = '
  <a href="/git.php">Git</a>. No Git account is required.
 </p>
 ';
-site_header("Using Git for PHP Development", array("current" => "community"));
+site_header("Using Git for PHP Development", ["current" => "community"]);
 
-$groups = array(
+$groups = [
     "none" => "Choose One",
     "php"  => "PHP Group",
     "pear" => "PEAR Group",
     "pecl" => "PECL Group",
     "doc"  => "Doc Group",
-);
+];
 
 ?>
 
@@ -78,7 +78,7 @@ if (count($_POST) && (!isset($_POST['purpose']) || !is_array($_POST['purpose']) 
     if (!$error) {
         $error = posttohost(
             "https://main.php.net/entry/svn-account.php",
-            array(
+            [
                 "username" => $_POST['id'],
                 "name"     => $_POST['fullname'],
                 "email"    => $_POST['email'],
@@ -86,7 +86,7 @@ if (count($_POST) && (!isset($_POST['purpose']) || !is_array($_POST['purpose']) 
                 "note"     => $_POST['realpurpose'],
                 "yesno"    => $_POST['yesno'],
                 "group"    => $_POST['group'],
-            )
+            ]
         );
         // Error while posting
         if ($error) {
@@ -360,10 +360,10 @@ EOT;
  (check all that apply)</th>
  <td>
 <?php
-$purposes = array("Learning PHP", "Coding in PHP", "Reading the PHP source",
+$purposes = ["Learning PHP", "Coding in PHP", "Reading the PHP source",
     "Using PHP extensions", "Creating experimental PHP extensions",
     "Submitting a patch to PHP", "Adding notes to the documentation",
-    "Writing web pages with PHP");
+    "Writing web pages with PHP"];
 
 foreach ($purposes as $i => $p) { ?>
   <input type="checkbox" name="purpose[<?php echo $i?>]" value="1"

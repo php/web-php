@@ -10,13 +10,13 @@ function posttohost($url, $data)
 {
     $data = http_build_query($data);
 
-    $opts = array(
+    $opts = [
         'method'  => 'POST',
         'header'  => 'Content-type: application/x-www-form-urlencoded',
         'content' => $data,
-    );
+    ];
 
-    $ctx = stream_context_create(array('http' => $opts));
+    $ctx = stream_context_create(['http' => $opts]);
 
     return file_get_contents($url, false, $ctx);
 }
