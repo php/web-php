@@ -96,7 +96,7 @@ function make_image($file, $alt = false, $align = false, $extras = false,
 
     // Convert right or left alignment to CSS float,
     // but leave other alignments intact (for now)
-    if (in_array($align, array("right", "left"))) {
+    if (in_array($align, array("right", "left"), false)) {
         $align = ' style="float: ' . $align . ';"';
     } elseif ($align) {
         $align = ' align="' . $align . '"';
@@ -402,7 +402,7 @@ function print_news($news, $dog, $max = 5, $onlyyear = null, $return = false) {
         // Only print entries in the provided s/dog/cat/ egory
         // If $dog is null, everything matches
         foreach ($item["category"] as $category) {
-            if (is_null($dog) || in_array($category["term"], (array)$dog)) {
+            if (is_null($dog) || in_array($category["term"], (array)$dog, false)) {
                 $ok = true;
                 ++$count;
                 break;
@@ -561,7 +561,7 @@ function news_toc($sections = null) {
     foreach ($items as $section => $menu) {
 
         // only print requested sections.
-        if (is_array($sections) && !in_array($section, $sections)) {
+        if (is_array($sections) && !in_array($section, $sections, false)) {
             continue;
         }
 

@@ -107,7 +107,7 @@ function find_manual_page($lang, $keyword)
     // when rsync updates the database
     $dbh = false;
     if (class_exists('PDO')) {
-        if (in_array('sqlite', PDO::getAvailableDrivers())) {
+        if (in_array('sqlite', PDO::getAvailableDrivers(), true)) {
             if (file_exists($_SERVER['DOCUMENT_ROOT'] . '/backend/manual-lookup.sqlite')) {
                 try {
                     $dbh = new PDO( 'sqlite:' . $_SERVER['DOCUMENT_ROOT'] . '/backend/manual-lookup.sqlite', '', '', array(PDO::ATTR_PERSISTENT => true, PDO::ATTR_EMULATE_PREPARES => true) );

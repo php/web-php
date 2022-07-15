@@ -140,7 +140,7 @@ function myphpnet_urlsearch($type = false)
     global $MYPHPNET;
 
     // Set type if specified and if correct
-    if ($type && in_array($type, array(MYPHPNET_URL_FUNC, MYPHPNET_URL_MANUAL))) {
+    if ($type && in_array($type, array(MYPHPNET_URL_FUNC, MYPHPNET_URL_MANUAL), false)) {
         $MYPHPNET[1] = $type;
     }
 

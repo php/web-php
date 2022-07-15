@@ -56,8 +56,8 @@ function test_answer($name, $an, $bn, $answer) {
         }
     }
 
-    $a = array_search($an, NUMS);
-    $b = array_search($bn, NUMS);
+    $a = array_search($an, NUMS, false);
+    $b = array_search($bn, NUMS, false);
 
     if (empty($c) || $a === false || $b === false) return false;
 
