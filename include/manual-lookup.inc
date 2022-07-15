@@ -110,7 +110,7 @@ function find_manual_page($lang, $keyword)
         if (in_array('sqlite', PDO::getAvailableDrivers())) {
             if (file_exists($_SERVER['DOCUMENT_ROOT'] . '/backend/manual-lookup.sqlite')) {
                 try {
-                    $dbh = new PDO( 'sqlite:' . $_SERVER['DOCUMENT_ROOT'] . '/backend/manual-lookup.sqlite', '', '', array( PDO::ATTR_PERSISTENT => TRUE, PDO::ATTR_EMULATE_PREPARES => TRUE) );
+                    $dbh = new PDO( 'sqlite:' . $_SERVER['DOCUMENT_ROOT'] . '/backend/manual-lookup.sqlite', '', '', array(PDO::ATTR_PERSISTENT => TRUE, PDO::ATTR_EMULATE_PREPARES => TRUE) );
                 } catch (PDOException $e) {
                     return find_manual_page_slow($lang, $keyword);
                 }
@@ -196,12 +196,11 @@ function find_manual_page($lang, $keyword)
             $r = $stm->fetch(PDO::FETCH_NUM);
 
             if (isset($r[0])) {
-                if(isset($r[1]) && $r[1] > 10 && strlen($keyword) < 4) {
+                if (isset($r[1]) && $r[1] > 10 && strlen($keyword) < 4) {
                     // "Match" found, but the keyword is so short
                     // its probably bogus. Skip it
                     continue;
                 }
-
 
                 // Match found
                 // But does the file really exist?

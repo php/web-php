@@ -135,24 +135,24 @@ function gpg_key_get(string $rm): ?string {
 
 function gpg_key_get_branches(bool $activeOnly): array {
     $branches = [
-        '8.2' => [ 'pierrick', 'ramsey', 'sergey' ],
-        '8.1' => [ 'krakjoe', 'ramsey', 'patrickallaert' ],
-        '8.0' => [ 'pollita', 'carusogabriel' ],
-        '7.4' => [ 'derick', 'petk' ],
-        '7.3' => [ 'cmb', 'stas' ],
-        '7.2' => [ 'pollita', 'remi', 'cmb' ],
-        '7.1' => [ 'davey', 'krakjoe', 'pollita' ],
-        '7.0' => [ 'ab', 'tyrael' ],
-        '5.6' => [ 'tyrael', 'jpauli' ],
-        '5.5' => [ 'jpauli', 'dsp', 'stas' ],
-        '5.4' => [ 'stas' ],
-        '5.3' => [ 'dsp', 'johannes' ],
+        '8.2' => ['pierrick', 'ramsey', 'sergey'],
+        '8.1' => ['krakjoe', 'ramsey', 'patrickallaert'],
+        '8.0' => ['pollita', 'carusogabriel'],
+        '7.4' => ['derick', 'petk'],
+        '7.3' => ['cmb', 'stas'],
+        '7.2' => ['pollita', 'remi', 'cmb'],
+        '7.1' => ['davey', 'krakjoe', 'pollita'],
+        '7.0' => ['ab', 'tyrael'],
+        '5.6' => ['tyrael', 'jpauli'],
+        '5.5' => ['jpauli', 'dsp', 'stas'],
+        '5.4' => ['stas'],
+        '5.3' => ['dsp', 'johannes'],
     ];
 
     if (!$activeOnly) { return $branches; }
 
     $active = get_active_branches();
-    return array_filter($branches, function($branch) use ($active) {
+    return array_filter($branches, function ($branch) use ($active) {
         [$major] = explode('.', $branch, 2);
         return isset($active[$major][$branch]);
     }, ARRAY_FILTER_USE_KEY);
@@ -161,8 +161,8 @@ function gpg_key_get_branches(bool $activeOnly): array {
 function gpg_key_show_keys(bool $activeOnly): void {
     foreach (gpg_key_get_branches($activeOnly) as $branch => $rms) {
         $keys = array_filter(
-            array_map(function($rm) { return gpg_key_get($rm); }, $rms),
-            function($key) { return $key !== null; });
+            array_map(function ($rm) { return gpg_key_get($rm); }, $rms),
+            function ($key) { return $key !== null; });
         if (empty($keys)) { continue; }
 
         $branch = htmlentities($branch, ENT_QUOTES, 'UTF-8');

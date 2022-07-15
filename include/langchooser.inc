@@ -121,7 +121,7 @@ function language_choose_code()
     foreach ($browser_langs as $langdata) {
 
         // Translation table for accept-language codes and phpdoc codes
-        switch($langdata[0]) {
+        switch ($langdata[0]) {
             case "pt-br" : $langdata[0] = 'pt_br'; break;
             case "zh-cn" : $langdata[0] = 'zh'; break;
             case "zh-hk" : $langdata[0] = 'hk'; break;
@@ -162,7 +162,6 @@ function language_choose_code()
     // Return with all found data
     return array($selected, $explicitly_specified, $parsed_langs);
 }
-
 
 // Add a language to the possible languages' list
 function language_add($langcode, &$langs)

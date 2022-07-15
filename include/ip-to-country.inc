@@ -210,8 +210,8 @@ function i2c_realip()
             // 192.168.0.0/16
             // Also skip RFC 6598 IP's
             if (!preg_match('/^(?:10|100\.(?:6[4-9]|[7-9]\d|1[01]\d|12[0-7])|172\.(?:1[6-9]|2\d|3[01])|192\.168)\./', $ips[$i]) && ip2long($ips[$i])) {
-	            $ip = $ips[$i];
-	            break;
+                $ip = $ips[$i];
+                break;
             }
         }
     }

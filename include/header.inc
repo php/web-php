@@ -23,7 +23,6 @@ foreach($css_files as $filename) {
     $CSS[$filename] = @filemtime($path);
 }
 
-
 if (isset($shortname) && $shortname) {
     header("Link: <$shorturl>; rel=shorturl");
 }

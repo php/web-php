@@ -15,9 +15,9 @@ const MIRROR_DOESNOTWORK = 3;
 
 $MIRRORS = array(
     "https://www.php.net/" => array(
-    "DEU", "MyraCloud", FALSE,
-    "https://myracloud.com/en/", MIRROR_SPECIAL, TRUE,
-    "en", MIRROR_OK),
+        "DEU", "MyraCloud", FALSE,
+        "https://myracloud.com/en/", MIRROR_SPECIAL, TRUE,
+        "en", MIRROR_OK),
 );
 
 /**
@@ -166,28 +166,28 @@ function header_nocache()
 
 function get_available_sqlites() {
 
-	$allsqlites = array(1 => 'sqlite', 2 => 'sqlite3', 4 => 'pdo_sqlite', 8 => 'pdo_sqlite2');
-	$avail      = 0;
+    $allsqlites = array(1 => 'sqlite', 2 => 'sqlite3', 4 => 'pdo_sqlite', 8 => 'pdo_sqlite2');
+    $avail      = 0;
 
-	if (function_exists('sqlite_open')) {
-		$avail += 1;
-	}
-	if (class_exists('sqlite3')) {
-		$avail += 2;
-	}
-	if (method_exists('PDO', 'getavailabledrivers')) {
-		foreach (PDO::getavailabledrivers() as $driver) {
-			switch ($driver) {
-				case 'sqlite':
-					$avail += 4;
-					break;
-				case 'sqlite2':
-					$avail += 8;
-					break;
-			}
-		}
-	}
-	return $avail;
+    if (function_exists('sqlite_open')) {
+        $avail += 1;
+    }
+    if (class_exists('sqlite3')) {
+        $avail += 2;
+    }
+    if (method_exists('PDO', 'getavailabledrivers')) {
+        foreach (PDO::getavailabledrivers() as $driver) {
+            switch ($driver) {
+                case 'sqlite':
+                    $avail += 4;
+                    break;
+                case 'sqlite2':
+                    $avail += 8;
+                    break;
+            }
+        }
+    }
+    return $avail;
 }
 
 // Get all manual prefix search sections
@@ -217,7 +217,7 @@ function get_shortname($page) {
         // We can atleast remove manual/xx/
         $shorturl = substr($page, strrpos($page, "/")+1);
 
-        foreach($sections as $section) {
+        foreach ($sections as $section) {
             // If we know this section
             if (strpos($shorturl, $section) === 0) {
                 // We can make it even shorter
@@ -248,14 +248,13 @@ if (!isset($_SERVER["HTTPS"]) || $_SERVER["HTTPS"] != "on") {
     $proto = "https";
 }
 
-if($_SERVER["SERVER_PORT"] != '80' && $_SERVER["SERVER_PORT"] != 443) {
+if ($_SERVER["SERVER_PORT"] != '80' && $_SERVER["SERVER_PORT"] != 443) {
     $MYSITE = $proto . '://' . $_SERVER["SERVER_NAME"] . ':' . (int)$_SERVER["SERVER_PORT"] . '/';
     $msite  =      'http://' . $_SERVER["SERVER_NAME"] . ':' . (int)$_SERVER["SERVER_PORT"] . '/';
 } else {
     $MYSITE = $proto . '://' . $_SERVER["SERVER_NAME"] . '/';
     $msite  =     'https://' . $_SERVER["SERVER_NAME"] . '/';
 }
-
 
 // If the mirror is not registered with this name, provide defaults
 // (no country code, no search, no stats, English default language ...)
