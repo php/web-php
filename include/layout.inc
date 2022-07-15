@@ -10,13 +10,13 @@ ini_set('highlight.string',  'string');
 ini_set('highlight.html',    'html');
 
 // Highlight PHP code
-function highlight_php($code, $return = FALSE)
+function highlight_php($code, $return = false)
 {
-    $highlighted = highlight_string($code, TRUE);
+    $highlighted = highlight_string($code, true);
 
     // Use this ugly hack for now to avoid code snippets with bad syntax screwing up the highlighter
     if (strstr($highlighted, "include/layout.inc</b>")) {
-        $highlighted = '<span class="html">'. nl2br(htmlentities($code, ENT_HTML5), FALSE) ."</span>";
+        $highlighted = '<span class="html">'. nl2br(htmlentities($code, ENT_HTML5), false) ."</span>";
     }
 
     // Fix output to use CSS classes and wrap well
@@ -81,8 +81,8 @@ function resize_image($img, $width = 1, $height = 1)
 }
 
 // Return an <img> tag for a given image file available on the server
-function make_image($file, $alt = FALSE, $align = FALSE, $extras = FALSE,
-                    $dir = '/images', $addsize = TRUE)
+function make_image($file, $alt = false, $align = false, $extras = false,
+                    $dir = '/images', $addsize = true)
 {
     // If no / was provided at the start of $dir, add it
     $webdir = $_SERVER['MYSITE'] . ($dir[0] == '/' ? '' : '/') . $dir;
@@ -116,7 +116,7 @@ function make_image($file, $alt = FALSE, $align = FALSE, $extras = FALSE,
 }
 
 // Print an <img> tag out for a given file
-function print_image($file, $alt = FALSE, $align = FALSE, $extras = FALSE,
+function print_image($file, $alt = false, $align = false, $extras = false,
                      $dir = '/images')
 {
     echo make_image($file, $alt, $align, $extras, $dir);
@@ -134,13 +134,13 @@ function news_image($URL, $image, $alt, $print = true)
 }
 
 // Return HTML code for a submit button image
-function make_submit($file, $alt = FALSE, $align = FALSE, $extras = FALSE,
+function make_submit($file, $alt = false, $align = false, $extras = false,
                      $dir = '/images', $border = 0)
 {
     // Get an image without size info and convert the
     // border attribute to use CSS, as border="" is not
     // supported on <input> elements in [X]HTML
-    $img = make_image($file, $alt, $align, $extras, $dir, FALSE);
+    $img = make_image($file, $alt, $align, $extras, $dir, false);
     $img = str_replace(
         "border=\"$border\"",
         "style=\"border: {$border}px;\"",
@@ -152,7 +152,7 @@ function make_submit($file, $alt = FALSE, $align = FALSE, $extras = FALSE,
 }
 
 // Return a hiperlink to something within the site
-function make_link ($url, $linktext = FALSE, $target = FALSE, $extras = FALSE)
+function make_link ($url, $linktext = false, $target = false, $extras = false)
 {
     return sprintf("<a href=\"%s\"%s%s>%s</a>",
         $url,
@@ -163,7 +163,7 @@ function make_link ($url, $linktext = FALSE, $target = FALSE, $extras = FALSE)
 }
 
 // Print a hyperlink to something, within the site
-function print_link($url, $linktext = FALSE, $target = FALSE, $extras = FALSE)
+function print_link($url, $linktext = false, $target = false, $extras = false)
 {
     echo make_link($url, $linktext, $target, $extras);
 }
@@ -249,7 +249,7 @@ function clean($var) {
 function clean_note($text)
 {
     // Highlight PHP source
-    $text = highlight_php(trim($text), TRUE);
+    $text = highlight_php(trim($text), true);
 
     // Turn urls into links
     return preg_replace(

@@ -400,5 +400,5 @@ function get_current_release_for_branch(int $major, ?int $minor): ?string {
         }
     }
 
-    return NULL;
+    return null;
 }
