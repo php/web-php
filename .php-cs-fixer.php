@@ -8,7 +8,11 @@ $finder = $config->getFinder()
     ->ignoreDotFiles(false)
     ->in(__DIR__)
     ->exclude('manual/en/')
+    ->name('*.inc')
     ->name(__FILE__)
+    ->notPath('include/last_updated.inc')
+    ->notPath('include/pregen-confs.inc')
+    ->notPath('include/pregen-news.inc')
     ->notPath('tests/run-tests.php');
 
 $config->setRules([

@@ -15,7 +15,7 @@ header("Content-type: text/html; charset=utf-8");
 header("Permissions-Policy: interest-cohort=()");
 
 /* Fix Silly Same Origin Policies */
-(function() {
+(function () {
     if (!isset($_SERVER["HTTP_ORIGIN"])) {
         return;
     }
@@ -48,7 +48,6 @@ header("X-Frame-Options: SAMEORIGIN");
 if (ini_get("date.timezone") === "" && function_exists("date_default_timezone_set")) {
     date_default_timezone_set("UTC");
 }
-
 
 /* Compatibility with the PHP webserver.. */
 if (!isset($_SERVER["SERVER_ADDR"])) {

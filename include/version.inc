@@ -15,7 +15,7 @@
  *     ),
  * );
  */
-$RELEASES = (function() {
+$RELEASES = (function () {
     $data = [];
 
     /* PHP 8.1 Release */
@@ -93,5 +93,5 @@ function release_get_latest() {
         }
     }
 
-    return [ $version, $current ];
+    return [$version, $current];
 }

@@ -15,9 +15,9 @@ function highlight_php($code, $return = FALSE)
     $highlighted = highlight_string($code, TRUE);
 
     // Use this ugly hack for now to avoid code snippets with bad syntax screwing up the highlighter
-    if(strstr($highlighted, "include/layout.inc</b>")) {
-	    $highlighted = '<span class="html">'. nl2br(htmlentities($code, ENT_HTML5), FALSE) ."</span>";
-	}
+    if (strstr($highlighted, "include/layout.inc</b>")) {
+        $highlighted = '<span class="html">'. nl2br(htmlentities($code, ENT_HTML5), FALSE) ."</span>";
+    }
 
     // Fix output to use CSS classes and wrap well
     $highlighted = '<div class="phpcode">' . str_replace(
@@ -61,7 +61,6 @@ function highlight_php_trimmed($code, $return = false)
 
 // Stats pages still need this
 function commonHeader($title) { site_header($title); }
-
 
 // Stats pages still need this
 function commonFooter() { site_footer(); }
@@ -206,7 +205,7 @@ function download_link($file, $title)
         $local_file = "distributions/$file";
     }
 
-    if(@file_exists($local_file.".asc")) {
+    if (@file_exists($local_file.".asc")) {
         echo " ";
         $sig_link = "/distributions/$file.asc";
         print_link($sig_link, "(sig)");
@@ -235,10 +234,10 @@ function sect_to_file($string) {
     $chap = "ref.$string.php";
     $feat = "features.$string.php";
     $struct = "control-structures.$string.php";
-    if(@is_file($func)) return $func;
-    else if(@is_file($chap)) return $chap;
-    else if(@is_file($feat)) return $feat;
-    else if(@is_file($struct)) return $struct;
+    if (@is_file($func)) return $func;
+    else if (@is_file($chap)) return $chap;
+    else if (@is_file($feat)) return $feat;
+    else if (@is_file($struct)) return $struct;
     else return "$string.php";
 }
 
@@ -293,10 +292,10 @@ function display_event($event, $include_date = 1)
 
     // Recurring possibilities
     $re = array(
-         1 => 'First',
-         2 => 'Second',
-         3 => 'Third',
-         4 => 'Fourth',
+        1 => 'First',
+        2 => 'Second',
+        3 => 'Third',
+        4 => 'Fourth',
         -1 => 'Last',
         -2 => '2nd Last',
         -3 => '3rd Last'
@@ -351,7 +350,7 @@ function display_event($event, $include_date = 1)
     }
 
     // Event category
-    if(isset($event['category']) && $event['category']) {
+    if (isset($event['category']) && $event['category']) {
         $cat = array("unknown", "User Group Event", "Conference", "Training");
         echo ' [' . $cat[$event['category']] . '] ';
     }
@@ -397,12 +396,12 @@ function print_news($news, $dog, $max = 5, $onlyyear = null, $return = false) {
     $retval = array();
     $count = 0;
     $news = $news ?: array(); // default to empty array (if no news)
-    foreach($news as $item) {
+    foreach ($news as $item) {
         $ok = false;
 
         // Only print entries in the provided s/dog/cat/ egory
         // If $dog is null, everything matches
-        foreach($item["category"] as $category) {
+        foreach ($item["category"] as $category) {
             if (is_null($dog) || in_array($category["term"], (array)$dog)) {
                 $ok = true;
                 ++$count;
@@ -417,7 +416,7 @@ function print_news($news, $dog, $max = 5, $onlyyear = null, $return = false) {
         }
 
         $image = "";
-        if(isset($item["newsImage"])) {
+        if (isset($item["newsImage"])) {
             $image = news_image($item["newsImage"]["link"], $item["newsImage"]["content"], $item["newsImage"]["title"], false);
         }
 
@@ -425,7 +424,7 @@ function print_news($news, $dog, $max = 5, $onlyyear = null, $return = false) {
         $id = $id["fragment"];
 
         // Find the permlink
-        foreach($item["link"] as $link) {
+        foreach ($item["link"] as $link) {
             if ($link["rel"] === "via") {
                 $permlink = $link["href"];
                 break;
@@ -471,9 +470,6 @@ EOT;
     return $retval;
 }
 
-
-
-
 function site_header($title = '', $config = array())
 {
     global $MYSITE;
@@ -488,9 +484,7 @@ function site_header($title = '', $config = array())
         "headsup"     => "",
     );
 
-
     $config = array_merge($defaults, $config);
-
 
     $config["headsup"] = get_news_changes();
 
@@ -564,7 +558,7 @@ function news_toc($sections = null) {
         ),
     );
 
-    foreach($items as $section => $menu) {
+    foreach ($items as $section => $menu) {
 
         // only print requested sections.
         if (is_array($sections) && !in_array($section, $sections)) {
@@ -572,7 +566,7 @@ function news_toc($sections = null) {
         }
 
         echo "<dt><a href='{$menu["link"]}'>{$menu["title"]}</a></dt>\n";
-        foreach($menu["children"] as $child) {
+        foreach ($menu["children"] as $child) {
             echo "<dd><a href='{$child["permlink"]}'>{$child["title"]}</a></dd>\n";
         }
     }
@@ -628,12 +622,12 @@ function doc_toc_list($lang, $index, $file) {
     include __DIR__ . "/../manual/$lang/toc/$file.inc";
 
     doc_toc_title($lang, $index, $file);
-    foreach($TOC as $entry) {
+    foreach ($TOC as $entry) {
         echo "\t<dd><a href='/manual/$lang/{$entry[0]}'>{$entry[1]}</a></dd>\n";
     }
 }
 function doc_toc_title($lang, $index, $file, $elm = "dt") {
-    foreach($index as $entry) {
+    foreach ($index as $entry) {
         if ($entry[0] == "$file.php") {
             $link  = $entry[0];
             $title = $entry[1];

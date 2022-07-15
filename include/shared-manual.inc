@@ -18,7 +18,6 @@ include_once __DIR__ . '/prepend.inc';
 // Set variable defaults
 $PGI = array(); $SIDEBAR_DATA = '';
 
-
 // =============================================================================
 // User note display functions
 // =============================================================================
@@ -68,7 +67,7 @@ END_USERNOTE_HEADER;
     } else {
         // If we have notes, print them out
         echo '<div id="allnotes">';
-        foreach($notes as $note) {
+        foreach ($notes as $note) {
             manual_note_display(
                 $note['xwhen'], $note['user'], $note['note'], $note['id'], $note['votes']
             );
@@ -113,7 +112,7 @@ function manual_notes_load($id)
 }
 
 // Print out one user note entry
-function manual_note_display($date, $name, $text, $id, $votes = array('up'=>0,'down'=>0), $voteOption = true)
+function manual_note_display($date, $name, $text, $id, $votes = array('up'=>0, 'down'=>0), $voteOption = true)
 {
     if ($name) {
         $name = "\n  <strong class=\"user\"><em>" . htmlspecialchars($name) . "</em></strong>";
@@ -197,10 +196,9 @@ USER_NOTE_TEXT;
 
 }
 
-
 function manual_navigation_breadcrumbs(array $setup) {
     $menu = array();
-    foreach(array_reverse($setup["parents"]) as $parent) {
+    foreach (array_reverse($setup["parents"]) as $parent) {
         $menu[] = array(
             "title" => $parent[1],
             "link"  => $parent[0],
@@ -220,7 +218,7 @@ function manual_navigation_breadcrumbs(array $setup) {
 
 function manual_navigation_related(array $setup) {
     $siblings = array();
-    foreach($setup['toc'] as $entry) {
+    foreach ($setup['toc'] as $entry) {
         $siblings[] = array(
             "title" => manual_navigation_methodname($entry[1]),
             "link"  => $entry[0],
@@ -241,7 +239,7 @@ function manual_navigation_related(array $setup) {
 
 function manual_navigation_deprecated(array $setup) {
     $methods = array();
-    foreach((array)$setup['toc_deprecated'] as $entry) {
+    foreach ((array)$setup['toc_deprecated'] as $entry) {
         $methods[] = array(
             "title" => manual_navigation_methodname($entry[1]),
             "link"  => $entry[0],
@@ -260,7 +258,7 @@ function manual_navigation_methodname($methodname) {
     }
 
     // Add zero-width spaces to allow line-breaks at various characters
-    return str_replace(array('-','_'), array('-&#8203;','_&#8203;'), $methodname);
+    return str_replace(array('-', '_'), array('-&#8203;', '_&#8203;'), $methodname);
 }
 
 // Set up variables important for this page
@@ -407,12 +405,12 @@ function relTime(DateTime $date) {
     $current = new DateTime;
     $diff = $current->diff($date);
     $units = array("year" => $diff->format("%y"),
-                   "month" => $diff->format("%m"),
-                   "day" => $diff->format("%d"),
-                   "hour" => $diff->format("%h"),
-                   "minute" => $diff->format("%i"),
-                   "second" => $diff->format("%s"),
-                  );
+        "month" => $diff->format("%m"),
+        "day" => $diff->format("%d"),
+        "hour" => $diff->format("%h"),
+        "minute" => $diff->format("%i"),
+        "second" => $diff->format("%s"),
+    );
     $out = "just now...";
     foreach ($units as $unit => $amount) {
         if (empty($amount)) {
