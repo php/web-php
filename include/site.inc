@@ -15,8 +15,8 @@ const MIRROR_DOESNOTWORK = 3;
 
 $MIRRORS = array(
     "https://www.php.net/" => array(
-        "DEU", "MyraCloud", FALSE,
-        "https://myracloud.com/en/", MIRROR_SPECIAL, TRUE,
+        "DEU", "MyraCloud", false,
+        "https://myracloud.com/en/", MIRROR_SPECIAL, true,
         "en", MIRROR_OK),
 );
 
@@ -30,7 +30,7 @@ include __DIR__ . '/languages.inc';
 
 // Returns true if the current (or specified)
 // site is the primary mirror site
-function is_primary_site($site = FALSE)
+function is_primary_site($site = false)
 {
     global $MYSITE;
     if (!$site) { $site = $MYSITE; }
@@ -39,32 +39,32 @@ function is_primary_site($site = FALSE)
 
 // Returns true if the current (or specified)
 // mirror site is an official mirror site
-function is_official_mirror($site = FALSE)
+function is_official_mirror($site = false)
 {
     return (mirror_type($site) != MIRROR_VIRTUAL);
 }
 
 // Returns the current (or specified)
 // mirror site's default language
-function default_language($site = FALSE)
+function default_language($site = false)
 {
     global $MIRRORS, $MYSITE;
     if (!$site) { $site = $MYSITE; }
-    return (isset($MIRRORS[$site]) ? $MIRRORS[$site][6] : FALSE);
+    return (isset($MIRRORS[$site]) ? $MIRRORS[$site][6] : false);
 }
 
 // Returns true if the current (or specified) mirror
 // site is registered to have local search support
-function have_search($site = FALSE)
+function have_search($site = false)
 {
     global $MIRRORS, $MYSITE;
     if (!$site) { $site = $MYSITE; }
-    return (isset($MIRRORS[$site]) ? $MIRRORS[$site][5] : FALSE);
+    return (isset($MIRRORS[$site]) ? $MIRRORS[$site][5] : false);
 }
 
 // Returns the current (or specified)
 // mirror site's provider's name
-function mirror_provider($site = FALSE)
+function mirror_provider($site = false)
 {
     global $MIRRORS, $MYSITE;
     if (!$site) { $site = $MYSITE; }
@@ -82,7 +82,7 @@ function mirror_provider($site = FALSE)
 
 // Returns the current (or specified)
 // mirror site's provider's URL
-function mirror_provider_url($site = FALSE)
+function mirror_provider_url($site = false)
 {
     global $MIRRORS,$MYSITE;
     if (!$site) { $site = $MYSITE; }
@@ -100,7 +100,7 @@ function mirror_provider_url($site = FALSE)
 
 // Returns the current (or specified)
 // mirror site's type (use the constants!)
-function mirror_type($site = FALSE)
+function mirror_type($site = false)
 {
     global $MIRRORS, $MYSITE;
     if (!$site) { $site = $MYSITE; }
@@ -149,7 +149,7 @@ function mirror_setcookie($name, $content, $exptime)
         return setcookie($name, $content, time() + $exptime, '/');
     }
 
-    return FALSE;
+    return false;
 }
 
 // Use this function to write out proper headers on
@@ -259,7 +259,7 @@ if ($_SERVER["SERVER_PORT"] != '80' && $_SERVER["SERVER_PORT"] != 443) {
 // If the mirror is not registered with this name, provide defaults
 // (no country code, no search, no stats, English default language ...)
 if (!isset($MIRRORS[$MYSITE])) {
-    $MIRRORS[$MYSITE] = array("xx", $MYSITE, FALSE, $MYSITE, MIRROR_VIRTUAL, FALSE, "en", MIRROR_OK);
+    $MIRRORS[$MYSITE] = array("xx", $MYSITE, false, $MYSITE, MIRROR_VIRTUAL, false, "en", MIRROR_OK);
 }
 
 // Override mirror language with local preference

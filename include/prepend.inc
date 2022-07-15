@@ -99,10 +99,10 @@ function myphpnet_load()
     global $MYPHPNET, $MYSITE;
 
     // Empty the preferences array
-    $MYPHPNET = array(FALSE, FALSE, "NONE", 0, FALSE);
+    $MYPHPNET = array(false, false, "NONE", 0, false);
 
     if ($MYSITE === 'http://docs.php.net/') {
-        $MYPHPNET[4] = TRUE;
+        $MYPHPNET[4] = true;
     }
 
     // If we have a cookie, set the values in the array
@@ -115,7 +115,7 @@ function myphpnet_load()
 }
 
 // Get or set preferred language code
-function myphpnet_language($langcode = FALSE)
+function myphpnet_language($langcode = false)
 {
     global $MYPHPNET, $LANGUAGES;
 
@@ -135,7 +135,7 @@ const MYPHPNET_URL_FUNC = 'quickref';
 const MYPHPNET_URL_MANUAL = 'manual';
 
 // Set URL search fallback preference
-function myphpnet_urlsearch($type = FALSE)
+function myphpnet_urlsearch($type = false)
 {
     global $MYPHPNET;
 
@@ -179,7 +179,7 @@ function myphpnet_save()
 
     // Fill in values not specified
     for ($i = 0; $i <= 3; $i++) {
-        if (!isset($MYPHPNET[$i])) { $MYPHPNET[$i] = FALSE; }
+        if (!isset($MYPHPNET[$i])) { $MYPHPNET[$i] = false; }
     }
 
     // Set all the preferred values for a year

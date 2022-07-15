@@ -9,10 +9,10 @@
 function get_actual_download_file($file)
 {
     // Could be a normal download or a manual download file
-    $possible_files = array($file => TRUE, "manual/$file" => FALSE);
+    $possible_files = array($file => true, "manual/$file" => false);
 
     // Find out what is the exact file requested
-    $found = FALSE;
+    $found = false;
     foreach ($possible_files as $name => $log) {
         if (@file_exists($_SERVER['DOCUMENT_ROOT'] . '/distributions/' . $name)) {
             $found = $name;

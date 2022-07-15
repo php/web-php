@@ -16,7 +16,7 @@ $site_config = array(
 );
 
 // Find out what is the exact file requested
-$file = FALSE;
+$file = false;
 foreach ($possible_files as $name) {
     if (@file_exists($_SERVER['DOCUMENT_ROOT'] . '/distributions/' . $name)) {
         $file = $name;
@@ -30,7 +30,7 @@ site_header('Get Download', $site_config);
 echo '<div id="mirrors-container">';
 $size = 0;
 // No downloadable file found
-if ($file === FALSE) {
+if ($file === false) {
         $info = "<p>
  The file you requested (<strong>" . htmlspecialchars($df, ENT_QUOTES, "UTF-8") . "</strong>) is not found on
  this server (<strong>{$MYSITE}</strong>).</p>";

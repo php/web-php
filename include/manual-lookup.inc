@@ -105,12 +105,12 @@ function find_manual_page($lang, $keyword)
     // open the database, fall back to normal search. Use
     // open rather than popen to avoid any chance of confusion
     // when rsync updates the database
-    $dbh = FALSE;
+    $dbh = false;
     if (class_exists('PDO')) {
         if (in_array('sqlite', PDO::getAvailableDrivers())) {
             if (file_exists($_SERVER['DOCUMENT_ROOT'] . '/backend/manual-lookup.sqlite')) {
                 try {
-                    $dbh = new PDO( 'sqlite:' . $_SERVER['DOCUMENT_ROOT'] . '/backend/manual-lookup.sqlite', '', '', array(PDO::ATTR_PERSISTENT => TRUE, PDO::ATTR_EMULATE_PREPARES => TRUE) );
+                    $dbh = new PDO( 'sqlite:' . $_SERVER['DOCUMENT_ROOT'] . '/backend/manual-lookup.sqlite', '', '', array(PDO::ATTR_PERSISTENT => true, PDO::ATTR_EMULATE_PREPARES => true) );
                 } catch (PDOException $e) {
                     return find_manual_page_slow($lang, $keyword);
                 }
@@ -130,7 +130,7 @@ function find_manual_page($lang, $keyword)
     if ($keyword != '_') {
         $keyword = str_replace('_', '-', $keyword);
     }
-    if (strpos($keyword, '(') !== FALSE) {
+    if (strpos($keyword, '(') !== false) {
         $keyword = preg_replace("!\\(.*\\)!", "-", $keyword);
     }
 

@@ -51,9 +51,9 @@ function i2c_go()
     $ipnum = i2c_realip();
 
     // User already has a country detected with this IP stored
-    if (!empty($_COOKIE['COUNTRY']) && strpos($_COOKIE['COUNTRY'], ',') !== FALSE) {
+    if (!empty($_COOKIE['COUNTRY']) && strpos($_COOKIE['COUNTRY'], ',') !== false) {
        list($COUNTRY, $storedip) = explode(",", $_COOKIE['COUNTRY']);
-       if ($storedip == $ipnum) { return TRUE; }
+       if ($storedip == $ipnum) { return true; }
     }
 
     // Convert the IP number to some useable form for searching
@@ -66,7 +66,7 @@ function i2c_go()
     // in the index do not search, as it would take
     // a very long time. It is an error, if we have
     // not found anything in the index
-    if ($idx !== FALSE) {
+    if ($idx !== false) {
         $country = i2c_search_in_db($ipn, $idx);
     } else {
         $country = 'NA';
@@ -91,7 +91,7 @@ function i2c_search_in_index($ip)
         __DIR__ . "/../backend/ip-to-country.idx",
         "r"
     );
-    if (!$dbidx) { return FALSE; }
+    if (!$dbidx) { return false; }
 
     // Read in granularity from index file and
     // convert current IP to something useful
@@ -188,7 +188,7 @@ function i2c_realip()
 {
     // No IP found (will be overwritten by for
     // if any IP is found behind a firewall)
-    $ip = FALSE;
+    $ip = false;
 
     // If HTTP_CLIENT_IP is set, then give it priority
     if (!empty($_SERVER["HTTP_CLIENT_IP"])) {
@@ -203,7 +203,7 @@ function i2c_realip()
 
         // Put the IP's into an array which we shall work with shortly.
         $ips = explode (", ", $_SERVER['HTTP_X_FORWARDED_FOR']);
-        if ($ip) { array_unshift($ips, $ip); $ip = FALSE; }
+        if ($ip) { array_unshift($ips, $ip); $ip = false; }
 
         for ($i = 0; $i < count($ips); $i++) {
             // Skip RFC 1918 IP's 10.0.0.0/8, 172.16.0.0/12 and
