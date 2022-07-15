@@ -48,7 +48,7 @@ class Entry {
         if (!isset(self::CATEGORIES[$cat])) {
             throw new \Exception("Unknown category: $cat");
         }
-        if (!in_array($cat, $this->categories)) {
+        if (!in_array($cat, $this->categories, true)) {
             $this->categories[] = $cat;
         }
         return $this;

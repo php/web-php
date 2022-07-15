@@ -89,7 +89,7 @@ $active_majors = array_keys($RELEASES);
 $latest = max($active_majors);
 foreach ($OLDRELEASES as $major => $a) {
     echo '<a id="v' .$major. '"></a>';
-    if (!in_array($major, $active_majors)) {
+    if (!in_array($major, $active_majors, true)) {
         echo "\n<br>\n";
         echo "<p>Support for PHP $major has been <b style=\"color: red;\">discontinued</b> ";
         echo "since <b>" . current($a)['date'] . '</b>.';

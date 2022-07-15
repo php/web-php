@@ -28,7 +28,7 @@ $archived = array('da', 'kr', 'pl', 'tw');
 
 foreach ($INACTIVE_ONLINE_LANGUAGES as $cc => $lang) {
     $link = 'no archive';
-    if (in_array($cc, $archived)) {
+    if (in_array($cc, $archived, true)) {
         $link = '<a href="http://docs.php.net/manual/'. $cc .'">archive</a>';
     }
     echo '<li>', $lang, ': (', $link, ')</li>';
