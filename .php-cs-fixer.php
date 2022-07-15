@@ -13,6 +13,7 @@ $finder = $config->getFinder()
 
 $config->setRules([
     'array_indentation' => true,
+    'constant_case' => true,
     'indentation_type' => true,
     'line_ending' => true,
     'no_extra_blank_lines' => true,
