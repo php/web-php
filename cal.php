@@ -371,7 +371,7 @@ function read_event($fp)
         'recur_day' => $recur_day,
         'sdesc'     => $sdesc,
         'url'       => $url,
-        'ldesc'     => base64_decode($ldesc, true),
+        'ldesc'     => base64_decode($ldesc, false),
         'country'   => $country,
         'category'  => $category,
     );

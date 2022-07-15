@@ -69,7 +69,7 @@ if ($process) {
     if (!$_POST['url']) {
         $errors[] = "You must supply a URL with more information about the event.";
     }
-    elseif (empty($pu['host']) || !in_array($pu['scheme'], $valid_schemes, true)) {
+    elseif (empty($pu['host']) || !in_array($pu['scheme'], $valid_schemes, false)) {
         $errors[] = "The URL you supplied was invalid.";
     }
 

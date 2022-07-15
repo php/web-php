@@ -102,7 +102,7 @@ function manual_notes_load($id)
                 "rate"  => $rate,
                 "xwhen" => $ts,
                 "user"  => $user,
-                "note"  => base64_decode($note, true),
+                "note"  => base64_decode($note, false),
                 "votes"  => array("up"=> (int)$up, "down"=> (int)$down)
             );
         }
