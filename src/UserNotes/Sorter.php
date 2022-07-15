@@ -24,7 +24,7 @@ class Sorter {
     /**
      * @param array<string, UserNote> $notes
      */
-    public function sort(array &$notes) {
+    public function sort(array &$notes):void {
         // First we make a pass over the data to get the min and max values
         // for data normalization.
         $this->findMinMaxValues($notes);
@@ -47,15 +47,15 @@ class Sorter {
         });
     }
 
-    private function calcVotePriority(UserNote $note) {
+    private function calcVotePriority(UserNote $note):float {
         return ($note->upvotes - $note->downvotes - $this->minVote) * $this->voteFactor + .3;
     }
 
-    private function calcRatingPriority(UserNote $note) {
+    private function calcRatingPriority(UserNote $note):float {
         return $note->upvotes + $note->downvotes <= 2 ? 0.5 : $this->calcRating($note);
     }
 
-    private function calcRating(UserNote $note) {
+    private function calcRating(UserNote $note):float {
         $totalVotes = $note->upvotes + $note->downvotes;
         return $totalVotes > 0 ? $note->upvotes / $totalVotes : .5;
     }
@@ -76,7 +76,7 @@ class Sorter {
     /**
      * @param array<string, UserNote> $notes
      */
-    private function findMinMaxValues(array $notes) {
+    private function findMinMaxValues(array $notes):void {
         if ($notes === []) {
             return;
         }
