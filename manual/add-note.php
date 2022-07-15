@@ -1,11 +1,15 @@
 <?php
+
+use phpweb\Spam\Challenge;
+
 $ip_spam_lookup_url = 'http://www.dnsbl.info/dnsbl-database-check.php?IP=';
 
 $_SERVER['BASE_PAGE'] = 'manual/add-note.php';
+
+require_once __DIR__ . '/../autoload.php';
 include_once __DIR__ . '/../include/prepend.inc';
 include_once __DIR__ . '/../include/posttohost.inc';
 include_once __DIR__ . '/../include/shared-manual.inc';
-include __DIR__ . '/spam_challenge.php';
 
 use phpweb\UserNotes\UserNote;
 
@@ -55,7 +59,7 @@ if ($process) {
     }
 
     // SPAM challenge failed
-    elseif (!test_answer($_POST['func'], $_POST['arga'], $_POST['argb'], $_POST['answer'])) {
+    elseif (!Challenge::isValidAnswer($_POST['func'], $_POST['arga'], $_POST['argb'], $_POST['answer'])) {
         $error = 'SPAM challenge failed.';
     }
 
@@ -366,14 +370,14 @@ else {?>
   </tr>
   <tr>
    <th class="subr"><label for="form-answer">Answer to this simple question (SPAM challenge)</label>:<br>
-   <?php $c = gen_challenge(); echo $c[3]; ?>?</th>
+   <?php $c = Challenge::create(); echo $c->question; ?>?</th>
    <td><input id="form-answer" type="text" name="answer" size="60" maxlength="10" required> (Example: nine)</td>
   </tr>
   <tr>
    <th colspan="2">
-    <input type="hidden" name="func" value="<?php echo $c[0]; ?>">
-    <input type="hidden" name="arga" value="<?php echo $c[1]; ?>">
-    <input type="hidden" name="argb" value="<?php echo $c[2]; ?>">
+    <input type="hidden" name="func" value="<?php echo $c->function; ?>">
+    <input type="hidden" name="arga" value="<?php echo $c->argumentOne; ?>">
+    <input type="hidden" name="argb" value="<?php echo $c->argumentTwo; ?>">
     <input type="submit" name="action" value="Preview">
     <input type="submit" name="action" value="Add Note">
    </th>

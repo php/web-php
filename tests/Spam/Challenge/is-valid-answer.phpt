@@ -1,9 +1,13 @@
 --TEST--
-test_answer() returns true when answer to spam challenge is valid
+Challenge::isValidAnswer() returns true when answer to spam challenge is valid
 --FILE--
 <?php
 
-require_once __DIR__ . '/../manual/spam_challenge.php';
+declare(strict_types=1);
+
+use phpweb\Spam\Challenge;
+
+require_once __DIR__ . '/../../../src/autoload.php';
 
 $answers = [
     [
@@ -73,7 +77,7 @@ $answers = [
 ];
 
 $results = array_map(static function (array $answer): array {
-    $answer['isValid'] = test_answer(
+    $answer['isValid'] = Challenge::isValidAnswer(
         $answer['function'],
         $answer['argumentOne'],
         $answer['argumentTwo'],

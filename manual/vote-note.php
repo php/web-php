@@ -1,9 +1,13 @@
 <?php
+
+use phpweb\Spam\Challenge;
+
 $_SERVER['BASE_PAGE'] = 'manual/vote-note.php';
+
+require_once __DIR__ . '/../autoload.php';
 include_once __DIR__ . '/../include/prepend.inc';
 include_once __DIR__ . '/../include/posttohost.inc';
 include_once __DIR__ . '/../include/shared-manual.inc';
-include_once __DIR__ . '/spam_challenge.php';
 
 // Initialize global variables
 $error = false;
@@ -53,7 +57,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
   }
   if (!empty($_REQUEST['id']) && !empty($_REQUEST['page']) && ($N = manual_notes_load($_REQUEST['page'])) && array_key_exists($_REQUEST['id'], $N) && !empty($_REQUEST['vote']) && ($_REQUEST['vote'] === 'up' || $_REQUEST['vote'] === 'down')) {
     if (!empty($_POST['challenge']) && !empty($_POST['func']) || empty($_POST['arga']) || empty($_POST['argb'])) {
-      if (!test_answer($_POST['func'], $_POST['arga'], $_POST['argb'], $_POST['challenge'])) {
+      if (!Challenge::isValidAnswer($_POST['func'], $_POST['arga'], $_POST['argb'], $_POST['challenge'])) {
         $error = "Incorrect answer! Please try again.";
       }
       else {
@@ -109,13 +113,13 @@ else {
   <div style="background-color: #f5f5ff; border: 1px solid black; padding: 15px; width: 90%; margin: auto;">
    <form action="" method="post">
     <div>
-    <p><label for="form-challenge">Please answer this simple SPAM challenge</label>: <strong><?php $c = gen_challenge(); echo $c[3]; ?></strong>?<br>
+    <p><label for="form-challenge">Please answer this simple SPAM challenge</label>: <strong><?php $c = Challenge::create(); echo $c->question; ?></strong>?<br>
     <input id="form-challenge" type="text" name="challenge" maxlength="10" required> (Example: nine)</p>
     <p><input type="submit" value="Vote" name="votenote"></p>
     </div>
-    <input type="hidden" name="func" value="<?php echo $c[0]; ?>">
-    <input type="hidden" name="arga" value="<?php echo $c[1]; ?>">
-    <input type="hidden" name="argb" value="<?php echo $c[2]; ?>">
+    <input type="hidden" name="func" value="<?php echo $c->function; ?>">
+    <input type="hidden" name="arga" value="<?php echo $c->argumentOne; ?>">
+    <input type="hidden" name="argb" value="<?php echo $c->argumentTwo; ?>">
    </form>
   </div>
  </div>
@@ -158,13 +162,13 @@ if (!$headerset) {
   <div style="background-color: #f5f5ff; border: 1px solid black; padding: 15px; width: 90%; margin: auto;">
    <form action="" method="post">
     <div>
-    <p><label for="form-challenge">Please answer this simple SPAM challenge</label>: <strong><?php $c = gen_challenge(); echo $c[3]; ?></strong>?<br>
+    <p><label for="form-challenge">Please answer this simple SPAM challenge</label>: <strong><?php $c = Challenge::create(); echo $c->question; ?></strong>?<br>
     <input id="form-challenge" type="text" name="challenge" maxlength="10" required> (Example: nine)</p>
     <p><input type="submit" value="Vote" name="votenote"></p>
     </div>
-    <input type="hidden" name="func" value="<?php echo $c[0]; ?>">
-    <input type="hidden" name="arga" value="<?php echo $c[1]; ?>">
-    <input type="hidden" name="argb" value="<?php echo $c[2]; ?>">
+    <input type="hidden" name="func" value="<?php echo $c->function; ?>">
+    <input type="hidden" name="arga" value="<?php echo $c->argumentOne; ?>">
+    <input type="hidden" name="argb" value="<?php echo $c->argumentTwo; ?>">
    </form>
   <?php echo $error_div; ?>
   </div>

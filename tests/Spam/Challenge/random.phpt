@@ -1,20 +1,24 @@
 --TEST--
-gen_challenge() generates a spam challenge
+Challenge::random() generates a spam challenge
 --FILE--
 <?php
 
-require_once __DIR__ . '/../manual/spam_challenge.php';
+declare(strict_types=1);
+
+use phpweb\Spam\Challenge;
+
+require_once __DIR__ . '/../../../src/autoload.php';
 
 mt_srand(9001);
 
 $challenges = array_map(static function (): array {
-    [$function, $argumentOne, $argumentTwo, $question] = gen_challenge();
+    $challenge = Challenge::create();
 
     return [
-        'function' => $function,
-        'argumentOne' => $argumentOne,
-        'argumentTwo' => $argumentTwo,
-        'question' => $question,
+        'function' => $challenge->function,
+        'argumentOne' => $challenge->argumentOne,
+        'argumentTwo' => $challenge->argumentTwo,
+        'question' => $challenge->question,
     ];
 }, range(1, 20));
 
