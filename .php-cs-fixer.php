@@ -1,5 +1,11 @@
 <?php
 
+$header = <<<TXT
+Any ideas?
+
+@see https://github.com/php/web-php
+TXT;
+
 $finder = PhpCsFixer\Finder::create()->in(__DIR__);
 
 $config = new PhpCsFixer\Config();
@@ -20,6 +26,10 @@ $config
     ->setRules([
         'array_indentation' => true,
         'constant_case' => true,
+        'header_comment' => [
+            'comment_type' => 'PHPDoc',
+            'header' => $header,
+        ],
         'indentation_type' => true,
         'line_ending' => true,
         'no_extra_blank_lines' => true,
