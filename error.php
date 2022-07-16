@@ -1,13 +1,10 @@
 <?php
-/*
 
- This script handles all 401, 403 and 404 error redirects,
- and some directory requests (like /images). Uses the
- preferred language setting and the REQUEST_URI to guess what
- page should be displayed. In case there is no page that can
- be displayed, the user is redirected to a search page.
-
-*/
+/**
+ * Any ideas?
+ *
+ * @see https://github.com/php/web-php
+ */
 
 // Ensure that our environment is set up
 include_once __DIR__ . '/include/prepend.inc';

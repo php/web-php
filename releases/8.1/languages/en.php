@@ -1,5 +1,11 @@
 <?php
 
+/**
+ * Any ideas?
+ *
+ * @see https://github.com/php/web-php
+ */
+
 return [
     'common_header' => 'PHP 8.1 is a major update of the PHP language. Enums, readonly properties, first-class callable syntax, fibers, intersection types, performance improvements and more.',
     'main_title' => 'Released!',

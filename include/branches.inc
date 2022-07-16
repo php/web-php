@@ -1,4 +1,11 @@
 <?php
+
+/**
+ * Any ideas?
+ *
+ * @see https://github.com/php/web-php
+ */
+
 include_once __DIR__ . '/releases.inc';
 include_once __DIR__ . '/version.inc';
 

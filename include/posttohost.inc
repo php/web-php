@@ -1,10 +1,10 @@
 <?php
 
-/*
- This code is used to post data to the central server which
- can store the data in database and/or mail notices or requests
- to PHP.net stuff and servers
-*/
+/**
+ * Any ideas?
+ *
+ * @see https://github.com/php/web-php
+ */
 
 function posttohost($url, $data)
 {

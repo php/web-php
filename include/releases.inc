@@ -1,4 +1,11 @@
 <?php
+
+/**
+ * Any ideas?
+ *
+ * @see https://github.com/php/web-php
+ */
+
 $OLDRELEASES = array (
     8 =>
     array (

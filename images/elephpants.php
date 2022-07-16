@@ -1,4 +1,11 @@
 <?php
+
+/**
+ * Any ideas?
+ *
+ * @see https://github.com/php/web-php
+ */
+
 include_once __DIR__ . '/../include/prepend.inc';
 
 $now = $_SERVER["REQUEST_TIME"];

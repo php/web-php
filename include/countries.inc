@@ -1,4 +1,11 @@
 <?php
+
+/**
+ * Any ideas?
+ *
+ * @see https://github.com/php/web-php
+ */
+
 return array(
     'AFG' => 'Afghanistan',
     'ALB' => 'Albania',

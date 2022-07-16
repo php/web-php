@@ -1,7 +1,9 @@
 <?php
 
 /**
- * En-revision: 20b1bbed844a4609f3400ef0cd4e6be6fea323af
+ * Any ideas?
+ *
+ * @see https://github.com/php/web-php
  */
 
 return [

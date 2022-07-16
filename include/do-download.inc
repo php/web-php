@@ -1,10 +1,10 @@
 <?php
 
-/*
-   This code redirects the user to the exact file to
-   download, and logs the download if it's something
-   we would like to know about (PHP binary or source).
-*/
+/**
+ * Any ideas?
+ *
+ * @see https://github.com/php/web-php
+ */
 
 function get_actual_download_file($file)
 {

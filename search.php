@@ -1,4 +1,11 @@
-<?php // vim: et
+<?php
+
+/**
+ * Any ideas?
+ *
+ * @see https://github.com/php/web-php
+ */
+
 $_SERVER['BASE_PAGE'] = 'search.php';
 include_once __DIR__ . '/include/prepend.inc';
 

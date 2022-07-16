@@ -1,4 +1,11 @@
 <?php
+
+/**
+ * Any ideas?
+ *
+ * @see https://github.com/php/web-php
+ */
+
 $_SERVER['BASE_PAGE'] = 'conferences/index.php';
 include_once __DIR__ . '/../include/prepend.inc';
 include_once __DIR__ . '/../include/pregen-news.inc';

@@ -1,9 +1,10 @@
 <?php
-/*
-  This script provides functions to print out
-  error messages for users in case something is
-  not available.
-*/
+
+/**
+ * Any ideas?
+ *
+ * @see https://github.com/php/web-php
+ */
 
 // A 'good looking' 404 error message page
 function error_404()

@@ -1,9 +1,10 @@
 <?php
-/*
- This page supports the PHP.net automoderation system
- with enabling users to confirm their emails via the web.
- This script only need to run on the primary php.net box.
-*/
+
+/**
+ * Any ideas?
+ *
+ * @see https://github.com/php/web-php
+ */
 
 $_SERVER['BASE_PAGE'] = 'mod.php';
 include_once __DIR__ . '/include/prepend.inc';

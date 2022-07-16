@@ -1,4 +1,11 @@
 <?php
+
+/**
+ * Any ideas?
+ *
+ * @see https://github.com/php/web-php
+ */
+
 $_SERVER['BASE_PAGE'] = 'manual-lookup.php';
 include __DIR__ . '/include/prepend.inc';
 include __DIR__ . '/include/manual-lookup.inc';

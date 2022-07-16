@@ -1,4 +1,11 @@
 <?php
+
+/**
+ * Any ideas?
+ *
+ * @see https://github.com/php/web-php
+ */
+
 function bugfix($number) {
     echo "Fixed bug "; bugl($number);
 }

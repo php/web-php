@@ -1,4 +1,10 @@
-<?php // -*- C++ -*-
+<?php
+
+/**
+ * Any ideas?
+ *
+ * @see https://github.com/php/web-php
+ */
 
 // We need this for error reporting
 include_once __DIR__ . '/errors.inc';

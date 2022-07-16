@@ -1,5 +1,10 @@
 <?php
-// simple and stupid SPAM protection (using little challenges)
+
+/**
+ * Any ideas?
+ *
+ * @see https://github.com/php/web-php
+ */
 
 const NUMS = array('zero', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine');
 

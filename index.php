@@ -1,4 +1,11 @@
-<?php // vim: et
+<?php
+
+/**
+ * Any ideas?
+ *
+ * @see https://github.com/php/web-php
+ */
+
 (function ($uri): void {
     // Special redirect cases not able to be captured in error.php
     $shortcuts = [

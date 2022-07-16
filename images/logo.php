@@ -1,5 +1,11 @@
 <?php
 
+/**
+ * Any ideas?
+ *
+ * @see https://github.com/php/web-php
+ */
+
 $refresh = isset($_GET['refresh']);
 
 // Be 100% sure the timezone is set

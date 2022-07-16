@@ -1,4 +1,11 @@
 <?php
+
+/**
+ * Any ideas?
+ *
+ * @see https://github.com/php/web-php
+ */
+
 header("Content-Type: application/atom+xml");
 
 include __DIR__ . "/../include/version.inc";

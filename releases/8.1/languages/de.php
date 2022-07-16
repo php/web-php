@@ -1,5 +1,11 @@
 <?php
 
+/**
+ * Any ideas?
+ *
+ * @see https://github.com/php/web-php
+ */
+
 return [
     'common_header' => 'PHP 8.1 ist ein Minor-Update der Sprache PHP und beinhaltet viele neue Features und Verbesserungen. Unter anderem Enumerations, Readonly-Properties, First-Class Callable Syntax, Fibers, Intersection-Types, Performance-Optimierungen.',
     'main_title' => 'Released!',

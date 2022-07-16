@@ -1,5 +1,11 @@
 <?php
-// Define $MYSITE and $LAST_UPDATED variables
+
+/**
+ * Any ideas?
+ *
+ * @see https://github.com/php/web-php
+ */
+
 include_once __DIR__ . '/include/prepend.inc';
 
 // Define release_get_latest() function.

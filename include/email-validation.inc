@@ -1,6 +1,11 @@
 <?php
 
-// Try to remove anti-SPAM bits
+/**
+ * Any ideas?
+ *
+ * @see https://github.com/php/web-php
+ */
+
 function clean_AntiSPAM($email)
 {
     $remove_spam = "![-_]?(NO|I[-_]?HATE|DELETE|REMOVE)[-_]?(THIS)?(ME|SPAM)?[-_]?!i";
