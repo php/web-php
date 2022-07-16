@@ -44,48 +44,49 @@ if ($process) {
         $user = "Anonymous";
     }
 
-    // We don't know of any error now
-    $error = false;
+    $error = (static function (string $note, string $user, array $post): ?string {
+        // No note specified
+        if (strlen($note) == 0) {
+            return "You have not specified the note text.";
+        }
 
-    // No note specified
-    if (strlen($note) == 0) {
-        $error = "You have not specified the note text.";
-    }
+        // SPAM challenge failed
+        if (!test_answer($post['func'], $post['arga'], $post['argb'], $post['answer'])) {
+            return 'SPAM challenge failed.';
+        }
 
-    // SPAM challenge failed
-    elseif (!test_answer($_POST['func'], $_POST['arga'], $_POST['argb'], $_POST['answer'])) {
-        $error = 'SPAM challenge failed.';
-    }
+        // The user name contains a malicious character
+        if (stristr($user, "|")) {
+            return "You have included bad characters within your username. We appreciate you may want to obfuscate your email further, but we have a system in place to do this for you.";
+        }
 
-    // The user name contains a malicious character
-    elseif (stristr($user, "|")) {
-        $error = "You have included bad characters within your username. We appreciate you may want to obfuscate your email further, but we have a system in place to do this for you.";
-    }
+        // Check if the note is too long
+        if (strlen($note) >= 4096) {
+            return "Your note is too long. You'll have to make it shorter before you can post it. Keep in mind that this is not the place for long code examples!";
+        }
 
-    // Check if the note is too long
-    elseif (strlen($note) >= 4096) {
-        $error = "Your note is too long. You'll have to make it shorter before you can post it. Keep in mind that this is not the place for long code examples!";
-    }
+        // Check if the note is not too short
+        if (strlen($note) < 32) {
+            return "Your note is too short. Trying to test the notes system? Save us the trouble of deleting your test, and don't. It works.";
+        }
 
-    // Check if the note is not too short
-    elseif (strlen($note) < 32) {
-        $error = "Your note is too short. Trying to test the notes system? Save us the trouble of deleting your test, and don't. It works.";
-    }
-
-    // Check if any line is too long
-    else {
-
+        // Check if any line is too long
         // Split the note by whitespace, and check length
         foreach (preg_split("/\\s+/", $note) as $chunk) {
             if (strlen($chunk) > 120) {
-                $error = "Your note contains a bit of text that will result in a line that is too long, even after using wordwrap().";
-                break;
+                return "Your note contains a bit of text that will result in a line that is too long, even after using wordwrap().";
             }
         }
-    }
+
+        return null;
+    })(
+        $note,
+        $user,
+        $_POST
+    );
 
     // No error was found, and the submit action is required
-    if (!$error && strtolower($_POST['action']) !== "preview") {
+    if (!is_string($error) && strtolower($_POST['action']) !== "preview") {
 
         $redirip = $_SERVER['HTTP_X_FORWARDED_FOR'] ??
                    ($_SERVER['HTTP_VIA'] ?? '');
@@ -135,7 +136,9 @@ if ($process) {
 
     // There was an error, or a preview is needed
     // If there was an error, print out
-    if ($error) { echo "<p class=\"formerror\">$error</p>\n"; }
+    if (is_string($error)) {
+        echo "<p class=\"formerror\">$error</p>\n";
+    }
 
     // Print out preview of note
     echo '<p>This is what your entry will look like, roughly:</p>';
