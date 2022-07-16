@@ -19,6 +19,7 @@ $config
     ->setRiskyAllowed(true)
     ->setRules([
         'array_indentation' => true,
+        'blank_line_before_statement' => true,
         'constant_case' => true,
         'indentation_type' => true,
         'line_ending' => true,
