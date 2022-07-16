@@ -33,6 +33,7 @@ class Entry {
 
     public function setTitle(string $title): self {
         $this->title = $title;
+
         return $this;
     }
     public function setCategories(array $cats): self {
@@ -42,6 +43,7 @@ class Entry {
             }
         }
         $this->categories = $cats;
+
         return $this;
     }
     public function addCategory(string $cat): self {
@@ -51,6 +53,7 @@ class Entry {
         if (!in_array($cat, $this->categories, false)) {
             $this->categories[] = $cat;
         }
+
         return $this;
     }
 
@@ -59,6 +62,7 @@ class Entry {
     }
     public function setConfTime(int $time): self {
         $this->conf_time = $time;
+
         return $this;
     }
     public function setImage(string $path, string $title, ?string $link): self {
@@ -73,6 +77,7 @@ class Entry {
             'title' => $title,
             'link' => $link,
         ];
+
         return $this;
     }
     public function setContent(string $content): self {
@@ -80,6 +85,7 @@ class Entry {
             throw new \Exception('Content must not be empty');
         }
         $this->content = $content;
+
         return $this;
     }
     public function getId(): string {
@@ -189,6 +195,7 @@ class Entry {
         if ($to) {
             return $to->appendChild($n);
         }
+
         return $n;
     }
 }

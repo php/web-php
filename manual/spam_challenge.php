@@ -52,6 +52,7 @@ function test_answer($name, $an, $bn, $answer) {
     foreach (CHALLENGES as $x) {
         if ($x[0] === $name) {
             $c = $x;
+
             break;
         }
     }

@@ -44,6 +44,7 @@ function highlight_php($code, $return = false)
 
     if ($return) { return $highlighted; }
     echo $highlighted;
+
     return null;
 }
 
@@ -56,6 +57,7 @@ function highlight_php_trimmed($code, $return = false)
 
     if ($return) { return $highlighted_code; }
     echo $highlighted_code;
+
     return null;
 }
 
@@ -130,6 +132,7 @@ function news_image($URL, $image, $alt, $print = true)
     if ($print) {
         echo $str;
     }
+
     return $str;
 }
 
@@ -335,6 +338,7 @@ function display_event($event, $include_date = 1)
         case 'multi':
             $dtend = date("Y-m-d", strtotime("+1 day", $eday));
             echo " (<abbr class='dtstart'>", date("Y-m-d",$sday), "</abbr> to <abbr class='dtend' title='$dtend'>", date("Y-m-d",$eday), "</abbr>)";
+
             break;
         case 3:
         case 'recur':
@@ -346,6 +350,7 @@ function display_event($event, $include_date = 1)
             $month = date("M", mktime(0, 0, 0, $cm, 1, $cy));
             $dtstart = date("Y-m-d", strtotime($days . ' 0st' .$month. ' ' .$cy));
             echo ' (Every <abbr class="dtstart" title="'.$dtstart.'">', $days, "</abbr> of the month)";
+
             break;
     }
 
@@ -405,6 +410,7 @@ function print_news($news, $dog, $max = 5, $onlyyear = null, $return = false) {
             if (is_null($dog) || in_array($category["term"], (array)$dog, false)) {
                 $ok = true;
                 ++$count;
+
                 break;
             }
         }
@@ -427,6 +433,7 @@ function print_news($news, $dog, $max = 5, $onlyyear = null, $return = false) {
         foreach ($item["link"] as $link) {
             if ($link["rel"] === "via") {
                 $permlink = $link["href"];
+
                 break;
             }
         }
@@ -439,6 +446,7 @@ function print_news($news, $dog, $max = 5, $onlyyear = null, $return = false) {
         $newsdate = date("d M Y", $nixtimestamp);
         if ($onlyyear && date("Y", $nixtimestamp) != $onlyyear) {
             $count--;
+
             continue;
         }
 
@@ -449,6 +457,7 @@ function print_news($news, $dog, $max = 5, $onlyyear = null, $return = false) {
                 "permlink" => $permlink,
                 "date"     => $newsdate,
             );
+
             continue;
         }
 
@@ -533,8 +542,10 @@ function get_news_changes()
     if ($date->getTimestamp() > $_SERVER["REQUEST_TIME"]) {
         $link = preg_replace('~^(http://php.net/|https://www.php.net/)~', '/', $NEWS_ENTRIES[0]["link"][0]["href"]);
         $title = $NEWS_ENTRIES[0]["title"];
+
         return "<a href='{$link}'>{$title}</a>";
     }
+
     return false;
 }
 
@@ -631,6 +642,7 @@ function doc_toc_title($lang, $index, $file, $elm = "dt") {
         if ($entry[0] == "$file.php") {
             $link  = $entry[0];
             $title = $entry[1];
+
             break;
         }
     }

@@ -75,6 +75,7 @@ $RELEASES = (function () {
         }
         $ret[$major][$version] = $info;
     }
+
     return $ret;
 })();
 

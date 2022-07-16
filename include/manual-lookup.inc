@@ -90,6 +90,7 @@ function find_manual_page_slow($lang, $keyword)
     // BC: Few references pages where moved to book.
     if (strpos($keyword, "ref.") === 0) {
         $kw = substr_replace($keyword, "book.", 0, 4);
+
         return find_manual_page($lang, $kw);
     }
 

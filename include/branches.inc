@@ -155,6 +155,7 @@ function get_active_branches($include_recent_eols = true) {
     }
 
     ksort($branches);
+
     return $branches;
 }
 
@@ -248,6 +249,7 @@ function get_initial_release($branch) {
         // Fake a date like we have on the oldreleases array.
         $release = $GLOBALS['RELEASES'][$major]["$branch.0"];
         $release['date'] = $release['source'][0]['date'];
+
         return $release;
     }
 
@@ -279,6 +281,7 @@ function get_final_release($branch) {
         // Fake a date like we have on the oldreleases array.
         $release = $GLOBALS['RELEASES'][$major][$last];
         $release['date'] = $release['source'][0]['date'];
+
         return $release;
     }
 
@@ -310,6 +313,7 @@ function get_branch_security_eol_date($branch) {
     }
 
     $date = get_branch_release_date($branch);
+
     return $date ? $date->add(new DateInterval('P3Y')) : null;
 }
 

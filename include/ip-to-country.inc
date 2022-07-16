@@ -151,14 +151,18 @@ function i2c_search_in_db($ip, $idx)
         // We had run out of the indexed region,
         // where we expected to find the IP
         if ($idx[1] != -1 && $idx[0] > $idx[1]) {
-            $country = "NA"; break;
+            $country = "NA";
+
+break;
         }
 
         // Try to read record
         $record = fread($ipdb, 24);
 
         // Unable to read the record => error
-        if (strlen($record) != 24) { $country = "NA"; break; }
+        if (strlen($record) != 24) { $country = "NA";
+
+break; }
 
         // Split the record to it's parts
         $range_start = (float) substr($record, 0, 10);
@@ -180,6 +184,7 @@ function i2c_search_in_db($ip, $idx)
 function i2c_valid_country()
 {
     global $COUNTRY, $COUNTRIES;
+
     return (!empty($COUNTRY) && $COUNTRY != "NA" && isset($COUNTRIES[$COUNTRY]));
 }
 
@@ -211,6 +216,7 @@ function i2c_realip()
             // Also skip RFC 6598 IP's
             if (!preg_match('/^(?:10|100\.(?:6[4-9]|[7-9]\d|1[01]\d|12[0-7])|172\.(?:1[6-9]|2\d|3[01])|192\.168)\./', $ips[$i]) && ip2long($ips[$i])) {
                 $ip = $ips[$i];
+
                 break;
             }
         }

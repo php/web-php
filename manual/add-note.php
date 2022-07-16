@@ -23,6 +23,7 @@ $needed_vars = array('note', 'user', 'sect', 'redirect', 'action', 'func', 'arga
 foreach ($needed_vars as $varname) {
     if (empty($_POST[$varname])) {
         $process = false;
+
         break;
     }
 }
@@ -79,6 +80,7 @@ if ($process) {
         foreach (preg_split("/\\s+/", $note) as $chunk) {
             if (strlen($chunk) > 120) {
                 $error = "Your note contains a bit of text that will result in a line that is too long, even after using wordwrap().";
+
                 break;
             }
         }

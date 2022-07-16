@@ -16,6 +16,7 @@ function get_actual_download_file($file)
     foreach ($possible_files as $name => $log) {
         if (@file_exists($_SERVER['DOCUMENT_ROOT'] . '/distributions/' . $name)) {
             $found = $name;
+
             break;
         }
     }

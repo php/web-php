@@ -34,6 +34,7 @@ function is_primary_site($site = false)
 {
     global $MYSITE;
     if (!$site) { $site = $MYSITE; }
+
     return ($site == "https://www.php.net/" );
 }
 
@@ -50,6 +51,7 @@ function default_language($site = false)
 {
     global $MIRRORS, $MYSITE;
     if (!$site) { $site = $MYSITE; }
+
     return (isset($MIRRORS[$site]) ? $MIRRORS[$site][6] : false);
 }
 
@@ -59,6 +61,7 @@ function have_search($site = false)
 {
     global $MIRRORS, $MYSITE;
     if (!$site) { $site = $MYSITE; }
+
     return (isset($MIRRORS[$site]) ? $MIRRORS[$site][5] : false);
 }
 
@@ -180,13 +183,16 @@ function get_available_sqlites() {
             switch ($driver) {
                 case 'sqlite':
                     $avail += 4;
+
                     break;
                 case 'sqlite2':
                     $avail += 8;
+
                     break;
             }
         }
     }
+
     return $avail;
 }
 

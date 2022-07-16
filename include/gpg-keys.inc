@@ -152,8 +152,10 @@ function gpg_key_get_branches(bool $activeOnly): array {
     if (!$activeOnly) { return $branches; }
 
     $active = get_active_branches();
+
     return array_filter($branches, function ($branch) use ($active) {
         [$major] = explode('.', $branch, 2);
+
         return isset($active[$major][$branch]);
     }, ARRAY_FILTER_USE_KEY);
 }

@@ -20,6 +20,7 @@ $file = false;
 foreach ($possible_files as $name) {
     if (@file_exists($_SERVER['DOCUMENT_ROOT'] . '/distributions/' . $name)) {
         $file = $name;
+
         break;
     }
 }

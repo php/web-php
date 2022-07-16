@@ -24,16 +24,20 @@ function imgheader($filename) {
     switch ($ext) {
         case 'gif':
             $hdr = 'image/gif';
+
             break;
         case 'png':
             $hdr = 'image/png';
+
             break;
         case 'jpg':
         case 'jpeg':
             $hdr = 'image/jpeg';
+
             break;
         case 'svg':
             $hdr = 'image/svg+xml';
+
             break;
         default:
             return false;
@@ -44,10 +48,12 @@ function imgheader($filename) {
 function get_accepted_encodings() {
     if (isset($_SERVER['HTTP_ACCEPT_ENCODING'])) {
         $encodings = explode(',', $_SERVER['HTTP_ACCEPT_ENCODING']);
+
         return array_map(function ($x) {
             return trim($x);
         }, $encodings);
     }
+
     return array();
 }
 
@@ -60,6 +66,7 @@ function serve_compressed_if_available($logo): void {
                 if (file_exists($encoded_file)) {
                     header("Content-Encoding: $encoding");
                     readfile($encoded_file);
+
                     return;
                 }
             }
@@ -74,6 +81,7 @@ if (isset($_SERVER['QUERY_STRING'])) {
         case 'QA':
         case 'qa':
             $logo = './logos/qa.jpg';
+
             break;
     }
 }

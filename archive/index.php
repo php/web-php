@@ -5,6 +5,7 @@ do {
     $y = date("Y")-$i;
     if (file_exists("./$y.php")) {
         mirror_redirect("/archive/$y.php");
+
         break;
     }
 } while (++$i<3);

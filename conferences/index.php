@@ -16,10 +16,12 @@ foreach ($NEWS_ENTRIES as $entry) {
     foreach ($entry["category"] as $category) {
         if ($category["term"] == "cfp") {
             $frontpage[] = $entry;
+
             break;
         }
         if ($category["term"] == "conferences") {
             $frontpage[] = $entry;
+
             break;
         }
     }

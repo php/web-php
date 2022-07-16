@@ -498,6 +498,7 @@ function is_known_snippet(string $term): ?string {
     ];
 
     $term = ltrim(strtolower(trim($term)), '$');
+
     return $snippets[$term] ?? null;
 }
 
@@ -513,6 +514,7 @@ function get_legacy_manual_urls(string $uri): array
         if (count($matches) < 2) {
             return '';
         }
+
         return $matches[1] ;
     }, $uri);
 

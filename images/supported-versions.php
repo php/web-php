@@ -24,16 +24,19 @@ function branches_to_show() {
     }
 
     ksort($branches);
+
     return $branches;
 }
 
 function min_date() {
     $now = new DateTime('January 1');
+
     return $now->sub(new DateInterval('P3Y'));
 }
 
 function max_date() {
     $now = new DateTime('January 1');
+
     return $now->add(new DateInterval('P5Y'));
 }
 
@@ -42,6 +45,7 @@ function date_horiz_coord(DateTime $date) {
     if (!$diff->invert) {
         return $GLOBALS['margin_left'];
     }
+
     return $GLOBALS['margin_left'] + ($diff->days / (365.24 / $GLOBALS['year_width']));
 }
 

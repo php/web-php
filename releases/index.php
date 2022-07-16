@@ -67,6 +67,7 @@ if (isset($_GET["serialize"]) || isset($_GET["json"])) {
         header('Content-Type: application/json');
         echo json_encode($machineReadable);
     }
+
     return;
 }
 
@@ -175,6 +176,7 @@ function recentEOLBranchesHTML(): string {
         }
     }
     krsort($eol);
+
     return implode('', array_slice($eol, 0, 2));
 }
 

@@ -138,6 +138,7 @@ $prev_link = (function () use ($cm, $cy) {
 
     $month = date('m', $lm);
     $monthName = date('F', $lm);
+
     return sprintf('<a href="/cal.php?cm=%s&amp;cy=%s">%s, %s</a>',
                    urlencode($month),
                    urlencode($year),
@@ -155,6 +156,7 @@ $next_link = (function () use ($cm, $cy) {
 
     $month = date('m', $nm);
     $monthName = date('F', $nm);
+
     return sprintf('<a href="/cal.php?cm=%s&amp;cy=%s">%s, %s</a>',
                    urlencode($month),
                    urlencode($year),
@@ -218,6 +220,7 @@ function date_for_recur($recur, $day, $bom, $eom)
     if ($recur > 0) {
         $bomd = date("w", $bom) + 1;
         $days = (($day - $bomd + 7) % 7) + (($recur - 1) * 7);
+
         return mktime(0,0,1, date("m",$bom), $days + 1, date("Y",$bom));
     }
 
@@ -268,12 +271,14 @@ function load_event($id)
       // we search for (also close the file)
       if ($event !== false && $event['id'] == $id) {
         fclose($fp);
+
         return $event;
       }
     }
 
     // Close file, and return sign of failure
     fclose($fp);
+
     return false;
 }
 
@@ -322,6 +327,7 @@ function load_events($from, $whole_month = false)
                 if ($event['start'] >= $from_date && $event['start'] <= $to_date) {
                     $events[] = $event;
                 }
+
                 break;
 
             // Multi-day event
@@ -331,12 +337,14 @@ function load_events($from, $whole_month = false)
                  || ($event['start'] <= $from_date && $event['end']   >= $to_date)) {
                   $events[] = $event;
                 }
+
                 break;
         }
     }
 
     // Close file and return with results
     fclose($fp);
+
     return $events;
 }
 

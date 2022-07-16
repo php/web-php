@@ -108,6 +108,7 @@ function manual_notes_load($id)
         }
         fclose($fp);
     }
+
     return $notes;
 }
 
@@ -213,6 +214,7 @@ function manual_navigation_breadcrumbs(array $setup) {
         );
         $menu[] = $last_item;
     }
+
     return $menu;
 }
 
@@ -234,6 +236,7 @@ function manual_navigation_related(array $setup) {
         );
         $siblings = array(array_merge($last_item, array("children" => $siblings)));
     }
+
     return $siblings;
 }
 
@@ -373,6 +376,7 @@ function manual_language_chooser($currentlang, $currentpage) {
             }
             $out .= "$tab<option value='$value'$selected>$text</option>\n";
         }
+
         return trim($out);
     };
     $r = <<<CHANGE_LANG
@@ -386,6 +390,7 @@ function manual_language_chooser($currentlang, $currentpage) {
         </fieldset>
       </form>
 CHANGE_LANG;
+
     return trim($r);
 }
 
@@ -417,8 +422,10 @@ function relTime(DateTime $date) {
             continue;
         }
         $out = $amount . " " . ($amount == 1 ? $unit : $unit . "s") . " ago";
+
         break;
     }
+
     return $out;
 }
 

@@ -43,6 +43,7 @@ if (is_resource($fp)) {
             }
             $field = null;
             $record_no++;
+
             continue;
         }
         if (preg_match("/^([-\w]+):\s*(.*)/", $s, $m)) {
@@ -84,8 +85,10 @@ if (is_resource($fp)) {
             if ($c > $d) {
                 return -1;
             }
+
             return 0;
         }
+
         return 1;
     }
     usort($RECORDS, "cmp_records");

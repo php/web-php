@@ -127,6 +127,7 @@ function myphpnet_language($langcode = false)
     elseif (isset($MYPHPNET[0]) && $MYPHPNET[0]) {
         return $MYPHPNET[0];
     }
+
     return false;
 }
 
