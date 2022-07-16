@@ -122,9 +122,9 @@ $URI = rtrim($URI, '/');
 // Some nice URLs for getting something for download
 if (preg_match("!^get/([^/]+)$!", $URI, $what)) {
     switch ($what[1]) {
-        case "php"           : $URI = "downloads"; break;
-        case "docs"          : // intentional
-        case "documentation" : $URI = "download-docs"; break;
+        case "php": $URI = "downloads"; break;
+        case "docs": // intentional
+        case "documentation": $URI = "download-docs"; break;
     }
 }
 

@@ -122,10 +122,10 @@ function language_choose_code()
 
         // Translation table for accept-language codes and phpdoc codes
         switch ($langdata[0]) {
-            case "pt-br" : $langdata[0] = 'pt_br'; break;
-            case "zh-cn" : $langdata[0] = 'zh'; break;
-            case "zh-hk" : $langdata[0] = 'hk'; break;
-            case "zh-tw" : $langdata[0] = 'tw'; break;
+            case "pt-br": $langdata[0] = 'pt_br'; break;
+            case "zh-cn": $langdata[0] = 'zh'; break;
+            case "zh-hk": $langdata[0] = 'hk'; break;
+            case "zh-tw": $langdata[0] = 'tw'; break;
         }
 
         // We do not support flavors of languages (except the ones above)
