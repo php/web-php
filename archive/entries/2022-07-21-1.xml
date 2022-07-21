@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+  <title>PHP 8.2.0 Beta 1 available for testing</title>
+  <id>https://www.php.net/archive/2022.php#2022-07-21-1</id>
+  <published>2022-07-21T14:57:05+00:00</published>
+  <updated>2022-07-21T14:57:05+00:00</updated>
+  <link href="https://www.php.net/index.php#2022-07-21-1" rel="alternate" type="text/html"/>
+  <link href="https://www.php.net/archive/2022.php#2022-07-21-1" rel="via" type="text/html"/>
+  <category term="frontpage" label="PHP.net frontpage news"/>
+  <content type="xhtml">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+     <p>The PHP team is pleased to announce the first beta release of PHP 8.2.0, Beta 1. This continues the PHP 8.2 release cycle, the rough outline of which is specified in the <a href="https://wiki.php.net/todo/php82">PHP Wiki</a>.</p>
+     <p>For source downloads of PHP 8.2.0 Beta 1 please visit the <a href="https://downloads.php.net/~pierrick">download page</a>.</p>
+     <p>Please carefully test this version and report any issues found in the <a href="https://github.com/php/php-src/issues">bug reporting system</a>.</p>
+     <p><strong>Please DO NOT use this version in production, it is an early test version.</strong></p>
+     <p><strong>Because of a bug found in early testing of this release, this version is NOT usable with ZTS builds.</strong></p>
+     <p>For more information on the new features and other changes, you can read the <a href="https://github.com/php/php-src/blob/php-8.2.0beta1/NEWS">NEWS</a> file, or the <a href="https://github.com/php/php-src/blob/php-8.2.0beta1/UPGRADING">UPGRADING</a> file for a complete list of upgrading notes. These files can also be found in the release archive.</p>
+     <p>The next release will be PHP 8.2.0 Beta 2, planned for Aug 4 2022.</p>
+     <p>The signatures for the release can be found in the <a href="https://gist.github.com/adoy/81f41a2b833275bd2d00b7165907540e">manifest</a> or on the <a href="https://qa.php.net/">QA site</a>.</p>
+     <p>Thank you for helping us make PHP better.</p>
+    </div>
+  </content>
+</entry>
