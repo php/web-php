@@ -18,6 +18,8 @@ echo <<<XML
 
 XML;
 
+ob_start();
+
 // Flatten major versions out of RELEASES.
 $RELEASED_VERSIONS = array_reduce($RELEASES, 'array_merge', []);
 $FEED_UPDATED =  0;
@@ -80,9 +82,10 @@ XML;
     $FEED_UPDATED = max($maxtime, $FEED_UPDATED);
 }
 
+$entries = ob_get_clean();
+
 $FEED_UPDATED = date(DATE_ATOM, max($FEED_UPDATED));
 
-echo <<<XML
-    <updated>{$FEED_UPDATED}</updated>
-</feed>
-XML;
+echo "    <updated>{$FEED_UPDATED}</updated>\n";
+echo $entries;
+echo "</feed>";
