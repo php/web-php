@@ -751,6 +751,53 @@ changelog_header(8, $MINOR_VERSIONS);
 
 <a id="PHP_8_0"></a>
 
+<section class="version" id="8.0.22"><!-- {{{ 8.0.22 -->
+<h3>Version 8.0.22</h3>
+<b><?php release_date('04-Aug-2022'); ?></b>
+<ul><li>CLI:
+<ul>
+  <li>Fixed potential overflow for the builtin server via the PHP_CLI_SERVER_WORKERS environment variable.</li>
+</ul></li>
+<li>Core:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 8923); ?> (error_log on Windows can hold the file write lock).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 8995); ?> (WeakMap object reference offset causing TypeError).</li>
+</ul></li>
+<li>Date:
+<ul>
+  <li><?php bugfix(80047); ?> (DatePeriod doesn't warn with custom DateTimeImmutable).</li>
+</ul></li>
+<li>DBA:
+<ul>
+  <li>Fixed LMDB driver hanging when attempting to delete a non-existing key (Girgias)</li>
+</ul></li>
+<li>FPM:
+<ul>
+  <li>Fixed zlog message prepend, free on incorrect address.</li>
+  <li>Fixed possible double free on configuration loading failure. (Heiko Weber).</li>
+</ul></li>
+<li>GD:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 8848); ?> (imagecopyresized() error refers to the wrong argument).</li>
+</ul></li>
+<li>Intl:
+<ul>
+  <li>Fixed build for ICU 69.x and onwards.</li>
+</ul></li>
+<li>OPcache:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 8847); ?> (PHP hanging infinitly at 100% cpu when check php syntaxe of a valid file).</li>
+</ul></li>
+<li>Standard:
+<ul>
+  <li>Fixed the crypt_sha256/512 api build with clang &gt; 12.</li>
+  <li>Uses CCRandomGenerateBytes instead of arc4random_buf on macOs. (David Carlier).</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
+
+
 <section class="version" id="8.0.21"><!-- {{{ 8.0.21 -->
 <h3>Version 8.0.21</h3>
 <b><?php release_date('07-Jul-2022'); ?></b>
