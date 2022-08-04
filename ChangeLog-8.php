@@ -769,12 +769,12 @@ changelog_header(8, $MINOR_VERSIONS);
 </ul></li>
 <li>DBA:
 <ul>
-  <li>Fixed LMDB driver hanging when attempting to delete a non-existing key (Girgias)</li>
+  <li>Fixed LMDB driver hanging when attempting to delete a non-existing key.</li>
 </ul></li>
 <li>FPM:
 <ul>
   <li>Fixed zlog message prepend, free on incorrect address.</li>
-  <li>Fixed possible double free on configuration loading failure. (Heiko Weber).</li>
+  <li>Fixed possible double free on configuration loading failure.</li>
 </ul></li>
 <li>GD:
 <ul>
@@ -791,7 +791,7 @@ changelog_header(8, $MINOR_VERSIONS);
 <li>Standard:
 <ul>
   <li>Fixed the crypt_sha256/512 api build with clang &gt; 12.</li>
-  <li>Uses CCRandomGenerateBytes instead of arc4random_buf on macOs. (David Carlier).</li>
+  <li>Uses CCRandomGenerateBytes instead of arc4random_buf on macOs.</li>
 </ul></li>
 </ul>
 <!-- }}} --></section>
