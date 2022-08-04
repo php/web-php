@@ -9,7 +9,7 @@
   <category term="frontpage" label="PHP.net frontpage news"/>
   <content type="xhtml">
     <div xmlns="http://www.w3.org/1999/xhtml">
-      <p>The PHP team is pleased to announce the first beta release of PHP 8.2.0, Beta 2. This continues the PHP 8.2 release cycle, the rough outline of which is specified in the <a href="https://wiki.php.net/todo/php82">PHP Wiki</a>.</p>
+      <p>The PHP team is pleased to announce the second beta release of PHP 8.2.0, Beta 2. This continues the PHP 8.2 release cycle, the rough outline of which is specified in the <a href="https://wiki.php.net/todo/php82">PHP Wiki</a>.</p>
       <p>For source downloads of PHP 8.2.0 Beta 2 please visit the <a href="https://downloads.php.net/~sergey">download page</a>.</p>
       <p>Please carefully test this version and report any issues found in the <a href="https://github.com/php/php-src/issues">bug reporting system</a>.</p>
       <p><strong>Please DO NOT use this version in production, it is an early test version.</strong></p>
