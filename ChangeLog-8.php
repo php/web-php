@@ -40,12 +40,12 @@ changelog_header(8, $MINOR_VERSIONS);
 </ul></li>
 <li>OPcache:
 <ul>
-  <li>Fixed bug <?php githubissuel('php/php-src', 8847); ?> (PHP hanging infinitly at 100% cpu when check php syntaxe of a valid file).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 8847); ?> (PHP hanging infinitly at 100% cpu when check php syntax of a valid file).</li>
   <li>Fixed bug <?php githubissuel('php/php-src', 8030); ?> (Segfault with JIT and large match/switch statements).</li>
 </ul></li>
 <li>Reflection:
 <ul>
-  <li>Fixed bug <?php githubissuel('php/php-src', 8943); ?> (Fixed Reflection::getModifiersNames() with readonly modifier).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 8943); ?> (Fixed Reflection::getModifierNames() with readonly modifier).</li>
 </ul></li>
 <li>Standard:
 <ul>
