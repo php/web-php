@@ -1,4 +1,4 @@
-<?php
+<?php 
 $_SERVER['BASE_PAGE'] = 'sites.php';
 include_once __DIR__ . '/include/prepend.inc';
 site_header("A Tourist's Guide", array("current" => "help"));
