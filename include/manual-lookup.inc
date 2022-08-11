@@ -183,7 +183,7 @@ function find_manual_page($lang, $keyword)
             //        if this change remains, adjust the gen-phpweb-sqlite script accordingly
 
             $SQL = "SELECT name, prio FROM fs WHERE lang = :lang
-                    AND keyword IN (?, ?, ?, ?) ORDER BY keyword = ? DESC, prio LIMIT 1";
+                    AND keyword IN (?, ?, ?, ?, ?) ORDER BY keyword = ? DESC, prio LIMIT 1";
 
             $stm = $dbh->prepare($SQL);
             if ($stm) {
