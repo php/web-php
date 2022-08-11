@@ -330,6 +330,7 @@ $uri_aliases = array (
     "bcmath"           => "bc",
     'streams'          => 'book.stream',
     "mongodb"          => "set.mongodb",
+    "hrtime"           => "function.hrtime", // Prefer function over PECL ext
 
     "callback"     => "language.pseudo-types",
     "number"       => "language.pseudo-types",
