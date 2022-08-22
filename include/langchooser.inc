@@ -42,7 +42,7 @@ function language_choose_code()
 {
     // Contains all the languages picked up by the
     // process in priority order (without repeating codes)
-    $languages = array();
+    $languages = [];
 
     // Default values for languages
     $explicitly_specified = ''; $selected = '';
@@ -94,7 +94,7 @@ function language_choose_code()
 
     // Specified by the user via the browser's Accept Language setting
     // Samples: "hu, en-us;q=0.66, en;q=0.33", "hu,en-us;q=0.5"
-    $browser_langs = array(); $parsed_langs = array();
+    $browser_langs = []; $parsed_langs = [];
 
     // Check if we have $_SERVER['HTTP_ACCEPT_LANGUAGE'] set and
     // it no longer breaks if you only have one language set :)
@@ -108,7 +108,7 @@ function language_choose_code()
             // If the quality is missing, it is assumed to be 1 according to the RFC
             if (preg_match("!([a-z-]+)(;q=([0-9\\.]+))?!", trim($value), $found)) {
                 $quality = (isset($found[3]) ? (float) $found[3] : 1.0);
-                $browser_langs[] = array($found[1], $quality);
+                $browser_langs[] = [$found[1], $quality];
             }
             unset($found);
         }
@@ -168,7 +168,7 @@ function language_choose_code()
     $selected = $languages[0];
 
     // Return with all found data
-    return array($selected, $explicitly_specified, $parsed_langs);
+    return [$selected, $explicitly_specified, $parsed_langs];
 }
 
 // Add a language to the possible languages' list

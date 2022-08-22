@@ -37,15 +37,15 @@ $SIDEBAR_DATA='
 </div>
 ';
 
-site_header("Download documentation", array("current" => "docs"));
+site_header("Download documentation", ["current" => "docs"]);
 
 // Format to look for
-$formats = array(
+$formats = [
     "Single HTML file" => "html.gz",
     "Many HTML files"  => "tar.gz",
     "HTML Help file"   => "chm",
     "HTML Help file (with user notes)" => "chm",
-);
+];
 ?>
 
 <h1>Download documentation</h1>
@@ -86,7 +86,7 @@ $formats = array(
 </p>
 
 <?php
-$files = array(); $found_formats = array();
+$files = []; $found_formats = [];
 $filepath = $filename = '';
 
 // Go through all possible manual languages
@@ -119,12 +119,12 @@ foreach ($LANGUAGES as $langcode => $language) {
 
             // Size available, collect information
             if ($size !== false) {
-                $files[$langcode][$formatname] = array(
+                $files[$langcode][$formatname] = [
                     $link_to,
                     (int) ($size/1024),
                     date("j M Y", $changed),
                     $extension
-                );
+                ];
                 $found_formats[$formatname] = 1;
             }
         }
@@ -221,4 +221,4 @@ if (count($found_formats) == 0) {
 }
 ?>
 
-<?php site_footer(array('sidebar' => $SIDEBAR_DATA));
+<?php site_footer(['sidebar' => $SIDEBAR_DATA]);

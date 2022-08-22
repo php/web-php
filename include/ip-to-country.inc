@@ -110,7 +110,7 @@ function i2c_search_in_index($ip)
 
         // Compare current index part with our IP
         if ($ip_chunk >= $idxpart && $ip_chunk < (int) $data[0]) {
-            return array($recnum, (int) $data[1]);
+            return [$recnum, (int) $data[1]];
         }
 
         // Store for next compare
@@ -119,7 +119,7 @@ function i2c_search_in_index($ip)
     }
 
     // Return record number found
-    return array($recnum, -1);
+    return [$recnum, -1];
 }
 
 // Find the country searching from record $idx

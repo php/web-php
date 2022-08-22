@@ -34,7 +34,7 @@ echo "<h1>PHP Security Center</h1>\n";
 $dbfile = $_SERVER['DOCUMENT_ROOT'] . '/security/vulndb.txt';
 $fp = @fopen($dbfile, "rt");
 if (is_resource($fp)) {
-    $RECORDS = array();
+    $RECORDS = [];
     $record_no = 1;
     while ($s = fgets($fp)) {
         if ($s == "\n") {

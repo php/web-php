@@ -26,17 +26,17 @@ $SIDEBAR_DATA = '
 ';
 
 site_header("Downloads",
-    array(
-        'link' => array(
-            array(
+    [
+        'link' => [
+            [
                 "rel"   => "alternate",
                 "type"  => "application/atom+xml",
                 "href"  => $MYSITE . "releases/feed.php",
                 "title" => "PHP Release feed"
-            ),
-        ),
+            ],
+        ],
         "current" => "downloads",
-    )
+    ]
 );
 ?>
 <?php $i = 0; foreach ($RELEASES as $MAJOR => $major_releases): /* major releases loop start */
@@ -101,4 +101,4 @@ to verify the tags:
 </p>
 
 <?php
-site_footer(array('sidebar' => $SIDEBAR_DATA));
+site_footer(['sidebar' => $SIDEBAR_DATA]);

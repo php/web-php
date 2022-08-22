@@ -50,7 +50,7 @@ if (!$dirh) {
     error_noservice();
 }
 
-$functions = $maybe = $temp = $parts = array();
+$functions = $maybe = $temp = $parts = [];
 $p = 0;
 
 // Get all file names from the directory
@@ -105,10 +105,10 @@ if (count($temp) > 0) {
 }
 
 // Do not index page if presented as a search result
-if (count($maybe) > 0) { $head_options = array("noindex"); }
-else { $head_options = array(); }
+if (count($maybe) > 0) { $head_options = ["noindex"]; }
+else { $head_options = []; }
 
-site_header("Manual Quick Reference", $head_options+array("current" => "help"));
+site_header("Manual Quick Reference", $head_options+["current" => "help"]);
 
 // Note: $notfound is defined (with htmlspecialchars) inside manual-lookup.php
 $notfound_enc = urlencode($notfound);
@@ -131,9 +131,9 @@ if ($snippet = is_known_snippet($notfound)) {
 <?php
 quickref_table($maybe, false);
 
-$config = array(
+$config = [
     "sidebar" => '<p class="panel"><a href="/search.php?show=all&amp;pattern=' . $notfound_enc . '">Full website search</a>',
-);
+];
 
 site_footer($config);
 }

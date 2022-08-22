@@ -1,7 +1,7 @@
 <?php
 $_SERVER['BASE_PAGE'] = 'sites.php';
 include_once __DIR__ . '/include/prepend.inc';
-site_header("A Tourist's Guide", array("current" => "help"));
+site_header("A Tourist's Guide", ["current" => "help"]);
 ?>
 
 <h1 class="content-header">PHP.net: A Tourist's Guide</h1>
@@ -223,7 +223,7 @@ SIDEBAR_DATA;
 
 // Print the common footer.
 site_footer(
-    array(
+    [
         'sidebar' => $SIDEBAR
-    )
+    ]
 );

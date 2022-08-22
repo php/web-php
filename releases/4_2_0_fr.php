@@ -1,7 +1,7 @@
 <?php
 $_SERVER['BASE_PAGE'] = 'releases/4_2_0_fr.php';
 include_once __DIR__ . '/../include/prepend.inc';
-site_header("Annonce de publication de PHP 4.2.0", array("lang" => "fr"));
+site_header("Annonce de publication de PHP 4.2.0", ["lang" => "fr"]);
 ?>
 
 <h1>Annonce de publication de PHP 4.2.0</h1>

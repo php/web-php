@@ -45,13 +45,13 @@ if (!empty($_FORM['pattern'])) {
 else {
 
     // Print out common header
-    $link = array(
+    $link = [
         "rel"   => "search",
         "type"  => "application/opensearchdescription+xml",
         "href"  => $MYSITE . "phpnetimprovedsearch.src",
         "title" => "Add PHP.net search"
-    );
-    site_header("Search", array("link" => array($link), "current" => "help"));
+    ];
+    site_header("Search", ["link" => [$link], "current" => "help"]);
 
     google_cse();
     site_footer();

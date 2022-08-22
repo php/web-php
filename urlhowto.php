@@ -24,7 +24,7 @@ $SIDEBAR_DATA='
 </p>
 ';
 
-site_header("URL Howto", array("current" => "help"));
+site_header("URL Howto", ["current" => "help"]);
 function a($href): void {
     global $MYSITE;
     echo '<a href="' . $MYSITE . $href . '">' . $MYSITE . $href . '</a>';

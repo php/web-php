@@ -179,7 +179,7 @@ if (preg_match('/^GH-(\d+)$/', $URI, $matches)) {
 // Redirect if the entered URI was a PHP page name (except some pages,
 // which we display in the mirror's language or the explicitly specified
 // language [see below])
-if (!in_array($URI, array('mirror-info', 'error', 'mod'), false) &&
+if (!in_array($URI, ['mirror-info', 'error', 'mod'], true) &&
     file_exists($_SERVER['DOCUMENT_ROOT'] . "/$URI.php")) {
     mirror_redirect("/$URI.php");
 }
@@ -211,7 +211,7 @@ if ($path = is_known_term($term)) {
 // Major manual page modifications (need to handle shortcuts and pages in all languages)
 // Used permanent HTTP redirects, so search engines will be able to pick up the correct
 // new URLs for these pages.
-$manual_page_moves = array(
+$manual_page_moves = [
     // entry point changed
     'installation'               => 'install',
 
@@ -248,7 +248,7 @@ $manual_page_moves = array(
 
     // Refactored
     'regexp.reference'           => 'regexp.introduction',
-);
+];
 
 if (isset($manual_page_moves[$URI])) {
     status_header(301);
@@ -259,7 +259,7 @@ if (isset($manual_page_moves[$URI])) {
     mirror_redirect("/manual/$match[1]/" . $manual_page_moves[$match[2]] . ".php");
 }
 
-$manual_redirections = array(
+$manual_redirections = [
     'class.oci-lob'             => 'class.ocilob',
     'oci-lob.append'            => 'ocilob.append',
     'oci-lob.close'             => 'ocilob.close',
@@ -290,7 +290,7 @@ $manual_redirections = array(
     'oci-collection.max'        => 'ocicollection.max',
     'oci-collection.size'       => 'ocicollection.size',
     'oci-collection.trim'       => 'ocicollection.trim',
-);
+];
 
 if (preg_match("!^manual/([^/]+)/([^/]+)$!", $URI, $match) && isset($manual_redirections[$match[2]])) {
     status_header(301);
@@ -299,7 +299,7 @@ if (preg_match("!^manual/([^/]+)/([^/]+)$!", $URI, $match) && isset($manual_redi
 
 // ============================================================================
 // Define shortcuts for PHP files, manual pages and external redirects
-$uri_aliases = array (
+$uri_aliases =  [
 
     # PHP page shortcuts
     "download"      => "downloads",
@@ -496,9 +496,9 @@ $uri_aliases = array (
     # Removed pages
     "tips.php"      => "urlhowto",
     "tips"          => "urlhowto",
-);
+];
 
-$external_redirects = array(
+$external_redirects = [
     "php4news"    => "https://github.com/php/php-src/raw/PHP-4.4/NEWS",
     "php5news"    => "https://github.com/php/php-src/raw/PHP-5.6/NEWS",
     "php53news"   => "https://github.com/php/php-src/raw/PHP-5.3/NEWS",
@@ -522,10 +522,10 @@ $external_redirects = array(
     "releases.atom" => "/releases/feed.php", // BC, No need to pre-generate it
     "spec"        => "https://github.com/php/php-langspec",
     "sunglasses"  => "https://www.youtube.com/watch?v=dQw4w9WgXcQ", // Temporary easter egg for bug#66144
-);
+];
 
 // Temporary hack to fix bug #49956 for mysqli -- Please don't hate me for this. Data taken from mysqli/summary.xml
-$mysqli_redirects = array(
+$mysqli_redirects = [
     "mysqli_affected_rows"  => "mysqli.affected-rows",
     "mysqli_get_client_version"  => "mysqli.client-version",
     "mysqli_connect_errno"  => "mysqli.connect-errno",
@@ -623,7 +623,7 @@ $mysqli_redirects = array(
     "mysqli_free_result"  => "mysqli-result.free",
     "mysqli_embedded_server_end"  => "mysqli-driver.embedded-server-end",
     "mysqli_embedded_server_start"  => "mysqli-driver.embedded-server-start",
-);
+];
 
 // Merge this temporary hack with $uri_aliases so it'll be treated as such
 $uri_aliases = array_merge($uri_aliases, $mysqli_redirects);

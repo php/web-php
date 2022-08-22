@@ -9,7 +9,7 @@
 
  http://www.unicode.org/unicode/onlinedat/languages.html
 */
-$LANGUAGES = array(
+$LANGUAGES = [
     'en'    => 'English',
     'ar'    => 'Arabic',
     'bg'    => 'Bulgarian',
@@ -45,7 +45,7 @@ $LANGUAGES = array(
     'sv'    => 'Swedish',
     'tr'    => 'Turkish',
     'uk'    => 'Ukrainian',
-);
+];
 
 /*
  The following languages are inactive, which means they will not:
@@ -56,7 +56,7 @@ $LANGUAGES = array(
  However, these languages are available on the doc dev server:
  - http://docs.php.net/
 */
-$INACTIVE_ONLINE_LANGUAGES = array(
+$INACTIVE_ONLINE_LANGUAGES = [
     'ar'    => 'Arabic',
     'bg'    => 'Bulgarian',
     'hk'    => 'Chinese (Hong Kong Cantonese)',
@@ -83,7 +83,7 @@ $INACTIVE_ONLINE_LANGUAGES = array(
     'sl'    => 'Slovenian',
     'sv'    => 'Swedish',
     'uk'    => 'Ukrainian',
-);
+];
 
 $ACTIVE_ONLINE_LANGUAGES = array_diff($LANGUAGES, $INACTIVE_ONLINE_LANGUAGES);
 

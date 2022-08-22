@@ -48,7 +48,7 @@ if (isset($_GET["serialize"]) || isset($_GET["json"])) {
         }
 
         if (empty($machineReadable)) {
-            $machineReadable = array("error" => "Unknown version");
+            $machineReadable = ["error" => "Unknown version"];
         }
     } else {
         foreach ($RELEASES as $major => $release) {
@@ -71,10 +71,10 @@ if (isset($_GET["serialize"]) || isset($_GET["json"])) {
 }
 
 // Human Readable.
-site_header("Releases", array(
+site_header("Releases", [
     'current' => 'downloads',
     'css' => '/styles/releases.css',
-));
+]);
 
 echo "<h1>Unsupported Historical Releases</h1>\n\n";
 echo "<p>
@@ -166,7 +166,7 @@ site_footer(['sidebar' =>
 ']);
 
 function recentEOLBranchesHTML(): string {
-    $eol = array();
+    $eol = [];
     foreach (get_eol_branches() as $branches) {
         foreach ($branches as $branch => $detail) {
             $detail_date = $detail['date'];

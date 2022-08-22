@@ -21,10 +21,10 @@ $SIDEBAR_DATA = '
 
 site_header(
     'Mirroring The PHP Website',
-    array(
+    [
         'current' => 'community',
         'layout_span' => 12,
-    )
+    ]
 );
 
 ?>

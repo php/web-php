@@ -7,7 +7,7 @@ include_once __DIR__ . '/../include/posttohost.inc';
 include_once __DIR__ . '/../include/shared-manual.inc';
 include __DIR__ . '/spam_challenge.php';
 
-site_header("Add Manual Note", array('css' => 'add-note.css'));
+site_header("Add Manual Note", ['css' => 'add-note.css']);
 
 // Copy over "sect" and "redirect" from GET to POST
 if (empty($_POST['sect']) && isset($_GET['sect'])) {
@@ -19,7 +19,7 @@ if (empty($_POST['redirect']) && isset($_GET['redirect'])) {
 
 // Decide on whether all vars are present for processing
 $process = true;
-$needed_vars = array('note', 'user', 'sect', 'redirect', 'action', 'func', 'arga', 'argb', 'answer');
+$needed_vars = ['note', 'user', 'sect', 'redirect', 'action', 'func', 'arga', 'argb', 'answer'];
 foreach ($needed_vars as $varname) {
     if (empty($_POST[$varname])) {
         $process = false;
@@ -93,13 +93,13 @@ if ($process) {
         // Post the variables to the central user note script
         $result = posttohost(
             "https://main.php.net/entry/user-note.php",
-            array(
+            [
                 'user'    => $user,
                 'note'    => $note,
                 'sect'    => $_POST['sect'],
                 'ip'      => $_SERVER['REMOTE_ADDR'],
                 'redirip' => $redirip
-            )
+            ]
         );
 
         // If there is any non-header result, then it is an error

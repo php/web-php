@@ -24,7 +24,7 @@ The following list of languages already contain SVN modules, and will show up on
 <ul>
 <?php
 // $archived are manuals we have old versions of
-$archived = array('da', 'kr', 'pl', 'tw');
+$archived = ['da', 'kr', 'pl', 'tw'];
 
 foreach ($INACTIVE_ONLINE_LANGUAGES as $cc => $lang) {
     $link = 'no archive';

@@ -39,7 +39,7 @@ class Sorter {
         $this->calcSortPriority($notes);
 
         // Third we sort the data.
-        uasort($notes, array($this, 'factorSort'));
+        uasort($notes, [$this, 'factorSort']);
     }
 
     private function calcVotePriority(array $note) {
@@ -56,11 +56,11 @@ class Sorter {
 
     private function calcSortPriority(array &$notes) {
         foreach ($notes as &$note) {
-            $prio = array(
+            $prio = [
                 'vote' => $this->calcVotePriority($note) * $this->voteWeight,
                 'rating' => $this->calcRatingPriority($note) * $this->ratingWeight,
                 'age' =>  ($note['xwhen'] - $this->minAge) * $this->ageFactor
-            );
+            ];
             $note['sort'] = $prio['value'] = array_sum($prio);
         }
     }

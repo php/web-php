@@ -21,7 +21,7 @@ function highlight_php($code, $return = false)
 
     // Fix output to use CSS classes and wrap well
     $highlighted = '<div class="phpcode">' . str_replace(
-        array(
+        [
             '&nbsp;',
             '<br>',
             '<span style="color: ',
@@ -29,8 +29,8 @@ function highlight_php($code, $return = false)
             "\n ",
             '  ',
             '  '
-        ),
-        array(
+        ],
+        [
             ' ',
             "<br>\n",
             '<span class="',
@@ -38,7 +38,7 @@ function highlight_php($code, $return = false)
             "\n&nbsp;",
             '&nbsp; ',
             '&nbsp; '
-        ),
+        ],
         $highlighted
     ) . '</div>';
 
@@ -96,7 +96,7 @@ function make_image($file, $alt = false, $align = false, $extras = false,
 
     // Convert right or left alignment to CSS float,
     // but leave other alignments intact (for now)
-    if (in_array($align, array("right", "left"), false)) {
+    if (in_array($align, ["right", "left"], true)) {
         $align = ' style="float: ' . $align . ';"';
     } elseif ($align) {
         $align = ' align="' . $align . '"';
@@ -291,7 +291,7 @@ function display_event($event, $include_date = 1)
     }
 
     // Recurring possibilities
-    $re = array(
+    $re = [
         1 => 'First',
         2 => 'Second',
         3 => 'Third',
@@ -299,7 +299,7 @@ function display_event($event, $include_date = 1)
         -1 => 'Last',
         -2 => '2nd Last',
         -3 => '3rd Last'
-    );
+    ];
 
     if (!isset($event['start']) && isset($event['sday'])) {
         $sday = mktime(12,0,0,$event['smonth'],$event['sday'],$event['syear']);
@@ -351,7 +351,7 @@ function display_event($event, $include_date = 1)
 
     // Event category
     if (isset($event['category']) && $event['category']) {
-        $cat = array("unknown", "User Group Event", "Conference", "Training");
+        $cat = ["unknown", "User Group Event", "Conference", "Training"];
         echo ' [' . $cat[$event['category']] . '] ';
     }
 
@@ -393,16 +393,16 @@ function news_archive_sidebar()
 
 // Print news
 function print_news($news, $dog, $max = 5, $onlyyear = null, $return = false) {
-    $retval = array();
+    $retval = [];
     $count = 0;
-    $news = $news ?: array(); // default to empty array (if no news)
+    $news = $news ?: []; // default to empty array (if no news)
     foreach ($news as $item) {
         $ok = false;
 
         // Only print entries in the provided s/dog/cat/ egory
         // If $dog is null, everything matches
         foreach ($item["category"] as $category) {
-            if (is_null($dog) || in_array($category["term"], (array)$dog, false)) {
+            if (is_null($dog) || in_array($category["term"], (array)$dog, true)) {
                 $ok = true;
                 ++$count;
                 break;
@@ -443,12 +443,12 @@ function print_news($news, $dog, $max = 5, $onlyyear = null, $return = false) {
         }
 
         if ($return) {
-            $retval[] = array(
+            $retval[] = [
                 "title" => $item["title"],
                 "id"    => $id,
                 "permlink" => $permlink,
                 "date"     => $newsdate,
-            );
+            ];
             continue;
         }
 
@@ -470,19 +470,19 @@ EOT;
     return $retval;
 }
 
-function site_header($title = '', $config = array())
+function site_header($title = '', $config = [])
 {
     global $MYSITE;
 
-    $defaults = array(
+    $defaults = [
         "lang" => myphpnet_language(),
         "current" => "",
-        "meta-navigation" => array(),
+        "meta-navigation" => [],
         'classes' => '',
         'layout_span' => 9,
         "cache"       => false,
         "headsup"     => "",
-    );
+    ];
 
     $config = array_merge($defaults, $config);
 
@@ -494,7 +494,7 @@ function site_header($title = '', $config = array())
 
     if (isset($_COOKIE["MD"]) || isset($_GET["MD"])) {
         $classes .= "markdown-content";
-        $config["css_overwrite"] = array("/styles/i-love-markdown.css");
+        $config["css_overwrite"] = ["/styles/i-love-markdown.css"];
     }
 
     if (empty($title)) {
@@ -508,7 +508,7 @@ function site_header($title = '', $config = array())
 
     require __DIR__ ."/header.inc";
 }
-function site_footer($config = array())
+function site_footer($config = [])
 {
     require __DIR__ . "/footer.inc";
 }
@@ -540,28 +540,28 @@ function get_news_changes()
 
 function news_toc($sections = null) {
     include __DIR__ . "/pregen-news.inc";
-    $items = array(
-        "news" => array(
+    $items = [
+        "news" => [
             "title" => "News",
             "link"  => "/archive/",
             "children" => print_news($NEWS_ENTRIES, "frontpage", 3, null, true),
-        ),
-        "conferences" => array(
+        ],
+        "conferences" => [
             "title" => "Conferences",
             "link"  => "/conferences/",
             "children" => print_news($NEWS_ENTRIES, "conferences", 3, null, true),
-        ),
-        "papers" => array(
+        ],
+        "papers" => [
             "title" => "Call for Papers",
             "link"  => "/conferences/",
             "children" => print_news($NEWS_ENTRIES, "cfp", 3, null, true),
-        ),
-    );
+        ],
+    ];
 
     foreach ($items as $section => $menu) {
 
         // only print requested sections.
-        if (is_array($sections) && !in_array($section, $sections, false)) {
+        if (is_array($sections) && !in_array($section, $sections, true)) {
             continue;
         }
 

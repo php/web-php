@@ -13,7 +13,7 @@
 })($_SERVER['REQUEST_URI'] ?? '');
 
 // Get the modification date of this PHP file
-$timestamps = array(@getlastmod());
+$timestamps = [@getlastmod()];
 
 /*
    The date of prepend.inc represents the age of ALL
@@ -56,7 +56,7 @@ include_once 'include/version.inc';
 mirror_setcookie("LAST_NEWS", $_SERVER["REQUEST_TIME"], 60*60*24*365);
 
 $content = "<div class='home-content'>";
-$frontpage = array();
+$frontpage = [];
 foreach ($NEWS_ENTRIES as $entry) {
     foreach ($entry["category"] as $category) {
         if ($category["term"] == "frontpage") {
@@ -122,31 +122,31 @@ $meta_image_path = $MYSITE . 'images/meta-image.png';
 $meta_description = "PHP is a popular general-purpose scripting language that powers everything from your blog to the most popular websites in the world.";
 
 site_header("Hypertext Preprocessor",
-    array(
+    [
         'current' => 'home',
-        'headtags' => array(
+        'headtags' => [
             '<link rel="alternate" type="application/atom+xml" title="PHP: Hypertext Preprocessor" href="' . $MYSITE . 'feed.atom">',
             '<script>',
             "function okc(f){var c=[38,38,40,40,37,39,37,39,66,65,13],x=function(){x.c=x.c||Array.apply({},c);x.r=function(){x.c=null};return x.c},h=function(e){if(x()[0]==(e||window.event).keyCode){x().shift();if(!x().length){x.r();f()}}else{x.r()}};window.addEventListener?window.addEventListener('keydown',h,false):document.attachEvent('onkeydown',h)}",
             "okc(function(){if(document.getElementById){i=document.getElementById('phplogo');i.src='".$MYSITE."images/php_konami.gif'}});",
             '</script>'
-        ),
-        'link' => array(
-            array(
+        ],
+        'link' => [
+            [
                 "rel"   => "search",
                 "type"  => "application/opensearchdescription+xml",
                 "href"  => $MYSITE . "phpnetimprovedsearch.src",
                 "title" => "Add PHP.net search"
-            ),
-            array(
+            ],
+            [
                 "rel"   => "alternate",
                 "type"  => "application/atom+xml",
                 "href"  => $MYSITE . "releases/feed.php",
                 "title" => "PHP Release feed"
-            ),
+            ],
 
-        ),
-        'css' => array('home.css'),
+        ],
+        'css' => ['home.css'],
         'intro' => $intro,
         'meta_tags' => <<<META
 <meta name="Description" content="{$meta_description}" />
@@ -165,7 +165,7 @@ site_header("Hypertext Preprocessor",
 <meta property="og:image" content="{$meta_image_path}" />
 <meta property="og:description" content="$meta_description" />
 META
-    )
+    ]
 );
 
 // Print body of home page.
@@ -173,10 +173,10 @@ echo $content;
 
 // Prepare announcements.
 if (is_array($CONF_TEASER)) {
-    $conftype = array(
+    $conftype = [
         'conference' => 'Upcoming conferences',
         'cfp'        => 'Conferences calling for papers',
-    );
+    ];
     $announcements = "";
     foreach ($CONF_TEASER as $category => $entries) {
         if ($entries) {
@@ -218,9 +218,9 @@ SIDEBAR_DATA;
 
 // Print the common footer.
 site_footer(
-    array(
+    [
         "atom" => "/feed.atom", // Add a link to the feed at the bottom
         'elephpants' => true,
         'sidebar' => $SIDEBAR
-    )
+    ]
 );
