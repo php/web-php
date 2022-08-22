@@ -313,7 +313,7 @@ function output_lists_table($mailing_lists): void
                  "<th>Newsgroup</th><th>Normal</th><th>Digest</th></tr>\n";
         } else {
             echo '<tr align="center">';
-            echo '<td align="left"><strong>' . $listinfo[1] . '</strong> <small>&lt;<a href="mailto:' . $listinfo[0] . '@lists.php.net">' . $listinfo[0] . '@lists.php.net</a>&gt;</small><br><small>'. $listinfo[2] . '</small></td>';
+            echo '<td align="left"><strong>' . $listinfo[1] . '</strong> <small>&lt;<a href="mailto:' . $listinfo[0] . '@lists.php.net">' . $listinfo[0] . '@lists.php.net</a>&gt;</small><br><small>' . $listinfo[2] . '</small></td>';
             echo '<td>' . ($listinfo[3] ? 'yes' : 'no') . '</td>';
 
             // Let the list name defined with a string, if the

@@ -22,6 +22,9 @@ $config
         'array_indentation' => true,
         'array_syntax' => true,
         'class_attributes_separation' => true,
+        'concat_space' => [
+            'spacing' => 'one',
+        ],
         'constant_case' => true,
         'indentation_type' => true,
         'line_ending' => true,

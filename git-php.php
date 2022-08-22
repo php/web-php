@@ -6,7 +6,7 @@ include_once __DIR__ . '/include/posttohost.inc';
 
 // Force the account requests to php.net
 if (!is_primary_site()) {
-    header('Location: https://www.php.net/'.$_SERVER['BASE_PAGE']);
+    header('Location: https://www.php.net/' . $_SERVER['BASE_PAGE']);
     exit;
 }
 
@@ -49,7 +49,7 @@ if (count($_POST) && (!isset($_POST['purpose']) || !is_array($_POST['purpose']) 
     if (empty($_POST['id'])) {
         $error .= "You must supply a desired Git user id. <br>";
     } elseif (!preg_match('!^[a-z]\w+$!', $_POST['id']) || strlen($_POST['id']) > 16) {
-        $error .= "Your user id must be from 1-16 characters long, start with ".
+        $error .= "Your user id must be from 1-16 characters long, start with " .
                   "a letter and contain nothing but a-z, 0-9, and _ <br>";
     }
     if (empty($_POST['fullname'])) {

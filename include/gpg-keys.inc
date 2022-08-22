@@ -109,9 +109,9 @@ function gpg_key_get(string $rm): ?string {
             return
                 "pub   rsa4096 2021-03-26 [SC] [expires: 2030-03-26]\n" .
                 "      E609 13E4 DF20 9907 D8E3  0D96 659A 97C9 CF2A 795A\n" .
-                "uid           [ultimate] Sergey Panteleev <sergey@php.net>\n".
-                "uid           [ultimate] Sergey Panteleev <sergey@s-panteleev.ru>\n".
-                "uid           [ultimate] Sergey Panteleev <sergey@sergeypanteleev.com>\n".
+                "uid           [ultimate] Sergey Panteleev <sergey@php.net>\n" .
+                "uid           [ultimate] Sergey Panteleev <sergey@s-panteleev.ru>\n" .
+                "uid           [ultimate] Sergey Panteleev <sergey@sergeypanteleev.com>\n" .
                 "sub   rsa4096 2021-03-26 [E] [expires: 2025-03-26]";
 
         case 'stas':

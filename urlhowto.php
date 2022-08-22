@@ -9,11 +9,11 @@ $SIDEBAR_DATA='
  examples you can try out:
 </p>
 <ul class="simple">
- <li><a href="'.$MYSITE.'echo">/echo</a></li>
- <li><a href="'.$MYSITE.'it/echo">/it/echo</a></li>
- <li><a href="'.$MYSITE.'imap">/imap</a></li>
- <li><a href="'.$MYSITE.'downloads">/downloads</a></li>
- <li><a href="'.$MYSITE.'searchterm">/searchterm</a></li>
+ <li><a href="' . $MYSITE . 'echo">/echo</a></li>
+ <li><a href="' . $MYSITE . 'it/echo">/it/echo</a></li>
+ <li><a href="' . $MYSITE . 'imap">/imap</a></li>
+ <li><a href="' . $MYSITE . 'downloads">/downloads</a></li>
+ <li><a href="' . $MYSITE . 'searchterm">/searchterm</a></li>
 </ul>
 
 <h3>My PHP.net</h3>

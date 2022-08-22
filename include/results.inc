@@ -8,25 +8,25 @@ function search_results($res, $q, $profile='all', $per_page=10, $s=0, $l='en', $
     $disp_start_result = $start_result + 1;
     $disp_end_result = $end_result + 1;
     if($show_title) echo "<h2>Showing results $disp_start_result to $disp_end_result of $results_count</h2>\n";
-    echo '<ul id="search-results">'."\n";
+    echo '<ul id="search-results">' . "\n";
     $pos = $res['ResultSet']['firstResultPosition'];
 
     $php_img_dir = 'http://www.php.net/images';
     $types = [
-        'pear'     => '<img src="'. $php_img_dir .'/pear_item.gif" height="19" width="17" style="float:left; margin-left:-30px;"/>',
-        'pecl'     => '<img src="'. $php_img_dir .'/pecl_item.gif" height="19" width="17" style="float:left; margin-left:-30px;"/>',
-        'pecl4win' => '<img src="'. $php_img_dir .'/pecl_item_win.gif" height="22" width="21" style="float:left; margin-left:-31px;"/>',
-        'peclbugs' => '<img src="'. $php_img_dir .'/pecl_item_bug.gif" height="19" width="17" style="float:left; margin-left:-30px;"/>',
-        'pearbugs' => '<img src="'. $php_img_dir .'/pear_item_bug.gif" height="19" width="17" style="float:left; margin-left:-30px;"/>',
-        'talks'    => '<img src="'. $php_img_dir .'/ele-icon.gif" height="20" width="32" style="float:left; margin-left:-40px;"/>',
-        'snaps'    => '<img src="'. $php_img_dir .'/logos/php_xpstyle_ico.png" height="32" width="32" style="float:left; margin-left:-40px;"/>',
-        'cvsweb'   => '<img src="'. $php_img_dir .'/logos/php_script_ico.png" height="32" width="32" style="float:left; margin-left:-40px;"/>',
-        'viewcvs'  => '<img src="'. $php_img_dir .'/logos/php_script_ico.png" height="32" width="32" style="float:left; margin-left:-40px;"/>',
-        'news'     => '<img src="'. $php_img_dir .'/logos/php-icon-white.gif" height="32" width="32" style="float:left; margin-left:-40px;"/>',
-        'php'      => '<img src="'. $php_img_dir .'/logos/php-icon-white.gif" height="32" width="32" style="float:left; margin-left:-40px;"/>',
-        'doc'      => '<img src="'. $php_img_dir .'/logos/php-icon-white.gif" height="32" width="32" style="float:left; margin-left:-40px;"/>',
-        'bugs'     => '<img src="'. $php_img_dir .'/php_bug.gif" height="32" width="32" style="float:left; margin-left:-40px;"/>',
-        'gtk'      => '<img src="'. $php_img_dir .'/logos/php-gtk-white.gif" height="26" width="32" style="float:left; margin-left:-40px;"/>'
+        'pear'     => '<img src="' . $php_img_dir . '/pear_item.gif" height="19" width="17" style="float:left; margin-left:-30px;"/>',
+        'pecl'     => '<img src="' . $php_img_dir . '/pecl_item.gif" height="19" width="17" style="float:left; margin-left:-30px;"/>',
+        'pecl4win' => '<img src="' . $php_img_dir . '/pecl_item_win.gif" height="22" width="21" style="float:left; margin-left:-31px;"/>',
+        'peclbugs' => '<img src="' . $php_img_dir . '/pecl_item_bug.gif" height="19" width="17" style="float:left; margin-left:-30px;"/>',
+        'pearbugs' => '<img src="' . $php_img_dir . '/pear_item_bug.gif" height="19" width="17" style="float:left; margin-left:-30px;"/>',
+        'talks'    => '<img src="' . $php_img_dir . '/ele-icon.gif" height="20" width="32" style="float:left; margin-left:-40px;"/>',
+        'snaps'    => '<img src="' . $php_img_dir . '/logos/php_xpstyle_ico.png" height="32" width="32" style="float:left; margin-left:-40px;"/>',
+        'cvsweb'   => '<img src="' . $php_img_dir . '/logos/php_script_ico.png" height="32" width="32" style="float:left; margin-left:-40px;"/>',
+        'viewcvs'  => '<img src="' . $php_img_dir . '/logos/php_script_ico.png" height="32" width="32" style="float:left; margin-left:-40px;"/>',
+        'news'     => '<img src="' . $php_img_dir . '/logos/php-icon-white.gif" height="32" width="32" style="float:left; margin-left:-40px;"/>',
+        'php'      => '<img src="' . $php_img_dir . '/logos/php-icon-white.gif" height="32" width="32" style="float:left; margin-left:-40px;"/>',
+        'doc'      => '<img src="' . $php_img_dir . '/logos/php-icon-white.gif" height="32" width="32" style="float:left; margin-left:-40px;"/>',
+        'bugs'     => '<img src="' . $php_img_dir . '/php_bug.gif" height="32" width="32" style="float:left; margin-left:-40px;"/>',
+        'gtk'      => '<img src="' . $php_img_dir . '/logos/php-gtk-white.gif" height="26" width="32" style="float:left; margin-left:-40px;"/>'
     ];
 
     foreach($res['ResultSet']['Result'] as $i => $hit) {
