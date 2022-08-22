@@ -11,8 +11,8 @@ function posttohost($url, $data)
     $data = http_build_query($data);
 
     $opts = [
-        'method'  => 'POST',
-        'header'  => 'Content-type: application/x-www-form-urlencoded',
+        'method' => 'POST',
+        'header' => 'Content-type: application/x-www-form-urlencoded',
         'content' => $data,
     ];
 

@@ -28,10 +28,10 @@ site_header("Using Git for PHP Development", ["current" => "community"]);
 
 $groups = [
     "none" => "Choose One",
-    "php"  => "PHP Group",
+    "php" => "PHP Group",
     "pear" => "PEAR Group",
     "pecl" => "PECL Group",
-    "doc"  => "Doc Group",
+    "doc" => "Doc Group",
 ];
 
 ?>
@@ -80,12 +80,12 @@ if (count($_POST) && (!isset($_POST['purpose']) || !is_array($_POST['purpose']) 
             "https://main.php.net/entry/svn-account.php",
             [
                 "username" => $_POST['id'],
-                "name"     => $_POST['fullname'],
-                "email"    => $_POST['email'],
-                "passwd"   => $_POST['password'],
-                "note"     => $_POST['realpurpose'],
-                "yesno"    => $_POST['yesno'],
-                "group"    => $_POST['group'],
+                "name" => $_POST['fullname'],
+                "email" => $_POST['email'],
+                "passwd" => $_POST['password'],
+                "note" => $_POST['realpurpose'],
+                "yesno" => $_POST['yesno'],
+                "group" => $_POST['group'],
             ]
         );
         // Error while posting
@@ -102,7 +102,7 @@ if (count($_POST) && (!isset($_POST['purpose']) || !is_array($_POST['purpose']) 
 ?>
 <p>
  Thank you. Your request has been sent. You should hear something within the
- next week or so. If you haven't heard anything by around <?php echo date('l, F jS', time()+604800); ?>
+ next week or so. If you haven't heard anything by around <?php echo date('l, F jS', time() + 604800); ?>
  then please send an email to the appropriate <a href="/mailing-lists.php">mailing list</a>:
 </p>
 <ul>

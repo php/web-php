@@ -22,7 +22,7 @@ ob_start();
 
 // Flatten major versions out of RELEASES.
 $RELEASED_VERSIONS = array_reduce($RELEASES, 'array_merge', []);
-$FEED_UPDATED =  0;
+$FEED_UPDATED = 0;
 krsort($RELEASED_VERSIONS);
 foreach ($RELEASED_VERSIONS as $version => $release) {
     $published = date(DATE_ATOM, strtotime($release["source"][0]["date"]));

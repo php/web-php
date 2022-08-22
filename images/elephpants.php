@@ -45,8 +45,8 @@ if (isset($_REQUEST['count'])) {
 }
 
 // read out photo metadata
-$path   = __DIR__ . '/elephpants';
-$json   = @file_get_contents($path . '/flickr.json');
+$path = __DIR__ . '/elephpants';
+$json = @file_get_contents($path . '/flickr.json');
 $photos = json_decode($json, true);
 
 // if no photo data, respond with an error.
@@ -78,8 +78,8 @@ foreach ($photos as $photo) {
     // add photo to response array.
     $elephpants[] = [
         'title' => $photo['title'],
-        'url'   => "http://flickr.com/photos/" . $photo['owner'] . "/" . $photo['id'],
-        'data'  => base64_encode(file_get_contents($path . '/' . $photo['filename']))
+        'url' => "http://flickr.com/photos/" . $photo['owner'] . "/" . $photo['id'],
+        'data' => base64_encode(file_get_contents($path . '/' . $photo['filename']))
     ];
 }
 

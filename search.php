@@ -46,9 +46,9 @@ else {
 
     // Print out common header
     $link = [
-        "rel"   => "search",
-        "type"  => "application/opensearchdescription+xml",
-        "href"  => $MYSITE . "phpnetimprovedsearch.src",
+        "rel" => "search",
+        "type" => "application/opensearchdescription+xml",
+        "href" => $MYSITE . "phpnetimprovedsearch.src",
         "title" => "Add PHP.net search"
     ];
     site_header("Search", ["link" => [$link], "current" => "help"]);

@@ -22,7 +22,7 @@ function print_star(): void
 function random_bgcolor($min, $max): void
 {
     echo "style=\"background-color: #" .
-         sprintf('%02x%02x%02x', rand($min, $max)*51, rand($min, $max)*51, rand($min, $max)*51) .
+         sprintf('%02x%02x%02x', rand($min, $max) * 51, rand($min, $max) * 51, rand($min, $max) * 51) .
          ";\"";
 }
 ?>

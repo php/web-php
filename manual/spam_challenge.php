@@ -37,11 +37,11 @@ const CHALLENGES = [
 
 // generate a challenge
 function gen_challenge() {
-    $c = CHALLENGES[rand(0, count(CHALLENGES)-1)];
+    $c = CHALLENGES[rand(0, count(CHALLENGES) - 1)];
 
-    $a  = rand(0, 9);
+    $a = rand(0, 9);
     $an = NUMS[$a];
-    $b  = isset($c[2]) ? $c[2]($a) : rand(0, 9);
+    $b = isset($c[2]) ? $c[2]($a) : rand(0, 9);
     $bn = NUMS[$b];
 
     return [$c[0], $an, $bn, $c[1]($c[0], $an, $bn)];

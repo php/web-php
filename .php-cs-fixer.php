@@ -21,6 +21,7 @@ $config
     ->setRules([
         'array_indentation' => true,
         'array_syntax' => true,
+        'binary_operator_spaces' => true,
         'class_attributes_separation' => true,
         'concat_space' => [
             'spacing' => 'one',
