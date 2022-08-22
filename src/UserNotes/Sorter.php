@@ -4,15 +4,21 @@ namespace phpweb\UserNotes;
 
 class Sorter {
     private $maxVote;
+
     private $minVote;
+
     private $maxAge;
+
     private $minAge;
 
     private $voteFactor;
+
     private $ageFactor;
 
     private $voteWeight = 38;
+
     private $ratingWeight = 60;
+
     private $ageWeight = 2;
 
     public function sort(array &$notes) {

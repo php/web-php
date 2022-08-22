@@ -20,6 +20,7 @@ $config
     ->setRiskyAllowed(true)
     ->setRules([
         'array_indentation' => true,
+        'class_attributes_separation' => true,
         'constant_case' => true,
         'indentation_type' => true,
         'line_ending' => true,
