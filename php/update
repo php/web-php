@@ -1,0 +1,11 @@
+/vendor/
+
+backend/mirror.gif
+backend/mirror.png
+backend/mirror.jpg
+backend/GeoIP.dat
+vendor/
+.idea
+.DS_Store
+.DS_Store?
+.php-cs-fixer.cache
