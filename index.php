@@ -2,9 +2,9 @@
 (function ($uri): void {
     // Special redirect cases not able to be captured in error.php
     $shortcuts = [
-        '/?:'    => '/language.operators.comparison#language.operators.comparison.ternary',
-        '/??'    => '/language.operators.comparison#language.operators.comparison.coalesce',
-        '/??='   => '/language.operators.assignment#language.operators.assignment.other',
+        '/?:' => '/language.operators.comparison#language.operators.comparison.ternary',
+        '/??' => '/language.operators.comparison#language.operators.comparison.coalesce',
+        '/??=' => '/language.operators.assignment#language.operators.assignment.other',
     ];
     if (isset($shortcuts[$uri])) {
         header("Location: {$shortcuts[$uri]}");
@@ -53,7 +53,7 @@ include_once 'include/pregen-confs.inc';
 include_once 'include/pregen-news.inc';
 include_once 'include/version.inc';
 
-mirror_setcookie("LAST_NEWS", $_SERVER["REQUEST_TIME"], 60*60*24*365);
+mirror_setcookie("LAST_NEWS", $_SERVER["REQUEST_TIME"], 60 * 60 * 24 * 365);
 
 $content = "<div class='home-content'>";
 $frontpage = [];
@@ -69,7 +69,7 @@ foreach ($NEWS_ENTRIES as $entry) {
 }
 foreach ($frontpage as $entry) {
     $link = preg_replace('~^(http://php.net/|https://www.php.net/)~', '', $entry["id"]);
-    $id   = parse_url($entry["id"], PHP_URL_FRAGMENT);
+    $id = parse_url($entry["id"], PHP_URL_FRAGMENT);
     $date = date_create($entry['updated']);
     $date_human = date_format($date, 'd M Y');
     $date_w3c = date_format($date, DATE_W3C);
@@ -133,15 +133,15 @@ site_header("Hypertext Preprocessor",
         ],
         'link' => [
             [
-                "rel"   => "search",
-                "type"  => "application/opensearchdescription+xml",
-                "href"  => $MYSITE . "phpnetimprovedsearch.src",
+                "rel" => "search",
+                "type" => "application/opensearchdescription+xml",
+                "href" => $MYSITE . "phpnetimprovedsearch.src",
                 "title" => "Add PHP.net search"
             ],
             [
-                "rel"   => "alternate",
-                "type"  => "application/atom+xml",
-                "href"  => $MYSITE . "releases/feed.php",
+                "rel" => "alternate",
+                "type" => "application/atom+xml",
+                "href" => $MYSITE . "releases/feed.php",
                 "title" => "PHP Release feed"
             ],
 
@@ -175,7 +175,7 @@ echo $content;
 if (is_array($CONF_TEASER)) {
     $conftype = [
         'conference' => 'Upcoming conferences',
-        'cfp'        => 'Conferences calling for papers',
+        'cfp' => 'Conferences calling for papers',
     ];
     $announcements = "";
     foreach ($CONF_TEASER as $category => $entries) {

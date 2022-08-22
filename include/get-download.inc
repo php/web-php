@@ -12,7 +12,7 @@ $possible_files = [$df, "manual/$df"];
 
 $site_config = [
     'current' => 'downloads',
-    'css'     => ['mirror.css']
+    'css' => ['mirror.css']
 ];
 
 // Find out what is the exact file requested

@@ -76,7 +76,7 @@ function i2c_go()
     $COUNTRY = $country;
 
     // Set the country in a cookie for a week
-    return mirror_setcookie("COUNTRY", "$country,$ipnum", 60*60*24*7);
+    return mirror_setcookie("COUNTRY", "$country,$ipnum", 60 * 60 * 24 * 7);
 
 }
 
@@ -115,7 +115,7 @@ function i2c_search_in_index($ip)
 
         // Store for next compare
         $idxpart = (int) $data[0];
-        $recnum  = (int) $data[1];
+        $recnum = (int) $data[1];
     }
 
     // Return record number found
@@ -140,7 +140,7 @@ function i2c_search_in_db($ip, $idx)
     if (!$ipdb) { return $country; }
 
     // Jump to record $idx
-    fseek($ipdb, ($idx[0] ? (($idx[0]-1)*24) : 0));
+    fseek($ipdb, ($idx[0] ? (($idx[0] - 1) * 24) : 0));
 
     // Read records until we hit the end of the file,
     // or we find the range where this IP is, or we
@@ -162,8 +162,8 @@ function i2c_search_in_db($ip, $idx)
 
         // Split the record to it's parts
         $range_start = (float) substr($record, 0, 10);
-        $range_end   = (float) substr($record, 10, 10);
-        $country     = substr($record, 20, 3);
+        $range_end = (float) substr($record, 10, 10);
+        $country = substr($record, 20, 3);
 
         // Getting closer to the end of the indexed region
         $idx[0] += 1;

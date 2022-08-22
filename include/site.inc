@@ -167,7 +167,7 @@ function header_nocache()
 function get_available_sqlites() {
 
     $allsqlites = [1 => 'sqlite', 2 => 'sqlite3', 4 => 'pdo_sqlite', 8 => 'pdo_sqlite2'];
-    $avail      = 0;
+    $avail = 0;
 
     if (function_exists('sqlite_open')) {
         $avail += 1;
@@ -215,7 +215,7 @@ function get_shortname($page) {
         array_shift($sections);
 
         // We can atleast remove manual/xx/
-        $shorturl = substr($page, strrpos($page, "/")+1);
+        $shorturl = substr($page, strrpos($page, "/") + 1);
 
         foreach ($sections as $section) {
             // If we know this section
@@ -250,10 +250,10 @@ if (!isset($_SERVER["HTTPS"]) || $_SERVER["HTTPS"] != "on") {
 
 if ($_SERVER["SERVER_PORT"] != '80' && $_SERVER["SERVER_PORT"] != 443) {
     $MYSITE = $proto . '://' . $_SERVER["SERVER_NAME"] . ':' . (int)$_SERVER["SERVER_PORT"] . '/';
-    $msite  =      'http://' . $_SERVER["SERVER_NAME"] . ':' . (int)$_SERVER["SERVER_PORT"] . '/';
+    $msite = 'http://' . $_SERVER["SERVER_NAME"] . ':' . (int)$_SERVER["SERVER_PORT"] . '/';
 } else {
     $MYSITE = $proto . '://' . $_SERVER["SERVER_NAME"] . '/';
-    $msite  =     'https://' . $_SERVER["SERVER_NAME"] . '/';
+    $msite = 'https://' . $_SERVER["SERVER_NAME"] . '/';
 }
 
 // If the mirror is not registered with this name, provide defaults

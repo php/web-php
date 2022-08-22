@@ -74,11 +74,11 @@ if (isset($_POST['action'])) {
         $result = posttohost(
             "https://main.php.net/entry/subscribe.php",
             [
-                "request"  => $request,
-                "email"    => $_POST['email'],
+                "request" => $request,
+                "email" => $_POST['email'],
                 "maillist" => $_POST['maillist'],
                 "remoteip" => $remote_addr,
-                "referer"  => $MYSITE . "mailing-lists.php"
+                "referer" => $MYSITE . "mailing-lists.php"
             ]
         );
 

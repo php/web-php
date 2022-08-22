@@ -7,7 +7,7 @@ if (!empty($_GET['active_langs'])) {
     exit;
 }
 
-$SIDEBAR_DATA='
+$SIDEBAR_DATA = '
 <div class="panel">
     <div class="headline">Online documentation</div>
     <div class="body">
@@ -42,8 +42,8 @@ site_header("Download documentation", ["current" => "docs"]);
 // Format to look for
 $formats = [
     "Single HTML file" => "html.gz",
-    "Many HTML files"  => "tar.gz",
-    "HTML Help file"   => "chm",
+    "Many HTML files" => "tar.gz",
+    "HTML Help file" => "chm",
     "HTML Help file (with user notes)" => "chm",
 ];
 ?>
@@ -114,14 +114,14 @@ foreach ($LANGUAGES as $langcode => $language) {
             $link_to = "/distributions/manual/$filename";
 
             // Try to get size and changed date
-            $size    = @filesize($filepath);
+            $size = @filesize($filepath);
             $changed = @filemtime($filepath);
 
             // Size available, collect information
             if ($size !== false) {
                 $files[$langcode][$formatname] = [
                     $link_to,
-                    (int) ($size/1024),
+                    (int) ($size / 1024),
                     date("j M Y", $changed),
                     $extension
                 ];

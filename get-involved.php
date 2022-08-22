@@ -66,7 +66,7 @@ site_header("Get Involved", ["current" => "community"]);
 
 <?php
 
-$SIDEBAR_DATA ='
+$SIDEBAR_DATA = '
 <div class="panel">
   <div class="headline">Table of Contents</div>
   <div class="body">
@@ -80,6 +80,6 @@ $SIDEBAR_DATA ='
 </div>
 ';
 
-site_footer(['sidebar'=>$SIDEBAR_DATA]);
+site_footer(['sidebar' => $SIDEBAR_DATA]);
 
 /* vim: set et ts=4 sw=4 ft=php: : */

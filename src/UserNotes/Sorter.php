@@ -27,7 +27,7 @@ class Sorter {
         $this->findMinMaxValues($notes);
 
         $this->voteFactor = $this->maxVote - $this->minVote
-            ? (1 - .3)/ ($this->maxVote - $this->minVote)
+            ? (1 - .3) / ($this->maxVote - $this->minVote)
             : .5;
         $this->ageFactor = $this->maxAge - $this->minAge
             ? 1 / ($this->maxAge - $this->minAge)
@@ -59,7 +59,7 @@ class Sorter {
             $prio = [
                 'vote' => $this->calcVotePriority($note) * $this->voteWeight,
                 'rating' => $this->calcRatingPriority($note) * $this->ratingWeight,
-                'age' =>  ($note['xwhen'] - $this->minAge) * $this->ageFactor
+                'age' => ($note['xwhen'] - $this->minAge) * $this->ageFactor
             ];
             $note['sort'] = $prio['value'] = array_sum($prio);
         }

@@ -126,7 +126,7 @@ if (count($errors) > 0) {
 
 // Beginning and end of this month
 $bom = mktime(0, 0, 1, $cm,   1, $cy);
-$eom = mktime(0, 0, 1, $cm+1, 0, $cy);
+$eom = mktime(0, 0, 1, $cm + 1, 0, $cy);
 
 // Link to previous month (but do not link to too early dates)
 $prev_link = (function () use ($cm, $cy) {
@@ -147,7 +147,7 @@ $prev_link = (function () use ($cm, $cy) {
 
 // Link to next month (but do not link to too early dates)
 $next_link = (function () use ($cm, $cy) {
-    $nm = mktime(0, 0, 1, $cm+1, 1, $cy);
+    $nm = mktime(0, 0, 1, $cm + 1, 1, $cy);
     $year = date('Y', $nm);
     if (!valid_year($year)) {
         return '&nbsp;';
@@ -174,7 +174,7 @@ echo '<table id="cal" width="100%" border="1" cellspacing="0" cellpadding="3">',
 
 // Print out headers for weekdays
 for ($i = 0; $i < 7; $i++) {
-    echo '<th width="14%">', date("l",mktime(0,0,1,4,$i+1,2001)), "</th>\n";
+    echo '<th width="14%">', date("l",mktime(0,0,1,4,$i + 1,2001)), "</th>\n";
 }
 echo "</tr>\n<tr>";
 
@@ -225,7 +225,7 @@ function date_for_recur($recur, $day, $bom, $eom)
     $eomd = date("w",$eom) + 1;
     $days = (($eomd - $day + 7) % 7) + ((abs($recur) - 1) * 7);
 
-    return mktime(0, 0, 1, date("m", $bom)+1, -$days, date("Y", $bom));
+    return mktime(0, 0, 1, date("m", $bom) + 1, -$days, date("Y", $bom));
 }
 
 // Display a <div> for each of the events that are on a given day
@@ -327,8 +327,8 @@ function load_events($from, $whole_month = false)
             // Multi-day event
             case 2:
                 if (($event['start'] >= $from_date && $event['start'] <= $to_date)
-                 || ($event['end']   >= $from_date && $event['end']   <= $to_date)
-                 || ($event['start'] <= $from_date && $event['end']   >= $to_date)) {
+                 || ($event['end'] >= $from_date && $event['end'] <= $to_date)
+                 || ($event['start'] <= $from_date && $event['end'] >= $to_date)) {
                   $events[] = $event;
                 }
                 break;
@@ -363,17 +363,17 @@ function read_event($fp)
 
     // Return with SQL-resultset like array
     return [
-        'id'        => $id,
-        'type'      => $tipo,
-        'start'     => $sdato,
-        'end'       => $edato,
-        'recur'     => $recur,
+        'id' => $id,
+        'type' => $tipo,
+        'start' => $sdato,
+        'end' => $edato,
+        'recur' => $recur,
         'recur_day' => $recur_day,
-        'sdesc'     => $sdesc,
-        'url'       => $url,
-        'ldesc'     => base64_decode($ldesc, false),
-        'country'   => $country,
-        'category'  => $category,
+        'sdesc' => $sdesc,
+        'url' => $url,
+        'ldesc' => base64_decode($ldesc, false),
+        'country' => $country,
+        'category' => $category,
     ];
 }
 
@@ -385,7 +385,7 @@ function valid_year($year)
     $current_year = date("Y");
 
     // We only allow this and the next year for displays
-    if ($year != $current_year && $year != $current_year+1) {
+    if ($year != $current_year && $year != $current_year + 1) {
         return false;
     }
 

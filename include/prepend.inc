@@ -183,7 +183,7 @@ function myphpnet_save()
     }
 
     // Set all the preferred values for a year
-    mirror_setcookie("MYPHPNET", join(",", $MYPHPNET), 60*60*24*365);
+    mirror_setcookie("MYPHPNET", join(",", $MYPHPNET), 60 * 60 * 24 * 365);
 
 }
 

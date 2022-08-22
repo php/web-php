@@ -171,7 +171,7 @@ function print_link($url, $linktext = false, $target = false, $extras = false)
 // make_popup_link()
 // return a hyperlink to something, within the site, that pops up a new window
 //
-function make_popup_link ($url, $linktext=false, $target=false, $windowprops="", $extras=false) {
+function make_popup_link ($url, $linktext = false, $target = false, $windowprops = "", $extras = false) {
     return sprintf("<a href=\"%s\" target=\"%s\" onclick=\"window.open('%s','%s','%s');return false;\"%s>%s</a>",
         htmlspecialchars($url, ENT_QUOTES | ENT_IGNORE),
         ($target ?: "_new"),
@@ -186,7 +186,7 @@ function make_popup_link ($url, $linktext=false, $target=false, $windowprops="",
 // print_popup_link()
 // print a hyperlink to something, within the site, that pops up a new window
 //
-function print_popup_link($url, $linktext=false, $windowprops="", $target=false, $extras=false) {
+function print_popup_link($url, $linktext = false, $windowprops = "", $target = false, $extras = false) {
     echo make_popup_link($url, $linktext, $windowprops, $target, $extras);
 }
 
@@ -221,7 +221,7 @@ function download_link($file, $title)
         if ($size < 1024) {
             echo number_format($size) . 'b';
         } else {
-            echo number_format($size/1024) . 'Kb';
+            echo number_format($size / 1024) . 'Kb';
         }
         echo ']';
     }
@@ -445,9 +445,9 @@ function print_news($news, $dog, $max = 5, $onlyyear = null, $return = false) {
         if ($return) {
             $retval[] = [
                 "title" => $item["title"],
-                "id"    => $id,
+                "id" => $id,
                 "permlink" => $permlink,
-                "date"     => $newsdate,
+                "date" => $newsdate,
             ];
             continue;
         }
@@ -480,8 +480,8 @@ function site_header($title = '', $config = [])
         "meta-navigation" => [],
         'classes' => '',
         'layout_span' => 9,
-        "cache"       => false,
-        "headsup"     => "",
+        "cache" => false,
+        "headsup" => "",
     ];
 
     $config = array_merge($defaults, $config);
@@ -543,17 +543,17 @@ function news_toc($sections = null) {
     $items = [
         "news" => [
             "title" => "News",
-            "link"  => "/archive/",
+            "link" => "/archive/",
             "children" => print_news($NEWS_ENTRIES, "frontpage", 3, null, true),
         ],
         "conferences" => [
             "title" => "Conferences",
-            "link"  => "/conferences/",
+            "link" => "/conferences/",
             "children" => print_news($NEWS_ENTRIES, "conferences", 3, null, true),
         ],
         "papers" => [
             "title" => "Call for Papers",
-            "link"  => "/conferences/",
+            "link" => "/conferences/",
             "children" => print_news($NEWS_ENTRIES, "cfp", 3, null, true),
         ],
     ];
@@ -629,7 +629,7 @@ function doc_toc_list($lang, $index, $file) {
 function doc_toc_title($lang, $index, $file, $elm = "dt") {
     foreach ($index as $entry) {
         if ($entry[0] == "$file.php") {
-            $link  = $entry[0];
+            $link = $entry[0];
             $title = $entry[1];
             break;
         }

@@ -4,10 +4,10 @@ namespace phpweb\News;
 
 class Entry {
     public const CATEGORIES = [
-        'frontpage'   => 'PHP.net frontpage news',
-        'releases'    => 'New PHP release',
+        'frontpage' => 'PHP.net frontpage news',
+        'releases' => 'New PHP release',
         'conferences' => 'Conference announcement',
-        'cfp'         => 'Call for Papers',
+        'cfp' => 'Call for Papers',
     ];
 
     public const WEBROOT = "https://www.php.net";
@@ -118,8 +118,8 @@ class Entry {
         self::ce($dom, "id", $archive, [], $item);
         self::ce($dom, "published", date(DATE_ATOM), [], $item);
         self::ce($dom, "updated", date(DATE_ATOM), [], $item);
-        self::ce($dom, "link", null, ['href' => "{$href}#{$this->id}", "rel"  => "alternate", "type" => "text/html"], $item);
-        self::ce($dom, "link", null, ['href' => $link, 'rel'  => 'via', 'type' => 'text/html'], $item);
+        self::ce($dom, "link", null, ['href' => "{$href}#{$this->id}", "rel" => "alternate", "type" => "text/html"], $item);
+        self::ce($dom, "link", null, ['href' => $link, 'rel' => 'via', 'type' => 'text/html'], $item);
 
         if (!empty($this->conf_time)) {
             $item->appendChild($dom->createElementNs("http://php.net/ns/news", "finalTeaserDate", date("Y-m-d", $this->conf_time)));
@@ -185,7 +185,7 @@ class Entry {
         do {
             ++$count;
             $id = $filename . "-" . $count;
-            $basename  = "{$id}.xml";
+            $basename = "{$id}.xml";
         } while (file_exists(self::ARCHIVE_ENTRIES_ABS . $basename));
 
         return $id;

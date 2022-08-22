@@ -29,9 +29,9 @@ site_header("Downloads",
     [
         'link' => [
             [
-                "rel"   => "alternate",
-                "type"  => "application/atom+xml",
-                "href"  => $MYSITE . "releases/feed.php",
+                "rel" => "alternate",
+                "type" => "application/atom+xml",
+                "href" => $MYSITE . "releases/feed.php",
                 "title" => "PHP Release feed"
             ],
         ],

@@ -2,7 +2,7 @@
 $_SERVER['BASE_PAGE'] = 'support.php';
 include_once __DIR__ . '/include/prepend.inc';
 
-$SIDEBAR_DATA ='
+$SIDEBAR_DATA = '
 <div class="panel" style="position:fixed">
   <div class="headline">Table of Contents</div>
   <div class="body">

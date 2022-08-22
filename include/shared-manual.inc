@@ -97,13 +97,13 @@ function manual_notes_load($id)
             if ($line == "") { continue; }
             @list($id, $sect, $rate, $ts, $user, $note, $up, $down) = explode("|", $line);
             $notes[$id] = [
-                "id"    => $id,
-                "sect"  => $sect,
-                "rate"  => $rate,
+                "id" => $id,
+                "sect" => $sect,
+                "rate" => $rate,
                 "xwhen" => $ts,
-                "user"  => $user,
-                "note"  => base64_decode($note, true),
-                "votes"  => ["up"=> (int)$up, "down"=> (int)$down]
+                "user" => $user,
+                "note" => base64_decode($note, true),
+                "votes" => ["up" => (int)$up, "down" => (int)$down]
             ];
         }
         fclose($fp);
@@ -112,7 +112,7 @@ function manual_notes_load($id)
 }
 
 // Print out one user note entry
-function manual_note_display($date, $name, $text, $id, $votes = ['up'=>0, 'down'=>0], $voteOption = true)
+function manual_note_display($date, $name, $text, $id, $votes = ['up' => 0, 'down' => 0], $voteOption = true)
 {
     if ($name) {
         $name = "\n  <strong class=\"user\"><em>" . htmlspecialchars($name) . "</em></strong>";
@@ -124,7 +124,7 @@ function manual_note_display($date, $name, $text, $id, $votes = ['up'=>0, 'down'
     // New date style will be relative time
     $datestr = relTime(new DateTime("@{$date}"));
     $fdatestr = date("Y-m-d h:i", $date);
-    $text    = clean_note($text);
+    $text = clean_note($text);
 
     // Calculate note rating by up/down votes
     $vote = $votes['up'] - $votes['down'];
@@ -201,7 +201,7 @@ function manual_navigation_breadcrumbs(array $setup) {
     foreach (array_reverse($setup["parents"]) as $parent) {
         $menu[] = [
             "title" => $parent[1],
-            "link"  => $parent[0],
+            "link" => $parent[0],
         ];
     }
 
@@ -209,7 +209,7 @@ function manual_navigation_breadcrumbs(array $setup) {
     if ($setup["up"][0]) {
         $last_item = [
             "title" => $setup["up"][1],
-            "link"  => $setup["up"][0],
+            "link" => $setup["up"][0],
         ];
         $menu[] = $last_item;
     }
@@ -221,7 +221,7 @@ function manual_navigation_related(array $setup) {
     foreach ($setup['toc'] as $entry) {
         $siblings[] = [
             "title" => manual_navigation_methodname($entry[1]),
-            "link"  => $entry[0],
+            "link" => $entry[0],
             "current" => $setup["this"][0] == $entry[0],
         ];
     }
@@ -230,7 +230,7 @@ function manual_navigation_related(array $setup) {
     if ($setup["up"][0]) {
         $last_item = [
             "title" => $setup["up"][1],
-            "link"  => $setup["up"][0],
+            "link" => $setup["up"][0],
         ];
         $siblings = [array_merge($last_item, ["children" => $siblings])];
     }
@@ -242,7 +242,7 @@ function manual_navigation_deprecated(array $setup) {
     foreach ((array)$setup['toc_deprecated'] as $entry) {
         $methods[] = [
             "title" => manual_navigation_methodname($entry[1]),
-            "link"  => $entry[0],
+            "link" => $entry[0],
             "current" => $setup["this"][0] == $entry[0],
         ];
     }
@@ -307,12 +307,12 @@ function manual_setup($setup) {
     $config = [
         "current" => "docs",
         "breadcrumbs" => $breadcrumbs,
-        "languages"   => array_keys($ACTIVE_ONLINE_LANGUAGES),
+        "languages" => array_keys($ACTIVE_ONLINE_LANGUAGES),
         "meta-navigation" => [
             "contents" => $base . $setup["home"][0],
-            "index"    => $base . $setup["up"][0],
-            "prev"     => $base . $setup["prev"][0],
-            "next"     => $base . $setup["next"][0],
+            "index" => $base . $setup["up"][0],
+            "prev" => $base . $setup["prev"][0],
+            "next" => $base . $setup["next"][0],
         ],
         "lang" => $setup["head"][1],
         "thispage" => $setup["this"][0],

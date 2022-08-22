@@ -52,7 +52,7 @@ function language_choose_code()
         $explicitly_specified = language_add(htmlspecialchars($_REQUEST['lang'], ENT_QUOTES, 'UTF-8'), $languages);
 
         // Set the language in a cookie for a year
-        mirror_setcookie("LAST_LANG", $explicitly_specified, 60*60*24*365);
+        mirror_setcookie("LAST_LANG", $explicitly_specified, 60 * 60 * 24 * 365);
     }
 
     // Specified in a shortcut URL (eg. /en/echo or /pt_br/echo)
@@ -84,7 +84,7 @@ function language_choose_code()
         }
 
         // Set the language in a cookie for a year
-        mirror_setcookie("LAST_LANG", $flang, 60*60*24*365);
+        mirror_setcookie("LAST_LANG", $flang, 60 * 60 * 24 * 365);
     }
 
     // Honor the users own language setting (if available)
