@@ -41,7 +41,7 @@ if ($id) {
     }
     // Unable to find event, put this to the error messages' list
     else {
-        $errors[] = "There is no event for specified id ('".htmlentities($id, ENT_QUOTES | ENT_IGNORE, 'UTF-8')."')";
+        $errors[] = "There is no event for specified id ('" . htmlentities($id, ENT_QUOTES | ENT_IGNORE, 'UTF-8') . "')";
     }
 }
 
@@ -57,7 +57,7 @@ elseif ($cy && $cm && $cd) {
         // Try to load events for that day, and display them all
         if ($events = load_events($date)) {
             $site_header_config = ['classes' => 'calendar calendar-day'] + $site_header_config;
-            site_header("Events: ".date("F j, Y", $date), $site_header_config);
+            site_header("Events: " . date("F j, Y", $date), $site_header_config);
             echo "<h2>", date("F j, Y", $date), "</h2>\n";
             foreach ($events as $event) {
                 display_event($event, 0);
@@ -68,20 +68,20 @@ elseif ($cy && $cm && $cd) {
 
         // Unable to load events for that day
         else {
-            $errors[] = "There are no events for the specified date (".date("F j, Y",$date).").";
+            $errors[] = "There are no events for the specified date (" . date("F j, Y",$date) . ").";
         }
     }
 
     // Wrong date specified
     else {
-        $errors[] = "The specified date (".htmlentities("$cy/$cm/$cd", ENT_QUOTES | ENT_IGNORE, 'UTF-8').") was not valid.";
+        $errors[] = "The specified date (" . htmlentities("$cy/$cm/$cd", ENT_QUOTES | ENT_IGNORE, 'UTF-8') . ") was not valid.";
         unset($cm, $cd, $cy);
     }
 }
 
 // Check if month and year is valid
 if ($cm && $cy && !checkdate($cm,1,$cy)) {
-    $errors[] = "The specified year and month (".htmlentities("$cy, $cm", ENT_QUOTES | ENT_IGNORE, 'UTF-8').") are not valid.";
+    $errors[] = "The specified year and month (" . htmlentities("$cy, $cm", ENT_QUOTES | ENT_IGNORE, 'UTF-8') . ") are not valid.";
     unset($cm, $cy);
 }
 
@@ -93,7 +93,7 @@ if (empty($cy)) { $cy = date("Y"); }
 $date = mktime(0, 0, 1, $cm, 1, $cy);
 
 if (!$begun) {
-  site_header("Events: ".date("F Y", $date), $site_header_config);
+  site_header("Events: " . date("F Y", $date), $site_header_config);
 ?>
 <div class="tip">
  <p>
@@ -189,7 +189,7 @@ for ($i = 1; $i <= date("t",$bom); $i++) {
     // Print out day number and all events for the day
     echo '<td><a class="day" href="/cal.php', "?cm=$cm&amp;cd=$i&amp;cy=$cy",
          '">',$i,'</a>';
-    display_events_for_day(date("Y-m-",$bom).sprintf("%02d",$i), $events);
+    display_events_for_day(date("Y-m-",$bom) . sprintf("%02d",$i), $events);
     echo '</td>';
 
     // Break HTML table row if at end of week

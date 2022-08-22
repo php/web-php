@@ -16,7 +16,7 @@ function highlight_php($code, $return = false)
 
     // Use this ugly hack for now to avoid code snippets with bad syntax screwing up the highlighter
     if (strstr($highlighted, "include/layout.inc</b>")) {
-        $highlighted = '<span class="html">'. nl2br(htmlentities($code, ENT_HTML5), false) ."</span>";
+        $highlighted = '<span class="html">' . nl2br(htmlentities($code, ENT_HTML5), false) . "</span>";
     }
 
     // Fix output to use CSS classes and wrap well
@@ -178,7 +178,7 @@ function make_popup_link ($url, $linktext=false, $target=false, $windowprops="",
         htmlspecialchars($url, ENT_QUOTES | ENT_IGNORE),
         ($target ?: "_new"),
                 $windowprops,
-        ($extras ? ' '.$extras : ''),
+        ($extras ? ' ' . $extras : ''),
         ($linktext ?: $url)
     );
 }
@@ -205,7 +205,7 @@ function download_link($file, $title)
         $local_file = "distributions/$file";
     }
 
-    if (@file_exists($local_file.".asc")) {
+    if (@file_exists($local_file . ".asc")) {
         echo " ";
         $sig_link = "/distributions/$file.asc";
         print_link($sig_link, "(sig)");
@@ -338,14 +338,14 @@ function display_event($event, $include_date = 1)
             break;
         case 3:
         case 'recur':
-            $days = $re[$event['recur']]. " " .$days[$event['recur_day']];
+            $days = $re[$event['recur']] . " " . $days[$event['recur_day']];
             if (!$cm || $cy) {
                 $cm = date("m");
                 $cy = date("Y");
             }
             $month = date("M", mktime(0, 0, 0, $cm, 1, $cy));
-            $dtstart = date("Y-m-d", strtotime($days . ' 0st' .$month. ' ' .$cy));
-            echo ' (Every <abbr class="dtstart" title="'.$dtstart.'">', $days, "</abbr> of the month)";
+            $dtstart = date("Y-m-d", strtotime($days . ' 0st' . $month . ' ' . $cy));
+            echo ' (Every <abbr class="dtstart" title="' . $dtstart . '">', $days, "</abbr> of the month)";
             break;
     }
 
@@ -431,7 +431,7 @@ function print_news($news, $dog, $max = 5, $onlyyear = null, $return = false) {
             }
         }
         if (!isset($permlink)) {
-            $permlink = "#" .$id;
+            $permlink = "#" . $id;
         }
 
         $published = substr($item["published"], 0, 10);
@@ -506,7 +506,7 @@ function site_header($title = '', $config = [])
         $shorturl = "https://www.php.net/" . $shortname;
     }
 
-    require __DIR__ ."/header.inc";
+    require __DIR__ . "/header.inc";
 }
 function site_footer($config = [])
 {

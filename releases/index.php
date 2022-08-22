@@ -88,7 +88,7 @@ echo "<p>
 $active_majors = array_keys($RELEASES);
 $latest = max($active_majors);
 foreach ($OLDRELEASES as $major => $a) {
-    echo '<a id="v' .$major. '"></a>';
+    echo '<a id="v' . $major . '"></a>';
     if (!in_array($major, $active_majors, false)) {
         echo "\n<br>\n";
         echo "<p>Support for PHP $major has been <b style=\"color: red;\">discontinued</b> ";

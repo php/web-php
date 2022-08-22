@@ -159,7 +159,7 @@ $height = $header_height + $footer_height + (count($branches) * $branch_height);
         ?>
 		<line x1="<?php echo $x ?>" y1="<?php echo $header_height ?>" x2="<?php echo $x ?>" y2="<?php echo $header_height + (count($branches) * $branch_height) ?>" />
 		<text x="<?php echo $x ?>" y="<?php echo $header_height + (count($branches) * $branch_height) + (0.8 * $footer_height) ?>">
-			<?php echo 'Today: '.$now->format('j M Y') ?>
+			<?php echo 'Today: ' . $now->format('j M Y') ?>
 		</text>
 	</g>
 </svg>
