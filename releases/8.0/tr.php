@@ -2,8 +2,6 @@
 $_SERVER['BASE_PAGE'] = 'releases/8.0/tr.php';
 include_once __DIR__ . '/common.php';
 
-releases\php80\language_redirect('tr');
-
 releases\php80\common_header(
     'PHP 8.0, PHP dili için önemli bir güncellemedir. Optimizasyonlar ve yeni özellikler: Adlandırılmış ' .
     'Değişkenler, Union Types, Attributes, Kurucularda Özellik Tanımı, Match İfadesi, Nullsafe Operatorü, ' .
@@ -158,7 +156,7 @@ releases\php80\common_header(
   <div class="php8-compare">
     <h2 class="php8-h2" id="union-types">
       Union types
-      <a class="php8-rfc" href="https://wiki.php.net/rfc/union_types_v2">RFC</a> <a class="php8-rfc" href="/manual/en/language.types.declarations.php#language.types.declarations.union">Doc</a>
+      <a class="php8-rfc" href="https://wiki.php.net/rfc/union_types_v2">RFC</a> <a class="php8-rfc" href="/manual/en/language.types.declarations.php#language.types.declarations.composite.union">Doc</a>
     </h2>
     <div class="php8-compare__main">
       <div class="php8-compare__block example-contents">

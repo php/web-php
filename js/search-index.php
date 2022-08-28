@@ -45,27 +45,24 @@ header("Last-Modified: " . $tsstring);
 header("Content-Type: application/javascript");
 /* }}} */
 
-
-
 $s = file_get_contents($indexfile);
 $js = json_decode($s, true);
 
-$index = array();
-foreach($js as $item) {
+$index = [];
+foreach ($js as $item) {
     if ($item[0]) {
         /* key: ID/filename, 0=>*/
-        $index[$item[1]] = array($item[0], "", $item[2]);
+        $index[$item[1]] = [$item[0], "", $item[2]];
     }
 }
 
 $s = file_get_contents($descfile);
 $js = json_decode($s, true);
 
-foreach($js as $k => $item) {
+foreach ($js as $k => $item) {
     if ($item && isset($index[$k])) {
         $index[$k][1] = $item;
     }
 }
-
 
 echo json_encode($index);

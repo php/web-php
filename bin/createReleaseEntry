@@ -2,8 +2,9 @@
 <?php
 PHP_SAPI == 'cli' or die("Please run this script using the cli sapi");
 
-require(__DIR__ . '/../include/news_entry.inc');
-use phpweb\news\Entry;
+require_once __DIR__ . '/../autoload.php';
+
+use phpweb\News\Entry;
 
 if (!file_exists(Entry::ARCHIVE_FILE_ABS)) {
 	fwrite(STDERR, "Can't find " . Entry::ARCHIVE_FILE_REL . ", are you sure you are in phpweb/?\n");

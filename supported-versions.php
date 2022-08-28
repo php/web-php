@@ -4,13 +4,13 @@ $_SERVER['BASE_PAGE'] = 'supported-versions.php';
 include_once __DIR__ . '/include/prepend.inc';
 include_once __DIR__ . '/include/branches.inc';
 
-site_header('Supported Versions', array('css' => array('supported-versions.css')));
+site_header('Supported Versions', ['css' => ['supported-versions.css']]);
 
 // Version notes: if you need to make a note about a version having an unusual
 // support lifetime, add it under a heading with an anchor, and add the anchor
 // and branch names to the array below ('x.y' => '#anchor-name').
-$VERSION_NOTES = array(
-);
+$VERSION_NOTES = [
+];
 ?>
 
 <h1>Supported Versions</h1>
@@ -50,11 +50,11 @@ $VERSION_NOTES = array(
 			<?php ksort($releases) ?>
 			<?php foreach ($releases as $branch => $release): ?>
 				<?php
-				$state = get_branch_support_state($branch);
-				$initial = get_branch_release_date($branch);
-				$until = get_branch_bug_eol_date($branch);
-				$eol = get_branch_security_eol_date($branch);
-				?>
+                $state = get_branch_support_state($branch);
+                $initial = get_branch_release_date($branch);
+                $until = get_branch_bug_eol_date($branch);
+                $eol = get_branch_security_eol_date($branch);
+                ?>
 				<tr class="<?php echo $state ?>">
 					<td>
 						<a href="/downloads.php#v<?php echo htmlspecialchars($release['version']) ?>"><?php echo htmlspecialchars($branch) ?></a>

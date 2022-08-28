@@ -2,7 +2,6 @@
 $_SERVER['BASE_PAGE'] = 'releases/8.0/zh.php';
 include_once __DIR__ . '/common.php';
 
-releases\php80\language_redirect('zh');
 releases\php80\common_header(
     'PHP 8.0 是 PHP 语言的一个主版本更新。它包含了很多新功能与优化项，' .
     '包括命名参数、联合类型、注解、构造器属性提升、match 表达式、' .
@@ -156,7 +155,7 @@ releases\php80\common_header(
   <div class="php8-compare">
     <h2 class="php8-h2" id="union-types">
       联合类型
-      <a class="php8-rfc" href="https://wiki.php.net/rfc/union_types_v2">RFC</a> <a class="php8-rfc" href="/manual/zh/language.types.declarations.php#language.types.declarations.union">文档</a>
+      <a class="php8-rfc" href="https://wiki.php.net/rfc/union_types_v2">RFC</a> <a class="php8-rfc" href="/manual/zh/language.types.declarations.php#language.types.declarations.composite.union">文档</a>
     </h2>
     <div class="php8-compare__main">
       <div class="php8-compare__block example-contents">

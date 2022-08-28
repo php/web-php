@@ -3,7 +3,7 @@ header("Content-Type: application/atom+xml");
 
 include __DIR__ . "/../include/version.inc";
 
-echo <<< XML
+echo <<<XML
 <?xml version="1.0" encoding="UTF-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom" xmlns:php="http://php.net/ns/releases">
     <title>PHP.net releases</title>
@@ -18,11 +18,11 @@ echo <<< XML
 
 XML;
 
-/* FIX silly editor highlighting */?><?php
+ob_start();
 
 // Flatten major versions out of RELEASES.
 $RELEASED_VERSIONS = array_reduce($RELEASES, 'array_merge', []);
-$FEED_UPDATED =  0;
+$FEED_UPDATED = 0;
 krsort($RELEASED_VERSIONS);
 foreach ($RELEASED_VERSIONS as $version => $release) {
     $published = date(DATE_ATOM, strtotime($release["source"][0]["date"]));
@@ -32,7 +32,7 @@ foreach ($RELEASED_VERSIONS as $version => $release) {
         $id = "http://qa.php.net/#$version";
     }
 
-    echo <<< XML
+    echo <<<XML
     <entry>
         <title>PHP {$version} released!</title>
         <id>{$id}</id>
@@ -41,7 +41,7 @@ foreach ($RELEASED_VERSIONS as $version => $release) {
         <summary type="html">There is a new PHP release in town!</summary>
 
 XML;
-    $maxtime = array();
+    $maxtime = [];
     foreach ($release["source"] as $source) {
         if (!isset($source["date"])) {
             continue;
@@ -50,13 +50,13 @@ XML;
         $released = date(DATE_ATOM, $time);
 
         echo "        <link rel=\"enclosure\" title=\"{$source["name"]}\" href=\"/distributions/{$source["filename"]}\">\n";
-        foreach (array('md5', 'sha256') as $hashAlgo) {
+        foreach (['md5', 'sha256'] as $hashAlgo) {
             if (isset($source[$hashAlgo])) {
                 echo "            <php:{$hashAlgo}>{$source[$hashAlgo]}</php:{$hashAlgo}>\n";
             }
         }
 
-        echo <<< XML
+        echo <<<XML
             <php:releaseDate>{$released}</php:releaseDate>
         </link>
 
@@ -72,7 +72,7 @@ XML;
         }
     }
 
-    echo <<< XML
+    echo <<<XML
         <updated>{$updated}</updated>
         <content src="{$id}" type="application/xhtml+xml"/>
     </entry>
@@ -82,9 +82,10 @@ XML;
     $FEED_UPDATED = max($maxtime, $FEED_UPDATED);
 }
 
+$entries = ob_get_clean();
+
 $FEED_UPDATED = date(DATE_ATOM, max($FEED_UPDATED));
 
-echo <<< XML
-    <updated>{$FEED_UPDATED}</updated>
-</feed>
-XML;
+echo "    <updated>{$FEED_UPDATED}</updated>\n";
+echo $entries;
+echo "</feed>";

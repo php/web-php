@@ -24,7 +24,7 @@ if (empty($notfound)) {
 
 // Print out the table of found (or all) functions. The HTML comments are
 // needed to support MyCroft search (Mozilla browser family and Sherlock for MacOSX)
-function quickref_table($functions, $sort = true)
+function quickref_table($functions, $sort = true): void
 {
     global $LANG;
 
@@ -50,11 +50,11 @@ if (!$dirh) {
     error_noservice();
 }
 
-$functions = $maybe = $temp = $parts = array();
+$functions = $maybe = $temp = $parts = [];
 $p = 0;
 
 // Get all file names from the directory
-while (($entry = readdir($dirh)) !== FALSE) {
+while (($entry = readdir($dirh)) !== false) {
 
     // Skip names starting with a dot
     if (substr($entry, 0, 1) == ".") { continue; }
@@ -70,7 +70,7 @@ while (($entry = readdir($dirh)) !== FALSE) {
 
             // If $notfound is a substring of $funcname then overwrite the score
             // similar_text() gave it.
-            if ($p < 70 && ($pos = strpos($funcname, $notfound)) !== FALSE) {
+            if ($p < 70 && ($pos = strpos($funcname, $notfound)) !== false) {
                 $p = 90 - $pos;
             }
             $temp[$entry] = $p;
@@ -93,7 +93,7 @@ if (count($temp) > 0) {
 
         // If the two are more then 70% similar or $notfound is a substring
         // of $funcname, then the match is a very similar one
-        if ($p >= 70 || (strpos($functions[$file], $notfound) !== FALSE)) {
+        if ($p >= 70 || (strpos($functions[$file], $notfound) !== false)) {
             $maybe[$file] = '<b>' . $functions[$file] . '</b>';
         }
         // Otherwise it is just similar
@@ -105,14 +105,13 @@ if (count($temp) > 0) {
 }
 
 // Do not index page if presented as a search result
-if (count($maybe) > 0) { $head_options = array("noindex"); }
-else { $head_options = array(); }
+if (count($maybe) > 0) { $head_options = ["noindex"]; }
+else { $head_options = []; }
 
-site_header("Manual Quick Reference", $head_options+array("current" => "help"));
+site_header("Manual Quick Reference", $head_options + ["current" => "help"]);
 
 // Note: $notfound is defined (with htmlspecialchars) inside manual-lookup.php
 $notfound_enc = urlencode($notfound);
-
 
 if ($snippet = is_known_snippet($notfound)) {
     echo "<h1>Related snippet found for '{$notfound}'</h1>";
@@ -132,9 +131,9 @@ if ($snippet = is_known_snippet($notfound)) {
 <?php
 quickref_table($maybe, false);
 
-$config = array(
+$config = [
     "sidebar" => '<p class="panel"><a href="/search.php?show=all&amp;pattern=' . $notfound_enc . '">Full website search</a>',
-);
+];
 
 site_footer($config);
 }

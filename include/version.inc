@@ -15,42 +15,42 @@
  *     ),
  * );
  */
-$RELEASES = (function() {
+$RELEASES = (function () {
     $data = [];
+
+    /* PHP 8.1 Release */
+    $data['8.1'] = [
+        'version' => '8.1.9',
+        'date' => '04 Aug 2022',
+        'tags' => [], // Set to ['security'] for security releases.
+        'sha256' => [
+            'tar.gz' => '954cf77f7e0a70dc765e7639acdfdccd164be5cd1bce3dbe9d10c58dca631e76',
+            'tar.bz2' => '9ebb0e2e571db6fd5930428dcb2d19ed3e050338ec1f1347c282cae92fc086ff',
+            'tar.xz' => '53477e73e6254dc942b68913a58d815ffdbf6946baf61a1f8ef854de524c27bf',
+        ]
+    ];
 
     /* PHP 8.0 Release */
     $data['8.0'] = [
-        'version' => '8.0.11',
-        'date'    => '23 Sep 2021',
-        'tags'    => ['security'], // Set to ['security'] for security releases.
+        'version' => '8.0.22',
+        'date' => '04 Aug 2022',
+        'tags' => [], // Set to ['security'] for security releases.
         'sha256' => [
-            'tar.gz'  => 'c6a461f57b4bcb46cd4dec443253b1e2e8e981466f1280093322b7864afe8be7',
-            'tar.bz2' => '70ed874285e4010c1e2e8937bfb56b13b9ed1b3789dcaf274b793b00c1f4403a',
-            'tar.xz'  => 'e3e5f764ae57b31eb65244a45512f0b22d7bef05f2052b23989c053901552e16',
+            'tar.gz' => '56fce7529a9798fd0895bca3539d2a65b9cac5d23ffbdf6338419c62ed083519',
+            'tar.bz2' => 'e342918d3ecd422f10032df0ac3ffb0e17f568fad6cf8e232b6f7a6a1fdc3c9c',
+            'tar.xz' => '130937c0fa3050cd33d6c415402f6ccbf0682ae83eb8d39c91164224ddfe57f1',
         ]
     ];
 
     /* PHP 7.4 Release */
     $data['7.4'] = [
-        'version' => '7.4.24',
-        'date'    => '23 Sep 2021',
-        'tags'    => ['security'], // Set to ['security'] for security releases
-        'sha256'  => [
-            'tar.gz'  => '8cc1758cf7ff45428c17641b1be84cd917a2909ba40c770f06a814d8b7f36333',
-            'tar.bz2' => 'f50e32b788864349041f19e31dcc65b1fcc65bc19122918f607526432edf2f32',
-            'tar.xz'  => 'ff7658ee2f6d8af05b48c21146af5f502e121def4e76e862df5ec9fa06e98734',
-        ]
-    ];
-
-    /* PHP 7.3 Release */
-    $data['7.3'] = [
-        'version' => '7.3.31',
-        'date'    => '23 Sep 2021',
-        'tags'      => ['security'],
-        'sha256'  => [
-            'tar.gz'  => '57ca37b08d3eed4cadc3976e78b0f51d0305bb6e60333f6e8c76e8aee07c3f0f',
-            'tar.bz2' => '6951f78524684f439186fe039ab14fb2459cea8f47ac829a159724a283f7f32b',
-            'tar.xz'  => 'd1aa8f44595d01ac061ff340354d95e146d6152f70e799b44d6b8654fb45cbcc',
+        'version' => '7.4.30',
+        'date' => '09 Jun 2022',
+        'tags' => ['security'], // Set to ['security'] for security releases
+        'sha256' => [
+            'tar.gz' => 'e37ea37e0f79109351ac615da85eb7c2c336101fc5bc802ee79a124a4310dc10',
+            'tar.bz2' => 'b601bb12e53720469b60ea816776cac1c0696b09888a11ad2379b2eee835386e',
+            'tar.xz' => 'ea72a34f32c67e79ac2da7dfe96177f3c451c3eefae5810ba13312ed398ba70d',
         ]
     ];
 
@@ -93,5 +93,5 @@ function release_get_latest() {
         }
     }
 
-    return [ $version, $current ];
+    return [$version, $current];
 }

@@ -6,7 +6,7 @@ include_once __DIR__ . '/include/posttohost.inc';
 
 // Force the account requests to php.net
 if (!is_primary_site()) {
-    header('Location: https://www.php.net/'.$_SERVER['BASE_PAGE']);
+    header('Location: https://www.php.net/' . $_SERVER['BASE_PAGE']);
     exit;
 }
 
@@ -24,15 +24,15 @@ $SIDEBAR_DATA = '
  <a href="/git.php">Git</a>. No Git account is required.
 </p>
 ';
-site_header("Using Git for PHP Development", array("current" => "community"));
+site_header("Using Git for PHP Development", ["current" => "community"]);
 
-$groups = array(
-  "none" => "Choose One",
-  "php"  => "PHP Group",
-  "pear" => "PEAR Group",
-  "pecl" => "PECL Group",
-  "doc"  => "Doc Group",
-);
+$groups = [
+    "none" => "Choose One",
+    "php" => "PHP Group",
+    "pear" => "PEAR Group",
+    "pecl" => "PECL Group",
+    "doc" => "Doc Group",
+];
 
 ?>
 
@@ -42,24 +42,14 @@ $groups = array(
 
 // We have a form submitted, and the user have read all the comments
 if (count($_POST) && (!isset($_POST['purpose']) || !is_array($_POST['purpose']) || !count($_POST['purpose']))) {
-    // Clean up incoming POST vars
-    if (function_exists('get_magic_quotes_gpc') && @get_magic_quotes_gpc()) {
-        foreach ($_POST as $k => $v) {
-            $cleaned[$k] = stripslashes($v);
-        }
-    }
-    else {
-        $cleaned = $_POST;
-    }
-
     // No error found yet
     $error = "";
 
     // Check for errors
     if (empty($_POST['id'])) {
         $error .= "You must supply a desired Git user id. <br>";
-    } elseif(!preg_match('!^[a-z]\w+$!', $_POST['id']) || strlen($_POST['id']) > 16) {
-        $error .= "Your user id must be from 1-16 characters long, start with ".
+    } elseif (!preg_match('!^[a-z]\w+$!', $_POST['id']) || strlen($_POST['id']) > 16) {
+        $error .= "Your user id must be from 1-16 characters long, start with " .
                   "a letter and contain nothing but a-z, 0-9, and _ <br>";
     }
     if (empty($_POST['fullname'])) {
@@ -71,7 +61,7 @@ if (count($_POST) && (!isset($_POST['purpose']) || !is_array($_POST['purpose']) 
     if (empty($_POST['password'])) {
         $error .= "You must supply a desired password. <br>";
     }
-    if (empty($_POST['email']) || !is_emailable_address($cleaned['email'])) {
+    if (empty($_POST['email']) || !is_emailable_address($_POST['email'])) {
         $error .= "You must supply a proper email address. <br>";
     }
     if (empty($_POST['yesno']) || $_POST['yesno'] != 'yes') {
@@ -80,7 +70,7 @@ if (count($_POST) && (!isset($_POST['purpose']) || !is_array($_POST['purpose']) 
     if (empty($_POST['group']) || $_POST['group'] === 'none' || !isset($groups[$_POST['group']])) {
         $error .= "You did not fill out where to send the request. <br>";
     }
-    if (!isset($_POST['guidelines']) || !$_POST['guidelines']) {
+    if (empty($_POST['guidelines'])) {
         $error .= "You did not agree to follow the contribution guidelines. <br>";
     }
 
@@ -88,15 +78,15 @@ if (count($_POST) && (!isset($_POST['purpose']) || !is_array($_POST['purpose']) 
     if (!$error) {
         $error = posttohost(
             "https://main.php.net/entry/svn-account.php",
-            array(
-                "username" => $cleaned['id'],
-                "name"     => $cleaned['fullname'],
-                "email"    => $cleaned['email'],
-                "passwd"   => $cleaned['password'],
-                "note"     => $cleaned['realpurpose'],
-                "yesno"    => $cleaned['yesno'],
-                "group"    => $cleaned['group'],
-            )
+            [
+                "username" => $_POST['id'],
+                "name" => $_POST['fullname'],
+                "email" => $_POST['email'],
+                "passwd" => $_POST['password'],
+                "note" => $_POST['realpurpose'],
+                "yesno" => $_POST['yesno'],
+                "group" => $_POST['group'],
+            ]
         );
         // Error while posting
         if ($error) {
@@ -112,7 +102,7 @@ if (count($_POST) && (!isset($_POST['purpose']) || !is_array($_POST['purpose']) 
 ?>
 <p>
  Thank you. Your request has been sent. You should hear something within the
- next week or so. If you haven't heard anything by around <?php echo date('l, F jS', time()+604800); ?>
+ next week or so. If you haven't heard anything by around <?php echo date('l, F jS', time() + 604800); ?>
  then please send an email to the appropriate <a href="/mailing-lists.php">mailing list</a>:
 </p>
 <ul>
@@ -168,7 +158,7 @@ if (count($_POST) && (!isset($_POST['purpose']) || !is_array($_POST['purpose']) 
 } // endif: no data or checkread not checked
 
 else {
-	if (count($_POST)) {
+    if (count($_POST)) {
         print <<<EOT
 <div class="warning">
 <p>
@@ -370,10 +360,10 @@ EOT;
  (check all that apply)</th>
  <td>
 <?php
-$purposes = array("Learning PHP", "Coding in PHP", "Reading the PHP source",
-	"Using PHP extensions", "Creating experimental PHP extensions",
-	"Submitting a patch to PHP", "Adding notes to the documentation",
-	"Writing web pages with PHP");
+$purposes = ["Learning PHP", "Coding in PHP", "Reading the PHP source",
+    "Using PHP extensions", "Creating experimental PHP extensions",
+    "Submitting a patch to PHP", "Adding notes to the documentation",
+    "Writing web pages with PHP"];
 
 foreach ($purposes as $i => $p) { ?>
   <input type="checkbox" name="purpose[<?php echo $i?>]" value="1"
@@ -408,7 +398,7 @@ foreach ($purposes as $i => $p) { ?>
  <td>
   <select name="group">
 <?php
-foreach($groups as $group => $name) {
+foreach ($groups as $group => $name) {
   $selected = (isset($_POST["group"]) && $_POST["group"] == $group) ? ' selected="selected"' : '';
   echo "<option value='$group'$selected>$name</option>\n";
 }

@@ -51,9 +51,9 @@ function i2c_go()
     $ipnum = i2c_realip();
 
     // User already has a country detected with this IP stored
-    if (!empty($_COOKIE['COUNTRY']) && strpos($_COOKIE['COUNTRY'], ',') !== FALSE) {
+    if (!empty($_COOKIE['COUNTRY']) && strpos($_COOKIE['COUNTRY'], ',') !== false) {
        list($COUNTRY, $storedip) = explode(",", $_COOKIE['COUNTRY']);
-       if ($storedip == $ipnum) { return TRUE; }
+       if ($storedip == $ipnum) { return true; }
     }
 
     // Convert the IP number to some useable form for searching
@@ -66,7 +66,7 @@ function i2c_go()
     // in the index do not search, as it would take
     // a very long time. It is an error, if we have
     // not found anything in the index
-    if ($idx !== FALSE) {
+    if ($idx !== false) {
         $country = i2c_search_in_db($ipn, $idx);
     } else {
         $country = 'NA';
@@ -76,7 +76,7 @@ function i2c_go()
     $COUNTRY = $country;
 
     // Set the country in a cookie for a week
-    return mirror_setcookie("COUNTRY", "$country,$ipnum", 60*60*24*7);
+    return mirror_setcookie("COUNTRY", "$country,$ipnum", 60 * 60 * 24 * 7);
 
 }
 
@@ -91,16 +91,16 @@ function i2c_search_in_index($ip)
         __DIR__ . "/../backend/ip-to-country.idx",
         "r"
     );
-    if (!$dbidx) { return FALSE; }
+    if (!$dbidx) { return false; }
 
     // Read in granularity from index file and
     // convert current IP to something useful
-    $granularity = intval(fgets($dbidx, 64));
+    $granularity = (int) fgets($dbidx, 64);
     if (!$granularity) {
         // The file is empty (demo file)
         return false;
     }
-    $ip_chunk = intval($ip / $granularity);
+    $ip_chunk = (int) ($ip / $granularity);
 
     // Loop till we can read the file
     while (!feof($dbidx)) {
@@ -110,16 +110,16 @@ function i2c_search_in_index($ip)
 
         // Compare current index part with our IP
         if ($ip_chunk >= $idxpart && $ip_chunk < (int) $data[0]) {
-            return array($recnum, (int) $data[1]);
+            return [$recnum, (int) $data[1]];
         }
 
         // Store for next compare
         $idxpart = (int) $data[0];
-        $recnum  = (int) $data[1];
+        $recnum = (int) $data[1];
     }
 
     // Return record number found
-    return array($recnum, -1);
+    return [$recnum, -1];
 }
 
 // Find the country searching from record $idx
@@ -140,7 +140,7 @@ function i2c_search_in_db($ip, $idx)
     if (!$ipdb) { return $country; }
 
     // Jump to record $idx
-    fseek($ipdb, ($idx[0] ? (($idx[0]-1)*24) : 0));
+    fseek($ipdb, ($idx[0] ? (($idx[0] - 1) * 24) : 0));
 
     // Read records until we hit the end of the file,
     // or we find the range where this IP is, or we
@@ -162,8 +162,8 @@ function i2c_search_in_db($ip, $idx)
 
         // Split the record to it's parts
         $range_start = (float) substr($record, 0, 10);
-        $range_end   = (float) substr($record, 10, 10);
-        $country     = substr($record, 20, 3);
+        $range_end = (float) substr($record, 10, 10);
+        $country = substr($record, 20, 3);
 
         // Getting closer to the end of the indexed region
         $idx[0] += 1;
@@ -188,7 +188,7 @@ function i2c_realip()
 {
     // No IP found (will be overwritten by for
     // if any IP is found behind a firewall)
-    $ip = FALSE;
+    $ip = false;
 
     // If HTTP_CLIENT_IP is set, then give it priority
     if (!empty($_SERVER["HTTP_CLIENT_IP"])) {
@@ -203,30 +203,21 @@ function i2c_realip()
 
         // Put the IP's into an array which we shall work with shortly.
         $ips = explode (", ", $_SERVER['HTTP_X_FORWARDED_FOR']);
-        if ($ip) { array_unshift($ips, $ip); $ip = FALSE; }
+        if ($ip) { array_unshift($ips, $ip); $ip = false; }
 
         for ($i = 0; $i < count($ips); $i++) {
             // Skip RFC 1918 IP's 10.0.0.0/8, 172.16.0.0/12 and
             // 192.168.0.0/16
             // Also skip RFC 6598 IP's
-            if (!preg_match('/^(?:10|100\.(?:6[4-9]|[7-9]\d|1[01]\d|12[0-7])|172\.(?:1[6-9]|2\d|3[01])|192\.168)\./', $ips[$i])) {
-                if (version_compare(phpversion(), "5.0.0", ">=")) {
-                    if (ip2long($ips[$i]) != false) {
-                        $ip = $ips[$i];
-                        break;
-                    }
-                } else {
-                    if (ip2long($ips[$i]) != -1) {
-                        $ip = $ips[$i];
-                        break;
-                    }
-                }
+            if (!preg_match('/^(?:10|100\.(?:6[4-9]|[7-9]\d|1[01]\d|12[0-7])|172\.(?:1[6-9]|2\d|3[01])|192\.168)\./', $ips[$i]) && ip2long($ips[$i])) {
+                $ip = $ips[$i];
+                break;
             }
         }
     }
 
     // Return with the found IP or the remote address
-    return ($ip ? $ip : $_SERVER['REMOTE_ADDR']);
+    return $ip ?: $_SERVER['REMOTE_ADDR'];
 }
 
 /* vim: set et ts=4 sw=4 ft=php: : */

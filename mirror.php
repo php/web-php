@@ -22,7 +22,7 @@ $MIRROR_IMAGE = '';
 if (is_official_mirror()) {
 
     // Iterate through possible mirror provider logo types in priority order
-    $types = array("gif", "jpg", "png");
+    $types = ["gif", "jpg", "png"];
     foreach ($types as $ext) {
         // Check if file exists for this type
         if (file_exists("backend/mirror." . $ext)) {
@@ -31,10 +31,9 @@ if (is_official_mirror()) {
             $MIRROR_IMAGE = make_image(
                 'mirror.' . $ext,
                 htmlspecialchars(mirror_provider()),
-                FALSE,
-                FALSE,
-                'backend',
-                0
+                false,
+                false,
+                'backend'
             );
 
             // Add size information depending on mirror type
@@ -49,7 +48,7 @@ if (is_official_mirror()) {
         }
     }
 }
-site_header("Information About This PHP Mirror Site", array("current" => "community"));
+site_header("Information About This PHP Mirror Site", ["current" => "community"]);
 ?>
 
 <h1>Information About This PHP Mirror Site</h1>

@@ -9,13 +9,15 @@
   <default:finalTeaserDate xmlns="http://php.net/ns/news">2021-06-17</default:finalTeaserDate>
   <category term="conferences" label="Conference announcement"/>
   <default:newsImage xmlns="http://php.net/ns/news" link="https://www.phpconference.nl" title="DPC21 Schedule">dpc21-schedule.png</default:newsImage>
-  <content type="html">
-    <p><em>Join us for 2 full days of Insights, Inspiration &amp; Exclusive talks around PHP and Web Technology!</em></p>
-    <p>June 17 and 18, 2021 - DPC Online edition</p>
-    <p>In light of health and safety recommendations from public health authorities, and our assessment of the duration of this pandemic, we will be organising the DPC conference as an 100% online event on June 17 &amp; 18, 2021.</p>
-    <p><strong>Master Classes &amp; Exclusive talks</strong></p>
-    <p>Join our pre-conference Workshop day Thursday June 17 with master classes from the PHP &amp; Web Tech community. These online workshops are in small groups and provide an opportunity to spend time with an expert, going in-depth on a specific topic.</p>
-    <p>Followed by the main Conference day Friday June 18 full of interesting brand new live streamed talks!</p>
-    <a href="https://www.phpconference.nl" title="DPC21">https://www.phpconference.nl</a>
-</content>
+  <content type="xhtml">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+      <p><em>Join us for 2 full days of Insights, Inspiration &amp; Exclusive talks around PHP and Web Technology!</em></p>
+      <p>June 17 and 18, 2021 - DPC Online edition</p>
+      <p>In light of health and safety recommendations from public health authorities, and our assessment of the duration of this pandemic, we will be organising the DPC conference as an 100% online event on June 17 &amp; 18, 2021.</p>
+      <p><strong>Master Classes &amp; Exclusive talks</strong></p>
+      <p>Join our pre-conference Workshop day Thursday June 17 with master classes from the PHP &amp; Web Tech community. These online workshops are in small groups and provide an opportunity to spend time with an expert, going in-depth on a specific topic.</p>
+      <p>Followed by the main Conference day Friday June 18 full of interesting brand new live streamed talks!</p>
+      <a href="https://www.phpconference.nl" title="DPC21">https://www.phpconference.nl</a>
+    </div>
+  </content>
 </entry>

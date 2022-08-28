@@ -94,12 +94,12 @@ if (!empty($config['view_source'])) {
     ?>
 
  <!-- External and third party libraries. -->
- <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+ <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 <?php
- $jsfiles = array("ext/modernizr.js", "ext/hogan-2.0.0.min.js", "ext/typeahead.min.js", "ext/mousetrap.min.js", "search.js", "common.js");
+ $jsfiles = ["ext/hogan-3.0.2.min.js", "ext/typeahead.min.js", "ext/mousetrap.min.js", "ext/jquery.scrollTo.min.js", "search.js", "common.js"];
  foreach ($jsfiles as $filename) {
-   $path = dirname(__DIR__).'/js/'.$filename;
-   echo '<script src="/cached.php?t=' . @filemtime($path) . '&amp;f=/js/' . $filename . '"></script>'."\n";
+   $path = dirname(__DIR__) . '/js/' . $filename;
+   echo '<script src="/cached.php?t=' . @filemtime($path) . '&amp;f=/js/' . $filename . '"></script>' . "\n";
  }
 ?>
 

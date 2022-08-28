@@ -2,39 +2,35 @@
 
 // Define some constants, and $MIRRORS array
 // Mirror type constants
-define('MIRROR_DOWNLOAD', 0);
-define('MIRROR_STANDARD', 1);
-define('MIRROR_SPECIAL',  2);
-define('MIRROR_VIRTUAL',  3);
+const MIRROR_DOWNLOAD = 0;
+const MIRROR_STANDARD = 1;
+const MIRROR_SPECIAL = 2;
+const MIRROR_VIRTUAL = 3;
 
 // Mirror status constants
-define('MIRROR_OK',          0);
-define('MIRROR_NOTACTIVE',   1);
-define('MIRROR_OUTDATED',    2);
-define('MIRROR_DOESNOTWORK', 3);
+const MIRROR_OK = 0;
+const MIRROR_NOTACTIVE = 1;
+const MIRROR_OUTDATED = 2;
+const MIRROR_DOESNOTWORK = 3;
 
-$MIRRORS = array(
-    "https://www.php.net/" => array(
-    "DEU", "MyraCloud", FALSE,
-    "https://myracloud.com/en/", MIRROR_SPECIAL, TRUE,
-    "en", MIRROR_OK),
-);
+$MIRRORS = [
+    "https://www.php.net/" => [
+        "DEU", "MyraCloud", false,
+        "https://myracloud.com/en/", MIRROR_SPECIAL, true,
+        "en", MIRROR_OK],
+];
 
-// Define $COUNTRIES array
-include __DIR__ . '/countries.inc';
-
-// Define $COUNTRIES_ALPHA2 array
-include __DIR__ . '/countries-alpha2.inc';
-
-// Define $COUNTRY_ALPHA_2_TO_3 array
-include __DIR__ . '/countries_alpha_mapping.inc';
+/**
+ * @var array<string, string> $COUNTRIES
+ */
+$COUNTRIES = include __DIR__ . '/countries.inc';
 
 // Define $LANGUAGES array
 include __DIR__ . '/languages.inc';
 
 // Returns true if the current (or specified)
 // site is the primary mirror site
-function is_primary_site($site = FALSE)
+function is_primary_site($site = false)
 {
     global $MYSITE;
     if (!$site) { $site = $MYSITE; }
@@ -43,39 +39,41 @@ function is_primary_site($site = FALSE)
 
 // Returns true if the current (or specified)
 // mirror site is an official mirror site
-function is_official_mirror($site = FALSE)
+function is_official_mirror($site = false)
 {
     return (mirror_type($site) != MIRROR_VIRTUAL);
 }
 
 // Returns the current (or specified)
 // mirror site's default language
-function default_language($site = FALSE)
+function default_language($site = false)
 {
     global $MIRRORS, $MYSITE;
     if (!$site) { $site = $MYSITE; }
-    return (isset($MIRRORS[$site]) ? $MIRRORS[$site][6] : FALSE);
+    return (isset($MIRRORS[$site]) ? $MIRRORS[$site][6] : false);
 }
 
 // Returns true if the current (or specified) mirror
 // site is registered to have local search support
-function have_search($site = FALSE)
+function have_search($site = false)
 {
     global $MIRRORS, $MYSITE;
     if (!$site) { $site = $MYSITE; }
-    return (isset($MIRRORS[$site]) ? $MIRRORS[$site][5] : FALSE);
+    return (isset($MIRRORS[$site]) ? $MIRRORS[$site][5] : false);
 }
 
 // Returns the current (or specified)
 // mirror site's provider's name
-function mirror_provider($site = FALSE)
+function mirror_provider($site = false)
 {
     global $MIRRORS, $MYSITE;
     if (!$site) { $site = $MYSITE; }
 
     if (isset($MIRRORS[$site])) {
        return $MIRRORS[$site][1];
-    } elseif (isset($MIRRORS[$_SERVER['SERVER_ADDR']])) {
+    }
+
+    if (isset($MIRRORS[$_SERVER['SERVER_ADDR']])) {
        return $MIRRORS[$_SERVER['SERVER_ADDR']][1];
     }
 
@@ -84,14 +82,16 @@ function mirror_provider($site = FALSE)
 
 // Returns the current (or specified)
 // mirror site's provider's URL
-function mirror_provider_url($site = FALSE)
+function mirror_provider_url($site = false)
 {
     global $MIRRORS,$MYSITE;
     if (!$site) { $site = $MYSITE; }
 
     if (isset($MIRRORS[$site])) {
         return $MIRRORS[$site][3];
-    } elseif (isset($MIRRORS[$_SERVER['SERVER_ADDR']])) {
+    }
+
+    if (isset($MIRRORS[$_SERVER['SERVER_ADDR']])) {
         return $MIRRORS[$_SERVER['SERVER_ADDR']][3];
     }
 
@@ -100,14 +100,16 @@ function mirror_provider_url($site = FALSE)
 
 // Returns the current (or specified)
 // mirror site's type (use the constants!)
-function mirror_type($site = FALSE)
+function mirror_type($site = false)
 {
     global $MIRRORS, $MYSITE;
     if (!$site) { $site = $MYSITE; }
 
     if (isset($MIRRORS[$site])) {
         return $MIRRORS[$site][4];
-    } elseif (isset($MIRRORS[$_SERVER['SERVER_ADDR']])) {
+    }
+
+    if (isset($MIRRORS[$_SERVER['SERVER_ADDR']])) {
         return $MIRRORS[$_SERVER['SERVER_ADDR']][4];
     }
 
@@ -142,12 +144,12 @@ function mirror_setcookie($name, $content, $exptime)
     if (!headers_sent()) {
         if (is_official_mirror()) {
             return setcookie($name, $content, time() + $exptime, '/', '.php.net');
-        } else {
-            return setcookie($name, $content, time() + $exptime, '/');
         }
-    } else {
-        return FALSE;
+
+        return setcookie($name, $content, time() + $exptime, '/');
     }
+
+    return false;
 }
 
 // Use this function to write out proper headers on
@@ -162,185 +164,39 @@ function header_nocache()
     }
 }
 
-
-// Compatibility function to fetch data from external source
-function fetch_contents($url, $headers = false) {
-
-    $terrors_setting = ini_set('track_errors', true);
-
-    // A mysterious and elusive bug on us3 allows this to work, but the other methods do not
-    // So for now, use Curl first (curl++)
-    if(function_exists('curl_exec')) {
-        $ch = curl_init();
-        curl_setopt($ch, CURLOPT_URL, $url);
-        curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
-        curl_setopt($ch, CURLOPT_HEADER, (int)$headers);
-        curl_setopt($ch, CURLOPT_USERAGENT, "php.net");
-
-        $data = curl_exec($ch);
-        curl_close($ch);
-
-        if ($headers) {
-            $array = explode("\n", $data);
-            foreach($array as $line) {
-                if (strlen($line)<=2) {
-                    return $header;
-                } else {
-                    $header[] = $line;
-                }
-            }
-        }
-        if (!$data) {
-            return array(
-                'ERROR_NOTE' => 'Unable to find a way to retrieve data with curl',
-                'ERROR_LAST' => $php_errormsg,
-            );
-        }
-
-        return $data;
-    }
-
-    if(function_exists('file_get_contents') && ini_get('allow_url_fopen')) {
-        $context = null;
-        $opts    = array('user_agent'  => 'php.net');
-
-        if (version_compare(PHP_VERSION, '5.1.0', '>')) {
-            $context = stream_context_get_default(array('http' => $opts));
-        }
-        elseif (version_compare(PHP_VERSION, '5.0.0', '>')) {
-            $context = stream_context_create(array('http' => $opts));
-        }
-        if ($context) {
-            $data = @file_get_contents($url, false, $context);
-        } else {
-            $data = @file_get_contents($url, false);
-        }
-
-        if ($headers) {
-            return $http_response_header;
-        }
-
-        if (!$data) {
-            return array(
-                'ERROR_NOTE' => 'Unable to find a way to retrieve data with file_get_contents',
-                'ERROR_LAST' => $php_errormsg,
-                'URL'        => $url,
-            );
-        }
-
-        return $data;
-    }
-
-    $array = parse_url($url);
-    if(function_exists('fsockopen') && $fd = @fsockopen($array["host"], 80, $errno, $errstr, 15)) {
-        $data = "";
-        $header = array();
-        $body = false;
-
-        $path = $array["path"];
-        if (isset($array["query"])) {
-            $path .= "?" . $array["query"];
-        }
-        fputs($fd,"GET {$path} HTTP/1.0\r\n");
-        fputs($fd,"Host: {$array["host"]}\r\n");
-        fputs($fd,"User-Agent: php.net\r\n");
-        fputs($fd,"Connection: close\r\n\r\n");
-
-        while($line = fgets($fd)) {
-            if($body) {
-                $data .= $line;
-            } elseif(strlen($line)<=2) {
-                $body = true;
-            } else {
-                $header[] = $line;
-            }
-        }
-        fclose($fd);
-
-        if ($headers) {
-            return $header;
-        }
-        if (!$data) {
-            return array(
-                'ERROR_NOTE' => 'Unable to find a way to retrieve data with fsockopen',
-                'ERROR_LAST' => $php_errormsg,
-            );
-        }
-
-        return $data;
-    }
-
-    // TODO: Log if we get here
-    // Redirect to www.php.net ?
-    return array(
-        'ERROR_NOTE' => 'Unable to find a way to retrieve data',
-        'ERROR_LAST' => $php_errormsg,
-    );
-}
-
-// Compatibility function to fetch headers from external source
-function fetch_header($url, $header) {
-    $headers = array();
-
-    if(function_exists("get_headers") && ini_get('allow_url_fopen')) {
-        $headers = get_headers($url, 1);
-    } else {
-        $data = fetch_contents($url, true);
-        if (isset($data["ERROR_NOTE"])) {
-            return null;
-        }
-        foreach($data as $line) {
-            if (($pos = strpos($line, ":")) !== false) {
-                $headers[substr($line, 0, $pos)] = trim(substr($line, $pos+1));
-            } else {
-                $headers[0] = trim($line);
-            }
-        }
-    }
-    if (!is_array($headers) || empty($headers)) {
-        return null;
-    }
-    if (is_string($header)) {
-        $header = strtolower($header);
-        $headers = array_change_key_case($headers, CASE_LOWER);
-    }
-
-    return isset($headers[$header]) ? $headers[$header] : null;
-}
-
 function get_available_sqlites() {
 
-	$allsqlites = array(1 => 'sqlite', 2 => 'sqlite3', 4 => 'pdo_sqlite', 8 => 'pdo_sqlite2');
-	$avail      = 0;
+    $allsqlites = [1 => 'sqlite', 2 => 'sqlite3', 4 => 'pdo_sqlite', 8 => 'pdo_sqlite2'];
+    $avail = 0;
 
-	if (function_exists('sqlite_open')) {
-		$avail += 1;
-	}
-	if (class_exists('sqlite3')) {
-		$avail += 2;
-	}
-	if (method_exists('PDO', 'getavailabledrivers')) {
-		foreach (PDO::getavailabledrivers() as $driver) {
-			switch ($driver) {
-				case 'sqlite':
-					$avail += 4;
-					break;
-				case 'sqlite2':
-					$avail += 8;
-					break;
-			}
-		}
-	}
-	return $avail;
+    if (function_exists('sqlite_open')) {
+        $avail += 1;
+    }
+    if (class_exists('sqlite3')) {
+        $avail += 2;
+    }
+    if (method_exists('PDO', 'getavailabledrivers')) {
+        foreach (PDO::getavailabledrivers() as $driver) {
+            switch ($driver) {
+                case 'sqlite':
+                    $avail += 4;
+                    break;
+                case 'sqlite2':
+                    $avail += 8;
+                    break;
+            }
+        }
+    }
+    return $avail;
 }
 
 // Get all manual prefix search sections
 function get_manual_search_sections() {
-    return array(
+    return [
         "", "book.", "ref.", "function.", "class.",
         "features.", "control-structures.", "language.",
         "about.", "faq.",
-    );
+    ];
 }
 
 function get_shortname($page) {
@@ -359,14 +215,13 @@ function get_shortname($page) {
         array_shift($sections);
 
         // We can atleast remove manual/xx/
-        $shorturl = substr($page, strrpos($page, "/")+1);
+        $shorturl = substr($page, strrpos($page, "/") + 1);
 
-        foreach($sections as $section) {
+        foreach ($sections as $section) {
             // If we know this section
             if (strpos($shorturl, $section) === 0) {
                 // We can make it even shorter
                 return substr($shorturl, strlen($section), -4);
-                break;
             }
         }
 
@@ -393,19 +248,18 @@ if (!isset($_SERVER["HTTPS"]) || $_SERVER["HTTPS"] != "on") {
     $proto = "https";
 }
 
-if($_SERVER["SERVER_PORT"] != '80' && $_SERVER["SERVER_PORT"] != 443) {
+if ($_SERVER["SERVER_PORT"] != '80' && $_SERVER["SERVER_PORT"] != 443) {
     $MYSITE = $proto . '://' . $_SERVER["SERVER_NAME"] . ':' . (int)$_SERVER["SERVER_PORT"] . '/';
-    $msite  =      'http://' . $_SERVER["SERVER_NAME"] . ':' . (int)$_SERVER["SERVER_PORT"] . '/';
+    $msite = 'http://' . $_SERVER["SERVER_NAME"] . ':' . (int)$_SERVER["SERVER_PORT"] . '/';
 } else {
     $MYSITE = $proto . '://' . $_SERVER["SERVER_NAME"] . '/';
-    $msite  =     'https://' . $_SERVER["SERVER_NAME"] . '/';
+    $msite = 'https://' . $_SERVER["SERVER_NAME"] . '/';
 }
-
 
 // If the mirror is not registered with this name, provide defaults
 // (no country code, no search, no stats, English default language ...)
 if (!isset($MIRRORS[$MYSITE])) {
-    $MIRRORS[$MYSITE] = array("xx", $MYSITE, FALSE, $MYSITE, MIRROR_VIRTUAL, FALSE, "en", MIRROR_OK);
+    $MIRRORS[$MYSITE] = ["xx", $MYSITE, false, $MYSITE, MIRROR_VIRTUAL, false, "en", MIRROR_OK];
 }
 
 // Override mirror language with local preference

@@ -28,7 +28,6 @@ if (!empty($_FORM['pattern'])) {
             mirror_redirect("/manual-lookup.php?pattern={$ucp}{$langparam}&scope={$_FORM['show']}");
             break;
 
-
         case "manual":
         case "404manual":
             mirror_redirect($MYSITE . "results.php?q={$ucp}&p={$_FORM['show']}&l=$LANG");
@@ -46,13 +45,13 @@ if (!empty($_FORM['pattern'])) {
 else {
 
     // Print out common header
-    $link = array(
-        "rel"   => "search",
-        "type"  => "application/opensearchdescription+xml",
-        "href"  => $MYSITE . "phpnetimprovedsearch.src",
+    $link = [
+        "rel" => "search",
+        "type" => "application/opensearchdescription+xml",
+        "href" => $MYSITE . "phpnetimprovedsearch.src",
         "title" => "Add PHP.net search"
-    );
-    site_header("Search", array("link" => array($link), "current" => "help"));
+    ];
+    site_header("Search", ["link" => [$link], "current" => "help"]);
 
     google_cse();
     site_footer();

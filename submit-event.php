@@ -3,29 +3,29 @@ $_SERVER['BASE_PAGE'] = 'submit-event.php';
 include_once __DIR__ . '/include/prepend.inc';
 include_once __DIR__ . '/include/posttohost.inc';
 include_once __DIR__ . '/include/email-validation.inc';
-site_header("Submit an Event", array("current" => "community"));
+site_header("Submit an Event", ["current" => "community"]);
 
 // No errors, processing depends on POST data
-$errors = array();
-$process = (boolean) count($_POST);
+$errors = [];
+$process = [] !== $_POST;
 
 // Avoid E_NOTICE errors on incoming vars if not set
-$vars = array(
+$vars = [
     'sday', 'smonth', 'syear', 'eday',
     'emonth', 'eyear', 'recur', 'recur_day'
-);
+];
 foreach ($vars as $varname) {
-    if (!isset($_POST[$varname]) || empty($_POST[$varname])) {
+    if (empty($_POST[$varname])) {
         $_POST[$varname] = 0;
     }
 }
-$vars = array(
-	'type', 'country', 'category', 'email', 'url', 'ldesc', 'sdesc'
-);
-foreach($vars as $varname) {
-	if (!isset($_POST[$varname])) {
-		$_POST[$varname] = "";
-	}
+$vars = [
+    'type', 'country', 'category', 'email', 'url', 'ldesc', 'sdesc'
+];
+foreach ($vars as $varname) {
+    if (!isset($_POST[$varname])) {
+        $_POST[$varname] = "";
+    }
 }
 
 // We need to process some form data
@@ -41,7 +41,7 @@ if ($process) {
      * Add, edit, or remove blacklisted users or domains
      * in include/email-validation.inc :: blacklisted().
      */
-    $uemail     = isset($_POST['email']) ? strtolower($_POST['email']) : '';
+    $uemail = isset($_POST['email']) ? strtolower($_POST['email']) : '';
     if (blacklisted($uemail)) {
         $errors[] = 'An expected error has been encountered.  Please don\'t try again later.';
     }
@@ -60,7 +60,7 @@ if ($process) {
         $errors[] = "This does not look like a 'PHP' event";
     }
 
-    $valid_schemes = array('http','https','ftp');
+    $valid_schemes = ['http', 'https', 'ftp'];
 
     $_POST['url'] = trim($_POST['url']);
     $pu = parse_url($_POST['url']);
@@ -69,7 +69,7 @@ if ($process) {
     if (!$_POST['url']) {
         $errors[] = "You must supply a URL with more information about the event.";
     }
-    elseif (empty($pu['host']) || !in_array($pu['scheme'], $valid_schemes)) {
+    elseif (empty($pu['host']) || !in_array($pu['scheme'], $valid_schemes, false)) {
         $errors[] = "The URL you supplied was invalid.";
     }
 
@@ -159,15 +159,15 @@ for ($i = 1; $i <= 12; $i++) {
 }
 
 // Possibilities to recur
-$re = array(
-     1 => 'First',
-     2 => 'Second',
-     3 => 'Third',
-     4 => 'Fourth',
+$re = [
+    1 => 'First',
+    2 => 'Second',
+    3 => 'Third',
+    4 => 'Fourth',
     -1 => 'Last',
     -2 => '2nd Last',
     -3 => '3rd Last'
-);
+];
 
 // If we have data, display preview
 if ($process && count($errors) === 0) {
@@ -230,7 +230,7 @@ if ($process && count($errors) === 0) {
   <td>
    <select name="category" class="max">
 <?php
-        $cat = array("- Select a category -", "User Group Event", 3 => "Training"); // 2 = conference.. which should be on php.net/conferences instead
+        $cat = ["- Select a category -", "User Group Event", 3 => "Training"]; // 2 = conference.. which should be on php.net/conferences instead
         display_options($cat, $_POST['category']);
 ?>
    </select>
@@ -257,7 +257,7 @@ if ($process && count($errors) === 0) {
  </tr>
  <tr>
   <th class="subr">Are you real?</th>
-  <td><select name="sane"><?php display_options(array("I, Robot", "I used to be", "WTF?", "No, but I'd still want to submit this", "Yes"), "2"); ?></select></td>
+  <td><select name="sane"><?php display_options(["I, Robot", "I used to be", "WTF?", "No, but I'd still want to submit this", "Yes"], "2"); ?></select></td>
  </tr>
 </table>
 </form>
@@ -265,7 +265,7 @@ if ($process && count($errors) === 0) {
 site_footer();
 
 // Display an option list with one selected
-function display_options($options, $current)
+function display_options($options, $current): void
 {
     foreach ($options as $k => $v) {
         echo '<option value="', $k, '"',

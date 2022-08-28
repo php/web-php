@@ -18,11 +18,11 @@ if (!isset($_GET["f"])) {
     exit;
 }
 $pwd = realpath($_SERVER["DOCUMENT_ROOT"]);
-$abs = $pwd. "/" .(string)$_GET["f"];
+$abs = $pwd . "/" . (string)$_GET["f"];
 $abs = realpath($abs);
 
 if (strncmp($abs, $pwd, strlen($pwd)) != 0) {
-    header("Location: https://www.php.net/" . strtr($_GET["f"],array("\r"=>"","\n"=>"")));
+    header("Location: https://www.php.net/" . strtr($_GET["f"],["\r" => "", "\n" => ""]));
     exit;
 }
 
@@ -31,7 +31,6 @@ if (isset($_GET["t"])) {
 } else {
     $time = filemtime($abs);
 }
-
 
 $tsstring = gmdate("D, d M Y H:i:s ", $time) . "GMT";
 if (isset($_SERVER["HTTP_IF_MODIFIED_SINCE"]) &&

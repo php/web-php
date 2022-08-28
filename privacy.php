@@ -1,7 +1,7 @@
 <?php
 $_SERVER['BASE_PAGE'] = 'privacy.php';
 include_once __DIR__ . '/include/prepend.inc';
-site_header("Privacy Policy", array("current" => "footer"));
+site_header("Privacy Policy", ["current" => "footer"]);
 ?>
 
 <h1>Privacy Policy</h1>

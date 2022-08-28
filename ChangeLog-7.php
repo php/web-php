@@ -8,6 +8,166 @@ changelog_header(7, $MINOR_VERSIONS);
 ?>
 <a id="PHP_7_4"></a>
 
+<section class="version" id="7.4.30"><!-- {{{ 7.4.30 -->
+<h3>Version 7.4.30</h3>
+<b><?php release_date('09-Jun-2022'); ?></b>
+<ul><li>mysqlnd:
+<ul>
+  <li><?php bugfix(81719); ?>: mysqlnd/pdo password buffer overflow. (CVE-2022-31626)</li>
+</ul></li>
+<li>pgsql:
+<ul>
+  <li><?php bugfix(81720); ?>: Uninitialized array in pg_query_params(). (CVE-2022-31625)</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
+
+
+<section class="version" id="7.4.29"><!-- {{{ 7.4.29 -->
+<h3>Version 7.4.29</h3>
+<b><?php release_date('14-Apr-2022'); ?></b>
+<ul><li>Core:
+<ul>
+  <li>No source changes to this release. This update allows for re-building the
+  Windows binaries against upgraded dependencies which have received security
+  updates.</li>
+</ul></li>
+<li>Date:
+<ul>
+  <li>Updated to latest IANA timezone database (2022a).</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
+
+
+<section class="version" id="7.4.28"><!-- {{{ 7.4.28 -->
+<h3>Version 7.4.28</h3>
+<b><?php release_date('17-Feb-2022'); ?></b>
+<ul><li>Filter:
+<ul>
+  <li>Fix #81708: UAF due to php_filter_float() failing for ints (CVE-2021-21708)</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
+
+
+<section class="version" id="7.4.27"><!-- {{{ 7.4.27 -->
+<h3>Version 7.4.27</h3>
+<b><?php release_date('16-Dec-2021'); ?></b>
+<ul><li>Core:
+<ul>
+  <li><?php bugfix(81626); ?> (Error on use static:: in __сallStatic() wrapped to Closure::fromCallable()).</li>
+</ul></li>
+<li>FPM:
+<ul>
+  <li><?php bugfix(81513); ?> (Future possibility for heap overflow in FPM zlog).</li>
+</ul></li>
+<li>GD:
+<ul>
+  <li><?php bugfix(71316); ?> (libpng warning from imagecreatefromstring).</li>
+</ul></li>
+<li>OpenSSL:
+<ul>
+  <li><?php bugfix(75725); ?> (./configure: detecting RAND_egd).</li>
+</ul></li>
+<li>PCRE:
+<ul>
+  <li><?php bugfix(74604); ?> (Out of bounds in php_pcre_replace_impl).</li>
+</ul></li>
+<li>Standard:
+<ul>
+  <li><?php bugfix(81618); ?> (dns_get_record fails on FreeBSD for missing type).</li>
+  <li><?php bugfix(81659); ?> (stream_get_contents() may unnecessarily overallocate).</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
+
+
+<section class="version" id="7.4.26"><!-- {{{ 7.4.26 -->
+<h3>Version 7.4.26</h3>
+<b><?php release_date('18-Nov-2021'); ?></b>
+<ul><li>Core:
+<ul>
+  <li><?php bugfix(81518); ?> (Header injection via default_mimetype / default_charset).</li>
+</ul></li>
+<li>Date:
+<ul>
+  <li><?php bugfix(81500); ?> (Interval serialization regression since 7.3.14 / 7.4.2).</li>
+</ul></li>
+<li>MBString:
+<ul>
+  <li><?php bugfix(76167); ?> (mbstring may use pointer from some previous request).</li>
+</ul></li>
+<li>MySQLi:
+<ul>
+  <li><?php bugfix(81494); ?> (Stopped unbuffered query does not throw error).</li>
+</ul></li>
+<li>PCRE:
+<ul>
+  <li><?php bugfix(81424); ?> (PCRE2 10.35 JIT performance regression).</li>
+</ul></li>
+<li>Streams:
+<ul>
+  <li><?php bugfix(54340); ?> (Memory corruption with user_filter).</li>
+</ul></li>
+<li>XML:
+<ul>
+  <li><?php bugfix(79971); ?> (special character is breaking the path in xml function). (CVE-2021-21707)</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
+
+
+<section class="version" id="7.4.25"><!-- {{{ 7.4.25 -->
+<h3>Version 7.4.25</h3>
+<b><?php release_date('21-Oct-2021'); ?></b>
+<ul><li>DOM:
+<ul>
+  <li><?php bugfix(81433); ?> (DOMElement::setIdAttribute() called twice may remove ID).</li>
+</ul></li>
+<li>FFI:
+<ul>
+  <li><?php bugfix(79576); ?> ("TYPE *" shows unhelpful message when type is not defined).</li>
+</ul></li>
+<li>Fileinfo:
+<ul>
+  <li><?php bugfix(78987); ?> (High memory usage during encoding detection).</li>
+</ul></li>
+<li>Filter:
+<ul>
+  <li><?php bugfix(61700); ?> (FILTER_FLAG_IPV6/FILTER_FLAG_NO_PRIV|RES_RANGE failing).</li>
+</ul></li>
+<li>FPM:
+<ul>
+  <li><?php bugfix(81026); ?> (PHP-FPM oob R/W in root process leading to privilege escalation) (CVE-2021-21703).</li>
+</ul></li>
+<li>SPL:
+<ul>
+  <li><?php bugfix(80663); ?> (Recursive SplFixedArray::setSize() may cause double-free).</li>
+</ul></li>
+<li>Streams:
+<ul>
+  <li><?php bugfix(81475); ?> (stream_isatty emits warning with attached stream wrapper).</li>
+</ul></li>
+<li>XML:
+<ul>
+  <li><?php bugfix(70962); ?> (XML_OPTION_SKIP_WHITE strips embedded whitespace).</li>
+</ul></li>
+<li>Zip:
+<ul>
+  <li><?php bugfix(81490); ?> (ZipArchive::extractTo() may leak memory).</li>
+  <li><?php bugfix(77978); ?> (Dirname ending in colon unzips to wrong dir).</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
+
+
 <section class="version" id="7.4.24"><!-- {{{ 7.4.24 -->
 <h3>Version 7.4.24</h3>
 <b><?php release_date('23-Sep-2021'); ?></b>
@@ -1774,6 +1934,30 @@ changelog_header(7, $MINOR_VERSIONS);
 <!-- }}} --></section>
 
 <a id="PHP_7_3"></a>
+
+<section class="version" id="7.3.33"><!-- {{{ 7.3.33 -->
+<h3>Version 7.3.33</h3>
+<b><?php release_date('18-Nov-2021'); ?></b>
+<ul><li>XML:
+<ul>
+  <li><?php bugfix(79971); ?> (special character is breaking the path in xml function). (CVE-2021-21707)</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
+
+
+<section class="version" id="7.3.32"><!-- {{{ 7.3.32 -->
+<h3>Version 7.3.32</h3>
+<b><?php release_date('28-Oct-2021'); ?></b>
+<ul><li>FPM:
+<ul>
+  <li><?php bugfix(81026); ?> (PHP-FPM oob R/W in root process leading to privilege escalation). (CVE-2021-21703)</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
+
 
 <section class="version" id="7.3.31"><!-- {{{ 7.3.31 -->
 <h3>Version 7.3.31</h3>

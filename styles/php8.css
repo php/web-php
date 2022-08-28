@@ -272,10 +272,26 @@
   text-align: left;
 }
 
+.php8-compare__content--spaced {
+  margin-bottom: 24px;
+}
+
+.php8-compare__content--block {
+  display: block;
+}
+
 @media (max-width: 810px) {
   .php8-compare__content {
     display: block;
   }
+}
+
+.php8-compare__content code {
+  color: rgba(39, 40, 44, 0.7);
+  background-color: rgba(39, 40, 44, 0.05);
+  padding: .2em .4em;
+  font-size: 85%;
+  border-radius: 6px;
 }
 
 .php8-code {
@@ -359,6 +375,10 @@
 
 .php8-h2:hover .genanchor {
   display: block;
+}
+
+.php8-chart__table {
+  margin: 16px 0;
 }
 
 .page-tools {

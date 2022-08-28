@@ -16,136 +16,26 @@
 include_once __DIR__ . '/prepend.inc';
 
 // Set variable defaults
-$PGI = array(); $SIDEBAR_DATA = '';
-
+$PGI = []; $SIDEBAR_DATA = '';
 
 // =============================================================================
 // User note display functions
 // =============================================================================
 
-
-class ManualNotesSorter {
-    private $maxVote;
-    private $minVote;
-    private $maxAge;
-    private $minAge;
-
-    private $voteFactor;
-    private $ratingFactor;
-    private $ageFactor;
-
-    private $voteWeight = 38;
-    private $ratingWeight = 60;
-    private $ageWeight = 2;
-
-    function sort(array &$notes) {
-        // First we make a pass over the data to get the min and max values
-        // for data normalization.
-        $this->findMinMaxValues($notes);
-
-        $this->voteFactor = $this->maxVote - $this->minVote
-            ? (1 - .3)/ ($this->maxVote - $this->minVote)
-            : .5;
-        $this->ageFactor = $this->maxAge - $this->minAge
-            ? 1 / ($this->maxAge - $this->minAge)
-            : .5;
-
-        $this->ageFactor *= $this->ageWeight;
-
-        // Second we loop through to calculate sort priority using the above numbers
-        $this->calcSortPriority($notes);
-
-        // Third we sort the data.
-        uasort($notes, array($this, 'factorSort'));
-    }
-
-
-    private function calcVotePriority(array $note) {
-        return ($note['score'] - $this->minVote) * $this->voteFactor + .3;
-    }
-
-
-    private function calcRatingPriority(array $note) {
-        if ($note['total'] <= 2) {
-            return 0.5;
-        } else {
-            return $note['rating'];
-        }
-    }
-
-
-    private function calcSortPriority(array &$notes) {
-        foreach ($notes as &$note) {
-            $prio = array(
-                'vote' => $this->calcVotePriority($note) * $this->voteWeight,
-                'rating' => $this->calcRatingPriority($note) * $this->ratingWeight,
-                'age' =>  ($note['xwhen'] - $this->minAge) * $this->ageFactor
-            );
-            $note['sort'] = $prio['value'] = array_sum($prio);
-        }
-    }
-
-
-    /*
-     * Not sure why, but using `$b['sort'] - $a['sort']` does not seem to
-     * work properly.
-     */
-    private function factorSort($a, $b) {
-        if ($a['sort'] < $b['sort']) {
-            return 1;
-        } elseif ($a['sort'] == $b['sort']) {
-            return 0;
-        } else {
-            return -1;
-        }
-    }
-
-
-    private function findMinMaxValues(array &$notes) {
-        $count = count($notes);
-        if ($count <= 0) {
-            return;
-        }
-        $note = array_shift($notes);
-        $note['score'] = $net = ($note['votes']['up'] - $note['votes']['down']);
-        $note['total'] = $totalVotes = ($note['votes']['up'] + $note['votes']['down']);
-        $note['rating'] = $totalVotes > 0
-            ? $note['votes']['up'] / $totalVotes
-            : .5;
-
-        $this->minVote = $this->maxVote = $net;
-        $this->minAge = $this->maxAge = $age = $note['xwhen'];
-
-        $first = $note;
-
-        foreach ($notes as &$note) {
-            $note['score'] = $net = ($note['votes']['up'] - $note['votes']['down']);
-            $note['total'] = $totalVotes = ($note['votes']['up'] + $note['votes']['down']);
-            $note['rating'] = $totalVotes > 0
-                ? $note['votes']['up'] / $totalVotes
-                : .5;
-            $age = $note['xwhen'];
-            $this->maxVote = max($this->maxVote, $net);
-            $this->minVote = min($this->minVote, $net);
-            $this->maxAge = max($this->maxAge, $age);
-            $this->minAge = min($this->minAge, $age);
-        }
-        array_unshift($notes, $first);
-    }
-}
-
+require_once __DIR__ . '/../autoload.php';
+use phpweb\UserNotes\Sorter;
 
 // Print out all user notes for this manual page
 function manual_notes($notes) {
     // Get needed values
-    list($filename, $title) = $GLOBALS['PGI']['this'];
+    list($filename) = $GLOBALS['PGI']['this'];
 
     // Drop file extension from the name
     if (substr($filename, -4) == '.php') {
         $filename = substr($filename, 0, -4);
     }
 
-    $sorter = new ManualNotesSorter;
+    $sorter = new Sorter;
     $sorter->sort($notes);
 
     // Link target to add a note to the current manual page,
@@ -154,50 +44,44 @@ function manual_notes($notes) {
                    '&amp;redirect=' . $_SERVER['BASE_HREF'];
     $addnotesnippet = make_link(
         $addnotelink,
-        "<img src='/images/notes-add@2x.png' alt='add a note' width='12' height='12'> <small>add a note</small>"
+        "＋<small>add a note</small>"
     );
 
     $num_notes = count($notes);
+    $noteCountHtml = '';
     if ($num_notes) {
-        $num_notes = "<span class=\"count\">$num_notes note" . ($num_notes == 1 ? '' : 's') . "</span>";
-    } else {
-        $num_notes = null;
+        $noteCountHtml = "<span class=\"count\">$num_notes note" . ($num_notes == 1 ? '' : 's') . "</span>";
     }
 
     echo <<<END_USERNOTE_HEADER
-
 <section id="usernotes">
  <div class="head">
   <span class="action">{$addnotesnippet}</span>
-  <h3 class="title">User Contributed Notes {$num_notes}</h3>
+  <h3 class="title">User Contributed Notes {$noteCountHtml}</h3>
  </div>
 END_USERNOTE_HEADER;
 
     // If we have no notes, then inform the user
-    if (sizeof($notes) == 0) {
+    if ($num_notes === 0) {
         echo "\n <div class=\"note\">There are no user contributed notes for this page.</div>";
-    }
-
-    // If we have notes, print them out
-    else {
+    } else {
+        // If we have notes, print them out
         echo '<div id="allnotes">';
-
-        foreach($notes as $note) {
+        foreach ($notes as $note) {
             manual_note_display(
                 $note['xwhen'], $note['user'], $note['note'], $note['id'], $note['votes']
             );
         }
         echo "</div>\n";
-        echo "\n <div class=\"foot\">$addnotesnippet</div>\n";
+        echo "<div class=\"foot\">$addnotesnippet</div>\n";
     }
-
-    // #usernotes gets closed by the footer
+    echo "</section>";
 }
 // Get user notes from the appropriate text dump
 function manual_notes_load($id)
 {
     // Initialize values
-    $notes = array();
+    $notes = [];
     $hash = substr(md5($id), 0, 16);
     $notes_file = $_SERVER['DOCUMENT_ROOT'] . "/backend/notes/" .
                   substr($hash, 0, 2) . "/$hash";
@@ -212,15 +96,15 @@ function manual_notes_load($id)
             $line = chop(fgets($fp, 12288));
             if ($line == "") { continue; }
             @list($id, $sect, $rate, $ts, $user, $note, $up, $down) = explode("|", $line);
-            $notes[$id] = array(
-                "id"    => $id,
-                "sect"  => $sect,
-                "rate"  => $rate,
+            $notes[$id] = [
+                "id" => $id,
+                "sect" => $sect,
+                "rate" => $rate,
                 "xwhen" => $ts,
-                "user"  => $user,
-                "note"  => base64_decode($note),
-                "votes"  => array("up"=> (int)$up, "down"=> (int)$down)
-            );
+                "user" => $user,
+                "note" => base64_decode($note, true),
+                "votes" => ["up" => (int)$up, "down" => (int)$down]
+            ];
         }
         fclose($fp);
     }
@@ -228,7 +112,7 @@ function manual_notes_load($id)
 }
 
 // Print out one user note entry
-function manual_note_display($date, $name, $text, $id, $votes = array('up'=>0,'down'=>0), $voteOption = true)
+function manual_note_display($date, $name, $text, $id, $votes = ['up' => 0, 'down' => 0], $voteOption = true)
 {
     if ($name) {
         $name = "\n  <strong class=\"user\"><em>" . htmlspecialchars($name) . "</em></strong>";
@@ -240,11 +124,11 @@ function manual_note_display($date, $name, $text, $id, $votes = array('up'=>0,'d
     // New date style will be relative time
     $datestr = relTime(new DateTime("@{$date}"));
     $fdatestr = date("Y-m-d h:i", $date);
-    $text    = clean_note($text);
+    $text = clean_note($text);
 
     // Calculate note rating by up/down votes
     $vote = $votes['up'] - $votes['down'];
-    $p = floor(($votes['up'] / (($votes['up'] + $votes['down']) ? $votes['up'] + $votes['down'] : 1)) * 100);
+    $p = floor(($votes['up'] / (($votes['up'] + $votes['down']) ?: 1)) * 100);
     $rate = !$p && !($votes['up'] + $votes['down']) ? "no votes..." : "$p% like this...";
 
     // Vote User Notes Div
@@ -312,56 +196,55 @@ USER_NOTE_TEXT;
 
 }
 
-
 function manual_navigation_breadcrumbs(array $setup) {
-    $menu = array();
-    foreach(array_reverse($setup["parents"]) as $parent) {
-        $menu[] = array(
+    $menu = [];
+    foreach (array_reverse($setup["parents"]) as $parent) {
+        $menu[] = [
             "title" => $parent[1],
-            "link"  => $parent[0],
-        );
+            "link" => $parent[0],
+        ];
     }
 
     // The index manual page has no parent..
     if ($setup["up"][0]) {
-        $last_item = array(
+        $last_item = [
             "title" => $setup["up"][1],
-            "link"  => $setup["up"][0],
-        );
+            "link" => $setup["up"][0],
+        ];
         $menu[] = $last_item;
     }
     return $menu;
 }
 
 function manual_navigation_related(array $setup) {
-    $siblings = array();
-    foreach($setup['toc'] as $entry) {
-        $siblings[] = array(
+    $siblings = [];
+    foreach ($setup['toc'] as $entry) {
+        $siblings[] = [
             "title" => manual_navigation_methodname($entry[1]),
-            "link"  => $entry[0],
+            "link" => $entry[0],
             "current" => $setup["this"][0] == $entry[0],
-        );
+        ];
     }
 
     // The index manual page has no parent..
     if ($setup["up"][0]) {
-        $last_item = array(
+        $last_item = [
             "title" => $setup["up"][1],
-            "link"  => $setup["up"][0],
-        );
-        $siblings = array(array_merge($last_item, array("children" => $siblings)));
+            "link" => $setup["up"][0],
+        ];
+        $siblings = [array_merge($last_item, ["children" => $siblings])];
     }
     return $siblings;
 }
 
 function manual_navigation_deprecated(array $setup) {
-    $methods = array();
-    foreach((array)$setup['toc_deprecated'] as $entry) {
-        $methods[] = array(
+    $methods = [];
+    foreach ((array)$setup['toc_deprecated'] as $entry) {
+        $methods[] = [
             "title" => manual_navigation_methodname($entry[1]),
-            "link"  => $entry[0],
+            "link" => $entry[0],
             "current" => $setup["this"][0] == $entry[0],
-        );
+        ];
     }
 
     return $methods;
@@ -375,7 +258,7 @@ function manual_navigation_methodname($methodname) {
     }
 
     // Add zero-width spaces to allow line-breaks at various characters
-    return str_replace(array('-','_'), array('-&#8203;','_&#8203;'), $methodname);
+    return str_replace(['-', '_'], ['-&#8203;', '_&#8203;'], $methodname);
 }
 
 // Set up variables important for this page
@@ -388,7 +271,7 @@ function manual_setup($setup) {
     global $__RELATED;
 
     if (!isset($setup["toc_deprecated"])) {
-        $setup["toc_deprecated"] = array();
+        $setup["toc_deprecated"] = [];
     }
     $PGI = $setup;
     // Set base href for this manual page
@@ -396,11 +279,11 @@ function manual_setup($setup) {
     $_SERVER['BASE_PAGE'] = $base . $setup['this'][0];
     $_SERVER['BASE_HREF'] = $MYSITE . $_SERVER['BASE_PAGE'];
 
-    $timestamps = array(
+    $timestamps = [
         filemtime($_SERVER["DOCUMENT_ROOT"] . "/" . $_SERVER["BASE_PAGE"]),
         filemtime($_SERVER["DOCUMENT_ROOT"] . "/include/prepend.inc"),
         filemtime($_SERVER["DOCUMENT_ROOT"] . "/styles/theme-base.css"),
-    );
+    ];
 
     // Load user note for this page
     list($filename, $title) = $PGI['this'];
@@ -421,26 +304,25 @@ function manual_setup($setup) {
     $__RELATED['toc'] = manual_navigation_related($setup);
     $__RELATED['toc_deprecated'] = manual_navigation_deprecated($setup);
 
-    $config = array(
+    $config = [
         "current" => "docs",
         "breadcrumbs" => $breadcrumbs,
-        "languages"   => array_keys($ACTIVE_ONLINE_LANGUAGES),
-        "meta-navigation" => array(
+        "languages" => array_keys($ACTIVE_ONLINE_LANGUAGES),
+        "meta-navigation" => [
             "contents" => $base . $setup["home"][0],
-            "index"    => $base . $setup["up"][0],
-            "prev"     => $base . $setup["prev"][0],
-            "next"     => $base . $setup["next"][0],
-        ),
+            "index" => $base . $setup["up"][0],
+            "prev" => $base . $setup["prev"][0],
+            "next" => $base . $setup["next"][0],
+        ],
         "lang" => $setup["head"][1],
         "thispage" => $setup["this"][0],
         "prev" => $setup["prev"],
         "next" => $setup["next"],
         "cache" => $lastmod,
-    );
+    ];
     site_header($setup["this"][1] . " - Manual ", $config);
 
     $id = substr($setup['this'][0], 0, -4);
-    $language_chooser = 'manual_language_chooser';
     $repo = strtolower($config['lang']); // pt_BR etc.
 
     $edit_url = "https://github.com/php/doc-{$repo}";
@@ -454,10 +336,12 @@ function manual_setup($setup) {
     }
     $__RELATED['edit_url'] = $edit_url;
 
+    $languageChooser = manual_language_chooser($config['lang'], $config['thispage']);
+
     echo <<<PAGE_TOOLS
   <div class="page-tools">
     <div class="change-language">
-      {$language_chooser($config['lang'], $config['thispage'])}
+      {$languageChooser}
     </div>
     <div class="edit-bug">
       <a href="{$edit_url}">Submit a Pull Request</a>
@@ -470,10 +354,10 @@ PAGE_TOOLS;
 function manual_language_chooser($currentlang, $currentpage) {
     global $ACTIVE_ONLINE_LANGUAGES;
 
-    $links = array();
+    $links = [];
 
     foreach ($ACTIVE_ONLINE_LANGUAGES as $lang => $name) {
-        $links[] = array("$lang/$currentpage", $name, $lang);
+        $links[] = ["$lang/$currentpage", $name, $lang];
     }
 
     // Print out the form with all the options
@@ -506,13 +390,11 @@ CHANGE_LANG;
     return trim($r);
 }
 
-function manual_header(){}
 function manual_footer() {
     global $USERNOTES, $__RELATED;
 
     manual_notes($USERNOTES);
-    echo "</section>";
-    $config = array(
+    $config = [
         'related_menu' => $__RELATED['toc'],
         'related_menu_deprecated' => $__RELATED['toc_deprecated'],
         'view_source' => $__RELATED['edit_url'],
@@ -524,13 +406,13 @@ function manual_footer() {
 function relTime(DateTime $date) {
     $current = new DateTime;
     $diff = $current->diff($date);
-    $units = array("year" => $diff->format("%y"),
-                   "month" => $diff->format("%m"),
-                   "day" => $diff->format("%d"),
-                   "hour" => $diff->format("%h"),
-                   "minute" => $diff->format("%i"),
-                   "second" => $diff->format("%s"),
-                  );
+    $units = ["year" => $diff->format("%y"),
+        "month" => $diff->format("%m"),
+        "day" => $diff->format("%d"),
+        "hour" => $diff->format("%h"),
+        "minute" => $diff->format("%i"),
+        "second" => $diff->format("%s"),
+    ];
     $out = "just now...";
     foreach ($units as $unit => $amount) {
         if (empty($amount)) {

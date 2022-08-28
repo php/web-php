@@ -1,7 +1,7 @@
 <?php
 $_SERVER['BASE_PAGE'] = 'contact.php';
 include_once __DIR__ . '/include/prepend.inc';
-site_header("Contact", array("current" => "community"));
+site_header("Contact", ["current" => "community"]);
 ?>
 
 <a id="ads"></a>

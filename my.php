@@ -6,11 +6,11 @@ include_once __DIR__ . '/include/prepend.inc';
 header_nocache();
 
 // Languages array copy and options to list
-$langs   = $ACTIVE_ONLINE_LANGUAGES;
-$options = array();
+$langs = $ACTIVE_ONLINE_LANGUAGES;
+$options = [];
 
 // We have post data, and it is an available language
-if (isset($_POST['my_lang']) && isset($langs[$_POST['my_lang']])) {
+if (isset($_POST['my_lang'], $langs[$_POST['my_lang']])) {
 
     // Set the language preference
     myphpnet_language($_POST['my_lang']);
@@ -46,8 +46,8 @@ foreach ($langs as $code => $name) {
 }
 
 // Assemble form from collected data
-$langpref = "<select name=\"my_lang\">\n" .
-            join("", $options) . "</select>\n";
+$langpref = "<select id=\"form-my_lang\" name=\"my_lang\">\n" .
+            implode("", $options) . "</select>\n";
 
 // Save URL shortcut fallback setting
 if (isset($_POST['urlsearch'])) {
@@ -55,16 +55,16 @@ if (isset($_POST['urlsearch'])) {
 }
 
 if (isset($_POST["showug"])) {
-    myphpnet_showug($_POST["showug"] == "enable");
+    myphpnet_showug($_POST["showug"] === "enable");
 }
 
 // Prepare mirror array
 $mirror_sites = $MIRRORS;
-$mirror_sites["NONE"] = array(7 => MIRROR_OK);
+$mirror_sites["NONE"] = [7 => MIRROR_OK];
 
 myphpnet_save();
 
-site_header("My PHP.net", array("current" => "community"));
+site_header("My PHP.net", ["current" => "community"]);
 ?>
 
 <form action="/my.php" method="post">
@@ -104,9 +104,9 @@ site_header("My PHP.net", array("current" => "community"));
 <?php
 
 // Data for the language settings table
-$langinfo = array(
+$langinfo = [
 
-    "Your preferred language" =>
+    "<label for=\"form-my_lang\">Your preferred language</label>" =>
     $langpref,
 
     "Last seen language" =>
@@ -119,7 +119,7 @@ $langinfo = array(
     default_language(),
 
     "Default" => "en"
-);
+];
 
 // Write a row for all settings
 foreach ($langinfo as $lin => $lid) {
@@ -176,18 +176,18 @@ if (i2c_valid_country()) {
 </p>
 
 <div class="indent">
- Your setting: <input type="radio" name="urlsearch" value="quickref"
+ Your setting: <input id="form-urlsearch-quickref" type="radio" name="urlsearch" value="quickref"
 <?php
 $type = myphpnet_urlsearch();
 if ($type === MYPHPNET_URL_NONE || $type === MYPHPNET_URL_FUNC) {
     echo ' checked="checked"';
 }
-echo '> Function list search <input type="radio" name="urlsearch" value="manual"';
+echo '> <label for="form-urlsearch-quickref">Function list search</label> <input id="form-urlsearch-manual" type="radio" name="urlsearch" value="manual"';
 if ($type === MYPHPNET_URL_MANUAL) {
     echo ' checked="checked"';
 }
 ?>
-> PHP Documentation search
+> <label for="form-urlsearch-manual">PHP Documentation search</label>
 </div>
 
 <br>
@@ -197,7 +197,7 @@ if ($type === MYPHPNET_URL_MANUAL) {
 We are experimenting with listing nearby user groups. This feature is highly experimental
 and will very likely change a lot and be broken at times.
 </p>
-<label for="showugenable">Enable UG tips</label> <input type="radio" name="showug" id="showugenable" value="enable" <?php    echo myphpnet_showug() ? "checked=checked" : "" ?>><br>
+<label for="showugenable">Enable UG tips</label> <input type="radio" name="showug" id="showugenable" value="enable" <?php echo myphpnet_showug() ? "checked=checked" : "" ?>><br>
 <label for="showugdisable">Disable UG tips</label> <input type="radio" name="showug" id="showugdisable" value="disable" <?php echo myphpnet_showug() ? "" : "checked=checked" ?>>
 
 <p class="center">

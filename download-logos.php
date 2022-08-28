@@ -10,19 +10,19 @@ $SIDEBAR_DATA = '
  under a GPL license.
 </p>
 ';
-site_header("Download Logos", array("current" => "downloads"));
+site_header("Download Logos", ["current" => "downloads"]);
 
 // Print recommended star cell
-function print_star()
+function print_star(): void
 {
     echo "<td class=\"star\"><span class=\"star\" title=\"recommended\">*</span></td>\n";
 }
 
 // Provide a random bgcolor setting for a cell
-function random_bgcolor($min, $max)
+function random_bgcolor($min, $max): void
 {
     echo "style=\"background-color: #" .
-         sprintf('%02x%02x%02x', rand($min, $max)*51, rand($min, $max)*51, rand($min, $max)*51) .
+         sprintf('%02x%02x%02x', rand($min, $max) * 51, rand($min, $max) * 51, rand($min, $max) * 51) .
          ";\"";
 }
 ?>
@@ -65,7 +65,7 @@ function random_bgcolor($min, $max)
 </p>
 
 <div class="center logo-list">
-  <?php print_image("logos/new-php-logo.svg", "PHP logo", FALSE, 'width="200"'); ?>
+  <?php print_image("logos/new-php-logo.svg", "PHP logo", false, 'width="200"'); ?>
   <br>
   <a href="/images/logos/new-php-logo.svg">SVG</a> |
   <a href="/images/logos/new-php-logo.png">PNG</a>
@@ -78,7 +78,7 @@ function random_bgcolor($min, $max)
 </p>
 
 <div class="center logo-list">
-  <?php print_image("logos/php-logo.svg", "PHP logo", FALSE, 'width="200"'); ?>
+  <?php print_image("logos/php-logo.svg", "PHP logo", false, 'width="200"'); ?>
   <br>
   <a href="/images/logos/php-logo.svg">SVG</a> |
   <a href="/images/logos/php-logo-bigger.png">PNG</a>

@@ -2,7 +2,7 @@
 $_SERVER['BASE_PAGE'] = 'build-setup.php';
 include_once __DIR__ . '/include/prepend.inc';
 
-$SIDEBAR_DATA ='
+$SIDEBAR_DATA = '
 <div class="panel">
   <div class="body">
     <p>
@@ -13,7 +13,7 @@ $SIDEBAR_DATA ='
 </div>
 ';
 
-site_header("Operating System Preparation", array("current" => "community"));
+site_header("Operating System Preparation", ["current" => "community"]);
 
 ?>
 <h2 id="os-prep" class="content-header">Operating System Preparation</h2>
@@ -172,6 +172,6 @@ site_header("Operating System Preparation", array("current" => "community"));
 </p>
 </div>
 <?php
-site_footer(array('sidebar'=>$SIDEBAR_DATA));
+site_footer(['sidebar' => $SIDEBAR_DATA]);
 
 /* vim: set et ts=4 sw=4 ft=php: : */

@@ -9,43 +9,43 @@
 
  http://www.unicode.org/unicode/onlinedat/languages.html
 */
-$LANGUAGES = array(
-    'en'    => 'English',
-    'ar'    => 'Arabic',
-    'bg'    => 'Bulgarian',
+$LANGUAGES = [
+    'en' => 'English',
+    'ar' => 'Arabic',
+    'bg' => 'Bulgarian',
     'pt_BR' => 'Brazilian Portuguese',
-    'zh'    => 'Chinese (Simplified)',
-    'hk'    => 'Chinese (Hong Kong Cantonese)',
-    'tw'    => 'Chinese (Traditional)',
-    'ca'    => 'Catalan',
-    'cs'    => 'Czech',
-    'da'    => 'Danish',
-    'nl'    => 'Dutch',
-    'fi'    => 'Finnish',
-    'fr'    => 'French',
-    'de'    => 'German',
-    'el'    => 'Greek',
-    'he'    => 'Hebrew',
-    'hu'    => 'Hungarian',
-    'id'    => 'Indonesian',
-    'it'    => 'Italian',
-    'ja'    => 'Japanese',
-    'kr'    => 'Korean',
-    'lt'    => 'Lithuanian',
-    'no'    => 'Norwegian',
-    'pl'    => 'Polish',
-    'pt'    => 'Portuguese',
-    'ro'    => 'Romanian',
-    'ru'    => 'Russian',
-    'fa'    => 'Persian',
-    'sr'    => 'Serbian',
-    'sk'    => 'Slovak',
-    'sl'    => 'Slovenian',
-    'es'    => 'Spanish',
-    'sv'    => 'Swedish',
-    'tr'    => 'Turkish',
-    'uk'    => 'Ukrainian',
-);
+    'zh' => 'Chinese (Simplified)',
+    'hk' => 'Chinese (Hong Kong Cantonese)',
+    'tw' => 'Chinese (Traditional)',
+    'ca' => 'Catalan',
+    'cs' => 'Czech',
+    'da' => 'Danish',
+    'nl' => 'Dutch',
+    'fi' => 'Finnish',
+    'fr' => 'French',
+    'de' => 'German',
+    'el' => 'Greek',
+    'he' => 'Hebrew',
+    'hu' => 'Hungarian',
+    'id' => 'Indonesian',
+    'it' => 'Italian',
+    'ja' => 'Japanese',
+    'kr' => 'Korean',
+    'lt' => 'Lithuanian',
+    'no' => 'Norwegian',
+    'pl' => 'Polish',
+    'pt' => 'Portuguese',
+    'ro' => 'Romanian',
+    'ru' => 'Russian',
+    'fa' => 'Persian',
+    'sr' => 'Serbian',
+    'sk' => 'Slovak',
+    'sl' => 'Slovenian',
+    'es' => 'Spanish',
+    'sv' => 'Swedish',
+    'tr' => 'Turkish',
+    'uk' => 'Ukrainian',
+];
 
 /*
  The following languages are inactive, which means they will not:
@@ -56,40 +56,41 @@ $LANGUAGES = array(
  However, these languages are available on the doc dev server:
  - http://docs.php.net/
 */
-$INACTIVE_ONLINE_LANGUAGES = array(
-    'ar'    => 'Arabic',
-    'bg'    => 'Bulgarian',
-    'hk'    => 'Chinese (Hong Kong Cantonese)',
-    'tw'    => 'Chinese (Traditional)',
-    'ca'    => 'Catalan',
-    'cs'    => 'Czech',
-    'da'    => 'Danish',
-    'nl'    => 'Dutch',
-    'fi'    => 'Finnish',
-    'el'    => 'Greek',
-    'he'    => 'Hebrew',
-    'hu'    => 'Hungarian',
-    'id'    => 'Indonesian',
-    'it'    => 'Italian',
-    'kr'    => 'Korean',
-    'lt'    => 'Lithuanian',
-    'no'    => 'Norwegian',
-    'pl'    => 'Polish',
-    'pt'    => 'Portuguese',
-    'fa'    => 'Persian',
-    'sr'    => 'Serbian',
-    'sk'    => 'Slovak',
-    'sl'    => 'Slovenian',
-    'sv'    => 'Swedish',
-    'uk'    => 'Ukrainian',
- );
+$INACTIVE_ONLINE_LANGUAGES = [
+    'ar' => 'Arabic',
+    'bg' => 'Bulgarian',
+    'hk' => 'Chinese (Hong Kong Cantonese)',
+    'tw' => 'Chinese (Traditional)',
+    'ca' => 'Catalan',
+    'cs' => 'Czech',
+    'da' => 'Danish',
+    'nl' => 'Dutch',
+    'fi' => 'Finnish',
+    'el' => 'Greek',
+    'he' => 'Hebrew',
+    'hu' => 'Hungarian',
+    'id' => 'Indonesian',
+    'it' => 'Italian',
+    'kr' => 'Korean',
+    'lt' => 'Lithuanian',
+    'no' => 'Norwegian',
+    'pl' => 'Polish',
+    'pt' => 'Portuguese',
+    'fa' => 'Persian',
+    'ro' => 'Romanian',
+    'sr' => 'Serbian',
+    'sk' => 'Slovak',
+    'sl' => 'Slovenian',
+    'sv' => 'Swedish',
+    'uk' => 'Ukrainian',
+];
 
 $ACTIVE_ONLINE_LANGUAGES = array_diff($LANGUAGES, $INACTIVE_ONLINE_LANGUAGES);
 
 // Convert between language codes back and forth
 // [We use non standard languages codes and so conversion
 // is needed when communicating with the outside world]
-function language_convert($langcode, $to_phpweb_format = TRUE)
+function language_convert($langcode, $to_phpweb_format = true)
 {
     global $LANGUAGES;
     if ($to_phpweb_format) {

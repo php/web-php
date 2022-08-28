@@ -2,7 +2,7 @@
 $_SERVER['BASE_PAGE'] = 'support.php';
 include_once __DIR__ . '/include/prepend.inc';
 
-$SIDEBAR_DATA ='
+$SIDEBAR_DATA = '
 <div class="panel" style="position:fixed">
   <div class="headline">Table of Contents</div>
   <div class="body">
@@ -21,9 +21,9 @@ $SIDEBAR_DATA ='
 
 site_header(
     'Getting Help',
-    array(
+    [
         'current' => 'help',
-    )
+    ]
 );
 ?>
 
@@ -107,4 +107,4 @@ site_header(
  questions.
 </p>
 
-<?php site_footer(array('sidebar' => $SIDEBAR_DATA)); ?>
+<?php site_footer(['sidebar' => $SIDEBAR_DATA]); ?>

@@ -86,14 +86,16 @@ h1.refname {
 .interfacename a,
 .fieldsynopsis .type,
 .methodsynopsis .type,
-.constructorsynopsis .type {
+.constructorsynopsis .type,
+.destructorsynopsis .type {
   color:#693;
 }
 
 .classsynopsisinfo .modifier,
 .fieldsynopsis .modifier,
 .methodsynopsis .modifier,
-.constructorsynopsis .modifier {
+.constructorsynopsis .modifier,
+.destructorsynopsis .modifier {
   color: #936;
 }
 
@@ -493,7 +495,7 @@ div.elephpants img:focus {
 }
 .mirror .title img {
 	position: absolute;
-	right: 0px;
+	right: 0;
 }
 .mirror .title {
 	font-size: 1.4em;

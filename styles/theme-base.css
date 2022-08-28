@@ -555,8 +555,7 @@ div.classsynopsisinfo_comment {
 
 pre.info {
     border: 1px solid;
-    margin: 1rem 2rem 1.3rem;
-    margin-right: 0.8rem;
+    margin: 1rem 0.8rem 1.3rem 2rem;
 }
 
 #langform {
@@ -686,7 +685,6 @@ table td {
 
 table.standard {
     border-collapse: collapse;
-    border-style: hidden;
     border:1px solid #d9d9d9;
 }
 
@@ -797,9 +795,8 @@ table.standard th.subr {
     width: 23.404%;
     margin-right: 2.762%;
     padding:.5rem .75rem;
-    border: 1px solid;
+    border: 1px solid #e0e0e0;
     background-color:#f2f2f2;
-    border-color: #e0e0e0;
     border-bottom-color:#d9d9d9;
     border-radius:2px;
     margin-top: 0;
@@ -1159,7 +1156,7 @@ fieldset {
 .content-box pre {
     background: white;
     border: solid 1px rgb(214, 214, 214);
-    margin: 0px;
+    margin: 0;
     padding: 0.75rem;
     overflow: auto;
     font: normal 0.875rem/1.5rem "Source Code Pro", monospace;
@@ -1483,8 +1480,8 @@ div.soft-deprecation-notice {
 }
 div.soft-deprecation-notice blockquote.sidebar {
     padding: 10px;
-    margin: 0px;
-    border: 0px solid;
+    margin: 0;
+    border: 0 solid;
 }
 
 #breadcrumbs {
@@ -1541,7 +1538,6 @@ div.soft-deprecation-notice blockquote.sidebar {
     display:block;
   }
   .navbar-search,
-  #intro .download,
   #intro .background,
   aside.tips,
   .layout-menu {
@@ -1549,7 +1545,7 @@ div.soft-deprecation-notice blockquote.sidebar {
     float: left;
   }
 
-  #intro .blurb, #layout-content {
+  #layout-content {
     float:left;
     width:75%;
   }
@@ -1565,11 +1561,11 @@ div.soft-deprecation-notice blockquote.sidebar {
 
 
 @media (min-width: 768px) and (max-width: 979px) {
-    #intro .download, aside.tips, .navbar-search {
+    aside.tips, .navbar-search {
         width: 30% !important;
     }
 
-    #intro .blurb, #layout-content {
+    #layout-content {
         width: 70% !important;
     }
 }
@@ -1611,7 +1607,7 @@ div.soft-deprecation-notice blockquote.sidebar {
     float:left;
     clear: both;
     margin-top: 0;
-    padding: 0px 10px 10px 10px;
+    padding: 0 10px 10px 10px;
   }
 
   .navbar .nav {
@@ -1652,7 +1648,7 @@ div.soft-deprecation-notice blockquote.sidebar {
 
   .navbar-search {
     margin-top: 0;
-    padding: 0px 10px 10px;
+    padding: 0 10px 10px;
   }
 
   .navbar .brand img {
@@ -1691,7 +1687,7 @@ div.soft-deprecation-notice blockquote.sidebar {
   }
 
   #flash-message {
-    margin-top: 0px !important;
+    margin-top: 0 !important;
     top: 0;
   }
 
@@ -1736,7 +1732,7 @@ div.soft-deprecation-notice blockquote.sidebar {
   color: #E6E6E6;
 }
 #goto .search .results {
-  text-shadow: 0px 2px 3px #555;
+  text-shadow: 0 2px 3px #555;
   font-size: 2rem;
   line-height: 1;
 }
@@ -1746,7 +1742,7 @@ div.soft-deprecation-notice blockquote.sidebar {
 }
 #goto .search .text {
   color: #222;
-  text-shadow: 0px 2px 3px #555;
+  text-shadow: 0 2px 3px #555;
   font-size: 10rem;
   line-height: .7;
 }

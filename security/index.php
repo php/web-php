@@ -2,12 +2,12 @@
 $_SERVER['BASE_PAGE'] = 'security/index.php';
 
 include_once __DIR__ . '/../include/prepend.inc';
-if(!isset($_COOKIE["MAGIC_COOKIE"])) {
+if (!isset($_COOKIE["MAGIC_COOKIE"])) {
     mirror_redirect("/manual/security");
     exit;
 }
 
-$SIDEBAR_DATA = <<< EOT
+$SIDEBAR_DATA = <<<EOT
 <br>
 <div id="securitySidebar">
  <h3><a href="/security/">Security Center?</a></h3>
@@ -28,33 +28,32 @@ $SIDEBAR_DATA = <<< EOT
 </div>
 EOT;
 
-
 site_header("PHP Security center");
 echo "<h1>PHP Security Center</h1>\n";
 
 $dbfile = $_SERVER['DOCUMENT_ROOT'] . '/security/vulndb.txt';
 $fp = @fopen($dbfile, "rt");
-if(is_resource($fp)) {
-    $RECORDS = array();
+if (is_resource($fp)) {
+    $RECORDS = [];
     $record_no = 1;
-    while($s = fgets($fp)) {
-        if($s == "\n") {
-            if(!isset($RECORDS[$record_no]["id"])) {
+    while ($s = fgets($fp)) {
+        if ($s == "\n") {
+            if (!isset($RECORDS[$record_no]["id"])) {
                 $RECORDS[$record_no]["id"] = $record_no;
             }
             $field = null;
             $record_no++;
             continue;
         }
-        if(preg_match("/^([-\w]+):\s*(.*)/", $s, $m)) {
+        if (preg_match("/^([-\w]+):\s*(.*)/", $s, $m)) {
             // new record
             $field = strtolower($m[1]);
             $data = $m[2];
         } else {
             $data = $s;
         }
-        if($field) {
-            if(isset($RECORDS[$record_no][$field])) {
+        if ($field) {
+            if (isset($RECORDS[$record_no][$field])) {
                     $RECORDS[$record_no][$field] .= $data;
                 } else {
                     $RECORDS[$record_no][$field] = $data;
@@ -65,7 +64,7 @@ if(is_resource($fp)) {
 
     //echo "<pre>";print_r($RECORDS);
     $id = isset($_GET["id"]) ? (int)$_GET["id"] : 0;
-    if(!$id || !isset($RECORDS[$id])) {
+    if (!$id || !isset($RECORDS[$id])) {
 ?>
 <h3>PHP Vulnerability Disclosures</h3>
 <p>This page contains information about PHP-related security threats, patches and known workarounds.</p>
@@ -81,8 +80,8 @@ if(is_resource($fp)) {
     function cmp_records($a, $b) {
         $c = date("Ym", strtotime($a["published"]));
         $d = date("Ym", strtotime($b["published"]));
-        if($c >= $d) {
-            if($c > $d) {
+        if ($c >= $d) {
+            if ($c > $d) {
                 return -1;
             }
             return 0;
@@ -92,16 +91,16 @@ if(is_resource($fp)) {
     usort($RECORDS, "cmp_records");
 
     $last_month = "";
-    foreach($RECORDS as $record) {
-        if(!isset($record["summary"])) {
-            if(strlen($record["description"]) > 80) {
+    foreach ($RECORDS as $record) {
+        if (!isset($record["summary"])) {
+            if (strlen($record["description"]) > 80) {
                 $record["summary"] = substr($record["description"], 0, 70) . "...";
             } else {
                 $record["summary"] = $record["description"];
             }
         }
         $current_month = date("Ym", strtotime($record["published"]));
-        if($current_month != $last_month) {
+        if ($current_month != $last_month) {
             $last_month = $current_month;
             $current_month = $record["affects"];
 
@@ -118,23 +117,23 @@ if(is_resource($fp)) {
 
 <?php
     } // foreach($records);
-} elseif(isset($RECORDS)) { // Print a single record
+} elseif (isset($RECORDS)) { // Print a single record
     $date = date("F jS Y", strtotime($RECORDS[$id]["published"]));
     $RECORDS[$id]["id"] = sprintf("PHPSA-%04d", $RECORDS[$id]["id"]);
     printf("<h3>%s (%s)</h3>\n", $RECORDS[$id]["id"], $date);
     echo "<div class=\"singlerecord\">\n";
-    foreach($RECORDS[$id] as $field => $data) {
-        if(!$data) {
+    foreach ($RECORDS[$id] as $field => $data) {
+        if (!$data) {
             continue;
         }
         $title = ucfirst(strtr($field, "-", " "));
         // Turn urls into links (stolen from master/manage/user-notes.php)
         $data = preg_replace(
-            '!((mailto:|(http|ftp|nntp|news):\/\/).*?)(\s|<|\)|"|\\|\'|$)!',
+            '!((mailto:|(http|ftp|nntp|news)://).*?)(\s|<|\)|"|\\|\'|$)!',
             '<a href="\1" target="_blank">\1</a>\4',
             $data
         );
-        echo <<< EOT
+        echo <<<EOT
  <div class="row $field">
   <div class="title">$title</div>
   <div class="data">$data</div>

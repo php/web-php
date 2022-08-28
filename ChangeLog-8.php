@@ -3,10 +3,1342 @@ $_SERVER['BASE_PAGE'] = 'ChangeLog-8.php';
 include_once __DIR__ . '/include/prepend.inc';
 include_once __DIR__ . '/include/changelogs.inc';
 
-$MINOR_VERSIONS = ['8.0'];
+$MINOR_VERSIONS = ['8.1', '8.0'];
 changelog_header(8, $MINOR_VERSIONS);
 ?>
+<a id="PHP_8_1"></a>
+
+<section class="version" id="8.1.9"><!-- {{{ 8.1.9 -->
+<h3>Version 8.1.9</h3>
+<b><?php release_date('04-Aug-2022'); ?></b>
+<ul><li>CLI:
+<ul>
+  <li>Fixed potential overflow for the builtin server via the PHP_CLI_SERVER_WORKERS environment variable.</li>
+  <li>Fixed <?php githubissuel('php/php-src', 8952); ?> (Intentionally closing std handles no longer possible).</li>
+</ul></li>
+<li>Core:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 8923); ?> (error_log on Windows can hold the file write lock).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 8995); ?> (WeakMap object reference offset causing TypeError).</li>
+</ul></li>
+<li>Date:
+<ul>
+  <li><?php bugfix(80047); ?> (DatePeriod doesn't warn with custom DateTimeImmutable).</li>
+</ul></li>
+<li>FPM:
+<ul>
+  <li>Fixed zlog message prepend, free on incorrect address.</li>
+  <li>Fixed possible double free on configuration loading failure. (Heiko Weber).</li>
+</ul></li>
+<li>GD:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 8848); ?> (imagecopyresized() error refers to the wrong argument).</li>
+</ul></li>
+<li>Intl:
+<ul>
+  <li>Fixed build for ICU 69.x and onwards.</li>
+</ul></li>
+<li>OPcache:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 8847); ?> (PHP hanging infinitly at 100% cpu when check php syntax of a valid file).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 8030); ?> (Segfault with JIT and large match/switch statements).</li>
+</ul></li>
+<li>Reflection:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 8943); ?> (Fixed Reflection::getModifierNames() with readonly modifier).</li>
+</ul></li>
+<li>Standard:
+<ul>
+  <li>Fixed the crypt_sha256/512 api build with clang &gt; 12.</li>
+  <li>Uses CCRandomGenerateBytes instead of arc4random_buf on macOs. (David Carlier).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 9017); ?> (php_stream_sock_open_from_socket could return NULL).</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
+
+
+<section class="version" id="8.1.8"><!-- {{{ 8.1.8 -->
+<h3>Version 8.1.8</h3>
+<b><?php release_date('07-Jul-2022'); ?></b>
+<ul><li>Core:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src',8338); ?> (Intel CET is disabled unintentionally).</li>
+  <li>Fixed leak in Enum::from/tryFrom for internal enums when using JIT</li>
+  <li>Fixed calling internal methods with a static return type from extension code.</li>
+  <li>Fixed bug <?php githubissuel('php/php-src',8655); ?> (Casting an object to array does not unwrap refcount=1 references).</li>
+  <li>Fixed potential use after free in php_binary_init().</li>
+</ul></li>
+<li>CLI:
+<ul>
+  <li>Fixed <?php githubissuel('php/php-src',8827); ?> (Intentionally closing std handles no longer possible).</li>
+</ul></li>
+<li>COM:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src',8778); ?> (Integer arithmethic with large number variants fails).</li>
+</ul></li>
+<li>Curl:
+<ul>
+  <li>Fixed CURLOPT_TLSAUTH_TYPE is not treated as a string option.</li>
+</ul></li>
+<li>Date:
+<ul>
+  <li><?php bugfix(72963); ?> (Null-byte injection in CreateFromFormat and related functions).</li>
+  <li><?php bugfix(74671); ?> (DST timezone abbreviation has incorrect offset).</li>
+  <li><?php bugfix(77243); ?> (Weekdays are calculated incorrectly for negative years).</li>
+  <li><?php bugfix(78139); ?> (timezone_open accepts invalid timezone string argument).</li>
+</ul></li>
+<li>Fileinfo:
+<ul>
+  <li><?php bugfix(81723); ?> (Heap buffer overflow in finfo_buffer). (CVE-2022-31627)</li>
+</ul></li>
+<li>FPM:
+<ul>
+  <li><?php bugfix(67764); ?> (fpm: syslog.ident don't work).</li>
+</ul></li>
+<li>GD:
+<ul>
+  <li>Fixed imagecreatefromavif() memory leak.</li>
+</ul></li>
+<li>MBString:
+<ul>
+  <li>mb_detect_encoding recognizes all letters in Czech alphabet</li>
+  <li>mb_detect_encoding recognizes all letters in Hungarian alphabet</li>
+  <li>Fixed bug <?php githubissuel('php/php-src',8685); ?> (pcre not ready at mbstring startup).</li>
+  <li>Backwards-compatible mappings for 0x5C/0x7E in Shift-JIS are restored, after they had been changed in 8.1.0.</li>
+</ul></li>
+<li>ODBC:
+<ul>
+  <li>Fixed handling of single-key connection strings.</li>
+</ul></li>
+<li>OPcache:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src',8591); ?> (tracing JIT crash after private instance method change).</li>
+</ul></li>
+<li>OpenSSL:
+<ul>
+  <li><?php bugfix(50293); ?> (Several openssl functions ignore the VCWD).</li>
+  <li><?php bugfix(81713); ?> (NULL byte injection in several OpenSSL functions working with certificates).</li>
+</ul></li>
+<li>PDO_ODBC:
+<ul>
+  <li>Fixed handling of single-key connection strings.</li>
+</ul></li>
+<li>Zip:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src',8781); ?> (ZipArchive::close deletes zip file without updating stat cache).</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
+
+
+<section class="version" id="8.1.7"><!-- {{{ 8.1.7 -->
+<h3>Version 8.1.7</h3>
+<b><?php release_date('09-Jun-2022'); ?></b>
+<ul><li>CLI:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src',8575); ?> (CLI closes standard streams too early).</li>
+</ul></li>
+<li>Date:
+<ul>
+  <li><?php bugfix(51934); ?> (strtotime plurals / incorrect time).</li>
+  <li><?php bugfix(51987); ?> (Datetime fails to parse an ISO 8601 ordinal date (extended format)).</li>
+  <li><?php bugfix(66019); ?> (DateTime object does not support short ISO 8601 time format - YYYY-MM-DDTHH)</li>
+  <li><?php bugfix(68549); ?> (Timezones and offsets are not properly used when working with dates)</li>
+  <li><?php bugfix(81565); ?> (date parsing fails when provided with timezones including seconds).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src',7758); ?> (Problems with negative timestamps and fractions).</li>
+</ul></li>
+<li>FPM:
+<ul>
+  <li>Fixed ACL build check on MacOS.</li>
+  <li><?php bugfix(72185); ?>: php-fpm writes empty fcgi record causing nginx 502.</li>
+</ul></li>
+<li>mysqlnd:
+<ul>
+  <li><?php bugfix(81719); ?>: mysqlnd/pdo password buffer overflow. (CVE-2022-31626)</li>
+</ul></li>
+<li>OPcache:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src',8461); ?> (tracing JIT crash after function/method change).</li>
+</ul></li>
+<li>OpenSSL:
+<ul>
+  <li><?php bugfix(79589); ?> (error:14095126:SSL routines:ssl3_read_n:unexpected eof while reading).</li>
+</ul></li>
+<li>Pcntl:
+<ul>
+  <li>Fixed Haiku build.</li>
+</ul></li>
+<li>pgsql:
+<ul>
+  <li><?php bugfix(81720); ?>: Uninitialized array in pg_query_params(). (CVE-2022-31625)</li>
+</ul></li>
+<li>Soap:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src',8578); ?> (Error on wrong parameter on SoapHeader constructor).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src',8538); ?> (SoapClient may strip parts of nmtokens).</li>
+</ul></li>
+<li>SPL:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src',8235); ?> (iterator_count() may run indefinitely).</li>
+</ul></li>
+<li>Standard:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src',8185); ?> (Crash during unloading of extension after dl() in ZTS).</li>
+</ul></li>
+<li>Zip:
+<ul>
+  <li>Fixed type for index in ZipArchive::replaceFile.</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
+
+
+<section class="version" id="8.1.6"><!-- {{{ 8.1.6 -->
+<h3>Version 8.1.6</h3>
+<b><?php release_date('12-May-2022'); ?></b>
+<ul><li>Core:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src',8310); ?> (Registry settings are no longer recognized).</li>
+  <li>Fixed potential race condition during resource ID allocation.</li>
+  <li>Fixed bug <?php githubissuel('php/php-src',8133); ?> (Preloading of constants containing arrays with enums segfaults).</li>
+  <li>Fixed Haiku ZTS builds.</li>
+</ul></li>
+<li>Date:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src',7752); ?> (DateTimeZone::getTransitions() returns insufficient data).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src',8108); ?> (Timezone doesn't work as intended).</li>
+  <li><?php bugfix(81660); ?> (DateTimeZone::getTransitions() returns invalid data).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src',8289); ?> (Exceptions thrown within a yielded from iterator are not rethrown into the generator).</li>
+</ul></li>
+<li>FFI:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src',8433); ?> (Assigning function pointers to structs in FFI leaks).</li>
+</ul></li>
+<li>FPM:
+<ul>
+  <li><?php bugfix(76003); ?> (FPM /status reports wrong number of active processe).</li>
+  <li><?php bugfix(77023); ?> (FPM cannot shutdown processes).</li>
+  <li>Fixed comment in kqueue remove callback log message.</li>
+</ul></li>
+<li>Hash:
+<ul>
+  <li><?php bugfix(81714); ?> (segfault when serializing finalized HashContext).</li>
+</ul></li>
+<li>Iconv:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src',8218); ?> (ob_end_clean does not reset Content-Encoding header).</li>
+</ul></li>
+<li>Intl:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src',8364); ?> (msgfmt_format $values may not support references).</li>
+</ul></li>
+<li>MBString:
+<ul>
+  <li>Number of error markers emitted for invalid UTF-8 text matches WHATWG specification. This is a return to the behavior of PHP 8.0 and earlier.</li>
+</ul></li>
+<li>MySQLi:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src',8267); ?> (MySQLi uses unsupported format specifier on Windows).</li>
+</ul></li>
+<li>SPL:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src',8366); ?> (ArrayIterator may leak when calling __construct()).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src',8273); ?> (SplFileObject: key() returns wrong value).</li>
+</ul></li>
+<li>Streams:
+<ul>
+  <li>Fixed php://temp does not preserve file-position when switched to temporary file.</li>
+</ul></li>
+<li>zlib:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src',8218); ?> (ob_end_clean does not reset Content-Encoding header).</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
+
+
+<section class="version" id="8.1.5"><!-- {{{ 8.1.5 -->
+<h3>Version 8.1.5</h3>
+<b><?php release_date('14-Apr-2022'); ?></b>
+<ul><li>Core:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src',8176); ?> (Enum values in property initializers leak).</li>
+  <li>Fixed freeing of internal attribute arguments.</li>
+  <li>Fixed bug <?php githubissuel('php/php-src',8070); ?> (memory leak of internal function attribute hash).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src',8160); ?> (ZTS support on Alpine is broken).</li>
+</ul></li>
+<li>Filter:
+<ul>
+  <li>Fixed signedness confusion in php_filter_validate_domain().</li>
+</ul></li>
+<li>Intl:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src',8115); ?> (Can't catch arg type deprecation when instantiating Intl classes).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src',8142); ?> (Compilation error on cygwin).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src',7734); ?> (Fix IntlPartsIterator key off-by-one error and first key).</li>
+</ul></li>
+<li>MBString:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src',8208); ?> (mb_encode_mimeheader: $indent functionality broken).</li>
+</ul></li>
+<li>MySQLi:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src',8068); ?> (mysqli_fetch_object creates inaccessible properties).</li>
+</ul></li>
+<li>Pcntl:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src',8142); ?> (Compilation error on cygwin).</li>
+</ul></li>
+<li>PgSQL:
+<ul>
+  <li>Fixed result_type related stack corruption on LLP64 architectures.</li>
+  <li>Fixed bug <?php githubissuel('php/php-src',8253); ?> (pg_insert() fails for references).</li>
+</ul></li>
+<li>Sockets:
+<ul>
+  <li>Fixed Solaris builds.</li>
+</ul></li>
+<li>SPL:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src',8121); ?> (SplFileObject - seek and key with csv file inconsistent).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src',8192); ?> (Cannot override DirectoryIterator::current() without return typehint in 8.1).</li>
+</ul></li>
+<li>Standard:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src',8048); ?> (Force macOS to use statfs).</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
+
+
+<section class="version" id="8.1.4"><!-- {{{ 8.1.4 -->
+<h3>Version 8.1.4</h3>
+<b><?php release_date('17-Mar-2022'); ?></b>
+<ul><li>Core:
+<ul>
+  <li>Fixed Haiku ZTS build.</li>
+  <li>Fixed bug <?php githubissuel('php/php-src',8059); ?> arginfo not regenerated for extension.</li>
+  <li>Fixed bug <?php githubissuel('php/php-src',8083); ?> Segfault when dumping uncalled fake closure with static variables.</li>
+  <li>Fixed bug <?php githubissuel('php/php-src',7958); ?> (Nested CallbackFilterIterator is leaking memory).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src',8074); ?> (Wrong type inference of range() result).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src',8140); ?> (Wrong first class callable by name optimization).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src',8082); ?> (op_arrays with temporary run_time_cache leak memory when observed).</li>
+</ul></li>
+<li>GD:
+<ul>
+  <li>Fixed libpng warning when loading interlaced images.</li>
+</ul></li>
+<li>FPM:
+<ul>
+  <li><?php bugfix(76109); ?> (Unsafe access to fpm scoreboard).</li>
+</ul></li>
+<li>Iconv:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src',7953); ?> (ob_clean() only does not set Content-Encoding).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src',7980); ?> (Unexpected result for iconv_mime_decode).</li>
+</ul></li>
+<li>MBString:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src',8128); ?> (mb_check_encoding wrong result for 7bit).</li>
+</ul></li>
+<li>MySQLnd:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src',8058); ?> (NULL pointer dereference in mysqlnd package).</li>
+</ul></li>
+<li>Reflection:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src',8080); ?> (ReflectionClass::getConstants() depends on def. order).</li>
+</ul></li>
+<li>Zlib:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src',7953); ?> (ob_clean() only does not set Content-Encoding).</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
+
+
+<section class="version" id="8.1.3"><!-- {{{ 8.1.3 -->
+<h3>Version 8.1.3</h3>
+<b><?php release_date('17-Feb-2022'); ?></b>
+<ul><li>Core:
+<ul>
+  <li><?php bugfix(81430); ?> (Attribute instantiation leaves dangling pointer).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src',7896); ?> (Environment vars may be mangled on Windows).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src',7883); ?> (Segfault when INI file is not readable).</li>
+</ul></li>
+<li>FFI:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src',7867); ?> (FFI::cast() from pointer to array is broken).</li>
+</ul></li>
+<li>Filter:
+<ul>
+  <li>Fix #81708: UAF due to php_filter_float() failing for ints. (CVE-2021-21708)</li>
+</ul></li>
+<li>FPM:
+<ul>
+  <li>Fixed memory leak on invalid port.</li>
+  <li>Fixed bug <?php githubissuel('php/php-src',7842); ?> (Invalid OpenMetrics response format returned by FPM status page.</li>
+</ul></li>
+<li>MBString:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src',7902); ?> (mb_send_mail may delimit headers with LF only).</li>
+</ul></li>
+<li>MySQLnd:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src',7972); ?> (MariaDB version prefix 5.5.5- is not stripped).</li>
+</ul></li>
+<li>pcntl:
+<ul>
+  <li>Fixed pcntl_rfork build for DragonFlyBSD.</li>
+</ul></li>
+<li>Sockets:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src',7978); ?> (sockets extension compilation errors).</li>
+</ul></li>
+<li>Standard:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src',7899); ?> (Regression in unpack for negative int value).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src',7875); ?> (mails are sent even if failure to log throws exception).</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
+
+
+<section class="version" id="8.1.2"><!-- {{{ 8.1.2 -->
+<h3>Version 8.1.2</h3>
+<b><?php release_date('20-Jan-2022'); ?></b>
+<ul><li>Core:
+<ul>
+  <li><?php bugfix(81216); ?> (Nullsafe operator leaks dynamic property name).</li>
+  <li><?php bugfix(81684); ?> (Using null coalesce assignment with $GLOBALS["x"] produces opcode error).</li>
+  <li><?php bugfix(81656); ?> (GCC-11 silently ignores -R).</li>
+  <li><?php bugfix(81683); ?> (Misleading "access type ... must be public" error message on final or abstract interface methods).</li>
+  <li><?php bugfix(81585); ?> (cached_chunks are not counted to real_size on shutdown).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src',7757); ?> (Multi-inherited final constant causes fatal error).</li>
+  <li>Fixed zend_fibers.c build with ZEND_FIBER_UCONTEXT.</li>
+  <li>Added riscv64 support for fibers.</li>
+</ul></li>
+<li>Filter:
+<ul>
+  <li>Fixed FILTER_FLAG_NO_RES_RANGE flag.</li>
+</ul></li>
+<li>Hash:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src',7759); ?> (Incorrect return types for hash() and hash_hmac()).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src',7826); ?> (Inconsistent argument name in hash_hmac_file and hash_file).</li>
+</ul></li>
+<li>MBString:
+<ul>
+  <li><?php bugfix(81693); ?> (mb_check_encoding(7bit) segfaults).</li>
+</ul></li>
+<li>MySQLi:
+<ul>
+  <li><?php bugfix(81658); ?> (MYSQL_OPT_LOAD_DATA_LOCAL_DIR not available in MariaDB).</li>
+  <li>Introduced MYSQLI_IS_MARIADB.</li>
+  <li>Fixed bug <?php githubissuel('php/php-src',7746); ?> (mysqli_sql_exception-&gt;getSqlState()).</li>
+</ul></li>
+<li>MySQLnd:
+<ul>
+  <li>Fixed bug where large bigints may be truncated.</li>
+</ul></li>
+<li>OCI8:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src',7765); ?> (php_oci_cleanup_global_handles segfaults at second call).</li>
+</ul></li>
+<li>OPcache:
+<ul>
+  <li><?php bugfix(81679); ?> (Tracing JIT crashes on reattaching).</li>
+</ul></li>
+<li>Readline:
+<ul>
+  <li><?php bugfix(81598); ?> (Cannot input unicode characters in PHP 8 interactive shell).</li>
+</ul></li>
+<li>Reflection:
+<ul>
+  <li><?php bugfix(81681); ?> (ReflectionEnum throwing exceptions).</li>
+</ul></li>
+<li>PDO_PGSQL:
+<ul>
+  <li>Fixed error message allocation of PDO PgSQL.</li>
+</ul></li>
+<li>Sockets:
+<ul>
+  <li>Avoid void* arithmetic in sockets/multicast.c on NetBSD.</li>
+  <li>Fixed ext/sockets build on Haiku.</li>
+</ul></li>
+<li>Spl:
+<ul>
+  <li><?php bugfix(75917); ?> (SplFileObject::seek broken with CSV flags).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src',7809); ?> (Cloning a faked SplFileInfo object may segfault).</li>
+</ul></li>
+<li>Standard:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src',7748); ?> (gethostbyaddr outputs binary string).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src',7815); ?> (php_uname doesn't recognise latest Windows versions).</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
+
+
+<section class="version" id="8.1.1"><!-- {{{ 8.1.1 -->
+<h3>Version 8.1.1</h3>
+<b><?php release_date('02-Dec-2021'); ?></b>
+<ul><li>IMAP:
+<ul>
+  <li><?php bugfix(81649); ?> (imap_(un)delete accept sequences, not single numbers).</li>
+</ul></li>
+<li>PCRE:
+<ul>
+  <li>Update bundled PCRE2 to 10.39.</li>
+  <li><?php bugfix(74604); ?> (Out of bounds in php_pcre_replace_impl).</li>
+</ul></li>
+<li>Standard:
+<ul>
+  <li><?php bugfix(81659); ?> (stream_get_contents() may unnecessarily overallocate).</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
+
+
+<section class="version" id="8.1.0"><!-- {{{ 8.1.0 -->
+<h3>Version 8.1.0</h3>
+<b><?php release_date('25-Nov-2021'); ?></b>
+<ul><li>Core:
+<ul>
+  <li>Fixed inclusion order for phpize builds on Windows.</li>
+  <li>Added missing hashtable insertion APIs for arr/obj/ref.</li>
+  <li><?php implemented(77372); ?> (Relative file path is removed from uploaded file).</li>
+  <li><?php bugfix(81607); ?> (CE_CACHE allocation with concurrent access).</li>
+  <li><?php bugfix(81507); ?> (Fiber does not compile on AIX).</li>
+  <li><?php bugfix(78647); ?> (SEGFAULT in zend_do_perform_implementation_check).</li>
+  <li><?php bugfix(81518); ?> (Header injection via default_mimetype / default_charset).</li>
+  <li><?php bugfix(75941); ?> (Fix compile failure on Solaris with clang).</li>
+  <li><?php bugfix(81380); ?> (Observer may not be initialized properly).</li>
+  <li><?php bugfix(81514); ?> (Using Enum as key in WeakMap triggers GC + SegFault).</li>
+  <li><?php bugfix(81520); ?> (TEST_PHP_CGI_EXECUTABLE badly set in run-tests.php).</li>
+  <li><?php bugfix(81377); ?> (unset() of $GLOBALS sub-key yields warning).</li>
+  <li><?php bugfix(81342); ?> (New ampersand token parsing depends on new line after it).</li>
+  <li><?php bugfix(81280); ?> (Unicode characters in cli.prompt causes segfault).</li>
+  <li><?php bugfix(81192); ?> ("Declaration should be compatible with" gives incorrect line number with traits).</li>
+  <li><?php bugfix(78919); ?> (CLI server: insufficient cleanup if request startup fails).</li>
+  <li><?php bugfix(81303); ?> (match error message improvements).</li>
+  <li><?php bugfix(81238); ?> (Fiber support missing for Solaris Sparc).</li>
+  <li><?php bugfix(81237); ?> (Comparison of fake closures doesn't work).</li>
+  <li><?php bugfix(81202); ?> (powerpc64 build fails on fibers).</li>
+  <li><?php bugfix(80072); ?> (Cyclic unserialize in TMPVAR operand may leak).</li>
+  <li><?php bugfix(81163); ?> (__sleep allowed to return non-array).</li>
+  <li><?php bugfix(75474); ?> (function scope static variables are not bound to a unique function).</li>
+  <li><?php bugfix(53826); ?> (__callStatic fired in base class through a parent call if the method is private).</li>
+  <li><?php bugfix(81076); ?> (incorrect debug info on Closures with implicit binds).</li>
+</ul></li>
+<li>CLI:
+<ul>
+  <li><?php bugfix(81496); ?> (Server logs incorrect request method).</li>
+</ul></li>
+<li>COM:
+<ul>
+  <li>Dispatch using LANG_NEUTRAL instead of LOCALE_SYSTEM_DEFAULT.</li>
+</ul></li>
+<li>Curl:
+<ul>
+  <li><?php bugfix(81085); ?> (Support CURLOPT_SSLCERT_BLOB for cert strings).</li>
+</ul></li>
+<li>Date:
+<ul>
+  <li><?php bugfix(81458); ?> (Regression Incorrect difference after timezone change).</li>
+  <li><?php bugfix(81500); ?> (Interval serialization regression since 7.3.14 / 7.4.2).</li>
+  <li><?php bugfix(81504); ?> (Incorrect timezone transition details for POSIX data).</li>
+  <li><?php bugfix(80998); ?> (Missing second with inverted interval).</li>
+  <li>Speed up finding timezone offset information.</li>
+  <li><?php bugfix(79580); ?> (date_create_from_format misses leap year).</li>
+  <li><?php bugfix(80963); ?> (DateTimeZone::getTransitions() truncated).</li>
+  <li><?php bugfix(80974); ?> (Wrong diff between 2 dates in different timezones).</li>
+  <li><?php bugfix(80998); ?> (Missing second with inverted interval).</li>
+  <li><?php bugfix(81097); ?> (DateTimeZone silently falls back to UTC when providing an offset with seconds).</li>
+  <li><?php bugfix(81106); ?> (Regression in 8.1: add() now truncate -&gt;f).</li>
+  <li><?php bugfix(81273); ?> (Date interval calculation not correct).</li>
+  <li><?php bugfix(52480); ?> (Incorrect difference using DateInterval).</li>
+  <li><?php bugfix(62326); ?> (date_diff() function returns false result).</li>
+  <li><?php bugfix(64992); ?> (dst not handled past 2038).</li>
+  <li><?php bugfix(65003); ?> (Wrong date diff).</li>
+  <li><?php bugfix(66545); ?> (DateTime. diff returns negative values).</li>
+  <li><?php bugfix(68503); ?> (date_diff on two dates with timezone set localised returns wrong results).</li>
+  <li><?php bugfix(69806); ?> (Incorrect date from timestamp).</li>
+  <li><?php bugfix(71700); ?> (Extra day on diff between begin and end of march 2016).</li>
+  <li><?php bugfix(71826); ?> (DateTime::diff confuse on timezone 'Asia/Tokyo').</li>
+  <li><?php bugfix(73460); ?> (Datetime add not realising it already applied DST change).</li>
+  <li><?php bugfix(74173); ?> (DateTimeImmutable::getTimestamp() triggers DST switch in incorrect time).</li>
+  <li><?php bugfix(74274); ?> (Handling DST transitions correctly).</li>
+  <li><?php bugfix(74524); ?> (Date diff is bad calculated, in same time zone).</li>
+  <li><?php bugfix(75167); ?> (DateTime::add does only care about backward DST transition, not forward).</li>
+  <li><?php bugfix(76032); ?> (DateTime-&gt;diff having issues with leap days for timezones ahead of UTC).</li>
+  <li><?php bugfix(76374); ?> (Date difference varies according day time).</li>
+  <li><?php bugfix(77571); ?> (DateTime's diff DateInterval incorrect in timezones from UTC+01:00 to UTC+12:00).</li>
+  <li><?php bugfix(78452); ?> (diff makes wrong in hour for Asia/Tehran).</li>
+  <li><?php bugfix(79452); ?> (DateTime::diff() generates months differently between time zones).</li>
+  <li><?php bugfix(79698); ?> (timelib mishandles future timestamps (triggered by 'zic -b slim')).</li>
+  <li><?php bugfix(79716); ?> (Invalid date time created (with day "00")).</li>
+  <li><?php bugfix(80610); ?> (DateTime calculate wrong with DateInterval).</li>
+  <li><?php bugfix(80664); ?> (DateTime objects behave incorrectly around DST transition).</li>
+  <li><?php bugfix(80913); ?> (DateTime(Immutable)::sub around DST yield incorrect time).</li>
+</ul></li>
+<li>DBA:
+<ul>
+  <li><?php bugfix(81588); ?> (TokyoCabinet driver leaks memory).</li>
+</ul></li>
+<li>DOM:
+<ul>
+  <li><?php bugfix(81433); ?> (DOMElement::setIdAttribute() called twice may remove ID).</li>
+</ul></li>
+<li>FFI:
+<ul>
+  <li><?php bugfix(79576); ?> ("TYPE *" shows unhelpful message when type is not defined).</li>
+</ul></li>
+<li>Filter:
+<ul>
+  <li><?php bugfix(61700); ?> (FILTER_FLAG_IPV6/FILTER_FLAG_NO_PRIV|RES_RANGE failing).</li>
+</ul></li>
+<li>FPM:
+<ul>
+  <li><?php bugfix(81513); ?> (Future possibility for heap overflow in FPM zlog).</li>
+  <li><?php bugfix(81026); ?> (PHP-FPM oob R/W in root process leading to privilege escalation) (CVE-2021-21703).</li>
+  <li>Added openmetrics status format.</li>
+  <li>Enable process renaming on macOS.</li>
+  <li>Added pm.max_spawn_rate option to configure max spawn child processes rate.</li>
+  <li><?php bugfix(65800); ?> (Events port mechanism).</li>
+</ul></li>
+<li>FTP:
+<ul>
+  <li>Convert resource&lt;ftp&gt; to object \FTP\Connection.</li>
+</ul></li>
+<li>GD:
+<ul>
+  <li><?php bugfix(71316); ?> (libpng warning from imagecreatefromstring).</li>
+  <li>Convert resource&lt;gd font&gt; to object \GdFont.</li>
+  <li>Added support for Avif images</li>
+</ul></li>
+<li>hash:
+<ul>
+  <li><?php implemented(68109); ?> (Add MurmurHash V3).</li>
+  <li><?php implemented(73385); ?> (Add xxHash support).</li>
+</ul></li>
+<li>JSON:
+<ul>
+  <li><?php bugfix(81532); ?> (Change of $depth behaviour in json_encode() on PHP 8.1).</li>
+</ul></li>
+<li>LDAP:
+<ul>
+  <li>Convert resource&lt;ldap link&gt; to object \LDAP\Connection.</li>
+  <li>Convert resource&lt;ldap result&gt; to object \LDAP\Result.</li>
+  <li>Convert resource&lt;ldap result entry&gt; to object \LDAP\ResultEntry.</li>
+</ul></li>
+<li>MBString:
+<ul>
+  <li><?php bugfix(76167); ?> (mbstring may use pointer from some previous request).</li>
+  <li><?php bugfix(81390); ?> (mb_detect_encoding() regression).</li>
+  <li><?php bugfix(81349); ?> (mb_detect_encoding misdetcts ASCII in some cases).</li>
+  <li><?php bugfix(81298); ?> (mb_detect_encoding() segfaults when 7bit encoding is specified).</li>
+</ul></li>
+<li>MySQLi:
+<ul>
+  <li><?php bugfix(70372); ?> (Emulate mysqli_fetch_all() for libmysqlclient).</li>
+  <li><?php bugfix(80330); ?> (Replace language in APIs and source code/docs).</li>
+  <li><?php bugfix(80329); ?> (Add option to specify LOAD DATA LOCAL white list folder (including libmysql)).</li>
+</ul></li>
+<li>MySQLnd:
+<ul>
+  <li><?php bugfix(63327); ?> (Crash (Bus Error) in mysqlnd due to wrong alignment).</li>
+  <li><?php bugfix(80761); ?> (PDO uses too much memory).</li>
+</ul></li>
+<li>Opcache:
+<ul>
+  <li><?php bugfix(81409); ?> (Incorrect JIT code for ADD with a reference to array).</li>
+  <li><?php bugfix(81255); ?> (Memory leak in PHPUnit with functional JIT).</li>
+  <li><?php bugfix(80959); ?> (infinite loop in building cfg during JIT compilation).</li>
+  <li><?php bugfix(81225); ?> (Wrong result with pow operator with JIT enabled).</li>
+  <li><?php bugfix(81249); ?> (Intermittent property assignment failure with JIT enabled).</li>
+  <li><?php bugfix(81256); ?> (Assertion `zv != ((void *)0)' failed for "preload" with JIT).</li>
+  <li><?php bugfix(81133); ?> (building opcache with phpize fails).</li>
+  <li><?php bugfix(81136); ?> (opcache header not installed).</li>
+  <li>Added inheritance cache.</li>
+</ul></li>
+<li>OpenSSL:
+<ul>
+  <li><?php bugfix(81502); ?> ($tag argument of openssl_decrypt() should accept null/empty string).</li>
+  <li>Bump minimal OpenSSL version to 1.0.2.</li>
+</ul></li>
+<li>PCRE:
+<ul>
+  <li><?php bugfix(81424); ?> (PCRE2 10.35 JIT performance regression).</li>
+  <li>Bundled PCRE2 is 10.37.</li>
+</ul></li>
+<li>PDO:
+<ul>
+  <li><?php bugfix(40913); ?> (PDO_MYSQL: PDO::PARAM_LOB does not bind to a stream for fetching a BLOB).</li>
+</ul></li>
+<li>PDO MySQL:
+<ul>
+  <li><?php bugfix(80908); ?> (PDO::lastInsertId() return wrong).</li>
+  <li><?php bugfix(81037); ?> (PDO discards error message text from prepared statement).</li>
+</ul></li>
+<li>PDO OCI:
+<ul>
+  <li><?php bugfix(77120); ?> (Support 'success with info' at connection).</li>
+</ul></li>
+<li>PDO ODBC:
+<ul>
+  <li>Implement PDO_ATTR_SERVER_VERSION and PDO_ATTR_SERVER_INFO for PDO::getAttribute().</li>
+</ul></li>
+<li>PDO PgSQL:
+<ul>
+  <li><?php bugfix(81343); ?> (pdo_pgsql: Inconsitent boolean conversion after calling closeCursor()).</li>
+</ul></li>
+<li>PDO SQLite:
+<ul>
+  <li><?php bugfix(38334); ?> (Proper data-type support for PDO_SQLITE).</li>
+</ul></li>
+<li>PgSQL:
+<ul>
+  <li><?php bugfix(81509); ?> (pg_end_copy still expects a resource).</li>
+  <li>Convert resource&lt;pgsql link&gt; to object \PgSql\Connection.</li>
+  <li>Convert resource&lt;pgsql result&gt; to object \PgSql\Result.</li>
+  <li>Convert resource&lt;pgsql large object&gt; to object \PgSql\Lob.</li>
+</ul></li>
+<li>Phar:
+<ul>
+  <li>Use SHA256 by default for signature.</li>
+  <li>Add support for OpenSSL_SHA256 and OpenSSL_SHA512 signature.</li>
+</ul></li>
+<li>phpdbg:
+<ul>
+  <li><?php bugfix(81135); ?> (unknown help topic causes assertion failure).</li>
+</ul></li>
+<li>PSpell:
+<ul>
+  <li>Convert resource&lt;pspell&gt; to object \PSpell\Dictionary.</li>
+  <li>Convert resource&lt;pspell config&gt; to object \PSpell\Config.</li>
+</ul></li>
+<li>readline:
+<ul>
+  <li><?php bugfix(72998); ?> (invalid read in readline completion).</li>
+</ul></li>
+<li>Reflection:
+<ul>
+  <li><?php bugfix(81611); ?> (ArgumentCountError when getting default value from ReflectionParameter with new).</li>
+  <li><?php bugfix(81630); ?> (PHP 8.1: ReflectionClass-&gt;getTraitAliases() crashes with Internal error).</li>
+  <li><?php bugfix(81457); ?> (Enum: ReflectionMethod-&gt;getDeclaringClass() return a ReflectionClass).</li>
+  <li><?php bugfix(81474); ?> (Make ReflectionEnum and related class non-final).</li>
+  <li><?php bugfix(80821); ?> (ReflectionProperty::getDefaultValue() returns current value for statics).</li>
+  <li><?php bugfix(80564); ?> (ReflectionProperty::__toString() renders current value, not default value).</li>
+  <li><?php bugfix(80097); ?> (ReflectionAttribute is not a Reflector).</li>
+  <li><?php bugfix(81200); ?> (no way to determine if Closure is static).</li>
+  <li>Implement ReflectionFunctionAbstract::getClosureUsedVariables.</li>
+</ul></li>
+<li>Shmop:
+<ul>
+  <li><?php bugfix(81407); ?> (shmop_open won't attach and causes php to crash).</li>
+</ul></li>
+<li>SimpleXML:
+<ul>
+  <li><?php bugfix(81325); ?> (Segfault in zif_simplexml_import_dom).</li>
+</ul></li>
+<li>SNMP:
+<ul>
+  <li>Implement SHA256 and SHA512 for security protocol.</li>
+</ul></li>
+<li>Sodium:
+<ul>
+  <li>Added the XChaCha20 stream cipher functions.</li>
+  <li>Added the Ristretto255 functions, which are available in libsodium 1.0.18.</li>
+</ul></li>
+<li>SPL:
+<ul>
+  <li><?php bugfix(66588); ?> (SplFileObject::fgetcsv incorrectly returns a row on premature EOF).</li>
+  <li><?php bugfix(80663); ?> (Recursive SplFixedArray::setSize() may cause double-free).</li>
+  <li><?php bugfix(81477); ?> (LimitIterator + SplFileObject regression in 8.0.1).</li>
+  <li><?php bugfix(81112); ?> (Special json_encode behavior for SplFixedArray).</li>
+  <li><?php bugfix(80945); ?> ("Notice: Undefined index" on unset() ArrayObject non-existing key).</li>
+  <li><?php bugfix(80724); ?> (FilesystemIterator::FOLLOW_SYMLINKS remove KEY_AS_FILE from bitmask).</li>
+</ul></li>
+<li>Standard:
+<ul>
+  <li><?php bugfix(81441); ?> (gethostbyaddr('::1') returns ip instead of name after calling some other method).</li>
+  <li><?php bugfix(81491); ?> (Incorrectly using libsodium for argon2 hashing).</li>
+  <li><?php bugfix(81142); ?> (PHP 7.3+ memory leak when unserialize() is used on an associative array).</li>
+  <li><?php bugfix(81111); ?> (Serialization is unexpectedly allowed on anonymous classes with __serialize()).</li>
+  <li><?php bugfix(81137); ?> (hrtime breaks build on OSX before Sierra).</li>
+  <li><?php bugfix(77627); ?> (method_exists on Closure::__invoke inconsistency).</li>
+</ul></li>
+<li>Streams:
+<ul>
+  <li><?php bugfix(81475); ?> (stream_isatty emits warning with attached stream wrapper).</li>
+</ul></li>
+<li>XML:
+<ul>
+  <li><?php bugfix(79971); ?> (special character is breaking the path in xml function) (CVE-2021-21707).</li>
+  <li><?php bugfix(70962); ?> (XML_OPTION_SKIP_WHITE strips embedded whitespace).</li>
+</ul></li>
+<li>Zip:
+<ul>
+  <li><?php bugfix(81490); ?> (ZipArchive::extractTo() may leak memory).</li>
+  <li><?php bugfix(77978); ?> (Dirname ending in colon unzips to wrong dir).</li>
+  <li><?php bugfix(81420); ?> (ZipArchive::extractTo extracts outside of destination) (CVE-2021-21706).</li>
+  <li><?php bugfix(80833); ?> (ZipArchive::getStream doesn't use setPassword).</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
+
+
 <a id="PHP_8_0"></a>
+
+<section class="version" id="8.0.22"><!-- {{{ 8.0.22 -->
+<h3>Version 8.0.22</h3>
+<b><?php release_date('04-Aug-2022'); ?></b>
+<ul><li>CLI:
+<ul>
+  <li>Fixed potential overflow for the builtin server via the PHP_CLI_SERVER_WORKERS environment variable.</li>
+</ul></li>
+<li>Core:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 8923); ?> (error_log on Windows can hold the file write lock).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 8995); ?> (WeakMap object reference offset causing TypeError).</li>
+</ul></li>
+<li>Date:
+<ul>
+  <li><?php bugfix(80047); ?> (DatePeriod doesn't warn with custom DateTimeImmutable).</li>
+</ul></li>
+<li>DBA:
+<ul>
+  <li>Fixed LMDB driver hanging when attempting to delete a non-existing key.</li>
+</ul></li>
+<li>FPM:
+<ul>
+  <li>Fixed zlog message prepend, free on incorrect address.</li>
+  <li>Fixed possible double free on configuration loading failure.</li>
+</ul></li>
+<li>GD:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 8848); ?> (imagecopyresized() error refers to the wrong argument).</li>
+</ul></li>
+<li>Intl:
+<ul>
+  <li>Fixed build for ICU 69.x and onwards.</li>
+</ul></li>
+<li>OPcache:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 8847); ?> (PHP hanging infinitly at 100% cpu when check php syntaxe of a valid file).</li>
+</ul></li>
+<li>Standard:
+<ul>
+  <li>Fixed the crypt_sha256/512 api build with clang &gt; 12.</li>
+  <li>Uses CCRandomGenerateBytes instead of arc4random_buf on macOs.</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
+
+
+<section class="version" id="8.0.21"><!-- {{{ 8.0.21 -->
+<h3>Version 8.0.21</h3>
+<b><?php release_date('07-Jul-2022'); ?></b>
+<ul><li>Core:
+<ul>
+  <li>Fixed potential use after free in php_binary_init().</li>
+</ul></li>
+<li>CLI:
+<ul>
+  <li>Fixed <?php githubissuel('php/php-src',8827); ?> (Intentionally closing std handles no longer possible).</li>
+</ul></li>
+<li>COM:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src',8778); ?> (Integer arithmethic with large number variants fails).</li>
+</ul></li>
+<li>Curl:
+<ul>
+  <li>Fixed CURLOPT_TLSAUTH_TYPE is not treated as a string option.</li>
+</ul></li>
+<li>Date:
+<ul>
+  <li><?php bugfix(74671); ?> (DST timezone abbreviation has incorrect offset).</li>
+  <li><?php bugfix(77243); ?> (Weekdays are calculated incorrectly for negative years).</li>
+  <li><?php bugfix(78139); ?> (timezone_open accepts invalid timezone string argument).</li>
+</ul></li>
+<li>FPM:
+<ul>
+  <li><?php bugfix(67764); ?> (fpm: syslog.ident don't work).</li>
+</ul></li>
+<li>MBString:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src',8685); ?> (pcre not ready at mbstring startup).</li>
+</ul></li>
+<li>ODBC:
+<ul>
+  <li>Fixed handling of single-key connection strings.</li>
+</ul></li>
+<li>OpenSSL:
+<ul>
+  <li><?php bugfix(50293); ?> (Several openssl functions ignore the VCWD).</li>
+  <li><?php bugfix(81713); ?> (NULL byte injection in several OpenSSL functions working with certificates).</li>
+</ul></li>
+<li>PDO_ODBC:
+<ul>
+  <li>Fixed errorInfo() result on successful PDOStatement-&gt;execute().</li>
+  <li>Fixed handling of single-key connection strings.</li>
+</ul></li>
+<li>Zip:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src',8781); ?> (ZipArchive::close deletes zip file without updating stat cache).</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
+
+
+<section class="version" id="8.0.20"><!-- {{{ 8.0.20 -->
+<h3>Version 8.0.20</h3>
+<b><?php release_date('09-Jun-2022'); ?></b>
+<ul><li>CLI:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src',8575); ?> (CLI closes standard streams too early).</li>
+</ul></li>
+<li>Core:
+<ul>
+  <li>Fixed Haiku ZTS builds.</li>
+</ul></li>
+<li>Date:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src',8471); ?> (Segmentation fault when converting immutable and mutable DateTime instances created using reflection).</li>
+</ul></li>
+<li>FPM:
+<ul>
+  <li>Fixed ACL build check on MacOS.</li>
+  <li><?php bugfix(72185); ?>: php-fpm writes empty fcgi record causing nginx 502.</li>
+</ul></li>
+<li>Mysqlnd:
+<ul>
+  <li><?php bugfix(81719); ?>: mysqlnd/pdo password buffer overflow. (CVE-2022-31626)</li>
+</ul></li>
+<li>OPcache:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src',8466); ?> (ini_get() is optimized out when the option does not exist).</li>
+</ul></li>
+<li>Pcntl:
+<ul>
+  <li>Fixed Haiku build.</li>
+</ul></li>
+<li>Pgsql:
+<ul>
+  <li><?php bugfix(81720); ?>: Uninitialized array in pg_query_params(). (CVE-2022-31625)</li>
+</ul></li>
+<li>Soap:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src',8578); ?> (Error on wrong parameter on SoapHeader constructor).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src',8538); ?> (SoapClient may strip parts of nmtokens).</li>
+</ul></li>
+<li>SPL:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src',8235); ?> (iterator_count() may run indefinitely).</li>
+</ul></li>
+<li>Zip:
+<ul>
+  <li>Fixed type for index in ZipArchive::replaceFile.</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
+
+
+<section class="version" id="8.0.19"><!-- {{{ 8.0.19 -->
+<h3>Version 8.0.19</h3>
+<b><?php release_date('12-May-2022'); ?></b>
+<ul><li>Core:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src',8289); ?> (Exceptions thrown within a yielded from iterator are not rethrown into the generator).</li>
+</ul></li>
+<li>Date:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src',7979); ?> (DatePeriod iterator advances when checking if valid).</li>
+</ul></li>
+<li>FFI:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src',8433); ?> (Assigning function pointers to structs in FFI leaks).</li>
+</ul></li>
+<li>FPM:
+<ul>
+  <li><?php bugfix(76003); ?> (FPM /status reports wrong number of active processe).</li>
+  <li><?php bugfix(77023); ?> (FPM cannot shutdown processes).</li>
+  <li>Fixed comment in kqueue remove callback log message.</li>
+</ul></li>
+<li>Iconv:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src',8218); ?> (ob_end_clean does not reset Content-Encoding header).</li>
+</ul></li>
+<li>Intl:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src',8364); ?> (msgfmt_format $values may not support references).</li>
+</ul></li>
+<li>MySQLi:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src',8267); ?> (MySQLi uses unsupported format specifier on Windows).</li>
+</ul></li>
+<li>SPL:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src',8366); ?> (ArrayIterator may leak when calling __construct()).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src',8273); ?> (SplFileObject: key() returns wrong value).</li>
+</ul></li>
+<li>Streams:
+<ul>
+  <li>Fixed php://temp does not preserve file-position when switched to temporary file.</li>
+</ul></li>
+<li>zlib:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src',8218); ?> (ob_end_clean does not reset Content-Encoding header).</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
+
+
+<section class="version" id="8.0.18"><!-- {{{ 8.0.18 -->
+<h3>Version 8.0.18</h3>
+<b><?php release_date('14-Apr-2022'); ?></b>
+<ul><li>Core:
+<ul>
+  <li>Fixed freeing of internal attribute arguments.</li>
+  <li>Fixed bug <?php githubissuel('php/php-src',8070); ?> (memory leak of internal function attribute hash).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src',8160); ?> (ZTS support on Alpine is broken).</li>
+</ul></li>
+<li>Filter:
+<ul>
+  <li>Fixed signedness confusion in php_filter_validate_domain().</li>
+</ul></li>
+<li>Intl:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src',8142); ?> (Compilation error on cygwin).</li>
+</ul></li>
+<li>MBString:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src',8208); ?> (mb_encode_mimeheader: $indent functionality broken).</li>
+</ul></li>
+<li>MySQLi:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src',8068); ?> (mysqli_fetch_object creates inaccessible properties).</li>
+</ul></li>
+<li>Pcntl:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src',8142); ?> (Compilation error on cygwin).</li>
+</ul></li>
+<li>PgSQL:
+<ul>
+  <li>Fixed result_type related stack corruption on LLP64 architectures.</li>
+  <li>Fixed bug <?php githubissuel('php/php-src',8253); ?> (pg_insert() fails for references).</li>
+</ul></li>
+<li>Sockets:
+<ul>
+  <li>Fixed Solaris builds.</li>
+</ul></li>
+<li>SPL:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src',8121); ?> (SplFileObject - seek and key with csv file inconsistent).</li>
+</ul></li>
+<li>Standard:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src',8048); ?> (Force macOS to use statfs).</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
+
+
+<section class="version" id="8.0.17"><!-- {{{ 8.0.17 -->
+<h3>Version 8.0.17</h3>
+<b><?php release_date('17-Mar-2022'); ?></b>
+<ul><li>Core:
+<ul>
+  <li>Fixed Haiku ZTS build.</li>
+</ul></li>
+<li>GD:
+<ul>
+  <li>Fixed libpng warning when loading interlaced images.</li>
+</ul></li>
+<li>FPM:
+<ul>
+  <li><?php bugfix(76109); ?> (Unsafe access to fpm scoreboard).</li>
+</ul></li>
+<li>Iconv:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src',7953); ?> (ob_clean() only does not set Content-Encoding).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src',7980); ?> (Unexpected result for iconv_mime_decode).</li>
+</ul></li>
+<li>MySQLnd:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src',8058); ?> (NULL pointer dereference in mysqlnd package).</li>
+</ul></li>
+<li>OPcache:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src',8074); ?> (Wrong type inference of range() result).</li>
+</ul></li>
+<li>Reflection:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src',8080); ?> (ReflectionClass::getConstants() depends on def. order).</li>
+</ul></li>
+<li>Zlib:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src',7953); ?> (ob_clean() only does not set Content-Encoding).</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
+
+
+<section class="version" id="8.0.16"><!-- {{{ 8.0.16 -->
+<h3>Version 8.0.16</h3>
+<b><?php release_date('17-Feb-2022'); ?></b>
+<ul><li>Core:
+<ul>
+  <li><?php bugfix(81430); ?> (Attribute instantiation leaves dangling pointer).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src',7896); ?> (Environment vars may be mangled on Windows).</li>
+</ul></li>
+<li>FFI:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src',7867); ?> (FFI::cast() from pointer to array is broken).</li>
+</ul></li>
+<li>Filter:
+<ul>
+  <li>Fix #81708: UAF due to php_filter_float() failing for ints.</li>
+</ul></li>
+<li>FPM:
+<ul>
+  <li>Fixed memory leak on invalid port.</li>
+</ul></li>
+<li>MBString:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src',7902); ?> (mb_send_mail may delimit headers with LF only).</li>
+</ul></li>
+<li>MySQLnd:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src',7972); ?> (MariaDB version prefix 5.5.5- is not stripped).</li>
+</ul></li>
+<li>Sockets:
+<ul>
+  <li>Fixed ext/sockets build on Haiku.</li>
+  <li>Fixed bug <?php githubissuel('php/php-src',7978); ?> (sockets extension compilation errors).</li>
+</ul></li>
+<li>Standard:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src',7875); ?> (mails are sent even if failure to log throws exception).</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
+
+
+<section class="version" id="8.0.15"><!-- {{{ 8.0.15 -->
+<h3>Version 8.0.15</h3>
+<b><?php release_date('20-Jan-2022'); ?></b>
+<ul><li>Core:
+<ul>
+  <li><?php bugfix(81656); ?> (GCC-11 silently ignores -R).</li>
+  <li><?php bugfix(81585); ?> (cached_chunks are not counted to real_size on shutdown).</li>
+</ul></li>
+<li>Filter:
+<ul>
+  <li>Fixed FILTER_FLAG_NO_RES_RANGE flag.</li>
+</ul></li>
+<li>Hash:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src',7759); ?> (Incorrect return types for hash() and hash_hmac()).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src',7826); ?> (Inconsistent argument name in hash_hmac_file and hash_file).</li>
+</ul></li>
+<li>MySQLnd:
+<ul>
+  <li>Fixed bug where large bigints may be truncated.</li>
+</ul></li>
+<li>OCI8:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src',7765); ?> (php_oci_cleanup_global_handles segfaults at second call).</li>
+</ul></li>
+<li>OPcache:
+<ul>
+  <li><?php bugfix(81679); ?> (Tracing JIT crashes on reattaching).</li>
+</ul></li>
+<li>PDO_PGSQL:
+<ul>
+  <li>Fixed error message allocation of PDO PgSQL.</li>
+</ul></li>
+<li>Sockets:
+<ul>
+  <li>Avoid void* arithmetic in sockets/multicast.c on NetBSD.</li>
+</ul></li>
+<li>Spl:
+<ul>
+  <li><?php bugfix(75917); ?> (SplFileObject::seek broken with CSV flags).</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
+
+
+<section class="version" id="8.0.14"><!-- {{{ 8.0.14 -->
+<h3>Version 8.0.14</h3>
+<b><?php release_date('16-Dec-2021'); ?></b>
+<ul><li>Core:
+<ul>
+  <li><?php bugfix(81582); ?> (Stringable not implicitly declared if __toString() came from a trait).</li>
+  <li><?php bugfix(81591); ?> (Fatal Error not properly logged in particular cases).</li>
+  <li><?php bugfix(81626); ?> (Error on use static:: in __сallStatic() wrapped to Closure::fromCallable()).</li>
+  <li><?php bugfix(81631); ?> (::class with dynamic class name may yield wrong line number).</li>
+</ul></li>
+<li>FPM:
+<ul>
+  <li><?php bugfix(81513); ?> (Future possibility for heap overflow in FPM zlog).</li>
+</ul></li>
+<li>GD:
+<ul>
+  <li><?php bugfix(71316); ?> (libpng warning from imagecreatefromstring).</li>
+</ul></li>
+<li>IMAP:
+<ul>
+  <li><?php bugfix(81649); ?> (imap_(un)delete accept sequences, not single numbers).</li>
+</ul></li>
+<li>OpenSSL:
+<ul>
+  <li><?php bugfix(75725); ?> (./configure: detecting RAND_egd).</li>
+</ul></li>
+<li>PCRE:
+<ul>
+  <li><?php bugfix(74604); ?> (Out of bounds in php_pcre_replace_impl).</li>
+</ul></li>
+<li>SPL:
+<ul>
+  <li><?php bugfix(81587); ?> (MultipleIterator Segmentation fault w/ SimpleXMLElement attached).</li>
+</ul></li>
+<li>Standard:
+<ul>
+  <li><?php bugfix(81618); ?> (dns_get_record fails on FreeBSD for missing type).</li>
+  <li><?php bugfix(81659); ?> (stream_get_contents() may unnecessarily overallocate).</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
+
+
+<section class="version" id="8.0.13"><!-- {{{ 8.0.13 -->
+<h3>Version 8.0.13</h3>
+<b><?php release_date('18-Nov-2021'); ?></b>
+<ul><li>Core:
+<ul>
+  <li><?php bugfix(81518); ?> (Header injection via default_mimetype / default_charset).</li>
+</ul></li>
+<li>Date:
+<ul>
+  <li><?php bugfix(81500); ?> (Interval serialization regression since 7.3.14 / 7.4.2).</li>
+</ul></li>
+<li>DBA:
+<ul>
+  <li><?php bugfix(81588); ?> (TokyoCabinet driver leaks memory).</li>
+</ul></li>
+<li>MBString:
+<ul>
+  <li><?php bugfix(76167); ?> (mbstring may use pointer from some previous request).</li>
+</ul></li>
+<li>Opcache:
+<ul>
+  <li><?php bugfix(81512); ?> (Unexpected behavior with arrays and JIT).</li>
+</ul></li>
+<li>PCRE:
+<ul>
+  <li><?php bugfix(81424); ?> (PCRE2 10.35 JIT performance regression).</li>
+</ul></li>
+<li>XML:
+<ul>
+  <li><?php bugfix(79971); ?> (special character is breaking the path in xml function). (CVE-2021-21707)</li>
+</ul></li>
+<li>XMLReader:
+<ul>
+  <li><?php bugfix(81521); ?> (XMLReader::getParserProperty may throw with a valid property).</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
+
+
+<section class="version" id="8.0.12"><!-- {{{ 8.0.12 -->
+<h3>Version 8.0.12</h3>
+<b><?php release_date('21-Oct-2021'); ?></b>
+<ul><li>CLI:
+<ul>
+  <li><?php bugfix(81496); ?> (Server logs incorrect request method).</li>
+</ul></li>
+<li>Core:
+<ul>
+  <li><?php bugfix(81435); ?> (Observer current_observed_frame may point to an old (overwritten) frame).</li>
+  <li><?php bugfix(81380); ?> (Observer may not be initialized properly).</li>
+</ul></li>
+<li>DOM:
+<ul>
+  <li><?php bugfix(81433); ?> (DOMElement::setIdAttribute() called twice may remove ID).</li>
+</ul></li>
+<li>FFI:
+<ul>
+  <li><?php bugfix(79576); ?> ("TYPE *" shows unhelpful message when type is not defined).</li>
+</ul></li>
+<li>FPM:
+<ul>
+  <li><?php bugfix(81026); ?> (PHP-FPM oob R/W in root process leading to privilege escalation) (CVE-2021-21703).</li>
+</ul></li>
+<li>Fileinfo:
+<ul>
+  <li><?php bugfix(78987); ?> (High memory usage during encoding detection).</li>
+</ul></li>
+<li>Filter:
+<ul>
+  <li><?php bugfix(61700); ?> (FILTER_FLAG_IPV6/FILTER_FLAG_NO_PRIV|RES_RANGE failing).</li>
+</ul></li>
+<li>Opcache:
+<ul>
+  <li><?php bugfix(81472); ?> (Cannot support large linux major/minor device number when read /proc/self/maps).</li>
+</ul></li>
+<li>Reflection:
+<ul>
+  <li>ReflectionAttribute is no longer final.</li>
+</ul></li>
+<li>SPL:
+<ul>
+  <li><?php bugfix(80663); ?> (Recursive SplFixedArray::setSize() may cause double-free).</li>
+  <li><?php bugfix(81477); ?> (LimitIterator + SplFileObject regression in 8.0.1).</li>
+</ul></li>
+<li>Standard:
+<ul>
+  <li><?php bugfix(69751); ?> (Change Error message of sprintf/printf for missing/typo position specifier).</li>
+</ul></li>
+<li>Streams:
+<ul>
+  <li><?php bugfix(81475); ?> (stream_isatty emits warning with attached stream wrapper).</li>
+</ul></li>
+<li>XML:
+<ul>
+  <li><?php bugfix(70962); ?> (XML_OPTION_SKIP_WHITE strips embedded whitespace).</li>
+</ul></li>
+<li>Zip:
+<ul>
+  <li><?php bugfix(81490); ?> (ZipArchive::extractTo() may leak memory).</li>
+  <li><?php bugfix(77978); ?> (Dirname ending in colon unzips to wrong dir).</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
+
 
 <section class="version" id="8.0.11"><!-- {{{ 8.0.11 -->
 <h3>Version 8.0.11</h3>
@@ -104,7 +1436,7 @@ changelog_header(8, $MINOR_VERSIONS);
 </ul></li>
 <li>Phar:
 <ul>
-  <li><?php bugfix(81211); ?>: Symlinks are followed when creating PHAR archive (cmb)</li>
+  <li><?php bugfix(81211); ?>: Symlinks are followed when creating PHAR archive</li>
 </ul></li>
 <li>Shmop:
 <ul>
@@ -451,7 +1783,7 @@ changelog_header(8, $MINOR_VERSIONS);
 </ul></li>
 <li>Phar:
 <ul>
-  <li><?php bugfix(75850); ?> (Unclear error message wrt. __halt_compiler() w/o semicolon) (cmb)</li>
+  <li><?php bugfix(75850); ?> (Unclear error message wrt. __halt_compiler() w/o semicolon)</li>
   <li><?php bugfix(70091); ?> (Phar does not mark UTF-8 filenames in ZIP archives).</li>
   <li><?php bugfix(53467); ?> (Phar cannot compress large archives).</li>
 </ul></li>

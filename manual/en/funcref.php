@@ -48,7 +48,6 @@ $setup["toc"] = $TOC;
 $setup["parents"] = $PARENTS;
 manual_setup($setup);
 
-manual_header();
 ?>
 <div id="funcref" class="set">
   <h1 class="title">Function Reference</h1>

@@ -15,7 +15,7 @@ header("Content-type: text/html; charset=utf-8");
 header("Permissions-Policy: interest-cohort=()");
 
 /* Fix Silly Same Origin Policies */
-(function() {
+(function () {
     if (!isset($_SERVER["HTTP_ORIGIN"])) {
         return;
     }
@@ -35,7 +35,7 @@ header("Permissions-Policy: interest-cohort=()");
     header("Access-Control-Allow-Origin: http://$hostname");
     if (isset($_SERVER["HTTP_ACCESS_CONTROL_REQUEST_HEADERS"])) {
         $headers = $_SERVER["HTTP_ACCESS_CONTROL_REQUEST_HEADERS"];
-        $headers = str_replace(array("\r", "\n", "\0"), "", $headers);
+        $headers = str_replace(["\r", "\n", "\0"], "", $headers);
         header("Access-Control-Allow-Headers: $headers");
     }
 })();
@@ -48,7 +48,6 @@ header("X-Frame-Options: SAMEORIGIN");
 if (ini_get("date.timezone") === "" && function_exists("date_default_timezone_set")) {
     date_default_timezone_set("UTC");
 }
-
 
 /* Compatibility with the PHP webserver.. */
 if (!isset($_SERVER["SERVER_ADDR"])) {
@@ -100,10 +99,10 @@ function myphpnet_load()
     global $MYPHPNET, $MYSITE;
 
     // Empty the preferences array
-    $MYPHPNET = array(FALSE, FALSE, "NONE", 0, FALSE);
+    $MYPHPNET = [false, false, "NONE", 0, false];
 
     if ($MYSITE === 'http://docs.php.net/') {
-        $MYPHPNET[4] = TRUE;
+        $MYPHPNET[4] = true;
     }
 
     // If we have a cookie, set the values in the array
@@ -116,7 +115,7 @@ function myphpnet_load()
 }
 
 // Get or set preferred language code
-function myphpnet_language($langcode = FALSE)
+function myphpnet_language($langcode = false)
 {
     global $MYPHPNET, $LANGUAGES;
 
@@ -131,17 +130,17 @@ function myphpnet_language($langcode = FALSE)
     return false;
 }
 
-define("MYPHPNET_URL_NONE", FALSE);
-define("MYPHPNET_URL_FUNC", 'quickref');
-define("MYPHPNET_URL_MANUAL", 'manual');
+const MYPHPNET_URL_NONE = false;
+const MYPHPNET_URL_FUNC = 'quickref';
+const MYPHPNET_URL_MANUAL = 'manual';
 
 // Set URL search fallback preference
-function myphpnet_urlsearch($type = FALSE)
+function myphpnet_urlsearch($type = false)
 {
     global $MYPHPNET;
 
     // Set type if specified and if correct
-    if ($type && in_array($type, array(MYPHPNET_URL_FUNC, MYPHPNET_URL_MANUAL))) {
+    if ($type && in_array($type, [MYPHPNET_URL_FUNC, MYPHPNET_URL_MANUAL], true)) {
         $MYPHPNET[1] = $type;
     }
 
@@ -180,18 +179,15 @@ function myphpnet_save()
 
     // Fill in values not specified
     for ($i = 0; $i <= 3; $i++) {
-        if (!isset($MYPHPNET[$i])) { $MYPHPNET[$i] = FALSE; }
+        if (!isset($MYPHPNET[$i])) { $MYPHPNET[$i] = false; }
     }
 
     // Set all the preferred values for a year
-    mirror_setcookie("MYPHPNET", join(",", $MYPHPNET), 60*60*24*365);
+    mirror_setcookie("MYPHPNET", join(",", $MYPHPNET), 60 * 60 * 24 * 365);
 
 }
 
-// Default: Default search.
-// Lang: Not yet implemented (TODO: Compare google lang codes with ours. We did this for bing already, so maybe it's an easy fix)
-// TODO: Possible $default escaping issues
-function google_cse($default = '', $lang = 'en') {
+function google_cse() {
 ?>
 <noscript>
   php.net's search functionality requires JavaScript to operate. Please enable

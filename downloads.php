@@ -26,24 +26,24 @@ $SIDEBAR_DATA = '
 ';
 
 site_header("Downloads",
-    array(
-        'link' => array(
-            array(
-                "rel"   => "alternate",
-                "type"  => "application/atom+xml",
-                "href"  => $MYSITE . "releases/feed.php",
+    [
+        'link' => [
+            [
+                "rel" => "alternate",
+                "type" => "application/atom+xml",
+                "href" => $MYSITE . "releases/feed.php",
                 "title" => "PHP Release feed"
-            ),
-        ),
+            ],
+        ],
         "current" => "downloads",
-    )
+    ]
 );
 ?>
-<?php foreach ($RELEASES as $MAJOR => $major_releases): /* major releases loop start */
+<?php $i = 0; foreach ($RELEASES as $MAJOR => $major_releases): /* major releases loop start */
         $releases = array_slice($major_releases, 0, $SHOW_COUNT);
 ?>
 <a id="v<?php echo $MAJOR; ?>"></a>
-<?php $i = 0; foreach ($releases as $v => $a): ?>
+<?php foreach ($releases as $v => $a): ?>
   <?php $mver = substr($v, 0, strrpos($v, '.')); ?>
   <?php $stable = $i++ === 0 ? "Current Stable" : "Old Stable"; ?>
 
@@ -101,4 +101,4 @@ to verify the tags:
 </p>
 
 <?php
-site_footer(array('sidebar' => $SIDEBAR_DATA));
+site_footer(['sidebar' => $SIDEBAR_DATA]);

@@ -1,6 +1,6 @@
 <?php
 
-$refresh = isset($_GET['refresh']) ? true : false;
+$refresh = isset($_GET['refresh']);
 
 // Be 100% sure the timezone is set
 if (ini_get('date.timezone') === '' && function_exists('date_default_timezone_set')) {
@@ -41,7 +41,6 @@ function imgheader($filename) {
     header("Content-Type: $hdr");
 }
 
-
 function get_accepted_encodings() {
     if (isset($_SERVER['HTTP_ACCEPT_ENCODING'])) {
         $encodings = explode(',', $_SERVER['HTTP_ACCEPT_ENCODING']);
@@ -49,11 +48,10 @@ function get_accepted_encodings() {
             return trim($x);
         }, $encodings);
     }
-    return array();
+    return [];
 }
 
-
-function serve_compressed_if_available($logo) {
+function serve_compressed_if_available($logo): void {
     $encodings = get_accepted_encodings();
     if (!empty($encodings)) {
         foreach ($encodings as $encoding) {
@@ -72,12 +70,12 @@ function serve_compressed_if_available($logo) {
 
 $logo = './logos/php-logo.svg';
 if (isset($_SERVER['QUERY_STRING'])) {
-	switch ($_SERVER['QUERY_STRING']) {
-		case 'QA':
-		case 'qa':
-		    $logo = './logos/qa.jpg';
-		    break;
-	}
+    switch ($_SERVER['QUERY_STRING']) {
+        case 'QA':
+        case 'qa':
+            $logo = './logos/qa.jpg';
+            break;
+    }
 }
 
 // xmas season, december and the first week of January

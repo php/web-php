@@ -2,7 +2,7 @@
 $_SERVER['BASE_PAGE'] = 'archive/2006.php';
 include_once __DIR__ . '/../include/prepend.inc';
 news_archive_sidebar();
-site_header("News Archive - 2006", array("cache" => true));
+site_header("News Archive - 2006", ["cache" => true]);
 ?>
 
 <h1>News Archive - 2006</h1>
@@ -466,4 +466,4 @@ Further details about this release can be found in the <a href="/release_5_1_2.p
 and the full list of changes is available in the <a href="/ChangeLog-5.php#5.1.2">PHP 5 ChangeLog</a>.
 </p>
 
-<?php site_footer(array('elephpants' => true, 'sidebar' => $SIDEBAR_DATA));
+<?php site_footer(['elephpants' => true, 'sidebar' => $SIDEBAR_DATA]);

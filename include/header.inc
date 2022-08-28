@@ -1,10 +1,10 @@
 <?php
-$css_files = array(
+$css_files = [
     '/fonts/Fira/fira.css',
     '/fonts/Font-Awesome/css/fontello.css',
     '/styles/theme-base.css',
     '/styles/theme-medium.css',
-);
+];
 
 if (isset($config['css'])) {
     $css_files = array_merge($css_files, (array) $config['css']);
@@ -23,7 +23,6 @@ foreach($css_files as $filename) {
     $CSS[$filename] = @filemtime($path);
 }
 
-
 if (isset($shortname) && $shortname) {
     header("Link: <$shorturl>; rel=shorturl");
 }
@@ -32,7 +31,7 @@ if ($config["cache"]) {
     if (is_numeric($config["cache"])) {
         $timestamp = $config["cache"];
     } else {
-        $timestamp = filemtime($_SERVER["DOCUMENT_ROOT"] . "/" .$_SERVER["BASE_PAGE"]);
+        $timestamp = filemtime($_SERVER["DOCUMENT_ROOT"] . "/" . $_SERVER["BASE_PAGE"]);
     }
     $tsstring = gmdate("D, d M Y H:i:s ", $timestamp) . "GMT";
 
@@ -43,7 +42,7 @@ if ($config["cache"]) {
     header("Last-Modified: " . $tsstring);
 }
 if (!isset($config["languages"])) {
-    $config["languages"] = array();
+    $config["languages"] = [];
 }
 
 ?>
@@ -56,7 +55,12 @@ if (!isset($config["languages"])) {
 
   <title>PHP: <?php echo $title ?></title>
 
- <link rel="shortcut icon" href="<?php echo $MYSITE ?>favicon.ico">
+ <link rel="icon" type="image/svg+xml" sizes="any" href="<?php echo $MYSITE ?>favicon.svg?v=2">
+ <link rel="icon" type="image/png" sizes="196x196" href="<?php echo $MYSITE ?>favicon-196x196.png?v=2">
+ <link rel="icon" type="image/png" sizes="32x32" href="<?php echo $MYSITE ?>favicon-32x32.png?v=2">
+ <link rel="icon" type="image/png" sizes="16x16" href="<?php echo $MYSITE ?>favicon-16x16.png?v=2">
+ <link rel="shortcut icon" href="<?php echo $MYSITE ?>favicon.ico?v=2">
+
  <link rel="search" type="application/opensearchdescription+xml" href="http://php.net/phpnetimprovedsearch.src" title="Add PHP.net search">
  <link rel="alternate" type="application/atom+xml" href="<?php echo $MYSITE ?>releases/feed.php" title="PHP Release feed">
  <link rel="alternate" type="application/atom+xml" href="<?php echo $MYSITE ?>feed.atom" title="PHP: Hypertext Preprocessor">
@@ -81,24 +85,6 @@ if (!isset($config["languages"])) {
 <link rel="stylesheet" type="text/css" href="/cached.php?t=<?php echo $modified?>&amp;f=<?php echo $filename?>" media="screen">
 <?php endforeach ?>
 
- <!--[if lte IE 7]>
- <link rel="stylesheet" type="text/css" href="<?php echo $MYSITE ?>styles/workarounds.ie7.css" media="screen">
- <![endif]-->
-
- <!--[if lte IE 8]>
- <script>
-  window.brokenIE = true;
- </script>
- <![endif]-->
-
- <!--[if lte IE 9]>
- <link rel="stylesheet" type="text/css" href="<?php echo $MYSITE ?>styles/workarounds.ie9.css" media="screen">
- <![endif]-->
-
- <!--[if IE]>
- <script src="<?php echo $MYSITE ?>js/ext/html5.js"></script>
- <![endif]-->
-
 <?php if (!empty($_SERVER["BASE_HREF"])): ?>
  <base href="<?php echo $_SERVER["BASE_HREF"] ?>">
 <?php endif ?>
@@ -119,8 +105,8 @@ if (!isset($config["languages"])) {
       <li class="<?php echo $curr == "community" ? "active" : ""?>"><a href="/get-involved" >Get Involved</a></li>
       <li class="<?php echo $curr == "help" ? "active" : ""?>"><a href="/support">Help</a></li>
       <li class="<?php echo $curr === "php8" ? "active" : "" ?>">
-        <a href="/releases/8.0/index.php">
-          <img src="/images/php8/logo_php8.svg" alt="php8" height="22" width="60">
+        <a href="/releases/8.1/index.php">
+          <img src="/images/php8/logo_php8_1.svg" alt="php8.1" height="22" width="60">
         </a>
       </li>
     </ul>

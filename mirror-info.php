@@ -16,13 +16,13 @@ $mirror_stats = (int) (isset($_SERVER['MIRROR_STATS']) && $_SERVER['MIRROR_STATS
 $dist = $latest['source'][0];
 $filename = __DIR__ . "/distributions/{$dist['filename']}";
 if (!file_exists($filename)) {
-	$hash_ok = 0;
+    $hash_ok = 0;
 } elseif (isset($dist['sha256']) &&
-		function_exists('hash_file') &&
-		in_array('sha256', hash_algos(), true)) {
-	$hash_ok = (int)(hash_file('sha256', $filename) === $dist['sha256']);
+        function_exists('hash_file') &&
+        in_array('sha256', hash_algos(), true)) {
+    $hash_ok = (int)(hash_file('sha256', $filename) === $dist['sha256']);
 } else {
-	$hash_ok = 0;
+    $hash_ok = 0;
 }
 
 // Does this mirror have sqlite?
@@ -31,9 +31,9 @@ $sqlite = get_available_sqlites();
 
 $exts = implode(',', get_loaded_extensions());
 
-echo join('|', array(
+echo implode('|', [
     $MYSITE,            	// 0 : CNAME for mirror as accessed (CC, CC1, etc.)
-    phpversion(),       	// 1 : PHP version overview
+    PHP_VERSION,       	// 1 : PHP version overview
     $LAST_UPDATED,      	// 2 : Update problems
     $sqlite,            	// 3 : SQLite support?
     $mirror_stats,      	// 4 : Optional local stats support
@@ -43,5 +43,4 @@ echo join('|', array(
     $exts,              	// 8 : List of php extensions separated by comma
     gethostname(),		// 9 : The configured hostname of the local system
     $_SERVER['SERVER_ADDR'],	// 10: The IP address under which we're running
-));
-
+]);
