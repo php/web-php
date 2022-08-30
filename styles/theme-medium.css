@@ -1,17 +1,19 @@
 :root {
   --background-color: var(--dark-grey-color);
-  --foreground-color: #F2F2F2;
+  --background-text-color: #CCC;
+  --content-background-color: #F2F2F2;
+  --content-text-color: var(--dark-grey-color);
 }
 
 html {
   background-color: var(--background-color);
   background-image: url('/images/bg-texture-00.svg');
-  color: #CCC;
+  color: var(--background-text-color);
 }
 
 #layout-content {
-  background: var(--foreground-color);
-  color: var(--background-color);
+  background: var(--content-background-color);
+  color: var(--content-text-color);
 }
 #layout-content:not(:only-child) {
   border-right:.25rem solid #666;
@@ -23,7 +25,7 @@ abbr {
 
 h1, h2, h3, h4, h5, h6 {
   font-weight: 500;
-  color:var(--dark-grey-color)
+  color: var(--content-text-color)
 }
 header.title,
 h1:after,
@@ -43,7 +45,7 @@ h3:after {
 
 a:link,
 a:visited {
-  color: #ccc;
+  color: var(--background-text-color);
 }
 #layout-content a:link,
 #layout-content a:visited {
@@ -105,7 +107,7 @@ h1.refname {
   color: var(--magenta-color);
 }
 .title time {
-  color: var(--dark-grey-color);
+  color: var(--content-text-color);
 }
 
 .methodname b,
@@ -139,7 +141,7 @@ div.tip {
 }
 blockquote.note {
   background-color: #E6E6E6;
-  border-color: #ccc;
+  border-color: var(--background-text-color);
 }
 div.caution {
   background: #fcfce9;
@@ -258,7 +260,7 @@ div.warning a:focus {
   border-radius: 4px;
 }
 #usernotes .note .name {
-  color: var(--dark-grey-color);
+  color: var(--content-text-color);
 }
 #usernotes .note .date {
   color: #666;
@@ -270,7 +272,7 @@ div.warning a:focus {
   transition: opacity 0.4s;
 }
 #usernotes .note .votes .tally {
-  color: var(--dark-grey-color);
+  color: var(--content-text-color);
 }
 #usernotes .note .votes a {
   transition: border 0.4s;
@@ -281,13 +283,13 @@ div.warning a:focus {
 /* {{{ Tables */
 .doctable,
 .segmentedlist {
-  border-color: #ccc;
+  border-color: var(--background-text-color);
 }
 .doctable thead tr,
 .segmentedlist thead tr {
   border-color: #C4C9DF;
   border-bottom-color: var(--medium-blue-color);
-  color: var(--dark-grey-color);
+  color: var(--content-text-color);
 }
 .doctable th,
 .segmentedlist th {
@@ -295,7 +297,7 @@ div.warning a:focus {
 }
 .doctable tr,
 .segmentedlist tr {
-  border-color: #ccc
+  border-color: var(--background-text-color)
 }
 .doctable tbody tr:nth-child(odd),
 .segmentedlist tbody tr:nth-child(odd) {
@@ -354,7 +356,7 @@ div.phpcode span.string {
 {
   background-color: #E6E6E6;
   border-radius: 2px;
-  color: var(--dark-grey-color);
+  color: var(--content-text-color);
   padding: 2px 4px;
   white-space: nowrap;
   font-style: normal;
@@ -379,7 +381,7 @@ var.reset
 }
 #layout-content a.genanchor:hover,
 #layout-content a.genanchor:focus {
-    color: var(--dark-grey-color);
+    color: var(--content-text-color);
     border-bottom: none;
 }
 /* }}} */
@@ -403,7 +405,7 @@ aside.tips h3 {
   color:#E6E6E6;
 }
 aside.tips a {
-  color:#ccc;
+  color: var(--background-text-color);
   border-bottom:1px dotted #666;
 }
 aside.tips .panel > a:after,
@@ -482,7 +484,7 @@ div.elephpants img:focus {
 
 .mirror {
 	position: relative;
-	border: 1px solid #ccc;
+	border: 1px solid var(--background-text-color);
 	padding: 20px;
 	margin: 5px;
 }

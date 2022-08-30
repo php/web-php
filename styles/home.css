@@ -94,7 +94,7 @@
 }
 
 .hero-versions a {
-    color:#ccc;
+    color: var(--background-text-color);
     border:0;
 }
 
