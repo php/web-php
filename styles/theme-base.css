@@ -1017,7 +1017,7 @@ fieldset {
     background: none repeat scroll 0 0 var(--light-blue-color);
     border-bottom: 1px solid #C4C9DF;
     border-radius: 0 0 2px 2px;
-    box-shadow: 1px 0 1px -1px #C4C9DF inset, -1px 0 1px -1px #C4C9DF inset, 0 0 1px var(--dark-blue);
+    box-shadow: 1px 0 1px -1px #C4C9DF inset, -1px 0 1px -1px #C4C9DF inset, 0 0 1px var(--dark-blue-color);
     color: var(--dark-grey-color);
     padding-top: 3px;
     margin-top: -3px;
@@ -1026,7 +1026,7 @@ fieldset {
 
 .tt-dropdown-menu .result-heading {
     font-size:1.1rem;
-    border-bottom: 2px solid var(--dark-blue);
+    border-bottom: 2px solid var(--dark-blue-color);
     color: var(--light-blue-color);
     text-shadow:0 -1px 0 rgba(0,0,0,.25);
     word-spacing:6px;
@@ -1107,7 +1107,7 @@ fieldset {
 
 /* Selected items. */
 .tt-suggestion.tt-is-under-cursor {
-    background-color: var(--dark-blue);
+    background-color: var(--dark-blue-color);
 }
 
 .tt-suggestion.tt-is-under-cursor h4 {
@@ -1627,7 +1627,7 @@ div.soft-deprecation-notice blockquote.sidebar {
   }
 
   #mainmenu-toggle-overlay {
-    background: var(--dark-blue) url(/images/mobile-menu.png) no-repeat center center;
+    background: var(--dark-blue-color) url(/images/mobile-menu.png) no-repeat center center;
     float: right;
     display: block;
     height: 32px;
