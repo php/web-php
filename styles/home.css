@@ -54,12 +54,12 @@
 }
 
 .hero-btn-primary {
-  background-color: #4f5b93;
+  background-color: var(--dark-blue-color);
   color: #fff !important;
 }
 
 .hero-btn-primary:hover, .hero-btn-primary:focus {
-  background-color: #793862;
+  background-color: var(--magenta-color);
 }
 
 .hero-btn-secondary {
@@ -69,8 +69,8 @@
 }
 
 .hero-btn-secondary:hover, .hero-btn-secondary:focus {
-  background-color: #793862;
-  border-color: #793862;
+  background-color: var(--magenta-color);
+  border-color: var(--magenta-color);
   color: #fff !important;
 }
 

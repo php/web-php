@@ -15,7 +15,7 @@
 }
 
 .php8-section_dark {
-  background-color: #4F5B93;
+  background-color: var(--dark-blue-color);
   color: #fff;
 }
 
@@ -102,7 +102,6 @@
   font-style: normal;
   line-height: 1.29;
   letter-spacing: -0.5px;
-  color: #27282c;
   overflow: visible;
 }
 
@@ -129,7 +128,7 @@
   padding: 16px 46px;
   border-radius: 30px;
   border: none;
-  background-color: #4F5B93;
+  background-color: var(--dark-blue-color);
   color: #fff !important;
   text-decoration: none !important;
   font-size: 20px;
@@ -210,7 +209,7 @@
   font-weight: normal;
   line-height: 1.6;
   vertical-align: middle;
-  color: #505c90;
+  color: var(--dark-blue-color);
   border-bottom-color: currentColor;
 }
 
@@ -256,12 +255,12 @@
   line-height: 1.33;
   letter-spacing: normal;
   text-align: center;
-  color: rgba(39, 40, 44, 0.7);
-  background-color: rgba(39, 40, 44, 0.05);
+  color: var(--background-color);
+  background-color: var(--foreground-color);
 }
 
 .php8-compare__label_new {
-  background-color: #505c90;
+  background-color: var(--dark-blue-color);
   color: #fff;
 }
 

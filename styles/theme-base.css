@@ -9,6 +9,14 @@
  * Designed and built with all the love in the world @twitter by @mdo and @fat.
  */
 
+:root {
+  --dark-grey-color: #333;
+  --dark-blue-color: #4F5B93;
+  --medium-blue-color: #7A86B8;
+  --light-blue-color: #E2E4EF;
+  --magenta-color: #793862;
+}
+
 .clearfix {
   *zoom: 1;
 }
@@ -60,7 +68,7 @@ a {
   border-bottom:1px solid;
 }
 a:focus {
-  outline: thin dotted #333;
+  outline: thin dotted var(--dark-grey-color);
   outline-offset: -2px;
 }
 a:hover,
@@ -865,7 +873,7 @@ table.standard th.subr {
 
 #layout .cse .gsc-result-info,
 #layout .gsc-result-info {
-    color: #333;
+    color: var(--dark-grey-color);
     font-size: 0.75rem;
     padding: 0;
     margin: 0;
@@ -1006,11 +1014,11 @@ fieldset {
 }
 
 .tt-dropdown-menu {
-    background: none repeat scroll 0 0 #E2E4EF;
+    background: none repeat scroll 0 0 var(--light-blue-color);
     border-bottom: 1px solid #C4C9DF;
     border-radius: 0 0 2px 2px;
-    box-shadow: 1px 0 1px -1px #C4C9DF inset, -1px 0 1px -1px #C4C9DF inset, 0 0 1px #4F5B93;
-    color: #333333;
+    box-shadow: 1px 0 1px -1px #C4C9DF inset, -1px 0 1px -1px #C4C9DF inset, 0 0 1px var(--dark-blue);
+    color: var(--dark-grey-color);
     padding-top: 3px;
     margin-top: -3px;
     min-width: 100%;
@@ -1018,8 +1026,8 @@ fieldset {
 
 .tt-dropdown-menu .result-heading {
     font-size:1.1rem;
-    border-bottom: 2px solid #4F5B93;
-    color: #E2E4EF;
+    border-bottom: 2px solid var(--dark-blue);
+    color: var(--light-blue-color);
     text-shadow:0 -1px 0 rgba(0,0,0,.25);
     word-spacing:6px;
     margin: 0;
@@ -1078,7 +1086,7 @@ fieldset {
 }
 
 .tt-suggestion h4 {
-    color: #333;
+    color: var(--dark-grey-color);
     margin: 0;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -1099,7 +1107,7 @@ fieldset {
 
 /* Selected items. */
 .tt-suggestion.tt-is-under-cursor {
-    background-color: #4F5B93;
+    background-color: var(--dark-blue);
 }
 
 .tt-suggestion.tt-is-under-cursor h4 {
@@ -1619,7 +1627,7 @@ div.soft-deprecation-notice blockquote.sidebar {
   }
 
   #mainmenu-toggle-overlay {
-    background: #4F5B93 url(/images/mobile-menu.png) no-repeat center center;
+    background: var(--dark-blue) url(/images/mobile-menu.png) no-repeat center center;
     float: right;
     display: block;
     height: 32px;
@@ -1722,7 +1730,7 @@ div.soft-deprecation-notice blockquote.sidebar {
 
 #goto {
   display: none;
-  background-color: #333;
+  background-color: var(--dark-grey-color);
   height: 100%;
   width: 100%;
   opacity: 0.9;
