@@ -59,7 +59,7 @@
 }
 
 .hero-btn-primary:hover, .hero-btn-primary:focus {
-  background-color: var(--magenta-color);
+  background-color: var(--dark-magenta-color);
 }
 
 .hero-btn-secondary {
@@ -69,8 +69,8 @@
 }
 
 .hero-btn-secondary:hover, .hero-btn-secondary:focus {
-  background-color: var(--magenta-color);
-  border-color: var(--magenta-color);
+  background-color: var(--dark-magenta-color);
+  border-color: var(--dark-magenta-color);
   color: #fff !important;
 }
 

@@ -55,8 +55,8 @@ a:hover,
 a:focus,
 #layout-content a:hover,
 #layout-content a:focus {
-  color: #AE508D;
-  border-color: #AE508D;
+  color: var(--medium-magenta-color);
+  border-color: var(--medium-magenta-color);
   outline:0;
 }
 
@@ -74,7 +74,7 @@ dl.qandaentry {
 }
 
 h1.refname {
-  color: var(--magenta-color);
+  color: var(--dark-magenta-color);
 }
 
 
@@ -104,7 +104,7 @@ h1.refname {
 
 .title a,
 .title {
-  color: var(--magenta-color);
+  color: var(--dark-magenta-color);
 }
 .title time {
   color: var(--content-text-color);
@@ -255,7 +255,7 @@ div.warning a:focus {
 
 /* {{{ User notes */
 #usernotes .count {
-  background-color: var(--magenta-color);
+  background-color: var(--dark-magenta-color);
   color: #fff;
   border-radius: 4px;
 }
@@ -419,12 +419,12 @@ aside.tips .panel > a {
   border-bottom: none;
 }
 aside.tips .panel > a:hover:after {
-  border-color:#AE508D;
+  border-color:var(--medium-magenta-color);
 }
 aside.tips a:hover,
 aside.tips a:focus {
-  color:#AE508D;
-  border-color:#AE508D;
+  color:var(--medium-magenta-color);
+  border-color:var(--medium-magenta-color);
 }
 
 .soft-deprecation-notice {
@@ -453,8 +453,8 @@ aside.tips a:focus {
   border-top-color:#666;
 }
 .layout-menu ul.child-menu-list li.current a {
-  color:#AE508D;
-  border-bottom-color:#AE508D;
+  color:var(--medium-magenta-color);
+  border-bottom-color:var(--medium-magenta-color);
 }
 .layout-menu ul.child-menu-list a {
   border-color: #666;
