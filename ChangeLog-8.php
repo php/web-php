@@ -8,6 +8,62 @@ changelog_header(8, $MINOR_VERSIONS);
 ?>
 <a id="PHP_8_1"></a>
 
+<section class="version" id="8.1.10"><!-- {{{ 8.1.10 -->
+<h3>Version 8.1.10</h3>
+<b><?php release_date('01-Sep-2022'); ?></b>
+<ul><li>Core:
+<ul>
+  <li>Fixed --CGI-- support of run-tests.php.</li>
+  <li>Fixed incorrect double to long casting in latest clang.</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 9266); ?> (GC root buffer keeps growing when dtors are present).</li>
+</ul></li>
+<li>Date:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 8730); ?> (DateTime::diff miscalculation is same time zone of different type).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 8964); ?> (DateTime object comparison after applying delta less than 1 second).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 9106); ?>: (DateInterval 1.5s added to DateTimeInterface is rounded down since PHP 8.1.0).</li>
+  <li><?php bugfix(81263); ?> (Wrong result from DateTimeImmutable::diff).</li>
+</ul></li>
+<li>DBA:
+<ul>
+  <li>Fixed LMDB driver memory leak on DB creation failure (Girgias)</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 9155); ?> (dba_open("non-existing", "c-", "flatfile") segfaults) (cmb)</li>
+</ul></li>
+<li>IMAP:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 9309); ?> (Segfault when connection is used after imap_close()).</li>
+</ul></li>
+<li>Intl:
+<ul>
+  <li>Fixed IntlDateFormatter::formatObject() parameter type.</li>
+</ul></li>
+<li>MBString:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 9008); ?> (mb_detect_encoding(): wrong results with null $encodings).</li>
+</ul></li>
+<li>OPcache:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 9033); ?> (Loading blacklist file can fail due to negative length).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 9164); ?> (Segfault in zend_accel_class_hash_copy).</li>
+</ul></li>
+<li>PDO_SQLite:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 9032); ?> (SQLite3 authorizer crashes on NULL values).</li>
+</ul></li>
+<li>SQLite3:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 9032); ?> (SQLite3 authorizer crashes on NULL values).</li>
+</ul></li>
+<li>Streams:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 8472); ?> (The resource returned by stream_socket_accept may have incorrect metadata).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 8409); ?> (SSL handshake timeout leaves persistent connections hanging).</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
+
+
 <section class="version" id="8.1.9"><!-- {{{ 8.1.9 -->
 <h3>Version 8.1.9</h3>
 <b><?php release_date('04-Aug-2022'); ?></b>
