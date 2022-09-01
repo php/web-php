@@ -857,6 +857,48 @@ changelog_header(8, $MINOR_VERSIONS);
 
 <a id="PHP_8_0"></a>
 
+<section class="version" id="8.0.23"><!-- {{{ 8.0.23 -->
+<h3>Version 8.0.23</h3>
+<b><?php release_date('01-Sep-2022'); ?></b>
+<ul><li>Core:
+<ul>
+  <li>Fixed incorrect double to long casting in latest clang.</li>
+</ul></li>
+<li>DBA:
+<ul>
+  <li>Fixed LMDB driver memory leak on DB creation failure (Girgias)</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 9155); ?> (dba_open("non-existing", "c-", "flatfile") segfaults).</li>
+</ul></li>
+<li>Intl:
+<ul>
+  <li>Fixed IntlDateFormatter::formatObject() parameter type.</li>
+</ul></li>
+<li>OPcache:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 9033); ?> (Loading blacklist file can fail due to negative length).</li>
+</ul></li>
+<li>PDO_SQLite:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 9032); ?> (SQLite3 authorizer crashes on NULL values).</li>
+</ul></li>
+<li>SQLite3:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 9032); ?> (SQLite3 authorizer crashes on NULL values).</li>
+</ul></li>
+<li>Standard:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 9017); ?> (php_stream_sock_open_from_socket could return NULL).</li>
+</ul></li>
+<li>Streams:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 8472); ?> (The resource returned by stream_socket_accept may have incorrect metadata).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 8409); ?> (SSL handshake timeout leaves persistent connections hanging).</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
+
+
 <section class="version" id="8.0.22"><!-- {{{ 8.0.22 -->
 <h3>Version 8.0.22</h3>
 <b><?php release_date('04-Aug-2022'); ?></b>
