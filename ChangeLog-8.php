@@ -26,8 +26,8 @@ changelog_header(8, $MINOR_VERSIONS);
 </ul></li>
 <li>DBA:
 <ul>
-  <li>Fixed LMDB driver memory leak on DB creation failure (Girgias)</li>
-  <li>Fixed bug <?php githubissuel('php/php-src', 9155); ?> (dba_open("non-existing", "c-", "flatfile") segfaults) (cmb)</li>
+  <li>Fixed LMDB driver memory leak on DB creation failure.</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 9155); ?> (dba_open("non-existing", "c-", "flatfile") segfaults).</li>
 </ul></li>
 <li>IMAP:
 <ul>
@@ -866,7 +866,7 @@ changelog_header(8, $MINOR_VERSIONS);
 </ul></li>
 <li>DBA:
 <ul>
-  <li>Fixed LMDB driver memory leak on DB creation failure (Girgias)</li>
+  <li>Fixed LMDB driver memory leak on DB creation failure.</li>
   <li>Fixed bug <?php githubissuel('php/php-src', 9155); ?> (dba_open("non-existing", "c-", "flatfile") segfaults).</li>
 </ul></li>
 <li>Intl:
