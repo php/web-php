@@ -247,8 +247,10 @@ PHP
             </div>
         </div>
         <div class="php8-compare__content">
-            You can use the <code>#[AllowDynamicProperties]</code> attribute on classes that should still allow those
-            properties. <code>stdClass</code> and <code>__get</code>/<code>__set</code> are not affected.
+            <p>The creation of dynamic properties is deprecated to help avoid mistakes and typos, unless the class opts
+                in by using the <code>#[\AllowDynamicProperties]</code> attribute. <code>stdClass</code> allows dynamic
+                properties.</p>
+            <p>Usage of the <code>__get</code>/<code>__set</code> magic methods is not affected by this change.</p>
         </div>
 
         <div class="php8-compare">
@@ -353,7 +355,7 @@ PHP
 
         <div class="php8-compare">
             <h2 class="php8-h2" id="readonly_classes">
-                New <code>Random</code> extension
+                New "Random" extension
                 <a class="php8-rfc" href="https://wiki.php.net/rfc/rng_extension">RFC</a>
                 <a class="php8-rfc" href="https://wiki.php.net/rfc/random_extension_improvement">RFC</a>
             </h2>
@@ -384,7 +386,8 @@ $array = ['foo', 'bar', 'baz'];
 $engine = new Random\Engine\Mt19937(1234, MT_RAND_PHP);
 $randomizer = new Random\Randomizer($engine);
 $single = $randomizer->pickArrayKeys($array, 1)[0]; // (int) 0
- // or: [$single] = $randomizer->pickArrayKeys($array, 1);
+
+// or: [$single] = $randomizer->pickArrayKeys($array, 1);
 $multiple = $randomizer->pickArrayKeys($array, 2); // (array) [1, 2]
 PHP
                         ); ?>
@@ -393,12 +396,12 @@ PHP
             </div>
         </div>
         <div class="php8-compare__content">
-            <p>The new <code>random</code> extension organizes and consolidates the existing PHP functionality
-                related to random number generation.</p>
-            <p>One of the most important new additions with the new <code>random</code> extension
-                is the <code>Random\Randomizer</code> class. It is meant to provide an object-oriented API
-                to access all Random Number generation functionality with a choice of Pseudo Random Number Generator
-                algorithm, which can be swapped out with a new implementation.</p>
+            <p>The "random" extension provides a new object-oriented API to random number generation. Instead of relying
+                on a globally seeded random number generator (RNG) using the Mersenne Twister algorithm the
+                object-oriented API provides several classes ("Engine"s) providing access to modern algorithms that
+                store their state within objects to allow for multiple independent seedable sequences.</p>
+            <p>The <code>\Random\Randomizer</code> class provides a high level interface to use the engine's randomness
+                to generate a random integer, to shuffle an array or string, to select random array keys and more.</p>
         </div>
     </section>
 
@@ -416,12 +419,16 @@ PHP
                     </li>
                     <li>New <code>#[\AllowDynamicProperties]</code> and <code>#[\SensitiveParameter]</code> attributes.
                     </li>
-                    <li>New <code>curl_upkeep</code> function.</li>
                     <li>New <code>ZipArchive::getStreamIndex</code>, <code>ZipArchive::getStreamName</code>, and <code>ZipArchive::clearError</code>
                         methods.
                     </li>
-                    <li>New <code>memory_reset_peak_usage</code> function.</li>
-                    <li>New <code>sodium_crypto_stream_xchacha20_xor_ic</code> function.</li>
+                    <li>New <code>ReflectionFunction::isAnonymous</code> and <code>ReflectionMethod::hasPrototype</code>
+                        methods.
+                    </li>
+                    <li>New <code>curl_upkeep</code>, <code>memory_reset_peak_usage</code>,
+                        <code>ini_parse_quantity</code>, <code>libxml_get_external_entity_loader</code>, <code>sodium_crypto_stream_xchacha20_xor_ic</code>,
+                        <code>openssl_cipher_key_length</code> functions.
+                    </li>
                 </ul>
             </div>
             <h2 class="php8-h2 php8-h2_margin-top" id="deprecations_and_bc_breaks">
@@ -435,7 +442,7 @@ PHP
                     </li>
                     <li>Extensions <code>ODBC</code> and <code>PDO_ODBC</code> escapes the username and password.</li>
                     <li>Functions <code>strtolower</code> and <code>strtoupper</code> are locale-sensitive.</li>
-                    <li>Methods <code>SplFileInfo::_bad_state_ex</code>, <code>SplFileObject::getCsvControl</code>,
+                    <li>Methods <code>SplFileObject::getCsvControl</code>,
                         <code>SplFileObject::fflush</code>,
                         <code>SplFileObject::ftell</code>, <code>SplFileObject::fgetc</code>,and <code>SplFileObject::fpassthru</code>
                         enforces their signature.
@@ -444,6 +451,7 @@ PHP
                     </li>
                     <li>Method <code>SplFileObject::getChildren</code> has a tentative return type of <code>null</code>.
                     </li>
+                    <li>The internal method <code>SplFileInfo::_bad_state_ex</code> has been deprecated.</li>
                 </ul>
             </div>
         </div>
