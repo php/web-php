@@ -216,6 +216,9 @@ class User
 
 $user = new User();
 $user->last_name = 'Doe';
+
+$user = new stdClass();
+$user->last_name = 'Doe';
 PHP
 
                         ); ?>
@@ -234,6 +237,9 @@ class User
 
 $user = new User();
 $user->last_name = 'Doe'; // Deprecated notice
+
+$user = new stdClass();
+$user->last_name = 'Doe'; // Still allowed
 PHP
                         ); ?>
                     </div>
@@ -242,7 +248,7 @@ PHP
         </div>
         <div class="php8-compare__content">
             You can use the <code>#[AllowDynamicProperties]</code> attribute on classes that should still allow those
-            properties.
+            properties. <code>stdClass</code> and <code>__get</code>/<code>__set</code> are not affected.
         </div>
 
         <div class="php8-compare">
