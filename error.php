@@ -290,6 +290,7 @@ $manual_redirections = [
     'oci-collection.max' => 'ocicollection.max',
     'oci-collection.size' => 'ocicollection.size',
     'oci-collection.trim' => 'ocicollection.trim',
+    'function.curl-file-create' => 'curlfile.construct',
 ];
 
 if (preg_match("!^manual/([^/]+)/([^/]+)$!", $URI, $match) && isset($manual_redirections[$match[2]])) {
