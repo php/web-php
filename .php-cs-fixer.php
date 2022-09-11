@@ -29,6 +29,7 @@ $config
         'constant_case' => true,
         'indentation_type' => true,
         'line_ending' => true,
+        'new_with_braces' => true,
         'no_extra_blank_lines' => true,
         'no_trailing_whitespace' => true,
         'ordered_class_elements' => true,
