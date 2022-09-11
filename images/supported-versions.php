@@ -154,7 +154,7 @@ $height = $header_height + $footer_height + (count($branches) * $branch_height);
 	<!-- Today -->
 	<g class="today">
 		<?php
-        $now = new DateTime;
+        $now = new DateTime();
         $x = date_horiz_coord($now);
         ?>
 		<line x1="<?php echo $x ?>" y1="<?php echo $header_height ?>" x2="<?php echo $x ?>" y2="<?php echo $header_height + (count($branches) * $branch_height) ?>" />
