@@ -142,7 +142,7 @@ PHP
 
         <div class="php8-compare">
             <h2 class="php8-h2" id="readonly_classes">
-                Disjunctive Normal Form Types
+                Disjunctive Normal Form (DNF) Types
                 <a class="php8-rfc" href="https://wiki.php.net/rfc/dnf_types">RFC</a>
             </h2>
             <div class="php8-compare__main">
@@ -176,7 +176,7 @@ PHP
                         <?php highlight_php_trimmed(
                             <<<'PHP'
 class Foo {
-    public function bar((A & B) | null $entity) {
+    public function bar((A&B)|null $entity) {
         if ($entity === null) {
             return null;
         }
@@ -414,7 +414,7 @@ PHP
                 <ul>
                     <li>New <code>mysqli_execute_query</code> function and <code>mysqli::execute_query</code> method.
                     </li>
-                    <li>New <code>#[AllowDynamicProperties]</code> and <code>#[\SensitiveParameter]</code> attributes.
+                    <li>New <code>#[\AllowDynamicProperties]</code> and <code>#[\SensitiveParameter]</code> attributes.
                     </li>
                     <li>New <code>curl_upkeep</code> function.</li>
                     <li>New <code>ZipArchive::getStreamIndex</code>, <code>ZipArchive::getStreamName</code>, and <code>ZipArchive::clearError</code>
