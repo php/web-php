@@ -27,6 +27,9 @@ $config
             'spacing' => 'one',
         ],
         'constant_case' => true,
+        'increment_style' => [
+            'style' => 'post',
+        ],
         'indentation_type' => true,
         'line_ending' => true,
         'no_extra_blank_lines' => true,
