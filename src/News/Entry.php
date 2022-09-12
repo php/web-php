@@ -183,7 +183,7 @@ class Entry {
         $filename = date("Y-m-d", $_SERVER["REQUEST_TIME"]);
         $count = 0;
         do {
-            ++$count;
+            $count++;
             $id = $filename . "-" . $count;
             $basename = "{$id}.xml";
         } while (file_exists(self::ARCHIVE_ENTRIES_ABS . $basename));
