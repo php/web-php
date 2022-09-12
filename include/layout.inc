@@ -404,7 +404,7 @@ function print_news($news, $dog, $max = 5, $onlyyear = null, $return = false) {
         foreach ($item["category"] as $category) {
             if (is_null($dog) || in_array($category["term"], (array)$dog, true)) {
                 $ok = true;
-                ++$count;
+                $count++;
                 break;
             }
         }
