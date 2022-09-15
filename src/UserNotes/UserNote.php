@@ -10,18 +10,25 @@ final class UserNote
 {
     /** @var string $id */
     public $id;
+
     /** @var string $sect */
     public $sect;
+
     /** @var string $rate */
     public $rate;
+
     /** @var string $ts */
     public $ts;
+
     /** @var string $user */
     public $user;
+
     /** @var string $text */
     public $text;
+
     /** @var int $upvotes */
     public $upvotes;
+
     /** @var int $downvotes */
     public $downvotes;
 

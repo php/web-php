@@ -125,7 +125,7 @@ function manual_note_display(UserNote $note, $voteOption = true)
     $date = new DateTime("@{$note->ts}");
     $datestr = relTime($date);
     $fdatestr = $date->format("Y-m-d h:i");
-    $text    = clean_note($note->text);
+    $text = clean_note($note->text);
 
     // Calculate note rating by up/down votes
     $vote = $note->upvotes - $note->downvotes;
