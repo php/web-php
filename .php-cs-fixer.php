@@ -35,6 +35,7 @@ $config
         'no_extra_blank_lines' => true,
         'no_trailing_whitespace' => true,
         'ordered_class_elements' => true,
+        'random_api_migration' => true,
         'single_space_after_construct' => true,
         'strict_param' => true,
         'switch_case_space' => true,
