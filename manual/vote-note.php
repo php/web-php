@@ -17,10 +17,8 @@ $master_url = "https://main.php.net/entry/user-notes-vote.php";
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
   if (isset($_SERVER['HTTP_X_JSON']) && $_SERVER['HTTP_X_JSON'] == 'On' && !empty($_REQUEST['id']) && !empty($_REQUEST['page']) && ($N = manual_notes_load($_REQUEST['page'])) && array_key_exists($_REQUEST['id'], $N) && !empty($_REQUEST['vote']) && ($_REQUEST['vote'] === 'up' || $_REQUEST['vote'] === 'down')) {
     $response = [];
-    $update = $N[$_REQUEST['id']]['votes']['up'] - $N[$_REQUEST['id']]['votes']['down'];
     $hash = substr(md5($_REQUEST['page']), 0, 16);
-    $notes_file = $_SERVER['DOCUMENT_ROOT'] . "/backend/notes/" .
-        substr($hash, 0, 2) . "/$hash";
+    $notes_file = $_SERVER['DOCUMENT_ROOT'] . "/backend/notes/" . substr($hash, 0, 2) . "/$hash";
     if (!file_exists($notes_file)) {
       $response["success"] = false;
       $response["msg"] = "Invalid request.";
@@ -60,15 +58,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
       }
       else {
         if ($_REQUEST['vote'] === 'up') {
-          $N[$_REQUEST['id']]['votes']['up']++;
+          $N[$_REQUEST['id']]->upvotes++;
         }
         elseif ($_REQUEST['vote'] === 'down') {
-          $N[$_REQUEST['id']]['votes']['down']++;
+          $N[$_REQUEST['id']]->downvotes++;
         }
-        $update = $N[$_REQUEST['id']]['votes']['up'] - $N[$_REQUEST['id']]['votes']['down'];
         $hash = substr(md5($_REQUEST['page']), 0, 16);
-        $notes_file = $_SERVER['DOCUMENT_ROOT'] . "/backend/notes/" .
-            substr($hash, 0, 2) . "/$hash";
+        $notes_file = $_SERVER['DOCUMENT_ROOT'] . "/backend/notes/" . substr($hash, 0, 2) . "/$hash";
         if (file_exists($notes_file)) {
           $data = [
               "noteid" => $_REQUEST['id'],
@@ -128,10 +124,7 @@ else {
 <?php
   $backID = htmlspecialchars($_REQUEST['id']);
   $backPAGE = htmlspecialchars($_REQUEST['page']);
-  manual_note_display(
-      $N[$_REQUEST['id']]['xwhen'], $N[$_REQUEST['id']]['user'], $N[$_REQUEST['id']]['note'], $N[$_REQUEST['id']]['id'],
-      $N[$_REQUEST['id']]['votes'], false
-  );
+  manual_note_display($N[$_REQUEST['id']], false);
 ?>
  </div>
  <div style="width: 90%; margin: auto;"><p><a href="<?php echo "/{$backPAGE}#{$backID}"; ?>">&lt;&lt; Back to user notes page</a></p></div>
@@ -184,10 +177,7 @@ if (!$headerset) {
 <?php
   $backID = htmlspecialchars($_REQUEST['id']);
   $backPAGE = htmlspecialchars($_REQUEST['page']);
-  manual_note_display(
-      $N[$_REQUEST['id']]['xwhen'], $N[$_REQUEST['id']]['user'], $N[$_REQUEST['id']]['note'], $N[$_REQUEST['id']]['id'],
-      $N[$_REQUEST['id']]['votes'], false
-  );
+  manual_note_display($N[$_REQUEST['id']], false);
 ?>
  </div>
  <div style="width: 90%; margin: auto;"><p><a href="<?php echo "/{$backPAGE}#{$backID}"; ?>">&lt;&lt; Back to user notes page</a></p></div>

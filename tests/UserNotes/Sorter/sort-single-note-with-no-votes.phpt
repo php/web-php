@@ -4,46 +4,38 @@ sort a single note with no votes
 precision=-1
 --FILE--
 <?php
+
+use phpweb\UserNotes\Sorter;
+use phpweb\UserNotes\UserNote;
+
 require_once __DIR__ . "/../../../autoload.php";
 
 $notes = [
-    [
-        "votes" => ["up" => 0, "down" => 0],
-        "xwhen" => 1613487094,
-    ],
+    new UserNote('1', '', '', '1613487094', '', '', 0, 0),
 ];
 
-$sorter = new phpweb\UserNotes\Sorter();
+$sorter = new Sorter();
 $sorter->sort($notes);
-var_dump(array_map(function (array $note): array {
-    return [
-        "ts" => $note["xwhen"],
-        "upvotes" => $note["votes"]["up"],
-        "downvotes" => $note["votes"]["down"],
-        "score" => $note["score"],
-        "total" => $note["total"],
-        "rating" => $note["rating"],
-        "sort" => $note["sort"],
-    ];
+var_dump(array_map(function (UserNote $note): array {
+  return [
+      "id" => $note->id,
+      "ts" => $note->ts,
+      "upvotes" => $note->upvotes,
+      "downvotes" => $note->downvotes,
+  ];
 }, $notes));
 ?>
 --EXPECT--
 array(1) {
   [0]=>
-  array(7) {
+  array(4) {
+    ["id"]=>
+    string(1) "1"
     ["ts"]=>
-    int(1613487094)
+    string(10) "1613487094"
     ["upvotes"]=>
     int(0)
     ["downvotes"]=>
     int(0)
-    ["score"]=>
-    int(0)
-    ["total"]=>
-    int(0)
-    ["rating"]=>
-    float(0.5)
-    ["sort"]=>
-    float(41.4)
   }
 }

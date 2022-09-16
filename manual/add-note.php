@@ -7,6 +7,8 @@ include_once __DIR__ . '/../include/posttohost.inc';
 include_once __DIR__ . '/../include/shared-manual.inc';
 include __DIR__ . '/spam_challenge.php';
 
+use phpweb\UserNotes\UserNote;
+
 site_header("Add Manual Note", ['css' => 'add-note.css']);
 
 // Copy over "sect" and "redirect" from GET to POST
@@ -140,7 +142,7 @@ if ($process) {
     // Print out preview of note
     echo '<p>This is what your entry will look like, roughly:</p>';
     echo '<div id="usernotes">';
-    manual_note_display(time(), $user, $note, false);
+    manual_note_display(new UserNote('', '', '', time(), $user, $note));
     echo '</div><br><br>';
 }
 

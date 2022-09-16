@@ -23,10 +23,16 @@ $PGI = []; $SIDEBAR_DATA = '';
 // =============================================================================
 
 require_once __DIR__ . '/../autoload.php';
-use phpweb\UserNotes\Sorter;
 
-// Print out all user notes for this manual page
-function manual_notes($notes) {
+use phpweb\UserNotes\Sorter;
+use phpweb\UserNotes\UserNote;
+
+/**
+ * Print out all user notes for this manual page
+ *
+ * @param array<string, UserNote> $notes
+ */
+function manual_notes($notes):void {
     // Get needed values
     list($filename) = $GLOBALS['PGI']['this'];
 
@@ -68,20 +74,21 @@ END_USERNOTE_HEADER;
         // If we have notes, print them out
         echo '<div id="allnotes">';
         foreach ($notes as $note) {
-            manual_note_display(
-                $note['xwhen'], $note['user'], $note['note'], $note['id'], $note['votes']
-            );
+            manual_note_display($note);
         }
         echo "</div>\n";
         echo "<div class=\"foot\">$addnotesnippet</div>\n";
     }
     echo "</section>";
 }
-// Get user notes from the appropriate text dump
-function manual_notes_load($id)
+
+/**
+ * Get user notes from the appropriate text dump
+ *
+ * @return array<string, UserNote>
+ */
+function manual_notes_load(string $id): array
 {
-    // Initialize values
-    $notes = [];
     $hash = substr(md5($id), 0, 16);
     $notes_file = $_SERVER['DOCUMENT_ROOT'] . "/backend/notes/" .
                   substr($hash, 0, 2) . "/$hash";
@@ -89,22 +96,15 @@ function manual_notes_load($id)
     // Open the note file for reading and get the data (12KB)
     // ..if it exists
     if (!file_exists($notes_file)) {
-        return $notes;
+        return [];
     }
+    $notes = [];
     if ($fp = @fopen($notes_file, "r")) {
         while (!feof($fp)) {
             $line = chop(fgets($fp, 12288));
             if ($line == "") { continue; }
             @list($id, $sect, $rate, $ts, $user, $note, $up, $down) = explode("|", $line);
-            $notes[$id] = [
-                "id" => $id,
-                "sect" => $sect,
-                "rate" => $rate,
-                "xwhen" => $ts,
-                "user" => $user,
-                "note" => base64_decode($note, true),
-                "votes" => ["up" => (int)$up, "down" => (int)$down]
-            ];
+            $notes[$id] = new UserNote($id, $sect, $rate, $ts, $user, base64_decode($note, true), (int) $up, (int) $down);
         }
         fclose($fp);
     }
@@ -112,24 +112,25 @@ function manual_notes_load($id)
 }
 
 // Print out one user note entry
-function manual_note_display($date, $name, $text, $id, $votes = ['up' => 0, 'down' => 0], $voteOption = true)
+function manual_note_display(UserNote $note, $voteOption = true)
 {
-    if ($name) {
-        $name = "\n  <strong class=\"user\"><em>" . htmlspecialchars($name) . "</em></strong>";
+    if ($note->user) {
+        $name = "\n  <strong class=\"user\"><em>" . htmlspecialchars($note->user) . "</em></strong>";
     } else {
         $name = "<strong class=\"user\"><em>Anonymous</em></strong>";
     }
-    $name = ($id ? "\n  <a href=\"#$id\" class=\"name\">$name</a><a class=\"genanchor\" href=\"#$id\"> &para;</a>" : "\n  $name");
+    $name = ($note->id ? "\n  <a href=\"#{$note->id}\" class=\"name\">$name</a><a class=\"genanchor\" href=\"#{$note->id}\"> &para;</a>" : "\n  $name");
 
     // New date style will be relative time
-    $datestr = relTime(new DateTime("@{$date}"));
-    $fdatestr = date("Y-m-d h:i", $date);
-    $text = clean_note($text);
+    $date = new DateTime("@{$note->ts}");
+    $datestr = relTime($date);
+    $fdatestr = $date->format("Y-m-d h:i");
+    $text = clean_note($note->text);
 
     // Calculate note rating by up/down votes
-    $vote = $votes['up'] - $votes['down'];
-    $p = floor(($votes['up'] / (($votes['up'] + $votes['down']) ?: 1)) * 100);
-    $rate = !$p && !($votes['up'] + $votes['down']) ? "no votes..." : "$p% like this...";
+    $vote = $note->upvotes - $note->downvotes;
+    $p = floor(($note->upvotes / (($note->upvotes + $note->downvotes) ?: 1)) * 100);
+    $rate = !$p && !($note->upvotes + $note->downvotes) ? "no votes..." : "$p% like this...";
 
     // Vote User Notes Div
     if ($voteOption) {
@@ -140,13 +141,13 @@ function manual_note_display($date, $name, $text, $id, $votes = ['up' => 0, 'dow
         $rredir_filename = urlencode($redir_filename);
         $votediv = <<<VOTEDIV
   <div class="votes">
-    <div id="Vu{$id}">
-    <a href="/manual/vote-note.php?id={$id}&amp;page={$rredir_filename}&amp;vote=up" title="Vote up!" class="usernotes-voteu">up</a>
+    <div id="Vu{$note->id}">
+    <a href="/manual/vote-note.php?id={$note->id}&amp;page={$rredir_filename}&amp;vote=up" title="Vote up!" class="usernotes-voteu">up</a>
     </div>
-    <div id="Vd{$id}">
-    <a href="/manual/vote-note.php?id={$id}&amp;page={$rredir_filename}&amp;vote=down" title="Vote down!" class="usernotes-voted">down</a>
+    <div id="Vd{$note->id}">
+    <a href="/manual/vote-note.php?id={$note->id}&amp;page={$rredir_filename}&amp;vote=down" title="Vote down!" class="usernotes-voted">down</a>
     </div>
-    <div class="tally" id="V{$id}" title="{$rate}">
+    <div class="tally" id="V{$note->id}" title="{$rate}">
     {$vote}
     </div>
   </div>
@@ -156,26 +157,26 @@ VOTEDIV;
     }
 
     // If the viewer is logged in, show admin options
-    if (isset($_COOKIE['IS_DEV']) && $id) {
+    if (isset($_COOKIE['IS_DEV']) && $note->id) {
 
         $admin = "\n  <span class=\"admin\">\n   " .
 
         make_popup_link(
-            'https://main.php.net/manage/user-notes.php?action=edit+' . $id,
+            'https://main.php.net/manage/user-notes.php?action=edit+' . $note->id,
             '<img src="/images/notes-edit@2x.png" height="12" width="12" alt="edit note">',
             'admin',
             'scrollbars=yes,width=650,height=400'
         ) . "\n   " .
 
         make_popup_link(
-            'https://main.php.net/manage/user-notes.php?action=reject+' . $id,
+            'https://main.php.net/manage/user-notes.php?action=reject+' . $note->id,
             '<img src="/images/notes-reject@2x.png" height="12" width="12" alt="reject note">',
             'admin',
             'scrollbars=no,width=300,height=200'
         ) . "\n   " .
 
         make_popup_link(
-            'https://main.php.net/manage/user-notes.php?action=delete+' . $id,
+            'https://main.php.net/manage/user-notes.php?action=delete+' . $note->id,
             '<img src="/images/notes-delete@2x.png" height="12" width="12" alt="delete note">',
             'admin',
             'scrollbars=no,width=300,height=200'
@@ -187,8 +188,8 @@ VOTEDIV;
 
     echo <<<USER_NOTE_TEXT
 
-  <div class="note" id="$id">{$votediv}{$name}{$admin}<div class="date" title="$fdatestr"><strong>{$datestr}</strong></div>
-  <div class="text" id="Hcom{$id}">
+  <div class="note" id="{$note->id}">{$votediv}{$name}{$admin}<div class="date" title="$fdatestr"><strong>{$datestr}</strong></div>
+  <div class="text" id="Hcom{$note->id}">
 {$text}
   </div>
  </div>
@@ -295,7 +296,7 @@ function manual_setup($setup) {
     $USERNOTES = manual_notes_load($filename);
     if ($USERNOTES) {
         $note = current($USERNOTES);
-        $timestamps[] = $note["xwhen"];
+        $timestamps[] = $note->ts;
     }
 
     $lastmod = max($timestamps);
