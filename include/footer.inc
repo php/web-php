@@ -68,9 +68,9 @@
         <li><a href="/contact.php">Contact</a></li>
         <li><a href="/sites.php">Other PHP.net sites</a></li>
         <li><a href="/privacy.php">Privacy policy</a></li>
-<?php if (!empty($_SERVER['BASE_PAGE']) || substr($_SERVER['BASE_PAGE'],0,5)=='manual'): ?>
+<?php if (empty($_SERVER['BASE_PAGE']) || substr($_SERVER['BASE_PAGE'],0,5)=='manual') {} else {?>
         <li><a href="https://github.com/php/web-php/blob/master/<?php echo urlencode($_SERVER['BASE_PAGE']); ?>">View Source</a></li>
-<?php endif; ?>
+<?php } ?>
       </ul>
       </div>
     </div>
