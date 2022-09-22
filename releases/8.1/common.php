@@ -42,6 +42,7 @@ function language_chooser(string $currentLang): void {
         'zh' => '简体中文',
         'ka' => 'ქართული',
         'ja' => '日本語',
+        'id' => 'Indonesian',
     ];
 
     // Print out the form with all the options
