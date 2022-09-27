@@ -12,6 +12,12 @@ $BRANCH_NOTES = [
     '7.0' => '<a href="/migration71">A guide is available for migrating from PHP 7.0 to 7.1.</a>',
     '5.6' => '<a href="/migration70">A guide is available for migrating from PHP 5.6 to 7.0.</a>',
     '5.5' => '<a href="/migration56">A guide is available for migrating from PHP 5.5 to 5.6.</a>',
+    '5.4' => '<a href="https://php-legacy-docs.zend.com/manual/php5/en/migration55">A guide is available for migrating from PHP 5.4 to 5.5.</a>',
+    '5.3' => '<a href="https://php-legacy-docs.zend.com/manual/php5/en/migration54">A guide is available for migrating from PHP 5.3 to 5.4.</a>',
+    '5.2' => '<a href="https://php-legacy-docs.zend.com/manual/php5/en/migration53">A guide is available for migrating from PHP 5.2 to 5.3.</a>',
+    '5.1' => '<a href="https://php-legacy-docs.zend.com/manual/php5/en/migration52">A guide is available for migrating from PHP 5.1 to 5.2.</a>',
+    '5.0' => '<a href="https://php-legacy-docs.zend.com/manual/php5/en/migration51">A guide is available for migrating from PHP 5.0 to 5.1.</a>',
+    '4.4' => '<a href="https://php-legacy-docs.zend.com/manual/php5/en/migration5">A guide is available for migrating from PHP 4 to 5.0.</a>',
 ];
 
 site_header('Unsupported Branches');
