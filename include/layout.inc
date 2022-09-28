@@ -459,7 +459,7 @@ EOT;
     return $retval;
 }
 
-function site_header($title = '', $config = [])
+function site_header($title = 'Hypertext Preprocessor', $config = [])
 {
     global $MYSITE;
 
@@ -484,10 +484,6 @@ function site_header($title = '', $config = [])
     if (isset($_COOKIE["MD"]) || isset($_GET["MD"])) {
         $classes .= "markdown-content";
         $config["css_overwrite"] = ["/styles/i-love-markdown.css"];
-    }
-
-    if (empty($title)) {
-        $title = "Hypertext Preprocessor";
     }
 
     // shorturl; http://wiki.snaplog.com/short_url
