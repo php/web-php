@@ -13,7 +13,7 @@ $options = [];
 if (isset($_POST['my_lang'], $langs[$_POST['my_lang']])) {
 
     // Set the language preference
-    myphpnet_language($_POST['my_lang']);
+    $MYPHPNET[0] = $_POST['my_lang'];
 
     // Add this as first option, selected
     $options[] = '<option value="' . $_POST['my_lang'] . '" selected>' .

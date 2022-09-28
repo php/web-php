@@ -90,7 +90,7 @@ $ACTIVE_ONLINE_LANGUAGES = array_diff($LANGUAGES, $INACTIVE_ONLINE_LANGUAGES);
 // Convert between language codes back and forth
 // [We use non standard languages codes and so conversion
 // is needed when communicating with the outside world]
-function language_convert($langcode, $to_phpweb_format = true)
+function language_convert(string $langcode, $to_phpweb_format = true)
 {
     global $LANGUAGES;
     if ($to_phpweb_format) {

@@ -114,20 +114,16 @@ function myphpnet_load()
     $MYPHPNET[2] = 'https://www.php.net';
 }
 
-// Get or set preferred language code
-function myphpnet_language($langcode = false)
+// Get preferred language code
+function myphpnet_language(): string
 {
-    global $MYPHPNET, $LANGUAGES;
+    global $MYPHPNET;
 
-    // Set language code
-    if ($langcode && isset($LANGUAGES[$langcode])) {
-        $MYPHPNET[0] = $langcode;
-    }
-    // Return code or FALSE
-    elseif (isset($MYPHPNET[0]) && $MYPHPNET[0]) {
+    // Return code
+    if (isset($MYPHPNET[0]) && $MYPHPNET[0]) {
         return $MYPHPNET[0];
     }
-    return false;
+    return '';
 }
 
 const MYPHPNET_URL_NONE = false;
