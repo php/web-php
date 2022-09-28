@@ -287,7 +287,7 @@ function manual_setup($setup) {
     ];
 
     // Load user note for this page
-    list($filename, $title) = $PGI['this'];
+    $filename = $PGI['this'][0];
 
     // Drop file extension from the name
     if (substr($filename, -4) == '.php') {
