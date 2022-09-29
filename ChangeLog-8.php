@@ -13,8 +13,8 @@ changelog_header(8, $MINOR_VERSIONS);
 <b><?php release_date('29-Sep-2022'); ?></b>
 <ul><li>Core:
 <ul>
-  <li><?php bugfix(81726); ?>: phar wrapper: DOS when using quine gzip file.</li>
-  <li><?php bugfix(81727); ?>: Don't mangle HTTP variable names that clash with ones that have a specific semantic meaning.</li>
+  <li><?php bugfix(81726); ?>: phar wrapper: DOS when using quine gzip file. (CVE-2022-31628)</li>
+  <li><?php bugfix(81727); ?>: Don't mangle HTTP variable names that clash with ones that have a specific semantic meaning. (CVE-2022-31629)</li>
   <li>Fixed bug <?php githubissuel('php/php-src', 9323); ?> (Crash in ZEND_RETURN/GC/zend_call_function) (Tim Starling)</li>
   <li>Fixed bug <?php githubissuel('php/php-src', 9361); ?> (Segmentation fault on script exit #9379).</li>
   <li>Fixed bug <?php githubissuel('php/php-src', 9447); ?> (Invalid class FQN emitted by AST dump for new and class constants in constant expressions).</li>
