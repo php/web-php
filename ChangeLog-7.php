@@ -8,6 +8,19 @@ changelog_header(7, $MINOR_VERSIONS);
 ?>
 <a id="PHP_7_4"></a>
 
+<section class="version" id="7.4.32"><!-- {{{ 7.4.32 -->
+<h3>Version 7.4.32</h3>
+<b><?php release_date('29-Sep-2022'); ?></b>
+<ul><li>Core:
+<ul>
+  <li><?php bugfix(81726); ?>: phar wrapper: DOS when using quine gzip file. (CVE-2022-31628)</li>
+  <li><?php bugfix(81727); ?>: Don't mangle HTTP variable names that clash with ones that have a specific semantic meaning. (CVE-2022-31629)</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
+
+
 <section class="version" id="7.4.30"><!-- {{{ 7.4.30 -->
 <h3>Version 7.4.30</h3>
 <b><?php release_date('09-Jun-2022'); ?></b>
