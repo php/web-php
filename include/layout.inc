@@ -164,21 +164,6 @@ function make_link(string $url, string $linktext = ''): string
     return sprintf("<a href=\"%s\">%s</a>", $url, $linktext ?: $url);
 }
 
-// make_popup_link()
-// return a hyperlink to something, within the site, that pops up a new window
-//
-function make_popup_link($url, $linktext = false, $target = false, $windowprops = "", $extras = false) {
-    return sprintf("<a href=\"%s\" target=\"%s\" onclick=\"window.open('%s','%s','%s');return false;\"%s>%s</a>",
-        htmlspecialchars($url, ENT_QUOTES | ENT_IGNORE),
-        ($target ?: "_new"),
-        htmlspecialchars($url, ENT_QUOTES | ENT_IGNORE),
-        ($target ?: "_new"),
-                $windowprops,
-        ($extras ? ' ' . $extras : ''),
-        ($linktext ?: $url),
-    );
-}
-
 // Print a link for a downloadable file (including filesize)
 function download_link($file, $title): void
 {
@@ -218,20 +203,6 @@ function download_link($file, $title): void
 
 function clean($var) {
   return htmlspecialchars($var, ENT_QUOTES);
-}
-
-// Clean out the content of one user note for printing to HTML
-function clean_note($text)
-{
-    // Highlight PHP source
-    $text = highlight_php(trim($text), true);
-
-    // Turn urls into links
-    return preg_replace(
-        '!((mailto:|(https?|ftp|nntp|news)://).*?)(\s|<|\)|"|\\\\|\'|$)!',
-        '<a href="\1" rel="nofollow" target="_blank">\1</a>\4',
-        $text,
-    );
 }
 
 function display_errors($errors): void
