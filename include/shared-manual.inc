@@ -354,35 +354,26 @@ PAGE_TOOLS;
 function manual_language_chooser($currentlang, $currentpage) {
     global $ACTIVE_ONLINE_LANGUAGES;
 
-    $links = [];
-
-    foreach ($ACTIVE_ONLINE_LANGUAGES as $lang => $name) {
-        $links[] = ["$lang/$currentpage", $name, $lang];
-    }
-
-    // Print out the form with all the options
+    // Prepare the form with all the options
     $othersel = ' selected="selected"';
-    $format_options = function (array $links) use ($currentlang, &$othersel) {
-        $out = '';
-        $tab = str_repeat('  ', 6);
-        foreach ($links as $link) {
-            list($value, $text, $lang) = $link;
-            $selected = '';
-            if ($lang == $currentlang) {
-                $selected = ' selected="selected"';
-                $othersel = '';
-            }
-            $out .= "$tab<option value='$value'$selected>$text</option>\n";
+    $out = [];
+    foreach ($ACTIVE_ONLINE_LANGUAGES as $lang => $text) {
+        $selected = '';
+        if ($lang == $currentlang) {
+            $selected = ' selected="selected"';
+            $othersel = '';
         }
-        return trim($out);
-    };
+        $out[] = "<option value='$lang/$currentpage'$selected>$text</option>";
+    }
+    $out[] = "<option value='help-translate.php'{$othersel}>Other</option>";
+    $format_options = implode("\n" . str_repeat('  ', 6), $out);
+
     $r = <<<CHANGE_LANG
       <form action="/manual/change.php" method="get" id="changelang" name="changelang">
         <fieldset>
           <label for="changelang-langs">Change language:</label>
           <select onchange="document.changelang.submit()" name="page" id="changelang-langs">
-            {$format_options($links)}
-            <option value="help-translate.php"{$othersel}>Other</option>
+            {$format_options}
           </select>
         </fieldset>
       </form>
