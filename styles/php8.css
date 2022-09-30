@@ -436,3 +436,8 @@
   color: rgba(39, 40, 44, 0.7);
   line-height: 1.33;
 }
+
+.example-contents-full {
+  width: 100%;
+  position: relative;
+}
