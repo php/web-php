@@ -914,7 +914,7 @@ changelog_header(8, $MINOR_VERSIONS);
   <li>Fixed bug <?php githubissuel('php/php-src', 9323); ?> (Crash in ZEND_RETURN/GC/zend_call_function) (Tim Starling)</li>
   <li>Fixed bug <?php githubissuel('php/php-src', 9361); ?> (Segmentation fault on script exit #9379).</li>
   <li>Fixed bug <?php githubissuel('php/php-src', 9407); ?> (LSP error in eval'd code refers to wrong class for static type).</li>
-  <li>Fix #81727 (Don't mangle semantically meaningful HTTP var names).</li>
+  <li><?php bugfix(81727); ?>: Don't mangle HTTP variable names that clash with ones that have a specific semantic meaning. (CVE-2022-31629)</li>
 </ul></li>
 <li>DOM:
 <ul>
@@ -935,7 +935,7 @@ changelog_header(8, $MINOR_VERSIONS);
 </ul></li>
 <li>Phar:
 <ul>
-  <li>Fix #81726 (DOS when using quine gzip file).</li>
+  <li><?php bugfix(81726); ?>: phar wrapper: DOS when using quine gzip file. (CVE-2022-31628)</li>
 </ul></li>
 <li>PDO_PGSQL:
 <ul>
