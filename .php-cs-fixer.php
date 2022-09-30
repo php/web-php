@@ -14,6 +14,7 @@ $finder = $config->getFinder()
     ->notPath('include/pregen-confs.inc')
     ->notPath('include/pregen-news.inc')
     ->notPath('include/releases.inc')
+    ->notPath('include/version.inc')
     ->notPath('tests/run-tests.php');
 
 $config
