@@ -906,6 +906,55 @@ changelog_header(8, $MINOR_VERSIONS);
 
 <a id="PHP_8_0"></a>
 
+<section class="version" id="8.0.24"><!-- {{{ 8.0.24 -->
+<h3>Version 8.0.24</h3>
+<b><?php release_date('29-Sep-2022'); ?></b>
+<ul><li>Core:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 9323); ?> (Crash in ZEND_RETURN/GC/zend_call_function) (Tim Starling)</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 9361); ?> (Segmentation fault on script exit #9379).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 9407); ?> (LSP error in eval'd code refers to wrong class for static type).</li>
+  <li>Fix #81727 (Don't mangle semantically meaningful HTTP var names).</li>
+</ul></li>
+<li>DOM:
+<ul>
+  <li><?php bugfix(79451); ?> (DOMDocument-&gt;replaceChild on doctype causes double free).</li>
+</ul></li>
+<li>FPM:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 8885); ?> (FPM access.log with stderr begins to write logs to error_log after daemon reload).</li>
+  <li><?php bugfix(77780); ?> ("Headers already sent..." when previous connection was aborted).</li>
+</ul></li>
+<li>GMP:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 9308); ?> (GMP throws the wrong error when a GMP object is passed to gmp_init()).</li>
+</ul></li>
+<li>Intl:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 9421); ?> (Incorrect argument number for ValueError in NumberFormatter).</li>
+</ul></li>
+<li>Phar:
+<ul>
+  <li>Fix #81726 (DOS when using quine gzip file).</li>
+</ul></li>
+<li>PDO_PGSQL:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 9411); ?> (PgSQL large object resource is incorrectly closed).</li>
+</ul></li>
+<li>Reflection:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 8932); ?> (ReflectionFunction provides no way to get the called class of a Closure).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 9409); ?> (Private method is incorrectly dumped as "overwrites").</li>
+</ul></li>
+<li>Streams:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 9316); ?> ($http_response_header is wrong for long status line).</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
+
+
 <section class="version" id="8.0.23"><!-- {{{ 8.0.23 -->
 <h3>Version 8.0.23</h3>
 <b><?php release_date('01-Sep-2022'); ?></b>
