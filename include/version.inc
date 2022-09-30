@@ -36,9 +36,9 @@ $RELEASES = (function () {
         'date' => '29 Sep 2022',
         'tags' => ['security'], // Set to ['security'] for security releases.
         'sha256' => [
-            'tar.gz'  => '6020843a2f1ce36745d958b3ca17f3fdc42e78a43899f552ab5dbc509ff19232',
+            'tar.gz' => '6020843a2f1ce36745d958b3ca17f3fdc42e78a43899f552ab5dbc509ff19232',
             'tar.bz2' => '908e17cea331d5abb8506b4a89c6392b962e127c391327777c7485eb4b415d43',
-            'tar.xz'  => '8e6a63ac9cdabe4c345b32a54b18f348d9e50a1decda217faf2d61278d22f08b',
+            'tar.xz' => '8e6a63ac9cdabe4c345b32a54b18f348d9e50a1decda217faf2d61278d22f08b',
         ]
     ];
 
