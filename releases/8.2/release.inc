@@ -45,7 +45,8 @@ common_header(message('common_header', $lang));
             <h2 class="php8-h2" id="readonly_classes">
                 Readonly classes
                 <a class="php8-rfc" href="https://wiki.php.net/rfc/readonly_classes">RFC</a>
-                <a class="php8-rfc" href="https://www.php.net/manual/en/migration82.new-features.php#migration82.new-features.core.readonly-classes">Doc</a>
+                <a class="php8-rfc"
+                   href="https://www.php.net/manual/en/migration82.new-features.php#migration82.new-features.core.readonly-classes">Doc</a>
             </h2>
             <div class="php8-compare__main">
                 <div class="php8-compare__block example-contents">
@@ -96,56 +97,11 @@ PHP
         </div>
 
         <div class="php8-compare">
-            <h2 class="php8-h2" id="readonly_classes">
-                Allow <code>null</code>, <code>false</code>, and <code>true</code> as stand-alone types
-                <a class="php8-rfc" href="https://wiki.php.net/rfc/null-false-standalone-types">RFC</a>
-                <a class="php8-rfc" href="https://wiki.php.net/rfc/true-type">RFC</a>
-            </h2>
-            <div class="php8-compare__main">
-                <div class="php8-compare__block example-contents">
-                    <div class="php8-compare__label">PHP &lt; 8.2</div>
-                    <div class="php8-code phpcode">
-                        <?php highlight_php_trimmed(
-                            <<<'PHP'
-class Falsy
-{
-    public function almostFalse(): string|bool { /* ... */ *}
-
-    public function almostTrue(): string|bool { /* ... */ *}
-
-    public function almostNull(): string|null { /* ... */ *}
-}
-PHP
-
-                        ); ?>
-                    </div>
-                </div>
-                <div class="php8-compare__arrow"></div>
-                <div class="php8-compare__block example-contents">
-                    <div class="php8-compare__label php8-compare__label_new">PHP 8.2</div>
-                    <div class="php8-code phpcode">
-                        <?php highlight_php_trimmed(
-                            <<<'PHP'
-class Falsy
-{
-    public function alwaysFalse(): false { /* ... */ *}
-
-    public function alwaysTrue(): true { /* ... */ *}
-
-    public function alwaysNull(): null { /* ... */ *}
-}
-PHP
-                        ); ?>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="php8-compare">
-            <h2 class="php8-h2" id="readonly_classes">
+            <h2 class="php8-h2" id="dnf_types">
                 Disjunctive Normal Form (DNF) Types
                 <a class="php8-rfc" href="https://wiki.php.net/rfc/dnf_types">RFC</a>
-                <a class="php8-rfc" href="https://www.php.net/manual/en/migration82.new-features.php#migration82.new-features.core.type-system">Doc</a>
+                <a class="php8-rfc"
+                   href="https://www.php.net/manual/en/migration82.new-features.php#migration82.new-features.core.type-system">Doc</a>
             </h2>
             <div class="php8-compare__main">
                 <div class="php8-compare__block example-contents">
@@ -201,10 +157,10 @@ PHP
         </div>
 
         <div class="php8-compare">
-            <h2 class="php8-h2" id="readonly_classes">
-                Deprecate dynamic properties
-                <a class="php8-rfc" href="https://wiki.php.net/rfc/deprecate_dynamic_properties">RFC</a>
-                <a class="php8-rfc" href="https://www.php.net/manual/en/migration82.deprecated.php#migration82.deprecated.core.dynamic-properties">Doc</a>
+            <h2 class="php8-h2" id="null_false_true_types">
+                Allow <code>null</code>, <code>false</code>, and <code>true</code> as stand-alone types
+                <a class="php8-rfc" href="https://wiki.php.net/rfc/null-false-standalone-types">RFC</a>
+                <a class="php8-rfc" href="https://wiki.php.net/rfc/true-type">RFC</a>
             </h2>
             <div class="php8-compare__main">
                 <div class="php8-compare__block example-contents">
@@ -212,16 +168,14 @@ PHP
                     <div class="php8-code phpcode">
                         <?php highlight_php_trimmed(
                             <<<'PHP'
-class User
+class Falsy
 {
-    public $name;
+    public function almostFalse(): string|bool { /* ... */ *}
+
+    public function almostTrue(): string|bool { /* ... */ *}
+
+    public function almostNull(): string|null { /* ... */ *}
 }
-
-$user = new User();
-$user->last_name = 'Doe';
-
-$user = new stdClass();
-$user->last_name = 'Doe';
 PHP
 
                         ); ?>
@@ -233,16 +187,58 @@ PHP
                     <div class="php8-code phpcode">
                         <?php highlight_php_trimmed(
                             <<<'PHP'
-class User
+class Falsy
 {
-    public $name;
+    public function alwaysFalse(): false { /* ... */ *}
+
+    public function alwaysTrue(): true { /* ... */ *}
+
+    public function alwaysNull(): null { /* ... */ *}
+}
+PHP
+                        ); ?>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="php8-compare">
+            <h2 class="php8-h2" id="random_extension">
+                New "Random" extension
+                <a class="php8-rfc" href="https://wiki.php.net/rfc/rng_extension">RFC</a>
+                <a class="php8-rfc" href="https://wiki.php.net/rfc/random_extension_improvement">RFC</a>
+                <a class="php8-rfc"
+                   href="https://www.php.net/manual/en/migration82.new-features.php#migration82.new-features.random">Doc</a>
+            </h2>
+            <div class="php8-compare__main">
+                <div class="example-contents example-contents-full">
+                    <div class="php8-compare__label php8-compare__label_new">PHP 8.2</div>
+                    <div class="php8-code phpcode">
+                        <?php highlight_php_trimmed(
+                            <<<'PHP'
+$blueprintRng = new \Random\Engine\Xoshiro256StarStar("Example seed string with 256 Bit");
+
+$fibers = [];
+for ($i = 0; $i < 8; $i++) {
+	$fiberRng = clone $blueprintRng;
+	$blueprintRng->jump(); // Moves the blueprint ahead 2**128 steps, giving the Fiber 2**128 unique values without needing to reseed.
+
+	$fibers[] = new Fiber(function () use ($fiberRng, $i): void {
+		$randomizer = new \Random\Randomizer($fiberRng);
+
+		echo "$i: " . $randomizer->getInt(0, 100), PHP_EOL;
+	});
 }
 
-$user = new User();
-$user->last_name = 'Doe'; // Deprecated notice
+// The randomizer will use a CSPRNG by default.
+$randomizer = new \Random\Randomizer();
 
-$user = new stdClass();
-$user->last_name = 'Doe'; // Still allowed
+// Even though the fibers execute in a random order, they will print the same value
+// each time, because each has its own unique instance of the RNG.
+$fibers = $randomizer->shuffleArray($fibers);
+foreach ($fibers as $fiber) {
+	$fiber->start();
+}
 PHP
                         ); ?>
                     </div>
@@ -250,17 +246,20 @@ PHP
             </div>
         </div>
         <div class="php8-compare__content">
-            <p>The creation of dynamic properties is deprecated to help avoid mistakes and typos, unless the class opts
-                in by using the <code>#[\AllowDynamicProperties]</code> attribute. <code>stdClass</code> allows dynamic
-                properties.</p>
-            <p>Usage of the <code>__get</code>/<code>__set</code> magic methods is not affected by this change.</p>
+            <p>The "random" extension provides a new object-oriented API to random number generation. Instead of relying
+                on a globally seeded random number generator (RNG) using the Mersenne Twister algorithm the
+                object-oriented API provides several classes ("Engine"s) providing access to modern algorithms that
+                store their state within objects to allow for multiple independent seedable sequences.</p>
+            <p>The <code>\Random\Randomizer</code> class provides a high level interface to use the engine's randomness
+                to generate a random integer, to shuffle an array or string, to select random array keys and more.</p>
         </div>
 
         <div class="php8-compare">
-            <h2 class="php8-h2" id="readonly_classes">
+            <h2 class="php8-h2" id="constants_in_traits">
                 Constants in traits
                 <a class="php8-rfc" href="https://wiki.php.net/rfc/constants_in_traits">RFC</a>
-                <a class="php8-rfc" href="https://www.php.net/manual/en/migration82.new-features.php#migration82.new-features.core.constant-in-traits">Doc</a>
+                <a class="php8-rfc"
+                   href="https://www.php.net/manual/en/migration82.new-features.php#migration82.new-features.core.constant-in-traits">Doc</a>
             </h2>
             <div class="php8-compare__main">
                 <div class="php8-compare__block example-contents">
@@ -321,10 +320,11 @@ PHP
         </div>
 
         <div class="php8-compare">
-            <h2 class="php8-h2" id="readonly_classes">
-                Deprecate <code>${}</code> string interpolation
-                <a class="php8-rfc" href="https://wiki.php.net/rfc/deprecate_dollar_brace_string_interpolation">RFC</a>
-                <a class="php8-rfc" href="https://www.php.net/manual/en/migration82.deprecated.php#migration82.deprecated.core.dollar-brace-interpolation">Doc</a>
+            <h2 class="php8-h2" id="deprecate_dynamic_properties">
+                Deprecate dynamic properties
+                <a class="php8-rfc" href="https://wiki.php.net/rfc/deprecate_dynamic_properties">RFC</a>
+                <a class="php8-rfc"
+                   href="https://www.php.net/manual/en/migration82.deprecated.php#migration82.deprecated.core.dynamic-properties">Doc</a>
             </h2>
             <div class="php8-compare__main">
                 <div class="php8-compare__block example-contents">
@@ -332,10 +332,16 @@ PHP
                     <div class="php8-code phpcode">
                         <?php highlight_php_trimmed(
                             <<<'PHP'
-var_dump("Hello {$world}");
-var_dump("Hello $world");
-var_dump("Hello ${world}");
-var_dump("Hello ${(world)}");
+class User
+{
+    public $name;
+}
+
+$user = new User();
+$user->last_name = 'Doe';
+
+$user = new stdClass();
+$user->last_name = 'Doe';
 PHP
 
                         ); ?>
@@ -347,53 +353,16 @@ PHP
                     <div class="php8-code phpcode">
                         <?php highlight_php_trimmed(
                             <<<'PHP'
-var_dump("Hello {$world}");
-var_dump("Hello $world");
-var_dump("Hello ${world}"); // Deprecated notice
-var_dump("Hello ${(world)}"); // Deprecated notice
-PHP
-                        ); ?>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="php8-compare">
-            <h2 class="php8-h2" id="readonly_classes">
-                New "Random" extension
-                <a class="php8-rfc" href="https://wiki.php.net/rfc/rng_extension">RFC</a>
-                <a class="php8-rfc" href="https://wiki.php.net/rfc/random_extension_improvement">RFC</a>
-                <a class="php8-rfc" href="https://www.php.net/manual/en/migration82.new-features.php#migration82.new-features.random">Doc</a>
-            </h2>
-            <div class="php8-compare__main">
-                <div class="example-contents example-contents-full">
-                    <div class="php8-compare__label php8-compare__label_new">PHP 8.2</div>
-                    <div class="php8-code phpcode">
-                        <?php highlight_php_trimmed(
-                            <<<'PHP'
-$blueprintRng = new \Random\Engine\Xoshiro256StarStar("Example seed string with 256 Bit");
-
-$fibers = [];
-for ($i = 0; $i < 8; $i++) {
-	$fiberRng = clone $blueprintRng;
-	$blueprintRng->jump(); // Moves the blueprint ahead 2**128 steps, giving the Fiber 2**128 unique values without needing to reseed.
-
-	$fibers[] = new Fiber(function () use ($fiberRng, $i): void {
-		$randomizer = new \Random\Randomizer($fiberRng);
-
-		echo "$i: " . $randomizer->getInt(0, 100), PHP_EOL;
-	});
+class User
+{
+    public $name;
 }
 
-// The randomizer will use a CSPRNG by default.
-$randomizer = new \Random\Randomizer();
+$user = new User();
+$user->last_name = 'Doe'; // Deprecated notice
 
-// Even though the fibers execute in a random order, they will print the same value
-// each time, because each has its own unique instance of the RNG.
-$fibers = $randomizer->shuffleArray($fibers);
-foreach ($fibers as $fiber) {
-	$fiber->start();
-}
+$user = new stdClass();
+$user->last_name = 'Doe'; // Still allowed
 PHP
                         ); ?>
                     </div>
@@ -401,13 +370,12 @@ PHP
             </div>
         </div>
         <div class="php8-compare__content">
-            <p>The "random" extension provides a new object-oriented API to random number generation. Instead of relying
-                on a globally seeded random number generator (RNG) using the Mersenne Twister algorithm the
-                object-oriented API provides several classes ("Engine"s) providing access to modern algorithms that
-                store their state within objects to allow for multiple independent seedable sequences.</p>
-            <p>The <code>\Random\Randomizer</code> class provides a high level interface to use the engine's randomness
-                to generate a random integer, to shuffle an array or string, to select random array keys and more.</p>
+            <p>The creation of dynamic properties is deprecated to help avoid mistakes and typos, unless the class opts
+                in by using the <code>#[\AllowDynamicProperties]</code> attribute. <code>stdClass</code> allows dynamic
+                properties.</p>
+            <p>Usage of the <code>__get</code>/<code>__set</code> magic methods is not affected by this change.</p>
         </div>
+
     </section>
 
     <section class="php8-section center php8-section_light php8-columns">
@@ -441,6 +409,7 @@ PHP
             </h2>
             <div class="php8-compare__content">
                 <ul>
+                    <li>Deprecated <code>${}</code> string interpolation.</li>
                     <li>Deprecated <code>utf8_encode</code> and <code>utf8_decode</code> functions.</li>
                     <li>Methods <code>DateTime::createFromImmutable</code> and <code>DateTimeImmutable::createFromMutable</code>
                         has a tentative return type of <code>static</code>.
