@@ -89,7 +89,9 @@ site_header("Thanks", ["current" => "community"]);
     </li>
 
     <li class="thanks">
-        <a href="https://www.servercentral.net" class="thanks__logo thanks__logo--white"></a>
+        <a href="https://www.servercentral.net" class="thanks__logo">
+            <img src="images/sponsors/servercentral.svg" alt="Spry">
+        </a>
         <section>
             <strong class="thanks__heading"><a href="https://www.servercentral.net">Server Central</a></strong>
             <p class="thanks__description">
