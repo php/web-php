@@ -512,4 +512,95 @@ div.elephpants img:focus {
   color: #fff;
 }
 
+.thanks-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 2rem 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+@media (min-width: 980px) {
+  .thanks-list {
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+  }
+}
+
+.thanks {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 1rem;
+  break-inside: avoid;
+  box-shadow: #dddddd 0 .125rem .5rem;
+  border-radius: .25rem;
+  padding: 1rem;
+  background: #F9F9F9;
+}
+@media (min-width: 425px) {
+  .thanks {
+    flex-direction: row;
+  }
+}
+
+.thanks__logo {
+  border: 0;
+  background: #F9F9F9;
+  border-radius: .25rem;
+  padding: .5rem;
+  flex: 0 0 7.5rem;
+  min-width: 5rem;
+  min-height: 5rem;
+  max-height: 5rem;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  align-self: center;
+  overflow: hidden;
+}
+.thanks__logo--white {
+  background: #FFFFFF;
+  border: 1px solid #f0f0f0;
+}
+.thanks__logo--dark {
+  background: #152536;
+}
+.thanks__logo--osu {
+  background: #bc450c;
+}
+.thanks__logo--redpill {
+  background: #b73e40;
+}
+@media (min-width: 425px) {
+  .thanks__logo {
+    align-self: start;
+  }
+}
+
+.thanks__logo img {
+  width: 100%;
+  max-height: 100%;
+  transition: transform 300ms ease-in-out;
+}
+.thanks__logo:hover img {
+  transform: scale(1.1);
+}
+
+.thanks__heading {
+  display: block;
+  font-size: 1.15rem;
+  padding: 0 0 1rem 0;
+  text-align: center;
+}
+@media (min-width: 425px) {
+  .thanks__heading {
+    text-align: left;
+    padding: 0 0 .25rem 0;
+  }
+}
+
+.thanks__description {
+  margin: 0
+}
 /* vim: set ts=2 sw=2 et: */
