@@ -8,12 +8,12 @@ if (!isset($df)) {
 }
 
 // Could be a normal download or a manual download file
-$possible_files = array($df, "manual/$df");
+$possible_files = [$df, "manual/$df"];
 
-$site_config = array(
+$site_config = [
     'current' => 'downloads',
-    'css'     => array('mirror.css')
-);
+    'css' => ['mirror.css']
+];
 
 // Find out what is the exact file requested
 $file = false;

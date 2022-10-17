@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom" xmlns:default="http://php.net/ns/news">
+  <title>Longhorn PHP 2022</title>
+  <id>https://www.php.net/archive/2022.php#2022-09-01-2</id>
+  <published>2022-09-01T12:48:32+00:00</published>
+  <updated>2022-09-01T12:48:32+00:00</updated>
+  <link href="https://www.php.net/conferences/index.php#2022-09-01-2" rel="alternate" type="text/html"/>
+  <link href="https://www.longhornphp.com/" rel="via" type="text/html"/>
+  <default:finalTeaserDate xmlns="http://php.net/ns/news">2022-11-03</default:finalTeaserDate>
+  <category term="conferences" label="Conference announcement"/>
+  <default:newsImage xmlns="http://php.net/ns/news" link="https://www.longhornphp.com/" title="Longhorn PHP Logo">longhornphp.png</default:newsImage>
+  <content type="xhtml">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+     Longhorn PHP returns for the fourth year, from November 3-5 2022, in Austin Texas. The three day conference features tutorials and talks across three tracks. The <a href="https://www.longhornphp.com/schedule">full schedule</a> is live -  grab your tickets before October 3rd to get Early Bird pricing!
+    </div>
+  </content>
+</entry>

@@ -42,7 +42,7 @@ function is_emailable_address($email)
  *     real_person@thisispamsendoftheweb.example.com
  */
 function blacklisted($email) {
-    $mosquitoes = array(
+    $mosquitoes = [
         'saradhaaa@gmail.com',
         'mg-tuzi@yahoo.com.cn',
         'bitlifesciences',
@@ -101,8 +101,8 @@ function blacklisted($email) {
         'a@a.com',
         '@insightconferences.com',
         '@conferenceseries.com',
-    );
+    ];
     foreach ($mosquitoes as $m) {
-        if (preg_match('/'.preg_quote($m, '/').'/i',$email)) return true;
+        if (preg_match('/' . preg_quote($m, '/') . '/i',$email)) return true;
     }
 }

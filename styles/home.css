@@ -54,12 +54,12 @@
 }
 
 .hero-btn-primary {
-  background-color: #4f5b93;
+  background-color: var(--dark-blue-color);
   color: #fff !important;
 }
 
 .hero-btn-primary:hover, .hero-btn-primary:focus {
-  background-color: #793862;
+  background-color: var(--dark-magenta-color);
 }
 
 .hero-btn-secondary {
@@ -69,8 +69,8 @@
 }
 
 .hero-btn-secondary:hover, .hero-btn-secondary:focus {
-  background-color: #793862;
-  border-color: #793862;
+  background-color: var(--dark-magenta-color);
+  border-color: var(--dark-magenta-color);
   color: #fff !important;
 }
 
@@ -94,7 +94,7 @@
 }
 
 .hero-versions a {
-    color:#ccc;
+    color: var(--background-text-color);
     border:0;
 }
 

@@ -11,12 +11,19 @@ function gpg_key_get(string $rm): ?string {
                 "      Key fingerprint = 1A4E 8B72 77C4 2E53 DBA9  C7B9 BCAA 30EA 9C0D 5763\n" .
                 "uid                  Anatol Belski <ab@php.net>";
 
-        case 'carusogabriel':
+        case 'carusogabriel-old':
             return
                 "pub   rsa4096 2020-05-09 [SC] [expires: 2024-05-08]\n" .
                 "      BFDD D286 4282 4F81 18EF  7790 9B67 A5C1 2229 118F\n" .
                 "uid           [ultimate] Gabriel Caruso (Release Manager) <carusogabriel@php.net>\n" .
                 "sub   rsa4096 2020-05-09 [E] [expires: 2024-05-08]";
+
+        case 'carusogabriel-new':
+            return
+                "pub   rsa4096 2022-08-30 [SC] [expires: 2024-08-29]\n" .
+                "      2C16 C765 DBE5 4A08 8130  F1BC 4B9B 5F60 0B55 F3B4\n" .
+                "uid           [ultimate] Gabriel Caruso <carusogabriel@php.net>\n" .
+                "sub   rsa4096 2022-08-30 [E] [expires: 2024-08-29]";
 
         case 'cmb':
             return
@@ -109,9 +116,9 @@ function gpg_key_get(string $rm): ?string {
             return
                 "pub   rsa4096 2021-03-26 [SC] [expires: 2030-03-26]\n" .
                 "      E609 13E4 DF20 9907 D8E3  0D96 659A 97C9 CF2A 795A\n" .
-                "uid           [ultimate] Sergey Panteleev <sergey@php.net>\n".
-                "uid           [ultimate] Sergey Panteleev <sergey@s-panteleev.ru>\n".
-                "uid           [ultimate] Sergey Panteleev <sergey@sergeypanteleev.com>\n".
+                "uid           [ultimate] Sergey Panteleev <sergey@php.net>\n" .
+                "uid           [ultimate] Sergey Panteleev <sergey@s-panteleev.ru>\n" .
+                "uid           [ultimate] Sergey Panteleev <sergey@sergeypanteleev.com>\n" .
                 "sub   rsa4096 2021-03-26 [E] [expires: 2025-03-26]";
 
         case 'stas':
@@ -137,7 +144,7 @@ function gpg_key_get_branches(bool $activeOnly): array {
     $branches = [
         '8.2' => ['pierrick', 'ramsey', 'sergey'],
         '8.1' => ['krakjoe', 'ramsey', 'patrickallaert'],
-        '8.0' => ['pollita', 'carusogabriel'],
+        '8.0' => ['pollita', 'carusogabriel-old', 'carusogabriel-new'],
         '7.4' => ['derick', 'petk'],
         '7.3' => ['cmb', 'stas'],
         '7.2' => ['pollita', 'remi', 'cmb'],

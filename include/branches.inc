@@ -9,34 +9,34 @@ include_once __DIR__ . '/version.inc';
  *    - stable:   the end of active support (usually two years after release).
  *    - security: the end of security support (usually release + 3 years).
  */
-$BRANCHES = array(
+$BRANCHES = [
     /* 3.0 is here because version_compare() can't handle the only version in
      * $OLDRELEASES, and it saves another special case in
      * get_branch_security_eol_date(). */
-    '3.0' => array(
+    '3.0' => [
         'security' => '2000-10-20',
-    ),
-    '5.3' => array(
-        'stable'   => '2013-07-11',
+    ],
+    '5.3' => [
+        'stable' => '2013-07-11',
         'security' => '2014-08-14',
-    ),
-    '5.4' => array(
-        'stable'   => '2014-09-14',
+    ],
+    '5.4' => [
+        'stable' => '2014-09-14',
         'security' => '2015-09-03',
-    ),
-    '5.5' => array(
-        'stable'   => '2015-07-10',
+    ],
+    '5.5' => [
+        'stable' => '2015-07-10',
         'security' => '2016-07-21',
-    ),
-    '5.6' => array(
-        'stable'   => '2017-01-19',
+    ],
+    '5.6' => [
+        'stable' => '2017-01-19',
         'security' => '2018-12-31',
-    ),
-    '7.0' => array(
-        'stable'   => '2018-01-04',
+    ],
+    '7.0' => [
+        'stable' => '2018-01-04',
         'security' => '2019-01-10',
-    ),
-);
+    ],
+];
 
 /* Time to keep EOLed branches in the array returned by get_active_branches(),
  * which is used on the front page download links and the supported versions
@@ -49,16 +49,16 @@ function format_interval($from, $to) {
         $to_obj = $to instanceof DateTime ? $to : new DateTime($to);
         $diff = $to_obj->diff($from_obj);
 
-        $times = array();
+        $times = [];
         if ($diff->y) {
-            $times[] = array($diff->y, 'year');
+            $times[] = [$diff->y, 'year'];
             if ($diff->m) {
-                    $times[] = array($diff->m, 'month');
+                    $times[] = [$diff->m, 'month'];
             }
         } elseif ($diff->m) {
-            $times[] = array($diff->m, 'month');
+            $times[] = [$diff->m, 'month'];
         } elseif ($diff->d) {
-            $times[] = array($diff->d, 'day');
+            $times[] = [$diff->d, 'day'];
         } else {
             $eolPeriod = 'midnight';
         }
@@ -96,7 +96,7 @@ function version_number_to_branch(string $version): ?string {
 }
 
 function get_all_branches() {
-    $branches = array();
+    $branches = [];
 
     foreach ($GLOBALS['OLDRELEASES'] as $major => $releases) {
         foreach ($releases as $version => $release) {
@@ -129,7 +129,7 @@ function get_all_branches() {
 }
 
 function get_active_branches($include_recent_eols = true) {
-    $branches = array();
+    $branches = [];
     $now = new DateTime;
 
     foreach ($GLOBALS['RELEASES'] as $major => $releases) {
@@ -162,8 +162,8 @@ function get_active_branches($include_recent_eols = true) {
  * must be in $RELEASES _and_ must be the full version number, not the branch:
  * ie provide array('5.3.29'), not array('5.3'). */
 function get_eol_branches($always_include = null) {
-    $always_include = $always_include ?: array();
-    $branches = array();
+    $always_include = $always_include ?: [];
+    $branches = [];
     $now = new DateTime;
 
     // Gather the last release on each branch into a convenient array.
@@ -171,11 +171,11 @@ function get_eol_branches($always_include = null) {
         foreach ($releases as $version => $release) {
             if ($branch = version_number_to_branch($version)) {
                 if (!isset($branches[$major][$branch]) || version_compare($version, $branches[$major][$branch]['version'], 'gt')) {
-                    $branches[$major][$branch] = array(
+                    $branches[$major][$branch] = [
                         'date' => strtotime($release['date']),
                         'link' => "/releases#$version",
                         'version' => $version,
-                    );
+                    ];
                 }
             }
         }
@@ -209,11 +209,11 @@ function get_eol_branches($always_include = null) {
             if (isset($GLOBALS['RELEASES'][$major][$version])) {
                 $release = $GLOBALS['RELEASES'][$major][$version];
                 if ($branch = version_number_to_branch($version)) {
-                    $branches[$major][$branch] = array(
+                    $branches[$major][$branch] = [
                         'date' => strtotime($release['source'][0]['date']),
                         'link' => "/downloads#v$version",
                         'version' => $version,
-                    );
+                    ];
                 }
             }
         }

@@ -9,7 +9,7 @@
 function get_actual_download_file($file)
 {
     // Could be a normal download or a manual download file
-    $possible_files = array($file => true, "manual/$file" => false);
+    $possible_files = [$file => true, "manual/$file" => false];
 
     // Find out what is the exact file requested
     $found = false;

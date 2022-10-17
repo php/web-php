@@ -8,6 +8,111 @@ changelog_header(8, $MINOR_VERSIONS);
 ?>
 <a id="PHP_8_1"></a>
 
+<section class="version" id="8.1.11"><!-- {{{ 8.1.11 -->
+<h3>Version 8.1.11</h3>
+<b><?php release_date('29-Sep-2022'); ?></b>
+<ul><li>Core:
+<ul>
+  <li><?php bugfix(81726); ?>: phar wrapper: DOS when using quine gzip file. (CVE-2022-31628)</li>
+  <li><?php bugfix(81727); ?>: Don't mangle HTTP variable names that clash with ones that have a specific semantic meaning. (CVE-2022-31629)</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 9323); ?> (Crash in ZEND_RETURN/GC/zend_call_function) (Tim Starling)</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 9361); ?> (Segmentation fault on script exit #9379).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 9447); ?> (Invalid class FQN emitted by AST dump for new and class constants in constant expressions).</li>
+</ul></li>
+<li>DOM:
+<ul>
+  <li><?php bugfix(79451); ?> (DOMDocument-&gt;replaceChild on doctype causes double free).</li>
+</ul></li>
+<li>FPM:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 8885); ?> (FPM access.log with stderr begins to write logs to error_log after daemon reload).</li>
+  <li><?php bugfix(77780); ?> ("Headers already sent..." when previous connection was aborted).</li>
+</ul></li>
+<li>GMP:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 9308); ?> (GMP throws the wrong error when a GMP object is passed to gmp_init()).</li>
+</ul></li>
+<li>Intl:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 9421); ?> (Incorrect argument number for ValueError in NumberFormatter).</li>
+</ul></li>
+<li>PCRE:
+<ul>
+  <li>Fixed pcre.jit on Apple Silicon.</li>
+</ul></li>
+<li>PDO_PGSQL:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 9411); ?> (PgSQL large object resource is incorrectly closed).</li>
+</ul></li>
+<li>Reflection:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 8932); ?> (ReflectionFunction provides no way to get the called class of a Closure).</li>
+</ul></li>
+<li>Streams:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 9316); ?> ($http_response_header is wrong for long status line).</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
+
+
+<section class="version" id="8.1.10"><!-- {{{ 8.1.10 -->
+<h3>Version 8.1.10</h3>
+<b><?php release_date('01-Sep-2022'); ?></b>
+<ul><li>Core:
+<ul>
+  <li>Fixed --CGI-- support of run-tests.php.</li>
+  <li>Fixed incorrect double to long casting in latest clang.</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 9266); ?> (GC root buffer keeps growing when dtors are present).</li>
+</ul></li>
+<li>Date:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 8730); ?> (DateTime::diff miscalculation is same time zone of different type).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 8964); ?> (DateTime object comparison after applying delta less than 1 second).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 9106); ?>: (DateInterval 1.5s added to DateTimeInterface is rounded down since PHP 8.1.0).</li>
+  <li><?php bugfix(81263); ?> (Wrong result from DateTimeImmutable::diff).</li>
+</ul></li>
+<li>DBA:
+<ul>
+  <li>Fixed LMDB driver memory leak on DB creation failure.</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 9155); ?> (dba_open("non-existing", "c-", "flatfile") segfaults).</li>
+</ul></li>
+<li>IMAP:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 9309); ?> (Segfault when connection is used after imap_close()).</li>
+</ul></li>
+<li>Intl:
+<ul>
+  <li>Fixed IntlDateFormatter::formatObject() parameter type.</li>
+</ul></li>
+<li>MBString:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 9008); ?> (mb_detect_encoding(): wrong results with null $encodings).</li>
+</ul></li>
+<li>OPcache:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 9033); ?> (Loading blacklist file can fail due to negative length).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 9164); ?> (Segfault in zend_accel_class_hash_copy).</li>
+</ul></li>
+<li>PDO_SQLite:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 9032); ?> (SQLite3 authorizer crashes on NULL values).</li>
+</ul></li>
+<li>SQLite3:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 9032); ?> (SQLite3 authorizer crashes on NULL values).</li>
+</ul></li>
+<li>Streams:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 8472); ?> (The resource returned by stream_socket_accept may have incorrect metadata).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 8409); ?> (SSL handshake timeout leaves persistent connections hanging).</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
+
+
 <section class="version" id="8.1.9"><!-- {{{ 8.1.9 -->
 <h3>Version 8.1.9</h3>
 <b><?php release_date('04-Aug-2022'); ?></b>
@@ -40,12 +145,12 @@ changelog_header(8, $MINOR_VERSIONS);
 </ul></li>
 <li>OPcache:
 <ul>
-  <li>Fixed bug <?php githubissuel('php/php-src', 8847); ?> (PHP hanging infinitly at 100% cpu when check php syntaxe of a valid file).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 8847); ?> (PHP hanging infinitly at 100% cpu when check php syntax of a valid file).</li>
   <li>Fixed bug <?php githubissuel('php/php-src', 8030); ?> (Segfault with JIT and large match/switch statements).</li>
 </ul></li>
 <li>Reflection:
 <ul>
-  <li>Fixed bug <?php githubissuel('php/php-src', 8943); ?> (Fixed Reflection::getModifiersNames() with readonly modifier).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 8943); ?> (Fixed Reflection::getModifierNames() with readonly modifier).</li>
 </ul></li>
 <li>Standard:
 <ul>
@@ -800,6 +905,97 @@ changelog_header(8, $MINOR_VERSIONS);
 
 
 <a id="PHP_8_0"></a>
+
+<section class="version" id="8.0.24"><!-- {{{ 8.0.24 -->
+<h3>Version 8.0.24</h3>
+<b><?php release_date('29-Sep-2022'); ?></b>
+<ul><li>Core:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 9323); ?> (Crash in ZEND_RETURN/GC/zend_call_function) (Tim Starling)</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 9361); ?> (Segmentation fault on script exit #9379).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 9407); ?> (LSP error in eval'd code refers to wrong class for static type).</li>
+  <li><?php bugfix(81727); ?>: Don't mangle HTTP variable names that clash with ones that have a specific semantic meaning. (CVE-2022-31629)</li>
+</ul></li>
+<li>DOM:
+<ul>
+  <li><?php bugfix(79451); ?> (DOMDocument-&gt;replaceChild on doctype causes double free).</li>
+</ul></li>
+<li>FPM:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 8885); ?> (FPM access.log with stderr begins to write logs to error_log after daemon reload).</li>
+  <li><?php bugfix(77780); ?> ("Headers already sent..." when previous connection was aborted).</li>
+</ul></li>
+<li>GMP:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 9308); ?> (GMP throws the wrong error when a GMP object is passed to gmp_init()).</li>
+</ul></li>
+<li>Intl:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 9421); ?> (Incorrect argument number for ValueError in NumberFormatter).</li>
+</ul></li>
+<li>Phar:
+<ul>
+  <li><?php bugfix(81726); ?>: phar wrapper: DOS when using quine gzip file. (CVE-2022-31628)</li>
+</ul></li>
+<li>PDO_PGSQL:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 9411); ?> (PgSQL large object resource is incorrectly closed).</li>
+</ul></li>
+<li>Reflection:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 8932); ?> (ReflectionFunction provides no way to get the called class of a Closure).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 9409); ?> (Private method is incorrectly dumped as "overwrites").</li>
+</ul></li>
+<li>Streams:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 9316); ?> ($http_response_header is wrong for long status line).</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
+
+
+<section class="version" id="8.0.23"><!-- {{{ 8.0.23 -->
+<h3>Version 8.0.23</h3>
+<b><?php release_date('01-Sep-2022'); ?></b>
+<ul><li>Core:
+<ul>
+  <li>Fixed incorrect double to long casting in latest clang.</li>
+</ul></li>
+<li>DBA:
+<ul>
+  <li>Fixed LMDB driver memory leak on DB creation failure.</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 9155); ?> (dba_open("non-existing", "c-", "flatfile") segfaults).</li>
+</ul></li>
+<li>Intl:
+<ul>
+  <li>Fixed IntlDateFormatter::formatObject() parameter type.</li>
+</ul></li>
+<li>OPcache:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 9033); ?> (Loading blacklist file can fail due to negative length).</li>
+</ul></li>
+<li>PDO_SQLite:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 9032); ?> (SQLite3 authorizer crashes on NULL values).</li>
+</ul></li>
+<li>SQLite3:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 9032); ?> (SQLite3 authorizer crashes on NULL values).</li>
+</ul></li>
+<li>Standard:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 9017); ?> (php_stream_sock_open_from_socket could return NULL).</li>
+</ul></li>
+<li>Streams:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 8472); ?> (The resource returned by stream_socket_accept may have incorrect metadata).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 8409); ?> (SSL handshake timeout leaves persistent connections hanging).</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
+
 
 <section class="version" id="8.0.22"><!-- {{{ 8.0.22 -->
 <h3>Version 8.0.22</h3>

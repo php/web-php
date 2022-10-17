@@ -10,7 +10,7 @@ $SIDEBAR_DATA = '
  under a GPL license.
 </p>
 ';
-site_header("Download Logos", array("current" => "downloads"));
+site_header("Download Logos", ["current" => "downloads"]);
 
 // Print recommended star cell
 function print_star(): void
@@ -22,7 +22,7 @@ function print_star(): void
 function random_bgcolor($min, $max): void
 {
     echo "style=\"background-color: #" .
-         sprintf('%02x%02x%02x', rand($min, $max)*51, rand($min, $max)*51, rand($min, $max)*51) .
+         sprintf('%02x%02x%02x', mt_rand($min, $max) * 51, mt_rand($min, $max) * 51, mt_rand($min, $max) * 51) .
          ";\"";
 }
 ?>

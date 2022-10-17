@@ -42,7 +42,7 @@ function language_choose_code()
 {
     // Contains all the languages picked up by the
     // process in priority order (without repeating codes)
-    $languages = array();
+    $languages = [];
 
     // Default values for languages
     $explicitly_specified = ''; $selected = '';
@@ -52,7 +52,7 @@ function language_choose_code()
         $explicitly_specified = language_add(htmlspecialchars($_REQUEST['lang'], ENT_QUOTES, 'UTF-8'), $languages);
 
         // Set the language in a cookie for a year
-        mirror_setcookie("LAST_LANG", $explicitly_specified, 60*60*24*365);
+        mirror_setcookie("LAST_LANG", $explicitly_specified, 60 * 60 * 24 * 365);
     }
 
     // Specified in a shortcut URL (eg. /en/echo or /pt_br/echo)
@@ -84,7 +84,7 @@ function language_choose_code()
         }
 
         // Set the language in a cookie for a year
-        mirror_setcookie("LAST_LANG", $flang, 60*60*24*365);
+        mirror_setcookie("LAST_LANG", $flang, 60 * 60 * 24 * 365);
     }
 
     // Honor the users own language setting (if available)
@@ -94,7 +94,7 @@ function language_choose_code()
 
     // Specified by the user via the browser's Accept Language setting
     // Samples: "hu, en-us;q=0.66, en;q=0.33", "hu,en-us;q=0.5"
-    $browser_langs = array(); $parsed_langs = array();
+    $browser_langs = []; $parsed_langs = [];
 
     // Check if we have $_SERVER['HTTP_ACCEPT_LANGUAGE'] set and
     // it no longer breaks if you only have one language set :)
@@ -108,7 +108,7 @@ function language_choose_code()
             // If the quality is missing, it is assumed to be 1 according to the RFC
             if (preg_match("!([a-z-]+)(;q=([0-9\\.]+))?!", trim($value), $found)) {
                 $quality = (isset($found[3]) ? (float) $found[3] : 1.0);
-                $browser_langs[] = array($found[1], $quality);
+                $browser_langs[] = [$found[1], $quality];
             }
             unset($found);
         }
@@ -122,10 +122,18 @@ function language_choose_code()
 
         // Translation table for accept-language codes and phpdoc codes
         switch ($langdata[0]) {
-            case "pt-br" : $langdata[0] = 'pt_br'; break;
-            case "zh-cn" : $langdata[0] = 'zh'; break;
-            case "zh-hk" : $langdata[0] = 'hk'; break;
-            case "zh-tw" : $langdata[0] = 'tw'; break;
+            case "pt-br":
+                $langdata[0] = 'pt_br';
+                break;
+            case "zh-cn":
+                $langdata[0] = 'zh';
+                break;
+            case "zh-hk":
+                $langdata[0] = 'hk';
+                break;
+            case "zh-tw":
+                $langdata[0] = 'tw';
+                break;
         }
 
         // We do not support flavors of languages (except the ones above)
@@ -160,7 +168,7 @@ function language_choose_code()
     $selected = $languages[0];
 
     // Return with all found data
-    return array($selected, $explicitly_specified, $parsed_langs);
+    return [$selected, $explicitly_specified, $parsed_langs];
 }
 
 // Add a language to the possible languages' list

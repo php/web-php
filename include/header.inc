@@ -1,10 +1,10 @@
 <?php
-$css_files = array(
+$css_files = [
     '/fonts/Fira/fira.css',
     '/fonts/Font-Awesome/css/fontello.css',
     '/styles/theme-base.css',
     '/styles/theme-medium.css',
-);
+];
 
 if (isset($config['css'])) {
     $css_files = array_merge($css_files, (array) $config['css']);
@@ -31,7 +31,7 @@ if ($config["cache"]) {
     if (is_numeric($config["cache"])) {
         $timestamp = $config["cache"];
     } else {
-        $timestamp = filemtime($_SERVER["DOCUMENT_ROOT"] . "/" .$_SERVER["BASE_PAGE"]);
+        $timestamp = filemtime($_SERVER["DOCUMENT_ROOT"] . "/" . $_SERVER["BASE_PAGE"]);
     }
     $tsstring = gmdate("D, d M Y H:i:s ", $timestamp) . "GMT";
 
@@ -42,7 +42,7 @@ if ($config["cache"]) {
     header("Last-Modified: " . $tsstring);
 }
 if (!isset($config["languages"])) {
-    $config["languages"] = array();
+    $config["languages"] = [];
 }
 
 ?>

@@ -4,19 +4,26 @@ namespace phpweb\News;
 
 class Entry {
     public const CATEGORIES = [
-        'frontpage'   => 'PHP.net frontpage news',
-        'releases'    => 'New PHP release',
+        'frontpage' => 'PHP.net frontpage news',
+        'releases' => 'New PHP release',
         'conferences' => 'Conference announcement',
-        'cfp'         => 'Call for Papers',
+        'cfp' => 'Call for Papers',
     ];
 
     public const WEBROOT = "https://www.php.net";
+
     public const PHPWEB = __DIR__ . '/../../';
+
     public const ARCHIVE_FILE_REL = 'archive/archive.xml';
+
     public const ARCHIVE_FILE_ABS = self::PHPWEB . self::ARCHIVE_FILE_REL;
+
     public const ARCHIVE_ENTRIES_REL = 'archive/entries/';
+
     public const ARCHIVE_ENTRIES_ABS = self::PHPWEB . self::ARCHIVE_ENTRIES_REL;
+
     public const IMAGE_PATH_REL = 'images/news/';
+
     public const IMAGE_PATH_ABS = self::PHPWEB . self::IMAGE_PATH_REL;
 
     protected $title = '';
@@ -35,6 +42,7 @@ class Entry {
         $this->title = $title;
         return $this;
     }
+
     public function setCategories(array $cats): self {
         foreach ($cats as $cat) {
             if (!isset(self::CATEGORIES[$cat])) {
@@ -44,6 +52,7 @@ class Entry {
         $this->categories = $cats;
         return $this;
     }
+
     public function addCategory(string $cat): self {
         if (!isset(self::CATEGORIES[$cat])) {
             throw new \Exception("Unknown category: $cat");
@@ -57,10 +66,12 @@ class Entry {
     public function isConference(): bool {
         return (bool)array_intersect($this->categories, ['cfp', 'conferences']);
     }
+
     public function setConfTime(int $time): self {
         $this->conf_time = $time;
         return $this;
     }
+
     public function setImage(string $path, string $title, ?string $link): self {
         if (basename($path) !== $path) {
             throw new \Exception('path must be a simple file name under ' . self::IMAGE_PATH_REL);
@@ -75,6 +86,7 @@ class Entry {
         ];
         return $this;
     }
+
     public function setContent(string $content): self {
         if (empty($content)) {
             throw new \Exception('Content must not be empty');
@@ -82,6 +94,7 @@ class Entry {
         $this->content = $content;
         return $this;
     }
+
     public function getId(): string {
         return $this->id;
     }
@@ -105,8 +118,8 @@ class Entry {
         self::ce($dom, "id", $archive, [], $item);
         self::ce($dom, "published", date(DATE_ATOM), [], $item);
         self::ce($dom, "updated", date(DATE_ATOM), [], $item);
-        self::ce($dom, "link", null, ['href' => "{$href}#{$this->id}", "rel"  => "alternate", "type" => "text/html"], $item);
-        self::ce($dom, "link", null, ['href' => $link, 'rel'  => 'via', 'type' => 'text/html'], $item);
+        self::ce($dom, "link", null, ['href' => "{$href}#{$this->id}", "rel" => "alternate", "type" => "text/html"], $item);
+        self::ce($dom, "link", null, ['href' => $link, 'rel' => 'via', 'type' => 'text/html'], $item);
 
         if (!empty($this->conf_time)) {
             $item->appendChild($dom->createElementNs("http://php.net/ns/news", "finalTeaserDate", date("Y-m-d", $this->conf_time)));
@@ -165,13 +178,14 @@ class Entry {
 
         return $this;
     }
+
     private static function selectNextId(): string {
         $filename = date("Y-m-d", $_SERVER["REQUEST_TIME"]);
         $count = 0;
         do {
-            ++$count;
+            $count++;
             $id = $filename . "-" . $count;
-            $basename  = "{$id}.xml";
+            $basename = "{$id}.xml";
         } while (file_exists(self::ARCHIVE_ENTRIES_ABS . $basename));
 
         return $id;

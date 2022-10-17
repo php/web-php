@@ -22,7 +22,7 @@ ob_start();
 
 // Flatten major versions out of RELEASES.
 $RELEASED_VERSIONS = array_reduce($RELEASES, 'array_merge', []);
-$FEED_UPDATED =  0;
+$FEED_UPDATED = 0;
 krsort($RELEASED_VERSIONS);
 foreach ($RELEASED_VERSIONS as $version => $release) {
     $published = date(DATE_ATOM, strtotime($release["source"][0]["date"]));
@@ -41,7 +41,7 @@ foreach ($RELEASED_VERSIONS as $version => $release) {
         <summary type="html">There is a new PHP release in town!</summary>
 
 XML;
-    $maxtime = array();
+    $maxtime = [];
     foreach ($release["source"] as $source) {
         if (!isset($source["date"])) {
             continue;
@@ -50,7 +50,7 @@ XML;
         $released = date(DATE_ATOM, $time);
 
         echo "        <link rel=\"enclosure\" title=\"{$source["name"]}\" href=\"/distributions/{$source["filename"]}\">\n";
-        foreach (array('md5', 'sha256') as $hashAlgo) {
+        foreach (['md5', 'sha256'] as $hashAlgo) {
             if (isset($source[$hashAlgo])) {
                 echo "            <php:{$hashAlgo}>{$source[$hashAlgo]}</php:{$hashAlgo}>\n";
             }

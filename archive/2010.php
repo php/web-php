@@ -2,7 +2,7 @@
 $_SERVER['BASE_PAGE'] = 'archive/2010.php';
 include_once __DIR__ . '/../include/prepend.inc';
 news_archive_sidebar();
-site_header("News Archive - 2010", array("cache" => true));
+site_header("News Archive - 2010", ["cache" => true]);
 ?>
 
 <h1>News Archive - 2010</h1>
@@ -765,4 +765,4 @@ class Bar {<br>
     </div>
 </div>
 
-<?php site_footer(array('elephpants' => true, 'sidebar' => $SIDEBAR_DATA));
+<?php site_footer(['elephpants' => true, 'sidebar' => $SIDEBAR_DATA]);

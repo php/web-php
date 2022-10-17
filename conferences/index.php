@@ -3,15 +3,15 @@ $_SERVER['BASE_PAGE'] = 'conferences/index.php';
 include_once __DIR__ . '/../include/prepend.inc';
 include_once __DIR__ . '/../include/pregen-news.inc';
 
-mirror_setcookie("LAST_NEWS", $_SERVER["REQUEST_TIME"], 60*60*24*365);
-site_header("PHP Conferences around the world", array(
+mirror_setcookie("LAST_NEWS", $_SERVER["REQUEST_TIME"], 60 * 60 * 24 * 365);
+site_header("PHP Conferences around the world", [
     'headtags' => '<link rel="alternate" type="application/atom+xml" title="PHP: Conference announcements" href="' . $MYSITE . 'feed.atom">',
-    'current'  => 'community',
-    'css' => array('home.css'),
-));
+    'current' => 'community',
+    'css' => ['home.css'],
+]);
 
 $content = "<div class='home-content'>";
-$frontpage = array();
+$frontpage = [];
 foreach ($NEWS_ENTRIES as $entry) {
     foreach ($entry["category"] as $category) {
         if ($category["term"] == "cfp") {
@@ -28,10 +28,10 @@ $panels = '<p class="prepend"><a href="https://wiki.php.net/conferences">Want to
 
 foreach ($frontpage as $entry) {
     $link = preg_replace('~^(http://php.net/|https://www.php.net/)~', '', $entry["id"]);
-    $id   = parse_url($entry["id"], PHP_URL_FRAGMENT);
+    $id = parse_url($entry["id"], PHP_URL_FRAGMENT);
     $date = date_format(date_create($entry["updated"]), 'Y-m-d');
     $content .= '<div class="newsentry">';
-    $content .= '<h3 class="newstitle title"><a href="'. $MYSITE.$link .'" id="' . $id . '">' . $entry["title"] . '</a></h3>';
+    $content .= '<h3 class="newstitle title"><a href="' . $MYSITE . $link . '" id="' . $id . '">' . $entry["title"] . '</a></h3>';
     $content .= '<div class="newsimage">';
 
     if (isset($entry["newsImage"])) {
@@ -51,9 +51,9 @@ $content .= "</div>";
 echo $content;
 
 site_footer(
-    array(
+    [
         "atom" => "/feed.atom",
         "elephpants" => true,
         "sidebar" => $panels,
-    )
+    ]
 );

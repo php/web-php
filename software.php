@@ -1,7 +1,7 @@
 <?php
 $_SERVER['BASE_PAGE'] = 'software.php';
 include_once __DIR__ . '/include/prepend.inc';
-site_header("PHP Software", array("current" => "help"));
+site_header("PHP Software", ["current" => "help"]);
 ?>
 
 <h1>PHP Software</h1>

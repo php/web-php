@@ -2,9 +2,9 @@
 (function ($uri): void {
     // Special redirect cases not able to be captured in error.php
     $shortcuts = [
-        '/?:'    => '/language.operators.comparison#language.operators.comparison.ternary',
-        '/??'    => '/language.operators.comparison#language.operators.comparison.coalesce',
-        '/??='   => '/language.operators.assignment#language.operators.assignment.other',
+        '/?:' => '/language.operators.comparison#language.operators.comparison.ternary',
+        '/??' => '/language.operators.comparison#language.operators.comparison.coalesce',
+        '/??=' => '/language.operators.assignment#language.operators.assignment.other',
     ];
     if (isset($shortcuts[$uri])) {
         header("Location: {$shortcuts[$uri]}");
@@ -13,7 +13,7 @@
 })($_SERVER['REQUEST_URI'] ?? '');
 
 // Get the modification date of this PHP file
-$timestamps = array(@getlastmod());
+$timestamps = [@getlastmod()];
 
 /*
    The date of prepend.inc represents the age of ALL
@@ -53,10 +53,10 @@ include_once 'include/pregen-confs.inc';
 include_once 'include/pregen-news.inc';
 include_once 'include/version.inc';
 
-mirror_setcookie("LAST_NEWS", $_SERVER["REQUEST_TIME"], 60*60*24*365);
+mirror_setcookie("LAST_NEWS", $_SERVER["REQUEST_TIME"], 60 * 60 * 24 * 365);
 
 $content = "<div class='home-content'>";
-$frontpage = array();
+$frontpage = [];
 foreach ($NEWS_ENTRIES as $entry) {
     foreach ($entry["category"] as $category) {
         if ($category["term"] == "frontpage") {
@@ -69,7 +69,7 @@ foreach ($NEWS_ENTRIES as $entry) {
 }
 foreach ($frontpage as $entry) {
     $link = preg_replace('~^(http://php.net/|https://www.php.net/)~', '', $entry["id"]);
-    $id   = parse_url($entry["id"], PHP_URL_FRAGMENT);
+    $id = parse_url($entry["id"], PHP_URL_FRAGMENT);
     $date = date_create($entry['updated']);
     $date_human = date_format($date, 'd M Y');
     $date_w3c = date_format($date, DATE_W3C);
@@ -92,7 +92,7 @@ $content .= "</div>";
 
 $intro = <<<EOF
   <div class="hero">
-    <img class="hero-logo" src="/images/logos/php-logo-white.svg" width="240" height="120">
+    <img class="hero-logo" src="/images/logos/php-logo-white.svg" alt="php" width="240" height="120">
     <p class="hero-text">A <strong>popular general-purpose scripting language</strong> that is especially suited to web development.<br />Fast, flexible and pragmatic, PHP powers everything from your blog to the most popular websites in the world.</p>
     <div class="hero-actions">
       <a href="/releases/8.1/index.php" class="hero-btn hero-btn-primary">What's new in 8.1</a>
@@ -122,31 +122,31 @@ $meta_image_path = $MYSITE . 'images/meta-image.png';
 $meta_description = "PHP is a popular general-purpose scripting language that powers everything from your blog to the most popular websites in the world.";
 
 site_header("Hypertext Preprocessor",
-    array(
+    [
         'current' => 'home',
-        'headtags' => array(
+        'headtags' => [
             '<link rel="alternate" type="application/atom+xml" title="PHP: Hypertext Preprocessor" href="' . $MYSITE . 'feed.atom">',
             '<script>',
             "function okc(f){var c=[38,38,40,40,37,39,37,39,66,65,13],x=function(){x.c=x.c||Array.apply({},c);x.r=function(){x.c=null};return x.c},h=function(e){if(x()[0]==(e||window.event).keyCode){x().shift();if(!x().length){x.r();f()}}else{x.r()}};window.addEventListener?window.addEventListener('keydown',h,false):document.attachEvent('onkeydown',h)}",
-            "okc(function(){if(document.getElementById){i=document.getElementById('phplogo');i.src='".$MYSITE."images/php_konami.gif'}});",
+            "okc(function(){if(document.getElementById){i=document.getElementById('phplogo');i.src='" . $MYSITE . "images/php_konami.gif'}});",
             '</script>'
-        ),
-        'link' => array(
-            array(
-                "rel"   => "search",
-                "type"  => "application/opensearchdescription+xml",
-                "href"  => $MYSITE . "phpnetimprovedsearch.src",
+        ],
+        'link' => [
+            [
+                "rel" => "search",
+                "type" => "application/opensearchdescription+xml",
+                "href" => $MYSITE . "phpnetimprovedsearch.src",
                 "title" => "Add PHP.net search"
-            ),
-            array(
-                "rel"   => "alternate",
-                "type"  => "application/atom+xml",
-                "href"  => $MYSITE . "releases/feed.php",
+            ],
+            [
+                "rel" => "alternate",
+                "type" => "application/atom+xml",
+                "href" => $MYSITE . "releases/feed.php",
                 "title" => "PHP Release feed"
-            ),
+            ],
 
-        ),
-        'css' => array('home.css'),
+        ],
+        'css' => ['home.css'],
         'intro' => $intro,
         'meta_tags' => <<<META
 <meta name="Description" content="{$meta_description}" />
@@ -165,7 +165,7 @@ site_header("Hypertext Preprocessor",
 <meta property="og:image" content="{$meta_image_path}" />
 <meta property="og:description" content="$meta_description" />
 META
-    )
+    ]
 );
 
 // Print body of home page.
@@ -173,15 +173,15 @@ echo $content;
 
 // Prepare announcements.
 if (is_array($CONF_TEASER)) {
-    $conftype = array(
+    $conftype = [
         'conference' => 'Upcoming conferences',
-        'cfp'        => 'Conferences calling for papers',
-    );
+        'cfp' => 'Conferences calling for papers',
+    ];
     $announcements = "";
     foreach ($CONF_TEASER as $category => $entries) {
         if ($entries) {
             $announcements .= '<div class="panel">';
-            $announcements .= '  <a href="/conferences" class="headline" title="' . $conftype[$category] . '">' . $conftype[$category] .'</a>';
+            $announcements .= '  <a href="/conferences" class="headline" title="' . $conftype[$category] . '">' . $conftype[$category] . '</a>';
             $announcements .= '<div class="body"><ul>';
             foreach (array_slice($entries, 0, 4) as $url => $title) {
                 $title = preg_replace("'([A-Za-z0-9])([\s:\-,]*?)call for(.*?)$'i", "$1", $title);
@@ -218,9 +218,9 @@ SIDEBAR_DATA;
 
 // Print the common footer.
 site_footer(
-    array(
+    [
         "atom" => "/feed.atom", // Add a link to the feed at the bottom
         'elephpants' => true,
         'sidebar' => $SIDEBAR
-    )
+    ]
 );

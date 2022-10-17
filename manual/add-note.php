@@ -7,7 +7,9 @@ include_once __DIR__ . '/../include/posttohost.inc';
 include_once __DIR__ . '/../include/shared-manual.inc';
 include __DIR__ . '/spam_challenge.php';
 
-site_header("Add Manual Note", array('css' => 'add-note.css'));
+use phpweb\UserNotes\UserNote;
+
+site_header("Add Manual Note", ['css' => 'add-note.css']);
 
 // Copy over "sect" and "redirect" from GET to POST
 if (empty($_POST['sect']) && isset($_GET['sect'])) {
@@ -19,7 +21,7 @@ if (empty($_POST['redirect']) && isset($_GET['redirect'])) {
 
 // Decide on whether all vars are present for processing
 $process = true;
-$needed_vars = array('note', 'user', 'sect', 'redirect', 'action', 'func', 'arga', 'argb', 'answer');
+$needed_vars = ['note', 'user', 'sect', 'redirect', 'action', 'func', 'arga', 'argb', 'answer'];
 foreach ($needed_vars as $varname) {
     if (empty($_POST[$varname])) {
         $process = false;
@@ -93,13 +95,13 @@ if ($process) {
         // Post the variables to the central user note script
         $result = posttohost(
             "https://main.php.net/entry/user-note.php",
-            array(
-                'user'    => $user,
-                'note'    => $note,
-                'sect'    => $_POST['sect'],
-                'ip'      => $_SERVER['REMOTE_ADDR'],
+            [
+                'user' => $user,
+                'note' => $note,
+                'sect' => $_POST['sect'],
+                'ip' => $_SERVER['REMOTE_ADDR'],
                 'redirip' => $redirip
-            )
+            ]
         );
 
         // If there is any non-header result, then it is an error
@@ -107,9 +109,9 @@ if ($process) {
             if (strpos($result, '[TOO MANY NOTES]') !== false) {
                 print "<p class=\"formerror\">As a security precaution, we only allow a certain number of notes to be submitted per minute. At this time, this number has been exceeded. Please re-submit your note in about a minute.</p>";
             } elseif (($pos = strpos($result, '[SPAMMER]')) !== false) {
-                $ip       = trim(substr($result, $pos+9));
+                $ip = trim(substr($result, $pos + 9));
                 $spam_url = $ip_spam_lookup_url . $ip;
-                print '<p class="formerror">Your IP is listed in one of the spammers lists we use, which aren\'t controlled by us. More information is available at <a href="'.$spam_url.'">'.$spam_url.'</a>.</p>';
+                print '<p class="formerror">Your IP is listed in one of the spammers lists we use, which aren\'t controlled by us. More information is available at <a href="' . $spam_url . '">' . $spam_url . '</a>.</p>';
             } elseif (strpos($result, '[SPAM WORD]') !== false) {
                 echo '<p class="formerror">Your note contains a prohibited (usually SPAM) word. Please remove it and try again.</p>';
             } elseif (strpos($result, '[CLOSED]') !== false) {
@@ -123,9 +125,8 @@ if ($process) {
         // There was no error returned
         else {
             echo '<p>Your submission was successful -- thanks for contributing! Note ',
-                 'that it will not show up for up to a few hours on some of the <a ',
-                 'href="/mirrors.php">mirrors</a>, but it will find its way to all of ',
-                 'our mirrors in due time.</p>';
+                 'that it will not show up for up to a few hours, ',
+                 'but it will eventually find its way.</p>';
         }
 
         // Print out common footer, and end page
@@ -140,7 +141,7 @@ if ($process) {
     // Print out preview of note
     echo '<p>This is what your entry will look like, roughly:</p>';
     echo '<div id="usernotes">';
-    manual_note_display(time(), $user, $note, false);
+    manual_note_display(new UserNote('', '', '', time(), $user, $note));
     echo '</div><br><br>';
 }
 

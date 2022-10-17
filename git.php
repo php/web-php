@@ -21,7 +21,7 @@ $SIDEBAR_DATA = '
  to contribute.
 </p>
 ';
-site_header("Git Access", array("current" => "community"));
+site_header("Git Access", ["current" => "community"]);
 ?>
 
 <h1>Git Access</h1>
@@ -104,6 +104,9 @@ site_header("Git Access", array("current" => "community"));
   <br>
   <strong>PHP 8.1</strong>:
   <code>git checkout PHP-8.1</code>
+  <br>
+  <strong>PHP 8.2</strong>:
+  <code>git checkout PHP-8.2</code>
   <br>
   <strong>PHP HEAD</strong>:
   <code>git checkout master</code>

@@ -38,29 +38,29 @@ if (isset($_REQUEST['count'])) {
     $count = min((int) $_REQUEST['count'], 50);
 } else {
     header('HTTP/1.1 400', true, 400);
-    print json_encode(array(
+    print json_encode([
         'error' => "Specify how many elephpants to serve via 'count'."
-    ));
+    ]);
     exit;
 }
 
 // read out photo metadata
-$path   = __DIR__ . '/elephpants';
-$json   = @file_get_contents($path . '/flickr.json');
+$path = __DIR__ . '/elephpants';
+$json = @file_get_contents($path . '/flickr.json');
 $photos = json_decode($json, true);
 
 // if no photo data, respond with an error.
 if (!$photos || !is_array($photos)) {
     header('HTTP/1.1 500', true, 500);
-    print json_encode(array(
+    print json_encode([
         'error' => "No elephpant metadata available."
-    ));
+    ]);
     exit;
 }
 
 // prepare requested number of elephpants at random.
 shuffle($photos);
-$elephpants = array();
+$elephpants = [];
 $got = 0;
 foreach ($photos as $photo) {
 
@@ -76,11 +76,11 @@ foreach ($photos as $photo) {
 
     $got++;
     // add photo to response array.
-    $elephpants[] = array(
+    $elephpants[] = [
         'title' => $photo['title'],
-        'url'   => "http://flickr.com/photos/" . $photo['owner'] . "/" . $photo['id'],
-        'data'  => base64_encode(file_get_contents($path . '/' . $photo['filename']))
-    );
+        'url' => "http://flickr.com/photos/" . $photo['owner'] . "/" . $photo['id'],
+        'data' => base64_encode(file_get_contents($path . '/' . $photo['filename']))
+    ];
 }
 
 print json_encode($elephpants);

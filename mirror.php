@@ -22,7 +22,7 @@ $MIRROR_IMAGE = '';
 if (is_official_mirror()) {
 
     // Iterate through possible mirror provider logo types in priority order
-    $types = array("gif", "jpg", "png");
+    $types = ["gif", "jpg", "png"];
     foreach ($types as $ext) {
         // Check if file exists for this type
         if (file_exists("backend/mirror." . $ext)) {
@@ -48,7 +48,7 @@ if (is_official_mirror()) {
         }
     }
 }
-site_header("Information About This PHP Mirror Site", array("current" => "community"));
+site_header("Information About This PHP Mirror Site", ["current" => "community"]);
 ?>
 
 <h1>Information About This PHP Mirror Site</h1>
@@ -66,14 +66,14 @@ site_header("Information About This PHP Mirror Site", array("current" => "commun
 
 <ul>
  <li>This site is <?php echo is_official_mirror() ? "" : "not"; ?> an official PHP.net mirror site</li>
- <li>The mirror site's address is <?php print_link($MYSITE); ?></li>
+ <li>The mirror site's address is <?= make_link($MYSITE)?></li>
 </ul>
 
 <?php if (is_official_mirror()) { ?>
 <h2>Mirror Provider</h2>
 <ul>
  <li>
-  <p>The provider of this mirror is <?php print_link(mirror_provider_url(), mirror_provider()); ?></p>
+  <p>The provider of this mirror is <?= make_link(mirror_provider_url(), mirror_provider())?></p>
   <?php if ($MIRROR_IMAGE) { ?>
   <p><?php echo $MIRROR_IMAGE; ?></p>
   <?php } ?>

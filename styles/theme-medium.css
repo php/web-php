@@ -1,36 +1,31 @@
-/**
- *
- *  COLORS:       | HEX     |
- * ---------------+---------+
- *  light-blue    | #E2E4EF |
- * ---------------+---------+
- *  medium-blue   | #8892BF |
- * ---------------+---------+
- *  dark-blue     | #4F5B93 |
- * ---------------+---------+
- *
- */
-
+:root {
+  --background-color: var(--dark-grey-color);
+  --background-text-color: #CCC;
+  --content-background-color: #F2F2F2;
+  --content-text-color: var(--dark-grey-color);
+}
 
 html {
-  background: #333 url('/images/bg-texture-00.svg');
-  color: #CCC;
+  background-color: var(--background-color);
+  background-image: url('/images/bg-texture-00.svg');
+  color: var(--background-text-color);
 }
+
 #layout-content {
-  background:#F2F2F2;
-  color:#333;
+  background: var(--content-background-color);
+  color: var(--content-text-color);
 }
 #layout-content:not(:only-child) {
   border-right:.25rem solid #666;
 }
 
 abbr {
-  border-color: #8892BF;
+  border-color: var(--medium-blue-color);
 }
 
 h1, h2, h3, h4, h5, h6 {
   font-weight: 500;
-  color:#333
+  color: var(--content-text-color)
 }
 header.title,
 h1:after,
@@ -50,7 +45,7 @@ h3:after {
 
 a:link,
 a:visited {
-  color: #ccc;
+  color: var(--background-text-color);
 }
 #layout-content a:link,
 #layout-content a:visited {
@@ -60,8 +55,8 @@ a:hover,
 a:focus,
 #layout-content a:hover,
 #layout-content a:focus {
-  color: #AE508D;
-  border-color: #AE508D;
+  color: var(--medium-magenta-color);
+  border-color: var(--medium-magenta-color);
   outline:0;
 }
 
@@ -79,7 +74,7 @@ dl.qandaentry {
 }
 
 h1.refname {
-  color: #793862;
+  color: var(--dark-magenta-color);
 }
 
 
@@ -109,10 +104,10 @@ h1.refname {
 
 .title a,
 .title {
-  color: #793862;
+  color: var(--dark-magenta-color);
 }
 .title time {
-  color: #333;
+  color: var(--content-text-color);
 }
 
 .methodname b,
@@ -146,7 +141,7 @@ div.tip {
 }
 blockquote.note {
   background-color: #E6E6E6;
-  border-color: #ccc;
+  border-color: var(--background-text-color);
 }
 div.caution {
   background: #fcfce9;
@@ -195,14 +190,14 @@ div.warning a:focus {
 /* {{{ Navbar */
 .navbar .nav > li > a:focus,
 .navbar .nav > li > a:hover {
-  color: #333333;
+  color: var(--dark-grey-color);
 }
 .navbar .nav > .active > a {
   box-shadow: inset 0 3px 8px rgba(0, 0, 0, 0.125);
 }
 .navbar .brand,
 .navbar .nav > li > a {
-  color: #E2E4EF;
+  color: var(--light-blue-color);
   border:0;
   text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
 }
@@ -221,11 +216,11 @@ div.warning a:focus {
 .navbar .nav .active > a:hover,
 .navbar .nav .active > a:focus {
   color: #fff;
-  background-color: #4F5B93;
+  background-color: var(--dark-blue-color);
 }
 .navbar .navbar-search .search-query {
   background-color: #fff;
-  color: #333;
+  color: var(--dark-grey-color);
   text-shadow: 0 1px 0 #fff;
   border:0;
   border-radius:2px;
@@ -244,8 +239,8 @@ div.warning a:focus {
   color: #999;
 }
 .navbar {
-  border-color:#4F5B93;
-  background:#8892BF;
+  border-color:var(--dark-blue-color);
+  background:var(--medium-blue-color);
   box-shadow: 0 .25em .25em  rgba(0,0,0,.1);
 }
 .navbar .brand {
@@ -260,12 +255,12 @@ div.warning a:focus {
 
 /* {{{ User notes */
 #usernotes .count {
-  background-color: #793862;
+  background-color: var(--dark-magenta-color);
   color: #fff;
   border-radius: 4px;
 }
 #usernotes .note .name {
-  color: #333;
+  color: var(--content-text-color);
 }
 #usernotes .note .date {
   color: #666;
@@ -277,7 +272,7 @@ div.warning a:focus {
   transition: opacity 0.4s;
 }
 #usernotes .note .votes .tally {
-  color: #333;
+  color: var(--content-text-color);
 }
 #usernotes .note .votes a {
   transition: border 0.4s;
@@ -288,13 +283,13 @@ div.warning a:focus {
 /* {{{ Tables */
 .doctable,
 .segmentedlist {
-  border-color: #ccc;
+  border-color: var(--background-text-color);
 }
 .doctable thead tr,
 .segmentedlist thead tr {
   border-color: #C4C9DF;
-  border-bottom-color: #8892BF;
-  color: #333;
+  border-bottom-color: var(--medium-blue-color);
+  color: var(--content-text-color);
 }
 .doctable th,
 .segmentedlist th {
@@ -302,7 +297,7 @@ div.warning a:focus {
 }
 .doctable tr,
 .segmentedlist tr {
-  border-color: #ccc
+  border-color: var(--background-text-color)
 }
 .doctable tbody tr:nth-child(odd),
 .segmentedlist tbody tr:nth-child(odd) {
@@ -340,7 +335,7 @@ div.warning a:focus {
   background-color: transparent;
 }
 .phpcode span.comment {
-  color: #4F5B93;
+  color: var(--dark-blue-color);
   background-color: transparent;
 }
 div.phpcode span.default {
@@ -361,7 +356,7 @@ div.phpcode span.string {
 {
   background-color: #E6E6E6;
   border-radius: 2px;
-  color: #333;
+  color: var(--content-text-color);
   padding: 2px 4px;
   white-space: nowrap;
   font-style: normal;
@@ -386,14 +381,14 @@ var.reset
 }
 #layout-content a.genanchor:hover,
 #layout-content a.genanchor:focus {
-    color: #333;
+    color: var(--content-text-color);
     border-bottom: none;
 }
 /* }}} */
 
 
 .warn {
-  border-color: #4F5B93;
+  border-color: var(--dark-blue-color);
   background-color: #fff;
   border-radius: 0 0 2px 2px;
 }
@@ -410,7 +405,7 @@ aside.tips h3 {
   color:#E6E6E6;
 }
 aside.tips a {
-  color:#ccc;
+  color: var(--background-text-color);
   border-bottom:1px dotted #666;
 }
 aside.tips .panel > a:after,
@@ -424,16 +419,16 @@ aside.tips .panel > a {
   border-bottom: none;
 }
 aside.tips .panel > a:hover:after {
-  border-color:#AE508D;
+  border-color:var(--medium-magenta-color);
 }
 aside.tips a:hover,
 aside.tips a:focus {
-  color:#AE508D;
-  border-color:#AE508D;
+  color:var(--medium-magenta-color);
+  border-color:var(--medium-magenta-color);
 }
 
 .soft-deprecation-notice {
-  color: #333;
+  color: var(--dark-grey-color);
   border-color: #eecdde;
   background-color: #f9ecf2;
 }
@@ -458,8 +453,8 @@ aside.tips a:focus {
   border-top-color:#666;
 }
 .layout-menu ul.child-menu-list li.current a {
-  color:#AE508D;
-  border-bottom-color:#AE508D;
+  color:var(--medium-magenta-color);
+  border-bottom-color:var(--medium-magenta-color);
 }
 .layout-menu ul.child-menu-list a {
   border-color: #666;
@@ -489,7 +484,7 @@ div.elephpants img:focus {
 
 .mirror {
 	position: relative;
-	border: 1px solid #ccc;
+	border: 1px solid var(--background-text-color);
 	padding: 20px;
 	margin: 5px;
 }

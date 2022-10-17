@@ -6,7 +6,7 @@ include_once __DIR__ . '/include/posttohost.inc';
 
 // Force the account requests to php.net
 if (!is_primary_site()) {
-    header('Location: https://www.php.net/'.$_SERVER['BASE_PAGE']);
+    header('Location: https://www.php.net/' . $_SERVER['BASE_PAGE']);
     exit;
 }
 
@@ -24,15 +24,15 @@ $SIDEBAR_DATA = '
  <a href="/git.php">Git</a>. No Git account is required.
 </p>
 ';
-site_header("Using Git for PHP Development", array("current" => "community"));
+site_header("Using Git for PHP Development", ["current" => "community"]);
 
-$groups = array(
+$groups = [
     "none" => "Choose One",
-    "php"  => "PHP Group",
+    "php" => "PHP Group",
     "pear" => "PEAR Group",
     "pecl" => "PECL Group",
-    "doc"  => "Doc Group",
-);
+    "doc" => "Doc Group",
+];
 
 ?>
 
@@ -49,7 +49,7 @@ if (count($_POST) && (!isset($_POST['purpose']) || !is_array($_POST['purpose']) 
     if (empty($_POST['id'])) {
         $error .= "You must supply a desired Git user id. <br>";
     } elseif (!preg_match('!^[a-z]\w+$!', $_POST['id']) || strlen($_POST['id']) > 16) {
-        $error .= "Your user id must be from 1-16 characters long, start with ".
+        $error .= "Your user id must be from 1-16 characters long, start with " .
                   "a letter and contain nothing but a-z, 0-9, and _ <br>";
     }
     if (empty($_POST['fullname'])) {
@@ -78,15 +78,15 @@ if (count($_POST) && (!isset($_POST['purpose']) || !is_array($_POST['purpose']) 
     if (!$error) {
         $error = posttohost(
             "https://main.php.net/entry/svn-account.php",
-            array(
+            [
                 "username" => $_POST['id'],
-                "name"     => $_POST['fullname'],
-                "email"    => $_POST['email'],
-                "passwd"   => $_POST['password'],
-                "note"     => $_POST['realpurpose'],
-                "yesno"    => $_POST['yesno'],
-                "group"    => $_POST['group'],
-            )
+                "name" => $_POST['fullname'],
+                "email" => $_POST['email'],
+                "passwd" => $_POST['password'],
+                "note" => $_POST['realpurpose'],
+                "yesno" => $_POST['yesno'],
+                "group" => $_POST['group'],
+            ]
         );
         // Error while posting
         if ($error) {
@@ -102,7 +102,7 @@ if (count($_POST) && (!isset($_POST['purpose']) || !is_array($_POST['purpose']) 
 ?>
 <p>
  Thank you. Your request has been sent. You should hear something within the
- next week or so. If you haven't heard anything by around <?php echo date('l, F jS', time()+604800); ?>
+ next week or so. If you haven't heard anything by around <?php echo date('l, F jS', time() + 604800); ?>
  then please send an email to the appropriate <a href="/mailing-lists.php">mailing list</a>:
 </p>
 <ul>
@@ -360,10 +360,10 @@ EOT;
  (check all that apply)</th>
  <td>
 <?php
-$purposes = array("Learning PHP", "Coding in PHP", "Reading the PHP source",
+$purposes = ["Learning PHP", "Coding in PHP", "Reading the PHP source",
     "Using PHP extensions", "Creating experimental PHP extensions",
     "Submitting a patch to PHP", "Adding notes to the documentation",
-    "Writing web pages with PHP");
+    "Writing web pages with PHP"];
 
 foreach ($purposes as $i => $p) { ?>
   <input type="checkbox" name="purpose[<?php echo $i?>]" value="1"

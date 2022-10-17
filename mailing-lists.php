@@ -39,7 +39,7 @@ $SIDEBAR_DATA = '
 </ul>
 ';
 
-site_header("Mailing Lists", array("current" => "help"));
+site_header("Mailing Lists", ["current" => "help"]);
 
 // Some mailing list is selected for [un]subscription
 if (isset($_POST['action'])) {
@@ -73,13 +73,13 @@ if (isset($_POST['action'])) {
         // Get in contact with main server to [un]subscribe the user
         $result = posttohost(
             "https://main.php.net/entry/subscribe.php",
-            array(
-                "request"  => $request,
-                "email"    => $_POST['email'],
+            [
+                "request" => $request,
+                "email" => $_POST['email'],
                 "maillist" => $_POST['maillist'],
                 "remoteip" => $remote_addr,
-                "referer"  => $MYSITE . "mailing-lists.php"
-            )
+                "referer" => $MYSITE . "mailing-lists.php"
+            ]
         );
 
         // Provide error if unable to [un]subscribe
@@ -183,125 +183,125 @@ if (isset($_POST['action'])) {
 <?php
 
   // array of lists (list, name, short desc., moderated, archive, digest, newsgroup)
-  $general_mailing_lists = array(
+  $general_mailing_lists = [
 
       'General mailing lists for PHP users',
-      array (
+      [
           'php-announce', 'Announcements',
           'Announcements of new PHP releases are sent to this very low-volume list',
           true, false, false, "php.announce"
-      ),
-      array (
+      ],
+      [
           'php-general', 'General user list',
           'This is a high volume list for general PHP support; ask PHP questions here',
           false, true, true, "php.general"
-      ),
-      array (
+      ],
+      [
           'php-windows', 'Windows PHP users list',
           'Using PHP on Microsoft Windows',
           false, true, true, "php.windows"
-      ),
+      ],
 
       'Subject specific lists for PHP users',
-      array (
+      [
           'php-install', 'Installation issues and problems',
           'How to install PHP with particular configurations and servers',
           false, true, true, "php.install"
-      ),
-      array (
+      ],
+      [
           'php-db', 'Databases and PHP',
           'This list is for the discussion of PHP database topics',
           false, true, true, "php.db"
-      ),
-      array (
+      ],
+      [
           'php-i18n', 'Unicode and Internationalization',
           'Unicode support, Internationalization (i18n) and localization (l10n) issues and features',
           false, true, true, "php.i18n"
-      ),
-      array (
+      ],
+      [
           'php-evangelism', 'PHP evangelism mailing list',
           'A list for people interested in promoting PHP and learning good reasons to support PHP in the enterprise',
           true, true, true, "php.evangelism"
-      ),
-      array (
+      ],
+      [
           'soap', 'PHP SOAP list',
           'List for the SOAP developers',
           false, false, false, 'php.soap'
-      ),
+      ],
       'Non-English language mailing lists',
-      array (
+      [
           'php-es', 'Spanish PHP Mailing list',
           'List for Spanish speaking people interested in PHP',
           false, false, false, 'php.general.es'
-      ),
+      ],
 
-  );
+  ];
 
   // array of lists (list, name, short desc., moderated, archive, digest, newsgroup)
-  $internals_mailing_lists = array(
+  $internals_mailing_lists = [
 
       'PHP and Zend Engine internals lists',
-      array (
+      [
           'internals', 'Internals list',
           'A medium volume list for those who want to help out with the development of PHP',
           false, 'php-internals', true, "php.internals"
-      ),
-      array (
+      ],
+      [
           'internals-win', 'Windows Internals list',
           'A low volume list for those who want to help out with the development of PHP on Windows',
           false, false, true, "php.internals.win"
-      ),
-      array (
+      ],
+      [
           'php-cvs', 'Git commit list',
           'All commits to internals (php-src) and the Zend Engine are posted to this list automatically',
           true, true, false, "php.cvs"
-      ),
-      array (
+      ],
+      [
           'git-pulls', 'Git pull requests',
           'Pull requests from Github',
           false, false, false, "php.git-pulls"
-      ),
-      array (
+      ],
+      [
           'php-qa', 'Quality Assurance list',
           'List for the members of the PHP-QA Team',
           false, true, false, "php.qa"
-      ),
-      array (
+      ],
+      [
           'php-bugs', 'General bugs',
           'General bug activity are posted here',
           false, false, false, "php.bugs"
-      ),
-      array (
+      ],
+      [
           'standards', 'PHP Standardization and interoperability list',
           'Development of language standards',
           false, false, false, "php.standards"
-      ),
+      ],
 
       'PHP internal website mailing lists',
-      array (
+      [
           'php-webmaster', 'PHP php.net internal infrastructure discussion',
           'List for discussing and maintaining the php.net web infrastructure.<br>
        For general PHP support questions, see "General Mailing Lists" or the <a href="/support.php">support page</a>',
           false, false, false, "php.webmaster"
-      ),
+      ],
 
       'PHP documentation mailing lists',
-      array (
+      [
           'phpdoc', 'Documentation discussion',
           'List for discussing the PHP documentation',
           false, true, false, "php.doc"
-      ),
-      array (
+      ],
+      [
           'doc-cvs', 'Documentation changes and commits',
           'Changes to the documentation are posted here',
           true, "php-doc-cvs", false, "php.doc.cvs"
-      ),
-      array (
+      ],
+      [
           'doc-bugs', 'Documentation bugs',
           'Documentation bug activity (translations, sources, and build system) are posted here',
           true, 'php-doc-bugs', false, "php.doc.bugs"
-      ),
-  );
+      ],
+  ];
 
 // Print out a table for a given list array
 function output_lists_table($mailing_lists): void
@@ -313,7 +313,7 @@ function output_lists_table($mailing_lists): void
                  "<th>Newsgroup</th><th>Normal</th><th>Digest</th></tr>\n";
         } else {
             echo '<tr align="center">';
-            echo '<td align="left"><strong>' . $listinfo[1] . '</strong> <small>&lt;<a href="mailto:' . $listinfo[0] . '@lists.php.net">' . $listinfo[0] . '@lists.php.net</a>&gt;</small><br><small>'. $listinfo[2] . '</small></td>';
+            echo '<td align="left"><strong>' . $listinfo[1] . '</strong> <small>&lt;<a href="mailto:' . $listinfo[0] . '@lists.php.net">' . $listinfo[0] . '@lists.php.net</a>&gt;</small><br><small>' . $listinfo[2] . '</small></td>';
             echo '<td>' . ($listinfo[3] ? 'yes' : 'no') . '</td>';
 
             // Let the list name defined with a string, if the

@@ -2,6 +2,151 @@
 $OLDRELEASES = array (
   8 => 
   array (
+    '8.0.23' => 
+    array (
+      'announcement' => 
+      array (
+        'English' => '/releases/8_0_23.php',
+      ),
+      'tags' => 
+      array (
+        0 => 'security',
+      ),
+      'date' => '01 Sep 2022',
+      'source' => 
+      array (
+        0 => 
+        array (
+          'filename' => 'php-8.0.23.tar.gz',
+          'name' => 'PHP 8.0.23 (tar.gz)',
+          'sha256' => 'a2dd50e9c4a0328d921b6bc914e8b4e6572f94f09867318f88acca5ac4fa76c7',
+          'date' => '01 Sep 2022',
+        ),
+        1 => 
+        array (
+          'filename' => 'php-8.0.23.tar.bz2',
+          'name' => 'PHP 8.0.23 (tar.bz2)',
+          'sha256' => '1412db46800a45ced377c2892ec6261b3c412f13dc133bfc998cfb2f147b40cf',
+          'date' => '01 Sep 2022',
+        ),
+        2 => 
+        array (
+          'filename' => 'php-8.0.23.tar.xz',
+          'name' => 'PHP 8.0.23 (tar.xz)',
+          'sha256' => '65e474b6bd8cfc9d4a8a56268a755e2f9d3e7499e1687e6401a9f2b047600f87',
+          'date' => '01 Sep 2022',
+        ),
+      ),
+      'museum' => false,
+    ),
+    '8.1.10' => 
+    array (
+      'announcement' => 
+      array (
+        'English' => '/releases/8_1_10.php',
+      ),
+      'tags' => 
+      array (
+      ),
+      'date' => '01 Sep 2022',
+      'source' => 
+      array (
+        0 => 
+        array (
+          'filename' => 'php-8.1.10.tar.gz',
+          'name' => 'PHP 8.1.10 (tar.gz)',
+          'sha256' => '3ea4f323109dfbc8d2631d08aa0e08602c1f713678e9dc6c750f081ef49eab0f',
+          'date' => '01 Sep 2022',
+        ),
+        1 => 
+        array (
+          'filename' => 'php-8.1.10.tar.bz2',
+          'name' => 'PHP 8.1.10 (tar.bz2)',
+          'sha256' => '2de8e0402285f7c56887defe651922308aded58ba60befcf3b77720209e31f10',
+          'date' => '01 Sep 2022',
+        ),
+        2 => 
+        array (
+          'filename' => 'php-8.1.10.tar.xz',
+          'name' => 'PHP 8.1.10 (tar.xz)',
+          'sha256' => '90e7120c77ee83630e6ac928d23bc6396603d62d83a3cf5df8a450d2e3070162',
+          'date' => '01 Sep 2022',
+        ),
+      ),
+      'museum' => false,
+    ),
+    '8.0.22' => 
+    array (
+      'announcement' => 
+      array (
+        'English' => '/releases/8_0_22.php',
+      ),
+      'tags' => 
+      array (
+      ),
+      'date' => '04 Aug 2022',
+      'source' => 
+      array (
+        0 => 
+        array (
+          'filename' => 'php-8.0.22.tar.gz',
+          'name' => 'PHP 8.0.22 (tar.gz)',
+          'sha256' => '56fce7529a9798fd0895bca3539d2a65b9cac5d23ffbdf6338419c62ed083519',
+          'date' => '04 Aug 2022',
+        ),
+        1 => 
+        array (
+          'filename' => 'php-8.0.22.tar.bz2',
+          'name' => 'PHP 8.0.22 (tar.bz2)',
+          'sha256' => 'e342918d3ecd422f10032df0ac3ffb0e17f568fad6cf8e232b6f7a6a1fdc3c9c',
+          'date' => '04 Aug 2022',
+        ),
+        2 => 
+        array (
+          'filename' => 'php-8.0.22.tar.xz',
+          'name' => 'PHP 8.0.22 (tar.xz)',
+          'sha256' => '130937c0fa3050cd33d6c415402f6ccbf0682ae83eb8d39c91164224ddfe57f1',
+          'date' => '04 Aug 2022',
+        ),
+      ),
+      'museum' => false,
+    ),
+    '8.1.9' => 
+    array (
+      'announcement' => 
+      array (
+        'English' => '/releases/8_1_9.php',
+      ),
+      'tags' => 
+      array (
+      ),
+      'date' => '04 Aug 2022',
+      'source' => 
+      array (
+        0 => 
+        array (
+          'filename' => 'php-8.1.9.tar.gz',
+          'name' => 'PHP 8.1.9 (tar.gz)',
+          'sha256' => '954cf77f7e0a70dc765e7639acdfdccd164be5cd1bce3dbe9d10c58dca631e76',
+          'date' => '04 Aug 2022',
+        ),
+        1 => 
+        array (
+          'filename' => 'php-8.1.9.tar.bz2',
+          'name' => 'PHP 8.1.9 (tar.bz2)',
+          'sha256' => '9ebb0e2e571db6fd5930428dcb2d19ed3e050338ec1f1347c282cae92fc086ff',
+          'date' => '04 Aug 2022',
+        ),
+        2 => 
+        array (
+          'filename' => 'php-8.1.9.tar.xz',
+          'name' => 'PHP 8.1.9 (tar.xz)',
+          'sha256' => '53477e73e6254dc942b68913a58d815ffdbf6946baf61a1f8ef854de524c27bf',
+          'date' => '04 Aug 2022',
+        ),
+      ),
+      'museum' => false,
+    ),
     '8.1.8' => 
     array (
       'announcement' => 
@@ -1094,6 +1239,43 @@ $OLDRELEASES = array (
   ),
   7 => 
   array (
+    '7.4.30' => 
+    array (
+      'announcement' => 
+      array (
+        'English' => '/releases/7_4_30.php',
+      ),
+      'tags' => 
+      array (
+        0 => 'security',
+      ),
+      'date' => '09 Jun 2022',
+      'source' => 
+      array (
+        0 => 
+        array (
+          'filename' => 'php-7.4.30.tar.gz',
+          'name' => 'PHP 7.4.30 (tar.gz)',
+          'sha256' => 'e37ea37e0f79109351ac615da85eb7c2c336101fc5bc802ee79a124a4310dc10',
+          'date' => '09 Jun 2022',
+        ),
+        1 => 
+        array (
+          'filename' => 'php-7.4.30.tar.bz2',
+          'name' => 'PHP 7.4.30 (tar.bz2)',
+          'sha256' => 'b601bb12e53720469b60ea816776cac1c0696b09888a11ad2379b2eee835386e',
+          'date' => '09 Jun 2022',
+        ),
+        2 => 
+        array (
+          'filename' => 'php-7.4.30.tar.xz',
+          'name' => 'PHP 7.4.30 (tar.xz)',
+          'sha256' => 'ea72a34f32c67e79ac2da7dfe96177f3c451c3eefae5810ba13312ed398ba70d',
+          'date' => '09 Jun 2022',
+        ),
+      ),
+      'museum' => false,
+    ),
     '7.4.29' => 
     array (
       'announcement' => 

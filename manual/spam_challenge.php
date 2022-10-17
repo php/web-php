@@ -1,14 +1,14 @@
 <?php
 // simple and stupid SPAM protection (using little challenges)
 
-const NUMS = array('zero', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine');
+const NUMS = ['zero', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine'];
 
 function plus($a, $b) {
     return $a + $b;
 }
 
 function gen_plus($a) {
-    return rand(0, 9 - $a);
+    return mt_rand(0, 9 - $a);
 }
 
 function minus($a, $b) {
@@ -16,7 +16,7 @@ function minus($a, $b) {
 }
 
 function gen_minus($a) {
-    return rand(0, $a);
+    return mt_rand(0, $a);
 }
 
 function print_infix($name, $a, $b) {
@@ -27,24 +27,24 @@ function print_prefix($name, $a, $b) {
     return "$name($a, $b)";
 }
 
-const CHALLENGES = array(
+const CHALLENGES = [
     // name, print, generator
-    array('max',   'print_prefix'),
-    array('min',   'print_prefix'),
-    array('minus', 'print_infix', 'gen_minus'),
-    array('plus',  'print_infix', 'gen_plus'),
-);
+    ['max',   'print_prefix'],
+    ['min',   'print_prefix'],
+    ['minus', 'print_infix', 'gen_minus'],
+    ['plus',  'print_infix', 'gen_plus'],
+];
 
 // generate a challenge
 function gen_challenge() {
-    $c = CHALLENGES[rand(0, count(CHALLENGES)-1)];
+    $c = CHALLENGES[mt_rand(0, count(CHALLENGES) - 1)];
 
-    $a  = rand(0, 9);
+    $a = mt_rand(0, 9);
     $an = NUMS[$a];
-    $b  = isset($c[2]) ? $c[2]($a) : rand(0, 9);
+    $b = isset($c[2]) ? $c[2]($a) : mt_rand(0, 9);
     $bn = NUMS[$b];
 
-    return array($c[0], $an, $bn, $c[1]($c[0], $an, $bn));
+    return [$c[0], $an, $bn, $c[1]($c[0], $an, $bn)];
 }
 
 // test an answer for validity

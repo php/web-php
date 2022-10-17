@@ -35,7 +35,7 @@ header("Permissions-Policy: interest-cohort=()");
     header("Access-Control-Allow-Origin: http://$hostname");
     if (isset($_SERVER["HTTP_ACCESS_CONTROL_REQUEST_HEADERS"])) {
         $headers = $_SERVER["HTTP_ACCESS_CONTROL_REQUEST_HEADERS"];
-        $headers = str_replace(array("\r", "\n", "\0"), "", $headers);
+        $headers = str_replace(["\r", "\n", "\0"], "", $headers);
         header("Access-Control-Allow-Headers: $headers");
     }
 })();
@@ -99,7 +99,7 @@ function myphpnet_load()
     global $MYPHPNET, $MYSITE;
 
     // Empty the preferences array
-    $MYPHPNET = array(false, false, "NONE", 0, false);
+    $MYPHPNET = [false, false, "NONE", 0, false];
 
     if ($MYSITE === 'http://docs.php.net/') {
         $MYPHPNET[4] = true;
@@ -114,20 +114,16 @@ function myphpnet_load()
     $MYPHPNET[2] = 'https://www.php.net';
 }
 
-// Get or set preferred language code
-function myphpnet_language($langcode = false)
+// Get preferred language code
+function myphpnet_language(): string
 {
-    global $MYPHPNET, $LANGUAGES;
+    global $MYPHPNET;
 
-    // Set language code
-    if ($langcode && isset($LANGUAGES[$langcode])) {
-        $MYPHPNET[0] = $langcode;
-    }
-    // Return code or FALSE
-    elseif (isset($MYPHPNET[0]) && $MYPHPNET[0]) {
+    // Return code
+    if (isset($MYPHPNET[0]) && $MYPHPNET[0]) {
         return $MYPHPNET[0];
     }
-    return false;
+    return '';
 }
 
 const MYPHPNET_URL_NONE = false;
@@ -140,7 +136,7 @@ function myphpnet_urlsearch($type = false)
     global $MYPHPNET;
 
     // Set type if specified and if correct
-    if ($type && in_array($type, array(MYPHPNET_URL_FUNC, MYPHPNET_URL_MANUAL), false)) {
+    if ($type && in_array($type, [MYPHPNET_URL_FUNC, MYPHPNET_URL_MANUAL], true)) {
         $MYPHPNET[1] = $type;
     }
 
@@ -183,7 +179,7 @@ function myphpnet_save()
     }
 
     // Set all the preferred values for a year
-    mirror_setcookie("MYPHPNET", join(",", $MYPHPNET), 60*60*24*365);
+    mirror_setcookie("MYPHPNET", join(",", $MYPHPNET), 60 * 60 * 24 * 365);
 
 }
 

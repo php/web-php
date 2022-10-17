@@ -4,21 +4,22 @@ sort no notes
 precision=-1
 --FILE--
 <?php
+
+use phpweb\UserNotes\Sorter;
+use phpweb\UserNotes\UserNote;
+
 require_once __DIR__ . "/../../../autoload.php";
 
 $notes = [];
 
-$sorter = new phpweb\UserNotes\Sorter();
+$sorter = new Sorter();
 $sorter->sort($notes);
-var_dump(array_map(function (array $note): array {
+var_dump(array_map(function (UserNote $note): array {
     return [
-        "ts" => $note["xwhen"],
-        "upvotes" => $note["votes"]["up"],
-        "downvotes" => $note["votes"]["down"],
-        "score" => $note["score"],
-        "total" => $note["total"],
-        "rating" => $note["rating"],
-        "sort" => $note["sort"],
+        "id" => $note->id,
+        "ts" => $note->ts,
+        "upvotes" => $note->upvotes,
+        "downvotes" => $note->downvotes,
     ];
 }, $notes));
 ?>

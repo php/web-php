@@ -20,37 +20,37 @@ $RELEASES = (function () {
 
     /* PHP 8.1 Release */
     $data['8.1'] = [
-        'version' => '8.1.9',
-        'date'    => '04 Aug 2022',
-        'tags'    => [], // Set to ['security'] for security releases.
+        'version' => '8.1.11',
+        'date' => '29 Sep 2022',
+        'tags' => ['security'], // Set to ['security'] for security releases.
         'sha256' => [
-            'tar.gz'  => '954cf77f7e0a70dc765e7639acdfdccd164be5cd1bce3dbe9d10c58dca631e76',
-            'tar.bz2' => '9ebb0e2e571db6fd5930428dcb2d19ed3e050338ec1f1347c282cae92fc086ff',
-            'tar.xz'  => '53477e73e6254dc942b68913a58d815ffdbf6946baf61a1f8ef854de524c27bf',
+            'tar.gz' => '3660e8408321149f5d382bb8eeb9ea7b12ea8dd7ea66069da33f6f7383750ab2',
+            'tar.bz2' => 'af6250b18b4403b6eeff9b4a02786ac86a12a208141f6f65478f79256f47f246',
+            'tar.xz' => '3005198d7303f87ab31bc30695de76e8ad62783f806b6ab9744da59fe41cc5bd',
         ]
     ];
 
     /* PHP 8.0 Release */
     $data['8.0'] = [
-        'version' => '8.0.22',
-        'date'    => '04 Aug 2022',
-        'tags'    => [], // Set to ['security'] for security releases.
+        'version' => '8.0.24',
+        'date' => '29 Sep 2022',
+        'tags' => ['security'], // Set to ['security'] for security releases.
         'sha256' => [
-            'tar.gz'  => '56fce7529a9798fd0895bca3539d2a65b9cac5d23ffbdf6338419c62ed083519',
-            'tar.bz2' => 'e342918d3ecd422f10032df0ac3ffb0e17f568fad6cf8e232b6f7a6a1fdc3c9c',
-            'tar.xz'  => '130937c0fa3050cd33d6c415402f6ccbf0682ae83eb8d39c91164224ddfe57f1',
+            'tar.gz' => '6020843a2f1ce36745d958b3ca17f3fdc42e78a43899f552ab5dbc509ff19232',
+            'tar.bz2' => '908e17cea331d5abb8506b4a89c6392b962e127c391327777c7485eb4b415d43',
+            'tar.xz' => '8e6a63ac9cdabe4c345b32a54b18f348d9e50a1decda217faf2d61278d22f08b',
         ]
     ];
 
     /* PHP 7.4 Release */
     $data['7.4'] = [
-        'version' => '7.4.30',
-        'date'    => '09 Jun 2022',
-        'tags'    => ['security'], // Set to ['security'] for security releases
-        'sha256'  => [
-            'tar.gz'  => 'e37ea37e0f79109351ac615da85eb7c2c336101fc5bc802ee79a124a4310dc10',
-            'tar.bz2' => 'b601bb12e53720469b60ea816776cac1c0696b09888a11ad2379b2eee835386e',
-            'tar.xz'  => 'ea72a34f32c67e79ac2da7dfe96177f3c451c3eefae5810ba13312ed398ba70d',
+        'version' => '7.4.32',
+        'date' => '29 Sep 2022',
+        'tags' => ['security'], // Set to ['security'] for security releases
+        'sha256' => [
+            'tar.gz' => '197e3372afd69694eb6b230838305eb9e1cbe5db272e0fa3bbe0d38e329a95bc',
+            'tar.bz2' => '9b4c3c21ffbb4f35d7b865dbf88538bba1742335248ae1cc2afc303d456e3aa6',
+            'tar.xz' => '323332c991e8ef30b1d219cb10f5e30f11b5f319ce4c6642a5470d75ade7864a',
         ]
     ];
 

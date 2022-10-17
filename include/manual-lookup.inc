@@ -110,7 +110,7 @@ function find_manual_page($lang, $keyword)
         if (in_array('sqlite', PDO::getAvailableDrivers(), true)) {
             if (file_exists($_SERVER['DOCUMENT_ROOT'] . '/backend/manual-lookup.sqlite')) {
                 try {
-                    $dbh = new PDO( 'sqlite:' . $_SERVER['DOCUMENT_ROOT'] . '/backend/manual-lookup.sqlite', '', '', array(PDO::ATTR_PERSISTENT => true, PDO::ATTR_EMULATE_PREPARES => true) );
+                    $dbh = new PDO( 'sqlite:' . $_SERVER['DOCUMENT_ROOT'] . '/backend/manual-lookup.sqlite', '', '', [PDO::ATTR_PERSISTENT => true, PDO::ATTR_EMULATE_PREPARES => true] );
                 } catch (PDOException $e) {
                     return find_manual_page_slow($lang, $keyword);
                 }
@@ -124,7 +124,7 @@ function find_manual_page($lang, $keyword)
 
     // Try the preferred language first, then the
     // English one in case no page is found
-    $langs = ($lang != 'en') ? array($lang, 'en') : array('en');
+    $langs = ($lang != 'en') ? [$lang, 'en'] : ['en'];
 
     // Reformat keyword, drop anything in parenthesis --- except a search for the underscore only. (Bug #63490)
     if ($keyword != '_') {
@@ -172,7 +172,7 @@ function find_manual_page($lang, $keyword)
             if (!$stm) {
                     return find_manual_page_slow($lang, $keyword);
             }
-            $stm->execute(array($lang, "/manual/{$lang}/{$_keyword}", $keyword));
+            $stm->execute([$lang, "/manual/{$lang}/{$_keyword}", $keyword]);
 
         // Some partially specified URL is used
         } else {
@@ -183,11 +183,11 @@ function find_manual_page($lang, $keyword)
             //        if this change remains, adjust the gen-phpweb-sqlite script accordingly
 
             $SQL = "SELECT name, prio FROM fs WHERE lang = :lang
-                    AND keyword IN (?, ?, ?, ?) ORDER BY keyword = ? DESC, prio LIMIT 1";
+                    AND keyword IN (?, ?, ?, ?, ?) ORDER BY keyword = ? DESC, prio LIMIT 1";
 
             $stm = $dbh->prepare($SQL);
             if ($stm) {
-                $stm->execute(array($lang, $keyword, str_replace('\\', '-', $keyword), str_replace(' ', '', $keyword), str_replace(' ', '-', $keyword), str_replace('-', '', $keyword), $keyword));
+                $stm->execute([$lang, $keyword, str_replace('\\', '-', $keyword), str_replace(' ', '', $keyword), str_replace(' ', '-', $keyword), str_replace('-', '', $keyword), $keyword]);
             }
         }
 
