@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom" xmlns:default="http://php.net/ns/news">
+  <title>php[tek] 2023 - Chicago, IL</title>
+  <id>https://www.php.net/archive/2022.php#2022-10-19-2</id>
+  <published>2022-10-19T13:44:26-07:00</published>
+  <updated>2022-10-19T13:44:26-07:00</updated>
+  <link href="https://www.php.net/conferences/index.php#2022-10-19-2" rel="alternate" type="text/html"/>
+  <link href="https://tek.phparch.com" rel="via" type="text/html"/>
+  <default:finalTeaserDate xmlns="http://php.net/ns/news">2023-05-16</default:finalTeaserDate>
+  <category term="conferences" label="Conference announcement"/>
+  <default:newsImage xmlns="http://php.net/ns/news" link="https://tek.phparch.com" title="php[tek] 2023">php-tek-2023.png</default:newsImage>
+  <content type="xhtml">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+     Join us for the 15th Annual Web Developer Conference, php[tek] 2023, May 16-18 2023.
+     
+     We are so excited to be bringing back php[tek] in 2023 and will be returning to the Sheraton O’Hare Hotel which is conveniently located by Chicago O'Hare Airport.
+     
+     php[tek] 2023 combines leadership, expertise, and networking in one event. A relaxing atmosphere for tech leaders and developers to share, learn and grow professionally while also providing you with the knowledge to solve your everyday problems.
+     
+     We are the longest-running web developer conference in the United States, focusing on the PHP programming language. The event is broken up into multiple days. The main conference happens over the course of 3 days (May 16-18) and includes keynotes, talks, and networking options. It will be broken into three tracks and will cover a range of topics.
+     
+    Blind Early Bird tickets are already available and offer the best value. Head over to https://tek.phparch.com and get yours today!
+    </div>
+  </content>
+</entry>
