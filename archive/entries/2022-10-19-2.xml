@@ -10,16 +10,37 @@
   <category term="conferences" label="Conference announcement"/>
   <default:newsImage xmlns="http://php.net/ns/news" link="https://tek.phparch.com" title="php[tek] 2023">php-tek-2023.png</default:newsImage>
   <content type="xhtml">
-    <div xmlns="http://www.w3.org/1999/xhtml">
-     Join us for the 15th Annual Web Developer Conference, php[tek] 2023, May 16-18 2023.
-     
-     We are so excited to be bringing back php[tek] in 2023 and will be returning to the Sheraton O’Hare Hotel which is conveniently located by Chicago O'Hare Airport.
-     
-     php[tek] 2023 combines leadership, expertise, and networking in one event. A relaxing atmosphere for tech leaders and developers to share, learn and grow professionally while also providing you with the knowledge to solve your everyday problems.
-     
-     We are the longest-running web developer conference in the United States, focusing on the PHP programming language. The event is broken up into multiple days. The main conference happens over the course of 3 days (May 16-18) and includes keynotes, talks, and networking options. It will be broken into three tracks and will cover a range of topics.
-     
-    Blind Early Bird tickets are already available and offer the best value. Head over to https://tek.phparch.com and get yours today!
-    </div>
+      <div xmlns="http://www.w3.org/1999/xhtml">
+          <p>
+              Join us for the 15th Annual Web Developer Conference, php[tek] 2023, May 16-18 2023.
+          </p>
+
+          <p>
+              We are so excited to be bringing back php[tek] in 2023 and will be returning to the
+              Sheraton O’Hare Hotel which is conveniently located by Chicago O'Hare Airport.
+          </p>
+
+
+          <p>
+              php[tek] 2023 combines leadership, expertise, and networking in one event. A relaxing
+              atmosphere for tech leaders and developers to share, learn and grow professionally while
+              also providing you with the knowledge to solve your everyday problems.
+          </p>
+
+
+          <p>
+              We are the longest-running web developer conference in the United States, focusing on the
+              PHP programming language. The event is broken up into multiple days. The main conference
+              happens over the course of 3 days (May 16-18) and includes keynotes, talks, and networking
+              options. It will be broken into three tracks and will cover a range of topics.
+          </p>
+
+
+          <p>
+              <b>Blind Early Bird tickets are already available and offer the best value.</b>
+              Head over to <a href="https://tek.phparch.com">https://tek.phparch.com</a> and get yours today!
+          </p>
+
+      </div>
   </content>
 </entry>

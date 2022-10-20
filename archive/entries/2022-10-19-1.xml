@@ -11,15 +11,32 @@
   <default:newsImage xmlns="http://php.net/ns/news" link="https://tek.phparch.com/speakers/" title="php[tek] 2023">php-tek-2023.png</default:newsImage>
   <content type="xhtml">
     <div xmlns="http://www.w3.org/1999/xhtml">
-     We are excited to be bringing back php[tek] in 2023 and will be returning to the Sheraton O’Hare Hotel which is conveniently located by Chicago O'Hare Airport.
-     
-     Whether you are a seasoned speaker or this will be your first time speaking at a conference, this is the conference you want to submit your talk to. Our panel of professional speakers will review your abstract and give pointers to help improve your chances of being selected.
-     
-     php[tek] 2023 combines leadership, expertise, and networking in one event. A relaxing atmosphere for tech leaders and developers to share, learn and grow professionally while also providing you with the knowledge to solve your everyday problems.
-     
-     The team at php[architect] will help you through the entire process. For this initial submission, you don't need to have a completed talk, just provide us a brief overview of your presentation idea and what level of developer you are targeting.
-     
-     Submit your talk today at https://tek.phparch.com/speakers/.
+        <p>
+            We are excited to be bringing back php[tek] in 2023 and will be returning to the
+            Sheraton O’Hare Hotel which is conveniently located by Chicago O'Hare Airport.
+        </p>
+
+        <p>
+            Whether you are a seasoned speaker or this will be your first time speaking at a conference,
+            this is the conference you want to submit your talk to. Our panel of professional speakers
+            will review your abstract and give pointers to help improve your chances of being selected.
+        </p>
+
+        <p>
+            php[tek] 2023 combines leadership, expertise, and networking in one event. A relaxing atmosphere
+            for tech leaders and developers to share, learn and grow professionally while also providing you
+            with the knowledge to solve your everyday problems.
+        </p>
+
+        <p>
+            The team at php[architect] will help you through the entire process. For this initial submission,
+            you don't need to have a completed talk, just provide us a brief overview of your presentation
+            idea and what level of developer you are targeting.
+        </p>
+
+        <p>
+            Submit your talk today at <a href="https://tek.phparch.com/speakers/">https://tek.phparch.com/speakers/</a> .
+        </p>
     </div>
   </content>
 </entry>
