@@ -37,7 +37,7 @@ site_header('Unsupported Branches');
 	<thead>
 		<tr>
 			<th>Branch</th>
-			<th colspan="2">Date</th>
+			<th>Date</th>
 			<th>Last Release</th>
 			<th>Notes</th>
 		</tr>
@@ -51,9 +51,8 @@ site_header('Unsupported Branches');
 						<td><?php echo htmlspecialchars($branch); ?></td>
 						<td>
 							<?php echo $eolDate->format('j M Y') ?>
-						</td>
-						<td>
-							<em><?php echo $eolPeriod ?></em>
+							<br/>
+							<em>(<?php echo $eolPeriod ?>)</em>
 						</td>
 						<td>
 							<a href="<?php echo htmlspecialchars($detail['link']); ?>">
