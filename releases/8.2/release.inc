@@ -28,14 +28,10 @@ common_header(message('common_header', $lang));
             <div class="php8-logo">
                 <img src="/images/php8/logo_php8_2.svg" alt="PHP 8.2" height="126" width="343">
             </div>
-            <div class="php8-title">Released!</div>
-            <div class="php8-subtitle">
-                PHP 8.2 is a major update of the PHP language.<br class="display-none-md"> It
-                contains many new features, including readonly classes, null, false, and true as stand-alone types,
-                deprecated dynamic properties, performance improvements and more
-            </div>
+            <div class="php8-title"><?= message('main_title', $lang) ?></div>
+            <div class="php8-subtitle"><?= message('main_subtitle', $lang) ?></div>
             <div class="php8-button-wrapper center">
-                <a class="php8-button php8-button_light" href="/downloads">Upgrade to PHP 8.2 now!</a>
+                <a class="php8-button php8-button_light" href="/downloads"><?= message('upgrade_now', $lang) ?></a>
             </div>
         </div>
     </section>
@@ -43,10 +39,13 @@ common_header(message('common_header', $lang));
     <section class="php8-section center">
         <div class="php8-compare">
             <h2 class="php8-h2" id="readonly_classes">
-                Readonly classes
+                <?= message('readonly_classes_title', $lang) ?>
                 <a class="php8-rfc" href="https://wiki.php.net/rfc/readonly_classes">RFC</a>
                 <a class="php8-rfc"
-                   href="https://www.php.net/manual/en/migration82.new-features.php#migration82.new-features.core.readonly-classes">Doc</a>
+                   href="https://www.php.net/manual/en/migration82.new-features.php#migration82.new-features.core.readonly-classes"><?= message(
+                        'documentation',
+                        $lang
+                    ) ?></a>
             </h2>
             <div class="php8-compare__main">
                 <div class="php8-compare__block example-contents">
@@ -98,10 +97,13 @@ PHP
 
         <div class="php8-compare">
             <h2 class="php8-h2" id="dnf_types">
-                Disjunctive Normal Form (DNF) Types
+                <?= message('dnf_types_title', $lang) ?>
                 <a class="php8-rfc" href="https://wiki.php.net/rfc/dnf_types">RFC</a>
                 <a class="php8-rfc"
-                   href="https://www.php.net/manual/en/migration82.new-features.php#migration82.new-features.core.type-system">Doc</a>
+                   href="https://www.php.net/manual/en/migration82.new-features.php#migration82.new-features.core.type-system"><?= message(
+                        'documentation',
+                        $lang
+                    ) ?></a>
             </h2>
             <div class="php8-compare__main">
                 <div class="php8-compare__block example-contents">
@@ -149,11 +151,7 @@ PHP
             </div>
         </div>
         <div class="php8-compare__content">
-            DNF types allow us to combine <a
-                    href="/manual/en/language.types.declarations.php#language.types.declarations.composite.union">union</a>
-            and <a href="/manual/en/language.types.declarations.php#language.types.declarations.composite.intersection">intersection</a>
-            types, following a strict rule:
-            when combining union and intersection types, intersection types must be grouped with brackets.
+            <?= message('dnf_types_description', $lang) ?>
         </div>
 
         <div class="php8-compare">
@@ -204,11 +202,14 @@ PHP
 
         <div class="php8-compare">
             <h2 class="php8-h2" id="random_extension">
-                New "Random" extension
+                <?= message('random_title', $lang) ?>
                 <a class="php8-rfc" href="https://wiki.php.net/rfc/rng_extension">RFC</a>
                 <a class="php8-rfc" href="https://wiki.php.net/rfc/random_extension_improvement">RFC</a>
                 <a class="php8-rfc"
-                   href="https://www.php.net/manual/en/migration82.new-features.php#migration82.new-features.random">Doc</a>
+                   href="https://www.php.net/manual/en/migration82.new-features.php#migration82.new-features.random"><?= message(
+                        'documentation',
+                        $lang
+                    ) ?></a>
             </h2>
             <div class="php8-compare__main">
                 <div class="example-contents example-contents-full">
@@ -246,20 +247,18 @@ PHP
             </div>
         </div>
         <div class="php8-compare__content">
-            <p>The "random" extension provides a new object-oriented API to random number generation. Instead of relying
-                on a globally seeded random number generator (RNG) using the Mersenne Twister algorithm the
-                object-oriented API provides several classes ("Engine"s) providing access to modern algorithms that
-                store their state within objects to allow for multiple independent seedable sequences.</p>
-            <p>The <code>\Random\Randomizer</code> class provides a high level interface to use the engine's randomness
-                to generate a random integer, to shuffle an array or string, to select random array keys and more.</p>
+            <?= message('random_description', $lang) ?>
         </div>
 
         <div class="php8-compare">
             <h2 class="php8-h2" id="constants_in_traits">
-                Constants in traits
+                <?= message('constants_in_traits_title', $lang) ?>
                 <a class="php8-rfc" href="https://wiki.php.net/rfc/constants_in_traits">RFC</a>
                 <a class="php8-rfc"
-                   href="https://www.php.net/manual/en/migration82.new-features.php#migration82.new-features.core.constant-in-traits">Doc</a>
+                   href="https://www.php.net/manual/en/migration82.new-features.php#migration82.new-features.core.constant-in-traits"><?= message(
+                        'documentation',
+                        $lang
+                    ) ?></a>
             </h2>
             <div class="php8-compare__main">
                 <div class="php8-compare__block example-contents">
@@ -315,16 +314,18 @@ PHP
             </div>
         </div>
         <div class="php8-compare__content">
-            You cannot access the constant through the name of the trait,
-            but, you can access the constant through the class that uses the trait.
+            <?= message('constants_in_traits_description', $lang) ?>
         </div>
 
         <div class="php8-compare">
             <h2 class="php8-h2" id="deprecate_dynamic_properties">
-                Deprecate dynamic properties
+                <?= message('deprecate_dynamic_properties_title', $lang) ?>
                 <a class="php8-rfc" href="https://wiki.php.net/rfc/deprecate_dynamic_properties">RFC</a>
                 <a class="php8-rfc"
-                   href="https://www.php.net/manual/en/migration82.deprecated.php#migration82.deprecated.core.dynamic-properties">Doc</a>
+                   href="https://www.php.net/manual/en/migration82.deprecated.php#migration82.deprecated.core.dynamic-properties"><?= message(
+                        'documentation',
+                        $lang
+                    ) ?></a>
             </h2>
             <div class="php8-compare__main">
                 <div class="php8-compare__block example-contents">
@@ -370,62 +371,38 @@ PHP
             </div>
         </div>
         <div class="php8-compare__content">
-            <p>The creation of dynamic properties is deprecated to help avoid mistakes and typos, unless the class opts
-                in by using the <code>#[\AllowDynamicProperties]</code> attribute. <code>stdClass</code> allows dynamic
-                properties.</p>
-            <p>Usage of the <code>__get</code>/<code>__set</code> magic methods is not affected by this change.</p>
+            <?= message('deprecate_dynamic_properties_description', $lang) ?>
         </div>
 
     </section>
 
     <section class="php8-section center php8-section_light php8-columns">
         <div class="php8-column">
-            <h2 class="php8-h2" id="performance_improvements">Performance Improvements</h2>
-
+            <h2 class="php8-h2" id="other_new_things"><?= message('new_classes_title', $lang) ?></h2>
+            <div class="php8-compare__content php8-compare__content--block">
+                <ul>
+                    <li><?= message('new_mysqli', $lang) ?></li>
+                    <li><?= message('new_attributes', $lang) ?></li>
+                    <li><?= message('new_zip', $lang) ?></li>
+                    <li><?= message('new_reflection', $lang) ?></li>
+                    <li><?= message('new_functions', $lang) ?></li>
+                </ul>
+            </div>
         </div>
 
         <div class="php8-column">
-            <h2 class="php8-h2" id="other_new_things">New Classes, Interfaces, and Functions</h2>
-            <div class="php8-compare__content php8-compare__content--block">
-                <ul>
-                    <li>New <code>mysqli_execute_query</code> function and <code>mysqli::execute_query</code> method.
-                    </li>
-                    <li>New <code>#[\AllowDynamicProperties]</code> and <code>#[\SensitiveParameter]</code> attributes.
-                    </li>
-                    <li>New <code>ZipArchive::getStreamIndex</code>, <code>ZipArchive::getStreamName</code>, and <code>ZipArchive::clearError</code>
-                        methods.
-                    </li>
-                    <li>New <code>ReflectionFunction::isAnonymous</code> and <code>ReflectionMethod::hasPrototype</code>
-                        methods.
-                    </li>
-                    <li>New <code>curl_upkeep</code>, <code>memory_reset_peak_usage</code>,
-                        <code>ini_parse_quantity</code>, <code>libxml_get_external_entity_loader</code>, <code>sodium_crypto_stream_xchacha20_xor_ic</code>,
-                        <code>openssl_cipher_key_length</code> functions.
-                    </li>
-                </ul>
-            </div>
-            <h2 class="php8-h2 php8-h2_margin-top" id="deprecations_and_bc_breaks">
-                Deprecations and backward compatibility breaks
-            </h2>
+            <h2 class="php8-h2" id="deprecations_and_bc_breaks"><?= message('bc_title', $lang) ?></h2>
             <div class="php8-compare__content">
                 <ul>
-                    <li>Deprecated <code>${}</code> string interpolation.</li>
-                    <li>Deprecated <code>utf8_encode</code> and <code>utf8_decode</code> functions.</li>
-                    <li>Methods <code>DateTime::createFromImmutable</code> and <code>DateTimeImmutable::createFromMutable</code>
-                        has a tentative return type of <code>static</code>.
-                    </li>
-                    <li>Extensions <code>ODBC</code> and <code>PDO_ODBC</code> escapes the username and password.</li>
-                    <li>Functions <code>strtolower</code> and <code>strtoupper</code> are locale-sensitive.</li>
-                    <li>Methods <code>SplFileObject::getCsvControl</code>,
-                        <code>SplFileObject::fflush</code>,
-                        <code>SplFileObject::ftell</code>, <code>SplFileObject::fgetc</code>,and <code>SplFileObject::fpassthru</code>
-                        enforces their signature.
-                    </li>
-                    <li>Method <code>SplFileObject::hasChildren</code> has a tentative return type of <code>false</code>.
-                    </li>
-                    <li>Method <code>SplFileObject::getChildren</code> has a tentative return type of <code>null</code>.
-                    </li>
-                    <li>The internal method <code>SplFileInfo::_bad_state_ex</code> has been deprecated.</li>
+                    <li><?= message('bc_string_interpolation', $lang) ?></li>
+                    <li><?= message('bc_utf8', $lang) ?></li>
+                    <li><?= message('bc_datetime', $lang) ?></li>
+                    <li><?= message('bc_odbc', $lang) ?></li>
+                    <li><?= message('bc_str_locale_sensitive', $lang) ?></li>
+                    <li><?= message('bc_spl_enforces_signature', $lang) ?></li>
+                    <li><?= message('bc_spl_false', $lang) ?></li>
+                    <li><?= message('bc_spl_null', $lang) ?></li>
+                    <li><?= message('bc_spl_deprecated', $lang) ?></li>
                 </ul>
             </div>
         </div>
@@ -433,23 +410,11 @@ PHP
 
     <section class="php8-section php8-section_dark php8-section_footer php8-footer">
         <div class="php8-section__content">
-            <h2 class="php8-h2 center">Better performance, better syntax, improved type safety.</h2>
+            <h2 class="php8-h2 center"><?= message('footer_title', $lang) ?></h2>
             <div class="php8-button-wrapper center">
-                <a class="php8-button php8-button_light" href="/downloads">Upgrade to PHP 8.2 now!</a>
+                <a class="php8-button php8-button_light" href="/downloads"><?= message('upgrade_now', $lang) ?></a>
             </div>
-            <div class="php8-footer__content">
-                <p>
-                    For source downloads of PHP 8.2 please visit the <a
-                            href="https://www.php.net/downloads">downloads</a> page.
-                    Windows binaries can be found on the <a href="https://windows.php.net/download">PHP for Windows</a>
-                    site.
-                    The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-8.php#PHP_8_2">ChangeLog</a>.
-                </p>
-                <p>
-                    The <a href="/manual/en/migration82.php">migration guide</a> is available in the PHP Manual. Please
-                    consult it for a detailed list of new features and backward-incompatible changes.
-                </p>
-            </div>
+            <div class="php8-footer__content"><?= message('footer_description', $lang) ?></div>
         </div>
     </section>
 
