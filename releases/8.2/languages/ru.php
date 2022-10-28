@@ -7,7 +7,7 @@ return [
     'main_subtitle' => 'PHP 8.2 — большое обновление языка PHP.<br class="display-none-md">Оно содержит множество новых возможностей, включая readonly-классы, самостоятельные типы null, false и true, устаревшие динамические свойства, улучшение производительности и многое другое.',
     'upgrade_now' => 'Переходите на PHP 8.2!',
     'readonly_classes_title' => 'Readonly-классы',
-    'dnf_types_title' => 'Типы дизъюнктивной нормальной формы (DNF)',
+    'dnf_types_title' => 'Типы в виде дизъюнктивной нормальной формы (ДНФ)',
     'dnf_types_description' => 'ДНФ позволяет совместить <a href="/manual/ru/language.types.declarations.php#language.types.declarations.composite.union">объединение</a> и <a href="/manual/ru/language.types.declarations.php#language.types.declarations.composite.intersection">пересечение</a> типов, при этом обязательно типы пересечения следует сгруппировать скобками.',
     'null_false_true_types_title' => 'Самостоятельные типы <code>null</code>, <code>false</code> и <code>true</code>',
     'random_title' => 'Новый модуль "Random"',
