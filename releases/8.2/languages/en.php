@@ -9,6 +9,7 @@ return [
     'readonly_classes_title' => 'Readonly classes',
     'dnf_types_title' => 'Disjunctive Normal Form (DNF) Types',
     'dnf_types_description' => 'DNF types allow us to combine <a href="/manual/en/language.types.declarations.php#language.types.declarations.composite.union">union</a> and <a href="/manual/en/language.types.declarations.php#language.types.declarations.composite.intersection">intersection</a> types, following a strict rule: when combining union and intersection types, intersection types must be grouped with brackets.',
+    'null_false_true_types_title' => 'Allow <code>null</code>, <code>false</code>, and <code>true</code> as stand-alone types',
     'random_title' => 'New "Random" extension',
     'random_description' => '<p>The "random" extension provides a new object-oriented API to random number generation. Instead of relying on a globally seeded random number generator (RNG) using the Mersenne Twister algorithm the object-oriented API provides several classes ("Engine"s) providing access to modern algorithms that store their state within objects to allow for multiple independent seedable sequences.</p>
         <p>The <code>\Random\Randomizer</code> class provides a high level interface to use the engine\'s randomness to generate a random integer, to shuffle an array or string, to select random array keys and more.</p>',

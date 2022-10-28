@@ -156,7 +156,7 @@ PHP
 
         <div class="php8-compare">
             <h2 class="php8-h2" id="null_false_true_types">
-                Allow <code>null</code>, <code>false</code>, and <code>true</code> as stand-alone types
+                <?= message('null_false_true_types_title', $lang) ?>
                 <a class="php8-rfc" href="https://wiki.php.net/rfc/null-false-standalone-types">RFC</a>
                 <a class="php8-rfc" href="https://wiki.php.net/rfc/true-type">RFC</a>
             </h2>

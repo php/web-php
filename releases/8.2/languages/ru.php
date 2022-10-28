@@ -1,0 +1,40 @@
+<?php
+
+return [
+    'common_header' => 'PHP 8.2 — большое обновление языка PHP. Readonly-классы, самостоятельные типы null, false и true, устаревшие динамические свойства, улучшение производительности и многое другое.',
+    'documentation' => 'Документация',
+    'main_title' => 'выпущен!',
+    'main_subtitle' => 'PHP 8.2 — большое обновление языка PHP.<br class="display-none-md">Оно содержит множество новых возможностей, включая readonly-классы, самостоятельные типы null, false и true, устаревшие динамические свойства, улучшение производительности и многое другое.',
+    'upgrade_now' => 'Переходите на PHP 8.2!',
+    'readonly_classes_title' => 'Readonly-классы',
+    'dnf_types_title' => 'Типы дизъюнктивной нормальной формы (DNF)',
+    'dnf_types_description' => 'Типы DNF позволяют объединять типы <a href="/manual/ru/language.types.declarations.php#language.types.declarations.composite.union">union</a> и <a href="/manual/ru/language.types.declarations.php#language.types.declarations.composite.intersection">intersection</a>, следуя строгому правилу: при объединении типов union и intersection, типы intersection должны быть сгруппированы скобками.',
+    'null_false_true_types_title' => 'Самостоятельные типы <code>null</code>, <code>false</code> и <code>true</code>',
+    'random_title' => 'Новый модуль "Random"',
+    'random_description' => '<p>Модуль "random" предоставляет новый объектно-ориентированный API для генерации случайных чисел. Вместо того чтобы полагаться на глобальный генератор случайных чисел (RNG), использующий алгоритм Mersenne Twister, объектно-ориентированный API предоставляет несколько классов ("Движков"), обеспечивающих доступ к современным алгоритмам, которые хранят свое состояние в объектах, что позволяет создавать несколько независимых последовательностей.</p>
+        <p>Класс <code>\Random\Randomizer</code> предоставляет высокоуровневый интерфейс для использования случайности движка для генерации случайного целого числа, перемешивания массива или строки, выбора случайных ключей массива и многого другого.</p>',
+    'constants_in_traits_title' => 'Констаны в трейтах',
+    'constants_in_traits_description' => 'Нельзя получить доступ к константе через имя трейта, но можно через класс, который использует этот трейт.',
+    'deprecate_dynamic_properties_title' => 'Динамические свойства устарели',
+    'deprecate_dynamic_properties_description' => '<p>Создание динамических свойств устарело, чтобы помочь избежать ошибок и опечаток, если только класс не разрешит это с помощью атрибута <code>#[\AllowDynamicProperties]</code>. <code>stdClass</code> разрешает динамические свойства.</p>
+        <p>Это изменение не влияет на использование магических методов <code>__get</code>/<code>__set</code>.</p>',
+    'new_classes_title' => 'Новые классы, интерфейсы и функции',
+    'new_mysqli' => 'Новая функция <code>mysqli_execute_query</code> и метод <code>mysqli::execute_query</code>.',
+    'new_attributes' => 'Новые атрибуты <code>#[\AllowDynamicProperties]</code> и <code>#[\SensitiveParameter]</code>.',
+    'new_zip' => 'Новые методы <code>ZipArchive::getStreamIndex</code>, <code>ZipArchive::getStreamName</code> и <code>ZipArchive::clearError</code>.',
+    'new_reflection' => 'Новые методы <code>ReflectionFunction::isAnonymous</code> и <code>ReflectionMethod::hasPrototype</code>.',
+    'new_functions' => 'Новые функции <code>curl_upkeep</code>, <code>memory_reset_peak_usage</code>, <code>ini_parse_quantity</code>, <code>libxml_get_external_entity_loader</code>, <code>sodium_crypto_stream_xchacha20_xor_ic</code>, <code>openssl_cipher_key_length</code>.',
+    'bc_title' => 'Устаревшая функциональность и изменения в обратной совместимости',
+    'bc_string_interpolation' => 'Устарела интерполяция строк <code>${}</code>.',
+    'bc_utf8' => 'Устарели функции <code>utf8_encode</code> и <code>utf8_decode</code>.',
+    'bc_datetime' => 'У методов <code>DateTime::createFromImmutable</code> и <code>DateTimeImmutable::createFromMutable</code> предварительный тип возвращаемого значения <code>static</code>.',
+    'bc_odbc' => 'Модули <code>ODBC</code> и <code>PDO_ODBC</code> экранирует имя пользователя и пароль.',
+    'bc_str_locale_sensitive' => 'Функции <code>strtolower</code> и <code>strtoupper</code> чувствительны к местным условиям.',
+    'bc_spl_enforces_signature' => 'Методы <code>SplFileObject::getCsvControl</code>, <code>SplFileObject::fflush</code>, <code>SplFileObject::ftell</code>, <code>SplFileObject::fgetc</code> и <code>SplFileObject::fpassthru</code> усиливают свою сигнатуру.',
+    'bc_spl_false' => 'У метода <code>SplFileObject::hasChildren</code> предварительный тип возвращаемого значения <code>false</code>.',
+    'bc_spl_null' => 'У метода <code>SplFileObject::getChildren</code> предварительный тип возвращаемого значения <code>null</code>.',
+    'bc_spl_deprecated' => 'Устарел внутренний метод <code>SplFileInfo::_bad_state_ex</code>.',
+    'footer_title' => 'Выше производительность, лучше синтаксис, надёжнее система типов.',
+    'footer_description' => '<p>Для загрузки исходного кода PHP 8.2 посетите страницу <a href="https://www.php.net/downloads">Downloads</a>. Бинарные файлы Windows находятся на сайте <a href="https://windows.php.net/download">PHP for Windows</a>. Список изменений перечислен на странице <a href="https://www.php.net/ChangeLog-8.php#PHP_8_2">ChangeLog</a>.</p>
+        <p><a href="/manual/ru/migration82.php">Руководство по миграции</a> доступно в разделе документации.Ознакомьтесь с ним, чтобы узнать обо всех новых возможностях и изменений, затрагивающих обратную совместимость.</p>',
+];

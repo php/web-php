@@ -41,6 +41,7 @@ META
 function language_chooser(string $currentLang): void {
     $LANGUAGES = [
         'en' => 'English',
+        'ru' => 'Russian',
     ];
 
     // Print out the form with all the options
