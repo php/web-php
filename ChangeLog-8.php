@@ -906,6 +906,30 @@ changelog_header(8, $MINOR_VERSIONS);
 
 <a id="PHP_8_0"></a>
 
+<section class="version" id="8.0.25"><!-- {{{ 8.0.25 -->
+<h3>Version 8.0.25</h3>
+<b><?php release_date('27-Oct-2022'); ?></b>
+<ul><li>GD:
+<ul>
+  <li><?php bugfix(81739); ?>: OOB read due to insufficient input validation in imageloadfont(). (CVE-2022-31630)</li>
+</ul></li>
+<li>Hash:
+<ul>
+  <li><?php bugfix(81738); ?>: buffer overflow in hash_update() on long parameter. (CVE-2022-37454)</li>
+</ul></li>
+<li>Session:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 9583); ?> (session_create_id() fails with user defined save handler that doesn't have a validateId() method).</li>
+</ul></li>
+<li>Streams:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 9590); ?> (stream_select does not abort upon exception or empty valid fd set).</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
+
+
 <section class="version" id="8.0.24"><!-- {{{ 8.0.24 -->
 <h3>Version 8.0.24</h3>
 <b><?php release_date('29-Sep-2022'); ?></b>
