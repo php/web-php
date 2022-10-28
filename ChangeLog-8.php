@@ -8,6 +8,46 @@ changelog_header(8, $MINOR_VERSIONS);
 ?>
 <a id="PHP_8_1"></a>
 
+<section class="version" id="8.1.12"><!-- {{{ 8.1.12 -->
+<h3>Version 8.1.12</h3>
+<b><?php release_date('27-Oct-2022'); ?></b>
+<ul><li>Core:
+<ul>
+  <li>Fixes segfault with Fiber on FreeBSD i386 architecture.</li>
+</ul></li>
+<li>Fileinfo:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 8805); ?> (finfo returns wrong mime type for woff/woff2 files).</li>
+</ul></li>
+<li>GD:
+<ul>
+  <li><?php bugfix(81739); ?>: OOB read due to insufficient input validation in imageloadfont(). (CVE-2022-31630)</li>
+</ul></li>
+<li>Hash:
+<ul>
+  <li><?php bugfix(81738); ?>: buffer overflow in hash_update() on long parameter. (CVE-2022-37454)</li>
+</ul></li>
+<li>MBString:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 9683); ?> (Problem when ISO-2022-JP-MS is specified in mb_ encode_mimeheader).</li>
+</ul></li>
+<li>Opcache:
+<ul>
+  <li>Added indirect call reduction for jit on x86 architectures.</li>
+</ul></li>
+<li>Session:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 9583); ?> (session_create_id() fails with user defined save handler that doesn't have a validateId() method).</li>
+</ul></li>
+<li>Streams:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 9590); ?> (stream_select does not abort upon exception or empty valid fd set).</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
+
+
 <section class="version" id="8.1.11"><!-- {{{ 8.1.11 -->
 <h3>Version 8.1.11</h3>
 <b><?php release_date('29-Sep-2022'); ?></b>
