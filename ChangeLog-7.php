@@ -8,6 +8,22 @@ changelog_header(7, $MINOR_VERSIONS);
 ?>
 <a id="PHP_7_4"></a>
 
+<section class="version" id="7.4.33"><!-- {{{ 7.4.33 -->
+<h3>Version 7.4.33</h3>
+<b><?php release_date('03-Nov-2022'); ?></b>
+<ul><li>GD:
+<ul>
+  <li><?php bugfix(81739); ?>: OOB read due to insufficient input validation in imageloadfont(). (CVE-2022-31630)</li>
+</ul></li>
+<li>Hash:
+<ul>
+  <li><?php bugfix(81738); ?>: buffer overflow in hash_update() on long parameter. (CVE-2022-37454)</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
+
+
 <section class="version" id="7.4.32"><!-- {{{ 7.4.32 -->
 <h3>Version 7.4.32</h3>
 <b><?php release_date('29-Sep-2022'); ?></b>
