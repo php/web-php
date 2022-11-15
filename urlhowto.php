@@ -75,7 +75,7 @@ function a($href): void {
  <li>Reference pages (e.g. <?php a("imap") ?>)</li>
  <li>Function pages (e.g. <?php a("join") ?>)</li>
  <li>Class pages (e.g. <?php a("dir") ?>)</li>
- <li>Feature pages (e.g. <?php a("safe_mode") ?>)</li>
+ <li>Feature pages (e.g. <?php a("commandline") ?>)</li>
  <li>Control structure pages (e.g. <?php a("while") ?>)</li>
  <li>Other language pages (e.g. <?php a("oop") ?>)</li>
 </ul>
