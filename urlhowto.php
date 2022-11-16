@@ -132,8 +132,8 @@ function a($href): void {
  always override this setting by explicitly providing
  the language you want to get to. You can embed the language
  in the URL before the manual search term.
- <kbd><?php echo $MYSITE; ?>hu/sort</kbd> will bring up
- the Hungarian manual page for sort() for example.
+ <kbd><?php echo $MYSITE; ?>fr/sort</kbd> will bring up
+ the French manual page for sort() for example.
 </p>
 
 <h2>Search shortcuts</h2>
