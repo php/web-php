@@ -8,6 +8,49 @@ changelog_header(8, $MINOR_VERSIONS);
 ?>
 <a id="PHP_8_1"></a>
 
+<section class="version" id="8.1.13"><!-- {{{ 8.1.13 -->
+<h3>Version 8.1.13</h3>
+<b><?php release_date('24-Nov-2022'); ?></b>
+<ul><li>CLI:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 9709); ?> (Null pointer dereference with -w/-s options).</li>
+</ul></li>
+<li>Core:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 9752); ?> (Generator crashes when interrupted during argument evaluation with extra named params).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 9801); ?> (Generator crashes when memory limit is exceeded during initialization).</li>
+  <li>Fixed potential NULL pointer dereference Windows shm*() functions.</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 9750); ?> (Generator memory leak when interrupted during argument evaluation.</li>
+</ul></li>
+<li>Date:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 9763); ?> (DateTimeZone ctr mishandles input and adds null byte if the argument is an offset larger than 100*60 minutes).</li>
+</ul></li>
+<li>FPM:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 9754); ?> (SaltStack (using Python subprocess) hangs when running php-fpm 8.1.11).</li>
+</ul></li>
+<li>mysqli:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 9841); ?> (mysqli_query throws warning despite using silenced error mode).</li>
+</ul></li>
+<li>MySQLnd:
+<ul>
+  <li>Fixed potential heap corruption due to alignment mismatch.</li>
+</ul></li>
+<li>OpenSSL:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 8430); ?> (OpenSSL compiled with no-md2, no-md4 or no-rmd160 does not build).</li>
+</ul></li>
+<li>SOAP:
+<ul>
+  <li>Fixed <?php githubissuel('php/php-src', 9720); ?> (Null pointer dereference while serializing the response).</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
+
+
 <section class="version" id="8.1.12"><!-- {{{ 8.1.12 -->
 <h3>Version 8.1.12</h3>
 <b><?php release_date('27-Oct-2022'); ?></b>
