@@ -227,8 +227,8 @@ $blueprintRng = new Xoshiro256StarStar(
 $fibers = [];
 for ($i = 0; $i < 8; $i++) {
 	$fiberRng = clone $blueprintRng;
-	// Xoshiro256**'s 'jump()' method moves the blueprint ahead 2**128 steps, as if calling 'generate()' 2**128 times,
-	// giving the Fiber 2**128 unique values without needing to reseed.
+	// Xoshiro256**'s 'jump()' method moves the blueprint ahead 2**128 steps, as if calling
+	// 'generate()' 2**128 times, giving the Fiber 2**128 unique values without needing to reseed.
 	$blueprintRng->jump(); 
 
 	$fibers[] = new Fiber(function () use ($fiberRng, $i): void {
