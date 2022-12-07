@@ -95,7 +95,7 @@ $intro = <<<EOF
     <img class="hero-logo" src="/images/logos/php-logo-white.svg" alt="php" width="240" height="120">
     <p class="hero-text">A <strong>popular general-purpose scripting language</strong> that is especially suited to web development.<br />Fast, flexible and pragmatic, PHP powers everything from your blog to the most popular websites in the world.</p>
     <div class="hero-actions">
-      <a href="/releases/8.2/index.php" class="hero-btn hero-btn-primary">What's new in 8.2</a>
+      <a href="/releases/8.1/index.php" class="hero-btn hero-btn-primary">What's new in 8.2</a>
       <a href="/downloads.php" class="hero-btn hero-btn-secondary">Download</a>
     </div>
 EOF;
