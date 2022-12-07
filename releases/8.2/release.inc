@@ -42,7 +42,7 @@ common_header(message('common_header', $lang));
                 <?= message('readonly_classes_title', $lang) ?>
                 <a class="php8-rfc" href="https://wiki.php.net/rfc/readonly_classes">RFC</a>
                 <a class="php8-rfc"
-                   href="https://www.php.net/manual/en/migration82.new-features.php#migration82.new-features.core.readonly-classes"><?= message(
+                   href="/manual/<?= $lang ?>/language.oop5.basic.php#language.oop5.basic.class.readonly"><?= message(
                         'documentation',
                         $lang
                     ) ?></a>
@@ -100,7 +100,7 @@ PHP
                 <?= message('dnf_types_title', $lang) ?>
                 <a class="php8-rfc" href="https://wiki.php.net/rfc/dnf_types">RFC</a>
                 <a class="php8-rfc"
-                   href="https://www.php.net/manual/en/migration82.new-features.php#migration82.new-features.core.type-system"><?= message(
+                   href="/manual/<?= $lang ?>/migration82.new-features.php#migration82.new-features.core.type-system"><?= message(
                         'documentation',
                         $lang
                     ) ?></a>
@@ -205,11 +205,7 @@ PHP
                 <?= message('random_title', $lang) ?>
                 <a class="php8-rfc" href="https://wiki.php.net/rfc/rng_extension">RFC</a>
                 <a class="php8-rfc" href="https://wiki.php.net/rfc/random_extension_improvement">RFC</a>
-                <a class="php8-rfc"
-                   href="https://www.php.net/manual/en/migration82.new-features.php#migration82.new-features.random"><?= message(
-                        'documentation',
-                        $lang
-                    ) ?></a>
+                <a class="php8-rfc" href="/manual/<?= $lang ?>/book.random.php"><?= message('documentation', $lang ) ?></a>
             </h2>
             <div class="php8-compare__main">
                 <div class="example-contents example-contents-full">
@@ -229,7 +225,7 @@ for ($i = 0; $i < 8; $i++) {
 	$fiberRng = clone $blueprintRng;
 	// Xoshiro256**'s 'jump()' method moves the blueprint ahead 2**128 steps, as if calling
 	// 'generate()' 2**128 times, giving the Fiber 2**128 unique values without needing to reseed.
-	$blueprintRng->jump(); 
+	$blueprintRng->jump();
 
 	$fibers[] = new Fiber(function () use ($fiberRng, $i): void {
 		$randomizer = new Randomizer($fiberRng);
@@ -262,7 +258,7 @@ PHP
                 <?= message('constants_in_traits_title', $lang) ?>
                 <a class="php8-rfc" href="https://wiki.php.net/rfc/constants_in_traits">RFC</a>
                 <a class="php8-rfc"
-                   href="https://www.php.net/manual/en/migration82.new-features.php#migration82.new-features.core.constant-in-traits"><?= message(
+                   href="/manual/<?= $lang ?>/migration82.new-features.php#migration82.new-features.core.constant-in-traits"><?= message(
                         'documentation',
                         $lang
                     ) ?></a>
@@ -329,7 +325,7 @@ PHP
                 <?= message('deprecate_dynamic_properties_title', $lang) ?>
                 <a class="php8-rfc" href="https://wiki.php.net/rfc/deprecate_dynamic_properties">RFC</a>
                 <a class="php8-rfc"
-                   href="https://www.php.net/manual/en/migration82.deprecated.php#migration82.deprecated.core.dynamic-properties"><?= message(
+                   href="/manual/<?= $lang ?>/migration82.deprecated.php#migration82.deprecated.core.dynamic-properties"><?= message(
                         'documentation',
                         $lang
                     ) ?></a>
