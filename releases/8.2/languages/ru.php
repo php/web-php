@@ -1,0 +1,40 @@
+<?php
+
+return [
+    'common_header' => 'PHP 8.2 — большое обновление языка PHP. Readonly-классы, самостоятельные типы null, false и true, устаревшие динамические свойства, улучшение производительности и многое другое.',
+    'documentation' => 'Документация',
+    'main_title' => 'будет выпущен завтра!',
+    'main_subtitle' => 'PHP 8.2 — большое обновление языка PHP.<br class="display-none-md">Оно содержит множество новых возможностей, включая readonly-классы, самостоятельные типы null, false и true, устаревшие динамические свойства, улучшение производительности и многое другое.',
+    'upgrade_now' => 'Переходите на PHP 8.2!',
+    'readonly_classes_title' => 'Readonly-классы',
+    'dnf_types_title' => 'Типы в виде дизъюнктивной нормальной формы (ДНФ)',
+    'dnf_types_description' => 'ДНФ позволяет совместить <a href="/manual/ru/language.types.type-system.php#language.types.type-system.composite.union">объединение</a> и <a href="/manual/ru/language.types.type-system.php#language.types.type-system.composite.intersection">пересечение</a> типов, при этом обязательно типы пересечения следует сгруппировать скобками.',
+    'null_false_true_types_title' => 'Самостоятельные типы <code>null</code>, <code>false</code> и <code>true</code>',
+    'random_title' => 'Новый модуль "Random"',
+    'random_description' => '<p>Модуль "random" предлагает новый объектно-ориентированный API для генерации случайных чисел. Вместо использования глобального генератора случайных чисел (ГСЧ) на базе алгоритма вихря Мерсенна, в объектно-ориентированном API доступно несколько ГСЧ, представленных отдельными классами (как реализации интерфейса Engine), которые хранят внутреннее состояние, позволяя создавать несколько независимых последовательностей случайных чисел.</p>
+        <p>Класс <code>\Random\Randomizer</code> представляет высокоуровневый интерфейс по использованию движков для генерации случайного целого числа, перемешивания массива или строки, выбора случайных ключей массива и многое другое.</p>',
+    'constants_in_traits_title' => 'Константы в трейтах',
+    'constants_in_traits_description' => 'Нельзя получить доступ к константе через имя трейта, но можно через класс, который использует этот трейт.',
+    'deprecate_dynamic_properties_title' => 'Динамические свойства объявлены устаревшими',
+    'deprecate_dynamic_properties_description' => '<p>Чтобы помочь избежать ошибок и опечаток, больше не рекомендуется определять динамические свойства, только если сам класс явно не разрешит это при помощи атрибута <code>#[\AllowDynamicProperties]</code>. В экземплярах <code>stdClass</code> по-прежнему можно использовать динамические свойства.</p>
+        <p>Это изменение не влияет на использование магических методов <code>__get</code>/<code>__set</code>.</p>',
+    'new_classes_title' => 'Новые классы, интерфейсы и функции',
+    'new_mysqli' => 'Новая функция <a href="/manual/ru/mysqli.execute-query.php"><code>mysqli_execute_query</code></a> и метод <a href="/manual/ru/mysqli.execute-query.php"><code>mysqli::execute_query</code></a>.',
+    'new_attributes' => 'Новые атрибуты <a href="/manual/ru/class.allow-dynamic-properties.php"><code>#[\AllowDynamicProperties]</code></a> и <a href="/manual/ru/class.sensitive-parameter.php"><code>#[\SensitiveParameter]</code></a>.',
+    'new_zip' => 'Новые методы <a href="/manual/ru/ziparchive.getstreamindex.php"><code>ZipArchive::getStreamIndex</code></a>, <a href="/manual/ru/ziparchive.getstreamname.php"><code>ZipArchive::getStreamName</code></a> и <a href="/manual/ru/ziparchive.clearerror.php"><code>ZipArchive::clearError</code></a>.',
+    'new_reflection' => 'Новые методы <a href="/manual/ru/reflectionfunction.isanonymous.php"><code>ReflectionFunction::isAnonymous</code></a> и <a href="/manual/ru/reflectionmethod.hasprototype.php"><code>ReflectionMethod::hasPrototype</code></a>.',
+    'new_functions' => 'Новые функции <a href="/manual/ru/function.curl_upkeep.php"><code>curl_upkeep</code></a>, <a href="/manual/ru/function.memory-reset-peak-usage.php"><code>memory_reset_peak_usage</code></a>, <a href="/manual/ru/function.ini-parse-quantity.php"><code>ini_parse_quantity</code></a>, <a href="/manual/ru/function.libxml-get-external-entity-loader.php"><code>libxml_get_external_entity_loader</code></a>, <a href="/manual/ru/function.sodium-crypto-stream-xchacha20-xor-ic.php"><code>sodium_crypto_stream_xchacha20_xor_ic</code></a>, <a href="/manual/ru/function.openssl-cipher-key-length.php"><code>openssl_cipher_key_length</code></a>.',
+    'bc_title' => 'Устаревшая функциональность и изменения в обратной совместимости',
+    'bc_string_interpolation' => 'Интерполяции строк вида <code>${}</code> следует избегать.',
+    'bc_utf8' => 'Не рекомендуется использовать функции <a href="/manual/ru/function.utf8-encode.php"><code>utf8_encode</code></a> и <a href="/manual/ru/function.utf8-decode.php"><code>utf8_decode</code></a>.',
+    'bc_datetime' => 'У методов <a href="/manual/ru/datetime.createfromimmutable.php"><code>DateTime::createFromImmutable</code></a> и <a href="/manual/ru/datetimeimmutable.createfrommutable.php"><code>DateTimeImmutable::createFromMutable</code></a> задан предварительный тип возвращаемого значения <code>static</code>.',
+    'bc_odbc' => 'Модули <code>ODBC</code> и <code>PDO_ODBC</code> экранирует имя пользователя и пароль.',
+    'bc_str_locale_sensitive' => 'При работе функции <a href="/manual/ru/function.strtolower.php"><code>strtolower</code></a> и <a href="/manual/ru/function.strtoupper.php"><code>strtoupper</code></a> теперь не учитывают локаль.',
+    'bc_spl_enforces_signature' => 'Методы <a href="/manual/ru/splfileobject.getcsvcontrol.php"><code>SplFileObject::getCsvControl</code></a>, <a href="/manual/ru/splfileobject.fflush.php"><code>SplFileObject::fflush</code></a>, <a href="/manual/ru/splfileobject.ftell.php"><code>SplFileObject::ftell</code></a>, <a href="/manual/ru/splfileobject.fgetc.php"><code>SplFileObject::fgetc</code></a> и <a href="/manual/ru/splfileobject.fpassthru.php"><code>SplFileObject::fpassthru</code></a> усиливают свою сигнатуру.',
+    'bc_spl_false' => 'У метода <a href="/manual/ru/splfileobject.haschildren.php"><code>SplFileObject::hasChildren</code></a> предварительный тип возвращаемого значения задан как <code>false</code>.',
+    'bc_spl_null' => 'У метода <a href="/manual/ru/splfileobject.getchildren.php"><code>SplFileObject::getChildren</code></a> предварительный тип возвращаемого значения задан как <code>null</code>.',
+    'bc_spl_deprecated' => 'Внутренний метод <code>SplFileInfo::_bad_state_ex</code> объявлен устаревшим.',
+    'footer_title' => 'Выше производительность, лучше синтаксис, надёжнее система типов.',
+    'footer_description' => '<p>Для загрузки исходного кода PHP 8.2 посетите страницу <a href="/downloads">Downloads</a>. Бинарные файлы Windows находятся на сайте <a href="https://windows.php.net/download">PHP for Windows</a>. Список изменений перечислен на странице <a href="/ChangeLog-8.php#PHP_8_2">ChangeLog</a>.</p>
+        <p><a href="/manual/ru/migration82.php">Руководство по миграции</a> доступно в разделе документации. Ознакомьтесь с ним, чтобы узнать обо всех новых возможностях и изменениях, затрагивающих обратную совместимость.</p>',
+];
