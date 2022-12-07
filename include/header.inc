@@ -105,8 +105,8 @@ if (!isset($config["languages"])) {
       <li class="<?php echo $curr == "community" ? "active" : ""?>"><a href="/get-involved" >Get Involved</a></li>
       <li class="<?php echo $curr == "help" ? "active" : ""?>"><a href="/support">Help</a></li>
       <li class="<?php echo $curr === "php8" ? "active" : "" ?>">
-        <a href="/releases/8.2/index.php">
-          <img src="/images/php8/logo_php8_2.svg" alt="php8.2" height="22" width="60">
+        <a href="/releases/8.1/index.php">
+          <img src="/images/php8/logo_php8_1.svg" alt="php8.1" height="22" width="60">
         </a>
       </li>
     </ul>
