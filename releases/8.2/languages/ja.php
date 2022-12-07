@@ -1,0 +1,40 @@
+<?php
+
+return [
+    'common_header' => 'PHP 8.2 は、PHP 言語のメジャーアップデートです。読み取り専用クラス、独立した型 null, true, false、動的なプロパティの非推奨化などの機能や、パフォーマンスの向上が含まれています。',
+    'documentation' => 'Doc',
+    'main_title' => 'Released!',
+    'main_subtitle' => 'PHP 8.2 は、PHP 言語のメジャーアップデートです。<br class="display-none-md">このアップデートには、たくさんの新機能や最適化が含まれています。読み取り専用クラス、独立した型 null, false, true、動的なプロパティの非推奨化や、パフォーマンスの向上などが含まれています。',
+    'upgrade_now' => 'PHP 8.2 にアップデートしよう!',
+    'readonly_classes_title' => '読み取り専用クラス',
+    'dnf_types_title' => 'DNF(Disjunctive Normal Form)型',
+    'dnf_types_description' => 'DNF 型を使うと、<a href="/manual/ja/language.types.declarations.php#language.types.declarations.composite.union">union 型</a> と <a href="/manual/en/language.types.declarations.php#language.types.declarations.composite.intersection">交差型</a> を組み合わせることができます。これらを組み合わせるときは、交差型は括弧で囲まなければいけません。',
+    'null_false_true_types_title' => '<code>null</code>, <code>false</code>, <code>true</code> が、独立した型に',
+    'random_title' => '"Random" 拡張モジュール',
+    'random_description' => '<p>"random" 拡張モジュールは、乱数を生成するための、新しいオブジェクト指向の API を提供します。グローバルなシードに依存していた、メルセンヌ・ツイスターを使った乱数生成器(RNG) の代わりに、オブジェクト志向の API が複数の("エンジン" の)クラスを提供します。このクラスは、ステートをオブジェクトの内部に保存した状態で、モダンなアルゴリズムへのアクセスを提供します。これによって、複数の独立したシードのシーケンスを許容することができます。</p>
+        <p><code>\Random\Randomizer</code> クラスは、エンジンのランダムな値を使って高レベルなインターフェイスを提供します。これを使うと、ランダムな数字を生成したり、配列や文字列をシャッフルしたり、配列のキーをランダムに選択したりなどができます。</p>',
+    'constants_in_traits_title' => 'トレイトで定数',
+    'constants_in_traits_description' => 'トレイトの名前経由で定数にはアクセスできませんが、トレイトを使うクラスを通じて定数にアクセスできます。',
+    'deprecate_dynamic_properties_title' => '動的なプロパティが非推奨に',
+    'deprecate_dynamic_properties_description' => '<p>クラスを <code>#[\AllowDynamicProperties]</code> でマークしない限り、動的なプロパティの作成は推奨されなくなりました。これはミスや typo を防ぐのを助けるためです。<code>stdClass</code> は動的なプロパティを許可しています。</p>
+        <p>マジックメソッド <code>__get</code>/<code>__set</code> を使っても、この変更の変更は受けません。</p>',
+    'new_classes_title' => '新しいクラス、インターフェイス、関数',
+    'new_mysqli' => '<code>mysqli_execute_query</code>, <code>mysqli::execute_query</code>',
+    'new_attributes' => '新しいアトリビュート <code>#[\AllowDynamicProperties]</code>,<code>#[\SensitiveParameter]</code>',
+    'new_zip' => '<code>ZipArchive::getStreamIndex</code>, <code>ZipArchive::getStreamName</code>, <code>ZipArchive::clearError</code>',
+    'new_reflection' => '<code>ReflectionFunction::isAnonymous</code>, <code>ReflectionMethod::hasPrototype</code>',
+    'new_functions' => '<code>curl_upkeep</code>, <code>memory_reset_peak_usage</code>, <code>ini_parse_quantity</code>, <code>libxml_get_external_entity_loader</code>, <code>sodium_crypto_stream_xchacha20_xor_ic</code>, <code>openssl_cipher_key_length</code>',
+    'bc_title' => '非推奨および、非互換の変更',
+    'bc_string_interpolation' => '<code>${}</code> 形式の、文字列への値の埋め込みは、推奨されなくなりました。',
+    'bc_utf8' => '<code>utf8_encode</code> と <code>utf8_decode</code> は、推奨されなくなりました。',
+    'bc_datetime' => '<code>DateTime::createFromImmutable</code> と <code>DateTimeImmutable::createFromMutable</code> は、仮の戻り値の型が <code>static</code> になりました。',
+    'bc_odbc' => '拡張モジュール <code>ODBC</code> と <code>PDO_ODBC</code> は、ユーザー名とパスワードをエスケープするようになりました。',
+    'bc_str_locale_sensitive' => '<code>strtolower</code> や <code>strtoupper</code> は、ロケールに依存しなくなりました。',
+    'bc_spl_enforces_signature' => '<code>SplFileObject::getCsvControl</code>, <code>SplFileObject::fflush</code>, <code>SplFileObject::ftell</code>, <code>SplFileObject::fgetc</code>, <code>SplFileObject::fpassthru</code> は、シグネチャを強制するようになりました。',
+    'bc_spl_false' => '<code>SplFileObject::hasChildren</code> は、仮の戻り値の型が <code>false</code> になりました。',
+    'bc_spl_null' => '<code>SplFileObject::getChildren</code> は、仮の戻り値の型が <code>null</code> になりました。',
+    'bc_spl_deprecated' => '内部メソッド <code>SplFileInfo::_bad_state_ex</code> は、推奨されなくなりました。',
+    'footer_title' => 'パフォーマンスの向上、より良い文法、型システムの改善',
+    'footer_description' => '<p>PHP 8.2  のソースコードのダウンロードは、<a href="https://www.php.net/downloads">downloads</a> のページをどうぞ。 Windows 用のバイナリは <a href="https://windows.php.net/download">PHP for Windows</a> のページにあります。変更の一覧は <a href="https://www.php.net/ChangeLog-8.php#PHP_8_2">ChangeLog</a> にあります。</p>
+        <p><a href="/manual/ja/migration82.php">移行ガイド</a> が PHP マニュアルで利用できます。新機能や下位互換性のない変更の詳細については、移行ガイドを参照して下さい。</p>',
+];
