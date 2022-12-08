@@ -264,32 +264,7 @@ PHP
                     ) ?></a>
             </h2>
             <div class="php8-compare__main">
-                <div class="php8-compare__block example-contents">
-                    <div class="php8-compare__label">PHP &lt; 8.2</div>
-                    <div class="php8-code phpcode">
-                        <?php highlight_php_trimmed(
-                            <<<'PHP'
-trait Foo
-{
-    public const CONSTANT = 1;
-
-    public function bar(): int
-    {
-        return self::CONSTANT; // Fatal error
-    }
-}
-
-class Bar
-{
-    use Foo;
-}
-PHP
-
-                        ); ?>
-                    </div>
-                </div>
-                <div class="php8-compare__arrow"></div>
-                <div class="php8-compare__block example-contents">
+                <div class="example-contents example-contents-full">
                     <div class="php8-compare__label php8-compare__label_new">PHP 8.2</div>
                     <div class="php8-code phpcode">
                         <?php highlight_php_trimmed(
@@ -297,11 +272,6 @@ PHP
 trait Foo
 {
     public const CONSTANT = 1;
-
-    public function bar(): int
-    {
-        return self::CONSTANT; // Fatal error
-    }
 }
 
 class Bar
@@ -310,6 +280,7 @@ class Bar
 }
 
 var_dump(Bar::CONSTANT); // 1
+var_dump(Foo::CONSTANT); // Error
 PHP
                         ); ?>
                     </div>
