@@ -30,7 +30,7 @@ while(($ln = fgets($fp)) !== false) {
 	}
 	if (!$inside) { continue; }
 
-	if (preg_match('/,? PHP \d+.\d+.\d+/', $ln)) {
+	if (preg_match('/, PHP \d+.\d+.\d+/', $ln)) {
 		// next entry - we're done
 		break;
 	}
