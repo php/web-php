@@ -3,7 +3,7 @@
 return [
     'common_header' => 'PHP 8.2 is a major update of the PHP language. Readonly classes, null, false, and true as stand-alone types, deprecated dynamic properties, performance improvements and more',
     'documentation' => 'Doc',
-    'main_title' => 'To be released tomorrow!',
+    'main_title' => 'Released!',
     'main_subtitle' => 'PHP 8.2 is a major update of the PHP language.<br class="display-none-md">It contains many new features, including readonly classes, null, false, and true as stand-alone types, deprecated dynamic properties, performance improvements and more.',
     'upgrade_now' => 'Upgrade to PHP 8.2 now!',
     'readonly_classes_title' => 'Readonly classes',
