@@ -80,7 +80,258 @@ changelog_header(8, $MINOR_VERSIONS);
   <li>idate() now accepts format specifiers "N" (ISO Day-of-Week) and "o" (ISO Year).</li>
   <li>Fixed bug <?php githubissuel('php/php-src', 8730); ?> (DateTime::diff miscalculation is same time zone of different type).</li>
   <li>Fixed bug <?php githubissuel('php/php-src', 8964); ?> (DateTime object comparison after applying delta less than 1 second).</li>
-  <li>Fixed bug <?php githubissuel('php/php-src', 9106); ?>: (DateInterval 1.5s added to DateTimeInterface is rounded</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 9106); ?> (DateInterval 1.5s added to DateTimeInterface is rounded down since PHP 8.1.0).</li>
+  <li><?php bugfix(75035); ?> (Datetime fails to unserialize "extreme" dates).</li>
+  <li><?php bugfix(80483); ?> (DateTime Object with 5-digit year can't unserialized).</li>
+  <li><?php bugfix(81263); ?> (Wrong result from DateTimeImmutable::diff).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 9431); ?> (DateTime::getLastErrors() not returning false when no errors/warnings).</li>
+  <li>Fixed bug with parsing large negative numbers with the @ notation.</li>
+</ul></li>
+<li>DBA:
+<ul>
+  <li>Fixed LMDB driver hanging when attempting to delete a non-existing key (Girgias)</li>
+  <li>Fixed LMDB driver memory leak on DB creation failure (Girgias)</li>
+  <li>Fixed <?php githubissuel('php/php-src', 8856); ?> (dba: lmdb: allow to override the MDB_NOSUBDIR flag).</li>
+</ul></li>
+<li>FFI:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 9090); ?> (Support assigning function pointers in FFI).</li>
+</ul></li>
+<li>Fileinfo:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 8805); ?> (finfo returns wrong mime type for woff/woff2 files).</li>
+</ul></li>
+<li>Filter:
+<ul>
+  <li>Added FILTER_FLAG_GLOBAL_RANGE to filter Global IPs.</li>
+</ul></li>
+<li>FPM:
+<ul>
+  <li>Emit error for invalid port setting.</li>
+  <li>Added extra check for FPM proc dumpable on SELinux based systems.</li>
+  <li>Added support for listening queue on macOS.</li>
+  <li>Changed default for listen.backlog on Linux to -1.</li>
+  <li>Added listen.setfib pool option to set route FIB on FreeBSD.</li>
+  <li>Added access.suppress_path pool option to filter access log entries.</li>
+  <li>Fixed on fpm scoreboard occasional warning on acquisition failure.</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 9754); ?> (SaltStack (using Python subprocess) hangs when running php-fpm 8.1.11).</li>
+</ul></li>
+<li>FTP:
+<ul>
+  <li>Fix datetime format string to follow POSIX spec in ftp_mdtm().</li>
+</ul></li>
+<li>GD:
+<ul>
+  <li><?php bugfix(81739); ?>: OOB read due to insufficient input validation in imageloadfont(). (CVE-2022-31630)</li>
+</ul></li>
+<li>GMP:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 9308); ?> (GMP throws the wrong error when a GMP object is passed to gmp_init()).</li>
+</ul></li>
+<li>Hash:
+<ul>
+  <li><?php bugfix(81738); ?>: buffer overflow in hash_update() on long parameter. (CVE-2022-37454)</li>
+</ul></li>
+<li>Intl:
+<ul>
+  <li>Update all grandfathered language tags with preferred values</li>
+  <li>Fixed <?php githubissuel('php/php-src', 7939); ?> (Cannot unserialize IntlTimeZone objects).</li>
+  <li>Fixed build for ICU 69.x and onwards.</li>
+  <li>Declared Transliterator::$id as readonly to unlock subclassing it.</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 9421); ?> (Incorrect argument number for ValueError in NumberFormatter).</li>
+</ul></li>
+<li>MBString:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 9248); ?> (Segmentation fault in mb_strimwidth()).</li>
+</ul></li>
+<li>mysqli:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 9841); ?> (mysqli_query throws warning despite using silenced error mode).</li>
+</ul></li>
+<li>MySQLnd:
+<ul>
+  <li>Fixed potential heap corruption due to alignment mismatch.</li>
+</ul></li>
+<li>OCI8:
+<ul>
+  <li>Added oci8.prefetch_lob_size directive to tune LOB query performance</li>
+  <li>Support for building against Oracle Client libraries 10.1 and 10.2 has been dropped. Oracle Client libraries 11.2 or newer are now required.</li>
+</ul></li>
+<li>ODBC:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 8300); ?> (User input not escaped when building connection string).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 9347); ?> (Current ODBC liveness checks may be inadequate).</li>
+</ul></li>
+<li>Opcache:
+<ul>
+  <li>Allocate JIT buffer close to PHP .text segemnt to allow using direct IP-relative calls and jumps.</li>
+  <li>Added initial support for JIT performance profiling generation for macOs Instrument.</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 8030); ?> (Segfault with JIT and large match/switch statements).</li>
+  <li>Added JIT support improvement for macOs for segments and executable permission bit handling.</li>
+  <li>Added JIT buffer allocation near the .text section on FreeNSD.</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 9371); ?> (Crash with JIT on mac arm64) (jdp1024/David Carlier)</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 9259); ?> (opcache.interned_strings_buffer setting integer overflow).</li>
+  <li>Added indirect call reduction for jit on x86 architectures.</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 9164); ?> (Segfault in zend_accel_class_hash_copy).</li>
+  <li>Fix opcache preload with observers enabled.</li>
+</ul></li>
+<li>OpenSSL:
+<ul>
+  <li>Discard poll calls on socket when no timeout/non blocking/MSG_DONTWAIT.</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 9310); ?> (SSL local_cert and local_pk do not respect open_basedir).</li>
+  <li>Implement FR #76935 ("chacha20-poly1305" is an AEAD but does not work like AEAD).</li>
+  <li>Added openssl_cipher_key_length function.</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 9517); ?> (Compilation error openssl extension related to PR <?php githubissuel('php/php-src', 9366); ?>).</li>
+  <li>Fixed missing clean up of OpenSSL engine list - attempt to fix <?php githubissuel('php/php-src', 8620); ?>.</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 8430); ?> (OpenSSL compiled with no-md2, no-md4 or no-rmd160 does not build).</li>
+</ul></li>
+<li>PCNTL:
+<ul>
+  <li>Fixed pcntl_(get|set)priority error handling for MacOS.</li>
+</ul></li>
+<li>PCRE:
+<ul>
+  <li><?php implemented(77726); ?> (Allow null character in regex patterns).</li>
+  <li>Updated bundled libpcre to 10.40.</li>
+</ul></li>
+<li>PDO:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 9818); ?> (Initialize run time cache in PDO methods).</li>
+</ul></li>
+<li>PDO_Firebird:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 8576); ?> (Bad interpretation of length when char is UTF-8).</li>
+</ul></li>
+<li>PDO_ODBC:
+<ul>
+  <li><?php bugfix(80909); ?> (crash with persistent connections in PDO_ODBC).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 8300); ?> (User input not escaped when building connection string).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 9347); ?> (Current ODBC liveness checks may be inadequate).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 9372); ?> (HY010 when binding overlong parameter).</li>
+</ul></li>
+<li>PDO_PGSQL:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 9411); ?> (PgSQL large object resource is incorrectly closed).</li>
+</ul></li>
+<li>Random:
+<ul>
+  <li>Added new random extension.</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 9067); ?> (random extension is not thread safe).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 9055); ?> (segmentation fault if user engine throws).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 9066); ?> (signed integer overflow).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 9083); ?> (undefined behavior during shifting).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 9088); ?>, <?php githubissuel('php/php-src', 9056); ?> (incorrect expansion of bytes when generating uniform integers within a given range).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 9089); ?> (Fix memory leak on Randomizer::__construct() call twice).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 9212); ?> (PcgOneseq128XslRr64::jump() should not allow negative $advance).</li>
+  <li>Changed Mt19937 to throw a ValueError instead of InvalidArgumentException for invalid $mode.</li>
+  <li>Splitted Random\Randomizer::getInt() (without arguments) to Random\Randomizer::nextInt().</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 9235); ?> (non-existant $sequence parameter in stub for PcgOneseq128XslRr64::__construct()).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 9190); ?>, <?php githubissuel('php/php-src', 9191); ?> (undefined behavior for MT_RAND_PHP when handling large ranges).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 9249); ?> (Xoshiro256StarStar does not reject the invalid all-zero state).</li>
+  <li>Removed redundant RuntimeExceptions from Randomizer methods. The exceptions thrown by the engines will be exposed directly.</li>
+  <li>Added extension specific Exceptions/Errors (RandomException, RandomError, BrokenRandomEngineError).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 9415); ?> (Randomizer::getInt(0, 2**32 - 1) with Mt19937 always returns 1).</li>
+  <li>Fixed Randomizer::getInt() consistency for 32-bit engines.</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 9464); ?> (build on older macOs releases).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 9839); ?> (Pre-PHP 8.2 output compatibility for non-mt_rand() functions for MT_RAND_PHP).</li>
+</ul></li>
+<li>Reflection:
+<ul>
+  <li>Added ReflectionFunction::isAnonymous().</li>
+  <li>Added ReflectionMethod::hasPrototype().</li>
+  <li>Narrow ReflectionEnum::getBackingType() return type to ReflectionNamedType.</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 8932); ?> (ReflectionFunction provides no way to get the called class of a Closure).</li>
+</ul></li>
+<li>Session:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 7787); ?> (Improve session write failure message for user error handlers).</li>
+  <li>Fixed <?php githubissuel('php/php-src', 9200); ?> (setcookie has an obsolete expires date format).</li>
+  <li>Fixed <?php githubissuel('php/php-src', 9584); ?> (Avoid memory corruption when not unregistering custom session handler).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 9583); ?> (session_create_id() fails with user defined save handler that doesn't have a validateId() method).</li>
+</ul></li>
+<li>SOAP:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 9720); ?> (Null pointer dereference while serializing the response).</li>
+</ul></li>
+<li>Sockets:
+<ul>
+  <li>Added TCP_NOTSENT_LOWAT socket option.</li>
+  <li>Added SO_MEMINFO socket option.</li>
+  <li>Added SO_RTABLE socket option (OpenBSD), equivalent of SO_MARK (Linux).</li>
+  <li>Added TCP_KEEPALIVE, TCP_KEEPIDLE, TCP_KEEPINTVL, TCP_KEEPCNT socket options.</li>
+  <li>Added ancillary data support for FreeBSD.</li>
+  <li>Added ancillary data support for NetBSD.</li>
+  <li>Added SO_BPF_EXTENSIONS socket option.</li>
+  <li>Added SO_SETFIB socket option.</li>
+  <li>Added TCP_CONGESTION socket option.</li>
+  <li>Added SO_ZEROCOPY/MSG_ZEROCOPY options.</li>
+  <li>Added SOL_FILTER socket option for Solaris.</li>
+  <li>Fixed socket constants regression as of PHP 8.2.0beta3.</li>
+</ul></li>
+<li>Sodium:
+<ul>
+  <li>Added sodium_crypto_stream_xchacha20_xor_ic().</li>
+</ul></li>
+<li>SPL:
+<ul>
+  <li>Uses safe_erealloc instead of erealloc to handle heap growth for the SplHeap::insert method to avoid possible overflows.</li>
+  <li>Widen iterator_to_array() and iterator_count()'s $iterator parameter to iterable.</li>
+  <li><?php bugfix(69181); ?> (READ_CSV|DROP_NEW_LINE drops newlines within fields).</li>
+  <li><?php bugfix(65069); ?> (GlobIterator incorrect handling of open_basedir check).</li>
+</ul></li>
+<li>SQLite3:
+<ul>
+  <li>Changed sqlite3.defensive from PHP_INI_SYSTEM to PHP_INI_USER.</li>
+</ul></li>
+<li>Standard:
+<ul>
+  <li>net_get_interfaces() also reports wireless network interfaces on Windows.</li>
+  <li>Finished AVIF support in getimagesize().</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 7847); ?> (stripos with large haystack has bad performance).</li>
+  <li>New function memory_reset_peak_usage().</li>
+  <li>Fixed parse_url(): can not recognize port without scheme.</li>
+  <li>Deprecated utf8_encode() and utf8_decode().</li>
+  <li>Fixed the crypt_sha256/512 api build with clang &gt; 12.</li>
+  <li>Uses safe_erealloc instead of erealloc to handle options in getopt to avoid possible overflows.</li>
+  <li>Implemented FR <?php githubissuel('php/php-src', 8924); ?> (str_split should return empty array for empty string).</li>
+  <li>Added ini_parse_quantity function to convert ini quantities shorthand notation to int.</li>
+  <li>Enable arc4random_buf for Linux glibc 2.36 and onwards for the random_bytes.</li>
+  <li>Uses CCRandomGenerateBytes instead of arc4random_buf on macOs. (David Carlier).</li>
+  <li><?php bugfix(65489); ?> (glob() basedir check is inconsistent).</li>
+  <li>Fixed <?php githubissuel('php/php-src', 9200); ?> (setcookie has an obsolete expires date format).</li>
+  <li>Fixed <?php githubissuel('php/php-src', 9244); ?> (Segfault with array_multisort + array_shift).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 9296); ?> (`ksort` behaves incorrectly on arrays with mixed keys).</li>
+  <li>Marked crypt()'s $string parameter as #[\SensitiveParameter].</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 9464); ?> (build on older macOs releases).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 9518); ?> (Disabling IPv6 support disables unrelated constants).</li>
+  <li>Revert "Fixed parse_url(): can not recognize port without scheme." (andypost)</li>
+  <li>Fix crash reading module_entry after DL_UNLOAD() when module already loaded.</li>
+</ul></li>
+<li>Streams:
+<ul>
+  <li>Set IP_BIND_ADDRESS_NO_PORT if available when connecting to remote host.</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 8548); ?> (stream_wrapper_unregister() leaks memory).</li>
+  <li>Discard poll calls on socket when no timeout/non blocking/MSG_DONTWAIT.</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 9316); ?> ($http_response_header is wrong for long status line).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 9590); ?> (stream_select does not abort upon exception or empty valid fd set).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 9653); ?> (file copy between different filesystems).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 9779); ?> (stream_copy_to_stream fails if dest in append mode).</li>
+</ul></li>
+<li>Windows:
+<ul>
+  <li>Added preliminary support for (cross-)building for ARM64.</li>
+</ul></li>
+<li>XML:
+<ul>
+  <li>Added libxml_get_external_entity_loader() function.</li>
+</ul></li>
+<li>Zip:
+<ul>
+  <li>add ZipArchive::clearError() method</li>
+  <li>add ZipArchive::getStreamName() method</li>
+  <li>add ZipArchive::getStreamIndex() method</li>
+  <li>On Windows, the Zip extension is now built as shared library (DLL) by default.</li>
+  <li>Implement fseek for zip stream when possible with libzip 1.9.1.</li>
 </ul></li>
 </ul>
 <!-- }}} --></section>
