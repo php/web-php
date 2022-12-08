@@ -3,9 +3,90 @@ $_SERVER['BASE_PAGE'] = 'ChangeLog-8.php';
 include_once __DIR__ . '/include/prepend.inc';
 include_once __DIR__ . '/include/changelogs.inc';
 
-$MINOR_VERSIONS = ['8.1', '8.0'];
+$MINOR_VERSIONS = ['8.2', '8.1', '8.0'];
 changelog_header(8, $MINOR_VERSIONS);
 ?>
+<a id="PHP_8_2"></a>
+
+<section class="version" id="8.2.0"><!-- {{{ 8.2.0 -->
+<h3>Version 8.2.0</h3>
+<b><?php release_date('08-Dec-2022'); ?></b>
+<ul><li>CLI:
+<ul>
+  <li><?php bugfix(81496); ?> (Server logs incorrect request method).</li>
+  <li>Updated the mime-type table for the builtin-server.</li>
+  <li>Fixed potential overflow for the builtin server via the PHP_CLI_SERVER_WORKERS environment variable.</li>
+  <li>Fixed <?php githubissuel('php/php-src', 8575); ?> by changing STDOUT, STDERR and STDIN to not close on resource destruction.</li>
+  <li>Implement built-in web server responding without body to HEAD request on a static resource.</li>
+  <li>Implement built-in web server responding with HTTP status 405 to DELETE/PUT/PATCH request on a static resource.</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 9709); ?> (Null pointer dereference with -w/-s options).</li>
+</ul></li>
+<li>COM:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 8750); ?> (Can not create VT_ERROR variant type).</li>
+</ul></li>
+<li>Core:
+<ul>
+  <li><?php bugfix(81380); ?> (Observer may not be initialized properly).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 7771); ?> (Fix filename/lineno of constant expressions).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 7792); ?> (Improve class type in error messages).</li>
+  <li>Support huge pages on MacOS.</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 8655); ?> (Casting an object to array does not unwrap refcount=1 references).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 8661); ?> (Nullsafe in coalesce triggers undefined variable warning).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 7821); ?> and <?php githubissuel('php/php-src', 8418); ?> (Allow arbitrary const expressions in backed enums).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 8810); ?> (Incorrect lineno in backtrace of multi-line function calls).</li>
+  <li>Optimised code path for newly created file with the stream plain wrapper.</li>
+  <li>Uses safe_perealloc instead of perealloc for the ZEND_PTR_STACK_RESIZE_IF_NEEDED to avoid possible overflows.</li>
+  <li>Reduced the memory footprint of strings returned by var_export(), json_encode(), serialize(), iconv_*(), mb_ereg*(), session_create_id(), http_build_query(), strstr(), Reflection*::__toString().</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 8995); ?> (WeakMap object reference offset causing TypeError).</li>
+  <li>Added error_log_mode ini setting.</li>
+  <li>Updated request startup messages.</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 7900); ?> (Arrow function with never return type compile-time errors).</li>
+  <li>Fixed incorrect double to long casting in latest clang.</li>
+  <li>Added support for defining constants in traits.</li>
+  <li>Stop incorrectly emitting false positive deprecation notice alongside unsupported syntax fatal error for `"{$g{'h'}}"`.</li>
+  <li>Fix unexpected deprecated dynamic property warning, which occurred when exit() in finally block after an exception was thrown without catching.</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 9323); ?> (Crash in ZEND_RETURN/GC/zend_call_function) (Tim Starling)</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 9227); ?> (Trailing dots and spaces in filenames are ignored).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 9285); ?> (Traits cannot be used in readonly classes).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 9186); ?> (@strict-properties can be bypassed using unserialization).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 9500); ?> (Using dnf type with parentheses after readonly keyword results in a parse error).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 9516); ?> ((A&amp;B)|D as a param should allow AB or D. Not just A).</li>
+  <li>Fixed observer class notify with Opcache file_cache_only=1.</li>
+  <li>Fixes segfault with Fiber on FreeBSD i386 architecture.</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 9655); ?> (Pure intersection types cannot be implicitly nullable) (Girgias)</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 9589); ?> (dl() segfaults when module is already loaded).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 9752); ?> (Generator crashes when interrupted during argument evaluation with extra named params).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 9801); ?> (Generator crashes when memory limit is exceeded during initialization).</li>
+  <li>Fixed a bug with preloaded enums possibly segfaulting.</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 9823); ?> (Don’t reset func in zend_closure_internal_handler).</li>
+  <li>Fixed potential NULL pointer dereference Windows shm*() functions.</li>
+  <li>Fix target validation for internal attributes with constructor property promotion.</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 9750); ?> (Generator memory leak when interrupted during argument evaluation.</li>
+  <li>Move observer_declared_function_notify until after pass_two().</li>
+  <li>Do not report MINIT stage internal class aliases in extensions.</li>
+</ul></li>
+<li>Curl:
+<ul>
+  <li>Added support for CURLOPT_XFERINFOFUNCTION.</li>
+  <li>Added support for CURLOPT_MAXFILESIZE_LARGE.</li>
+  <li>Added new constants from cURL 7.62 to 7.80.</li>
+  <li>New function curl_upkeep().</li>
+</ul></li>
+<li>Date:
+<ul>
+  <li>Fixed <?php githubissuel('php/php-src', 8458); ?> (DateInterval::createFromDateString does not throw if non-relative items are present).</li>
+  <li><?php bugfix(52015); ?> (Allow including end date in DatePeriod iterations) (Daniel Egeberg, Derick)</li>
+  <li>idate() now accepts format specifiers "N" (ISO Day-of-Week) and "o" (ISO Year).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 8730); ?> (DateTime::diff miscalculation is same time zone of different type).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 8964); ?> (DateTime object comparison after applying delta less than 1 second).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 9106); ?>: (DateInterval 1.5s added to DateTimeInterface is rounded</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
+
+
 <a id="PHP_8_1"></a>
 
 <section class="version" id="8.1.13"><!-- {{{ 8.1.13 -->
