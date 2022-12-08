@@ -21,7 +21,7 @@ $RELEASES = (function () {
     /* PHP 8.2 Release */
     $data['8.2'] = [
         'version' => '8.2.0',
-        'date' => '08 Dec 2021',
+        'date' => '08 Dec 2022',
         'tags' => [], // Set to ['security'] for security releases.
         'sha256' => [
             'tar.gz' => '435c4c2439db648cdf34236f7cd459f93f943fb788b66723a033610d4a059fc6',
