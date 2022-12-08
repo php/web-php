@@ -113,11 +113,7 @@ PHP
                             <<<'PHP'
 class Foo {
     public function bar(mixed $entity) {
-        if ($entity === null) {
-            return null;
-        }
-
-        if (($entity instanceof A) && ($entity instanceof B)) {
+        if ((($entity instanceof A) && ($entity instanceof B)) || ($entity === null)) {
             return $entity;
         }
 
@@ -137,10 +133,6 @@ PHP
                             <<<'PHP'
 class Foo {
     public function bar((A&B)|null $entity) {
-        if ($entity === null) {
-            return null;
-        }
-
         return $entity;
     }
 }
