@@ -11,14 +11,14 @@ return [
     'main_subtitle' => 'PHP 8.2 是 PHP 语言的一个主版本更新。<br class="display-none-md">它包含了只读类、null、false 和 true 作为独立的类型、废弃动态属性、性能改进等。',
     'upgrade_now' => '更新到 PHP 8.2 ！',
     'readonly_classes_title' => '只读类',
-    'dnf_types_title' => '析取范式 (DNF) 类型',
+    'dnf_types_title' => '析取范式 （DNF）类型',
     'dnf_types_description' => 'DNF 类型允许我们组合 <a href="/manual/zh/language.types.type-system.php#language.types.type-system.composite.union">union</a> 和 <a href="/manual/zh/language.types.type-system.php#language.types.composite.intersection">intersection</a>类型，遵循一个严格规则：组合并集和交集类型时，交集类型必须用括号进行分组。',
     'null_false_true_types_title' => '允许 <code>null</code>、<code>false</code> 和 <code>true</code> 作为独立类型',
     'random_title' => '新的“随机”扩展',
-    'random_description' => '<p>“随机”扩展为随机数生成提供了一个新的面向对象的API。这个面向对象的API提供了几个类（“引擎”），提供对现代算法的访问，这些算法在对象中存储其状态，以允许多个独立的可播种序列，而不是依赖于使用 Mersenne Twister 算法的全局种子随机数发生器（RNG）。</p>
+    'random_description' => '<p>“随机”扩展为随机数生成提供了一个新的面向对象的 API。这个面向对象的 API 提供了几个类（“引擎”），提供对现代算法的访问，这些算法在对象中存储其状态，以允许多个独立的可播种序列，而不是依赖于使用 Mersenne Twister 算法的全局种子随机数发生器（RNG）。</p>
         <p><code>\Random\Randomizer</code> 类提供了一个高级接口来使用引擎的随机性来生成随机整数、随机排列数组或字符串、选择随机数组键等。</p>',
     'constants_in_traits_title' => 'Traits 中的常量',
-    'constants_in_traits_description' => '您不能通过 Traits 名称访问常量，但是您可以通过使用 Traits 的类访问常量。',
+    'constants_in_traits_description' => '您不能通过 trait 名称访问常量，但是您可以通过使用 trait 的类访问常量。',
     'deprecate_dynamic_properties_title' => '弃用动态属性',
     'deprecate_dynamic_properties_description' => '<p>动态属性的创建已被弃用，以帮助避免错误和拼写错误，除非该类通过使用 <code>#[\AllowDynamicProperties]</code> 属性来选择。<code>stdClass</code> 允许动态属性。</p>
         <p><code>__get</code>/<code>__set</code> 魔术方法的使用不受此更改的影响。</p>',
@@ -42,8 +42,8 @@ return [
     'bc_spl_deprecated' => '内置方法 <code>SplFileInfo::_bad_state_ex</code> 已被废弃。',
 
     'footer_title' => '更好的性能、更好的语法、改进类型安全。',
-    'footer_content' => '<p>
-        请访问 <a href="/downloads">下载</a> 页面下载 PHP 8.1 源代码。
+    'footer_description' => '<p>
+        请访问 <a href="/downloads">下载</a> 页面下载 PHP 8.2 源代码。
         在 <a href="https://windows.php.net/download">PHP for Windows</a> 站点中可找到 Windows 二进制文件。
         <a href="https://www.php.net/ChangeLog-8.php#PHP_8_2">ChangeLog</a> 中有变更历史记录清单。
       </p>
