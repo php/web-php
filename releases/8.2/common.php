@@ -43,6 +43,7 @@ function language_chooser(string $currentLang): void {
         'en' => 'English',
         'ru' => 'Russian',
         'ja' => '日本語',
+        'zh' => '简体中文',
     ];
 
     // Print out the form with all the options
