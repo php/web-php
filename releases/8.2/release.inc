@@ -160,9 +160,9 @@ PHP
                             <<<'PHP'
 class Falsy
 {
-    public function almostFalse(): string|bool { /* ... */ *}
+    public function almostFalse(): bool { /* ... */ *}
 
-    public function almostTrue(): string|bool { /* ... */ *}
+    public function almostTrue(): bool { /* ... */ *}
 
     public function almostNull(): string|null { /* ... */ *}
 }
