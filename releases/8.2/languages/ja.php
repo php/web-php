@@ -17,7 +17,7 @@ return [
     'constants_in_traits_description' => 'トレイトの名前経由で定数にはアクセスできませんが、トレイトを使うクラスを通じて定数にアクセスできます。',
     'deprecate_dynamic_properties_title' => '動的なプロパティが非推奨に',
     'deprecate_dynamic_properties_description' => '<p>クラスを <code>#[\AllowDynamicProperties]</code> でマークしない限り、動的なプロパティの作成は推奨されなくなりました。これはミスや typo を防ぐのを助けるためです。<code>stdClass</code> は動的なプロパティを許可しています。</p>
-        <p>マジックメソッド <code>__get</code>/<code>__set</code> を使っても、この変更の変更は受けません。</p>',
+        <p>マジックメソッド <code>__get</code>/<code>__set</code> を使う場合は、この変更の影響を受けません。</p>',
     'new_classes_title' => '新しいクラス、インターフェイス、関数',
     'new_mysqli' => '<code>mysqli_execute_query</code>, <code>mysqli::execute_query</code>',
     'new_attributes' => '新しいアトリビュート <code>#[\AllowDynamicProperties]</code>,<code>#[\SensitiveParameter]</code>',
