@@ -116,8 +116,9 @@ function getNextOrPreviousSibling(node, forward) {
 }
 
 function cycleMenuItems(current, forward) {
-    if (getNextOrPreviousSibling(current, forward).length) {
-        cycle(getNextOrPreviousSibling(current, forward), current);
+    var nextOrPreviousSibling = getNextOrPreviousSibling(current, forward);
+    if (nextOrPreviousSibling.length) {
+        cycle(nextOrPreviousSibling, current);
         curr.children("a").first().focus().css({
             outline: "none"
         });
@@ -131,9 +132,11 @@ function cycleHeaders(matches, forward) {
     var gotmatch = 0;
 
     matches.each(function (k, item) {
-        if ($(item).hasClass("current")) {
-            if ($(matches[forward ? k + 1 : k - 1]).length) {
-                cycle($(matches[forward ? k + 1 : k - 1]), $(item));
+        var node = $(item);
+        if (node.hasClass("current")) {
+            var matchNode = $(matches[forward ? k + 1 : k - 1]);
+            if (matchNode.length) {
+                cycle(matchNode, node);
                 gotmatch = 1;
                 return false;
             }
@@ -240,17 +243,17 @@ Mousetrap.bind("g a", function (e) {
 });
 
 function globalsearch(txt) {
-    var key = "search-en";
-    var cache = window.localStorage.getItem(key);
-    cache = JSON.parse(cache);
-
     var term = txt.toLowerCase();
     if (term.length < 3) {
         return;
     }
+
+    var key = "search-en";
+    var cache = window.localStorage.getItem(key);
+    cache = JSON.parse(cache);
+
     if (cache) {
         for (var type in cache.data) {
-            console.log(type);
             var elms = cache.data[type].elements;
             for (var node in elms) {
                 if (elms[node].description.toLowerCase().contains(term) || elms[node].name.toLowerCase().contains(term)) {
@@ -278,20 +281,22 @@ Mousetrap.bind("r o t a t e enter", function (e) {
     if (rotate > 360) {
         rotate = 0;
     }
-    $("html").css("-webkit-transform", "rotate(" + rotate + "deg)");
-    $("html").css("-moz-transform", "rotate(" + rotate + "deg)");
-    $("html").css("-o-transform", "rotate(" + rotate + "deg)");
-    $("html").css("-ms-transform", "rotate(" + rotate + "deg)");
-    $("html").css("transform", "rotate(" + rotate + "deg)");
+    var htmlNode = $("html");
+    htmlNode.css("-webkit-transform", "rotate(" + rotate + "deg)");
+    htmlNode.css("-moz-transform", "rotate(" + rotate + "deg)");
+    htmlNode.css("-o-transform", "rotate(" + rotate + "deg)");
+    htmlNode.css("-ms-transform", "rotate(" + rotate + "deg)");
+    htmlNode.css("transform", "rotate(" + rotate + "deg)");
 });
 var scale = 1;
 Mousetrap.bind("m i r r o r enter", function (e) {
     scale *= -1;
-    $("html").css("-webkit-transform", "scaleX(" + scale + ")");
-    $("html").css("-moz-transform", "scaleX(" + scale + ")");
-    $("html").css("-o-transform", "scaleX(" + scale + ")");
-    $("html").css("-ms-transform", "scaleX(" + scale + ")");
-    $("html").css("transform", "scaleX(" + scale + ")");
+    var htmlNode = $("html");
+    htmlNode.css("-webkit-transform", "scaleX(" + scale + ")");
+    htmlNode.css("-moz-transform", "scaleX(" + scale + ")");
+    htmlNode.css("-o-transform", "scaleX(" + scale + ")");
+    htmlNode.css("-ms-transform", "scaleX(" + scale + ")");
+    htmlNode.css("transform", "scaleX(" + scale + ")");
 });
 Mousetrap.bind("I space h a t e space P H P enter", function (e) {
     window.location = "http://python.org";
@@ -325,27 +330,28 @@ function fixTimeout() {
 }
 
 function fixEdges(rotate) {
+    var htmlNode = $("html");
     if (rotate > 360) {
         rotate = 0;
-        $("html").css("zoom", 1);
-        $("html").css("-moz-transform", "scale(1)");
-        $("html").css("-webkit-transform", "scale(1)");
+        htmlNode.css("zoom", 1);
+        htmlNode.css("-moz-transform", "scale(1)");
+        htmlNode.css("-webkit-transform", "scale(1)");
         setTimeout(function () {
             fixEdges(36);
         }, 30000);
     } else {
-        $("html").css("zoom", 0.5);
-        $("html").css("-moz-transform", "scale(0.5)");
-        $("html").css("-webkit-transform", "scale(0.5)");
+        htmlNode.css("zoom", 0.5);
+        htmlNode.css("-moz-transform", "scale(0.5)");
+        htmlNode.css("-webkit-transform", "scale(0.5)");
         setTimeout(function () {
             fixEdges(rotate + 36);
         }, 100);
     }
-    $("html").css("-webkit-transform", "rotate(" + rotate + "deg)");
-    $("html").css("-moz-transform", "rotate(" + rotate + "deg)");
-    $("html").css("-o-transform", "rotate(" + rotate + "deg)");
-    $("html").css("-ms-transform", "rotate(" + rotate + "deg)");
-    $("html").css("transform", "rotate(" + rotate + "deg)");
+    htmlNode.css("-webkit-transform", "rotate(" + rotate + "deg)");
+    htmlNode.css("-moz-transform", "rotate(" + rotate + "deg)");
+    htmlNode.css("-o-transform", "rotate(" + rotate + "deg)");
+    htmlNode.css("-ms-transform", "rotate(" + rotate + "deg)");
+    htmlNode.css("transform", "rotate(" + rotate + "deg)");
 }
 $(document).ready(function () {
     /*
