@@ -1209,9 +1209,6 @@ header.title {
 
 /* {{{ General styles (p, parameters, initializers, ...) */
 
-.refsect1 .parameter {
-    cursor:pointer;
-}
 .refsect1 dt {
     height:1.5rem;
 }
