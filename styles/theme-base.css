@@ -551,7 +551,6 @@ dl dd {
 
 .phpcode, div.classsynopsis {
     text-align: left;
-    white-space: pre;
 }
 div.classsynopsisinfo_comment {
     margin-top:1.5rem;
