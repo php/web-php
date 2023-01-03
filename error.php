@@ -291,6 +291,9 @@ $manual_redirections = [
     'oci-collection.max' => 'ocicollection.max',
     'oci-collection.size' => 'ocicollection.size',
     'oci-collection.trim' => 'ocicollection.trim',
+    'class.allow-dynamic-properties.php' => 'class.allowdynamicproperties.php',
+    'class.return-type-will-change.php' => 'class.returntypewillchange.php',
+    'class.sensitive-parameter.php' => 'class.sensitiveparameter.php',
     'function.curl-file-create' => 'curlfile.construct',
 ];
 
