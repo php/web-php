@@ -1324,6 +1324,10 @@ div.tip p:first-child {
     font-weight: normal;
 }
 
+.phpcode code span span {
+    white-space: pre;
+}
+
 /* }}} */
 
 
