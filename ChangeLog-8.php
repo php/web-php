@@ -340,6 +340,72 @@ changelog_header(8, $MINOR_VERSIONS);
 
 <a id="PHP_8_1"></a>
 
+<section class="version" id="8.1.14"><!-- {{{ 8.1.14 -->
+<h3>Version 8.1.14</h3>
+<b><?php release_date('05-Jan-2023'); ?></b>
+<ul><li>Core:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 9905); ?> (constant() behaves inconsistent when class is undefined).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 9918); ?> (License information for xxHash is not included in README.REDIST.BINS file).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 9650); ?> (Can't initialize heap: [0x000001e7]).</li>
+  <li>Fixed potentially undefined behavior in Windows ftok(3) emulation.</li>
+</ul></li>
+<li>Date:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 9699); ?> (DateTimeImmutable::diff differences in 8.1.10 onwards - timezone related).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 9700); ?> (DateTime::createFromFormat: Parsing TZID string is too greedy).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 9866); ?> (Time zone bug with \DateTimeInterface::diff()).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 9880); ?> (DateTime diff returns wrong sign on day count when using a timezone).</li>
+</ul></li>
+<li>FPM:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 9959); ?> (Solaris port event mechanism is still broken after bug #66694).</li>
+  <li><?php bugfix(68207); ?> (Setting fastcgi.error_header can result in a WARNING).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 8517); ?> (Random crash of FPM master process in fpm_stdio_child_said).</li>
+</ul></li>
+<li>MBString:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 9535); ?> (The behavior of mb_strcut in mbstring has been changed in PHP8.1).</li>
+</ul></li>
+<li>Opcache:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 9968); ?> (Segmentation Fault during OPCache Preload).</li>
+</ul></li>
+<li>OpenSSL:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 9064); ?> (PHP fails to build if openssl was built with --no-ec).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 10000); ?> (OpenSSL test failures when OpenSSL compiled with no-dsa).</li>
+</ul></li>
+<li>Pcntl:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 9298); ?> (Signal handler called after rshutdown leads to crash).</li>
+</ul></li>
+<li>PDO_Firebird:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 9971); ?> (Incorrect NUMERIC value returned from PDO_Firebird).</li>
+</ul></li>
+<li>PDO/SQLite:
+<ul>
+  <li><?php bugfix(81740); ?> (PDO::quote() may return unquoted string). (CVE-2022-31631)</li>
+</ul></li>
+<li>Session:
+<ul>
+  <li>Fixed <?php githubissuel('php/php-src', 9932); ?> (session name silently fails with . and [).</li>
+</ul></li>
+<li>SPL:
+<ul>
+  <li>Fixed <?php githubissuel('php/php-src', 9883); ?> (SplFileObject::__toString() reads next line).</li>
+  <li>Fixed <?php githubissuel('php/php-src', 10011); ?> (Trampoline autoloader will get reregistered and cannot be unregistered).</li>
+</ul></li>
+<li>SQLite3:
+<ul>
+  <li><?php bugfix(81742); ?> (open_basedir bypass in SQLite3 by using file URI).</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
+
+
 <section class="version" id="8.1.13"><!-- {{{ 8.1.13 -->
 <h3>Version 8.1.13</h3>
 <b><?php release_date('24-Nov-2022'); ?></b>
