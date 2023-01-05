@@ -1462,6 +1462,18 @@ changelog_header(8, $MINOR_VERSIONS);
 
 <a id="PHP_8_0"></a>
 
+<section class="version" id="8.0.27"><!-- {{{ 8.0.27 -->
+<h3>Version 8.0.27</h3>
+<b><?php release_date('05-Jan-2023'); ?></b>
+<ul><li>PDO/SQLite:
+<ul>
+  <li><?php bugfix(81740); ?> (PDO::quote() may return unquoted string). (CVE-2022-31631)</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
+
+
 <section class="version" id="8.0.26"><!-- {{{ 8.0.26 -->
 <h3>Version 8.0.26</h3>
 <b><?php release_date('24-Nov-2022'); ?></b>
