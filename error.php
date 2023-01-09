@@ -291,13 +291,15 @@ $manual_redirections = [
     'oci-collection.max' => 'ocicollection.max',
     'oci-collection.size' => 'ocicollection.size',
     'oci-collection.trim' => 'ocicollection.trim',
-    'class.allow-dynamic-properties.php' => 'class.allowdynamicproperties.php',
-    'class.return-type-will-change.php' => 'class.returntypewillchange.php',
-    'class.sensitive-parameter.php' => 'class.sensitiveparameter.php',
+    'splstack.setiteratormode' => 'spldoublylinkedlist.setiteratormode',
+    'splqueue.setiteratormode' => 'spldoublylinkedlist.setiteratormode',
+    'class.allow-dynamic-properties' => 'class.allowdynamicproperties',
+    'class.return-type-will-change' => 'class.returntypewillchange',
+    'class.sensitive-parameter' => 'class.sensitiveparameter',
     'function.curl-file-create' => 'curlfile.construct',
 ];
 
-if (preg_match("!^manual/([^/]+)/([^/]+)$!", $URI, $match) && isset($manual_redirections[$match[2]])) {
+if (preg_match("!^manual/([^/]+)/([^/]+)(\.php)?$!", $URI, $match) && isset($manual_redirections[$match[2]])) {
     status_header(301);
     mirror_redirect("/manual/$match[1]/" . $manual_redirections[$match[2]]);
 }
