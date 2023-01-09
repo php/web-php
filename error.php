@@ -299,7 +299,9 @@ $manual_redirections = [
     'function.curl-file-create' => 'curlfile.construct',
 ];
 
-if (preg_match("!^manual/([^/]+)/([^/]+)(\.php)?$!", $URI, $match) && isset($manual_redirections[$match[2]])) {
+$manualUri = strripos($URI, ".php") === strlen($URI) - 4 ? substr($URI, 0, -4) : $URI;
+
+if (preg_match("!^manual/([^/]+)/([^/]+)$!", $manualUri, $match) && isset($manual_redirections[$match[2]])) {
     status_header(301);
     mirror_redirect("/manual/$match[1]/" . $manual_redirections[$match[2]]);
 }
