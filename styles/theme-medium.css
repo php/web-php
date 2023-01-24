@@ -456,6 +456,9 @@ aside.tips a:focus {
   color:var(--light-magenta-color);
   border-bottom-color:var(--light-magenta-color);
 }
+.layout-menu ul.child-menu-list li a:hover {
+  color:var(--light-magenta-color);
+}
 .layout-menu ul.child-menu-list a {
   border-color: #666;
 }
