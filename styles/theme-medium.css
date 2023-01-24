@@ -453,8 +453,8 @@ aside.tips a:focus {
   border-top-color:#666;
 }
 .layout-menu ul.child-menu-list li.current a {
-  color:var(--medium-magenta-color);
-  border-bottom-color:var(--medium-magenta-color);
+  color:var(--light-magenta-color);
+  border-bottom-color:var(--light-magenta-color);
 }
 .layout-menu ul.child-menu-list a {
   border-color: #666;
