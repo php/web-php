@@ -423,8 +423,8 @@ aside.tips .panel > a:hover:after {
 }
 aside.tips a:hover,
 aside.tips a:focus {
-  color:var(--medium-magenta-color);
-  border-color:var(--medium-magenta-color);
+  color:var(--light-magenta-color);
+  border-color:var(--light-magenta-color);
 }
 
 .soft-deprecation-notice {
@@ -456,6 +456,7 @@ aside.tips a:focus {
   color:var(--light-magenta-color);
   border-bottom-color:var(--light-magenta-color);
 }
+.layout-menu ul.parent-menu-list li a:hover,
 .layout-menu ul.child-menu-list li a:hover {
   color:var(--light-magenta-color);
 }
