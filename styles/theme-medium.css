@@ -98,7 +98,7 @@ h1.refname {
   color: #4D4D4D;
 }
 
-.docs .classsynopsisinfo_comment {
+.docs .classsynopsisinfo_comment, .docs .classsynopsisinfo_phpdoc {
   color:#f80;
 }
 
