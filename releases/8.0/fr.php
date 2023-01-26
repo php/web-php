@@ -498,7 +498,7 @@ array_chunk([], -1); // ValueError: array_chunk(): Argument #2 ($length) must be
       </p>
       <p>
         Le <a href="/manual/fr/migration80.php">guide de migration</a> est disponible dans le manuel PHP.
-        Veuillez le consulter pour une liste détailler des nouvelles fonctionnalités et changements non rétrocompatibles.
+        Veuillez le consulter pour une liste détaillée des nouvelles fonctionnalités et changements non rétrocompatibles.
       </p>
     </div>
   </div>
