@@ -8,6 +8,74 @@ changelog_header(8, $MINOR_VERSIONS);
 ?>
 <a id="PHP_8_2"></a>
 
+<section class="version" id="8.2.2"><!-- {{{ 8.2.2 -->
+<h3>Version 8.2.2</h3>
+<b><?php release_date('02-Feb-2023'); ?></b>
+<ul><li>Core:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 10200); ?> (zif_get_object_vars: Assertion `!(((__ht)-&gt;u.flags &amp; (1&lt;&lt;2)) != 0)' failed).</li>
+  <li>Fix <?php githubissuel('php/php-src', 10251); ?> (Assertion `(flag &amp; (1&lt;&lt;3)) == 0' failed).</li>
+  <li>Fix <?php githubissuel('php/php-src', 10240); ?> (Assertion failure when adding more than 2**30 elements to an unpacked array).</li>
+  <li>Fix <?php githubissuel('php/php-src', 9735); ?> (Fiber stack variables do not participate in cycle collector).</li>
+  <li>Fix <?php githubissuel('php/php-src', 9675); ?> (Broken run_time_cache init for internal enum methods).</li>
+</ul></li>
+<li>FPM:
+<ul>
+  <li><?php bugfix(77106); ?> (Missing separator in FPM FastCGI errors).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 9981); ?> (FPM does not reset fastcgi.error_header).</li>
+  <li><?php bugfix(68591); ?> (Configuration test does not perform UID lookups).</li>
+  <li>Fixed memory leak when running FPM config test.</li>
+  <li><?php bugfix(67244); ?> (Wrong owner:group for listening unix socket).</li>
+</ul></li>
+<li>Hash:
+<ul>
+  <li>Handle exceptions from __toString in XXH3's initialization (nielsdos)</li>
+</ul></li>
+<li>LDAP:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 10112); ?> (LDAP\Connection::__construct() refers to ldap_create()).</li>
+</ul></li>
+<li>Opcache:
+<ul>
+  <li>Fix inverted bailout value in zend_runtime_jit() (Max Kellermann).</li>
+  <li>Fix access to uninitialized variable in accel_preload().</li>
+  <li>Fix zend_jit_find_trace() crashes.</li>
+  <li>Added missing lock for EXIT_INVALIDATE in zend_jit_trace_exit.</li>
+</ul></li>
+<li>Phar:
+<ul>
+  <li>Fix wrong flags check for compression method in phar_object.c (nielsdos)</li>
+</ul></li>
+<li>PHPDBG:
+<ul>
+  <li>Fix undefined behaviour in phpdbg_load_module_or_extension().</li>
+  <li>Fix NULL pointer dereference in phpdbg_create_conditional_breal().</li>
+  <li>Fix <?php githubissuel('php/php-src', 9710); ?>: phpdbg memory leaks by option "-h" (nielsdos)</li>
+  <li>Fix phpdbg segmentation fault in case of malformed input (nielsdos)</li>
+</ul></li>
+<li>Posix:
+<ul>
+  <li>Fix memory leak in posix_ttyname() (girgias)</li>
+</ul></li>
+<li>Random:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 10247); ?> (Theoretical file descriptor leak for /dev/urandom).</li>
+</ul></li>
+<li>Standard:
+<ul>
+  <li>Fix <?php githubissuel('php/php-src', 10187); ?> (Segfault in stripslashes() with arm64).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 10214); ?> (Incomplete validation of object syntax during unserialize()).</li>
+  <li>Fix substr_replace with slots in repl_ht being UNDEF.</li>
+</ul></li>
+<li>XMLWriter:
+<ul>
+  <li>Fix missing check for xmlTextWriterEndElement (nielsdos)</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
+
+
 <section class="version" id="8.2.1"><!-- {{{ 8.2.1 -->
 <h3>Version 8.2.1</h3>
 <b><?php release_date('05-Jan-2023'); ?></b>
