@@ -483,6 +483,85 @@ changelog_header(8, $MINOR_VERSIONS);
 
 <a id="PHP_8_1"></a>
 
+<section class="version" id="8.1.15"><!-- {{{ 8.1.15 -->
+<h3>Version 8.1.15</h3>
+<b><?php release_date('02-Feb-2023'); ?></b>
+<ul><li>Apache:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 9949); ?> (Partial content on incomplete POST request).</li>
+</ul></li>
+<li>Core:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 10072); ?> (PHP crashes when execute_ex is overridden and a __call trampoline is used from internal code).</li>
+  <li>Fix <?php githubissuel('php/php-src', 10251); ?> (Assertion `(flag &amp; (1&lt;&lt;3)) == 0' failed).</li>
+  <li>Fix wrong comparison in block optimisation pass after opcode update.</li>
+</ul></li>
+<li>Date:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 9891); ?> (DateTime modify with unixtimestamp (@) must work like setTimestamp).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 10218); ?> (DateTimeZone fails to parse time zones that contain the "+" character).</li>
+</ul></li>
+<li>Fiber:
+<ul>
+  <li>Fix assertion on stack allocation size.</li>
+</ul></li>
+<li>FPM:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 9981); ?> (FPM does not reset fastcgi.error_header).</li>
+  <li><?php bugfix(67244); ?> (Wrong owner:group for listening unix socket).</li>
+</ul></li>
+<li>Hash:
+<ul>
+  <li>Handle exceptions from __toString in XXH3's initialization (nielsdos)</li>
+</ul></li>
+<li>LDAP:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 10112); ?> (LDAP\Connection::__construct() refers to ldap_create()).</li>
+</ul></li>
+<li>MBString:
+<ul>
+  <li>Fixed: mb_strlen (and a couple of other mbstring functions) would wrongly treat 0x80, 0xFD, 0xFE, 0xFF, and certain other byte values as the first byte of a 2-byte SJIS character.</li>
+</ul></li>
+<li>Opcache:
+<ul>
+  <li>Fix inverted bailout value in zend_runtime_jit() (Max Kellermann).</li>
+  <li>Fix access to uninitialized variable in accel_preload().</li>
+  <li>Fix zend_jit_find_trace() crashes.</li>
+  <li>Added missing lock for EXIT_INVALIDATE in zend_jit_trace_exit.</li>
+</ul></li>
+<li>Phar:
+<ul>
+  <li>Fix wrong flags check for compression method in phar_object.c (nielsdos)</li>
+</ul></li>
+<li>PHPDBG:
+<ul>
+  <li>Fix undefined behaviour in phpdbg_load_module_or_extension().</li>
+  <li>Fix NULL pointer dereference in phpdbg_create_conditional_breal().</li>
+  <li>Fix <?php githubissuel('php/php-src', 9710); ?>: phpdbg memory leaks by option "-h" (nielsdos)</li>
+  <li>Fix phpdbg segmentation fault in case of malformed input (nielsdos)</li>
+</ul></li>
+<li>Posix:
+<ul>
+  <li>Fix memory leak in posix_ttyname() (girgias)</li>
+</ul></li>
+<li>Standard:
+<ul>
+  <li>Fix <?php githubissuel('php/php-src', 10187); ?> (Segfault in stripslashes() with arm64).</li>
+  <li>Fix substr_replace with slots in repl_ht being UNDEF.</li>
+</ul></li>
+<li>TSRM:
+<ul>
+  <li>Fixed Windows shmget() wrt. IPC_PRIVATE.</li>
+</ul></li>
+<li>XMLWriter:
+<ul>
+  <li>Fix missing check for xmlTextWriterEndElement (nielsdos)</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
+
+
 <section class="version" id="8.1.14"><!-- {{{ 8.1.14 -->
 <h3>Version 8.1.14</h3>
 <b><?php release_date('05-Jan-2023'); ?></b>
