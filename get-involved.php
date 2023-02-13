@@ -31,7 +31,7 @@ site_header("Get Involved", ["current" => "community"]);
   <li>Help finding and diagnosing failed tests, see
       the <a href="http://qa.php.net/write-test.php">phpt documentation</a></li>
   <li>Filing and resolving bug reports
-      at <a href="http://bugs.php.net">bugs.php.net</a></li>
+      on <a href="https://github.com/php/php-src/issues/">GitHub Issues</a>.</li>
   <li>Help maintain and or translate documentation files
       at the doc-* repositories on <a href="https://github.com/php/?q=doc">github</a>. Check out our
       <a href="http://doc.php.net/tutorial/">guide for contributors</a>.</li>
