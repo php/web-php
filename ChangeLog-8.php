@@ -1609,6 +1609,23 @@ changelog_header(8, $MINOR_VERSIONS);
 
 <a id="PHP_8_0"></a>
 
+<section class="version" id="8.0.28"><!-- {{{ 8.0.28 -->
+<h3>Version 8.0.28</h3>
+<b><?php release_date('14-Feb-2023'); ?></b>
+<ul><li>Core:
+<ul>
+  <li><?php bugfix(81744); ?> (Password_verify() always return true with some hash).</li>
+  <li><?php bugfix(81746); ?> (1-byte array overrun in common path resolve code).</li>
+</ul></li>
+<li>SAPI:
+<ul>
+  <li>Fixed bug GHSA-54hq-v5wp-fqgv (DOS vulnerability when parsing multipart request body). (CVE-2023-0662)</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
+
+
 <section class="version" id="8.0.27"><!-- {{{ 8.0.27 -->
 <h3>Version 8.0.27</h3>
 <b><?php release_date('05-Jan-2023'); ?></b>
