@@ -36,9 +36,9 @@ $RELEASES = (function () {
         'date' => '14 Feb 2023',
         'tags' => ['security'], // Set to ['security'] for security releases.
         'sha256' => [
-            'tar.gz' => 'cb1f2ef7af37aa9978e7742818d9edbf27b1db009bc3dfefe7dc522cb3d3423d',
-            'tar.bz2' => '95f2e4f2502906ac233217844806018e888135f0718649f4a0a67e40e450ffa1',
-            'tar.xz' => '7108b7347981ad6e610aaf3b3fb0f6444019ab6f59a872c1b55a29bc753eba93',
+            'tar.gz' => 'a929fb9ed3bc364a5dea4f64954e8aaaa3408b87df04d7c6f743a190f5594e84',
+            'tar.bz2' => 'cd9f0ea14d82d9455587a49a0b6c802a7b8d8ff79703f9f48b17db010fb633ce',
+            'tar.xz' => 'd61f13d96a58b93c39672b58f25e1ee4ce88500f4acb1430cb01a514875c1258',
         ]
     ];
 
