@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom" xmlns:default="http://php.net/ns/news">
+  <title>SymfonyCon Brussels 2023</title>
+  <id>https://www.php.net/archive/2023.php#2023-02-15-3</id>
+  <published>2023-02-07T08:32:51+00:00</published>
+  <updated>2023-02-07T08:32:51+00:00</updated>
+  <link href="https://www.php.net/conferences/index.php#id2023-02-15-3" rel="alternate" type="text/html"/>
+  <link href="https://live.symfony.com/2023-brussels-con/" rel="via" type="text/html"/>
+  <default:finalTeaserDate xmlns="http://php.net/ns/news">2023-12-06</default:finalTeaserDate>
+  <category term="conferences" label="Conference announcement"/>
+  <default:newsImage xmlns="http://php.net/ns/news" link="https://live.symfony.com/2023-brussels-con/" title="SymfonyCon Brussels 2023">symfonycon-brussels-2023.png</default:newsImage>
+  <content type="xhtml">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+      <p>
+        <a href="https://live.symfony.com/2023-brussels-con/">SymfonyCon Brussels 2023</a> is the global conference in English for Symfony and PHP developers. Two days of workshops (December 5-6) followed by two days (December 7-8) full of talks on PHP, Symfony and its ecosystem.
+      </p>
+      <p>
+        Join us and discover the amazing city of Brussels (Belgium) while you share fun and knowledge with developers from all around the World.
+      </p>
+      <p>
+        Check out <a href="https://live.symfony.com/2023-brussels-con/">all the conference details</a>
+      </p>
+    </div>
+  </content>
+</entry>
