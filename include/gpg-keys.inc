@@ -106,6 +106,13 @@ function gpg_key_get(string $rm): ?string {
                 "uid           [ultimate] Ben Ramsey <ramsey@php.net>\n" .
                 "sub   rsa4096 2021-04-26 [E] [expires: 2025-11-24]";
 
+        case 'release-managers':
+            return
+                "pub   rsa4096 2023-02-14 [SC] [expires: 2024-03-01]\n" .
+                "      6210 07F0 0131 D4FB BCE1  BC95 005E E785 B943 B701\n" .
+                "uid           [ultimate] Release Managers <release-managers@php.net>\n" .
+                "sub   rsa4096 2023-02-14 [E] [expires: 2024-03-01]";
+
         case 'remi':
             return
                 "pub   4096R/EE5AF27F 2017-05-24 [expires: 2024-05-22]\n" .
@@ -142,9 +149,9 @@ function gpg_key_get(string $rm): ?string {
 
 function gpg_key_get_branches(bool $activeOnly): array {
     $branches = [
-        '8.2' => ['pierrick', 'ramsey', 'sergey'],
-        '8.1' => ['krakjoe', 'ramsey', 'patrickallaert'],
-        '8.0' => ['pollita', 'carusogabriel-old', 'carusogabriel-new'],
+        '8.2' => ['pierrick', 'ramsey', 'sergey', 'release-managers'],
+        '8.1' => ['krakjoe', 'ramsey', 'patrickallaert', 'release-managers'],
+        '8.0' => ['pollita', 'carusogabriel-old', 'carusogabriel-new', 'release-managers'],
         '7.4' => ['derick', 'petk'],
         '7.3' => ['cmb', 'stas'],
         '7.2' => ['pollita', 'remi', 'cmb'],
