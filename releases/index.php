@@ -106,7 +106,8 @@ foreach ($OLDRELEASES as $major => $a) {
             $release["announcement"] ?? false,
             $release["source"] ?? [],
             $release["windows"] ?? [],
-            $release["museum"] ?? ($i >= 3)
+            $release["museum"] ?? ($i >= 3),
+            $release["location"] ?? null
         );
     }
 }
@@ -187,7 +188,8 @@ function mk_rel(int $major,
                 $announcement,
                 array $source,
                 array $windows,
-                bool $museum): void {
+                bool $museum,
+                ?string $location): void {
     printf("<a id=\"%s\"></a>\n<h2>%1\$s</h2>\n<ul>\n <li>Released: %s</li>\n <li>Announcement: ",
            ($pos = strpos($ver, " ")) ? substr($ver, 0, $pos) : $ver,
            $date);
@@ -216,7 +218,7 @@ function mk_rel(int $major,
         foreach (array_merge($source, $windows) as $src) {
             echo " <li>\n";
             if (isset($src['filename'])) {
-                download_link($src["filename"], $src["name"]); echo "<br>\n";
+                download_link($src["filename"], $src["name"], $ver, $location); echo "<br>\n";
                 $linebreak = '';
                 foreach (['md5', 'sha256'] as $cs) {
                     if (isset($src[$cs])) {

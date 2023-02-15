@@ -57,7 +57,7 @@ site_header("Downloads",
     <ul>
       <?php foreach ($a['source'] as $rel): ?>
         <li>
-          <?php download_link($rel['filename'], $rel['filename']); ?>
+          <?php download_link($rel['filename'], $rel['filename'], $v, $a['location'] ?? null); ?>
           <span class="releasedate"><?php echo date('d M Y', strtotime($rel['date'])); ?></span>
           <?php
             if (isset($rel['md5']))    echo '<span class="md5sum">', $rel['md5'], '</span>';

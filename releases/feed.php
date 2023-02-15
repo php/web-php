@@ -49,7 +49,13 @@ XML;
         $maxtime[] = $time = strtotime($source["date"]);
         $released = date(DATE_ATOM, $time);
 
-        echo "        <link rel=\"enclosure\" title=\"{$source["name"]}\" href=\"/distributions/{$source["filename"]}\">\n";
+        if ($release['location'] === 'github') {
+            $distUrl = "https://github.com/php/php-src/releases/download/php-{$version}/{$source["filename"]}";
+        } else {
+            $distUrl = "/distributions/{$source["filename"]}";
+        }
+
+        echo "        <link rel=\"enclosure\" title=\"{$source["name"]}\" href=\"{$distUrl}\">\n";
         foreach (['md5', 'sha256'] as $hashAlgo) {
             if (isset($source[$hashAlgo])) {
                 echo "            <php:{$hashAlgo}>{$source[$hashAlgo]}</php:{$hashAlgo}>\n";

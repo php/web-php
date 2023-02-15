@@ -64,6 +64,7 @@ $RELEASES = (function () {
             'tags' => $release['tags'],
             'date' => $release['date'],
             'source' => [],
+            'location' => $release['location'] ?? 'distributions',
         ];
         foreach ($release['sha256'] as $format => $hash) {
             $info['source'][] = [

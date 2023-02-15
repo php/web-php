@@ -180,9 +180,14 @@ function print_popup_link($url, $linktext = false, $windowprops = "", $target = 
 }
 
 // Print a link for a downloadable file (including filesize)
-function download_link($file, $title)
+function download_link($file, $title, ?string $version = null, ?string $location = null)
 {
-    $download_link = "/distributions/" . $file;
+    if ($location === 'github') {
+        $download_link = "https://github.com/php/php-src/releases/download/php-{$version}/{$file}";
+        $sig_link = "https://github.com/php/php-src/releases/download/php-{$version}/{$file}.asc";
+    } else {
+        $download_link = "/distributions/" . $file;
+    }
 
     // Print out the download link
     echo make_link($download_link, $title);
@@ -195,8 +200,11 @@ function download_link($file, $title)
     }
 
     if (@file_exists($local_file . ".asc")) {
-        echo " ";
         $sig_link = "/distributions/$file.asc";
+    }
+
+    if (isset($sig_link)) {
+        echo " ";
         echo make_link($sig_link, "(sig)");
     }
 
