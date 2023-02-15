@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom" xmlns:default="http://php.net/ns/news">
+  <title>SymfonyOnline June 2023</title>
+  <id>https://www.php.net/archive/2023.php#2023-02-15-2</id>
+  <published>2023-02-07T08:27:14+00:00</published>
+  <updated>2023-02-07T08:27:14+00:00</updated>
+  <link href="https://www.php.net/conferences/index.php#id2023-02-15-2" rel="alternate" type="text/html"/>
+  <link href="https://live.symfony.com/2023-online-june/" rel="via" type="text/html"/>
+  <default:finalTeaserDate xmlns="http://php.net/ns/news">2023-06-14</default:finalTeaserDate>
+  <category term="conferences" label="Conference announcement"/>
+  <default:newsImage xmlns="http://php.net/ns/news" link="https://live.symfony.com/2023-online-june/" title="SymfonyOnline June 2023">symfonyonline-june-2023.png</default:newsImage>
+  <content type="xhtml">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+      <p>
+        <a href="https://live.symfony.com/2023-online-june/">SymfonyOnline June 2023</a> is the online conference in English for Symfony and PHP developers from all around the World. Two days of online workshops (June 13-14) followed by two days (June 15-16) full of online talks on PHP, Symfony and its ecosystem.
+      </p>
+      <p>
+        Check out <a href="https://live.symfony.com/2023-online-june/">all the conference details</a>
+      </p>
+    </div>
+  </content>
+</entry>
