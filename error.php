@@ -107,6 +107,13 @@ if (preg_match("!^manual/(\\w+)/(print|printwn|html)((/.+)|$)!", $URI, $array)) 
 }
 
 // ============================================================================
+// The php-keyring.gpg file moved from web-php-distributions to web-php.
+if (preg_match("!^distributions/php-keyring\.gpg!", $URI, $array)) {
+    status_header(301);
+    mirror_redirect("/php-keyring.gpg");
+}
+
+// ============================================================================
 // If someone is looking for something in distributions/* and it isn't there,
 // send them to the /releases page since that is likely to be most helpful.
 if (preg_match("!^distributions/.*!", $URI, $array)) {
