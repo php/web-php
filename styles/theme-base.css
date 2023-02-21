@@ -16,6 +16,7 @@
   --light-blue-color: #E2E4EF;
   --dark-magenta-color: #793862;
   --medium-magenta-color: #AE508D;
+  --light-magenta-color: #CF82B1;
 }
 
 .clearfix {
@@ -659,6 +660,10 @@ body > footer .footmenu li {
 body > footer a {
   display:inline-block;
   border-bottom:0;
+}
+body > footer a:hover,
+body > footer a:focus {
+    color:var(--light-magenta-color);
 }
 
 /* {{{ ElePHPants photo stream */
@@ -1525,6 +1530,10 @@ div.soft-deprecation-notice blockquote.sidebar {
 #breadcrumbs a:link,
 #breadcrumbs a:visited {
     border-width:0;
+}
+#breadcrumbs a:hover,
+#breadcrumbs a:focus {
+    color:var(--light-magenta-color);
 }
 
 #breadcrumbs .next,
