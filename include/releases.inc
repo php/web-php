@@ -7661,17 +7661,17 @@ $OLDRELEASES = array (
           'filename' => 'php-7.0.2.tar.gz',
           'name' => 'PHP 7.0.2 (tar.gz)',
           'sha256' => '040198aef3dc5f17c253c1282160aabc6a05ca0b18b3d6fc9213970363083412',
-          'date' => '07 Jan 2015',
+          'date' => '07 Jan 2016',
         ),
         2 => 
         array (
           'filename' => 'php-7.0.2.tar.xz',
           'name' => 'PHP 7.0.2 (tar.xz)',
           'sha256' => '556121271a34c442b48e3d7fa3d3bbb4413d91897abbb92aaeced4a7df5f2ab2',
-          'date' => '07 Jan 2015',
+          'date' => '07 Jan 2016',
         ),
       ),
-      'date' => '07 Jan 2015',
+      'date' => '07 Jan 2016',
       'museum' => false,
       'tags' => 
       array (
