@@ -500,6 +500,112 @@ changelog_header(8, $MINOR_VERSIONS);
 
 <a id="PHP_8_1"></a>
 
+<section class="version" id="8.1.17"><!-- {{{ 8.1.17 -->
+<h3>Version 8.1.17</h3>
+<b><?php release_date('16-Mar-2023'); ?></b>
+<ul><li>Core:
+<ul>
+  <li>Fixed incorrect check condition in ZEND_YIELD.</li>
+  <li>Fixed incorrect check condition in type inference.</li>
+  <li>Fixed overflow check in OnUpdateMemoryConsumption.</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 9916); ?> (Entering shutdown sequence with a fiber suspended in a Generator emits an unavoidable fatal error or crashes).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 10437); ?> (Segfault/assertion when using fibers in shutdown function after bailout).</li>
+  <li>Fixed SSA object type update for compound assignment opcodes.</li>
+  <li>Fixed language scanner generation build.</li>
+  <li>Fixed zend_update_static_property() calling zend_update_static_property_ex() misleadingly with the wrong return type.</li>
+  <li>Fix bug <?php githubissuel('php/php-src', 10570); ?> (Fixed unknown string hash on property fetch with integer constant name).</li>
+  <li>Fixed php_fopen_primary_script() call resulted on zend_destroy_file_handle() freeing dangling pointers on the handle as it was uninitialized.</li>
+</ul></li>
+<li>Curl:
+<ul>
+  <li>Fixed deprecation warning at compile time.</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 10270); ?> (Unable to return CURL_READFUNC_PAUSE in readfunc callback).</li>
+</ul></li>
+<li>Date:
+<ul>
+  <li>Fix <?php githubissuel('php/php-src', 10447); ?> ('p' format specifier does not yield 'Z' for 00:00).</li>
+</ul></li>
+<li>FFI:
+<ul>
+  <li>Fixed incorrect bitshifting and masking in ffi bitfield.</li>
+</ul></li>
+<li>Fiber:
+<ul>
+  <li>Fixed assembly on alpine x86.</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 10496); ?> (segfault when garbage collector is invoked inside of fiber).</li>
+</ul></li>
+<li>FPM:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 10315); ?> (FPM unknown child alert not valid).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 10385); ?> (FPM successful config test early exit).</li>
+</ul></li>
+<li>Intl:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 10647); ?> (Spoolchecker isSuspicious/areConfusable methods error code's argument always returning NULL0.</li>
+</ul></li>
+<li>JSON:
+<ul>
+  <li>Fixed JSON scanner and parser generation build.</li>
+</ul></li>
+<li>MBString:
+<ul>
+  <li>ext/mbstring: fix new_value length check.</li>
+  <li>Fix bug <?php githubissuel('php/php-src', 10627); ?> (mb_convert_encoding crashes PHP on Windows).</li>
+</ul></li>
+<li>Opcache:
+<ul>
+  <li>Fix incorrect page_size check.</li>
+</ul></li>
+<li>OpenSSL:
+<ul>
+  <li>Fixed php_openssl_set_server_dh_param() DH params errors handling.</li>
+</ul></li>
+<li>PDO OCI:
+<ul>
+  <li><?php bugfix(60994); ?> (Reading a multibyte CLOB caps at 8192 chars).</li>
+</ul></li>
+<li>PHPDBG:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 10715); ?> (heap buffer overflow on --run option misuse).</li>
+</ul></li>
+<li>PGSQL:
+<ul>
+  <li>Fix <?php githubissuel('php/php-src', 10672); ?> (pg_lo_open segfaults in the strict_types mode).</li>
+</ul></li>
+<li>Phar:
+<ul>
+  <li>Fix incorrect check in phar tar parsing.</li>
+</ul></li>
+<li>Reflection:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 10623); ?> (Reflection::getClosureUsedVariables opcode fix with variadic arguments).</li>
+  <li>Fix Segfault when using ReflectionFiber suspended by an internal function.</li>
+</ul></li>
+<li>Session:
+<ul>
+  <li>Fixed ps_files_cleanup_dir() on failure code paths with -1 instead of 0 as the latter was considered success by callers. (nielsdos).</li>
+</ul></li>
+<li>Standard:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 10292); ?> (Made the default value of the first param of srand() and mt_srand() unknown).</li>
+  <li>Fix incorrect check in cs_8559_5 in map_from_unicode().</li>
+  <li>Fix bug <?php githubissuel('php/php-src', 9697); ?> for reset/end/next/prev() attempting to move pointer of properties table for certain internal classes such as FFI classes</li>
+  <li>Fix incorrect error check in browsecap for pcre2_match().</li>
+</ul></li>
+<li>Tidy:
+<ul>
+  <li>Fix memory leaks when attempting to open a non-existing file or a file over 4GB.</li>
+  <li>Add missing error check on tidyLoadConfig.</li>
+</ul></li>
+<li>Zlib:
+<ul>
+  <li>Fixed output_handler directive value's length which counted the string terminator.</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
+
+
 <section class="version" id="8.1.16"><!-- {{{ 8.1.16 -->
 <h3>Version 8.1.16</h3>
 <b><?php release_date('14-Feb-2023'); ?></b>
