@@ -10,13 +10,13 @@
  */
 
 :root {
-  --dark-grey-color: #333;
-  --dark-blue-color: #4F5B93;
-  --medium-blue-color: #7A86B8;
-  --light-blue-color: #E2E4EF;
-  --dark-magenta-color: #793862;
-  --medium-magenta-color: #AE508D;
-  --light-magenta-color: #CF82B1;
+  --dark-grey-color: #121212;
+  --dark-blue-color: #1a76df;
+  --medium-blue-color: #135cc1;
+  --light-blue-color: #f6f7ff;
+  --dark-magenta-color: #232877;
+  --medium-magenta-color: #ea2e5a;
+  --light-magenta-color: #fd9dd9;
 }
 
 .clearfix {
@@ -186,6 +186,8 @@ textarea {
   height: 1.5rem;
   padding: .75rem .75rem .75rem 1.5rem;
 }
+
+
 .navbar .brand:hover,
 .navbar .brand:focus {
   text-decoration: none;

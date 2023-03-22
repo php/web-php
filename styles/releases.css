@@ -7,4 +7,6 @@ a[id]:empty {
   height:4.25rem;
   margin-top:-4.25rem;
   border:none;
+  display: flex;
+  gap: 1rem;
 }
