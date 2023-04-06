@@ -1,0 +1,40 @@
+<?php
+
+return [
+    'common_header' => 'PHP 8.2 es una actualización importante del lenguaje PHP. Clases de solo lectura, null, false y true como tipos independientes, propiedades dinámicas en desuso, mejoras de rendimiento y más',
+    'documentation' => 'Doc',
+    'main_title' => '¡Lanzado!',
+    'main_subtitle' => 'PHP 8.2 es una actualización importante del lenguaje PHP.<br class="display-none-md">Contiene muchas características nuevas, incluidas clases de solo lectura, null, false y true como tipos independientes, propiedades dinámicas en desuso, mejoras de rendimiento y más.',
+    'upgrade_now' => '¡Actualiza a PHP 8.2 ahora!',
+    'readonly_classes_title' => 'Clases de solo lectura',
+    'dnf_types_title' => 'Tipos de forma normal disyuntiva (DNF)',
+    'dnf_types_description' => 'Los tipos DNF nos permiten combinar <a href="/manual/en/language.types.type-system.php#language.types.type-system.composite.union">unión</a> y <a href="/manual/en/language.types.type-system.php#language.types.type-system.composite.intersection">intersección</a> de tipos, siguiendo una regla estricta: al combinar tipos de unión e intersección, los tipos de intersección deben agruparse con corchetes.',
+    'null_false_true_types_title' => 'Permitir <code>null</code>, <code>false</code> y <code>true</code> como tipos independientes',
+    'random_title' => 'Nueva extensión "Random"',
+    'random_description' => '<p>La extensión "random" proporciona una nueva API orientada a objetos para la generación de números aleatorios. En lugar de depender de un generador de números aleatorios (RNG) globalmente sembrado utilizando el algoritmo Mersenne Twister, la API orientada a objetos proporciona varias clases ("Engine") que proporcionan acceso a algoritmos modernos que almacenan su estado dentro de objetos para permitir múltiples secuencias sembrables independientes.</p>
+        <p>La clase <code>\Random\Randomizer</code> proporciona una interfaz de alto nivel para utilizar la aleatoriedad del motor para generar un número entero aleatorio, para mezclar un array o cadena, para seleccionar claves de array aleatorias y más.</p>',
+    'constants_in_traits_title' => 'Constantes en rasgos',
+    'constants_in_traits_description' => 'No se puede acceder a la constante a través del nombre del rasgo, pero se puede acceder a la constante a través de la clase que utiliza el rasgo.',
+    'deprecate_dynamic_properties_title' => 'Deprecar propiedades dinámicas',
+    'deprecate_dynamic_properties_description' => '<p>La creación de propiedades dinámicas está en desuso para ayudar a evitar errores y errores tipográficos, a menos que la clase opte por usar el atributo <code>#[\AllowDynamicProperties]</code>. <code>stdClass</code> permite propiedades dinámicas.</p>
+        <p>El uso de los métodos mágicos <code>__get</code>/<code>__set</code> no se ve afectado por este cambio.</p>',
+    'new_classes_title' => 'Nuevas clases, interfaces y funciones',
+    'new_mysqli' => 'Nueva función <a href="/manual/en/mysqli.execute-query.php"><code>mysqli_execute_query</code></a> y método <a href="/manual/en/mysqli.execute-query.php"><code>mysqli::execute_query</code></a>.',
+    'new_attributes' => 'Nuevos atributos <a href="/manual/en/class.allow-dynamic-properties.php"><code>#[\AllowDynamicProperties]</code></a> y <a href="/manual/en/class.sensitive-parameter.php"><code>#[\SensitiveParameter]</code></a>.',
+    'new_zip' => 'Nuevos métodos <a href="/manual/en/ziparchive.getstreamindex.php"><code>ZipArchive::getStreamIndex</code></a>, <a href="/manual/en/ziparchive.getstreamname.php"><code>ZipArchive::getStreamName</code></a> y <a href="/manual/en/ziparchive.clearerror.php"><code>ZipArchive::clearError</code></a>.',
+    'new_reflection' => 'Nuevos métodos <a href="/manual/en/reflectionfunction.isanonymous.php"><code>ReflectionFunction::isAnonymous</code></a> y <a href="/manual/en/reflectionmethod.hasprototype.php"><code>ReflectionMethod::hasPrototype</code></a>.',
+    'new_functions' => 'Nuevas funciones <a href="/manual/en/function.curl_upkeep.php"><code>curl_upkeep</code></a>, <a href="/manual/en/function.memory-reset-peak-usage.php"><code>memory_reset_peak_usage</code></a>, <a href="/manual/en/function.ini-parse-quantity.php"><code>ini_parse_quantity</code></a>, <a href="/manual/en/function.libxml-get-external-entity-loader.php"><code>libxml_get_external_entity_loader</code></a>, <a href="/manual/en/function.sodium-crypto-stream-xchacha20-xor-ic.php"><code>sodium_crypto_stream_xchacha20_xor_ic</code></a>, <a href="/manual/en/function.openssl-cipher-key-length.php"><code>openssl_cipher_key_length</code></a> funciones.',
+    'bc_title' => 'Deprecaciones y cambios de compatibilidad hacia atrás',
+    'bc_string_interpolation' => 'Interpolación de cadena <code>${}</code> en desuso.',
+    'bc_utf8' => 'Funciones en desuso <a href="/manual/en/function.utf8-encode.php"><code>utf8_encode</code></a> y <a href="/manual/en/function.utf8-decode.php"><code>utf8_decode</code></a>.',
+    'bc_datetime' => 'Los métodos <a href="/manual/en/datetime.createfromimmutable.php"><code>DateTime::createFromImmutable</code></a> y <a href="/manual/en/datetimeimmutable.createfrommutable.php"><code>DateTimeImmutable::createFromMutable</code></a> tienen un tipo de retorno tentativo de <code>static</code>.',
+    'bc_odbc' => 'Las extensiones <code>ODBC</code> y <code>PDO_ODBC</code> escapan el nombre de usuario y la contraseña.',
+    'bc_str_locale_sensitive' => 'Las funciones <a href="/manual/en/function.strtolower.php"><code>strtolower</code></a> y <a href="/manual/en/function.strtoupper.php"><code>strtoupper</code></a> ya no son sensibles al entorno regional.',
+    'bc_spl_enforces_signature' => 'Los métodos <a href="/manual/en/splfileobject.getcsvcontrol.php"><code>SplFileObject::getCsvControl</code></a>, <a href="/manual/en/splfileobject.fflush.php"><code>SplFileObject::fflush</code></a>, <a href="/manual/en/splfileobject.ftell.php"><code>SplFileObject::ftell</code></a>, <a href="/manual/en/splfileobject.fgetc.php"><code>SplFileObject::fgetc</code></a> y <a href="/manual/en/splfileobject.fpassthru.php"><code>SplFileObject::fpassthru</code></a> aplican su firma.',
+    'bc_spl_false' => 'El método <a href="/manual/en/splfileobject.haschildren.php"><code>SplFileObject::hasChildren</code></a> tiene un tipo de retorno tentativo de <code>false</code>.',
+    'bc_spl_null' => 'El método <a href="/manual/en/splfileobject.getchildren.php"><code>SplFileObject::getChildren</code></a> tiene un tipo de retorno tentativo de <code>null</code>.',
+    'bc_spl_deprecated' => 'El método interno <code>SplFileInfo::_bad_state_ex</code> ha sido deprecado.',
+    'footer_title' => 'Mejor rendimiento, mejor sintaxis, mayor seguridad en los tipos.',
+    'footer_description' => '<p>Para descargar el código fuente de PHP 8.2, por favor visite la página de <a href="/downloads">descargas</a>. Los binarios de Windows se pueden encontrar en el sitio de <a href="https://windows.php.net/download">PHP para Windows</a>. La lista de cambios está registrada en el <a href="/ChangeLog-8.php#PHP_8_2">ChangeLog</a>.</p>
+    <p>La <a href="/manual/en/migration82.php">guía de migración</a> está disponible en el Manual de PHP. Por favor, consulte la guía para obtener una lista detallada de las nuevas características y cambios incompatibles con versiones anteriores.</p>',
+];
