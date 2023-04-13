@@ -8,6 +8,89 @@ changelog_header(8, $MINOR_VERSIONS);
 ?>
 <a id="PHP_8_2"></a>
 
+<section class="version" id="8.2.5"><!-- {{{ 8.2.5 -->
+<h3>Version 8.2.5</h3>
+<b><?php release_date('13-Apr-2023'); ?></b>
+<ul><li>Core:
+<ul>
+  <li>Added optional support for max_execution_time in ZTS/Linux builds (Kévin Dunglas)</li>
+  <li>Fixed use-after-free in recursive AST evaluation.</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 8646); ?> (Memory leak PHP FPM 8.1).</li>
+  <li>Re-add some CTE functions that were removed from being CTE by a mistake.</li>
+  <li>Remove CTE flag from array_diff_ukey(), which was added by mistake.</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 10801); ?> (Named arguments in CTE functions cause a segfault).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 8789); ?> (PHP 8.0.20 (ZTS) zend_signal_handler_defer crashes on apache).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 10015); ?> (zend_signal_handler_defer crashes on apache shutdown).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 10810); ?> (Fix NUL byte terminating Exception::__toString()).</li>
+  <li>Fix potential memory corruption when mixing __callStatic() and FFI.</li>
+</ul></li>
+<li>Date:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 10747); ?> (Private and protected properties in serialized Date* objects throw).</li>
+</ul></li>
+<li>FPM:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 10611); ?> (fpm_env_init_main leaks environ).</li>
+  <li>Destroy file_handle in fpm_main.</li>
+  <li><?php bugfix(74129); ?> (Incorrect SCRIPT_NAME with apache ProxyPassMatch when spaces are in path).</li>
+</ul></li>
+<li>FTP:
+<ul>
+  <li>Propagate success status of ftp_close().</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 10521); ?> (ftp_get/ftp_nb_get resumepos offset is maximum 10GB).</li>
+</ul></li>
+<li>IMAP:
+<ul>
+  <li>Fix build failure with Clang 16.</li>
+</ul></li>
+<li>MySQLnd:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 8979); ?> (Possible Memory Leak with SSL-enabled MySQL connections).</li>
+</ul></li>
+<li>Opcache:
+<ul>
+  <li>Fixed build for macOS to cater with pkg-config settings.</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 8065); ?> (opcache.consistency_checks &gt; 0 causes segfaults in PHP &gt;= 8.1.5 in fpm context).</li>
+</ul></li>
+<li>OpenSSL:
+<ul>
+  <li>Add missing error checks on file writing functions.</li>
+</ul></li>
+<li>PDO Firebird:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 10908); ?> (Bus error with PDO Firebird on RPI with 64 bit kernel and 32 bit userland).</li>
+</ul></li>
+<li>Phar:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 10766); ?> (PharData archive created with Phar::Zip format does not keep files metadata (datetime)).</li>
+  <li>Add missing error checks on EVP_MD_CTX_create() and EVP_VerifyInit().</li>
+</ul></li>
+<li>PDO ODBC:
+<ul>
+  <li>Fixed missing and inconsistent error checks on SQLAllocHandle.</li>
+</ul></li>
+<li>PGSQL:
+<ul>
+  <li>Fixed typo in the array returned from pg_meta_data (extended mode).</li>
+</ul></li>
+<li>SPL:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 10519); ?> (Array Data Address Reference Issue).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 10907); ?> (Unable to serialize processed SplFixedArrays in PHP 8.2.4).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 10844); ?> (ArrayIterator allows modification of readonly props).</li>
+</ul></li>
+<li>Standard:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 10885); ?> (stream_socket_server context leaks).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 10052); ?> (Browscap crashes PHP 8.1.12 on request shutdown (apache2)).</li>
+  <li>Fixed oss-fuzz #57392 (Buffer-overflow in php_fgetcsv() with \0 delimiter and enclosure).</li>
+  <li>Fixed undefined behaviour in unpack().</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
+
+
 <section class="version" id="8.2.4"><!-- {{{ 8.2.4 -->
 <h3>Version 8.2.4</h3>
 <b><?php release_date('16-Mar-2023'); ?></b>
