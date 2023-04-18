@@ -3336,7 +3336,7 @@ $OLDRELEASES = array (
       'tags' => 
       array (
       ),
-      'date' => '11 June 2020',
+      'date' => '11 Jun 2020',
       'source' => 
       array (
         0 => 
@@ -3344,21 +3344,21 @@ $OLDRELEASES = array (
           'filename' => 'php-7.4.7.tar.bz2',
           'name' => 'PHP 7.4.7 (tar.bz2)',
           'sha256' => '800e0d01f359c8ec41540925c0d4a24c34d5f21ef6addd6d82ff4a52be23d87a',
-          'date' => '11 June 2020',
+          'date' => '11 Jun 2020',
         ),
         1 => 
         array (
           'filename' => 'php-7.4.7.tar.gz',
           'name' => 'PHP 7.4.7 (tar.gz)',
           'sha256' => 'a554a510190e726ebe7157fb00b4aceabdb50c679430510a3b93cbf5d7546e44',
-          'date' => '11 June 2020',
+          'date' => '11 Jun 2020',
         ),
         2 => 
         array (
           'filename' => 'php-7.4.7.tar.xz',
           'name' => 'PHP 7.4.7 (tar.xz)',
           'sha256' => '53558f8f24cd8ab6fa0ea252ca8198e2650160649681ce5230c1df1dc2b52faf',
-          'date' => '11 June 2020',
+          'date' => '11 Jun 2020',
         ),
       ),
       'museum' => false,
@@ -11779,14 +11779,14 @@ $OLDRELEASES = array (
           'filename' => 'php-5.4.5.tar.bz2',
           'name' => 'PHP 5.4.5 (tar.bz2)',
           'md5' => 'ffcc7f4dcf2b79d667fe0c110e6cb724',
-          'date' => '19 July 2012',
+          'date' => '19 Jul 2012',
         ),
         1 => 
         array (
           'filename' => 'php-5.4.5.tar.gz',
           'name' => 'PHP 5.4.5 (tar.gz)',
           'md5' => '51fb5bf974d92359f0606dffc810735a',
-          'date' => '19 July 2012',
+          'date' => '19 Jul 2012',
         ),
         2 => 
         array (
@@ -11794,7 +11794,7 @@ $OLDRELEASES = array (
           'name' => 'Windows 5.4.5 binaries and source',
         ),
       ),
-      'date' => '19 July 2012',
+      'date' => '19 Jul 2012',
       'museum' => true,
     ),
     '5.4.4' => 
@@ -11810,14 +11810,14 @@ $OLDRELEASES = array (
           'filename' => 'php-5.4.4.tar.bz2',
           'name' => 'PHP 5.4.4 (tar.bz2)',
           'md5' => '1fd98dc3f6f3805cd67bff12a26ed77f',
-          'date' => '14 June 2012',
+          'date' => '14 Jun 2012',
         ),
         1 => 
         array (
           'filename' => 'php-5.4.4.tar.gz',
           'name' => 'PHP 5.4.4 (tar.gz)',
           'md5' => '8366c3626f2275ab8c7ef5e2d6bc5bd7',
-          'date' => '14 June 2012',
+          'date' => '14 Jun 2012',
         ),
         2 => 
         array (
@@ -11825,7 +11825,7 @@ $OLDRELEASES = array (
           'name' => 'Windows 5.4.4 binaries and source',
         ),
       ),
-      'date' => '14 June 2012',
+      'date' => '14 Jun 2012',
       'museum' => true,
     ),
     '5.4.3' => 
@@ -11893,17 +11893,17 @@ $OLDRELEASES = array (
           'filename' => 'php-5.4.1.tar.bz2',
           'name' => 'PHP 5.4.1 (tar.bz2)',
           'md5' => '5b9529ed89dbc48c498e9693d1af3caf',
-          'date' => '26 April 2012',
+          'date' => '26 Apr 2012',
         ),
         1 => 
         array (
           'filename' => 'php-5.4.1.tar.gz',
           'name' => 'PHP 5.4.1 (tar.gz)',
           'md5' => 'acd566dbd70f855c19d17fc3c0e876a2',
-          'date' => '26 April 2012',
+          'date' => '26 Apr 2012',
         ),
       ),
-      'date' => '26 April 2012',
+      'date' => '26 Apr 2012',
       'museum' => true,
     ),
     '5.4.0' => 
@@ -11919,17 +11919,17 @@ $OLDRELEASES = array (
           'filename' => 'php-5.4.0.tar.bz2',
           'name' => 'PHP 5.4.0 (tar.bz2)',
           'md5' => '04bb6f9d71ea86ba05685439d50db074',
-          'date' => '01 March 2012',
+          'date' => '01 Mar 2012',
         ),
         1 => 
         array (
           'filename' => 'php-5.4.0.tar.gz',
           'name' => 'PHP 5.4.0 (tar.gz)',
           'md5' => '46b72e274c6ea7e775245ffdb81c9ce5',
-          'date' => '01 March 2012',
+          'date' => '01 Mar 2012',
         ),
       ),
-      'date' => '01 March 2012',
+      'date' => '01 Mar 2012',
       'museum' => true,
     ),
     '5.3.29' => 
@@ -12386,14 +12386,14 @@ $OLDRELEASES = array (
           'filename' => 'php-5.3.15.tar.bz2',
           'name' => 'PHP 5.3.15 (tar.bz2)',
           'md5' => '5cfcfd0fa4c4da7576f397073e7993cc',
-          'date' => '19 July 2012',
+          'date' => '19 Jul 2012',
         ),
         1 => 
         array (
           'filename' => 'php-5.3.15.tar.gz',
           'name' => 'PHP 5.3.15 (tar.gz)',
           'md5' => '7c885c79a611b89f3a1095fce6eae5c6',
-          'date' => '19 July 2012',
+          'date' => '19 Jul 2012',
         ),
         2 => 
         array (
@@ -12401,7 +12401,7 @@ $OLDRELEASES = array (
           'name' => 'Windows 5.3.15 binaries and source',
         ),
       ),
-      'date' => '19 July 2012',
+      'date' => '19 Jul 2012',
       'museum' => true,
     ),
     '5.3.14' => 
@@ -12417,14 +12417,14 @@ $OLDRELEASES = array (
           'filename' => 'php-5.3.14.tar.bz2',
           'name' => 'PHP 5.3.14 (tar.bz2)',
           'md5' => '370be99c5cdc2e756c82c44d774933c8',
-          'date' => '14 June 2012',
+          'date' => '14 Jun 2012',
         ),
         1 => 
         array (
           'filename' => 'php-5.3.14.tar.gz',
           'name' => 'PHP 5.3.14 (tar.gz)',
           'md5' => '148730865242a031a638ee3bab4a9d4d',
-          'date' => '14 June 2012',
+          'date' => '14 Jun 2012',
         ),
         2 => 
         array (
@@ -12432,7 +12432,7 @@ $OLDRELEASES = array (
           'name' => 'Windows 5.3.14 binaries and source',
         ),
       ),
-      'date' => '14 June 2012',
+      'date' => '14 Jun 2012',
       'museum' => true,
     ),
     '5.3.13' => 
@@ -12500,17 +12500,17 @@ $OLDRELEASES = array (
           'filename' => 'php-5.3.11.tar.bz2',
           'name' => 'PHP 5.3.11 (tar.bz2)',
           'md5' => '5b9529ed89dbc48c498e9693d1af3caf',
-          'date' => '26 April 2012',
+          'date' => '26 Apr 2012',
         ),
         1 => 
         array (
           'filename' => 'php-5.3.11.tar.gz',
           'name' => 'PHP 5.3.11 (tar.gz)',
           'md5' => 'acd566dbd70f855c19d17fc3c0e876a2',
-          'date' => '26 April 2012',
+          'date' => '26 Apr 2012',
         ),
       ),
-      'date' => '26 April 2012',
+      'date' => '26 Apr 2012',
       'museum' => true,
     ),
     '5.3.10' => 
@@ -12526,17 +12526,17 @@ $OLDRELEASES = array (
           'filename' => 'php-5.3.10.tar.bz2',
           'name' => 'PHP 5.3.10 (tar.bz2)',
           'md5' => '816259e5ca7d0a7e943e56a3bb32b17f',
-          'date' => '02 February 2012',
+          'date' => '02 Feb 2012',
         ),
         1 => 
         array (
           'filename' => 'php-5.3.10.tar.gz',
           'name' => 'PHP 5.3.10 (tar.gz)',
           'md5' => '2b3d2d0ff22175685978fb6a5cbcdc13',
-          'date' => '02 February 2012',
+          'date' => '02 Feb 2012',
         ),
       ),
-      'date' => '02 February 2012',
+      'date' => '02 Feb 2012',
       'museum' => true,
     ),
     '5.3.9' => 
@@ -12552,17 +12552,17 @@ $OLDRELEASES = array (
           'filename' => 'php-5.3.9.tar.bz2',
           'name' => 'PHP 5.3.9 (tar.bz2)',
           'md5' => 'dd3288ed5c08cd61ac5bf619cb357521',
-          'date' => '10 January 2012',
+          'date' => '10 Jan 2012',
         ),
         1 => 
         array (
           'filename' => 'php-5.3.9.tar.gz',
           'name' => 'PHP 5.3.9 (tar.gz)',
           'md5' => 'c79e374c61423beb64a69da1eb5526b7',
-          'date' => '10 January 2012',
+          'date' => '10 Jan 2012',
         ),
       ),
-      'date' => '10 January 2012',
+      'date' => '10 Jan 2012',
       'museum' => true,
     ),
     '5.3.8' => 
@@ -12578,17 +12578,17 @@ $OLDRELEASES = array (
           'filename' => 'php-5.3.8.tar.bz2',
           'name' => 'PHP 5.3.8 (tar.bz2)',
           'md5' => '704cd414a0565d905e1074ffdc1fadfb',
-          'date' => '23 August 2011',
+          'date' => '23 Aug 2011',
         ),
         1 => 
         array (
           'filename' => 'php-5.3.8.tar.gz',
           'name' => 'PHP 5.3.8 (tar.gz)',
           'md5' => 'f4ce40d5d156ca66a996dbb8a0e7666a',
-          'date' => '23 August 2011',
+          'date' => '23 Aug 2011',
         ),
       ),
-      'date' => '23 August 2011',
+      'date' => '23 Aug 2011',
       'museum' => true,
     ),
     '5.3.7' => 
@@ -12604,17 +12604,17 @@ $OLDRELEASES = array (
           'filename' => 'php-5.3.7.tar.bz2',
           'name' => 'PHP 5.3.7 (tar.bz2)',
           'md5' => '2d47d003c96de4e88863ff38da61af33',
-          'date' => '18 August 2011',
+          'date' => '18 Aug 2011',
         ),
         1 => 
         array (
           'filename' => 'php-5.3.7.tar.gz',
           'name' => 'PHP 5.3.7 (tar.gz)',
           'md5' => '1ec460bf3a40cea4079ee80076558d51',
-          'date' => '18 August 2011',
+          'date' => '18 Aug 2011',
         ),
       ),
-      'date' => '18 August 2011',
+      'date' => '18 Aug 2011',
       'museum' => true,
     ),
     '5.3.6' => 
@@ -12630,17 +12630,17 @@ $OLDRELEASES = array (
           'filename' => 'php-5.3.6.tar.bz2',
           'name' => 'PHP 5.3.6 (tar.bz2)',
           'md5' => '2286f5a82a6e8397955a0025c1c2ad98',
-          'date' => '19 March 2011',
+          'date' => '19 Mar 2011',
         ),
         1 => 
         array (
           'filename' => 'php-5.3.6.tar.gz',
           'name' => 'PHP 5.3.6 (tar.gz)',
           'md5' => '88a2b00047bc53afbbbdf10ebe28a57e',
-          'date' => '19 March 2011',
+          'date' => '19 Mar 2011',
         ),
       ),
-      'date' => '19 March 2011',
+      'date' => '19 Mar 2011',
       'museum' => true,
     ),
     '5.3.5' => 
@@ -12656,17 +12656,17 @@ $OLDRELEASES = array (
           'filename' => 'php-5.3.5.tar.bz2',
           'name' => 'PHP 5.3.5 (tar.bz2)',
           'md5' => '8aaf20c95e91f25c5b6a591e5d6d61b9',
-          'date' => '06 January 2011',
+          'date' => '06 Jan 2011',
         ),
         1 => 
         array (
           'filename' => 'php-5.3.5.tar.gz',
           'name' => 'PHP 5.3.5 (tar.gz)',
           'md5' => 'fb727a3ac72bf0ce37e1a20468a7bb81',
-          'date' => '06 January 2011',
+          'date' => '06 Jan 2011',
         ),
       ),
-      'date' => '06 January 2011',
+      'date' => '06 Jan 2011',
       'museum' => true,
     ),
     '5.3.4' => 
@@ -12682,17 +12682,17 @@ $OLDRELEASES = array (
           'filename' => 'php-5.3.4.tar.bz2',
           'name' => 'PHP 5.3.4 (tar.bz2)',
           'md5' => '2c069d8f690933e3bf6a8741ed818150',
-          'date' => '09 December 2010',
+          'date' => '09 Dec 2010',
         ),
         1 => 
         array (
           'filename' => 'php-5.3.4.tar.gz',
           'name' => 'PHP 5.3.4 (tar.gz)',
           'md5' => 'b69b36132899c5ca3bf155efa0218676',
-          'date' => '09 December 2010',
+          'date' => '09 Dec 2010',
         ),
       ),
-      'date' => '09 December 2010',
+      'date' => '09 Dec 2010',
       'museum' => true,
     ),
     '5.2.17' => 
@@ -12708,17 +12708,17 @@ $OLDRELEASES = array (
           'filename' => 'php-5.2.17.tar.bz2',
           'name' => 'PHP 5.2.17 (tar.bz2)',
           'md5' => 'b27947f3045220faf16e4d9158cbfe13',
-          'date' => '06 January 2011',
+          'date' => '06 Jan 2011',
         ),
         1 => 
         array (
           'filename' => 'php-5.2.17.tar.gz',
           'name' => 'PHP 5.2.17 (tar.gz)',
           'md5' => '04d321d5aeb9d3a051233dbd24220ef1',
-          'date' => '06 January 2011',
+          'date' => '06 Jan 2011',
         ),
       ),
-      'date' => '06 January 2011',
+      'date' => '06 Jan 2011',
       'museum' => true,
     ),
     '5.2.16' => 
@@ -12734,17 +12734,17 @@ $OLDRELEASES = array (
           'filename' => 'php-5.2.16.tar.bz2',
           'name' => 'PHP 5.2.16 (tar.bz2)',
           'md5' => '3b0bd012bd53bac9a5fefca61eccd5c6',
-          'date' => '16 December 2010',
+          'date' => '16 Dec 2010',
         ),
         1 => 
         array (
           'filename' => 'php-5.2.16.tar.gz',
           'name' => 'PHP 5.2.16 (tar.gz)',
           'md5' => '68f2c92b5b33d131b1ea70ece9fc40ad',
-          'date' => '16 December 2010',
+          'date' => '16 Dec 2010',
         ),
       ),
-      'date' => '16 December 2010',
+      'date' => '16 Dec 2010',
       'museum' => true,
     ),
     '5.2.15' => 
@@ -12760,17 +12760,17 @@ $OLDRELEASES = array (
           'filename' => 'php-5.2.15.tar.bz2',
           'name' => 'PHP 5.2.15 (tar.bz2)',
           'md5' => 'd4ccad187b12835024980a0cea362893',
-          'date' => '09 December 2010',
+          'date' => '09 Dec 2010',
         ),
         1 => 
         array (
           'filename' => 'php-5.2.15.tar.gz',
           'name' => 'PHP 5.2.15 (tar.gz)',
           'md5' => 'dbbb2beed6b51e05d134744f137091a9',
-          'date' => '09 December 2010',
+          'date' => '09 Dec 2010',
         ),
       ),
-      'date' => '09 December 2010',
+      'date' => '09 Dec 2010',
       'museum' => true,
     ),
     '5.3.3' => 
@@ -12786,17 +12786,17 @@ $OLDRELEASES = array (
           'filename' => 'php-5.3.3.tar.bz2',
           'name' => 'PHP 5.3.3 (tar.bz2)',
           'md5' => '21ceeeb232813c10283a5ca1b4c87b48',
-          'date' => '22 July 2010',
+          'date' => '22 Jul 2010',
         ),
         1 => 
         array (
           'filename' => 'php-5.3.3.tar.gz',
           'name' => 'PHP 5.3.3 (tar.gz)',
           'md5' => '5adf1a537895c2ec933fddd48e78d8a2',
-          'date' => '22 July 2010',
+          'date' => '22 Jul 2010',
         ),
       ),
-      'date' => '22 July 2010',
+      'date' => '22 Jul 2010',
       'museum' => true,
     ),
     '5.2.14' => 
@@ -12812,17 +12812,17 @@ $OLDRELEASES = array (
           'filename' => 'php-5.2.14.tar.bz2',
           'name' => 'PHP 5.2.14 (tar.bz2)',
           'md5' => '21ceeeb232813c10283a5ca1b4c87b48',
-          'date' => '22 July 2010',
+          'date' => '22 Jul 2010',
         ),
         1 => 
         array (
           'filename' => 'php-5.2.14.tar.gz',
           'name' => 'PHP 5.2.14 (tar.gz)',
           'md5' => '5adf1a537895c2ec933fddd48e78d8a2',
-          'date' => '22 July 2010',
+          'date' => '22 Jul 2010',
         ),
       ),
-      'date' => '22 July 2010',
+      'date' => '22 Jul 2010',
       'museum' => true,
     ),
     '5.3.2' => 
@@ -12964,14 +12964,14 @@ $OLDRELEASES = array (
           'filename' => 'php-5.2.12.tar.bz2',
           'name' => 'PHP 5.2.12 (tar.bz2)',
           'md5' => '5b7077e366c7eeab34da31dd860a1923',
-          'date' => '17 December 2009',
+          'date' => '17 Dec 2009',
         ),
         1 => 
         array (
           'filename' => 'php-5.2.12.tar.gz',
           'name' => 'PHP 5.2.12 (tar.gz)',
           'md5' => 'e6d6cc6570c77f60d8d4c99565d42ffd',
-          'date' => '17 December 2009',
+          'date' => '17 Dec 2009',
         ),
       ),
       'windows' => 
@@ -12981,7 +12981,7 @@ $OLDRELEASES = array (
           'filename' => 'php-5.2.12-Win32.zip',
           'name' => 'PHP 5.2.12 zip package',
           'md5' => 'e04f2944175dc19d7d007b5e889690b4',
-          'date' => '17 December 2009',
+          'date' => '17 Dec 2009',
           'note' => '',
         ),
         1 => 
@@ -12989,7 +12989,7 @@ $OLDRELEASES = array (
           'filename' => 'php-5.2.12-win32-installer.msi',
           'name' => 'PHP 5.2.12 installer',
           'md5' => 'df73529935bb855842e38afda8a295d7',
-          'date' => '17 December 2009',
+          'date' => '17 Dec 2009',
           'note' => '',
         ),
         2 => 
@@ -12997,14 +12997,14 @@ $OLDRELEASES = array (
           'filename' => 'php-debug-pack-5.2.12-Win32.zip',
           'name' => 'PHP 5.2.12 Win32 Debug Pack',
           'md5' => 'b21a5abb9e5bae4c657d0983986c4434',
-          'date' => '17 December 2009',
+          'date' => '17 Dec 2009',
         ),
         3 => 
         array (
           'filename' => 'php-5.2.12-nts-Win32.zip',
           'name' => 'PHP 5.2.12 Non-thread-safe zip package',
           'md5' => 'ff0c67bb622c062f0820598e8d6bc12c',
-          'date' => '17 December 2009',
+          'date' => '17 Dec 2009',
           'note' => '',
         ),
         4 => 
@@ -13012,17 +13012,17 @@ $OLDRELEASES = array (
           'filename' => 'php-5.2.12-nts-win32-installer.msi',
           'name' => 'PHP 5.2.12 Non-thread-safe installer',
           'md5' => '418656307a52c99f2175c748da31a9d8',
-          'date' => '17 December 2009',
+          'date' => '17 Dec 2009',
         ),
         5 => 
         array (
           'filename' => 'php-debug-pack-5.2.12-nts-Win32.zip',
           'name' => 'PHP 5.2.12 Non-thread-safe Win32 Debug Pack',
           'md5' => 'e2620df81442ddefc0c3450be58540f9',
-          'date' => '17 December 2009',
+          'date' => '17 Dec 2009',
         ),
       ),
-      'date' => '17 December 2009',
+      'date' => '17 Dec 2009',
       'museum' => true,
     ),
     '5.2.11' => 
@@ -13038,14 +13038,14 @@ $OLDRELEASES = array (
           'filename' => 'php-5.2.11.tar.bz2',
           'name' => 'PHP 5.2.11 (tar.bz2)',
           'md5' => '286bf34630f5643c25ebcedfec5e0a09',
-          'date' => '17 September 2009',
+          'date' => '17 Sep 2009',
         ),
         1 => 
         array (
           'filename' => 'php-5.2.11.tar.gz',
           'name' => 'PHP 5.2.11 (tar.gz)',
           'md5' => '0223d71f0d6987c06c54b7557ff47f1d',
-          'date' => '17 September 2009',
+          'date' => '17 Sep 2009',
         ),
       ),
       'windows' => 
@@ -13055,7 +13055,7 @@ $OLDRELEASES = array (
           'filename' => 'php-5.2.11-Win32.zip',
           'name' => 'PHP 5.2.11 zip package',
           'md5' => 'adac50ae1449b76f10ff1865bb4f94f1',
-          'date' => '17 September 2009',
+          'date' => '17 Sep 2009',
           'note' => '',
         ),
         1 => 
@@ -13063,7 +13063,7 @@ $OLDRELEASES = array (
           'filename' => 'php-5.2.11-win32-installer.msi',
           'name' => 'PHP 5.2.11 installer',
           'md5' => '3cedc71fc90f88239d629cdb735d87c0',
-          'date' => '17 September 2009',
+          'date' => '17 Sep 2009',
           'note' => '',
         ),
         2 => 
@@ -13071,14 +13071,14 @@ $OLDRELEASES = array (
           'filename' => 'php-debug-pack-5.2.11-Win32.zip',
           'name' => 'PHP 5.2.11 Win32 Debug Pack',
           'md5' => '38cb1b783dd08dff41f445b582d2ffed',
-          'date' => '17 September 2009',
+          'date' => '17 Sep 2009',
         ),
         3 => 
         array (
           'filename' => 'php-5.2.11-nts-Win32.zip',
           'name' => 'PHP 5.2.11 Non-thread-safe zip package',
           'md5' => 'b724475450a13af4cd99c518fd495340',
-          'date' => '17 September 2009',
+          'date' => '17 Sep 2009',
           'note' => '',
         ),
         4 => 
@@ -13086,17 +13086,17 @@ $OLDRELEASES = array (
           'filename' => 'php-5.2.11-nts-win32-installer.msi',
           'name' => 'PHP 5.2.11 Non-thread-safe installer',
           'md5' => '4fe1344093e26c2a51a82094bac131ad',
-          'date' => '17 September 2009',
+          'date' => '17 Sep 2009',
         ),
         5 => 
         array (
           'filename' => 'php-debug-pack-5.2.11-nts-Win32.zip',
           'name' => 'PHP 5.2.11 Non-thread-safe Win32 Debug Pack',
           'md5' => '19d026d6e4322dc64694010ae254e978',
-          'date' => '17 September 2009',
+          'date' => '17 Sep 2009',
         ),
       ),
-      'date' => '17 September 2009',
+      'date' => '17 Sep 2009',
       'museum' => true,
     ),
     '5.3.0' => 
@@ -13112,17 +13112,17 @@ $OLDRELEASES = array (
           'filename' => 'php-5.3.0.tar.bz2',
           'name' => 'PHP 5.3.0 (tar.bz2)',
           'md5' => '846760cd655c98dfd86d6d97c3d964b0',
-          'date' => '30 June 2009',
+          'date' => '30 Jun 2009',
         ),
         1 => 
         array (
           'filename' => 'php-5.3.0.tar.gz',
           'name' => 'PHP 5.3.0 (tar.gz)',
           'md5' => 'f4905eca4497da3f0beb5c96863196b4',
-          'date' => '30 June 2009',
+          'date' => '30 Jun 2009',
         ),
       ),
-      'date' => '30 June 2009',
+      'date' => '30 Jun 2009',
       'museum' => true,
     ),
     '5.2.10' => 
@@ -13138,14 +13138,14 @@ $OLDRELEASES = array (
           'filename' => 'php-5.2.10.tar.bz2',
           'name' => 'PHP 5.2.10 (tar.bz2)',
           'md5' => '15c7b5a87f57332d6fc683528e28247b',
-          'date' => '18 June 2009',
+          'date' => '18 Jun 2009',
         ),
         1 => 
         array (
           'filename' => 'php-5.2.10.tar.gz',
           'name' => 'PHP 5.2.10 (tar.gz)',
           'md5' => '85753ba2909ac9fae5bca516adbda9e9',
-          'date' => '18 June 2009',
+          'date' => '18 Jun 2009',
         ),
       ),
       'windows' => 
@@ -13155,7 +13155,7 @@ $OLDRELEASES = array (
           'filename' => 'php-5.2.10-Win32.zip',
           'name' => 'PHP 5.2.10 zip package',
           'md5' => '95ae7ccfcd05b6c81c93aa2e9e792f9e',
-          'date' => '18 June 2009',
+          'date' => '18 Jun 2009',
           'note' => '',
         ),
         1 => 
@@ -13163,7 +13163,7 @@ $OLDRELEASES = array (
           'filename' => 'php-5.2.10-win32-installer.msi',
           'name' => 'PHP 5.2.10 installer',
           'md5' => '38b65bc57f64c66ff73f6f4e2db2cbb4',
-          'date' => '18 June 2009',
+          'date' => '18 Jun 2009',
           'note' => '',
         ),
         2 => 
@@ -13171,14 +13171,14 @@ $OLDRELEASES = array (
           'filename' => 'php-debug-pack-5.2.10-Win32.zip',
           'name' => 'PHP 5.2.10 Win32 Debug Pack',
           'md5' => 'f6bdea0e1f71ca46f78e78c86e86606',
-          'date' => '18 June 2009',
+          'date' => '18 Jun 2009',
         ),
         3 => 
         array (
           'filename' => 'php-5.2.10-nts-Win32.zip',
           'name' => 'PHP 5.2.10 Non-thread-safe zip package',
           'md5' => 'b1c53e6f525133647e621a9c95b09e65',
-          'date' => '18 June 2009',
+          'date' => '18 Jun 2009',
           'note' => '',
         ),
         4 => 
@@ -13186,17 +13186,17 @@ $OLDRELEASES = array (
           'filename' => 'php-5.2.10-nts-win32-installer.msi',
           'name' => 'PHP 5.2.10 Non-thread-safe installer',
           'md5' => 'e341deb2872d3f8f4589593da88bbede',
-          'date' => '18 June 2009',
+          'date' => '18 Jun 2009',
         ),
         5 => 
         array (
           'filename' => 'php-debug-pack-5.2.10-nts-Win32.zip',
           'name' => 'PHP 5.2.10 Non-thread-safe Win32 Debug Pack',
           'md5' => '760a141c861a789f928b91c655c9d58',
-          'date' => '18 June 2009',
+          'date' => '18 Jun 2009',
         ),
       ),
-      'date' => '18 June 2009',
+      'date' => '18 Jun 2009',
       'museum' => true,
     ),
     '5.2.9' => 
@@ -13212,14 +13212,14 @@ $OLDRELEASES = array (
           'filename' => 'php-5.2.9.tar.bz2',
           'name' => 'PHP 5.2.9 (tar.bz2)',
           'md5' => '280d6cda7f72a4fc6de42fda21ac2db7',
-          'date' => '26 February 2009',
+          'date' => '26 Feb 2009',
         ),
         1 => 
         array (
           'filename' => 'php-5.2.9.tar.gz',
           'name' => 'PHP 5.2.9 (tar.gz)',
           'md5' => '98b647561dc664adefe296106056cf11',
-          'date' => '26 February 2009',
+          'date' => '26 Feb 2009',
         ),
       ),
       'windows' => 
@@ -13229,49 +13229,49 @@ $OLDRELEASES = array (
           'filename' => 'php-5.2.9-2-Win32.zip',
           'name' => 'PHP 5.2.9-2 zip package',
           'md5' => '316b9c81bab08e6547a730315ea2abfd',
-          'date' => '8 April 2009',
-          'note' => 'Updated 9th of April: Added the missing oci8 DLL',
+          'date' => '8 Apr 2009',
+          'note' => 'Updated 9th of Apr: Added the missing oci8 DLL',
         ),
         1 => 
         array (
           'filename' => 'php-5.2.9-2-win32-installer.msi',
           'name' => 'PHP 5.2.9-2 installer',
           'md5' => 'e2162faa3467aed01651df4269aa6944',
-          'date' => '8 April 2009',
-          'note' => 'Updated 9th of April: Added the missing oci8 DLL',
+          'date' => '8 Apr 2009',
+          'note' => 'Updated 9th of Apr: Added the missing oci8 DLL',
         ),
         2 => 
         array (
           'filename' => 'php-debug-pack-5.2.9-2-Win32.zip',
           'name' => 'PHP 5.2.9 Win32 Debug Pack',
           'md5' => 'b52e9a152e105c7391c832fdfe0fa06f',
-          'date' => '8 April 2009',
+          'date' => '8 Apr 2009',
         ),
         3 => 
         array (
           'filename' => 'php-5.2.9-2-nts-Win32.zip',
           'name' => 'PHP 5.2.9-2 Non-thread-safe zip package',
           'md5' => '8f85777941f7722fcbfe08e7de358f7d',
-          'date' => '8 April 2009',
-          'note' => 'Updated 9th of April: Added the missing oci8 DLL',
+          'date' => '8 Apr 2009',
+          'note' => 'Updated 9th of Apr: Added the missing oci8 DLL',
         ),
         4 => 
         array (
           'filename' => 'php-5.2.9-2-nts-win32-installer.msi',
           'name' => 'PHP 5.2.9-2 Non-thread-safe installer',
           'md5' => '4e7a1bec2b268d3d2d28cb89f629b680',
-          'date' => '8 April 2009',
-          'note' => 'Updated 9th of April: Added the missing oci8 DLL',
+          'date' => '8 Apr 2009',
+          'note' => 'Updated 9th of Apr: Added the missing oci8 DLL',
         ),
         5 => 
         array (
           'filename' => 'php-debug-pack-5.2.9-2-nts-Win32.zip',
           'name' => 'PHP 5.2.9 Non-thread-safe Win32 Debug Pack',
           'md5' => '4b7b695a257527f2896312f98dc30fd3',
-          'date' => '8 April 2009',
+          'date' => '8 Apr 2009',
         ),
       ),
-      'date' => '26 February 2009',
+      'date' => '26 Feb 2009',
       'museum' => true,
     ),
     '5.2.8' => 
@@ -13287,14 +13287,14 @@ $OLDRELEASES = array (
           'filename' => 'php-5.2.8.tar.bz2',
           'name' => 'PHP 5.2.8 (tar.bz2)',
           'md5' => '8760a833cf10433d3e72271ab0d0eccf',
-          'date' => '08 December 2008',
+          'date' => '08 Dec 2008',
         ),
         1 => 
         array (
           'filename' => 'php-5.2.8.tar.gz',
           'name' => 'PHP 5.2.8 (tar.gz)',
           'md5' => 'e748cace3cfecb66fb6de9a945f98e2a',
-          'date' => '08 December 2008',
+          'date' => '08 Dec 2008',
         ),
       ),
       'windows' => 
@@ -13304,7 +13304,7 @@ $OLDRELEASES = array (
           'filename' => 'php-5.2.8-Win32.zip',
           'name' => 'PHP 5.2.8 zip package',
           'md5' => '71511834881753ea0906f2bca91632b9',
-          'date' => '08 December 2008',
+          'date' => '08 Dec 2008',
           'note' => '',
         ),
         1 => 
@@ -13312,7 +13312,7 @@ $OLDRELEASES = array (
           'filename' => 'php-5.2.8-win32-installer.msi',
           'name' => 'PHP 5.2.8 installer',
           'md5' => '159def484800411060a9eacccafd2253',
-          'date' => '08 December 2008',
+          'date' => '08 Dec 2008',
           'note' => '',
         ),
         2 => 
@@ -13320,14 +13320,14 @@ $OLDRELEASES = array (
           'filename' => 'php-debug-pack-5.2.8-Win32.zip',
           'name' => 'PHP 5.2.8 Win32 Debug Pack',
           'md5' => 'fabc6e79c1c66dc80320165336b5ed54',
-          'date' => '08 December 2008',
+          'date' => '08 Dec 2008',
         ),
         3 => 
         array (
           'filename' => 'php-5.2.8-nts-Win32.zip',
           'name' => 'PHP 5.2.8 Non-thread-safe zip package',
           'md5' => '207abb02054c5ce996bc350352224acc',
-          'date' => '08 December 2008',
+          'date' => '08 Dec 2008',
           'note' => '',
         ),
         4 => 
@@ -13335,17 +13335,17 @@ $OLDRELEASES = array (
           'filename' => 'php-5.2.8-nts-win32-installer.msi',
           'name' => 'PHP 5.2.8 Non-thread-safe installer',
           'md5' => 'd4490964818542c416644b3d67f5b350',
-          'date' => '08 December 2008',
+          'date' => '08 Dec 2008',
         ),
         5 => 
         array (
           'filename' => 'php-debug-pack-5.2.8-nts-Win32.zip',
           'name' => 'PHP 5.2.8 Non-thread-safe Win32 Debug Pack',
           'md5' => '240566ce66761ab076ae9901547b7ce2',
-          'date' => '08 December 2008',
+          'date' => '08 Dec 2008',
         ),
       ),
-      'date' => '08 December 2008',
+      'date' => '08 Dec 2008',
       'museum' => true,
     ),
     '5.2.6' => 
@@ -13443,7 +13443,7 @@ $OLDRELEASES = array (
     ),
     '5.2.5' => 
     array (
-      'date' => '08 November 2007',
+      'date' => '08 Nov 2007',
       'source' => 
       array (
         0 => 
@@ -13482,7 +13482,7 @@ $OLDRELEASES = array (
     ),
     '5.2.4' => 
     array (
-      'date' => '30 August 2007',
+      'date' => '30 Aug 2007',
       'source' => 
       array (
         0 => 
@@ -14088,7 +14088,7 @@ $OLDRELEASES = array (
     ),
     '5.0.0' => 
     array (
-      'date' => '13 July 2004',
+      'date' => '13 Jul 2004',
       'source' => 
       array (
         0 => 
@@ -14137,14 +14137,14 @@ $OLDRELEASES = array (
           'filename' => 'php-4.4.9.tar.bz2',
           'name' => 'PHP 4.4.9 (tar.bz2)',
           'md5' => '2e3b2a0e27f10cb84fd00e5ecd7a1880',
-          'date' => '07 August 2008',
+          'date' => '07 Aug 2008',
         ),
         1 => 
         array (
           'filename' => 'php-4.4.9.tar.gz',
           'name' => 'PHP 4.4.9 (tar.gz)',
           'md5' => '9bcc1aba50be0dfeeea551d018375548',
-          'date' => '07 August 2008',
+          'date' => '07 Aug 2008',
         ),
       ),
       'windows' => 
@@ -14154,10 +14154,10 @@ $OLDRELEASES = array (
           'filename' => 'php-4.4.9-Win32.zip',
           'name' => 'PHP 4.4.9 zip package',
           'md5' => '7395068d5489a9f8abf50c6e4b48622f',
-          'date' => '07 August 2008',
+          'date' => '07 Aug 2008',
         ),
       ),
-      'date' => '07 August 2008',
+      'date' => '07 Aug 2008',
       'museum' => true,
     ),
     '4.4.8' => 
@@ -14173,14 +14173,14 @@ $OLDRELEASES = array (
           'filename' => 'php-4.4.8.tar.bz2',
           'name' => 'PHP 4.4.8 (tar.bz2)',
           'md5' => 'ed31e77414e0331e787487b53732dbca',
-          'date' => '03 January 2008',
+          'date' => '03 Jan 2008',
         ),
         1 => 
         array (
           'filename' => 'php-4.4.8.tar.gz',
           'name' => 'PHP 4.4.8 (tar.gz)',
           'md5' => '8ad5d1ca793d55b24cd82e591248c04e',
-          'date' => '03 January 2008',
+          'date' => '03 Jan 2008',
         ),
       ),
       'windows' => 
@@ -14193,7 +14193,7 @@ $OLDRELEASES = array (
           'date' => '12 Feb 2008',
         ),
       ),
-      'date' => '03 January 2008',
+      'date' => '03 Jan 2008',
       'museum' => true,
     ),
     '4.4.7' => 
@@ -14581,7 +14581,7 @@ $OLDRELEASES = array (
     ),
     '4.3.8' => 
     array (
-      'date' => '13 July 2004',
+      'date' => '13 Jul 2004',
       'source' => 
       array (
         0 => 
@@ -14611,7 +14611,7 @@ $OLDRELEASES = array (
     ),
     '4.3.7' => 
     array (
-      'date' => '03 June 2004',
+      'date' => '03 Jun 2004',
       'source' => 
       array (
         0 => 
@@ -14642,7 +14642,7 @@ $OLDRELEASES = array (
     ),
     '4.3.6' => 
     array (
-      'date' => '15 April 2004',
+      'date' => '15 Apr 2004',
       'source' => 
       array (
         0 => 
@@ -14673,7 +14673,7 @@ $OLDRELEASES = array (
     ),
     '4.3.5' => 
     array (
-      'date' => '26 March 2004',
+      'date' => '26 Mar 2004',
       'source' => 
       array (
         0 => 
@@ -14704,7 +14704,7 @@ $OLDRELEASES = array (
     ),
     '4.3.4' => 
     array (
-      'date' => '03 November 2003',
+      'date' => '03 Nov 2003',
       'source' => 
       array (
         0 => 
@@ -14735,7 +14735,7 @@ $OLDRELEASES = array (
     ),
     '4.3.3' => 
     array (
-      'date' => '25 August 2003',
+      'date' => '25 Aug 2003',
       'source' => 
       array (
         0 => 
@@ -14802,7 +14802,7 @@ $OLDRELEASES = array (
     ),
     '4.3.1' => 
     array (
-      'date' => '17 February 2003',
+      'date' => '17 Feb 2003',
       'source' => 
       array (
         0 => 
@@ -14832,7 +14832,7 @@ $OLDRELEASES = array (
     ),
     '4.3.0' => 
     array (
-      'date' => '27 December 2002',
+      'date' => '27 Dec 2002',
       'source' => 
       array (
         0 => 
@@ -14863,7 +14863,7 @@ $OLDRELEASES = array (
     ),
     '4.2.3' => 
     array (
-      'date' => '6 September 2002',
+      'date' => '6 Sep 2002',
       'source' => 
       array (
         0 => 
@@ -14893,7 +14893,7 @@ $OLDRELEASES = array (
     ),
     '4.2.2' => 
     array (
-      'date' => '22 July 2002',
+      'date' => '22 Jul 2002',
       'source' => 
       array (
         0 => 
@@ -14955,7 +14955,7 @@ $OLDRELEASES = array (
     ),
     '4.2.0' => 
     array (
-      'date' => '22 April 2002',
+      'date' => '22 Apr 2002',
       'source' => 
       array (
         0 => 
@@ -14986,7 +14986,7 @@ $OLDRELEASES = array (
     ),
     '4.1.2' => 
     array (
-      'date' => '12 March 2002',
+      'date' => '12 Mar 2002',
       'source' => 
       array (
         0 => 
@@ -15072,7 +15072,7 @@ $OLDRELEASES = array (
     ),
     '4.0.6' => 
     array (
-      'date' => '23 June 2001',
+      'date' => '23 Jun 2001',
       'source' => 
       array (
         0 => 
@@ -15093,7 +15093,7 @@ $OLDRELEASES = array (
     ),
     '4.0.5' => 
     array (
-      'date' => '30 April 2001',
+      'date' => '30 Apr 2001',
       'source' => 
       array (
         0 => 
@@ -15114,7 +15114,7 @@ $OLDRELEASES = array (
     ),
     '4.0.4' => 
     array (
-      'date' => '19 December 2000',
+      'date' => '19 Dec 2000',
       'source' => 
       array (
         0 => 
@@ -15154,7 +15154,7 @@ $OLDRELEASES = array (
     ),
     '4.0.3' => 
     array (
-      'date' => '11 October 2000',
+      'date' => '11 Oct 2000',
       'source' => 
       array (
         0 => 
@@ -15190,7 +15190,7 @@ $OLDRELEASES = array (
     ),
     '4.0.2' => 
     array (
-      'date' => '29 August 2000',
+      'date' => '29 Aug 2000',
       'source' => 
       array (
         0 => 
@@ -15215,7 +15215,7 @@ $OLDRELEASES = array (
     ),
     '4.0.1' => 
     array (
-      'date' => '28 June 2000',
+      'date' => '28 Jun 2000',
       'source' => 
       array (
         0 => 
