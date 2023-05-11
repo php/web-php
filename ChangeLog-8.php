@@ -762,6 +762,44 @@ changelog_header(8, $MINOR_VERSIONS);
 
 <a id="PHP_8_1"></a>
 
+<section class="version" id="8.1.19"><!-- {{{ 8.1.19 -->
+<h3>Version 8.1.19</h3>
+<b><?php release_date('11-May-2023'); ?></b>
+<ul><li>Core:
+<ul>
+  <li>Fix inconsistent float negation in constant expressions.</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 8841); ?> (php-cli core dump calling a badly formed function).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 10737); ?> (PHP 8.1.16 segfaults on line 597 of sapi/apache2handler/sapi_apache2.c).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 11028); ?> (Heap Buffer Overflow in zval_undefined_cv.).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 11108); ?> (Incorrect CG(memoize_mode) state after bailout in ??=).</li>
+</ul></li>
+<li>DOM:
+<ul>
+  <li><?php bugfix(80602); ?> (Segfault when using DOMChildNode::before()).</li>
+  <li>Fixed incorrect error handling in dom_zvals_to_fragment().</li>
+</ul></li>
+<li>Exif:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 9397); ?> (exif read : warnings and errors : Potentially invalid endianess, Illegal IFD size and Undefined index).</li>
+</ul></li>
+<li>Intl:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 11071); ?> (TZData version not displayed anymore).</li>
+</ul></li>
+<li>PCRE:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 10968); ?> (Segfault in preg_replace_callback_array()).</li>
+</ul></li>
+<li>Standard:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 10990); ?> (mail() throws TypeError after iterating over $additional_headers array by reference).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 9775); ?> (Duplicates returned by array_unique when using enums).</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
+
+
 <section class="version" id="8.1.18"><!-- {{{ 8.1.18 -->
 <h3>Version 8.1.18</h3>
 <b><?php release_date('13-Apr-2023'); ?></b>
