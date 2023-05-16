@@ -1326,7 +1326,8 @@ div.tip p:first-child {
     margin-bottom: 1.5rem;
 }
 
-.docs .phpcode {
+.docs .phpcode code {
+    display: block;
     overflow-x: auto;
 }
 
