@@ -550,6 +550,10 @@ dl dd {
     padding:0 1.5rem;
 }
 
+.php8-code.phpcode{
+    overflow-x: auto;
+}
+
 .phpcode, div.classsynopsis {
     text-align: left;
 }
@@ -1311,6 +1315,7 @@ div.tip p:first-child {
 .docs .example-contents.screen,
 .informalexample .literallayout {
     padding: .75rem;
+    overflow-x: auto;
 }
 
 .docs .classsynopsis,
@@ -1321,8 +1326,8 @@ div.tip p:first-child {
     margin-bottom: 1.5rem;
 }
 
-.docs .phpcode code {
-    display: block;
+.docs .phpcode {
+    overflow-x: auto;
 }
 
 .docs .qandaentry dt .phpcode * {
