@@ -142,6 +142,7 @@ function gpg_key_get(string $rm): ?string {
 
 function gpg_key_get_branches(bool $activeOnly): array {
     $branches = [
+        '8.3' => ['pierrick'],
         '8.2' => ['pierrick', 'ramsey', 'sergey'],
         '8.1' => ['krakjoe', 'ramsey', 'patrickallaert'],
         '8.0' => ['pollita', 'carusogabriel-old', 'carusogabriel-new'],
