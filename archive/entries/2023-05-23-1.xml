@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom" xmlns:default="http://php.net/ns/news">
+  <title>Dutch PHP Conference 2023 - Call for Papers</title>
+  <id>https://www.php.net/archive/2023.php#2023-05-23-1</id>
+  <published>2023-05-23T10:52:58+00:00</published>
+  <updated>2023-05-23T10:52:58+00:00</updated>
+  <link href="https://www.php.net/conferences/index.php#2023-05-23-1" rel="alternate" type="text/html"/>
+  <link href="https://phpconference.nl/" rel="via" type="text/html"/>
+  <default:finalTeaserDate xmlns="http://php.net/ns/news">2023-07-28</default:finalTeaserDate>
+  <category term="cfp" label="Call for Papers"/>
+  <default:newsImage xmlns="http://php.net/ns/news" link="https://phpconference.nl/" title="Dutch PHP Conference">DPC-logo.png</default:newsImage>
+  <content type="xhtml">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+     <p>We are back for the <strong>17th edition</strong> of the <a href="https://phpconference.nl/">Dutch PHP Conference</a>! We hope you will join us on <strong>October 13, 2023</strong> for the <strong>online conference</strong>. 🐘🎉</p>
+     <p>We’re also looking for high-quality, technical and non-technical sessions from speakers who can cover advanced topics and keep our audience inspired.</p>
+     <p>We’ve had great speakers presenting talks about the PHP ecosystem, frameworks, DevOps, architecture, JavaScript, scaling, testing, performance, security and more. And we would like to advance on these very topics for this year’s conference as well.</p>
+     <p>But we also would like to invite speakers to talk about non-technical subjects that are increasingly instrumental in maintaining success as a developer or development team. These are topics like communication, understanding, relationships, (self) management and even the business and economics part of development. In other words: the soft skills that complement the deep technical skills. And about the surrounding environment necessary to be successful as a technical developer.</p>
+     <p>This invitation is intentionally a bit broad in the hope to inspire everyone to share their ideas and insights and hard-fought experience in the broader development arena that we all thrive in.</p>
+     <p>The <strong><a href="https://phpconference.nl/call-for-papers-dpc23">call for papers</a></strong> is open up to and including <strong>July 28th</strong></p>
+    </div>
+  </content>
+</entry>
