@@ -13,27 +13,27 @@ function tryprefix($lang, $keyword, $prefix)
     $keyword = preg_replace("!\\(.*\\)!", "-", $keyword);
 
     // Try the keyword with the prefix
-    $try = "/manual/${lang}/${prefix}${keyword}.php";
+    $try = "/manual/{$lang}/{$prefix}{$keyword}.php";
     if (@file_exists($_SERVER['DOCUMENT_ROOT'] . $try)) { return $try; }
 
     // Drop out spaces, and try that keyword (if different)
     $nosp = str_replace(" ", "", $keyword);
     if ($nosp != $keyword) {
-        $try = "/manual/${lang}/${prefix}${nosp}.php";
+        $try = "/manual/{$lang}/{$prefix}{$nosp}.php";
         if (@file_exists($_SERVER['DOCUMENT_ROOT'] . $try)) { return $try; }
     }
 
     // Replace spaces with hyphens, and try that (if different)
     $dasp = str_replace(" ", "-", $keyword);
     if ($dasp != $keyword) {
-        $try = "/manual/${lang}/${prefix}${dasp}.php";
+        $try = "/manual/{$lang}/{$prefix}{$dasp}.php";
         if (@file_exists($_SERVER['DOCUMENT_ROOT'] . $try)) { return $try; }
     }
 
     // Remove hyphens (and underscores), and try that (if different)
     $noul = str_replace("-", "", $keyword);
     if ($noul != $keyword) {
-        $try = "/manual/${lang}/${prefix}${noul}.php";
+        $try = "/manual/{$lang}/{$prefix}{$noul}.php";
         if (@file_exists($_SERVER['DOCUMENT_ROOT'] . $try)) { return $try; }
     }
 
@@ -41,7 +41,7 @@ function tryprefix($lang, $keyword, $prefix)
     $keyword = urldecode($keyword);
     $noul = str_replace("\\", "-", $keyword);
     if ($noul != $keyword) {
-        $try = "/manual/${lang}/${prefix}${noul}.php";
+        $try = "/manual/{$lang}/{$prefix}{$noul}.php";
         if (@file_exists($_SERVER['DOCUMENT_ROOT'] . $try)) { return $try; }
     }
 
@@ -52,7 +52,7 @@ function tryprefix($lang, $keyword, $prefix)
         if ($pos !== false) {
             $keyword[$pos] = '.';
 
-            $try = "/manual/${lang}/${prefix}${keyword}.php";
+            $try = "/manual/{$lang}/{$prefix}{$keyword}.php";
             if (@file_exists($_SERVER['DOCUMENT_ROOT'] . $try)) { return $try; }
         }
     }

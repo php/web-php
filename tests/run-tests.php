@@ -698,7 +698,7 @@ function main(): void
         $environment['TEST_PHP_EXECUTABLE'] = $php;
     }
 
-    if (strlen($conf_passed)) {
+    if ($conf_passed != null) {
         if (IS_WINDOWS) {
             $pass_options .= " -c " . escapeshellarg($conf_passed);
         } else {
@@ -2802,10 +2802,10 @@ case "$1" in
     gdb --args {$cmd}
     ;;
 "valgrind")
-    USE_ZEND_ALLOC=0 valgrind $2 ${cmd}
+    USE_ZEND_ALLOC=0 valgrind $2 {$cmd}
     ;;
 "rr")
-    rr record $2 ${cmd}
+    rr record $2 {$cmd}
     ;;
 *)
     {$cmd}
@@ -3345,7 +3345,7 @@ function clear_show_test(): void
     // Parallel testing
     global $workerID;
 
-    if (!$workerID) {
+    if (!$workerID && isset($line_length)) {
         // Write over the last line to avoid random trailing chars on next echo
         echo str_repeat(" ", $line_length), "\r";
     }
