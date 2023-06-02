@@ -10,6 +10,15 @@ function gpg_key_get(string $rm): ?string {
                 "pub   2048R/9C0D5763 2015-06-09 [expires: 2024-06-06]\n" .
                 "      Key fingerprint = 1A4E 8B72 77C4 2E53 DBA9  C7B9 BCAA 30EA 9C0D 5763\n" .
                 "uid                  Anatol Belski <ab@php.net>";
+        
+        case 'bukka':
+            return
+                "pub   ed25519 2021-04-10 [SC]\n" .
+                "      C28D937575603EB4ABB725861C0779DC5C0A9DE4\n" .
+                "uid           [ultimate] Jakub Zelenka <bukka@php.net>\n" .
+                "uid           [ultimate] Jakub Zelenka <jakub.openssl@gmail.com>\n" .
+                "uid           [ultimate] Jakub Zelenka <jakub.zelenka@gmail.com>\n" .
+                "sub   cv25519 2021-04-10 [E]";
 
         case 'carusogabriel-old':
             return
@@ -154,7 +163,7 @@ function gpg_key_get(string $rm): ?string {
 
 function gpg_key_get_branches(bool $activeOnly): array {
     $branches = [
-        '8.3' => ['pierrick', 'ericmann'],
+        '8.3' => ['pierrick', 'ericmann', 'bukka'],
         '8.2' => ['pierrick', 'ramsey', 'sergey'],
         '8.1' => ['krakjoe', 'ramsey', 'patrickallaert'],
         '8.0' => ['pollita', 'carusogabriel-old', 'carusogabriel-new'],
