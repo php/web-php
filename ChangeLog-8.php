@@ -2129,6 +2129,18 @@ changelog_header(8, $MINOR_VERSIONS);
 
 <a id="PHP_8_0"></a>
 
+<section class="version" id="8.0.29"><!-- {{{ 8.0.29 -->
+<h3>Version 8.0.29</h3>
+<b><?php release_date('08-Jun-2023'); ?></b>
+<ul><li>Soap:
+<ul>
+  <li>Fixed bug GHSA-76gg-c692-v2mw (Missing error check and insufficient random bytes in HTTP Digest authentication for SOAP).</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
+
+
 <section class="version" id="8.0.28"><!-- {{{ 8.0.28 -->
 <h3>Version 8.0.28</h3>
 <b><?php release_date('14-Feb-2023'); ?></b>
