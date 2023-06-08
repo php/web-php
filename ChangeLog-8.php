@@ -843,6 +843,76 @@ changelog_header(8, $MINOR_VERSIONS);
 
 <a id="PHP_8_1"></a>
 
+<section class="version" id="8.1.20"><!-- {{{ 8.1.20 -->
+<h3>Version 8.1.20</h3>
+<b><?php release_date('08-Jun-2023'); ?></b>
+<ul><li>Core:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 9068); ?> (Conditional jump or move depends on uninitialised value(s)).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 11189); ?> (Exceeding memory limit in zend_hash_do_resize leaves the array in an invalid state).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 11222); ?> (foreach by-ref may jump over keys during a rehash).</li>
+</ul></li>
+<li>Date:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 11281); ?> (DateTimeZone::getName() does not include seconds in offset).</li>
+</ul></li>
+<li>Exif:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 10834); ?> (exif_read_data() cannot read smaller stream wrapper chunk sizes).</li>
+</ul></li>
+<li>FPM:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 10461); ?> (PHP-FPM segfault due to after free usage of child-&gt;ev_std(out|err)).</li>
+  <li><?php bugfix(64539); ?> (FPM status page: query_string not properly JSON encoded).</li>
+  <li>Fixed memory leak for invalid primary script file handle.</li>
+</ul></li>
+<li>Hash:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 11180); ?> (hash_file() appears to be restricted to 3 arguments).</li>
+</ul></li>
+<li>LibXML:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 11160); ?> (Few tests failed building with new libxml 2.11.0).</li>
+</ul></li>
+<li>Opcache:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 11134); ?> (Incorrect match default branch optimization).</li>
+  <li>Fixed too wide OR and AND range inference.</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 11245); ?> (In some specific cases SWITCH with one default statement will cause segfault).</li>
+</ul></li>
+<li>PGSQL:
+<ul>
+  <li>Fixed parameter parsing of pg_lo_export().</li>
+</ul></li>
+<li>Phar:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 11099); ?> (Generating phar.php during cross-compile can't be done).</li>
+</ul></li>
+<li>Soap:
+<ul>
+  <li>Fixed bug GHSA-76gg-c692-v2mw (Missing error check and insufficient random bytes in HTTP Digest authentication for SOAP).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 8426); ?> (make test fail while soap extension build).</li>
+</ul></li>
+<li>SPL:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 11178); ?> (Segmentation fault in spl_array_it_get_current_data (PHP 8.1.18)).</li>
+</ul></li>
+<li>Standard:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 11138); ?> (move_uploaded_file() emits open_basedir warning for source file).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 11274); ?> (POST/PATCH request switches to GET after a HTTP 308 redirect).</li>
+</ul></li>
+<li>Streams:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 10031); ?> ([Stream] STREAM_NOTIFY_PROGRESS over HTTP emitted irregularly for last chunk of data).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 11175); ?> (Stream Socket Timeout).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 11177); ?> (ASAN UndefinedBehaviorSanitizer when timeout = -1 passed to stream_socket_accept/stream_socket_client).</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
+
+
 <section class="version" id="8.1.19"><!-- {{{ 8.1.19 -->
 <h3>Version 8.1.19</h3>
 <b><?php release_date('11-May-2023'); ?></b>
