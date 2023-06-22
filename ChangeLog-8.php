@@ -66,7 +66,7 @@ changelog_header(8, $MINOR_VERSIONS);
 </ul></li>
 <li>Soap:
 <ul>
-  <li>Fixed bug GHSA-76gg-c692-v2mw (Missing error check and insufficient random bytes in HTTP Digest authentication for SOAP).</li>
+  <li>Fixed bug GHSA-76gg-c692-v2mw (Missing error check and insufficient random bytes in HTTP Digest authentication for SOAP). (CVE-2023-3247)</li>
   <li>Fixed bug <?php githubissuel('php/php-src', 8426); ?> (make test fail while soap extension build).</li>
 </ul></li>
 <li>SPL:
@@ -890,7 +890,7 @@ changelog_header(8, $MINOR_VERSIONS);
 </ul></li>
 <li>Soap:
 <ul>
-  <li>Fixed bug GHSA-76gg-c692-v2mw (Missing error check and insufficient random bytes in HTTP Digest authentication for SOAP).</li>
+  <li>Fixed bug GHSA-76gg-c692-v2mw (Missing error check and insufficient random bytes in HTTP Digest authentication for SOAP). (CVE-2023-3247)</li>
   <li>Fixed bug <?php githubissuel('php/php-src', 8426); ?> (make test fail while soap extension build).</li>
 </ul></li>
 <li>SPL:
@@ -2285,7 +2285,7 @@ changelog_header(8, $MINOR_VERSIONS);
 <b><?php release_date('08-Jun-2023'); ?></b>
 <ul><li>Soap:
 <ul>
-  <li>Fixed bug GHSA-76gg-c692-v2mw (Missing error check and insufficient random bytes in HTTP Digest authentication for SOAP).</li>
+  <li>Fixed bug GHSA-76gg-c692-v2mw (Missing error check and insufficient random bytes in HTTP Digest authentication for SOAP). (CVE-2023-3247)</li>
 </ul></li>
 </ul>
 <!-- }}} --></section>
