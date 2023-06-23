@@ -421,7 +421,6 @@ $uri_aliases = [
     "abstract" => "language.oop5.abstract",
     "interface" => "language.oop5.interfaces",
     "interfaces" => "language.oop5.interfaces",
-    "autoload" => "language.oop5.autoload",
     "__autoload" => "language.oop5.autoload",
     "language.oop5.reflection" => "book.reflection", // BC
     "::" => "language.oop5.paamayim-nekudotayim",
