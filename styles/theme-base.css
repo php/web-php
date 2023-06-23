@@ -303,7 +303,7 @@ pre.info,
 .docs .classsynopsis,
 .docs .classsynopsis code {
   font: normal 0.875rem/1.5rem "Fira Mono", "Source Code Pro", monospace;
-  word-wrap: break-word;
+  overflow-x: auto;
 }
 p code,
 li code,
