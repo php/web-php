@@ -9,7 +9,7 @@
     <default:finalTeaserDate xmlns="http://php.net/ns/news">2023-07-29</default:finalTeaserDate>
     <category term="conferences" label="Conference announcement"/>
     <default:newsImage xmlns="http://php.net/ns/news" link="http://www.phpvelhoeste.com.br/2023/"
-                       title="PHP Velho Oeste 2023">php_velho_oeste.png
+                       title="PHP Velho Oeste 2023">php_velho_oeste_450x400px.png
     </default:newsImage>
     <content type="xhtml">
         <div xmlns="http://www.w3.org/1999/xhtml">
