@@ -8,7 +8,7 @@ precision=-1
 use phpweb\UserNotes\Sorter;
 use phpweb\UserNotes\UserNote;
 
-require_once __DIR__ . "/../../../autoload.php";
+require_once __DIR__ . "/../../../src/autoload.php";
 
 $file = file(__DIR__ . "/../../../backend/notes/d7/d7742c269d23ea86");
 $notes = [];

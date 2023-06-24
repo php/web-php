@@ -5,7 +5,6 @@
         '/?:' => '/language.operators.comparison#language.operators.comparison.ternary',
         '/??' => '/language.operators.comparison#language.operators.comparison.coalesce',
         '/??=' => '/language.operators.assignment#language.operators.assignment.other',
-        '/autoload' => '/language.oop5.autoload',
     ];
     if (isset($shortcuts[$uri])) {
         header("Location: {$shortcuts[$uri]}");

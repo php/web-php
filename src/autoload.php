@@ -5,7 +5,7 @@
  */
 spl_autoload_register(static function (string $class): void {
     $prefix = 'phpweb\\';
-    $directory = __DIR__ . '/src/';
+    $directory = __DIR__ . '/';
 
     $length = strlen($prefix);
 
