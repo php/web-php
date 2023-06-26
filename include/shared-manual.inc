@@ -22,7 +22,7 @@ $PGI = []; $SIDEBAR_DATA = '';
 // User note display functions
 // =============================================================================
 
-require_once __DIR__ . '/../autoload.php';
+require_once __DIR__ . '/../src/autoload.php';
 
 use phpweb\UserNotes\Sorter;
 use phpweb\UserNotes\UserNote;
