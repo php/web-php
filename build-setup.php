@@ -41,6 +41,8 @@ site_header("Operating System Preparation", ["current" => "community"]);
     <ul>
         <li><pre class="small">sudo apt-get build-dep php5-<i>extname</i></pre></li>
     </ul>
+
+    Alternatively, you can use <a href="https://github.com/dunglas/php-dev-docker"><code>php-dev-docker</code></a>, a Docker image containing all the tools needed to develop PHP and PHP extensions.
 </p>
 <p>
     The following table shows what is required for Microsoft Windows users to build PHP:
