@@ -920,6 +920,71 @@ changelog_header(8, $MINOR_VERSIONS);
 
 <a id="PHP_8_1"></a>
 
+<section class="version" id="8.1.21"><!-- {{{ 8.1.21 -->
+<h3>Version 8.1.21</h3>
+<b><?php release_date('06-Jun-2023'); ?></b>
+<ul><li>CLI:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 11246); ?> (cli/get_set_process_title fails on MacOS).</li>
+</ul></li>
+<li>Core:
+<ul>
+  <li>Fixed build for the riscv64 architecture/GCC 12.</li>
+</ul></li>
+<li>Curl:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 11433); ?> (Unable to set CURLOPT_ACCEPT_ENCODING to NULL).</li>
+</ul></li>
+<li>DOM:
+<ul>
+  <li>Fixed bugs <?php githubissuel('php/php-src', 11288); ?> and <?php githubissuel('php/php-src', 11289); ?> and <?php githubissuel('php/php-src', 11290); ?> and <?php githubissuel('php/php-src', 9142); ?> (DOMExceptions and segfaults with replaceWith).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 10234); ?> (Setting DOMAttr::textContent results in an empty attribute value).</li>
+  <li>Fix return value in stub file for DOMNodeList::item.</li>
+  <li>Fix spec compliance error with '*' namespace for DOMDocument::getElementsByTagNameNS.</li>
+  <li>Fix DOMElement::append() and DOMElement::prepend() hierarchy checks.</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 11347); ?> (Memory leak when calling a static method inside an xpath query).</li>
+  <li><?php bugfix(67440); ?> (append_node of a DOMDocumentFragment does not reconcile namespaces).</li>
+  <li><?php bugfix(81642); ?> (DOMChildNode::replaceWith() bug when replacing a node with itself).</li>
+  <li><?php bugfix(77686); ?> (Removed elements are still returned by getElementById).</li>
+  <li><?php bugfix(70359); ?> (print_r() on DOMAttr causes Segfault in php_libxml_node_free_list()).</li>
+  <li><?php bugfix(78577); ?> (Crash in DOMNameSpace debug info handlers).</li>
+  <li>Fix lifetime issue with getAttributeNodeNS().</li>
+  <li>Fix "invalid state error" with cloned namespace declarations.</li>
+  <li><?php bugfix(55294); ?> and #47530 and #47847 (various namespace reconciliation issues).</li>
+  <li><?php bugfix(80332); ?> (Completely broken array access functionality with DOMNamedNodeMap).</li>
+</ul></li>
+<li>Opcache:
+<ul>
+  <li>Fix allocation loop in zend_shared_alloc_startup().</li>
+  <li>Access violation on smm_shared_globals with ALLOC_FALLBACK.</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 11336); ?> (php still tries to unlock the shared memory ZendSem with opcache.file_cache_only=1 but it was never locked).</li>
+</ul></li>
+<li>OpenSSL:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 9356); ?> Incomplete validation of IPv6 Address fields in subjectAltNames (James Lucas, Jakub Zelenka).</li>
+</ul></li>
+<li>PGSQL:
+<ul>
+  <li>Fixed intermittent segfault with pg_trace.</li>
+</ul></li>
+<li>Phar:
+<ul>
+  <li>Fix cross-compilation check in phar generation for FreeBSD.</li>
+</ul></li>
+<li>SPL:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 11338); ?> (SplFileInfo empty getBasename with more than one slash).</li>
+</ul></li>
+<li>Standard:
+<ul>
+  <li>Fix access on NULL pointer in array_merge_recursive().</li>
+  <li>Fix exception handling in array_multisort().</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
+
+
 <section class="version" id="8.1.20"><!-- {{{ 8.1.20 -->
 <h3>Version 8.1.20</h3>
 <b><?php release_date('08-Jun-2023'); ?></b>
