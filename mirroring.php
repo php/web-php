@@ -31,7 +31,7 @@ site_header(
 <h1>Mirroring The PHP Website</h1>
 
 <p>
- The PHP project does no have an official mirror program anymore, but you can
+ The PHP project does not have an official mirror program anymore, but you can
  set-up a mirror for your own network or company.
 </p>
 
