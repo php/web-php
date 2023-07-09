@@ -922,7 +922,7 @@ changelog_header(8, $MINOR_VERSIONS);
 
 <section class="version" id="8.1.21"><!-- {{{ 8.1.21 -->
 <h3>Version 8.1.21</h3>
-<b><?php release_date('06-Jun-2023'); ?></b>
+<b><?php release_date('06-Jul-2023'); ?></b>
 <ul><li>CLI:
 <ul>
   <li>Fixed bug <?php githubissuel('php/php-src', 11246); ?> (cli/get_set_process_title fails on MacOS).</li>
