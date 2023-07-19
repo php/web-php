@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom" xmlns:default="http://php.net/ns/news">
+  <title>Web Summer Camp 2023</title>
+  <id>https://www.php.net/archive/2023.php#2023-03-20-1</id>
+  <published>2023-03-20T17:53:01+01:00</published>
+  <updated>2023-03-20T17:53:01+01:00</updated>
+  <link href="https://www.php.net/conferences/index.php#2023-03-20-1" rel="alternate" type="text/html"/>
+  <link href="https://websummercamp.com/2023" rel="via" type="text/html"/>
+  <default:finalTeaserDate xmlns="http://php.net/ns/news">2023-08-31</default:finalTeaserDate>
+  <category term="conferences" label="Conference announcement"/>
+  <default:newsImage xmlns="http://php.net/ns/news" link="https://websummercamp.com/2023" title="Web Summer Camp logo">websc2023.svg</default:newsImage>
+  <content type="xhtml">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+     Web Summer Camp is a conference with hands-on workshops for web developers, designers and decision-makers. Besides 2 tracks about UX/PM processes and web technologies there will be 3 tracks for non-beginner developers with hands-on workshops on topics related to JavaScript, PHP and Symfony. Take home practical knowhow on relevant tools and techniques useful in your every day work and join us in person this summer on the Croatian coast.
+
+All the information on this year's event you can find on our <a href="https://websummercamp.com/2023">web site</a>
+    </div>
+  </content>
+</entry>
