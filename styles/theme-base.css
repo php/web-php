@@ -10,6 +10,8 @@
  */
 
 :root {
+  --font-family-sans-serif: "Fira Sans", "Source Sans Pro", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --font-family-mono: "Fira Mono", "Source Code Pro", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
   --dark-grey-color: #333;
   --dark-blue-color: #4F5B93;
   --medium-blue-color: #7A86B8;
@@ -295,15 +297,15 @@ textarea {
 }
 
 body, input, textarea {
-    font-family: "Fira Sans", "Source Sans Pro", Helvetica, Arial, sans-serif;
+  font-family: var(--font-family-sans-serif);
   font-weight: 400;
 }
 code,
 pre.info,
 .docs .classsynopsis,
 .docs .classsynopsis code {
-  font: normal 0.875rem/1.5rem "Fira Mono", "Source Code Pro", monospace;
-  word-wrap: break-word;
+  font: normal 0.875rem/1.5rem var(--font-family-mono);
+  overflow-x: auto;
 }
 p code,
 li code,
@@ -745,7 +747,7 @@ table.standard th.subr {
 #layout .cse .gsc-control-cse,
 #layout .gsc-control-cse,
 #layout .gsc-control-cse .gsc-table-result {
-    font-family: "Fira Sans", "Source Sans Pro", Helvetica, Arial, sans-serif;
+    font-family: var(--font-family-sans-serif);
     font-size: 1rem;
     margin: 0;
     padding: 0;
@@ -1157,11 +1159,11 @@ fieldset {
 }
 .content-box .md5sum:before {
     content: "md5: ";
-    font-family: "Fira Sans", "Source Sans Pro", Helvetica, Arial, sans-serif;
+    font-family: var(--font-family-sans-serif);
 }
 .content-box .sha256:before {
     content: "sha256: ";
-    font-family: "Fira Sans", "Source Sans Pro", Helvetica, Arial, sans-serif;
+    font-family: var(--font-family-sans-serif);
 }
 .content-box .releasedate {
     float: right;

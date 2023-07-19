@@ -8,6 +8,302 @@ changelog_header(8, $MINOR_VERSIONS);
 ?>
 <a id="PHP_8_2"></a>
 
+<section class="version" id="8.2.8"><!-- {{{ 8.2.8 -->
+<h3>Version 8.2.8</h3>
+<b><?php release_date('06-Jul-2023'); ?></b>
+<ul><li>CLI:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 11246); ?> (cli/get_set_process_title fails on MacOS).</li>
+</ul></li>
+<li>Core:
+<ul>
+  <li>Fixed build for the riscv64 architecture/GCC 12.</li>
+</ul></li>
+<li>Curl:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 11433); ?> (Unable to set CURLOPT_ACCEPT_ENCODING to NULL).</li>
+</ul></li>
+<li>Date:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 11455); ?> (Segmentation fault with custom object date properties).</li>
+</ul></li>
+<li>DOM:
+<ul>
+  <li>Fixed bugs <?php githubissuel('php/php-src', 11288); ?> and <?php githubissuel('php/php-src', 11289); ?> and <?php githubissuel('php/php-src', 11290); ?> and <?php githubissuel('php/php-src', 9142); ?> (DOMExceptions and segfaults with replaceWith).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 10234); ?> (Setting DOMAttr::textContent results in an empty attribute value).</li>
+  <li>Fix return value in stub file for DOMNodeList::item.</li>
+  <li>Fix spec compliance error with '*' namespace for DOMDocument::getElementsByTagNameNS.</li>
+  <li>Fix DOMElement::append() and DOMElement::prepend() hierarchy checks.</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 11347); ?> (Memory leak when calling a static method inside an xpath query).</li>
+  <li><?php bugfix(67440); ?> (append_node of a DOMDocumentFragment does not reconcile namespaces).</li>
+  <li><?php bugfix(81642); ?> (DOMChildNode::replaceWith() bug when replacing a node with itself).</li>
+  <li><?php bugfix(77686); ?> (Removed elements are still returned by getElementById).</li>
+  <li><?php bugfix(70359); ?> (print_r() on DOMAttr causes Segfault in php_libxml_node_free_list()).</li>
+  <li><?php bugfix(78577); ?> (Crash in DOMNameSpace debug info handlers).</li>
+  <li>Fix lifetime issue with getAttributeNodeNS().</li>
+  <li>Fix "invalid state error" with cloned namespace declarations.</li>
+  <li><?php bugfix(55294); ?> and #47530 and #47847 (various namespace reconciliation issues).</li>
+  <li><?php bugfix(80332); ?> (Completely broken array access functionality with DOMNamedNodeMap).</li>
+</ul></li>
+<li>Opcache:
+<ul>
+  <li>Fix allocation loop in zend_shared_alloc_startup().</li>
+  <li>Access violation on smm_shared_globals with ALLOC_FALLBACK.</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 11336); ?> (php still tries to unlock the shared memory ZendSem with opcache.file_cache_only=1 but it was never locked).</li>
+</ul></li>
+<li>OpenSSL:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 9356); ?> Incomplete validation of IPv6 Address fields in subjectAltNames (James Lucas, Jakub Zelenka).</li>
+</ul></li>
+<li>PCRE:
+<ul>
+  <li>Fix preg_replace_callback_array() pattern validation.</li>
+</ul></li>
+<li>PGSQL:
+<ul>
+  <li>Fixed intermittent segfault with pg_trace.</li>
+</ul></li>
+<li>Phar:
+<ul>
+  <li>Fix cross-compilation check in phar generation for FreeBSD.</li>
+</ul></li>
+<li>SPL:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 11338); ?> (SplFileInfo empty getBasename with more than one slash).</li>
+</ul></li>
+<li>Standard:
+<ul>
+  <li>Fix access on NULL pointer in array_merge_recursive().</li>
+  <li>Fix exception handling in array_multisort().</li>
+</ul></li>
+<li>SQLite3:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 11451); ?> (Invalid associative array containing duplicate keys).</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
+
+
+<section class="version" id="8.2.7"><!-- {{{ 8.2.7 -->
+<h3>Version 8.2.7</h3>
+<b><?php release_date('08-Jun-2023'); ?></b>
+<ul><li>Core:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 11152); ?> (Unable to alias namespaces containing reserved class names).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 9068); ?> (Conditional jump or move depends on uninitialised value(s)).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 11189); ?> (Exceeding memory limit in zend_hash_do_resize leaves the array in an invalid state).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 11063); ?> (Compilation error on old GCC versions).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 11222); ?> (foreach by-ref may jump over keys during a rehash).</li>
+</ul></li>
+<li>Date:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 11281); ?> (DateTimeZone::getName() does not include seconds in offset).</li>
+</ul></li>
+<li>Exif:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 10834); ?> (exif_read_data() cannot read smaller stream wrapper chunk sizes).</li>
+</ul></li>
+<li>FPM:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 10461); ?> (PHP-FPM segfault due to after free usage of child-&gt;ev_std(out|err)).</li>
+  <li><?php bugfix(64539); ?> (FPM status page: query_string not properly JSON encoded).</li>
+  <li>Fixed memory leak for invalid primary script file handle.</li>
+</ul></li>
+<li>Hash:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 11180); ?> (hash_file() appears to be restricted to 3 arguments).</li>
+</ul></li>
+<li>LibXML:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 11160); ?> (Few tests failed building with new libxml 2.11.0).</li>
+</ul></li>
+<li>MBString:
+<ul>
+  <li>Fix bug <?php githubissuel('php/php-src', 11217); ?> (Segfault in mb_strrpos / mb_strripos when using negative offset and ASCII encoding).</li>
+</ul></li>
+<li>Opcache:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 11134); ?> (Incorrect match default branch optimization).</li>
+  <li>Fixed too wide OR and AND range inference.</li>
+  <li>Fixed missing class redeclaration error with OPcache enabled.</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 11245); ?> (In some specific cases SWITCH with one default statement will cause segfault).</li>
+</ul></li>
+<li>PCNTL:
+<ul>
+  <li>Fixed maximum argument count of pcntl_forkx().</li>
+</ul></li>
+<li>PGSQL:
+<ul>
+  <li>Fixed parameter parsing of pg_lo_export().</li>
+</ul></li>
+<li>Phar:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 11099); ?> (Generating phar.php during cross-compile can't be done).</li>
+</ul></li>
+<li>Soap:
+<ul>
+  <li>Fixed bug GHSA-76gg-c692-v2mw (Missing error check and insufficient random bytes in HTTP Digest authentication for SOAP). (CVE-2023-3247)</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 8426); ?> (make test fail while soap extension build).</li>
+</ul></li>
+<li>SPL:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 11178); ?> (Segmentation fault in spl_array_it_get_current_data (PHP 8.1.18)).</li>
+</ul></li>
+<li>Standard:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 11138); ?> (move_uploaded_file() emits open_basedir warning for source file).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 11274); ?> (POST/PATCH request switches to GET after a HTTP 308 redirect).</li>
+</ul></li>
+<li>Streams:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 10031); ?> ([Stream] STREAM_NOTIFY_PROGRESS over HTTP emitted irregularly for last chunk of data).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 11175); ?> (Stream Socket Timeout).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 11177); ?> (ASAN UndefinedBehaviorSanitizer when timeout = -1 passed to stream_socket_accept/stream_socket_client).</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
+
+
+<section class="version" id="8.2.6"><!-- {{{ 8.2.6 -->
+<h3>Version 8.2.6</h3>
+<b><?php release_date('11-May-2023'); ?></b>
+<ul><li>Core:
+<ul>
+  <li>Fix inconsistent float negation in constant expressions.</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 8841); ?> (php-cli core dump calling a badly formed function).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 10737); ?> (PHP 8.1.16 segfaults on line 597 of sapi/apache2handler/sapi_apache2.c).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 11028); ?> (Heap Buffer Overflow in zval_undefined_cv.).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 11108); ?> (Incorrect CG(memoize_mode) state after bailout in ??=).</li>
+</ul></li>
+<li>Date:
+<ul>
+  <li>Fixed bug where the diff() method would not return the right result around DST changeover for date/times associated with a timezone identifier.</li>
+  <li>Fixed out-of-range bug when converting to/from around the LONG_MIN unix timestamp.</li>
+</ul></li>
+<li>DOM:
+<ul>
+  <li><?php bugfix(80602); ?> (Segfault when using DOMChildNode::before()).</li>
+  <li>Fixed incorrect error handling in dom_zvals_to_fragment().</li>
+</ul></li>
+<li>Exif:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 9397); ?> (exif read : warnings and errors : Potentially invalid endianess, Illegal IFD size and Undefined index).</li>
+</ul></li>
+<li>Intl:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 11071); ?> (TZData version not displayed anymore).</li>
+</ul></li>
+<li>PCRE:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 10968); ?> (Segfault in preg_replace_callback_array()).</li>
+</ul></li>
+<li>Reflection:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 10983); ?> (State-dependant segfault in ReflectionObject::getProperties).</li>
+</ul></li>
+<li>SPL:
+<ul>
+  <li>Handle indirect zvals and use up-to-date properties in SplFixedArray::__serialize.</li>
+</ul></li>
+<li>Standard:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 10990); ?> (mail() throws TypeError after iterating over $additional_headers array by reference).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 9775); ?> (Duplicates returned by array_unique when using enums).</li>
+</ul></li>
+<li>Streams:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 10406); ?> (feof() behavior change for UNIX based socket resources).</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
+
+
+<section class="version" id="8.2.5"><!-- {{{ 8.2.5 -->
+<h3>Version 8.2.5</h3>
+<b><?php release_date('13-Apr-2023'); ?></b>
+<ul><li>Core:
+<ul>
+  <li>Added optional support for max_execution_time in ZTS/Linux builds (Kévin Dunglas)</li>
+  <li>Fixed use-after-free in recursive AST evaluation.</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 8646); ?> (Memory leak PHP FPM 8.1).</li>
+  <li>Re-add some CTE functions that were removed from being CTE by a mistake.</li>
+  <li>Remove CTE flag from array_diff_ukey(), which was added by mistake.</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 10801); ?> (Named arguments in CTE functions cause a segfault).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 8789); ?> (PHP 8.0.20 (ZTS) zend_signal_handler_defer crashes on apache).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 10015); ?> (zend_signal_handler_defer crashes on apache shutdown).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 10810); ?> (Fix NUL byte terminating Exception::__toString()).</li>
+  <li>Fix potential memory corruption when mixing __callStatic() and FFI.</li>
+</ul></li>
+<li>Date:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 10747); ?> (Private and protected properties in serialized Date* objects throw).</li>
+</ul></li>
+<li>FPM:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 10611); ?> (fpm_env_init_main leaks environ).</li>
+  <li>Destroy file_handle in fpm_main.</li>
+  <li><?php bugfix(74129); ?> (Incorrect SCRIPT_NAME with apache ProxyPassMatch when spaces are in path).</li>
+</ul></li>
+<li>FTP:
+<ul>
+  <li>Propagate success status of ftp_close().</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 10521); ?> (ftp_get/ftp_nb_get resumepos offset is maximum 10GB).</li>
+</ul></li>
+<li>IMAP:
+<ul>
+  <li>Fix build failure with Clang 16.</li>
+</ul></li>
+<li>MySQLnd:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 8979); ?> (Possible Memory Leak with SSL-enabled MySQL connections).</li>
+</ul></li>
+<li>Opcache:
+<ul>
+  <li>Fixed build for macOS to cater with pkg-config settings.</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 8065); ?> (opcache.consistency_checks &gt; 0 causes segfaults in PHP &gt;= 8.1.5 in fpm context).</li>
+</ul></li>
+<li>OpenSSL:
+<ul>
+  <li>Add missing error checks on file writing functions.</li>
+</ul></li>
+<li>PDO Firebird:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 10908); ?> (Bus error with PDO Firebird on RPI with 64 bit kernel and 32 bit userland).</li>
+</ul></li>
+<li>Phar:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 10766); ?> (PharData archive created with Phar::Zip format does not keep files metadata (datetime)).</li>
+  <li>Add missing error checks on EVP_MD_CTX_create() and EVP_VerifyInit().</li>
+</ul></li>
+<li>PDO ODBC:
+<ul>
+  <li>Fixed missing and inconsistent error checks on SQLAllocHandle.</li>
+</ul></li>
+<li>PGSQL:
+<ul>
+  <li>Fixed typo in the array returned from pg_meta_data (extended mode).</li>
+</ul></li>
+<li>SPL:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 10519); ?> (Array Data Address Reference Issue).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 10907); ?> (Unable to serialize processed SplFixedArrays in PHP 8.2.4).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 10844); ?> (ArrayIterator allows modification of readonly props).</li>
+</ul></li>
+<li>Standard:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 10885); ?> (stream_socket_server context leaks).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 10052); ?> (Browscap crashes PHP 8.1.12 on request shutdown (apache2)).</li>
+  <li>Fixed oss-fuzz #57392 (Buffer-overflow in php_fgetcsv() with \0 delimiter and enclosure).</li>
+  <li>Fixed undefined behaviour in unpack().</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
+
+
 <section class="version" id="8.2.4"><!-- {{{ 8.2.4 -->
 <h3>Version 8.2.4</h3>
 <b><?php release_date('16-Mar-2023'); ?></b>
@@ -623,6 +919,259 @@ changelog_header(8, $MINOR_VERSIONS);
 
 
 <a id="PHP_8_1"></a>
+
+<section class="version" id="8.1.21"><!-- {{{ 8.1.21 -->
+<h3>Version 8.1.21</h3>
+<b><?php release_date('06-Jul-2023'); ?></b>
+<ul><li>CLI:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 11246); ?> (cli/get_set_process_title fails on MacOS).</li>
+</ul></li>
+<li>Core:
+<ul>
+  <li>Fixed build for the riscv64 architecture/GCC 12.</li>
+</ul></li>
+<li>Curl:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 11433); ?> (Unable to set CURLOPT_ACCEPT_ENCODING to NULL).</li>
+</ul></li>
+<li>DOM:
+<ul>
+  <li>Fixed bugs <?php githubissuel('php/php-src', 11288); ?> and <?php githubissuel('php/php-src', 11289); ?> and <?php githubissuel('php/php-src', 11290); ?> and <?php githubissuel('php/php-src', 9142); ?> (DOMExceptions and segfaults with replaceWith).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 10234); ?> (Setting DOMAttr::textContent results in an empty attribute value).</li>
+  <li>Fix return value in stub file for DOMNodeList::item.</li>
+  <li>Fix spec compliance error with '*' namespace for DOMDocument::getElementsByTagNameNS.</li>
+  <li>Fix DOMElement::append() and DOMElement::prepend() hierarchy checks.</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 11347); ?> (Memory leak when calling a static method inside an xpath query).</li>
+  <li><?php bugfix(67440); ?> (append_node of a DOMDocumentFragment does not reconcile namespaces).</li>
+  <li><?php bugfix(81642); ?> (DOMChildNode::replaceWith() bug when replacing a node with itself).</li>
+  <li><?php bugfix(77686); ?> (Removed elements are still returned by getElementById).</li>
+  <li><?php bugfix(70359); ?> (print_r() on DOMAttr causes Segfault in php_libxml_node_free_list()).</li>
+  <li><?php bugfix(78577); ?> (Crash in DOMNameSpace debug info handlers).</li>
+  <li>Fix lifetime issue with getAttributeNodeNS().</li>
+  <li>Fix "invalid state error" with cloned namespace declarations.</li>
+  <li><?php bugfix(55294); ?> and #47530 and #47847 (various namespace reconciliation issues).</li>
+  <li><?php bugfix(80332); ?> (Completely broken array access functionality with DOMNamedNodeMap).</li>
+</ul></li>
+<li>Opcache:
+<ul>
+  <li>Fix allocation loop in zend_shared_alloc_startup().</li>
+  <li>Access violation on smm_shared_globals with ALLOC_FALLBACK.</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 11336); ?> (php still tries to unlock the shared memory ZendSem with opcache.file_cache_only=1 but it was never locked).</li>
+</ul></li>
+<li>OpenSSL:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 9356); ?> Incomplete validation of IPv6 Address fields in subjectAltNames (James Lucas, Jakub Zelenka).</li>
+</ul></li>
+<li>PGSQL:
+<ul>
+  <li>Fixed intermittent segfault with pg_trace.</li>
+</ul></li>
+<li>Phar:
+<ul>
+  <li>Fix cross-compilation check in phar generation for FreeBSD.</li>
+</ul></li>
+<li>SPL:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 11338); ?> (SplFileInfo empty getBasename with more than one slash).</li>
+</ul></li>
+<li>Standard:
+<ul>
+  <li>Fix access on NULL pointer in array_merge_recursive().</li>
+  <li>Fix exception handling in array_multisort().</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
+
+
+<section class="version" id="8.1.20"><!-- {{{ 8.1.20 -->
+<h3>Version 8.1.20</h3>
+<b><?php release_date('08-Jun-2023'); ?></b>
+<ul><li>Core:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 9068); ?> (Conditional jump or move depends on uninitialised value(s)).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 11189); ?> (Exceeding memory limit in zend_hash_do_resize leaves the array in an invalid state).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 11222); ?> (foreach by-ref may jump over keys during a rehash).</li>
+</ul></li>
+<li>Date:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 11281); ?> (DateTimeZone::getName() does not include seconds in offset).</li>
+</ul></li>
+<li>Exif:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 10834); ?> (exif_read_data() cannot read smaller stream wrapper chunk sizes).</li>
+</ul></li>
+<li>FPM:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 10461); ?> (PHP-FPM segfault due to after free usage of child-&gt;ev_std(out|err)).</li>
+  <li><?php bugfix(64539); ?> (FPM status page: query_string not properly JSON encoded).</li>
+  <li>Fixed memory leak for invalid primary script file handle.</li>
+</ul></li>
+<li>Hash:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 11180); ?> (hash_file() appears to be restricted to 3 arguments).</li>
+</ul></li>
+<li>LibXML:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 11160); ?> (Few tests failed building with new libxml 2.11.0).</li>
+</ul></li>
+<li>Opcache:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 11134); ?> (Incorrect match default branch optimization).</li>
+  <li>Fixed too wide OR and AND range inference.</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 11245); ?> (In some specific cases SWITCH with one default statement will cause segfault).</li>
+</ul></li>
+<li>PGSQL:
+<ul>
+  <li>Fixed parameter parsing of pg_lo_export().</li>
+</ul></li>
+<li>Phar:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 11099); ?> (Generating phar.php during cross-compile can't be done).</li>
+</ul></li>
+<li>Soap:
+<ul>
+  <li>Fixed bug GHSA-76gg-c692-v2mw (Missing error check and insufficient random bytes in HTTP Digest authentication for SOAP). (CVE-2023-3247)</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 8426); ?> (make test fail while soap extension build).</li>
+</ul></li>
+<li>SPL:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 11178); ?> (Segmentation fault in spl_array_it_get_current_data (PHP 8.1.18)).</li>
+</ul></li>
+<li>Standard:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 11138); ?> (move_uploaded_file() emits open_basedir warning for source file).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 11274); ?> (POST/PATCH request switches to GET after a HTTP 308 redirect).</li>
+</ul></li>
+<li>Streams:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 10031); ?> ([Stream] STREAM_NOTIFY_PROGRESS over HTTP emitted irregularly for last chunk of data).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 11175); ?> (Stream Socket Timeout).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 11177); ?> (ASAN UndefinedBehaviorSanitizer when timeout = -1 passed to stream_socket_accept/stream_socket_client).</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
+
+
+<section class="version" id="8.1.19"><!-- {{{ 8.1.19 -->
+<h3>Version 8.1.19</h3>
+<b><?php release_date('11-May-2023'); ?></b>
+<ul><li>Core:
+<ul>
+  <li>Fix inconsistent float negation in constant expressions.</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 8841); ?> (php-cli core dump calling a badly formed function).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 10737); ?> (PHP 8.1.16 segfaults on line 597 of sapi/apache2handler/sapi_apache2.c).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 11028); ?> (Heap Buffer Overflow in zval_undefined_cv.).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 11108); ?> (Incorrect CG(memoize_mode) state after bailout in ??=).</li>
+</ul></li>
+<li>DOM:
+<ul>
+  <li><?php bugfix(80602); ?> (Segfault when using DOMChildNode::before()).</li>
+  <li>Fixed incorrect error handling in dom_zvals_to_fragment().</li>
+</ul></li>
+<li>Exif:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 9397); ?> (exif read : warnings and errors : Potentially invalid endianess, Illegal IFD size and Undefined index).</li>
+</ul></li>
+<li>Intl:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 11071); ?> (TZData version not displayed anymore).</li>
+</ul></li>
+<li>PCRE:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 10968); ?> (Segfault in preg_replace_callback_array()).</li>
+</ul></li>
+<li>Standard:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 10990); ?> (mail() throws TypeError after iterating over $additional_headers array by reference).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 9775); ?> (Duplicates returned by array_unique when using enums).</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
+
+
+<section class="version" id="8.1.18"><!-- {{{ 8.1.18 -->
+<h3>Version 8.1.18</h3>
+<b><?php release_date('13-Apr-2023'); ?></b>
+<ul><li>Core:
+<ul>
+  <li>Added optional support for max_execution_time in ZTS/Linux builds.</li>
+  <li>Fixed use-after-free in recursive AST evaluation.</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 8646); ?> (Memory leak PHP FPM 8.1).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 10801); ?> (Named arguments in CTE functions cause a segfault).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 8789); ?> (PHP 8.0.20 (ZTS) zend_signal_handler_defer crashes on apache).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 10015); ?> (zend_signal_handler_defer crashes on apache shutdown).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 10810); ?> (Fix NUL byte terminating Exception::__toString()).</li>
+  <li>Fix potential memory corruption when mixing __callStatic() and FFI.</li>
+</ul></li>
+<li>Date:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 10583); ?> (DateTime modify with tz pattern should not update linked timezone).</li>
+</ul></li>
+<li>FPM:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 10611); ?> (fpm_env_init_main leaks environ).</li>
+  <li>Destroy file_handle in fpm_main.</li>
+  <li><?php bugfix(74129); ?> (Incorrect SCRIPT_NAME with apache ProxyPassMatch when spaces are in path).</li>
+</ul></li>
+<li>FTP:
+<ul>
+  <li>Propagate success status of ftp_close().</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 10521); ?> (ftp_get/ftp_nb_get resumepos offset is maximum 10GB).</li>
+</ul></li>
+<li>IMAP:
+<ul>
+  <li>Fix build failure with Clang 16.</li>
+</ul></li>
+<li>MySQLnd:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 8979); ?> (Possible Memory Leak with SSL-enabled MySQL connections).</li>
+</ul></li>
+<li>Opcache:
+<ul>
+  <li>Fixed build for macOS to cater with pkg-config settings.</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 8065); ?> (opcache.consistency_checks &gt; 0 causes segfaults in PHP &gt;= 8.1.5 in fpm context).</li>
+</ul></li>
+<li>OpenSSL:
+<ul>
+  <li>Add missing error checks on file writing functions.</li>
+</ul></li>
+<li>PDO Firebird:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 10908); ?> (Bus error with PDO Firebird on RPI with 64 bit kernel and 32 bit userland).</li>
+</ul></li>
+<li>PDO ODBC:
+<ul>
+  <li>Fixed missing and inconsistent error checks on SQLAllocHandle.</li>
+</ul></li>
+<li>Phar:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 10766); ?> (PharData archive created with Phar::Zip format does not keep files metadata (datetime)).</li>
+  <li>Add missing error checks on EVP_MD_CTX_create() and EVP_VerifyInit().</li>
+</ul></li>
+<li>PGSQL:
+<ul>
+  <li>Fixed typo in the array returned from pg_meta_data (extended mode).</li>
+</ul></li>
+<li>SPL:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 10519); ?> (Array Data Address Reference Issue).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 10844); ?> (ArrayIterator allows modification of readonly props).</li>
+</ul></li>
+<li>Standard:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 10885); ?> (stream_socket_server context leaks).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 10052); ?> (Browscap crashes PHP 8.1.12 on request shutdown (apache2)).</li>
+  <li>Fixed oss-fuzz #57392 (Buffer-overflow in php_fgetcsv() with \0 delimiter and enclosure).</li>
+  <li>Fixed undefined behaviour in unpack().</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
+
 
 <section class="version" id="8.1.17"><!-- {{{ 8.1.17 -->
 <h3>Version 8.1.17</h3>
@@ -1872,6 +2421,18 @@ changelog_header(8, $MINOR_VERSIONS);
 
 
 <a id="PHP_8_0"></a>
+
+<section class="version" id="8.0.29"><!-- {{{ 8.0.29 -->
+<h3>Version 8.0.29</h3>
+<b><?php release_date('08-Jun-2023'); ?></b>
+<ul><li>Soap:
+<ul>
+  <li>Fixed bug GHSA-76gg-c692-v2mw (Missing error check and insufficient random bytes in HTTP Digest authentication for SOAP). (CVE-2023-3247)</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
+
 
 <section class="version" id="8.0.28"><!-- {{{ 8.0.28 -->
 <h3>Version 8.0.28</h3>

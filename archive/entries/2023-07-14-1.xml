@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom" xmlns:default="http://php.net/ns/news">
+  <title>CakeFest 2023: The Official CakePHP Conference</title>
+  <id>https://www.php.net/archive/2023.php#2023-07-14-1</id>
+  <published>2023-07-14T06:50:23+00:00</published>
+  <updated>2023-07-14T06:50:23+00:00</updated>
+  <link href="https://www.php.net/conferences/index.php#2023-07-14-1" rel="alternate" type="text/html"/>
+  <link href="https://cakefest.org" rel="via" type="text/html"/>
+  <default:finalTeaserDate xmlns="http://php.net/ns/news">2023-09-28</default:finalTeaserDate>
+  <category term="conferences" label="Conference announcement"/>
+  <default:newsImage xmlns="http://php.net/ns/news" link="https://cakefest.org" title="CakeFest 2023: The Official CakePHP Conference">cakefest-2017.png</default:newsImage>
+  <content type="xhtml">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+      <p>
+        <a href="https://cakefest.org">CakeFest 2023</a> - our annual conference dedicated to CakePHP. One full workshop day (plus one hybrid day) that is an ideal way to learn as both beginners and advanced users, followed by days of presentations, discussions and talks on CakePHP related technologies. CakeFest 2023 will be held in Los Angeles, CA - we are excited to see you there!
+      </p>
+      <p>
+        Date: September 28, 29 &amp; 30<br/>
+        Time: 09:00am PDT
+      </p>
+      <p>
+        Check out the full schedule on <a href="https://cakefest.org">CakeFest.org</a>
+      </p>
+    </div>
+  </content>
+</entry>
+
+
+
+
+

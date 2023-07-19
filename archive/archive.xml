@@ -9,6 +9,24 @@
     <uri>http://php.net/contact</uri>
     <email>php-webmaster@lists.php.net</email>
   </author>
+
+  <xi:include href="entries/2023-07-29-1.xml"/>
+  <xi:include href="entries/2023-07-14-1.xml"/>
+  <xi:include href="entries/2023-07-06-3.xml"/>
+  <xi:include href="entries/2023-07-06-2.xml"/>
+  <xi:include href="entries/2023-07-06-1.xml"/>
+  <xi:include href="entries/2023-06-22-1.xml"/>
+  <xi:include href="entries/2023-06-08-5.xml"/>
+  <xi:include href="entries/2023-06-08-4.xml"/>
+  <xi:include href="entries/2023-06-08-3.xml"/>
+  <xi:include href="entries/2023-06-08-2.xml"/>
+  <xi:include href="entries/2023-06-08-1.xml"/>
+  <xi:include href="entries/2023-06-03-1.xml"/>
+  <xi:include href="entries/2023-05-23-1.xml"/>
+  <xi:include href="entries/2023-05-11-2.xml"/>
+  <xi:include href="entries/2023-05-11-1.xml"/>
+  <xi:include href="entries/2023-04-13-2.xml"/>
+  <xi:include href="entries/2023-04-13-1.xml"/>
   <xi:include href="entries/2023-03-20-1.xml"/>
   <xi:include href="entries/2023-03-16-2.xml"/>
   <xi:include href="entries/2023-03-16-1.xml"/>

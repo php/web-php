@@ -10,6 +10,15 @@ function gpg_key_get(string $rm): ?string {
                 "pub   2048R/9C0D5763 2015-06-09 [expires: 2024-06-06]\n" .
                 "      Key fingerprint = 1A4E 8B72 77C4 2E53 DBA9  C7B9 BCAA 30EA 9C0D 5763\n" .
                 "uid                  Anatol Belski <ab@php.net>";
+        
+        case 'bukka':
+            return
+                "pub   ed25519 2021-04-10 [SC]\n" .
+                "      C28D937575603EB4ABB725861C0779DC5C0A9DE4\n" .
+                "uid           [ultimate] Jakub Zelenka <bukka@php.net>\n" .
+                "uid           [ultimate] Jakub Zelenka <jakub.openssl@gmail.com>\n" .
+                "uid           [ultimate] Jakub Zelenka <jakub.zelenka@gmail.com>\n" .
+                "sub   cv25519 2021-04-10 [E]";
 
         case 'carusogabriel-old':
             return
@@ -52,6 +61,18 @@ function gpg_key_get(string $rm): ?string {
                 "pub   4096R/7267B52D 2012-03-20 [expires: 2016-03-19]\n" .
                 "      Key fingerprint = 0B96 609E 270F 565C 1329  2B24 C13C 70B8 7267 B52D\n" .
                 "uid                  David Soria Parra <dsp@php.net>";
+
+        case 'ericmann':
+            return
+                "pub   rsa4096 2016-11-25 [SC]\n" .
+                "      AFD8 691F DAED F03B DF6E  4605 63F1 5A9B 7153 76CA\n" .
+                "uid           [ultimate] Eric A Mann <eric@sixthree.me>\n" .
+                "uid           [ultimate] Eric A Mann <eric@eamann.com>\n" .
+                "uid           [ultimate] Eric A Mann <eric@eam.me>\n" .
+                "uid           [ultimate] Eric Mann <ericmann@php.net>\n" .
+                "sub   rsa4096 2016-11-25 [S]\n" .
+                "sub   rsa4096 2016-11-25 [E]\n" .
+                "sub   rsa4096 2016-11-25 [A]";
 
         case 'johannes':
             return
@@ -142,6 +163,7 @@ function gpg_key_get(string $rm): ?string {
 
 function gpg_key_get_branches(bool $activeOnly): array {
     $branches = [
+        '8.3' => ['pierrick', 'ericmann', 'bukka'],
         '8.2' => ['pierrick', 'ramsey', 'sergey'],
         '8.1' => ['krakjoe', 'ramsey', 'patrickallaert'],
         '8.0' => ['pollita', 'carusogabriel-old', 'carusogabriel-new'],

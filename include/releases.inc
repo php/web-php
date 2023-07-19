@@ -2,6 +2,333 @@
 $OLDRELEASES = array (
   8 => 
   array (
+    '8.1.20' => 
+    array (
+      'announcement' => 
+      array (
+        'English' => '/releases/8_1_20.php',
+      ),
+      'tags' => 
+      array (
+        0 => 'security',
+      ),
+      'date' => '08 Jun 2023',
+      'source' => 
+      array (
+        0 => 
+        array (
+          'filename' => 'php-8.1.20.tar.gz',
+          'name' => 'PHP 8.1.20 (tar.gz)',
+          'sha256' => 'b7d3e2a0c5bed37bb39e4627550d0ee5a4a600042b83c63037b0f5f84793cbe6',
+          'date' => '08 Jun 2023',
+        ),
+        1 => 
+        array (
+          'filename' => 'php-8.1.20.tar.bz2',
+          'name' => 'PHP 8.1.20 (tar.bz2)',
+          'sha256' => '55578587514a2707500f85319e57c0d4df9b8803cdb26566595ac4bf459dc4dd',
+          'date' => '08 Jun 2023',
+        ),
+        2 => 
+        array (
+          'filename' => 'php-8.1.20.tar.xz',
+          'name' => 'PHP 8.1.20 (tar.xz)',
+          'sha256' => '4c9973f599e93ed5e8ce2b45ce1d41bb8fb54ce642824fd23e56b52fd75029a6',
+          'date' => '08 Jun 2023',
+        ),
+      ),
+      'museum' => false,
+    ),
+    '8.2.7' => 
+    array (
+      'announcement' => 
+      array (
+        'English' => '/releases/8_2_7.php',
+      ),
+      'tags' => 
+      array (
+        0 => 'security',
+      ),
+      'date' => '08 Jun 2023',
+      'source' => 
+      array (
+        0 => 
+        array (
+          'filename' => 'php-8.2.7.tar.gz',
+          'name' => 'PHP 8.2.7 (tar.gz)',
+          'sha256' => '7046f939f0e5116285341d55c06af1d50907e107ac2c70defc32ef880f88cde4',
+          'date' => '08 Jun 2023',
+        ),
+        1 => 
+        array (
+          'filename' => 'php-8.2.7.tar.bz2',
+          'name' => 'PHP 8.2.7 (tar.bz2)',
+          'sha256' => '5bfb2a35c67921bdcadd5c90cb290ad7537d24da113a5e8bc2d646b02de7488f',
+          'date' => '08 Jun 2023',
+        ),
+        2 => 
+        array (
+          'filename' => 'php-8.2.7.tar.xz',
+          'name' => 'PHP 8.2.7 (tar.xz)',
+          'sha256' => '4b9fb3dcd7184fe7582d7e44544ec7c5153852a2528de3b6754791258ffbdfa0',
+          'date' => '08 Jun 2023',
+        ),
+      ),
+      'museum' => false,
+    ),
+    '8.1.19' => 
+    array (
+      'announcement' => 
+      array (
+        'English' => '/releases/8_1_19.php',
+      ),
+      'tags' => 
+      array (
+      ),
+      'date' => '11 May 2023',
+      'source' => 
+      array (
+        0 => 
+        array (
+          'filename' => 'php-8.1.19.tar.gz',
+          'name' => 'PHP 8.1.19 (tar.gz)',
+          'sha256' => '0ebb6b0ecf5d8e355c2f1362807f9b73c6e803d496c5ad3e4fb00be989988372',
+          'date' => '11 May 2023',
+        ),
+        1 => 
+        array (
+          'filename' => 'php-8.1.19.tar.bz2',
+          'name' => 'PHP 8.1.19 (tar.bz2)',
+          'sha256' => '64207207fda30be926a2ef1f66ff266bf1fdc7e03339bc99fbba0a1245e4279b',
+          'date' => '11 May 2023',
+        ),
+        2 => 
+        array (
+          'filename' => 'php-8.1.19.tar.xz',
+          'name' => 'PHP 8.1.19 (tar.xz)',
+          'sha256' => 'f42f0e93467415b2d30aa5b7ac825f0079a74207e0033010383cdc1e13657379',
+          'date' => '11 May 2023',
+        ),
+      ),
+      'museum' => false,
+    ),
+    '8.2.6' => 
+    array (
+      'announcement' => 
+      array (
+        'English' => '/releases/8_2_6.php',
+      ),
+      'tags' => 
+      array (
+      ),
+      'date' => '11 May 2023',
+      'source' => 
+      array (
+        0 => 
+        array (
+          'filename' => 'php-8.2.6.tar.gz',
+          'name' => 'PHP 8.2.6 (tar.gz)',
+          'sha256' => '1b8463df1f180ed39475cfcded1ff106242ccb823f99c9fc1a407c0b76afa2c8',
+          'date' => '11 May 2023',
+        ),
+        1 => 
+        array (
+          'filename' => 'php-8.2.6.tar.bz2',
+          'name' => 'PHP 8.2.6 (tar.bz2)',
+          'sha256' => '44a70c52f537662c10d91eedbf51fd765c9961be6ba2508ed63bf7a26cdd3100',
+          'date' => '11 May 2023',
+        ),
+        2 => 
+        array (
+          'filename' => 'php-8.2.6.tar.xz',
+          'name' => 'PHP 8.2.6 (tar.xz)',
+          'sha256' => '10b796f0ed45574229851212b30a596a76e70ae365322bcaaaf9c00fa7d58cca',
+          'date' => '11 May 2023',
+        ),
+      ),
+      'museum' => false,
+    ),
+    '8.0.28' => 
+    array (
+      'announcement' => 
+      array (
+        'English' => '/releases/8_0_28.php',
+      ),
+      'tags' => 
+      array (
+        0 => 'security',
+      ),
+      'date' => '14 Feb 2023',
+      'source' => 
+      array (
+        0 => 
+        array (
+          'filename' => 'php-8.0.28.tar.gz',
+          'name' => 'PHP 8.0.28 (tar.gz)',
+          'sha256' => '7432184eae01e4e8e39f03f80e8ec0ca2c8bfebc56e9a7b983541ca8805df22f',
+          'date' => '14 Feb 2023',
+        ),
+        1 => 
+        array (
+          'filename' => 'php-8.0.28.tar.bz2',
+          'name' => 'PHP 8.0.28 (tar.bz2)',
+          'sha256' => '9d5e74935c900e3b9c7b6bc740596b71933630eb9f63717c0c4923d8c788c62e',
+          'date' => '14 Feb 2023',
+        ),
+        2 => 
+        array (
+          'filename' => 'php-8.0.28.tar.xz',
+          'name' => 'PHP 8.0.28 (tar.xz)',
+          'sha256' => '5e07278a1f315a67d36a676c01343ca2d4da5ec5bdb15d018e4248b3012bc0cd',
+          'date' => '14 Feb 2023',
+        ),
+      ),
+      'museum' => false,
+    ),
+    '8.1.18' => 
+    array (
+      'announcement' => 
+      array (
+        'English' => '/releases/8_1_18.php',
+      ),
+      'tags' => 
+      array (
+      ),
+      'date' => '13 Apr 2023',
+      'source' => 
+      array (
+        0 => 
+        array (
+          'filename' => 'php-8.1.18.tar.gz',
+          'name' => 'PHP 8.1.18 (tar.gz)',
+          'sha256' => '8b6b12902e7d6bdf68668acc067b4d75a3c504722f768098c5f80c7d7bfd2563',
+          'date' => '13 Apr 2023',
+        ),
+        1 => 
+        array (
+          'filename' => 'php-8.1.18.tar.bz2',
+          'name' => 'PHP 8.1.18 (tar.bz2)',
+          'sha256' => 'd2ac30d6b574fca594fe0cc01c0693e23585b27443e342b0aab07274cde4416e',
+          'date' => '13 Apr 2023',
+        ),
+        2 => 
+        array (
+          'filename' => 'php-8.1.18.tar.xz',
+          'name' => 'PHP 8.1.18 (tar.xz)',
+          'sha256' => 'f3553370f8ba42729a9ce75eed17a2111d32433a43b615694f6a571b8bad0e39',
+          'date' => '13 Apr 2023',
+        ),
+      ),
+      'museum' => false,
+    ),
+    '8.2.5' => 
+    array (
+      'announcement' => 
+      array (
+        'English' => '/releases/8_2_5.php',
+      ),
+      'tags' => 
+      array (
+      ),
+      'date' => '13 Apr 2023',
+      'source' => 
+      array (
+        0 => 
+        array (
+          'filename' => 'php-8.2.5.tar.gz',
+          'name' => 'PHP 8.2.5 (tar.gz)',
+          'sha256' => '8974dea2507155471660b13a0bcbdc165ac778eeb845a7dbd65d5ffb92738c0a',
+          'date' => '13 Apr 2023',
+        ),
+        1 => 
+        array (
+          'filename' => 'php-8.2.5.tar.bz2',
+          'name' => 'PHP 8.2.5 (tar.bz2)',
+          'sha256' => 'e5a80663cca4f6044ad86a489798147c7af037eca96f6cd357ab36d28cb63757',
+          'date' => '13 Apr 2023',
+        ),
+        2 => 
+        array (
+          'filename' => 'php-8.2.5.tar.xz',
+          'name' => 'PHP 8.2.5 (tar.xz)',
+          'sha256' => '800738c359b7f1e67e40c22713d2d90276bc85ba1c21b43d99edd43c254c5f76',
+          'date' => '13 Apr 2023',
+        ),
+      ),
+      'museum' => false,
+    ),
+    '8.1.17' => 
+    array (
+      'announcement' => 
+      array (
+        'English' => '/releases/8_1_17.php',
+      ),
+      'tags' => 
+      array (
+      ),
+      'date' => '16 Mar 2023',
+      'source' => 
+      array (
+        0 => 
+        array (
+          'filename' => 'php-8.1.17.tar.gz',
+          'name' => 'PHP 8.1.17 (tar.gz)',
+          'sha256' => 'ef270156291d90a80ce83d68eee812f301cf5e48836a0ff6fd2931913f8e25c5',
+          'date' => '16 Mar 2023',
+        ),
+        1 => 
+        array (
+          'filename' => 'php-8.1.17.tar.bz2',
+          'name' => 'PHP 8.1.17 (tar.bz2)',
+          'sha256' => 'f4fb298a0eb091f944ecebac57b76daae768a970c2f51610a5ab24f34d8c0caf',
+          'date' => '16 Mar 2023',
+        ),
+        2 => 
+        array (
+          'filename' => 'php-8.1.17.tar.xz',
+          'name' => 'PHP 8.1.17 (tar.xz)',
+          'sha256' => 'b5c48f95b8e1d8624dd05fc2eab7be13277f9a203ccba97bdca5a1a0fb4a1460',
+          'date' => '16 Mar 2023',
+        ),
+      ),
+      'museum' => false,
+    ),
+    '8.2.4' => 
+    array (
+      'announcement' => 
+      array (
+        'English' => '/releases/8_2_4.php',
+      ),
+      'tags' => 
+      array (
+      ),
+      'date' => '16 Mar 2023',
+      'source' => 
+      array (
+        0 => 
+        array (
+          'filename' => 'php-8.2.4.tar.gz',
+          'name' => 'PHP 8.2.4 (tar.gz)',
+          'sha256' => 'cee7748015a2ddef1739d448b980b095dccd09ed589cf1b6c6ee2d16f5e73c50',
+          'date' => '16 Mar 2023',
+        ),
+        1 => 
+        array (
+          'filename' => 'php-8.2.4.tar.bz2',
+          'name' => 'PHP 8.2.4 (tar.bz2)',
+          'sha256' => '79186f94bd510db86e31e535dd448277a1eb92a87878303a1ead44602d8b1197',
+          'date' => '16 Mar 2023',
+        ),
+        2 => 
+        array (
+          'filename' => 'php-8.2.4.tar.xz',
+          'name' => 'PHP 8.2.4 (tar.xz)',
+          'sha256' => 'bc7bf4ca7ed0dd17647e3ea870b6f062fcb56b243bfdef3f59ff7f94e96176a8',
+          'date' => '16 Mar 2023',
+        ),
+      ),
+      'museum' => false,
+    ),
     '8.2.3' => 
     array (
       'announcement' => 

@@ -297,6 +297,13 @@ $manual_redirections = [
     'class.return-type-will-change' => 'class.returntypewillchange',
     'class.sensitive-parameter' => 'class.sensitiveparameter',
     'function.curl-file-create' => 'curlfile.construct',
+    'simplexmliterator.current' => 'simplexmlelement.current',
+    'simplexmliterator.getchildren' => 'simplexmlelement.getchildren',
+    'simplexmliterator.haschildren' => 'simplexmlelement.haschildren',
+    'simplexmliterator.key' => 'simplexmlelement.key',
+    'simplexmliterator.next' => 'simplexmlelement.next',
+    'simplexmliterator.rewind' => 'simplexmlelement.rewind',
+    'simplexmliterator.valid' => 'simplexmlelement.valid',
 ];
 
 if (preg_match("!^manual/([^/]+)/([^/]+?)(?:\.php)?$!", $URI, $match) && isset($manual_redirections[$match[2]])) {

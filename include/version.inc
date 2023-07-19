@@ -20,37 +20,37 @@ $RELEASES = (function () {
 
     /* PHP 8.2 Release */
     $data['8.2'] = [
-        'version' => '8.2.4',
-        'date' => '16 Mar 2023',
+        'version' => '8.2.8',
+        'date' => '06 Jul 2023',
         'tags' => [], // Set to ['security'] for security releases.
         'sha256' => [
-            'tar.gz' => 'cee7748015a2ddef1739d448b980b095dccd09ed589cf1b6c6ee2d16f5e73c50',
-            'tar.bz2' => '79186f94bd510db86e31e535dd448277a1eb92a87878303a1ead44602d8b1197',
-            'tar.xz' => 'bc7bf4ca7ed0dd17647e3ea870b6f062fcb56b243bfdef3f59ff7f94e96176a8',
+            'tar.gz' => '6419b74e9b675c8d5a1afd2788c4d7996a19bbe2be409716ccb2067897af9df1',
+            'tar.bz2' => '995ed4009c7917c962d31837a1a3658f36d4af4f357b673c97ffdbe6403f8517',
+            'tar.xz' => 'cfe1055fbcd486de7d3312da6146949aae577365808790af6018205567609801',
         ]
     ];
 
     /* PHP 8.1 Release */
     $data['8.1'] = [
-        'version' => '8.1.17',
-        'date' => '16 Mar 2023',
+        'version' => '8.1.21',
+        'date' => '06 Jul 2023',
         'tags' => [], // Set to ['security'] for security releases.
         'sha256' => [
-            'tar.gz' => 'ef270156291d90a80ce83d68eee812f301cf5e48836a0ff6fd2931913f8e25c5',
-            'tar.bz2' => 'f4fb298a0eb091f944ecebac57b76daae768a970c2f51610a5ab24f34d8c0caf',
-            'tar.xz' => 'b5c48f95b8e1d8624dd05fc2eab7be13277f9a203ccba97bdca5a1a0fb4a1460',
+            'tar.gz' => 'a95f8d35924aa5705ad07a70dc994bf41b5d45126ecdec7aaad6edfbe5e1c37f',
+            'tar.bz2' => '6ea49e8335d632177f56b507160aa151c7b020185789a9c14859fce5d4a0776d',
+            'tar.xz' => 'e634a00b0c6a8cd39e840e9fb30b5227b820b7a9ace95b7b001053c1411c4821',
         ]
     ];
 
     /* PHP 8.0 Release */
     $data['8.0'] = [
-        'version' => '8.0.28',
-        'date' => '14 Feb 2023',
+        'version' => '8.0.29',
+        'date' => '08 Jun 2023',
         'tags' => ['security'], // Set to ['security'] for security releases.
         'sha256' => [
-            'tar.gz' => '7432184eae01e4e8e39f03f80e8ec0ca2c8bfebc56e9a7b983541ca8805df22f',
-            'tar.bz2' => '9d5e74935c900e3b9c7b6bc740596b71933630eb9f63717c0c4923d8c788c62e',
-            'tar.xz' => '5e07278a1f315a67d36a676c01343ca2d4da5ec5bdb15d018e4248b3012bc0cd',
+            'tar.gz' => 'db6ee08df5706365f624cde1cffb20ad6de1effe59d7e886337213a09f2e2684',
+            'tar.bz2' => '4801a1f0e17170286723ab54acd045ac78a9656021d56f104a64543eec922e12',
+            'tar.xz' => '14db2fbf26c07d0eb2c9fab25dbde7e27726a3e88452cca671f0896bbb683ca9',
         ]
     ];
 
