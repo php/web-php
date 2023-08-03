@@ -920,6 +920,111 @@ changelog_header(8, $MINOR_VERSIONS);
 
 <a id="PHP_8_1"></a>
 
+<section class="version" id="8.1.22"><!-- {{{ 8.1.22 -->
+<h3>Version 8.1.22</h3>
+<b><?php release_date('03-Aug-2023'); ?></b>
+<ul><li>Build:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 11522); ?> (PHP version check fails with '-' separator).</li>
+</ul></li>
+<li>CLI:
+<ul>
+  <li>Fix interrupted CLI output causing the process to exit.</li>
+</ul></li>
+<li>Core:
+<ul>
+  <li>Fixed oss-fuzz #60011 (Mis-compilation of by-reference nullsafe operator).</li>
+  <li>Fixed use-of-uninitialized-value with ??= on assert.</li>
+  <li>Fixed build for FreeBSD before the 11.0 releases.</li>
+</ul></li>
+<li>Curl:
+<ul>
+  <li>Fix crash when an invalid callback function is passed to CURLMOPT_PUSHFUNCTION.</li>
+</ul></li>
+<li>Date:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 11368); ?> (Date modify returns invalid datetime).</li>
+</ul></li>
+<li>DOM:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 11625); ?> (DOMElement::replaceWith() doesn't replace node with DOMDocumentFragment but just deletes node or causes wrapping &lt;&gt;&lt;/&gt; depending on libxml2 version).</li>
+</ul></li>
+<li>Fileinfo:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 11298); ?> (finfo returns wrong mime type for xz files).</li>
+</ul></li>
+<li>FTP:
+<ul>
+  <li>Fix context option check for "overwrite".</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 10562); ?> (Memory leak and invalid state with consecutive ftp_nb_fget).</li>
+</ul></li>
+<li>GD:
+<ul>
+  <li>Fix most of the external libgd test failures.</li>
+</ul></li>
+<li>Hash:
+<ul>
+  <li>Fix use-of-uninitialized-value in hash_pbkdf2(), fix missing $options parameter in signature.</li>
+</ul></li>
+<li>Intl:
+<ul>
+  <li>Fix memory leak in MessageFormatter::format() on failure.</li>
+</ul></li>
+<li>Libxml:
+<ul>
+  <li>Fixed bug GHSA-3qrf-m4j2-pcrr (Security issue with external entity loading in XML without enabling it). (CVE-2023-3823)</li>
+</ul></li>
+<li>MBString:
+<ul>
+  <li>Fix <?php githubissuel('php/php-src', 11300); ?> (license issue: restricted unicode license headers).</li>
+</ul></li>
+<li>Opcache:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 10914); ?> (OPCache with Enum and Callback functions results in segmentation fault).</li>
+  <li>Prevent potential deadlock if accelerated globals cannot be allocated.</li>
+</ul></li>
+<li>PCNTL:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 11498); ?> (SIGCHLD is not always returned from proc_open).</li>
+</ul></li>
+<li>PCRE:
+<ul>
+  <li>Mangle PCRE regex cache key with JIT option.</li>
+</ul></li>
+<li>PDO:
+<ul>
+  <li>Fix <?php githubissuel('php/php-src', 11587); ?> (After php8.1, when PDO::ATTR_EMULATE_PREPARES is true and PDO::ATTR_STRINGIFY_FETCHES is true, decimal zeros are no longer filled).</li>
+</ul></li>
+<li>PDO SQLite:
+<ul>
+  <li>Fix <?php githubissuel('php/php-src', 11492); ?> (Make test failure: ext/pdo_sqlite/tests/bug_42589.phpt).</li>
+</ul></li>
+<li>Phar:
+<ul>
+  <li>Add missing check on EVP_VerifyUpdate() in phar util.</li>
+  <li>Fixed bug GHSA-jqcx-ccgc-xwhv (Buffer mismanagement in phar_dir_read()). (CVE-2023-3824)</li>
+</ul></li>
+<li>PHPDBG:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 9669); ?> (phpdbg -h options doesn't list the -z option).</li>
+</ul></li>
+<li>Session:
+<ul>
+  <li>Removed broken url support for transferring session ID.</li>
+</ul></li>
+<li>Standard:
+<ul>
+  <li>Fix serialization of RC1 objects appearing in object graph twice.</li>
+</ul></li>
+<li>SQLite3:
+<ul>
+  <li>Fix replaced error handling in SQLite3Stmt::__construct.</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
+
+
 <section class="version" id="8.1.21"><!-- {{{ 8.1.21 -->
 <h3>Version 8.1.21</h3>
 <b><?php release_date('06-Jul-2023'); ?></b>
