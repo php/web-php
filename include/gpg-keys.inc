@@ -166,7 +166,7 @@ function gpg_key_get_branches(bool $activeOnly): array {
         '8.3' => ['pierrick', 'ericmann', 'bukka'],
         '8.2' => ['pierrick', 'ramsey', 'sergey'],
         '8.1' => ['krakjoe', 'ramsey', 'patrickallaert'],
-        '8.0' => ['pollita', 'carusogabriel-old', 'carusogabriel-new'],
+        '8.0' => ['pollita', 'carusogabriel-old', 'carusogabriel-new', 'ramsey'],
         '7.4' => ['derick', 'petk'],
         '7.3' => ['cmb', 'stas'],
         '7.2' => ['pollita', 'remi', 'cmb'],
