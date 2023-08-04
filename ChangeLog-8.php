@@ -2527,6 +2527,22 @@ changelog_header(8, $MINOR_VERSIONS);
 
 <a id="PHP_8_0"></a>
 
+<section class="version" id="8.0.30"><!-- {{{ 8.0.30 -->
+<h3>Version 8.0.30</h3>
+<b><?php release_date('03-Aug-2023'); ?></b>
+<ul><li>Libxml:
+<ul>
+  <li>Fixed bug GHSA-3qrf-m4j2-pcrr (Security issue with external entity loading in XML without enabling it). (CVE-2023-3823)</li>
+</ul></li>
+<li>Phar:
+<ul>
+  <li>Fixed bug GHSA-jqcx-ccgc-xwhv (Buffer mismanagement in phar_dir_read()). (CVE-2023-3824)</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
+
+
 <section class="version" id="8.0.29"><!-- {{{ 8.0.29 -->
 <h3>Version 8.0.29</h3>
 <b><?php release_date('08-Jun-2023'); ?></b>
