@@ -368,16 +368,29 @@ $(document).ready(function () {
         $(this).append("<a class='genanchor' href='#" + $(this).parent().attr("id") + "'> ¶</a>");
     });
 
-    $('.refentry code.parameter').click(function (event) {
-        var id = $(this).text().replace(/^&?(\.\.\.)?\$?/g, '');
-        var offsetTop = $('.parameters, .options').find('.parameter').filter(function () {
-            return $(this).text().trim() === id; // https://bugs.php.net/bug.php?id=74493
-        }).offset().top - 52;
-        $.scrollTo({
-            top: offsetTop,
-            left: 0
-        }, 400);
-    });
+    function findParameter(elt) {
+        var id = $(elt).text().replace(/^&?(\.\.\.)?\$?/g, '');
+        return $('.parameters, .options').find('.parameter').filter(function () {
+            return $(elt).text().trim() === id; // https://bugs.php.net/bug.php?id=74493
+        }).first();
+    }
+
+    $('.refentry code.parameter')
+        .each(function () {
+            var param = findParameter(this);
+            if (param.length) {
+                $(this).css('cursor', 'pointer');
+            }
+        })
+        .click(function () {
+            var param = findParameter(this);
+            if (param.length) {
+                $.scrollTo({
+                    top: param.offset().top - 52,
+                    left: 0
+                }, 400);
+            }
+        });
 
     $('h1[id], h2[id], h3[id], h4[id]').each(function () {
         var $this = $(this);
