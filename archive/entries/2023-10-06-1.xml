@@ -8,8 +8,7 @@
 <link href="https://phpeste.org/" rel="via" type="text/html"/>
 <default:finalTeaserDate xmlns="http://php.net/ns/news">2023-10-05</default:finalTeaserDate>
 <category term="conferences" label="Conference announcement"/>
-<default:newsImage xmlns="http://php.net/ns/news" link="https://phpeste.org/" title="PHPeste 2023">
-  phpeste_400x120.png</default:newsImage>
+<default:newsImage xmlns="http://php.net/ns/news" link="https://phpeste.org/" title="PHPeste 2023">phpeste_400x120.png</default:newsImage>
 <content type="xhtml">
   <div xmlns="http://www.w3.org/1999/xhtml">
     <p>
