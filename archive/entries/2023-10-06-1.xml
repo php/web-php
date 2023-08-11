@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom" xmlns:default="http://php.net/ns/news">
+<title>PHPeste 2023</title>
+<id>https://www.php.net/archive/2023.php#2023-10-06-1</id>
+<published>2023-08-10T11:00:00-03:00</published>
+<updated>2023-08-10T11:00:00-03:00</updated>
+<link href="https://www.php.net/conferences/index.php#2023-10-06-1" rel="alternate" type="text/html"/>
+<link href="https://phpeste.org/" rel="via" type="text/html"/>
+<default:finalTeaserDate xmlns="http://php.net/ns/news">2023-10-05</default:finalTeaserDate>
+<category term="conferences" label="Conference announcement"/>
+<default:newsImage xmlns="http://php.net/ns/news" link="https://phpeste.org/" title="PHPeste 2023">
+  phpeste_400x120.png</default:newsImage>
+<content type="xhtml">
+  <div xmlns="http://www.w3.org/1999/xhtml">
+    <p>
+      <strong>About the Conference</strong>
+    </p>
+
+    <p>
+      Introducing <a href="https://phpeste.org/">PHPeste</a>, a distinguished PHP conference, championed by the
+      resilient communities of Brazil's Northeast. Over the years, this event has graced cities including João Pessoa,
+      Salvador, São Luis, Recife, Natal, and once again returns to the coastal beauty of Fortaleza.
+    </p>
+
+    <p>
+      Spanning two enriching days, attendees can anticipate:
+    </p>
+
+    <ul>
+      <li>
+        <strong>Comprehensive Learning:</strong> Dive deep into the world of PHP through hands-on sessions and
+        workshops.
+      </li>
+      <li>
+        <strong>Networking Opportunities:</strong> Engage with passionate PHP enthusiasts and professionals who embody
+        the spirit and vigor of the Northeast.
+      </li>
+      <li>
+        <strong>Expert Speakers:</strong> Gain insights from an array of top-tier industry speakers, sharing their
+        expertise and experiences.
+      </li>
+    </ul>
+
+    <p>
+      PHPeste is a collaborative effort by communities from various Northeastern states, including Alagoas, Bahia,
+      Ceará, Maranhão, Paraíba, Pernambuco, Piauí, Rio Grande do Norte, and Sergipe. This year, the
+      "<a href="https://phpcomrapadura.org/">PHP com Rapadura</a>" community takes the helm, ensuring that the event
+      remains both high-quality and accessible. Thanks to the tireless efforts of our volunteer members, we are able to
+      provide an exceptional experience at a cost-effective price, making this conference accessible to many.
+    </p>
+
+    <p>
+      <strong>Date: October 6-7, 2023 in Fortaleza, Ceará.</strong>
+    </p>
+
+    <p>
+      <strong>
+        Location: Estácio University Center of Ceará, ESTÁCIO VIA CORPVS | R. Eliseu Uchôa Beco, 600 Guararapes,
+        Fortaleza, Ceara, Brazil.
+      </strong>
+    </p>
+
+    <p>For more information about the event, visit the website:
+      <a href="https://phpeste.org/">PHPeste</a>
+    </p>
+  </div>
+</content>
+</entry>
