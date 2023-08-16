@@ -1328,14 +1328,11 @@ div.tip p:first-child {
 .docs .phpcode code {
     display: block;
     overflow-x: auto;
+    white-space: pre;
 }
 
 .docs .qandaentry dt .phpcode * {
     font-weight: normal;
-}
-
-.phpcode code span span {
-    white-space: pre;
 }
 
 /* }}} */
