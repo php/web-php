@@ -27,7 +27,7 @@ ERROR;
 $sites = ["php.net", "lists.php.net"];
 
 // Get data from the URL
-list($none, $site, $token, $sender) = explode("/", $_SERVER["PATH_INFO"]);
+[$none, $site, $token, $sender] = explode("/", $_SERVER["PATH_INFO"]);
 
 // Error in input data
 if ($sender == "" || strlen($token) < 32 || !isset($sites[$site])) {
