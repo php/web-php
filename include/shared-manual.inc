@@ -41,7 +41,7 @@ function manual_notes($notes):void {
         $filename = substr($filename, 0, -4);
     }
 
-    $sorter = new Sorter;
+    $sorter = new Sorter();
     $sorter->sort($notes);
 
     // Link target to add a note to the current manual page,
@@ -394,7 +394,7 @@ function manual_footer() {
 
 // This function takes a DateTime object and returns a formated string of the time difference relative to now
 function relTime(DateTime $date) {
-    $current = new DateTime;
+    $current = new DateTime();
     $diff = $current->diff($date);
     $units = ["year" => $diff->format("%y"),
         "month" => $diff->format("%m"),

@@ -130,7 +130,7 @@ function get_all_branches() {
 
 function get_active_branches($include_recent_eols = true) {
     $branches = [];
-    $now = new DateTime;
+    $now = new DateTime();
 
     foreach ($GLOBALS['RELEASES'] as $major => $releases) {
         foreach ($releases as $version => $release) {
@@ -164,7 +164,7 @@ function get_active_branches($include_recent_eols = true) {
 function get_eol_branches($always_include = null) {
     $always_include = $always_include ?: [];
     $branches = [];
-    $now = new DateTime;
+    $now = new DateTime();
 
     // Gather the last release on each branch into a convenient array.
     foreach ($GLOBALS['OLDRELEASES'] as $major => $releases) {
@@ -325,7 +325,7 @@ function get_branch_support_state($branch) {
     $security = get_branch_security_eol_date($branch);
 
     if ($initial && $bug && $security) {
-        $now = new DateTime;
+        $now = new DateTime();
 
         if ($now >= $security) {
             return 'eol';
