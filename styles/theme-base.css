@@ -1328,7 +1328,7 @@ div.tip p:first-child {
 .docs .phpcode code {
     display: block;
     overflow-x: auto;
-    white-space: pre;
+    white-space: pre-wrap;
 }
 
 .docs .qandaentry dt .phpcode * {
