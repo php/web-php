@@ -20,26 +20,14 @@ function highlight_php($code, $return = false)
     }
 
     // Fix output to use CSS classes and wrap well
-    $highlighted = '<div class="phpcode">' . str_replace(
+    $highlighted = '<div class="phpcode">' . strtr(
+        $highlighted,
         [
-            '&nbsp;',
-            '<br>',
-            '<span style="color: ',
-            '</font>',
-            "\n ",
-            '  ',
-            '  '
+            '&nbsp;' => ' ',
+            "\n" => '',
+
+            '<span style="color: ' => '<span class="',
         ],
-        [
-            ' ',
-            "<br>\n",
-            '<span class="',
-            '</span>',
-            "\n&nbsp;",
-            '&nbsp; ',
-            '&nbsp; '
-        ],
-        $highlighted
     ) . '</div>';
 
     if ($return) { return $highlighted; }
