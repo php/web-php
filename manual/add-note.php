@@ -190,11 +190,7 @@ else {
       </div>
       <div class="text">
         <div class="phpcode">
-          <code>
-            <span class="html">
-              <p>eval() is the best for all sorts of things</p>
-            </span>
-          </code>
+          <code><span class="html">eval() is the best for all sorts of things</span></code>
         </div>
       </div>
     </div>
@@ -220,11 +216,7 @@ else {
   </div>
   <div class="text">
     <div class="phpcode">
-      <code>
-        <span class="html">
-        <p>If eval() is the answer, you're almost certainly asking the wrong question.</p>
-        </span>
-      </code>
+      <code><span class="html">If eval() is the answer, you're almost certainly asking the wrong question.</span></code>
     </div>
   </div>
 </div>
@@ -250,11 +242,7 @@ else {
   </div>
   <div class="text">
     <div class="phpcode">
-      <code>
-        <span class="html">
-        <p>egg bacon sausage spam spam baked beans</p>
-        </span>
-      </code>
+      <code><span class="html">egg bacon sausage spam spam baked beans</span></code>
     </div>
   </div>
 </div>
