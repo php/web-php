@@ -8,6 +8,77 @@ changelog_header(8, $MINOR_VERSIONS);
 ?>
 <a id="PHP_8_2"></a>
 
+<section class="version" id="8.2.10"><!-- {{{ 8.2.10 -->
+<h3>Version 8.2.10</h3>
+<b><?php release_date('31-Aug-2023'); ?></b>
+<ul><li>CLI:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 11716); ?> (cli server crashes on SIGINT when compiled with ZEND_RC_DEBUG=1).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 10964); ?> (Improve man page about the built-in server).</li>
+</ul></li>
+<li>Date:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 11416); ?> (Crash with DatePeriod when uninitialised objects are passed in).</li>
+</ul></li>
+<li>Core:
+<ul>
+  <li>Fixed strerror_r detection at configuration time.</li>
+  <li>Fixed trait typed properties using a DNF type not being correctly bound.</li>
+  <li>Fixed trait property types not being arena allocated if copied from an internal trait.</li>
+  <li>Fixed deep copy of property DNF type during lazy class load.</li>
+  <li>Fixed memory freeing of DNF types for non arena allocated types.</li>
+</ul></li>
+<li>DOM:
+<ul>
+  <li>Fix DOMEntity field getter bugs.</li>
+  <li>Fix incorrect attribute existence check in DOMElement::setAttributeNodeNS.</li>
+  <li>Fix DOMCharacterData::replaceWith() with itself.</li>
+  <li>Fix empty argument cases for DOMParentNode methods.</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 11791); ?> (Wrong default value of DOMDocument::xmlStandalone).</li>
+  <li>Fix json_encode result on DOMDocument.</li>
+  <li>Fix manually calling __construct() on DOM classes.</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 11830); ?> (ParentNode methods should perform their checks upfront).</li>
+  <li>Fix viable next sibling search for replaceWith.</li>
+  <li>Fix segfault when DOMParentNode::prepend() is called when the child disappears.</li>
+</ul></li>
+<li>FFI:
+<ul>
+  <li>Fix leaking definitions when using FFI::cdef()-&gt;new(...).</li>
+</ul></li>
+<li>Hash:
+<ul>
+  <li>Fix use-of-uninitialized-value in hash_pbkdf2(), fix missing $options parameter in signature.</li>
+</ul></li>
+<li>MySQLnd:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 11440); ?> (authentication to a sha256_password account fails over SSL).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 11438); ?> (mysqlnd fails to authenticate with sha256_password accounts using passwords longer than 19 characters).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 11550); ?> (MySQL Statement has a empty query result when the response field has changed, also Segmentation fault).</li>
+  <li>Fixed invalid error message "Malformed packet" when connection is dropped.</li>
+</ul></li>
+<li>Opcache:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 11715); ?> (opcache.interned_strings_buffer either has no effect or opcache_get_status() / phpinfo() is wrong).</li>
+  <li>Avoid adding an unnecessary read-lock when loading script from shm if restart is in progress.</li>
+</ul></li>
+<li>PCNTL:
+<ul>
+  <li>Revert behaviour of receiving SIGCHLD signals back to the behaviour before 8.1.22.</li>
+</ul></li>
+<li>SPL:
+<ul>
+  <li><?php bugfix(81992); ?> (SplFixedArray::setSize() causes use-after-free).</li>
+</ul></li>
+<li>Standard:
+<ul>
+  <li>Prevent int overflow on $decimals in number_format.</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 11870); ?> (Fix off-by-one bug when truncating tempnam prefix) (athos-ribeiro)</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
+
+
 <section class="version" id="8.2.9"><!-- {{{ 8.2.9 -->
 <h3>Version 8.2.9</h3>
 <b><?php release_date('03-Aug-2023'); ?></b>
