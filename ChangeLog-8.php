@@ -1100,65 +1100,62 @@ changelog_header(8, $MINOR_VERSIONS);
 
 <a id="PHP_8_1"></a>
 
-<section class="version" id="8.1.21"><!-- {{{ 8.1.21 -->
-<h3>Version 8.1.21</h3>
-<b><?php release_date('06-Jul-2023'); ?></b>
+<section class="version" id="8.1.23"><!-- {{{ 8.1.23 -->
+<h3>Version 8.1.23</h3>
+<b><?php release_date('31-Aug-2023'); ?></b>
 <ul><li>CLI:
 <ul>
-  <li>Fixed bug <?php githubissuel('php/php-src', 11246); ?> (cli/get_set_process_title fails on MacOS).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 11716); ?> (cli server crashes on SIGINT when compiled with ZEND_RC_DEBUG=1).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 10964); ?> (Improve man page about the built-in server).</li>
 </ul></li>
 <li>Core:
 <ul>
-  <li>Fixed build for the riscv64 architecture/GCC 12.</li>
+  <li>Fixed strerror_r detection at configuration time.</li>
 </ul></li>
-<li>Curl:
+<li>Date:
 <ul>
-  <li>Fixed bug <?php githubissuel('php/php-src', 11433); ?> (Unable to set CURLOPT_ACCEPT_ENCODING to NULL).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 11416); ?>: Crash with DatePeriod when uninitialised objects are passed in.</li>
 </ul></li>
 <li>DOM:
 <ul>
-  <li>Fixed bugs <?php githubissuel('php/php-src', 11288); ?> and <?php githubissuel('php/php-src', 11289); ?> and <?php githubissuel('php/php-src', 11290); ?> and <?php githubissuel('php/php-src', 9142); ?> (DOMExceptions and segfaults with replaceWith).</li>
-  <li>Fixed bug <?php githubissuel('php/php-src', 10234); ?> (Setting DOMAttr::textContent results in an empty attribute value).</li>
-  <li>Fix return value in stub file for DOMNodeList::item.</li>
-  <li>Fix spec compliance error with '*' namespace for DOMDocument::getElementsByTagNameNS.</li>
-  <li>Fix DOMElement::append() and DOMElement::prepend() hierarchy checks.</li>
-  <li>Fixed bug <?php githubissuel('php/php-src', 11347); ?> (Memory leak when calling a static method inside an xpath query).</li>
-  <li><?php bugfix(67440); ?> (append_node of a DOMDocumentFragment does not reconcile namespaces).</li>
-  <li><?php bugfix(81642); ?> (DOMChildNode::replaceWith() bug when replacing a node with itself).</li>
-  <li><?php bugfix(77686); ?> (Removed elements are still returned by getElementById).</li>
-  <li><?php bugfix(70359); ?> (print_r() on DOMAttr causes Segfault in php_libxml_node_free_list()).</li>
-  <li><?php bugfix(78577); ?> (Crash in DOMNameSpace debug info handlers).</li>
-  <li>Fix lifetime issue with getAttributeNodeNS().</li>
-  <li>Fix "invalid state error" with cloned namespace declarations.</li>
-  <li><?php bugfix(55294); ?> and #47530 and #47847 (various namespace reconciliation issues).</li>
-  <li><?php bugfix(80332); ?> (Completely broken array access functionality with DOMNamedNodeMap).</li>
+  <li>Fix DOMEntity field getter bugs.</li>
+  <li>Fix incorrect attribute existence check in DOMElement::setAttributeNodeNS.</li>
+  <li>Fix DOMCharacterData::replaceWith() with itself.</li>
+  <li>Fix empty argument cases for DOMParentNode methods.</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 11791); ?> (Wrong default value of DOMDocument::xmlStandalone).</li>
+  <li>Fix json_encode result on DOMDocument.</li>
+  <li>Fix manually calling __construct() on DOM classes.</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 11830); ?> (ParentNode methods should perform their checks upfront).</li>
+  <li>Fix segfault when DOMParentNode::prepend() is called when the child disappears.</li>
+</ul></li>
+<li>FFI:
+<ul>
+  <li>Fix leaking definitions when using FFI::cdef()-&gt;new(...).</li>
+</ul></li>
+<li>MySQLnd:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 11440); ?> (authentication to a sha256_password account fails over SSL).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 11438); ?> (mysqlnd fails to authenticate with sha256_password accounts using passwords longer than 19 characters).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 11550); ?> (MySQL Statement has a empty query result when the response field has changed, also Segmentation fault).</li>
+  <li>Fixed invalid error message "Malformed packet" when connection is dropped.</li>
 </ul></li>
 <li>Opcache:
 <ul>
-  <li>Fix allocation loop in zend_shared_alloc_startup().</li>
-  <li>Access violation on smm_shared_globals with ALLOC_FALLBACK.</li>
-  <li>Fixed bug <?php githubissuel('php/php-src', 11336); ?> (php still tries to unlock the shared memory ZendSem with opcache.file_cache_only=1 but it was never locked).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 11715); ?> (opcache.interned_strings_buffer either has no effect or opcache_get_status() / phpinfo() is wrong).</li>
+  <li>Avoid adding an unnecessary read-lock when loading script from shm if restart is in progress.</li>
 </ul></li>
-<li>OpenSSL:
+<li>PCNTL:
 <ul>
-  <li>Fixed bug <?php githubissuel('php/php-src', 9356); ?> Incomplete validation of IPv6 Address fields in subjectAltNames (James Lucas, Jakub Zelenka).</li>
-</ul></li>
-<li>PGSQL:
-<ul>
-  <li>Fixed intermittent segfault with pg_trace.</li>
-</ul></li>
-<li>Phar:
-<ul>
-  <li>Fix cross-compilation check in phar generation for FreeBSD.</li>
+  <li>Revert behaviour of receiving SIGCHLD signals back to the behaviour before 8.1.22.</li>
 </ul></li>
 <li>SPL:
 <ul>
-  <li>Fixed bug <?php githubissuel('php/php-src', 11338); ?> (SplFileInfo empty getBasename with more than one slash).</li>
+  <li><?php bugfix(81992); ?> (SplFixedArray::setSize() causes use-after-free).</li>
 </ul></li>
 <li>Standard:
 <ul>
-  <li>Fix access on NULL pointer in array_merge_recursive().</li>
-  <li>Fix exception handling in array_multisort().</li>
+  <li>Prevent int overflow on $decimals in number_format.</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 11870); ?> (Fix off-by-one bug when truncating tempnam prefix) (athos-ribeiro)</li>
 </ul></li>
 </ul>
 <!-- }}} --></section>
