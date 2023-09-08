@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom" xmlns:default="http://php.net/ns/news">
+  <title>Dutch PHP Conference 2023 - Schedule</title>
+  <id>https://www.php.net/archive/2023.php#2023-09-08-1</id>
+  <published>2023-09-08T11:08:55+00:00</published>
+  <updated>2023-09-08T11:08:55+00:00</updated>
+  <link href="https://www.php.net/conferences/index.php#2023-09-08-1" rel="alternate" type="text/html"/>
+  <link href="https://phpconference.nl/schedule" rel="via" type="text/html"/>
+  <default:finalTeaserDate xmlns="http://php.net/ns/news">2023-10-13</default:finalTeaserDate>
+  <category term="conferences" label="Conference announcement"/>
+  <default:newsImage xmlns="http://php.net/ns/news" link="https://phpconference.nl/schedule" title="DPC23">DPC-logo.png</default:newsImage>
+  <content type="xhtml">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+     <p>Get ready for the Dutch PHP Conference 2023 - Online Edition! 🚀 <a href="https://www.phpconference.nl">Join</a> us on October 13 for an exciting day filled with tech talks and networking. Here's a sneak peek of what's in store:</p>
+
+      <ul>
+        <li>🌐 <a href="https://www.phpconference.nl/talk/281">Building the World: The Story behind Wolfi, the Linux undistro built for containers</a> by <strong>Erika Heidi</strong></li>
+        <li>🚀 <a href="https://www.phpconference.nl/talk/309">Our Journey from Gitflow to Trunk Based Development</a> by <strong>Ludovic Toison</strong></li>
+        <li>🔍 <a href="https://www.phpconference.nl/talk/302">Generics Aren't Coming</a> by <strong>Brent Roose</strong></li>
+        <li>📚 <a href="https://www.phpconference.nl/talk/296">Internships - MBO / Medium Level Education</a> by <strong>Sophie Fischer</strong></li>
+        <li>🐘 <a href="https://www.phpconference.nl/talk/286">How to Eat an ElePHPant: Modernize Your Legacy PHP Applications</a> by <strong>Ayesh Karunaratne</strong></li>
+        <li>🧠 <a href="https://www.phpconference.nl/talk/288">Making PHP Smarter: Introduction of AI into PHP Applications</a> by <strong>Adam Englander</strong></li>
+      </ul>
+
+      <p>This free, online conference day is hosted by <strong>Caneco</strong>! Don't miss out – secure your virtual seat now! 🎟️</p>
+
+      <p>Mark your calendars and stay tuned for more updates. Follow us on social media using #DPC23 to join the conversation. Let's make this year's DPC unforgettable! 🌟</p>
+
+      <p>See you on October 13th!</p>
+
+      <p>The Ibuildings DPC Team</p>
+    </div>
+  </content>
+</entry>
