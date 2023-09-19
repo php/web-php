@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom" xmlns:default="http://php.net/ns/news">
+  <title>PHP Conference Japan 2023</title>
+  <id>https://www.php.net/archive/2023.php#2023-09-06-1</id>
+  <published>2023-09-06T10:20:04+02:00</published>
+  <updated>2023-09-06T10:20:04+02:00</updated>
+  <link href="https://www.php.net/conferences/index.php#2023-09-06-1" rel="alternate" type="text/html"/>
+  <link href="https://www.php.net/archive/2023.php#2023-09-06-1" rel="via" type="text/html"/>
+  <default:finalTeaserDate xmlns="http://php.net/ns/news">2023-10-08</default:finalTeaserDate>
+  <category term="cfp" label="Call for Papers"/>
+  <content type="xhtml">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+      <p>
+        <a href="https://phpcon.php.gr.jp/2023/">PHP Conference Japan 2023</a> is the largest PHP event in Japan and has been held once a year since 2000.
+        As an event for a popular language, it is attended by a wide range of web engineers, from beginners to advanced users.
+      </p>
+      <p>
+        <strong>Date: October 8, 2023</strong><br />
+        <strong>Location: Tokyo, Japan.</strong>
+      </p>
+      <p>
+      For more details, See the <a href="https://fortee.jp/phpcon-2023">event page</a>.
+      </p>
+    </div>
+  </content>
+</entry>
