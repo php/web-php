@@ -27,16 +27,22 @@ site_header("Contact", ["current" => "community"]);
  <a href="mailto:security@php.net">security@php.net</a>.
  Please note that the following are <b>NOT</b> security issues:
  <ul>
-  <li><b>Requests for help with using PHP.</b> Please use the
-      <a href="mailto:php-general@lists.php.net">PHP General</a> mailing list.</li>
-  <li><b>Source code to the PHP website(s) being publicly readable.</b>
+  <li>
+   <b>Requests for help with using PHP.</b> Please use the
+      <a href="mailto:php-general@lists.php.net">PHP General</a> mailing list.
+  </li>
+  <li>
+   <b>Source code to the PHP website(s) being publicly readable.</b>
       This is <i>on purpose</i>.
       All of the php.net websites are available publicly on github.
-      For example, you can find this site at <a href="https://github.com/php/web-php">github.com/php/web-php</a>.</li>
-  <li><b>Requests for bug bounty payments.</b>
+      For example, you can find this site at <a href="https://github.com/php/web-php">github.com/php/web-php</a>.
+  </li>
+  <li>
+   <b>Requests for bug bounty payments.</b>
       PHP is run by volunteers with literally zero budget.
       The servers are donated hardware and bandwidth.
-      Your bug reports and patches are appreciated, but we can not pay you for them.</li>
+      Your bug reports and patches are appreciated, but we can not pay you for them.
+  </li>
  </ul>
 </p>
 <p>
