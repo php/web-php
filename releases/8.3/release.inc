@@ -111,7 +111,7 @@ PHP
                         <?php highlight_php_trimmed(
                             <<<'PHP'
 use PHPUnit\Framework\TestCase;
- 
+
 final class MyTest extends TestCase
 {
     protected $logFile;
@@ -143,7 +143,7 @@ PHP
                             <<<'PHP'
 // TODO
 use PHPUnit\Framework\TestCase;
- 
+
 final class MyTest extends TestCase
 {
     protected $logFile;
@@ -163,6 +163,7 @@ final class MyTest extends TestCase
 
 // Fatal error: MyTest::taerDown() has #[\Override] attribute,
 // but no matching parent method exists
+PHP
                         ); ?>
                     </div>
                 </div>
