@@ -79,7 +79,14 @@ PHP
                     <div class="php8-code phpcode">
                         <?php highlight_php_trimmed(
                             <<<'PHP'
-// TODO
+interface I {
+    // We may naively assume that the PHP constant is always a string
+    const PHP = 'PHP 8.2';
+}
+
+class Foo implements I {
+    const PHP = []; // But it may be an array...
+}
 PHP
 
                         ); ?>
@@ -91,7 +98,15 @@ PHP
                     <div class="php8-code phpcode">
                         <?php highlight_php_trimmed(
                             <<<'PHP'
-// TODO
+interface I {
+    const string PHP = 'PHP 8.3';
+}
+
+class Foo implements I {
+    const string PHP = [];
+}
+
+// Fatal error: Cannot use array as value for class constant Foo::PHP of type string
 PHP
                         ); ?>
                     </div>
@@ -141,7 +156,6 @@ PHP
                     <div class="php8-code phpcode">
                         <?php highlight_php_trimmed(
                             <<<'PHP'
-// TODO
 use PHPUnit\Framework\TestCase;
 
 final class MyTest extends TestCase
@@ -359,7 +373,8 @@ PHP
                     <li>Negative indices in arrays.</li>
                     <li>Changes to the <code>range</code> function.</li>
                     <li>Traits and static properties.</li>
-                    <li>The <code>U_MULTIPLE_DECIMAL_SEPERATORS</code> constant had been deprecated in favor of <code>U_MULTIPLE_DECIMAL_SEPARATORS</code>.</li>
+                    <li>The <code>U_MULTIPLE_DECIMAL_SEPERATORS</code> constant had been deprecated in favor of <code>U_MULTIPLE_DECIMAL_SEPARATORS</code>.
+                    </li>
                     <li>The <code>MT_RAND_PHP</code> Mt19937 variant is deprecated.</li>
                     <li><code>ReflectionClass::getStaticProperties</code> is no longer nullable.</li>
                 </ul>
