@@ -323,7 +323,15 @@ PHP
                     <div class="php8-code phpcode">
                         <?php highlight_php_trimmed(
                             <<<'PHP'
-// TODO
+class Foo {
+    const PHP = 'PHP 8.3';
+}
+
+$searchableConstant = 'PHP';
+
+$reflectedClass = new ReflectionClass(Foo::class);
+
+var_dump($reflectedClass->getConstant($searchableConstant));
 PHP
 
                         ); ?>
@@ -335,7 +343,13 @@ PHP
                     <div class="php8-code phpcode">
                         <?php highlight_php_trimmed(
                             <<<'PHP'
-// TODO
+class Foo {
+    const PHP = 'PHP 8.3';
+}
+
+$searchableConstant = 'PHP';
+
+var_dump(Foo::{$searchableConstant});
 PHP
                         ); ?>
                     </div>
