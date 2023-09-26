@@ -101,7 +101,7 @@ PHP
 
         <div class="php8-compare">
             <h2 class="php8-h2" id="override_attribute">
-                <code>#[Override]</code> attribute
+                <code>#[\Override]</code> attribute
                 <a class="php8-rfc" href="https://wiki.php.net/rfc/marking_overriden_methods">RFC</a>
             </h2>
             <div class="php8-compare__main">
@@ -110,7 +110,26 @@ PHP
                     <div class="php8-code phpcode">
                         <?php highlight_php_trimmed(
                             <<<'PHP'
-// TODO
+use PHPUnit\Framework\TestCase;
+ 
+final class MyTest extends TestCase
+{
+    protected $logFile;
+
+    protected function setUp(): void
+    {
+        $this->logFile = fopen('/tmp/logfile', 'w');
+    }
+
+    protected function taerDown(): void
+    {
+        fclose($this->logFile);
+        unlink('/tmp/logfile');
+    }
+}
+
+// The log file will never be removed, because the
+// method name was mistyped (taerDown vs tearDown).
 PHP
 
                         ); ?>
@@ -123,7 +142,27 @@ PHP
                         <?php highlight_php_trimmed(
                             <<<'PHP'
 // TODO
-PHP
+use PHPUnit\Framework\TestCase;
+ 
+final class MyTest extends TestCase
+{
+    protected $logFile;
+
+    protected function setUp(): void
+    {
+        $this->logFile = fopen('/tmp/logfile', 'w');
+    }
+
+    #[\Override]
+    protected function taerDown(): void
+    {
+        fclose($this->logFile);
+        unlink('/tmp/logfile');
+    }
+}
+
+// Fatal error: MyTest::taerDown() has #[\Override] attribute,
+// but no matching parent method exists
                         ); ?>
                     </div>
                 </div>
