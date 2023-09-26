@@ -48,7 +48,43 @@ common_header(message('common_header', $lang));
                     <div class="php8-code phpcode">
                         <?php highlight_php_trimmed(
                             <<<'PHP'
-// TODO
+readonly class Foo {
+	public \DateTime $dateTime;
+
+	function __construct(\DateTime $dateTime) {
+		$this->dateTime = $dateTime;
+	}
+
+	public function with(...$values): static
+    {
+        $reflectedClass = new ReflectionClass(static::class);
+        $clone = $reflectedClass->newInstanceWithoutConstructor();
+
+        foreach (get_object_vars($this) as $field => $value) {
+            $value = array_key_exists($field, $values) ?
+                $values[$field] : $value;
+
+            $scope = $reflectedClass
+                ->getProperty($field)
+                ->getDeclaringClass()
+                ->getName();
+
+            if ($scope === self::class) {
+                $clone->$field = $value;
+            } else {
+                (fn () => $this->$field = $value)
+                    ->bindTo($clone, $scope)();
+            }
+        }
+
+        return $clone;
+    }
+}
+
+$today = new Foo(new \DateTime());
+$tomorrow = $today->with(
+    dateTime: (new \DateTime())->modify('+1 day')
+);
 PHP
 
                         ); ?>
@@ -60,7 +96,23 @@ PHP
                     <div class="php8-code phpcode">
                         <?php highlight_php_trimmed(
                             <<<'PHP'
-// TODO
+readonly class Foo {
+	public \DateTime $dateTime;
+
+	function __construct(\DateTime $dateTime) {
+		$this->dateTime = $dateTime;
+	}
+
+	public function __clone()
+    {
+        $this->dateTime = clone $this->dateTime;
+    }
+}
+
+$today = new Foo(new \DateTime());
+$tomorrow = clone $today;
+
+$tomorrow->dateTime->modify('+1 day');
 PHP
                         ); ?>
                     </div>
