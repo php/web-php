@@ -156,7 +156,10 @@ function getBytesFromString(string $string, int $length) {
 
 $randomDomain = sprintf(
     "%s.example.com",
-    getBytesFromString('abcdefghijklmnopqrstuvwxyz0123456789', 16),
+    getBytesFromString(
+        'abcdefghijklmnopqrstuvwxyz0123456789',
+        16,
+    ),
 );
 
 echo $randomDomain;
@@ -171,12 +174,16 @@ PHP
                     <div class="php8-code phpcode">
                         <?php highlight_php_trimmed(
                             <<<'PHP'
-// A \Random\Engine may be passed for seeding, the default is the secure engine.
+// A \Random\Engine may be passed for seeding,
+// the default is the secure engine.
 $randomizer = new \Random\Randomizer();
 
 $randomDomain = sprintf(
     "%s.example.com",
-    $randomizer->getBytesFromString('abcdefghijklmnopqrstuvwxyz0123456789', 16),
+    $randomizer->getBytesFromString(
+        'abcdefghijklmnopqrstuvwxyz0123456789',
+        16,
+    ),
 );
 
 echo $randomDomain;
@@ -203,7 +210,8 @@ function getFloat(float $min, float $max) {
     // This algorithm is biased for specific inputs and may
     // return values outside the given range. This is impossible
     // to work around in userland.
-    return (random_int(0, PHP_INT_MAX) / PHP_INT_MAX) * ($max - $min) + $min;
+    $offset = random_int(0, PHP_INT_MAX) / PHP_INT_MAX;
+    return $offset * ($max - $min) + $min;
 }
 
 $temperature = getFloat(-89.2, 56.7);
@@ -225,10 +233,15 @@ PHP
                             <<<'PHP'
 $randomizer = new \Random\Randomizer();
 
-$temperature = $randomizer->getFloat(-89.2, 56.7, \Random\IntervalBoundary::ClosedClosed);
+$temperature = $randomizer->getFloat(
+    -89.2,
+    56.7,
+    \Random\IntervalBoundary::ClosedClosed,
+);
 
 $chanceForTrue = 0.1;
-// Randomizer::nextFloat() is equivalent to Randomizer::getFloat(0, 1, \Random\IntervalBoundary::ClosedOpen).
+// Randomizer::nextFloat() is equivalent to
+// Randomizer::getFloat(0, 1, \Random\IntervalBoundary::ClosedOpen).
 // The upper bound, i.e. 1, will not be returned.
 $myBoolean = $randomizer->nextFloat(); < $chanceForTrue;
 PHP
