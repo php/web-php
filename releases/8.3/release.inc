@@ -363,18 +363,19 @@ PHP
             <h2 class="php8-h2" id="other_new_things"><?= message('new_classes_title', $lang) ?></h2>
             <div class="php8-compare__content php8-compare__content--block">
                 <ul>
-                    <li>New <code>json_validate</code> function.</li>
-                    <li>New <code>ldap_connect_wallet</code>, and <code>ldap_exop_sync</code> functions.</li>
-                    <li>New <code>mb_str_pad</code> function.</li>
-                    <li>New <code>posix_sysconf</code>, <code>posix_pathconf</code>, <code>posix_fpathconf</code>, and
-                        <code>posix_eaccess</code> functions.
+                    <li>New <code>json_validate()</code> function.</li>
+                    <li>New <code>ldap_connect_wallet()</code>, and <code>ldap_exop_sync()</code> functions.</li>
+                    <li>New <code>mb_str_pad()</code> function.</li>
+                    <li>New <code>posix_sysconf()</code>, <code>posix_pathconf()</code>, <code>posix_fpathconf()</code>,
+                        and
+                        <code>posix_eaccess()</code> functions.
                     </li>
-                    <li>New <code>ReflectionMethod::createFromMethodName</code> method.</li>
-                    <li>New <code>socket_atmark</code> function.</li>
-                    <li>New <code>str_increment</code>, <code>str_decrement</code>, and
-                        <code>stream_context_set_options</code> functions.
+                    <li>New <code>ReflectionMethod::createFromMethodName()</code> method.</li>
+                    <li>New <code>socket_atmark()</code> function.</li>
+                    <li>New <code>str_increment()</code>, <code>str_decrement()</code>, and
+                        <code>stream_context_set_options()</code> functions.
                     </li>
-                    <li>New <code>ZipArchive::getArchiveFlag</code> function.</li>
+                    <li>New <code>ZipArchive::getArchiveFlag()</code> function.</li>
                 </ul>
             </div>
         </div>
@@ -385,12 +386,12 @@ PHP
                 <ul>
                     <li>More Appropriate Date/Time Exceptions.</li>
                     <li>Negative indices in arrays.</li>
-                    <li>Changes to the <code>range</code> function.</li>
+                    <li>Changes to the <code>range()</code> function.</li>
                     <li>Traits and static properties.</li>
                     <li>The <code>U_MULTIPLE_DECIMAL_SEPERATORS</code> constant had been deprecated in favor of <code>U_MULTIPLE_DECIMAL_SEPARATORS</code>.
                     </li>
                     <li>The <code>MT_RAND_PHP</code> Mt19937 variant is deprecated.</li>
-                    <li><code>ReflectionClass::getStaticProperties</code> is no longer nullable.</li>
+                    <li><code>ReflectionClass::getStaticProperties()</code> is no longer nullable.</li>
                 </ul>
             </div>
         </div>
