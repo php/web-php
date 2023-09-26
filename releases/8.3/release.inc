@@ -186,7 +186,7 @@ PHP
 
         <div class="php8-compare">
             <h2 class="php8-h2" id="randomizer_get_bytes_from_string">
-                New <code>Randomizer::getBytesFromString</code> method
+                New <code>Randomizer::getBytesFromString()</code> method
                 <a class="php8-rfc" href="https://wiki.php.net/rfc/randomizer_additions#getbytesfromstring">RFC</a>
             </h2>
             <div class="php8-compare__main">
@@ -250,7 +250,7 @@ PHP
 
         <div class="php8-compare">
             <h2 class="php8-h2" id="randomizer_get_float">
-                New <code>Randomizer::getFloat</code> and <code>Randomizer::nextFloat</code> methods
+                New <code>Randomizer::getFloat()</code> and <code>Randomizer::nextFloat()</code> methods
                 <a class="php8-rfc" href="https://wiki.php.net/rfc/randomizer_additions#getfloat">RFC</a>
             </h2>
             <div class="php8-compare__main">
@@ -297,7 +297,7 @@ $chanceForTrue = 0.1;
 // Randomizer::nextFloat() is equivalent to
 // Randomizer::getFloat(0, 1, \Random\IntervalBoundary::ClosedOpen).
 // The upper bound, i.e. 1, will not be returned.
-$myBoolean = $randomizer->nextFloat(); < $chanceForTrue;
+$myBoolean = $randomizer->nextFloat() < $chanceForTrue;
 PHP
                         ); ?>
                     </div>
