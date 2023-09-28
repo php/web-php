@@ -32,13 +32,13 @@ $RELEASES = (function () {
 
     /* PHP 8.1 Release */
     $data['8.1'] = [
-        'version' => '8.1.23',
-        'date' => '31 Aug 2023',
+        'version' => '8.1.24',
+        'date' => '28 Sep 2023',
         'tags' => [], // Set to ['security'] for security releases.
         'sha256' => [
-            'tar.gz' => 'ec5330b3978edc8fe2f78830720505bf69d12542622b5cddccee63ae3a0e5b58',
-            'tar.bz2' => '929a62785177da892ddffca074bab2f1ff578473a0d4adb915c12f5f3e34ec1b',
-            'tar.xz' => 'fc48422fa7e75bb45916fc192a9f9728cb38bb2b5858572c51ea15825326360c',
+            'tar.gz' => 'd6001a5c16765cd1897609fc71ff083e35db9a28c8874a1ff191cdebe80a6460',
+            'tar.bz2' => 'b0ae5804a9ad53a7e28d0a32629495f816f935b10830c71f4ec15827185a73c9',
+            'tar.xz' => 'ee61f6232bb29bd2e785daf325d2177f2272bf80d086c295a724594e710bce3d',
         ]
     ];
 
