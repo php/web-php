@@ -8,6 +8,56 @@ changelog_header(8, $MINOR_VERSIONS);
 ?>
 <a id="PHP_8_2"></a>
 
+<section class="version" id="8.2.11"><!-- {{{ 8.2.11 -->
+<h3>Version 8.2.11</h3>
+<b><?php release_date('28-Sep-2023'); ?></b>
+<ul><li>Core:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 11937); ?> (Constant ASTs containing objects).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 11790); ?> (On riscv64 require libatomic if actually needed).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 11876); ?>: ini_parse_quantity() accepts invalid quantities.</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 12073); ?> (Segfault when freeing incompletely initialized closures).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 12060); ?> (Internal iterator rewind handler is called twice).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 12102); ?> (Incorrect compile error when using array access on TMP value in function call).</li>
+</ul></li>
+<li>DOM:
+<ul>
+  <li>Fix memory leak when setting an invalid DOMDocument encoding.</li>
+</ul></li>
+<li>Iconv:
+<ul>
+  <li>Fixed build for NetBSD which still uses the old iconv signature.</li>
+</ul></li>
+<li>Intl:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 12020); ?> (intl_get_error_message() broken after MessageFormatter::formatMessage() fails).</li>
+</ul></li>
+<li>MySQLnd:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 10270); ?> (Invalid error message when connection via SSL fails: "trying to connect via (null)").</li>
+</ul></li>
+<li>ODBC:
+<ul>
+  <li>Fixed memory leak with failed SQLPrepare.</li>
+  <li>Fixed persistent procedural ODBC connections not getting closed.</li>
+</ul></li>
+<li>SimpleXML:
+<ul>
+  <li><?php bugfix(52751); ?> (XPath processing-instruction() function is not supported).</li>
+</ul></li>
+<li>SPL:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 11972); ?> (RecursiveCallbackFilterIterator regression in 8.1.18).</li>
+</ul></li>
+<li>SQLite3:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 11878); ?> (SQLite3 callback functions cause a memory leak with a callable array).</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
+
+
 <section class="version" id="8.2.10"><!-- {{{ 8.2.10 -->
 <h3>Version 8.2.10</h3>
 <b><?php release_date('31-Aug-2023'); ?></b>
