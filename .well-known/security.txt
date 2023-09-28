@@ -1,0 +1,36 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA256
+
+Contact: https://github.com/php/php-src/security/advisories/new
+Contact: mailto:security@php.net
+Expires: 2024-11-28T11:59:59.999Z
+Preferred-Languages: en
+Canonical: https://www.php.net/.well-known/security.txt
+Policy: https://github.com/php/php-src/security/policy
+
+# Signed by Ben Ramsey <ramsey@php.net> on 2023-09-28.
+
+# All changes to this file are signed by a PHP release manager for a currently
+# supported version of PHP (at the time of the changes).
+# Supported PHP versions are listed at <https://www.php.net/supported-versions.php>.
+# Release manager PGP keys are listed at <https://www.php.net/gpg-keys.php>.
+
+# For more information about this file, see <https://securitytxt.org> and
+# RFC 9116 <https://www.rfc-editor.org/rfc/rfc9116>.
+-----BEGIN PGP SIGNATURE-----
+
+iQJDBAEBCAAtFiEEObZBND2MEEsrFG3D+cOdwLlphUQFAmUVzUwPHHJhbXNleUBw
+aHAubmV0AAoJEPnDncC5aYVEnQYQAIFr8yIGOJ8GBGJ0L8LkGmE23UHukVQKdqFw
+lt/evxz7c+Z3GX2i4j+TyVKl5mSgXaryOMIo3e6HCjnmqPZp+gBlamYLusgn6b/3
+bmCQ1jh+7lEeEg8eTF7URNvR/8ao3I22iu0TAAQIF3B3bhYq7hwQYJtQvIdAvn/X
+qGInKHGJ+QJRyR+GHOOPUDrQ6geU6lSMd2znAe2WUTtZZWo3A0OURmW7m1m7w9E/
+vq5Mzttkjk0syKOJ6/5GLk8Olag7KV8gCnsazjBRzUD5fN5tbo2XX/6EJYkqeptq
+LREVYi2c/iWotwapoHZJrG+Gx3GgtLDYBZ+cJ8ZpR+8OevCeBQOdYLMNbhvdAM7b
+HZm36EpmBSfU7YngaKnq1Erb2GsgtF03dG4eeXSViVhVT/ERGvzidK7OG4RWBnL/
+AwMb5LsdQswM2PHq2QwNz9hwv1AL3UOLMM4e2cOMvmZlOZ7PDYQHp+UqWy5VaGRU
+YoZ9wQWudpnpJ4RzOAzf9/fQG8wracwJqgCk2CinTd9Dk/4rueVwv5FvyCSq6EiK
+iuq9cnhQlPFGwOR3dfYlTU+CdevlnP7JFSwBdQuyrNV8YSTqMD4O2I8Kwo+1MNN2
+elK4pT1pHGKe50c31NM82ZwY5RLW2cLj8Q4Y+pvOfTqhzr3vPAy/NfZZiwlNYsRE
+KN9Ixm67
+=n+Pu
+-----END PGP SIGNATURE-----
