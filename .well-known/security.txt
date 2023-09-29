@@ -8,51 +8,24 @@ Preferred-Languages: en
 Canonical: https://www.php.net/.well-known/security.txt
 Policy: https://github.com/php/php-src/security/policy
 
-# Signed by Ben Ramsey <ramsey@php.net> on 2023-09-28.
+# Signed by Ben Ramsey <ramsey@php.net> on 2023-09-29.
 
-# All changes to this file are signed by a PHP release manager for a currently
-# supported version of PHP (at the time of the changes).
-# Supported PHP versions are listed at <https://www.php.net/supported-versions.php>.
-# Release manager PGP keys are listed at <https://www.php.net/gpg-keys.php>.
-#
-# To make changes to this file:
-#
-# 1. First, remove the PGP signature that wraps the body of this file:
-#
-#        gpg --decrypt --output security.txt security.txt
-#
-# 2. Make and save your changes to this file, i.e., update the Expires
-#    timestamp. Be sure to update the signature above to include your name,
-#    the email address for your PGP key, and the current date.
-#
-# 3. Sign your changes:
-#
-#        gpg --clearsign --local-user YOU@php.net --output security.txt.asc security.txt
-#
-#    Note: you cannot output the signature to the same file as the input or it
-#    will result in a signature wrapped around empty content.
-#
-# 4. Last, replace security.txt with security.txt.asc and commit your changes:
-#
-#        mv security.txt.asc security.txt
-#        git commit security.txt
-#
-# For more information about this file, see <https://securitytxt.org> and
-# RFC 9116 <https://www.rfc-editor.org/rfc/rfc9116>.
+# For instructions on how to update this file, read
+# <https://github.com/php/php-src/blob/master/docs/security-policies.md#making-changes-to-securitytxt>
 -----BEGIN PGP SIGNATURE-----
 
-iQJDBAEBCAAtFiEEObZBND2MEEsrFG3D+cOdwLlphUQFAmUV+rUPHHJhbXNleUBw
-aHAubmV0AAoJEPnDncC5aYVEecgQAI5vAj7c/FwzaZm02IxUWofKFH8ZPivXlRbI
-1aKDJkIFZwxq59Lr9EW2AnZRSdSmBDPJ1ED91DP737wACVx/rmQecuW3fJ2UtyYC
-TnwERb34ff3Ojt0qO9RTXc3X/+Aq7j28cZVM8JmGrTIbIMh9FnYoWmdoMjy3dqF/
-YBPQw/7wFMBW9wpRJx4ZSjf02VoUn6grR2UTMAfveCQcFKNAo7qo6km/ogJMnPsi
-pcpgYA1d7plx4H1BhnyExSwZ/V9wmNOOPOME75wvx2V9nVNWKha/XCoNU53ySi9V
-15U/zdXa2zjCo+8KASWgYqFAipMTa7oCzRLuqbWLc59amMMflRpbfKHAnC4W2L1d
-M2HdG4loOh45OFZAenOFAQxAbT5cFhA1jWMDP4jY1X7ivuCV62YaBfqYBILaTps+
-/uutLUq73WMVsCdtwN5Va/2CWplvgFPcwVbpNeGJcjHTsA/ikSuVhNoTeDLfwUck
-ZBo67oqwkAHJsKX79PD9eemZqrqHvS9qx0l05ZlRE7dUdq0XY7YCZOREBKnipX7O
-RnMXnjSg9oE6I5m02OdPeKy24KthQPFCev+nu6TwgNfvc5AWADanYNf5BnhWRzea
-tc0VUoaXaxQtbInFA0E0NfMUVcy6mR9RFYhDCt62xFHp0TDkyaHszBs701Tebxei
-tAj40vPD
-=U/gC
+iQJDBAEBCAAtFiEEObZBND2MEEsrFG3D+cOdwLlphUQFAmUXFR8PHHJhbXNleUBw
+aHAubmV0AAoJEPnDncC5aYVE5FsP/0vTzaiBB6ESAex1QPWU2tUFPiVsFBZN0/lo
+DHVokFrOQ0CiUaXmOltia8ZJK5WR5IRlKjm94GlgFqdg5Mn0sLvo9JF9e4eq2PZa
+AYj3rGL4C6GCXc8voKz9TXZ/eerkCSA2BY/0a1PM69dDam0XBcrCIndcil/3Evj0
+ztiWPWcMRHubBadxmDosoGtXwcw5u13IIGDmSsHwNtdkKNbS1eb1+o7DFSVQZicY
+hW5SI4pfjW5BsIYxHLR7F9qCtoTWkZwtwTqX5LNIPBh6M/C8aYl/3vAfikBbqvXu
+SPnObTGBNXeaHavVXMohBFNZsWdiJzBSAKQBhsqGTElVJfSbuzyaNIFN7LuuheS4
+Od7Ar9V8tUsfy/y9OisWOIbNVpm7FgQIDKTTXXJpI1THQ1kmsHKsPN5eFZw1O8ZE
+ZSztjMyo0jaLTlwrfzAmqSwEiuAQAv1fvc4PncHeat1SMFFG4wP1/lEfmzunmLiq
+yUzwii/5JOLWwAGfkuNaWTOTX7XJVyfTcr34nD+2WNxws4vrAA9KES2qhLBYpZ/K
+xELiqGcogoDBiQYZ7AnofsbghFQn1cpX90uUxdXXAimiUWgBm3ONnXX9YoNsYMdd
+eVMZ3JfOOUL8Gfe5vjaQex46o4zN/1g2baAmu5usfD21TLZEcrD9HhFiarEWjYv0
+Tr0agdzE
+=CJdS
 -----END PGP SIGNATURE-----
