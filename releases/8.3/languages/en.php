@@ -7,8 +7,35 @@ return [
     'main_subtitle' => 'PHP 8.3 is a major update of the PHP language.<br class="display-none-md">It contains many new features, including Readonly amendments, Typed class constants, Randomizer additions, performance improvements and more.',
     'upgrade_now' => 'Upgrade to PHP 8.3 now!',
 
+    'readonly_title' => 'Readonly amendments',
+    'typed_class_constants_title' => 'Typed class constants',
+    'override_title' => '<code>#[\Override]</code> attribute',
+    'randomizer_getbytesfromstring_title' => 'New <code>Randomizer::getBytesFromString()</code> method',
+    'randomizer_getfloat_nextfloat_title' => 'New <code>Randomizer::getFloat()</code> and <code>Randomizer::nextFloat()</code> methods',
+    'randomizer_getfloat_nextfloat_description' => 'The algorithm used is the γ-section algorithm as published in:
+            <a href="https://doi.org/10.1145/3503512" target="_blank" rel="noopener noreferrer">Drawing Random
+                Floating-Point Numbers from an Interval</a>.
+            Frédéric Goualard, ACM Trans. Model. Comput. Simul., 32:3, 2022.',
+    'dynamic_class_constant_fetch_title' => 'Dynamic class constant fetch',
+
     'new_classes_title' => 'New Classes, Interfaces, and Functions',
+    'new_json_validate' => 'New <code>json_validate()</code> function.',
+    'new_ldap' => 'New <code>ldap_connect_wallet()</code>, and <code>ldap_exop_sync()</code> functions.',
+    'new_mb_str_pad' => 'New <code>mb_str_pad()</code> function.',
+    'new_posix' => 'New <code>posix_sysconf()</code>, <code>posix_pathconf()</code>, <code>posix_fpathconf()</code>, and <code>posix_eaccess()</code> functions.',
+    'new_reflection' => 'New <code>ReflectionMethod::createFromMethodName()</code> method.',
+    'new_socket' => 'New <code>socket_atmark()</code> function.',
+    'new_str' => 'New <code>str_increment()</code>, <code>str_decrement()</code>, and <code>stream_context_set_options()</code> functions.',
+    'new_ziparchive' => 'New <code>ZipArchive::getArchiveFlag()</code> function.',
+
     'bc_title' => 'Deprecations and backward compatibility breaks',
+    'bc_datetime' => 'More Appropriate Date/Time Exceptions.',
+    'bc_arrays' => 'Negative indices in arrays.',
+    'bc_range' => 'Changes to the <code>range()</code> function.',
+    'bc_traits' => 'Traits and static properties.',
+    'bc_umultipledecimalseparators' => 'The <code>U_MULTIPLE_DECIMAL_SEPERATORS</code> constant had been deprecated in favor of <code>U_MULTIPLE_DECIMAL_SEPARATORS</code>.',
+    'bc_mtrand' => 'The <code>MT_RAND_PHP</code> Mt19937 variant is deprecated.',
+    'bc_reflection' => '<code>ReflectionClass::getStaticProperties()</code> is no longer nullable.',
 
     'footer_title' => 'Better performance, better syntax, improved type safety.',
     'footer_description' => '<p>For source downloads of PHP 8.3 please visit the <a href="/downloads">downloads</a> page. Windows binaries can be found on the <a href="https://windows.php.net/download">PHP for Windows</a> site. The list of changes is recorded in the <a href="/ChangeLog-8.php#PHP_8_3">ChangeLog</a>.</p>

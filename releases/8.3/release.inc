@@ -39,7 +39,7 @@ common_header(message('common_header', $lang));
     <section class="php8-section center">
         <div class="php8-compare">
             <h2 class="php8-h2" id="readonly_classes">
-                Readonly amendments
+                <?= message('readonly_title', $lang) ?>
                 <a class="php8-rfc" href="https://wiki.php.net/rfc/readonly_amendments">RFC</a>
             </h2>
             <div class="php8-compare__main">
@@ -122,7 +122,7 @@ PHP
 
         <div class="php8-compare">
             <h2 class="php8-h2" id="typed_class_constants">
-                Typed class constants
+                <?= message('typed_class_constants_title', $lang) ?>
                 <a class="php8-rfc" href="https://wiki.php.net/rfc/typed_class_constants">RFC</a>
             </h2>
             <div class="php8-compare__main">
@@ -168,7 +168,7 @@ PHP
 
         <div class="php8-compare">
             <h2 class="php8-h2" id="override_attribute">
-                <code>#[\Override]</code> attribute
+                <?= message('override_title', $lang) ?>
                 <a class="php8-rfc" href="https://wiki.php.net/rfc/marking_overriden_methods">RFC</a>
             </h2>
             <div class="php8-compare__main">
@@ -238,7 +238,7 @@ PHP
 
         <div class="php8-compare">
             <h2 class="php8-h2" id="randomizer_get_bytes_from_string">
-                New <code>Randomizer::getBytesFromString()</code> method
+                <?= message('randomizer_getbytesfromstring_title', $lang) ?>
                 <a class="php8-rfc" href="https://wiki.php.net/rfc/randomizer_additions#getbytesfromstring">RFC</a>
             </h2>
             <div class="php8-compare__main">
@@ -302,7 +302,7 @@ PHP
 
         <div class="php8-compare">
             <h2 class="php8-h2" id="randomizer_get_float">
-                New <code>Randomizer::getFloat()</code> and <code>Randomizer::nextFloat()</code> methods
+                <?= message('randomizer_getfloat_nextfloat_title', $lang) ?>
                 <a class="php8-rfc" href="https://wiki.php.net/rfc/randomizer_additions#getfloat">RFC</a>
             </h2>
             <div class="php8-compare__main">
@@ -358,15 +358,12 @@ PHP
         </div>
 
         <div class="php8-compare__content">
-            The algorithm used is the γ-section algorithm as published in:
-            <a href="https://doi.org/10.1145/3503512" target="_blank" rel="noopener noreferrer">Drawing Random
-                Floating-Point Numbers from an Interval</a>.
-            Frédéric Goualard, ACM Trans. Model. Comput. Simul., 32:3, 2022.
+            <?= message('randomizer_getfloat_nextfloat_description', $lang) ?>
         </div>
 
         <div class="php8-compare">
             <h2 class="php8-h2" id="dynamic_class_constant_fetch">
-                Dynamic class constant fetch
+                <?= message('dynamic_class_constant_fetch_title', $lang) ?>
                 <a class="php8-rfc" href="https://wiki.php.net/rfc/dynamic_class_constant_fetch">RFC</a>
             </h2>
             <div class="php8-compare__main">
@@ -415,19 +412,14 @@ PHP
             <h2 class="php8-h2" id="other_new_things"><?= message('new_classes_title', $lang) ?></h2>
             <div class="php8-compare__content php8-compare__content--block">
                 <ul>
-                    <li>New <code>json_validate()</code> function.</li>
-                    <li>New <code>ldap_connect_wallet()</code>, and <code>ldap_exop_sync()</code> functions.</li>
-                    <li>New <code>mb_str_pad()</code> function.</li>
-                    <li>New <code>posix_sysconf()</code>, <code>posix_pathconf()</code>, <code>posix_fpathconf()</code>,
-                        and
-                        <code>posix_eaccess()</code> functions.
-                    </li>
-                    <li>New <code>ReflectionMethod::createFromMethodName()</code> method.</li>
-                    <li>New <code>socket_atmark()</code> function.</li>
-                    <li>New <code>str_increment()</code>, <code>str_decrement()</code>, and
-                        <code>stream_context_set_options()</code> functions.
-                    </li>
-                    <li>New <code>ZipArchive::getArchiveFlag()</code> function.</li>
+                    <li><?= message('new_json_validate', $lang) ?></li>
+                    <li><?= message('new_ldap', $lang) ?></li>
+                    <li><?= message('new_mb_str_pad', $lang) ?></li>
+                    <li><?= message('new_posix', $lang) ?></li>
+                    <li><?= message('new_reflection', $lang) ?></li>
+                    <li><?= message('new_socket', $lang) ?></li>
+                    <li><?= message('new_str', $lang) ?></li>
+                    <li><?= message('new_ziparchive', $lang) ?></li>
                 </ul>
             </div>
         </div>
@@ -436,14 +428,13 @@ PHP
             <h2 class="php8-h2" id="deprecations_and_bc_breaks"><?= message('bc_title', $lang) ?></h2>
             <div class="php8-compare__content">
                 <ul>
-                    <li>More Appropriate Date/Time Exceptions.</li>
-                    <li>Negative indices in arrays.</li>
-                    <li>Changes to the <code>range()</code> function.</li>
-                    <li>Traits and static properties.</li>
-                    <li>The <code>U_MULTIPLE_DECIMAL_SEPERATORS</code> constant had been deprecated in favor of <code>U_MULTIPLE_DECIMAL_SEPARATORS</code>.
-                    </li>
-                    <li>The <code>MT_RAND_PHP</code> Mt19937 variant is deprecated.</li>
-                    <li><code>ReflectionClass::getStaticProperties()</code> is no longer nullable.</li>
+                    <li><?= message('bc_datetime', $lang) ?></li>
+                    <li><?= message('bc_arrays', $lang) ?></li>
+                    <li><?= message('bc_range', $lang) ?></li>
+                    <li><?= message('bc_traits', $lang) ?></li>
+                    <li><?= message('bc_umultipledecimalseparators', $lang) ?></li>
+                    <li><?= message('bc_mtrand', $lang) ?></li>
+                    <li><?= message('bc_reflection', $lang) ?></li>
                 </ul>
             </div>
         </div>
