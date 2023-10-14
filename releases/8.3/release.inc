@@ -378,9 +378,7 @@ class Foo {
 
 $searchableConstant = 'PHP';
 
-$reflectedClass = new ReflectionClass(Foo::class);
-
-var_dump($reflectedClass->getConstant($searchableConstant));
+var_dump(constant(Foo::class . "::{$searchableConstant}"));
 PHP
 
                         ); ?>
