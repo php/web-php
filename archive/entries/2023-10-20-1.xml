@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+  <title>phpday 2024</title>
+  <id>https://www.php.net/archive/2023.php#2023-10-20-1</id>
+  <published>2023-10-20T11:59:20+02:00</published>
+  <updated>2023-10-20T11:59:20+02:00</updated>
+  <link href="https://www.php.net/conferences/index.php#2023-10-20-1" rel="alternate" type="text/html"/>
+  <link href="https://2024.phpday.it/" rel="via" type="text/html"/>
+  <finalTeaserDate xmlns="http://php.net/ns/news">2024-01-14</finalTeaserDate>
+  <category term="cfp" label="Call for Papers"/>
+  <newsImage xmlns="http://php.net/ns/news" link="https://2024.phpday.it/" title="phpday 2024: Verona + online - May 16-17">phpday2023.png</newsImage>
+  <content type="xhtml">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+<p>20 years of <a href="https://2024.phpday.it/">phpday</a>! On May 16-17
+2024 you can attend the in-person event in <b>Verona (Italy)</b> or online.</p>
+
+<p>Organized by <a href="https://www.grusp.org/en/">GrUSP</a> (the Italian PHP user
+group), phpday is one of the first historic European conferences dedicated
+to PHP, development tools and best practices. We are a community whose
+intent is to improve the web development ecosystem and to organize
+affordable, high-quality events and workshops for developers.</p>
+
+<p>We are committed to <b>diversity, inclusion and accessibility</b> values: we
+apply a <a href="https://www.grusp.org/en/coc/">Code of Conduct</a> and we have a
+<a href="https://www.grusp.org/en/conferences_/scholarships/">Scholarship
+program</a>.</p>
+
+<p>Our <b><a href="https://sessionize.com/phpday-2024/">Call For Papers</a></b> will be <b>open
+until January 14th 2024</b>.<br>The event is international and all sessions will
+be in English. We really appreciate submissions from first time speakers,
+and we can offer support for the entire process.</p>
+
+<p>Don't miss the opportunity to take part in this amazing community event
+with international speakers from all over the world where everyone can
+share, learn and grow professionally.</p>
+
+<P>Get your ticket <a href="https://ti.to/grusp/phpday-2024">here</a>!</p>
+
+<p>Follow us on <a href="https://twitter.com/phpday">Twitter</a>, <a href="https://facebook.com/phpday/">Facebook</a>
+and <b><a href="https://phpc.social/@phpday">Mastodon</a></b>!</p>
+    </div>
+  </content>
+</entry>
