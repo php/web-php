@@ -1228,6 +1228,88 @@ changelog_header(8, $MINOR_VERSIONS);
 
 <a id="PHP_8_1"></a>
 
+<section class="version" id="8.1.25"><!-- {{{ 8.1.25 -->
+<h3>Version 8.1.25</h3>
+<b><?php release_date('26-Oct-2023'); ?></b>
+<ul><li>Core:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 12207); ?> (memory leak when class using trait with doc block).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 12215); ?> (Module entry being overwritten causes type errors in ext/dom).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 12273); ?> (__builtin_cpu_init check).</li>
+  <li><?php bugfix(80092); ?> (ZTS + preload = segfault on shutdown).</li>
+</ul></li>
+<li>CLI:
+<ul>
+  <li>Ensure a single Date header is present.</li>
+</ul></li>
+<li>CType:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 11997); ?> (ctype_alnum 5 times slower in PHP 8.1 or greater).</li>
+</ul></li>
+<li>DOM:
+<ul>
+  <li>Restore old namespace reconciliation behaviour.</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 8996); ?> (DOMNode serialization on PHP ^8.1).</li>
+</ul></li>
+<li>Fileinfo:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 11891); ?> (fileinfo returns text/xml for some svg files).</li>
+</ul></li>
+<li>Filter:
+<ul>
+  <li>Fix explicit FILTER_REQUIRE_SCALAR with FILTER_CALLBACK (ilutov)</li>
+</ul></li>
+<li>Hash:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 12186); ?> (segfault copying/cloning a finalized HashContext).</li>
+</ul></li>
+<li>Intl:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 12243); ?> (segfault on IntlDateFormatter::construct).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 12282); ?> (IntlDateFormatter::construct should throw an exception on an invalid locale).</li>
+</ul></li>
+<li>MySQLnd:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 12297); ?> (PHP Startup: Invalid library (maybe not a PHP library) 'mysqlnd.so' in Unknown on line).</li>
+</ul></li>
+<li>Opcache:
+<ul>
+  <li>Fixed opcache_invalidate() on deleted file.</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 12380); ?> (JIT+private array property access inside closure accesses private property in child class).</li>
+</ul></li>
+<li>PCRE:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 11956); ?> (Backport upstream fix, PCRE regular expressions with JIT enabled gives different result).</li>
+</ul></li>
+<li>SimpleXML:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 12170); ?> (Can't use xpath with comments in SimpleXML).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 12223); ?> (Entity reference produces infinite loop in var_dump/print_r).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 12167); ?> (Unable to get processing instruction contents in SimpleXML).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 12169); ?> (Unable to get comment contents in SimpleXML).</li>
+</ul></li>
+<li>Streams:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 12190); ?> (binding ipv4 address with both address and port at 0).</li>
+</ul></li>
+<li>XML:
+<ul>
+  <li>Fix return type of stub of xml_parse_into_struct().</li>
+  <li>Fix memory leak when calling xml_parse_into_struct() twice.</li>
+</ul></li>
+<li>XSL:
+<ul>
+  <li>Fix type error on XSLTProcessor::transformToDoc return value with SimpleXML.</li>
+</ul></li>
+<li>Sockets:
+<ul>
+  <li>Fix socket_export_stream() with wrong protocol (twosee)</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
+
+
 <section class="version" id="8.1.24"><!-- {{{ 8.1.24 -->
 <h3>Version 8.1.24</h3>
 <b><?php release_date('28-Sep-2023'); ?></b>
