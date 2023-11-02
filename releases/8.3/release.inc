@@ -26,7 +26,7 @@ common_header(message('common_header', $lang));
         </div>
         <div class="php8-section__content">
             <div class="php8-logo">
-                <img src="/images/php8/logo_php8_2.svg" alt="PHP 8.3" height="126" width="343">
+                <img src="/images/php8/logo_php8_3.svg" alt="PHP 8.3" height="126" width="343">
             </div>
             <div class="php8-title"><?= message('main_title', $lang) ?></div>
             <div class="php8-subtitle"><?= message('main_subtitle', $lang) ?></div>

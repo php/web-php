@@ -106,7 +106,7 @@ if (!isset($config["languages"])) {
       <li class="<?php echo $curr == "help" ? "active" : ""?>"><a href="/support">Help</a></li>
       <li class="<?php echo $curr === "php8" ? "active" : "" ?>">
         <a href="/releases/8.3/index.php">
-          <img src="/images/php8/logo_php8_2.svg" alt="php8.3" height="22" width="60">
+          <img src="/images/php8/logo_php8_3.svg" alt="php8.3" height="22" width="60">
         </a>
       </li>
     </ul>
