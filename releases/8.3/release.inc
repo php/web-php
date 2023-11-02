@@ -240,7 +240,7 @@ PHP
             <h2 class="php8-h2" id="randomizer_get_bytes_from_string">
                 <?= message('randomizer_getbytesfromstring_title', $lang) ?>
                 <a class="php8-rfc" href="https://wiki.php.net/rfc/randomizer_additions#getbytesfromstring">RFC</a>
-                <a class="php8-rfc" href="/manual/<?=$lang ?>/random-randomizer.getbytesfromstring.php"><?= message('documentation', $lang) ?></a>
+                <a class="php8-rfc" href="/manual/<?= $lang ?>/random-randomizer.getbytesfromstring.php"><?= message('documentation', $lang) ?></a>
             </h2>
             <div class="php8-compare__main">
                 <div class="php8-compare__block example-contents">
@@ -305,7 +305,7 @@ PHP
             <h2 class="php8-h2" id="randomizer_get_float">
                 <?= message('randomizer_getfloat_nextfloat_title', $lang) ?>
                 <a class="php8-rfc" href="https://wiki.php.net/rfc/randomizer_additions#getfloat">RFC</a>
-                <a class="php8-rfc" href="/manual/<?=$lang ?>/random-randomizer.getfloat.php"><?= message('documentation', $lang) ?></a>
+                <a class="php8-rfc" href="/manual/<?= $lang ?>/random-randomizer.getfloat.php"><?= message('documentation', $lang) ?></a>
             </h2>
             <div class="php8-compare__main">
                 <div class="php8-compare__block example-contents">
