@@ -38,89 +38,6 @@ common_header(message('common_header', $lang));
 
     <section class="php8-section center">
         <div class="php8-compare">
-            <h2 class="php8-h2" id="readonly_classes">
-                <?= message('readonly_title', $lang) ?>
-                <a class="php8-rfc" href="https://wiki.php.net/rfc/readonly_amendments">RFC</a>
-            </h2>
-            <div class="php8-compare__main">
-                <div class="php8-compare__block example-contents">
-                    <div class="php8-compare__label">PHP &lt; 8.3</div>
-                    <div class="php8-code phpcode">
-                        <?php highlight_php_trimmed(
-                            <<<'PHP'
-readonly class Foo {
-	public \DateTime $dateTime;
-
-	function __construct(\DateTime $dateTime) {
-		$this->dateTime = $dateTime;
-	}
-
-	public function with(...$values): static
-    {
-        $reflectedClass = new ReflectionClass(static::class);
-        $clone = $reflectedClass->newInstanceWithoutConstructor();
-
-        foreach (get_object_vars($this) as $field => $value) {
-            $value = array_key_exists($field, $values) ?
-                $values[$field] : $value;
-
-            $scope = $reflectedClass
-                ->getProperty($field)
-                ->getDeclaringClass()
-                ->getName();
-
-            if ($scope === self::class) {
-                $clone->$field = $value;
-            } else {
-                (fn () => $this->$field = $value)
-                    ->bindTo($clone, $scope)();
-            }
-        }
-
-        return $clone;
-    }
-}
-
-$today = new Foo(new \DateTime());
-$tomorrow = $today->with(
-    dateTime: (new \DateTime())->modify('+1 day')
-);
-PHP
-
-                        ); ?>
-                    </div>
-                </div>
-                <div class="php8-compare__arrow"></div>
-                <div class="php8-compare__block example-contents">
-                    <div class="php8-compare__label php8-compare__label_new">PHP 8.3</div>
-                    <div class="php8-code phpcode">
-                        <?php highlight_php_trimmed(
-                            <<<'PHP'
-readonly class Foo {
-	public \DateTime $dateTime;
-
-	function __construct(\DateTime $dateTime) {
-		$this->dateTime = $dateTime;
-	}
-
-	public function __clone()
-    {
-        $this->dateTime = clone $this->dateTime;
-    }
-}
-
-$today = new Foo(new \DateTime());
-$tomorrow = clone $today;
-
-$tomorrow->dateTime->modify('+1 day');
-PHP
-                        ); ?>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="php8-compare">
             <h2 class="php8-h2" id="typed_class_constants">
                 <?= message('typed_class_constants_title', $lang) ?>
                 <a class="php8-rfc" href="https://wiki.php.net/rfc/typed_class_constants">RFC</a>
@@ -375,7 +292,7 @@ PHP
                         <?php highlight_php_trimmed(
                             <<<'PHP'
 class Foo {
-    const PHP = 'PHP 8.3';
+    const PHP = 'PHP 8.2';
 }
 
 $searchableConstant = 'PHP';
@@ -399,6 +316,69 @@ class Foo {
 $searchableConstant = 'PHP';
 
 var_dump(Foo::{$searchableConstant});
+PHP
+                        ); ?>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="php8-compare">
+            <h2 class="php8-h2" id="readonly_classes">
+                <?= message('readonly_title', $lang) ?>
+                <a class="php8-rfc" href="https://wiki.php.net/rfc/readonly_amendments">RFC</a>
+            </h2>
+            <div class="php8-compare__main">
+                <div class="php8-compare__block example-contents">
+                    <div class="php8-compare__label">PHP &lt; 8.3</div>
+                    <div class="php8-code phpcode">
+                        <?php highlight_php_trimmed(
+                            <<<'PHP'
+readonly class Foo {
+    public \DateTime $dateTime;
+
+    function __construct(\DateTime $dateTime) {
+        $this->dateTime = $dateTime;
+    }
+
+    public function __clone()
+    {
+        $this->dateTime = clone $this->dateTime;
+    }
+}
+
+$today = new Foo(new \DateTime());
+$tomorrow = clone $today;
+
+// Fatal error: Cannot modify readonly property Foo::$dateTime
+PHP
+
+                        ); ?>
+                    </div>
+                </div>
+                <div class="php8-compare__arrow"></div>
+                <div class="php8-compare__block example-contents">
+                    <div class="php8-compare__label php8-compare__label_new">PHP 8.3</div>
+                    <div class="php8-code phpcode">
+                        <?php highlight_php_trimmed(
+                            <<<'PHP'
+readonly class Foo {
+	public \DateTime $dateTime;
+
+	function __construct(\DateTime $dateTime) {
+		$this->dateTime = $dateTime;
+	}
+
+	public function __clone()
+    {
+        $this->dateTime = clone $this->dateTime;
+    }
+}
+
+$today = new Foo(new \DateTime());
+$tomorrow = clone $today;
+
+$tomorrow->dateTime->modify('+1 day');
 PHP
                         ); ?>
                     </div>
