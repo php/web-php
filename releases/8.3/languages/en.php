@@ -11,7 +11,7 @@ return [
     'json_validate_title' => 'New <code>json_validate()</code> function',
     'typed_class_constants_title' => 'Typed class constants',
     'override_title' => '<code>#[\Override]</code> attribute',
-    'randomizer_getbytesfromstring_title' => 'New <code>Randomizer::getBytesFromString()</code> method',
+    'randomizer_getbytesfromstring_title' => 'New <code>Randomizer<span style="word-break: break-all;">::</span>getBytesFromString()</code> method',
     'randomizer_getfloat_nextfloat_title' => 'New <code>Randomizer::getFloat()</code> and <code>Randomizer::nextFloat()</code> methods',
     'randomizer_getfloat_nextfloat_description' => 'The algorithm used is the γ-section algorithm as published in:
             <a href="https://doi.org/10.1145/3503512" target="_blank" rel="noopener noreferrer">Drawing Random
