@@ -32,8 +32,8 @@ return [
     'bc_datetime' => 'More Appropriate Date/Time Exceptions.',
     'bc_arrays' => 'Negative indices in arrays.',
     'bc_range' => 'Changes to the <code>range()</code> function.',
-    'bc_traits' => 'Traits and static properties.',
-    'bc_umultipledecimalseparators' => 'The <code>U_MULTIPLE_DECIMAL_SEPERATORS</code> constant had been deprecated in favor of <code>U_MULTIPLE_DECIMAL_SEPARATORS</code>.',
+    'bc_traits' => 'Changes in re-declaration of static properties in traits.',
+    'bc_umultipledecimalseparators' => 'The <code>U_MULTIPLE_DECIMAL_SEPERATORS</code> constant is deprecated in favor of <code>U_MULTIPLE_DECIMAL_SEPARATORS</code>.',
     'bc_mtrand' => 'The <code>MT_RAND_PHP</code> Mt19937 variant is deprecated.',
     'bc_reflection' => '<code>ReflectionClass::getStaticProperties()</code> is no longer nullable.',
 
