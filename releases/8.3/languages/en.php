@@ -29,6 +29,7 @@ return [
     'new_socket' => 'New <code>socket_atmark()</code> function.',
     'new_str' => 'New <code>str_increment()</code>, <code>str_decrement()</code>, and <code>stream_context_set_options()</code> functions.',
     'new_ziparchive' => 'New <code>ZipArchive::getArchiveFlag()</code> function.',
+    'new_openssl_ec' => 'Support for generation EC keys with custom EC parameters in OpenSSL extension.',
 
     'bc_title' => 'Deprecations and backward compatibility breaks',
     'bc_datetime' => 'More Appropriate Date/Time Exceptions.',

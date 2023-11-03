@@ -439,6 +439,7 @@ PHP
                     <li><?= message('new_socket', $lang) ?></li>
                     <li><?= message('new_str', $lang) ?></li>
                     <li><?= message('new_ziparchive', $lang) ?></li>
+                    <li><?= message('new_openssl_ec', $lang) ?></li>
                 </ul>
             </div>
         </div>
