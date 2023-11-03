@@ -8,10 +8,14 @@ return [
     'upgrade_now' => 'Upgrade to PHP 8.3 now!',
 
     'readonly_title' => 'Readonly amendments',
+    'readonly_description' => '<code>readonly</code> properties may now be modified once within the magic <code>__clone</code> method to enable deep-cloning of readonly properties.',
     'json_validate_title' => 'New <code>json_validate()</code> function',
+    'json_validate_description' => '<code>json_validate()</code> allows to check if a string is syntactically valid JSON, while being more efficient than <code>json_decode()</code>.',
     'typed_class_constants_title' => 'Typed class constants',
     'override_title' => '<code>#[\Override]</code> attribute',
+    'override_description' => 'By adding the <code>#[\Override]</code> attribute to a method, PHP will ensure that a method with the same name exists in a parent class or in an implemented interface. Adding the attribute makes it clear that overriding a parent method is intentional and simplifies refactoring, because the removal of an overridden parent method will be detected.',
     'randomizer_getbytesfromstring_title' => 'New <code>Randomizer<span style="word-break: break-all;">::</span>getBytesFromString()</code> method',
+    'randomizer_getbytesfromstring_description' => 'The <a href="/releases/8.2/en.php#random_extension">Random Extension</a> that was added in PHP 8.2 was extended by a new method to generate random strings consisting of specific bytes only. This method allows to easily generate random identifiers, such as domain names, and numeric strings of arbitrary length.',
     'randomizer_getfloat_nextfloat_title' => 'New <code>Randomizer::getFloat()</code> and <code>Randomizer::nextFloat()</code> methods',
     'randomizer_getfloat_nextfloat_description' => 'The algorithm used is the γ-section algorithm as published in:
             <a href="https://doi.org/10.1145/3503512" target="_blank" rel="noopener noreferrer">Drawing Random

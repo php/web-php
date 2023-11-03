@@ -194,6 +194,10 @@ PHP
                     </div>
                 </div>
             </div>
+
+            <div class="php8-compare__content">
+                <?= message('override_description', $lang) ?>
+            </div>
         </div>
 
         <div class="php8-compare">
@@ -236,13 +240,13 @@ PHP
                         <?php highlight_php_trimmed(
                             <<<'PHP'
 readonly class Foo {
-	public \DateTime $dateTime;
+    public \DateTime $dateTime;
 
-	function __construct(\DateTime $dateTime) {
-		$this->dateTime = $dateTime;
-	}
+    function __construct(\DateTime $dateTime) {
+        $this->dateTime = $dateTime;
+    }
 
-	public function __clone()
+    public function __clone()
     {
         $this->dateTime = clone $this->dateTime;
     }
@@ -257,6 +261,9 @@ PHP
                     </div>
                 </div>
             </div>
+            <div class="php8-compare__content">
+                <?= message('readonly_description', $lang) ?>
+            </div>
         </div>
 
         <div class="php8-compare">
@@ -270,7 +277,7 @@ PHP
                     <div class="php8-code phpcode">
                         <?php highlight_php_trimmed(
                             <<<'PHP'
-function json_validate(string $string) {
+function json_validate(string $string): bool {
     json_decode($string);
     return json_last_error() === JSON_ERROR_NONE;
 }
@@ -292,6 +299,9 @@ PHP
                         ); ?>
                     </div>
                 </div>
+            </div>
+            <div class="php8-compare__content">
+                <?= message('json_validate_description', $lang) ?>
             </div>
         </div>
 
@@ -357,6 +367,10 @@ PHP
                         ); ?>
                     </div>
                 </div>
+            </div>
+
+            <div class="php8-compare__content">
+                <?= message('randomizer_getbytesfromstring_description', $lang) ?>
             </div>
         </div>
 
