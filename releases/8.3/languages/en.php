@@ -8,6 +8,7 @@ return [
     'upgrade_now' => 'Upgrade to PHP 8.3 now!',
 
     'readonly_title' => 'Readonly amendments',
+    'json_validate_title' => 'New <code>json_validate()</code> function',
     'typed_class_constants_title' => 'Typed class constants',
     'override_title' => '<code>#[\Override]</code> attribute',
     'randomizer_getbytesfromstring_title' => 'New <code>Randomizer::getBytesFromString()</code> method',
@@ -19,7 +20,8 @@ return [
     'dynamic_class_constant_fetch_title' => 'Dynamic class constant fetch',
 
     'new_classes_title' => 'New Classes, Interfaces, and Functions',
-    'new_json_validate' => 'New <code>json_validate()</code> function.',
+    'new_dom' => 'New <code>DOMElement::getAttributeNames()</code>, <code>DOMElement::insertAdjacentElement()</code>, <code>DOMElement::insertAdjacentText()</code>,  <code>DOMElement::toggleAttribute()</code>, <code>DOMNode::contains()</code>, <code>DOMNode::getRootNode()</code>, <code>DOMNode::isEqualNode()</code>, <code>DOMNameSpaceNode::contains()</code>, and <code>DOMParentNode::replaceChildren()</code> methods.',
+    'new_intl' => 'New <code>IntlCalendar::setDate()</code>, <code>IntlCalendar::setDateTime()</code>, <code>IntlGregorianCalendar::createFromDate()</code>, and <code>IntlGregorianCalendar::createFromDateTime()</code> methods.',
     'new_ldap' => 'New <code>ldap_connect_wallet()</code>, and <code>ldap_exop_sync()</code> functions.',
     'new_mb_str_pad' => 'New <code>mb_str_pad()</code> function.',
     'new_posix' => 'New <code>posix_sysconf()</code>, <code>posix_pathconf()</code>, <code>posix_fpathconf()</code>, and <code>posix_eaccess()</code> functions.',
@@ -30,7 +32,7 @@ return [
 
     'bc_title' => 'Deprecations and backward compatibility breaks',
     'bc_datetime' => 'More Appropriate Date/Time Exceptions.',
-    'bc_arrays' => 'Negative indices in arrays.',
+    'bc_arrays' => 'Assigning a negative index <code>n</code> to an empty array will now make sure that the next index is <code>n + 1</code> instead of <code>0</code>.',
     'bc_range' => 'Changes to the <code>range()</code> function.',
     'bc_traits' => 'Changes in re-declaration of static properties in traits.',
     'bc_umultipledecimalseparators' => 'The <code>U_MULTIPLE_DECIMAL_SEPERATORS</code> constant is deprecated in favor of <code>U_MULTIPLE_DECIMAL_SEPARATORS</code>.',

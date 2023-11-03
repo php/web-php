@@ -84,6 +84,49 @@ PHP
         </div>
 
         <div class="php8-compare">
+            <h2 class="php8-h2" id="dynamic_class_constant_fetch">
+                <?= message('dynamic_class_constant_fetch_title', $lang) ?>
+                <a class="php8-rfc" href="https://wiki.php.net/rfc/dynamic_class_constant_fetch">RFC</a>
+            </h2>
+            <div class="php8-compare__main">
+                <div class="php8-compare__block example-contents">
+                    <div class="php8-compare__label">PHP &lt; 8.3</div>
+                    <div class="php8-code phpcode">
+                        <?php highlight_php_trimmed(
+                            <<<'PHP'
+class Foo {
+    const PHP = 'PHP 8.2';
+}
+
+$searchableConstant = 'PHP';
+
+var_dump(constant(Foo::class . "::{$searchableConstant}"));
+PHP
+
+                        ); ?>
+                    </div>
+                </div>
+                <div class="php8-compare__arrow"></div>
+                <div class="php8-compare__block example-contents">
+                    <div class="php8-compare__label php8-compare__label_new">PHP 8.3</div>
+                    <div class="php8-code phpcode">
+                        <?php highlight_php_trimmed(
+                            <<<'PHP'
+class Foo {
+    const PHP = 'PHP 8.3';
+}
+
+$searchableConstant = 'PHP';
+
+var_dump(Foo::{$searchableConstant});
+PHP
+                        ); ?>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="php8-compare">
             <h2 class="php8-h2" id="override_attribute">
                 <?= message('override_title', $lang) ?>
                 <a class="php8-rfc" href="https://wiki.php.net/rfc/marking_overriden_methods">RFC</a>
@@ -146,6 +189,105 @@ final class MyTest extends TestCase
 
 // Fatal error: MyTest::taerDown() has #[\Override] attribute,
 // but no matching parent method exists
+PHP
+                        ); ?>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="php8-compare">
+            <h2 class="php8-h2" id="readonly_classes">
+                <?= message('readonly_title', $lang) ?>
+                <a class="php8-rfc" href="https://wiki.php.net/rfc/readonly_amendments">RFC</a>
+            </h2>
+            <div class="php8-compare__main">
+                <div class="php8-compare__block example-contents">
+                    <div class="php8-compare__label">PHP &lt; 8.3</div>
+                    <div class="php8-code phpcode">
+                        <?php highlight_php_trimmed(
+                            <<<'PHP'
+readonly class Foo {
+    public \DateTime $dateTime;
+
+    function __construct(\DateTime $dateTime) {
+        $this->dateTime = $dateTime;
+    }
+
+    public function __clone()
+    {
+        $this->dateTime = clone $this->dateTime;
+    }
+}
+
+$today = new Foo(new \DateTime());
+$tomorrow = clone $today;
+
+// Fatal error: Cannot modify readonly property Foo::$dateTime
+PHP
+
+                        ); ?>
+                    </div>
+                </div>
+                <div class="php8-compare__arrow"></div>
+                <div class="php8-compare__block example-contents">
+                    <div class="php8-compare__label php8-compare__label_new">PHP 8.3</div>
+                    <div class="php8-code phpcode">
+                        <?php highlight_php_trimmed(
+                            <<<'PHP'
+readonly class Foo {
+	public \DateTime $dateTime;
+
+	function __construct(\DateTime $dateTime) {
+		$this->dateTime = $dateTime;
+	}
+
+	public function __clone()
+    {
+        $this->dateTime = clone $this->dateTime;
+    }
+}
+
+$today = new Foo(new \DateTime());
+$tomorrow = clone $today;
+
+$tomorrow->dateTime->modify('+1 day');
+PHP
+                        ); ?>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="php8-compare">
+            <h2 class="php8-h2" id="json_validate">
+                <?= message('json_validate_title', $lang) ?>
+                <a class="php8-rfc" href="https://wiki.php.net/rfc/json_validate">RFC</a>
+            </h2>
+            <div class="php8-compare__main">
+                <div class="php8-compare__block example-contents">
+                    <div class="php8-compare__label">PHP &lt; 8.3</div>
+                    <div class="php8-code phpcode">
+                        <?php highlight_php_trimmed(
+                            <<<'PHP'
+function json_validate(string $string) {
+    json_decode($string);
+    return json_last_error() === JSON_ERROR_NONE;
+}
+
+var_dump(json_validate('{ "test": { "foo": "bar" } }')); // true
+PHP
+
+                        ); ?>
+                    </div>
+                </div>
+                <div class="php8-compare__arrow"></div>
+                <div class="php8-compare__block example-contents">
+                    <div class="php8-compare__label php8-compare__label_new">PHP 8.3</div>
+                    <div class="php8-code phpcode">
+                        <?php highlight_php_trimmed(
+                            <<<'PHP'
+var_dump(json_validate('{ "test": { "foo": "bar" } }')); // true
 PHP
                         ); ?>
                     </div>
@@ -280,111 +422,7 @@ PHP
             <?= message('randomizer_getfloat_nextfloat_description', $lang) ?>
         </div>
 
-        <div class="php8-compare">
-            <h2 class="php8-h2" id="dynamic_class_constant_fetch">
-                <?= message('dynamic_class_constant_fetch_title', $lang) ?>
-                <a class="php8-rfc" href="https://wiki.php.net/rfc/dynamic_class_constant_fetch">RFC</a>
-            </h2>
-            <div class="php8-compare__main">
-                <div class="php8-compare__block example-contents">
-                    <div class="php8-compare__label">PHP &lt; 8.3</div>
-                    <div class="php8-code phpcode">
-                        <?php highlight_php_trimmed(
-                            <<<'PHP'
-class Foo {
-    const PHP = 'PHP 8.2';
-}
 
-$searchableConstant = 'PHP';
-
-var_dump(constant(Foo::class . "::{$searchableConstant}"));
-PHP
-
-                        ); ?>
-                    </div>
-                </div>
-                <div class="php8-compare__arrow"></div>
-                <div class="php8-compare__block example-contents">
-                    <div class="php8-compare__label php8-compare__label_new">PHP 8.3</div>
-                    <div class="php8-code phpcode">
-                        <?php highlight_php_trimmed(
-                            <<<'PHP'
-class Foo {
-    const PHP = 'PHP 8.3';
-}
-
-$searchableConstant = 'PHP';
-
-var_dump(Foo::{$searchableConstant});
-PHP
-                        ); ?>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="php8-compare">
-            <h2 class="php8-h2" id="readonly_classes">
-                <?= message('readonly_title', $lang) ?>
-                <a class="php8-rfc" href="https://wiki.php.net/rfc/readonly_amendments">RFC</a>
-            </h2>
-            <div class="php8-compare__main">
-                <div class="php8-compare__block example-contents">
-                    <div class="php8-compare__label">PHP &lt; 8.3</div>
-                    <div class="php8-code phpcode">
-                        <?php highlight_php_trimmed(
-                            <<<'PHP'
-readonly class Foo {
-    public \DateTime $dateTime;
-
-    function __construct(\DateTime $dateTime) {
-        $this->dateTime = $dateTime;
-    }
-
-    public function __clone()
-    {
-        $this->dateTime = clone $this->dateTime;
-    }
-}
-
-$today = new Foo(new \DateTime());
-$tomorrow = clone $today;
-
-// Fatal error: Cannot modify readonly property Foo::$dateTime
-PHP
-
-                        ); ?>
-                    </div>
-                </div>
-                <div class="php8-compare__arrow"></div>
-                <div class="php8-compare__block example-contents">
-                    <div class="php8-compare__label php8-compare__label_new">PHP 8.3</div>
-                    <div class="php8-code phpcode">
-                        <?php highlight_php_trimmed(
-                            <<<'PHP'
-readonly class Foo {
-	public \DateTime $dateTime;
-
-	function __construct(\DateTime $dateTime) {
-		$this->dateTime = $dateTime;
-	}
-
-	public function __clone()
-    {
-        $this->dateTime = clone $this->dateTime;
-    }
-}
-
-$today = new Foo(new \DateTime());
-$tomorrow = clone $today;
-
-$tomorrow->dateTime->modify('+1 day');
-PHP
-                        ); ?>
-                    </div>
-                </div>
-            </div>
-        </div>
     </section>
 
     <section class="php8-section center php8-section_light php8-columns">
@@ -392,7 +430,8 @@ PHP
             <h2 class="php8-h2" id="other_new_things"><?= message('new_classes_title', $lang) ?></h2>
             <div class="php8-compare__content php8-compare__content--block">
                 <ul>
-                    <li><?= message('new_json_validate', $lang) ?></li>
+                    <li><?= message('new_dom', $lang) ?></li>
+                    <li><?= message('new_intl', $lang) ?></li>
                     <li><?= message('new_ldap', $lang) ?></li>
                     <li><?= message('new_mb_str_pad', $lang) ?></li>
                     <li><?= message('new_posix', $lang) ?></li>
