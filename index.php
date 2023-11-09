@@ -197,6 +197,13 @@ if (is_array($CONF_TEASER)) {
 
 $SIDEBAR = <<<SIDEBAR_DATA
 
+    <div class='panel'>
+      <a href='https://thephp.foundation/' class='headline'>The PHP Foundation</a>
+      <div class='body'>
+        <p>The PHP Foundation is a collective of people and organizations relying on the PHP language. Its mission is to ensure the long-term prosperity of the PHP language.
+        <p><a href='https://thephp.foundation/donate/' class='btn btn-primary'>Donate</a></p>
+      </div>
+    </div>
 $announcements
     <p class='panel'><a href='/cal.php'>User Group Events</a></p>
     <p class='panel'><a href='/thanks.php'>Special Thanks</a></p>
