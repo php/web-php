@@ -447,7 +447,6 @@ $uri_aliases = [
     "lsb" => "language.oop5.late-static-bindings",
     "namespace" => "language.namespaces",
     "use" => "language.namespaces.using",
-    "iterator" => "language.oop5.iterations",
 
     "factory" => "language.oop5.patterns",
     "singleton" => "language.oop5.patterns",
