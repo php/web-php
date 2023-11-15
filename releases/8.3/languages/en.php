@@ -28,8 +28,8 @@ return [
     'new_intl' => 'New <a href="/manual/en/intlcalendar.setdate.php"><code>IntlCalendar::setDate()</code></a>, <a href="/manual/en/intlcalendar.setdatetime.php"><code>IntlCalendar::setDateTime()</code></a>, <code>IntlGregorianCalendar::createFromDate()</code>, and <code>IntlGregorianCalendar::createFromDateTime()</code> methods.',
     'new_ldap' => 'New <code>ldap_connect_wallet()</code>, and <code>ldap_exop_sync()</code> functions.',
     'new_mb_str_pad' => 'New <a href="/manual/en/function.mb-str-pad.php"><code>mb_str_pad()</code></a> function.',
-    'new_posix' => 'New <code>posix_sysconf()</code>, <code>posix_pathconf()</code>, <code>posix_fpathconf()</code>, and <code>posix_eaccess()</code> functions.',
-    'new_reflection' => 'New <code>ReflectionMethod::createFromMethodName()</code> method.',
+    'new_posix' => 'New <a href="/manual/en/function.posix-sysconf.php"><code>posix_sysconf()</code></a>, <a href="/manual/en/function.posix-pathconf.php"><code>posix_pathconf()</code></a>, <a href="/manual/en/function.posix-fpathconf.php"><code>posix_fpathconf()</code></a>, and <a href="/manual/en/function.posix-eaccess.php"><code>posix_eaccess()</code></a> functions.',
+    'new_reflection' => 'New <a href="/en/reflectionmethod.createfrommethodname.php"><code>ReflectionMethod::createFromMethodName()</code></a> method.',
     'new_socket' => 'New <code>socket_atmark()</code> function.',
     'new_str' => 'New <a href="/manual/en/function.str-increment.php"><code>str_increment()</code></a>, <a href="/manual/en/function.str-decrement.php"><code>str_decrement()</code></a>, and <code>stream_context_set_options()</code> functions.',
     'new_ziparchive' => 'New <a href="/manual/en/ziparchive.getarchiveflag.php"><code>ZipArchive::getArchiveFlag()</code></a> function.',
@@ -42,7 +42,7 @@ return [
     'bc_traits' => 'Changes in re-declaration of static properties in traits.',
     'bc_umultipledecimalseparators' => 'The <code>U_MULTIPLE_DECIMAL_SEPERATORS</code> constant is deprecated in favor of <code>U_MULTIPLE_DECIMAL_SEPARATORS</code>.',
     'bc_mtrand' => 'The <code>MT_RAND_PHP</code> Mt19937 variant is deprecated.',
-    'bc_reflection' => '<code>ReflectionClass::getStaticProperties()</code> is no longer nullable.',
+    'bc_reflection' => '<a href="/manual/en/reflectionclass.getstaticproperties.php"><code>ReflectionClass::getStaticProperties()</code></a> is no longer nullable.',
 
     'footer_title' => 'Better performance, better syntax, improved type safety.',
     'footer_description' => '<p>For source downloads of PHP 8.3 please visit the <a href="/downloads">downloads</a> page. Windows binaries can be found on the <a href="https://windows.php.net/download">PHP for Windows</a> site. The list of changes is recorded in the <a href="/ChangeLog-8.php#PHP_8_3">ChangeLog</a>.</p>

@@ -270,6 +270,7 @@ PHP
             <h2 class="php8-h2" id="json_validate">
                 <?= message('json_validate_title', $lang) ?>
                 <a class="php8-rfc" href="https://wiki.php.net/rfc/json_validate">RFC</a>
+                <a class="php8-rfc" href="/manual/en/function.json-validate.php"><?= message('documentation', $lang) ?></a>
             </h2>
             <div class="php8-compare__main">
                 <div class="php8-compare__block example-contents">
