@@ -8,7 +8,7 @@ require_once __DIR__ . '/../include/email-validation.inc';
 $emails = array(
     'asasasd324324@php.net',
     'jcastagnetto-delete-this-@yahoo.com',
-    'jcastagnetto-i-hate-spam@NOSPAMyahoo.com',
+    'jcastagnetto-i-hate-spam@NOSPAMyahoo.test',
     'jcastagnetto-NO-SPAM@yahoo.com',
     'jcastagnetto@NoSpam-yahoo.com',
     'jesusmc@scripps.edu',
