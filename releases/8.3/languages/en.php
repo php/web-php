@@ -1,10 +1,10 @@
 <?php
 
 return [
-    'common_header' => 'PHP 8.3 is a major update of the PHP language. It contains many new features, including Readonly amendments, Typed class constants, Randomizer additions, performance improvements and more.',
+    'common_header' => 'PHP 8.3 is a major update of the PHP language. It contains many new features, such as explicit typing of class constants, deep-cloning of readonly properties and additions to the randomness functionality. As always it also includes performance improvements, bug fixes and general cleanup.',
     'documentation' => 'Doc',
     'main_title' => 'Released!',
-    'main_subtitle' => 'PHP 8.3 is a major update of the PHP language.<br class="display-none-md">It contains many new features, including Readonly amendments, Typed class constants, Randomizer additions, performance improvements and more.',
+    'main_subtitle' => 'PHP 8.3 is a major update of the PHP language.<br class="display-none-md">It contains many new features, such as explicit typing of class constants, deep-cloning of readonly properties and additions to the randomness functionality. As always it also includes performance improvements, bug fixes and general cleanup.',
     'upgrade_now' => 'Upgrade to PHP 8.3 now!',
 
     'readonly_title' => 'Deep-cloning of readonly properties',
