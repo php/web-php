@@ -1,7 +1,7 @@
 <?php
 
 return [
-    'common_header' => 'PHP 8.3 is a major update of the PHP language. Readonly amendments, Typed class constants, #[Override] attribute, Randomizer additions, performance improvements and more',
+    'common_header' => 'PHP 8.3 is a major update of the PHP language. It contains many new features, including Readonly amendments, Typed class constants, Randomizer additions, performance improvements and more.',
     'documentation' => 'Doc',
     'main_title' => 'Released!',
     'main_subtitle' => 'PHP 8.3 is a major update of the PHP language.<br class="display-none-md">It contains many new features, including Readonly amendments, Typed class constants, Randomizer additions, performance improvements and more.',
@@ -17,10 +17,7 @@ return [
     'randomizer_getbytesfromstring_title' => 'New <code>Randomizer<span style="word-break: break-all;">::</span>getBytesFromString()</code> method',
     'randomizer_getbytesfromstring_description' => 'The <a href="/releases/8.2/en.php#random_extension">Random Extension</a> that was added in PHP 8.2 was extended by a new method to generate random strings consisting of specific bytes only. This method allows to easily generate random identifiers, such as domain names, and numeric strings of arbitrary length.',
     'randomizer_getfloat_nextfloat_title' => 'New <code>Randomizer::getFloat()</code> and <code>Randomizer::nextFloat()</code> methods',
-    'randomizer_getfloat_nextfloat_description' => 'The algorithm used is the γ-section algorithm as published in:
-            <a href="https://doi.org/10.1145/3503512" target="_blank" rel="noopener noreferrer">Drawing Random
-                Floating-Point Numbers from an Interval</a>.
-            Frédéric Goualard, ACM Trans. Model. Comput. Simul., 32:3, 2022.',
+    'randomizer_getfloat_nextfloat_description' => '<p>Due to the limited precision and implicit rounding of floating point numbers, generating an unbiased float lying within a specific interval is non-trivial and the commonly used userland solutions may generate biased results or numbers outside the requested range.</p><p>The Randomizer was also extended with two methods to generate random floats in an unbiased fashion. The <code>Randomizer::getFloat()</code> method uses the γ-section algorithm that was published in <a href="https://doi.org/10.1145/3503512" target="_blank" rel="noopener noreferrer">Drawing Random Floating-Point Numbers from an Interval. Frédéric Goualard, ACM Trans. Model. Comput. Simul., 32:3, 2022.</a></p>',
     'dynamic_class_constant_fetch_title' => 'Dynamic class constant fetch',
 
     'new_classes_title' => 'New Classes, Interfaces, and Functions',
@@ -41,7 +38,7 @@ return [
     'bc_range' => 'Changes to the <code>range()</code> function.',
     'bc_traits' => 'Changes in re-declaration of static properties in traits.',
     'bc_umultipledecimalseparators' => 'The <code>U_MULTIPLE_DECIMAL_SEPERATORS</code> constant is deprecated in favor of <code>U_MULTIPLE_DECIMAL_SEPARATORS</code>.',
-    'bc_mtrand' => 'The <code>MT_RAND_PHP</code> Mt19937 variant is deprecated.',
+    'bc_mtrand' => 'The <a href="/manual/en/random.constants.php#constant.mt-rand-php"><code>MT_RAND_PHP</code></a> Mt19937 variant is deprecated.',
     'bc_reflection' => '<a href="/manual/en/reflectionclass.getstaticproperties.php"><code>ReflectionClass::getStaticProperties()</code></a> is no longer nullable.',
 
     'footer_title' => 'Better performance, better syntax, improved type safety.',

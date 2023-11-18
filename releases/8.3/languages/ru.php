@@ -1,25 +1,23 @@
 <?php
 
 return [
-    'common_header' => 'PHP 8.3 — большое обновление языка PHP. Улучшения readonly-свойств, типизированные константы классов, атрибут #[Override], улучшения Randomizer, улучшение производительности и многое другое',
+    'common_header' => 'PHP 8.3 — большое обновление языка PHP. Оно содержит множество новых возможностей, включая улучшения readonly-свойств, типизированные константы классов, атрибут #[Override], улучшения класса Randomizer, улучшение производительности и многое другое',
     'documentation' => 'Документация',
     'main_title' => 'выпущен!',
     'main_subtitle' => 'PHP 8.3 — большое обновление языка PHP.<br class="display-none-md">Оно содержит множество новых возможностей, включая улучшения readonly-свойств, типизированные константы классов, атрибут #[Override], улучшения класса Randomizer, улучшение производительности и многое другое',
     'upgrade_now' => 'Переходите на PHP 8.3!',
 
-    'readonly_title' => 'Улучшения readonly-свойств',
+    'readonly_title' => 'Глубокое клонирование readonly-свойств',
     'readonly_description' => 'Свойства, доступные только для чтения (<code>readonly</code>) теперь могут быть изменены один раз с помощью магического метода <code>__clone</code> для обеспечения возможности глубокого клонирования readonly-свойств.',
     'json_validate_title' => 'Новая функция <code>json_validate()</code>',
     'json_validate_description' => 'Функция <code>json_validate()</code> позволяет проверить, является ли строка синтаксически корректным JSON, при этом она более эффективна, чем функция <code>json_decode()</code>.',
     'typed_class_constants_title' => 'Типизированные константы классов',
-    'override_title' => 'Атрибут <code>#[\Override]</code>',
+    'override_title' => 'Новый атрибут <code>#[\Override]</code>',
     'override_description' => 'Добавив методу атрибут <code>#[\Override]</code>, PHP убедится, что метод с таким же именем существует в родительском классе или в реализованном интерфейсе. Добавление атрибута даёт понять, что переопределение родительского метода является намеренным, а также упрощает рефакторинг, поскольку удаление переопределённого родительского метода будет обнаружено.',
     'randomizer_getbytesfromstring_title' => 'Новый метод <code>Randomizer<span style="word-break: break-all;">::</span>getBytesFromString()</code>',
     'randomizer_getbytesfromstring_description' => '<a href="/releases/8.2/ru.php#random_extension">Модуль Random</a>, добавленный в PHP 8.2, был дополнен новым методом генерации случайных строк, состоящих только из определённых байтов. Этот метод позволяет легко генерировать случайные идентификаторы, например, имена доменов и числовые строки произвольной длины.',
     'randomizer_getfloat_nextfloat_title' => 'Новые методы <code>Randomizer::getFloat()</code> и <code>Randomizer::nextFloat()</code>',
-    'randomizer_getfloat_nextfloat_description' => 'В качестве алгоритма используется алгоритм γ-секции, опубликованный в статье:
-        <a href="https://doi.org/10.1145/3503512" target="_blank" rel="noopener noreferrer">Drawing Random Floating-Point Numbers from an Interval</a>.
-        Frédéric Goualard, ACM Trans. Model. Comput. Simul., 32:3, 2022.',
+    'randomizer_getfloat_nextfloat_description' => '<p>Из-за ограниченной точности и неявного округления чисел с плавающей точкой генерация несмещённого числа, лежащего в определённом интервале, является нетривиальной задачей, а пользовательские решения могут давать смещённые результаты или числа, выходящие за пределы требуемого диапазона.</p><p>Класс Randomizer был расширен двумя методами, позволяющими генерировать случайные числа с плавающей точкой несмещённым образом. Метод <code>Randomizer::getFloat()</code> использует алгоритм γ-секции, который был опубликован в <a href="https://doi.org/10.1145/3503512" target="_blank" rel="noopener noreferrer">Drawing Random Floating-Point Numbers from an Interval. Frédéric Goualard, ACM Trans. Model. Comput. Simul., 32:3, 2022.</a></p>',
     'dynamic_class_constant_fetch_title' => 'Динамическое получение констант класса',
 
     'new_classes_title' => 'Новые классы, интерфейсы и функции',
@@ -40,7 +38,7 @@ return [
     'bc_range' => 'Изменения в функции <code>range()</code>.',
     'bc_traits' => 'Изменения в повторном объявлении статических свойств в трейтах.',
     'bc_umultipledecimalseparators' => 'Константа <code>U_MULTIPLE_DECIMAL_SEPERATORS</code> объявлена устаревшей, вместо неё рекомендуется использовать константу <code>U_MULTIPLE_DECIMAL_SEPARATORS</code>.',
-    'bc_mtrand' => 'Вариант Mt19937 <code>MT_RAND_PHP</code> объявлен устаревшим.',
+    'bc_mtrand' => 'Вариант Mt19937 <a href="/manual/ru/random.constants.php#constant.mt-rand-php"><code>MT_RAND_PHP</code></a> объявлен устаревшим.',
     'bc_reflection' => '<a href="/manual/ru/reflectionclass.getstaticproperties.php"><code>ReflectionClass::getStaticProperties()</code></a> теперь не возвращает значение <code>null</code>.',
 
     'footer_title' => 'Выше производительность, лучше синтаксис, надёжнее система типов.',
