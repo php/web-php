@@ -29,8 +29,8 @@ return [
     'new_mb_str_pad' => 'Новая функция <a href="/manual/ru/function.mb-str-pad.php"><code>mb_str_pad()</code></a>.',
     'new_posix' => 'Новые функции <a href="/manual/ru/function.posix-sysconf.php"><code>posix_sysconf()</code></a>, <a href="/manual/ru/function.posix-pathconf.php"><code>posix_pathconf()</code></a>, <a href="/manual/ru/function.posix-fpathconf.php"><code>posix_fpathconf()</code></a> и <a href="/manual/ru/function.posix-eaccess.php"><code>posix_eaccess()</code></a>.',
     'new_reflection' => 'Новый метод <a href="/manual/ru/reflectionmethod.createfrommethodname.php"><code>ReflectionMethod::createFromMethodName()</code></a>.',
-    'new_socket' => 'Новая функция <code>socket_atmark()</code>.',
-    'new_str' => 'Новые функции <a href="/manual/ru/function.str-increment.php"><code>str_increment()</code></a>, <a href="/manual/ru/function.str-decrement.php"><code>str_decrement()</code></a> и <code>stream_context_set_options()</code>.',
+    'new_socket' => 'Новая функция <a href="/manual/ru/function.socket-atmark.php"><code>socket_atmark()</code></a>.',
+    'new_str' => 'Новые функции <a href="/manual/ru/function.str-increment.php"><code>str_increment()</code></a>, <a href="/manual/ru/function.str-decrement.php"><code>str_decrement()</code></a> и <a href="/manual/ru/function.stream-context-set-option.php"><code>stream_context_set_options()</code></a>.',
     'new_ziparchive' => 'Новый метод <a href="/manual/ru/ziparchive.getarchiveflag.php"><code>ZipArchive::getArchiveFlag()</code></a>.',
     'new_openssl_ec' => 'Поддержка генерации EC-ключей с пользовательскими EC-параметрами в модуле OpenSSL.',
 
