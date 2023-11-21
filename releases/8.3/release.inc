@@ -141,17 +141,14 @@ PHP
                             <<<'PHP'
 use PHPUnit\Framework\TestCase;
 
-final class MyTest extends TestCase
-{
+final class MyTest extends TestCase {
     protected $logFile;
 
-    protected function setUp(): void
-    {
+    protected function setUp(): void {
         $this->logFile = fopen('/tmp/logfile', 'w');
     }
 
-    protected function taerDown(): void
-    {
+    protected function taerDown(): void {
         fclose($this->logFile);
         unlink('/tmp/logfile');
     }
@@ -172,18 +169,15 @@ PHP
                             <<<'PHP'
 use PHPUnit\Framework\TestCase;
 
-final class MyTest extends TestCase
-{
+final class MyTest extends TestCase {
     protected $logFile;
 
-    protected function setUp(): void
-    {
+    protected function setUp(): void {
         $this->logFile = fopen('/tmp/logfile', 'w');
     }
 
     #[\Override]
-    protected function taerDown(): void
-    {
+    protected function taerDown(): void {
         fclose($this->logFile);
         unlink('/tmp/logfile');
     }
@@ -213,23 +207,24 @@ PHP
                     <div class="php8-code phpcode">
                         <?php highlight_php_trimmed(
                             <<<'PHP'
+class PHP {
+    public string $version = '8.2';
+}
+
 readonly class Foo {
-    public \DateTime $dateTime;
+    public function __construct(
+        public PHP $php
+    ) {}
 
-    function __construct(\DateTime $dateTime) {
-        $this->dateTime = $dateTime;
-    }
-
-    public function __clone()
-    {
-        $this->dateTime = clone $this->dateTime;
+    public function __clone(): void {
+        $this->php = clone $this->php;
     }
 }
 
-$today = new Foo(new \DateTime());
-$tomorrow = clone $today;
+$instance = new Foo(new PHP());
+$cloned = clone $instance;
 
-// Fatal error: Cannot modify readonly property Foo::$dateTime
+// Fatal error: Cannot modify readonly property Foo::$php
 PHP
 
                         ); ?>
@@ -241,23 +236,24 @@ PHP
                     <div class="php8-code phpcode">
                         <?php highlight_php_trimmed(
                             <<<'PHP'
+class PHP {
+    public string $version = '8.2';
+}
+
 readonly class Foo {
-    public \DateTime $dateTime;
+    public function __construct(
+        public PHP $php
+    ) {}
 
-    function __construct(\DateTime $dateTime) {
-        $this->dateTime = $dateTime;
-    }
-
-    public function __clone()
-    {
-        $this->dateTime = clone $this->dateTime;
+    public function __clone(): void {
+        $this->php = clone $this->php;
     }
 }
 
-$today = new Foo(new \DateTime());
-$tomorrow = clone $today;
+$instance = new Foo(new PHP());
+$cloned = clone $instance;
 
-$tomorrow->dateTime->modify('+1 day');
+$cloned->php->version = '8.3';
 PHP
                         ); ?>
                     </div>
@@ -272,7 +268,8 @@ PHP
             <h2 class="php8-h2" id="json_validate">
                 <?= message('json_validate_title', $lang) ?>
                 <a class="php8-rfc" href="https://wiki.php.net/rfc/json_validate">RFC</a>
-                <a class="php8-rfc" href="/manual/<?= $lang ?>/function.json-validate.php"><?= message('documentation', $lang) ?></a>
+                <a class="php8-rfc"
+                   href="/manual/<?= $lang ?>/function.json-validate.php"><?= message('documentation', $lang) ?></a>
             </h2>
             <div class="php8-compare__main">
                 <div class="php8-compare__block example-contents">
@@ -282,6 +279,7 @@ PHP
                             <<<'PHP'
 function json_validate(string $string): bool {
     json_decode($string);
+
     return json_last_error() === JSON_ERROR_NONE;
 }
 
@@ -312,7 +310,8 @@ PHP
             <h2 class="php8-h2" id="randomizer_get_bytes_from_string">
                 <?= message('randomizer_getbytesfromstring_title', $lang) ?>
                 <a class="php8-rfc" href="https://wiki.php.net/rfc/randomizer_additions#getbytesfromstring">RFC</a>
-                <a class="php8-rfc" href="/manual/<?= $lang ?>/random-randomizer.getbytesfromstring.php"><?= message('documentation', $lang) ?></a>
+                <a class="php8-rfc"
+                   href="/manual/<?= $lang ?>/random-randomizer.getbytesfromstring.php"><?= message('documentation', $lang) ?></a>
             </h2>
             <div class="php8-compare__main">
                 <div class="php8-compare__block example-contents">
@@ -381,7 +380,8 @@ PHP
             <h2 class="php8-h2" id="randomizer_get_float">
                 <?= message('randomizer_getfloat_nextfloat_title', $lang) ?>
                 <a class="php8-rfc" href="https://wiki.php.net/rfc/randomizer_additions#getfloat">RFC</a>
-                <a class="php8-rfc" href="/manual/<?= $lang ?>/random-randomizer.getfloat.php"><?= message('documentation', $lang) ?></a>
+                <a class="php8-rfc"
+                   href="/manual/<?= $lang ?>/random-randomizer.getfloat.php"><?= message('documentation', $lang) ?></a>
             </h2>
             <div class="php8-compare__main">
                 <div class="php8-compare__block example-contents">
@@ -395,6 +395,7 @@ function getFloat(float $min, float $max) {
     // return values outside the given range. This is impossible
     // to work around in userland.
     $offset = random_int(0, PHP_INT_MAX) / PHP_INT_MAX;
+
     return $offset * ($max - $min) + $min;
 }
 
@@ -474,6 +475,7 @@ PHP
                     <li><?= message('bc_mtrand', $lang) ?></li>
                     <li><?= message('bc_reflection', $lang) ?></li>
                     <li><?= message('bc_ini', $lang) ?></li>
+                    <li><?= message('bc_standard', $lang) ?></li>
                 </ul>
             </div>
         </div>
