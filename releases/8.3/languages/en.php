@@ -35,6 +35,7 @@ return [
     'new_openssl_ec' => 'Support for generation EC keys with custom EC parameters in OpenSSL extension.',
     'new_ini' => 'New INI setting <a href="/manual/en/migration83.other-changes.php#migration83.other-changes.ini"><code>zend.max_allowed_stack_size</code></a> to set the maximum allowed stack size.',
     'ini_fallback' => 'php.ini now supports fallback/default value syntax.',
+    'anonymous_readonly' => 'Anonymous classes can now be readonly.',
 
     'bc_title' => 'Deprecations and backward compatibility breaks',
     'bc_datetime' => '<a href="https://wiki.php.net/rfc/datetime-exceptions">More Appropriate Date/Time Exceptions</a>.',
