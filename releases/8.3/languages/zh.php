@@ -38,6 +38,7 @@ return [
     'new_ziparchive' => '新增 <a href="/manual/zh/ziparchive.getarchiveflag.php"><code>ZipArchive::getArchiveFlag()</code></a> 方法。',
     'new_openssl_ec' => '支持在 OpenSSL 扩展中使用自定义 EC 参数生成 EC 密钥。',
     'new_ini' => '新增 INI 设置 <a href="/manual/zh/migration83.other-changes.php#migration83.other-changes.ini"><code>zend.max_allowed_stack_size</code></a> 用于设置允许的最大堆栈大小。',
+    'ini_fallback' => 'php.ini 现在支持后备/默认值语法。',
 
     'bc_title' => '弃用和向后不兼容',
     'bc_datetime' => '<a href="https://wiki.php.net/rfc/datetime-exceptions">更合适的 Date/Time 异常。</a>',

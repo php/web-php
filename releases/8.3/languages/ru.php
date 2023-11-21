@@ -34,6 +34,7 @@ return [
     'new_ziparchive' => 'Новый метод <a href="/manual/ru/ziparchive.getarchiveflag.php"><code>ZipArchive::getArchiveFlag()</code></a>.',
     'new_openssl_ec' => 'Поддержка генерации EC-ключей с пользовательскими EC-параметрами в модуле OpenSSL.',
     'new_ini' => 'Новый параметр INI <a href="/manual/ru/migration83.other-changes.php#migration83.other-changes.ini"><code>zend.max_allowed_stack_size</code></a> для установки максимально допустимого размера стека.',
+    'ini_fallback' => 'php.ini теперь поддерживает синтаксис резервных значений/значений по умолчанию.',
 
     'bc_title' => 'Устаревшая функциональность и изменения в обратной совместимости',
     'bc_datetime' => '<a href="https://wiki.php.net/rfc/datetime-exceptions">Более подходящие исключения в модуле Date/Time</a>.',

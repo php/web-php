@@ -493,6 +493,7 @@ No syntax errors detected in bar.php
                     <li><?= message('new_ziparchive', $lang) ?></li>
                     <li><?= message('new_openssl_ec', $lang) ?></li>
                     <li><?= message('new_ini', $lang) ?></li>
+                    <li><?= message('ini_fallback', $lang) ?></li>
                 </ul>
             </div>
         </div>
