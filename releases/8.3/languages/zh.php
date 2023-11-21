@@ -23,6 +23,8 @@ return [
     'randomizer_getfloat_nextfloat_title' => '新增 <code>Randomizer::getFloat()</code> 和 <code>Randomizer::nextFloat()</code> 方法',
     'randomizer_getfloat_nextfloat_description' => '<p>由于浮点数的精度和隐式四舍五入的限制，在特定区间内生成无偏差的浮点数并非易事，常建的用户解决方案可能会生成有偏差的结果或超出要求范围的数字。</p><p>Randomizer 扩展了两种方法，用于随机生成无偏差的浮点数。<code>Randomizer::getFloat()</code> 方法使用的是 γ-section 算法，该算法发表于 <a href="https://doi.org/10.1145/3503512" target="_blank" rel="noopener noreferrer">Drawing Random Floating-Point Numbers from an Interval. Frédéric Goualard, ACM Trans. Model. Comput. Simul., 32:3, 2022.</a></p>',
     'dynamic_class_constant_fetch_title' => '动态获取类常量',
+    'command_line_linter_title' => '命令行 linter 支持多个文件',
+    'command_line_linter_description' => '<p>命令行 linter 现在接受文件名的可变输入以进行 lint</p>',
 
     'new_classes_title' => '新的类、接口和函数',
     'new_dom' => '新增 <a href="/manual/zh/domelement.getattributenames.php"><code>DOMElement::getAttributeNames()</code></a>、<a href="/manual/zh/domelement.insertadjacentelement.php"><code>DOMElement::insertAdjacentElement()</code></a>、<a href="/manual/zh/domelement.insertadjacenttext.php"><code>DOMElement::insertAdjacentText()</code></a>、<a href="/manual/zh/domelement.toggleattribute.php"><code>DOMElement::toggleAttribute()</code></a>、<a href="/manual/zh/domnode.contains.php"><code>DOMNode::contains()</code></a>、<a href="/manual/zh/domnode.getrootnode.php"><code>DOMNode::getRootNode()</code></a>、<a href="/manual/zh/domnode.isequalnode.php"><code>DOMNode::isEqualNode()</code></a>、<code>DOMNameSpaceNode::contains()</code> 和 <a href="/manual/zh/domparentnode.replacechildren.php"><code>DOMParentNode::replaceChildren()</code></a> 方法。',

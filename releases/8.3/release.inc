@@ -440,6 +440,40 @@ PHP
             <?= message('randomizer_getfloat_nextfloat_description', $lang) ?>
         </div>
 
+        <div class="php8-compare">
+            <h2 class="php8-h2" id="command_line_linter">
+                <?= message('command_line_linter_title', $lang) ?>
+                <a class="php8-rfc" href="https://github.com/php/php-src/issues/10024">PR</a>
+                <a class="php8-rfc" href="/manual/<?= $lang ?>/features.commandline.options.php"><?= message('documentation', $lang) ?></a>
+            </h2>
+            <div class="php8-compare__main">
+                <div class="php8-compare__block example-contents">
+                    <div class="php8-compare__label">PHP &lt; 8.3</div>
+                    <div class="php8-code phpcode">
+                        <code>
+php -l foo.php bar.php
+No syntax errors detected in foo.php
+                        </code>
+                    </div>
+                </div>
+                <div class="php8-compare__arrow"></div>
+                <div class="php8-compare__block example-contents">
+                    <div class="php8-compare__label php8-compare__label_new">PHP 8.3</div>
+                    <div class="php8-code phpcode">
+                        <code>
+php -l foo.php bar.php
+No syntax errors detected in foo.php
+No syntax errors detected in bar.php
+                        </code>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="php8-compare__content">
+            <?= message('command_line_linter_description', $lang) ?>
+        </div>
+
 
     </section>
 
