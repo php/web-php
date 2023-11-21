@@ -34,7 +34,7 @@ return [
     'new_ini' => 'Новый параметр INI <a href="/manual/ru/migration83.other-changes.php#migration83.other-changes.ini"><code>zend.max_allowed_stack_size</code></a> для установки максимально допустимого размера стека.',
 
     'bc_title' => 'Устаревшая функциональность и изменения в обратной совместимости',
-    'bc_datetime' => 'Более подходящие исключения в модуле Date/Time.',
+    'bc_datetime' => '<a href="https://wiki.php.net/rfc/datetime-exceptions">Более подходящие исключения в модуле Date/Time</a>.',
     'bc_arrays' => 'Присвоение отрицательного индекса <code>n</code> пустому массиву теперь гарантирует, что следующим индексом будет <code>n + 1</code>, а не <code>0</code>.',
     'bc_range' => 'Изменения в функции <code>range()</code>.',
     'bc_traits' => 'Изменения в повторном объявлении статических свойств в трейтах.',

@@ -38,7 +38,7 @@ return [
     'new_ini' => '新增 INI 设置 <a href="/manual/zh/migration83.other-changes.php#migration83.other-changes.ini"><code>zend.max_allowed_stack_size</code></a> 用于设置允许的最大堆栈大小。',
 
     'bc_title' => '弃用和向后不兼容',
-    'bc_datetime' => '更合适的 Date/Time 异常。',
+    'bc_datetime' => '<a href="https://wiki.php.net/rfc/datetime-exceptions">更合适的 Date/Time 异常。</a>',
     'bc_arrays' => '现在在空数组中获取负索引 <code>n</code> 时，将确保下一个索引是 <code>n + 1</code> 而不是 <code>0</code>。',
     'bc_range' => '对 <code>range()</code> 函数的更改。',
     'bc_traits' => '在 traits 中重新声明静态属性的更改。',

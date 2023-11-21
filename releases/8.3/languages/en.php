@@ -34,7 +34,7 @@ return [
     'new_ini' => 'New INI setting <a href="/manual/en/migration83.other-changes.php#migration83.other-changes.ini"><code>zend.max_allowed_stack_size</code></a> to set the maximum allowed stack size.',
 
     'bc_title' => 'Deprecations and backward compatibility breaks',
-    'bc_datetime' => 'More Appropriate Date/Time Exceptions.',
+    'bc_datetime' => '<a href="https://wiki.php.net/rfc/datetime-exceptions">More Appropriate Date/Time Exceptions</a>.',
     'bc_arrays' => 'Assigning a negative index <code>n</code> to an empty array will now make sure that the next index is <code>n + 1</code> instead of <code>0</code>.',
     'bc_range' => 'Changes to the <code>range()</code> function.',
     'bc_traits' => 'Changes in re-declaration of static properties in traits.',
