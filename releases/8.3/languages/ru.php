@@ -31,7 +31,7 @@ return [
     'new_str' => 'Новые функции <a href="/manual/ru/function.str-increment.php"><code>str_increment()</code></a>, <a href="/manual/ru/function.str-decrement.php"><code>str_decrement()</code></a> и <a href="/manual/ru/function.stream-context-set-option.php"><code>stream_context_set_options()</code></a>.',
     'new_ziparchive' => 'Новый метод <a href="/manual/ru/ziparchive.getarchiveflag.php"><code>ZipArchive::getArchiveFlag()</code></a>.',
     'new_openssl_ec' => 'Поддержка генерации EC-ключей с пользовательскими EC-параметрами в модуле OpenSSL.',
-    'new_ini' => 'Новый параметр INI <a href="/manual/en/migration83.other-changes.php#migration83.other-changes.ini"><code>zend.max_allowed_stack_size</code></a> для установки максимально допустимого размера стека.',
+    'new_ini' => 'Новый параметр INI <a href="/manual/ru/migration83.other-changes.php#migration83.other-changes.ini"><code>zend.max_allowed_stack_size</code></a> для установки максимально допустимого размера стека.',
 
     'bc_title' => 'Устаревшая функциональность и изменения в обратной совместимости',
     'bc_datetime' => 'Более подходящие исключения в модуле Date/Time.',
