@@ -28,7 +28,7 @@ return [
     'new_posix' => 'New <a href="/manual/en/function.posix-sysconf.php"><code>posix_sysconf()</code></a>, <a href="/manual/en/function.posix-pathconf.php"><code>posix_pathconf()</code></a>, <a href="/manual/en/function.posix-fpathconf.php"><code>posix_fpathconf()</code></a>, and <a href="/manual/en/function.posix-eaccess.php"><code>posix_eaccess()</code></a> functions.',
     'new_reflection' => 'New <a href="/manual/en/reflectionmethod.createfrommethodname.php"><code>ReflectionMethod::createFromMethodName()</code></a> method.',
     'new_socket' => 'New <a href="/manual/en/function.socket-atmark.php"><code>socket_atmark()</code></a> function.',
-    'new_str' => 'New <a href="/manual/en/function.str-increment.php"><code>str_increment()</code></a>, <a href="/manual/en/function.str-decrement.php"><code>str_decrement()</code></a>, and <a href="/manual/en/function.stream-context-set-option.php"><code>stream_context_set_options()</code></a> functions.',
+    'new_str' => 'New <a href="/manual/en/function.str-increment.php"><code>str_increment()</code></a>, <a href="/manual/en/function.str-decrement.php"><code>str_decrement()</code></a>, and <a href="/manual/en/function.stream-context-set-options.php"><code>stream_context_set_options()</code></a> functions.',
     'new_ziparchive' => 'New <a href="/manual/en/ziparchive.getarchiveflag.php"><code>ZipArchive::getArchiveFlag()</code></a> method.',
     'new_openssl_ec' => 'Support for generation EC keys with custom EC parameters in OpenSSL extension.',
     'new_ini' => 'New INI setting <a href="/manual/en/migration83.other-changes.php#migration83.other-changes.ini"><code>zend.max_allowed_stack_size</code></a> to set the maximum allowed stack size.',
