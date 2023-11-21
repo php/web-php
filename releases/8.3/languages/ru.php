@@ -31,6 +31,7 @@ return [
     'new_str' => 'Новые функции <a href="/manual/ru/function.str-increment.php"><code>str_increment()</code></a>, <a href="/manual/ru/function.str-decrement.php"><code>str_decrement()</code></a> и <a href="/manual/ru/function.stream-context-set-option.php"><code>stream_context_set_options()</code></a>.',
     'new_ziparchive' => 'Новый метод <a href="/manual/ru/ziparchive.getarchiveflag.php"><code>ZipArchive::getArchiveFlag()</code></a>.',
     'new_openssl_ec' => 'Поддержка генерации EC-ключей с пользовательскими EC-параметрами в модуле OpenSSL.',
+    'new_ini' => 'Новый параметр INI <a href="/manual/en/migration83.other-changes.php#migration83.other-changes.ini"><code>zend.max_allowed_stack_size</code></a> для установки максимально допустимого размера стека.',
 
     'bc_title' => 'Устаревшая функциональность и изменения в обратной совместимости',
     'bc_datetime' => 'Более подходящие исключения в модуле Date/Time.',
@@ -40,6 +41,7 @@ return [
     'bc_umultipledecimalseparators' => 'Константа <code>U_MULTIPLE_DECIMAL_SEPERATORS</code> объявлена устаревшей, вместо неё рекомендуется использовать константу <code>U_MULTIPLE_DECIMAL_SEPARATORS</code>.',
     'bc_mtrand' => 'Вариант Mt19937 <a href="/manual/ru/random.constants.php#constant.mt-rand-php"><code>MT_RAND_PHP</code></a> объявлен устаревшим.',
     'bc_reflection' => '<a href="/manual/ru/reflectionclass.getstaticproperties.php"><code>ReflectionClass::getStaticProperties()</code></a> теперь не возвращает значение <code>null</code>.',
+    'bc_ini' => 'Параметры INI <a href="/manual/ru/info.configuration.php#ini.assert.active"><code>assert.active</code></a>, <a href="/manual/ru/info.configuration.php#ini.assert.bail"><code>assert.bail</code></a>, <a href="/manual/ru/info.configuration.php#ini.assert.callback"><code>assert.callback</code></a>, <a href="/manual/ru/info.configuration.php#ini.assert.exception"><code>assert.exception</code></a> и <a href="/manual/ru/info.configuration.php#ini.assert.warning"><code>assert.warning</code></a> объявлены устаревшими.',
 
     'footer_title' => 'Выше производительность, лучше синтаксис, надёжнее система типов.',
     'footer_description' => '<p>Для загрузки исходного кода PHP 8.3 посетите страницу <a href="/downloads">Downloads</a>. Бинарные файлы Windows находятся на сайте <a href="https://windows.php.net/download">PHP for Windows</a>. Список изменений перечислен на странице <a href="/ChangeLog-8.php#PHP_8_3">ChangeLog</a>.</p>

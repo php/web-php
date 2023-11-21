@@ -31,6 +31,7 @@ return [
     'new_str' => 'New <a href="/manual/en/function.str-increment.php"><code>str_increment()</code></a>, <a href="/manual/en/function.str-decrement.php"><code>str_decrement()</code></a>, and <a href="/manual/en/function.stream-context-set-option.php"><code>stream_context_set_options()</code></a> functions.',
     'new_ziparchive' => 'New <a href="/manual/en/ziparchive.getarchiveflag.php"><code>ZipArchive::getArchiveFlag()</code></a> method.',
     'new_openssl_ec' => 'Support for generation EC keys with custom EC parameters in OpenSSL extension.',
+    'new_ini' => 'New INI setting <a href="/manual/en/migration83.other-changes.php#migration83.other-changes.ini"><code>zend.max_allowed_stack_size</code></a> to set the maximum allowed stack size.',
 
     'bc_title' => 'Deprecations and backward compatibility breaks',
     'bc_datetime' => 'More Appropriate Date/Time Exceptions.',
@@ -40,6 +41,7 @@ return [
     'bc_umultipledecimalseparators' => 'The <code>U_MULTIPLE_DECIMAL_SEPERATORS</code> constant is deprecated in favor of <code>U_MULTIPLE_DECIMAL_SEPARATORS</code>.',
     'bc_mtrand' => 'The <a href="/manual/en/random.constants.php#constant.mt-rand-php"><code>MT_RAND_PHP</code></a> Mt19937 variant is deprecated.',
     'bc_reflection' => '<a href="/manual/en/reflectionclass.getstaticproperties.php"><code>ReflectionClass::getStaticProperties()</code></a> is no longer nullable.',
+    'bc_ini' => 'INI settings <a href="/manual/en/info.configuration.php#ini.assert.active"><code>assert.active</code></a>, <a href="/manual/en/info.configuration.php#ini.assert.bail"><code>assert.bail</code></a>, <a href="/manual/en/info.configuration.php#ini.assert.callback"><code>assert.callback</code></a>, <a href="/manual/en/info.configuration.php#ini.assert.exception"><code>assert.exception</code></a>, and <a href="/manual/en/info.configuration.php#ini.assert.warning"><code>assert.warning</code></a> have been deprecated.',
 
     'footer_title' => 'Better performance, better syntax, improved type safety.',
     'footer_description' => '<p>For source downloads of PHP 8.3 please visit the <a href="/downloads">downloads</a> page. Windows binaries can be found on the <a href="https://windows.php.net/download">PHP for Windows</a> site. The list of changes is recorded in the <a href="/ChangeLog-8.php#PHP_8_3">ChangeLog</a>.</p>

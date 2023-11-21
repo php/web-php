@@ -457,6 +457,7 @@ PHP
                     <li><?= message('new_str', $lang) ?></li>
                     <li><?= message('new_ziparchive', $lang) ?></li>
                     <li><?= message('new_openssl_ec', $lang) ?></li>
+                    <li><?= message('new_ini', $lang) ?></li>
                 </ul>
             </div>
         </div>
@@ -472,6 +473,7 @@ PHP
                     <li><?= message('bc_umultipledecimalseparators', $lang) ?></li>
                     <li><?= message('bc_mtrand', $lang) ?></li>
                     <li><?= message('bc_reflection', $lang) ?></li>
+                    <li><?= message('bc_ini', $lang) ?></li>
                 </ul>
             </div>
         </div>
