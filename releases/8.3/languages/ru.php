@@ -47,6 +47,7 @@ return [
     'bc_reflection' => '<a href="/manual/ru/reflectionclass.getstaticproperties.php"><code>ReflectionClass::getStaticProperties()</code></a> теперь не возвращает значение <code>null</code>.',
     'bc_ini' => 'Параметры INI <a href="/manual/ru/info.configuration.php#ini.assert.active"><code>assert.active</code></a>, <a href="/manual/ru/info.configuration.php#ini.assert.bail"><code>assert.bail</code></a>, <a href="/manual/ru/info.configuration.php#ini.assert.callback"><code>assert.callback</code></a>, <a href="/manual/ru/info.configuration.php#ini.assert.exception"><code>assert.exception</code></a> и <a href="/manual/ru/info.configuration.php#ini.assert.warning"><code>assert.warning</code></a> объявлены устаревшими.',
     'bc_standard' => 'Вызов функции <a href="/manual/en/function.get-class.php"><code>get_class()</code></a> и <a href="/manual/en/function.get-parent-class.php"><code>get_parent_class()</code></a> без аргументов объявлен устаревшим.',
+    'bc_sqlite3' => 'SQLite3: режим ошибок по умолчанию установлен на исключения.',
 
     'footer_title' => 'Выше производительность, лучше синтаксис, надёжнее система типов.',
     'footer_description' => '<p>Для загрузки исходного кода PHP 8.3 посетите страницу <a href="/downloads">Downloads</a>. Бинарные файлы Windows находятся на сайте <a href="https://windows.php.net/download">PHP for Windows</a>. Список изменений перечислен на странице <a href="/ChangeLog-8.php#PHP_8_3">ChangeLog</a>.</p>

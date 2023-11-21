@@ -47,6 +47,7 @@ return [
     'bc_reflection' => '<a href="/manual/en/reflectionclass.getstaticproperties.php"><code>ReflectionClass::getStaticProperties()</code></a> is no longer nullable.',
     'bc_ini' => 'INI settings <a href="/manual/en/info.configuration.php#ini.assert.active"><code>assert.active</code></a>, <a href="/manual/en/info.configuration.php#ini.assert.bail"><code>assert.bail</code></a>, <a href="/manual/en/info.configuration.php#ini.assert.callback"><code>assert.callback</code></a>, <a href="/manual/en/info.configuration.php#ini.assert.exception"><code>assert.exception</code></a>, and <a href="/manual/en/info.configuration.php#ini.assert.warning"><code>assert.warning</code></a> have been deprecated.',
     'bc_standard' => 'Calling <a href="/manual/en/function.get-class.php"><code>get_class()</code></a> and <a href="/manual/en/function.get-parent-class.php"><code>get_parent_class()</code></a> without arguments are deprecated.',
+    'bc_sqlite3' => 'SQLite3: Default error mode set to exceptions.',
 
     'footer_title' => 'Better performance, better syntax, improved type safety.',
     'footer_description' => '<p>For source downloads of PHP 8.3 please visit the <a href="/downloads">downloads</a> page. Windows binaries can be found on the <a href="https://windows.php.net/download">PHP for Windows</a> site. The list of changes is recorded in the <a href="/ChangeLog-8.php#PHP_8_3">ChangeLog</a>.</p>

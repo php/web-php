@@ -51,6 +51,7 @@ return [
     'bc_reflection' => '<a href="/manual/zh/reflectionclass.getstaticproperties.php"><code>ReflectionClass::getStaticProperties()</code></a> 不再为空。',
     'bc_ini' => 'INI 配置 <a href="/manual/zh/info.configuration.php#ini.assert.active"><code>assert.active</code></a>、<a href="/manual/zh/info.configuration.php#ini.assert.bail"><code>assert.bail</code></a>、<a href="/manual/zh/info.configuration.php#ini.assert.callback"><code>assert.callback</code></a>、<a href="/manual/zh/info.configuration.php#ini.assert.exception"><code>assert.exception</code></a> 和 <a href="/manual/zh/info.configuration.php#ini.assert.warning"><code>assert.warning</code></a> 已被废弃。',
     'bc_standard' => '调用 <a href="/manual/zh/function.get-class.php"><code>get_class()</code></a> 和 <a href="/manual/zh/function.get-parent-class.php"><code>get_parent_class()</code></a> 时未提供参数，已被废弃。',
+    'bc_sqlite3' => 'SQLite3：默认错误模式设置为异常。',
 
     'footer_title' => '更好的性能、更好的语法、改进类型安全。',
     'footer_description' => '<p>

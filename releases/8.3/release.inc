@@ -512,6 +512,7 @@ No syntax errors detected in bar.php
                     <li><?= message('bc_reflection', $lang) ?></li>
                     <li><?= message('bc_ini', $lang) ?></li>
                     <li><?= message('bc_standard', $lang) ?></li>
+                    <li><?= message('bc_sqlite3', $lang) ?></li>
                 </ul>
             </div>
         </div>
