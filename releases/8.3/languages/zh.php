@@ -19,7 +19,7 @@ return [
     'override_title' => '新增 <code>#[\Override]</code> 属性',
     'override_description' => '通过给方法添加 <code>#[\Override]</code> 属性，PHP 将确保在父类或实现的接口中存在同名的方法。添加该属性表示明确说明覆盖父方法是有意为之，并且简化了重构过程，因为删除被覆盖的父方法将被检测出来。',
     'randomizer_getbytesfromstring_title' => '新增 <code>Randomizer<span style="word-break: break-all;">::</span>getBytesFromString()</code> 方法',
-    'randomizer_getbytesfromstring_description' => '在 PHP 8.2 中新增的 <a href="/releases/8.2/en.php#random_extension">Random 扩展</a> 通过一个新方法生成由特定字节组成的随机字符串。这种方法可以使开发者更轻松的生成随机的标识符（如域名），以及任意长度的数字字符串。',
+    'randomizer_getbytesfromstring_description' => '在 PHP 8.2 中新增的 <a href="/releases/8.2/zh.php#random_extension">Random 扩展</a> 通过一个新方法生成由特定字节组成的随机字符串。这种方法可以使开发者更轻松的生成随机的标识符（如域名），以及任意长度的数字字符串。',
     'randomizer_getfloat_nextfloat_title' => '新增 <code>Randomizer::getFloat()</code> 和 <code>Randomizer::nextFloat()</code> 方法',
     'randomizer_getfloat_nextfloat_description' => '<p>由于浮点数的精度和隐式四舍五入的限制，在特定区间内生成无偏差的浮点数并非易事，常建的用户解决方案可能会生成有偏差的结果或超出要求范围的数字。</p><p>Randomizer 扩展了两种方法，用于随机生成无偏差的浮点数。<code>Randomizer::getFloat()</code> 方法使用的是 γ-section 算法，该算法发表于 <a href="https://doi.org/10.1145/3503512" target="_blank" rel="noopener noreferrer">Drawing Random Floating-Point Numbers from an Interval. Frédéric Goualard, ACM Trans. Model. Comput. Simul., 32:3, 2022.</a></p>',
     'dynamic_class_constant_fetch_title' => '动态获取类常量',
@@ -38,7 +38,7 @@ return [
     'new_ini' => '新增 INI 设置 <a href="/manual/zh/migration83.other-changes.php#migration83.other-changes.ini"><code>zend.max_allowed_stack_size</code></a> 用于设置允许的最大堆栈大小。',
 
     'bc_title' => '弃用和向后不兼容',
-    'bc_datetime' => '更适合的 Date/Time 异常。',
+    'bc_datetime' => '更合适的 Date/Time 异常。',
     'bc_arrays' => '现在在空数组中获取负索引 <code>n</code> 时，将确保下一个索引是 <code>n + 1</code> 而不是 <code>0</code>。',
     'bc_range' => '对 <code>range()</code> 函数的更改。',
     'bc_traits' => '在 traits 中重新声明静态属性的更改。',
