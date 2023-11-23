@@ -1,1 +1,3 @@
-.icon-twitter:before { content: '\e800'; } /* '' */
+
+.icon-x-twitter:before { content: '\e800'; } /* '' */
+.icon-mastodon:before { content: '\e801'; } /* '' */

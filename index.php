@@ -208,8 +208,14 @@ $announcements
         <ul>
           <li>
             <a href="https://twitter.com/official_php">
-              <i class="icon-twitter"></i>
+              <i class="icon-x-twitter"></i>
               @official_php
+            </a>
+          </li>
+          <li>
+            <a href="https://fosstodon.org/@php">
+              <i class="icon-mastodon"></i>
+              @php@fosstodon.org
             </a>
           </li>
         </ul>
