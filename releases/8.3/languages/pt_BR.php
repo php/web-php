@@ -33,7 +33,7 @@ return [
     'new_openssl_ec' => 'Suporte para geração de chaves EC com parâmetros EC personalizados na extensão OpenSSL.',
     'new_ini' => 'Nova configuração INI <a href="/manual/pt_BR/migration83.other-changes.php#migration83.other-changes.ini"><code>zend.max_allowed_stack_size</code></a> para definir o tamanho máximo permitido da pilha.',
 
-    'bc_title' => 'Depreciações e quebras de retrocompatibilidade',
+    'bc_title' => 'Descontinuações e quebras de retrocompatibilidade',
     'bc_datetime' => 'Exceções de Date/Time mais apropriadas.',
     'bc_arrays' => 'Atribuir um índice negativo <code>n</code> a um array vazio agora garantirá que o próximo índice seja <code>n + 1</code> em vez de <code>0</code>.',
     'bc_range' => 'Alterações na função <code>range()</code>.',
