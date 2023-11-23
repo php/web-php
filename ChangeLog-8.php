@@ -3,9 +3,306 @@ $_SERVER['BASE_PAGE'] = 'ChangeLog-8.php';
 include_once __DIR__ . '/include/prepend.inc';
 include_once __DIR__ . '/include/changelogs.inc';
 
-$MINOR_VERSIONS = ['8.2', '8.1', '8.0'];
+$MINOR_VERSIONS = ['8.3', '8.2', '8.1', '8.0'];
 changelog_header(8, $MINOR_VERSIONS);
 ?>
+<a id="PHP_8_3"></a>
+
+<section class="version" id="8.3.0"><!-- {{{ 8.3.0 -->
+<h3>Version 8.3.0</h3>
+<b><?php release_date('23-Nov-2023'); ?></b>
+<ul><li>Bcmath:
+<ul>
+  <li>Fixed <?php githubissuel('php/php-src', 11761); ?> (removing trailing zeros from numbers) (jorgsowa)</li>
+</ul></li>
+<li>CLI:
+<ul>
+  <li>Added pdeathsig to builtin server to terminate workers when the master process is killed.</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 11104); ?> (STDIN/STDOUT/STDERR is not available for CLI without a script).</li>
+  <li>Implement <?php githubissuel('php/php-src', 10024); ?> (support linting multiple files at once using php -l).</li>
+</ul></li>
+<li>Core:
+<ul>
+  <li>Fix <?php githubissuel('php/php-src', 11388); ?> (Allow "final" modifier when importing a method from a trait).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 11406); ?> (segfault with unpacking and magic method closure).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 9388); ?> (Improve unset property and __get type incompatibility error message).</li>
+  <li>SA_ONSTACK is now set for signal handlers to be friendlier to other in-process code such as Go's cgo.</li>
+  <li>SA_ONSTACK is now set when signals are disabled.</li>
+  <li>Fix <?php githubissuel('php/php-src', 9649); ?>: Signal handlers now do a no-op instead of crashing when executed on threads not managed by TSRM.</li>
+  <li>Added shadow stack support for fibers.</li>
+  <li>Fix bug <?php githubissuel('php/php-src', 9965); ?> (Fix accidental caching of default arguments with side effects).</li>
+  <li>Implement <?php githubissuel('php/php-src', 10217); ?> (Use strlen() for determining the class_name length).</li>
+  <li>Fix bug <?php githubissuel('php/php-src', 8821); ?> (Improve line numbers for errors in constant expressions).</li>
+  <li>Fix bug <?php githubissuel('php/php-src', 10083); ?> (Allow comments between &amp; and parameter).</li>
+  <li>Zend Max Execution Timers is now enabled by default for ZTS builds on Linux.</li>
+  <li>Fix bug <?php githubissuel('php/php-src', 10469); ?> (Disallow .. in open_basedir paths set at runtime).</li>
+  <li>Fix bug <?php githubissuel('php/php-src', 10168); ?>, <?php githubissuel('php/php-src', 10582); ?> (Various segfaults with destructors and VM return values).</li>
+  <li>Fix bug <?php githubissuel('php/php-src', 10935); ?> (Use of trait doesn't redeclare static property if class has inherited it from its parent).</li>
+  <li>Fix bug <?php githubissuel('php/php-src', 11154); ?> (Negative indices on empty array don't affect next chosen index).</li>
+  <li>Fix bug <?php githubissuel('php/php-src', 8846); ?> (Implement delayed early binding for classes without parents).</li>
+  <li>Fix bug #79836 (Segfault in concat_function).</li>
+  <li>Fix bug #81705 (type confusion/UAF on set_error_handler with concat operation).</li>
+  <li>Fix <?php githubissuel('php/php-src', 11348); ?> (Closure created from magic method does not accept named arguments).</li>
+  <li>Fix <?php githubissuel('php/php-src', 11388); ?> (Allow "final" modifier when importing a method from a trait).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 11406); ?> (segfault with unpacking and magic method closure).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 11507); ?> (String concatenation performance regression in 8.3).</li>
+  <li>Fixed <?php githubissuel('php/php-src', 11488); ?> (Missing "Optional parameter before required" deprecation on union null type).</li>
+  <li>Implement the #[\Override] attribute RFC.</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 11601); ?> (Incorrect handling of unwind and graceful exit exceptions).</li>
+  <li>Added zend_call_stack_get implementation for OpenBSD.</li>
+  <li>Add stack limit check in zend_eval_const_expr().</li>
+  <li>Expose time spent collecting cycles in gc_status().</li>
+  <li>Remove WeakMap entries whose key is only reachable through the entry value.</li>
+  <li>Resolve open_basedir paths on INI update.</li>
+  <li>Fixed oss-fuzz #60741 (Leak in open_basedir).</li>
+  <li>Fixed segfault during freeing of some incompletely initialized objects due to OOM error (PDO, SPL, XSL).</li>
+  <li>Introduced Zend guard recursion protection to fix __debugInfo issue.</li>
+  <li>Fixed oss-fuzz #61712 (assertion failure with error handler during binary op).</li>
+  <li>Fixed <?php githubissuel('php/php-src', 11847); ?> (DTrace enabled build is broken).</li>
+  <li>Fixed OSS Fuzz #61865 (Undef variable in ++/-- for declared property that is unset in error handler).</li>
+  <li>Fixed warning emitted when checking if a user stream is castable.</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 12123); ?> (Compile error on MacOS with C++ extension when using ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 12189); ?> (#[Override] attribute in trait does not check for parent class implementations).</li>
+  <li>Fixed OSS Fuzz #62294 (Unsetting variable after ++/-- on string variable warning).</li>
+  <li>Fixed buffer underflow when compiling memoized expression.</li>
+  <li>Fixed oss-fuzz #63802 (OP1 leak in error path of post inc/dec).</li>
+</ul></li>
+<li>Curl:
+<ul>
+  <li>Added Curl options and constants up to (including) version 7.87.</li>
+</ul></li>
+<li>Date:
+<ul>
+  <li>Implement More Appropriate Date/Time Exceptions RFC.</li>
+</ul></li>
+<li>DOM:
+<ul>
+  <li>Fix bug <?php githubissuel('php/php-src', 8388); ?> (DOMAttr unescapes character reference).</li>
+  <li>Fix bug <?php githubissuel('php/php-src', 11308); ?> (getElementsByTagName() is O(N^2)).</li>
+  <li>Fix #79700 (wrong use of libxml oldNs leads to performance problem).</li>
+  <li>Fix #77894 (DOMNode::C14N() very slow on generated DOMDocuments even after normalisation).</li>
+  <li>Revert changes to DOMAttr::$value and DOMAttr::$nodeValue expansion.</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 11500); ?> (Namespace reuse in createElementNS() generates wrong output).</li>
+  <li>Implemented DOMDocument::adoptNode(). Previously this always threw a "not yet implemented" exception.</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 9628); ?> (Implicitly removing nodes from \DOMDocument breaks existing references).</li>
+  <li>Added DOMNode::contains() and DOMNameSpaceNode::contains().</li>
+  <li>Added DOMElement::getAttributeNames().</li>
+  <li>Added DOMNode::getRootNode().</li>
+  <li>Added DOMElement::className and DOMElement::id.</li>
+  <li>Added DOMParentNode::replaceChildren().</li>
+  <li>Added DOMNode::isConnected and DOMNameSpaceNode::isConnected.</li>
+  <li>Added DOMNode::parentElement and DOMNameSpaceNode::parentElement.</li>
+  <li>Added DOMNode::isEqualNode().</li>
+  <li>Added DOMElement::insertAdjacentElement() and DOMElement::insertAdjacentText().</li>
+  <li>Added DOMElement::toggleAttribute().</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 11792); ?> (LIBXML_NOXMLDECL is not implemented or broken).</li>
+  <li>adoptNode now respects the strict error checking property.</li>
+  <li>Align DOMChildNode parent checks with spec.</li>
+  <li><?php bugfix(80927); ?> (Removing documentElement after creating attribute node: possible use-after-free).</li>
+  <li>Fix various namespace prefix conflict resolution bugs.</li>
+  <li>Fix calling createAttributeNS() without prefix causing the default namespace of the element to change.</li>
+  <li>Fixed <?php githubissuel('php/php-src', 11952); ?> (Confusing warning when blocking entity loading via libxml_set_external_entity_loader).</li>
+  <li>Fix broken cache invalidation with deallocated and reallocated document node.</li>
+  <li>Fix compile error when php_libxml.h header is included in C++.</li>
+  <li><?php bugfix(47531); ?> (No way of removing redundant xmlns: declarations).</li>
+</ul></li>
+<li>Exif:
+<ul>
+  <li>Removed unneeded codepaths in exif_process_TIFF_in_JPEG().</li>
+</ul></li>
+<li>FFI:
+<ul>
+  <li>Implement <?php githubissuel('php/php-src', 11934); ?> (Allow to pass CData into struct and/or union fields).</li>
+</ul></li>
+<li>Fileinfo:
+<ul>
+  <li>Upgrade bundled libmagic to 5.43.</li>
+  <li>Fix <?php githubissuel('php/php-src', 11408); ?> (Unable to build PHP 8.3.0 alpha 1 / fileinfo extension).</li>
+</ul></li>
+<li>FPM:
+<ul>
+  <li>The status.listen shared pool now uses the same php_values (including expose_php) and php_admin_value as the pool it is shared with.</li>
+  <li>Added warning to log when fpm socket was not registered on the expected path.</li>
+  <li><?php bugfix(76067); ?> (system() function call leaks php-fpm listening sockets).</li>
+  <li>Fixed <?php githubissuel('php/php-src', 12077); ?> (PHP 8.3.0RC1 borked socket-close-on-exec.phpt).</li>
+</ul></li>
+<li>GD:
+<ul>
+  <li>Removed imagerotate "ignore_transparent" argument since it has no effect.</li>
+</ul></li>
+<li>Intl:
+<ul>
+  <li>Added pattern format error infos for numfmt_set_pattern.</li>
+  <li>Added MIXED_NUMBERS and HIDDEN_OVERLAY constants for the Spoofchecker's class.</li>
+  <li>Updated datefmt_set_timezone/IntlDateformatter::setTimezone returns type. (David Carlier).</li>
+  <li>Updated IntlBreakInterator::setText return type.</li>
+  <li>Updated IntlChar::enumCharNames return type.</li>
+  <li>Removed the BC break on IntlDateFormatter::construct which threw an exception with an invalid locale.</li>
+</ul></li>
+<li>JSON:
+<ul>
+  <li>Added json_validate().</li>
+</ul></li>
+<li>LDAP:
+<ul>
+  <li>Deprecate calling ldap_connect() with separate hostname and port.</li>
+</ul></li>
+<li>LibXML:
+<ul>
+  <li>Fix compile error with -Werror=incompatible-function-pointer-types and old libxml2.</li>
+</ul></li>
+<li>MBString:
+<ul>
+  <li>mb_detect_encoding is better able to identify the correct encoding for Turkish text.</li>
+  <li>mb_detect_encoding's "non-strict" mode now behaves as described in the documentation. Previously, it would return false if the same byte (for example, the first byte) of the input string was invalid in all candidate encodings. More generally, it would eliminate candidate encodings from consideration when an invalid byte was seen, and if the same input byte eliminated all remaining encodings still under consideration, it would return false. On the other hand, if all candidate encodings but one were eliminated from consideration, it would return the last remaining one without regard for how many encoding errors might be encountered later in the string. This is different from the behavior described in the documentation, which says: "If strict is set to false, the closest matching encoding will be returned." (Alex Dowad)</li>
+  <li>mb_strtolower, mb_strtotitle, and mb_convert_case implement conditional casing rules for the Greek letter sigma. For mb_convert_case, conditional casing only applies to MB_CASE_LOWER and MB_CASE_TITLE modes, not to MB_CASE_LOWER_SIMPLE and MB_CASE_TITLE_SIMPLE.</li>
+  <li>mb_detect_encoding is better able to identify UTF-8 and UTF-16 strings with a byte-order mark.</li>
+  <li>mb_decode_mimeheader interprets underscores in QPrint-encoded MIME encoded words as required by RFC 2047; they are converted to spaces. Underscores must be encoded as "=5F" in such MIME encoded words.</li>
+  <li>mb_encode_mimeheader no longer drops NUL (zero) bytes when QPrint-encoding the input string. This previously caused strings in certain text encodings, especially UTF-16 and UTF-32, to be corrupted by mb_encode_mimeheader.</li>
+  <li>Implement mb_str_pad() RFC.</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 11514); ?> (PHP 8.3 build fails with --enable-mbstring enabled).</li>
+  <li>Fix use-after-free of mb_list_encodings() return value.</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 11992); ?> (utf_encodings.phpt fails on Windows 32-bit).</li>
+</ul></li>
+<li>mysqli:
+<ul>
+  <li>mysqli_fetch_object raises a ValueError instead of an Exception.</li>
+</ul></li>
+<li>Opcache:
+<ul>
+  <li>Added start, restart and force restart time to opcache's phpinfo section.</li>
+  <li>Fix <?php githubissuel('php/php-src', 9139); ?>: Allow FFI in opcache.preload when opcache.preload_user=root.</li>
+  <li>Made opcache.preload_user always optional in the cli and phpdbg SAPIs.</li>
+  <li>Allows W/X bits on page creation on FreeBSD despite system settings.</li>
+  <li>Added memfd api usage, on Linux, for zend_shared_alloc_create_lock() to create an abstract anonymous file for the opcache's lock.</li>
+  <li>Avoid resetting JIT counter handlers from multiple processes/threads.</li>
+  <li>Fixed COPY_TMP type inference for references.</li>
+</ul></li>
+<li>OpenSSL:
+<ul>
+  <li>Added OPENSSL_CMS_OLDMIMETYPE and PKCS7_NOOLDMIMETYPE contants to switch between mime content types.</li>
+  <li>Fixed <?php githubissuel('php/php-src', 11054); ?>: Reset OpenSSL errors when using a PEM public key.</li>
+  <li>Added support for additional EC parameters in openssl_pkey_new.</li>
+</ul></li>
+<li>PCNTL:
+<ul>
+  <li>SA_ONSTACK is now set for pcntl_signal.</li>
+  <li>Added SIGINFO constant.</li>
+</ul></li>
+<li>PCRE:
+<ul>
+  <li>Update bundled libpcre2 to 10.42.</li>
+</ul></li>
+<li>PGSQL:
+<ul>
+  <li>pg_fetch_object raises a ValueError instead of an Exception.</li>
+  <li>pg_cancel use thread safe PQcancel api instead.</li>
+  <li>pg_trace new PGSQL_TRACE_SUPPRESS_TIMESTAMPS/PGSQL_TRACE_REGRESS_MODE contants support.</li>
+  <li>pg_set_error_verbosity adding PGSQL_ERRORS_STATE constant.</li>
+  <li>pg_convert/pg_insert E_WARNING on type errors had been converted to ValueError/TypeError exceptions.</li>
+  <li>Added pg_set_error_context_visibility to set the context's visibility within the error messages.</li>
+</ul></li>
+<li>Phar:
+<ul>
+  <li>Fix memory leak in phar_rename_archive().</li>
+</ul></li>
+<li>POSIX:
+<ul>
+  <li>Added posix_sysconf.</li>
+  <li>Added posix_pathconf.</li>
+  <li>Added posix_fpathconf.</li>
+  <li>Fixed zend_parse_arg_long's bool pointer argument assignment.</li>
+  <li>Added posix_eaccess.</li>
+</ul></li>
+<li>Random:
+<ul>
+  <li>Added Randomizer::getBytesFromString().</li>
+  <li>Added Randomizer::nextFloat(), ::getFloat(), and IntervalBoundary.</li>
+  <li>Enable getrandom() for NetBSD (from 10.x).</li>
+  <li>Deprecate MT_RAND_PHP.</li>
+  <li>Fix Randomizer::getFloat() returning incorrect results under certain circumstances.</li>
+</ul></li>
+<li>Reflection:
+<ul>
+  <li>Fix <?php githubissuel('php/php-src', 9470); ?> (ReflectionMethod constructor should not find private parent method).</li>
+  <li>Fix <?php githubissuel('php/php-src', 10259); ?> (ReflectionClass::getStaticProperties doesn't need null return type).</li>
+</ul></li>
+<li>SAPI:
+<ul>
+  <li>Fixed <?php githubissuel('php/php-src', 11141); ?> (Could not open input file: should be sent to stderr).</li>
+</ul></li>
+<li>Session:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 11529); ?> (Crash after dealing with an Apache request).</li>
+</ul></li>
+<li>SimpleXML:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 12192); ?> (SimpleXML infinite loop when getName() is called within foreach).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 12208); ?> (SimpleXML infinite loop when a cast is used inside a foreach).</li>
+  <li><?php bugfix(55098); ?> (SimpleXML iteration produces infinite loop).</li>
+</ul></li>
+<li>Sockets:
+<ul>
+  <li>Added SO_ATTACH_REUSEPORT_CBPF socket option, to give tighter control over socket binding for a cpu core.</li>
+  <li>Added SKF_AD_QUEUE for cbpf filters.</li>
+  <li>Added socket_atmark if send/recv needs using MSG_OOB.</li>
+  <li>Added TCP_QUICKACK constant, to give tigher control over ACK delays.</li>
+  <li>Added DONTFRAGMENT support for path MTU discovery purpose.</li>
+  <li>Added AF_DIVERT for raw socket for divert ports.</li>
+  <li>Added SOL_UPDLITE, UDPLITE_RECV_CSCOV and UDPLITE_SEND_CSCOV for updlite protocol support.</li>
+  <li>Added SO_RERROR, SO_ZEROIZE and SO_SPLICE netbsd and openbsd constants.</li>
+  <li>Added TCP_REPAIR for quietly close a connection.</li>
+  <li>Added SO_REUSEPORT_LB freebsd constant.</li>
+  <li>Added IP_BIND_ADDRESS_NO_PORT.</li>
+</ul></li>
+<li>SPL:
+<ul>
+  <li>Fixed <?php githubissuel('php/php-src', 11573); ?> (RecursiveDirectoryIterator::hasChildren is slow).</li>
+</ul></li>
+<li>Standard:
+<ul>
+  <li>E_NOTICEs emitted by unserialize() have been promoted to E_WARNING.</li>
+  <li>unserialize() now emits a new E_WARNING if the input contains unconsumed bytes.</li>
+  <li>Make array_pad's $length warning less confusing.</li>
+  <li>E_WARNING emitted by strtok in the caase both arguments are not provided when starting tokenisation.</li>
+  <li>password_hash() will now chain the original RandomException to the ValueError on salt generation failure.</li>
+  <li>Fix <?php githubissuel('php/php-src', 10239); ?> (proc_close after proc_get_status always returns -1).</li>
+  <li>Improve the warning message for unpack() in case not enough values were provided.</li>
+  <li>Fix <?php githubissuel('php/php-src', 11010); ?> (parse_ini_string() now preserves formatting of unquoted strings starting with numbers when the INI_SCANNER_TYPED flag is specified).</li>
+  <li>Fix <?php githubissuel('php/php-src', 10742); ?> (http_response_code emits no error when headers were already sent).</li>
+  <li>Added support for rounding negative places in number_format().</li>
+  <li>Prevent precision loss on formatting decimal integers in number_format().</li>
+  <li>Added usage of posix_spawn for proc_open when supported by OS.</li>
+  <li>Added $before_needle argument to strrchr().</li>
+  <li>Fixed <?php githubissuel('php/php-src', 11982); ?> (str_getcsv returns null byte for unterminated enclosure).</li>
+  <li>Fixed str_decrement() on "1".</li>
+</ul></li>
+<li>Streams:
+<ul>
+  <li><?php bugfix(51056); ?>: blocking fread() will block even if data is available.</li>
+  <li>Added storing of the original path used to open xport stream.</li>
+  <li>Implement <?php githubissuel('php/php-src', 8641); ?> (STREAM_NOTIFY_COMPLETED over HTTP never emitted).</li>
+  <li>Fix bug <?php githubissuel('php/php-src', 10406); ?> (fgets on a redis socket connection fails on PHP 8.3).</li>
+  <li>Implemented <?php githubissuel('php/php-src', 11242); ?> (_php_stream_copy_to_mem: Allow specifying a maximum length without allocating a buffer of that size).</li>
+  <li><?php bugfix(52335); ?> (fseek() on memory stream behavior different than file).</li>
+  <li><?php bugfix(76857); ?> (Can read "non-existant" files).</li>
+</ul></li>
+<li>XSLTProcessor:
+<ul>
+  <li><?php bugfix(69168); ?> (DomNode::getNodePath() returns invalid path).</li>
+</ul></li>
+<li>ZIP:
+<ul>
+  <li>zip extension version 1.22.0 for libzip 1.10.0.</li>
+  <li>add new error macros (ER_DATA_LENGTH and ER_NOT_ALLOWED).</li>
+  <li>add new archive global flags (ER_AFL_*).</li>
+  <li>add ZipArchive::setArchiveFlag and ZipArchive::getArchiveFlag methods.</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
+
+
 <a id="PHP_8_2"></a>
 
 <section class="version" id="8.2.13"><!-- {{{ 8.2.13 -->

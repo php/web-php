@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+  <title>PHP 8.3.0 Released!</title>
+  <id>https://www.php.net/archive/2023.php#2023-11-23-2</id>
+  <published>2023-11-23T15:43:03+00:00</published>
+  <updated>2023-11-23T15:43:03+00:00</updated>
+  <link href="https://www.php.net/index.php#2023-11-23-2" rel="alternate" type="text/html"/>
+  <link href="https://www.php.net/archive/2023.php#2023-11-23-2" rel="via" type="text/html"/>
+  <category term="releases" label="New PHP release"/>
+  <category term="frontpage" label="PHP.net frontpage news"/>
+  <content type="xhtml">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+      <p>The PHP development team announces the immediate availability of PHP 8.3.0. This release marks the latest minor release of the PHP language.</p>
+      <p>PHP 8.3 comes with numerous improvements and new features such as:</p>
+      <ul>
+        <li><a href="https://www.php.net/manual/en/migration83.new-features.php#migration83.new-features.core.typed-class-constants">Typed Class Constants</a></li>
+        <li><a href="https://www.php.net/manual/en/migration83.new-features.php#migration83.new-features.core.fetch-class-constant-dynamically-syntax">Fetch class constant dynamically syntax</a></li>
+        <li><a href="https://www.php.net/manual/en/migration83.new-features.php#migration83.new-features.core.readonly-modifier-improvements">Readonly Amendments</a></li>
+        <li><a href="https://www.php.net/manual/en/migration83.new-features.php#migration83.new-features.core.override-attribute">Override Attribute</a></li>
+        <li><a href="https://www.php.net/manual/en/random-randomizer.getbytesfromstring.php">New Randomizer method Random\Randomizer::getBytesFromString</a></li>
+        <li><a href="https://www.php.net/manual/en/function.json-validate.php">New function json_validate</a></li>
+        <li>And much much more...</li>
+      </ul>
+      <p>
+        For source downloads of PHP 8.3.0 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
+        Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
+        The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-8.php#8.3.0">ChangeLog</a>.
+      </p>
+      <p>
+        The <a href="https://php.net/manual/en/migration83.php">migration guide</a> is available in the PHP Manual.
+        Please consult it for the detailed list of new features and backward incompatible changes.
+      </p>
+      <p>Kudos to all the contributors and supporters!</p>
+   </div>
+  </content>
+</entry>
