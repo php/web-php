@@ -1,12 +1,14 @@
 <?xml version="1.0" standalone="no"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 <svg xmlns="http://www.w3.org/2000/svg">
-<metadata>Copyright (C) 2014 by original authors @ fontello.com</metadata>
+<metadata>Copyright (C) 2023 by original authors @ fontello.com</metadata>
 <defs>
 <font id="fontello" horiz-adv-x="1000" >
 <font-face font-family="fontello" font-weight="400" font-stretch="normal" units-per-em="1000" ascent="850" descent="-150" />
 <missing-glyph horiz-adv-x="1000" />
-<glyph glyph-name="twitter" unicode="&#xe800;" d="m25 74q19-2 43-2 126 0 224 77-59 1-105 36t-64 89q19-3 34-3 24 0 48 6-63 13-104 62t-41 115v2q38-21 82-23-37 25-59 64t-22 86q0 49 25 91 67-83 164-133t208-55q-5 21-5 41 0 75 53 127t127 53q78 0 132-57 61 12 114 44-20-64-79-100 52 6 104 28-37-54-90-93 0-8 0-23 0-73-21-145t-64-139-103-117-144-82-181-30q-151 0-276 81z" horiz-adv-x="928.6" />
+<glyph glyph-name="x-twitter" unicode="&#xe800;" d="M760 756h138l-301-344 354-468h-277l-218 284-248-284h-138l322 368-340 444h285l196-259 227 259z m-48-730h76l-493 652h-82l499-652z" horiz-adv-x="1000" />
+
+<glyph glyph-name="mastodon" unicode="&#xe801;" d="M846 500c0 190-125 246-125 246-122 56-446 55-567 0 0 0-124-56-124-246 0-226-13-507 206-565 79-20 147-25 202-22 99 6 155 36 155 36l-4 72s-71-23-150-20c-79 3-162 9-175 105a200 200 0 0 0-2 28c167-41 310-18 349-13 110 13 205 80 217 142 19 97 18 237 18 237z m-147-244h-91v223c0 97-125 101-125-14v-122h-91v122c0 115-125 111-125 14v-223h-91c0 238-10 289 36 342 51 56 156 60 203-12l23-38 22 38c47 72 153 68 203 12 46-54 36-104 36-342z" horiz-adv-x="875" />
 </font>
 </defs>
 </svg>
