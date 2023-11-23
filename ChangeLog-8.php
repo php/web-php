@@ -8,6 +8,83 @@ changelog_header(8, $MINOR_VERSIONS);
 ?>
 <a id="PHP_8_2"></a>
 
+<section class="version" id="8.2.13"><!-- {{{ 8.2.13 -->
+<h3>Version 8.2.13</h3>
+<b><?php release_date('23-Nov-2023'); ?></b>
+<ul><li>Core:
+<ul>
+  <li>Fixed double-free of non-interned enum case name.</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 12457); ?> (Incorrect result of stripos with single character needle).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 12468); ?> (Double-free of doc_comment when overriding static property via trait).</li>
+  <li>Fixed segfault caused by weak references to FFI objects.</li>
+  <li>Fixed max_execution_time: don't delete an unitialized timer.</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 12558); ?> (Arginfo soft-breaks with namespaced class return type if the class name starts with N).</li>
+</ul></li>
+<li>DOM:
+<ul>
+  <li>Fix registerNodeClass with abstract class crashing.</li>
+  <li>Add missing NULL pointer error check.</li>
+  <li>Fix validation logic of php:function() callbacks.</li>
+</ul></li>
+<li>Fiber:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 11121); ?> (ReflectionFiber segfault).</li>
+</ul></li>
+<li>FPM:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 9921); ?> (Loading ext in FPM config does not register module handlers).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 12232); ?> (FPM: segfault dynamically loading extension without opcache).</li>
+  <li><?php bugfix(76922); ?> (FastCGI terminates conn after FCGI_GET_VALUES).</li>
+</ul></li>
+<li>Intl:
+<ul>
+  <li>Removed the BC break on IntlDateFormatter::construct which threw an exception with an invalid locale.</li>
+</ul></li>
+<li>Opcache:
+<ul>
+  <li>Added warning when JIT cannot be enabled.</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 8143); ?> (Crashes in zend_accel_inheritance_cache_find since upgrading to 8.1.3 due to corrupt on-disk file cache).</li>
+</ul></li>
+<li>OpenSSL:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 12489); ?> (Missing sigbio creation checking in openssl_cms_verify).</li>
+</ul></li>
+<li>PCRE:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 11374); ?> (Backport upstream fix, Different preg_match result with -d pcre.jit=0).</li>
+</ul></li>
+<li>SOAP:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 12392); ?> (Segmentation fault on SoapClient::__getTypes).</li>
+  <li><?php bugfix(66150); ?> (SOAP WSDL cache race condition causes Segmentation Fault).</li>
+  <li><?php bugfix(67617); ?> (SOAP leaves incomplete cache file on ENOSPC).</li>
+  <li>Fix incorrect uri check in SOAP caching.</li>
+  <li>Fix segfault and assertion failure with refcounted props and arrays.</li>
+  <li>Fix potential crash with an edge case of persistent encoders.</li>
+  <li><?php bugfix(75306); ?> (Memleak in SoapClient).</li>
+</ul></li>
+<li>Streams:
+<ul>
+  <li><?php bugfix(75708); ?> (getimagesize with "&amp;$imageinfo" fails on StreamWrappers).</li>
+</ul></li>
+<li>XMLReader:
+<ul>
+  <li>Add missing NULL pointer error check.</li>
+</ul></li>
+<li>XMLWriter:
+<ul>
+  <li>Add missing NULL pointer error check.</li>
+</ul></li>
+<li>XSL:
+<ul>
+  <li>Add missing module dependency.</li>
+  <li>Fix validation logic of php:function() callbacks.</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
+
+
 <section class="version" id="8.2.12"><!-- {{{ 8.2.12 -->
 <h3>Version 8.2.12</h3>
 <b><?php release_date('26-Oct-2023'); ?></b>
