@@ -326,7 +326,7 @@ function getBytesFromString(string $string, int $length) {
     $result = '';
     for ($i = 0; $i < $length; $i++) {
         // random_int is not seedable for testing, but secure.
-        $result .= $string[random_int(0, $stringLength - 1)]);
+        $result .= $string[random_int(0, $stringLength - 1)];
     }
 
     return $result;
