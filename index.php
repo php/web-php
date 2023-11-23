@@ -164,6 +164,8 @@ site_header("Hypertext Preprocessor",
 
 <meta property="og:image" content="{$meta_image_path}" />
 <meta property="og:description" content="$meta_description" />
+
+<link href="https://fosstodon.org/@php" rel="me" />
 META
     ]
 );
