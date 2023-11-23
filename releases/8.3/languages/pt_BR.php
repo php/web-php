@@ -38,11 +38,11 @@ return [
     'bc_arrays' => 'Atribuir um índice negativo <code>n</code> a um array vazio agora garantirá que o próximo índice seja <code>n + 1</code> em vez de <code>0</code>.',
     'bc_range' => 'Alterações na função <code>range()</code>.',
     'bc_traits' => 'Alterações na redeclaração de propriedades estáticas em traits.',
-    'bc_umultipledecimalseparators' => 'A constante <code>U_MULTIPLE_DECIMAL_SEPERATORS</code> foi depreciada em favor de <code>U_MULTIPLE_DECIMAL_SEPARATORS</code>.',
-    'bc_mtrand' => 'A variante <a href="/manual/pt_BR/random.constants.php#constant.mt-rand-php"><code>MT_RAND_PHP</code></a> do Mt19937 está depreciada.',
+    'bc_umultipledecimalseparators' => 'A constante <code>U_MULTIPLE_DECIMAL_SEPERATORS</code> foi obsoleta em favor de <code>U_MULTIPLE_DECIMAL_SEPARATORS</code>.',
+    'bc_mtrand' => 'A variante <a href="/manual/pt_BR/random.constants.php#constant.mt-rand-php"><code>MT_RAND_PHP</code></a> do Mt19937 está obsoleta.',
     'bc_reflection' => '<a href="/manual/pt_BR/reflectionclass.getstaticproperties.php"><code>ReflectionClass::getStaticProperties()</code></a> não é mais nulo.',
-    'bc_ini' => 'As configurações INI <a href="/manual/pt_BR/info.configuration.php#ini.assert.active"><code>assert.active</code></a>, <a href="/manual/pt_BR/info.configuration.php#ini.assert.bail"><code>assert.bail</code></a>, <a href="/manual/pt_BR/info.configuration.php#ini.assert.callback"><code>assert.callback</code></a>, <a href="/manual/pt_BR/info.configuration.php#ini.assert.exception"><code>assert.exception</code></a> e <a href="/manual/pt_BR/info.configuration.php#ini.assert.warning"><code>assert.warning</code></a> foram depreciadas.',
-    'bc_standard' => 'Chamar <a href="/manual/pt_BR/function.get-class.php"><code>get_class()</code></a> e <a href="/manual/pt_BR/function.get-parent-class.php"><code>get_parent_class()</code></a> sem argumentos está depreciado.',
+    'bc_ini' => 'As configurações INI <a href="/manual/pt_BR/info.configuration.php#ini.assert.active"><code>assert.active</code></a>, <a href="/manual/pt_BR/info.configuration.php#ini.assert.bail"><code>assert.bail</code></a>, <a href="/manual/pt_BR/info.configuration.php#ini.assert.callback"><code>assert.callback</code></a>, <a href="/manual/pt_BR/info.configuration.php#ini.assert.exception"><code>assert.exception</code></a> e <a href="/manual/pt_BR/info.configuration.php#ini.assert.warning"><code>assert.warning</code></a> foram obsoletas.',
+    'bc_standard' => 'Chamar <a href="/manual/pt_BR/function.get-class.php"><code>get_class()</code></a> e <a href="/manual/pt_BR/function.get-parent-class.php"><code>get_parent_class()</code></a> sem argumentos está obsoleto.',
 
     'footer_title' => 'Melhorias de desempenho, sintaxe aprimorada, e maior segurança de tipos.',
     'footer_description' => '<p>Para downloads do código-fonte do PHP 8.3, visite a página de <a href="/downloads">downloads</a>. Binários para Windows podem ser encontrados no site <a href="https://windows.php.net/download">PHP for Windows</a>. A lista de alterações está registrada no <a href="/ChangeLog-8.php#PHP_8_3">ChangeLog</a>.</p>
