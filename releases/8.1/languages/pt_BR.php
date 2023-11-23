@@ -66,7 +66,7 @@ return [
     'other_new_array_is_list' => 'Nova função <code>array_is_list</code>.',
     'other_new_sodium_xchacha20' => 'Novas funções Sodium XChaCha20.',
 
-    'bc_title' => 'Depreciações e quebras de retrocompatibilidade',
+    'bc_title' => 'Alterações obsoletas e incompatibilidades com versões anteriores',
     'bc_null_to_not_nullable' => 'Passagem de null para parâmetros não anuláveis em funções internas está depreciada.',
     'bc_return_types' => 'Tipos de retorno provisórios em métodos de classes embutidas do PHP.',
     'bc_serializable_deprecated' => 'Interface <code>Serializable</code> depreciada.',
