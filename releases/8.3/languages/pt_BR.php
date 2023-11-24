@@ -19,6 +19,8 @@ return [
     'randomizer_getfloat_nextfloat_title' => 'Novos métodos <code>Randomizer::getFloat()</code> e <code>Randomizer::nextFloat()</code>',
     'randomizer_getfloat_nextfloat_description' => '<p>Devido à precisão limitada e ao arredondamento implícito de números de ponto flutuante, gerar um float imparcial dentro de um intervalo específico não é trivial, e as soluções comumente usadas no nível do usuário podem gerar resultados tendenciosos ou números fora do intervalo solicitado.</p><p>O Randomizer também foi ampliado com dois métodos para gerar floats de maneira imparcial. O método <code>Randomizer::getFloat()</code> utiliza o algoritmo da seção γ que foi publicado em <a href="https://doi.org/10.1145/3503512" target="_blank" rel="noopener noreferrer">Drawing Random Floating-Point Numbers from an Interval. Frédéric Goualard, ACM Trans. Model. Comput. Simul., 32:3, 2022.</a></p>',
     'dynamic_class_constant_fetch_title' => 'Recuperação dinâmica de constantes de classe',
+    'command_line_linter_title' => 'O linter de linha de comando suporta vários arquivos',
+    'command_line_linter_description' => '<p>O linter da linha de comando agora aceita vários nomes de arquivos para lint</p>',
 
     'new_classes_title' => 'Novas classes, interfaces e funções',
     'new_dom' => 'Novos métodos <a href="/manual/pt_BR/domelement.getattributenames.php"><code>DOMElement::getAttributeNames()</code></a>, <a href="/manual/pt_BR/domelement.insertadjacentelement.php"><code>DOMElement::insertAdjacentElement()</code></a>, <a href="/manual/pt_BR/domelement.insertadjacenttext.php"><code>DOMElement::insertAdjacentText()</code></a>, <a href="/manual/pt_BR/domelement.toggleattribute.php"><code>DOMElement::toggleAttribute()</code></a>, <a href="/manual/pt_BR/domnode.contains.php"><code>DOMNode::contains()</code></a>, <a href="/manual/pt_BR/domnode.getrootnode.php"><code>DOMNode::getRootNode()</code></a>, <a href="/manual/pt_BR/domnode.isequalnode.php"><code>DOMNode::isEqualNode()</code></a>, <code>DOMNameSpaceNode::contains()</code> e <a href="/manual/pt_BR/domparentnode.replacechildren.php"><code>DOMParentNode::replaceChildren()</code></a>.',
@@ -32,6 +34,8 @@ return [
     'new_ziparchive' => 'Novo método <a href="/manual/pt_BR/ziparchive.getarchiveflag.php"><code>ZipArchive::getArchiveFlag()</code></a>.',
     'new_openssl_ec' => 'Suporte para geração de chaves EC com parâmetros EC personalizados na extensão OpenSSL.',
     'new_ini' => 'Nova configuração INI <a href="/manual/pt_BR/migration83.other-changes.php#migration83.other-changes.ini"><code>zend.max_allowed_stack_size</code></a> para definir o tamanho máximo permitido da pilha.',
+    'ini_fallback' => 'php.ini agora suporta sintaxe de valor substituto/padrão.',
+    'anonymous_readonly' => 'Classes anônimas agora podem ser somente leitura.',
 
     'bc_title' => 'Alterações obsoletas e incompatibilidades com versões anteriores',
     'bc_datetime' => 'Exceções de Date/Time mais apropriadas.',
@@ -43,6 +47,7 @@ return [
     'bc_reflection' => 'O tipo de retorno de <a href="/manual/pt_BR/reflectionclass.getstaticproperties.php"><code>ReflectionClass::getStaticProperties()</code></a> não será mais nulo.',
     'bc_ini' => 'As configurações INI <a href="/manual/pt_BR/info.configuration.php#ini.assert.active"><code>assert.active</code></a>, <a href="/manual/pt_BR/info.configuration.php#ini.assert.bail"><code>assert.bail</code></a>, <a href="/manual/pt_BR/info.configuration.php#ini.assert.callback"><code>assert.callback</code></a>, <a href="/manual/pt_BR/info.configuration.php#ini.assert.exception"><code>assert.exception</code></a> e <a href="/manual/pt_BR/info.configuration.php#ini.assert.warning"><code>assert.warning</code></a> foram obsoletas.',
     'bc_standard' => 'Chamar <a href="/manual/pt_BR/function.get-class.php"><code>get_class()</code></a> e <a href="/manual/pt_BR/function.get-parent-class.php"><code>get_parent_class()</code></a> sem argumentos está obsoleto.',
+    'bc_sqlite3' => 'SQLite3: modo de erro padrão definido como exceções.',
 
     'footer_title' => 'Melhorias de desempenho, sintaxe aprimorada e maior segurança de tipos.',
     'footer_description' => '<p>Para downloads do código-fonte do PHP 8.3, visite a página de <a href="/downloads">downloads</a>. Binários para Windows podem ser encontrados no site <a href="https://windows.php.net/download">PHP for Windows</a>. A lista de alterações está registrada no <a href="/ChangeLog-8.php#PHP_8_3">ChangeLog</a>.</p>
