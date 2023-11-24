@@ -23,6 +23,8 @@ return [
     'randomizer_getfloat_nextfloat_title' => '新增 <code>Randomizer::getFloat()</code> 和 <code>Randomizer::nextFloat()</code> 方法',
     'randomizer_getfloat_nextfloat_description' => '<p>由于浮点数的精度和隐式四舍五入的限制，在特定区间内生成无偏差的浮点数并非易事，常建的用户解决方案可能会生成有偏差的结果或超出要求范围的数字。</p><p>Randomizer 扩展了两种方法，用于随机生成无偏差的浮点数。<code>Randomizer::getFloat()</code> 方法使用的是 γ-section 算法，该算法发表于 <a href="https://doi.org/10.1145/3503512" target="_blank" rel="noopener noreferrer">Drawing Random Floating-Point Numbers from an Interval. Frédéric Goualard, ACM Trans. Model. Comput. Simul., 32:3, 2022.</a></p>',
     'dynamic_class_constant_fetch_title' => '动态获取类常量',
+    'command_line_linter_title' => '命令行 linter 支持多个文件',
+    'command_line_linter_description' => '<p>命令行 linter 现在接受文件名的可变输入以进行 lint</p>',
 
     'new_classes_title' => '新的类、接口和函数',
     'new_dom' => '新增 <a href="/manual/zh/domelement.getattributenames.php"><code>DOMElement::getAttributeNames()</code></a>、<a href="/manual/zh/domelement.insertadjacentelement.php"><code>DOMElement::insertAdjacentElement()</code></a>、<a href="/manual/zh/domelement.insertadjacenttext.php"><code>DOMElement::insertAdjacentText()</code></a>、<a href="/manual/zh/domelement.toggleattribute.php"><code>DOMElement::toggleAttribute()</code></a>、<a href="/manual/zh/domnode.contains.php"><code>DOMNode::contains()</code></a>、<a href="/manual/zh/domnode.getrootnode.php"><code>DOMNode::getRootNode()</code></a>、<a href="/manual/zh/domnode.isequalnode.php"><code>DOMNode::isEqualNode()</code></a>、<code>DOMNameSpaceNode::contains()</code> 和 <a href="/manual/zh/domparentnode.replacechildren.php"><code>DOMParentNode::replaceChildren()</code></a> 方法。',
@@ -36,9 +38,11 @@ return [
     'new_ziparchive' => '新增 <a href="/manual/zh/ziparchive.getarchiveflag.php"><code>ZipArchive::getArchiveFlag()</code></a> 方法。',
     'new_openssl_ec' => '支持在 OpenSSL 扩展中使用自定义 EC 参数生成 EC 密钥。',
     'new_ini' => '新增 INI 设置 <a href="/manual/zh/migration83.other-changes.php#migration83.other-changes.ini"><code>zend.max_allowed_stack_size</code></a> 用于设置允许的最大堆栈大小。',
+    'ini_fallback' => 'php.ini 现在支持后备/默认值语法。',
+    'anonymous_readonly' => '匿名类现在可以是只读的。',
 
     'bc_title' => '弃用和向后不兼容',
-    'bc_datetime' => '更合适的 Date/Time 异常。',
+    'bc_datetime' => '<a href="https://wiki.php.net/rfc/datetime-exceptions">更合适的 Date/Time 异常。</a>',
     'bc_arrays' => '现在在空数组中获取负索引 <code>n</code> 时，将确保下一个索引是 <code>n + 1</code> 而不是 <code>0</code>。',
     'bc_range' => '对 <code>range()</code> 函数的更改。',
     'bc_traits' => '在 traits 中重新声明静态属性的更改。',
@@ -47,6 +51,7 @@ return [
     'bc_reflection' => '<a href="/manual/zh/reflectionclass.getstaticproperties.php"><code>ReflectionClass::getStaticProperties()</code></a> 不再为空。',
     'bc_ini' => 'INI 配置 <a href="/manual/zh/info.configuration.php#ini.assert.active"><code>assert.active</code></a>、<a href="/manual/zh/info.configuration.php#ini.assert.bail"><code>assert.bail</code></a>、<a href="/manual/zh/info.configuration.php#ini.assert.callback"><code>assert.callback</code></a>、<a href="/manual/zh/info.configuration.php#ini.assert.exception"><code>assert.exception</code></a> 和 <a href="/manual/zh/info.configuration.php#ini.assert.warning"><code>assert.warning</code></a> 已被废弃。',
     'bc_standard' => '调用 <a href="/manual/zh/function.get-class.php"><code>get_class()</code></a> 和 <a href="/manual/zh/function.get-parent-class.php"><code>get_parent_class()</code></a> 时未提供参数，已被废弃。',
+    'bc_sqlite3' => 'SQLite3：默认错误模式设置为异常。',
 
     'footer_title' => '更好的性能、更好的语法、改进类型安全。',
     'footer_description' => '<p>

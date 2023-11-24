@@ -19,6 +19,8 @@ return [
     'randomizer_getfloat_nextfloat_title' => 'Новые методы <code>Randomizer::getFloat()</code> и <code>Randomizer::nextFloat()</code>',
     'randomizer_getfloat_nextfloat_description' => '<p>Из-за ограниченной точности и неявного округления чисел с плавающей точкой генерация несмещённого числа, лежащего в определённом интервале, является нетривиальной задачей, а пользовательские решения могут давать смещённые результаты или числа, выходящие за пределы требуемого диапазона.</p><p>Класс Randomizer был расширен двумя методами, позволяющими генерировать случайные числа с плавающей точкой несмещённым образом. Метод <code>Randomizer::getFloat()</code> использует алгоритм γ-секции, который был опубликован в <a href="https://doi.org/10.1145/3503512" target="_blank" rel="noopener noreferrer">Drawing Random Floating-Point Numbers from an Interval. Frédéric Goualard, ACM Trans. Model. Comput. Simul., 32:3, 2022.</a></p>',
     'dynamic_class_constant_fetch_title' => 'Динамическое получение констант класса',
+    'command_line_linter_title' => 'Линтер командной строки поддерживает несколько файлов',
+    'command_line_linter_description' => '<p>Линтер командной строки теперь принимает нескольно имён файлов для проверки.</p>',
 
     'new_classes_title' => 'Новые классы, интерфейсы и функции',
     'new_dom' => 'Новые методы <a href="/manual/ru/domelement.getattributenames.php"><code>DOMElement::getAttributeNames()</code></a>, <a href="/manual/ru/domelement.insertadjacentelement.php"><code>DOMElement::insertAdjacentElement()</code></a>, <a href="/manual/ru/domelement.insertadjacenttext.php"><code>DOMElement::insertAdjacentText()</code></a>, <a href="/manual/ru/domelement.toggleattribute.php"><code>DOMElement::toggleAttribute()</code></a>, <a href="/manual/ru/domnode.contains.php"><code>DOMNode::contains()</code></a>, <a href="/manual/ru/domnode.getrootnode.php"><code>DOMNode::getRootNode()</code></a>, <a href="/manual/ru/domnode.isequalnode.php"><code>DOMNode::isEqualNode()</code></a>, <code>DOMNameSpaceNode::contains()</code> и <a href="/manual/ru/domparentnode.replacechildren.php"><code>DOMParentNode::replaceChildren()</code></a>.',
@@ -32,9 +34,11 @@ return [
     'new_ziparchive' => 'Новый метод <a href="/manual/ru/ziparchive.getarchiveflag.php"><code>ZipArchive::getArchiveFlag()</code></a>.',
     'new_openssl_ec' => 'Поддержка генерации EC-ключей с пользовательскими EC-параметрами в модуле OpenSSL.',
     'new_ini' => 'Новый параметр INI <a href="/manual/ru/migration83.other-changes.php#migration83.other-changes.ini"><code>zend.max_allowed_stack_size</code></a> для установки максимально допустимого размера стека.',
+    'ini_fallback' => 'php.ini теперь поддерживает синтаксис резервных значений/значений по умолчанию.',
+    'anonymous_readonly' => 'Анонимные классы теперь доступны только для чтения.',
 
     'bc_title' => 'Устаревшая функциональность и изменения в обратной совместимости',
-    'bc_datetime' => 'Более подходящие исключения в модуле Date/Time.',
+    'bc_datetime' => '<a href="https://wiki.php.net/rfc/datetime-exceptions">Более подходящие исключения в модуле Date/Time</a>.',
     'bc_arrays' => 'Присвоение отрицательного индекса <code>n</code> пустому массиву теперь гарантирует, что следующим индексом будет <code>n + 1</code>, а не <code>0</code>.',
     'bc_range' => 'Изменения в функции <code>range()</code>.',
     'bc_traits' => 'Изменения в повторном объявлении статических свойств в трейтах.',
@@ -43,6 +47,7 @@ return [
     'bc_reflection' => '<a href="/manual/ru/reflectionclass.getstaticproperties.php"><code>ReflectionClass::getStaticProperties()</code></a> теперь не возвращает значение <code>null</code>.',
     'bc_ini' => 'Параметры INI <a href="/manual/ru/info.configuration.php#ini.assert.active"><code>assert.active</code></a>, <a href="/manual/ru/info.configuration.php#ini.assert.bail"><code>assert.bail</code></a>, <a href="/manual/ru/info.configuration.php#ini.assert.callback"><code>assert.callback</code></a>, <a href="/manual/ru/info.configuration.php#ini.assert.exception"><code>assert.exception</code></a> и <a href="/manual/ru/info.configuration.php#ini.assert.warning"><code>assert.warning</code></a> объявлены устаревшими.',
     'bc_standard' => 'Вызов функции <a href="/manual/en/function.get-class.php"><code>get_class()</code></a> и <a href="/manual/en/function.get-parent-class.php"><code>get_parent_class()</code></a> без аргументов объявлен устаревшим.',
+    'bc_sqlite3' => 'SQLite3: режим ошибок по умолчанию установлен на исключения.',
 
     'footer_title' => 'Выше производительность, лучше синтаксис, надёжнее система типов.',
     'footer_description' => '<p>Для загрузки исходного кода PHP 8.3 посетите страницу <a href="/downloads">Downloads</a>. Бинарные файлы Windows находятся на сайте <a href="https://windows.php.net/download">PHP for Windows</a>. Список изменений перечислен на странице <a href="/ChangeLog-8.php#PHP_8_3">ChangeLog</a>.</p>

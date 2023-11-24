@@ -19,6 +19,8 @@ return [
     'randomizer_getfloat_nextfloat_title' => 'New <code>Randomizer::getFloat()</code> and <code>Randomizer::nextFloat()</code> methods',
     'randomizer_getfloat_nextfloat_description' => '<p>Due to the limited precision and implicit rounding of floating point numbers, generating an unbiased float lying within a specific interval is non-trivial and the commonly used userland solutions may generate biased results or numbers outside the requested range.</p><p>The Randomizer was also extended with two methods to generate random floats in an unbiased fashion. The <code>Randomizer::getFloat()</code> method uses the γ-section algorithm that was published in <a href="https://doi.org/10.1145/3503512" target="_blank" rel="noopener noreferrer">Drawing Random Floating-Point Numbers from an Interval. Frédéric Goualard, ACM Trans. Model. Comput. Simul., 32:3, 2022.</a></p>',
     'dynamic_class_constant_fetch_title' => 'Dynamic class constant fetch',
+    'command_line_linter_title' => 'Command line linter supports multiple files',
+    'command_line_linter_description' => '<p>The command line linter now accepts variadic input for filenames to lint</p>',
 
     'new_classes_title' => 'New Classes, Interfaces, and Functions',
     'new_dom' => 'New <a href="/manual/en/domelement.getattributenames.php"><code>DOMElement::getAttributeNames()</code></a>, <a href="/manual/en/domelement.insertadjacentelement.php"><code>DOMElement::insertAdjacentElement()</code></a>, <a href="/manual/en/domelement.insertadjacenttext.php"><code>DOMElement::insertAdjacentText()</code></a>, <a href="/manual/en/domelement.toggleattribute.php"><code>DOMElement::toggleAttribute()</code></a>, <a href="/manual/en/domnode.contains.php"><code>DOMNode::contains()</code></a>, <a href="/manual/en/domnode.getrootnode.php"><code>DOMNode::getRootNode()</code></a>, <a href="/manual/en/domnode.isequalnode.php"><code>DOMNode::isEqualNode()</code></a>, <code>DOMNameSpaceNode::contains()</code>, and <a href="/manual/en/domparentnode.replacechildren.php"><code>DOMParentNode::replaceChildren()</code></a> methods.',
@@ -32,9 +34,11 @@ return [
     'new_ziparchive' => 'New <a href="/manual/en/ziparchive.getarchiveflag.php"><code>ZipArchive::getArchiveFlag()</code></a> method.',
     'new_openssl_ec' => 'Support for generation EC keys with custom EC parameters in OpenSSL extension.',
     'new_ini' => 'New INI setting <a href="/manual/en/migration83.other-changes.php#migration83.other-changes.ini"><code>zend.max_allowed_stack_size</code></a> to set the maximum allowed stack size.',
+    'ini_fallback' => 'php.ini now supports fallback/default value syntax.',
+    'anonymous_readonly' => 'Anonymous classes can now be readonly.',
 
     'bc_title' => 'Deprecations and backward compatibility breaks',
-    'bc_datetime' => 'More Appropriate Date/Time Exceptions.',
+    'bc_datetime' => '<a href="https://wiki.php.net/rfc/datetime-exceptions">More Appropriate Date/Time Exceptions</a>.',
     'bc_arrays' => 'Assigning a negative index <code>n</code> to an empty array will now make sure that the next index is <code>n + 1</code> instead of <code>0</code>.',
     'bc_range' => 'Changes to the <code>range()</code> function.',
     'bc_traits' => 'Changes in re-declaration of static properties in traits.',
@@ -43,6 +47,7 @@ return [
     'bc_reflection' => '<a href="/manual/en/reflectionclass.getstaticproperties.php"><code>ReflectionClass::getStaticProperties()</code></a> is no longer nullable.',
     'bc_ini' => 'INI settings <a href="/manual/en/info.configuration.php#ini.assert.active"><code>assert.active</code></a>, <a href="/manual/en/info.configuration.php#ini.assert.bail"><code>assert.bail</code></a>, <a href="/manual/en/info.configuration.php#ini.assert.callback"><code>assert.callback</code></a>, <a href="/manual/en/info.configuration.php#ini.assert.exception"><code>assert.exception</code></a>, and <a href="/manual/en/info.configuration.php#ini.assert.warning"><code>assert.warning</code></a> have been deprecated.',
     'bc_standard' => 'Calling <a href="/manual/en/function.get-class.php"><code>get_class()</code></a> and <a href="/manual/en/function.get-parent-class.php"><code>get_parent_class()</code></a> without arguments are deprecated.',
+    'bc_sqlite3' => 'SQLite3: Default error mode set to exceptions.',
 
     'footer_title' => 'Better performance, better syntax, improved type safety.',
     'footer_description' => '<p>For source downloads of PHP 8.3 please visit the <a href="/downloads">downloads</a> page. Windows binaries can be found on the <a href="https://windows.php.net/download">PHP for Windows</a> site. The list of changes is recorded in the <a href="/ChangeLog-8.php#PHP_8_3">ChangeLog</a>.</p>
