@@ -49,6 +49,5 @@ return [
     'bc_sqlite3' => 'SQLite3のエラーモードのデフォルトが例外になりました。',
 
     'footer_title' => 'さらなる性能向上、よりよい構文、すぐれた型安全性。',
-    'footer_description' => '<p>PHP8.3の<a href="/downloads">ダウンロードはこちら</a>。Windowsバイナリは<a href="https://windows.php.net/download">PHP for Windows</a>で見つけることができます。<a href="/ChangeLog-8.php#PHP_8_3">ChangeLogはこちら</a>です。</p>
-        <p>マニュアルにある<a href="/manual/ja/migration83.php">マイグレーションガイド</a>では、新機能や変更点についてのより詳しい情報が記載されています。</p>',
+    'footer_description' => '<p>PHP8.3の<a href="/downloads">ダウンロードはこちら</a>。Windowsバイナリは<a href="https://windows.php.net/download">PHP for Windows</a>で見つけることができます。<a href="/ChangeLog-8.php#PHP_8_3">ChangeLogはこちら</a>です。</p><p>マニュアルにある<a href="/manual/ja/migration83.php">マイグレーションガイド</a>では、新機能や変更点についてのより詳しい情報が記載されています。</p>',
 ];
