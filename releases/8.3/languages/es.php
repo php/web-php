@@ -37,7 +37,6 @@ return [
     'ini_fallback' => 'php.ini ahora soporta la sintaxis de valor predeterminado/de reserva.',
     'anonymous_readonly' => 'Las clases anónimas ahora pueden ser de solo lectura.',
 
-
     'bc_title' => 'Deprecaciones y rupturas de compatibilidad hacia atrás',
     'bc_datetime' => '<a href="https://wiki.php.net/rfc/datetime-exceptions">Excepciones de Fecha/Hora más Apropiadas</a>.',
     'bc_arrays' => 'Asignar un índice negativo <code>n</code> a un arreglo vacío ahora asegurará que el siguiente índice sea <code>n + 1</code> en lugar de <code>0</code>.',
@@ -49,7 +48,6 @@ return [
     'bc_ini' => 'Las configuraciones INI <a href="/manual/es/info.configuration.php#ini.assert.active"><code>assert.active</code></a>, <a href="/manual/es/info.configuration.php#ini.assert.bail"><code>assert.bail</code></a>, <a href="/manual/es/info.configuration.php#ini.assert.callback"><code>assert.callback</code></a>, <a href="/manual/es/info.configuration.php#ini.assert.exception"><code>assert.exception</code></a>, y <a href="/manual/es/info.configuration.php#ini.assert.warning"><code>assert.warning</code></a> han sido obsoletas.',
     'bc_standard' => 'Llamar a <a href="/manual/es/function.get-class.php"><code>get_class()</code></a> y <a href="/manual/es/function.get-parent-class.php"><code>get_parent_class()</code></a> sin argumentos está obsoleto.',
     'bc_sqlite3' => 'SQLite3: Modo de error predeterminado establecido en excepciones.',
-
 
     'footer_title' => 'Mejor rendimiento, mejor sintaxis, mayor seguridad de tipos.',
     'footer_description' => '<p>Para descargas de código fuente de PHP 8.3, por favor visita la página de <a href="/downloads">descargas</a>. Los binarios para Windows se pueden encontrar en el sitio de <a href="https://windows.php.net/download">PHP para Windows</a>. La lista de cambios está registrada en el <a href="/ChangeLog-8.php#PHP_8_3">Registro de Cambios</a>.</p>
