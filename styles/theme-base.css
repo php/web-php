@@ -1718,6 +1718,9 @@ div.soft-deprecation-notice blockquote.sidebar {
 }
 
 @media (min-width:768px) {
+  #layout-content{
+    padding-top:2.5rem;
+  }
   #topsearch {
     float:right;
   }
@@ -1828,6 +1831,12 @@ aside.tips div.inner {
     clear:none;
     border:0;
     background:inherit;
+}
+
+@media(min-width: 768px){
+  aside.tips div.inner{
+    padding-top:2.5rem;
+  }
 }
 /* }}} */
 
