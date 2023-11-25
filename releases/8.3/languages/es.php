@@ -1,0 +1,56 @@
+<?php
+
+return [
+    'common_header' => 'PHP 8.3 es una actualización importante del lenguaje PHP. Contiene muchas características nuevas, como la tipificación explícita de constantes de clase, la clonación profunda de propiedades de solo lectura y adiciones a la funcionalidad de aleatoriedad. Como siempre, también incluye mejoras de rendimiento, correcciones de errores y limpieza general.',
+    'documentation' => 'Documentación',
+    'main_title' => '¡Lanzado!',
+    'main_subtitle' => 'PHP 8.3 es una actualización importante del lenguaje PHP.<br class="display-none-md">Contiene muchas características nuevas, como la tipificación explícita de constantes de clase, la clonación profunda de propiedades de solo lectura y adiciones a la funcionalidad de aleatoriedad. Como siempre, también incluye mejoras de rendimiento, correcciones de errores y limpieza general.',
+    'upgrade_now' => '¡Actualiza a PHP 8.3 ahora!',
+
+    'readonly_title' => 'Clonación profunda de propiedades de solo lectura',
+    'readonly_description' => '<code>readonly</code> las propiedades ahora pueden ser modificadas una vez dentro del método mágico <code>__clone</code> para permitir la clonación profunda de propiedades de solo lectura.',
+    'json_validate_title' => 'Nueva función <code>json_validate()</code>',
+    'json_validate_description' => '<code>json_validate()</code> permite verificar si una cadena es JSON sintácticamente válido, siendo más eficiente que <code>json_decode()</code>.',
+    'typed_class_constants_title' => 'Constantes de clase tipificadas',
+    'override_title' => 'Nuevo atributo <code>#[\Override]</code>',
+    'override_description' => 'Al agregar el atributo <code>#[\Override]</code> a un método, PHP asegurará que un método con el mismo nombre exista en una clase padre o en una interfaz implementada. Agregar el atributo aclara que la sobreescritura de un método padre es intencional y simplifica la refactorización, porque la eliminación de un método padre sobreescrito será detectada.',
+    'randomizer_getbytesfromstring_title' => 'Nuevo método <code>Randomizer<span style="word-break: break-all;">::</span>getBytesFromString()</code>',
+    'randomizer_getbytesfromstring_description' => 'La <a href="/releases/8.2/en.php#random_extension">Extensión Aleatoria</a> que se agregó en PHP 8.2 se extendió con un nuevo método para generar cadenas aleatorias compuestas solo por bytes específicos. Este método permite al desarrollador generar fácilmente identificadores aleatorios, como nombres de dominio y cadenas numéricas de longitud arbitraria.',
+    'randomizer_getfloat_nextfloat_title' => 'Nuevos métodos <code>Randomizer::getFloat()</code> y <code>Randomizer::nextFloat()</code>',
+    'randomizer_getfloat_nextfloat_description' => '<p>Debido a la precisión limitada y el redondeo implícito de los números de punto flotante, generar un flotante imparcial dentro de un intervalo específico no es trivial y las soluciones comunes de usuario pueden generar resultados sesgados o números fuera del rango solicitado.</p><p>La Aleatorizadora también se extendió con dos métodos para generar flotantes aleatorios de manera imparcial. El método <code>Randomizer::getFloat()</code> usa el algoritmo de sección γ que se publicó en <a href="https://doi.org/10.1145/3503512" target="_blank" rel="noopener noreferrer">Drawing Random Floating-Point Numbers from an Interval. Frédéric Goualard, ACM Trans. Model. Comput. Simul., 32:3, 2022.</a></p>',
+    'dynamic_class_constant_fetch_title' => 'Búsqueda dinámica de constantes de clase',
+    'command_line_linter_title' => 'El linter de línea de comandos admite múltiples archivos',
+    'command_line_linter_description' => '<p>El linter de línea de comandos ahora acepta entrada variada para nombres de archivos a revisar</p>',
+
+    'new_classes_title' => 'Nuevas Clases, Interfaces y Funciones',
+    'new_dom' => 'Nuevos métodos <a href="/manual/es/domelement.getattributenames.php"><code>DOMElement::getAttributeNames()</code></a>, <a href="/manual/es/domelement.insertadjacentelement.php"><code>DOMElement::insertAdjacentElement()</code></a>, <a href="/manual/es/domelement.insertadjacenttext.php"><code>DOMElement::insertAdjacentText()</code></a>, <a href="/manual/es/domelement.toggleattribute.php"><code>DOMElement::toggleAttribute()</code></a>, <a href="/manual/es/domnode.contains.php"><code>DOMNode::contains()</code></a>, <a href="/manual/es/domnode.getrootnode.php"><code>DOMNode::getRootNode()</code></a>, <a href="/manual/es/domnode.isequalnode.php"><code>DOMNode::isEqualNode()</code></a>, <code>DOMNameSpaceNode::contains()</code>, y <a href="/manual/es/domparentnode.replacechildren.php"><code>DOMParentNode::replaceChildren()</code></a>.',
+    'new_intl' => 'Nuevos métodos <a href="/manual/es/intlcalendar.setdate.php"><code>IntlCalendar::setDate()</code></a>, <a href="/manual/es/intlcalendar.setdatetime.php"><code>IntlCalendar::setDateTime()</code></a>, <a href="/manual/es/intlgregoriancalendar.createfromdate.php"><code>IntlGregorianCalendar::createFromDate()</code></a>, y <a href="/manual/es/intlgregoriancalendar.createfromdatetime.php"><code>IntlGregorianCalendar::createFromDateTime()</code></a>.',
+    'new_ldap' => 'Nuevas funciones <code>ldap_connect_wallet()</code> y <code>ldap_exop_sync()</code>.',
+    'new_mb_str_pad' => 'Nueva función <a href="/manual/es/function.mb-str-pad.php"><code>mb_str_pad()</code></a>.',
+    'new_posix' => 'Nuevas funciones <a href="/manual/es/function.posix-sysconf.php"><code>posix_sysconf()</code></a>, <a href="/manual/es/function.posix-pathconf.php"><code>posix_pathconf()</code></a>, <a href="/manual/es/function.posix-fpathconf.php"><code>posix_fpathconf()</code></a>, y <a href="/manual/es/function.posix-eaccess.php"><code>posix_eaccess()</code></a>.',
+    'new_reflection' => 'Nuevo método <a href="/manual/es/reflectionmethod.createfrommethodname.php"><code>ReflectionMethod::createFromMethodName()</code></a>.',
+    'new_socket' => 'Nueva función <a href="/manual/es/function.socket-atmark.php"><code>socket_atmark()</code></a>.',
+    'new_str' => 'Nuevas funciones <a href="/manual/es/function.str-increment.php"><code>str_increment()</code></a>, <a href="/manual/es/function.str-decrement.php"><code>str_decrement()</code></a>, y <a href="/manual/es/function.stream-context-set-options.php"><code>stream_context_set_options()</code></a>.',
+    'new_ziparchive' => 'Nuevo método <a href="/manual/es/ziparchive.getarchiveflag.php"><code>ZipArchive::getArchiveFlag()</code></a>.',
+    'new_openssl_ec' => 'Soporte para la generación de claves EC con parámetros EC personalizados en la extensión OpenSSL.',
+    'new_ini' => 'Nueva configuración INI <a href="/manual/es/migration83.other-changes.php#migration83.other-changes.ini"><code>zend.max_allowed_stack_size</code></a> para establecer el tamaño máximo permitido de la pila.',
+    'ini_fallback' => 'php.ini ahora soporta la sintaxis de valor predeterminado/de reserva.',
+    'anonymous_readonly' => 'Las clases anónimas ahora pueden ser de solo lectura.',
+
+    'bc_title' => 'Deprecaciones y rupturas de compatibilidad hacia atrás',
+    'bc_datetime' => '<a href="https://wiki.php.net/rfc/datetime-exceptions">Excepciones de Fecha/Hora más Apropiadas</a>.',
+    'bc_arrays' => 'Asignar un índice negativo <code>n</code> a un arreglo vacío ahora asegurará que el siguiente índice sea <code>n + 1</code> en lugar de <code>0</code>.',
+    'bc_range' => 'Cambios en la función <code>range()</code>.',
+    'bc_traits' => 'Cambios en la re-declaración de propiedades estáticas en rasgos.',
+    'bc_umultipledecimalseparators' => 'La constante <code>U_MULTIPLE_DECIMAL_SEPERATORS</code> está obsoleta en favor de <code>U_MULTIPLE_DECIMAL_SEPARATORS</code>.',
+    'bc_mtrand' => 'La variante <a href="/manual/es/random.constants.php#constant.mt-rand-php"><code>MT_RAND_PHP</code></a> Mt19937 está obsoleta.',
+    'bc_reflection' => '<a href="/manual/es/reflectionclass.getstaticproperties.php"><code>ReflectionClass::getStaticProperties()</code></a> ya no es nulo.',
+    'bc_ini' => 'Las configuraciones INI <a href="/manual/es/info.configuration.php#ini.assert.active"><code>assert.active</code></a>, <a href="/manual/es/info.configuration.php#ini.assert.bail"><code>assert.bail</code></a>, <a href="/manual/es/info.configuration.php#ini.assert.callback"><code>assert.callback</code></a>, <a href="/manual/es/info.configuration.php#ini.assert.exception"><code>assert.exception</code></a>, y <a href="/manual/es/info.configuration.php#ini.assert.warning"><code>assert.warning</code></a> han sido obsoletas.',
+    'bc_standard' => 'Llamar a <a href="/manual/es/function.get-class.php"><code>get_class()</code></a> y <a href="/manual/es/function.get-parent-class.php"><code>get_parent_class()</code></a> sin argumentos está obsoleto.',
+    'bc_sqlite3' => 'SQLite3: Modo de error predeterminado establecido en excepciones.',
+
+    'footer_title' => 'Mejor rendimiento, mejor sintaxis, mayor seguridad de tipos.',
+    'footer_description' => '<p>Para descargas de código fuente de PHP 8.3, por favor visita la página de <a href="/downloads">descargas</a>. Los binarios para Windows se pueden encontrar en el sitio de <a href="https://windows.php.net/download">PHP para Windows</a>. La lista de cambios está registrada en el <a href="/ChangeLog-8.php#PHP_8_3">Registro de Cambios</a>.</p>
+        <p>La <a href="/manual/es/migration83.php">guía de migración</a> está disponible en el Manual de PHP. Por favor, consúltala para obtener una lista detallada de las nuevas características y los cambios que no son compatibles con versiones anteriores.</p>',
+
+];
