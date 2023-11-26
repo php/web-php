@@ -54,18 +54,6 @@ $RELEASES = (function () {
         ]
     ];
 
-    /* PHP 8.0 Release */
-    $data['8.0'] = [
-        'version' => '8.0.30',
-        'date' => '03 Aug 2023',
-        'tags' => ['security'], // Set to ['security'] for security releases.
-        'sha256' => [
-            'tar.gz' => '449d2048fcb20a314d8c218097c6d1047a9f1c5bb72aa54d5d3eba0a27a4c80c',
-            'tar.bz2' => '98a9cb6a0e27a6950cdf4b26dcac48f2be2d936d5224a502f066cf3d4cf19b92',
-            'tar.xz' => '216ab305737a5d392107112d618a755dc5df42058226f1670e9db90e77d777d9',
-        ]
-    ];
-
     $ret = [];
     foreach ($data as $release) {
         $version = $release['version'];
