@@ -1,14 +1,14 @@
 <?php
 
 /**
- * En-revision: 55390a7898d58ea61e951fe27eca3acd5d1b5426
+ * En-revision: 1f6e3ae4d455815ffdb42c4dbe23d6a03b0e0c1b
  */
 
 return [
     'common_header' => 'PHP 8.3 是 PHP 语言的主版本更新。它包含了许多新功能，例如：类常量显式类型、只读属性深拷贝，以及对随机性功能的补充。一如既往，它还包括性能改进、错误修复和常规清理等。',
     'documentation' => '文档',
     'main_title' => '已发布！',
-    'main_subtitle' => 'PHP 8.3 是 PHP 语言的主版本更新。它包含了许多新功能，<br class="display-none-md">它包含了许多新功能，例如：类常量显式类型、只读属性深拷贝，以及对随机性功能的补充。一如既往，它还包括性能改进、错误修复和常规清理等。',
+    'main_subtitle' => 'PHP 8.3 是 PHP 语言的主版本更新。<br class="display-none-md">它包含了许多新功能，例如：类常量显式类型、只读属性深拷贝，以及对随机性功能的补充。一如既往，它还包括性能改进、错误修复和常规清理等。',
     'upgrade_now' => '更新到 PHP 8.3 ！',
 
     'readonly_title' => '只读属性深拷贝',
