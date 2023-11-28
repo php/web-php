@@ -148,6 +148,7 @@ function is_known_ini (string $ini): ?string {
         'expose-php' => 'ini.core.php#ini.expose-php',
         'max-execution-time' => 'info.configuration.php#ini.max-execution-time',
         'max-input-time' => 'info.configuration.php#ini.max-input-time',
+        'max-input-vars' => 'info.configuration.php#ini.max-input-vars',
         'max-input-nesting-level' => 'info.configuration.php#ini.max-input-nesting-level',
         'memory-limit' => 'ini.core.php#ini.memory-limit',
         'error-reporting' => 'errorfunc.configuration.php#ini.error-reporting',
