@@ -17,8 +17,8 @@ site_header("Contact", ["current" => "community"]);
 
 <p>
  Please report problems you find on PHP.net and mirror sites on <a
- href="https://github.com/php/php-src/issues/new/choose">GitHub</a>. Add the
- label "Category: Website". This allows us to follow the progress of the
+ href="https://github.com/php/web-php/issues">GitHub</a>.
+ This allows us to follow the progress of the
  problem until it is fixed.
 </p>
 <p>
