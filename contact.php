@@ -8,23 +8,31 @@ site_header("Contact", ["current" => "community"]);
 <h1>Advertising at PHP.net and mirror sites</h1>
 
 <p>
- The maintainers of PHP.net and the mirror sites are definitely
- <em>not interested</em> in graphical banner or text ad placement
- deals.
+ The maintainers of PHP.net are definitely <em>not interested</em> in graphical
+ banner or text ad placement deals.
 </p>
 
 <a id="contact"></a>
 <h1>Contact</h1>
 
 <p>
- Please report problems you find on PHP.net and mirror sites in
- <a href="http://bugs.php.net/">the bug system</a>. Categorize the bug
- as "PHP.net Website Problem". This allows us to follow the progress of
- the problem until it is fixed.
+ Please report problems you find on PHP.net and mirror sites on <a
+ href="https://github.com/php/php-src/issues/new/choose">GitHub</a>. Add the
+ label "Category: Website". This allows us to follow the progress of the
+ problem until it is fixed.
 </p>
 <p>
- For security related issues (in PHP or our websites) please contact
- <a href="mailto:security@php.net">security@php.net</a>.
+ For security related issues (in PHP or our websites) please contact <a
+ href="mailto:security@php.net">security@php.net</a>, or <a
+ href="https://github.com/php/php-src/security">report a vulnerability on
+ GitHub</a>.
+</p>
+<p>
+ We have published a <a
+ href="https://github.com/php/php-src/security">Vulnerability Disclosure
+ Policy</a>.
+</p>
+<p>
  Please note that the following are <b>NOT</b> security issues:
  <ul>
   <li><b>Requests for help with using PHP.</b> Please use the
