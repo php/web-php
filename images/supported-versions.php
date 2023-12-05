@@ -39,7 +39,7 @@ function max_date() {
 
 function date_horiz_coord(DateTime $date) {
     $diff = $date->diff(min_date());
-    if (!$diff->invert) {
+    if (! $diff->invert) {
         return $GLOBALS['margin_left'];
     }
     return $GLOBALS['margin_left'] + ($diff->days / (365.24 / $GLOBALS['year_width']));
@@ -51,7 +51,7 @@ foreach ($branches as $branch => $version) {
     $branches[$branch]['top'] = $header_height + ($branch_height * $i++);
 }
 
-if (!isset($non_standalone)) {
+if (! isset($non_standalone)) {
     header('Content-Type: image/svg+xml');
     echo '<?xml version="1.0"?>';
 }

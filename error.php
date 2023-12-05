@@ -77,7 +77,7 @@ if (preg_match("!(.*\\.php)3$!", $URI, $array)) {
 //     default language manual accessibility on mirror sites through /manual/filename)
 // @todo do we rely on this? how about removing it...
 if (preg_match("!^manual/([^/]*)$!", $URI, $array)) {
-    if (!isset($INACTIVE_ONLINE_LANGUAGES[$array[1]])) {
+    if (! isset($INACTIVE_ONLINE_LANGUAGES[$array[1]])) {
         mirror_redirect("/manual/$LANG/$array[1]");
     }
 } elseif (preg_match("!^manual/html/([^/]+)$!", $URI, $array)) {
@@ -146,7 +146,7 @@ if (preg_match("!^get/([^/]+)/from/([^/]+)(/mirror)?$!", $URI, $dlinfo)) {
     $mr = "https://www.php.net/";
 
     // Check if that mirror really exists if not, bail out
-    if (!isset($MIRRORS[$mr])) {
+    if (! isset($MIRRORS[$mr])) {
         error_nomirror($mr);
         exit;
     }
@@ -179,7 +179,7 @@ if (preg_match('/^GH-(\d+)$/', $URI, $matches)) {
 // Redirect if the entered URI was a PHP page name (except some pages,
 // which we display in the mirror's language or the explicitly specified
 // language [see below])
-if (!in_array($URI, ['mirror-info', 'error', 'mod'], true) &&
+if (! in_array($URI, ['mirror-info', 'error', 'mod'], true) &&
     file_exists($_SERVER['DOCUMENT_ROOT'] . "/$URI.php")) {
     mirror_redirect("/$URI.php");
 }

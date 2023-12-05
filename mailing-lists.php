@@ -49,7 +49,7 @@ if (isset($_POST['action'])) {
 
     // Check email address
     if (empty($_POST['email']) || $_POST['email'] == 'user@example.com' ||
-        $_POST['email'] == 'fake@from.net' || !is_emailable_address($_POST['email'])) {
+        $_POST['email'] == 'fake@from.net' || ! is_emailable_address($_POST['email'])) {
         $error = "You forgot to specify an email address to be added to the list, or specified an invalid address." .
                  "<br>Please go back and try again.";
     }
@@ -90,7 +90,7 @@ if (isset($_POST['action'])) {
     }
 
     // Give error information or success report
-    if (!empty($error)) {
+    if (! empty($error)) {
         echo "<p class=\"formerror\">$error</p>";
     } else {
 ?>
@@ -308,7 +308,7 @@ function output_lists_table($mailing_lists): void
 {
     echo '<table cellpadding="5" border="0" class="standard mailing-lists">', "\n";
     foreach ($mailing_lists as $listinfo) {
-        if (!is_array($listinfo)) {
+        if (! is_array($listinfo)) {
             echo "<tr><th>{$listinfo}</th><th>Moderated</th><th>Archive</th>" .
                  "<th>Newsgroup</th><th>Normal</th><th>Digest</th></tr>\n";
         } else {

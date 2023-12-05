@@ -1,6 +1,6 @@
 <?php
 $_GET["lang"] = "en";
-if (!isset($_GET["lang"])) {
+if (! isset($_GET["lang"])) {
     header("Location: http://php.net");
     exit;
 }
@@ -8,7 +8,7 @@ if (empty($_SERVER["DOCUMENT_ROOT"])) {
     $_SERVER["DOCUMENT_ROOT"] = __DIR__ . "/../";
 }
 include __DIR__ . '/../include/prepend.inc';
-if (!isset($ACTIVE_ONLINE_LANGUAGES[$_GET["lang"]])) {
+if (! isset($ACTIVE_ONLINE_LANGUAGES[$_GET["lang"]])) {
     header("Location: http://php.net");
 }
 $lang = $_GET["lang"];

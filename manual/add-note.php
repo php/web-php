@@ -55,7 +55,7 @@ if ($process) {
     }
 
     // SPAM challenge failed
-    elseif (!test_answer($_POST['func'], $_POST['arga'], $_POST['argb'], $_POST['answer'])) {
+    elseif (! test_answer($_POST['func'], $_POST['arga'], $_POST['argb'], $_POST['answer'])) {
         $error = 'SPAM challenge failed.';
     }
 
@@ -87,7 +87,7 @@ if ($process) {
     }
 
     // No error was found, and the submit action is required
-    if (!$error && strtolower($_POST['action']) !== "preview") {
+    if (! $error && strtolower($_POST['action']) !== "preview") {
 
         $redirip = $_SERVER['HTTP_X_FORWARDED_FOR'] ??
                    ($_SERVER['HTTP_VIA'] ?? '');
@@ -330,7 +330,7 @@ else {
 if (empty($_POST['user'])) { $_POST['user'] = "user@example.com"; }
 
 // There is no section to add note to
-if (!isset($_POST['sect'], $_POST['redirect'])) {
+if (! isset($_POST['sect'], $_POST['redirect'])) {
     echo '<p class="formerror">To add a note, you must click on the "Add Note" button (the plus sign)  ',
          'on the bottom of a manual page so we know where to add the note!</p>';
 }

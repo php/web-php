@@ -13,7 +13,7 @@ if (isset($_SERVER['HTTP_IF_MODIFIED_SINCE'])) {
     $last = strtotime($_SERVER['HTTP_IF_MODIFIED_SINCE']);
 
     // Use the same logo for a day
-    if (strtotime('+1 day', $last) > $now && !$refresh) {
+    if (strtotime('+1 day', $last) > $now && ! $refresh) {
         header('HTTP/1.1 304 Not Modified');
         exit;
     }
@@ -53,7 +53,7 @@ function get_accepted_encodings() {
 
 function serve_compressed_if_available($logo): void {
     $encodings = get_accepted_encodings();
-    if (!empty($encodings)) {
+    if (! empty($encodings)) {
         foreach ($encodings as $encoding) {
             if ($encoding === 'gzip') {
                 $encoded_file = "$logo.gz";

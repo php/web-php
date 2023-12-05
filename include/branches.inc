@@ -101,7 +101,7 @@ function get_all_branches() {
     foreach ($GLOBALS['OLDRELEASES'] as $major => $releases) {
         foreach ($releases as $version => $release) {
             if ($branch = version_number_to_branch($version)) {
-                if (!isset($branches[$major][$branch]) || version_compare($version, $branches[$major][$branch]['version'], 'gt')) {
+                if (! isset($branches[$major][$branch]) || version_compare($version, $branches[$major][$branch]['version'], 'gt')) {
                     $branches[$major][$branch] = $release;
                     $branches[$major][$branch]['version'] = $version;
                 }
@@ -112,7 +112,7 @@ function get_all_branches() {
     foreach ($GLOBALS['RELEASES'] as $major => $releases) {
         foreach ($releases as $version => $release) {
             if ($branch = version_number_to_branch($version)) {
-                if (!isset($branches[$major][$branch]) || version_compare($version, $branches[$major][$branch]['version'], 'gt')) {
+                if (! isset($branches[$major][$branch]) || version_compare($version, $branches[$major][$branch]['version'], 'gt')) {
                     $branches[$major][$branch] = $release;
                     $branches[$major][$branch]['version'] = $version;
                 }
@@ -149,7 +149,7 @@ function get_active_branches($include_recent_eols = true) {
                 }
             }
         }
-        if (!empty($branches[$major])) {
+        if (! empty($branches[$major])) {
             ksort($branches[$major]);
         }
     }
@@ -170,7 +170,7 @@ function get_eol_branches($always_include = null) {
     foreach ($GLOBALS['OLDRELEASES'] as $major => $releases) {
         foreach ($releases as $version => $release) {
             if ($branch = version_number_to_branch($version)) {
-                if (!isset($branches[$major][$branch]) || version_compare($version, $branches[$major][$branch]['version'], 'gt')) {
+                if (! isset($branches[$major][$branch]) || version_compare($version, $branches[$major][$branch]['version'], 'gt')) {
                     $branches[$major][$branch] = [
                         'date' => strtotime($release['date']),
                         'link' => "/releases#$version",
@@ -233,7 +233,7 @@ function get_eol_branches($always_include = null) {
  * version metadata from $RELEASES for a single release. */
 function get_initial_release($branch) {
     $branch = version_number_to_branch($branch);
-    if (!$branch) {
+    if (! $branch) {
         return null;
     }
     $major = substr($branch, 0, strpos($branch, '.'));
@@ -257,7 +257,7 @@ function get_initial_release($branch) {
 
 function get_final_release($branch) {
     $branch = version_number_to_branch($branch);
-    if (!$branch) {
+    if (! $branch) {
         return null;
     }
     $major = substr($branch, 0, strpos($branch, '.'));
@@ -389,13 +389,13 @@ function get_current_release_for_branch(int $major, ?int $minor): ?string {
     }
 
     foreach (($RELEASES[$major] ?? []) as $version => $_) {
-        if (!strncmp($prefix, $version, strlen($prefix))) {
+        if (! strncmp($prefix, $version, strlen($prefix))) {
             return $version;
         }
     }
 
     foreach (($OLDRELEASES[$major] ?? []) as $version => $_) {
-        if (!strncmp($prefix, $version, strlen($prefix))) {
+        if (! strncmp($prefix, $version, strlen($prefix))) {
             return $version;
         }
     }

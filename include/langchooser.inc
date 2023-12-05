@@ -48,7 +48,7 @@ function language_choose_code()
     $explicitly_specified = ''; $selected = '';
 
     // Specified for the request (GET/POST parameter)
-    if (!empty($_REQUEST['lang']) && is_string($_REQUEST['lang'])) {
+    if (! empty($_REQUEST['lang']) && is_string($_REQUEST['lang'])) {
         $explicitly_specified = language_add(htmlspecialchars($_REQUEST['lang'], ENT_QUOTES, 'UTF-8'), $languages);
 
         // Set the language in a cookie for a year
@@ -185,8 +185,8 @@ function language_add($langcode, &$langs)
     // Append language code in priority order if it is not
     // there already and supported by the PHP site. Try to
     // lower number of file_exists() calls to the minumum...
-    if (!in_array($langcode, $langs, false) && isset($LANGUAGES[$langcode])
-        && !isset($INACTIVE_ONLINE_LANGUAGES[$langcode])) {
+    if (! in_array($langcode, $langs, false) && isset($LANGUAGES[$langcode])
+        && ! isset($INACTIVE_ONLINE_LANGUAGES[$langcode])) {
         $langs[] = $langcode;
     }
 

@@ -96,7 +96,7 @@ function status_header(int $status): bool
         302 => 'Found',
         404 => 'Not Found',
     ];
-    if (!isset($text[$status])) {
+    if (! isset($text[$status])) {
         return false;
     }
 
@@ -585,7 +585,7 @@ function get_legacy_manual_urls(string $uri): array
         return $matches[1] ;
     }, $uri);
 
-    if (!isset($pages_ids[$page_id])) {
+    if (! isset($pages_ids[$page_id])) {
         return [];
     }
 

@@ -48,7 +48,7 @@ function search_results($res, $q, $profile = 'all', $per_page = 10, $s = 0, $l =
         $display_title = str_replace(['PHP:', '&amp;'], ['', '&'], $hit['Title']);
 
         // Fall back to the PHP logo for unknown hits
-        if (!isset($types[$type])) {
+        if (! isset($types[$type])) {
             $type = "php";
         }
 

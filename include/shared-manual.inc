@@ -95,12 +95,12 @@ function manual_notes_load(string $id): array
 
     // Open the note file for reading and get the data (12KB)
     // ..if it exists
-    if (!file_exists($notes_file)) {
+    if (! file_exists($notes_file)) {
         return [];
     }
     $notes = [];
     if ($fp = @fopen($notes_file, "r")) {
-        while (!feof($fp)) {
+        while (! feof($fp)) {
             $line = chop(fgets($fp, 12288));
             if ($line == "") { continue; }
             @list($id, $sect, $rate, $ts, $user, $note, $up, $down) = explode("|", $line);
@@ -130,7 +130,7 @@ function manual_note_display(UserNote $note, $voteOption = true): void
     // Calculate note rating by up/down votes
     $vote = $note->upvotes - $note->downvotes;
     $p = floor(($note->upvotes / (($note->upvotes + $note->downvotes) ?: 1)) * 100);
-    $rate = !$p && !($note->upvotes + $note->downvotes) ? "no votes..." : "$p% like this...";
+    $rate = ! $p && ! ($note->upvotes + $note->downvotes) ? "no votes..." : "$p% like this...";
 
     // Vote User Notes Div
     if ($voteOption) {
@@ -271,7 +271,7 @@ function manual_setup($setup): void {
     //TODO: get rid of this hack to get the related items into manual_footer
     global $__RELATED;
 
-    if (!isset($setup["toc_deprecated"])) {
+    if (! isset($setup["toc_deprecated"])) {
         $setup["toc_deprecated"] = [];
     }
     $PGI = $setup;

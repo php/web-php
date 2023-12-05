@@ -4,7 +4,7 @@ use function releases\php81\common_header;
 use function releases\php81\language_chooser;
 use function releases\php81\message;
 
-if (!isset($lang)) {
+if (! isset($lang)) {
     $lang = 'en';
 }
 

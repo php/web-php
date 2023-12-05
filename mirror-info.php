@@ -15,7 +15,7 @@ $mirror_stats = (int) (isset($_SERVER['MIRROR_STATS']) && $_SERVER['MIRROR_STATS
 [, $latest] = release_get_latest();
 $dist = $latest['source'][0];
 $filename = __DIR__ . "/distributions/{$dist['filename']}";
-if (!file_exists($filename)) {
+if (! file_exists($filename)) {
     $hash_ok = 0;
 } elseif (isset($dist['sha256']) &&
         function_exists('hash_file') &&

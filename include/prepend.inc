@@ -16,7 +16,7 @@ header("Permissions-Policy: interest-cohort=()");
 
 /* Fix Silly Same Origin Policies */
 (function (): void {
-    if (!isset($_SERVER["HTTP_ORIGIN"])) {
+    if (! isset($_SERVER["HTTP_ORIGIN"])) {
         return;
     }
 
@@ -50,14 +50,14 @@ if (ini_get("date.timezone") === "" && function_exists("date_default_timezone_se
 }
 
 /* Compatibility with the PHP webserver.. */
-if (!isset($_SERVER["SERVER_ADDR"])) {
+if (! isset($_SERVER["SERVER_ADDR"])) {
     $_SERVER["SERVER_ADDR"] = "127.0.0.1";
 }
 
 // As of PHP 5.3.0 multibyte sequence errors are no longer
 // silent. Prior to that version this bitfield does not exist
 // so define it to prevent notices on older versions
-if (!defined("ENT_IGNORE")) {
+if (! defined("ENT_IGNORE")) {
     define("ENT_IGNORE", 0);
 }
 
@@ -106,7 +106,7 @@ function myphpnet_load(): void
     }
 
     // If we have a cookie, set the values in the array
-    if (!empty($_COOKIE['MYPHPNET'])) {
+    if (! empty($_COOKIE['MYPHPNET'])) {
         $MYPHPNET = explode(",", $_COOKIE['MYPHPNET']);
     }
 
@@ -141,7 +141,7 @@ function myphpnet_urlsearch($type = false)
     }
 
     // Return code or NONE
-    elseif (isset($MYPHPNET[1]) && !empty($MYPHPNET[1])) {
+    elseif (isset($MYPHPNET[1]) && ! empty($MYPHPNET[1])) {
         return $MYPHPNET[1];
     } else { return MYPHPNET_URL_NONE; }
 }
@@ -175,7 +175,7 @@ function myphpnet_save(): void
 
     // Fill in values not specified
     for ($i = 0; $i <= 3; $i++) {
-        if (!isset($MYPHPNET[$i])) { $MYPHPNET[$i] = false; }
+        if (! isset($MYPHPNET[$i])) { $MYPHPNET[$i] = false; }
     }
 
     // Set all the preferred values for a year

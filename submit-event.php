@@ -23,7 +23,7 @@ $vars = [
     'type', 'country', 'category', 'email', 'url', 'ldesc', 'sdesc'
 ];
 foreach ($vars as $varname) {
-    if (!isset($_POST[$varname])) {
+    if (! isset($_POST[$varname])) {
         $_POST[$varname] = "";
     }
 }
@@ -32,7 +32,7 @@ foreach ($vars as $varname) {
 if ($process) {
 
     // Clean and validate data
-    if (!is_emailable_address($_POST['email'])) {
+    if (! is_emailable_address($_POST['email'])) {
         $errors[] = 'You must supply a valid email address.';
     }
 
@@ -47,13 +47,13 @@ if ($process) {
     }
 
     $_POST['sdesc'] = trim($_POST['sdesc']);
-    if (!$_POST['sdesc']) {
+    if (! $_POST['sdesc']) {
         $errors[] = "You must supply a short description of the event.";
     }
 
     $_POST['ldesc'] = trim(strip_tags($_POST['ldesc'], '<a><i><b><br><p>'));
     $_POST['ldesc'] = preg_replace("/(style|on\\w+?)\s*=[^>]*/i", "", $_POST['ldesc']);
-    if (!$_POST['ldesc']) {
+    if (! $_POST['ldesc']) {
         $errors[] = "You must supply a long description of the event.";
     }
     elseif (stripos($_POST['ldesc'], 'PHP') === false) {
@@ -66,22 +66,22 @@ if ($process) {
     $pu = parse_url($_POST['url']);
     $pu['host'] = isset($pu['host']) ? trim($pu['host']) : '';
 
-    if (!$_POST['url']) {
+    if (! $_POST['url']) {
         $errors[] = "You must supply a URL with more information about the event.";
     }
-    elseif (empty($pu['host']) || !in_array($pu['scheme'], $valid_schemes, false)) {
+    elseif (empty($pu['host']) || ! in_array($pu['scheme'], $valid_schemes, false)) {
         $errors[] = "The URL you supplied was invalid.";
     }
 
-    if (!$_POST['country']) {
+    if (! $_POST['country']) {
         $errors[] = 'You must specify a country for the event.';
     }
 
-    if (!$_POST['category']) {
+    if (! $_POST['category']) {
         $errors[] = 'You must specify a category for the event.';
     }
 
-    if (!checkdate($_POST['smonth'], $_POST['sday'], $_POST['syear'])) {
+    if (! checkdate($_POST['smonth'], $_POST['sday'], $_POST['syear'])) {
       $errors[] = "You must specify a valid start date.";
     }
     else {
@@ -91,7 +91,7 @@ if ($process) {
         }
     }
 
-    if ($_POST['type'] == 'multi' && !checkdate($_POST['emonth'], $_POST['eday'], $_POST['eyear'])) {
+    if ($_POST['type'] == 'multi' && ! checkdate($_POST['emonth'], $_POST['eday'], $_POST['eyear'])) {
         $errors[] = "You must specify a valid end date for a multi-day event.";
     }
     elseif ($_POST['type'] == 'multi' && checkdate($_POST['smonth'], $_POST['sday'], $_POST['syear'])) {
@@ -105,7 +105,7 @@ if ($process) {
         }
     }
 
-    if ($_POST['type'] == 'recur' && !($_POST['recur'] && $_POST['recur_day'])) {
+    if ($_POST['type'] == 'recur' && ! ($_POST['recur'] && $_POST['recur_day'])) {
         $errors[] = "You must specify a valid day of the month for a recurring event.";
     }
 
@@ -185,7 +185,7 @@ if ($process && count($errors) === 0) {
    <select name="smonth"><option></option><?php display_options($months, $_POST['smonth'])?></select>
    <input type="text" name="sday" size="2" maxlength="2" value="<?php echo htmlentities($_POST['sday'], ENT_QUOTES | ENT_IGNORE, 'UTF-8')?>">
    <input type="text" name="syear" size="4" maxlength="4" value="<?php echo $_POST['syear'] ? htmlentities($_POST['syear'], ENT_QUOTES | ENT_IGNORE, 'UTF-8') : date("Y")?>">
-   <input type="radio" id="single" name="type" value="single"<?php if ($_POST['type'] == 'single' || !$_POST['type']) echo ' checked="checked"';?>>
+   <input type="radio" id="single" name="type" value="single"<?php if ($_POST['type'] == 'single' || ! $_POST['type']) echo ' checked="checked"';?>>
    <label for="single">One day (no end-date required)</label>
   </td>
  </tr>

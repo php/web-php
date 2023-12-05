@@ -5,7 +5,7 @@ include_once __DIR__ . '/include/email-validation.inc';
 include_once __DIR__ . '/include/posttohost.inc';
 
 // Force the account requests to php.net
-if (!is_primary_site()) {
+if (! is_primary_site()) {
     header('Location: https://www.php.net/' . $_SERVER['BASE_PAGE']);
     exit;
 }
@@ -41,14 +41,14 @@ $groups = [
 <?php
 
 // We have a form submitted, and the user have read all the comments
-if (count($_POST) && (!isset($_POST['purpose']) || !is_array($_POST['purpose']) || !count($_POST['purpose']))) {
+if (count($_POST) && (! isset($_POST['purpose']) || ! is_array($_POST['purpose']) || ! count($_POST['purpose']))) {
     // No error found yet
     $error = "";
 
     // Check for errors
     if (empty($_POST['id'])) {
         $error .= "You must supply a desired Git user id. <br>";
-    } elseif (!preg_match('!^[a-z]\w+$!', $_POST['id']) || strlen($_POST['id']) > 16) {
+    } elseif (! preg_match('!^[a-z]\w+$!', $_POST['id']) || strlen($_POST['id']) > 16) {
         $error .= "Your user id must be from 1-16 characters long, start with " .
                   "a letter and contain nothing but a-z, 0-9, and _ <br>";
     }
@@ -61,13 +61,13 @@ if (count($_POST) && (!isset($_POST['purpose']) || !is_array($_POST['purpose']) 
     if (empty($_POST['password'])) {
         $error .= "You must supply a desired password. <br>";
     }
-    if (empty($_POST['email']) || !is_emailable_address($_POST['email'])) {
+    if (empty($_POST['email']) || ! is_emailable_address($_POST['email'])) {
         $error .= "You must supply a proper email address. <br>";
     }
     if (empty($_POST['yesno']) || $_POST['yesno'] != 'yes') {
         $error .= "You did not fill the form out correctly. <br>";
     }
-    if (empty($_POST['group']) || $_POST['group'] === 'none' || !isset($groups[$_POST['group']])) {
+    if (empty($_POST['group']) || $_POST['group'] === 'none' || ! isset($groups[$_POST['group']])) {
         $error .= "You did not fill out where to send the request. <br>";
     }
     if (empty($_POST['guidelines'])) {
@@ -75,7 +75,7 @@ if (count($_POST) && (!isset($_POST['purpose']) || !is_array($_POST['purpose']) 
     }
 
     // Post the request if there is no error
-    if (!$error) {
+    if (! $error) {
         $error = posttohost(
             "https://main.php.net/entry/svn-account.php",
             [

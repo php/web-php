@@ -43,7 +43,7 @@ foreach ($RELEASED_VERSIONS as $version => $release) {
 XML;
     $maxtime = [];
     foreach ($release["source"] as $source) {
-        if (!isset($source["date"])) {
+        if (! isset($source["date"])) {
             continue;
         }
         $maxtime[] = $time = strtotime($source["date"]);

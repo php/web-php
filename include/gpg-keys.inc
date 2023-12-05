@@ -178,7 +178,7 @@ function gpg_key_get_branches(bool $activeOnly): array {
         '5.3' => ['dsp', 'johannes'],
     ];
 
-    if (!$activeOnly) { return $branches; }
+    if (! $activeOnly) { return $branches; }
 
     $active = get_active_branches();
     return array_filter($branches, function ($branch) use ($active) {

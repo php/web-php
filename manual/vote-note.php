@@ -15,11 +15,11 @@ $link = "/{$BACKpage}#{$BACKid}";
 $master_url = "https://main.php.net/entry/user-notes-vote.php";
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-  if (isset($_SERVER['HTTP_X_JSON']) && $_SERVER['HTTP_X_JSON'] == 'On' && !empty($_REQUEST['id']) && !empty($_REQUEST['page']) && ($N = manual_notes_load($_REQUEST['page'])) && array_key_exists($_REQUEST['id'], $N) && !empty($_REQUEST['vote']) && ($_REQUEST['vote'] === 'up' || $_REQUEST['vote'] === 'down')) {
+  if (isset($_SERVER['HTTP_X_JSON']) && $_SERVER['HTTP_X_JSON'] == 'On' && ! empty($_REQUEST['id']) && ! empty($_REQUEST['page']) && ($N = manual_notes_load($_REQUEST['page'])) && array_key_exists($_REQUEST['id'], $N) && ! empty($_REQUEST['vote']) && ($_REQUEST['vote'] === 'up' || $_REQUEST['vote'] === 'down')) {
     $response = [];
     $hash = substr(md5($_REQUEST['page']), 0, 16);
     $notes_file = $_SERVER['DOCUMENT_ROOT'] . "/backend/notes/" . substr($hash, 0, 2) . "/$hash";
-    if (!file_exists($notes_file)) {
+    if (! file_exists($notes_file)) {
       $response["success"] = false;
       $response["msg"] = "Invalid request.";
     }
@@ -39,7 +39,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         if (isset($r->status, $r->votes) && $r->status) {
           $response["success"] = true;
           $response["update"] = (int)$r->votes;
-        } elseif (isset($r->status, $r->message) && !$r->status) {
+        } elseif (isset($r->status, $r->message) && ! $r->status) {
           $response["success"] = false;
           $response["msg"] = $r->message;
         } else {
@@ -51,9 +51,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     echo json_encode($response);
     exit;
   }
-  if (!empty($_REQUEST['id']) && !empty($_REQUEST['page']) && ($N = manual_notes_load($_REQUEST['page'])) && array_key_exists($_REQUEST['id'], $N) && !empty($_REQUEST['vote']) && ($_REQUEST['vote'] === 'up' || $_REQUEST['vote'] === 'down')) {
-    if (!empty($_POST['challenge']) && !empty($_POST['func']) || empty($_POST['arga']) || empty($_POST['argb'])) {
-      if (!test_answer($_POST['func'], $_POST['arga'], $_POST['argb'], $_POST['challenge'])) {
+  if (! empty($_REQUEST['id']) && ! empty($_REQUEST['page']) && ($N = manual_notes_load($_REQUEST['page'])) && array_key_exists($_REQUEST['id'], $N) && ! empty($_REQUEST['vote']) && ($_REQUEST['vote'] === 'up' || $_REQUEST['vote'] === 'down')) {
+    if (! empty($_POST['challenge']) && ! empty($_POST['func']) || empty($_POST['arga']) || empty($_POST['argb'])) {
+      if (! test_answer($_POST['func'], $_POST['arga'], $_POST['argb'], $_POST['challenge'])) {
         $error = "Incorrect answer! Please try again.";
       }
       else {
@@ -102,7 +102,7 @@ else {
   site_header("Vote On User Notes");
   $headerset = true;
 
-  if (!empty($_REQUEST['id']) && !empty($_REQUEST['page']) && ($N = manual_notes_load($_REQUEST['page'])) && array_key_exists($_REQUEST['id'], $N) && !empty($_REQUEST['vote']) && ($_REQUEST['vote'] === 'up' || $_REQUEST['vote'] === 'down')) {
+  if (! empty($_REQUEST['id']) && ! empty($_REQUEST['page']) && ($N = manual_notes_load($_REQUEST['page'])) && array_key_exists($_REQUEST['id'], $N) && ! empty($_REQUEST['vote']) && ($_REQUEST['vote'] === 'up' || $_REQUEST['vote'] === 'down')) {
 ?>
  <div class="container" id="notes-dialog" style="width: 100%; padding-bottom: 15px; margin: auto;">
   <div style="width: 100%; margin: auto;"><h1>Voting</h1></div>
@@ -148,7 +148,7 @@ if ($error) {
         </p>
       </div>
 EOL;
-if (!$headerset) {
+if (! $headerset) {
   site_header("Error - Voting");
   $headerset = true;
 }

@@ -117,7 +117,7 @@ function find_manual_page($lang, $keyword)
             }
         }
     }
-    if (!$dbh) {
+    if (! $dbh) {
         return find_manual_page_slow($lang, $keyword);
     }
     $kw = $keyword;
@@ -169,7 +169,7 @@ function find_manual_page($lang, $keyword)
             }
 
             $stm = $dbh->prepare($SQL);
-            if (!$stm) {
+            if (! $stm) {
                     return find_manual_page_slow($lang, $keyword);
             }
             $stm->execute([$lang, "/manual/{$lang}/{$_keyword}", $keyword]);

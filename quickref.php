@@ -46,7 +46,7 @@ function quickref_table($functions, $sort = true): void
 // Open directory, fall back to English,
 // if there is no dir for that language
 $dirh = @opendir($_SERVER['DOCUMENT_ROOT'] . "/manual/$LANG");
-if (!$dirh) {
+if (! $dirh) {
     error_noservice();
 }
 
@@ -65,7 +65,7 @@ while (($entry = readdir($dirh)) !== false) {
         $functions[$entry] = $funcname;
 
         // Compute similarity of the name to the requested one
-        if (function_exists('similar_text') && !empty($notfound)) {
+        if (function_exists('similar_text') && ! empty($notfound)) {
             similar_text($funcname, $notfound, $p);
 
             // If $notfound is a substring of $funcname then overwrite the score
@@ -122,7 +122,7 @@ if ($snippet = is_known_snippet($notfound)) {
 
 <h1>PHP Function List</h1>
 
-<?php if (!empty($notfound) && count($maybe) > 0) { ?>
+<?php if (! empty($notfound) && count($maybe) > 0) { ?>
 
 <p>
  <b><?php echo $notfound; ?></b> doesn't exist. Closest matches:

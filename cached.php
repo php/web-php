@@ -13,7 +13,7 @@
 $_SERVER['BASE_PAGE'] = 'cached.php';
 include_once 'include/prepend.inc';
 
-if (!isset($_GET["f"])) {
+if (! isset($_GET["f"])) {
     header("Location: https://www.php.net/");
     exit;
 }

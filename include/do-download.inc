@@ -26,7 +26,7 @@ function get_actual_download_file($file)
 function download_file($mirror, $file): void
 {
     // Redirect to the particular file
-    if (!headers_sent()) {
+    if (! headers_sent()) {
         status_header(302);
         header('Location: ' . $mirror . 'distributions/' . $file);
     } else {

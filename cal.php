@@ -27,7 +27,7 @@ $cd = isset($_GET['cd']) ? (int) $_GET['cd'] : 0;
 // If the year is not valid, set it to the current year
 // This excludes all the "too old", or "too far in the future"
 // calendar displays (so search engines can handle this page too)
-if ($cy != 0 && !valid_year($cy)) {
+if ($cy != 0 && ! valid_year($cy)) {
     $cy = date("Y");
 }
 
@@ -80,7 +80,7 @@ elseif ($cy && $cm && $cd) {
 }
 
 // Check if month and year is valid
-if ($cm && $cy && !checkdate($cm,1,$cy)) {
+if ($cm && $cy && ! checkdate($cm,1,$cy)) {
     $errors[] = "The specified year and month (" . htmlentities("$cy, $cm", ENT_QUOTES | ENT_IGNORE, 'UTF-8') . ") are not valid.";
     unset($cm, $cy);
 }
@@ -92,7 +92,7 @@ if (empty($cy)) { $cy = date("Y"); }
 // Start of the month date
 $date = mktime(0, 0, 1, $cm, 1, $cy);
 
-if (!$begun) {
+if (! $begun) {
   site_header("Events: " . date("F Y", $date), $site_header_config);
 ?>
 <div class="tip">
@@ -132,7 +132,7 @@ $eom = mktime(0, 0, 1, $cm + 1, 0, $cy);
 $prev_link = (function () use ($cm, $cy) {
     $lm = mktime(0, 0, 1, $cm, 0, $cy);
     $year = date('Y', $lm);
-    if (!valid_year($year)) {
+    if (! valid_year($year)) {
         return '&nbsp;';
     }
 
@@ -149,7 +149,7 @@ $prev_link = (function () use ($cm, $cy) {
 $next_link = (function () use ($cm, $cy) {
     $nm = mktime(0, 0, 1, $cm + 1, 1, $cy);
     $year = date('Y', $nm);
-    if (!valid_year($year)) {
+    if (! valid_year($year)) {
         return '&nbsp;';
     }
 
@@ -257,10 +257,10 @@ function load_event($id)
 {
     // Open events CSV file, return on error
     $fp = @fopen("backend/events.csv",'r');
-    if (!$fp) { return false; }
+    if (! $fp) { return false; }
 
     // Read as we can, event by event
-    while (!feof($fp)) {
+    while (! feof($fp)) {
 
       $event = read_event($fp);
 
@@ -292,10 +292,10 @@ function load_events($from, $whole_month = false)
 
     // Try to open the events file for reading, return if unable to
     $fp = @fopen("backend/events.csv",'r');
-    if (!$fp) { return false; }
+    if (! $fp) { return false; }
 
     // For all events, read in the event and check it if fits our scope
-    while (!feof($fp)) {
+    while (! feof($fp)) {
 
         // Read the event data into $event, or continue with next
         // line, if there was an error with this line
@@ -305,7 +305,7 @@ function load_events($from, $whole_month = false)
 
         // Keep event's seen list up to date
         // (for repeating events with the same ID)
-        if (!isset($seen[$event['id']])) { $seen[$event['id']] = 1; }
+        if (! isset($seen[$event['id']])) { $seen[$event['id']] = 1; }
         else { continue; }
 
         // Check if event is in our scope, depending on type

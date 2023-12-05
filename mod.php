@@ -11,7 +11,7 @@ include_once __DIR__ . '/include/prepend.inc';
 site_header("Email confirmation", ["current" => "community"]);
 
 // Only run on main php.net box.
-if (!is_primary_site()) {
+if (! is_primary_site()) {
     echo <<<ERROR
 <h1>Email confirmation failed</h1>
 
@@ -30,7 +30,7 @@ $sites = ["php.net", "lists.php.net"];
 [$none, $site, $token, $sender] = explode("/", $_SERVER["PATH_INFO"]);
 
 // Error in input data
-if ($sender == "" || strlen($token) < 32 || !isset($sites[$site])) {
+if ($sender == "" || strlen($token) < 32 || ! isset($sites[$site])) {
     echo <<<ERROR
 <h1>Email confirmation failed</h1>
 

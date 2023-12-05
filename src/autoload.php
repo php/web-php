@@ -20,7 +20,7 @@ spl_autoload_register(static function (string $class): void {
 
     $file = $directory . str_replace('\\', '/', $relativeClass) . '.php';
 
-    if (!file_exists($file)) {
+    if (! file_exists($file)) {
         return;
     }
 

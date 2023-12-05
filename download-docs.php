@@ -2,7 +2,7 @@
 $_SERVER['BASE_PAGE'] = 'download-docs.php';
 include_once __DIR__ . '/include/prepend.inc';
 
-if (!empty($_GET['active_langs'])) {
+if (! empty($_GET['active_langs'])) {
     echo serialize($ACTIVE_ONLINE_LANGUAGES);
     exit;
 }
@@ -161,7 +161,7 @@ if (count($found_formats) == 0) {
 
     // Print out the name of the formats
     foreach ($formats as $formatname => $extension) {
-        if (!isset($found_formats[$formatname])) { continue; }
+        if (! isset($found_formats[$formatname])) { continue; }
         echo "  <th valign=\"bottom\">$formatname</th>\n";
     }
 
@@ -185,10 +185,10 @@ if (count($found_formats) == 0) {
         foreach ($formats as $formatname => $extension) {
 
             // Skip if no file found
-            if (!isset($found_formats[$formatname])) { continue; }
+            if (! isset($found_formats[$formatname])) { continue; }
 
             echo "<td align=\"center\"$cellclass>";
-            if (!isset($lang_files[$formatname])) {
+            if (! isset($lang_files[$formatname])) {
                 echo "&nbsp;";
             } else {
 
@@ -196,7 +196,7 @@ if (count($found_formats) == 0) {
                 echo "<a href=\"$fileinfo[0]\"";
 
                 // Only print out tooltip, if explicit information is not printed
-                if (!isset($_GET['sizes']) && !$preflang) {
+                if (! isset($_GET['sizes']) && ! $preflang) {
                     echo " title=\" Size: $fileinfo[1]Kb -- Date: $fileinfo[2]\"";
                 }
 

@@ -74,7 +74,7 @@ site_header("My PHP.net", ["current" => "community"]);
  This page allows you to customize the PHP.net site.
 </p>
 
-<?php if (!is_official_mirror()) { ?>
+<?php if (! is_official_mirror()) { ?>
 <p class="warn">
  This is not an official PHP.net mirror site, and therefore the settings
  you set and see here will <strong>not</strong> be effective on any

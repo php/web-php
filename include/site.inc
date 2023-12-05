@@ -39,7 +39,7 @@ include __DIR__ . '/languages.inc';
 function is_primary_site($site = false)
 {
     global $MYSITE;
-    if (!$site) { $site = $MYSITE; }
+    if (! $site) { $site = $MYSITE; }
     return ($site == "https://www.php.net/" );
 }
 
@@ -55,7 +55,7 @@ function is_official_mirror($site = false)
 function default_language($site = false)
 {
     global $MIRRORS, $MYSITE;
-    if (!$site) { $site = $MYSITE; }
+    if (! $site) { $site = $MYSITE; }
     return (isset($MIRRORS[$site]) ? $MIRRORS[$site][6] : false);
 }
 
@@ -64,7 +64,7 @@ function default_language($site = false)
 function have_search($site = false)
 {
     global $MIRRORS, $MYSITE;
-    if (!$site) { $site = $MYSITE; }
+    if (! $site) { $site = $MYSITE; }
     return (isset($MIRRORS[$site]) ? $MIRRORS[$site][5] : false);
 }
 
@@ -73,7 +73,7 @@ function have_search($site = false)
 function mirror_provider($site = false)
 {
     global $MIRRORS, $MYSITE;
-    if (!$site) { $site = $MYSITE; }
+    if (! $site) { $site = $MYSITE; }
 
     if (isset($MIRRORS[$site])) {
        return $MIRRORS[$site][1];
@@ -91,7 +91,7 @@ function mirror_provider($site = false)
 function mirror_provider_url($site = false)
 {
     global $MIRRORS,$MYSITE;
-    if (!$site) { $site = $MYSITE; }
+    if (! $site) { $site = $MYSITE; }
 
     if (isset($MIRRORS[$site])) {
         return $MIRRORS[$site][3];
@@ -109,7 +109,7 @@ function mirror_provider_url($site = false)
 function mirror_type($site = false)
 {
     global $MIRRORS, $MYSITE;
-    if (!$site) { $site = $MYSITE; }
+    if (! $site) { $site = $MYSITE; }
 
     if (isset($MIRRORS[$site])) {
         return $MIRRORS[$site][4];
@@ -129,12 +129,12 @@ function mirror_redirect($absoluteURI): void
 
     // Test if there is no protocol spec
     // in the URL, then prepend local site URI
-    if (!preg_match("!^[a-z]+://!", $absoluteURI)) {
+    if (! preg_match("!^[a-z]+://!", $absoluteURI)) {
         $absoluteURI = substr($MYSITE, 0, -1) . $absoluteURI;
     }
 
     // Do a redirection, if headers are not sent
-    if (!headers_sent()) {
+    if (! headers_sent()) {
         header("Location: $absoluteURI");
     }
 
@@ -147,7 +147,7 @@ function mirror_redirect($absoluteURI): void
 // to the current time!
 function mirror_setcookie($name, $content, $exptime)
 {
-    if (!headers_sent()) {
+    if (! headers_sent()) {
         if (is_official_mirror()) {
             return setcookie($name, $content, time() + $exptime, '/', '.php.net');
         }
@@ -164,7 +164,7 @@ function header_nocache(): void
 {
     // Only try to send out headers in case
     // those were not sent already
-    if (!headers_sent()) {
+    if (! headers_sent()) {
         header("Cache-Control: private");
         header("Pragma: no-cache");
     }
@@ -248,7 +248,7 @@ function get_shortname($page) {
 // it works under more then one name). SERVER_NAME is
 // the name of the Apache vhost.
 
-if (!isset($_SERVER["HTTPS"]) || $_SERVER["HTTPS"] != "on") {
+if (! isset($_SERVER["HTTPS"]) || $_SERVER["HTTPS"] != "on") {
     $proto = "http";
 } else {
     $proto = "https";
@@ -264,7 +264,7 @@ if ($_SERVER["SERVER_PORT"] != '80' && $_SERVER["SERVER_PORT"] != 443) {
 
 // If the mirror is not registered with this name, provide defaults
 // (no country code, no search, no stats, English default language ...)
-if (!isset($MIRRORS[$MYSITE])) {
+if (! isset($MIRRORS[$MYSITE])) {
     $MIRRORS[$MYSITE] = ["xx", $MYSITE, false, $MYSITE, MIRROR_VIRTUAL, false, "en", MIRROR_OK];
 }
 
@@ -277,7 +277,7 @@ if (isset($_SERVER['MIRROR_LANGUAGE'])) {
 
 // Fallback to English in case the language
 // set is definitely not supported
-if (!isset($LANGUAGES[$MIRRORS[$MYSITE][6]])) {
+if (! isset($LANGUAGES[$MIRRORS[$MYSITE][6]])) {
     $MIRRORS[$MYSITE][6] = "en";
 }
 

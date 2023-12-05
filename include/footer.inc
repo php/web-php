@@ -1,17 +1,17 @@
     </section><!-- layout-content -->
     <?php
-    if (!empty($config['spanning-content'])) {
+    if (! empty($config['spanning-content'])) {
         print "<div class='spanning-content'>";
         print $config['spanning-content'];
         print "</div>";
     }
 
     ?>
-<?php if (!empty($config['related_menu']) || !empty($config['related_menu_deprecated'])): ?>
+<?php if (! empty($config['related_menu']) || ! empty($config['related_menu_deprecated'])): ?>
     <aside class='layout-menu'>
 
         <ul class='parent-menu-list'>
-            <?php if (!empty($config['related_menu'])): ?>
+            <?php if (! empty($config['related_menu'])): ?>
             <?php foreach($config['related_menu'] as $section): ?>
             <li>
                 <a href="<?php echo $section['link']; ?>"><?php echo $section['title']; ?></a>
@@ -35,7 +35,7 @@
             <?php endforeach; ?>
             <?php endif; ?>
 
-            <?php if (!empty($config['related_menu_deprecated'])): ?>
+            <?php if (! empty($config['related_menu_deprecated'])): ?>
             <li>
                 <span class="header">Deprecated</span>
                 <ul class="child-menu-list">
@@ -51,7 +51,7 @@
     </aside>
 <?php endif; ?>
 
-<?php if (!empty($config['sidebar'])): ?>
+<?php if (! empty($config['sidebar'])): ?>
 <aside class="tips">
     <div class="inner"><?php echo $config['sidebar']; ?></div>
 </aside>
@@ -68,7 +68,7 @@
         <li><a href="/contact.php">Contact</a></li>
         <li><a href="/sites.php">Other PHP.net sites</a></li>
         <li><a href="/privacy.php">Privacy policy</a></li>
-<?php if (!empty($_SERVER['BASE_PAGE']) && strncmp($_SERVER['BASE_PAGE'], 'manual', 6) !== 0): ?>
+<?php if (! empty($_SERVER['BASE_PAGE']) && strncmp($_SERVER['BASE_PAGE'], 'manual', 6) !== 0): ?>
         <li><a href="https://github.com/php/web-php/blob/master/<?php echo urlencode($_SERVER['BASE_PAGE']); ?>">View Source</a></li>
 <?php endif; ?>
       </ul>

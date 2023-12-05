@@ -41,7 +41,7 @@ if ($config["cache"]) {
     }
     header("Last-Modified: " . $tsstring);
 }
-if (!isset($config["languages"])) {
+if (! isset($config["languages"])) {
     $config["languages"] = [];
 }
 
@@ -85,7 +85,7 @@ if (!isset($config["languages"])) {
 <link rel="stylesheet" type="text/css" href="/cached.php?t=<?php echo $modified?>&amp;f=<?php echo $filename?>" media="screen">
 <?php endforeach ?>
 
-<?php if (!empty($_SERVER["BASE_HREF"])): ?>
+<?php if (! empty($_SERVER["BASE_HREF"])): ?>
  <base href="<?php echo $_SERVER["BASE_HREF"] ?>">
 <?php endif ?>
 
@@ -117,7 +117,7 @@ if (!isset($config["languages"])) {
   </div>
   <div id="flash-message"></div>
 </nav>
-<?php if (!empty($config["headsup"])): ?>
+<?php if (! empty($config["headsup"])): ?>
 <div class="headsup"><?php echo $config["headsup"]?></div>
 <?php endif ?>
 <nav id="trick"><div><?php doc_toc("en") ?></div></nav>
@@ -128,7 +128,7 @@ if (!isset($config["languages"])) {
    </div>
 </div>
 
-<?php if (!empty($config['breadcrumbs'])): ?>
+<?php if (! empty($config['breadcrumbs'])): ?>
   <div id="breadcrumbs" class="clearfix">
     <div id="breadcrumbs-inner">
     <?php if (isset($config['next'])): ?>
@@ -161,7 +161,7 @@ if (!isset($config["languages"])) {
 <?php endif; ?>
 
 
-<?php if (!empty($config['intro'])):?>
+<?php if (! empty($config['intro'])):?>
 <div id="intro" class="clearfix">
   <div class="container">
     <?php echo $config['intro'];?>

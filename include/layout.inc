@@ -278,16 +278,16 @@ function display_event($event, $include_date = 1): void
         -3 => '3rd Last'
     ];
 
-    if (!isset($event['start']) && isset($event['sday'])) {
+    if (! isset($event['start']) && isset($event['sday'])) {
         $sday = mktime(12,0,0,$event['smonth'],$event['sday'],$event['syear']);
     } else {
-        $sday = (isset($event['start']) && !empty($event['start'])) ? strtotime($event['start']) : 0;
+        $sday = (isset($event['start']) && ! empty($event['start'])) ? strtotime($event['start']) : 0;
     }
 
-    if (!isset($event['end']) && isset($event['eday'])) {
+    if (! isset($event['end']) && isset($event['eday'])) {
         $eday = mktime(12,0,0,$event['emonth'],$event['eday'],$event['eyear']);
     } else {
-        $eday = (isset($event['end']) && !empty($event['end'])) ? strtotime($event['end']) : 0;
+        $eday = (isset($event['end']) && ! empty($event['end'])) ? strtotime($event['end']) : 0;
     }
 ?>
 <table border="0" cellspacing="0" cellpadding="3" width="100%" class="vevent">
@@ -316,7 +316,7 @@ function display_event($event, $include_date = 1): void
         case 3:
         case 'recur':
             $days = $re[$event['recur']] . " " . $days[$event['recur_day']];
-            if (!$cm || $cy) {
+            if (! $cm || $cy) {
                 $cm = date("m");
                 $cy = date("Y");
             }
@@ -407,7 +407,7 @@ function print_news($news, $dog, $max = 5, $onlyyear = null, $return = false) {
                 break;
             }
         }
-        if (!isset($permlink)) {
+        if (! isset($permlink)) {
             $permlink = "#" . $id;
         }
 
@@ -495,7 +495,7 @@ function get_news_changes()
     }
 
     /* It is a bug when this happens.. but I don't know where it is coming from */
-    if (!isset($_SERVER["BASE_PAGE"])) {
+    if (! isset($_SERVER["BASE_PAGE"])) {
         return false;
     }
     if ($_SERVER["BASE_PAGE"] == "index.php") {
@@ -534,7 +534,7 @@ function news_toc($sections = null): void {
     foreach ($items as $section => $menu) {
 
         // only print requested sections.
-        if (is_array($sections) && !in_array($section, $sections, true)) {
+        if (is_array($sections) && ! in_array($section, $sections, true)) {
             continue;
         }
 
@@ -546,7 +546,7 @@ function news_toc($sections = null): void {
 }
 function doc_toc($lang): void {
     $file = __DIR__ . "/../manual/$lang/toc/index.inc";
-    if (!file_exists($file)) {
+    if (! file_exists($file)) {
         $lang = "en"; // Fallback on english if the translation doesn't exist
         $file = __DIR__ . "/../manual/en/toc/index.inc";
     }

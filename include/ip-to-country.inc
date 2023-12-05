@@ -51,7 +51,7 @@ function i2c_go()
     $ipnum = i2c_realip();
 
     // User already has a country detected with this IP stored
-    if (!empty($_COOKIE['COUNTRY']) && strpos($_COOKIE['COUNTRY'], ',') !== false) {
+    if (! empty($_COOKIE['COUNTRY']) && strpos($_COOKIE['COUNTRY'], ',') !== false) {
        list($COUNTRY, $storedip) = explode(",", $_COOKIE['COUNTRY']);
        if ($storedip == $ipnum) { return true; }
     }
@@ -91,19 +91,19 @@ function i2c_search_in_index($ip)
         __DIR__ . "/../backend/ip-to-country.idx",
         "r"
     );
-    if (!$dbidx) { return false; }
+    if (! $dbidx) { return false; }
 
     // Read in granularity from index file and
     // convert current IP to something useful
     $granularity = (int) fgets($dbidx, 64);
-    if (!$granularity) {
+    if (! $granularity) {
         // The file is empty (demo file)
         return false;
     }
     $ip_chunk = (int) ($ip / $granularity);
 
     // Loop till we can read the file
-    while (!feof($dbidx)) {
+    while (! feof($dbidx)) {
 
         // Get CSV data from index file
         $data = fgetcsv($dbidx, 100);
@@ -137,7 +137,7 @@ function i2c_search_in_db($ip, $idx)
     );
 
     // Return with "NA" in case of we cannot open the db
-    if (!$ipdb) { return $country; }
+    if (! $ipdb) { return $country; }
 
     // Jump to record $idx
     fseek($ipdb, ($idx[0] ? (($idx[0] - 1) * 24) : 0));
@@ -146,7 +146,7 @@ function i2c_search_in_db($ip, $idx)
     // or we find the range where this IP is, or we
     // reach the next indexed part [where the IP should
     // not be found, so there is no point in searching further]
-    while (!feof($ipdb) && !($range_start <= $ip && $range_end >= $ip)) {
+    while (! feof($ipdb) && ! ($range_start <= $ip && $range_end >= $ip)) {
 
         // We had run out of the indexed region,
         // where we expected to find the IP
@@ -180,7 +180,7 @@ function i2c_search_in_db($ip, $idx)
 function i2c_valid_country()
 {
     global $COUNTRY, $COUNTRIES;
-    return (!empty($COUNTRY) && $COUNTRY != "NA" && isset($COUNTRIES[$COUNTRY]));
+    return (! empty($COUNTRY) && $COUNTRY != "NA" && isset($COUNTRIES[$COUNTRY]));
 }
 
 // Returns the real IP address of the user
@@ -191,7 +191,7 @@ function i2c_realip()
     $ip = false;
 
     // If HTTP_CLIENT_IP is set, then give it priority
-    if (!empty($_SERVER["HTTP_CLIENT_IP"])) {
+    if (! empty($_SERVER["HTTP_CLIENT_IP"])) {
         $ip = $_SERVER["HTTP_CLIENT_IP"];
     }
 
@@ -199,7 +199,7 @@ function i2c_realip()
     // if they are behind a proxy then only figure out which IP belongs to the
     // user.  Might not need any more hackin if there is a squid reverse proxy
     // infront of apache.
-    if (!empty($_SERVER['HTTP_X_FORWARDED_FOR'])) {
+    if (! empty($_SERVER['HTTP_X_FORWARDED_FOR'])) {
 
         // Put the IP's into an array which we shall work with shortly.
         $ips = explode (", ", $_SERVER['HTTP_X_FORWARDED_FOR']);
@@ -209,7 +209,7 @@ function i2c_realip()
             // Skip RFC 1918 IP's 10.0.0.0/8, 172.16.0.0/12 and
             // 192.168.0.0/16
             // Also skip RFC 6598 IP's
-            if (!preg_match('/^(?:10|100\.(?:6[4-9]|[7-9]\d|1[01]\d|12[0-7])|172\.(?:1[6-9]|2\d|3[01])|192\.168)\./', $ips[$i]) && ip2long($ips[$i])) {
+            if (! preg_match('/^(?:10|100\.(?:6[4-9]|[7-9]\d|1[01]\d|12[0-7])|172\.(?:1[6-9]|2\d|3[01])|192\.168)\./', $ips[$i]) && ip2long($ips[$i])) {
                 $ip = $ips[$i];
                 break;
             }

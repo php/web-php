@@ -29,7 +29,7 @@ site_header("Documentation", ["current" => "docs"]);
 // List all manual languages viewable online
 $lastlang = end($ACTIVE_ONLINE_LANGUAGES);
 foreach ($ACTIVE_ONLINE_LANGUAGES as $langcode => $langname) {
-    if (!file_exists($_SERVER["DOCUMENT_ROOT"] . "/manual/{$langcode}/index.php")) {
+    if (! file_exists($_SERVER["DOCUMENT_ROOT"] . "/manual/{$langcode}/index.php")) {
         continue;
     }
 

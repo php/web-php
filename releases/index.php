@@ -32,7 +32,7 @@ if (isset($_GET["serialize"]) || isset($_GET["json"])) {
                 }
 
                 if (compare_version($versionArray, $version) == 0) {
-                    if (!isset($_GET['max'])) {
+                    if (! isset($_GET['max'])) {
                         $release['supported_versions'] = $supportedVersions[$ver] ?? [];
                     }
                     $machineReadable[$version] = $release;
@@ -40,7 +40,7 @@ if (isset($_GET["serialize"]) || isset($_GET["json"])) {
                 }
             }
 
-            if (!isset($_GET['max']) && !empty($machineReadable)) {
+            if (! isset($_GET['max']) && ! empty($machineReadable)) {
                 $version = key($machineReadable);
                 $machineReadable = current($machineReadable);
                 $machineReadable["version"] = $version;
@@ -89,7 +89,7 @@ $active_majors = array_keys($RELEASES);
 $latest = max($active_majors);
 foreach ($OLDRELEASES as $major => $a) {
     echo '<a id="v' . $major . '"></a>';
-    if (!in_array($major, $active_majors, false)) {
+    if (! in_array($major, $active_majors, false)) {
         echo "\n<br>\n";
         echo "<p>Support for PHP $major has been <b style=\"color: red;\">discontinued</b> ";
         echo "since <b>" . current($a)['date'] . '</b>.';
@@ -212,7 +212,7 @@ function mk_rel(int $major,
     echo "\n <li>\n  Download:\n";
     echo "<ul>\n";
 
-    if (!$museum) {
+    if (! $museum) {
         foreach (array_merge($source, $windows) as $src) {
             echo " <li>\n";
             if (isset($src['filename'])) {
@@ -233,7 +233,7 @@ function mk_rel(int $major,
 
     } else { /* $museum */
         foreach ($source as $src) {
-            if (!isset($src["filename"])) {
+            if (! isset($src["filename"])) {
                 continue;
             }
             printf('<li><a href="http://museum.php.net/php%d/%s">%s</a></li>',

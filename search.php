@@ -9,7 +9,7 @@ $_FORM = &$_GET;
 // ---------------------------------------------------------------------------
 
 // We received something to search for
-if (!empty($_FORM['pattern'])) {
+if (! empty($_FORM['pattern'])) {
 
     if (empty($_FORM['show'])) {
         $_FORM['show'] = 'all';

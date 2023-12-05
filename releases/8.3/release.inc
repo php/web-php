@@ -5,7 +5,7 @@ use function releases\php83\language_chooser;
 use function releases\php83\language_redirect;
 use function releases\php83\message;
 
-if (!isset($lang)) {
+if (! isset($lang)) {
     $lang = 'en';
 }
 

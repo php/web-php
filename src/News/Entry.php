@@ -45,7 +45,7 @@ class Entry {
 
     public function setCategories(array $cats): self {
         foreach ($cats as $cat) {
-            if (!isset(self::CATEGORIES[$cat])) {
+            if (! isset(self::CATEGORIES[$cat])) {
                 throw new \Exception("Unknown category: $cat");
             }
         }
@@ -54,10 +54,10 @@ class Entry {
     }
 
     public function addCategory(string $cat): self {
-        if (!isset(self::CATEGORIES[$cat])) {
+        if (! isset(self::CATEGORIES[$cat])) {
             throw new \Exception("Unknown category: $cat");
         }
-        if (!in_array($cat, $this->categories, false)) {
+        if (! in_array($cat, $this->categories, false)) {
             $this->categories[] = $cat;
         }
         return $this;
@@ -76,7 +76,7 @@ class Entry {
         if (basename($path) !== $path) {
             throw new \Exception('path must be a simple file name under ' . self::IMAGE_PATH_REL);
         }
-        if (!file_exists(self::IMAGE_PATH_ABS . $path)) {
+        if (! file_exists(self::IMAGE_PATH_ABS . $path)) {
             throw new \Exception('Image not found at web-php/' . self::IMAGE_PATH_REL . $path);
         }
         $this->image = [
@@ -121,7 +121,7 @@ class Entry {
         self::ce($dom, "link", null, ['href' => "{$href}#{$this->id}", "rel" => "alternate", "type" => "text/html"], $item);
         self::ce($dom, "link", null, ['href' => $link, 'rel' => 'via', 'type' => 'text/html'], $item);
 
-        if (!empty($this->conf_time)) {
+        if (! empty($this->conf_time)) {
             $item->appendChild($dom->createElementNs("http://php.net/ns/news", "finalTeaserDate", date("Y-m-d", $this->conf_time)));
         }
 

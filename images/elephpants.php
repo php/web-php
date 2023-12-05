@@ -50,7 +50,7 @@ $json = @file_get_contents($path . '/flickr.json');
 $photos = json_decode($json, true);
 
 // if no photo data, respond with an error.
-if (!$photos || !is_array($photos)) {
+if (! $photos || ! is_array($photos)) {
     header('HTTP/1.1 500', true, 500);
     print json_encode([
         'error' => "No elephpant metadata available."
@@ -70,7 +70,7 @@ foreach ($photos as $photo) {
     }
 
     // skip photo if file doesn't exist.
-    if (!is_readable($path . '/' . $photo['filename'])) {
+    if (! is_readable($path . '/' . $photo['filename'])) {
         continue;
     }
 

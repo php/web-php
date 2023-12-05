@@ -3,7 +3,7 @@
 header_nocache();
 
 // No file to download
-if (!isset($df)) {
+if (! isset($df)) {
     exit("No file requested for download");
 }
 
