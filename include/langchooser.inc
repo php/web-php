@@ -56,7 +56,7 @@ function language_choose_code()
     }
 
     // Specified in a shortcut URL (eg. /en/echo or /pt_br/echo)
-    if (preg_match("!^/(\\w{2}(_\\w{2})?)/!", htmlspecialchars($_SERVER['REQUEST_URI'],ENT_QUOTES, 'UTF-8'), $flang)) {
+    if (preg_match("!^/(\\w{2}(_\\w{2})?)/!", htmlspecialchars($_SERVER['REQUEST_URI'], ENT_QUOTES, 'UTF-8'), $flang)) {
 
         // Put language into preference list
         $rlang = language_add($flang[1], $languages);
@@ -68,7 +68,9 @@ function language_choose_code()
 
         // Drop out langauge specification from URL, as this is already handled
         $_SERVER['STRIPPED_URI'] = preg_replace(
-            "!^/$flang[1]/!", "/", htmlspecialchars($_SERVER['REQUEST_URI'], ENT_QUOTES, 'UTF-8')
+            "!^/$flang[1]/!",
+            "/",
+            htmlspecialchars($_SERVER['REQUEST_URI'], ENT_QUOTES, 'UTF-8')
         );
 
     }

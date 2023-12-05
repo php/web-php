@@ -181,16 +181,20 @@ function recentEOLBranchesHTML(): string {
 /**
  * @param bool|array $announcement
  */
-function mk_rel(int $major,
-                string $ver,
-                string $date,
-                $announcement,
-                array $source,
-                array $windows,
-                bool $museum): void {
-    printf("<a id=\"%s\"></a>\n<h2>%1\$s</h2>\n<ul>\n <li>Released: %s</li>\n <li>Announcement: ",
-           ($pos = strpos($ver, " ")) ? substr($ver, 0, $pos) : $ver,
-           $date);
+function mk_rel(
+    int $major,
+    string $ver,
+    string $date,
+    $announcement,
+    array $source,
+    array $windows,
+    bool $museum
+): void {
+    printf(
+        "<a id=\"%s\"></a>\n<h2>%1\$s</h2>\n<ul>\n <li>Released: %s</li>\n <li>Announcement: ",
+        ($pos = strpos($ver, " ")) ? substr($ver, 0, $pos) : $ver,
+        $date
+    );
 
     if ($announcement) {
         if (is_array($announcement)) {
@@ -236,12 +240,20 @@ function mk_rel(int $major,
             if (!isset($src["filename"])) {
                 continue;
             }
-            printf('<li><a href="http://museum.php.net/php%d/%s">%s</a></li>',
-                   $major, $src["filename"], $src["name"]);
+            printf(
+                '<li><a href="http://museum.php.net/php%d/%s">%s</a></li>',
+                $major,
+                $src["filename"],
+                $src["name"]
+            );
         }
         foreach ($windows as $src) {
-            printf('<li><a href="http://museum.php.net/%s/%s">%s</a></li>',
-                   ($major == 5 ? "php5" : "win32"), $src["filename"], $src["name"]);
+            printf(
+                '<li><a href="http://museum.php.net/%s/%s">%s</a></li>',
+                ($major == 5 ? "php5" : "win32"),
+                $src["filename"],
+                $src["name"]
+            );
         }
     }
 

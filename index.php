@@ -121,7 +121,8 @@ EOF;
 $meta_image_path = $MYSITE . 'images/meta-image.png';
 $meta_description = "PHP is a popular general-purpose scripting language that powers everything from your blog to the most popular websites in the world.";
 
-site_header("Hypertext Preprocessor",
+site_header(
+    "Hypertext Preprocessor",
     [
         'current' => 'home',
         'headtags' => [

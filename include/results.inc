@@ -41,9 +41,9 @@ function search_results($res, $q, $profile = 'all', $per_page = 10, $s = 0, $l =
         // rewrite mirrors urls (\w\w\d? or www, but not qa, doc, gtk and ~/user)
         $real_url = preg_replace('@^http://(?!doc|qa|gtk)\w{2,3}\.php\.net(?!/~)(.*)$@', '$1', $hit['Url']);
         $displayurl = preg_replace('@^http://(?:(?!doc|qa|php|gtk)\w{2,3}\.)?(.+[^/])/?$@', '$1', $hit['Url']);
-        $type = substr($displayurl,0,strpos($displayurl,'.'));
-        if($type == 'pecl' && strstr($displayurl,"/bugs/")) $type = "peclbugs";
-        if($type == 'pear' && strstr($displayurl,"/bugs/")) $type = "pearbugs";
+        $type = substr($displayurl, 0, strpos($displayurl, '.'));
+        if($type == 'pecl' && strstr($displayurl, "/bugs/")) $type = "peclbugs";
+        if($type == 'pear' && strstr($displayurl, "/bugs/")) $type = "pearbugs";
         if($type == 'smarty') continue;
         $display_title = str_replace(['PHP:', '&amp;'], ['', '&'], $hit['Title']);
 

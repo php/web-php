@@ -49,7 +49,7 @@ if ($id) {
 elseif ($cy && $cm && $cd) {
 
     // Check if date is valid
-    if (checkdate($cm,$cd,$cy)) {
+    if (checkdate($cm, $cd, $cy)) {
 
         // Date integer for that day
         $date = mktime(0, 0, 1, $cm, $cd, $cy);
@@ -68,7 +68,7 @@ elseif ($cy && $cm && $cd) {
 
         // Unable to load events for that day
         else {
-            $errors[] = "There are no events for the specified date (" . date("F j, Y",$date) . ").";
+            $errors[] = "There are no events for the specified date (" . date("F j, Y", $date) . ").";
         }
     }
 
@@ -80,7 +80,7 @@ elseif ($cy && $cm && $cd) {
 }
 
 // Check if month and year is valid
-if ($cm && $cy && !checkdate($cm,1,$cy)) {
+if ($cm && $cy && !checkdate($cm, 1, $cy)) {
     $errors[] = "The specified year and month (" . htmlentities("$cy, $cm", ENT_QUOTES | ENT_IGNORE, 'UTF-8') . ") are not valid.";
     unset($cm, $cy);
 }
@@ -125,7 +125,7 @@ if (count($errors) > 0) {
 }
 
 // Beginning and end of this month
-$bom = mktime(0, 0, 1, $cm,   1, $cy);
+$bom = mktime(0, 0, 1, $cm, 1, $cy);
 $eom = mktime(0, 0, 1, $cm + 1, 0, $cy);
 
 // Link to previous month (but do not link to too early dates)
@@ -138,11 +138,13 @@ $prev_link = (function () use ($cm, $cy) {
 
     $month = date('m', $lm);
     $monthName = date('F', $lm);
-    return sprintf('<a href="/cal.php?cm=%s&amp;cy=%s">%s, %s</a>',
-                   urlencode($month),
-                   urlencode($year),
-                   htmlentities($monthName),
-                   htmlentities($year));
+    return sprintf(
+        '<a href="/cal.php?cm=%s&amp;cy=%s">%s, %s</a>',
+        urlencode($month),
+        urlencode($year),
+        htmlentities($monthName),
+        htmlentities($year)
+    );
 })();
 
 // Link to next month (but do not link to too early dates)
@@ -155,11 +157,13 @@ $next_link = (function () use ($cm, $cy) {
 
     $month = date('m', $nm);
     $monthName = date('F', $nm);
-    return sprintf('<a href="/cal.php?cm=%s&amp;cy=%s">%s, %s</a>',
-                   urlencode($month),
-                   urlencode($year),
-                   htmlentities($monthName),
-                   htmlentities($year));
+    return sprintf(
+        '<a href="/cal.php?cm=%s&amp;cy=%s">%s, %s</a>',
+        urlencode($month),
+        urlencode($year),
+        htmlentities($monthName),
+        htmlentities($year)
+    );
 })();
 
 // Print out navigation links for previous and next month
@@ -174,22 +178,22 @@ echo '<table id="cal" width="100%" border="1" cellspacing="0" cellpadding="3">',
 
 // Print out headers for weekdays
 for ($i = 0; $i < 7; $i++) {
-    echo '<th width="14%">', date("l",mktime(0,0,1,4,$i + 1,2001)), "</th>\n";
+    echo '<th width="14%">', date("l", mktime(0, 0, 1, 4, $i + 1, 2001)), "</th>\n";
 }
 echo "</tr>\n<tr>";
 
 // Generate the requisite number of blank days to get things started
-for ($days = $i = date("w",$bom); $i > 0; $i--) {
+for ($days = $i = date("w", $bom); $i > 0; $i--) {
     echo '<td class="notaday">&nbsp;</td>';
 }
 
 // Print out all the days in this month
-for ($i = 1; $i <= date("t",$bom); $i++) {
+for ($i = 1; $i <= date("t", $bom); $i++) {
 
     // Print out day number and all events for the day
     echo '<td><a class="day" href="/cal.php', "?cm=$cm&amp;cd=$i&amp;cy=$cy",
          '">',$i,'</a>';
-    display_events_for_day(date("Y-m-",$bom) . sprintf("%02d",$i), $events);
+    display_events_for_day(date("Y-m-", $bom) . sprintf("%02d", $i), $events);
     echo '</td>';
 
     // Break HTML table row if at end of week
@@ -218,11 +222,11 @@ function date_for_recur($recur, $day, $bom, $eom)
     if ($recur > 0) {
         $bomd = date("w", $bom) + 1;
         $days = (($day - $bomd + 7) % 7) + (($recur - 1) * 7);
-        return mktime(0,0,1, date("m",$bom), $days + 1, date("Y",$bom));
+        return mktime(0, 0, 1, date("m", $bom), $days + 1, date("Y", $bom));
     }
 
     // ${recur}th to last $day of the month
-    $eomd = date("w",$eom) + 1;
+    $eomd = date("w", $eom) + 1;
     $days = (($eomd - $day + 7) % 7) + ((abs($recur) - 1) * 7);
 
     return mktime(0, 0, 1, date("m", $bom) + 1, -$days, date("Y", $bom));
@@ -256,7 +260,7 @@ function display_events_for_day($day, $events): void
 function load_event($id)
 {
     // Open events CSV file, return on error
-    $fp = @fopen("backend/events.csv",'r');
+    $fp = @fopen("backend/events.csv", 'r');
     if (!$fp) { return false; }
 
     // Read as we can, event by event
@@ -283,15 +287,15 @@ function load_events($from, $whole_month = false)
 {
     // Take advantage of the equality behavior of this date format
     $from_date = date("Y-m-d", $from);
-    $bom = mktime(0, 0, 1, date("m",$from), 1, date("Y",$from));
-    $eom = mktime(0, 0, 1, date("m",$from) + 1, 0, date("Y",$from));
+    $bom = mktime(0, 0, 1, date("m", $from), 1, date("Y", $from));
+    $eom = mktime(0, 0, 1, date("m", $from) + 1, 0, date("Y", $from));
     $to_date = date("Y-m-d", $whole_month ? $eom : $from);
 
     // Set arrays to their default
     $events = $seen = [];
 
     // Try to open the events file for reading, return if unable to
-    $fp = @fopen("backend/events.csv",'r');
+    $fp = @fopen("backend/events.csv", 'r');
     if (!$fp) { return false; }
 
     // For all events, read in the event and check it if fits our scope

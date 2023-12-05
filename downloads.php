@@ -25,7 +25,8 @@ $SIDEBAR_DATA = '
 <p class="panel"><a href="/releases/">Old archives</a></p>
 ';
 
-site_header("Downloads",
+site_header(
+    "Downloads",
     [
         'link' => [
             [

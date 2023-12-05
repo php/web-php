@@ -44,7 +44,7 @@ common_header(message('common_header', $lang));
                 <div class="php8-compare__label">PHP &lt; 8.1</div>
                 <div class="php8-code phpcode">
                     <?php highlight_php_trimmed(
-                        <<<'PHP'
+    <<<'PHP'
 class Status
 {
     const DRAFT = 'draft';
@@ -53,8 +53,7 @@ class Status
 }
 function acceptStatus(string $status) {...}
 PHP
-
-                    );?>
+);?>
                 </div>
             </div>
             <div class="php8-compare__arrow"></div>
@@ -62,7 +61,7 @@ PHP
                 <div class="php8-compare__label php8-compare__label_new">PHP 8.1</div>
                 <div class="php8-code phpcode">
                     <?php highlight_php_trimmed(
-                        <<<'PHP'
+    <<<'PHP'
 enum Status
 {
     case Draft;
@@ -71,8 +70,7 @@ enum Status
 }
 function acceptStatus(Status $status) {...}
 PHP
-
-                    );?>
+);?>
                 </div>
             </div>
         </div>
@@ -91,7 +89,7 @@ PHP
                 <div class="php8-compare__label">PHP &lt; 8.1</div>
                 <div class="php8-code phpcode">
                     <?php highlight_php_trimmed(
-                        <<<'PHP'
+    <<<'PHP'
 class BlogData
 {
     private Status $status;
@@ -107,8 +105,7 @@ class BlogData
     }
 }
 PHP
-
-                    );?>
+);?>
                 </div>
             </div>
             <div class="php8-compare__arrow"></div>
@@ -116,7 +113,7 @@ PHP
                 <div class="php8-compare__label php8-compare__label_new">PHP 8.1</div>
                 <div class="php8-code phpcode">
                     <?php highlight_php_trimmed(
-                            <<<'PHP'
+    <<<'PHP'
 class BlogData
 {
     public readonly Status $status;
@@ -127,7 +124,7 @@ class BlogData
     }
 }
 PHP
-                    );?>
+);?>
                 </div>
             </div>
         </div>
@@ -287,7 +284,6 @@ function count_and_iterate(Iterator $value) {
     count($value);
 }
 PHP
-
                     );?>
                 </div>
             </div>
@@ -335,7 +331,6 @@ function redirectToLoginPage() {
     echo 'Hello'; // <- dead code
 }
 PHP
-
                     );?>
                 </div>
             </div>
@@ -355,7 +350,6 @@ function redirectToLoginPage(): never {
     echo 'Hello'; // <- dead code detected by static analysis 
 }
 PHP
-
                     );?>
                 </div>
             </div>
@@ -386,7 +380,6 @@ class Bar extends Foo
     public const XX = "bar"; // No error
 }
 PHP
-
                     );?>
                 </div>
             </div>
@@ -406,7 +399,6 @@ class Bar extends Foo
     public const XX = "bar"; // Fatal error
 }
 PHP
-
                     );?>
                 </div>
             </div>
@@ -430,7 +422,6 @@ PHP
 016 === 16; // false because `016` is octal for `14` and it's confusing
 016 === 14; // true 
 PHP
-
                     );?>
                 </div>
             </div>
@@ -471,7 +462,6 @@ $httpClient->request('https://example.com/')
             print json_decode($responseBody)['code'];
         });
 PHP
-
                     );?>
                 </div>
             </div>

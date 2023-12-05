@@ -6,8 +6,8 @@ $_SERVER['MYSITE'] = $MYSITE;
 ini_set('highlight.comment', 'comment');
 ini_set('highlight.default', 'default');
 ini_set('highlight.keyword', 'keyword');
-ini_set('highlight.string',  'string');
-ini_set('highlight.html',    'html');
+ini_set('highlight.string', 'string');
+ini_set('highlight.html', 'html');
 
 // Highlight PHP code
 function highlight_php($code, $return = false)
@@ -57,7 +57,7 @@ function commonFooter(): void { site_footer(); }
 function resize_image($img, $width = 1, $height = 1)
 {
     // Drop width and height values from image if available
-    $str = preg_replace('!width=\"([0-9]+?)\"!i',  '', $img);
+    $str = preg_replace('!width=\"([0-9]+?)\"!i', '', $img);
     $str = preg_replace('!height=\"([0-9]+?)\"!i', '', $str);
 
     // Return image with new width and height added
@@ -69,8 +69,14 @@ function resize_image($img, $width = 1, $height = 1)
 }
 
 // Return an <img> tag for a given image file available on the server
-function make_image($file, $alt = false, $align = false, $extras = false,
-                    $dir = '/images', $addsize = true)
+function make_image(
+    $file,
+    $alt = false,
+    $align = false,
+    $extras = false,
+    $dir = '/images',
+    $addsize = true
+)
 {
     // If no / was provided at the start of $dir, add it
     $webdir = $_SERVER['MYSITE'] . ($dir[0] == '/' ? '' : '/') . $dir;
@@ -93,7 +99,8 @@ function make_image($file, $alt = false, $align = false, $extras = false,
     }
 
     // Return with image built up
-    return sprintf('<img src="%s/%s" alt="%s"%s%s%s>',
+    return sprintf(
+        '<img src="%s/%s" alt="%s"%s%s%s>',
         $webdir,
         $file,
         ($alt ?: ''),
@@ -104,8 +111,13 @@ function make_image($file, $alt = false, $align = false, $extras = false,
 }
 
 // Print an <img> tag out for a given file
-function print_image($file, $alt = false, $align = false, $extras = false,
-                     $dir = '/images'): void
+function print_image(
+    $file,
+    $alt = false,
+    $align = false,
+    $extras = false,
+    $dir = '/images'
+): void
 {
     echo make_image($file, $alt, $align, $extras, $dir);
 }
@@ -122,8 +134,14 @@ function news_image($URL, $image, $alt, $print = true)
 }
 
 // Return HTML code for a submit button image
-function make_submit($file, $alt = false, $align = false, $extras = false,
-                     $dir = '/images', $border = 0)
+function make_submit(
+    $file,
+    $alt = false,
+    $align = false,
+    $extras = false,
+    $dir = '/images',
+    $border = 0
+)
 {
     // Get an image without size info and convert the
     // border attribute to use CSS, as border="" is not
@@ -149,12 +167,13 @@ function make_link (string $url, string $linktext = ''): string
 // return a hyperlink to something, within the site, that pops up a new window
 //
 function make_popup_link ($url, $linktext = false, $target = false, $windowprops = "", $extras = false) {
-    return sprintf("<a href=\"%s\" target=\"%s\" onclick=\"window.open('%s','%s','%s');return false;\"%s>%s</a>",
+    return sprintf(
+        "<a href=\"%s\" target=\"%s\" onclick=\"window.open('%s','%s','%s');return false;\"%s>%s</a>",
         htmlspecialchars($url, ENT_QUOTES | ENT_IGNORE),
         ($target ?: "_new"),
         htmlspecialchars($url, ENT_QUOTES | ENT_IGNORE),
         ($target ?: "_new"),
-                $windowprops,
+        $windowprops,
         ($extras ? ' ' . $extras : ''),
         ($linktext ?: $url)
     );
@@ -279,13 +298,13 @@ function display_event($event, $include_date = 1): void
     ];
 
     if (!isset($event['start']) && isset($event['sday'])) {
-        $sday = mktime(12,0,0,$event['smonth'],$event['sday'],$event['syear']);
+        $sday = mktime(12, 0, 0, $event['smonth'], $event['sday'], $event['syear']);
     } else {
         $sday = (isset($event['start']) && !empty($event['start'])) ? strtotime($event['start']) : 0;
     }
 
     if (!isset($event['end']) && isset($event['eday'])) {
-        $eday = mktime(12,0,0,$event['emonth'],$event['eday'],$event['eyear']);
+        $eday = mktime(12, 0, 0, $event['emonth'], $event['eday'], $event['eyear']);
     } else {
         $eday = (isset($event['end']) && !empty($event['end'])) ? strtotime($event['end']) : 0;
     }
@@ -311,7 +330,7 @@ function display_event($event, $include_date = 1): void
         case 2:
         case 'multi':
             $dtend = date("Y-m-d", strtotime("+1 day", $eday));
-            echo " (<abbr class='dtstart'>", date("Y-m-d",$sday), "</abbr> to <abbr class='dtend' title='$dtend'>", date("Y-m-d",$eday), "</abbr>)";
+            echo " (<abbr class='dtstart'>", date("Y-m-d", $sday), "</abbr> to <abbr class='dtend' title='$dtend'>", date("Y-m-d", $eday), "</abbr>)";
             break;
         case 3:
         case 'recur':
@@ -340,7 +359,7 @@ function display_event($event, $include_date = 1): void
 <?php
 
     // Print long description
-    echo preg_replace("/\r?\n\r?\n/", "<br><br>", trim(htmlentities($event['ldesc'],ENT_QUOTES | ENT_IGNORE, 'UTF-8')));
+    echo preg_replace("/\r?\n\r?\n/", "<br><br>", trim(htmlentities($event['ldesc'], ENT_QUOTES | ENT_IGNORE, 'UTF-8')));
     // If we have an URL, print it out
     if ($event['url']) {
         echo '<br><br><b>URL:</b> ',

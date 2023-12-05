@@ -8,7 +8,8 @@ function common_header(string $description): void {
     global $MYSITE;
 
     $meta_image_path = \htmlspecialchars(
-        \filter_var($MYSITE . 'images/php8/php_8_1_released.png', \FILTER_VALIDATE_URL));
+        \filter_var($MYSITE . 'images/php8/php_8_1_released.png', \FILTER_VALIDATE_URL)
+    );
     $meta_description = \htmlspecialchars($description);
 
     \site_header("PHP 8.1.0 Release Announcement", [

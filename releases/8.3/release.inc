@@ -47,7 +47,7 @@ common_header(message('common_header', $lang));
                     <div class="php8-compare__label">PHP &lt; 8.3</div>
                     <div class="php8-code phpcode">
                         <?php highlight_php_trimmed(
-                            <<<'PHP'
+    <<<'PHP'
 interface I {
     // We may naively assume that the PHP constant is always a string.
     const PHP = 'PHP 8.2';
@@ -58,8 +58,7 @@ class Foo implements I {
     const PHP = [];
 }
 PHP
-
-                        ); ?>
+); ?>
                     </div>
                 </div>
                 <div class="php8-compare__arrow"></div>
@@ -67,7 +66,7 @@ PHP
                     <div class="php8-compare__label php8-compare__label_new">PHP 8.3</div>
                     <div class="php8-code phpcode">
                         <?php highlight_php_trimmed(
-                            <<<'PHP'
+    <<<'PHP'
 interface I {
     const string PHP = 'PHP 8.3';
 }
@@ -79,7 +78,7 @@ class Foo implements I {
 // Fatal error: Cannot use array as value for class constant
 // Foo::PHP of type string
 PHP
-                        ); ?>
+); ?>
                     </div>
                 </div>
             </div>
@@ -95,7 +94,7 @@ PHP
                     <div class="php8-compare__label">PHP &lt; 8.3</div>
                     <div class="php8-code phpcode">
                         <?php highlight_php_trimmed(
-                            <<<'PHP'
+    <<<'PHP'
 class Foo {
     const PHP = 'PHP 8.2';
 }
@@ -104,8 +103,7 @@ $searchableConstant = 'PHP';
 
 var_dump(constant(Foo::class . "::{$searchableConstant}"));
 PHP
-
-                        ); ?>
+); ?>
                     </div>
                 </div>
                 <div class="php8-compare__arrow"></div>
@@ -113,7 +111,7 @@ PHP
                     <div class="php8-compare__label php8-compare__label_new">PHP 8.3</div>
                     <div class="php8-code phpcode">
                         <?php highlight_php_trimmed(
-                            <<<'PHP'
+    <<<'PHP'
 class Foo {
     const PHP = 'PHP 8.3';
 }
@@ -122,7 +120,7 @@ $searchableConstant = 'PHP';
 
 var_dump(Foo::{$searchableConstant});
 PHP
-                        ); ?>
+); ?>
                     </div>
                 </div>
             </div>
@@ -157,7 +155,6 @@ final class MyTest extends TestCase {
 // The log file will never be removed, because the
 // method name was mistyped (taerDown vs tearDown).
 PHP
-
                         ); ?>
                     </div>
                 </div>
@@ -226,7 +223,6 @@ $cloned = clone $instance;
 
 // Fatal error: Cannot modify readonly property Foo::$php
 PHP
-
                         ); ?>
                     </div>
                 </div>
@@ -285,7 +281,6 @@ function json_validate(string $string): bool {
 
 var_dump(json_validate('{ "test": { "foo": "bar" } }')); // true
 PHP
-
                         ); ?>
                     </div>
                 </div>
@@ -342,7 +337,6 @@ $randomDomain = sprintf(
 
 echo $randomDomain;
 PHP
-
                         ); ?>
                     </div>
                 </div>
@@ -406,7 +400,6 @@ $chanceForTrue = 0.1;
 // introducing a small bias.
 $myBoolean = getFloat(0, 1) < $chanceForTrue;
 PHP
-
                         ); ?>
                     </div>
                 </div>

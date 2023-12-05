@@ -43,16 +43,16 @@ common_header(message('common_header', $lang));
                 <a class="php8-rfc" href="https://wiki.php.net/rfc/readonly_classes">RFC</a>
                 <a class="php8-rfc"
                    href="/manual/<?= $lang ?>/language.oop5.basic.php#language.oop5.basic.class.readonly"><?= message(
-                        'documentation',
-                        $lang
-                    ) ?></a>
+    'documentation',
+    $lang
+) ?></a>
             </h2>
             <div class="php8-compare__main">
                 <div class="php8-compare__block example-contents">
                     <div class="php8-compare__label">PHP &lt; 8.2</div>
                     <div class="php8-code phpcode">
                         <?php highlight_php_trimmed(
-                            <<<'PHP'
+    <<<'PHP'
 class BlogData
 {
     public readonly string $title;
@@ -66,8 +66,7 @@ class BlogData
     }
 }
 PHP
-
-                        ); ?>
+); ?>
                     </div>
                 </div>
                 <div class="php8-compare__arrow"></div>
@@ -75,7 +74,7 @@ PHP
                     <div class="php8-compare__label php8-compare__label_new">PHP 8.2</div>
                     <div class="php8-code phpcode">
                         <?php highlight_php_trimmed(
-                            <<<'PHP'
+    <<<'PHP'
 readonly class BlogData
 {
     public string $title;
@@ -89,7 +88,7 @@ readonly class BlogData
     }
 }
 PHP
-                        ); ?>
+); ?>
                     </div>
                 </div>
             </div>
@@ -101,16 +100,16 @@ PHP
                 <a class="php8-rfc" href="https://wiki.php.net/rfc/dnf_types">RFC</a>
                 <a class="php8-rfc"
                    href="/manual/<?= $lang ?>/migration82.new-features.php#migration82.new-features.core.type-system"><?= message(
-                        'documentation',
-                        $lang
-                    ) ?></a>
+    'documentation',
+    $lang
+) ?></a>
             </h2>
             <div class="php8-compare__main">
                 <div class="php8-compare__block example-contents">
                     <div class="php8-compare__label">PHP &lt; 8.2</div>
                     <div class="php8-code phpcode">
                         <?php highlight_php_trimmed(
-                            <<<'PHP'
+                        <<<'PHP'
 class Foo {
     public function bar(mixed $entity) {
         if ((($entity instanceof A) && ($entity instanceof B)) || ($entity === null)) {
@@ -121,8 +120,7 @@ class Foo {
     }
 }
 PHP
-
-                        ); ?>
+                    ); ?>
                     </div>
                 </div>
                 <div class="php8-compare__arrow"></div>
@@ -167,7 +165,6 @@ class Falsy
     public function almostNull(): string|null { /* ... */ *}
 }
 PHP
-
                         ); ?>
                     </div>
                 </div>
@@ -176,7 +173,7 @@ PHP
                     <div class="php8-compare__label php8-compare__label_new">PHP 8.2</div>
                     <div class="php8-code phpcode">
                         <?php highlight_php_trimmed(
-                            <<<'PHP'
+                        <<<'PHP'
 class Falsy
 {
     public function alwaysFalse(): false { /* ... */ *}
@@ -186,7 +183,7 @@ class Falsy
     public function alwaysNull(): null { /* ... */ *}
 }
 PHP
-                        ); ?>
+                    ); ?>
                     </div>
                 </div>
             </div>
@@ -251,9 +248,9 @@ PHP
                 <a class="php8-rfc" href="https://wiki.php.net/rfc/constants_in_traits">RFC</a>
                 <a class="php8-rfc"
                    href="/manual/<?= $lang ?>/migration82.new-features.php#migration82.new-features.core.constant-in-traits"><?= message(
-                        'documentation',
-                        $lang
-                    ) ?></a>
+                            'documentation',
+                            $lang
+                        ) ?></a>
             </h2>
             <div class="php8-compare__main">
                 <div class="example-contents example-contents-full">
@@ -289,9 +286,9 @@ PHP
                 <a class="php8-rfc" href="https://wiki.php.net/rfc/deprecate_dynamic_properties">RFC</a>
                 <a class="php8-rfc"
                    href="/manual/<?= $lang ?>/migration82.deprecated.php#migration82.deprecated.core.dynamic-properties"><?= message(
-                        'documentation',
-                        $lang
-                    ) ?></a>
+                            'documentation',
+                            $lang
+                        ) ?></a>
             </h2>
             <div class="php8-compare__main">
                 <div class="php8-compare__block example-contents">
@@ -310,7 +307,6 @@ $user->last_name = 'Doe';
 $user = new stdClass();
 $user->last_name = 'Doe';
 PHP
-
                         ); ?>
                     </div>
                 </div>
@@ -319,7 +315,7 @@ PHP
                     <div class="php8-compare__label php8-compare__label_new">PHP 8.2</div>
                     <div class="php8-code phpcode">
                         <?php highlight_php_trimmed(
-                            <<<'PHP'
+                        <<<'PHP'
 class User
 {
     public $name;
@@ -331,7 +327,7 @@ $user->last_name = 'Doe'; // Deprecated notice
 $user = new stdClass();
 $user->last_name = 'Doe'; // Still allowed
 PHP
-                        ); ?>
+                    ); ?>
                     </div>
                 </div>
             </div>

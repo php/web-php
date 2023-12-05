@@ -191,7 +191,8 @@ function gpg_key_show_keys(bool $activeOnly): void {
     foreach (gpg_key_get_branches($activeOnly) as $branch => $rms) {
         $keys = array_filter(
             array_map(function ($rm) { return gpg_key_get($rm); }, $rms),
-            function ($key) { return $key !== null; });
+            function ($key) { return $key !== null; }
+        );
         if (empty($keys)) { continue; }
 
         $branch = htmlentities($branch, ENT_QUOTES, 'UTF-8');

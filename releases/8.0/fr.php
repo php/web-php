@@ -9,7 +9,8 @@ releases\php80\common_header(
     "promotion de propriétés de constructeur, l'expression match, " .
     "l'opérateur nullsafe, JIT (Compilation à la Volée), " .
     "et des améliorations dans le système de typage, " .
-    "la gestion d'erreur, et de cohérence.");
+    "la gestion d'erreur, et de cohérence."
+);
 
 ?>
 <section class="php8-section php8-section_dark php8-section_header center">
@@ -47,8 +48,8 @@ releases\php80\common_header(
         <div class="php8-compare__label">PHP 7</div>
         <div class="php8-code phpcode">
             <?php highlight_php_trimmed(
-                'htmlspecialchars($string, ENT_COMPAT | ENT_HTML401, \'UTF-8\', false);'
-            );?>
+    'htmlspecialchars($string, ENT_COMPAT | ENT_HTML401, \'UTF-8\', false);'
+);?>
         </div>
 
 
@@ -58,8 +59,8 @@ releases\php80\common_header(
         <div class="php8-compare__label php8-compare__label_new">PHP 8</div>
         <div class="php8-code phpcode">
             <?php highlight_php_trimmed(
-                'htmlspecialchars($string, double_encode: false);'
-            );?>
+    'htmlspecialchars($string, double_encode: false);'
+);?>
         </div>
       </div>
     </div>
@@ -81,12 +82,12 @@ releases\php80\common_header(
         <div class="php8-compare__label">PHP 7</div>
         <div class="php8-code phpcode">
             <?php highlight_php_trimmed(
-                '/**
+    '/**
 * @Route("/api/posts/{id}", methods={"GET", "HEAD"})
 */
 class User
 {'
-            );?>
+);?>
         </div>
       </div>
       <div class="php8-compare__arrow"></div>
@@ -94,10 +95,10 @@ class User
         <div class="php8-compare__label php8-compare__label_new">PHP 8</div>
         <div class="php8-code phpcode">
             <?php highlight_php_trimmed(
-                '#[Route("/api/posts/{id}", methods: ["GET", "HEAD"])]
+    '#[Route("/api/posts/{id}", methods: ["GET", "HEAD"])]
 class User
 {'
-            );?>
+);?>
         </div>
       </div>
     </div>

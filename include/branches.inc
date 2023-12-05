@@ -63,15 +63,16 @@ function format_interval($from, $to) {
             $eolPeriod = 'midnight';
         }
         if ($times) {
-            $eolPeriod = implode(', ',
-                                        array_map(
-                                            function ($t) {
+            $eolPeriod = implode(
+                ', ',
+                array_map(
+                    function ($t) {
                                                 return "$t[0] $t[1]" .
                                                         ($t[0] != 1 ? 's' : '');
                                             },
-                                            $times
-                                        )
-                                );
+                    $times
+                )
+            );
 
             if ($diff->invert) {
                 $eolPeriod = "$eolPeriod ago";
