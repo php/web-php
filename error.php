@@ -139,7 +139,7 @@ if (preg_match("!^get/([^/]+)/from/([^/]+)(/mirror)?$!", $URI, $dlinfo)) {
     $df = $dlinfo[1];
     if (strpos($df, "7-LATEST") !== false) {
         include_once __DIR__ . "/include/version.inc";
-        [ $latest ] = release_get_latest();
+        [$latest] = release_get_latest();
         $df = str_replace("7-LATEST", $latest, $df);
     }
 
