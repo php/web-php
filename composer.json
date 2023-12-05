@@ -8,7 +8,7 @@
         "source": "https://github.com/php/web-php"
     },
     "require": {
-        "php": "^7.3"
+        "php": "~8.2.0"
     },
     "require-dev": {
         "friendsofphp/php-cs-fixer": "^3.4.0"
@@ -20,7 +20,7 @@
     },
     "config": {
         "platform": {
-            "php": "7.3.19"
+            "php": "8.2.0"
         },
         "sort-packages": true
     }
