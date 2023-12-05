@@ -123,7 +123,7 @@ function mirror_type($site = false)
 }
 
 // Redirect to an URI on this mirror site or outside this site
-function mirror_redirect($absoluteURI)
+function mirror_redirect($absoluteURI): void
 {
     global $MYSITE;
 
@@ -160,7 +160,7 @@ function mirror_setcookie($name, $content, $exptime)
 
 // Use this function to write out proper headers on
 // pages where the content should not be publicly cached
-function header_nocache()
+function header_nocache(): void
 {
     // Only try to send out headers in case
     // those were not sent already

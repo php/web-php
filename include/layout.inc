@@ -48,10 +48,10 @@ function highlight_php_trimmed($code, $return = false)
 }
 
 // Stats pages still need this
-function commonHeader($title) { site_header($title); }
+function commonHeader($title): void { site_header($title); }
 
 // Stats pages still need this
-function commonFooter() { site_footer(); }
+function commonFooter(): void { site_footer(); }
 
 // Resize the image using the output of make_image()
 function resize_image($img, $width = 1, $height = 1)
@@ -105,7 +105,7 @@ function make_image($file, $alt = false, $align = false, $extras = false,
 
 // Print an <img> tag out for a given file
 function print_image($file, $alt = false, $align = false, $extras = false,
-                     $dir = '/images')
+                     $dir = '/images'): void
 {
     echo make_image($file, $alt, $align, $extras, $dir);
 }
@@ -163,12 +163,12 @@ function make_popup_link ($url, $linktext = false, $target = false, $windowprops
 // print_popup_link()
 // print a hyperlink to something, within the site, that pops up a new window
 //
-function print_popup_link($url, $linktext = false, $windowprops = "", $target = false, $extras = false) {
+function print_popup_link($url, $linktext = false, $windowprops = "", $target = false, $extras = false): void {
     echo make_popup_link($url, $linktext, $windowprops, $target, $extras);
 }
 
 // Print a link for a downloadable file (including filesize)
-function download_link($file, $title)
+function download_link($file, $title): void
 {
     $download_link = "/distributions/" . $file;
 
@@ -236,7 +236,7 @@ function clean_note($text)
     );
 }
 
-function display_errors($errors)
+function display_errors($errors): void
 {
     echo '<div class="errors">';
     if (count($errors) > 1) {
@@ -254,7 +254,7 @@ function display_errors($errors)
 
 // Displays an event. Used in event submission
 // previews and event information displays
-function display_event($event, $include_date = 1)
+function display_event($event, $include_date = 1): void
 {
     global $COUNTRIES;
     // Current month (int)($_GET['cm'] ?: 0)
@@ -354,7 +354,7 @@ function display_event($event, $include_date = 1)
 }
 
 // Print news links for archives
-function news_archive_sidebar()
+function news_archive_sidebar(): void
 {
     global $SIDEBAR_DATA;
     $SIDEBAR_DATA = '
@@ -447,7 +447,7 @@ EOT;
     return $retval;
 }
 
-function site_header($title = 'Hypertext Preprocessor', $config = [])
+function site_header($title = 'Hypertext Preprocessor', $config = []): void
 {
     global $MYSITE;
 
@@ -481,7 +481,7 @@ function site_header($title = 'Hypertext Preprocessor', $config = [])
 
     require __DIR__ . "/header.inc";
 }
-function site_footer($config = [])
+function site_footer($config = []): void
 {
     require __DIR__ . "/footer.inc";
 }
@@ -511,7 +511,7 @@ function get_news_changes()
     return false;
 }
 
-function news_toc($sections = null) {
+function news_toc($sections = null): void {
     include __DIR__ . "/pregen-news.inc";
     $items = [
         "news" => [
@@ -544,7 +544,7 @@ function news_toc($sections = null) {
         }
     }
 }
-function doc_toc($lang) {
+function doc_toc($lang): void {
     $file = __DIR__ . "/../manual/$lang/toc/index.inc";
     if (!file_exists($file)) {
         $lang = "en"; // Fallback on english if the translation doesn't exist
@@ -591,7 +591,7 @@ function doc_toc($lang) {
     echo "</dl>";
 
 }
-function doc_toc_list($lang, $index, $file) {
+function doc_toc_list($lang, $index, $file): void {
     include __DIR__ . "/../manual/$lang/toc/$file.inc";
 
     doc_toc_title($lang, $index, $file);
@@ -599,7 +599,7 @@ function doc_toc_list($lang, $index, $file) {
         echo "\t<dd><a href='/manual/$lang/{$entry[0]}'>{$entry[1]}</a></dd>\n";
     }
 }
-function doc_toc_title($lang, $index, $file, $elm = "dt") {
+function doc_toc_title($lang, $index, $file, $elm = "dt"): void {
     foreach ($index as $entry) {
         if ($entry[0] == "$file.php") {
             $link = $entry[0];

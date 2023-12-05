@@ -23,7 +23,7 @@ function get_actual_download_file($file)
     return $found;
 }
 // Download a file from a mirror site
-function download_file($mirror, $file)
+function download_file($mirror, $file): void
 {
     // Redirect to the particular file
     if (!headers_sent()) {

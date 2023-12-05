@@ -43,6 +43,7 @@ $config
         'switch_case_space' => true,
         'trim_array_spaces' => true,
         'visibility_required' => true,
+        'void_return' => true,
         'whitespace_after_comma_in_array' => true,
     ]);
 
