@@ -12,7 +12,7 @@ header("Content-type: text/plain; charset=utf-8");
 $mirror_stats = (int) (isset($_SERVER['MIRROR_STATS']) && $_SERVER['MIRROR_STATS'] == '1');
 
 // SHA256 check last release file (identifies rsync setup problems)
-[ , $latest ] = release_get_latest();
+[, $latest] = release_get_latest();
 $dist = $latest['source'][0];
 $filename = __DIR__ . "/distributions/{$dist['filename']}";
 if (!file_exists($filename)) {
