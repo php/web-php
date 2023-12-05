@@ -6,7 +6,7 @@
 */
 
 // A 'good looking' 404 error message page
-function error_404()
+function error_404(): void
 {
     global $MYSITE;
     status_header(404);
@@ -19,7 +19,7 @@ function error_404()
 }
 
 // A 'good looking' 404 error message page for manual pages
-function error_404_manual()
+function error_404_manual(): void
 {
     global $MYSITE;
     status_header(404);
@@ -35,7 +35,7 @@ function error_404_manual()
 }
 
 // An error message page for manual pages from inactive languages
-function error_inactive_manual_page($lang_name, $en_page)
+function error_inactive_manual_page($lang_name, $en_page): void
 {
     global $MYSITE, $ACTIVE_ONLINE_LANGUAGES;
     status_header(404);
@@ -61,7 +61,7 @@ function error_inactive_manual_page($lang_name, $en_page)
 }
 
 // This service is not working right now
-function error_noservice()
+function error_noservice(): void
 {
     global $MYSITE;
     site_header('Service not working', ["noindex"]);
@@ -76,7 +76,7 @@ function error_noservice()
 }
 
 // There is no such mirror
-function error_nomirror($mirror) {
+function error_nomirror($mirror): void {
     site_header("No such mirror", ["noindex"]);
     echo "<h1>No such mirror</h1>\n<p>The mirror you tried to access (" .
          htmlspecialchars($mirror) .

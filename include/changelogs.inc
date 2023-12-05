@@ -1,33 +1,33 @@
 <?php
-function bugfix($number) {
+function bugfix($number): void {
     echo "Fixed bug "; bugl($number);
 }
 
-function bugl($number) {
+function bugl($number): void {
     echo "<a href=\"http://bugs.php.net/$number\">#$number</a>";
 }
 
-function implemented($number) {
+function implemented($number): void {
     echo "Implemented FR "; bugl($number);
 }
 
-function peclbugfix($number) {
+function peclbugfix($number): void {
     echo "Fixed PECL bug "; bugl($number);
 }
 
-function peclbugl($number) {
+function peclbugl($number): void {
     echo "<a href=\"http://pecl.php.net/bugs/bug.php?id=$number\">#$number</a>";
 }
 
-function githubissue($repo, $number) {
+function githubissue($repo, $number): void {
     echo "Fixed issue "; githubissuel($repo, $number);
 }
 
-function githubissuel($repo, $number) {
+function githubissuel($repo, $number): void {
     echo "<a href=\"https://github.com/$repo/issues/$number\">GH-$number</a>";
 }
 
-function release_date($in) {
+function release_date($in): void {
     $time = strtotime($in);
     $human_readable = date('d M Y', $time);
     $for_tools = date('Y-m-d', $time);

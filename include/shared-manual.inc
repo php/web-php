@@ -112,7 +112,7 @@ function manual_notes_load(string $id): array
 }
 
 // Print out one user note entry
-function manual_note_display(UserNote $note, $voteOption = true)
+function manual_note_display(UserNote $note, $voteOption = true): void
 {
     if ($note->user) {
         $name = "\n  <strong class=\"user\"><em>" . htmlspecialchars($note->user) . "</em></strong>";
@@ -264,7 +264,7 @@ function manual_navigation_methodname($methodname) {
 
 // Set up variables important for this page
 // including HTTP header information
-function manual_setup($setup) {
+function manual_setup($setup): void {
     global $PGI, $MYSITE, $USERNOTES;
     global $ACTIVE_ONLINE_LANGUAGES;
 
@@ -381,7 +381,7 @@ CHANGE_LANG;
     return trim($r);
 }
 
-function manual_footer() {
+function manual_footer(): void {
     global $USERNOTES, $__RELATED;
 
     manual_notes($USERNOTES);

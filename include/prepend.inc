@@ -15,7 +15,7 @@ header("Content-type: text/html; charset=utf-8");
 header("Permissions-Policy: interest-cohort=()");
 
 /* Fix Silly Same Origin Policies */
-(function () {
+(function (): void {
     if (!isset($_SERVER["HTTP_ORIGIN"])) {
         return;
     }
@@ -94,7 +94,7 @@ include __DIR__ . '/last_updated.inc';
 // -----------------------------------------------------------------------------
 
 // Load in the user preferences
-function myphpnet_load()
+function myphpnet_load(): void
 {
     global $MYPHPNET, $MYSITE;
 
@@ -169,7 +169,7 @@ function myphpnet_showug($enable = null) {
 }
 
 // Save user settings in cookie
-function myphpnet_save()
+function myphpnet_save(): void
 {
     global $MYPHPNET;
 
@@ -183,7 +183,7 @@ function myphpnet_save()
 
 }
 
-function google_cse() {
+function google_cse(): void {
 ?>
 <noscript>
   php.net's search functionality requires JavaScript to operate. Please enable
