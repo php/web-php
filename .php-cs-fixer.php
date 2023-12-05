@@ -36,6 +36,7 @@ $config
         'new_with_parentheses' => true,
         'no_extra_blank_lines' => true,
         'no_trailing_whitespace' => true,
+        'not_operator_with_successor_space' => true,
         'ordered_class_elements' => true,
         'random_api_migration' => true,
         'single_space_around_construct' => [
