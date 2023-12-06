@@ -123,7 +123,7 @@ The most commonly searched terms have also been added.
 TODO: Determine if we want to continue 301 -OR- make these official URLs.
 ******************************************************************************/
 
-function is_known_ini (string $ini): ?string {
+function is_known_ini(string $ini): ?string {
     $inis = [
         'engine' => 'apache.configuration.php#ini.engine',
         'short-open-tag' => 'ini.core.php#ini.short-open-tag',
@@ -366,7 +366,7 @@ function is_known_variable(string $variable): ?string {
     return $variables[ltrim($variable, '$')] ?? null;
 }
 
-function is_known_term (string $term): ?string {
+function is_known_term(string $term): ?string {
     $terms = [
         '<>' => 'language.operators.comparison.php',
         '<=>' => 'language.operators.comparison.php',
