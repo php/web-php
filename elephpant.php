@@ -36,5 +36,5 @@ site_header("ElePHPant", ["current" => "footer"]);
 <?php
 // Print the common footer.
 site_footer([
-    'elephpants' => true
+    'elephpants' => true,
 ]);

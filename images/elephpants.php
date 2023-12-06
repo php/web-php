@@ -39,7 +39,7 @@ if (isset($_REQUEST['count'])) {
 } else {
     header('HTTP/1.1 400', true, 400);
     echo json_encode([
-        'error' => "Specify how many elephpants to serve via 'count'."
+        'error' => "Specify how many elephpants to serve via 'count'.",
     ]);
     exit;
 }
@@ -53,7 +53,7 @@ $photos = json_decode($json, true);
 if (!$photos || !is_array($photos)) {
     header('HTTP/1.1 500', true, 500);
     echo json_encode([
-        'error' => "No elephpant metadata available."
+        'error' => "No elephpant metadata available.",
     ]);
     exit;
 }
@@ -79,7 +79,7 @@ foreach ($photos as $photo) {
     $elephpants[] = [
         'title' => $photo['title'],
         'url' => "http://flickr.com/photos/" . $photo['owner'] . "/" . $photo['id'],
-        'data' => base64_encode(file_get_contents($path . '/' . $photo['filename']))
+        'data' => base64_encode(file_get_contents($path . '/' . $photo['filename'])),
     ];
 }
 

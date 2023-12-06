@@ -24,7 +24,7 @@ site_header(
     [
         'current' => 'community',
         'layout_span' => 12,
-    ]
+    ],
 );
 
 ?>

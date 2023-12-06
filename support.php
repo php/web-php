@@ -23,7 +23,7 @@ site_header(
     'Getting Help',
     [
         'current' => 'help',
-    ]
+    ],
 );
 ?>
 

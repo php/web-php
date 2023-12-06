@@ -16,7 +16,7 @@ $credits = preg_replace('!<style.*?>.*</style>!ims', '', $m[1]);
 $credits = str_replace(
     ["</center>", "& "],
     ["</div>", "&amp; "],
-    $credits
+    $credits,
 );
 
 // If there is something left, print it out

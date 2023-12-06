@@ -15,7 +15,7 @@ spl_autoload_register(static function (string $class): void {
 
     $relativeClass = substr(
         $class,
-        $length
+        $length,
     );
 
     $file = $directory . str_replace('\\', '/', $relativeClass) . '.php';

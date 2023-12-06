@@ -49,7 +49,7 @@ else {
         "rel" => "search",
         "type" => "application/opensearchdescription+xml",
         "href" => $MYSITE . "phpnetimprovedsearch.src",
-        "title" => "Add PHP.net search"
+        "title" => "Add PHP.net search",
     ];
     site_header("Search", ["link" => [$link], "current" => "help"]);
 

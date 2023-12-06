@@ -32,11 +32,11 @@ site_header("Downloads",
                 "rel" => "alternate",
                 "type" => "application/atom+xml",
                 "href" => $MYSITE . "releases/feed.php",
-                "title" => "PHP Release feed"
+                "title" => "PHP Release feed",
             ],
         ],
         "current" => "downloads",
-    ]
+    ],
 );
 ?>
 <?php $i = 0; foreach ($RELEASES as $MAJOR => $major_releases): /* major releases loop start */

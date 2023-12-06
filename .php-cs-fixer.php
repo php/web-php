@@ -51,6 +51,12 @@ $config
         ],
         'strict_param' => true,
         'switch_case_space' => true,
+        'trailing_comma_in_multiline' => [
+            'elements' => [
+                'arguments',
+                'arrays',
+            ],
+        ],
         'trim_array_spaces' => true,
         'unary_operator_spaces' => true,
         'visibility_required' => true,

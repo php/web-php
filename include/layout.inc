@@ -64,7 +64,7 @@ function resize_image($img, $width = 1, $height = 1)
     return preg_replace(
         '!/?>$!',
         sprintf(' height="%s" width="%s">', $height, $width),
-        $str
+        $str,
     );
 }
 
@@ -99,7 +99,7 @@ function make_image($file, $alt = false, $align = false, $extras = false,
         ($alt ?: ''),
         $sizeparams,
         $align,
-        ($extras ? ' ' . $extras              : '')
+        ($extras ? ' ' . $extras              : ''),
     );
 }
 
@@ -132,7 +132,7 @@ function make_submit($file, $alt = false, $align = false, $extras = false,
     $img = str_replace(
         "border=\"$border\"",
         "style=\"border: {$border}px;\"",
-        $img
+        $img,
     );
 
     // Return with ready input image
@@ -156,7 +156,7 @@ function make_popup_link($url, $linktext = false, $target = false, $windowprops 
         ($target ?: "_new"),
                 $windowprops,
         ($extras ? ' ' . $extras : ''),
-        ($linktext ?: $url)
+        ($linktext ?: $url),
     );
 }
 
@@ -232,7 +232,7 @@ function clean_note($text)
     return preg_replace(
         '!((mailto:|(https?|ftp|nntp|news)://).*?)(\s|<|\)|"|\\\\|\'|$)!',
         '<a href="\1" rel="nofollow" target="_blank">\1</a>\4',
-        $text
+        $text,
     );
 }
 
@@ -275,7 +275,7 @@ function display_event($event, $include_date = 1): void
         4 => 'Fourth',
         -1 => 'Last',
         -2 => '2nd Last',
-        -3 => '3rd Last'
+        -3 => '3rd Last',
     ];
 
     if (!isset($event['start']) && isset($event['sday'])) {

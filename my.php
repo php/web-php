@@ -118,7 +118,7 @@ $langinfo = [
     "The mirror's default language" =>
     default_language(),
 
-    "Default" => "en"
+    "Default" => "en",
 ];
 
 // Write a row for all settings

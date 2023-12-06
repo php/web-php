@@ -129,20 +129,20 @@ site_header("Hypertext Preprocessor",
             '<script>',
             "function okc(f){var c=[38,38,40,40,37,39,37,39,66,65,13],x=function(){x.c=x.c||Array.apply({},c);x.r=function(){x.c=null};return x.c},h=function(e){if(x()[0]==(e||window.event).keyCode){x().shift();if(!x().length){x.r();f()}}else{x.r()}};window.addEventListener?window.addEventListener('keydown',h,false):document.attachEvent('onkeydown',h)}",
             "okc(function(){if(document.getElementById){i=document.getElementById('phplogo');i.src='" . $MYSITE . "images/php_konami.gif'}});",
-            '</script>'
+            '</script>',
         ],
         'link' => [
             [
                 "rel" => "search",
                 "type" => "application/opensearchdescription+xml",
                 "href" => $MYSITE . "phpnetimprovedsearch.src",
-                "title" => "Add PHP.net search"
+                "title" => "Add PHP.net search",
             ],
             [
                 "rel" => "alternate",
                 "type" => "application/atom+xml",
                 "href" => $MYSITE . "releases/feed.php",
-                "title" => "PHP Release feed"
+                "title" => "PHP Release feed",
             ],
 
         ],
@@ -167,7 +167,7 @@ site_header("Hypertext Preprocessor",
 
 <link href="https://fosstodon.org/@php" rel="me" />
 META
-    ]
+    ],
 );
 
 // Print body of home page.
@@ -228,5 +228,5 @@ SIDEBAR_DATA;
 site_footer([
     "atom" => "/feed.atom", // Add a link to the feed at the bottom
     'elephpants' => true,
-    'sidebar' => $SIDEBAR
+    'sidebar' => $SIDEBAR,
 ]);

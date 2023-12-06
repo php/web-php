@@ -78,8 +78,8 @@ if (isset($_POST['action'])) {
                 "email" => $_POST['email'],
                 "maillist" => $_POST['maillist'],
                 "remoteip" => $remote_addr,
-                "referer" => $MYSITE . "mailing-lists.php"
-            ]
+                "referer" => $MYSITE . "mailing-lists.php",
+            ],
         );
 
         // Provide error if unable to [un]subscribe
@@ -189,50 +189,50 @@ if (isset($_POST['action'])) {
       [
           'php-announce', 'Announcements',
           'Announcements of new PHP releases are sent to this very low-volume list',
-          true, false, false, "php.announce"
+          true, false, false, "php.announce",
       ],
       [
           'php-general', 'General user list',
           'This is a high volume list for general PHP support; ask PHP questions here',
-          false, true, true, "php.general"
+          false, true, true, "php.general",
       ],
       [
           'php-windows', 'Windows PHP users list',
           'Using PHP on Microsoft Windows',
-          false, true, true, "php.windows"
+          false, true, true, "php.windows",
       ],
 
       'Subject specific lists for PHP users',
       [
           'php-install', 'Installation issues and problems',
           'How to install PHP with particular configurations and servers',
-          false, true, true, "php.install"
+          false, true, true, "php.install",
       ],
       [
           'php-db', 'Databases and PHP',
           'This list is for the discussion of PHP database topics',
-          false, true, true, "php.db"
+          false, true, true, "php.db",
       ],
       [
           'php-i18n', 'Unicode and Internationalization',
           'Unicode support, Internationalization (i18n) and localization (l10n) issues and features',
-          false, true, true, "php.i18n"
+          false, true, true, "php.i18n",
       ],
       [
           'php-evangelism', 'PHP evangelism mailing list',
           'A list for people interested in promoting PHP and learning good reasons to support PHP in the enterprise',
-          true, true, true, "php.evangelism"
+          true, true, true, "php.evangelism",
       ],
       [
           'soap', 'PHP SOAP list',
           'List for the SOAP developers',
-          false, false, false, 'php.soap'
+          false, false, false, 'php.soap',
       ],
       'Non-English language mailing lists',
       [
           'php-es', 'Spanish PHP Mailing list',
           'List for Spanish speaking people interested in PHP',
-          false, false, false, 'php.general.es'
+          false, false, false, 'php.general.es',
       ],
 
   ];
@@ -244,37 +244,37 @@ if (isset($_POST['action'])) {
       [
           'internals', 'Internals list',
           'A medium volume list for those who want to help out with the development of PHP',
-          false, 'php-internals', true, "php.internals"
+          false, 'php-internals', true, "php.internals",
       ],
       [
           'internals-win', 'Windows Internals list',
           'A low volume list for those who want to help out with the development of PHP on Windows',
-          false, false, true, "php.internals.win"
+          false, false, true, "php.internals.win",
       ],
       [
           'php-cvs', 'Git commit list',
           'All commits to internals (php-src) and the Zend Engine are posted to this list automatically',
-          true, true, false, "php.cvs"
+          true, true, false, "php.cvs",
       ],
       [
           'git-pulls', 'Git pull requests',
           'Pull requests from Github',
-          false, false, false, "php.git-pulls"
+          false, false, false, "php.git-pulls",
       ],
       [
           'php-qa', 'Quality Assurance list',
           'List for the members of the PHP-QA Team',
-          false, true, false, "php.qa"
+          false, true, false, "php.qa",
       ],
       [
           'php-bugs', 'General bugs',
           'General bug activity are posted here',
-          false, false, false, "php.bugs"
+          false, false, false, "php.bugs",
       ],
       [
           'standards', 'PHP Standardization and interoperability list',
           'Development of language standards',
-          false, false, false, "php.standards"
+          false, false, false, "php.standards",
       ],
 
       'PHP internal website mailing lists',
@@ -282,24 +282,24 @@ if (isset($_POST['action'])) {
           'php-webmaster', 'PHP php.net internal infrastructure discussion',
           'List for discussing and maintaining the php.net web infrastructure.<br>
        For general PHP support questions, see "General Mailing Lists" or the <a href="/support.php">support page</a>',
-          false, false, false, "php.webmaster"
+          false, false, false, "php.webmaster",
       ],
 
       'PHP documentation mailing lists',
       [
           'phpdoc', 'Documentation discussion',
           'List for discussing the PHP documentation',
-          false, true, false, "php.doc"
+          false, true, false, "php.doc",
       ],
       [
           'doc-cvs', 'Documentation changes and commits',
           'Changes to the documentation are posted here',
-          true, "php-doc-cvs", false, "php.doc.cvs"
+          true, "php-doc-cvs", false, "php.doc.cvs",
       ],
       [
           'doc-bugs', 'Documentation bugs',
           'Documentation bug activity (translations, sources, and build system) are posted here',
-          true, 'php-doc-bugs', false, "php.doc.bugs"
+          true, 'php-doc-bugs', false, "php.doc.bugs",
       ],
   ];
 

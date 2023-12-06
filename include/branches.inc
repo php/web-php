@@ -68,8 +68,8 @@ function format_interval($from, DateTime $to) {
                                                 return "$t[0] $t[1]" .
                                                         ($t[0] != 1 ? 's' : '');
                                             },
-                                            $times
-                                        )
+                                            $times,
+                                        ),
                                 );
 
             if ($diff->invert) {
@@ -378,7 +378,7 @@ function version_array(string $version, ?int $length = null)
 {
     $versionArray = array_map(
         'intval',
-        explode('.', $version)
+        explode('.', $version),
     );
 
     if (is_int($length)) {
@@ -387,7 +387,7 @@ function version_array(string $version, ?int $length = null)
             : array_slice(
                 $versionArray,
                 0,
-                $length
+                $length,
             );
     }
 
