@@ -385,11 +385,10 @@ function manual_footer(): void {
     global $USERNOTES, $__RELATED;
 
     manual_notes($USERNOTES);
-    $config = [
+    site_footer([
         'related_menu' => $__RELATED['toc'],
         'related_menu_deprecated' => $__RELATED['toc_deprecated']
-    ];
-    site_footer($config);
+    ]);
 }
 
 // This function takes a DateTime object and returns a formated string of the time difference relative to now
