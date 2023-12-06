@@ -1,6 +1,10 @@
 <?php
+
+require_once __DIR__ . '/../src/autoload.php';
 include_once __DIR__ . '/releases.inc';
 include_once __DIR__ . '/version.inc';
+
+use phpweb\Release\Version;
 
 /* Branch overrides. For situations where we've changed the exact dates for a
  * branch's active support and security fix EOLs, these can be reflected here.
@@ -85,13 +89,18 @@ function format_interval($from, DateTime $to) {
     return $eolPeriod;
 }
 
-function version_number_to_branch(string $version): ?string {
-    $parts = explode('.', $version);
-    if (count($parts) > 1) {
-        return "$parts[0].$parts[1]";
+function version_number_to_branch(string $value): ?string {
+    try {
+        $version = Version::fromString($value);
+    } catch (\InvalidArgumentException) {
+        return null;
     }
 
-    return null;
+    return sprintf(
+        '%s.%s',
+        $version->major()->toString(),
+        $version->minor()->toString(),
+    );
 }
 
 function get_all_branches() {
