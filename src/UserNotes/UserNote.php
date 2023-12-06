@@ -2,11 +2,7 @@
 
 namespace phpweb\UserNotes;
 
-/**
- * @readonly
- * @psalm-immutable
- */
-final class UserNote
+final readonly class UserNote
 {
     public function __construct(
         public string $id,
