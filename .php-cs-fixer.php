@@ -28,6 +28,7 @@ $config
             'spacing' => 'one',
         ],
         'constant_case' => true,
+        'elseif' => true,
         'increment_style' => [
             'style' => 'post',
         ],
