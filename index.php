@@ -225,10 +225,8 @@ $announcements
 SIDEBAR_DATA;
 
 // Print the common footer.
-site_footer(
-    [
-        "atom" => "/feed.atom", // Add a link to the feed at the bottom
-        'elephpants' => true,
-        'sidebar' => $SIDEBAR
-    ]
-);
+site_footer([
+    "atom" => "/feed.atom", // Add a link to the feed at the bottom
+    'elephpants' => true,
+    'sidebar' => $SIDEBAR
+]);

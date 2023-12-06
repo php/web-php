@@ -50,10 +50,8 @@ $content .= "</div>";
 
 echo $content;
 
-site_footer(
-    [
-        "atom" => "/feed.atom",
-        "elephpants" => true,
-        "sidebar" => $panels,
-    ]
-);
+site_footer([
+    "atom" => "/feed.atom",
+    "elephpants" => true,
+    "sidebar" => $panels,
+]);
