@@ -140,7 +140,7 @@ function make_submit($file, $alt = false, $align = false, $extras = false,
 }
 
 // Return a hiperlink to something within the site
-function make_link (string $url, string $linktext = ''): string
+function make_link(string $url, string $linktext = ''): string
 {
     return sprintf("<a href=\"%s\">%s</a>", $url, $linktext ?: $url);
 }
@@ -148,7 +148,7 @@ function make_link (string $url, string $linktext = ''): string
 // make_popup_link()
 // return a hyperlink to something, within the site, that pops up a new window
 //
-function make_popup_link ($url, $linktext = false, $target = false, $windowprops = "", $extras = false) {
+function make_popup_link($url, $linktext = false, $target = false, $windowprops = "", $extras = false) {
     return sprintf("<a href=\"%s\" target=\"%s\" onclick=\"window.open('%s','%s','%s');return false;\"%s>%s</a>",
         htmlspecialchars($url, ENT_QUOTES | ENT_IGNORE),
         ($target ?: "_new"),
