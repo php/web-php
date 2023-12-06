@@ -12,7 +12,7 @@ function is_emailable_address($email)
 {
     $email = filter_var($email, FILTER_VALIDATE_EMAIL);
     // No email, no validation
-    if (! $email) {
+    if (!$email) {
         return false;
     }
 
