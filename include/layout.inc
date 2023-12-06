@@ -481,7 +481,7 @@ function site_header($title = 'Hypertext Preprocessor', $config = []): void
 
     require __DIR__ . "/header.inc";
 }
-function site_footer($config = []): void
+function site_footer(array $config = []): void
 {
     require __DIR__ . "/footer.inc";
 }
