@@ -2,7 +2,8 @@
 
 namespace phpweb\News;
 
-class Entry {
+class Entry
+{
     public const CATEGORIES = [
         'frontpage' => 'PHP.net frontpage news',
         'releases' => 'New PHP release',
