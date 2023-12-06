@@ -29,6 +29,7 @@ $config
         ],
         'constant_case' => true,
         'elseif' => true,
+        'function_declaration' => true,
         'increment_style' => [
             'style' => 'post',
         ],
