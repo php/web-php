@@ -43,11 +43,10 @@ $BRANCHES = [
  * page. (Currently 28 days.) */
 $KEEP_EOL = new DateInterval('P28D');
 
-function format_interval($from, $to) {
+function format_interval($from, DateTime $to) {
     try {
         $from_obj = $from instanceof DateTime ? $from : new DateTime($from);
-        $to_obj = $to instanceof DateTime ? $to : new DateTime($to);
-        $diff = $to_obj->diff($from_obj);
+        $diff = $to->diff($from_obj);
 
         $times = [];
         if ($diff->y) {

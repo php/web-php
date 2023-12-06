@@ -54,6 +54,7 @@ $VERSION_NOTES = [
                 $initial = get_branch_release_date($branch);
                 $until = get_branch_bug_eol_date($branch);
                 $eol = get_branch_security_eol_date($branch);
+                $now = new DateTime('now');
                 ?>
 				<tr class="<?php echo $state ?>">
 					<td>
@@ -63,11 +64,11 @@ $VERSION_NOTES = [
 						<?php endif ?>
 					</td>
 					<td><?php echo htmlspecialchars($initial->format('j M Y')) ?></td>
-					<td class="collapse-phone"><em><?php echo htmlspecialchars(format_interval($initial, null)) ?></em></td>
+					<td class="collapse-phone"><em><?php echo htmlspecialchars(format_interval($initial, $now)) ?></em></td>
 					<td><?php echo htmlspecialchars($until->format('j M Y')) ?></td>
-					<td class="collapse-phone"><em><?php echo htmlspecialchars(format_interval($until, null)) ?></em></td>
+					<td class="collapse-phone"><em><?php echo htmlspecialchars(format_interval($until, $now)) ?></em></td>
 					<td><?php echo htmlspecialchars($eol->format('j M Y')) ?></td>
-					<td class="collapse-phone"><em><?php echo htmlspecialchars(format_interval($eol, null)) ?></em></td>
+					<td class="collapse-phone"><em><?php echo htmlspecialchars(format_interval($eol, $now)) ?></em></td>
 				</tr>
 			<?php endforeach ?>
 		<?php endforeach ?>
