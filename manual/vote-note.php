@@ -28,7 +28,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
           "noteid" => $_REQUEST['id'],
           "sect" => $_REQUEST['page'],
           "vote" => $_REQUEST['vote'],
-          "ip" => $_SERVER['REMOTE_ADDR']
+          "ip" => $_SERVER['REMOTE_ADDR'],
       ];
       if (($r = posttohost($master_url, $data)) === null || strpos($r,"failed to open socket to") !== false) {
         $response["success"] = false;

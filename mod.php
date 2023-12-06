@@ -47,7 +47,7 @@ else {
         "confirm@" . $sites[$site],
         "confirm",
         "[confirm: $token $sender]",
-        "From: $sender"
+        "From: $sender",
     );
 
     echo <<<THANKS

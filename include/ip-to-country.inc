@@ -89,7 +89,7 @@ function i2c_search_in_index($ip)
     // Open the index file for reading
     $dbidx = fopen(
         __DIR__ . "/../backend/ip-to-country.idx",
-        "r"
+        "r",
     );
     if (!$dbidx) { return false; }
 
@@ -133,7 +133,7 @@ function i2c_search_in_db($ip, $idx)
     // Open DB for reading
     $ipdb = fopen(
         $_SERVER['DOCUMENT_ROOT'] . "/backend/ip-to-country.db",
-        "r"
+        "r",
     );
 
     // Return with "NA" in case of we cannot open the db

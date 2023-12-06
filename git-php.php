@@ -86,7 +86,7 @@ if (count($_POST) && (!isset($_POST['purpose']) || !is_array($_POST['purpose']) 
                 "note" => $_POST['realpurpose'],
                 "yesno" => $_POST['yesno'],
                 "group" => $_POST['group'],
-            ]
+            ],
         );
         // Error while posting
         if ($error) {

@@ -10,7 +10,7 @@ site_header(
         'noindex',
         'current' => 'help',
         'layout_span' => 12,
-    ]
+    ],
 );
 
 echo '<h1>Search results</h1>';

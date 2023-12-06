@@ -106,7 +106,7 @@ foreach ($OLDRELEASES as $major => $a) {
             $release["announcement"] ?? false,
             $release["source"] ?? [],
             $release["windows"] ?? [],
-            $release["museum"] ?? ($i >= 3)
+            $release["museum"] ?? ($i >= 3),
         );
     }
 }
@@ -163,7 +163,7 @@ site_footer(['sidebar' =>
     </ul>
   </div>
 </div>
-']);
+', ]);
 
 function recentEOLBranchesHTML(): string {
     $eol = [];

@@ -68,7 +68,7 @@ function language_choose_code()
 
         // Drop out langauge specification from URL, as this is already handled
         $_SERVER['STRIPPED_URI'] = preg_replace(
-            "!^/$flang[1]/!", "/", htmlspecialchars($_SERVER['REQUEST_URI'], ENT_QUOTES, 'UTF-8')
+            "!^/$flang[1]/!", "/", htmlspecialchars($_SERVER['REQUEST_URI'], ENT_QUOTES, 'UTF-8'),
         );
 
     }

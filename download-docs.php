@@ -123,7 +123,7 @@ foreach ($LANGUAGES as $langcode => $language) {
                     $link_to,
                     (int) ($size / 1024),
                     date("j M Y", $changed),
-                    $extension
+                    $extension,
                 ];
                 $found_formats[$formatname] = 1;
             }

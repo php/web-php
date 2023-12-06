@@ -12,7 +12,7 @@ $process = [] !== $_POST;
 // Avoid E_NOTICE errors on incoming vars if not set
 $vars = [
     'sday', 'smonth', 'syear', 'eday',
-    'emonth', 'eyear', 'recur', 'recur_day'
+    'emonth', 'eyear', 'recur', 'recur_day',
 ];
 foreach ($vars as $varname) {
     if (empty($_POST[$varname])) {
@@ -20,7 +20,7 @@ foreach ($vars as $varname) {
     }
 }
 $vars = [
-    'type', 'country', 'category', 'email', 'url', 'ldesc', 'sdesc'
+    'type', 'country', 'category', 'email', 'url', 'ldesc', 'sdesc',
 ];
 foreach ($vars as $varname) {
     if (!isset($_POST[$varname])) {
@@ -166,7 +166,7 @@ $re = [
     4 => 'Fourth',
     -1 => 'Last',
     -2 => '2nd Last',
-    -3 => '3rd Last'
+    -3 => '3rd Last',
 ];
 
 // If we have data, display preview

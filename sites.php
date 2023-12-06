@@ -223,5 +223,5 @@ SIDEBAR_DATA;
 
 // Print the common footer.
 site_footer([
-    'sidebar' => $SIDEBAR
+    'sidebar' => $SIDEBAR,
 ]);

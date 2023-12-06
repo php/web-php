@@ -41,7 +41,7 @@ releases\php80\common_header(
         <div class="php8-compare__label">PHP 7</div>
         <div class="php8-code phpcode">
             <?php highlight_php_trimmed(
-                'htmlspecialchars($string, ENT_COMPAT | ENT_HTML401, \'UTF-8\', false);'
+                'htmlspecialchars($string, ENT_COMPAT | ENT_HTML401, \'UTF-8\', false);',
             );?>
         </div>
 
@@ -52,7 +52,7 @@ releases\php80\common_header(
         <div class="php8-compare__label php8-compare__label_new">PHP 8</div>
         <div class="php8-code phpcode">
             <?php highlight_php_trimmed(
-                'htmlspecialchars($string, double_encode: false);'
+                'htmlspecialchars($string, double_encode: false);',
             );?>
         </div>
       </div>
@@ -81,7 +81,7 @@ releases\php80\common_header(
      * @Route("/api/posts/{id}", methods={"GET"})
      */
     public function get($id) { /* ... */ }
-}'
+}',
             );?>
         </div>
       </div>
@@ -94,7 +94,7 @@ releases\php80\common_header(
 {
     #[Route("/api/posts/{id}", methods: ["GET"])]
     public function get($id) { /* ... */ }
-}'
+}',
             );?>
         </div>
       </div>
@@ -127,7 +127,7 @@ releases\php80\common_header(
     $this->y = $y;
     $this->z = $z;
   }
-}'
+}',
             );?>
         </div>
       </div>
@@ -142,7 +142,7 @@ releases\php80\common_header(
     public float $y = 0.0,
     public float $z = 0.0,
   ) {}
-}'
+}',
             );?>
         </div>
       </div>
@@ -172,7 +172,7 @@ releases\php80\common_header(
     $this->number = $number;
   }
 }
-new Number(\'NaN\'); // Ok'
+new Number(\'NaN\'); // Ok',
             );?>
         </div>
       </div>
@@ -186,7 +186,7 @@ new Number(\'NaN\'); // Ok'
     private int|float $number
   ) {}
 }
-new Number(\'NaN\'); // TypeError'
+new Number(\'NaN\'); // TypeError',
             );?>
         </div>
       </div>
@@ -216,7 +216,7 @@ new Number(\'NaN\'); // TypeError'
     break;
 }
 echo $result;
-//> Oh no!'
+//> Oh no!',
             );?>
         </div>
       </div>
@@ -229,7 +229,7 @@ echo $result;
   \'8.0\' => "Oh no!",
   8.0 => "This is what I expected",
 };
-//> This is what I expected'
+//> This is what I expected',
             );?>
         </div>
       </div>
@@ -264,7 +264,7 @@ if ($session !== null) {
       $country = $address->country;
     }
   }
-}'
+}',
             );?>
         </div>
       </div>
@@ -273,7 +273,7 @@ if ($session !== null) {
         <div class="php8-compare__label php8-compare__label_new">PHP 8</div>
         <div class="php8-code phpcode">
             <?php highlight_php_trimmed(
-                '$country = $session?->user?->getAddress()?->country;'
+                '$country = $session?->user?->getAddress()?->country;',
             );?>
         </div>
       </div>
@@ -294,7 +294,7 @@ if ($session !== null) {
         <div class="php8-compare__label">PHP 7</div>
         <div class="php8-code phpcode">
             <?php highlight_php_trimmed(
-                '0 == \'foobar\' // true'
+                '0 == \'foobar\' // true',
             );?>
         </div>
       </div>
@@ -303,7 +303,7 @@ if ($session !== null) {
         <div class="php8-compare__label php8-compare__label_new">PHP 8</div>
         <div class="php8-code phpcode">
             <?php highlight_php_trimmed(
-                '0 == \'foobar\' // false'
+                '0 == \'foobar\' // false',
             );?>
         </div>
       </div>
@@ -325,7 +325,7 @@ if ($session !== null) {
         <div class="php8-code phpcode">
             <?php highlight_php_trimmed(
                 'strlen([]); // Warning: strlen() expects parameter 1 to be string, array given
-array_chunk([], -1); // Warning: array_chunk(): Size parameter expected to be greater than 0'
+array_chunk([], -1); // Warning: array_chunk(): Size parameter expected to be greater than 0',
             );?>
         </div>
       </div>
@@ -335,7 +335,7 @@ array_chunk([], -1); // Warning: array_chunk(): Size parameter expected to be gr
         <div class="php8-code phpcode">
             <?php highlight_php_trimmed(
                 'strlen([]); // TypeError: strlen(): Argument #1 ($str) must be of type string, array given
-array_chunk([], -1); // ValueError: array_chunk(): Argument #2 ($length) must be greater than 0'
+array_chunk([], -1); // ValueError: array_chunk(): Argument #2 ($length) must be greater than 0',
             );?>
         </div>
       </div>

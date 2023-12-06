@@ -100,8 +100,8 @@ if ($process) {
                 'note' => $note,
                 'sect' => $_POST['sect'],
                 'ip' => $_SERVER['REMOTE_ADDR'],
-                'redirip' => $redirip
-            ]
+                'redirip' => $redirip,
+            ],
         );
 
         // If there is any non-header result, then it is an error

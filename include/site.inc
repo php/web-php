@@ -22,8 +22,8 @@ $MIRRORS = [
         MIRROR_SPECIAL,
         true,
         "en",
-        MIRROR_OK
-    ]
+        MIRROR_OK,
+    ],
 ];
 
 /**
