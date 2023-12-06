@@ -286,7 +286,8 @@ function get_final_release($branch) {
     return null;
 }
 
-function get_branch_bug_eol_date($branch) {
+function get_branch_bug_eol_date($branch): ?DateTime
+{
     if (isset($GLOBALS['BRANCHES'][$branch]['stable'])) {
         return new DateTime($GLOBALS['BRANCHES'][$branch]['stable']);
     }
@@ -296,7 +297,8 @@ function get_branch_bug_eol_date($branch) {
     return $date ? $date->add(new DateInterval('P2Y')) : null;
 }
 
-function get_branch_security_eol_date($branch) {
+function get_branch_security_eol_date($branch): ?DateTime
+{
     if (isset($GLOBALS['BRANCHES'][$branch]['security'])) {
         return new DateTime($GLOBALS['BRANCHES'][$branch]['security']);
     }
@@ -313,7 +315,8 @@ function get_branch_security_eol_date($branch) {
     return $date ? $date->add(new DateInterval('P3Y')) : null;
 }
 
-function get_branch_release_date($branch) {
+function get_branch_release_date($branch): ?DateTime
+{
     $initial = get_initial_release($branch);
 
     return $initial ? new DateTime($initial['date']) : null;

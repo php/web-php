@@ -27,12 +27,14 @@ function branches_to_show() {
     return $branches;
 }
 
-function min_date() {
+function min_date(): DateTime
+{
     $now = new DateTime('January 1');
     return $now->sub(new DateInterval('P3Y'));
 }
 
-function max_date() {
+function max_date(): DateTime
+{
     $now = new DateTime('January 1');
     return $now->add(new DateInterval('P5Y'));
 }
