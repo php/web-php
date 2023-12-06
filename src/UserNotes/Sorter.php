@@ -2,7 +2,8 @@
 
 namespace phpweb\UserNotes;
 
-class Sorter {
+class Sorter
+{
     private $maxVote;
 
     private $minVote;
