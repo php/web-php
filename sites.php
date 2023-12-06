@@ -189,7 +189,7 @@ site_header("A Tourist's Guide", ["current" => "help"]);
 <h2 id="windows" class="content-header"><a href="https://windows.php.net/">windows.php.net</a>: PHP for Windows</h2>
 
 <p class="content-box">
- This site is dedicated to supporting PHP on Microsoft Windows. 
+ This site is dedicated to supporting PHP on Microsoft Windows.
  It also supports ports of PHP extensions or features as well as providing special builds for the various Windows architectures.
 </p>
 
@@ -222,8 +222,6 @@ $SIDEBAR = <<<SIDEBAR_DATA
 SIDEBAR_DATA;
 
 // Print the common footer.
-site_footer(
-    [
-        'sidebar' => $SIDEBAR
-    ]
-);
+site_footer([
+    'sidebar' => $SIDEBAR
+]);
