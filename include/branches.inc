@@ -99,7 +99,9 @@ function get_all_branches() {
 
     foreach ($GLOBALS['OLDRELEASES'] as $major => $releases) {
         foreach ($releases as $version => $release) {
-            if ($branch = version_number_to_branch($version)) {
+            $branch = version_number_to_branch($version);
+
+            if ($branch) {
                 if (!isset($branches[$major][$branch]) || version_compare($version, $branches[$major][$branch]['version'], 'gt')) {
                     $branches[$major][$branch] = $release;
                     $branches[$major][$branch]['version'] = $version;
@@ -110,7 +112,9 @@ function get_all_branches() {
 
     foreach ($GLOBALS['RELEASES'] as $major => $releases) {
         foreach ($releases as $version => $release) {
-            if ($branch = version_number_to_branch($version)) {
+            $branch = version_number_to_branch($version);
+
+            if ($branch) {
                 if (!isset($branches[$major][$branch]) || version_compare($version, $branches[$major][$branch]['version'], 'gt')) {
                     $branches[$major][$branch] = $release;
                     $branches[$major][$branch]['version'] = $version;
@@ -133,7 +137,9 @@ function get_active_branches($include_recent_eols = true) {
 
     foreach ($GLOBALS['RELEASES'] as $major => $releases) {
         foreach ($releases as $version => $release) {
-            if ($branch = version_number_to_branch($version)) {
+            $branch = version_number_to_branch($version);
+
+            if ($branch) {
                 $threshold = get_branch_security_eol_date($branch);
                 if ($threshold === null) {
                     // No EOL date available, assume it is ancient.
@@ -168,7 +174,9 @@ function get_eol_branches($always_include = null) {
     // Gather the last release on each branch into a convenient array.
     foreach ($GLOBALS['OLDRELEASES'] as $major => $releases) {
         foreach ($releases as $version => $release) {
-            if ($branch = version_number_to_branch($version)) {
+            $branch = version_number_to_branch($version);
+
+            if ($branch) {
                 if (!isset($branches[$major][$branch]) || version_compare($version, $branches[$major][$branch]['version'], 'gt')) {
                     $branches[$major][$branch] = [
                         'date' => strtotime($release['date']),
@@ -184,7 +192,9 @@ function get_eol_branches($always_include = null) {
      * the $RELEASES array and not explicitly marked as EOL there". */
     foreach ($GLOBALS['RELEASES'] as $major => $releases) {
         foreach ($releases as $version => $release) {
-            if ($branch = version_number_to_branch($version)) {
+            $branch = version_number_to_branch($version);
+
+            if ($branch) {
                 if ($now < get_branch_security_eol_date($branch)) {
                     /* This branch isn't EOL: remove it from our array. */
                     if (isset($branches[$major][$branch])) {
@@ -207,7 +217,9 @@ function get_eol_branches($always_include = null) {
 
             if (isset($GLOBALS['RELEASES'][$major][$version])) {
                 $release = $GLOBALS['RELEASES'][$major][$version];
-                if ($branch = version_number_to_branch($version)) {
+                $branch = version_number_to_branch($version);
+
+                if ($branch) {
                     $branches[$major][$branch] = [
                         'date' => strtotime($release['source'][0]['date']),
                         'link' => "/downloads#v$version",
