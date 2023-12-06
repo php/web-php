@@ -447,7 +447,7 @@ EOT;
     return $retval;
 }
 
-function site_header($title = 'Hypertext Preprocessor', $config = []): void
+function site_header(string $title = 'Hypertext Preprocessor', array $config = []): void
 {
     global $MYSITE;
 
