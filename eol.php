@@ -48,7 +48,7 @@ site_header('Unsupported Branches');
 		<?php foreach (get_eol_branches() as $major => $branches): ?>
 			<?php foreach ($branches as $branch => $detail): ?>
 				<?php $eolDate = get_branch_security_eol_date($branch) ?>
-				<?php $eolPeriod = format_interval($eolDate, null) ?>
+				<?php $eolPeriod = format_interval($eolDate, new DateTime('now')) ?>
 					<tr>
 						<td><?php echo htmlspecialchars($branch); ?></td>
 						<td>
