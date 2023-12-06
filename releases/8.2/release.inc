@@ -2,7 +2,6 @@
 
 use function releases\php82\common_header;
 use function releases\php82\language_chooser;
-use function releases\php82\language_redirect;
 use function releases\php82\message;
 
 if (!isset($lang)) {
@@ -12,8 +11,6 @@ if (!isset($lang)) {
 $_SERVER['BASE_PAGE'] = 'releases/8.2/' . $lang . '.php';
 
 include_once __DIR__ . '/common.php';
-
-language_redirect($lang);
 
 common_header(message('common_header', $lang));
 
