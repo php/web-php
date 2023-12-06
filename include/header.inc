@@ -92,7 +92,7 @@ if (!isset($config["languages"])) {
 <?php if (isset($config['meta_tags'])) { echo $config['meta_tags']; } ?>
 
 </head>
-<body class="<?php print $curr; ?> <?php echo $classes; ?>">
+<body class="<?php echo $curr; ?> <?php echo $classes; ?>">
 
 <nav id="head-nav" class="navbar navbar-fixed-top">
   <div class="navbar-inner clearfix">

@@ -1,9 +1,9 @@
     </section><!-- layout-content -->
     <?php
     if (!empty($config['spanning-content'])) {
-        print "<div class='spanning-content'>";
-        print $config['spanning-content'];
-        print "</div>";
+        echo "<div class='spanning-content'>";
+        echo $config['spanning-content'];
+        echo "</div>";
     }
 
     ?>
@@ -80,7 +80,7 @@
     // if elephpants enabled, insert placeholder nodes
     // to be populated with images via javascript.
     if (isset($config['elephpants']) && $config['elephpants']) {
-        print "<div class='elephpants'><div class=images></div></div>";
+        echo "<div class='elephpants'><div class=images></div></div>";
     }
     ?>
 

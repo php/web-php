@@ -159,7 +159,7 @@ if (count($_POST) && (!isset($_POST['purpose']) || !is_array($_POST['purpose']) 
 
 else {
     if (count($_POST)) {
-        print <<<EOT
+        echo <<<EOT
 <div class="warning">
 <p>
  We could not have said it more clearly. Read everything on
