@@ -12,7 +12,7 @@ if ($_SERVER['argc'] < 1) {
 }
 
 $major = (int) $_SERVER['argv'][1];
-isset($RELEASES[$major]) or die("Unkown major version $major");
+isset($RELEASES[$major]) or die("Unknown major version $major");
 $minor = isset($_SERVER['argv'][2]) ? (int) $_SERVER['argv'][2] : null;
 
 $version = get_current_release_for_branch($major, $minor);
