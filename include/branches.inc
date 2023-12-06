@@ -95,7 +95,8 @@ function version_number_to_branch(string $version): ?string {
     return null;
 }
 
-function get_all_branches() {
+function get_all_branches(): array
+{
     $branches = [];
 
     foreach ($GLOBALS['OLDRELEASES'] as $major => $releases) {

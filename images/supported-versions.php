@@ -10,7 +10,8 @@ $year_width = 120;
 $branch_height = 30;
 $footer_height = 24;
 
-function branches_to_show() {
+function branches_to_show(): array
+{
     // Basically: show all 5.3+ branches with EOL dates > min_date().
     $branches = [];
 
