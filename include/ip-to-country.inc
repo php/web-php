@@ -202,7 +202,7 @@ function i2c_realip()
     if (!empty($_SERVER['HTTP_X_FORWARDED_FOR'])) {
 
         // Put the IP's into an array which we shall work with shortly.
-        $ips = explode (", ", $_SERVER['HTTP_X_FORWARDED_FOR']);
+        $ips = explode(", ", $_SERVER['HTTP_X_FORWARDED_FOR']);
         if ($ip) { array_unshift($ips, $ip); $ip = false; }
 
         for ($i = 0; $i < count($ips); $i++) {
