@@ -1,6 +1,7 @@
 <?php declare(strict_types=1);
 
 namespace releases\php80;
+
 include_once __DIR__ . '/../../include/prepend.inc';
 
 function common_header(string $description): void {
