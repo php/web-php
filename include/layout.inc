@@ -212,9 +212,9 @@ function sect_to_file($string) {
     $feat = "features.$string.php";
     $struct = "control-structures.$string.php";
     if (@is_file($func)) return $func;
-    elseif (@is_file($chap)) return $chap;
-    elseif (@is_file($feat)) return $feat;
-    elseif (@is_file($struct)) return $struct;
+    if (@is_file($chap)) return $chap;
+    if (@is_file($feat)) return $feat;
+    if (@is_file($struct)) return $struct;
     else return "$string.php";
 }
 
