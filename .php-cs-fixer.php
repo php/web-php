@@ -51,6 +51,7 @@ $config
         ],
         'strict_param' => true,
         'switch_case_space' => true,
+        'ternary_operator_spaces' => true,
         'trailing_comma_in_multiline' => [
             'elements' => [
                 'arguments',
