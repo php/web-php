@@ -54,6 +54,7 @@ $config
             'constructs_preceded_by_a_single_space' => [],
             'constructs_followed_by_a_single_space' => [],
         ],
+        'statement_indentation' => true,
         'strict_param' => true,
         'switch_case_space' => true,
         'ternary_operator_spaces' => true,
