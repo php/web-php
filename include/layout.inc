@@ -379,7 +379,7 @@ function print_news($news, $dog, $max = 5, $onlyyear = null, $return = false) {
         // Only print entries in the provided s/dog/cat/ egory
         // If $dog is null, everything matches
         foreach ($item["category"] as $category) {
-            if (is_null($dog) || in_array($category["term"], (array)$dog, true)) {
+            if (null === $dog || in_array($category["term"], (array)$dog, true)) {
                 $ok = true;
                 $count++;
                 break;
