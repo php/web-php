@@ -609,5 +609,3 @@ function doc_toc_title($lang, $index, $file, $elm = "dt"): void {
     }
     echo "<$elm><a href='/manual/$lang/$link'>$title</a></$elm>\n";
 }
-
-/* vim: set et ts=4 sw=4 ft=php: : */

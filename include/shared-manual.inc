@@ -412,5 +412,3 @@ function relTime(DateTime $date) {
     }
     return $out;
 }
-
-/* vim: set et ts=4 sw=4: */

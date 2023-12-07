@@ -1,4 +1,4 @@
-<?php // vim: et
+<?php
 $_SERVER['BASE_PAGE'] = 'gpg-keys.php';
 include_once __DIR__ . '/include/prepend.inc';
 include_once __DIR__ . '/include/gpg-keys.inc';

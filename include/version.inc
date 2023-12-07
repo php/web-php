@@ -1,4 +1,4 @@
-<?php // vim: et
+<?php
 /* The format is:
  * array(
  *     "major release number" => array(

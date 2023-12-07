@@ -713,6 +713,3 @@ mirror_redirect(
     '/search.php?show=' . $fallback . '&lang=' . urlencode($LANG) .
     '&pattern=' . substr($_SERVER['REQUEST_URI'], 1),
 );
-/*
- * vim: set et ts=4 sw=4 ft=php: :
- */

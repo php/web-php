@@ -739,5 +739,3 @@ function getLanguage() {
         $link.attr('href', $link.attr('href') + window.location.hash);
     });
 })(jQuery);
-
-// vim: set ts=4 sw=4 et:
