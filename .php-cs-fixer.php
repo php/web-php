@@ -55,6 +55,8 @@ $config
             'elements' => [
                 'arguments',
                 'arrays',
+                'match',
+                'parameters',
             ],
         ],
         'trim_array_spaces' => true,
