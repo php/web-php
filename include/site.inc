@@ -1,4 +1,4 @@
-<?php // -*- C++ -*-
+<?php
 
 // Define some constants, and $MIRRORS array
 // Mirror type constants

@@ -1,4 +1,4 @@
-<?php // -*- C++ -*-
+<?php
 
 // We need this for error reporting
 include_once __DIR__ . '/errors.inc';
