@@ -99,7 +99,7 @@ function make_image($file, $alt = false, $align = false, $extras = false,
         ($alt ?: ''),
         $sizeparams,
         $align,
-        ($extras ? ' ' . $extras              : ''),
+        ($extras ? ' ' . $extras : ''),
     );
 }
 
