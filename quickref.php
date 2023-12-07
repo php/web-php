@@ -16,7 +16,6 @@
 $_SERVER['BASE_PAGE'] = 'quickref.php';
 include_once __DIR__ . '/include/prepend.inc';
 include_once __DIR__ . '/include/errors.inc';
-include __DIR__ . '/include/results.inc';
 
 if (empty($notfound)) {
     mirror_redirect("/search.php");

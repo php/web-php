@@ -161,20 +161,6 @@ function getContent(): string {
 	return $news;
 }
 
-function updateArchiveXML(string $id, string $archiveFile): void {
-	$arch = new DOMDocument("1.0", "utf-8");
-	$arch->formatOutput = true;
-	$arch->preserveWhiteSpace = false;
-	$arch->load($archiveFile);
-
-	$first = $arch->createElementNs("http://www.w3.org/2001/XInclude", "xi:include");
-	$first->setAttribute("href", "entries/{$id}.xml");
-
-	$second = $arch->getElementsByTagNameNs("http://www.w3.org/2001/XInclude", "include")->item(0);
-	$arch->documentElement->insertBefore($first, $second);
-	$arch->save($archiveFile);
-}
-
 function parseOptions(): Entry {
 	$opts = getopt('h', [
 		'help',

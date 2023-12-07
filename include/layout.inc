@@ -47,12 +47,6 @@ function highlight_php_trimmed($code, $return = false)
     return null;
 }
 
-// Stats pages still need this
-function commonHeader($title): void { site_header($title); }
-
-// Stats pages still need this
-function commonFooter(): void { site_footer(); }
-
 // Resize the image using the output of make_image()
 function resize_image($img, $width = 1, $height = 1)
 {
@@ -160,13 +154,6 @@ function make_popup_link($url, $linktext = false, $target = false, $windowprops 
     );
 }
 
-// print_popup_link()
-// print a hyperlink to something, within the site, that pops up a new window
-//
-function print_popup_link($url, $linktext = false, $windowprops = "", $target = false, $extras = false): void {
-    echo make_popup_link($url, $linktext, $windowprops, $target, $extras);
-}
-
 // Print a link for a downloadable file (including filesize)
 function download_link($file, $title): void
 {
@@ -202,20 +189,6 @@ function download_link($file, $title): void
         }
         echo ']';
     }
-}
-
-function sect_to_file($string) {
-    $string = strtolower($string);
-    $string = str_replace([' ', '_'], '-', $string);
-    $func = "function.$string.php";
-    $chap = "ref.$string.php";
-    $feat = "features.$string.php";
-    $struct = "control-structures.$string.php";
-    if (@is_file($func)) return $func;
-    if (@is_file($chap)) return $chap;
-    if (@is_file($feat)) return $feat;
-    if (@is_file($struct)) return $struct;
-    else return "$string.php";
 }
 
 function clean($var) {
@@ -511,39 +484,6 @@ function get_news_changes()
     return false;
 }
 
-function news_toc($sections = null): void {
-    include __DIR__ . "/pregen-news.inc";
-    $items = [
-        "news" => [
-            "title" => "News",
-            "link" => "/archive/",
-            "children" => print_news($NEWS_ENTRIES, "frontpage", 3, null, true),
-        ],
-        "conferences" => [
-            "title" => "Conferences",
-            "link" => "/conferences/",
-            "children" => print_news($NEWS_ENTRIES, "conferences", 3, null, true),
-        ],
-        "papers" => [
-            "title" => "Call for Papers",
-            "link" => "/conferences/",
-            "children" => print_news($NEWS_ENTRIES, "cfp", 3, null, true),
-        ],
-    ];
-
-    foreach ($items as $section => $menu) {
-
-        // only print requested sections.
-        if (is_array($sections) && !in_array($section, $sections, true)) {
-            continue;
-        }
-
-        echo "<dt><a href='{$menu["link"]}'>{$menu["title"]}</a></dt>\n";
-        foreach ($menu["children"] as $child) {
-            echo "<dd><a href='{$child["permlink"]}'>{$child["title"]}</a></dd>\n";
-        }
-    }
-}
 function doc_toc($lang): void {
     $file = __DIR__ . "/../manual/$lang/toc/index.inc";
     if (!file_exists($file)) {
