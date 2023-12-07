@@ -349,7 +349,6 @@ site_header("News Archive - 2004", ["cache" => true]);
 
 <hr>
 
-<?php //news_image("http://www.phpconference.de/2003/index_en.php", "international_conference_2003.gif", "International PHP Conference"); ?>
 <h1>International PHP Conference 2004</h1>
 <p>
  <span class="newsdate">[18-Jun-2004]</span>
