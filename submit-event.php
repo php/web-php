@@ -274,5 +274,4 @@ function display_options($options, $current): void
     }
 }
 
-/* vim: set et ts=4 sw=4 ft=php: : */
 ?>

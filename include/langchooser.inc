@@ -201,5 +201,3 @@ function language_accept_order($a, $b)
     if ($a[1] == $b[1]) { return 0; }
     return ($a[1] > $b[1]) ? -1 : 1;
 }
-
-/* vim: set noet ts=4 sw=4 ft=php: : */
