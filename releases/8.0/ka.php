@@ -199,7 +199,7 @@ new Number(\'NaN\'); // TypeError',
       </div>
     </div>
     <div class="php8-compare__content">
-        <p>PHPDoc ანოტაციების ნაცვლად, გაერთიანებული ტიპებისთვის  შეგიძლიათ გამოიყენოთ განცხადება union type, 
+        <p>PHPDoc ანოტაციების ნაცვლად, გაერთიანებული ტიპებისთვის  შეგიძლიათ გამოიყენოთ განცხადება union type,
             რომლებიც მოწმდება შესრულების დროს.</p>
     </div>
   </div>
@@ -268,7 +268,7 @@ if ($session !== null) {
 
   if ($user !== null) {
     $address = $user->getAddress();
-  
+
     if ($address !== null) {
       $country = $address->country;
     }
@@ -318,7 +318,7 @@ if ($session !== null) {
       </div>
     </div>
     <div class="php8-compare__content">
-        <p>PHP 8 რიცხვითი სტრიქონის შედარებისას იყენებს რიცხვების შედარებას. წინააღმდეგ შემთხვევაში, 
+        <p>PHP 8 რიცხვითი სტრიქონის შედარებისას იყენებს რიცხვების შედარებას. წინააღმდეგ შემთხვევაში,
             რიცხვი გარდაიქმნება სტრიქონად და გამოიყენება სტრიქონების შედარება.</p>
     </div>
   </div>
@@ -360,8 +360,8 @@ array_chunk([], -1); // ValueError: array_chunk(): Argument #2 ($length) must be
 <section class="php8-section php8-section_light">
   <h2 class="php8-h2">კომპილაცია Just-In-Time</h2>
   <p>
-  PHP 8 წარმოგიდგენთ JIT-კომპილაციის ორ მექანიზმს. JIT ტრასირება, მათგან ყველაზე პერსპექტიულია, 
-    სინთეზურ ბენჩმარკზე აჩვენებს მუშაობის გაუმჯობესებას დაახლოებით 3-ჯერ და 1.5-2-ჯერ ზოგიერთ დიდ ხანს მომუშავე აპლიკაციებში. 
+  PHP 8 წარმოგიდგენთ JIT-კომპილაციის ორ მექანიზმს. JIT ტრასირება, მათგან ყველაზე პერსპექტიულია,
+    სინთეზურ ბენჩმარკზე აჩვენებს მუშაობის გაუმჯობესებას დაახლოებით 3-ჯერ და 1.5-2-ჯერ ზოგიერთ დიდ ხანს მომუშავე აპლიკაციებში.
     აპლიკაციის სტანდარტული წარმადობა ერთ და იგივე დონეზეა PHP 7.4-თან.
   </p>
   <h3 class="php8-h3">
@@ -486,12 +486,12 @@ array_chunk([], -1); // ValueError: array_chunk(): Argument #2 ($length) must be
     </div>
     <div class="php8-footer__content">
       <p>
-        PHP 8 წყაროს კოდის ჩამოსატვირთად ეწვიეთ <a href="http://www.php.net/downloads">ჩამოტვირთვის</a> გვერდს.
-        Windows-ის ბინარული ფაილები განთავსებულია საიტზე <a href="http://windows.php.net/download">PHP Windows-თვის</a>.
-        ცვლილებების სია წარმოდგენილია <a href="http://www.php.net/ChangeLog-8.php">ChangeLog-ში</a>.
+        PHP 8 წყაროს კოდის ჩამოსატვირთად ეწვიეთ <a href="https://www.php.net/downloads">ჩამოტვირთვის</a> გვერდს.
+        Windows-ის ბინარული ფაილები განთავსებულია საიტზე <a href="https://windows.php.net/download">PHP Windows-თვის</a>.
+        ცვლილებების სია წარმოდგენილია <a href="https://www.php.net/ChangeLog-8.php">ChangeLog-ში</a>.
       </p>
       <p>
-        <a href="/manual/en/migration80.php">მიგრაციის გზამკვლევი</a> ხელმისაწვდომია დოკუმენტაციის განყოფილებაში. გთხოვთ, 
+        <a href="/manual/en/migration80.php">მიგრაციის გზამკვლევი</a> ხელმისაწვდომია დოკუმენტაციის განყოფილებაში. გთხოვთ,
             შეისწავლოთ იგი ახალი ფუნქციების დეტალური ჩამონათვალის მისაღებად და უკუ შეუთავსებელი ცვლილებებისთვის.
       </p>
     </div>

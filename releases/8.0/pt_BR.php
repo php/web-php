@@ -268,7 +268,7 @@ if ($session !== null) {
 
   if ($user !== null) {
     $address = $user->getAddress();
-  
+
     if ($address !== null) {
       $country = $address->country;
     }
@@ -493,10 +493,10 @@ array_chunk([], -1); // ValueError: array_chunk(): Argument #2 ($length) must be
             <div class="php8-footer__content">
                 <p>
                     Para downloads do código-fonte do PHP 8, visite a página de
-                    <a href="http://www.php.net/downloads">downloads</a>.
-                    Os binários do Windows podem ser encontrados na página <a href="http://windows.php.net/download">PHP para
+                    <a href="https://www.php.net/downloads">downloads</a>.
+                    Os binários do Windows podem ser encontrados na página <a href="https://windows.php.net/download">PHP para
                         Windows</a>.
-                    A lista de mudanças é registrada no <a href="http://www.php.net/ChangeLog-8.php">ChangeLog</a>.
+                    A lista de mudanças é registrada no <a href="https://www.php.net/ChangeLog-8.php">ChangeLog</a>.
                 </p>
                 <p>
                     O <a href="/manual/pt_BR/migration80.php">guia de migração</a> está disponível no Manual do PHP.

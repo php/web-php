@@ -60,7 +60,7 @@ site_header("News Archive - 2000", ["cache" => true]);
 <p>
  <span class="newsdate">[06-Oct-2000]</span>
  You can now go directly to PHP manual pages with a URL such as
- <a href="http://php.net/strlen">php.net/strlen</a>.
+ <a href="https://php.net/strlen">php.net/strlen</a>.
 </p>
 
 <hr>

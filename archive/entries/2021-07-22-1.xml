@@ -15,7 +15,7 @@
         <a href="https://wiki.php.net/todo/php81">PHP Wiki</a>.
       </p>
       <p>For source downloads of PHP 8.1.0 Beta 1 please visit the <a href="https://downloads.php.net/~ramsey">download page</a>.</p>
-      <p>Please carefully test this version and report any issues found in the <a href="http://bugs.php.net">bug reporting system</a>.</p>
+      <p>Please carefully test this version and report any issues found in the <a href="https://bugs.php.net">bug reporting system</a>.</p>
       <p><b>Please DO NOT use this version in production, it is an early test version.</b></p>
       <p>
         For more information on the new features and other changes, you can read the

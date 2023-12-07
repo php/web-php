@@ -54,7 +54,7 @@ $LANGUAGES = [
  - Accept redirections to the translation, despite ACCEPT_LANGUAGE
  - Be listed at php.net/docs or php.net/download-docs
  However, these languages are available on the doc dev server:
- - http://docs.php.net/
+ - https://docs.php.net/
 */
 $INACTIVE_ONLINE_LANGUAGES = [
     'ar' => 'Arabic',

@@ -6,9 +6,9 @@
   <updated>2023-10-20T11:59:20+02:00</updated>
   <link href="https://www.php.net/conferences/index.php#2023-10-20-1" rel="alternate" type="text/html"/>
   <link href="https://2024.phpday.it/" rel="via" type="text/html"/>
-  <finalTeaserDate xmlns="http://php.net/ns/news">2024-01-14</finalTeaserDate>
+  <finalTeaserDate xmlns="https://php.net/ns/news">2024-01-14</finalTeaserDate>
   <category term="cfp" label="Call for Papers"/>
-  <newsImage xmlns="http://php.net/ns/news" link="https://2024.phpday.it/" title="phpday 2024: Verona + online - May 16-17">phpday2023.png</newsImage>
+  <newsImage xmlns="https://php.net/ns/news" link="https://2024.phpday.it/" title="phpday 2024: Verona + online - May 16-17">phpday2023.png</newsImage>
   <content type="xhtml">
     <div xmlns="http://www.w3.org/1999/xhtml">
 <p>20 years of <a href="https://2024.phpday.it/">phpday</a>! On May 16-17

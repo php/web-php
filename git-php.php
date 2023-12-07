@@ -20,7 +20,7 @@ $SIDEBAR_DATA = '
 <h3>Git access</h3>
 <p>
  If you would like to grab PHP sources or other PHP.net
- hosted project data from PHP.net, you can also use 
+ hosted project data from PHP.net, you can also use
  <a href="/git.php">Git</a>. No Git account is required.
 </p>
 ';
@@ -205,11 +205,11 @@ EOT;
  </tr>
  <tr>
   <td class="sub">Reading the PHP source</td>
-  <td><a href="http://doc.php.net/tutorial/">Maintaining the documentation</a></td>
+  <td><a href="https://doc.php.net/tutorial/">Maintaining the documentation</a></td>
  </tr>
  <tr>
   <td class="sub">Using PHP extensions</td>
-  <td><a href="http://doc.php.net/tutorial/">Translating the documentation</a></td>
+  <td><a href="https://doc.php.net/tutorial/">Translating the documentation</a></td>
  </tr>
  <tr>
   <td class="sub">Creating experimental PHP extensions</td>
@@ -259,7 +259,7 @@ EOT;
  Similarly, if you plan on contributing documentation, you should
  <a href="mailto:phpdoc-subscribe@lists.php.net">subscribe to the
  documentation mailing list</a>, and read the
- <a href="http://doc.php.net/tutorial/">PHP Documentation HOWTO</a>.
+ <a href="https://doc.php.net/tutorial/">PHP Documentation HOWTO</a>.
 </p>
 
 <p>
@@ -273,10 +273,10 @@ EOT;
 
 <p>
  If you have a new PEAR package you wish to contribute, propose it
- through the <a href="http://pear.php.net/pepr/">PEPR system</a> on
- <a href="http://pear.php.net/">the PEAR website</a>. If you have a new PECL
+ through the <a href="https://pear.php.net/pepr/">PEPR system</a> on
+ <a href="https://pear.php.net/">the PEAR website</a>. If you have a new PECL
  extension you wish to contribute, bring it up on the appropriate
- <a href="http://pecl.php.net/support.php">PECL mailing list</a> first.
+ <a href="https://pecl.php.net/support.php">PECL mailing list</a> first.
 </p>
 
 <p>
@@ -304,7 +304,7 @@ EOT;
  patient!), gives you access to a number of things. First, and most
  importantly, it gives you access to modify those parts of the PHP Git tree for
  which you have requested and been granted access. It also allows you to comment
- on and close bugs in our <a href="http://bugs.php.net/">bug database</a>, and
+ on and close bugs in our <a href="https://bugs.php.net/">bug database</a>, and
  allows you to modify the documentation notes in the <a href="/manual/">annotated
  manual</a>. Your Git account also translates into a foo@php.net forwarding email
  address where <strong>foo</strong> is your Git user id. Feel free to use it!
@@ -335,7 +335,7 @@ EOT;
 </p>
 <p class="warn">
  If someone told you to fill in an account request because you are a developer of
- a certain extension, for example a <a href="http://pecl.php.net/">PECL</a> extension,
+ a certain extension, for example a <a href="https://pecl.php.net/">PECL</a> extension,
  then please state who told you to submit this request in the purpose text field below.
 </p>
 

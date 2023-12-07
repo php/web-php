@@ -101,7 +101,7 @@ function myphpnet_load(): void
     // Empty the preferences array
     $MYPHPNET = [false, false, "NONE", 0, false];
 
-    if ($MYSITE === 'http://docs.php.net/') {
+    if ($MYSITE === 'https://docs.php.net/') {
         $MYPHPNET[4] = true;
     }
 

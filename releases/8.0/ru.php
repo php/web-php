@@ -266,7 +266,7 @@ if ($session !== null) {
 
   if ($user !== null) {
     $address = $user->getAddress();
-  
+
     if ($address !== null) {
       $country = $address->country;
     }
@@ -485,9 +485,9 @@ array_chunk([], -1); // ValueError: array_chunk(): Argument #2 ($length) must be
     </div>
     <div class="php8-footer__content">
       <p>
-        Для загрузки исходного кода PHP 8 посетите страницу <a href="http://www.php.net/downloads">downloads</a>.
-        Бинарные файлы Windows находятся на сайте <a href="http://windows.php.net/download">PHP для Windows</a>.
-        Список изменений представлен в <a href="http://www.php.net/ChangeLog-8.php">ChangeLog</a>.
+        Для загрузки исходного кода PHP 8 посетите страницу <a href="https://www.php.net/downloads">downloads</a>.
+        Бинарные файлы Windows находятся на сайте <a href="https://windows.php.net/download">PHP для Windows</a>.
+        Список изменений представлен в <a href="https://www.php.net/ChangeLog-8.php">ChangeLog</a>.
       </p>
       <p>
         <a href="/manual/ru/migration80.php">Руководство по миграции</a> доступно в разделе документации. Пожалуйста,

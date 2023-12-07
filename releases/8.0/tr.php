@@ -265,7 +265,7 @@ if ($session !== null) {
 
   if ($user !== null) {
     $address = $user->getAddress();
-  
+
     if ($address !== null) {
       $country = $address->country;
     }
@@ -483,9 +483,9 @@ array_chunk([], -1); // ValueError: array_chunk(): Argument #2 ($length) must be
     </div>
     <div class="php8-footer__content">
       <p>
-        PHP 8'i indirmek için <a href="http://www.php.net/downloads">downloads</a> sayfasını ziyaret edebilirsiniz.
-        Windows için derlenmiş sürümüne <a href="http://windows.php.net/download">PHP for Windows</a> sayfasından ulaşabilirsiniz.
-        Değişiklikler için <a href="http://www.php.net/ChangeLog-8.php">ChangeLog</a>'a göz atabilirsiniz.
+        PHP 8'i indirmek için <a href="https://www.php.net/downloads">downloads</a> sayfasını ziyaret edebilirsiniz.
+        Windows için derlenmiş sürümüne <a href="https://windows.php.net/download">PHP for Windows</a> sayfasından ulaşabilirsiniz.
+        Değişiklikler için <a href="https://www.php.net/ChangeLog-8.php">ChangeLog</a>'a göz atabilirsiniz.
       </p>
       <p>
         PHP Kılavuzundan PHP 8 için <a href="/manual/tr/migration80.php">Göç Belgelerine</a> ulaşabilirsiniz.

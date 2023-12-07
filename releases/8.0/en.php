@@ -267,7 +267,7 @@ if ($session !== null) {
 
   if ($user !== null) {
     $address = $user->getAddress();
-  
+
     if ($address !== null) {
       $country = $address->country;
     }
@@ -486,9 +486,9 @@ array_chunk([], -1); // ValueError: array_chunk(): Argument #2 ($length) must be
     </div>
     <div class="php8-footer__content">
       <p>
-        For source downloads of PHP 8 please visit the <a href="http://www.php.net/downloads">downloads</a> page.
-        Windows binaries can be found on the <a href="http://windows.php.net/download">PHP for Windows</a> site.
-        The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-8.php">ChangeLog</a>.
+        For source downloads of PHP 8 please visit the <a href="https://www.php.net/downloads">downloads</a> page.
+        Windows binaries can be found on the <a href="https://windows.php.net/download">PHP for Windows</a> site.
+        The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-8.php">ChangeLog</a>.
       </p>
       <p>
         The <a href="/manual/en/migration80.php">migration guide</a> is available in the PHP Manual. Please

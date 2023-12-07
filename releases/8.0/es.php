@@ -484,9 +484,9 @@ array_chunk([], -1); // ValueError: array_chunk(): Argument #2 ($length) must be
     </div>
     <div class="php8-footer__content">
       <p>
-        Para bajar el código fuente de PHP8 visita la página <a href="http://www.php.net/downloads">downloads</a>.
-        Código binario para windows lo puedes encontrar en la página <a href="http://windows.php.net/download">PHP for Windows</a>.
-        La lista de cambios está disponible en la página <a href="http://www.php.net/ChangeLog-8.php">ChangeLog</a>.
+        Para bajar el código fuente de PHP8 visita la página <a href="https://www.php.net/downloads">downloads</a>.
+        Código binario para windows lo puedes encontrar en la página <a href="https://windows.php.net/download">PHP for Windows</a>.
+        La lista de cambios está disponible en la página <a href="https://www.php.net/ChangeLog-8.php">ChangeLog</a>.
       </p>
       <p>
         La <a href="/manual/en/migration80.php">guía de migración</a> está disponible en el manual de PHP.

@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<entry xmlns="http://www.w3.org/2005/Atom" xmlns:default="http://php.net/ns/news">
+<entry xmlns="http://www.w3.org/2005/Atom" xmlns:default="https://php.net/ns/news">
   <title>PHP.RUHR 2020 - Web Development &amp; Digital Commerce</title>
   <id>https://www.php.net/archive/2020.php#2020-06-24-1</id>
   <published>2020-06-24T15:56:11+00:00</published>
   <updated>2020-06-24T15:56:11+00:00</updated>
   <link href="https://www.php.net/conferences/index.php#id2020-06-24-1" rel="alternate" type="text/html"/>
   <link href="https://2020.php.ruhr/" rel="via" type="text/html"/>
-  <default:finalTeaserDate xmlns="http://php.net/ns/news">2020-11-04</default:finalTeaserDate>
+  <default:finalTeaserDate xmlns="https://php.net/ns/news">2020-11-04</default:finalTeaserDate>
   <category term="conferences" label="Conference announcement"/>
-  <default:newsImage xmlns="http://php.net/ns/news" link="https://2020.php.ruhr/" title="PHP.RUHR 2020">php-ruhr-2020.png</default:newsImage>
+  <default:newsImage xmlns="https://php.net/ns/news" link="https://2020.php.ruhr/" title="PHP.RUHR 2020">php-ruhr-2020.png</default:newsImage>
   <content type="xhtml">
     <div xmlns="http://www.w3.org/1999/xhtml">
           <p><b>PHP.RUHR 2020 – Web Development &amp; Digital Commerce</b></p>

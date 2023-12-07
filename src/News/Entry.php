@@ -123,7 +123,7 @@ class Entry
         self::ce($dom, "link", null, ['href' => $link, 'rel' => 'via', 'type' => 'text/html'], $item);
 
         if (!empty($this->conf_time)) {
-            $item->appendChild($dom->createElementNs("http://php.net/ns/news", "finalTeaserDate", date("Y-m-d", $this->conf_time)));
+            $item->appendChild($dom->createElementNs("https://php.net/ns/news", "finalTeaserDate", date("Y-m-d", $this->conf_time)));
         }
 
         foreach ($this->categories as $cat) {
@@ -131,7 +131,7 @@ class Entry
         }
 
         if ($this->image['path'] ?? '') {
-            $image = $item->appendChild($dom->createElementNs("http://php.net/ns/news", "newsImage", $this->image['path']));
+            $image = $item->appendChild($dom->createElementNs("https://php.net/ns/news", "newsImage", $this->image['path']));
             $image->setAttribute("link", $this->image['link']);
             $image->setAttribute("title", $this->image['title']);
         }

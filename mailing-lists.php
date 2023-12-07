@@ -17,11 +17,11 @@ $SIDEBAR_DATA = '
 <h3>Other PHP related mailing lists</h3>
 
 <p>
- Find the <a href="http://pear.php.net/support/lists.php">PEAR
- lists</a>, the <a href="http://pecl.php.net/support.php">PECL
- lists</a>, and the <a href="http://gtk.php.net/resources.php">PHP-GTK
+ Find the <a href="https://pear.php.net/support/lists.php">PEAR
+ lists</a>, the <a href="https://pecl.php.net/support.php">PECL
+ lists</a>, and the <a href="https://gtk.php.net/resources.php">PHP-GTK
  lists</a> on their own pages.
-</p> 
+</p>
 
 <a id="local"></a>
 <h3>Local Mailing Lists and Newsgroups</h3>
@@ -119,7 +119,7 @@ if (isset($_POST['action'])) {
 </p>
 <p>
  There is an experimental web interface for the news server at
- <a href="http://news.php.net/">http://news.php.net/</a>, and
+ <a href="https://news.php.net/">http://news.php.net/</a>, and
  there are also other archives provided by
  <a href="http://marc.info/">Marc</a>.
 </p>
@@ -323,7 +323,7 @@ function output_lists_table($mailing_lists): void
                 $larchive = ($listinfo[4] === true ? $listinfo[0] : $listinfo[4]);
             } else { $larchive = false; }
             echo '<td>' . ($larchive ? "<a href=\"http://marc.info/?l={$larchive}\">yes</a>" : 'n/a') . '</td>';
-            echo '<td>' . ($listinfo[6] ? "<a href=\"news://news.php.net/{$listinfo[6]}\">yes</a> <a href=\"http://news.php.net/group.php?group={$listinfo[6]}\">http</a>" : 'n/a') . '</td>';
+            echo '<td>' . ($listinfo[6] ? "<a href=\"news://news.php.net/{$listinfo[6]}\">yes</a> <a href=\"https://news.php.net/group.php?group={$listinfo[6]}\">http</a>" : 'n/a') . '</td>';
             echo '<td><input name="maillist" type="radio" value="' . $listinfo[0] . '"></td>';
             echo '<td>' . ($listinfo[5] ? '<input name="maillist" type="radio" value="' . $listinfo[0] . '-digest">' : 'n/a') . '</td>';
             echo "</tr>\n";
@@ -383,7 +383,7 @@ function output_lists_table($mailing_lists): void
 
 <p>
  All of the mailing lists hosted at <a
- href="http://lists.php.net/">lists.php.net</a> are managed using the <a
+ href="https://lists.php.net/">lists.php.net</a> are managed using the <a
  href="http://untroubled.org/ezmlm/">ezmlm-idx</a> mailing list software.
  There are a variety of commands you can use to modify your subscription.
  Either send a message to <code>php-whatever-help@lists.php.net</code> (as in,

@@ -25,7 +25,7 @@ site_header('PHP Version 4 Documentation');
 
 <ul>
  <li>
-  You can download a copy in the <a href="http://doc.php.net/archives/">documentation archives</a>.
+  You can download a copy in the <a href="https://doc.php.net/archives/">documentation archives</a>.
  </li>
  <li>
   You can also find the <a href="https://php-legacy-docs.zend.com/manual/php4/en/index">PHP 4 legacy manual</a>
@@ -44,7 +44,7 @@ site_header('PHP Version 4 Documentation');
 <h2>Migrating to supported PHP version</h2>
 <p>
  All users are strongly encouraged to upgrade their environments to  newest PHP version.
- Please read our guides for <a href="http://php.net/manual/en/migration5.php">Migrating
+ Please read our guides for <a href="https://php.net/manual/en/migration5.php">Migrating
  from PHP 4 to PHP 5.0.x</a> for more information.
 </p>
 

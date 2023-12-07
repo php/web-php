@@ -14,24 +14,24 @@
         This continues the PHP 8.0 release cycle, the rough outline of which is specified in the
         <a href="https://wiki.php.net/todo/php80">PHP Wiki</a>.
         </p>
-        
+
         <p>For source downloads of PHP 8.0.0 Alpha 2 please visit the <a href="https://downloads.php.net/~carusogabriel">download page</a>.</p>
-        
-        <p>Please carefully test this version and report any issues found in the <a href="http://bugs.php.net">bug reporting system</a>.</p>
-        
+
+        <p>Please carefully test this version and report any issues found in the <a href="https://bugs.php.net">bug reporting system</a>.</p>
+
         <p><b>Please DO NOT use this version in production, it is an early test version.</b></p>
-        
+
         <p>
          For more information on the new features and other changes, you can read the
          <a href="https://github.com/php/php-src/blob/php-8.0.0alpha2/NEWS">NEWS</a> file,
          or the <a href="https://github.com/php/php-src/blob/php-8.0.0alpha2/UPGRADING">UPGRADING</a>
          file for a complete list of upgrading notes. These files can also be found in the release archive.
         </p>
-        
+
         <p>The next release will be Alpha 3, planned for 23 Jul 2020.</p>
-        
+
         <p>The signatures for the release can be found in <a href="https://gist.github.com/carusogabriel/0ae8a6238ab9336be7d8e1eb6873888f">the manifest</a> or on <a href="https://qa.php.net/">the QA site</a>.</p>
-        
+
         <p>Thank you for helping us make PHP better.</p>
     </div>
   </content>

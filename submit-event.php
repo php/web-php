@@ -116,7 +116,7 @@ if ($process) {
 
     if (isset($_POST['action']) && $_POST['action'] === 'Submit' && empty($errors)) {
         // Submit to main.php.net
-        $result = posttohost("http://main.php.net/entry/event.php", $_POST);
+        $result = posttohost("https://main.php.net/entry/event.php", $_POST);
         if ($result) {
             $errors[] = "There was an error processing your submission: $result";
         }

@@ -12,7 +12,7 @@ The PHP Manual has over 30 translations already setup, but due to inactivity man
 
 <h3>How to help translate the PHP Manual</h3>
 <p>
-If you're interested in helping translate a specific language, then please read the translation section of the <a href="http://doc.php.net/tutorial/">Guide for Manual Contributors</a> and contact the appropriate mailing list. Whether or not your language is shown below, you are very welcome to help translate the PHP Manual from English to another language.
+If you're interested in helping translate a specific language, then please read the translation section of the <a href="https://doc.php.net/tutorial/">Guide for Manual Contributors</a> and contact the appropriate mailing list. Whether or not your language is shown below, you are very welcome to help translate the PHP Manual from English to another language.
 </p>
 
 <h3>Using outdated translations</h3>
@@ -29,7 +29,7 @@ $archived = ['da', 'kr', 'pl', 'tw'];
 foreach ($INACTIVE_ONLINE_LANGUAGES as $cc => $lang) {
     $link = 'no archive';
     if (in_array($cc, $archived, true)) {
-        $link = '<a href="http://docs.php.net/manual/' . $cc . '">archive</a>';
+        $link = '<a href="https://docs.php.net/manual/' . $cc . '">archive</a>';
     }
     echo '<li>', $lang, ': (', $link, ')</li>';
 }

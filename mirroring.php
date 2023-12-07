@@ -47,7 +47,7 @@ site_header(
 
 <p>
  First, you need to have a <a href="http://rsync.samba.org/">rsync</a>
- installed. 
+ installed.
  To synchronize your server with the appropriate rsync location, first view the <a
  href="/images/oidk.net-rsync-distribution-plan-may2012.png">coverage map</a>
  and identify which location your mirror should be using. Next, modify the
@@ -239,7 +239,7 @@ site_header(
 <ul>
  <li>Create a 120 x 60 pixel sized logo button.</li>
  <li>Copy it to your <code>/www/htdocs/phpweb/backend</code> folder as <code>mirror.gif</code>, <code>mirror.jpg</code> or <code>mirror.png</code>.</li>
- <li>Go visit your mirror URL (e.g. http://foo.php.net/mirror.php) and check if it is there.</li>
+ <li>Go visit your mirror URL (e.g. https://foo.php.net/mirror.php) and check if it is there.</li>
 </ul>
 
 <p>

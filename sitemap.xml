@@ -4,121 +4,121 @@
  xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
  <!-- Last update of sitemap: $LastChangedDate -->
  <url>
-  <loc>http://php.net/</loc>
+  <loc>https://php.net/</loc>
  </url>
  <url>
-  <loc>http://php.net/archive/</loc>
+  <loc>https://php.net/archive/</loc>
  </url>
  <url>
-  <loc>http://php.net/cal.php</loc>
+  <loc>https://php.net/cal.php</loc>
  </url>
  <url>
-  <loc>http://php.net/ChangeLog-4.php</loc>
+  <loc>https://php.net/ChangeLog-4.php</loc>
   <changefreq>never</changefreq>
  </url>
  <url>
-  <loc>http://php.net/ChangeLog-5.php</loc>
+  <loc>https://php.net/ChangeLog-5.php</loc>
  </url>
  <url>
-  <loc>http://php.net/ChangeLog-7.php</loc>
+  <loc>https://php.net/ChangeLog-7.php</loc>
  </url>
  <url>
-  <loc>http://php.net/conferences/</loc>
+  <loc>https://php.net/conferences/</loc>
  </url>
  <url>
-  <loc>http://php.net/contact.php</loc>
+  <loc>https://php.net/contact.php</loc>
  </url>
  <url>
-  <loc>http://php.net/copyright.php</loc>
+  <loc>https://php.net/copyright.php</loc>
  </url>
  <url>
-  <loc>http://php.net/credits.php</loc>
+  <loc>https://php.net/credits.php</loc>
  </url>
  <url>
-  <loc>http://php.net/distributions/</loc>
+  <loc>https://php.net/distributions/</loc>
  </url>
  <url>
-  <loc>http://php.net/docs.php</loc>
+  <loc>https://php.net/docs.php</loc>
  </url>
  <url>
-  <loc>http://php.net/download-docs.php</loc>
+  <loc>https://php.net/download-docs.php</loc>
  </url>
  <url>
-  <loc>http://php.net/download-logos.php</loc>
+  <loc>https://php.net/download-logos.php</loc>
  </url>
  <url>
-  <loc>http://php.net/downloads.php</loc>
+  <loc>https://php.net/downloads.php</loc>
  </url>
  <url>
-  <loc>http://php.net/get-involved.php</loc>
+  <loc>https://php.net/get-involved.php</loc>
  </url>
  <url>
-  <loc>http://php.net/git-php.php</loc>
+  <loc>https://php.net/git-php.php</loc>
  </url>
  <url>
-  <loc>http://php.net/git.php</loc>
+  <loc>https://php.net/git.php</loc>
  </url>
  <url>
-  <loc>http://php.net/license/</loc>
+  <loc>https://php.net/license/</loc>
  </url>
  <url>
-  <loc>http://php.net/license/contrib-guidelines-code.php</loc>
+  <loc>https://php.net/license/contrib-guidelines-code.php</loc>
  </url>
  <url>
-  <loc>http://php.net/license/distrib-guidelines-code.php</loc>
+  <loc>https://php.net/license/distrib-guidelines-code.php</loc>
  </url>
  <url>
-  <loc>http://php.net/manual/</loc>
+  <loc>https://php.net/manual/</loc>
  </url>
  <url>
-  <loc>http://php.net/mailing-lists.php</loc>
+  <loc>https://php.net/mailing-lists.php</loc>
  </url>
  <url>
-  <loc>http://php.net/mirror-info.php</loc>
+  <loc>https://php.net/mirror-info.php</loc>
  </url>
  <url>
-  <loc>http://php.net/mirror.php</loc>
+  <loc>https://php.net/mirror.php</loc>
  </url>
  <url>
-  <loc>http://php.net/mirroring.php</loc>
+  <loc>https://php.net/mirroring.php</loc>
  </url>
  <url>
-  <loc>http://php.net/my.php</loc>
+  <loc>https://php.net/my.php</loc>
  </url>
  <url>
-  <loc>http://php.net/privacy.php</loc>
+  <loc>https://php.net/privacy.php</loc>
  </url>
  <url>
-  <loc>http://php.net/quickref.php</loc>
+  <loc>https://php.net/quickref.php</loc>
  </url>
  <url>
-  <loc>http://php.net/releases/</loc>
+  <loc>https://php.net/releases/</loc>
  </url>
  <url>
-  <loc>http://php.net/security/</loc>
+  <loc>https://php.net/security/</loc>
  </url>
  <url>
-  <loc>http://php.net/security-note.php</loc>
+  <loc>https://php.net/security-note.php</loc>
  </url>
  <url>
-  <loc>http://php.net/sitemap.php</loc>
+  <loc>https://php.net/sitemap.php</loc>
  </url>
  <url>
-  <loc>http://php.net/sites.php</loc>
+  <loc>https://php.net/sites.php</loc>
  </url>
  <url>
-  <loc>http://php.net/software.php</loc>
+  <loc>https://php.net/software.php</loc>
  </url>
  <url>
-  <loc>http://php.net/support.php</loc>
+  <loc>https://php.net/support.php</loc>
  </url>
  <url>
-  <loc>http://php.net/thanks.php</loc>
+  <loc>https://php.net/thanks.php</loc>
  </url>
  <url>
-  <loc>http://php.net/unsub.php</loc>
+  <loc>https://php.net/unsub.php</loc>
  </url>
  <url>
-  <loc>http://php.net/urlhowto.php</loc>
+  <loc>https://php.net/urlhowto.php</loc>
  </url>
 </urlset>

@@ -68,7 +68,7 @@ foreach ($NEWS_ENTRIES as $entry) {
     }
 }
 foreach ($frontpage as $entry) {
-    $link = preg_replace('~^(http://php.net/|https://www.php.net/)~', '', $entry["id"]);
+    $link = preg_replace('~^(https://php.net/|https://www.php.net/)~', '', $entry["id"]);
     $id = parse_url($entry["id"], PHP_URL_FRAGMENT);
     $date = date_create($entry['updated']);
     $date_human = date_format($date, 'd M Y');

@@ -54,7 +54,7 @@ site_header("Annonce de publication de PHP 4.2.1", ["lang" => "fr"]);
  (mais toujours exp&eacute;rimentale) avec Apache 2. Nous <strong>ne
  recommandons pas</strong> son utilisation dans un environnement de
  production. Testez-le intensivement, et rapportez tous les bugs dans le
- <a href="http://bugs.php.net">syst&egrave;me</a>.
+ <a href="https://bugs.php.net">syst&egrave;me</a>.
 </p>
 
 <h2>Variables externes</h2>

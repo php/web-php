@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<entry xmlns="http://www.w3.org/2005/Atom" xmlns:default="http://php.net/ns/news">
+<entry xmlns="http://www.w3.org/2005/Atom" xmlns:default="https://php.net/ns/news">
   <title>Dutch PHP Conference 2023 - Call for Papers</title>
   <id>https://www.php.net/archive/2023.php#2023-05-23-1</id>
   <published>2023-05-23T10:52:58+00:00</published>
   <updated>2023-05-23T10:52:58+00:00</updated>
   <link href="https://www.php.net/conferences/index.php#2023-05-23-1" rel="alternate" type="text/html"/>
   <link href="https://phpconference.nl/" rel="via" type="text/html"/>
-  <default:finalTeaserDate xmlns="http://php.net/ns/news">2023-07-28</default:finalTeaserDate>
+  <default:finalTeaserDate xmlns="https://php.net/ns/news">2023-07-28</default:finalTeaserDate>
   <category term="cfp" label="Call for Papers"/>
-  <default:newsImage xmlns="http://php.net/ns/news" link="https://phpconference.nl/" title="Dutch PHP Conference">DPC-logo.png</default:newsImage>
+  <default:newsImage xmlns="https://php.net/ns/news" link="https://phpconference.nl/" title="Dutch PHP Conference">DPC-logo.png</default:newsImage>
   <content type="xhtml">
     <div xmlns="http://www.w3.org/1999/xhtml">
      <p>We are back for the <strong>17th edition</strong> of the <a href="https://phpconference.nl/">Dutch PHP Conference</a>! We hope you will join us on <strong>October 13, 2023</strong> for the <strong>online conference</strong>. 🐘🎉</p>

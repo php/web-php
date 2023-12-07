@@ -259,7 +259,7 @@ if ($session !== null) {
   $user = $session->user;
   if ($user !== null) {
     $address = $user->getAddress();
-  
+
     if ($address !== null) {
       $country = $address->country;
     }
@@ -349,7 +349,7 @@ array_chunk([], -1); // ValueError: array_chunk(): Argument #2 ($length) must be
 <section class="php8-section php8-section_light">
   <h2 class="php8-h2">即时编译</h2>
   <p>
-    PHP 8 引入了两个即时编译引擎。 
+    PHP 8 引入了两个即时编译引擎。
     Tracing JIT 在两个中更有潜力，它在综合基准测试中显示了三倍的性能，
     并在某些长时间运行的程序中显示了 1.5-2 倍的性能改进。
     典型的应用性能则和 PHP 7.4 不相上下。
@@ -476,9 +476,9 @@ array_chunk([], -1); // ValueError: array_chunk(): Argument #2 ($length) must be
     </div>
     <div class="php8-footer__content">
       <p>
-        请访问 <a href="http://www.php.net/downloads">下载</a> 页面下载 PHP 8 源代码。
-        在 <a href="http://windows.php.net/download">PHP for Windows</a> 站点中可找到 Windows 二进制文件。
-        <a href="http://www.php.net/ChangeLog-8.php">ChangeLog</a> 中有变更历史记录清单。
+        请访问 <a href="https://www.php.net/downloads">下载</a> 页面下载 PHP 8 源代码。
+        在 <a href="https://windows.php.net/download">PHP for Windows</a> 站点中可找到 Windows 二进制文件。
+        <a href="https://www.php.net/ChangeLog-8.php">ChangeLog</a> 中有变更历史记录清单。
       </p>
       <p>
         PHP 手册中有 <a href="/manual/zh/migration80.php">迁移指南</a>。

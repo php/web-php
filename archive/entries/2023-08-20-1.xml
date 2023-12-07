@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<entry xmlns="http://www.w3.org/2005/Atom" xmlns:default="http://php.net/ns/news">
+<entry xmlns="http://www.w3.org/2005/Atom" xmlns:default="https://php.net/ns/news">
   <title>ConFoo Montreal 2024: Call for Papers is Now Open</title>
   <id>https://www.php.net/archive/2023.php#2023-08-20-1</id>
   <published>2023-08-20T16:59:09-04:00</published>
   <updated>2023-08-20T16:59:09-04:00</updated>
   <link href="https://www.php.net/conferences/index.php#2023-08-20-1" rel="alternate" type="text/html"/>
   <link href="https://confoo.ca/en/2024" rel="via" type="text/html"/>
-  <default:finalTeaserDate xmlns="http://php.net/ns/news">2023-09-23</default:finalTeaserDate>
+  <default:finalTeaserDate xmlns="https://php.net/ns/news">2023-09-23</default:finalTeaserDate>
   <category term="cfp" label="Call for Papers"/>
-  <default:newsImage xmlns="http://php.net/ns/news" link="https://confoo.ca/en/2024" title="ConFoo Montreal 2024: Call for Papers is Now Open">confoo_2024.png</default:newsImage>
+  <default:newsImage xmlns="https://php.net/ns/news" link="https://confoo.ca/en/2024" title="ConFoo Montreal 2024: Call for Papers is Now Open">confoo_2024.png</default:newsImage>
   <content type="xhtml">
 	  <div xmlns="http://www.w3.org/1999/xhtml">
 		  <p>
@@ -18,10 +18,10 @@
 			  Want to share your knowledge and expertise to hundreds of experts in your field? Want to be part of our talented team of renowned speakers? The team at ConFoo is looking for speakers and conference proposals for its 2024 event in Montreal.
 		  </p>
 		  <p>
-			  Our talks are both dynamic and educational and are set to help participants build on their career. We recommend a 45-minute format, including a 10 Q&amp;A session at the end. 
+			  Our talks are both dynamic and educational and are set to help participants build on their career. We recommend a 45-minute format, including a 10 Q&amp;A session at the end.
 		  </p>
 		  <p>
-			  You have until September 23, 2023, to <a href="https://confoo.ca/en/2024/call-for-papers">submit your proposal</a>. 
+			  You have until September 23, 2023, to <a href="https://confoo.ca/en/2024/call-for-papers">submit your proposal</a>.
 		  </p>
 		  <p>
 				  Until then, participants can <a href="https://confoo.ca/en/2024">enjoy a 400$ discount</a> on their registration until September 23.

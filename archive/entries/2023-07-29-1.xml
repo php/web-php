@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<entry xmlns="http://www.w3.org/2005/Atom" xmlns:default="http://php.net/ns/news">
+<entry xmlns="http://www.w3.org/2005/Atom" xmlns:default="https://php.net/ns/news">
   <title>PHP Velho Oeste 2023</title>
   <id>https://www.php.net/archive/2023.php#2023-07-29-1</id>
   <published>2023-06-24T11:37:40+03:00</published>
   <updated>2023-06-24T11:37:40+03:00</updated>
   <link href="https://www.php.net/conferences/index.php#2023-07-29-1" rel="alternate" type="text/html"/>
   <link href="http://www.phpvelhoeste.com.br/2023/" rel="via" type="text/html"/>
-  <default:finalTeaserDate xmlns="http://php.net/ns/news">2023-07-29</default:finalTeaserDate>
+  <default:finalTeaserDate xmlns="https://php.net/ns/news">2023-07-29</default:finalTeaserDate>
   <category term="conferences" label="Conference announcement"/>
-  <default:newsImage xmlns="http://php.net/ns/news" link="http://www.phpvelhoeste.com.br/2023/"
+  <default:newsImage xmlns="https://php.net/ns/news" link="http://www.phpvelhoeste.com.br/2023/"
                      title="PHP Velho Oeste 2023">php_velho_oeste_350x300px.png
   </default:newsImage>
   <content type="xhtml">

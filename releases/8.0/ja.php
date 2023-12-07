@@ -265,7 +265,7 @@ if ($session !== null) {
 
   if ($user !== null) {
     $address = $user->getAddress();
-  
+
     if ($address !== null) {
       $country = $address->country;
     }
@@ -491,9 +491,9 @@ array_chunk([], -1); // ValueError: array_chunk(): Argument #2 ($length) must be
     <div class="php8-footer__content">
       <p>
         PHP 8 のソースコードのダウンロードは、
-        <a href="http://www.php.net/downloads">downloads</a> のページをどうぞ。
-        Windows 用のバイナリは <a href="http://windows.php.net/download">PHP for Windows</a> のページにあります。
-        変更の一覧は <a href="http://www.php.net/ChangeLog-8.php">ChangeLog</a> にあります。
+        <a href="https://www.php.net/downloads">downloads</a> のページをどうぞ。
+        Windows 用のバイナリは <a href="https://windows.php.net/download">PHP for Windows</a> のページにあります。
+        変更の一覧は <a href="https://www.php.net/ChangeLog-8.php">ChangeLog</a> にあります。
       </p>
       <p>
         <a href="/manual/ja/migration80.php">移行ガイド</a> が PHP マニュアルで利用できます。

@@ -24,7 +24,7 @@ releases\php80\common_header(
     <div class="php8-subtitle">
       PHP 8.0 is een omvangrijke update van de PHP programmeertaal.<br class="display-none-md"> Het bevat
       veel nieuwe mogelijkheden en optimalisaties, waaronder argument naamgeving, unie types, attributen,
-      promotie van constructor eigenschappen, expressie vergelijking, null-veilige operator, JIT, en 
+      promotie van constructor eigenschappen, expressie vergelijking, null-veilige operator, JIT, en
       verbeteringen aan het type systeem, foute afhandeling, en consistentie.
     </div>
     <div class="php8-button-wrapper center">
@@ -268,7 +268,7 @@ if ($session !== null) {
 
   if ($user !== null) {
     $address = $user->getAddress();
-  
+
     if ($address !== null) {
       $country = $address->country;
     }
@@ -487,9 +487,9 @@ array_chunk([], -1); // ValueError: array_chunk(): Argument #2 ($length) must be
     </div>
     <div class="php8-footer__content">
       <p>
-        Ga naar de <a href="http://www.php.net/downloads">downloads</a> pagina om de PHP 8 code te verkrijgen.
-        Uitvoerbare bestanden voor Windows kan je vinden op de <a href="http://windows.php.net/download">PHP voor Windows</a> website.
-        De volledige lijst met wijzigingen is vastgelegd in een <a href="http://www.php.net/ChangeLog-8.php">ChangeLog</a>.
+        Ga naar de <a href="https://www.php.net/downloads">downloads</a> pagina om de PHP 8 code te verkrijgen.
+        Uitvoerbare bestanden voor Windows kan je vinden op de <a href="https://windows.php.net/download">PHP voor Windows</a> website.
+        De volledige lijst met wijzigingen is vastgelegd in een <a href="https://www.php.net/ChangeLog-8.php">ChangeLog</a>.
       </p>
       <p>
         De <a href="/manual/en/migration80.php">migratie gids</a> is beschikbaar in de PHP Handleiding. Gebruik

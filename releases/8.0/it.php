@@ -22,10 +22,10 @@ releases\php80\common_header(
     </div>
     <div class="php8-title">Released!</div>
     <div class="php8-subtitle">
-      PHP 8.0 è una nuova versione major del linguaggio PHP.<br class="display-none-md"> 
-        Contiene molte nuove funzionalità ed ottimizzazioni quali i named arguments, 
+      PHP 8.0 è una nuova versione major del linguaggio PHP.<br class="display-none-md">
+        Contiene molte nuove funzionalità ed ottimizzazioni quali i named arguments,
         la definizione di tipi unione, gli attributi, la promozione a proprietà degli argomenti del costruttore,
-        l'espressione match, l'operatore nullsafe, la compilazione JIT e 
+        l'espressione match, l'operatore nullsafe, la compilazione JIT e
         miglioramenti al sistema dei tipi, alla gestione degli errori e alla consistenza.
     </div>
     <div class="php8-button-wrapper center">
@@ -200,7 +200,7 @@ new Number(\'NaN\'); // TypeError',
       </div>
     </div>
     <div class="php8-compare__content">
-      <p>Invece di indicare una combinazione di tipi con le annotazioni PHPDoc, puoi usare una dichiarazione nativa 
+      <p>Invece di indicare una combinazione di tipi con le annotazioni PHPDoc, puoi usare una dichiarazione nativa
           di tipo unione che viene validato durante l'esecuzione.</p>
     </div>
   </div>
@@ -487,12 +487,12 @@ array_chunk([], -1); // ValueError: array_chunk(): Argument #2 ($length) must be
     </div>
     <div class="php8-footer__content">
       <p>
-        Per scaricare il codice sorgente visita di PHP 8 visita la pagina di <a href="http://www.php.net/downloads">download</a>.
-        I binari eseguibili per Windows possono essere trovati sul sito <a href="http://windows.php.net/download">PHP for Windows</a>.
-        Una lista dei cambiamenti è registrata nel <a href="http://www.php.net/ChangeLog-8.php">ChangeLog</a>.
+        Per scaricare il codice sorgente visita di PHP 8 visita la pagina di <a href="https://www.php.net/downloads">download</a>.
+        I binari eseguibili per Windows possono essere trovati sul sito <a href="https://windows.php.net/download">PHP for Windows</a>.
+        Una lista dei cambiamenti è registrata nel <a href="https://www.php.net/ChangeLog-8.php">ChangeLog</a>.
       </p>
       <p>
-        La <a href="/manual/en/migration80.php">guida alla migrazione</a> è disponibile nel manuale PHP. 
+        La <a href="/manual/en/migration80.php">guida alla migrazione</a> è disponibile nel manuale PHP.
         Consultatelo per una lista completa delle nuove funzionalità e dei cambiamenti non retrocompatibili.
       </p>
     </div>

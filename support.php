@@ -53,7 +53,7 @@ site_header(
  lists are also reflected onto the news server at
  <a href="news://news.php.net">news://news.php.net/</a>. The
  server also has a read only web interface at
- <a href="http://news.php.net/">http://news.php.net/</a>.
+ <a href="https://news.php.net/">http://news.php.net/</a>.
 </p>
 
 <p>
