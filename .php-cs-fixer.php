@@ -35,6 +35,7 @@ $config
             'style' => 'post',
         ],
         'indentation_type' => true,
+        'is_null' => true,
         'line_ending' => true,
         'new_with_parentheses' => true,
         'no_extra_blank_lines' => true,
