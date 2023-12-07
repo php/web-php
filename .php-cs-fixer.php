@@ -49,6 +49,7 @@ $config
         'no_trailing_whitespace' => true,
         'ordered_class_elements' => true,
         'random_api_migration' => true,
+        'single_quote' => true,
         'single_space_around_construct' => [
             'constructs_contain_a_single_space' => [
                 'yield_from',
