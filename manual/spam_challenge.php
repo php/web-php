@@ -1,4 +1,5 @@
 <?php
+
 // simple and stupid SPAM protection (using little challenges)
 
 const NUMS = ['zero', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine'];

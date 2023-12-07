@@ -1,4 +1,5 @@
 <?php
+
 $_GET["lang"] = "en";
 if (!isset($_GET["lang"])) {
     header("Location: http://php.net");

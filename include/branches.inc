@@ -1,4 +1,5 @@
 <?php
+
 include_once __DIR__ . '/releases.inc';
 include_once __DIR__ . '/version.inc';
 

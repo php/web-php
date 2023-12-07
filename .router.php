@@ -1,4 +1,5 @@
 <?php
+
 $_SERVER["SERVER_ADDR"] = $_SERVER["HTTP_HOST"];
 
 $filename = $_SERVER["PATH_INFO"] ?? $_SERVER["SCRIPT_NAME"];

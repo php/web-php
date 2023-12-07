@@ -1,4 +1,5 @@
 <?php
+
 // Define $MYSITE and $LAST_UPDATED variables
 include_once __DIR__ . '/include/prepend.inc';
 

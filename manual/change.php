@@ -1,4 +1,5 @@
 <?php
+
 include_once __DIR__ . '/../include/prepend.inc';
 
 $page = isset($_GET['page']) ? htmlspecialchars($_GET['page'], ENT_QUOTES, 'UTF-8') : '';

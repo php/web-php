@@ -1,4 +1,5 @@
 <?php
+
 return [
     'AFG' => 'Afghanistan',
     'ALB' => 'Albania',
