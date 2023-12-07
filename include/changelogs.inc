@@ -1,4 +1,5 @@
 <?php
+
 function bugfix($number): void {
     echo "Fixed bug "; bugl($number);
 }

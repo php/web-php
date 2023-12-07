@@ -1,4 +1,5 @@
 <?php
+
 include_once __DIR__ . '/../include/prepend.inc';
 
 $now = $_SERVER["REQUEST_TIME"];

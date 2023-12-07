@@ -1,4 +1,5 @@
 <?php
+
 (function ($uri): void {
     // Special redirect cases not able to be captured in error.php
     $shortcuts = [
