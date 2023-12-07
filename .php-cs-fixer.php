@@ -41,6 +41,7 @@ $config
         'new_with_parentheses' => true,
         'no_extra_blank_lines' => true,
         'no_mixed_echo_print' => true,
+        'no_singleline_whitespace_before_semicolons' => true,
         'no_trailing_whitespace' => true,
         'ordered_class_elements' => true,
         'random_api_migration' => true,
