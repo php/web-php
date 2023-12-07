@@ -582,7 +582,7 @@ function get_legacy_manual_urls(string $uri): array
         if (count($matches) < 2) {
             return '';
         }
-        return $matches[1] ;
+        return $matches[1];
     }, $uri);
 
     if (!isset($pages_ids[$page_id])) {
