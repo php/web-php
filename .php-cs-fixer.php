@@ -32,6 +32,7 @@ $config
         'constant_case' => true,
         'elseif' => true,
         'function_declaration' => true,
+        'include' => true,
         'increment_style' => [
             'style' => 'post',
         ],
