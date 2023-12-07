@@ -12,7 +12,7 @@ final readonly class UserNote
         public string $user,
         public string $text,
         public int $upvotes = 0,
-        public int $downvotes = 0
+        public int $downvotes = 0,
     ) {
     }
 }
