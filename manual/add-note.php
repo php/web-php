@@ -136,7 +136,9 @@ if ($process) {
 
     // There was an error, or a preview is needed
     // If there was an error, print out
-    if ($error) { echo "<p class=\"formerror\">$error</p>\n"; }
+    if ($error) {
+    echo "<p class=\"formerror\">$error</p>\n";
+    }
 
     // Print out preview of note
     echo '<p>This is what your entry will look like, roughly:</p>';
@@ -327,7 +329,9 @@ else {
 }
 
 // If the user name was not specified, provide a default
-if (empty($_POST['user'])) { $_POST['user'] = "user@example.com"; }
+if (empty($_POST['user'])) {
+$_POST['user'] = "user@example.com";
+}
 
 // There is no section to add note to
 if (!isset($_POST['sect'], $_POST['redirect'])) {
@@ -360,7 +364,9 @@ else {?>
   </tr>
   <tr>
    <th class="subr"><label for="form-note">Your notes</label>:</th>
-   <td><textarea id="form-note" name="note" rows="20" cols="60" wrap="virtual" required maxlength="4095" minlength="32"><?php if (isset($_POST['note'])) { echo clean($_POST['note']); } ?></textarea>
+   <td><textarea id="form-note" name="note" rows="20" cols="60" wrap="virtual" required maxlength="4095" minlength="32"><?php if (isset($_POST['note'])) {
+   echo clean($_POST['note']);
+   } ?></textarea>
    <br>
   </td>
   </tr>

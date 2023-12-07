@@ -36,7 +36,9 @@ $_SERVER['STRIPPED_URI'] = htmlspecialchars($_SERVER['REQUEST_URI'], ENT_QUOTES,
 list($LANG, $EXPL_LANG, $UA_LANGS) = language_choose_code();
 
 // Compatibility
-if ($EXPL_LANG == '') { unset($EXPL_LANG); }
+if ($EXPL_LANG == '') {
+unset($EXPL_LANG);
+}
 
 function language_choose_code()
 {
@@ -180,7 +182,9 @@ function language_add($langcode, &$langs)
     $langcode = strtolower(htmlspecialchars($langcode));
 
     // The Brazilian Portuguese code needs special attention
-    if ($langcode == 'pt_br') { $langcode = 'pt_BR'; }
+    if ($langcode == 'pt_br') {
+    $langcode = 'pt_BR';
+    }
 
     // Append language code in priority order if it is not
     // there already and supported by the PHP site. Try to
@@ -198,7 +202,9 @@ function language_add($langcode, &$langs)
 // accept-language codes by quality value
 function language_accept_order($a, $b)
 {
-    if ($a[1] == $b[1]) { return 0; }
+    if ($a[1] == $b[1]) {
+    return 0;
+    }
     return ($a[1] > $b[1]) ? -1 : 1;
 }
 

@@ -161,7 +161,9 @@ if (count($found_formats) == 0) {
 
     // Print out the name of the formats
     foreach ($formats as $formatname => $extension) {
-        if (!isset($found_formats[$formatname])) { continue; }
+        if (!isset($found_formats[$formatname])) {
+        continue;
+        }
         echo "  <th valign=\"bottom\">$formatname</th>\n";
     }
 
@@ -170,8 +172,12 @@ if (count($found_formats) == 0) {
     foreach ($files as $langcode => $lang_files) {
 
         // See if current language is the preferred one
-        if ($langcode == $LANG) { $preflang = true; }
-        else { $preflang = false; }
+        if ($langcode == $LANG) {
+        $preflang = true;
+        }
+        else {
+        $preflang = false;
+        }
 
         // Highlight manual in preferred language
         if ($preflang) {
@@ -185,7 +191,9 @@ if (count($found_formats) == 0) {
         foreach ($formats as $formatname => $extension) {
 
             // Skip if no file found
-            if (!isset($found_formats[$formatname])) { continue; }
+            if (!isset($found_formats[$formatname])) {
+            continue;
+            }
 
             echo "<td align=\"center\"$cellclass>";
             if (!isset($lang_files[$formatname])) {

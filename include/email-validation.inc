@@ -41,7 +41,8 @@ function is_emailable_address($email)
  * .... will match:
  *     real_person@thisispamsendoftheweb.example.com
  */
-function blacklisted($email) {
+function blacklisted($email)
+{
     $mosquitoes = [
         'saradhaaa@gmail.com',
         'mg-tuzi@yahoo.com.cn',

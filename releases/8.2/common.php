@@ -4,7 +4,8 @@ namespace releases\php82;
 
 include_once __DIR__ . '/../../include/prepend.inc';
 
-function common_header(string $description): void {
+function common_header(string $description): void
+{
     global $MYSITE;
 
     $meta_image_path = \htmlspecialchars(
@@ -32,7 +33,8 @@ META
     ]);
 }
 
-function language_chooser(string $currentLang): void {
+function language_chooser(string $currentLang): void
+{
     $LANGUAGES = [
         'en' => 'English',
         'es' => 'Español',

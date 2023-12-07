@@ -53,7 +53,9 @@ function i2c_go()
     // User already has a country detected with this IP stored
     if (!empty($_COOKIE['COUNTRY']) && strpos($_COOKIE['COUNTRY'], ',') !== false) {
        list($COUNTRY, $storedip) = explode(",", $_COOKIE['COUNTRY']);
-       if ($storedip == $ipnum) { return true; }
+       if ($storedip == $ipnum) {
+       return true;
+       }
     }
 
     // Convert the IP number to some useable form for searching
@@ -91,7 +93,9 @@ function i2c_search_in_index($ip)
         __DIR__ . "/../backend/ip-to-country.idx",
         "r",
     );
-    if (!$dbidx) { return false; }
+    if (!$dbidx) {
+    return false;
+    }
 
     // Read in granularity from index file and
     // convert current IP to something useful
@@ -137,7 +141,9 @@ function i2c_search_in_db($ip, $idx)
     );
 
     // Return with "NA" in case of we cannot open the db
-    if (!$ipdb) { return $country; }
+    if (!$ipdb) {
+    return $country;
+    }
 
     // Jump to record $idx
     fseek($ipdb, ($idx[0] ? (($idx[0] - 1) * 24) : 0));
@@ -158,7 +164,9 @@ function i2c_search_in_db($ip, $idx)
         $record = fread($ipdb, 24);
 
         // Unable to read the record => error
-        if (strlen($record) != 24) { $country = "NA"; break; }
+        if (strlen($record) != 24) {
+        $country = "NA"; break;
+        }
 
         // Split the record to it's parts
         $range_start = (float) substr($record, 0, 10);
@@ -203,7 +211,9 @@ function i2c_realip()
 
         // Put the IP's into an array which we shall work with shortly.
         $ips = explode (", ", $_SERVER['HTTP_X_FORWARDED_FOR']);
-        if ($ip) { array_unshift($ips, $ip); $ip = false; }
+        if ($ip) {
+        array_unshift($ips, $ip); $ip = false;
+        }
 
         for ($i = 0; $i < count($ips); $i++) {
             // Skip RFC 1918 IP's 10.0.0.0/8, 172.16.0.0/12 and

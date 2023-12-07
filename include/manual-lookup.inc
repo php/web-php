@@ -14,27 +14,35 @@ function tryprefix($lang, $keyword, $prefix)
 
     // Try the keyword with the prefix
     $try = "/manual/{$lang}/{$prefix}{$keyword}.php";
-    if (@file_exists($_SERVER['DOCUMENT_ROOT'] . $try)) { return $try; }
+    if (@file_exists($_SERVER['DOCUMENT_ROOT'] . $try)) {
+    return $try;
+    }
 
     // Drop out spaces, and try that keyword (if different)
     $nosp = str_replace(" ", "", $keyword);
     if ($nosp != $keyword) {
         $try = "/manual/{$lang}/{$prefix}{$nosp}.php";
-        if (@file_exists($_SERVER['DOCUMENT_ROOT'] . $try)) { return $try; }
+        if (@file_exists($_SERVER['DOCUMENT_ROOT'] . $try)) {
+        return $try;
+        }
     }
 
     // Replace spaces with hyphens, and try that (if different)
     $dasp = str_replace(" ", "-", $keyword);
     if ($dasp != $keyword) {
         $try = "/manual/{$lang}/{$prefix}{$dasp}.php";
-        if (@file_exists($_SERVER['DOCUMENT_ROOT'] . $try)) { return $try; }
+        if (@file_exists($_SERVER['DOCUMENT_ROOT'] . $try)) {
+        return $try;
+        }
     }
 
     // Remove hyphens (and underscores), and try that (if different)
     $noul = str_replace("-", "", $keyword);
     if ($noul != $keyword) {
         $try = "/manual/{$lang}/{$prefix}{$noul}.php";
-        if (@file_exists($_SERVER['DOCUMENT_ROOT'] . $try)) { return $try; }
+        if (@file_exists($_SERVER['DOCUMENT_ROOT'] . $try)) {
+        return $try;
+        }
     }
 
     // urldecode() (%5C == \) Replace namespace sperators, and try that (if different)
@@ -42,7 +50,9 @@ function tryprefix($lang, $keyword, $prefix)
     $noul = str_replace("\\", "-", $keyword);
     if ($noul != $keyword) {
         $try = "/manual/{$lang}/{$prefix}{$noul}.php";
-        if (@file_exists($_SERVER['DOCUMENT_ROOT'] . $try)) { return $try; }
+        if (@file_exists($_SERVER['DOCUMENT_ROOT'] . $try)) {
+        return $try;
+        }
     }
 
     // Replace first - with a dot and try that (for mysqli_ type entries)
@@ -53,7 +63,9 @@ function tryprefix($lang, $keyword, $prefix)
             $keyword[$pos] = '.';
 
             $try = "/manual/{$lang}/{$prefix}{$keyword}.php";
-            if (@file_exists($_SERVER['DOCUMENT_ROOT'] . $try)) { return $try; }
+            if (@file_exists($_SERVER['DOCUMENT_ROOT'] . $try)) {
+            return $try;
+            }
         }
     }
 
@@ -75,7 +87,9 @@ function find_manual_page_slow($lang, $keyword)
     // Try to find a manual page with the specified prefix
     foreach ($sections as $section) {
         $found = tryprefix($lang, $keyword, $section);
-        if ($found) { return $found; }
+        if ($found) {
+        return $found;
+        }
     }
 
     // Fall back to English, if the language was not English,
@@ -83,7 +97,9 @@ function find_manual_page_slow($lang, $keyword)
     if ($lang != "en") {
         foreach ($sections as $section) {
             $found = tryprefix("en", $keyword, $section);
-            if ($found) { return $found; }
+            if ($found) {
+            return $found;
+            }
         }
     }
 

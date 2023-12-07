@@ -43,7 +43,8 @@ $BRANCHES = [
  * page. (Currently 28 days.) */
 $KEEP_EOL = new DateInterval('P28D');
 
-function format_interval($from, DateTime $to) {
+function format_interval($from, DateTime $to)
+{
     try {
         $from_obj = $from instanceof DateTime ? $from : new DateTime($from);
         $diff = $to->diff($from_obj);
@@ -85,7 +86,8 @@ function format_interval($from, DateTime $to) {
     return $eolPeriod;
 }
 
-function version_number_to_branch(string $version): ?string {
+function version_number_to_branch(string $version): ?string
+{
     $parts = explode('.', $version);
     if (count($parts) > 1) {
         return "$parts[0].$parts[1]";
@@ -94,7 +96,8 @@ function version_number_to_branch(string $version): ?string {
     return null;
 }
 
-function get_all_branches() {
+function get_all_branches()
+{
     $branches = [];
 
     foreach ($GLOBALS['OLDRELEASES'] as $major => $releases) {
@@ -131,7 +134,8 @@ function get_all_branches() {
     return $branches;
 }
 
-function get_active_branches($include_recent_eols = true) {
+function get_active_branches($include_recent_eols = true)
+{
     $branches = [];
     $now = new DateTime();
 
@@ -166,7 +170,8 @@ function get_active_branches($include_recent_eols = true) {
 /* If you provide an array to $always_include, note that the version numbers
  * must be in $RELEASES _and_ must be the full version number, not the branch:
  * ie provide array('5.3.29'), not array('5.3'). */
-function get_eol_branches($always_include = null) {
+function get_eol_branches($always_include = null)
+{
     $always_include = $always_include ?: [];
     $branches = [];
     $now = new DateTime();
@@ -242,7 +247,8 @@ function get_eol_branches($always_include = null) {
  * MAJOR.MINOR.REVISION (the REVISION will be ignored if provided). This will
  * return either null (if no release exists on the given branch), or the usual
  * version metadata from $RELEASES for a single release. */
-function get_initial_release($branch) {
+function get_initial_release($branch)
+{
     $branch = version_number_to_branch($branch);
     if (!$branch) {
         return null;
@@ -266,7 +272,8 @@ function get_initial_release($branch) {
     return null;
 }
 
-function get_final_release($branch) {
+function get_final_release($branch)
+{
     $branch = version_number_to_branch($branch);
     if (!$branch) {
         return null;
@@ -333,7 +340,8 @@ function get_branch_release_date($branch): ?DateTime
     return $initial ? new DateTime($initial['date']) : null;
 }
 
-function get_branch_support_state($branch) {
+function get_branch_support_state($branch)
+{
     $initial = get_branch_release_date($branch);
     $bug = get_branch_bug_eol_date($branch);
     $security = get_branch_security_eol_date($branch);
@@ -394,7 +402,8 @@ function version_array(string $version, ?int $length = null)
     return $versionArray;
 }
 
-function get_current_release_for_branch(int $major, ?int $minor): ?string {
+function get_current_release_for_branch(int $major, ?int $minor): ?string
+{
     global $RELEASES, $OLDRELEASES;
 
     $prefix = "{$major}.";

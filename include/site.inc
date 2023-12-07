@@ -39,7 +39,9 @@ include __DIR__ . '/languages.inc';
 function is_primary_site($site = false)
 {
     global $MYSITE;
-    if (!$site) { $site = $MYSITE; }
+    if (!$site) {
+    $site = $MYSITE;
+    }
     return ($site == "https://www.php.net/" );
 }
 
@@ -55,7 +57,9 @@ function is_official_mirror($site = false)
 function default_language($site = false)
 {
     global $MIRRORS, $MYSITE;
-    if (!$site) { $site = $MYSITE; }
+    if (!$site) {
+    $site = $MYSITE;
+    }
     return (isset($MIRRORS[$site]) ? $MIRRORS[$site][6] : false);
 }
 
@@ -64,7 +68,9 @@ function default_language($site = false)
 function have_search($site = false)
 {
     global $MIRRORS, $MYSITE;
-    if (!$site) { $site = $MYSITE; }
+    if (!$site) {
+    $site = $MYSITE;
+    }
     return (isset($MIRRORS[$site]) ? $MIRRORS[$site][5] : false);
 }
 
@@ -73,7 +79,9 @@ function have_search($site = false)
 function mirror_provider($site = false)
 {
     global $MIRRORS, $MYSITE;
-    if (!$site) { $site = $MYSITE; }
+    if (!$site) {
+    $site = $MYSITE;
+    }
 
     if (isset($MIRRORS[$site])) {
        return $MIRRORS[$site][1];
@@ -91,7 +99,9 @@ function mirror_provider($site = false)
 function mirror_provider_url($site = false)
 {
     global $MIRRORS,$MYSITE;
-    if (!$site) { $site = $MYSITE; }
+    if (!$site) {
+    $site = $MYSITE;
+    }
 
     if (isset($MIRRORS[$site])) {
         return $MIRRORS[$site][3];
@@ -109,7 +119,9 @@ function mirror_provider_url($site = false)
 function mirror_type($site = false)
 {
     global $MIRRORS, $MYSITE;
-    if (!$site) { $site = $MYSITE; }
+    if (!$site) {
+    $site = $MYSITE;
+    }
 
     if (isset($MIRRORS[$site])) {
         return $MIRRORS[$site][4];
@@ -170,7 +182,8 @@ function header_nocache(): void
     }
 }
 
-function get_available_sqlites() {
+function get_available_sqlites()
+{
 
     $allsqlites = [1 => 'sqlite', 2 => 'sqlite3', 4 => 'pdo_sqlite', 8 => 'pdo_sqlite2'];
     $avail = 0;
@@ -197,7 +210,8 @@ function get_available_sqlites() {
 }
 
 // Get all manual prefix search sections
-function get_manual_search_sections() {
+function get_manual_search_sections()
+{
     return [
         "", "book.", "ref.", "function.", "class.",
         "features.", "control-structures.", "language.",
@@ -205,7 +219,8 @@ function get_manual_search_sections() {
     ];
 }
 
-function get_shortname($page) {
+function get_shortname($page)
+{
     // We can at the very least kill the .php
     $shorturl = substr($page, 0, -4);
 
@@ -285,4 +300,6 @@ if (!isset($LANGUAGES[$MIRRORS[$MYSITE][6]])) {
 // shortcut URL accessed pages work without redirection
 if (isset($_SERVER['BASE_PAGE'])) {
     $_SERVER['BASE_HREF'] = $MYSITE . $_SERVER['BASE_PAGE'];
-} else { unset($_SERVER['BASE_HREF']); }
+} else {
+unset($_SERVER['BASE_HREF']);
+}

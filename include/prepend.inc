@@ -143,10 +143,13 @@ function myphpnet_urlsearch($type = false)
     // Return code or NONE
     elseif (isset($MYPHPNET[1]) && !empty($MYPHPNET[1])) {
         return $MYPHPNET[1];
-    } else { return MYPHPNET_URL_NONE; }
+    } else {
+    return MYPHPNET_URL_NONE;
+    }
 }
 
-function myphpnet_showug($enable = null) {
+function myphpnet_showug($enable = null)
+{
     global $MYPHPNET;
 
     if (isset($_GET["showug"])) {
@@ -175,7 +178,9 @@ function myphpnet_save(): void
 
     // Fill in values not specified
     for ($i = 0; $i <= 3; $i++) {
-        if (!isset($MYPHPNET[$i])) { $MYPHPNET[$i] = false; }
+        if (!isset($MYPHPNET[$i])) {
+        $MYPHPNET[$i] = false;
+        }
     }
 
     // Set all the preferred values for a year
@@ -183,7 +188,8 @@ function myphpnet_save(): void
 
 }
 
-function google_cse(): void {
+function google_cse(): void
+{
 ?>
 <noscript>
   php.net's search functionality requires JavaScript to operate. Please enable

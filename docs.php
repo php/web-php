@@ -34,12 +34,16 @@ foreach ($ACTIVE_ONLINE_LANGUAGES as $langcode => $langname) {
     }
 
     // Make preferred language bold
-    if ($langcode == $LANG) { echo "<strong>"; }
+    if ($langcode == $LANG) {
+    echo "<strong>";
+    }
 
     echo '<a href="/manual/' . $langcode . '/">' . $langname . '</a>';
     echo ($lastlang != $langname) ? ",\n" : "\n";
 
-    if ($langcode == $LANG) { echo "</strong>"; }
+    if ($langcode == $LANG) {
+    echo "</strong>";
+    }
 }
 
 ?>

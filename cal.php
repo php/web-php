@@ -86,8 +86,12 @@ if ($cm && $cy && !checkdate($cm,1,$cy)) {
 }
 
 // Give defaults for the month and day values if they were invalid
-if (empty($cm)) { $cm = date("m"); }
-if (empty($cy)) { $cy = date("Y"); }
+if (empty($cm)) {
+$cm = date("m");
+}
+if (empty($cy)) {
+$cy = date("Y");
+}
 
 // Start of the month date
 $date = mktime(0, 0, 1, $cm, 1, $cy);
@@ -257,7 +261,9 @@ function load_event($id)
 {
     // Open events CSV file, return on error
     $fp = @fopen("backend/events.csv",'r');
-    if (!$fp) { return false; }
+    if (!$fp) {
+    return false;
+    }
 
     // Read as we can, event by event
     while (!feof($fp)) {
@@ -292,7 +298,9 @@ function load_events($from, $whole_month = false)
 
     // Try to open the events file for reading, return if unable to
     $fp = @fopen("backend/events.csv",'r');
-    if (!$fp) { return false; }
+    if (!$fp) {
+    return false;
+    }
 
     // For all events, read in the event and check it if fits our scope
     while (!feof($fp)) {
@@ -305,8 +313,12 @@ function load_events($from, $whole_month = false)
 
         // Keep event's seen list up to date
         // (for repeating events with the same ID)
-        if (!isset($seen[$event['id']])) { $seen[$event['id']] = 1; }
-        else { continue; }
+        if (!isset($seen[$event['id']])) {
+        $seen[$event['id']] = 1;
+        }
+        else {
+        continue;
+        }
 
         // Check if event is in our scope, depending on type
         switch ($event['type']) {
@@ -350,7 +362,9 @@ function read_event($fp)
     }
 
     // Corrupt line in CSV file
-    if (count($linearr) < 13) { return false; }
+    if (count($linearr) < 13) {
+    return false;
+    }
 
     // Get components
     [

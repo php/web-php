@@ -89,7 +89,9 @@ if (!isset($config["languages"])) {
  <base href="<?php echo $_SERVER["BASE_HREF"] ?>">
 <?php endif ?>
 
-<?php if (isset($config['meta_tags'])) { echo $config['meta_tags']; } ?>
+<?php if (isset($config['meta_tags'])) {
+echo $config['meta_tags'];
+} ?>
 
 </head>
 <body class="<?php echo $curr; ?> <?php echo $classes; ?>">

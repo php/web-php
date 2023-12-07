@@ -76,7 +76,8 @@ function error_noservice(): void
 }
 
 // There is no such mirror
-function error_nomirror($mirror): void {
+function error_nomirror($mirror): void
+{
     site_header("No such mirror", ["noindex"]);
     echo "<h1>No such mirror</h1>\n<p>The mirror you tried to access (" .
          htmlspecialchars($mirror) .
@@ -123,7 +124,8 @@ The most commonly searched terms have also been added.
 TODO: Determine if we want to continue 301 -OR- make these official URLs.
 ******************************************************************************/
 
-function is_known_ini(string $ini): ?string {
+function is_known_ini(string $ini): ?string
+{
     $inis = [
         'engine' => 'apache.configuration.php#ini.engine',
         'short-open-tag' => 'ini.core.php#ini.short-open-tag',
@@ -338,7 +340,8 @@ function is_known_ini(string $ini): ?string {
     return $inis[$ini] ?? null;
 }
 
-function is_known_variable(string $variable): ?string {
+function is_known_variable(string $variable): ?string
+{
     $variables = [
         // Variables
         'globals' => 'reserved.variables.globals.php',
@@ -366,7 +369,8 @@ function is_known_variable(string $variable): ?string {
     return $variables[ltrim($variable, '$')] ?? null;
 }
 
-function is_known_term(string $term): ?string {
+function is_known_term(string $term): ?string
+{
     $terms = [
         '<>' => 'language.operators.comparison.php',
         '<=>' => 'language.operators.comparison.php',
@@ -540,7 +544,8 @@ Search snippet provider: A dirty proof-of-concept:
     It should also take into account vague searches, such as 'global' and 'str'. The search works well enough for,
     most terms, so something like $_SERVER isn't really needed but it's defined below anyways...
 */
-function is_known_snippet(string $term): ?string {
+function is_known_snippet(string $term): ?string
+{
     $snippets = [
         'global' => '
 		The <b>global</b> keyword is used to manipulate <a href="/language.variables.scope">variable scope</a>, and

@@ -165,7 +165,8 @@ site_footer(['sidebar' =>
 </div>
 ', ]);
 
-function recentEOLBranchesHTML(): string {
+function recentEOLBranchesHTML(): string
+{
     $eol = [];
     foreach (get_eol_branches() as $branches) {
         foreach ($branches as $branch => $detail) {
@@ -187,7 +188,8 @@ function mk_rel(int $major,
                 $announcement,
                 array $source,
                 array $windows,
-                bool $museum): void {
+                bool $museum): void
+{
     printf("<a id=\"%s\"></a>\n<h2>%1\$s</h2>\n<ul>\n <li>Released: %s</li>\n <li>Announcement: ",
            ($pos = strpos($ver, " ")) ? substr($ver, 0, $pos) : $ver,
            $date);

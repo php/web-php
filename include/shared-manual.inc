@@ -32,7 +32,8 @@ use phpweb\UserNotes\UserNote;
  *
  * @param array<string, UserNote> $notes
  */
-function manual_notes($notes):void {
+function manual_notes($notes):void
+{
     // Get needed values
     list($filename) = $GLOBALS['PGI']['this'];
 
@@ -102,7 +103,9 @@ function manual_notes_load(string $id): array
     if ($fp = @fopen($notes_file, "r")) {
         while (!feof($fp)) {
             $line = chop(fgets($fp, 12288));
-            if ($line == "") { continue; }
+            if ($line == "") {
+            continue;
+            }
             @list($id, $sect, $rate, $ts, $user, $note, $up, $down) = explode("|", $line);
             $notes[$id] = new UserNote($id, $sect, $rate, $ts, $user, base64_decode($note, true), (int) $up, (int) $down);
         }
@@ -197,7 +200,8 @@ USER_NOTE_TEXT;
 
 }
 
-function manual_navigation_breadcrumbs(array $setup) {
+function manual_navigation_breadcrumbs(array $setup)
+{
     $menu = [];
     foreach (array_reverse($setup["parents"]) as $parent) {
         $menu[] = [
@@ -217,7 +221,8 @@ function manual_navigation_breadcrumbs(array $setup) {
     return $menu;
 }
 
-function manual_navigation_related(array $setup) {
+function manual_navigation_related(array $setup)
+{
     $siblings = [];
     foreach ($setup['toc'] as $entry) {
         $siblings[] = [
@@ -238,7 +243,8 @@ function manual_navigation_related(array $setup) {
     return $siblings;
 }
 
-function manual_navigation_deprecated(array $setup) {
+function manual_navigation_deprecated(array $setup)
+{
     $methods = [];
     foreach ((array)$setup['toc_deprecated'] as $entry) {
         $methods[] = [
@@ -251,7 +257,8 @@ function manual_navigation_deprecated(array $setup) {
     return $methods;
 }
 
-function manual_navigation_methodname($methodname) {
+function manual_navigation_methodname($methodname)
+{
     // We strip out any class prefix here, we only want method names
     if (strpos($methodname, '::') !== false && strpos($methodname, ' ') === false) {
         $tmp = explode('::', $methodname);
@@ -264,7 +271,8 @@ function manual_navigation_methodname($methodname) {
 
 // Set up variables important for this page
 // including HTTP header information
-function manual_setup($setup): void {
+function manual_setup($setup): void
+{
     global $PGI, $MYSITE, $USERNOTES;
     global $ACTIVE_ONLINE_LANGUAGES;
 
@@ -351,7 +359,8 @@ function manual_setup($setup): void {
 PAGE_TOOLS;
 }
 
-function manual_language_chooser($currentlang, $currentpage) {
+function manual_language_chooser($currentlang, $currentpage)
+{
     global $ACTIVE_ONLINE_LANGUAGES;
 
     // Prepare the form with all the options
@@ -381,7 +390,8 @@ CHANGE_LANG;
     return trim($r);
 }
 
-function manual_footer(): void {
+function manual_footer(): void
+{
     global $USERNOTES, $__RELATED;
 
     manual_notes($USERNOTES);
@@ -392,7 +402,8 @@ function manual_footer(): void {
 }
 
 // This function takes a DateTime object and returns a formated string of the time difference relative to now
-function relTime(DateTime $date) {
+function relTime(DateTime $date)
+{
     $current = new DateTime();
     $diff = $current->diff($date);
     $units = ["year" => $diff->format("%y"),

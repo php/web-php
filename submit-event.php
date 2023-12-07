@@ -148,7 +148,9 @@ else {
 }
 
 // Display errors if found
-if (count($errors)) { display_errors($errors); }
+if (count($errors)) {
+display_errors($errors);
+}
 
 // Generate days and months arrays for form
 for ($i = 1; $i <= 7; $i++) {

@@ -10,7 +10,8 @@ $year_width = 120;
 $branch_height = 30;
 $footer_height = 24;
 
-function branches_to_show() {
+function branches_to_show()
+{
     // Basically: show all 5.3+ branches with EOL dates > min_date().
     $branches = [];
 
@@ -39,7 +40,8 @@ function max_date(): DateTime
     return $now->add(new DateInterval('P5Y'));
 }
 
-function date_horiz_coord(DateTime $date) {
+function date_horiz_coord(DateTime $date)
+{
     $diff = $date->diff(min_date());
     if (!$diff->invert) {
         return $GLOBALS['margin_left'];

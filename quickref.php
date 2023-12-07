@@ -57,7 +57,9 @@ $p = 0;
 while (($entry = readdir($dirh)) !== false) {
 
     // Skip names starting with a dot
-    if (substr($entry, 0, 1) == ".") { continue; }
+    if (substr($entry, 0, 1) == ".") {
+    continue;
+    }
 
     // For function and class pages, get the name out
     if (preg_match('!^(function|class)\.(.+)\.php$!', $entry, $parts)) {
@@ -89,7 +91,9 @@ if (count($temp) > 0) {
     foreach ($temp as $file => $p) {
 
         // Stop, if we found enough matches
-        if (count($maybe) >= 30) { break; }
+        if (count($maybe) >= 30) {
+        break;
+        }
 
         // If the two are more then 70% similar or $notfound is a substring
         // of $funcname, then the match is a very similar one
@@ -105,8 +109,12 @@ if (count($temp) > 0) {
 }
 
 // Do not index page if presented as a search result
-if (count($maybe) > 0) { $head_options = ["noindex"]; }
-else { $head_options = []; }
+if (count($maybe) > 0) {
+$head_options = ["noindex"];
+}
+else {
+$head_options = [];
+}
 
 site_header("Manual Quick Reference", $head_options + ["current" => "help"]);
 

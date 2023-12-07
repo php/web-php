@@ -39,12 +39,14 @@ class Entry
 
     protected $id = '';
 
-    public function setTitle(string $title): self {
+    public function setTitle(string $title): self
+    {
         $this->title = $title;
         return $this;
     }
 
-    public function setCategories(array $cats): self {
+    public function setCategories(array $cats): self
+    {
         foreach ($cats as $cat) {
             if (!isset(self::CATEGORIES[$cat])) {
                 throw new \Exception("Unknown category: $cat");
@@ -54,7 +56,8 @@ class Entry
         return $this;
     }
 
-    public function addCategory(string $cat): self {
+    public function addCategory(string $cat): self
+    {
         if (!isset(self::CATEGORIES[$cat])) {
             throw new \Exception("Unknown category: $cat");
         }
@@ -64,16 +67,19 @@ class Entry
         return $this;
     }
 
-    public function isConference(): bool {
+    public function isConference(): bool
+    {
         return (bool)array_intersect($this->categories, ['cfp', 'conferences']);
     }
 
-    public function setConfTime(int $time): self {
+    public function setConfTime(int $time): self
+    {
         $this->conf_time = $time;
         return $this;
     }
 
-    public function setImage(string $path, string $title, ?string $link): self {
+    public function setImage(string $path, string $title, ?string $link): self
+    {
         if (basename($path) !== $path) {
             throw new \Exception('path must be a simple file name under ' . self::IMAGE_PATH_REL);
         }
@@ -88,7 +94,8 @@ class Entry
         return $this;
     }
 
-    public function setContent(string $content): self {
+    public function setContent(string $content): self
+    {
         if (empty($content)) {
             throw new \Exception('Content must not be empty');
         }
@@ -96,11 +103,13 @@ class Entry
         return $this;
     }
 
-    public function getId(): string {
+    public function getId(): string
+    {
         return $this->id;
     }
 
-    public function save(): self {
+    public function save(): self
+    {
         if (empty($this->id)) {
             $this->id = self::selectNextId();
         }
@@ -160,7 +169,8 @@ class Entry
         return $this;
     }
 
-    public function updateArchiveXML(): self {
+    public function updateArchiveXML(): self
+    {
         if (empty($this->id)) {
             throw new \Exception('Entry must be saved before updating archive XML');
         }
@@ -180,7 +190,8 @@ class Entry
         return $this;
     }
 
-    private static function selectNextId(): string {
+    private static function selectNextId(): string
+    {
         $filename = date("Y-m-d", $_SERVER["REQUEST_TIME"]);
         $count = 0;
         do {
@@ -192,7 +203,8 @@ class Entry
         return $id;
     }
 
-    private static function ce(\DOMDocument $d, string $name, $value, array $attrs = [], ?\DOMNode $to = null) {
+    private static function ce(\DOMDocument $d, string $name, $value, array $attrs = [], ?\DOMNode $to = null)
+    {
         if ($value) {
             $n = $d->createElement($name, $value);
         } else {

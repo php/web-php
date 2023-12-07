@@ -3,27 +3,33 @@
 
 const NUMS = ['zero', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine'];
 
-function plus($a, $b) {
+function plus($a, $b)
+{
     return $a + $b;
 }
 
-function gen_plus($a) {
+function gen_plus($a)
+{
     return mt_rand(0, 9 - $a);
 }
 
-function minus($a, $b) {
+function minus($a, $b)
+{
     return $a - $b;
 }
 
-function gen_minus($a) {
+function gen_minus($a)
+{
     return mt_rand(0, $a);
 }
 
-function print_infix($name, $a, $b) {
+function print_infix($name, $a, $b)
+{
     return "$a $name $b";
 }
 
-function print_prefix($name, $a, $b) {
+function print_prefix($name, $a, $b)
+{
     return "$name($a, $b)";
 }
 
@@ -36,7 +42,8 @@ const CHALLENGES = [
 ];
 
 // generate a challenge
-function gen_challenge() {
+function gen_challenge()
+{
     $c = CHALLENGES[mt_rand(0, count(CHALLENGES) - 1)];
 
     $a = mt_rand(0, 9);
@@ -48,7 +55,8 @@ function gen_challenge() {
 }
 
 // test an answer for validity
-function test_answer($name, $an, $bn, $answer) {
+function test_answer($name, $an, $bn, $answer)
+{
     foreach (CHALLENGES as $x) {
         if ($x[0] === $name) {
             $c = $x;

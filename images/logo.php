@@ -19,7 +19,8 @@ if (isset($_SERVER['HTTP_IF_MODIFIED_SINCE'])) {
     }
 }
 
-function imgheader($filename) {
+function imgheader($filename)
+{
     $ext = strtolower(pathinfo($filename, PATHINFO_EXTENSION));
     switch ($ext) {
         case 'gif':
@@ -41,7 +42,8 @@ function imgheader($filename) {
     header("Content-Type: $hdr");
 }
 
-function get_accepted_encodings() {
+function get_accepted_encodings()
+{
     if (isset($_SERVER['HTTP_ACCEPT_ENCODING'])) {
         $encodings = explode(',', $_SERVER['HTTP_ACCEPT_ENCODING']);
         return array_map(function ($x) {
@@ -51,7 +53,8 @@ function get_accepted_encodings() {
     return [];
 }
 
-function serve_compressed_if_available($logo): void {
+function serve_compressed_if_available($logo): void
+{
     $encodings = get_accepted_encodings();
     if (!empty($encodings)) {
         foreach ($encodings as $encoding) {

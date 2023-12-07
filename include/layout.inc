@@ -30,7 +30,9 @@ function highlight_php($code, $return = false)
         ],
     ) . '</div>';
 
-    if ($return) { return $highlighted; }
+    if ($return) {
+    return $highlighted;
+    }
     echo $highlighted;
     return null;
 }
@@ -42,16 +44,24 @@ function highlight_php_trimmed($code, $return = false)
     $highlighted_code = highlight_php($code, true);
     $highlighted_code = preg_replace("!&lt;\?php(<br />)+!", '', $highlighted_code, 1);
 
-    if ($return) { return $highlighted_code; }
+    if ($return) {
+    return $highlighted_code;
+    }
     echo $highlighted_code;
     return null;
 }
 
 // Stats pages still need this
-function commonHeader($title): void { site_header($title); }
+function commonHeader($title): void
+{
+site_header($title);
+}
 
 // Stats pages still need this
-function commonFooter(): void { site_footer(); }
+function commonFooter(): void
+{
+site_footer();
+}
 
 // Resize the image using the output of make_image()
 function resize_image($img, $width = 1, $height = 1)
@@ -148,7 +158,8 @@ function make_link(string $url, string $linktext = ''): string
 // make_popup_link()
 // return a hyperlink to something, within the site, that pops up a new window
 //
-function make_popup_link($url, $linktext = false, $target = false, $windowprops = "", $extras = false) {
+function make_popup_link($url, $linktext = false, $target = false, $windowprops = "", $extras = false)
+{
     return sprintf("<a href=\"%s\" target=\"%s\" onclick=\"window.open('%s','%s','%s');return false;\"%s>%s</a>",
         htmlspecialchars($url, ENT_QUOTES | ENT_IGNORE),
         ($target ?: "_new"),
@@ -163,7 +174,8 @@ function make_popup_link($url, $linktext = false, $target = false, $windowprops 
 // print_popup_link()
 // print a hyperlink to something, within the site, that pops up a new window
 //
-function print_popup_link($url, $linktext = false, $windowprops = "", $target = false, $extras = false): void {
+function print_popup_link($url, $linktext = false, $windowprops = "", $target = false, $extras = false): void
+{
     echo make_popup_link($url, $linktext, $windowprops, $target, $extras);
 }
 
@@ -204,7 +216,8 @@ function download_link($file, $title): void
     }
 }
 
-function sect_to_file($string) {
+function sect_to_file($string)
+{
     $string = strtolower($string);
     $string = str_replace([' ', '_'], '-', $string);
     $func = "function.$string.php";
@@ -218,7 +231,8 @@ function sect_to_file($string) {
     else return "$string.php";
 }
 
-function clean($var) {
+function clean($var)
+{
   return htmlspecialchars($var, ENT_QUOTES);
 }
 
@@ -300,11 +314,15 @@ function display_event($event, $include_date = 1): void
     }
 
     // Print link in case we have one
-    if ($event['url']) { echo '<a href="', htmlentities($event['url'], ENT_QUOTES | ENT_IGNORE, 'UTF-8'),'" class="url">'; }
+    if ($event['url']) {
+    echo '<a href="', htmlentities($event['url'], ENT_QUOTES | ENT_IGNORE, 'UTF-8'),'" class="url">';
+    }
     // Print event description
     echo "<b class='summary'>", stripslashes(htmlentities($event['sdesc'], ENT_QUOTES | ENT_IGNORE, 'UTF-8')), "</b>";
     // End link
-    if ($event['url']) { echo "</a>"; }
+    if ($event['url']) {
+    echo "</a>";
+    }
 
     // Print extra date info for recurring and multiday events
     switch ($event['type']) {
@@ -369,7 +387,8 @@ function news_archive_sidebar(): void
 }
 
 // Print news
-function print_news($news, $dog, $max = 5, $onlyyear = null, $return = false) {
+function print_news($news, $dog, $max = 5, $onlyyear = null, $return = false)
+{
     $retval = [];
     $count = 0;
     $news = $news ?: []; // default to empty array (if no news)
@@ -511,7 +530,8 @@ function get_news_changes()
     return false;
 }
 
-function news_toc($sections = null): void {
+function news_toc($sections = null): void
+{
     include __DIR__ . "/pregen-news.inc";
     $items = [
         "news" => [
@@ -544,7 +564,8 @@ function news_toc($sections = null): void {
         }
     }
 }
-function doc_toc($lang): void {
+function doc_toc($lang): void
+{
     $file = __DIR__ . "/../manual/$lang/toc/index.inc";
     if (!file_exists($file)) {
         $lang = "en"; // Fallback on english if the translation doesn't exist
@@ -591,7 +612,8 @@ function doc_toc($lang): void {
     echo "</dl>";
 
 }
-function doc_toc_list($lang, $index, $file): void {
+function doc_toc_list($lang, $index, $file): void
+{
     include __DIR__ . "/../manual/$lang/toc/$file.inc";
 
     doc_toc_title($lang, $index, $file);
@@ -599,7 +621,8 @@ function doc_toc_list($lang, $index, $file): void {
         echo "\t<dd><a href='/manual/$lang/{$entry[0]}'>{$entry[1]}</a></dd>\n";
     }
 }
-function doc_toc_title($lang, $index, $file, $elm = "dt"): void {
+function doc_toc_title($lang, $index, $file, $elm = "dt"): void
+{
     foreach ($index as $entry) {
         if ($entry[0] == "$file.php") {
             $link = $entry[0];

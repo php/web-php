@@ -8,7 +8,8 @@ header('Content-Type: application/json; charset=UTF-8');
 
 $states = [];
 
-function formatDate($date = null) {
+function formatDate($date = null)
+{
     return $date !== null ? $date->format('c') : null;
 }
 

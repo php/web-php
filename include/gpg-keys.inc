@@ -3,7 +3,8 @@ require __DIR__ . '/branches.inc';
 
 // GPG keys used for signing releases.
 
-function gpg_key_get(string $rm): ?string {
+function gpg_key_get(string $rm): ?string
+{
     switch ($rm) {
         case 'ab':
             return
@@ -161,7 +162,8 @@ function gpg_key_get(string $rm): ?string {
     }
 }
 
-function gpg_key_get_branches(bool $activeOnly): array {
+function gpg_key_get_branches(bool $activeOnly): array
+{
     $branches = [
         '8.3' => ['pierrick', 'ericmann', 'bukka'],
         '8.2' => ['pierrick', 'ramsey', 'sergey'],
@@ -178,7 +180,9 @@ function gpg_key_get_branches(bool $activeOnly): array {
         '5.3' => ['dsp', 'johannes'],
     ];
 
-    if (!$activeOnly) { return $branches; }
+    if (!$activeOnly) {
+    return $branches;
+    }
 
     $active = get_active_branches();
     return array_filter($branches, function ($branch) use ($active) {
@@ -187,12 +191,15 @@ function gpg_key_get_branches(bool $activeOnly): array {
     }, ARRAY_FILTER_USE_KEY);
 }
 
-function gpg_key_show_keys(bool $activeOnly): void {
+function gpg_key_show_keys(bool $activeOnly): void
+{
     foreach (gpg_key_get_branches($activeOnly) as $branch => $rms) {
         $keys = array_filter(
             array_map(function ($rm) { return gpg_key_get($rm); }, $rms),
             function ($key) { return $key !== null; });
-        if (empty($keys)) { continue; }
+        if (empty($keys)) {
+        continue;
+        }
 
         $branch = htmlentities($branch, ENT_QUOTES, 'UTF-8');
         $keys = htmlentities(implode("\n\n", $keys), ENT_QUOTES, 'UTF-8');
