@@ -24,6 +24,7 @@ $config
         'array_syntax' => true,
         'binary_operator_spaces' => true,
         'blank_line_after_namespace' => true,
+        'braces_position' => true,
         'class_attributes_separation' => true,
         'class_definition' => true,
         'concat_space' => [
