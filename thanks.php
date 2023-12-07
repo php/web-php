@@ -267,12 +267,12 @@ site_header("Thanks", ["current" => "community"]);
 <ul>
     <?php
     $last_country = '';
-    foreach ($historical_mirrors as $m) {
-        ?>
+foreach ($historical_mirrors as $m) {
+    ?>
         <li><?php echo $COUNTRIES[$m[0]]; ?>: <a href='<?php echo $m[3]; ?>'><?php echo $m[2]; ?></a></li>
         <?php
-    }
-    ?>
+}
+?>
 </ul>
 
 <p>PHP.net is very grateful for all their support.</p>

@@ -184,7 +184,7 @@ function myphpnet_save(): void
 }
 
 function google_cse(): void {
-?>
+    ?>
 <noscript>
   php.net's search functionality requires JavaScript to operate. Please enable
   JavaScript and reload to continue.

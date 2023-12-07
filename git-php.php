@@ -99,7 +99,7 @@ if (count($_POST) && (!isset($_POST['purpose']) || !is_array($_POST['purpose']) 
         echo "<div class=\"warning\"><p>$error</p></div>";
     }
     else {
-?>
+        ?>
 <p>
  Thank you. Your request has been sent. You should hear something within the
  next week or so. If you haven't heard anything by around <?php echo date('l, F jS', time() + 604800); ?>
@@ -152,7 +152,7 @@ if (count($_POST) && (!isset($_POST['purpose']) || !is_array($_POST['purpose']) 
 </p>
 
 <?php
-        site_footer();
+                site_footer();
         exit;
     } // endif: no error found
 } // endif: no data or checkread not checked
@@ -168,7 +168,7 @@ else {
 </div>
 EOT;
     }
-?>
+    ?>
 
 <div class="content-box">
 <p>
@@ -399,8 +399,8 @@ foreach ($purposes as $i => $p) { ?>
   <select name="group">
 <?php
 foreach ($groups as $group => $name) {
-  $selected = (isset($_POST["group"]) && $_POST["group"] == $group) ? ' selected="selected"' : '';
-  echo "<option value='$group'$selected>$name</option>\n";
+    $selected = (isset($_POST["group"]) && $_POST["group"] == $group) ? ' selected="selected"' : '';
+    echo "<option value='$group'$selected>$name</option>\n";
 }
 ?>
   </select>

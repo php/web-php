@@ -92,7 +92,7 @@ $filepath = $filename = '';
 // Go through all possible manual languages
 foreach ($LANGUAGES as $langcode => $language) {
     if (isset($INACTIVE_ONLINE_LANGUAGES[$langcode]) && $MYSITE !== 'http://docs.php.net/') {
-       continue;
+        continue;
     }
 
     // Go through all possible manual formats

@@ -93,7 +93,7 @@ if (isset($_POST['action'])) {
     if (!empty($error)) {
         echo "<p class=\"formerror\">$error</p>";
     } else {
-?>
+        ?>
 <p>
  A request has been entered into the mailing list processing queue. You
  should receive an email at <?php echo clean($_POST['email']); ?> shortly describing
@@ -237,71 +237,71 @@ if (isset($_POST['action'])) {
 
   ];
 
-  // array of lists (list, name, short desc., moderated, archive, digest, newsgroup)
-  $internals_mailing_lists = [
+// array of lists (list, name, short desc., moderated, archive, digest, newsgroup)
+$internals_mailing_lists = [
 
-      'PHP and Zend Engine internals lists',
-      [
-          'internals', 'Internals list',
-          'A medium volume list for those who want to help out with the development of PHP',
-          false, 'php-internals', true, "php.internals",
-      ],
-      [
-          'internals-win', 'Windows Internals list',
-          'A low volume list for those who want to help out with the development of PHP on Windows',
-          false, false, true, "php.internals.win",
-      ],
-      [
-          'php-cvs', 'Git commit list',
-          'All commits to internals (php-src) and the Zend Engine are posted to this list automatically',
-          true, true, false, "php.cvs",
-      ],
-      [
-          'git-pulls', 'Git pull requests',
-          'Pull requests from Github',
-          false, false, false, "php.git-pulls",
-      ],
-      [
-          'php-qa', 'Quality Assurance list',
-          'List for the members of the PHP-QA Team',
-          false, true, false, "php.qa",
-      ],
-      [
-          'php-bugs', 'General bugs',
-          'General bug activity are posted here',
-          false, false, false, "php.bugs",
-      ],
-      [
-          'standards', 'PHP Standardization and interoperability list',
-          'Development of language standards',
-          false, false, false, "php.standards",
-      ],
+    'PHP and Zend Engine internals lists',
+    [
+        'internals', 'Internals list',
+        'A medium volume list for those who want to help out with the development of PHP',
+        false, 'php-internals', true, "php.internals",
+    ],
+    [
+        'internals-win', 'Windows Internals list',
+        'A low volume list for those who want to help out with the development of PHP on Windows',
+        false, false, true, "php.internals.win",
+    ],
+    [
+        'php-cvs', 'Git commit list',
+        'All commits to internals (php-src) and the Zend Engine are posted to this list automatically',
+        true, true, false, "php.cvs",
+    ],
+    [
+        'git-pulls', 'Git pull requests',
+        'Pull requests from Github',
+        false, false, false, "php.git-pulls",
+    ],
+    [
+        'php-qa', 'Quality Assurance list',
+        'List for the members of the PHP-QA Team',
+        false, true, false, "php.qa",
+    ],
+    [
+        'php-bugs', 'General bugs',
+        'General bug activity are posted here',
+        false, false, false, "php.bugs",
+    ],
+    [
+        'standards', 'PHP Standardization and interoperability list',
+        'Development of language standards',
+        false, false, false, "php.standards",
+    ],
 
-      'PHP internal website mailing lists',
-      [
-          'php-webmaster', 'PHP php.net internal infrastructure discussion',
-          'List for discussing and maintaining the php.net web infrastructure.<br>
+    'PHP internal website mailing lists',
+    [
+        'php-webmaster', 'PHP php.net internal infrastructure discussion',
+        'List for discussing and maintaining the php.net web infrastructure.<br>
        For general PHP support questions, see "General Mailing Lists" or the <a href="/support.php">support page</a>',
-          false, false, false, "php.webmaster",
-      ],
+        false, false, false, "php.webmaster",
+    ],
 
-      'PHP documentation mailing lists',
-      [
-          'phpdoc', 'Documentation discussion',
-          'List for discussing the PHP documentation',
-          false, true, false, "php.doc",
-      ],
-      [
-          'doc-cvs', 'Documentation changes and commits',
-          'Changes to the documentation are posted here',
-          true, "php-doc-cvs", false, "php.doc.cvs",
-      ],
-      [
-          'doc-bugs', 'Documentation bugs',
-          'Documentation bug activity (translations, sources, and build system) are posted here',
-          true, 'php-doc-bugs', false, "php.doc.bugs",
-      ],
-  ];
+    'PHP documentation mailing lists',
+    [
+        'phpdoc', 'Documentation discussion',
+        'List for discussing the PHP documentation',
+        false, true, false, "php.doc",
+    ],
+    [
+        'doc-cvs', 'Documentation changes and commits',
+        'Changes to the documentation are posted here',
+        true, "php-doc-cvs", false, "php.doc.cvs",
+    ],
+    [
+        'doc-bugs', 'Documentation bugs',
+        'Documentation bug activity (translations, sources, and build system) are posted here',
+        true, 'php-doc-bugs', false, "php.doc.bugs",
+    ],
+];
 
 // Print out a table for a given list array
 function output_lists_table($mailing_lists): void

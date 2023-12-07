@@ -51,11 +51,11 @@ $VERSION_NOTES = [
 			<?php foreach ($releases as $branch => $release): ?>
 				<?php
                 $state = get_branch_support_state($branch);
-                $initial = get_branch_release_date($branch);
-                $until = get_branch_bug_eol_date($branch);
-                $eol = get_branch_security_eol_date($branch);
-                $now = new DateTime('now');
-                ?>
+			    $initial = get_branch_release_date($branch);
+			    $until = get_branch_bug_eol_date($branch);
+			    $eol = get_branch_security_eol_date($branch);
+			    $now = new DateTime('now');
+			    ?>
 				<tr class="<?php echo $state ?>">
 					<td>
 						<a href="/downloads.php#v<?php echo htmlspecialchars($release['version']) ?>"><?php echo htmlspecialchars($branch) ?></a>

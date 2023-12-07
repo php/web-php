@@ -33,7 +33,7 @@ if (!empty($_FORM['pattern'])) {
             mirror_redirect($MYSITE . "results.php?q={$ucp}&p={$_FORM['show']}&l=$LANG");
             break;
 
-        // Covers the rest
+            // Covers the rest
         default:
             $p = urlencode($_FORM['show']);
             mirror_redirect($MYSITE . "results.php?q={$ucp}&l=$LANG&p=$p");

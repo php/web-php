@@ -52,8 +52,8 @@ function i2c_go()
 
     // User already has a country detected with this IP stored
     if (!empty($_COOKIE['COUNTRY']) && strpos($_COOKIE['COUNTRY'], ',') !== false) {
-       list($COUNTRY, $storedip) = explode(",", $_COOKIE['COUNTRY']);
-       if ($storedip == $ipnum) { return true; }
+        list($COUNTRY, $storedip) = explode(",", $_COOKIE['COUNTRY']);
+        if ($storedip == $ipnum) { return true; }
     }
 
     // Convert the IP number to some useable form for searching

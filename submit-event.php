@@ -82,7 +82,7 @@ if ($process) {
     }
 
     if (!checkdate($_POST['smonth'], $_POST['sday'], $_POST['syear'])) {
-      $errors[] = "You must specify a valid start date.";
+        $errors[] = "You must specify a valid start date.";
     }
     else {
         $sdate = mktime(0, 0, 1, $_POST['smonth'], $_POST['sday'], $_POST['syear']);
@@ -231,7 +231,7 @@ if ($process && count($errors) === 0) {
    <select name="category" class="max">
 <?php
         $cat = ["- Select a category -", "User Group Event", 3 => "Training"]; // 2 = conference.. which should be on php.net/conferences instead
-        display_options($cat, $_POST['category']);
+display_options($cat, $_POST['category']);
 ?>
    </select>
   </td>
@@ -269,8 +269,8 @@ function display_options($options, $current): void
 {
     foreach ($options as $k => $v) {
         echo '<option value="', $k, '"',
-             ($k == $current ? ' selected="selected"' : ''),
-             '>', htmlentities($v, ENT_QUOTES | ENT_IGNORE, 'UTF-8'), "</option>\n";
+        ($k == $current ? ' selected="selected"' : ''),
+        '>', htmlentities($v, ENT_QUOTES | ENT_IGNORE, 'UTF-8'), "</option>\n";
     }
 }
 

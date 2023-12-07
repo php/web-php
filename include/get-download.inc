@@ -31,7 +31,7 @@ echo '<div id="mirrors-container">';
 $size = 0;
 // No downloadable file found
 if ($file === false) {
-        $info = "<p>
+    $info = "<p>
  The file you requested (<strong>" . htmlspecialchars($df, ENT_QUOTES, "UTF-8") . "</strong>) is not found on
  this server (<strong>{$MYSITE}</strong>).</p>";
 

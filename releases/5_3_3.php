@@ -31,7 +31,7 @@ class Bar {
     }
 }
 ?>');
-    ?></p>
+?></p>
 	<p>There is no impact on migration from 5.2.x because namespaces were only introduced in PHP 5.3.</p></li>
 </ul>
 <p>

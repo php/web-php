@@ -52,7 +52,7 @@ function format_interval($from, DateTime $to) {
         if ($diff->y) {
             $times[] = [$diff->y, 'year'];
             if ($diff->m) {
-                    $times[] = [$diff->m, 'month'];
+                $times[] = [$diff->m, 'month'];
             }
         } elseif ($diff->m) {
             $times[] = [$diff->m, 'month'];
@@ -63,14 +63,14 @@ function format_interval($from, DateTime $to) {
         }
         if ($times) {
             $eolPeriod = implode(', ',
-                                        array_map(
-                                            function ($t) {
-                                                return "$t[0] $t[1]" .
-                                                        ($t[0] != 1 ? 's' : '');
-                                            },
-                                            $times,
-                                        ),
-                                );
+                array_map(
+                    function ($t) {
+                        return "$t[0] $t[1]" .
+                                ($t[0] != 1 ? 's' : '');
+                    },
+                    $times,
+                ),
+            );
 
             if ($diff->invert) {
                 $eolPeriod = "$eolPeriod ago";

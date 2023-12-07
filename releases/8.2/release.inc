@@ -40,9 +40,9 @@ common_header(message('common_header', $lang));
                 <a class="php8-rfc" href="https://wiki.php.net/rfc/readonly_classes">RFC</a>
                 <a class="php8-rfc"
                    href="/manual/<?= $lang ?>/language.oop5.basic.php#language.oop5.basic.class.readonly"><?= message(
-                        'documentation',
-                        $lang,
-                    ) ?></a>
+                       'documentation',
+                       $lang,
+                   ) ?></a>
             </h2>
             <div class="php8-compare__main">
                 <div class="php8-compare__block example-contents">
@@ -98,9 +98,9 @@ PHP
                 <a class="php8-rfc" href="https://wiki.php.net/rfc/dnf_types">RFC</a>
                 <a class="php8-rfc"
                    href="/manual/<?= $lang ?>/migration82.new-features.php#migration82.new-features.core.type-system"><?= message(
-                        'documentation',
-                        $lang,
-                    ) ?></a>
+                       'documentation',
+                       $lang,
+                   ) ?></a>
             </h2>
             <div class="php8-compare__main">
                 <div class="php8-compare__block example-contents">
@@ -248,9 +248,9 @@ PHP
                 <a class="php8-rfc" href="https://wiki.php.net/rfc/constants_in_traits">RFC</a>
                 <a class="php8-rfc"
                    href="/manual/<?= $lang ?>/migration82.new-features.php#migration82.new-features.core.constant-in-traits"><?= message(
-                        'documentation',
-                        $lang,
-                    ) ?></a>
+                       'documentation',
+                       $lang,
+                   ) ?></a>
             </h2>
             <div class="php8-compare__main">
                 <div class="example-contents example-contents-full">
@@ -286,9 +286,9 @@ PHP
                 <a class="php8-rfc" href="https://wiki.php.net/rfc/deprecate_dynamic_properties">RFC</a>
                 <a class="php8-rfc"
                    href="/manual/<?= $lang ?>/migration82.deprecated.php#migration82.deprecated.core.dynamic-properties"><?= message(
-                        'documentation',
-                        $lang,
-                    ) ?></a>
+                       'documentation',
+                       $lang,
+                   ) ?></a>
             </h2>
             <div class="php8-compare__main">
                 <div class="php8-compare__block example-contents">

@@ -93,8 +93,8 @@ if (empty($cy)) { $cy = date("Y"); }
 $date = mktime(0, 0, 1, $cm, 1, $cy);
 
 if (!$begun) {
-  site_header("Events: " . date("F Y", $date), $site_header_config);
-?>
+    site_header("Events: " . date("F Y", $date), $site_header_config);
+    ?>
 <div class="tip">
  <p>
   If you would like to suggest an upcoming event to be listed on this
@@ -139,10 +139,10 @@ $prev_link = (function () use ($cm, $cy) {
     $month = date('m', $lm);
     $monthName = date('F', $lm);
     return sprintf('<a href="/cal.php?cm=%s&amp;cy=%s">%s, %s</a>',
-                   urlencode($month),
-                   urlencode($year),
-                   htmlentities($monthName),
-                   htmlentities($year));
+        urlencode($month),
+        urlencode($year),
+        htmlentities($monthName),
+        htmlentities($year));
 })();
 
 // Link to next month (but do not link to too early dates)
@@ -156,21 +156,21 @@ $next_link = (function () use ($cm, $cy) {
     $month = date('m', $nm);
     $monthName = date('F', $nm);
     return sprintf('<a href="/cal.php?cm=%s&amp;cy=%s">%s, %s</a>',
-                   urlencode($month),
-                   urlencode($year),
-                   htmlentities($monthName),
-                   htmlentities($year));
+        urlencode($month),
+        urlencode($year),
+        htmlentities($monthName),
+        htmlentities($year));
 })();
 
 // Print out navigation links for previous and next month
 echo '<br><table id="calnav" width="100%" border="0" cellspacing="0" cellpadding="3">',
-     "\n<tr>", '<td align="left" width="33%">', $prev_link, '</td>',
-     '<td align="center" width="33%"><b>', htmlentities(date('F, Y', $bom)), '</b></td>',
-     '<td align="right" width="33%">', $next_link, "</td></tr>\n</table>\n";
+"\n<tr>", '<td align="left" width="33%">', $prev_link, '</td>',
+'<td align="center" width="33%"><b>', htmlentities(date('F, Y', $bom)), '</b></td>',
+'<td align="right" width="33%">', $next_link, "</td></tr>\n</table>\n";
 
 // Begin the calendar table
 echo '<table id="cal" width="100%" border="1" cellspacing="0" cellpadding="3">',
-     "\n",'<tr>',"\n";
+"\n",'<tr>',"\n";
 
 // Print out headers for weekdays
 for ($i = 0; $i < 7; $i++) {
@@ -188,7 +188,7 @@ for ($i = 1; $i <= date("t",$bom); $i++) {
 
     // Print out day number and all events for the day
     echo '<td><a class="day" href="/cal.php', "?cm=$cm&amp;cd=$i&amp;cy=$cy",
-         '">',$i,'</a>';
+    '">',$i,'</a>';
     display_events_for_day(date("Y-m-",$bom) . sprintf("%02d",$i), $events);
     echo '</td>';
 
@@ -241,13 +241,13 @@ function display_events_for_day($day, $events): void
         if (($event['type'] == 2 && $event['start'] <= $day && $event['end'] >= $day)
          || ($event['start'] == $day)) {
             echo '<div class="event">',
-                 ($COUNTRY == $event['country'] ? "<strong>" : ""),
-                 '<a class="cat' . $event['category'] . '" href="/cal.php',
-                 "?id=$event[id]&amp;cm=$cm&amp;cy=$cy", '">',
-                 stripslashes(htmlentities($event['sdesc'], ENT_QUOTES | ENT_IGNORE, 'UTF-8')),
-                 '</a>',
-                 ($COUNTRY == $event['country'] ? "</strong>" : ""),
-                 '</div>';
+            ($COUNTRY == $event['country'] ? "<strong>" : ""),
+            '<a class="cat' . $event['category'] . '" href="/cal.php',
+            "?id=$event[id]&amp;cm=$cm&amp;cy=$cy", '">',
+            stripslashes(htmlentities($event['sdesc'], ENT_QUOTES | ENT_IGNORE, 'UTF-8')),
+            '</a>',
+            ($COUNTRY == $event['country'] ? "</strong>" : ""),
+            '</div>';
         }
     }
 }
@@ -262,14 +262,14 @@ function load_event($id)
     // Read as we can, event by event
     while (!feof($fp)) {
 
-      $event = read_event($fp);
+        $event = read_event($fp);
 
-      // Return with the event, if it's ID is the one
-      // we search for (also close the file)
-      if ($event !== false && $event['id'] == $id) {
-        fclose($fp);
-        return $event;
-      }
+        // Return with the event, if it's ID is the one
+        // we search for (also close the file)
+        if ($event !== false && $event['id'] == $id) {
+            fclose($fp);
+            return $event;
+        }
     }
 
     // Close file, and return sign of failure
@@ -311,25 +311,25 @@ function load_events($from, $whole_month = false)
         // Check if event is in our scope, depending on type
         switch ($event['type']) {
 
-             // Recurring event
+            // Recurring event
             case 3:
                 $date = date_for_recur($event['recur'], $event['recur_day'], $bom, $eom);
                 $event['start'] = date("Y-m-d", $date);
                 // Fall through. Now it is just like a single-day event
 
-            // Single-day event
+                // Single-day event
             case 1:
                 if ($event['start'] >= $from_date && $event['start'] <= $to_date) {
                     $events[] = $event;
                 }
                 break;
 
-            // Multi-day event
+                // Multi-day event
             case 2:
                 if (($event['start'] >= $from_date && $event['start'] <= $to_date)
                  || ($event['end'] >= $from_date && $event['end'] <= $to_date)
                  || ($event['start'] <= $from_date && $event['end'] >= $to_date)) {
-                  $events[] = $event;
+                    $events[] = $event;
                 }
                 break;
         }

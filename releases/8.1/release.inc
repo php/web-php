@@ -116,7 +116,7 @@ PHP
                 <div class="php8-compare__label php8-compare__label_new">PHP 8.1</div>
                 <div class="php8-code phpcode">
                     <?php highlight_php_trimmed(
-                            <<<'PHP'
+                        <<<'PHP'
 class BlogData
 {
     public readonly Status $status;

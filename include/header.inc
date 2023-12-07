@@ -148,13 +148,13 @@ if (!isset($config["languages"])) {
       <ul>
       <?php
           $breadcrumbs = $config['breadcrumbs'];
-          $last = array_pop($breadcrumbs);
-          foreach ($breadcrumbs as $crumb) {
-              echo "      <li><a href='{$crumb['link']}'>{$crumb['title']}</a></li>";
-          }
-          echo "      <li><a href='{$last['link']}'>{$last['title']}</a></li>";
+    $last = array_pop($breadcrumbs);
+    foreach ($breadcrumbs as $crumb) {
+        echo "      <li><a href='{$crumb['link']}'>{$crumb['title']}</a></li>";
+    }
+    echo "      <li><a href='{$last['link']}'>{$last['title']}</a></li>";
 
-      ?>
+    ?>
       </ul>
     </div>
   </div>

@@ -70,7 +70,7 @@ function resize_image($img, $width = 1, $height = 1)
 
 // Return an <img> tag for a given image file available on the server
 function make_image($file, $alt = false, $align = false, $extras = false,
-                    $dir = '/images', $addsize = true)
+    $dir = '/images', $addsize = true)
 {
     // If no / was provided at the start of $dir, add it
     $webdir = $_SERVER['MYSITE'] . ($dir[0] == '/' ? '' : '/') . $dir;
@@ -105,7 +105,7 @@ function make_image($file, $alt = false, $align = false, $extras = false,
 
 // Print an <img> tag out for a given file
 function print_image($file, $alt = false, $align = false, $extras = false,
-                     $dir = '/images'): void
+    $dir = '/images'): void
 {
     echo make_image($file, $alt, $align, $extras, $dir);
 }
@@ -123,7 +123,7 @@ function news_image($URL, $image, $alt, $print = true)
 
 // Return HTML code for a submit button image
 function make_submit($file, $alt = false, $align = false, $extras = false,
-                     $dir = '/images', $border = 0)
+    $dir = '/images', $border = 0)
 {
     // Get an image without size info and convert the
     // border attribute to use CSS, as border="" is not
@@ -154,7 +154,7 @@ function make_popup_link($url, $linktext = false, $target = false, $windowprops 
         ($target ?: "_new"),
         htmlspecialchars($url, ENT_QUOTES | ENT_IGNORE),
         ($target ?: "_new"),
-                $windowprops,
+        $windowprops,
         ($extras ? ' ' . $extras : ''),
         ($linktext ?: $url),
     );
@@ -219,7 +219,7 @@ function sect_to_file($string) {
 }
 
 function clean($var) {
-  return htmlspecialchars($var, ENT_QUOTES);
+    return htmlspecialchars($var, ENT_QUOTES);
 }
 
 // Clean out the content of one user note for printing to HTML
@@ -289,20 +289,20 @@ function display_event($event, $include_date = 1): void
     } else {
         $eday = (isset($event['end']) && !empty($event['end'])) ? strtotime($event['end']) : 0;
     }
-?>
+    ?>
 <table border="0" cellspacing="0" cellpadding="3" width="100%" class="vevent">
  <tr bgcolor="#dddddd"><td>
 <?php
 
-    // Print out date if needed
-    if ($include_date && (isset($event['start']))) {
-        echo "<b>", date("F j, Y", $sday), "</b>\n";
-    }
+        // Print out date if needed
+        if ($include_date && (isset($event['start']))) {
+            echo "<b>", date("F j, Y", $sday), "</b>\n";
+        }
 
-    // Print link in case we have one
-    if ($event['url']) { echo '<a href="', htmlentities($event['url'], ENT_QUOTES | ENT_IGNORE, 'UTF-8'),'" class="url">'; }
-    // Print event description
-    echo "<b class='summary'>", stripslashes(htmlentities($event['sdesc'], ENT_QUOTES | ENT_IGNORE, 'UTF-8')), "</b>";
+        // Print link in case we have one
+        if ($event['url']) { echo '<a href="', htmlentities($event['url'], ENT_QUOTES | ENT_IGNORE, 'UTF-8'),'" class="url">'; }
+        // Print event description
+        echo "<b class='summary'>", stripslashes(htmlentities($event['sdesc'], ENT_QUOTES | ENT_IGNORE, 'UTF-8')), "</b>";
     // End link
     if ($event['url']) { echo "</a>"; }
 
@@ -334,20 +334,20 @@ function display_event($event, $include_date = 1): void
 
     // Print out country information
     echo ' (<span class="location">' , $COUNTRIES[$event['country']] , '</span>)';
-?>
+    ?>
  </td></tr>
  <tr bgcolor="#eeeeee" class="description"><td>
 <?php
 
-    // Print long description
-    echo preg_replace("/\r?\n\r?\n/", "<br><br>", trim(htmlentities($event['ldesc'],ENT_QUOTES | ENT_IGNORE, 'UTF-8')));
+        // Print long description
+        echo preg_replace("/\r?\n\r?\n/", "<br><br>", trim(htmlentities($event['ldesc'],ENT_QUOTES | ENT_IGNORE, 'UTF-8')));
     // If we have an URL, print it out
     if ($event['url']) {
         echo '<br><br><b>URL:</b> ',
-             '<a href="', htmlentities($event['url'], ENT_QUOTES | ENT_IGNORE, 'UTF-8'), '">',
-             htmlentities($event['url'], ENT_QUOTES | ENT_IGNORE, 'UTF-8'), '</a>';
+        '<a href="', htmlentities($event['url'], ENT_QUOTES | ENT_IGNORE, 'UTF-8'), '">',
+        htmlentities($event['url'], ENT_QUOTES | ENT_IGNORE, 'UTF-8'), '</a>';
     }
-?>
+    ?>
  </td></tr>
 </table>
 <?php

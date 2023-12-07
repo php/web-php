@@ -135,9 +135,9 @@ $height = $header_height + $footer_height + (count($branches) * $branch_height);
 		<?php foreach ($branches as $branch => $version): ?>
 			<?php
             $x_release = date_horiz_coord(get_branch_release_date($branch));
-            $x_bug = date_horiz_coord(get_branch_bug_eol_date($branch));
-            $x_eol = date_horiz_coord(get_branch_security_eol_date($branch));
-            ?>
+		    $x_bug = date_horiz_coord(get_branch_bug_eol_date($branch));
+		    $x_eol = date_horiz_coord(get_branch_security_eol_date($branch));
+		    ?>
 			<rect class="stable" x="<?php echo $x_release ?>" y="<?php echo $version['top'] ?>" width="<?php echo $x_bug - $x_release ?>" height="<?php echo $branch_height ?>" />
 			<rect class="security" x="<?php echo $x_bug ?>" y="<?php echo $version['top'] ?>" width="<?php echo $x_eol - $x_bug ?>" height="<?php echo $branch_height ?>" />
 		<?php endforeach ?>
@@ -157,8 +157,8 @@ $height = $header_height + $footer_height + (count($branches) * $branch_height);
 	<g class="today">
 		<?php
         $now = new DateTime();
-        $x = date_horiz_coord($now);
-        ?>
+$x = date_horiz_coord($now);
+?>
 		<line x1="<?php echo $x ?>" y1="<?php echo $header_height ?>" x2="<?php echo $x ?>" y2="<?php echo $header_height + (count($branches) * $branch_height) ?>" />
 		<text x="<?php echo $x ?>" y="<?php echo $header_height + (count($branches) * $branch_height) + (0.8 * $footer_height) ?>">
 			<?php echo 'Today: ' . $now->format('j M Y') ?>

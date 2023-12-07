@@ -125,8 +125,8 @@ if ($process) {
         // There was no error returned
         else {
             echo '<p>Your submission was successful -- thanks for contributing! Note ',
-                 'that it will not show up for up to a few hours, ',
-                 'but it will eventually find its way.</p>';
+            'that it will not show up for up to a few hours, ',
+            'but it will eventually find its way.</p>';
         }
 
         // Print out common footer, and end page
@@ -147,7 +147,7 @@ if ($process) {
 
 // Any needed variable was missing => display instructions
 else {
-?>
+    ?>
 
 <section id="add-note-usernotes" class="clearfix">
   <h1>Adding a note to the manual</h1>
@@ -332,7 +332,7 @@ if (empty($_POST['user'])) { $_POST['user'] = "user@example.com"; }
 // There is no section to add note to
 if (!isset($_POST['sect'], $_POST['redirect'])) {
     echo '<p class="formerror">To add a note, you must click on the "Add Note" button (the plus sign)  ',
-         'on the bottom of a manual page so we know where to add the note!</p>';
+    'on the bottom of a manual page so we know where to add the note!</p>';
 }
 
 // Everything is in place, so we can display the form

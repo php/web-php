@@ -76,11 +76,11 @@ function mirror_provider($site = false)
     if (!$site) { $site = $MYSITE; }
 
     if (isset($MIRRORS[$site])) {
-       return $MIRRORS[$site][1];
+        return $MIRRORS[$site][1];
     }
 
     if (isset($MIRRORS[$_SERVER['SERVER_ADDR']])) {
-       return $MIRRORS[$_SERVER['SERVER_ADDR']][1];
+        return $MIRRORS[$_SERVER['SERVER_ADDR']][1];
     }
 
     return false;

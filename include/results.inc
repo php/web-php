@@ -65,30 +65,30 @@ EOB;
     }
     echo "</ul>\n";
     if($show_attrib):
-    echo <<<EOB
+        echo <<<EOB
 <span style="margin-left: 3em; margin-top: 1em; float: right; font-family: Verdana, Tahoma, Helvetica, Arial;
 font-size: 11px; color:#555;">results by <img style="margin-bottom:4px;" src="/images/bing.png" align="center"/></span>
 EOB;
     endif;
     if($show_foot):
-    echo <<<EOB
+        echo <<<EOB
 <div id="results_nav"><h4>Results Page:</h4>
 <ul id="results_nav_list">
 EOB;
-    $start = 0;
-    for($z = 1; $z < 11; $z++) {
-        if($start > $res['ResultSet']['totalResultsAvailable']) {
-            break;
-        }
+        $start = 0;
+        for($z = 1; $z < 11; $z++) {
+            if($start > $res['ResultSet']['totalResultsAvailable']) {
+                break;
+            }
 
-        $class = '';
-        if ($start == $start_result) {
-            $class = 'current';
-        }
+            $class = '';
+            if ($start == $start_result) {
+                $class = 'current';
+            }
 
-        printf('<li class="%s"><a href="/results.php?q=%s&start=%d&p=%s&l=%s">%d</a></li>', $class, urlencode($q), $start, $profile, urlencode($l), $z);
-        $start += $per_page;
-    }
-    echo '</ul></div>';
+            printf('<li class="%s"><a href="/results.php?q=%s&start=%d&p=%s&l=%s">%d</a></li>', $class, urlencode($q), $start, $profile, urlencode($l), $z);
+            $start += $per_page;
+        }
+        echo '</ul></div>';
     endif;
 }

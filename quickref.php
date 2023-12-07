@@ -131,7 +131,7 @@ if ($snippet = is_known_snippet($notfound)) {
 <?php
 quickref_table($maybe, false);
 
-site_footer([
-    "sidebar" => '<p class="panel"><a href="/search.php?show=all&amp;pattern=' . $notfound_enc . '">Full website search</a>',
-]);
+    site_footer([
+        "sidebar" => '<p class="panel"><a href="/search.php?show=all&amp;pattern=' . $notfound_enc . '">Full website search</a>',
+    ]);
 }

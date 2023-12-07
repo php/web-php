@@ -40,8 +40,8 @@ site_header("Downloads",
 );
 ?>
 <?php $i = 0; foreach ($RELEASES as $MAJOR => $major_releases): /* major releases loop start */
-        $releases = array_slice($major_releases, 0, $SHOW_COUNT);
-?>
+    $releases = array_slice($major_releases, 0, $SHOW_COUNT);
+    ?>
 <a id="v<?php echo $MAJOR; ?>"></a>
 <?php foreach ($releases as $v => $a): ?>
   <?php $mver = substr($v, 0, strrpos($v, '.')); ?>
@@ -60,9 +60,9 @@ site_header("Downloads",
           <?php download_link($rel['filename'], $rel['filename']); ?>
           <span class="releasedate"><?php echo date('d M Y', strtotime($rel['date'])); ?></span>
           <?php
-            if (isset($rel['md5']))    echo '<span class="md5sum">', $rel['md5'], '</span>';
-            if (isset($rel['sha256'])) echo '<span class="sha256">', $rel['sha256'], '</span>';
-           ?>
+                if (isset($rel['md5']))    echo '<span class="md5sum">', $rel['md5'], '</span>';
+          if (isset($rel['sha256'])) echo '<span class="sha256">', $rel['sha256'], '</span>';
+          ?>
           <?php if (isset($rel['note']) && $rel['note']): ?>
             <p>
               <strong>Note:</strong>

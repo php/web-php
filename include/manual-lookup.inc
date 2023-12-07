@@ -170,7 +170,7 @@ function find_manual_page($lang, $keyword)
 
             $stm = $dbh->prepare($SQL);
             if (!$stm) {
-                    return find_manual_page_slow($lang, $keyword);
+                return find_manual_page_slow($lang, $keyword);
             }
             $stm->execute([$lang, "/manual/{$lang}/{$_keyword}", $keyword]);
 
