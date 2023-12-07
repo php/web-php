@@ -1,4 +1,4 @@
-<?php // -*- C++ -*-
+<?php
 // Compress all pages, if ext/zlib is available on the mirror
 // XXX Deactivated by sas, causes errors towards delivery machines
 // ini_set("zlib.output_compression", 1);

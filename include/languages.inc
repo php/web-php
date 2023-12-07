@@ -1,4 +1,4 @@
-<?php // -*- C++ -*-
+<?php
 
 /*
  This is a list of all manual languages hosted
