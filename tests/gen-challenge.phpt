@@ -5,7 +5,7 @@ gen_challenge() generates a spam challenge
 
 require_once __DIR__ . '/../manual/spam_challenge.php';
 
-srand(9001);
+mt_srand(9001);
 
 $challenges = array_map(static function (): array {
     [$function, $argumentOne, $argumentTwo, $question] = gen_challenge();
