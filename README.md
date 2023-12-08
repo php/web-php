@@ -1,4 +1,5 @@
 [![Integrate](https://github.com/php/web-php/actions/workflows/integrate.yaml/badge.svg)](https://github.com/php/web-php/actions/workflows/integrate.yaml)
+[![Type Coverage](https://shepherd.dev/github/php/web-php/coverage.svg)](https://shepherd.dev/github/php/web-php)
 
 ## Local development
 
