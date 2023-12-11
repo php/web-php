@@ -5,7 +5,6 @@ include_once __DIR__ . '/../include/prepend.inc';
 include_once __DIR__ . '/../include/pregen-news.inc';
 news_archive_sidebar();
 site_header("News Archive - 2020");
-//site_header("News Archive - 2020", array("cache" => true));
 ?>
 
 <h1>News Archive - 2020</h1>
