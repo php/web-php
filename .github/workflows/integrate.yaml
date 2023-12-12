@@ -4,6 +4,7 @@ name: "Integrate"
 
 on:
   pull_request: null
+  pull_request_target: null
   push:
     branches:
       - "master"
@@ -54,8 +55,42 @@ jobs:
         env:
           PHP_CS_FIXER_IGNORE_ENV: "1"
 
+  preview:
+    name: "Preview"
+
+    runs-on: "ubuntu-22.04"
+
+    if: "github.repository_owner == 'php'"
+
+    steps:
+      - name: "Checkout"
+        uses: "actions/checkout@v4"
+        with:
+          ref: "refs/pull/${{ github.event.number }}/merge"
+
+      - name: "Deploy to preview environment"
+        uses: "easingthemes/ssh-deploy@main"
+        with:
+          REMOTE_HOST: "${{ secrets.PREVIEW_REMOTE_HOST }}"
+          REMOTE_USER: "${{ secrets.PREVIEW_REMOTE_USER }}"
+          SCRIPT_AFTER: "bash /home/thephpfoundation/scripts/pr_created.sh web-php ${{ github.event.number }}"
+          SCRIPT_BEFORE: "bash /home/thephpfoundation/scripts/pr_created_pre.sh web-php ${{ github.event.number }}"
+          SSH_PRIVATE_KEY: "${{ secrets.PREVIEW_SSH_KEY }}"
+          TARGET: "/home/thephpfoundation/preview/web-php-pr-${{ github.event.number }}/public"
+
+      - name: "Comment on pull request"
+        uses: "peter-evans/create-or-update-comment@v3"
+        with:
+          body: |
+            🚀 Deployed on https://web-php-pr-${{ github.event.number }}.preview.thephp.foundation
+          edit-mode: 'replace'
+          issue-number: "${{ github.event.number }}"
+
   tests:
     name: "Tests"
+
+    needs:
+      - "preview"
 
     runs-on: "ubuntu-latest"
 
