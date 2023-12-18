@@ -32,4 +32,4 @@ jobs:
           comment-id: ${{ steps.fc.outputs.comment-id }}
           edit-mode: 'replace'
           body: |
-            🚀 Commit $(echo ${GITHUB_SHA::8}) Deployed on https://web-php-pr-${{ github.event.number }}.preview.thephp.foundation
+            🚀 Commit ${{ github.sha }} Deployed on https://web-php-pr-${{ github.event.number }}.preview.thephp.foundation
