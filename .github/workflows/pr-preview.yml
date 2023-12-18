@@ -20,9 +20,16 @@ jobs:
           SCRIPT_BEFORE: bash /home/thephpfoundation/scripts/pr_created_pre.sh web-php ${{ github.event.number }}
           SCRIPT_AFTER: bash /home/thephpfoundation/scripts/pr_created.sh web-php ${{ github.event.number }}
 
+      - uses: peter-evans/find-comment@v2
+        id: fc
+        with:
+          issue-number: ${{ github.event.number }}
+          comment-author: 'github-actions[bot]'
+
       - uses: peter-evans/create-or-update-comment@v3
         with:
           issue-number: ${{ github.event.number }}
+          comment-id: ${{ steps.fc.outputs.comment-id }}
           edit-mode: 'replace'
           body: |
-            🚀 Deployed on https://web-php-pr-${{ github.event.number }}.preview.thephp.foundation
+            🚀 Commit $(echo ${GITHUB_SHA::8}) Deployed on https://web-php-pr-${{ github.event.number }}.preview.thephp.foundation
