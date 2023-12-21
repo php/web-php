@@ -8,6 +8,55 @@ changelog_header(8, $MINOR_VERSIONS);
 ?>
 <a id="PHP_8_3"></a>
 
+<section class="version" id="8.3.1"><!-- {{{ 8.3.1 -->
+<h3>Version 8.3.1</h3>
+<b><?php release_date('21-Dec-2023'); ?></b>
+<ul><li>Core:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 12758); ?> / <?php githubissuel('php/php-src', 12768); ?> (Invalid opline in OOM handlers within ZEND_FUNC_GET_ARGS and ZEND_BIND_STATIC).</li>
+  <li>Fix various missing NULL checks.</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 12835); ?> (Leak of call-&gt;extra_named_params on internal __call).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 12826); ?> (Weird pointers issue in nested loops).</li>
+</ul></li>
+<li>FPM:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 12705); ?> (Segmentation fault in fpm_status_export_to_zval).</li>
+</ul></li>
+<li>FTP:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 9348); ?> (FTP &amp; SSL session reuse).</li>
+</ul></li>
+<li>LibXML:
+<ul>
+  <li>Fixed test failures for libxml2 2.12.0.</li>
+</ul></li>
+<li>MySQLnd:
+<ul>
+  <li>Avoid using uninitialised struct.</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 12791); ?> (Possible dereference of NULL in MySQLnd debug code).</li>
+</ul></li>
+<li>Opcache:
+<ul>
+  <li>Fixed JIT bug (Function JIT emits "Uninitialized string offset" warning at the same time as invalid offset Error).</li>
+  <li>Fixed JIT bug (JIT emits "Attempt to assign property of non-object" warning at the same time as Error is being thrown).</li>
+</ul></li>
+<li>PDO PGSQL:
+<ul>
+  <li>Fixed the default value of $fetchMode in PDO::pgsqlGetNotify() (kocsismate)</li>
+</ul></li>
+<li>SOAP:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 12838); ?> ([SOAP] Temporary WSDL cache files not being deleted).</li>
+</ul></li>
+<li>Standard:
+<ul>
+  <li>Fixed <?php githubissuel('php/php-src', 12745); ?> (http_build_query() default null argument for $arg_separator is implicitly coerced to string).</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
+
+
 <section class="version" id="8.3.0"><!-- {{{ 8.3.0 -->
 <h3>Version 8.3.0</h3>
 <b><?php release_date('23-Nov-2023'); ?></b>
