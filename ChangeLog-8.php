@@ -1651,6 +1651,74 @@ changelog_header(8, $MINOR_VERSIONS);
 
 <a id="PHP_8_1"></a>
 
+<section class="version" id="8.1.27"><!-- {{{ 8.1.27 -->
+<h3>Version 8.1.27</h3>
+<b><?php release_date('21-Dec-2023'); ?></b>
+<ul><li>Core:
+<ul>
+  <li>Fixed oss-fuzz #54325 (Use-after-free of name in var-var with malicious error handler).</li>
+  <li>Fixed oss-fuzz #64209 (In-place modification of filename in php_message_handler_for_zend).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 12758); ?> / <?php githubissuel('php/php-src', 12768); ?> (Invalid opline in OOM handlers within ZEND_FUNC_GET_ARGS and ZEND_BIND_STATIC).</li>
+</ul></li>
+<li>DOM:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 12616); ?> (DOM: Removing XMLNS namespace node results in invalid default: prefix).</li>
+</ul></li>
+<li>FPM:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 12705); ?> (Segmentation fault in fpm_status_export_to_zval).</li>
+</ul></li>
+<li>Intl:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 12635); ?> (Test bug69398.phpt fails with ICU 74.1).</li>
+</ul></li>
+<li>LibXML:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 12702); ?> (libxml2 2.12.0 issue building from src).</li>
+</ul></li>
+<li>MySQLnd:
+<ul>
+  <li>Avoid using uninitialised struct.</li>
+</ul></li>
+<li>OpenSSL:
+<ul>
+  <li><?php bugfix(50713); ?> (openssl_pkcs7_verify() may ignore untrusted CAs).</li>
+</ul></li>
+<li>PCRE:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 12628); ?> (The gh11374 test fails on Alpinelinux).</li>
+</ul></li>
+<li>PGSQL:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 12763); ?> wrong argument type for pg_untrace.</li>
+</ul></li>
+<li>PHPDBG:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 12675); ?> (MEMORY_LEAK in phpdbg_prompt.c).</li>
+</ul></li>
+<li>SQLite3:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 12633); ?> (sqlite3_defensive.phpt fails with sqlite 3.44.0).</li>
+</ul></li>
+<li>Standard:
+<ul>
+  <li>Fix memory leak in syslog device handling.</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 12621); ?> (browscap segmentation fault when configured in the vhost).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 12655); ?> (proc_open() does not take into account references in the descriptor array).</li>
+</ul></li>
+<li>Streams:
+<ul>
+  <li><?php bugfix(79945); ?> (Stream wrappers in imagecreatefrompng causes segfault).</li>
+</ul></li>
+<li>Zip:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 12661); ?> (Inconsistency in ZipArchive::addGlob remove_path Option Behavior).</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
+
+
 <section class="version" id="8.1.26"><!-- {{{ 8.1.26 -->
 <h3>Version 8.1.26</h3>
 <b><?php release_date('23-Nov-2023'); ?></b>
