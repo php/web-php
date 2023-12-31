@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "c5d7affcdce069dec449e3bf7d31be2b",
+    "content-hash": "6cae84eb63f0eb7aa907bf021f8e041f",
     "packages": [],
     "packages-dev": [
         {
@@ -227,21 +227,22 @@
         },
         {
             "name": "friendsofphp/php-cs-fixer",
-            "version": "v3.40.2",
+            "version": "v3.49.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/PHP-CS-Fixer/PHP-CS-Fixer.git",
-                "reference": "4344562a516b76afe8f2d64b2e52214c30d64ed8"
+                "reference": "8742f7aa6f72a399688b65e4f58992c2d4681fc2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/PHP-CS-Fixer/PHP-CS-Fixer/zipball/4344562a516b76afe8f2d64b2e52214c30d64ed8",
-                "reference": "4344562a516b76afe8f2d64b2e52214c30d64ed8",
+                "url": "https://api.github.com/repos/PHP-CS-Fixer/PHP-CS-Fixer/zipball/8742f7aa6f72a399688b65e4f58992c2d4681fc2",
+                "reference": "8742f7aa6f72a399688b65e4f58992c2d4681fc2",
                 "shasum": ""
             },
             "require": {
                 "composer/semver": "^3.4",
                 "composer/xdebug-handler": "^3.0.3",
+                "ext-filter": "*",
                 "ext-json": "*",
                 "ext-tokenizer": "*",
                 "php": "^7.4 || ^8.0",
@@ -266,10 +267,7 @@
                 "php-cs-fixer/accessible-object": "^1.1",
                 "php-cs-fixer/phpunit-constraint-isidenticalstring": "^1.4",
                 "php-cs-fixer/phpunit-constraint-xmlmatchesxsd": "^1.4",
-                "phpspec/prophecy": "^1.17",
-                "phpspec/prophecy-phpunit": "^2.0",
-                "phpunit/phpunit": "^9.6",
-                "symfony/phpunit-bridge": "^6.3.8 || ^7.0",
+                "phpunit/phpunit": "^9.6 || ^10.5.5",
                 "symfony/yaml": "^5.4 || ^6.0 || ^7.0"
             },
             "suggest": {
@@ -308,7 +306,7 @@
             ],
             "support": {
                 "issues": "https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/issues",
-                "source": "https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/tree/v3.40.2"
+                "source": "https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/tree/v3.49.0"
             },
             "funding": [
                 {
@@ -316,7 +314,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2023-12-03T09:21:33+00:00"
+            "time": "2024-02-02T00:41:40+00:00"
         },
         {
             "name": "psr/container",
