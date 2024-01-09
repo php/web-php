@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom" xmlns:default="http://php.net/ns/news">
+  <title>Unveiling the ConFoo 2024 edition!</title>
+  <id>https://www.php.net/archive/2024.php#2024-01-08-3</id>
+  <published>2024-01-08T21:33:28-05:00</published>
+  <updated>2024-01-08T21:33:28-05:00</updated>
+  <link href="https://www.php.net/conferences/index.php#2024-01-08-3" rel="alternate" type="text/html"/>
+  <link href="https://confoo.ca/en/2024" rel="via" type="text/html"/>
+  <default:finalTeaserDate xmlns="http://php.net/ns/news">1600-01-08</default:finalTeaserDate>
+  <category term="conferences" label="Conference announcement"/>
+  <default:newsImage xmlns="http://php.net/ns/news" link="https://confoo.ca/en/2024" title="ConFoo Montreal 2024">confoo_2024.png</default:newsImage>
+  <content type="xhtml">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+     With over <a href="https://confoo.ca/en/2024/sessions">170 presentations</a>, delivered by speakers from around the world, ConFoo is a conference for Full-Stack developers covering everything from the backend to the frontend: JavaScript, PHP, Java, Dotnet, Security, Artificial Intelligence, DevOps, and much more.
+     
+     ConFoo brings an outstanding diversity of content to expand your knowledge, increase your productivity, and take your development skills to the next level.
+     
+     With a selection of presentations focused on cutting-edge technologies, there's a reason why attendees returning from ConFoo say they've learned more in these 3 days than in 3 years at university!
+     
+     Register now to participate, <a href="https://confoo.ca/en/2024/speakers">meet renowned speakers</a> who contribute to the Open Source projects you use every day.
+    </div>
+  </content>
+</entry>
