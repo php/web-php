@@ -8,7 +8,7 @@
   <link href="https://live.symfony.com/2024-online-january/" rel="via" type="text/html"/>
   <default:finalTeaserDate xmlns="http://php.net/ns/news">2024-01-18</default:finalTeaserDate>
   <category term="conferences" label="Conference announcement"/>
-  <default:newsImage xmlns="http://php.net/ns/news" link="https://live.symfony.com/2024-online-january/" title="SymfonyOnline June 2024">symfonyonline-june-2024.png</default:newsImage>
+  <default:newsImage xmlns="http://php.net/ns/news" link="https://live.symfony.com/2024-online-january/" title="SymfonyOnline June 2024">symfonyonline-january-2024.png</default:newsImage>
   <content type="xhtml">
     <div xmlns="http://www.w3.org/1999/xhtml">
       <p>
