@@ -1885,7 +1885,8 @@ aside.tips div.inner {
   padding: 10px;
 }
 
-.newsentry .newsimage img {
+.newsentry .newsimage img,
+.newsItem .newsImage img {
     max-width: 350px;
 }
 /* }}} */
