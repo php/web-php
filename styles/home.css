@@ -213,5 +213,6 @@ aside.tips .social-media .icon-twitter {
 }
 
 .btn-primary:hover, .hero-btn-primary:focus {
-  background-color: var(--dark-magenta-color);
+  background-color: var(--dark-magenta-color) !important;
+  border-color: var(--dark-magenta-color) !important;
 }
