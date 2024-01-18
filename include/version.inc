@@ -21,7 +21,7 @@ $RELEASES = (function () {
     /* PHP 8.3 Release */
     $data['8.3'] = [
         'version' => '8.3.2',
-        'date' => '18 Jan 2023',
+        'date' => '18 Jan 2024',
         'tags' => [], // Set to ['security'] for security releases.
         'sha256' => [
             'tar.gz' => 'decf0f51e5415b21fb6350753e45b6c3be5cc0868e4ec561e5c89326c8e6ef16',
@@ -32,13 +32,13 @@ $RELEASES = (function () {
 
     /* PHP 8.2 Release */
     $data['8.2'] = [
-        'version' => '8.2.14',
-        'date' => '21 Dec 2023',
+        'version' => '8.2.15',
+        'date' => '18 Jan 2024',
         'tags' => [], // Set to ['security'] for security releases.
         'sha256' => [
-            'tar.gz' => '4c1fbb55a10ece7f4532feba9f3f88b9b211c11320742977588738374c03255f',
-            'tar.bz2' => 'f871e131333d60ae6c537b1adddbc2aea54c436c562af986fb8309c060040b9e',
-            'tar.xz' => '763ecd39fcf51c3815af6ef6e43fa9aa0d0bd8e5a615009e5f4780c92705f583',
+            'tar.gz' => 'f9390d23708c65f428e868583dce7ab4a69e88ab6f377137a56643076f966b8f',
+            'tar.bz2' => '50c3e220b7aa63a85716233c902eb44cc0a4667ed0b8335722ae2391b1355e7a',
+            'tar.xz' => 'eca5deac02d77d806838275f8a3024b38b35ac0a5d9853dcc71c6cbe3f1f8765',
         ]
     ];
 
