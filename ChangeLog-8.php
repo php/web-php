@@ -8,6 +8,88 @@ changelog_header(8, $MINOR_VERSIONS);
 ?>
 <a id="PHP_8_3"></a>
 
+<section class="version" id="8.3.2"><!-- {{{ 8.3.2 -->
+<h3>Version 8.3.2</h3>
+<b><?php release_date('18-Jan-2024'); ?></b>
+<ul><li>Core:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 12953); ?> (false positive SSA integrity verification failed when loading composer classmaps with more than 11k elements).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 12999); ?> (zend_strnlen build when strnlen is unsupported).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 12966); ?> (missing cross-compiling 3rd argument so Autoconf doesn't emit warnings).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 12854); ?> (8.3 - as final trait-used method does not correctly report visibility in Reflection).</li>
+</ul></li>
+<li>Cli:
+<ul>
+  <li>Fix incorrect timeout in built-in web server when using router script and max_input_time.</li>
+</ul></li>
+<li>DOM:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 12870); ?> (Creating an xmlns attribute results in a DOMException).</li>
+  <li>Fix crash when toggleAttribute() is used without a document.</li>
+  <li>Fix crash in adoptNode with attribute references.</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 13012); ?> (DOMNode::isEqualNode() is incorrect when attribute order is different).</li>
+</ul></li>
+<li>FFI:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 9698); ?> (stream_wrapper_register crashes with FFI\CData).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 12905); ?> (FFI::new interacts badly with observers).</li>
+</ul></li>
+<li>Intl:
+<ul>
+  <li>Fixed <?php githubissuel('php/php-src', 12943); ?> (IntlDateFormatter::__construct accepts 'C' as valid locale).</li>
+</ul></li>
+<li>Hash:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 12936); ?> (hash() function hangs endlessly if using sha512 on strings &gt;= 4GiB).</li>
+</ul></li>
+<li>ODBC:
+<ul>
+  <li>Fix crash on Apache shutdown with persistent connections.</li>
+</ul></li>
+<li>Opcache:
+<ul>
+  <li>Fixed oss-fuzz #64727 (JIT undefined array key warning may overwrite DIM with NULL when DIM is the same var as result).</li>
+  <li>Added workaround for SELinux mprotect execheap issue. See https://bugzilla.kernel.org/show_bug.cgi?id=218258.</li>
+</ul></li>
+<li>OpenSSL:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 12987); ?> (openssl_csr_sign might leak new cert on error).</li>
+</ul></li>
+<li>PDO:
+<ul>
+  <li>Fix <?php githubissuel('php/php-src', 12969); ?> (Fixed PDO::getAttribute() to get PDO::ATTR_STRINGIFY_FETCHES).</li>
+</ul></li>
+<li>PDO_ODBC:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 12767); ?> (Unable to turn on autocommit mode with setAttribute()).</li>
+</ul></li>
+<li>PGSQL:
+<ul>
+  <li>Fixed auto_reset_persistent handling and allow_persistent type.</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 12974); ?> (Apache crashes on shutdown when using pg_pconnect()).</li>
+</ul></li>
+<li>Phar:
+<ul>
+  <li><?php bugfix(77432); ?> (Segmentation fault on including phar file).</li>
+</ul></li>
+<li>PHPDBG:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 12962); ?> (Double free of init_file in phpdbg_prompt.c).</li>
+</ul></li>
+<li>SimpleXML:
+<ul>
+  <li>Fix getting the address of an uninitialized property of a SimpleXMLElement resulting in a crash.</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 12929); ?> (SimpleXMLElement with stream_wrapper_register can segfault).</li>
+</ul></li>
+<li>Tidy:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 12980); ?> (tidynode.props.attribute is missing "Boolean Attributes" and empty attributes).</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
+
+
 <section class="version" id="8.3.1"><!-- {{{ 8.3.1 -->
 <h3>Version 8.3.1</h3>
 <b><?php release_date('21-Dec-2023'); ?></b>
