@@ -11,6 +11,7 @@
         "php": "~8.2.0"
     },
     "require-dev": {
+        "ext-curl": "*",
         "friendsofphp/php-cs-fixer": "^3.40.2"
     },
     "autoload": {
