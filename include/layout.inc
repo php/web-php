@@ -64,7 +64,7 @@ function resize_image($img, $width = 1, $height = 1)
 
 // Return an <img> tag for a given image file available on the server
 function make_image($file, $alt = false, $align = false, $extras = false,
-                    $dir = '/images', $addsize = true)
+                    $dir = '/images', $addsize = false)
 {
     // If no / was provided at the start of $dir, add it
     $webdir = $_SERVER['MYSITE'] . ($dir[0] == '/' ? '' : '/') . $dir;
