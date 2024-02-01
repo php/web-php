@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom" xmlns:default="http://php.net/ns/news">
+    <title>php[tek] 2024 - Sheraton Suites O'Hare, Rosemont, IL</title>
+    <id>https://www.php.net/archive/2024.php#2024-01-30-1</id>
+    <published>2024-01-30T13:44:26-07:00</published>
+    <updated>2024-01-30T13:44:26-07:00</updated>
+    <link href="https://www.php.net/conferences/index.php#2024-01-30-1" rel="alternate" type="text/html"/>
+    <link href="https://tek.phparch.com" rel="via" type="text/html"/>
+    <default:finalTeaserDate xmlns="http://php.net/ns/news">2024-01-30</default:finalTeaserDate>
+    <category term="conferences" label="Conference announcement"/>
+    <default:newsImage xmlns="http://php.net/ns/news"
+                       link="https://tek.phparch.com/?utm_source=PHP%20Conference%20List&amp;utm_medium=web&amp;utm_campaign=tek2024&amp;utm_id=phptek"
+                       title="php[tek] 2024">phptek2024.png</default:newsImage>
+    <content type="xhtml">
+        <div xmlns="http://www.w3.org/1999/xhtml">
+            <p>
+                Join us for the 16th Annual Web Developer Conference, php[tek] 2024, April 23-25 2024.
+            </p>
+
+            <p>
+                php[tek] 2024 combines leadership, expertise, and networking in one event. A relaxing
+                atmosphere for tech leaders and developers to share, learn and grow professionally while
+                also providing you with the knowledge to solve your everyday problems.
+            </p>
+
+
+            <p>
+                We are the longest-running web developer conference in the United States, focusing on the
+                PHP programming language. The event is broken up into multiple days. The main conference
+                happens over the course of 3 days (April 23-25) and includes keynotes, talks, and networking
+                options. It will be broken into four tracks this year and will cover a range of topics.
+            </p>
+
+
+            <p>
+                Head over to <a
+                    href="https://tek.phparch.com/?utm_source=PHP%20Conference%20List&amp;utm_medium=web&amp;utm_campaign=tek2024&amp;utm_id=phptek">
+                https://tek.phparch.com
+            </a> and get yours today!
+            </p>
+
+        </div>
+    </content>
+</entry>
