@@ -9,10 +9,8 @@
     <default:finalTeaserDate xmlns="http://php.net/ns/news">2024-01-30</default:finalTeaserDate>
     <category term="conferences" label="Conference announcement"/>
     <default:newsImage xmlns="http://php.net/ns/news"
-                       link="https://tek.phparch.com/?utm_source=PHP%20Conference%20List&utm_medium=web&utm_campaign=tek2024&utm_id=phptek"
-                       title="php[tek] 2024">
-        phptek2024.png
-    </default:newsImage>
+                       link="https://tek.phparch.com/?utm_source=PHP%20Conference%20List&amp;utm_medium=web&amp;utm_campaign=tek2024&amp;utm_id=phptek"
+                       title="php[tek] 2024">phptek2024.png</default:newsImage>
     <content type="xhtml">
         <div xmlns="http://www.w3.org/1999/xhtml">
             <p>
@@ -36,7 +34,7 @@
 
             <p>
                 Head over to <a
-                    href="https://tek.phparch.com/?utm_source=PHP%20Conference%20List&utm_medium=web&utm_campaign=tek2024&utm_id=phptek">
+                    href="https://tek.phparch.com/?utm_source=PHP%20Conference%20List&amp;utm_medium=web&amp;utm_campaign=tek2024&amp;utm_id=phptek">
                 https://tek.phparch.com
             </a> and get yours today!
             </p>
