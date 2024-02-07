@@ -70,7 +70,6 @@ $INACTIVE_ONLINE_LANGUAGES = [
     'he' => 'Hebrew',
     'hu' => 'Hungarian',
     'id' => 'Indonesian',
-    'it' => 'Italian',
     'kr' => 'Korean',
     'lt' => 'Lithuanian',
     'no' => 'Norwegian',
