@@ -32,7 +32,10 @@
     </source>
     <testsuites>
         <testsuite name="end-to-end">
-            <directory suffix=".phpt">.</directory>
+            <directory suffix=".phpt">EndToEnd/</directory>
+        </testsuite>
+        <testsuite name="unit">
+            <directory suffix=".phpt">Unit/</directory>
         </testsuite>
     </testsuites>
 </phpunit>
