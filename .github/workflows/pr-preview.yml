@@ -20,7 +20,7 @@ jobs:
           SCRIPT_BEFORE: bash /home/thephpfoundation/scripts/pr_created_pre.sh web-php ${{ github.event.number }}
           SCRIPT_AFTER: bash /home/thephpfoundation/scripts/pr_created.sh web-php ${{ github.event.number }}
 
-      - uses: peter-evans/find-comment@v2
+      - uses: peter-evans/find-comment@v3
         id: fc
         with:
           issue-number: ${{ github.event.number }}
