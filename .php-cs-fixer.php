@@ -6,16 +6,11 @@ $config = new PhpCsFixer\Config();
 
 $finder = $config->getFinder()
     ->ignoreDotFiles(false)
-    ->in(__DIR__)
-    ->exclude('manual/en/')
-    ->name('*.inc')
-    ->name('.php-cs-fixer.php')
-    ->notPath('include/last_updated.inc')
-    ->notPath('include/pregen-confs.inc')
-    ->notPath('include/pregen-news.inc')
-    ->notPath('include/releases.inc')
-    ->notPath('include/version.inc')
-    ->notPath('tests/run-tests.php');
+    ->in([
+        __DIR__ . '/src',
+        __DIR__ . '/tests',
+    ])
+    ->notName('run-tests.php');
 
 $config
     ->setRiskyAllowed(true)
