@@ -82,7 +82,7 @@ $RELEASES = (function () {
 function release_get_latest() {
     global $RELEASES;
 
-    $version = null;
+    $version = '0.0.0';
     $current = null;
     foreach ($RELEASES as $versions) {
         foreach ($versions as $ver => $info) {
