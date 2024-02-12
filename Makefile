@@ -8,7 +8,7 @@ help: ## Displays this list of targets with descriptions
 
 .PHONY: coding-standards
 coding-standards: vendor ## Fixes code style issues with friendsofphp/php-cs-fixer
-	vendor/bin/php-cs-fixer fix --config=.php-cs-fixer.php --diff --verbose
+	vendor/bin/php-cs-fixer fix --config=.php-cs-fixer.php --diff --show-progress=dots --verbose
 
 .PHONY: tests
 tests: vendor ## Runs tests
