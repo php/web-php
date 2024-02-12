@@ -2,7 +2,7 @@
 $_SERVER['BASE_PAGE'] = 'archive/2009.php';
 include_once __DIR__ . '/../include/prepend.inc';
 news_archive_sidebar();
-site_header("News Archive - 2009", ["cache" => true]);
+site_header('News Archive - 2009', ['cache' => true]);
 ?>
 
 <h1>News Archive - 2009</h1>
@@ -45,7 +45,7 @@ site_header("News Archive - 2009", ["cache" => true]);
 
 <hr>
 <div class="newsItem hentry vevent">
-    <div class="newsImage"><?php news_image("http://www.phpconference.co.uk/", "phpukconf2010.png", "PHP UK Conference 2010"); ?></div>
+    <div class="newsImage"><?php news_image('http://www.phpconference.co.uk/', 'phpukconf2010.png', 'PHP UK Conference 2010'); ?></div>
     <h1 class="summary entry-title"><a id="id2009-12-09-1" href="http://www.phpconference.co.uk/" rel="bookmark" class="bookmark">PHP UK Conference 2010</a></h1>
     <div class="entry-content description">
         <abbr class="published newsdate" title="2009-12-09T14:38:07+01:00">[09-Dec-2009]</abbr>
@@ -132,7 +132,7 @@ site_header("News Archive - 2009", ["cache" => true]);
 
 <hr>
 <div class="newsItem hentry vevent">
-    <div class="newsImage"><?php news_image("http://www.phpconference.com/", "ipc09.png", "International PHP Conference"); ?></div>
+    <div class="newsImage"><?php news_image('http://www.phpconference.com/', 'ipc09.png', 'International PHP Conference'); ?></div>
     <h1 class="summary entry-title"><a id="id2009-10-21-1" href="http://www.phpconference.com/" rel="bookmark" class="bookmark">International PHP Conference</a></h1>
     <div class="entry-content description">
         <abbr class="published newsdate" title="2009-10-21T20:15:30+02:00">[21-Oct-2009]</abbr>
@@ -148,7 +148,7 @@ site_header("News Archive - 2009", ["cache" => true]);
 
 <hr>
 <div class="newsItem hentry vevent">
-    <div class="newsImage"><?php news_image("http://www.phpworld-kongress.de", "phpworldkongress09.gif", "PHP World Kongress"); ?></div>
+    <div class="newsImage"><?php news_image('http://www.phpworld-kongress.de', 'phpworldkongress09.gif', 'PHP World Kongress'); ?></div>
     <h1 class="summary entry-title"><a id="id2009-10-01-1" href="http://www.phpworld-kongress.de" rel="bookmark" class="bookmark">PHP World Kongress</a></h1>
     <div class="entry-content description">
         <abbr class="published newsdate" title="2009-10-01T21:19:01+02:00">[01-Oct-2009]</abbr>
@@ -176,7 +176,7 @@ site_header("News Archive - 2009", ["cache" => true]);
 
 <hr>
 <div class="newsItem hentry vevent">
-    <div class="newsImage"><?php news_image("http://phpconference.es/", "phpbarcelonaconference2009small1.jpg", "PHP Barcelona"); ?></div>
+    <div class="newsImage"><?php news_image('http://phpconference.es/', 'phpbarcelonaconference2009small1.jpg', 'PHP Barcelona'); ?></div>
     <h1 class="summary entry-title"><a id="id2009-09-28-1" href="http://phpconference.es/" rel="bookmark" class="bookmark">PHP Barcelona Conference 2009</a></h1>
     <div class="entry-content description">
         <abbr class="published newsdate" title="2009-09-28T21:27:54+02:00">[28-Sep-2009]</abbr>
@@ -221,7 +221,7 @@ site_header("News Archive - 2009", ["cache" => true]);
 
 <hr>
 <div class="newsItem hentry vevent">
-    <div class="newsImage"><?php news_image("http://zendcon.com", "ZendCon09-logo.gif", "ZendCon 2009"); ?></div>
+    <div class="newsImage"><?php news_image('http://zendcon.com', 'ZendCon09-logo.gif', 'ZendCon 2009'); ?></div>
     <h1 class="summary entry-title"><a id="id2009-08-26-1" href="http://zendcon.com" rel="bookmark" class="bookmark">ZendCon 2009!</a></h1>
     <div class="entry-content description">
         <abbr class="published newsdate" title="2009-08-26T10:19:35+02:00">[26-Aug-2009]</abbr>
@@ -301,7 +301,7 @@ site_header("News Archive - 2009", ["cache" => true]);
 
 <hr>
 <div class="newsItem hentry vevent">
-    <div class="newsImage"><?php news_image("http://conference.phpnw.org.uk/", "phpnw09_blk_300x110.png", "PHP NW 2009"); ?></div>
+    <div class="newsImage"><?php news_image('http://conference.phpnw.org.uk/', 'phpnw09_blk_300x110.png', 'PHP NW 2009'); ?></div>
     <h1 class="summary entry-title"><a id="id2009-07-21-1" href="http://conference.phpnw.org.uk/" rel="bookmark" class="bookmark">PHP North West Conference</a></h1>
     <div class="entry-content description">
         <abbr class="published newsdate" title="2009-07-21T15:37:06-07:00">[21-Jul-2009]</abbr>
@@ -466,7 +466,7 @@ site_header("News Archive - 2009", ["cache" => true]);
 
 <hr>
 <div class="newsItem hentry vevent">
-    <div class="newsImage"><?php news_image("http://www.phprio.org/phpnrio09", "phpnrio09.png", "PHP Rio"); ?></div>
+    <div class="newsImage"><?php news_image('http://www.phprio.org/phpnrio09', 'phpnrio09.png', 'PHP Rio'); ?></div>
     <h1 class="summary entry-title"><a id="id2009-06-21-1" href="http://www.php.net/archive/2009.php#id2009-06-21-1" rel="bookmark" class="bookmark">PHP'n Rio conference</a></h1>
     <div class="entry-content description">
         <abbr class="published newsdate" title="2009-06-21T10:45:52-07:00">[21-Jun-2009]</abbr>
@@ -572,7 +572,7 @@ site_header("News Archive - 2009", ["cache" => true]);
 
 <hr>
 <div class="newsItem hentry vevent">
-    <div class="newsImage"><?php news_image("http://cw.mtacon.com/", "codeworks2009.png", "CodeWorks Conference"); ?></div>
+    <div class="newsImage"><?php news_image('http://cw.mtacon.com/', 'codeworks2009.png', 'CodeWorks Conference'); ?></div>
     <h1 class="summary entry-title"><a id="id2009-06-03-1" href="http://cw.mtacon.com/" rel="bookmark" class="bookmark">CodeWorks Conference</a></h1>
     <div class="entry-content description">
         <abbr class="published newsdate" title="2009-06-03T14:01:20+02:00">[03-Jun-2009]</abbr>
@@ -600,7 +600,7 @@ site_header("News Archive - 2009", ["cache" => true]);
 
 <hr>
 <div class="newsItem hentry vevent">
-    <div class="newsImage"><?php news_image("http://www.afup.org/", "forumphp2009.jpg", "Forum PHP Paris"); ?></div>
+    <div class="newsImage"><?php news_image('http://www.afup.org/', 'forumphp2009.jpg', 'Forum PHP Paris'); ?></div>
     <h1 class="summary entry-title"><a id="id2009-05-29-1" href="http://www.afup.org/" rel="bookmark" class="bookmark">Forum PHP Paris 2009</a></h1>
     <div class="entry-content description">
         <abbr class="published newsdate" title="2009-05-29T11:47:20+02:00">[29-May-2009]</abbr>
@@ -705,7 +705,7 @@ site_header("News Archive - 2009", ["cache" => true]);
 
 <hr>
 <div class="newsItem hentry vevent">
-    <div class="newsImage"><?php news_image("http://www.phpday.it/", "phpday-it-2009.png", "phpDay Italy"); ?></div>
+    <div class="newsImage"><?php news_image('http://www.phpday.it/', 'phpday-it-2009.png', 'phpDay Italy'); ?></div>
     <h1 class="summary entry-title"><a id="id2009-04-17-1" href="http://www.phpday.it/" rel="bookmark" class="bookmark">phpDay Italy</a></h1>
     <div class="entry-content description">
         <abbr class="published newsdate" title="2009-04-17T11:42:32+02:00">[17-Apr-2009]</abbr>
@@ -760,7 +760,7 @@ site_header("News Archive - 2009", ["cache" => true]);
 
 <hr>
 <div class="newsItem hentry vevent">
-    <div class="newsImage"><?php news_image("http://phpconference.nl/", "dpc09_banner.jpg", "DPC09"); ?></div>
+    <div class="newsImage"><?php news_image('http://phpconference.nl/', 'dpc09_banner.jpg', 'DPC09'); ?></div>
     <h1 class="summary entry-title"><a id="id2009-04-06-1" href="http://phpconference.nl/" rel="bookmark" class="bookmark">DPC09</a></h1>
     <div class="entry-content description">
         <abbr class="published newsdate" title="2009-04-06T21:36:59+02:00">[06-Apr-2009]</abbr>

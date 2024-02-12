@@ -15,8 +15,8 @@ function highlight_php($code, $return = false)
     $highlighted = highlight_string($code, true);
 
     // Use this ugly hack for now to avoid code snippets with bad syntax screwing up the highlighter
-    if (strstr($highlighted, "include/layout.inc</b>")) {
-        $highlighted = '<span class="html">' . nl2br(htmlentities($code, ENT_HTML5), false) . "</span>";
+    if (strstr($highlighted, 'include/layout.inc</b>')) {
+        $highlighted = '<span class="html">' . nl2br(htmlentities($code, ENT_HTML5), false) . '</span>';
     }
 
     // Fix output to use CSS classes and wrap well
@@ -78,7 +78,7 @@ function make_image($file, $alt = false, $align = false, $extras = false,
 
     // Convert right or left alignment to CSS float,
     // but leave other alignments intact (for now)
-    if (in_array($align, ["right", "left"], true)) {
+    if (in_array($align, ['right', 'left'], true)) {
         $align = ' style="float: ' . $align . ';"';
     } elseif ($align) {
         $align = ' align="' . $align . '"';
@@ -108,7 +108,7 @@ function print_image($file, $alt = false, $align = false, $extras = false,
 // image from the news dir with an alt and an URL)
 function news_image($URL, $image, $alt, $print = true)
 {
-    $str = "<a href=\"$URL\">" . make_image("news/$image", $alt, "right") . "</a>";
+    $str = "<a href=\"$URL\">" . make_image("news/$image", $alt, 'right') . '</a>';
     if ($print) {
         echo $str;
     }
@@ -136,18 +136,18 @@ function make_submit($file, $alt = false, $align = false, $extras = false,
 // Return a hiperlink to something within the site
 function make_link(string $url, string $linktext = ''): string
 {
-    return sprintf("<a href=\"%s\">%s</a>", $url, $linktext ?: $url);
+    return sprintf('<a href="%s">%s</a>', $url, $linktext ?: $url);
 }
 
 // make_popup_link()
 // return a hyperlink to something, within the site, that pops up a new window
 //
-function make_popup_link($url, $linktext = false, $target = false, $windowprops = "", $extras = false) {
+function make_popup_link($url, $linktext = false, $target = false, $windowprops = '', $extras = false) {
     return sprintf("<a href=\"%s\" target=\"%s\" onclick=\"window.open('%s','%s','%s');return false;\"%s>%s</a>",
         htmlspecialchars($url, ENT_QUOTES | ENT_IGNORE),
-        ($target ?: "_new"),
+        ($target ?: '_new'),
         htmlspecialchars($url, ENT_QUOTES | ENT_IGNORE),
-        ($target ?: "_new"),
+        ($target ?: '_new'),
                 $windowprops,
         ($extras ? ' ' . $extras : ''),
         ($linktext ?: $url),
@@ -157,22 +157,22 @@ function make_popup_link($url, $linktext = false, $target = false, $windowprops 
 // Print a link for a downloadable file (including filesize)
 function download_link($file, $title): void
 {
-    $download_link = "/distributions/" . $file;
+    $download_link = '/distributions/' . $file;
 
     // Print out the download link
     echo make_link($download_link, $title);
 
     // We have a full path or a relative to the distributions dir
-    if ($tmp = strrchr($file, "/")) {
+    if ($tmp = strrchr($file, '/')) {
         $local_file = substr($tmp, 1, strlen($tmp));
     } else {
         $local_file = "distributions/$file";
     }
 
-    if (@file_exists($local_file . ".asc")) {
-        echo " ";
+    if (@file_exists($local_file . '.asc')) {
+        echo ' ';
         $sig_link = "/distributions/$file.asc";
-        echo make_link($sig_link, "(sig)");
+        echo make_link($sig_link, '(sig)');
     }
 
     // Try to get the size of the file
@@ -213,11 +213,11 @@ function display_errors($errors): void
 {
     echo '<div class="errors">';
     if (count($errors) > 1) {
-        echo "You need to do the following before your submission will be accepted:<ul>";
+        echo 'You need to do the following before your submission will be accepted:<ul>';
         foreach ($errors as $error) {
             echo "<li>$error</li>\n";
         }
-        echo "</ul>";
+        echo '</ul>';
     }
     else {
         echo $errors[0];
@@ -269,39 +269,39 @@ function display_event($event, $include_date = 1): void
 
     // Print out date if needed
     if ($include_date && (isset($event['start']))) {
-        echo "<b>", date("F j, Y", $sday), "</b>\n";
+        echo '<b>', date('F j, Y', $sday), "</b>\n";
     }
 
     // Print link in case we have one
     if ($event['url']) { echo '<a href="', htmlentities($event['url'], ENT_QUOTES | ENT_IGNORE, 'UTF-8'),'" class="url">'; }
     // Print event description
-    echo "<b class='summary'>", stripslashes(htmlentities($event['sdesc'], ENT_QUOTES | ENT_IGNORE, 'UTF-8')), "</b>";
+    echo "<b class='summary'>", stripslashes(htmlentities($event['sdesc'], ENT_QUOTES | ENT_IGNORE, 'UTF-8')), '</b>';
     // End link
-    if ($event['url']) { echo "</a>"; }
+    if ($event['url']) { echo '</a>'; }
 
     // Print extra date info for recurring and multiday events
     switch ($event['type']) {
         case 2:
         case 'multi':
-            $dtend = date("Y-m-d", strtotime("+1 day", $eday));
-            echo " (<abbr class='dtstart'>", date("Y-m-d",$sday), "</abbr> to <abbr class='dtend' title='$dtend'>", date("Y-m-d",$eday), "</abbr>)";
+            $dtend = date('Y-m-d', strtotime('+1 day', $eday));
+            echo " (<abbr class='dtstart'>", date('Y-m-d',$sday), "</abbr> to <abbr class='dtend' title='$dtend'>", date('Y-m-d',$eday), '</abbr>)';
             break;
         case 3:
         case 'recur':
-            $days = $re[$event['recur']] . " " . $days[$event['recur_day']];
+            $days = $re[$event['recur']] . ' ' . $days[$event['recur_day']];
             if (!$cm || $cy) {
-                $cm = date("m");
-                $cy = date("Y");
+                $cm = date('m');
+                $cy = date('Y');
             }
-            $month = date("M", mktime(0, 0, 0, $cm, 1, $cy));
-            $dtstart = date("Y-m-d", strtotime($days . ' 0st' . $month . ' ' . $cy));
-            echo ' (Every <abbr class="dtstart" title="' . $dtstart . '">', $days, "</abbr> of the month)";
+            $month = date('M', mktime(0, 0, 0, $cm, 1, $cy));
+            $dtstart = date('Y-m-d', strtotime($days . ' 0st' . $month . ' ' . $cy));
+            echo ' (Every <abbr class="dtstart" title="' . $dtstart . '">', $days, '</abbr> of the month)';
             break;
     }
 
     // Event category
     if (isset($event['category']) && $event['category']) {
-        $cat = ["unknown", "User Group Event", "Conference", "Training"];
+        $cat = ['unknown', 'User Group Event', 'Conference', 'Training'];
         echo ' [' . $cat[$event['category']] . '] ';
     }
 
@@ -313,7 +313,7 @@ function display_event($event, $include_date = 1): void
 <?php
 
     // Print long description
-    echo preg_replace("/\r?\n\r?\n/", "<br><br>", trim(htmlentities($event['ldesc'],ENT_QUOTES | ENT_IGNORE, 'UTF-8')));
+    echo preg_replace("/\r?\n\r?\n/", '<br><br>', trim(htmlentities($event['ldesc'],ENT_QUOTES | ENT_IGNORE, 'UTF-8')));
     // If we have an URL, print it out
     if ($event['url']) {
         echo '<br><br><b>URL:</b> ',
@@ -334,9 +334,9 @@ function news_archive_sidebar(): void
 <h3 class="announcements">Archives by year</h3>
 
 ';
-    for ($i = date("Y"); $i >= 1998; $i--) {
+    for ($i = date('Y'); $i >= 1998; $i--) {
         $pagename = "archive/$i.php";
-        $classname = ($pagename == $_SERVER['BASE_PAGE'] ? " active" : '');
+        $classname = ($pagename == $_SERVER['BASE_PAGE'] ? ' active' : '');
         $SIDEBAR_DATA .= "<p class='panel{$classname}'><a href=\"/{$pagename}\">{$i}</a></p>\n";
     }
 }
@@ -351,8 +351,8 @@ function print_news($news, $dog, $max = 5, $onlyyear = null, $return = false) {
 
         // Only print entries in the provided s/dog/cat/ egory
         // If $dog is null, everything matches
-        foreach ($item["category"] as $category) {
-            if (null === $dog || in_array($category["term"], (array)$dog, true)) {
+        foreach ($item['category'] as $category) {
+            if (null === $dog || in_array($category['term'], (array)$dog, true)) {
                 $ok = true;
                 $count++;
                 break;
@@ -365,39 +365,39 @@ function print_news($news, $dog, $max = 5, $onlyyear = null, $return = false) {
             continue;
         }
 
-        $image = "";
-        if (isset($item["newsImage"])) {
-            $image = news_image($item["newsImage"]["link"], $item["newsImage"]["content"], $item["newsImage"]["title"], false);
+        $image = '';
+        if (isset($item['newsImage'])) {
+            $image = news_image($item['newsImage']['link'], $item['newsImage']['content'], $item['newsImage']['title'], false);
         }
 
-        $id = parse_url($item["id"]);
-        $id = $id["fragment"];
+        $id = parse_url($item['id']);
+        $id = $id['fragment'];
 
         // Find the permlink
-        foreach ($item["link"] as $link) {
-            if ($link["rel"] === "via") {
-                $permlink = $link["href"];
+        foreach ($item['link'] as $link) {
+            if ($link['rel'] === 'via') {
+                $permlink = $link['href'];
                 break;
             }
         }
         if (!isset($permlink)) {
-            $permlink = "#" . $id;
+            $permlink = '#' . $id;
         }
 
-        $published = substr($item["published"], 0, 10);
+        $published = substr($item['published'], 0, 10);
         $nixtimestamp = strtotime($published);
-        $newsdate = date("d M Y", $nixtimestamp);
-        if ($onlyyear && date("Y", $nixtimestamp) != $onlyyear) {
+        $newsdate = date('d M Y', $nixtimestamp);
+        if ($onlyyear && date('Y', $nixtimestamp) != $onlyyear) {
             $count--;
             continue;
         }
 
         if ($return) {
             $retval[] = [
-                "title" => $item["title"],
-                "id" => $id,
-                "permlink" => $permlink,
-                "date" => $newsdate,
+                'title' => $item['title'],
+                'id' => $id,
+                'permlink' => $permlink,
+                'date' => $newsdate,
             ];
             continue;
         }
@@ -406,11 +406,11 @@ function print_news($news, $dog, $max = 5, $onlyyear = null, $return = false) {
 <article class="newsItem">
   <header>
     <div class="newsImage">{$image}</div>
-    <h2 class="newstitle"><a id="{$id}" href="{$permlink}" rel="bookmark" class="bookmark">{$item["title"]}</a></h2>
+    <h2 class="newstitle"><a id="{$id}" href="{$permlink}" rel="bookmark" class="bookmark">{$item['title']}</a></h2>
   </header>
-  <time class="newsdate" datetime="{$item["published"]}">{$newsdate}</time>
+  <time class="newsdate" datetime="{$item['published']}">{$newsdate}</time>
   <div class="newscontent">
-    {$item["content"]}
+    {$item['content']}
   </div>
 </article>
 
@@ -425,60 +425,60 @@ function site_header(string $title = 'Hypertext Preprocessor', array $config = [
     global $MYSITE;
 
     $defaults = [
-        "lang" => myphpnet_language(),
-        "current" => "",
-        "meta-navigation" => [],
+        'lang' => myphpnet_language(),
+        'current' => '',
+        'meta-navigation' => [],
         'classes' => '',
         'layout_span' => 9,
-        "cache" => false,
-        "headsup" => "",
+        'cache' => false,
+        'headsup' => '',
     ];
 
     $config = array_merge($defaults, $config);
 
-    $config["headsup"] = get_news_changes();
+    $config['headsup'] = get_news_changes();
 
-    $lang = language_convert($config["lang"]);
-    $curr = $config["current"];
+    $lang = language_convert($config['lang']);
+    $curr = $config['current'];
     $classes = $config['classes'];
 
-    if (isset($_COOKIE["MD"]) || isset($_GET["MD"])) {
-        $classes .= "markdown-content";
-        $config["css_overwrite"] = ["/styles/i-love-markdown.css"];
+    if (isset($_COOKIE['MD']) || isset($_GET['MD'])) {
+        $classes .= 'markdown-content';
+        $config['css_overwrite'] = ['/styles/i-love-markdown.css'];
     }
 
     // shorturl; http://wiki.snaplog.com/short_url
-    if (isset($_SERVER['BASE_PAGE']) && $shortname = get_shortname($_SERVER["BASE_PAGE"])) {
-        $shorturl = "https://www.php.net/" . $shortname;
+    if (isset($_SERVER['BASE_PAGE']) && $shortname = get_shortname($_SERVER['BASE_PAGE'])) {
+        $shorturl = 'https://www.php.net/' . $shortname;
     }
 
-    require __DIR__ . "/header.inc";
+    require __DIR__ . '/header.inc';
 }
 function site_footer(array $config = []): void
 {
-    require __DIR__ . "/footer.inc";
+    require __DIR__ . '/footer.inc';
 }
 
 function get_news_changes()
 {
-    include __DIR__ . "/pregen-news.inc";
-    $date = date_create($NEWS_ENTRIES[0]["updated"]);
-    if (isset($_COOKIE["LAST_NEWS"]) && $_COOKIE["LAST_NEWS"] >= $date->getTimestamp()) {
+    include __DIR__ . '/pregen-news.inc';
+    $date = date_create($NEWS_ENTRIES[0]['updated']);
+    if (isset($_COOKIE['LAST_NEWS']) && $_COOKIE['LAST_NEWS'] >= $date->getTimestamp()) {
         return false;
     }
 
     /* It is a bug when this happens.. but I don't know where it is coming from */
-    if (!isset($_SERVER["BASE_PAGE"])) {
+    if (!isset($_SERVER['BASE_PAGE'])) {
         return false;
     }
-    if ($_SERVER["BASE_PAGE"] == "index.php") {
+    if ($_SERVER['BASE_PAGE'] == 'index.php') {
         return false;
     }
 
-    $date->modify("+1 week");
-    if ($date->getTimestamp() > $_SERVER["REQUEST_TIME"]) {
-        $link = preg_replace('~^(http://php.net/|https://www.php.net/)~', '/', $NEWS_ENTRIES[0]["link"][0]["href"]);
-        $title = $NEWS_ENTRIES[0]["title"];
+    $date->modify('+1 week');
+    if ($date->getTimestamp() > $_SERVER['REQUEST_TIME']) {
+        $link = preg_replace('~^(http://php.net/|https://www.php.net/)~', '/', $NEWS_ENTRIES[0]['link'][0]['href']);
+        $title = $NEWS_ENTRIES[0]['title'];
         return "<a href='{$link}'>{$title}</a>";
     }
     return false;
@@ -487,27 +487,27 @@ function get_news_changes()
 function doc_toc($lang): void {
     $file = __DIR__ . "/../manual/$lang/toc/index.inc";
     if (!file_exists($file)) {
-        $lang = "en"; // Fallback on english if the translation doesn't exist
-        $file = __DIR__ . "/../manual/en/toc/index.inc";
+        $lang = 'en'; // Fallback on english if the translation doesn't exist
+        $file = __DIR__ . '/../manual/en/toc/index.inc';
     }
     require __DIR__ . "/../manual/$lang/toc/index.inc";
 
     echo "<dl>\n";
-    doc_toc_list($lang, $TOC, "getting-started");
-    doc_toc_list($lang, $TOC, "langref");
+    doc_toc_list($lang, $TOC, 'getting-started');
+    doc_toc_list($lang, $TOC, 'langref');
     echo "</dl>\n";
 
     echo "<dl>\n";
-    doc_toc_list($lang, $TOC, "security");
-    doc_toc_list($lang, $TOC, "features");
+    doc_toc_list($lang, $TOC, 'security');
+    doc_toc_list($lang, $TOC, 'features');
     echo "</dl>\n";
 
     echo "<dl>\n";
-    doc_toc_list($lang, $TOC, "funcref");
+    doc_toc_list($lang, $TOC, 'funcref');
     echo "</dl>\n";
 
     echo "<dl>\n";
-    echo "<dt>Keyboard Shortcuts</dt>";
+    echo '<dt>Keyboard Shortcuts</dt>';
     echo "<dt>?</dt>\n";
     echo "<dd>This help</dd>\n";
     echo "<dt>j</dt>\n";
@@ -528,7 +528,7 @@ function doc_toc($lang): void {
     echo "<dd>Goto search<br>(current page)</dd>\n";
     echo "<dt>/</dt>\n";
     echo "<dd>Focus search box</dd>\n";
-    echo "</dl>";
+    echo '</dl>';
 
 }
 function doc_toc_list($lang, $index, $file): void {
@@ -539,7 +539,7 @@ function doc_toc_list($lang, $index, $file): void {
         echo "\t<dd><a href='/manual/$lang/{$entry[0]}'>{$entry[1]}</a></dd>\n";
     }
 }
-function doc_toc_title($lang, $index, $file, $elm = "dt"): void {
+function doc_toc_title($lang, $index, $file, $elm = 'dt'): void {
     foreach ($index as $entry) {
         if ($entry[0] == "$file.php") {
             $link = $entry[0];

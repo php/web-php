@@ -2,20 +2,20 @@
 
 include_once __DIR__ . '/../include/prepend.inc';
 
-$now = $_SERVER["REQUEST_TIME"];
-if (isset($_SERVER["HTTP_IF_MODIFIED_SINCE"])) {
-    $last = strtotime($_SERVER["HTTP_IF_MODIFIED_SINCE"]);
+$now = $_SERVER['REQUEST_TIME'];
+if (isset($_SERVER['HTTP_IF_MODIFIED_SINCE'])) {
+    $last = strtotime($_SERVER['HTTP_IF_MODIFIED_SINCE']);
 
     /* Use the same logo for a day */
-    if (strtotime("+1 day", $last) > $now) {
-        header("HTTP/1.1 304 Not Modified");
+    if (strtotime('+1 day', $last) > $now) {
+        header('HTTP/1.1 304 Not Modified');
         exit;
     }
 }
-$future = strtotime("+1 day", $now);
-$tsstring = gmdate("D, d M Y H:i:s ", $now) . "GMT";
-header("Last-Modified: " . $tsstring);
-header("Expires: " . date(DATE_RSS, $future));
+$future = strtotime('+1 day', $now);
+$tsstring = gmdate('D, d M Y H:i:s ', $now) . 'GMT';
+header('Last-Modified: ' . $tsstring);
+header('Expires: ' . date(DATE_RSS, $future));
 
 /*
 
@@ -54,7 +54,7 @@ $photos = json_decode($json, true);
 if (!$photos || !is_array($photos)) {
     header('HTTP/1.1 500', true, 500);
     echo json_encode([
-        'error' => "No elephpant metadata available.",
+        'error' => 'No elephpant metadata available.',
     ]);
     exit;
 }
@@ -79,7 +79,7 @@ foreach ($photos as $photo) {
     // add photo to response array.
     $elephpants[] = [
         'title' => $photo['title'],
-        'url' => "http://flickr.com/photos/" . $photo['owner'] . "/" . $photo['id'],
+        'url' => 'http://flickr.com/photos/' . $photo['owner'] . '/' . $photo['id'],
         'data' => base64_encode(file_get_contents($path . '/' . $photo['filename'])),
     ];
 }

@@ -15,14 +15,14 @@ $credits = preg_replace('!<style.*?>.*</style>!ims', '', $m[1]);
 // Fix for PHP bug #24839,
 // which affects the page layout
 $credits = str_replace(
-    ["</center>", "& "],
-    ["</div>", "&amp; "],
+    ['</center>', '& '],
+    ['</div>', '&amp; '],
     $credits,
 );
 
 // If there is something left, print it out
 if ($credits) {
-    site_header("Credits", ["current" => "community", 'css' => ['credits.css']]);
+    site_header('Credits', ['current' => 'community', 'css' => ['credits.css']]);
     echo $credits;
     site_footer();
 }

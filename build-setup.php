@@ -13,7 +13,7 @@ $SIDEBAR_DATA = '
 </div>
 ';
 
-site_header("Operating System Preparation", ["current" => "community"]);
+site_header('Operating System Preparation', ['current' => 'community']);
 
 ?>
 <h2 id="os-prep" class="content-header">Operating System Preparation</h2>

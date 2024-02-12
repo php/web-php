@@ -23,29 +23,29 @@ $timestamps = [@getlastmod()];
    the display of the index page). The cost of stat'ing
    them all is prohibitive.
 */
-$timestamps[] = @filemtime("include/prepend.inc");
+$timestamps[] = @filemtime('include/prepend.inc');
 
 // These are the only dynamic parts of the frontpage
-$timestamps[] = @filemtime("include/pregen-confs.inc");
-$timestamps[] = @filemtime("include/pregen-news.inc");
-$timestamps[] = @filemtime("include/version.inc");
-$timestamps[] = @filemtime("js/common.js");
+$timestamps[] = @filemtime('include/pregen-confs.inc');
+$timestamps[] = @filemtime('include/pregen-news.inc');
+$timestamps[] = @filemtime('include/version.inc');
+$timestamps[] = @filemtime('js/common.js');
 
 // The latest of these modification dates is our real Last-Modified date
 $timestamp = max($timestamps);
 
 // Note that this is not a RFC 822 date (the tz is always GMT)
-$tsstring = gmdate("D, d M Y H:i:s ", $timestamp) . "GMT";
+$tsstring = gmdate('D, d M Y H:i:s ', $timestamp) . 'GMT';
 
 // Check if the client has the same page cached
-if (isset($_SERVER["HTTP_IF_MODIFIED_SINCE"]) &&
-    ($_SERVER["HTTP_IF_MODIFIED_SINCE"] == $tsstring)) {
-    header("HTTP/1.1 304 Not Modified");
+if (isset($_SERVER['HTTP_IF_MODIFIED_SINCE']) &&
+    ($_SERVER['HTTP_IF_MODIFIED_SINCE'] == $tsstring)) {
+    header('HTTP/1.1 304 Not Modified');
     exit();
 }
 
 // Inform the user agent what is our last modification date
-header("Last-Modified: " . $tsstring);
+header('Last-Modified: ' . $tsstring);
 
 $_SERVER['BASE_PAGE'] = 'index.php';
 include_once 'include/prepend.inc';
@@ -54,13 +54,13 @@ include_once 'include/pregen-confs.inc';
 include_once 'include/pregen-news.inc';
 include_once 'include/version.inc';
 
-mirror_setcookie("LAST_NEWS", $_SERVER["REQUEST_TIME"], 60 * 60 * 24 * 365);
+mirror_setcookie('LAST_NEWS', $_SERVER['REQUEST_TIME'], 60 * 60 * 24 * 365);
 
 $content = "<div class='home-content'>";
 $frontpage = [];
 foreach ($NEWS_ENTRIES as $entry) {
-    foreach ($entry["category"] as $category) {
-        if ($category["term"] == "frontpage") {
+    foreach ($entry['category'] as $category) {
+        if ($category['term'] == 'frontpage') {
             $frontpage[] = $entry;
             if (count($frontpage) >= 25) {
                 break 2;
@@ -69,8 +69,8 @@ foreach ($NEWS_ENTRIES as $entry) {
     }
 }
 foreach ($frontpage as $entry) {
-    $link = preg_replace('~^(http://php.net/|https://www.php.net/)~', '', $entry["id"]);
-    $id = parse_url($entry["id"], PHP_URL_FRAGMENT);
+    $link = preg_replace('~^(http://php.net/|https://www.php.net/)~', '', $entry['id']);
+    $id = parse_url($entry['id'], PHP_URL_FRAGMENT);
     $date = date_create($entry['updated']);
     $date_human = date_format($date, 'd M Y');
     $date_w3c = date_format($date, DATE_W3C);
@@ -79,17 +79,17 @@ foreach ($frontpage as $entry) {
   <header class="title">
     <time datetime="$date_w3c">$date_human</time>
     <h2 class="newstitle">
-      <a href="{$MYSITE}{$link}" id="{$id}">{$entry["title"]}</a>
+      <a href="{$MYSITE}{$link}" id="{$id}">{$entry['title']}</a>
     </h2>
   </header>
   <div class="newscontent">
-    {$entry["content"]}
+    {$entry['content']}
   </div>
 </article>
 NEWSENTRY;
 }
 $content .= '<p class="archive"><a href="/archive/">Older News Entries</a></p>';
-$content .= "</div>";
+$content .= '</div>';
 
 $intro = <<<EOF
   <div class="hero">
@@ -120,9 +120,9 @@ EOF;
 
 // Write out common header
 $meta_image_path = $MYSITE . 'images/meta-image.png';
-$meta_description = "PHP is a popular general-purpose scripting language that powers everything from your blog to the most popular websites in the world.";
+$meta_description = 'PHP is a popular general-purpose scripting language that powers everything from your blog to the most popular websites in the world.';
 
-site_header("Hypertext Preprocessor",
+site_header('Hypertext Preprocessor',
     [
         'current' => 'home',
         'headtags' => [
@@ -134,16 +134,16 @@ site_header("Hypertext Preprocessor",
         ],
         'link' => [
             [
-                "rel" => "search",
-                "type" => "application/opensearchdescription+xml",
-                "href" => $MYSITE . "phpnetimprovedsearch.src",
-                "title" => "Add PHP.net search",
+                'rel' => 'search',
+                'type' => 'application/opensearchdescription+xml',
+                'href' => $MYSITE . 'phpnetimprovedsearch.src',
+                'title' => 'Add PHP.net search',
             ],
             [
-                "rel" => "alternate",
-                "type" => "application/atom+xml",
-                "href" => $MYSITE . "releases/feed.php",
-                "title" => "PHP Release feed",
+                'rel' => 'alternate',
+                'type' => 'application/atom+xml',
+                'href' => $MYSITE . 'releases/feed.php',
+                'title' => 'PHP Release feed',
             ],
 
         ],
@@ -180,14 +180,14 @@ if (is_array($CONF_TEASER)) {
         'conference' => 'Upcoming conferences',
         'cfp' => 'Conferences calling for papers',
     ];
-    $announcements = "";
+    $announcements = '';
     foreach ($CONF_TEASER as $category => $entries) {
         if ($entries) {
             $announcements .= '<div class="panel">';
             $announcements .= '  <a href="/conferences" class="headline" title="' . $conftype[$category] . '">' . $conftype[$category] . '</a>';
             $announcements .= '<div class="body"><ul>';
             foreach (array_slice($entries, 0, 4) as $url => $title) {
-                $title = preg_replace("'([A-Za-z0-9])([\s:\-,]*?)call for(.*?)$'i", "$1", $title);
+                $title = preg_replace("'([A-Za-z0-9])([\s:\-,]*?)call for(.*?)$'i", '$1', $title);
                 $announcements .= "<li><a href='$url' title='$title'>$title</a></li>";
             }
             $announcements .= '</ul></div>';
@@ -234,7 +234,7 @@ SIDEBAR_DATA;
 
 // Print the common footer.
 site_footer([
-    "atom" => "/feed.atom", // Add a link to the feed at the bottom
+    'atom' => '/feed.atom', // Add a link to the feed at the bottom
     'elephpants' => true,
     'sidebar' => $SIDEBAR,
 ]);

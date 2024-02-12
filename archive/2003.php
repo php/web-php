@@ -2,7 +2,7 @@
 $_SERVER['BASE_PAGE'] = 'archive/2003.php';
 include_once __DIR__ . '/../include/prepend.inc';
 news_archive_sidebar();
-site_header("News Archive - 2003", ["cache" => true]);
+site_header('News Archive - 2003', ['cache' => true]);
 ?>
 
 <h1>News Archive - 2003</h1>
@@ -13,7 +13,7 @@ site_header("News Archive - 2003", ["cache" => true]);
 
 <hr>
 
-<?php news_image("http://vancouver.php.net/", "vancouver_conference_2004.gif", "Vancouver PHP Conference 2004"); ?>
+<?php news_image('http://vancouver.php.net/', 'vancouver_conference_2004.gif', 'Vancouver PHP Conference 2004'); ?>
 
 <h1>Vancouver PHP Conference 2004</h1>
 <p>
@@ -45,7 +45,7 @@ site_header("News Archive - 2003", ["cache" => true]);
 
 <hr>
 
-<?php news_image("http://www.php-mag.net/", "php-mag.gif", "International PHP Magazine"); ?>
+<?php news_image('http://www.php-mag.net/', 'php-mag.gif', 'International PHP Magazine'); ?>
 
 <h1>PHP Magazine in PDF Format</h1>
 <p>
@@ -61,7 +61,7 @@ site_header("News Archive - 2003", ["cache" => true]);
 
 <hr>
 
-<?php news_image("http://conf.phpquebec.org/index.html", "conference_php_quebec.gif", "Conference PHP Quebec"); ?>
+<?php news_image('http://conf.phpquebec.org/index.html', 'conference_php_quebec.gif', 'Conference PHP Quebec'); ?>
 
 <h1>First PHP dedicated DVD released!</h1>
 <p>
@@ -81,7 +81,7 @@ site_header("News Archive - 2003", ["cache" => true]);
 
 <hr>
 
-<?php news_image("http://mysql.com/events/uc2004", "mysqluc2004.png", "MySQL User Conference 2004"); ?>
+<?php news_image('http://mysql.com/events/uc2004', 'mysqluc2004.png', 'MySQL User Conference 2004'); ?>
 
 <h1>Call for Participation: MySQL User Conference 2004</h1>
 <p>
@@ -102,8 +102,8 @@ site_header("News Archive - 2003", ["cache" => true]);
 
 <hr>
 
-<?php news_image("http://www.phpconf.hu/", "hu_conf.gif", "Second Hungarian PHP conference"); ?>
-<?php news_image("http://webdevmagazine.co.uk/conf/index_n.php", "bulgaria_2004.gif", "First Bulgarian PHP conference"); ?>
+<?php news_image('http://www.phpconf.hu/', 'hu_conf.gif', 'Second Hungarian PHP conference'); ?>
+<?php news_image('http://webdevmagazine.co.uk/conf/index_n.php', 'bulgaria_2004.gif', 'First Bulgarian PHP conference'); ?>
 
 <h1>First Bulgarian and Second Hungarian PHP Conference</h1>
 <p>
@@ -124,7 +124,7 @@ site_header("News Archive - 2003", ["cache" => true]);
 
 <hr>
 
-<?php news_image("http://conf.phpquebec.org/index.html", "conference_php_quebec.gif", "Conference PHP Quebec"); ?>
+<?php news_image('http://conf.phpquebec.org/index.html', 'conference_php_quebec.gif', 'Conference PHP Quebec'); ?>
 
 <h1>Call for Speakers: PHP Qu&eacute;bec 2004</h1>
 <p>
@@ -224,7 +224,7 @@ site_header("News Archive - 2003", ["cache" => true]);
 
 <hr>
 
-<?php news_image("http://www.afup.org/forumphp/", "afup2003.png", "Forum PHP"); ?>
+<?php news_image('http://www.afup.org/forumphp/', 'afup2003.png', 'Forum PHP'); ?>
 
 <h1>Forum PHP in Paris, November 26 & 27th</h1>
 <p>
@@ -240,7 +240,7 @@ site_header("News Archive - 2003", ["cache" => true]);
 
 <hr>
 
-<?php news_image("http://www.directionphp.biz/", "directionphp.png", "Direction|PHP"); ?>
+<?php news_image('http://www.directionphp.biz/', 'directionphp.png', 'Direction|PHP'); ?>
 
 <h1>Monthly PHP Magazine in French launched!</h1>
 <p>
@@ -257,7 +257,7 @@ site_header("News Archive - 2003", ["cache" => true]);
 
 <hr>
 
-<?php news_image("http://www.apachecon.com/", "apachecon2003.jpg", "ApacheCon"); ?>
+<?php news_image('http://www.apachecon.com/', 'apachecon2003.jpg', 'ApacheCon'); ?>
 
 <h1>ApacheCon 2003, the Global Hub for All Things Apache</h1>
 <p>
@@ -274,7 +274,7 @@ site_header("News Archive - 2003", ["cache" => true]);
 
 <hr>
 
-<?php news_image("http://www.phpcruise.com/", "phpcruise.png", "php|cruise"); ?>
+<?php news_image('http://www.phpcruise.com/', 'phpcruise.png', 'php|cruise'); ?>
 
 <h1>php|cruise: The World's First Ever PHP-only Cruise</h1>
 <p>
@@ -293,7 +293,7 @@ site_header("News Archive - 2003", ["cache" => true]);
 
 <hr>
 
-<?php news_image("http://www.zend.com/zend/php_survey_results.php", "zendtech_logo.gif", "Zend Technologies"); ?>
+<?php news_image('http://www.zend.com/zend/php_survey_results.php', 'zendtech_logo.gif', 'Zend Technologies'); ?>
 
 <h1>PHP Usage Survey Results</h1>
 <p>
@@ -305,7 +305,7 @@ site_header("News Archive - 2003", ["cache" => true]);
 
 <hr>
 
-<?php news_image("http://weblabor.hu/php-doc-chm", "chmhelp.gif", "CHM"); ?>
+<?php news_image('http://weblabor.hu/php-doc-chm', 'chmhelp.gif', 'CHM'); ?>
 
 <h1>PHP Manual CHM Edition - 12th build</h1>
 <p>
@@ -321,7 +321,7 @@ site_header("News Archive - 2003", ["cache" => true]);
 
 <hr>
 
-<?php news_image("http://www.phpconference.de/2003/index_en.php", "international_conference_2003.gif", "International PHP Conference 2003"); ?>
+<?php news_image('http://www.phpconference.de/2003/index_en.php', 'international_conference_2003.gif', 'International PHP Conference 2003'); ?>
 
 <h1>International PHP Conference 2003 program online</h1>
 <p>
@@ -341,7 +341,7 @@ site_header("News Archive - 2003", ["cache" => true]);
 
 <hr>
 
-<?php news_image("http://servercentral.net", "server_central.gif", "Server Central"); ?>
+<?php news_image('http://servercentral.net', 'server_central.gif', 'Server Central'); ?>
 
 <h1>Server Central Donates Server</h1>
 <p>
@@ -368,7 +368,7 @@ site_header("News Archive - 2003", ["cache" => true]);
 
 <hr>
 
-<?php news_image("http://www.php-con.com", "phpcon_2003.gif", "php{con west 2003"); ?>
+<?php news_image('http://www.php-con.com', 'phpcon_2003.gif', 'php{con west 2003'); ?>
 
 <h1>php{con west is announced</h1>
 <p>
@@ -396,7 +396,7 @@ site_header("News Archive - 2003", ["cache" => true]);
 
 <hr>
 
-<?php news_image("http://www.ActiveState.com/Corporate/ActiveAwards/", "activestate_logo.gif", "ActiveState"); ?>
+<?php news_image('http://www.ActiveState.com/Corporate/ActiveAwards/', 'activestate_logo.gif', 'ActiveState'); ?>
 
 <h1>Active Awards 2003 Winners</h1>
 
@@ -450,7 +450,7 @@ site_header("News Archive - 2003", ["cache" => true]);
 
 <hr>
 
-<?php news_image("http://www.php-mag.net/", "php-mag.gif", "PHP Magazine"); ?>
+<?php news_image('http://www.php-mag.net/', 'php-mag.gif', 'PHP Magazine'); ?>
 
 <h1>PHP Magazine web site now with daily news</h1>
 
@@ -479,7 +479,7 @@ site_header("News Archive - 2003", ["cache" => true]);
 
 <hr>
 
-<?php news_image("http://www.phparch.com/", "phpa_logo_small.gif", "php|architect"); ?>
+<?php news_image('http://www.phparch.com/', 'phpa_logo_small.gif', 'php|architect'); ?>
 
 <h1>php|architect now in print</h1>
 
@@ -494,7 +494,7 @@ site_header("News Archive - 2003", ["cache" => true]);
 
 <hr>
 
-<?php news_image("http://www.linuxtag.org/2003/en/index.html", "linuxtag2003.gif", "LinuxTag"); ?>
+<?php news_image('http://www.linuxtag.org/2003/en/index.html', 'linuxtag2003.gif', 'LinuxTag'); ?>
 
 <h1>PHP @ LinuxTag</h1>
 <p>
@@ -558,7 +558,7 @@ site_header("News Archive - 2003", ["cache" => true]);
 
 <hr>
 
-<?php news_image("http://www.zend.com/survey/php_net.php", "zendtech_logo.gif", "Zend Technologies"); ?>
+<?php news_image('http://www.zend.com/survey/php_net.php', 'zendtech_logo.gif', 'Zend Technologies'); ?>
 
 <h1>PHP Usage Survey</h1>
 <p>
@@ -674,7 +674,7 @@ site_header("News Archive - 2003", ["cache" => true]);
 
 <hr>
 
-<?php news_image("http://phpconf.hu/", "hu_conf.gif", "PHPConf.hu"); ?>
+<?php news_image('http://phpconf.hu/', 'hu_conf.gif', 'PHPConf.hu'); ?>
 
 <h1>First Hungarian PHP Conference</h1>
 
@@ -709,7 +709,7 @@ site_header("News Archive - 2003", ["cache" => true]);
 
 <hr>
 
-<?php news_image("http://www.php-con.com/return.php?i=ph2", "phpcon_logo.png", "PHPCon East 2003"); ?>
+<?php news_image('http://www.php-con.com/return.php?i=ph2', 'phpcon_logo.png', 'PHPCon East 2003'); ?>
 
 <h1>PHPCon East 2003 - (April 23-25, 2003)</h1>
 <p>
@@ -733,7 +733,7 @@ site_header("News Archive - 2003", ["cache" => true]);
 
 <hr>
 
-<?php news_image("http://phpconf.phpquebec.org/index.php", "conference_php_quebec.gif", "Conference PHP Quebec"); ?>
+<?php news_image('http://phpconf.phpquebec.org/index.php', 'conference_php_quebec.gif', 'Conference PHP Quebec'); ?>
 
 <h1>Conf&eacute;rence PHP Qu&eacute;bec 2003 - (Montr&eacute;al, March 20&amp;21rst, 2003)</h1>
 <p>
@@ -758,7 +758,7 @@ site_header("News Archive - 2003", ["cache" => true]);
 
 <hr>
 
-<?php news_image("http://www.phpconference.com/", "international_conference_2003_spring.gif", "Int'l PHP Conference"); ?>
+<?php news_image('http://www.phpconference.com/', 'international_conference_2003_spring.gif', "Int'l PHP Conference"); ?>
 
 <h1>International PHP Conference 2003 - Spring Edition (Amsterdam, May 8-9)</h1>
 <p>

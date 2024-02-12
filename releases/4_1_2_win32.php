@@ -1,7 +1,7 @@
 <?php
 $_SERVER['BASE_PAGE'] = 'releases/4_1_2_win32.php';
 include_once __DIR__ . '/../include/prepend.inc';
-site_header("PHP 4.1.2 Windows (Win32) Release Announcement");
+site_header('PHP 4.1.2 Windows (Win32) Release Announcement');
 ?>
 
 <h1>PHP 4.1.2 Windows (Win32) Release Announcement</h1>

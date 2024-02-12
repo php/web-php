@@ -2,7 +2,7 @@
 $_SERVER['BASE_PAGE'] = 'archive/2002.php';
 include_once __DIR__ . '/../include/prepend.inc';
 news_archive_sidebar();
-site_header("News Archive - 2002", ["cache" => true]);
+site_header('News Archive - 2002', ['cache' => true]);
 ?>
 
 <h1>News Archive - 2002</h1>
@@ -44,7 +44,7 @@ site_header("News Archive - 2002", ["cache" => true]);
 
 <hr>
 
-<?php news_image("http://weblabor.hu/php-doc-chm", "chmhelp.gif", "CHM"); ?>
+<?php news_image('http://weblabor.hu/php-doc-chm', 'chmhelp.gif', 'CHM'); ?>
 
 <h1>New Release of the PHP Manual CHM Edition - Please Help Us</h1>
 <p>
@@ -66,7 +66,7 @@ site_header("News Archive - 2002", ["cache" => true]);
 
 <hr>
 
-<?php news_image("http://www.mysql.com/events/uc2003/", "mysqluc2003.png", "MySQL Users Conference and Expo 2003"); ?>
+<?php news_image('http://www.mysql.com/events/uc2003/', 'mysqluc2003.png', 'MySQL Users Conference and Expo 2003'); ?>
 
 <h1>MySQL Users Conference and Expo 2003 in San Jose</h1>
 <p>
@@ -97,7 +97,7 @@ site_header("News Archive - 2002", ["cache" => true]);
 
 <hr>
 
-<?php news_image("http://www.afup.org/", "afup-logo.gif", "AFUP"); ?>
+<?php news_image('http://www.afup.org/', 'afup-logo.gif', 'AFUP'); ?>
 
 <h1>Forum PHP 2002 in Paris, France</h1>
 <p>
@@ -210,7 +210,7 @@ site_header("News Archive - 2002", ["cache" => true]);
 
 <hr>
 
-<?php news_image("http://www.php-conference.de/2002/index_en.php", "phpconf2002.gif", "PHP Conference 2002"); ?>
+<?php news_image('http://www.php-conference.de/2002/index_en.php', 'phpconf2002.gif', 'PHP Conference 2002'); ?>
 
 <h1>International PHP Conference 2002 (Frankfurt, Nov 3-6)</h1>
 <p>
@@ -239,7 +239,7 @@ site_header("News Archive - 2002", ["cache" => true]);
 
 <hr>
 
-<?php news_image("http://www.php-con.com/", "phpcon2002.png", "PHPCon 2002"); ?>
+<?php news_image('http://www.php-con.com/', 'phpcon2002.png', 'PHPCon 2002'); ?>
 
 <h1>PHPCon 2002 (California, Oct 24-25)</h1>
 <p>
@@ -348,7 +348,7 @@ site_header("News Archive - 2002", ["cache" => true]);
 
 <hr>
 
-<?php print_image("news/engine.gif", "Zend Engine 2", "right"); ?>
+<?php print_image('news/engine.gif', 'Zend Engine 2', 'right'); ?>
 
 <h1>Alpha 2 of PHP w/ the Zend Engine 2 Now Available</h1>
 <p>
@@ -387,7 +387,7 @@ site_header("News Archive - 2002", ["cache" => true]);
 
 <hr>
 
-<?php news_image("http://www.linuxtag.org/2002/deutsch/showitem.php3?item=30&amp;lang=en", "linuxtag3.gif", "LinuxTag"); ?>
+<?php news_image('http://www.linuxtag.org/2002/deutsch/showitem.php3?item=30&amp;lang=en', 'linuxtag3.gif', 'LinuxTag'); ?>
 
 <h1>LinuxTag 2002: 6 - 9th June, Karlsruhe, Germany</h1>
 <p>
@@ -433,7 +433,7 @@ site_header("News Archive - 2002", ["cache" => true]);
 
 <hr>
 
-<?php news_image("http://www.php-award.net/", "phpaward_100.gif", "PHP Award"); ?>
+<?php news_image('http://www.php-award.net/', 'phpaward_100.gif', 'PHP Award'); ?>
 
 <h1>PHP Award 2002</h1>
 <p>
@@ -480,7 +480,7 @@ site_header("News Archive - 2002", ["cache" => true]);
 
 <hr>
 
-<?php news_image("http://weblabor.hu/php-doc-chm", "chmhelp.gif", "CHM"); ?>
+<?php news_image('http://weblabor.hu/php-doc-chm', 'chmhelp.gif', 'CHM'); ?>
 
 <h1>Fifth sample of 'PHP Manual CHM Edition'</h1>
 
@@ -500,7 +500,7 @@ site_header("News Archive - 2002", ["cache" => true]);
 
 <hr>
 
-<?php news_image("http://www.phpmag.de/", "phpmag.gif", "PHP Magazin"); ?>
+<?php news_image('http://www.phpmag.de/', 'phpmag.gif', 'PHP Magazin'); ?>
 
 <h1>PHP Magazin out now!</h1>
 <p>
@@ -527,7 +527,7 @@ site_header("News Archive - 2002", ["cache" => true]);
 
 <hr>
 
-<?php news_image("http://www.php-ev.de/documents/phpdoc/protocol.html", "brain.gif", "PHPDoc Brain"); ?>
+<?php news_image('http://www.php-ev.de/documents/phpdoc/protocol.html', 'brain.gif', 'PHPDoc Brain'); ?>
 
 <h1>PHP Documentation Team Meeting</h1>
 <p>
@@ -583,7 +583,7 @@ site_header("News Archive - 2002", ["cache" => true]);
 
 <hr>
 
-<?php news_image("http://www.phpconference.de/2001/index_en.php", "international_conference.gif", "International PHP Conference 2001"); ?>
+<?php news_image('http://www.phpconference.de/2001/index_en.php', 'international_conference.gif', 'International PHP Conference 2001'); ?>
 
 <h1>International PHP Conference slides available</h1>
 

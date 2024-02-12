@@ -14,14 +14,14 @@ const MIRROR_OUTDATED = 2;
 const MIRROR_DOESNOTWORK = 3;
 
 $MIRRORS = [
-    "https://www.php.net/" => [
-        "DEU",
-        "MyraCloud",
+    'https://www.php.net/' => [
+        'DEU',
+        'MyraCloud',
         false,
-        "https://myracloud.com/en/",
+        'https://myracloud.com/en/',
         MIRROR_SPECIAL,
         true,
-        "en",
+        'en',
         MIRROR_OK,
     ],
 ];
@@ -40,7 +40,7 @@ function is_primary_site($site = false)
 {
     global $MYSITE;
     if (!$site) { $site = $MYSITE; }
-    return ($site == "https://www.php.net/" );
+    return ($site == 'https://www.php.net/' );
 }
 
 // Returns true if the current (or specified)
@@ -120,7 +120,7 @@ function mirror_redirect($absoluteURI): void
 
     // Test if there is no protocol spec
     // in the URL, then prepend local site URI
-    if (!preg_match("!^[a-z]+://!", $absoluteURI)) {
+    if (!preg_match('!^[a-z]+://!', $absoluteURI)) {
         $absoluteURI = substr($MYSITE, 0, -1) . $absoluteURI;
     }
 
@@ -156,8 +156,8 @@ function header_nocache(): void
     // Only try to send out headers in case
     // those were not sent already
     if (!headers_sent()) {
-        header("Cache-Control: private");
-        header("Pragma: no-cache");
+        header('Cache-Control: private');
+        header('Pragma: no-cache');
     }
 }
 
@@ -190,9 +190,9 @@ function get_available_sqlites() {
 // Get all manual prefix search sections
 function get_manual_search_sections() {
     return [
-        "", "book.", "ref.", "function.", "class.",
-        "features.", "control-structures.", "language.",
-        "about.", "faq.",
+        '', 'book.', 'ref.', 'function.', 'class.',
+        'features.', 'control-structures.', 'language.',
+        'about.', 'faq.',
     ];
 }
 
@@ -201,18 +201,18 @@ function get_shortname($page) {
     $shorturl = substr($page, 0, -4);
 
     // If its a "root page", we can't shorten it more
-    if (strpos($shorturl, "/") === false) {
+    if (strpos($shorturl, '/') === false) {
         return $shorturl;
     }
 
     // Manual pages get be quite short
-    if (strpos($page, "manual/") !== false) {
+    if (strpos($page, 'manual/') !== false) {
         $sections = get_manual_search_sections();
         // Kill the first entry (empty)
         array_shift($sections);
 
         // We can atleast remove manual/xx/
-        $shorturl = substr($page, strrpos($page, "/") + 1);
+        $shorturl = substr($page, strrpos($page, '/') + 1);
 
         foreach ($sections as $section) {
             // If we know this section
@@ -227,8 +227,8 @@ function get_shortname($page) {
     }
 
     // /conferences/index.php can be shortened to /conferences
-    if (strpos($page, "conferences/") !== false) {
-        return "conferences";
+    if (strpos($page, 'conferences/') !== false) {
+        return 'conferences';
     }
 
     return $shorturl;
@@ -239,24 +239,24 @@ function get_shortname($page) {
 // it works under more then one name). SERVER_NAME is
 // the name of the Apache vhost.
 
-if (!isset($_SERVER["HTTPS"]) || $_SERVER["HTTPS"] != "on") {
-    $proto = "http";
+if (!isset($_SERVER['HTTPS']) || $_SERVER['HTTPS'] != 'on') {
+    $proto = 'http';
 } else {
-    $proto = "https";
+    $proto = 'https';
 }
 
-if ($_SERVER["SERVER_PORT"] != '80' && $_SERVER["SERVER_PORT"] != 443) {
-    $MYSITE = $proto . '://' . $_SERVER["SERVER_NAME"] . ':' . (int)$_SERVER["SERVER_PORT"] . '/';
-    $msite = 'http://' . $_SERVER["SERVER_NAME"] . ':' . (int)$_SERVER["SERVER_PORT"] . '/';
+if ($_SERVER['SERVER_PORT'] != '80' && $_SERVER['SERVER_PORT'] != 443) {
+    $MYSITE = $proto . '://' . $_SERVER['SERVER_NAME'] . ':' . (int)$_SERVER['SERVER_PORT'] . '/';
+    $msite = 'http://' . $_SERVER['SERVER_NAME'] . ':' . (int)$_SERVER['SERVER_PORT'] . '/';
 } else {
-    $MYSITE = $proto . '://' . $_SERVER["SERVER_NAME"] . '/';
-    $msite = 'https://' . $_SERVER["SERVER_NAME"] . '/';
+    $MYSITE = $proto . '://' . $_SERVER['SERVER_NAME'] . '/';
+    $msite = 'https://' . $_SERVER['SERVER_NAME'] . '/';
 }
 
 // If the mirror is not registered with this name, provide defaults
 // (no country code, no search, no stats, English default language ...)
 if (!isset($MIRRORS[$MYSITE])) {
-    $MIRRORS[$MYSITE] = ["xx", $MYSITE, false, $MYSITE, MIRROR_VIRTUAL, false, "en", MIRROR_OK];
+    $MIRRORS[$MYSITE] = ['xx', $MYSITE, false, $MYSITE, MIRROR_VIRTUAL, false, 'en', MIRROR_OK];
 }
 
 // Override mirror language with local preference
@@ -269,7 +269,7 @@ if (isset($_SERVER['MIRROR_LANGUAGE'])) {
 // Fallback to English in case the language
 // set is definitely not supported
 if (!isset($LANGUAGES[$MIRRORS[$MYSITE][6]])) {
-    $MIRRORS[$MYSITE][6] = "en";
+    $MIRRORS[$MYSITE][6] = 'en';
 }
 
 // Provide base href information to make relative links on

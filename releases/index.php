@@ -2,9 +2,9 @@
 
 $_SERVER['BASE_PAGE'] = 'releases/index.php';
 include_once __DIR__ . '/../include/prepend.inc';
-include_once __DIR__ . "/../include/branches.inc";
+include_once __DIR__ . '/../include/branches.inc';
 
-if (isset($_GET["serialize"]) || isset($_GET["json"])) {
+if (isset($_GET['serialize']) || isset($_GET['json'])) {
     $RELEASES = $RELEASES + $OLDRELEASES;
 
     $machineReadable = [];
@@ -14,8 +14,8 @@ if (isset($_GET["serialize"]) || isset($_GET["json"])) {
         $supportedVersions[$major] = array_keys($releases);
     }
 
-    if (isset($_GET["version"])) {
-        $versionArray = version_array($_GET["version"]);
+    if (isset($_GET['version'])) {
+        $versionArray = version_array($_GET['version']);
         $ver = $versionArray[0];
 
         if (isset($RELEASES[$ver])) {
@@ -44,27 +44,27 @@ if (isset($_GET["serialize"]) || isset($_GET["json"])) {
             if (!isset($_GET['max']) && !empty($machineReadable)) {
                 $version = key($machineReadable);
                 $machineReadable = current($machineReadable);
-                $machineReadable["version"] = $version;
+                $machineReadable['version'] = $version;
             }
         }
 
         if (empty($machineReadable)) {
-            $machineReadable = ["error" => "Unknown version"];
+            $machineReadable = ['error' => 'Unknown version'];
         }
     } else {
         foreach ($RELEASES as $major => $release) {
             $version = key($release);
             $r = current($release);
-            $r["version"] = $version;
+            $r['version'] = $version;
             $r['supported_versions'] = $supportedVersions[$major] ?? [];
             $machineReadable[$major] = $r;
         }
     }
 
-    if (isset($_GET["serialize"])) {
+    if (isset($_GET['serialize'])) {
         header('Content-type: text/plain');
         echo serialize($machineReadable);
-    } elseif (isset($_GET["json"])) {
+    } elseif (isset($_GET['json'])) {
         header('Content-Type: application/json');
         echo json_encode($machineReadable);
     }
@@ -72,7 +72,7 @@ if (isset($_GET["serialize"]) || isset($_GET["json"])) {
 }
 
 // Human Readable.
-site_header("Releases", [
+site_header('Releases', [
     'current' => 'downloads',
     'css' => '/styles/releases.css',
 ]);
@@ -93,7 +93,7 @@ foreach ($OLDRELEASES as $major => $a) {
     if (!in_array($major, $active_majors, false)) {
         echo "\n<br>\n";
         echo "<p>Support for PHP $major has been <b style=\"color: red;\">discontinued</b> ";
-        echo "since <b>" . current($a)['date'] . '</b>.';
+        echo 'since <b>' . current($a)['date'] . '</b>.';
         echo "Please consider upgrading to $latest.</p>\n";
     }
 
@@ -103,11 +103,11 @@ foreach ($OLDRELEASES as $major => $a) {
         mk_rel(
             $major,
             $ver,
-            $release["date"],
-            $release["announcement"] ?? false,
-            $release["source"] ?? [],
-            $release["windows"] ?? [],
-            $release["museum"] ?? ($i >= 3),
+            $release['date'],
+            $release['announcement'] ?? false,
+            $release['source'] ?? [],
+            $release['windows'] ?? [],
+            $release['museum'] ?? ($i >= 3),
         );
     }
 }
@@ -190,7 +190,7 @@ function mk_rel(int $major,
                 array $windows,
                 bool $museum): void {
     printf("<a id=\"%s\"></a>\n<h2>%1\$s</h2>\n<ul>\n <li>Released: %s</li>\n <li>Announcement: ",
-           ($pos = strpos($ver, " ")) ? substr($ver, 0, $pos) : $ver,
+           ($pos = strpos($ver, ' ')) ? substr($ver, 0, $pos) : $ver,
            $date);
 
     if ($announcement) {
@@ -199,11 +199,11 @@ function mk_rel(int $major,
                 echo "<a href=\"$url\">$ann</a> ";
             }
         } else {
-            $url = str_replace(".", "_", $ver);
+            $url = str_replace('.', '_', $ver);
             echo "<a href=\"/releases/{$url}.php\">English</a>";
         }
     } else {
-        echo "None";
+        echo 'None';
     }
     echo "</li>\n";
 
@@ -217,13 +217,13 @@ function mk_rel(int $major,
         foreach (array_merge($source, $windows) as $src) {
             echo " <li>\n";
             if (isset($src['filename'])) {
-                download_link($src["filename"], $src["name"]); echo "<br>\n";
+                download_link($src['filename'], $src['name']); echo "<br>\n";
                 $linebreak = '';
                 foreach (['md5', 'sha256'] as $cs) {
                     if (isset($src[$cs])) {
                         echo $linebreak;
                         echo "<span class=\"{$cs}sum\">{$cs}: {$src[$cs]}</span>\n";
-                        $linebreak = "<br/>";
+                        $linebreak = '<br/>';
                     }
                 }
             } else {
@@ -234,15 +234,15 @@ function mk_rel(int $major,
 
     } else { /* $museum */
         foreach ($source as $src) {
-            if (!isset($src["filename"])) {
+            if (!isset($src['filename'])) {
                 continue;
             }
             printf('<li><a href="http://museum.php.net/php%d/%s">%s</a></li>',
-                   $major, $src["filename"], $src["name"]);
+                   $major, $src['filename'], $src['name']);
         }
         foreach ($windows as $src) {
             printf('<li><a href="http://museum.php.net/%s/%s">%s</a></li>',
-                   ($major == 5 ? "php5" : "win32"), $src["filename"], $src["name"]);
+                   ($major == 5 ? 'php5' : 'win32'), $src['filename'], $src['name']);
         }
     }
 

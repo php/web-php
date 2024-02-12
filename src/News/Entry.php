@@ -11,7 +11,7 @@ class Entry
         'cfp' => 'Call for Papers',
     ];
 
-    public const WEBROOT = "https://www.php.net";
+    public const WEBROOT = 'https://www.php.net';
 
     public const PHPWEB = __DIR__ . '/../../';
 
@@ -106,56 +106,56 @@ class Entry
         }
 
         // Create the XML document.
-        $dom = new \DOMDocument("1.0", "utf-8");
+        $dom = new \DOMDocument('1.0', 'utf-8');
         $dom->formatOutput = true;
         $dom->preserveWhiteSpace = false;
-        $item = $dom->createElementNs("http://www.w3.org/2005/Atom", "entry");
+        $item = $dom->createElementNs('http://www.w3.org/2005/Atom', 'entry');
 
         $href = self::WEBROOT . ($this->isConference() ? '/conferences/index.php' : '/index.php');
-        $archive = self::WEBROOT . "/archive/" . date('Y', $_SERVER['REQUEST_TIME']) . ".php#{$this->id}";
+        $archive = self::WEBROOT . '/archive/' . date('Y', $_SERVER['REQUEST_TIME']) . ".php#{$this->id}";
         $link = ($this->image['link'] ?? null) ?: $archive;
 
-        self::ce($dom, "title", $this->title, [], $item);
-        self::ce($dom, "id", $archive, [], $item);
-        self::ce($dom, "published", date(DATE_ATOM), [], $item);
-        self::ce($dom, "updated", date(DATE_ATOM), [], $item);
-        self::ce($dom, "link", null, ['href' => "{$href}#{$this->id}", "rel" => "alternate", "type" => "text/html"], $item);
-        self::ce($dom, "link", null, ['href' => $link, 'rel' => 'via', 'type' => 'text/html'], $item);
+        self::ce($dom, 'title', $this->title, [], $item);
+        self::ce($dom, 'id', $archive, [], $item);
+        self::ce($dom, 'published', date(DATE_ATOM), [], $item);
+        self::ce($dom, 'updated', date(DATE_ATOM), [], $item);
+        self::ce($dom, 'link', null, ['href' => "{$href}#{$this->id}", 'rel' => 'alternate', 'type' => 'text/html'], $item);
+        self::ce($dom, 'link', null, ['href' => $link, 'rel' => 'via', 'type' => 'text/html'], $item);
 
         if (!empty($this->conf_time)) {
-            $item->appendChild($dom->createElementNs("http://php.net/ns/news", "finalTeaserDate", date("Y-m-d", $this->conf_time)));
+            $item->appendChild($dom->createElementNs('http://php.net/ns/news', 'finalTeaserDate', date('Y-m-d', $this->conf_time)));
         }
 
         foreach ($this->categories as $cat) {
-            self::ce($dom, "category", null, ['term' => $cat, "label" => self::CATEGORIES[$cat]], $item);
+            self::ce($dom, 'category', null, ['term' => $cat, 'label' => self::CATEGORIES[$cat]], $item);
         }
 
         if ($this->image['path'] ?? '') {
-            $image = $item->appendChild($dom->createElementNs("http://php.net/ns/news", "newsImage", $this->image['path']));
-            $image->setAttribute("link", $this->image['link']);
-            $image->setAttribute("title", $this->image['title']);
+            $image = $item->appendChild($dom->createElementNs('http://php.net/ns/news', 'newsImage', $this->image['path']));
+            $image->setAttribute('link', $this->image['link']);
+            $image->setAttribute('title', $this->image['title']);
         }
 
-        $content = self::ce($dom, "content", null, [], $item);
+        $content = self::ce($dom, 'content', null, [], $item);
 
         // Slurp content into our DOM.
-        $tdoc = new \DOMDocument("1.0", "utf-8");
+        $tdoc = new \DOMDocument('1.0', 'utf-8');
         $tdoc->formatOutput = true;
         if ($tdoc->loadXML("<div>{$this->content}    </div>")) {
-            $content->setAttribute("type", "xhtml");
-            $div = $content->appendChild($dom->createElement("div"));
-            $div->setAttribute("xmlns", "http://www.w3.org/1999/xhtml");
+            $content->setAttribute('type', 'xhtml');
+            $div = $content->appendChild($dom->createElement('div'));
+            $div->setAttribute('xmlns', 'http://www.w3.org/1999/xhtml');
             foreach ($tdoc->firstChild->childNodes as $node) {
                 $div->appendChild($dom->importNode($node, true));
             }
         } else {
-            fwrite(STDERR, "There is something wrong with your xhtml, falling back to html");
-            $content->setAttribute("type", "html");
+            fwrite(STDERR, 'There is something wrong with your xhtml, falling back to html');
+            $content->setAttribute('type', 'html');
             $content->nodeValue = $this->content;
         }
 
         $dom->appendChild($item);
-        $dom->save(self::ARCHIVE_ENTRIES_ABS . $this->id . ".xml");
+        $dom->save(self::ARCHIVE_ENTRIES_ABS . $this->id . '.xml');
 
         return $this;
     }
@@ -165,15 +165,15 @@ class Entry
             throw new \Exception('Entry must be saved before updating archive XML');
         }
 
-        $arch = new \DOMDocument("1.0", "utf-8");
+        $arch = new \DOMDocument('1.0', 'utf-8');
         $arch->formatOutput = true;
         $arch->preserveWhiteSpace = false;
         $arch->load(self::ARCHIVE_FILE_ABS);
 
-        $first = $arch->createElementNs("http://www.w3.org/2001/XInclude", "xi:include");
-        $first->setAttribute("href", "entries/{$this->id}.xml");
+        $first = $arch->createElementNs('http://www.w3.org/2001/XInclude', 'xi:include');
+        $first->setAttribute('href', "entries/{$this->id}.xml");
 
-        $second = $arch->getElementsByTagNameNs("http://www.w3.org/2001/XInclude", "include")->item(0);
+        $second = $arch->getElementsByTagNameNs('http://www.w3.org/2001/XInclude', 'include')->item(0);
         $arch->documentElement->insertBefore($first, $second);
         $arch->save(self::ARCHIVE_FILE_ABS);
 
@@ -181,11 +181,11 @@ class Entry
     }
 
     private static function selectNextId(): string {
-        $filename = date("Y-m-d", $_SERVER["REQUEST_TIME"]);
+        $filename = date('Y-m-d', $_SERVER['REQUEST_TIME']);
         $count = 0;
         do {
             $count++;
-            $id = $filename . "-" . $count;
+            $id = $filename . '-' . $count;
             $basename = "{$id}.xml";
         } while (file_exists(self::ARCHIVE_ENTRIES_ABS . $basename));
 

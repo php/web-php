@@ -30,11 +30,11 @@ function download_file($mirror, $file): void
         status_header(302);
         header('Location: ' . $mirror . 'distributions/' . $file);
     } else {
-        exit("Unable to serve you the requested file for download");
+        exit('Unable to serve you the requested file for download');
     }
 
     // Try to flush output, and make the browser really
     // download the file, even if the log server is down
-    echo " ";
+    echo ' ';
     flush();
 }

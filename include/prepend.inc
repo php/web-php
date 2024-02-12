@@ -8,57 +8,57 @@
 
 // Provide default content-type, charset and language information
 // Manual pages will override this, and maybe others too
-header("Content-language: en");
-header("Content-type: text/html; charset=utf-8");
+header('Content-language: en');
+header('Content-type: text/html; charset=utf-8');
 
 // Opt out of FLoC
-header("Permissions-Policy: interest-cohort=()");
+header('Permissions-Policy: interest-cohort=()');
 
 /* Fix Silly Same Origin Policies */
 (function (): void {
-    if (!isset($_SERVER["HTTP_ORIGIN"])) {
+    if (!isset($_SERVER['HTTP_ORIGIN'])) {
         return;
     }
 
-    $host = parse_url($_SERVER["HTTP_ORIGIN"]);
-    if (strncmp(strrev($host["host"]), strrev("php.net"), strlen("php.net")) != 0) {
-        if ($host["host"] != $_SERVER["SERVER_NAME"]) {
+    $host = parse_url($_SERVER['HTTP_ORIGIN']);
+    if (strncmp(strrev($host['host']), strrev('php.net'), strlen('php.net')) != 0) {
+        if ($host['host'] != $_SERVER['SERVER_NAME']) {
             exit(10);
         }
     }
-    if (isset($host["port"])) {
-        $hostname = $host["host"] . ":" . $host["port"];
+    if (isset($host['port'])) {
+        $hostname = $host['host'] . ':' . $host['port'];
     } else {
-        $hostname = $host["host"];
+        $hostname = $host['host'];
     }
 
     header("Access-Control-Allow-Origin: http://$hostname");
-    if (isset($_SERVER["HTTP_ACCESS_CONTROL_REQUEST_HEADERS"])) {
-        $headers = $_SERVER["HTTP_ACCESS_CONTROL_REQUEST_HEADERS"];
-        $headers = str_replace(["\r", "\n", "\0"], "", $headers);
+    if (isset($_SERVER['HTTP_ACCESS_CONTROL_REQUEST_HEADERS'])) {
+        $headers = $_SERVER['HTTP_ACCESS_CONTROL_REQUEST_HEADERS'];
+        $headers = str_replace(["\r", "\n", "\0"], '', $headers);
         header("Access-Control-Allow-Headers: $headers");
     }
 })();
 
 /* Clickjacking workaround. Nothing should be in a frame so it could technically be 'deny'
  * but it doesn't make any difference anyway */
-header("X-Frame-Options: SAMEORIGIN");
+header('X-Frame-Options: SAMEORIGIN');
 
 // Be 100% sure the timezone is set
-if (ini_get("date.timezone") === "" && function_exists("date_default_timezone_set")) {
-    date_default_timezone_set("UTC");
+if (ini_get('date.timezone') === '' && function_exists('date_default_timezone_set')) {
+    date_default_timezone_set('UTC');
 }
 
 /* Compatibility with the PHP webserver.. */
-if (!isset($_SERVER["SERVER_ADDR"])) {
-    $_SERVER["SERVER_ADDR"] = "127.0.0.1";
+if (!isset($_SERVER['SERVER_ADDR'])) {
+    $_SERVER['SERVER_ADDR'] = '127.0.0.1';
 }
 
 // As of PHP 5.3.0 multibyte sequence errors are no longer
 // silent. Prior to that version this bitfield does not exist
 // so define it to prevent notices on older versions
-if (!defined("ENT_IGNORE")) {
-    define("ENT_IGNORE", 0);
+if (!defined('ENT_IGNORE')) {
+    define('ENT_IGNORE', 0);
 }
 
 // Prevent cross site scripting problems
@@ -99,7 +99,7 @@ function myphpnet_load(): void
     global $MYPHPNET, $MYSITE;
 
     // Empty the preferences array
-    $MYPHPNET = [false, false, "NONE", 0, false];
+    $MYPHPNET = [false, false, 'NONE', 0, false];
 
     if ($MYSITE === 'http://docs.php.net/') {
         $MYPHPNET[4] = true;
@@ -107,7 +107,7 @@ function myphpnet_load(): void
 
     // If we have a cookie, set the values in the array
     if (!empty($_COOKIE['MYPHPNET'])) {
-        $MYPHPNET = explode(",", $_COOKIE['MYPHPNET']);
+        $MYPHPNET = explode(',', $_COOKIE['MYPHPNET']);
     }
 
     // Ignore site part, and always use https://www.php.net
@@ -149,7 +149,7 @@ function myphpnet_urlsearch($type = false)
 function myphpnet_showug($enable = null) {
     global $MYPHPNET;
 
-    if (isset($_GET["showug"])) {
+    if (isset($_GET['showug'])) {
         $enable = true;
     }
 
@@ -161,7 +161,7 @@ function myphpnet_showug($enable = null) {
         return $MYPHPNET[3];
     }
 
-    if ($_SERVER["REQUEST_TIME"] % 10) {
+    if ($_SERVER['REQUEST_TIME'] % 10) {
         return true;
     }
 
@@ -179,7 +179,7 @@ function myphpnet_save(): void
     }
 
     // Set all the preferred values for a year
-    mirror_setcookie("MYPHPNET", join(",", $MYPHPNET), 60 * 60 * 24 * 365);
+    mirror_setcookie('MYPHPNET', join(',', $MYPHPNET), 60 * 60 * 24 * 365);
 
 }
 

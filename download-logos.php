@@ -10,7 +10,7 @@ $SIDEBAR_DATA = '
  under a GPL license.
 </p>
 ';
-site_header("Download Logos", ["current" => "downloads"]);
+site_header('Download Logos', ['current' => 'downloads']);
 
 // Print recommended star cell
 function print_star(): void
@@ -21,9 +21,9 @@ function print_star(): void
 // Provide a random bgcolor setting for a cell
 function random_bgcolor($min, $max): void
 {
-    echo "style=\"background-color: #" .
+    echo 'style="background-color: #' .
          sprintf('%02x%02x%02x', mt_rand($min, $max) * 51, mt_rand($min, $max) * 51, mt_rand($min, $max) * 51) .
-         ";\"";
+         ';"';
 }
 ?>
 
@@ -65,7 +65,7 @@ function random_bgcolor($min, $max): void
 </p>
 
 <div class="center logo-list">
-  <?php print_image("logos/new-php-logo.svg", "PHP logo", false, 'width="200"'); ?>
+  <?php print_image('logos/new-php-logo.svg', 'PHP logo', false, 'width="200"'); ?>
   <br>
   <a href="/images/logos/new-php-logo.svg">SVG</a> |
   <a href="/images/logos/new-php-logo.png">PNG</a>
@@ -78,7 +78,7 @@ function random_bgcolor($min, $max): void
 </p>
 
 <div class="center logo-list">
-  <?php print_image("logos/php-logo.svg", "PHP logo", false, 'width="200"'); ?>
+  <?php print_image('logos/php-logo.svg', 'PHP logo', false, 'width="200"'); ?>
   <br>
   <a href="/images/logos/php-logo.svg">SVG</a> |
   <a href="/images/logos/php-logo-bigger.png">PNG</a>
@@ -98,7 +98,7 @@ function random_bgcolor($min, $max): void
 
  <tr>
   <td class="logo">
-   <?php print_image("logos/php-med-trans-light.gif", "PHP logo"); ?><br>
+   <?php print_image('logos/php-med-trans-light.gif', 'PHP logo'); ?><br>
    (not exactly as shown)
   </td>
   <?php print_star(); ?>
@@ -115,7 +115,7 @@ function random_bgcolor($min, $max): void
 
  <tr>
   <td class="logo">
-   <?php print_image("logos/php-med-trans-light.gif", "PHP logo"); ?><br>
+   <?php print_image('logos/php-med-trans-light.gif', 'PHP logo'); ?><br>
    (not exactly as shown)
   </td>
   <td></td>
@@ -131,7 +131,7 @@ function random_bgcolor($min, $max): void
 
  <tr>
   <td class="logo" <?php random_bgcolor(0, 5); ?>>
-   <?php print_image("logos/php-med-trans.png", "PHP logo"); ?>
+   <?php print_image('logos/php-med-trans.png', 'PHP logo'); ?>
   </td>
   <?php print_star(); ?>
   <td>
@@ -146,7 +146,7 @@ function random_bgcolor($min, $max): void
 
  <tr>
   <td class="logo">
-   <?php print_image("logos/php-med-trans-light.gif", "PHP logo"); ?>
+   <?php print_image('logos/php-med-trans-light.gif', 'PHP logo'); ?>
   </td>
   <td></td>
   <td>
@@ -161,7 +161,7 @@ function random_bgcolor($min, $max): void
 
  <tr>
   <td class="logob">
-   <?php print_image("logos/php-med-trans-dark.gif", "PHP logo"); ?>
+   <?php print_image('logos/php-med-trans-dark.gif', 'PHP logo'); ?>
   </td>
   <td></td>
   <td>
@@ -176,7 +176,7 @@ function random_bgcolor($min, $max): void
 
  <tr>
   <td class="logo" <?php random_bgcolor(3, 5); ?>>
-   <?php print_image("logos/php-power-white.png", "Powered by PHP"); ?>
+   <?php print_image('logos/php-power-white.png', 'Powered by PHP'); ?>
   </td>
   <?php print_star(); ?>
   <td>
@@ -191,7 +191,7 @@ function random_bgcolor($min, $max): void
 
  <tr>
   <td class="logo">
-   <?php print_image("logos/php-power-white.gif", "Powered by PHP"); ?>
+   <?php print_image('logos/php-power-white.gif', 'Powered by PHP'); ?>
   </td>
   <td></td>
   <td>
@@ -206,7 +206,7 @@ function random_bgcolor($min, $max): void
 
  <tr>
   <td class="logo" <?php random_bgcolor(0, 2); ?>>
-   <?php print_image("logos/php-power-black.png", "Powered by PHP"); ?>
+   <?php print_image('logos/php-power-black.png', 'Powered by PHP'); ?>
   </td>
   <?php print_star(); ?>
   <td>
@@ -221,7 +221,7 @@ function random_bgcolor($min, $max): void
 
  <tr>
   <td class="logob">
-   <?php print_image("logos/php-power-black.gif", "Powered by PHP"); ?>
+   <?php print_image('logos/php-power-black.gif', 'Powered by PHP'); ?>
   </td>
   <td></td>
   <td>
@@ -236,9 +236,9 @@ function random_bgcolor($min, $max): void
 
  <tr>
   <td class="logo">
-   <?php print_image("logos/php-power-micro.png", "PHP Powered"); ?><br><br>
-   <?php print_image("logos/php-power-micro2.png", "PHP Powered"); ?><br><br>
-   <?php print_image("logos/php5-power-micro.png", "PHP 5 Powered"); ?>
+   <?php print_image('logos/php-power-micro.png', 'PHP Powered'); ?><br><br>
+   <?php print_image('logos/php-power-micro2.png', 'PHP Powered'); ?><br><br>
+   <?php print_image('logos/php5-power-micro.png', 'PHP 5 Powered'); ?>
   </td>
   <td></td>
   <td>
@@ -257,7 +257,7 @@ function random_bgcolor($min, $max): void
 
  <tr>
   <td class="logo" <?php random_bgcolor(0, 5); ?>>
-   <?php print_image("logos/php-icon.png", "PHP icon"); ?>
+   <?php print_image('logos/php-icon.png', 'PHP icon'); ?>
   </td>
   <?php print_star(); ?>
   <td>
@@ -272,7 +272,7 @@ function random_bgcolor($min, $max): void
 
  <tr>
   <td class="logo">
-   <?php print_image("logos/php-icon-white.gif", "PHP icon"); ?>
+   <?php print_image('logos/php-icon-white.gif', 'PHP icon'); ?>
   </td>
   <td></td>
   <td>
@@ -287,7 +287,7 @@ function random_bgcolor($min, $max): void
 
  <tr>
   <td class="logob">
-   <?php print_image("logos/php-icon-black.gif", "PHP icon"); ?>
+   <?php print_image('logos/php-icon-black.gif', 'PHP icon'); ?>
   </td>
   <td></td>
   <td>
@@ -302,7 +302,7 @@ function random_bgcolor($min, $max): void
 
  <tr>
   <td class="logo">
-   <?php print_image("logos/php-icon-white.gif", "PHP icons"); ?><br>
+   <?php print_image('logos/php-icon-white.gif', 'PHP icons'); ?><br>
    (not exactly as shown)
   </td>
   <td></td>
@@ -322,7 +322,7 @@ function random_bgcolor($min, $max): void
 
  <tr>
   <td class="logo">
-   <?php print_image("logos/php_file_ico.gif", "PHP file icons"); ?><br>
+   <?php print_image('logos/php_file_ico.gif', 'PHP file icons'); ?><br>
    (not exactly as shown)
   </td>
   <td></td>
@@ -339,7 +339,7 @@ function random_bgcolor($min, $max): void
 
  <tr>
   <td class="logo">
-   <?php print_image("logos/php_script_ico.png", "PHP script icons"); ?><br>
+   <?php print_image('logos/php_script_ico.png', 'PHP script icons'); ?><br>
    (not exactly as shown)
   </td>
   <td></td>
@@ -356,7 +356,7 @@ function random_bgcolor($min, $max): void
 
  <tr>
   <td class="logo">
-   <?php print_image("logos/php_xpstyle_ico.gif", "Windows XP PHP file icons"); ?><br>
+   <?php print_image('logos/php_xpstyle_ico.gif', 'Windows XP PHP file icons'); ?><br>
    (not exactly as shown)
   </td>
   <td></td>

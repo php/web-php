@@ -1,7 +1,7 @@
 <?php
 $_SERVER['BASE_PAGE'] = 'software.php';
 include_once __DIR__ . '/include/prepend.inc';
-site_header("PHP Software", ["current" => "help"]);
+site_header('PHP Software', ['current' => 'help']);
 ?>
 
 <h1>PHP Software</h1>
@@ -12,17 +12,17 @@ site_header("PHP Software", ["current" => "help"]);
 </p>
 
 <p>
- <?php echo make_image("logos/php-icon-white.gif", $alt = "php.net", "left") ?>&nbsp;
+ <?php echo make_image('logos/php-icon-white.gif', $alt = 'php.net', 'left') ?>&nbsp;
  <a href="http://php.net/">php.net</a><br>
  &nbsp;Main site for the PHP project.<br clear="left">
 </p>
 <p>
- <?php echo make_image("pear-icon.png", $alt = "pear.php.net", "left") ?>&nbsp;
+ <?php echo make_image('pear-icon.png', $alt = 'pear.php.net', 'left') ?>&nbsp;
  <a href="http://pear.php.net/">pear.php.net</a><br>
  &nbsp;The PEAR project where you can find reusable components for PHP .<br clear="left">
 </p>
 <p>
- <?php echo make_image("pecl-icon.png", $alt = "pecl.php.net", "left") ?>&nbsp;
+ <?php echo make_image('pecl-icon.png', $alt = 'pecl.php.net', 'left') ?>&nbsp;
  <a href="http://pecl.php.net/">pecl.php.net</a><br>
  &nbsp;The PECL project where you can find PHP extensions.<br clear="left">
 </p>

@@ -24,14 +24,14 @@ $SIDEBAR_DATA = '
  <a href="/git.php">Git</a>. No Git account is required.
 </p>
 ';
-site_header("Using Git for PHP Development", ["current" => "community"]);
+site_header('Using Git for PHP Development', ['current' => 'community']);
 
 $groups = [
-    "none" => "Choose One",
-    "php" => "PHP Group",
-    "pear" => "PEAR Group",
-    "pecl" => "PECL Group",
-    "doc" => "Doc Group",
+    'none' => 'Choose One',
+    'php' => 'PHP Group',
+    'pear' => 'PEAR Group',
+    'pecl' => 'PECL Group',
+    'doc' => 'Doc Group',
 ];
 
 ?>
@@ -43,49 +43,49 @@ $groups = [
 // We have a form submitted, and the user have read all the comments
 if (count($_POST) && (!isset($_POST['purpose']) || !is_array($_POST['purpose']) || !count($_POST['purpose']))) {
     // No error found yet
-    $error = "";
+    $error = '';
 
     // Check for errors
     if (empty($_POST['id'])) {
-        $error .= "You must supply a desired Git user id. <br>";
+        $error .= 'You must supply a desired Git user id. <br>';
     } elseif (!preg_match('!^[a-z]\w+$!', $_POST['id']) || strlen($_POST['id']) > 16) {
-        $error .= "Your user id must be from 1-16 characters long, start with " .
-                  "a letter and contain nothing but a-z, 0-9, and _ <br>";
+        $error .= 'Your user id must be from 1-16 characters long, start with ' .
+                  'a letter and contain nothing but a-z, 0-9, and _ <br>';
     }
     if (empty($_POST['fullname'])) {
-        $error .= "You must supply your real name. <br>";
+        $error .= 'You must supply your real name. <br>';
     }
     if (empty($_POST['realpurpose'])) {
-        $error .= "You must supply a reason for requesting the Git account. <br>";
+        $error .= 'You must supply a reason for requesting the Git account. <br>';
     }
     if (empty($_POST['password'])) {
-        $error .= "You must supply a desired password. <br>";
+        $error .= 'You must supply a desired password. <br>';
     }
     if (empty($_POST['email']) || !is_emailable_address($_POST['email'])) {
-        $error .= "You must supply a proper email address. <br>";
+        $error .= 'You must supply a proper email address. <br>';
     }
     if (empty($_POST['yesno']) || $_POST['yesno'] != 'yes') {
-        $error .= "You did not fill the form out correctly. <br>";
+        $error .= 'You did not fill the form out correctly. <br>';
     }
     if (empty($_POST['group']) || $_POST['group'] === 'none' || !isset($groups[$_POST['group']])) {
-        $error .= "You did not fill out where to send the request. <br>";
+        $error .= 'You did not fill out where to send the request. <br>';
     }
     if (empty($_POST['guidelines'])) {
-        $error .= "You did not agree to follow the contribution guidelines. <br>";
+        $error .= 'You did not agree to follow the contribution guidelines. <br>';
     }
 
     // Post the request if there is no error
     if (!$error) {
         $error = posttohost(
-            "https://main.php.net/entry/svn-account.php",
+            'https://main.php.net/entry/svn-account.php',
             [
-                "username" => $_POST['id'],
-                "name" => $_POST['fullname'],
-                "email" => $_POST['email'],
-                "passwd" => $_POST['password'],
-                "note" => $_POST['realpurpose'],
-                "yesno" => $_POST['yesno'],
-                "group" => $_POST['group'],
+                'username' => $_POST['id'],
+                'name' => $_POST['fullname'],
+                'email' => $_POST['email'],
+                'passwd' => $_POST['password'],
+                'note' => $_POST['realpurpose'],
+                'yesno' => $_POST['yesno'],
+                'group' => $_POST['group'],
             ],
         );
         // Error while posting
@@ -360,10 +360,10 @@ EOT;
  (check all that apply)</th>
  <td>
 <?php
-$purposes = ["Learning PHP", "Coding in PHP", "Reading the PHP source",
-    "Using PHP extensions", "Creating experimental PHP extensions",
-    "Submitting a patch to PHP", "Adding notes to the documentation",
-    "Writing web pages with PHP"];
+$purposes = ['Learning PHP', 'Coding in PHP', 'Reading the PHP source',
+    'Using PHP extensions', 'Creating experimental PHP extensions',
+    'Submitting a patch to PHP', 'Adding notes to the documentation',
+    'Writing web pages with PHP'];
 
 foreach ($purposes as $i => $p) { ?>
   <input type="checkbox" name="purpose[<?php echo $i?>]" value="1"
@@ -399,7 +399,7 @@ foreach ($purposes as $i => $p) { ?>
   <select name="group">
 <?php
 foreach ($groups as $group => $name) {
-  $selected = (isset($_POST["group"]) && $_POST["group"] == $group) ? ' selected="selected"' : '';
+  $selected = (isset($_POST['group']) && $_POST['group'] == $group) ? ' selected="selected"' : '';
   echo "<option value='$group'$selected>$name</option>\n";
 }
 ?>

@@ -2,7 +2,7 @@
 $_SERVER['BASE_PAGE'] = 'archive/2010.php';
 include_once __DIR__ . '/../include/prepend.inc';
 news_archive_sidebar();
-site_header("News Archive - 2010", ["cache" => true]);
+site_header('News Archive - 2010', ['cache' => true]);
 ?>
 
 <h1>News Archive - 2010</h1>
@@ -154,7 +154,7 @@ site_header("News Archive - 2010", ["cache" => true]);
 
 <hr>
 <div class="newsItem hentry vevent">
-    <div class="newsImage"><?php news_image("http://www.confoo.ca/", "logo_confoo_300_95.gif", "Confoo"); ?></div>
+    <div class="newsImage"><?php news_image('http://www.confoo.ca/', 'logo_confoo_300_95.gif', 'Confoo'); ?></div>
     <h1 class="summary entry-title"><a id="id2010-11-08-1" href="http://confoo.ca/" rel="bookmark" class="bookmark">Confoo</a></h1>
     <div class="entry-content description">
         <abbr class="published newsdate" title="2010-11-08T20:05:56-02:00">[08-Nov-2010]</abbr>
@@ -182,7 +182,7 @@ site_header("News Archive - 2010", ["cache" => true]);
 
 <hr>
 <div class="newsItem hentry vevent">
-    <div class="newsImage"><?php news_image("http://www.phprio.org/phpnrio10", "phpnrio10.png", "PHP'n Rio 10"); ?></div>
+    <div class="newsImage"><?php news_image('http://www.phprio.org/phpnrio10', 'phpnrio10.png', "PHP'n Rio 10"); ?></div>
     <h1 class="summary entry-title"><a id="id2010-11-02-1" href="http://www.phprio.org/phpnrio10" rel="bookmark" class="bookmark">PHP'n Rio 10</a></h1>
     <div class="entry-content description">
         <abbr class="published newsdate" title="2010-11-02T20:05:56-02:00">[02-Nov-2010]</abbr>
@@ -216,7 +216,7 @@ site_header("News Archive - 2010", ["cache" => true]);
 
 <hr>
 <div class="newsItem hentry vevent">
-    <div class="newsImage"><?php news_image("http://www.zendcon.com/", "zend_phpconf10.jpg", "Zend / PHP Conference"); ?></div>
+    <div class="newsImage"><?php news_image('http://www.zendcon.com/', 'zend_phpconf10.jpg', 'Zend / PHP Conference'); ?></div>
     <h1 class="summary entry-title"><a id="id2010-09-30-1" href="http://www.zendcon.com/" rel="bookmark" class="bookmark">Zend / PHP Conference</a></h1>
     <div class="entry-content description">
         <abbr class="published newsdate" title="2010-09-30T15:27:22+08:00">[30-Sep-2010]</abbr>
@@ -268,7 +268,7 @@ site_header("News Archive - 2010", ["cache" => true]);
 
 <hr>
 <div class="newsItem hentry vevent">
-    <div class="newsImage"><?php news_image("http://phpconference.es/", "barcelona2010.png", "PHP Barcelona Conference 2010"); ?></div>
+    <div class="newsImage"><?php news_image('http://phpconference.es/', 'barcelona2010.png', 'PHP Barcelona Conference 2010'); ?></div>
     <h1 class="summary entry-title"><a id="id2010-09-25-2" href="http://phpconference.es/" rel="bookmark" class="bookmark">PHP Barcelona Conference 2010</a></h1>
     <div class="entry-content description">
         <abbr class="published newsdate" title="2010-09-25T13:30:45+02:00">[25-Sep-2010]</abbr>
@@ -285,7 +285,7 @@ site_header("News Archive - 2010", ["cache" => true]);
 
 <hr>
 <div class="newsItem hentry vevent">
-    <div class="newsImage"><?php news_image("http://phpconference.com/", "ipc2010.gif", "International PHP Conference 2010"); ?></div>
+    <div class="newsImage"><?php news_image('http://phpconference.com/', 'ipc2010.gif', 'International PHP Conference 2010'); ?></div>
     <h1 class="summary entry-title"><a id="id2010-09-25-1" href="http://phpconference.com/" rel="bookmark" class="bookmark">International PHP Conference</a></h1>
     <div class="entry-content description">
         <abbr class="published newsdate" title="2010-09-25T13:09:54+02:00">[25-Sep-2010]</abbr>
@@ -317,7 +317,7 @@ site_header("News Archive - 2010", ["cache" => true]);
 
 <hr>
 <div class="newsItem hentry vevent">
-    <div class="newsImage"><?php news_image("http://conference.phpnw.org.uk/phpnw10/", "phpnw10_logo.png", "PHP | OSI Days 2010"); ?></div>
+    <div class="newsImage"><?php news_image('http://conference.phpnw.org.uk/phpnw10/', 'phpnw10_logo.png', 'PHP | OSI Days 2010'); ?></div>
     <h1 class="summary entry-title"><a id="id2010-09-09-1" href="http://www.php.net/archive/2010.php#id2010-09-09-1" rel="bookmark" class="bookmark">PHPNW10</a></h1>
     <div class="entry-content description">
         <abbr class="published newsdate" title="2010-09-09T23:53:00+08:00">[09-Sep-2010]</abbr>
@@ -531,7 +531,7 @@ class Bar {<br>
 
 <hr>
 <div class="newsItem hentry vevent">
-    <div class="newsImage"><?php news_image("http://osidays.com/node/add/proposal", "php_osi_2010.png", "PHP | OSI Days 2010"); ?></div>
+    <div class="newsImage"><?php news_image('http://osidays.com/node/add/proposal', 'php_osi_2010.png', 'PHP | OSI Days 2010'); ?></div>
     <h1 class="summary entry-title"><a id="id2010-06-05-1" href="http://www.php.net/archive/2010.php#id2010-06-05-1" rel="bookmark" class="bookmark">PHP | OSI Days 2010: Participate at the confluence of PHP's finest!</a></h1>
     <div class="entry-content description">
         <abbr class="published newsdate" title="2010-06-05T18:21:05-03:00">[05-Jun-2010]</abbr>
@@ -703,7 +703,7 @@ class Bar {<br>
 
 <hr>
 <div class="newsItem hentry vevent">
-    <div class="newsImage"><?php news_image("http://phpconference.nl/", "dpc10_banner.jpg", "Dutch PHP Conference 2010"); ?></div>
+    <div class="newsImage"><?php news_image('http://phpconference.nl/', 'dpc10_banner.jpg', 'Dutch PHP Conference 2010'); ?></div>
     <h1 class="summary entry-title"><a id="id2010-02-19-1" href="http://phpconference.nl/" rel="bookmark" class="bookmark">Dutch PHP Conference</a></h1>
     <div class="entry-content description">
         <abbr class="published newsdate" title="2010-02-19T14:57:14+01:00">[19-Feb-2010]</abbr>
@@ -730,7 +730,7 @@ class Bar {<br>
 
 <hr>
 <div class="newsItem hentry vevent">
-    <div class="newsImage"><?php news_image("http://confoo.ca/en", "logo_confoo_300_95.gif", "ConFoo Web Techno Conference"); ?></div>
+    <div class="newsImage"><?php news_image('http://confoo.ca/en', 'logo_confoo_300_95.gif', 'ConFoo Web Techno Conference'); ?></div>
     <h1 class="summary entry-title"><a id="id2010-01-16-1" href="http://confoo.ca/en" rel="bookmark" class="bookmark">ConFoo Web Techno Conference</a></h1>
     <div class="entry-content description">
         <abbr class="published newsdate" title="2010-01-16T14:25:31+01:00">[16-Jan-2010]</abbr>

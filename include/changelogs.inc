@@ -1,7 +1,7 @@
 <?php
 
 function bugfix($number): void {
-    echo "Fixed bug "; bugl($number);
+    echo 'Fixed bug '; bugl($number);
 }
 
 function bugl($number): void {
@@ -9,11 +9,11 @@ function bugl($number): void {
 }
 
 function implemented($number): void {
-    echo "Implemented FR "; bugl($number);
+    echo 'Implemented FR '; bugl($number);
 }
 
 function peclbugfix($number): void {
-    echo "Fixed PECL bug "; bugl($number);
+    echo 'Fixed PECL bug '; bugl($number);
 }
 
 function peclbugl($number): void {
@@ -21,7 +21,7 @@ function peclbugl($number): void {
 }
 
 function githubissue($repo, $number): void {
-    echo "Fixed issue "; githubissuel($repo, $number);
+    echo 'Fixed issue '; githubissuel($repo, $number);
 }
 
 function githubissuel($repo, $number): void {
@@ -60,7 +60,7 @@ function changelog_footer(int $current_major, array $minor_versions): void {
         if ($major === $current_major) {
             $sidebar .= "  <li><b>PHP {$major}.x</b>\n    <ul>";
             foreach ($minor_versions as $branch) {
-                $sidebar .= "      <li>" . changelog_makelink($branch) . "</li>\n";
+                $sidebar .= '      <li>' . changelog_makelink($branch) . "</li>\n";
             }
             $sidebar .= "    </ul></li>\n";
         } else {

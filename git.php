@@ -21,7 +21,7 @@ $SIDEBAR_DATA = '
  to contribute.
 </p>
 ';
-site_header("Git Access", ["current" => "community"]);
+site_header('Git Access', ['current' => 'community']);
 ?>
 
 <h1>Git Access</h1>

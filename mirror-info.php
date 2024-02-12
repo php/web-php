@@ -7,7 +7,7 @@ include_once __DIR__ . '/include/prepend.inc';
 include_once __DIR__ . '/include/version.inc';
 
 // Text/plain content type for better readability in browsers
-header("Content-type: text/plain; charset=utf-8");
+header('Content-type: text/plain; charset=utf-8');
 
 // Provide information on local stats setup
 $mirror_stats = (int) (isset($_SERVER['MIRROR_STATS']) && $_SERVER['MIRROR_STATS'] == '1');

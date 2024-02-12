@@ -3,8 +3,8 @@
 // Try to remove anti-SPAM bits
 function clean_AntiSPAM($email)
 {
-    $remove_spam = "![-_]?(NO|I[-_]?HATE|DELETE|REMOVE)[-_]?(THIS)?(ME|SPAM)?[-_]?!i";
-    return preg_replace($remove_spam, "", trim($email));
+    $remove_spam = '![-_]?(NO|I[-_]?HATE|DELETE|REMOVE)[-_]?(THIS)?(ME|SPAM)?[-_]?!i';
+    return preg_replace($remove_spam, '', trim($email));
 }
 
 // Try to check that this email address is valid

@@ -9,7 +9,7 @@ $SIDEBAR_DATA = '
  <a href="/license/">see our licensing information page</a>.
 </p>
 ';
-site_header("Copyright", ["current" => "footer"]);
+site_header('Copyright', ['current' => 'footer']);
 ?>
 
 <a id="copyright"></a>
@@ -17,7 +17,7 @@ site_header("Copyright", ["current" => "footer"]);
 
 <p>
  The code, text, PHP logo, and graphical elements on this website
- and the mirror websites (the "Site") are Copyright &copy; 2001-<?php echo date("Y") ?>
+ and the mirror websites (the "Site") are Copyright &copy; 2001-<?php echo date('Y') ?>
  the <a href="/credits.php">PHP Group</a>. All rights reserved.
 </p>
 

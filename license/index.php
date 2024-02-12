@@ -17,7 +17,7 @@ $SIDEBAR_DATA = <<<EOF
 </aside>
 EOF;
 
-site_header("License Information", ["current" => "help"]);
+site_header('License Information', ['current' => 'help']);
 ?>
 
 <h1>PHP Licensing</h1>

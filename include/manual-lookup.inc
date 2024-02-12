@@ -7,31 +7,31 @@ include_once __DIR__ . '/errors.inc';
 function tryprefix($lang, $keyword, $prefix)
 {
     // Replace all underscores with hyphens (phpdoc convention)
-    $keyword = str_replace("_", "-", $keyword);
+    $keyword = str_replace('_', '-', $keyword);
 
     // Replace everything in parentheses with a hyphen (ie. function call)
-    $keyword = preg_replace("!\\(.*\\)!", "-", $keyword);
+    $keyword = preg_replace('!\\(.*\\)!', '-', $keyword);
 
     // Try the keyword with the prefix
     $try = "/manual/{$lang}/{$prefix}{$keyword}.php";
     if (@file_exists($_SERVER['DOCUMENT_ROOT'] . $try)) { return $try; }
 
     // Drop out spaces, and try that keyword (if different)
-    $nosp = str_replace(" ", "", $keyword);
+    $nosp = str_replace(' ', '', $keyword);
     if ($nosp != $keyword) {
         $try = "/manual/{$lang}/{$prefix}{$nosp}.php";
         if (@file_exists($_SERVER['DOCUMENT_ROOT'] . $try)) { return $try; }
     }
 
     // Replace spaces with hyphens, and try that (if different)
-    $dasp = str_replace(" ", "-", $keyword);
+    $dasp = str_replace(' ', '-', $keyword);
     if ($dasp != $keyword) {
         $try = "/manual/{$lang}/{$prefix}{$dasp}.php";
         if (@file_exists($_SERVER['DOCUMENT_ROOT'] . $try)) { return $try; }
     }
 
     // Remove hyphens (and underscores), and try that (if different)
-    $noul = str_replace("-", "", $keyword);
+    $noul = str_replace('-', '', $keyword);
     if ($noul != $keyword) {
         $try = "/manual/{$lang}/{$prefix}{$noul}.php";
         if (@file_exists($_SERVER['DOCUMENT_ROOT'] . $try)) { return $try; }
@@ -39,7 +39,7 @@ function tryprefix($lang, $keyword, $prefix)
 
     // urldecode() (%5C == \) Replace namespace sperators, and try that (if different)
     $keyword = urldecode($keyword);
-    $noul = str_replace("\\", "-", $keyword);
+    $noul = str_replace('\\', '-', $keyword);
     if ($noul != $keyword) {
         $try = "/manual/{$lang}/{$prefix}{$noul}.php";
         if (@file_exists($_SERVER['DOCUMENT_ROOT'] . $try)) { return $try; }
@@ -58,7 +58,7 @@ function tryprefix($lang, $keyword, $prefix)
     }
 
     // Nothing found
-    return "";
+    return '';
 }
 
 // Try to find a manual page in a specified language
@@ -70,7 +70,7 @@ function find_manual_page_slow($lang, $keyword)
     $sections = get_manual_search_sections();
 
     // Remove .. for security reasons
-    $keyword = str_replace("..", "", $keyword);
+    $keyword = str_replace('..', '', $keyword);
 
     // Try to find a manual page with the specified prefix
     foreach ($sections as $section) {
@@ -80,21 +80,21 @@ function find_manual_page_slow($lang, $keyword)
 
     // Fall back to English, if the language was not English,
     // and nothing was found so far for any of the prefixes
-    if ($lang != "en") {
+    if ($lang != 'en') {
         foreach ($sections as $section) {
-            $found = tryprefix("en", $keyword, $section);
+            $found = tryprefix('en', $keyword, $section);
             if ($found) { return $found; }
         }
     }
 
     // BC: Few references pages where moved to book.
-    if (strpos($keyword, "ref.") === 0) {
-        $kw = substr_replace($keyword, "book.", 0, 4);
+    if (strpos($keyword, 'ref.') === 0) {
+        $kw = substr_replace($keyword, 'book.', 0, 4);
         return find_manual_page($lang, $kw);
     }
 
     // Nothing found
-    return "";
+    return '';
 }
 
 // If sqlite is available on this mirror use that for manual
@@ -131,12 +131,12 @@ function find_manual_page($lang, $keyword)
         $keyword = str_replace('_', '-', $keyword);
     }
     if (strpos($keyword, '(') !== false) {
-        $keyword = preg_replace("!\\(.*\\)!", "-", $keyword);
+        $keyword = preg_replace('!\\(.*\\)!', '-', $keyword);
     }
 
     // No keyword to search for
     if (strlen($keyword) == 0) {
-        return "";
+        return '';
     }
 
     // If there is a dot in the $keyword, then a prefix
@@ -160,8 +160,8 @@ function find_manual_page($lang, $keyword)
            This also applies to other sections like book.foo, language.foo, example.foo, etc.
            Note: $keyword replaces _ with - above, so _ variants also work
         */
-        if (strpos($keyword, ".") > 0) {
-            $SQL = "SELECT name from fs WHERE lang = ? AND (name = ? OR keyword = ?) ORDER BY prio LIMIT 1";
+        if (strpos($keyword, '.') > 0) {
+            $SQL = 'SELECT name from fs WHERE lang = ? AND (name = ? OR keyword = ?) ORDER BY prio LIMIT 1';
 
             $_keyword = $keyword;
             if (pathinfo($keyword, PATHINFO_EXTENSION) !== 'php') {
@@ -182,8 +182,8 @@ function find_manual_page($lang, $keyword)
             //        the similar_text() search fallback works fine (see quickref.php)
             //        if this change remains, adjust the gen-phpweb-sqlite script accordingly
 
-            $SQL = "SELECT name, prio FROM fs WHERE lang = :lang
-                    AND keyword IN (?, ?, ?, ?, ?) ORDER BY keyword = ? DESC, prio LIMIT 1";
+            $SQL = 'SELECT name, prio FROM fs WHERE lang = :lang
+                    AND keyword IN (?, ?, ?, ?, ?) ORDER BY keyword = ? DESC, prio LIMIT 1';
 
             $stm = $dbh->prepare($SQL);
             if ($stm) {
@@ -206,7 +206,7 @@ function find_manual_page($lang, $keyword)
                 // But does the file really exist?
                 // @todo consider redirecting here, instead of including content within the 404
                 // @todo considering the file path is generated from the manual build, we can probably remove this file_exists() check
-                if (file_exists($_SERVER["DOCUMENT_ROOT"] . $r[0])) {
+                if (file_exists($_SERVER['DOCUMENT_ROOT'] . $r[0])) {
                     return $r[0];
                 }
             }

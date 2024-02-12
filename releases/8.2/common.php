@@ -13,7 +13,7 @@ function common_header(string $description): void {
         \filter_var($MYSITE . 'images/php8/php_8_2_released.png', \FILTER_VALIDATE_URL));
     $meta_description = \htmlspecialchars($description);
 
-    \site_header("PHP 8.2.0 Release Announcement", [
+    \site_header('PHP 8.2.0 Release Announcement', [
         'current' => 'php8',
         'css' => ['php8.css'],
         'meta_tags' => <<<META

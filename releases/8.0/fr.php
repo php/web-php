@@ -3,12 +3,12 @@ $_SERVER['BASE_PAGE'] = 'releases/8.0/en.php';
 include_once __DIR__ . '/common.php';
 
 releases\php80\common_header(
-    "PHP 8.0 est une mise à jour majeure du langage PHP. " .
+    'PHP 8.0 est une mise à jour majeure du langage PHP. ' .
     "Elle contient beaucoup de nouvelle fonctionnalités et d'optimisations, " .
     "incluant les arguments nommés, les types d'union, attributs, " .
     "promotion de propriétés de constructeur, l'expression match, " .
     "l'opérateur nullsafe, JIT (Compilation à la Volée), " .
-    "et des améliorations dans le système de typage, " .
+    'et des améliorations dans le système de typage, ' .
     "la gestion d'erreur, et de cohérence.");
 
 ?>

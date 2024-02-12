@@ -2,7 +2,7 @@
 $_SERVER['BASE_PAGE'] = 'manual/help-translate.php';
 include_once __DIR__ . '/../include/prepend.inc';
 include_once __DIR__ . '/../include/shared-manual.inc';
-site_header("Help translate the PHP Manual");
+site_header('Help translate the PHP Manual');
 ?>
 
 <h3>Looking for a translation?</h3>

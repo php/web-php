@@ -1,7 +1,7 @@
 <?php
 $_SERVER['BASE_PAGE'] = 'releases/4_3_10.php';
 include_once __DIR__ . '/../include/prepend.inc';
-site_header("Annonce de PHP 4.3.11");
+site_header('Annonce de PHP 4.3.11');
 ?>
 
 <h1>Annonce de publication de PHP 4.3.11</h1>

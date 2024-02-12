@@ -9,7 +9,7 @@ $SIDEBAR_DATA = '
  <a href="/license/">see our licensing information page</a>.
 </p>
 ';
-site_header("ElePHPant", ["current" => "footer"]);
+site_header('ElePHPant', ['current' => 'footer']);
 ?>
 
 <a id="copyright"></a>

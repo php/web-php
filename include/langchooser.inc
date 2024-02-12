@@ -52,11 +52,11 @@ function language_choose_code()
         $explicitly_specified = language_add(htmlspecialchars($_REQUEST['lang'], ENT_QUOTES, 'UTF-8'), $languages);
 
         // Set the language in a cookie for a year
-        mirror_setcookie("LAST_LANG", $explicitly_specified, 60 * 60 * 24 * 365);
+        mirror_setcookie('LAST_LANG', $explicitly_specified, 60 * 60 * 24 * 365);
     }
 
     // Specified in a shortcut URL (eg. /en/echo or /pt_br/echo)
-    if (preg_match("!^/(\\w{2}(_\\w{2})?)/!", htmlspecialchars($_SERVER['REQUEST_URI'],ENT_QUOTES, 'UTF-8'), $flang)) {
+    if (preg_match('!^/(\\w{2}(_\\w{2})?)/!', htmlspecialchars($_SERVER['REQUEST_URI'],ENT_QUOTES, 'UTF-8'), $flang)) {
 
         // Put language into preference list
         $rlang = language_add($flang[1], $languages);
@@ -68,13 +68,13 @@ function language_choose_code()
 
         // Drop out langauge specification from URL, as this is already handled
         $_SERVER['STRIPPED_URI'] = preg_replace(
-            "!^/$flang[1]/!", "/", htmlspecialchars($_SERVER['REQUEST_URI'], ENT_QUOTES, 'UTF-8'),
+            "!^/$flang[1]/!", '/', htmlspecialchars($_SERVER['REQUEST_URI'], ENT_QUOTES, 'UTF-8'),
         );
 
     }
 
     // Specified in a manual URL (eg. manual/en/ or manual/pt_br/)
-    if (preg_match("!^/manual/(\\w{2}(_\\w{2})?)(/|$)!", htmlspecialchars($_SERVER['REQUEST_URI'], ENT_QUOTES, 'UTF-8'), $flang)) {
+    if (preg_match('!^/manual/(\\w{2}(_\\w{2})?)(/|$)!', htmlspecialchars($_SERVER['REQUEST_URI'], ENT_QUOTES, 'UTF-8'), $flang)) {
 
         $flang = language_add($flang[1], $languages);
 
@@ -84,7 +84,7 @@ function language_choose_code()
         }
 
         // Set the language in a cookie for a year
-        mirror_setcookie("LAST_LANG", $flang, 60 * 60 * 24 * 365);
+        mirror_setcookie('LAST_LANG', $flang, 60 * 60 * 24 * 365);
     }
 
     // Honor the users own language setting (if available)
@@ -99,14 +99,14 @@ function language_choose_code()
     // Check if we have $_SERVER['HTTP_ACCEPT_LANGUAGE'] set and
     // it no longer breaks if you only have one language set :)
     if (isset($_SERVER['HTTP_ACCEPT_LANGUAGE'])) {
-        $browser_accept = explode(",", $_SERVER['HTTP_ACCEPT_LANGUAGE']);
+        $browser_accept = explode(',', $_SERVER['HTTP_ACCEPT_LANGUAGE']);
 
         // Go through all language preference specs
         foreach ($browser_accept as $value) {
             // The language part is either a code or a code with a quality
             // We cannot do anything with a * code, so it is skipped
             // If the quality is missing, it is assumed to be 1 according to the RFC
-            if (preg_match("!([a-z-]+)(;q=([0-9\\.]+))?!", trim($value), $found)) {
+            if (preg_match('!([a-z-]+)(;q=([0-9\\.]+))?!', trim($value), $found)) {
                 $quality = (isset($found[3]) ? (float) $found[3] : 1.0);
                 $browser_langs[] = [$found[1], $quality];
             }
@@ -115,23 +115,23 @@ function language_choose_code()
     }
 
     // Order the codes by quality
-    usort($browser_langs, "language_accept_order");
+    usort($browser_langs, 'language_accept_order');
 
     // For all languages found in the accept-language
     foreach ($browser_langs as $langdata) {
 
         // Translation table for accept-language codes and phpdoc codes
         switch ($langdata[0]) {
-            case "pt-br":
+            case 'pt-br':
                 $langdata[0] = 'pt_br';
                 break;
-            case "zh-cn":
+            case 'zh-cn':
                 $langdata[0] = 'zh';
                 break;
-            case "zh-hk":
+            case 'zh-hk':
                 $langdata[0] = 'hk';
                 break;
-            case "zh-tw":
+            case 'zh-tw':
                 $langdata[0] = 'tw';
                 break;
         }
@@ -139,7 +139,7 @@ function language_choose_code()
         // We do not support flavors of languages (except the ones above)
         // This is not in conformance to the RFC, but it here for user
         // convinience reasons
-        if (preg_match("!^(.+)-!", $langdata[0], $match)) {
+        if (preg_match('!^(.+)-!', $langdata[0], $match)) {
             $langdata[0] = $match[1];
         }
 
@@ -151,7 +151,7 @@ function language_choose_code()
     language_add(default_language(), $languages);
 
     // Last default language is English
-    language_add("en", $languages);
+    language_add('en', $languages);
 
     // Try to find out what language is available on this mirror.
     // As most of the language dependant operations involve manual

@@ -9,8 +9,8 @@ $css_files = [
 if (isset($config['css'])) {
     $css_files = array_merge($css_files, (array) $config['css']);
 }
-if (isset($config["css_overwrite"])) {
-    $css_files = $config["css_overwrite"];
+if (isset($config['css_overwrite'])) {
+    $css_files = $config['css_overwrite'];
 }
 
 foreach($css_files as $filename) {
@@ -27,22 +27,22 @@ if (isset($shortname) && $shortname) {
     header("Link: <$shorturl>; rel=shorturl");
 }
 
-if ($config["cache"]) {
-    if (is_numeric($config["cache"])) {
-        $timestamp = $config["cache"];
+if ($config['cache']) {
+    if (is_numeric($config['cache'])) {
+        $timestamp = $config['cache'];
     } else {
-        $timestamp = filemtime($_SERVER["DOCUMENT_ROOT"] . "/" . $_SERVER["BASE_PAGE"]);
+        $timestamp = filemtime($_SERVER['DOCUMENT_ROOT'] . '/' . $_SERVER['BASE_PAGE']);
     }
-    $tsstring = gmdate("D, d M Y H:i:s ", $timestamp) . "GMT";
+    $tsstring = gmdate('D, d M Y H:i:s ', $timestamp) . 'GMT';
 
-    if (isset($_SERVER["HTTP_IF_MODIFIED_SINCE"]) && $_SERVER["HTTP_IF_MODIFIED_SINCE"] == $tsstring) {
-        header("HTTP/1.1 304 Not Modified");
+    if (isset($_SERVER['HTTP_IF_MODIFIED_SINCE']) && $_SERVER['HTTP_IF_MODIFIED_SINCE'] == $tsstring) {
+        header('HTTP/1.1 304 Not Modified');
         exit;
     }
-    header("Last-Modified: " . $tsstring);
+    header('Last-Modified: ' . $tsstring);
 }
-if (!isset($config["languages"])) {
-    $config["languages"] = [];
+if (!isset($config['languages'])) {
+    $config['languages'] = [];
 }
 
 ?>
@@ -73,20 +73,20 @@ if (!isset($config["languages"])) {
 <?php endif ?>
 <?php endif ?>
 
-<?php foreach($config["meta-navigation"] as $rel => $page): ?>
+<?php foreach($config['meta-navigation'] as $rel => $page): ?>
  <link rel="<?php echo $rel ?>" href="<?php echo $MYSITE ?><?php echo $page ?>">
 <?php endforeach ?>
 
-<?php foreach($config["languages"] as $code): ?>
- <link rel="alternate" href="<?php echo $MYSITE ?>manual/<?php echo $code?>/<?php echo $config["thispage"] ?>" hreflang="<?php echo $code?>">
+<?php foreach($config['languages'] as $code): ?>
+ <link rel="alternate" href="<?php echo $MYSITE ?>manual/<?php echo $code?>/<?php echo $config['thispage'] ?>" hreflang="<?php echo $code?>">
 <?php endforeach ?>
 
 <?php foreach($CSS as $filename => $modified): ?>
 <link rel="stylesheet" type="text/css" href="/cached.php?t=<?php echo $modified?>&amp;f=<?php echo $filename?>" media="screen">
 <?php endforeach ?>
 
-<?php if (!empty($_SERVER["BASE_HREF"])): ?>
- <base href="<?php echo $_SERVER["BASE_HREF"] ?>">
+<?php if (!empty($_SERVER['BASE_HREF'])): ?>
+ <base href="<?php echo $_SERVER['BASE_HREF'] ?>">
 <?php endif ?>
 
 <?php if (isset($config['meta_tags'])) { echo $config['meta_tags']; } ?>
@@ -100,11 +100,11 @@ if (!isset($config["languages"])) {
     <div id="mainmenu-toggle-overlay"></div>
     <input type="checkbox" id="mainmenu-toggle">
     <ul class="nav">
-      <li class="<?php echo $curr == "downloads" ? "active" : ""?>"><a href="/downloads">Downloads</a></li>
-      <li class="<?php echo $curr == "docs" ? "active" : ""?>"><a href="/docs.php">Documentation</a></li>
-      <li class="<?php echo $curr == "community" ? "active" : ""?>"><a href="/get-involved" >Get Involved</a></li>
-      <li class="<?php echo $curr == "help" ? "active" : ""?>"><a href="/support">Help</a></li>
-      <li class="<?php echo $curr === "php8" ? "active" : "" ?>">
+      <li class="<?php echo $curr == 'downloads' ? 'active' : ''?>"><a href="/downloads">Downloads</a></li>
+      <li class="<?php echo $curr == 'docs' ? 'active' : ''?>"><a href="/docs.php">Documentation</a></li>
+      <li class="<?php echo $curr == 'community' ? 'active' : ''?>"><a href="/get-involved" >Get Involved</a></li>
+      <li class="<?php echo $curr == 'help' ? 'active' : ''?>"><a href="/support">Help</a></li>
+      <li class="<?php echo $curr === 'php8' ? 'active' : '' ?>">
         <a href="/releases/8.3/index.php">
           <img src="/images/php8/logo_php8_3.svg" alt="php8.3" height="22" width="60">
         </a>
@@ -117,10 +117,10 @@ if (!isset($config["languages"])) {
   </div>
   <div id="flash-message"></div>
 </nav>
-<?php if (!empty($config["headsup"])): ?>
-<div class="headsup"><?php echo $config["headsup"]?></div>
+<?php if (!empty($config['headsup'])): ?>
+<div class="headsup"><?php echo $config['headsup']?></div>
 <?php endif ?>
-<nav id="trick"><div><?php doc_toc("en") ?></div></nav>
+<nav id="trick"><div><?php doc_toc('en') ?></div></nav>
 <div id="goto">
     <div class="search">
          <div class="text"></div>

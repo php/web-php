@@ -1,7 +1,7 @@
 <?php
 $_SERVER['BASE_PAGE'] = 'releases/5_4_40.php';
 include_once __DIR__ . '/../include/prepend.inc';
-site_header("PHP 5.4.40 Release Announcement");
+site_header('PHP 5.4.40 Release Announcement');
 ?>
 
 <h1>PHP 5.4.40 Release Announcement</h1>

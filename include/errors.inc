@@ -10,7 +10,7 @@ function error_404(): void
 {
     global $MYSITE;
     status_header(404);
-    site_header('404 Not Found', ["noindex"]);
+    site_header('404 Not Found', ['noindex']);
     echo "<h1>Not Found</h1>\n<p><strong>" .
          htmlspecialchars(substr($MYSITE, 0, -1) . $_SERVER['REQUEST_URI']) .
          "</strong> not found on this server.</p>\n";
@@ -23,12 +23,12 @@ function error_404_manual(): void
 {
     global $MYSITE;
     status_header(404);
-    site_header('404 Not Found', ["noindex"]);
+    site_header('404 Not Found', ['noindex']);
     echo "<h1>Not Found</h1>\n" .
-         "<p>The manual page you are looking for (<strong>" .
+         '<p>The manual page you are looking for (<strong>' .
          htmlspecialchars(substr($MYSITE, 0, -1) . $_SERVER['REQUEST_URI']) .
-         "</strong>) is not available on this server right now. " .
-         "Please check back later, or if the problem persists, " .
+         '</strong>) is not available on this server right now. ' .
+         'Please check back later, or if the problem persists, ' .
          "<a href=\"/contact.php\">contact the webmasters</a>.</p>\n";
     site_footer();
     exit;
@@ -39,9 +39,9 @@ function error_inactive_manual_page($lang_name, $en_page): void
 {
     global $MYSITE, $ACTIVE_ONLINE_LANGUAGES;
     status_header(404);
-    site_header('Page gone', ["noindex"]);
+    site_header('Page gone', ['noindex']);
     echo "<h1>Page gone</h1>\n" .
-         "<p>The " . htmlspecialchars($lang_name) . " manual page you are looking for (<strong>" .
+         '<p>The ' . htmlspecialchars($lang_name) . ' manual page you are looking for (<strong>' .
          htmlspecialchars(substr($MYSITE, 0, -1) . $_SERVER['REQUEST_URI']) .
          "</strong>) is no longer available.</p>\n";
     $en_url = htmlspecialchars(substr($MYSITE, 0, -1) . $en_page);
@@ -49,10 +49,10 @@ function error_inactive_manual_page($lang_name, $en_page): void
     echo "<p>Several other languages are also available:</p>\n";
     echo "<ul>\n";
     foreach ($ACTIVE_ONLINE_LANGUAGES as $alt_lang => $alt_lang_name) {
-        if ($alt_lang === "en") {
+        if ($alt_lang === 'en') {
             continue;
         }
-        $alt_url = htmlspecialchars(substr($MYSITE, 0, -1) . str_replace("/en/", "/{$alt_lang}/", $en_page));
+        $alt_url = htmlspecialchars(substr($MYSITE, 0, -1) . str_replace('/en/', "/{$alt_lang}/", $en_page));
         echo "<li><a href=\"{$alt_url}\">" . htmlspecialchars($alt_lang_name) . "</a></li>\n";
     }
     echo "</ul>\n";
@@ -64,12 +64,12 @@ function error_inactive_manual_page($lang_name, $en_page): void
 function error_noservice(): void
 {
     global $MYSITE;
-    site_header('Service not working', ["noindex"]);
+    site_header('Service not working', ['noindex']);
     echo "<h1>Service not working</h1>\n" .
-         "<p>The service you tried to access with <strong>" .
+         '<p>The service you tried to access with <strong>' .
          htmlspecialchars(substr($MYSITE, 0, -1) . $_SERVER['REQUEST_URI']) .
-         "</strong> is not available on this server right now. " .
-         "Please check back later, or if the problem persists, " .
+         '</strong> is not available on this server right now. ' .
+         'Please check back later, or if the problem persists, ' .
          "<a href=\"/contact.php\">contact the webmasters</a>.</p>\n";
     site_footer();
     exit;
@@ -77,11 +77,11 @@ function error_noservice(): void
 
 // There is no such mirror
 function error_nomirror($mirror): void {
-    site_header("No such mirror", ["noindex"]);
+    site_header('No such mirror', ['noindex']);
     echo "<h1>No such mirror</h1>\n<p>The mirror you tried to access (" .
          htmlspecialchars($mirror) .
-         ") is not registered php.net mirror. Please check back later," .
-         " or if the problem persists, " .
+         ') is not registered php.net mirror. Please check back later,' .
+         ' or if the problem persists, ' .
          "<a href=\"/contact.php\">contact the webmasters</a>.</p>\n";
     site_footer();
     exit;
@@ -576,7 +576,7 @@ function is_known_snippet(string $term): ?string {
  */
 function get_legacy_manual_urls(string $uri): array
 {
-    $filename = $_SERVER["DOCUMENT_ROOT"] . "/manual/legacyurls.json";
+    $filename = $_SERVER['DOCUMENT_ROOT'] . '/manual/legacyurls.json';
     $pages_ids = json_decode(file_get_contents($filename), true);
     $page_id = preg_replace_callback('/^manual\/.*\/(.*?)(\.php)?$/', function (array $matches): string {
         if (count($matches) < 2) {
@@ -604,7 +604,7 @@ function fallback_to_legacy_manuals(array $legacy_urls): void
 {
     global $MYSITE;
     status_header(404);
-    site_header('404 Not Found', ["noindex"]);
+    site_header('404 Not Found', ['noindex']);
 
     $original_url = htmlspecialchars(substr($MYSITE, 0, -1) . $_SERVER['REQUEST_URI']);
     $legacy_links = '';

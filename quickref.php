@@ -18,7 +18,7 @@ include_once __DIR__ . '/include/prepend.inc';
 include_once __DIR__ . '/include/errors.inc';
 
 if (empty($notfound)) {
-    mirror_redirect("/search.php");
+    mirror_redirect('/search.php');
 }
 
 // Print out the table of found (or all) functions. The HTML comments are
@@ -56,7 +56,7 @@ $p = 0;
 while (($entry = readdir($dirh)) !== false) {
 
     // Skip names starting with a dot
-    if (substr($entry, 0, 1) == ".") { continue; }
+    if (substr($entry, 0, 1) == '.') { continue; }
 
     // For function and class pages, get the name out
     if (preg_match('!^(function|class)\.(.+)\.php$!', $entry, $parts)) {
@@ -104,10 +104,10 @@ if (count($temp) > 0) {
 }
 
 // Do not index page if presented as a search result
-if (count($maybe) > 0) { $head_options = ["noindex"]; }
+if (count($maybe) > 0) { $head_options = ['noindex']; }
 else { $head_options = []; }
 
-site_header("Manual Quick Reference", $head_options + ["current" => "help"]);
+site_header('Manual Quick Reference', $head_options + ['current' => 'help']);
 
 // Note: $notfound is defined (with htmlspecialchars) inside manual-lookup.php
 $notfound_enc = urlencode($notfound);
@@ -131,6 +131,6 @@ if ($snippet = is_known_snippet($notfound)) {
 quickref_table($maybe, false);
 
 site_footer([
-    "sidebar" => '<p class="panel"><a href="/search.php?show=all&amp;pattern=' . $notfound_enc . '">Full website search</a>',
+    'sidebar' => '<p class="panel"><a href="/search.php?show=all&amp;pattern=' . $notfound_enc . '">Full website search</a>',
 ]);
 }

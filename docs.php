@@ -2,7 +2,7 @@
 $_SERVER['BASE_PAGE'] = 'docs.php';
 include_once __DIR__ . '/include/prepend.inc';
 
-site_header("Documentation", ["current" => "docs"]);
+site_header('Documentation', ['current' => 'docs']);
 
 ?>
 
@@ -29,17 +29,17 @@ site_header("Documentation", ["current" => "docs"]);
 // List all manual languages viewable online
 $lastlang = end($ACTIVE_ONLINE_LANGUAGES);
 foreach ($ACTIVE_ONLINE_LANGUAGES as $langcode => $langname) {
-    if (!file_exists($_SERVER["DOCUMENT_ROOT"] . "/manual/{$langcode}/index.php")) {
+    if (!file_exists($_SERVER['DOCUMENT_ROOT'] . "/manual/{$langcode}/index.php")) {
         continue;
     }
 
     // Make preferred language bold
-    if ($langcode == $LANG) { echo "<strong>"; }
+    if ($langcode == $LANG) { echo '<strong>'; }
 
     echo '<a href="/manual/' . $langcode . '/">' . $langname . '</a>';
     echo ($lastlang != $langname) ? ",\n" : "\n";
 
-    if ($langcode == $LANG) { echo "</strong>"; }
+    if ($langcode == $LANG) { echo '</strong>'; }
 }
 
 ?>

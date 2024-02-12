@@ -2,7 +2,7 @@
 $_SERVER['BASE_PAGE'] = 'archive/2007.php';
 include_once __DIR__ . '/../include/prepend.inc';
 news_archive_sidebar();
-site_header("News Archive - 2007", ["cache" => true]);
+site_header('News Archive - 2007', ['cache' => true]);
 ?>
 
 <h1>News Archive - 2007</h1>
@@ -39,7 +39,7 @@ site_header("News Archive - 2007", ["cache" => true]);
 </div>
 
 <hr>
-<?php news_image("http://www.prophp.com.br/phpconference.php", "phpconfbrasil2007.png", "São Paulo 2007"); ?>
+<?php news_image('http://www.prophp.com.br/phpconference.php', 'phpconfbrasil2007.png', 'São Paulo 2007'); ?>
 <div class="newsItem">
 
     <a id="2007-10-29-1"><h1>PHP Conference Brasil 2007</h1></a>
@@ -82,7 +82,7 @@ using <a href="/my.php">my.php</a>.
 </div>
 
 <hr>
-<?php news_image("http://www.dcphpconference.com/", "dcphpconference.2007.png", "Washington DC 2007"); ?>
+<?php news_image('http://www.dcphpconference.com/', 'dcphpconference.2007.png', 'Washington DC 2007'); ?>
 <div class="newsItem">
 
     <a id="2007-09-21-1"><h1>DC PHP Conference 2007</h1></a>
@@ -99,7 +99,7 @@ Please see <a href="http://www.dcphpconference.com ">the website</a> for more de
 </div>
 
 <hr>
-<?php news_image("http://www.afup.org/pages/forumphp2007/", "afup2007.jpg", "Paris Forum 2007"); ?>
+<?php news_image('http://www.afup.org/pages/forumphp2007/', 'afup2007.jpg', 'Paris Forum 2007'); ?>
 <div class="newsItem">
 
     <a id="2007-09-20-1"><h1>Forum PHP Paris 2007</h1></a>
@@ -169,7 +169,7 @@ those releases and PHP 5.2.4.
 </div>
 
 <hr>
-<?php news_image("http://www.zendcon.com/", "zendcon07_logo_s.jpg", "Zend/PHP Conference 2007"); ?>
+<?php news_image('http://www.zendcon.com/', 'zendcon07_logo_s.jpg', 'Zend/PHP Conference 2007'); ?>
 <div class="newsItem">
 
     <a id="2007-07-25-1"><h1>Zend/PHP Conference 2007</h1></a>
@@ -207,7 +207,7 @@ For more information please see <a href="http://www.zendcon.com/">http://www.zen
 </div>
 
 <hr>
-<?php news_image("http://works.phparch.com/c/p/index", "phpworks2007.png", "php|works 2007"); ?>
+<?php news_image('http://works.phparch.com/c/p/index', 'phpworks2007.png', 'php|works 2007'); ?>
 <div class="newsItem">
 
     <a id="2007-07-16-01"><h1>php|works 2007 in Atlanta</h1></a>
@@ -297,7 +297,7 @@ those releases and PHP 5.2.3.
 </div>
 
 <hr>
-<?php news_image("http://www.wtconferences.com/2007/?q=node/1", "wtlogo_s.png", "WebTech 2007"); ?>
+<?php news_image('http://www.wtconferences.com/2007/?q=node/1', 'wtlogo_s.png', 'WebTech 2007'); ?>
 <div class="newsItem">
 
     <a id="2007-05-19-1"><h1>WebTech 2007</h1></a>
@@ -595,7 +595,7 @@ posted in the <a href="/downloads.php">download section</a>.</p>
 </div>
 
 <hr>
-<?php news_image("http://conf.phpquebec.com/en/conf2007/", "conference_php_quebec.gif", "PHP Québec conference"); ?>
+<?php news_image('http://conf.phpquebec.com/en/conf2007/', 'conference_php_quebec.gif', 'PHP Québec conference'); ?>
 <div class="newsItem">
 
     <a id="2007-02-07-1"><h1>PHP Québec conference 2007</h1></a>
@@ -644,7 +644,7 @@ contributors.
 </div>
 
 <hr>
-<?php news_image("http://www.phpconference.co.uk/", "phplondon2007.png", "PHP London 2007"); ?>
+<?php news_image('http://www.phpconference.co.uk/', 'phplondon2007.png', 'PHP London 2007'); ?>
 <div class="newsItem">
 
     <a id="2007-01-18-1"><h1>PHP London 2007</h1></a>
@@ -658,7 +658,7 @@ After the success of 2006 the <a href="http://www.phplondon.org/">PHP London use
 </div>
 
 <hr>
-<?php news_image("http://www.phparch.com/tek", "phptek2007.png", "php|tek 2007"); ?>
+<?php news_image('http://www.phparch.com/tek', 'phptek2007.png', 'php|tek 2007'); ?>
 <div class="newsItem">
 
     <a id="2007-01-12-1"><h1>Chicago php|tek 2007</h1></a>

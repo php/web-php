@@ -2,7 +2,7 @@
 $_SERVER['BASE_PAGE'] = 'archive/2008.php';
 include_once __DIR__ . '/../include/prepend.inc';
 news_archive_sidebar();
-site_header("News Archive - 2008", ["cache" => true]);
+site_header('News Archive - 2008', ['cache' => true]);
 ?>
 
 <h1>News Archive - 2008</h1>
@@ -194,7 +194,7 @@ site_header("News Archive - 2008", ["cache" => true]);
 
 <hr>
 <div class="newsItem hentry vevent">
-    <div class="newsImage"><?php news_image("http://www.afup.org/", "afup2008.png", "Forum AFUP Paris 2008"); ?></div>
+    <div class="newsImage"><?php news_image('http://www.afup.org/', 'afup2008.png', 'Forum AFUP Paris 2008'); ?></div>
     <h1 class="summary entry-title"><a id="id2008-11-15-1" href="http://www.php.net/archive/2008.php#id2008-11-15-1" rel="bookmark" class="bookmark">Forum PHP Paris 2008</a></h1>
 
     <div class="entry-content description">
@@ -217,7 +217,7 @@ site_header("News Archive - 2008", ["cache" => true]);
 
 <hr>
 <div class="newsItem hentry vevent">
-    <div class="newsImage"><?php news_image("http://conference.phpnw.org.uk", "phpnw08_logo.jpg", "PHPNW08 logo"); ?></div>
+    <div class="newsImage"><?php news_image('http://conference.phpnw.org.uk', 'phpnw08_logo.jpg', 'PHPNW08 logo'); ?></div>
     <h1 class="summary entry-title"><a id="id2008-11-04-2" href="http://conference.phpnw.org.uk" rel="bookmark" class="bookmark">PHPNW08 - November 22nd - Manchester, UK</a></h1>
     <div class="entry-content description">
         <abbr class="published newsdate" title="2008-11-04T12:55:09+00:00">[04-Nov-2008]</abbr>
@@ -285,7 +285,7 @@ site_header("News Archive - 2008", ["cache" => true]);
 
 <hr>
 <div class="newsItem hentry vevent">
-    <div class="newsImage"><?php news_image("http://phpconference.es/", "PHPBarcelonaConference003.png", "Barcelona PHP Conference"); ?></div>
+    <div class="newsImage"><?php news_image('http://phpconference.es/', 'PHPBarcelonaConference003.png', 'Barcelona PHP Conference'); ?></div>
     <h1 class="summary entry-title"><a id="id2008-09-10-1" href="http://phpconference.es/" rel="bookmark" class="bookmark">Barcelona PHP Conference 2008</a></h1>
 
     <div class="entry-content description">
@@ -325,7 +325,7 @@ site_header("News Archive - 2008", ["cache" => true]);
 
 <hr>
 <div class="newsItem hentry vevent">
-    <div class="newsImage"><?php news_image("http://www.phpconference.com/", "icp08.jpg", "International PHP Conference 2008"); ?></div>
+    <div class="newsImage"><?php news_image('http://www.phpconference.com/', 'icp08.jpg', 'International PHP Conference 2008'); ?></div>
     <h1 class="summary entry-title"><a id="id2008-09-08-1" href="http://www.phpconference.com/" rel="bookmark" class="bookmark">International PHP Conference 2008 October 27-31st Mainz, Germany</a></h1>
     <div class="entry-content description">
         <abbr class="published newsdate" title="2008-09-08T12:31:08+02:00">[08-Sep-2008]</abbr>
@@ -374,7 +374,7 @@ site_header("News Archive - 2008", ["cache" => true]);
 
 <hr>
 <div class="newsItem hentry vevent">
-    <div class="newsImage"><?php news_image("http://phpworks.mtacon.com/", "phppyworks.png", "php|works / PyWorks 2008: Chicago"); ?></div>
+    <div class="newsImage"><?php news_image('http://phpworks.mtacon.com/', 'phppyworks.png', 'php|works / PyWorks 2008: Chicago'); ?></div>
     <h1 class="summary entry-title"><a id="2008-09-03-1" href="http://phpworks.mtacon.com/" rel="bookmark" class="bookmark">php|works &amp; PyWorks 2008 - Atlanta</a></h1>
 
     <div class="entry-content description">
@@ -553,7 +553,7 @@ site_header("News Archive - 2008", ["cache" => true]);
 
 <hr>
 <div class="newsItem hentry vevent">
-    <div class="newsImage"><?php news_image("http://zendcon.com/", "zlogo.gif", "ZendCon 2008"); ?></div>
+    <div class="newsImage"><?php news_image('http://zendcon.com/', 'zlogo.gif', 'ZendCon 2008'); ?></div>
 
     <h1 class="summary entry-title"><a id="id2008-07-13-1" href="http://zendcon.com/" rel="bookmark" class="bookmark">ZendCon 2008 - September 15-18 - Santa Clara, CA-US</a></h1>
     <div class="entry-content description">
@@ -578,7 +578,7 @@ site_header("News Archive - 2008", ["cache" => true]);
 <hr>
 
 <div class="newsItem hentry vevent">
-    <div class="newsImage"><?php news_image("http://www.afup.org/", "elephpants.jpg", "elePHPants"); ?></div>
+    <div class="newsImage"><?php news_image('http://www.afup.org/', 'elephpants.jpg', 'elePHPants'); ?></div>
     <h1 class="summary entry-title"><a id="id2008-05-13-1" href="http://www.php.net/archive/2008.php#id2008-05-13-1" rel="bookmark" class="bookmark">Call for PUG, for elePHPants, 2008 generation</a></h1>
     <div class="entry-content description">
         <abbr class="published newsdate" title="2008-05-13T11:56:55-07:00">[13-May-2008]</abbr>
@@ -721,7 +721,7 @@ and join the <a href="http://www.flickr.com/photos/tags/elephpant/">world of blu
 
 <hr>
 <div class="newsItem hentry vevent">
-    <div class="newsImage"><?php news_image("http://www.afup.org/", "afup2008.png", "Forum AFUP Paris 2008"); ?></div>
+    <div class="newsImage"><?php news_image('http://www.afup.org/', 'afup2008.png', 'Forum AFUP Paris 2008'); ?></div>
     <h1 class="summary entry-title"><a id="id2008-04-13-2" href="http://www.php.net/archive/2008.php#id2008-04-13-2" rel="bookmark" class="bookmark">Call for speakers for Forum PHP Paris 2008</a></h1>
     <div class="entry-content description">
         <abbr class="published newsdate" title="2008-04-13T21:56:55-07:00">[13-Apr-2008]</abbr>
@@ -753,7 +753,7 @@ and join the <a href="http://www.flickr.com/photos/tags/elephpant/">world of blu
 
 <hr>
 <div class="newsItem hentry vevent">
-    <div class="newsImage"><?php news_image("http://www.dcphpconference.com/", "dcphpconference.2008.png", "PHP DC conference 2008"); ?></div>
+    <div class="newsImage"><?php news_image('http://www.dcphpconference.com/', 'dcphpconference.2008.png', 'PHP DC conference 2008'); ?></div>
     <h1 class="summary entry-title"><a id="id2008-04-13-1" href="http://www.dcphpconference.com/" rel="bookmark" class="bookmark">PHP DC conference 2008</a></h1>
     <div class="entry-content description">
         <abbr class="published newsdate" title="2008-04-13T12:00:00-05:00">[13-Apr-2008]</abbr>
@@ -838,7 +838,7 @@ and join the <a href="http://www.flickr.com/photos/tags/elephpant/">world of blu
 
 <hr>
 <div class="newsItem hentry vevent">
-    <div class="newsImage"><?php news_image("http://tek.phparch.com/", "phptek_2008.png", "php|tek 2008: Chicago"); ?></div>
+    <div class="newsImage"><?php news_image('http://tek.phparch.com/', 'phptek_2008.png', 'php|tek 2008: Chicago'); ?></div>
     <h1 class="summary entry-title"><a id="2008-02-19-1" href="http://tek.phparch.com/" rel="bookmark" class="bookmark">php|tek 2008: Chicago</a></h1>
     <div class="entry-content description">
         <abbr class="published newsdate" title="2008-02-19T11:45:00-05:00">[19-Feb-2008]</abbr>
@@ -862,7 +862,7 @@ For the past two years, php|architect's spring conference has sold out <em>weeks
 
 <hr>
 <div class="newsItem hentry vevent">
-    <div class="newsImage"><?php news_image("http://conf.phpquebec.com/en/conf2008/", "conference_php_quebec.gif", "PHP Québec conference 2008"); ?></div>
+    <div class="newsImage"><?php news_image('http://conf.phpquebec.com/en/conf2008/', 'conference_php_quebec.gif', 'PHP Québec conference 2008'); ?></div>
     <h1 class="summary entry-title"><a id="2008-02-06-1" href="http://conf.phpquebec.com/en/conf2008/" rel="bookmark" class="bookmark">PHP Québec conference 2008</a></h1>
     <div class="entry-content description">
         <abbr class="published newsdate" title="2008-02-06T19:23:51+01:00">[06-Feb-2008]</abbr>
@@ -892,7 +892,7 @@ visit the website: <a href="http://conf.phpquebec.com">http://conf.phpquebec.com
 
 <hr>
 <div class="newsItem hentry vevent">
-    <div class="newsImage"><?php news_image("http://www.phpconference.co.uk/", "phplondon2008.png", "PHP London Conference 08"); ?></div>
+    <div class="newsImage"><?php news_image('http://www.phpconference.co.uk/', 'phplondon2008.png', 'PHP London Conference 08'); ?></div>
     <h1 class="summary entry-title"><a id="2008-01-10-1" href="http://www.phpconference.co.uk/" rel="bookmark" class="bookmark">phplondon conference 2008</a></h1>
 
     <div class="entry-content description">

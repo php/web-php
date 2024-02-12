@@ -1,7 +1,7 @@
 <?php
 $_SERVER['BASE_PAGE'] = 'license/contrib-guidelines-code.php';
 include_once __DIR__ . '/../include/prepend.inc';
-site_header("License Information", ["current" => "help"]);
+site_header('License Information', ['current' => 'help']);
 ?>
 <h2>PHP Contributor Guidelines for Code Developers</h2>
 

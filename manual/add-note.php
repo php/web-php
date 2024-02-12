@@ -9,7 +9,7 @@ include __DIR__ . '/spam_challenge.php';
 
 use phpweb\UserNotes\UserNote;
 
-site_header("Add Manual Note", ['css' => 'add-note.css']);
+site_header('Add Manual Note', ['css' => 'add-note.css']);
 
 // Copy over "sect" and "redirect" from GET to POST
 if (empty($_POST['sect']) && isset($_GET['sect'])) {
@@ -42,8 +42,8 @@ if ($process) {
     $note = preg_replace("/\n{2,}/", "\n\n", $note);
 
     // Don't pass through example username
-    if ($user === "user@example.com") {
-        $user = "Anonymous";
+    if ($user === 'user@example.com') {
+        $user = 'Anonymous';
     }
 
     // We don't know of any error now
@@ -51,7 +51,7 @@ if ($process) {
 
     // No note specified
     if (strlen($note) == 0) {
-        $error = "You have not specified the note text.";
+        $error = 'You have not specified the note text.';
     }
 
     // SPAM challenge failed
@@ -60,8 +60,8 @@ if ($process) {
     }
 
     // The user name contains a malicious character
-    elseif (stristr($user, "|")) {
-        $error = "You have included bad characters within your username. We appreciate you may want to obfuscate your email further, but we have a system in place to do this for you.";
+    elseif (stristr($user, '|')) {
+        $error = 'You have included bad characters within your username. We appreciate you may want to obfuscate your email further, but we have a system in place to do this for you.';
     }
 
     // Check if the note is too long
@@ -78,23 +78,23 @@ if ($process) {
     else {
 
         // Split the note by whitespace, and check length
-        foreach (preg_split("/\\s+/", $note) as $chunk) {
+        foreach (preg_split('/\\s+/', $note) as $chunk) {
             if (strlen($chunk) > 120) {
-                $error = "Your note contains a bit of text that will result in a line that is too long, even after using wordwrap().";
+                $error = 'Your note contains a bit of text that will result in a line that is too long, even after using wordwrap().';
                 break;
             }
         }
     }
 
     // No error was found, and the submit action is required
-    if (!$error && strtolower($_POST['action']) !== "preview") {
+    if (!$error && strtolower($_POST['action']) !== 'preview') {
 
         $redirip = $_SERVER['HTTP_X_FORWARDED_FOR'] ??
                    ($_SERVER['HTTP_VIA'] ?? '');
 
         // Post the variables to the central user note script
         $result = posttohost(
-            "https://main.php.net/entry/user-note.php",
+            'https://main.php.net/entry/user-note.php',
             [
                 'user' => $user,
                 'note' => $note,
@@ -107,7 +107,7 @@ if ($process) {
         // If there is any non-header result, then it is an error
         if ($result) {
             if (strpos($result, '[TOO MANY NOTES]') !== false) {
-                echo "<p class=\"formerror\">As a security precaution, we only allow a certain number of notes to be submitted per minute. At this time, this number has been exceeded. Please re-submit your note in about a minute.</p>";
+                echo '<p class="formerror">As a security precaution, we only allow a certain number of notes to be submitted per minute. At this time, this number has been exceeded. Please re-submit your note in about a minute.</p>';
             } elseif (($pos = strpos($result, '[SPAMMER]')) !== false) {
                 $ip = trim(substr($result, $pos + 9));
                 $spam_url = $ip_spam_lookup_url . $ip;
@@ -118,7 +118,7 @@ if ($process) {
                 echo '<p class="formerror">Due to some technical problems this service isn\'t currently working. Please try again later. Sorry for any inconvenience.</p>';
             } else {
                 echo "<!-- $result -->";
-                echo "<p class=\"formerror\">There was an internal error processing your submission. Please try to submit again later.</p>";
+                echo '<p class="formerror">There was an internal error processing your submission. Please try to submit again later.</p>';
             }
         }
 
@@ -327,7 +327,7 @@ else {
 }
 
 // If the user name was not specified, provide a default
-if (empty($_POST['user'])) { $_POST['user'] = "user@example.com"; }
+if (empty($_POST['user'])) { $_POST['user'] = 'user@example.com'; }
 
 // There is no section to add note to
 if (!isset($_POST['sect'], $_POST['redirect'])) {

@@ -4,7 +4,7 @@ header_nocache();
 
 // No file to download
 if (!isset($df)) {
-    exit("No file requested for download");
+    exit('No file requested for download');
 }
 
 // Could be a normal download or a manual download file
@@ -31,8 +31,8 @@ echo '<div id="mirrors-container">';
 $size = 0;
 // No downloadable file found
 if ($file === false) {
-        $info = "<p>
- The file you requested (<strong>" . htmlspecialchars($df, ENT_QUOTES, "UTF-8") . "</strong>) is not found on
+        $info = '<p>
+ The file you requested (<strong>' . htmlspecialchars($df, ENT_QUOTES, 'UTF-8') . "</strong>) is not found on
  this server (<strong>{$MYSITE}</strong>).</p>";
 
     echo <<<EOT

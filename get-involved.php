@@ -2,7 +2,7 @@
 $_SERVER['BASE_PAGE'] = 'get-involved.php';
 include_once __DIR__ . '/include/prepend.inc';
 
-site_header("Get Involved", ["current" => "community"]);
+site_header('Get Involved', ['current' => 'community']);
 ?>
 
 <h2 class="content-title" id="contributing-to-php">Contributing to PHP</h2>
