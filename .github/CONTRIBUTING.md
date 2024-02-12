@@ -4,7 +4,7 @@ Anybody who programs in PHP can be a contributing member of the community that
 develops and deploys www.php.net; the task of deploying the www.php.net website is a never-ending one.
 
 You don't need any special access to download, debug and begin submitting
-code, tests or documentation. 
+code, tests or documentation.
 
 ## Index
 
@@ -62,14 +62,14 @@ about what you're working on, you can contact us via the
 - Create test scripts.
 - Run
 
-  ```
+  ```shell
   make tests
   ```
 
   to check your change doesn't break other features.
 - Run
 
-  ```
+  ```shell
   make coding-standards
   ```
 
@@ -93,7 +93,7 @@ bumping. Before doing this think about these questions:
 
 ## What happens when your contribution is applied?
 
-Your name will likely be included in the Git commit log. 
+Your name will likely be included in the Git commit log.
 
 ## Git commit rules
 
@@ -124,13 +124,13 @@ Having said that, here are the organizational rules:
 
 5. Test your changes before committing them. We mean it. Really. To do so use
 
-   ```
+   ```shell
    make tests
    ```
 
 5. Fix coding standard issues before committing code. To do so use
 
-   ```
+   ```shell
    make coding-standards
    ```
 
