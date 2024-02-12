@@ -1884,6 +1884,11 @@ aside.tips div.inner {
   border: 0;
   padding: 10px;
 }
+
+.newsentry .newsimage img,
+.newsItem .newsImage img {
+    max-width: 350px;
+}
 /* }}} */
 
 /* {{{ Logo Downloads */

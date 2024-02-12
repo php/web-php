@@ -38,6 +38,7 @@ function language_chooser(string $currentLang): void {
     $LANGUAGES = [
         'en' => 'English',
         'es' => 'Español',
+        'de' => 'Deutsch',
         'fr' => 'Français',
         'pt_BR' => 'Português do Brasil',
         'ru' => 'Russian',

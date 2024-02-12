@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+  <title>Drupal Mountain Camp 2024</title>
+  <id>https://www.php.net/archive/2024.php#2024-01-05-1</id>
+  <published>2024-01-05T10:08:42+00:00</published>
+  <updated>2024-01-05T10:08:42+00:00</updated>
+  <link href="https://www.php.net/conferences/index.php#2024-01-05-1" rel="alternate" type="text/html"/>
+  <link href="https://drupalmountaincamp.ch" rel="via" type="text/html"/>
+  <finalTeaserDate xmlns="http://php.net/ns/news">2024-03-07</finalTeaserDate>
+  <category term="conferences" label="Conference announcement"/>
+  <newsImage xmlns="http://php.net/ns/news" link="https://drupalmountaincamp.ch" title="Drupal Mountain Camp 2024">drupalmountaincamp-2024-banner.png</newsImage>
+  <content type="xhtml">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+      <p>
+        We are thrilled to announce the 4th edition of <strong>Drupal Mountain Camp</strong>, taking place from March 7th to March 10th, 2024, in Davos, Switzerland.
+      </p>
+
+      <p>
+        <strong>About the Conference</strong><br/>
+        Featuring seven different tracks (three parallel), focusing not only on Drupal but also on Symfony, Laravel, PHP, modern JavaScript (React), as well as accessibility,
+        diversity, and inclusion, the conference will be a great opportunity to learn, connect, and share with the community.
+      </p>
+
+      <p>
+        Drupal Mountain Camp brings together experts and newcomers in web development to share their knowledge in creating interactive websites using Drupal and
+        related web technologies. We are committed to unite a diverse crowd from different disciplines such as developers, designers, project managers as well as
+        agency and community leaders.
+      </p>
+
+      <p>
+        <strong>Winter Wonderland in Davos</strong><br/>
+        Embrace the beauty of the Swiss Alps during the snowy season.<br/>
+        Enjoy <strong>social activities</strong> like skiing, snowboarding, sledding, and indulging in traditional fondue high up in the mountains.<br/>
+        It's not just a conference; it's an adventure!
+      </p>
+
+      <p>
+        <strong>Who should join?</strong><br/>
+        Although the conference is predominately focused on Drupal, this years' edition we've expanded to several non-Drupal tracks, thus we invite everyone related to PHP or the modern web to participate.
+      </p>
+
+      <p>
+        Davos is located high up in the Swiss alps, reachable from Zurich airport within a beautiful 2 hours train ride up the mountains.<br/>
+        <ul>
+          <li>Date: March 7 - 10, 2024</li>
+          <li>Location: Davos, Switzerland</li>
+          <li>Language: English</li>
+        </ul>
+      </p>
+
+      <p>
+        <strong>Interested?</strong><br/>
+        Submit a session, register as a participant, or become a sponsor today.<br/>
+        Keep in touch via our website at: <a href="https://drupalmountaincamp.ch" target="_blank">drupalmountaincamp.ch</a>
+      </p>
+    </div>
+  </content>
+</entry>

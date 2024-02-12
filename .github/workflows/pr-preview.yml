@@ -1,0 +1,35 @@
+name: Preview PR
+on:
+  pull_request_target:
+
+jobs:
+  build:
+    runs-on: "ubuntu-22.04"
+    if: github.repository_owner == 'php'
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: "refs/pull/${{ github.event.number }}/merge"
+
+      - uses: easingthemes/ssh-deploy@main
+        with:
+          REMOTE_HOST: ${{ secrets.PREVIEW_REMOTE_HOST }}
+          REMOTE_USER: ${{ secrets.PREVIEW_REMOTE_USER }}
+          SSH_PRIVATE_KEY: ${{ secrets.PREVIEW_SSH_KEY }}
+          TARGET: "/home/thephpfoundation/preview/web-php-pr-${{ github.event.number }}/public"
+          SCRIPT_BEFORE: bash /home/thephpfoundation/scripts/pr_created_pre.sh web-php ${{ github.event.number }}
+          SCRIPT_AFTER: bash /home/thephpfoundation/scripts/pr_created.sh web-php ${{ github.event.number }}
+
+      - uses: peter-evans/find-comment@v2
+        id: fc
+        with:
+          issue-number: ${{ github.event.number }}
+          comment-author: 'github-actions[bot]'
+
+      - uses: peter-evans/create-or-update-comment@v3
+        with:
+          issue-number: ${{ github.event.number }}
+          comment-id: ${{ steps.fc.outputs.comment-id }}
+          edit-mode: 'replace'
+          body: |
+            🚀 Commit ${{ github.sha }} Deployed on https://web-php-pr-${{ github.event.number }}.preview.thephp.foundation

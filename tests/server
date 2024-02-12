@@ -1,0 +1,171 @@
+#!/bin/bash
+
+# https://github.com/cubny/php-built-in-server-manager/blob/9a5cbeaad50a108d6058b882b83ba23fbd7722a9/server
+
+# default hostname
+HOST=localhost
+# default port number
+PORT=8080
+# script name
+NAME=${0##*/}
+
+usage () {
+  cat <<EOF
+
+  $NAME (PHP built-in web server manager) Version 0.2.0
+  PHP builtin server manager on port $PORT
+
+  usage: ./$NAME <command> [<hostname>:<port>]
+
+  Available commands:
+
+  start     Starts PHP built-in web server server on specified hostname:port, default is localhost:$PORT
+  stop      Stops the PHP built-in web server
+  restart   Stops and Starts on previously specified hostname:port
+  status    Status of "$NAME" process
+  log       Show the PHP built-in web server logs. Use the -f option for a live update
+
+
+  report bugs to me@cubny.com
+  $NAME homepage: <https://github.com/cubny/php-built-in-server-manager>
+
+EOF
+return 0
+}
+
+setup_colors() {
+
+if which tput >/dev/null 2>&1; then
+      ncolors=$(tput colors)
+  fi
+  if [ -t 1 ] && [ -n "$ncolors" ] && [ "$ncolors" -ge 8 ]; then
+    RED="$(tput setaf 1)"
+    GREEN="$(tput setaf 2)"
+    YELLOW="$(tput setaf 3)"
+    BLUE="$(tput setaf 4)"
+    BOLD="$(tput bold)"
+    NORMAL="$(tput sgr0)"
+  else
+    RED=""
+    GREEN=""
+    YELLOW=""
+    BLUE=""
+    BOLD=""
+    NORMAL=""
+  fi
+}
+
+# if no command specified exit and show usage
+if [[ $# < 1 ]]; then
+  echo $NAME: no command specified
+  usage
+  exit 1
+fi
+
+# if hostname:port specified override defaults
+if [[ $# > 1 ]]; then
+  IFS=':' read -r -a hostport <<< "$2"
+  if [[ ! -z "${hostport[0]}" ]]; then
+    HOST=${hostport[0]}
+  fi
+  if [[ ! -z "${hostport[1]}" ]]; then
+    PORT=${hostport[1]}
+  fi
+fi
+
+# pidfile contents would be hostname:port:pid
+PIDFILE=tests/server.pid
+LOGFILE=tests/server.log
+
+validate_server () {
+  which php &> /dev/null
+  if [[ $? -eq 1 ]]; then
+    printf "${YELLOW}Error: PHP not found. ${NORMAL}Please install PHP version 5.4 or greater!\n"
+    return 1
+  fi
+
+  php -h | grep -q -- '-S'
+  if [[ $? -eq 1 ]]; then
+    printf "${YELLOW}Error: PHP version must be 5.4 or greater!${NORMAL}\n"
+    return 1
+  fi
+
+  return 0
+}
+
+start_server () {
+  validate_server
+
+  if [[ $? -eq 1 ]]; then
+    return 1
+  fi
+
+  if [[ -e "$PIDFILE" ]]; then
+    printf "${YELLOW}Server seems to be running!${NORMAL}\n"
+    echo
+    echo if not, there is probably a zombie "$PIDFILE" in this directory.
+    echo if you are sure no server is running just remove "$PIDFILE" manually and start again
+    return 1
+  else
+    printf "${GREEN}"$NAME" started on $HOST:$PORT${NORMAL}\n"
+    php -S "$HOST":"$PORT" -c tests/php.ini >> "$LOGFILE" 2>&1 &
+    echo "$HOST":"$PORT":$! > $PIDFILE
+    return 0
+  fi
+}
+
+read_pidfile() {
+  if [[ -e "$PIDFILE" ]]; then
+    PIDFILECONTENT=`cat "$PIDFILE"`
+    IFS=: read HOST PORT PID <<< "$PIDFILECONTENT:"
+    return 0
+  else
+    return 1
+  fi
+}
+
+stop_server () {
+  if read_pidfile; then
+    kill -9 "$PID"
+    rm -f "$PIDFILE"
+    printf "${GREEN}"$NAME" stopped!${NORMAL}\n"
+    return 0
+  else
+    printf "${YELLOW}"$NAME" is not running!${NORMAL}\n"
+    return 1
+  fi
+}
+
+status_server() {
+  if read_pidfile && kill -0 "$PID" ; then
+    printf "${BLUE}"$NAME" is running on ${HOST}:${PORT}${NORMAL}\n"
+  else
+    printf "${YELLOW}"$NAME" is not running!${NORMAL}\n"
+  fi
+}
+
+
+log_server() {
+  if read_pidfile && kill -0 "$PID" ; then
+    if [[ "$1" = "-f" ]]; then
+      TAIL_OPTS="-f"
+    fi
+    tail $TAIL_OPTS "$LOGFILE"
+  else
+    printf "${YELLOW}"$NAME" is not running!${NORMAL}\n"
+  fi
+}
+
+
+setup_colors
+
+case $1 in
+  start) start_server;;
+  stop)  stop_server;;
+  restart) stop_server; start_server ;;
+  status) status_server;;
+  log) log_server $2;;
+  -h) usage ;;
+  --help) usage ;;
+  *) usage;;
+esac

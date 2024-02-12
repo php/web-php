@@ -194,3 +194,25 @@ aside.tips .social-media .icon-twitter {
     font-size: 1.5em;
     vertical-align: middle;
 }
+
+/* Unheroic button */
+.btn {
+  box-sizing: border-box;
+  padding: 0.5rem 1rem;
+  margin-bottom: 1rem;
+  border-radius: 2rem;
+  text-align: center;
+  display: inline-block;
+  border: none;
+  transition: background-color 0.2s;
+}
+
+.btn-primary {
+  background-color: var(--dark-blue-color);
+  color: #fff !important;
+}
+
+.btn-primary:hover, .hero-btn-primary:focus {
+  background-color: var(--dark-magenta-color) !important;
+  border-color: var(--dark-magenta-color) !important;
+}

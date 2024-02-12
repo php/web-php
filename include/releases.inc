@@ -2,6 +2,186 @@
 $OLDRELEASES = array (
   8 => 
   array (
+    '8.2.14' => 
+    array (
+      'announcement' => 
+      array (
+        'English' => '/releases/8_2_14.php',
+      ),
+      'tags' => 
+      array (
+      ),
+      'date' => '21 Dec 2023',
+      'source' => 
+      array (
+        0 => 
+        array (
+          'filename' => 'php-8.2.14.tar.gz',
+          'name' => 'PHP 8.2.14 (tar.gz)',
+          'sha256' => '4c1fbb55a10ece7f4532feba9f3f88b9b211c11320742977588738374c03255f',
+          'date' => '21 Dec 2023',
+        ),
+        1 => 
+        array (
+          'filename' => 'php-8.2.14.tar.bz2',
+          'name' => 'PHP 8.2.14 (tar.bz2)',
+          'sha256' => 'f871e131333d60ae6c537b1adddbc2aea54c436c562af986fb8309c060040b9e',
+          'date' => '21 Dec 2023',
+        ),
+        2 => 
+        array (
+          'filename' => 'php-8.2.14.tar.xz',
+          'name' => 'PHP 8.2.14 (tar.xz)',
+          'sha256' => '763ecd39fcf51c3815af6ef6e43fa9aa0d0bd8e5a615009e5f4780c92705f583',
+          'date' => '21 Dec 2023',
+        ),
+      ),
+      'museum' => false,
+    ),
+    '8.3.1' => 
+    array (
+      'announcement' => 
+      array (
+        'English' => '/releases/8_3_1.php',
+      ),
+      'tags' => 
+      array (
+      ),
+      'date' => '21 Dec 2023',
+      'source' => 
+      array (
+        0 => 
+        array (
+          'filename' => 'php-8.3.1.tar.gz',
+          'name' => 'PHP 8.3.1 (tar.gz)',
+          'sha256' => '2b10218b5e81915d1708ab4b6351362d073556ec73a790553c61fd89c119924e',
+          'date' => '21 Dec 2023',
+        ),
+        1 => 
+        array (
+          'filename' => 'php-8.3.1.tar.bz2',
+          'name' => 'PHP 8.3.1 (tar.bz2)',
+          'sha256' => 'c40fae9197fa68a532f6a062c316dafe3b04c545136b54b9ead4932fc26c6ae1',
+          'date' => '21 Dec 2023',
+        ),
+        2 => 
+        array (
+          'filename' => 'php-8.3.1.tar.xz',
+          'name' => 'PHP 8.3.1 (tar.xz)',
+          'sha256' => '56445b1771b2ba5b7573453f9e8a9451e2d810b1741a352fa05259733b1e9758',
+          'date' => '21 Dec 2023',
+        ),
+      ),
+      'museum' => false,
+    ),
+    '8.2.13' => 
+    array (
+      'announcement' => 
+      array (
+        'English' => '/releases/8_2_13.php',
+      ),
+      'tags' => 
+      array (
+      ),
+      'date' => '23 Nov 2023',
+      'source' => 
+      array (
+        0 => 
+        array (
+          'filename' => 'php-8.2.13.tar.gz',
+          'name' => 'PHP 8.2.13 (tar.gz)',
+          'sha256' => '6a194038f5a9e46d8f70a9d59c072c3b08d6edbdd8e304096e24ccf2225bcf1b',
+          'date' => '23 Nov 2023',
+        ),
+        1 => 
+        array (
+          'filename' => 'php-8.2.13.tar.bz2',
+          'name' => 'PHP 8.2.13 (tar.bz2)',
+          'sha256' => '66529f43b213131e6b253c5602bef05f049458d21292730fccd63b48a06d67ba',
+          'date' => '23 Nov 2023',
+        ),
+        2 => 
+        array (
+          'filename' => 'php-8.2.13.tar.xz',
+          'name' => 'PHP 8.2.13 (tar.xz)',
+          'sha256' => '2629bba10117bf78912068a230c68a8fd09b7740267bd8ebd3cfce91515d454b',
+          'date' => '23 Nov 2023',
+        ),
+      ),
+      'museum' => false,
+    ),
+    '8.1.26' => 
+    array (
+      'announcement' => 
+      array (
+        'English' => '/releases/8_1_26.php',
+      ),
+      'tags' => 
+      array (
+      ),
+      'date' => '23 Nov 2023',
+      'source' => 
+      array (
+        0 => 
+        array (
+          'filename' => 'php-8.1.26.tar.gz',
+          'name' => 'PHP 8.1.26 (tar.gz)',
+          'sha256' => 'd954cecfc3d294c2fccbe2b1a6bef784ce0d6c5d44a9e28f8a527e092825f2cb',
+          'date' => '23 Nov 2023',
+        ),
+        1 => 
+        array (
+          'filename' => 'php-8.1.26.tar.bz2',
+          'name' => 'PHP 8.1.26 (tar.bz2)',
+          'sha256' => '83bde249c84aa1a043a8c8d0eea09345c2cae69b9784cdf02229fc916fbb9ea0',
+          'date' => '23 Nov 2023',
+        ),
+        2 => 
+        array (
+          'filename' => 'php-8.1.26.tar.xz',
+          'name' => 'PHP 8.1.26 (tar.xz)',
+          'sha256' => '17f87133596449327451ad4b8d9911bfaea59ff5109f3a6f2bb679f967a8ea0f',
+          'date' => '23 Nov 2023',
+        ),
+      ),
+      'museum' => false,
+    ),
+    '8.3.0' => 
+    array (
+      'announcement' => 
+      array (
+        'English' => '/releases/8_3_0.php',
+      ),
+      'tags' => 
+      array (
+      ),
+      'date' => '23 Nov 2023',
+      'source' => 
+      array (
+        0 => 
+        array (
+          'filename' => 'php-8.3.0.tar.gz',
+          'name' => 'PHP 8.3.0 (tar.gz)',
+          'sha256' => '557ae14650f1d1984d3213e3fcd8d93a5f11418b3f8026d3a2d5022251163951',
+          'date' => '23 Nov 2023',
+        ),
+        1 => 
+        array (
+          'filename' => 'php-8.3.0.tar.bz2',
+          'name' => 'PHP 8.3.0 (tar.bz2)',
+          'sha256' => 'de67d0833d42b196e5a66fa1a332f45e296cbe8e9472e9256b2a071c34dc5ed6',
+          'date' => '23 Nov 2023',
+        ),
+        2 => 
+        array (
+          'filename' => 'php-8.3.0.tar.xz',
+          'name' => 'PHP 8.3.0 (tar.xz)',
+          'sha256' => '1db84fec57125aa93638b51bb2b15103e12ac196e2f960f0d124275b2687ea54',
+          'date' => '23 Nov 2023',
+        ),
+      ),
+      'museum' => false,
+    ),
     '8.0.30' => 
     array (
       'announcement' => 

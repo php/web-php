@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom" xmlns:default="http://php.net/ns/news">
+  <title>SymfonyCon Vienna 2024</title>
+  <id>https://www.php.net/archive/2024.php#2024-02-15-3</id>
+  <published>2024-01-15T10:10:34+00:00</published>
+  <updated>2024-01-15T10:10:34+00:00</updated>
+  <link href="https://www.php.net/conferences/index.php#id2024-01-15-3" rel="alternate" type="text/html"/>
+  <link href="https://live.symfony.com/2024-vienna-con/" rel="via" type="text/html"/>
+  <default:finalTeaserDate xmlns="http://php.net/ns/news">2024-12-06</default:finalTeaserDate>
+  <category term="conferences" label="Conference announcement"/>
+  <default:newsImage xmlns="http://php.net/ns/news" link="https://live.symfony.com/2024-vienna-con/" title="SymfonyCon Vienna 2024">symfonycon-vienna-2024.png</default:newsImage>
+  <content type="xhtml">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+      <p>
+        <a href="https://live.symfony.com/2024-vienna-con/">SymfonyCon Vienna 2024</a> is the global conference in English for Symfony and PHP developers. Two days of workshops (December 3-4) followed by two days (December 5-6) full of talks on PHP, Symfony and its ecosystem.
+      </p>
+      <p>
+        Join us and discover the amazing city of Vienna (Austria) while you share fun and knowledge with developers from all around the World.
+      </p>
+      <p>
+        Check out <a href="https://live.symfony.com/2024-vienna-con/">all the conference details</a>
+      </p>
+    </div>
+  </content>
+</entry>
