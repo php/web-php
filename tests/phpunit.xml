@@ -27,6 +27,8 @@
     <coverage includeUncoveredFiles="true"/>
     <source>
         <include>
+            <directory suffix=".php">../manual/</directory>
+            <directory suffix=".inc">../include/</directory>
             <directory suffix=".php">../src/</directory>
         </include>
     </source>
@@ -35,7 +37,7 @@
             <directory suffix=".php">EndToEnd/</directory>
         </testsuite>
         <testsuite name="unit">
-            <directory suffix=".phpt">Unit/</directory>
+            <directory suffix=".php">Unit/</directory>
         </testsuite>
     </testsuites>
 </phpunit>

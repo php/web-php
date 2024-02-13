@@ -22,7 +22,7 @@
     },
     "autoload-dev": {
         "psr-4": {
-            "phpweb\\Test\\EndToEnd\\": "tests/EndToEnd/"
+            "phpweb\\Test\\": "tests/"
         }
     },
     "config": {
