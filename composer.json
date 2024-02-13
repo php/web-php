@@ -20,6 +20,11 @@
             "phpweb\\": "src/"
         }
     },
+    "autoload-dev": {
+        "psr-4": {
+            "phpweb\\Test\\EndToEnd\\": "tests/EndToEnd/"
+        }
+    },
     "config": {
         "platform": {
             "php": "8.2.0"
