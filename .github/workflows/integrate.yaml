@@ -9,6 +9,56 @@ on:
       - "master"
 
 jobs:
+  code-coverage:
+    name: "Code Coverage"
+
+    runs-on: "ubuntu-latest"
+
+    strategy:
+      matrix:
+        php-version:
+          - "8.2"
+
+    steps:
+      - name: "Checkout"
+        uses: "actions/checkout@v4"
+
+      - name: "Set up PHP"
+        uses: "shivammathur/setup-php@v2"
+        with:
+          coverage: "xdebug"
+          extensions: "none, curl, dom, json, mbstring, tokenizer, xml, xmlwriter"
+          php-version: "${{ matrix.php-version }}"
+
+      - name: "Set up problem matchers for PHP"
+        run: "echo \"::add-matcher::${{ runner.tool_cache }}/php.json\""
+
+      - name: "Set up problem matchers for phpunit/phpunit"
+        run: "echo \"::add-matcher::${{ runner.tool_cache }}/phpunit.json\""
+
+      - name: "Determine composer cache directory"
+        run: "echo \"COMPOSER_CACHE_DIR=$(composer config cache-dir)\" >> $GITHUB_ENV"
+
+      - name: "Cache dependencies installed with composer"
+        uses: "actions/cache@v3"
+        with:
+          path: "${{ env.COMPOSER_CACHE_DIR }}"
+          key: "php-${{ matrix.php-version }}-composer-${{ hashFiles('composer.lock') }}"
+          restore-keys: "php-${{ matrix.php-version }}-composer-"
+
+      - name: "Install dependencies with composer"
+        run: "composer install --ansi --no-interaction --no-progress"
+
+      - name: "Collect code coverage from running unit tests with phpunit/phpunit"
+        env:
+          XDEBUG_MODE: "coverage"
+        run: "vendor/bin/phpunit --colors=always --configuration=tests/phpunit.xml --coverage-clover=.build/phpunit/logs/clover.xml --testsuite=unit"
+
+      - name: "Send code coverage report to codecov.io"
+        uses: "codecov/codecov-action@v4.0.1"
+        with:
+          files: ".build/phpunit/logs/clover.xml"
+
   coding-standards:
     name: "Coding Standards"
 
