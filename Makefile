@@ -5,6 +5,10 @@ HTTP_HOST:=localhost:8080
 .PHONY: it
 it: coding-standards tests ## Runs all the targets
 
+.PHONY: code-coverage
+code-coverage: vendor ## Collects code coverage from running unit tests with phpunit/phpunit
+	vendor/bin/phpunit --configuration=tests/phpunit.xml --coverage-text --testsuite=unit
+
 .PHONY: help
 help: ## Displays this list of targets with descriptions
 	@grep -E '^[a-zA-Z0-9_-]+:.*?## .*$$' $(MAKEFILE_LIST) | sort | awk 'BEGIN {FS = ":.*?## "}; {printf "\033[32m%-30s\033[0m %s\n", $$1, $$2}'
