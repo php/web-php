@@ -55,7 +55,7 @@ jobs:
         run: "vendor/bin/phpunit --colors=always --configuration=tests/phpunit.xml --coverage-clover=.build/phpunit/logs/clover.xml --testsuite=unit"
 
       - name: "Send code coverage report to codecov.io"
-        uses: "codecov/codecov-action@v4.0.1"
+        uses: "codecov/codecov-action@v4"
         with:
           files: ".build/phpunit/logs/clover.xml"
 
