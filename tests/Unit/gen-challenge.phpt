@@ -3,7 +3,7 @@ gen_challenge() generates a spam challenge
 --FILE--
 <?php
 
-require_once __DIR__ . '/../manual/spam_challenge.php';
+require_once __DIR__ . '/../../manual/spam_challenge.php';
 
 mt_srand(9001);
 

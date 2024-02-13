@@ -3,7 +3,7 @@ clean_AntiSPAM() removes spam terms
 --FILE--
 <?php
 
-require_once __DIR__ . '/../include/email-validation.inc';
+require_once __DIR__ . '/../../include/email-validation.inc';
 
 $emails = array (
     'asasasd324324@php.net',
