@@ -58,6 +58,7 @@ jobs:
         uses: "codecov/codecov-action@v4.0.1"
         with:
           files: ".build/phpunit/logs/clover.xml"
+          token: "${{ secrets.CODECOV_TOKEN }}"
 
   coding-standards:
     name: "Coding Standards"
