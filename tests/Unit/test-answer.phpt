@@ -3,7 +3,7 @@ test_answer() returns true when answer to spam challenge is valid
 --FILE--
 <?php
 
-require_once __DIR__ . '/../manual/spam_challenge.php';
+require_once __DIR__ . '/../../manual/spam_challenge.php';
 
 $answers = [
     [
