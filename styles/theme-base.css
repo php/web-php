@@ -1531,6 +1531,7 @@ div.soft-deprecation-notice blockquote.sidebar {
 #breadcrumbs a:link,
 #breadcrumbs a:visited {
     border-width:0;
+    text-shadow: none;
 }
 #breadcrumbs a:hover,
 #breadcrumbs a:focus {
@@ -1550,7 +1551,7 @@ div.soft-deprecation-notice blockquote.sidebar {
     transform: translateZ(0);
   }
   body {
-    margin:3.25rem 0 0;
+    margin:6.25rem 0 0;
   }
   /* add a top-margin to all elements which get referenced by anchor-urls, so they are not covered by the fixed header */
   [id] {
