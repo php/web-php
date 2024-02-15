@@ -508,6 +508,67 @@ changelog_header(8, $MINOR_VERSIONS);
 
 <a id="PHP_8_2"></a>
 
+<section class="version" id="8.2.16"><!-- {{{ 8.2.16 -->
+<h3>Version 8.2.16</h3>
+<b><?php release_date('15-Feb-2024'); ?></b>
+<ul><li>Core:
+<ul>
+  <li>Fixed timer leak in zend-max-execution-timers builds.</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 12349); ?> (linking failure on ARM with mold).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 13097); ?> (Anonymous class reference in trigger_error / thrown Exception).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 13215); ?> (GCC 14 build failure).</li>
+</ul></li>
+<li>Curl:
+<ul>
+  <li>Fix missing error check in curl_multi_init().</li>
+</ul></li>
+<li>FPM:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 12996); ?> (Incorrect SCRIPT_NAME with Apache ProxyPassMatch when plus in path).</li>
+</ul></li>
+<li>GD:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 10344); ?> (imagettfbbox(): Could not find/open font UNC path).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 10614); ?> (imagerotate will turn the picture all black, when rotated 90).</li>
+</ul></li>
+<li>MySQLnd:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 12107); ?> (When running a stored procedure (that returns a result set) twice, PHP crashes).</li>
+</ul></li>
+<li>Opcache:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 13232); ?> (Segmentation fault will be reported when JIT is off but JIT_debug is still on).</li>
+</ul></li>
+<li>OpenSSL:
+<ul>
+  <li>Fixed LibreSSL undefined reference when OPENSSL_NO_ENGINE not set. (David Carlier).</li>
+</ul></li>
+<li>PDO_Firebird:
+<ul>
+  <li>Fix <?php githubissuel('php/php-src', 13119); ?> (Changed to convert float and double values ​​into strings using `H` format).</li>
+</ul></li>
+<li>Phar:
+<ul>
+  <li><?php bugfix(71465); ?> (PHAR doesn't know about litespeed).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 13037); ?> (PharData incorrectly extracts zip file).</li>
+</ul></li>
+<li>Random:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 13138); ?> (Randomizer::pickArrayKeys() does not detect broken engines).</li>
+</ul></li>
+<li>Session:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 12504); ?> (Corrupted session written when there's a fatal error in autoloader).</li>
+</ul></li>
+<li>Streams:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 13071); ?> (Copying large files using mmap-able source streams may exhaust available memory and fail).</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
+
+
 <section class="version" id="8.2.15"><!-- {{{ 8.2.15 -->
 <h3>Version 8.2.15</h3>
 <b><?php release_date('18-Jan-2024'); ?></b>
