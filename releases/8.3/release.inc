@@ -145,14 +145,14 @@ final class MyTest extends TestCase {
         $this->logFile = fopen('/tmp/logfile', 'w');
     }
 
-    protected function taerDown(): void {
+    protected function tearDown(): void {
         fclose($this->logFile);
         unlink('/tmp/logfile');
     }
 }
 
 // The log file will never be removed, because the
-// method name was mistyped (taerDown vs tearDown).
+// method name was mistyped (tearDown vs tearDown).
 PHP
 
                         ); ?>
@@ -174,13 +174,13 @@ final class MyTest extends TestCase {
     }
 
     #[\Override]
-    protected function taerDown(): void {
+    protected function tearDown(): void {
         fclose($this->logFile);
         unlink('/tmp/logfile');
     }
 }
 
-// Fatal error: MyTest::taerDown() has #[\Override] attribute,
+// Fatal error: MyTest::tearDown() has #[\Override] attribute,
 // but no matching parent method exists
 PHP
                         ); ?>
