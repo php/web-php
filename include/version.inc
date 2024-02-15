@@ -20,13 +20,13 @@ $RELEASES = (function () {
 
     /* PHP 8.3 Release */
     $data['8.3'] = [
-        'version' => '8.3.2',
-        'date' => '18 Jan 2024',
+        'version' => '8.3.3',
+        'date' => '15 Feb 2024',
         'tags' => [], // Set to ['security'] for security releases.
         'sha256' => [
-            'tar.gz' => 'decf0f51e5415b21fb6350753e45b6c3be5cc0868e4ec561e5c89326c8e6ef16',
-            'tar.bz2' => '582b3c837a8d952efffe274a5e49706c43a88c162830c2a8c358089fe7449284',
-            'tar.xz' => '4ffa3e44afc9c590e28dc0d2d31fc61f0139f8b335f11880a121b9f9b9f0634e',
+            'tar.gz' => '61285ae17a93d172c9f2ebfe4280058d05bda17cadab705ca5b51ba3e6f3a5ac',
+            'tar.bz2' => 'aafb613ba79594a23fe722f8e90ad473300610bf80e74b8aa52da9cac2dc4e2a',
+            'tar.xz' => 'b0a996276fe21fe9ca8f993314c8bc02750f464c7b0343f056fb0894a8dfa9d1',
         ]
     ];
 
