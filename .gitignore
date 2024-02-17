@@ -7,4 +7,3 @@ backend/mirror.jpg
 backend/GeoIP.dat
 tests/server.log
 tests/server.pid
-.php-cs-fixer.cache
