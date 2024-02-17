@@ -9,13 +9,13 @@ it: coding-standards tests ## Runs all the targets
 code-coverage: vendor ## Collects code coverage from running unit tests with phpunit/phpunit
 	vendor/bin/phpunit --configuration=tests/phpunit.xml --coverage-text --testsuite=unit
 
-.PHONY: help
-help: ## Displays this list of targets with descriptions
-	@grep -E '^[a-zA-Z0-9_-]+:.*?## .*$$' $(MAKEFILE_LIST) | sort | awk 'BEGIN {FS = ":.*?## "}; {printf "\033[32m%-30s\033[0m %s\n", $$1, $$2}'
-
 .PHONY: coding-standards
 coding-standards: vendor ## Fixes code style issues with friendsofphp/php-cs-fixer
 	vendor/bin/php-cs-fixer fix --config=.php-cs-fixer.php --diff --show-progress=dots --verbose
+
+.PHONY: help
+help: ## Displays this list of targets with descriptions
+	@grep -E '^[a-zA-Z0-9_-]+:.*?## .*$$' $(MAKEFILE_LIST) | sort | awk 'BEGIN {FS = ":.*?## "}; {printf "\033[32m%-30s\033[0m %s\n", $$1, $$2}'
 
 .PHONY: tests
 tests: vendor ## Runs unit and end-to-end tests with phpunit/phpunit
