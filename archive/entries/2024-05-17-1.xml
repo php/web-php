@@ -9,8 +9,7 @@
   <default:finalTeaserDate xmlns="http://php.net/ns/news">2024-05-17</default:finalTeaserDate>
   <category term="conferences" label="Conference announcement"/>
   <default:newsImage xmlns="http://php.net/ns/news" link="http://www.phpvelhoeste.com.br/2024/"
-                     title="PHP Velho Oeste 2024">php_velho_oeste_350x300px.png
-  </default:newsImage>
+                     title="PHP Velho Oeste 2024">php_velho_oeste_350x300px.png</default:newsImage>
   <content type="xhtml">
     <div xmlns="http://www.w3.org/1999/xhtml">
       <p>
