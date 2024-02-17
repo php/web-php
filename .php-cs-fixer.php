@@ -13,6 +13,7 @@ $finder = $config->getFinder()
     ->notName('run-tests.php');
 
 $config
+    ->setCacheFile(__DIR__ . '/.build/php-cs-fixer/php-cs-fixer.cache')
     ->setRiskyAllowed(true)
     ->setRules([
         'array_indentation' => true,
