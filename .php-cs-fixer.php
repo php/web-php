@@ -9,8 +9,7 @@ $finder = $config->getFinder()
     ->in([
         __DIR__ . '/src',
         __DIR__ . '/tests',
-    ])
-    ->notName('run-tests.php');
+    ]);
 
 $config
     ->setRiskyAllowed(true)
