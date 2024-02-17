@@ -74,8 +74,8 @@ if [[ $# > 1 ]]; then
 fi
 
 # pidfile contents would be hostname:port:pid
-PIDFILE=tests/server.pid
-LOGFILE=tests/server.log
+PIDFILE=.build/server/server.pid
+LOGFILE=.build/server/server.log
 
 validate_server () {
   which php &> /dev/null
@@ -108,7 +108,9 @@ start_server () {
     return 1
   else
     printf "${GREEN}"$NAME" started on $HOST:$PORT${NORMAL}\n"
+    mkdir -p $(dirname "$LOGFILE")
     php -S "$HOST":"$PORT" -c tests/php.ini >> "$LOGFILE" 2>&1 &
+    mkdir -p $(dirname "$PIDFILE")
     echo "$HOST":"$PORT":$! > $PIDFILE
     return 0
   fi
