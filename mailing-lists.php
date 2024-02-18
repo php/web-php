@@ -376,7 +376,7 @@ function output_lists_table($mailing_lists): void
  To subscribe to any mailing list, send an email to
  <code><em>listname</em>-subscribe@lists.php.net</code>
  (substituting the name of the list for <code><em>listname</em></code>
- &mdash; for example, <code>php-general-subscribe@lists.php.net</code>).
+ &mdash; for example, <code>php-general+subscribe@lists.php.net</code>).
 </p>
 
 <h2>Mailing list options</h2>
@@ -384,11 +384,10 @@ function output_lists_table($mailing_lists): void
 <p>
  All of the mailing lists hosted at <a
  href="http://lists.php.net/">lists.php.net</a> are managed using the <a
- href="http://untroubled.org/ezmlm/">ezmlm-idx</a> mailing list software.
+ href="http://mlmmj.org/">mlmmj</a> mailing list software.
  There are a variety of commands you can use to modify your subscription.
- Either send a message to <code>php-whatever-help@lists.php.net</code> (as in,
- <code>php-general-help@lists.php.net</code>) or you can view the commands for
- ezmlm <a href="http://untroubled.org/ezmlm/ezman/ezman1.html">here.</a>
+ Either send a message to <code>php-whatever+help@lists.php.net</code> (as in,
+ <code>php-general+help@lists.php.net</code>).</a>
 </p>
 
 <?php site_footer(); ?>
