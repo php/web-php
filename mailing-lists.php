@@ -21,7 +21,7 @@ $SIDEBAR_DATA = '
  lists</a>, the <a href="http://pecl.php.net/support.php">PECL
  lists</a>, and the <a href="http://gtk.php.net/resources.php">PHP-GTK
  lists</a> on their own pages.
-</p> 
+</p>
 
 <a id="local"></a>
 <h3>Local Mailing Lists and Newsgroups</h3>

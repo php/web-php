@@ -9,7 +9,7 @@ $SIDEBAR_DATA = '
  lists</a>, the <a href="http://pecl.php.net/support.php">PECL
  lists</a>, and the <a href="http://gtk.php.net/resources.php">PHP-GTK
  lists</a> on their own pages.
-</p> 
+</p>
 ';
 site_header("Unsubscribing", ["current" => "community"]);
 ?>
@@ -40,15 +40,15 @@ site_header("Unsubscribing", ["current" => "community"]);
 
 <p>
  To unsubscribe from one of those mailing lists, all you usually need to
- do is send an email to <code><em>listname</em>-unsubscribe@lists.php.net</code>
+ do is send an email to <code><em>listname</em>+unsubscribe@lists.php.net</code>
  (substituting the name of the list for <code><em>listname</em></code>
- &mdash; for example, <code>php-general-unsubscribe@lists.php.net</code>).
+ &mdash; for example, <code>php-general+unsubscribe@lists.php.net</code>).
 </p>
 
 <p>
  If you are subscribed to the <strong>digest version</strong> of the
  mailing list, you need to send an email to
- <code><em>listname</em>-digest-unsubscribe@lists.php.net</code>.
+ <code><em>listname</em>+unsubscribe-digest@lists.php.net</code>.
 </p>
 
 <p>
