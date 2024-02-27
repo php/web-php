@@ -13,7 +13,9 @@
     "require-dev": {
         "ext-curl": "*",
         "friendsofphp/php-cs-fixer": "^3.50.0",
-        "phpunit/phpunit": "^10.5.11"
+        "phpunit/phpunit": "^10.5.11",
+        "psalm/plugin-phpunit": "~0.18.4",
+        "vimeo/psalm": "^5.22.2"
     },
     "autoload": {
         "psr-4": {
