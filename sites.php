@@ -117,14 +117,6 @@ site_header("A Tourist's Guide", ["current" => "help"]);
  and contributors.
 </p>
 
-<h2 id="edit" class="content-header"><a href="https://edit.php.net/">edit.php.net</a>: PhD Online Editor</h2>
-
-<p class="content-box">
- PhD O.E. is an online documentation editor. Its a great tool for users that are looking for a way to get into
- contributing to PHP.net. Anonymous users can submit patches through the editor, while karma holders can approve
- and commit changes directly from the editor.
-</p>
-
 <h2 id="docs" class="content-header"><a href="http://docs.php.net/">docs.php.net</a>: Documentation dev server</h2>
 
 <p class="content-box">
