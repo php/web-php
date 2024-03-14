@@ -8,6 +8,64 @@ changelog_header(8, $MINOR_VERSIONS);
 ?>
 <a id="PHP_8_3"></a>
 
+<section class="version" id="8.3.4"><!-- {{{ 8.3.4 -->
+<h3>Version 8.3.4</h3>
+<b><?php release_date('14-Mar-2024'); ?></b>
+<ul><li>Core:
+<ul>
+  <li>Fix ZTS persistent resource crashes on shutdown.</li>
+</ul></li>
+<li>Curl:
+<ul>
+  <li>Fix failing tests due to string changes in libcurl 8.6.0.</li>
+</ul></li>
+<li>DOM:
+<ul>
+  <li>Fix unlikely memory leak in case of namespace removal with extremely deep trees.</li>
+  <li>Fix reference access in dimensions for DOMNodeList and DOMNodeMap.</li>
+</ul></li>
+<li>Fileinfo:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 13344); ?> (finfo::buffer(): Failed identify data 0:(null), backport).</li>
+</ul></li>
+<li>FPM:
+<ul>
+  <li><?php bugfix(75712); ?> (getenv in php-fpm should not read $_ENV, $_SERVER).</li>
+</ul></li>
+<li>GD:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 12019); ?> (detection of image formats in system gd library).</li>
+</ul></li>
+<li>MySQLnd:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 11950); ?> ([mysqlnd] Fixed not to set CR_MALFORMED_PACKET to error if CR_SERVER_GONE_ERROR is already set).</li>
+</ul></li>
+<li>PDO:
+<ul>
+  <li>Fix various PDORow bugs.</li>
+</ul></li>
+<li>PGSQL:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 13354); ?> (pg_execute/pg_send_query_params/pg_send_execute with null value passed by reference).</li>
+</ul></li>
+<li>SPL:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 13531); ?> (Unable to resize SplfixedArray after being unserialized in PHP 8.2.15).</li>
+</ul></li>
+<li>Standard:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 13279); ?> (Instable array during in-place modification in uksort).</li>
+  <li>Fixed array key as hash to string (case insensitive) comparison typo for the second operand buffer size (albeit unused for now).</li>
+</ul></li>
+<li>XML:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 13517); ?> (Multiple test failures when building with --with-expat).</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
+
+
 <section class="version" id="8.3.3"><!-- {{{ 8.3.3 -->
 <h3>Version 8.3.3</h3>
 <b><?php release_date('15-Feb-2024'); ?></b>
