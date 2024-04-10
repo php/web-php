@@ -419,14 +419,19 @@ hr {
 .page-tools {
   text-align: right;
 }
-
-.page-tools #changelang-langs,
-.page-tools .edit-bug {
+.page-tools #changelang-langs {
   font-size:.75rem;
 }
-.page-tools .edit-bug a {
+
+.contribute {
+  border: 1px solid #888;
+  border-radius: 3px;
+  margin: 0px -10px 0px -10px;
+  padding: 0 10px 5px 10px;
+  background-color: #E2E2E2;
+}
+.contribute .edit-bug a {
     border: 0;
-    margin-left: 1rem;
 }
 
 /**
