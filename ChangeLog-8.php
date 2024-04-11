@@ -566,6 +566,83 @@ changelog_header(8, $MINOR_VERSIONS);
 
 <a id="PHP_8_2"></a>
 
+<section class="version" id="8.2.18"><!-- {{{ 8.2.18 -->
+<h3>Version 8.2.18</h3>
+<b><?php release_date('11-Apr-2024'); ?></b>
+<ul><li>Core:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 13612); ?> (Corrupted memory in destructor with weak references).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 13784); ?> (AX_GCC_FUNC_ATTRIBUTE failure).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 13670); ?> (GC does not scale well with a lot of objects created in destructor).</li>
+</ul></li>
+<li>DOM:
+<ul>
+  <li>Add some missing ZPP checks.</li>
+  <li>Fix potential memory leak in XPath evaluation results.</li>
+  <li>Fix phpdoc for DOMDocument load methods.</li>
+</ul></li>
+<li>FPM:
+<ul>
+  <li>Fix incorrect check in fpm_shm_free().</li>
+</ul></li>
+<li>GD:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 12019); ?> (add GDLIB_CFLAGS in feature tests).</li>
+</ul></li>
+<li>Gettext:
+<ul>
+  <li>Fixed sigabrt raised with dcgettext/dcngettext calls with gettext 0.22.5 with category set to LC_ALL.</li>
+</ul></li>
+<li>MySQLnd:
+<ul>
+  <li>Fix <?php githubissuel('php/php-src', 13452); ?> (Fixed handshake response [mysqlnd]).</li>
+  <li>Fix incorrect charset length in check_mb_eucjpms().</li>
+</ul></li>
+<li>Opcache:
+<ul>
+  <li>Fixed <?php githubissuel('php/php-src', 13508); ?> (JITed QM_ASSIGN may be optimized out when op1 is null).</li>
+  <li>Fixed <?php githubissuel('php/php-src', 13712); ?> (Segmentation fault for enabled observers when calling trait method of internal trait when opcache is loaded).</li>
+</ul></li>
+<li>PDO:
+<ul>
+  <li>Fix various PDORow bugs.</li>
+</ul></li>
+<li>Random:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 13544); ?> (Pre-PHP 8.2 compatibility for mt_srand with unknown modes).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 13690); ?> (Global Mt19937 is not properly reset in-between requests when MT_RAND_PHP is used).</li>
+</ul></li>
+<li>Session:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 13680); ?> (Segfault with session_decode and compilation error).</li>
+</ul></li>
+<li>Sockets:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 13604); ?> (socket_getsockname returns random characters in the end of the socket name).</li>
+</ul></li>
+<li>SPL:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 13531); ?> (Unable to resize SplfixedArray after being unserialized in PHP 8.2.15).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 13685); ?> (Unexpected null pointer in zend_string.h).</li>
+</ul></li>
+<li>Standard:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 11808); ?> (Live filesystem modified by tests).</li>
+  <li>Fixed <?php githubissuel('php/php-src', 13402); ?> (Added validation of `\n` in $additional_headers of mail()).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 13203); ?> (file_put_contents fail on strings over 4GB on Windows).</li>
+  <li>Fixed bug GHSA-pc52-254m-w9w7 (Command injection via array-ish $command parameter of proc_open). (CVE-2024-1874)</li>
+  <li>Fixed bug GHSA-wpj3-hf5j-x4v4 (__Host-/__Secure- cookie bypass due to partial CVE-2022-31629 fix). (CVE-2024-2756)</li>
+  <li>Fixed bug GHSA-h746-cjrr-wfmr (password_verify can erroneously return true, opening ATO risk). (CVE-2024-3096)</li>
+</ul></li>
+<li>XML:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 13517); ?> (Multiple test failures when building with --with-expat).</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
+
+
 <section class="version" id="8.2.17"><!-- {{{ 8.2.17 -->
 <h3>Version 8.2.17</h3>
 <b><?php release_date('14-Mar-2024'); ?></b>
