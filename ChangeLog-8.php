@@ -2282,6 +2282,20 @@ changelog_header(8, $MINOR_VERSIONS);
 
 <a id="PHP_8_1"></a>
 
+<section class="version" id="8.1.28"><!-- {{{ 8.1.28 -->
+<h3>Version 8.1.28</h3>
+<b><?php release_date('11-Apr-2024'); ?></b>
+<ul><li>Standard:
+<ul>
+  <li>Fixed bug GHSA-pc52-254m-w9w7 (Command injection via array-ish $command parameter of proc_open). (CVE-2024-1874)</li>
+  <li>Fixed bug GHSA-wpj3-hf5j-x4v4 (__Host-/__Secure- cookie bypass due to partial CVE-2022-31629 fix). (CVE-2024-2756)</li>
+  <li>Fixed bug GHSA-h746-cjrr-wfmr (password_verify can erroneously return true, opening ATO risk). (CVE-2024-3096)</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
+
+
 <section class="version" id="8.1.27"><!-- {{{ 8.1.27 -->
 <h3>Version 8.1.27</h3>
 <b><?php release_date('21-Dec-2023'); ?></b>
