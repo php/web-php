@@ -386,8 +386,35 @@ function output_lists_table($mailing_lists): void
  href="http://lists.php.net/">lists.php.net</a> are managed using the <a
  href="http://mlmmj.org/">mlmmj</a> mailing list software.
  There are a variety of commands you can use to modify your subscription.
- Either send a message to <code>php-whatever+help@lists.php.net</code> (as in,
+ For a full overview, send a message to <code>php-whatever+help@lists.php.net</code> (as in,
  <code>php-general+help@lists.php.net</code>).</a>
 </p>
+
+<h3>Subscribing</h3>
+
+<ul>
+	<li>The normal mailing list, where you receive every message seperately:<br/>
+	Email: <code>php-<em>listname</em>+subscribe@lists.php.net</code></li>
+	<li>The daily digest list, where you receive an email with every message for a whole day at once:<br/>
+	Email: <code>php-<em>listname</em>+subscribe<b>-digest</b>@lists.php.net</code></li>
+	<li>The no email list, where you receive no emails from the list, but you can still post to it:<br/>
+	Email: <code>php-<em>listname</em>+subscribe<b>-nomail</b>@lists.php.net</code></li>
+</ul>
+
+<h3>Unsubscribing</h3>
+
+<p>
+Email: <code>php-<em>listname</em>+unsubscribe@lists.php.net</code>
+</p>
+
+<h3>Help</h3>
+
+<ul>
+	<li>For a FAQ (Frequently Asked Questions):<br/>
+	Email: <code>php-<em>listname</em>+unsubscribe@lists.php.net</code></li>
+	<li>To reach an administrator:<br/>
+	Email: <code>php-<em>listname</em>+owner@lists.php.net</code></li>
+</ul>
+
 
 <?php site_footer(); ?>
