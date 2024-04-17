@@ -323,29 +323,12 @@ function manual_setup($setup): void {
     ];
     site_header($setup["this"][1] . " - Manual ", $config);
 
-    $id = substr($setup['this'][0], 0, -4);
-    $repo = strtolower($config['lang']); // pt_BR etc.
-
-    $edit_url = "https://github.com/php/doc-{$repo}";
-    // If the documentation source information is available (generated using
-    // doc-base/configure.php and PhD) then try and make a source-specific URL.
-    if (isset($setup['source'])) {
-        $source_lang = $setup['source']['lang'];
-        if ($source_lang === $repo || $source_lang === 'base') {
-            $edit_url = "https://github.com/php/doc-{$source_lang}/blob/master/{$setup['source']['path']}";
-        }
-    }
-
     $languageChooser = manual_language_chooser($config['lang'], $config['thispage']);
 
     echo <<<PAGE_TOOLS
   <div class="page-tools">
     <div class="change-language">
       {$languageChooser}
-    </div>
-    <div class="edit-bug">
-      <a href="{$edit_url}">Submit a Pull Request</a>
-      <a href="https://github.com/php/doc-{$repo}/issues/new?body=From%20manual%20page:%20https:%2F%2Fphp.net%2F$id%0A%0A---">Report a Bug</a>
     </div>
   </div>
 PAGE_TOOLS;
@@ -381,8 +364,34 @@ CHANGE_LANG;
     return trim($r);
 }
 
-function manual_footer(): void {
+function manual_footer($setup): void {
     global $USERNOTES, $__RELATED;
+
+    $id = substr($setup['this'][0], 0, -4);
+    $repo = strtolower($setup["head"][1]); // pt_BR etc.
+
+    $edit_url = "https://github.com/php/doc-{$repo}";
+    // If the documentation source information is available (generated using
+    // doc-base/configure.php and PhD) then try and make a source-specific URL.
+    if (isset($setup['source'])) {
+        $source_lang = $setup['source']['lang'];
+        if ($source_lang === $repo || $source_lang === 'base') {
+            $edit_url = "https://github.com/php/doc-{$source_lang}/blob/master/{$setup['source']['path']}";
+        }
+    }
+
+    echo <<<CONTRIBUTE
+    <div class="contribute">
+      <h3 class="title">Improve This Page</h3>
+      <div class="edit-bug">
+        <a href="https://github.com/php/doc-base/blob/master/README.md" title="This will take you to our contribution guidelines on GitHub." target="_blank" rel="noopener noreferrer">Learn how improve this page</a>
+        •
+        <a href="{$edit_url}">Submit a Pull Request</a>
+        •
+        <a href="https://github.com/php/doc-{$repo}/issues/new?body=From%20manual%20page:%20https:%2F%2Fphp.net%2F$id%0A%0A---">Report a Bug</a>
+      </div>
+    </div>
+CONTRIBUTE;
 
     manual_notes($USERNOTES);
     site_footer([
