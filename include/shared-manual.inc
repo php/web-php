@@ -380,11 +380,28 @@ function manual_footer($setup): void {
         }
     }
 
+    $lastUpdate = '';
+    if (isset($setup["history"]['modified']) && $setup["history"]['modified'] !== "") {
+        $modifiedDateTime = date_create($setup["history"]['modified']);
+        if ($modifiedDateTime !== false) {
+            $lastUpdate .= "Last updated on " . date_format($modifiedDateTime,"M d, Y (H:i T)");
+            $lastUpdate .= (isset($setup["history"]['contributors'][0]) ? " by " . $setup["history"]['contributors'][0] : "") . ".";
+        }
+    }
+
+    $contributors = '';
+    if (isset($setup["history"]['contributors']) && count($setup["history"]['contributors']) > 0) {
+        $contributors = '<a href="?contributors">All contributors.</a>';
+    }
+
     echo <<<CONTRIBUTE
     <div class="contribute">
       <h3 class="title">Improve This Page</h3>
+      <div>
+        $lastUpdate $contributors
+      </div>
       <div class="edit-bug">
-        <a href="https://github.com/php/doc-base/blob/master/README.md" title="This will take you to our contribution guidelines on GitHub." target="_blank" rel="noopener noreferrer">Learn how improve this page</a>
+        <a href="https://github.com/php/doc-base/blob/master/README.md" title="This will take you to our contribution guidelines on GitHub." target="_blank" rel="noopener noreferrer">Learn How To Improve This Page</a>
         •
         <a href="{$edit_url}">Submit a Pull Request</a>
         •
@@ -420,4 +437,26 @@ function relTime(DateTime $date) {
         break;
     }
     return $out;
+}
+
+function contributors($setup) {
+    if (!isset($_GET["contributors"])
+        || !isset($setup["history"]["contributors"])
+        || count($setup["history"]["contributors"]) < 1) {
+        return;
+    }
+
+    $contributorList = "<li>" . implode("</li><li>", $setup["history"]["contributors"]) . "</li>";
+
+    echo <<<CONTRIBUTORS
+<div class="book">
+  <h1 class="title">Output Buffering Control</h1>
+  The following have authored commits that contributed to this page:
+  <ul>
+   $contributorList
+  </ul>
+</div>
+CONTRIBUTORS;
+    manual_footer($setup);
+    exit;
 }
