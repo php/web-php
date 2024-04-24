@@ -34,10 +34,10 @@
 	 <p>Additionally it is also good practice for applications to accept only
 	 specific charsets, with an allow-list.</p>
      
-	 <p>Some Linux distributions such as <a href="GLIBC Vulnerability on
-	 Servers Serving PHP">Debian</a>, CentOS, and others, already have
-	 published patched variants of glibc. Please upgrade as soon as
-	 possible.</p>
+	 <p>Some Linux distributions such as <a
+	 href="https://security-tracker.debian.org/tracker/CVE-2024-2961">Debian</a>,
+	 CentOS, and others, already have published patched variants of glibc.
+	 Please upgrade as soon as possible.</p>
      
 	 <p>Once an update is available in glibc, updating that package on your
 	 Linux machine will be enough to alleviate the issue. You do not need to
