@@ -11,8 +11,9 @@
     <div xmlns="http://www.w3.org/1999/xhtml">
 	 <p>Recently, a bug in <strong>glibc</strong> version 2.39 and older (<a
 	 href="https://nvd.nist.gov/vuln/detail/CVE-2024-2961">CVE-2024-2961</a>) was uncovered
-	 where a buffer overflow in character set conversions *to* the
-	 ISO-2022-CN-EXT character set.</p>
+	 where a buffer overflow in character set conversions <strong>to</strong>
+	 the ISO-2022-CN-EXT character set can result in remote code execution.
+	 </p>
 
 	 <p>This specific buffer overflow in glibc is exploitable through PHP,
 	 which uses the iconv functionality in glibc to do character set
@@ -22,7 +23,7 @@
 
 	 <p>There are numerous reports online with titles like "Mitigating the
 	 iconv Vulnerability for PHP (CVE-2024-2961)" or "PHP Under Attack". These
-	 titles are misleading as this is <em>not</em> a bug in PHP itself.</p>
+	 titles are misleading as this is <strong>not</strong> a bug in PHP itself.</p>
 
 	 <p>Currently there is no fix for this issue, but there is a workaround
 	 described in <a
