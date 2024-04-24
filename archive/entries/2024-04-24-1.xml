@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+  <title>Statement on glibc/iconv Vulnerability</title>
+  <id>https://www.php.net/archive/2024.php#2024-04-24-1</id>
+  <published>2024-04-24T18:40:29+00:00</published>
+  <updated>2024-04-24T18:40:29+00:00</updated>
+  <link href="https://www.php.net/index.php#2024-04-24-1" rel="alternate" type="text/html"/>
+  <link href="https://www.php.net/archive/2024.php#2024-04-24-1" rel="via" type="text/html"/>
+  <category term="frontpage" label="PHP.net frontpage news"/>
+  <content type="xhtml">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+	 <p>Recently, a bug in <b>glibc</b> version 2.39 and older (<a
+	 href="archive/entries/2024-04-24-1.xml">CVE-2024-2961</a>) was uncovered
+	 where a buffer overflow in character set conversions *to* the
+	 ISO-2022-CN-EXT character set.</p>
+     
+	 <p>This specific buffer overflow in glibc is exploitable through PHP,
+	 which uses the iconv functionality in glibc to do character set
+	 conversions. Although the bug is exploitable in the context of the PHP
+	 Engine, the bug is not in PHP. It is also not directly exploitable
+	 remotely.</p>
+     
+	 <p>There are numerous reports online with titles like "Mitigating the
+	 iconv Vulnerability for PHP (CVE-2024-2961)" or "PHP Under Attack". These
+	 titles are misleading as this is *not* a bug in PHP itself.</p>
+     
+	 <p>Currently there is no fix for this issue, but there is a workaround
+	 described in <a
+	 href="https://rockylinux.org/news/glibc-vulnerability-april-2024/">GLIBC
+	 Vulnerability on Servers Serving PHP</a>. It explains a way how to remove
+	 the problematic character set from glibc. Perform this procedure for every
+	 gconv-modules-extra.conf file that is available on your system.</p>
+     
+	 <p>Additionally it is also good practice for applications to accept only
+	 specific charsets, with an allow-list.</p>
+     
+	 <p>Some Linux distributions such as <a href="GLIBC Vulnerability on
+	 Servers Serving PHP">Debian</a>, CentOS, and others, already have
+	 published patched variants of glibc. Please upgrade as soon as
+	 possible.</p>
+     
+	 <p>Once an update is available in glibc, updating that package on your
+	 Linux machine will be enough to alleviate the issue. You do not need to
+	 update PHP, as glibc is a dynamically linked library.</p>
+     
+	 <p>PHP users on Windows are not affected.</p>
+     
+	 <p>There will therefore also not be a new version of PHP for this
+	 vulnerability.</p>
+    </div>
+  </content>
+</entry>
