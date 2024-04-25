@@ -80,7 +80,7 @@
 	 Linux machine will be enough to alleviate the issue. You do not need to
 	 update PHP, as glibc is a dynamically linked library.</p>
 
-	 <p>PHP users on Windows are not affected. This is because the iconv extension is not available on Windows.</p>
+	 <p>PHP users on Windows are not affected.</p>
 
 	 <p>There will therefore also not be a new version of PHP for this
 	 vulnerability.</p>
