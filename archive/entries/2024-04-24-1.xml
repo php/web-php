@@ -9,42 +9,78 @@
   <category term="frontpage" label="PHP.net frontpage news"/>
   <content type="xhtml">
     <div xmlns="http://www.w3.org/1999/xhtml">
+     <p>EDIT 2024-04-25: Clarified when a PHP application is vulnerable to this bug.</p>
 	 <p>Recently, a bug in <strong>glibc</strong> version 2.39 and older (<a
 	 href="https://nvd.nist.gov/vuln/detail/CVE-2024-2961">CVE-2024-2961</a>) was uncovered
 	 where a buffer overflow in character set conversions <strong>to</strong>
 	 the ISO-2022-CN-EXT character set can result in remote code execution.
 	 </p>
 
-	 <p>This specific buffer overflow in glibc is exploitable through PHP,
-	 which uses the iconv functionality in glibc to do character set
-	 conversions. Although the bug is exploitable in the context of the PHP
-	 Engine, the bug is not in PHP. It is also not directly exploitable
-	 remotely.</p>
+     <p>
+      This specific buffer overflow in glibc is exploitable through PHP,
+      which exposes the iconv functionality of glibc to do character set
+      conversions via the <a href="https://www.php.net/manual/en/function.iconv.php">iconv extension</a>.
+      Although the bug is exploitable in the context of the PHP
+      Engine, the bug is not in PHP. It is also not directly exploitable
+      remotely.
+     </p>
+
+     <p>
+      The bug is exploitable, <strong>if and only if</strong>,
+      the PHP application calls iconv <a href="https://www.php.net/manual/en/ref.iconv.php">functions</a>
+      or <a href="https://www.php.net/manual/en/filters.convert.php#filters.convert.iconv">filters</a>
+      with user-supplied character sets.
+     </p>
+
+     <p>
+      Applications are <strong>not</strong> vulnerable if:
+     </p>
+
+     <ul>
+      <li>Glibc security updates from the distribution have been installed</li>
+      <li>Or the iconv extension is not loaded</li>
+      <li>Or the vulnerable character set has been removed from gconv-modules-extra.conf</li>
+      <li>Or the application passes only specifically allowed character sets to iconv.</li>
+     </ul>
+
+     <p>
+      Moreover, when using a user-supplied character set,
+      it is good practice for applications to accept only
+      specific charsets that have been explicitly allowed by the application.
+      One example of how this can be done is by using an allow-list and the
+      <a href="https://www.php.net/manual/en/function.array-search"><code>array_search()</code></a> function
+      to check the encoding before passing it to iconv.
+      For example: <code>array_search($charset, $allowed_list, true)</code>
+     </p>
 
 	 <p>There are numerous reports online with titles like "Mitigating the
 	 iconv Vulnerability for PHP (CVE-2024-2961)" or "PHP Under Attack". These
 	 titles are misleading as this is <strong>not</strong> a bug in PHP itself.</p>
 
-	 <p>Currently there is no fix for this issue, but there is a workaround
-	 described in <a
-	 href="https://rockylinux.org/news/glibc-vulnerability-april-2024/">GLIBC
-	 Vulnerability on Servers Serving PHP</a>. It explains a way how to remove
+	 <p>
+      If your PHP application is vulnerable, we first recommend to check if your Linux distribution
+      has already published patched variants of glibc.
+      <a href="https://security-tracker.debian.org/tracker/CVE-2024-2961">Debian</a>,
+      CentOS, and others, have already done so, and please upgrade as soon as possible.
+     </p>
+
+     <p>Once an update is available in glibc, updating that package on your
+      Linux machine will be enough to alleviate the issue. You do not need to
+      update PHP, as glibc is a dynamically linked library.</p>
+
+     <p>
+      If your Linux distribution has not published a patched version of glibc,
+      there is no fix for this issue. However, there exists a workaround described in
+      <a href="https://rockylinux.org/news/glibc-vulnerability-april-2024/">GLIBC
+	 Vulnerability on Servers Serving PHP</a> which explains a way on how to remove
 	 the problematic character set from glibc. Perform this procedure for every
 	 gconv-modules-extra.conf file that is available on your system.</p>
-
-	 <p>Additionally it is also good practice for applications to accept only
-	 specific charsets, with an allow-list.</p>
-
-	 <p>Some Linux distributions such as <a
-	 href="https://security-tracker.debian.org/tracker/CVE-2024-2961">Debian</a>,
-	 CentOS, and others, already have published patched variants of glibc.
-	 Please upgrade as soon as possible.</p>
 
 	 <p>Once an update is available in glibc, updating that package on your
 	 Linux machine will be enough to alleviate the issue. You do not need to
 	 update PHP, as glibc is a dynamically linked library.</p>
 
-	 <p>PHP users on Windows are not affected.</p>
+	 <p>PHP users on Windows are not affected. This is because the iconv extension is not available on Windows.</p>
 
 	 <p>There will therefore also not be a new version of PHP for this
 	 vulnerability.</p>
