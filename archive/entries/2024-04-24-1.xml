@@ -76,10 +76,6 @@
 	 the problematic character set from glibc. Perform this procedure for every
 	 gconv-modules-extra.conf file that is available on your system.</p>
 
-	 <p>Once an update is available in glibc, updating that package on your
-	 Linux machine will be enough to alleviate the issue. You do not need to
-	 update PHP, as glibc is a dynamically linked library.</p>
-
 	 <p>PHP users on Windows are not affected.</p>
 
 	 <p>There will therefore also not be a new version of PHP for this
