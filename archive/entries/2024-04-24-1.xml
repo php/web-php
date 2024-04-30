@@ -37,9 +37,9 @@
      </p>
 
      <ul>
-      <li>Glibc security updates from the distribution have been installed</li>
-      <li>Or the iconv extension is not loaded</li>
-      <li>Or the vulnerable character set has been removed from gconv-modules-extra.conf</li>
+      <li>Glibc security updates from the distribution have been installed.</li>
+      <li>Or the iconv extension is not loaded.</li>
+      <li>Or the vulnerable character set has been removed from gconv-modules-extra.conf.</li>
       <li>Or the application passes only specifically allowed character sets to iconv.</li>
      </ul>
 
