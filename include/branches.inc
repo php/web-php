@@ -306,7 +306,15 @@ function get_branch_bug_eol_date($branch): ?DateTime
 
     $date = get_branch_release_date($branch);
 
-    return $date ? $date->add(new DateInterval('P2Y')) : null;
+    $date = $date?->add(new DateInterval('P2Y'));
+
+    // Versions before 8.2 do not extend the release cycle to the end of the year
+    if (version_compare($branch, '8.2', '<')) {
+        return $date;
+    }
+
+    // Extend the release cycle to the end of the year
+    return $date?->setDate($date->format('Y'), 12, 31);
 }
 
 function get_branch_security_eol_date($branch): ?DateTime
@@ -324,7 +332,16 @@ function get_branch_security_eol_date($branch): ?DateTime
     }
 
     $date = get_branch_release_date($branch);
-    return $date ? $date->add(new DateInterval('P3Y')) : null;
+
+    // Versions before 8.1 have 3-year support since the initial release
+    if (version_compare($branch, '8.1', '<')) {
+        return $date?->add(new DateInterval('P3Y'));
+    }
+
+    $date = $date?->add(new DateInterval('P4Y'));
+
+    // Extend the release cycle to the end of the year
+    return $date?->setDate($date->format('Y'), 12, 31);
 }
 
 function get_branch_release_date($branch): ?DateTime
