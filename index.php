@@ -91,15 +91,24 @@ NEWSENTRY;
 $content .= '<p class="archive"><a href="/archive/">Older News Entries</a></p>';
 $content .= "</div>";
 
+$uwu_set = isset($_GET['uwu']) || isset($_COOKIE['uwu']);
+if ($uwu_set) {
+  setcookie("uwu", true, time() + 60);
+}
+$hero_logo = $uwu_set
+             ? ["img" => "images/logos/php-logo-by-SAWARATSUKI.png", "alt" => "php logo by SAWARATSUKI", "width" => "250"]
+             : ["img" => "images/logos/php-logo-white.svg", "alt" => "php", "width" => "240", "height" => "120"];
+
 $intro = <<<EOF
   <div class="hero">
-    <img class="hero-logo" src="/images/logos/php-logo-white.svg" alt="php" width="240" height="120">
+    <img class="hero-logo" src="{$hero_logo['img']}" alt="{$hero_logo['alt']}" width="{$hero_logo['width']}" height="{$hero_logo['height']}">
     <p class="hero-text">A <strong>popular general-purpose scripting language</strong> that is especially suited to web development.<br />Fast, flexible and pragmatic, PHP powers everything from your blog to the most popular websites in the world.</p>
     <div class="hero-actions">
       <a href="/releases/8.3/index.php" class="hero-btn hero-btn-primary">What's new in 8.3</a>
       <a href="/downloads.php" class="hero-btn hero-btn-secondary">Download</a>
     </div>
 EOF;
+
 
 $intro .= "<ul class='hero-versions'>\n";
 $active_branches = get_active_branches();
