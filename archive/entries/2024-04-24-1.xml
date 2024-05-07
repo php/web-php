@@ -37,9 +37,9 @@
      </p>
 
      <ul>
-      <li>Glibc security updates from the distribution have been installed</li>
-      <li>Or the iconv extension is not loaded</li>
-      <li>Or the vulnerable character set has been removed from gconv-modules-extra.conf</li>
+      <li>Glibc security updates from the distribution have been installed.</li>
+      <li>Or the iconv extension is not loaded.</li>
+      <li>Or the vulnerable character set has been removed from gconv-modules-extra.conf.</li>
       <li>Or the application passes only specifically allowed character sets to iconv.</li>
      </ul>
 
@@ -76,14 +76,9 @@
 	 the problematic character set from glibc. Perform this procedure for every
 	 gconv-modules-extra.conf file that is available on your system.</p>
 
-	 <p>Once an update is available in glibc, updating that package on your
-	 Linux machine will be enough to alleviate the issue. You do not need to
-	 update PHP, as glibc is a dynamically linked library.</p>
-
 	 <p>PHP users on Windows are not affected.</p>
 
-	 <p>There will therefore also not be a new version of PHP for this
-	 vulnerability.</p>
+	 <p>Therefore, a new version of PHP will not be released for this vulnerability.</p>
     </div>
   </content>
 </entry>
