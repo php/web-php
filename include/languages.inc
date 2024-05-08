@@ -30,7 +30,6 @@ $LANGUAGES = [
  - http://docs.php.net/
 */
 $INACTIVE_ONLINE_LANGUAGES = [
-    'pl' => 'Polish',
     'ro' => 'Romanian',
     'uk' => 'Ukrainian',
 ];
