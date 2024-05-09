@@ -23,13 +23,13 @@ $VERSION_NOTES = [
 
 <p>
 	After this two year period of active support, each branch is then supported
-	for an additional year for critical security issues only. Releases during
+	for two additionals year for critical security issues only. Releases during
 	this period are made on an as-needed basis: there may be multiple point
 	releases, or none, depending on the number of reports.
 </p>
 
 <p>
-	Once the three years of support are completed, the branch reaches its end of
+	Once the four years of support are completed, the branch reaches its end of
 	life and is no longer supported. <a href="/eol.php">A table of end of life
 	branches is available.</a>
 </p>
