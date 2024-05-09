@@ -634,6 +634,84 @@ changelog_header(8, $MINOR_VERSIONS);
 
 <a id="PHP_8_2"></a>
 
+<section class="version" id="8.2.19"><!-- {{{ 8.2.19 -->
+<h3>Version 8.2.19</h3>
+<b><?php release_date('09-May-2024'); ?></b>
+<ul><li>Core:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 13772); ?> (Invalid execute_data-&gt;opline pointers in observer fcall handlers when JIT is enabled).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 13931); ?> (Applying zero offset to null pointer in Zend/zend_opcode.c).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 13942); ?> (Align the behavior of zend-max-execution-timers with other timeout implementations).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 14003); ?> (Broken cleanup of unfinished calls with callable convert parameters).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 14013); ?> (Erroneous dnl appended in configure).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 10232); ?> (If autoloading occurs during constant resolution filename and lineno are identified incorrectly).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 13727); ?> (Missing void keyword).</li>
+</ul></li>
+<li>Fibers:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 13903); ?> (ASAN false positive underflow when executing copy()).</li>
+</ul></li>
+<li>FPM:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 13563); ?> (Setting bool values via env in FPM config fails).</li>
+</ul></li>
+<li>Intl:
+<ul>
+  <li>Fixed build for icu 74 and onwards.</li>
+</ul></li>
+<li>MySQLnd:
+<ul>
+  <li>Fix shift out of bounds on 32-bit non-fast-path platforms.</li>
+</ul></li>
+<li>Opcache:
+<ul>
+  <li>Fixed incorrect assumptions across compilation units for static calls.</li>
+</ul></li>
+<li>OpenSSL:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 10495); ?> (feof on OpenSSL stream hangs indefinitely).</li>
+</ul></li>
+<li>PDO SQLite:
+<ul>
+  <li>Fix <?php githubissuel('php/php-src', 13984); ?> (Buffer size is now checked before memcmp).</li>
+  <li>Fix <?php githubissuel('php/php-src', 13998); ?> (Manage refcount of agg_context-&gt;val correctly).</li>
+</ul></li>
+<li>Phar:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 13836); ?> (Renaming a file in a Phar to an already existing filename causes a NULL pointer dereference).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 13833); ?> (Applying zero offset to null pointer in zend_hash.c).</li>
+  <li>Fix potential NULL pointer dereference before calling EVP_SignInit.</li>
+</ul></li>
+<li>PHPDBG:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 13827); ?> (Null pointer access of type 'zval' in phpdbg_frame).</li>
+</ul></li>
+<li>Posix:
+<ul>
+  <li>Fix usage of reentrant functions in ext/posix.</li>
+</ul></li>
+<li>Session:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 13856); ?> (Member access within null pointer of type 'ps_files' in ext/session/mod_files.c).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 13891); ?> (memleak and segfault when using ini_set with session.trans_sid_hosts).</li>
+  <li>Fixed buffer _read/_write size limit on windows for the file mode.</li>
+</ul></li>
+<li>Streams:
+<ul>
+  <li>Fixed file_get_contents() on Windows fails with "errno=22 Invalid argument".</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 13264); ?> (Part 1 - Memory leak on stream filter failure).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 13860); ?> (Incorrect PHP_STREAM_OPTION_CHECK_LIVENESS case in ext/openssl/xp_ssl.c - causing use of dead socket).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 11678); ?> (Build fails on musl 1.2.4 - lfs64).</li>
+</ul></li>
+<li>Treewide:
+<ul>
+  <li>Fix gcc-14 Wcalloc-transposed-args warnings.</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
+
+
 <section class="version" id="8.2.18"><!-- {{{ 8.2.18 -->
 <h3>Version 8.2.18</h3>
 <b><?php release_date('11-Apr-2024'); ?></b>
