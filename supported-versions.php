@@ -23,7 +23,7 @@ $VERSION_NOTES = [
 
 <p>
 	After this two year period of active support, each branch is then supported
-	for two additionals year for critical security issues only. Releases during
+	for two additional years for critical security issues only. Releases during
 	this period are made on an as-needed basis: there may be multiple point
 	releases, or none, depending on the number of reports.
 </p>
