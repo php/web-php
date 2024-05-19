@@ -20,6 +20,13 @@ function gpg_key_get(string $rm): ?string {
                 "uid           [ultimate] Jakub Zelenka <jakub.zelenka@gmail.com>\n" .
                 "sub   cv25519 2021-04-10 [E]";
 
+        case "calvinb":
+            return
+                "pub   ed25519 2024-04-17 [SC]\n" .
+                "      9D7F 99A0 CB8F 05C8 A695  8D62 56A9 7AF7 600A 39A6\n" .
+                "uid           [ultimate] Calvin Buckley (PHP) <calvinb@php.net>\n" .
+                "sub   cv25519 2024-04-17 [E]";
+
         case 'carusogabriel-old':
             return
                 "pub   rsa4096 2020-05-09 [SC] [expires: 2024-05-08]\n" .
