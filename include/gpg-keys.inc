@@ -170,7 +170,7 @@ function gpg_key_get(string $rm): ?string {
 
 function gpg_key_get_branches(bool $activeOnly): array {
     $branches = [
-        '8.4' => ['ericmann'],
+        '8.4' => ['ericmann', 'calvinb'],
         '8.3' => ['pierrick', 'ericmann', 'bukka'],
         '8.2' => ['pierrick', 'ramsey', 'sergey'],
         '8.1' => ['krakjoe', 'ramsey', 'patrickallaert'],
