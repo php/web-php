@@ -10,7 +10,7 @@ function gpg_key_get(string $rm): ?string {
                 "pub   2048R/9C0D5763 2015-06-09 [expires: 2024-06-06]\n" .
                 "      Key fingerprint = 1A4E 8B72 77C4 2E53 DBA9  C7B9 BCAA 30EA 9C0D 5763\n" .
                 "uid                  Anatol Belski <ab@php.net>";
-        
+
         case 'bukka':
             return
                 "pub   ed25519 2021-04-10 [SC]\n" .
@@ -140,6 +140,13 @@ function gpg_key_get(string $rm): ?string {
                 "      Key fingerprint = B1B4 4D8F 021E 4E2D 6021  E995 DC9F F8D3 EE5A F27F\n" .
                 "uid                  Remi Collet <remi@php.net>";
 
+        case 'saki':
+            return
+                "pub   rsa4096 2024-05-20 [SC]\n" .
+                "      0616 E93D 95AF 4712 43E2  6761 7704 26E1 7EBB B3DD\n" .
+                "uid           [ultimate] Saki Takamachi (for php.net) <saki@php.net>\n" .
+                "sub   rsa4096 2024-05-20 [E]";
+
         case 'sergey':
             return
                 "pub   rsa4096 2021-03-26 [SC] [expires: 2030-03-26]\n" .
@@ -170,7 +177,7 @@ function gpg_key_get(string $rm): ?string {
 
 function gpg_key_get_branches(bool $activeOnly): array {
     $branches = [
-        '8.4' => ['ericmann', 'calvinb'],
+        '8.4' => ['ericmann', 'calvinb', 'saki'],
         '8.3' => ['pierrick', 'ericmann', 'bukka'],
         '8.2' => ['pierrick', 'ramsey', 'sergey'],
         '8.1' => ['krakjoe', 'ramsey', 'patrickallaert'],
