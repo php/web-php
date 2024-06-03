@@ -37,7 +37,9 @@ const items: TestPageOptions[] = [
 ]
 
 for (const item of items) {
-    test(`testing with ${item.path}`, async ({page}) => {
+    test(`testing with ${item.path}`, async ({page}, testInfo) => {
+        testInfo.snapshotSuffix = '';
+
         const httpHost = process.env.HTTP_HOST
 
         if (typeof httpHost !== 'string') {
