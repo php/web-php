@@ -32,7 +32,7 @@ jobs:
           comment-id: ${{ steps.fc.outputs.comment-id }}
           edit-mode: 'replace'
           body: |
-            🚀 Commit ${{ github.sha }} Deployed on https://web-php-pr-${{ github.event.number }}.preview.thephp.foundation
+            🚀 Preview for commit ${{ github.sha }} can be found at https://web-php-pr-${{ github.event.number }}.preview.thephp.foundation
 
   tests_visual:
     name: "Visual Tests"
@@ -127,4 +127,4 @@ jobs:
           comment-id: ${{ steps.snapshot.outputs.comment-id }}
           edit-mode: 'replace'
           body: |
-            🚀 Commit ${{ github.sha }} Regression report on https://web-php-regression-report-pr-${{ github.event.number }}.preview.thephp.foundation
+            🚀 Regression report for commit ${{ github.sha }} is at https://web-php-regression-report-pr-${{ github.event.number }}.preview.thephp.foundation
