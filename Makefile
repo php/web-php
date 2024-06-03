@@ -23,7 +23,6 @@ tests: vendor ## Runs unit and end-to-end tests with phpunit/phpunit
 	rm -rf tests/server.log
 	tests/server start;
 	vendor/bin/phpunit --configuration=tests/phpunit.xml --testsuite=end-to-end;
-	npx playwright test
 	tests/server stop
 
 tests_visual:
