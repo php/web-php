@@ -43,21 +43,24 @@ site_header("Git Access", ["current" => "community"]);
 </p>
 
 <ul>
- <li><i>autoconf</i>:
+ <li id="autoconf"><i>autoconf</i>:
   <ul>
-   <li><i>PHP 5.4 - 7.1</i>: 2.59+</li>
+   <li><i>PHP 7.3 and later</i>: 2.68+</li>
    <li><i>PHP 7.2</i>: 2.64+</li>
-   <li><i>PHP 7.3</i>: 2.68+</li>
+   <li><i>PHP 7.1 and earlier</i>: 2.59+</li>
   </ul>
  </li>
- <li><i>libtool</i>: 1.4.x+ (except 1.4.2)</li>
- <li><i>re2c</i>: 0.13.4+</li>
+ <li id="libtool"><i>libtool</i>: 1.4.x+ (except 1.4.2)</li>
+ <li id="re2c"><i>re2c</i>:
+  <ul>
+    <li><i>PHP 8.3 and later</i>: 1.0.3+</li>
+    <li><i>PHP 8.2 and earlier</i>: 0.13.4+</li>
+  </ul>
+ </li>
  <li id="bison"><i>bison</i>:
   <ul>
-   <li><i>PHP 5.4</i>: 1.28, 1.35, 1.75, 2.0 to 2.6.4</li>
-   <li><i>PHP 5.5 and 5.6</i>: 2.4 to 2.7</li>
-   <li><i>PHP 7.0 - 7.3</i>: 2.4+</li>
-   <li><i>PHP 7.4 - PHP 8.0</i>: 3.0.0+</li>
+   <li><i>PHP 7.4 and later</i>: 3.0.0+</li>
+   <li><i>PHP 7.3 and earlier</i>: 2.4+</li>
   </ul>
  </li>
 </ul>

@@ -411,7 +411,7 @@ Email: <code>php-<em>listname</em>+unsubscribe@lists.php.net</code>
 
 <ul>
 	<li>For a FAQ (Frequently Asked Questions):<br/>
-	Email: <code>php-<em>listname</em>+unsubscribe@lists.php.net</code></li>
+	Email: <code>php-<em>listname</em>+help@lists.php.net</code></li>
 	<li>To reach an administrator:<br/>
 	Email: <code>php-<em>listname</em>+owner@lists.php.net</code></li>
 </ul>
