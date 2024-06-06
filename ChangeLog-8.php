@@ -2444,6 +2444,30 @@ changelog_header(8, $MINOR_VERSIONS);
 
 <a id="PHP_8_1"></a>
 
+<section class="version" id="8.1.29"><!-- {{{ 8.1.29 -->
+<h3>Version 8.1.29</h3>
+<b><?php release_date('06-Jun-2024'); ?></b>
+<ul><li>CGI:
+<ul>
+  <li>Fixed bug GHSA-3qgc-jrrr-25jv (Bypass of CVE-2012-1823, Argument Injection in PHP-CGI). (CVE-2024-4577)</li>
+</ul></li>
+<li>Filter:
+<ul>
+  <li>Fixed bug GHSA-w8qr-v226-r27w (Filter bypass in filter_var FILTER_VALIDATE_URL). (CVE-2024-5458)</li>
+</ul></li>
+<li>OpenSSL:
+<ul>
+  <li>The openssl_private_decrypt function in PHP, when using PKCS1 padding (OPENSSL_PKCS1_PADDING, which is the default), is vulnerable to the Marvin Attack unless it is used with an OpenSSL version that includes the changes from this pull request: https://github.com/openssl/openssl/pull/13817 (rsa_pkcs1_implicit_rejection). These changes are part of OpenSSL 3.2 and have also been backported to stable versions of various Linux distributions, as well as to the PHP builds provided for Windows since the previous release. All distributors and builders should ensure that this version is used to prevent PHP from being vulnerable.</li>
+</ul></li>
+<li>Standard:
+<ul>
+  <li>Fixed bug GHSA-9fcc-425m-g385 (Bypass of CVE-2024-1874). (CVE-2024-5585)</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
+
+
 <section class="version" id="8.1.28"><!-- {{{ 8.1.28 -->
 <h3>Version 8.1.28</h3>
 <b><?php release_date('11-Apr-2024'); ?></b>
