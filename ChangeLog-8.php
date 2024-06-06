@@ -786,6 +786,83 @@ changelog_header(8, $MINOR_VERSIONS);
 
 <a id="PHP_8_2"></a>
 
+<section class="version" id="8.2.20"><!-- {{{ 8.2.20 -->
+<h3>Version 8.2.20</h3>
+<b><?php release_date('06-Jun-2024'); ?></b>
+<ul><li>CGI:
+<ul>
+  <li>Fixed buffer limit on Windows, replacing read call usage by _read.</li>
+  <li>Fixed bug GHSA-3qgc-jrrr-25jv (Bypass of CVE-2012-1823, Argument Injection in PHP-CGI). (CVE-2024-4577)</li>
+</ul></li>
+<li>CLI:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 14189); ?> (PHP Interactive shell input state incorrectly handles quoted heredoc literals.).</li>
+</ul></li>
+<li>Core:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 13970); ?> (Incorrect validation of #[Attribute] flags type for non-compile-time expressions).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 14140); ?> (Floating point bug in range operation on Apple Silicon hardware).</li>
+</ul></li>
+<li>DOM:
+<ul>
+  <li>Fix crashes when entity declaration is removed while still having entity references.</li>
+  <li>Fix references not handled correctly in C14N.</li>
+  <li>Fix crash when calling childNodes next() when iterator is exhausted.</li>
+  <li>Fix crash in ParentNode::append() when dealing with a fragment containing text nodes.</li>
+</ul></li>
+<li>FFI:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 14215); ?> (Cannot use FFI::load on CRLF header file with apache2handler).</li>
+</ul></li>
+<li>Filter:
+<ul>
+  <li>Fixed bug GHSA-w8qr-v226-r27w (Filter bypass in filter_var FILTER_VALIDATE_URL). (CVE-2024-5458)</li>
+</ul></li>
+<li>FPM:
+<ul>
+  <li>Fix bug <?php githubissuel('php/php-src', 14175); ?> (Show decimal number instead of scientific notation in systemd status).</li>
+</ul></li>
+<li>Hash:
+<ul>
+  <li>ext/hash: Swap the checking order of `__has_builtin` and `__GNUC__` (Saki Takamachi)</li>
+</ul></li>
+<li>Intl:
+<ul>
+  <li>Fixed build regression on systems without C++17 compilers.</li>
+</ul></li>
+<li>Ini:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 14100); ?> (Corrected spelling mistake in php.ini files).</li>
+</ul></li>
+<li>MySQLnd:
+<ul>
+  <li>Fix bug <?php githubissuel('php/php-src', 14255); ?> (mysqli_fetch_assoc reports error from nested query).</li>
+</ul></li>
+<li>Opcache:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 14109); ?> (Fix accidental persisting of internal class constant in shm).</li>
+</ul></li>
+<li>OpenSSL:
+<ul>
+  <li>The openssl_private_decrypt function in PHP, when using PKCS1 padding (OPENSSL_PKCS1_PADDING, which is the default), is vulnerable to the Marvin Attack unless it is used with an OpenSSL version that includes the changes from this pull request: https://github.com/openssl/openssl/pull/13817 (rsa_pkcs1_implicit_rejection). These changes are part of OpenSSL 3.2 and have also been backported to stable versions of various Linux distributions, as well as to the PHP builds provided for Windows since the previous release. All distributors and builders should ensure that this version is used to prevent PHP from being vulnerable.</li>
+</ul></li>
+<li>Standard:
+<ul>
+  <li>Fixed bug GHSA-9fcc-425m-g385 (Bypass of CVE-2024-1874). (CVE-2024-5585)</li>
+</ul></li>
+<li>XML:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 14124); ?> (Segmentation fault with XML extension under certain memory limit).</li>
+</ul></li>
+<li>XMLReader:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 14183); ?> (XMLReader::open() can't be overridden).</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
+
+
 <section class="version" id="8.2.19"><!-- {{{ 8.2.19 -->
 <h3>Version 8.2.19</h3>
 <b><?php release_date('09-May-2024'); ?></b>
