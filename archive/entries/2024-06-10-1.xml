@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom" xmlns:default="http://php.net/ns/news">
+  <title>Forum PHP 2024 - Paris (France)</title>
+  <id>https://www.php.net/archive/2024.php#2024-06-10-1</id>
+  <published>2024-06-07T21:13:21+00:00</published>
+  <updated>2024-06-07T21:13:21+00:00</updated>
+  <link href="https://www.php.net/conferences/index.php#2024-06-10-1" rel="alternate" type="text/html"/>
+  <link href="https://event.afup.org/" rel="via" type="text/html"/>
+  <default:finalTeaserDate xmlns="http://php.net/ns/news">2024-10-12</default:finalTeaserDate>
+  <category term="conferences" label="Conference announcement"/>
+  <default:newsImage xmlns="http://php.net/ns/news" link="https://event.afup.org/" title="Forum PHP 2024 - Paris (France)">forumphp-2024.png</default:newsImage>
+  <content type="xhtml">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+      <p>
+       Join the biggest PHP event organized by the French PHP user group, organized for the third time in Disneyland Paris, at the Hotel New York - The Art of Marvel ! During two days, on October 10th and 11th, enjoy the company of our friendly audience, share your knowledge with +700 attendees, meet the companies who use PHP every day, in a environment that will bring even more magic to the language.
+      </p>
+      <p>
+        Date: October 10 &amp; 11
+      </p>
+      <p>
+        Check out more details at <a href="https://event.afup.org">Afup.org</a>
+      </p>
+    </div>
+  </content>
+</entry>
