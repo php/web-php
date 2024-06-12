@@ -1313,6 +1313,8 @@ div.tip p:first-child {
 }
 .docs .example-contents pre {
     margin:0;
+    overflow-x:auto;
+    white-space:pre;
 }
 .docs .example-contents > [class$="code"],
 .docs .example-contents.screen,
