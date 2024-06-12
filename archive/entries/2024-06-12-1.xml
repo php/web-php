@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom" xmlns:default="http://php.net/ns/news">
+  <title>PHPCon Poland 2024</title>
+  <id>https://www.php.net/archive/2024.php#2024-06-12-1</id>
+  <published>2024-06-12T23:00:20+02:00</published>
+  <updated>2024-06-12T23:00:20+02:00</updated>
+  <link href="https://www.php.net/conferences/index.php#2024-06-12-1" rel="alternate" type="text/html"/>
+  <link href="https://cfp.phpcon.pl/en/" rel="via" type="text/html"/>
+  <default:finalTeaserDate xmlns="http://php.net/ns/news">2024-07-31</default:finalTeaserDate>
+  <category term="cfp" label="Call for Papers"/>
+  <default:newsImage xmlns="http://php.net/ns/news" link="https://cfp.phpcon.pl/en/" title="PHPCon Poland 2024">phpconpl2024.png</default:newsImage>
+  <content type="xhtml">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+     <p>PHPCon Poland is the oldest and most unique conference in Poland, aimed at PHP developers and enthusiasts. We have been on the Polish market since 2010 and have contributed to educating a new generation of PHP developers!</p>
+     <p>This is an event where you will make new contacts and exchange experiences and ideas for the near future. But not only that! It's a conference you'll love coming back to, both for the atmosphere and the new contacts and also for your development - as a listener, speaker, or maybe as a recruiter looking for new talent. Who knows?</p>
+     <p>For the first time this year, PHPCon Poland will occur in Wisła, a town often called "the pearl of the Beskid Mountains.”</p>
+     <p>The Stok ("The Slope") hotel is a uniquely picturesque mountain resort near the Czech Republic and Slovakia. It is surrounded by mountain ranges, with the highest massif being Barania Gora (1220 m.a.s.l). Three mountain streams combine to create the Wisła, the Queen of Polish rivers. The town of Wisła is the hometown of Adam Małysz, the world champion of ski jumps.</p>
+     <p>Your talk will appear on YouTube with us and obtain an extra intro. Watch <a href="https://tiny.pl/d14lg">the examples</a>.</p>
+     <p>For further information on the PHPCon Poland 2024 Conference visit: <a href="https://2024.phpcon.pl/en/">2024.phpcon.pl</a>.</p>
+     <p>Direct link to Call for Papers is: <a href="https://cfp.phpcon.pl/en/">cfp.phpcon.pl</a>.</p>
+     <p>Conference days are: October 25-26.</p>
+     <p>Call for Papers ends at: July 31.</p>
+    </div>
+  </content>
+</entry>
