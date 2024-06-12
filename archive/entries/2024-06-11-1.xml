@@ -11,17 +11,20 @@
   <default:newsImage xmlns="http://php.net/ns/news" link="https://phpconference.com/munich/" title="International PHP Conference Munich 2024">IPC_24_Logo.png</default:newsImage>
   <content type="xhtml">
     <div xmlns="http://www.w3.org/1999/xhtml">
-<p>    
- <a href="https://phpconference.com/munich/">The International PHP Conference</a>  is the world's first PHP conference and stands since more than a decade for top-notch pragmatic expertise in PHP and web technologies. At the IPC, internationally renowned experts from the PHP industry meet up with PHP users and developers from large and small companies. Here is the place where concepts emerge and ideas are born - the IPC signifies knowledge transfer at highest level.
-   </p>
-<p> 
-Basic facts:
-</p>
-<p><strong>Date: November 11 ‒ 15, 2024</strong></p>
-<p><strong>Location: Munich Marriott Hotel City West, Munich or Online</strong></p>
-
-    <p>Highlights:</p>
-    <ul>
+      <p>
+        <a href="https://phpconference.com/munich/">The International PHP Conference</a> is the world's first PHP conference and stands since more than a decade for top-notch pragmatic expertise in PHP and web technologies. At the IPC, internationally renowned experts from the PHP industry meet up with PHP users and developers from large and small companies. Here is the place where concepts emerge and ideas are born - the IPC signifies knowledge transfer at highest level.
+      </p>
+      <p>
+        Basic facts:
+      </p>
+      <p>
+        <strong>Date: November 11 ‒ 15, 2024</strong>
+      </p>
+      <p>
+        <strong>Location: Munich Marriott Hotel City West, Munich or Online</strong>
+      </p>
+      <p>Highlights:</p>
+      <ul>
         <li>60+ best practice sessions</li>
         <li>50+ international top speakers</li>
         <li>PHPower: Hands-on Power Workshops</li>
@@ -31,8 +34,9 @@ Basic facts:
         <li>Free Goodies:Developer bag, T-Shirt, magazines etc.</li>
         <li>Exclusive networking events</li>
       </ul>
- <p>For further information on the International PHP Conference Munich visit:<a href="https://phpconference.com/munich/"> https://phpconference.com/munich/</a></p>
-
-</div>
+      <p>
+        For further information on the International PHP Conference Munich visit: <a href="https://phpconference.com/munich/">https://phpconference.com/munich/</a>
+      </p>
+    </div>
   </content>
 </entry>
