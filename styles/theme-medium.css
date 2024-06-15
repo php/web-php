@@ -603,3 +603,7 @@ div.elephpants img:focus {
 .thanks__description {
   margin: 0
 }
+
+.replaceable {
+  font-style: italic;
+}
