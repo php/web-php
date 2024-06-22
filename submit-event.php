@@ -110,7 +110,7 @@ if ($process) {
     }
 
     // Spam question
-    if ($_POST["sane"] != 4) {
+    if ($_POST["sane"] != 3) {
         $errors[] = "It's OK. I'm not real either";
     }
 
@@ -257,7 +257,7 @@ if ($process && count($errors) === 0) {
  </tr>
  <tr>
   <th class="subr">Are you real?</th>
-  <td><select name="sane"><?php display_options(["I, Robot", "I used to be", "WTF?", "No, but I'd still want to submit this", "Yes"], "2"); ?></select></td>
+  <td><select name="sane"><?php display_options(["I, Robot", "I used to be", "WTF?", "Yes", "No, but I'd still want to submit this"], "2"); ?></select></td>
  </tr>
 </table>
 </form>
