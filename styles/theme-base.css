@@ -1038,6 +1038,8 @@ fieldset {
     padding-top: 3px;
     margin-top: -3px;
     min-width: 100%;
+    overflow: auto;
+    max-height: 90vh;
 }
 
 .tt-dropdown-menu .result-heading {
