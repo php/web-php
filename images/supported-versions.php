@@ -98,13 +98,13 @@ $height = $header_height + $footer_height + (count($branches) * $branch_height);
 			}
 
 			.today line {
-				stroke: #f33;
+				stroke: #333;
 				stroke-dasharray: 7,7;
 				stroke-width: 3px;
 			}
 
 			.today text {
-				fill: #f33;
+				fill: #333;
 				text-anchor: middle;
 			}
 
