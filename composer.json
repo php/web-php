@@ -13,7 +13,7 @@
     "require-dev": {
         "ext-curl": "*",
         "friendsofphp/php-cs-fixer": "^3.59.3",
-        "phpunit/phpunit": "^11.2.2"
+        "phpunit/phpunit": "^11.2.5"
     },
     "autoload": {
         "psr-4": {
