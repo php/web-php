@@ -63,7 +63,19 @@
     <div class="container footer-content">
       <div class="row-fluid">
       <ul class="footmenu">
+<?php
+global $LANG;
+if (!empty($_SERVER['BASE_PAGE'])
+    && str_starts_with($_SERVER['BASE_PAGE'], 'manual/' . $LANG . '/')) {
+?>
+        <li><a href="/manual/<?php echo $LANG; ?>/copyright.php">Copyright &copy; 2001-<?php echo date('Y'); ?> The PHP Documentation Group</a></li>
+<?php
+} else {
+?>
         <li><a href="/copyright.php">Copyright &copy; 2001-<?php echo date('Y'); ?> The PHP Group</a></li>
+<?php
+}
+?>
         <li><a href="/my.php">My PHP.net</a></li>
         <li><a href="/contact.php">Contact</a></li>
         <li><a href="/sites.php">Other PHP.net sites</a></li>
