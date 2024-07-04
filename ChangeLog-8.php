@@ -786,6 +786,92 @@ changelog_header(8, $MINOR_VERSIONS);
 
 <a id="PHP_8_2"></a>
 
+<section class="version" id="8.2.21"><!-- {{{ 8.2.21 -->
+<h3>Version 8.2.21</h3>
+<b><?php release_date('04-Jul-2024'); ?></b>
+<ul><li>Core:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 14315); ?> (Incompatible pointer type warnings).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 12814); ?> (max_execution_time reached too early on MacOS 14 when running on Apple Silicon).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 14387); ?> (Crash when stack walking in destructor of yielded from values during Generator-&gt;throw()).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 14456); ?> (Attempting to initialize class with private constructor calls destructor).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 14549); ?> (Incompatible function pointer type for fclose).</li>
+</ul></li>
+<li>BCMatch:
+<ul>
+  <li>Fixed bug (bcpowmod() with mod = -1 returns 1 when it must be 0).</li>
+</ul></li>
+<li>Curl:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 14307); ?> (Test curl_basic_024 fails with curl 8.8.0).</li>
+</ul></li>
+<li>DOM:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 14343); ?> (Memory leak in xml and dom).</li>
+</ul></li>
+<li>FPM:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 14037); ?> (PHP-FPM ping.path and ping.response config vars are ignored in status pool).</li>
+</ul></li>
+<li>GD:
+<ul>
+  <li>Fix parameter numbers for imagecolorset().</li>
+</ul></li>
+<li>Intl:
+<ul>
+  <li>Fix reference handling in SpoofChecker.</li>
+</ul></li>
+<li>MySQLnd:
+<ul>
+  <li>Partially fix bug <?php githubissuel('php/php-src', 10599); ?> (Apache crash on Windows when using a self-referencing anonymous function inside a class with an active mysqli connection).</li>
+</ul></li>
+<li>Opcache:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 14267); ?> (opcache.jit=off does not allow enabling JIT at runtime).</li>
+  <li>Fixed TLS access in JIT on FreeBSD/amd64.</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 11188); ?> (Error when building TSRM in ARM64).</li>
+</ul></li>
+<li>PDO ODBC:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 14367); ?> (incompatible SDWORD type with iODBC).</li>
+</ul></li>
+<li>PHPDBG:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 13681); ?> (segfault on watchpoint addition failure).</li>
+</ul></li>
+<li>Soap:
+<ul>
+  <li><?php bugfix(47925); ?> (PHPClient can't decompress response).</li>
+  <li>Fix missing error restore code.</li>
+  <li>Fix memory leak if calling SoapServer::setObject() twice.</li>
+  <li>Fix memory leak if calling SoapServer::setClass() twice.</li>
+  <li>Fix reading zlib ini settings in ext-soap.</li>
+  <li>Fix memory leaks with string function name lookups.</li>
+  <li><?php bugfix(69280); ?> (SoapClient classmap doesn't support fully qualified class name).</li>
+  <li><?php bugfix(76232); ?> (SoapClient Cookie Header Semicolon).</li>
+  <li>Fixed memory leaks when calling SoapFault::__construct() twice.</li>
+</ul></li>
+<li>Sodium:
+<ul>
+  <li>Fix memory leaks in ext/sodium on failure of some functions.</li>
+</ul></li>
+<li>SPL:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 14290); ?> (Member access within null pointer in extension spl).</li>
+</ul></li>
+<li>Standard:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 14483); ?> (Fixed off-by-one error in checking length of abstract namespace Unix sockets).</li>
+</ul></li>
+<li>Streams:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 11078); ?> (PHP Fatal error triggers pointer being freed was not allocated and malloc: double free for ptr errors).</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
+
+
 <section class="version" id="8.2.20"><!-- {{{ 8.2.20 -->
 <h3>Version 8.2.20</h3>
 <b><?php release_date('06-Jun-2024'); ?></b>
