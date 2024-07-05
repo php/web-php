@@ -408,8 +408,8 @@ aside.tips h3 {
   color:#E6E6E6;
 }
 aside.tips li {
-  line-height: 1.2rem; /** avoid gaps in wrapped links **/
-  margin-bottom: 0.5rem; /** seperate each link item a little bit from eachother **/
+  line-height: 1.2rem; /* avoid gaps in wrapped links */
+  margin-bottom: 0.5rem; /* seperate each link item a little bit from eachother */
 }
 aside.tips a {
   color:#ccc;
