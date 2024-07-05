@@ -407,11 +407,13 @@ aside.tips div.border {
 aside.tips h3 {
   color:#E6E6E6;
 }
+aside.tips li {
+  line-height: 1.2rem; /** avoid gaps in wrapped links **/
+  margin-bottom: 0.5rem; /** seperate each link item a little bit from eachother **/
+}
 aside.tips a {
   color:#ccc;
   border-bottom:1px dotted #666;
-  display:inline-block;
-  vertical-align:top;
 }
 aside.tips .panel > a:after,
 aside.tips .panel > span:after {
