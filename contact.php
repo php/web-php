@@ -56,7 +56,7 @@ site_header("Contact", ["current" => "community"]);
 <p>
  If you would like to contact the webmasters for some other reason, please
  write to <a href="mailto:php-webmaster@lists.php.net">php-webmaster@lists.php.net</a>.
- Note that this address is mapped to a mailing list and a newsgroup, so
+ Note that this address is mapped to a <a href="/mailing-lists.php">mailing list</a> and a newsgroup, so
  <strong>every message you send will be stored in public archives at multiple
  servers</strong>.
 </p>
