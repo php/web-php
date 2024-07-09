@@ -366,7 +366,7 @@ else {?>
    </td>
   </tr>
   <tr>
-   <th class="subr"><label for="form-user">Your email address (or name)</label>:</th>
+   <th class="subr"><label for="form-user">Your email address</label>:</th>
    <td><input id="form-user" type="email" name="user" size="60" maxlength="40" required value="<?php echo clean($_POST['user']); ?>"></td>
   </tr>
   <tr>
