@@ -1,6 +1,7 @@
 .EXPORT_ALL_VARIABLES:
 
 HTTP_HOST:=localhost:8080
+CORES?=$(shell (nproc  || sysctl -n hw.ncpu) 2> /dev/null)
 
 .PHONY: it
 it: coding-standards tests ## Runs all the targets
@@ -27,7 +28,7 @@ tests: vendor ## Runs unit and end-to-end tests with phpunit/phpunit
 
 tests_visual:
 	tests/server start;
-	npx playwright test
+	npx playwright test --workers=$(CORES)
 	tests/server stop
 
 tests_update_snapshots:
