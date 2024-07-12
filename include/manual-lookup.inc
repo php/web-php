@@ -126,10 +126,8 @@ function find_manual_page($lang, $keyword)
     // English one in case no page is found
     $langs = ($lang != 'en') ? [$lang, 'en'] : ['en'];
 
-    // Reformat keyword, drop anything in parenthesis --- except a search for the underscore only. (Bug #63490)
-    if ($keyword != '_') {
-        $keyword = str_replace('_', '-', $keyword);
-    }
+    // Reformat keyword, drop anything in parentheses
+    $keyword = str_replace('_', '-', $keyword);
     if (strpos($keyword, '(') !== false) {
         $keyword = preg_replace("!\\(.*\\)!", "-", $keyword);
     }

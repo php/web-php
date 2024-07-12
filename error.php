@@ -400,7 +400,6 @@ $uri_aliases = [
     "links" => "support", // BC
     "links.php" => "support", // BC
     "oracle" => "oci8",
-    "_" => "function.gettext",
     "cli" => "features.commandline",
 
     "oop" => "language.oop5",
