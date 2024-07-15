@@ -159,22 +159,6 @@ site_header("Unsubscribing", ["current" => "community"]);
  </dd>
 </dl>
 
-<a id="unsubdiff"></a>
-<h2>Unsubscribe with a different email address</h2>
-
-<p>
- To unsubscribe an address like this that is different from what the
- mailing list software recognizes as your own address, you need to send mail to
- <code><em>listname</em>-unsubscribe-<em>joecool=example.com</em>@lists.php.net</code>
- (or <code>-unsubscribe-digest-</code>, if the address is subscribed to the
- digest format of the list).
-</p>
-
-<p>
- Once you have done that, you will receive a message at that email address
- with instructions on how to complete your unsubscription request.
-</p>
-
 <h2>Still need help?</h2>
 
 <p>
