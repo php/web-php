@@ -124,12 +124,25 @@ if (isset($_POST['action'])) {
  <a href="http://marc.info/">Marc</a>.
 </p>
 
-<h2>Twitter</h2>
+<h2>Social Media</h2>
 <p>
- The PHP team maintains an official PHP.net account on twitter,
- <a href="https://twitter.com/official_php">@official_php</a>, for those
- interested in following news and other announcements from the PHP project.
+ The PHP team maintains official PHP.net accounts on several social media
+ platforms for those interested in following news and other announcements
+ from the PHP project.
 </p>
+<ul>
+  <li>
+   <a href="https://fosstodon.org/@php">@php@fosstodon.org</a> on the
+   Fediverse/Mastodon.
+  </li>
+  <li>
+   <a href="https://www.linkedin.com/company/phpnet/">PHP</a> on LinkedIn.
+  </li>
+  <li>
+   <a href="https://x.com/official_php">@official_php</a> on X (formerly
+   Twitter).
+  </li>
+</ul>
 
 <h2>Mailing List Posting guidelines</h2>
 
