@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom" xmlns:default="http://php.net/ns/news">
+  <title>CascadiaPHP 2024</title>
+  <id>https://www.php.net/archive/2024.php#2024-07-19-1</id>
+  <published>2024-07-19T01:27:49+00:00</published>
+  <updated>2024-07-19T01:27:49+00:00</updated>
+  <link href="https://www.php.net/conferences/index.php#2024-07-19-1" rel="alternate" type="text/html"/>
+  <link href="https://cascadiaphp.com" rel="via" type="text/html"/>
+  <default:finalTeaserDate xmlns="http://php.net/ns/news">2024-10-24</default:finalTeaserDate>
+  <category term="conferences" label="Conference announcement"/>
+  <default:newsImage xmlns="http://php.net/ns/news" link="https://cascadiaphp.com" title="CascadiaPHP Logo">cascadiaphp-2018.jpg</default:newsImage>
+  <content type="xhtml">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+     <p>Join us in Portland, Oregon fon Thursday-Saturday, October 24-26 in Portland, Oregon for the third (and first since 2019) edition of CascadiaPHP! We're excited to bring back a PHP conference run by and for the community to the Pacific Northwest. As with previous years, Portland State University's campus will be our venue.</p>
+     <p>Attend for one, two, or three days, with a mix of talks and tutorials each day. <a href="https://cascadiaphp.com/registration">Purchase a ticket</a> before speakers are announced to get an extra discount.</p>
+    </div>
+  </content>
+</entry>
