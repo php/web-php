@@ -117,15 +117,6 @@ site_header("A Tourist's Guide", ["current" => "help"]);
  and contributors.
 </p>
 
-<h2 id="docs" class="content-header"><a href="http://docs.php.net/">docs.php.net</a>: Documentation dev server</h2>
-
-<p class="content-box">
- The documentation developmental server is a PHP mirror that contains upcoming
- releases of the PHP documentation before it's pushed out to the mirrors.
- Documentation changes, such as layout, is tested here (with feedback requested)
- before being made official. Documentation is built here four times a day.
-</p>
-
 <h2 id="qa" class="content-header"><a href="https://qa.php.net/">qa.php.net</a>: Quality Assurance Team</h2>
 
 <p class="content-box">
