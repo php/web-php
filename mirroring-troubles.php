@@ -12,13 +12,12 @@ $SIDEBAR_DATA = '
 site_header("The PHP mirrors problem and troubleshooting guide", ["current" => "help"]);
 ?>
 
-<h1>Common troubles that PHP.net mirrors face</h1>
+<h1>Common troubles that mirrors of PHP.net face</h1>
 <p>
- Mirroring a PHP.net server requires a few specific settings and
+ Mirroring the PHP.net website requires a few specific settings and
  considerations, and this document provides a list of problems with possible
- solutions. The mirror tools check for these problems and automatically
- disable the problematic mirrors. The [<strong>?</strong>] link within each
- title may be used to test this mirror.
+ solutions. The [<strong>?</strong>] link within each title may be used to
+ test this mirror.
 </p>
 
 <a name="multiviews"></a>
@@ -101,15 +100,6 @@ site_header("The PHP mirrors problem and troubleshooting guide", ["current" => "
  server configuration should be adjusted to force .msi files as
  'application/octet-stream'. In Apache this may be done by using:
  <code>AddType application/octet-stream .msi</code>
-</p>
-
-<a name="slow"></a>
-<h3>Slow response time</h3>
-<p>
- Although this test is currently a little unfair (it's only based from the
- USA), the response time of the server exceeds five seconds. Please confirm
- the speed of these mirrors and we'll likely adjust the testing procedure.
- This test will be performed from multiple locations in the future.
 </p>
 
 <a name="outbound"></a>
