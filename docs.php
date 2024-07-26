@@ -17,8 +17,8 @@ site_header("Documentation", ["current" => "docs"]);
 <p>
  Note, that many languages are just under translation, and
  the untranslated parts are still in English. Also some translated
- parts might be outdated. The translation teams are open to
- contributions.
+ parts might be outdated. The translation teams are
+ <a href="https://doc.php.net/">open to contributions</a>.
 </p>
 </div>
 
@@ -44,6 +44,13 @@ foreach ($ACTIVE_ONLINE_LANGUAGES as $langcode => $langname) {
 
 ?>
 </p>
+
+<p>
+ The language currently being used as the default for you should be in
+ <strong>bold</strong> above. You can change the setting for this on the
+ <a href="/my.php">My PHP.net customization page</a>.
+</p>
+
 <p>
  For downloadable formats, please visit our
  <a href="download-docs.php">documentation downloads</a> page.
