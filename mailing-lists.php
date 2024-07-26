@@ -206,21 +206,6 @@ if (isset($_POST['action'])) {
           'This list is for the discussion of PHP database topics',
           false, true, true, "php.db",
       ],
-      [
-          'php-i18n', 'Unicode and Internationalization',
-          'Unicode support, Internationalization (i18n) and localization (l10n) issues and features',
-          false, true, true, "php.i18n",
-      ],
-      [
-          'php-evangelism', 'PHP evangelism mailing list',
-          'A list for people interested in promoting PHP and learning good reasons to support PHP in the enterprise',
-          true, true, true, "php.evangelism",
-      ],
-      [
-          'soap', 'PHP SOAP list',
-          'List for the SOAP developers',
-          false, false, false, 'php.soap',
-      ],
       'Non-English language mailing lists',
       [
           'php-es', 'Spanish PHP Mailing list',
