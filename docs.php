@@ -18,7 +18,7 @@ site_header("Documentation", ["current" => "docs"]);
  Note, that many languages are just under translation, and
  the untranslated parts are still in English. Also some translated
  parts might be outdated. The translation teams are
- <a href="https://doc.php.net/">open to contributions</a>.
+ <a href="http://doc.php.net/">open to contributions</a>.
 </p>
 </div>
 
