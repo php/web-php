@@ -152,15 +152,6 @@ site_header("A Tourist's Guide", ["current" => "help"]);
  i.e. documentation files.
 </p>
 
-<h2 id="gtk" class="content-header"><a href="http://gtk.php.net/">gtk.php.net</a>: PHP-GTK</h2>
-
-<p class="content-box">
- This web site is the home of the PHP-GTK project, which allows PHP to be
- used to build graphical interfaces, with slick interface and highly
- interactive content. You'll find the downloads and docs here,
- and the latest news from the project.
-</p>
-
 <h2 id="wiki" class="content-header"><a href="https://wiki.php.net/">wiki.php.net</a>: The PHP Wiki</h2>
 
 <p class="content-box">
@@ -197,7 +188,6 @@ $SIDEBAR = <<<SIDEBAR_DATA
 <p class='panel'><a href="#qa">Quality Assurance Team</a></p>
 <p class='panel'><a href="#git">Git Repository</a></p>
 <p class='panel'><a href="#svn">Archived SVN Repository</a></p>
-<p class='panel'><a href="#gtk">PHP-GTK</a></p>
 <p class='panel'><a href="#wiki">The PHP Wiki</a></h2>
 <p class='panel'><a href="#windows">PHP for Windows</a></h2>
 <p class='panel'><a href="#people">The PHP Developers Profiles</a></h2>
