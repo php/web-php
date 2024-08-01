@@ -959,6 +959,87 @@ changelog_header(8, $MINOR_VERSIONS);
 
 <a id="PHP_8_2"></a>
 
+<section class="version" id="8.2.22"><!-- {{{ 8.2.22 -->
+<h3>Version 8.2.22</h3>
+<b><?php release_date('01-Aug-2024'); ?></b>
+<ul><li>Core:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 13922); ?> (Fixed support for systems with sysconf(_SC_GETPW_R_SIZE_MAX) == -1).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 14626); ?> (Fix is_zend_ptr() for huge blocks).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 14590); ?> (Memory leak in FPM test gh13563-conf-bool-env.phpt.</li>
+  <li>Fixed OSS-Fuzz #69765.</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 14741); ?> (Segmentation fault in Zend/zend_types.h).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 14969); ?> (Use-after-free in property coercion with __toString()).</li>
+</ul></li>
+<li>Dom:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 14702); ?> (DOMDocument::xinclude() crash).</li>
+</ul></li>
+<li>Gd:
+<ul>
+  <li>ext/gd/tests/gh10614.phpt: skip if no PNG support.</li>
+  <li>restored warning instead of fata error.</li>
+</ul></li>
+<li>LibXML:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 14563); ?> (Build failure with libxml2 v2.13.0).</li>
+</ul></li>
+<li>Opcache:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 14550); ?> (No warning message when Zend DTrace is enabled that opcache.jit is implictly disabled).</li>
+</ul></li>
+<li>Output:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 14808); ?> (Unexpected null pointer in Zend/zend_string.h with empty output buffer).</li>
+</ul></li>
+<li>PDO:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 14712); ?> (Crash with PDORow access to null property).</li>
+</ul></li>
+<li>Phar:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 14603); ?> (null string from zip entry).</li>
+</ul></li>
+<li>PHPDBG:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 14596); ?> (crashes with ASAN and ZEND_RC_DEBUG=1).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 14553); ?> (echo output trimmed at NULL byte).</li>
+</ul></li>
+<li>Shmop:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 14537); ?> (shmop Windows 11 crashes the process).</li>
+</ul></li>
+<li>SimpleXML:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 14638); ?> (null dereference after XML parsing failure).</li>
+</ul></li>
+<li>SPL:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 14639); ?> (Member access within null pointer in ext/spl/spl_observer.c).</li>
+</ul></li>
+<li>Standard:
+<ul>
+  <li>Fix 32-bit wordwrap test failures.</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 14774); ?> (time_sleep_until overflow).</li>
+</ul></li>
+<li>Tidy:
+<ul>
+  <li>Fix memory leak in tidy_repair_file().</li>
+</ul></li>
+<li>Treewide:
+<ul>
+  <li>Fix compatibility with libxml2 2.13.2.</li>
+</ul></li>
+<li>XML:
+<ul>
+  <li>Move away from to-be-deprecated libxml fields.</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 14834); ?> (Error installing PHP when --with-pear is used).</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
+
+
 <section class="version" id="8.2.21"><!-- {{{ 8.2.21 -->
 <h3>Version 8.2.21</h3>
 <b><?php release_date('04-Jul-2024'); ?></b>
