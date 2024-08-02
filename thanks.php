@@ -65,78 +65,6 @@ site_header("Thanks", ["current" => "community"]);
     </li>
 
     <li class="thanks">
-        <a href="http://promote.pair.com/direct.pl?php.net" class="thanks__logo">
-            <img src="images/sponsors/pair.png" alt="pair Networks">
-        </a>
-        <section>
-            <strong class="thanks__heading"><a href="http://promote.pair.com/direct.pl?php.net">pair Networks</a></strong>
-            <p class="thanks__description">
-                Provides the servers and bandwidth for PEAR, PECL and mailing list services.
-            </p>
-        </section>
-    </li>
-
-    <li class="thanks">
-        <a href="https://rackspace.com" class="thanks__logo">
-            <img src="images/sponsors/rackspace.svg" alt="Rackspace">
-        </a>
-        <section>
-            <strong class="thanks__heading"><a href="https://rackspace.com">Rackspace</a></strong>
-            <p class="thanks__description">
-                Provides the server and bandwidth for various php.net services.
-            </p>
-        </section>
-    </li>
-
-    <li class="thanks">
-        <a href="https://www.servercentral.net" class="thanks__logo">
-            <img src="images/sponsors/servercentral.svg" alt="Spry">
-        </a>
-        <section>
-            <strong class="thanks__heading"><a href="https://www.servercentral.net">Server Central</a></strong>
-            <p class="thanks__description">
-                Provides a box and connection which runs various services and sites for php.net
-            </p>
-        </section>
-    </li>
-
-    <li class="thanks">
-        <a href="https://www.spry.com" class="thanks__logo thanks__logo--white">
-            <img src="images/sponsors/spry.png" alt="Spry">
-        </a>
-        <section>
-            <strong class="thanks__heading"><a href="https://www.spry.com">Spry VPS Hosting</a></strong>
-            <p class="thanks__description">
-                Provides a server and bandwidth for various php.net services.
-            </p>
-        </section>
-    </li>
-
-    <li class="thanks">
-        <a href="https://www.osuosl.org" class="thanks__logo thanks__logo--osu">
-            <img src="images/sponsors/osu.png" alt="OSU Open Source Lab">
-        </a>
-        <section>
-            <strong class="thanks__heading"><a href="https://www.osuosl.org">OSU Open Source Lab</a></strong>
-            <p class="thanks__description">
-                Provides a server and bandwidth for various php.net services.
-            </p>
-        </section>
-    </li>
-
-    <li class="thanks">
-        <a href="https://www.nexcess.net/" class="thanks__logo">
-            <img src="images/sponsors/nexcess.webp" alt="NEXCESS.NET">
-        </a>
-        <section>
-            <strong class="thanks__heading"><a href="https://www.nexcess.net/">NEXCESS.NET</a></strong>
-            <p class="thanks__description">
-                Provides a server and bandwidth for various php.net services.
-            </p>
-        </section>
-    </li>
-
-    <li class="thanks">
         <a href="https://eukhost.com/" class="thanks__logo">
             <img src="images/sponsors/eukhost.svg" alt="EUKhost">
         </a>
@@ -155,43 +83,7 @@ site_header("Thanks", ["current" => "community"]);
         <section>
             <strong class="thanks__heading"><a href="https://duocast.nl/">Duocast</a></strong>
             <p class="thanks__description">
-                Provides the servers and bandwidth used for buildbot testing and various windows based servers.
-            </p>
-        </section>
-    </li>
-
-    <li class="thanks">
-        <a href="https://redpill-linpro.com/" class="thanks__logo thanks__logo--redpill">
-            <img src="images/sponsors/redpill.svg" alt="Redpill Linpro">
-        </a>
-        <section>
-            <strong class="thanks__heading"><a href="https://redpill-linpro.com/">Redpill Linpro</a></strong>
-            <p class="thanks__description">
-                Provides managed servers and bandwidth for various php.net services.
-            </p>
-        </section>
-    </li>
-
-    <li class="thanks">
-        <a href="https://krystal.uk/" class="thanks__logo thanks__logo--dark">
-            <img src="images/sponsors/krystal.svg" alt="Krystal.uk">
-        </a>
-        <section>
-            <strong class="thanks__heading"><a href="https://krystal.uk/">Krystal.uk</a></strong>
-            <p class="thanks__description">
-                Provides a server and bandwidth for the ci.qa.php.net build and quality assurance infrastructure.
-            </p>
-        </section>
-    </li>
-
-    <li class="thanks">
-        <a href="https://servergrove.com/" class="thanks__logo thanks__logo--dark">
-            <img src="images/sponsors/servergrove.png" alt="ServerGrove">
-        </a>
-        <section>
-            <strong class="thanks__heading"><a href="https://servergrove.com/">ServerGrove</a></strong>
-            <p class="thanks__description">
-                Provides managed servers and bandwidth for various php.net services.
+                Provides the servers and bandwidth used for buildbot testing and various Windows based servers.
             </p>
         </section>
     </li>
@@ -256,6 +148,52 @@ site_header("Thanks", ["current" => "community"]);
         <a href="https://vasoftware.com">VA Software Corp.</a> helped us
         by donating a server and resources to enable us to build manuals
         and distribute our content via rsync.
+    </li>
+
+    <li>
+        <a href="https://krystal.uk/">Krystal.uk</a> provided a server and
+        bandwidth for the ci.qa.php.net build and quality assurance
+        infrastructure.
+    </li>
+
+    <li>
+        <a href="https://www.nexcess.net/">NEXCESS.NET</a> provided servers and
+        resources for various php.net services.
+    </li>
+
+    <li>
+        <a href="https://www.osuosl.org/">Oregon State University Open Source Lab</a>
+        provided servers and resources for various php.net services.
+    </li>
+
+    <li>
+        <a href="https://promote.pair.com/direct.pl?php.net">pair Networks</a>
+        provided servers and resources for hosting PEAR, PECL, and the mailing lists.
+    </li>
+
+    <li>
+        <a href="https://rackspace.com/">Rackspace</a> provided servers and
+        resources for various php.net services.
+    </li>
+
+    <li>
+        <a href="https://redpill-linpro.com/">Redpill Linpro</a> provided servers and
+        resources for various php.net services.
+    </li>
+
+    <li>
+        <a href="https://www.servercentral.net/">Server Central</a> provided
+        servers and resources for various php.net services.
+    </li>
+
+    <li>
+        <a href="https://servergrove.com/">ServerGrove</a> provided managed
+        servers and resources for various php.net services.
+    </li>
+
+    <li>
+        <a href="https://www.spry.com/">Spry VPS Hosting</a> provided servers
+        and resources for various php.net services.
     </li>
 </ul>
 
