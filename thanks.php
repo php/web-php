@@ -65,6 +65,18 @@ site_header("Thanks", ["current" => "community"]);
     </li>
 
     <li class="thanks">
+        <a href="https://www.deft.com/" class="thanks__logo">
+            <img src="images/sponsors/deft.svg" alt="Deft">
+        </a>
+        <section>
+            <strong class="thanks__heading"><a href="https://www.deft.com/">Deft</a></strong>
+            <p class="thanks__description">
+                Provides a server and bandwidth for rsync.php.net.
+            </p>
+        </section>
+    </li>
+
+    <li class="thanks">
         <a href="https://eukhost.com/" class="thanks__logo">
             <img src="images/sponsors/eukhost.svg" alt="EUKhost">
         </a>
@@ -179,11 +191,6 @@ site_header("Thanks", ["current" => "community"]);
     <li>
         <a href="https://redpill-linpro.com/">Redpill Linpro</a> provided servers and
         resources for various php.net services.
-    </li>
-
-    <li>
-        <a href="https://www.servercentral.net/">Server Central</a> provided
-        servers and resources for various php.net services.
     </li>
 
     <li>
