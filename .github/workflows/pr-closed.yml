@@ -13,4 +13,6 @@ jobs:
           host: ${{ secrets.PREVIEW_REMOTE_HOST }}
           username: ${{ secrets.PREVIEW_REMOTE_USER }}
           key: ${{ secrets.PREVIEW_SSH_KEY }}
-          script: bash /home/thephpfoundation/scripts/pr_closed.sh web-php ${{ github.event.number }}
+          script: |
+            bash /home/thephpfoundation/scripts/pr_closed.sh web-php ${{ github.event.number }}
+            bash /home/thephpfoundation/scripts/pr_closed.sh web-php-regression-report ${{ github.event.number }}
