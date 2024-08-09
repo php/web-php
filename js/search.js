@@ -19,13 +19,12 @@
     /**
      * Adds an item to the backend.
      *
-     * @param {String} id     The item ID. It would help if this was unique.
-     * @param {String} name   The item name to use as a label.
-     * @param {Array}  tokens An array of tokens that should match this item.
+     * @param {String} id          The item ID. It would help if this was unique.
+     * @param {String} name        The item name to use as a label.
+     * @param {String} description Explanatory text for item.
      */
-    Backend.prototype.addItem = function (id, name, description, tokens) {
+    Backend.prototype.addItem = function (id, name, description) {
         this.elements[id] = {
-            tokens: tokens,
             id: id,
             name: name,
             description: description
@@ -42,52 +41,18 @@
         var array = [];
 
         $.each(this.elements, function (_, element) {
+            element.methodName = element.name.split('::');
+            if (element.methodName.length > 1) {
+                element.methodName = element.methodName.slice(-1)[0];
+            } else {
+                delete element.methodName;
+            }
             array.push(element);
         });
 
-        /* This is a rather convoluted sorting function, but the idea is to
-         * make the results as useful as possible, since only a few are shown
-         * at any one time. In general, we favour shorter names over longer
-         * ones, and favour regular functions over methods when sorting
-         * functions. Ideally, this would actually sort based on function
-         * popularity, but this is a simpler algorithmic approach for now that
-         * seems to result in generally useful results. */
-        array.sort(function (a, b) {
-            var a = a.name;
-            var b = b.name;
-
-            var aIsMethod = (a.indexOf("::") != -1);
-            var bIsMethod = (b.indexOf("::") != -1);
-
-            // Methods are always after regular functions.
-            if (aIsMethod && !bIsMethod) {
-                return 1;
-            } else if (bIsMethod && !aIsMethod) {
-                return -1;
-            }
-
-            /* If one function name is the exact prefix of the other, we want
-             * to sort the shorter version first (mostly for things like date()
-             * versus date_format()). */
-            if (a.length > b.length) {
-                if (a.indexOf(b) == 0) {
-                    return 1;
-                }
-            } else {
-                if (b.indexOf(a) == 0) {
-                    return -1;
-                }
-            }
-
-            // Otherwise, sort normally.
-            if (a > b) {
-                return 1;
-            } else if (a < b) {
-                return -1;
-            }
-
-            return 0;
-        });
+        /**
+         * Old pre-sorting has no effect on results sorted by score.
+         */
         return array;
     };
 
@@ -143,20 +108,7 @@
                  * of data this is, and hence which backend this should go
                  * into. */
                 if (item[0]) {
-                    var tokens = [item[0]];
                     var type = null;
-
-                    if (item[0].indexOf("_") != -1) {
-                        tokens.push(item[0].replace("_", ""));
-                    }
-                    if (item[0].indexOf("::") != -1) {
-                        /* We'll add tokens to make the autocompletion more
-                         * useful: users can search for method names and can
-                         * specify that they only want method names by
-                         * prefixing their search with ::. */
-                        tokens.push(item[0].split("::")[1]);
-                        tokens.push("::" + item[0].split("::")[1]);
-                    }
 
                     switch(item[2]) {
                         case "phpdoc:varentry":
@@ -190,7 +142,7 @@
                     }
 
                     if (type) {
-                        backends[type].addItem(id, item[0], item[1], tokens);
+                        backends[type].addItem(id, item[0], item[1]);
                     }
                 }
             });
@@ -270,33 +222,74 @@
          * @param {Object} backends An array-like object containing backends.
          */
         var enableSearchTypeahead = function (backends) {
-            var template = "<h4>{{ name }}</h4>" +
-                           "<span title='{{ description }}' class='description'>{{ description }}</span>";
+            var header = Hogan.compile(
+                '<h3 class="result-heading"><span class="collapsible"></span>{{ label }}' +
+                '<span class="result-count">{{ count }}</span></h3>' +
+                '<div class="tt-suggestions"></div>'
+            );
+            var template = Hogan.compile(
+                '<div>' +
+                    '<h4>{{ name }}</h4>' +
+                    '<span title="{{ description }}" class="description">{{ description }}</span>' +
+                '</div>'
+            );
 
             // Build the typeahead options array.
             var typeaheadOptions = $.map(backends, function (backend, name) {
-                var local = backend instanceof Backend ? backend.toTypeaheadArray() : backend;
+                var fuzzyhound = new FuzzySearch({
+                    source: backend.toTypeaheadArray(),
+                    token_sep: ' \t.,-_', // treat colon as part of token, ignore tabs (from pasted content)
+                    score_test_fused: true,
+                    keys: [
+                        'name',
+                        'methodName',
+                        'description'
+                    ],
+                    thresh_include: 5.0,
+                    thresh_relative_to_best: 0.7,
+                    bonus_match_start: 0.7,
+                    bonus_token_order: 1.0,
+                    bonus_position_decay: 0.3,
+                    token_query_min_length: 1,
+                    token_field_min_length: 2
+                });
 
                 return {
+                    source: fuzzyhound,
                     name: name,
-                    local: backend.toTypeaheadArray(),
-                    header: '<h3 class="result-heading"><span class="collapsible"></span>' + backend.label + '</h3>',
                     limit: options.limit,
-                    valueKey: "name",
-                    engine: Hogan,
-                    template: template
+                    display: 'name',
+                    templates: {
+                        header: function () {
+                            return header.render({
+                                label: backend.label,
+                                count: fuzzyhound.results.length
+                            });
+                        },
+                        suggestion: function (result) {
+                            return template.render({
+                                name: result.name,
+                                description: result.description
+                            });
+                        }
+                    }
                 };
             });
 
-            /* Construct a global that we can use to track the total number of
-             * results from each backend. */
-            var results = {};
-
             // Set up the typeahead and the various listeners we need.
-            var searchTypeahead = $(element).typeahead(typeaheadOptions);
+            var searchTypeahead = element.typeahead(
+                {
+                    minLength: 1,
+                    classNames: {
+                        menu: 'tt-dropdown-menu',
+                        cursor: 'tt-is-under-cursor'
+                    }
+                },
+                typeaheadOptions
+            );
 
             // Delegate click events to result-heading collapsible icons, and trigger the accordion action
-            $('.tt-dropdown-menu').delegate('.result-heading .collapsible', 'click', function() {
+            $('.tt-dropdown-menu').delegate('.result-heading .collapsible', 'click', function () {
                 var el = $(this), suggestions = el.parent().parent().find('.tt-suggestions');
                 suggestions.stop();
                 if(!el.hasClass('closed')) {
@@ -310,10 +303,20 @@
             });
 
             // If the user has selected an autocomplete item and hits enter, we should take them straight to the page.
-            searchTypeahead.on("typeahead:selected", function (_, item) {
-                window.location = "/manual/" + options.language + "/" + item.id;
+            searchTypeahead.on("typeahead:select", function (_, item) {
+                window.location = "/manual/" + options.language + "/" + item.id + ".php";
             });
 
+            // Get new parent after initialization
+            var elementParent = element.parent();
+
+            searchTypeahead.on('typeahead:render', function (evt, renderedSuggestions, fetchedAsync, datasetIndex) {
+                // Fix the missing wrapper from typeahead v0.9.3 for UI parity
+                var set = elementParent.find('.tt-dataset-' + datasetIndex);
+                set.children('.tt-suggestions').first().append(set.children('.tt-suggestion'));
+            });
+
+            var lastPattern;
             searchTypeahead.on("keyup", (function () {
                 /* typeahead.js doesn't give us a reliable event for the
                  * dropdown entries having been updated, so we'll hook into the
@@ -323,41 +326,26 @@
                  * entered. */
 
                 // Precompile the templates we need for the fake entries.
-                var moreTemplate = Hogan.compile("<a class='more' href='{{ url }}'>&raquo; {{ num }} more result{{ plural }}</a>");
                 var searchTemplate = Hogan.compile("<a class='search' href='{{ url }}'>&raquo; Search php.net for {{ pattern }}</a>");
 
                 /* Now we'll return the actual function that should be invoked
                  * when the user has typed something into the search box after
                  * typeahead.js has done its thing. */
                 return function () {
-                    // Add result totals to each section heading.
-                    $.each(results, function (name, numResults) {
-                        var container = $(".tt-dataset-" + name, $(element).parent()),
-                            resultHeading = container.find('.result-heading'),
-                            resultCount = container.find('.result-count');
-
-                        // Does a result count already exist in this resultHeading?
-                        if(resultCount.length == 0) {
-                            var results = $("<span class='result-count'>").text(numResults);
-                            resultHeading.append(results);
-                        } else {
-                            resultCount.text(numResults);
-                        }
-
-
-                    });
-
                     // Grab what the user entered.
-                    var pattern = $(element).val();
+                    var pattern = element.val();
+                    if (pattern == lastPattern) {
+                        return;
+                    }
+                    lastPattern = pattern;
 
                     /* Add a global search option. Note that, as above, the
                      * link is only displayed if more than 2 characters have
                      * been entered: this is due to our search functionality
                      * requiring at least 3 characters in the pattern. */
-                    $(".tt-dropdown-menu .search", $(element).parent()).remove();
+                    var dropdown = elementParent.children('.tt-dropdown-menu');
+                    dropdown.children('.search').remove();
                     if (pattern.length > 2) {
-                        var dropdown = $(".tt-dropdown-menu", $(element).parent());
-
                         dropdown.append(searchTemplate.render({
                             pattern: pattern,
                             url: "/search.php?pattern=" + encodeURIComponent(pattern)
@@ -370,19 +358,6 @@
                 };
             })());
 
-            /* Override the dataset._getLocalSuggestions() method to grab the
-             * number of results each dataset returns when a search occurs. */
-            $.each($(element).data().ttView.datasets, function (_, dataset) {
-                var originalGetLocal = dataset._getLocalSuggestions;
-
-                dataset._getLocalSuggestions = function () {
-                    var suggestions = originalGetLocal.apply(dataset, arguments);
-
-                    results[dataset.name] = suggestions.length;
-                    return suggestions;
-                };
-            });
-
             /* typeahead.js adds another input element as part of its DOM
              * manipulation, which breaks the auto-submit functionality we
              * previously relied upon for enter keypresses in the input box to
@@ -390,7 +365,7 @@
             $("<input type='submit' style='visibility: hidden; position: fixed'>").insertAfter(element);
 
             // Fix for a styling issue on the created input element.
-            $(".tt-hint", $(element).parent()).addClass("search-query");
+            elementParent.children(".tt-hint").addClass("search-query");
         };
 
         // Look for the user's language, then fall back to English.
