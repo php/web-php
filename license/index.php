@@ -150,7 +150,6 @@ For related projects, please refer to licensing information on the Project websi
 <ul>
   <li><a href="http://pecl.php.net/copyright.php">PECL</a></li>
   <li><a href="http://pear.php.net/copyright.php">PEAR</a></li>
-  <li><a href="http://gtk.php.net/copyright.php">GTK</a></li>
 </ul>
 
 <?php site_footer(['sidebar' => $SIDEBAR_DATA]);

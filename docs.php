@@ -17,8 +17,8 @@ site_header("Documentation", ["current" => "docs"]);
 <p>
  Note, that many languages are just under translation, and
  the untranslated parts are still in English. Also some translated
- parts might be outdated. The translation teams are open to
- contributions.
+ parts might be outdated. The translation teams are
+ <a href="http://doc.php.net/">open to contributions</a>.
 </p>
 </div>
 
@@ -44,6 +44,13 @@ foreach ($ACTIVE_ONLINE_LANGUAGES as $langcode => $langname) {
 
 ?>
 </p>
+
+<p>
+ The language currently being used as the default for you should be in
+ <strong>bold</strong> above. You can change the setting for this on the
+ <a href="/my.php">My PHP.net customization page</a>.
+</p>
+
 <p>
  For downloadable formats, please visit our
  <a href="download-docs.php">documentation downloads</a> page.
@@ -59,10 +66,6 @@ foreach ($ACTIVE_ONLINE_LANGUAGES as $langcode => $langname) {
  <li>
   If you are interested in how the documentation is edited and translated,
   you should read the <a href="http://doc.php.net/tutorial/">Documentation HOWTO</a>.
- </li>
- <li>
-  <a href="http://gtk.php.net/">PHP-GTK related documentation</a>
-  is hosted on the PHP-GTK website.
  </li>
  <li>
   <a href="http://pear.php.net/manual/">Documentation of PEAR and the various

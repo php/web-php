@@ -20,25 +20,25 @@ $RELEASES = (function () {
 
     /* PHP 8.3 Release */
     $data['8.3'] = [
-        'version' => '8.3.9',
-        'date' => '04 Jul 2024',
+        'version' => '8.3.10',
+        'date' => '01 Aug 2024',
         'tags' => [], // Set to ['security'] for security releases.
         'sha256' => [
-            'tar.gz' => 'f484dec6ee005c83f899af02fc021e1bc3b1d7b3f143ca062ef66b0fcee96566',
-            'tar.bz2' => '96edc6d82b7503a6650541fc477abd5456df28dfaa8c9388ff9e31d9fe1e3112',
-            'tar.xz' => 'bf4d7b8ea60a356064f88485278bd6f941a230ec16f0fc401574ce1445ad6c77',
+            'tar.gz' => 'd0b4dd5ff465053248fd28dacf2fe0bed79deaaef657890cecb6bfcb73996dcd',
+            'tar.bz2' => 'e584199c350b46343c37069bb9cc20ad893cb04c747c899ef1b05eadc0eea3b0',
+            'tar.xz' => 'a0f2179d00931fe7631a12cbc3428f898ca3d99fe564260c115af381d2a1978d',
         ]
     ];
 
     /* PHP 8.2 Release */
     $data['8.2'] = [
-        'version' => '8.2.21',
-        'date' => '04 Jul 2024',
+        'version' => '8.2.22',
+        'date' => '01 Aug 2024',
         'tags' => [], // Set to ['security'] for security releases.
         'sha256' => [
-            'tar.gz' => '0c6323699309a4d2e71057f01bc071b199f240973c349287b667a3ab36a496c6',
-            'tar.bz2' => 'f9876fe7d4d96d41aced199b58a1f7ae7b6655ddc92673135feded7f6939d77f',
-            'tar.xz' => '8cc44d51bb2506399ec176f70fe110f0c9e1f7d852a5303a2cd1403402199707',
+            'tar.gz' => '44197016c9eeed5c50523e20eb44adc4dd9d84ac08bdf9e46077e775d467d7d0',
+            'tar.bz2' => '5aae5964c60533185f9be928cf7d79a13393cc5560cedf1f4b977944cc76a585',
+            'tar.xz' => '8566229bc88ad1f4aadc10700ab5fbcec81587c748999d985f11cf3b745462df',
         ]
     ];
 

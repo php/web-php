@@ -8,16 +8,6 @@ $SIDEBAR_DATA = '
  mirrors page</a>.
 </p>
 ';
-/*
-<h3>SVN repository mirroring</h3>
-<p>
- If you are interested in using a local copy of our
- SVN repository for yourself, we provide
- <a href="/svnsync.php">svnsync instructions</a>
- separately.
-</p>
-';
-*/
 
 site_header(
     'Mirroring The PHP Website',
@@ -32,7 +22,7 @@ site_header(
 
 <p>
  The PHP project does not have an official mirror program anymore, but you can
- set-up a mirror for your own network or company.
+ set up a mirror for your own network or company.
 </p>
 
 <p>
@@ -78,13 +68,6 @@ site_header(
  whole distributions directory (and the related extra folder) by replacing
  <code>"--exclude='distributions/manual/**'"</code> with
  <code>"--exclude='distributions/**' --exclude='extra/**'"</code>.
-</p>
-
-<p>
- PHP mirror sites should provide the exact content coming from our servers,
- and must not be altered in any way unless explicitly stated in the mirroring
- guidelines. Failing to do will result in immediate termination and permanent
- expulsion of your participation in the program.
 </p>
 
 <h2>Add SQLite 3 Support</h2>
@@ -154,11 +137,6 @@ site_header(
      # Set mirror's preferred language here
      SetEnv MIRROR_LANGUAGE "en"
 
-     # The next two lines are only necessary if generating
-     # stats (see below), otherwise you should comment them out
-     Alias /stats/ /path/to/local/stats/
-     SetEnv MIRROR_STATS 1
-
      # Apache2 has 'AddHandler type-map var' enabled by default.
      # Remove the comment sign on the line below if you have it enabled.
      # RemoveHandler var
@@ -198,14 +176,6 @@ site_header(
  site should start working.
 </p>
 
-<h2>Setting Up Local Stats</h2>
-
-<p>
- Setting up local stats can be a plus on your mirror. We
- provide <a href="/mirroring-stats.php">some setup
- instructions for that</a>.
-</p>
-
 <h2>Setup Regular Updates</h2>
 
 <p>
@@ -228,66 +198,13 @@ site_header(
  minutes.
 </p>
 
-<h2>Sponsor Logo</h2>
-
-<p>
- We would like to thank you for providing a mirror, so
- if you would like to display a logo on the mirror site promoting your
- company, you are able to do so by following these steps:
-</p>
-
-<ul>
- <li>Create a 120 x 60 pixel sized logo button.</li>
- <li>Copy it to your <code>/www/htdocs/phpweb/backend</code> folder as <code>mirror.gif</code>, <code>mirror.jpg</code> or <code>mirror.png</code>.</li>
- <li>Go visit your mirror URL (e.g. http://foo.php.net/mirror.php) and check if it is there.</li>
-</ul>
-
-<p>
- The <a href="/credits.php">PHP Group</a> and the Network Infrastructure Manager reserve the
- right to refuse images based on content, but most things should be fine.
-</p>
-
-<p>
- We have chosen a banner size which conforms with the
- <a href="http://www.iab.net/standards/adunits.asp">Internet
- Advertising Bureau standards</a>.
-</p>
-
-<p>
- And finally, don't forget to put a nice little PHP logo somewhere
- on your hosting company's site if possible. Grab one of the logos
- from the <a href="/download-logos.php">logos download</a> page, and
- link it to your mirror.  This shows the community that you are a
- proud supporter of PHP and open source technology.
-</p>
-
 <h2>Mirror Setup Troubleshooting</h2>
 
 <p>
  The <a href="/mirroring-troubles.php">mirror troubleshooting guide</a>
  contains information about the common and potential problems discovered
- when setting up and maintaining a PHP.net mirror. Included are links that
- perform many of the tests executed by the automated mirror management tools.
-</p>
-
-<p>
- There is a mailing list named <code>"php-mirrors"</code> at
- <code>lists.php.net</code>, to which you can subscribe.
- This mailing list is very low-traffic and only used for communication
- between mirror maintainers and php.net webmasters.
-</p>
-<p>
- To subscribe send an empty message
- to: <a href="mailto:php-mirrors-subscribe@lists.php.net">php-mirrors-subscribe@lists.php.net</a>
-</p>
-
-<p>
- <em>
-  Thank you for your interest in providing a mirror!  If you ever have any
-  questions or concerns, drop us a line at
-  <a href="mailto:php-mirrors@lists.php.net">php-mirrors@lists.php.net</a>
-  --- we are here to help!
- </em>
+ when setting up and maintaining a mirror of PHP.net. Included are links that
+ can help demonstrate common configuration problems.
 </p>
 
 <?php site_footer(); ?>

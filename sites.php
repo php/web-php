@@ -117,15 +117,6 @@ site_header("A Tourist's Guide", ["current" => "help"]);
  and contributors.
 </p>
 
-<h2 id="docs" class="content-header"><a href="http://docs.php.net/">docs.php.net</a>: Documentation dev server</h2>
-
-<p class="content-box">
- The documentation developmental server is a PHP mirror that contains upcoming
- releases of the PHP documentation before it's pushed out to the mirrors.
- Documentation changes, such as layout, is tested here (with feedback requested)
- before being made official. Documentation is built here four times a day.
-</p>
-
 <h2 id="qa" class="content-header"><a href="https://qa.php.net/">qa.php.net</a>: Quality Assurance Team</h2>
 
 <p class="content-box">
@@ -159,15 +150,6 @@ site_header("A Tourist's Guide", ["current" => "help"]);
  migrated to <a href="https://github.com/php/">Git</a> (see above) in March 2012.
  The old SVN repository is archived here for posterity, however it's still used for
  i.e. documentation files.
-</p>
-
-<h2 id="gtk" class="content-header"><a href="http://gtk.php.net/">gtk.php.net</a>: PHP-GTK</h2>
-
-<p class="content-box">
- This web site is the home of the PHP-GTK project, which allows PHP to be
- used to build graphical interfaces, with slick interface and highly
- interactive content. You'll find the downloads and docs here,
- and the latest news from the project.
 </p>
 
 <h2 id="wiki" class="content-header"><a href="https://wiki.php.net/">wiki.php.net</a>: The PHP Wiki</h2>
@@ -206,7 +188,6 @@ $SIDEBAR = <<<SIDEBAR_DATA
 <p class='panel'><a href="#qa">Quality Assurance Team</a></p>
 <p class='panel'><a href="#git">Git Repository</a></p>
 <p class='panel'><a href="#svn">Archived SVN Repository</a></p>
-<p class='panel'><a href="#gtk">PHP-GTK</a></p>
 <p class='panel'><a href="#wiki">The PHP Wiki</a></h2>
 <p class='panel'><a href="#windows">PHP for Windows</a></h2>
 <p class='panel'><a href="#people">The PHP Developers Profiles</a></h2>

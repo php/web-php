@@ -18,8 +18,7 @@ $SIDEBAR_DATA = '
 
 <p>
  Find the <a href="http://pear.php.net/support/lists.php">PEAR
- lists</a>, the <a href="http://pecl.php.net/support.php">PECL
- lists</a>, and the <a href="http://gtk.php.net/resources.php">PHP-GTK
+ lists</a> and the <a href="http://pecl.php.net/support.php">PECL
  lists</a> on their own pages.
 </p>
 
@@ -124,13 +123,6 @@ if (isset($_POST['action'])) {
  <a href="http://marc.info/">Marc</a>.
 </p>
 
-<h2>Twitter</h2>
-<p>
- The PHP team maintains an official PHP.net account on twitter,
- <a href="https://twitter.com/official_php">@official_php</a>, for those
- interested in following news and other announcements from the PHP project.
-</p>
-
 <h2>Mailing List Posting guidelines</h2>
 
 <p>
@@ -212,21 +204,6 @@ if (isset($_POST['action'])) {
           'php-db', 'Databases and PHP',
           'This list is for the discussion of PHP database topics',
           false, true, true, "php.db",
-      ],
-      [
-          'php-i18n', 'Unicode and Internationalization',
-          'Unicode support, Internationalization (i18n) and localization (l10n) issues and features',
-          false, true, true, "php.i18n",
-      ],
-      [
-          'php-evangelism', 'PHP evangelism mailing list',
-          'A list for people interested in promoting PHP and learning good reasons to support PHP in the enterprise',
-          true, true, true, "php.evangelism",
-      ],
-      [
-          'soap', 'PHP SOAP list',
-          'List for the SOAP developers',
-          false, false, false, 'php.soap',
       ],
       'Non-English language mailing lists',
       [

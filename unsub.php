@@ -6,8 +6,7 @@ $SIDEBAR_DATA = '
 
 <p>
  Unsubscribe from the <a href="http://pear.php.net/support/lists.php">PEAR
- lists</a>, the <a href="http://pecl.php.net/support.php">PECL
- lists</a>, and the <a href="http://gtk.php.net/resources.php">PHP-GTK
+ lists</a> and the <a href="http://pecl.php.net/support.php">PECL
  lists</a> on their own pages.
 </p>
 ';

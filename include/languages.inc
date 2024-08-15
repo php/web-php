@@ -32,7 +32,6 @@ $LANGUAGES = [
 $INACTIVE_ONLINE_LANGUAGES = [
     'pl' => 'Polish',
     'ro' => 'Romanian',
-    'uk' => 'Ukrainian',
 ];
 
 $ACTIVE_ONLINE_LANGUAGES = array_diff($LANGUAGES, $INACTIVE_ONLINE_LANGUAGES);
