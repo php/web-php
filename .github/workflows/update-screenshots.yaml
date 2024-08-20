@@ -1,0 +1,74 @@
+# https://docs.github.com/en/actions
+
+name: "Update screenshots"
+
+on:
+  workflow_dispatch:
+
+jobs:
+  tests_update_snapshots:
+    name: "Update Tests snapshots"
+
+    runs-on: "ubuntu-latest"
+
+    strategy:
+      matrix:
+        php-version:
+          - "8.2"
+        node-version:
+          - "22.x"
+
+    env:
+      HTTP_HOST: "localhost:8080"
+
+    steps:
+      - name: "Checkout"
+        uses: "actions/checkout@v4"
+
+      - name: "Set up PHP"
+        uses: "shivammathur/setup-php@v2"
+        with:
+          coverage: "none"
+          extensions: "none, curl, dom, json, mbstring, tokenizer, xml, xmlwriter"
+          php-version: "${{ matrix.php-version }}"
+
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node-version }}
+
+      - name: "Set up problem matchers for PHP"
+        run: "echo \"::add-matcher::${{ runner.tool_cache }}/php.json\""
+
+      - name: "Set up problem matchers for phpunit/phpunit"
+        run: "echo \"::add-matcher::${{ runner.tool_cache }}/phpunit.json\""
+
+      - name: "Determine composer cache directory"
+        run: "echo \"COMPOSER_CACHE_DIR=$(composer config cache-dir)\" >> $GITHUB_ENV"
+
+      - name: "Cache dependencies installed with composer"
+        uses: "actions/cache@v3"
+        with:
+          path: "${{ env.COMPOSER_CACHE_DIR }}"
+          key: "php-${{ matrix.php-version }}-composer-${{ hashFiles('composer.lock') }}"
+          restore-keys: "php-${{ matrix.php-version }}-composer-"
+
+      - name: "Install dependencies with composer"
+        run: "composer install --ansi --no-interaction --no-progress"
+
+      - name: "Install dependencies"
+        run: "yarn install"
+
+      - name: "Install Playwright"
+        run: "npx playwright install"
+
+      - name: "Run visual tests"
+        run: "make tests_update_snapshots"
+
+      - name: Update snapshots
+        uses: test-room-7/action-update-file@v1
+        if: ${{ !cancelled() }}
+        with:
+          file-path: tests/Visual/**/*
+          commit-msg: Update snapshots
+          github-token: ${{ secrets.GITHUB_TOKEN }}
