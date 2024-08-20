@@ -4,6 +4,7 @@ export type TestPageOptions = {
     path: string
     options?: object
     evaluate?: () => any
+    mask?: string[]
 }
 
 const items: TestPageOptions[] = [
@@ -12,7 +13,12 @@ const items: TestPageOptions[] = [
         evaluate: () => {
             const selector = document.querySelector('.elephpants');
             selector.remove()
-        }
+        },
+        options: {
+            fullPage: true,
+            timeout: 10000,
+        },
+        mask: ['.hero-versions'],
     },
     {
         path: 'archive/1998.php',
@@ -50,6 +56,13 @@ for (const item of items) {
 
         if (typeof item.evaluate === 'function') {
             await page.evaluate(item.evaluate)
+        }
+
+        if (typeof item.mask === 'object') {
+            item.options = {
+                ...item.options,
+                mask: item.mask.map((selector) => page.locator(selector))
+            }
         }
 
         await expect(page).toHaveScreenshot(
