@@ -25,7 +25,7 @@ common_header(message('common_header', $lang));
             <div class="php8-logo">
                 <img src="/images/php8/logo_php8_3.svg" alt="PHP 8.3" height="126" width="343">
             </div>
-            <div class="php8-title"><?= message('main_title', $lang) ?></div>
+
             <div class="php8-subtitle"><?= message('main_subtitle', $lang) ?></div>
             <div class="php8-button-wrapper center">
                 <a class="php8-button php8-button_light" href="/downloads"><?= message('upgrade_now', $lang) ?></a>
