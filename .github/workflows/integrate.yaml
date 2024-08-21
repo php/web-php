@@ -97,7 +97,7 @@ jobs:
       - name: "Run friendsofphp/php-cs-fixer"
         run: "vendor/bin/php-cs-fixer fix --ansi --config=.php-cs-fixer.php --diff --dry-run --show-progress=dots --verbose"
 
-      - name: "Get libxml2-tools"
+      - name: "Get libxml2-utils"
         run: |
           set -x
           export DEBIAN_FRONTEND=noninteractive
