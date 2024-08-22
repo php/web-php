@@ -97,6 +97,16 @@ jobs:
       - name: "Run friendsofphp/php-cs-fixer"
         run: "vendor/bin/php-cs-fixer fix --ansi --config=.php-cs-fixer.php --diff --dry-run --show-progress=dots --verbose"
 
+      - name: "Get libxml2-utils"
+        run: |
+          set -x
+          export DEBIAN_FRONTEND=noninteractive
+          sudo apt-get update -y | true
+          sudo apt-get install -y libxml2-utils
+
+      - name: "Validate XML files"
+        run: "for a in $(find . -name '*.xml'); do xmllint --quiet --noout $a; done"
+
   tests:
     name: "Tests"
 
