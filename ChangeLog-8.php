@@ -959,6 +959,82 @@ changelog_header(8, $MINOR_VERSIONS);
 
 <a id="PHP_8_2"></a>
 
+<section class="version" id="8.2.23"><!-- {{{ 8.2.23 -->
+<h3>Version 8.2.23</h3>
+<b><?php release_date('29-Aug-2024'); ?></b>
+<ul><li>Core:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 15020); ?> (Memory leak in Zend/Optimizer/escape_analysis.c).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 15023); ?> (Memory leak in Zend/zend_ini.c).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 13330); ?> (Append -Wno-implicit-fallthrough flag conditionally).</li>
+  <li>Fix uninitialized memory in network.c.</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 15108); ?> (Segfault when destroying generator during shutdown).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 15275); ?> (Crash during GC of suspended generator delegate).</li>
+</ul></li>
+<li>Curl:
+<ul>
+  <li>Fixed case when curl_error returns an empty string.</li>
+</ul></li>
+<li>DOM:
+<ul>
+  <li>Fix UAF when removing doctype and using foreach iteration.</li>
+</ul></li>
+<li>FFI:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 14286); ?> (ffi enum type (when enum has no name) make memory leak).</li>
+</ul></li>
+<li>Hash:
+<ul>
+  <li>Fix crash when converting array data for array in shm in xxh3.</li>
+</ul></li>
+<li>Intl:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 15087); ?> (IntlChar::foldCase()'s $option is not optional).</li>
+</ul></li>
+<li>Opcache:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 13817); ?> (Segmentation fault for enabled observers after pass 4).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 13775); ?> (Memory leak possibly related to opcache SHM placement).</li>
+</ul></li>
+<li>Output:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 15179); ?> (Segmentation fault (null pointer dereference) in ext/standard/url_scanner_ex.re).</li>
+</ul></li>
+<li>PDO_Firebird:
+<ul>
+  <li>Fix bogus fallthrough path in firebird_handle_get_attribute().</li>
+</ul></li>
+<li>PHPDBG:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 13199); ?> (EOF emits redundant prompt in phpdbg local console mode with libedit/readline).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 15268); ?> (heap buffer overflow in phpdbg (zend_hash_num_elements() Zend/zend_hash.h)).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 15210); ?> use-after-free on watchpoint allocations.</li>
+</ul></li>
+<li>Soap:
+<ul>
+  <li><?php bugfix(55639); ?> (Digest autentication dont work).</li>
+  <li>Fix SoapFault property destruction.</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 15252); ?> (SOAP XML broken since PHP 8.3.9 when using classmap constructor option).</li>
+</ul></li>
+<li>Standard:
+<ul>
+  <li>Fix passing non-finite timeout values in stream functions.</li>
+  <li>Fixed <?php githubissuel('php/php-src', 14780); ?> p(f)sockopen timeout overflow.</li>
+</ul></li>
+<li>Streams:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 15028); ?> (Memory leak in ext/phar/stream.c).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 15034); ?> (Integer overflow on stream_notification_callback byte_max parameter with files bigger than 2GB).</li>
+</ul></li>
+<li>Tidy:
+<ul>
+  <li>Fix memory leaks in ext/tidy basedir restriction code.</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
+
+
 <section class="version" id="8.2.22"><!-- {{{ 8.2.22 -->
 <h3>Version 8.2.22</h3>
 <b><?php release_date('01-Aug-2024'); ?></b>
