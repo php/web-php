@@ -24,7 +24,7 @@ $RELEASES = (function () {
         'date' => '29 Aug 2024',
         'tags' => [], // Set to ['security'] for security releases.
         'sha256' => [
-            'tar.gz' => 'b93a69af83a1302543789408194bd1ae9829e116e784d578778200f20f1b72d40',
+            'tar.gz' => 'b93a69af83a1302543789408194bd1ae9829e116e784d578778200f20f1b72d4',
             'tar.bz2' => '6640e2455080a89adc41d4e57bb04f8c2bfb7eec627fe199af973bff34d7f0ee',
             'tar.xz' => 'b862b098a08ab9bf4b36ed12c7d0d9f65353656b36fb0e3c5344093aceb35802',
         ]
