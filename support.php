@@ -53,7 +53,7 @@ site_header(
  lists are also reflected onto the news server at
  <a href="news://news.php.net">news://news.php.net/</a>. The
  server also has a read only web interface at
- <a href="http://news.php.net/">http://news.php.net/</a>.
+ <a href="https://news-web.php.net/">https://news-web.php.net/</a>.
 </p>
 
 <p>
@@ -91,7 +91,6 @@ site_header(
  (<a href="http://www.efnet.org/">EFNet</a>,
  <a href="http://www.quakenet.org">QuakeNet</a>,
  <a href="http://www.ircnet.com/">IRCNet</a>,
- <a href="http://www.icq.com">IrCQNet</a>,
  <a href="http://www.dal.net/">DALNet</a> and
  <a href="http://oftc.net">OFTC</a>).
 </p>
