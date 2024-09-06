@@ -234,7 +234,7 @@ EOT;
  If you are contributing a patch, a small fix, or another minor change you do
  not need to ask for a Git account before submitting it. Fork our
  <a href="https://github.com/php/php-src">GitHub repository</a> and create a
- <a href="http://help.github.com/send-pull-requests/">pull request</a>, attach
+ <a href="https://docs.github.com/en/pull-requests">pull request</a>, attach
  a patch to a
  <a href="https://bugs.php.net/">bug report or feature request</a>,
  or send your patch to
