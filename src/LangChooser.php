@@ -1,0 +1,188 @@
+<?php
+
+namespace phpweb;
+
+class LangChooser
+{
+    /**
+     * @param array<string, string> $availableLanguages
+     * @param array<string, string> $inactiveLanguages
+     */
+    public function __construct(
+        private readonly array $availableLanguages,
+        private readonly array $inactiveLanguages,
+    )
+    {
+    }
+
+    /**
+     * @return array{string, string, list<string>}
+     */
+    public function chooseCode(): array
+    {
+        // Contains all the languages picked up by the
+        // process in priority order (without repeating codes)
+        $languages = [];
+
+        // Default values for languages
+        $explicitly_specified = ''; $selected = '';
+
+        // Specified for the request (GET/POST parameter)
+        if (!empty($_REQUEST['lang']) && is_string($_REQUEST['lang'])) {
+            $explicitly_specified = $this->add(htmlspecialchars($_REQUEST['lang'], ENT_QUOTES, 'UTF-8'), $languages);
+        }
+
+        // Specified in a shortcut URL (eg. /en/echo or /pt_br/echo)
+        if (preg_match("!^/(\\w{2}(_\\w{2})?)/!", htmlspecialchars($_SERVER['REQUEST_URI'],ENT_QUOTES, 'UTF-8'), $flang)) {
+
+            // Put language into preference list
+            $rlang = $this->add($flang[1], $languages);
+
+            // Set explicity specified language
+            if (empty($explicitly_specified)) {
+                $explicitly_specified = $rlang;
+            }
+
+            // Drop out langauge specification from URL, as this is already handled
+            $_SERVER['STRIPPED_URI'] = preg_replace(
+                "!^/$flang[1]/!", "/", htmlspecialchars($_SERVER['REQUEST_URI'], ENT_QUOTES, 'UTF-8'),
+            );
+
+        }
+
+        // Specified in a manual URL (eg. manual/en/ or manual/pt_br/)
+        if (preg_match("!^/manual/(\\w{2}(_\\w{2})?)(/|$)!", htmlspecialchars($_SERVER['REQUEST_URI'], ENT_QUOTES, 'UTF-8'), $flang)) {
+
+            $flang = $this->add($flang[1], $languages);
+
+            // Set explicity specified language
+            if (empty($explicitly_specified)) {
+                $explicitly_specified = $flang;
+            }
+        }
+
+        // Honor the users own language setting (if available)
+        if (myphpnet_language()) {
+            $this->add(myphpnet_language(), $languages);
+        }
+
+        // Specified by the user via the browser's Accept Language setting
+        // Samples: "hu, en-us;q=0.66, en;q=0.33", "hu,en-us;q=0.5"
+        $browser_langs = []; $parsed_langs = [];
+
+        // Check if we have $_SERVER['HTTP_ACCEPT_LANGUAGE'] set and
+        // it no longer breaks if you only have one language set :)
+        if (isset($_SERVER['HTTP_ACCEPT_LANGUAGE'])) {
+            $browser_accept = explode(",", $_SERVER['HTTP_ACCEPT_LANGUAGE']);
+
+            // Go through all language preference specs
+            foreach ($browser_accept as $value) {
+                // The language part is either a code or a code with a quality
+                // We cannot do anything with a * code, so it is skipped
+                // If the quality is missing, it is assumed to be 1 according to the RFC
+                if (preg_match("!([a-z-]+)(;q=([0-9\\.]+))?!", trim($value), $found)) {
+                    $quality = (isset($found[3]) ? (float) $found[3] : 1.0);
+                    $browser_langs[] = [$found[1], $quality];
+                }
+                unset($found);
+            }
+        }
+
+        // Order the codes by quality
+        usort($browser_langs, $this->acceptOrder(...));
+
+        // For all languages found in the accept-language
+        foreach ($browser_langs as $langdata) {
+
+            // Translation table for accept-language codes and phpdoc codes
+            switch ($langdata[0]) {
+                case "pt-br":
+                    $langdata[0] = 'pt_br';
+                    break;
+                case "zh-cn":
+                    $langdata[0] = 'zh';
+                    break;
+                case "zh-hk":
+                    $langdata[0] = 'hk';
+                    break;
+                case "zh-tw":
+                    $langdata[0] = 'tw';
+                    break;
+            }
+
+            // We do not support flavors of languages (except the ones above)
+            // This is not in conformance to the RFC, but it here for user
+            // convinience reasons
+            if (preg_match("!^(.+)-!", $langdata[0], $match)) {
+                $langdata[0] = $match[1];
+            }
+
+            // Add language to priority order
+            $parsed_langs[] = $this->add($langdata[0], $languages);
+        }
+
+        // Language preferred by this mirror site
+        $this->add(default_language() ?: '', $languages);
+
+        // Last default language is English
+        $this->add("en", $languages);
+
+        // Try to find out what language is available on this mirror.
+        // As most of the language dependant operations involve manual
+        // page display (lookup, search, shortcuts), we will check for
+        // the index file of manuals.
+        /*
+            foreach ($languages as $language) {
+                if (file_exists($_SERVER['DOCUMENT_ROOT'] . "/manual/$language/index.php")) {
+                    $selected = $language;
+                    break;
+                }
+            }
+        */
+        $selected = $languages[0];
+
+        // Return with all found data
+        return [$selected, $explicitly_specified, $parsed_langs];
+    }
+
+    /**
+     * Add a language to the possible languages' list
+     *
+     * @param string $langcode
+     * @param list<string> $langs
+     */
+    private function add(string $langcode, array &$langs): string
+    {
+
+        // Make language code lowercase, html encode special chars and remove slashes
+        $langcode = strtolower(htmlspecialchars($langcode));
+
+        // The Brazilian Portuguese code needs special attention
+        if ($langcode == 'pt_br') { $langcode = 'pt_BR'; }
+
+        // Append language code in priority order if it is not
+        // there already and supported by the PHP site. Try to
+        // lower number of file_exists() calls to the minumum...
+        if (!in_array($langcode, $langs, false) && isset($this->availableLanguages[$langcode])
+            && !isset($this->inactiveLanguages[$langcode])) {
+            $langs[] = $langcode;
+        }
+
+        // Return with language code
+        return $langcode;
+    }
+
+    /**
+     * Order the array of compiled
+     * accept-language codes by quality value
+     *
+     * @param array{string, float} $a
+     * @param array{string, float} $b
+     */
+    private function acceptOrder(array $a, array $b): int
+    {
+        if ($a[1] == $b[1]) { return 0; }
+        return ($a[1] > $b[1]) ? -1 : 1;
+    }
+
+}
