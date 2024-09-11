@@ -183,23 +183,26 @@ function myphpnet_save(): void
 
 }
 
+// Embed Google Custom Search engine
 function google_cse(): void {
-?>
-<noscript>
-  php.net's search functionality requires JavaScript to operate. Please enable
-  JavaScript and reload to continue.
-</noscript>
-<script>
-    (function() {
-        var cx = '011570197911755000456:fip9wopfz_u';
-        var gcse = document.createElement('script');
-        gcse.type = 'text/javascript';
-        gcse.async = true;
-        gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
-        var s = document.getElementsByTagName('script')[0];
-        s.parentNode.insertBefore(gcse, s);
-    })();
-</script>
-<div class="gcse-search" data-linktarget></div>
-<?php
+    $cse_snippet = <<<EOF
+        <noscript>
+          php.net's search functionality requires JavaScript to operate. Please enable
+          JavaScript and reload to continue.
+        </noscript>
+        <script>
+            (function() {
+                var cx = '011570197911755000456:fip9wopfz_u';
+                var gcse = document.createElement('script');
+                gcse.type = 'text/javascript';
+                gcse.async = true;
+                gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+                var s = document.getElementsByTagName('script')[0];
+                s.parentNode.insertBefore(gcse, s);
+            })();
+        </script>
+        <div class="gcse-search" data-linktarget></div>
+    EOF;
+
+    echo $cse_snippet;
 }
