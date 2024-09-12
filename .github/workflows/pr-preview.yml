@@ -25,6 +25,7 @@ jobs:
         with:
           issue-number: ${{ github.event.number }}
           comment-author: 'github-actions[bot]'
+          body-includes: 'Preview for commit'
 
       - uses: peter-evans/create-or-update-comment@v4
         with:
@@ -51,13 +52,11 @@ jobs:
       HTTP_HOST: "localhost:8080"
 
     steps:
-      - name: "Checkout"
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
         with:
           ref: "refs/pull/${{ github.event.number }}/merge"
 
-      - name: "Set up PHP"
-        uses: "shivammathur/setup-php@v2"
+      - uses: shivammathur/setup-php@v2
         with:
           coverage: "none"
           extensions: "none, curl, dom, json, mbstring, tokenizer, xml, xmlwriter"
@@ -78,7 +77,7 @@ jobs:
         run: "echo \"COMPOSER_CACHE_DIR=$(composer config cache-dir)\" >> $GITHUB_ENV"
 
       - name: "Cache dependencies installed with composer"
-        uses: "actions/cache@v3"
+        uses: actions/cache@v3
         with:
           path: "${{ env.COMPOSER_CACHE_DIR }}"
           key: "php-${{ matrix.php-version }}-composer-${{ hashFiles('composer.lock') }}"
@@ -119,6 +118,7 @@ jobs:
         with:
           issue-number: ${{ github.event.number }}
           comment-author: 'github-actions[bot]'
+          body-includes: 'Regression report for commit'
 
       - uses: peter-evans/create-or-update-comment@v4
         if: ${{ !cancelled() }}
