@@ -18,7 +18,11 @@ class LangChooser
     /**
      * @return array{string, string, list<string>}
      */
-    public function chooseCode(): array
+    public function chooseCode(
+        string|array|null $langParam,
+        string $requestUri,
+        ?string $acceptLanguageHeader,
+    ): array
     {
         // Contains all the languages picked up by the
         // process in priority order (without repeating codes)
@@ -28,12 +32,12 @@ class LangChooser
         $explicitly_specified = ''; $selected = '';
 
         // Specified for the request (GET/POST parameter)
-        if (!empty($_REQUEST['lang']) && is_string($_REQUEST['lang'])) {
-            $explicitly_specified = $this->add(htmlspecialchars($_REQUEST['lang'], ENT_QUOTES, 'UTF-8'), $languages);
+        if (is_string($langParam)) {
+            $explicitly_specified = $this->add(htmlspecialchars($langParam, ENT_QUOTES, 'UTF-8'), $languages);
         }
 
         // Specified in a shortcut URL (eg. /en/echo or /pt_br/echo)
-        if (preg_match("!^/(\\w{2}(_\\w{2})?)/!", htmlspecialchars($_SERVER['REQUEST_URI'],ENT_QUOTES, 'UTF-8'), $flang)) {
+        if (preg_match("!^/(\\w{2}(_\\w{2})?)/!", htmlspecialchars($requestUri,ENT_QUOTES, 'UTF-8'), $flang)) {
 
             // Put language into preference list
             $rlang = $this->add($flang[1], $languages);
@@ -45,13 +49,13 @@ class LangChooser
 
             // Drop out langauge specification from URL, as this is already handled
             $_SERVER['STRIPPED_URI'] = preg_replace(
-                "!^/$flang[1]/!", "/", htmlspecialchars($_SERVER['REQUEST_URI'], ENT_QUOTES, 'UTF-8'),
+                "!^/$flang[1]/!", "/", htmlspecialchars($requestUri, ENT_QUOTES, 'UTF-8'),
             );
 
         }
 
         // Specified in a manual URL (eg. manual/en/ or manual/pt_br/)
-        if (preg_match("!^/manual/(\\w{2}(_\\w{2})?)(/|$)!", htmlspecialchars($_SERVER['REQUEST_URI'], ENT_QUOTES, 'UTF-8'), $flang)) {
+        if (preg_match("!^/manual/(\\w{2}(_\\w{2})?)(/|$)!", htmlspecialchars($requestUri, ENT_QUOTES, 'UTF-8'), $flang)) {
 
             $flang = $this->add($flang[1], $languages);
 
@@ -72,8 +76,8 @@ class LangChooser
 
         // Check if we have $_SERVER['HTTP_ACCEPT_LANGUAGE'] set and
         // it no longer breaks if you only have one language set :)
-        if (isset($_SERVER['HTTP_ACCEPT_LANGUAGE'])) {
-            $browser_accept = explode(",", $_SERVER['HTTP_ACCEPT_LANGUAGE']);
+        if (isset($acceptLanguageHeader)) {
+            $browser_accept = explode(",", $acceptLanguageHeader);
 
             // Go through all language preference specs
             foreach ($browser_accept as $value) {
