@@ -182,11 +182,11 @@ if (i2c_valid_country()) {
  Your setting: <input id="form-urlsearch-quickref" type="radio" name="urlsearch" value="quickref"
 <?php
 $type = myphpnet_urlsearch();
-if ($type === MYPHPNET_URL_NONE || $type === MYPHPNET_URL_FUNC) {
+if ($type === UserPreferences::URL_NONE || $type === UserPreferences::URL_FUNC) {
     echo ' checked="checked"';
 }
 echo '> <label for="form-urlsearch-quickref">Function list search</label> <input id="form-urlsearch-manual" type="radio" name="urlsearch" value="manual"';
-if ($type === MYPHPNET_URL_MANUAL) {
+if ($type === UserPreferences::URL_MANUAL) {
     echo ' checked="checked"';
 }
 ?>

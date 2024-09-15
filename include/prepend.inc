@@ -101,7 +101,7 @@ include __DIR__ . '/last_updated.inc';
 function myphpnet_load(): void
 {
     UserPreferences::$languageCode = '';
-    UserPreferences::$searchType = MYPHPNET_URL_NONE;
+    UserPreferences::$searchType = UserPreferences::URL_NONE;
     UserPreferences::$isUserGroupTipsEnabled = false;
 
     if (!isset($_COOKIE['MYPHPNET']) || !is_string($_COOKIE['MYPHPNET']) || $_COOKIE['MYPHPNET'] === '') {
@@ -117,7 +117,7 @@ function myphpnet_load(): void
      */
     $preferences = explode(",", $_COOKIE['MYPHPNET']);
     UserPreferences::$languageCode = $preferences[0] ?? '';
-    if (isset($preferences[1]) && in_array($preferences[1], [MYPHPNET_URL_FUNC, MYPHPNET_URL_MANUAL], true)) {
+    if (isset($preferences[1]) && in_array($preferences[1], [UserPreferences::URL_FUNC, UserPreferences::URL_MANUAL], true)) {
         UserPreferences::$searchType = $preferences[1];
     }
 
@@ -130,15 +130,11 @@ function myphpnet_language(): string
     return UserPreferences::$languageCode;
 }
 
-const MYPHPNET_URL_NONE = false;
-const MYPHPNET_URL_FUNC = 'quickref';
-const MYPHPNET_URL_MANUAL = 'manual';
-
 // Set URL search fallback preference
 function myphpnet_urlsearch($type = false)
 {
     // Set type if specified and if correct
-    if ($type && in_array($type, [MYPHPNET_URL_FUNC, MYPHPNET_URL_MANUAL], true)) {
+    if ($type && in_array($type, [UserPreferences::URL_FUNC, UserPreferences::URL_MANUAL], true)) {
         UserPreferences::$searchType = $type;
     }
 
