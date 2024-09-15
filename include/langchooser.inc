@@ -50,9 +50,6 @@ function language_choose_code()
     // Specified for the request (GET/POST parameter)
     if (!empty($_REQUEST['lang']) && is_string($_REQUEST['lang'])) {
         $explicitly_specified = language_add(htmlspecialchars($_REQUEST['lang'], ENT_QUOTES, 'UTF-8'), $languages);
-
-        // Set the language in a cookie for a year
-        mirror_setcookie("LAST_LANG", $explicitly_specified, 60 * 60 * 24 * 365);
     }
 
     // Specified in a shortcut URL (eg. /en/echo or /pt_br/echo)
@@ -82,9 +79,6 @@ function language_choose_code()
         if (empty($explicitly_specified)) {
             $explicitly_specified = $flang;
         }
-
-        // Set the language in a cookie for a year
-        mirror_setcookie("LAST_LANG", $flang, 60 * 60 * 24 * 365);
     }
 
     // Honor the users own language setting (if available)
