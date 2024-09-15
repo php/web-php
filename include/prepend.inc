@@ -1,4 +1,9 @@
 <?php
+
+use phpweb\UserPreferences;
+
+require_once __DIR__ . '/../src/autoload.php';
+
 // Compress all pages, if ext/zlib is available on the mirror
 // XXX Deactivated by sas, causes errors towards delivery machines
 // ini_set("zlib.output_compression", 1);
@@ -68,7 +73,6 @@ unset($SEARCH_BASE);
 unset($LANG);
 unset($COUNTRY);
 unset($ONLOAD);
-unset($MYPHPNET);
 unset($LAST_UPDATED);
 
 // Load the My PHP.net settings before any includes
@@ -96,32 +100,30 @@ include __DIR__ . '/last_updated.inc';
 // Load in the user preferences
 function myphpnet_load(): void
 {
-    global $MYPHPNET, $MYSITE;
+    global $MYSITE;
 
     // Empty the preferences array
-    $MYPHPNET = [false, false, "NONE", 0, false];
+    UserPreferences::$myPhpNet = [false, false, "NONE", 0, false];
 
     if ($MYSITE === 'http://docs.php.net/') {
-        $MYPHPNET[4] = true;
+        UserPreferences::$myPhpNet[4] = true;
     }
 
     // If we have a cookie, set the values in the array
     if (!empty($_COOKIE['MYPHPNET'])) {
-        $MYPHPNET = explode(",", $_COOKIE['MYPHPNET']);
+        UserPreferences::$myPhpNet = explode(",", $_COOKIE['MYPHPNET']);
     }
 
     // Ignore site part, and always use https://www.php.net
-    $MYPHPNET[2] = 'https://www.php.net';
+    UserPreferences::$myPhpNet[2] = 'https://www.php.net';
 }
 
 // Get preferred language code
 function myphpnet_language(): string
 {
-    global $MYPHPNET;
-
     // Return code
-    if (isset($MYPHPNET[0]) && $MYPHPNET[0]) {
-        return $MYPHPNET[0];
+    if (isset(UserPreferences::$myPhpNet[0]) && UserPreferences::$myPhpNet[0]) {
+        return UserPreferences::$myPhpNet[0];
     }
     return '';
 }
@@ -133,32 +135,28 @@ const MYPHPNET_URL_MANUAL = 'manual';
 // Set URL search fallback preference
 function myphpnet_urlsearch($type = false)
 {
-    global $MYPHPNET;
-
     // Set type if specified and if correct
     if ($type && in_array($type, [MYPHPNET_URL_FUNC, MYPHPNET_URL_MANUAL], true)) {
-        $MYPHPNET[1] = $type;
+        UserPreferences::$myPhpNet[1] = $type;
     }
 
     // Return code or NONE
-    elseif (isset($MYPHPNET[1]) && !empty($MYPHPNET[1])) {
-        return $MYPHPNET[1];
+    elseif (isset(UserPreferences::$myPhpNet[1]) && !empty(UserPreferences::$myPhpNet[1])) {
+        return UserPreferences::$myPhpNet[1];
     } else { return MYPHPNET_URL_NONE; }
 }
 
 function myphpnet_showug($enable = null) {
-    global $MYPHPNET;
-
     if (isset($_GET["showug"])) {
         $enable = true;
     }
 
     if ($enable !== null) {
-        $MYPHPNET[3] = $enable;
+        UserPreferences::$myPhpNet[3] = $enable;
     }
 
-    if (isset($MYPHPNET[3])) {
-        return $MYPHPNET[3];
+    if (isset(UserPreferences::$myPhpNet[3])) {
+        return UserPreferences::$myPhpNet[3];
     }
 
     if ($_SERVER["REQUEST_TIME"] % 10) {
@@ -171,15 +169,13 @@ function myphpnet_showug($enable = null) {
 // Save user settings in cookie
 function myphpnet_save(): void
 {
-    global $MYPHPNET;
-
     // Fill in values not specified
     for ($i = 0; $i <= 3; $i++) {
-        if (!isset($MYPHPNET[$i])) { $MYPHPNET[$i] = false; }
+        if (!isset(UserPreferences::$myPhpNet[$i])) { UserPreferences::$myPhpNet[$i] = false; }
     }
 
     // Set all the preferred values for a year
-    mirror_setcookie("MYPHPNET", join(",", $MYPHPNET), 60 * 60 * 24 * 365);
+    mirror_setcookie("MYPHPNET", join(",", UserPreferences::$myPhpNet), 60 * 60 * 24 * 365);
 
 }
 

@@ -1,4 +1,7 @@
 <?php
+
+use phpweb\UserPreferences;
+
 $_SERVER['BASE_PAGE'] = 'my.php';
 include_once __DIR__ . '/include/prepend.inc';
 
@@ -13,7 +16,7 @@ $options = [];
 if (isset($_POST['my_lang'], $langs[$_POST['my_lang']])) {
 
     // Set the language preference
-    $MYPHPNET[0] = $_POST['my_lang'];
+    UserPreferences::$myPhpNet[0] = $_POST['my_lang'];
 
     // Add this as first option, selected
     $options[] = '<option value="' . $_POST['my_lang'] . '" selected>' .
