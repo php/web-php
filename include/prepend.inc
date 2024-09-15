@@ -100,32 +100,34 @@ include __DIR__ . '/last_updated.inc';
 // Load in the user preferences
 function myphpnet_load(): void
 {
-    global $MYSITE;
+    UserPreferences::$languageCode = '';
+    UserPreferences::$searchType = MYPHPNET_URL_NONE;
+    UserPreferences::$isUserGroupTipsEnabled = false;
 
-    // Empty the preferences array
-    UserPreferences::$myPhpNet = [false, false, "NONE", 0, false];
-
-    if ($MYSITE === 'http://docs.php.net/') {
-        UserPreferences::$myPhpNet[4] = true;
+    if (!isset($_COOKIE['MYPHPNET']) || !is_string($_COOKIE['MYPHPNET']) || $_COOKIE['MYPHPNET'] === '') {
+        return;
     }
 
-    // If we have a cookie, set the values in the array
-    if (!empty($_COOKIE['MYPHPNET'])) {
-        UserPreferences::$myPhpNet = explode(",", $_COOKIE['MYPHPNET']);
+    /**
+     * 0 - Language code
+     * 1 - URL search fallback
+     * 2 - Mirror site (removed)
+     * 3 - User Group tips
+     * 4 - Documentation developmental server (removed)
+     */
+    $preferences = explode(",", $_COOKIE['MYPHPNET']);
+    UserPreferences::$languageCode = $preferences[0] ?? '';
+    if (isset($preferences[1]) && in_array($preferences[1], [MYPHPNET_URL_FUNC, MYPHPNET_URL_MANUAL], true)) {
+        UserPreferences::$searchType = $preferences[1];
     }
 
-    // Ignore site part, and always use https://www.php.net
-    UserPreferences::$myPhpNet[2] = 'https://www.php.net';
+    UserPreferences::$isUserGroupTipsEnabled = isset($preferences[3]) && $preferences[3];
 }
 
 // Get preferred language code
 function myphpnet_language(): string
 {
-    // Return code
-    if (isset(UserPreferences::$myPhpNet[0]) && UserPreferences::$myPhpNet[0]) {
-        return UserPreferences::$myPhpNet[0];
-    }
-    return '';
+    return UserPreferences::$languageCode;
 }
 
 const MYPHPNET_URL_NONE = false;
@@ -137,13 +139,10 @@ function myphpnet_urlsearch($type = false)
 {
     // Set type if specified and if correct
     if ($type && in_array($type, [MYPHPNET_URL_FUNC, MYPHPNET_URL_MANUAL], true)) {
-        UserPreferences::$myPhpNet[1] = $type;
+        UserPreferences::$searchType = $type;
     }
 
-    // Return code or NONE
-    elseif (isset(UserPreferences::$myPhpNet[1]) && !empty(UserPreferences::$myPhpNet[1])) {
-        return UserPreferences::$myPhpNet[1];
-    } else { return MYPHPNET_URL_NONE; }
+    return UserPreferences::$searchType;
 }
 
 function myphpnet_showug($enable = null) {
@@ -151,32 +150,37 @@ function myphpnet_showug($enable = null) {
         $enable = true;
     }
 
-    if ($enable !== null) {
-        UserPreferences::$myPhpNet[3] = $enable;
+    if (is_bool($enable)) {
+        UserPreferences::$isUserGroupTipsEnabled = $enable;
     }
 
-    if (isset(UserPreferences::$myPhpNet[3])) {
-        return UserPreferences::$myPhpNet[3];
-    }
-
+    // Show the ug tips to lucky few, depending on time.
     if ($_SERVER["REQUEST_TIME"] % 10) {
-        return true;
+        UserPreferences::$isUserGroupTipsEnabled = true;
     }
 
-    return false;
+    return UserPreferences::$isUserGroupTipsEnabled;
 }
 
 // Save user settings in cookie
 function myphpnet_save(): void
 {
-    // Fill in values not specified
-    for ($i = 0; $i <= 3; $i++) {
-        if (!isset(UserPreferences::$myPhpNet[$i])) { UserPreferences::$myPhpNet[$i] = false; }
-    }
+    /**
+     * 0 - Language code
+     * 1 - URL search fallback
+     * 2 - Mirror site (removed)
+     * 3 - User Group tips
+     * 4 - Documentation developmental server (removed)
+     */
+    $preferences = [
+        UserPreferences::$languageCode,
+        UserPreferences::$searchType,
+        '',
+        UserPreferences::$isUserGroupTipsEnabled,
+    ];
 
     // Set all the preferred values for a year
-    mirror_setcookie("MYPHPNET", join(",", UserPreferences::$myPhpNet), 60 * 60 * 24 * 365);
-
+    mirror_setcookie("MYPHPNET", join(",", $preferences), 60 * 60 * 24 * 365);
 }
 
 // Embed Google Custom Search engine

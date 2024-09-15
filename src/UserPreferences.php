@@ -7,5 +7,14 @@ namespace phpweb;
  */
 final class UserPreferences
 {
-    public static array $myPhpNet = [false, false, "NONE", 0, false];
+    public static string $languageCode = '';
+
+    /**
+     * URL search fallback
+     *
+     * @var 'manual'|'quickref'|false
+     */
+    public static string|false $searchType = false;
+
+    public static bool $isUserGroupTipsEnabled = false;
 }
