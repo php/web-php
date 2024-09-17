@@ -28,6 +28,8 @@
 
 */
 
+use phpweb\UserPreferences;
+
 // Default STRIPPED_URI
 $_SERVER['STRIPPED_URI'] = htmlspecialchars($_SERVER['REQUEST_URI'], ENT_QUOTES, 'UTF-8');
 
@@ -82,8 +84,8 @@ function language_choose_code()
     }
 
     // Honor the users own language setting (if available)
-    if (myphpnet_language()) {
-        language_add(myphpnet_language(), $languages);
+    if (UserPreferences::$languageCode !== '') {
+        language_add(UserPreferences::$languageCode, $languages);
     }
 
     // Specified by the user via the browser's Accept Language setting

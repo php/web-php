@@ -97,12 +97,6 @@ include __DIR__ . '/last_updated.inc';
 
 // -----------------------------------------------------------------------------
 
-// Get preferred language code
-function myphpnet_language(): string
-{
-    return UserPreferences::$languageCode;
-}
-
 // Set URL search fallback preference
 function myphpnet_urlsearch($type = false)
 {
