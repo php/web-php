@@ -1,4 +1,9 @@
 <?php
+
+use phpweb\UserPreferences;
+
+require_once __DIR__ . '/../src/autoload.php';
+
 // Compress all pages, if ext/zlib is available on the mirror
 // XXX Deactivated by sas, causes errors towards delivery machines
 // ini_set("zlib.output_compression", 1);
@@ -68,7 +73,6 @@ unset($SEARCH_BASE);
 unset($LANG);
 unset($COUNTRY);
 unset($ONLOAD);
-unset($MYPHPNET);
 unset($LAST_UPDATED);
 
 // Load the My PHP.net settings before any includes
@@ -96,91 +100,83 @@ include __DIR__ . '/last_updated.inc';
 // Load in the user preferences
 function myphpnet_load(): void
 {
-    global $MYPHPNET, $MYSITE;
+    UserPreferences::$languageCode = '';
+    UserPreferences::$searchType = UserPreferences::URL_NONE;
+    UserPreferences::$isUserGroupTipsEnabled = false;
 
-    // Empty the preferences array
-    $MYPHPNET = [false, false, "NONE", 0, false];
-
-    if ($MYSITE === 'http://docs.php.net/') {
-        $MYPHPNET[4] = true;
+    if (!isset($_COOKIE['MYPHPNET']) || !is_string($_COOKIE['MYPHPNET']) || $_COOKIE['MYPHPNET'] === '') {
+        return;
     }
 
-    // If we have a cookie, set the values in the array
-    if (!empty($_COOKIE['MYPHPNET'])) {
-        $MYPHPNET = explode(",", $_COOKIE['MYPHPNET']);
+    /**
+     * 0 - Language code
+     * 1 - URL search fallback
+     * 2 - Mirror site (removed)
+     * 3 - User Group tips
+     * 4 - Documentation developmental server (removed)
+     */
+    $preferences = explode(",", $_COOKIE['MYPHPNET']);
+    UserPreferences::$languageCode = $preferences[0] ?? '';
+    if (isset($preferences[1]) && in_array($preferences[1], [UserPreferences::URL_FUNC, UserPreferences::URL_MANUAL], true)) {
+        UserPreferences::$searchType = $preferences[1];
     }
 
-    // Ignore site part, and always use https://www.php.net
-    $MYPHPNET[2] = 'https://www.php.net';
+    UserPreferences::$isUserGroupTipsEnabled = isset($preferences[3]) && $preferences[3];
 }
 
 // Get preferred language code
 function myphpnet_language(): string
 {
-    global $MYPHPNET;
-
-    // Return code
-    if (isset($MYPHPNET[0]) && $MYPHPNET[0]) {
-        return $MYPHPNET[0];
-    }
-    return '';
+    return UserPreferences::$languageCode;
 }
-
-const MYPHPNET_URL_NONE = false;
-const MYPHPNET_URL_FUNC = 'quickref';
-const MYPHPNET_URL_MANUAL = 'manual';
 
 // Set URL search fallback preference
 function myphpnet_urlsearch($type = false)
 {
-    global $MYPHPNET;
-
     // Set type if specified and if correct
-    if ($type && in_array($type, [MYPHPNET_URL_FUNC, MYPHPNET_URL_MANUAL], true)) {
-        $MYPHPNET[1] = $type;
+    if ($type && in_array($type, [UserPreferences::URL_FUNC, UserPreferences::URL_MANUAL], true)) {
+        UserPreferences::$searchType = $type;
     }
 
-    // Return code or NONE
-    elseif (isset($MYPHPNET[1]) && !empty($MYPHPNET[1])) {
-        return $MYPHPNET[1];
-    } else { return MYPHPNET_URL_NONE; }
+    return UserPreferences::$searchType;
 }
 
 function myphpnet_showug($enable = null) {
-    global $MYPHPNET;
-
     if (isset($_GET["showug"])) {
         $enable = true;
     }
 
-    if ($enable !== null) {
-        $MYPHPNET[3] = $enable;
+    if (is_bool($enable)) {
+        UserPreferences::$isUserGroupTipsEnabled = $enable;
     }
 
-    if (isset($MYPHPNET[3])) {
-        return $MYPHPNET[3];
-    }
-
+    // Show the ug tips to lucky few, depending on time.
     if ($_SERVER["REQUEST_TIME"] % 10) {
-        return true;
+        UserPreferences::$isUserGroupTipsEnabled = true;
     }
 
-    return false;
+    return UserPreferences::$isUserGroupTipsEnabled;
 }
 
 // Save user settings in cookie
 function myphpnet_save(): void
 {
-    global $MYPHPNET;
-
-    // Fill in values not specified
-    for ($i = 0; $i <= 3; $i++) {
-        if (!isset($MYPHPNET[$i])) { $MYPHPNET[$i] = false; }
-    }
+    /**
+     * 0 - Language code
+     * 1 - URL search fallback
+     * 2 - Mirror site (removed)
+     * 3 - User Group tips
+     * 4 - Documentation developmental server (removed)
+     */
+    $preferences = [
+        UserPreferences::$languageCode,
+        UserPreferences::$searchType,
+        '',
+        UserPreferences::$isUserGroupTipsEnabled,
+    ];
 
     // Set all the preferred values for a year
-    mirror_setcookie("MYPHPNET", join(",", $MYPHPNET), 60 * 60 * 24 * 365);
-
+    mirror_setcookie("MYPHPNET", join(",", $preferences), 60 * 60 * 24 * 365);
 }
 
 // Embed Google Custom Search engine

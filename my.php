@@ -1,4 +1,7 @@
 <?php
+
+use phpweb\UserPreferences;
+
 $_SERVER['BASE_PAGE'] = 'my.php';
 include_once __DIR__ . '/include/prepend.inc';
 
@@ -13,7 +16,7 @@ $options = [];
 if (isset($_POST['my_lang'], $langs[$_POST['my_lang']])) {
 
     // Set the language preference
-    $MYPHPNET[0] = $_POST['my_lang'];
+    UserPreferences::$languageCode = $_POST['my_lang'];
 
     // Add this as first option, selected
     $options[] = '<option value="' . $_POST['my_lang'] . '" selected>' .
@@ -175,11 +178,11 @@ if (i2c_valid_country()) {
  Your setting: <input id="form-urlsearch-quickref" type="radio" name="urlsearch" value="quickref"
 <?php
 $type = myphpnet_urlsearch();
-if ($type === MYPHPNET_URL_NONE || $type === MYPHPNET_URL_FUNC) {
+if ($type === UserPreferences::URL_NONE || $type === UserPreferences::URL_FUNC) {
     echo ' checked="checked"';
 }
 echo '> <label for="form-urlsearch-quickref">Function list search</label> <input id="form-urlsearch-manual" type="radio" name="urlsearch" value="manual"';
-if ($type === MYPHPNET_URL_MANUAL) {
+if ($type === UserPreferences::URL_MANUAL) {
     echo ' checked="checked"';
 }
 ?>
