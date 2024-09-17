@@ -64,4 +64,19 @@ final class UserPreferences
 
         self::$isUserGroupTipsEnabled = $enable;
     }
+
+    public static function save(): void
+    {
+        /**
+         * 0 - Language code
+         * 1 - URL search fallback
+         * 2 - Mirror site (removed)
+         * 3 - User Group tips
+         * 4 - Documentation developmental server (removed)
+         */
+        $preferences = [self::$languageCode, self::$searchType, '', self::$isUserGroupTipsEnabled];
+
+        // Set all the preferred values for a year
+        mirror_setcookie("MYPHPNET", join(",", $preferences), 60 * 60 * 24 * 365);
+    }
 }

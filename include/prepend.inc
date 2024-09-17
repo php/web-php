@@ -97,27 +97,6 @@ include __DIR__ . '/last_updated.inc';
 
 // -----------------------------------------------------------------------------
 
-// Save user settings in cookie
-function myphpnet_save(): void
-{
-    /**
-     * 0 - Language code
-     * 1 - URL search fallback
-     * 2 - Mirror site (removed)
-     * 3 - User Group tips
-     * 4 - Documentation developmental server (removed)
-     */
-    $preferences = [
-        UserPreferences::$languageCode,
-        UserPreferences::$searchType,
-        '',
-        UserPreferences::$isUserGroupTipsEnabled,
-    ];
-
-    // Set all the preferred values for a year
-    mirror_setcookie("MYPHPNET", join(",", $preferences), 60 * 60 * 24 * 365);
-}
-
 // Embed Google Custom Search engine
 function google_cse(): void {
     $cse_snippet = <<<EOF
