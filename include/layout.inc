@@ -1,6 +1,7 @@
 <?php
 
 use phpweb\Navigation\NavItem;
+use phpweb\UserPreferences;
 
 $_SERVER['STATIC_ROOT'] = $MYSITE;
 $_SERVER['MYSITE'] = $MYSITE;
@@ -431,7 +432,7 @@ function site_header(string $title = 'Hypertext Preprocessor', array $config = [
     $meta_description = "PHP is a popular general-purpose scripting language that powers everything from your blog to the most popular websites in the world.";
 
     $defaults = [
-        "lang" => myphpnet_language(),
+        "lang" => UserPreferences::$languageCode,
         "current" => "",
         "meta-navigation" => [],
         'classes' => '',

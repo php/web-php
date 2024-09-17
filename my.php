@@ -27,14 +27,14 @@ if (isset($_POST['my_lang'], $langs[$_POST['my_lang']])) {
 }
 
 // We have received a cookie and it is an available language
-elseif (isset($langs[myphpnet_language()])) {
+elseif (isset($langs[UserPreferences::$languageCode])) {
 
     // Add this as first option, selected
-    $options[] = '<option value="' . myphpnet_language() . '" selected>' .
-                 $langs[myphpnet_language()] . "</option>\n";
+    $options[] = '<option value="' . UserPreferences::$languageCode . '" selected>' .
+                 $langs[UserPreferences::$languageCode] . "</option>\n";
 
     // Remove, so it is not listed two times
-    unset($langs[myphpnet_language()]);
+    unset($langs[UserPreferences::$languageCode]);
 }
 
 // We have no cookie and no form submitted
