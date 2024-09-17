@@ -94,9 +94,8 @@ site_header("My PHP.net", ["current" => "community"]);
  If you use a shortcut or search for a function, the language used
  is determined by checking for the following settings. The list is
  in priority order, the first is the most important. Normally you don't
- need to set your preferred language, as your last seen language is
- always remembered, and is a good estimate of your preferred language
- most of the time.
+ need to set your preferred language, as your browser's language preferences
+ are detected automatically using the Accept-Language header.
 </p>
 
 <div class="indent">
@@ -108,9 +107,6 @@ $langinfo = [
 
     "<label for=\"form-my_lang\">Your preferred language</label>" =>
     $langpref,
-
-    "Last seen language" =>
-    (isset($_COOKIE['LAST_LANG']) ? htmlentities($_COOKIE['LAST_LANG'], ENT_QUOTES | ENT_IGNORE, 'UTF-8') : "None"),
 
     "Your Accept-Language browser setting" =>
     (isset($_SERVER['HTTP_ACCEPT_LANGUAGE']) ? htmlentities($_SERVER['HTTP_ACCEPT_LANGUAGE'], ENT_QUOTES | ENT_IGNORE, 'UTF-8') : "None"),
