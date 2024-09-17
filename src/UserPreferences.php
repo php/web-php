@@ -55,4 +55,13 @@ final class UserPreferences
 
         self::$searchType = $type;
     }
+
+    public static function setIsUserGroupTipsEnabled(bool $enable): void {
+        // Show the ug tips to lucky few, depending on time.
+        if ($_SERVER["REQUEST_TIME"] % 10) {
+            $enable = true;
+        }
+
+        self::$isUserGroupTipsEnabled = $enable;
+    }
 }

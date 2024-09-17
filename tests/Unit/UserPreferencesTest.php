@@ -68,4 +68,26 @@ final class UserPreferencesTest extends TestCase
             [['manual'], UserPreferences::URL_NONE],
         ];
     }
+
+    public function testSetIsUserGroupTipsEnabled(): void
+    {
+        $timeBackup = $_SERVER['REQUEST_TIME'];
+        $_SERVER['REQUEST_TIME'] = 1726600070;
+
+        UserPreferences::$isUserGroupTipsEnabled = false;
+        UserPreferences::setIsUserGroupTipsEnabled(true);
+        self::assertTrue(UserPreferences::$isUserGroupTipsEnabled);
+
+        UserPreferences::$isUserGroupTipsEnabled = true;
+        UserPreferences::setIsUserGroupTipsEnabled(false);
+        self::assertFalse(UserPreferences::$isUserGroupTipsEnabled);
+
+        $_SERVER['REQUEST_TIME'] = 1726600066;
+
+        UserPreferences::$isUserGroupTipsEnabled = false;
+        UserPreferences::setIsUserGroupTipsEnabled(false);
+        self::assertTrue(UserPreferences::$isUserGroupTipsEnabled);
+
+        $_SERVER['REQUEST_TIME'] = $timeBackup;
+    }
 }
