@@ -42,12 +42,12 @@ class LangChooser
             // Put language into preference list
             $rlang = $this->add($flang[1], $languages);
 
-            // Set explicity specified language
+            // Set explicitly specified language
             if (empty($explicitly_specified)) {
                 $explicitly_specified = $rlang;
             }
 
-            // Drop out langauge specification from URL, as this is already handled
+            // Drop out language specification from URL, as this is already handled
             $_SERVER['STRIPPED_URI'] = preg_replace(
                 "!^/$flang[1]/!", "/", htmlspecialchars($requestUri, ENT_QUOTES, 'UTF-8'),
             );
@@ -59,7 +59,7 @@ class LangChooser
 
             $flang = $this->add($flang[1], $languages);
 
-            // Set explicity specified language
+            // Set explicitly specified language
             if (empty($explicitly_specified)) {
                 $explicitly_specified = $flang;
             }
@@ -116,7 +116,7 @@ class LangChooser
 
             // We do not support flavors of languages (except the ones above)
             // This is not in conformance to the RFC, but it here for user
-            // convinience reasons
+            // convenience reasons
             if (preg_match("!^(.+)-!", $langdata[0], $match)) {
                 $langdata[0] = $match[1];
             }
@@ -166,7 +166,7 @@ class LangChooser
 
         // Append language code in priority order if it is not
         // there already and supported by the PHP site. Try to
-        // lower number of file_exists() calls to the minumum...
+        // lower number of file_exists() calls to the minimum...
         if (!in_array($langcode, $langs, false) && isset($this->availableLanguages[$langcode])
             && !isset($this->inactiveLanguages[$langcode])) {
             $langs[] = $langcode;
