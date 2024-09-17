@@ -16,7 +16,7 @@ class LangChooser
     }
 
     /**
-     * @return array{string, string, list<string>}
+     * @return array{string, string}
      */
     public function chooseCode(
         string|array|null $langParam,
@@ -72,7 +72,7 @@ class LangChooser
 
         // Specified by the user via the browser's Accept Language setting
         // Samples: "hu, en-us;q=0.66, en;q=0.33", "hu,en-us;q=0.5"
-        $browser_langs = []; $parsed_langs = [];
+        $browser_langs = [];
 
         // Check if we have $_SERVER['HTTP_ACCEPT_LANGUAGE'] set and
         // it no longer breaks if you only have one language set :)
@@ -122,7 +122,7 @@ class LangChooser
             }
 
             // Add language to priority order
-            $parsed_langs[] = $this->add($langdata[0], $languages);
+            $this->add($langdata[0], $languages);
         }
 
         // Language preferred by this mirror site
@@ -146,7 +146,7 @@ class LangChooser
         $selected = $languages[0];
 
         // Return with all found data
-        return [$selected, $explicitly_specified, $parsed_langs];
+        return [$selected, $explicitly_specified];
     }
 
     /**
