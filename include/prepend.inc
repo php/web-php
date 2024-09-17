@@ -75,8 +75,10 @@ unset($COUNTRY);
 unset($ONLOAD);
 unset($LAST_UPDATED);
 
+$userPreferences = new UserPreferences();
+
 // Load the My PHP.net settings before any includes
-UserPreferences::load();
+$userPreferences->load();
 
 // Site details (mirror site information)
 include __DIR__ . '/site.inc';

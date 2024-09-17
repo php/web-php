@@ -22,11 +22,12 @@ final class UserPreferencesTest extends TestCase
     ): void {
         $_COOKIE = $cookie;
 
-        UserPreferences::load();
+        $userPreferences = new UserPreferences();
+        $userPreferences->load();
 
-        self::assertSame($languageCode, UserPreferences::$languageCode);
-        self::assertSame($searchType, UserPreferences::$searchType);
-        self::assertSame($isUserGroupTipsEnabled, UserPreferences::$isUserGroupTipsEnabled);
+        self::assertSame($languageCode, $userPreferences->languageCode);
+        self::assertSame($searchType, $userPreferences->searchType);
+        self::assertSame($isUserGroupTipsEnabled, $userPreferences->isUserGroupTipsEnabled);
     }
 
     /** @return array<int, array{array<string, mixed>, string, string|false, bool}> */
@@ -51,9 +52,9 @@ final class UserPreferencesTest extends TestCase
     #[DataProvider('urlSearchTypeProvider')]
     public function testSetUrlSearchType(mixed $type, string|false $expected): void
     {
-        UserPreferences::$searchType = UserPreferences::URL_NONE;
-        UserPreferences::setUrlSearchType($type);
-        self::assertSame($expected, UserPreferences::$searchType);
+        $userPreferences = new UserPreferences(searchType: UserPreferences::URL_NONE);
+        $userPreferences->setUrlSearchType($type);
+        self::assertSame($expected, $userPreferences->searchType);
     }
 
     /** @return array<int, array{mixed, string|false}> */
@@ -74,19 +75,19 @@ final class UserPreferencesTest extends TestCase
         $timeBackup = $_SERVER['REQUEST_TIME'];
         $_SERVER['REQUEST_TIME'] = 1726600070;
 
-        UserPreferences::$isUserGroupTipsEnabled = false;
-        UserPreferences::setIsUserGroupTipsEnabled(true);
-        self::assertTrue(UserPreferences::$isUserGroupTipsEnabled);
+        $userPreferences = new UserPreferences(isUserGroupTipsEnabled: false);
+        $userPreferences->setIsUserGroupTipsEnabled(true);
+        self::assertTrue($userPreferences->isUserGroupTipsEnabled);
 
-        UserPreferences::$isUserGroupTipsEnabled = true;
-        UserPreferences::setIsUserGroupTipsEnabled(false);
-        self::assertFalse(UserPreferences::$isUserGroupTipsEnabled);
+        $userPreferences = new UserPreferences(isUserGroupTipsEnabled: true);
+        $userPreferences->setIsUserGroupTipsEnabled(false);
+        self::assertFalse($userPreferences->isUserGroupTipsEnabled);
 
         $_SERVER['REQUEST_TIME'] = 1726600066;
 
-        UserPreferences::$isUserGroupTipsEnabled = false;
-        UserPreferences::setIsUserGroupTipsEnabled(false);
-        self::assertTrue(UserPreferences::$isUserGroupTipsEnabled);
+        $userPreferences = new UserPreferences(isUserGroupTipsEnabled: false);
+        $userPreferences->setIsUserGroupTipsEnabled(false);
+        self::assertTrue($userPreferences->isUserGroupTipsEnabled);
 
         $_SERVER['REQUEST_TIME'] = $timeBackup;
     }
