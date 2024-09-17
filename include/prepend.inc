@@ -97,23 +97,6 @@ include __DIR__ . '/last_updated.inc';
 
 // -----------------------------------------------------------------------------
 
-function myphpnet_showug($enable = null) {
-    if (isset($_GET["showug"])) {
-        $enable = true;
-    }
-
-    if (is_bool($enable)) {
-        UserPreferences::$isUserGroupTipsEnabled = $enable;
-    }
-
-    // Show the ug tips to lucky few, depending on time.
-    if ($_SERVER["REQUEST_TIME"] % 10) {
-        UserPreferences::$isUserGroupTipsEnabled = true;
-    }
-
-    return UserPreferences::$isUserGroupTipsEnabled;
-}
-
 // Save user settings in cookie
 function myphpnet_save(): void
 {
