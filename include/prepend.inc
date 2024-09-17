@@ -76,7 +76,7 @@ unset($ONLOAD);
 unset($LAST_UPDATED);
 
 // Load the My PHP.net settings before any includes
-myphpnet_load();
+UserPreferences::load();
 
 // Site details (mirror site information)
 include __DIR__ . '/site.inc';
@@ -96,33 +96,6 @@ include __DIR__ . '/layout.inc';
 include __DIR__ . '/last_updated.inc';
 
 // -----------------------------------------------------------------------------
-
-// Load in the user preferences
-function myphpnet_load(): void
-{
-    UserPreferences::$languageCode = '';
-    UserPreferences::$searchType = UserPreferences::URL_NONE;
-    UserPreferences::$isUserGroupTipsEnabled = false;
-
-    if (!isset($_COOKIE['MYPHPNET']) || !is_string($_COOKIE['MYPHPNET']) || $_COOKIE['MYPHPNET'] === '') {
-        return;
-    }
-
-    /**
-     * 0 - Language code
-     * 1 - URL search fallback
-     * 2 - Mirror site (removed)
-     * 3 - User Group tips
-     * 4 - Documentation developmental server (removed)
-     */
-    $preferences = explode(",", $_COOKIE['MYPHPNET']);
-    UserPreferences::$languageCode = $preferences[0] ?? '';
-    if (isset($preferences[1]) && in_array($preferences[1], [UserPreferences::URL_FUNC, UserPreferences::URL_MANUAL], true)) {
-        UserPreferences::$searchType = $preferences[1];
-    }
-
-    UserPreferences::$isUserGroupTipsEnabled = isset($preferences[3]) && $preferences[3];
-}
 
 // Get preferred language code
 function myphpnet_language(): string
