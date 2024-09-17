@@ -6,7 +6,6 @@ namespace phpweb\Test\Unit;
 
 use phpweb\LangChooser;
 use PHPUnit\Framework;
-use phpweb\UserPreferences;
 
 #[Framework\Attributes\CoversClass(LangChooser::class)]
 class LangChooserTest extends Framework\TestCase
@@ -107,9 +106,7 @@ class LangChooserTest extends Framework\TestCase
 
     public function testChooseCodeWithManualPathAndUserPreference(): void
     {
-        UserPreferences::$languageCode = 'en';
-
-        $langChooser = new LangChooser(self::DEFAULT_LANGUAGE_LIST, [], '', 'en');
+        $langChooser = new LangChooser(self::DEFAULT_LANGUAGE_LIST, [], 'en', 'en');
         $result = $langChooser->chooseCode('', '/manual/de', null);
 
         self::assertSame(['de', 'de'], $result);

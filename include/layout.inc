@@ -1,7 +1,6 @@
 <?php
 
 use phpweb\Navigation\NavItem;
-use phpweb\UserPreferences;
 
 $_SERVER['STATIC_ROOT'] = $MYSITE;
 $_SERVER['MYSITE'] = $MYSITE;
@@ -426,13 +425,13 @@ EOT;
 
 function site_header(string $title = 'Hypertext Preprocessor', array $config = []): void
 {
-    global $MYSITE;
+    global $MYSITE, $LANG;
 
     $meta_image_path = $MYSITE . 'images/meta-image.png';
     $meta_description = "PHP is a popular general-purpose scripting language that powers everything from your blog to the most popular websites in the world.";
 
     $defaults = [
-        "lang" => UserPreferences::$languageCode,
+        "lang" => $LANG,
         "current" => "",
         "meta-navigation" => [],
         'classes' => '',
