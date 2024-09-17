@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom"
+  xmlns:default="http://php.net/ns/news">
+  <title>Dutch PHP Conference 2025 - Call For Papers</title>
+  <id>https://www.php.net/archive/2024.php#2024-09-17-1</id>
+  <published>2024-09-17T07:18:41+00:00</published>
+  <updated>2024-09-17T07:18:41+00:00</updated>
+  <link href="https://www.php.net/conferences/index.php#2024-09-17-1" rel="alternate" type="text/html"/>
+  <link href="https://phpconference.nl/" rel="via" type="text/html"/>
+  <default:finalTeaserDate xmlns="http://php.net/ns/news">2024-12-17</default:finalTeaserDate>
+  <category term="cfp" label="Call for Papers"/>
+  <default:newsImage xmlns="http://php.net/ns/news" link="https://phpconference.nl/" title="Dutch PHP Conference">dpc-2025.png</default:newsImage>
+  <content type="xhtml">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+      <p>🚀 Dutch PHP Conference 2025 is coming! 🚀</p>
+      <p>We’re thrilled to announce that the 19th edition of the Dutch PHP Conference will take place from March 18 to March 21, 2025 in Amsterdam! 🗓️</p>
+      <p>🎤 Call for Papers is now OPEN! 🎤</p>
+      <p>Got insights, skills, or experience to share? Submit your talk ideas before the deadline on December 17th! We’re looking for both technical and non-technical sessions that will inspire and engage our community.</p>
+      <p>
+        <strong>Highlights:</strong>
+      </p>
+      <ul>
+        <li>👥 Expected attendance: around 800</li>
+        <li>📅 Conference dates: March 18 – 21, 2025</li>
+        <li>🎙️ 30-40 speaking slots available</li>
+      </ul>
+
+      <p>🎟️ Early Bird Tickets Available Now! 🎟️</p>
+      <p>Don’t miss out on the early bird prices! With your ticket, you’ll get access to not just one, but three incredible conferences: Dutch PHP Conference, Appdevcon (where app development meets creativity 📱✨), and Webdevcon (your gateway to the latest in web technology 🌐🚀)! Secure your spot for a fantastic lineup of workshop days, conference sessions, and social activities.</p>
+      <p>Get ready for an incredible edition of #DPC25, plus the added value of Appdevcon and Webdevcon! 🌟</p>
+      <ul>
+        <li>👉 Submit your CFP =&gt; <a href="https://phpconference.nl/speakers/cfp/">https://phpconference.nl/speakers/cfp/</a>
+        </li>
+        <li>👉 Grab your early bird tickets =&gt; <a href="https://egeniq.paydro.com/dpc-2025">https://egeniq.paydro.com/dpc-2025</a>
+        </li>
+      </ul>
+      <p>See you there! 🚀🎉</p>
+    </div>
+  </content>
+</entry>
