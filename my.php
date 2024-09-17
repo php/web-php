@@ -54,7 +54,7 @@ $langpref = "<select id=\"form-my_lang\" name=\"my_lang\">\n" .
 
 // Save URL shortcut fallback setting
 if (isset($_POST['urlsearch'])) {
-    myphpnet_urlsearch($_POST['urlsearch']);
+    UserPreferences::setUrlSearchType($_POST['urlsearch']);
 }
 
 if (isset($_POST["showug"])) {
@@ -177,7 +177,7 @@ if (i2c_valid_country()) {
 <div class="indent">
  Your setting: <input id="form-urlsearch-quickref" type="radio" name="urlsearch" value="quickref"
 <?php
-$type = myphpnet_urlsearch();
+$type = UserPreferences::$searchType;
 if ($type === UserPreferences::URL_NONE || $type === UserPreferences::URL_FUNC) {
     echo ' checked="checked"';
 }

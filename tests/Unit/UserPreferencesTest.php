@@ -47,4 +47,25 @@ final class UserPreferencesTest extends TestCase
             [['MYPHPNET' => 'en,manual,,1'], 'en', UserPreferences::URL_MANUAL, true],
         ];
     }
+
+    #[DataProvider('urlSearchTypeProvider')]
+    public function testSetUrlSearchType(mixed $type, string|false $expected): void
+    {
+        UserPreferences::$searchType = UserPreferences::URL_NONE;
+        UserPreferences::setUrlSearchType($type);
+        self::assertSame($expected, UserPreferences::$searchType);
+    }
+
+    /** @return array<int, array{mixed, string|false}> */
+    public static function urlSearchTypeProvider(): array
+    {
+        return [
+            ['manual', UserPreferences::URL_MANUAL],
+            ['quickref', UserPreferences::URL_FUNC],
+            [false, UserPreferences::URL_NONE],
+            ['', UserPreferences::URL_NONE],
+            ['invalid', UserPreferences::URL_NONE],
+            [['manual'], UserPreferences::URL_NONE],
+        ];
+    }
 }
