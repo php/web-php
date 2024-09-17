@@ -97,17 +97,6 @@ include __DIR__ . '/last_updated.inc';
 
 // -----------------------------------------------------------------------------
 
-// Set URL search fallback preference
-function myphpnet_urlsearch($type = false)
-{
-    // Set type if specified and if correct
-    if ($type && in_array($type, [UserPreferences::URL_FUNC, UserPreferences::URL_MANUAL], true)) {
-        UserPreferences::$searchType = $type;
-    }
-
-    return UserPreferences::$searchType;
-}
-
 function myphpnet_showug($enable = null) {
     if (isset($_GET["showug"])) {
         $enable = true;

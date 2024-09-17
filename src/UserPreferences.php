@@ -43,10 +43,16 @@ final class UserPreferences
          */
         $preferences = explode(",", $_COOKIE['MYPHPNET']);
         self::$languageCode = $preferences[0] ?? '';
-        if (isset($preferences[1]) && in_array($preferences[1], [self::URL_FUNC, self::URL_MANUAL], true)) {
-            self::$searchType = $preferences[1];
+        self::setUrlSearchType($preferences[1] ?? self::URL_NONE);
+        self::$isUserGroupTipsEnabled = isset($preferences[3]) && $preferences[3];
+    }
+
+    public static function setUrlSearchType(mixed $type): void
+    {
+        if (!in_array($type, [self::URL_FUNC, self::URL_MANUAL, self::URL_NONE], true)) {
+            return;
         }
 
-        self::$isUserGroupTipsEnabled = isset($preferences[3]) && $preferences[3];
+        self::$searchType = $type;
     }
 }
