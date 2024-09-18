@@ -348,7 +348,9 @@ div.phpcode span.string {
 }
 
 .para var,
-.simpara var
+.simpara var,
+.para .computeroutput,
+.simpara .computeroutput
 {
   background-color: #E6E6E6;
   border-radius: 2px;
