@@ -39,8 +39,10 @@ site_header("Downloads",
     ],
 );
 ?>
+<h1>Downloads &amp; Installation Instructions</h1>
+
 <p>
-    <a href="/manual/en/install.general.php">Installing PHP</a> is covered
+    <a href="/manual/install.general.php">Installing PHP</a> is covered
     thoroughly in the PHP documentation.
 </p>
 
@@ -54,10 +56,10 @@ site_header("Downloads",
 
     <ul>
         <li>
-            <a href="/manual/en/install.unix.php">Installation instructions for Unix systems</a>
+            <a href="/manual/install.unix.php">Installation instructions for Unix systems</a>
         </li>
         <li>
-            <a href="/manual/en/install.macosx.php">Installation instructions for macOS</a>
+            <a href="/manual/install.macosx.php">Installation instructions for macOS</a>
         </li>
     </ul>
 </p>
