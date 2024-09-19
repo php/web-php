@@ -133,18 +133,6 @@ class LangChooser
         // Last default language is English
         $this->add("en", $languages);
 
-        // Try to find out what language is available on this mirror.
-        // As most of the language dependant operations involve manual
-        // page display (lookup, search, shortcuts), we will check for
-        // the index file of manuals.
-        /*
-            foreach ($languages as $language) {
-                if (file_exists($_SERVER['DOCUMENT_ROOT'] . "/manual/$language/index.php")) {
-                    $selected = $language;
-                    break;
-                }
-            }
-        */
         $selected = $languages[0];
 
         // Return with all found data
