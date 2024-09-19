@@ -11,6 +11,8 @@ class LangChooser
     public function __construct(
         private readonly array $availableLanguages,
         private readonly array $inactiveLanguages,
+        private readonly string $preferredLanguage,
+        private readonly string $defaultLanguage,
     )
     {
     }
@@ -66,8 +68,8 @@ class LangChooser
         }
 
         // Honor the users own language setting (if available)
-        if (myphpnet_language()) {
-            $this->add(myphpnet_language(), $languages);
+        if ($this->preferredLanguage) {
+            $this->add($this->preferredLanguage, $languages);
         }
 
         // Specified by the user via the browser's Accept Language setting
@@ -126,7 +128,7 @@ class LangChooser
         }
 
         // Language preferred by this mirror site
-        $this->add(default_language() ?: '', $languages);
+        $this->add($this->defaultLanguage, $languages);
 
         // Last default language is English
         $this->add("en", $languages);
