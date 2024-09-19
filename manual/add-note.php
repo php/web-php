@@ -18,6 +18,10 @@ if (empty($_POST['sect']) && isset($_GET['sect'])) {
 if (empty($_POST['redirect']) && isset($_GET['redirect'])) {
     $_POST['redirect'] = $_GET['redirect'];
 }
+// Assume English if we didn't get a language
+if (empty($_POST['repo'])) {
+    $_POST['repo'] = 'en';
+}
 
 // Decide on whether all vars are present for processing
 $process = true;
@@ -258,8 +262,8 @@ else {
 <div class='columns'>
 <ul>
   <li><strong>Bug reports &amp; Missing documentation</strong>
-    Instead <a href="http://bugs.php.net/report.php?bug_type=Documentation+problem<?php echo isset($_POST['sect']) ? '&amp;manpage=' . clean($_POST['sect']) : ''; ?>">report a bug</a>
-  for this manual page to the bug database.
+    Instead <a href="https://github.com/php/doc-<?=clean($_POST['repo'])?>/issues/new?body=From%20manual%20page:%20https:%2F%2Fphp.net%2F<?=clean($_POST['sect'])?>%0A%0A---">report an issue</a>
+  for this manual page.
   </li>
   <li><strong>Support questions or request for help</strong> See the <a href="/support.php">support page</a> for available options. In other words, do not ask questions within the user notes.</li>
   <li><strong>References to other notes or authors</strong>  This is not a forum; we do not encourage nor permit discussions here.  Further, if a note is referenced directly and is later removed or modified it causes confusion.
@@ -347,9 +351,9 @@ else {?>
    <td colspan="2">
     <b>
      <a href="/support.php">Click here to go to the support pages.</a><br>
-     <a href="http://bugs.php.net/report.php?bug_type=Documentation+problem&amp;manpage=<?php echo clean($_POST['sect']); ?>">Click here to submit a bug report.</a><br>
-     <a href="http://bugs.php.net/report.php?bug_type=Documentation+problem&amp;manpage=<?php echo clean($_POST['sect']); ?>">Click here to request a feature.</a><br>
-     (Again, please note, if you ask a question, report a bug, or request a feature,
+     <a href="https://github.com/php/doc-<?=clean($_POST['repo'])?>/issues/new?body=From%20manual%20page:%20https:%2F%2Fphp.net%2F<?=clean($_POST['sect'])?>%0A%0A---">Click here to submit an issue about the documentation.</a><br>
+     <a href="https://github.com/php/php-src/issues/new?body=From%20manual%20page:%20https:%2F%2Fphp.net%2F<?=clean($_POST['sect'])?>%0A%0A---">Click here to submit an issue about PHP itself.</a><br>
+     (Again, please note, if you ask a question, report an issue, or request a feature,
      your note <i>will be deleted</i>.)
     </b>
    </td>
