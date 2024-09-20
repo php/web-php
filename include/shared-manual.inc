@@ -30,7 +30,7 @@ use phpweb\UserNotes\UserNote;
  *
  * @param array<string, UserNote> $notes
  */
-function manual_notes($notes):void {
+function manual_notes($notes, $repo = 'en'):void {
     // Get needed values
     list($filename) = $GLOBALS['PGI']['this'];
 
@@ -45,6 +45,7 @@ function manual_notes($notes):void {
     // Link target to add a note to the current manual page,
     // and it's extended form with a [+] image
     $addnotelink = '/manual/add-note.php?sect=' . $filename .
+                   '&amp;repo=' . $repo .
                    '&amp;redirect=' . $_SERVER['BASE_HREF'];
     $addnotesnippet = make_link(
         $addnotelink,
@@ -408,7 +409,7 @@ function manual_footer($setup): void {
     </div>
 CONTRIBUTE;
 
-    manual_notes($USERNOTES);
+    manual_notes($USERNOTES, $repo);
     site_footer([
         'related_menu' => $__RELATED['toc'],
         'related_menu_deprecated' => $__RELATED['toc_deprecated'],

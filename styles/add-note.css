@@ -47,6 +47,7 @@
     -webkit-columns:15rem;
     -moz-columns:15rem;
     columns:15rem;
+    margin-bottom: 1em;
   }
   #whatnottoenter .columns li {
     -webkit-column-break-inside:avoid;
