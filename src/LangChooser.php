@@ -95,7 +95,7 @@ class LangChooser
         }
 
         // Order the codes by quality
-        usort($browser_langs, $this->acceptOrder(...));
+        usort($browser_langs, fn ($a, $b) => $b[1] <=> $a[1]);
 
         // For all languages found in the accept-language
         foreach ($browser_langs as $langdata) {
@@ -165,18 +165,4 @@ class LangChooser
         // Return with language code
         return $langcode;
     }
-
-    /**
-     * Order the array of compiled
-     * accept-language codes by quality value
-     *
-     * @param array{string, float} $a
-     * @param array{string, float} $b
-     */
-    private function acceptOrder(array $a, array $b): int
-    {
-        if ($a[1] == $b[1]) { return 0; }
-        return ($a[1] > $b[1]) ? -1 : 1;
-    }
-
 }
