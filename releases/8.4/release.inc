@@ -33,12 +33,226 @@ common_header(message('common_header', $lang));
         </div>
     </section>
 
+    <section class="php8-section center">
+        <div class="php8-compare">
+            <h2 class="php8-h2" id="property_hooks">
+                <?= message('property_hooks_title', $lang) ?>
+                <a class="php8-rfc" href="https://wiki.php.net/rfc/property-hooks">RFC</a>
+            </h2>
+            <div class="php8-compare__main">
+                <div class="php8-compare__block example-contents">
+                    <div class="php8-compare__label">PHP &lt; 8.4</div>
+                    <div class="php8-code phpcode">
+                        <?php highlight_php_trimmed(
+                            <<<'PHP'
+class User
+{
+    public function __construct(private string $first, private string $last) {}
+
+    public function setFullName(string $value): string {
+        [$this->first, $this->last] = explode(' ', $value, 2);
+    }
+
+    public function getFullName(): string {
+        return $this->first . ' ' . $this->last;
+    }
+}
+PHP
+
+                        ); ?>
+                    </div>
+                </div>
+                <div class="php8-compare__arrow"></div>
+                <div class="php8-compare__block example-contents">
+                    <div class="php8-compare__label php8-compare__label_new">PHP 8.4</div>
+                    <div class="php8-code phpcode">
+                        <?php highlight_php_trimmed(
+                            <<<'PHP'
+class User
+{
+    public function __construct(private string $first, private string $last) {}
+
+    public string $fullName {
+        get {
+            return $this->first . " " . $this->last;
+        }
+        set (string $value) {
+            [$this->first, $this->last] = explode(' ', $value, 2);
+        }
+    }
+}
+PHP
+                        ); ?>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="php8-compare">
+            <h2 class="php8-h2" id="asymmetric_visibility">
+                <?= message('asymmetric_visibility_title', $lang) ?>
+                <a class="php8-rfc" href="https://wiki.php.net/rfc/asymmetric-visibility-v2">RFC</a>
+            </h2>
+            <div class="php8-compare__main">
+                <div class="php8-compare__block example-contents">
+                    <div class="php8-compare__label">PHP &lt; 8.4</div>
+                    <div class="php8-code phpcode">
+                        <?php highlight_php_trimmed(
+                            <<<'PHP'
+class PhpVersion
+{
+    public string $version = '8.3';
+}
+
+$phpVersion = new PhpVersion();
+$foo->version = 'PHP 8.4'; // No error
+PHP
+
+                        ); ?>
+                    </div>
+                </div>
+                <div class="php8-compare__arrow"></div>
+                <div class="php8-compare__block example-contents">
+                    <div class="php8-compare__label php8-compare__label_new">PHP 8.4</div>
+                    <div class="php8-code phpcode">
+                        <?php highlight_php_trimmed(
+                            <<<'PHP'
+class PhpVersion
+{
+    public private(set) string $version = '8.4';
+}
+
+$phpVersion = new PhpVersion();
+$foo->version = 'PHP 8.3'; // Visibility error
+PHP
+                        ); ?>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="php8-compare">
+            <h2 class="php8-h2" id="dom_additions_84">
+                <?= message('dom_additions_84_title', $lang) ?>
+                <a class="php8-rfc" href="https://wiki.php.net/rfc/dom_additions_84">RFC</a>
+            </h2>
+            <div class="php8-compare__main">
+                <div class="php8-compare__block example-contents">
+                    <div class="php8-compare__label">PHP &lt; 8.4</div>
+                    <div class="php8-code phpcode">
+                        <?php highlight_php_trimmed(
+                            <<<'PHP'
+// TODO
+PHP
+
+                        ); ?>
+                    </div>
+                </div>
+                <div class="php8-compare__arrow"></div>
+                <div class="php8-compare__block example-contents">
+                    <div class="php8-compare__label php8-compare__label_new">PHP 8.4</div>
+                    <div class="php8-code phpcode">
+                        <?php highlight_php_trimmed(
+                            <<<'PHP'
+// TODO
+PHP
+                        ); ?>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="php8-compare">
+            <h2 class="php8-h2" id="domdocument_html5_parser">
+                <?= message('domdocument_html5_parser_title', $lang) ?>
+                <a class="php8-rfc" href="https://wiki.php.net/rfc/new_without_parentheses">RFC</a>
+            </h2>
+            <div class="php8-compare__main">
+                <div class="php8-compare__block example-contents">
+                    <div class="php8-compare__label">PHP &lt; 8.4</div>
+                    <div class="php8-code phpcode">
+                        <?php highlight_php_trimmed(
+                            <<<'PHP'
+// TODO
+PHP
+
+                        ); ?>
+                    </div>
+                </div>
+                <div class="php8-compare__arrow"></div>
+                <div class="php8-compare__block example-contents">
+                    <div class="php8-compare__label php8-compare__label_new">PHP 8.4</div>
+                    <div class="php8-code phpcode">
+                        <?php highlight_php_trimmed(
+                            <<<'PHP'
+// TODO
+PHP
+                        ); ?>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="php8-compare">
+            <h2 class="php8-h2" id="new_without_parentheses">
+                <?= message('new_without_parentheses_title', $lang) ?>
+                <a class="php8-rfc" href="https://wiki.php.net/rfc/new_without_parentheses">RFC</a>
+            </h2>
+            <div class="php8-compare__main">
+                <div class="php8-compare__block example-contents">
+                    <div class="php8-compare__label">PHP &lt; 8.4</div>
+                    <div class="php8-code phpcode">
+                        <?php highlight_php_trimmed(
+                            <<<'PHP'
+class PhpVersion {
+    public function currentVersion(): string {
+        return 'PHP 8.3';
+    }
+}
+
+var_dump((new PhpVersion())->currentVersion());
+PHP
+
+                        ); ?>
+                    </div>
+                </div>
+                <div class="php8-compare__arrow"></div>
+                <div class="php8-compare__block example-contents">
+                    <div class="php8-compare__label php8-compare__label_new">PHP 8.4</div>
+                    <div class="php8-code phpcode">
+                        <?php highlight_php_trimmed(
+                            <<<'PHP'
+class PhpVersion {
+    public function currentVersion(): string {
+        return 'PHP 8.4';
+    }
+}
+
+var_dump(new PhpVersion()->currentVersion());
+PHP
+                        ); ?>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
     <section class="php8-section center php8-section_light php8-columns">
         <div class="php8-column">
             <h2 class="php8-h2" id="other_new_things"><?= message('new_classes_title', $lang) ?></h2>
             <div class="php8-compare__content php8-compare__content--block">
                 <ul>
-
+                    <li><?= message('new_bc_functions', $lang) ?></li>
+                    <li><?= message('new_dom_methods', $lang) ?></li>
+                    <li><?= message('new_intl_methods', $lang) ?></li>
+                    <li><?= message('new_mbstring_functions', $lang) ?></li>
+                    <li><?= message('new_pcntl_functions', $lang) ?></li>
+                    <li><?= message('new_pdo_method', $lang) ?></li>
+                    <li><?= message('new_pgsql_functions', $lang) ?></li>
+                    <li><?= message('new_reflection_methods', $lang) ?></li>
+                    <li><?= message('new_sodium_functions', $lang) ?></li>
+                    <li><?= message('new_soap_method', $lang) ?></li>
+                    <li><?= message('new_standard_functions', $lang) ?></li>
+                    <li><?= message('new_tidy_methods', $lang) ?></li>
+                    <li><?= message('new_xml_methods', $lang) ?></li>
+                    <li><?= message('new_xsl_method', $lang) ?></li>
                 </ul>
             </div>
         </div>
@@ -47,7 +261,9 @@ common_header(message('common_header', $lang));
             <h2 class="php8-h2" id="deprecations_and_bc_breaks"><?= message('bc_title', $lang) ?></h2>
             <div class="php8-compare__content">
                 <ul>
-
+                    <li><?= message('bc_pecl', $lang) ?></li>
+                    <li><?= message('bc_nullable_parameter_types', $lang) ?></li>
+                    <li><?= message('bc_classname', $lang) ?></li>
                 </ul>
             </div>
         </div>
