@@ -4,6 +4,10 @@ namespace phpweb;
 
 class LangChooser
 {
+    private readonly string $preferredLanguage;
+
+    private readonly string $defaultLanguage;
+
     /**
      * @param array<string, string> $availableLanguages
      * @param array<string, string> $inactiveLanguages
@@ -11,10 +15,12 @@ class LangChooser
     public function __construct(
         private readonly array $availableLanguages,
         private readonly array $inactiveLanguages,
-        private readonly string $preferredLanguage,
-        private readonly string $defaultLanguage,
+        string $preferredLanguage,
+        string $defaultLanguage,
     )
     {
+        $this->defaultLanguage = $this->normalize($defaultLanguage);
+        $this->preferredLanguage = $this->normalize($preferredLanguage);
     }
 
     /**
@@ -26,23 +32,22 @@ class LangChooser
         ?string $acceptLanguageHeader,
     ): array
     {
-        // Contains all the languages picked up by the
-        // process in priority order (without repeating codes)
-        $languages = [];
-
         // Default values for languages
-        $explicitly_specified = ''; $selected = '';
+        $explicitly_specified = '';
 
         // Specified for the request (GET/POST parameter)
         if (is_string($langParam)) {
-            $explicitly_specified = $this->add(htmlspecialchars($langParam, ENT_QUOTES, 'UTF-8'), $languages);
+            $langCode = $this->normalize(htmlspecialchars($langParam, ENT_QUOTES, 'UTF-8'));
+            $explicitly_specified = $langCode;
+            if ($this->isAvailableLanguage($langCode)) {
+                return [$langCode, $explicitly_specified];
+            }
         }
 
         // Specified in a shortcut URL (eg. /en/echo or /pt_br/echo)
         if (preg_match("!^/(\\w{2}(_\\w{2})?)/!", htmlspecialchars($requestUri,ENT_QUOTES, 'UTF-8'), $flang)) {
-
             // Put language into preference list
-            $rlang = $this->add($flang[1], $languages);
+            $rlang = $this->normalize($flang[1]);
 
             // Set explicitly specified language
             if (empty($explicitly_specified)) {
@@ -54,22 +59,28 @@ class LangChooser
                 "!^/$flang[1]/!", "/", htmlspecialchars($requestUri, ENT_QUOTES, 'UTF-8'),
             );
 
+            if ($this->isAvailableLanguage($rlang)) {
+                return [$rlang, $explicitly_specified];
+            }
         }
 
         // Specified in a manual URL (eg. manual/en/ or manual/pt_br/)
         if (preg_match("!^/manual/(\\w{2}(_\\w{2})?)(/|$)!", htmlspecialchars($requestUri, ENT_QUOTES, 'UTF-8'), $flang)) {
-
-            $flang = $this->add($flang[1], $languages);
+            $flang = $this->normalize($flang[1]);
 
             // Set explicitly specified language
             if (empty($explicitly_specified)) {
                 $explicitly_specified = $flang;
             }
+
+            if ($this->isAvailableLanguage($flang)) {
+                return [$flang, $explicitly_specified];
+            }
         }
 
         // Honor the users own language setting (if available)
-        if ($this->preferredLanguage) {
-            $this->add($this->preferredLanguage, $languages);
+        if ($this->isAvailableLanguage($this->preferredLanguage)) {
+            return [$this->preferredLanguage, $explicitly_specified];
         }
 
         // Specified by the user via the browser's Accept Language setting
@@ -123,46 +134,35 @@ class LangChooser
                 $langdata[0] = $match[1];
             }
 
-            // Add language to priority order
-            $this->add($langdata[0], $languages);
+            $lang = $this->normalize($langdata[0]);
+            if ($this->isAvailableLanguage($lang)) {
+                return [$lang, $explicitly_specified];
+            }
         }
 
         // Language preferred by this mirror site
-        $this->add($this->defaultLanguage, $languages);
-
-        // Last default language is English
-        $this->add("en", $languages);
-
-        $selected = $languages[0];
-
-        // Return with all found data
-        return [$selected, $explicitly_specified];
-    }
-
-    /**
-     * Add a language to the possible languages' list
-     *
-     * @param string $langcode
-     * @param list<string> $langs
-     */
-    private function add(string $langcode, array &$langs): string
-    {
-
-        // Make language code lowercase, html encode special chars and remove slashes
-        $langcode = strtolower(htmlspecialchars($langcode));
-
-        // The Brazilian Portuguese code needs special attention
-        if ($langcode == 'pt_br') { $langcode = 'pt_BR'; }
-
-        // Append language code in priority order if it is not
-        // there already and supported by the PHP site. Try to
-        // lower number of file_exists() calls to the minimum...
-        if (!in_array($langcode, $langs, false) && isset($this->availableLanguages[$langcode])
-            && !isset($this->inactiveLanguages[$langcode])) {
-            $langs[] = $langcode;
+        if ($this->isAvailableLanguage($this->defaultLanguage)) {
+            return [$this->defaultLanguage, $explicitly_specified];
         }
 
-        // Return with language code
-        return $langcode;
+        // Last default language is English
+        return ["en", $explicitly_specified];
+    }
+
+    private function normalize(string $langCode): string
+    {
+        // Make language code lowercase, html encode special chars and remove slashes
+        $langCode = strtolower(htmlspecialchars($langCode));
+
+        // The Brazilian Portuguese code needs special attention
+        if ($langCode == 'pt_br') {
+            return 'pt_BR';
+        }
+        return $langCode;
+    }
+
+    private function isAvailableLanguage(string $langCode): bool
+    {
+        return isset($this->availableLanguages[$langCode]) && !isset($this->inactiveLanguages[$langCode]);
     }
 }
