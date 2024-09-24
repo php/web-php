@@ -39,6 +39,32 @@ site_header("Downloads",
     ],
 );
 ?>
+<h1>Downloads &amp; Installation Instructions</h1>
+
+<p>
+    <a href="/manual/install.general.php">Installing PHP</a> is covered
+    thoroughly in the PHP documentation.
+</p>
+
+<h2>Binaries</h2>
+
+<p>
+    <a href="https://windows.php.net/download/">Binaries are available for
+    Microsoft Windows</a>. The PHP project does not currently release binary packages
+    for other platforms such as Linux or macOS, but they are packaged by distributions
+    and other providers. For more information, see:
+
+    <ul>
+        <li>
+            <a href="/manual/install.unix.php">Installation instructions for Unix systems</a>
+        </li>
+        <li>
+            <a href="/manual/install.macosx.php">Installation instructions for macOS</a>
+        </li>
+    </ul>
+</p>
+
+<h2>Source Code</h2>
 <?php $i = 0; foreach ($RELEASES as $MAJOR => $major_releases): /* major releases loop start */
         $releases = array_slice($major_releases, 0, $SHOW_COUNT);
 ?>
