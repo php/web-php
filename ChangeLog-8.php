@@ -8,6 +8,67 @@ changelog_header(8, $MINOR_VERSIONS);
 ?>
 <a id="PHP_8_3"></a>
 
+<section class="version" id="8.3.12"><!-- {{{ 8.3.12 -->
+<h3>Version 8.3.12</h3>
+<b><?php release_date('26-Sep-2024'); ?></b>
+<ul><li>CGI:
+<ul>
+  <li>Fixed bug GHSA-p99j-rfp4-xqvq (Bypass of CVE-2024-4577, Parameter Injection Vulnerability). (CVE-2024-8926)</li>
+  <li>Fixed bug GHSA-94p6-54jq-9mwp (cgi.force_redirect configuration is bypassable due to the environment variable collision). (CVE-2024-8927)</li>
+</ul></li>
+<li>Core:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 15408); ?> (MSan false-positve on zend_max_execution_timer).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 15515); ?> (Configure error grep illegal option q).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 15514); ?> (Configure error: genif.sh: syntax error).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 15565); ?> (--disable-ipv6 during compilation produces error EAI_SYSTEM not found).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 15587); ?> (CRC32 API build error on arm 32-bit).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 15330); ?> (Do not scan generator frames more than once).</li>
+  <li>Fixed uninitialized lineno in constant AST of internal enums.</li>
+</ul></li>
+<li>Curl:
+<ul>
+  <li>FIxed bug <?php githubissuel('php/php-src', 15547); ?> (curl_multi_select overflow on timeout argument).</li>
+</ul></li>
+<li>DOM:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 15551); ?> (Segmentation fault (access null pointer) in ext/dom/xml_common.h).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 15654); ?> (Signed integer overflow in ext/dom/nodelist.c).</li>
+</ul></li>
+<li>Fileinfo:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 15752); ?> (Incorrect error message for finfo_file with an empty filename argument).</li>
+</ul></li>
+<li>FPM:
+<ul>
+  <li>Fixed bug GHSA-865w-9rf3-2wh5 (Logs from childrens may be altered). (CVE-2024-9026)</li>
+</ul></li>
+<li>MySQLnd:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 15432); ?> (Heap corruption when querying a vector).</li>
+</ul></li>
+<li>Opcache:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 15661); ?> (Access null pointer in Zend/Optimizer/zend_inference.c).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 15658); ?> (Segmentation fault in Zend/zend_vm_execute.h).</li>
+</ul></li>
+<li>SAPI:
+<ul>
+  <li>Fixed bug GHSA-9pqp-7h25-4f32 (Erroneous parsing of multipart form data). (CVE-2024-8925)</li>
+</ul></li>
+<li>Standard:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 15552); ?> (Signed integer overflow in ext/standard/scanf.c).</li>
+</ul></li>
+<li>Streams:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 15628); ?> (php_stream_memory_get_buffer() not zero-terminated).</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
+
+
 <section class="version" id="8.3.11"><!-- {{{ 8.3.11 -->
 <h3>Version 8.3.11</h3>
 <b><?php release_date('29-Aug-2024'); ?></b>
