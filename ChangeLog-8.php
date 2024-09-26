@@ -3207,6 +3207,27 @@ changelog_header(8, $MINOR_VERSIONS);
 
 <a id="PHP_8_1"></a>
 
+<section class="version" id="8.1.30"><!-- {{{ 8.1.30 -->
+<h3>Version 8.1.30</h3>
+<b><?php release_date('26-Sep-2024'); ?></b>
+<ul><li>CGI:
+<ul>
+  <li>Fixed bug GHSA-p99j-rfp4-xqvq (Bypass of CVE-2024-4577, Parameter Injection Vulnerability). (CVE-2024-8926)</li>
+  <li>Fixed bug GHSA-94p6-54jq-9mwp (cgi.force_redirect configuration is bypassable due to the environment variable collision). (CVE-2024-8927)</li>
+</ul></li>
+<li>FPM:
+<ul>
+  <li>Fixed bug GHSA-865w-9rf3-2wh5 (Logs from childrens may be altered). (CVE-2024-9026)</li>
+</ul></li>
+<li>SAPI:
+<ul>
+  <li>Fixed bug GHSA-9pqp-7h25-4f32 (Erroneous parsing of multipart form data). (CVE-2024-8925)</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
+
+
 <section class="version" id="8.1.29"><!-- {{{ 8.1.29 -->
 <h3>Version 8.1.29</h3>
 <b><?php release_date('06-Jun-2024'); ?></b>
