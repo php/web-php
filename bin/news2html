@@ -66,6 +66,8 @@ $bug_map = [
     '/Implemented FR #([0-9]+)/' => '<?php implemented(\1); ?'.'>',
     '/GitHub PR #([0-9]+)/'      => '<?php githubissuel(\'php/php-src\', \1); ?'.'>',
     '/GH-([0-9]+)/'              => '<?php githubissuel(\'php/php-src\', \1); ?'.'>',
+    '/GHSA-([0-9a-z]{4}-[0-9a-z]{4}-[0-9a-z]{4})/'
+                                 => '<?php githubsecurityl(\'php/php-src\', \'\1\'); ?'.'>',
 ];
 
 foreach($entries as $module => $items) {
