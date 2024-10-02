@@ -28,6 +28,10 @@ function githubissuel($repo, $number): void {
     echo "<a href=\"https://github.com/$repo/issues/$number\">GH-$number</a>";
 }
 
+function githubsecurityl($repo, $id): void {
+    echo "<a href=\"https://github.com/$repo/security/advisories/GHSA-$id\">GHSA-$id</a>";
+}
+
 function release_date($in): void {
     $time = strtotime($in);
     $human_readable = date('d M Y', $time);

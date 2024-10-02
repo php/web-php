@@ -13,8 +13,8 @@ changelog_header(8, $MINOR_VERSIONS);
 <b><?php release_date('26-Sep-2024'); ?></b>
 <ul><li>CGI:
 <ul>
-  <li>Fixed bug GHSA-p99j-rfp4-xqvq (Bypass of CVE-2024-4577, Parameter Injection Vulnerability). (CVE-2024-8926)</li>
-  <li>Fixed bug GHSA-94p6-54jq-9mwp (cgi.force_redirect configuration is bypassable due to the environment variable collision). (CVE-2024-8927)</li>
+  <li>Fixed bug <?php githubsecurityl('php/php-src', 'p99j-rfp4-xqvq'); ?> (Bypass of CVE-2024-4577, Parameter Injection Vulnerability). (CVE-2024-8926)</li>
+  <li>Fixed bug <?php githubsecurityl('php/php-src', '94p6-54jq-9mwp'); ?> (cgi.force_redirect configuration is bypassable due to the environment variable collision). (CVE-2024-8927)</li>
 </ul></li>
 <li>Core:
 <ul>
@@ -41,7 +41,7 @@ changelog_header(8, $MINOR_VERSIONS);
 </ul></li>
 <li>FPM:
 <ul>
-  <li>Fixed bug GHSA-865w-9rf3-2wh5 (Logs from childrens may be altered). (CVE-2024-9026)</li>
+  <li>Fixed bug <?php githubsecurityl('php/php-src', '865w-9rf3-2wh5'); ?> (Logs from childrens may be altered). (CVE-2024-9026)</li>
 </ul></li>
 <li>MySQLnd:
 <ul>
@@ -54,7 +54,7 @@ changelog_header(8, $MINOR_VERSIONS);
 </ul></li>
 <li>SAPI:
 <ul>
-  <li>Fixed bug GHSA-9pqp-7h25-4f32 (Erroneous parsing of multipart form data). (CVE-2024-8925)</li>
+  <li>Fixed bug <?php githubsecurityl('php/php-src', '9pqp-7h25-4f32'); ?> (Erroneous parsing of multipart form data). (CVE-2024-8925)</li>
 </ul></li>
 <li>Standard:
 <ul>
