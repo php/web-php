@@ -163,7 +163,6 @@ p.archive {
 }
 
 @media (min-width: 768px) {
-    .navbar-search,
     #intro .background,
     aside.tips,
     .layout-menu {
@@ -176,7 +175,7 @@ p.archive {
 }
 
 @media (min-width: 768px) and (max-width: 784px) {
-    aside.tips, .navbar-search {
+    aside.tips {
         width: 30%;
     }
 

@@ -94,27 +94,74 @@ if (!isset($config["languages"])) {
 </head>
 <body class="<?php echo $curr; ?> <?php echo $classes; ?>">
 
-<nav id="head-nav" class="navbar navbar-fixed-top">
-  <div class="navbar-inner clearfix">
-    <a href="/" class="brand"><img src="/images/logos/php-logo.svg" width="48" height="24" alt="php"></a>
-    <div id="mainmenu-toggle-overlay"></div>
-    <input type="checkbox" id="mainmenu-toggle">
-    <ul class="nav">
-      <li class="<?php echo $curr == "downloads" ? "active" : ""?>"><a href="/downloads">Downloads</a></li>
-      <li class="<?php echo $curr == "docs" ? "active" : ""?>"><a href="/docs.php">Documentation</a></li>
-      <li class="<?php echo $curr == "community" ? "active" : ""?>"><a href="/get-involved" >Get Involved</a></li>
-      <li class="<?php echo $curr == "help" ? "active" : ""?>"><a href="/support">Help</a></li>
-      <li class="<?php echo $curr === "php8" ? "active" : "" ?>">
-        <a href="/releases/8.3/index.php">
-          <img src="/images/php8/logo_php8_3.svg" alt="php8.3" height="22" width="60">
-        </a>
-      </li>
-    </ul>
-    <form class="navbar-search" id="topsearch" action="/search.php">
-      <input type="hidden" name="show" value="quickref">
-      <input type="search" name="pattern" class="search-query" placeholder="Search" accesskey="s">
-    </form>
+<nav class="navbar navbar-fixed-top">
+  <div class="navbar-inner">
+    <a href="/" aria-label="PHP Home" class="brand">
+      <img
+        src="/images/logos/php-logo-white.svg"
+        alt="PHP Logo"
+        width="80"
+        height="40"
+      >
+    </a>
+
+    <div
+      id="navbar-offcanvas"
+      tabindex="-1"
+      class="navbar-offcanvas"
+      aria-label="Menu"
+    >
+      <button
+        id="navbar-menu-btn-close"
+        class="navbar-menu-btn navbar-menu-btn-close"
+      >
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z" /></svg>
+      </button>
+      <ul class="navbar-nav">
+        <li class="<?= $curr == "downloads" ? "active" : ""; ?>">
+          <a href="/downloads">Downloads</a>
+        </li>
+        <li class="<?= $curr == "docs" ? "active" : ""; ?>">
+          <a href="/docs.php">Documentation</a>
+        </li>
+        <li class="<?= $curr == "community" ? "active" : ""; ?>">
+          <a href="/get-involved" >Get Involved</a>
+        </li>
+        <li class="<?= $curr == "help" ? "active" : ""; ?>">
+          <a href="/support">Help</a>
+        </li>
+        <li class="navbar-release <?= $curr === "php8" ? "active" : ""; ?>">
+          <a href="/releases/8.3/index.php">
+            <img src="/images/php8/logo_php8_3.svg" alt="php8.3">
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="navbar-right">
+        <button class="navbar-search-btn">Search</button>
+
+        <button aria-label="Search" class="navbar-search-btn-mobile">
+          <!-- https://feathericons.com search -->
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+        </button>
+        <button
+          id="navbar-menu-btn-open"
+          aria-label="Menu"
+          class="navbar-menu-btn navbar-menu-btn-open"
+        >
+          <!-- https://pictogrammers.com/library/mdi/icon/menu/ -->
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3,6H21V8H3V6M3,11H21V13H3V11M3,16H21V18H3V16Z" /></svg>
+        </button>
+      </div>
+    </div>
+
+    <div
+      id="navbar-backdrop"
+      class="navbar-backdrop"
+    ></div>
   </div>
+
   <div id="flash-message"></div>
 </nav>
 <?php if (!empty($config["headsup"])): ?>

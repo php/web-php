@@ -10,10 +10,11 @@ String.prototype.toInt = function () {
 
 var PHP_NET = {};
 
-PHP_NET.HEADER_HEIGHT = 52;
+PHP_NET.HEADER_HEIGHT = 64;
 
 Mousetrap.bind('up up down down left right left right b a enter', function () {
     $(".brand img").attr("src", "/images/php_konami.gif");
+    window.scrollTo(0, 0);
 });
 Mousetrap.bind("?", function () {
     $("#trick").slideToggle();
@@ -100,12 +101,10 @@ Mousetrap.bind("b o r k", function () {
     Mousetrap.unbind("b o r k");
 });
 
-var FIXED_HEADER_HEIGHT = 50;
-
 function cycle(to, from) {
     from.removeClass("current");
     to.addClass("current");
-    $.scrollTo(to.offset().top - FIXED_HEADER_HEIGHT);
+    $.scrollTo(to.offset().top);
 }
 
 function getNextOrPreviousSibling(node, forward) {
@@ -461,6 +460,62 @@ $(document).ready(function () {
             $this.remove();
         }
     });
+
+    /*{{{ 2024 Navbar */
+    const offcanvasElement = document.getElementById('navbar-offcanvas')
+    const offcanvasSelectables = offcanvasElement.querySelectorAll("input, button, a")
+    const backdropElement = document.getElementById('navbar-backdrop')
+
+    // Focus trap for offcanvas nav
+    const focusTrapHandler = (event) => {
+        if (event.key != "Tab") {
+            return;
+        }
+
+        const firstElement = offcanvasSelectables[0];
+        const lastElement = offcanvasSelectables[offcanvasSelectables.length - 1];
+
+        if (event.shiftKey) {
+            if (document.activeElement === firstElement) {
+                event.preventDefault();
+                lastElement.focus();
+            }
+        } else if (document.activeElement === lastElement) {
+            event.preventDefault();
+            firstElement.focus();
+        }
+    }
+
+    const openOffcanvasNav = () => {
+        offcanvasElement.classList.add('show')
+        offcanvasElement.setAttribute('aria-modal', 'true')
+        offcanvasElement.setAttribute('role', "dialog")
+        offcanvasElement.style.visibility = 'visible'
+        backdropElement.classList.add('show')
+        offcanvasSelectables[0].focus()
+        document.addEventListener('keydown', focusTrapHandler)
+    }
+
+    const closeOffcanvasNav = () => {
+        offcanvasElement.classList.remove('show')
+        offcanvasElement.removeAttribute('aria-modal')
+        offcanvasElement.removeAttribute('role')
+        backdropElement.classList.remove('show')
+        document.removeEventListener('keydown', focusTrapHandler)
+        offcanvasElement.addEventListener('transitionend', () => {
+            offcanvasElement.style.removeProperty('visibility')
+        }, { once: true })
+    }
+
+    document
+        .getElementById('navbar-menu-btn-open')
+        .addEventListener('click', openOffcanvasNav)
+
+    document
+        .getElementById('navbar-menu-btn-close')
+        .addEventListener('click', closeOffcanvasNav)
+
+    /*}}}*/
 
     /*{{{ Scroll to top */
     (function () {

@@ -2,13 +2,6 @@
   width: 100% !important;
 }
 
-@media (max-width: 979px) and (min-width: 768px) {
-  .navbar-search {
-    width: 30% !important;
-    max-width: calc(100% - 605px) !important;
-  }
-}
-
 .php8-section {
   padding: 96px 1.5rem;
   margin: 0 -1.5rem;
