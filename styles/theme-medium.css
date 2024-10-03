@@ -442,6 +442,255 @@ div.warning a:focus {
 }
 /* }}} */
 
+/* {{{ Search modal */
+.search-modal-backdrop {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1030;
+
+  justify-content: center;
+
+  visibility: hidden;
+
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+
+  transition: opacity 0.2s ease-out;
+}
+
+.search-modal-backdrop.showing,
+.search-modal-backdrop.show {
+  visibility: visible;
+  opacity: 1;
+}
+
+.search-modal-backdrop.hiding {
+  visibility: visible;
+  opacity: 0;
+}
+
+.search-modal,
+.search-modal * {
+  box-sizing: border-box;
+}
+
+.search-modal {
+  display: flex;
+
+  flex-direction: column;
+
+  width: 100%;
+  height: 100%;
+  margin: 0;
+
+  background-color: var(--dark-grey-color);
+}
+
+.search-modal *:focus-visible {
+  outline: 2px solid var(--light-magenta-color);
+  outline-offset: 2px;
+}
+
+.search-modal-header {
+  display: flex;
+  align-items: center;
+  padding: 10px 16px;
+}
+
+.search-modal-form {
+  display: flex;
+
+  flex-grow: 1;
+
+  align-items: center;
+
+  min-width: 0;
+  padding-left: 12px;
+
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+}
+
+.search-modal-input-icon {
+  display: block;
+  flex-shrink: 0;
+  width: 24px;
+}
+
+.search-modal-input-icon svg {
+  display: block;
+}
+
+.search-modal-input {
+  flex-grow: 1;
+
+  min-width: 0;
+  height: 44px;
+  padding-left: 12px;
+
+  color: white;
+
+  background-color: transparent;
+  border: none;
+}
+
+.search-modal-input:focus {
+  border-width: 1px;
+  outline: none;
+}
+
+.search-modal-input::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+/* TODO: The icon button styles were copied from the navbar. */
+/* We should refactor this into a shared component when possible. */
+.search-modal-close-btn {
+  padding: 8px;
+  margin-right: -8px; /* Compensate for button padding */
+  margin-left: 8px;
+
+  color: #e8e8e8;
+
+  cursor: pointer;
+
+  background-color: transparent;
+  border: 0;
+  outline: 0;
+  opacity: 0.65;
+
+  transition: opacity 0.25s ease-out;
+}
+
+.search-modal-close-btn svg {
+  display: block;
+  width: 24px;
+  fill: currentColor;
+}
+
+.search-modal-close-btn:hover,
+.search-modal-close-btn:focus {
+  color: white;
+  opacity: 1;
+}
+
+.search-modal-results {
+  height: 100%;
+  padding: 0 16px;
+  overflow-y: scroll;
+}
+
+.search-modal-result {
+  display: flex;
+
+  align-items: center;
+
+  padding: 10px;
+  padding-left: 14px;
+
+  line-height: 1.2;
+
+  border: none;
+  border-radius: 0.5rem;
+}
+
+.search-modal-result:hover {
+  background-color: var(--dark-blue-color);
+}
+
+.search-modal-result[aria-selected="true"] {
+  background-color: var(--dark-magenta-color);
+}
+
+.search-modal-result-main {
+  flex-grow: 1;
+  min-width: 0; /* Allow text truncation */
+}
+
+.search-modal-result-name {
+  margin-bottom: 6px;
+  overflow: hidden;
+
+  color: #e6e6e6;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.search-modal-result:hover .search-modal-result-name {
+  color: white;
+}
+
+.search-modal-result-desc {
+  overflow: hidden;
+
+  font-size: 14px;
+  color: var(--background-text-color);
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.search-modal-result:hover .search-modal-result-desc {
+  color: white;
+  opacity: 0.6;
+}
+
+.search-modal-result-icon {
+  margin-right: 12px;
+}
+
+.search-modal-result-icon svg {
+  display: block;
+  width: 24px;
+  fill: hsla(0, 0%, 100%, 0.3);
+}
+
+.search-modal-helper-text {
+  display: none;
+  padding: 10px 16px;
+  font-size: 14px;
+}
+
+@media (min-width: 992px) {
+  .search-modal {
+    max-width: 560px;
+    height: calc(100% - 1rem * 2);
+    margin: 1rem auto;
+    border-radius: 16px;
+  }
+
+  .search-modal-header {
+    padding: 18px 20px;
+  }
+
+  .search-modal-input {
+    height: 52px;
+    font-size: 18px;
+  }
+
+  .search-modal-close-btn {
+    margin-right: -10px; /* Compensate for button padding */
+  }
+
+  .search-modal-results {
+    padding: 0 20px;
+  }
+
+  .search-modal-helper-text {
+    display: block;
+    padding: 18px 20px;
+  }
+
+  .search-modal-helper-key {
+    display: inline-block;
+    padding: 0px 4px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 4px
+  }
+}
+/* }}} */
 
 /* {{{ User notes */
 #usernotes .count {

@@ -252,28 +252,25 @@ function globalsearch(txt) {
     cache = JSON.parse(cache);
 
     if (cache) {
-        for (var type in cache.data) {
-            var elms = cache.data[type].elements;
-            for (var node in elms) {
-                if (elms[node].description.toLowerCase().contains(term) || elms[node].name.toLowerCase().contains(term)) {
-                    $("#goto .results ul").append("<li><a href='/manual/en/" + elms[node].id + ".php'>" + elms[node].name + ": " + elms[node].description + "</a></li>");
-                    if ($("#goto .results ul li") > 30) {
-                        return;
-                    }
+        for (const node of cache.data) {
+            if (
+                node.description.toLowerCase().contains(term) ||
+                node.name.toLowerCase().contains(term)
+            ) {
+                $("#goto .results ul").append(`
+                    <li>
+                        <a href='/manual/en/${node.id}.php'>
+                            ${node.name}: ${node.description}
+                        </a>
+                    </li>`);
+                if ($("#goto .results ul li") > 30) {
+                    return;
                 }
             }
         }
     }
 }
-Mousetrap.bind("/", function (e) {
-    if (e.preventDefault) {
-        e.preventDefault();
-    } else {
-        // internet explorer
-        e.returnValue = false;
-    }
-    $("input[type=search]").focus();
-});
+
 var rotate = 0;
 Mousetrap.bind("r o t a t e enter", function (e) {
     rotate += 90;
@@ -462,9 +459,10 @@ $(document).ready(function () {
     });
 
     /*{{{ 2024 Navbar */
-    const offcanvasElement = document.getElementById('navbar-offcanvas')
-    const offcanvasSelectables = offcanvasElement.querySelectorAll("input, button, a")
-    const backdropElement = document.getElementById('navbar-backdrop')
+    const offcanvasElement = document.getElementById("navbar-offcanvas");
+    const offcanvasSelectables =
+        offcanvasElement.querySelectorAll("input, button, a");
+    const backdropElement = document.getElementById("navbar-backdrop");
 
     // Focus trap for offcanvas nav
     const focusTrapHandler = (event) => {
@@ -473,7 +471,8 @@ $(document).ready(function () {
         }
 
         const firstElement = offcanvasSelectables[0];
-        const lastElement = offcanvasSelectables[offcanvasSelectables.length - 1];
+        const lastElement =
+            offcanvasSelectables[offcanvasSelectables.length - 1];
 
         if (event.shiftKey) {
             if (document.activeElement === firstElement) {
@@ -484,36 +483,40 @@ $(document).ready(function () {
             event.preventDefault();
             firstElement.focus();
         }
-    }
+    };
 
     const openOffcanvasNav = () => {
-        offcanvasElement.classList.add('show')
-        offcanvasElement.setAttribute('aria-modal', 'true')
-        offcanvasElement.setAttribute('role', "dialog")
-        offcanvasElement.style.visibility = 'visible'
-        backdropElement.classList.add('show')
-        offcanvasSelectables[0].focus()
-        document.addEventListener('keydown', focusTrapHandler)
-    }
+        offcanvasElement.classList.add("show");
+        offcanvasElement.setAttribute("aria-modal", "true");
+        offcanvasElement.setAttribute("role", "dialog");
+        offcanvasElement.style.visibility = "visible";
+        backdropElement.classList.add("show");
+        offcanvasSelectables[0].focus();
+        document.addEventListener("keydown", focusTrapHandler);
+    };
 
     const closeOffcanvasNav = () => {
-        offcanvasElement.classList.remove('show')
-        offcanvasElement.removeAttribute('aria-modal')
-        offcanvasElement.removeAttribute('role')
-        backdropElement.classList.remove('show')
-        document.removeEventListener('keydown', focusTrapHandler)
-        offcanvasElement.addEventListener('transitionend', () => {
-            offcanvasElement.style.removeProperty('visibility')
-        }, { once: true })
-    }
+        offcanvasElement.classList.remove("show");
+        offcanvasElement.removeAttribute("aria-modal");
+        offcanvasElement.removeAttribute("role");
+        backdropElement.classList.remove("show");
+        document.removeEventListener("keydown", focusTrapHandler);
+        offcanvasElement.addEventListener(
+            "transitionend",
+            () => {
+                offcanvasElement.style.removeProperty("visibility");
+            },
+            { once: true },
+        );
+    };
 
     document
-        .getElementById('navbar-menu-btn-open')
-        .addEventListener('click', openOffcanvasNav)
+        .getElementById("navbar-menu-btn-open")
+        .addEventListener("click", openOffcanvasNav);
 
     document
-        .getElementById('navbar-menu-btn-close')
-        .addEventListener('click', closeOffcanvasNav)
+        .getElementById("navbar-menu-btn-close")
+        .addEventListener("click", closeOffcanvasNav);
 
     /*}}}*/
 
@@ -607,13 +610,13 @@ $(document).ready(function () {
     });
     /*}}}*/
 
-    // Search box autocomplete (for browsers that aren't IE <= 8, anyway).
-    if (typeof window.brokenIE === "undefined") {
-        jQuery("#topsearch .search-query").search({
-            language: getLanguage(),
-            limit: 30
-        });
-    }
+    /*{{{Search Modal*/
+    const language = getLanguage();
+    initSearchModal();
+    initPHPSearch(language).then((searchCallback) => {
+        initSearchUI({language, searchCallback, limit: 30});
+    });
+    /*}}}*/
 
     /* {{{ Negative user notes fade-out */
     var usernotes = document.getElementById('usernotes');

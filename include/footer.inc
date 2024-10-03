@@ -108,5 +108,51 @@ if (!empty($_SERVER['BASE_PAGE'])
 
 <a id="toTop" href="javascript:;"><span id="toTopHover"></span><img width="40" height="40" alt="To Top" src="/images/to-top@2x.png"></a>
 
+<div id="search-modal-backdrop" class="search-modal-backdrop">
+  <div
+    role="dialog"
+    aria-label="Search modal"
+    id="search-modal"
+    class="search-modal"
+  >
+    <div class="search-modal-header">
+      <div class="search-modal-form">
+        <div class="search-modal-input-icon">
+          <!-- https://feathericons.com search -->
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+        </div>
+        <input
+          type="text"
+          id="search-modal-input"
+          class="search-modal-input"
+          placeholder="Search PHP docs"
+        />
+      </div>
+
+      <button aria-label="Close" class="search-modal-close-btn">
+        <!-- https://pictogrammers.com/library/mdi/icon/close/ -->
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z"/></svg>
+      </button>
+    </div>
+    <div
+      role="listbox"
+      aria-label="Search results"
+      id="search-modal-results"
+      class="search-modal-results"
+    ></div>
+    <div class="search-modal-helper-text">
+      <div>
+        <span class="search-modal-helper-key">↑ ↓</span> to navigate •
+        <span class="search-modal-helper-key">Enter</span> to select •
+        <span class="search-modal-helper-key">Esc</span> to close
+      </div>
+      <div>
+        Press <span class="search-modal-helper-key">Enter</span> without
+        selection to search using Google
+      </div>
+    </div>
+  </div>
+</div>
+
 </body>
 </html>
