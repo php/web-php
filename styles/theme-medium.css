@@ -451,7 +451,7 @@ div.warning a:focus {
   background-color: rgba(0, 0, 0, 0.5);
   opacity: 0;
 
-  transition: opacity 0.2s ease-out;
+  transition: opacity 0.1s ease-out;
 }
 
 .search-modal-backdrop.showing,
