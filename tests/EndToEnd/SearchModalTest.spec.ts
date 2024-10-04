@@ -114,12 +114,12 @@ test('should navigate to selected result page when Enter is pressed', async ({ p
 
     await page.keyboard.press('ArrowDown');
     await page.keyboard.press('Enter');
-    await expect(page).toHaveURL(`${httpHost}/manual/en/function.strpos.php`);
+    await expect(page).toHaveURL(`http://${httpHost}/manual/en/function.strpos.php`);
 });
 
 test('should navigate to search page when Enter is pressed with no selection', async ({ page }) => {
     const modal = await openSearchModal(page);
     await modal.getByRole('textbox').fill('php basics');
     await page.keyboard.press('Enter');
-    await expect(page).toHaveURL(`${httpHost}/search.php?lang=en&q=php%20basics`);
+    await expect(page).toHaveURL(`http://${httpHost}/search.php?lang=en&q=php%20basics`);
 });
