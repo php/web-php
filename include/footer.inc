@@ -125,7 +125,7 @@ if (!empty($_SERVER['BASE_PAGE'])
           type="text"
           id="search-modal-input"
           class="search-modal-input"
-          placeholder="Search PHP docs"
+          placeholder="Search docs"
         />
       </div>
 
