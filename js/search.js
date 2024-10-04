@@ -169,19 +169,20 @@ const initSearchModal = () => {
         });
     }
 
+    const documentWidth = document.documentElement.clientWidth
+    const scrollbarWidth = Math.abs(window.innerWidth - documentWidth)
+
     const show = function () {
-        // Prevent showing the modal if it's already visible
         if (
             backdropElement.classList.contains("show") ||
             backdropElement.classList.contains("showing")
         ) {
             return;
         }
-        // Prevent page from scrolling
-        document.body.style.overflow = "hidden";
 
-        // Reset modal results
+        document.body.style.overflow = "hidden";
         resultsElement.innerHTML = "";
+        document.body.style.paddingRight = `${scrollbarWidth}px`
 
         backdropElement.setAttribute("aria-modal", "true");
         backdropElement.setAttribute("role", "dialog");
@@ -197,18 +198,17 @@ const initSearchModal = () => {
     };
 
     const hide = function () {
-        // Prevent hiding the modal if it's already hidden
         if (!backdropElement.classList.contains("show")) {
             return;
         }
-        // Re-enable page scrolling
-        document.body.style.overflow = "auto";
 
         backdropElement.classList.add("hiding");
         backdropElement.classList.remove("show");
         backdropElement.removeAttribute("aria-modal");
         backdropElement.removeAttribute("role");
         onModalTransitionEnd(() => {
+            document.body.style.overflow = "auto";
+            document.body.style.paddingRight = '0px'
             backdropElement.classList.remove("hiding");
             document.removeEventListener("keydown", focusTrapHandler);
         });
