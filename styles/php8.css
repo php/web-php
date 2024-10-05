@@ -9,6 +9,10 @@
 
 .php8-section_dark {
   background-color: var(--dark-blue-color);
+  /* Trick for darkening the background color, there is no gradient.
+   * Can be refactored once color-mix becomes widely supported.
+   * See https://developer.mozilla.org/en-US/docs/Web/CSS/color_value/color-mix */
+  background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1));
   color: #fff;
 }
 
