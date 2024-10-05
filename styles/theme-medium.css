@@ -245,7 +245,7 @@ div.warning a:focus {
   padding: 0px 12px;
 
   font-size: 16px;
-  color: hsl(231, 100%, 89%);
+  color: hsl(231, 100%, 91%);
   text-decoration: none;
 
   transition: color .15s ease-out;
@@ -279,18 +279,12 @@ div.warning a:focus {
 .navbar-search-btn {
   padding: 8px 12px;
 
-  color: #B4BFF3;
+  color: hsl(230, 72%, 84%);
   text-align: left;
 
   background-color: #404F82;
   border: 1px solid #6A78BE;
   border-radius: 8px;
-}
-
-.navbar-search-btn:hover {
-  border-color: #94A3ED;
-  border-width: 1px;
-  outline: none;
 }
 
 .navbar-backdrop {
@@ -312,16 +306,15 @@ div.warning a:focus {
 .navbar-menu-btn, .navbar-search-btn-mobile {
   padding: 8px;
 
-  color: #D2D9FF;
+  color: hsl(221, 55%, 75%);
 
   cursor: pointer;
 
   background-color: transparent;
   border: 0;
   outline: 0;
-  opacity: .65;
 
-  transition: opacity .25s ease-out;
+  transition: color .25s ease-out;
 }
 
 .navbar-menu-btn:hover,
@@ -356,7 +349,7 @@ div.warning a:focus {
 
 .navbar-release img {
   height: 24px;
-  opacity: .75;
+  opacity: .85;
   transition: opacity .25s ease-out;
 }
 
@@ -510,7 +503,7 @@ div.warning a:focus {
   min-width: 0;
   padding-left: 12px;
 
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: hsl(0, 0%, 25%);
   border-radius: 8px;
 }
 
@@ -522,6 +515,7 @@ div.warning a:focus {
 
 .search-modal-input-icon svg {
   display: block;
+  color: rgba(255, 255, 255, 0.39);
 }
 
 .search-modal-input {
@@ -543,7 +537,8 @@ div.warning a:focus {
 }
 
 .search-modal-input::placeholder {
-  color: rgba(255, 255, 255, 0.5);
+  color: rgba(255, 255, 255, 0.56);
+  opacity: 1;
 }
 
 /* TODO: The icon button styles were copied from the navbar. */
