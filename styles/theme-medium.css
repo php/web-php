@@ -576,6 +576,8 @@ div.warning a:focus {
   height: 100%;
   padding: 0 16px;
   overflow-y: scroll;
+  scrollbar-color: hsl(0, 0%, 50%) var(--dark-grey-color);
+  scrollbar-width: thin;
 }
 
 .search-modal-result {
