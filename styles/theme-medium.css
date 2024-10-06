@@ -266,7 +266,7 @@ div.warning a:focus {
 
 .navbar__search-form,
 .navbar__search-button {
-  display: flex;
+  display: none;
 
   flex-grow: 1;
 
@@ -276,12 +276,6 @@ div.warning a:focus {
   background-color: #404f82;
   border: 1px solid #6a78be;
   border-radius: 8px;
-}
-
-.navbar__search-button {
-  display: none;
-  align-items: center;
-  text-align: left;
 }
 
 .navbar__search-form label {
@@ -470,8 +464,11 @@ div.warning a:focus {
     display: none;
   }
 
+  .navbar__search-form,
   .navbar__search-button {
     display: flex;
+    align-items: center;
+    text-align: left;
   }
 }
 
