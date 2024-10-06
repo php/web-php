@@ -143,15 +143,6 @@ site_header("A Tourist's Guide", ["current" => "help"]);
 </p>
 </div>
 
-<h2 id="svn" class="content-header"><a href="https://svn.php.net/">svn.php.net</a>: Archived SVN Repository</h2>
-
-<p class="content-box">
- The PHP project used to be organized under the SVN revision control system, but
- migrated to <a href="https://github.com/php/">Git</a> (see above) in March 2012.
- The old SVN repository is archived here for posterity, however it's still used for
- i.e. documentation files.
-</p>
-
 <h2 id="wiki" class="content-header"><a href="https://wiki.php.net/">wiki.php.net</a>: The PHP Wiki</h2>
 
 <p class="content-box">
@@ -184,10 +175,8 @@ $SIDEBAR = <<<SIDEBAR_DATA
 <p class='panel'><a href="#pecl">The PHP Extension Community Library</a></p>
 <p class='panel'><a href="#bugs">Bug Database</a></p>
 <p class='panel'><a href="#doc">Documentation collaboration</a></p>
-<p class='panel'><a href="#docs">Documentation dev server</a></p>
 <p class='panel'><a href="#qa">Quality Assurance Team</a></p>
 <p class='panel'><a href="#git">Git Repository</a></p>
-<p class='panel'><a href="#svn">Archived SVN Repository</a></p>
 <p class='panel'><a href="#wiki">The PHP Wiki</a></h2>
 <p class='panel'><a href="#windows">PHP for Windows</a></h2>
 <p class='panel'><a href="#people">The PHP Developers Profiles</a></h2>
