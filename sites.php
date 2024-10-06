@@ -175,7 +175,6 @@ $SIDEBAR = <<<SIDEBAR_DATA
 <p class='panel'><a href="#pecl">The PHP Extension Community Library</a></p>
 <p class='panel'><a href="#bugs">Bug Database</a></p>
 <p class='panel'><a href="#doc">Documentation collaboration</a></p>
-<p class='panel'><a href="#docs">Documentation dev server</a></p>
 <p class='panel'><a href="#qa">Quality Assurance Team</a></p>
 <p class='panel'><a href="#git">Git Repository</a></p>
 <p class='panel'><a href="#wiki">The PHP Wiki</a></h2>
