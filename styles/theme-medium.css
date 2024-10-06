@@ -622,6 +622,7 @@ div.warning a:focus {
   height: 100%;
   padding: 0 16px;
   overflow-y: scroll;
+
   scrollbar-color: hsl(0, 0%, 50%) var(--dark-grey-color);
   scrollbar-width: thin;
 }
@@ -726,11 +727,15 @@ div.warning a:focus {
     padding: 18px 20px;
   }
 
-  .search-modal-helper-key {
+  .search-modal-helper-text kbd {
     display: inline-block;
+
     padding: 0px 4px;
+
+    font-family: inherit;
+
     background-color: rgba(255, 255, 255, 0.1);
-    border-radius: 4px
+    border-radius: 4px;
   }
 }
 /* }}} */

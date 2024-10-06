@@ -143,12 +143,12 @@ if (!empty($_SERVER['BASE_PAGE'])
     ></div>
     <div class="search-modal-helper-text">
       <div>
-        <span class="search-modal-helper-key">↑ ↓</span> to navigate •
-        <span class="search-modal-helper-key">Enter</span> to select •
-        <span class="search-modal-helper-key">Esc</span> to close
+        <kbd>↑ ↓</kbd> to navigate •
+        <kbd>Enter</kbd> to select •
+        <kbd>Esc</kbd> to close
       </div>
       <div>
-        Press <span class="search-modal-helper-key">Enter</span> without
+        Press <kbd>Enter</kbd> without
         selection to search using Google
       </div>
     </div>
