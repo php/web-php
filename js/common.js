@@ -13,7 +13,7 @@ var PHP_NET = {};
 PHP_NET.HEADER_HEIGHT = 64;
 
 Mousetrap.bind('up up down down left right left right b a enter', function () {
-    $(".brand img").attr("src", "/images/php_konami.gif");
+    $(".navbar__brand img").attr("src", "/images/php_konami.gif");
     window.scrollTo(0, 0);
 });
 Mousetrap.bind("?", function () {
@@ -304,7 +304,7 @@ Mousetrap.bind("I space l o v e space P H P enter", function (e) {
 });
 Mousetrap.bind("l o g o enter", function (e) {
     var time = new Date().getTime();
-    $(".brand img").attr("src", "/images/logo.php?refresh&time=" + time);
+    $(".navbar__brand img").attr("src", "/images/logo.php?refresh&time=" + time);
 });
 Mousetrap.bind("u n r e a d a b l e enter", function (e) {
     document.cookie = 'MD=; path=/; expires=Thu, 01 Jan 1970 00:00:00 GMT';
@@ -459,10 +459,10 @@ $(document).ready(function () {
     });
 
     /*{{{ 2024 Navbar */
-    const offcanvasElement = document.getElementById("navbar-offcanvas");
+    const offcanvasElement = document.getElementById("navbar__offcanvas");
     const offcanvasSelectables =
         offcanvasElement.querySelectorAll("input, button, a");
-    const backdropElement = document.getElementById("navbar-backdrop");
+    const backdropElement = document.getElementById("navbar__backdrop");
 
     // Focus trap for offcanvas nav
     const focusTrapHandler = (event) => {
@@ -511,11 +511,11 @@ $(document).ready(function () {
     };
 
     document
-        .getElementById("navbar-menu-btn-open")
+        .getElementById("navbar__open-button")
         .addEventListener("click", openOffcanvasNav);
 
     document
-        .getElementById("navbar-menu-btn-close")
+        .getElementById("navbar__close-button")
         .addEventListener("click", closeOffcanvasNav);
 
     /*}}}*/

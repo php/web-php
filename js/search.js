@@ -138,10 +138,10 @@ const initPHPSearch = async (language) => {
 };
 
 const initSearchModal = () => {
-    const backdropElement = document.getElementById("search-modal-backdrop");
+    const backdropElement = document.getElementById("search-modal__backdrop");
     const modalElement = document.getElementById("search-modal");
-    const resultsElement = document.getElementById("search-modal-results");
-    const inputElement = document.getElementById("search-modal-input");
+    const resultsElement = document.getElementById("search-modal__results");
+    const inputElement = document.getElementById("search-modal__input");
 
     // Focus trap
     const focusTrapHandler = (event) => {
@@ -215,12 +215,12 @@ const initSearchModal = () => {
     };
 
     // Hide fallback search form
-    document.querySelector(".navbar-search-form").style.display = "none";
-    document.querySelector(".navbar-search-btn").style.removeProperty("display");
+    document.querySelector(".navbar__search-form").style.display = "none";
+    document.querySelector(".navbar__search-button").style.removeProperty("display");
 
     // Open when the search button is clicked
     document
-        .querySelectorAll(".navbar-search-btn, .navbar-search-btn-mobile")
+        .querySelectorAll(".navbar__search-button, .navbar__search-button-mobile")
         .forEach((button) => button.addEventListener("click", show));
 
     // Open when / is pressed
@@ -233,7 +233,7 @@ const initSearchModal = () => {
 
     // Close when the close button is clicked
     document
-        .querySelector(".search-modal-close-btn")
+        .querySelector(".search-modal__close")
         .addEventListener("click", hide);
 
     // Close when the escape key is pressed
@@ -258,15 +258,15 @@ const initSearchUI = ({ searchCallback, language, limit = 30 }) => {
     // https://pictogrammers.com/library/mdi/icon/file-document-outline/
     const DOCUMENT_ICON = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6,2A2,2 0 0,0 4,4V20A2,2 0 0,0 6,22H18A2,2 0 0,0 20,20V8L14,2H6M6,4H13V9H18V20H6V4M8,12V14H16V12H8M8,16V18H13V16H8Z" /></svg>';
 
-    const resultsElement = document.getElementById("search-modal-results");
-    const inputElement = document.getElementById("search-modal-input");
+    const resultsElement = document.getElementById("search-modal__results");
+    const inputElement = document.getElementById("search-modal__input");
     let selectedIndex = -1;
 
     /**
      * Update the selected result in the results container.
      */
     const updateSelectedResult = () => {
-        const results = resultsElement.querySelectorAll(".search-modal-result");
+        const results = resultsElement.querySelectorAll(".search-modal__result");
         results.forEach((result, index) => {
             const isSelected = index === selectedIndex;
             result.setAttribute("aria-selected", isSelected ? "true" : "false");
@@ -310,18 +310,18 @@ const initSearchUI = ({ searchCallback, language, limit = 30 }) => {
             resultsHtml += `
                 <a
                     href="${link}"
-                    class="search-modal-result"
+                    class="search-modal__result"
                     role="option"
-                    aria-labelledby="search-modal-result-name-${i}"
-                    aria-describedby="search-modal-result-desc-${i}"
+                    aria-labelledby="search-modal__result-name-${i}"
+                    aria-describedby="search-modal__result-description-${i}"
                     aria-selected="false"
                 >
-                    <div class="search-modal-result-icon">${icon}</div>
-                    <div class="search-modal-result-main">
-                        <div id="search-modal-result-name-${i}" class="search-modal-result-name">
+                    <div class="search-modal__result-icon">${icon}</div>
+                    <div class="search-modal__result-content">
+                        <div id="search-modal__result-name-${i}" class="search-modal__result-name">
                             ${escape(item.name)}
                         </div>
-                        <div id="search-modal-result-desc-${i}" class="search-modal-result-desc">
+                        <div id="search-modal__result-description-${i}" class="search-modal__result-description">
                             ${escape(description)}
                         </div>
                     </div>
@@ -342,7 +342,7 @@ const initSearchUI = ({ searchCallback, language, limit = 30 }) => {
 
     const handleKeyDown = (event) => {
         const resultsElements =
-            resultsElement.querySelectorAll(".search-modal-result");
+            resultsElement.querySelectorAll(".search-modal__result");
 
         switch (event.key) {
             case "ArrowDown":

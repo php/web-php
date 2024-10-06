@@ -195,7 +195,7 @@ div.warning a:focus {
   box-sizing: border-box;
 }
 
-.navbar-inner {
+.navbar__inner {
   display: flex;
   height: 64px;
   padding: 0px 16px;
@@ -211,22 +211,22 @@ div.warning a:focus {
   display: block;
 }
 
-.navbar .brand {
+.navbar .navbar__brand {
   display: flex;
   align-items: center;
 }
 
-.navbar .brand img {
+.navbar .navbar__brand img {
   height: 40px;
 }
 
-.navbar-nav {
+.navbar__nav {
   display: flex;
   margin: 0;
   margin-left: 24px;
 }
 
-.navbar-nav li {
+.navbar__nav li {
   display: block;
   list-style: none;
 }
@@ -236,7 +236,7 @@ div.warning a:focus {
   border-bottom: none;
 }
 
-.navbar-nav a {
+.navbar__nav a {
   display: flex;
 
   align-items: center;
@@ -251,21 +251,21 @@ div.warning a:focus {
   transition: color 0.15s ease-out;
 }
 
-.navbar-nav li.active {
+.navbar__nav li.active {
   background-color: rgba(0, 0, 0, 0.1);
 }
 
-.navbar-nav li.active a,
-.navbar-nav a:hover {
+.navbar__nav li.active a,
+.navbar__nav a:hover {
   color: white;
 }
 
-.navbar-offcanvas {
+.navbar__offcanvas {
   display: flex;
 }
 
-.navbar-search-form,
-.navbar-search-btn {
+.navbar__search-form,
+.navbar__search-button {
   display: flex;
 
   flex-grow: 1;
@@ -278,33 +278,33 @@ div.warning a:focus {
   border-radius: 8px;
 }
 
-.navbar-search-btn {
+.navbar__search-button {
   display: none;
   align-items: center;
   text-align: left;
 }
 
-.navbar-search-form label {
+.navbar__search-form label {
   display: flex;
   align-items: center;
 }
 
-.navbar-search-form svg,
-.navbar-search-btn svg {
+.navbar__search-form svg,
+.navbar__search-button svg {
   width: 24px;
   height: 24px;
   margin-right: 8px;
   color: hsl(225, 41%, 69%);
 }
 
-.navbar-search-form:focus-within,
-.navbar-search-btn:hover {
+.navbar__search-form:focus-within,
+.navbar__search-button:hover {
   border-color: #94a3ed;
   border-width: 1px;
   outline: none;
 }
 
-.navbar-search-input {
+.navbar__search-input {
   width: 100%;
   padding: 0;
 
@@ -314,24 +314,24 @@ div.warning a:focus {
   border: none;
 }
 
-.navbar-search-input:focus-visible {
+.navbar__search-input:focus-visible {
   outline: none;
 }
 
-.navbar-search-input::placeholder,
-.navbar-search-btn {
+.navbar__search-input::placeholder,
+.navbar__search-button {
   color: hsla(230, 72%, 84%);
   opacity: 1;
 }
 
-.navbar-right {
+.navbar__right {
   display: flex;
   flex-grow: 1;
   justify-content: end;
   padding: 12px 0px;
 }
 
-.navbar-backdrop {
+.navbar__backdrop {
   position: fixed;
   top: 0;
   left: 0;
@@ -347,8 +347,8 @@ div.warning a:focus {
   opacity: 0.25;
 }
 
-.navbar-menu-btn,
-.navbar-search-btn-mobile {
+.navbar__menu-button,
+.navbar__search-button-mobile {
   padding: 8px;
 
   color: hsl(221, 55%, 75%);
@@ -362,45 +362,46 @@ div.warning a:focus {
   transition: color 0.25s ease-out;
 }
 
-.navbar-menu-btn:hover,
-.navbar-menu-btn:focus,
-.navbar-search-btn-mobile:hover,
-.navbar-search-btn-mobile:focus {
+.navbar__menu-button:hover,
+.navbar__menu-button:focus,
+.navbar__search-button-mobile:hover,
+.navbar__search-button-mobile:focus {
   color: white;
   opacity: 1;
 }
 
-.navbar-menu-btn svg {
+.navbar__menu-button svg {
   display: block;
   width: 24px;
   fill: currentColor;
 }
 
-.navbar-search-btn-mobile svg {
+.navbar__search-button-mobile svg {
   display: block;
   width: 24px;
   stroke: currentColor;
 }
 
-.navbar-menu-btn-open {
+.navbar__open-button {
   margin-right: -8px;
 }
 
-.navbar-menu-btn-close {
+.navbar__close-button {
   position: absolute;
   top: 13px;
   right: 12px;
 }
 
-.navbar-release img {
+.navbar__release img {
   height: 24px;
   opacity: 0.85;
   transition: opacity 0.25s ease-out;
 }
 
-.navbar-release:hover img,
-.navbar-release a:focus img,
-.navbar-release.active img {
+.navbar__release:hover img,
+.navbar__release a:focus img,
+/* TODO: Extract native as BEM modifier */
+.navbar__release.active img {
   opacity: 1;
 }
 
@@ -410,7 +411,7 @@ div.warning a:focus {
     position: relative;
   }
 
-  .navbar-offcanvas {
+  .navbar__offcanvas {
     position: fixed;
     top: 0;
     right: 0;
@@ -433,56 +434,56 @@ div.warning a:focus {
     transform: translateX(100%);
   }
 
-  .navbar-offcanvas.show {
+  .navbar__offcanvas.show {
     display: flex;
     transform: translateX(0);
   }
 
-  .navbar-nav {
+  .navbar__nav {
     flex-direction: column;
     order: 1;
     margin-top: 40px;
     margin-left: 0;
   }
 
-  .navbar-nav li.active {
+  .navbar__nav li.active {
     background-color: transparent;
   }
 
-  .navbar-nav a {
+  .navbar__nav a {
     padding: 16px 0;
     font-size: 18px;
   }
 
-  .navbar-search-btn {
+  .navbar__search-button {
     display: none;
   }
 
-  .navbar-backdrop.show {
+  .navbar__backdrop.show {
     display: block;
   }
 }
 
 @media (min-width: 992px) {
-  .navbar-menu-btn,
-  .navbar-search-btn-mobile {
+  .navbar__menu-button,
+  .navbar__search-button-mobile {
     display: none;
   }
 
-  .navbar-search-btn {
+  .navbar__search-button {
     display: flex;
   }
 }
 
 @media (min-width: 1200px) {
-  .navbar-nav a {
+  .navbar__nav a {
     padding: 8px 16px;
   }
 }
 /* }}} */
 
 /* {{{ Search modal */
-.search-modal-backdrop {
+.search-modal__backdrop {
   position: fixed;
   top: 0;
   right: 0;
@@ -500,13 +501,13 @@ div.warning a:focus {
   transition: opacity 0.1s ease-out;
 }
 
-.search-modal-backdrop.showing,
-.search-modal-backdrop.show {
+.search-modal__backdrop.showing,
+.search-modal__backdrop.show {
   visibility: visible;
   opacity: 1;
 }
 
-.search-modal-backdrop.hiding {
+.search-modal__backdrop.hiding {
   visibility: visible;
   opacity: 0;
 }
@@ -533,13 +534,13 @@ div.warning a:focus {
   outline-offset: 2px;
 }
 
-.search-modal-header {
+.search-modal__header {
   display: flex;
   align-items: center;
   padding: 10px 16px;
 }
 
-.search-modal-form {
+.search-modal__form {
   display: flex;
 
   flex-grow: 1;
@@ -553,18 +554,18 @@ div.warning a:focus {
   border-radius: 8px;
 }
 
-.search-modal-input-icon {
+.search-modal__input-icon {
   display: block;
   flex-shrink: 0;
   width: 24px;
 }
 
-.search-modal-input-icon svg {
+.search-modal__input-icon svg {
   display: block;
   color: rgba(255, 255, 255, 0.39);
 }
 
-.search-modal-input {
+.search-modal__input {
   flex-grow: 1;
 
   min-width: 0;
@@ -577,19 +578,19 @@ div.warning a:focus {
   border: none;
 }
 
-.search-modal-input:focus {
+.search-modal__input:focus {
   border-width: 1px;
   outline: none;
 }
 
-.search-modal-input::placeholder {
+.search-modal__input::placeholder {
   color: rgba(255, 255, 255, 0.56);
   opacity: 1;
 }
 
 /* TODO: The icon button styles were copied from the navbar. */
 /* We should refactor this into a shared component when possible. */
-.search-modal-close-btn {
+.search-modal__close {
   padding: 8px;
   margin-right: -8px; /* Compensate for button padding */
   margin-left: 8px;
@@ -606,19 +607,19 @@ div.warning a:focus {
   transition: opacity 0.25s ease-out;
 }
 
-.search-modal-close-btn svg {
+.search-modal__close svg {
   display: block;
   width: 24px;
   fill: currentColor;
 }
 
-.search-modal-close-btn:hover,
-.search-modal-close-btn:focus {
+.search-modal__close:hover,
+.search-modal__close:focus {
   color: white;
   opacity: 1;
 }
 
-.search-modal-results {
+.search-modal__results {
   height: 100%;
   padding: 0 16px;
   overflow-y: scroll;
@@ -627,7 +628,7 @@ div.warning a:focus {
   scrollbar-width: thin;
 }
 
-.search-modal-result {
+.search-modal__result {
   display: flex;
 
   align-items: center;
@@ -641,20 +642,20 @@ div.warning a:focus {
   border-radius: 0.5rem;
 }
 
-.search-modal-result:hover {
+.search-modal__result:hover {
   background-color: var(--dark-blue-color);
 }
 
-.search-modal-result[aria-selected="true"] {
+.search-modal__result[aria-selected="true"] {
   background-color: var(--dark-magenta-color);
 }
 
-.search-modal-result-main {
+.search-modal__result-content {
   flex-grow: 1;
   min-width: 0; /* Allow text truncation */
 }
 
-.search-modal-result-name {
+.search-modal__result-name {
   margin-bottom: 6px;
   overflow: hidden;
 
@@ -663,11 +664,11 @@ div.warning a:focus {
   white-space: nowrap;
 }
 
-.search-modal-result:hover .search-modal-result-name {
+.search-modal__result:hover .search-modal__result-name {
   color: white;
 }
 
-.search-modal-result-desc {
+.search-modal__result-description {
   overflow: hidden;
 
   font-size: 14px;
@@ -676,22 +677,22 @@ div.warning a:focus {
   white-space: nowrap;
 }
 
-.search-modal-result:hover .search-modal-result-desc {
+.search-modal__result:hover .search-modal__result-description {
   color: white;
   opacity: 0.6;
 }
 
-.search-modal-result-icon {
+.search-modal__result-icon {
   margin-right: 12px;
 }
 
-.search-modal-result-icon svg {
+.search-modal__result-icon svg {
   display: block;
   width: 24px;
   fill: hsla(0, 0%, 100%, 0.3);
 }
 
-.search-modal-helper-text {
+.search-modal__helper-text {
   display: none;
   padding: 10px 16px;
   font-size: 14px;
@@ -705,29 +706,29 @@ div.warning a:focus {
     border-radius: 16px;
   }
 
-  .search-modal-header {
+  .search-modal__header {
     padding: 18px 20px;
   }
 
-  .search-modal-input {
+  .search-modal__input {
     height: 52px;
     font-size: 18px;
   }
 
-  .search-modal-close-btn {
+  .search-modal__close {
     margin-right: -10px; /* Compensate for button padding */
   }
 
-  .search-modal-results {
+  .search-modal__results {
     padding: 0 20px;
   }
 
-  .search-modal-helper-text {
+  .search-modal__helper-text {
     display: block;
     padding: 18px 20px;
   }
 
-  .search-modal-helper-text kbd {
+  .search-modal__helper-text kbd {
     display: inline-block;
 
     padding: 0px 4px;

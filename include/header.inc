@@ -95,8 +95,8 @@ if (!isset($config["languages"])) {
 <body class="<?php echo $curr; ?> <?php echo $classes; ?>">
 
 <nav class="navbar navbar-fixed-top">
-  <div class="navbar-inner">
-    <a href="/" aria-label="PHP Home" class="brand">
+  <div class="navbar__inner">
+    <a href="/" aria-label="PHP Home" class="navbar__brand">
       <img
         src="/images/logos/php-logo-white.svg"
         aria-hidden="true"
@@ -106,18 +106,18 @@ if (!isset($config["languages"])) {
     </a>
 
     <div
-      id="navbar-offcanvas"
+      id="navbar__offcanvas"
       tabindex="-1"
-      class="navbar-offcanvas"
+      class="navbar__offcanvas"
       aria-label="Menu"
     >
       <button
-        id="navbar-menu-btn-close"
-        class="navbar-menu-btn navbar-menu-btn-close"
+        id="navbar__close-button"
+        class="navbar__menu-button navbar__close-button"
       >
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z" /></svg>
       </button>
-      <ul class="navbar-nav">
+      <ul class="navbar__nav">
         <li class="<?= $curr == "downloads" ? "active" : ""; ?>">
           <a href="/downloads">Downloads</a>
         </li>
@@ -130,7 +130,7 @@ if (!isset($config["languages"])) {
         <li class="<?= $curr == "help" ? "active" : ""; ?>">
           <a href="/support">Help</a>
         </li>
-        <li class="navbar-release <?= $curr === "php8" ? "active" : ""; ?>">
+        <li class="navbar__release <?= $curr === "php8" ? "active" : ""; ?>">
           <a href="/releases/8.3/index.php">
             <img src="/images/php8/logo_php8_3.svg" alt="php8.3">
           </a>
@@ -138,39 +138,39 @@ if (!isset($config["languages"])) {
       </ul>
     </div>
 
-    <div class="navbar-right">
+    <div class="navbar__right">
         <form
           action="/search.php"
-          class="navbar-search-form"
+          class="navbar__search-form"
         >
           <input type="hidden" name="show" value="quickref">
-          <label for="navbar-search-input" aria-label="Search docs">
+          <label for="navbar__search-input" aria-label="Search docs">
             <!-- https://feathericons.com search -->
             <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" width="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
           </label>
           <input
             type="search"
             name="pattern"
-            id="navbar-search-input"
-            class="navbar-search-input"
+            id="navbar__search-input"
+            class="navbar__search-input"
             placeholder="Search docs"
             accesskey="s"
           >
         </form>
-        <button class="navbar-search-btn" style="display: none;">
+        <button class="navbar__search-button" style="display: none;">
           <!-- https://feathericons.com search -->
           <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" width="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
           Search docs
         </button>
 
-        <button aria-label="Search docs" class="navbar-search-btn-mobile">
+        <button aria-label="Search docs" class="navbar__search-button-mobile">
           <!-- https://feathericons.com search -->
           <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" width="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
         </button>
         <button
-          id="navbar-menu-btn-open"
+          id="navbar__open-button"
           aria-label="Menu"
-          class="navbar-menu-btn navbar-menu-btn-open"
+          class="navbar__menu-button navbar__open-button"
         >
           <!-- https://pictogrammers.com/library/mdi/icon/menu/ -->
           <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" viewBox="0 0 24 24"><path d="M3,6H21V8H3V6M3,11H21V13H3V11M3,16H21V18H3V16Z" /></svg>
@@ -179,8 +179,8 @@ if (!isset($config["languages"])) {
     </div>
 
     <div
-      id="navbar-backdrop"
-      class="navbar-backdrop"
+      id="navbar__backdrop"
+      class="navbar__backdrop"
     ></div>
   </div>
 

@@ -15,14 +15,14 @@ const openSearchModal = async (page) => {
     const modal = await page.getByRole('dialog', { name: 'Search modal' });
 
     // Wait for the modal animation to finish
-    await expect(page.locator('#search-modal-backdrop.show')).not.toHaveClass('showing');
+    await expect(page.locator('#search-modal__backdrop.show')).not.toHaveClass('showing');
 
     expect(modal).toBeVisible();
     return modal;
 }
 
 const expectModalToBeHidden = async (page, modal) => {
-    await expect(page.locator('#search-modal-backdrop')).not.toHaveClass(['show', 'hiding']);
+    await expect(page.locator('#search-modal__backdrop')).not.toHaveClass(['show', 'hiding']);
     await expect(modal).toBeHidden();
 }
 
@@ -78,7 +78,7 @@ test('should close search modal when Escape key is pressed', async ({ page }) =>
 
 test('should close search modal when clicking outside of it', async ({ page }) => {
     const modal = await openSearchModal(page);
-    await page.click('#search-modal-backdrop', { position: { x: 10, y: 10 } });
+    await page.click('#search-modal__backdrop', { position: { x: 10, y: 10 } });
     await expectModalToBeHidden(page, modal);
 });
 
