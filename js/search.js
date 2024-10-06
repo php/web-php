@@ -214,6 +214,10 @@ const initSearchModal = () => {
         });
     };
 
+    // Hide fallback search form
+    document.querySelector(".navbar-search-form").style.display = "none";
+    document.querySelector(".navbar-search-btn").style.removeProperty("display");
+
     // Open when the search button is clicked
     document
         .querySelectorAll(".navbar-search-btn, .navbar-search-btn-mobile")

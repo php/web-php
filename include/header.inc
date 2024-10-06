@@ -139,11 +139,33 @@ if (!isset($config["languages"])) {
     </div>
 
     <div class="navbar-right">
-        <button class="navbar-search-btn">Search docs</button>
+        <form
+          action="/search.php"
+          class="navbar-search-form"
+        >
+          <input type="hidden" name="show" value="quickref">
+          <label for="navbar-search-input" aria-label="Search docs">
+            <!-- https://feathericons.com search -->
+            <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" width="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+          </label>
+          <input
+            type="search"
+            name="pattern"
+            id="navbar-search-input"
+            class="navbar-search-input"
+            placeholder="Search docs"
+            accesskey="s"
+          >
+        </form>
+        <button class="navbar-search-btn" style="display: none;">
+          <!-- https://feathericons.com search -->
+          <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" width="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+          Search docs
+        </button>
 
         <button aria-label="Search docs" class="navbar-search-btn-mobile">
           <!-- https://feathericons.com search -->
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" width="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
         </button>
         <button
           id="navbar-menu-btn-open"
@@ -151,7 +173,7 @@ if (!isset($config["languages"])) {
           class="navbar-menu-btn navbar-menu-btn-open"
         >
           <!-- https://pictogrammers.com/library/mdi/icon/menu/ -->
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3,6H21V8H3V6M3,11H21V13H3V11M3,16H21V18H3V16Z" /></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" viewBox="0 0 24 24"><path d="M3,6H21V8H3V6M3,11H21V13H3V11M3,16H21V18H3V16Z" /></svg>
         </button>
       </div>
     </div>
