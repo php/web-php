@@ -49,7 +49,7 @@ test('should disable window scroll when search modal is open', async ({ page }) 
 
 test('should focus on search input when modal is opened', async ({ page }) => {
     const modal = await openSearchModal(page);
-    const searchInput = modal.getByRole('textbox', { name: 'Search PHP docs' });
+    const searchInput = modal.getByRole('searchbox', { name: 'Search docs' });
     await expect(searchInput).toBeFocused();
     await expect(searchInput).toHaveValue('');
 });
@@ -84,7 +84,7 @@ test('should close search modal when clicking outside of it', async ({ page }) =
 
 test('should perform search and display results', async ({ page }) => {
     const modal = await openSearchModal(page);
-    await modal.getByRole('textbox').fill('array');
+    await modal.getByRole('searchbox').fill('array');
     await expect(
         await modal.getByRole('listbox', { name: 'Search results' }).getByRole('option')
     ).toHaveCount(30);
@@ -92,7 +92,7 @@ test('should perform search and display results', async ({ page }) => {
 
 test('should navigate through search results with arrow keys', async ({ page }) => {
     const modal = await openSearchModal(page);
-    await modal.getByRole('textbox').fill('strlen');
+    await modal.getByRole('searchbox').fill('strlen');
     await expectOption(modal, /^strlen$/);
 
     await page.keyboard.press('ArrowDown');
@@ -109,7 +109,7 @@ test('should navigate through search results with arrow keys', async ({ page }) 
 
 test('should navigate to selected result page when Enter is pressed', async ({ page }) => {
     const modal = await openSearchModal(page);
-    await modal.getByRole('textbox').fill('strpos');
+    await modal.getByRole('searchbox').fill('strpos');
     await expectOption(modal, /^strpos$/);
 
     await page.keyboard.press('ArrowDown');
@@ -119,7 +119,7 @@ test('should navigate to selected result page when Enter is pressed', async ({ p
 
 test('should navigate to search page when Enter is pressed with no selection', async ({ page }) => {
     const modal = await openSearchModal(page);
-    await modal.getByRole('textbox').fill('php basics');
+    await modal.getByRole('searchbox').fill('php basics');
     await page.keyboard.press('Enter');
     await expect(page).toHaveURL(`http://${httpHost}/search.php?lang=en&q=php%20basics`);
 });

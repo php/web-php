@@ -7,7 +7,7 @@ if (typeof httpHost !== 'string') {
 }
 
 test.beforeEach(async ({ page }) => {
-    await page.goto(`${httpHost}`);
+    await page.goto(httpHost);
 });
 
 test.use({ javaScriptEnabled: false });
