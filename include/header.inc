@@ -99,7 +99,7 @@ if (!isset($config["languages"])) {
     <a href="/" aria-label="PHP Home" class="brand">
       <img
         src="/images/logos/php-logo-white.svg"
-        alt="PHP Logo"
+        aria-hidden="true"
         width="80"
         height="40"
       >
