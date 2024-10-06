@@ -16,7 +16,7 @@ $options = [];
 if (isset($_POST['my_lang'], $langs[$_POST['my_lang']])) {
 
     // Set the language preference
-    UserPreferences::$languageCode = $_POST['my_lang'];
+    $userPreferences->languageCode = $_POST['my_lang'];
 
     // Add this as first option, selected
     $options[] = '<option value="' . $_POST['my_lang'] . '" selected>' .
@@ -27,14 +27,14 @@ if (isset($_POST['my_lang'], $langs[$_POST['my_lang']])) {
 }
 
 // We have received a cookie and it is an available language
-elseif (isset($langs[myphpnet_language()])) {
+elseif (isset($langs[$userPreferences->languageCode])) {
 
     // Add this as first option, selected
-    $options[] = '<option value="' . myphpnet_language() . '" selected>' .
-                 $langs[myphpnet_language()] . "</option>\n";
+    $options[] = '<option value="' . $userPreferences->languageCode . '" selected>' .
+                 $langs[$userPreferences->languageCode] . "</option>\n";
 
     // Remove, so it is not listed two times
-    unset($langs[myphpnet_language()]);
+    unset($langs[$userPreferences->languageCode]);
 }
 
 // We have no cookie and no form submitted
@@ -54,18 +54,18 @@ $langpref = "<select id=\"form-my_lang\" name=\"my_lang\">\n" .
 
 // Save URL shortcut fallback setting
 if (isset($_POST['urlsearch'])) {
-    myphpnet_urlsearch($_POST['urlsearch']);
+    $userPreferences->setUrlSearchType($_POST['urlsearch']);
 }
 
 if (isset($_POST["showug"])) {
-    myphpnet_showug($_POST["showug"] === "enable");
+    $userPreferences->setIsUserGroupTipsEnabled($_POST["showug"] === "enable");
 }
 
 // Prepare mirror array
 $mirror_sites = $MIRRORS;
 $mirror_sites["NONE"] = [7 => MIRROR_OK];
 
-myphpnet_save();
+$userPreferences->save();
 
 site_header("My PHP.net", ["current" => "community"]);
 ?>
@@ -177,7 +177,7 @@ if (i2c_valid_country()) {
 <div class="indent">
  Your setting: <input id="form-urlsearch-quickref" type="radio" name="urlsearch" value="quickref"
 <?php
-$type = myphpnet_urlsearch();
+$type = $userPreferences->searchType;
 if ($type === UserPreferences::URL_NONE || $type === UserPreferences::URL_FUNC) {
     echo ' checked="checked"';
 }
@@ -196,8 +196,8 @@ if ($type === UserPreferences::URL_MANUAL) {
 We are experimenting with listing nearby user groups. This feature is highly experimental
 and will very likely change a lot and be broken at times.
 </p>
-<label for="showugenable">Enable UG tips</label> <input type="radio" name="showug" id="showugenable" value="enable" <?php echo myphpnet_showug() ? "checked=checked" : "" ?>><br>
-<label for="showugdisable">Disable UG tips</label> <input type="radio" name="showug" id="showugdisable" value="disable" <?php echo myphpnet_showug() ? "" : "checked=checked" ?>>
+<label for="showugenable">Enable UG tips</label> <input type="radio" name="showug" id="showugenable" value="enable" <?php echo $userPreferences->isUserGroupTipsEnabled ? "checked=checked" : "" ?>><br>
+<label for="showugdisable">Disable UG tips</label> <input type="radio" name="showug" id="showugdisable" value="disable" <?php echo $userPreferences->isUserGroupTipsEnabled ? "" : "checked=checked" ?>>
 
 <p class="center">
  <input type="submit" value="Set All Preferences">

@@ -33,12 +33,12 @@ $_SERVER['STRIPPED_URI'] = htmlspecialchars($_SERVER['REQUEST_URI'], ENT_QUOTES,
 
 // The code is encapsulated in a function,
 // so the variable namespace is not polluted
-list($LANG, $EXPL_LANG, $UA_LANGS) = language_choose_code();
+list($LANG, $EXPL_LANG, $UA_LANGS) = language_choose_code($userPreferences->languageCode);
 
 // Compatibility
 if ($EXPL_LANG == '') { unset($EXPL_LANG); }
 
-function language_choose_code()
+function language_choose_code(string $userLanguageCode)
 {
     // Contains all the languages picked up by the
     // process in priority order (without repeating codes)
@@ -82,8 +82,8 @@ function language_choose_code()
     }
 
     // Honor the users own language setting (if available)
-    if (myphpnet_language()) {
-        language_add(myphpnet_language(), $languages);
+    if ($userLanguageCode !== '') {
+        language_add($userLanguageCode, $languages);
     }
 
     // Specified by the user via the browser's Accept Language setting
