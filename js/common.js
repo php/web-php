@@ -10,10 +10,11 @@ String.prototype.toInt = function () {
 
 var PHP_NET = {};
 
-PHP_NET.HEADER_HEIGHT = 52;
+PHP_NET.HEADER_HEIGHT = 64;
 
 Mousetrap.bind('up up down down left right left right b a enter', function () {
-    $(".brand img").attr("src", "/images/php_konami.gif");
+    $(".navbar__brand img").attr("src", "/images/php_konami.gif");
+    window.scrollTo(0, 0);
 });
 Mousetrap.bind("?", function () {
     $("#trick").slideToggle();
@@ -100,12 +101,10 @@ Mousetrap.bind("b o r k", function () {
     Mousetrap.unbind("b o r k");
 });
 
-var FIXED_HEADER_HEIGHT = 50;
-
 function cycle(to, from) {
     from.removeClass("current");
     to.addClass("current");
-    $.scrollTo(to.offset().top - FIXED_HEADER_HEIGHT);
+    $.scrollTo(to.offset().top);
 }
 
 function getNextOrPreviousSibling(node, forward) {
@@ -253,28 +252,25 @@ function globalsearch(txt) {
     cache = JSON.parse(cache);
 
     if (cache) {
-        for (var type in cache.data) {
-            var elms = cache.data[type].elements;
-            for (var node in elms) {
-                if (elms[node].description.toLowerCase().contains(term) || elms[node].name.toLowerCase().contains(term)) {
-                    $("#goto .results ul").append("<li><a href='/manual/en/" + elms[node].id + ".php'>" + elms[node].name + ": " + elms[node].description + "</a></li>");
-                    if ($("#goto .results ul li") > 30) {
-                        return;
-                    }
+        for (const node of cache.data) {
+            if (
+                node.description.toLowerCase().contains(term) ||
+                node.name.toLowerCase().contains(term)
+            ) {
+                $("#goto .results ul").append(`
+                    <li>
+                        <a href='/manual/en/${node.id}.php'>
+                            ${node.name}: ${node.description}
+                        </a>
+                    </li>`);
+                if ($("#goto .results ul li") > 30) {
+                    return;
                 }
             }
         }
     }
 }
-Mousetrap.bind("/", function (e) {
-    if (e.preventDefault) {
-        e.preventDefault();
-    } else {
-        // internet explorer
-        e.returnValue = false;
-    }
-    $("input[type=search]").focus();
-});
+
 var rotate = 0;
 Mousetrap.bind("r o t a t e enter", function (e) {
     rotate += 90;
@@ -308,7 +304,7 @@ Mousetrap.bind("I space l o v e space P H P enter", function (e) {
 });
 Mousetrap.bind("l o g o enter", function (e) {
     var time = new Date().getTime();
-    $(".brand img").attr("src", "/images/logo.php?refresh&time=" + time);
+    $(".navbar__brand img").attr("src", "/images/logo.php?refresh&time=" + time);
 });
 Mousetrap.bind("u n r e a d a b l e enter", function (e) {
     document.cookie = 'MD=; path=/; expires=Thu, 01 Jan 1970 00:00:00 GMT';
@@ -462,6 +458,68 @@ $(document).ready(function () {
         }
     });
 
+    /*{{{ 2024 Navbar */
+    const offcanvasElement = document.getElementById("navbar__offcanvas");
+    const offcanvasSelectables =
+        offcanvasElement.querySelectorAll("input, button, a");
+    const backdropElement = document.getElementById("navbar__backdrop");
+
+    // Focus trap for offcanvas nav
+    const focusTrapHandler = (event) => {
+        if (event.key != "Tab") {
+            return;
+        }
+
+        const firstElement = offcanvasSelectables[0];
+        const lastElement =
+            offcanvasSelectables[offcanvasSelectables.length - 1];
+
+        if (event.shiftKey) {
+            if (document.activeElement === firstElement) {
+                event.preventDefault();
+                lastElement.focus();
+            }
+        } else if (document.activeElement === lastElement) {
+            event.preventDefault();
+            firstElement.focus();
+        }
+    };
+
+    const openOffcanvasNav = () => {
+        offcanvasElement.classList.add("show");
+        offcanvasElement.setAttribute("aria-modal", "true");
+        offcanvasElement.setAttribute("role", "dialog");
+        offcanvasElement.style.visibility = "visible";
+        backdropElement.classList.add("show");
+        offcanvasSelectables[0].focus();
+        document.addEventListener("keydown", focusTrapHandler);
+    };
+
+    const closeOffcanvasNav = () => {
+        offcanvasElement.classList.remove("show");
+        offcanvasElement.removeAttribute("aria-modal");
+        offcanvasElement.removeAttribute("role");
+        backdropElement.classList.remove("show");
+        document.removeEventListener("keydown", focusTrapHandler);
+        offcanvasElement.addEventListener(
+            "transitionend",
+            () => {
+                offcanvasElement.style.removeProperty("visibility");
+            },
+            { once: true },
+        );
+    };
+
+    document
+        .getElementById("navbar__open-button")
+        .addEventListener("click", openOffcanvasNav);
+
+    document
+        .getElementById("navbar__close-button")
+        .addEventListener("click", closeOffcanvasNav);
+
+    /*}}}*/
+
     /*{{{ Scroll to top */
     (function () {
         var settings = {
@@ -552,13 +610,13 @@ $(document).ready(function () {
     });
     /*}}}*/
 
-    // Search box autocomplete (for browsers that aren't IE <= 8, anyway).
-    if (typeof window.brokenIE === "undefined") {
-        jQuery("#topsearch .search-query").search({
-            language: getLanguage(),
-            limit: 30
-        });
-    }
+    /*{{{Search Modal*/
+    const language = getLanguage();
+    initSearchModal();
+    initPHPSearch(language).then((searchCallback) => {
+        initSearchUI({language, searchCallback, limit: 30});
+    });
+    /*}}}*/
 
     /* {{{ Negative user notes fade-out */
     var usernotes = document.getElementById('usernotes');
