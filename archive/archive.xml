@@ -9,6 +9,7 @@
     <uri>http://php.net/contact</uri>
     <email>php-webmaster@lists.php.net</email>
   </author>
+  <xi:include href="entries/2024-10-10-1.xml"/>
   <xi:include href="entries/2024-09-26-4.xml"/>
   <xi:include href="entries/2024-09-26-3.xml"/>
   <xi:include href="entries/2024-09-26-2.xml"/>
