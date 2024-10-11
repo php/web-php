@@ -464,8 +464,10 @@ $(document).ready(function () {
         offcanvasElement.querySelectorAll("input, button, a");
     const backdropElement = document.getElementById("navbar__backdrop");
 
-    // Focus trap for offcanvas nav
-    const focusTrapHandler = (event) => {
+    const documentWidth = document.documentElement.clientWidth
+    const scrollbarWidth = Math.abs(window.innerWidth - documentWidth)
+
+    const offcanvasFocusTrapHandler = (event) => {
         if (event.key != "Tab") {
             return;
         }
@@ -491,8 +493,14 @@ $(document).ready(function () {
         offcanvasElement.setAttribute("role", "dialog");
         offcanvasElement.style.visibility = "visible";
         backdropElement.classList.add("show");
+        document.body.style.overflow = "hidden";
+        // Disable scroll on the html element as well to prevent the offcanvas
+        // nav from being pushed off screen when the page has horizontal scroll,
+        // like downloads.php has.
+        document.documentElement.style.overflow = "hidden";
+        document.body.style.paddingRight = `${scrollbarWidth}px`
         offcanvasSelectables[0].focus();
-        document.addEventListener("keydown", focusTrapHandler);
+        document.addEventListener("keydown", offcanvasFocusTrapHandler);
     };
 
     const closeOffcanvasNav = () => {
@@ -500,10 +508,13 @@ $(document).ready(function () {
         offcanvasElement.removeAttribute("aria-modal");
         offcanvasElement.removeAttribute("role");
         backdropElement.classList.remove("show");
-        document.removeEventListener("keydown", focusTrapHandler);
+        document.removeEventListener("keydown", offcanvasFocusTrapHandler);
         offcanvasElement.addEventListener(
             "transitionend",
             () => {
+                document.body.style.overflow = "auto";
+                document.documentElement.style.overflow = "auto";
+                document.body.style.paddingRight = '0px'
                 offcanvasElement.style.removeProperty("visibility");
             },
             { once: true },
@@ -511,8 +522,12 @@ $(document).ready(function () {
     };
 
     document
-        .getElementById("navbar__open-button")
-        .addEventListener("click", openOffcanvasNav);
+        .getElementById("navbar__menu-link")
+        .setAttribute("hidden", "true");
+
+    const menuButton = document.getElementById("navbar__menu-button")
+    menuButton.removeAttribute("hidden");
+    menuButton.addEventListener("click", openOffcanvasNav);
 
     document
         .getElementById("navbar__close-button")

@@ -181,6 +181,7 @@ const initSearchModal = () => {
         }
 
         document.body.style.overflow = "hidden";
+        document.documentElement.style.overflow = "hidden";
         resultsElement.innerHTML = "";
         document.body.style.paddingRight = `${scrollbarWidth}px`
 
@@ -208,20 +209,29 @@ const initSearchModal = () => {
         backdropElement.removeAttribute("role");
         onModalTransitionEnd(() => {
             document.body.style.overflow = "auto";
+            document.documentElement.style.overflow = "auto";
             document.body.style.paddingRight = '0px'
             backdropElement.classList.remove("hiding");
             document.removeEventListener("keydown", focusTrapHandler);
         });
     };
 
-    // Hide fallback search form
-    document.querySelector(".navbar__search-form").style.display = "none";
-    document.querySelector(".navbar__search-button").style.removeProperty("display");
+    const searchLink = document.getElementById("navbar__search-link");
+    const searchButtonMobile = document.getElementById("navbar__search-button-mobile");
+    const searchButton = document.getElementById("navbar__search-button");
+
+    // Enhance mobile search
+    searchLink.setAttribute("hidden", "true");
+    searchButtonMobile.removeAttribute("hidden");
+
+    // Enhance desktop search
+    document.querySelector(".navbar__search-form").setAttribute("hidden", "true");
+    searchButton.removeAttribute("hidden");
 
     // Open when the search button is clicked
-    document
-        .querySelectorAll(".navbar__search-button, .navbar__search-button-mobile")
-        .forEach((button) => button.addEventListener("click", show));
+    [searchButton, searchButtonMobile].forEach(
+        (button) => button.addEventListener("click", show)
+    );
 
     // Open when / is pressed
     document.addEventListener("keydown", (event) => {

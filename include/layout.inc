@@ -1,4 +1,7 @@
 <?php
+
+use phpweb\Navigation\NavItem;
+
 $_SERVER['STATIC_ROOT'] = $MYSITE;
 $_SERVER['MYSITE'] = $MYSITE;
 
@@ -479,6 +482,37 @@ META
 function site_footer(array $config = []): void
 {
     require __DIR__ . "/footer.inc";
+}
+
+function get_nav_items(): array {
+  return [
+    new NavItem(
+      name: 'Downloads',
+      href: '/downloads.php',
+      id: 'downloads',
+    ),
+    new NavItem(
+      name: 'Documentation',
+      href: '/docs.php',
+      id: 'docs',
+    ),
+    new NavItem(
+      name: 'Get Involved',
+      href: '/get-involved.php',
+      id: 'community',
+    ),
+    new NavItem(
+      name: 'Help',
+      href: '/support.php',
+      id: 'help',
+    ),
+    new NavItem(
+      name: 'PHP 8.3',
+      href: '/releases/8.3/index.php',
+      id: 'php8',
+      image: '/images/php8/logo_php8_3.svg',
+    )
+  ];
 }
 
 function get_news_changes()

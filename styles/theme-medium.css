@@ -9,6 +9,7 @@ html {
   background-color: var(--background-color);
   background-image: url('/images/bg-texture-00.svg');
   color: var(--background-text-color);
+  scrollbar-color: hsl(0, 0%, 67%) transparent;
 }
 
 #layout-content {
@@ -195,6 +196,11 @@ div.warning a:focus {
   box-sizing: border-box;
 }
 
+.navbar *:focus-visible {
+  outline: 2px solid var(--light-magenta-color);
+  outline-offset: 2px;
+}
+
 .navbar__inner {
   display: flex;
   height: 64px;
@@ -202,21 +208,13 @@ div.warning a:focus {
   margin: 0 auto;
 }
 
-.navbar *:focus-visible {
-  outline: 2px solid var(--light-magenta-color);
-  outline-offset: 2px;
-}
-
-.navbar img {
-  display: block;
-}
-
-.navbar .navbar__brand {
+.navbar__brand {
   display: flex;
   align-items: center;
+  border: none;
 }
 
-.navbar .navbar__brand img {
+.navbar__brand img {
   height: 40px;
 }
 
@@ -226,17 +224,16 @@ div.warning a:focus {
   margin-left: 24px;
 }
 
-.navbar__nav li {
+.navbar__item {
   display: block;
   list-style: none;
 }
 
-.navbar a {
-  display: block;
-  border-bottom: none;
+.navbar [hidden] {
+  display: none;
 }
 
-.navbar__nav a {
+.navbar__link {
   display: flex;
 
   align-items: center;
@@ -245,18 +242,29 @@ div.warning a:focus {
   padding: 0px 12px;
 
   font-size: 16px;
-  color: hsl(231, 100%, 91%);
+  color: #ffffff;
   text-decoration: none;
 
-  transition: color 0.15s ease-out;
+  border-bottom: none;
+
+  transition: color 0.25s ease-out;
 }
 
-.navbar__nav li.active {
+/* TODO: Convert to BEM modifier */
+.navbar__link--active {
   background-color: rgba(0, 0, 0, 0.1);
 }
 
-.navbar__nav li.active a,
-.navbar__nav a:hover {
+.navbar__link,
+.navbar__link:link,
+.navbar__link:visited {
+  color: hsl(231, 100%, 93%);
+}
+
+.navbar__link--active,
+.navbar__link:hover,
+.navbar__link:link:hover,
+.navbar__link:visited:hover {
   color: white;
 }
 
@@ -325,6 +333,10 @@ div.warning a:focus {
   padding: 12px 0px;
 }
 
+.navbar_icon-item--visually-aligned {
+  margin-right: -8px;
+}
+
 .navbar__backdrop {
   position: fixed;
   top: 0;
@@ -341,11 +353,12 @@ div.warning a:focus {
   opacity: 0.25;
 }
 
-.navbar__menu-button,
-.navbar__search-button-mobile {
+.navbar__icon-item,
+.navbar__icon-item:link,
+.navbar__icon-item:visited {
   padding: 8px;
 
-  color: hsl(221, 55%, 75%);
+  color: hsl(222, 80%, 87%);
 
   cursor: pointer;
 
@@ -356,55 +369,27 @@ div.warning a:focus {
   transition: color 0.25s ease-out;
 }
 
-.navbar__menu-button:hover,
-.navbar__menu-button:focus,
-.navbar__search-button-mobile:hover,
-.navbar__search-button-mobile:focus {
+.navbar__icon-item:hover {
   color: white;
   opacity: 1;
 }
 
-.navbar__menu-button svg {
+.navbar__icon-item svg {
   display: block;
-  width: 24px;
-  fill: currentColor;
-}
-
-.navbar__search-button-mobile svg {
-  display: block;
-  width: 24px;
-  stroke: currentColor;
-}
-
-.navbar__open-button {
-  margin-right: -8px;
 }
 
 .navbar__close-button {
   position: absolute;
   top: 13px;
-  right: 12px;
+  right: 16px;
 }
 
 .navbar__release img {
-  height: 24px;
-  opacity: 0.85;
-  transition: opacity 0.25s ease-out;
-}
-
-.navbar__release:hover img,
-.navbar__release a:focus img,
-/* TODO: Extract native as BEM modifier */
-.navbar__release.active img {
-  opacity: 1;
+  height: 22px;
 }
 
 /* We use a desktop-first approach for the offcanvas navigation styles */
 @media (max-width: 992px) {
-  .navbar {
-    position: relative;
-  }
-
   .navbar__offcanvas {
     position: fixed;
     top: 0;
@@ -417,7 +402,7 @@ div.warning a:focus {
 
     width: 240px;
     max-width: 100%;
-    padding: 24px;
+    padding: 24px 0px;
 
     visibility: hidden;
 
@@ -440,12 +425,8 @@ div.warning a:focus {
     margin-left: 0;
   }
 
-  .navbar__nav li.active {
-    background-color: transparent;
-  }
-
-  .navbar__nav a {
-    padding: 16px 0;
+  .navbar__link {
+    padding: 16px 24px;
     font-size: 18px;
   }
 
@@ -453,14 +434,14 @@ div.warning a:focus {
     display: none;
   }
 
+  /* TODO: Convert to BEM modifier */
   .navbar__backdrop.show {
     display: block;
   }
 }
 
 @media (min-width: 992px) {
-  .navbar__menu-button,
-  .navbar__search-button-mobile {
+  .navbar__icon-item {
     display: none;
   }
 
@@ -473,7 +454,7 @@ div.warning a:focus {
 }
 
 @media (min-width: 1200px) {
-  .navbar__nav a {
+  .navbar__link {
     padding: 8px 16px;
   }
 }
@@ -559,7 +540,7 @@ div.warning a:focus {
 
 .search-modal__input-icon svg {
   display: block;
-  color: rgba(255, 255, 255, 0.39);
+  color: hsl(0, 0%, 54%);
 }
 
 .search-modal__input {
@@ -601,7 +582,7 @@ div.warning a:focus {
   outline: 0;
   opacity: 0.65;
 
-  transition: opacity 0.25s ease-out;
+  transition: opacity 0.15s ease-out;
 }
 
 .search-modal__close svg {
@@ -621,7 +602,7 @@ div.warning a:focus {
   padding: 0 16px;
   overflow-y: scroll;
 
-  scrollbar-color: hsl(0, 0%, 50%) var(--dark-grey-color);
+  scrollbar-color: hsl(0, 0%, 67%) transparent;
   scrollbar-width: thin;
 }
 
@@ -736,6 +717,31 @@ div.warning a:focus {
     border-radius: 4px;
   }
 }
+/* }}} */
+
+/* {{{ Lookup form */
+
+.lookup-form {
+  max-width: 540px;
+}
+
+.lookup-form *:focus-visible {
+  outline: 2px solid var(--light-magenta-color);
+}
+
+/* }}} */
+
+/* {{{ Menu */
+
+.menu .menu__item ~ .menu__item {
+  margin-top: 16px;
+}
+
+.menu__link {
+  font-size: 1.25rem;
+  border: none;
+}
+
 /* }}} */
 
 /* {{{ User notes */

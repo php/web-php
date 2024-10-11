@@ -113,69 +113,132 @@ if (!isset($config["languages"])) {
     >
       <button
         id="navbar__close-button"
-        class="navbar__menu-button navbar__close-button"
+        class="navbar__icon-item navbar_icon-item--visually-aligned navbar__close-button"
       >
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z" /></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" viewBox="0 0 24 24" fill="currentColor"><path d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z" /></svg>
       </button>
+
       <ul class="navbar__nav">
-        <li class="<?= $curr == "downloads" ? "active" : ""; ?>">
-          <a href="/downloads">Downloads</a>
-        </li>
-        <li class="<?= $curr == "docs" ? "active" : ""; ?>">
-          <a href="/docs.php">Documentation</a>
-        </li>
-        <li class="<?= $curr == "community" ? "active" : ""; ?>">
-          <a href="/get-involved" >Get Involved</a>
-        </li>
-        <li class="<?= $curr == "help" ? "active" : ""; ?>">
-          <a href="/support">Help</a>
-        </li>
-        <li class="navbar__release <?= $curr === "php8" ? "active" : ""; ?>">
-          <a href="/releases/8.3/index.php">
-            <img src="/images/php8/logo_php8_3.svg" alt="php8.3">
-          </a>
-        </li>
+        <?php foreach (get_nav_items() as $entry): ?>
+          <?php
+            $isActive = $curr == $entry->id;
+            $activeClass = $isActive ? 'navbar__link--active' : '';
+            $releaseClass = $entry->image ? 'navbar__release' : '';
+          ?>
+          <li class="navbar__item">
+              <a
+                href="<?= $entry->href ?>"
+                <?= $isActive ? 'aria-current="page"' : '' ?>
+                class="navbar__link <?= "$activeClass $releaseClass" ?>"
+              >
+                <?php if ($entry->image): ?>
+                  <img src="<?= $entry->image ?>" alt="<?= $entry->name ?>">
+                <?php else: ?>
+                  <?= $entry->name ?>
+                <?php endif; ?>
+              </a>
+          </li>
+        <?php endforeach; ?>
       </ul>
     </div>
 
     <div class="navbar__right">
-        <form
-          action="/search.php"
-          class="navbar__search-form"
-        >
-          <input type="hidden" name="show" value="quickref">
-          <label for="navbar__search-input" aria-label="Search docs">
-            <!-- https://feathericons.com search -->
-            <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" width="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
-          </label>
-          <input
-            type="search"
-            name="pattern"
-            id="navbar__search-input"
-            class="navbar__search-input"
-            placeholder="Search docs"
-            accesskey="s"
+      <?php
+          // https://feathericons.com search
+          $searchIcon = <<<SVG
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            aria-hidden="true"
+            width="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
           >
-        </form>
-        <button class="navbar__search-button" style="display: none;">
-          <!-- https://feathericons.com search -->
-          <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" width="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
-          Search docs
-        </button>
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+          SVG;
 
-        <button aria-label="Search docs" class="navbar__search-button-mobile">
-          <!-- https://feathericons.com search -->
-          <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" width="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
-        </button>
-        <button
-          id="navbar__open-button"
-          aria-label="Menu"
-          class="navbar__menu-button navbar__open-button"
+          // https://pictogrammers.com/library/mdi/icon/menu/
+          $menuIcon = <<<SVG
+          <svg xmlns="http://www.w3.org/2000/svg"
+            aria-hidden="true"
+            width="24"
+            viewBox="0 0 24 24"
+            fill="currentColor"
+          >
+            <path d="M3,6H21V8H3V6M3,11H21V13H3V11M3,16H21V18H3V16Z" />
+          </svg>
+          SVG;
+      ?>
+
+      <!-- Desktop default search -->
+      <form
+        action="/manual-lookup.php"
+        class="navbar__search-form"
+      >
+        <label for="navbar__search-input" aria-label="Search docs">
+          <?= $searchIcon ?>
+        </label>
+        <input
+          type="search"
+          name="pattern"
+          id="navbar__search-input"
+          class="navbar__search-input"
+          placeholder="Search docs"
+          accesskey="s"
         >
-          <!-- https://pictogrammers.com/library/mdi/icon/menu/ -->
-          <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" viewBox="0 0 24 24"><path d="M3,6H21V8H3V6M3,11H21V13H3V11M3,16H21V18H3V16Z" /></svg>
-        </button>
-      </div>
+        <input type="hidden" name="scope" value="quickref">
+      </form>
+
+      <!-- Desktop encanced search -->
+      <button
+        id="navbar__search-button"
+        class="navbar__search-button"
+        hidden
+      >
+        <?= $searchIcon ?>
+        Search docs
+      </button>
+
+      <!-- Mobile default items -->
+      <a
+        id="navbar__search-link"
+        href="/lookup-form.php"
+        aria-label="Search docs"
+        class="navbar__icon-item navbar__search-link"
+      >
+        <?= $searchIcon ?>
+      </a>
+      <a
+        id="navbar__menu-link"
+        href="/menu.php"
+        aria-label="Menu"
+        class="navbar__icon-item navbar_icon-item--visually-aligned navbar_menu-link"
+      >
+        <?= $menuIcon ?>
+      </a>
+
+      <!-- Mobile enhanced items -->
+      <button
+        id="navbar__search-button-mobile"
+        aria-label="Search docs"
+        class="navbar__icon-item navbar__search-button-mobile"
+        hidden
+      >
+        <?= $searchIcon ?>
+      </button>
+      <button
+        id="navbar__menu-button"
+        aria-label="Menu"
+        class="navbar__icon-item navbar_icon-item--visually-aligned"
+        hidden
+      >
+        <?= $menuIcon ?>
+      </button>
     </div>
 
     <div
