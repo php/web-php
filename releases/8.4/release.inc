@@ -47,7 +47,10 @@ common_header(message('common_header', $lang));
                             <<<'PHP'
 class User
 {
-    public function __construct(private string $first, private string $last) {}
+    public function __construct(
+        private string $first,
+        private string $last
+    ) {}
 
     public function setFullName(string $value): string {
         [$this->first, $this->last] = explode(' ', $value, 2);
@@ -70,7 +73,10 @@ PHP
                             <<<'PHP'
 class User
 {
-    public function __construct(private string $first, private string $last) {}
+    public function __construct(
+        private string $first,
+        private string $last
+    ) {}
 
     public string $fullName {
         get {
@@ -104,7 +110,7 @@ class PhpVersion
 }
 
 $phpVersion = new PhpVersion();
-$foo->version = 'PHP 8.4'; // No error
+$phpVersion->version = 'PHP 8.4'; // No error
 PHP
 
                         ); ?>
@@ -122,7 +128,37 @@ class PhpVersion
 }
 
 $phpVersion = new PhpVersion();
-$foo->version = 'PHP 8.3'; // Visibility error
+$phpVersion->version = 'PHP 8.3'; // Visibility error
+PHP
+                        ); ?>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="php8-compare">
+            <h2 class="php8-h2" id="lazy_objects">
+                <?= message('lazy_objects_title', $lang) ?>
+                <a class="php8-rfc" href="https://wiki.php.net/rfc/lazy-objects">RFC</a>
+            </h2>
+            <div class="php8-compare__main">
+                <div class="php8-compare__block example-contents">
+                    <div class="php8-compare__label">PHP &lt; 8.4</div>
+                    <div class="php8-code phpcode">
+                        <?php highlight_php_trimmed(
+                            <<<'PHP'
+// TODO
+PHP
+
+                        ); ?>
+                    </div>
+                </div>
+                <div class="php8-compare__arrow"></div>
+                <div class="php8-compare__block example-contents">
+                    <div class="php8-compare__label php8-compare__label_new">PHP 8.4</div>
+                    <div class="php8-code phpcode">
+                        <?php highlight_php_trimmed(
+                            <<<'PHP'
+// TODO
 PHP
                         ); ?>
                     </div>
@@ -131,8 +167,9 @@ PHP
         </div>
         <div class="php8-compare">
             <h2 class="php8-h2" id="dom_additions_84">
-                <?= message('dom_additions_84_title', $lang) ?>
+                <?= message('dom_additions_html5_title', $lang) ?>
                 <a class="php8-rfc" href="https://wiki.php.net/rfc/dom_additions_84">RFC</a>
+                <a class="php8-rfc" href="https://wiki.php.net/rfc/domdocument_html5_parser">RFC</a>
             </h2>
             <div class="php8-compare__main">
                 <div class="php8-compare__block example-contents">
@@ -160,9 +197,9 @@ PHP
             </div>
         </div>
         <div class="php8-compare">
-            <h2 class="php8-h2" id="domdocument_html5_parser">
-                <?= message('domdocument_html5_parser_title', $lang) ?>
-                <a class="php8-rfc" href="https://wiki.php.net/rfc/new_without_parentheses">RFC</a>
+            <h2 class="php8-h2" id="new_array_find">
+                <?= message('new_array_find_title', $lang) ?>
+                <a class="php8-rfc" href="https://wiki.php.net/rfc/array_find">RFC</a>
             </h2>
             <div class="php8-compare__main">
                 <div class="php8-compare__block example-contents">
@@ -170,9 +207,16 @@ PHP
                     <div class="php8-code phpcode">
                         <?php highlight_php_trimmed(
                             <<<'PHP'
-// TODO
-PHP
+$animal = null;
+foreach (['dog', 'cat', 'cow', 'duck', 'goose'] as $value) {
+    if (str_starts_with($value, 'c')) {
+        $animal = $value;
+        break;
+    }
+}
 
+var_dump($animal); // string(3) "cat"
+PHP
                         ); ?>
                     </div>
                 </div>
@@ -182,11 +226,21 @@ PHP
                     <div class="php8-code phpcode">
                         <?php highlight_php_trimmed(
                             <<<'PHP'
-// TODO
+var_dump(
+    array_find(
+        ['dog', 'cat', 'cow', 'duck', 'goose'],
+        static function (string $value) {
+            return str_starts_with($value, 'c');
+        }
+    )
+); // string(3) "cat"
 PHP
                         ); ?>
                     </div>
                 </div>
+            </div>
+            <div class="php8-compare__content">
+                <?= message('new_array_find_description', $lang) ?>
             </div>
         </div>
         <div class="php8-compare">
@@ -200,7 +254,8 @@ PHP
                     <div class="php8-code phpcode">
                         <?php highlight_php_trimmed(
                             <<<'PHP'
-class PhpVersion {
+class PhpVersion
+{
     public function currentVersion(): string {
         return 'PHP 8.3';
     }
@@ -218,7 +273,8 @@ PHP
                     <div class="php8-code phpcode">
                         <?php highlight_php_trimmed(
                             <<<'PHP'
-class PhpVersion {
+class PhpVersion
+{
     public function currentVersion(): string {
         return 'PHP 8.4';
     }
@@ -239,20 +295,7 @@ PHP
             <h2 class="php8-h2" id="other_new_things"><?= message('new_classes_title', $lang) ?></h2>
             <div class="php8-compare__content php8-compare__content--block">
                 <ul>
-                    <li><?= message('new_bc_functions', $lang) ?></li>
-                    <li><?= message('new_dom_methods', $lang) ?></li>
-                    <li><?= message('new_intl_methods', $lang) ?></li>
-                    <li><?= message('new_mbstring_functions', $lang) ?></li>
-                    <li><?= message('new_pcntl_functions', $lang) ?></li>
-                    <li><?= message('new_pdo_method', $lang) ?></li>
-                    <li><?= message('new_pgsql_functions', $lang) ?></li>
-                    <li><?= message('new_reflection_methods', $lang) ?></li>
-                    <li><?= message('new_sodium_functions', $lang) ?></li>
-                    <li><?= message('new_soap_method', $lang) ?></li>
-                    <li><?= message('new_standard_functions', $lang) ?></li>
-                    <li><?= message('new_tidy_methods', $lang) ?></li>
-                    <li><?= message('new_xml_methods', $lang) ?></li>
-                    <li><?= message('new_xsl_method', $lang) ?></li>
+
                 </ul>
             </div>
         </div>
@@ -264,6 +307,7 @@ PHP
                     <li><?= message('bc_pecl', $lang) ?></li>
                     <li><?= message('bc_nullable_parameter_types', $lang) ?></li>
                     <li><?= message('bc_classname', $lang) ?></li>
+                    <li><?= message('bc_zero_raised_to_negative_number', $lang) ?></li>
                 </ul>
             </div>
         </div>
