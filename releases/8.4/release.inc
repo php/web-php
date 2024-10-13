@@ -49,7 +49,7 @@ class User
 {
     public function __construct(
         private string $first,
-        private string $last
+        private string $last,
     ) {}
 
     public function setFullName(string $value): string {
@@ -75,7 +75,7 @@ class User
 {
     public function __construct(
         private string $first,
-        private string $last
+        private string $last,
     ) {}
 
     public string $fullName {
@@ -226,14 +226,14 @@ PHP
                     <div class="php8-code phpcode">
                         <?php highlight_php_trimmed(
                             <<<'PHP'
-var_dump(
-    array_find(
-        ['dog', 'cat', 'cow', 'duck', 'goose'],
-        static function (string $value) {
-            return str_starts_with($value, 'c');
-        }
-    )
-); // string(3) "cat"
+$animal = array_find(
+    ['dog', 'cat', 'cow', 'duck', 'goose'],
+    static function (string $value) {
+        return str_starts_with($value, 'c');
+    }
+);
+
+var_dump($animal); // string(3) "cat"
 PHP
                         ); ?>
                     </div>
