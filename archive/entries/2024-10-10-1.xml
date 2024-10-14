@@ -11,7 +11,7 @@
     <div xmlns="http://www.w3.org/1999/xhtml">
       <p>
          The PHP team is pleased to announce the release of PHP 8.4.0, RC2.
-         This is the first release candidate, continuing the PHP 8.4 release cycle,
+         This is the second release candidate, continuing the PHP 8.4 release cycle,
          the rough outline of which is specified in the
          <a href="https://wiki.php.net/todo/php84">PHP Wiki</a>.
        </p>
