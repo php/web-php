@@ -244,6 +244,50 @@ PHP
             </div>
         </div>
         <div class="php8-compare">
+            <h2 class="php8-h2" id="new_array_find">
+                <?= message('pdo_driver_specific_parsers_title', $lang) ?>
+                <a class="php8-rfc" href="https://wiki.php.net/rfc/pdo_driver_specific_parsers">RFC</a>
+            </h2>
+            <div class="php8-compare__main">
+                <div class="php8-compare__block example-contents">
+                    <div class="php8-compare__label">PHP &lt; 8.4</div>
+                    <div class="php8-code phpcode">
+                        <?php highlight_php_trimmed(
+                            <<<'PHP'
+$connection = new PDO(
+    'sqlite:host=localhost;dbname=test',
+    $username,
+    $password
+); // object(PDO)
+
+$connection->query('SELECT * FROM foo');
+PHP
+                        ); ?>
+                    </div>
+                </div>
+                <div class="php8-compare__arrow"></div>
+                <div class="php8-compare__block example-contents">
+                    <div class="php8-compare__label php8-compare__label_new">PHP 8.4</div>
+                    <div class="php8-code phpcode">
+                        <?php highlight_php_trimmed(
+                            <<<'PHP'
+$connection = PDO::connect(
+    'sqlite:host=localhost;dbname=test',
+    $username,
+    $password
+); // object(Pdo\Sqlite)
+
+$connection->query('SELECT * FROM foo');
+PHP
+                        ); ?>
+                    </div>
+                </div>
+            </div>
+            <div class="php8-compare__content">
+                <?= message('pdo_driver_specific_parsers_description', $lang) ?>
+            </div>
+        </div>
+        <div class="php8-compare">
             <h2 class="php8-h2" id="new_without_parentheses">
                 <?= message('new_without_parentheses_title', $lang) ?>
                 <a class="php8-rfc" href="https://wiki.php.net/rfc/new_without_parentheses">RFC</a>
