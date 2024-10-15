@@ -12,6 +12,8 @@ return [
     'lazy_objects_title' => 'Lazy Objects',
     'dom_additions_html5_title' => 'New ext-dom features and HTML5 support',
     'new_array_find_title' => 'New <code>array_*()</code> functions',
+    'pdo_driver_specific_parsers_title' => 'PDO Driver specific SQL parsers',
+    'pdo_driver_specific_parsers_description' => 'New subclasses <code>Pdo\Dblib</code>, <code>Pdo\Firebird</code>, <code>Pdo\MySql</code>, <code>Pdo\Odbc</code>, <code>Pdo\Sqlite</code> of <code>PDO</code> are available.',
     'new_array_find_description' => 'New functions <code>array_find()</code>, <code>array_find_key</code>, <code>array_any</code>, and <code>array_all</code> are available.',
     'new_without_parentheses_title' => 'new MyClass()->method() without parentheses',
 
