@@ -18,7 +18,7 @@ function createOutput(output) {
 
 async function main() {
   const buffer = [];
-	const {ccall} = await phpBinary({
+  const { ccall } = await phpBinary({
     print(data) {
       if (!data) {
         return;
@@ -34,27 +34,28 @@ async function main() {
   console.log("PHP wasm %s loaded.", ccall("phpw_exec", "string", ["string"], ["phpversion();"]));
   let lastOutput = null
 
-	document.querySelectorAll('.example').forEach((example) => {
-		const button = document.createElement('button');
-		const phpcode = example.querySelector('.phpcode');
+  document.querySelectorAll('.example').forEach((example) => {
+    const button = document.createElement('button');
+    button.setAttribute('type', 'button')
+    const phpcode = example.querySelector('.phpcode');
 
     const code = phpcode.querySelector('pre code')
     code.setAttribute('contentEditable', true)
 
-		button.innerText = 'Run code';
-		button.onclick = function() {
+    button.innerText = 'Run code';
+    button.onclick = function() {
       if (lastOutput && lastOutput.parentNode) {
-        lastOutput.parentNode.removeChild(lastOutput)
+        lastOutput.remove()
       }
 
       ccall("phpw_run", null, ["string"], ['?>' + phpcode.innerText]);
       lastOutput = createOutput(buffer.join(''))
       phpcode.parentNode.appendChild(lastOutput);
       buffer.length = 0;
-		};
+    };
 
-		phpcode.parentNode.insertBefore(button, phpcode);
-	});
+    phpcode.before(button);
+  });
 
 }
 
