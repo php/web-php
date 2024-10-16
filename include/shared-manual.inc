@@ -44,6 +44,7 @@ function manual_notes($notes):void {
     $sorter = new Sorter();
     $sorter->sort($notes);
 
+    $repo = strtolower($LANG);
     $addNote = autogen('add_a_note', $LANG);
     // Link target to add a note to the current manual page,
     // and it's extended form with a [+] image
@@ -420,7 +421,7 @@ function manual_footer($setup): void {
     </div>
 CONTRIBUTE;
 
-    manual_notes($USERNOTES, $repo);
+    manual_notes($USERNOTES);
     site_footer([
         'related_menu' => $__RELATED['toc'],
         'related_menu_deprecated' => $__RELATED['toc_deprecated'],
@@ -475,6 +476,7 @@ function autogen(string $text, string $lang) {
     static $translations = [];
 
     $lang = ($lang === "") ? "en" : $lang;
+    $lang = strtolower($lang);
     if (isset($translations[$lang])) {
         if (isset($translations[$lang][$text]) && $translations[$lang][$text] !== "") {
             return $translations[$lang][$text];
