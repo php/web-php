@@ -265,7 +265,7 @@ PHP
             </div>
         </div>
         <div class="php8-compare">
-            <h2 class="php8-h2" id="new_array_find">
+            <h2 class="php8-h2" id="pdo_driver_specific_parsers">
                 <?= message('pdo_driver_specific_parsers_title', $lang) ?>
                 <a class="php8-rfc" href="https://wiki.php.net/rfc/pdo_driver_specific_parsers">RFC</a>
             </h2>
@@ -276,12 +276,17 @@ PHP
                         <?php highlight_php_trimmed(
                             <<<'PHP'
 $connection = new PDO(
-    'sqlite:host=localhost;dbname=test',
+    'sqlite:foo.db',
     $username,
     $password
 ); // object(PDO)
 
-$connection->query('SELECT * FROM foo');
+$connection->sqliteCreateFunction(
+    'append_php',
+    static fn($string) => 'PHP ' . $string
+);
+
+$connection->query('SELECT append_php(version) FROM php');
 PHP
                         ); ?>
                     </div>
@@ -293,12 +298,17 @@ PHP
                         <?php highlight_php_trimmed(
                             <<<'PHP'
 $connection = PDO::connect(
-    'sqlite:host=localhost;dbname=test',
+    'sqlite:foo.db',
     $username,
     $password
 ); // object(Pdo\Sqlite)
 
-$connection->query('SELECT * FROM foo');
+$connection->createFunction(
+    'append_php',
+    static fn($string) => 'PHP ' . $string
+); // Does not exist on a mismatching driver.
+
+$connection->query('SELECT append_php(version) FROM php');
 PHP
                         ); ?>
                     </div>
