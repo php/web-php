@@ -177,7 +177,26 @@ PHP
                     <div class="php8-code phpcode">
                         <?php highlight_php_trimmed(
                             <<<'PHP'
-// TODO
+$dom = new DOMDocument();
+$dom->loadHTML(<<<HTML
+<main>
+    <article>
+        PHP 8.4 is a feature-rich release!
+    </article>
+
+    <article class="featured">
+        PHP 8.4 adds new DOM classes that are spec-compliant,
+        keeping the old ones for compatibility.
+    </article>
+</main>
+HTML, LIBXML_NOERROR);
+
+$xpath = new DOMXPath($dom);
+$query = $xpath->query(".//main/article[not(following-sibling::*)]");
+foreach ($query as $node) {
+    $classes = explode(" ", $node->className); // This is an approximation
+    var_dump(in_array("featured", $classes)); // bool(true)
+}
 PHP
 
                         ); ?>
@@ -189,7 +208,23 @@ PHP
                     <div class="php8-code phpcode">
                         <?php highlight_php_trimmed(
                             <<<'PHP'
-// TODO
+$dom = Dom\HTMLDocument::createFromString(<<<HTML
+<main>
+    <article>
+        PHP 8.4 is a feature-rich release!
+    </article>
+
+    <article class="featured">
+        PHP 8.4 adds new DOM classes that are spec-compliant,
+        keeping the old ones for compatibility.
+    </article>
+</main>
+HTML, LIBXML_NOERROR);
+
+$query = $dom->querySelectorAll('main > article:last-child');
+foreach ($query as $node) {
+    var_dump($node->classList->contains("featured")); // bool(true)
+}
 PHP
                         ); ?>
                     </div>
