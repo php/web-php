@@ -1,8 +1,6 @@
 <?php
 
-use function releases\php84\common_header;
-use function releases\php84\language_chooser;
-use function releases\php84\message;
+use function releases\php84\common_header;use function releases\php84\language_chooser;use function releases\php84\message;
 
 if (!isset($lang)) {
     $lang = 'en';
@@ -180,14 +178,8 @@ PHP
 $dom = new DOMDocument();
 $dom->loadHTML(<<<HTML
 <main>
-    <article>
-        PHP 8.4 is a feature-rich release!
-    </article>
-
-    <article class="featured">
-        PHP 8.4 adds new DOM classes that are spec-compliant,
-        keeping the old ones for compatibility.
-    </article>
+    <article>PHP 8.4 is a feature-rich release!</article>
+    <article class="featured">PHP 8.4 adds new DOM classes that are spec-compliant, keeping the old ones for compatibility.</article>
 </main>
 HTML, LIBXML_NOERROR);
 
@@ -210,14 +202,8 @@ PHP
                             <<<'PHP'
 $dom = Dom\HTMLDocument::createFromString(<<<HTML
 <main>
-    <article>
-        PHP 8.4 is a feature-rich release!
-    </article>
-
-    <article class="featured">
-        PHP 8.4 adds new DOM classes that are spec-compliant,
-        keeping the old ones for compatibility.
-    </article>
+    <article>PHP 8.4 is a feature-rich release!</article>
+    <article class="featured">PHP 8.4 adds new DOM classes that are spec-compliant, keeping the old ones for compatibility.</article>
 </main>
 HTML, LIBXML_NOERROR);
 
