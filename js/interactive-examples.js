@@ -38,6 +38,9 @@ async function main() {
 		const button = document.createElement('button');
 		const phpcode = example.querySelector('.phpcode');
 
+    const code = phpcode.querySelector('pre code')
+    code.setAttribute('contentEditable', true)
+
 		button.innerText = 'Run code';
 		button.onclick = function() {
       if (lastOutput && lastOutput.parentNode) {
