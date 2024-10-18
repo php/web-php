@@ -6,6 +6,21 @@ namespace releases\php80;
 
 include_once __DIR__ . '/../../include/prepend.inc';
 
+const LANGUAGES = [
+    'en' => 'English',
+    'de' => 'Deutsch',
+    'es' => 'Español',
+    'fr' => 'Français',
+    'it' => 'Italiano',
+    'ja' => '日本語',
+    'nl' => 'Nederlands',
+    'pt_BR' => 'Português do Brasil',
+    'ru' => 'Русский',
+    'tr' => 'Türkçe',
+    'zh' => '简体中文',
+    'ka' => 'ქართული',
+];
+
 function common_header(string $description): void {
     global $MYSITE;
 
@@ -35,21 +50,6 @@ META
 }
 
 function language_chooser(string $currentLang): void {
-    $LANGUAGES = [
-        'en' => 'English',
-        'de' => 'Deutsch',
-        'es' => 'Español',
-        'fr' => 'Français',
-        'it' => 'Italiano',
-        'ja' => '日本語',
-        'nl' => 'Nederlands',
-        'pt_BR' => 'Português do Brasil',
-        'ru' => 'Русский',
-        'tr' => 'Türkçe',
-        'zh' => '简体中文',
-        'ka' => 'ქართული',
-    ];
-
     // Print out the form with all the options
     echo '
       <form action="" method="get" id="changelang" name="changelang">
@@ -59,7 +59,7 @@ function language_chooser(string $currentLang): void {
 ';
 
     $tab = '            ';
-    foreach ($LANGUAGES as $lang => $text) {
+    foreach (LANGUAGES as $lang => $text) {
         $selected = ($lang === $currentLang) ? ' selected="selected"' : '';
         echo $tab, "<option value='$lang'$selected>$text</option>\n";
     }
