@@ -6,6 +6,10 @@ namespace releases\php84;
 
 include_once __DIR__ . '/../../include/prepend.inc';
 
+const LANGUAGES = [
+    'en' => 'English',
+];
+
 function common_header(string $description): void {
     global $MYSITE;
 
@@ -35,10 +39,6 @@ META
 }
 
 function language_chooser(string $currentLang): void {
-    $LANGUAGES = [
-        'en' => 'English',
-    ];
-
     // Print out the form with all the options
     echo '
       <form action="" method="get" id="changelang" name="changelang">
@@ -48,7 +48,7 @@ function language_chooser(string $currentLang): void {
 ';
 
     $tab = '            ';
-    foreach ($LANGUAGES as $lang => $text) {
+    foreach (LANGUAGES as $lang => $text) {
         $selected = ($lang === $currentLang) ? ' selected="selected"' : '';
         echo $tab, "<option value='$lang'$selected>$text</option>\n";
     }
