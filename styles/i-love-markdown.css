@@ -188,6 +188,6 @@
 }
 
 
-.brand, #mainmenu-toggle-overlay, #mainmenu-toggle, #trick {
+.navbar__brand, #mainmenu-toggle-overlay, #mainmenu-toggle, #trick {
 	display: none;
 }
