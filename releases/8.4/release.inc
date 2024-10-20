@@ -186,7 +186,7 @@ HTML, LIBXML_NOERROR);
 $xpath = new DOMXPath($dom);
 $query = $xpath->query(".//main/article[not(following-sibling::*)]");
 foreach ($query as $node) {
-    $classes = explode(" ", $node->className); // This is an approximation
+    $classes = explode(" ", $node->className); // Simplified
     var_dump(in_array("featured", $classes)); // bool(true)
 }
 PHP
