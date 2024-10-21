@@ -4,7 +4,7 @@ function createOutput(output) {
   const container = document.createElement("div");
   container.classList.add("screen", "example-contents");
   const title = document.createElement("p");
-  title.innerText = "Output: ";
+  title.innerText = "Output (PHP "+ PHP.version +"):";
   container.appendChild(title);
   const div = document.createElement("div");
   div.classList.add("examplescode");
@@ -19,6 +19,7 @@ function createOutput(output) {
 class PHP {
   static buffer = [];
   static runPhp = null;
+  static version = '';
   static async loadPhp() {
     if (PHP.runPhp) {
       return PHP.runPhp;
@@ -37,10 +38,8 @@ class PHP {
       },
     });
 
-    console.log(
-      "PHP wasm %s loaded.",
-      ccall("phpw_exec", "string", ["string"], ["phpversion();"]),
-    );
+    PHP.version = ccall("phpw_exec", "string", ["string"], ["phpversion();"]),
+    console.log("PHP wasm %s loaded.", PHP.version);
     PHP.runPhp = (code) => ccall("phpw_run", null, ["string"], ["?>" + code]);
     return PHP.runPhp;
   }
