@@ -247,8 +247,9 @@ function globalsearch(txt) {
         return;
     }
 
-    var key = "search-en";
-    var cache = window.localStorage.getItem(key);
+    const language = getLanguage()
+    const key = `search-${language}`;
+    let cache = window.localStorage.getItem(key);
     cache = JSON.parse(cache);
 
     if (cache) {
@@ -259,7 +260,7 @@ function globalsearch(txt) {
             ) {
                 $("#goto .results ul").append(`
                     <li>
-                        <a href='/manual/en/${node.id}.php'>
+                        <a href='/manual/${language}/${node.id}.php'>
                             ${node.name}: ${node.description}
                         </a>
                     </li>`);
