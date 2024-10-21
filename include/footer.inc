@@ -162,7 +162,7 @@ if (!empty($_SERVER['BASE_PAGE'])
     ></div>
     <div class="search-modal__helper-text">
       <div>
-        <kbd>↑ ↓</kbd> to navigate •
+        <kbd>↑</kbd> and <kbd>↓</kbd> to navigate •
         <kbd>Enter</kbd> to select •
         <kbd>Esc</kbd> to close
       </div>
