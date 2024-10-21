@@ -251,6 +251,9 @@ $manual_page_moves = [
     // Refactored
     'regexp.reference' => 'regexp.introduction',
     "security" => "manual/security",
+
+    // Set to book
+    'set.mongodb.php' => 'book.mongodb.php',
 ];
 
 if (isset($manual_page_moves[$URI])) {
