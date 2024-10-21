@@ -48,21 +48,41 @@ const initPHPSearch = async (language) => {
             .filter(Boolean);
     };
 
-    /**
-     * Attempt to asynchronously load the search JSON for a given language.
-     */
-    const loadLanguageIndex = async (language) => {
+    const lookupLanguageIndexCache = (language) => {
         const key = `search-${language}`;
         const cache = window.localStorage.getItem(key);
 
-        if (cache) {
-            const { data, time: cachedDate } = JSON.parse(cache);
-            const expireDate = cachedDate + CACHE_DAYS * MILLISECONDS_PER_DAY;
-            if (Date.now() < expireDate) {
-                return data;
-            }
+        if (!cache) {
+            return null;
         }
 
+        const { data, time: cachedDate } = JSON.parse(cache);
+
+        // Invalidate old search cache format (previously an object)
+        // TODO: Remove this check once the new search index (a single array)
+        // has been in use for a while.
+        if (!Array.isArray(data)) {
+            console.log("Invalidating old search cache format");
+            return null;
+        }
+
+        const expireDate = cachedDate + CACHE_DAYS * MILLISECONDS_PER_DAY;
+
+        if (Date.now() > expireDate) {
+            return null;
+        }
+
+        return data;
+    }
+
+    /**
+     * Fetch the search index for a given language.
+     *
+     * @param {string} language The language to fetch the index for.
+     * @returns {Promise<Array>} The search index.
+     */
+    const fetchLanguageIndex = async (language) => {
+        const key = `search-${language}`;
         const response = await fetch(`/js/search-index.php?lang=${language}`);
         const data = await response.json();
         const items = processIndex(data);
@@ -78,9 +98,18 @@ const initPHPSearch = async (language) => {
         } catch (e) {
             // Local storage might be full, or other error.
             // Just continue without caching.
+            console.error("Failed to cache search index", e);
         }
 
         return items;
+    }
+
+    /**
+     * Attempt to asynchronously load the search JSON for a given language.
+     */
+    const loadLanguageIndex = async (language) => {
+        const cached = lookupLanguageIndexCache(language);
+        return cached || fetchLanguageIndex(language);
     };
 
     /**
