@@ -328,8 +328,8 @@ const initSearchUI = ({ searchCallback, language, limit = 30 }) => {
      */
     const renderResults = (results) => {
         const escape = (html) => {
-            var div = document.createElement("div");
-            var node = document.createTextNode(html);
+            const div = document.createElement("div");
+            const node = document.createTextNode(html);
             div.appendChild(node);
             return div.innerHTML;
         };
