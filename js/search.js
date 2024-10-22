@@ -90,7 +90,7 @@ const initPHPSearch = async (language) => {
         }
 
         return data;
-    }
+    };
 
     /**
      * Fetch the search index.
@@ -118,7 +118,7 @@ const initPHPSearch = async (language) => {
         }
 
         return items;
-    }
+    };
 
     /**
      * Loads the search index, using cache if available.
@@ -216,16 +216,16 @@ const initSearchModal = () => {
             event.preventDefault();
             inputElement.focus();
         }
-    }
+    };
 
     const onModalTransitionEnd = (handler) => {
         backdropElement.addEventListener("transitionend", handler, {
-            once: true
+            once: true,
         });
-    }
+    };
 
-    const documentWidth = document.documentElement.clientWidth
-    const scrollbarWidth = Math.abs(window.innerWidth - documentWidth)
+    const documentWidth = document.documentElement.clientWidth;
+    const scrollbarWidth = Math.abs(window.innerWidth - documentWidth);
 
     const show = function () {
         if (
@@ -238,7 +238,7 @@ const initSearchModal = () => {
         document.body.style.overflow = "hidden";
         document.documentElement.style.overflow = "hidden";
         resultsElement.innerHTML = "";
-        document.body.style.paddingRight = `${scrollbarWidth}px`
+        document.body.style.paddingRight = `${scrollbarWidth}px`;
 
         backdropElement.setAttribute("aria-modal", "true");
         backdropElement.setAttribute("role", "dialog");
@@ -265,14 +265,16 @@ const initSearchModal = () => {
         onModalTransitionEnd(() => {
             document.body.style.overflow = "auto";
             document.documentElement.style.overflow = "auto";
-            document.body.style.paddingRight = "0px"
+            document.body.style.paddingRight = "0px";
             backdropElement.classList.remove("hiding");
             document.removeEventListener("keydown", focusTrapHandler);
         });
     };
 
     const searchLink = document.getElementById("navbar__search-link");
-    const searchButtonMobile = document.getElementById("navbar__search-button-mobile");
+    const searchButtonMobile = document.getElementById(
+        "navbar__search-button-mobile",
+    );
     const searchButton = document.getElementById("navbar__search-button");
 
     // Enhance mobile search
@@ -280,12 +282,14 @@ const initSearchModal = () => {
     searchButtonMobile.removeAttribute("hidden");
 
     // Enhance desktop search
-    document.querySelector(".navbar__search-form").setAttribute("hidden", "true");
+    document
+        .querySelector(".navbar__search-form")
+        .setAttribute("hidden", "true");
     searchButton.removeAttribute("hidden");
 
     // Open when the search button is clicked
-    [searchButton, searchButtonMobile].forEach(
-        (button) => button.addEventListener("click", show)
+    [searchButton, searchButtonMobile].forEach((button) =>
+        button.addEventListener("click", show),
     );
 
     // Open when / is pressed
@@ -326,9 +330,11 @@ const initSearchModal = () => {
 const initSearchUI = ({ searchCallback, language, limit = 30 }) => {
     const DEBOUNCE_DELAY = 200;
     // https://pictogrammers.com/library/mdi/icon/code-braces/
-    const BRACES_ICON = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8,3A2,2 0 0,0 6,5V9A2,2 0 0,1 4,11H3V13H4A2,2 0 0,1 6,15V19A2,2 0 0,0 8,21H10V19H8V14A2,2 0 0,0 6,12A2,2 0 0,0 8,10V5H10V3M16,3A2,2 0 0,1 18,5V9A2,2 0 0,0 20,11H21V13H20A2,2 0 0,0 18,15V19A2,2 0 0,1 16,21H14V19H16V14A2,2 0 0,1 18,12A2,2 0 0,1 16,10V5H14V3H16Z" /></svg>';
+    const BRACES_ICON =
+        '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8,3A2,2 0 0,0 6,5V9A2,2 0 0,1 4,11H3V13H4A2,2 0 0,1 6,15V19A2,2 0 0,0 8,21H10V19H8V14A2,2 0 0,0 6,12A2,2 0 0,0 8,10V5H10V3M16,3A2,2 0 0,1 18,5V9A2,2 0 0,0 20,11H21V13H20A2,2 0 0,0 18,15V19A2,2 0 0,1 16,21H14V19H16V14A2,2 0 0,1 18,12A2,2 0 0,1 16,10V5H14V3H16Z" /></svg>';
     // https://pictogrammers.com/library/mdi/icon/file-document-outline/
-    const DOCUMENT_ICON = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6,2A2,2 0 0,0 4,4V20A2,2 0 0,0 6,22H18A2,2 0 0,0 20,20V8L14,2H6M6,4H13V9H18V20H6V4M8,12V14H16V12H8M8,16V18H13V16H8Z" /></svg>';
+    const DOCUMENT_ICON =
+        '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6,2A2,2 0 0,0 4,4V20A2,2 0 0,0 6,22H18A2,2 0 0,0 20,20V8L14,2H6M6,4H13V9H18V20H6V4M8,12V14H16V12H8M8,16V18H13V16H8Z" /></svg>';
 
     const resultsElement = document.getElementById("search-modal__results");
     const inputElement = document.getElementById("search-modal__input");
@@ -338,7 +344,9 @@ const initSearchUI = ({ searchCallback, language, limit = 30 }) => {
      * Update the selected result in the results container.
      */
     const updateSelectedResult = () => {
-        const results = resultsElement.querySelectorAll(".search-modal__result");
+        const results = resultsElement.querySelectorAll(
+            ".search-modal__result",
+        );
         results.forEach((result, index) => {
             const isSelected = index === selectedIndex;
             result.setAttribute("aria-selected", isSelected ? "true" : "false");
@@ -390,10 +398,16 @@ const initSearchUI = ({ searchCallback, language, limit = 30 }) => {
                 >
                     <div class="search-modal__result-icon">${icon}</div>
                     <div class="search-modal__result-content">
-                        <div id="search-modal__result-name-${i}" class="search-modal__result-name">
+                        <div
+                            id="search-modal__result-name-${i}"
+                            class="search-modal__result-name"
+                        >
                             ${escape(item.name)}
                         </div>
-                        <div id="search-modal__result-description-${i}" class="search-modal__result-description">
+                        <div
+                            id="search-modal__result-description-${i}"
+                            class="search-modal__result-description"
+                        >
                             ${escape(description)}
                         </div>
                     </div>
@@ -413,8 +427,9 @@ const initSearchUI = ({ searchCallback, language, limit = 30 }) => {
     };
 
     const handleKeyDown = (event) => {
-        const resultsElements =
-            resultsElement.querySelectorAll(".search-modal__result");
+        const resultsElements = resultsElement.querySelectorAll(
+            ".search-modal__result",
+        );
 
         switch (event.key) {
             case "ArrowDown":
