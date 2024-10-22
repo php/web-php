@@ -621,11 +621,14 @@ div.warning a:focus {
 }
 
 .search-modal__result:hover {
-  background-color: var(--dark-blue-color);
+  /* Simulates 33% opacity by blending --dark-blue-color with --dark-grey-color.
+   * TODO: Use rgb(var(--dark-blue-color) / 33%) once widely supported.
+   * More info: https://caniuse.com/mdn-css_types_color_rgb_relative_syntax */
+  background-color: #3c4053;
 }
 
 .search-modal__result[aria-selected="true"] {
-  background-color: var(--dark-magenta-color);
+  background-color: var(--dark-blue-color);
 }
 
 .search-modal__result-content {
