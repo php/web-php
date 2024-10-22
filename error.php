@@ -352,7 +352,7 @@ $uri_aliases = [
     "gd" => "image",
     "bcmath" => "bc",
     'streams' => 'book.stream',
-    "mongodb" => "set.mongodb",
+    "mongodb" => "book.mongodb",
     "hrtime" => "function.hrtime", // Prefer function over PECL ext
 
     "callback" => "language.pseudo-types",
