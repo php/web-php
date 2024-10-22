@@ -63,10 +63,9 @@ const initPHPSearch = async (language) => {
     /**
      * Looks up the search index cached in localStorage.
      *
-     * @param {string} language
      * @returns {Array|null}
      */
-    const lookupLanguageIndexCache = (language) => {
+    const lookupIndexCache = () => {
         const key = `search-${language}`;
         const cache = window.localStorage.getItem(key);
 
@@ -94,12 +93,11 @@ const initPHPSearch = async (language) => {
     }
 
     /**
-     * Fetch the search index for a given language.
+     * Fetch the search index.
      *
-     * @param {string} language The language to fetch the index for.
      * @returns {Promise<Array>} The search index.
      */
-    const fetchLanguageIndex = async (language) => {
+    const fetchIndex = async () => {
         const key = `search-${language}`;
         const response = await fetch(`/js/search-index.php?lang=${language}`);
         const data = await response.json();
@@ -123,29 +121,27 @@ const initPHPSearch = async (language) => {
     }
 
     /**
-     * Loads the search index for a given language, using cache if available.
+     * Loads the search index, using cache if available.
      *
-     * @param {string} language
      * @returns {Promise<Array>}
      */
-    const loadLanguageIndex = async (language) => {
-        const cached = lookupLanguageIndexCache(language);
-        return cached || fetchLanguageIndex(language);
+    const loadIndex = async () => {
+        const cached = lookupIndexCache();
+        return cached || fetchIndex();
     };
 
     /**
      * Load the language index, falling back to English on error.
      *
-     * @param {string} language
      * @returns {Promise<Array>}
      */
-    const loadLanguageIndexWithFallback = async (language) => {
+    const loadIndexWithFallback = async () => {
         try {
-            const searchItems = await loadLanguageIndex(language);
+            const searchItems = await loadIndex();
             return searchItems;
         } catch (error) {
             if (language !== "en") {
-                return loadLanguageIndexWithFallback("en");
+                return loadIndexWithFallback("en");
             }
             throw error;
         }
@@ -171,7 +167,7 @@ const initPHPSearch = async (language) => {
             .sort((a, b) => b.score - a.score);
     };
 
-    const searchIndex = await loadLanguageIndexWithFallback(language);
+    const searchIndex = await loadIndexWithFallback();
     if (!searchIndex) {
         throw new Error("Failed to load search index");
     }
