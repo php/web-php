@@ -251,6 +251,9 @@ $manual_page_moves = [
     // Refactored
     'regexp.reference' => 'regexp.introduction',
     "security" => "manual/security",
+
+    // Set to book
+    'set.mongodb' => 'book.mongodb',
 ];
 
 if (isset($manual_page_moves[$URI])) {
@@ -349,7 +352,7 @@ $uri_aliases = [
     "gd" => "image",
     "bcmath" => "bc",
     'streams' => 'book.stream',
-    "mongodb" => "set.mongodb",
+    "mongodb" => "book.mongodb",
     "hrtime" => "function.hrtime", // Prefer function over PECL ext
 
     "callback" => "language.pseudo-types",
