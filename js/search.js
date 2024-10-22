@@ -1,10 +1,22 @@
+/**
+ * Initialize the PHP search functionality with a given language.
+ * Loads the search index, sets up FuzzySearch, and returns a search function.
+ *
+ * @param {string} language The language for which the search index should be
+ * loaded.
+ * @returns {Promise<(query: string) => Array>} A function that takes a query
+ * and performs a search using the loaded index.
+ */
 const initPHPSearch = async (language) => {
     const MILLISECONDS_PER_DAY = 24 * 60 * 60 * 1000;
     const CACHE_DAYS = 14;
 
     /**
-     * Processes a data structure in the format of our search-index.php
-     * files and returns an array of search items.
+     * Converts the structure from search-index.php into an array of objects,
+     * mapping the index entries to their respective types.
+     *
+     * @param {object} index
+     * @returns {Array}
      */
     const processIndex = (index) => {
         return Object.entries(index)
@@ -48,6 +60,12 @@ const initPHPSearch = async (language) => {
             .filter(Boolean);
     };
 
+    /**
+     * Looks up the search index cached in localStorage.
+     *
+     * @param {string} language
+     * @returns {Array|null}
+     */
     const lookupLanguageIndexCache = (language) => {
         const key = `search-${language}`;
         const cache = window.localStorage.getItem(key);
@@ -105,7 +123,10 @@ const initPHPSearch = async (language) => {
     }
 
     /**
-     * Attempt to asynchronously load the search JSON for a given language.
+     * Loads the search index for a given language, using cache if available.
+     *
+     * @param {string} language
+     * @returns {Promise<Array>}
      */
     const loadLanguageIndex = async (language) => {
         const cached = lookupLanguageIndexCache(language);
@@ -113,7 +134,10 @@ const initPHPSearch = async (language) => {
     };
 
     /**
-     * Load language data with fallback to English.
+     * Load the language index, falling back to English on error.
+     *
+     * @param {string} language
+     * @returns {Promise<Array>}
      */
     const loadLanguageIndexWithFallback = async (language) => {
         try {
@@ -128,7 +152,11 @@ const initPHPSearch = async (language) => {
     };
 
     /**
-     * Perform a search with the given query and FuzzySearch instance.
+     * Perform a search using the given query and a FuzzySearch instance.
+     *
+     * @param {string} query The search query.
+     * @param {object} fuzzyhound The FuzzySearch instance to use for searching.
+     * @returns {Array} An array of search results.
      */
     const search = (query, fuzzyhound) => {
         return fuzzyhound
@@ -166,13 +194,15 @@ const initPHPSearch = async (language) => {
     return (query) => search(query, fuzzyhound);
 };
 
+/**
+ * Initialize the search modal, handling focus trap and modal transitions.
+ */
 const initSearchModal = () => {
     const backdropElement = document.getElementById("search-modal__backdrop");
     const modalElement = document.getElementById("search-modal");
     const resultsElement = document.getElementById("search-modal__results");
     const inputElement = document.getElementById("search-modal__input");
 
-    // Focus trap
     const focusTrapHandler = (event) => {
         if (event.key != "Tab") {
             return;
@@ -239,7 +269,7 @@ const initSearchModal = () => {
         onModalTransitionEnd(() => {
             document.body.style.overflow = "auto";
             document.documentElement.style.overflow = "auto";
-            document.body.style.paddingRight = '0px'
+            document.body.style.paddingRight = "0px"
             backdropElement.classList.remove("hiding");
             document.removeEventListener("keydown", focusTrapHandler);
         });
@@ -290,6 +320,13 @@ const initSearchModal = () => {
     });
 };
 
+/**
+ * Initialize the search modal UI, setting up search result rendering and
+ * input handling.
+ *
+ * @param {object} options An object containing the search callback, language,
+ * and result limit.
+ */
 const initSearchUI = ({ searchCallback, language, limit = 30 }) => {
     const DEBOUNCE_DELAY = 200;
     // https://pictogrammers.com/library/mdi/icon/code-braces/
