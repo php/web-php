@@ -253,7 +253,7 @@ $manual_page_moves = [
     "security" => "manual/security",
 
     // Set to book
-    'set.mongodb.php' => 'book.mongodb.php',
+    'set.mongodb' => 'book.mongodb',
 ];
 
 if (isset($manual_page_moves[$URI])) {
