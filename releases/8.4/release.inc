@@ -370,7 +370,16 @@ PHP
             <h2 class="php8-h2" id="other_new_things"><?= message('new_classes_title', $lang) ?></h2>
             <div class="php8-compare__content php8-compare__content--block">
                 <ul>
-
+                    <li><?= message('new_deprecated_attribute', $lang) ?></li>
+                    <li><?= message('new_core_functions', $lang) ?></li>
+                    <li><?= message('new_bcmath_functions', $lang) ?></li>
+                    <li><?= message('new_date_functions', $lang) ?></li>
+                    <li><?= message('new_dom_functions', $lang) ?></li>
+                    <li><?= message('new_mb_functions', $lang) ?></li>
+                    <li><?= message('new_pcntl_functions', $lang) ?></li>
+                    <li><?= message('new_reflection_functions', $lang) ?></li>
+                    <li><?= message('new_standard_functions', $lang) ?></li>
+                    <li><?= message('new_xml_functions', $lang) ?></li>
                 </ul>
             </div>
         </div>
@@ -383,6 +392,12 @@ PHP
                     <li><?= message('bc_nullable_parameter_types', $lang) ?></li>
                     <li><?= message('bc_classname', $lang) ?></li>
                     <li><?= message('bc_zero_raised_to_negative_number', $lang) ?></li>
+                    <li><?= message('bc_gmp', $lang) ?></li>
+                    <li><?= message('bc_mysqli_constants', $lang) ?></li>
+                    <li><?= message('bc_mysqli_functions', $lang) ?></li>
+                    <li><?= message('bc_standard', $lang) ?></li>
+                    <li><?= message('bc_core', $lang) ?></li>
+                    <li><?= message('bc_warnings', $lang) ?></li>
                 </ul>
             </div>
         </div>
