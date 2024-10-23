@@ -1,10 +1,10 @@
 <?php
 
 return [
-    'common_header' => 'PHP 8.4 is a major update of the PHP language. It contains many new features, such as property hooks, asymmetric visibility, lazy objects, performance improvements, bug fixes, and general cleanup.',
+    'common_header' => 'PHP 8.4 is a major update of the PHP language. It contains many new features, such as property hooks, asymmetric visibility, an updated DOM API, performance improvements, bug fixes, and general cleanup.',
     'documentation' => 'Doc',
     'main_title' => 'Released!',
-    'main_subtitle' => 'PHP 8.4 is a major update of the PHP language.<br class="display-none-md"> It contains many new features, such as property hooks, asymmetric visibility, lazy objects, performance improvements, bug fixes, and general cleanup.',
+    'main_subtitle' => 'PHP 8.4 is a major update of the PHP language.<br class="display-none-md"> It contains many new features, such as property hooks, asymmetric visibility, an updated DOM API, performance improvements, bug fixes, and general cleanup.',
     'upgrade_now' => 'Upgrade to PHP 8.4 now!',
 
     'property_hooks_title' => 'Property hooks',
