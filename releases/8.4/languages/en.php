@@ -37,7 +37,7 @@ return [
     'bc_gmp' => '<code>GMP</code> class is now final.',
     'bc_mysqli_constants' => '<code>MYSQLI_SET_CHARSET_DIR</code>, <code>MYSQLI_STMT_ATTR_PREFETCH_ROWS</code>, <code>MYSQLI_CURSOR_TYPE_FOR_UPDATE</code>, <code>MYSQLI_CURSOR_TYPE_SCROLLABLE</code>, and <code>MYSQLI_TYPE_INTERVAL</code> constants have been removed.',
     'bc_mysqli_functions' => '<code>mysqli_ping()</code>, <code>mysqli_kill()</code>, <code>mysqli_refresh()</code> functions, <code>mysqli::ping()</code>, <code>mysqli::kill()</code>, <code>mysqli::refresh()</code> methods, and <code>MYSQLI_REFRESH_*</code> constants have been deprecated.',
-    'bc_standard' => '<code>tream_bucket_make_writeable()</code> and <code>stream_bucket_new()</code> now return an instance of <code>StreamBucket</code> instead of <code>stdClass</code>.',
+    'bc_standard' => '<code>stream_bucket_make_writeable()</code> and <code>stream_bucket_new()</code> now return an instance of <code>StreamBucket</code> instead of <code>stdClass</code>.',
     'bc_core' => '<code>exit()</code> language construct is now a function.',
     'bc_warnings' => '<code>E_STRICT</code> constant has been deprecated.',
 

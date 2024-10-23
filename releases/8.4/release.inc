@@ -139,25 +139,51 @@ PHP
                 <a class="php8-rfc" href="https://wiki.php.net/rfc/lazy-objects">RFC</a>
             </h2>
             <div class="php8-compare__main">
-                <div class="php8-compare__block example-contents">
-                    <div class="php8-compare__label">PHP &lt; 8.4</div>
+                <div class="example-contents example-contents-full">
+                    <div class="php8-compare__label php8-compare__label_new">PHP 8.2</div>
                     <div class="php8-code phpcode">
                         <?php highlight_php_trimmed(
                             <<<'PHP'
-// TODO
+<?php
+
+class Php
+{
+    public function __construct(private string $version)
+    {
+
+    }
+}
+
+$initializer = static function (Php $ghost): void {
+    $ghost->__construct('8.4');
+};
+
+$reflector = new ReflectionClass(Php::class);
+$ghost = $reflector->newLazyGhost($initializer);
+
+$initializer = static function (Php $proxy): Php {
+    return new Php('8.4');
+};
+
+$reflector = new ReflectionClass(Php::class);
+$proxy = $reflector->newLazyProxy($initializer);
+
+var_dump($ghost);
+var_dump($proxy);
+/*
+lazy ghost object(Php)#3 (0) {
+  ["version":"Php":private]=>
+  uninitialized(string)
+}
+
+lazy proxy object(Php)#2 (0) {
+  ["version":"Php":private]=>
+  uninitialized(string)
+}
+*/
+
 PHP
 
-                        ); ?>
-                    </div>
-                </div>
-                <div class="php8-compare__arrow"></div>
-                <div class="php8-compare__block example-contents">
-                    <div class="php8-compare__label php8-compare__label_new">PHP 8.4</div>
-                    <div class="php8-code phpcode">
-                        <?php highlight_php_trimmed(
-                            <<<'PHP'
-// TODO
-PHP
                         ); ?>
                     </div>
                 </div>
