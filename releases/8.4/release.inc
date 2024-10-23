@@ -108,7 +108,7 @@ class Locale
     public string $combinedCode {
         get => \sprintf("%s_%s", $this->languageCode, $this->countryCode);
         set (string $value) {
-            [$this->countryCode, $this->languageCode] = explode(' ', $value, 2);
+            [$this->countryCode, $this->languageCode] = explode('_', $value, 2);
         }
     }
 
@@ -119,8 +119,8 @@ class Locale
 }
 
 $brazilianPortuguese = new Locale('pt', 'br');
-var_dump($brazilianPortuguese->getCountryCode()); // BR
-var_dump($brazilianPortuguese->getCombinedCode()); // pt_BR
+var_dump($brazilianPortuguese->countryCode); // BR
+var_dump($brazilianPortuguese->combinedCode); // pt_BR
 PHP
                         ); ?>
                     </div>
@@ -253,11 +253,9 @@ $dom->loadHTML(<<<HTML
 HTML, LIBXML_NOERROR);
 
 $xpath = new DOMXPath($dom);
-$query = $xpath->query(".//main/article[not(following-sibling::*)]");
-foreach ($query as $node) {
-    $classes = explode(" ", $node->className); // Simplified
-    var_dump(in_array("featured", $classes)); // bool(true)
-}
+$node = $xpath->query(".//main/article[not(following-sibling::*)]")[0];
+$classes = explode(" ", $node->className); // Simplified
+var_dump(in_array("featured", $classes)); // bool(true)
 PHP
 
                         ); ?>
@@ -276,10 +274,8 @@ $dom = Dom\HTMLDocument::createFromString(<<<HTML
 </main>
 HTML, LIBXML_NOERROR);
 
-$query = $dom->querySelectorAll('main > article:last-child');
-foreach ($query as $node) {
-    var_dump($node->classList->contains("featured")); // bool(true)
-}
+$node = $dom->querySelector('main > article:last-child');
+var_dump($node->classList->contains("featured")); // bool(true)
 PHP
                         ); ?>
                     </div>
