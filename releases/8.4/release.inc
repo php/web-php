@@ -174,7 +174,10 @@ PHP
                             <<<'PHP'
 class PhpVersion
 {
-    #[\Deprecated("use PhpVersion::getVersion() instead", since: "8.4")]
+    #[\Deprecated(
+        message: "use PhpVersion::getVersion() instead",
+        since: "8.4"
+    )]
     public function getPhpVersion() {
         return $this->getVersion();
     }
@@ -361,12 +364,12 @@ PHP
                             <<<'PHP'
 class PhpVersion
 {
-    public function currentVersion(): string {
+    public function getVersion(): string {
         return 'PHP 8.3';
     }
 }
 
-var_dump((new PhpVersion())->currentVersion());
+var_dump((new PhpVersion())->getVersion());
 PHP
 
                         ); ?>
@@ -380,12 +383,12 @@ PHP
                             <<<'PHP'
 class PhpVersion
 {
-    public function currentVersion(): string {
+    public function getVersion(): string {
         return 'PHP 8.4';
     }
 }
 
-var_dump(new PhpVersion()->currentVersion());
+var_dump(new PhpVersion()->getVersion());
 PHP
                         ); ?>
                     </div>
