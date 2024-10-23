@@ -144,6 +144,7 @@ class PhpVersion
 }
 
 $phpVersion = new PhpVersion();
+var_dump($phpVersion->version); // string(3) "8.3"
 $phpVersion->version = 'PHP 8.4'; // No error
 PHP
 
@@ -162,6 +163,7 @@ class PhpVersion
 }
 
 $phpVersion = new PhpVersion();
+var_dump($phpVersion->version); // string(3) "8.4"
 $phpVersion->version = 'PHP 8.3'; // Visibility error
 PHP
                         ); ?>
