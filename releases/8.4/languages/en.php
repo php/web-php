@@ -9,7 +9,7 @@ return [
 
     'property_hooks_title' => 'Property hooks',
     'asymmetric_visibility_title' => 'Asymmetric Visibility',
-    'lazy_objects_title' => 'Lazy Objects',
+    'deprecated_attribute_title' => '<code>#[\Deprecated]</code> Attribute',
     'dom_additions_html5_title' => 'New ext-dom features and HTML5 support',
     'new_array_find_title' => 'New <code>array_*()</code> functions',
     'pdo_driver_specific_parsers_title' => 'PDO Driver specific SQL parsers',
@@ -18,7 +18,6 @@ return [
     'new_without_parentheses_title' => 'new MyClass()->method() without parentheses',
 
     'new_classes_title' => 'New Classes, Interfaces, and Functions',
-    'new_deprecated_attribute' => 'New <code>#[\Deprecated]</code> attribute.',
     'new_core_functions' => 'New <code>request_parse_body()</code> function.',
     'new_bcmath_functions' => 'New <code>bcceil()</code>, <code>bcdivmod()</code>, <code>bcfloor()</code>, and <code>bcround()</code> functions.',
     'new_date_functions' => 'New <code>DateTime::createFromTimestamp()</code>, <code>DateTime::getMicrosecond()</code>, <code>DateTime::setMicrosecond()</code>, <code>DateTimeImmutable::createFromTimestamp()</code>, <code>DateTimeImmutable::getMicrosecond()</code>, and <code>DateTimeImmutable::setMicrosecond()</code> methods.',

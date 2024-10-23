@@ -134,56 +134,45 @@ PHP
             </div>
         </div>
         <div class="php8-compare">
-            <h2 class="php8-h2" id="lazy_objects">
-                <?= message('lazy_objects_title', $lang) ?>
-                <a class="php8-rfc" href="https://wiki.php.net/rfc/lazy-objects">RFC</a>
+            <h2 class="php8-h2" id="deprecated_attribute">
+                <?= message('deprecated_attribute_title', $lang) ?>
+                <a class="php8-rfc" href="https://wiki.php.net/rfc/deprecated_attribute">RFC</a>
             </h2>
             <div class="php8-compare__main">
-                <div class="example-contents example-contents-full">
-                    <div class="php8-compare__label php8-compare__label_new">PHP 8.2</div>
+                <div class="php8-compare__block example-contents">
+                    <div class="php8-compare__label">PHP &lt; 8.4</div>
                     <div class="php8-code phpcode">
                         <?php highlight_php_trimmed(
                             <<<'PHP'
-<?php
-
-class Php
+class PhpVersion
 {
-    public function __construct(private string $version)
-    {
-
+    /**
+     * @deprecated 8.4
+     * @deprecated use getVersion() instead.
+    */
+    public function getPhpVersion() {
+        return '8.3';
     }
 }
-
-$initializer = static function (Php $ghost): void {
-    $ghost->__construct('8.4');
-};
-
-$reflector = new ReflectionClass(Php::class);
-$ghost = $reflector->newLazyGhost($initializer);
-
-$initializer = static function (Php $proxy): Php {
-    return new Php('8.4');
-};
-
-$reflector = new ReflectionClass(Php::class);
-$proxy = $reflector->newLazyProxy($initializer);
-
-var_dump($ghost);
-var_dump($proxy);
-/*
-lazy ghost object(Php)#3 (0) {
-  ["version":"Php":private]=>
-  uninitialized(string)
-}
-
-lazy proxy object(Php)#2 (0) {
-  ["version":"Php":private]=>
-  uninitialized(string)
-}
-*/
-
 PHP
 
+                        ); ?>
+                    </div>
+                </div>
+                <div class="php8-compare__arrow"></div>
+                <div class="php8-compare__block example-contents">
+                    <div class="php8-compare__label php8-compare__label_new">PHP 8.4</div>
+                    <div class="php8-code phpcode">
+                        <?php highlight_php_trimmed(
+                            <<<'PHP'
+class PhpVersion
+{
+    #[\Deprecated("use getVersion() instead", since: "8.4")]
+    public function getPhpVersion() {
+        return '8.3';
+    }
+}
+PHP
                         ); ?>
                     </div>
                 </div>
@@ -396,7 +385,6 @@ PHP
             <h2 class="php8-h2" id="other_new_things"><?= message('new_classes_title', $lang) ?></h2>
             <div class="php8-compare__content php8-compare__content--block">
                 <ul>
-                    <li><?= message('new_deprecated_attribute', $lang) ?></li>
                     <li><?= message('new_core_functions', $lang) ?></li>
                     <li><?= message('new_bcmath_functions', $lang) ?></li>
                     <li><?= message('new_date_functions', $lang) ?></li>
