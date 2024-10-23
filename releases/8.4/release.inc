@@ -147,13 +147,20 @@ PHP
 class PhpVersion
 {
     /**
-     * @deprecated 8.4
-     * @deprecated use getVersion() instead.
-    */
+     * @deprecated 8.3 use PhpVersion::getVersion() instead
+     */
     public function getPhpVersion() {
+        return $this->getVersion();
+    }
+    
+    public function getVersion() {
         return '8.3';
     }
 }
+
+$phpVersion = new PhpVersion();
+// No indication that the method is deprecated.
+echo $phpVersion->getPhpVersion();
 PHP
 
                         ); ?>
@@ -167,11 +174,19 @@ PHP
                             <<<'PHP'
 class PhpVersion
 {
-    #[\Deprecated("use getVersion() instead", since: "8.4")]
+    #[\Deprecated("use PhpVersion::getVersion() instead", since: "8.4")]
     public function getPhpVersion() {
-        return '8.3';
+        return $this->getVersion();
+    }
+    
+    public function getVersion() {
+        return '8.4';
     }
 }
+
+$phpVersion = new PhpVersion();
+// Deprecated: Method PhpVersion::getPhpVersion() is deprecated since 8.4, use getVersion() instead
+echo $phpVersion->getPhpVersion();
 PHP
                         ); ?>
                     </div>
