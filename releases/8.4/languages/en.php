@@ -10,6 +10,7 @@ return [
     'property_hooks_title' => 'Property hooks',
     'asymmetric_visibility_title' => 'Asymmetric Visibility',
     'deprecated_attribute_title' => '<code>#[\Deprecated]</code> Attribute',
+    'deprecated_attribute_description' => 'The new <code>#[\Deprecated]</code> attribute makes PHP’s existing deprecation mechanism available to user-defined functions, methods, and class constants.',
     'dom_additions_html5_title' => 'New ext-dom features and HTML5 support',
     'dom_additions_html5_description' => 'New <code>Dom\HTMLDocument</code>, <code>Dom\XMLDocument</code> classes, and <code>DOMNode::compareDocumentPosition()</code>, <code>DOMXPath::registerPhpFunctionNS()</code>, <code>DOMXPath::quote()</code>, <code>XSLTProcessor::registerPHPFunctionNS()</code> methods are available.',
     'new_array_find_title' => 'New <code>array_*()</code> functions',

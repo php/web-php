@@ -47,7 +47,7 @@ class Locale
 {
     private string $languageCode;
     private string $countryCode;
-    
+
     public function __construct(string $languageCode, string $countryCode) {
         $this->setLanguageCode($languageCode);
         $this->setCountryCode($countryCode);
@@ -226,12 +226,15 @@ class PhpVersion
 }
 
 $phpVersion = new PhpVersion();
-// Deprecated: Method PhpVersion::getPhpVersion() is deprecated since 8.4, use getVersion() instead
+// Deprecated: Method PhpVersion::getPhpVersion() is deprecated since 8.4, use PhpVersion::getVersion() instead
 echo $phpVersion->getPhpVersion();
 PHP
                         ); ?>
                     </div>
                 </div>
+            </div>
+            <div class="php8-compare__content">
+                <?= message('deprecated_attribute_description', $lang) ?>
             </div>
         </div>
         <div class="php8-compare">
