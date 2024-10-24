@@ -252,8 +252,14 @@ $manual_page_moves = [
     'regexp.reference' => 'regexp.introduction',
     "security" => "manual/security",
 
-    // Set to book
+    // MongoDB converted from set to book
     'set.mongodb' => 'book.mongodb',
+    'mongodb.installation.homebrew' => 'mongodb.installation',
+    'mongodb.installation.manual' => 'mongodb.installation',
+    'mongodb.installation.pecl' => 'mongodb.installation',
+    'mongodb.installation.windows' => 'mongodb.installation',
+    'mongodb.persistence.deserialization' => 'mongodb.persistence',
+    'mongodb.persistence.serialization' => 'mongodb.persistence',
 ];
 
 if (isset($manual_page_moves[$URI])) {
