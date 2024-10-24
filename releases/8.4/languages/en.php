@@ -11,7 +11,7 @@ return [
     'asymmetric_visibility_title' => 'Asymmetric Visibility',
     'deprecated_attribute_title' => '<code>#[\Deprecated]</code> Attribute',
     'dom_additions_html5_title' => 'New ext-dom features and HTML5 support',
-    'dom_additions_html5_description' => 'New <code>DOMNode::compareDocumentPosition()</code>, <code>DOMXPath::registerPhpFunctionNS()</code>, <code>DOMXPath::quote()</code>, and <code>XSLTProcessor::registerPHPFunctionNS()</code> methods are available.',
+    'dom_additions_html5_description' => 'New <code>Dom\HTMLDocument</code>, <code>Dom\XMLDocument</code> classes, and <code>DOMNode::compareDocumentPosition()</code>, <code>DOMXPath::registerPhpFunctionNS()</code>, <code>DOMXPath::quote()</code>, <code>XSLTProcessor::registerPHPFunctionNS()</code> methods are available.',
     'new_array_find_title' => 'New <code>array_*()</code> functions',
     'pdo_driver_specific_parsers_title' => 'PDO Driver specific SQL parsers',
     'pdo_driver_specific_parsers_description' => 'New subclasses <code>Pdo\Dblib</code>, <code>Pdo\Firebird</code>, <code>Pdo\MySql</code>, <code>Pdo\Odbc</code>, <code>Pdo\Sqlite</code> of <code>PDO</code> are available.',
