@@ -190,7 +190,7 @@ class PhpVersion
     public function getPhpVersion() {
         return $this->getVersion();
     }
-    
+
     public function getVersion() {
         return '8.3';
     }
@@ -219,7 +219,7 @@ class PhpVersion
     public function getPhpVersion() {
         return $this->getVersion();
     }
-    
+
     public function getVersion() {
         return '8.4';
     }
@@ -235,7 +235,7 @@ PHP
             </div>
         </div>
         <div class="php8-compare">
-            <h2 class="php8-h2" id="dom_additions_84">
+            <h2 class="php8-h2" id="dom_additions_html5">
                 <?= message('dom_additions_html5_title', $lang) ?>
                 <a class="php8-rfc" href="https://wiki.php.net/rfc/dom_additions_84">RFC</a>
                 <a class="php8-rfc" href="https://wiki.php.net/rfc/domdocument_html5_parser">RFC</a>
@@ -282,6 +282,9 @@ PHP
                         ); ?>
                     </div>
                 </div>
+            </div>
+            <div class="php8-compare__content">
+                <?= message('dom_additions_html5_description', $lang) ?>
             </div>
         </div>
         <div class="php8-compare">
