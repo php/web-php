@@ -34,7 +34,7 @@ site_header("Get Involved", ["current" => "community"]);
       on <a href="https://github.com/php/php-src/issues/">GitHub Issues</a>.</li>
   <li>Help maintain and or translate documentation files
       at the doc-* repositories on <a href="https://github.com/php/?q=doc">github</a>. Check out our
-      <a href="http://doc.php.net/tutorial/">guide for contributors</a>.</li>
+      <a href="https://doc.php.net/guide/">guide for contributors</a>.</li>
  </ol>
 
 <h3 class="content-header" id="php-src">Development of the PHP source</h3>

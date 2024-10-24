@@ -533,8 +533,8 @@ $external_redirects = [
     "pear" => "http://pear.php.net/",
     "bugs" => "https://bugs.php.net/",
     "bugstats" => "https://bugs.php.net/stats.php",
-    "phpdochowto" => "http://doc.php.net/tutorial/",
-    "rev" => "http://doc.php.net/revcheck.php?p=graph&lang=$LANG",
+    "phpdochowto" => "https://doc.php.net/guide/",
+    "rev" => "https://doc.php.net/revcheck.php?p=graph&lang=$LANG",
     "release/5_3_0.php" => "/releases/5_3_0.php", // PHP 5.3.0 release announcement had a typo
     "ideas.php" => "http://wiki.php.net/ideas", // BC
     "releases.atom" => "/releases/feed.php", // BC, No need to pre-generate it
