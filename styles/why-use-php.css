@@ -67,11 +67,20 @@
 }
 
 .logo__item {
-    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 80px;
     break-inside: avoid;
     box-shadow: #dddddd 0 .125rem .5rem;
     border-radius: .25rem;
     background: #F9F9F9;
+    padding: 0.5rem;
+}
+
+.logo__item img {
+    max-width: 100%;
+    max-height: 100%;
 }
 
 .cards {
@@ -102,6 +111,16 @@
 .card__link {
     margin-top: 0.5rem;
     color: #4b5563;
+}
+
+.card__image {
+    height: 40px;
+    margin-bottom: 1rem;
+}
+
+.card__image img {
+    max-width: 100%;
+    max-height: 100%;
 }
 
 @media (max-width: 768px) {

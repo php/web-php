@@ -96,29 +96,75 @@ site_header('Why Use PHP? Fast, Flexible, Powerful Web Development', [
     </div>
     <div class="block__body">
         <div class="logo">
-            <div class="logo__item"></div>
-            <div class="logo__item"></div>
-            <div class="logo__item"></div>
-            <div class="logo__item"></div>
-            <div class="logo__item"></div>
-            <div class="logo__item"></div>
-            <div class="logo__item"></div>
-            <div class="logo__item"></div>
-            <div class="logo__item"></div>
-            <div class="logo__item"></div>
-            <div class="logo__item"></div>
-            <div class="logo__item"></div>
-            <div class="logo__item"></div>
-            <div class="logo__item"></div>
-            <div class="logo__item"></div>
-            <div class="logo__item"></div>
-            <div class="logo__item"></div>
-            <div class="logo__item"></div>
-            <div class="logo__item"></div>
-            <div class="logo__item"></div>
-            <div class="logo__item"></div>
-            <div class="logo__item"></div>
-            <div class="logo__item"></div>
+            <div class="logo__item">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/WordPress_logo.svg/1080px-WordPress_logo.svg.png" alt=""/>
+            </div>
+            <div class="logo__item">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/WordPress_logo.svg/1080px-WordPress_logo.svg.png" alt=""/>
+            </div>
+            <div class="logo__item">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/WordPress_logo.svg/1080px-WordPress_logo.svg.png" alt=""/>
+            </div>
+            <div class="logo__item">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/WordPress_logo.svg/1080px-WordPress_logo.svg.png" alt=""/>
+            </div>
+            <div class="logo__item">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/WordPress_logo.svg/1080px-WordPress_logo.svg.png" alt=""/>
+            </div>
+            <div class="logo__item">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/WordPress_logo.svg/1080px-WordPress_logo.svg.png" alt=""/>
+            </div>
+            <div class="logo__item">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/WordPress_logo.svg/1080px-WordPress_logo.svg.png" alt=""/>
+            </div>
+            <div class="logo__item">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/WordPress_logo.svg/1080px-WordPress_logo.svg.png" alt=""/>
+            </div>
+            <div class="logo__item">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/WordPress_logo.svg/1080px-WordPress_logo.svg.png" alt=""/>
+            </div>
+            <div class="logo__item">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/WordPress_logo.svg/1080px-WordPress_logo.svg.png" alt=""/>
+            </div>
+            <div class="logo__item">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/WordPress_logo.svg/1080px-WordPress_logo.svg.png" alt=""/>
+            </div>
+            <div class="logo__item">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/WordPress_logo.svg/1080px-WordPress_logo.svg.png" alt=""/>
+            </div>
+            <div class="logo__item">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/WordPress_logo.svg/1080px-WordPress_logo.svg.png" alt=""/>
+            </div>
+            <div class="logo__item">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/WordPress_logo.svg/1080px-WordPress_logo.svg.png" alt=""/>
+            </div>
+            <div class="logo__item">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/WordPress_logo.svg/1080px-WordPress_logo.svg.png" alt=""/>
+            </div>
+            <div class="logo__item">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/WordPress_logo.svg/1080px-WordPress_logo.svg.png" alt=""/>
+            </div>
+            <div class="logo__item">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/WordPress_logo.svg/1080px-WordPress_logo.svg.png" alt=""/>
+            </div>
+            <div class="logo__item">
+                <img src="https://edmff3urfwf.exactdn.com/app/themes/spryker-website/dist/Components/NavigationFooter/Assets/logo-9dc549614a.svg" alt=""/>
+            </div>
+            <div class="logo__item">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/WordPress_logo.svg/1080px-WordPress_logo.svg.png" alt=""/>
+            </div>
+            <div class="logo__item">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/WordPress_logo.svg/1080px-WordPress_logo.svg.png" alt=""/>
+            </div>
+            <div class="logo__item">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/WordPress_logo.svg/1080px-WordPress_logo.svg.png" alt=""/>
+            </div>
+            <div class="logo__item">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/WordPress_logo.svg/1080px-WordPress_logo.svg.png" alt=""/>
+            </div>
+            <div class="logo__item">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/WordPress_logo.svg/1080px-WordPress_logo.svg.png" alt=""/>
+            </div>
         </div>
     </div>
 </div>
@@ -131,6 +177,9 @@ site_header('Why Use PHP? Fast, Flexible, Powerful Web Development', [
     <div class="block__body">
         <div class="cards">
             <div class="card">
+                <div class="card__image">
+                    <img src="https://laravel.com/img/logomark.min.svg" alt="Laravel"/>
+                </div>
                 <div class="subtitle">Laravel</div>
                 <div class="description">Raised $57M in Series A funding from Accel in 2023</div>
                 <div class="card__link">
@@ -139,6 +188,9 @@ site_header('Why Use PHP? Fast, Flexible, Powerful Web Development', [
                 </div>
             </div>
             <div class="card">
+                <div class="card__image">
+                    <img src="https://assets.shopware.com/media/logos/shopware_logo_blue.svg" alt="Shopware (Symfony-based)"/>
+                </div>
                 <div class="subtitle">Shopware (Symfony-based)</div>
                 <div class="description">Secured $100M investment in 2022</div>
                 <div class="card__link">
@@ -147,6 +199,9 @@ site_header('Why Use PHP? Fast, Flexible, Powerful Web Development', [
                 </div>
             </div>
             <div class="card">
+                <div class="card__image">
+                    <img src="https://edmff3urfwf.exactdn.com/app/themes/spryker-website/dist/Components/NavigationFooter/Assets/logo-9dc549614a.svg" alt="Spryker"/>
+                </div>
                 <div class="subtitle">Spryker</div>
                 <div class="description">Raised $130M in 2020</div>
                 <div class="card__link">
@@ -155,6 +210,9 @@ site_header('Why Use PHP? Fast, Flexible, Powerful Web Development', [
                 </div>
             </div>
             <div class="card">
+                <div class="card__image">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/WordPress_logo.svg/1080px-WordPress_logo.svg.png" alt="WordPress parent company Automattic"/>
+                </div>
                 <div class="subtitle">WordPress parent company Automattic</div>
                 <div class="description">Valued at $7.5B</div>
                 <div class="card__link">
@@ -260,20 +318,32 @@ site_header('Why Use PHP? Fast, Flexible, Powerful Web Development', [
     <div class="block__body">
         <div class="cards">
             <div class="card">
+                <div class="card__image">
+                    <img src="https://thephp.foundation/assets/icons/php_foundation.svg" alt="The PHP Foundation"/>
+                </div>
                 <div class="subtitle"><a href="https://thephp.foundation/">The PHP Foundation</a></div>
                 <div class="description">Ensures PHP's long-term sustainability.</div>
             </div>
             <div class="card">
+                <div class="card__image">
+                    <img src="https://cdn3.iconfinder.com/data/icons/say-no-to-war-2/32/court-courthouse-building-judicial-institution-office-government-512.png" alt="Corporate Sponsors"/>
+                </div>
                 <div class="subtitle">Corporate Sponsors</div>
                 <div class="description">
                     PHP is funded by corporate <a href="#">sponsors</a> and <a href="#">governments</a>.
                 </div>
             </div>
             <div class="card">
+                <div class="card__image">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/PHP-logo.svg/1422px-PHP-logo.svg.png" alt="PHP Internals"/>
+                </div>
                 <div class="subtitle">PHP Internals</div>
                 <div class="description">Core developers who shape the language's future.</div>
             </div>
             <div class="card">
+                <div class="card__image">
+                    <img src="https://cdn3.iconfinder.com/data/icons/fluent-solid-24px-vol-5/24/ic_fluent_people_community_24_filled-512.png" alt="More than XXX global community"/>
+                </div>
                 <div class="subtitle">More than XXX global community</div>
                 <div class="description">Many contributors and maintainers are volunteering.</div>
             </div>
