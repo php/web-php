@@ -131,6 +131,7 @@ PHP
             <h2 class="php8-h2" id="asymmetric_visibility">
                 <?= message('asymmetric_visibility_title', $lang) ?>
                 <a class="php8-rfc" href="https://wiki.php.net/rfc/asymmetric-visibility-v2">RFC</a>
+                <a class="php8-rfc" href="/manual/<?= $lang ?>/language.oop5.visibility.php#language.oop5.visibility-members-aviz"><?= message('documentation', $lang) ?></a>
             </h2>
             <div class="php8-compare__main">
                 <div class="php8-compare__block example-contents">
@@ -175,6 +176,7 @@ PHP
             <h2 class="php8-h2" id="deprecated_attribute">
                 <?= message('deprecated_attribute_title', $lang) ?>
                 <a class="php8-rfc" href="https://wiki.php.net/rfc/deprecated_attribute">RFC</a>
+                <a class="php8-rfc" href="/manual/<?= $lang ?>/class.deprecated.php"><?= message('documentation', $lang) ?></a>
             </h2>
             <div class="php8-compare__main">
                 <div class="php8-compare__block example-contents">
