@@ -1217,6 +1217,119 @@ changelog_header(8, $MINOR_VERSIONS);
 
 <a id="PHP_8_2"></a>
 
+<section class="version" id="8.2.25"><!-- {{{ 8.2.25 -->
+<h3>Version 8.2.25</h3>
+<b><?php release_date('24-Oct-2024'); ?></b>
+<ul><li>Calendar:
+<ul>
+  <li>Fixed <?php githubissuel('php/php-src', 16240); ?>: jdtounix overflow on argument value.</li>
+  <li>Fixed <?php githubissuel('php/php-src', 16241); ?>: easter_days/easter_date overflow on year argument.</li>
+  <li>Fixed <?php githubissuel('php/php-src', 16263); ?>: jddayofweek overflow.</li>
+  <li>Fixed <?php githubissuel('php/php-src', 16234); ?>: jewishtojd overflow.</li>
+</ul></li>
+<li>CLI:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 16137); ?>: duplicate http headers when set several times by the client.</li>
+</ul></li>
+<li>Core:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 15712); ?>: zend_strtod overflow with precision INI set on large value.</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 15905); ?> (Assertion failure for TRACK_VARS_SERVER).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 15907); ?> (Failed assertion when promoting Serialize deprecation to exception).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 15851); ?> (Segfault when printing backtrace during cleanup of nested generator frame).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 15866); ?> (Core dumped in Zend/zend_generators.c).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 16188); ?> (Assertion failure in Zend/zend_exceptions.c).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 16233); ?> (Observer segfault when calling user function in internal function via trampoline).</li>
+</ul></li>
+<li>Date:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 15582); ?>: Crash when not calling parent constructor of DateTimeZone.</li>
+  <li>Fixed regression where signs after the first one were ignored while parsing a signed integer, with the DateTimeInterface::modify() function.</li>
+</ul></li>
+<li>DOM:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 16039); ?> (Segmentation fault (access null pointer) in ext/dom/parentnode/tree.c).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 16151); ?> (Assertion failure in ext/dom/parentnode/tree.c).</li>
+</ul></li>
+<li>GD:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 16232); ?> (bitshift overflow on wbmp file content reading / fix backport from upstream).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 12264); ?> (overflow/underflow on imagerotate degrees value) (David Carlier)</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 16274); ?> (imagescale underflow on RBG channels / fix backport from upstream).</li>
+</ul></li>
+<li>LDAP:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 16032); ?> (Various NULL pointer dereferencements in ldap_modify_batch()).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 16101); ?> (Segfault in ldap_list(), ldap_read(), and ldap_search() when LDAPs array is not a list).</li>
+  <li>Fix <?php githubissuel('php/php-src', 16132); ?> (php_ldap_do_modify() attempts to free pointer not allocated by ZMM.).</li>
+  <li>Fix <?php githubissuel('php/php-src', 16136); ?> (Memory leak in php_ldap_do_modify() when entry is not a proper dictionary).</li>
+</ul></li>
+<li>MBString:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 16261); ?> (Reference invariant broken in mb_convert_variables()).</li>
+</ul></li>
+<li>OpenSSL:
+<ul>
+  <li>Fixed stub for openssl_csr_new.</li>
+</ul></li>
+<li>PCRE:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 16189); ?> (underflow on offset argument).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 16184); ?> (UBSan address overflowed in ext/pcre/php_pcre.c).</li>
+</ul></li>
+<li>PHPDBG:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 15901); ?> (phpdbg: Assertion failure on i funcs).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 16181); ?> (phpdbg: exit in exception handler reports fatal error).</li>
+</ul></li>
+<li>Reflection:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 16187); ?> (Assertion failure in ext/reflection/php_reflection.c).</li>
+</ul></li>
+<li>SAPI:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 15395); ?> (php-fpm: zend_mm_heap corrupted with cgi-fcgi request).</li>
+</ul></li>
+<li>SimpleXML:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 15837); ?> (Segmentation fault in ext/simplexml/simplexml.c).</li>
+</ul></li>
+<li>Sockets:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 16267); ?> (socket_strerror overflow on errno argument).</li>
+</ul></li>
+<li>SOAP:
+<ul>
+  <li><?php bugfix(62900); ?> (Wrong namespace on xsd import error message).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 16237); ?> (Segmentation fault when cloning SoapServer).</li>
+  <li>Fix Soap leaking http_msg on error.</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 16256); ?> (Assertion failure in ext/soap/php_encoding.c:460).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 16259); ?> (Soap segfault when classmap instantiation fails).</li>
+</ul></li>
+<li>Standard:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 15613); ?> (overflow on unpack call hex string repeater).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 15937); ?> (overflow on stream timeout option value).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 16053); ?> (Assertion failure in Zend/zend_hash.c).</li>
+</ul></li>
+<li>Streams:
+<ul>
+  <li>Fixed bugs <?php githubissuel('php/php-src', 15908); ?> and <?php githubissuel('php/php-src', 15026); ?> (leak / assertion failure in streams.c).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 15980); ?> (Signed integer overflow in main/streams/streams.c).</li>
+</ul></li>
+<li>TSRM:
+<ul>
+  <li>Prevent closing of unrelated handles.</li>
+</ul></li>
+<li>XML:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 15868); ?> (Assertion failure in xml_parse_into_struct after exception).</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
+
+
 <section class="version" id="8.2.24"><!-- {{{ 8.2.24 -->
 <h3>Version 8.2.24</h3>
 <b><?php release_date('26-Sep-2024'); ?></b>

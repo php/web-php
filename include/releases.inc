@@ -2,6 +2,43 @@
 $OLDRELEASES = array (
   8 => 
   array (
+    '8.2.24' => 
+    array (
+      'announcement' => 
+      array (
+        'English' => '/releases/8_2_24.php',
+      ),
+      'tags' => 
+      array (
+        0 => 'security',
+      ),
+      'date' => '26 Sep 2024',
+      'source' => 
+      array (
+        0 => 
+        array (
+          'filename' => 'php-8.2.24.tar.gz',
+          'name' => 'PHP 8.2.24 (tar.gz)',
+          'sha256' => '5d26441969279a594e404bb9f2e17b6f74bb10606fe05911e739137673ae6c4c',
+          'date' => '26 Sep 2024',
+        ),
+        1 => 
+        array (
+          'filename' => 'php-8.2.24.tar.bz2',
+          'name' => 'PHP 8.2.24 (tar.bz2)',
+          'sha256' => '4cc76ec644eee97d17c92bfe8d0e84714fedf299a538b7dfadc0639dd0dc432f',
+          'date' => '26 Sep 2024',
+        ),
+        2 => 
+        array (
+          'filename' => 'php-8.2.24.tar.xz',
+          'name' => 'PHP 8.2.24 (tar.xz)',
+          'sha256' => '80a5225746a9eb484475b312d4c626c63a88a037d8e56d214f30205e1ba1411a',
+          'date' => '26 Sep 2024',
+        ),
+      ),
+      'museum' => false,
+    ),
     '8.3.12' => 
     array (
       'announcement' => 
