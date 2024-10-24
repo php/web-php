@@ -14,10 +14,10 @@ return [
     'dom_additions_html5_title' => 'New ext-dom features and HTML5 support',
     'dom_additions_html5_description' => 'New <code>Dom\HTMLDocument</code>, <code>Dom\XMLDocument</code> classes, and <code>DOMNode::compareDocumentPosition()</code>, <code>DOMXPath::registerPhpFunctionNS()</code>, <code>DOMXPath::quote()</code>, <code>XSLTProcessor::registerPHPFunctionNS()</code> methods are available.',
     'new_array_find_title' => 'New <code>array_*()</code> functions',
+    'new_array_find_description' => 'New functions <code>array_find()</code>, <code>array_find_key()</code>, <code>array_any()</code>, and <code>array_all()</code> are available.',
     'pdo_driver_specific_parsers_title' => 'PDO Driver specific SQL parsers',
     'pdo_driver_specific_parsers_description' => 'New subclasses <code>Pdo\Dblib</code>, <code>Pdo\Firebird</code>, <code>Pdo\MySql</code>, <code>Pdo\Odbc</code>, <code>Pdo\Sqlite</code> of <code>PDO</code> are available.',
-    'new_array_find_description' => 'New functions <code>array_find()</code>, <code>array_find_key()</code>, <code>array_any()</code>, and <code>array_all()</code> are available.',
-    'new_without_parentheses_title' => 'new MyClass()->method() without parentheses',
+    'new_without_parentheses_title' => '<code>new MyClass()->method()</code> without parentheses',
 
     'new_classes_title' => 'New Classes, Interfaces, and Functions',
     'new_core_functions' => 'New <code>request_parse_body()</code> function.',
@@ -26,7 +26,7 @@ return [
     'new_mb_functions' => 'New <code>mb_trim()</code>, <code>mb_ltrim()</code>, <code>mb_rtrim()</code>, <code>mb_ucfirst()</code>, and <code>mb_lcfirst()</code> functions.',
     'new_pcntl_functions' => 'New <code>pcntl_getcpu()</code>, <code>pcntl_getcpuaffinity()</code>, <code>pcntl_getqos_class()</code>, <code>pcntl_setns()</code>, and <code>pcntl_waitid()</code> functions.',
     'new_reflection_functions' => 'New <code>ReflectionClassConstant::isDeprecated()</code>, <code>ReflectionGenerator::isClosed()</code>, and <code>ReflectionProperty::isDynamic()</code> methods.',
-    'new_standard_functions' => 'New <code>http_get_last_response_headers()</code>, <code>http_clear_last_response_headers()</code>, <code>fpow()</code>, <code>array_all()</code>, <code>array_any()</code>, <code>array_find()</code>, and <code>array_find_key()</code> functions.',
+    'new_standard_functions' => 'New <code>http_get_last_response_headers()</code>, <code>http_clear_last_response_headers()</code>, and <code>fpow()</code> functions.',
     'new_xml_functions' => 'New <code>XMLReader::fromStream()</code>, <code>XMLReader::fromUri()</code>, <code>XMLReader::fromString()</code>, <code>XMLWriter::toStream()</code>, <code>XMLWriter::toUri()</code>, and <code>XMLWriter::toMemory()</code> methods.',
 
     'bc_title' => 'Deprecations and backward compatibility breaks',
