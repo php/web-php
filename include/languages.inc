@@ -27,7 +27,7 @@ $LANGUAGES = [
  - Accept redirections to the translation, despite ACCEPT_LANGUAGE
  - Be listed at php.net/docs or php.net/download-docs
  However, translation status for these languages is available at:
- - http://doc.php.net/
+ - https://doc.php.net/
 */
 $INACTIVE_ONLINE_LANGUAGES = [
     'pl' => 'Polish',
