@@ -252,8 +252,14 @@ $manual_page_moves = [
     'regexp.reference' => 'regexp.introduction',
     "security" => "manual/security",
 
-    // Set to book
+    // MongoDB converted from set to book
     'set.mongodb' => 'book.mongodb',
+    'mongodb.installation.homebrew' => 'mongodb.installation#mongodb.installation.homebrew',
+    'mongodb.installation.manual' => 'mongodb.installation#mongodb.installation.manual',
+    'mongodb.installation.pecl' => 'mongodb.installation#mongodb.installation.pecl',
+    'mongodb.installation.windows' => 'mongodb.installation#mongodb.installation.windows',
+    'mongodb.persistence.deserialization' => 'mongodb.persistence#mongodb.persistence.deserialization',
+    'mongodb.persistence.serialization' => 'mongodb.persistence#mongodb.persistence.serialization',
 ];
 
 if (isset($manual_page_moves[$URI])) {
@@ -262,7 +268,13 @@ if (isset($manual_page_moves[$URI])) {
 } elseif (preg_match("!^manual/([^/]+)/([^/]+).php$!", $URI, $match) &&
           isset($manual_page_moves[$match[2]])) {
     status_header(301);
-    mirror_redirect("/manual/$match[1]/" . $manual_page_moves[$match[2]] . ".php");
+
+    $parts = explode('#', $manual_page_moves[$match[2]], 2);
+    if (count($parts) === 1) {
+        mirror_redirect("/manual/{$match[1]}/{$parts[0]}.php");
+    } else {
+        mirror_redirect("/manual/{$match[1]}/{$parts[0]}.php#{$parts[1]}");
+    }
 }
 
 $manual_redirections = [
