@@ -48,10 +48,13 @@ class PHP {
 async function main() {
   let lastOutput = null;
 
-  document.querySelectorAll(".example").forEach((example) => {
+  document.querySelectorAll(".example .example-contents").forEach((example) => {
     const button = document.createElement("button");
     button.setAttribute("type", "button");
     const phpcode = example.querySelector(".phpcode");
+    if (phpcode === null) {
+      return;
+    }
 
     const code = phpcode.querySelector("code");
     code.setAttribute("contentEditable", true);
