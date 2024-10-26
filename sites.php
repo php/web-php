@@ -110,7 +110,7 @@ site_header("A Tourist's Guide", ["current" => "help"]);
  reported the same problem!).
 </p>
 
-<h2 id="doc" class="content-header"><a href="http://doc.php.net/">doc.php.net</a>: Documentation Tools</h2>
+<h2 id="doc" class="content-header"><a href="https://doc.php.net/">doc.php.net</a>: Documentation Tools</h2>
 
 <p class="content-box">
  This page provides set of useful tools for PHP Manual translators

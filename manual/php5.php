@@ -25,7 +25,7 @@ site_header('PHP Version 5 Documentation');
 
 <ul>
  <li>
-  You can download a copy in the <a href="http://doc.php.net/archives/">documentation archives</a>.
+  You can download a copy in the <a href="https://doc.php.net/archives/">documentation archives</a>.
  </li>
  <li>
   You can also find the <a href="https://php-legacy-docs.zend.com/manual/php5/en/index">PHP 5 legacy manual</a>

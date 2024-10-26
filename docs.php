@@ -18,7 +18,7 @@ site_header("Documentation", ["current" => "docs"]);
  Note, that many languages are just under translation, and
  the untranslated parts are still in English. Also some translated
  parts might be outdated. The translation teams are
- <a href="http://doc.php.net/">open to contributions</a>.
+ <a href="https://doc.php.net/">open to contributions</a>.
 </p>
 </div>
 
@@ -65,7 +65,7 @@ foreach ($ACTIVE_ONLINE_LANGUAGES as $langcode => $langname) {
 <ul class="content-box listed">
  <li>
   If you are interested in how the documentation is edited and translated,
-  you should read the <a href="http://doc.php.net/tutorial/">Documentation HOWTO</a>.
+  you should read the <a href="https://doc.php.net/guide/">contribution guide</a>.
  </li>
  <li>
   <a href="http://pear.php.net/manual/">Documentation of PEAR and the various
