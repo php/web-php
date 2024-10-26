@@ -16,13 +16,13 @@
   margin: 32px 0;
 }
 
-.hero-logo {
+.hero__logo {
   width: 100%;
   max-width: 240px;
   margin-bottom: 24px;
 }
 
-.hero-text {
+.hero__text {
   margin-top: 0;
   margin-bottom: 28px;
   line-height: 1.5;
@@ -30,18 +30,18 @@
   text-rendering: optimizeLegibility;
 }
 
-.hero-text strong {
+.hero__text strong {
   font-weight: 500;
 }
 
-.hero-actions {
+.hero__actions {
   width: 100%;
   display: flex;
   flex-direction: column;
   margin-bottom: 24px;
 }
 
-.hero-btn {
+.hero__btn {
   box-sizing: border-box;
   padding: 16px 32px;
   margin-bottom: 12px;
@@ -53,28 +53,28 @@
   transition: background-color 0.2s;
 }
 
-.hero-btn-primary {
+.hero__btn--primary {
   background-color: var(--dark-blue-color);
   color: #fff !important;
 }
 
-.hero-btn-primary:hover, .hero-btn-primary:focus {
+.hero__btn--primary:hover, .hero__btn--primary:focus {
   background-color: var(--dark-magenta-color);
 }
 
-.hero-btn-secondary {
+.hero__btn--secondary {
   background-color: transparent;
   color: #b8c0e9 !important;
   border: 1px solid #6773ad;
 }
 
-.hero-btn-secondary:hover, .hero-btn-secondary:focus {
+.hero__btn--secondary:hover, .hero__btn--secondary:focus {
   background-color: var(--dark-magenta-color);
   border-color: var(--dark-magenta-color);
   color: #fff !important;
 }
 
-.hero-versions {
+.hero__versions {
   margin: 0;
   list-style:none;
   display: flex;
@@ -85,41 +85,41 @@
   width: 100%;
 }
 
-.hero-version {
+.hero__version {
   margin-bottom: 12px;
 }
 
-.hero-versions a.notes {
+.hero__versions a.notes {
     font-size:.875rem;
     white-space:nowrap;
 }
 
-.hero-versions a {
+.hero__versions a {
     color: var(--background-text-color);
     border:0;
 }
 
-.hero-versions a:hover,
-.hero-versions a:focus {
+.hero__versions a:hover,
+.hero__versions a:focus {
   border-bottom:1px dotted;
 }
 
-.hero-version-link {
+.hero__version--link {
     color:#fff !important;
     display: inline-block;
 }
 
 @media (min-width: 540px) {
-  .hero-actions {
+  .hero__actions {
     flex-direction: row;
     width: auto;
   }
 
-  .hero-btn {
+  .hero__btn {
     min-width: 188px;
   }
 
-  .hero-btn-secondary {
+  .hero__btn--secondary {
     margin-left: 8px;
   }
 }
@@ -129,20 +129,20 @@
     margin: 60px 0;
   }
 
-  .hero-versions {
+  .hero__versions {
     flex-direction: row;
   }
 
-  .hero-version {
+  .hero__version {
     font-size: 1.125rem;
     padding: 0 1.5rem;
   }
 
-  .hero-version:not(:first-child) {
+  .hero__version:not(:first-child) {
     border-left: 1px dotted #666;
   }
 
-  .hero-text {
+  .hero__text {
     font-size: 18px;
   }
 }
@@ -213,7 +213,7 @@ aside.tips .social-media .icon-twitter {
   color: #fff !important;
 }
 
-.btn-primary:hover, .hero-btn-primary:focus {
+.btn-primary:hover, .hero__btn--primary:focus {
   background-color: var(--dark-magenta-color) !important;
   border-color: var(--dark-magenta-color) !important;
 }

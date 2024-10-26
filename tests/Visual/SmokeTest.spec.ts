@@ -18,7 +18,7 @@ const items: TestPageOptions[] = [
             fullPage: true,
             timeout: 10000,
         },
-        mask: ['.hero-versions'],
+        mask: ['.hero__versions'],
     },
     {
         path: 'archive/1998.php',
