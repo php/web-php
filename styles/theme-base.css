@@ -1166,6 +1166,8 @@ fieldset {
 .content-box .md5sum, .content-box .sha256 {
     display: block;
     font: normal 0.875rem/1.5rem "Fira Mono", "Source Code Pro", monospace;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 .content-box .md5sum:before {
     content: "md5: ";
