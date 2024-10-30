@@ -93,15 +93,15 @@ $content .= "</div>";
 
 $intro = <<<EOF
   <div class="hero">
-    <img class="hero-logo" src="/images/logos/php-logo-white.svg" alt="php" width="240" height="120">
-    <p class="hero-text">A <strong>popular general-purpose scripting language</strong> that is especially suited to web development.<br />Fast, flexible and pragmatic, PHP powers everything from your blog to the most popular websites in the world.</p>
-    <div class="hero-actions">
-      <a href="/releases/8.3/index.php" class="hero-btn hero-btn-primary">What's new in 8.3</a>
-      <a href="/downloads.php" class="hero-btn hero-btn-secondary">Download</a>
+    <img class="hero__logo" src="/images/logos/php-logo-white.svg" alt="php" width="240" height="120">
+    <p class="hero__text">A <strong>popular general-purpose scripting language</strong> that is especially suited to web development.<br />Fast, flexible and pragmatic, PHP powers everything from your blog to the most popular websites in the world.</p>
+    <div class="hero__actions">
+      <a href="/releases/8.3/index.php" class="hero__btn hero__btn--primary">What's new in 8.3</a>
+      <a href="/downloads.php" class="hero__btn hero__btn--secondary">Download</a>
     </div>
 EOF;
 
-$intro .= "<ul class='hero-versions'>\n";
+$intro .= "<ul class='hero__versions'>\n";
 $active_branches = get_active_branches();
 krsort($active_branches);
 foreach ($active_branches as $major => $releases) {
@@ -110,7 +110,7 @@ foreach ($active_branches as $major => $releases) {
         $version = $release['version'];
         [$major, $minor, $_] = explode('.', $version);
         $intro .= "
-            <li class='hero-version'><a class='hero-version-link' href='/downloads.php#v$version'>$version</a> &middot; <a class='notes' href='/ChangeLog-$major.php#$version'>Changelog</a> &middot; <a class='notes' href='/migration$major$minor'>Upgrading</a></li>\n";
+            <li class='hero__version'><a class='hero__version-link' href='/downloads.php#v$version'>$version</a> &middot; <a class='notes' href='/ChangeLog-$major.php#$version'>Changelog</a> &middot; <a class='notes' href='/migration$major$minor'>Upgrading</a></li>\n";
     }
 }
 $intro .= "</ul>\n";
