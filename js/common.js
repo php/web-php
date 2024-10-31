@@ -522,6 +522,15 @@ $(document).ready(function () {
         );
     };
 
+    const closeOffCanvasByClickOutside = (event) => {
+        if (
+            !offcanvasElement.contains(event.target) &&
+            !menuButton.contains(event.target)
+        ) {
+            closeOffcanvasNav()
+        }
+    };
+
     document
         .getElementById("navbar__menu-link")
         .setAttribute("hidden", "true");
@@ -533,6 +542,8 @@ $(document).ready(function () {
     document
         .getElementById("navbar__close-button")
         .addEventListener("click", closeOffcanvasNav);
+
+    document.addEventListener('click', closeOffCanvasByClickOutside);
 
     /*}}}*/
 
