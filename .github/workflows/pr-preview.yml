@@ -1,11 +1,12 @@
 name: Preview PR
 on:
   pull_request_target:
+    types: [ labeled ]
 
 jobs:
   build:
     runs-on: "ubuntu-22.04"
-    if: github.repository_owner == 'php'
+    if: "github.repository_owner == 'php' && github.event.label.name == 'Status: Preview Allowed'"
     steps:
       - uses: actions/checkout@v4
         with:
@@ -39,7 +40,7 @@ jobs:
     name: "Visual Tests"
 
     runs-on: "ubuntu-latest"
-    if: github.repository_owner == 'php'
+    if: "github.repository_owner == 'php' && github.event.label.name == 'Status: Preview Allowed'"
 
     strategy:
       matrix:
