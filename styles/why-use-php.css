@@ -134,6 +134,26 @@
     margin-bottom: 1rem;
 }
 
+.phpcode {
+    background-color: #FFF;
+    box-shadow: inset 0 0 0 1px rgba(0, 0, 0, .15);
+    border-radius: 0 0 2px 2px;
+    overflow-x: auto;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    padding: 50px 40px 38px;
+    box-sizing: border-box;
+    margin: 0;
+}
+
+.phpcode code {
+    display: block;
+    overflow-x: auto;
+    white-space: pre-wrap;
+}
+
 @media (max-width: 1280px) {
     .logos {
         grid-template-columns: repeat(6, 1fr);
