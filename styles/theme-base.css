@@ -180,53 +180,6 @@ textarea {
   }
 }
 
-.navbar .brand {
-  margin-right:.75rem;
-  float: left;
-  display: block;
-  height: 1.5rem;
-  padding: .75rem .75rem .75rem 1.5rem;
-}
-.navbar .brand:hover,
-.navbar .brand:focus {
-  text-decoration: none;
-}
-.navbar-search {
-  position: relative;
-  float: left;
-  margin-top: .770rem;
-  margin-bottom: 0;
-  width:100%;
-  -moz-box-sizing:border-box;
-  box-sizing:border-box;
-}
-.navbar-search .search-query {
-  margin-bottom: 0;
-  padding: .125rem .5rem;
-  -moz-box-sizing: border-box;
-  box-sizing:border-box;
-  width:100%;
-}
-.navbar-fixed-top .navbar-inner {
-  margin:0 auto;
-}
-.navbar .nav {
-  position: relative;
-  left: 0;
-  display: block;
-  float: left;
-  margin: 0 10px 0 0;
-}
-.navbar .nav > li {
-  float: left;
-}
-.navbar .nav > li > a {
-  float: none;
-  padding: .75rem;
-}
-.navbar .nav > li > a > img {
-  vertical-align: middle;
-}
 @-ms-viewport {
   width: device-width;
 }
@@ -398,22 +351,6 @@ hr {
     border:0;
     height:0;
     border-top:.25rem solid #99c;
-}
-
-.navbar .brand img {
-    padding:0;
-    opacity:.75;
-    border: 0;
-}
-.navbar a {
-    border:0;
-}
-
-.navbar {
-  border-bottom:.25rem solid;
-  overflow: visible;
-  *position: relative;
-  *z-index: 2;
 }
 
 .page-tools {
@@ -1009,149 +946,6 @@ fieldset {
     padding:0;
     border:0;
 }
-.navbar ul {
-    list-style:none;
-}
-.navbar a {
-    display:inline-block;
-}
-
-/* {{{ Typeahead search results */
-.twitter-typeahead {
-    width: 100%;
-}
-
-.navbar .navbar-search .tt-hint.search-query {
-    color: silver;
-}
-
-.search-query {
-    z-index: 2 !important;
-}
-
-.tt-dropdown-menu {
-    background: none repeat scroll 0 0 var(--light-blue-color);
-    border-bottom: 1px solid #C4C9DF;
-    border-radius: 0 0 2px 2px;
-    box-shadow: 1px 0 1px -1px #C4C9DF inset, -1px 0 1px -1px #C4C9DF inset, 0 0 1px var(--dark-blue-color);
-    color: var(--dark-grey-color);
-    padding-top: 3px;
-    margin-top: -3px;
-    min-width: 100%;
-    overflow: auto;
-    max-height: 90vh;
-}
-
-.tt-dropdown-menu .result-heading {
-    font-size:1.1rem;
-    border-bottom: 2px solid var(--dark-blue-color);
-    color: var(--light-blue-color);
-    text-shadow:0 -1px 0 rgba(0,0,0,.25);
-    word-spacing:6px;
-    margin: 0;
-    padding: 0.1rem 0.3rem;
-    line-height: 2.5rem;
-    background-color: rgb(136, 146, 191);
-}
-
-.tt-dropdown-menu .result-heading .collapsible {
-    background: url(../images/search-sprites.png) no-repeat left center;
-    background-position: 0 -15px;
-    width: 30px;
-    height: 13px;
-    display: inline-block;
-}
-
-.tt-dropdown-menu .result-heading .collapsible:hover {
-    cursor: pointer;
-}
-
-.tt-dropdown-menu .result-heading .collapsible.closed {
-    background-position: 0 -2px;
-}
-
-.tt-dropdown-menu .result-heading::after {
-    border-bottom: none;
-}
-
-.tt-dropdown-menu .result-count {
-    display: inline-block;
-    float: right;
-    opacity: 0.6;
-    text-align: right;
-}
-
-.tt-suggestions {
-    color: #555;
-    overflow-y: auto;
-	overflow-x: hidden;
-    max-height: 210px;
-}
-
-.tt-dropdown-menu .search {
-    border: none;
-    color: white;
-    display: block;
-    padding: 0.3rem;
-    background: rgb(136, 146, 191);
-}
-
-.tt-suggestion {
-    margin: 0;
-    padding: 3px;
-    background: rgb(226, 228, 239);
-    border-bottom: 1px solid rgb(79, 91, 147);
-}
-
-.tt-suggestion h4 {
-    color: var(--dark-grey-color);
-    margin: 0;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    font-size: 11pt;
-    line-height: 2rem;
-    font-weight: normal;
-}
-
-/* Class and other matches descriptions tend to be useless. */
-.tt-suggestion .description {
-    display: block;
-    font-size: 0.75rem;
-    line-height: 1rem;
-    overflow: hidden;
-    text-overflow: ellipsis;
-}
-
-
-/* Selected items. */
-.tt-suggestion.tt-is-under-cursor {
-    background-color: var(--dark-blue-color);
-}
-
-.tt-suggestion.tt-is-under-cursor h4 {
-    color: #FFF;
-}
-
-.tt-suggestion.tt-is-under-cursor .description {
-    color: #FFF;
-}
-
-/* We need to crunch down the dropdown on smaller displays. Firstly we'll drop
- * the descriptions, then classes (since they're two clicks away if you have
- * matching functions). */
-@media screen and (max-height: 480px) {
-    .tt-suggestion .description {
-        display: none;
-    }
-}
-
-@media screen and (max-height: 400px) {
-    .tt-dataset-1 {
-        /* Overriding an unfortunate element style. */
-        display: none !important;
-    }
-}
-/* }}} */
 
 .downloads .content-box {
   margin:0 0 2.25rem;
@@ -1553,25 +1347,9 @@ div.soft-deprecation-notice blockquote.sidebar {
   float:right;
 }
 @media (min-width: 768px) {
-
-  .navbar-fixed-top {
-    top: 0;
-    -webkit-transform: translateZ(0);
-    -moz-transform: translateZ(0);
-    transform: translateZ(0);
-  }
-  body {
-    margin:3.25rem 0 0;
-  }
-  /* add a top-margin to all elements which get referenced by anchor-urls, so they are not covered by the fixed header */
-  [id] {
-    scroll-margin-top: 3.25rem;
-  }
-
   #breadcrumbs {
     display:block;
   }
-  .navbar-search,
   #intro .background,
   aside.tips,
   .layout-menu {
@@ -1583,19 +1361,10 @@ div.soft-deprecation-notice blockquote.sidebar {
     float:left;
     width:75%;
   }
-  .navbar-fixed-top {
-    position: fixed;
-    right: 0;
-    left: 0;
-    z-index: 1030;
-    margin-bottom: 0;
-  }
 }
 
-
-
 @media (min-width: 768px) and (max-width: 979px) {
-    aside.tips, .navbar-search {
+    aside.tips {
         width: 30% !important;
     }
 
@@ -1606,7 +1375,7 @@ div.soft-deprecation-notice blockquote.sidebar {
 
 @media (min-width: 1200px) {
   #intro .container,
-  .navbar-inner,
+  .navbar__inner,
   #breadcrumbs-inner,
   #goto div,
   #trick div,
@@ -1617,7 +1386,7 @@ div.soft-deprecation-notice blockquote.sidebar {
 }
 @media (min-width: 1500px) {
   #intro .container,
-  .navbar-inner,
+  .navbar__inner,
   #breadcrumbs-inner,
   #goto div,
   #trick div,
@@ -1633,21 +1402,6 @@ div.soft-deprecation-notice blockquote.sidebar {
 
 
 @media (max-width:767px) {
-  .navbar-fixed-top .container {
-    width:auto;
-  }
-
-  .navbar-search {
-    float:left;
-    clear: both;
-    margin-top: 0;
-    padding: 0 10px 10px 10px;
-  }
-
-  .navbar .nav {
-    margin-right: 0;
-  }
-
   #intro .download-php {
     margin: 0 !important;
   }
@@ -1675,46 +1429,6 @@ div.soft-deprecation-notice blockquote.sidebar {
     opacity: 0;
   }
 
-  .navbar .brand {
-    float: left;
-    margin-bottom: 0.5rem;
-  }
-
-  .navbar-search {
-    margin-top: 0;
-    padding: 0 10px 10px;
-  }
-
-  .navbar .brand img {
-    display: block;
-    margin-left: 12px;
-  }
-
-  .navbar .nav {
-    clear: both;
-    float: none;
-    max-height: 0;
-    overflow: hidden;
-    -moz-transition: max-height 400ms;
-    -webkit-transition: max-height 400ms;
-    -o-transition: max-height 400ms;
-    -ms-transition: max-height 400ms;
-    transition: max-height 400ms;
-  }
-
-  .navbar .nav > li, .footmenu > li {
-    float: none;
-    display: block;
-    text-align: center;
-
-  }
-
-  .navbar .nav > li a, .footmenu > li > a {
-    width: 100%;
-    display: block;
-    padding-left: 0;
-  }
-
   #mainmenu-toggle:checked + .nav {
     /* This just has to be big enough to cover whatever's in .nav. */
     max-height: 50rem;
@@ -1728,12 +1442,6 @@ div.soft-deprecation-notice blockquote.sidebar {
 }
 
 @media (min-width:768px) {
-  #topsearch {
-    float:right;
-  }
-  .navbar-search .search-query {
-    width:100%;
-  }
   #intro .container {
     position:relative;
   }
@@ -1761,7 +1469,7 @@ div.soft-deprecation-notice blockquote.sidebar {
   width: 100%;
   opacity: 0.9;
   position: fixed;
-  top: 50px;
+  top: 64px;
   z-index: 5000;
   color: #E6E6E6;
 }
@@ -1786,7 +1494,7 @@ div.soft-deprecation-notice blockquote.sidebar {
     height: 100%;
     width: 100%;
     position: fixed;
-    top: 50px;
+    top: 64px;
     z-index: 5000;
 }
 #goto div,
@@ -1844,7 +1552,6 @@ aside.tips div.inner {
 /* {{{ Flash message */
 #flash-message {
   height: auto;
-  margin-top: 4px;
   position: fixed;
   width: 100%;
   z-index: 95;

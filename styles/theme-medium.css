@@ -9,6 +9,7 @@ html {
   background-color: var(--background-color);
   background-image: url('/images/bg-texture-00.svg');
   color: var(--background-text-color);
+  scrollbar-color: hsl(0, 0%, 67%) transparent;
 }
 
 #layout-content {
@@ -182,72 +183,569 @@ div.warning a:focus {
 }
 /* }}} */
 
+/* {{{ 2024 Navbar */
+.navbar {
+  /* Ensure the navbar shadow is rendered above the main content */
+  position: relative;
+  z-index: 1000;
+  background-color: var(--dark-blue-color);
+  box-shadow: 0 2px 4px 0px rgba(0, 0, 0, 0.2);
+}
 
-/* {{{ Navbar */
-.navbar .nav > li > a:focus,
-.navbar .nav > li > a:hover {
-  color: var(--dark-grey-color);
+.navbar * {
+  box-sizing: border-box;
 }
-.navbar .nav > .active > a {
-  box-shadow: inset 0 3px 8px rgba(0, 0, 0, 0.125);
+
+.navbar *:focus-visible {
+  outline: 2px solid var(--light-magenta-color);
+  outline-offset: 2px;
 }
-.navbar .brand,
-.navbar .nav > li > a {
-  color: var(--light-blue-color);
-  border:0;
-  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+
+.navbar__inner {
+  display: flex;
+  height: 64px;
+  padding: 0px 16px;
+  margin: 0 auto;
 }
-.navbar .brand:hover,
-.navbar .nav > li > a:hover,
-.navbar .brand:focus,
-.navbar .nav > li > a:focus {
-  color: #fff;
+
+.navbar__brand {
+  display: flex;
+  align-items: center;
+  border: none;
 }
-.navbar .nav > li > a:focus,
-.navbar .nav > li > a:hover {
+
+.navbar__brand img {
+  height: 40px;
+}
+
+.navbar__nav {
+  display: flex;
+  margin: 0;
+  margin-left: 24px;
+}
+
+.navbar__item {
+  display: block;
+  list-style: none;
+}
+
+.navbar [hidden] {
+  display: none;
+}
+
+.navbar__link {
+  display: flex;
+
+  align-items: center;
+
+  height: 100%;
+  padding: 0px 12px;
+
+  font-size: 16px;
+  color: #ffffff;
+  text-decoration: none;
+
+  border-bottom: none;
+
+  transition: color 0.25s ease-out;
+}
+
+/* TODO: Convert to BEM modifier */
+.navbar__link--active {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.navbar__link,
+.navbar__link:link,
+.navbar__link:visited {
+  color: hsl(231, 100%, 93%);
+}
+
+.navbar__link--active,
+.navbar__link:hover,
+.navbar__link:link:hover,
+.navbar__link:visited:hover {
+  color: white;
+}
+
+.navbar__offcanvas {
+  display: flex;
+}
+
+.navbar__search-form,
+.navbar__search-button {
+  display: none;
+
+  flex-grow: 1;
+
+  max-width: 300px;
+  padding: 8px 8px;
+
+  background-color: #404f82;
+  border: 1px solid #6a78be;
+  border-radius: 8px;
+}
+
+.navbar__search-form label {
+  display: flex;
+  align-items: center;
+}
+
+.navbar__search-form svg,
+.navbar__search-button svg {
+  width: 24px;
+  height: 24px;
+  margin-right: 8px;
+  color: hsl(225, 41%, 69%);
+}
+
+.navbar__search-form:focus-within,
+.navbar__search-button:hover {
+  border-color: #94a3ed;
+  border-width: 1px;
+  outline: none;
+}
+
+.navbar__search-input {
+  width: 100%;
+  padding: 0;
+
+  color: white;
+
   background-color: transparent;
-  color: #fff;
+  border: none;
 }
-.navbar .nav .active > a,
-.navbar .nav .active > a:hover,
-.navbar .nav .active > a:focus {
-  color: #fff;
+
+.navbar__search-input:focus-visible {
+  outline: none;
+}
+
+.navbar__search-input::placeholder,
+.navbar__search-button {
+  color: hsla(230, 72%, 84%);
+  opacity: 1;
+}
+
+.navbar__right {
+  display: flex;
+  flex-grow: 1;
+  justify-content: end;
+  padding: 12px 0px;
+}
+
+.navbar_icon-item--visually-aligned {
+  margin-right: -8px;
+}
+
+.navbar__backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  /* Ensure to render above other non static elements */
+  z-index: 1010;
+
+  display: none;
+
+  width: 100vw;
+  height: 100vh;
+
+  background-color: #000;
+  opacity: 0.25;
+}
+
+.navbar__icon-item,
+.navbar__icon-item:link,
+.navbar__icon-item:visited {
+  padding: 8px;
+
+  color: hsl(222, 80%, 87%);
+
+  cursor: pointer;
+
+  background-color: transparent;
+  border: 0;
+  outline: 0;
+
+  transition: color 0.25s ease-out;
+}
+
+.navbar__icon-item:hover {
+  color: white;
+  opacity: 1;
+}
+
+.navbar__icon-item svg {
+  display: block;
+}
+
+.navbar__close-button {
+  position: absolute;
+  top: 13px;
+  right: 16px;
+}
+
+.navbar__release img {
+  height: 22px;
+}
+
+/* We use a desktop-first approach for the offcanvas navigation styles */
+@media (max-width: 992px) {
+  .navbar__offcanvas {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1020;
+
+    flex-grow: 1;
+    flex-direction: column;
+
+    width: 240px;
+    max-width: 100%;
+    padding: 24px 0px;
+
+    visibility: hidden;
+
+    background-color: var(--dark-blue-color);
+    box-shadow: 0 16px 48px rgba(0, 0, 0, 0.175);
+
+    transition: transform 0.3s ease;
+    transform: translateX(100%);
+  }
+
+  .navbar__offcanvas.show {
+    display: flex;
+    transform: translateX(0);
+  }
+
+  .navbar__nav {
+    flex-direction: column;
+    order: 1;
+    margin-top: 40px;
+    margin-left: 0;
+  }
+
+  .navbar__link {
+    padding: 16px 24px;
+    font-size: 18px;
+  }
+
+  .navbar__search-button {
+    display: none;
+  }
+
+  /* TODO: Convert to BEM modifier */
+  .navbar__backdrop.show {
+    display: block;
+  }
+}
+
+@media (min-width: 992px) {
+  .navbar__icon-item {
+    display: none;
+  }
+
+  .navbar__search-form,
+  .navbar__search-button {
+    display: flex;
+    align-items: center;
+    text-align: left;
+  }
+}
+
+@media (min-width: 1200px) {
+  .navbar__link {
+    padding: 8px 16px;
+  }
+}
+/* }}} */
+
+/* {{{ Search modal */
+.search-modal__backdrop {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1030;
+
+  justify-content: center;
+
+  visibility: hidden;
+
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+
+  transition: opacity 0.1s ease-out;
+}
+
+.search-modal__backdrop.showing,
+.search-modal__backdrop.show {
+  visibility: visible;
+  opacity: 1;
+}
+
+.search-modal__backdrop.hiding {
+  visibility: visible;
+  opacity: 0;
+}
+
+.search-modal,
+.search-modal * {
+  box-sizing: border-box;
+}
+
+.search-modal {
+  display: flex;
+
+  flex-direction: column;
+
+  width: 100%;
+  height: 100%;
+  margin: 0;
+
+  background-color: var(--dark-grey-color);
+}
+
+.search-modal *:focus-visible {
+  outline: 2px solid var(--light-magenta-color);
+  outline-offset: 2px;
+}
+
+.search-modal__header {
+  display: flex;
+  align-items: center;
+  padding: 10px 16px;
+}
+
+.search-modal__form {
+  display: flex;
+
+  flex-grow: 1;
+
+  align-items: center;
+
+  min-width: 0;
+  padding-left: 12px;
+
+  background-color: hsl(0, 0%, 25%);
+  border-radius: 8px;
+}
+
+.search-modal__input-icon {
+  display: block;
+  flex-shrink: 0;
+  width: 24px;
+}
+
+.search-modal__input-icon svg {
+  display: block;
+  color: hsl(0, 0%, 54%);
+}
+
+.search-modal__input {
+  flex-grow: 1;
+
+  min-width: 0;
+  height: 44px;
+  padding-left: 12px;
+
+  color: white;
+
+  background-color: transparent;
+  border: none;
+}
+
+.search-modal__input:focus {
+  border-width: 1px;
+  outline: none;
+}
+
+.search-modal__input::placeholder {
+  color: rgba(255, 255, 255, 0.56);
+  opacity: 1;
+}
+
+/* TODO: The icon button styles were copied from the navbar. */
+/* We should refactor this into a shared component when possible. */
+.search-modal__close {
+  padding: 8px;
+  margin-right: -8px; /* Compensate for button padding */
+  margin-left: 8px;
+
+  color: #e8e8e8;
+
+  cursor: pointer;
+
+  background-color: transparent;
+  border: 0;
+  outline: 0;
+  opacity: 0.65;
+
+  transition: opacity 0.15s ease-out;
+}
+
+.search-modal__close svg {
+  display: block;
+  width: 24px;
+  fill: currentColor;
+}
+
+.search-modal__close:hover,
+.search-modal__close:focus {
+  color: white;
+  opacity: 1;
+}
+
+.search-modal__results {
+  height: 100%;
+  padding: 0 16px;
+  overflow-y: scroll;
+
+  scrollbar-color: hsl(0, 0%, 67%) transparent;
+  scrollbar-width: thin;
+}
+
+.search-modal__result {
+  display: flex;
+
+  align-items: center;
+
+  padding: 10px;
+  padding-left: 14px;
+
+  line-height: 1.2;
+
+  border: none;
+  border-radius: 0.5rem;
+}
+
+.search-modal__result:hover {
+  /* Simulates 33% opacity by blending --dark-blue-color with --dark-grey-color.
+   * TODO: Use rgb(var(--dark-blue-color) / 33%) once widely supported.
+   * More info: https://caniuse.com/mdn-css_types_color_rgb_relative_syntax */
+  background-color: #3c4053;
+}
+
+.search-modal__result[aria-selected="true"] {
   background-color: var(--dark-blue-color);
 }
-.navbar .navbar-search .search-query {
-  background-color: #fff;
-  color: var(--dark-grey-color);
-  text-shadow: 0 1px 0 #fff;
-  border:0;
-  border-radius:2px;
-  box-shadow: inset 0 1px 2px rgba(0,0,0,.2);
+
+.search-modal__result-content {
+  flex-grow: 1;
+  min-width: 0; /* Allow text truncation */
 }
-.navbar .navbar-search .search-query:focus {
-  box-shadow: inset 0 1px 2px rgba(0,0,0,.2);
+
+.search-modal__result-name {
+  margin-bottom: 6px;
+  overflow: hidden;
+
+  color: #e6e6e6;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
-.navbar .navbar-search .search-query:-moz-placeholder {
-  color: #999;
+
+.search-modal__result:hover .search-modal__result-name {
+  color: white;
 }
-.navbar .navbar-search .search-query:-ms-input-placeholder {
-  color: #999;
+
+.search-modal__result-description {
+  overflow: hidden;
+
+  font-size: 14px;
+  color: var(--background-text-color);
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
-.navbar .navbar-search .search-query::-webkit-input-placeholder {
-  color: #999;
+
+.search-modal__result:hover .search-modal__result-description {
+  color: white;
+  opacity: 0.6;
 }
-.navbar {
-  border-color:var(--dark-blue-color);
-  background:var(--medium-blue-color);
-  box-shadow: 0 .25em .25em  rgba(0,0,0,.1);
+
+.search-modal__result-icon {
+  margin-right: 12px;
 }
-.navbar .brand {
-  color: #fff;
+
+.search-modal__result-icon svg {
+  display: block;
+  width: 24px;
+  fill: hsla(0, 0%, 100%, 0.3);
 }
-.navbar a {
-  text-shadow: 0 1px 0 #fff;
+
+.search-modal__helper-text {
+  display: none;
+  padding: 10px 16px;
+  font-size: 14px;
+}
+
+@media (min-width: 992px) {
+  .search-modal {
+    max-width: 560px;
+    height: calc(100% - 1rem * 2);
+    margin: 1rem auto;
+    border-radius: 16px;
+  }
+
+  .search-modal__header {
+    padding: 18px 20px;
+  }
+
+  .search-modal__input {
+    height: 52px;
+    font-size: 18px;
+  }
+
+  .search-modal__close {
+    margin-right: -10px; /* Compensate for button padding */
+  }
+
+  .search-modal__results {
+    padding: 0 20px;
+  }
+
+  .search-modal__helper-text {
+    display: block;
+    padding: 18px 20px;
+  }
+
+  .search-modal__helper-text kbd {
+    display: inline-block;
+
+    padding: 0px 4px;
+
+    font-family: inherit;
+
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
+  }
+}
+/* }}} */
+
+/* {{{ Lookup form */
+
+.lookup-form {
+  max-width: 540px;
+}
+
+.lookup-form *:focus-visible {
+  outline: 2px solid var(--light-magenta-color);
 }
 
 /* }}} */
 
+/* {{{ Menu */
+
+.menu .menu__item ~ .menu__item {
+  margin-top: 16px;
+}
+
+.menu__link {
+  font-size: 1.25rem;
+  border: none;
+}
+
+/* }}} */
 
 /* {{{ User notes */
 #usernotes .count {
@@ -504,10 +1002,11 @@ div.elephpants img:focus {
 }
 
 .headsup {
+  position: relative;
   padding:.25rem 0;
   height:1.5rem;
-  border-bottom:.125rem solid #696;
-  background-color: #9c9;
+  box-shadow: 0 2px 4px 0px rgba(0,0,0,.2);
+  background-color: var(--dark-magenta-color);
   color:#fff;
 }
 
