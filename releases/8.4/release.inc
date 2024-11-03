@@ -448,7 +448,6 @@ PHP
                     <li><?= message('new_core_functions', $lang) ?></li>
                     <li><?= message('new_bcmath_functions', $lang) ?></li>
                     <li><?= message('new_date_functions', $lang) ?></li>
-                    <li><?= message('new_dom_functions', $lang) ?></li>
                     <li><?= message('new_mb_functions', $lang) ?></li>
                     <li><?= message('new_pcntl_functions', $lang) ?></li>
                     <li><?= message('new_reflection_functions', $lang) ?></li>
