@@ -9,6 +9,7 @@ include_once __DIR__ . '/../../include/prepend.inc';
 const LANGUAGES = [
     'en' => 'English',
     'ru' => 'Russian',
+    'pt_BR' => 'Português do Brasil'
 ];
 
 function common_header(string $description): void {
