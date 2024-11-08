@@ -523,13 +523,10 @@ $(document).ready(function () {
     };
 
     const closeOffCanvasByClickOutside = (event) => {
-        if (
-            !offcanvasElement.contains(event.target) &&
-            !menuButton.contains(event.target)
-        ) {
-            closeOffcanvasNav()
+        if (event.target === backdropElement) {
+            closeOffcanvasNav();
         }
-    };
+    }
 
     document
         .getElementById("navbar__menu-link")
@@ -543,7 +540,7 @@ $(document).ready(function () {
         .getElementById("navbar__close-button")
         .addEventListener("click", closeOffcanvasNav);
 
-    document.addEventListener('click', closeOffCanvasByClickOutside);
+    backdropElement.addEventListener('click', closeOffCanvasByClickOutside);
 
     /*}}}*/
 
