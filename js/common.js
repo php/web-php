@@ -500,7 +500,7 @@ $(document).ready(function () {
         // like downloads.php has.
         document.documentElement.style.overflow = "hidden";
         document.body.style.paddingRight = `${scrollbarWidth}px`
-        offcanvasSelectables[0].focus();
+        offcanvasElement.querySelector(".navbar__link").focus();
         document.addEventListener("keydown", offcanvasFocusTrapHandler);
     };
 
