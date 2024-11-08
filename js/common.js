@@ -465,8 +465,8 @@ $(document).ready(function () {
         offcanvasElement.querySelectorAll("input, button, a");
     const backdropElement = document.getElementById("navbar__backdrop");
 
-    const documentWidth = document.documentElement.clientWidth
-    const scrollbarWidth = Math.abs(window.innerWidth - documentWidth)
+    const documentWidth = document.documentElement.clientWidth;
+    const scrollbarWidth = Math.abs(window.innerWidth - documentWidth);
 
     const offcanvasFocusTrapHandler = (event) => {
         if (event.key != "Tab") {
@@ -499,7 +499,7 @@ $(document).ready(function () {
         // nav from being pushed off screen when the page has horizontal scroll,
         // like downloads.php has.
         document.documentElement.style.overflow = "hidden";
-        document.body.style.paddingRight = `${scrollbarWidth}px`
+        document.body.style.paddingRight = `${scrollbarWidth}px`;
         offcanvasElement.querySelector(".navbar__link").focus();
         document.addEventListener("keydown", offcanvasFocusTrapHandler);
     };
@@ -515,7 +515,7 @@ $(document).ready(function () {
             () => {
                 document.body.style.overflow = "auto";
                 document.documentElement.style.overflow = "auto";
-                document.body.style.paddingRight = '0px'
+                document.body.style.paddingRight = "0px";
                 offcanvasElement.style.removeProperty("visibility");
             },
             { once: true },
@@ -526,13 +526,11 @@ $(document).ready(function () {
         if (event.target === backdropElement) {
             closeOffcanvasNav();
         }
-    }
+    };
 
-    document
-        .getElementById("navbar__menu-link")
-        .setAttribute("hidden", "true");
+    document.getElementById("navbar__menu-link").setAttribute("hidden", "true");
 
-    const menuButton = document.getElementById("navbar__menu-button")
+    const menuButton = document.getElementById("navbar__menu-button");
     menuButton.removeAttribute("hidden");
     menuButton.addEventListener("click", openOffcanvasNav);
 
@@ -540,7 +538,7 @@ $(document).ready(function () {
         .getElementById("navbar__close-button")
         .addEventListener("click", closeOffcanvasNav);
 
-    backdropElement.addEventListener('click', closeOffCanvasByClickOutside);
+    backdropElement.addEventListener("click", closeOffCanvasByClickOutside);
 
     /*}}}*/
 
