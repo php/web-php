@@ -96,10 +96,8 @@ if (!empty($_SERVER['BASE_PAGE'])
     }
     ?>
 
- <!-- External and third party libraries. -->
- <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 <?php
- $jsfiles = ["ext/FuzzySearch.min.js", "ext/mousetrap.min.js", "ext/jquery.scrollTo.min.js", "search.js", "common.js"];
+ $jsfiles = ["ext/jquery-3.6.0.min.js", "ext/FuzzySearch.min.js", "ext/mousetrap.min.js", "ext/jquery.scrollTo.min.js", "search.js", "common.js"];
  foreach ($jsfiles as $filename) {
    $path = dirname(__DIR__) . '/js/' . $filename;
    echo '<script src="/cached.php?t=' . @filemtime($path) . '&amp;f=/js/' . $filename . '"></script>' . "\n";
