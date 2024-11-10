@@ -5,6 +5,8 @@
   not available.
 */
 
+use phpweb\I18n\Languages;
+
 // A 'good looking' 404 error message page
 function error_404(): void
 {
@@ -37,7 +39,7 @@ function error_404_manual(): void
 // An error message page for manual pages from inactive languages
 function error_inactive_manual_page($lang_name, $en_page): void
 {
-    global $MYSITE, $ACTIVE_ONLINE_LANGUAGES;
+    global $MYSITE;
     status_header(404);
     site_header('Page gone', ["noindex"]);
     echo "<h1>Page gone</h1>\n" .
@@ -48,7 +50,7 @@ function error_inactive_manual_page($lang_name, $en_page): void
     echo "<p>The English page is available at <a href=\"{$en_url}\">{$en_url}</a></p>\n";
     echo "<p>Several other languages are also available:</p>\n";
     echo "<ul>\n";
-    foreach ($ACTIVE_ONLINE_LANGUAGES as $alt_lang => $alt_lang_name) {
+    foreach (Languages::ACTIVE_ONLINE_LANGUAGES as $alt_lang => $alt_lang_name) {
         if ($alt_lang === "en") {
             continue;
         }

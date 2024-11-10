@@ -1,5 +1,7 @@
 <?php
 
+use phpweb\I18n\Languages;
+
 // Define some constants, and $MIRRORS array
 // Mirror type constants
 const MIRROR_DOWNLOAD = 0;
@@ -30,9 +32,6 @@ $MIRRORS = [
  * @var array<string, string> $COUNTRIES
  */
 $COUNTRIES = include __DIR__ . '/countries.inc';
-
-// Define $LANGUAGES array
-include __DIR__ . '/languages.inc';
 
 // Returns true if the current (or specified)
 // site is the primary mirror site
@@ -261,14 +260,14 @@ if (!isset($MIRRORS[$MYSITE])) {
 
 // Override mirror language with local preference
 if (isset($_SERVER['MIRROR_LANGUAGE'])) {
-    if (isset($LANGUAGES[$_SERVER['MIRROR_LANGUAGE']])) {
+    if (isset(Languages::LANGUAGES[$_SERVER['MIRROR_LANGUAGE']])) {
         $MIRRORS[$MYSITE][6] = $_SERVER['MIRROR_LANGUAGE'];
     }
 }
 
 // Fallback to English in case the language
 // set is definitely not supported
-if (!isset($LANGUAGES[$MIRRORS[$MYSITE][6]])) {
+if (!isset(Languages::LANGUAGES[$MIRRORS[$MYSITE][6]])) {
     $MIRRORS[$MYSITE][6] = "en";
 }
 

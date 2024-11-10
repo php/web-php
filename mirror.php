@@ -1,4 +1,7 @@
 <?php
+
+use phpweb\I18n\Languages;
+
 $_SERVER['BASE_PAGE'] = 'mirror.php';
 include_once __DIR__ . '/include/prepend.inc';
 $SIDEBAR_DATA = '
@@ -84,7 +87,7 @@ site_header("Information About This PHP Mirror Site", ["current" => "community"]
 <h2>Mirror Services</h2>
 
 <ul>
- <li>Default language is <?php echo $LANGUAGES[default_language()]; ?></li>
+ <li>Default language is <?php echo Languages::LANGUAGES[default_language()]; ?></li>
 </ul>
 
 <h2>Mirror Status</h2>

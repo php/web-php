@@ -28,6 +28,7 @@
 
 */
 
+use phpweb\I18n\Languages;
 use phpweb\LangChooser;
 
 require_once __DIR__ . '/../src/autoload.php';
@@ -37,7 +38,7 @@ $_SERVER['STRIPPED_URI'] = htmlspecialchars($_SERVER['REQUEST_URI'], ENT_QUOTES,
 
 // The code is encapsulated in a function,
 // so the variable namespace is not polluted
-list($LANG, $EXPL_LANG) = (new LangChooser($LANGUAGES, $INACTIVE_ONLINE_LANGUAGES, $userPreferences->languageCode, default_language() ?: ''))->chooseCode(
+list($LANG, $EXPL_LANG) = (new LangChooser(Languages::LANGUAGES, Languages::INACTIVE_ONLINE_LANGUAGES, $userPreferences->languageCode, default_language() ?: ''))->chooseCode(
     $_REQUEST['lang'] ?? null,
     $_SERVER['REQUEST_URI'],
     $_SERVER['HTTP_ACCEPT_LANGUAGE'] ?? null,

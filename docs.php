@@ -1,4 +1,7 @@
 <?php
+
+use phpweb\I18n\Languages;
+
 $_SERVER['BASE_PAGE'] = 'docs.php';
 include_once __DIR__ . '/include/prepend.inc';
 
@@ -27,19 +30,19 @@ site_header("Documentation", ["current" => "docs"]);
 <?php
 
 // List all manual languages viewable online
-$lastlang = end($ACTIVE_ONLINE_LANGUAGES);
-foreach ($ACTIVE_ONLINE_LANGUAGES as $langcode => $langname) {
+$lastlang = array_key_last(Languages::ACTIVE_ONLINE_LANGUAGES);
+foreach (Languages::ACTIVE_ONLINE_LANGUAGES as $langcode => $langname) {
     if (!file_exists($_SERVER["DOCUMENT_ROOT"] . "/manual/{$langcode}/index.php")) {
         continue;
     }
 
     // Make preferred language bold
-    if ($langcode == $LANG) { echo "<strong>"; }
+    if ($langcode === $LANG) { echo "<strong>"; }
 
     echo '<a href="/manual/' . $langcode . '/">' . $langname . '</a>';
-    echo ($lastlang != $langname) ? ",\n" : "\n";
+    echo ($lastlang !== $langcode) ? ",\n" : "\n";
 
-    if ($langcode == $LANG) { echo "</strong>"; }
+    if ($langcode === $LANG) { echo "</strong>"; }
 }
 
 ?>
