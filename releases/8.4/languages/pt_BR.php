@@ -41,7 +41,7 @@ return [
     'bc_mysqli_constants' => 'As constantes <code>MYSQLI_SET_CHARSET_DIR</code>, <code>MYSQLI_STMT_ATTR_PREFETCH_ROWS</code>, <code>MYSQLI_CURSOR_TYPE_FOR_UPDATE</code>, <code>MYSQLI_CURSOR_TYPE_SCROLLABLE</code> e <code>MYSQLI_TYPE_INTERVAL</code> foram removidas.',
     'bc_mysqli_functions' => 'As funções <code>mysqli_ping()</code>, <code>mysqli_kill()</code>, <code>mysqli_refresh()</code>, os métodos <code>mysqli::ping()</code>, <code>mysqli::kill()</code>, <code>mysqli::refresh()</code> e as constantes <code>MYSQLI_REFRESH_*</code> estão obsoletas.',
     'bc_standard' => '<code>stream_bucket_make_writeable()</code> e <code>stream_bucket_new()</code> agora retornam uma instância de <code>StreamBucket</code> em vez de <code>stdClass</code>.',
-    'bc_core' => 'A construção de linguagem <code>exit</code> agora exige parênteses, funcionando exclusivamente como uma função.',
+    'bc_core' => '<a href="/manual/pt_BR/migration84.incompatible.php#migration84.incompatible.core.exit">Alteração de comportamento no uso de <code>exit()</code></a>.',
     'bc_warnings' => 'A constante <code>E_STRICT</code> está obsoleta.',
 
     'footer_title' => 'Melhor desempenho, sintaxe aprimorada e maior segurança de tipos.',
