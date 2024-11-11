@@ -75,8 +75,10 @@ unset($COUNTRY);
 unset($ONLOAD);
 unset($LAST_UPDATED);
 
+$userPreferences = new UserPreferences();
+
 // Load the My PHP.net settings before any includes
-myphpnet_load();
+$userPreferences->load();
 
 // Site details (mirror site information)
 include __DIR__ . '/site.inc';
@@ -96,88 +98,6 @@ include __DIR__ . '/layout.inc';
 include __DIR__ . '/last_updated.inc';
 
 // -----------------------------------------------------------------------------
-
-// Load in the user preferences
-function myphpnet_load(): void
-{
-    UserPreferences::$languageCode = '';
-    UserPreferences::$searchType = UserPreferences::URL_NONE;
-    UserPreferences::$isUserGroupTipsEnabled = false;
-
-    if (!isset($_COOKIE['MYPHPNET']) || !is_string($_COOKIE['MYPHPNET']) || $_COOKIE['MYPHPNET'] === '') {
-        return;
-    }
-
-    /**
-     * 0 - Language code
-     * 1 - URL search fallback
-     * 2 - Mirror site (removed)
-     * 3 - User Group tips
-     * 4 - Documentation developmental server (removed)
-     */
-    $preferences = explode(",", $_COOKIE['MYPHPNET']);
-    UserPreferences::$languageCode = $preferences[0] ?? '';
-    if (isset($preferences[1]) && in_array($preferences[1], [UserPreferences::URL_FUNC, UserPreferences::URL_MANUAL], true)) {
-        UserPreferences::$searchType = $preferences[1];
-    }
-
-    UserPreferences::$isUserGroupTipsEnabled = isset($preferences[3]) && $preferences[3];
-}
-
-// Get preferred language code
-function myphpnet_language(): string
-{
-    return UserPreferences::$languageCode;
-}
-
-// Set URL search fallback preference
-function myphpnet_urlsearch($type = false)
-{
-    // Set type if specified and if correct
-    if ($type && in_array($type, [UserPreferences::URL_FUNC, UserPreferences::URL_MANUAL], true)) {
-        UserPreferences::$searchType = $type;
-    }
-
-    return UserPreferences::$searchType;
-}
-
-function myphpnet_showug($enable = null) {
-    if (isset($_GET["showug"])) {
-        $enable = true;
-    }
-
-    if (is_bool($enable)) {
-        UserPreferences::$isUserGroupTipsEnabled = $enable;
-    }
-
-    // Show the ug tips to lucky few, depending on time.
-    if ($_SERVER["REQUEST_TIME"] % 10) {
-        UserPreferences::$isUserGroupTipsEnabled = true;
-    }
-
-    return UserPreferences::$isUserGroupTipsEnabled;
-}
-
-// Save user settings in cookie
-function myphpnet_save(): void
-{
-    /**
-     * 0 - Language code
-     * 1 - URL search fallback
-     * 2 - Mirror site (removed)
-     * 3 - User Group tips
-     * 4 - Documentation developmental server (removed)
-     */
-    $preferences = [
-        UserPreferences::$languageCode,
-        UserPreferences::$searchType,
-        '',
-        UserPreferences::$isUserGroupTipsEnabled,
-    ];
-
-    // Set all the preferred values for a year
-    mirror_setcookie("MYPHPNET", join(",", $preferences), 60 * 60 * 24 * 365);
-}
 
 // Embed Google Custom Search engine
 function google_cse(): void {
