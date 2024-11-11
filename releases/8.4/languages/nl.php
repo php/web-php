@@ -41,7 +41,7 @@ return [
     'bc_mysqli_constants' => '<code>MYSQLI_SET_CHARSET_DIR</code>, <code>MYSQLI_STMT_ATTR_PREFETCH_ROWS</code>, <code>MYSQLI_CURSOR_TYPE_FOR_UPDATE</code>, <code>MYSQLI_CURSOR_TYPE_SCROLLABLE</code>, en <code>MYSQLI_TYPE_INTERVAL</code> constanten zijn verwijderd.',
     'bc_mysqli_functions' => '<code>mysqli_ping()</code>, <code>mysqli_kill()</code>, <code>mysqli_refresh()</code> functies, <code>mysqli::ping()</code>, <code>mysqli::kill()</code>, <code>mysqli::refresh()</code> methoden, en <code>MYSQLI_REFRESH_*</code> constanten zijn uitgefaseerd.',
     'bc_standard' => '<code>stream_bucket_make_writeable()</code> en <code>stream_bucket_new()</code> geven nu een instantie van <code>StreamBucket</code> terug in plaats van <code>stdClass</code>.',
-    'bc_core' => '<code>exit()</code> taalconstructie is nu een functie.',
+    'bc_core' => '<a href="/manual/en/migration84.incompatible.php#migration84.incompatible.core.exit"><code>exit()</code> heeft ander gedrag</a>.',
     'bc_warnings' => '<code>E_STRICT</code> constante is uitgefaseerd.',
 
     'footer_title' => 'Betere prestaties, betere syntaxis, verbeterd type systeem.',
