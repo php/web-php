@@ -41,7 +41,7 @@ return [
     'bc_mysqli_constants' => 'Удалены константы <code>MYSQLI_SET_CHARSET_DIR</code>, <code>MYSQLI_STMT_ATTR_PREFETCH_ROWS</code>, <code>MYSQLI_CURSOR_TYPE_FOR_UPDATE</code>, <code>MYSQLI_CURSOR_TYPE_SCROLLABLE</code> и <code>MYSQLI_TYPE_INTERVAL</code>.',
     'bc_mysqli_functions' => 'Функции <code>mysqli_ping()</code>, <code>mysqli_kill()</code>, <code>mysqli_refresh()</code>, методы <code>mysqli::ping()</code>, <code>mysqli::kill()</code>, <code>mysqli::refresh()</code> и константы <code>MYSQLI_REFRESH_*</code> объявлены устаревшими.',
     'bc_standard' => 'Функции <code>stream_bucket_make_writeable()</code> и <code>stream_bucket_new()</code> теперь возвращают экземпляр класса <code>StreamBucket</code> вместо <code>stdClass</code>.',
-    'bc_core' => 'Языковая конструкция <code>exit()</code> теперь более похожа на функцию, но её по-прежнему нельзя отключить или реализовать <code>exit</code>/<code>die</code> в пространстве имён.',
+    'bc_core' => '<a href="/manual/ru/migration84.incompatible.php#migration84.incompatible.core.exit">Изменение поведения языковой конструкции <code>exit()</code></a>.',
     'bc_warnings' => 'Константа <code>E_STRICT</code> объявлена устаревшей.',
 
     'footer_title' => 'Выше производительность, лучше синтаксис, надёжнее система типов.',
