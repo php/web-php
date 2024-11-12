@@ -14,7 +14,7 @@ return [
     'dom_additions_html5_title' => 'Nieuwe ext-dom functies en HTML5 ondersteuning',
     'dom_additions_html5_description' => 'Nieuwe <code>Dom\HTMLDocument</code>, <code>Dom\XMLDocument</code> klassen en <code>DOMNode::compareDocumentPosition()</code>, <code>DOMXPath::registerPhpFunctionNS()</code>, <code>DOMXPath::quote()</code>, <code>XSLTProcessor::registerPHPFunctionNS()</code> methoden zijn beschikbaar.',
     'new_array_find_title' => 'Nieuwe <code>array_*()</code> functies',
-    'new_array_find_description' => 'Nieuwe functies <code>array_find()</code>, <code>array_find_key()</code>, <code>array_any()</code>, en <code>array_all()</code> zijn nu beschikbaar.',
+    'new_array_find_description' => 'Nieuwe functies <a href="/manual/en/function.array-find.php"><code>array_find()</code></a>, <a href="/manual/en/function.array-find-key.php"><code>array_find_key()</code></a>, <a href="/manual/en/function.array-any.php"><code>array_any()</code></a>, en <a href="/manual/en/function.array-all.php"><code>array_all()</code></a> zijn nu beschikbaar.',
     'pdo_driver_specific_parsers_title' => 'PDO driver specifieke SQL parsers',
     'pdo_driver_specific_parsers_description' => 'Nieuwe subklassen <code>Pdo\Dblib</code>, <code>Pdo\Firebird</code>, <code>Pdo\MySql</code>, <code>Pdo\Odbc</code>, <code>Pdo\Sqlite</code> van <code>PDO</code> zijn nu beschikbaar.',
     'new_without_parentheses_title' => '<code>new MyClass()->method()</code> zonder haakjes',

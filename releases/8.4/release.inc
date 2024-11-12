@@ -5,6 +5,9 @@ use function releases\php84\common_header;use function releases\php84\language_c
 if (!isset($lang)) {
     $lang = 'en';
 }
+if (!isset($documentation)) {
+    $documentation = $lang;
+}
 
 $_SERVER['BASE_PAGE'] = 'releases/8.4/' . $lang . '.php';
 
@@ -36,6 +39,7 @@ common_header(message('common_header', $lang));
             <h2 class="php8-h2" id="property_hooks">
                 <?= message('property_hooks_title', $lang) ?>
                 <a class="php8-rfc" href="https://wiki.php.net/rfc/property-hooks">RFC</a>
+                <a class="php8-rfc" href="/manual/<?= $documentation ?>/migration84.new-features.php#migration84.new-features.core.property-hooks"><?= message('documentation', $lang) ?></a>
             </h2>
             <div class="php8-compare__main">
                 <div class="php8-compare__block example-contents">
@@ -131,7 +135,7 @@ PHP
             <h2 class="php8-h2" id="asymmetric_visibility">
                 <?= message('asymmetric_visibility_title', $lang) ?>
                 <a class="php8-rfc" href="https://wiki.php.net/rfc/asymmetric-visibility-v2">RFC</a>
-                <a class="php8-rfc" href="/manual/<?= $lang ?>/language.oop5.visibility.php#language.oop5.visibility-members-aviz"><?= message('documentation', $lang) ?></a>
+                <a class="php8-rfc" href="/manual/<?= $documentation ?>/language.oop5.visibility.php#language.oop5.visibility-members-aviz"><?= message('documentation', $lang) ?></a>
             </h2>
             <div class="php8-compare__main">
                 <div class="php8-compare__block example-contents">
@@ -176,7 +180,7 @@ PHP
             <h2 class="php8-h2" id="deprecated_attribute">
                 <?= message('deprecated_attribute_title', $lang) ?>
                 <a class="php8-rfc" href="https://wiki.php.net/rfc/deprecated_attribute">RFC</a>
-                <a class="php8-rfc" href="/manual/<?= $lang ?>/class.deprecated.php"><?= message('documentation', $lang) ?></a>
+                <a class="php8-rfc" href="/manual/<?= $documentation ?>/class.deprecated.php"><?= message('documentation', $lang) ?></a>
             </h2>
             <div class="php8-compare__main">
                 <div class="php8-compare__block example-contents">
@@ -244,6 +248,7 @@ PHP
                 <?= message('dom_additions_html5_title', $lang) ?>
                 <a class="php8-rfc" href="https://wiki.php.net/rfc/dom_additions_84">RFC</a>
                 <a class="php8-rfc" href="https://wiki.php.net/rfc/domdocument_html5_parser">RFC</a>
+                <a class="php8-rfc" href="/manual/<?= $documentation ?>/migration84.new-features.php#migration84.new-features.dom"><?= message('documentation', $lang) ?></a>
             </h2>
             <div class="php8-compare__main">
                 <div class="php8-compare__block example-contents">
@@ -397,6 +402,7 @@ PHP
             <h2 class="php8-h2" id="new_without_parentheses">
                 <?= message('new_without_parentheses_title', $lang) ?>
                 <a class="php8-rfc" href="https://wiki.php.net/rfc/new_without_parentheses">RFC</a>
+                <a class="php8-rfc" href="/manual/<?= $documentation ?>/migration84.new-features.php#migration84.new-features.core.new-chaining"><?= message('documentation', $lang) ?></a>
             </h2>
             <div class="php8-compare__main">
                 <div class="php8-compare__block example-contents">

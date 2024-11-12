@@ -14,7 +14,7 @@ return [
     'dom_additions_html5_title' => 'Новые возможности ext-dom и поддержка HTML5',
     'dom_additions_html5_description' => 'Добавлены классы <code>Dom\HTMLDocument</code>, <code>Dom\XMLDocument</code>, а также новые методы <code>DOMNode::compareDocumentPosition()</code>, <code>DOMXPath::registerPhpFunctionNS()</code>, <code>DOMXPath::quote()</code> и <code>XSLTProcessor::registerPHPFunctionNS()</code>.',
     'new_array_find_title' => 'Новые функции <code>array_*()</code>',
-    'new_array_find_description' => 'Добавлены функции <code>array_find()</code>, <code>array_find_key()</code>, <code>array_any()</code> и <code>array_all()</code>.',
+    'new_array_find_description' => 'Добавлены функции <a href="/manual/ru/function.array-find.php"><code>array_find()</code></a>, <a href="/manual/ru/function.array-find-key.php"><code>array_find_key()</code></a>, <a href="/manual/ru/function.array-any.php"><code>array_any()</code></a> и <a href="/manual/ru/function.array-all.php"><code>array_all()</code></a>.',
     'pdo_driver_specific_parsers_title' => 'SQL-парсеры, специфичные для драйверов PDO',
     'pdo_driver_specific_parsers_description' => 'Добавлены дочерние классы <code>Pdo\Dblib</code>, <code>Pdo\Firebird</code>, <code>Pdo\MySql</code>, <code>Pdo\Odbc</code>, <code>Pdo\Sqlite</code> драйверов, наследующие <code>PDO</code>.',
     'new_without_parentheses_title' => '<code>new MyClass()->method()</code> без скобок',
