@@ -1,0 +1,50 @@
+<?php
+
+return [
+    'common_header' => 'PHP 8.4 es una actualización importante del lenguaje PHP. Contiene muchas características nuevas, como hooks para propiedades, visibilidad asimétrica, una API DOM actualizada, mejoras de rendimiento, correcciones de errores y limpieza general.',
+    'documentation' => 'Documentación',
+    'main_title' => '¡Lanzado!',
+    'main_subtitle' => 'PHP 8.4 es una actualización importante del lenguaje PHP.<br class="display-none-md"> Contiene muchas características nuevas, como hooks para propiedades, visibilidad asimétrica, una API DOM actualizada, mejoras de rendimiento, correcciones de errores y limpieza general.',
+    'upgrade_now' => '¡Actualiza a PHP 8.4 ahora!',
+
+    'property_hooks_title' => 'Hooks para Propiedades',
+    'asymmetric_visibility_title' => 'Visibilidad asimétrica',
+    'deprecated_attribute_title' => 'Atributo <code>#[\Deprecated]</code>',
+    'deprecated_attribute_description' => 'El nuevo atributo <code>#[\Deprecated]</code> hace que el mecanismo de obsolescencia existente de PHP esté disponible para funciones, métodos y constantes de clase definidas por el usuario.',
+    'dom_additions_html5_title' => 'Nuevas características de ext-dom y soporte para HTML5',
+    'dom_additions_html5_description' => 'Nuevas clases <code>Dom\HTMLDocument</code>, <code>Dom\XMLDocument</code>, y métodos como <code>DOMNode::compareDocumentPosition()</code>, <code>DOMXPath::registerPhpFunctionNS()</code>, <code>DOMXPath::quote()</code>, <code>XSLTProcessor::registerPHPFunctionNS()</code> están disponibles.',
+    'new_array_find_title' => 'Nuevas funciones <code>array_*()</code>',
+    'new_array_find_description' => 'Nuevas funciones disponibles: <a href="/manual/es/function.array-find.php"><code>array_find()</code></a>, <a href="/manual/es/function.array-find-key.php"><code>array_find_key()</code></a>, <a href="/manual/es/function.array-any.php"><code>array_any()</code></a> y <a href="/manual/es/function.array-all.php"><code>array_all()</code></a>.',
+    'pdo_driver_specific_parsers_title' => 'Procesadores SQL específicos para PDO Driver',
+    'pdo_driver_specific_parsers_description' => 'Nuevas subclases de <code>PDO</code>: <code>Pdo\Dblib</code>, <code>Pdo\Firebird</code>, <code>Pdo\MySql</code>, <code>Pdo\Odbc</code>, <code>Pdo\Sqlite</code> están disponibles.',
+    'new_without_parentheses_title' => '<code>new MyClass()->method()</code> sin paréntesis',
+
+    'new_classes_title' => 'Nuevas Clases, Interfaces y Funciones',
+    'new_core_functions' => 'Nueva función <code>request_parse_body()</code>.',
+    'new_bcmath_functions' => 'Nuevas funciones: <code>bcceil()</code>, <code>bcdivmod()</code>, <code>bcfloor()</code> y <code>bcround()</code>.',
+    'new_round_modes' => 'Nuevo enum <code>RoundingMode</code> para <code>round()</code> con 4 nuevos modos de redondeo: <code>TowardsZero</code>, <code>AwayFromZero</code>, <code>NegativeInfinity</code> y <code>PositiveInfinity</code>.',
+    'new_date_functions' => 'Nuevos métodos: <code>DateTime::createFromTimestamp()</code>, <code>DateTime::getMicrosecond()</code>, <code>DateTime::setMicrosecond()</code>, <code>DateTimeImmutable::createFromTimestamp()</code>, <code>DateTimeImmutable::getMicrosecond()</code>, y <code>DateTimeImmutable::setMicrosecond()</code>.',
+    'new_mb_functions' => 'Nuevas funciones: <code>mb_trim()</code>, <code>mb_ltrim()</code>, <code>mb_rtrim()</code>, <code>mb_ucfirst()</code>, y <code>mb_lcfirst()</code>.',
+    'new_pcntl_functions' => 'Nuevas funciones: <code>pcntl_getcpu()</code>, <code>pcntl_getcpuaffinity()</code>, <code>pcntl_getqos_class()</code>, <code>pcntl_setns()</code> y <code>pcntl_waitid()</code>.',
+    'new_reflection_functions' => 'Nuevos métodos: <code>ReflectionClassConstant::isDeprecated()</code>, <code>ReflectionGenerator::isClosed()</code>, y <code>ReflectionProperty::isDynamic()</code>.',
+    'new_standard_functions' => 'Nuevas funciones: <code>http_get_last_response_headers()</code>, <code>http_clear_last_response_headers()</code> y <code>fpow()</code>.',
+    'new_xml_functions' => 'Nuevos métodos: <code>XMLReader::fromStream()</code>, <code>XMLReader::fromUri()</code>, <code>XMLReader::fromString()</code>, <code>XMLWriter::toStream()</code>, <code>XMLWriter::toUri()</code> y <code>XMLWriter::toMemory()</code>.',
+
+    'bc_title' => 'Deprecaciones y cambios en compatibilidad retroactiva',
+    'bc_pecl' => 'Las extensiones IMAP, OCI8, PDO_OCI y pspell han sido desagregadas y movidas a PECL.',
+    'bc_nullable_parameter_types' => 'Los tipos de parámetros implícitamente nulos ahora están en desuso.',
+    'bc_classname' => 'Usar <code>_</code> como nombre de clase ahora está en desuso.',
+    'bc_zero_raised_to_negative_number' => 'Elevar cero a la potencia de un número negativo ahora está en desuso.',
+    'bc_gmp' => 'La clase <code>GMP</code> ahora es final.',
+    'bc_round' => 'Pasar un modo inválido a <code>round()</code> lanza un <code>ValueError</code>.',
+    'bc_typed_constants' => 'Las constantes de clase de las extensiones <code>date</code>, <code>intl</code>, <code>pdo</code>, <code>reflection</code>, <code>spl</code>, <code>sqlite</code>, <code>xmlreader</code> ahora tienen tipos.',
+    'bc_mysqli_constants' => 'Los constantes <code>MYSQLI_SET_CHARSET_DIR</code>, <code>MYSQLI_STMT_ATTR_PREFETCH_ROWS</code>, <code>MYSQLI_CURSOR_TYPE_FOR_UPDATE</code>, <code>MYSQLI_CURSOR_TYPE_SCROLLABLE</code>, y <code>MYSQLI_TYPE_INTERVAL</code> han sido eliminadas.',
+    'bc_mysqli_functions' => 'Las funciones <code>mysqli_ping()</code>, <code>mysqli_kill()</code>, <code>mysqli_refresh()</code>, los métodos <code>mysqli::ping()</code>, <code>mysqli::kill()</code>, <code>mysqli::refresh()</code>, y los constantes <code>MYSQLI_REFRESH_*</code> están en desuso.',
+    'bc_standard' => '<code>stream_bucket_make_writeable()</code> y <code>stream_bucket_new()</code> ahora devuelven una instancia de <code>StreamBucket</code> en lugar de <code>stdClass</code>.',
+    'bc_core' => 'Cambio en el comportamiento de <a href="/manual/es/migration84.incompatible.php#migration84.incompatible.core.exit"><code>exit()</code></a>.',
+    'bc_warnings' => 'El constante <code>E_STRICT</code> está en desuso.',
+
+    'footer_title' => 'Mejor rendimiento, mejor sintaxis, mejor seguridad de tipos.',
+    'footer_description' => '<p>Para descargar el código fuente de PHP 8.4, por favor visita la página de <a href="/downloads">descargas</a>. Los binarios para Windows se encuentran en el sitio <a href="https://windows.php.net/download">PHP para Windows</a>. La lista de cambios está registrada en el <a href="/ChangeLog-8.php#PHP_8_4">ChangeLog</a>.</p>
+        <p>La <a href="/manual/en/migration84.php">guía de migración</a> está disponible en el Manual de PHP. Por favor, consúltala para una lista detallada de nuevas características y cambios incompatibles con versiones anteriores.</p>',
+];
