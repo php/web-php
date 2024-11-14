@@ -1,5 +1,6 @@
 <?php
 
+use phpweb\I18n\Languages;
 use phpweb\UserPreferences;
 
 $_SERVER['BASE_PAGE'] = 'my.php';
@@ -9,7 +10,7 @@ include_once __DIR__ . '/include/prepend.inc';
 header_nocache();
 
 // Languages array copy and options to list
-$langs = $ACTIVE_ONLINE_LANGUAGES;
+$langs = Languages::ACTIVE_ONLINE_LANGUAGES;
 $options = [];
 
 // We have post data, and it is an available language

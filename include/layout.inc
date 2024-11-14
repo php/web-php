@@ -1,5 +1,6 @@
 <?php
 
+use phpweb\I18n\Languages;
 use phpweb\Navigation\NavItem;
 
 $_SERVER['STATIC_ROOT'] = $MYSITE;
@@ -463,7 +464,7 @@ META
 
     $config["headsup"] = get_news_changes();
 
-    $lang = language_convert($config["lang"]);
+    $lang = (new Languages())->convert($config["lang"]);
     $curr = $config["current"];
     $classes = $config['classes'];
 

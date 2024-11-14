@@ -9,11 +9,11 @@
 
 */
 
+use phpweb\I18n\Languages;
 use phpweb\UserPreferences;
 
 // Ensure that our environment is set up
 include_once __DIR__ . '/include/prepend.inc';
-include_once __DIR__ . '/include/languages.inc';
 include_once __DIR__ . '/include/errors.inc';
 
 // Get URI for this request, strip leading slash
@@ -79,7 +79,7 @@ if (preg_match("!(.*\\.php)3$!", $URI, $array)) {
 //     default language manual accessibility on mirror sites through /manual/filename)
 // @todo do we rely on this? how about removing it...
 if (preg_match("!^manual/([^/]*)$!", $URI, $array)) {
-    if (!isset($INACTIVE_ONLINE_LANGUAGES[$array[1]])) {
+    if (!isset(Languages::INACTIVE_ONLINE_LANGUAGES[$array[1]])) {
         mirror_redirect("/manual/$LANG/$array[1]");
     }
 } elseif (preg_match("!^manual/html/([^/]+)$!", $URI, $array)) {
@@ -705,10 +705,10 @@ if (preg_match("!^manual/(.+)/function\.(.+)-(.+).php$!", $URI, $array)) {
 // ============================================================================
 // For manual pages for inactive languages, point visitors to the English page
 if (preg_match("!^manual/([^/]+)/([^/]+).php$!", $URI, $match) &&
-    isset($INACTIVE_ONLINE_LANGUAGES[$match[1]])) {
+    isset(Languages::INACTIVE_ONLINE_LANGUAGES[$match[1]])) {
     $try = find_manual_page("en", $match[2]);
     if ($try) {
-        error_inactive_manual_page($INACTIVE_ONLINE_LANGUAGES[$match[1]], $try);
+        error_inactive_manual_page(Languages::INACTIVE_ONLINE_LANGUAGES[$match[1]], $try);
     }
 }
 

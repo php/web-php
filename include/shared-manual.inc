@@ -22,6 +22,7 @@ $PGI = []; $SIDEBAR_DATA = '';
 // User note display functions
 // =============================================================================
 
+use phpweb\I18n\Languages;
 use phpweb\UserNotes\Sorter;
 use phpweb\UserNotes\UserNote;
 
@@ -271,7 +272,6 @@ function manual_navigation_methodname($methodname) {
 // including HTTP header information
 function manual_setup($setup): void {
     global $PGI, $MYSITE, $USERNOTES;
-    global $ACTIVE_ONLINE_LANGUAGES;
 
     //TODO: get rid of this hack to get the related items into manual_footer
     global $__RELATED;
@@ -281,7 +281,7 @@ function manual_setup($setup): void {
     }
     $PGI = $setup;
     // Set base href for this manual page
-    $base = 'manual/' . language_convert($setup['head'][1]) . "/";
+    $base = 'manual/' . (new Languages())->convert($setup['head'][1]) . "/";
     $_SERVER['BASE_PAGE'] = $base . $setup['this'][0];
     $_SERVER['BASE_HREF'] = $MYSITE . $_SERVER['BASE_PAGE'];
 
@@ -313,7 +313,7 @@ function manual_setup($setup): void {
     $config = [
         "current" => "docs",
         "breadcrumbs" => $breadcrumbs,
-        "languages" => array_keys($ACTIVE_ONLINE_LANGUAGES),
+        "languages" => array_keys(Languages::ACTIVE_ONLINE_LANGUAGES),
         "meta-navigation" => [
             "contents" => $base . $setup["home"][0],
             "index" => $base . $setup["up"][0],
@@ -340,12 +340,12 @@ PAGE_TOOLS;
 }
 
 function manual_language_chooser($currentlang, $currentpage) {
-    global $ACTIVE_ONLINE_LANGUAGES, $LANG;
+    global $LANG;
 
     // Prepare the form with all the options
     $othersel = ' selected="selected"';
     $out = [];
-    foreach ($ACTIVE_ONLINE_LANGUAGES as $lang => $text) {
+    foreach (Languages::ACTIVE_ONLINE_LANGUAGES as $lang => $text) {
         $selected = '';
         if ($lang == $currentlang) {
             $selected = ' selected="selected"';
