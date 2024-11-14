@@ -11,6 +11,7 @@ const LANGUAGES = [
     'ru' => 'Russian',
     'pt_BR' => 'Português do Brasil',
     'nl' => 'Nederlands',
+    'es' => 'Spanish',
 ];
 
 function common_header(string $description): void {
