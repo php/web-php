@@ -140,6 +140,9 @@ PHP
                     </div>
                 </div>
             </div>
+            <div class="php8-compare__content">
+                <?= message('property_hooks_description', $lang) ?>
+            </div>
         </div>
         <div class="php8-compare">
             <h2 class="php8-h2" id="asymmetric_visibility">
@@ -184,6 +187,9 @@ PHP
                         ); ?>
                     </div>
                 </div>
+            </div>
+            <div class="php8-compare__content">
+                <?= message('asymmetric_visibility_description', $lang) ?>
             </div>
         </div>
         <div class="php8-compare">
@@ -382,11 +388,11 @@ $connection = new PDO(
 ); // object(PDO)
 
 $connection->sqliteCreateFunction(
-    'append_php',
+    'prepend_php',
     static fn ($string) => "PHP {$string}",
 );
 
-$connection->query('SELECT append_php(version) FROM php');
+$connection->query('SELECT prepend_php(version) FROM php');
 PHP
                         ); ?>
                     </div>
@@ -408,7 +414,7 @@ $connection->createFunction(
     static fn ($string) => "PHP {$string}",
 ); // Does not exist on a mismatching driver.
 
-$connection->query('SELECT append_php(version) FROM php');
+$connection->query('SELECT prepend_php(version) FROM php');
 PHP
                         ); ?>
                     </div>
@@ -463,6 +469,9 @@ PHP
                         ); ?>
                     </div>
                 </div>
+            </div>
+            <div class="php8-compare__content">
+                <?= message('new_without_parentheses_description', $lang) ?>
             </div>
         </div>
 
