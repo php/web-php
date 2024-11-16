@@ -52,35 +52,42 @@ class Locale
     private string $languageCode;
     private string $countryCode;
 
-    public function __construct(string $languageCode, string $countryCode) {
+    public function __construct(string $languageCode, string $countryCode)
+    {
         $this->setLanguageCode($languageCode);
         $this->setCountryCode($countryCode);
     }
 
-    public function getLanguageCode(): string {
+    public function getLanguageCode(): string
+    {
         return $this->languageCode;
     }
 
-    public function setLanguageCode(string $languageCode): void {
+    public function setLanguageCode(string $languageCode): void
+    {
         $this->languageCode = $languageCode;
     }
 
-    public function getCountryCode(): string {
+    public function getCountryCode(): string
+    {
         return $this->countryCode;
     }
 
-    public function setCountryCode(string $countryCode): void {
+    public function setCountryCode(string $countryCode): void
+    {
         $this->countryCode = strtoupper($countryCode);
     }
 
-    public function setCombinedCode(string $combinedCode): void {
+    public function setCombinedCode(string $combinedCode): void
+    {
         [$languageCode, $countryCode] = explode('_', $combinedCode, 2);
 
         $this->setLanguageCode($languageCode);
         $this->setCountryCode($countryCode);
     }
 
-    public function getCombinedCode(): string {
+    public function getCombinedCode(): string
+    {
         return \sprintf("%s_%s", $this->languageCode, $this->countryCode);
     }
 }
@@ -103,20 +110,23 @@ class Locale
 {
     public string $languageCode;
 
-    public string $countryCode {
+    public string $countryCode
+    {
         set (string $countryCode) {
             $this->countryCode = strtoupper($countryCode);
         }
     }
 
-    public string $combinedCode {
+    public string $combinedCode
+    {
         get => \sprintf("%s_%s", $this->languageCode, $this->countryCode);
         set (string $value) {
             [$this->countryCode, $this->languageCode] = explode('_', $value, 2);
         }
     }
 
-    public function __construct(string $languageCode, string $countryCode) {
+    public function __construct(string $languageCode, string $countryCode)
+    {
         $this->languageCode = $languageCode;
         $this->countryCode = $countryCode;
     }
@@ -193,11 +203,13 @@ class PhpVersion
     /**
      * @deprecated 8.3 use PhpVersion::getVersion() instead
      */
-    public function getPhpVersion() {
+    public function getPhpVersion()
+    {
         return $this->getVersion();
     }
 
-    public function getVersion() {
+    public function getVersion()
+    {
         return '8.3';
     }
 }
@@ -220,13 +232,15 @@ class PhpVersion
 {
     #[\Deprecated(
         message: "use PhpVersion::getVersion() instead",
-        since: "8.4"
+        since: "8.4",
     )]
-    public function getPhpVersion() {
+    public function getPhpVersion()
+    {
         return $this->getVersion();
     }
 
-    public function getVersion() {
+    public function getVersion()
+    {
         return '8.4';
     }
 }
@@ -257,12 +271,15 @@ PHP
                         <?php highlight_php_trimmed(
                             <<<'PHP'
 $dom = new DOMDocument();
-$dom->loadHTML(<<<HTML
-<main>
-    <article>PHP 8.4 is a feature-rich release!</article>
-    <article class="featured">PHP 8.4 adds new DOM classes that are spec-compliant, keeping the old ones for compatibility.</article>
-</main>
-HTML, LIBXML_NOERROR);
+$dom->loadHTML(
+    <<<'HTML'
+        <main>
+            <article>PHP 8.4 is a feature-rich release!</article>
+            <article class="featured">PHP 8.4 adds new DOM classes that are spec-compliant, keeping the old ones for compatibility.</article>
+        </main>
+        HTML,
+    LIBXML_NOERROR,
+);
 
 $xpath = new DOMXPath($dom);
 $node = $xpath->query(".//main/article[not(following-sibling::*)]")[0];
@@ -279,12 +296,15 @@ PHP
                     <div class="php8-code phpcode">
                         <?php highlight_php_trimmed(
                             <<<'PHP'
-$dom = Dom\HTMLDocument::createFromString(<<<HTML
-<main>
-    <article>PHP 8.4 is a feature-rich release!</article>
-    <article class="featured">PHP 8.4 adds new DOM classes that are spec-compliant, keeping the old ones for compatibility.</article>
-</main>
-HTML, LIBXML_NOERROR);
+$dom = Dom\HTMLDocument::createFromString(
+    <<<HTML
+        <main>
+            <article>PHP 8.4 is a feature-rich release!</article>
+            <article class="featured">PHP 8.4 adds new DOM classes that are spec-compliant, keeping the old ones for compatibility.</article>
+        </main>
+        HTML,
+    LIBXML_NOERROR,
+);
 
 $node = $dom->querySelector('main > article:last-child');
 var_dump($node->classList->contains("featured")); // bool(true)
@@ -331,7 +351,7 @@ $animal = array_find(
     ['dog', 'cat', 'cow', 'duck', 'goose'],
     static function (string $value) {
         return str_starts_with($value, 'c');
-    }
+    },
 );
 
 var_dump($animal); // string(3) "cat"
@@ -358,12 +378,12 @@ PHP
 $connection = new PDO(
     'sqlite:foo.db',
     $username,
-    $password
+    $password,
 ); // object(PDO)
 
 $connection->sqliteCreateFunction(
     'append_php',
-    static fn($string) => 'PHP ' . $string
+    static fn ($string) => "PHP {$string}",
 );
 
 $connection->query('SELECT append_php(version) FROM php');
@@ -380,12 +400,12 @@ PHP
 $connection = PDO::connect(
     'sqlite:foo.db',
     $username,
-    $password
+    $password,
 ); // object(Pdo\Sqlite)
 
 $connection->createFunction(
     'append_php',
-    static fn($string) => 'PHP ' . $string
+    static fn ($string) => "PHP {$string}",
 ); // Does not exist on a mismatching driver.
 
 $connection->query('SELECT append_php(version) FROM php');
@@ -412,7 +432,8 @@ PHP
                             <<<'PHP'
 class PhpVersion
 {
-    public function getVersion(): string {
+    public function getVersion(): string
+    {
         return 'PHP 8.3';
     }
 }
@@ -431,7 +452,8 @@ PHP
                             <<<'PHP'
 class PhpVersion
 {
-    public function getVersion(): string {
+    public function getVersion(): string
+    {
         return 'PHP 8.4';
     }
 }
