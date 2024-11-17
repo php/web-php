@@ -410,7 +410,7 @@ $connection = PDO::connect(
 ); // object(Pdo\Sqlite)
 
 $connection->createFunction(
-    'append_php',
+    'prepend_php',
     static fn ($string) => "PHP {$string}",
 ); // Does not exist on a mismatching driver.
 
@@ -484,6 +484,7 @@ PHP
                 <ul>
                     <li><?= message('new_core_functions', $lang) ?></li>
                     <li><?= message('new_bcmath_functions', $lang) ?></li>
+                    <li><?= message('new_round_modes', $lang) ?></li>
                     <li><?= message('new_date_functions', $lang) ?></li>
                     <li><?= message('new_mb_functions', $lang) ?></li>
                     <li><?= message('new_pcntl_functions', $lang) ?></li>
@@ -502,6 +503,8 @@ PHP
                     <li><?= message('bc_nullable_parameter_types', $lang) ?></li>
                     <li><?= message('bc_classname', $lang) ?></li>
                     <li><?= message('bc_zero_raised_to_negative_number', $lang) ?></li>
+                    <li><?= message('bc_round', $lang) ?></li>
+                    <li><?= message('bc_typed_constants', $lang) ?></li>
                     <li><?= message('bc_gmp', $lang) ?></li>
                     <li><?= message('bc_mysqli_constants', $lang) ?></li>
                     <li><?= message('bc_mysqli_functions', $lang) ?></li>
