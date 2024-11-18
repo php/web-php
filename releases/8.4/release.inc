@@ -209,12 +209,12 @@ class PhpVersion
     /**
      * @deprecated 8.3 use PhpVersion::getVersion() instead
      */
-    public function getPhpVersion()
+    public function getPhpVersion(): string
     {
         return $this->getVersion();
     }
 
-    public function getVersion()
+    public function getVersion(): string
     {
         return '8.3';
     }
@@ -240,12 +240,12 @@ class PhpVersion
         message: "use PhpVersion::getVersion() instead",
         since: "8.4",
     )]
-    public function getPhpVersion()
+    public function getPhpVersion(): string
     {
         return $this->getVersion();
     }
 
-    public function getVersion()
+    public function getVersion(): string
     {
         return '8.4';
     }
@@ -355,7 +355,7 @@ PHP
                             <<<'PHP'
 $animal = array_find(
     ['dog', 'cat', 'cow', 'duck', 'goose'],
-    static function (string $value) {
+    static function (string $value): bool {
         return str_starts_with($value, 'c');
     },
 );
