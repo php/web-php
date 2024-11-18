@@ -482,6 +482,7 @@ PHP
             <h2 class="php8-h2" id="other_new_things"><?= message('new_classes_title', $lang) ?></h2>
             <div class="php8-compare__content php8-compare__content--block">
                 <ul>
+                    <li><?= message('new_jit_implementation', $lang) ?></li>
                     <li><?= message('new_core_functions', $lang) ?></li>
                     <li><?= message('new_bcmath_functions', $lang) ?></li>
                     <li><?= message('new_round_modes', $lang) ?></li>
@@ -491,6 +492,7 @@ PHP
                     <li><?= message('new_reflection_functions', $lang) ?></li>
                     <li><?= message('new_standard_functions', $lang) ?></li>
                     <li><?= message('new_xml_functions', $lang) ?></li>
+                    <li><?= message('new_grapheme_function', $lang) ?></li>
                 </ul>
             </div>
         </div>

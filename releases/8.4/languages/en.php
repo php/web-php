@@ -23,6 +23,7 @@ return [
     'new_without_parentheses_description' => 'Properties and methods of a newly instantiated object can now be accessed without wrapping the <code>new</code> expression in parenthesis.',
 
     'new_classes_title' => 'New Classes, Interfaces, and Functions',
+    'new_jit_implementation' => 'New JIT implementation based on IR Framework',
     'new_core_functions' => 'New <code>request_parse_body()</code> function.',
     'new_bcmath_functions' => 'New <code>bcceil()</code>, <code>bcdivmod()</code>, <code>bcfloor()</code>, and <code>bcround()</code> functions.',
     'new_round_modes' => 'New <code>RoundingMode</code> enum for <code>round()</code> with 4 new rounding modes <code>TowardsZero</code>, <code>AwayFromZero</code>, <code>NegativeInfinity</code>, and <code>PositiveInfinity</code>.',
@@ -32,6 +33,7 @@ return [
     'new_reflection_functions' => 'New <code>ReflectionClassConstant::isDeprecated()</code>, <code>ReflectionGenerator::isClosed()</code>, and <code>ReflectionProperty::isDynamic()</code> methods.',
     'new_standard_functions' => 'New <code>http_get_last_response_headers()</code>, <code>http_clear_last_response_headers()</code>, and <code>fpow()</code> functions.',
     'new_xml_functions' => 'New <code>XMLReader::fromStream()</code>, <code>XMLReader::fromUri()</code>, <code>XMLReader::fromString()</code>, <code>XMLWriter::toStream()</code>, <code>XMLWriter::toUri()</code>, and <code>XMLWriter::toMemory()</code> methods.',
+    'new_grapheme_function' => 'New <code>grapheme_str_split()</code> function.',
 
     'bc_title' => 'Deprecations and backward compatibility breaks',
     'bc_pecl' => 'The IMAP, OCI8, PDO_OCI, and pspell extensions have been unbundled and moved to PECL.',
