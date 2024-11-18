@@ -23,6 +23,7 @@ return [
     'new_without_parentheses_description' => 'К свойствам и методам только что инициализированного объекта теперь можно обращаться, не оборачивая выражение <code>new</code> в круглые скобки.',
 
     'new_classes_title' => 'Новые классы, интерфейсы и функции',
+    'new_jit_implementation' => 'Новая реализация JIT на основе IR Framework',
     'new_core_functions' => 'Добавлена функция <code>request_parse_body()</code>.',
     'new_bcmath_functions' => 'Добавлены функции <code>bcceil()</code>, <code>bcdivmod()</code>, <code>bcfloor()</code> и <code>bcround()</code>.',
     'new_round_modes' => 'Добавлено перечисление <code>RoundingMode</code> для функции <code>round()</code> с 4 режимами: <code>TowardsZero</code>, <code>AwayFromZero</code>, <code>NegativeInfinity</code> и <code>PositiveInfinity</code>.',
@@ -32,6 +33,7 @@ return [
     'new_reflection_functions' => 'Добавлены методы <code>ReflectionClassConstant::isDeprecated()</code>, <code>ReflectionGenerator::isClosed()</code> и <code>ReflectionProperty::isDynamic()</code>.',
     'new_standard_functions' => 'Добавлены функции <code>http_get_last_response_headers()</code>, <code>http_clear_last_response_headers()</code>, <code>fpow()</code>.',
     'new_xml_functions' => 'Добавлены методы <code>XMLReader::fromStream()</code>, <code>XMLReader::fromUri()</code>, <code>XMLReader::fromString()</code>, <code>XMLWriter::toStream()</code>, <code>XMLWriter::toUri()</code> и <code>XMLWriter::toMemory()</code>.',
+    'new_grapheme_function' => 'Добавлена функция <code>grapheme_str_split()</code>.',
 
     'bc_title' => 'Устаревшая функциональность и изменения в обратной совместимости',
     'bc_pecl' => 'Модули IMAP, OCI8, PDO_OCI и pspell перенесены из ядра в PECL.',
