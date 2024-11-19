@@ -23,6 +23,7 @@ return [
     'new_without_parentheses_description' => 'Eigenschappen en methoden van een nieuw geïnstantieerd object kunnen nu opgevraagd worden zonder de <code>new</code> expressie tussen haakjes te zetten.',
 
     'new_classes_title' => 'Nieuwe klassen, interfaces en functies',
+    'new_jit_implementation' => 'Nieuwe JIT implementation gebaseerd op IR Framework',
     'new_core_functions' => 'Nieuwe <code>request_parse_body()</code> functie.',
     'new_bcmath_functions' => 'Nieuwe <code>bcceil()</code>, <code>bcdivmod()</code>, <code>bcfloor()</code>, en <code>bcround()</code> functies.',
     'new_round_modes' => 'Nieuwe <code>RoundingMode</code> enum voor <code>round()</code> met 4 nieuwe afrondingsmodi <code>TowardsZero</code>, <code>AwayFromZero</code>, <code>NegativeInfinity</code>, en <code>PositiveInfinity</code>.',
@@ -32,6 +33,7 @@ return [
     'new_reflection_functions' => 'Nieuwe <code>ReflectionClassConstant::isDeprecated()</code>, <code>ReflectionGenerator::isClosed()</code>, en <code>ReflectionProperty::isDynamic()</code> methoden.',
     'new_standard_functions' => 'Nieuwe <code>http_get_last_response_headers()</code>, <code>http_clear_last_response_headers()</code>, en <code>fpow()</code> functies.',
     'new_xml_functions' => 'Nieuwe <code>XMLReader::fromStream()</code>, <code>XMLReader::fromUri()</code>, <code>XMLReader::fromString()</code>, <code>XMLWriter::toStream()</code>, <code>XMLWriter::toUri()</code>, en <code>XMLWriter::toMemory()</code> methoden.',
+    'new_grapheme_function' => 'Nieuwe <code>grapheme_str_split()</code> functie.',
 
     'bc_title' => 'Uitfaseringen en neerwaarts incompatibele aanpassingen',
     'bc_pecl' => 'De IMAP, OCI8, PDO_OCI en pspell-extensies zijn ontbundeld en verplaatst naar PECL.',
