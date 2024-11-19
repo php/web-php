@@ -8,7 +8,9 @@ return [
     'upgrade_now' => 'Atualize para PHP 8.4 agora!',
 
     'property_hooks_title' => 'Hooks de Propriedade',
+    'property_hooks_description' => 'Hooks de Propriedade oferecem suporte para propriedades computadas que podem ser interpretadas nativamente por IDEs e ferramentas de análise estática, sem a necessidade de escrever comentários em docblocks que podem ficar desatualizados. Além disso, eles permitem o pré-processamento ou pós-processamento confiável de valores, sem precisar verificar se um getter ou setter correspondente existe na classe.',
     'asymmetric_visibility_title' => 'Visibilidade Assimétrica',
+    'asymmetric_visibility_description' => 'O escopo para escrita em uma propriedade agora pode ser controlado independentemente do escopo para leitura da propriedade, reduzindo a necessidade de métodos getter redundantes para expor o valor de uma propriedade sem permitir sua modificação fora da classe.',
     'deprecated_attribute_title' => '<code>#[\Deprecated]</code> Atributo',
     'deprecated_attribute_description' => 'O novo atributo <code>#[\Deprecated]</code> torna o mecanismo de descontinuação existente no PHP disponível para funções, métodos e constantes de classe definidas pelo usuário.',
     'dom_additions_html5_title' => 'Novos recursos ext-dom e suporte a HTML5',
@@ -18,8 +20,10 @@ return [
     'pdo_driver_specific_parsers_title' => 'Parsers SQL específicos para drivers PDO',
     'pdo_driver_specific_parsers_description' => 'Novas subclasses <code>Pdo\Dblib</code>, <code>Pdo\Firebird</code>, <code>Pdo\MySql</code>, <code>Pdo\Odbc</code>, <code>Pdo\Sqlite</code> de <code>PDO</code> estão disponíveis.',
     'new_without_parentheses_title' => '<code>new MyClass()->method()</code> sem parênteses',
+    'new_without_parentheses_description' => 'Propriedades e métodos de um objeto recém-instanciado agora podem ser acessados sem a necessidade de envolver a expressão <code>new</code> entre parênteses.',
 
     'new_classes_title' => 'Novas classes, interfaces e funções',
+    'new_jit_implementation' => 'Nova implementação JIT baseada no Framework IR',
     'new_core_functions' => 'Nova função <code>request_parse_body()</code>.',
     'new_bcmath_functions' => 'Novas funções <code>bcceil()</code>, <code>bcdivmod()</code>, <code>bcfloor()</code> e <code>bcround()</code>.',
     'new_round_modes' => 'Novo Enum <code>RoundingMode</code> para <code>round()</code> com 4 novos modos de arredondamento: <code>TowardsZero</code>, <code>AwayFromZero</code>, <code>NegativeInfinity</code> e <code>PositiveInfinity</code>.',
@@ -29,6 +33,7 @@ return [
     'new_reflection_functions' => 'Novos métodos <code>ReflectionClassConstant::isDeprecated()</code>, <code>ReflectionGenerator::isClosed()</code> e <code>ReflectionProperty::isDynamic()</code>.',
     'new_standard_functions' => 'Novas funções <code>http_get_last_response_headers()</code>, <code>http_clear_last_response_headers()</code> e <code>fpow()</code>.',
     'new_xml_functions' => 'Novos métodos <code>XMLReader::fromStream()</code>, <code>XMLReader::fromUri()</code>, <code>XMLReader::fromString()</code>, <code>XMLWriter::toStream()</code>, <code>XMLWriter::toUri()</code> e <code>XMLWriter::toMemory()</code>.',
+    'new_grapheme_function' => 'Nova função <code>grapheme_str_split()</code>.',
 
     'bc_title' => 'Alterações obsoletas e incompatibilidades com versões anteriores',
     'bc_pecl' => 'As extensões IMAP, OCI8, PDO_OCI e pspell foram separadas e movidas para o PECL.',
