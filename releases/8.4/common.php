@@ -8,6 +8,7 @@ include_once __DIR__ . '/../../include/prepend.inc';
 
 const LANGUAGES = [
     'en' => 'English',
+    'fr' => 'Français',
     'ru' => 'Russian',
     'pt_BR' => 'Português do Brasil',
     'nl' => 'Nederlands',
