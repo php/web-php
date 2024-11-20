@@ -5,10 +5,10 @@
  */
 
 return [
-    'common_header' => 'PHP 8.2 是 PHP 语言的一个主版本更新。它包含了只读类、null、false 和 true 作为独立的类型、废弃动态属性、性能改进等。',
+    'common_header' => 'PHP 8.2 是 PHP 语言的一次重大更新。它包含了只读类、null、false 和 true 作为独立的类型、废弃动态属性、性能改进等。',
     'documentation' => '文档',
     'main_title' => '已发布！',
-    'main_subtitle' => 'PHP 8.2 是 PHP 语言的一个主版本更新。<br class="display-none-md">它包含了只读类、null、false 和 true 作为独立的类型、废弃动态属性、性能改进等。',
+    'main_subtitle' => 'PHP 8.2 是 PHP 语言的一次重大更新。<br class="display-none-md">它包含了只读类、null、false 和 true 作为独立的类型、废弃动态属性、性能改进等。',
     'upgrade_now' => '更新到 PHP 8.2 ！',
     'readonly_classes_title' => '只读类',
     'dnf_types_title' => '析取范式 （DNF）类型',

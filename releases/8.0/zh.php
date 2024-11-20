@@ -3,7 +3,7 @@ $_SERVER['BASE_PAGE'] = 'releases/8.0/zh.php';
 include_once __DIR__ . '/common.php';
 
 releases\php80\common_header(
-    'PHP 8.0 是 PHP 语言的一个主版本更新。它包含了很多新功能与优化项，' .
+    'PHP 8.0 是 PHP 语言的一次重大更新。它包含了很多新功能与优化项，' .
     '包括命名参数、联合类型、注解、构造器属性提升、match 表达式、' .
     'Nullsafe 运算符、JIT，并改进了类型系统、错误处理、语法一致性。');
 
@@ -20,7 +20,7 @@ releases\php80\common_header(
     </div>
     <div class="php8-title">已发布！</div>
     <div class="php8-subtitle">
-      PHP 8.0 是 PHP 语言的一个主版本更新。
+      PHP 8.0 是 PHP 语言的一次重大更新。
       <br class="display-none-md"> 它包含了很多新功能与优化项，
       包括命名参数、联合类型、注解、构造器属性提升、match 表达式、nullsafe 运算符、JIT，并改进了类型系统、错误处理、语法一致性。
     </div>
@@ -259,7 +259,7 @@ if ($session !== null) {
   $user = $session->user;
   if ($user !== null) {
     $address = $user->getAddress();
-  
+
     if ($address !== null) {
       $country = $address->country;
     }
@@ -349,7 +349,7 @@ array_chunk([], -1); // ValueError: array_chunk(): Argument #2 ($length) must be
 <section class="php8-section php8-section_light">
   <h2 class="php8-h2">即时编译</h2>
   <p>
-    PHP 8 引入了两个即时编译引擎。 
+    PHP 8 引入了两个即时编译引擎。
     Tracing JIT 在两个中更有潜力，它在综合基准测试中显示了三倍的性能，
     并在某些长时间运行的程序中显示了 1.5-2 倍的性能改进。
     典型的应用性能则和 PHP 7.4 不相上下。

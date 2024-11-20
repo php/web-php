@@ -5,10 +5,10 @@
  */
 
 return [
-    'common_header' => 'PHP 8.4 是 PHP 语言的主版本更新。它包含了许多新功能，例如属性钩子、不对称可见性、更新的 DOM API、性能改进、错误修复和常规清理等。',
+    'common_header' => 'PHP 8.4 是 PHP 语言的一次重大更新。它包含了许多新功能，例如属性钩子、不对称可见性、更新的 DOM API、性能改进、错误修复和常规清理等。',
     'documentation' => '文档',
     'main_title' => '已发布！',
-    'main_subtitle' => 'PHP 8.4 是 PHP 语言的主版本更新。<br class="display-none-md">它包含许多新功能，例如属性钩子、不对称可见性、更新的 DOM API、性能改进、错误修复和常规清理等。',
+    'main_subtitle' => 'PHP 8.4 是 PHP 语言的一次重大更新。<br class="display-none-md">它包含许多新功能，例如属性钩子、不对称可见性、更新的 DOM API、性能改进、错误修复和常规清理等。',
     'upgrade_now' => '更新到 PHP 8.4 ！',
 
     'property_hooks_title' => '属性钩子',
