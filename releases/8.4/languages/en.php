@@ -23,7 +23,7 @@ return [
     'new_without_parentheses_description' => 'Properties and methods of a newly instantiated object can now be accessed without wrapping the <code>new</code> expression in parenthesis.',
 
     'new_classes_title' => 'New Classes, Interfaces, and Functions',
-    'new_jit_implementation' => 'New JIT implementation based on IR Framework',
+    'new_jit_implementation' => 'New JIT implementation based on IR Framework.',
     'new_core_functions' => 'New <code>request_parse_body()</code> function.',
     'new_bcmath_functions' => 'New <code>bcceil()</code>, <code>bcdivmod()</code>, <code>bcfloor()</code>, and <code>bcround()</code> functions.',
     'new_round_modes' => 'New <code>RoundingMode</code> enum for <code>round()</code> with 4 new rounding modes <code>TowardsZero</code>, <code>AwayFromZero</code>, <code>NegativeInfinity</code>, and <code>PositiveInfinity</code>.',
