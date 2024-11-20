@@ -158,12 +158,20 @@ PHP
                             <<<'PHP'
 class PhpVersion
 {
-    public string $version = '8.3';
-}
+    private string $version = '8.3';
 
-$phpVersion = new PhpVersion();
-var_dump($phpVersion->version); // string(3) "8.3"
-$phpVersion->version = 'PHP 8.4'; // No error
+    public function getVersion(): string
+    {
+        return $this->version;
+    }
+
+    public function increment(): void
+    {
+        [$major, $minor] = explode('.', $this->version);
+        $minor++;
+        $this->version = "$major.$minor";
+    }
+}
 PHP
 
                         ); ?>
@@ -178,11 +186,14 @@ PHP
 class PhpVersion
 {
     public private(set) string $version = '8.4';
-}
 
-$phpVersion = new PhpVersion();
-var_dump($phpVersion->version); // string(3) "8.4"
-$phpVersion->version = 'PHP 8.3'; // Visibility error
+    public function increment(): void
+    {
+        [$major, $minor] = explode('.', $this->version);
+        $minor++;
+        $this->version = "$major.$minor";
+    }
+}
 PHP
                         ); ?>
                     </div>
