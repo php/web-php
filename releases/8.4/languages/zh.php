@@ -27,7 +27,7 @@ return [
     'new_without_parentheses_description' => '现在可以在不使用括号包装 <code>new</code> 表达式的情况下访问新实例化对象的属性和方法。',
 
     'new_classes_title' => '新的类、接口和函数',
-    'new_jit_implementation' => '基于 IR 框架的新 JIT 实现',
+    'new_jit_implementation' => '基于 IR 框架的新 JIT 实现.',
     'new_core_functions' => '新增 <code>request_parse_body()</code> 函数。',
     'new_bcmath_functions' => '新增 <code>bcceil()</code>、<code>bcdivmod()</code>、<code>bcfloor()</code> 和 <code>bcround()</code> 函数。',
     'new_round_modes' => '新增 <code>RoundingMode</code> 枚举用于 <code>round()</code>，包括 4 个新的舍入模式 <code>TowardsZero</code>、<code>AwayFromZero</code>、<code>NegativeInfinity</code> 和 <code>PositiveInfinity</code>。',

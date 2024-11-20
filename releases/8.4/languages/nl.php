@@ -23,7 +23,7 @@ return [
     'new_without_parentheses_description' => 'Eigenschappen en methoden van een nieuw geïnstantieerd object kunnen nu opgevraagd worden zonder de <code>new</code> expressie tussen haakjes te zetten.',
 
     'new_classes_title' => 'Nieuwe klassen, interfaces en functies',
-    'new_jit_implementation' => 'Nieuwe JIT implementation gebaseerd op IR Framework',
+    'new_jit_implementation' => 'Nieuwe JIT implementation gebaseerd op IR Framework.',
     'new_core_functions' => 'Nieuwe <code>request_parse_body()</code> functie.',
     'new_bcmath_functions' => 'Nieuwe <code>bcceil()</code>, <code>bcdivmod()</code>, <code>bcfloor()</code>, en <code>bcround()</code> functies.',
     'new_round_modes' => 'Nieuwe <code>RoundingMode</code> enum voor <code>round()</code> met 4 nieuwe afrondingsmodi <code>TowardsZero</code>, <code>AwayFromZero</code>, <code>NegativeInfinity</code>, en <code>PositiveInfinity</code>.',

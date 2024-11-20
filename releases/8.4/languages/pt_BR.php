@@ -23,7 +23,7 @@ return [
     'new_without_parentheses_description' => 'Propriedades e métodos de um objeto recém-instanciado agora podem ser acessados sem a necessidade de envolver a expressão <code>new</code> entre parênteses.',
 
     'new_classes_title' => 'Novas classes, interfaces e funções',
-    'new_jit_implementation' => 'Nova implementação JIT baseada no Framework IR',
+    'new_jit_implementation' => 'Nova implementação JIT baseada no Framework IR.',
     'new_core_functions' => 'Nova função <code>request_parse_body()</code>.',
     'new_bcmath_functions' => 'Novas funções <code>bcceil()</code>, <code>bcdivmod()</code>, <code>bcfloor()</code> e <code>bcround()</code>.',
     'new_round_modes' => 'Novo Enum <code>RoundingMode</code> para <code>round()</code> com 4 novos modos de arredondamento: <code>TowardsZero</code>, <code>AwayFromZero</code>, <code>NegativeInfinity</code> e <code>PositiveInfinity</code>.',

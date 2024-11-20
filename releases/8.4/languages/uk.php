@@ -23,7 +23,7 @@ return [
     'new_without_parentheses_description' => 'До властивостей і методів нового екземпляра об\'єкта тепер можна звертатися, не беручи вираз <code>new</code> у круглі дужки.',
 
     'new_classes_title' => 'Нові класи, інтерфейси та функції',
-    'new_jit_implementation' => 'Нова реалізація JIT на основі IR Framework',
+    'new_jit_implementation' => 'Нова реалізація JIT на основі IR Framework.',
     'new_core_functions' => 'Нова функція <code>request_parse_body()</code>.',
     'new_bcmath_functions' => 'Нові функції <code>bcceil()</code>, <code>bcdivmod()</code>, <code>bcfloor()</code> і <code>bcround()</code>.',
     'new_round_modes' => 'Нове перерахування <code>RoundingMode</code> для функції <code>round()</code>, що містить 4 нових режими округлення <code>TowardsZero</code>, <code>AwayFromZero</code>, <code>NegativeInfinity</code> і <code>PositiveInfinity</code>.',
