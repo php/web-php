@@ -101,9 +101,9 @@ PHP
                     </div>
                 </div>
                 <div class="php8-compare__arrow"></div>
-                <div class="php8-compare__block example-contents">
+                <div class="php8-compare__block example-contents" style="display: table;">
                     <div class="php8-compare__label php8-compare__label_new">PHP 8.4</div>
-                    <div class="php8-code phpcode">
+                    <div class="php8-code phpcode" style="display: table-cell;">
                         <?php highlight_php_trimmed(
                             <<<'PHP'
 class Locale
