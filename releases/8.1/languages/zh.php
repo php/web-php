@@ -5,9 +5,9 @@
  */
 
 return [
-    'common_header' => 'PHP 8.1 是 PHP 语言的一个主版本更新。它包含了许多新功能，包括枚举、只读属性、First-class 可调用语法、纤程、交集类型和性能改进等。',
+    'common_header' => 'PHP 8.1 是 PHP 语言的一次重大更新。它包含了许多新功能，包括枚举、只读属性、First-class 可调用语法、纤程、交集类型和性能改进等。',
     'main_title' => '已发布！',
-    'main_subtitle' => 'PHP 8.1 是 PHP 语言的一个主版本更新。<br class="display-none-md"> 它包含了许多新功能，包括枚举、只读属性、First-class 可调用语法、纤程、交集类型和性能改进等。',
+    'main_subtitle' => 'PHP 8.1 是 PHP 语言的一次重大更新。<br class="display-none-md"> 它包含了许多新功能，包括枚举、只读属性、First-class 可调用语法、纤程、交集类型和性能改进等。',
     'upgrade_now' => '更新到 PHP 8.1 ！',
     'documentation' => '文档',
 
