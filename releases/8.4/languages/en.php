@@ -19,8 +19,8 @@ return [
     'bcmath_description' => '<p>New <code>BcMath\Number</code> object enables object-oriented usage and standard mathematical operators when working with arbitrary precision numbers.</p><p>These objects are immutable and implement the <code>Stringable</code> interface, so they can be used in string contexts like <code>echo $num</code>.</p>',
     'new_array_find_title' => 'New <code>array_*()</code> functions',
     'new_array_find_description' => 'New functions <a href="/manual/en/function.array-find.php"><code>array_find()</code></a>, <a href="/manual/en/function.array-find-key.php"><code>array_find_key()</code></a>, <a href="/manual/en/function.array-any.php"><code>array_any()</code></a>, and <a href="/manual/en/function.array-all.php"><code>array_all()</code></a> are available.',
-    'pdo_driver_specific_parsers_title' => 'PDO Driver specific SQL parsers',
-    'pdo_driver_specific_parsers_description' => 'New subclasses <code>Pdo\Dblib</code>, <code>Pdo\Firebird</code>, <code>Pdo\MySql</code>, <code>Pdo\Odbc</code>, and <code>Pdo\Sqlite</code> of <code>PDO</code> are available.',
+    'pdo_driver_specific_subclasses_title' => 'PDO driver specific subclasses',
+    'pdo_driver_specific_subclasses_description' => 'New subclasses <code>Pdo\Dblib</code>, <code>Pdo\Firebird</code>, <code>Pdo\MySql</code>, <code>Pdo\Odbc</code>, <code>Pdo\Pgsql</code>, and <code>Pdo\Sqlite</code> of <code>PDO</code> are available.',
     'new_without_parentheses_title' => '<code>new MyClass()->method()</code> without parentheses',
     'new_without_parentheses_description' => 'Properties and methods of a newly instantiated object can now be accessed without wrapping the <code>new</code> expression in parentheses.',
 

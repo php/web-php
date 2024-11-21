@@ -21,8 +21,8 @@ return [
     'dom_additions_html5_description' => '<p>新的 DOM API 包括符合标准的支持，用于解析 HTML5 文档，修复了 DOM 功能行为中的几个长期存在的规范性错误，并添加了几个函数，使处理文档更加方便。</p><p>新的 DOM API 可以在 <code>Dom</code> 命名空间中使用。使用新的 DOM API 可以使用 <code>Dom\HTMLDocument</code> 和 <code>Dom\XMLDocument</code> 类创建文档。</p>',
     'new_array_find_title' => '新的 <code>array_*()</code> 函数',
     'new_array_find_description' => '新增函数 <a href="/manual/zh/function.array-find.php"><code>array_find()</code></a>、<a href="/manual/zh/function.array-find-key.php"><code>array_find_key()</code></a>、<a href="/manual/zh/function.array-any.php"><code>array_any()</code></a> 和 <a href="/manual/zh/function.array-all.php"><code>array_all()</code></a>。',
-    'pdo_driver_specific_parsers_title' => 'PDO 驱动程序特定的 SQL 解析器',
-    'pdo_driver_specific_parsers_description' => '新的 <code>Pdo\Dblib</code>、<code>Pdo\Firebird</code>、<code>Pdo\MySql</code>、<code>Pdo\Odbc</code> 和 <code>Pdo\Sqlite</code> 的子类可用。',
+    'pdo_driver_specific_subclasses_title' => 'PDO 驱动程序特定的 SQL 解析器',
+    'pdo_driver_specific_subclasses_description' => '新的 <code>Pdo\Dblib</code>、<code>Pdo\Firebird</code>、<code>Pdo\MySql</code>、<code>Pdo\Odbc</code>、<code>Pdo\Pgsql</code> 和 <code>Pdo\Sqlite</code> 的子类可用。',
     'new_without_parentheses_title' => '<code>new MyClass()->method()</code> 不需要括号',
     'new_without_parentheses_description' => '现在可以在不使用括号包装 <code>new</code> 表达式的情况下访问新实例化对象的属性和方法。',
 

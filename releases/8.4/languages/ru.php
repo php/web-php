@@ -19,8 +19,8 @@ return [
     'bcmath_description' => '<p>Новый объект <code>BcMath\Number</code> позволяет использовать объектно-ориентированный стиль и стандартные математические операторы при работе с числами произвольной точности.</p><p>Эти объекты неизменяемы и реализуют интерфейс <code>Stringable</code>, поэтому их можно использовать в строковых контекстах, например, <code>echo $num</code>.</p>',
     'new_array_find_title' => 'Новые функции <code>array_*()</code>',
     'new_array_find_description' => 'Добавлены функции <a href="/manual/ru/function.array-find.php"><code>array_find()</code></a>, <a href="/manual/ru/function.array-find-key.php"><code>array_find_key()</code></a>, <a href="/manual/ru/function.array-any.php"><code>array_any()</code></a> и <a href="/manual/ru/function.array-all.php"><code>array_all()</code></a>.',
-    'pdo_driver_specific_parsers_title' => 'SQL-парсеры, специфичные для драйверов PDO',
-    'pdo_driver_specific_parsers_description' => 'Добавлены дочерние классы <code>Pdo\Dblib</code>, <code>Pdo\Firebird</code>, <code>Pdo\MySql</code>, <code>Pdo\Odbc</code>, <code>Pdo\Sqlite</code> драйверов, наследующие <code>PDO</code>.',
+    'pdo_driver_specific_subclasses_title' => 'SQL-парсеры, специфичные для драйверов PDO',
+    'pdo_driver_specific_subclasses_description' => 'Добавлены дочерние классы <code>Pdo\Dblib</code>, <code>Pdo\Firebird</code>, <code>Pdo\MySql</code>, <code>Pdo\Odbc</code>, <code>Pdo\Pgsql</code>, <code>Pdo\Sqlite</code> драйверов, наследующие <code>PDO</code>.',
     'new_without_parentheses_title' => '<code>new MyClass()->method()</code> без скобок',
     'new_without_parentheses_description' => 'К свойствам и методам только что инициализированного объекта теперь можно обращаться, не оборачивая выражение <code>new</code> в круглые скобки.',
 
