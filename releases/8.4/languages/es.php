@@ -18,7 +18,7 @@ return [
     'new_array_find_title' => 'Nuevas funciones <code>array_*()</code>',
     'new_array_find_description' => 'Nuevas funciones disponibles: <a href="/manual/es/function.array-find.php"><code>array_find()</code></a>, <a href="/manual/es/function.array-find-key.php"><code>array_find_key()</code></a>, <a href="/manual/es/function.array-any.php"><code>array_any()</code></a> y <a href="/manual/es/function.array-all.php"><code>array_all()</code></a>.',
     'pdo_driver_specific_subclasses_title' => 'Procesadores SQL específicos para PDO Driver',
-    'pdo_driver_specific_subclasses_description' => 'Nuevas subclases de <code>PDO</code>: <code>Pdo\Dblib</code>, <code>Pdo\Firebird</code>, <code>Pdo\MySql</code>, <code>Pdo\Odbc</code>, <code>Pdo\Sqlite</code> están disponibles.',
+    'pdo_driver_specific_subclasses_description' => 'Nuevas subclases de <code>PDO</code>: <code>Pdo\Dblib</code>, <code>Pdo\Firebird</code>, <code>Pdo\MySql</code>, <code>Pdo\Odbc</code>, <code>Pdo\Pgsql</code>, <code>Pdo\Sqlite</code> están disponibles.',
     'new_without_parentheses_title' => '<code>new MyClass()->method()</code> sin paréntesis',
     'new_without_parentheses_description' => 'Las propiedades y métodos de un objeto recién instanciado ahora se pueden acceder sin envolver la expresión <code>new</code> entre paréntesis.',
 

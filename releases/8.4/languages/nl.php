@@ -18,7 +18,7 @@ return [
     'new_array_find_title' => 'Nieuwe <code>array_*()</code> functies',
     'new_array_find_description' => 'Nieuwe functies <a href="/manual/en/function.array-find.php"><code>array_find()</code></a>, <a href="/manual/en/function.array-find-key.php"><code>array_find_key()</code></a>, <a href="/manual/en/function.array-any.php"><code>array_any()</code></a>, en <a href="/manual/en/function.array-all.php"><code>array_all()</code></a> zijn nu beschikbaar.',
     'pdo_driver_specific_subclasses_title' => 'PDO driver specifieke SQL parsers',
-    'pdo_driver_specific_subclasses_description' => 'Nieuwe subklassen <code>Pdo\Dblib</code>, <code>Pdo\Firebird</code>, <code>Pdo\MySql</code>, <code>Pdo\Odbc</code>, <code>Pdo\Sqlite</code> van <code>PDO</code> zijn nu beschikbaar.',
+    'pdo_driver_specific_subclasses_description' => 'Nieuwe subklassen <code>Pdo\Dblib</code>, <code>Pdo\Firebird</code>, <code>Pdo\MySql</code>, <code>Pdo\Odbc</code>, <code>Pdo\Pgsql</code>, <code>Pdo\Sqlite</code> van <code>PDO</code> zijn nu beschikbaar.',
     'new_without_parentheses_title' => '<code>new MyClass()->method()</code> zonder haakjes',
     'new_without_parentheses_description' => 'Eigenschappen en methoden van een nieuw geïnstantieerd object kunnen nu opgevraagd worden zonder de <code>new</code> expressie tussen haakjes te zetten.',
 

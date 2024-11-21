@@ -20,7 +20,7 @@ return [
     'new_array_find_title' => 'Nouvelles fonctions <code>array_*()</code>',
     'new_array_find_description' => 'Les nouvelles fonctions <a href="/manual/fr/function.array-find.php"><code>array_find()</code></a>, <a href="/manual/fr/function.array-find-key.php"><code>array_find_key()</code></a>, <a href="/manual/fr/function.array-any.php"><code>array_any()</code></a> et <a href="/manual/fr/function.array-all.php"><code>array_all()</code></a> sont désormais disponibles.',
     'pdo_driver_specific_subclasses_title' => 'Parseurs SQL spécifiques au pilote PDO',
-    'pdo_driver_specific_subclasses_description' => 'De nouvelles sous-classes <code>Pdo\Dblib</code>, <code>Pdo\Firebird</code>, <code>Pdo\MySql</code>, <code>Pdo\Odbc</code> et <code>Pdo\Sqlite</code> de <code>PDO</code> sont désormais disponibles.',
+    'pdo_driver_specific_subclasses_description' => 'De nouvelles sous-classes <code>Pdo\Dblib</code>, <code>Pdo\Firebird</code>, <code>Pdo\MySql</code>, <code>Pdo\Odbc</code>, <code>Pdo\Pgsql</code> et <code>Pdo\Sqlite</code> de <code>PDO</code> sont désormais disponibles.',
     'new_without_parentheses_title' => '<code>new MyClass()->method()</code> sans parenthèses.',
     'new_without_parentheses_description' => 'Les propriétés et méthodes d\'un objet nouvellement instancié peuvent désormais être accessibles sans entourer l\'expression <code>new</code> entre parenthèses.',
 
