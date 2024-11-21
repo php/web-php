@@ -3,29 +3,29 @@ Hash: SHA512
 
 Contact: https://github.com/php/php-src/security/advisories/new
 Contact: mailto:security@php.net
-Expires: 2024-11-28T11:59:59.999Z
+Expires: 2025-11-28T11:59:59.999Z
 Preferred-Languages: en
 Canonical: https://www.php.net/.well-known/security.txt
 Policy: https://github.com/php/policies/blob/main/security-classification.rst
 
-# Signed by Derick Rethans <derick@php.net> on 2024-02-06.
+# Signed by Pierrick Charron <pierrick@php.net> on 2024-11-21.
 
 # For instructions on how to update this file, read
 # <https://github.com/php/policies/blob/main/security-policies.rst>
 -----BEGIN PGP SIGNATURE-----
 
-iQJDBAEBCgAtFiEEWlKIB4H3VWCL+BX8kQ3rRvU+oxIFAmXCHKcPHGRlcmlja0Bw
-aHAubmV0AAoJEJEN60b1PqMSibcQANkyBZX2OebH+X6HGBaASjywJBn2U+P0/WCQ
-hBxeoJS2PoTBotAwbcWL+by0whPuc4H+tlhk3CH2HmqQZj3btDpGwEv+kAxrDQrz
-JL9g3Y/TkcC9CQ0WpzqwsZIpDhOjjmzGfOpiXJfVHzqLDLf2iZTDTxaUt9uZTRvC
-W+zBml99gak27w/MjHLn4L3OP5uIMq8HLSw0oEA4ksm9Uo6e/MhVN/lcG26Btvqc
-GUXOlAfkwmCvRhVU69IV8zBWZEd4vvB1mNJcdiKL504SjtICyrw2A5YupP2kqkat
-Gm2VNZMiaKj6qwYsJtlcJRmOGNY+E3BBIIYSO+i7Nw9b3yEh4BqkXL73oMJ9gNC1
-bdE/HcaG+39uIBa1E4EMgBa9gxxNIAcviM4dDAjj0KXuprkn0g58DMv3cTF68vyN
-3XX6HbxzB6eRy92YlRbolwcJrT7qU5VEL78bwCOyN93FSppqCYyx+y9MOdarMFk/
-OLOZSVHlpWr5DwTbjGxbgtPWETEUr+paL3EkW3KA8dLoD7H7Aib50BvAcq3RLACn
-38uZPBlULfIEpttRKKYSqxNSxfhTBqQB4dU6dmSrZk+L0kZ0KR7Smwdobz6IeA0c
-wv1x1PdCiodNMzWhEHdkzqZ/O8SVshA+shNm3uyVr10UzvSvIg23HrYsvUZl2Ti0
-PDLZowMK
-=USeI
+iQJFBAEBCgAvFiEEEZjAEXWTSXpexcGZKGrx+Yl0adwFAmc/HGgRHHBpZXJyaWNr
+QHBocC5uZXQACgkQKGrx+Yl0ady6kg/5AdN6I24sv70MLUP8Bkba4uaBK7G1rZaM
+7EqewwAcOquwArMHG9kTjgN/fC7wFZgOMGLC6dyRXDvhVXZZNCGOEJBrslXTTYnv
+0o5m8gMyOK2R9qLLZ0ANCsDLMgreULS9pZriMnULNF/Do59/G/kXmppZAaFtahP4
+1ayhuwXGblPUs2XVQz8vLQqU9B/Bp3BcLJo4AROvo7+CW9yKhV9caUNZ0m4CI5o0
+Scs8I3hh3JEyu3qLADg33wTD9XtFo9qB9L6z6KTp6VN4CAeSOqwhB2RV9c2aHjx1
+qCmS1jZVJolLqhrAQ84x6n3JM7MyOJSbiGbIW8aY0E29JR70w53B1BFfvMmUUc4M
+jgiLqiUXuChQq3lmhDwLClPBfNiAe7uulQToVtufnsULOhbcWhvn/1SHUYA+jlbb
+cJxUj/LiGmDmLEy/h/IzsUOhjLTfC/WBeMCMd6ZaE/c2x6+i3tWlApTudE08CI29
+LaPYVec2SVX1QlyAFuOZxqpJhwdCiLcY6Xz853oxJKJVH/pvX/qXLvBR3Qyiw7f3
+X/lhYFckMfxojE4pAXH3w/Y/GdFMCMWhjCW4D+C41zdXoJTon/W09GDMuKB7F0rn
+N3935FNLZha4k8ludI9iJ4G/jDWYLKPV5CbJo6QW5HWAnJEOinp5H5ZKBQz6q2wk
+p/uwDS/Fp/g=
+=fZhl
 -----END PGP SIGNATURE-----
