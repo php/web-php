@@ -25,6 +25,7 @@ return [
     'new_without_parentheses_description' => 'Les propriétés et méthodes d\'un objet nouvellement instancié peuvent désormais être accessibles sans entourer l\'expression <code>new</code> entre parenthèses.',
 
     'new_classes_title' => 'Nouvelles classes, interfaces et fonctions',
+    'new_lazy_objects' => 'Nouveaux <a href="/manual/fr/language.oop5.lazy-objects.php">objets à initialisation différée</a>.',
     'new_jit_implementation' => 'Nouvelle implémentation JIT basée sur le framework IR.',
     'new_core_functions' => 'Nouvelle fonction <code>request_parse_body()</code>.',
     'new_bcmath_functions' => 'Nouvelles fonctions <code>bcceil()</code>, <code>bcdivmod()</code>, <code>bcfloor()</code>, et <code>bcround()</code>.',

@@ -25,6 +25,7 @@ return [
     'new_without_parentheses_description' => 'К свойствам и методам только что инициализированного объекта теперь можно обращаться, не оборачивая выражение <code>new</code> в круглые скобки.',
 
     'new_classes_title' => 'Новые классы, интерфейсы и функции',
+    'new_lazy_objects' => 'Добавлены <a href="/manual/ru/language.oop5.lazy-objects.php">ленивые объекты</a>.',
     'new_jit_implementation' => 'Новая реализация JIT на основе IR Framework.',
     'new_core_functions' => 'Добавлена функция <code>request_parse_body()</code>.',
     'new_bcmath_functions' => 'Добавлены функции <code>bcceil()</code>, <code>bcdivmod()</code>, <code>bcfloor()</code> и <code>bcround()</code>.',
