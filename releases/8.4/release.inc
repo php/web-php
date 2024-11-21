@@ -362,7 +362,7 @@ PHP
                     <div class="php8-code phpcode">
                         <?php highlight_php_trimmed(
                             <<<'PHP'
-use BCMath\Number;
+use BcMath\Number;
 
 $num1 = new Number('0.12345');
 $num2 = new Number('2');
