@@ -54,5 +54,5 @@ return [
 
     'footer_title' => 'Melhor desempenho, sintaxe aprimorada e maior segurança de tipos.',
     'footer_description' => '<p>Para baixar o código-fonte do PHP 8.4, visite a página de <a href="/downloads">downloads</a>. Os binários para Windows podem ser encontrados no site <a href="https://windows.php.net/download">PHP for Windows</a>. A lista de alterações está registrada no <a href="/ChangeLog-8.php#PHP_8_4">ChangeLog</a>.</p>
-        <p>O <a href="/manual/en/migration84.php">guia de migração</a> está disponível no Manual do PHP. Consulte-o para uma lista detalhada de novos recursos e mudanças incompatíveis com versões anteriores.</p>',
+        <p>O <a href="/manual/pt_BR/migration84.php">guia de migração</a> está disponível no Manual do PHP. Consulte-o para uma lista detalhada de novos recursos e mudanças incompatíveis com versões anteriores.</p>',
 ];
