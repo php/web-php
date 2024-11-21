@@ -3791,6 +3791,39 @@ changelog_header(8, $MINOR_VERSIONS);
 
 <a id="PHP_8_1"></a>
 
+<section class="version" id="8.1.31"><!-- {{{ 8.1.31 -->
+<h3>Version 8.1.31</h3>
+<b><?php release_date('21-Nov-2024'); ?></b>
+<ul><li>CLI:
+<ul>
+  <li>Fixed bug <?php githubsecurityl('php/php-src', '4w77-75f9-2c8w'); ?> (Heap-Use-After-Free in sapi_read_post_data Processing in CLI SAPI Interface).</li>
+</ul></li>
+<li>LDAP:
+<ul>
+  <li>Fixed bug <?php githubsecurityl('php/php-src', 'g665-fm4p-vhff'); ?> (OOB access in ldap_escape). (CVE-2024-8932)</li>
+</ul></li>
+<li>MySQLnd:
+<ul>
+  <li>Fixed bug <?php githubsecurityl('php/php-src', 'h35g-vwh6-m678'); ?> (Leak partial content of the heap through heap buffer over-read). (CVE-2024-8929)</li>
+</ul></li>
+<li>PDO DBLIB:
+<ul>
+  <li>Fixed bug <?php githubsecurityl('php/php-src', '5hqh-c84r-qjcv'); ?> (Integer overflow in the dblib quoter causing OOB writes). (CVE-2024-11236)</li>
+</ul></li>
+<li>PDO Firebird:
+<ul>
+  <li>Fixed bug <?php githubsecurityl('php/php-src', '5hqh-c84r-qjcv'); ?> (Integer overflow in the firebird quoter causing OOB writes). (CVE-2024-11236)</li>
+</ul></li>
+<li>Streams:
+<ul>
+  <li>Fixed bug <?php githubsecurityl('php/php-src', 'c5f2-jwm7-mmq2'); ?> (Configuring a proxy in a stream context might allow for CRLF injection in URIs). (CVE-2024-11234)</li>
+  <li>Fixed bug <?php githubsecurityl('php/php-src', 'r977-prxv-hc43'); ?> (Single byte overread with convert.quoted-printable-decode filter). (CVE-2024-11233)</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
+
+
 <section class="version" id="8.1.30"><!-- {{{ 8.1.30 -->
 <h3>Version 8.1.30</h3>
 <b><?php release_date('26-Sep-2024'); ?></b>
