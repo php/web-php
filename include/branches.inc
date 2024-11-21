@@ -37,6 +37,9 @@ $BRANCHES = [
         'stable' => '2018-01-04',
         'security' => '2019-01-10',
     ],
+    '8.4' => [
+        'date' => '2024-11-21',
+    ],
 ];
 
 /* Time to keep EOLed branches in the array returned by get_active_branches(),
@@ -252,6 +255,10 @@ function get_initial_release($branch) {
 
     if (isset($GLOBALS['OLDRELEASES'][$major]["$branch.0"])) {
         return $GLOBALS['OLDRELEASES'][$major]["$branch.0"];
+    }
+
+    if(isset($GLOBALS['BRANCHES'][$branch])) {
+        return $GLOBALS['BRANCHES'][$branch];
     }
 
     /* If there's only been one release on the branch, it won't be in
