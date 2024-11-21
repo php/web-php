@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+  <title>PHP 8.4.1 Released!</title>
+  <id>https://www.php.net/archive/2024.php#2024-11-21-4</id>
+  <published>2024-11-21T06:55:34+00:00</published>
+  <updated>2024-11-21T06:55:34+00:00</updated>
+  <link href="https://www.php.net/index.php#2024-11-21-4" rel="alternate" type="text/html"/>
+  <link href="https://www.php.net/archive/2024.php#2024-11-21-4" rel="via" type="text/html"/>
+  <category term="releases" label="New PHP release"/>
+  <category term="frontpage" label="PHP.net frontpage news"/>
+  <content type="xhtml">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+      <p>The PHP development team announces the immediate availability of PHP 8.4.1. This release marks the latest minor release of the PHP language.</p>
+      <p>PHP 8.4 comes with numerous improvements and new features such as:</p>
+      <ul>
+        <li><a href="https://www.php.net/manual/en/migration84.new-features.php#migration84.new-features.core.property-hooks">Property Hooks</a></li>
+        <li><a href="https://www.php.net/manual/en/migration84.new-features.php#migration84.new-features.core.asymmetric-property-visibility">Asymmetric Property Visibility</a></li>
+        <li><a href="https://www.php.net/manual/en/migration84.new-features.php#migration84.new-features.core.lazy-objects">Lazy Objects</a></li>
+        <li><a href="https://www.php.net/manual/en/migration84.new-features.php#migration84.new-features.pdo">PDO driver-specific subclasses</a></li>
+        <li><a href="https://www.php.net/manual/en/migration84.new-classes.php#migration84.new-classes.bcmath">BCMath object type</a></li>
+        <li>And much much more...</li>
+      </ul>
+      <p>
+        For source downloads of PHP 8.4.1 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
+        Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
+        The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-8.php#8.4.1">ChangeLog</a>.
+      </p>
+      <p>
+        The <a href="https://php.net/manual/en/migration84.php">migration guide</a> is available in the PHP Manual.
+        Please consult it for the detailed list of new features and backward incompatible changes.
+      </p>
+      <p>Kudos to all the contributors and supporters!</p>
+    </div>
+  </content>
+</entry>
