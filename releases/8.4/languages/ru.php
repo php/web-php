@@ -50,6 +50,6 @@ return [
     'bc_warnings' => 'Константа <code>E_STRICT</code> объявлена устаревшей.',
 
     'footer_title' => 'Выше производительность, лучше синтаксис, надёжнее система типов.',
-    'footer_description' => '<p>Для загрузки исходного кода PHP 8.3 посетите страницу <a href="/downloads">Downloads</a>. Бинарные файлы Windows находятся на сайте <a href="https://windows.php.net/download">PHP for Windows</a>. Список изменений перечислен на странице <a href="/ChangeLog-8.php#PHP_8_4">ChangeLog</a>.</p>
+    'footer_description' => '<p>Для загрузки исходного кода PHP 8.4 посетите страницу <a href="/downloads">Downloads</a>. Бинарные файлы Windows находятся на сайте <a href="https://windows.php.net/download">PHP for Windows</a>. Список изменений перечислен на странице <a href="/ChangeLog-8.php#PHP_8_4">ChangeLog</a>.</p>
         <p><a href="/manual/ru/migration84.php">Руководство по миграции</a> доступно в разделе документации. Ознакомьтесь с ним, чтобы узнать обо всех новых возможностях и изменениях, затрагивающих обратную совместимость.</p>',
 ];
