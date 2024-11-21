@@ -15,6 +15,8 @@ return [
     'deprecated_attribute_description' => 'Новий атрибут <code>#[\Deprecated]</code> дозволяє використовувати існуючий механізм оголошення функціональності PHP застарілою для функцій, методів і констант класів, визначених користувачем.',
     'dom_additions_html5_title' => 'Нові можливості розширення ext-dom і підтримка HTML5',
     'dom_additions_html5_description' => '<p>Новий DOM API, який включає підтримку стандартів для синтаксичного аналізу HTML5-документів, виправляє кілька давніх помилок сумісності у поведінці DOM та додає кілька нових функцій для зручнішої роботи з документами.</p><p>Новий DOM API доступний у просторі імен <code>Dom</code>. Документи, що використовують новий DOM API, можна створювати за допомогою класів <code>Dom\HTMLDocument</code> і <code>Dom\XMLDocument</code>.</p>',
+    'bcmath_title' => 'Об\'єктний API для BCMath',
+    'bcmath_description' => '<p>Новий об\'єкт <code>BcMath\Number</code> дозволяє використовувати об\'єктно-орієнтовану модель і стандартні математичні оператори під час роботи з числами довільної точності.</p><p>Ці об\'єкти є незмінними і реалізують інтерфейс <code>Stringable</code>, тому їх можна використовувати у контекстах рядків, наприклад, у виразі <code>echo $num</code>.</p>',
     'new_array_find_title' => 'Нові функції <code>array_*()</code>',
     'new_array_find_description' => 'Нові функції <a href="/manual/uk/function.array-find.php"><code>array_find()</code></a>, <a href="/manual/uk/function.array-find-key.php"><code>array_find_key()</code></a>, <a href="/manual/uk/function.array-any.php"><code>array_any()</code></a> і <a href="/manual/uk/function.array-all.php"><code>array_all()</code></a>.',
     'pdo_driver_specific_parsers_title' => 'Специфічні аналізатори синтаксису SQL для драйверів PDO',
@@ -23,6 +25,7 @@ return [
     'new_without_parentheses_description' => 'До властивостей і методів нового екземпляра об\'єкта тепер можна звертатися, не беручи вираз <code>new</code> у круглі дужки.',
 
     'new_classes_title' => 'Нові класи, інтерфейси та функції',
+    'new_lazy_objects' => 'Нові <a href="/manual/uk/language.oop5.lazy-objects.php">ліниві об\'єкти</a>.',
     'new_jit_implementation' => 'Нова реалізація JIT на основі IR Framework.',
     'new_core_functions' => 'Нова функція <code>request_parse_body()</code>.',
     'new_bcmath_functions' => 'Нові функції <code>bcceil()</code>, <code>bcdivmod()</code>, <code>bcfloor()</code> і <code>bcround()</code>.',
