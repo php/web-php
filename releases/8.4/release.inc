@@ -536,6 +536,7 @@ PHP
             <h2 class="php8-h2" id="other_new_things"><?= message('new_classes_title', $lang) ?></h2>
             <div class="php8-compare__content php8-compare__content--block">
                 <ul>
+                    <li><?= message('new_lazy_objects', $lang) ?></li>
                     <li><?= message('new_jit_implementation', $lang) ?></li>
                     <li><?= message('new_core_functions', $lang) ?></li>
                     <li><?= message('new_bcmath_functions', $lang) ?></li>
