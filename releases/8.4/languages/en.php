@@ -22,7 +22,7 @@ return [
     'pdo_driver_specific_parsers_title' => 'PDO Driver specific SQL parsers',
     'pdo_driver_specific_parsers_description' => 'New subclasses <code>Pdo\Dblib</code>, <code>Pdo\Firebird</code>, <code>Pdo\MySql</code>, <code>Pdo\Odbc</code>, and <code>Pdo\Sqlite</code> of <code>PDO</code> are available.',
     'new_without_parentheses_title' => '<code>new MyClass()->method()</code> without parentheses',
-    'new_without_parentheses_description' => 'Properties and methods of a newly instantiated object can now be accessed without wrapping the <code>new</code> expression in parenthesis.',
+    'new_without_parentheses_description' => 'Properties and methods of a newly instantiated object can now be accessed without wrapping the <code>new</code> expression in parentheses.',
 
     'new_classes_title' => 'New Classes, Interfaces, and Functions',
     'new_lazy_objects' => 'New <a href="/manual/en/language.oop5.lazy-objects.php">Lazy Objects</a>.',
