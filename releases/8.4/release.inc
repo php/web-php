@@ -335,6 +335,51 @@ PHP
             </div>
         </div>
         <div class="php8-compare">
+            <h2 class="php8-h2" id="bcmath">
+                <?= message('bcmath_title', $lang) ?>
+                <a class="php8-rfc" href="https://wiki.php.net/rfc/support_object_type_in_bcmath">RFC</a>
+            </h2>
+            <div class="php8-compare__main">
+                <div class="php8-compare__block example-contents">
+                    <div class="php8-compare__label">PHP &lt; 8.4</div>
+                    <div class="php8-code phpcode">
+                        <?php highlight_php_trimmed(
+                            <<<'PHP'
+$num1 = '0.12345';
+$num2 = 2;
+$result = bcadd($num1, $num2, 5);
+
+echo $result; // '2.12345'
+var_dump(bccomp($num1, $num2) > 0); // false
+PHP
+
+                        ); ?>
+                    </div>
+                </div>
+                <div class="php8-compare__arrow"></div>
+                <div class="php8-compare__block example-contents">
+                    <div class="php8-compare__label php8-compare__label_new">PHP 8.4</div>
+                    <div class="php8-code phpcode">
+                        <?php highlight_php_trimmed(
+                            <<<'PHP'
+use BCMath\Number;
+
+$num1 = new Number('0.12345');
+$num2 = new Number('2');
+$result = $num1 + $num2;
+
+echo $result; // '2.12345'
+var_dump($num1 > $num2); // false
+PHP
+                        ); ?>
+                    </div>
+                </div>
+            </div>
+            <div class="php8-compare__content">
+                <?= message('bcmath_description', $lang) ?>
+            </div>
+        </div>
+        <div class="php8-compare">
             <h2 class="php8-h2" id="new_array_find">
                 <?= message('new_array_find_title', $lang) ?>
                 <a class="php8-rfc" href="https://wiki.php.net/rfc/array_find">RFC</a>
