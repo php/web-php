@@ -425,9 +425,9 @@ PHP
             </div>
         </div>
         <div class="php8-compare">
-            <h2 class="php8-h2" id="pdo_driver_specific_parsers">
-                <?= message('pdo_driver_specific_parsers_title', $lang) ?>
-                <a class="php8-rfc" href="https://wiki.php.net/rfc/pdo_driver_specific_parsers">RFC</a>
+            <h2 class="php8-h2" id="pdo_driver_specific_subclasses">
+                <?= message('pdo_driver_specific_subclasses_title', $lang) ?>
+                <a class="php8-rfc" href="https://wiki.php.net/rfc/pdo_driver_specific_subclasses">RFC</a>
             </h2>
             <div class="php8-compare__main">
                 <div class="php8-compare__block example-contents">
@@ -475,7 +475,7 @@ PHP
                 </div>
             </div>
             <div class="php8-compare__content">
-                <?= message('pdo_driver_specific_parsers_description', $lang) ?>
+                <?= message('pdo_driver_specific_subclasses_description', $lang) ?>
             </div>
         </div>
         <div class="php8-compare">
