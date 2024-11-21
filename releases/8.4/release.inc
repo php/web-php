@@ -169,7 +169,7 @@ class PhpVersion
     {
         [$major, $minor] = explode('.', $this->version);
         $minor++;
-        $this->version = "$major.$minor";
+        $this->version = "{$major}.{$minor}";
     }
 }
 PHP
@@ -191,7 +191,7 @@ class PhpVersion
     {
         [$major, $minor] = explode('.', $this->version);
         $minor++;
-        $this->version = "$major.$minor";
+        $this->version = "{$major}.{$minor}";
     }
 }
 PHP
