@@ -13,6 +13,7 @@ const LANGUAGES = [
     'pt_BR' => 'Português do Brasil',
     'nl' => 'Nederlands',
     'es' => 'Spanish',
+    'tr' => 'Türkçe',
     'uk' => 'Українська',
     'zh' => '简体中文',
     'ja' => '日本語',
