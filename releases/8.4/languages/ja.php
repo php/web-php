@@ -19,8 +19,8 @@ return [
     'bcmath_description' => '<p>新しい <code>BcMath\Number</code> オブジェクトを使うと、任意精度数値をオブジェクト指向で利用したり、通常の算術演算子で計算したりできるようになります。</p><p>このオブジェクトはイミュータブルで、 <code>Stringable</code> インターフェースを実装しているので <code>echo $num</code> のように文字列の文脈で利用可能です。</p>',
     'new_array_find_title' => '新しい <code>array_*()</code> 関数',
     'new_array_find_description' => '新しい関数 <a href="/manual/ja/function.array-find.php"><code>array_find()</code></a>、<a href="/manual/ja/function.array-find-key.php"><code>array_find_key()</code></a>、<a href="/manual/ja/function.array-any.php"><code>array_any()</code></a>、<a href="/manual/ja/function.array-all.php"><code>array_all()</code></a> が追加されました。',
-    'pdo_driver_specific_parsers_title' => 'PDO ドライバー特有の SQL パーサー',
-    'pdo_driver_specific_parsers_description' => '新しい <code>PDO</code> のサブクラス <code>Pdo\Dblib</code>、<code>Pdo\Firebird</code>、<code>Pdo\MySql</code>、<code>Pdo\Odbc</code>、<code>Pdo\Sqlite</code> が追加されました。',
+    'pdo_driver_specific_subclasses_title' => 'PDO ドライバー固有のサブクラス',
+    'pdo_driver_specific_subclasses_description' => '新しい <code>PDO</code> のサブクラス <code>Pdo\Dblib</code>、<code>Pdo\Firebird</code>、<code>Pdo\MySql</code>、<code>Pdo\Odbc</code>、<code>Pdo\Pgsql</code>、<code>Pdo\Sqlite</code> が追加されました。',
     'new_without_parentheses_title' => '括弧なしの <code>new MyClass()->method()</code>',
     'new_without_parentheses_description' => '新しくインスタンス化されたオブジェクトのプロパティとメソッドへのアクセスが、<code>new</code> 式を括弧で囲むことなくできるようになります。',
 

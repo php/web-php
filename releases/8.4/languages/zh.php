@@ -23,7 +23,7 @@ return [
     'bcmath_description' => '<p>新的 <code>BcMath\Number</code> 对象使在处理任意精度数字时可以使用面向对象的方式和标准的数学运算符。</p><p>这些对象是不可变的，并实现了 <code>Stringable</code> 接口，因此可以在字符串上下文中使用，如 <code>echo $num</code>。</p>',
     'new_array_find_title' => '新的 <code>array_*()</code> 函数',
     'new_array_find_description' => '新增函数 <a href="/manual/zh/function.array-find.php"><code>array_find()</code></a>、<a href="/manual/zh/function.array-find-key.php"><code>array_find_key()</code></a>、<a href="/manual/zh/function.array-any.php"><code>array_any()</code></a> 和 <a href="/manual/zh/function.array-all.php"><code>array_all()</code></a>。',
-    'pdo_driver_specific_subclasses_title' => 'PDO 驱动程序特定的 SQL 解析器',
+    'pdo_driver_specific_subclasses_title' => 'PDO 驱动程序特定子类',
     'pdo_driver_specific_subclasses_description' => '新的 <code>Pdo\Dblib</code>、<code>Pdo\Firebird</code>、<code>Pdo\MySql</code>、<code>Pdo\Odbc</code>、<code>Pdo\Pgsql</code> 和 <code>Pdo\Sqlite</code> 的子类可用。',
     'new_without_parentheses_title' => '<code>new MyClass()->method()</code> 不需要括号',
     'new_without_parentheses_description' => '现在可以在不使用括号包裹 <code>new</code> 表达式的情况下访问新实例化对象的属性和方法。',
