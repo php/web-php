@@ -17,14 +17,14 @@ return [
     'dom_additions_html5_description' => '<p>Yeni DOM API, HTML5 dokümanlarını standartlara uygun şekilde işlemenize olanak tanır, DOM işlevselliğindeki uzun süredir devam eden uyumluluk hatalarını giderir ve dokümanlarla çalışmayı daha kolay hale getiren bir dizi yeni fonksiyon ekler.</p><p>Yeni DOM API, <code>Dom</code> isim alanı içerisinde kullanılabilir. Bu API ile çalışmak için HTML ve XML içerikleri, <code>Dom\HTMLDocument</code> ve <code>Dom\XMLDocument</code> sınıfları kullanılarak oluşturulabilir.</p>',    'bcmath_title' => 'BCMath için Nesne API’si',
     'bcmath_description' => '<p>Yeni <code>BcMath\Number</code> nesnesi, yüksek doğruluk gerektiren sayılarla çalışırken nesne yönelimli kullanım ve standart matematiksel operatörlerin desteklenmesini sağlar.</p><p>Bu nesneler değişmezdir ve <code>Stringable</code> arayüzünü uygular, böylece <code>echo $num</code> gibi metin bağlamlarında kullanılabilirler.</p>',
     'new_array_find_title' => 'Yeni <code>array_*()</code> Fonksiyonları',
-    'new_array_find_description' => 'Yeni fonksiyonlar: <a href="/manual/en/function.array-find.php"><code>array_find()</code></a>, <a href="/manual/en/function.array-find-key.php"><code>array_find_key()</code></a>, <a href="/manual/en/function.array-any.php"><code>array_any()</code></a> ve <a href="/manual/en/function.array-all.php"><code>array_all()</code></a> kullanılabilir.',
+    'new_array_find_description' => 'Yeni fonksiyonlar: <a href="/manual/tr/function.array-find.php"><code>array_find()</code></a>, <a href="/manual/tr/function.array-find-key.php"><code>array_find_key()</code></a>, <a href="/manual/tr/function.array-any.php"><code>array_any()</code></a> ve <a href="/manual/tr/function.array-all.php"><code>array_all()</code></a> kullanılabilir.',
     'pdo_driver_specific_subclasses_title' => 'PDO Sürücüsüne Özel Alt Sınıflar',
     'pdo_driver_specific_subclasses_description' => 'PDO için yeni alt sınıflar: <code>Pdo\Dblib</code>, <code>Pdo\Firebird</code>, <code>Pdo\MySql</code>, <code>Pdo\Odbc</code>, <code>Pdo\Pgsql</code> ve <code>Pdo\Sqlite</code> mevcut.',
     'new_without_parentheses_title' => '<code>new MyClass()->method()</code> Parantezsiz Kullanım',
     'new_without_parentheses_description' => 'Yeni oluşturulan bir nesnenin özelliklerine ve metotlarına, <code>new</code> ifadesini parantez içine almadan doğrudan erişilebilir.',
 
     'new_classes_title' => 'Yeni Sınıflar, Arayüzler ve Fonksiyonlar',
-    'new_lazy_objects' => 'Yeni <a href="/manual/en/language.oop5.lazy-objects.php">Lazy Objects</a>.',
+    'new_lazy_objects' => 'Yeni <a href="/manual/tr/language.oop5.lazy-objects.php">Lazy Objects</a>.',
     'new_jit_implementation' => 'IR Framework tabanlı yeni JIT uygulaması.',
     'new_core_functions' => 'Yeni <code>request_parse_body()</code> fonksiyonu.',
     'new_bcmath_functions' => 'Yeni <code>bcceil()</code>, <code>bcdivmod()</code>, <code>bcfloor()</code> ve <code>bcround()</code> fonksiyonları.',
@@ -48,10 +48,10 @@ return [
     'bc_mysqli_constants' => '<code>MYSQLI_SET_CHARSET_DIR</code>, <code>MYSQLI_STMT_ATTR_PREFETCH_ROWS</code>, <code>MYSQLI_CURSOR_TYPE_FOR_UPDATE</code> gibi sabitler artık kaldırılmıştır.',
     'bc_mysqli_functions' => '<code>mysqli_ping()</code>, <code>mysqli_kill()</code>, <code>mysqli_refresh()</code> fonksiyonları, <code>mysqli::ping()</code>, <code>mysqli::kill()</code>, <code>mysqli::refresh()</code> metotları ve <code>MYSQLI_REFRESH_*</code> sabitleri artık kullanımdan kaldırıldı.',
     'bc_standard' => '<code>stream_bucket_make_writeable()</code> ve <code>stream_bucket_new()</code> artık <code>stdClass</code> yerine bir <code>StreamBucket</code> objesi döndürüyor.',
-    'bc_core' => '<a href="/manual/en/migration84.incompatible.php#migration84.incompatible.core.exit"><code>exit()</code> davranış değişikliği</a>.',
+    'bc_core' => '<a href="/manual/tr/migration84.incompatible.php#migration84.incompatible.core.exit"><code>exit()</code> davranış değişikliği</a>.',
     'bc_warnings' => '<code>E_STRICT</code> sabiti artık kullanımdan kaldırılmıştır.',
 
     'footer_title' => 'Daha iyi performans, daha temiz sözdizimi, gelişmiş tür güvenliği.',
     'footer_description' => '<p>PHP 8.4 kaynak dosyalarını indirmek için <a href="/downloads">indirme sayfasını</a> ziyaret edin. Windows için çalıştırılabilir dosyaları <a href="https://windows.php.net/download">PHP for Windows</a> sitesinden indirebilirsiniz. Tüm değişikliklerin listesi <a href="/ChangeLog-8.php#PHP_8_4">ChangeLog</a> içinde kayıtlıdır.</p>
-        <p>Detaylı bilgi için <a href="/manual/en/migration84.php">göç rehberine</a> göz atabilirsiniz.</p>',
+        <p>Detaylı bilgi için <a href="/manual/tr/migration84.php">göç rehberine</a> göz atabilirsiniz.</p>',
 ];
