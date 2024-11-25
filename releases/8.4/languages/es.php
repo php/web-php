@@ -15,6 +15,8 @@ return [
     'deprecated_attribute_description' => 'El nuevo atributo <code>#[\Deprecated]</code> hace que el mecanismo de obsolescencia existente de PHP esté disponible para funciones, métodos y constantes de clase definidas por el usuario.',
     'dom_additions_html5_title' => 'Nuevas características de ext-dom y soporte para HTML5',
     'dom_additions_html5_description' => '<p>Nueva API DOM que incluye soporte conforme a los estándares para el análisis de documentos HTML5, corrige varios errores de cumplimiento antiguos en el comportamiento de la funcionalidad DOM, y añade varias funciones para hacer más conveniente trabajar con documentos.</p><p>La nueva API DOM está disponible dentro del espacio de nombres <code>Dom</code>. Los documentos que utilizan la nueva API DOM pueden ser creados utilizando las clases <code>Dom\HTMLDocument</code> y <code>Dom\XMLDocument</code>.',
+    'bcmath_title' => 'API de objetos para BCMath',
+    'bcmath_description' => '<p>El nuevo objeto <code>BcMath\Number</code> permite el uso orientado a objetos y operadores matemáticos estándar cuando se trabaja con números de precisión arbitraria.</p><p>Estos objetos son inmutables e implementan la interfaz <code>Stringable</code>, por lo que se pueden usar en contextos de cadena como <code>echo $num</code>.</p>',
     'new_array_find_title' => 'Nuevas funciones <code>array_*()</code>',
     'new_array_find_description' => 'Nuevas funciones disponibles: <a href="/manual/es/function.array-find.php"><code>array_find()</code></a>, <a href="/manual/es/function.array-find-key.php"><code>array_find_key()</code></a>, <a href="/manual/es/function.array-any.php"><code>array_any()</code></a> y <a href="/manual/es/function.array-all.php"><code>array_all()</code></a>.',
     'pdo_driver_specific_subclasses_title' => 'Procesadores SQL específicos para PDO Driver',
@@ -23,6 +25,7 @@ return [
     'new_without_parentheses_description' => 'Las propiedades y métodos de un objeto recién instanciado ahora se pueden acceder sin envolver la expresión <code>new</code> entre paréntesis.',
 
     'new_classes_title' => 'Nuevas Clases, Interfaces y Funciones',
+    'new_lazy_objects' => 'Nuevos <a href="/manual/es/language.oop5.lazy-objects.php">Objetos Lazy</a>.',
     'new_jit_implementation' => 'Nueva implementación JIT basada en el marco IR.',
     'new_core_functions' => 'Nueva función <code>request_parse_body()</code>.',
     'new_bcmath_functions' => 'Nuevas funciones: <code>bcceil()</code>, <code>bcdivmod()</code>, <code>bcfloor()</code> y <code>bcround()</code>.',
