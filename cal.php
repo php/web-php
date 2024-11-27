@@ -232,7 +232,7 @@ function date_for_recur($recur, $day, $bom, $eom)
 function display_events_for_day($day, $events): void
 {
     // For preservation of state in the links
-    global $cm, $cy, $COUNTRY;
+    global $cm, $cy;
 
     // For all events, try to find the events for this day
     foreach ($events as $event) {
@@ -241,12 +241,10 @@ function display_events_for_day($day, $events): void
         if (($event['type'] == 2 && $event['start'] <= $day && $event['end'] >= $day)
          || ($event['start'] == $day)) {
             echo '<div class="event">',
-                 ($COUNTRY == $event['country'] ? "<strong>" : ""),
                  '<a class="cat' . $event['category'] . '" href="/cal.php',
                  "?id=$event[id]&amp;cm=$cm&amp;cy=$cy", '">',
                  stripslashes(htmlentities($event['sdesc'], ENT_QUOTES | ENT_IGNORE, 'UTF-8')),
                  '</a>',
-                 ($COUNTRY == $event['country'] ? "</strong>" : ""),
                  '</div>';
         }
     }
