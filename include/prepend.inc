@@ -71,7 +71,6 @@ unset($RSIDEBAR_DATA);
 unset($SIDEBAR_DATA);
 unset($SEARCH_BASE);
 unset($LANG);
-unset($COUNTRY);
 unset($ONLOAD);
 unset($LAST_UPDATED);
 
@@ -86,7 +85,7 @@ include __DIR__ . '/site.inc';
 // Choose language used for translated parts
 include __DIR__ . '/langchooser.inc';
 
-// Get country of the user and set it in a cookie
+// Import function to get the real IP address
 include __DIR__ . '/ip-to-country.inc';
 
 // Common layout functions

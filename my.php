@@ -146,25 +146,6 @@ foreach ($langinfo as $lin => $lid) {
  <a href="/docs.php">language selection</a> pages, etc.
 </p>
 
-<h2>Your country</h2>
-
-<p>
- The PHP.net site tries to detect your country
- using the <a href="http://www.directi.com/?site=ip-to-country">Directi
- Ip-to-Country Database</a>. This information is used to mark
- the events in your country specially.
-</p>
-
-<div class="indent">
-<?php
-if (i2c_valid_country()) {
-    echo "We detected that you are from <b>" . $COUNTRIES[$COUNTRY] . "</b>";
-} else {
-    echo "We were unable to detect your country";
-}
-?>
-</div>
-
 <h2>URL search fallback</h2>
 
 <p>
