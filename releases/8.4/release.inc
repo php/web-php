@@ -314,7 +314,7 @@ PHP
                         <?php highlight_php_trimmed(
                             <<<'PHP'
 $dom = Dom\HTMLDocument::createFromString(
-    <<<HTML
+    <<<'HTML'
         <main>
             <article>PHP 8.4 is a feature-rich release!</article>
             <article class="featured">PHP 8.4 adds new DOM classes that are spec-compliant, keeping the old ones for compatibility.</article>
