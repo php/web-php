@@ -121,7 +121,7 @@ class Locale
     {
         get => \sprintf("%s_%s", $this->languageCode, $this->countryCode);
         set (string $value) {
-            [$this->countryCode, $this->languageCode] = explode('_', $value, 2);
+            [$this->languageCode, $this->countryCode] = explode('_', $value, 2);
         }
     }
 
