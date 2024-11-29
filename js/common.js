@@ -368,7 +368,7 @@ $(document).ready(function () {
     function findParameter(elt) {
         var id = $(elt).text().replace(/^&?(\.\.\.)?\$?/g, '');
         return $('.parameters, .options').find('.parameter').filter(function () {
-            return $(elt).text().trim() === id; // https://bugs.php.net/bug.php?id=74493
+            return $(this).text().trim() === id; // https://bugs.php.net/bug.php?id=74493
         }).first();
     }
 
@@ -383,7 +383,7 @@ $(document).ready(function () {
             var param = findParameter(this);
             if (param.length) {
                 $.scrollTo({
-                    top: param.offset().top - 52,
+                    top: param.offset().top,
                     left: 0
                 }, 400);
             }
