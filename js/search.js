@@ -294,6 +294,10 @@ const initSearchModal = () => {
 
     // Open when / is pressed
     document.addEventListener("keydown", (event) => {
+        if (event.target.contentEditable) {
+          return;
+        }
+
         if (event.key === "/") {
             show();
             event.preventDefault();
