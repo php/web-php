@@ -140,57 +140,73 @@ PHP
 </div>
 
 <div class="block">
-    <div class="cards cards--3">
-        <div class="card">
-            <div class="card__title">Stable and Secure</div>
-            <div class="card__body">
-                <div class="subtitle">PHP has a rich history spanning over 29 years, resulting in:</div>
-                <ul>
-                    <li>Fewer bugs due to extensive testing and refinement</li>
-                    <li>Predictable release cycle</li>
-                    <li>Stable API, ensuring backward compatibility</li>
-                    <li>Regular security updates and audits</li>
-                </ul>
+    <div class="cards">
+        <div class="card card--columns">
+            <div class="card__info">
+                <div class="card__title">Stable and Secure</div>
+                <div class="card__body">
+                    <div class="subtitle">PHP has a rich history spanning over 29 years, resulting in:</div>
+                    <ul>
+                        <li>Fewer bugs due to extensive testing and refinement</li>
+                        <li>Predictable release cycle</li>
+                        <li>Stable API, ensuring backward compatibility</li>
+                        <li>Regular security updates and audits</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="card__cover">
+                <img src="https://placehold.co/1920x1080" alt=""/>
             </div>
         </div>
-        <div class="card">
-            <div class="card__title">Fast and Efficient</div>
-            <div class="card__body">
-                <div class="subtitle">PHP consistently ranks among the fastest server-side languages:</div>
-                <ul>
-                    <li>Outperforms Python and Ruby in benchmarks</li>
-                    <li>Built-in opcode caching for improved performance</li>
-                    <li>Supports asynchronous programming with libraries like Swoole and ReactPHP</li>
-                    <li>Has modern application servers for containerized applications:
-                        <a href="#">FrankenPHP</a>, <a href="#">RoadRunner</a></li>
-                </ul>
+        <div class="card card--columns">
+            <div class="card__info">
+                <div class="card__title">Fast and Efficient</div>
+                <div class="card__body">
+                    <div class="subtitle">PHP consistently ranks among the fastest server-side languages:</div>
+                    <ul>
+                        <li>Outperforms Python and Ruby in benchmarks</li>
+                        <li>Built-in opcode caching for improved performance</li>
+                        <li>Supports asynchronous programming with libraries like Swoole and ReactPHP</li>
+                        <li>Has modern application servers for containerized applications:
+                            <a href="#">FrankenPHP</a>, <a href="#">RoadRunner</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="card__cover">
+                <img src="https://placehold.co/1920x1080" alt=""/>
             </div>
         </div>
-        <div class="card">
-            <div class="card__title">Rich Ecosystem</div>
-            <div class="card__body">
-                <div class="subtitle">PHP boasts a thriving ecosystem that speeds up development:</div>
-                <ul>
-                    <li>
-                        <a href="https://getcomposer.org/">Composer</a>: The package manager for PHP with over
-                        <a href="https://packagist.org/statistics">400,000 packages</a>.
-                    </li>
-                    <li>
-                        Popular frameworks: <a href="https://laravel.com/">Laravel</a>, <a href="https://symfony.com/">Symfony</a>,
-                        <a href="https://getlaminas.org/">Laminas</a>, and more.
-                    </li>
-                    <li>
-                        Content Management Systems:
-                        <a href="https://wordpress.com/">WordPress</a>, <a href="https://www.drupal.org/">Drupal</a>,
-                        <a href="https://www.joomla.org/">Joomla!</a>, <a href="https://typo3.org/">TYPO3</a>.
-                    </li>
-                    <li>Learning Management Systems: <a href="https://moodle.org/">Moodle</a>.</li>
-                    <li>
-                        E-commerce platforms: <a href="https://woocommerce.com/">WooCommerce</a>,
-                        <a href="https://www.shopware.com/">Shopware</a>,
-                        <a href="https://prestashop.com/">PrestaShop</a>.
-                    </li>
-                </ul>
+        <div class="card card--columns">
+            <div class="card__info">
+                <div class="card__title">Rich Ecosystem</div>
+                <div class="card__body">
+                    <div class="subtitle">PHP boasts a thriving ecosystem that speeds up development:</div>
+                    <ul>
+                        <li>
+                            <a href="https://getcomposer.org/">Composer</a>: The package manager for PHP with over
+                            <a href="https://packagist.org/statistics">400,000 packages</a>.
+                        </li>
+                        <li>
+                            Popular frameworks: <a href="https://laravel.com/">Laravel</a>, <a
+                                    href="https://symfony.com/">Symfony</a>,
+                            <a href="https://getlaminas.org/">Laminas</a>, and more.
+                        </li>
+                        <li>
+                            Content Management Systems:
+                            <a href="https://wordpress.com/">WordPress</a>, <a href="https://www.drupal.org/">Drupal</a>,
+                            <a href="https://www.joomla.org/">Joomla!</a>, <a href="https://typo3.org/">TYPO3</a>.
+                        </li>
+                        <li>Learning Management Systems: <a href="https://moodle.org/">Moodle</a>.</li>
+                        <li>
+                            E-commerce platforms: <a href="https://woocommerce.com/">WooCommerce</a>,
+                            <a href="https://www.shopware.com/">Shopware</a>,
+                            <a href="https://prestashop.com/">PrestaShop</a>.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="card__cover">
+                <img src="https://placehold.co/1920x1080" alt=""/>
             </div>
         </div>
     </div>
@@ -202,7 +218,7 @@ PHP
         <div class="description">PHP continues to attract significant investments and power successful businesses:</div>
     </div>
     <div class="block__body">
-        <div class="cards">
+        <div class="cards cards--2">
             <div class="card">
                 <div class="card__image">
                     <img src="https://laravel.com/img/logomark.min.svg" alt="Laravel"/>
@@ -343,7 +359,7 @@ PHP
         <div class="description">PHP's development is driven by a passionate community:</div>
     </div>
     <div class="block__body">
-        <div class="cards">
+        <div class="cards cards--2">
             <div class="card">
                 <div class="card__image">
                     <img src="https://thephp.foundation/assets/icons/php_foundation.svg" alt="The PHP Foundation"/>
