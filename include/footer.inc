@@ -103,6 +103,13 @@ if (!empty($_SERVER['BASE_PAGE'])
    echo '<script src="/cached.php?t=' . @filemtime($path) . '&amp;f=/js/' . $filename . '"></script>' . "\n";
  }
 ?>
+<?php
+ $jsfiles = ["interactive-examples.js"];
+ foreach ($jsfiles as $filename) {
+   $path = dirname(__DIR__) . '/js/' . $filename;
+   echo '<script type="module" src="/cached.php?t=' . @filemtime($path) . '&amp;f=/js/' . $filename . '"></script>' . "\n";
+ }
+?>
 
 <a id="toTop" href="javascript:;"><span id="toTopHover"></span><img width="40" height="40" alt="To Top" src="/images/to-top@2x.png"></a>
 
