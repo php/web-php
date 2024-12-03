@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom" xmlns:default="http://php.net/ns/news">
+  <title>PHP Conference Nagoya 2025</title>
+  <id>https://www.php.net/archive/2024.php#2024-12-03-1</id>
+  <published>2024-12-03T08:19:47+00:00</published>
+  <updated>2024-12-03T08:19:47+00:00</updated>
+  <link href="https://www.php.net/conferences/index.php#2024-12-03-1" rel="alternate" type="text/html"/>
+  <link href="https://phpcon.nagoya/2025/" rel="via" type="text/html"/>
+  <default:finalTeaserDate xmlns="http://php.net/ns/news">2025-02-22</default:finalTeaserDate>
+  <category term="conferences" label="Conference announcement"/>
+  <default:newsImage xmlns="http://php.net/ns/news" link="https://phpcon.nagoya/2025/" title="PHP Conference Nagoya 2025">phpcon_nagoya2025.png</default:newsImage>
+  <content type="xhtml">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+      <p>
+        PHP Conference Nagoya will be held for the first time in 2025.
+      </p>
+      <p>
+        The conference aims to promote interaction between Nagoya engineers and engineers across the country, and to bring a breath of fresh air to the Nagoya engineering community.<br/>
+        (This conference will be conducted in Japanese.)
+      </p>
+      <strong>Basic facts</strong><br/>
+      <ul>
+        <li>Date: February 22, 2025 (JST)</li>
+        <li>Location: Nagoya City, Aichi Prefecture, Japan</li>
+      </ul>
+      <p>
+        For more information, see <a href="https://phpcon.nagoya/2025/">PHP Conference Nagoya 2025</a>.
+      </p>
+      <p>
+        Follow us on <a href="https://x.com/phpcon_nagoya">𝕏</a>.
+      </p>
+    </div>
+  </content>
+</entry>
