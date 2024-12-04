@@ -294,7 +294,7 @@ const initSearchModal = () => {
 
     // Open when / is pressed
     document.addEventListener("keydown", (event) => {
-        if (event.target.contentEditable === 'true') {
+        if (event.target.contentEditable === "true") {
             return;
         }
 
