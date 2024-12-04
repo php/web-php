@@ -57,6 +57,7 @@ async function main() {
     }
 
     const code = phpcode.querySelector("code");
+    code.spellcheck = false;
     code.setAttribute("contentEditable", true);
 
     button.innerText = "Run code";
