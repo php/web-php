@@ -31,8 +31,8 @@ $setup = array (
   ),
   'next' =>
   array (
-    0 => 'function.strrchr.php',
-    1 => 'strrchr',
+    0 => 'function.rtrim.php',
+    1 => 'rtrim',
   ),
   'alternatives' =>
   array (
