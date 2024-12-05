@@ -26,8 +26,8 @@ $setup = array (
   ),
   'prev' =>
   array (
-    0 => 'function.strpbrk.php',
-    1 => 'strpbrk',
+    0 => 'ref.strings.php',
+    1 => 'String Functions',
   ),
   'next' =>
   array (
@@ -197,4 +197,4 @@ binary-safe.</span></p></blockquote>
  </div>
 
 
-</div><?php manual_footer(); ?>
+</div><?php manual_footer([]); ?>

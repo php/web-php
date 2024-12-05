@@ -438,4 +438,4 @@ array (
  </div>
 
 
-</div><?php manual_footer(); ?>
+</div><?php manual_footer([]); ?>
