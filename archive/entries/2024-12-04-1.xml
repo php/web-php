@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom" xmlns:default="http://php.net/ns/news">
+  <title>PHP Conference Japan 2024</title>
+  <id>https://www.php.net/archive/2024.php#2024-12-04-1</id>
+  <published>2024-12-04T13:44:00+00:00</published>
+  <updated>2024-12-04T13:44:00+00:00</updated>
+  <link href="https://www.php.net/conferences/index.php#2024-12-04-1" rel="alternate" type="text/html"/>
+  <link href="https://phpcon.php.gr.jp/2024/" rel="via" type="text/html"/>
+  <default:finalTeaserDate xmlns="http://php.net/ns/news">2024-12-04</default:finalTeaserDate>
+  <category term="conferences" label="Conference announcement"/>
+  <default:newsImage xmlns="http://php.net/ns/news" link="https://phpcon.php.gr.jp/2024/" title="PHP Conference Japan 2024">phpcon-japan-2024.png</default:newsImage>
+  <content type="xhtml">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+      <li>Date: December 22, 2024 (JST)</li>
+      <li>Location: Ota Tokyo, Japan.</li>
+      <p>
+        <a href="https://phpcon.php.gr.jp/2024/">PHP Conference Japan 2024</a> the largest PHP event in Japan.
+      </p>
+      <p>
+        The first PHP Conference Japan was held in 2000 by PHP user group in Japan, and this year marks the 25th edition of the event.
+      </p>
+      <p>
+         We have prepared enjoyable programs for all PHPers, from beginners to advanced users.
+      </p>
+
+      <p>
+        For more information, see <a href="https://phpcon.php.gr.jp/2024/">PHP Conference Japan 2024</a>.
+      </p>
+      <p>
+        Follow us on <a href="https://x.com/phpcon">𝕏</a> <a href="https://x.com/search?q=%23phpcon">#phpcon</a>
+      </p>
+    </div>
+  </content>
+</entry>
