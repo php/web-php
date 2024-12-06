@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom" xmlns:default="http://php.net/ns/news">
+  <title>phpday 2025 - Call For Papers</title>
+  <id>https://www.php.net/archive/2024.php#2024-12-06-1</id>
+  <published>2024-12-06T08:49:08+00:00</published>
+  <updated>2024-12-06T08:49:08+00:00</updated>
+  <link href="https://www.php.net/conferences/index.php#2024-12-06-1" rel="alternate" type="text/html"/>
+  <link href="https://www.phpday.it/" rel="via" type="text/html"/>
+  <default:finalTeaserDate xmlns="http://php.net/ns/news">2025-01-12</default:finalTeaserDate>
+  <category term="cfp" label="Call for Papers"/>
+  <default:newsImage xmlns="http://php.net/ns/news" link="https://www.phpday.it/" title="phpday 2025 - Verona + online - May 15-16">phpday2023.png</default:newsImage>
+  <content type="xhtml">
+    <div xmlns="http://www.w3.org/1999/xhtml"><p>
+phpday is the annual gathering for developers, professionals, and PHP enthusiasts,
+dedicated to sharing insights, expertise, and advancements in web programming.
+The event offers a mix of technical sessions, hands-on workshops, and networking with industry leaders.
+</p>
+<p>
+Now in its 22nd year, phpday has been held continuously since 2003. The 2025 edition
+will be hosted in Verona on May 15-16.
+</p>
+<p>
+<b>The <a href="https://www.phpday.it/welcome/cfp.html">Call For Papers</a> is now open!</b>
+</p>
+<p>
+At phpday, attendees can explore the latest trends and best practices in PHP development,
+enhancing their technical skills and keeping their design and development teams at the
+forefront of industry innovation.
+</p>
+<p>
+phpday is proudly organized by <a href="https://www.grusp.org/" target="_blank">GrUSP!</a>
+</p>
+    </div>
+  </content>
+</entry>
