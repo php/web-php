@@ -205,87 +205,18 @@ manual_setup($setup);
 
  </div>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<h2>Table of Contents</h2><ul class="chunklist chunklist_reference"><li><a href="exception.construct.php">Exception::__construct</a> — Construct the exception</li><li><a href="exception.getmessage.php">Exception::getMessage</a> — Gets the Exception message</li><li><a href="exception.getprevious.php">Exception::getPrevious</a> — Returns previous Exception</li><li><a href="exception.getcode.php">Exception::getCode</a> — Gets the Exception code</li><li><a href="exception.getfile.php">Exception::getFile</a> — Gets the file in which the exception occurred</li><li><a href="exception.getline.php">Exception::getLine</a> — Gets the line in which the exception occurred</li><li><a href="exception.gettrace.php">Exception::getTrace</a> — Gets the stack trace</li><li><a href="exception.gettraceasstring.php">Exception::getTraceAsString</a> — Gets the stack trace as a string</li><li><a href="exception.tostring.php">Exception::__toString</a> — String representation of the exception</li><li><a href="exception.clone.php">Exception::__clone</a> — Clone the exception</li></ul>
+<h2>Table of Contents</h2>
+    <ul class="chunklist chunklist_reference">
+        <li><a href="exception.construct.php">Exception::__construct</a> — Construct the exception</li>
+        <li><a href="exception.getmessage.php">Exception::getMessage</a> — Gets the Exception message</li>
+        <li><a href="exception.getprevious.php">Exception::getPrevious</a> — Returns previous Exception</li>
+        <li><a href="exception.getcode.php">Exception::getCode</a> — Gets the Exception code</li>
+        <li><a href="exception.getfile.php">Exception::getFile</a> — Gets the file in which the exception occurred</li>
+        <li><a href="exception.getline.php">Exception::getLine</a> — Gets the line in which the exception occurred</li>
+        <li><a href="exception.gettrace.php">Exception::getTrace</a> — Gets the stack trace</li>
+        <li><a href="exception.gettraceasstring.php">Exception::getTraceAsString</a> — Gets the stack trace as a string</li>
+        <li><a href="exception.tostring.php">Exception::__toString</a> — String representation of the exception</li>
+        <li><a href="exception.clone.php">Exception::__clone</a> — Clone the exception</li>
+    </ul>
 </div>
-<?php manual_footer(); ?>
+<?php manual_footer([]); ?>
