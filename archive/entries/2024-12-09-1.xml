@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom" xmlns:default="http://php.net/ns/news">
+  <title>ConFoo 2025</title>
+  <id>https://www.php.net/archive/2024.php#2024-12-09-1</id>
+  <published>2024-12-09T13:21:37-05:00</published>
+  <updated>2024-12-09T13:21:37-05:00</updated>
+  <link href="https://www.php.net/conferences/index.php#2024-12-09-1" rel="alternate" type="text/html"/>
+  <link href="https://confoo.ca/en/2025" rel="via" type="text/html"/>
+  <default:finalTeaserDate xmlns="http://php.net/ns/news">2025-02-26</default:finalTeaserDate>
+  <category term="conferences" label="Conference announcement"/>
+  <default:newsImage xmlns="http://php.net/ns/news" link="https://confoo.ca/en/2025" title="ConFoo 2025">confoo_2024.png</default:newsImage>
+  <content type="html">
+	  <p>ConFoo is back for its 23rd edition, at Hotel Bonaventure in Montreal, with a full stack of incredible talks with the best speakers in tech. You can check our newest program right now on our <a href="https://confoo.ca/en/2025">website</a></p>
+	  <p>With over <a href="https://confoo.ca/en/2025/sessions">190 presentations</a>, offered by over a hundred local and international speakers, ConFoo took on the mission to bring an outstanding diversity of content to expand your knowledge, increase your productivity and boost your development skills. </p>
+	  <p>This year schedule is especially important for those looking to learn the latest news in cutting edge technologies and get better with their <a href="https://confoo.ca/en/2025/track/php">PHP skills</a>. </p>
+	  <p>In an environment especially crafted for developers, ConFoo is also a great opportunity to meet potential employers, enjoy networking sessions with colleagues and friends and discover Montreal in its prime season.</p>
+	  <p><strong>Attend and find out how human intelligence is building the future!</strong></p>
+</content>
+</entry>
