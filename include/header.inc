@@ -91,6 +91,7 @@ if (!isset($config["languages"])) {
 
 <?php if (isset($config['meta_tags'])) { echo $config['meta_tags']; } ?>
 
+<?php if (is_primary_site()) { ?>
 <!-- Matomo -->
 <script>
     var _paq = window._paq = window._paq || [];
@@ -108,6 +109,7 @@ if (!isset($config["languages"])) {
     })();
 </script>
 <!-- End Matomo Code -->
+<?php } ?>
 </head>
 <body class="<?php echo $curr; ?> <?php echo $classes; ?>">
 
