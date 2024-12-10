@@ -161,4 +161,4 @@ string(4) &quot;foo!&quot;
 
 
  </div>
-<?php manual_footer(); ?>
+<?php manual_footer([]); ?>
