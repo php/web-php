@@ -31,8 +31,14 @@ site_header("Privacy Policy", ["current" => "footer"]);
 <h2>Cookies</h2>
 <p>
  php.net uses cookies to keep track of <a href="/my.php">user preferences</a>. Unless
- you login on the site, the cookies will not be used to store personal information and
+ you login on the site, the cookies will not be used to store personal information, and
  we do not give away the information from the cookies.
+</p>
+<p>
+ We also use self-hosted analytics service to improve popular sections of the documentation,
+ and never share user data with third parties.
+ You may deactivate or restrict the transmission of cookies by changing the settings of your web browser.
+ Cookies that are already stored may be deleted at any time.
 </p>
 
 <?php
