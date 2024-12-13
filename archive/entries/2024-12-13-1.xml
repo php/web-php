@@ -8,7 +8,7 @@
   <link href="https://phpconference.com/berlin/" rel="via" type="text/html"/>
   <default:finalTeaserDate xmlns="http://php.net/ns/news">2025-06-06</default:finalTeaserDate>
   <category term="conferences" label="Conference announcement"/>
-  <default:newsImage xmlns="http://php.net/ns/news" link="https://phpconference.com/berlin/" title="International PHP Conference Berlin 2025">IPC_24_Logo.png</default:newsImage>
+  <default:newsImage xmlns="http://php.net/ns/news" link="https://phpconference.com/berlin-en/" title="International PHP Conference Berlin 2025">IPC_24_Logo.png</default:newsImage>
   <content type="xhtml">
     <div xmlns="http://www.w3.org/1999/xhtml">
       <p>
