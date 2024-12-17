@@ -177,6 +177,12 @@ if (preg_match('/^GH-(\d+)$/', $URI, $matches)) {
     mirror_redirect("https://github.com/php/php-src/issues/" . $matches[1]);
 }
 
+// php.net/supported-versions.PHP -> supported-versions.php
+if ($URI == 'supported-versions.PHP') {
+    mirror_redirect("https://www.php.net/supported-versions.php");
+}
+
+
 // ============================================================================
 // Redirect if the entered URI was a PHP page name (except some pages,
 // which we display in the mirror's language or the explicitly specified
