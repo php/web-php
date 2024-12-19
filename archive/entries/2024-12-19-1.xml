@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+  <title>PHP 8.2.27 Released!</title>
+  <id>https://www.php.net/archive/2024.php#2024-12-19-1</id>
+  <published>2024-12-19T15:47:10+00:00</published>
+  <updated>2024-12-19T15:47:10+00:00</updated>
+  <link href="https://www.php.net/index.php#2024-12-19-1" rel="alternate" type="text/html"/>
+  <link href="https://www.php.net/archive/2024.php#2024-12-19-1" rel="via" type="text/html"/>
+  <category term="releases" label="New PHP release"/>
+  <category term="frontpage" label="PHP.net frontpage news"/>
+  <content type="xhtml">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+      <p>The PHP development team announces the immediate availability of PHP 8.2.27. This is a bug fix release.</p>
+      <p>All PHP 8.2 users are encouraged to upgrade to this version.</p>
+      <p>For source downloads of PHP 8.2.27 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
+        Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
+        The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-8.php#8.2.27">ChangeLog</a>.
+      </p>
+      <p>Please note, this is the last bug-fix release for the 8.2.x series. Security fix support will continue until 31 Dec 2026.
+        For more information, please check our <a href="https://www.php.net/supported-versions">Supported Versions</a> page.
+      </p>
+    </div>
+  </content>
+</entry>

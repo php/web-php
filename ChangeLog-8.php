@@ -1928,6 +1928,100 @@ changelog_header(8, $MINOR_VERSIONS);
 
 <a id="PHP_8_2"></a>
 
+<section class="version" id="8.2.27"><!-- {{{ 8.2.27 -->
+<h3>Version 8.2.27</h3>
+<b><?php release_date('19-Dec-2024'); ?></b>
+<ul><li>Calendar:
+<ul>
+  <li>Fixed jdtogregorian overflow.</li>
+  <li>Fixed cal_to_jd julian_days argument overflow.</li>
+</ul></li>
+<li>COM:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 16991); ?> (Getting typeinfo of non DISPATCH variant segfaults).</li>
+</ul></li>
+<li>Core:
+<ul>
+  <li>Fail early in *nix configuration build script.</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 16727); ?> (Opcache bad signal 139 crash in ZTS bookworm (frankenphp)).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 16799); ?> (Assertion failure at Zend/zend_vm_execute.h:7469).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 16630); ?> (UAF in lexer with encoding translation and heredocs).</li>
+  <li>Fix is_zend_ptr() huge block comparison.</li>
+  <li>Fixed potential OOB read in zend_dirname() on Windows.</li>
+</ul></li>
+<li>Curl:
+<ul>
+  <li>Fix various memory leaks in curl mime handling.</li>
+</ul></li>
+<li>FPM:
+<ul>
+  <li>Fixed <?php githubissuel('php/php-src', 16432); ?> (PHP-FPM 8.2 SIGSEGV in fpm_get_status).</li>
+</ul></li>
+<li>GD:
+<ul>
+  <li>Fixed <?php githubissuel('php/php-src', 16776); ?> (imagecreatefromstring overflow).</li>
+</ul></li>
+<li>GMP:
+<ul>
+  <li>Revert gmp_pow() overly restrictive overflow checks.</li>
+</ul></li>
+<li>Hash:
+<ul>
+  <li>Fixed <?php githubissuel('php/php-src', 16711); ?>: Segfault in mhash().</li>
+</ul></li>
+<li>Opcache:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 16770); ?> (Tracing JIT type mismatch when returning UNDEF).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 16851); ?> (JIT_G(enabled) not set correctly on other threads).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 16902); ?> (Set of opcache tests fail zts+aarch64).</li>
+</ul></li>
+<li>OpenSSL:
+<ul>
+  <li>Prevent unexpected array entry conversion when reading key.</li>
+  <li>Fix various memory leaks related to openssl exports.</li>
+  <li>Fix memory leak in php_openssl_pkey_from_zval().</li>
+</ul></li>
+<li>PDO:
+<ul>
+  <li>Fixed memory leak of `setFetchMode()`.</li>
+</ul></li>
+<li>Phar:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 16695); ?> (phar:// tar parser and zero-length file header blocks).</li>
+</ul></li>
+<li>PHPDBG:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 15208); ?> (Segfault with breakpoint map and phpdbg_clear()).</li>
+</ul></li>
+<li>SAPI:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 16998); ?> (UBSAN warning in rfc1867).</li>
+</ul></li>
+<li>SimpleXML:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 16808); ?> (Segmentation fault in RecursiveIteratorIterator -&gt;current() with a xml element input).</li>
+</ul></li>
+<li>SNMP:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 16959); ?> (snmget modifies the object_id array).</li>
+</ul></li>
+<li>Standard:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 16905); ?> (Internal iterator functions can't handle UNDEF properties).</li>
+</ul></li>
+<li>Streams:
+<ul>
+  <li>Fixed network connect poll interuption handling.</li>
+</ul></li>
+<li>Windows:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 16849); ?> (Error dialog causes process to hang).</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
+
+
 <section class="version" id="8.2.26"><!-- {{{ 8.2.26 -->
 <h3>Version 8.2.26</h3>
 <b><?php release_date('21-Nov-2024'); ?></b>
