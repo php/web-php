@@ -66,7 +66,7 @@ jobs:
         run: "make tests_update_snapshots"
 
       - name: Update snapshots
-        uses: test-room-7/action-update-file@v1
+        uses: test-room-7/action-update-file@v2
         if: ${{ !cancelled() }}
         with:
           file-path: tests/Visual/**/*
