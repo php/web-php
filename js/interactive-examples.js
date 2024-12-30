@@ -1,10 +1,14 @@
 import phpBinary from "/js/php-web.mjs";
 
+function generateExampleOutputTitle(phpVersion) {
+  return "Output of the above example in PHP "+ phpVersion +":";
+}
+
 function createOutput(output) {
   const container = document.createElement("div");
   container.classList.add("screen", "example-contents");
   const title = document.createElement("p");
-  title.innerText = "Output (PHP "+ PHP.version +"):";
+  title.innerText = generateExampleOutputTitle(PHP.version);
   container.appendChild(title);
   const div = document.createElement("div");
   div.classList.add("examplescode");
@@ -56,6 +60,15 @@ async function main() {
       return;
     }
 
+    const exampleTitleContainer = example.nextElementSibling;
+    let exampleTitleParagraphElement = null;
+    let exampleScreenPreElement = null;
+    if (exampleTitleContainer !== null) {
+      exampleTitleParagraphElement = exampleTitleContainer.querySelector("p")
+      const exampleScreenContainer = exampleTitleContainer.nextElementSibling;
+      exampleScreenPreElement = exampleScreenContainer.querySelector("pre");
+    }
+
     const code = phpcode.querySelector("code");
     code.spellcheck = false;
     code.setAttribute("contentEditable", true);
@@ -68,8 +81,13 @@ async function main() {
 
       const runPhp = await PHP.loadPhp();
       runPhp(phpcode.innerText);
-      lastOutput = createOutput(PHP.buffer.join(""));
-      phpcode.parentNode.appendChild(lastOutput);
+      if (exampleScreenPreElement !== null) {
+        exampleTitleParagraphElement.innerText = generateExampleOutputTitle(PHP.version);
+        exampleScreenPreElement.innerText = PHP.buffer.join("");
+      } else {
+        lastOutput = createOutput(PHP.buffer.join(""));
+        phpcode.parentNode.appendChild(lastOutput);
+      }
       PHP.buffer.length = 0;
     };
 
