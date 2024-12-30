@@ -137,11 +137,11 @@ const initPHPSearch = async (language) => {
      */
     const loadIndexWithFallback = async () => {
         try {
-            const searchItems = await loadIndex();
-            return searchItems;
+            return await loadIndex();
         } catch (error) {
             if (language !== "en") {
-                return loadIndexWithFallback("en");
+                language = "en";
+                return loadIndexWithFallback();
             }
             throw error;
         }
