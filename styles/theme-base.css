@@ -532,6 +532,10 @@ pre.info {
     padding:.75rem 1.5rem 1.5rem;
     -moz-box-sizing:border-box;
     box-sizing:border-box;
+    position: sticky;
+    top: 3rem;
+    max-height: calc(100vh - 3rem);
+    overflow: auto;
 }
 #layout-content {
   padding:1.5rem;
@@ -1352,6 +1356,10 @@ div.soft-deprecation-notice blockquote.sidebar {
 @media (min-width: 768px) {
   #breadcrumbs {
     display:block;
+    position: sticky;
+    top: 0px;
+    background: var(--dark-grey-color);
+    z-index: 1;
   }
   #intro .background,
   aside.tips,
@@ -1363,6 +1371,7 @@ div.soft-deprecation-notice blockquote.sidebar {
   #layout-content {
     float:left;
     width:75%;
+    border-top-left-radius: 1rem;
   }
 }
 
