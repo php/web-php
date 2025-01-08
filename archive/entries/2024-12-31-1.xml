@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom" xmlns:default="http://php.net/ns/news">
+  <title>Web Summer Camp 2025</title>
+  <id>https://www.php.net/archive/2024.php#2024-12-31-1</id>
+  <published>2024-12-31T15:56:51+01:00</published>
+  <updated>2024-12-31T15:56:51+01:00</updated>
+  <link href="https://www.php.net/conferences/index.php#2024-12-31-1" rel="alternate" type="text/html"/>
+  <link href="https://www.websummercamp.com" rel="via" type="text/html"/>
+  <default:finalTeaserDate xmlns="http://php.net/ns/news">2025-07-03</default:finalTeaserDate>
+  <category term="conferences" label="Conference announcement"/>
+  <default:newsImage xmlns="http://php.net/ns/news" link="https://www.websummercamp.com" title="Web Summer Camp 2025">websc.png</default:newsImage>
+  <content type="xhtml">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+     <p>Web Summer Camp is a unique <b>3-day international conference</b> for web professionals, focused on providing <b>intensive knowledge exchange and hands-on workshops</b>. It is set in a relaxed summer environment, offering a full-day program with numerous opportunities for learning and sharing experiences with web designers, developers, founders, and other web aficionados. The program will be divided into <b>six tracks, one being focused on PHP</b>. Other tracks include Javascript, Python, UX, etc.
+</p>
+     
+     <p>The nextedition will be held on <b>July 3rd-5th 2025 in Opatija, Croatia</b>. Call for papers is open till March 15th 2025. For more information see the web site: <a href="https://www.websummercamp.com">Web Summer Camp 2025</a>.
+</p>
+    </div>
+  </content>
+</entry>
