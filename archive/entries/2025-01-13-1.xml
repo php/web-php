@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom" xmlns:default="http://php.net/ns/news">
+  <title>API Platform Conference 2025</title>
+  <id>https://www.php.net/archive/2025.php#2025-01-13-1</id>
+  <published>2025-01-13T14:56:53+00:00</published>
+  <updated>2025-01-13T14:56:53+00:00</updated>
+  <link href="https://www.php.net/conferences/index.php#2025-01-13-1" rel="alternate" type="text/html"/>
+  <link href="https://api-platform.com/fr/con/2025/" rel="via" type="text/html"/>
+  <default:finalTeaserDate xmlns="http://php.net/ns/news">2025-09-18</default:finalTeaserDate>
+  <category term="conferences" label="Conference announcement"/>
+  <default:newsImage xmlns="http://php.net/ns/news" link="https://api-platform.com/fr/con/2025/" title="API Platform Conference 2025">api-platform-con-2025.png</default:newsImage>
+  <content type="xhtml">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+      <p><b>We are thrilled to announce that the API Platform Conference will return on September 18th and 19th, 2025, both in Lille (France) and online.</b></p>
+      <p>The API Platform Conference is a two-day event that highlights the latest trends, best practices, and case studies related to API Platform and its ecosystem, including PHP, Symfony, JavaScript, AI, FrankenPHP, performance, and tools.</p>
+      <p>With nearly 30 talks delivered in both English and French, the conference is a must-attend for innovative companies, project leaders, and skilled developers. If you're a developer, CTO, or decision-maker specializing in these technologies, this event is tailored for you!</p>
+      <p><b>The <a href="https://conference-hall.io/api-platform-conference-2025-lille-and-online">call for papers</a> for the API Platform Conference 2025 is open until March 23.</b> Final speakers will be announced starting May 14. Submit your pitch, and you could join us for this special anniversary edition: <a href="https://api-platform.com/con/2025/">https://api-platform.com/con/2025/</a></p>
+    </div>
+  </content>
+</entry>
