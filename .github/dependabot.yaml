@@ -3,7 +3,8 @@
 version: 2
 
 updates:
-  - allow:
+  - package-ecosystem: "composer"
+    allow:
       - dependency-type: "development"
     commit-message:
       include: "scope"
@@ -12,18 +13,28 @@ updates:
     labels:
       - "dependency"
     open-pull-requests-limit: 10
-    package-ecosystem: "composer"
     schedule:
       interval: "weekly"
     versioning-strategy: "increase"
 
-  - commit-message:
+  - package-ecosystem: "github-actions"
+    commit-message:
       include: "scope"
       prefix: "github-actions"
     directory: "/"
     labels:
       - "dependency"
     open-pull-requests-limit: 10
-    package-ecosystem: "github-actions"
+    schedule:
+      interval: "weekly"
+  
+  - package-ecosystem: "devcontainers"
+    commit-message:
+      include: "scope"
+      prefix: "devcontainers"
+    directory: "/"
+    labels:
+      - "dependency"
+    open-pull-requests-limit: 10
     schedule:
       interval: "weekly"
