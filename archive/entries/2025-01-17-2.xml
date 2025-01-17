@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom" xmlns:default="http://php.net/ns/news">
+  <title>PHPerKaigi 2025</title>
+  <id>https://www.php.net/archive/2025.php#2025-01-17-2</id>
+  <published>2025-01-17T14:42:59+00:00</published>
+  <updated>2025-01-17T14:42:59+00:00</updated>
+  <link href="https://www.php.net/conferences/index.php#2025-01-17-2" rel="alternate" type="text/html"/>
+  <link href="https://phperkaigi.jp/2025/" rel="via" type="text/html"/>
+  <default:finalTeaserDate xmlns="http://php.net/ns/news">2025-03-21</default:finalTeaserDate>
+  <category term="conferences" label="Conference announcement"/>
+  <default:newsImage xmlns="http://php.net/ns/news" link="https://phperkaigi.jp/2025/" title="PHPerKaigi 2025">phperkaigi-2025.png</default:newsImage>
+  <content type="xhtml">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+     <p><strong>PHPerKaigi 2025, Nakano, Tokyo, Japan</strong></p>
+     <p><strong>Date: Mar 21 - 23, 2025</strong></p>
+     <p>PHPerKaigi is an event for PHPers, that is, those who are currently using PHP, those who have used PHP in the past, those who want to use PHP in the future, and those who love PHP, to share technical know-how and "<strong>#love</strong>" for PHP.</p>
+     <p>The conference consists of talk sessions by public speakers. In addition to we have unconference, social gathering and so on for all of developers from all from Japan. Let's talk about PHP!</p>
+     <p>Follow us on X (Formerly Twitter) <a href="https://x.com/phperkaigi">@phperkaigi</a>, <a href="https://x.com/search?q=%23phperkaigi">#phperkaigi</a>.</p>
+     <p><a href="https://phperkaigi.jp/2025/">https://phperkaigi.jp/2025/</a></p>
+     <p>Note:</p>
+     <p>*Kaigi* means meeting in Japanese.</p>
+    </div>
+  </content>
+</entry>
