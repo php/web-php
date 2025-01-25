@@ -12,8 +12,8 @@
     },
     "require-dev": {
         "ext-curl": "*",
-        "friendsofphp/php-cs-fixer": "^3.66.0",
-        "phpunit/phpunit": "^11.5.2"
+        "friendsofphp/php-cs-fixer": "^3.68.1",
+        "phpunit/phpunit": "^11.5.3"
     },
     "autoload": {
         "psr-4": {

@@ -2,6 +2,78 @@
 $OLDRELEASES = array (
   8 => 
   array (
+    '8.4.2' => 
+    array (
+      'announcement' => 
+      array (
+        'English' => '/releases/8_4_2.php',
+      ),
+      'tags' => 
+      array (
+      ),
+      'date' => '19 Dec 2024',
+      'source' => 
+      array (
+        0 => 
+        array (
+          'filename' => 'php-8.4.2.tar.gz',
+          'name' => 'PHP 8.4.2 (tar.gz)',
+          'sha256' => '5d3cf82a7f4cafdcfc4f3d98f3e3ee81077ae57c709a5613cbff5834d78a7747',
+          'date' => '19 Dec 2024',
+        ),
+        1 => 
+        array (
+          'filename' => 'php-8.4.2.tar.bz2',
+          'name' => 'PHP 8.4.2 (tar.bz2)',
+          'sha256' => 'ef4fe9921b885ce3b047792ab60260eaf657e22812be511d19d0e45edf984783',
+          'date' => '19 Dec 2024',
+        ),
+        2 => 
+        array (
+          'filename' => 'php-8.4.2.tar.xz',
+          'name' => 'PHP 8.4.2 (tar.xz)',
+          'sha256' => '92636453210f7f2174d6ee6df17a5811368f556a6c2c2cbcf019321e36456e01',
+          'date' => '19 Dec 2024',
+        ),
+      ),
+      'museum' => false,
+    ),
+    '8.3.15' => 
+    array (
+      'announcement' => 
+      array (
+        'English' => '/releases/8_3_15.php',
+      ),
+      'tags' => 
+      array (
+      ),
+      'date' => '19 Dec 2024',
+      'source' => 
+      array (
+        0 => 
+        array (
+          'filename' => 'php-8.3.15.tar.gz',
+          'name' => 'PHP 8.3.15 (tar.gz)',
+          'sha256' => '67073c3c9c56c86461e0715d9e1806af5ddffe8e6e2eb9781f7923bbb5bd67fa',
+          'date' => '19 Dec 2024',
+        ),
+        1 => 
+        array (
+          'filename' => 'php-8.3.15.tar.bz2',
+          'name' => 'PHP 8.3.15 (tar.bz2)',
+          'sha256' => 'b1675a4ff730b5811b8e6a7687488c42e835e156a99776aa3e6f017abda3be98',
+          'date' => '19 Dec 2024',
+        ),
+        2 => 
+        array (
+          'filename' => 'php-8.3.15.tar.xz',
+          'name' => 'PHP 8.3.15 (tar.xz)',
+          'sha256' => '3df5d45637283f759eef8fc3ce03de829ded3e200c3da278936a684955d2f94f',
+          'date' => '19 Dec 2024',
+        ),
+      ),
+      'museum' => false,
+    ),
     '8.4.1' => 
     array (
       'announcement' => 
