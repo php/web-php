@@ -1369,9 +1369,8 @@ div.soft-deprecation-notice blockquote.sidebar {
   }
 
   #layout-content {
-    float:left;
-    width:75%;
-    border-top-left-radius: 1rem;
+    float: left;
+    width: 75%;
   }
 }
 
