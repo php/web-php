@@ -294,7 +294,13 @@ const initSearchModal = () => {
 
     // Open when / is pressed
     document.addEventListener("keydown", (event) => {
-        if (event.target.contentEditable === "true") {
+        const target = event.target;
+
+        if (
+            target.contentEditable === "true" ||
+            target.tagName === "INPUT" ||
+            target.tagName === "TEXTAREA"
+        ) {
             return;
         }
 
