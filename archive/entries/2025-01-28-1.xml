@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom" xmlns:default="http://php.net/ns/news">
+  <title>PHP Tek 2025</title>
+  <id>https://www.php.net/archive/2025.php#2025-01-28-1</id>
+  <published>2025-01-28T21:35:08+00:00</published>
+  <updated>2025-01-28T21:35:08+00:00</updated>
+  <link href="https://www.php.net/conferences/index.php#2025-01-28-1" rel="alternate" type="text/html"/>
+  <link href="https://phptek.io" rel="via" type="text/html"/>
+  <default:finalTeaserDate xmlns="http://php.net/ns/news">2025-05-20</default:finalTeaserDate>
+  <category term="conferences" label="Conference announcement"/>
+  <default:newsImage xmlns="http://php.net/ns/news" link="https://phptek.io" title="PHP Tek 2025 Logo">php-tek-2025.png</default:newsImage>
+  <content type="xhtml">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+     
+    </div>
+  </content>
+</entry>
