@@ -12,7 +12,7 @@
     },
     "require-dev": {
         "ext-curl": "*",
-        "friendsofphp/php-cs-fixer": "^3.68.2",
+        "friendsofphp/php-cs-fixer": "^3.68.5",
         "phpunit/phpunit": "^11.5.6"
     },
     "autoload": {
