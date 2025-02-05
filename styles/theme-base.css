@@ -1632,3 +1632,49 @@ aside.tips div.inner {
 .caption {
   font-size: 0.85rem;
 }
+
+/**
+* Table overlapping fix
+*/
+.table {
+  width: 100%;
+  margin: 1% !important;
+  border-spacing: 20px;
+  table-layout: fixed;
+}
+
+@media only screen and (max-width: 760px), (min-device-width: 768px) and (max-device-width: 1024px) {
+  /* Make table elements block for stacking */
+  table, thead, tbody, th, td, tr {
+    display: block;
+  }
+
+  /* Hide the table headers */
+  thead tr {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+  }
+
+  tr {
+    margin: 0 0 1rem 0;
+  }
+
+  td {
+    border: none;
+    border-bottom: 1px solid #eee;
+    position: relative;
+    padding-left: 50%;
+  }
+
+  td:before {
+    position: absolute;
+    top: 0;
+    left: 6px;
+    width: 45%;
+    padding-right: 10px;
+    white-space: nowrap;
+    font-weight: bold;
+    content: attr(data-label); /* Dynamically gets the column name */
+  }
+}
