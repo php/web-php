@@ -101,7 +101,7 @@ releases\php80\common_header(
       </div>
     </div>
     <div class="php8-compare__content">
-      <p>En vez de anotaciones en PHPDoc, puedes usar metadatos estructurados con el sintax nativo de PHP.</p>
+      <p>En vez de anotaciones en PHPDoc, puedes usar metadatos estructurados con la sintaxis nativa de PHP.</p>
     </div>
   </div>
 
