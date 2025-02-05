@@ -1643,6 +1643,10 @@ aside.tips div.inner {
   table-layout: fixed;
 }
 
+td {
+  word-wrap: break-word;
+}
+
 @media only screen and (max-width: 760px), (min-device-width: 768px) and (max-device-width: 1024px) {
   /* Make table elements block for stacking */
   table, thead, tbody, th, td, tr {
@@ -1664,7 +1668,6 @@ aside.tips div.inner {
     border: none;
     border-bottom: 1px solid #eee;
     position: relative;
-    word-wrap: break-word;
   }
   td:before {
     left: -.50rem;
