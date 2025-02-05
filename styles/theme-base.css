@@ -1632,3 +1632,55 @@ aside.tips div.inner {
 .caption {
   font-size: 0.85rem;
 }
+
+/**
+* Table overlapping fix
+*/
+.table {
+  width: 100%;
+  margin: 1% !important;
+  border-spacing: 20px;
+  table-layout: fixed;
+}
+
+td {
+  word-wrap: break-word;
+}
+
+@media only screen and (max-width: 760px), (min-device-width: 768px) and (max-device-width: 1024px) {
+  /* Make table elements block for stacking */
+  table, thead, tbody, th, td, tr {
+    display: block;
+  }
+
+  /* Hide the table headers */
+  thead tr {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+  }
+
+  tr {
+    margin: 0 0 1rem 0;
+  }
+
+  td {
+    border: none;
+    border-bottom: 1px solid #eee;
+    position: relative;
+  }
+  td:before {
+    left: -.50rem;
+    top: -0.3rem;
+    padding: .25rem .5rem;
+    width: 100%;
+    font-weight: bold;
+    border: none;
+    background-color: #C4C9DF;
+    border-bottom: 1px solid #eee;
+    position: relative;
+    display: block;
+    unicode-bidi: isolate;
+    content: attr(data-label);
+  }
+}
