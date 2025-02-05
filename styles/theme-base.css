@@ -1664,17 +1664,19 @@ aside.tips div.inner {
     border: none;
     border-bottom: 1px solid #eee;
     position: relative;
-    padding-left: 50%;
   }
-
   td:before {
-    position: absolute;
-    top: 0;
-    left: 6px;
-    width: 45%;
-    padding-right: 10px;
-    white-space: nowrap;
+    left: -.50rem;
+    top: -0.3rem;
+    padding: .25rem .5rem;
+    width: 100%;
     font-weight: bold;
-    content: attr(data-label); /* Dynamically gets the column name */
+    border: none;
+    background-color: #C4C9DF;
+    border-bottom: 1px solid #eee;
+    position: relative;
+    display: block;
+    unicode-bidi: isolate;
+    content: attr(data-label);
   }
 }
