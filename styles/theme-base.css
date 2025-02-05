@@ -1664,6 +1664,7 @@ aside.tips div.inner {
     border: none;
     border-bottom: 1px solid #eee;
     position: relative;
+    word-wrap: break-word;
   }
   td:before {
     left: -.50rem;
