@@ -1122,11 +1122,16 @@ div.tip p:first-child {
     overflow-x:auto;
     white-space:pre;
 }
-.docs .example-contents > [class$="code"],
+
+.docs .example-contents > [class$="code"]:not(.phpcode),
 .docs .example-contents.screen,
 .informalexample .literallayout {
     padding: .75rem;
     overflow-x: auto;
+}
+
+.docs .example-contents > .phpcode > code {
+    padding: .75rem;
 }
 
 .docs .classsynopsis,
@@ -1140,7 +1145,6 @@ div.tip p:first-child {
 .phpcode code {
     display: block;
     overflow-x: auto;
-    padding: .75rem;
     white-space: pre-wrap;
 }
 
