@@ -1140,6 +1140,7 @@ div.tip p:first-child {
 .phpcode code {
     display: block;
     overflow-x: auto;
+    padding: .75rem;
     white-space: pre-wrap;
 }
 
