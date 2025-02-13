@@ -900,6 +900,88 @@ changelog_header(8, $MINOR_VERSIONS);
 
 <a id="PHP_8_3"></a>
 
+<section class="version" id="8.3.17"><!-- {{{ 8.3.17 -->
+<h3>Version 8.3.17</h3>
+<b><?php release_date('13-Feb-2025'); ?></b>
+<ul><li>Core:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 16892); ?> (ini_parse_quantity() fails to parse inputs starting with 0x0b).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 16886); ?> (ini_parse_quantity() fails to emit warning for 0x+0).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 17214); ?> (Relax final+private warning for trait methods with inherited final).</li>
+  <li>Fixed NULL arithmetic during system program execution on Windows.</li>
+  <li>Fixed potential OOB when checking for trailing spaces on Windows.</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 17408); ?> (Assertion failure Zend/zend_exceptions.c).</li>
+  <li>Fix may_have_extra_named_args flag for ZEND_AST_UNPACK.</li>
+  <li>Fix NULL arithmetic in System V shared memory emulation for Windows.</li>
+</ul></li>
+<li>DOM:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 17500); ?> (Segfault with requesting nodeName on nameless doctype).</li>
+</ul></li>
+<li>Enchant:
+<ul>
+  <li>Fix crashes in enchant when passing null bytes.</li>
+</ul></li>
+<li>FTP:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 16800); ?> (ftp functions can abort with EINTR).</li>
+</ul></li>
+<li>GD:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 17349); ?> (Tiled truecolor filling looses single color transparency).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 17373); ?> (imagefttext() ignores clipping rect for palette images).</li>
+  <li>Ported fix for libgd 223 (gdImageRotateGeneric() does not properly interpolate).</li>
+</ul></li>
+<li>Intl:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 11874); ?> (intl causing segfault in docker images).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 17469); ?> (UConverter::transcode always emit E_WARNING on invalid encoding).</li>
+</ul></li>
+<li>Opcache:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 17307); ?> (Internal closure causes JIT failure).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 17564); ?> (Potential UB when reading from / writing to struct padding).</li>
+</ul></li>
+<li>PDO:
+<ul>
+  <li>Fixed a memory leak when the GC is used to free a PDOStatment.</li>
+  <li>Fixed a crash in the PDO Firebird Statement destructor.</li>
+  <li>Fixed UAFs when changing default fetch class ctor args.</li>
+</ul></li>
+<li>Phar:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 17518); ?> (offset overflow phar extractTo()).</li>
+</ul></li>
+<li>PHPDBG:
+<ul>
+  <li>Fix crashes in function registration + test.</li>
+</ul></li>
+<li>Session:
+<ul>
+  <li>Fix type confusion with session SID constant.</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 17541); ?> (ext/session NULL pointer dereferencement during ID reset).</li>
+</ul></li>
+<li>SimpleXML:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 17409); ?> (Assertion failure Zend/zend_hash.c:1730).</li>
+</ul></li>
+<li>SNMP:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 17330); ?> (SNMP::setSecurity segfault on closed session).</li>
+</ul></li>
+<li>SPL:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 17463); ?> (crash on SplTempFileObject::ftruncate with negative value).</li>
+</ul></li>
+<li>Zip:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 17139); ?> (Fix zip_entry_name() crash on invalid entry).</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
+
+
 <section class="version" id="8.3.16"><!-- {{{ 8.3.16 -->
 <h3>Version 8.3.16</h3>
 <b><?php release_date('16-Jan-2025'); ?></b>
