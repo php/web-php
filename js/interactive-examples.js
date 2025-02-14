@@ -63,7 +63,7 @@ async function main() {
   document.querySelectorAll(".example .example-contents").forEach((example) => {
     const button = document.createElement("button");
     button.setAttribute("type", "button");
-    const phpcode = example.querySelector(".phpcode");
+    const phpcode = example.querySelector(".phpcode.annotation-interactive");
     if (phpcode === null) {
       return;
     }
