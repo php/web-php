@@ -11,7 +11,32 @@
   <default:newsImage xmlns="http://php.net/ns/news" link="https://phptek.io" title="PHP Tek 2025 Logo">php-tek-2025.png</default:newsImage>
   <content type="xhtml">
     <div xmlns="http://www.w3.org/1999/xhtml">
-     
+            <p>
+                Join us for the 17th Annual Web Developer Conference, PHP Tek 2025, May 20-22 2025.
+            </p>
+
+            <p>
+                PHP Tek 2025 combines leadership, expertise, and networking in one event. A relaxing
+                atmosphere for tech leaders and developers to share, learn and grow professionally while
+                also providing you with the knowledge to solve your everyday problems.
+            </p>
+
+
+            <p>
+                We are the longest-running web developer conference in the United States, focusing on the
+                PHP programming language. The event is broken up into multiple days. The main conference
+                happens over the course of 3 days (May 20-22) and includes keynotes, talks, and networking
+                options. It will be broken into four tracks this year and will cover a range of topics.
+            </p>
+
+
+            <p>
+                Head over to <a
+                    href="https://phptek.io/?utm_source=PHP%20Conference%20List&amp;utm_medium=web&amp;utm_campaign=tek2025&amp;utm_id=phptek">
+                https://phptek.io
+            </a> and get yours today!
+            </p>
+
     </div>
   </content>
 </entry>
