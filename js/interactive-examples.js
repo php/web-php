@@ -7,16 +7,24 @@ function generateExampleOutputTitle(phpVersion) {
 function createOutput(output) {
   const container = document.createElement("div");
   container.classList.add("screen", "example-contents");
+
+  if (output != "") {
+    const title = document.createElement("p");
+    title.innerText = generateExampleOutputTitle(PHP.version);
+    container.appendChild(title);
+    const div = document.createElement("div");
+    div.classList.add("examplescode");
+    container.appendChild(div);
+    const pre = document.createElement("pre");
+    pre.classList.add("examplescode");
+    pre.innerText = output;
+    div.appendChild(pre);
+    return container;
+  }
+
   const title = document.createElement("p");
-  title.innerText = generateExampleOutputTitle(PHP.version);
+  title.innerText = "This example did not produce any output."
   container.appendChild(title);
-  const div = document.createElement("div");
-  div.classList.add("examplescode");
-  container.appendChild(div);
-  const pre = document.createElement("pre");
-  pre.classList.add("examplescode");
-  pre.innerText = output;
-  div.appendChild(pre);
   return container;
 }
 
@@ -91,7 +99,7 @@ async function main() {
       PHP.buffer.length = 0;
     };
 
-    phpcode.before(button);
+    phpcode.after(button);
   });
 }
 
