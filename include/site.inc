@@ -189,7 +189,7 @@ function get_available_sqlites() {
 // Get all manual prefix search sections
 function get_manual_search_sections() {
     return [
-        "", "book.", "ref.", "function.", "class.",
+        "", "book.", "ref.", "function.", "class.", "enum.",
         "features.", "control-structures.", "language.",
         "about.", "faq.",
     ];
