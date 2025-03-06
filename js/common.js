@@ -819,3 +819,24 @@ function getLanguage() {
         $link.attr('href', $link.attr('href') + window.location.hash);
     });
 })(jQuery);
+
+(function ($) {
+    /**
+     * Each th will dynamically set for the corresponding td the attribute of
+     * "data-label" with the text of the th.
+     */
+    $(document).ready(function () {
+        $('table').each(function () {
+            var $table = $(this);
+            $table.find('th').each(function (index) {
+                var $th = $(this);
+                var text = $th.text();
+                if (text === '') {
+                    return;
+                }
+                $table.find('td:nth-child(' + (index + 1) + ')')
+                    .attr('data-label', text);
+            });
+        });
+    });
+})(jQuery);

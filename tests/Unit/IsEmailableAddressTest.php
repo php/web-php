@@ -61,7 +61,7 @@ final class IsEmailableAddressTest extends Framework\TestCase
             'jcastagnetto-NO-SPAM@yahoo.com',
             'jesusmc@scripps.edu',
             'jmcastagnetto@yahoo.com',
-            'some-wrong@asdas.com',
+            'not-exists@thephp.foundation',
         ];
 
         foreach ($values as $value) {

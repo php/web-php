@@ -223,6 +223,11 @@ $manual_page_moves = [
     // entry point changed
     'installation' => 'install',
 
+    // XML Id changed (see https://github.com/php/doc-en/commit/0d51ca45814bbc60d7a1e6cf6fc7213f0b49c8d5)
+    'enum.random.intervalboundary' => 'enum.random-intervalboundary',
+    'enum.random.intervalboundary.intro' => 'enum.random-intervalboundary.intro',
+    'enum.random.intervalboundary.synopsis' => 'enum.random-intervalboundary.synopsis',
+
     // was split among platforms (don't know where to redirect)
     'install.apache' => 'install',
     'install.apache2' => 'install',
