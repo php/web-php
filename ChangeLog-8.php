@@ -900,6 +900,105 @@ changelog_header(8, $MINOR_VERSIONS);
 
 <a id="PHP_8_3"></a>
 
+<section class="version" id="8.3.19"><!-- {{{ 8.3.19 -->
+<h3>Version 8.3.19</h3>
+<b><?php release_date('13-Mar-2025'); ?></b>
+<ul><li>BCMath:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 17398); ?> (bcmul memory leak).</li>
+</ul></li>
+<li>Core:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 17623); ?> (Broken stack overflow detection for variable compilation).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 17618); ?> (UnhandledMatchError does not take zend.exception_ignore_args=1 into account).</li>
+  <li>Fix fallback paths in fast_long_{add,sub}_function.</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 17718); ?> (Calling static methods on an interface that has `__callStatic` is allowed).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 17797); ?> (zend_test_compile_string crash on invalid script path).</li>
+  <li>Fixed <?php githubsecurityl('php/php-src', 'rwp7-7vc6-8477'); ?> (Reference counting in php_request_shutdown causes Use-After-Free). (CVE-2024-11235)</li>
+</ul></li>
+<li>DOM:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 17847); ?> (xinclude destroys live node).</li>
+</ul></li>
+<li>FFI:
+<ul>
+  <li>Fix FFI Parsing of Pointer Declaration Lists.</li>
+</ul></li>
+<li>FPM:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 17643); ?> (FPM with httpd ProxyPass encoded PATH_INFO env).</li>
+</ul></li>
+<li>GD:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 17772); ?> (imagepalettetotruecolor crash with memory_limit=2M).</li>
+</ul></li>
+<li>LDAP:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 17704); ?> (ldap_search fails when $attributes contains a non-packed array with numerical keys).</li>
+</ul></li>
+<li>LibXML:
+<ul>
+  <li>Fixed <?php githubsecurityl('php/php-src', 'wg4p-4hqh-c3g9'); ?> (Reocurrence of #72714).</li>
+  <li>Fixed <?php githubsecurityl('php/php-src', 'p3x9-6h7p-cgfc'); ?> (libxml streams use wrong `content-type` header when requesting a redirected resource). (CVE-2025-1219)</li>
+</ul></li>
+<li>MBString:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 17503); ?> (Undefined float conversion in mb_convert_variables).</li>
+</ul></li>
+<li>Opcache:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 17654); ?> (Multiple classes using same trait causes function JIT crash).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 17577); ?> (JIT packed type guard crash).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 17899); ?> (zend_test_compile_string with invalid path when opcache is enabled).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 17868); ?> (Cannot allocate memory with tracing JIT).</li>
+</ul></li>
+<li>PDO_SQLite:
+<ul>
+  <li>Fixed <?php githubissuel('php/php-src', 17837); ?> ()::getColumnMeta() on unexecuted statement segfaults).</li>
+  <li>Fix cycle leak in sqlite3 setAuthorizer().</li>
+</ul></li>
+<li>Phar:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 17808); ?>: PharFileInfo refcount bug.</li>
+</ul></li>
+<li>PHPDBG:
+<ul>
+  <li>Partially fixed bug <?php githubissuel('php/php-src', 17387); ?> (Trivial crash in phpdbg lexer).</li>
+  <li>Fix memory leak in phpdbg calling registered function.</li>
+</ul></li>
+<li>Reflection:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 15902); ?> (Core dumped in ext/reflection/php_reflection.c).</li>
+</ul></li>
+<li>Standard:
+<ul>
+  <li><?php bugfix(72666); ?> (stat cache clearing inconsistent between file:// paths and plain paths).</li>
+</ul></li>
+<li>Streams:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 17650); ?> (realloc with size 0 in user_filters.c).</li>
+  <li>Fix memory leak on overflow in _php_stream_scandir().</li>
+  <li>Fixed GHSA-hgf54-96fm-v528 (Stream HTTP wrapper header check might omit basic auth header). (CVE-2025-1736)</li>
+  <li>Fixed <?php githubsecurityl('php/php-src', '52jp-hrpf-2jff'); ?> (Stream HTTP wrapper truncate redirect location to 1024 bytes). (CVE-2025-1861)</li>
+  <li>Fixed <?php githubsecurityl('php/php-src', 'pcmh-g36c-qc44'); ?> (Streams HTTP wrapper does not fail for headers without colon). (CVE-2025-1734)</li>
+  <li>Fixed <?php githubsecurityl('php/php-src', 'v8xr-gpvj-cx9g'); ?> (Header parser of `http` stream wrapper does not handle folded headers). (CVE-2025-1217)</li>
+</ul></li>
+<li>Windows:
+<ul>
+  <li>Fixed phpize for Windows 11 (24H2).</li>
+  <li>Fixed <?php githubissuel('php/php-src', 17855); ?> (CURL_STATICLIB flag set even if linked with shared lib).</li>
+</ul></li>
+<li>Zlib:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 17745); ?> (zlib extension incorrectly handles object arguments).</li>
+  <li>Fix memory leak when encoding check fails.</li>
+  <li>Fix zlib support for large files.</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
+
+
 <section class="version" id="8.3.17"><!-- {{{ 8.3.17 -->
 <h3>Version 8.3.17</h3>
 <b><?php release_date('13-Feb-2025'); ?></b>
