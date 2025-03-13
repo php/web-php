@@ -97,7 +97,7 @@ changelog_header(8, $MINOR_VERSIONS);
 <ul>
   <li>Fixed bug <?php githubissuel('php/php-src', 17650); ?> (realloc with size 0 in user_filters.c).</li>
   <li>Fix memory leak on overflow in _php_stream_scandir().</li>
-  <li>Fixed GHSA-hgf54-96fm-v528 (Stream HTTP wrapper header check might omit basic auth header). (CVE-2025-1736)</li>
+  <li>Fixed <?php githubsecurityl('php/php-src', 'hgf5-96fm-v528'); ?> (Stream HTTP wrapper header check might omit basic auth header). (CVE-2025-1736)</li>
   <li>Fixed <?php githubsecurityl('php/php-src', '52jp-hrpf-2jff'); ?> (Stream HTTP wrapper truncate redirect location to 1024 bytes). (CVE-2025-1861)</li>
   <li>Fixed <?php githubsecurityl('php/php-src', 'pcmh-g36c-qc44'); ?> (Streams HTTP wrapper does not fail for headers without colon). (CVE-2025-1734)</li>
   <li>Fixed <?php githubsecurityl('php/php-src', 'v8xr-gpvj-cx9g'); ?> (Header parser of `http` stream wrapper does not handle folded headers). (CVE-2025-1217)</li>
@@ -1087,7 +1087,7 @@ changelog_header(8, $MINOR_VERSIONS);
 <ul>
   <li>Fixed bug <?php githubissuel('php/php-src', 17650); ?> (realloc with size 0 in user_filters.c).</li>
   <li>Fix memory leak on overflow in _php_stream_scandir().</li>
-  <li>Fixed GHSA-hgf54-96fm-v528 (Stream HTTP wrapper header check might omit basic auth header). (CVE-2025-1736)</li>
+  <li>Fixed <?php githubsecurityl('php/php-src', 'hgf5-96fm-v528'); ?> (Stream HTTP wrapper header check might omit basic auth header). (CVE-2025-1736)</li>
   <li>Fixed <?php githubsecurityl('php/php-src', '52jp-hrpf-2jff'); ?> (Stream HTTP wrapper truncate redirect location to 1024 bytes). (CVE-2025-1861)</li>
   <li>Fixed <?php githubsecurityl('php/php-src', 'pcmh-g36c-qc44'); ?> (Streams HTTP wrapper does not fail for headers without colon). (CVE-2025-1734)</li>
   <li>Fixed <?php githubsecurityl('php/php-src', 'v8xr-gpvj-cx9g'); ?> (Header parser of `http` stream wrapper does not handle folded headers). (CVE-2025-1217)</li>
@@ -2812,7 +2812,7 @@ changelog_header(8, $MINOR_VERSIONS);
 </ul></li>
 <li>Streams:
 <ul>
-  <li>Fixed GHSA-hgf54-96fm-v528 (Stream HTTP wrapper header check might omit basic auth header). (CVE-2025-1736)</li>
+  <li>Fixed <?php githubsecurityl('php/php-src', 'hgf5-96fm-v528'); ?> (Stream HTTP wrapper header check might omit basic auth header). (CVE-2025-1736)</li>
   <li>Fixed <?php githubsecurityl('php/php-src', '52jp-hrpf-2jff'); ?> (Stream HTTP wrapper truncate redirect location to 1024 bytes). (CVE-2025-1861)</li>
   <li>Fixed <?php githubsecurityl('php/php-src', 'pcmh-g36c-qc44'); ?> (Streams HTTP wrapper does not fail for headers without colon). (CVE-2025-1734)</li>
   <li>Fixed <?php githubsecurityl('php/php-src', 'v8xr-gpvj-cx9g'); ?> (Header parser of `http` stream wrapper does not handle folded headers). (CVE-2025-1217)</li>
@@ -5325,7 +5325,7 @@ changelog_header(8, $MINOR_VERSIONS);
 </ul></li>
 <li>Streams:
 <ul>
-  <li>Fixed GHSA-hgf54-96fm-v528 (Stream HTTP wrapper header check might omit basic auth header). (CVE-2025-1736)</li>
+  <li>Fixed <?php githubsecurityl('php/php-src', 'hgf5-96fm-v528'); ?> (Stream HTTP wrapper header check might omit basic auth header). (CVE-2025-1736)</li>
   <li>Fixed <?php githubsecurityl('php/php-src', '52jp-hrpf-2jff'); ?> (Stream HTTP wrapper truncate redirect location to 1024 bytes). (CVE-2025-1861)</li>
   <li>Fixed <?php githubsecurityl('php/php-src', 'pcmh-g36c-qc44'); ?> (Streams HTTP wrapper does not fail for headers without colon). (CVE-2025-1734)</li>
   <li>Fixed <?php githubsecurityl('php/php-src', 'v8xr-gpvj-cx9g'); ?> (Header parser of `http` stream wrapper does not handle folded headers). (CVE-2025-1217)</li>
