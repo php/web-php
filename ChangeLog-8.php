@@ -5287,6 +5287,30 @@ changelog_header(8, $MINOR_VERSIONS);
 
 <a id="PHP_8_1"></a>
 
+<section class="version" id="8.1.32"><!-- {{{ 8.1.32 -->
+<h3>Version 8.1.32</h3>
+<b><?php release_date('13-Mar-2025'); ?></b>
+<ul><li>LibXML:
+<ul>
+  <li>Fixed <?php githubsecurityl('php/php-src', 'wg4p-4hqh-c3g9'); ?> (Reocurrence of #72714).</li>
+  <li>Fixed <?php githubsecurityl('php/php-src', 'p3x9-6h7p-cgfc'); ?> (libxml streams use wrong `content-type` header when requesting a redirected resource). (CVE-2025-1219)</li>
+</ul></li>
+<li>Streams:
+<ul>
+  <li>Fixed GHSA-hgf54-96fm-v528 (Stream HTTP wrapper header check might omit basic auth header). (CVE-2025-1736)</li>
+  <li>Fixed <?php githubsecurityl('php/php-src', '52jp-hrpf-2jff'); ?> (Stream HTTP wrapper truncate redirect location to 1024 bytes). (CVE-2025-1861)</li>
+  <li>Fixed <?php githubsecurityl('php/php-src', 'pcmh-g36c-qc44'); ?> (Streams HTTP wrapper does not fail for headers without colon). (CVE-2025-1734)</li>
+  <li>Fixed <?php githubsecurityl('php/php-src', 'v8xr-gpvj-cx9g'); ?> (Header parser of `http` stream wrapper does not handle folded headers). (CVE-2025-1217)</li>
+</ul></li>
+<li>Windows:
+<ul>
+  <li>Fixed phpize for Windows 11 (24H2).</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
+
+
 <section class="version" id="8.1.31"><!-- {{{ 8.1.31 -->
 <h3>Version 8.1.31</h3>
 <b><?php release_date('21-Nov-2024'); ?></b>
