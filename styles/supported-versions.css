@@ -19,10 +19,6 @@ table.standard tr.stable td:first-child {
 	}
 
 	table.standard td.collapse-phone {
-		padding: 0;
-	}
-
-	table.standard td.collapse-phone * {
 		display: none;
 	}
 }

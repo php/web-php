@@ -827,15 +827,12 @@ function getLanguage() {
      */
     $(document).ready(function () {
         $('table').each(function () {
-            var $table = $(this);
-            $table.find('th').each(function (index) {
-                var $th = $(this);
-                var text = $th.text();
-                if (text === '') {
-                    return;
-                }
-                $table.find('td:nth-child(' + (index + 1) + ')')
-                    .attr('data-label', text);
+            var $columns = $(this).find('td:not(.collapse-phone)');
+            var $headers = $(this).find('th');
+            $headers.each(function (index) {
+              $columns.filter(function (counter) {
+                return index === counter % $headers.length;
+              }).attr('data-label', $(this).text());
             });
         });
     });
