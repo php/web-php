@@ -36,7 +36,7 @@ $VERSION_NOTES = [
 
 <h3>Currently Supported Versions</h3>
 
-<table class="standard">
+<table class="standard versions">
 	<thead>
 		<tr>
 			<th>Branch</th>
