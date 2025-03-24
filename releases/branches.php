@@ -1,34 +1,30 @@
 <?php
-# This API is deprecated as of 2025-04-01.
-# Please use /releases/branches.php instead.
-# This API *may* be removed at an indeterminate point in the future.
-
-$_SERVER['BASE_PAGE'] = 'releases/active.php';
 
 include_once __DIR__ . '/../include/prepend.inc';
-include_once $_SERVER['DOCUMENT_ROOT'] . '/include/branches.inc';
+include_once __DIR__ . '/../include/branches.inc';
 
 header('Content-Type: application/json; charset=UTF-8');
-
-$states = [];
 
 function formatDate($date = null) {
     return $date !== null ? $date->format('c') : null;
 }
 
+$current = [];
 foreach (get_all_branches() as $major => $releases) {
-    $states[$major] = [];
     foreach ($releases as $branch => $release) {
-        $states[$major][$branch] = [
+        $current[$branch] = [
+            'branch' => $branch,
+            'lastest' => ($release['version'] ?? null),
             'state' => get_branch_support_state($branch),
             'initial_release' => formatDate(get_branch_release_date($branch)),
             'active_support_end' => formatDate(get_branch_bug_eol_date($branch)),
             'security_support_end' => formatDate(get_branch_security_eol_date($branch)),
         ];
     }
-    krsort($states[$major]);
 }
 
-krsort($states);
+// Sorting should already be correct based on return of get_all_branches(),
+// but enforce it here anyway, just to be nice.
+usort($current, fn($a, $b) => version_compare($b['branch'], $a['branch']));
 
-echo json_encode($states);
+echo json_encode($current);
