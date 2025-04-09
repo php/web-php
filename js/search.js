@@ -418,7 +418,7 @@ const initSearchUI = ({ searchCallback, language, limit = 30 }) => {
                             id="search-modal__result-description-${i}"
                             class="search-modal__result-description"
                         >
-                            ${description}
+                            ${escape(description)}
                         </div>
                     </div>
                 </a>

@@ -59,7 +59,7 @@ $js = json_decode($s, true);
 
 foreach ($js as $k => $item) {
     if ($item && isset($index[$k])) {
-        $index[$k][1] = $item;
+        $index[$k][1] = html_entity_decode($item);
     }
 }
 
