@@ -1009,6 +1009,72 @@ changelog_header(8, $MINOR_VERSIONS);
 
 <a id="PHP_8_3"></a>
 
+<section class="version" id="8.3.20"><!-- {{{ 8.3.20 -->
+<h3>Version 8.3.20</h3>
+<b><?php release_date('10-Apr-2025'); ?></b>
+<ul><li>Core:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 17961); ?> (use-after-free during dl()'ed module class destruction).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 15367); ?> (dl() of module with aliased class crashes in shutdown).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 13193); ?> again (Significant performance degradation in 'foreach').</li>
+</ul></li>
+<li>DOM:
+<ul>
+  <li>Fix weird unpack behaviour in DOM.</li>
+  <li>Fix xinclude destruction of live attributes.</li>
+</ul></li>
+<li>Embed:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 8533); ?> (Unable to link dynamic libphp on Mac).</li>
+</ul></li>
+<li>Fuzzer:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 18081); ?> (Memory leaks in error paths of fuzzer SAPI).</li>
+</ul></li>
+<li>GD:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 17984); ?> (calls with arguments as array with references).</li>
+</ul></li>
+<li>Intl:
+<ul>
+  <li>Fix locale_compose and locale_lookup to work with their array argument with values as references.</li>
+  <li>Fix dateformat_format when the time is an array of references.</li>
+  <li>Fix UConverter::transcode with substitutes as references.</li>
+</ul></li>
+<li>Mbstring:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 17989); ?> (mb_output_handler crash with unset http_output_conv_mimetypes).</li>
+</ul></li>
+<li>Opcache:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 18112); ?> (NULL access with preloading and INI option).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 18107); ?> (Opcache CFG jmp optimization with try-finally breaks the exception table).</li>
+</ul></li>
+<li>PDO:
+<ul>
+  <li>Fix memory leak when destroying PDORow.</li>
+</ul></li>
+<li>SOAP:
+<ul>
+  <li><?php bugfix(66049); ?> (Typemap can break parsing in parse_packet_soap leading to a segfault) .</li>
+</ul></li>
+<li>SPL:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 18018); ?> (RC1 data returned from offsetGet causes UAF in ArrayObject).</li>
+</ul></li>
+<li>Treewide:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 17736); ?> (Assertion failure zend_reference_destroy()).</li>
+</ul></li>
+<li>Windows:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 17836); ?> (zend_vm_gen.php shouldn't break on Windows line endings).</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
+
+
 <section class="version" id="8.3.19"><!-- {{{ 8.3.19 -->
 <h3>Version 8.3.19</h3>
 <b><?php release_date('13-Mar-2025'); ?></b>
