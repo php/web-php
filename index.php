@@ -203,6 +203,12 @@ $announcements
               @php@fosstodon.org
             </a>
           </li>
+          <li>
+            <a href="https://www.linkedin.com/company/phpnet">
+              <i class="icon-linkedin"></i>
+              @phpnet
+            </a>
+          </li>
         </ul>
       </div>
     </div>
