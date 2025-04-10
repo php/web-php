@@ -38,7 +38,7 @@ $RELEASES = (function () {
         'sha256' => [
             'tar.gz' => '515ed37529df6b7f569ba68d505713bce23a93a58471dedac4ecfd17c44e5650',
             'tar.bz2' => '36b4e6a323cd45673a54f296e9d2666b7f5df57641031c77c4fd8137bc4ebeb3',
-            'tar.xz' => 'f15914e071b5bddaf1475b5f2ba68107e8b8846655f9e89690fb7cd410b0dc',
+            'tar.xz' => 'f15914e071b5bddaf1475b5f2ba68107e8b8846655f9e89690fb7cd410b0db6c',
         ]
     ];
 
