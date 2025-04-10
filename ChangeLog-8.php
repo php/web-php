@@ -9,6 +9,94 @@ changelog_header(8, $MINOR_VERSIONS);
 
 <a id="PHP_8_4"></a>
 
+<section class="version" id="8.4.6"><!-- {{{ 8.4.6 -->
+<h3>Version 8.4.6</h3>
+<b><?php release_date('10-Apr-2025'); ?></b>
+<ul><li>BCMath:
+<ul>
+  <li>Fixed pointer subtraction for scale.</li>
+</ul></li>
+<li>Core:
+<ul>
+  <li>Fixed property hook backing value access in multi-level inheritance.</li>
+  <li>Fixed accidentally inherited default value in overridden virtual properties.</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 17376); ?> (Broken JIT polymorphism for property hooks added to child class).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 17913); ?> (ReflectionFunction::isDeprecated() returns incorrect results for closures created from magic __call()).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 17941); ?> (Stack-use-after-return with lazy objects and hooks).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 17988); ?> (Incorrect handling of hooked props without get hook in get_object_vars()).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 17998); ?> (Skipped lazy object initialization on primed SIMPLE_WRITE cache).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 17998); ?> (Assignment to backing value in set hook of lazy proxy calls hook again).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 17961); ?> (use-after-free during dl()'ed module class destruction).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 15367); ?> (dl() of module with aliased class crashes in shutdown).</li>
+  <li>Fixed OSS-Fuzz #403308724.</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 13193); ?> again (Significant performance degradation in 'foreach').</li>
+</ul></li>
+<li>DBA:
+<ul>
+  <li>Fixed assertion violation when opening the same file with dba_open multiple times.</li>
+</ul></li>
+<li>DOM:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 17991); ?> (Assertion failure dom_attr_value_write).</li>
+  <li>Fix weird unpack behaviour in DOM.</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 18090); ?> (DOM: Svg attributes and tag names are being lowercased).</li>
+  <li>Fix xinclude destruction of live attributes.</li>
+</ul></li>
+<li>Fuzzer:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 18081); ?> (Memory leaks in error paths of fuzzer SAPI).</li>
+</ul></li>
+<li>GD:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 17984); ?> (calls with arguments as array with references).</li>
+</ul></li>
+<li>LDAP:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 18015); ?> (Error messages for ldap_mod_replace are confusing).</li>
+</ul></li>
+<li>Mbstring:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 17989); ?> (mb_output_handler crash with unset http_output_conv_mimetypes).</li>
+</ul></li>
+<li>Opcache:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 15834); ?> (Segfault with hook "simple get" cache slot and minimal JIT).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 17966); ?> (Symfony JIT 1205 assertion failure).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 18037); ?> (SEGV Zend/zend_execute.c).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 18050); ?> (IN_ARRAY optimization in DFA pass is broken).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 18113); ?> (stack-buffer-overflow ext/opcache/jit/ir/ir_sccp.c).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 18112); ?> (NULL access with preloading and INI option).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 18107); ?> (Opcache CFG jmp optimization with try-finally breaks the exception table).</li>
+</ul></li>
+<li>PDO:
+<ul>
+  <li>Fix memory leak when destroying PDORow.</li>
+</ul></li>
+<li>Standard:
+<ul>
+  <li>Fix memory leaks in array_any() / array_all().</li>
+</ul></li>
+<li>SOAP:
+<ul>
+  <li><?php bugfix(66049); ?> (Typemap can break parsing in parse_packet_soap leading to a segfault) .</li>
+</ul></li>
+<li>SPL:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 18018); ?> (RC1 data returned from offsetGet causes UAF in ArrayObject).</li>
+</ul></li>
+<li>Treewide:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 17736); ?> (Assertion failure zend_reference_destroy()).</li>
+</ul></li>
+<li>Windows:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 17836); ?> (zend_vm_gen.php shouldn't break on Windows line endings).</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
+
+
 <section class="version" id="8.4.5"><!-- {{{ 8.4.5 -->
 <h3>Version 8.4.5</h3>
 <b><?php release_date('13-Mar-2025'); ?></b>
