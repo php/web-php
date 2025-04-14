@@ -11,16 +11,19 @@ use phpweb\UserNotes\UserNote;
 
 site_header("Add Manual Note", ['css' => 'add-note.css']);
 
-// Copy over "sect" and "redirect" from GET to POST
+// Copy over "sect", "redirect" and "repo" from GET to POST
 if (empty($_POST['sect']) && isset($_GET['sect'])) {
     $_POST['sect'] = $_GET['sect'];
 }
 if (empty($_POST['redirect']) && isset($_GET['redirect'])) {
     $_POST['redirect'] = $_GET['redirect'];
 }
-// Assume English if we didn't get a language
 if (empty($_POST['repo']) && isset($_GET['repo'])) {
     $_POST['repo'] = $_GET['repo'];
+}
+// Assume English if we didn't get a language
+if (empty($_POST['repo'])) {
+    $_POST['repo'] = 'en';
 }
 
 // Decide on whether all vars are present for processing
