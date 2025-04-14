@@ -19,8 +19,8 @@ if (empty($_POST['redirect']) && isset($_GET['redirect'])) {
     $_POST['redirect'] = $_GET['redirect'];
 }
 // Assume English if we didn't get a language
-if (empty($_POST['repo'])) {
-    $_POST['repo'] = 'en';
+if (empty($_POST['repo']) && isset($_GET['repo'])) {
+    $_POST['repo'] = $_GET['repo'];
 }
 
 // Decide on whether all vars are present for processing
