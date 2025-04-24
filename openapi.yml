@@ -92,3 +92,69 @@ paths:
                                             type: string
                                             format: date-time
 
+    "/releases/release-candidates.php":
+        get:
+            summary: "Currently RC versions of PHP."
+            parameters:
+                - in: query
+                  name: format
+                  schema:
+                      type: string
+                      enum: [ "json", "serialize" ]
+                  required: false
+                  description: Output format
+                - in: query
+                  name: only
+                  schema:
+                      type: string
+                      enum: [ "dev_versions" ]
+                  required: false
+                  description: Include only dev version numbers
+
+            responses:
+                "200":
+                    description: "Actively RC per-branch versions of PHP."
+                    content:
+                        "application/json":
+                            schema:
+                                type: array
+                                items:
+                                    type: object
+                                    properties:
+                                        active:
+                                            description: "Whether RC version is active"
+                                            type: boolean
+                                        release:
+                                            type: object
+                                            properties:
+                                                type:
+                                                    description: "Unstable release type"
+                                                    type: string
+                                                    enum:
+                                                        - alpha
+                                                        - beta
+                                                        - RC
+                                                number:
+                                                    description: "Unstable release number"
+                                                    type: integer
+                                                sha256_gz:
+                                                    description: "Unstable release gz hash"
+                                                    type: string
+                                                sha256_bz2:
+                                                    description: "Unstable release bz2 hash"
+                                                    type: string
+                                                sha256_xz:
+                                                    description: "Unstable release xz hash"
+                                                    type: string
+                                                date:
+                                                    description: "Date of release"
+                                                    type: string
+                                                baseurl:
+                                                    description: "Download base URL"
+                                                    type: string
+                                                enabled:
+                                                    description: "enabled"
+                                                    type: boolean
+                                        dev_version:
+                                            description: "dev_version"
+                                            type: string
