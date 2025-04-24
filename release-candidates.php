@@ -46,7 +46,7 @@ whether no regressions have been introduced.
     <ul>
       <?php foreach ($info['files'] as $file_type => $file_info) : ?>
         <li>
-          <?php download_link($file_info['path'], "php-{$info['version']}.tar.{$file_type}"); ?>
+          <a href="<?php echo $file_info['path'] ?>"><?php echo "php-{$info['version']}.tar.{$file_type}"; ?></a>
           <span class="releasedate"><?php echo date('d M Y', strtotime($info['date'])); ?></span>
             <?php foreach ($QA_CHECKSUM_TYPES as $algo): ?>
               <span class="<?php echo $algo; ?>">
