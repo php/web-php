@@ -26,7 +26,7 @@ site_header("Get Involved", ["current" => "community"]);
 <h3 class="content-title" id="ways-to-contribute">Four Best Ways to Contribute</h3>
 
  <ol class="content-box listed">
-  <li>Running test suites in <a href="https://qa.php.net/">RC</a>
+  <li>Running test suites in <a href="/release-candidates.php">RC</a>
       and <a href="https://php.net/releases">release</a> distributions of PHP</li>
   <li>Help finding and diagnosing failed tests, see
       the <a href="https://qa.php.net/write-test.php">phpt documentation</a></li>
