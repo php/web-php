@@ -93,7 +93,7 @@ $QA_RELEASES = [
             'sha256_gz'  => 'b12d97767aeda4624ea1904c1d93303efe4ffe1ba91970a3c5774ad556918e93',
             'sha256_xz'  => '6cb37632eb65ee311cb4427ad070b6ab27fdaf13e8f0103701b2b78907326c93',
             'date'       => '24 Apr 2025',
-            'baseurl'    => 'https://downloads.php.net/~saki',
+            'baseurl'    => 'https://downloads.php.net/~saki/',
         ],
     ],
 ];
