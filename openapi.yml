@@ -92,7 +92,7 @@ paths:
                                             type: string
                                             format: date-time
 
-    "/releases/release-candidates.php":
+    "/release-candidates.php":
         get:
             summary: "Currently RC versions of PHP."
             parameters:

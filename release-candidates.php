@@ -3,6 +3,26 @@ $_SERVER['BASE_PAGE'] = 'qa.php';
 include_once __DIR__ . '/include/prepend.inc';
 include_once __DIR__ . '/include/release-qa.php';
 
+if (isset($_GET["format"])) {
+    $output = $QA_RELEASES;
+
+    if (($_GET['only'] ?? null) === 'dev_versions') {
+        $output = $output['reported'];
+    }
+
+    switch ($_GET['format'] ?? null) {
+        case 'json':
+            header('Content-Type: application/json; charset=UTF-8');
+            echo json_encode($output);
+            exit;
+        case 'serialize':
+        default:
+            header('Content-Type: text/plain; charset=UTF-8');
+            echo serialize($output);
+            exit;
+    }
+}
+
 $SITE_UPDATE = date("D M d H:i:s Y T", filectime(__FILE__));
 
 $SIDEBAR_DATA = '
@@ -16,6 +36,13 @@ $SIDEBAR_DATA = '
     If you find a problem when running your library or application with these
     builds, please file a report on <a
     href="https://github.com/php/php-src/issues/">GitHub Issues</a>.
+  </div>
+  <div class="body">
+    <p>The QA API is simple, and is based on the query string. Pass in <code>only=dev-versions</code> (the only type currently), along with the desired format (<code>serialize</code> or <code>json</code>).</p>
+    <ul>
+        <li>All information, serialized: https://php.net/release-candidates.php?format=serialize</li>
+        <li>Only dev version numbers, json: https://php.net/release-candidates.php?format=json&only=dev_versions</li>
+    </ul>
   </div>
 </div>
 ';
