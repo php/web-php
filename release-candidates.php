@@ -32,16 +32,31 @@ $SIDEBAR_DATA = '
     The downloads on this page are not meant to be run in production. They are
     for testing only.
   </div>
+
   <div class="body">
     If you find a problem when running your library or application with these
-    builds, please file a report on <a
-    href="https://github.com/php/php-src/issues/">GitHub Issues</a>.
+    builds, please file a report on
+    <a href="https://github.com/php/php-src/issues/">GitHub Issues</a>.
   </div>
+  <br/>
+  QA Releases API
   <div class="body">
-    <p>The QA API is simple, and is based on the query string. Pass in <code>only=dev-versions</code> (the only type currently), along with the desired format (<code>serialize</code> or <code>json</code>).</p>
+    <p>
+      The QA API is based on the query string.
+    </p>
+    <p>
+      Pass in the <code>format</code> parameter, with <code>serialize</code> or
+      <code>json</code> as value to obtain all information:
+    </p>
     <ul>
-        <li>All information, serialized: https://php.net/release-candidates.php?format=serialize</li>
-        <li>Only dev version numbers, json: https://php.net/release-candidates.php?format=json&only=dev_versions</li>
+      <li><a href="https://php.net/release-candidates.php?format=json">/release-candidates.php?format=json</a></li>
+      <li><a href="https://php.net/release-candidates.php?format=serialize">/release-candidates.php?format=serialize</a></li>
+    </ul>
+    <p>
+      To only tried dev version numbers, add <code>only=dev_versions</code>:
+    </p>
+    <ul>
+      <li><a href="https://php.net/release-candidates.php?format=json&only=dev_versions">/release-candidates.php?format=json&only=dev_versions</a></li>
     </ul>
   </div>
 </div>
