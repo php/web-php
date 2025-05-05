@@ -181,7 +181,7 @@ $SIDEBAR = <<<SIDEBAR_DATA
       <a href='https://thephp.foundation/' class='headline'>The PHP Foundation</a>
       <div class='body'>
         <p>The PHP Foundation is a collective of people and organizations, united in the mission to ensure the long-term prosperity of the PHP language.
-        <p><a href='https://thephp.foundation/donate/' class='btn btn-primary'>Donate</a></p>
+        <p><a href='https://thephp.foundation/donate/' target="_blank" rel="noopener noreferrer" class='btn btn-primary'>Donate</a></p>
       </div>
     </div>
 $announcements
