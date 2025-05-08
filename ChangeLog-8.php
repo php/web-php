@@ -9,6 +9,90 @@ changelog_header(8, $MINOR_VERSIONS);
 
 <a id="PHP_8_4"></a>
 
+<section class="version" id="8.4.7"><!-- {{{ 8.4.7 -->
+<h3>Version 8.4.7</h3>
+<b><?php release_date('8-May-2025'); ?></b>
+<ul><li>Core:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 18038); ?> (Lazy proxy calls magic methods twice).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 18209); ?> (Use-after-free in extract() with EXTR_REFS).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 18268); ?> (Segfault in array_walk() on object with added property hooks).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 18304); ?> (Changing the properties of a DateInterval through dynamic properties triggers a SegFault).</li>
+  <li>Fix some leaks in php_scandir.</li>
+</ul></li>
+<li>DBA:
+<ul>
+  <li>FIxed bug <?php githubissuel('php/php-src', 18247); ?> dba_popen() memory leak on invalid path.</li>
+</ul></li>
+<li>Filter:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 18309); ?> (ipv6 filter integer overflow).</li>
+</ul></li>
+<li>GD:
+<ul>
+  <li>Fixed imagecrop() overflow with rect argument with x/width y/heigh usage in gdImageCrop().</li>
+  <li>Fixed <?php githubissuel('php/php-src', 18243); ?> imagettftext() overflow/underflow on font size value.</li>
+</ul></li>
+<li>Intl:
+<ul>
+  <li>Fix reference support for intltz_get_offset().</li>
+</ul></li>
+<li>LDAP:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 17776); ?> (LDAP_OPT_X_TLS_* options can't be overridden).</li>
+  <li>Fix NULL deref on high modification key.</li>
+</ul></li>
+<li>libxml:
+<ul>
+  <li>Fixed custom external entity loader returning an invalid resource leading to a confusing TypeError message.</li>
+</ul></li>
+<li>Opcache:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 18294); ?> (assertion failure zend_jit_ir.c).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 18289); ?> (Fix segfault in JIT).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 18136); ?> (tracing JIT floating point register clobbering on Windows and ARM64).</li>
+</ul></li>
+<li>OpenSSL:
+<ul>
+  <li>Fix memory leak in openssl_sign() when passing invalid algorithm.</li>
+  <li>Fix potential leaks when writing to BIO fails.</li>
+</ul></li>
+<li>PDO Firebird:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 18276); ?> (persistent connection - "zend_mm_heap corrupted" with setAttribute()) (SakiTakamachi).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 17383); ?> (PDOException has wrong code and message since PHP 8.4) (SakiTakamachi).</li>
+</ul></li>
+<li>PDO Sqlite:
+<ul>
+  <li>Fix memory leak on error return of collation callback.</li>
+</ul></li>
+<li>PgSql:
+<ul>
+  <li>Fix uouv in pg_put_copy_end().</li>
+</ul></li>
+<li>SPL:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 18322); ?> (SplObjectStorage debug handler mismanages memory).</li>
+</ul></li>
+<li>Standard:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 18145); ?> (php8ts crashes in php_clear_stat_cache()).</li>
+  <li>Fix resource leak in iptcembed() on error.</li>
+</ul></li>
+<li>Tests:
+<ul>
+  <li>Address deprecated PHP 8.4 session options to prevent test failures.</li>
+</ul></li>
+<li>Zip:
+<ul>
+  <li>Fix uouv when handling empty options in ZipArchive::addGlob().</li>
+  <li>Fix memory leak when handling a too long path in ZipArchive::addGlob().</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
+
+
 <section class="version" id="8.4.6"><!-- {{{ 8.4.6 -->
 <h3>Version 8.4.6</h3>
 <b><?php release_date('10-Apr-2025'); ?></b>
