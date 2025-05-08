@@ -1181,6 +1181,66 @@ changelog_header(8, $MINOR_VERSIONS);
 
 <a id="PHP_8_3"></a>
 
+<section class="version" id="8.3.21"><!-- {{{ 8.3.21 -->
+<h3>Version 8.3.21</h3>
+<b><?php release_date('08-May-2025'); ?></b>
+<ul><li>Core:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 18304); ?> (Changing the properties of a DateInterval through dynamic properties triggers a SegFault).</li>
+  <li>Fix some leaks in php_scandir.</li>
+</ul></li>
+<li>Filter:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 18309); ?> (ipv6 filter integer overflow).</li>
+</ul></li>
+<li>GD:
+<ul>
+  <li>Fixed imagecrop() overflow with rect argument with x/width y/heigh usage in gdImageCrop().</li>
+  <li>Fixed <?php githubissuel('php/php-src', 18243); ?> imagettftext() overflow/underflow on font size value.</li>
+</ul></li>
+<li>Intl:
+<ul>
+  <li>Fix reference support for intltz_get_offset().</li>
+</ul></li>
+<li>LDAP:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 17776); ?> (LDAP_OPT_X_TLS_* options can't be overridden).</li>
+  <li>Fix NULL deref on high modification key.</li>
+</ul></li>
+<li>libxml:
+<ul>
+  <li>Fixed custom external entity loader returning an invalid resource leading to a confusing TypeError message.</li>
+</ul></li>
+<li>OpenSSL:
+<ul>
+  <li>Fix memory leak in openssl_sign() when passing invalid algorithm.</li>
+  <li>Fix potential leaks when writing to BIO fails.</li>
+</ul></li>
+<li>PDO Firebird:
+<ul>
+  <li>Fixed <?php githubissuel('php/php-src', 18276); ?> - persistent connection - "zend_mm_heap corrupted" with setAttribute() (SakiTakamachi).</li>
+</ul></li>
+<li>SPL:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 18322); ?> (SplObjectStorage debug handler mismanages memory).</li>
+</ul></li>
+<li>Standard:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 18145); ?> (php8ts crashes in php_clear_stat_cache()).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 18209); ?> (Use-after-free in extract() with EXTR_REFS).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 18212); ?> (fseek with SEEK_CUR whence value and negative offset leads to negative stream position).</li>
+  <li>Fix resource leak in iptcembed() on error.</li>
+</ul></li>
+<li>Zip:
+<ul>
+  <li>Fix uouv when handling empty options in ZipArchive::addGlob().</li>
+  <li>Fix memory leak when handling a too long path in ZipArchive::addGlob().</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
+
+
 <section class="version" id="8.3.20"><!-- {{{ 8.3.20 -->
 <h3>Version 8.3.20</h3>
 <b><?php release_date('10-Apr-2025'); ?></b>
