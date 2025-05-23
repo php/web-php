@@ -10,6 +10,10 @@ site_header('Supported Versions', ['css' => ['supported-versions.css']]);
 // support lifetime, add it under a heading with an anchor, and add the anchor
 // and branch names to the array below ('x.y' => '#anchor-name').
 $VERSION_NOTES = [
+	'8.4' => 'https://www.php.net/manual/migration84.php',
+	'8.3' => 'https://www.php.net/manual/migration83.php',
+	'8.2' => 'https://www.php.net/manual/migration82.php',
+	'8.1' => 'https://www.php.net/manual/migration81.php',
 ];
 ?>
 
@@ -43,6 +47,7 @@ $VERSION_NOTES = [
 			<th colspan="2">Initial Release</th>
 			<th colspan="2">Active Support Until</th>
 			<th colspan="2">Security Support Until</th>
+			<th colspan="2">Notes</th>
 		</tr>
 	</thead>
 	<tbody>
@@ -59,9 +64,6 @@ $VERSION_NOTES = [
 				<tr class="<?php echo $state ?>">
 					<td>
 						<a href="/downloads.php#v<?php echo htmlspecialchars($release['version']) ?>"><?php echo htmlspecialchars($branch) ?></a>
-						<?php if (isset($VERSION_NOTES[$branch])): ?>
-							<a class="version-notes" href="<?php echo htmlspecialchars($VERSION_NOTES[$branch]) ?>">*</a>
-						<?php endif ?>
 					</td>
 					<td><?php echo htmlspecialchars($initial->format('j M Y')) ?></td>
 					<td class="collapse-phone"><em><?php echo htmlspecialchars(format_interval($initial, $now)) ?></em></td>
@@ -69,6 +71,15 @@ $VERSION_NOTES = [
 					<td class="collapse-phone"><em><?php echo htmlspecialchars(format_interval($until, $now)) ?></em></td>
 					<td><?php echo htmlspecialchars($eol->format('j M Y')) ?></td>
 					<td class="collapse-phone"><em><?php echo htmlspecialchars(format_interval($eol, $now)) ?></em></td>
+					<td>
+						<?php if (isset($VERSION_NOTES[$branch])): ?>
+							<a href="<?php echo htmlspecialchars($VERSION_NOTES[$branch]) ?>">
+								Migration guide for PHP <?php echo htmlspecialchars($branch) ?>
+							</a>
+						<?php else: ?>
+							 —
+						<?php endif; ?>
+					</td>
 				</tr>
 			<?php endforeach ?>
 		<?php endforeach ?>
