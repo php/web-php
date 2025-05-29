@@ -12,7 +12,7 @@ const LANGUAGES = [
     'de' => 'Deutsch',
     'ru' => 'Russian',
     'zh' => '简体中文',
-    'pt_BR' => 'Português do Brasil',
+    'pt_BR' => 'Brazilian Portuguese',
     'ja' => '日本語',
     'uk' => 'Українська',
 ];
