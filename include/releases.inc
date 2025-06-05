@@ -2,6 +2,42 @@
 $OLDRELEASES = array (
   8 => 
   array (
+    '8.3.21' => 
+    array (
+      'announcement' => 
+      array (
+        'English' => '/releases/8_3_21.php',
+      ),
+      'tags' => 
+      array (
+      ),
+      'date' => '8 May 2025',
+      'source' => 
+      array (
+        0 => 
+        array (
+          'filename' => 'php-8.3.21.tar.gz',
+          'name' => 'PHP 8.3.21 (tar.gz)',
+          'sha256' => 'e7f1748c1fa3d2bf8ef2e00508bd62325ba68c3b830b253bc561225a9ba5457d',
+          'date' => '8 May 2025',
+        ),
+        1 => 
+        array (
+          'filename' => 'php-8.3.21.tar.bz2',
+          'name' => 'PHP 8.3.21 (tar.bz2)',
+          'sha256' => 'd0769e6e11cfa6c59a16de241668be8c7f31a729950a8d06190dfad2d8622b04',
+          'date' => '8 May 2025',
+        ),
+        2 => 
+        array (
+          'filename' => 'php-8.3.21.tar.xz',
+          'name' => 'PHP 8.3.21 (tar.xz)',
+          'sha256' => '4dfb329f209a552c3716394fc123bb62e80a468b55ce27fc8cb0fd5f30b9dcd6',
+          'date' => '8 May 2025',
+        ),
+      ),
+      'museum' => false,
+    ),
     '8.4.7' => 
     array (
       'announcement' => 

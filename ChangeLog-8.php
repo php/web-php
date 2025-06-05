@@ -1249,6 +1249,70 @@ changelog_header(8, $MINOR_VERSIONS);
 
 <a id="PHP_8_3"></a>
 
+<section class="version" id="8.3.22"><!-- {{{ 8.3.22 -->
+<h3>Version 8.3.22</h3>
+<b><?php release_date('05-Jun-2025'); ?></b>
+<ul><li>Core:
+<ul>
+  <li>Fixed <?php githubissuel('php/php-src', 18480); ?> (array_splice with large values for offset/length arguments).</li>
+  <li>Partially fixed <?php githubissuel('php/php-src', 18572); ?> (nested object comparisons leading to stack overflow).</li>
+  <li>Fixed OSS-Fuzz #417078295.</li>
+  <li>Fixed OSS-Fuzz #418106144.</li>
+</ul></li>
+<li>Curl:
+<ul>
+  <li>Fixed <?php githubissuel('php/php-src', 18460); ?> (curl_easy_setopt with CURLOPT_USERPWD/CURLOPT_USERNAME/ CURLOPT_PASSWORD set the Authorization header when set to NULL).</li>
+</ul></li>
+<li>Date:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 18076); ?> (Since PHP 8, the date_sun_info() function returns inaccurate sunrise and sunset times, but other calculated times are correct) (JiriJozif).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 18481); ?> (date_sunrise with unexpected nan value for the offset).</li>
+</ul></li>
+<li>Intl:
+<ul>
+  <li>Fix various reference issues.</li>
+</ul></li>
+<li>LDAP:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 18529); ?> (ldap no longer respects TLS_CACERT from ldaprc in ldap_start_tls()).</li>
+</ul></li>
+<li>Opcache:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 18417); ?> (Windows SHM reattachment fails when increasing memory_consumption or jit_buffer_size).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 18567); ?> (Preloading with internal class alias triggers assertion failure).</li>
+  <li>Fix leak of accel_globals-&gt;key.</li>
+</ul></li>
+<li>OpenSSL:
+<ul>
+  <li>Fix missing checks against php_set_blocking() in xp_ssl.c.</li>
+</ul></li>
+<li>PDO_OCI:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 18494); ?> (PDO OCI segfault in statement GC).</li>
+</ul></li>
+<li>SPL:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 18421); ?> (Integer overflow with large numbers in LimitIterator).</li>
+</ul></li>
+<li>Standard:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 17403); ?> (Potential deadlock when putenv fails).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 18509); ?> (Dynamic calls to assert() ignore zend.assertions).</li>
+</ul></li>
+<li>Windows:
+<ul>
+  <li>Fix leak+crash with sapi_windows_set_ctrl_handler().</li>
+</ul></li>
+<li>Zip:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 18431); ?> (Registering ZIP progress callback twice doesn't work).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 18438); ?> (Handling of empty data and errors in ZipArchive::addPattern).</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
+
+
 <section class="version" id="8.3.21"><!-- {{{ 8.3.21 -->
 <h3>Version 8.3.21</h3>
 <b><?php release_date('08-May-2025'); ?></b>
