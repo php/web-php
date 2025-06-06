@@ -117,15 +117,6 @@ site_header("A Tourist's Guide", ["current" => "help"]);
  and contributors.
 </p>
 
-<h2 id="qa" class="content-header"><a href="https://qa.php.net/">qa.php.net</a>: Quality Assurance Team</h2>
-
-<p class="content-box">
- The Quality Assurance team is one of the most important pieces of the PHP
- project, protecting users from bugs. It is gathered around the QA mailing list,
- and this site allows anyone to provide tests and experience to the release
- process.
-</p>
-
 <h2 id="git" class="content-header"><a href="https://github.com/php/">github.com/php/</a>: Git Repository</h2>
 
 <div class="content-box">
@@ -175,7 +166,6 @@ $SIDEBAR = <<<SIDEBAR_DATA
 <p class='panel'><a href="#pecl">The PHP Extension Community Library</a></p>
 <p class='panel'><a href="#bugs">Bug Database</a></p>
 <p class='panel'><a href="#doc">Documentation collaboration</a></p>
-<p class='panel'><a href="#qa">Quality Assurance Team</a></p>
 <p class='panel'><a href="#git">Git Repository</a></p>
 <p class='panel'><a href="#wiki">The PHP Wiki</a></h2>
 <p class='panel'><a href="#windows">PHP for Windows</a></h2>

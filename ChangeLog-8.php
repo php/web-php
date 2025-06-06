@@ -9,6 +9,246 @@ changelog_header(8, $MINOR_VERSIONS);
 
 <a id="PHP_8_4"></a>
 
+<section class="version" id="8.4.8"><!-- {{{ 8.4.8 -->
+<h3>Version 8.4.8</h3>
+<b><?php release_date('05-Jun-2025'); ?></b>
+<ul><li>Core:
+<ul>
+  <li>Fixed <?php githubissuel('php/php-src', 18480); ?> (array_splice with large values for offset/length arguments).</li>
+  <li>Partially fixed <?php githubissuel('php/php-src', 18572); ?> (nested object comparisons leading to stack overflow).</li>
+  <li>Fixed OSS-Fuzz #417078295.</li>
+  <li>Fixed OSS-Fuzz #418106144.</li>
+</ul></li>
+<li>Curl:
+<ul>
+  <li>Fixed <?php githubissuel('php/php-src', 18460); ?> (curl_easy_setopt with CURLOPT_USERPWD/CURLOPT_USERNAME/ CURLOPT_PASSWORD set the Authorization header when set to NULL).</li>
+</ul></li>
+<li>Date:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 18076); ?> (Since PHP 8, the date_sun_info() function returns inaccurate sunrise and sunset times, but other calculated times are correct) (JiriJozif).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 18481); ?> (date_sunrise with unexpected nan value for the offset).</li>
+</ul></li>
+<li>DOM:
+<ul>
+  <li>Backport lexbor/lexbor#274.</li>
+</ul></li>
+<li>Intl:
+<ul>
+  <li>Fix various reference issues.</li>
+</ul></li>
+<li>LDAP:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 18529); ?> (ldap no longer respects TLS_CACERT from ldaprc in ldap_start_tls()).</li>
+</ul></li>
+<li>Opcache:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 18417); ?> (Windows SHM reattachment fails when increasing memory_consumption or jit_buffer_size).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 18297); ?> (Exception not handled when jit guard is triggered).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 18408); ?> (Snapshotted poly_func / poly_this may be spilled).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 18567); ?> (Preloading with internal class alias triggers assertion failure).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 18534); ?> (FPM exit code 70 with enabled opcache and hooked properties in traits).</li>
+  <li>Fix leak of accel_globals-&gt;key.</li>
+</ul></li>
+<li>OpenSSL:
+<ul>
+  <li>Fix missing checks against php_set_blocking() in xp_ssl.c.</li>
+</ul></li>
+<li>SPL:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 18421); ?> (Integer overflow with large numbers in LimitIterator).</li>
+</ul></li>
+<li>Standard:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 17403); ?> (Potential deadlock when putenv fails).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 18400); ?> (http_build_query type error is inaccurate).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 18509); ?> (Dynamic calls to assert() ignore zend.assertions).</li>
+</ul></li>
+<li>Windows:
+<ul>
+  <li>Fix leak+crash with sapi_windows_set_ctrl_handler().</li>
+</ul></li>
+<li>Zip:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 18431); ?> (Registering ZIP progress callback twice doesn't work).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 18438); ?> (Handling of empty data and errors in ZipArchive::addPattern).</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
+
+
+<section class="version" id="8.4.7"><!-- {{{ 8.4.7 -->
+<h3>Version 8.4.7</h3>
+<b><?php release_date('8-May-2025'); ?></b>
+<ul><li>Core:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 18038); ?> (Lazy proxy calls magic methods twice).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 18209); ?> (Use-after-free in extract() with EXTR_REFS).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 18268); ?> (Segfault in array_walk() on object with added property hooks).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 18304); ?> (Changing the properties of a DateInterval through dynamic properties triggers a SegFault).</li>
+  <li>Fix some leaks in php_scandir.</li>
+</ul></li>
+<li>DBA:
+<ul>
+  <li>FIxed bug <?php githubissuel('php/php-src', 18247); ?> dba_popen() memory leak on invalid path.</li>
+</ul></li>
+<li>Filter:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 18309); ?> (ipv6 filter integer overflow).</li>
+</ul></li>
+<li>GD:
+<ul>
+  <li>Fixed imagecrop() overflow with rect argument with x/width y/heigh usage in gdImageCrop().</li>
+  <li>Fixed <?php githubissuel('php/php-src', 18243); ?> imagettftext() overflow/underflow on font size value.</li>
+</ul></li>
+<li>Intl:
+<ul>
+  <li>Fix reference support for intltz_get_offset().</li>
+</ul></li>
+<li>LDAP:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 17776); ?> (LDAP_OPT_X_TLS_* options can't be overridden).</li>
+  <li>Fix NULL deref on high modification key.</li>
+</ul></li>
+<li>libxml:
+<ul>
+  <li>Fixed custom external entity loader returning an invalid resource leading to a confusing TypeError message.</li>
+</ul></li>
+<li>Opcache:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 18294); ?> (assertion failure zend_jit_ir.c).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 18289); ?> (Fix segfault in JIT).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 18136); ?> (tracing JIT floating point register clobbering on Windows and ARM64).</li>
+</ul></li>
+<li>OpenSSL:
+<ul>
+  <li>Fix memory leak in openssl_sign() when passing invalid algorithm.</li>
+  <li>Fix potential leaks when writing to BIO fails.</li>
+</ul></li>
+<li>PDO Firebird:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 18276); ?> (persistent connection - "zend_mm_heap corrupted" with setAttribute()) (SakiTakamachi).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 17383); ?> (PDOException has wrong code and message since PHP 8.4) (SakiTakamachi).</li>
+</ul></li>
+<li>PDO Sqlite:
+<ul>
+  <li>Fix memory leak on error return of collation callback.</li>
+</ul></li>
+<li>PgSql:
+<ul>
+  <li>Fix uouv in pg_put_copy_end().</li>
+</ul></li>
+<li>SPL:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 18322); ?> (SplObjectStorage debug handler mismanages memory).</li>
+</ul></li>
+<li>Standard:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 18145); ?> (php8ts crashes in php_clear_stat_cache()).</li>
+  <li>Fix resource leak in iptcembed() on error.</li>
+</ul></li>
+<li>Tests:
+<ul>
+  <li>Address deprecated PHP 8.4 session options to prevent test failures.</li>
+</ul></li>
+<li>Zip:
+<ul>
+  <li>Fix uouv when handling empty options in ZipArchive::addGlob().</li>
+  <li>Fix memory leak when handling a too long path in ZipArchive::addGlob().</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
+
+
+<section class="version" id="8.4.6"><!-- {{{ 8.4.6 -->
+<h3>Version 8.4.6</h3>
+<b><?php release_date('10-Apr-2025'); ?></b>
+<ul><li>BCMath:
+<ul>
+  <li>Fixed pointer subtraction for scale.</li>
+</ul></li>
+<li>Core:
+<ul>
+  <li>Fixed property hook backing value access in multi-level inheritance.</li>
+  <li>Fixed accidentally inherited default value in overridden virtual properties.</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 17376); ?> (Broken JIT polymorphism for property hooks added to child class).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 17913); ?> (ReflectionFunction::isDeprecated() returns incorrect results for closures created from magic __call()).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 17941); ?> (Stack-use-after-return with lazy objects and hooks).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 17988); ?> (Incorrect handling of hooked props without get hook in get_object_vars()).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 17998); ?> (Skipped lazy object initialization on primed SIMPLE_WRITE cache).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 17998); ?> (Assignment to backing value in set hook of lazy proxy calls hook again).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 17961); ?> (use-after-free during dl()'ed module class destruction).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 15367); ?> (dl() of module with aliased class crashes in shutdown).</li>
+  <li>Fixed OSS-Fuzz #403308724.</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 13193); ?> again (Significant performance degradation in 'foreach').</li>
+</ul></li>
+<li>DBA:
+<ul>
+  <li>Fixed assertion violation when opening the same file with dba_open multiple times.</li>
+</ul></li>
+<li>DOM:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 17991); ?> (Assertion failure dom_attr_value_write).</li>
+  <li>Fix weird unpack behaviour in DOM.</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 18090); ?> (DOM: Svg attributes and tag names are being lowercased).</li>
+  <li>Fix xinclude destruction of live attributes.</li>
+</ul></li>
+<li>Fuzzer:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 18081); ?> (Memory leaks in error paths of fuzzer SAPI).</li>
+</ul></li>
+<li>GD:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 17984); ?> (calls with arguments as array with references).</li>
+</ul></li>
+<li>LDAP:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 18015); ?> (Error messages for ldap_mod_replace are confusing).</li>
+</ul></li>
+<li>Mbstring:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 17989); ?> (mb_output_handler crash with unset http_output_conv_mimetypes).</li>
+</ul></li>
+<li>Opcache:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 15834); ?> (Segfault with hook "simple get" cache slot and minimal JIT).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 17966); ?> (Symfony JIT 1205 assertion failure).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 18037); ?> (SEGV Zend/zend_execute.c).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 18050); ?> (IN_ARRAY optimization in DFA pass is broken).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 18113); ?> (stack-buffer-overflow ext/opcache/jit/ir/ir_sccp.c).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 18112); ?> (NULL access with preloading and INI option).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 18107); ?> (Opcache CFG jmp optimization with try-finally breaks the exception table).</li>
+</ul></li>
+<li>PDO:
+<ul>
+  <li>Fix memory leak when destroying PDORow.</li>
+</ul></li>
+<li>Standard:
+<ul>
+  <li>Fix memory leaks in array_any() / array_all().</li>
+</ul></li>
+<li>SOAP:
+<ul>
+  <li><?php bugfix(66049); ?> (Typemap can break parsing in parse_packet_soap leading to a segfault) .</li>
+</ul></li>
+<li>SPL:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 18018); ?> (RC1 data returned from offsetGet causes UAF in ArrayObject).</li>
+</ul></li>
+<li>Treewide:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 17736); ?> (Assertion failure zend_reference_destroy()).</li>
+</ul></li>
+<li>Windows:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 17836); ?> (zend_vm_gen.php shouldn't break on Windows line endings).</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
+
+
 <section class="version" id="8.4.5"><!-- {{{ 8.4.5 -->
 <h3>Version 8.4.5</h3>
 <b><?php release_date('13-Mar-2025'); ?></b>
@@ -97,7 +337,7 @@ changelog_header(8, $MINOR_VERSIONS);
 <ul>
   <li>Fixed bug <?php githubissuel('php/php-src', 17650); ?> (realloc with size 0 in user_filters.c).</li>
   <li>Fix memory leak on overflow in _php_stream_scandir().</li>
-  <li>Fixed GHSA-hgf54-96fm-v528 (Stream HTTP wrapper header check might omit basic auth header). (CVE-2025-1736)</li>
+  <li>Fixed <?php githubsecurityl('php/php-src', 'hgf5-96fm-v528'); ?> (Stream HTTP wrapper header check might omit basic auth header). (CVE-2025-1736)</li>
   <li>Fixed <?php githubsecurityl('php/php-src', '52jp-hrpf-2jff'); ?> (Stream HTTP wrapper truncate redirect location to 1024 bytes). (CVE-2025-1861)</li>
   <li>Fixed <?php githubsecurityl('php/php-src', 'pcmh-g36c-qc44'); ?> (Streams HTTP wrapper does not fail for headers without colon). (CVE-2025-1734)</li>
   <li>Fixed <?php githubsecurityl('php/php-src', 'v8xr-gpvj-cx9g'); ?> (Header parser of `http` stream wrapper does not handle folded headers). (CVE-2025-1217)</li>
@@ -1009,6 +1249,196 @@ changelog_header(8, $MINOR_VERSIONS);
 
 <a id="PHP_8_3"></a>
 
+<section class="version" id="8.3.22"><!-- {{{ 8.3.22 -->
+<h3>Version 8.3.22</h3>
+<b><?php release_date('05-Jun-2025'); ?></b>
+<ul><li>Core:
+<ul>
+  <li>Fixed <?php githubissuel('php/php-src', 18480); ?> (array_splice with large values for offset/length arguments).</li>
+  <li>Partially fixed <?php githubissuel('php/php-src', 18572); ?> (nested object comparisons leading to stack overflow).</li>
+  <li>Fixed OSS-Fuzz #417078295.</li>
+  <li>Fixed OSS-Fuzz #418106144.</li>
+</ul></li>
+<li>Curl:
+<ul>
+  <li>Fixed <?php githubissuel('php/php-src', 18460); ?> (curl_easy_setopt with CURLOPT_USERPWD/CURLOPT_USERNAME/ CURLOPT_PASSWORD set the Authorization header when set to NULL).</li>
+</ul></li>
+<li>Date:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 18076); ?> (Since PHP 8, the date_sun_info() function returns inaccurate sunrise and sunset times, but other calculated times are correct) (JiriJozif).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 18481); ?> (date_sunrise with unexpected nan value for the offset).</li>
+</ul></li>
+<li>Intl:
+<ul>
+  <li>Fix various reference issues.</li>
+</ul></li>
+<li>LDAP:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 18529); ?> (ldap no longer respects TLS_CACERT from ldaprc in ldap_start_tls()).</li>
+</ul></li>
+<li>Opcache:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 18417); ?> (Windows SHM reattachment fails when increasing memory_consumption or jit_buffer_size).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 18567); ?> (Preloading with internal class alias triggers assertion failure).</li>
+  <li>Fix leak of accel_globals-&gt;key.</li>
+</ul></li>
+<li>OpenSSL:
+<ul>
+  <li>Fix missing checks against php_set_blocking() in xp_ssl.c.</li>
+</ul></li>
+<li>PDO_OCI:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 18494); ?> (PDO OCI segfault in statement GC).</li>
+</ul></li>
+<li>SPL:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 18421); ?> (Integer overflow with large numbers in LimitIterator).</li>
+</ul></li>
+<li>Standard:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 17403); ?> (Potential deadlock when putenv fails).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 18509); ?> (Dynamic calls to assert() ignore zend.assertions).</li>
+</ul></li>
+<li>Windows:
+<ul>
+  <li>Fix leak+crash with sapi_windows_set_ctrl_handler().</li>
+</ul></li>
+<li>Zip:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 18431); ?> (Registering ZIP progress callback twice doesn't work).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 18438); ?> (Handling of empty data and errors in ZipArchive::addPattern).</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
+
+
+<section class="version" id="8.3.21"><!-- {{{ 8.3.21 -->
+<h3>Version 8.3.21</h3>
+<b><?php release_date('08-May-2025'); ?></b>
+<ul><li>Core:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 18304); ?> (Changing the properties of a DateInterval through dynamic properties triggers a SegFault).</li>
+  <li>Fix some leaks in php_scandir.</li>
+</ul></li>
+<li>Filter:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 18309); ?> (ipv6 filter integer overflow).</li>
+</ul></li>
+<li>GD:
+<ul>
+  <li>Fixed imagecrop() overflow with rect argument with x/width y/heigh usage in gdImageCrop().</li>
+  <li>Fixed <?php githubissuel('php/php-src', 18243); ?> imagettftext() overflow/underflow on font size value.</li>
+</ul></li>
+<li>Intl:
+<ul>
+  <li>Fix reference support for intltz_get_offset().</li>
+</ul></li>
+<li>LDAP:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 17776); ?> (LDAP_OPT_X_TLS_* options can't be overridden).</li>
+  <li>Fix NULL deref on high modification key.</li>
+</ul></li>
+<li>libxml:
+<ul>
+  <li>Fixed custom external entity loader returning an invalid resource leading to a confusing TypeError message.</li>
+</ul></li>
+<li>OpenSSL:
+<ul>
+  <li>Fix memory leak in openssl_sign() when passing invalid algorithm.</li>
+  <li>Fix potential leaks when writing to BIO fails.</li>
+</ul></li>
+<li>PDO Firebird:
+<ul>
+  <li>Fixed <?php githubissuel('php/php-src', 18276); ?> - persistent connection - "zend_mm_heap corrupted" with setAttribute() (SakiTakamachi).</li>
+</ul></li>
+<li>SPL:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 18322); ?> (SplObjectStorage debug handler mismanages memory).</li>
+</ul></li>
+<li>Standard:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 18145); ?> (php8ts crashes in php_clear_stat_cache()).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 18209); ?> (Use-after-free in extract() with EXTR_REFS).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 18212); ?> (fseek with SEEK_CUR whence value and negative offset leads to negative stream position).</li>
+  <li>Fix resource leak in iptcembed() on error.</li>
+</ul></li>
+<li>Zip:
+<ul>
+  <li>Fix uouv when handling empty options in ZipArchive::addGlob().</li>
+  <li>Fix memory leak when handling a too long path in ZipArchive::addGlob().</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
+
+
+<section class="version" id="8.3.20"><!-- {{{ 8.3.20 -->
+<h3>Version 8.3.20</h3>
+<b><?php release_date('10-Apr-2025'); ?></b>
+<ul><li>Core:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 17961); ?> (use-after-free during dl()'ed module class destruction).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 15367); ?> (dl() of module with aliased class crashes in shutdown).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 13193); ?> again (Significant performance degradation in 'foreach').</li>
+</ul></li>
+<li>DOM:
+<ul>
+  <li>Fix weird unpack behaviour in DOM.</li>
+  <li>Fix xinclude destruction of live attributes.</li>
+</ul></li>
+<li>Embed:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 8533); ?> (Unable to link dynamic libphp on Mac).</li>
+</ul></li>
+<li>Fuzzer:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 18081); ?> (Memory leaks in error paths of fuzzer SAPI).</li>
+</ul></li>
+<li>GD:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 17984); ?> (calls with arguments as array with references).</li>
+</ul></li>
+<li>Intl:
+<ul>
+  <li>Fix locale_compose and locale_lookup to work with their array argument with values as references.</li>
+  <li>Fix dateformat_format when the time is an array of references.</li>
+  <li>Fix UConverter::transcode with substitutes as references.</li>
+</ul></li>
+<li>Mbstring:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 17989); ?> (mb_output_handler crash with unset http_output_conv_mimetypes).</li>
+</ul></li>
+<li>Opcache:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 18112); ?> (NULL access with preloading and INI option).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 18107); ?> (Opcache CFG jmp optimization with try-finally breaks the exception table).</li>
+</ul></li>
+<li>PDO:
+<ul>
+  <li>Fix memory leak when destroying PDORow.</li>
+</ul></li>
+<li>SOAP:
+<ul>
+  <li><?php bugfix(66049); ?> (Typemap can break parsing in parse_packet_soap leading to a segfault) .</li>
+</ul></li>
+<li>SPL:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 18018); ?> (RC1 data returned from offsetGet causes UAF in ArrayObject).</li>
+</ul></li>
+<li>Treewide:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 17736); ?> (Assertion failure zend_reference_destroy()).</li>
+</ul></li>
+<li>Windows:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 17836); ?> (zend_vm_gen.php shouldn't break on Windows line endings).</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
+
+
 <section class="version" id="8.3.19"><!-- {{{ 8.3.19 -->
 <h3>Version 8.3.19</h3>
 <b><?php release_date('13-Mar-2025'); ?></b>
@@ -1087,7 +1517,7 @@ changelog_header(8, $MINOR_VERSIONS);
 <ul>
   <li>Fixed bug <?php githubissuel('php/php-src', 17650); ?> (realloc with size 0 in user_filters.c).</li>
   <li>Fix memory leak on overflow in _php_stream_scandir().</li>
-  <li>Fixed GHSA-hgf54-96fm-v528 (Stream HTTP wrapper header check might omit basic auth header). (CVE-2025-1736)</li>
+  <li>Fixed <?php githubsecurityl('php/php-src', 'hgf5-96fm-v528'); ?> (Stream HTTP wrapper header check might omit basic auth header). (CVE-2025-1736)</li>
   <li>Fixed <?php githubsecurityl('php/php-src', '52jp-hrpf-2jff'); ?> (Stream HTTP wrapper truncate redirect location to 1024 bytes). (CVE-2025-1861)</li>
   <li>Fixed <?php githubsecurityl('php/php-src', 'pcmh-g36c-qc44'); ?> (Streams HTTP wrapper does not fail for headers without colon). (CVE-2025-1734)</li>
   <li>Fixed <?php githubsecurityl('php/php-src', 'v8xr-gpvj-cx9g'); ?> (Header parser of `http` stream wrapper does not handle folded headers). (CVE-2025-1217)</li>
@@ -2797,6 +3227,34 @@ changelog_header(8, $MINOR_VERSIONS);
 
 
 <a id="PHP_8_2"></a>
+
+<section class="version" id="8.2.28"><!-- {{{ 8.2.28 -->
+<h3>Version 8.2.28</h3>
+<b><?php release_date('13-Mar-2025'); ?></b>
+<ul><li>Core:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 17211); ?> (observer segfault on function loaded with dl()).</li>
+</ul></li>
+<li>LibXML:
+<ul>
+  <li>Fixed <?php githubsecurityl('php/php-src', 'wg4p-4hqh-c3g9'); ?> (Reocurrence of #72714).</li>
+  <li>Fixed <?php githubsecurityl('php/php-src', 'p3x9-6h7p-cgfc'); ?> (libxml streams use wrong `content-type` header when requesting a redirected resource). (CVE-2025-1219)</li>
+</ul></li>
+<li>Streams:
+<ul>
+  <li>Fixed <?php githubsecurityl('php/php-src', 'hgf5-96fm-v528'); ?> (Stream HTTP wrapper header check might omit basic auth header). (CVE-2025-1736)</li>
+  <li>Fixed <?php githubsecurityl('php/php-src', '52jp-hrpf-2jff'); ?> (Stream HTTP wrapper truncate redirect location to 1024 bytes). (CVE-2025-1861)</li>
+  <li>Fixed <?php githubsecurityl('php/php-src', 'pcmh-g36c-qc44'); ?> (Streams HTTP wrapper does not fail for headers without colon). (CVE-2025-1734)</li>
+  <li>Fixed <?php githubsecurityl('php/php-src', 'v8xr-gpvj-cx9g'); ?> (Header parser of `http` stream wrapper does not handle folded headers). (CVE-2025-1217)</li>
+</ul></li>
+<li>Windows:
+<ul>
+  <li>Fixed phpize for Windows 11 (24H2).</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
+
 
 <section class="version" id="8.2.27"><!-- {{{ 8.2.27 -->
 <h3>Version 8.2.27</h3>
@@ -5297,7 +5755,7 @@ changelog_header(8, $MINOR_VERSIONS);
 </ul></li>
 <li>Streams:
 <ul>
-  <li>Fixed GHSA-hgf54-96fm-v528 (Stream HTTP wrapper header check might omit basic auth header). (CVE-2025-1736)</li>
+  <li>Fixed <?php githubsecurityl('php/php-src', 'hgf5-96fm-v528'); ?> (Stream HTTP wrapper header check might omit basic auth header). (CVE-2025-1736)</li>
   <li>Fixed <?php githubsecurityl('php/php-src', '52jp-hrpf-2jff'); ?> (Stream HTTP wrapper truncate redirect location to 1024 bytes). (CVE-2025-1861)</li>
   <li>Fixed <?php githubsecurityl('php/php-src', 'pcmh-g36c-qc44'); ?> (Streams HTTP wrapper does not fail for headers without colon). (CVE-2025-1734)</li>
   <li>Fixed <?php githubsecurityl('php/php-src', 'v8xr-gpvj-cx9g'); ?> (Header parser of `http` stream wrapper does not handle folded headers). (CVE-2025-1217)</li>

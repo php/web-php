@@ -38,6 +38,7 @@ releases\php80\common_header(
     <h2 class="php8-h2" id="named-arguments">
       Named Arguments
       <a class="php8-rfc" href="https://wiki.php.net/rfc/named_params">RFC</a>
+      <a class="php8-rfc" href="/manual/de/functions.arguments.php#functions.named-arguments">Doc</a>
     </h2>
     <div class="php8-compare__main">
       <div class="php8-compare__block example-contents">

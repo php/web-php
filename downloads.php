@@ -18,11 +18,12 @@ $SIDEBAR_DATA = '
   </div>
 </div>
 
-<p class="panel"><a href="download-docs.php">Documentation download</a></p>
-<p class="panel"><a href="download-logos.php">PHP logos</a></p>
+<p class="panel"><a href="download-docs.php">Documentation Download</a></p>
+<p class="panel"><a href="download-logos.php">PHP Logos</a></p>
 
-<p class="panel"><a href="/git.php">Development sources (git)</a></p>
-<p class="panel"><a href="/releases/">Old archives</a></p>
+<p class="panel"><a href="/release-candidates.php">Release Candidates</a></p>
+<p class="panel"><a href="/git.php">Development Sources (git)</a></p>
+<p class="panel"><a href="/releases/">Old Archives</a></p>
 ';
 
 site_header("Downloads",

@@ -48,7 +48,7 @@
 
   /* you can be more comfortable with increased icons size */
   /* font-size: 120%; */
-  
+
   /* Font smoothing. That was taken from TWBS */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -59,3 +59,4 @@
 
 .icon-x-twitter:before { content: '\e800'; } /* '' */
 .icon-mastodon:before { content: '\e801'; } /* '' */
+.icon-linkedin:before { content: '\f0e1'; } /* '' */

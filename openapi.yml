@@ -1,0 +1,160 @@
+openapi: 3.1.0
+info:
+    title: "PHP Website API"
+    description: "APIs available for use on the www.php.net website."
+    version: 2025.4.1
+
+servers:
+    - url: "https://www.php.net"
+      description: "The php.net website."
+
+components:
+    pathItems:
+        releases:
+            get:
+                summary: "Atom feed of php.net news and announcements."
+                responses:
+                    "200":
+                        description: "Atom feed of php.net news and announcements."
+                        content:
+                            "application/atom+xml":
+                                schema:
+                                    readOnly: true
+                                    externalDocs:
+                                        description: "Standard Atom feed with additional fields in the php: xml namespace."
+                                        url: http://php.net/ns/releases
+
+paths:
+    "/mirror-info.php":
+        get:
+            summary: >-
+                Returns information about the host running php.net.
+                Historically, this was unique per mirror.
+                With the move to a CDN model in 2019, there is now only one canonical source, and thus only one relevant configuration.
+                Refer to https://github.com/php/web-php/blob/master/mirror-info.php for the serialization format of the response.
+            responses:
+                "200":
+                    description: "Successful response of host configuration. This API does not error."
+                    content:
+                        "text/plain":
+                            schema:
+                                type: string
+                                readOnly: true
+                                externalDocs:
+                                    description: "This pipe delimited string's contents are described in the source code for this file."
+                                    url: "https://github.com/php/web-php/blob/master/mirror-info.php"
+                                example: "https://www.php.net/|8.4.5|1743832640|0|0|en|manual-noalias|1|Core,date,libxml,json,SPL,Zend OPcache|php-web4|169.254.12.255"
+
+    "/releases/feed.php":
+        "$ref": "#/components/pathItems/releases"
+
+    # Redirects to /releases/feed.php
+    "/relases.atom":
+        "$ref": "#/components/pathItems/releases"
+
+    "/releases/branches.php":
+        get:
+            summary: "Currently active versions of PHP."
+            responses:
+                "200":
+                    description: "Actively supported per-branch versions of PHP."
+                    content:
+                        "application/json":
+                            schema:
+                                type: array
+                                items:
+                                    type: object
+                                    properties:
+                                        branch:
+                                            description: "Major.Minor branch identifier, e.g. (8.4, 5.6, etc...)"
+                                            type: string
+                                        latest:
+                                            description: "Most recent release on this branch (e.g. 8.4.5, 5.6.40, etc...)"
+                                            type: string
+                                        state:
+                                            description: "Overall release readiness of the branch."
+                                            type: string
+                                            enum:
+                                                - stable
+                                                - security
+                                                - eol
+                                                - future
+                                        initial_release:
+                                            description: "Date on which first GA release of the branch was announced."
+                                            type: string
+                                            format: date-time
+                                        active_support_end:
+                                            description: "Date on which general bugfix support for this branch ends."
+                                            type: string
+                                            format: date-time
+                                        security_support_end:
+                                            description: "Date on which all support for this branch ends."
+                                            type: string
+                                            format: date-time
+
+    "/release-candidates.php":
+        get:
+            summary: "Currently RC versions of PHP."
+            parameters:
+                - in: query
+                  name: format
+                  schema:
+                      type: string
+                      enum: [ "json", "serialize" ]
+                  required: false
+                  description: Output format
+                - in: query
+                  name: only
+                  schema:
+                      type: string
+                      enum: [ "dev_versions" ]
+                  required: false
+                  description: Include only dev version numbers
+
+            responses:
+                "200":
+                    description: "Actively RC per-branch versions of PHP."
+                    content:
+                        "application/json":
+                            schema:
+                                type: array
+                                items:
+                                    type: object
+                                    properties:
+                                        active:
+                                            description: "Whether RC version is active"
+                                            type: boolean
+                                        release:
+                                            type: object
+                                            properties:
+                                                type:
+                                                    description: "Unstable release type"
+                                                    type: string
+                                                    enum:
+                                                        - alpha
+                                                        - beta
+                                                        - RC
+                                                number:
+                                                    description: "Unstable release number"
+                                                    type: integer
+                                                sha256_gz:
+                                                    description: "Unstable release gz hash"
+                                                    type: string
+                                                sha256_bz2:
+                                                    description: "Unstable release bz2 hash"
+                                                    type: string
+                                                sha256_xz:
+                                                    description: "Unstable release xz hash"
+                                                    type: string
+                                                date:
+                                                    description: "Date of release"
+                                                    type: string
+                                                baseurl:
+                                                    description: "Download base URL"
+                                                    type: string
+                                                enabled:
+                                                    description: "enabled"
+                                                    type: boolean
+                                        dev_version:
+                                            description: "dev_version"
+                                            type: string

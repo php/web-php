@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+    <title>PHP Core Undergoes Security Audit – Results Now Available</title>
+    <id>https://www.php.net/archive/2025.php#2025-04-10-1</id>
+    <published>2025-04-10T11:59:24+00:00</published>
+    <updated>2025-04-10T11:59:24+00:00</updated>
+    <link href="https://www.php.net/index.php#2025-04-10-1" rel="alternate" type="text/html"/>
+    <link href="https://www.php.net/archive/2025.php#2025-04-10-1" rel="via" type="text/html"/>
+    <category term="frontpage" label="PHP.net frontpage news"/>
+    <content type="xhtml">
+        <div xmlns="http://www.w3.org/1999/xhtml">
+            <p>
+                A focused security audit of the PHP source code (<a href="https://github.com/php/php-src">php/php-src</a>) was recently completed, commissioned by the <a href="https://www.sovereign.tech/">Sovereign Tech Agency</a>, organized by <a href="https://thephp.foundation/">The PHP Foundation</a> in partnership with <a href="https://ostif.org/">OSTIF</a>, and performed by <a href="https://www.quarkslab.com/">Quarkslab</a>. The audit targeted the most critical parts of the codebase, leading to 27 findings, 17 with security implications, including four CVEs.
+            </p>
+            <p>
+                All issues have been addressed by the PHP development team. Users are encouraged to upgrade to the latest PHP versions to benefit from these security improvements.
+            </p>
+            <p>
+                Read the full <a href="https://thephp.foundation/assets/files/24-07-1730-REP-V1.4_temp.pdf">audit report</a>.
+                More details in <a href="https://thephp.foundation/blog/2025/04/10/php-core-security-audit-results/">the PHP Foundation blog post</a>.
+            </p>
+            <p>
+                If your organization is interested in sponsoring further audits, please contact The PHP Foundation team: <a href="mailto:contact@thephp.foundation">contact@thephp.foundation</a>.
+            </p>
+        </div>
+    </content>
+</entry>

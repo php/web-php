@@ -181,7 +181,7 @@ $SIDEBAR = <<<SIDEBAR_DATA
       <a href='https://thephp.foundation/' class='headline'>The PHP Foundation</a>
       <div class='body'>
         <p>The PHP Foundation is a collective of people and organizations, united in the mission to ensure the long-term prosperity of the PHP language.
-        <p><a href='https://thephp.foundation/donate/' class='btn btn-primary'>Donate</a></p>
+        <p><a href='https://thephp.foundation/donate/' target="_blank" rel="noopener noreferrer" class='btn btn-primary'>Donate</a></p>
       </div>
     </div>
 $announcements
@@ -192,15 +192,21 @@ $announcements
       <div class='body'>
         <ul>
           <li>
-            <a href="https://twitter.com/official_php">
+            <a href="https://twitter.com/official_php" target="_blank" rel="noopener noreferrer">
               <i class="icon-x-twitter"></i>
               @official_php
             </a>
           </li>
           <li>
-            <a href="https://fosstodon.org/@php">
+            <a href="https://fosstodon.org/@php" target="_blank" rel="noopener noreferrer">
               <i class="icon-mastodon"></i>
               @php@fosstodon.org
+            </a>
+          </li>
+          <li>
+            <a href="https://www.linkedin.com/company/phpnet" target="_blank" rel="noopener noreferrer">
+              <i class="icon-linkedin"></i>
+              @phpnet
             </a>
           </li>
         </ul>

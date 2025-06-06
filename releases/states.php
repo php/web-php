@@ -1,4 +1,7 @@
 <?php
+# This API is deprecated as of 2025-04-01.
+# Please use /releases/branches.php instead.
+# This API *may* be removed at an indeterminate point in the future.
 
 $_SERVER['BASE_PAGE'] = 'releases/active.php';
 

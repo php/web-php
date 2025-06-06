@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom" xmlns:default="http://php.net/ns/news">
+  <title>PHP Conference Odawara 2025</title>
+  <id>https://www.php.net/archive/2025.php#2025-03-14-1</id>
+  <published>2025-03-14T00:24:54+00:00</published>
+  <updated>2025-03-14T00:24:54+00:00</updated>
+  <link href="https://www.php.net/conferences/index.php#2025-03-14-1" rel="alternate" type="text/html"/>
+  <link href="https://phpcon-odawara.jp/2025/" rel="via" type="text/html"/>
+  <default:finalTeaserDate xmlns="http://php.net/ns/news">2025-04-12</default:finalTeaserDate>
+  <category term="conferences" label="Conference announcement"/>
+  <default:newsImage xmlns="http://php.net/ns/news" link="https://phpcon-odawara.jp/2025/" title="PHP Conference Odawara 2025">phpcon_odawara2025.png</default:newsImage>
+  <content type="xhtml">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+     <p>
+         PHP Conference Odawara is back for its second run!🍥
+     </p>
+     <p>
+         This time, we're excited to welcome Saki Takamachi (RM) as our keynote speaker.<br/>
+         While talks will remain at the heart of the conference, we’re also planning interactive sessions designed to spark communication among fellow engineers.<br/>
+         Join us in Odawara again to share in the excitement of PHP and connect with passionate community members.<br/>
+         (This conference will be conducted in Japanese)
+     </p>
+     <strong>Basic information</strong><br/>
+     <ul>
+         <li>🌸 Date: April 12, 2025 (JST)</li>
+         <li>🏯 Location: Odawara Civic Exchange Center "UMECO", Kanagawa Prefecture, Japan</li>
+     </ul>
+     <p>
+         For more information, see the event page: <a href="https://phpcon-odawara.jp/2025/">PHP Conference Odawara 2025</a>.
+     </p>
+     <p>
+         Follow us on <a href="https://twitter.com/phpcon_odawara">X</a>.
+     </p>
+     
+    </div>
+  </content>
+</entry>

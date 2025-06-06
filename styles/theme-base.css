@@ -1367,6 +1367,10 @@ div.soft-deprecation-notice blockquote.sidebar {
     background: var(--dark-grey-color);
     z-index: 1;
   }
+  .doctable thead th {
+    position: sticky;
+    top: 3rem;
+  }
   #intro .background,
   aside.tips,
   .layout-menu {
