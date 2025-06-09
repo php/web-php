@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 require __DIR__ . '/branches.inc';
 
 // GPG keys used for signing releases.
