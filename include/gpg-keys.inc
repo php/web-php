@@ -47,6 +47,12 @@ function gpg_key_get(string $rm): ?string {
                 "      Key fingerprint = CBAF 69F1 73A0 FEA4 B537  F470 D66C 9593 118B CCB6\n" .
                 "uid                  Christoph M. Becker <cmb@php.net>";
 
+        case 'daniels':
+            return
+                "pub   rsa4096 2025-06-08 [SCEA]\n" .
+                "      D95C 03BC 702B E951 5344  AE33 74E4 4BC9 0677 01A5\n" .
+                "uid           [ultimate] Daniel Scherzer (for PHP) <daniels@php.net>";
+
         case 'davey':
             return
                 "pub   4096R/7BD5DCD0 2016-05-07\n" .
@@ -68,6 +74,13 @@ function gpg_key_get(string $rm): ?string {
                 "pub   4096R/7267B52D 2012-03-20 [expires: 2016-03-19]\n" .
                 "      Key fingerprint = 0B96 609E 270F 565C 1329  2B24 C13C 70B8 7267 B52D\n" .
                 "uid                  David Soria Parra <dsp@php.net>";
+
+        case 'edorian':
+            return
+                "pub   ed25519 2025-06-08 [SC]\n" .
+                "      49D9 AF6B C72A 80D6 6917  19C8 AA23 F5BE 9C70 97D4\n" .
+                "uid           [ultimate] Volker Dusch <edorian@php.net>\n" .
+                "sub   cv25519 2025-06-08 [E]";
 
         case 'ericmann':
             return
@@ -177,6 +190,7 @@ function gpg_key_get(string $rm): ?string {
 
 function gpg_key_get_branches(bool $activeOnly): array {
     $branches = [
+        '8.5' => ['pierrick', 'edorian', 'daniels'],
         '8.4' => ['ericmann', 'calvinb', 'saki'],
         '8.3' => ['pierrick', 'ericmann', 'bukka'],
         '8.2' => ['pierrick', 'ramsey', 'sergey'],
