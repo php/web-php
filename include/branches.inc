@@ -355,7 +355,7 @@ function get_branch_release_date($branch): ?DateTime
 {
     $initial = get_initial_release($branch);
 
-    return $initial ? new DateTime($initial['date']) : null;
+    return isset($initial['date']) ? new DateTime($initial['date']) : null;
 }
 
 function get_branch_support_state($branch) {
