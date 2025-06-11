@@ -23,6 +23,13 @@ foreach($css_files as $filename) {
     $CSS[$filename] = @filemtime($path);
 }
 
+if (isset($config["js_files"])) {
+    foreach($config['js_files'] as $filename) {
+        $path = dirname(__DIR__) . $filename;
+        $JS[$filename] = @filemtime($path);
+    }
+}
+
 if (isset($shortname) && $shortname) {
     header("Link: <$shorturl>; rel=shorturl");
 }
@@ -83,6 +90,10 @@ if (!isset($config["languages"])) {
 
 <?php foreach($CSS as $filename => $modified): ?>
 <link rel="stylesheet" type="text/css" href="/cached.php?t=<?php echo $modified?>&amp;f=<?php echo $filename?>" media="screen">
+<?php endforeach ?>
+
+<?php foreach($JS as $filename => $modified): ?>
+<script type="text/javascript" src="/cached.php?t=<?php echo $modified?>&amp;f=<?php echo $filename?>"></script>
 <?php endforeach ?>
 
 <?php if (!empty($_SERVER["BASE_HREF"])): ?>
