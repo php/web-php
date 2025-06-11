@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom" xmlns:default="http://php.net/ns/news">
+    <title>CakeFest 2025 Madrid: The Official CakePHP Conference</title>
+    <id>https://www.php.net/archive/2025.php#2025-06-11-1</id>
+    <published>2025-06-11T09:44:39+00:00</published>
+    <updated>2025-06-11T09:44:39+00:00</updated>
+    <link href="https://www.php.net/conferences/index.php#2025-06-11-1" rel="alternate" type="text/html"/>
+    <link href="https://cakefest.org/" rel="via" type="text/html"/>
+    <default:finalTeaserDate xmlns="http://php.net/ns/news">2025-10-09</default:finalTeaserDate>
+    <category term="conferences" label="Conference announcement"/>
+    <default:newsImage xmlns="http://php.net/ns/news" link="https://cakefest.org/" title="CakeFest 2025 Madrid">cakefest-2017.png</default:newsImage>
+    <content type="xhtml">
+        <div xmlns="http://www.w3.org/1999/xhtml">
+            <p>
+                CakeFest is the official conference dedicated to the <b>CakePHP</b> framework and community. Whether
+                you're a seasoned developer or just starting out,
+                CakeFest offers two days of workshops, talks, networking, and learning from top contributors and
+                professionals in the <b>CakePHP</b> ecosystem.
+            </p>
+
+            <p>
+                In 2025, we’re celebrating 20 years of <b>CakePHP</b> - a major milestone in open-source history!
+            </p>
+            <p>
+                Quick links:
+            </p>
+            <ul>
+                <li>
+                    <a href="https://cakefest.org/schedule">CakeFest 2025 Schedule</a>
+                </li>
+                <li>
+                    <a href="https://cakefest.org/tickets">Get your CakeFest ticket</a>
+                </li>
+            </ul>
+            <p>
+                Join us in Madrid for this special anniversary edition
+                of CakeFest: connect with fellow developers, discover the latest in <b>CakePHP</b>, and enjoy an
+                unforgettable community experience.
+            </p>
+        </div>
+    </content>
+</entry>
