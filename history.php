@@ -1,7 +1,7 @@
 <?php
 $_SERVER['BASE_PAGE'] = 'history.php';
 include_once __DIR__ . '/include/prepend.inc';
-site_header('History of PHP', ['css' => 'history.css']);
+site_header('30 years of PHP', ['css' => 'history.css']);
 
 $path = __DIR__ . '/history.json';
 $events = json_decode(file_get_contents($path), true);
@@ -17,56 +17,42 @@ final readonly class HistoryEntry {
 
     public function renderHtml(): string
     {
-        if ($this->description === '') {
-            return <<<"HTML"
-                <div class="timeline-event">
-                    <header>
-                        <h3>$this->title</h3>
-                        <small>{$this->date->format("Y-m-d")}</small>
-                    </header>
-                    <p>{$this->renderLinkHtml()}</p>
-                </div>
-                HTML;
-        }
-
-        if ($this->priority === 1) {
-            return <<<"HTML"
-                <div class="timeline-event">
-                    <header>
-                        <h3>$this->title</h3>
-                        <small>{$this->date->format("Y-m-d")}</small>
-                    </header>
-                    <p>
-                        $this->description
-                        <br/>
-                        {$this->renderLinkHtml()}
-                    </p>
-                </div>
-                HTML;
-        }
-
-        return <<<"HTML"
+        $html = <<<"HTML"
             <article class="timeline-event">
-                <header>
-                    <h3>$this->title</h3>
+                <aside>
+                    {$this->date->format("M d")}
+                </aside>
+                <div>
+                    <header>
+                        <a href="$this->linkHref">
+                            <h3 class="importance-{$this->priority}">
+                                $this->title
+                            </h3>
+                        </a>
+            HTML;
+
+        if ($this->description !== '' && $this->priority !== 1) {
+            $html .= <<<"HTML"
                     <span class="timeline-tooltip">
                         <img src="/images/i.svg" alt="">
                         <span class="timeline-tooltip--text">$this->description</span>
                     </span>
-                    <small>{$this->date->format("Y-m-d")}</small>
-                </header>
-                <p>{$this->renderLinkHtml()}</p>
-            </article>
             HTML;
-    }
-
-    private function renderLinkHtml(): string
-    {
-        if ($this->linkHref === '') {
-            return '';
         }
 
-        return "<a href='" . htmlspecialchars($this->linkHref) . "'>Read more</a>";
+        $html .= <<<"HTML"
+
+                </header>
+            HTML;
+
+        if ($this->description !== '' && $this->priority === 1) {
+            $html .= "<p>$this->description</p>";
+        }
+
+        return $html . <<<"HTML"
+                </div>
+            </article>
+            HTML;
     }
 }
 
@@ -89,7 +75,7 @@ $SIDEBAR_DATA = <<<"HTML"
     HTML;
 ?>
 
-    <h1>History of PHP</h1>
+    <h1 class="title">30 years of PHP history</h1>
     <p>
         Welcome to the PHP Timeline — a curated historical journey of key milestones, releases, and ideas that shaped the PHP language over the years.
         Explore the highlights and contributions that helped PHP become one of the most widely used languages on the web.
@@ -97,7 +83,7 @@ $SIDEBAR_DATA = <<<"HTML"
     <div class="timeline">
 <?php
 foreach ($grouped as $year => $items) {
-    echo "<div class='timeline-year' id='year-$year'><h2>$year</h2>";
+    echo "<div class='timeline-year' id='year-$year'><h2 class='title'>$year</h2>";
     foreach ($items as $event) {
         echo $event->renderHtml();
     }

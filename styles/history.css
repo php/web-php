@@ -1,25 +1,32 @@
 .timeline {
-    border-left: 2px solid #ccc;
     margin: 2em 0;
-    padding-left: 1em;
 }
 
 .timeline-year {
+    border-left: 2px solid #ccc;
+    padding-left: 1em;
     margin-bottom: 2em;
 }
 
-.timeline-year > h2 {
+.timeline-year h2 {
     font-size: 1.5em;
     margin: 1em 0 0.5em;
 }
 
 .timeline-event {
-    border-left: 2px solid #0071bc;
-    margin-left: 1em;
-    padding-left: 1em;
+    display: grid;
+    grid-template-columns: 3rem 1fr;
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
 }
 
-.timeline-event > header {
+.timeline-event aside {
+    color: #333333;
+    font-size: 0.8rem;
+    border-right: 2px solid steelblue;
+}
+
+.timeline-event header {
     align-items: center;
     display: flex;
     flex-direction: row;
@@ -29,7 +36,7 @@
     margin-bottom: 0.5rem;
 }
 
-.timeline-event > header:after {
+.timeline-event header:after {
     border-bottom: 1px dotted;
     content: " ";
     display: table;
@@ -37,15 +44,40 @@
     width: 100%;
 }
 
-.timeline-event > header > h3 {
+.timeline-event header a {
+    text-underline: none;
+}
+
+.timeline-event header h3 {
     display: inline-block;
-    font-size: 1.2em;
-    line-height: 1.8rem;
+    font-size: 1em;
+    line-height: 1.7rem;
     margin: 0;
 }
 
-.timeline-event > header > h3:after {
+.timeline-event header h3.importance-1 {
+    font-size: 1.3em;
+}
+
+.timeline-event header h3.importance-2 {
+}
+
+.timeline-event header h3.importance-3,
+.timeline-event header h3.importance-4
+{
+    font-weight: 400;
+}
+
+.timeline-event header h3:after {
     display: none;
+}
+
+.timeline-event header small {
+    color: #c3c3c3;
+}
+
+.timeline-event p {
+    margin: 0 0 0.5rem 0;
 }
 
 .timeline-tooltip {
