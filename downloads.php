@@ -7,8 +7,6 @@ include_once __DIR__ . '/include/version.inc';
 // Try to make this page non-cached
 header_nocache();
 
-$SHOW_COUNT = 4;
-
 $SIDEBAR_DATA = '
 <div class="panel">
   <a href="/supported-versions.php">Supported Versions</a>
@@ -37,15 +35,85 @@ site_header("Downloads",
             ],
         ],
         "current" => "downloads",
+        "js_files" => [
+            "/js/version-choice.js",
+        ],
     ],
 );
+
+function option(string $id, string $value, string $desc)
+{
+    $selected = '';
+	if (array_key_exists($id, $_GET) && $_GET[$id] === $value) {
+        $selected = ' selected';
+    }
+
+	echo <<<ENDOPT
+	<option value="{$value}"{$selected}>{$desc}</option>
+
+ENDOPT;
+}
 ?>
 <h1>Downloads &amp; Installation Instructions</h1>
 
+<form>
+Get PHP for
+<select id="os" name="os">
+    <?= option('os', 'linux', 'Linux'); ?>
+    <?= option('os', 'osx', 'OSX'); ?>
+    <?= option('os', 'windows', 'Windows'); ?>
+</select>
+
+<select id="osvariant" name="osvariant">
+	<?= option('osvariant', 'linux-deb-buster', 'Debian Buster'); ?>
+	<?= option('osvariant', 'linux-deb-bullseye', 'Debian Bullseye'); ?>
+	<?= option('osvariant', 'linux-deb-bookworm', 'Debian Bookworm'); ?>
+	<?= option('osvariant', 'linux-rpm-fedora41', 'Fedora 41'); ?>
+	<?= option('osvariant', 'linux-rpm-fedora42', 'Fedora 42'); ?>
+	<?= option('osvariant', 'linux-rpm-redhat', 'RedHat'); ?>
+	<?= option('osvariant', 'osx-latest', 'Latest'); ?>
+	<?= option('osvariant', 'windows-wsl', 'with WSL'); ?>
+	<?= option('osvariant', 'windows-normal', 'without WSL'); ?>
+</select>
+
+to work on
+<select id="usage" name="usage">
+	<?= option('usage', 'web', 'Web Development'); ?>
+	<?= option('usage', 'cli', 'Command Line Libraries'); ?>
+	<?= option('usage', 'fw-drupal', 'Drupal'); ?>
+	<?= option('usage', 'fw-laravel', 'Laravel'); ?>
+	<?= option('usage', 'fw-symfony', 'Symfony'); ?>
+</select>
+
+with
+<select id="version" name="version">
+	<?= option('version', 'php84', 'version 8.4'); ?>
+	<?= option('version', 'php83', 'version 8.3'); ?>
+	<?= option('version', 'php82', 'version 8.2'); ?>
+	<?= option('version', 'php81', 'version 8.1'); ?>
+	<?= option('version', 'default', 'OS default version'); ?>
+</select>
+
+<input type='submit' value="Go!"></input>
+
+<br/>
+
+I want to have multiple versions at the same time:
+<input type="checkbox" id="multiversion" name="multiversion" label="I want to have multiple versions at the same time">
+</input>
+</form>
+
+<h2>Instructions</h2>
+<div id="instructions">
+<?php include 'downloads-get-instructions.php'; ?>
+</div>
+
+<!--
 <p>
     <a href="/manual/install.general.php">Installing PHP</a> is covered
     thoroughly in the PHP documentation.
 </p>
+-->
 
 <h2>Binaries</h2>
 
@@ -66,49 +134,7 @@ site_header("Downloads",
 </p>
 
 <h2>Source Code</h2>
-<?php $i = 0; foreach ($RELEASES as $MAJOR => $major_releases): /* major releases loop start */
-        $releases = array_slice($major_releases, 0, $SHOW_COUNT);
-?>
-<a id="v<?php echo $MAJOR; ?>"></a>
-<?php foreach ($releases as $v => $a): ?>
-  <?php $mver = substr($v, 0, strrpos($v, '.')); ?>
-  <?php $stable = $i++ === 0 ? "Current Stable" : "Old Stable"; ?>
-
-  <h3 id="v<?php echo $v; ?>" class="title">
-    <span class="release-state"><?php echo $stable; ?></span>
-    PHP <?php echo $v; ?>
-    (<a href="/ChangeLog-<?php echo $MAJOR; ?>.php#<?php echo urlencode($v); ?>" class="changelog">Changelog</a>)
-  </h3>
-  <div class="content-box">
-
-    <ul>
-      <?php foreach ($a['source'] as $rel): ?>
-        <li>
-          <?php download_link($rel['filename'], $rel['filename']); ?>
-          <span class="releasedate"><?php echo date('d M Y', strtotime($rel['date'])); ?></span>
-          <?php
-            if (isset($rel['md5']))    echo '<span class="md5sum">', $rel['md5'], '</span>';
-            if (isset($rel['sha256'])) echo '<span class="sha256">', $rel['sha256'], '</span>';
-           ?>
-          <?php if (isset($rel['note']) && $rel['note']): ?>
-            <p>
-              <strong>Note:</strong>
-              <?php echo $rel['note']; ?>
-            </p>
-          <?php endif; ?>
-        </li>
-      <?php endforeach; ?>
-      <li>
-        <a href="https://windows.php.net/download#php-<?php echo urlencode($mver); ?>">
-          Windows downloads
-        </a>
-      </li>
-    </ul>
-
-    <a href="#gpg-<?php echo $mver; ?>">GPG Keys for PHP <?php echo $mver; ?></a>
-  </div>
-<?php endforeach; ?>
-<?php endforeach; /* major releases loop end */ ?>
+<?php show_source_releases(); ?>
 
 <hr>
 <h2>GPG Keys</h2>
