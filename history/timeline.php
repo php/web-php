@@ -1,9 +1,9 @@
 <?php
-$_SERVER['BASE_PAGE'] = 'history.php';
-include_once __DIR__ . '/include/prepend.inc';
+$_SERVER['BASE_PAGE'] = 'history/timeline.php';
+include_once __DIR__ . '/../include/prepend.inc';
 site_header('30 years of PHP', ['css' => 'history.css']);
 
-$path = __DIR__ . '/history.json';
+$path = __DIR__ . '/timeline-data.json';
 $events = json_decode(file_get_contents($path), true);
 
 final readonly class HistoryEntry {
