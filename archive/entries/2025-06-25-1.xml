@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+  <title>PHP 8.5.0 Alpha 0 available for testing</title>
+  <id>https://www.php.net/archive/2025.php#2025-06-25-1</id>
+  <published>2025-06-25T01:20:28+00:00</published>
+  <updated>2025-06-25T01:20:28+00:00</updated>
+  <link href="https://www.php.net/index.php#2025-06-25-1" rel="alternate" type="text/html"/>
+  <link href="https://www.php.net/archive/2025.php#2025-06-25-1" rel="via" type="text/html"/>
+  <category term="frontpage" label="PHP.net frontpage news"/>
+  <content type="xhtml">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+     <p>The PHP team is pleased to announce the FAKE testing release of PHP 8.5.0, Alpha 0. This DOES NOT start the PHP 8.5 release cycle, the rough outline of which is specified in the <a href="https://wiki.php.net/todo/php85">PHP Wiki</a>.</p>
+     <p>For source downloads of PHP 8.5.0 Alpha 0 please visit the <a href="https://downloads.php.net/~daniels/">download page</a>.</p>
+     <p>Please carefully test this version and report any issues found <a href="https://github.com/php/php-src/issues/new?template=bug_report.yml">on GitHub</a>.</p>
+     <p><strong>Please DO NOT use this version in production, it is an early test version.</strong></p>
+     <p>For more information on the new features and other changes, you can read the <a href="https://github.com/danielescherzer/php-src/blob/php-8.5.0alpha0/NEWS">NEWS</a> file, or the <a href="https://github.com/danielescherzer/php-src/blob/php-8.5.0alpha0/UPGRADING">UPGRADING</a> file for a complete list of upgrading notes. These files can also be found in the release archive.</p>
+     <p>The next release will be THE REAL Alpha 1, planned for 3 Jul 2025.</p>
+     <p>The signatures for the release can be found in the <a href="https://gist.github.com/DanielEScherzer/4373bd69dbc01bd25bf206f9c6d790b4">manifest</a> or on the <a href="https://www.php.net/release-candidates.php">Release Candidate page</a>.</p>
+     <p>Thank you for helping us make PHP better.</p>
+     
+    </div>
+  </content>
+</entry>
