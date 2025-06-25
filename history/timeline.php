@@ -91,5 +91,22 @@ foreach ($grouped as $year => $items) {
 }
 ?>
     </div>
+    <h3 class="title">Special thanks for helping us prepare the timeline go to</h3>
+    <ul class="timeline-thanks">
+        <li><a href="https://x.com/peter_kokot" target="_blank">Peter Kokot</a></li>
+        <li><a href="https://x.com/derickr" target="_blank">Derick Rethans</a></li>
+        <li><a href="https://x.com/sam_dark" target="_blank">Alexander Makarov</a></li>
+        <li><a href="https://x.com/andigutmans" target="_blank">Andi Gutmans</a></li>
+        <li><a href="https://x.com/dstogov" target="_blank">Dmitry Stogov</a></li>
+        <li><a href="https://x.com/vudaltsov" target="_blank">Valentin Udaltsov</a></li>
+        <li><a href="https://x.com/s_bergmann" target="_blank">Sebastian Bergmann</a></li>
+        <li><a href="https://jetbrains.com" target="_blank">JetBrains team</a></li>
+        <li><a href="https://accesto.com" target="_blank">Accesto team</a></li>
+    </ul>
+    <h3 class="title">Disclaimer</h3>
+    <p>
+        The Timeline data is opensource and available on <a href="https://github.com/php/web-php/blob/master/history/timeline-data.json" target="_blank">GitHub</a>.
+        If you found a mistake, please feel free to create a pull-request.
+    </p>
 
 <?php site_footer(['elephpants' => true, 'sidebar' => $SIDEBAR_DATA]);
