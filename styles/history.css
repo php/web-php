@@ -123,6 +123,10 @@
     visibility: visible;
 }
 
+.timeline-thanks {
+    font-size: 0.875rem;
+}
+
 @media (min-width: 768px) {
     .timeline-tooltip {
         position: relative;
