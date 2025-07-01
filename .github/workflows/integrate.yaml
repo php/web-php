@@ -27,7 +27,7 @@ jobs:
         uses: "shivammathur/setup-php@v2"
         with:
           coverage: "xdebug"
-          extensions: "none, curl, dom, json, mbstring, tokenizer, xml, xmlwriter"
+          extensions: "none, curl, dom, json, mbstring, tokenizer, xml, xmlwriter, iconv"
           php-version: "${{ matrix.php-version }}"
 
       - name: "Set up problem matchers for PHP"
@@ -72,7 +72,7 @@ jobs:
         uses: "shivammathur/setup-php@v2"
         with:
           coverage: "none"
-          extensions: "none, curl, dom, json, mbstring, tokenizer, xml, xmlwriter"
+          extensions: "none, curl, dom, json, mbstring, tokenizer, xml, xmlwriter, iconv"
           php-version: "${{ matrix.php-version }}"
 
       - name: "Set up problem matchers for PHP"
@@ -128,7 +128,7 @@ jobs:
         uses: "shivammathur/setup-php@v2"
         with:
           coverage: "none"
-          extensions: "none, curl, dom, json, mbstring, tokenizer, xml, xmlwriter"
+          extensions: "none, curl, dom, json, mbstring, tokenizer, xml, xmlwriter, iconv"
           php-version: "${{ matrix.php-version }}"
 
       - name: "Set up problem matchers for PHP"
