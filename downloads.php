@@ -96,7 +96,9 @@ if (!array_key_exists('osvariant', $options) || !array_key_exists($options['osva
         I want to use PHP for
         <select id="usage" name="usage">
             <?php foreach ($usage as $value => $description) { ?>
-                <?= option($value, $description); ?>
+                <?= option($value, $description, [
+                    'selected' => array_key_exists('usage', $options) && $options['usage'] === $value,
+                ]); ?>
             <?php } ?>
         </select>.
     </div>
