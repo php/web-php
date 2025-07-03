@@ -7,6 +7,8 @@ site_header('PHP 8.4.10 Release Announcement');
 
 <p>The PHP development team announces the immediate availability of PHP 8.4.10. This is a security release.</p>
 
+<p>Version 8.4.9 was skipped because it was tagged without including security patches.</p>
+
 <p>All PHP 8.4 users are encouraged to upgrade to this version.</p>
 
 <p>For source downloads of PHP 8.4.10 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
