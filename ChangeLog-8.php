@@ -9,6 +9,112 @@ changelog_header(8, $MINOR_VERSIONS);
 
 <a id="PHP_8_4"></a>
 
+<section class="version" id="8.4.10"><!-- {{{ 8.4.10 -->
+<h3>Version 8.4.10</h3>
+<b><?php release_date('03-Jul-2025'); ?></b>
+<ul><li>BcMath:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 18641); ?> (Accessing a BcMath\Number property by ref crashes).</li>
+</ul></li>
+<li>Core:
+<ul>
+  <li>Fixed bugs <?php githubissuel('php/php-src', 17711); ?> and <?php githubissuel('php/php-src', 18022); ?> (Infinite recursion on deprecated attribute evaluation) and <?php githubissuel('php/php-src', 18464); ?> (Recursion protection for deprecation constants not released on bailout).</li>
+  <li>Fixed <?php githubissuel('php/php-src', 18695); ?> (zend_ast_export() - float number is not preserved).</li>
+  <li>Fix handling of references in zval_try_get_long().</li>
+  <li>Do not delete main chunk in zend_gc.</li>
+  <li>Fix compile issues with zend_alloc and some non-default options.</li>
+</ul></li>
+<li>Curl:
+<ul>
+  <li>Fix memory leak when setting a list via curl_setopt fails.</li>
+</ul></li>
+<li>Date:
+<ul>
+  <li>Fix leaks with multiple calls to DatePeriod iterator current().</li>
+</ul></li>
+<li>DOM:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 18744); ?> (classList works not correctly if copy HTMLElement by clone keyword).</li>
+</ul></li>
+<li>FPM:
+<ul>
+  <li>Fixed <?php githubissuel('php/php-src', 18662); ?> (fpm_get_status segfault).</li>
+</ul></li>
+<li>Hash:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 14551); ?> (PGO build fails with xxhash).</li>
+</ul></li>
+<li>Intl:
+<ul>
+  <li>Fix memory leak in intl_datetime_decompose() on failure.</li>
+  <li>Fix memory leak in locale lookup on failure.</li>
+</ul></li>
+<li>Opcache:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 18743); ?> (Incompatibility in Inline TLS Assembly on Alpine 3.22).</li>
+</ul></li>
+<li>ODBC:
+<ul>
+  <li>Fix memory leak on php_odbc_fetch_hash() failure.</li>
+</ul></li>
+<li>OpenSSL:
+<ul>
+  <li>Fix memory leak of X509_STORE in php_openssl_setup_verify() on failure.</li>
+  <li><?php bugfix(74796); ?> (Requests through http proxy set peer name).</li>
+</ul></li>
+<li>PGSQL:
+<ul>
+  <li>Fixed <?php githubsecurityl('php/php-src', 'hrwm-9436-5mv3'); ?> (pgsql extension does not check for errors during escaping). (CVE-2025-1735)</li>
+  <li>Fix warning not being emitted when failure to cancel a query with pg_cancel_query().</li>
+</ul></li>
+<li>PDO ODBC:
+<ul>
+  <li>Fix memory leak if WideCharToMultiByte() fails.</li>
+</ul></li>
+<li>PDO Sqlite:
+<ul>
+  <li>Fixed memory leak with Pdo_Sqlite::createCollation when the callback has an incorrect return type.</li>
+</ul></li>
+<li>Phar:
+<ul>
+  <li>Add missing filter cleanups on phar failure.</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 18642); ?> (Signed integer overflow in ext/phar fseek).</li>
+</ul></li>
+<li>PHPDBG:
+<ul>
+  <li>Fix 'phpdbg --help' segfault on shutdown with USE_ZEND_ALLOC=0.</li>
+</ul></li>
+<li>Random:
+<ul>
+  <li>Fix reference type confusion and leak in user random engine.</li>
+</ul></li>
+<li>Readline:
+<ul>
+  <li>Fix memory leak when calloc() fails in php_readline_completion_cb().</li>
+</ul></li>
+<li>SimpleXML:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 18597); ?> (Heap-buffer-overflow in zend_alloc.c when assigning string with UTF-8 bytes).</li>
+</ul></li>
+<li>SOAP:
+<ul>
+  <li>Fix memory leaks in php_http.c when call_user_function() fails.</li>
+  <li>Fixed <?php githubsecurityl('php/php-src', '453j-q27h-5p8x'); ?> (NULL Pointer Dereference in PHP SOAP Extension via Large XML Namespace Prefix). (CVE-2025-6491)</li>
+</ul></li>
+<li>Standard:
+<ul>
+  <li>Fixed <?php githubsecurityl('php/php-src', '3cr5-j632-f35r'); ?> (Null byte termination in hostnames). (CVE-2025-1220)</li>
+</ul></li>
+<li>Tidy:
+<ul>
+  <li>Fix memory leak in tidy output handler on error.</li>
+  <li>Fix tidyOptIsReadonly deprecation, using tidyOptGetCategory.</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
+
+
 <section class="version" id="8.4.8"><!-- {{{ 8.4.8 -->
 <h3>Version 8.4.8</h3>
 <b><?php release_date('05-Jun-2025'); ?></b>
