@@ -508,6 +508,41 @@ div.classsynopsisinfo_comment {
     margin-top:1.5rem;
 }
 
+.phpcode {
+    background-color: #FFF;
+    box-shadow: inset 0 0 0 1px rgba(0, 0, 0, .15);
+    border-radius: 0 0 2px 2px;
+    overflow-x: auto;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    padding: 0 1.5rem;
+    box-sizing: border-box;
+    margin: 0;
+}
+
+.instructions {
+    margin-bottom: 2rem;
+}
+
+.instructions p {
+    margin: 1rem 0;
+}
+
+.instructions-form {
+    display: flex;
+    flex-direction: column;
+    gap: .75rem;
+    margin-bottom: 2rem;
+}
+
+.instructions-label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
 .warn {
     padding: .75rem 1rem;
     margin: 1.5rem 0 1.5rem 1.5rem;

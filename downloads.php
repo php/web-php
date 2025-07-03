@@ -56,64 +56,67 @@ ENDOPT;
 ?>
 <h1>Downloads &amp; Installation Instructions</h1>
 
-<form>
-Get PHP for
-<select id="os" name="os">
-    <?= option('os', 'linux', 'Linux'); ?>
-    <?= option('os', 'osx', 'OSX'); ?>
-    <?= option('os', 'windows', 'Windows'); ?>
-</select>
+<form class="instructions-form">
+    <div class="instructions-row">
+        I want to use PHP for
+        <select id="usage" name="usage">
+            <?= option('usage', 'web', 'Web Development'); ?>
+            <?= option('usage', 'cli', 'Command Line Libraries'); ?>
+            <?= option('usage', 'fw-drupal', 'Drupal'); ?>
+            <?= option('usage', 'fw-laravel', 'Laravel'); ?>
+            <?= option('usage', 'fw-symfony', 'Symfony'); ?>
+        </select>.
+    </div>
 
-<select id="osvariant" name="osvariant">
-	<?= option('osvariant', 'linux-deb-buster', 'Debian Buster'); ?>
-	<?= option('osvariant', 'linux-deb-bullseye', 'Debian Bullseye'); ?>
-	<?= option('osvariant', 'linux-deb-bookworm', 'Debian Bookworm'); ?>
-	<?= option('osvariant', 'linux-rpm-fedora41', 'Fedora 41'); ?>
-	<?= option('osvariant', 'linux-rpm-fedora42', 'Fedora 42'); ?>
-	<?= option('osvariant', 'linux-rpm-redhat', 'RedHat'); ?>
-	<?= option('osvariant', 'osx-latest', 'Latest'); ?>
-	<?= option('osvariant', 'windows-wsl', 'with WSL'); ?>
-	<?= option('osvariant', 'windows-normal', 'without WSL'); ?>
-</select>
+    <div class="instructions-row">
+        I work with
+        <select id="os" name="os">
+            <?= option('os', 'linux', 'Linux'); ?>
+            <?= option('os', 'osx', 'OSX'); ?>
+            <?= option('os', 'windows', 'Windows'); ?>
+        </select>
+        <select id="osvariant" name="osvariant">
+            <?= option('osvariant', 'linux-deb-buster', 'Debian Buster'); ?>
+            <?= option('osvariant', 'linux-deb-bullseye', 'Debian Bullseye'); ?>
+            <?= option('osvariant', 'linux-deb-bookworm', 'Debian Bookworm'); ?>
+            <?= option('osvariant', 'linux-rpm-fedora41', 'Fedora 41'); ?>
+            <?= option('osvariant', 'linux-rpm-fedora42', 'Fedora 42'); ?>
+            <?= option('osvariant', 'linux-rpm-redhat', 'RedHat'); ?>
+            <?= option('osvariant', 'osx-latest', 'Latest'); ?>
+            <?= option('osvariant', 'windows-wsl', 'with WSL'); ?>
+            <?= option('osvariant', 'windows-normal', 'without WSL'); ?>
+        </select>,
+        and use
+        <select id="version" name="version">
+            <?= option('version', 'php84', 'version 8.4'); ?>
+            <?= option('version', 'php83', 'version 8.3'); ?>
+            <?= option('version', 'php82', 'version 8.2'); ?>
+            <?= option('version', 'php81', 'version 8.1'); ?>
+            <?= option('version', 'default', 'OS default version'); ?>
+        </select>
+    </div>
 
-to work on
-<select id="usage" name="usage">
-	<?= option('usage', 'web', 'Web Development'); ?>
-	<?= option('usage', 'cli', 'Command Line Libraries'); ?>
-	<?= option('usage', 'fw-drupal', 'Drupal'); ?>
-	<?= option('usage', 'fw-laravel', 'Laravel'); ?>
-	<?= option('usage', 'fw-symfony', 'Symfony'); ?>
-</select>
+    <label for="multiversion" class="instructions-label">
+        I want to be able to use multiple PHP versions:
+        <input type="checkbox" id="multiversion" name="multiversion" value="Y"
+            <?= array_key_exists('multiversion', $_GET) && $_GET['multiversion'] === 'Y' ? 'checked' : '' ?>/>
+    </label>
 
-with
-<select id="version" name="version">
-	<?= option('version', 'php84', 'version 8.4'); ?>
-	<?= option('version', 'php83', 'version 8.3'); ?>
-	<?= option('version', 'php82', 'version 8.2'); ?>
-	<?= option('version', 'php81', 'version 8.1'); ?>
-	<?= option('version', 'default', 'OS default version'); ?>
-</select>
+    <label for="source" class="instructions-label">
+        I want to compile everything from source:
+        <input type="checkbox" id="source" name="source" value="Y"
+            <?= array_key_exists('source', $_GET) && $_GET['source'] === 'Y' ? 'checked' : '' ?>/>
+    </label>
 
-<input type='submit' value="Go!"></input>
-
-<br/>
-
-I want to have multiple versions at the same time:
-<input type="checkbox" id="multiversion" name="multiversion" label="I want to have multiple versions at the same time">
-</input>
+    <div>
+        <button type="submit" class="button">Get Instructions</button>
+    </div>
 </form>
 
 <h2>Instructions</h2>
-<div id="instructions">
+<div id="instructions" class="instructions">
 <?php include 'downloads-get-instructions.php'; ?>
 </div>
-
-<!--
-<p>
-    <a href="/manual/install.general.php">Installing PHP</a> is covered
-    thoroughly in the PHP documentation.
-</p>
--->
 
 <h2>Binaries</h2>
 
