@@ -45,10 +45,11 @@ function option(string $value, string $desc, $attributes = []): string
 
 $usage = [
     'web' => 'Web Development',
-    'cli' => 'Command Line Libraries',
-    'fw-drupal' => 'Drupal',
-    'fw-laravel' => 'Laravel',
-    'fw-symfony' => 'Symfony',
+    'cli' => 'CLI/Library Development',
+    'fw-drupal' => 'Drupal Development',
+    'fw-laravel' => 'Laravel Development',
+    'fw-symfony' => 'Symfony Development',
+    'fw-wordpress' => 'WordPress Development',
 ];
 
 $os = [
@@ -76,6 +77,14 @@ $os = [
             'windows-normal' => 'Windows without WSL',
         ],
     ],
+];
+
+$versions = [
+    'php84' => 'version 8.4',
+    'php83' => 'version 8.3',
+    'php82' => 'version 8.2',
+    'php81' => 'version 8.1',
+    'default' => 'OS default version',
 ];
 
 $defaults = [
@@ -124,11 +133,11 @@ if (!array_key_exists('osvariant', $options) || !array_key_exists($options['osva
         <?php } ?>,
         and use
         <select id="version" name="version">
-            <?= option('php84', 'version 8.4'); ?>
-            <?= option('php83', 'version 8.3'); ?>
-            <?= option('php82', 'version 8.2'); ?>
-            <?= option('php81', 'version 8.1'); ?>
-            <?= option('default', 'OS default version'); ?>
+            <?php foreach ($versions as $value => $version) { ?>
+                <?= option($value, $version, [
+                    'selected' => array_key_exists('version', $options) && $options['version'] === $value,
+                ]); ?>
+            <?php } ?>
         </select>
     </div>
 
