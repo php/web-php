@@ -35,82 +35,116 @@ site_header("Downloads",
             ],
         ],
         "current" => "downloads",
-        "js_files" => [
-            "/js/version-choice.js",
-        ],
     ],
 );
 
-function option(string $id, string $value, string $desc)
+function option(string $value, string $desc, $attributes = []): string
 {
-    $selected = '';
-	if (array_key_exists($id, $_GET) && $_GET[$id] === $value) {
-        $selected = ' selected';
-    }
+    return '<option value="' . $value . '"' . implode(' ', array_keys(array_filter($attributes))) . '>' . $desc . '</option>';
+}
 
-	echo <<<ENDOPT
-	<option value="{$value}"{$selected}>{$desc}</option>
+$usage = [
+    'web' => 'Web Development',
+    'cli' => 'Command Line Libraries',
+    'fw-drupal' => 'Drupal',
+    'fw-laravel' => 'Laravel',
+    'fw-symfony' => 'Symfony',
+];
 
-ENDOPT;
+$os = [
+    'linux' => [
+        'name' => 'Linux',
+        'variants' => [
+            'linux-deb-buster' => 'Debian Buster',
+            'linux-deb-bullseye' => 'Debian Bullseye',
+            'linux-deb-bookworm' => 'Debian Bookworm',
+            'linux-rpm-fedora41' => 'Fedora 41',
+            'linux-rpm-fedora42' => 'Fedora 42',
+            'linux-rpm-redhat' => 'RedHat',
+        ],
+    ],
+    'osx' => [
+        'name' => 'macOS',
+        'variants' => [
+            'osx-latest' => 'macOS Latest',
+        ],
+    ],
+    'windows' => [
+        'name' => 'Windows',
+        'variants' => [
+            'windows-wsl' => 'Windows with WSL',
+            'windows-normal' => 'Windows without WSL',
+        ],
+    ],
+];
+
+$defaults = [
+    'os' => 'linux',
+    'version' => 'php84',
+    'usage' => 'web',
+];
+
+$options = array_merge($defaults, $_GET);
+if (!array_key_exists('osvariant', $options) || !array_key_exists($options['osvariant'], $os[$options['os']]['variants'])) {
+    $options['osvariant'] = array_key_first($os[$options['os']]['variants']);
 }
 ?>
 <h1>Downloads &amp; Installation Instructions</h1>
 
-<form class="instructions-form">
+    <form class="instructions-form" id="instructions-form">
     <div class="instructions-row">
         I want to use PHP for
         <select id="usage" name="usage">
-            <?= option('usage', 'web', 'Web Development'); ?>
-            <?= option('usage', 'cli', 'Command Line Libraries'); ?>
-            <?= option('usage', 'fw-drupal', 'Drupal'); ?>
-            <?= option('usage', 'fw-laravel', 'Laravel'); ?>
-            <?= option('usage', 'fw-symfony', 'Symfony'); ?>
+            <?php foreach ($usage as $value => $description) { ?>
+                <?= option($value, $description); ?>
+            <?php } ?>
         </select>.
     </div>
 
     <div class="instructions-row">
         I work with
         <select id="os" name="os">
-            <?= option('os', 'linux', 'Linux'); ?>
-            <?= option('os', 'osx', 'OSX'); ?>
-            <?= option('os', 'windows', 'Windows'); ?>
+            <?php foreach ($os as $value => $item) { ?>
+                <?= option($value, $item['name'], [
+                    'selected' => array_key_exists('os', $options) && $options['os'] === $value,
+                ]); ?>
+            <?php } ?>
         </select>
-        <select id="osvariant" name="osvariant">
-            <?= option('osvariant', 'linux-deb-buster', 'Debian Buster'); ?>
-            <?= option('osvariant', 'linux-deb-bullseye', 'Debian Bullseye'); ?>
-            <?= option('osvariant', 'linux-deb-bookworm', 'Debian Bookworm'); ?>
-            <?= option('osvariant', 'linux-rpm-fedora41', 'Fedora 41'); ?>
-            <?= option('osvariant', 'linux-rpm-fedora42', 'Fedora 42'); ?>
-            <?= option('osvariant', 'linux-rpm-redhat', 'RedHat'); ?>
-            <?= option('osvariant', 'osx-latest', 'Latest'); ?>
-            <?= option('osvariant', 'windows-wsl', 'with WSL'); ?>
-            <?= option('osvariant', 'windows-normal', 'without WSL'); ?>
-        </select>,
+
+        <?php if (array_key_exists('os', $options) && array_key_exists('osvariant', $options)) { ?>
+            <select id="osvariant" name="osvariant">
+                <?php foreach ($os[$options['os']]['variants'] as $value => $description) { ?>
+                    <?= option($value, $description, [
+                        'selected' => $options['osvariant'] === $value,
+                    ]); ?>
+                <?php } ?>
+            </select>
+        <?php } ?>,
         and use
         <select id="version" name="version">
-            <?= option('version', 'php84', 'version 8.4'); ?>
-            <?= option('version', 'php83', 'version 8.3'); ?>
-            <?= option('version', 'php82', 'version 8.2'); ?>
-            <?= option('version', 'php81', 'version 8.1'); ?>
-            <?= option('version', 'default', 'OS default version'); ?>
+            <?= option('php84', 'version 8.4'); ?>
+            <?= option('php83', 'version 8.3'); ?>
+            <?= option('php82', 'version 8.2'); ?>
+            <?= option('php81', 'version 8.1'); ?>
+            <?= option('default', 'OS default version'); ?>
         </select>
     </div>
 
     <label for="multiversion" class="instructions-label">
         I want to be able to use multiple PHP versions:
         <input type="checkbox" id="multiversion" name="multiversion" value="Y"
-            <?= array_key_exists('multiversion', $_GET) && $_GET['multiversion'] === 'Y' ? 'checked' : '' ?>/>
+            <?= array_key_exists('multiversion', $options) && $options['multiversion'] === 'Y' ? 'checked' : '' ?>/>
     </label>
 
     <label for="source" class="instructions-label">
         I want to compile everything from source:
         <input type="checkbox" id="source" name="source" value="Y"
-            <?= array_key_exists('source', $_GET) && $_GET['source'] === 'Y' ? 'checked' : '' ?>/>
+            <?= array_key_exists('source', $options) && $options['source'] === 'Y' ? 'checked' : '' ?>/>
     </label>
 
-    <div>
-        <button type="submit" class="button">Get Instructions</button>
-    </div>
+    <noscript>
+        <button type="submit" class="button">Update Instructions</button>
+    </noscript>
 </form>
 
 <h2>Instructions</h2>
@@ -155,6 +189,16 @@ to verify the tags:
     available.
   </a>
 </p>
+
+    <script>
+        window.onload = function () {
+            let form = document.getElementById("instructions-form")
+
+            form.addEventListener('change', function () {
+                form.submit();
+            });
+        }
+    </script>
 
 <?php
 site_footer(['sidebar' => $SIDEBAR_DATA]);
