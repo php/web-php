@@ -5871,6 +5871,26 @@ changelog_header(8, $MINOR_VERSIONS);
 
 <a id="PHP_8_1"></a>
 
+<section class="version" id="8.1.33"><!-- {{{ 8.1.33 -->
+<h3>Version 8.1.33</h3>
+<b><?php release_date('03-Jul-2025'); ?></b>
+<ul><li>PGSQL:
+<ul>
+  <li>Fixed <?php githubsecurityl('php/php-src', 'hrwm-9436-5mv3'); ?> (pgsql extension does not check for errors during escaping). (CVE-2025-1735)</li>
+</ul></li>
+<li>SOAP:
+<ul>
+  <li>Fixed <?php githubsecurityl('php/php-src', '453j-q27h-5p8x'); ?> (NULL Pointer Dereference in PHP SOAP Extension via Large XML Namespace Prefix). (CVE-2025-6491)</li>
+</ul></li>
+<li>Standard:
+<ul>
+  <li>Fixed <?php githubsecurityl('php/php-src', '3cr5-j632-f35r'); ?> (Null byte termination in hostnames). (CVE-2025-1220)</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
+
+
 <section class="version" id="8.1.32"><!-- {{{ 8.1.32 -->
 <h3>Version 8.1.32</h3>
 <b><?php release_date('13-Mar-2025'); ?></b>
