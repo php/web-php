@@ -1,8 +1,9 @@
 <?php
 
+use phpweb\News\NewsHandler;
+
 $_SERVER['BASE_PAGE'] = 'conferences/index.php';
 include_once __DIR__ . '/../include/prepend.inc';
-include_once __DIR__ . '/../include/pregen-news.inc';
 
 mirror_setcookie("LAST_NEWS", $_SERVER["REQUEST_TIME"], 60 * 60 * 24 * 365);
 site_header("PHP Conferences around the world", [
@@ -13,7 +14,7 @@ site_header("PHP Conferences around the world", [
 
 $content = "<div class='home-content'>";
 $frontpage = [];
-foreach ($NEWS_ENTRIES as $entry) {
+foreach ((new NewsHandler())->getPregeneratedNews() as $entry) {
     foreach ($entry["category"] as $category) {
         if ($category["term"] == "cfp") {
             $frontpage[] = $entry;

@@ -1,8 +1,9 @@
 <?php
 
+use phpweb\News\NewsHandler;
+
 $_SERVER['BASE_PAGE'] = 'archive/2024.php';
 include_once __DIR__ . '/../include/prepend.inc';
-include_once __DIR__ . '/../include/pregen-news.inc';
 news_archive_sidebar();
 site_header("News Archive - 2024");
 ?>
@@ -17,5 +18,5 @@ site_header("News Archive - 2024");
 
 <?php
 
-print_news($NEWS_ENTRIES, null, 500, 2024);
+print_news((new NewsHandler())->getPregeneratedNews(), null, 500, 2024);
 site_footer(['elephpants' => true, 'sidebar' => $SIDEBAR_DATA]);
