@@ -1,11 +1,11 @@
 <?php
-if ($_GET['os'] === 'windows' && $_GET['osvariant'] === 'windows-wsl') {
-    $_GET['os'] = 'linux';
-    $_GET['osvariant'] = 'linux-deb-bookworm';
-    $_GET['multiversion'] = 'true';
+if ($options['os'] === 'windows' && $options['osvariant'] === 'windows-wsl') {
+    $options['os'] = 'linux';
+    $options['osvariant'] = 'linux-deb-bookworm';
+    $options['multiversion'] = 'true';
 }
-if ($_GET['os'] === 'osx') {
-    $version = match($_GET['version']) {
+if ($options['os'] === 'osx') {
+    $version = match($options['version']) {
         'php84' => '@8.4',
         'php83' => '@8.3',
         'php82' => '@8.2',
@@ -13,7 +13,7 @@ if ($_GET['os'] === 'osx') {
         default => ''
     };
 
-    $versionDir = match($_GET['version']) {
+    $versionDir = match($options['version']) {
         'php84' => '8.4',
         'php83' => '8.3',
         'php82' => '8.2',
@@ -56,8 +56,8 @@ ENDOSX;
 }
 ?>
 <?php
-if ($_GET['os'] === 'linux' && str_starts_with($_GET['osvariant'], 'linux-deb')) {
-    if ($_GET['version'] === 'default' && $_GET['multiversion'] != 'true') {
+if ($options['os'] === 'linux' && str_starts_with($options['osvariant'], 'linux-deb')) {
+    if ($options['version'] === 'default' && $options['multiversion'] != 'true') {
     echo <<<ENDAPT
 <p>
     On the command line shell, enter:
@@ -68,7 +68,7 @@ sudo apt-get install php
 </pre></div>
 ENDAPT;
     } else {
-        $version = match($_GET['version']) {
+        $version = match($options['version']) {
             'php84' => '8.4',
             'php83' => '8.3',
             'php82' => '8.2',
@@ -94,4 +94,4 @@ ENDAPT;
 There are no instructions yet.
 </p>
 
-<?php var_dump($_GET); ?>
+<?php var_dump($options); ?>
