@@ -287,7 +287,7 @@ function output_lists_table($mailing_lists): void
     foreach ($mailing_lists as $listinfo) {
         if (!is_array($listinfo)) {
             echo "<tr><th>{$listinfo}</th><th>Moderated</th><th>Archive</th>" .
-                 "<th>Newsgroup</th><th>Normal</th><th>Digest</th></tr>\n";
+                 "<th>Newsgroup</th><th>Normal</th><th>Digest</th><th>List name</th></tr>\n";
         } else {
             echo '<tr align="center">';
             echo '<td align="left"><strong>' . $listinfo[1] . '</strong> <small>&lt;<a href="mailto:' . $listinfo[0] . '@lists.php.net">' . $listinfo[0] . '@lists.php.net</a>&gt;</small><br><small>' . $listinfo[2] . '</small></td>';
@@ -303,6 +303,7 @@ function output_lists_table($mailing_lists): void
             echo '<td>' . ($listinfo[6] ? "<a href=\"news://news.php.net/{$listinfo[6]}\">yes</a> <a href=\"http://news.php.net/group.php?group={$listinfo[6]}\">http</a>" : 'n/a') . '</td>';
             echo '<td><input name="maillist" type="radio" value="' . $listinfo[0] . '"></td>';
             echo '<td>' . ($listinfo[5] ? '<input name="maillist" type="radio" value="' . $listinfo[0] . '-digest">' : 'n/a') . '</td>';
+            echo '<td><code><small>' . $listinfo[0] . '</small></code></td>';
             echo "</tr>\n";
         }
     }
@@ -349,48 +350,57 @@ function output_lists_table($mailing_lists): void
 
 <p>
  If you experience trouble subscribing via the form above, you may also
- subscribe by sending an email to the list server.
- To subscribe to any mailing list, send an email to
- <code><em>listname</em>+subscribe@lists.php.net</code>
- (substituting the name of the list for <code><em>listname</em></code>
- &mdash; for example, <code>php-general+subscribe@lists.php.net</code>).
+ subscribe by sending an email to the list server. To subscribe to any
+ mailing list, send an email to
+ <code><em>listname</em><b>+subscribe</b>@lists.php.net</code> (substituting the
+ name of the list for <code><em>listname</em></code>&mdash;for example,
+ <a href="mailto:php-general+subscribe@lists.php.net"><code>php-general+subscribe@lists.php.net</code></a>).
 </p>
 
 <h2>Mailing list options</h2>
 
 <p>
- All of the mailing lists hosted at <a
- href="http://lists.php.net/">lists.php.net</a> are managed using the <a
- href="http://mlmmj.org/">mlmmj</a> mailing list software.
- There are a variety of commands you can use to modify your subscription.
- For a full overview, send a message to <code>php-whatever+help@lists.php.net</code> (as in,
- <code>php-general+help@lists.php.net</code>).</a>
+ All the mailing lists hosted at <a href="http://lists.php.net/">lists.php.net</a>
+ are managed using the <a href="http://mlmmj.org/">mlmmj</a> mailing list
+ software. There are a variety of commands you may use to modify your
+ subscription. For a full overview, send a message to
+ <code><em>listname</em><b>+help</b>@lists.php.net</code> (as in,
+ <a href="mailto:php-general+help@lists.php.net"><code>php-general+help@lists.php.net</code></a>).
 </p>
 
 <h3>Subscribing</h3>
 
 <ul>
-	<li>The normal mailing list, where you receive every message seperately:<br/>
-	Email: <code>php-<em>listname</em>+subscribe@lists.php.net</code></li>
-	<li>The daily digest list, where you receive an email with every message for a whole day at once:<br/>
-	Email: <code>php-<em>listname</em>+subscribe<b>-digest</b>@lists.php.net</code></li>
-	<li>The no email list, where you receive no emails from the list, but you can still post to it:<br/>
-	Email: <code>php-<em>listname</em>+subscribe<b>-nomail</b>@lists.php.net</code></li>
+ <li>The normal mailing list, where you receive every message separately:<br/>
+  Email: <code><em>listname</em><b>+subscribe</b>@lists.php.net</code></li>
+ <li>The daily digest list, where you receive a daily email with every message for the whole day:<br/>
+  Email: <code><em>listname</em><b>+subscribe-digest</b>@lists.php.net</code></li>
+ <li>The "no email" list, where you receive no emails from the list, but you have permission to post to it:<br/>
+  Email: <code><em>listname</em><b>+subscribe-nomail</b>@lists.php.net</code></li>
 </ul>
 
 <h3>Unsubscribing</h3>
 
 <p>
-Email: <code>php-<em>listname</em>+unsubscribe@lists.php.net</code>
+ To unsubscribe from a mailing list, send an email to
+ <code><em>listname</em><b>+unsubscribe</b>@lists.php.net</code>, where
+ <em>listname</em> is the name of the list you wish to unsubscribe from.
+ For example, to unsubscribe from the <code>php-announce</code> mailing list,
+ send an email to <a href="mailto:php-announce+unsubscribe@lists.php.net">
+ <code>php-announce+unsubscribe@lists.php.net</code></a>.
+</p>
+
+<p>
+ Please note, you must send the email from the address you want to unsubscribe.
 </p>
 
 <h3>Help</h3>
 
 <ul>
-	<li>For a FAQ (Frequently Asked Questions):<br/>
-	Email: <code>php-<em>listname</em>+help@lists.php.net</code></li>
-	<li>To reach an administrator:<br/>
-	Email: <code>php-<em>listname</em>+owner@lists.php.net</code></li>
+ <li>For mailing list FAQs (Frequently Asked Questions):<br/>
+  Email: <code><em>listname</em><b>+help</b>@lists.php.net</code></li>
+ <li>To reach an administrator:<br/>
+  Email: <code><em>listname</em><b>+owner</b>@lists.php.net</code></li>
 </ul>
 
 
