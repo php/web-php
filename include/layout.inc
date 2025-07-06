@@ -519,12 +519,12 @@ function get_nav_items(): array {
 
 function get_news_changes()
 {
-    $newsEntries = (new NewsHandler())->getPregeneratedNews();
-    if (!isset($newsEntries[0])) {
+    $lastNews = (new NewsHandler())->getLastestNews();
+    if ($lastNews === null) {
         return false;
     }
 
-    $date = date_create($newsEntries[0]["updated"]);
+    $date = date_create($lastNews["updated"]);
     if (isset($_COOKIE["LAST_NEWS"]) && $_COOKIE["LAST_NEWS"] >= $date->getTimestamp()) {
         return false;
     }
@@ -539,8 +539,8 @@ function get_news_changes()
 
     $date->modify("+1 week");
     if ($date->getTimestamp() > $_SERVER["REQUEST_TIME"]) {
-        $link = preg_replace('~^(http://php.net/|https://www.php.net/)~', '/', $newsEntries[0]["link"][0]["href"]);
-        $title = $newsEntries[0]["title"];
+        $link = preg_replace('~^(http://php.net/|https://www.php.net/)~', '/', $lastNews["link"][0]["href"]);
+        $title = $lastNews["title"];
         return "<a href='{$link}'>{$title}</a>";
     }
     return false;

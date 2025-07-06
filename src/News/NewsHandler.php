@@ -8,6 +8,16 @@ use function is_array;
 
 final class NewsHandler
 {
+    public function getLastestNews(): array|null
+    {
+        $news = $this->getPregeneratedNews();
+        if (!isset($news[0])) {
+            return null;
+        }
+
+        return $news[0];
+    }
+
     public function getPregeneratedNews(): array
     {
         $NEWS_ENTRIES = null;
