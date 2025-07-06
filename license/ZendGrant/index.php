@@ -10,7 +10,7 @@ $SIDEBAR_DATA = <<<EOF
         <li><a href="/license/ZendGrant/ZendGrant3.png">Page 1</a></li>
         <li><a href="/license/ZendGrant/ZendGrant4.png">Page 2</a></li>
     </ul>
-    
+
     <h3>Exhibit 2</h3>
 
     <ul>
@@ -27,7 +27,8 @@ $SIDEBAR_DATA = <<<EOF
     <h3>Resources</h3>
 
     <ul>
-        <li><a href="/license/ZendGrant/ZendGrant.pdf">Scan of full document as a PDF</a></li>
+        <li><a href="/license/ZendGrant/ZendGrant.pdf">Zend Grant (PDF)</a></li>
+        <li><a href="/license/ZendGrant/PHPAssociation.pdf">PHP Association Articles (PDF)</a></li>
     </ul>
 </aside>
 EOF;
