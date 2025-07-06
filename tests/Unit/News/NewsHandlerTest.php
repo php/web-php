@@ -18,4 +18,13 @@ final class NewsHandlerTest extends TestCase
         self::assertArrayHasKey(0, $news);
         self::assertSame($news[0], $newsHandler->getLastestNews());
     }
+
+    public function testGetFrontPageNews(): void
+    {
+        $frontPage = (new NewsHandler())->getFrontPageNews();
+        self::assertCount(25, $frontPage);
+        foreach ($frontPage as $news) {
+            self::assertContains(['term' => 'frontpage', 'label' => 'PHP.net frontpage news'], $news['category']);
+        }
+    }
 }

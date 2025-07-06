@@ -58,18 +58,7 @@ include_once 'include/version.inc';
 mirror_setcookie("LAST_NEWS", $_SERVER["REQUEST_TIME"], 60 * 60 * 24 * 365);
 
 $content = "<div class='home-content'>";
-$frontpage = [];
-foreach ((new NewsHandler())->getPregeneratedNews() as $entry) {
-    foreach ($entry["category"] as $category) {
-        if ($category["term"] == "frontpage") {
-            $frontpage[] = $entry;
-            if (count($frontpage) >= 25) {
-                break 2;
-            }
-        }
-    }
-}
-foreach ($frontpage as $entry) {
+foreach ((new NewsHandler())->getFrontPageNews() as $entry) {
     $link = preg_replace('~^(http://php.net/|https://www.php.net/)~', '', $entry["id"]);
     $id = parse_url($entry["id"], PHP_URL_FRAGMENT);
     $date = date_create($entry['updated']);

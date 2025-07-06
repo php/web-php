@@ -8,6 +8,8 @@ use function is_array;
 
 final class NewsHandler
 {
+    private const MAX_FRONT_PAGE_NEWS = 25;
+
     public function getLastestNews(): array|null
     {
         $news = $this->getPregeneratedNews();
@@ -16,6 +18,26 @@ final class NewsHandler
         }
 
         return $news[0];
+    }
+
+    /** @return list<array> */
+    public function getFrontPageNews(): array
+    {
+        $frontPage = [];
+        foreach ($this->getPregeneratedNews() as $entry) {
+            foreach ($entry['category'] as $category) {
+                if ($category['term'] !== 'frontpage') {
+                    continue;
+                }
+
+                $frontPage[] = $entry;
+                if (count($frontPage) >= self::MAX_FRONT_PAGE_NEWS) {
+                    break 2;
+                }
+            }
+        }
+
+        return $frontPage;
     }
 
     public function getPregeneratedNews(): array
