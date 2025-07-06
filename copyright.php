@@ -1,14 +1,6 @@
 <?php
 $_SERVER['BASE_PAGE'] = 'copyright.php';
 include_once __DIR__ . '/include/prepend.inc';
-$SIDEBAR_DATA = '
-<a id="license"></a>
-<h3>PHP License</h3>
-<p>
- For information on the PHP License (i.e. using the PHP language),
- <a href="/license/">see our licensing information page</a>.
-</p>
-';
 site_header("Copyright", ["current" => "footer"]);
 ?>
 
