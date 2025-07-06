@@ -1,13 +1,14 @@
 ============= An example PHP License, version 2.01 file ============
 
-This is the original PHP License, version 2.01 which applies only to
-very old versions of PHP software (such as versions 4.0RC2 and earlier).
+This is the original PHP License, version 2.01, which applies only to
+old versions of PHP software (such as versions 4.0RC2 and earlier).
 
-This license is provided here for historical purposes only.
+This license is provided for historical purposes only.
 
-This license has been superseded by the PHP License, version 3.01,
-available at <https://www.php.net/license/3_01.txt>. All new works
-using the PHP License should use the PHP License, version 3.01.
+This license has been superseded by the PHP License, version 4,
+available at <https://www.php.net/license/>. The PHP License, version 4
+is the Modified BSD License (BSD-3-Clause). All new works using the PHP
+License should use the Modified BSD License.
 
 
 --------------------------------------------------------------------
@@ -29,32 +30,32 @@ are met:
 
   3. The name "PHP" must not be used to endorse or promote products
      derived from this software without prior permission from the
-	 PHP Group.  This does not apply to add-on libraries or tools
-	 that work in conjunction with PHP.  In such a case the PHP
-	 name may be used to indicate that the product supports PHP.
+     PHP Group.  This does not apply to add-on libraries or tools
+     that work in conjunction with PHP.  In such a case the PHP
+     name may be used to indicate that the product supports PHP.
 
   4. The PHP Group may publish revised and/or new versions of the
      license from time to time. Each version will be given a
-	 distinguishing version number.
+     distinguishing version number.
      Once covered code has been published under a particular version
-	 of the license, you may always continue to use it under the
-	 terms of that version. You may also choose to use such covered
-	 code under the terms of any subsequent version of the license
-	 published by the PHP Group. No one other than the PHP Group has
-	 the right to modify the terms applicable to covered code created
-	 under this License.
+     of the license, you may always continue to use it under the
+     terms of that version. You may also choose to use such covered
+     code under the terms of any subsequent version of the license
+     published by the PHP Group. No one other than the PHP Group has
+     the right to modify the terms applicable to covered code created
+     under this License.
 
   5. Redistributions of any form whatsoever must retain the following
      acknowledgment:
      "This product includes PHP, freely available from
-	 http://www.php.net/".
+     http://www.php.net/".
 
   6. Permission to freely distribute and use Zend as an integrated
      part of PHP is granted, under the conditions of version 0.91
-	 of the Zend License.
-	 The license is bundled with the Zend engine, and is available
-	 at http://www.zend.com/license/0_91.txt, or by contacting
-	 license@zend.com.
+     of the Zend License.
+     The license is bundled with the Zend engine, and is available
+     at http://www.zend.com/license/0_91.txt, or by contacting
+     license@zend.com.
 
 
 

@@ -8,7 +8,7 @@ site_header("PHP Software", ["current" => "help"]);
 
 <p>
  This page contains a list of sites where you can find software distributed
- under the <a href="/license/3_01.txt">PHP license</a>.
+ under the <a href="/license/">PHP license</a>.
 </p>
 
 <p>
