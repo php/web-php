@@ -19,6 +19,23 @@ final class NewsHandlerTest extends TestCase
         self::assertSame($news[0], $newsHandler->getLastestNews());
     }
 
+    public function testGetConferences(): void
+    {
+        $conferences = (new NewsHandler())->getConferences();
+        self::assertNotEmpty($conferences);
+        foreach ($conferences as $conference) {
+            $isConference = false;
+            foreach ($conference['category'] as $category) {
+                if ($category['term'] === 'cfp' || $category['term'] === 'conferences') {
+                    $isConference = true;
+                    break;
+                }
+            }
+
+            self::assertTrue($isConference);
+        }
+    }
+
     public function testGetFrontPageNews(): void
     {
         $frontPage = (new NewsHandler())->getFrontPageNews();

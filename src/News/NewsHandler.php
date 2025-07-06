@@ -40,6 +40,24 @@ final class NewsHandler
         return $frontPage;
     }
 
+    /** @return list<array> */
+    public function getConferences(): array
+    {
+        $conferences = [];
+        foreach ($this->getPregeneratedNews() as $entry) {
+            foreach ($entry['category'] as $category) {
+                if ($category['term'] !== 'cfp' && $category['term'] !== 'conferences') {
+                    continue;
+                }
+
+                $conferences[] = $entry;
+                break;
+            }
+        }
+
+        return $conferences;
+    }
+
     public function getPregeneratedNews(): array
     {
         $NEWS_ENTRIES = null;
