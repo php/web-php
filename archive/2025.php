@@ -18,5 +18,5 @@ site_header("News Archive - 2025");
 
 <?php
 
-print_news((new NewsHandler())->getPregeneratedNews(), null, 500, 2025);
+print_news((new NewsHandler())->getNewsByYear(2025), null, 500);
 site_footer(['elephpants' => true, 'sidebar' => $SIDEBAR_DATA]);

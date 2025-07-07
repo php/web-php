@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace News;
 
+use DateTimeImmutable;
 use PHPUnit\Framework\Attributes\CoversClass;
 use PHPUnit\Framework\TestCase;
 use phpweb\News\NewsHandler;
@@ -33,6 +34,15 @@ final class NewsHandlerTest extends TestCase
             }
 
             self::assertTrue($isConference);
+        }
+    }
+
+    public function testGetNewsByYear(): void
+    {
+        $news = (new NewsHandler())->getNewsByYear(2018);
+        self::assertNotEmpty($news);
+        foreach ($news as $entry) {
+            self::assertSame('2018', (new DateTimeImmutable($entry['published']))->format('Y'));
         }
     }
 

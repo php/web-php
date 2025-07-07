@@ -18,5 +18,5 @@ site_header("News Archive - 2022");
 
 <?php
 
-print_news((new NewsHandler())->getPregeneratedNews(), null, 500, 2022);
+print_news((new NewsHandler())->getNewsByYear(2022), null, 500);
 site_footer(['elephpants' => true, 'sidebar' => $SIDEBAR_DATA]);

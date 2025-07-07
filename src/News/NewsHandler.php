@@ -4,6 +4,10 @@ declare(strict_types=1);
 
 namespace phpweb\News;
 
+use DateTimeImmutable;
+
+use function array_filter;
+use function array_values;
 use function is_array;
 
 final class NewsHandler
@@ -56,6 +60,15 @@ final class NewsHandler
         }
 
         return $conferences;
+    }
+
+    /** @return list<array> */
+    public function getNewsByYear(int $year): array
+    {
+        return array_values(array_filter(
+            $this->getPregeneratedNews(),
+            static fn (array $entry): bool => (int) (new DateTimeImmutable($entry['published']))->format('Y') === $year,
+        ));
     }
 
     public function getPregeneratedNews(): array

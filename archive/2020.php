@@ -18,7 +18,7 @@ site_header("News Archive - 2020");
 
 <?php
 
-print_news((new NewsHandler())->getPregeneratedNews(), null, 500, 2020);
+print_news((new NewsHandler())->getNewsByYear(2020), null, 500);
 
 /* %s/<a href="\(.*\)"><img src="\/images\/news\/\(.*\)" alt="\(.*\)" width.*><\/a>/<?php news_image("\1", "\2", "\3"); ?>/g */
 site_footer(['elephpants' => true, 'sidebar' => $SIDEBAR_DATA]);

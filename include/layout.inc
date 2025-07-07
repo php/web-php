@@ -347,7 +347,7 @@ function news_archive_sidebar(): void
 }
 
 // Print news
-function print_news($news, $dog, $max = 5, $onlyyear = null, $return = false) {
+function print_news($news, $dog, $max = 5, $return = false) {
     $retval = [];
     $count = 0;
     $news = $news ?: []; // default to empty array (if no news)
@@ -392,10 +392,6 @@ function print_news($news, $dog, $max = 5, $onlyyear = null, $return = false) {
         $published = substr($item["published"], 0, 10);
         $nixtimestamp = strtotime($published);
         $newsdate = date("d M Y", $nixtimestamp);
-        if ($onlyyear && date("Y", $nixtimestamp) != $onlyyear) {
-            $count--;
-            continue;
-        }
 
         if ($return) {
             $retval[] = [

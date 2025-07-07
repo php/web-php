@@ -18,5 +18,5 @@ site_header("News Archive - 2023");
 
 <?php
 
-print_news((new NewsHandler())->getPregeneratedNews(), null, 500, 2023);
+print_news((new NewsHandler())->getNewsByYear(2023), null, 500);
 site_footer(['elephpants' => true, 'sidebar' => $SIDEBAR_DATA]);
