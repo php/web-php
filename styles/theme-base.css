@@ -727,7 +727,11 @@ table.standard th.subr {
 
 #layout .cse table.gsc-search-box td,
 #layout table.gsc-search-box td {
-    padding: 0;
+    padding-right: unset;
+}
+#layout .cse table.gsc-search-box .gsc-search-button,
+#layout table.gsc-search-box .gsc-search-button {
+    margin-left: unset;
 }
 
 #layout .cse input.gsc-search-button,
@@ -816,20 +820,23 @@ table.standard th.subr {
 #layout .cse .gsc-above-wrapper-area,
 #layout .gsc-above-wrapper-area {
     border: 0;
-    margin: 0;
-    padding: 0 0 1rem 26.166%;
-    width: 73.834%;
 }
 
 #layout .cse .gsc-above-wrapper-area-container,
 #layout .gsc-above-wrapper-area-container {
-    width: auto;
+    width: 100%;
+}
+
+#layout .cse .gsc-orderby,
+#layout .gsc-orderby {
+    padding: 0 4px;
 }
 
 #layout .cse .gsc-result-info-container,
 #layout .gsc-result-info-container {
     padding: 0;
     margin: 0;
+    vertical-align: inherit;
 }
 
 #layout .cse .gsc-result-info,
@@ -838,13 +845,6 @@ table.standard th.subr {
     font-size: 0.75rem;
     padding: 0;
     margin: 0;
-}
-
-#layout .cse .gsc-results,
-#layout .gsc-results {
-    margin: 0;
-    padding: 0 0 0 26.166%;
-    width: 73.834%;
 }
 
 #layout .cse .gsc-resultsHeader,
