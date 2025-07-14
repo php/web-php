@@ -1,0 +1,237 @@
+/* {{{ Search results. */
+
+/* Undo a whole bunch of default styles. */
+#layout .cse .gsc-control-cse,
+#layout .gsc-control-cse,
+#layout .gsc-control-cse .gsc-table-result {
+    font-family: var(--font-family-sans-serif);
+    font-size: 1rem;
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+
+/* Override the search box styling. */
+#layout .cse form.gsc-search-box,
+#layout form.gsc-search-box {
+    margin: 0 0 1rem 0;
+    padding: 0;
+}
+
+#layout .cse table.gsc-search-box,
+#layout table.gsc-search-box {
+    border: solid 1px #99c;
+    border-radius: 2px;
+}
+
+#layout .cse input.gsc-input,
+#layout input.gsc-input {
+    border: 0;
+}
+
+#layout .cse table.gsc-search-box td,
+#layout table.gsc-search-box td {
+    padding-right: unset;
+}
+
+#layout .cse table.gsc-search-box .gsc-search-button,
+#layout table.gsc-search-box .gsc-search-button {
+    margin-left: unset;
+}
+
+#layout .cse input.gsc-search-button,
+#layout input.gsc-search-button {
+    background: #99c;
+    border: solid 1px #99c;
+    border-radius: 0;
+    color: rgb(238, 238, 255);
+}
+
+#layout .cse input.gsc-search-button:hover,
+#layout input.gsc-search-button:hover {
+    color: white;
+}
+
+/* We don't need a clear button. */
+#layout .cse .gsc-clear-button,
+#layout .gsc-clear-button {
+    display: none;
+}
+
+/* Style the "tabs", and reformat them as a sidebar item. */
+#layout .cse div.gsc-results-wrapper-visible,
+#layout div.gsc-results-wrapper-visible {
+    position: relative;
+    min-height: 11rem;
+}
+
+#layout .cse .gsc-tabsArea,
+#layout .gsc-tabsArea {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 23.404%;
+    margin-right: 2.762%;
+    padding: .5rem .75rem;
+    border: 1px solid #e0e0e0;
+    background-color: #f2f2f2;
+    border-bottom-color: #d9d9d9;
+    border-radius: 2px;
+    margin-top: 0;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+#layout .cse .gsc-tabHeader.gsc-tabhActive,
+#layout .gsc-tabHeader.gsc-tabhActive,
+#layout .cse .gsc-tabHeader.gsc-tabhInactive,
+#layout .gsc-tabHeader.gsc-tabhInactive {
+    background: transparent;
+    color: rgb(38, 38, 38);
+    border: 0;
+    display: block;
+    font-size: 100%;
+    font-weight: normal;
+    border-top: dotted 1px rgb(189, 189, 189);
+    padding: 0;
+}
+
+#layout .cse .gsc-tabHeader.gsc-tabhActive:first-child,
+#layout .gsc-tabHeader.gsc-tabhActive:first-child,
+#layout .cse .gsc-tabHeader.gsc-tabhInactive:first-child,
+#layout .gsc-tabHeader.gsc-tabhInactive:first-child {
+    border: 0;
+}
+
+#layout .cse .gsc-tabHeader.gsc-tabhActive,
+#layout .gsc-tabHeader.gsc-tabhActive {
+    color: black;
+}
+
+#layout .cse .gsc-tabHeader.gsc-tabhActive:after,
+#layout .gsc-tabHeader.gsc-tabhActive:after {
+    content: "»";
+    color: black;
+    float: right;
+    text-align: right;
+}
+
+#layout .cse .gsc-tabHeader.gsc-tabhInactive:hover,
+#layout .gsc-tabHeader.gsc-tabhInactive:hover {
+    color: #693;
+}
+
+/* Format the results in the right place. */
+#layout .cse .gsc-above-wrapper-area,
+#layout .gsc-above-wrapper-area {
+    border: 0;
+}
+
+#layout .cse .gsc-above-wrapper-area-container,
+#layout .gsc-above-wrapper-area-container {
+    width: 100%;
+}
+
+#layout .cse .gsc-orderby,
+#layout .gsc-orderby {
+    padding: 0 4px;
+}
+
+#layout .cse .gsc-result-info-container,
+#layout .gsc-result-info-container {
+    padding: 0;
+    margin: 0;
+    vertical-align: inherit;
+}
+
+#layout .cse .gsc-result-info,
+#layout .gsc-result-info {
+    color: var(--dark-grey-color);
+    font-size: 0.75rem;
+    padding: 0;
+    margin: 0;
+}
+
+#layout .cse .gsc-resultsHeader,
+#layout .gsc-resultsHeader {
+    display: none;
+}
+
+#layout .cse .gsc-webResult.gsc-result,
+#layout .gsc-webResult.gsc-result {
+    margin: 0 0 1rem 0;
+    padding: 0;
+    border: 0;
+}
+
+#layout .cse .gs-webResult.gs-result a,
+#layout .gs-webResult.gs-result a,
+#layout .cse .gs-webResult.gs-result a b,
+#layout .gs-webResult.gs-result a b {
+    border-bottom: solid 1px rgb(51, 102, 153);
+    color: rgb(51, 102, 153);
+    text-decoration: none;
+}
+
+#layout .cse .gs-webResult.gs-result a:focus,
+#layout .gs-webResult.gs-result a:focus,
+#layout .cse .gs-webResult.gs-result a:hover,
+#layout .gs-webResult.gs-result a:hover,
+#layout .cse .gs-webResult.gs-result a:focus b,
+#layout .gs-webResult.gs-result a:focus b,
+#layout .cse .gs-webResult.gs-result a:hover b,
+#layout .gs-webResult.gs-result a:hover b {
+    border-bottom-color: rgb(51, 102, 153);
+    color: rgb(102, 153, 51);
+}
+
+#layout .gs-webResult.gs-result .gs-visibleUrl {
+    font-weight: normal;
+}
+
+/* Handle no results tabs. */
+#layout .gs-no-results-result .gs-snippet {
+    border: 0;
+    background: transparent;
+}
+
+/* Override docs table styling we don't want. */
+.docs #cse th,
+.docs #cse td {
+    padding: 0;
+}
+
+/* }}} */
+
+@media only screen and (max-width: 760px), (min-device-width: 768px) and (max-device-width: 1024px) {
+    tr {
+        margin: 0;
+        display: table-row;
+    }
+
+    td:before {
+        content: none;
+    }
+
+    table {
+        display: table;
+    }
+
+    thead {
+        display: table-header-group;
+    }
+
+    tbody {
+        display: table-row-group;
+    }
+
+    td:not(.gsc-clear-button),
+    th {
+        display: table-cell;
+    }
+
+    .gssb_a {
+        padding: 5px 3px !important;
+        white-space: normal !important;
+    }
+}

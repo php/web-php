@@ -52,7 +52,7 @@ else {
         "href" => $MYSITE . "phpnetimprovedsearch.src",
         "title" => "Add PHP.net search",
     ];
-    site_header("Search", ["link" => [$link], "current" => "help"]);
+    site_header("Search", ["link" => [$link], "current" => "help", 'css' => 'cse-search.css']);
 
     google_cse();
     site_footer();
