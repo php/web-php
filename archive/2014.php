@@ -2,7 +2,6 @@
 
 $_SERVER['BASE_PAGE'] = 'archive/2014.php';
 include_once __DIR__ . '/../include/prepend.inc';
-include_once __DIR__ . '/../include/pregen-news.inc';
 news_archive_sidebar();
 site_header("News Archive - 2014", ["cache" => true]);
 ?>
