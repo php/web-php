@@ -508,20 +508,6 @@ div.classsynopsisinfo_comment {
     margin-top:1.5rem;
 }
 
-.phpcode {
-    background-color: #FFF;
-    box-shadow: inset 0 0 0 1px rgba(0, 0, 0, .15);
-    border-radius: 0 0 2px 2px;
-    overflow-x: auto;
-    display: flex;
-    align-items: center;
-    width: 100%;
-    height: 100%;
-    padding: 0 1.5rem;
-    box-sizing: border-box;
-    margin: 0;
-}
-
 .instructions {
     margin-bottom: 2rem;
 }

@@ -2,6 +2,14 @@
 $file = 'unknown';
 $latestPhpVersion = '8.4';
 
+if (!isset($options)) {
+    $options = [
+        'os' => '',
+        'usage' => '',
+        'version' => '',
+    ];
+}
+
 if ($options['os'] === 'windows') {
 	if ($options['osvariant'] === 'windows-wsl-debian') {
 		$options['os'] = 'linux';
