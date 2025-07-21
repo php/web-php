@@ -149,13 +149,13 @@ if (!array_key_exists('osvariant', $options) || !array_key_exists($options['osva
         <input type="checkbox" id="multiversion" name="multiversion" value="Y"
             <?= array_key_exists('multiversion', $options) && $options['multiversion'] === 'Y' ? 'checked' : '' ?>/>
     </label>
-
+<!--
     <label for="source" class="instructions-label">
         I want to compile everything from source:
         <input type="checkbox" id="source" name="source" value="Y"
             <?= array_key_exists('source', $options) && $options['source'] === 'Y' ? 'checked' : '' ?>/>
     </label>
-
+-->
     <noscript>
         <button type="submit" class="button">Update Instructions</button>
     </noscript>
