@@ -1,8 +1,9 @@
 <?php
 
+use phpweb\News\NewsHandler;
+
 $_SERVER['BASE_PAGE'] = 'archive/2016.php';
 include_once __DIR__ . '/../include/prepend.inc';
-include_once __DIR__ . '/../include/pregen-news.inc';
 news_archive_sidebar();
 site_header("News Archive - 2016");
 ?>
@@ -17,7 +18,7 @@ site_header("News Archive - 2016");
 
 <?php
 
-print_news($NEWS_ENTRIES, ["conferences", "cfp", "frontpage", "nofrontpage"], 500, 2016);
+print_news((new NewsHandler())->getNewsByYear(2016), ["conferences", "cfp", "frontpage", "nofrontpage"], 500);
 
 /* %s/<a href="\(.*\)"><img src="\/images\/news\/\(.*\)" alt="\(.*\)" width.*><\/a>/<?php news_image("\1", "\2", "\3"); ?>/g */
 site_footer(['elephpants' => true, 'sidebar' => $SIDEBAR_DATA]);
