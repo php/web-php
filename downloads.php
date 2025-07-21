@@ -56,40 +56,43 @@ $os = [
     'linux' => [
         'name' => 'Linux',
         'variants' => [
-            'linux-deb-buster' => 'Debian Buster',
-            'linux-deb-bullseye' => 'Debian Bullseye',
-            'linux-deb-bookworm' => 'Debian Bookworm',
-            'linux-rpm-fedora41' => 'Fedora 41',
-            'linux-rpm-fedora42' => 'Fedora 42',
-            'linux-rpm-redhat' => 'RedHat',
+            'linux-debian' => 'Debian',
+            'linux-fedora' => 'Fedora',
+            'linux-redhat' => 'RedHat',
+			'linux-ubuntu' => 'Ubuntu',
         ],
     ],
     'osx' => [
         'name' => 'macOS',
         'variants' => [
-            'osx-latest' => 'macOS Latest',
+            'osx-homebrew' => 'Homebrew/Brew',
+			'osx-homebrew-php' => 'Homebrew/Homebrew-PHP',
+			'osx-macports' => 'MacPorts',
         ],
     ],
     'windows' => [
         'name' => 'Windows',
         'variants' => [
-            'windows-wsl' => 'Windows with WSL',
-            'windows-normal' => 'Windows without WSL',
+			'windows-native' => 'Windows Native Build',
+			'windows-chocolatey' => 'Windows with Chocolatey',
+			'windows-scoop' => 'Windows with Scoop',
+            'windows-wsl-debian' => 'Windows with WSL/Debian',
+            'windows-wsl-ubuntu' => 'Windows with WSL/Ubuntu',
         ],
     ],
 ];
 
 $versions = [
-    'php84' => 'version 8.4',
-    'php83' => 'version 8.3',
-    'php82' => 'version 8.2',
-    'php81' => 'version 8.1',
+    '8.4' => 'version 8.4',
+    '8.3' => 'version 8.3',
+    '8.2' => 'version 8.2',
+    '8.1' => 'version 8.1',
     'default' => 'OS default version',
 ];
 
 $defaults = [
     'os' => 'linux',
-    'version' => 'php84',
+    'version' => 'default',
     'usage' => 'web',
 ];
 
@@ -160,26 +163,10 @@ if (!array_key_exists('osvariant', $options) || !array_key_exists($options['osva
 
 <h2>Instructions</h2>
 <div id="instructions" class="instructions">
-<?php include 'downloads-get-instructions.php'; ?>
+<?php $instructionsShown = include 'downloads-get-instructions.php'; ?>
 </div>
 
-<h2>Binaries</h2>
-
-<p>
-    <a href="https://windows.php.net/download/">Binaries are available for
-    Microsoft Windows</a>. The PHP project does not currently release binary packages
-    for other platforms such as Linux or macOS, but they are packaged by distributions
-    and other providers. For more information, see:
-
-    <ul>
-        <li>
-            <a href="/manual/install.unix.php">Installation instructions for Unix systems</a>
-        </li>
-        <li>
-            <a href="/manual/install.macosx.php">Installation instructions for macOS</a>
-        </li>
-    </ul>
-</p>
+<?php if (!$instructionsShown): ?>
 
 <h2>Source Code</h2>
 <?php show_source_releases(); ?>
@@ -200,6 +187,26 @@ to verify the tags:
     available.
   </a>
 </p>
+
+<h2>Binaries</h2>
+
+<p>
+    <a href="https://windows.php.net/download/">Binaries are available for
+    Microsoft Windows</a>. The PHP project does not currently release binary packages
+    for other platforms such as Linux or macOS, but they are packaged by distributions
+    and other providers. For more information, see:
+
+    <ul>
+        <li>
+            <a href="/manual/install.unix.php">Installation instructions for Unix systems</a>
+        </li>
+        <li>
+            <a href="/manual/install.macosx.php">Installation instructions for macOS</a>
+        </li>
+    </ul>
+</p>
+
+<?php endif; ?>
 
     <script>
         window.onload = function () {
