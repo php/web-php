@@ -508,6 +508,27 @@ div.classsynopsisinfo_comment {
     margin-top:1.5rem;
 }
 
+.instructions {
+    margin-bottom: 2rem;
+}
+
+.instructions p {
+    margin: 1rem 0;
+}
+
+.instructions-form {
+    display: flex;
+    flex-direction: column;
+    gap: .75rem;
+    margin-bottom: 2rem;
+}
+
+.instructions-label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
 .warn {
     padding: .75rem 1rem;
     margin: 1.5rem 0 1.5rem 1.5rem;
