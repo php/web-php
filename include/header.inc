@@ -54,7 +54,7 @@ if (!isset($config["languages"])) {
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <?php if (!empty($_SERVER["BASE_HREF"])): ?>
-   <base href="<?php echo $_SERVER["BASE_HREF"] ?>">
+   <base href="<?php echo $_SERVER["BASE_HREF"]; ?>">
   <?php endif ?>
 
   <title>PHP: <?php echo $title ?></title>
