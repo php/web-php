@@ -18,9 +18,7 @@
             "extensions": [
                 "DEVSENSE.composer-php-vscode",
                 "editorconfig.editorconfig",
-                "junstyle.php-cs-fixer",
-                "ms-vscode.makefile-tools",
-                "recca0120.vscode-phpunit"
+                "ms-vscode.makefile-tools"
             ]
         }
     },
