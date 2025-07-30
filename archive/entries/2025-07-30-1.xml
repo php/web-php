@@ -11,6 +11,7 @@
   <default:newsImage xmlns="http://php.net/ns/news" link="https://conf.phpyh.ru/?utm_source=site&amp;utm_medium=article&amp;utm_campaign=media&amp;utm_content=notice&amp;utm_term=php.net" title="Pyh.conf’25 Moscow">pyh-conf-25.png</default:newsImage>
   <content type="xhtml">
     <div xmlns="http://www.w3.org/1999/xhtml">
+      <p>Pyh.conf is a fresh PHP conference that brings together the Russian-speaking PHP community — whether you work with Bitrix, WordPress, Symfony, Laravel, Yii, AMPHP, Swoole, or anything else. Projects differ, approaches vary, but the language is one: PHP.</p>
       <p>It’s a space to share experience, connect with others, and talk about designing, developing, and maintaining all kinds of PHP backends.</p>
       <p>The program features 28 powerful talks, an open mic, a fail meetup, and a partner expo.</p>
       <ul>
