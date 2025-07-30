@@ -20,7 +20,7 @@ if ($options['os'] === 'windows') {
 	    $options['osvariant'] = 'linux-ubuntu';
 	}
 }
-if ($options['os'] === 'osx') {
+if ($options['os'] === 'osx' || $options['os'] === 'windows') {
     if ($options['version'] === 'default') {
 		$options['version'] = $latestPhpVersion;
 	}
