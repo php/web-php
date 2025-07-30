@@ -1,7 +1,7 @@
 <p>
 On the command line, run the following commands:
 </p>
-<pre class="shellCommands">
+<pre><code class="language-bash line-numbers">
 sudo apt update
 sudo apt install -y php
-</pre>
+</code></pre>

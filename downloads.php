@@ -35,6 +35,13 @@ site_header("Downloads",
             ],
         ],
         "current" => "downloads",
+        "css" => [
+            "prism.css",
+            "code-syntax.css",
+        ],
+        "js_files" => [
+            "js/ext/prism.js",
+        ],
     ],
 );
 

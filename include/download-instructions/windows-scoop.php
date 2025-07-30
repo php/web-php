@@ -1,6 +1,6 @@
 <p>
 On the command line, run the following commands:
 </p>
-<pre class="shellCommands">
+<pre><code class="language-powershell line-numbers">
 scoop install php@<?= $version; ?>
-</pre>
+</code></pre>
