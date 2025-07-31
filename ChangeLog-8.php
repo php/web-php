@@ -9,6 +9,87 @@ changelog_header(8, $MINOR_VERSIONS);
 
 <a id="PHP_8_4"></a>
 
+<section class="version" id="8.4.11"><!-- {{{ 8.4.11 -->
+<h3>Version 8.4.11</h3>
+<b><?php release_date('31-Jul-2025'); ?></b>
+<ul><li>Calendar:
+<ul>
+  <li>Fixed jewishtojd overflow on year argument.</li>
+</ul></li>
+<li>Core:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 18833); ?> (Use after free with weakmaps dependent on destruction order).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 18907); ?> (Leak when creating cycle in hook).</li>
+  <li>Fix OSS-Fuzz #427814456.</li>
+  <li>Fix OSS-Fuzz #428983568 and #428760800.</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 17204); ?> (-Wuseless-escape warnings emitted by re2c).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 19064); ?> (Undefined symbol 'execute_ex' on Windows ARM64).</li>
+</ul></li>
+<li>Curl:
+<ul>
+  <li>Fix memory leaks when returning refcounted value from curl callback.</li>
+  <li>Remove incorrect string release.</li>
+</ul></li>
+<li>DOM:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 18979); ?> (Dom\XMLDocument::createComment() triggers undefined behavior with null byte).</li>
+</ul></li>
+<li>LDAP:
+<ul>
+  <li>Fixed <?php githubissuel('php/php-src', 18902); ?> ldap_exop/ldap_exop_sync assert triggered on empty request OID.</li>
+</ul></li>
+<li>MbString:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 18901); ?> (integer overflow mb_split).</li>
+</ul></li>
+<li>Opcache:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 18639); ?> (Internal class aliases can break preloading + JIT).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 18899); ?> (JIT function crash when emitting undefined variable warning and opline is not set yet).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 14082); ?> (Segmentation fault on unknown address 0x600000000018 in ext/opcache/jit/zend_jit.c).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 18898); ?> (SEGV zend_jit_op_array_hot with property hooks and preloading).</li>
+</ul></li>
+<li>OpenSSL:
+<ul>
+  <li><?php bugfix(80770); ?> (It is not possible to get client peer certificate with stream_socket_server).</li>
+</ul></li>
+<li>PCNTL:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 18958); ?> (Fatal error during shutdown after pcntl_rfork() or pcntl_forkx() with zend-max-execution-timers).</li>
+</ul></li>
+<li>Phar:
+<ul>
+  <li>Fix stream double free in phar.</li>
+  <li>Fix phar crash and file corruption with SplFileObject.</li>
+</ul></li>
+<li>SOAP:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 18990); ?>, bug #81029, bug #47314 (SOAP HTTP socket not closing on object destruction).</li>
+  <li>Fix memory leak when URL parsing fails in redirect.</li>
+</ul></li>
+<li>SPL:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 19094); ?> (Attaching class with no Iterator implementation to MultipleIterator causes crash).</li>
+</ul></li>
+<li>Standard:
+<ul>
+  <li>Fix misleading errors in printf().</li>
+  <li>Fix RCN violations in array functions.</li>
+  <li>Fixed <?php githubissuel('php/php-src', 18976); ?> pack() overflow with h/H format and INT_MAX repeater value.</li>
+</ul></li>
+<li>Streams:
+<ul>
+  <li>Fixed <?php githubissuel('php/php-src', 13264); ?> (fgets() and stream_get_line() do not return false on filter fatal error).</li>
+</ul></li>
+<li>Zip:
+<ul>
+  <li>Fix leak when path is too long in ZipArchive::extractTo().</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
+
+
 <section class="version" id="8.4.10"><!-- {{{ 8.4.10 -->
 <h3>Version 8.4.10</h3>
 <b><?php release_date('03-Jul-2025'); ?></b>
