@@ -97,7 +97,7 @@ class LangChooser
                 // The language part is either a code or a code with a quality
                 // We cannot do anything with a * code, so it is skipped
                 // If the quality is missing, it is assumed to be 1 according to the RFC
-                if (preg_match("!([a-z-]+)(;q=([0-9\\.]+))?!", trim($value), $found)) {
+                if (preg_match("!([a-z-]+)(;q=([0-9\\.]+))?!", strtolower(trim($value)), $found)) {
                     $quality = (isset($found[3]) ? (float) $found[3] : 1.0);
                     $browser_langs[] = [$found[1], $quality];
                 }
