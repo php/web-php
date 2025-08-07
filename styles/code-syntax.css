@@ -1,0 +1,65 @@
+pre[class*=language-] {
+    margin: 0;
+}
+
+:not(pre) > code[class*=language-], pre[class*=language-] {
+    background: transparent;
+}
+
+.code-toolbar .toolbar {
+    opacity: 1 !important;
+    visibility: visible !important;
+    pointer-events: auto !important;
+}
+
+div.code-toolbar > .toolbar {
+    position: relative;
+    border-top: 1px solid rgba(0, 0, 0, .15);
+    top: 0;
+    right: 0;
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+}
+
+.code-toolbar {
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, .15);
+}
+
+.toolbar-item {
+    padding: 5px;
+}
+
+pre.line-numbers {
+    padding-left: 2.5em !important;
+}
+
+pre.line-numbers .line-numbers-rows {
+    border-right: none !important;
+    width: 4em !important;
+}
+
+pre.line-numbers .line-numbers-rows > span:before {
+    padding-right: 1em !important;
+}
+
+div.code-toolbar > .toolbar > .toolbar-item > a, div.code-toolbar > .toolbar > .toolbar-item > button, div.code-toolbar > .toolbar > .toolbar-item > span {
+    color: #000;
+    background: transparent;
+    box-shadow: none;
+    padding-left: 1em !important;
+}
+
+button.copy-to-clipboard-button {
+    padding: 0.75em !important;
+    padding-right: 1em !important;
+    background-color: var(--dark-blue-color) !important;
+    color: #fff !important;
+    border-radius: 30px !important;
+}
+
+button.copy-to-clipboard-button:hover {
+    background-color: var(--dark-magenta-color) !important;
+    border-color: var(--dark-magenta-color) !important;
+}
+
