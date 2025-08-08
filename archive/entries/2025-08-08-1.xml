@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom" xmlns:default="http://php.net/ns/news">
+  <title>ConFoo Montreal 2026: Call for Papers</title>
+  <id>https://www.php.net/archive/2025.php#2025-08-08-1</id>
+  <published>2025-08-08T17:41:33+00:00</published>
+  <updated>2025-08-08T17:41:33+00:00</updated>
+  <link href="https://www.php.net/conferences/index.php#2025-08-08-1" rel="alternate" type="text/html"/>
+  <link href="https://confoo.ca/en/2026" rel="via" type="text/html"/>
+  <default:finalTeaserDate xmlns="http://php.net/ns/news">2025-09-21</default:finalTeaserDate>
+  <category term="cfp" label="Call for Papers"/>
+  <default:newsImage xmlns="http://php.net/ns/news" link="https://confoo.ca/en/2026" title="ConFoo Montreal 2026">confoo_2024.png</default:newsImage>
+  <content type="xhtml">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+     <p>ConFoo is a multi-technology conference specifically crafted for tech professionals. Whether you’re a developer, architect or a CTO, this conference wishes to bring an outstanding diversity of content to expand your knowledge, increase your productivity and boost your development skills. With over 170 presentations, offered by local and international speakers, you’re sure to level up your skills and more!</p>
+     
+     <p>You’re a leader in your field and wish to share your wisdom? Want to be part of our 2026 lineup? Want to demonstrate how human intelligence is changing our industry?
+     The team at ConFoo is looking for speakers and conference proposals for its 2026 event in Montreal.</p>
+     
+     <p>Our conferences are both dynamic and educational and are set to challenge our participants. We usually recommend a 45-minute format, including a 10 Q&amp;A session at the end. Checkout last year conference schedule to get an idea of what you can expect.</p>
+     
+     <p>You have until September 21 to <a href="https://confoo.ca/en/2026/call-for-papers">submit your proposals</a>.</p>
+     
+     <p>Until then, participants can enjoy a <a href="https://confoo.ca/">300$ discount</a> on their registration!</p>
+     
+    </div>
+  </content>
+</entry>
