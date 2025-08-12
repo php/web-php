@@ -8,7 +8,7 @@ jobs:
     runs-on: "ubuntu-22.04"
     if: "github.repository_owner == 'php' && github.event.label.name == 'Status: Preview Allowed'"
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
         with:
           ref: "refs/pull/${{ github.event.number }}/merge"
 
@@ -53,7 +53,7 @@ jobs:
       HTTP_HOST: "localhost:8080"
 
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
         with:
           ref: "refs/pull/${{ github.event.number }}/merge"
 
