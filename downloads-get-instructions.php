@@ -37,6 +37,14 @@ if (array_key_exists('multiversion', $options)) {
 	$multiversion = $options['multiversion'] === 'Y';
 }
 
+$source = false;
+
+if (array_key_exists('source', $options)) {
+	if ($options['source'] === 'Y') {
+		$source = $options['source'] === 'Y';
+	}
+}
+
 switch ($options['os']) {
 	case 'linux':
 		$defaultOrCommunity = ($options['version'] !== 'default' || $multiversion) ? 'community' : 'default';
@@ -51,16 +59,23 @@ switch ($options['os']) {
 		break;
 }
 
+if ($source) {
+    $file = "{$options['os']}-source";
+}
+
 $version = $options['version'];
 $versionNoDot = str_replace('.', '', $version);
 
 if (file_exists(__DIR__ . "/include/download-instructions/{$file}.php")) {
 	include __DIR__ . "/include/download-instructions/{$file}.php";
+	if ($source) {
+		return false;
+	}
 	return true;
 } else {
 ?>
 <p>
-There are no instructions yet. Try using the generic installation from source.
+    There are no instructions yet. Try using the <a href="https://www.php.net/manual/en/install.php">generic installation from source</a>.
 </p>
 <?php
 	return false;
