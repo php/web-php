@@ -26,7 +26,7 @@ foreach($css_files as $filename) {
 $JS = [];
 if (isset($config["js_files"])) {
     foreach($config['js_files'] as $filename) {
-        $path = dirname(__DIR__) . $filename;
+        $path = dirname(__DIR__) . '/' . $filename;
         $JS[$filename] = @filemtime($path);
     }
 }
