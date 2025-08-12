@@ -1,4 +1,3 @@
 <p>
-	The <a href="https://www.php.net/manual/en/install.windows.building.php">instructions for compiling from source
-	on Windows</a> are described in the PHP manual.
+	The instructions for compiling from source on Windows are described in the <a href="https://github.com/php/php-windows-builder#local-setup">php/php-windows-builder</a> repository.
 </p>
