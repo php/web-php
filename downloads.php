@@ -218,10 +218,32 @@ to verify the tags:
 
     <script>
         window.onload = function () {
-            let form = document.getElementById("instructions-form")
+            const form = document.getElementById("instructions-form")
+            const instructions = document.getElementById("instructions")
 
             form.addEventListener('change', function () {
-                form.submit();
+                const params = new URLSearchParams(new FormData(form)).toString()
+
+                const newUrl = form.action.split('?')[0] + '?' + params;
+                history.pushState(null, '', newUrl);
+
+                fetch(form.action + '?' + params)
+                    .then(response => response.text())
+                    .then(html => {
+                        const parser = new DOMParser();
+                        const doc = parser.parseFromString(html, 'text/html');
+
+                        const newForm = doc.querySelector('#instructions-form');
+                        const newInstructions = doc.querySelector('#instructions');
+
+                        if (newForm) form.innerHTML = newForm.innerHTML;
+                        if (newInstructions) instructions.innerHTML = newInstructions.innerHTML;
+
+                        if (window.Prism && typeof Prism.highlightAll === 'function') {
+                            Prism.highlightAll();
+                        }
+                    })
+                    .catch(err => console.error('Request failed', err));
             });
         }
     </script>
