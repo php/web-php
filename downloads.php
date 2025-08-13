@@ -217,17 +217,22 @@ to verify the tags:
 <?php endif; ?>
 
     <script>
+        let currentController = null;
+
         window.onload = function () {
             const form = document.getElementById("instructions-form")
             const instructions = document.getElementById("instructions")
 
             form.addEventListener('change', function () {
+                if (currentController) {
+                    currentController.abort();
+                }
+
+                currentController = new AbortController();
+
                 const params = new URLSearchParams(new FormData(form)).toString()
 
-                const newUrl = form.action.split('?')[0] + '?' + params;
-                history.pushState(null, '', newUrl);
-
-                fetch(form.action + '?' + params)
+                fetch(form.action + '?' + params, {signal: currentController.signal})
                     .then(response => response.text())
                     .then(html => {
                         const parser = new DOMParser();
@@ -242,8 +247,17 @@ to verify the tags:
                         if (window.Prism && typeof Prism.highlightAll === 'function') {
                             Prism.highlightAll();
                         }
+
+                        const newUrl = form.action.split('?')[0] + '?' + params;
+                        history.pushState(null, '', newUrl);
                     })
-                    .catch(err => console.error('Request failed', err));
+                    .catch(err => {
+                        if (err.name === 'AbortError') {
+                            return
+                        }
+
+                        console.error('Request failed:', err);
+                    })
             });
         }
     </script>
