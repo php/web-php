@@ -100,13 +100,13 @@ $QA_RELEASES = [
     '8.5.0' => [
         'active'  => true,
         'release' => [
-            'type'       => 'alpha',
-            'number'     => 4,
-            'sha256_bz2' => 'd9cddc414e49815dc18ef6c63701ca0271ca1ea9c812fe1cbc6cc989adf0a026',
-            'sha256_gz'  => '0d8df870b8de569e2cf3530a8bb8f2b627b1f7f7f9212a76ce3a5b3742903f37',
-            'sha256_xz'  => '5d33e15942d89956814f1521540210c58174c7f72dd277deda6b99709173e2db',
-            'date'       => '31 Jul 2025',
-            'baseurl'    => 'https://downloads.php.net/~daniels/',
+            'type'       => 'beta',
+            'number'     => 1,
+            'sha256_bz2' => '3b9712d3dc33c05271c02c23b7edcfd86651660d7aa3b10e912597c8f35ab1a2',
+            'sha256_gz'  => 'd28f6de0744fa733db898ddcdeaa784a5e87ec1b4b4822e83529d9a76229ea61',
+            'sha256_xz'  => '60fe18a9802d18a9c9be05d43b4d130b3aeab27a031a29d0e267b7b4c8dff4a7',
+            'date'       => '14 Aug 2025',
+            'baseurl'    => 'https://downloads.php.net/~edorian/',
         ],
     ],
 ];
