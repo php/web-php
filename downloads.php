@@ -81,6 +81,7 @@ $os = [
     'windows' => [
         'name' => 'Windows',
         'variants' => [
+            'windows-downloads' => 'Windows ZIP Downloads',
             'windows-native' => 'Windows Native Build',
             'windows-chocolatey' => 'Windows with Chocolatey',
             'windows-scoop' => 'Windows with Scoop',
