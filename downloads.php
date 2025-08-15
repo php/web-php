@@ -170,6 +170,13 @@ if (!array_key_exists('osvariant', $options) || !array_key_exists($options['osva
     </noscript>
 </form>
 
+<div class="tip">
+    <p>
+        Did you find a mistake? Didn't find what you were looking for?
+        Please <a href='https://github.com/php/web-php/issues/new?template=download-page.yml'>submit an issue</a>.
+    </p>
+</div>
+
 <h2>Instructions</h2>
 <div id="instructions" class="instructions">
 <?php $instructionsShown = include 'downloads-get-instructions.php'; ?>
