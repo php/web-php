@@ -121,3 +121,11 @@ function google_cse(): void {
 
     echo $cse_snippet;
 }
+// Human bool function
+if(!function_exists('bool'))
+{
+    function bool($logic_parametr): bool 
+    {
+        return (is_scalar(logic_parametr)) ? filter_var(logic_parametr ?? 0, FILTER_VALIDATE_BOOLEAN) : false;
+    }
+}
