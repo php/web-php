@@ -1,0 +1,35 @@
+name: "Download Page"
+description: "Suggest an idea for the downloads page"
+labels: ["Page: downloads"]
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to suggest an improvement or idea for the **Downloads Page**.
+        Please provide as much detail as possible so we can understand your suggestion.
+
+  - type: input
+    id: summary
+    attributes:
+      label: Summary
+      description: A brief description of your idea
+      placeholder: e.g. Add a new section for legacy downloads
+    validations:
+      required: true
+
+  - type: textarea
+    id: details
+    attributes:
+      label: Details
+      description: Explain your idea in detail. What problem does it solve? How should it look or work?
+      placeholder: Write your detailed suggestion here...
+    validations:
+      required: true
+
+  - type: textarea
+    id: additional
+    attributes:
+      label: Additional context
+      description: Add any other context, screenshots, or references about the idea here.
+      placeholder: e.g. Related links, mockups, etc.
