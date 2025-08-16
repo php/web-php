@@ -244,6 +244,8 @@ to verify the tags:
                     if (newForm && form) form.innerHTML = newForm.innerHTML
                     if (newInstructions && instructions) instructions.innerHTML = newInstructions.innerHTML
 
+                    removeUpdateInstructionsButton()
+
                     if (window.Prism && typeof Prism.highlightAll === 'function') {
                         Prism.highlightAll()
                     }
@@ -257,11 +259,15 @@ to verify the tags:
                 });
         }
 
-        document.addEventListener('DOMContentLoaded', function () {
-            const btn = document.querySelector('#instructions-form button[type="submit"]');
+        function removeUpdateInstructionsButton() {
+            const btn = document.querySelector('#instructions-form button[type="submit"]')
             if (btn) {
                 btn.remove()
             }
+        }
+
+        document.addEventListener('DOMContentLoaded', function () {
+            removeUpdateInstructionsButton()
         })
 
         document.addEventListener('change', function (e) {
