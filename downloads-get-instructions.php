@@ -1,14 +1,12 @@
 <?php
 $file = 'unknown';
 $latestPhpVersion = '8.4';
-$priorPhpVersion = '8.3';
 
 if (!isset($options)) {
     $options = [
         'os' => '',
         'usage' => '',
         'version' => '',
-        'priorVersion' => $priorPhpVersion,
     ];
 }
 
@@ -67,8 +65,6 @@ if ($source) {
 
 $version = $options['version'];
 $versionNoDot = str_replace('.', '', $version);
-$priorVersion = $options['priorVersion'];
-$priorVersionNoDot = str_replace('.', '', $priorPhpVersion);
 
 if (file_exists(__DIR__ . "/include/download-instructions/{$file}.php")) {
     include __DIR__ . "/include/download-instructions/{$file}.php";
