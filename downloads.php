@@ -164,9 +164,7 @@ if (!array_key_exists('osvariant', $options) || !array_key_exists($options['osva
             <?= array_key_exists('source', $options) && $options['source'] === 'Y' ? 'checked' : '' ?>/>
     </label>
 
-    <noscript>
         <button type="submit" class="button">Update Instructions</button>
-    </noscript>
 </form>
 
 <h2>Instructions</h2>
@@ -258,6 +256,13 @@ to verify the tags:
                     }
                 });
         }
+
+        document.addEventListener('DOMContentLoaded', function () {
+            const btn = document.querySelector('#instructions-form button[type="submit"]');
+            if (btn) {
+                btn.remove()
+            }
+        })
 
         document.addEventListener('change', function (e) {
             if (e.target.closest('#instructions-form')) {
