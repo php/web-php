@@ -219,47 +219,62 @@ to verify the tags:
     <script>
         let currentController = null;
 
-        window.onload = function () {
-            const form = document.getElementById("instructions-form")
-            const instructions = document.getElementById("instructions")
+        function loadInstructions(url) {
+            const form = document.querySelector('#instructions-form')
+            const instructions = document.getElementById('instructions')
 
-            form.addEventListener('change', function () {
-                if (currentController) {
-                    currentController.abort();
-                }
+            if (currentController) {
+                currentController.abort()
+            }
+            currentController = new AbortController()
 
-                currentController = new AbortController();
+            fetch(url, {signal: currentController.signal})
+                .then(response => {
+                    if (!response.ok) {
+                        instructions.innerHTML = `<p class="error">Error ${response.status}: Unable to load data.</p>`
+                        throw new Error(`HTTP ${response.status} ${response.statusText}`)
+                    }
+                    return response.text()
+                })
+                .then(html => {
+                    const parser = new DOMParser();
+                    const doc = parser.parseFromString(html, 'text/html')
 
-                const params = new URLSearchParams(new FormData(form)).toString()
+                    const newForm = doc.querySelector('#instructions-form')
+                    const newInstructions = doc.querySelector('#instructions')
 
-                fetch(form.action + '?' + params, {signal: currentController.signal})
-                    .then(response => response.text())
-                    .then(html => {
-                        const parser = new DOMParser();
-                        const doc = parser.parseFromString(html, 'text/html');
+                    if (newForm && form) form.innerHTML = newForm.innerHTML
+                    if (newInstructions && instructions) instructions.innerHTML = newInstructions.innerHTML
 
-                        const newForm = doc.querySelector('#instructions-form');
-                        const newInstructions = doc.querySelector('#instructions');
-
-                        if (newForm) form.innerHTML = newForm.innerHTML;
-                        if (newInstructions) instructions.innerHTML = newInstructions.innerHTML;
-
-                        if (window.Prism && typeof Prism.highlightAll === 'function') {
-                            Prism.highlightAll();
-                        }
-
-                        const newUrl = form.action.split('?')[0] + '?' + params;
-                        history.pushState(null, '', newUrl);
-                    })
-                    .catch(err => {
-                        if (err.name === 'AbortError') {
-                            return
-                        }
-
-                        console.error('Request failed:', err);
-                    })
-            });
+                    if (window.Prism && typeof Prism.highlightAll === 'function') {
+                        Prism.highlightAll()
+                    }
+                })
+                .catch(err => {
+                    if (err.name === 'AbortError') return;
+                    console.error('Request failed:', err)
+                    if (!instructions.querySelector('.error')) {
+                        instructions.innerHTML = `<p class="error">An unexpected error occurred.</p>`
+                    }
+                });
         }
+
+        document.addEventListener('change', function (e) {
+            if (e.target.closest('#instructions-form')) {
+                const form = e.target.closest('#instructions-form')
+                const params = new URLSearchParams(new FormData(form)).toString()
+                const newUrl = form.action.split('?')[0] + '?' + params
+
+                history.pushState({url: newUrl}, '', newUrl)
+                loadInstructions(newUrl)
+            }
+        })
+
+        window.addEventListener('popstate', function (e) {
+            if (e.state && e.state.url) {
+                loadInstructions(e.state.url)
+            }
+        })
     </script>
 
 <?php
