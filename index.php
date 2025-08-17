@@ -105,7 +105,7 @@ $intro = <<<EOF
             <div class="stat-label">of websites</div>
           </div>
           <div class="stat-item">
-            <div class="stat-number">30</div>
+            <div class="stat-number">30+</div>
             <div class="stat-label">years strong</div>
           </div>
           <div class="stat-item">
