@@ -261,7 +261,7 @@ to verify the tags:
 
         function removeUpdateInstructionsButton() {
             const btn = document.querySelector('#instructions-form button[type="submit"]')
-            if (btn) {
+            if (btn && window.fetch && window.AbortController) {
                 btn.remove()
             }
         }
