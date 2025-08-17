@@ -194,9 +194,7 @@ if ($auto_osvariant && (!array_key_exists('osvariant', $options) || !array_key_e
             <?= array_key_exists('source', $options) && $options['source'] === 'Y' ? 'checked' : '' ?>/>
     </label>
 
-    <noscript>
         <button type="submit" class="button">Update Instructions</button>
-    </noscript>
 </form>
 
 <div class="tip">
@@ -254,13 +252,77 @@ to verify the tags:
 <?php endif; ?>
 
     <script>
-        window.onload = function () {
-            let form = document.getElementById("instructions-form")
+        let currentController = null;
 
-            form.addEventListener('change', function () {
-                form.submit();
-            });
+        function loadInstructions(url) {
+            const form = document.querySelector('#instructions-form')
+            const instructions = document.getElementById('instructions')
+
+            if (currentController) {
+                currentController.abort()
+            }
+            currentController = new AbortController()
+
+            fetch(url, {signal: currentController.signal})
+                .then(response => {
+                    if (!response.ok) {
+                        instructions.innerHTML = `<p class="error">Error ${response.status}: Unable to load data.</p>`
+                        throw new Error(`HTTP ${response.status} ${response.statusText}`)
+                    }
+                    return response.text()
+                })
+                .then(html => {
+                    const parser = new DOMParser();
+                    const doc = parser.parseFromString(html, 'text/html')
+
+                    const newForm = doc.querySelector('#instructions-form')
+                    const newInstructions = doc.querySelector('#instructions')
+
+                    if (newForm && form) form.innerHTML = newForm.innerHTML
+                    if (newInstructions && instructions) instructions.innerHTML = newInstructions.innerHTML
+
+                    removeUpdateInstructionsButton()
+
+                    if (window.Prism && typeof Prism.highlightAll === 'function') {
+                        Prism.highlightAll()
+                    }
+                })
+                .catch(err => {
+                    if (err.name === 'AbortError') return;
+                    console.error('Request failed:', err)
+                    if (!instructions.querySelector('.error')) {
+                        instructions.innerHTML = `<p class="error">An unexpected error occurred.</p>`
+                    }
+                });
         }
+
+        function removeUpdateInstructionsButton() {
+            const btn = document.querySelector('#instructions-form button[type="submit"]')
+            if (btn && window.fetch && window.AbortController) {
+                btn.remove()
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', function () {
+            removeUpdateInstructionsButton()
+        })
+
+        document.addEventListener('change', function (e) {
+            if (e.target.closest('#instructions-form')) {
+                const form = e.target.closest('#instructions-form')
+                const params = new URLSearchParams(new FormData(form)).toString()
+                const newUrl = form.action.split('?')[0] + '?' + params
+
+                history.pushState({url: newUrl}, '', newUrl)
+                loadInstructions(newUrl)
+            }
+        })
+
+        window.addEventListener('popstate', function (e) {
+            if (e.state && e.state.url) {
+                loadInstructions(e.state.url)
+            }
+        })
     </script>
 
 <?php
