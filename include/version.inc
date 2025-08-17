@@ -147,7 +147,7 @@ function show_source_releases()
                 </li>
               <?php endforeach; ?>
               <li>
-                <a href="https://windows.php.net/download#php-<?php echo urlencode($mver); ?>">
+                <a href="/downloads.php?os=windows&osvariant=windows-downloads&version=<?php echo urlencode($mver); ?>">
                   Windows downloads
                 </a>
               </li>
