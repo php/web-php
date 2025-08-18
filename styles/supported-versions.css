@@ -21,6 +21,10 @@ table.standard tr.stable td:first-child {
 	table.standard td.collapse-phone {
 		display: none;
 	}
+
+	table.standard:nth-of-type(2) td::before {
+		content: unset;
+	}
 }
 
 svg {
