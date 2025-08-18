@@ -411,7 +411,7 @@ PHP
                             <<<'PHP'
 $animal = array_find(
     ['dog', 'cat', 'cow', 'duck', 'goose'],
-    static fn (string $value): bool => str_starts_with($value, 'c'),
+    static fn(string $value): bool => str_starts_with($value, 'c'),
 );
 
 var_dump($animal); // string(3) "cat"
@@ -443,7 +443,7 @@ $connection = new PDO(
 
 $connection->sqliteCreateFunction(
     'prepend_php',
-    static fn ($string) => "PHP {$string}",
+    static fn($string) => "PHP {$string}",
 );
 
 $connection->query('SELECT prepend_php(version) FROM php');
@@ -465,7 +465,7 @@ $connection = PDO::connect(
 
 $connection->createFunction(
     'prepend_php',
-    static fn ($string) => "PHP {$string}",
+    static fn($string) => "PHP {$string}",
 ); // Does not exist on a mismatching driver.
 
 $connection->query('SELECT prepend_php(version) FROM php');
