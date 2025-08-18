@@ -5,7 +5,6 @@ backend/mirror.gif
 backend/mirror.png
 backend/mirror.jpg
 backend/GeoIP.dat
-include/download-instructions/releases.json
 node_modules/
 /test-results/
 /playwright-report/
