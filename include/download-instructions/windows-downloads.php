@@ -2,7 +2,7 @@
 $baseDownloads  = 'https://downloads.php.net/~windows/releases/';
 
 $dataStr = @file_get_contents(__DIR__ . '/win-releases.json');
-$releases = $dataStr ? json_decode($dataStr ?? $json, true) : null;
+$releases = $dataStr ? json_decode($dataStr, true) : null;
 
 if (!is_array($releases)) {
 	echo '<p>Windows release index is temporarily unavailable.</p>';
