@@ -88,3 +88,7 @@ button.copy-to-clipboard-button:hover {
     font-size: 0.8rem;
     display: block;
 }
+
+.instructions .sha256 {
+    word-break: break-all;
+}
