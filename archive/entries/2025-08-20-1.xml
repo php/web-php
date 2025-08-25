@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <entry xmlns="http://www.w3.org/2005/Atom" xmlns:default="http://php.net/ns/news">
-  <title>Longhorn PHP 2025 - Speakers and Schedule Announced!</title>
+  <title>Longhorn PHP 2025</title>
   <id>https://www.php.net/archive/2025.php#2025-08-20-1</id>
   <published>2025-08-20T17:41:57+00:00</published>
-  <updated>2025-08-20T17:41:57+00:00</updated>
+  <updated>2025-08-23T20:35:57+00:00</updated>
   <link href="https://www.php.net/conferences/index.php#2025-08-20-1" rel="alternate" type="text/html"/>
   <link href="https://longhornphp.com/schedule" rel="via" type="text/html"/>
-  <default:finalTeaserDate xmlns="http://php.net/ns/news">2025-08-20</default:finalTeaserDate>
+  <default:finalTeaserDate xmlns="http://php.net/ns/news">2025-10-23</default:finalTeaserDate>
   <category term="conferences" label="Conference announcement"/>
   <default:newsImage xmlns="http://php.net/ns/news" link="https://longhornphp.com/schedule" title="LonghornPHP">longhornphp.png</default:newsImage>
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml">
         <p>Longhorn PHP is back for 2025 - and our schedule and speakers list is now live! The conference will be held in Austin, Texas, and will start with an optional tutorial day on Thursday, October 23, followed by two days full of talks and keynotes plus open spaces and more, on Friday and Saturday, October 24-25.</p>
-        <p>Longhorn PHP is a regional community run conference, designed to help PHP developers level up their craft and connect with the larger PHP community. <a href="https://longhornphp.com/schedule">Our full schedule is available now</a>, with Blind Bird pricing still available until end of day, Sunday August 24, so grab your tickets before prices go up!</p>
+        <p>Longhorn PHP is a regional community run conference, designed to help PHP developers level up their craft and connect with the larger PHP community. <a href="https://longhornphp.com/schedule">Our full schedule is available now</a>.</p>
       </div>
   </content>
 </entry>
