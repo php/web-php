@@ -8,6 +8,8 @@ body:
       value: |
         Thanks for taking the time to suggest an improvement or idea for the **Downloads Page**.
         Please provide as much detail as possible so we can understand your suggestion.
+        Please **do not** use this issue tracker for reporting issues with installing PHP, as
+        this is not a support forum. Instead head to [our support page](https://www.php.net/support.php).
 
   - type: input
     id: summary
