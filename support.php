@@ -10,7 +10,6 @@ $SIDEBAR_DATA = '
       <li><a href="#documentation">Documentation</a></li>
       <li><a href="#community-support">Community Support</a></li>
       <li><a href="#user-groups-events">User Groups &amp; Events</a></li>
-      <li><a href="#irc">IRC</a></li>
       <li><a href="#archive">Archive (Legacy resources)</a></li>
       <!-- Purposefully no link to the webmasters -->
     </ul>
@@ -54,6 +53,9 @@ site_header(
           <li><a href="https://discord.gg/php-developers-484326318851358720">PHP Developers</a></li>
       </ul>
   </li>
+  <li>
+    <strong>IRC:</strong> real-time chat at <a href="https://libera.chat/">Libera.Chat</a> in <strong>#phpc</strong>. This channel is also bridged with Discord via <a href="https://phpc.chat/">phpc.chat</a>.
+  </li>
 </ul>
 
 <h2 id="user-groups-events">User Groups &amp; Events</h2>
@@ -67,19 +69,6 @@ site_header(
   <li>Want to list an event? Submit it <a href="/submit-event.php">here</a>.</li>
 </ul>
 
-<h2 id="irc">Internet Relay Chat</h2>
-
-<p>
- Otherwise known as IRC. Here you can usually find experienced PHP people
- sitting around doing nothing on various channels with php in their names.
- Note that there is no official IRC channel. Check
- <a href="https://libera.chat/">Libera.Chat</a> or any other major network
- (<a href="http://www.efnet.org/">EFNet</a>,
- <a href="http://www.quakenet.org">QuakeNet</a>,
- <a href="http://www.ircnet.com/">IRCNet</a>,
- <a href="http://www.dal.net/">DALNet</a> and
- <a href="http://oftc.net">OFTC</a>).
-</p>
 
 <h2 id="archive">Archive (Legacy resources)</h2>
 
@@ -90,7 +79,7 @@ site_header(
 
 <h3 id="newsgroups">Newsgroups</h3>
 <p>
- The PHP language newsgroup was comp.lang.php. Many of our mailing lists were also reflected onto the news server at
+ The PHP language newsgroup is comp.lang.php. Many of our mailing lists were also reflected onto the news server at
  <a href="news://news.php.net">news://news.php.net/</a>. The server also has a read only web interface at
  <a href="https://news-web.php.net/">https://news-web.php.net/</a>.
 </p>
@@ -101,12 +90,13 @@ site_header(
 <h2 id="webmasters">PHP.net webmasters</h2>
 
 <p>
- If you have a problem or suggestion <em>in connection with the PHP.net
- website or mirror sites</em>, <a href="/contact.php">please
- contact the webmasters</a>. <br> If you have problems setting up PHP
- or using some functionality, please ask your question on a support
- channel detailed above, the webmasters will not answer any such
- questions.
+    If you have a problem or suggestion <em>in connection with the PHP.net
+    website or mirror sites</em>, <a href="/contact.php">please contact the webmasters</a>.
+</p>
+<p>
+    If you have problems setting up PHP or using some functionality,
+    please ask your question on a support channel detailed above,
+    the webmasters will not answer any such questions.
 </p>
 
 <?php site_footer(['sidebar' => $SIDEBAR_DATA]); ?>
