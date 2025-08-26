@@ -8,8 +8,7 @@
   <link href="https://www.php.net/archive/2025.php#2025-08-25-1" rel="via" type="text/html"/>
   <default:finalTeaserDate xmlns="http://php.net/ns/news">2025-08-25</default:finalTeaserDate>
   <category term="conferences" label="Conference announcement"/>
-  <default:newsImage xmlns="http://php.net/ns/news" link="https://phpeste.org/" title="PHPeste 2023">
-  phpeste_400x120.png</default:newsImage>
+  <default:newsImage xmlns="http://php.net/ns/news" link="https://phpeste.org/" title="PHPeste 2025">phpeste_400x120.png</default:newsImage>
   <content type="xhtml">
   <div xmlns="http://www.w3.org/1999/xhtml">
     <p>
