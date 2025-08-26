@@ -362,6 +362,7 @@ $uri_aliases = [
     "whatis" => "introduction",
     "whatisphp" => "introduction",
     "what_is_php" => "introduction",
+    "composer" => "install.composer.intro",
 
     "windows" => "install.windows",
     "win32" => "install.windows",
