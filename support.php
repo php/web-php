@@ -80,8 +80,9 @@ site_header(
 
 <h3 id="newsgroups">Newsgroups</h3>
 <p>
- The PHP language newsgroup is comp.lang.php. Many of our mailing lists were also reflected onto the news server at
- <a href="news://news.php.net">news://news.php.net/</a>. The server also has a read only web interface at
+ There was a PHP language NNTP newsgroup at comp.lang.php, and many of our support mailing
+ lists are also reflected onto our news server at <a href="news://news.php.net">news://news.php.net/</a>.
+ The server also has a read only web interface at
  <a href="https://news-web.php.net/">https://news-web.php.net/</a>.
 </p>
 <p>
