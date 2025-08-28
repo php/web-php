@@ -65,7 +65,7 @@ if (!isset($config["languages"])) {
    <base href="<?php echo $_SERVER["BASE_HREF"]; ?>">
   <?php endif ?>
 
-  <title>PHP: <?php echo $title ?></title>
+  <title><?php echo $title ?></title>
 
   <?php foreach($CSS as $filename => $modified): ?>
     <link rel="stylesheet" type="text/css" href="/cached.php?t=<?php echo $modified?>&amp;f=<?php echo $filename?>" media="screen">
