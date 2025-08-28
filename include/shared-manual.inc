@@ -326,7 +326,7 @@ function manual_setup($setup): void {
         "next" => $setup["next"],
         "cache" => $lastmod,
     ];
-    site_header($setup["this"][1] . " - Manual ", $config);
+    site_header($setup["this"][1] . " - Manual", $config);
 
     $languageChooser = manual_language_chooser($config['lang'], $config['thispage']);
 
