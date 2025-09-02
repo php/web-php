@@ -427,7 +427,7 @@ function site_header(?string $title = NULL, array $config = []): void
 
     $title = $title ? "PHP: {$title}" : 'PHP';
     $meta_image_path = $MYSITE . 'images/meta-image.png';
-    $meta_description = $config['description'] ?? $title;
+    $meta_description = $config['description'] ?? "PHP is a popular general-purpose scripting language that powers everything from your blog to the most popular websites in the world.";
 
     $defaults = [
         "lang" => $LANG,
