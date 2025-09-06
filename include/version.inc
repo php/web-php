@@ -153,7 +153,7 @@ function show_source_releases()
               </li>
             </ul>
 
-            <a href="#gpg-<?php echo $mver; ?>">GPG Keys for PHP <?php echo $mver; ?></a>
+            <a href="<?php echo $_SERVER['REQUEST_URI']; ?>#gpg-<?php echo $mver; ?>">GPG Keys for PHP <?php echo $mver; ?></a>
           </div>
         <?php endforeach; ?>
     <?php endforeach; /* major releases loop end */ ?>
