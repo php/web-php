@@ -11,11 +11,25 @@
   <default:newsImage xmlns="http://php.net/ns/news" link="https://event.afup.org" title="Forum PHP 2025">forumphp-2025.png</default:newsImage>
   <content type="xhtml">
     <div xmlns="http://www.w3.org/1999/xhtml">
-     Join the biggest PHP event organized by the French PHP user group, organized for the fourth time in Disneyland Paris, at the Hotel New York - The Art of Marvel!
+      <p>
+        Join the biggest PHP event organized by the French PHP user group, organized for the fourth time in Disneyland
+        Paris, at the Hotel New York - The Art of Marvel!
+      </p>
 
-     For two days, on October 9th and 10th, enjoy the company of our friendly audience, share your knowledge with +700 attendees, meet the companies who use PHP every day, in an environment that will bring even more magic to the language.
+      <p>
+        For two days, on <strong>October 9th and 10th</strong>, enjoy the company of our friendly audience, share your knowledge with
+        +700 attendees, meet the companies who use PHP every day, in an environment that will bring even more magic to
+        the language.
+      </p>
 
-     This year is a special one for the French PHP community: along with 30 years of PHP, we will also celebrate 25 years of AFUP, 20 years of Symfony and 10 years of API Platform!
+      <p>
+        This year is a special one for the French PHP community: along with 30 years of PHP, we will also celebrate 25
+        years of AFUP, 20 years of Symfony and 10 years of API Platform!
+      </p>
+
+      <p>
+        Check out more details and tickets at <a href="https://event.afup.org">Afup.org</a>
+      </p>
     </div>
   </content>
 </entry>
