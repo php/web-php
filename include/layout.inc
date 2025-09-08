@@ -421,12 +421,13 @@ EOT;
     return $retval;
 }
 
-function site_header(string $title = 'Hypertext Preprocessor', array $config = []): void
+function site_header(?string $title = NULL, array $config = []): void
 {
     global $MYSITE, $LANG;
 
+    $title = $title ? "PHP: {$title}" : 'PHP';
     $meta_image_path = $MYSITE . 'images/meta-image.png';
-    $meta_description = "PHP is a popular general-purpose scripting language that powers everything from your blog to the most popular websites in the world.";
+    $meta_description = $config['description'] ?? "PHP is a popular general-purpose scripting language that powers everything from your blog to the most popular websites in the world.";
 
     $defaults = [
         "lang" => $LANG,
@@ -441,13 +442,13 @@ function site_header(string $title = 'Hypertext Preprocessor', array $config = [
 
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:site" content="@official_php" />
-<meta name="twitter:title" content="PHP: Hypertext Preprocessor" />
+<meta name="twitter:title" content="{$title}" />
 <meta name="twitter:description" content="{$meta_description}" />
 <meta name="twitter:creator" content="@official_php" />
 <meta name="twitter:image:src" content="{$meta_image_path}" />
 
-<meta itemprop="name" content="PHP: Hypertext Preprocessor" />
-<meta itemprop="description" content="$meta_description" />
+<meta itemprop="name" content="{$title}" />
+<meta itemprop="description" content="{$meta_description}" />
 <meta itemprop="image" content="{$meta_image_path}" />
 
 <meta property="og:image" content="{$meta_image_path}" />
