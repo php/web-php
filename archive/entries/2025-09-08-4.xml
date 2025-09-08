@@ -6,6 +6,7 @@
   <updated>2025-09-08T08:36:42+00:00</updated>
   <link href="https://www.php.net/conferences/index.php#2025-09-08-4" rel="alternate" type="text/html"/>
   <link href="https://www.php.net/archive/2025.php#2025-09-08-4" rel="via" type="text/html"/>
+<link href="https://phpkonf.az/" rel="alternate" type="text/html" title="Official website"/>
   <default:finalTeaserDate xmlns="http://php.net/ns/news">2025-10-26</default:finalTeaserDate>
   <category term="conferences" label="Conference announcement"/>
   <content type="xhtml">
@@ -18,6 +19,7 @@
      Participants will have the opportunity to connect with experienced speakers, exchange knowledge with peers, and explore real-world solutions to everyday development challenges.
      
      With support from local tech organizations and the broader PHP community, PHPKonf 2025 aims to strengthen the professional network of developers in the region and inspire collaboration on open source and enterprise projects.
+    <p><strong>Official website:</strong> <a href="https://phpkonf.az/">https://phpkonf.az/</a></p>
     </div>
   </content>
 </entry>
