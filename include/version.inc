@@ -114,6 +114,8 @@ function show_source_releases()
 
     $SHOW_COUNT = 4;
 
+    $current_uri = htmlspecialchars($_SERVER['REQUEST_URI'], ENT_QUOTES, 'UTF-8');
+
     $i = 0; foreach ($RELEASES as $MAJOR => $major_releases): /* major releases loop start */
         $releases = array_slice($major_releases, 0, $SHOW_COUNT);
 ?>
@@ -153,7 +155,7 @@ function show_source_releases()
               </li>
             </ul>
 
-            <a href="<?php echo $_SERVER['REQUEST_URI']; ?>#gpg-<?php echo $mver; ?>">GPG Keys for PHP <?php echo $mver; ?></a>
+            <a href="<?php echo $current_uri; ?>#gpg-<?php echo $mver; ?>">GPG Keys for PHP <?php echo $mver; ?></a>
           </div>
         <?php endforeach; ?>
     <?php endforeach; /* major releases loop end */ ?>
