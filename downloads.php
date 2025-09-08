@@ -68,6 +68,7 @@ $os = [
             'linux-fedora' => 'Fedora',
             'linux-redhat' => 'RedHat',
             'linux-ubuntu' => 'Ubuntu',
+            'linux-docker' => 'Docker',
         ],
     ],
     'osx' => [
@@ -75,6 +76,7 @@ $os = [
         'variants' => [
             'osx-homebrew' => 'Homebrew/Brew',
             'osx-homebrew-php' => 'Homebrew/Homebrew-PHP',
+            'osx-docker' => 'Docker',
             'osx-macports' => 'MacPorts',
         ],
     ],
@@ -85,6 +87,7 @@ $os = [
             'windows-native' => 'Windows Native Build',
             'windows-chocolatey' => 'Windows with Chocolatey',
             'windows-scoop' => 'Windows with Scoop',
+            'windows-docker' => 'Windows with Docker',
             'windows-wsl-debian' => 'Windows with WSL/Debian',
             'windows-wsl-ubuntu' => 'Windows with WSL/Ubuntu',
         ],
