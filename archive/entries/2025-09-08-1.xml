@@ -12,17 +12,24 @@
   <content type="xhtml">
     <div xmlns="http://www.w3.org/1999/xhtml">
         <p>
-            We are pleased to announce <a href="https://phpkonf.az/">PHPKonf 2025 Baku</a>,
-            to be held on 26 October 2025 at Ganjlik Plaza, Baku, Azerbaijan.
+            PHPKonf 2025 will take place on October 26, 2025 in Baku, Azerbaijan, bringing together PHP developers,
+            software engineers, and technology enthusiasts from the local and international community.
         </p>
         <p>
-            This one-day conference will feature talks on PHP, Laravel, Symfony,
-            security, testing, architecture, and real-world case studies.
-            Around 70–100 developers are expected to attend.
+            This one-day conference will feature practical talks and case studies on PHP and its ecosystem,
+            including frameworks such as Laravel and Symfony, as well as modern practices in testing,
+            security, architecture, and performance optimization.
         </p>
         <p>
-            Tickets are available now at <a href="https://phpkonf.az/#tickets">phpkonf.az</a>.
+            Participants will have the opportunity to connect with experienced speakers,
+            exchange knowledge with peers, and explore real-world solutions to everyday development challenges.
         </p>
+        <p>
+            With support from local tech organizations and the broader PHP community,
+            PHPKonf 2025 aims to strengthen the professional network of developers
+            in the region and inspire collaboration on open source and enterprise projects.
+        </p>
+        <p><strong>Official website:</strong> <a href="https://phpkonf.az/">https://phpkonf.az/</a></p>
     </div>
   </content>
 </entry>
