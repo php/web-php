@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom" xmlns:default="http://php.net/ns/news">
+  <title>PHPKonf 2025 Baku</title>
+  <id>https://www.php.net/archive/2025.php#2025-09-08-1</id>
+  <published>2025-09-08T06:53:09+00:00</published>
+  <updated>2025-09-08T06:53:09+00:00</updated>
+  <link href="https://www.php.net/conferences/index.php#2025-09-08-1" rel="alternate" type="text/html"/>
+  <link href="https://phpkonf.az/" rel="via" type="text/html"/>
+  <default:finalTeaserDate xmlns="http://php.net/ns/news">2025-10-26</default:finalTeaserDate>
+  <category term="conferences" label="Conference announcement"/>
+  <default:newsImage xmlns="http://php.net/ns/news" link="https://phpkonf.az/" title="PHPKonf 2025 Baku">phpkonf_2025.png</default:newsImage>
+  <content type="xhtml">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+        <p>
+            PHPKonf 2025 will take place on October 26, 2025 in Baku, Azerbaijan, bringing together PHP developers,
+            software engineers, and technology enthusiasts from the local and international community.
+        </p>
+        <p>
+            This one-day conference will feature practical talks and case studies on PHP and its ecosystem,
+            including frameworks such as Laravel and Symfony, as well as modern practices in testing,
+            security, architecture, and performance optimization.
+        </p>
+        <p>
+            Participants will have the opportunity to connect with experienced speakers,
+            exchange knowledge with peers, and explore real-world solutions to everyday development challenges.
+        </p>
+        <p>
+            With support from local tech organizations and the broader PHP community,
+            PHPKonf 2025 aims to strengthen the professional network of developers
+            in the region and inspire collaboration on open source and enterprise projects.
+        </p>
+        <p><strong>Official website:</strong> <a href="https://phpkonf.az/">https://phpkonf.az/</a></p>
+    </div>
+  </content>
+</entry>
