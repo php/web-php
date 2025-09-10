@@ -74,8 +74,8 @@ $os = [
     'osx' => [
         'name' => 'macOS',
         'variants' => [
-            'osx-homebrew' => 'Homebrew/Brew',
-            'osx-homebrew-php' => 'Homebrew/Homebrew-PHP',
+            'osx-homebrew' => 'Homebrew',
+            'osx-homebrew-php' => 'Homebrew-PHP',
             'osx-docker' => 'Docker',
             'osx-macports' => 'MacPorts',
         ],
@@ -83,13 +83,13 @@ $os = [
     'windows' => [
         'name' => 'Windows',
         'variants' => [
-            'windows-downloads' => 'Windows ZIP Downloads',
-            'windows-native' => 'Windows Native Build',
-            'windows-chocolatey' => 'Windows with Chocolatey',
-            'windows-scoop' => 'Windows with Scoop',
-            'windows-docker' => 'Windows with Docker',
-            'windows-wsl-debian' => 'Windows with WSL/Debian',
-            'windows-wsl-ubuntu' => 'Windows with WSL/Ubuntu',
+            'windows-downloads' => 'ZIP Downloads',
+            'windows-native' => 'Single Line Installer',
+            'windows-chocolatey' => 'Chocolatey',
+            'windows-scoop' => 'Scoop',
+            'windows-docker' => 'Docker',
+            'windows-wsl-debian' => 'WSL/Debian',
+            'windows-wsl-ubuntu' => 'WSL/Ubuntu',
         ],
     ],
 ];
