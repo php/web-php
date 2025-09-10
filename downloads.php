@@ -55,6 +55,7 @@ $usage = [
     'web' => 'Web Development',
     'cli' => 'CLI/Library Development',
     'fw-drupal' => 'Drupal Development',
+    'fw-joomla' => 'Joomla Development',
     'fw-laravel' => 'Laravel Development',
     'fw-symfony' => 'Symfony Development',
     'fw-wordpress' => 'WordPress Development',
