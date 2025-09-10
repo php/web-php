@@ -55,7 +55,11 @@ switch ($options['os']) {
         break;
     case 'osx':
     case 'windows':
-        $file = "{$options['osvariant']}";
+        if($options['osvariant'] === "{$options['os']}-docker") {
+            $file = "{$options['osvariant']}-{$options['usage']}";
+        } else {
+            $file = "{$options['osvariant']}";
+        }
         break;
 }
 
