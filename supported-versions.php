@@ -63,7 +63,7 @@ $VERSION_NOTES = [
                 ?>
 				<tr class="<?php echo $state ?>">
 					<td>
-						<a href="/downloads.php#v<?php echo htmlspecialchars($release['version']) ?>"><?php echo htmlspecialchars($branch) ?></a>
+						<a href="/downloads.php?version=<?php echo htmlspecialchars($branch) ?>"><?php echo htmlspecialchars($branch) ?></a>
 					</td>
 					<td><?php echo htmlspecialchars($initial->format('j M Y')) ?></td>
 					<td class="collapse-phone"><em><?php echo htmlspecialchars(format_interval($initial, $now)) ?></em></td>
