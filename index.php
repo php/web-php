@@ -100,7 +100,7 @@ foreach ($active_branches as $major => $releases) {
         $version = $release['version'];
         [$major, $minor, $_] = explode('.', $version);
         $intro .= "
-            <li class='hero__version'><a class='hero__version-link' href='/downloads.php#v$version'>$version</a> &middot; <a class='notes' href='/ChangeLog-$major.php#$version'>Changelog</a> &middot; <a class='notes' href='/migration$major$minor'>Upgrading</a></li>\n";
+            <li class='hero__version'><a class='hero__version-link' href='/downloads.php?version=$major.$minor'>$version</a> &middot; <a class='notes' href='/ChangeLog-$major.php#$version'>Changelog</a> &middot; <a class='notes' href='/migration$major$minor'>Upgrading</a></li>\n";
     }
 }
 $intro .= "</ul>\n";
