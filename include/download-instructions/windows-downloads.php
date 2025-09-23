@@ -1,5 +1,5 @@
 <?php
-$baseDownloads  = 'https://downloads.php.net/~windows/releases/';
+$baseDownloads  = 'https://downloads.php.net/~windows/releases/archives/';
 
 $dataStr = @file_get_contents(__DIR__ . '/../../backend/win-releases.json');
 $releases = $dataStr ? json_decode($dataStr, true) : null;
