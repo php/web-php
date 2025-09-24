@@ -26,7 +26,7 @@ if ($options['os'] === 'osx' || $options['os'] === 'windows') {
     }
 }
 
-if (in_array($options['usage'], ['fw-drupal', 'fw-laravel', 'fw-symfony', 'fw-wordpress', 'fw-joomla'])) {
+if (in_array($options['usage'], ['fw-drupal', 'fw-laravel', 'fw-symfony', 'fw-wordpress', 'fw-joomla', 'fw-mezzio'])) {
     $file = "{$options['usage']}";
     $options['os'] = null;
 }
