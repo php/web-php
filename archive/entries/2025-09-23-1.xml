@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom" xmlns:default="http://php.net/ns/news">
+  <title>PHP Conference Brazil 2025</title>
+  <id>https://www.php.net/archive/2025.php#2025-09-23-1</id>
+  <published>2025-09-23T18:54:43+00:00</published>
+  <updated>2025-09-23T18:54:43+00:00</updated>
+  <link href="https://www.php.net/conferences/index.php#2025-09-23-1" rel="alternate" type="text/html"/>
+  <link href="https://www.php.net/archive/2025.php#2025-09-23-1" rel="via" type="text/html"/>
+  <default:finalTeaserDate xmlns="http://php.net/ns/news">2025-12-06</default:finalTeaserDate>
+  <category term="conferences" label="Conference announcement"/>
+  <content type="xhtml">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+     Come join the 20th year of the main andd longest living PHP Conference in Latin America!
+     <p><strong>Official website:</strong> <a href="https://phpconference.com.br/">https://phpconference.com.br/</a></p>
+    </div>
+  </content>
+</entry>
