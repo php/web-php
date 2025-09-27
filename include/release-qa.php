@@ -75,12 +75,12 @@ $QA_RELEASES = [
         'active'  => true,
         'release' => [
             'type'       => 'RC',
-            'number'     => 1,
-            'sha256_bz2' => '9fd1963008e116ab2da513645381484e61c04c75a432e013b40f6607fb204c17',
-            'sha256_gz'  => '6225da9473eeb04e8f0e30d10e0481999129d08e12b0467b2542f306b517e2c9',
-            'sha256_xz'  => 'f8fa51d9e5b58186f415dc3f6e15b61459c50a01258d6c187bab5edfdd45d732',
+            'number'     => 0,
+            'sha256_bz2' => '',
+            'sha256_gz'  => '',
+            'sha256_xz'  => '',
             'date'       => '11 Sep 2025',
-            'baseurl'    => 'https://downloads.php.net/~jakub/',
+            'baseurl'    => 'https://downloads.php.net/',
         ],
     ],
 
@@ -100,13 +100,13 @@ $QA_RELEASES = [
     '8.5.0' => [
         'active'  => true,
         'release' => [
-            'type'       => 'beta',
-            'number'     => 3,
-            'sha256_bz2' => '897593d9fe0f5f6dd782e1e187323c407ef937a9e860e3552d3548621c260cc8',
-            'sha256_gz'  => 'ff3f5a8c73c4b84883ef0e3870543c078d324c46ccef2eb85c66cb88124e7a55',
-            'sha256_xz'  => 'ffde3f5c02187ff0bef28abad7fb0cfa389f47b79a324a8af6ae96b6b60f20cf',
-            'date'       => '11 Sep 2025',
-            'baseurl'    => 'https://downloads.php.net/~edorian/',
+            'type'       => 'RC',
+            'number'     => 1,
+            'sha256_bz2' => '8365ae9263cc160e6182302f0bdcc80edf1806029556e6870beb3078a625389c',
+            'sha256_gz'  => '0ea5059a387117fe6ed9a72cdc20945dbff6acc072df936e97d35a9cb26420e0',
+            'sha256_xz'  => '96f064b5d604e00e5fe1c993d4881da659a99d6d1d8ac0b1df8fec6406e34a9d',
+            'date'       => '25 Sep 2025',
+            'baseurl'    => 'https://downloads.php.net/~daniels/',
         ],
     ],
 ];
