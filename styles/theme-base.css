@@ -1413,7 +1413,8 @@ aside.tips div.inner {
 /* }}} */
 
 /* {{{ News */
-.newsentry header h2 {
+.newsentry header h2,
+.newsItem header h2 {
   margin:0;
 }
 .newsentry {
@@ -1427,7 +1428,8 @@ aside.tips div.inner {
   float: right;
   opacity: 0.8;
 }
-.newsentry header time {
+.newsentry header time,
+.newsItem header time {
   float:right;
   line-height:3rem;
 }
@@ -1436,7 +1438,8 @@ aside.tips div.inner {
     line-height: 1.7rem;
 }
 
-.newsentry .newsimage a {
+.newsentry .newsimage a,
+.newsItem .newsImage a {
   float: right;
   border: 0;
   padding: 10px;
