@@ -66,6 +66,7 @@ $os = [
     'linux' => [
         'name' => 'Linux',
         'variants' => [
+            'linux-almalinux' => 'AlmaLinux',
             'linux-debian' => 'Debian',
             'linux-fedora' => 'Fedora',
             'linux-redhat' => 'RedHat',
