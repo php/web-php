@@ -19,6 +19,10 @@ if ($options['os'] === 'windows') {
         $options['os'] = 'linux';
         $options['osvariant'] = 'linux-ubuntu';
     }
+    if ($options['osvariant'] === 'windows-wsl-almalinux') {
+        $options['os'] = 'linux';
+        $options['osvariant'] = 'linux-almalinux';
+    }
 }
 if ($options['os'] === 'osx' || $options['os'] === 'windows') {
     if ($options['version'] === 'default') {
@@ -26,7 +30,7 @@ if ($options['os'] === 'osx' || $options['os'] === 'windows') {
     }
 }
 
-if (in_array($options['usage'], ['fw-drupal', 'fw-laravel', 'fw-symfony', 'fw-wordpress', 'fw-joomla'])) {
+if (in_array($options['usage'], ['fw-drupal', 'fw-laravel', 'fw-symfony', 'fw-wordpress', 'fw-joomla', 'fw-mezzio'])) {
     $file = "{$options['usage']}";
     $options['os'] = null;
 }

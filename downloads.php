@@ -57,6 +57,7 @@ $usage = [
     'fw-drupal' => 'Drupal Development',
     'fw-joomla' => 'Joomla Development',
     'fw-laravel' => 'Laravel Development',
+     'fw-mezzio' => 'Mezzio Development',
     'fw-symfony' => 'Symfony Development',
     'fw-wordpress' => 'WordPress Development',
 ];
@@ -65,6 +66,7 @@ $os = [
     'linux' => [
         'name' => 'Linux',
         'variants' => [
+            'linux-almalinux' => 'AlmaLinux',
             'linux-debian' => 'Debian',
             'linux-fedora' => 'Fedora',
             'linux-redhat' => 'RedHat',
@@ -89,6 +91,7 @@ $os = [
             'windows-chocolatey' => 'Chocolatey',
             'windows-scoop' => 'Scoop',
             'windows-docker' => 'Docker',
+            'windows-wsl-almalinux' => 'WSL/AlmaLinux',
             'windows-wsl-debian' => 'WSL/Debian',
             'windows-wsl-ubuntu' => 'WSL/Ubuntu',
         ],
