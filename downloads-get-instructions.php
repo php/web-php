@@ -19,6 +19,10 @@ if ($options['os'] === 'windows') {
         $options['os'] = 'linux';
         $options['osvariant'] = 'linux-ubuntu';
     }
+    if ($options['osvariant'] === 'windows-wsl-almalinux') {
+        $options['os'] = 'linux';
+        $options['osvariant'] = 'linux-almalinux';
+    }
 }
 if ($options['os'] === 'osx' || $options['os'] === 'windows') {
     if ($options['version'] === 'default') {
