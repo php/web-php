@@ -72,10 +72,14 @@ async function main() {
     let exampleTitleParagraphElement = null;
     let exampleScreenPreElement = null;
     if (exampleTitleContainer !== null) {
-      exampleTitleParagraphElement = exampleTitleContainer.querySelector("p")
+      if (exampleTitleContainer.tagName === "P") {
+        exampleTitleParagraphElement = exampleTitleContainer;
+      } else {
+        exampleTitleParagraphElement = exampleTitleContainer.querySelector("p")
+      }
       const exampleScreenContainer = exampleTitleContainer.nextElementSibling;
       if (exampleScreenContainer !== null) {
-          exampleScreenPreElement = exampleScreenContainer.querySelector("pre");
+        exampleScreenPreElement = exampleScreenContainer.querySelector("pre");
       }
     }
 
