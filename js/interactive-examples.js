@@ -74,7 +74,9 @@ async function main() {
     if (exampleTitleContainer !== null) {
       exampleTitleParagraphElement = exampleTitleContainer.querySelector("p")
       const exampleScreenContainer = exampleTitleContainer.nextElementSibling;
-      exampleScreenPreElement = exampleScreenContainer.querySelector("pre");
+      if (exampleScreenContainer !== null) {
+          exampleScreenPreElement = exampleScreenContainer.querySelector("pre");
+      }
     }
 
     const code = phpcode.querySelector("code");
