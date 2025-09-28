@@ -60,7 +60,7 @@ class PHP {
 async function main() {
   let lastOutput = null;
 
-  document.querySelectorAll(".example .example-contents").forEach((example) => {
+  document.querySelectorAll(".example .example-contents, .informalexample .example-contents").forEach((example) => {
     const button = document.createElement("button");
     button.setAttribute("type", "button");
     const phpcode = example.querySelector(".phpcode.annotation-interactive");
