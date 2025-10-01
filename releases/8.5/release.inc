@@ -48,7 +48,8 @@ common_header(message('common_header', $lang));
                                 <<<'PHP'
 $components = parse_url("https://php.net/releases/8.5/en.php");
 
-var_dump($components['host']); // string(7) "php.net"
+var_dump($components['host']);
+// string(7) "php.net"
 PHP
 
                         ); ?>
@@ -62,7 +63,8 @@ PHP
                                 <<<'PHP'
 $uri = new Uri\Rfc3986\Uri("https://php.net/releases/8.5/en.php");
 
-var_dump($uri->getHost()); // string(7) "php.net"
+var_dump($uri->getHost());
+// string(7) "php.net"
 PHP
                         ); ?>
                     </div>
@@ -84,7 +86,20 @@ PHP
                     <div class="php8-code phpcode">
                         <?php highlight_php_trimmed(
                                 <<<'PHP'
-// TODO
+class PhpVersion {
+    public function __construct(
+        private string $version = 'PHP 8.4'
+    ) {}
+
+    public function withVersion(string $version) {
+        $newObject = clone $this;
+        $newObject->version = $version;
+
+        return $newObject;
+    }
+}
+
+var_dump(new PhpVersion()->withVersion('PHP 8.5'));
 PHP
 
                         ); ?>
@@ -96,7 +111,17 @@ PHP
                     <div class="php8-code phpcode" style="display: table-cell;">
                         <?php highlight_php_trimmed(
                                 <<<'PHP'
-// TODO
+class PhpVersion {
+    public function __construct(
+        private readonly string $version = 'PHP 8.4'
+    ) {}
+
+    public function withVersion(string $version) {
+        return clone($this, ['version' => $version]);
+    }
+}
+
+var_dump(new PhpVersion()->withVersion('PHP 8.5'));
 PHP
                         ); ?>
                     </div>
@@ -160,7 +185,11 @@ PHP
                     <div class="php8-code phpcode">
                         <?php highlight_php_trimmed(
                                 <<<'PHP'
-// TODO
+function getPhpVersion(): string {
+	return 'PHP 8.4';
+}
+
+getPhpVersion(); // No Errors
 PHP
 
                         ); ?>
@@ -172,7 +201,13 @@ PHP
                     <div class="php8-code phpcode" style="display: table-cell;">
                         <?php highlight_php_trimmed(
                                 <<<'PHP'
-// TODO
+#[\NoDiscard]
+function getPhpVersion(): string {
+	return 'PHP 8.4';
+}
+
+getPhpVersion();
+// Warning: The return value of function getPhpVersion() should either be used or intentionally ignored by casting it as (void)
 PHP
                         ); ?>
                     </div>
@@ -259,7 +294,8 @@ PHP
                                 <<<'PHP'
 $versions = ['PHP 8.1', 'PHP 8.2', 'PHP 8.3', 'PHP 8.4', 'PHP 8.5'];
 
-var_dump($versions[array_key_first($versions)]); // string(7) "PHP 8.1"
+var_dump($versions[array_key_first($versions)]);
+// string(7) "PHP 8.1"
 PHP
 
                         ); ?>
@@ -273,7 +309,8 @@ PHP
                                 <<<'PHP'
 $versions = ['PHP 8.1', 'PHP 8.2', 'PHP 8.3', 'PHP 8.4', 'PHP 8.5'];
 
-var_dump(array_first($versions)); // string(7) "PHP 8.1"
+var_dump(array_first($versions));
+// string(7) "PHP 8.1"
 PHP
                         ); ?>
                     </div>
@@ -300,7 +337,8 @@ class PhpVersion {
     }
 }
 
-var_dump(new PhpVersion()->version); // Fatal error: Cannot use the final modifier on a parameter
+var_dump(new PhpVersion()->version);
+// Fatal error: Cannot use the final modifier on a parameter
 PHP
 
                         ); ?>
@@ -320,7 +358,8 @@ class PhpVersion {
     }
 }
 
-var_dump(new PhpVersion()->version); // string(7) "PHP 8.5"
+var_dump(new PhpVersion()->version);
+// string(7) "PHP 8.5"
 PHP
                         ); ?>
                     </div>
@@ -344,7 +383,8 @@ PHP
 #[NewFeatures]
 const VERSION = '8.4';
 
-var_dump(VERSION); // Parse error: syntax error, unexpected token "const"
+var_dump(VERSION);
+// Parse error: syntax error, unexpected token "const"
 PHP
 
                         ); ?>
@@ -361,7 +401,8 @@ PHP
 #[NewFeatures]
 const VERSION = '8.5';
 
-var_dump(VERSION); // string(3) "8.5"
+var_dump(VERSION);
+// string(3) "8.5"
 PHP
                         ); ?>
                     </div>
