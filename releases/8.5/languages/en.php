@@ -11,9 +11,18 @@ return [
     'url_parsing_api_title' => 'Add RFC 3986 and WHATWG URL compliant API',
     'url_parsing_api_description' => '<code>Uri\UriException</code>, <code>Uri\InvalidUriException</code>, <code>Uri\UriComparisonMode</code>,
     <code>Uri\Rfc3986\Uri</code>, <code>Uri\WhatWg\InvalidUrlException</code>, <code>Uri\WhatWg\UrlValidationErrorType</code>, <code>Uri\WhatWg\UrlValidationError</code>, and <code>Uri\WhatWg\Url</code> are now available.',
+    'clone_with_title' => 'Clone with v2',
+    'no_discard_title' => 'New <code>#[\NoDiscard]</code> Attribute',
+    'fcc_in_const_expr_title' => 'First Class Callables in constant expressions',
+    'curl_share_persistence_improvement_title' => 'Persistent cURL share handle improvement',
+    'array_first_last_title' => 'New <code>array_first()</code> and <code>array_last()</code> functions',
+    'final_promotion_title' => 'Final Property Promotion',
+    'attributes_on_constants_title' => 'Attributes on Constants',
+    'override_properties_title' => 'Attribute <code>#[\Override]</code> extended to target properties',
+    'static_aviz_title' => 'Asymmetric Visibility for Static Properties',
+    'deprecated_traits_title' => 'Attribute <code>#[\Deprecated]</code> available for traits',
 
     'new_classes_title' => 'New Classes, Interfaces, and Functions',
-    'new_core_attributes' => '<code>#[\NoDiscard]</code> and <code>#[\DelayedTargetValidation]</code> attributes',
 
     'bc_title' => 'Deprecations and backward compatibility breaks',
 
