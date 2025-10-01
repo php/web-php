@@ -3,25 +3,7 @@ description: "Submit your design for the PHP 8.5 Release Page"
 labels: ["Design Contest"]
 
 body:
-  - type: textarea
-    id: rationale
-    attributes:
-      label: "Rationale (300-600 words)"
-      description: |
-        Explain information hierarchy, layout choices, and how the design meets
-        goals.
-    validations:
-      required: true
-
-  - type: markdown
-    id: screenshot
-    attributes:
-      value: |
-        ## Screenshots
-
-        You must add 3 to 5 screenshots to this submission.
-
-  - type: textarea
+  - type: input
     id: team
     attributes:
       label: "Names and Contact Details"
@@ -35,6 +17,17 @@ body:
       label: "Link to mockup/prototype"
       description: "Please provide a link to the mockup or prototype if available."
       placeholder: "https://example.com/my-design.html"
+    validations:
+      required: true
+
+  - type: textarea
+    id: rationale
+    attributes:
+      label: "Rationale (300-600 words)"
+      description: |
+        Explain information hierarchy, layout choices, and how the design meets
+        goals. You must add 3 to 5 screenshots through "Paste, drop, or click
+        to add files".
     validations:
       required: true
 
