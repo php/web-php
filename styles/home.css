@@ -510,27 +510,18 @@ aside.tips .social-media .icon-twitter {
 }
 
 .code-content {
-    position: relative;
-    height: 440px;
-    overflow: hidden;
+    display: flex;
+    flex-direction: column;
 }
 
 .code-demo {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
     padding: 1.5rem;
-    opacity: 0;
-    transform: translateX(20px);
-    transition: all 0.4s ease;
     text-align: left;
+    display: none;
 }
 
 .code-demo.active {
-    opacity: 1;
-    transform: translateX(0);
+    display: block;
 }
 
 .code-demo pre {
@@ -603,7 +594,7 @@ aside.tips .social-media .icon-twitter {
     .hero-container,
     .versions-container,
     .content-container {
-        padding: 0 clamp(1rem, 3vw, 2rem);
+        padding: 1em clamp(1rem, 3vw, 2rem);
     }
 }
 
@@ -641,6 +632,24 @@ aside.tips .social-media .icon-twitter {
     }
 }
 
+@media (max-width: 1135px) and (min-width: 884px) {
+    .hero-content {
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+        text-align: left;
+    }
+
+    .code-dots {
+        display: none;
+    }
+
+    .hero-actions a {
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+}
+
 @media (max-width: 768px) {
     .modern-hero {
         min-height: auto;
@@ -669,7 +678,6 @@ aside.tips .social-media .icon-twitter {
 
     .btn-primary, .btn-secondary {
         width: 100%;
-        max-width: 300px;
         justify-content: center;
     }
 
@@ -691,10 +699,6 @@ aside.tips .social-media .icon-twitter {
 
     .version-item .version-number {
         font-size: 1rem;
-    }
-
-    .code-content {
-        height: 585px;
     }
 
     .code-actions {
@@ -766,5 +770,26 @@ aside.tips .social-media .icon-twitter {
     .version-download-mini {
         width: 28px;
         height: 28px;
+    }
+}
+
+@media (max-width: 375px) {
+    .hero-content {
+        grid-template-columns: 1fr;
+    }
+
+    #intro .container {
+        padding: 0;
+        display: block;
+    }
+}
+
+@media (max-width: 320px) {
+    .hero-content {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .hero-code-demo {
+        display: none;
     }
 }
