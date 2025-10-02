@@ -55,6 +55,7 @@ $usage = [
     'web' => 'Web Development',
     'cli' => 'CLI/Library Development',
     'fw-drupal' => 'Drupal Development',
+    'fw-joomla' => 'Joomla Development',
     'fw-laravel' => 'Laravel Development',
     'fw-symfony' => 'Symfony Development',
     'fw-wordpress' => 'WordPress Development',
@@ -68,25 +69,28 @@ $os = [
             'linux-fedora' => 'Fedora',
             'linux-redhat' => 'RedHat',
             'linux-ubuntu' => 'Ubuntu',
+            'linux-docker' => 'Docker',
         ],
     ],
     'osx' => [
         'name' => 'macOS',
         'variants' => [
-            'osx-homebrew' => 'Homebrew/Brew',
-            'osx-homebrew-php' => 'Homebrew/Homebrew-PHP',
+            'osx-homebrew' => 'Homebrew',
+            'osx-homebrew-php' => 'Homebrew-PHP',
+            'osx-docker' => 'Docker',
             'osx-macports' => 'MacPorts',
         ],
     ],
     'windows' => [
         'name' => 'Windows',
         'variants' => [
-            'windows-downloads' => 'Windows ZIP Downloads',
-            'windows-native' => 'Windows Native Build',
-            'windows-chocolatey' => 'Windows with Chocolatey',
-            'windows-scoop' => 'Windows with Scoop',
-            'windows-wsl-debian' => 'Windows with WSL/Debian',
-            'windows-wsl-ubuntu' => 'Windows with WSL/Ubuntu',
+            'windows-downloads' => 'ZIP Downloads',
+            'windows-native' => 'Single Line Installer',
+            'windows-chocolatey' => 'Chocolatey',
+            'windows-scoop' => 'Scoop',
+            'windows-docker' => 'Docker',
+            'windows-wsl-debian' => 'WSL/Debian',
+            'windows-wsl-ubuntu' => 'WSL/Ubuntu',
         ],
     ],
 ];
@@ -99,14 +103,43 @@ $versions = [
     'default' => 'OS default version',
 ];
 
+
+$platform = $_SERVER['HTTP_SEC_CH_UA_PLATFORM'] ?? '';
+$ua = $_SERVER['HTTP_USER_AGENT'] ?? '';
+$auto_os = null;
+$auto_osvariant = null;
+
+if (!empty($platform) || !empty($ua)) {
+    $platform = strtolower(trim($platform, '"'));
+    if ($platform === 'windows' || stripos($ua, 'Windows') !== false) {
+        $auto_os = 'windows';
+    } elseif ($platform === 'macos' || stripos($ua, 'Mac') !== false) {
+        $auto_os = 'osx';
+    } elseif ($platform === 'linux' || stripos($ua, 'Linux') !== false) {
+        $auto_os = 'linux';
+        if (stripos($ua, 'Ubuntu') !== false) {
+            $auto_osvariant = 'linux-ubuntu';
+        } elseif (stripos($ua, 'Debian') !== false) {
+            $auto_osvariant = 'linux-debian';
+        } elseif (stripos($ua, 'Fedora') !== false) {
+            $auto_osvariant = 'linux-fedora';
+        } elseif (stripos($ua, 'Red Hat') !== false || stripos($ua, 'RedHat') !== false) {
+            $auto_osvariant = 'linux-redhat';
+        }
+    }
+}
+
 $defaults = [
-    'os' => 'linux',
+    'os' => $auto_os ?? 'linux',
     'version' => 'default',
     'usage' => 'web',
 ];
 
 $options = array_merge($defaults, $_GET);
-if (!array_key_exists('osvariant', $options) || !array_key_exists($options['osvariant'], $os[$options['os']]['variants'])) {
+
+if ($auto_osvariant && (!array_key_exists('osvariant', $options) || !array_key_exists($options['osvariant'], $os[$options['os']]['variants']))) {
+    $options['osvariant'] = $auto_osvariant;
+} elseif (!array_key_exists('osvariant', $options) || !array_key_exists($options['osvariant'], $os[$options['os']]['variants'])) {
     $options['osvariant'] = array_key_first($os[$options['os']]['variants']);
 }
 ?>
@@ -165,9 +198,7 @@ if (!array_key_exists('osvariant', $options) || !array_key_exists($options['osva
             <?= array_key_exists('source', $options) && $options['source'] === 'Y' ? 'checked' : '' ?>/>
     </label>
 
-    <noscript>
         <button type="submit" class="button">Update Instructions</button>
-    </noscript>
 </form>
 
 <div class="tip">
@@ -225,13 +256,77 @@ to verify the tags:
 <?php endif; ?>
 
     <script>
-        window.onload = function () {
-            let form = document.getElementById("instructions-form")
+        let currentController = null;
 
-            form.addEventListener('change', function () {
-                form.submit();
-            });
+        function loadInstructions(url) {
+            const form = document.querySelector('#instructions-form')
+            const instructions = document.getElementById('instructions')
+
+            if (currentController) {
+                currentController.abort()
+            }
+            currentController = new AbortController()
+
+            fetch(url, {signal: currentController.signal})
+                .then(response => {
+                    if (!response.ok) {
+                        instructions.innerHTML = `<p class="error">Error ${response.status}: Unable to load data.</p>`
+                        throw new Error(`HTTP ${response.status} ${response.statusText}`)
+                    }
+                    return response.text()
+                })
+                .then(html => {
+                    const parser = new DOMParser();
+                    const doc = parser.parseFromString(html, 'text/html')
+
+                    const newForm = doc.querySelector('#instructions-form')
+                    const newInstructions = doc.querySelector('#instructions')
+
+                    if (newForm && form) form.innerHTML = newForm.innerHTML
+                    if (newInstructions && instructions) instructions.innerHTML = newInstructions.innerHTML
+
+                    removeUpdateInstructionsButton()
+
+                    if (window.Prism && typeof Prism.highlightAll === 'function') {
+                        Prism.highlightAll()
+                    }
+                })
+                .catch(err => {
+                    if (err.name === 'AbortError') return;
+                    console.error('Request failed:', err)
+                    if (!instructions.querySelector('.error')) {
+                        instructions.innerHTML = `<p class="error">An unexpected error occurred.</p>`
+                    }
+                });
         }
+
+        function removeUpdateInstructionsButton() {
+            const btn = document.querySelector('#instructions-form button[type="submit"]')
+            if (btn && window.fetch && window.AbortController) {
+                btn.remove()
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', function () {
+            removeUpdateInstructionsButton()
+        })
+
+        document.addEventListener('change', function (e) {
+            if (e.target.closest('#instructions-form')) {
+                const form = e.target.closest('#instructions-form')
+                const params = new URLSearchParams(new FormData(form)).toString()
+                const newUrl = form.action.split('?')[0] + '?' + params
+
+                history.pushState({url: newUrl}, '', newUrl)
+                loadInstructions(newUrl)
+            }
+        })
+
+        window.addEventListener('popstate', function (e) {
+            if (e.state && e.state.url) {
+                loadInstructions(e.state.url)
+            }
+        })
     </script>
 
 <?php

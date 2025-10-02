@@ -63,3 +63,32 @@ button.copy-to-clipboard-button:hover {
     border-color: var(--dark-magenta-color) !important;
 }
 
+.win-build {
+    background: rgba(39, 40, 44, 0.05);
+    margin: 20px 0;
+    padding: 20px 20px 10px 20px;
+    border-top: 4px solid var(--dark-blue-color, #4F5B93);
+}
+
+.win-build h4 {
+    line-height: 1.5rem;
+    margin-bottom: 0;
+}
+
+.instructions .size {
+    background: #dcdcdc;
+    border-radius: 6px;
+    padding: 3px 7px;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.instructions .time {
+    color: #555;
+    font-size: 0.8rem;
+    display: block;
+}
+
+.instructions .sha256 {
+    word-break: break-all;
+}

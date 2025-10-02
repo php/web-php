@@ -21,7 +21,7 @@ return [
     'randomizer_getbytesfromstring_title' => '新增 <code>Randomizer<span style="word-break: break-all;">::</span>getBytesFromString()</code> 方法',
     'randomizer_getbytesfromstring_description' => '在 PHP 8.2 中新增的 <a href="/releases/8.2/zh.php#random_extension">Random 扩展</a> 通过一个新方法生成由特定字节组成的随机字符串。这种方法可以使开发者更轻松的生成随机的标识符（如域名），以及任意长度的数字字符串。',
     'randomizer_getfloat_nextfloat_title' => '新增 <code>Randomizer::getFloat()</code> 和 <code>Randomizer::nextFloat()</code> 方法',
-    'randomizer_getfloat_nextfloat_description' => '<p>由于浮点数的精度和隐式四舍五入的限制，在特定区间内生成无偏差的浮点数并非易事，常建的用户解决方案可能会生成有偏差的结果或超出要求范围的数字。</p><p>Randomizer 扩展了两种方法，用于随机生成无偏差的浮点数。<code>Randomizer::getFloat()</code> 方法使用的是 γ-section 算法，该算法发表于 <a href="https://doi.org/10.1145/3503512" target="_blank" rel="noopener noreferrer">Drawing Random Floating-Point Numbers from an Interval. Frédéric Goualard, ACM Trans. Model. Comput. Simul., 32:3, 2022.</a></p>',
+    'randomizer_getfloat_nextfloat_description' => '<p>由于浮点数的精度和隐式四舍五入的限制，在特定区间内生成无偏差的浮点数并非易事，常见的用户解决方案可能会生成有偏差的结果或超出要求范围的数字。</p><p>Randomizer 扩展了两种方法，用于随机生成无偏差的浮点数。<code>Randomizer::getFloat()</code> 方法使用的是 γ-section 算法，该算法发表于 <a href="https://doi.org/10.1145/3503512" target="_blank" rel="noopener noreferrer">Drawing Random Floating-Point Numbers from an Interval. Frédéric Goualard, ACM Trans. Model. Comput. Simul., 32:3, 2022.</a></p>',
     'dynamic_class_constant_fetch_title' => '动态获取类常量',
     'command_line_linter_title' => '命令行 linter 支持多个文件',
     'command_line_linter_description' => '<p>命令行 linter 现在接受文件名的可变输入以进行 lint</p>',

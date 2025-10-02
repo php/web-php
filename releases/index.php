@@ -93,7 +93,7 @@ foreach ($OLDRELEASES as $major => $a) {
     if (!in_array($major, $active_majors, false)) {
         echo "\n<br>\n";
         echo "<p>Support for PHP $major has been <b style=\"color: red;\">discontinued</b> ";
-        echo "since <b>" . current($a)['date'] . '</b>.';
+        echo "since <b>" . current($a)['date'] . '</b>. ';
         echo "Please consider upgrading to $latest.</p>\n";
     }
 

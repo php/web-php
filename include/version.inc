@@ -20,25 +20,25 @@ $RELEASES = (function () {
 
     /* PHP 8.4 Release */
     $data['8.4'] = [
-        'version' => '8.4.11',
-        'date' => '31 Jul 2025',
+        'version' => '8.4.13',
+        'date' => '25 Sep 2025',
         'tags' => [''], // Set to ['security'] for security releases.
         'sha256' => [
-            'tar.gz' => '422548cd8cf14ab0264ba510d3586476b0e77a3272356ba486bc82e706dc6cc8',
-            'tar.bz2' => '2c39c75b54df89b01195b72ad0ee1fcd490c71db18bc52bcd61fb2ffb57b26fa',
-            'tar.xz' => '04cd331380a8683a5c2503938eb51764d48d507c53ad4208d2c82e0eed779a00',
+            'tar.gz' => 'ba323619b322125dbd7bf09eefbd572863797359c7d127f986c58a71c872d531',
+            'tar.bz2' => '85181ddca7b3e03f148521b043bd62411950d468c667db6400479f1b10812194',
+            'tar.xz' => 'b4f27adf30bcf262eacf93c78250dd811980f20f3b90d79a3dc11248681842df',
         ]
     ];
 
     /* PHP 8.3 Release */
     $data['8.3'] = [
-        'version' => '8.3.24',
-        'date' => '31 Jul 2025',
+        'version' => '8.3.26',
+        'date' => '25 Sep 2025',
         'tags' => [], // Set to ['security'] for security releases.
         'sha256' => [
-            'tar.gz' => 'b827c512b59270c3dc7e19614314fc345022c423e6443c960746310792d0de82',
-            'tar.bz2' => 'e4e12da490746924624c91406b60b31967e4d7bdeabbab9e8cb5354884ee9964',
-            'tar.xz' => '388ee5fd111097e97bae439bff46aec4ea27f816d3f0c2cb5490a41410d44251',
+            'tar.gz' => 'c96dac9745db9216a299007d144b593f4e4e7d95b4618b2a9591e5e5585200d5',
+            'tar.bz2' => '721b63d5349f131f5097537b3be6ba6801e2d8e6faba1f1f2ea95b4fd62e7525',
+            'tar.xz' => '2f522eefa02c400c94610d07f25c4fd4c771f95e4a1f55102332ccb40663cbd2',
         ]
     ];
 
@@ -114,6 +114,8 @@ function show_source_releases()
 
     $SHOW_COUNT = 4;
 
+    $current_uri = htmlspecialchars($_SERVER['REQUEST_URI'], ENT_QUOTES, 'UTF-8');
+
     $i = 0; foreach ($RELEASES as $MAJOR => $major_releases): /* major releases loop start */
         $releases = array_slice($major_releases, 0, $SHOW_COUNT);
 ?>
@@ -147,13 +149,13 @@ function show_source_releases()
                 </li>
               <?php endforeach; ?>
               <li>
-                <a href="https://windows.php.net/download#php-<?php echo urlencode($mver); ?>">
+                <a href="/downloads.php?os=windows&osvariant=windows-downloads&version=<?php echo urlencode($mver); ?>">
                   Windows downloads
                 </a>
               </li>
             </ul>
 
-            <a href="#gpg-<?php echo $mver; ?>">GPG Keys for PHP <?php echo $mver; ?></a>
+            <a href="<?php echo $current_uri; ?>#gpg-<?php echo $mver; ?>">GPG Keys for PHP <?php echo $mver; ?></a>
           </div>
         <?php endforeach; ?>
     <?php endforeach; /* major releases loop end */ ?>

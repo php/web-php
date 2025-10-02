@@ -26,7 +26,7 @@ if ($options['os'] === 'osx' || $options['os'] === 'windows') {
     }
 }
 
-if (in_array($options['usage'], ['fw-drupal', 'fw-laravel', 'fw-symfony', 'fw-wordpress'])) {
+if (in_array($options['usage'], ['fw-drupal', 'fw-laravel', 'fw-symfony', 'fw-wordpress', 'fw-joomla'])) {
     $file = "{$options['usage']}";
     $options['os'] = null;
 }
@@ -55,7 +55,11 @@ switch ($options['os']) {
         break;
     case 'osx':
     case 'windows':
-        $file = "{$options['osvariant']}";
+        if($options['osvariant'] === "{$options['os']}-docker") {
+            $file = "{$options['osvariant']}-{$options['usage']}";
+        } else {
+            $file = "{$options['osvariant']}";
+        }
         break;
 }
 

@@ -212,7 +212,7 @@ $intro = <<<EOF
     </div>
 EOF;
 
-site_header("Hypertext Preprocessor",
+site_header(null,
     [
         'current' => 'home',
         'headtags' => [

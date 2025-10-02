@@ -60,7 +60,7 @@ class PHP {
 async function main() {
   let lastOutput = null;
 
-  document.querySelectorAll(".example .example-contents").forEach((example) => {
+  document.querySelectorAll(".example .example-contents, .informalexample .example-contents").forEach((example) => {
     const button = document.createElement("button");
     button.setAttribute("type", "button");
     const phpcode = example.querySelector(".phpcode.annotation-interactive");
@@ -72,9 +72,15 @@ async function main() {
     let exampleTitleParagraphElement = null;
     let exampleScreenPreElement = null;
     if (exampleTitleContainer !== null) {
-      exampleTitleParagraphElement = exampleTitleContainer.querySelector("p")
+      if (exampleTitleContainer.tagName === "P") {
+        exampleTitleParagraphElement = exampleTitleContainer;
+      } else {
+        exampleTitleParagraphElement = exampleTitleContainer.querySelector("p")
+      }
       const exampleScreenContainer = exampleTitleContainer.nextElementSibling;
-      exampleScreenPreElement = exampleScreenContainer.querySelector("pre");
+      if (exampleScreenContainer !== null) {
+        exampleScreenPreElement = exampleScreenContainer.querySelector("pre");
+      }
     }
 
     const code = phpcode.querySelector("code");
