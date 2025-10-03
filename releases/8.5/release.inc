@@ -309,7 +309,22 @@ PHP
                     <div class="php8-code phpcode">
                         <?php highlight_php_trimmed(
                                 <<<'PHP'
-// TODO
+$sh = curl_share_init();
+curl_share_setopt($sh, CURLSHOPT_SHARE, CURL_LOCK_DATA_DNS);
+curl_share_setopt($sh, CURLSHOPT_SHARE, CURL_LOCK_DATA_CONNECT);
+
+$ch1 = curl_init('https://php.net/');
+curl_setopt($ch1, CURLOPT_SHARE, $sh);
+curl_exec($ch1);
+
+$ch2 = curl_init('https://thephp.foundation/');
+curl_setopt($ch2, CURLOPT_SHARE, $sh);
+curl_exec($ch2);
+
+curl_share_close($sh);
+
+curl_close($ch1);
+curl_close($ch2);
 PHP
 
                         ); ?>
@@ -321,7 +336,21 @@ PHP
                     <div class="php8-code phpcode" style="display: table-cell;">
                         <?php highlight_php_trimmed(
                                 <<<'PHP'
-// TODO
+$sh = curl_share_init_persistent([
+    CURL_LOCK_DATA_DNS,
+    CURL_LOCK_DATA_CONNECT
+]);
+
+$ch1 = curl_init('https://php.net/');
+curl_setopt($ch1, CURLOPT_SHARE, $sh);
+curl_exec($ch1);
+
+$ch2 = curl_init('https://thephp.foundation/');
+curl_setopt($ch2, CURLOPT_SHARE, $sh);
+curl_exec($ch2);
+
+curl_close($ch1);
+curl_close($ch2);
 PHP
                         ); ?>
                     </div>
@@ -343,10 +372,22 @@ PHP
                     <div class="php8-code phpcode">
                         <?php highlight_php_trimmed(
                                 <<<'PHP'
-$versions = ['PHP 8.1', 'PHP 8.2', 'PHP 8.3', 'PHP 8.4', 'PHP 8.5'];
+$php = [
+    'php-82' => ['state' => 'security', 'branch' => 'PHP-8.2'],
+    'php-83' => ['state' => 'active', 'branch' => 'PHP-8.3'],
+    'php-84' => ['state' => 'active', 'branch' => 'PHP-8.4'],
+    'php-85' => ['state' => 'upcoming', 'branch' => 'PHP-8.5'],
+];
 
-var_dump($versions[array_key_first($versions)]);
-// string(7) "PHP 8.1"
+$upcomingRelease = null;
+foreach ($php as $key => $version) {
+    if ($version['state'] === 'upcoming') {
+        $upcomingRelease = $version;
+        break;
+    }
+}
+
+var_dump($upcomingRelease);
 PHP
 
                         ); ?>
@@ -358,10 +399,21 @@ PHP
                     <div class="php8-code phpcode" style="display: table-cell;">
                         <?php highlight_php_trimmed(
                                 <<<'PHP'
-$versions = ['PHP 8.1', 'PHP 8.2', 'PHP 8.3', 'PHP 8.4', 'PHP 8.5'];
+$php = [
+    'php-82' => ['state' => 'security', 'branch' => 'PHP-8.2'],
+    'php-83' => ['state' => 'active', 'branch' => 'PHP-8.3'],
+    'php-84' => ['state' => 'active', 'branch' => 'PHP-8.4'],
+    'php-85' => ['state' => 'upcoming', 'branch' => 'PHP-8.5'],
+];
 
-var_dump(array_first($versions));
-// string(7) "PHP 8.1"
+$upcomingRelease = array_first(
+    array_filter(
+        $php,
+        static fn($version) => $version['state'] === 'upcoming'
+    )
+);
+
+var_dump($upcomingRelease);
 PHP
                         ); ?>
                     </div>
