@@ -1,10 +1,10 @@
 <?php
 
 return [
-    'common_header' => 'PHP 8.5 is a major update of the PHP language. It contains many new features, such as Pipe operator, Final Property Promotion, Attributes on Constants, performance improvements, bug fixes, and general cleanup.',
+    'common_header' => 'PHP 8.5 is a major update of the PHP language. It contains many new features, such as the new URI extension, support for modifying properties while cloning, the Pipe operator, performance improvements, bug fixes, and general cleanup.',
     'documentation' => 'Doc',
     'main_title' => 'Released!',
-    'main_subtitle' => 'PHP 8.5 is a major update of the PHP language.<br class="display-none-md"> It contains many new features, such as Pipe operator, Final Property Promotion, Attributes on Constants, performance improvements, bug fixes, and general cleanup.',
+    'main_subtitle' => 'PHP 8.5 is a major update of the PHP language.<br class="display-none-md"> It contains many new features, such as the new URI extension, support for modifying properties while cloning, the Pipe operator, performance improvements, bug fixes, and general cleanup.',
     'upgrade_now' => 'Upgrade to PHP 8.5 now!',
 
     'pipe_operator_title' => 'Pipe operator',
@@ -16,10 +16,6 @@ return [
     'fcc_in_const_expr_title' => 'First Class Callables in constant expressions',
     'curl_share_persistence_improvement_title' => 'Persistent cURL share handle improvement',
     'array_first_last_title' => 'New <code>array_first()</code> and <code>array_last()</code> functions',
-    'final_promotion_title' => 'Final Property Promotion',
-    'attributes_on_constants_title' => 'Attributes on Constants',
-    'override_properties_title' => 'Attribute <code>#[\Override]</code> extended to target properties',
-    'static_aviz_title' => 'Asymmetric Visibility for Static Properties',
     'deprecated_traits_title' => 'Attribute <code>#[\Deprecated]</code> available for traits',
 
     'new_classes_title' => 'New Classes, Interfaces, and Functions',

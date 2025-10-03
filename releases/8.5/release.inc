@@ -61,7 +61,9 @@ PHP
                     <div class="php8-code phpcode" style="display: table-cell;">
                         <?php highlight_php_trimmed(
                                 <<<'PHP'
-$uri = new Uri\Rfc3986\Uri("https://php.net/releases/8.5/en.php");
+use Uri\Rfc3986\Uri;
+
+$uri = new Uri("https://php.net/releases/8.5/en.php");
 
 var_dump($uri->getHost());
 // string(7) "php.net"
@@ -86,9 +88,9 @@ PHP
                     <div class="php8-code phpcode">
                         <?php highlight_php_trimmed(
                                 <<<'PHP'
-class PhpVersion {
+final readonly class PhpVersion {
     public function __construct(
-        private string $version = 'PHP 8.4'
+        public string $version = 'PHP 8.4',
     ) {}
 
     public function withVersion(string $version) {
@@ -100,6 +102,7 @@ class PhpVersion {
 }
 
 var_dump(new PhpVersion()->withVersion('PHP 8.5'));
+// Fatal error: Uncaught Error: Cannot modify readonly property PhpVersion::$version
 PHP
 
                         ); ?>
@@ -111,9 +114,9 @@ PHP
                     <div class="php8-code phpcode" style="display: table-cell;">
                         <?php highlight_php_trimmed(
                                 <<<'PHP'
-class PhpVersion {
+final readonly class PhpVersion {
     public function __construct(
-        private readonly string $version = 'PHP 8.4'
+        public string $version = 'PHP 8.4',
     ) {}
 
     public function withVersion(string $version) {
@@ -121,7 +124,12 @@ class PhpVersion {
     }
 }
 
-var_dump(new PhpVersion()->withVersion('PHP 8.5'));
+$version = new PhpVersion();
+
+var_dump(
+    $version->withVersion('PHP 8.5'),
+    $version->version,
+);
 PHP
                         ); ?>
                     </div>
@@ -219,6 +227,7 @@ PHP
             <h2 class="php8-h2" id="fcc_in_const_expr">
                 <?= message('fcc_in_const_expr_title', $lang) ?>
                 <a class="php8-rfc" href="https://wiki.php.net/rfc/fcc_in_const_expr">RFC</a>
+                <a class="php8-rfc" href="https://wiki.php.net/rfc/closures_in_const_expr">RFC</a>
             </h2>
             <div class="php8-compare__main">
                 <div class="php8-compare__block example-contents">
@@ -226,7 +235,23 @@ PHP
                     <div class="php8-code phpcode">
                         <?php highlight_php_trimmed(
                                 <<<'PHP'
-// TODO
+final class CalculatorTest extends \PHPUnit\Framework\TestCase
+{
+    #[DataProvider('subtractionProvider')]
+    public function testSubtraction(int $minuend, int $subtrahend, int $result): void
+    {
+        $this->assertSame($result, Calculator::subtract($minuend, $subtrahend));
+    }
+
+    public static function subtractionProvider(): iterable
+    {
+        for ($i = -10; $i <= 10; $i++) {
+            yield [$i, $i, 0];
+            yield [$i, 0, $i];
+            yield [0, $i, -$i];
+        }
+    }
+}
 PHP
 
                         ); ?>
@@ -238,7 +263,20 @@ PHP
                     <div class="php8-code phpcode" style="display: table-cell;">
                         <?php highlight_php_trimmed(
                                 <<<'PHP'
-// TODO
+final class CalculatorTest
+{
+    #[Test\CaseGenerator(static function (): iterable {
+        for ($i = -10; $i <= 10; $i++) {
+            yield [$i, $i, 0];
+            yield [$i, 0, $i];
+            yield [0, $i, ($i * -1)];
+        }
+    })]
+    public function testSubtraction(int $minuend, int $subtrahend, int $result)
+    {
+        \assert(Calculator::subtract($minuend, $subtrahend) === $result);
+    }
+}
 PHP
                         ); ?>
                     </div>
@@ -319,185 +357,6 @@ PHP
         </div>
 
         <div class="php8-compare">
-            <h2 class="php8-h2" id="final_promotion">
-                <?= message('final_promotion_title', $lang) ?>
-                <a class="php8-rfc" href="https://wiki.php.net/rfc/final_promotion">RFC</a>
-            </h2>
-            <div class="php8-compare__main">
-                <div class="php8-compare__block example-contents">
-                    <div class="php8-compare__label">PHP &lt; 8.5</div>
-                    <div class="php8-code phpcode">
-                        <?php highlight_php_trimmed(
-                                <<<'PHP'
-class PhpVersion {
-    public function __construct(
-        final public string $version = 'PHP 8.4'
-    ) {
-
-    }
-}
-
-var_dump(new PhpVersion()->version);
-// Fatal error: Cannot use the final modifier on a parameter
-PHP
-
-                        ); ?>
-                    </div>
-                </div>
-                <div class="php8-compare__arrow"></div>
-                <div class="php8-compare__block example-contents" style="display: table;">
-                    <div class="php8-compare__label php8-compare__label_new">PHP 8.5</div>
-                    <div class="php8-code phpcode" style="display: table-cell;">
-                        <?php highlight_php_trimmed(
-                                <<<'PHP'
-class PhpVersion {
-    public function __construct(
-        final public string $version = 'PHP 8.5'
-    ) {
-
-    }
-}
-
-var_dump(new PhpVersion()->version);
-// string(7) "PHP 8.5"
-PHP
-                        ); ?>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="php8-compare">
-            <h2 class="php8-h2" id="attributes_on_constants">
-                <?= message('attributes_on_constants_title', $lang) ?>
-                <a class="php8-rfc" href="https://wiki.php.net/rfc/attributes-on-constants">RFC</a>
-            </h2>
-            <div class="php8-compare__main">
-                <div class="php8-compare__block example-contents">
-                    <div class="php8-compare__label">PHP &lt; 8.5</div>
-                    <div class="php8-code phpcode">
-                        <?php highlight_php_trimmed(
-                                <<<'PHP'
-<?php
-
-#[NewFeatures]
-const VERSION = '8.4';
-
-var_dump(VERSION);
-// Parse error: syntax error, unexpected token "const"
-PHP
-
-                        ); ?>
-                    </div>
-                </div>
-                <div class="php8-compare__arrow"></div>
-                <div class="php8-compare__block example-contents" style="display: table;">
-                    <div class="php8-compare__label php8-compare__label_new">PHP 8.5</div>
-                    <div class="php8-code phpcode" style="display: table-cell;">
-                        <?php highlight_php_trimmed(
-                                <<<'PHP'
-<?php
-
-#[NewFeatures]
-const VERSION = '8.5';
-
-var_dump(VERSION);
-// string(3) "8.5"
-PHP
-                        ); ?>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="php8-compare">
-            <h2 class="php8-h2" id="override_properties">
-                <?= message('override_properties_title', $lang) ?>
-                <a class="php8-rfc" href="https://wiki.php.net/rfc/override_properties">RFC</a>
-            </h2>
-            <div class="php8-compare__main">
-                <div class="php8-compare__block example-contents">
-                    <div class="php8-compare__label">PHP &lt; 8.5</div>
-                    <div class="php8-code phpcode">
-                        <?php highlight_php_trimmed(
-                                <<<'PHP'
-// TODO
-PHP
-
-                        ); ?>
-                    </div>
-                </div>
-                <div class="php8-compare__arrow"></div>
-                <div class="php8-compare__block example-contents" style="display: table;">
-                    <div class="php8-compare__label php8-compare__label_new">PHP 8.5</div>
-                    <div class="php8-code phpcode" style="display: table-cell;">
-                        <?php highlight_php_trimmed(
-                                <<<'PHP'
-// TODO
-PHP
-                        ); ?>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="php8-compare">
-            <h2 class="php8-h2" id="static_aviz">
-                <?= message('static_aviz_title', $lang) ?>
-                <a class="php8-rfc" href="https://wiki.php.net/rfc/static-aviz">RFC</a>
-            </h2>
-            <div class="php8-compare__main">
-                <div class="php8-compare__block example-contents">
-                    <div class="php8-compare__label">PHP &lt; 8.5</div>
-                    <div class="php8-code phpcode">
-                        <?php highlight_php_trimmed(
-                                <<<'PHP'
-class PhpVersion
-{
-    private static string $version = '8.4';
-
-    public function getVersion(): string
-    {
-        return self::$version;
-    }
-
-    public function increment(): void
-    {
-        [$major, $minor] = explode('.', self::$version);
-        $minor++;
-        self::$version = "{$major}.{$minor}";
-    }
-}
-PHP
-
-                        ); ?>
-                    </div>
-                </div>
-                <div class="php8-compare__arrow"></div>
-                <div class="php8-compare__block example-contents" style="display: table;">
-                    <div class="php8-compare__label php8-compare__label_new">PHP 8.5</div>
-                    <div class="php8-code phpcode" style="display: table-cell;">
-                        <?php highlight_php_trimmed(
-                                <<<'PHP'
-class PhpVersion
-{
-    public static private(set) string $version = '8.5';
-
-    public function increment(): void
-    {
-        [$major, $minor] = explode('.', self::$version);
-        $minor++;
-        self::$version = "{$major}.{$minor}";
-    }
-}
-PHP
-                        ); ?>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="php8-compare">
             <h2 class="php8-h2" id="deprecated_traits">
                 <?= message('deprecated_traits_title', $lang) ?>
                 <a class="php8-rfc" href="https://wiki.php.net/rfc/deprecated_traits">RFC</a>
@@ -553,6 +412,10 @@ PHP
             <h2 class="php8-h2" id="other_new_things"><?= message('new_classes_title', $lang) ?></h2>
             <div class="php8-compare__content php8-compare__content--block">
                 <ul>
+                    <li>Property Promotion is now available for <code>final</code></li>
+                    <li>Attributes are now available for constants</li>
+                    <li>Attribute <code>#[\Override]</code> now works on properties</li>
+                    <li>Asymmetric Visibility for Static Properties</li>
                     <li>New <code>#[\DelayedTargetValidation]</code> attribute is available</li>
                     <li>New <code>get_error_handler()</code>, <code>get_exception_handler()</code> functions, and <code>Closure::getCurrent</code> method are available.</li>
                     <li>New <code>Dom\Element::getElementsByClassName()</code> and <code>Dom\Element::insertAdjacentHTML()</code> methods are available.</li>
