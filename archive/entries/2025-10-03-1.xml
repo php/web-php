@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom" xmlns:default="http://php.net/ns/news">
+  <title>PHP Conference Fukuoka 2025</title>
+  <id>https://www.php.net/archive/2025.php#2025-10-03-1</id>
+  <published>2025-10-03T14:03:22+00:00</published>
+  <updated>2025-10-03T14:03:22+00:00</updated>
+  <link href="https://www.php.net/conferences/index.php#2025-10-03-1" rel="alternate" type="text/html"/>
+  <link href="https://phpcon.fukuoka.jp/2025/" rel="via" type="text/html"/>
+  <default:finalTeaserDate xmlns="http://php.net/ns/news">2025-11-08</default:finalTeaserDate>
+  <category term="conferences" label="Conference announcement"/>
+  <default:newsImage xmlns="http://php.net/ns/news" link="https://phpcon.fukuoka.jp/2025/" title="PHP Conference Fukuoka 2025">phpconfuk2025.png</default:newsImage>
+  <content type="xhtml">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+     <p>
+         We are pleased to announce the PHP Conference Fukuoka 2025.
+     </p>
+     <p>
+         PHP Conference Fukuoka celebrates its 10th anniversary this year, and this edition will be the final one.<br/>
+         Since its first edition in 2015, the conference has aimed to boost the IT industry in the Kyushu region and provide a place where PHPers from Kyushu and all over Japan can connect and exchange ideas.<br/>
+         We hope this last gathering will once again inspire participants, spark new ideas, and create lasting connections. (The conference will be conducted in Japanese)
+     </p>
+     <strong>Basic facts</strong><br/>
+     <ul>
+         <li>Date: November 8, 2025 (JST)</li>
+         <li>Location: Fukuoka, Japan</li>
+     </ul>
+     <p>
+         For more information, please visit the event page: <a href="https://phpcon.fukuoka.jp/2025/">PHP Conference Fukuoka 2025</a>.
+     </p>
+     <p>
+         Follow us on <a href="https://x.com/phpcon_fukuoka">X</a>.
+     </p>
+     
+     
+    </div>
+  </content>
+</entry>
