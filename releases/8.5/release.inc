@@ -238,9 +238,16 @@ PHP
 final class CalculatorTest extends \PHPUnit\Framework\TestCase
 {
     #[DataProvider('subtractionProvider')]
-    public function testSubtraction(int $minuend, int $subtrahend, int $result): void
+    public function testSubtraction(
+        int $minuend,
+        int $subtrahend,
+        int $result
+    ): void
     {
-        $this->assertSame($result, Calculator::subtract($minuend, $subtrahend));
+        $this->assertSame(
+            $result,
+            Calculator::subtract($minuend, $subtrahend)
+        );
     }
 
     public static function subtractionProvider(): iterable
@@ -272,9 +279,15 @@ final class CalculatorTest
             yield [0, $i, ($i * -1)];
         }
     })]
-    public function testSubtraction(int $minuend, int $subtrahend, int $result)
+    public function testSubtraction(
+        int $minuend,
+        int $subtrahend,
+        int $result
+    )
     {
-        \assert(Calculator::subtract($minuend, $subtrahend) === $result);
+        \assert(
+            Calculator::subtract($minuend, $subtrahend) === $result
+        );
     }
 }
 PHP
@@ -355,56 +368,6 @@ PHP
                 </div>
             </div>
         </div>
-
-        <div class="php8-compare">
-            <h2 class="php8-h2" id="deprecated_traits">
-                <?= message('deprecated_traits_title', $lang) ?>
-                <a class="php8-rfc" href="https://wiki.php.net/rfc/deprecated_traits">RFC</a>
-            </h2>
-            <div class="php8-compare__main">
-                <div class="php8-compare__block example-contents">
-                    <div class="php8-compare__label">PHP &lt; 8.5</div>
-                    <div class="php8-code phpcode">
-                        <?php highlight_php_trimmed(
-                                <<<'PHP'
-/**
-* @deprecated 8.4 use UsePhpVersion instead
-*/
-trait UseVersion
-{
-    public function getVersion(): string
-    {
-        return '8.4';
-    }
-}
-PHP
-
-                        ); ?>
-                    </div>
-                </div>
-                <div class="php8-compare__arrow"></div>
-                <div class="php8-compare__block example-contents" style="display: table;">
-                    <div class="php8-compare__label php8-compare__label_new">PHP 8.5</div>
-                    <div class="php8-code phpcode" style="display: table-cell;">
-                        <?php highlight_php_trimmed(
-                                <<<'PHP'
-#[\Deprecated(
-    message: "use UsePhpVersion instead",
-    since: "8.5",
-)]
-trait UseVersion
-{
-    public function getVersion(): string
-    {
-        return '8.5';
-    }
-}
-PHP
-                        ); ?>
-                    </div>
-                </div>
-            </div>
-        </div>
     </section>
 
     <section class="php8-section center php8-section_light php8-columns">
@@ -415,6 +378,7 @@ PHP
                     <li>Property Promotion is now available for <code>final</code></li>
                     <li>Attributes are now available for constants</li>
                     <li>Attribute <code>#[\Override]</code> now works on properties</li>
+                    <li>Attribute <code>#[\Deprecated]</code> available for traits</li>
                     <li>Asymmetric Visibility for Static Properties</li>
                     <li>New <code>#[\DelayedTargetValidation]</code> attribute is available</li>
                     <li>New <code>get_error_handler()</code>, <code>get_exception_handler()</code> functions, and <code>Closure::getCurrent</code> method are available.</li>
