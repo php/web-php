@@ -36,22 +36,21 @@ class PHP {
     if (PHP.runPhp) {
       return PHP.runPhp;
     }
+    let initializing = true;
 
     const { ccall } = await phpBinary({
       print(data) {
-        if (!data) {
+        // The initial exec to get PHP version causes empty output we don't want
+        if (initializing) {
           return;
         }
-
-        if (PHP.buffer.length) {
-          PHP.buffer.push("\n");
-        }
-        PHP.buffer.push(data);
+        PHP.buffer.push(data + "\n");
       },
     });
 
     PHP.version = ccall("phpw_exec", "string", ["string"], ["phpversion();"]),
     console.log("PHP wasm %s loaded.", PHP.version);
+    initializing = false;
     PHP.runPhp = (code) => ccall("phpw_run", null, ["string"], ["?>" + code]);
     return PHP.runPhp;
   }
