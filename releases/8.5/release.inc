@@ -101,7 +101,12 @@ final readonly class PhpVersion {
     }
 }
 
-var_dump(new PhpVersion()->withVersion('PHP 8.5'));
+$version = new PhpVersion();
+
+var_dump($version->version);
+// string(7) "PHP 8.4"
+
+var_dump($version->withVersion('PHP 8.5')->version);
 // Fatal error: Uncaught Error: Cannot modify readonly property PhpVersion::$version
 PHP
 
@@ -120,16 +125,22 @@ final readonly class PhpVersion {
     ) {}
 
     public function withVersion(string $version) {
-        return clone($this, ['version' => $version]);
+        return clone($this, [
+            'version' => $version,
+        ]);
     }
 }
 
 $version = new PhpVersion();
 
-var_dump(
-    $version->withVersion('PHP 8.5'),
-    $version->version,
-);
+var_dump($version->version);
+// string(7) "PHP 8.4"
+
+var_dump($version->withVersion('PHP 8.5')->version);
+// string(7) "PHP 8.5"
+
+var_dump($version->version);
+// string(7) "PHP 8.4"
 PHP
                         ); ?>
                     </div>
@@ -157,6 +168,9 @@ $output = strtolower(
         )
     )
 );
+
+var_dump($output);
+// string(19) "some-kind-of-string"
 PHP
 
                         ); ?>
@@ -175,6 +189,9 @@ $output = $input
     |> (fn (string $string) => str_replace(' ', '-', $string))
     |> (fn (string $string) => str_replace(['.', '/', '…'], '', $string))
     |> strtolower(...);
+
+var_dump($output);
+// string(19) "some-kind-of-string"
 PHP
                         ); ?>
                     </div>
@@ -193,7 +210,8 @@ PHP
                     <div class="php8-code phpcode">
                         <?php highlight_php_trimmed(
                                 <<<'PHP'
-function getPhpVersion(): string {
+function getPhpVersion(): string
+{
 	return 'PHP 8.4';
 }
 
@@ -210,8 +228,9 @@ PHP
                         <?php highlight_php_trimmed(
                                 <<<'PHP'
 #[\NoDiscard]
-function getPhpVersion(): string {
-	return 'PHP 8.4';
+function getPhpVersion(): string
+{
+	return 'PHP 8.5';
 }
 
 getPhpVersion();
@@ -276,7 +295,7 @@ final class CalculatorTest
         for ($i = -10; $i <= 10; $i++) {
             yield [$i, $i, 0];
             yield [$i, 0, $i];
-            yield [0, $i, ($i * -1)];
+            yield [0, $i, -$i];
         }
     })]
     public function testSubtraction(
@@ -322,9 +341,6 @@ curl_setopt($ch2, CURLOPT_SHARE, $sh);
 curl_exec($ch2);
 
 curl_share_close($sh);
-
-curl_close($ch1);
-curl_close($ch2);
 PHP
 
                         ); ?>
@@ -348,9 +364,6 @@ curl_exec($ch1);
 $ch2 = curl_init('https://thephp.foundation/');
 curl_setopt($ch2, CURLOPT_SHARE, $sh);
 curl_exec($ch2);
-
-curl_close($ch1);
-curl_close($ch2);
 PHP
                         ); ?>
                     </div>
@@ -429,11 +442,12 @@ PHP
                 <ul>
                     <li>Property Promotion is now available for <code>final</code></li>
                     <li>Attributes are now available for constants</li>
-                    <li>Attribute <code>#[\Override]</code> now works on properties</li>
-                    <li>Attribute <code>#[\Deprecated]</code> available for traits</li>
+                    <li>Attribute <a href="/manual/<?= $documentation ?>/class.override.php"><code>#[\Override]</code></a> now works on properties</li>
+                    <li>Attribute <a href="/manual/<?= $documentation ?>/class.deprecated.php"><code>#[\Deprecated]</code></a> available for traits</li>
                     <li>Asymmetric Visibility for Static Properties</li>
                     <li>New <code>#[\DelayedTargetValidation]</code> attribute is available</li>
-                    <li>New <code>get_error_handler()</code>, <code>get_exception_handler()</code> functions, and <code>Closure::getCurrent</code> method are available.</li>
+                    <li>New <a href="/manual/<?= $documentation ?>/function.get-error-handler.php"><code>get_error_handler()</code></a>, <a href="/manual/<?= $documentation ?>/function.get-exception-handler.php"><code>get_exception_handler()</code></a> functions are available.</li>
+                    <li>New <code>Closure::getCurrent</code> method is available.</li>
                     <li>New <code>Dom\Element::getElementsByClassName()</code> and <code>Dom\Element::insertAdjacentHTML()</code> methods are available.</li>
                     <li>New <code>enchant_dict_remove_from_session()</code> and <code>enchant_dict_remove()</code> functions are available.</li>
                     <li>New <code>grapheme_levenshtein()</code> function is available.</li>
