@@ -16,7 +16,6 @@ return [
     'fcc_in_const_expr_title' => 'First Class Callables in constant expressions',
     'curl_share_persistence_improvement_title' => 'Persistent cURL share handle improvement',
     'array_first_last_title' => 'New <code>array_first()</code> and <code>array_last()</code> functions',
-    'deprecated_traits_title' => '',
 
     'new_classes_title' => 'New Classes, Interfaces, and Functions',
 

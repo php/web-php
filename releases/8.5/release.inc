@@ -88,12 +88,14 @@ PHP
                     <div class="php8-code phpcode">
                         <?php highlight_php_trimmed(
                                 <<<'PHP'
-final readonly class PhpVersion {
+final readonly class PhpVersion
+{
     public function __construct(
         public string $version = 'PHP 8.4',
     ) {}
 
-    public function withVersion(string $version) {
+    public function withVersion(string $version): self
+    {
         $newObject = clone $this;
         $newObject->version = $version;
 
@@ -119,12 +121,14 @@ PHP
                     <div class="php8-code phpcode" style="display: table-cell;">
                         <?php highlight_php_trimmed(
                                 <<<'PHP'
-final readonly class PhpVersion {
+final readonly class PhpVersion
+{
     public function __construct(
         public string $version = 'PHP 8.4',
     ) {}
 
-    public function withVersion(string $version) {
+    public function withVersion(string $version): self
+    {
         return clone($this, [
             'version' => $version,
         ]);
@@ -186,8 +190,8 @@ $input = ' Some kind of string. ';
 
 $output = $input
     |> trim(...)
-    |> (fn (string $string) => str_replace(' ', '-', $string))
-    |> (fn (string $string) => str_replace(['.', '/', '…'], '', $string))
+    |> (fn($string) => str_replace(' ', '-', $string))
+    |> (fn($string) => str_replace(['.', '/', '…'], '', $string))
     |> strtolower(...);
 
 var_dump($output);
@@ -339,8 +343,6 @@ curl_exec($ch1);
 $ch2 = curl_init('https://thephp.foundation/');
 curl_setopt($ch2, CURLOPT_SHARE, $sh);
 curl_exec($ch2);
-
-curl_share_close($sh);
 PHP
 
                         ); ?>
