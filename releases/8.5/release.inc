@@ -295,7 +295,8 @@ PHP
                                 <<<'PHP'
 final class CalculatorTest
 {
-    #[Test\CaseGenerator(static function (): iterable {
+    #[Test\CaseGenerator(static function (): iterable
+    {
         for ($i = -10; $i <= 10; $i++) {
             yield [$i, $i, 0];
             yield [$i, 0, $i];
