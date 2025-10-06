@@ -28,7 +28,7 @@ jobs:
           comment-author: 'github-actions[bot]'
           body-includes: 'Preview for commit'
 
-      - uses: peter-evans/create-or-update-comment@v4
+      - uses: peter-evans/create-or-update-comment@v5
         with:
           issue-number: ${{ github.event.number }}
           comment-id: ${{ steps.fc.outputs.comment-id }}
@@ -121,7 +121,7 @@ jobs:
           comment-author: 'github-actions[bot]'
           body-includes: 'Regression report for commit'
 
-      - uses: peter-evans/create-or-update-comment@v4
+      - uses: peter-evans/create-or-update-comment@v5
         if: ${{ !cancelled() }}
         with:
           issue-number: ${{ github.event.number }}
