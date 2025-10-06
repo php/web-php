@@ -21,7 +21,7 @@ jobs:
           SCRIPT_BEFORE: bash /home/thephpfoundation/scripts/pr_created_pre.sh web-php ${{ github.event.number }}
           SCRIPT_AFTER: bash /home/thephpfoundation/scripts/pr_created.sh web-php ${{ github.event.number }}
 
-      - uses: peter-evans/find-comment@v3
+      - uses: peter-evans/find-comment@v4
         id: fc
         with:
           issue-number: ${{ github.event.number }}
@@ -113,7 +113,7 @@ jobs:
           TARGET: "/home/thephpfoundation/preview/web-php-regression-report-pr-${{ github.event.number }}/public"
           SCRIPT_BEFORE: bash /home/thephpfoundation/scripts/pr_created_pre.sh web-php-regression-report ${{ github.event.number }}
 
-      - uses: peter-evans/find-comment@v3
+      - uses: peter-evans/find-comment@v4
         if: ${{ !cancelled() }}
         id: snapshot
         with:
