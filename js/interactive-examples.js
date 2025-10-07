@@ -36,22 +36,21 @@ class PHP {
     if (PHP.runPhp) {
       return PHP.runPhp;
     }
+    let initializing = true;
 
     const { ccall } = await phpBinary({
       print(data) {
-        if (!data) {
+        // The initial exec to get PHP version causes empty output we don't want
+        if (initializing) {
           return;
         }
-
-        if (PHP.buffer.length) {
-          PHP.buffer.push("\n");
-        }
-        PHP.buffer.push(data);
+        PHP.buffer.push(data + "\n");
       },
     });
 
     PHP.version = ccall("phpw_exec", "string", ["string"], ["phpversion();"]),
     console.log("PHP wasm %s loaded.", PHP.version);
+    initializing = false;
     PHP.runPhp = (code) => ccall("phpw_run", null, ["string"], ["?>" + code]);
     return PHP.runPhp;
   }
@@ -60,7 +59,7 @@ class PHP {
 async function main() {
   let lastOutput = null;
 
-  document.querySelectorAll(".example .example-contents").forEach((example) => {
+  document.querySelectorAll(".example .example-contents, .informalexample .example-contents").forEach((example) => {
     const button = document.createElement("button");
     button.setAttribute("type", "button");
     const phpcode = example.querySelector(".phpcode.annotation-interactive");
@@ -72,9 +71,15 @@ async function main() {
     let exampleTitleParagraphElement = null;
     let exampleScreenPreElement = null;
     if (exampleTitleContainer !== null) {
-      exampleTitleParagraphElement = exampleTitleContainer.querySelector("p")
+      if (exampleTitleContainer.tagName === "P") {
+        exampleTitleParagraphElement = exampleTitleContainer;
+      } else {
+        exampleTitleParagraphElement = exampleTitleContainer.querySelector("p")
+      }
       const exampleScreenContainer = exampleTitleContainer.nextElementSibling;
-      exampleScreenPreElement = exampleScreenContainer.querySelector("pre");
+      if (exampleScreenContainer !== null) {
+        exampleScreenPreElement = exampleScreenContainer.querySelector("pre");
+      }
     }
 
     const code = phpcode.querySelector("code");

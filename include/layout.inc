@@ -111,9 +111,9 @@ function print_image($file, $alt = false, $align = false, $extras = false,
 
 // Shortcut to usual news image printing (right floating
 // image from the news dir with an alt and an URL)
-function news_image($URL, $image, $alt, $print = true)
+function news_image($URL, $image, $alt, $print = true, $align = 'right')
 {
-    $str = "<a href=\"$URL\">" . make_image("news/$image", $alt, "right") . "</a>";
+    $str = "<a href=\"$URL\">" . make_image("news/$image", $alt, $align) . "</a>";
     if ($print) {
         echo $str;
     }
@@ -372,7 +372,7 @@ function print_news($news, $dog, $max = 5, $return = false) {
 
         $image = "";
         if (isset($item["newsImage"])) {
-            $image = news_image($item["newsImage"]["link"], $item["newsImage"]["content"], $item["newsImage"]["title"], false);
+            $image = news_image($item["newsImage"]["link"], $item["newsImage"]["content"], $item["newsImage"]["title"], false, '');
         }
 
         $id = parse_url($item["id"]);
@@ -405,12 +405,12 @@ function print_news($news, $dog, $max = 5, $return = false) {
 
         echo <<<EOT
 <article class="newsItem">
-  <header>
-    <div class="newsImage">{$image}</div>
+  <header class="title">
+    <time class="newsdate" datetime="{$item["published"]}">{$newsdate}</time>
     <h2 class="newstitle"><a id="{$id}" href="{$permlink}" rel="bookmark" class="bookmark">{$item["title"]}</a></h2>
   </header>
-  <time class="newsdate" datetime="{$item["published"]}">{$newsdate}</time>
   <div class="newscontent">
+    <div class="newsImage">{$image}</div>
     {$item["content"]}
   </div>
 </article>
