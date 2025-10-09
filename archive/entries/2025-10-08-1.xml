@@ -11,7 +11,11 @@
   <default:newsImage xmlns="http://php.net/ns/news" link="https://phpcon-hiroshima.jp/" title="PHP Conference Hiroshima 2025">phpconfHiroshima-2025.png</default:newsImage>
   <content type="xhtml">
     <div xmlns="http://www.w3.org/1999/xhtml">
-     <p>We are excited to announce the PHP Conference Hiroshima 2025!</p>
+      <p>That technical problem you've been struggling with alone? Turns out the person next to you has been wrestling with the same thing.
+Why not come to Hiroshima and experience that moment of discovery and sence of relief for yourself?</p>
+      <p>We hope this conference will be not only a place to gain knowledge, but also a place to meet like-minded peers.
+Learn from others' experience, inspire each other, and share your own insights.</p>
+      <p>As this cycle of learning continues, connections are made, and the PHP community of tomorrow grows even stronger. Let's make that day together.</p>
     </div>
   </content>
 </entry>
