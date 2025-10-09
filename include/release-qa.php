@@ -84,16 +84,16 @@ $QA_RELEASES = [
         ],
     ],
 
-    '8.4.13' => [
+    '8.4.14' => [
         'active'  => true,
         'release' => [
             'type'       => 'RC',
-            'number'     => 0,
-            'sha256_bz2' => '',
-            'sha256_gz'  => '',
-            'sha256_xz'  => '',
-            'date'       => '11 Sep 2025',
-            'baseurl'    => 'https://downloads.php.net/',
+            'number'     => 1,
+            'sha256_bz2' => '7004bdb9eb56bd236ca4878d5535d62b3a59ee5c7eb676990d71b06a43dfbfe4',
+            'sha256_gz'  => '5c41a7ac2bb5a8c2db9b13863a554e5f3b6cb1b6377be4b6d22599e0cb129c9e',
+            'sha256_xz'  => 'afa5d25db94f1f34baeddcb8682dfea212f56e3a142651c27a11ca96c1fe5484',
+            'date'       => '09 Oct 2025',
+            'baseurl'    => 'https://downloads.php.net/~saki/',
         ],
     ],
 
