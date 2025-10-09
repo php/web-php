@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom" xmlns:default="http://php.net/ns/news">
+  <title>PHP Conference Kagawa 2025</title>
+  <id>https://www.php.net/archive/2025.php#2025-10-09-1</id>
+  <published>2025-10-09T06:23:40+00:00</published>
+  <updated>2025-10-09T06:23:40+00:00</updated>
+  <link href="https://www.php.net/conferences/index.php#2025-10-09-1" rel="alternate" type="text/html"/>
+  <link href="https://phpcon.kagawa.jp/2025/" rel="via" type="text/html"/>
+  <default:finalTeaserDate xmlns="http://php.net/ns/news">2025-11-24</default:finalTeaserDate>
+  <category term="conferences" label="Conference announcement"/>
+  <default:newsImage xmlns="http://php.net/ns/news" link="https://phpcon.kagawa.jp/2025/" title="PHP Conference Kagawa 2025">phpconkagawa2025.png</default:newsImage>
+  <content type="xhtml">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+      <p>The first PHP Conference Kagawa held last year was a great success.</p>
+      <p>This year, the event will once again take place in the same traditional Japanese venue, designated as an Important Cultural Property of Japan.</p>
+      <p>Join us in Kagawa, one of Japan’s popular travel destinations, and connect with fellow PHP developers from across the country!</p>
+      <strong>Basic facts</strong><br/>
+      <ul>
+        <li>Date: November 24, 2025 (JST)</li>
+        <li>Location: Takamatsu City, Kagawa Prefecture, Japan</li>
+      </ul>
+      <p>
+        Further information will be available on the <a href="https://phpcon.kagawa.jp/2025/" target="_blank">event page</a> and <a href="https://x.com/phpcon_kagawa" target="_blank">X(Twitter)</a>.<br/>
+        Buy tickets: <a href="https://fortee.jp/phpconkagawa-2025/ticket-shop/index" target="_blank">https://fortee.jp/phpconkagawa-2025/ticket-shop/index</a>
+      </p>
+    </div>
+  </content>
+</entry>
