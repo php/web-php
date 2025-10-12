@@ -169,7 +169,7 @@ if (!empty($_SERVER['BASE_PAGE'])
       <div>
         <kbd>↑</kbd> and <kbd>↓</kbd> to navigate •
         <kbd>Enter</kbd> to select •
-        <kbd>Esc</kbd> to close
+        <kbd>Esc</kbd> to close • <kbd>/</kbd> to open
       </div>
       <div>
         Press <kbd>Enter</kbd> without
