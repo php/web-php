@@ -3564,6 +3564,11 @@ footer p:where(.dark,.dark *) {
     background-color: transparent;
 }
 
+.php85 .phpcode span.variable {
+    color: #7d55ba;
+    background-color: transparent;
+}
+
 .php85 .phpcode span.keyword {
     color: #07a;
     background-color: transparent;
@@ -3585,13 +3590,18 @@ footer p:where(.dark,.dark *) {
     background-color: transparent;
 }
 
+.dark .php85 .phpcode span.variable {
+    color: #a5d6ff;
+    background-color: transparent;
+}
+
 .dark .php85 .phpcode span.keyword {
     color: #ff7b72;
     background-color: transparent;
 }
 
 .dark .php85 .phpcode span.string {
-    color: #a5d6ff;
+    color: #80b83c;
     background-color: transparent;
 }
 
