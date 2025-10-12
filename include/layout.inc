@@ -14,26 +14,33 @@ ini_set('highlight.keyword', 'keyword');
 ini_set('highlight.string',  'string');
 ini_set('highlight.html',    'html');
 
+// convert PHP 8.2 highlight_string() output to match PHP 8.3+
+function normalize_highlight_string(string $html): string
+{
+    $search = ["\r\n", "\n", '<br />', '&nbsp;'];
+    $replace = ["\n", '', "\n", ' '];
+    $result = str_replace($search, $replace, $html);
+
+    // strip extra span tag
+    $result = substr_replace($result, '', 5, 6);
+    $result = substr_replace($result, '', -14, 7);
+
+    return '<pre>' . $result . '</pre>';
+}
+
 // Highlight PHP code
 function highlight_php($code, $return = false)
 {
     $highlighted = highlight_string($code, true);
 
-    // Use this ugly hack for now to avoid code snippets with bad syntax screwing up the highlighter
-    if (strstr($highlighted, "include/layout.inc</b>")) {
-        $highlighted = '<span class="html">' . nl2br(htmlentities($code, ENT_HTML5), false) . "</span>";
+    if (PHP_VERSION_ID < 80300) {
+        $highlighted = normalize_highlight_string($highlighted);
     }
 
-    // Fix output to use CSS classes and wrap well
-    $highlighted = '<div class="phpcode">' . strtr(
-        $highlighted,
-        [
-            '&nbsp;' => ' ',
-            "\n" => '',
-
-            '<span style="color: ' => '<span class="',
-        ],
-    ) . '</div>';
+    // Fix output to use CSS classes
+    $search = ['<code style="color: ', '<span style="color: '];
+    $replace = ['<code class="', '<span class="'];
+    $highlighted = '<div class="phpcode">' . str_replace($search, $replace, $highlighted) . '</div>';
 
     if ($return) { return $highlighted; }
     echo $highlighted;
@@ -45,7 +52,7 @@ function highlight_php_trimmed($code, $return = false)
 {
     $code = "<?php\n" . $code;
     $highlighted_code = highlight_php($code, true);
-    $highlighted_code = preg_replace("!&lt;\?php(<br />)+!", '', $highlighted_code, 1);
+    $highlighted_code = preg_replace("!&lt;\?php(\\n)+!", '', $highlighted_code, 1);
 
     // add syntax highlighting for variables
     $variableReplacer = function (array $matches) {
