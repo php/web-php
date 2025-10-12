@@ -11,7 +11,7 @@ return [
     'url_parsing_api_title' => 'New URI Extension',
     'url_parsing_api_description' => '<p>As an always-available part of PHP\'s standard library the new URI extension provides APIs to parse and modify URIs and URLs according to the RFC 3986 and the WHATWG URL standards.</p><p>The secure and standards-compliant URI parsing is powered by the <a href="https://uriparser.github.io/">uriparser</a> (RFC 3986) and <a href="https://lexbor.com/">Lexbor</a> (WHATWG URL) libraries.</p>',
     'clone_with_title' => 'Clone With',
-    'clone_with_description' => 'It is not possible to update properties during object cloning by passing an associative array with the updated to the <code>clone()</code> function. This enables straight-forward support of the "with-er" pattern for <code>readonly</code> classes.',
+    'clone_with_description' => 'It is now possible to update properties during object cloning by passing an associative array with the updated to the <code>clone()</code> function. This enables straight-forward support of the "with-er" pattern for <code>readonly</code> classes.',
     'no_discard_title' => '<code>#[\NoDiscard]</code> Attribute',
     'no_discard_description' => '<p>By adding the <code>#[\NoDiscard]</code> attribute to a function, PHP will check whether the returned value is consumed and emit a warning if it is not. This allows to improve the safety of APIs where the returned value is important, but where it is easy to forget using the return value by accident.</p><p>The associated <code>(void)</code> cast can be used to indicate that a value is intentionally unused.</p>',
     'fcc_in_const_expr_title' => 'Closures and First Class Callables in Constant Expressions',
