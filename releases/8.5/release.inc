@@ -150,6 +150,9 @@ PHP
                     </div>
                 </div>
             </div>
+            <div class="php8-compare__content">
+                <?= message('clone_with_description', $lang) ?>
+            </div>
         </div>
 
         <div class="php8-compare">
@@ -243,6 +246,9 @@ PHP
                         ); ?>
                     </div>
                 </div>
+            </div>
+            <div class="php8-compare__content">
+                <?= message('no_discard_description', $lang) ?>
             </div>
         </div>
 
