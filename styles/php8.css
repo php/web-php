@@ -305,6 +305,10 @@
   margin: 0 !important;
 }
 
+.align-start {
+    align-items: start;
+}
+
 @media (max-width: 768px) {
   .php8-code {
     padding-left: 12px !important;
