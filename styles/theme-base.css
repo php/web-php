@@ -948,6 +948,7 @@ div.tip p:first-child {
     overflow-x: auto;
 }
 
+.docs .example-contents > .phpcode > pre,
 .docs .example-contents > .phpcode > code {
     padding: .75rem;
 }
