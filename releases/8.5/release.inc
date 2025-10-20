@@ -204,6 +204,9 @@ PHP
                     </div>
                 </div>
             </div>
+            <div class="php8-compare__content">
+                <?= message('pipe_operator_description', $lang) ?>
+            </div>
         </div>
 
         <div class="php8-compare">

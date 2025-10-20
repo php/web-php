@@ -8,8 +8,9 @@ return [
     'upgrade_now' => 'Upgrade to PHP 8.5 now!',
 
     'pipe_operator_title' => 'Pipe Operator',
+    'pipe_operator_description' => '<p>The pipe operator allows chaining function calls together without dealing with intermediary variables. That can be especially helpful when replacing many "nested calls" with a chain that can be read forwards, rather than inside-out.</p><p>Learn more about the backstory of this feature in <a href="https://thephp.foundation/blog/2025/07/11/php-85-adds-pipe-operator/" target="_blank" rel="noopener noreferrer">The PHP Foundation’s blog</a>.</p>',
     'url_parsing_api_title' => 'New URI Extension',
-    'url_parsing_api_description' => '<p>As an always-available part of PHP\'s standard library the new URI extension provides APIs to parse and modify URIs and URLs according to the RFC 3986 and the WHATWG URL standards.</p><p>The secure and standards-compliant URI parsing is powered by the <a href="https://uriparser.github.io/">uriparser</a> (RFC 3986) and <a href="https://lexbor.com/">Lexbor</a> (WHATWG URL) libraries.</p>',
+    'url_parsing_api_description' => '<p>As an always-available part of PHP\'s standard library the new URI extension provides APIs to parse and modify URIs and URLs according to the RFC 3986 and the WHATWG URL standards.</p><p>The secure and standards-compliant URI parsing is powered by the <a href="https://uriparser.github.io/">uriparser</a> (RFC 3986) and <a href="https://lexbor.com/">Lexbor</a> (WHATWG URL) libraries.</p><p>Learn more about the backstory of this feature in <a href="https://thephp.foundation/blog/2025/10/10/php-85-uri-extension/" target="_blank" rel="noopener noreferrer">The PHP Foundation’s blog</a>.</p>',
     'clone_with_title' => 'Clone With',
     'clone_with_description' => 'It is now possible to update properties during object cloning by passing an associative array with the updated to the <code>clone()</code> function. This enables straight-forward support of the "with-er" pattern for <code>readonly</code> classes.',
     'no_discard_title' => '<code>#[\NoDiscard]</code> Attribute',
