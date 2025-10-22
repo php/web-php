@@ -46,7 +46,7 @@ common_header(message('common_header', $lang));
                     <div class="php8-code phpcode">
                         <?php highlight_php_trimmed(
                                 <<<'PHP'
-$components = parse_url("https://php.net/releases/8.5/en.php");
+$components = parse_url('https://php.net/releases/8.4/en.php');
 
 var_dump($components['host']);
 // string(7) "php.net"
@@ -63,7 +63,7 @@ PHP
                                 <<<'PHP'
 use Uri\Rfc3986\Uri;
 
-$uri = new Uri("https://php.net/releases/8.5/en.php");
+$uri = new Uri('https://php.net/releases/8.5/en.php');
 
 var_dump($uri->getHost());
 // string(7) "php.net"
