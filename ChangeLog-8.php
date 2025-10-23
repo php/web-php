@@ -1690,6 +1690,91 @@ changelog_header(8, $MINOR_VERSIONS);
 
 <a id="PHP_8_3"></a>
 
+<section class="version" id="8.3.27"><!-- {{{ 8.3.27 -->
+<h3>Version 8.3.27</h3>
+<b><?php release_date('23-Oct-2025'); ?></b>
+<ul><li>Core:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 19765); ?> (object_properties_load() bypasses readonly property checks).</li>
+  <li>Fixed hard_timeout with --enable-zend-max-execution-timers.</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 19792); ?> (SCCP causes UAF for return value if both warning and exception are triggered).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 19653); ?> (Closure named argument unpacking between temporary closures can cause a crash).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 19839); ?> (Incorrect HASH_FLAG_HAS_EMPTY_IND flag on userland array).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 19480); ?> (error_log php.ini cannot be unset when open_basedir is configured).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 20002); ?> (Broken build on *BSD with MSAN).</li>
+</ul></li>
+<li>CLI:
+<ul>
+  <li>Fix useless "Failed to poll event" error logs due to EAGAIN in CLI server with PHP_CLI_SERVER_WORKERS.</li>
+</ul></li>
+<li>Curl:
+<ul>
+  <li>Fix cloning of CURLOPT_POSTFIELDS when using the clone operator instead of the curl_copy_handle() function to clone a CurlHandle.</li>
+  <li>Fix curl build and test failures with version 8.16.</li>
+</ul></li>
+<li>Date:
+<ul>
+  <li>Fixed <?php githubissuel('php/php-src', 17159); ?>: "P" format for ::createFromFormat swallows string literals.</li>
+</ul></li>
+<li>DBA:
+<ul>
+  <li>Fixed <?php githubissuel('php/php-src', 19885); ?> (dba_fetch() overflow on skip argument).</li>
+</ul></li>
+<li>GD:
+<ul>
+  <li>Fixed <?php githubissuel('php/php-src', 19955); ?> (imagefttext() memory leak).</li>
+</ul></li>
+<li>MySQLnd:
+<ul>
+  <li><?php bugfix(67563); ?> (mysqli compiled with mysqlnd does not take ipv6 adress as parameter).</li>
+</ul></li>
+<li>Phar:
+<ul>
+  <li>Fix memory leak and invalid continuation after tar header writing fails.</li>
+  <li>Fix memory leaks when creating temp file fails when applying zip signature.</li>
+</ul></li>
+<li>SimpleXML:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 19988); ?> (zend_string_init with NULL pointer in simplexml (UB)).</li>
+</ul></li>
+<li>Soap:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 19784); ?> (SoapServer memory leak).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 20011); ?> (Array of SoapVar of unknown type causes crash).</li>
+</ul></li>
+<li>Standard:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 12265); ?> (Cloning an object breaks serialization recursion).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 19701); ?> (Serialize/deserialize loses some data).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 19801); ?> (leaks in var_dump() and debug_zval_dump()).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 20043); ?> (array_unique assertion failure with RC1 array causing an exception on sort).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 19926); ?> (reset internal pointer earlier while splicing array while COW violation flag is still set).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 19570); ?> (unable to fseek in /dev/zero and /dev/null).</li>
+</ul></li>
+<li>Streams:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 19248); ?> (Use strerror_r instead of strerror in main).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 17345); ?> (Bug #35916 was not completely fixed).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 19705); ?> (segmentation when attempting to flush on non seekable stream.</li>
+</ul></li>
+<li>XMLReader:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 20009); ?> (XMLReader leak on RelaxNG schema failure).</li>
+</ul></li>
+<li>Zip:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 19688); ?> (Remove pattern overflow in zip addGlob()).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 19932); ?> (Memory leak in zip setEncryptionName()/setEncryptionIndex()).</li>
+</ul></li>
+<li>Zlib:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 19922); ?> (Double free on gzopen).</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
+
+
 <section class="version" id="8.3.26"><!-- {{{ 8.3.26 -->
 <h3>Version 8.3.26</h3>
 <b><?php release_date('25-Sep-2025'); ?></b>
