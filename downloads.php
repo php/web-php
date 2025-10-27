@@ -88,6 +88,7 @@ $os = [
             'windows-native' => 'Single Line Installer',
             'windows-chocolatey' => 'Chocolatey',
             'windows-scoop' => 'Scoop',
+            'windows-winget' => 'Winget',
             'windows-docker' => 'Docker',
             'windows-wsl-debian' => 'WSL/Debian',
             'windows-wsl-ubuntu' => 'WSL/Ubuntu',
