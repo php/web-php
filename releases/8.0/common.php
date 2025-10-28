@@ -69,3 +69,13 @@ function language_chooser(string $currentLang): void {
       </form>
 ';
 }
+
+function message($code, $language = 'en')
+{
+    $original = require __DIR__ . '/languages/en.php';
+    if (($language !== 'en') && file_exists(__DIR__ . '/languages/' . $language . '.php')) {
+        $translation = require __DIR__ . '/languages/' . $language . '.php';
+    }
+
+    return $translation[$code] ?? $original[$code] ?? $code;
+}
