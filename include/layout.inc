@@ -43,7 +43,7 @@ function highlight_php($code, $return = false)
 // Same as highlight_php() but does not require '<?php' in $code
 function highlight_php_trimmed($code, $return = false)
 {
-    $code = "<?php\n" . $code;
+    $code = "<?php\r\n" . $code;
     $highlighted_code = highlight_php($code, true);
     $highlighted_code = preg_replace("!&lt;\?php(<br />)+!", '', $highlighted_code, 1);
 
@@ -506,10 +506,10 @@ function get_nav_items(): array {
       id: 'help',
     ),
     new NavItem(
-      name: 'PHP 8.4',
-      href: '/releases/8.4/index.php',
+      name: 'PHP 8.5',
+      href: '/releases/8.5/index.php',
       id: 'php8',
-      image: '/images/php8/logo_php8_4.svg',
+      image: '/images/php8/logo_php8_5.svg',
     )
   ];
 }
