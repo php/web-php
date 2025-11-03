@@ -12,61 +12,12 @@ const initPHPSearch = async (language) => {
     const CACHE_DAYS = 14;
 
     /**
-     * Converts the structure from search-index.php into an array of objects,
-     * mapping the index entries to their respective types.
-     *
-     * @param {object} index
-     * @returns {Array}
-     */
-    const processIndex = (index) => {
-        return Object.entries(index)
-            .map(([id, [name, description, tag]]) => {
-                if (!name) return null;
-
-                let type = "General";
-                switch (tag) {
-                    case "phpdoc:varentry":
-                        type = "Variable";
-                        break;
-
-                    case "refentry":
-                        type = "Function";
-                        break;
-
-                    case "phpdoc:exceptionref":
-                        type = "Exception";
-                        break;
-
-                    case "phpdoc:classref":
-                        type = "Class";
-                        break;
-
-                    case "set":
-                    case "book":
-                    case "reference":
-                        type = "Extension";
-                        break;
-                }
-
-                return {
-                    id,
-                    name,
-                    description,
-                    tag,
-                    type,
-                    methodName: name.split("::").pop(),
-                };
-            })
-            .filter(Boolean);
-    };
-
-    /**
      * Looks up the search index cached in localStorage.
      *
      * @returns {Array|null}
      */
     const lookupIndexCache = () => {
-        const key = `search-${language}`;
+        const key = `search2-${language}`;
         const cache = window.localStorage.getItem(key);
 
         if (!cache) {
@@ -74,14 +25,6 @@ const initPHPSearch = async (language) => {
         }
 
         const { data, time: cachedDate } = JSON.parse(cache);
-
-        // Invalidate old search cache format (previously an object)
-        // TODO: Remove this check once the new search index (a single array)
-        // has been in use for a while.
-        if (!Array.isArray(data)) {
-            console.log("Invalidating old search cache format");
-            return null;
-        }
 
         const expireDate = cachedDate + CACHE_DAYS * MILLISECONDS_PER_DAY;
 
@@ -98,10 +41,14 @@ const initPHPSearch = async (language) => {
      * @returns {Promise<Array>} The search index.
      */
     const fetchIndex = async () => {
-        const key = `search-${language}`;
-        const response = await fetch(`/js/search-index.php?lang=${language}`);
-        const data = await response.json();
-        const items = processIndex(data);
+        const key = `search2-${language}`;
+        let items;
+        if (language === 'local') {
+            items = localSearchIndexes;
+        } else {
+            const response = await fetch(`/js/search-index.php?lang=${language}`);
+            items = await response.json();
+        }
 
         try {
             localStorage.setItem(
@@ -139,7 +86,7 @@ const initPHPSearch = async (language) => {
         try {
             return await loadIndex();
         } catch (error) {
-            if (language !== "en") {
+            if ((language !== "en") && (language !== "local")) {
                 language = "en";
                 return loadIndexWithFallback();
             }
@@ -200,7 +147,7 @@ const initSearchModal = () => {
     const inputElement = document.getElementById("search-modal__input");
 
     const focusTrapHandler = (event) => {
-        if (event.key != "Tab") {
+        if (event.key !== "Tab") {
             return;
         }
 
@@ -276,19 +223,25 @@ const initSearchModal = () => {
         "navbar__search-button-mobile",
     );
     const searchButton = document.getElementById("navbar__search-button");
+    let buttons = [searchButton];
 
     // Enhance mobile search
-    searchLink.setAttribute("hidden", "true");
-    searchButtonMobile.removeAttribute("hidden");
+    if (searchLink !== null) {
+        searchLink.setAttribute("hidden", "true");
+        searchButtonMobile.removeAttribute("hidden");
+        buttons.push(searchButtonMobile);
+    }
 
     // Enhance desktop search
-    document
-        .querySelector(".navbar__search-form")
-        .setAttribute("hidden", "true");
+    const searchForm = document
+        .querySelector(".navbar__search-form");
+    if (searchForm !== null) {
+        searchForm.setAttribute("hidden", "true");
+    }
     searchButton.removeAttribute("hidden");
 
     // Open when the search button is clicked
-    [searchButton, searchButtonMobile].forEach((button) =>
+    buttons.forEach((button) =>
         button.addEventListener("click", show),
     );
 
@@ -390,7 +343,10 @@ const initSearchUI = ({ searchCallback, language, limit = 30 }) => {
             const icon = ["General", "Extension"].includes(item.type)
                 ? DOCUMENT_ICON
                 : BRACES_ICON;
-            const link = `/manual/${encodeURIComponent(language)}/${encodeURIComponent(item.id)}.php`;
+            let link = `/manual/${encodeURIComponent(language)}/${encodeURIComponent(item.id)}.php`;
+            if (language === 'local') {
+                link = encodeURIComponent(item.id) + '.html';
+            }
 
             const description =
                 item.type !== "General"
@@ -459,7 +415,7 @@ const initSearchUI = ({ searchCallback, language, limit = 30 }) => {
                 if (selectedIndex !== -1) {
                     event.preventDefault();
                     resultsElements[selectedIndex].click();
-                } else {
+                } else if (language !== 'local') {
                     window.location.href = `/search.php?lang=${language}&q=${encodeURIComponent(inputElement.value)}`;
                 }
                 break;
