@@ -20,7 +20,7 @@ const initPHPSearch = async (language) => {
         const key = `search2-${language}`;
         const cache = window.localStorage.getItem(key);
 
-        if (!cache) {
+        if ((!cache) || (language === 'local')) {
             return null;
         }
 
@@ -48,20 +48,20 @@ const initPHPSearch = async (language) => {
         } else {
             const response = await fetch(`/js/search-index.php?lang=${language}`);
             items = await response.json();
-        }
 
-        try {
-            localStorage.setItem(
-                key,
-                JSON.stringify({
-                    data: items,
-                    time: Date.now(),
-                }),
-            );
-        } catch (e) {
-            // Local storage might be full, or other error.
-            // Just continue without caching.
-            console.error("Failed to cache search index", e);
+            try {
+                localStorage.setItem(
+                    key,
+                    JSON.stringify({
+                        data: items,
+                        time: Date.now(),
+                    }),
+                );
+            } catch (e) {
+                // Local storage might be full, or other error.
+                // Just continue without caching.
+                console.error("Failed to cache search index", e);
+            }
         }
 
         return items;
