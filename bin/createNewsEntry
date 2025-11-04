@@ -107,7 +107,7 @@ function getConfTime(): int { for(;;) {
 function getImage(): ?array {
 	global $imageRestriction;
 
-	fwrite(STDOUT, "Will a picture be accompanying this entry? ");
+	fwrite(STDOUT, "Will a picture be accompanying this entry?(y/N) ");
 	$yn = fgets(STDIN);
 
 
@@ -129,7 +129,7 @@ function getImage(): ?array {
 			$imageSizes = getimagesize("./images/news/$path");
 
 			if (($imageSizes[0] > $imageRestriction['width']) || ($imageSizes[1] > $imageRestriction['height'])) {
-				fwrite(STDOUT, "Provided image has a higher size than recommended (" . implode(' by ', $imageRestriction) . "). Continue? ");
+				fwrite(STDOUT, "Provided image has a higher size than recommended (" . implode(' by ', $imageRestriction) . "). Continue with this image?(y/N) ");
 				$ynImg = fgets(STDIN);
 				if (strtoupper($ynImg[0]) !== "Y") {
 					$isValidImage = false;
