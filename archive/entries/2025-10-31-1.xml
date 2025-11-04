@@ -8,6 +8,7 @@
     <link href="https://php.bettercode.eu/" rel="via" type="text/html"/>
     <default:finalTeaserDate xmlns="http://php.net/ns/news">2025-11-25</default:finalTeaserDate>
     <category term="conferences" label="Conference announcement"/>
+    <default:newsImage xmlns="http://php.net/ns/news" link="https://php.bettercode.eu/" title="betterCode() PHP 2025">bettercodephp2025.jpg</default:newsImage>
     <content type="xhtml">
         <div xmlns="http://www.w3.org/1999/xhtml">
             <p>With version 8.5, PHP continues to evolve in its thirtieth year: the new pipe operator and numerous performance improvements make your development more efficient. At the same time, FrankenPHP is establishing itself in Caddy Server, a European open-source solution, as a modern alternative to Nginx.</p>
