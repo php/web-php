@@ -36,8 +36,60 @@ common_header(message('common_header', $lang));
 
     <section class="php8-section center">
         <div class="php8-compare">
-            <h2 class="php8-h2" id="url_parsing_api">
-                <?= message('url_parsing_api_title', $lang) ?>
+            <h2 class="php8-h2" id="pipe_operator">
+                <?= message('pipe_operator_title', $lang) ?>
+                <a class="php8-rfc" href="https://wiki.php.net/rfc/pipe-operator-v3">RFC</a>
+            </h2>
+            <div class="php8-compare__main">
+                <div class="php8-compare__block example-contents">
+                    <div class="php8-compare__label">PHP &lt; 8.5</div>
+                    <div class="php8-code phpcode">
+                        <?php highlight_php_trimmed(
+                                <<<'PHP'
+$input = ' My test value. ';
+
+$output = strtolower(
+    str_replace('.', '',
+        str_replace(' ', '-',
+            trim($input)
+        )
+    )
+);
+
+var_dump($output); // string(13) "my-test-value"
+PHP
+
+                        ); ?>
+                    </div>
+                </div>
+                <div class="php8-compare__arrow"></div>
+                <div class="php8-compare__block example-contents">
+                    <div class="php8-compare__label php8-compare__label_new">PHP 8.5</div>
+                    <div class="php8-code phpcode">
+                        <?php highlight_php_trimmed(
+                                <<<'PHP'
+$input = ' My test value. ';
+
+$output = $input
+    |> trim(...)
+    |> (fn($str) => str_replace(' ', '-', $str))
+    |> (fn($str) => str_replace('.', '', $str))
+    |> strtolower(...);
+
+var_dump($output); // string(13) "my-test-value"
+PHP
+                        ); ?>
+                    </div>
+                </div>
+            </div>
+            <div class="php8-compare__content">
+                <?= message('pipe_operator_description', $lang) ?>
+            </div>
+        </div>
+
+        <div class="php8-compare">
+            <h2 class="php8-h2" id="uri_extension">
+                <?= message('uri_extension_title', $lang) ?>
                 <a class="php8-rfc" href="https://wiki.php.net/rfc/url_parsing_api">RFC</a>
             </h2>
             <div class="php8-compare__main">
@@ -56,9 +108,9 @@ PHP
                     </div>
                 </div>
                 <div class="php8-compare__arrow"></div>
-                <div class="php8-compare__block example-contents" style="display: table;">
+                <div class="php8-compare__block example-contents">
                     <div class="php8-compare__label php8-compare__label_new">PHP 8.5</div>
-                    <div class="php8-code phpcode" style="display: table-cell;">
+                    <div class="php8-code phpcode">
                         <?php highlight_php_trimmed(
                                 <<<'PHP'
 use Uri\Rfc3986\Uri;
@@ -73,7 +125,7 @@ PHP
                 </div>
             </div>
             <div class="php8-compare__content">
-                <?= message('url_parsing_api_description', $lang) ?>
+                <?= message('uri_extension_description', $lang) ?>
             </div>
         </div>
 
@@ -88,63 +140,53 @@ PHP
                     <div class="php8-code phpcode">
                         <?php highlight_php_trimmed(
                                 <<<'PHP'
-final readonly class PhpVersion
+readonly class Color
 {
     public function __construct(
-        public string $version = 'PHP 8.4',
+        public int $red,
+        public int $green,
+        public int $blue,
+        public int $alpha = 255,
     ) {}
 
-    public function withVersion(string $version): self
+    public function withAlpha(int $alpha): self
     {
-        $newObject = clone $this;
-        $newObject->version = $version;
-
-        return $newObject;
+        $values = get_object_vars($this);
+        $values['alpha'] = $alpha;
+        return new self(...$values);
     }
 }
 
-$version = new PhpVersion();
-
-var_dump($version->version);
-// string(7) "PHP 8.4"
-
-var_dump($version->withVersion('PHP 8.5')->version);
-// Fatal error: Uncaught Error: Cannot modify readonly property PhpVersion::$version
+$blue = new Color(79, 91, 147);
+$transparentBlue = $blue->withAlpha(128);
 PHP
 
                         ); ?>
                     </div>
                 </div>
                 <div class="php8-compare__arrow"></div>
-                <div class="php8-compare__block example-contents" style="display: table;">
+                <div class="php8-compare__block example-contents">
                     <div class="php8-compare__label php8-compare__label_new">PHP 8.5</div>
-                    <div class="php8-code phpcode" style="display: table-cell;">
+                    <div class="php8-code phpcode">
                         <?php highlight_php_trimmed(
                                 <<<'PHP'
-final readonly class PhpVersion
+readonly class Color
 {
     public function __construct(
-        public string $version = 'PHP 8.4',
+        public int $red,
+        public int $green,
+        public int $blue,
+        public int $alpha = 255,
     ) {}
 
-    public function withVersion(string $version): self
+    public function withAlpha(int $alpha): self
     {
-        return clone($this, [
-            'version' => $version,
-        ]);
+        return clone($this, ['alpha' => $alpha]);
     }
 }
 
-$version = new PhpVersion();
-
-var_dump($version->version);
-// string(7) "PHP 8.4"
-
-var_dump($version->withVersion('PHP 8.5')->version);
-// string(7) "PHP 8.5"
-
-var_dump($version->version);
-// string(7) "PHP 8.4"
+$blue = new Color(79, 91, 147);
+$transparentBlue = $blue->withAlpha(128);
 PHP
                         ); ?>
                     </div>
@@ -152,60 +194,6 @@ PHP
             </div>
             <div class="php8-compare__content">
                 <?= message('clone_with_description', $lang) ?>
-            </div>
-        </div>
-
-        <div class="php8-compare">
-            <h2 class="php8-h2" id="pipe_operator">
-                <?= message('pipe_operator_title', $lang) ?>
-                <a class="php8-rfc" href="https://wiki.php.net/rfc/pipe-operator-v3">RFC</a>
-            </h2>
-            <div class="php8-compare__main">
-                <div class="php8-compare__block example-contents">
-                    <div class="php8-compare__label">PHP &lt; 8.5</div>
-                    <div class="php8-code phpcode">
-                        <?php highlight_php_trimmed(
-                            <<<'PHP'
-$input = ' Some kind of string. ';
-
-$output = strtolower(
-    str_replace(['.', '/', '…'], '',
-        str_replace(' ', '-',
-            trim($input)
-        )
-    )
-);
-
-var_dump($output);
-// string(19) "some-kind-of-string"
-PHP
-
-                        ); ?>
-                    </div>
-                </div>
-                <div class="php8-compare__arrow"></div>
-                <div class="php8-compare__block example-contents" style="display: table;">
-                    <div class="php8-compare__label php8-compare__label_new">PHP 8.5</div>
-                    <div class="php8-code phpcode" style="display: table-cell;">
-                        <?php highlight_php_trimmed(
-                            <<<'PHP'
-$input = ' Some kind of string. ';
-
-$output = $input
-    |> trim(...)
-    |> (fn($string) => str_replace(' ', '-', $string))
-    |> (fn($string) => str_replace(['.', '/', '…'], '', $string))
-    |> strtolower(...);
-
-var_dump($output);
-// string(19) "some-kind-of-string"
-PHP
-                        ); ?>
-                    </div>
-                </div>
-            </div>
-            <div class="php8-compare__content">
-                <?= message('pipe_operator_description', $lang) ?>
             </div>
         </div>
 
@@ -225,16 +213,16 @@ function getPhpVersion(): string
 	return 'PHP 8.4';
 }
 
-getPhpVersion(); // No Errors
+getPhpVersion(); // No warning
 PHP
 
                         ); ?>
                     </div>
                 </div>
                 <div class="php8-compare__arrow"></div>
-                <div class="php8-compare__block example-contents" style="display: table;">
+                <div class="php8-compare__block example-contents">
                     <div class="php8-compare__label php8-compare__label_new">PHP 8.5</div>
-                    <div class="php8-code phpcode" style="display: table-cell;">
+                    <div class="php8-code phpcode">
                         <?php highlight_php_trimmed(
                                 <<<'PHP'
 #[\NoDiscard]
@@ -256,10 +244,9 @@ PHP
         </div>
 
         <div class="php8-compare">
-            <h2 class="php8-h2" id="fcc_in_const_expr">
-                <?= message('fcc_in_const_expr_title', $lang) ?>
-                <a class="php8-rfc" href="https://wiki.php.net/rfc/fcc_in_const_expr">RFC</a>
-                <a class="php8-rfc" href="https://wiki.php.net/rfc/closures_in_const_expr">RFC</a>
+            <h2 class="php8-h2" id="array_first_last">
+                <?= message('array_first_last_title', $lang) ?>
+                <a class="php8-rfc" href="https://wiki.php.net/rfc/array_first_last">RFC</a>
             </h2>
             <div class="php8-compare__main">
                 <div class="php8-compare__block example-contents">
@@ -267,62 +254,40 @@ PHP
                     <div class="php8-code phpcode">
                         <?php highlight_php_trimmed(
                                 <<<'PHP'
-final class CalculatorTest extends \PHPUnit\Framework\TestCase
-{
-    #[DataProvider('subtractionProvider')]
-    public function testSubtraction(
-        int $minuend,
-        int $subtrahend,
-        int $result
-    ): void
-    {
-        $this->assertSame(
-            $result,
-            Calculator::subtract($minuend, $subtrahend)
-        );
-    }
+$releases = [
+    '8.5' => '2025-11-20',
+    '8.4' => '2024-11-21',
+    '8.3' => '2023-11-23',
+    '8.2' => '2022-12-08',
+];
 
-    public static function subtractionProvider(): iterable
-    {
-        for ($i = -10; $i <= 10; $i++) {
-            yield [$i, $i, 0];
-            yield [$i, 0, $i];
-            yield [0, $i, -$i];
-        }
-    }
-}
+$firstKey = array_key_first($releases);
+$newestDate = $releases[$firstKey];
+
+var_dump($newestDate);
+// string(10) "2025-11-20"
 PHP
 
                         ); ?>
                     </div>
                 </div>
                 <div class="php8-compare__arrow"></div>
-                <div class="php8-compare__block example-contents" style="display: table;">
+                <div class="php8-compare__block example-contents">
                     <div class="php8-compare__label php8-compare__label_new">PHP 8.5</div>
-                    <div class="php8-code phpcode" style="display: table-cell;">
+                    <div class="php8-code phpcode">
                         <?php highlight_php_trimmed(
                                 <<<'PHP'
-final class CalculatorTest
-{
-    #[Test\CaseGenerator(static function (): iterable
-    {
-        for ($i = -10; $i <= 10; $i++) {
-            yield [$i, $i, 0];
-            yield [$i, 0, $i];
-            yield [0, $i, -$i];
-        }
-    })]
-    public function testSubtraction(
-        int $minuend,
-        int $subtrahend,
-        int $result
-    )
-    {
-        \assert(
-            Calculator::subtract($minuend, $subtrahend) === $result
-        );
-    }
-}
+$releases = [
+    '8.5' => '2025-11-20',
+    '8.4' => '2024-11-21',
+    '8.3' => '2023-11-23',
+    '8.2' => '2022-12-08',
+];
+
+$newestDate = array_first($releases);
+
+var_dump($newestDate);
+// string(10) "2025-11-20"
 PHP
                         ); ?>
                     </div>
@@ -331,8 +296,67 @@ PHP
         </div>
 
         <div class="php8-compare">
+            <h2 class="php8-h2" id="fcc_in_const_expr">
+                <?= message('fcc_in_const_expr_title', $lang) ?>
+                <a class="php8-rfc" href="https://wiki.php.net/rfc/closures_in_const_expr">RFC</a>
+                <a class="php8-rfc" href="https://wiki.php.net/rfc/fcc_in_const_expr">RFC</a>
+            </h2>
+            <div class="php8-compare__main">
+                <div class="php8-compare__block example-contents">
+                    <div class="php8-compare__label">PHP &lt; 8.5</div>
+                    <div class="php8-code phpcode">
+                        <?php highlight_php_trimmed(
+                                <<<'PHP'
+function increment(
+    int $value,
+    ?Closure $incrementer = null,
+): int {
+    if ($incrementer === null) {
+        $incrementer = addOne(...);
+    }
+
+    return $incrementer($value);
+}
+
+function addOne(int $value): int
+{
+    return $value + 1;
+}
+PHP
+
+                        ); ?>
+                    </div>
+                </div>
+                <div class="php8-compare__arrow"></div>
+                <div class="php8-compare__block example-contents">
+                    <div class="php8-compare__label php8-compare__label_new">PHP 8.5</div>
+                    <div class="php8-code phpcode">
+                        <?php highlight_php_trimmed(
+                                <<<'PHP'
+function increment(
+    int $value,
+    Closure $incrementer = addOne(...),
+): int {
+    return $incrementer($value);
+}
+
+function addOne(int $value): int
+{
+    return $value + 1;
+}
+PHP
+                        ); ?>
+                    </div>
+                </div>
+            </div>
+            <div class="php8-compare__content">
+                <?= message('fcc_in_const_expr_description', $lang) ?>
+            </div>
+        </div>
+
+        <div class="php8-compare">
             <h2 class="php8-h2" id="curl_share_persistence_improvement">
-                <?= message('curl_share_persistence_improvement_title', $lang) ?>
+                <?= message('persistent_curl_share_handles_title', $lang) ?>
                 <a class="php8-rfc" href="https://wiki.php.net/rfc/curl_share_persistence">RFC</a>
                 <a class="php8-rfc" href="https://wiki.php.net/rfc/curl_share_persistence_improvement">RFC</a>
             </h2>
@@ -348,20 +372,16 @@ curl_share_setopt($sh, CURLSHOPT_SHARE, CURL_LOCK_DATA_CONNECT);
 
 $ch1 = curl_init('https://php.net/');
 curl_setopt($ch1, CURLOPT_SHARE, $sh);
+
 curl_exec($ch1);
-
-$ch2 = curl_init('https://thephp.foundation/');
-curl_setopt($ch2, CURLOPT_SHARE, $sh);
-curl_exec($ch2);
 PHP
-
                         ); ?>
                     </div>
                 </div>
                 <div class="php8-compare__arrow"></div>
-                <div class="php8-compare__block example-contents" style="display: table;">
+                <div class="php8-compare__block example-contents">
                     <div class="php8-compare__label php8-compare__label_new">PHP 8.5</div>
-                    <div class="php8-code phpcode" style="display: table-cell;">
+                    <div class="php8-code phpcode">
                         <?php highlight_php_trimmed(
                                 <<<'PHP'
 $sh = curl_share_init_persistent([
@@ -371,78 +391,16 @@ $sh = curl_share_init_persistent([
 
 $ch1 = curl_init('https://php.net/');
 curl_setopt($ch1, CURLOPT_SHARE, $sh);
-curl_exec($ch1);
 
-$ch2 = curl_init('https://thephp.foundation/');
-curl_setopt($ch2, CURLOPT_SHARE, $sh);
-curl_exec($ch2);
+// This may now reuse the connection from an earlier SAPI request
+curl_exec($ch1);
 PHP
                         ); ?>
                     </div>
                 </div>
             </div>
             <div class="php8-compare__content">
-                New <code>CurlSharePersistentHandle</code> class, <code>curl_multi_get_handles()</code>, <code>curl_share_init_persistent()</code> functions are available.
-            </div>
-        </div>
-
-        <div class="php8-compare">
-            <h2 class="php8-h2" id="array_first_last">
-                <?= message('array_first_last_title', $lang) ?>
-                <a class="php8-rfc" href="https://wiki.php.net/rfc/array_first_last">RFC</a>
-            </h2>
-            <div class="php8-compare__main">
-                <div class="php8-compare__block example-contents">
-                    <div class="php8-compare__label">PHP &lt; 8.5</div>
-                    <div class="php8-code phpcode">
-                        <?php highlight_php_trimmed(
-                                <<<'PHP'
-$php = [
-    'php-82' => ['state' => 'security', 'branch' => 'PHP-8.2'],
-    'php-83' => ['state' => 'active', 'branch' => 'PHP-8.3'],
-    'php-84' => ['state' => 'active', 'branch' => 'PHP-8.4'],
-    'php-85' => ['state' => 'upcoming', 'branch' => 'PHP-8.5'],
-];
-
-$upcomingRelease = null;
-foreach ($php as $key => $version) {
-    if ($version['state'] === 'upcoming') {
-        $upcomingRelease = $version;
-        break;
-    }
-}
-
-var_dump($upcomingRelease);
-PHP
-
-                        ); ?>
-                    </div>
-                </div>
-                <div class="php8-compare__arrow"></div>
-                <div class="php8-compare__block example-contents" style="display: table;">
-                    <div class="php8-compare__label php8-compare__label_new">PHP 8.5</div>
-                    <div class="php8-code phpcode" style="display: table-cell;">
-                        <?php highlight_php_trimmed(
-                                <<<'PHP'
-$php = [
-    'php-82' => ['state' => 'security', 'branch' => 'PHP-8.2'],
-    'php-83' => ['state' => 'active', 'branch' => 'PHP-8.3'],
-    'php-84' => ['state' => 'active', 'branch' => 'PHP-8.4'],
-    'php-85' => ['state' => 'upcoming', 'branch' => 'PHP-8.5'],
-];
-
-$upcomingRelease = array_first(
-    array_filter(
-        $php,
-        static fn($version) => $version['state'] === 'upcoming'
-    )
-);
-
-var_dump($upcomingRelease);
-PHP
-                        ); ?>
-                    </div>
-                </div>
+                <?= message('persistent_curl_share_handles_description', $lang) ?>
             </div>
         </div>
     </section>
@@ -452,19 +410,18 @@ PHP
             <h2 class="php8-h2" id="other_new_things"><?= message('new_classes_title', $lang) ?></h2>
             <div class="php8-compare__content php8-compare__content--block">
                 <ul>
-                    <li>Property Promotion is now available for <code>final</code></li>
-                    <li>Attributes are now available for constants</li>
-                    <li>Attribute <a href="/manual/<?= $documentation ?>/class.override.php"><code>#[\Override]</code></a> now works on properties</li>
-                    <li>Attribute <a href="/manual/<?= $documentation ?>/class.deprecated.php"><code>#[\Deprecated]</code></a> available for traits</li>
-                    <li>Asymmetric Visibility for Static Properties</li>
-                    <li>New <code>#[\DelayedTargetValidation]</code> attribute is available</li>
-                    <li>New <a href="/manual/<?= $documentation ?>/function.get-error-handler.php"><code>get_error_handler()</code></a>, <a href="/manual/<?= $documentation ?>/function.get-exception-handler.php"><code>get_exception_handler()</code></a> functions are available.</li>
-                    <li>New <code>Closure::getCurrent</code> method is available.</li>
+                    <li>Fatal Errors (such as an exceeded maximum execution time) now include a backtrace.</li>
+                    <li>Attributes can now target constants.</li>
+                    <li><a href="/manual/<?= $documentation ?>/class.override.php"><code>#[\Override]</code></a> attribute can now be applied to properties.</li>
+                    <li><a href="/manual/<?= $documentation ?>/class.deprecated.php"><code>#[\Deprecated]</code></a> attribute can be used on traits and constants.</li>
+                    <li>Static properties now support asymmetric visibility.</li>
+                    <li>Properties can be marked as <code>final</code> using constructor property promotion.</li>
+                    <li>Added <code>Closure::getCurrent()</code> method to simplify recursion in anonymous functions.</li>
+                    <li><code>setcookie()</code> and <code>setrawcookie()</code> now support the "partitioned" key.</li>
+                    <li>New <a href="/manual/<?= $documentation ?>/function.get-error-handler.php"><code>get_error_handler()</code></a> and <a href="/manual/<?= $documentation ?>/function.get-exception-handler.php"><code>get_exception_handler()</code></a> functions are available.</li>
                     <li>New <code>Dom\Element::getElementsByClassName()</code> and <code>Dom\Element::insertAdjacentHTML()</code> methods are available.</li>
-                    <li>New <code>enchant_dict_remove_from_session()</code> and <code>enchant_dict_remove()</code> functions are available.</li>
-                    <li>New <code>grapheme_levenshtein()</code> function is available.</li>
-                    <li>New <code>opcache_is_script_cached_in_file_cache()</code> function is available.</li>
-                    <li>New <code>ReflectionConstant::getFileName()</code>, <code>ReflectionConstant::getExtension()</code>, <code>ReflectionConstant::getExtensionName()</code>, <code>ReflectionConstant::getAttributes()</code>, and <code>ReflectionProperty::getMangledName()</code> methods are available.</li>
+                    <li>Added <code>grapheme_levenshtein()</code> function.</li>
+                    <li>New <code>#[\DelayedTargetValidation]</code> attribute can be used to suppress compile-time errors from core and extension attributes that are used on invalid targets.</li>
                 </ul>
             </div>
         </div>
@@ -473,7 +430,16 @@ PHP
             <h2 class="php8-h2" id="deprecations_and_bc_breaks"><?= message('bc_title', $lang) ?></h2>
             <div class="php8-compare__content">
                 <ul>
-
+                    <li>The backtick operator as an alias for <code>shell_exec()</code> has been deprecated.</li>
+                    <li>Non-canonical cast names <code>(boolean)</code>, <code>(integer)</code>, <code>(double)</code>, and <code>(binary)</code> have been deprecated. Use <code>(bool)</code>, <code>(int)</code>, <code>(float)</code>, and <code>(string)</code> instead, respectively.</li>
+                    <li>The <code>disable_classes</code> INI setting has been removed as it causes various engine assumptions to be broken.</li>
+                    <li>Returning a non-string from a user output handler is deprecated.</li>
+                    <li>Terminating case statements with a semicolon instead of a colon has been deprecated.</li>
+                    <li>Using <code>null</code> as an array offset or when calling <code>array_key_exists()</code> is now deprecated. Use an empty string instead.</li>
+                    <li>It is no longer possible to use "array" and "callable" as class alias names in <code>class_alias()</code>.</li>
+                    <li>The <code>__sleep()</code> and <code>__wakeup()</code> magic methods have been soft-deprecated. The <code>__serialize()</code> and <code>__unserialize()</code> magic methods should be used instead.</li>
+                    <li>A warning is now emitted when casting <code>NAN</code> to other types.</li>
+                    <li>A warning is now emitted when casting floats (or strings that look like floats) to <code>int</code> if they cannot be represented as one.</li>
                 </ul>
             </div>
         </div>
