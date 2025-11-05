@@ -28,6 +28,13 @@ const initPHPSearch = async (language) => {
 
         const expireDate = cachedDate + CACHE_DAYS * MILLISECONDS_PER_DAY;
 
+        // Reject old format indexes
+        if (
+          (typeof data[0] !== 'object')
+          || Array.isArray(data[0])
+        ) {
+          return null;
+        }
         if (Date.now() > expireDate) {
             return null;
         }
