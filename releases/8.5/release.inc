@@ -36,6 +36,48 @@ common_header(message('common_header', $lang));
 
     <section class="php8-section center">
         <div class="php8-compare">
+            <h2 class="php8-h2" id="uri_extension">
+                <?= message('uri_extension_title', $lang) ?>
+                <a class="php8-rfc" href="https://wiki.php.net/rfc/url_parsing_api">RFC</a>
+            </h2>
+            <div class="php8-compare__main">
+                <div class="php8-compare__block example-contents">
+                    <div class="php8-compare__label">PHP &lt; 8.5</div>
+                    <div class="php8-code phpcode">
+                        <?php highlight_php_trimmed(
+                                <<<'PHP'
+$components = parse_url('https://php.net/releases/8.4/en.php');
+
+var_dump($components['host']);
+// string(7) "php.net"
+PHP
+
+                        ); ?>
+                    </div>
+                </div>
+                <div class="php8-compare__arrow"></div>
+                <div class="php8-compare__block example-contents">
+                    <div class="php8-compare__label php8-compare__label_new">PHP 8.5</div>
+                    <div class="php8-code phpcode">
+                        <?php highlight_php_trimmed(
+                                <<<'PHP'
+use Uri\Rfc3986\Uri;
+
+$uri = new Uri('https://php.net/releases/8.5/en.php');
+
+var_dump($uri->getHost());
+// string(7) "php.net"
+PHP
+                        ); ?>
+                    </div>
+                </div>
+            </div>
+            <div class="php8-compare__content">
+                <?= message('uri_extension_description', $lang) ?>
+            </div>
+        </div>
+
+        <div class="php8-compare">
             <h2 class="php8-h2" id="pipe_operator">
                 <?= message('pipe_operator_title', $lang) ?>
                 <a class="php8-rfc" href="https://wiki.php.net/rfc/pipe-operator-v3">RFC</a>
@@ -84,48 +126,6 @@ PHP
             </div>
             <div class="php8-compare__content">
                 <?= message('pipe_operator_description', $lang) ?>
-            </div>
-        </div>
-
-        <div class="php8-compare">
-            <h2 class="php8-h2" id="uri_extension">
-                <?= message('uri_extension_title', $lang) ?>
-                <a class="php8-rfc" href="https://wiki.php.net/rfc/url_parsing_api">RFC</a>
-            </h2>
-            <div class="php8-compare__main">
-                <div class="php8-compare__block example-contents">
-                    <div class="php8-compare__label">PHP &lt; 8.5</div>
-                    <div class="php8-code phpcode">
-                        <?php highlight_php_trimmed(
-                                <<<'PHP'
-$components = parse_url('https://php.net/releases/8.4/en.php');
-
-var_dump($components['host']);
-// string(7) "php.net"
-PHP
-
-                        ); ?>
-                    </div>
-                </div>
-                <div class="php8-compare__arrow"></div>
-                <div class="php8-compare__block example-contents">
-                    <div class="php8-compare__label php8-compare__label_new">PHP 8.5</div>
-                    <div class="php8-code phpcode">
-                        <?php highlight_php_trimmed(
-                                <<<'PHP'
-use Uri\Rfc3986\Uri;
-
-$uri = new Uri('https://php.net/releases/8.5/en.php');
-
-var_dump($uri->getHost());
-// string(7) "php.net"
-PHP
-                        ); ?>
-                    </div>
-                </div>
-            </div>
-            <div class="php8-compare__content">
-                <?= message('uri_extension_description', $lang) ?>
             </div>
         </div>
 
@@ -254,18 +254,9 @@ PHP
                     <div class="php8-code phpcode">
                         <?php highlight_php_trimmed(
                                 <<<'PHP'
-$releases = [
-    '8.5' => '2025-11-20',
-    '8.4' => '2024-11-21',
-    '8.3' => '2023-11-23',
-    '8.2' => '2022-12-08',
-];
-
-$firstKey = array_key_first($releases);
-$newestDate = $releases[$firstKey];
-
-var_dump($newestDate);
-// string(10) "2025-11-20"
+$lastEvent = $events === []
+    ? null
+    : $events[array_key_last($events)];
 PHP
 
                         ); ?>
@@ -277,17 +268,7 @@ PHP
                     <div class="php8-code phpcode">
                         <?php highlight_php_trimmed(
                                 <<<'PHP'
-$releases = [
-    '8.5' => '2025-11-20',
-    '8.4' => '2024-11-21',
-    '8.3' => '2023-11-23',
-    '8.2' => '2022-12-08',
-];
-
-$newestDate = array_first($releases);
-
-var_dump($newestDate);
-// string(10) "2025-11-20"
+$lastEvent = array_last($events);
 PHP
                         ); ?>
                     </div>
