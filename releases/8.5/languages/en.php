@@ -1,10 +1,10 @@
 <?php
 
 return [
-    'common_header' => 'PHP 8.5 is a major update of the PHP language, with new features including the Pipe Operator, URI extension, and support for modifying properties while cloning.',
+    'common_header' => 'PHP 8.5 is a major update of the PHP language, with new features including the URI Extension, Pipe Operator, and support for modifying properties while cloning.',
     'documentation' => 'Doc',
     'main_title' => 'Released!',
-    'main_subtitle' => 'PHP 8.5 is a major update of the PHP language, with new features including the Pipe Operator, URI extension, and support for modifying properties while cloning.',
+    'main_subtitle' => 'PHP 8.5 is a major update of the PHP language, with new features including the URI Extension, Pipe Operator, and support for modifying properties while cloning.',
     'upgrade_now' => 'Upgrade to PHP 8.5',
 
     'pipe_operator_title' => 'Pipe Operator',
