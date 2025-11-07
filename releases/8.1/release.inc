@@ -7,6 +7,9 @@ use function releases\php81\message;
 if (!isset($lang)) {
     $lang = 'en';
 }
+if (!isset($documentation)) {
+    $documentation = $lang;
+}
 
 $_SERVER['BASE_PAGE'] = 'releases/8.1/' . $lang . '.php';
 
@@ -37,7 +40,8 @@ common_header(message('common_header', $lang));
     <div class="php8-compare">
         <h2 class="php8-h2" id="enumerations">
             <?= message('enumerations_title', $lang) ?>
-            <a class="php8-rfc" href="https://wiki.php.net/rfc/enumerations">RFC</a> <a class="php8-rfc" href="/manual/<?= $lang ?>/language.enumerations.php"><?= message('documentation', $lang) ?></a>
+            <a class="php8-rfc" href="https://wiki.php.net/rfc/enumerations">RFC</a>
+            <a class="php8-rfc" href="/manual/<?= $documentation ?>/language.enumerations.php"><?= message('documentation', $lang) ?></a>
         </h2>
         <div class="php8-compare__main">
             <div class="php8-compare__block example-contents">
@@ -84,7 +88,8 @@ PHP
     <div class="php8-compare">
         <h2 class="php8-h2" id="readonly_properties">
             <?= message('readonly_properties_title', $lang) ?>
-            <a class="php8-rfc" href="https://wiki.php.net/rfc/readonly_properties_v2">RFC</a> <a class="php8-rfc" href="/manual/<?= $lang ?>/language.oop5.properties.php#language.oop5.properties.readonly-properties"><?= message('documentation', $lang) ?></a>
+            <a class="php8-rfc" href="https://wiki.php.net/rfc/readonly_properties_v2">RFC</a>
+            <a class="php8-rfc" href="/manual/<?= $documentation ?>/language.oop5.properties.php#language.oop5.properties.readonly-properties"><?= message('documentation', $lang) ?></a>
         </h2>
         <div class="php8-compare__main">
             <div class="php8-compare__block example-contents">
@@ -95,15 +100,15 @@ PHP
 class BlogData
 {
     private Status $status;
-   
-    public function __construct(Status $status) 
+
+    public function __construct(Status $status)
     {
         $this->status = $status;
     }
-    
-    public function getStatus(): Status 
+
+    public function getStatus(): Status
     {
-        return $this->status;    
+        return $this->status;
     }
 }
 PHP
@@ -120,8 +125,8 @@ PHP
 class BlogData
 {
     public readonly Status $status;
-   
-    public function __construct(Status $status) 
+
+    public function __construct(Status $status)
     {
         $this->status = $status;
     }
@@ -139,7 +144,8 @@ PHP
     <div class="php8-compare">
         <h2 class="php8-h2" id="first_class_callable_syntax">
             <?= message('first_class_callable_syntax_title', $lang) ?>
-            <a class="php8-rfc" href="https://wiki.php.net/rfc/first_class_callable_syntax">RFC</a> <a class="php8-rfc" href="/manual/<?= $lang ?>/functions.first_class_callable_syntax.php"><?= message('documentation', $lang) ?></a>
+            <a class="php8-rfc" href="https://wiki.php.net/rfc/first_class_callable_syntax">RFC</a>
+            <a class="php8-rfc" href="/manual/<?= $documentation ?>/functions.first_class_callable_syntax.php"><?= message('documentation', $lang) ?></a>
         </h2>
         <div class="php8-compare__main">
             <div class="php8-compare__block example-contents">
@@ -184,10 +190,10 @@ PHP
                 <div class="php8-code phpcode">
                     <?php highlight_php_trimmed(
                         <<<'PHP'
-class Service 
+class Service
 {
     private Logger $logger;
- 
+
     public function __construct(
         ?Logger $logger = null,
     ) {
@@ -204,10 +210,10 @@ PHP
                 <div class="php8-code phpcode">
                     <?php highlight_php_trimmed(
                         <<<'PHP'
-class Service 
+class Service
 {
     private Logger $logger;
-    
+
     public function __construct(
         Logger $logger = new NullLogger(),
     ) {
@@ -229,7 +235,7 @@ PHP
                 <div class="php8-code phpcode">
                     <?php highlight_php_trimmed(
                         <<<'PHP'
-class User 
+class User
 {
     /**
      * @Assert\All({
@@ -249,7 +255,7 @@ PHP
                 <div class="php8-code phpcode">
                     <?php highlight_php_trimmed(
                         <<<'PHP'
-class User 
+class User
 {
     #[\Assert\All(
         new \Assert\NotNull,
@@ -267,7 +273,8 @@ PHP
     <div class="php8-compare">
         <h2 class="php8-h2" id="pure_intersection_types">
             <?= message('pure_intersection_types_title', $lang) ?>
-            <a class="php8-rfc" href="https://wiki.php.net/rfc/pure-intersection-types">RFC</a> <a class="php8-rfc" href="/manual/<?= $lang ?>/language.types.declarations.php#language.types.declarations.composite.intersection"><?= message('documentation', $lang) ?></a>
+            <a class="php8-rfc" href="https://wiki.php.net/rfc/pure-intersection-types">RFC</a>
+            <a class="php8-rfc" href="/manual/<?= $documentation ?>/language.types.declarations.php#language.types.declarations.composite.intersection"><?= message('documentation', $lang) ?></a>
         </h2>
         <div class="php8-compare__main">
             <div class="php8-compare__block example-contents">
@@ -317,7 +324,8 @@ PHP
     <div class="php8-compare">
         <h2 class="php8-h2" id="never_return_type">
             <?= message('never_return_type_title', $lang) ?>
-            <a class="php8-rfc" href="https://wiki.php.net/rfc/noreturn_type">RFC</a> <a class="php8-rfc" href="/manual/<?= $lang ?>/language.types.declarations.php#language.types.declarations.never"><?= message('documentation', $lang) ?></a>
+            <a class="php8-rfc" href="https://wiki.php.net/rfc/noreturn_type">RFC</a>
+            <a class="php8-rfc" href="/manual/<?= $documentation ?>/language.types.declarations.php#language.types.declarations.never"><?= message('documentation', $lang) ?></a>
         </h2>
         <div class="php8-compare__main">
             <div class="php8-compare__block example-contents">
@@ -329,7 +337,7 @@ function redirect(string $uri) {
     header('Location: ' . $uri);
     exit();
 }
- 
+
 function redirectToLoginPage() {
     redirect('/login');
     echo 'Hello'; // <- dead code
@@ -349,10 +357,10 @@ function redirect(string $uri): never {
     header('Location: ' . $uri);
     exit();
 }
- 
+
 function redirectToLoginPage(): never {
     redirect('/login');
-    echo 'Hello'; // <- dead code detected by static analysis 
+    echo 'Hello'; // <- dead code detected by static analysis
 }
 PHP
 
@@ -368,7 +376,8 @@ PHP
     <div class="php8-compare">
         <h2 class="php8-h2" id="final_class_constants">
             <?= message('final_class_constants_title', $lang) ?>
-            <a class="php8-rfc" href="https://wiki.php.net/rfc/final_class_const">RFC</a> <a class="php8-rfc" href="/manual/<?= $lang ?>/language.oop5.final.php#language.oop5.final.example.php81"><?= message('documentation', $lang) ?></a>
+            <a class="php8-rfc" href="https://wiki.php.net/rfc/final_class_const">RFC</a>
+            <a class="php8-rfc" href="/manual/<?= $documentation ?>/language.oop5.final.php#language.oop5.final.example.php81"><?= message('documentation', $lang) ?></a>
         </h2>
         <div class="php8-compare__main">
             <div class="php8-compare__block example-contents">
@@ -419,7 +428,8 @@ PHP
     <div class="php8-compare">
         <h2 class="php8-h2" id="explicit_octal_numeral_notation">
             <?= message('octal_numeral_notation_title', $lang) ?>
-            <a class="php8-rfc" href="https://wiki.php.net/rfc/explicit_octal_notation">RFC</a> <a class="php8-rfc" href="/manual/<?= $lang ?>/migration81.new-features.php#migration81.new-features.core.octal-literal-prefix"><?= message('documentation', $lang) ?></a>
+            <a class="php8-rfc" href="https://wiki.php.net/rfc/explicit_octal_notation">RFC</a>
+            <a class="php8-rfc" href="/manual/<?= $documentation ?>/migration81.new-features.php#migration81.new-features.core.octal-literal-prefix"><?= message('documentation', $lang) ?></a>
         </h2>
         <div class="php8-compare__main">
             <div class="php8-compare__block example-contents">
@@ -428,7 +438,7 @@ PHP
                     <?php highlight_php_trimmed(
                         <<<'PHP'
 016 === 16; // false because `016` is octal for `14` and it's confusing
-016 === 14; // true 
+016 === 14; // true
 PHP
 
                     );?>
@@ -441,7 +451,7 @@ PHP
                     <?php highlight_php_trimmed(
                         <<<'PHP'
 0o16 === 16; // false — not confusing with explicit notation
-0o16 === 14; // true 
+0o16 === 14; // true
 PHP
                     );?>
                 </div>
@@ -455,7 +465,8 @@ PHP
     <div class="php8-compare">
         <h2 class="php8-h2" id="fibers">
             <?= message('fibers_title', $lang) ?>
-            <a class="php8-rfc" href="https://wiki.php.net/rfc/fibers">RFC</a> <a class="php8-rfc" href="/manual/<?= $lang ?>/language.fibers.php"><?= message('documentation', $lang) ?></a>
+            <a class="php8-rfc" href="https://wiki.php.net/rfc/fibers">RFC</a>
+            <a class="php8-rfc" href="/manual/<?= $documentation ?>/language.fibers.php"><?= message('documentation', $lang) ?></a>
         </h2>
         <div class="php8-compare__main">
             <div class="php8-compare__block example-contents">
@@ -496,7 +507,8 @@ PHP
     <div class="php8-compare">
         <h2 class="php8-h2" id="array_unpacking_support_for_string_keyed_arrays">
             <?= message('array_unpacking_title', $lang) ?>
-            <a class="php8-rfc" href="https://wiki.php.net/rfc/array_unpacking_string_keys">RFC</a> <a class="php8-rfc" href="/manual/<?= $lang ?>/language.types.array.php#language.types.array.unpacking"><?= message('documentation', $lang) ?></a>
+            <a class="php8-rfc" href="https://wiki.php.net/rfc/array_unpacking_string_keys">RFC</a>
+            <a class="php8-rfc" href="/manual/<?= $documentation ?>/language.types.array.php#language.types.array.unpacking"><?= message('documentation', $lang) ?></a>
         </h2>
         <div class="php8-compare__main">
             <div class="php8-compare__block example-contents">
