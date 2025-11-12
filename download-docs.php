@@ -28,14 +28,11 @@ $SIDEBAR_DATA = '
     <div class="headline">Other formats</div>
     <div class="body">
         <p>
-            The manual is also available via *nix style man pages. To
-            install and use:
+            The manual is also available in other formats. For instructions on
+            building the documentation see the
+            <a href="https://doc.php.net/guide/local-setup.md">local environment
+            setup guide</a>.
         </p>
-        <ul class="toc">
-            <li>Install: <code>pear install doc.php.net/pman</code></li>
-            <li>Upgrade: <code>pear upgrade doc.php.net/pman</code></li>
-            <li>Example usage: <code>pman strlen</code></li>
-        </ul>
     </div>
 </div>
 ';
