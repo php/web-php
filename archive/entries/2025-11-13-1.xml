@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+  <title>PHP 8.5.0 RC 5 available for testing</title>
+  <id>https://www.php.net/archive/2025.php#2025-11-13-1</id>
+  <published>2025-11-13T22:39:02+00:00</published>
+  <updated>2025-11-13T22:39:02+00:00</updated>
+  <link href="https://www.php.net/index.php#2025-11-13-1" rel="alternate" type="text/html"/>
+  <link href="https://www.php.net/archive/2025.php#2025-11-13-1" rel="via" type="text/html"/>
+  <category term="frontpage" label="PHP.net frontpage news"/>
+  <content type="xhtml">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+     <p>
+         The PHP team is pleased to announce the fifth release candidate of PHP 8.5.0, RC 5.
+         This continues the PHP 8.5 release cycle, the rough outline of which is specified in the
+         <a href="https://wiki.php.net/todo/php85">PHP Wiki</a>.
+     </p>
+     <p>For source downloads of PHP 8.5.0 RC5, please visit the <a href="https://downloads.php.net/~daniels">download page</a>.</p>
+     <p>Please carefully test this version and report any issues found <a href="https://github.com/php/php-src/issues/new?template=bug_report.yml">on GitHub</a>.</p>
+     <p><strong>Please DO NOT use this version in production, it is a test version.</strong></p>
+     <p>For more information on the new features and other changes, you can read the <a href="https://github.com/php/php-src/blob/php-8.5.0RC5/NEWS">NEWS</a> file, or the <a href="https://github.com/php/php-src/blob/php-8.5.0RC5/UPGRADING">UPGRADING</a> file for a complete list of upgrading notes. These files can also be found in the release archive.</p>
+     <p>The next release will be the GA release of PHP 8.5.0, planned for 20 Nov 2025.</p>
+     <p>The signatures for the release can be found in the <a href="https://gist.github.com/DanielEScherzer/bc2eb22adfab2826894ea31853d57ce0">manifest</a> or on the <a href="https://www.php.net/release-candidates.php">Release Candidates page</a>.</p>
+     <p>Thank you for helping us make PHP better.</p>
+    </div>
+  </content>
+</entry>
