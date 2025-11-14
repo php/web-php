@@ -54,7 +54,7 @@ META
     ]);
 }
 
-function message($code, $language = 'en', array $interpolations = [])
+function message($code, $language = 'en', array $interpolations = []): string
 {
     $original = require __DIR__ . '/languages/en.php';
     if (($language !== 'en') && file_exists(__DIR__ . '/languages/' . $language . '.php')) {

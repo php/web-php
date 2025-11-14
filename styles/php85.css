@@ -1828,6 +1828,10 @@ header nav {
         padding: calc(var(--spacing) * 5);
         grid-template-columns:repeat(2, minmax(0, 1fr))
     }
+
+    .before-and-after-code.single {
+        grid-template-columns: minmax(0, 1fr)
+    }
 }
 
 .before-and-after-code:where(.dark,.dark *) {
@@ -1886,7 +1890,8 @@ header nav {
     }
 }
 
-.before-and-after-title-and-description p {
+.before-and-after-title-and-description p,
+.before-and-after-title-and-description ul {
     color: var(--color-gray-600);
     text-align: left;
 }
@@ -1898,12 +1903,14 @@ header nav {
     }
 }
 
-.before-and-after-title-and-description p:where(.dark,.dark *) {
+.before-and-after-title-and-description p:where(.dark,.dark *),
+.before-and-after-title-and-description ul:where(.dark,.dark *) {
     color: #fffc
 }
 
 @supports (color:color-mix(in lab, red, red)) {
-    .before-and-after-title-and-description p:where(.dark,.dark *) {
+    .before-and-after-title-and-description p:where(.dark,.dark *),
+    .before-and-after-title-and-description ul:where(.dark,.dark *) {
         color: color-mix(in oklab, var(--color-white) 80%, transparent)
     }
 }
@@ -1924,6 +1931,13 @@ header nav {
     padding-block: calc(var(--spacing) * .5);
     font-size: var(--text-sm);
     line-height: var(--tw-leading, var(--text-sm--line-height))
+}
+.features-col a code {
+    font-size: inherit;
+    line-height: inherit
+}
+.before-and-after-title-and-description h2 > code {
+    font-size: 87%;
 }
 
 .before-and-after-title-and-description code:where(.dark,.dark *) {
@@ -2173,28 +2187,36 @@ header nav {
     }
 }
 
-.release-notes ul {
+.release-notes ul,
+.before-and-after-title-and-description ul {
     margin-left: calc(var(--spacing) * 4);
     list-style-type: disc
 }
 
-:where(.release-notes ul>:not(:last-child)) {
+:where(.release-notes ul>:not(:last-child)),
+:where(.before-and-after-title-and-description ul>:not(:last-child)) {
     --tw-space-y-reverse: 0;
     margin-block-start: calc(calc(var(--spacing) * 4) * var(--tw-space-y-reverse));
     margin-block-end: calc(calc(var(--spacing) * 4) * calc(1 - var(--tw-space-y-reverse)))
 }
 
-.release-notes ul {
+.release-notes ul,
+.before-and-after-title-and-description ul {
     font-size: var(--text-sm);
     line-height: var(--tw-leading, var(--text-sm--line-height));
     overflow-wrap: break-word
 }
 
 @media (min-width: 64rem) {
-    .release-notes ul {
+    .release-notes ul,
+    .before-and-after-title-and-description ul {
         font-size: var(--text-base);
         line-height: var(--tw-leading, var(--text-base--line-height))
     }
+}
+
+.release-notes-grid div > ul:not(:last-of-type) {
+    margin-bottom: calc(var(--spacing) * 8);
 }
 
 .release-notes code {
@@ -2255,11 +2277,19 @@ header nav {
     color: var(--color-red-400)
 }
 
+.release-notes h3 {
+    margin-bottom: calc(var(--spacing) * 2);
+}
+
 .release-notes-grid-container {
     margin-inline: auto;
     margin-top: calc(var(--spacing) * -2);
     max-width: var(--container-7xl);
     padding-inline: calc(var(--spacing) * 4)
+}
+
+.release-notes-grid-container + .release-notes-grid-container {
+    margin-top: calc(var(--spacing) * 8)
 }
 
 @media (min-width: 64rem) {
@@ -2276,17 +2306,16 @@ header nav {
 
 .release-notes-grid div {
     border-radius: var(--radius-3xl);
-    background-color: #00000008
+    background-color: #00000008;
+    padding: calc(var(--spacing) * 6);
 }
 
-@supports (color:color-mix(in lab, red, red)) {
-    .release-notes-grid div {
-        background-color: color-mix(in oklab, var(--color-black) 3%, transparent)
-    }
+.release-notes-grid div.chart-table:where(.dark,.dark *) {
+    background-color: #ffffff59;
 }
 
-.release-notes-grid div {
-    padding: calc(var(--spacing) * 6)
+.release-notes-grid div:where(.dark,.dark *) {
+    background-color: #ffffff08
 }
 
 @media (min-width: 48rem) {
@@ -2295,19 +2324,41 @@ header nav {
     }
 }
 
-.release-notes-grid div:where(.dark,.dark *) {
-    background-color: #ffffff08
+.release-notes-grid div.chart-table {
+    margin: calc(var(--spacing) * 4) 0;
+    padding: calc(var(--spacing) * 4);
+    border-radius: var(--radius-xl);
 }
 
 @supports (color:color-mix(in lab, red, red)) {
-    .release-notes-grid div:where(.dark,.dark *) {
-        background-color: color-mix(in oklab, var(--color-white) 3%, transparent)
+    .release-notes-grid div {
+        background-color: color-mix(in oklab, var(--color-black) 3%, transparent);
     }
+    .release-notes-grid div:where(.dark,.dark *) {
+        background-color: color-mix(in oklab, var(--color-white) 3%, transparent);
+    }
+    .release-notes-grid div.chart-table:where(.dark,.dark *) {
+        background-color: color-mix(in oklab, var(--color-white) 80%, transparent);
+    }
+}
+
+.release-notes-grid div.center {
+    background-color: transparent;
+    border-radius: 0;
+    padding: 0;
+}
+
+.release-notes-grid div.center:where(.dark,.dark *) {
+    background-color: transparent;
 }
 
 @media (min-width: 64rem) {
     .release-notes-grid div:first-of-type {
         grid-column: span 6/span 6
+    }
+
+    .release-notes-grid div:only-child {
+        grid-column: span 12/span 12
     }
 }
 
