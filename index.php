@@ -82,33 +82,137 @@ $content .= '<p class="archive"><a href="/archive/">Older News Entries</a></p>';
 $content .= "</div>";
 
 $intro = <<<EOF
-  <div class="hero">
-    <img class="hero__logo" src="/images/logos/php-logo-white.svg" alt="php" width="240" height="120">
-    <p class="hero__text">A <strong>popular general-purpose scripting language</strong> that is especially suited to web development.<br />Fast, flexible and pragmatic, PHP powers everything from your blog to the most popular websites in the world.</p>
-    <div class="hero__actions">
-      <a href="/releases/8.4/index.php" class="hero__btn hero__btn--primary">What's new in 8.4</a>
-      <a href="/downloads.php" class="hero__btn hero__btn--secondary">Download</a>
+<div class="modern-hero">
+  <div class="hero-container">
+    <div class="hero-content">
+      <div class="hero-main-content">
+        <div class="hero-badge">
+          <span>The Web's Favorite Language</span>
+        </div>
+        <img src="/images/logos/php-logo-white.svg" alt="PHP" class="hero-logo" width="120" height="60">
+        <h1 class="hero-title">
+          <span class="title-line">Build</span>
+          <span class="title-line">the Web</span>
+          <span class="title-accent">with PHP</span>
+        </h1>
+        <p class="hero-description">
+          The popular general-purpose scripting language that powers everything from personal blogs to the most visited websites in the world. Fast, flexible, and pragmatic.
+        </p>
+
+        <div class="hero-stats">
+          <div class="stat-item">
+            <div class="stat-number">79%</div>
+            <div class="stat-label">of websites</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number">30+</div>
+            <div class="stat-label">years strong</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number">Active</div>
+            <div class="stat-label">development</div>
+          </div>
+        </div>
+
+        <div class="hero-actions">
+          <a href="/downloads.php" class="btn-primary">
+            <span>Download PHP</span>
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+              <path d="M10 12l-4-4h3V4h2v4h3l-4 4zm-7 4h14v2H3v-2z"/>
+            </svg>
+          </a>
+          <a href="/releases/8.4/index.php" class="btn-secondary">
+            <span>What's New in 8.4</span>
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+              <path d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-8.707l-3-3a1 1 0 00-1.414 1.414L10.586 9H7a1 1 0 100 2h3.586l-1.293 1.293a1 1 0 101.414 1.414l3-3a1 1 0 000-1.414z"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="hero-code-demo">
+            <div class="code-window">
+          <div class="code-header">
+            <div class="code-dots">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+            <div class="code-title">hello-world.php</div>
+            <div class="code-actions">
+              <button class="code-btn active" data-demo="basic">PDO</button>
+              <button class="code-btn" data-demo="modern">Attributes</button>
+              <button class="code-btn" data-demo="framework">Arrays</button>
+            </div>
+          </div>
+          <div class="code-content">
+            <div class="code-demo active" id="basic-demo">
+              <pre><code><span class="token-tag">&lt;?php</span>
+<span class="token-comment">// PDO Database Connection</span>
+<span class="token-variable">\$pdo</span> = <span class="token-keyword">new</span> <span class="token-class">PDO</span>(
+    <span class="token-string">'mysql:host=localhost;dbname=app'</span>,
+    <span class="token-variable">\$username</span>, <span class="token-variable">\$password</span>
+);
+
+<span class="token-comment">// Secure prepared statements</span>
+<span class="token-variable">\$stmt</span> = <span class="token-variable">\$pdo</span>-><span class="token-function">prepare</span>(
+    <span class="token-string">'SELECT * FROM users WHERE age > ?'</span>
+);
+<span class="token-variable">\$stmt</span>-><span class="token-function">execute</span>([<span class="token-number">18</span>]);
+<span class="token-variable">\$users</span> = <span class="token-variable">\$stmt</span>-><span class="token-function">fetchAll</span>();
+</code></pre>
+            </div>
+
+            <div class="code-demo" id="modern-demo">
+              <pre><code><span class="token-tag">&lt;?php</span>
+<span class="token-comment">// PHP 8+ Attributes & Features</span>
+<span class="token-attribute">#[Required]</span>
+<span class="token-attribute">#[Validate('email')]</span>
+<span class="token-keyword">readonly</span> <span class="token-keyword">class</span> <span class="token-class">User</span> {
+    <span class="token-keyword">public</span> <span class="token-keyword">function</span> <span class="token-function">__construct</span>(
+        <span class="token-keyword">public</span> <span class="token-keyword">string</span> <span class="token-variable">\$email</span>,
+        <span class="token-keyword">public</span> <span class="token-keyword">?DateTime</span> <span class="token-variable">\$lastLogin</span> = <span class="token-keyword">null</span>
+    ) {}
+}
+
+<span class="token-comment">// Match expressions & null coalescing</span>
+<span class="token-variable">\$status</span> = <span class="token-keyword">match</span>(<span class="token-variable">\$user</span>-><span class="token-property">role</span>) {
+    <span class="token-string">'admin'</span> => <span class="token-string">'Administrator'</span>,
+    <span class="token-string">'user'</span> => <span class="token-string">'Member'</span>,
+    <span class="token-keyword">default</span> => <span class="token-string">'Guest'</span>
+};
+</code></pre>
+            </div>
+
+            <div class="code-demo" id="framework-demo">
+              <pre><code><span class="token-tag">&lt;?php</span>
+<span class="token-comment">// Powerful Array Functions</span>
+<span class="token-variable">\$products</span> = [
+    [<span class="token-string">'name'</span> => <span class="token-string">'Laptop'</span>, <span class="token-string">'price'</span> => <span class="token-number">999</span>, <span class="token-string">'category'</span> => <span class="token-string">'tech'</span>],
+    [<span class="token-string">'name'</span> => <span class="token-string">'Phone'</span>, <span class="token-string">'price'</span> => <span class="token-number">599</span>, <span class="token-string">'category'</span> => <span class="token-string">'tech'</span>],
+    [<span class="token-string">'name'</span> => <span class="token-string">'Book'</span>, <span class="token-string">'price'</span> => <span class="token-number">29</span>, <span class="token-string">'category'</span> => <span class="token-string">'books'</span>]
+];
+
+<span class="token-comment">// Filter, map, reduce operations</span>
+<span class="token-variable">\$techProducts</span> = <span class="token-function">array_filter</span>(<span class="token-variable">\$products</span>,
+    <span class="token-keyword">fn</span>(<span class="token-variable">\$p</span>) => <span class="token-variable">\$p</span>[<span class="token-string">'category'</span>] === <span class="token-string">'tech'</span>
+);
+
+<span class="token-variable">\$total</span> = <span class="token-function">array_reduce</span>(<span class="token-variable">\$products</span>,
+    <span class="token-keyword">fn</span>(<span class="token-variable">\$sum</span>, <span class="token-variable">\$p</span>) => <span class="token-variable">\$sum</span> + <span class="token-variable">\$p</span>[<span class="token-string">'price'</span>], <span class="token-number">0</span>
+);
+</code></pre>
+            </div>
+          </div>
+        </div>
+      </div>
+
+        </div>
+      </div>
     </div>
 EOF;
 
-$intro .= "<ul class='hero__versions'>\n";
-$active_branches = get_active_branches();
-krsort($active_branches);
-foreach ($active_branches as $major => $releases) {
-    krsort($releases);
-    foreach ((array)$releases as $release) {
-        $version = $release['version'];
-        [$major, $minor, $_] = explode('.', $version);
-        $intro .= "
-            <li class='hero__version'><a class='hero__version-link' href='/downloads.php?version=$major.$minor'>$version</a> &middot; <a class='notes' href='/ChangeLog-$major.php#$version'>Changelog</a> &middot; <a class='notes' href='/migration$major$minor'>Upgrading</a></li>\n";
-    }
-}
-$intro .= "</ul>\n";
-$intro .= <<<EOF
-  </div>
-EOF;
-
-site_header(NULL,
+site_header(null,
     [
         'current' => 'home',
         'headtags' => [
@@ -134,6 +238,7 @@ site_header(NULL,
 
         ],
         'css' => ['home.css'],
+        'js_files' => ['js/home-tabs.js'],
         'intro' => $intro,
     ],
 );
