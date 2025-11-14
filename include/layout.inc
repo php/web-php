@@ -72,6 +72,148 @@ function highlight_php_trimmed($code, $return = false)
     return null;
 }
 
+function get_rfc_link(string $namedLink): string
+{
+    // Use 'title|link' string since multiple links may have the same title
+    preg_match('!^((.+)\|)?(.+)$!', $namedLink, $matches);
+    $link = $matches[3];
+    $title = $matches[2] ?: 'Link';
+
+    return '<a class="php8-rfc" href="' . $link . '">' . $title . '</a>';
+}
+
+function feature_header(string $id, string $title, array $links): string
+{
+    $links = array_map(get_rfc_link(...), $links);
+    $linksHtml = implode("\n", $links);
+
+    return <<<HTML
+        <h2 class="php8-h2" id="$id">
+            $title
+            $linksHtml
+        </h2>
+    HTML;
+}
+
+function get_code_block(
+    string $beforeCode,
+    string $afterCode,
+    string $version,
+    string $previousVersion,
+    bool $highlightCode,
+): string {
+    $alignClass = '';
+    $noBeforeCode = $beforeCode === '';
+
+    if (substr_count($beforeCode, "\n") - substr_count($afterCode, "\n") > 12) {
+        // if new code is substantially shorter, align to top of code block
+        $alignClass = 'align-start';
+    }
+
+    if ($highlightCode) {
+        $beforeCode = highlight_php_trimmed($beforeCode, true);
+        $afterCode = highlight_php_trimmed($afterCode, true);
+    } else {
+        $beforeCode = "<code>$beforeCode</code>";
+        $afterCode = "<code>$afterCode</code>";
+    }
+
+    $version = htmlentities($version);
+    $previousVersion = htmlentities($previousVersion);
+
+    if ($noBeforeCode) {
+        $codeMarkup = <<<HTML
+            <div class="example-contents example-contents-full">
+                <div class="php8-compare__label php8-compare__label_new">$version</div>
+                <div class="php8-code phpcode">$afterCode</div>
+            </div>
+        HTML;
+    } else {
+        $codeMarkup = <<<HTML
+            <div class="php8-compare__block example-contents">
+                <div class="php8-compare__label">$previousVersion</div>
+                <div class="php8-code phpcode">$beforeCode</div>
+            </div>
+            <div class="php8-compare__arrow"></div>
+            <div class="php8-compare__block example-contents">
+                <div class="php8-compare__label php8-compare__label_new">$version</div>
+                <div class="php8-code $alignClass phpcode">
+                    $afterCode
+                </div>
+            </div>
+        HTML;
+    }
+
+    return <<<HTML
+        <div class="php8-compare__main">
+            $codeMarkup
+        </div>
+    HTML;
+}
+
+function feature_comparison(
+    string $id,
+    string $title,
+    string $description,
+    string $version,
+    string $previousVersion,
+    string $beforeCode,
+    string $afterCode,
+    bool $highlightCode = true,
+    array $links = [],
+    string $beforeCode2 = '',
+    string $afterCode2 = '',
+): string {
+    $header = feature_header($id, $title, $links);
+    $contentHtml = '';
+    $codeBlock = get_code_block($beforeCode, $afterCode, $version, $previousVersion, $highlightCode);
+    $code2Block = '';
+    $contentClass = 'php8-compare__content';
+
+    if ($afterCode2 !== '') {
+        $code2Block = get_code_block($beforeCode2, $afterCode2, $version, $previousVersion, $highlightCode);
+        $contentClass .= ' php8-compare__content--spaced';
+    }
+
+    if ($description !== '') {
+        $contentHtml = <<<HTML
+            <div class="$contentClass">$description</div>
+        HTML;
+    }
+
+    return <<<HTML
+        <div class="php8-compare">
+            $header
+            $codeBlock
+            $contentHtml
+            $code2Block
+        </div>
+    HTML;
+}
+
+function feature_comparisons(array $comparisons, string $version, string $previousVersion): string
+{
+    $html = '<section class="php8-section center">' . "\n";
+
+    foreach ($comparisons as $feature) {
+        $html .= feature_comparison(
+            id: $feature['id'],
+            title: $feature['title'],
+            description: $feature['description'] ?? '',
+            version: $version,
+            previousVersion: $previousVersion,
+            beforeCode: $feature['before'] ?? '',
+            afterCode: $feature['after'],
+            highlightCode: $feature['highlightCode'] ?? true,
+            links: $feature['links'] ?? [],
+            beforeCode2: $feature['before2'] ?? '',
+            afterCode2: $feature['after2'] ?? '',
+        ) . "\n";
+    }
+
+    return $html . "\n" . '</section>';
+}
+
 // Resize the image using the output of make_image()
 function resize_image($img, $width = 1, $height = 1)
 {
@@ -158,7 +300,7 @@ function make_submit($file, $alt = false, $align = false, $extras = false,
     return '<input type="image"' . substr($img, 4);
 }
 
-// Return a hiperlink to something within the site
+// Return a hyperlink to something within the site
 function make_link(string $url, string $linktext = ''): string
 {
     return sprintf("<a href=\"%s\">%s</a>", $url, $linktext ?: $url);
