@@ -59,12 +59,18 @@ function language_chooser(string $currentLang): void {
 ';
 }
 
-function message($code, $language = 'en')
+function message($code, $language = 'en', array $interpolations = [])
 {
     $original = require __DIR__ . '/languages/en.php';
     if (($language !== 'en') && file_exists(__DIR__ . '/languages/' . $language . '.php')) {
         $translation = require __DIR__ . '/languages/' . $language . '.php';
     }
 
-    return $translation[$code] ?? $original[$code] ?? $code;
+    $message = $translation[$code] ?? $original[$code] ?? $code;
+
+    foreach ($interpolations as $name => $value) {
+        $message = str_replace("{{$name}}", $value, $message);
+    }
+
+    return $message;
 }

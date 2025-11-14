@@ -254,34 +254,9 @@ PHP
                     <div class="php8-code phpcode">
                         <?php highlight_php_trimmed(
                                 <<<'PHP'
-final class Stopwatch
-{
-    private int $start;
-    public private(set) array $laps = [];
-
-    public function __construct()
-    {
-        $this->start = hrtime(true);
-    }
-
-    public function stopLap()
-    {
-        $fromStart = hrtime(true) - $this->start;
-        $lastLap = $this->laps !== []
-            ? $this->laps[array_key_last($this->laps)]
-            : 0;
-        $lapDuration = $fromStart - $lastLap;
-
-        $this->laps[] = $fromStart;
-
-        return $lapDuration;
-    }
-}
-
-$watch = new Stopwatch();
-for ($i = 1; $i < 5; $i++) {
-    printf("Lap #%d took %dns\n", $i, $watch->stopLap());
-}
+$lastEvent = $events === []
+    ? null
+    : $events[array_key_last($events)];
 PHP
 
                         ); ?>
@@ -293,32 +268,7 @@ PHP
                     <div class="php8-code phpcode">
                         <?php highlight_php_trimmed(
                                 <<<'PHP'
-final class Stopwatch
-{
-    private int $start;
-    public private(set) array $laps = [];
-
-    public function __construct()
-    {
-        $this->start = hrtime(true);
-    }
-
-    public function stopLap()
-    {
-        $fromStart = hrtime(true) - $this->start;
-        $lastLap = array_last($this->laps) ?? 0;
-        $lapDuration = $fromStart - $lastLap;
-
-        $this->laps[] = $fromStart;
-
-        return $lapDuration;
-    }
-}
-
-$watch = new Stopwatch();
-for ($i = 1; $i < 5; $i++) {
-    printf("Lap #%d took %dns\n", $i, $watch->stopLap());
-}
+$lastEvent = array_last($events);
 PHP
                         ); ?>
                     </div>
@@ -441,18 +391,24 @@ PHP
             <h2 class="php8-h2" id="other_new_things"><?= message('new_classes_title', $lang) ?></h2>
             <div class="php8-compare__content php8-compare__content--block">
                 <ul>
-                    <li>Fatal Errors (such as an exceeded maximum execution time) now include a backtrace.</li>
-                    <li>Attributes can now target constants.</li>
-                    <li><a href="/manual/<?= $documentation ?>/class.override.php"><code>#[\Override]</code></a> attribute can now be applied to properties.</li>
-                    <li><a href="/manual/<?= $documentation ?>/class.deprecated.php"><code>#[\Deprecated]</code></a> attribute can be used on traits and constants.</li>
-                    <li>Static properties now support asymmetric visibility.</li>
-                    <li>Properties can be marked as <code>final</code> using constructor property promotion.</li>
-                    <li>Added <code>Closure::getCurrent()</code> method to simplify recursion in anonymous functions.</li>
-                    <li><code>setcookie()</code> and <code>setrawcookie()</code> now support the "partitioned" key.</li>
-                    <li>New <a href="/manual/<?= $documentation ?>/function.get-error-handler.php"><code>get_error_handler()</code></a> and <a href="/manual/<?= $documentation ?>/function.get-exception-handler.php"><code>get_exception_handler()</code></a> functions are available.</li>
-                    <li>New <code>Dom\Element::getElementsByClassName()</code> and <code>Dom\Element::insertAdjacentHTML()</code> methods are available.</li>
-                    <li>Added <code>grapheme_levenshtein()</code> function.</li>
-                    <li>New <code>#[\DelayedTargetValidation]</code> attribute can be used to suppress compile-time errors from core and extension attributes that are used on invalid targets.</li>
+                    <li><?= message('fatal_error_backtrace', $lang) ?></li>
+                    <li><?= message('const_attribute_target', $lang) ?></li>
+                    <li><?= message('override_attr_properties', $lang, ['<a href="/manual/' . $documentation . '/class.override.php"><code>#[\Override]</code></a>']) ?></li>
+                    <li><?= message('deprecated_traits_constants', $lang, ['<a href="/manual/' . $documentation . '/class.deprecated.php"><code>#[\Deprecated]</code></a>']) ?></li>
+                    <li><?= message('asymmetric_static_properties', $lang) ?></li>
+                    <li><?= message('final_promoted_properties', $lang) ?></li>
+                    <li><?= message('closure_getCurrent', $lang) ?></li>
+                    <li><?= message('partitioned_cookies', $lang) ?></li>
+                    <li><?= message('get_set_error_handler', $lang, [
+                        '<a href="/manual/' . $documentation . '/function.get-error-handler.php"><code>get_error_handler()</code></a>',
+                        '<a href="/manual/' . $documentation . '/function.get-exception-handler.php"><code>get_exception_handler()</code></a>',
+                    ]) ?></li>
+                    <li><?= message('new_dom_element_methods', $lang, [
+                        '<code>Dom\Element::getElementsByClassName()</code>',
+                        '<code>Dom\Element::insertAdjacentHTML()</code>',
+                    ]) ?></li>
+                    <li><?= message('grapheme_levenshtein', $lang, ['<code>grapheme_levenshtein()</code>']) ?></li>
+                    <li><?= message('delayed_target_validation', $lang, ['<code>#[\DelayedTargetValidation]</code>']) ?></li>
                 </ul>
             </div>
         </div>
@@ -461,16 +417,21 @@ PHP
             <h2 class="php8-h2" id="deprecations_and_bc_breaks"><?= message('bc_title', $lang) ?></h2>
             <div class="php8-compare__content">
                 <ul>
-                    <li>The backtick operator as an alias for <code>shell_exec()</code> has been deprecated.</li>
-                    <li>Non-canonical cast names <code>(boolean)</code>, <code>(integer)</code>, <code>(double)</code>, and <code>(binary)</code> have been deprecated. Use <code>(bool)</code>, <code>(int)</code>, <code>(float)</code>, and <code>(string)</code> instead, respectively.</li>
-                    <li>The <code>disable_classes</code> INI setting has been removed as it causes various engine assumptions to be broken.</li>
-                    <li>Returning a non-string from a user output handler is deprecated.</li>
-                    <li>Terminating case statements with a semicolon instead of a colon has been deprecated.</li>
-                    <li>Using <code>null</code> as an array offset or when calling <code>array_key_exists()</code> is now deprecated. Use an empty string instead.</li>
-                    <li>It is no longer possible to use "array" and "callable" as class alias names in <code>class_alias()</code>.</li>
-                    <li>The <code>__sleep()</code> and <code>__wakeup()</code> magic methods have been soft-deprecated. The <code>__serialize()</code> and <code>__unserialize()</code> magic methods should be used instead.</li>
-                    <li>A warning is now emitted when casting <code>NAN</code> to other types.</li>
-                    <li>A warning is now emitted when casting floats (or strings that look like floats) to <code>int</code> if they cannot be represented as one.</li>
+                    <li><?= message('bc_backtick_operator', $lang, ['<code>shell_exec()</code>']) ?></li>
+                    <li><?= message('bc_non_canonical_cast_names', $lang) ?></li>
+                    <li><?= message('bc_disable_classes', $lang, ['<code>disable_classes</code>']) ?></li>
+                    <li><?= message('bc_semicolon_after_case', $lang) ?></li>
+                    <li><?= message('bc_null_array_offset', $lang, ['<code>array_key_exists()</code>']) ?></li>
+                    <li><?= message('bc_class_alias_names', $lang, ['<code>class_alias()</code>']) ?></li>
+                    <li><?= message('bc_sleep_wakeup', $lang, [
+                        '<code>__sleep()</code>',
+                        '<code>__wakeup()</code>',
+                        '<code>__serialize()</code>',
+                        '<code>__unserialize()</code>',
+                    ]) ?></li>
+                    <li><?= message('bc_casting_nan', $lang, ['<code>NAN</code>']) ?></li>
+                    <li><?= message('bc_non_array_destructuring', $lang, ['<code>[]</code>', '<code>list()</code>']) ?></li>
+                    <li><?= message('bc_casting_non_int_floats', $lang) ?></li>
                 </ul>
             </div>
         </div>
