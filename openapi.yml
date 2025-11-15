@@ -92,9 +92,9 @@ paths:
                                             type: string
                                             format: date-time
 
-    "/release-candidates.php":
+    "/pre-release-builds.php":
         get:
-            summary: "Currently RC versions of PHP."
+            summary: "Currently Pre-release versions of PHP."
             parameters:
                 - in: query
                   name: format

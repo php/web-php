@@ -19,6 +19,7 @@ include_once __DIR__ . '/include/errors.inc';
 // Get URI for this request, strip leading slash
 // See langchooser.inc for more info on STRIPPED_URI
 $URI = substr($_SERVER['STRIPPED_URI'], 1);
+$queryString = $_SERVER['QUERY_STRING'] ?? '';
 
 // ============================================================================
 // Mozilla Search Sidebar plugin resource file handling (need to be mirror
@@ -538,6 +539,7 @@ $uri_aliases = [
     # Removed pages
     "tips.php" => "urlhowto",
     "tips" => "urlhowto",
+    "release-candidates.php" => "pre-release-builds",
 ];
 
 $external_redirects = [
@@ -677,7 +679,11 @@ if (isset($uri_aliases[$URI])) {
     $URI = $uri_aliases[$URI];
     /* If it was a page alias, redirect right away */
     if (file_exists($_SERVER['DOCUMENT_ROOT'] . "/$URI.php")) {
-        mirror_redirect("/$URI.php");
+        $target = "/$URI.php";
+        if ($queryString !== '') {
+            $target .= (strpos($target, '?') === false ? '?' : '&') . $queryString;
+        }
+        mirror_redirect($target);
     }
 }
 

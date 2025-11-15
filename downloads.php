@@ -20,7 +20,7 @@ $SIDEBAR_DATA = '
 <p class="panel"><a href="download-docs.php">Documentation Download</a></p>
 <p class="panel"><a href="download-logos.php">PHP Logos</a></p>
 
-<p class="panel"><a href="/release-candidates.php">Release Candidates</a></p>
+<p class="panel"><a href="/pre-release-builds.php">Pre-Release Builds</a></p>
 <p class="panel"><a href="/git.php">Development Sources (git)</a></p>
 <p class="panel"><a href="/releases/">Old Archives</a></p>
 ';
