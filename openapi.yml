@@ -94,7 +94,7 @@ paths:
 
     "/pre-release-builds.php":
         get:
-            summary: "Currently Pre-release versions of PHP."
+            summary: "Current pre-release versions of PHP."
             parameters:
                 - in: query
                   name: format
