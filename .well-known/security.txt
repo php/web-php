@@ -1,31 +1,30 @@
 -----BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA512
+Hash: SHA256
 
 Contact: https://github.com/php/php-src/security/advisories/new
 Contact: mailto:security@php.net
-Expires: 2025-11-28T11:59:59.999Z
+Expires: 2026-11-28T11:59:59.999Z
 Preferred-Languages: en
 Canonical: https://www.php.net/.well-known/security.txt
 Policy: https://github.com/php/policies/blob/main/security-classification.rst
 
-# Signed by Pierrick Charron <pierrick@php.net> on 2024-11-21.
+# Signed by Daniel Scherzer <daniels@php.net> on 2025-11-16.
 
 # For instructions on how to update this file, read
 # <https://github.com/php/policies/blob/main/security-policies.rst>
 -----BEGIN PGP SIGNATURE-----
 
-iQJFBAEBCgAvFiEEEZjAEXWTSXpexcGZKGrx+Yl0adwFAmc/HGgRHHBpZXJyaWNr
-QHBocC5uZXQACgkQKGrx+Yl0ady6kg/5AdN6I24sv70MLUP8Bkba4uaBK7G1rZaM
-7EqewwAcOquwArMHG9kTjgN/fC7wFZgOMGLC6dyRXDvhVXZZNCGOEJBrslXTTYnv
-0o5m8gMyOK2R9qLLZ0ANCsDLMgreULS9pZriMnULNF/Do59/G/kXmppZAaFtahP4
-1ayhuwXGblPUs2XVQz8vLQqU9B/Bp3BcLJo4AROvo7+CW9yKhV9caUNZ0m4CI5o0
-Scs8I3hh3JEyu3qLADg33wTD9XtFo9qB9L6z6KTp6VN4CAeSOqwhB2RV9c2aHjx1
-qCmS1jZVJolLqhrAQ84x6n3JM7MyOJSbiGbIW8aY0E29JR70w53B1BFfvMmUUc4M
-jgiLqiUXuChQq3lmhDwLClPBfNiAe7uulQToVtufnsULOhbcWhvn/1SHUYA+jlbb
-cJxUj/LiGmDmLEy/h/IzsUOhjLTfC/WBeMCMd6ZaE/c2x6+i3tWlApTudE08CI29
-LaPYVec2SVX1QlyAFuOZxqpJhwdCiLcY6Xz853oxJKJVH/pvX/qXLvBR3Qyiw7f3
-X/lhYFckMfxojE4pAXH3w/Y/GdFMCMWhjCW4D+C41zdXoJTon/W09GDMuKB7F0rn
-N3935FNLZha4k8ludI9iJ4G/jDWYLKPV5CbJo6QW5HWAnJEOinp5H5ZKBQz6q2wk
-p/uwDS/Fp/g=
-=fZhl
+iQIzBAEBCAAdFiEE2VwDvHAr6VFTRK4zdORLyQZ3AaUFAmkaix4ACgkQdORLyQZ3
+AaVMzg/+Pf8BQ40Jo2BVBhz85iLyKtVQrQl7lFyOA+w8ek7zUb0+QA0jtFfGBYkg
+gnMvDMlVZK45VupmSQQQFMH3FF7KPoDaqDpgb43cLODDBEIqf7ZQaRLm9hqx7ABX
+a6DqiwMOuwViH8Neu/2BOGthfmUu2c7HghRMhuEW7CBJSRAO+uTlwS50WI/D6olN
+Uk2Foh6S2PB96xP3do08go7AFYNuU/YM+n3cCWKiKpyHo0xQyMR9E1jpOIdwpptz
+u7e3z195wXz+2oCrMvak0u6zV0RmFxg9B/AYujl4boqmNRrd5fWoF11ku2KtllFE
+MrGYUNxfJYfaLNtB44exC1CTFSMxsQi2T8Xk7Rd+gcT1WLpD7/CF/1Qqz+I3BQ9h
+xaeBgaHEBSNpDGt7uelW66bvvin8UeQ4ULwWio3gq4OwvqWh3EGN+kfazqxJQKpV
+EfF25BG/cUubGzsR12jfxg/9Dav8QIuSbEKx0+DGrxQGXctn0Cqc1YSTY8HgR1JK
+XndS/j/ZCF9dZb8eqvfkbtxvpx89CDvfg6rPXpQm3dHadDhVAFXOWuXOCa9i1dAv
+usAKHx1lAwsWegYc+GIg9/jbZg2zMvxLWOBBYHYGqAW7uv0DQL8NBVfHJhLTGLXC
+lt2zVD1cgLMB+0zazdVlv5+JjgC3epqY3ORYux64VtjfrN0NPjY=
+=d0Ww
 -----END PGP SIGNATURE-----
