@@ -12,7 +12,7 @@ return [
     'documentation' => 'Документация',
     'released' => 'Выпущен 20 ноября 2025',
     'key_features' => 'Основные функции PHP 8.5',
-    'key_features_description' => '<p>PHP 8.5 выпущен, он стал <strong>лучше</strong>, <strong>быстрее</strong>, <strong>доступнее для разработчиков</strong>.</p>',
+    'key_features_description' => '<p><strong>Быстрее</strong>, <strong>лучше</strong>, <strong>доступнее для разработчиков</strong>.</p>',
 
     'features_pipe_operator_title' => 'Оператор Pipe',
     'features_pipe_operator_description' => '<p>В PHP 8.5 добавлен оператор <code>|></code> для связывания вызываемых объектов слева направо, что позволяет передавать значения через несколько функций.</p>',

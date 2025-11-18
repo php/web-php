@@ -12,7 +12,7 @@ return [
     'documentation' => 'Doc',
     'released' => 'Released Nov 20, 2025',
     'key_features' => 'Key Features in PHP 8.5',
-    'key_features_description' => '<p>PHP 8.5 is here, <strong>faster</strong>, <strong>cleaner</strong>, and <strong>built for developers</strong>.</p>',
+    'key_features_description' => '<p><strong>Faster</strong>, <strong>cleaner</strong>, and <strong>built for developers</strong>.</p>',
 
     'features_pipe_operator_title' => 'Pipe Operator',
     'features_pipe_operator_description' => '<p>PHP 8.5 introduces the <code>|></code> operator to chain callables left-to-right, passing values smoothly through multiple functions natively.</p>',
