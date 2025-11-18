@@ -53,6 +53,22 @@
     position: relative;
 }
 
+:not(pre) > code[class*=language-], pre[class*=language-] {
+    background: transparent;
+}
+
+code[class*=language-], pre[class*=language-] {
+    text-shadow: none;
+}
+
+.language-css .token.string, .style .token.string, .token.entity, .token.operator, .token.url {
+    background: transparent;
+}
+
+.js-copy-code {
+
+}
+
 @layer properties {
     @supports (((-webkit-hyphens:none)) and (not (margin-trim:inline))) or ((-moz-orient:inline) and (not (color:rgb(from red r g b)))) {
         *, :before, :after, ::backdrop {
@@ -1061,7 +1077,7 @@ header nav {
     --tw-gradient-stops: var(--tw-gradient-via-stops, var(--tw-gradient-position), var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-to) var(--tw-gradient-to-position))
 }
 
-.hero video {
+.hero .hero-bg {
     pointer-events: none;
     top: calc(var(--spacing) * 0);
     z-index: calc(10 * -1);

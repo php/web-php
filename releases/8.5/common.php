@@ -24,10 +24,11 @@ function common_header(string $description): void {
     }
 
     \site_header("PHP 8.5 Release Announcement", [
-        'current' => 'php85 dark',
-        'css' => ['php85.css'],
-        'js_files' => ['js/php85.js'],
+        'current' => 'php85',
+        'css' => ['prism.css', 'php85.css'],
+        'js_files' => ['js/php85.js', 'js/ext/prism.js'],
         'language_switcher' => $languages,
+        'theme_switcher' => true,
         'meta_tags' => <<<META
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:site" content="@official_php" />

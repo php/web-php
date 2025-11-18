@@ -31,7 +31,7 @@ return [
     'pipe_operator_description' => '<p>Оператор Pipe позволяет связывать вызовы функций в цепочку без использования промежуточных переменных. Позволяет заменить множество «вложенных вызовов» цепочкой.</p><p>Узнайте больше об этой функции в <a href="https://thephp.foundation/blog/2025/07/11/php-85-adds-pipe-operator/" target="_blank" rel="noopener noreferrer">блоге PHP Foundation</a>.</p>',
 
     'array_first_last_title' => 'Функции array_first() и array_last()',
-    'array_first_last_description' => '<p>В PHP 8.5 добавлены две новые функции для извлечения первого и последнего значения массива, они дополняют функции <code>array_key_first()</code> и <code>array_key_last()</code>.</p>',
+    'array_first_last_description' => '<p>Функции <code>array_first()</code> и <code>array_last()</code> возвращают первое или последнее значение массива, соответственно. Если массив пустой, возвращается <code>null</code> (что упрощает работу с оператором <code>??</code>).</p>',
 
     'clone_with_title' => 'Clone With',
     'clone_with_description' => '<p>Теперь можно обновлять свойства во время клонирования объектов, передавая ассоциативный массив в функцию <code>clone()</code>. Это позволит напрямую поддерживать паттерн «with-er» для классов <code>readonly</code>.</p>',

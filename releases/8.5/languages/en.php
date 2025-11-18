@@ -31,7 +31,7 @@ return [
     'pipe_operator_description' => '<p>The pipe operator allows chaining function calls together without dealing with intermediary variables. This enables replacing many "nested calls" with a chain that can be read forwards, rather than inside-out.</p><p>Learn more about the backstory of this feature in <a href="https://thephp.foundation/blog/2025/07/11/php-85-adds-pipe-operator/" target="_blank" rel="noopener noreferrer">The PHP Foundation’s blog</a>.</p>',
 
     'array_first_last_title' => 'array_first() and array_last() functions',
-    'array_first_last_description' => '<p>PHP 8.5 adds two new functions for retrieving the first and last values of an array. These functions complement the <code>array_key_first()</code> and <code>array_key_last()</code> functions.</p>',
+    'array_first_last_description' => '<p>The <code>array_first()</code> and <code>array_last()</code> functions return the first or last value of an array, respectively. If the array is empty, <code>null</code> is returned (making it easy to compose with the <code>??</code> operator).</p>',
 
     'clone_with_title' => 'Clone With',
     'clone_with_description' => '<p>It is now possible to update properties during object cloning by passing an associative array to the <code>clone()</code> function. This enables straightforward support of the "with-er" pattern for <code>readonly</code> classes.</p>',

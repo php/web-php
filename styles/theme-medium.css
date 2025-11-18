@@ -1114,8 +1114,7 @@ div.elephpants img:focus {
 }
 
 .navbar__languages {
-    border-color: #94a3ed;
-    border-width: 1px;
+    border: 1px solid #6a78be;
     outline: none;
     color: hsla(230, 72%, 84%);
     opacity: 1;
@@ -1124,4 +1123,26 @@ div.elephpants img:focus {
     background-color: #404f82;
     border-radius: 8px;
     margin-right: 12px;
+}
+
+.navbar__languages:hover {
+    border-color: #94a3ed;
+}
+
+.navbar__theme {
+    margin-left: 12px;
+    border: 1px solid #6a78be;
+    color: hsla(230, 72%, 84%);
+    background-color: #404f82;
+    border-radius: 8px;
+    margin-right: 12px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.navbar__theme:hover {
+    border-color: #94a3ed;
 }
