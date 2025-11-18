@@ -267,7 +267,8 @@ $slug = strtolower(
     )
 );
 
-var_dump($slug); // string(15) "php-85-released"
+var_dump($slug);
+// string(15) "php-85-released"
                         </code>
                     </pre>
                 </div>
@@ -290,7 +291,8 @@ $slug = $title
     |> (fn($str) => str_replace('.', '', $str))
     |> strtolower(...);
 
-var_dump($slug); // string(15) "php-85-released"
+var_dump($slug);
+// string(15) "php-85-released"
                         </code>
                     </pre>
                 </div>
@@ -420,7 +422,8 @@ function getPhpVersion(): string
 }
 
 getPhpVersion();
-// Warning: The return value of function getPhpVersion() should either be used or intentionally ignored by casting it as (void)
+// Warning: The return value of function getPhpVersion() should
+// either be used or intentionally ignored by casting it as (void)
                         </code>
                     </pre>
                 </div>
@@ -557,10 +560,10 @@ $sh = curl_share_init();
 curl_share_setopt($sh, CURLSHOPT_SHARE, CURL_LOCK_DATA_DNS);
 curl_share_setopt($sh, CURLSHOPT_SHARE, CURL_LOCK_DATA_CONNECT);
 
-$ch1 = curl_init('https://php.net/');
-curl_setopt($ch1, CURLOPT_SHARE, $sh);
+$ch = curl_init('https://php.net/');
+curl_setopt($ch, CURLOPT_SHARE, $sh);
 
-curl_exec($ch1);
+curl_exec($ch);
                         </code>
                     </pre>
                 </div>
@@ -582,11 +585,11 @@ $sh = curl_share_init_persistent([
     CURL_LOCK_DATA_CONNECT
 ]);
 
-$ch1 = curl_init('https://php.net/');
+$ch = curl_init('https://php.net/');
 curl_setopt($ch1, CURLOPT_SHARE, $sh);
 
 // This may now reuse the connection from an earlier SAPI request
-curl_exec($ch1);
+curl_exec($ch);
                         </code>
                     </pre>
                 </div>
