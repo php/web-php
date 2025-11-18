@@ -3545,49 +3545,49 @@ footer p:where(.dark,.dark *) {
     color: #953800
 }
 
-.dark div.phpcode .constant, .dark div.phpcode .property {
+.dark .constant, .dark .property {
     color: #79c0ff
 }
 
-.dark div.phpcode .comment {
+.dark .comment {
     color: #8b949e;
     font-style: italic
 }
 
-.dark div.phpcode .default,
-.dark div.phpcode .string {
+.dark .default,
+.dark .string {
     color: #a5d6ff
 }
 
-.dark div.phpcode .keyword {
+.dark .keyword {
     color: #ff7b72
 }
 
-.dark div.phpcode .literal {
+.dark .literal {
     color: #79c0ff
 }
 
-.dark div.phpcode .type {
+.dark .type {
     color: #ffa657
 }
 
-.dark div.phpcode .variable, .dark div.phpcode .number {
+.dark .variable, .dark .number {
     color: #79c0ff
 }
 
-.dark div.phpcode .function {
+.dark .function {
     color: #d2a8ff
 }
 
-.dark div.phpcode .operator {
+.dark .operator {
     color: #ff7b72
 }
 
-.dark div.phpcode .punctuation {
+.dark .punctuation {
     color: #c9d1d9
 }
 
-.dark div.phpcode .class {
+.dark .class {
     color: #ffa657
 }
 
@@ -3982,9 +3982,4 @@ footer p:where(.dark,.dark *) {
 @property --tw-tracking {
     syntax: "*";
     inherits: false
-}
-
-div.phpcode span.default {}
-div.phpcode span.keyword {
-
 }
