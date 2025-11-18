@@ -74,6 +74,6 @@ return [
     'bc_non_array_destructuring' => 'Destructuring non-array values (other than <code>null</code>) using {0} or {1} now emits a warning.',
     'bc_casting_non_int_floats' => 'A warning is now emitted when casting floats (or strings that look like floats) to <code>int</code> if they cannot be represented as one.',
 
-    'footer_title' => 'Better performance, better syntax, improved type safety.',
-    'footer_description' => '<p class="first-paragraph">For source downloads of PHP 8.5 please visit the <a href="/downloads" target="_blank">downloads</a> page. Windows binaries can be found on the <a href="https://windows.php.net/download" target="_blank">PHP for Windows</a> site. The list of changes is recorded in the <a href="/ChangeLog-8.php#PHP_8_5" target="_blank">ChangeLog</a>.</p><p>The <a href="/manual/en/migration85.php" target="_blank">migration guide</a> is available in the PHP Manual. Please consult it for a detailed list of new features and backward-incompatible changes.</p>',
+    'footer_title' => 'Better syntax, improved performance and type safety.',
+    'footer_description' => '<p class="first-paragraph">The full list of changes is recorded in the <a href="/ChangeLog-8.php#PHP_8_5" target="_blank">ChangeLog</a>.</p><p>Please consult the <a href="/manual/en/migration85.php" target="_blank">migration guide</a> for a detailed list of new features and backward-incompatible changes.</p>',
 ];
