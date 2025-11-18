@@ -18,7 +18,7 @@ return [
     'features_pipe_operator_description' => '<p>PHP 8.5 introduces the <code>|></code> operator to chain callables left-to-right, passing values smoothly through multiple functions natively.</p>',
     'features_persistent_curl_share_handles_title' => 'Persistent cURL Share Handles',
     'features_persistent_curl_share_handles_description' => '<p>Handles will not be destroyed at the end of the PHP request, it will be reused, avoiding the cost of initializing.</p>',
-    'features_clone_with_title' => 'Clone with',
+    'features_clone_with_title' => 'Clone With',
     'features_clone_with_description' => '<p>Clone objects and update properties with the new <code>clone()</code> syntax, making the "with-er" pattern simple for <code>readonly</code> classes.</p>',
     'features_uri_extension_title' => 'URI Extension',
     'features_uri_extension_description' => '<p>PHP 8.5 adds a built-in URI extension to parse, normalize, and handle URLs following <em>RFC 3986</em> and <em>WHATWG URL</em> standards.</p>',

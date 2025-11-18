@@ -540,7 +540,7 @@ curl_exec($ch);
 <code class="language-php">
 $sh = curl_share_init_persistent([
     CURL_LOCK_DATA_DNS,
-    CURL_LOCK_DATA_CONNECT
+    CURL_LOCK_DATA_CONNECT,
 ]);
 
 $ch = curl_init('https://php.net/');
