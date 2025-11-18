@@ -27,23 +27,23 @@ return [
     'features_persistent_curl_share_handles_title' => 'Persistent cURL Share Handles',
     'features_persistent_curl_share_handles_description' => '<p>New <code>CurlSharePersistentHandle</code> class, <code>curl_multi_get_handles()</code>, <code>curl_share_init_persistent()</code> functions.</p>',
 
-    'pipe_operator_title' => 'The Pipe Operator',
-    'pipe_operator_description' => '<p>PHP 8.5 adds a new operator, the pipe operator <code>|></code> to chain multiple callables from left to right, taking the return value of the left callable and passing it to the right.</p>',
+    'pipe_operator_title' => 'Pipe Operator',
+    'pipe_operator_description' => '<p>The pipe operator allows chaining function calls together without dealing with intermediary variables. This enables replacing many "nested calls" with a chain that can be read forwards, rather than inside-out.</p><p>Learn more about the backstory of this feature in <a href="https://thephp.foundation/blog/2025/07/11/php-85-adds-pipe-operator/" target="_blank" rel="noopener noreferrer">The PHP Foundation’s blog</a>.</p>',
 
     'array_first_last_title' => 'Array First & Last Functions',
     'array_first_last_description' => '<p>PHP 8.5 adds two new functions for retrieving the first and last values of an array. These functions complement the <code>array_key_first</code> and <code>array_key_last</code> functions.</p>',
 
     'clone_with_title' => 'Clone With',
-    'clone_with_description' => '<p>It is now possible to update properties during object cloning by passing an associative array with the updated to the <code>clone()</code> function. This enables straight-forward support of the "with-er" pattern for <code>readonly</code> classes.</p>',
+    'clone_with_description' => '<p>It is now possible to update properties during object cloning by passing an associative array to the <code>clone()</code> function. This enables straightforward support of the "with-er" pattern for <code>readonly</code> classes.</p>',
 
     'uri_extension_title' => 'URI Extension',
-    'uri_extension_description' => '<p>PHP 8.5 adds a built-in URI extension to parse, normalize, and handle URLs following <code>RFC 3986</code> and <code>WHATWG</code> standards.</p>',
+    'uri_extension_description' => '<p>The new always-available URI extension provides APIs to securely parse and modify URIs and URLs according to the RFC 3986 and the WHATWG URL standards.</p><p>Powered by the <a href="https://uriparser.github.io/">uriparser</a> (RFC 3986) and <a href="https://lexbor.com/">Lexbor</a> (WHATWG URL) libraries.</p><p>Learn more about the backstory of this feature in <a href="https://thephp.foundation/blog/2025/10/10/php-85-uri-extension/" target="_blank" rel="noopener noreferrer">The PHP Foundation’s blog</a>.</p>',
 
     'no_discard_title' => '#[\NoDiscard] Attribute',
-    'no_discard_description' => '<p>Adding the <code>#[\NoDiscard]</code> attribute makes PHP warn if a function’s return value isn’t used, improving API safety. Use the (void) cast to mark values intentionally unused.</p>',
+    'no_discard_description' => '<p>By adding the <code>#[\NoDiscard]</code> attribute to a function, PHP will check whether the returned value is consumed and emit a warning if it is not. This allows improving the safety of APIs where the returned value is important, but it\'s easy to forget using the return value by accident.</p><p>The associated <code>(void)</code> cast can be used to indicate that a value is intentionally unused.</p>',
 
     'persistent_curl_share_handles_title' => 'Persistent cURL Share Handles',
-    'persistent_curl_share_handles_description' => '<p>The Curl extension in PHP 8.5 adds a new function named <code>curl_multi_get_handles</code> that returns an array of <code>CurlHandle</code> objects from a <code>CurlMultiHandle</code> object.</p>',
+    'persistent_curl_share_handles_description' => '<p>Unlike <code>curl_share_init()</code>, handles created by <code>curl_share_init_persistent()</code> will not be destroyed at the end of the PHP request. If a persistent share handle with the same set of share options is found, it will be reused, avoiding the cost of initializing cURL handles each time.</p>',
 
     'fcc_in_const_expr_title' => 'Closures and First-Class Callables in Constant Expressions',
     'fcc_in_const_expr_description' => '<p>Static closures and first-class callables can now be used in constant expressions. This includes attribute parameters, default values of properties and parameters, and constants.</p>',
