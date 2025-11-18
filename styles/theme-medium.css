@@ -1112,3 +1112,16 @@ div.elephpants img:focus {
 .replaceable {
   font-style: italic;
 }
+
+.navbar__languages {
+    border-color: #94a3ed;
+    border-width: 1px;
+    outline: none;
+    color: hsla(230, 72%, 84%);
+    opacity: 1;
+    max-width: 300px;
+    padding: 8px 8px;
+    background-color: #404f82;
+    border-radius: 8px;
+    margin-right: 12px;
+}

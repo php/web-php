@@ -8,18 +8,25 @@ include_once __DIR__ . '/../../include/prepend.inc';
 
 const LANGUAGES = [
     'en' => 'English',
+    'ru' => 'Русский',
 ];
 
 function common_header(string $description): void {
-    global $MYSITE;
+    global $MYSITE, $lang;
 
     $meta_image_path = \htmlspecialchars(
         \filter_var($MYSITE . 'images/php8/php_8_5_released.png', \FILTER_VALIDATE_URL));
     $meta_description = \htmlspecialchars($description);
 
+    $languages = [];
+    foreach (LANGUAGES as $code => $text) {
+        $languages[] = ['name' => $text, 'selected' => $lang === $code, 'url' => '/releases/8.5/' . $code . '.php'];
+    }
+
     \site_header("PHP 8.5 Release Announcement", [
         'current' => 'php85 dark',
         'css' => ['php85.css'],
+        'language_switcher' => $languages,
         'meta_tags' => <<<META
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:site" content="@official_php" />
@@ -36,27 +43,6 @@ function common_header(string $description): void {
 <meta property="og:description" content="{$meta_description}" />
 META
     ]);
-}
-
-function language_chooser(string $currentLang): void {
-    // Print out the form with all the options
-    echo '
-      <form action="" method="get" id="changelang" name="changelang">
-        <fieldset>
-          <label for="changelang-langs">Change language:</label>
-          <select onchange="location = this.value + \'.php\'" name="lang" id="changelang-langs">
-';
-
-    $tab = '            ';
-    foreach (LANGUAGES as $lang => $text) {
-        $selected = ($lang === $currentLang) ? ' selected="selected"' : '';
-        echo $tab, "<option value='$lang'$selected>$text</option>\n";
-    }
-
-    echo '          </select>
-        </fieldset>
-      </form>
-';
 }
 
 function message($code, $language = 'en', array $interpolations = [])

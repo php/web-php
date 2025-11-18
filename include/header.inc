@@ -233,6 +233,16 @@ if (!isset($config["languages"])) {
         <input type="hidden" name="scope" value="quickref">
       </form>
 
+        <?php if (!empty($config['language_switcher'])) { ?>
+            <div class="navbar__languages">
+                <select onchange="location = this.value">
+                    <?php foreach ($config['language_switcher'] as $item) { ?>
+                        <option value="<?= $item['url'] ?>"<?= $item['selected'] ? ' selected' : ''?>><?= $item['name'] ?></option>
+                    <?php } ?>
+                </select>
+            </div>
+        <?php } ?>
+
       <!-- Desktop encanced search -->
       <button
         id="navbar__search-button"
