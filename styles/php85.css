@@ -1830,7 +1830,8 @@ header nav {
 }
 
 .before-and-after-title-and-description p {
-    color: var(--color-gray-600)
+    color: var(--color-gray-600);
+    text-align: left;
 }
 
 @media (min-width: 64rem) {
