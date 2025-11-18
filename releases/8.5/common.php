@@ -18,8 +18,8 @@ function common_header(string $description): void {
     $meta_description = \htmlspecialchars($description);
 
     \site_header("PHP 8.5 Release Announcement", [
-        'current' => 'php8',
-        'css' => ['php8.css'],
+        'current' => 'php85 dark',
+        'css' => ['php85.css'],
         'meta_tags' => <<<META
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:site" content="@official_php" />
