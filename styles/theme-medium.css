@@ -1129,7 +1129,10 @@ div.elephpants img:focus {
     border-color: #94a3ed;
 }
 
-.navbar__languages select,
+.navbar__languages select {
+    color: hsla(230, 72%, 84%);
+}
+
 .navbar__languages option {
     color: #404f82;
 }
