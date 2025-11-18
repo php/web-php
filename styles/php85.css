@@ -3030,10 +3030,6 @@ footer {
     }
 }
 
-footer {
-    padding-bottom: calc(var(--spacing) * 8)
-}
-
 footer:where(.dark,.dark *) {
     border-color: #ffffff08
 }
