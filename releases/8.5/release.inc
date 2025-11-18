@@ -276,18 +276,17 @@ PHP
                     </div>
                     <?php highlight_php_trimmed(
                             <<<'PHP'
-$input = ' Some kind of string. ';
+$title = ' PHP 8.5 Released ';
 
-$output = strtolower(
-    str_replace(['.', '/', '…'], '',
+$slug = strtolower(
+    str_replace('.', '',
         str_replace(' ', '-',
-            trim($input)
+            trim($title)
         )
     )
 );
 
-var_dump($output);
-// string(19) "some-kind-of-string"
+var_dump($slug); // string(15) "php-85-released"
 PHP
                     ); ?>
                 </div>
@@ -355,21 +354,25 @@ PHP
                     </div>
                     <?php highlight_php_trimmed(
                             <<<'PHP'
-function increment(
-    int $value,
-    ?Closure $incrementer = null,
-): int {
-    if ($incrementer === null) {
-        $incrementer = addOne(...);
-    }
-
-    return $incrementer($value);
-}
-
-function addOne(int $value): int
+readonly class Color
 {
-    return $value + 1;
+    public function __construct(
+        public int $red,
+        public int $green,
+        public int $blue,
+        public int $alpha = 255,
+    ) {}
+
+    public function withAlpha(int $alpha): self
+    {
+        $values = get_object_vars($this);
+        $values['alpha'] = $alpha;
+        return new self(...$values);
+    }
 }
+
+$blue = new Color(79, 91, 147);
+$transparentBlue = $blue->withAlpha(128);
 PHP
                     ); ?>
                 </div>
@@ -394,17 +397,23 @@ PHP
                     </div>
                     <?php highlight_php_trimmed(
                             <<<'PHP'
-function increment(
-    int $value,
-    Closure $incrementer = addOne(...),
-): int {
-    return $incrementer($value);
+readonly class Color
+{
+    public function __construct(
+        public int $red,
+        public int $green,
+        public int $blue,
+        public int $alpha = 255,
+    ) {}
+
+    public function withAlpha(int $alpha): self
+    {
+        return clone($this, ['alpha' => $alpha]);
+    }
 }
 
-function addOne(int $value): int
-{
-    return $value + 1;
-}
+$blue = new Color(79, 91, 147);
+$transparentBlue = $blue->withAlpha(128);
 PHP
                     ); ?>
                 </div>
@@ -548,7 +557,7 @@ PHP
     </section>
 
     <!-- fcc-in-const-expr -->
-    <section id="fcc-in-const-expr" class="before-and-after-container last">
+    <section id="fcc-in-const-expr" class="before-and-after-container">
         <div class="before-and-after-title-and-description">
             <h2><?= message('fcc_in_const_expr_title', $lang) ?></h2>
             <?= message('fcc_in_const_expr_description', $lang) ?>
@@ -633,7 +642,7 @@ PHP
     </section>
 
     <!-- persistent-curl-share-handles -->
-    <section id="persistent-curl-share-handles" class="before-and-after-container">
+    <section id="persistent-curl-share-handles" class="before-and-after-container last">
         <div class="before-and-after-title-and-description">
             <h2><?= message('persistent_curl_share_handles_title', $lang) ?></h2>
             <?= message('persistent_curl_share_handles_description', $lang) ?>

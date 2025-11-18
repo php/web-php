@@ -16,7 +16,7 @@ return [
 
     'features_pipe_operator_title' => 'The Pipe Operator',
     'features_pipe_operator_description' => '<p>PHP 8.5 introduces the <code>|></code> operator to chain callables left-to-right, passing values smoothly through multiple functions natively.</p>',
-    'features_array_first_last_title' => 'Array First & Last Functions',
+    'features_array_first_last_title' => '<code>array_first()</code> and <code>array_last()</code> functions',
     'features_array_first_last_description' => '<p>Retrieve the first or last value of any array effortlessly, without changing internal pointers or writing extra helper code.</p>',
     'features_clone_with_title' => 'Clone with',
     'features_clone_with_description' => '<p>Clone objects and update properties with the new <code>clone()</code> syntax, making the "with-er" pattern simple for <code>readonly</code> classes.</p>',
@@ -30,7 +30,7 @@ return [
     'pipe_operator_title' => 'Pipe Operator',
     'pipe_operator_description' => '<p>The pipe operator allows chaining function calls together without dealing with intermediary variables. This enables replacing many "nested calls" with a chain that can be read forwards, rather than inside-out.</p><p>Learn more about the backstory of this feature in <a href="https://thephp.foundation/blog/2025/07/11/php-85-adds-pipe-operator/" target="_blank" rel="noopener noreferrer">The PHP Foundation’s blog</a>.</p>',
 
-    'array_first_last_title' => 'Array First & Last Functions',
+    'array_first_last_title' => '<code>array_first()</code> and <code>array_last()</code> functions',
     'array_first_last_description' => '<p>PHP 8.5 adds two new functions for retrieving the first and last values of an array. These functions complement the <code>array_key_first</code> and <code>array_key_last</code> functions.</p>',
 
     'clone_with_title' => 'Clone With',
