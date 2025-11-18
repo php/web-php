@@ -1120,7 +1120,7 @@ div.elephpants img:focus {
     opacity: 1;
     max-width: 300px;
     padding: 8px 8px;
-    background-color: #404f82;
+    background-color: rgba(64, 79, 130, 0.7);
     border-radius: 8px;
     margin-right: 12px;
 }
@@ -1134,7 +1134,7 @@ div.elephpants img:focus {
 }
 
 .navbar__languages option {
-    color: #404f82;
+    color: rgba(39, 40, 44, 0.7);
 }
 
 .navbar__theme {
