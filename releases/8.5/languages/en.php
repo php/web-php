@@ -21,17 +21,17 @@ return [
     'features_clone_with_title' => 'Clone with',
     'features_clone_with_description' => '<p>Clone objects and update properties with the new <code>clone()</code> syntax, making the "with-er" pattern simple for <code>readonly</code> classes.</p>',
     'features_uri_extension_title' => 'URI Extension',
-    'features_uri_extension_description' => '<p>PHP 8.5 adds a built-in URI extension to parse, normalize, and handle URLs following <code>RFC 3986</code> and <code>WHATWG</code> standards.</p>',
+    'features_uri_extension_description' => '<p>PHP 8.5 adds a built-in URI extension to parse, normalize, and handle URLs following <em>RFC 3986</em> and <em>WHATWG URL</em> standards.</p>',
     'features_no_discard_title' => '#[\NoDiscard] Attribute',
     'features_no_discard_description' => '<p>The <code>#[\NoDiscard]</code> attribute warns when a return value isn’t used, helping prevent mistakes and improving overall API safety.</p>',
     'features_fcc_in_const_expr_title' => 'Closures and First-Class Callables in Constant Expressions',
-    'features_fcc_in_const_expr_description' => '<p>Static closures and first-class callables can now be used in constant expressions.</p>',
+    'features_fcc_in_const_expr_description' => '<p>Static closures and first-class callables can now be used in constant expressions, such as Attribute parameters.</p>',
 
     'pipe_operator_title' => 'Pipe Operator',
     'pipe_operator_description' => '<p>The pipe operator allows chaining function calls together without dealing with intermediary variables. This enables replacing many "nested calls" with a chain that can be read forwards, rather than inside-out.</p><p>Learn more about the backstory of this feature in <a href="https://thephp.foundation/blog/2025/07/11/php-85-adds-pipe-operator/" target="_blank" rel="noopener noreferrer">The PHP Foundation’s blog</a>.</p>',
 
     'array_first_last_title' => 'array_first() and array_last() functions',
-    'array_first_last_description' => '<p>PHP 8.5 adds two new functions for retrieving the first and last values of an array. These functions complement the <code>array_key_first</code> and <code>array_key_last</code> functions.</p>',
+    'array_first_last_description' => '<p>PHP 8.5 adds two new functions for retrieving the first and last values of an array. These functions complement the <code>array_key_first()</code> and <code>array_key_last()</code> functions.</p>',
 
     'clone_with_title' => 'Clone With',
     'clone_with_description' => '<p>It is now possible to update properties during object cloning by passing an associative array to the <code>clone()</code> function. This enables straightforward support of the "with-er" pattern for <code>readonly</code> classes.</p>',

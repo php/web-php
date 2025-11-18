@@ -367,6 +367,7 @@ readonly class Color
     {
         $values = get_object_vars($this);
         $values['alpha'] = $alpha;
+
         return new self(...$values);
     }
 }
@@ -408,7 +409,9 @@ readonly class Color
 
     public function withAlpha(int $alpha): self
     {
-        return clone($this, ['alpha' => $alpha]);
+        return clone($this, [
+            'alpha' => $alpha,
+        ]);
     }
 }
 

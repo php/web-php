@@ -983,22 +983,20 @@ header nav {
 }
 
 .hero {
+    position: relative;
     isolation: isolate;
     z-index: 10;
     margin-top: calc(var(--spacing) * -4);
-    height: calc(var(--spacing) * 175);
-    justify-content: center;
-    align-items: center;
     display: flex;
-    position: relative;
-    overflow: hidden
-}
-
-@media (min-width: 64rem) {
-    .hero {
+    height: calc(var(--spacing) * 160);
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    @media (width >= 64rem) {
         margin-top: calc(var(--spacing) * -16);
-        height: 100vh;
-        padding-top: calc(var(--spacing) * 16)
+    }
+    @media (width >= 64rem) {
+        padding-top: calc(var(--spacing) * 16);
     }
 }
 
