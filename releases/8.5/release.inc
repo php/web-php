@@ -163,12 +163,12 @@ common_header(message('common_header', $lang));
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                                  stroke="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round"
-                                      d="M3.75 6A2.25 2.25 0 0 1 6 3.75h2.25A2.25 2.25 0 0 1 10.5 6v2.25a2.25 2.25 0 0 1-2.25 2.25H6a2.25 2.25 0 0 1-2.25-2.25V6ZM3.75 15.75A2.25 2.25 0 0 1 6 13.5h2.25a2.25 2.25 0 0 1 2.25 2.25V18a2.25 2.25 0 0 1-2.25 2.25H6A2.25 2.25 0 0 1 3.75 18v-2.25ZM13.5 6a2.25 2.25 0 0 1 2.25-2.25H18A2.25 2.25 0 0 1 20.25 6v2.25A2.25 2.25 0 0 1 18 10.5h-2.25a2.25 2.25 0 0 1-2.25-2.25V6ZM13.5 15.75a2.25 2.25 0 0 1 2.25-2.25H18a2.25 2.25 0 0 1 2.25 2.25V18A2.25 2.25 0 0 1 18 20.25h-2.25A2.25 2.25 0 0 1 13.5 18v-2.25Z"/>
+                                      d="M6 13.5V3.75m0 9.75a1.5 1.5 0 0 1 0 3m0-3a1.5 1.5 0 0 0 0 3m0 3.75V16.5m12-3V3.75m0 9.75a1.5 1.5 0 0 1 0 3m0-3a1.5 1.5 0 0 0 0 3m0 3.75V16.5m-6-9V3.75m0 3.75a1.5 1.5 0 0 1 0 3m0-3a1.5 1.5 0 0 0 0 3m0 9.75V10.5"/>
                             </svg>
 
-                            <a href="#array-first-and-last-functions"><span></span><?= message('features_array_first_last_title', $lang) ?>
+                            <a href="#closures-in-const-expr"><span></span><?= message('features_fcc_in_const_expr_title', $lang) ?>
                             </a>
-                            <?= message('features_array_first_last_description', $lang) ?>
+                            <?= message('features_fcc_in_const_expr_description', $lang) ?>
                         </div>
                     </div>
                 </div>
@@ -179,12 +179,12 @@ common_header(message('common_header', $lang));
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                                  stroke="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round"
-                                      d="M6 13.5V3.75m0 9.75a1.5 1.5 0 0 1 0 3m0-3a1.5 1.5 0 0 0 0 3m0 3.75V16.5m12-3V3.75m0 9.75a1.5 1.5 0 0 1 0 3m0-3a1.5 1.5 0 0 0 0 3m0 3.75V16.5m-6-9V3.75m0 3.75a1.5 1.5 0 0 1 0 3m0-3a1.5 1.5 0 0 0 0 3m0 9.75V10.5"/>
+                                      d="M3.75 6A2.25 2.25 0 0 1 6 3.75h2.25A2.25 2.25 0 0 1 10.5 6v2.25a2.25 2.25 0 0 1-2.25 2.25H6a2.25 2.25 0 0 1-2.25-2.25V6ZM3.75 15.75A2.25 2.25 0 0 1 6 13.5h2.25a2.25 2.25 0 0 1 2.25 2.25V18a2.25 2.25 0 0 1-2.25 2.25H6A2.25 2.25 0 0 1 3.75 18v-2.25ZM13.5 6a2.25 2.25 0 0 1 2.25-2.25H18A2.25 2.25 0 0 1 20.25 6v2.25A2.25 2.25 0 0 1 18 10.5h-2.25a2.25 2.25 0 0 1-2.25-2.25V6ZM13.5 15.75a2.25 2.25 0 0 1 2.25-2.25H18a2.25 2.25 0 0 1 2.25 2.25V18A2.25 2.25 0 0 1 18 20.25h-2.25A2.25 2.25 0 0 1 13.5 18v-2.25Z"/>
                             </svg>
 
-                            <a href="#closures-in-const-expr"><span></span><?= message('features_fcc_in_const_expr_title', $lang) ?>
+                            <a href="#persistent-curl-share-handles"><span></span><?= message('features_persistent_curl_share_handles_title', $lang) ?>
                             </a>
-                            <?= message('features_fcc_in_const_expr_description', $lang) ?>
+                            <?= message('features_persistent_curl_share_handles_description', $lang) ?>
                         </div>
                     </div>
                 </div>
@@ -431,48 +431,6 @@ getPhpVersion();
         </div>
     </section>
 
-    <!-- array-first-and-last-functions -->
-    <section id="array-first-and-last-functions" class="before-and-after-container">
-        <div class="before-and-after-title-and-description">
-            <h2><?= message('array_first_last_title', $lang) ?></h2>
-            <?= message('array_first_last_description', $lang) ?>
-        </div>
-
-        <div class="before-and-after-code-container">
-            <div class="before-and-after-code">
-                <div class="code-container">
-                    <div class="header">
-                        <div>
-                            <span><?= message('old_version', $lang) ?></span>
-                        </div>
-                    </div>
-                    <pre class="language-php">
-                        <code class="language-php">
-$lastEvent = $events === []
-    ? null
-    : $events[array_key_last($events)];
-                        </code>
-                    </pre>
-                </div>
-
-                <div class="code-container">
-                    <div class="header">
-                        <div>
-                            <span>PHP 8.5</span>
-                            <span class="badge-green"><?= message('badge_new', $lang) ?></span>
-                            <a target="_blank" href="https://wiki.php.net/rfc/array_first_last">RFC <span>↗</span></a>
-                        </div>
-                    </div>
-                    <pre class="language-php">
-                        <code class="language-php">
-$lastEvent = array_last($events);
-                        </code>
-                    </pre>
-                </div>
-            </div>
-        </div>
-    </section>
-
     <!-- fcc-in-const-expr -->
     <section id="closures-in-const-expr" class="before-and-after-container">
         <div class="before-and-after-title-and-description">
@@ -540,7 +498,7 @@ final class PostsController
     </section>
 
     <!-- persistent-curl-share-handles -->
-    <section id="persistent-curl-share-handles" class="before-and-after-container last">
+    <section id="persistent-curl-share-handles" class="before-and-after-container">
         <div class="before-and-after-title-and-description">
             <h2><?= message('persistent_curl_share_handles_title', $lang) ?></h2>
             <?= message('persistent_curl_share_handles_description', $lang) ?>
@@ -590,6 +548,48 @@ curl_setopt($ch1, CURLOPT_SHARE, $sh);
 
 // This may now reuse the connection from an earlier SAPI request
 curl_exec($ch);
+                        </code>
+                    </pre>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- array-first-and-last-functions -->
+    <section id="array-first-and-last-functions" class="before-and-after-container last">
+        <div class="before-and-after-title-and-description">
+            <h2><?= message('array_first_last_title', $lang) ?></h2>
+            <?= message('array_first_last_description', $lang) ?>
+        </div>
+
+        <div class="before-and-after-code-container">
+            <div class="before-and-after-code">
+                <div class="code-container">
+                    <div class="header">
+                        <div>
+                            <span><?= message('old_version', $lang) ?></span>
+                        </div>
+                    </div>
+                    <pre class="language-php">
+                        <code class="language-php">
+$lastEvent = $events === []
+    ? null
+    : $events[array_key_last($events)];
+                        </code>
+                    </pre>
+                </div>
+
+                <div class="code-container">
+                    <div class="header">
+                        <div>
+                            <span>PHP 8.5</span>
+                            <span class="badge-green"><?= message('badge_new', $lang) ?></span>
+                            <a target="_blank" href="https://wiki.php.net/rfc/array_first_last">RFC <span>↗</span></a>
+                        </div>
+                    </div>
+                    <pre class="language-php">
+                        <code class="language-php">
+$lastEvent = array_last($events);
                         </code>
                     </pre>
                 </div>
