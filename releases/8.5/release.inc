@@ -208,12 +208,12 @@ common_header(message('common_header', $lang));
                         </div>
                     </div>
                     <pre class="language-php">
-                        <code class="language-php">
+<code class="language-php">
 $components = parse_url('https://php.net/releases/8.4/en.php');
 
 var_dump($components['host']);
 // string(7) "php.net"
-                        </code>
+</code>
                     </pre>
                 </div>
 
@@ -226,14 +226,14 @@ var_dump($components['host']);
                         </div>
                     </div>
                     <pre class="language-php">
-                        <code class="language-php">
+<code class="language-php">
 use Uri\Rfc3986\Uri;
 
 $uri = new Uri('https://php.net/releases/8.5/en.php');
 
 var_dump($uri->getHost());
 // string(7) "php.net"
-                        </code>
+</code>
                     </pre>
                 </div>
             </div>
@@ -256,7 +256,7 @@ var_dump($uri->getHost());
                         </div>
                     </div>
                     <pre class="language-php">
-                        <code class="language-php">
+<code class="language-php">
 $title = ' PHP 8.5 Released ';
 
 $slug = strtolower(
@@ -269,7 +269,7 @@ $slug = strtolower(
 
 var_dump($slug);
 // string(15) "php-85-released"
-                        </code>
+</code>
                     </pre>
                 </div>
 
@@ -282,7 +282,7 @@ var_dump($slug);
                         </div>
                     </div>
                     <pre class="language-php">
-                        <code class="language-php">
+<code class="language-php">
 $title = ' PHP 8.5 Released ';
 
 $slug = $title
@@ -293,7 +293,7 @@ $slug = $title
 
 var_dump($slug);
 // string(15) "php-85-released"
-                        </code>
+</code>
                     </pre>
                 </div>
             </div>
@@ -316,7 +316,7 @@ var_dump($slug);
                         </div>
                     </div>
                     <pre class="language-php">
-                        <code class="language-php">
+<code class="language-php">
 readonly class Color
 {
     public function __construct(
@@ -337,7 +337,7 @@ readonly class Color
 
 $blue = new Color(79, 91, 147);
 $transparentBlue = $blue->withAlpha(128);
-                        </code>
+</code>
                     </pre>
                 </div>
 
@@ -350,7 +350,7 @@ $transparentBlue = $blue->withAlpha(128);
                         </div>
                     </div>
                     <pre class="language-php">
-                        <code class="language-php">
+<code class="language-php">
 readonly class Color
 {
     public function __construct(
@@ -370,7 +370,7 @@ readonly class Color
 
 $blue = new Color(79, 91, 147);
 $transparentBlue = $blue->withAlpha(128);
-                        </code>
+</code>
                     </pre>
                 </div>
             </div>
@@ -393,14 +393,14 @@ $transparentBlue = $blue->withAlpha(128);
                         </div>
                     </div>
                     <pre class="language-php">
-                        <code class="language-php">
+<code class="language-php">
 function getPhpVersion(): string
 {
     return 'PHP 8.4';
 }
 
 getPhpVersion(); // No warning
-                        </code>
+</code>
                     </pre>
                 </div>
 
@@ -414,7 +414,7 @@ getPhpVersion(); // No warning
                         </div>
                     </div>
                     <pre class="language-php">
-                        <code class="language-php">
+<code class="language-php">
 #[\NoDiscard]
 function getPhpVersion(): string
 {
@@ -424,7 +424,7 @@ function getPhpVersion(): string
 getPhpVersion();
 // Warning: The return value of function getPhpVersion() should
 // either be used or intentionally ignored by casting it as (void)
-                        </code>
+</code>
                     </pre>
                 </div>
             </div>
@@ -447,7 +447,7 @@ getPhpVersion();
                         </div>
                     </div>
                     <pre class="language-php">
-                        <code class="language-php">
+<code class="language-php">
 final class PostsController
 {
     #[AccessControl(
@@ -460,7 +460,7 @@ final class PostsController
         // ...
     }
 }
-                        </code>
+</code>
                     </pre>
                 </div>
 
@@ -474,7 +474,7 @@ final class PostsController
                         </div>
                     </div>
                     <pre class="language-php">
-                        <code class="language-php">
+<code class="language-php">
 final class PostsController
 {
     #[AccessControl(static function (
@@ -490,7 +490,7 @@ final class PostsController
         // ...
     }
 }
-                        </code>
+</code>
                     </pre>
                 </div>
             </div>
@@ -513,7 +513,7 @@ final class PostsController
                         </div>
                     </div>
                     <pre class="language-php">
-                        <code class="language-php">
+<code class="language-php">
 $sh = curl_share_init();
 curl_share_setopt($sh, CURLSHOPT_SHARE, CURL_LOCK_DATA_DNS);
 curl_share_setopt($sh, CURLSHOPT_SHARE, CURL_LOCK_DATA_CONNECT);
@@ -522,7 +522,7 @@ $ch = curl_init('https://php.net/');
 curl_setopt($ch, CURLOPT_SHARE, $sh);
 
 curl_exec($ch);
-                        </code>
+</code>
                     </pre>
                 </div>
 
@@ -537,7 +537,7 @@ curl_exec($ch);
                         </div>
                     </div>
                     <pre class="language-php">
-                        <code class="language-php">
+<code class="language-php">
 $sh = curl_share_init_persistent([
     CURL_LOCK_DATA_DNS,
     CURL_LOCK_DATA_CONNECT
@@ -548,7 +548,7 @@ curl_setopt($ch1, CURLOPT_SHARE, $sh);
 
 // This may now reuse the connection from an earlier SAPI request
 curl_exec($ch);
-                        </code>
+</code>
                     </pre>
                 </div>
             </div>
@@ -571,11 +571,11 @@ curl_exec($ch);
                         </div>
                     </div>
                     <pre class="language-php">
-                        <code class="language-php">
+<code class="language-php">
 $lastEvent = $events === []
     ? null
     : $events[array_key_last($events)];
-                        </code>
+</code>
                     </pre>
                 </div>
 
@@ -588,9 +588,9 @@ $lastEvent = $events === []
                         </div>
                     </div>
                     <pre class="language-php">
-                        <code class="language-php">
+<code class="language-php">
 $lastEvent = array_last($events);
-                        </code>
+</code>
                     </pre>
                 </div>
             </div>

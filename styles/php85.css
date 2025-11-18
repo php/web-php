@@ -2033,7 +2033,7 @@ header nav {
 
 .code-container code {
     height: 100%;
-    padding: calc(var(--spacing) * 4);
+    padding: var(--spacing);
     color: var(--color-gray-400);
     flex: 1;
     overflow: auto
