@@ -27,26 +27,6 @@ document.addEventListener('DOMContentLoaded', () => {
         icons.forEach((icon, i) => icon?.classList.toggle('hidden', themeOrder[i] !== theme));
     }
 
-    document.addEventListener('click', async (e) => {
-        const btn = e.target.closest('.js-copy-code');
-        if (!btn?.closest('.code-container')) return;
-
-        const code = btn.closest('.code-container').querySelector('code').textContent;
-        if (!navigator.clipboard) return console.error('Clipboard API not available');
-
-        try {
-            await navigator.clipboard.writeText(code);
-            const originalHTML = btn.innerHTML;
-            btn.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"><path d="M5 14L8.5 17.5L19 6.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>';
-            btn.disabled = true;
-            await new Promise(r => setTimeout(r, 2000));
-            btn.innerHTML = originalHTML;
-            btn.disabled = false;
-        } catch (err) {
-            console.error('Copy failed:', err);
-        }
-    });
-
     Prism.highlightAll()
 
     applyTheme(savedTheme)
