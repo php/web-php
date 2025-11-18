@@ -920,3 +920,6 @@ PHP
         </div>
     </div>
 </footer>
+<?php
+
+site_footer(['footer' => false]);
