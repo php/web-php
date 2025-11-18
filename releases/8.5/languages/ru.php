@@ -16,7 +16,7 @@ return [
 
     'features_pipe_operator_title' => 'Оператор Pipe',
     'features_pipe_operator_description' => '<p>В PHP 8.5 добавлен оператор <code>|></code> для связывания вызываемых объектов слева направо, что позволяет передавать значения через несколько функций.</p>',
-    'features_array_first_last_title' => 'Функции <code>array_first()</code> и <code>array_last()</code>',
+    'features_array_first_last_title' => 'Функции array_first() и array_last()',
     'features_array_first_last_description' => '<p>Без труда извлекайте первое или последнее значение массива, не изменяя внутренние указатели и без вспомогательного кода.</p>',
     'features_clone_with_title' => 'Clone with',
     'features_clone_with_description' => '<p>Клонируйте объекты и обновляйте свойства с помощью нового синтаксиса <code>clone()</code>, который упрощает использование шаблона «with-er» для классов <code>readonly</code>.</p>',
@@ -24,13 +24,13 @@ return [
     'features_uri_extension_description' => '<p>В PHP 8.5 добавлен модуль URI для анализа, нормализации и обработки URL-адресов в соответствии со стандартами <code>RFC 3986</code> и <code>WHATWG</code>.</p>',
     'features_no_discard_title' => 'Атрибут #[\NoDiscard]',
     'features_no_discard_description' => '<p>Атрибут <code>#[\NoDiscard]</code> выдаёт предупреждение, если возвращаемое значение не используется, что помогает предотвратить ошибки и повысить общую безопасность API.</p>',
-    'features_persistent_curl_share_handles_title' => 'Постоянные дескрипторы cURL Share',
-    'features_persistent_curl_share_handles_description' => '<p>Новый класс <code>CurlSharePersistentHandle</code>, функции <code>curl_multi_get_handles()</code> и <code>curl_share_init_persistent()</code>.</p>',
+    'features_fcc_in_const_expr_title' => 'Замыкания и вызовы первого класса в константных выражениях',
+    'features_fcc_in_const_expr_description' => '<p>Статические замыкания и вызываемые объекты первого класса теперь могут использоваться в константных выражениях.</p>',
 
     'pipe_operator_title' => 'Оператор Pipe',
     'pipe_operator_description' => '<p>Оператор Pipe позволяет связывать вызовы функций в цепочку без использования промежуточных переменных. Позволяет заменить множество «вложенных вызовов» цепочкой.</p><p>Узнайте больше об этой функции в <a href="https://thephp.foundation/blog/2025/07/11/php-85-adds-pipe-operator/" target="_blank" rel="noopener noreferrer">блоге PHP Foundation</a>.</p>',
 
-    'array_first_last_title' => 'Функции <code>array_first()</code> и <code>array_last()</code>',
+    'array_first_last_title' => 'Функции array_first() и array_last()',
     'array_first_last_description' => '<p>В PHP 8.5 добавлены две новые функции для извлечения первого и последнего значения массива, они дополняют функции <code>array_key_first</code> и <code>array_key_last</code>.</p>',
 
     'clone_with_title' => 'Clone With',

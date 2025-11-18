@@ -16,7 +16,7 @@ return [
 
     'features_pipe_operator_title' => 'The Pipe Operator',
     'features_pipe_operator_description' => '<p>PHP 8.5 introduces the <code>|></code> operator to chain callables left-to-right, passing values smoothly through multiple functions natively.</p>',
-    'features_array_first_last_title' => '<code>array_first()</code> and <code>array_last()</code> functions',
+    'features_array_first_last_title' => 'array_first() and array_last() functions',
     'features_array_first_last_description' => '<p>Retrieve the first or last value of any array effortlessly, without changing internal pointers or writing extra helper code.</p>',
     'features_clone_with_title' => 'Clone with',
     'features_clone_with_description' => '<p>Clone objects and update properties with the new <code>clone()</code> syntax, making the "with-er" pattern simple for <code>readonly</code> classes.</p>',
@@ -24,13 +24,13 @@ return [
     'features_uri_extension_description' => '<p>PHP 8.5 adds a built-in URI extension to parse, normalize, and handle URLs following <code>RFC 3986</code> and <code>WHATWG</code> standards.</p>',
     'features_no_discard_title' => '#[\NoDiscard] Attribute',
     'features_no_discard_description' => '<p>The <code>#[\NoDiscard]</code> attribute warns when a return value isn’t used, helping prevent mistakes and improving overall API safety.</p>',
-    'features_persistent_curl_share_handles_title' => 'Persistent cURL Share Handles',
-    'features_persistent_curl_share_handles_description' => '<p>New <code>CurlSharePersistentHandle</code> class, <code>curl_multi_get_handles()</code>, <code>curl_share_init_persistent()</code> functions.</p>',
+    'features_fcc_in_const_expr_title' => 'Closures and First-Class Callables in Constant Expressions',
+    'features_fcc_in_const_expr_description' => '<p>Static closures and first-class callables can now be used in constant expressions.</p>',
 
     'pipe_operator_title' => 'Pipe Operator',
     'pipe_operator_description' => '<p>The pipe operator allows chaining function calls together without dealing with intermediary variables. This enables replacing many "nested calls" with a chain that can be read forwards, rather than inside-out.</p><p>Learn more about the backstory of this feature in <a href="https://thephp.foundation/blog/2025/07/11/php-85-adds-pipe-operator/" target="_blank" rel="noopener noreferrer">The PHP Foundation’s blog</a>.</p>',
 
-    'array_first_last_title' => '<code>array_first()</code> and <code>array_last()</code> functions',
+    'array_first_last_title' => 'array_first() and array_last() functions',
     'array_first_last_description' => '<p>PHP 8.5 adds two new functions for retrieving the first and last values of an array. These functions complement the <code>array_key_first</code> and <code>array_key_last</code> functions.</p>',
 
     'clone_with_title' => 'Clone With',
