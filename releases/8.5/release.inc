@@ -18,6 +18,10 @@ common_header(message('common_header', $lang));
 ?>
     <!-- hero -->
     <section class="js-hero hero">
+        <video autoplay muted loop playsinline disablepictureinpicture controlslist="nodownload nofullscreen noremoteplayback">
+            <source src="/images/php8/bg-dark.mp4" type="video/mp4">
+        </video>
+
         <!-- hero background pattern -->
         <svg aria-hidden="true" class="hero-pattern">
             <defs>
