@@ -49,6 +49,8 @@
 
 .php85 .headsup {
     height: auto;
+    z-index: 11;
+    position: relative;
 }
 
 @layer properties {
