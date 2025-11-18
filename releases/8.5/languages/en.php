@@ -39,7 +39,7 @@ return [
     'uri_extension_title' => 'URI Extension',
     'uri_extension_description' => '<p>PHP 8.5 adds a built-in URI extension to parse, normalize, and handle URLs following <code>RFC 3986</code> and <code>WHATWG</code> standards.</p>',
 
-    'no_discard_title' => '<code>#[\NoDiscard]</code> Attribute',
+    'no_discard_title' => '#[\NoDiscard] Attribute',
     'no_discard_description' => '<p>Adding the <code>#[\NoDiscard]</code> attribute makes PHP warn if a function’s return value isn’t used, improving API safety. Use the (void) cast to mark values intentionally unused.</p>',
 
     'persistent_curl_share_handles_title' => 'Persistent cURL Share Handles',
