@@ -611,7 +611,10 @@ $lastEvent = array_last($events);
                         <li><?= message('asymmetric_static_properties', $lang) ?></li>
                         <li><?= message('final_promoted_properties', $lang) ?></li>
                         <li><?= message('closure_getCurrent', $lang) ?></li>
-                        <li><?= message('partitioned_cookies', $lang) ?></li>
+                        <li><?= message('partitioned_cookies', $lang, [
+                                '<a href="/manual/' . $documentation . '/function.setcookie.php"><code>setcookie()</code></a>',
+                                '<a href="/manual/' . $documentation . '/function.setrawcookie.php"><code>setrawcookie()</code></a>',
+                            ]) ?></li>
                         <li><?= message('get_set_error_handler', $lang, [
                                     '<a href="/manual/' . $documentation . '/function.get-error-handler.php"><code>get_error_handler()</code></a>',
                                     '<a href="/manual/' . $documentation . '/function.get-exception-handler.php"><code>get_exception_handler()</code></a>',
@@ -627,17 +630,23 @@ $lastEvent = array_last($events);
                 <div>
                     <h2><?= message('bc_title', $lang) ?></h2>
                     <ul class="old">
-                        <li><?= message('bc_backtick_operator', $lang, ['<code>shell_exec()</code>']) ?></li>
+                        <li><?= message('bc_backtick_operator', $lang, [
+                                '<a href="/manual/' . $documentation . '/function.shell-exec.php"><code>shell_exec()</code></a>'
+                            ]) ?></li>
                         <li><?= message('bc_non_canonical_cast_names', $lang) ?></li>
                         <li><?= message('bc_disable_classes', $lang, ['<code>disable_classes</code>']) ?></li>
                         <li><?= message('bc_semicolon_after_case', $lang) ?></li>
-                        <li><?= message('bc_null_array_offset', $lang, ['<code>array_key_exists()</code>']) ?></li>
-                        <li><?= message('bc_class_alias_names', $lang, ['<code>class_alias()</code>']) ?></li>
+                        <li><?= message('bc_null_array_offset', $lang, [
+                                '<a href="/manual/' . $documentation . '/function.array-key-exists.php"><code>array_key_exists()</code></a>'
+                            ]) ?></li>
+                        <li><?= message('bc_class_alias_names', $lang, [
+                                '<a href="/manual/' . $documentation . '/function.class-alias.php"><code>class_alias()</code></a>'
+                            ]) ?></li>
                         <li><?= message('bc_sleep_wakeup', $lang, [
-                                    '<code>__sleep()</code>',
-                                    '<code>__wakeup()</code>',
-                                    '<code>__serialize()</code>',
-                                    '<code>__unserialize()</code>',
+                                '<a href="/manual/' . $documentation . '/language.oop5.magic.php#object.sleep"><code>__sleep()</code></a>',
+                                '<a href="/manual/' . $documentation . '/language.oop5.magic.php#object.wakeup"><code>__wakeup()</code></a>',
+                                '<a href="/manual/' . $documentation . '/language.oop5.magic.php#object.serialize"><code>__serialize()</code></a>',
+                                '<a href="/manual/' . $documentation . '/language.oop5.magic.php#object.unserialize"><code>__unserialize()</code></a>',
                             ]) ?></li>
                         <li><?= message('bc_casting_nan', $lang, ['<code>NAN</code>']) ?></li>
                         <li><?= message('bc_non_array_destructuring', $lang, ['<code>[]</code>', '<code>list()</code>']) ?></li>

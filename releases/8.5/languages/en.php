@@ -14,7 +14,7 @@ return [
     'key_features' => 'Key Features in PHP 8.5',
     'key_features_description' => '<p>PHP 8.5 is here, <strong>faster</strong>, <strong>cleaner</strong>, and <strong>built for developers</strong>.</p>',
 
-    'features_pipe_operator_title' => 'The Pipe Operator',
+    'features_pipe_operator_title' => 'Pipe Operator',
     'features_pipe_operator_description' => '<p>PHP 8.5 introduces the <code>|></code> operator to chain callables left-to-right, passing values smoothly through multiple functions natively.</p>',
     'features_persistent_curl_share_handles_title' => 'Persistent cURL Share Handles',
     'features_persistent_curl_share_handles_description' => '<p>Handles will not be destroyed at the end of the PHP request, it will be reused, avoiding the cost of initializing.</p>',
@@ -56,7 +56,7 @@ return [
     'asymmetric_static_properties' => 'Static properties now support asymmetric visibility.',
     'final_promoted_properties' => 'Properties can be marked as <code>final</code> using constructor property promotion.',
     'closure_getCurrent' => 'Added <code>Closure::getCurrent()</code> method to simplify recursion in anonymous functions.',
-    'partitioned_cookies' => '<code>setcookie()</code> and <code>setrawcookie()</code> now support the "partitioned" key.',
+    'partitioned_cookies' => '{0} and {1} now support the "partitioned" key.',
     'get_set_error_handler' => 'New {0} and {1} functions are available.',
     'new_dom_element_methods' => 'New {0} and {1} methods are available.',
     'grapheme_levenshtein' => 'Added {0} function.',

@@ -56,7 +56,7 @@ return [
     'asymmetric_static_properties' => 'Статические свойства теперь поддерживают асимметричную видимость.',
     'final_promoted_properties' => 'Свойства могут быть помечены окончательными (<code>final</code>) с помощью свойств в конструкторе.',
     'closure_getCurrent' => 'Добавлен метод <code>Closure::getCurrent()</code> для упрощения рекурсии в анонимных функциях.',
-    'partitioned_cookies' => 'Функции <code>setcookie()</code> и <code>setrawcookie()</code> теперь поддерживают ключ <code>"partitioned"</code>.',
+    'partitioned_cookies' => 'Функции {0} и {1} теперь поддерживают ключ <code>"partitioned"</code>.',
     'get_set_error_handler' => 'Добавлены функции {0} и {1}.',
     'new_dom_element_methods' => 'Добавлены методы {0} и {1}.',
     'grapheme_levenshtein' => 'Добавлена фукнция {0}.',
