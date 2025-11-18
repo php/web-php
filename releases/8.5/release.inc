@@ -771,6 +771,10 @@ $lastEvent = array_last($events);
             </div>
         </div>
     </footer>
+
+    <script>
+        Prism.highlightAll()
+    </script>
 <?php
 
 site_footer(['footer' => false]);
