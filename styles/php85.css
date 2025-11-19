@@ -1132,7 +1132,7 @@ header nav {
 .hero-badge {
     margin-bottom: calc(var(--spacing) * 6);
     background-color: #ffffffa6;
-    border-radius: 3.40282e38px;
+    border-radius: calc(infinity * 1px);
     align-items: center;
     display: inline-flex
 }
@@ -3606,7 +3606,7 @@ footer p:where(.dark,.dark *) {
     font-weight: var(--font-weight-semibold);
     color: var(--color-white);
     background-color: #6b58ff;
-    border-radius: 3.40282e38px;
+    border-radius: calc(infinity * 1px);
     justify-content: center;
     align-items: center;
     text-decoration-line: none;
@@ -3654,7 +3654,7 @@ footer p:where(.dark,.dark *) {
     --tw-ring-shadow: var(--tw-ring-inset,) 0 0 0 calc(1px + var(--tw-ring-offset-width)) var(--tw-ring-color, currentcolor);
     box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
     --tw-ring-color: color-mix(in oklab, var(--color-gray-200) 50%, transparent);
-    border-radius: 3.40282e38px;
+    border-radius: calc(infinity * 1px);
     justify-content: center;
     align-items: center;
     text-decoration-line: none;
