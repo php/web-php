@@ -506,10 +506,10 @@ function get_nav_items(): array {
       id: 'help',
     ),
     new NavItem(
-      name: 'PHP 8.4',
-      href: '/releases/8.4/index.php',
+      name: 'PHP 8.5',
+      href: '/releases/8.5/index.php',
       id: 'php8',
-      image: '/images/php8/logo_php8_4.svg',
+      image: '/images/php8/logo_php8_5.svg',
     )
   ];
 }
