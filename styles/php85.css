@@ -3560,7 +3560,7 @@ footer p:where(.dark,.dark *) {
 }
 
 .php85 .phpcode span.default {
-    color: #dd4a68;
+    color: rgb(213, 51, 84);
     background-color: transparent;
 }
 
@@ -3570,7 +3570,7 @@ footer p:where(.dark,.dark *) {
 }
 
 .php85 .phpcode span.string {
-    color: #690;
+    color: rgb(80, 119, 0);
     background-color: transparent;
 }
 
