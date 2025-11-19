@@ -77,7 +77,7 @@ common_header(message('common_header', $lang));
     </section>
 
     <!-- new features -->
-    <section class="features" id="features">
+    <section class="features">
         <svg aria-hidden="true" width="100%" height="100%" class="features-pattern">
             <defs>
                 <pattern id="features-pattern" width="13" height="13" patternUnits="userSpaceOnUse">
@@ -88,7 +88,7 @@ common_header(message('common_header', $lang));
         </svg>
 
         <div class="features-title">
-            <h2><?= message('key_features', $lang) ?></h2>
+            <h2 id="features"><?= message('key_features', $lang) ?></h2>
             <?= message('key_features_description', $lang) ?>
         </div>
 
@@ -193,9 +193,9 @@ common_header(message('common_header', $lang));
     </section>
 
     <!-- new-uri-extension -->
-    <section id="new-uri-extension" class="before-and-after-container">
+    <section class="before-and-after-container">
         <div class="before-and-after-title-and-description">
-            <h2><?= message('uri_extension_title', $lang) ?></h2>
+            <h2 id="new-uri-extension"><?= message('uri_extension_title', $lang) ?></h2>
             <?= message('uri_extension_description', $lang) ?>
         </div>
 
@@ -241,9 +241,9 @@ var_dump($uri->getHost());
     </section>
 
     <!-- pipe-operator -->
-    <section id="pipe-operator" class="before-and-after-container">
+    <section class="before-and-after-container">
         <div class="before-and-after-title-and-description">
-            <h2><?= message('pipe_operator_title', $lang) ?></h2>
+            <h2 id="pipe-operator"><?= message('pipe_operator_title', $lang) ?></h2>
             <?= message('pipe_operator_description', $lang) ?>
         </div>
 
@@ -301,9 +301,9 @@ var_dump($slug);
     </section>
 
     <!-- clone-with -->
-    <section id="clone-with" class="before-and-after-container">
+    <section class="before-and-after-container">
         <div class="before-and-after-title-and-description">
-            <h2><?= message('clone_with_title', $lang) ?></h2>
+            <h2 id="clone-with"><?= message('clone_with_title', $lang) ?></h2>
             <?= message('clone_with_description', $lang) ?>
         </div>
 
@@ -378,9 +378,9 @@ $transparentBlue = $blue->withAlpha(128);
     </section>
 
     <!-- no-discard-attribute -->
-    <section id="no-discard-attribute" class="before-and-after-container">
+    <section class="before-and-after-container">
         <div class="before-and-after-title-and-description">
-            <h2><?= message('no_discard_title', $lang) ?></h2>
+            <h2 id="no-discard-attribute"><?= message('no_discard_title', $lang) ?></h2>
             <?= message('no_discard_description', $lang) ?>
         </div>
 
@@ -432,9 +432,9 @@ getPhpVersion();
     </section>
 
     <!-- fcc-in-const-expr -->
-    <section id="closures-in-const-expr" class="before-and-after-container">
+    <section class="before-and-after-container">
         <div class="before-and-after-title-and-description">
-            <h2><?= message('fcc_in_const_expr_title', $lang) ?></h2>
+            <h2 id="closures-in-const-expr"><?= message('fcc_in_const_expr_title', $lang) ?></h2>
             <?= message('fcc_in_const_expr_description', $lang) ?>
         </div>
 
@@ -498,9 +498,9 @@ final class PostsController
     </section>
 
     <!-- persistent-curl-share-handles -->
-    <section id="persistent-curl-share-handles" class="before-and-after-container">
+    <section class="before-and-after-container">
         <div class="before-and-after-title-and-description">
-            <h2><?= message('persistent_curl_share_handles_title', $lang) ?></h2>
+            <h2 id="persistent-curl-share-handles"><?= message('persistent_curl_share_handles_title', $lang) ?></h2>
             <?= message('persistent_curl_share_handles_description', $lang) ?>
         </div>
 
@@ -556,9 +556,9 @@ curl_exec($ch);
     </section>
 
     <!-- array-first-and-last-functions -->
-    <section id="array-first-and-last-functions" class="before-and-after-container last">
+    <section class="before-and-after-container last">
         <div class="before-and-after-title-and-description">
-            <h2><?= message('array_first_last_title', $lang) ?></h2>
+            <h2 id="array-first-and-last-functions"><?= message('array_first_last_title', $lang) ?></h2>
             <?= message('array_first_last_description', $lang) ?>
         </div>
 

@@ -69,6 +69,33 @@ code[class*=language-], pre[class*=language-] {
 
 }
 
+.features-title h2,
+.before-and-after-title-and-description h2 {
+    position: relative;
+    overflow: visible;
+    display: inline-block;
+}
+
+.features-title h2 .genanchor,
+.before-and-after-title-and-description h2 .genanchor {
+    position: absolute;
+    top: 4px;
+    left: 0;
+    display: none;
+    margin-left: -30px;
+    height: 30px;
+    width: 30px;
+    background: url("/images/php8/anchor-white.svg") scroll no-repeat left center / 21px 16px transparent;
+    text-decoration: none;
+    border-bottom: none;
+    font-size: 0;
+}
+
+.features-title h2:hover .genanchor,
+.before-and-after-title-and-description h2:hover .genanchor {
+    display: block;
+}
+
 @layer properties {
     @supports (((-webkit-hyphens:none)) and (not (margin-trim:inline))) or ((-moz-orient:inline) and (not (color:rgb(from red r g b)))) {
         *, :before, :after, ::backdrop {
