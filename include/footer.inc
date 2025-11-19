@@ -59,6 +59,7 @@
 
   </div><!-- layout -->
 
+<?php if(!isset($config['footer']) || $config['footer']): ?>
   <footer>
     <div class="container footer-content">
       <div class="row-fluid">
@@ -87,7 +88,7 @@ if (!empty($_SERVER['BASE_PAGE'])
       </div>
     </div>
   </footer>
-
+<?php endif; ?>
     <?php
     // if elephpants enabled, insert placeholder nodes
     // to be populated with images via javascript.

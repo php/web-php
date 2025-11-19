@@ -1112,3 +1112,45 @@ div.elephpants img:focus {
 .replaceable {
   font-style: italic;
 }
+
+.navbar__languages {
+    border: 1px solid #6a78be;
+    outline: none;
+    color: hsla(230, 72%, 84%);
+    opacity: 1;
+    max-width: 300px;
+    padding: 8px 8px;
+    background-color: rgba(64, 79, 130, 0.7);
+    border-radius: 8px;
+    margin-right: 12px;
+}
+
+.navbar__languages:hover {
+    border-color: #94a3ed;
+}
+
+.navbar__languages select {
+    color: hsla(230, 72%, 84%);
+}
+
+.navbar__languages option {
+    color: rgba(39, 40, 44, 0.7);
+}
+
+.navbar__theme {
+    margin-left: 12px;
+    border: 1px solid #6a78be;
+    color: hsla(230, 72%, 84%);
+    background-color: #404f82;
+    border-radius: 8px;
+    margin-right: 12px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.navbar__theme:hover {
+    border-color: #94a3ed;
+}
