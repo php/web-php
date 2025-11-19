@@ -832,7 +832,7 @@ div.warning a:focus {
   color: var(--dark-blue-color);
   background-color: transparent;
 }
-div.phpcode span.default {
+div.phpcode span.default, div.phpcode span.variable {
   color: #369;
   background-color: transparent;
 }
