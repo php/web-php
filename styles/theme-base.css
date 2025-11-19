@@ -961,6 +961,9 @@ div.tip p:first-child {
     margin-bottom: 1.5rem;
 }
 
+.phpcode pre {
+    margin: 0;
+}
 .phpcode code {
     display: block;
     overflow-x: auto;
