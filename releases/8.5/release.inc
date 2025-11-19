@@ -119,7 +119,7 @@ common_header(message('common_header', $lang));
                                       d="M19.5 12c0-1.232-.046-2.453-.138-3.662a4.006 4.006 0 0 0-3.7-3.7 48.678 48.678 0 0 0-7.324 0 4.006 4.006 0 0 0-3.7 3.7c-.017.22-.032.441-.046.662M19.5 12l3-3m-3 3-3-3m-12 3c0 1.232.046 2.453.138 3.662a4.006 4.006 0 0 0 3.7 3.7 48.656 48.656 0 0 0 7.324 0 4.006 4.006 0 0 0 3.7-3.7c.017-.22.032-.441.046-.662M4.5 12l3 3m-3-3-3 3"/>
                             </svg>
 
-                            <a href="#the-pipe-operator"><span></span><?= message('features_pipe_operator_title', $lang) ?>
+                            <a href="#pipe-operator"><span></span><?= message('features_pipe_operator_title', $lang) ?>
                             </a>
                             <?= message('features_pipe_operator_description', $lang) ?>
                         </div>
@@ -240,8 +240,8 @@ var_dump($uri->getHost());
         </div>
     </section>
 
-    <!-- the-pipe-operator -->
-    <section id="the-pipe-operator" class="before-and-after-container">
+    <!-- pipe-operator -->
+    <section id="pipe-operator" class="before-and-after-container">
         <div class="before-and-after-title-and-description">
             <h2><?= message('pipe_operator_title', $lang) ?></h2>
             <?= message('pipe_operator_description', $lang) ?>

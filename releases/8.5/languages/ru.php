@@ -15,9 +15,9 @@ return [
     'key_features_description' => '<p><strong>Быстрее</strong>, <strong>лучше</strong>, <strong>доступнее для разработчиков</strong>.</p>',
 
     'features_pipe_operator_title' => 'Оператор Pipe',
-    'features_pipe_operator_description' => '<p>В PHP 8.5 добавлен оператор <code>|></code> для связывания вызываемых объектов слева направо, что позволяет передавать значения через несколько функций.</p>',
+    'features_pipe_operator_description' => '<p>Оператор <code>|></code> позволяет связывать вызываемые объекты слева направо, передавая значения через несколько функций без промежуточных переменных.</p>',
     'features_persistent_curl_share_handles_title' => 'Постоянные дескрипторы cURL Share',
-    'features_persistent_curl_share_handles_description' => '<p>Дескрипторы не будут уничтожены в конце запроса PHP, что позволит избежать затрат на повторную инициализацию.</p>',
+    'features_persistent_curl_share_handles_description' => '<p>Теперь дескрипторы могут сохраняться между несколькими запросами PHP, что позволяет избежать затрат на повторную инициализацию соединения с одними и теми же хостами.</p>',
     'features_clone_with_title' => 'Clone With',
     'features_clone_with_description' => '<p>Клонируйте объекты и обновляйте свойства с помощью нового синтаксиса <code>clone()</code>, который упрощает использование шаблона «with-er» для классов <code>readonly</code>.</p>',
     'features_uri_extension_title' => 'Модуль URI',
