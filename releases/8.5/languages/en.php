@@ -66,7 +66,7 @@ return [
     'bc_backtick_operator' => 'The backtick operator as an alias for {0} has been deprecated.',
     'bc_non_canonical_cast_names' => 'Non-canonical cast names <code>(boolean)</code>, <code>(integer)</code>, <code>(double)</code>, and <code>(binary)</code> have been deprecated. Use <code>(bool)</code>, <code>(int)</code>, <code>(float)</code>, and <code>(string)</code> instead, respectively.',
     'bc_disable_classes' => 'The {0} INI setting has been removed as it causes various engine assumptions to be broken.',
-    'bc_semicolon_after_case' => 'Terminating case statements with a semicolon instead of a colon has been deprecated.',
+    'bc_semicolon_after_case' => 'Terminating <code>case</code> statements with a semicolon instead of a colon has been deprecated.',
     'bc_null_array_offset' => 'Using <code>null</code> as an array offset or when calling {0} is now deprecated. Use an empty string instead.',
     'bc_class_alias_names' => 'It is no longer possible to use "array" and "callable" as class alias names in {0}.',
     'bc_sleep_wakeup' => 'The {0} and {1} magic methods have been soft-deprecated. The {2} and {3} magic methods should be used instead.',
