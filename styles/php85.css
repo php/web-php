@@ -3549,6 +3549,10 @@ footer p:where(.dark,.dark *) {
     padding: 1em;
 }
 
+.dark .php85 .phpcode::selection {
+    background-color: #333;
+}
+
 .php85 .phpcode span.comment {
     color: #708090;
     background-color: transparent;
