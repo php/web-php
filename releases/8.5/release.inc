@@ -696,9 +696,9 @@ $lastEvent = array_last($events);
                         </svg>
                     </a>
 
-                    <p>The PHP Foundation is a collective of people and organizations, united in the mission to ensure
-                        the
-                        long-term prosperity of the PHP language.</p>
+                    <p>PHP is developed and maintained by a global community of contributors.
+                        <a href="https://thephp.foundation/" target="_blank">The PHP Foundation</a> helps fund this work. <br>
+                        If PHP is part of your business or projects, consider sponsoring the Foundation.</p>
 
                     <div class="social-icons">
                         <a href="https://www.linkedin.com/company/phpnet/" target="_blank" rel="noopener noreferrer">
