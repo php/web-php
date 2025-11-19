@@ -206,15 +206,21 @@ common_header(message('common_header', $lang));
                         <div>
                             <span><?= message('old_version', $lang) ?></span>
                         </div>
+                        <button class="js-copy-code">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none">
+                                <path d="M9 15C9 12.1716 9 10.7574 9.87868 9.87868C10.7574 9 12.1716 9 15 9L16 9C18.8284 9 20.2426 9 21.1213 9.87868C22 10.7574 22 12.1716 22 15V16C22 18.8284 22 20.2426 21.1213 21.1213C20.2426 22 18.8284 22 16 22H15C12.1716 22 10.7574 22 9.87868 21.1213C9 20.2426 9 18.8284 9 16L9 15Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M16.9999 9C16.9975 6.04291 16.9528 4.51121 16.092 3.46243C15.9258 3.25989 15.7401 3.07418 15.5376 2.90796C14.4312 2 12.7875 2 9.5 2C6.21252 2 4.56878 2 3.46243 2.90796C3.25989 3.07417 3.07418 3.25989 2.90796 3.46243C2 4.56878 2 6.21252 2 9.5C2 12.7875 2 14.4312 2.90796 15.5376C3.07417 15.7401 3.25989 15.9258 3.46243 16.092C4.51121 16.9528 6.04291 16.9975 9 16.9999" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </button>
                     </div>
-                    <pre class="language-php">
-<code class="language-php">
+                    <?php highlight_php_trimmed(
+                            <<<'PHP'
 $components = parse_url('https://php.net/releases/8.4/en.php');
 
 var_dump($components['host']);
 // string(7) "php.net"
-</code>
-                    </pre>
+PHP
+                    ); ?>
                 </div>
 
                 <div class="code-container">
@@ -224,17 +230,23 @@ var_dump($components['host']);
                             <span class="badge-green"><?= message('badge_new', $lang) ?></span>
                             <a target="_blank" href="https://wiki.php.net/rfc/url_parsing_api">RFC <span>↗</span></a>
                         </div>
+                        <button class="js-copy-code">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none">
+                                <path d="M9 15C9 12.1716 9 10.7574 9.87868 9.87868C10.7574 9 12.1716 9 15 9L16 9C18.8284 9 20.2426 9 21.1213 9.87868C22 10.7574 22 12.1716 22 15V16C22 18.8284 22 20.2426 21.1213 21.1213C20.2426 22 18.8284 22 16 22H15C12.1716 22 10.7574 22 9.87868 21.1213C9 20.2426 9 18.8284 9 16L9 15Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M16.9999 9C16.9975 6.04291 16.9528 4.51121 16.092 3.46243C15.9258 3.25989 15.7401 3.07418 15.5376 2.90796C14.4312 2 12.7875 2 9.5 2C6.21252 2 4.56878 2 3.46243 2.90796C3.25989 3.07417 3.07418 3.25989 2.90796 3.46243C2 4.56878 2 6.21252 2 9.5C2 12.7875 2 14.4312 2.90796 15.5376C3.07417 15.7401 3.25989 15.9258 3.46243 16.092C4.51121 16.9528 6.04291 16.9975 9 16.9999" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </button>
                     </div>
-                    <pre class="language-php">
-<code class="language-php">
+                    <?php highlight_php_trimmed(
+                            <<<'PHP'
 use Uri\Rfc3986\Uri;
 
 $uri = new Uri('https://php.net/releases/8.5/en.php');
 
 var_dump($uri->getHost());
 // string(7) "php.net"
-</code>
-                    </pre>
+PHP
+                    ); ?>
                 </div>
             </div>
         </div>
@@ -254,9 +266,15 @@ var_dump($uri->getHost());
                         <div>
                             <span><?= message('old_version', $lang) ?></span>
                         </div>
+                        <button class="js-copy-code">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none">
+                                <path d="M9 15C9 12.1716 9 10.7574 9.87868 9.87868C10.7574 9 12.1716 9 15 9L16 9C18.8284 9 20.2426 9 21.1213 9.87868C22 10.7574 22 12.1716 22 15V16C22 18.8284 22 20.2426 21.1213 21.1213C20.2426 22 18.8284 22 16 22H15C12.1716 22 10.7574 22 9.87868 21.1213C9 20.2426 9 18.8284 9 16L9 15Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M16.9999 9C16.9975 6.04291 16.9528 4.51121 16.092 3.46243C15.9258 3.25989 15.7401 3.07418 15.5376 2.90796C14.4312 2 12.7875 2 9.5 2C6.21252 2 4.56878 2 3.46243 2.90796C3.25989 3.07417 3.07418 3.25989 2.90796 3.46243C2 4.56878 2 6.21252 2 9.5C2 12.7875 2 14.4312 2.90796 15.5376C3.07417 15.7401 3.25989 15.9258 3.46243 16.092C4.51121 16.9528 6.04291 16.9975 9 16.9999" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </button>
                     </div>
-                    <pre class="language-php">
-<code class="language-php">
+                    <?php highlight_php_trimmed(
+                            <<<'PHP'
 $title = ' PHP 8.5 Released ';
 
 $slug = strtolower(
@@ -269,8 +287,8 @@ $slug = strtolower(
 
 var_dump($slug);
 // string(15) "php-85-released"
-</code>
-                    </pre>
+PHP
+                    ); ?>
                 </div>
 
                 <div class="code-container">
@@ -280,9 +298,15 @@ var_dump($slug);
                             <span class="badge-green"><?= message('badge_new', $lang) ?></span>
                             <a target="_blank" href="https://wiki.php.net/rfc/pipe-operator-v3">RFC <span>↗</span></a>
                         </div>
+                        <button class="js-copy-code">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none">
+                                <path d="M9 15C9 12.1716 9 10.7574 9.87868 9.87868C10.7574 9 12.1716 9 15 9L16 9C18.8284 9 20.2426 9 21.1213 9.87868C22 10.7574 22 12.1716 22 15V16C22 18.8284 22 20.2426 21.1213 21.1213C20.2426 22 18.8284 22 16 22H15C12.1716 22 10.7574 22 9.87868 21.1213C9 20.2426 9 18.8284 9 16L9 15Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M16.9999 9C16.9975 6.04291 16.9528 4.51121 16.092 3.46243C15.9258 3.25989 15.7401 3.07418 15.5376 2.90796C14.4312 2 12.7875 2 9.5 2C6.21252 2 4.56878 2 3.46243 2.90796C3.25989 3.07417 3.07418 3.25989 2.90796 3.46243C2 4.56878 2 6.21252 2 9.5C2 12.7875 2 14.4312 2.90796 15.5376C3.07417 15.7401 3.25989 15.9258 3.46243 16.092C4.51121 16.9528 6.04291 16.9975 9 16.9999" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </button>
                     </div>
-                    <pre class="language-php">
-<code class="language-php">
+                    <?php highlight_php_trimmed(
+                            <<<'PHP'
 $title = ' PHP 8.5 Released ';
 
 $slug = $title
@@ -293,8 +317,8 @@ $slug = $title
 
 var_dump($slug);
 // string(15) "php-85-released"
-</code>
-                    </pre>
+PHP
+                    ); ?>
                 </div>
             </div>
         </div>
@@ -314,9 +338,15 @@ var_dump($slug);
                         <div>
                             <span><?= message('old_version', $lang) ?></span>
                         </div>
+                        <button class="js-copy-code">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none">
+                                <path d="M9 15C9 12.1716 9 10.7574 9.87868 9.87868C10.7574 9 12.1716 9 15 9L16 9C18.8284 9 20.2426 9 21.1213 9.87868C22 10.7574 22 12.1716 22 15V16C22 18.8284 22 20.2426 21.1213 21.1213C20.2426 22 18.8284 22 16 22H15C12.1716 22 10.7574 22 9.87868 21.1213C9 20.2426 9 18.8284 9 16L9 15Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M16.9999 9C16.9975 6.04291 16.9528 4.51121 16.092 3.46243C15.9258 3.25989 15.7401 3.07418 15.5376 2.90796C14.4312 2 12.7875 2 9.5 2C6.21252 2 4.56878 2 3.46243 2.90796C3.25989 3.07417 3.07418 3.25989 2.90796 3.46243C2 4.56878 2 6.21252 2 9.5C2 12.7875 2 14.4312 2.90796 15.5376C3.07417 15.7401 3.25989 15.9258 3.46243 16.092C4.51121 16.9528 6.04291 16.9975 9 16.9999" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </button>
                     </div>
-                    <pre class="language-php">
-<code class="language-php">
+                    <?php highlight_php_trimmed(
+                            <<<'PHP'
 readonly class Color
 {
     public function __construct(
@@ -337,8 +367,8 @@ readonly class Color
 
 $blue = new Color(79, 91, 147);
 $transparentBlue = $blue->withAlpha(128);
-</code>
-                    </pre>
+PHP
+                    ); ?>
                 </div>
 
                 <div class="code-container">
@@ -348,9 +378,15 @@ $transparentBlue = $blue->withAlpha(128);
                             <span class="badge-green"><?= message('badge_new', $lang) ?></span>
                             <a target="_blank" href="https://wiki.php.net/rfc/clone_with_v2">RFC <span>↗</span></a>
                         </div>
+                        <button class="js-copy-code">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none">
+                                <path d="M9 15C9 12.1716 9 10.7574 9.87868 9.87868C10.7574 9 12.1716 9 15 9L16 9C18.8284 9 20.2426 9 21.1213 9.87868C22 10.7574 22 12.1716 22 15V16C22 18.8284 22 20.2426 21.1213 21.1213C20.2426 22 18.8284 22 16 22H15C12.1716 22 10.7574 22 9.87868 21.1213C9 20.2426 9 18.8284 9 16L9 15Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M16.9999 9C16.9975 6.04291 16.9528 4.51121 16.092 3.46243C15.9258 3.25989 15.7401 3.07418 15.5376 2.90796C14.4312 2 12.7875 2 9.5 2C6.21252 2 4.56878 2 3.46243 2.90796C3.25989 3.07417 3.07418 3.25989 2.90796 3.46243C2 4.56878 2 6.21252 2 9.5C2 12.7875 2 14.4312 2.90796 15.5376C3.07417 15.7401 3.25989 15.9258 3.46243 16.092C4.51121 16.9528 6.04291 16.9975 9 16.9999" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </button>
                     </div>
-                    <pre class="language-php">
-<code class="language-php">
+                    <?php highlight_php_trimmed(
+                            <<<'PHP'
 readonly class Color
 {
     public function __construct(
@@ -370,8 +406,8 @@ readonly class Color
 
 $blue = new Color(79, 91, 147);
 $transparentBlue = $blue->withAlpha(128);
-</code>
-                    </pre>
+PHP
+                    ); ?>
                 </div>
             </div>
         </div>
@@ -391,17 +427,23 @@ $transparentBlue = $blue->withAlpha(128);
                         <div>
                             <span><?= message('old_version', $lang) ?></span>
                         </div>
+                        <button class="js-copy-code">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none">
+                                <path d="M9 15C9 12.1716 9 10.7574 9.87868 9.87868C10.7574 9 12.1716 9 15 9L16 9C18.8284 9 20.2426 9 21.1213 9.87868C22 10.7574 22 12.1716 22 15V16C22 18.8284 22 20.2426 21.1213 21.1213C20.2426 22 18.8284 22 16 22H15C12.1716 22 10.7574 22 9.87868 21.1213C9 20.2426 9 18.8284 9 16L9 15Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M16.9999 9C16.9975 6.04291 16.9528 4.51121 16.092 3.46243C15.9258 3.25989 15.7401 3.07418 15.5376 2.90796C14.4312 2 12.7875 2 9.5 2C6.21252 2 4.56878 2 3.46243 2.90796C3.25989 3.07417 3.07418 3.25989 2.90796 3.46243C2 4.56878 2 6.21252 2 9.5C2 12.7875 2 14.4312 2.90796 15.5376C3.07417 15.7401 3.25989 15.9258 3.46243 16.092C4.51121 16.9528 6.04291 16.9975 9 16.9999" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </button>
                     </div>
-                    <pre class="language-php">
-<code class="language-php">
+                    <?php highlight_php_trimmed(
+                            <<<'PHP'
 function getPhpVersion(): string
 {
     return 'PHP 8.4';
 }
 
 getPhpVersion(); // No warning
-</code>
-                    </pre>
+PHP
+                    ); ?>
                 </div>
 
                 <div class="code-container">
@@ -412,9 +454,15 @@ getPhpVersion(); // No warning
                             <a target="_blank" href="https://wiki.php.net/rfc/marking_return_value_as_important">RFC
                                 <span>↗</span></a>
                         </div>
+                        <button class="js-copy-code">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none">
+                                <path d="M9 15C9 12.1716 9 10.7574 9.87868 9.87868C10.7574 9 12.1716 9 15 9L16 9C18.8284 9 20.2426 9 21.1213 9.87868C22 10.7574 22 12.1716 22 15V16C22 18.8284 22 20.2426 21.1213 21.1213C20.2426 22 18.8284 22 16 22H15C12.1716 22 10.7574 22 9.87868 21.1213C9 20.2426 9 18.8284 9 16L9 15Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M16.9999 9C16.9975 6.04291 16.9528 4.51121 16.092 3.46243C15.9258 3.25989 15.7401 3.07418 15.5376 2.90796C14.4312 2 12.7875 2 9.5 2C6.21252 2 4.56878 2 3.46243 2.90796C3.25989 3.07417 3.07418 3.25989 2.90796 3.46243C2 4.56878 2 6.21252 2 9.5C2 12.7875 2 14.4312 2.90796 15.5376C3.07417 15.7401 3.25989 15.9258 3.46243 16.092C4.51121 16.9528 6.04291 16.9975 9 16.9999" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </button>
                     </div>
-                    <pre class="language-php">
-<code class="language-php">
+                    <?php highlight_php_trimmed(
+                            <<<'PHP'
 #[\NoDiscard]
 function getPhpVersion(): string
 {
@@ -424,8 +472,8 @@ function getPhpVersion(): string
 getPhpVersion();
 // Warning: The return value of function getPhpVersion() should
 // either be used or intentionally ignored by casting it as (void)
-</code>
-                    </pre>
+PHP
+                    ); ?>
                 </div>
             </div>
         </div>
@@ -445,9 +493,15 @@ getPhpVersion();
                         <div>
                             <span><?= message('old_version', $lang) ?></span>
                         </div>
+                        <button class="js-copy-code">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none">
+                                <path d="M9 15C9 12.1716 9 10.7574 9.87868 9.87868C10.7574 9 12.1716 9 15 9L16 9C18.8284 9 20.2426 9 21.1213 9.87868C22 10.7574 22 12.1716 22 15V16C22 18.8284 22 20.2426 21.1213 21.1213C20.2426 22 18.8284 22 16 22H15C12.1716 22 10.7574 22 9.87868 21.1213C9 20.2426 9 18.8284 9 16L9 15Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M16.9999 9C16.9975 6.04291 16.9528 4.51121 16.092 3.46243C15.9258 3.25989 15.7401 3.07418 15.5376 2.90796C14.4312 2 12.7875 2 9.5 2C6.21252 2 4.56878 2 3.46243 2.90796C3.25989 3.07417 3.07418 3.25989 2.90796 3.46243C2 4.56878 2 6.21252 2 9.5C2 12.7875 2 14.4312 2.90796 15.5376C3.07417 15.7401 3.25989 15.9258 3.46243 16.092C4.51121 16.9528 6.04291 16.9975 9 16.9999" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </button>
                     </div>
-                    <pre class="language-php">
-<code class="language-php">
+                    <?php highlight_php_trimmed(
+                            <<<'PHP'
 final class PostsController
 {
     #[AccessControl(
@@ -460,8 +514,8 @@ final class PostsController
         // ...
     }
 }
-</code>
-                    </pre>
+PHP
+                    ); ?>
                 </div>
 
                 <div class="code-container">
@@ -472,9 +526,15 @@ final class PostsController
                             <a target="_blank" href="https://wiki.php.net/rfc/closures_in_const_expr">RFC <span>↗</span></a>
                             <a target="_blank" href="https://wiki.php.net/rfc/fcc_in_const_expr">RFC <span>↗</span></a>
                         </div>
+                        <button class="js-copy-code">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none">
+                                <path d="M9 15C9 12.1716 9 10.7574 9.87868 9.87868C10.7574 9 12.1716 9 15 9L16 9C18.8284 9 20.2426 9 21.1213 9.87868C22 10.7574 22 12.1716 22 15V16C22 18.8284 22 20.2426 21.1213 21.1213C20.2426 22 18.8284 22 16 22H15C12.1716 22 10.7574 22 9.87868 21.1213C9 20.2426 9 18.8284 9 16L9 15Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M16.9999 9C16.9975 6.04291 16.9528 4.51121 16.092 3.46243C15.9258 3.25989 15.7401 3.07418 15.5376 2.90796C14.4312 2 12.7875 2 9.5 2C6.21252 2 4.56878 2 3.46243 2.90796C3.25989 3.07417 3.07418 3.25989 2.90796 3.46243C2 4.56878 2 6.21252 2 9.5C2 12.7875 2 14.4312 2.90796 15.5376C3.07417 15.7401 3.25989 15.9258 3.46243 16.092C4.51121 16.9528 6.04291 16.9975 9 16.9999" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </button>
                     </div>
-                    <pre class="language-php">
-<code class="language-php">
+                    <?php highlight_php_trimmed(
+                            <<<'PHP'
 final class PostsController
 {
     #[AccessControl(static function (
@@ -490,8 +550,8 @@ final class PostsController
         // ...
     }
 }
-</code>
-                    </pre>
+PHP
+                    ); ?>
                 </div>
             </div>
         </div>
@@ -511,9 +571,15 @@ final class PostsController
                         <div>
                             <span><?= message('old_version', $lang) ?></span>
                         </div>
+                        <button class="js-copy-code">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none">
+                                <path d="M9 15C9 12.1716 9 10.7574 9.87868 9.87868C10.7574 9 12.1716 9 15 9L16 9C18.8284 9 20.2426 9 21.1213 9.87868C22 10.7574 22 12.1716 22 15V16C22 18.8284 22 20.2426 21.1213 21.1213C20.2426 22 18.8284 22 16 22H15C12.1716 22 10.7574 22 9.87868 21.1213C9 20.2426 9 18.8284 9 16L9 15Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M16.9999 9C16.9975 6.04291 16.9528 4.51121 16.092 3.46243C15.9258 3.25989 15.7401 3.07418 15.5376 2.90796C14.4312 2 12.7875 2 9.5 2C6.21252 2 4.56878 2 3.46243 2.90796C3.25989 3.07417 3.07418 3.25989 2.90796 3.46243C2 4.56878 2 6.21252 2 9.5C2 12.7875 2 14.4312 2.90796 15.5376C3.07417 15.7401 3.25989 15.9258 3.46243 16.092C4.51121 16.9528 6.04291 16.9975 9 16.9999" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </button>
                     </div>
-                    <pre class="language-php">
-<code class="language-php">
+                    <?php highlight_php_trimmed(
+                            <<<'PHP'
 $sh = curl_share_init();
 curl_share_setopt($sh, CURLSHOPT_SHARE, CURL_LOCK_DATA_DNS);
 curl_share_setopt($sh, CURLSHOPT_SHARE, CURL_LOCK_DATA_CONNECT);
@@ -522,8 +588,8 @@ $ch = curl_init('https://php.net/');
 curl_setopt($ch, CURLOPT_SHARE, $sh);
 
 curl_exec($ch);
-</code>
-                    </pre>
+PHP
+                    ); ?>
                 </div>
 
                 <div class="code-container">
@@ -535,9 +601,15 @@ curl_exec($ch);
                             <a target="_blank" href="https://wiki.php.net/rfc/curl_share_persistence_improvement">RFC
                                 <span>↗</span></a>
                         </div>
+                        <button class="js-copy-code">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none">
+                                <path d="M9 15C9 12.1716 9 10.7574 9.87868 9.87868C10.7574 9 12.1716 9 15 9L16 9C18.8284 9 20.2426 9 21.1213 9.87868C22 10.7574 22 12.1716 22 15V16C22 18.8284 22 20.2426 21.1213 21.1213C20.2426 22 18.8284 22 16 22H15C12.1716 22 10.7574 22 9.87868 21.1213C9 20.2426 9 18.8284 9 16L9 15Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M16.9999 9C16.9975 6.04291 16.9528 4.51121 16.092 3.46243C15.9258 3.25989 15.7401 3.07418 15.5376 2.90796C14.4312 2 12.7875 2 9.5 2C6.21252 2 4.56878 2 3.46243 2.90796C3.25989 3.07417 3.07418 3.25989 2.90796 3.46243C2 4.56878 2 6.21252 2 9.5C2 12.7875 2 14.4312 2.90796 15.5376C3.07417 15.7401 3.25989 15.9258 3.46243 16.092C4.51121 16.9528 6.04291 16.9975 9 16.9999" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </button>
                     </div>
-                    <pre class="language-php">
-<code class="language-php">
+                    <?php highlight_php_trimmed(
+                            <<<'PHP'
 $sh = curl_share_init_persistent([
     CURL_LOCK_DATA_DNS,
     CURL_LOCK_DATA_CONNECT,
@@ -548,8 +620,8 @@ curl_setopt($ch1, CURLOPT_SHARE, $sh);
 
 // This may now reuse the connection from an earlier SAPI request
 curl_exec($ch);
-</code>
-                    </pre>
+PHP
+                    ); ?>
                 </div>
             </div>
         </div>
@@ -569,14 +641,20 @@ curl_exec($ch);
                         <div>
                             <span><?= message('old_version', $lang) ?></span>
                         </div>
+                        <button class="js-copy-code">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none">
+                                <path d="M9 15C9 12.1716 9 10.7574 9.87868 9.87868C10.7574 9 12.1716 9 15 9L16 9C18.8284 9 20.2426 9 21.1213 9.87868C22 10.7574 22 12.1716 22 15V16C22 18.8284 22 20.2426 21.1213 21.1213C20.2426 22 18.8284 22 16 22H15C12.1716 22 10.7574 22 9.87868 21.1213C9 20.2426 9 18.8284 9 16L9 15Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M16.9999 9C16.9975 6.04291 16.9528 4.51121 16.092 3.46243C15.9258 3.25989 15.7401 3.07418 15.5376 2.90796C14.4312 2 12.7875 2 9.5 2C6.21252 2 4.56878 2 3.46243 2.90796C3.25989 3.07417 3.07418 3.25989 2.90796 3.46243C2 4.56878 2 6.21252 2 9.5C2 12.7875 2 14.4312 2.90796 15.5376C3.07417 15.7401 3.25989 15.9258 3.46243 16.092C4.51121 16.9528 6.04291 16.9975 9 16.9999" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </button>
                     </div>
-                    <pre class="language-php">
-<code class="language-php">
+                    <?php highlight_php_trimmed(
+                            <<<'PHP'
 $lastEvent = $events === []
     ? null
     : $events[array_key_last($events)];
-</code>
-                    </pre>
+PHP
+                    ); ?>
                 </div>
 
                 <div class="code-container">
@@ -586,12 +664,18 @@ $lastEvent = $events === []
                             <span class="badge-green"><?= message('badge_new', $lang) ?></span>
                             <a target="_blank" href="https://wiki.php.net/rfc/array_first_last">RFC <span>↗</span></a>
                         </div>
+                        <button class="js-copy-code">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none">
+                                <path d="M9 15C9 12.1716 9 10.7574 9.87868 9.87868C10.7574 9 12.1716 9 15 9L16 9C18.8284 9 20.2426 9 21.1213 9.87868C22 10.7574 22 12.1716 22 15V16C22 18.8284 22 20.2426 21.1213 21.1213C20.2426 22 18.8284 22 16 22H15C12.1716 22 10.7574 22 9.87868 21.1213C9 20.2426 9 18.8284 9 16L9 15Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M16.9999 9C16.9975 6.04291 16.9528 4.51121 16.092 3.46243C15.9258 3.25989 15.7401 3.07418 15.5376 2.90796C14.4312 2 12.7875 2 9.5 2C6.21252 2 4.56878 2 3.46243 2.90796C3.25989 3.07417 3.07418 3.25989 2.90796 3.46243C2 4.56878 2 6.21252 2 9.5C2 12.7875 2 14.4312 2.90796 15.5376C3.07417 15.7401 3.25989 15.9258 3.46243 16.092C4.51121 16.9528 6.04291 16.9975 9 16.9999" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </button>
                     </div>
-                    <pre class="language-php">
-<code class="language-php">
+                    <?php highlight_php_trimmed(
+                            <<<'PHP'
 $lastEvent = array_last($events);
-</code>
-                    </pre>
+PHP
+                    ); ?>
                 </div>
             </div>
         </div>
@@ -793,7 +877,27 @@ $lastEvent = array_last($events);
     </svg>
 
     <script>
-        Prism.highlightAll()
+        document.addEventListener('DOMContentLoaded', () => {
+            document.addEventListener('click', async (e) => {
+                const btn = e.target.closest('.js-copy-code');
+                if (!btn?.closest('.code-container')) return;
+
+                const code = btn.closest('.code-container').querySelector('code').textContent;
+                if (!navigator.clipboard) return console.error('Clipboard API not available');
+
+                try {
+                    await navigator.clipboard.writeText(code);
+                    const originalHTML = btn.innerHTML;
+                    btn.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"><path d="M5 14L8.5 17.5L19 6.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+                    btn.disabled = true;
+                    await new Promise(r => setTimeout(r, 2000));
+                    btn.innerHTML = originalHTML;
+                    btn.disabled = false;
+                } catch (err) {
+                    console.error('Copy failed:', err);
+                }
+            });
+        })
     </script>
 <?php
 

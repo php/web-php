@@ -25,8 +25,7 @@ function common_header(string $description): void {
 
     \site_header("PHP 8.5 Release Announcement", [
         'current' => 'php85',
-        'css' => ['prism.css', 'php85.css'],
-        'js_files' => ['js/ext/prism.js'],
+        'css' => ['php85.css'],
         'language_switcher' => $languages,
         'theme_switcher' => true,
         'meta_tags' => <<<META
