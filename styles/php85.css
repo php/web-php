@@ -85,10 +85,15 @@ code[class*=language-], pre[class*=language-] {
     margin-left: -30px;
     height: 30px;
     width: 30px;
-    background: url("/images/php8/anchor-white.svg") scroll no-repeat left center / 21px 16px transparent;
+    background: url("/images/php8/anchor.svg") scroll no-repeat left center / 21px 16px transparent;
     text-decoration: none;
     border-bottom: none;
     font-size: 0;
+}
+
+.dark .features-title h2 .genanchor,
+.dark .before-and-after-title-and-description h2 .genanchor {
+    background: url("/images/php8/anchor-white.svg") scroll no-repeat left center / 21px 16px transparent;
 }
 
 .features-title h2:hover .genanchor,
@@ -1127,7 +1132,7 @@ header nav {
 .hero-badge {
     margin-bottom: calc(var(--spacing) * 6);
     background-color: #ffffffa6;
-    border-radius: 3.40282e38px;
+    border-radius: calc(infinity * 1px);
     align-items: center;
     display: inline-flex
 }
@@ -3540,99 +3545,54 @@ footer p:where(.dark,.dark *) {
     color: var(--color-gray-400)
 }
 
-.html {
-    color: #abb2bf
+.php85 .phpcode {
+    padding: 1em;
 }
 
-.constant, .property {
-    color: #0550ae
+.dark .php85 .phpcode::selection {
+    background-color: #333;
 }
 
-.comment {
-    color: #6e7781;
-    font-style: italic
+.php85 .phpcode span.comment {
+    color: #708090;
+    background-color: transparent;
+    font-style: italic;
 }
 
-.string {
-    color: #0a3069
+.php85 .phpcode span.default {
+    color: rgb(213, 51, 84);
+    background-color: transparent;
 }
 
-.keyword {
-    color: #cf222e
+.php85 .phpcode span.keyword {
+    color: #07a;
+    background-color: transparent;
 }
 
-.literal {
-    color: #0550ae
+.php85 .phpcode span.string {
+    color: rgb(80, 119, 0);
+    background-color: transparent;
 }
 
-.type {
-    color: #953800
-}
-
-.variable, .number {
-    color: #0550ae
-}
-
-.function {
-    color: #8250df
-}
-
-.operator {
-    color: #cf222e
-}
-
-.punctuation {
-    color: #24292f
-}
-
-.class {
-    color: #953800
-}
-
-.dark .constant, .dark .property {
-    color: #79c0ff
-}
-
-.dark .comment {
+.dark .php85 .phpcode span.comment {
     color: #8b949e;
-    font-style: italic
+    background-color: transparent;
+    font-style: italic;
 }
 
-.dark .default,
-.dark .string {
-    color: #a5d6ff
+.dark .php85 .phpcode span.default {
+    color: #d2a8ff;
+    background-color: transparent;
 }
 
-.dark .keyword {
-    color: #ff7b72
+.dark .php85 .phpcode span.keyword {
+    color: #ff7b72;
+    background-color: transparent;
 }
 
-.dark .literal {
-    color: #79c0ff
-}
-
-.dark .type {
-    color: #ffa657
-}
-
-.dark .variable, .dark .number {
-    color: #79c0ff
-}
-
-.dark .function {
-    color: #d2a8ff
-}
-
-.dark .operator {
-    color: #ff7b72
-}
-
-.dark .punctuation {
-    color: #c9d1d9
-}
-
-.dark .class {
-    color: #ffa657
+.dark .php85 .phpcode span.string {
+    color: #a5d6ff;
+    background-color: transparent;
 }
 
 .php85 #layout-content a.button-primary {
@@ -3646,7 +3606,7 @@ footer p:where(.dark,.dark *) {
     font-weight: var(--font-weight-semibold);
     color: var(--color-white);
     background-color: #6b58ff;
-    border-radius: 3.40282e38px;
+    border-radius: calc(infinity * 1px);
     justify-content: center;
     align-items: center;
     text-decoration-line: none;
@@ -3694,7 +3654,7 @@ footer p:where(.dark,.dark *) {
     --tw-ring-shadow: var(--tw-ring-inset,) 0 0 0 calc(1px + var(--tw-ring-offset-width)) var(--tw-ring-color, currentcolor);
     box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
     --tw-ring-color: color-mix(in oklab, var(--color-gray-200) 50%, transparent);
-    border-radius: 3.40282e38px;
+    border-radius: calc(infinity * 1px);
     justify-content: center;
     align-items: center;
     text-decoration-line: none;
