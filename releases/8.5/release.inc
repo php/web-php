@@ -509,7 +509,7 @@ final class PostsController
     )]
     public function update(
         Request $request,
-        Post $post
+        Post $post,
     ): Response {
         // ...
     }
@@ -545,7 +545,7 @@ final class PostsController
     })]
     public function update(
         Request $request,
-        Post $post
+        Post $post,
     ): Response {
         // ...
     }
