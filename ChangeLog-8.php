@@ -9,6 +9,113 @@ changelog_header(8, $MINOR_VERSIONS);
 
 <a id="PHP_8_4"></a>
 
+<section class="version" id="8.4.15"><!-- {{{ 8.4.15 -->
+<h3>Version 8.4.15</h3>
+<b><?php release_date('20-Nov-2025'); ?></b>
+<ul><li>Core:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 19934); ?> (CGI with auto_globals_jit=0 causes uouv).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 20073); ?> (Assertion failure in WeakMap offset operations on reference).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 20085); ?> (Assertion failure when combining lazy object get_properties exception with foreach loop).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 19844); ?> (Don't bail when closing resources on shutdown).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 20177); ?> (Accessing overridden private property in get_object_vars() triggers assertion error).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 20270); ?> (Broken parent hook call with named arguments).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 20183); ?> (Stale EG(opline_before_exception) pointer through eval).</li>
+</ul></li>
+<li>DOM:
+<ul>
+  <li>Partially fixed bug <?php githubissuel('php/php-src', 16317); ?> (DOM classes do not allow __debugInfo() overrides to work).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 20281); ?> (\Dom\Document::getElementById() is inconsistent after nodes are removed).</li>
+</ul></li>
+<li>Exif:
+<ul>
+  <li>Fix possible memory leak when tag is empty.</li>
+</ul></li>
+<li>FPM:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 19974); ?> (fpm_status_export_to_zval segfault for parallel execution).</li>
+</ul></li>
+<li>FTP:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 20240); ?> (FTP with SSL: ftp_fput(): Connection timed out on successful writes).</li>
+</ul></li>
+<li>GD:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 20070); ?> (Return type violation in imagefilter when an invalid filter is provided).</li>
+</ul></li>
+<li>Intl:
+<ul>
+  <li>Fix memory leak on error in locale_filter_matches().</li>
+</ul></li>
+<li>LibXML:
+<ul>
+  <li>Fix not thread safe schema/relaxng calls.</li>
+</ul></li>
+<li>MySQLnd:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 8978); ?> (SSL certificate verification fails (port doubled)).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 20122); ?> (getColumnMeta() for JSON-column in MySQL).</li>
+</ul></li>
+<li>Opcache:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 20081); ?> (access to uninitialized vars in preload_load()).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 20121); ?> (JIT broken in ZTS builds on MacOS 15).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 19875); ?> (JIT 1205 segfault on large file compiled in subprocess).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 20012); ?> (heap buffer overflow in jit).</li>
+  <li>Partially fixed bug <?php githubissuel('php/php-src', 17733); ?> (Avoid calling wrong function when reusing file caches across differing environments).</li>
+</ul></li>
+<li>PgSql:
+<ul>
+  <li>Fix memory leak when first string conversion fails.</li>
+  <li>Fix segfaults when attempting to fetch row into a non-instantiable class name.</li>
+</ul></li>
+<li>Phar:
+<ul>
+  <li>Fix memory leak of argument in webPhar.</li>
+  <li>Fix memory leak when setAlias() fails.</li>
+  <li>Fix a bunch of memory leaks in phar_parse_zipfile() error handling.</li>
+  <li>Fix file descriptor/memory leak when opening central fp fails.</li>
+  <li>Fix memleak+UAF when opening temp stream in buildFromDirectory() fails.</li>
+  <li>Fix potential buffer length truncation due to usage of type int instead of type size_t.</li>
+  <li>Fix memory leak when openssl polyfill returns garbage.</li>
+  <li>Fix file descriptor leak in phar_zip_flush() on failure.</li>
+  <li>Fix memory leak when opening temp file fails while trying to open gzip-compressed archive.</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 20302); ?> (Freeing a phar alias may invalidate PharFileInfo objects).</li>
+</ul></li>
+<li>Random:
+<ul>
+  <li>Fix Randomizer::__serialize() w.r.t. INDIRECTs.</li>
+</ul></li>
+<li>Reflection:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 20217); ?> (ReflectionClass::isIterable() incorrectly returns true for classes with property hooks).</li>
+</ul></li>
+<li>SimpleXML:
+<ul>
+  <li>Partially fixed bug <?php githubissuel('php/php-src', 16317); ?> (SimpleXML does not allow __debugInfo() overrides to work).</li>
+</ul></li>
+<li>Streams:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 19798); ?>: XP_SOCKET XP_SSL (Socket stream modules): Incorrect condition for Win32/Win64.</li>
+</ul></li>
+<li>Tidy:
+<ul>
+  <li>Fixed <?php githubissuel('php/php-src', 19021); ?> (improved tidyOptGetCategory detection).</li>
+  <li>Fix UAF in tidy when tidySetErrorBuffer() fails.</li>
+</ul></li>
+<li>XMLReader:
+<ul>
+  <li>Fix arginfo/zpp violations when LIBXML_SCHEMAS_ENABLED is not available.</li>
+</ul></li>
+<li>Windows:
+<ul>
+  <li>Fix <?php githubissuel('php/php-src', 19722); ?> (_get_osfhandle asserts in debug mode when given a socket).</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
+
+
 <section class="version" id="8.4.14"><!-- {{{ 8.4.14 -->
 <h3>Version 8.4.14</h3>
 <b><?php release_date('23-Oct-2025'); ?></b>
