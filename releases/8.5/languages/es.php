@@ -75,5 +75,5 @@ return [
     'bc_casting_non_int_floats' => 'Una advertencia es emitida al convertir floats (o cadenas que parecen floats) a <code>int</code> si no pueden representarse como uno.',
 
     'footer_title' => 'Mejor sintaxis, rendimiento mejorado y seguridad de tipos.',
-    'footer_description' => '<p class="first-paragraph">La lista completa de cambios está registrada en el <a href="/ChangeLog-8.php#PHP_8_5" target="_blank">ChangeLog</a>.</p><p>Por favor consulte la <a href="/manual/en/migration85.php" target="_blank">guía de migración</a> para una lista detallada de nuevas características y cambios incompatibles hacia atrás.</p>',
+    'footer_description' => '<p class="first-paragraph">La lista completa de cambios está registrada en el <a href="/ChangeLog-8.php#PHP_8_5" target="_blank">ChangeLog</a>.</p><p>Por favor consulte la <a href="/manual/es/migration85.php" target="_blank">guía de migración</a> para una lista detallada de nuevas características y cambios incompatibles hacia atrás.</p>',
 ];
