@@ -10,6 +10,7 @@ site_header('Supported Versions', ['css' => ['supported-versions.css']]);
 // support lifetime, add it under a heading with an anchor, and add the anchor
 // and branch names to the array below ('x.y' => '#anchor-name').
 $VERSION_NOTES = [
+	'8.5' => 'https://www.php.net/manual/migration85.php',
 	'8.4' => 'https://www.php.net/manual/migration84.php',
 	'8.3' => 'https://www.php.net/manual/migration83.php',
 	'8.2' => 'https://www.php.net/manual/migration82.php',
