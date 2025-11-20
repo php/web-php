@@ -11090,6 +11090,10 @@ changelog_header(8, $MINOR_VERSIONS);
 <ul>
   <li><?php bugfix(80328); ?> (PhpToken::getAll() confusing name).</li>
 </ul></li>
+<li>URI:
+<ul>
+  <li>Add new URI extension.</li>
+</ul></li>
 <li>XML:
 <ul>
   <li><?php bugfix(76874); ?> (xml_parser_free() should never leak memory).</li>
