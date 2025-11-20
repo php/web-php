@@ -1885,12 +1885,14 @@ header nav {
 .before-and-after-title-and-description p {
     color: var(--color-gray-600);
     text-align: left;
+    text-wrap-style: balance;
 }
 
 @media (min-width: 64rem) {
     .before-and-after-title-and-description p {
         font-size: var(--text-lg);
-        line-height: var(--tw-leading, var(--text-lg--line-height))
+        line-height: var(--tw-leading, var(--text-lg--line-height));
+        text-align: center;
     }
 }
 
