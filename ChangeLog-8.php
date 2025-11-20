@@ -19,6 +19,7 @@ changelog_header(8, $MINOR_VERSIONS);
   <li>Added get_error_handler(), get_exception_handler() functions.</li>
   <li>Added support for casts in constant expressions.</li>
   <li>Added the pipe (|&gt;) operator.</li>
+  <li>Added the #[\DelayedTargetValidation] attribute to delay target errors for internal attributes from compile time to runtime.</li>
   <li>Added support for `final` with constructor property promotion.</li>
   <li>Added support for configuring the URI parser for the FTP/FTPS as well as the SSL/TLS stream wrappers as described in https://wiki.php.net/rfc/url_parsing_api#plugability.</li>
   <li>Added PHP_BUILD_PROVIDER constant.</li>
