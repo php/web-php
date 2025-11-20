@@ -75,5 +75,5 @@ return [
     'bc_casting_non_int_floats' => 'Float’ları (veya float gibi görünen string’leri) <code>int</code>’e dönüştürürken artık uyarı verilir.',
 
     'footer_title' => 'Daha iyi sözdizimi, geliştirilmiş performans ve tip güvenliği.',
-    'footer_description' => '<p class="first-paragraph">Tüm değişikliklerin tam listesi <a href="/ChangeLog-8.php#PHP_8_5" target="_blank">ChangeLog</a>’da kayıtlıdır.</p><p>Yeni özellikler ve geriye uyumsuz değişiklikler için ayrıntılı listeye <a href="/manual/en/migration85.php" target="_blank">göç rehberinden</a> bakabilirsiniz.</p>',
+    'footer_description' => '<p class="first-paragraph">Tüm değişikliklerin tam listesi <a href="/ChangeLog-8.php#PHP_8_5" target="_blank">ChangeLog</a>’da kayıtlıdır.</p><p>Yeni özellikler ve geriye uyumsuz değişiklikler için ayrıntılı listeye <a href="/manual/tr/migration85.php" target="_blank">göç rehberinden</a> bakabilirsiniz.</p>',
 ];
