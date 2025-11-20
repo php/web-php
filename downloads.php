@@ -97,6 +97,7 @@ $os = [
 ];
 
 $versions = [
+    '8.5' => 'version 8.5',
     '8.4' => 'version 8.4',
     '8.3' => 'version 8.3',
     '8.2' => 'version 8.2',
