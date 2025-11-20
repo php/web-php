@@ -16,16 +16,16 @@ return [
 
     'features_pipe_operator_title' => 'Pipe Operatörü',
     'features_pipe_operator_description' => '<p><code>|></code> operatörü, fonksiyonları soldan sağa zincirlemenizi sağlar ve değerleri ara değişken kullanmadan sorunsuz şekilde birden fazla fonksiyona geçirir.</p>',
-    'features_persistent_curl_share_handles_title' => 'Kalıcı cURL Paylaşılan Handles',
-    'features_persistent_curl_share_handles_description' => '<p>Handles artık birden fazla PHP isteği boyunca kalıcı olabilir, aynı hostlara tekrar bağlantı başlatma maliyetini ortadan kaldırır.</p>',
+    'features_persistent_curl_share_handles_title' => 'Kalıcı cURL Share Handle’lar',
+    'features_persistent_curl_share_handles_description' => '<p>Handle’lar artık birden fazla PHP isteği boyunca kalıcı olabilir, aynı hostlara tekrar bağlantı başlatma maliyetini ortadan kaldırır.</p>',
     'features_clone_with_title' => 'Clone With',
     'features_clone_with_description' => '<p>Nesneleri klonlarken özellikleri yeni <code>clone()</code> sözdizimi ile güncellemek mümkündür, bu da <code>readonly</code> sınıflar için "with-er" desenini basitleştirir.</p>',
     'features_uri_extension_title' => 'URI Uzantısı',
-    'features_uri_extension_description' => '<p>PHP 8.5, RFC 3986 ve WHATWG URL standartlarına uygun URL’leri ayrıştırmak, normalize etmek ve yönetmek için yerleşik bir URI uzantısı ekler.</p>',
+    'features_uri_extension_description' => '<p>PHP 8.5,  <em>RFC 3986</em> ve  <em>WHATWG URL</em> standartlarına uygun URL’leri ayrıştırmak, normalize etmek ve yönetmek için yerleşik bir URI uzantısı ekler.</p>',
     'features_no_discard_title' => '#[\NoDiscard] Özelliği',
     'features_no_discard_description' => '<p><code>#[\NoDiscard]</code> özelliği, döndürülen değer kullanılmadığında uyarı verir, böylece hataları önler ve API güvenliğini artırır.</p>',
-    'features_fcc_in_const_expr_title' => 'Sabit İfadelerde Closures ve Birinci Sınıf Callable’lar',
-    'features_fcc_in_const_expr_description' => '<p>Artık statik closures ve birinci sınıf callable’lar sabit ifadelerde kullanılabilir, örneğin attribute parametrelerinde.</p>',
+    'features_fcc_in_const_expr_title' => 'Sabit İfadelerde Closure’lar ve Birinci Sınıf Callable’lar',
+    'features_fcc_in_const_expr_description' => '<p>Artık statik closure’lar ve birinci sınıf callable’lar sabit ifadelerde kullanılabilir, örneğin attribute parametrelerinde.</p>',
 
     'pipe_operator_title' => 'Pipe Operatörü',
     'pipe_operator_description' => '<p>Pipe operatörü, fonksiyon çağrılarını ara değişkenlerle uğraşmadan zincirlemenizi sağlar. Bu, iç içe geçmiş birçok çağrıyı ileri doğru okunabilecek bir zincir ile değiştirmenize olanak tanır.</p><p>Bu özelliğin arka planını öğrenmek için <a href="https://thephp.foundation/blog/2025/07/11/php-85-adds-pipe-operator/" target="_blank" rel="noopener noreferrer">PHP Foundation blogu</a>’na bakabilirsiniz.</p>',
@@ -42,11 +42,11 @@ return [
     'no_discard_title' => '#[\NoDiscard] Özelliği',
     'no_discard_description' => '<p>Bir fonksiyona <code>#[\NoDiscard]</code> ekleyerek PHP, döndürülen değerin kullanılıp kullanılmadığını kontrol eder ve kullanılmadığında uyarı verir. Bu, döndürülen değerin önemli olduğu API’lerde hataları önler.</p>',
 
-    'persistent_curl_share_handles_title' => 'Kalıcı cURL Paylaşılan Handles',
-    'persistent_curl_share_handles_description' => '<p><code>curl_share_init()</code> ile farklı olarak, <code>curl_share_init_persistent()</code> ile oluşturulan handles PHP isteği sonunda yok edilmez. Eğer aynı paylaşılan ayarlara sahip bir persistent handle bulunursa tekrar kullanılır, cURL handle’larının her seferinde başlatılma maliyeti ortadan kalkar.</p>',
+    'persistent_curl_share_handles_title' => 'Kalıcı cURL Paylaşılan Handle’lar',
+    'persistent_curl_share_handles_description' => '<p><code>curl_share_init()</code> ile farklı olarak, <code>curl_share_init_persistent()</code> ile oluşturulan handle’lar PHP isteği sonunda yok edilmez. Eğer aynı paylaşılan ayarlara sahip bir persistent handle bulunursa tekrar kullanılır, cURL handle’larının her seferinde başlatılma maliyeti ortadan kalkar.</p>',
 
-    'fcc_in_const_expr_title' => 'Sabit İfadelerde Closures ve Birinci Sınıf Callable’lar',
-    'fcc_in_const_expr_description' => '<p>Artık statik closures ve birinci sınıf callable’lar sabit ifadelerde kullanılabilir. Bu, attribute parametreleri, özelliklerin ve parametrelerin varsayılan değerleri ve sabitler için geçerlidir.</p>',
+    'fcc_in_const_expr_title' => 'Sabit İfadelerde Closure’lar ve Birinci Sınıf Callable’lar',
+    'fcc_in_const_expr_description' => '<p>Artık statik closure’lar ve birinci sınıf callable’lar sabit ifadelerde kullanılabilir. Bu, attribute parametreleri, özelliklerin ve parametrelerin varsayılan değerleri ve sabitler için geçerlidir.</p>',
 
     'new_classes_title' => 'Ek özellikler ve iyileştirmeler',
     'fatal_error_backtrace' => 'Önemli Hatalar (ör. maksimum yürütme süresini aşmak) artık bir geri izleme içerir.',
@@ -59,7 +59,7 @@ return [
     'partitioned_cookies' => '{0} ve {1} artık "partitioned" anahtarını destekliyor.',
     'get_set_error_handler' => 'Yeni {0} ve {1} fonksiyonları mevcut.',
     'new_dom_element_methods' => 'Yeni {0} ve {1} metodları mevcut.',
-    'grapheme_levenshtein' => '{0} fonksiyonu eklendi.',
+    'grapheme_levenshtein' => '{0} fonksiyon eklendi.',
     'delayed_target_validation' => 'Yeni {0} özniteliği, geçersiz hedefler üzerinde core ve extension özniteliklerinin derleme zamanında hata vermesini engellemek için kullanılabilir.',
 
     'bc_title' => 'Kaldırılan ve geriye uyumluluk kıran değişiklikler',
