@@ -1,6 +1,6 @@
 <?php
 $file = 'unknown';
-$latestPhpVersion = '8.4';
+$latestPhpVersion = '8.5';
 
 if (!isset($options)) {
     $options = [
