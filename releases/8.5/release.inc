@@ -616,7 +616,7 @@ $sh = curl_share_init_persistent([
 ]);
 
 $ch = curl_init('https://php.net/');
-curl_setopt($ch1, CURLOPT_SHARE, $sh);
+curl_setopt($ch, CURLOPT_SHARE, $sh);
 
 // This may now reuse the connection from an earlier SAPI request
 curl_exec($ch);
