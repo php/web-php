@@ -42,6 +42,11 @@
     margin: 0;
 }
 
+.php85 .navbar .navbar__nav {
+    margin: 0;
+    margin-left: 24px;
+}
+
 .php85 #layout-content a:link,
 .php85 #layout-content a:visited {
     color: inherit;
