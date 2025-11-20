@@ -358,9 +358,14 @@ if (!isset($config["languages"])) {
 
 <?php if (!empty($config['intro'])):?>
 <div id="intro" class="clearfix">
-  <div class="container">
-    <?php echo $config['intro'];?>
-  </div>
+    <div class="hero-background">
+        <div class="hero-grid-overlay"></div>
+        <div class="hero-glow"></div>
+    </div>
+
+    <div class="container">
+        <?php echo $config['intro'];?>
+    </div>
 </div>
 <?php endif;?>
 
