@@ -10,6 +10,7 @@ const LANGUAGES = [
     'en' => 'English',
     'es' => 'Español',
     'ru' => 'Русский',
+    'tr' => 'Türkçe',
     'uk' => 'Українська',
     'zh' => '简体中文',
 ];
