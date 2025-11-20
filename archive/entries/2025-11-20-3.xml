@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+  <title>PHP 8.5.0 Released!</title>
+  <id>https://www.php.net/archive/2025.php#2025-11-20-3</id>
+  <published>2025-11-20T14:20:19+00:00</published>
+  <updated>2025-11-20T14:20:19+00:00</updated>
+  <link href="https://www.php.net/index.php#2025-11-20-3" rel="alternate" type="text/html"/>
+  <link href="https://www.php.net/archive/2025.php#2025-11-20-3" rel="via" type="text/html"/>
+  <category term="releases" label="New PHP release"/>
+  <category term="frontpage" label="PHP.net frontpage news"/>
+  <content type="xhtml">
+    <div xmlns="http://www.w3.org/1999/xhtml"><p>The PHP development team announces the immediate availability of PHP 8.5.0. This release marks the latest minor release of the PHP language.</p>
+
+<p>PHP 8.5 comes with numerous improvements and new features such as:</p>
+<ul>
+  <li>New "URI" extension</li>
+  <li>New pipe operator (|&gt;)</li>
+  <li>Clone With</li>
+  <li>New #[\NoDiscard] attribute</li>
+  <li>Support for closures, casts, and first class callables in constant expressions</li>
+  <li>And much much more...</li>
+</ul>
+<p>
+  For source downloads of PHP 8.5.0 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
+  Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
+  The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-8.php#8.5.0">ChangeLog</a>.
+</p>
+<p>
+  The <a href="https://php.net/manual/en/migration85.php">migration guide</a> is available in the PHP Manual.
+  Please consult it for the detailed list of new features and backward incompatible changes.
+</p>
+<p>Kudos to all the contributors and supporters!</p>
+</div>
+  </content>
+</entry>
