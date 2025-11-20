@@ -3,9 +3,504 @@ $_SERVER['BASE_PAGE'] = 'ChangeLog-8.php';
 include_once __DIR__ . '/include/prepend.inc';
 include_once __DIR__ . '/include/changelogs.inc';
 
-$MINOR_VERSIONS = ['8.4', '8.3', '8.2', '8.1', '8.0'];
+$MINOR_VERSIONS = ['8.5', '8.4', '8.3', '8.2', '8.1', '8.0'];
 changelog_header(8, $MINOR_VERSIONS);
 ?>
+
+<a id="PHP_8_5"></a>
+
+<section class="version" id="8.5.0"><!-- {{{ 8.5.0 -->
+<h3>Version 8.5.0</h3>
+<b><?php release_date('20-Nov-2025'); ?></b>
+<ul><li>Core:
+<ul>
+  <li>Added the #[\NoDiscard] attribute to indicate that a function's return value is important and should be consumed.</li>
+  <li>Added the (void) cast to indicate that not using a value is intentional.</li>
+  <li>Added get_error_handler(), get_exception_handler() functions.</li>
+  <li>Added support for casts in constant expressions.</li>
+  <li>Added the pipe (|&gt;) operator.</li>
+  <li>Added the #[\DelayedTargetValidation] attribute to delay target errors for internal attributes from compile time to runtime.</li>
+  <li>Added support for `final` with constructor property promotion.</li>
+  <li>Added support for configuring the URI parser for the FTP/FTPS as well as the SSL/TLS stream wrappers as described in https://wiki.php.net/rfc/url_parsing_api#plugability.</li>
+  <li>Added PHP_BUILD_PROVIDER constant.</li>
+  <li>Added PHP_BUILD_DATE constant.</li>
+  <li>Added support for Closures and first class callables in constant expressions.</li>
+  <li>Add support for backtraces for fatal errors.</li>
+  <li>Add clone-with support to the clone() function.</li>
+  <li>Add RFC 3986 and WHATWG URL compliant APIs for URL parsing and manipulation (kocsismate, timwolla)</li>
+  <li>Fixed AST printing for immediately invoked Closure.</li>
+  <li>Properly handle __debugInfo() returning an array reference.</li>
+  <li>Properly handle reference return value from __toString().</li>
+  <li>Improved error message of UnhandledMatchError for zend.exception_string_param_max_len=0.</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 15753); ?> and <?php githubissuel('php/php-src', 16198); ?> (Bind traits before parent class).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 17951); ?> (memory_limit is not always limited by max_memory_limit).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 20183); ?> (Stale EG(opline_before_exception) pointer through eval).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 20113); ?> (Missing new Foo(...) error in constant expressions).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 19844); ?> (Don't bail when closing resources on shutdown).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 20177); ?> (Accessing overridden private property in get_object_vars() triggers assertion error).</li>
+  <li>Fix OSS-Fuzz #447521098 (Fatal error during sccp shift eval).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 20002); ?> (Broken build on *BSD with MSAN).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 19352); ?> (Cross-compilation with musl C library).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 19765); ?> (object_properties_load() bypasses readonly property checks).</li>
+  <li>Fixed hard_timeout with --enable-zend-max-execution-timers.</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 19839); ?> (Incorrect HASH_FLAG_HAS_EMPTY_IND flag on userland array).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 19823); ?> (register_argc_argv deprecation emitted twice when using OPcache).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 19480); ?> (error_log php.ini cannot be unset when open_basedir is configured).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 19719); ?> (Allow empty statements before declare(strict_types)).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 19934); ?> (CGI with auto_globals_jit=0 causes uouv).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 19613); ?> (Stale array iterator pointer).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 19679); ?> (zend_ssa_range_widening may fail to converge).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 19681); ?> (PHP_EXPAND_PATH broken with bash 5.3.0).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 18850); ?> (Repeated inclusion of file with __halt_compiler() triggers "Constant already defined" warning).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 19476); ?> (pipe operator fails to correctly handle returning by reference).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 19081); ?> (Wrong lineno in property error with constructor property promotion).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 17959); ?> (Relax missing trait fatal error to error exception).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 18033); ?> (NULL-ptr dereference when using register_tick_function in destructor).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 18026); ?> (Improve "expecting token" error for ampersand).</li>
+  <li>The report_memleaks INI directive has been deprecated.</li>
+  <li>Fixed OSS-Fuzz #439125710 (Pipe cannot be used in write context).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 19548); ?> (Shared memory violation on property inheritance).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 19544); ?> (GC treats ZEND_WEAKREF_TAG_MAP references as WeakMap references).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 18373); ?> (Don't substitute self/parent with anonymous class).</li>
+  <li>Fix support for non-userland stream notifiers.</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 19305); ?> (Operands may be being released during comparison).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 19306); ?> (Generator can be resumed while fetching next value from delegated Generator).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 19326); ?> (Calling Generator::throw() on a running generator with a non-Generator delegate crashes).</li>
+  <li>Fix OSS-Fuzz #427814452 (pipe compilation fails with assert).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 16665); ?> (\array and \callable should not be usable in class_alias).</li>
+  <li>Use `clock_gettime_nsec_np()` for high resolution timer on macOS if available.</li>
+  <li>Make `clone()` a function.</li>
+  <li>Introduced the TAILCALL VM, enabled by default when compiling with Clang&gt;=19 on x86_64 or aarch64.</li>
+  <li>Enacted the follow-up phase of the "Path to Saner Increment/Decrement operators" RFC, meaning that incrementing non-numeric strings is now deprecated. (Girgias).</li>
+  <li>Various closure binding issues are now deprecated.</li>
+  <li>Constant redeclaration has been deprecated.</li>
+  <li>Marks the stack as non-executable on Haiku.</li>
+  <li>Deriving $_SERVER['argc'] and $_SERVER['argv'] from the query string is now deprecated.</li>
+  <li>Using null as an array offset or when calling array_key_exists() is now deprecated.</li>
+  <li>The disable_classes INI directive has been removed.</li>
+  <li>The locally predefined variable $http_response_header is deprecated.</li>
+  <li>Non-canonical cast names (boolean), (integer), (double), and (binary) have been deprecated.</li>
+  <li>The $exclude_disabled parameter of the get_defined_functions() function has been deprecated, as it no longer has any effect since PHP 8.0.</li>
+  <li>Terminating case statements with a semicolon instead of a colon has been deprecated.</li>
+  <li>The backtick operator as an alias for shell_exec() has been deprecated.</li>
+  <li>Returning null from __debugInfo() has been deprecated.</li>
+  <li>Support #[\Override] on properties.</li>
+  <li>Destructing non-array values (other than NULL) using [] or list() now emits a warning.</li>
+  <li>Casting floats that are not representable as ints now emits a warning.</li>
+  <li>Casting NAN to other types now emits a warning.</li>
+  <li>Implement <?php githubissuel('php/php-src', 15680); ?> (Enhance zend_dump_op_array to properly represent non-printable characters in string literals).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 17442); ?> (Engine UAF with reference assign and dtor).</li>
+  <li>Do not use RTLD_DEEPBIND if dlmopen is available.</li>
+</ul></li>
+<li>BCMath:
+<ul>
+  <li>Simplify `bc_divide()` code.</li>
+  <li>If the result is 0, n_scale is set to 0.</li>
+  <li>If size of BC_VECTOR array is within 64 bytes, stack area is now used.</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 20006); ?> (Power of 0 of BcMath number causes UB).</li>
+</ul></li>
+<li>Bz2:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 19810); ?> (Broken bzopen() stream mode validation).</li>
+</ul></li>
+<li>CLI:
+<ul>
+  <li>Add --ini=diff to print INI settings changed from the builtin default.</li>
+  <li>Drop support for -z CLI/CGI flag.</li>
+  <li>Fixed <?php githubissuel('php/php-src', 17956); ?> - development server 404 page does not adapt to mobiles.</li>
+  <li>Fix useless "Failed to poll event" error logs due to EAGAIN in CLI server with PHP_CLI_SERVER_WORKERS.</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 19461); ?> (Improve error message on listening error with IPv6 address).</li>
+</ul></li>
+<li>COM:
+<ul>
+  <li>Fixed property access of PHP objects wrapped in variant.</li>
+  <li>Fixed method calls for PHP objects wrapped in variant.</li>
+</ul></li>
+<li>Curl:
+<ul>
+  <li>Added CURLFOLLOW_ALL, CURLFOLLOW_OBEYCODE and CURLFOLLOW_FIRSTONLY values for CURLOPT_FOLLOWLOCATION curl_easy_setopt option.</li>
+  <li>Added curl_multi_get_handles().</li>
+  <li>Added curl_share_init_persistent().</li>
+  <li>Added CURLINFO_USED_PROXY, CURLINFO_HTTPAUTH_USED, and CURLINFO_PROXYAUTH_USED support to curl_getinfo.</li>
+  <li>Add support for CURLINFO_CONN_ID in curl_getinfo() (thecaliskan)</li>
+  <li>Add support for CURLINFO_QUEUE_TIME_T in curl_getinfo() (thecaliskan)</li>
+  <li>Add support for CURLOPT_SSL_SIGNATURE_ALGORITHMS.</li>
+  <li>The curl_close() function has been deprecated.</li>
+  <li>The curl_share_close() function has been deprecated.</li>
+  <li>Fix cloning of CURLOPT_POSTFIELDS when using the clone operator instead of the curl_copy_handle() function to clone a CurlHandle.</li>
+</ul></li>
+<li>Date:
+<ul>
+  <li>Fix undefined behaviour problems regarding integer overflow in extreme edge cases.</li>
+  <li>The DATE_RFC7231 and DateTimeInterface::RFC7231 constants have been deprecated.</li>
+  <li>Fixed date_sunrise() and date_sunset() with partial-hour UTC offset.</li>
+  <li>Fixed <?php githubissuel('php/php-src', 17159); ?>: "P" format for ::createFromFormat swallows string literals.</li>
+  <li>The __wakeup() magic method of DateTimeInterface, DateTime, DateTimeImmutable, DateTimeZone, DateInterval, and DatePeriod has been deprecated in favour of the __unserialize() magic method.</li>
+</ul></li>
+<li>DOM:
+<ul>
+  <li>Added Dom\Element::$outerHTML.</li>
+  <li>Added Dom\Element::insertAdjacentHTML().</li>
+  <li>Added $children property to ParentNode implementations.</li>
+  <li>Make cloning DOM node lists, maps, and collections fail.</li>
+  <li>Added Dom\Element::getElementsByClassName().</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 18877); ?> (\Dom\HTMLDocument querySelectorAll selecting only the first when using ~ and :has).</li>
+  <li>Fix getNamedItemNS() incorrect namespace check.</li>
+</ul></li>
+<li>Enchant:
+<ul>
+  <li>Added enchant_dict_remove_from_session().</li>
+  <li>Added enchant_dict_remove().</li>
+  <li>Fix missing empty string checks.</li>
+</ul></li>
+<li>EXIF:
+<ul>
+  <li>Add OffsetTime* Exif tags.</li>
+  <li>Added support to retrieve Exif from HEIF file.</li>
+  <li>Fix OSS-Fuzz #442954659 (zero-size box in HEIF file causes infinite loop).</li>
+  <li>Fix OSS-Fuzz #442954659 (Crash in exif_scan_HEIF_header).</li>
+  <li>Various hardening fixes to HEIF parsing.</li>
+</ul></li>
+<li>FileInfo:
+<ul>
+  <li>The finfo_close() function has been deprecated.</li>
+  <li>The $context parameter of the finfo_buffer() function has been deprecated as it is ignored.</li>
+  <li>Upgrade to file 5.46.</li>
+  <li>Change return type of finfo_close() to true.</li>
+</ul></li>
+<li>Filter:
+<ul>
+  <li>Added support for configuring the URI parser for FILTER_VALIDATE_URL as described in https://wiki.php.net/rfc/url_parsing_api#plugability.</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 16993); ?> (filter_var_array with FILTER_VALIDATE_INT|FILTER_NULL_ON_FAILURE should emit warning for invalid filter usage).</li>
+</ul></li>
+<li>FPM:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 19817); ?> (Decode SCRIPT_FILENAME issue in php 8.5).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 19989); ?> (PHP 8.5 FPM access log lines also go to STDERR).</li>
+  <li>Fixed <?php githubissuel('php/php-src', 17645); ?> (FPM with httpd ProxyPass does not decode script path).</li>
+  <li>Make FPM access log limit configurable using log_limit.</li>
+  <li>Fixed failed debug assertion when php_admin_value setting fails.</li>
+  <li>Fixed <?php githubissuel('php/php-src', 8157); ?> (post_max_size evaluates .user.ini too late in php-fpm).</li>
+</ul></li>
+<li>GD:
+<ul>
+  <li><?php bugfix(68629); ?> (Transparent artifacts when using imagerotate).</li>
+  <li><?php bugfix(64823); ?> (ZTS GD fails to find system TrueType font).</li>
+  <li>Fix incorrect comparison with result of php_stream_can_cast().</li>
+  <li>The imagedestroy() function has been deprecated.</li>
+</ul></li>
+<li>Iconv:
+<ul>
+  <li>Extends the ICONV_CONST preprocessor for illumos/solaris.</li>
+</ul></li>
+<li>Intl:
+<ul>
+  <li>Bumped ICU requirement to ICU &gt;= 57.1.</li>
+  <li>IntlDateFormatter::setTimeZone()/datefmt_set_timezone() throws an exception with uninitialised classes or clone failure.</li>
+  <li>Added DECIMAL_COMPACT_SHORT/DECIMAL_COMPACT_LONG for NumberFormatter class.</li>
+  <li>Added Locale::isRightToLeft to check if a locale is written right to left.</li>
+  <li>Added null bytes presence in locale inputs for Locale class.</li>
+  <li>Added grapheme_levenshtein() function.</li>
+  <li>Added Locale::addLikelySubtags/Locale::minimizeSubtags to handle adding/removing likely subtags to a locale.</li>
+  <li>Added IntlListFormatter class to format a list of items with a locale, operands types and units.</li>
+  <li>Added grapheme_strpos(), grapheme_stripos(), grapheme_strrpos(), grapheme_strripos(), grapheme_substr(), grapheme_strstr(), grapheme_stristr() and grapheme_levenshtein() functions add $locale parameter (Yuya Hamada).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 11952); ?> (Fix locale strings canonicalization for IntlDateFormatter and NumberFormatter).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 18566); ?> ([intl] Weird numeric sort in Collator).</li>
+  <li>Fix return value on failure for resourcebundle count handler.</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 19307); ?> (PGO builds of shared ext-intl are broken).</li>
+  <li>Intl's internal error mechanism has been modernized so that it indicates more accurately which call site caused what error. Moreover, some ext/date exceptions have been wrapped inside a IntlException now.</li>
+  <li>The intl.error_level INI setting has been deprecated.</li>
+</ul></li>
+<li>LDAP:
+<ul>
+  <li>Allow ldap_get_option to retrieve global option by allowing NULL for connection instance ($ldap).</li>
+</ul></li>
+<li>MBstring:
+<ul>
+  <li>Updated Unicode data tables to Unicode 17.0.</li>
+</ul></li>
+<li>MySQLi:
+<ul>
+  <li>Fixed bugs <?php githubissuel('php/php-src', 17900); ?> and <?php githubissuel('php/php-src', 8084); ?> (calling mysqli::__construct twice).</li>
+  <li>The mysqli_execute() alias function has been deprecated.</li>
+</ul></li>
+<li>MySQLnd:
+<ul>
+  <li>Added mysqlnd.collect_memory_statistics to ini quick reference.</li>
+</ul></li>
+<li>ODBC:
+<ul>
+  <li>Removed driver-specific build flags and support.</li>
+  <li>Remove ODBCVER and assume ODBC 3.5.</li>
+</ul></li>
+<li>Opcache:
+<ul>
+  <li>Make OPcache non-optional (Arnaud, timwolla)</li>
+  <li>Added opcache.file_cache_read_only.</li>
+  <li>Updated default value of opcache.jit_hot_loop.</li>
+  <li>Log a warning when opcache lock file permissions could not be changed.</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 20012); ?> (heap buffer overflow in jit).</li>
+  <li>Partially fixed bug <?php githubissuel('php/php-src', 17733); ?> (Avoid calling wrong function when reusing file caches across differing environments).</li>
+  <li>Disallow changing opcache.memory_consumption when SHM is already set up.</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 15074); ?> (Compiling opcache statically into ZTS PHP fails).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 17422); ?> (OPcache bypasses the user-defined error handler for deprecations).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 19301); ?> (opcache build failure).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 20081); ?> (access to uninitialized vars in preload_load()).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 20121); ?> (JIT broken in ZTS builds on MacOS 15).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 19875); ?> (JIT 1205 segfault on large file compiled in subprocess).</li>
+  <li>Fixed segfault in function JIT due to NAN to bool warning.</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 19984); ?> (Double-free of EG(errors)/persistent_script-&gt;warnings on persist of already persisted file).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 19889); ?> (race condition in zend_runtime_jit(), zend_jit_hot_func()).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 19669); ?> (assertion failure in zend_jit_trace_type_to_info_ex).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 19831); ?> (function JIT may not deref property value).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 19486); ?> (Incorrect opline after deoptimization).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 19601); ?> (Wrong JIT stack setup on aarch64/clang).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 19388); ?> (Broken opcache.huge_code_pages).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 19657); ?> (Build fails on non-glibc/musl/freebsd/macos/win platforms).</li>
+  <li>Fixed ZTS OPcache build on Cygwin.</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 19493); ?> (JIT variable not stored before YIELD).</li>
+</ul></li>
+<li>OpenSSL:
+<ul>
+  <li>Added openssl.libctx INI that allows to select the OpenSSL library context type and convert various parts of the extension to use the custom libctx.</li>
+  <li>Add $digest_algo parameter to openssl_public_encrypt() and openssl_private_decrypt() functions.</li>
+  <li>Implement #81724 (openssl_cms_encrypt only allows specific ciphers).</li>
+  <li>Implement #80495 (Enable to set padding in openssl_(sign|verify).</li>
+  <li>Implement #47728 (openssl_pkcs7_sign ignores new openssl flags).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 19994); ?> (openssl_get_cipher_methods inconsistent with fetching).</li>
+  <li>Fixed build when --with-openssl-legacy-provider set.</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 19369); ?> (8.5 | Regression in openssl_sign() - support for alias algorithms appears to be broken).</li>
+  <li>The $key_length parameter for openssl_pkey_derive() has been deprecated.</li>
+</ul></li>
+<li>Output:
+<ul>
+  <li>Fixed calculation of aligned buffer size.</li>
+</ul></li>
+<li>PCNTL:
+<ul>
+  <li>Extend pcntl_waitid with rusage parameter.</li>
+</ul></li>
+<li>PCRE:
+<ul>
+  <li>Remove PCRE2_EXTRA_ALLOW_LOOKAROUND_BSK from pcre compile options.</li>
+</ul></li>
+<li>PDO:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 20095); ?> (Incorrect class name in deprecation message for PDO mixins).</li>
+  <li>Driver specific methods and constants in the PDO class are now deprecated.</li>
+  <li>The "uri:" DSN scheme has been deprecated due to security concerns with DSNs coming from remote URIs.</li>
+</ul></li>
+<li>PDO_ODBC:
+<ul>
+  <li>Fetch larger block sizes and better handle SQL_NO_TOTAL when calling SQLGetData.</li>
+</ul></li>
+<li>PDO_PGSQL:
+<ul>
+  <li>Added Iterable support for PDO::pgsqlCopyFromArray.</li>
+  <li>Implement <?php githubissuel('php/php-src', 15387); ?> Pdo\Pgsql::setAttribute(PDO::ATTR_PREFETCH, 0) or Pdo\Pgsql::prepare(…, [ PDO::ATTR_PREFETCH =&gt; 0 ]) make fetch() lazy instead of storing the whole result set in memory (Guillaume Outters)</li>
+</ul></li>
+<li>PDO_SQLITE:
+<ul>
+  <li>Add PDO\Sqlite::ATTR_TRANSACTION_MODE connection attribute.</li>
+  <li>Implement <?php githubissuel('php/php-src', 17321); ?>: Add setAuthorizer to Pdo\Sqlite.</li>
+  <li>PDO::sqliteCreateCollation now throws a TypeError if the callback has a wrong return type.</li>
+  <li>Added Pdo_Sqlite::ATTR_BUSY_STATEMENT constant to check if a statement is currently executing.</li>
+  <li>Added Pdo_Sqlite::ATTR_EXPLAIN_STATEMENT constant to set a statement in either EXPLAIN_MODE_PREPARED, EXPLAIN_MODE_EXPLAIN, EXPLAIN_MODE_EXPLAIN_QUERY_PLAN modes.</li>
+  <li>Fix bug <?php githubissuel('php/php-src', 13952); ?> (sqlite PDO::quote silently corrupts strings with null bytes) by throwing on null bytes.</li>
+</ul></li>
+<li>PGSQL:
+<ul>
+  <li>Added pg_close_stmt to close a prepared statement while allowing its name to be reused.</li>
+  <li>Added Iterable support for pgsql_copy_from.</li>
+  <li>pg_connect checks if connection_string contains any null byte, pg_close_stmt check if the statement contains any null byte.</li>
+  <li>Added pg_service to get the connection current service identifier.</li>
+  <li>Fix segfaults when attempting to fetch row into a non-instantiable class name.</li>
+</ul></li>
+<li>Phar:
+<ul>
+  <li>Fix potential buffer length truncation due to usage of type int instead of type size_t.</li>
+  <li>Fixed memory leaks when verifying OpenSSL signature.</li>
+</ul></li>
+<li>POSIX:
+<ul>
+  <li>Added POSIX_SC_OPEN_MAX constant to get the number of file descriptors a process can handle.</li>
+  <li>posix_ttyname() sets last_error to EBADF on invalid file descriptors, posix_isatty() raises E_WARNING on invalid file descriptors, posix_fpathconf checks invalid file descriptors.</li>
+  <li>posix_kill and posix_setpgid throws a ValueError on invalid process_id.</li>
+  <li>posix_setpgid throws a ValueError on invalid process_group_id, posix_setrlimit throws a ValueError on invalid soft_limit and hard_limit arguments.</li>
+</ul></li>
+<li>Random:
+<ul>
+  <li>Moves from /dev/urandom usage to arc4random_buf on Haiku.</li>
+</ul></li>
+<li>Reflection:
+<ul>
+  <li>Added ReflectionConstant::getExtension() and ::getExtensionName().</li>
+  <li>Added ReflectionProperty::getMangledName() method.</li>
+  <li>ReflectionConstant is no longer final.</li>
+  <li>The setAccessible() methods of various Reflection objects have been deprecated, as those no longer have an effect.</li>
+  <li>ReflectionClass::getConstant() for constants that do not exist has been deprecated.</li>
+  <li>ReflectionProperty::getDefaultValue() for properties without default values has been deprecated.</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 12856); ?> (ReflectionClass::getStaticPropertyValue() returns UNDEF zval for uninitialized typed properties).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 15766); ?> (ReflectionClass::__toString() should have better output for enums).</li>
+  <li>Fix <?php githubissuel('php/php-src', 19691); ?> (getModifierNames() not reporting asymmetric visibility).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 17927); ?> (Reflection: have some indication of property hooks in `_property_string()`).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 19187); ?> (ReflectionNamedType::getName() prints nullable type when retrieved from ReflectionProperty::getSettableType()).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 20217); ?> (ReflectionClass::isIterable() incorrectly returns true for classes with property hooks).</li>
+</ul></li>
+<li>SAPI:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 18582); ?> and #81451: http_response_code() does not override the status code generated by header().</li>
+</ul></li>
+<li>Session:
+<ul>
+  <li>session_start() throws a ValueError on option argument if not a hashmap or a TypeError if read_and_close value is not compatible with int.</li>
+  <li>Added support for partitioned cookies.</li>
+  <li>Fix RC violation of session SID constant deprecation attribute.</li>
+  <li>Fixed <?php githubissuel('php/php-src', 19197); ?>: build broken with ZEND_STRL usage with memcpy when implemented as macro.</li>
+</ul></li>
+<li>SimpleXML:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 12231); ?> (SimpleXML xpath should warn when returning other return types than node lists).</li>
+</ul></li>
+<li>SNMP:
+<ul>
+  <li>snmpget, snmpset, snmp_get2, snmp_set2, snmp_get3, snmp_set3 and SNMP::__construct() throw an exception on invalid hostname, community timeout and retries arguments.</li>
+</ul></li>
+<li>SOAP:
+<ul>
+  <li>Added support for configuring the URI parser for SoapClient::__doRequest() as described in https://wiki.php.net/rfc/url_parsing_api#plugability.</li>
+  <li>Implement request #55503 (Extend __getTypes to support enumerations).</li>
+  <li>Implement request #61105 (Support Soap 1.2 SoapFault Reason Text lang attribute).</li>
+  <li><?php bugfix(49169); ?> (SoapServer calls wrong function, although "SOAP action" header is correct).</li>
+  <li>Fix namespace handling of WSDL and XML schema in SOAP, fixing at least <?php githubissuel('php/php-src', 16320); ?> and bug #68576.</li>
+  <li><?php bugfix(70951); ?> (Segmentation fault on invalid WSDL cache).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 19773); ?> (SIGSEGV due to uninitialized soap_globals-&gt;lang_en).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 19226); ?> (Segfault when spawning new thread in soap extension).</li>
+</ul></li>
+<li>Sockets:
+<ul>
+  <li>Added IPPROTO_ICMP/IPPROTO_ICMPV6 to create raw socket for ICMP usage.</li>
+  <li>Added TCP_FUNCTION_BLK to change the TCP stack algorithm on FreeBSD.</li>
+  <li>Added IP_BINDANY for a socket to bind to any address.</li>
+  <li>Added SO_BUSY_POOL to reduce packets poll latency.</li>
+  <li>Added UDP_SEGMENT support to optimise multiple large datagrams over UDP if the kernel and hardware supports it.</li>
+  <li>Added SHUT_RD, SHUT_WR and SHUT_RDWR constants for socket_shutdown().</li>
+  <li>Added TCP_FUNCTION_ALIAS, TCP_REUSPORT_LB_NUMA, TCP_REUSPORT_LB_NUMA_NODOM, TCP_REUSPORT_LB_CURDOM, TCP_BBR_ALGORITHM constants.</li>
+  <li>socket_set_option() catches possible overflow with SO_RCVTIMEO/SO_SNDTIMEO with timeout setting on windows.</li>
+  <li>socket_create_listen() throws an exception on invalid port value.</li>
+  <li>socket_bind() throws an exception on invalid port value.</li>
+  <li>socket_sendto() throws an exception on invalid port value.</li>
+  <li>socket_addrinfo_lookup throws an exception on invalid hints value types.</li>
+  <li>socket_addrinfo_lookup throws an exception if any of the hints value overflows.</li>
+  <li>socket_addrinfo_lookup throws an exception if one or more hints entries has an index as numeric.</li>
+  <li>socket_set_option with the options MCAST_LEAVE_GROUP/MCAST_LEAVE_SOURCE_GROUP will throw an exception if its value is not a valid array/object.</li>
+  <li>socket_getsockname/socket_create/socket_bind handled AF_PACKET family socket.</li>
+  <li>socket_set_option for multicast context throws a ValueError when the socket family is not of AF_INET/AF_INET6 family.</li>
+</ul></li>
+<li>Sodium:
+<ul>
+  <li>Fix overall theoretical overflows on zend_string buffer allocations.</li>
+</ul></li>
+<li>SPL:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 20101); ?> (SplHeap/SplPriorityQueue serialization exposes INDIRECTs).</li>
+  <li>Improve __unserialize() hardening for SplHeap/SplPriorityQueue.</li>
+  <li>Deprecate ArrayObject and ArrayIterator with objects.</li>
+  <li>Unregistering all autoloaders by passing the spl_autoload_call() function as a callback argument to spl_autoload_unregister() has been deprecated. Instead if this is needed, one should iterate over the return value of spl_autoload_functions() and call spl_autoload_unregister() on each value.</li>
+  <li>The SplObjectStorage::contains(), SplObjectStorage::attach(), and SplObjectStorage::detach() methods have been deprecated in favour of SplObjectStorage::offsetExists(), SplObjectStorage::offsetSet(), and SplObjectStorage::offsetUnset() respectively.</li>
+</ul></li>
+<li>Sqlite:
+<ul>
+  <li>Added Sqlite3Stmt::busy to check if a statement is still being executed.</li>
+  <li>Added Sqlite3Stmt::explain to produce an explain query plan from the statement.</li>
+  <li>Added Sqlite3Result::fetchAll to return all results at once from a query.</li>
+</ul></li>
+<li>Standard:
+<ul>
+  <li>Add HEIF/HEIC support to getimagesize.</li>
+  <li>Added support for partitioned cookies.</li>
+  <li>Implement #71517 (Implement SVG support for getimagesize() and friends).</li>
+  <li>Implement <?php githubissuel('php/php-src', 19188); ?>: Add support for new INI mail.cr_lf_mode.</li>
+  <li>Optimized PHP html_entity_decode function.</li>
+  <li>Minor optimization to array_chunk().</li>
+  <li>Optimized pack().</li>
+  <li>Fixed crypt() tests on musl when using --with-external-libcrypt (Michael Orlitzky).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 18062); ?> (is_callable(func(...), callable_name: $name) for first class callables returns wrong name).</li>
+  <li>Added array_first() and array_last().</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 18823); ?> (setlocale's 2nd and 3rd argument ignores strict_types).</li>
+  <li>Fixed exit code handling of sendmail cmd and added warnings.</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 18897); ?> (printf: empty precision is interpreted as precision 6, not as precision 0).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 20257); ?> (mail() heap overflow with an empty message in lf mode).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 20201); ?> (AVIF images misdetected as HEIF after introducing HEIF support in getimagesize()).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 19926); ?> (reset internal pointer earlier while splicing array while COW violation flag is still set).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 19801); ?> (leaks in var_dump() and debug_zval_dump()).</li>
+  <li>Fixed <?php githubissuel('php/php-src', 14402); ?> (SplPriorityQueue, SplMinHeap, and SplMaxHeap lost their data on serialize()).</li>
+  <li>Fixed <?php githubissuel('php/php-src', 19610); ?> (Deprecation warnings in functions taking as argument).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 19577); ?> (Avoid integer overflow when using a small offset and PHP_INT_MAX with LimitIterator).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 19153); ?> (#[\Attribute] validation should error on trait/interface/enum/abstract class).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 19070); ?> (setlocale($type, NULL) should not be deprecated).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 16649); ?> (UAF during array_splice).</li>
+  <li>Passing strings which are not one byte long to ord() is now deprecated.</li>
+  <li>Passing integers outside the interval [0, 255] to chr() is now deprecated.</li>
+  <li>The socket_set_timeout() alias function has been deprecated.</li>
+  <li>Passing null to readdir(), rewinddir(), and closedir() to use the last opened directory has been deprecated.</li>
+</ul></li>
+<li>Streams:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 16889); ?> (stream_select() timeout useless for pipes on Windows).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 19798); ?>: XP_SOCKET XP_SSL (Socket stream modules): Incorrect condition for Win32/Win64.</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 14506); ?> (Closing a userspace stream inside a userspace handler causes heap corruption).</li>
+  <li>Avoid double conversion to string in php_userstreamop_readdir().</li>
+</ul></li>
+<li>Tests:
+<ul>
+  <li>Allow to shuffle tests even in non-parallel mode.</li>
+</ul></li>
+<li>Tidy:
+<ul>
+  <li>tidy::__construct/parseFile/parseString methods throw an exception if the configuration argument is invalid.</li>
+  <li>Fixed <?php githubissuel('php/php-src', 19021); ?> (improved tidyOptGetCategory detection).</li>
+</ul></li>
+<li>Tokenizer:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 19507); ?> (Corrupted result after recursive tokenization during token_get_all()).</li>
+</ul></li>
+<li>URI:
+<ul>
+  <li>Add new URI extension.</li>
+</ul></li>
+<li>Windows:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 10992); ?> (Improper long path support for relative paths).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 16843); ?> (Windows phpize builds ignore source subfolders).</li>
+  <li>Fix <?php githubissuel('php/php-src', 19722); ?> (_get_osfhandle asserts in debug mode when given a socket).</li>
+</ul></li>
+<li>XML:
+<ul>
+  <li>The xml_parser_free() function has been deprecated.</li>
+</ul></li>
+<li>XMLWriter:
+<ul>
+  <li>Improved performance and reduce memory consumption.</li>
+</ul></li>
+<li>XSL:
+<ul>
+  <li>Implement request #30622 (make $namespace parameter functional).</li>
+</ul></li>
+<li>Zlib:
+<ul>
+  <li>gzfile, gzopen and readgzfile, their "use_include_path" argument is now a boolean.</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 16883); ?> (gzopen() does not use the default stream context when opening HTTP URLs).</li>
+  <li>Implemented <?php githubissuel('php/php-src', 17668); ?> (zlib streams should support locking).</li>
+</ul></li>
+<li>Zip:
+<ul>
+  <li>Fixed missing zend_release_fcall_info_cache on the following methods ZipArchive::registerProgressCallback() and ZipArchive::registerCancelCallback() on failure.</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
+
 
 <a id="PHP_8_4"></a>
 
