@@ -19,21 +19,17 @@ foreach ((new NewsHandler())->getConferences() as $entry) {
     $link = preg_replace('~^(http://php.net/|https://www.php.net/)~', '', $entry["id"]);
     $id = parse_url($entry["id"], PHP_URL_FRAGMENT);
     $date = date_format(date_create($entry["updated"]), 'Y-m-d');
-    $content .= '<div class="newsentry">';
-    $content .= '<h3 class="newstitle title"><a href="' . $MYSITE . $link . '" id="' . $id . '">' . $entry["title"] . '</a></h3>';
-    $content .= '<div class="newsimage">';
 
-    if (isset($entry["newsImage"])) {
-        $content .= sprintf('<a href="%s"><img src="/images/news/%s"></a>', $entry["newsImage"]["link"], $entry["newsImage"]["content"]);
-    }
-
+    $content .= '<div class="news__item">';
+    $content .= '<div class="news__content">';
+    $content .= '<div class="news__date">' . $date . '</div>';
+    $content .= '<div class="news__title"><a href="' . $MYSITE . $link . '" id="' . $id . '">' . $entry["title"] . '</a></div>';
+    $content .= '<div class="news__text">' . $entry["content"] . '</div>';
     $content .= '</div>';
-    $content .= '<div class="newscontent">';
-    $content .= $entry["content"];
+    $content .= '<div class="news__image">';
+    $content .= sprintf('<a href="%s"><img src="/images/news/%s"></a>', $entry["newsImage"]["link"], $entry["newsImage"]["content"]);
     $content .= '</div>';
     $content .= '</div>';
-
-    $panels .= sprintf('<p class="panel"><a href="%s">%s</a></p>', $entry["newsImage"]["link"], $entry["title"]);
 }
 $content .= "</div>";
 
