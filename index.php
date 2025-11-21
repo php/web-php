@@ -66,12 +66,12 @@ foreach ((new NewsHandler())->getFrontPageNews() as $entry) {
     $date_w3c = date_format($date, DATE_W3C);
     $content .= <<<NEWSENTRY
 <article class="newsentry">
-  <header class="title">
+  <div class="title">
     <time datetime="$date_w3c">$date_human</time>
     <h2 class="newstitle">
       <a href="{$MYSITE}{$link}" id="{$id}">{$entry["title"]}</a>
     </h2>
-  </header>
+  </div>
   <div class="newscontent">
     {$entry["content"]}
   </div>

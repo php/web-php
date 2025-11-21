@@ -441,7 +441,7 @@ EOT;
     return $retval;
 }
 
-function site_header(?string $title = NULL, array $config = []): void
+function site_header(?string $title = null, array $config = []): void
 {
     global $MYSITE, $LANG;
 
@@ -453,6 +453,7 @@ function site_header(?string $title = NULL, array $config = []): void
         "lang" => $LANG,
         "current" => "",
         "meta-navigation" => [],
+        "theme_switcher" => true,
         'classes' => '',
         'layout_span' => 9,
         "cache" => false,

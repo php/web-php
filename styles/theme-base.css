@@ -546,7 +546,7 @@ pre.info {
 
 
 #layout {
-    margin: 0 auto 1.5rem;
+    margin: 0 auto;
     clear:both;
 }
 
@@ -609,37 +609,6 @@ pre.info {
 }
 #results_nav_list li.current {
     font-weight: bolder;
-}
-/* Footer styling */
-
-body > footer {
-  clear: both;
-  overflow: auto;
-  line-height:3rem;
-}
-body > footer .footer-content {
-  margin: 1.5rem auto 0 ;
-  padding:0 1.5rem;
-  -moz-box-sizing:border-box;
-  box-sizing:border-box;
-}
-
-body > footer ul {
-    margin:0;
-    padding:0;
-}
-
-body > footer .footmenu li {
-  display: inline-block;
-  margin:0 0.75rem;
-}
-body > footer a {
-  display:inline-block;
-  border-bottom:0;
-}
-body > footer a:hover,
-body > footer a:focus {
-    color:var(--light-magenta-color);
 }
 
 /* {{{ ElePHPants photo stream */
@@ -1427,6 +1396,7 @@ aside.tips div.inner {
 }
 .newsentry h2 {
   font-weight:normal;
+  border-bottom: 1px dotted #000;
 }
 .newsentry h2 .release-state {
   float: right;
