@@ -1416,6 +1416,7 @@ td {
 }
 
 .news__item {
+    font-family: var(--font-sans);
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -1433,6 +1434,9 @@ td {
 }
 
 .news__content {
+    font-size: var(--text-lg);
+    line-height: var(--tw-leading, var(--text-lg--line-height));
+    color: var(--color-gray-600);
 }
 
 .news__date {
@@ -1448,12 +1452,12 @@ td {
 #layout-content .news__title a,
 #layout-content .news__title a:link,
 #layout-content .news__title a:visited {
-    color: var(--color-gray-900);
-    font-weight: var(--font-weight-medium);
-    font-size: var(--text-2xl);
-    line-height: calc(var(--spacing) * 6);
+    color: var(--color-gray-800);
+    font-weight: var(--font-weight-bold);
     text-decoration: none;
     border: 0;
+    font-size: var(--text-3xl);
+    line-height: var(--tw-leading, var(--text-3xl--line-height));
 }
 
 .news__text {

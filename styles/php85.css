@@ -773,7 +773,8 @@ body:where(.dark,.dark *) {
     margin-bottom: calc(var(--spacing) * 4);
     width: calc(var(--spacing) * 7);
     height: calc(var(--spacing) * 7);
-    color: #6b58ff
+    color: #6b58ff;
+    display: block;
 }
 
 .features-col svg:where(.dark,.dark *) {
