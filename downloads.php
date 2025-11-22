@@ -67,6 +67,7 @@ $os = [
         'variants' => [
             'linux-debian' => 'Debian',
             'linux-fedora' => 'Fedora',
+            'linux-almalinux' => 'AlmaLinux',
             'linux-redhat' => 'RedHat',
             'linux-ubuntu' => 'Ubuntu',
             'linux-docker' => 'Docker',
@@ -90,6 +91,7 @@ $os = [
             'windows-scoop' => 'Scoop',
             'windows-winget' => 'Winget',
             'windows-docker' => 'Docker',
+            'windows-wsl-almalinux' => 'WSL/AlmaLinux',
             'windows-wsl-debian' => 'WSL/Debian',
             'windows-wsl-ubuntu' => 'WSL/Ubuntu',
         ],
