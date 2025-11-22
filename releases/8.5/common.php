@@ -9,6 +9,7 @@ include_once __DIR__ . '/../../include/prepend.inc';
 const LANGUAGES = [
     'en' => 'English',
     'es' => 'Español',
+    'ja' => '日本語',
     'pt_BR' => 'Brazilian Portuguese',
     'ru' => 'Русский',
     'tr' => 'Türkçe',
