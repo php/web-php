@@ -75,7 +75,7 @@ community to test whether no inadvertent changes have been made, and
 whether no regressions have been introduced.
 </p>
 
-<h3>Source Builds:</h3>
+<h2 id="source">Source Builds</h2>
 <?php if (!empty($QA_RELEASES['releases'])) : ?>
   <?php $plural = count($QA_RELEASES['releases']) > 1 ? 's' : ''; ?>
 
@@ -103,10 +103,10 @@ whether no regressions have been introduced.
       </ul>
 	<?php endforeach; ?>
 <?php else: ?>
-	<span class='lihack'>There are no QA releases available at the moment to test.</span>
+	<p>There are no QA releases available at the moment to test.</p>
 <?php endif; ?>
 
-<h3>Windows Builds:</h3>
+<h2 id="windows">Windows Builds</h2>
 <?php
 $winQaFile = __DIR__ . '/backend/win-qa-releases.json';
 $winQaBase = 'https://downloads.php.net/~windows/qa/';
