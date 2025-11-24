@@ -28,10 +28,10 @@ return [
     'features_fcc_in_const_expr_description' => '<p>Closures estáticas e first-class callables agora podem ser usadas em expressões constantes, como parâmetros de atributos.</p>',
 
     'pipe_operator_title' => 'Operador Pipe',
-    'pipe_operator_description' => '<p>O operador pipe permite encadear chamadas de função sem lidar com variáveis intermediárias. Isso substitui chamadas aninhadas por um fluxo mais legível de cima para baixo.</p><p>Saiba mais sobre o histórico desse recurso no <a href="https://thephp.foundation/blog/2025/07/11/php-85-adds-pipe-operator/" target="_blank" rel="noopener noreferrer">blog da The PHP Foundation</a>.</p>',
+    'pipe_operator_description' => '<p>O operador pipe permite encadear chamadas de função sem lidar com variáveis intermediárias. Isso substitui chamadas aninhadas por um fluxo mais legível de cima para baixo.</p><p>Saiba mais sobre os bastidores desse recurso no <a href="https://thephp.foundation/blog/2025/07/11/php-85-adds-pipe-operator/" target="_blank" rel="noopener noreferrer">blog da The PHP Foundation</a>.</p>',
 
     'array_first_last_title' => 'Funções array_first() e array_last()',
-    'array_first_last_description' => '<p>As funções <code>array_first()</code> e <code>array_last()</code> retornam, respectivamente, o primeiro ou o último valor de um array. Se o array estiver vazio, retornam <code>null</code> (facilitando o uso com o operador <code>??</code>).</p>',
+    'array_first_last_description' => '<p>As funções <code>array_first()</code> e <code>array_last()</code> retornam, respectivamente, o primeiro ou o último valor de um array. Se o array estiver vazio, retornam <code>null</code>, o que facilita o uso com o operador <code>??</code>.</p>',
 
     'clone_with_title' => 'Clone With',
     'clone_with_description' => '<p>Agora é possível modificar propriedades durante a clonagem passando um array associativo para a função <code>clone()</code>. Isso simplifica o padrão “with-er” para classes <code>readonly</code>.</p>',
@@ -40,13 +40,13 @@ return [
     'uri_extension_description' => '<p>A nova extensão URI, sempre disponível, fornece APIs para analisar e modificar URIs e URLs seguindo os padrões RFC 3986 e WHATWG URL.</p><p>Baseada nas bibliotecas <a href="https://uriparser.github.io/">uriparser</a> (RFC 3986) e <a href="https://lexbor.com/">Lexbor</a> (WHATWG URL).</p><p>Saiba mais sobre esse recurso no <a href="https://thephp.foundation/blog/2025/10/10/php-85-uri-extension/" target="_blank" rel="noopener noreferrer">blog da The PHP Foundation</a>.</p>',
 
     'no_discard_title' => 'Atributo #[\NoDiscard]',
-    'no_discard_description' => '<p>Ao marcar uma função com <code>#[\NoDiscard]</code>, o PHP verificará se o valor retornado foi utilizado e emitirá um aviso caso contrário. Isso melhora a segurança de APIs em que o retorno é importante, mas pode ser facilmente ignorado.</p><p>O cast <code>(void)</code> pode ser usado para indicar que o valor não será utilizado intencionalmente.</p>',
+    'no_discard_description' => '<p>Ao marcar uma função com <code>#[\NoDiscard]</code>, o PHP verificará se o valor retornado foi usado e emitirá um aviso caso não seja. Isso aumenta a segurança de APIs em que o retorno é importante, mas pode ser facilmente ignorado.</p><p>O cast <code>(void)</code> pode ser usado para indicar que o valor está sendo descartado intencionalmente.</p>',
 
     'persistent_curl_share_handles_title' => 'cURL Share Handles Persistentes',
-    'persistent_curl_share_handles_description' => '<p>Diferente de <code>curl_share_init()</code>, handles criados com <code>curl_share_init_persistent()</code> não são destruídos ao final da requisição PHP. Se um handle com as mesmas opções já existir, ele será reutilizado, evitando custo desnecessário de inicialização.</p>',
+    'persistent_curl_share_handles_description' => '<p>Diferente de <code>curl_share_init()</code>, handles criados com <code>curl_share_init_persistent()</code> não são destruídos ao final da requisição PHP. Se um handle persistente com o mesmo conjunto de opções for encontrado, ele será reutilizado, evitando o custo de inicializar o cURL a cada requisição.</p>',
 
     'fcc_in_const_expr_title' => 'Closures e First-Class Callables em Expressões Constantes',
-    'fcc_in_const_expr_description' => '<p>Closures estáticas e first-class callables agora podem ser usadas em expressões constantes, incluindo parâmetros de atributos, valores padrão de propriedades e parâmetros, e constantes.</p>',
+    'fcc_in_const_expr_description' => '<p>Closures estáticas e first-class callables agora podem ser usadas em expressões constantes, incluindo parâmetros de atributos, valores padrão de propriedades e parâmetros, além de constantes.</p>',
 
     'new_classes_title' => 'Recursos e melhorias adicionais',
     'fatal_error_backtrace' => 'Erros fatais (como tempo máximo de execução excedido) agora exibem um backtrace.',
@@ -74,6 +74,6 @@ return [
     'bc_non_array_destructuring' => 'Desestruturar valores que não sejam arrays (exceto <code>null</code>) usando {0} ou {1} agora emite um aviso.',
     'bc_casting_non_int_floats' => 'Agora um aviso é emitido ao converter floats (ou strings que parecem floats) para <code>int</code> quando o valor não pode ser representado como inteiro.',
 
-    'footer_title' => 'Sintaxe melhor, desempenho aprimorado e mais segurança de tipos.',
+    'footer_title' => 'Melhor desempenho, sintaxe aprimorada e maior segurança de tipos.',
     'footer_description' => '<p class="first-paragraph">A lista completa de mudanças está registrada no <a href="/ChangeLog-8.php#PHP_8_5" target="_blank">ChangeLog</a>.</p><p>Consulte o <a href="/manual/pt_BR/migration85.php" target="_blank">guia de migração</a> para uma lista detalhada de novos recursos e alterações incompatíveis.</p>',
 ];
