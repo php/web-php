@@ -55,9 +55,9 @@ final class UserNoteService
         $repo = strtolower($LANG);
         // Link target to add a note to the current manual page,
         // and it's extended form with a [+] image
-            $addnotelink = '/manual/add-note.php?sect=' . $filename .
-                   '&amp;repo=' . $repo .
-                   '&amp;redirect=' . $_SERVER['BASE_HREF'];
+        $addnotelink = '/manual/add-note.php?sect=' . $filename .
+            '&amp;repo=' . $repo .
+            '&amp;redirect=' . $_SERVER['BASE_HREF'];
         $addnotesnippet = make_link(
             $addnotelink,
             "＋<small>$addNote</small>",
@@ -71,12 +71,12 @@ final class UserNoteService
 
         $userContributedNotes = autogen('user_contributed_notes', $LANG);
         echo <<<END_USERNOTE_HEADER
-<section id="usernotes">
- <div class="head">
-  <span class="action">{$addnotesnippet}</span>
-  <h3 class="title">$userContributedNotes {$noteCountHtml}</h3>
- </div>
-END_USERNOTE_HEADER;
+        <section id="usernotes">
+        <div class="head">
+        <span class="action">{$addnotesnippet}</span>
+        <h3 class="title">$userContributedNotes {$noteCountHtml}</h3>
+        </div>
+        END_USERNOTE_HEADER;
 
         // If we have no notes, then inform the user
         if ($num_notes === 0) {
@@ -125,18 +125,18 @@ END_USERNOTE_HEADER;
             }
             $rredir_filename = urlencode($redir_filename);
             $votediv = <<<VOTEDIV
-  <div class="votes">
-    <div id="Vu{$note->id}">
-    <a href="/manual/vote-note.php?id={$note->id}&amp;page={$rredir_filename}&amp;vote=up" title="Vote up!" class="usernotes-voteu">up</a>
-    </div>
-    <div id="Vd{$note->id}">
-    <a href="/manual/vote-note.php?id={$note->id}&amp;page={$rredir_filename}&amp;vote=down" title="Vote down!" class="usernotes-voted">down</a>
-    </div>
-    <div class="tally" id="V{$note->id}" title="{$rate}">
-    {$vote}
-    </div>
-  </div>
-VOTEDIV;
+              <div class="votes">
+                <div id="Vu{$note->id}">
+                <a href="/manual/vote-note.php?id={$note->id}&amp;page={$rredir_filename}&amp;vote=up" title="Vote up!" class="usernotes-voteu">up</a>
+                </div>
+                <div id="Vd{$note->id}">
+                <a href="/manual/vote-note.php?id={$note->id}&amp;page={$rredir_filename}&amp;vote=down" title="Vote down!" class="usernotes-voted">down</a>
+                </div>
+                <div class="tally" id="V{$note->id}" title="{$rate}">
+                {$vote}
+                </div>
+              </div>
+            VOTEDIV;
         } else {
             $votediv = null;
         }
@@ -173,12 +173,12 @@ VOTEDIV;
 
         echo <<<USER_NOTE_TEXT
 
-  <div class="note" id="{$note->id}">{$votediv}{$name}{$admin}<div class="date" title="$fdatestr"><strong>{$datestr}</strong></div>
-  <div class="text" id="Hcom{$note->id}">
-{$text}
-  </div>
- </div>
-USER_NOTE_TEXT;
+          <div class="note" id="{$note->id}">{$votediv}{$name}{$admin}<div class="date" title="$fdatestr"><strong>{$datestr}</strong></div>
+          <div class="text" id="Hcom{$note->id}">
+        {$text}
+          </div>
+         </div>
+        USER_NOTE_TEXT;
     }
 
     // Clean out the content of one user note for printing to HTML
@@ -230,7 +230,7 @@ USER_NOTE_TEXT;
             ($target ?: "_new"),
             htmlspecialchars($url, ENT_QUOTES | ENT_IGNORE),
             ($target ?: "_new"),
-                    $windowprops,
+            $windowprops,
             ($linktext ?: $url),
         );
     }
