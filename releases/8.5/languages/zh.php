@@ -41,7 +41,7 @@ return [
     'clone_with_description' => '<p>现在可以在对象克隆时通过向 <code>clone()</code> 传递关联数组来更新属性。这让 <code>readonly</code> 类的 with-er 模式变得简单明了。</p>',
 
     'uri_extension_title' => 'URI 扩展',
-    'uri_extension_description' => '<p>全新的、始终可用的 URI 扩展提供了一组 API，可根据 RFC 3986 和 WHATWG URL 标准安全地解析和修改 URI 与 URL。</p><p>由 <a href="https://uriparser.github.io/">uriparser</a>（RFC 3986）和 <a href="https://lexbor.com/">Lexbor</a>（WHATWG URL）库驱动。</p><p>在 <a href="https://thephp.foundation/blog/2025/10/10/php-85-uri-extension/" target="_blank" rel="noopener noreferrer">The PHP Foundation 的博客</a>中了解更多背景。</p>',
+    'uri_extension_description' => '<p>全新的、始终可用的 URI 扩展提供了一组 API，可根据 RFC 3986 和 WHATWG URL 标准安全地解析和修改 URI 与 URL。</p><p>由 <a href="https://uriparser.github.io/" target="_blank" rel="noopener noreferrer">uriparser</a>（RFC 3986）和 <a href="https://lexbor.com/" target="_blank" rel="noopener noreferrer">Lexbor</a>（WHATWG URL）库驱动。</p><p>在 <a href="https://thephp.foundation/blog/2025/10/10/php-85-uri-extension/" target="_blank" rel="noopener noreferrer">The PHP Foundation 的博客</a>中了解更多背景。</p>',
 
     'no_discard_title' => '#[\NoDiscard] 属性',
     'no_discard_description' => '<p>为函数添加 <code>#[\NoDiscard]</code> 属性后，PHP 会检查返回值是否被使用，若未使用则发出警告。这样可以提高 API 的安全性，避免关键返回值被忽略。</p><p>可以使用 <code>(void)</code> 来显式表示“我就是不使用这个结果”。</p>',

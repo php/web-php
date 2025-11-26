@@ -37,7 +37,7 @@ return [
     'clone_with_description' => '<p><code>clone()</code> 関数に連想配列を渡すことで、オブジェクトのクローン時にプロパティを更新することができるようになります。これによって、<code>readonly</code> クラスの "with-er" パターンを簡単に実装することができるようになります。</p>',
 
     'uri_extension_title' => 'URI 拡張モジュール',
-    'uri_extension_description' => '<p>常に有効な新しい URI 拡張モジュールは、RFC 3986 と WHATWG URL 標準にしたがって URI や URL を安全にパース・編集できる API を提供します。</p><p><a href="https://uriparser.github.io/">uriparser</a> (RFC 3986) と <a href="https://lexbor.com/">Lexbor</a> (WHATWG URL) ライブラリを利用しています。</p><p>この機能の背景は <a href="https://thephp.foundation/blog/2025/10/10/php-85-uri-extension/" target="_blank" rel="noopener noreferrer">PHP Foundation のブログ</a>をお読みください。</p>',
+    'uri_extension_description' => '<p>常に有効な新しい URI 拡張モジュールは、RFC 3986 と WHATWG URL 標準にしたがって URI や URL を安全にパース・編集できる API を提供します。</p><p><a href="https://uriparser.github.io/" target="_blank" rel="noopener noreferrer">uriparser</a> (RFC 3986) と <a href="https://lexbor.com/" target="_blank" rel="noopener noreferrer">Lexbor</a> (WHATWG URL) ライブラリを利用しています。</p><p>この機能の背景は <a href="https://thephp.foundation/blog/2025/10/10/php-85-uri-extension/" target="_blank" rel="noopener noreferrer">PHP Foundation のブログ</a>をお読みください。</p>',
 
     'no_discard_title' => '#[\NoDiscard] アトリビュート',
     'no_discard_description' => '<p><code>#[\NoDiscard]</code> アトリビュートを関数に追加すると、戻り値が利用されたかを PHP がチェックし、されていなければ警告を出します。これにより、戻り値が重要なのにそれを利用することをうっかり忘れやすい API の安全性を高めることができます。</p><p>関連する <code>(void)</code> キャストを使うと、戻り値を使っていないのが意図的であることを明示できます。</p>',
