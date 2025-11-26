@@ -23,7 +23,7 @@ return [
     'features_persistent_curl_share_handles_title' => '持久化 cURL Share 句柄',
     'features_persistent_curl_share_handles_description' => '<p>句柄现在可以在多个 PHP 请求之间保持，不再需要重复初始化到同一主机的连接。</p>',
     'features_clone_with_title' => 'Clone With',
-    'features_clone_with_description' => '<p>使用新的 <code>clone()</code> 语法可以克隆对象并更新属性，让 <code>readonly</code> 类的 with-er 模式变得简单。</p>',
+    'features_clone_with_description' => '<p>使用新的 <code>clone()</code> 语法可以克隆对象并更新属性，让 <code>readonly</code> 类的 "with-er" 模式变得简单。</p>',
     'features_uri_extension_title' => 'URI 扩展',
     'features_uri_extension_description' => '<p>PHP 8.5 增加了内置的 URI 扩展，用于按照 <em>RFC 3986</em> 和 <em>WHATWG URL</em> 标准解析、规范化和处理 URL。</p>',
     'features_no_discard_title' => '#[\NoDiscard] 属性',
@@ -41,7 +41,7 @@ return [
     'clone_with_description' => '<p>现在可以在对象克隆时通过向 <code>clone()</code> 传递关联数组来更新属性。这让 <code>readonly</code> 类的 with-er 模式变得简单明了。</p>',
 
     'uri_extension_title' => 'URI 扩展',
-    'uri_extension_description' => '<p>新的常驻 URI 扩展提供了安全解析和修改 URI、URL 的 API，遵循 RFC 3986 和 WHATWG URL 标准。</p><p>由 <a href="https://uriparser.github.io/" target="_blank" rel="noopener noreferrer">uriparser</a>（RFC 3986）和 <a href="https://lexbor.com/" target="_blank" rel="noopener noreferrer">Lexbor</a>（WHATWG URL）库驱动。</p><p>在 <a href="https://thephp.foundation/blog/2025/10/10/php-85-uri-extension/" target="_blank" rel="noopener noreferrer">The PHP Foundation 的博客</a>中了解更多背景。</p>',
+    'uri_extension_description' => '<p>全新的、始终可用的 URI 扩展提供了一组 API，可根据 RFC 3986 和 WHATWG URL 标准安全地解析和修改 URI 与 URL。</p><p>由 <a href="https://uriparser.github.io/" target="_blank" rel="noopener noreferrer">uriparser</a>（RFC 3986）和 <a href="https://lexbor.com/" target="_blank" rel="noopener noreferrer">Lexbor</a>（WHATWG URL）库驱动。</p><p>在 <a href="https://thephp.foundation/blog/2025/10/10/php-85-uri-extension/" target="_blank" rel="noopener noreferrer">The PHP Foundation 的博客</a>中了解更多背景。</p>',
 
     'no_discard_title' => '#[\NoDiscard] 属性',
     'no_discard_description' => '<p>为函数添加 <code>#[\NoDiscard]</code> 属性后，PHP 会检查返回值是否被使用，若未使用则发出警告。这样可以提高 API 的安全性，避免关键返回值被忽略。</p><p>可以使用 <code>(void)</code> 来显式表示“我就是不使用这个结果”。</p>',
@@ -50,13 +50,13 @@ return [
     'persistent_curl_share_handles_description' => '<p>与 <code>curl_share_init()</code> 不同，由 <code>curl_share_init_persistent()</code> 创建的句柄在请求结束时不会销毁。如果发现具有相同共享选项的持久化句柄，将会复用，从而避免每次初始化 cURL 句柄的开销。</p>',
 
     'fcc_in_const_expr_title' => '常量表达式中的闭包和 First-class 可调用',
-    'fcc_in_const_expr_description' => '<p>静态闭包和 First-class 可调用现在可以用于常量表达式，包括属性参数、属性/参数默认值以及常量等。</p>',
+    'fcc_in_const_expr_description' => '<p>静态闭包和 First-class 可调用现在可以用于常量表达式，包括属性参数、属性和参数默认值以及常量等。</p>',
 
     'new_classes_title' => '更多特性与改进',
     'fatal_error_backtrace' => '致命错误（如超出最大执行时间）现在会包含回溯信息。',
     'const_attribute_target' => '属性现在可以作用于常量。',
     'override_attr_properties' => '{0} 属性现在可以用于类属性。',
-    'deprecated_traits_constants' => '{0} 属性现在可用于 traits 和常量。',
+    'deprecated_traits_constants' => '{0} 属性现在可以用于 traits 和常量。',
     'asymmetric_static_properties' => '静态属性现在支持不对称可见性。',
     'final_promoted_properties' => '属性在构造器属性提升中可以被标记为 <code>final</code>。',
     'closure_getCurrent' => '新增 <code>Closure::getCurrent()</code> 方法，简化匿名函数的递归。',
@@ -78,6 +78,6 @@ return [
     'bc_non_array_destructuring' => '对非数组值（除 <code>null</code>）使用 {0} 或 {1} 进行解构现在会触发警告。',
     'bc_casting_non_int_floats' => '当浮点数（或看起来像浮点数的字符串）无法表示为 <code>int</code> 时，强制转换为 <code>int</code> 会发出警告。',
 
-    'footer_title' => '更好的语法、更高的性能、更安全的类型系统。',
-    'footer_description' => '<p class="first-paragraph">完整的变更列表记录在 <a href="/ChangeLog-8.php#PHP_8_5" target="_blank">ChangeLog</a> 中。</p><p>如需查看详细的新特性与兼容性变更，请查阅 <a href="/manual/zh/migration85.php" target="_blank">迁移指南</a>。</p>',
+    'footer_title' => '更好的语法、更高的性能以及更强的类型安全性。',
+    'footer_description' => '<p class="first-paragraph">完整的变更列表记录在 <a href="/ChangeLog-8.php#PHP_8_5" target="_blank">ChangeLog</a> 中。</p><p>如需查看详细的新特性与兼容性变更，请查阅<a href="/manual/zh/migration85.php" target="_blank">迁移指南</a>。</p>',
 ];
