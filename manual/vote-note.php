@@ -57,12 +57,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $error = "Incorrect answer! Please try again.";
       }
       else {
-        if ($_REQUEST['vote'] === 'up') {
-          $N[$_REQUEST['id']]->upvotes++;
-        }
-        elseif ($_REQUEST['vote'] === 'down') {
-          $N[$_REQUEST['id']]->downvotes++;
-        }
         $hash = substr(md5($_REQUEST['page']), 0, 16);
         $notes_file = $_SERVER['DOCUMENT_ROOT'] . "/backend/notes/" . substr($hash, 0, 2) . "/$hash";
         if (file_exists($notes_file)) {
