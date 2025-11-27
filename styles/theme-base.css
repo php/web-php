@@ -1533,17 +1533,22 @@ td {
     content: attr(data-label);
   }
 
-    .news__item {
+    .news__heading,
+    .news__content {
         flex-direction: column;
-        gap: calc(var(--spacing) * 5);
-    }
-
-    .news__image {
-        order: 1;
-        width: 100%;
+        align-items: flex-start;
+        gap: var(--spacing);
     }
 
     .news__content {
+        gap: calc(var(--spacing) * 3);
+    }
+    .news__image {
+        width: 100%;
+        order: 1;
+    }
+
+    .news__text {
         order: 2;
     }
 }
