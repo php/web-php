@@ -27,12 +27,12 @@ foreach ((new NewsHandler())->getConferences() as $entry) {
     $date = date_format($nixtimestamp, 'd M Y');
     $date_w3c = date_format($nixtimestamp, DATE_W3C);
 
-    $content .= '<div class="news__item" itemscope itemtype="https://schema.org/Event">';
+    $content .= '<article class="news__item" itemscope itemtype="https://schema.org/Event">';
     $content .= '<div class="news__heading">';
     $content .= '<div class="news__title">';
     $content .= '<a href="' . $link . '" id="' . $id . '" itemprop="name">' . $entry["title"] . '</a>';
     $content .= '</div>';
-    $content .= '<div class="news__date" itemprop="startDate" content="' . $date_w3c . '">' . $date . '</div>';
+    $content .= '<div class="news__date" itemprop="startDate" content="' . $date_w3c . '"><time datetime="' . $date_w3c . '">' . $date . '</time></div>';
     $content .= '</div>';
 
     $content .= '<div class="news__content">';
@@ -41,7 +41,7 @@ foreach ((new NewsHandler())->getConferences() as $entry) {
     $content .= sprintf('<a href="%s"><img src="/images/news/%s" itemprop="image" alt="%s"></a>', $entry["newsImage"]["link"], $entry["newsImage"]["content"], $entry["title"]);
     $content .= '</div>';
     $content .= '</div>';
-    $content .= '</div>';
+    $content .= '</article>';
 }
 $content .= "</div>";
 

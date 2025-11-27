@@ -439,18 +439,18 @@ function print_news($news, $dog, $max = 5, $return = false) {
         }
 
         echo <<<EOT
-<div class="news__item" itemscope itemtype="https://schema.org/Event">
+<article class="news__item" itemscope itemtype="https://schema.org/Event">
     <div class="news__heading">
         <div class="news__title">
           <a href="{$permlink}" id="{$id}" rel="bookmark" itemprop="name">{$item["title"]}</a>
         </div>
-        <div class="news__date" itemprop="startDate" content="$newsdate_w3c">$newsdate</div>
+        <div class="news__date" itemprop="startDate" content="$newsdate_w3c"><time datetime="{$newsdate_w3c}">$newsdate</time></div>
     </div>
     <div class="news__content">
         <div class="news__text" itemprop="description">{$item["content"]}</div>
         {$imageBlock}
     </div>
-</div>
+</article>
 EOT;
     }
 
