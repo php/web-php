@@ -624,6 +624,12 @@ div.elephpants div.images {
     white-space: nowrap;
 }
 
+div.elephpants a {
+    display: inline-block;
+    line-height: 0;
+    border-bottom: 0;
+}
+
 div.elephpants img {
     width: 75px;
     height: 75px;
@@ -1440,7 +1446,7 @@ td {
 }
 
 .news__date {
-    color: var(--color-gray-500);
+    color: var(--color-gray-600);
     font-size: var(--text-base);
     line-height: var(--tw-leading, var(--text-base--line-height));
 }

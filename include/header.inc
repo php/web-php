@@ -164,7 +164,7 @@ if (!isset($config["languages"])) {
 
                 <?php if (!empty($config['language_switcher'])) { ?>
                     <div class="select header-languages">
-                        <select onchange="location = this.value">
+                        <select onchange="location = this.value" aria-label="Select language">
                             <?php foreach ($config['language_switcher'] as $item) { ?>
                                 <option value="<?= $item['url'] ?>"<?= $item['selected'] ? ' selected' : '' ?>><?= $item['name'] ?></option>
                             <?php } ?>

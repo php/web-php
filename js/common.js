@@ -423,6 +423,7 @@ $(document).ready(function () {
                         for (photo in data) {
                             photo = data[photo];
                             link = $('<a>');
+                            link.attr('aria-label', "See elephpant photo");
                             link.attr('href', photo.url);
                             link.attr('title', photo.title);
                             image = $('<img>');

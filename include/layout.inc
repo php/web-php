@@ -412,6 +412,7 @@ function print_news($news, $dog, $max = 5, $return = false) {
         $published = substr($item["published"], 0, 10);
         $nixtimestamp = strtotime($published);
         $newsdate = date("d M Y", $nixtimestamp);
+        $newsdate_w3c = date_format(date_create($nixtimestamp), DATE_W3C);
 
         if ($return) {
             $retval[] = [
@@ -433,13 +434,13 @@ function print_news($news, $dog, $max = 5, $return = false) {
         }
 
         echo <<<EOT
-<div class="news__item">
+<div class="news__item" itemscope itemtype="https://schema.org/Event">
     <div class="news__content">
-        <div class="news__date"><time datetime="{$item["published"]}">{$newsdate}</time></div>
+        <div class="news__date" itemprop="startDate" content="$newsdate_w3c">$newsdate</div>
         <div class="news__title">
-          <a href="{$permlink}" id="{$id}" rel="bookmark">{$item["title"]}</a>
+          <a href="{$permlink}" id="{$id}" rel="bookmark" itemprop="name">{$item["title"]}</a>
         </div>
-        <div class="news__text">{$item["content"]}</div>
+        <div class="news__text" itemprop="description">{$item["content"]}</div>
     </div>
     {$imageBlock}
 </div>

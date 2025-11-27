@@ -19,15 +19,16 @@ foreach ((new NewsHandler())->getConferences() as $entry) {
     $link = preg_replace('~^(http://php.net/|https://www.php.net/)~', '', $entry["id"]);
     $id = parse_url($entry["id"], PHP_URL_FRAGMENT);
     $date = date_format(date_create($entry["updated"]), 'Y-m-d');
+    $date_w3c = date_format(date_create($entry["updated"]), DATE_W3C);
 
-    $content .= '<div class="news__item">';
+    $content .= '<div class="news__item" itemscope itemtype="https://schema.org/Event">';
     $content .= '<div class="news__content">';
-    $content .= '<div class="news__date">' . $date . '</div>';
-    $content .= '<div class="news__title"><a href="' . $MYSITE . $link . '" id="' . $id . '">' . $entry["title"] . '</a></div>';
-    $content .= '<div class="news__text">' . $entry["content"] . '</div>';
+    $content .= '<div class="news__date" itemprop="startDate" content="$date_w3c">' . $date . '</div>';
+    $content .= '<div class="news__title"><a href="' . $link . '" id="' . $id . '" itemprop="name">' . $entry["title"] . '</a></div>';
+    $content .= '<div class="news__text" itemprop="description">' . $entry["content"] . '</div>';
     $content .= '</div>';
     $content .= '<div class="news__image">';
-    $content .= sprintf('<a href="%s"><img src="/images/news/%s"></a>', $entry["newsImage"]["link"], $entry["newsImage"]["content"]);
+    $content .= sprintf('<a href="%s"><img src="/images/news/%s" itemprop="image" alt="%s"></a>', $entry["newsImage"]["link"], $entry["newsImage"]["content"], $entry["title"]);
     $content .= '</div>';
     $content .= '</div>';
 }
