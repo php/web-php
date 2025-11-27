@@ -20,7 +20,7 @@ foreach ((new NewsHandler())->getConferences() as $entry) {
     $id = parse_url($entry["id"], PHP_URL_FRAGMENT);
 
     $nixtimestamp = date_create($entry["updated"]);
-    if(isset($item["finalTeaserDate"])) {
+    if(isset($entry["finalTeaserDate"])) {
         $nixtimestamp = date_create($entry["finalTeaserDate"]);
     }
 
