@@ -11,7 +11,18 @@
   <default:newsImage xmlns="http://php.net/ns/news" link="https://laravellive.jp" title="Laravel Live Japan 2026">laravellivejapan_2026.png</default:newsImage>
   <content type="xhtml">
     <div xmlns="http://www.w3.org/1999/xhtml">
-     
+      <p>Laravel Live Japan is the first official Laravel community conference in Japan. It brings together developers, designers, and tech enthusiasts from around the world to share knowledge, exchange ideas, and celebrate the craft of building with Laravel.</p>
+      <p>Join us in Tokyo at Tachikawa Stage Garden on May 26-27, 2026 for this premiere event. Enjoy two days of inspiring talks, hands-on learning, and unforgettable community experiences.</p>
+      <strong>Basic info</strong><br/>
+      <ul>
+        <li>Date: May 26-27, 2026 (JST)</li>
+        <li>Location: Tachikawa City, Tokyo Prefecture, Japan</li>
+      </ul>
+      <strong>Links</strong><br/>
+      <ul>
+        <li>Website: <a href="https://laravellive.jp">https://laravellive.jp</a></li>
+        <li>X: <a href="https://x.com/LaravelLiveJP">https://x.com/LaravelLiveJP</a></li>
+      </ul>
     </div>
   </content>
 </entry>
