@@ -37,7 +37,7 @@ return [
     'clone_with_description' => '<p>Теперь можно обновлять свойства во время клонирования объектов, передавая ассоциативный массив в функцию <code>clone()</code>. Это позволит напрямую поддерживать паттерн «with-er» для классов <code>readonly</code>.</p>',
 
     'uri_extension_title' => 'Модуль URI',
-    'uri_extension_description' => '<p>Встроенный модуль URI предоставляет API для безопасного анализа и изменения URI и URL в соответствии со стандартами RFC 3986 и WHATWG URL.</p><p>Работает на базе библиотек <a href="https://uriparser.github.io/" target="_blank" rel="noopener noreferrer">uriparser</a> (RFC 3986) и <a href="https://lexbor.com/" target="_blank" rel="noopener noreferrer">Lexbor</a> (WHATWG URL). </p><p>Узнайте больше об этой функции в <a href="https://thephp.foundation/blog/2025/10/10/php-85-uri-extension/" target="_blank" rel="noopener noreferrer">блоге PHP Foundation</a>.</p>',
+    'uri_extension_description' => '<p>Встроенный модуль URI предоставляет API для безопасного анализа и изменения URI и URL в соответствии со стандартами RFC 3986 и WHATWG URL.</p><p>Работает на базе библиотек <a href="https://uriparser.github.io/" target="_blank" rel="noopener noreferrer">uriparser</a> (RFC 3986) и <a href="https://lexbor.com/" target="_blank" rel="noopener noreferrer">Lexbor</a> (WHATWG URL).</p><p>Узнайте больше об этой функции в <a href="https://thephp.foundation/blog/2025/10/10/php-85-uri-extension/" target="_blank" rel="noopener noreferrer">блоге PHP Foundation</a>.</p>',
 
     'no_discard_title' => 'Атрибут #[\NoDiscard]',
     'no_discard_description' => '<p>Добавив атрибут <code>#[\NoDiscard]</code> к функции, PHP будет проверять, используется ли возвращаемое значение, и выдавать предупреждение, если это не так. Позволяет повысить безопасность API, где возвращаемое значение важно, но про него можно легко забыть.</p><p>Связанное приведение типов <code>(void)</code> может использоваться для указания, что значение намеренно не используется.</p>',
@@ -59,7 +59,7 @@ return [
     'partitioned_cookies' => 'Функции {0} и {1} теперь поддерживают ключ <code>"partitioned"</code>.',
     'get_set_error_handler' => 'Добавлены функции {0} и {1}.',
     'new_dom_element_methods' => 'Добавлены методы {0} и {1}.',
-    'grapheme_levenshtein' => 'Добавлена фукнция {0}.',
+    'grapheme_levenshtein' => 'Добавлена функция {0}.',
     'delayed_target_validation' => 'Добавлен атрибут {0}, который можно использовать для подавления ошибок компиляции атрибутов ядра и модулей, которые используются на недопустимых целях.',
 
     'bc_title' => 'Устаревшая функциональность и изменения в обратной совместимости',
@@ -75,5 +75,5 @@ return [
     'bc_casting_non_int_floats' => 'Теперь выдаётся предупреждение при преобразовании чисел с плавающей точкой (или строк, похожих на числа с плавающей точкой) в целые числа (<code>int</code>), если они не могут быть представлены в виде целого числа.',
 
     'footer_title' => 'Выше производительность, лучше синтаксис, надёжнее система типов.',
-    'footer_description' => '<p>Список изменений перечислен на странице <a href="/ChangeLog-8.php#PHP_8_5">ChangeLog</a>.</p><p><a href="/manual/ru/migration85.php">Руководство по миграции</a> доступно в разделе документации. Ознакомьтесь с ним, чтобы узнать обо всех новых возможностях и изменениях, затрагивающих обратную совместимость.</p>',
+    'footer_description' => '<p>Список изменений перечислен на странице <a href="/ChangeLog-8.php#PHP_8_5" target="_blank">ChangeLog</a>.</p><p><a href="/manual/ru/migration85.php" target="_blank">Руководство по миграции</a> доступно в разделе документации. Ознакомьтесь с ним, чтобы узнать обо всех новых возможностях и изменениях, затрагивающих обратную совместимость.</p>',
 ];

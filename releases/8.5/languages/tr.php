@@ -37,7 +37,7 @@ return [
     'clone_with_description' => '<p>Artık nesne klonlama sırasında <code>clone()</code> fonksiyonuna bir ilişkisel dizi vererek özellikleri güncellemek mümkündür. Bu, <code>readonly</code> sınıflar için "with-er" desenini basitleştirir.</p>',
 
     'uri_extension_title' => 'URI Uzantısı',
-    'uri_extension_description' => '<p>Yeni her zaman kullanılabilir URI uzantısı, URI ve URL’leri güvenli bir şekilde ayrıştırmak ve düzenlemek için API sağlar. RFC 3986 ve WHATWG URL standartlarına uygundur.</p>',
+    'uri_extension_description' => '<p>Yeni her zaman kullanılabilir URI uzantısı, URI ve URL’leri güvenli bir şekilde ayrıştırmak ve düzenlemek için API sağlar. RFC 3986 ve WHATWG URL standartlarına uygundur.</p><p><a href="https://uriparser.github.io/" target="_blank" rel="noopener noreferrer">uriparser</a> (RFC 3986) ve <a href="https://lexbor.com/" target="_blank" rel="noopener noreferrer">Lexbor</a> (WHATWG URL) kütüphaneleri tarafından desteklenmektedir.</p><p>Bu özelliğin arka planını öğrenmek için <a href="https://thephp.foundation/blog/2025/10/10/php-85-uri-extension/" target="_blank" rel="noopener noreferrer">PHP Foundation blogu</a>’na bakabilirsiniz.</p>',
 
     'no_discard_title' => '#[\NoDiscard] Özelliği',
     'no_discard_description' => '<p>Bir fonksiyona <code>#[\NoDiscard]</code> ekleyerek PHP, döndürülen değerin kullanılıp kullanılmadığını kontrol eder ve kullanılmadığında uyarı verir. Bu, döndürülen değerin önemli olduğu API’lerde hataları önler.</p>',
@@ -56,7 +56,7 @@ return [
     'asymmetric_static_properties' => 'Statik özellikler artık asimetrik görünürlüğü destekler.',
     'final_promoted_properties' => 'Özellikler, constructor property promotion ile <code>final</code> olarak işaretlenebilir.',
     'closure_getCurrent' => 'Anonim fonksiyonlarda özyinelemeyi basitleştirmek için <code>Closure::getCurrent()</code> metodu eklendi.',
-    'partitioned_cookies' => '{0} ve {1} artık "partitioned" anahtarını destekliyor.',
+    'partitioned_cookies' => 'Fonksiyonlar {0} ve {1} artık "partitioned" anahtarını destekliyor.',
     'get_set_error_handler' => 'Yeni {0} ve {1} fonksiyonları mevcut.',
     'new_dom_element_methods' => 'Yeni {0} ve {1} metodları mevcut.',
     'grapheme_levenshtein' => '{0} fonksiyon eklendi.',

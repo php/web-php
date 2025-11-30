@@ -40,7 +40,7 @@ return [
     'uri_extension_description' => '<p>Нове вбудоване розширення URI надає API для безпечного аналізу та зміни URI та URL згідно зі стандартами RFC 3986 і WHATWG URL.</p><p>Працює на основі бібліотек <a href="https://uriparser.github.io/" target="_blank" rel="noopener noreferrer">uriparser</a> (RFC 3986) і <a href="https://lexbor.com/" target="_blank" rel="noopener noreferrer">Lexbor</a> (WHATWG URL).</p><p>Дізнайтеся більше про історію створення цієї функції у <a href="https://thephp.foundation/blog/2025/10/10/php-85-uri-extension/" target="_blank" rel="noopener noreferrer">блозі PHP Foundation</a>.</p>',
 
     'no_discard_title' => 'Атрибут #[\NoDiscard]',
-    'no_discard_description' => '<p>Після додавання атрибуту <code>#[\NoDiscard]</code> до функції PHP перевірятиме, чи використовується повернене значення, і викликатиме попередження, якщо ні. Це дозволяє підвищити безпеку API, де повернене значення є важливим, але його можна випадково проігнорувати.</p><p>>Відповідне приведення типу <code>(void)</code> може використовуватися як вказівка, що значення не використовується навмисно.</p>',
+    'no_discard_description' => '<p>Після додавання атрибуту <code>#[\NoDiscard]</code> до функції PHP перевірятиме, чи використовується повернене значення, і викликатиме попередження, якщо ні. Це дозволяє підвищити безпеку API, де повернене значення є важливим, але його можна випадково проігнорувати.</p><p>Відповідне приведення типу <code>(void)</code> може використовуватися як вказівка, що значення не використовується навмисно.</p>',
 
     'persistent_curl_share_handles_title' => 'Постійні cURL-дескриптори',
     'persistent_curl_share_handles_description' => '<p>На відміну від <code>curl_share_init()</code>, дескриптори, створені функцією <code>curl_share_init_persistent()</code>, не будуть знищуватися після завершення PHP-запиту. Якщо буде знайдено постійний дескриптор з тим самим набором опцій, його буде використано повторно, що дозволить уникнути витрат на ініціалізацію cURL-дескрипторів.</p>',
@@ -56,7 +56,7 @@ return [
     'asymmetric_static_properties' => 'Статичні властивості тепер підтримують асиметричну область видимості.',
     'final_promoted_properties' => 'Властивості тепер можна позначати як <code>final</code>, оголошуючи їх за допомогою конструктора.',
     'closure_getCurrent' => 'Додано метод <code>Closure::getCurrent()</code>, який спрощує використання рекурсії в анонімних функціях.',
-    'partitioned_cookies' => '{0} та {1} тепер підтримують ключ «partitioned».',
+    'partitioned_cookies' => 'Функції {0} та {1} тепер підтримують ключ "partitioned".',
     'get_set_error_handler' => 'Доступні нові функції {0} і {1}.',
     'new_dom_element_methods' => 'Доступні нові методи {0} і {1}.',
     'grapheme_levenshtein' => 'Додано функцію {0}.',

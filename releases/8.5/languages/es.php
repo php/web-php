@@ -56,7 +56,7 @@ return [
     'asymmetric_static_properties' => 'Las propiedades estáticas ahora soportan visibilidad asimétrica.',
     'final_promoted_properties' => 'Las propiedades pueden marcarse como <code>final</code> usando la promoción de propiedades en constructores.',
     'closure_getCurrent' => 'Se agregó el método <code>Closure::getCurrent()</code> para simplificar la recursión en funciones anónimas.',
-    'partitioned_cookies' => '{0} y {1} ahora soportan la clave "partitioned".',
+    'partitioned_cookies' => 'Las funciones {0} y {1} ahora soportan la clave "partitioned".',
     'get_set_error_handler' => 'Las nuevas funciones {0} y {1} están disponibles.',
     'new_dom_element_methods' => 'Los nuevos métodos {0} y {1} están disponibles.',
     'grapheme_levenshtein' => 'Se agregó la función {0}.',
