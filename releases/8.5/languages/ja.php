@@ -56,7 +56,7 @@ return [
     'asymmetric_static_properties' => 'static プロパティで非対称可視性を利用できるようになります。',
     'final_promoted_properties' => 'コンストラクタのプロモーションで、プロパティを <code>final</code> にすることができるようになります。',
     'closure_getCurrent' => '無名関数の再帰を簡単に行うための <code>Closure::getCurrent()</code> メソッドが追加されました。',
-    'partitioned_cookies' => '{0} と {1} で "partitioned" キーが利用できます。',
+    'partitioned_cookies' => '関数 {0} と {1} で "partitioned" キーが利用できます。',
     'get_set_error_handler' => '{0} と {1} 関数が追加されました。',
     'new_dom_element_methods' => '{0} と {1} メソッドが追加されました。',
     'grapheme_levenshtein' => '{0} 関数が追加されました。',

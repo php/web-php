@@ -60,7 +60,7 @@ return [
     'asymmetric_static_properties' => '静态属性现在支持不对称可见性。',
     'final_promoted_properties' => '属性在构造器属性提升中可以被标记为 <code>final</code>。',
     'closure_getCurrent' => '新增 <code>Closure::getCurrent()</code> 方法，简化匿名函数的递归。',
-    'partitioned_cookies' => '{0} 和 {1} 现在支持 "partitioned" 键。',
+    'partitioned_cookies' => '函数 {0} 和 {1} 现在支持 "partitioned" 键。',
     'get_set_error_handler' => '新增 {0} 与 {1} 函数。',
     'new_dom_element_methods' => '新增 {0} 与 {1} 方法。',
     'grapheme_levenshtein' => '新增 {0} 函数。',

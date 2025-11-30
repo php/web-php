@@ -56,7 +56,7 @@ return [
     'asymmetric_static_properties' => 'Статичні властивості тепер підтримують асиметричну область видимості.',
     'final_promoted_properties' => 'Властивості тепер можна позначати як <code>final</code>, оголошуючи їх за допомогою конструктора.',
     'closure_getCurrent' => 'Додано метод <code>Closure::getCurrent()</code>, який спрощує використання рекурсії в анонімних функціях.',
-    'partitioned_cookies' => '{0} та {1} тепер підтримують ключ «partitioned».',
+    'partitioned_cookies' => 'Функції {0} та {1} тепер підтримують ключ "partitioned".',
     'get_set_error_handler' => 'Доступні нові функції {0} і {1}.',
     'new_dom_element_methods' => 'Доступні нові методи {0} і {1}.',
     'grapheme_levenshtein' => 'Додано функцію {0}.',

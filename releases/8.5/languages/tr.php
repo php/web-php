@@ -56,7 +56,7 @@ return [
     'asymmetric_static_properties' => 'Statik özellikler artık asimetrik görünürlüğü destekler.',
     'final_promoted_properties' => 'Özellikler, constructor property promotion ile <code>final</code> olarak işaretlenebilir.',
     'closure_getCurrent' => 'Anonim fonksiyonlarda özyinelemeyi basitleştirmek için <code>Closure::getCurrent()</code> metodu eklendi.',
-    'partitioned_cookies' => '{0} ve {1} artık "partitioned" anahtarını destekliyor.',
+    'partitioned_cookies' => 'Fonksiyonlar {0} ve {1} artık "partitioned" anahtarını destekliyor.',
     'get_set_error_handler' => 'Yeni {0} ve {1} fonksiyonları mevcut.',
     'new_dom_element_methods' => 'Yeni {0} ve {1} metodları mevcut.',
     'grapheme_levenshtein' => '{0} fonksiyon eklendi.',
