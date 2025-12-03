@@ -77,9 +77,15 @@ whether no regressions have been introduced.
 
 <h2 id="source">Source Builds</h2>
 <?php if (!empty($QA_RELEASES['releases'])) : ?>
-  <?php $plural = count($QA_RELEASES['releases']) > 1 ? 's' : ''; ?>
+  <?php
+    $sourceReleases = $QA_RELEASES['releases'];
+    uksort($sourceReleases, static function ($a, $b) {
+        return version_compare($b, $a);
+    });
+    $plural = count($sourceReleases) > 1 ? 's' : '';
+  ?>
 
-  <?php foreach ($QA_RELEASES['releases'] as $pversion => $info) : ?>
+  <?php foreach ($sourceReleases as $pversion => $info) : ?>
   <h3 class="title">
     PHP <?php echo $info['version']; ?>
   </h3>
@@ -257,6 +263,11 @@ if (is_readable($winQaFile)) {
         'top_items' => $topItems,
         'builds' => $builds,
       ];
+    }
+    if (!empty($winQaReleases)) {
+      usort($winQaReleases, static function ($a, $b) {
+        return version_compare($b['version_label'], $a['version_label']);
+      });
     }
   } else {
     $winQaMessage = 'Windows QA release index could not be parsed.';
