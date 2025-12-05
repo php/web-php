@@ -97,16 +97,16 @@ $QA_RELEASES = [
         ],
     ],
 
-    '8.5.0' => [
+    '8.5.1' => [
         'active'  => true,
         'release' => [
             'type'       => 'RC',
-            'number'     => 0,
-            'sha256_bz2' => '',
-            'sha256_gz'  => '',
-            'sha256_xz'  => '',
-            'date'       => '13 Nov 2025',
-            'baseurl'    => 'https://downloads.php.net/~daniels/',
+            'number'     => 1,
+            'sha256_bz2' => '68dc259fa0e2accfef827acb304eef137c65441382ea56bbf4e58c438c4fe155',
+            'sha256_gz'  => 'b328792a6ebe2b5bfb9e1d616cea40ab9c6d8b13e141fda2bf511ca6d49a6ce1',
+            'sha256_xz'  => '67ea20de4c3038df65ac4d1521bd05a8752aeb79c6e65340410e1f71a599e56e',
+            'date'       => '5 Dec 2025',
+            'baseurl'    => 'https://downloads.php.net/~edorian/',
         ],
     ],
 ];
