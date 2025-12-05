@@ -410,6 +410,8 @@ $uri_aliases = [
     "splat" => "functions.arguments",
     "arrow" => "functions.arrow",
     "fn" => "functions.arrow",
+    "pipe" => "operators.functional",
+    "|>" => "operators.functional",
     // ?:, ??, ??=
     // These shortcuts can not be captured here since they
     // don't actually produce a 404 error.
