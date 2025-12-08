@@ -580,7 +580,7 @@ function get_legacy_manual_urls(string $uri): array
 {
     $filename = $_SERVER["DOCUMENT_ROOT"] . "/manual/legacyurls.json";
     $pages_ids = json_decode(file_get_contents($filename), true);
-    $page_id = preg_replace_callback('/^manual\/.*\/(.*?)(\.php)?$/', function (array $matches): string {
+    $page_id = preg_replace_callback('/^manual\/[a-z_A-Z]+\/(.*?)(\.php)?$/', function (array $matches): string {
         if (count($matches) < 2) {
             return '';
         }
@@ -611,7 +611,7 @@ function fallback_to_legacy_manuals(array $legacy_urls): void
     $original_url = htmlspecialchars(substr($MYSITE, 0, -1) . $_SERVER['REQUEST_URI']);
     $legacy_links = '';
     foreach ($legacy_urls as $php_version => $url) {
-        $legacy_links .= '<li><a href="' . $url . '">PHP ' . $php_version . ' legacy manual</a></li>';
+        $legacy_links .= '<li><a href="' . htmlspecialchars($url) . '">PHP ' . $php_version . ' legacy manual</a></li>';
     }
 
     echo <<<HTML
