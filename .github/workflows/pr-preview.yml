@@ -96,7 +96,7 @@ jobs:
       - name: "Run visual tests"
         run: "make tests_visual"
 
-      - uses: actions/upload-artifact@v5
+      - uses: actions/upload-artifact@v6
         if: ${{ !cancelled() }}
         with:
           name: playwright-report
