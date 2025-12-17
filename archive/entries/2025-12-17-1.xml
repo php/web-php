@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom" xmlns:default="http://php.net/ns/news">
+  <title>International PHP Conference Berlin 2026</title>
+
+  <id>https://www.php.net/archive/2026.php#2025-12-17-1</id>
+
+  <published>2025-12-17T09:00:00+00:00</published>
+  <updated>2025-12-17T09:00:00+00:00</updated>
+
+  <link href="https://www.php.net/conferences/index.php#2025-12-17-1" rel="alternate" type="text/html"/>
+  <link href="https://phpconference.com/berlin-en/" rel="via" type="text/html"/>
+
+  <default:finalTeaserDate xmlns="http://php.net/ns/news">2026-06-12</default:finalTeaserDate>
+
+  <category term="conferences" label="Conference announcement"/>
+
+  <default:newsImage
+    xmlns="http://php.net/ns/news"
+    link="https://phpconference.com/berlin-en/"
+    title="International PHP Conference Berlin 2026"
+  >IPC.png</default:newsImage>
+
+  <content type="xhtml">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+      <p>
+        <a href="https://phpconference.com/berlin-en/">The International PHP Conference</a>
+        is the world's first PHP conference and stands since more than a decade for top-notch
+        pragmatic expertise in PHP and web technologies. At the IPC, internationally renowned
+        experts from the PHP industry meet up with PHP users and developers from large and small
+        companies. Here is the place where concepts emerge and ideas are born – the IPC signifies
+        knowledge transfer at highest level.
+      </p>
+
+      <p>Basic facts:</p>
+
+      <p>
+        <strong>Date: June 8 – 12, 2026</strong>
+      </p>
+
+      <p>
+        <strong>Location: Maritim ProArte Hotel Berlin, Berlin or Online</strong>
+      </p>
+
+      <p>Highlights:</p>
+      <ul>
+        <li>60+ best practice sessions</li>
+        <li>50+ international top speakers</li>
+        <li>PHPower: Hands-on Power Workshops</li>
+        <li>Expo with exciting exhibitors on June 9 &amp; 10</li>
+        <li>All inclusive: Changing buffets, snacks &amp; refreshing drinks</li>
+        <li>Official certificate for attendees</li>
+        <li>Free Goodies: Developer bag, T-Shirt, magazines etc.</li>
+        <li>Exclusive networking events</li>
+      </ul>
+
+      <p>
+        For further information on the International PHP Conference Berlin visit:
+        <a href="https://phpconference.com/berlin-en/">https://phpconference.com/berlin-en/</a>
+      </p>
+    </div>
+  </content>
+</entry>
