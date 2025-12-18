@@ -4991,6 +4991,32 @@ changelog_header(8, $MINOR_VERSIONS);
 
 <a id="PHP_8_2"></a>
 
+<section class="version" id="8.2.30"><!-- {{{ 8.2.30 -->
+<h3>Version 8.2.30</h3>
+<b><?php release_date('18-Dec-2025'); ?></b>
+<ul><li>Curl:
+<ul>
+  <li>Fix curl build and test failures with version 8.16.</li>
+</ul></li>
+<li>Opcache:
+<ul>
+  <li>Reset global pointers to prevent use-after-free in zend_jit_status().</li>
+</ul></li>
+<li>PDO:
+<ul>
+  <li>Fixed <?php githubsecurityl('php/php-src', '8xr5-qppj-gvwj'); ?> (PDO quoting result null deref). (CVE-2025-14180)</li>
+</ul></li>
+<li>Standard:
+<ul>
+  <li>Fixed <?php githubsecurityl('php/php-src', 'www2-q4fc-65wf'); ?> (Null byte termination in dns_get_record()).</li>
+  <li>Fixed <?php githubsecurityl('php/php-src', 'h96m-rvf9-jgm2'); ?> (Heap buffer overflow in array_merge()). (CVE-2025-14178)</li>
+  <li>Fixed <?php githubsecurityl('php/php-src', '3237-qqm7-mfv7'); ?> (Information Leak of Memory in getimagesize). (CVE-2025-14177)</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
+
+
 <section class="version" id="8.2.29"><!-- {{{ 8.2.29 -->
 <h3>Version 8.2.29</h3>
 <b><?php release_date('03-Jul-2025'); ?></b>
