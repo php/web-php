@@ -2387,6 +2387,109 @@ changelog_header(8, $MINOR_VERSIONS);
 
 <a id="PHP_8_3"></a>
 
+<section class="version" id="8.3.29"><!-- {{{ 8.3.29 -->
+<h3>Version 8.3.29</h3>
+<b><?php release_date('18-Dec-2025'); ?></b>
+<ul><li>Core:
+<ul>
+  <li>Sync all boost.context files with release 1.86.0.</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 20435); ?> (SensitiveParameter doesn't work for named argument passing to variadic parameter).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 20286); ?> (use-after-destroy during userland stream_close()).</li>
+</ul></li>
+<li>Bz2:
+<ul>
+  <li>Fix assertion failures resulting in crashes with stream filter object parameters.</li>
+</ul></li>
+<li>Date:
+<ul>
+  <li>Fix crashes when trying to instantiate uninstantiable classes via date static constructors.</li>
+</ul></li>
+<li>DOM:
+<ul>
+  <li>Fix missing NUL byte check on C14NFile().</li>
+</ul></li>
+<li>Fibers:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 20483); ?> (ASAN stack overflow with fiber.stack_size INI small value).</li>
+</ul></li>
+<li>FTP:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 20601); ?> (ftp_connect overflow on timeout).</li>
+</ul></li>
+<li>GD:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 20511); ?> (imagegammacorrect out of range input/output values).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 20602); ?> (imagescale overflow with large height values).</li>
+</ul></li>
+<li>Intl:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 20426); ?> (Spoofchecker::setRestrictionLevel() error message suggests missing constants).</li>
+</ul></li>
+<li>LibXML:
+<ul>
+  <li>Fix some deprecations on newer libxml versions regarding input buffer/parser handling.</li>
+</ul></li>
+<li>MbString:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 20491); ?> (SLES15 compile error with mbstring oniguruma).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 20492); ?> (mbstring compile warning due to non-strings).</li>
+</ul></li>
+<li>MySQLnd:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 20528); ?> (Regression breaks mysql connexion using an IPv6 address enclosed in square brackets).</li>
+</ul></li>
+<li>Opcache:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 20329); ?> (opcache.file_cache broken with full interned string buffer).</li>
+</ul></li>
+<li>PDO:
+<ul>
+  <li>Fixed <?php githubsecurityl('php/php-src', '8xr5-qppj-gvwj'); ?> (PDO quoting result null deref). (CVE-2025-14180)</li>
+</ul></li>
+<li>Phar:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 20442); ?> (Phar does not respect case-insensitiveness of __halt_compiler() when reading stub).</li>
+  <li>Fix broken return value of fflush() for phar file entries.</li>
+  <li>Fix assertion failure when fseeking a phar file out of bounds.</li>
+</ul></li>
+<li>PHPDBG:
+<ul>
+  <li>Fixed ZPP type violation in phpdbg_get_executable() and phpdbg_end_oplog().</li>
+</ul></li>
+<li>SPL:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 20614); ?> (SplFixedArray incorrectly handles references in deserialization).</li>
+</ul></li>
+<li>Standard:
+<ul>
+  <li>Fix memory leak in array_diff() with custom type checks.</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 20583); ?> (Stack overflow in http_build_query via deep structures).</li>
+  <li>Fixed <?php githubsecurityl('php/php-src', 'www2-q4fc-65wf'); ?> (Null byte termination in dns_get_record()).</li>
+  <li>Fixed <?php githubsecurityl('php/php-src', 'h96m-rvf9-jgm2'); ?> (Heap buffer overflow in array_merge()). (CVE-2025-14178)</li>
+  <li>Fixed <?php githubsecurityl('php/php-src', '3237-qqm7-mfv7'); ?> (Information Leak of Memory in getimagesize). (CVE-2025-14177)</li>
+</ul></li>
+<li>Tidy:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 20374); ?> (PHP with tidy and custom-tags).</li>
+</ul></li>
+<li>XML:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 20439); ?> (xml_set_default_handler() does not properly handle special characters in attributes when passing data to callback).</li>
+</ul></li>
+<li>Zip:
+<ul>
+  <li>Fix crash in property existence test.</li>
+  <li>Don't truncate return value of zip_fread() with user sizes.</li>
+</ul></li>
+<li>Zlib:
+<ul>
+  <li>Fix assertion failures resulting in crashes with stream filter object parameters.</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
+
+
 <section class="version" id="8.3.28"><!-- {{{ 8.3.28 -->
 <h3>Version 8.3.28</h3>
 <b><?php release_date('20-Nov-2025'); ?></b>
