@@ -36,7 +36,7 @@ $template = <<<EOD
 <p>All PHP $branch users are encouraged to upgrade to this version.</p>
 
 <p>For source downloads of PHP $version please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
-Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
+Windows source and binaries can also be found <a href="https://www.php.net/downloads.php?os=windows&amp;version={$branch}">there</a>.
 The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-{$major}.php#{$version}">ChangeLog</a>.
 </p>
 EOD;
