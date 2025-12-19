@@ -126,7 +126,7 @@ function show_source_releases()
 {
     global $RELEASES;
 
-    $SHOW_COUNT = 4;
+    $SHOW_COUNT = 5;
 
     $current_uri = htmlspecialchars($_SERVER['REQUEST_URI'], ENT_QUOTES, 'UTF-8');
 
