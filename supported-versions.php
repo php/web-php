@@ -14,7 +14,6 @@ $VERSION_NOTES = [
 	'8.4' => 'https://www.php.net/manual/migration84.php',
 	'8.3' => 'https://www.php.net/manual/migration83.php',
 	'8.2' => 'https://www.php.net/manual/migration82.php',
-	'8.1' => 'https://www.php.net/manual/migration81.php',
 ];
 ?>
 
