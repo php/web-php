@@ -101,7 +101,6 @@ $versions = [
     '8.4' => 'version 8.4',
     '8.3' => 'version 8.3',
     '8.2' => 'version 8.2',
-    '8.1' => 'version 8.1',
     'default' => 'OS default version',
 ];
 
