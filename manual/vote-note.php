@@ -1,4 +1,7 @@
 <?php
+
+use phpweb\UserNotes\UserNoteService;
+
 $_SERVER['BASE_PAGE'] = 'manual/vote-note.php';
 include_once __DIR__ . '/../include/prepend.inc';
 include_once __DIR__ . '/../include/posttohost.inc';
@@ -13,9 +16,10 @@ $BACKpage = htmlspecialchars($_REQUEST['page'] ?? '');
 $BACKid = htmlspecialchars($_REQUEST['id'] ?? '');
 $link = "/{$BACKpage}#{$BACKid}";
 $master_url = "https://main.php.net/entry/user-notes-vote.php";
+$notes = new UserNoteService();
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-  if (isset($_SERVER['HTTP_X_JSON']) && $_SERVER['HTTP_X_JSON'] == 'On' && !empty($_REQUEST['id']) && !empty($_REQUEST['page']) && ($N = manual_notes_load($_REQUEST['page'])) && array_key_exists($_REQUEST['id'], $N) && !empty($_REQUEST['vote']) && ($_REQUEST['vote'] === 'up' || $_REQUEST['vote'] === 'down')) {
+  if (isset($_SERVER['HTTP_X_JSON']) && $_SERVER['HTTP_X_JSON'] == 'On' && !empty($_REQUEST['id']) && !empty($_REQUEST['page']) && ($N = $notes->load($_REQUEST['page'])) && array_key_exists($_REQUEST['id'], $N) && !empty($_REQUEST['vote']) && ($_REQUEST['vote'] === 'up' || $_REQUEST['vote'] === 'down')) {
     $response = [];
     $hash = substr(md5($_REQUEST['page']), 0, 16);
     $notes_file = $_SERVER['DOCUMENT_ROOT'] . "/backend/notes/" . substr($hash, 0, 2) . "/$hash";
@@ -51,7 +55,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     echo json_encode($response);
     exit;
   }
-  if (!empty($_REQUEST['id']) && !empty($_REQUEST['page']) && ($N = manual_notes_load($_REQUEST['page'])) && array_key_exists($_REQUEST['id'], $N) && !empty($_REQUEST['vote']) && ($_REQUEST['vote'] === 'up' || $_REQUEST['vote'] === 'down')) {
+  if (!empty($_REQUEST['id']) && !empty($_REQUEST['page']) && ($N = $notes->load($_REQUEST['page'])) && array_key_exists($_REQUEST['id'], $N) && !empty($_REQUEST['vote']) && ($_REQUEST['vote'] === 'up' || $_REQUEST['vote'] === 'down')) {
     if (!empty($_POST['challenge']) && !empty($_POST['func']) || empty($_POST['arga']) || empty($_POST['argb'])) {
       if (!test_answer($_POST['func'], $_POST['arga'], $_POST['argb'], $_POST['challenge'])) {
         $error = "Incorrect answer! Please try again.";
@@ -96,7 +100,7 @@ else {
   site_header("Vote On User Notes");
   $headerset = true;
 
-  if (!empty($_REQUEST['id']) && !empty($_REQUEST['page']) && ($N = manual_notes_load($_REQUEST['page'])) && array_key_exists($_REQUEST['id'], $N) && !empty($_REQUEST['vote']) && ($_REQUEST['vote'] === 'up' || $_REQUEST['vote'] === 'down')) {
+  if (!empty($_REQUEST['id']) && !empty($_REQUEST['page']) && ($N = $notes->load($_REQUEST['page'])) && array_key_exists($_REQUEST['id'], $N) && !empty($_REQUEST['vote']) && ($_REQUEST['vote'] === 'up' || $_REQUEST['vote'] === 'down')) {
 ?>
  <div class="container" id="notes-dialog" style="width: 100%; padding-bottom: 15px; margin: auto;">
   <div style="width: 100%; margin: auto;"><h1>Voting</h1></div>
@@ -118,7 +122,7 @@ else {
 <?php
   $backID = htmlspecialchars($_REQUEST['id']);
   $backPAGE = htmlspecialchars($_REQUEST['page']);
-  manual_note_display($N[$_REQUEST['id']], false);
+  $notes->displaySingle($N[$_REQUEST['id']], false);
 ?>
  </div>
  <div style="width: 90%; margin: auto;"><p><a href="<?php echo "/{$backPAGE}#{$backID}"; ?>">&lt;&lt; Back to user notes page</a></p></div>
@@ -171,7 +175,7 @@ if (!$headerset) {
 <?php
   $backID = htmlspecialchars($_REQUEST['id']);
   $backPAGE = htmlspecialchars($_REQUEST['page']);
-  manual_note_display($N[$_REQUEST['id']], false);
+  $notes->displaySingle($N[$_REQUEST['id']], false);
 ?>
  </div>
  <div style="width: 90%; margin: auto;"><p><a href="<?php echo "/{$backPAGE}#{$backID}"; ?>">&lt;&lt; Back to user notes page</a></p></div>
