@@ -68,18 +68,6 @@ $RELEASES = (function () {
         ]
     ];
 
-    /* PHP 8.1 Release */
-    $data['8.1'] = [
-        'version' => '8.1.34',
-        'date' => '18 Dec 2025',
-        'tags' => ['security'], // Set to ['security'] for security releases.
-        'sha256' => [
-            'tar.gz' => '3c5b060ec8e0d5dd1d8237823f3161cc8bc5342aab3c46893eba9857759c4bfa',
-            'tar.bz2' => '98e0a08a0fae37d08dfcca2f5ff6664863097dde4b1d360af2acc8c3542f2a0f',
-            'tar.xz' => 'ffa9e0982e82eeaea848f57687b425ed173aa278fe563001310ae2638db5c251',
-        ]
-    ];
-
     $ret = [];
     foreach ($data as $release) {
         $version = $release['version'];
@@ -126,7 +114,7 @@ function show_source_releases()
 {
     global $RELEASES;
 
-    $SHOW_COUNT = 5;
+    $SHOW_COUNT = 4;
 
     $current_uri = htmlspecialchars($_SERVER['REQUEST_URI'], ENT_QUOTES, 'UTF-8');
 

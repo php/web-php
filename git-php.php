@@ -20,7 +20,7 @@ $SIDEBAR_DATA = '
 <h3>Git access</h3>
 <p>
  If you would like to grab PHP sources or other PHP.net
- hosted project data from PHP.net, you can also use 
+ hosted project data from PHP.net, you can also use
  <a href="/git.php">Git</a>. No Git account is required.
 </p>
 ';

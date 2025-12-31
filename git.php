@@ -113,9 +113,6 @@ site_header("Git Access", ["current" => "community"]);
   <br>
   <strong>PHP 8.2</strong>:
   <code>git checkout PHP-8.2</code>
-  <br>
-  <strong>PHP 8.1</strong>:
-  <code>git checkout PHP-8.1</code>
   <br><br>
  </li>
 
