@@ -579,7 +579,7 @@ site_header("News Archive - 2004", ["cache" => true]);
  The Spanish PHP mailing list was relocated to our list server.
  If you would like to subscribe to the list, you can do it via our
  <a href="mailing-lists.php">mailing lists page</a>. To read
- the archives, please see <a href="http://news.php.net/">our
+ the archives, please see <a href="https://news-web.php.net/">our
  news server</a>.
 </p>
 
