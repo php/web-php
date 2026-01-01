@@ -30,8 +30,8 @@ site_header("Sitemap", ["current" => "help"]);
 <h2>PHP Bugs</h2>
 
 <ul>
- <li><a href="http://bugs.php.net/">Submit a bug or a feature request</a></li>
- <li><a href="http://bugs.php.net/search.php">Search for bugs</a></li>
+ <li><a href="https://bugs.php.net/">Submit a bug or a feature request</a></li>
+ <li><a href="https://bugs.php.net/search.php">Search for bugs</a></li>
 </ul>
 
 <h2>PHP Support</h2>

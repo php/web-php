@@ -520,7 +520,7 @@ class Bar {<br>
         tools as well as screencasts showing those build tools in action.
       </p>
       <p>
-        Please visit the <a href="http://wiki.php.net/qa/testfest-2010">TestFest
+        Please visit the <a href="https://wiki.php.net/qa/testfest-2010">TestFest
         2010</a> wiki page for all the details on events being organized in your area,
         or find out how you can organize your own event.
       </p>

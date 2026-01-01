@@ -45,7 +45,7 @@ function a($href): void {
  sites, not just at the main site. If you find that some of these
  shortcuts are not working on your mirror site, please report them
  as a "PHP.net Website Problem" at
- <a href="http://bugs.php.net/">http://bugs.php.net/</a>.
+ <a href="https://bugs.php.net/">https://bugs.php.net/</a>.
 </p>
 
 <p>
