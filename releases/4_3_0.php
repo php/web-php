@@ -20,7 +20,7 @@ site_header("PHP 4.3.0 Release Announcement");
 <p>
  This version finalizes the separate command line interface (CLI) that can be
  used for developing shell and desktop applications (with
- <a href="http://gtk.php.net/">PHP-GTK</a>). The CLI is always built, but
+ <a href="https://qa.php.net/">PHP-GTK</a>). The CLI is always built, but
  installed automatically only if CGI version is disabled via --disable-cgi
  switch during configuration. Alternatively, one can use <strong>make
  install-cli</strong> target. On Windows CLI can be found in
