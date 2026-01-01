@@ -64,7 +64,7 @@ Visit <a href="http://www.prophp.com.br/phpconference.php">the website</a> for m
 The PHP documentation team is pleased to announce the initial release of
 the new build system that generates the PHP Manual. Written in PHP, PhD
 (<em>[PH]P based [D]ocBook renderer</em>) builds are now available for
-viewing at <a href="http://docs.php.net/">docs.php.net</a>. Everyone is
+viewing at <a href="https://www.php.net/">php.net</a>. Everyone is
 encouraged to test and use this system so
 that <a href="https://bugs.php.net/">bugs</a> will be found and squashed.
       </p>
