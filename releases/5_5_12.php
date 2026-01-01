@@ -12,7 +12,7 @@ This release fixes several bugs against PHP 5.5.11, as well as CVE-2014-0185 reg
 <p>All PHP users are encouraged to upgrade to this new version.</p>
 
 <p>For source downloads of PHP 5.5.12, please visit our <a href="http://www.php.net/downloads.php">downloads page</a>.
-Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
+Windows binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
 The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.5.12">ChangeLog</a>.
 </p>
 

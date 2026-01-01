@@ -77,7 +77,7 @@ return [
     'footer_description' => '<p>
             Para downloads do código-fonte do PHP 8, visite a página de
             <a href="http://www.php.net/downloads">downloads</a>.
-            Os binários do Windows podem ser encontrados na página <a href="http://windows.php.net/download">PHP para
+            Os binários do Windows podem ser encontrados na página <a href="https://windows.php.net/download">PHP para
                 Windows</a>.
             A lista de mudanças é registrada no <a href="http://www.php.net/ChangeLog-8.php">ChangeLog</a>.
         </p>

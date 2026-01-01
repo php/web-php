@@ -96,7 +96,7 @@ site_header("News Archive - 2010", ["cache" => true]);
       For a full list of changes in PHP 5.3.4, see the
       <a href="/ChangeLog-5.php#5.3.4">ChangeLog</a>. For source downloads
       please visit our <a href="/downloads.php">downloads page</a>, Windows
-      binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
+      binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
      </p>
     </div>
 
@@ -661,7 +661,7 @@ class Bar {<br>
      For a full list of changes in PHP 5.3.2, see the
      <a href="/ChangeLog-5.php#5.3.2">ChangeLog</a>. For source downloads
      please visit our <a href="/downloads.php">downloads page</a>, Windows
-     binaries can be found on <a href="http://windows.php.net/download/">
+     binaries can be found on <a href="https://windows.php.net/download/">
      windows.php.net/download/</a>.
      </p>
 

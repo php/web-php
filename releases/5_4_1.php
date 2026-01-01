@@ -30,7 +30,7 @@ PHP 5.4 branch with over 60 bug fixes, some of which are security related.</p>
 <p>For a full list of changes in PHP 5.4.1, see the <a
 href="/ChangeLog-5.php#5.4.1">ChangeLog</a>. For source downloads please visit
 our <a href="/downloads.php">downloads page</a>, Windows binaries can be found
-on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.</p>
+on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.</p>
 
 <p>All users of PHP are strongly encouraged to upgrade to PHP 5.4.1.</p>
 
