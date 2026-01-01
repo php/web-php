@@ -134,7 +134,7 @@ site_header("News Archive - 2008", ["cache" => true]);
     <div class="entry-content description">
         <abbr class="published newsdate" title="2008-12-04T17:00:32+01:00">[04-Dec-2008]</abbr>
         <div>
-        <p>The PHP development team is proud to announce the <a href="http://qa.php.net/">third alpha release</a>
+        <p>The PHP development team is proud to announce the <a href="https://qa.php.net/">third alpha release</a>
 
         of the upcoming PHP 5.3.0 minor version update of PHP.
         Several new features have already been documented in the <a href="http://php.net/docs.php">official documentation</a>,
@@ -442,7 +442,7 @@ site_header("News Archive - 2008", ["cache" => true]);
     <div class="entry-content description">
         <abbr class="published newsdate" title="2008-08-01T08:50:37+02:00">[01-Aug-2008]</abbr>
         <div>
-        <p>The PHP development team is proud to announce the <a href="http://qa.php.net/">first alpha release</a> of the upcoming minor version update of PHP. <a href="http://windows.php.net/download/">Windows binaries</a> will be available starting with alpha2 (intermediate snapshots available at <a href="http://snaps.php.net">snaps.php.net</a>). The new version PHP 5.3 is expected to improve stability and performance as well as add new language syntax and extensions. Several new features have already been documented in the <a href="http://php.net/docs.php">official documentation</a>, others are listed on the <a href="http://wiki.php.net/doc/scratchpad/upgrade/53">wiki</a> in preparation of getting documented. Please also review the <a href="http://php.net/php5news">NEWS</a> file.</p>
+        <p>The PHP development team is proud to announce the <a href="https://qa.php.net/">first alpha release</a> of the upcoming minor version update of PHP. <a href="http://windows.php.net/download/">Windows binaries</a> will be available starting with alpha2 (intermediate snapshots available at <a href="http://snaps.php.net">snaps.php.net</a>). The new version PHP 5.3 is expected to improve stability and performance as well as add new language syntax and extensions. Several new features have already been documented in the <a href="http://php.net/docs.php">official documentation</a>, others are listed on the <a href="http://wiki.php.net/doc/scratchpad/upgrade/53">wiki</a> in preparation of getting documented. Please also review the <a href="http://php.net/php5news">NEWS</a> file.</p>
 
         <strong>THIS IS A DEVELOPMENT PREVIEW - DO NOT USE IT IN PRODUCTION!</strong>
         <p>The purpose of this alpha release is to encourage users to not only actively
@@ -482,7 +482,7 @@ site_header("News Archive - 2008", ["cache" => true]);
     <div class="entry-content description">
         <abbr class="published newsdate" title="2008-07-30T00:23:14+01:00">[30-Jul-2008]</abbr>
         <div>
-        <p>Overall 158 tests have been submitted as part of <a href="http://qa.php.net/testfest.php">TestFest 2008</a> since the launch of the <a href="http://testfest.php.net">TestFest submission site</a> by 30 different people from people all over the world. Actually this is not counting the various submissions by existing core developers, who also took this opportunity to add some more tests. This has actually increased total <a href="http://gcov.php.net/" target="_new">test coverage</a> for ext/reflection, ext/dom and ext/exif by about 10% each. While the organization of the TestFest was a bit adhoc, there were numerous TestFest events in local user groups. So the number of people exposed to the PHP test framework is much greater. Hopefully this will lead to more people submitting bug reports with an accompanying <a href="http://qa.php.net/write-test.php">phpt</a> test file!</p>
+        <p>Overall 158 tests have been submitted as part of <a href="https://phptestfest.org">TestFest 2008</a> since the launch of the <a href="http://testfest.php.net">TestFest submission site</a> by 30 different people from people all over the world. Actually this is not counting the various submissions by existing core developers, who also took this opportunity to add some more tests. This has actually increased total <a href="http://gcov.php.net/" target="_new">test coverage</a> for ext/reflection, ext/dom and ext/exif by about 10% each. While the organization of the TestFest was a bit adhoc, there were numerous TestFest events in local user groups. So the number of people exposed to the PHP test framework is much greater. Hopefully this will lead to more people submitting bug reports with an accompanying <a href="https://qa.php.net/write-test.php">phpt</a> test file!</p>
 
         <p>Our top submitter Felix De Vliegher has actually committed his last submissions himself since, based on the high quality of his submissions, he has been granted commit rights to the PHP repository. We have not heard back from all participants, but we encourage everybody to <a href="http://www.deshong.net/?p=76" target="_new">blog</a> about their experience and provide us with feedback on how to improve future events.</p>
         <p>Now better late than never, here are the 10 winners of the promised <a href="http://flickr.com/groups/elephpants/pool/">elePHPant</a> raffle sponsored by <a href="http://www.nexen.net">Nexen</a>. Note that Felix asked me not to include him in the raffle, since he is already herding quite a number of elePHPants at home.</p>
@@ -796,10 +796,10 @@ and join the <a href="http://www.flickr.com/photos/tags/elephpant/">world of blu
         <abbr class="published newsdate" title="2008-03-30T21:06:55+01:00">[30-Mar-2008]</abbr>
         <div>
         <p>The PHP-QA team would like to announce the
-        <a href="http://qa.php.net/testfest.php">TestFest</a> for the month of
+        <a href="https://phptestfest.org">TestFest</a> for the month of
         May 2008. The TestFest is an event that aims at improving the
         <a href="http://gcov.php.net">code coverage</a> of the
-        <a href="http://qa.php.net/running-tests.php">test suite</a> for the PHP
+        <a href="https://qa.php.net/running-tests.php">test suite</a> for the PHP
         language itself. As part of this event, local User Groups (UG) are
         invited to join the TestFest. These UGs can meet physically or come
         together virtually. The point however is that people network to learn
@@ -809,10 +809,10 @@ and join the <a href="http://www.flickr.com/photos/tags/elephpant/">world of blu
 
         <p>All it takes is someone to organize a UG to spearhead the event and
         to get others involved in
-        <a href="http://qa.php.net/write-test.php">writing phpt tests</a>.
+        <a href="https://qa.php.net/write-test.php">writing phpt tests</a>.
         The submissions will then be reviewed by members of php.net before
         getting included in the official test suite. Please visit the
-        <a href="http://qa.php.net/testfest.php">TestFest homepage</a> to get
+        <a href="https://phptestfest.org">TestFest homepage</a> to get
         additional details on the TestFest on how to get involved, either as a
         UG or by setting up the necessary infrastructure.</p>
       </div>
