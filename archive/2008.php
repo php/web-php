@@ -21,7 +21,7 @@ site_header("News Archive - 2008", ["cache" => true]);
 
         <div>
         <p>Due to unfortunate circumstances Windows binaries for PECL extensions will no longer be available on http://pecl4win.php.net.</p>
-        <p>Work is being done to incorporate Windows binaries for PECL extensions into <a href="http://pecl.php.net">pecl.php.net</a> and will hopefully be ready early 2009</p>
+        <p>Work is being done to incorporate Windows binaries for PECL extensions into <a href="https://pecl.php.net">pecl.php.net</a> and will hopefully be ready early 2009</p>
         <p>If anyone is interested in the project please join the <a href="mailto:internals-win@lists.php.net">PHP Windows Development</a> <a href="http://php.net/mailinglist">mailinglist</a>.</p>
 
       </div>
