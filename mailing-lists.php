@@ -118,7 +118,7 @@ if (isset($_POST['action'])) {
 </p>
 <p>
  There is an experimental web interface for the news server at
- <a href="http://news.php.net/">http://news.php.net/</a>, and
+ <a href="https://news-web.php.net/">https://news-web.php.net/</a>, and
  there are also other archives provided by
  <a href="http://marc.info/">Marc</a>.
 </p>
@@ -300,7 +300,7 @@ function output_lists_table($mailing_lists): void
                 $larchive = ($listinfo[4] === true ? $listinfo[0] : $listinfo[4]);
             } else { $larchive = false; }
             echo '<td>' . ($larchive ? "<a href=\"http://marc.info/?l={$larchive}\">yes</a>" : 'n/a') . '</td>';
-            echo '<td>' . ($listinfo[6] ? "<a href=\"news://news.php.net/{$listinfo[6]}\">yes</a> <a href=\"http://news.php.net/group.php?group={$listinfo[6]}\">http</a>" : 'n/a') . '</td>';
+            echo '<td>' . ($listinfo[6] ? "<a href=\"news://news.php.net/{$listinfo[6]}\">yes</a> <a href=\"https://news-web.php.net/group.php?group={$listinfo[6]}\">http</a>" : 'n/a') . '</td>';
             echo '<td><input name="maillist" type="radio" value="' . $listinfo[0] . '"></td>';
             echo '<td>' . ($listinfo[5] ? '<input name="maillist" type="radio" value="' . $listinfo[0] . '-digest">' : 'n/a') . '</td>';
             echo '<td><code><small>' . $listinfo[0] . '</small></code></td>';
