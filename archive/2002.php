@@ -157,7 +157,7 @@ site_header("News Archive - 2002", ["cache" => true]);
  browser specific magic you can now use our
  <a href="/sidebars.php">Search Bar</a> from the major browsers. Please help
  us to test this new service, and provide feedback via
- <a href="http://bugs.php.net/">the bug system</a> (categorize your bug
+ <a href="https://bugs.php.net/">the bug system</a> (categorize your bug
  as a PHP.net website bug please).
 </p>
 
