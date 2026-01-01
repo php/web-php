@@ -829,7 +829,7 @@ site_header("News Archive - 2009", ["cache" => true]);
         <li>Support for <a href="http://php.net/namespaces">namespaces</a></li>
         <li>Under the hood performance improvements</li>
         <li><a href="http://php.net/lsb">Late static binding</a></li>
-        <li><a href="http://docs.php.net/functions.anonymous">Lambda functions and closures</a></li>
+        <li><a href="https://www.php.net/functions.anonymous">Lambda functions and closures</a></li>
         <li>
          Syntax additions:
          <a href="http://php.net/manual/language.types.string.php#language.types.string.syntax.nowdoc">NOWDOC</a>, limited GOTO,
