@@ -360,7 +360,7 @@ function output_lists_table($mailing_lists): void
 <h2>Mailing list options</h2>
 
 <p>
- All the mailing lists hosted at <a href="http://lists.php.net/">lists.php.net</a>
+ All the mailing lists hosted at <a href="http://news-web.php.net/">news-web.php.net</a>
  are managed using the <a href="http://mlmmj.org/">mlmmj</a> mailing list
  software. There are a variety of commands you may use to modify your
  subscription. For a full overview, send a message to
