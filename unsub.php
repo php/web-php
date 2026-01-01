@@ -5,8 +5,8 @@ $SIDEBAR_DATA = '
 <h3>Other PHP related mailing lists</h3>
 
 <p>
- Unsubscribe from the <a href="http://pear.php.net/support/lists.php">PEAR
- lists</a> and the <a href="http://pecl.php.net/support.php">PECL
+ Unsubscribe from the <a href="https://pear.php.net/support/lists.php">PEAR
+ lists</a> and the <a href="https://pecl.php.net/support.php">PECL
  lists</a> on their own pages.
 </p>
 ';
@@ -86,45 +86,45 @@ site_header("Unsubscribing", ["current" => "community"]);
 <h3>Viewing full headers in different email applications</h3>
 
 <dl>
- <dt><a href="http://www.eudora.com/">Eudora</a></dt>
+ <dt><a href="https://www.eudora.com/">Eudora</a></dt>
  <dd>
   Click on the 'Blah Blah Blah' toolbar button above the message.
  </dd>
 
- <dt><a href="http://gmail.google.com/">Gmail</a></dt>
+ <dt><a href="https://gmail.google.com/">Gmail</a></dt>
  <dd>
   While viewing a message, click on 'More options' and 'Show original'.
   This will display the headers for that message in a new window.
  </dd>
 
- <dt><a href="http://www.hotmail.com/">Hotmail</a></dt>
+ <dt><a href="https://www.hotmail.com/">Hotmail</a></dt>
  <dd>
   Click on 'Options', 'Mail' and then 'Mail Display Settings'. Change
   the 'Message Headers' section to 'Advanced', and click OK.
  </dd>
 
- <dt><a href="http://mail.yahoo.com/">Yahoo! Mail</a></dt>
+ <dt><a href="https://mail.yahoo.com/">Yahoo! Mail</a></dt>
  <dd>
   Click on 'Mail Options' and 'General Preferences'. Under the 'Messages'
   section, select 'Show all headers on incoming messages' for the 'Headers'
   option and click 'Save'.
  </dd>
 
- <dt><a href="http://www.apple.com/macosx/features/mail/">Mail for Mac OS X</a></dt>
+ <dt><a href="https://www.apple.com/macosx/features/mail/">Mail for Mac OS X</a></dt>
  <dd>
   Click on the 'Mail' drop-down menu and select 'Preferences'. Click on
   the 'Viewing' icon, and then the arrow on the 'Show header detail'
   and select 'All'.
  </dd>
 
- <dt><a href="http://www.microsoft.com/outlook/">Microsoft Outlook</a></dt>
+ <dt><a href="https://www.microsoft.com/outlook/">Microsoft Outlook</a></dt>
  <dd>
   Either click on the 'Options' tab (Outlook 97) or select the 'Options...' item
   from the 'View' menu (Outlook 98, 2000, 2003). The headers are displayed at the
   bottom of the resulting window.
  </dd>
 
- <dt><a href="http://www.microsoft.com/Windows/oe/">Microsoft Outlook Express</a></dt>
+ <dt><a href="https://www.microsoft.com/Windows/oe/">Microsoft Outlook Express</a></dt>
  <dd>
   Select 'Properties' from the 'File' menu and then click on the 'Details' tab.
  </dd>
@@ -135,18 +135,18 @@ site_header("Unsubscribing", ["current" => "community"]);
   bound to the 'display-toggle-weed' function).
  </dd>
 
- <dt><a href="http://www.mozilla.com/thunderbird/">Mozilla Thunderbird</a></dt>
+ <dt><a href="https://www.thunderbird.net/">Mozilla Thunderbird</a></dt>
  <dd>
   Select 'Headers&rarr;All' from the 'View' menu, and expand the headers
   section of the display by clicking on the triangle icon.
  </dd>
 
- <dt><a href="http://www.pmail.com/">Pegasus Mail</a></dt>
+ <dt><a href="https://www.pmail.com">Pegasus Mail</a></dt>
  <dd>
   Open the message in a new window and then press backspace or Ctrl-H.
  </dd>
 
- <dt><a href="http://www.washington.edu/pine/">Pine</a></dt>
+ <dt><a href="https://www.washington.edu/pine/">Pine</a></dt>
  <dd>
   From the main Pine menu, type 'S' for 'Setup', then 'C' for 'Config'.
   Use the space bar and down arrow to scroll until you reach the

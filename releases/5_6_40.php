@@ -13,12 +13,12 @@ site_header("PHP 5.6.40 Release Announcement");
      All PHP 5.6 users are encouraged to upgrade to this version.
      </p>
 
-     <p>For source downloads of PHP 5.6.40 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-     The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.6.40">ChangeLog</a>.
+     <p>For source downloads of PHP 5.6.40 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
+     Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
+     The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-5.php#5.6.40">ChangeLog</a>.
      </p>
 
-     <p>Please note that according to the <a href="http://php.net/supported-versions.php">PHP version
+     <p>Please note that according to the <a href="https://www.php.net/supported-versions.php">PHP version
 support timelines</a>,
         PHP 5.6.40 is the last scheduled release of PHP 5.6 branch. There may be additional release if we
 discover

@@ -120,7 +120,7 @@ site_header("News Archive - 2004", ["cache" => true]);
 
 <hr>
 
-<?php news_image("http://www.zend.com/php5/contest/", "zendtech_logo.gif", "Zend Technologies"); ?>
+<?php news_image("https://www.zend.com/php5/contest/", "zendtech_logo.gif", "Zend Technologies"); ?>
 
 <h1>Zend's PHP 5 Coding Contest winners announced</h1>
 <p>
@@ -129,7 +129,7 @@ site_header("News Archive - 2004", ["cache" => true]);
  '<a href="http://www.xisc.com/">PRADO</a>' earned high votes both
  from the public and from the judges' panel!
  There are 49 other prizewinning applications in Zend's
- <a href="http://www.zend.com/php5/contest">contest gallery</a>
+ <a href="https://www.zend.com/php5/contest">contest gallery</a>
  &ndash; too many to list here.  Some of them are ongoing projects, bringing
  PHP 5 a small armoury of useful open source tools.
 </p>
@@ -298,7 +298,7 @@ site_header("News Archive - 2004", ["cache" => true]);
 
 <ul>
  <li>
-  The <a href="http://www.zend.com/php5/zend-engine2.php">Zend Engine II</a>
+  The <a href="https://www.zend.com/php5/zend-engine2.php">Zend Engine II</a>
   with a new object model and dozens of new features.
  </li>
  <li>
@@ -410,7 +410,7 @@ site_header("News Archive - 2004", ["cache" => true]);
  square meters booth are: <a href="http://100days.de">100days</a>, <a
  href="http://ez.no">eZ systems</a>, <a
  href="http://thinkphp.de">Mayflower</a>, <a href="http://mysql.com">MySQL</a>
- and <a href="http://zend.com">Zend</a>.
+ and <a href="https://www.zend.com">Zend</a>.
 </p>
 
 <p>
@@ -440,13 +440,13 @@ site_header("News Archive - 2004", ["cache" => true]);
 
 <hr>
 
-<?php news_image("http://www.zend.com/php5/contest/", "zendtech_logo.gif", "Zend Technologies"); ?>
+<?php news_image("https://www.zend.com/php5/contest/", "zendtech_logo.gif", "Zend Technologies"); ?>
 
 <h1>Zend's PHP 5 Coding Contest</h1>
 
 <p>
  <span class="newsdate">[06-Jun-2004]</span>
- <a href="http://www.zend.com/php5/contest/">Zend's
+ <a href="https://www.zend.com/php5/contest/">Zend's
  PHP 5 Coding Contest</a> is underway and accepting submissions.
  This is every developer's chance to flaunt their PHP 5 skills
  and let their application shine!
@@ -459,7 +459,7 @@ site_header("News Archive - 2004", ["cache" => true]);
 </p>
 
 <p>
- Lots of <a href="http://www.zend.com/php5/contest/prizes.php">prizes</a>
+ Lots of <a href="https://www.zend.com/php5/contest/prizes.php">prizes</a>
  are available!
 </p>
 
@@ -534,7 +534,7 @@ site_header("News Archive - 2004", ["cache" => true]);
 
 <ul>
  <li>
-  The <a href="http://www.zend.com/php5/zend-engine2.php">Zend Engine II</a>
+  The <a href="https://www.zend.com/php5/zend-engine2.php">Zend Engine II</a>
   with a new object model and dozens of new features.
  </li>
  <li>
@@ -579,7 +579,7 @@ site_header("News Archive - 2004", ["cache" => true]);
  The Spanish PHP mailing list was relocated to our list server.
  If you would like to subscribe to the list, you can do it via our
  <a href="mailing-lists.php">mailing lists page</a>. To read
- the archives, please see <a href="http://news.php.net/">our
+ the archives, please see <a href="https://news.php.net/">our
  news server</a>.
 </p>
 

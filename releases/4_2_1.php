@@ -41,7 +41,7 @@ site_header("PHP 4.2.1 Release Announcement");
 <p>
  PHP 4.2.1 also has improved (but still experimental) support for Apache version 2.
  We do <strong>not</strong> recommend that you use this in a production environment,
- but feel free to test it and report bugs to the <a href="http://bugs.php.net">bug
+ but feel free to test it and report bugs to the <a href="https://bugs.php.net">bug
  system</a>.
 </p>
 
@@ -59,7 +59,7 @@ site_header("PHP 4.2.1 Release Announcement");
 <ul>
  <li><a href="/manual/en/language.variables.predefined.php">PHP Manual: Predefined variables</a></li>
  <li><a href="/release_4_1_0.php">The PHP 4.1.0 release announcement</a></li>
- <li><a href="http://www.zend.com/zend/art/art-oertli.php">Thomas Oertli's article on secure programming in PHP</a></li>
+ <li><a href="https://www.zend.com/zend/art/art-oertli.php">Thomas Oertli's article on secure programming in PHP</a></li>
 </ul>
 
 <?php site_footer(); ?>

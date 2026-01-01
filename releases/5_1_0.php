@@ -39,7 +39,7 @@ In addition to new features, this release includes a number of important securit
 <li>Fixed a possible $GLOBALS overwrite problem in file upload handling,
 	extract() and import_request_variables() that could lead to unexpected
 	security holes in scripts assumed secure. (For more information, see <a
-	href='http://www.hardened-php.net/globals-problem'>here</a>).</li>
+	href='https://www.hardened-php.net/globals-problem'>here</a>).</li>
 <li>Fixed a problem when a request was terminated due to memory_limit
 	constraints during certain
 	<a href='/parse_str'>parse_str</a>() calls. In some cases

@@ -12,7 +12,7 @@ site_header("License Information", ["current" => "help"]);
 <p>
   Any code contributed to PHP must be contributed under the PHP license (or a compatible BSD-style license).
   PHP will be redistributed under the PHP license (currently
-  <a href="http://www.php.net/license/3_01.txt">version 3.01</a>).
+  <a href="https://www.php.net/license/3_01.txt">version 3.01</a>).
   This includes implementation code, test cases, utility scripts and tools - that is, all code associated
   with the PHP project. If you contribute code that isn't entirely your own
   (for example it may be partially derived from other Open Source software) you are asked to add a comment
@@ -36,8 +36,8 @@ site_header("License Information", ["current" => "help"]);
   For related projects, please refer to the Project websites:
 </p>
 <ul>
-  <li><a href="http://pecl.php.net/copyright.php">PECL</a></li>
-  <li><a href="http://pear.php.net/copyright.php">PEAR</a></li>
+  <li><a href="https://pecl.php.net/copyright.php">PECL</a></li>
+  <li><a href="https://pear.php.net/copyright.php">PEAR</a></li>
 </ul>
 
 <?php site_footer();

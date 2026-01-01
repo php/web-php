@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <entry xmlns="http://www.w3.org/2005/Atom" xmlns:default="http://php.net/ns/news">
   <title>Bulgaria PHP Conference</title>
-  <id>http://php.net/archive/2015.php#id2015-02-25-3</id>
+  <id>https://www.php.net/archive/2015.php#id2015-02-25-3</id>
   <published>2015-02-25T12:53:27+01:00</published>
   <updated>2015-02-25T12:53:27+01:00</updated>
   <default:finalTeaserDate xmlns="http://php.net/ns/news">2015-03-16</default:finalTeaserDate>
   <category term="conferences" label="Conference announcement"/>
   <category term="cfp" label="Call for Papers"/>
-  <link href="http://php.net/conferences/index.php#id2015-02-25-3" rel="alternate" type="text/html"/>
+  <link href="https://www.php.net/conferences/index.php#id2015-02-25-3" rel="alternate" type="text/html"/>
   <default:newsImage xmlns="http://php.net/ns/news" link="http://bgphp.org/" title="Bulgaria PHP Conference">conference-phpbulgaria2015.png</default:newsImage>
   <link href="http://bgphp.org/" rel="via" type="text/html"/>
   <content type="xhtml">

@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <entry xmlns="http://www.w3.org/2005/Atom" xmlns:default="http://php.net/ns/news">
   <title>ScotlandPHP 2019</title>
-  <id>http://php.net/archive/2019.php#id2019-01-15-1</id>
+  <id>https://www.php.net/archive/2019.php#id2019-01-15-1</id>
   <published>2019-01-15T21:41:40+00:00</published>
   <updated>2019-01-15T21:41:40+00:00</updated>
   <default:finalTeaserDate xmlns="http://php.net/ns/news">2019-03-31</default:finalTeaserDate>
   <category term="cfp" label="Call for Papers"/>
-  <link href="http://php.net/conferences/index.php#id2019-01-15-1" rel="alternate" type="text/html"/>
+  <link href="https://www.php.net/conferences/index.php#id2019-01-15-1" rel="alternate" type="text/html"/>
   <default:newsImage xmlns="http://php.net/ns/news" link="https://scophp.co/2019/" title="ScotlandPHP">scotlandphp-logo.png</default:newsImage>
   <link href="https://scophp.co/2019/" rel="via" type="text/html"/>
   <content type="xhtml">
     <div xmlns="http://www.w3.org/1999/xhtml">
      We are delighted to announce we are back in 2019 to do it all again! We will be staying put this year at the EICC in Edinburgh but the date has shifted forward a little to the 9th of November. Make sure to stick it in your diary!
-     
+
      No conference is possible without speakers and we're happy to announce this years call for speakers is open from Febuary 1st to March 31st.
     </div>
   </content>

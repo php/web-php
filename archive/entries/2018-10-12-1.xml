@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <entry xmlns="http://www.w3.org/2005/Atom" xmlns:default="http://php.net/ns/news">
   <title>Longhorn PHP 2019 CFP is open!</title>
-  <id>http://php.net/archive/2018.php#id2018-10-12-1</id>
+  <id>https://www.php.net/archive/2018.php#id2018-10-12-1</id>
   <published>2018-10-12T18:08:06+00:00</published>
   <updated>2018-10-12T18:08:06+00:00</updated>
   <default:finalTeaserDate xmlns="http://php.net/ns/news">2018-12-15</default:finalTeaserDate>
   <category term="conferences" label="Conference announcement"/>
-  <link href="http://php.net/conferences/index.php#id2018-10-12-1" rel="alternate" type="text/html"/>
+  <link href="https://www.php.net/conferences/index.php#id2018-10-12-1" rel="alternate" type="text/html"/>
   <default:newsImage xmlns="http://php.net/ns/news" link="https://www.longhornphp.com/" title="Longhorn PHP 2019">longhornphp.png</default:newsImage>
   <link href="https://www.longhornphp.com/" rel="via" type="text/html"/>
   <content type="xhtml">

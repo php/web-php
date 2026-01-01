@@ -28,10 +28,10 @@ site_header("License Information", ["current" => "help"]);
 <ul>
  <li>
   Starting with PHP 4, versions of the PHP software are distributed under the
-  <a href="http://www.php.net/license/3_01.txt">PHP License v3.01</a>, copyright (c) the <a href="/credits.php">PHP Group</a>.
+  <a href="https://www.php.net/license/3_01.txt">PHP License v3.01</a>, copyright (c) the <a href="/credits.php">PHP Group</a>.
   <ul>
    <li>
-    This is an <a href="http://www.opensource.org/docs/osd">Open Source license</a>,
+    This is an <a href="https://opensource.org/docs/osd">Open Source license</a>,
     certified by the Open Source Initiative.
    </li>
    <li>
@@ -60,10 +60,10 @@ site_header("License Information", ["current" => "help"]);
 <ul>
  <li>
   The PHP manual text and comments are covered by the
-  <a href="http://creativecommons.org/licenses/by/3.0/legalcode">Creative Commons Attribution 3.0 License</a>,
+  <a href="https://creativecommons.org/licenses/by/3.0/legalcode">Creative Commons Attribution 3.0 License</a>,
   copyright (c) the PHP Documentation Group
  </li>
- <li><a href="http://creativecommons.org/licenses/by/3.0/">Summary</a> in human-readable form</li>
+ <li><a href="https://creativecommons.org/licenses/by/3.0/">Summary</a> in human-readable form</li>
  <li>Practical Information: <a href="https://doc.php.net/guide/">Contribution Guide</a></li>
 </ul>
 
@@ -99,7 +99,7 @@ OK?
 We cannot really stop you from using PHP in the name of
 your project unless you include any code from the PHP distribution, in
 which case you would be violating the license.
-See Clause 4 in the <a href="http://www.php.net/license/3_01.txt">
+See Clause 4 in the <a href="https://www.php.net/license/3_01.txt">
 PHP License v3.01</a>.
 <br>But we would really prefer if people would come up with their own names
 independent of the  PHP name.
@@ -148,8 +148,8 @@ PHP become as popular as possible.
 For related projects, please refer to licensing information on the Project websites:
 </p>
 <ul>
-  <li><a href="http://pecl.php.net/copyright.php">PECL</a></li>
-  <li><a href="http://pear.php.net/copyright.php">PEAR</a></li>
+  <li><a href="https://pecl.php.net/copyright.php">PECL</a></li>
+  <li><a href="https://pear.php.net/copyright.php">PEAR</a></li>
 </ul>
 
 <?php site_footer(['sidebar' => $SIDEBAR_DATA]);

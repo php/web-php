@@ -54,7 +54,7 @@ site_header("Annonce de publication de PHP 4.2.1", ["lang" => "fr"]);
  (mais toujours exp&eacute;rimentale) avec Apache 2. Nous <strong>ne
  recommandons pas</strong> son utilisation dans un environnement de
  production. Testez-le intensivement, et rapportez tous les bugs dans le
- <a href="http://bugs.php.net">syst&egrave;me</a>.
+ <a href="https://bugs.php.net">syst&egrave;me</a>.
 </p>
 
 <h2>Variables externes</h2>
@@ -71,7 +71,7 @@ site_header("Annonce de publication de PHP 4.2.1", ["lang" => "fr"]);
 <ul>
  <li><a href="/manual/fr/language.variables.predefined.php">PHP Manuel : Variables pr&eacute;d&eacute;finies</a></li>
  <li><a href="/release_4_1_0_fr.php">L'annonce de publication de PHP 4.1.0</a></li>
- <li><a href="http://www.zend.com/zend/art/art-oertli.php">L'article de Thomas Oertli sur la programmation s&eacute;curis&eacute;e</a></li>
+ <li><a href="https://www.zend.com/zend/art/art-oertli.php">L'article de Thomas Oertli sur la programmation s&eacute;curis&eacute;e</a></li>
 </ul>
 
 <?php site_footer(); ?>

@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <entry xmlns="http://www.w3.org/2005/Atom" xmlns:default="http://php.net/ns/news">
   <title>WavePHP 2018 - Call for Speakers</title>
-  <id>http://php.net/archive/2018.php#id2018-02-06-1</id>
+  <id>https://www.php.net/archive/2018.php#id2018-02-06-1</id>
   <published>2018-02-06T17:20:49+00:00</published>
   <updated>2018-02-06T17:20:49+00:00</updated>
   <default:finalTeaserDate xmlns="http://php.net/ns/news">2018-02-28</default:finalTeaserDate>
   <category term="cfp" label="Call for Papers"/>
-  <link href="http://php.net/conferences/index.php#id2018-02-06-1" rel="alternate" type="text/html"/>
+  <link href="https://www.php.net/conferences/index.php#id2018-02-06-1" rel="alternate" type="text/html"/>
   <default:newsImage xmlns="http://php.net/ns/news" link="https://www.wavephp.com/" title="WavePHP 2018">WavePHPlogo.jpg</default:newsImage>
-  <link href="http://php.net/archive/2018.php#id2018-02-06-1" rel="via" type="text/html"/>
+  <link href="https://www.php.net/archive/2018.php#id2018-02-06-1" rel="via" type="text/html"/>
   <content type="xhtml">
     <div xmlns="http://www.w3.org/1999/xhtml">
      The inaugural San Diego PHP Conference (<a href="https://www.wavephp.com" title="WavePHP 2018">WavePHP</a>) is going to be happening September 19, 2018.   We have opened our <a href="https://cfp.wavephp.com" title="WavePHP 2018 Call for Speakers">Call for Speakers</a> and look forward to having a tough time choosing between all of the proposals.

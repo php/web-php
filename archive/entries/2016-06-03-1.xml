@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <entry xmlns="http://www.w3.org/2005/Atom" xmlns:default="http://php.net/ns/news">
   <title>Madison PHP Conference 2016 Call For Papers</title>
-  <id>http://php.net/archive/2016.php#id2016-06-03-1</id>
+  <id>https://www.php.net/archive/2016.php#id2016-06-03-1</id>
   <published>2016-06-03T21:05:00-04:00</published>
   <updated>2016-06-03T21:05:00-04:00</updated>
   <default:finalTeaserDate xmlns="http://php.net/ns/news">2016-06-20</default:finalTeaserDate>
   <category term="cfp" label="Call for Papers"/>
-  <link href="http://php.net/conferences/index.php#id2016-06-03-1" rel="alternate" type="text/html"/>
+  <link href="https://www.php.net/conferences/index.php#id2016-06-03-1" rel="alternate" type="text/html"/>
   <default:newsImage xmlns="http://php.net/ns/news" link="http://2016.madisonphpconference.com/" title="Madison PHP Conference 2016">madison-php-2016-conf-logo.png</default:newsImage>
   <link href="http://2016.madisonphpconference.com" rel="via" type="text/html"/>
   <content type="xhtml">

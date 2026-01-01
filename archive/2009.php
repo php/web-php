@@ -14,7 +14,7 @@ site_header("News Archive - 2009", ["cache" => true]);
 <hr>
 <div class="newsItem hentry">
     <div class="newsImage"></div>
-    <h1 class="summary entry-title"><a id="id2009-12-17-1" href="http://www.php.net/archive/2009.php#id2009-12-17-1" rel="bookmark" class="bookmark">PHP 5.2.12 Released!</a></h1>
+    <h1 class="summary entry-title"><a id="id2009-12-17-1" href="https://www.php.net/archive/2009.php#id2009-12-17-1" rel="bookmark" class="bookmark">PHP 5.2.12 Released!</a></h1>
     <div class="entry-content description">
         <abbr class="published newsdate" title="2009-12-17T07:41:36-05:00">[17-Dec-2009]</abbr>
         <div>
@@ -107,7 +107,7 @@ site_header("News Archive - 2009", ["cache" => true]);
 <hr>
 <div class="newsItem hentry">
     <div class="newsImage"></div>
-    <h1 class="summary entry-title"><a id="id2009-11-19-1" href="http://www.php.net/archive/2009.php#id2009-11-19-1" rel="bookmark" class="bookmark">PHP 5.3.1 Released!</a></h1>
+    <h1 class="summary entry-title"><a id="id2009-11-19-1" href="https://www.php.net/archive/2009.php#id2009-11-19-1" rel="bookmark" class="bookmark">PHP 5.3.1 Released!</a></h1>
     <div class="entry-content description">
         <abbr class="published newsdate" title="2009-11-19T17:41:11+00:00">[19-Nov-2009]</abbr>
         <div>
@@ -124,7 +124,7 @@ site_header("News Archive - 2009", ["cache" => true]);
         <li>Fixed a open_basedir bypass in posix_mkfifo().</li>
         <li>Fixed failing safe_mode_include_dir.</li>
       </ul>
-      <p>Further details about the PHP 5.3.1 release can be found in the <a href="http://www.php.net/releases/5_3_1.php">release announcement</a>, and the full list of changes are available in the <a href="http://www.php.net/ChangeLog-5.php#5.3.1">ChangeLog</a>.</p>
+      <p>Further details about the PHP 5.3.1 release can be found in the <a href="https://www.php.net/releases/5_3_1.php">release announcement</a>, and the full list of changes are available in the <a href="https://www.php.net/ChangeLog-5.php#5.3.1">ChangeLog</a>.</p>
     </div>
 
     </div>
@@ -192,7 +192,7 @@ site_header("News Archive - 2009", ["cache" => true]);
 <hr>
 <div class="newsItem hentry">
     <div class="newsImage"></div>
-    <h1 class="summary entry-title"><a id="id2009-09-17-1" href="http://www.php.net/archive/2009.php#id2009-09-17-1" rel="bookmark" class="bookmark">PHP 5.2.11 Released!</a></h1>
+    <h1 class="summary entry-title"><a id="id2009-09-17-1" href="https://www.php.net/archive/2009.php#id2009-09-17-1" rel="bookmark" class="bookmark">PHP 5.2.11 Released!</a></h1>
     <div class="entry-content description">
         <abbr class="published newsdate" title="2009-09-17T21:45:06-04:00">[17-Sep-2009]</abbr>
         <div>
@@ -250,7 +250,7 @@ site_header("News Archive - 2009", ["cache" => true]);
 <hr>
 <div class="newsItem hentry">
     <div class="newsImage"></div>
-    <h1 class="summary entry-title"><a id="id2009-07-30-1" href="http://www.php.net/archive/2009.php#id2009-07-30-1" rel="bookmark" class="bookmark">PHP TestFest 2009 Winners</a></h1>
+    <h1 class="summary entry-title"><a id="id2009-07-30-1" href="https://www.php.net/archive/2009.php#id2009-07-30-1" rel="bookmark" class="bookmark">PHP TestFest 2009 Winners</a></h1>
     <div class="entry-content description">
         <abbr class="published newsdate" title="2009-07-30T12:41:28+02:00">[30-Jul-2009]</abbr>
         <div>
@@ -259,8 +259,8 @@ site_header("News Archive - 2009", ["cache" => true]);
       <a href="http://www.flickr.com/search/?w=all&amp;q=elephpants&amp;m=tags">elePHPhants</a>
       or <a href="http://www.flickr.com/search/?w=all&amp;q=testfest+mug&amp;m=tags">TestFest mugs</a>
       have been picked at random from the people that contributed the
-      <a href="http://testfest.php.net/repos/testfest/">887 tests</a>
-      during the <a href="http://wiki.php.net/qa/testfest">2009 PHP TestFest</a>.
+      <a href="https://testfest.php.net/repos/testfest/">887 tests</a>
+      during the <a href="https://wiki.php.net/qa/testfest">2009 PHP TestFest</a>.
      </p>
      <h2>Winners of elePHPhants</h2>
      <ul>
@@ -337,21 +337,21 @@ site_header("News Archive - 2009", ["cache" => true]);
 <hr>
 <div class="newsItem hentry">
     <div class="newsImage"></div>
-    <h1 class="summary entry-title"><a id="id2009-07-16-1" href="http://www.php.net/archive/2009.php#id2009-07-16-1" rel="bookmark" class="bookmark">Subversion Migration Complete</a></h1>
+    <h1 class="summary entry-title"><a id="id2009-07-16-1" href="https://www.php.net/archive/2009.php#id2009-07-16-1" rel="bookmark" class="bookmark">Subversion Migration Complete</a></h1>
     <div class="entry-content description">
         <abbr class="published newsdate" title="2009-07-16T19:00:00-09:00">[16-Jul-2009]</abbr>
         <div>
      <p>
       The migration from CVS to Subversion is complete.  The web interface is at
-      <a href="http://svn.php.net">svn.php.net</a>.  You can read about it at
-      <a href="http://php.net/svn.php">php.net/svn.php</a>,
-      <a href="http://wiki.php.net/vcs/svnfaq">wiki.php.net/vcs/svnfaq</a>.  The
-      URL to feed to your svn client is http://svn.php.net/repository.
+      <a href="https://svn.php.net">svn.php.net</a>.  You can read about it at
+      <a href="https://www.php.net/svn.php">php.net/svn.php</a>,
+      <a href="https://wiki.php.net/vcs/svnfaq">wiki.php.net/vcs/svnfaq</a>.  The
+      URL to feed to your svn client is https://svn.php.net/repository.
      </p>
      <p>
       There is also a <a href="http://github.com/php">github mirror</a>.  Please
       use that instead of trying to do a full git clone from the svn repository.  See
-      the instructions at <a href="http://wiki.php.net/vcs/svnfaq#git">wiki.php.net/vcs/svnfaq#git</a>
+      the instructions at <a href="https://wiki.php.net/vcs/svnfaq#git">wiki.php.net/vcs/svnfaq#git</a>
      </p>
      <p>
       Many thanks to Gwynne who did the bulk of the work and also all the other folks who pitched in.
@@ -365,28 +365,28 @@ site_header("News Archive - 2009", ["cache" => true]);
 <hr>
 <div class="newsItem hentry">
     <div class="newsImage"></div>
-    <h1 class="summary entry-title"><a id="id2009-07-09-1" href="http://www.php.net/archive/2009.php#id2009-07-09-1" rel="bookmark" class="bookmark">2009 PHP TestFest</a></h1>
+    <h1 class="summary entry-title"><a id="id2009-07-09-1" href="https://www.php.net/archive/2009.php#id2009-07-09-1" rel="bookmark" class="bookmark">2009 PHP TestFest</a></h1>
     <div class="entry-content description">
         <abbr class="published newsdate" title="2009-07-09T10:04:07+02:00">[09-Jul-2009]</abbr>
         <div>
      <p>
       So finally we are at the end of the
-      <a href="http://wiki.php.net/qa/testfest">2009 PHP TestFest</a>.
+      <a href="https://wiki.php.net/qa/testfest">2009 PHP TestFest</a>.
       It has been an outstanding success with the
-      <a href="http://gcov.php.net/PHP_5_3/lcov_html/">coverage increasing</a>
+      <a href="https://gcov.php.net/PHP_5_3/lcov_html/">coverage increasing</a>
       by about 2.5% overall and 887 new tests contributed in the TestFest SVN
       repository of which 637 have already been added to PHP CVS.
      </p>
      <p>
-      <a href="http://wiki.php.net/usergroups">User groups</a> from all
+      <a href="https://wiki.php.net/usergroups">User groups</a> from all
       over the world have worked hard to make this happen and we thank
-      <a href="http://results.testfest.php.net">each and every one of you</a>
+      <a href="https://results.testfest.php.net">each and every one of you</a>
       for your contribution to PHP!
       You really made a difference to the PHP5.3 release quality.
      </p>
      <p>
       There still are few loose ends to tie up - the
-      <a href="http://testfest.php.net/repos/testfest/">TestFest SVN repository</a>
+      <a href="https://testfest.php.net/repos/testfest/">TestFest SVN repository</a>
       will be <em>closed</em> for contributions later this week and the last few
       tests will be moved into the main PHP repository. Finally, we have
       <a href="http://www.flickr.com/search/?w=all&amp;q=elephpants&amp;m=tags">10 elePHPants</a>
@@ -398,10 +398,10 @@ site_header("News Archive - 2009", ["cache" => true]);
      <p>
       For those that would like to continue to make a difference by
       writing tests there are two options. You can simply continue by
-      submitting new tests to the <a href="http://php.net/mailinglists">QA mailing list</a>,
+      submitting new tests to the <a href="https://www.php.net/mailinglists">QA mailing list</a>,
       or, if you have written a significant number of tests you might
       consider applying for your own
-      <a href="http://php.net/cvs-php">PHP CVS (or SVN) ID</a>.
+      <a href="https://www.php.net/cvs-php">PHP CVS (or SVN) ID</a>.
       In your application you should reference the tests that you have
       written in support of your application.
      </p>
@@ -420,43 +420,43 @@ site_header("News Archive - 2009", ["cache" => true]);
 <hr>
 <div class="newsItem hentry">
     <div class="newsImage"></div>
-    <h1 class="summary entry-title"><a id="id2009-06-30-1" href="http://www.php.net/archive/2009.php#id2009-06-30-1" rel="bookmark" class="bookmark">PHP 5.3.0 Released!</a></h1>
+    <h1 class="summary entry-title"><a id="id2009-06-30-1" href="https://www.php.net/archive/2009.php#id2009-06-30-1" rel="bookmark" class="bookmark">PHP 5.3.0 Released!</a></h1>
     <div class="entry-content description">
         <abbr class="published newsdate" title="2009-06-30T11:47:17+02:00">[30-Jun-2009]</abbr>
         <div>
      <p>
       The PHP development team is proud to announce the immediate release of PHP
-      <a href="http://php.net/downloads.php#v5.3.0">5.3.0</a>.
+      <a href="https://www.php.net/downloads.php#v5.3.0">5.3.0</a>.
       This release is a major improvement in the 5.X series, which includes a
       large number of new features and bug fixes.
      </p>
 
      <p>
       Some of the key new features include:
-      <a href="http://php.net/namespaces">namespaces</a>,
-      <a href="http://php.net/lsb">late static binding</a>,
-      <a href="http://php.net/closures">closures</a>,
-      optional <a href="http://php.net/gc_enable">garbage collection</a> for cyclic references,
-      new extensions (like <a href="http://php.net/phar">ext/phar</a>,
-      <a href="http://php.net/intl">ext/intl</a> and
-      <a href="http://php.net/fileinfo">ext/fileinfo</a>),
+      <a href="https://www.php.net/namespaces">namespaces</a>,
+      <a href="https://www.php.net/lsb">late static binding</a>,
+      <a href="https://www.php.net/closures">closures</a>,
+      optional <a href="https://www.php.net/gc_enable">garbage collection</a> for cyclic references,
+      new extensions (like <a href="https://www.php.net/phar">ext/phar</a>,
+      <a href="https://www.php.net/intl">ext/intl</a> and
+      <a href="https://www.php.net/fileinfo">ext/fileinfo</a>),
       over 140 bug fixes and much more.
      </p>
 
      <p>
       For users upgrading from PHP 5.2 there is a
-      <a href="http://php.net/migration53">migration guide</a>
+      <a href="https://www.php.net/migration53">migration guide</a>
       available here, detailing the changes between those
-      releases and <a href="http://php.net/downloads.php#v5.3.0">PHP 5.3.0</a>.
+      releases and <a href="https://www.php.net/downloads.php#v5.3.0">PHP 5.3.0</a>.
      </p>
 
      <p>
       Further details about the
-      <a href="http://php.net/downloads.php#v5.3.0">PHP 5.3.0</a> release
+      <a href="https://www.php.net/downloads.php#v5.3.0">PHP 5.3.0</a> release
       can be found in the
-      <a href="http://php.net/releases/5_3_0.php">release announcement</a>,
+      <a href="https://www.php.net/releases/5_3_0.php">release announcement</a>,
       and the full list of changes are available in the
-      <a href="http://php.net/ChangeLog-5.php">ChangeLog</a>.
+      <a href="https://www.php.net/ChangeLog-5.php">ChangeLog</a>.
      </p>
 
     </div>
@@ -467,7 +467,7 @@ site_header("News Archive - 2009", ["cache" => true]);
 <hr>
 <div class="newsItem hentry vevent">
     <div class="newsImage"><?php news_image("http://www.phprio.org/phpnrio09", "phpnrio09.png", "PHP Rio"); ?></div>
-    <h1 class="summary entry-title"><a id="id2009-06-21-1" href="http://www.php.net/archive/2009.php#id2009-06-21-1" rel="bookmark" class="bookmark">PHP'n Rio conference</a></h1>
+    <h1 class="summary entry-title"><a id="id2009-06-21-1" href="https://www.php.net/archive/2009.php#id2009-06-21-1" rel="bookmark" class="bookmark">PHP'n Rio conference</a></h1>
     <div class="entry-content description">
         <abbr class="published newsdate" title="2009-06-21T10:45:52-07:00">[21-Jun-2009]</abbr>
         <div>
@@ -483,7 +483,7 @@ site_header("News Archive - 2009", ["cache" => true]);
       The keynote speaker is Jan Schneider, who will also
       talk about the Horde project. In addition, we will
       have sessions about other frameworks and include a
-      <a href="http://qa.php.net/testfest.php">PHP TestFest</a>.
+      <a href="https://qa.php.net/testfest.php">PHP TestFest</a>.
      </p>
      <p>
       PHP'n Rio sessions go from 6-9 pm. Then the PHP TestFest follows up
@@ -504,7 +504,7 @@ site_header("News Archive - 2009", ["cache" => true]);
 <hr>
 <div class="newsItem hentry">
     <div class="newsImage"></div>
-    <h1 class="summary entry-title"><a id="id2009-06-19-1" href="http://www.php.net/archive/2009.php#id2009-06-19-1" rel="bookmark" class="bookmark">PHP 5.3.0RC4 Release Announcements</a></h1>
+    <h1 class="summary entry-title"><a id="id2009-06-19-1" href="https://www.php.net/archive/2009.php#id2009-06-19-1" rel="bookmark" class="bookmark">PHP 5.3.0RC4 Release Announcements</a></h1>
     <div class="entry-content description">
         <abbr class="published newsdate" title="2009-06-19T11:02:05+02:00">[19-Jun-2009]</abbr>
         <div>
@@ -514,17 +514,17 @@ site_header("News Archive - 2009", ["cache" => true]);
       and stability improvements, and we hope only minimal changes are required
       for the next candidate or final stable releases. PHP 5.3.0 is a newly
       developed version of PHP featuring long-awaited features like
-      <a href="http://php.net/namespaces">namespaces</a>,
-      <a href="http://php.net/lsb">late static binding</a>,
-      <a href="http://php.net/closures">closures</a> and much more.
+      <a href="https://www.php.net/namespaces">namespaces</a>,
+      <a href="https://www.php.net/lsb">late static binding</a>,
+      <a href="https://www.php.net/closures">closures</a> and much more.
      </p>
      <p>
       Please download and test these release candidates, and report any issues
       found. A stable release is expected next week . In case of critical
       issues we will continue producing weekly RCs. Downloads and further
-      information is available at <a href="http://qa.php.net/">qa.php.net</a>.
+      information is available at <a href="https://qa.php.net/">qa.php.net</a>.
       See also the work in progress
-      <a href="http://cvs.php.net/viewvc.cgi/php-src/UPGRADING?revision=PHP_5_3">5.3 upgrade guide</a>.
+      <a href="https://cvs.php.net/viewvc.cgi/php-src/UPGRADING?revision=PHP_5_3">5.3 upgrade guide</a>.
      </p>
     </div>
 
@@ -534,7 +534,7 @@ site_header("News Archive - 2009", ["cache" => true]);
 <hr>
 <div class="newsItem hentry">
     <div class="newsImage"></div>
-    <h1 class="summary entry-title"><a id="id2009-06-18-1" href="http://www.php.net/archive/2009.php#id2009-06-18-1" rel="bookmark" class="bookmark">PHP 5.2.10 Released!</a></h1>
+    <h1 class="summary entry-title"><a id="id2009-06-18-1" href="https://www.php.net/archive/2009.php#id2009-06-18-1" rel="bookmark" class="bookmark">PHP 5.2.10 Released!</a></h1>
     <div class="entry-content description">
         <abbr class="published newsdate" title="2009-06-18T18:18:28-04:00">[18-Jun-2009]</abbr>
         <div>
@@ -562,10 +562,10 @@ site_header("News Archive - 2009", ["cache" => true]);
 <hr>
 <div class="newsItem hentry">
     <div class="newsImage"></div>
-    <h1 class="summary entry-title"><a id="id2009-06-12-1" href="http://www.php.net/archive/2009.php#id2009-06-12-1" rel="bookmark" class="bookmark">PHP 5.2.10RC2 and PHP 5.3.0RC3 Release Announcements</a></h1>
+    <h1 class="summary entry-title"><a id="id2009-06-12-1" href="https://www.php.net/archive/2009.php#id2009-06-12-1" rel="bookmark" class="bookmark">PHP 5.2.10RC2 and PHP 5.3.0RC3 Release Announcements</a></h1>
     <div class="entry-content description">
         <abbr class="published newsdate" title="2009-06-12T17:39:42+02:00">[12-Jun-2009]</abbr>
-        <div>     <p>      The PHP development team is proud to announce the second release candidate of PHP 5.2.10 (PHP 5.2.10RC2) and      the third release candidate of PHP 5.3.0 (PHP 5.3.0RC3).      These RCs focuses on bug fixes and stability improvements, and we hope only minimal changes are required      for the next candidate or final stable releases.     </p>     <p>      PHP 5.2.10 is a pure maintenance release for providing bugfixes and stability updates. PHP 5.3.0      is a newly developed version of PHP featuring long-awaited features like namespaces, late      static binding, closures and much more.     </p>     <p>      Please download and test these release candidates, and report any issues found.      Downloads and further information is available at <a href="http://qa.php.net/">qa.php.net</a>.      See also the work in progress <a href="http://wiki.php.net/doc/scratchpad/upgrade/53">5.3 upgrade guide</a>.     </p></div>
+        <div>     <p>      The PHP development team is proud to announce the second release candidate of PHP 5.2.10 (PHP 5.2.10RC2) and      the third release candidate of PHP 5.3.0 (PHP 5.3.0RC3).      These RCs focuses on bug fixes and stability improvements, and we hope only minimal changes are required      for the next candidate or final stable releases.     </p>     <p>      PHP 5.2.10 is a pure maintenance release for providing bugfixes and stability updates. PHP 5.3.0      is a newly developed version of PHP featuring long-awaited features like namespaces, late      static binding, closures and much more.     </p>     <p>      Please download and test these release candidates, and report any issues found.      Downloads and further information is available at <a href="https://qa.php.net/">qa.php.net</a>.      See also the work in progress <a href="https://wiki.php.net/doc/scratchpad/upgrade/53">5.3 upgrade guide</a>.     </p></div>
 
     </div>
 </div>
@@ -631,7 +631,7 @@ site_header("News Archive - 2009", ["cache" => true]);
 <hr>
 <div class="newsItem hentry">
     <div class="newsImage"></div>
-    <h1 class="summary entry-title"><a id="id2009-05-09-1" href="http://www.php.net/archive/2009.php#id2009-05-09-1" rel="bookmark" class="bookmark">TestFest 2009</a></h1>
+    <h1 class="summary entry-title"><a id="id2009-05-09-1" href="https://www.php.net/archive/2009.php#id2009-05-09-1" rel="bookmark" class="bookmark">TestFest 2009</a></h1>
     <div class="entry-content description">
         <abbr class="published newsdate" title="2009-05-09T21:45:38+02:00">[09-May-2009]</abbr>
         <div>
@@ -666,7 +666,7 @@ site_header("News Archive - 2009", ["cache" => true]);
       </p>
       <p>
         Getting involved couldn't be simpler. Visit the
-        <a href="http://qa.php.net/testfest.php">QA TestFest page</a> to
+        <a href="https://qa.php.net/testfest.php">QA TestFest page</a> to
         find out how you can organize a TestFest event in your community.
         We are looking forward to seeing your communities tests being
         committed into PHP.
@@ -679,7 +679,7 @@ site_header("News Archive - 2009", ["cache" => true]);
 <hr>
 <div class="newsItem hentry">
     <div class="newsImage"></div>
-    <h1 class="summary entry-title"><a id="id2009-05-07-1" href="http://www.php.net/archive/2009.php#id2009-05-07-1" rel="bookmark" class="bookmark">PHP 5.3.0RC2 Release Announcement</a></h1>
+    <h1 class="summary entry-title"><a id="id2009-05-07-1" href="https://www.php.net/archive/2009.php#id2009-05-07-1" rel="bookmark" class="bookmark">PHP 5.3.0RC2 Release Announcement</a></h1>
     <div class="entry-content description">
         <abbr class="published newsdate" title="2009-05-07T20:20:39+02:00">[07-May-2009]</abbr>
         <div>
@@ -695,8 +695,8 @@ site_header("News Archive - 2009", ["cache" => true]);
      </p>
      <p>
       Please download and test this release candidate, and report any issues found.
-      Downloads and further information is available at <a href="http://qa.php.net/">qa.php.net</a>.
-      See also the work in progress <a href="http://wiki.php.net/doc/scratchpad/upgrade/53">5.3 upgrade guide</a>.
+      Downloads and further information is available at <a href="https://qa.php.net/">qa.php.net</a>.
+      See also the work in progress <a href="https://wiki.php.net/doc/scratchpad/upgrade/53">5.3 upgrade guide</a>.
      </p>
     </div>
 
@@ -744,7 +744,7 @@ site_header("News Archive - 2009", ["cache" => true]);
 <hr>
 <div class="newsItem hentry">
     <div class="newsImage"></div>
-    <h1 class="summary entry-title"><a id="id2009-04-08-1" href="http://www.php.net/archive/2009.php#id2009-04-08-1" rel="bookmark" class="bookmark">PHP 5.2.9-2 (Windows) released</a></h1>
+    <h1 class="summary entry-title"><a id="id2009-04-08-1" href="https://www.php.net/archive/2009.php#id2009-04-08-1" rel="bookmark" class="bookmark">PHP 5.2.9-2 (Windows) released</a></h1>
     <div class="entry-content description">
         <abbr class="published newsdate" title="2009-04-08T13:49:16+02:00">[08-Apr-2009]</abbr>
         <div>
@@ -796,7 +796,7 @@ site_header("News Archive - 2009", ["cache" => true]);
 <hr>
 <div class="newsItem hentry">
     <div class="newsImage"></div>
-    <h1 class="summary entry-title"><a id="id2009-03-27-1" href="http://www.php.net/archive/2009.php#id2009-03-27-1" rel="bookmark" class="bookmark">Google Summer of Code 2009</a></h1>
+    <h1 class="summary entry-title"><a id="id2009-03-27-1" href="https://www.php.net/archive/2009.php#id2009-03-27-1" rel="bookmark" class="bookmark">Google Summer of Code 2009</a></h1>
     <div class="entry-content description">
         <abbr class="published newsdate" title="2009-03-27T15:34:48-07:00">[27-Mar-2009]</abbr>
         <div>
@@ -806,7 +806,7 @@ site_header("News Archive - 2009", ["cache" => true]);
        at this years GSoC.
       </p>
       <p>
-       We invite everyone to look at the <a href="http://wiki.php.net/gsoc/2009">list of ideas</a> for
+       We invite everyone to look at the <a href="https://wiki.php.net/gsoc/2009">list of ideas</a> for
        this years GSoC, and get involved. Students are welcome to propose their own ideas, and we
        will consider all applications that are received before the April 3rd deadline. So, thanks to
        everyone involved and we look forward to seeing many students join us on this great adventure!
@@ -819,64 +819,64 @@ site_header("News Archive - 2009", ["cache" => true]);
 <hr>
 <div class="newsItem hentry">
     <div class="newsImage"></div>
-    <h1 class="summary entry-title"><a id="id2009-03-24-1" href="http://www.php.net/archive/2009.php#id2009-03-24-1" rel="bookmark" class="bookmark">PHP 5.3.0RC1 Release Announcement</a></h1>
+    <h1 class="summary entry-title"><a id="id2009-03-24-1" href="https://www.php.net/archive/2009.php#id2009-03-24-1" rel="bookmark" class="bookmark">PHP 5.3.0RC1 Release Announcement</a></h1>
     <div class="entry-content description">
         <abbr class="published newsdate" title="2009-03-24T21:16:11+01:00">[24-Mar-2009]</abbr>
         <div>
       <p>The PHP development team is proud to announce the availability of the first release candidate of PHP 5.3.0 (PHP 5.3.0RC1). This release marks the final phase in a major improvement in the 5.X series, which includes a large number of new features, bug fixes and security enhancements.</p>
       <p>The key features of the PHP 5.3 branch include:</p>
       <ul>
-        <li>Support for <a href="http://php.net/namespaces">namespaces</a></li>
+        <li>Support for <a href="https://www.php.net/namespaces">namespaces</a></li>
         <li>Under the hood performance improvements</li>
-        <li><a href="http://php.net/lsb">Late static binding</a></li>
-        <li><a href="http://docs.php.net/functions.anonymous">Lambda functions and closures</a></li>
+        <li><a href="https://www.php.net/lsb">Late static binding</a></li>
+        <li><a href="https://www.php.net/functions.anonymous">Lambda functions and closures</a></li>
         <li>
          Syntax additions:
-         <a href="http://php.net/manual/language.types.string.php#language.types.string.syntax.nowdoc">NOWDOC</a>, limited GOTO,
-         <a href="http://php.net/ternary#language.operators.comparison.ternary">ternary short cut "?:"</a> and
-         <a href="http://php.net/__callstatic">__callStatic()</a>
+         <a href="https://www.php.net/manual/language.types.string.php#language.types.string.syntax.nowdoc">NOWDOC</a>, limited GOTO,
+         <a href="https://www.php.net/ternary#language.operators.comparison.ternary">ternary short cut "?:"</a> and
+         <a href="https://www.php.net/__callstatic">__callStatic()</a>
         </li>
-        <li>Optional <a href="http://php.net/gc_enable">garbage collection</a> for cyclic references</li>
-        <li>Optional <a href="http://php.net/mysqli.mysqlnd">mysqlnd</a> PHP native replacement for libmysql</li>
-        <li>Improved <a href="http://windows.php.net">windows</a> support including VC6 and VC9 binaries</li>
+        <li>Optional <a href="https://www.php.net/gc_enable">garbage collection</a> for cyclic references</li>
+        <li>Optional <a href="https://www.php.net/mysqli.mysqlnd">mysqlnd</a> PHP native replacement for libmysql</li>
+        <li>Improved <a href="https://windows.php.net">windows</a> support including VC6 and VC9 binaries</li>
         <li>More consistent float rounding</li>
         <li>Deprecation notices are now handle via E_DEPRECATED (part of E_ALL) instead of the E_STRICT error level</li>
-        <li>Several enhancements to enable more <a href="http://php.net/ini.sections">flexiblity in php.ini</a> (and ini parsing in general)</li>
+        <li>Several enhancements to enable more <a href="https://www.php.net/ini.sections">flexiblity in php.ini</a> (and ini parsing in general)</li>
         <li>New bundled extensions:
-         <a href="http://php.net/phar">ext/phar</a>,
-         <a href="http://php.net/intl">ext/intl</a>,
-         <a href="http://php.net/fileinfo">ext/fileinfo</a>,
-         <a href="http://php.net/sqlite3">ext/sqlite3</a>,
-         <a href="http://php.net/enchant">ext/enchant</a>
+         <a href="https://www.php.net/phar">ext/phar</a>,
+         <a href="https://www.php.net/intl">ext/intl</a>,
+         <a href="https://www.php.net/fileinfo">ext/fileinfo</a>,
+         <a href="https://www.php.net/sqlite3">ext/sqlite3</a>,
+         <a href="https://www.php.net/enchant">ext/enchant</a>
         </li>
         <li>Countless bug fixes and improvements to existing extensions in particular to:
-         <a href="http://php.net/openssl">ext/openssl</a>,
-         <a href="http://php.net/spl">ext/spl</a> and
-         <a href="http://php.net/datetime">ext/date</a>
+         <a href="https://www.php.net/openssl">ext/openssl</a>,
+         <a href="https://www.php.net/spl">ext/spl</a> and
+         <a href="https://www.php.net/datetime">ext/date</a>
         </li>
       </ul>
       <p>This release also drops several extensions and unifies usage of internal APIs. Users should be aware of the following known backwards compatibility breaks:</p>
       <ul>
         <li>Parameter parsing API unification will cause some functions to behave more or less strict when it comes to type juggling</li>
         <li>Removed the following extensions:
-         <a href="http://php.net/mhash">ext/mhash</a> (see <a href="http://php.net/hash">ext/hash</a>),
-         <a href="http://php.net/msql">ext/msql</a>,
-         <a href="http://php.net/pspell">ext/pspell</a> (see <a href="http://php.net/enchant">ext/enchant</a>),
-         <a href="http://php.net/sybase">ext/sybase</a> (see <a href="http://php.net/sybase">ext/sybase_ct</a>)
+         <a href="https://www.php.net/mhash">ext/mhash</a> (see <a href="https://www.php.net/hash">ext/hash</a>),
+         <a href="https://www.php.net/msql">ext/msql</a>,
+         <a href="https://www.php.net/pspell">ext/pspell</a> (see <a href="https://www.php.net/enchant">ext/enchant</a>),
+         <a href="https://www.php.net/sybase">ext/sybase</a> (see <a href="https://www.php.net/sybase">ext/sybase_ct</a>)
         </li>
         <li>Moved the following extensions to PECL:
-         <a href="http://php.net/ming">ext/ming</a>,
-         <a href="http://php.net/fbsql">ext/fbsql</a>,
-         <a href="http://php.net/ncurses">ext/ncurses</a>,
-         <a href="http://php.net/fdf">ext/fdf</a>
+         <a href="https://www.php.net/ming">ext/ming</a>,
+         <a href="https://www.php.net/fbsql">ext/fbsql</a>,
+         <a href="https://www.php.net/ncurses">ext/ncurses</a>,
+         <a href="https://www.php.net/fdf">ext/fdf</a>
         </li>
-        <li>Removed <a href="http://php.net/manual/ini.core.php#ini.zend.ze1-compatibility-mode">zend.ze1_compatibility_mode</a></li>
-        <li>See the <a href="http://cvs.php.net/viewvc.cgi/php-src/UPGRADING?view=markup&amp;pathrev=PHP_5_3">upgrading guide</a> for other minor changes</li>
+        <li>Removed <a href="https://www.php.net/manual/ini.core.php#ini.zend.ze1-compatibility-mode">zend.ze1_compatibility_mode</a></li>
+        <li>See the <a href="https://cvs.php.net/viewvc.cgi/php-src/UPGRADING?view=markup&amp;pathrev=PHP_5_3">upgrading guide</a> for other minor changes</li>
       </ul>
       <p>All users of PHP, especially those using earlier PHP 5 releases are advised to test this release as the final release of PHP 5.3.0 will eventually obsolete the 5.2 branch of PHP.</p>
-      <p>For users upgrading from previous PHP 5 releases there is an upgrading guide available <a href="http://cvs.php.net/viewvc.cgi/php-src/UPGRADING?view=markup&amp;pathrev=PHP_5_3">here</a>, detailing the changes between those releases and PHP 5.3.0.</p>
+      <p>For users upgrading from previous PHP 5 releases there is an upgrading guide available <a href="https://cvs.php.net/viewvc.cgi/php-src/UPGRADING?view=markup&amp;pathrev=PHP_5_3">here</a>, detailing the changes between those releases and PHP 5.3.0.</p>
       <p>Please also note that we are aware of issues surrounding float/integer handling in some edge cases (some of which have been introduced in PHP 5.2.0), as well as a crash bug in NSAPI, that will be fixed in PHP 5.3.0RC2. These issues however do not prevent wide spread testing of PHP 5.3.0RC1 as users can now rely on the feature set and implementation decisions no longer being changed.</p>
-      <p>For a full list of changes in PHP 5.3.0, see the CVS <a href="http://cvs.php.net/viewvc.cgi/php-src/NEWS?view=markup&amp;pathrev=PHP_5_3">NEWS</a> file.</p>
+      <p>For a full list of changes in PHP 5.3.0, see the CVS <a href="https://cvs.php.net/viewvc.cgi/php-src/NEWS?view=markup&amp;pathrev=PHP_5_3">NEWS</a> file.</p>
     </div>
 
     </div>
@@ -885,7 +885,7 @@ site_header("News Archive - 2009", ["cache" => true]);
 <hr>
 <div class="newsItem hentry">
     <div class="newsImage"></div>
-    <h1 class="summary entry-title"><a id="id2009-03-10-1" href="http://www.php.net/archive/2009.php#id2009-03-10-1" rel="bookmark" class="bookmark">5.2.9-1 (for Windows) released</a></h1>
+    <h1 class="summary entry-title"><a id="id2009-03-10-1" href="https://www.php.net/archive/2009.php#id2009-03-10-1" rel="bookmark" class="bookmark">5.2.9-1 (for Windows) released</a></h1>
     <div class="entry-content description">
         <abbr class="published newsdate" title="2009-03-10T23:16:11+01:00">[10-Mar-2009]</abbr>
         <div>
@@ -901,7 +901,7 @@ site_header("News Archive - 2009", ["cache" => true]);
 <hr>
 <div class="newsItem hentry">
     <div class="newsImage"></div>
-    <h1 class="summary entry-title"><a id="id2009-02-26-1" href="http://www.php.net/archive/2009.php#id2009-02-26-1" rel="bookmark" class="bookmark">PHP 5.2.9 Released!</a></h1>
+    <h1 class="summary entry-title"><a id="id2009-02-26-1" href="https://www.php.net/archive/2009.php#id2009-02-26-1" rel="bookmark" class="bookmark">PHP 5.2.9 Released!</a></h1>
     <div class="entry-content description">
         <abbr class="published newsdate" title="2009-02-26T18:24:50-05:00">[26-Feb-2009]</abbr>
         <div>
@@ -910,7 +910,7 @@ site_header("News Archive - 2009", ["cache" => true]);
         <b>Security Enhancements and Fixes in PHP 5.2.9:</b>
       </p>
       <ul>        <li>Fixed security issue in imagerotate(), background colour isn't validated correctly with a non truecolour image. Reported by Hamid Ebadi, APA Laboratory (Fixes CVE-2008-5498). (Scott)</li>        <li>Fixed a crash on extract in zip when files or directories entry names contain  a relative path. (Pierre)</li>        <li>Fixed explode() behavior with empty string to respect negative limit. (Shire)</li>        <li>Fixed a segfault when malformed string is passed to json_decode(). (Scott)</li></ul>
-      <p>Further details about the PHP 5.2.9 can be found in the release announcement for <a href="http://www.php.net/releases/5_2_9.php">5.2.9</a>  the full list of changes is available in the <a href="http://www.php.net/ChangeLog-5.php#5.2.9">ChangeLog for PHP 5</a>.</p>
+      <p>Further details about the PHP 5.2.9 can be found in the release announcement for <a href="https://www.php.net/releases/5_2_9.php">5.2.9</a>  the full list of changes is available in the <a href="https://www.php.net/ChangeLog-5.php#5.2.9">ChangeLog for PHP 5</a>.</p>
     </div>
 
     </div>
@@ -919,7 +919,7 @@ site_header("News Archive - 2009", ["cache" => true]);
 <hr>
 <div class="newsItem hentry vevent">
     <div class="newsImage"></div>
-    <h1 class="summary entry-title"><a id="id2009-02-20-1" href="http://www.php.net/archive/2009.php#id2009-02-20-1" rel="bookmark" class="bookmark">php|tek 2009</a></h1>
+    <h1 class="summary entry-title"><a id="id2009-02-20-1" href="https://www.php.net/archive/2009.php#id2009-02-20-1" rel="bookmark" class="bookmark">php|tek 2009</a></h1>
     <div class="entry-content description">
         <abbr class="published newsdate" title="2009-02-20T18:59:30+01:00">[20-Feb-2009]</abbr>
         <div>
@@ -936,7 +936,7 @@ site_header("News Archive - 2009", ["cache" => true]);
 <hr>
 <div class="newsItem hentry vevent">
     <div class="newsImage"></div>
-    <h1 class="summary entry-title"><a id="id2009-02-18-1" href="http://www.php.net/archive/2009.php#id2009-02-18-1" rel="bookmark" class="bookmark">2009 PHP Quebec Conference</a></h1>
+    <h1 class="summary entry-title"><a id="id2009-02-18-1" href="https://www.php.net/archive/2009.php#id2009-02-18-1" rel="bookmark" class="bookmark">2009 PHP Quebec Conference</a></h1>
     <div class="entry-content description">
         <abbr class="published newsdate" title="2009-02-18T02:10:11-08:00">[18-Feb-2009]</abbr>
         <div>

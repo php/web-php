@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom" xmlns:php="http://php.net/ns/news" xmlns:xi="http://www.w3.org/2001/XInclude">
   <title>PHP.net news &amp; announcements</title>
-  <link href="http://www.php.net/feed.atom" rel="self"/>
-  <icon>http://php.net/images/news/php-logo.gif</icon>
-  <id>http://php.net/archive/index.php</id>
+  <link href="https://www.php.net/feed.atom" rel="self"/>
+  <icon>https://www.php.net/images/news/php-logo.gif</icon>
+  <id>https://www.php.net/archive/index.php</id>
   <author>
     <name>Webmaster</name>
-    <uri>http://php.net/contact</uri>
+    <uri>https://www.php.net/contact</uri>
     <email>php-webmaster@lists.php.net</email>
   </author>
   <xi:include href="entries/2025-12-18-5.xml"/>

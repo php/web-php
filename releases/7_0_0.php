@@ -28,12 +28,12 @@ site_header("PHP 7.0.0 Release Announcement");
 	<li>Zero cost asserts</li>
      </ul>
 
-     <p>For source downloads of PHP 7.0.0 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-     The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.0.0">ChangeLog</a>.
+     <p>For source downloads of PHP 7.0.0 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
+     Windows binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
+     The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-7.php#7.0.0">ChangeLog</a>.
      </p>
      <p>
-     The <a href="http://php.net/manual/migration70.php">migration guide</a> is available in the PHP Manual. Please consult
+     The <a href="https://www.php.net/manual/migration70.php">migration guide</a> is available in the PHP Manual. Please consult
      it for the detailed list of new features and backward incompatible changes.
      </p>
 

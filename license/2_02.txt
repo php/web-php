@@ -47,19 +47,19 @@ are met:
   5. Redistributions of any form whatsoever must retain the following
      acknowledgment:
      "This product includes PHP, freely available from
-     http://www.php.net/".
+     https://www.php.net/".
 
   6. The software incorporates the Zend Engine, a product of Zend
      Technologies, Ltd. ("Zend"). The Zend Engine is licensed to the
      PHP Association (pursuant to a grant from Zend that can be
-     found at http://www.php.net/license/ZendGrant/) for
+     found at https://www.php.net/license/ZendGrant/) for
      distribution to you under this license agreement, only as a
      part of PHP.  In the event that you separate the Zend Engine
      (or any portion thereof) from the rest of the software, or
      modify the Zend Engine, or any portion thereof, your use of the
      separated or modified Zend Engine software shall not be governed
      by this license, and instead shall be governed by the license
-     set forth at http://www.zend.com/license/ZendLicense/.
+     set forth at https://www.zend.com/license/ZendLicense/.
 
 
 
@@ -84,4 +84,4 @@ individuals on behalf of the PHP Group.
 The PHP Group can be contacted via Email at group@php.net.
 
 For more information on the PHP Group and the PHP project,
-please see <http://www.php.net>.
+please see <https://www.php.net>.

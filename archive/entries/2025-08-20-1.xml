@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<entry xmlns="http://www.w3.org/2005/Atom" xmlns:default="http://php.net/ns/news">
+<entry xmlns="https://www.php.net/ns/news">
   <title>Longhorn PHP 2025</title>
   <id>https://www.php.net/archive/2025.php#2025-08-20-1</id>
   <published>2025-08-20T17:41:57+00:00</published>

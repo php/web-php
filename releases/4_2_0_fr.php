@@ -27,7 +27,7 @@ site_header("Annonce de publication de PHP 4.2.0", ["lang" => "fr"]);
 <ul>
  <li><a href="/variables.predefined">PHP Manual : Predefined variables</a></li>
  <li><a href="/releases/4_1_0.php">Annonce de PHP 4.1.0</a></li>
- <li><a href="http://www.zend.com/zend/art/art-oertli.php">Article de Thomas Oertli sur la programmation s&eacute;curis&eacute;e en PHP</a></li>
+ <li><a href="https://www.zend.com/zend/art/art-oertli.php">Article de Thomas Oertli sur la programmation s&eacute;curis&eacute;e en PHP</a></li>
 </ul>
 
 <h2>Compatibilit&eacute;</h2>

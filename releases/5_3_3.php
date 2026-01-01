@@ -78,7 +78,7 @@ class Bar {
 
 <p>
 For users upgrading from PHP 5.2 there is a migration guide available on
-<a href="/migration53">http://php.net/migration53</a>, detailing the changes between those
+<a href="/migration53">https://www.php.net/migration53</a>, detailing the changes between those
 releases and PHP 5.3.
 </p>
 

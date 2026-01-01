@@ -58,7 +58,7 @@ site_header("News Archive - 1998", ["cache" => true]);
  conversion program will help you migrate your PHP 2 scripts to PHP 3.
 </p>
 <p>
- <a href="http://cvs.php.net/co.php/phpweb/Attic/release-3.0.txt?sa=1&amp;login=2&amp;r=1.2">Read
+ <a href="https://cvs.php.net/co.php/phpweb/Attic/release-3.0.txt?sa=1&amp;login=2&amp;r=1.2">Read
  the full anouncement</a>.
 </p>
 

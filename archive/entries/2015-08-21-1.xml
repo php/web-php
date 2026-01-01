@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <entry xmlns="http://www.w3.org/2005/Atom">
   <title>PHP 7.0.0 RC 1 Released</title>
-  <id>http://php.net/archive/2015.php#id2015-08-21-1</id>
+  <id>https://www.php.net/archive/2015.php#id2015-08-21-1</id>
   <published>2015-08-21T10:10:00+01:00</published>
   <updated>2015-08-21T10:10:00+01:00</updated>
   <category term="releases" label="New PHP release"/>
   <category term="frontpage" label="PHP.net frontpage news"/>
-  <link href="http://php.net/index.php#id2015-08-21-1" rel="alternate" type="text/html"/>
-  <link href="http://php.net/archive/2015.php#id2015-08-21-1" rel="via" type="text/html"/>
+  <link href="https://www.php.net/index.php#id2015-08-21-1" rel="alternate" type="text/html"/>
+  <link href="https://www.php.net/archive/2015.php#id2015-08-21-1" rel="via" type="text/html"/>
   <content type="xhtml">
     <div xmlns="http://www.w3.org/1999/xhtml">
       <p>
@@ -48,7 +48,7 @@
      <p>
       For source downloads of PHP 7.0.0 RC 1 please visit
       the <a href="https://downloads.php.net/ab/">download page</a>, Windows source and binaries
-      can be found on <a href="http://windows.php.net/qa/">windows.php.net/qa/</a>.
+      can be found on <a href="https://windows.php.net/qa/">windows.php.net/qa/</a>.
      </p>
 
      <p>

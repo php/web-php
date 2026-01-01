@@ -9,11 +9,11 @@ site_header("Thanks", ["current" => "community"]);
 
 <ul class="thanks-list">
     <li class="thanks">
-        <a href="http://www.easydns.com/?V=698570efeb62a6e2" class="thanks__logo">
+        <a href="https://www.easydns.com/?V=698570efeb62a6e2" class="thanks__logo">
             <img src="images/sponsors/easydns.png" alt="easyDNS">
         </a>
         <section>
-            <strong class="thanks__heading"><a href="http://www.easydns.com/?V=698570efeb62a6e2">easyDNS</a></strong>
+            <strong class="thanks__heading"><a href="https://www.easydns.com/?V=698570efeb62a6e2">easyDNS</a></strong>
             <p class="thanks__description">Provides DNS services for the PHP domains.</p>
         </section>
     </li>

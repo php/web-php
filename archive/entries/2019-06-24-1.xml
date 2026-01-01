@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <entry xmlns="http://www.w3.org/2005/Atom" xmlns:default="http://php.net/ns/news">
   <title>The 7th Annual China PHP Conference</title>
-  <id>http://php.net/archive/2019.php#id2019-06-24-1</id>
+  <id>https://www.php.net/archive/2019.php#id2019-06-24-1</id>
   <published>2019-06-24T19:01:22+08:00</published>
   <updated>2019-06-24T19:01:22+08:00</updated>
   <default:finalTeaserDate xmlns="http://php.net/ns/news">2019-08-10</default:finalTeaserDate>
   <category term="conferences" label="Conference announcement"/>
-  <link href="http://php.net/conferences/index.php#id2019-06-24-1" rel="alternate" type="text/html"/>
+  <link href="https://www.php.net/conferences/index.php#id2019-06-24-1" rel="alternate" type="text/html"/>
   <default:newsImage xmlns="http://php.net/ns/news" link="http://www.phpconchina.com" title="http://www.phpconchina.com">phpconf_shanghai_2019.jpg</default:newsImage>
   <link href="https://www.phpconchina.com/" rel="via" type="text/html"/>
   <content type="xhtml">

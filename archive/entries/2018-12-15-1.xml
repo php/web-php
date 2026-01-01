@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <entry xmlns="http://www.w3.org/2005/Atom" xmlns:default="http://php.net/ns/news">
 	<title>SunshinePHP 2019</title>
-	<id>http://php.net/archive/2018.php#id2018-12-15-1</id>
+	<id>https://www.php.net/archive/2018.php#id2018-12-15-1</id>
 	<published>2018-12-15T00:00:01+00:00</published>
 	<updated>2018-12-15T12:23:00+00:00</updated>
 	<default:finalTeaserDate xmlns="http://php.net/ns/news">2019-02-06</default:finalTeaserDate>
 	<category term="conferences" label="Conference Announcement"/>
-	<link href="http://php.net/conferences/index.php#id2018-12-15-1" rel="alternate" type="text/html"/>
+	<link href="https://www.php.net/conferences/index.php#id2018-12-15-1" rel="alternate" type="text/html"/>
 	<default:newsImage xmlns="http://php.net/ns/news" link="http://sunshinephp.com" title="SunshinePHP 2019">sunshinephp2019.png</default:newsImage>
 	<link href="http://sunshinephp.com" rel="via" type="text/html"/>
 	<content type="xhtml">

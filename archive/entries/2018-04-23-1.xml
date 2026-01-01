@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <entry xmlns="http://www.w3.org/2005/Atom" xmlns:default="http://php.net/ns/news">
   <title>International PHP Conference 2018 - Fall Edition</title>
-  <id>http://php.net/archive/2018.php#id2018-04-23-1</id>
+  <id>https://www.php.net/archive/2018.php#id2018-04-23-1</id>
   <published>2018-04-23T09:44:54-04:00</published>
   <updated>2018-04-23T09:44:54-04:00</updated>
   <default:finalTeaserDate xmlns="http://php.net/ns/news">2018-10-15</default:finalTeaserDate>
   <category term="conferences" label="Conference announcement"/>
-  <link href="http://php.net/conferences/index.php#id2018-04-23-1" rel="alternate" type="text/html"/>
+  <link href="https://www.php.net/conferences/index.php#id2018-04-23-1" rel="alternate" type="text/html"/>
   <default:newsImage xmlns="http://php.net/ns/news" link="https://phpconference.com" title="International PHP Conference 2018 - Fall Edition">ipc-2018-fall.png</default:newsImage>
   <link href="https://phpconference.com" rel="via" type="text/html"/>
   <content type="xhtml">

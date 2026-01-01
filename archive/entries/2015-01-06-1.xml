@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <entry xmlns="http://www.w3.org/2005/Atom" xmlns:default="http://php.net/ns/news">
   <title>ConFoo 2015 - Become a Master</title>
-  <id>http://php.net/archive/2015.php#id2015-01-06-1</id>
+  <id>https://www.php.net/archive/2015.php#id2015-01-06-1</id>
   <published>2015-01-06T18:15:50+00:00</published>
   <updated>2015-01-06T18:15:50+00:00</updated>
   <default:finalTeaserDate xmlns="http://php.net/ns/news">2015-02-18</default:finalTeaserDate>
   <category term="conferences" label="Conference announcement"/>
-  <link href="http://php.net/conferences/index.php#id2015-01-06-1" rel="alternate" type="text/html"/>
+  <link href="https://www.php.net/conferences/index.php#id2015-01-06-1" rel="alternate" type="text/html"/>
   <default:newsImage xmlns="http://php.net/ns/news" link="http://confoo.ca" title="Become a master: improve your skills at ConFoo">confoo-2015.jpg</default:newsImage>
   <link href="http://confoo.ca" rel="via" type="text/html"/>
   <content type="xhtml">

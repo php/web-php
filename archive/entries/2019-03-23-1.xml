@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <entry xmlns="http://www.w3.org/2005/Atom" xmlns:default="http://php.net/ns/news">
   <title>Mid-Atlantic Developer Conference</title>
-  <id>http://php.net/archive/2019.php#id2019-03-23-1</id>
+  <id>https://www.php.net/archive/2019.php#id2019-03-23-1</id>
   <published>2019-03-23T23:55:18+00:00</published>
   <updated>2019-03-23T23:55:18+00:00</updated>
   <default:finalTeaserDate xmlns="http://php.net/ns/news">2019-04-13</default:finalTeaserDate>
   <category term="cfp" label="Call for Papers"/>
-  <link href="http://php.net/conferences/index.php#id2019-03-23-1" rel="alternate" type="text/html"/>
+  <link href="https://www.php.net/conferences/index.php#id2019-03-23-1" rel="alternate" type="text/html"/>
   <default:newsImage xmlns="http://php.net/ns/news" link="https://www.middevcon.com/" title="Mid-Atlantic Developer Conference">middevcon2018.png</default:newsImage>
   <link href="https://www.middevcon.com/" rel="via" type="text/html"/>
   <content type="xhtml">
@@ -16,7 +16,7 @@
      It is designed to bring together programmers from the region for two full days of learning from each other and
      building a stronger regional community. We are currently hosting an open <a href="https://www.middevcon.com/call-for-speakers/?utm_campaign=phpnet">Call for Speakers</a>, which will end on April 13th!
      </p>
-     
+
      <p>
      We are looking for a broad range of submissions covering a wide range of topics that are of
      interest to today’s computer developers. This means not only programming topics, such as various
@@ -24,7 +24,7 @@
      caching, performance, scalability, APIs, etc — We also are looking for non-technical proposals that will
      appeal to a tech audience: open source, leadership, mentoring, health, work-life balance, management, customer service, and more!
      </p>
-     
+
      <p>
      Given the nature of the event, extra emphasis will be placed on submissions that appeal to a larger range of developers,
      as well as submissions from more local/regional presenters.

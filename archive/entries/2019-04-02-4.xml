@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <entry xmlns="http://www.w3.org/2005/Atom" xmlns:default="http://php.net/ns/news">
   <title>SymfonyLive London 2019</title>
-  <id>http://php.net/archive/2019.php#id2019-04-02-4</id>
+  <id>https://www.php.net/archive/2019.php#id2019-04-02-4</id>
   <published>2019-04-02T10:23:10+00:00</published>
   <updated>2019-04-02T10:23:10+00:00</updated>
   <default:finalTeaserDate xmlns="http://php.net/ns/news">2019-09-13</default:finalTeaserDate>
   <category term="conferences" label="Conference announcement"/>
-  <link href="http://php.net/conferences/index.php#id2019-04-02-4" rel="alternate" type="text/html"/>
+  <link href="https://www.php.net/conferences/index.php#id2019-04-02-4" rel="alternate" type="text/html"/>
   <default:newsImage xmlns="http://php.net/ns/news" link="https://london2019.live.symfony.com/" title="SymfonyLive London 2019 Conference">symfonylive-london-2019.png</default:newsImage>
   <link href="https://london2019.live.symfony.com/" rel="via" type="text/html"/>
   <content type="xhtml">
@@ -14,7 +14,7 @@
      <p>Join us from September 12th to 13th 2019 for SymfonyLive London 2019! We are
      proud to organize the 8th edition of the Symfony conference in London and to
      welcome the Symfony community from all over the UK.</p>
-     
+
      <p>Come for 2 days of Symfony to share best practices, experience, knowledge, make
      new contacts, and hear the latest developments with the framework!</p>
     </div>

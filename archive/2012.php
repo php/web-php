@@ -14,7 +14,7 @@ site_header("News Archive - 2012", ["cache" => true]);
 <hr>
 <div class="newsItem hentry">
     <div class="newsImage"></div>
-    <h2 class="summary entry-title"><a id="id2012-12-21-1" href="http://php.net/archive/2012.php#id2012-12-21-1" rel="bookmark" class="bookmark">PHP 5.5.0 Alpha2 released</a></h2>
+    <h2 class="summary entry-title"><a id="id2012-12-21-1" href="https://www.php.net/archive/2012.php#id2012-12-21-1" rel="bookmark" class="bookmark">PHP 5.5.0 Alpha2 released</a></h2>
     <div class="entry-content description">
         <abbr class="published newsdate" title="2012-12-21T16:19:14+00:00">21-Dec-2012</abbr>
         <div>
@@ -52,8 +52,8 @@ site_header("News Archive - 2012", ["cache" => true]);
 
      <p>
       For source downloads of PHP 5.5.0 Alpha 2 please visit
-      the <a href="http://downloads.php.net/dsp">download page</a>, Windows binaries
-      can be found on <a href="http://windows.php.net/qa/">windows.php.net/qa/</a>.
+      the <a href="https://downloads.php.net/dsp">download page</a>, Windows binaries
+      can be found on <a href="https://windows.php.net/qa/">windows.php.net/qa/</a>.
      </p>
 
      <p>
@@ -83,13 +83,13 @@ site_header("News Archive - 2012", ["cache" => true]);
 </div>
 <div class="newsItem hentry">
     <div class="newsImage"></div>
-    <h2 class="summary entry-title"><a id="id2012-12-20-1" href="http://php.net/archive/2012.php#id2012-12-20-1" rel="bookmark" class="bookmark">PHP 5.4.10 and PHP 5.3.20 released!</a></h2>
+    <h2 class="summary entry-title"><a id="id2012-12-20-1" href="https://www.php.net/archive/2012.php#id2012-12-20-1" rel="bookmark" class="bookmark">PHP 5.4.10 and PHP 5.3.20 released!</a></h2>
     <div class="entry-content description">
         <abbr class="published newsdate" title="2012-12-20T11:38:49+00:00">20-Dec-2012</abbr>
         <div>
      <div>
        <p>The PHP development team announces the immediate availability of PHP 5.4.10 and PHP 5.3.20. These releases fix about 15 bugs. Please note that the PHP 5.3 series will enter an end of life cycle and receive only critical fixes as of March 2013. All users of PHP are encouraged to upgrade to PHP 5.4.</p>
-       <p>For source downloads of PHP 5.4.10 and PHP 5.3.20 please visit our <a href="/downloads.php">downloads page</a>, Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.</p>
+       <p>For source downloads of PHP 5.4.10 and PHP 5.3.20 please visit our <a href="/downloads.php">downloads page</a>, Windows binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.</p>
        <p>The list of changes are recorded in the <a href="/ChangeLog-5.php">ChangeLog</a>.</p>
      </div>
     </div>
@@ -117,12 +117,12 @@ site_header("News Archive - 2012", ["cache" => true]);
 </div>
 <div class="newsItem hentry">
     <div class="newsImage"></div>
-    <h2 class="summary entry-title"><a id="id2012-11-22-1" href="http://www.php.net/archive/2012.php#id2012-11-22-1" rel="bookmark" class="bookmark">PHP 5.4.9 and PHP 5.3.19 released!</a></h2>
+    <h2 class="summary entry-title"><a id="id2012-11-22-1" href="https://www.php.net/archive/2012.php#id2012-11-22-1" rel="bookmark" class="bookmark">PHP 5.4.9 and PHP 5.3.19 released!</a></h2>
     <div class="entry-content description">
         <abbr class="published newsdate" title="2012-11-22T17:54:29+01:00">22-Nov-2012</abbr>
         <div>
      <p>The PHP development team announces the immediate availability of PHP 5.4.9 and PHP 5.3.19. These releases fix over 15 bugs. All users of PHP are encouraged to upgrade to PHP 5.4.9, or at least 5.3.19.</p>
-     <p>For source downloads of PHP 5.4.9 and PHP 5.3.19 please visit our <a href="/downloads.php">downloads page</a>, Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.</p>
+     <p>For source downloads of PHP 5.4.9 and PHP 5.3.19 please visit our <a href="/downloads.php">downloads page</a>, Windows binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.</p>
      <p>The list of changes are recorded in the <a href="/ChangeLog-5.php">ChangeLog</a>.</p>
     </div>
 
@@ -130,7 +130,7 @@ site_header("News Archive - 2012", ["cache" => true]);
 </div>
 <div class="newsItem hentry">
     <div class="newsImage"></div>
-    <h2 class="summary entry-title"><a id="id2012-11-15-1" href="http://www.php.net/archive/2012.php#id2012-11-15-1" rel="bookmark" class="bookmark">PHP 5.5.0 Alpha1 released</a></h2>
+    <h2 class="summary entry-title"><a id="id2012-11-15-1" href="https://www.php.net/archive/2012.php#id2012-11-15-1" rel="bookmark" class="bookmark">PHP 5.5.0 Alpha1 released</a></h2>
     <div class="entry-content description">
         <abbr class="published newsdate" title="2012-11-15T14:10:06+00:00">15-Nov-2012</abbr>
         <div>
@@ -163,8 +163,8 @@ site_header("News Archive - 2012", ["cache" => true]);
 
      <p>
       For source downloads of PHP 5.5.0 Alpha 1 please visit
-      the <a href="http://downloads.php.net/dsp">download page</a>, Windows binaries
-      can be found on <a href="http://windows.php.net/qa/">windows.php.net/qa/</a>.
+      the <a href="https://downloads.php.net/dsp">download page</a>, Windows binaries
+      can be found on <a href="https://windows.php.net/qa/">windows.php.net/qa/</a>.
      </p>
 
      <p>
@@ -225,7 +225,7 @@ site_header("News Archive - 2012", ["cache" => true]);
 </div>
 <div class="newsItem hentry">
     <div class="newsImage"></div>
-    <h2 class="summary entry-title"><a id="id2012-10-18-1" href="http://www.php.net/archive/2012.php#id2012-10-18-1" rel="bookmark" class="bookmark">PHP 5.4.8 and PHP 5.3.18 released!</a></h2>
+    <h2 class="summary entry-title"><a id="id2012-10-18-1" href="https://www.php.net/archive/2012.php#id2012-10-18-1" rel="bookmark" class="bookmark">PHP 5.4.8 and PHP 5.3.18 released!</a></h2>
     <div class="entry-content description">
         <abbr class="published newsdate" title="2012-10-18T17:35:45+00:00">18-Oct-2012</abbr>
         <div>
@@ -248,7 +248,7 @@ site_header("News Archive - 2012", ["cache" => true]);
      <p>
       For source downloads of PHP 5.4.8 and PHP 5.3.18 please visit
       our <a href="/downloads.php">downloads page</a>, Windows binaries
-      can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
+      can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
      </p>
 
      <p>
@@ -316,7 +316,7 @@ site_header("News Archive - 2012", ["cache" => true]);
 </div>
 <div class="newsItem hentry">
     <div class="newsImage"></div>
-    <h2 class="summary entry-title"><a id="id2012-09-13-1" href="http://www.php.net/archive/2012.php#id2012-09-13-1" rel="bookmark" class="bookmark">PHP 5.4.7 and PHP 5.3.17 released!</a></h2>
+    <h2 class="summary entry-title"><a id="id2012-09-13-1" href="https://www.php.net/archive/2012.php#id2012-09-13-1" rel="bookmark" class="bookmark">PHP 5.4.7 and PHP 5.3.17 released!</a></h2>
     <div class="entry-content description">
         <abbr class="published newsdate" title="2012-09-13T15:29:37+00:00">13-Sep-2012</abbr>
         <div>
@@ -339,7 +339,7 @@ site_header("News Archive - 2012", ["cache" => true]);
      <p>
       For source downloads of PHP 5.4.7 and PHP 5.3.17 please visit
       our <a href="/downloads.php">downloads page</a>, Windows binaries
-      can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
+      can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
      </p>
 
      <p>
@@ -487,15 +487,15 @@ site_header("News Archive - 2012", ["cache" => true]);
 </div>
 <div class="newsItem hentry">
     <div class="newsImage"></div>
-    <h2 class="summary entry-title"><a id="id2012-08-16-1" href="http://www.php.net/archive/2012.php#id2012-08-16-1" rel="bookmark" class="bookmark">PHP 5.4.6 and PHP 5.3.16 released!</a></h2>
+    <h2 class="summary entry-title"><a id="id2012-08-16-1" href="https://www.php.net/archive/2012.php#id2012-08-16-1" rel="bookmark" class="bookmark">PHP 5.4.6 and PHP 5.3.16 released!</a></h2>
     <div class="entry-content description">
         <abbr class="published newsdate" title="2012-08-16T19:30:09+00:00">16-Aug-2012</abbr>
         <div>
 	    <p>The PHP development team announces the immediate availability of PHP 5.4.6 and PHP 5.3.16. These releases fix over 20 bugs. All users of PHP are encouraged to upgrade to PHP 5.4.6, or at least 5.3.16.</p>
 
-     <p>For source downloads of PHP 5.4.6 and PHP 5.3.16 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-          Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-          The list of changes are recorded in the <a href="http://www.php.net/ChangeLog-5.php">ChangeLog</a>.</p>
+     <p>For source downloads of PHP 5.4.6 and PHP 5.3.16 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
+          Windows binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
+          The list of changes are recorded in the <a href="https://www.php.net/ChangeLog-5.php">ChangeLog</a>.</p>
     </div>
 
     </div>
@@ -549,7 +549,7 @@ site_header("News Archive - 2012", ["cache" => true]);
 </div>
 <div class="newsItem hentry">
     <div class="newsImage"></div>
-    <h2 class="summary entry-title"><a id="id2012-07-19-1" href="http://www.php.net/archive/2012.php#id2012-07-19-1" rel="bookmark" class="bookmark">PHP 5.4.5 and PHP 5.3.15 released!</a></h2>
+    <h2 class="summary entry-title"><a id="id2012-07-19-1" href="https://www.php.net/archive/2012.php#id2012-07-19-1" rel="bookmark" class="bookmark">PHP 5.4.5 and PHP 5.3.15 released!</a></h2>
     <div class="entry-content description">
         <abbr class="published newsdate" title="2012-07-19T23:50:47+02:00">19-Jul-2012</abbr>
         <div>
@@ -559,9 +559,9 @@ site_header("News Archive - 2012", ["cache" => true]);
      stream implementation. All users of PHP are encouraged to upgrade to
      PHP 5.4.5 or PHP 5.3.15.</p>
 
-     <p>For source downloads of PHP 5.4.5 and PHP 5.3.15 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-     The list of changes are recorded in the <a href="http://www.php.net/ChangeLog-5.php">ChangeLog</a>.</p>
+     <p>For source downloads of PHP 5.4.5 and PHP 5.3.15 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
+     Windows binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
+     The list of changes are recorded in the <a href="https://www.php.net/ChangeLog-5.php">ChangeLog</a>.</p>
 
     </div>
 
@@ -598,7 +598,7 @@ site_header("News Archive - 2012", ["cache" => true]);
 </div>
 <div class="newsItem hentry">
     <div class="newsImage"></div>
-    <h2 class="summary entry-title"><a id="id2012-06-14-1" href="http://www.php.net/archive/2012.php#id2012-06-14-1" rel="bookmark" class="bookmark">PHP 5.4.4 and PHP 5.3.14 released!</a></h2>
+    <h2 class="summary entry-title"><a id="id2012-06-14-1" href="https://www.php.net/archive/2012.php#id2012-06-14-1" rel="bookmark" class="bookmark">PHP 5.4.4 and PHP 5.3.14 released!</a></h2>
     <div class="entry-content description">
         <abbr class="published newsdate" title="2012-06-14T14:36:29+02:00">14-Jun-2012</abbr>
         <div>
@@ -607,22 +607,22 @@ site_header("News Archive - 2012", ["cache" => true]);
       encouraged to upgrade to PHP 5.4.4 or PHP 5.3.14.</p>
 
       <p>The release fixes multiple security issues: A weakness in the DES
-      implementation of <a href="http://docs.php.net/crypt">crypt</a> and a
+      implementation of <a href="https://www.php.net/crypt">crypt</a> and a
       heap overflow issue in the phar extension</p>
 
      <p>PHP 5.4.4 and PHP 5.3.14 fixes over 30 bugs. Please note that the
      use of <i>php://fd</i> streams is now restricted to the CLI SAPI</p>
 
-      <p>For source downloads of PHP 5.4.4 and PHP 5.3.14 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-      Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-      The list of changes are recorded in the <a href="http://www.php.net/ChangeLog-5.php">ChangeLog</a>.</p>
+      <p>For source downloads of PHP 5.4.4 and PHP 5.3.14 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
+      Windows binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
+      The list of changes are recorded in the <a href="https://www.php.net/ChangeLog-5.php">ChangeLog</a>.</p>
     </div>
 
     </div>
 </div>
 <div class="newsItem hentry">
     <div class="newsImage"></div>
-    <h2 class="summary entry-title"><a id="id2012-05-08-1" href="http://www.php.net/archive/2012.php#id2012-05-08-1" rel="bookmark" class="bookmark">PHP 5.4.3 and PHP 5.3.13 Released!</a></h2>
+    <h2 class="summary entry-title"><a id="id2012-05-08-1" href="https://www.php.net/archive/2012.php#id2012-05-08-1" rel="bookmark" class="bookmark">PHP 5.4.3 and PHP 5.3.13 Released!</a></h2>
     <div class="entry-content description">
         <abbr class="published newsdate" title="2012-05-08T19:44:07+02:00">08-May-2012</abbr>
         <div>
@@ -630,23 +630,23 @@ site_header("News Archive - 2012", ["cache" => true]);
      availability of PHP 5.4.3 and PHP 5.3.13. All users are encouraged
      to upgrade to PHP 5.4.3 or PHP 5.3.13</p>
 
-     <p>The releases complete a fix for a <a href="http://www.php.net/archive/2012.php#id2012-05-03-1">vulnerability</a>
+     <p>The releases complete a fix for a <a href="https://www.php.net/archive/2012.php#id2012-05-03-1">vulnerability</a>
      in CGI-based setups (CVE-2012-2311). <i>Note: mod_php and php-fpm are not vulnerable to this attack.</i></p>
 
      <p>PHP 5.4.3 fixes a buffer overflow vulnerability in the
-     <a href="http://php.net/manual/function.apache-request-headers.php">apache_request_headers()</a> (CVE-2012-2329).
+     <a href="https://www.php.net/manual/function.apache-request-headers.php">apache_request_headers()</a> (CVE-2012-2329).
      The PHP 5.3 series is not vulnerable to this issue.</p>
 
-     <p>For source downloads of PHP 5.4.3 and PHP 5.3.13 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-     The list of changes are recorded in the <a href="http://www.php.net/ChangeLog-5.php">ChangeLog</a>.</p>
+     <p>For source downloads of PHP 5.4.3 and PHP 5.3.13 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
+     Windows binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
+     The list of changes are recorded in the <a href="https://www.php.net/ChangeLog-5.php">ChangeLog</a>.</p>
     </div>
 
     </div>
 </div>
 <div class="newsItem hentry">
     <div class="newsImage"></div>
-    <h2 class="summary entry-title"><a id="id2012-05-06-1" href="http://www.php.net/archive/2012.php#id2012-05-06-1" rel="bookmark" class="bookmark">PHP 5.3.12 and 5.4.2 and the CGI flaw (CVE-2012-1823)</a></h2>
+    <h2 class="summary entry-title"><a id="id2012-05-06-1" href="https://www.php.net/archive/2012.php#id2012-05-06-1" rel="bookmark" class="bookmark">PHP 5.3.12 and 5.4.2 and the CGI flaw (CVE-2012-1823)</a></h2>
     <div class="entry-content description">
         <abbr class="published newsdate" title="2012-05-06T23:00:36+02:00">06-May-2012</abbr>
         <div>
@@ -681,7 +681,7 @@ site_header("News Archive - 2012", ["cache" => true]);
 </div>
 <div class="newsItem hentry">
     <div class="newsImage"></div>
-    <h2 class="summary entry-title"><a id="id2012-05-03-1" href="http://www.php.net/archive/2012.php#id2012-05-03-1" rel="bookmark" class="bookmark">PHP 5.3.12 and PHP 5.4.2 Released!</a></h2>
+    <h2 class="summary entry-title"><a id="id2012-05-03-1" href="https://www.php.net/archive/2012.php#id2012-05-03-1" rel="bookmark" class="bookmark">PHP 5.3.12 and PHP 5.4.2 Released!</a></h2>
     <div class="entry-content description">
         <abbr class="published newsdate" title="2012-05-03T18:00:36+02:00">03-May-2012</abbr>
         <div>
@@ -735,7 +735,7 @@ site_header("News Archive - 2012", ["cache" => true]);
 
      <p>For source downloads of PHP 5.3.12 and PHP 5.4.2 please visit
      our <a href="/downloads.php">downloads page</a>, Windows binaries can be found
-     on <a href="http://windows.php.net/download/">windows.php.net/download/</a>. A
+     on <a href="https://windows.php.net/download/">windows.php.net/download/</a>. A
      <a href="/ChangeLog-5.php#5.4.2">ChangeLog</a> exists.</p>
 
 
@@ -780,7 +780,7 @@ site_header("News Archive - 2012", ["cache" => true]);
 </div>
 <div class="newsItem hentry">
     <div class="newsImage"></div>
-    <h2 class="summary entry-title"><a id="id2012-04-26-1" href="http://www.php.net/archive/2012.php#id2012-04-26-1" rel="bookmark" class="bookmark">PHP 5.3.11 And PHP 5.4.1 Released!</a></h2>
+    <h2 class="summary entry-title"><a id="id2012-04-26-1" href="https://www.php.net/archive/2012.php#id2012-04-26-1" rel="bookmark" class="bookmark">PHP 5.3.11 And PHP 5.4.1 Released!</a></h2>
     <div class="entry-content description">
         <abbr class="published newsdate" title="2012-04-26T10:50:38+00:00">26-Apr-2012</abbr>
         <div>
@@ -808,7 +808,7 @@ site_header("News Archive - 2012", ["cache" => true]);
 
      <p>For a full list of changes in PHP 5.3.11 and PHP 5.4.1, see the <a href="/ChangeLog-5.php">ChangeLog</a>. For source downloads please visit
      our <a href="/downloads.php">downloads page</a>, Windows binaries can be found
-     on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.</p>
+     on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.</p>
 
      <p>All users of PHP are strongly encouraged to upgrade to PHP 5.3.11 or PHP 5.4.1.</p>
     </div>
@@ -817,15 +817,15 @@ site_header("News Archive - 2012", ["cache" => true]);
 </div>
 <div class="newsItem hentry">
     <div class="newsImage"></div>
-    <h2 class="summary entry-title"><a id="id2012-04-13-1" href="http://www.php.net/archive/2012.php#id2012-04-13-1" rel="bookmark" class="bookmark">PHP 5.4.1RC2 Released for Testing</a></h2>
+    <h2 class="summary entry-title"><a id="id2012-04-13-1" href="https://www.php.net/archive/2012.php#id2012-04-13-1" rel="bookmark" class="bookmark">PHP 5.4.1RC2 Released for Testing</a></h2>
     <div class="entry-content description">
         <abbr class="published newsdate" title="2012-04-13T13:37:44+02:00">13-Apr-2012</abbr>
         <div>
       <p>
         The PHP development team would like to announce the 2nd
-        <a href="http://qa.php.net">release candidate</a> of PHP 5.4.1.
+        <a href="https://qa.php.net">release candidate</a> of PHP 5.4.1.
          Windows binaries can be downloaded from the
-        <a href="http://windows.php.net/qa/">Windows QA site</a>.
+        <a href="https://windows.php.net/qa/">Windows QA site</a>.
       </p>
       <p>
         <strong>
@@ -861,7 +861,7 @@ site_header("News Archive - 2012", ["cache" => true]);
 </div>
 <div class="newsItem hentry">
     <div class="newsImage"></div>
-    <h2 class="summary entry-title"><a id="id2012-03-20-1" href="http://www.php.net/archive/2012.php#id2012-03-20-1" rel="bookmark" class="bookmark">PHP migrates to Git</a></h2>
+    <h2 class="summary entry-title"><a id="id2012-03-20-1" href="https://www.php.net/archive/2012.php#id2012-03-20-1" rel="bookmark" class="bookmark">PHP migrates to Git</a></h2>
     <div class="entry-content description">
         <abbr class="published newsdate" title="2012-03-20T10:25:52+08:00">20-Mar-2012</abbr>
         <div>
@@ -871,7 +871,7 @@ site_header("News Archive - 2012", ["cache" => true]);
      <a href="https://github.com/php/php-src">GitHub</a>, and we also
      now support pull requests made via GitHub, and full instructions
      on cloning the php-src tree can be found at
-     <a href="http://php.net/git">php.net/git</a>.
+     <a href="https://www.php.net/git">php.net/git</a>.
     </p>
 
     <p>
@@ -904,22 +904,22 @@ site_header("News Archive - 2012", ["cache" => true]);
 </div>
 <div class="newsItem hentry">
     <div class="newsImage"></div>
-    <h2 class="summary entry-title"><a id="id2012-03-01-1" href="http://www.php.net/archive/2012.php#id2012-03-01-1" rel="bookmark" class="bookmark">PHP 5.4.0 released!</a></h2>
+    <h2 class="summary entry-title"><a id="id2012-03-01-1" href="https://www.php.net/archive/2012.php#id2012-03-01-1" rel="bookmark" class="bookmark">PHP 5.4.0 released!</a></h2>
     <div class="entry-content description">
         <abbr class="published newsdate" title="2012-03-01T19:40:35+01:00">01-Mar-2012</abbr>
         <div>
      <p>
       The PHP development team is proud to announce the immediate availability of PHP
-      <a href="http://php.net/downloads.php#v5.4.0">5.4.0</a>.
+      <a href="https://www.php.net/downloads.php#v5.4.0">5.4.0</a>.
       This release is a major leap forward in the 5.x series, which includes a
       large number of new features and bug fixes.
      </p>
 
      <p>
       Some of the key new features include:
-      <a href="http://php.net/traits">traits</a>,
-      <a href="http://docs.php.net/manual/en/language.types.array.php">a shortened array syntax</a>,
-      <a href="http://php.net/manual/en/features.commandline.webserver.php">
+      <a href="https://www.php.net/traits">traits</a>,
+      <a href="https://www.php.net/manual/en/language.types.array.php">a shortened array syntax</a>,
+      <a href="https://www.php.net/manual/en/features.commandline.webserver.php">
       a built-in webserver for testing purposes</a>
       and more. PHP 5.4.0 significantly improves performance, memory footprint and fixes over
       100 bugs.
@@ -927,18 +927,18 @@ site_header("News Archive - 2012", ["cache" => true]);
 
      <p>
       For users upgrading from PHP 5.3 there is a
-      <a href="http://php.net/migration54">migration guide</a>
+      <a href="https://www.php.net/migration54">migration guide</a>
       available here, detailing the changes between those
-      releases and <a href="http://php.net/downloads.php#v5.4.0">PHP 5.4.0</a>.
+      releases and <a href="https://www.php.net/downloads.php#v5.4.0">PHP 5.4.0</a>.
      </p>
 
      <p>
       Further details about the
-      <a href="http://php.net/downloads.php#v5.4.0">PHP 5.4.0</a> release
+      <a href="https://www.php.net/downloads.php#v5.4.0">PHP 5.4.0</a> release
       can be found in the
-      <a href="http://php.net/releases/5_4_0.php">release announcement</a>,
+      <a href="https://www.php.net/releases/5_4_0.php">release announcement</a>,
       and the full list of changes are available in the
-      <a href="http://php.net/ChangeLog-5.php">ChangeLog</a>.
+      <a href="https://www.php.net/ChangeLog-5.php">ChangeLog</a>.
      </p>
      <p>
      Please note that it may take a while until the release is available
@@ -950,7 +950,7 @@ site_header("News Archive - 2012", ["cache" => true]);
 </div>
 <div class="newsItem hentry">
     <div class="newsImage"></div>
-    <h2 class="summary entry-title"><a id="id2012-02-02-1" href="http://www.php.net/archive/2012.php#id2012-02-02-1" rel="bookmark" class="bookmark">PHP 5.3.10 Released!</a></h2>
+    <h2 class="summary entry-title"><a id="id2012-02-02-1" href="https://www.php.net/archive/2012.php#id2012-02-02-1" rel="bookmark" class="bookmark">PHP 5.3.10 Released!</a></h2>
     <div class="entry-content description">
         <abbr class="published newsdate" title="2012-02-02T20:32:47+01:00">02-Feb-2012</abbr>
         <div>
@@ -969,7 +969,7 @@ site_header("News Archive - 2012", ["cache" => true]);
 
      <p>For source downloads please visit
             our <a href="/downloads.php">downloads page</a>, Windows binaries can be found
-            on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.</p>
+            on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.</p>
     </div>
 
     </div>
@@ -1005,7 +1005,7 @@ site_header("News Archive - 2012", ["cache" => true]);
 </div>
 <div class="newsItem hentry">
     <div class="newsImage"></div>
-    <h2 class="summary entry-title"><a id="id2012-01-10-1" href="http://www.php.net/archive/2012.php#id2012-01-11-1" rel="bookmark" class="bookmark">PHP 5.3.9 Released!</a></h2>
+    <h2 class="summary entry-title"><a id="id2012-01-10-1" href="https://www.php.net/archive/2012.php#id2012-01-11-1" rel="bookmark" class="bookmark">PHP 5.3.9 Released!</a></h2>
     <div class="entry-content description">
         <abbr class="published newsdate" title="2012-01-10T22:29:58+01:00">10-Jan-2012</abbr>
         <div>
@@ -1033,7 +1033,7 @@ site_header("News Archive - 2012", ["cache" => true]);
 
      <p>For a full list of changes in PHP 5.3.9, see the <a href="/ChangeLog-5.php#5.3.9">ChangeLog</a>. For source downloads please visit
        our <a href="/downloads.php">downloads page</a>, Windows binaries can be found
-       on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.</p>
+       on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.</p>
 
      <p>All users are strongly encouraged to upgrade to PHP 5.3.9.</p>
 

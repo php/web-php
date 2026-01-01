@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <entry xmlns="http://www.w3.org/2005/Atom" xmlns:default="http://php.net/ns/news">
   <title>PHPKonf Istanbul PHP Conference 2018 - Call for Papers</title>
-  <id>http://php.net/archive/2017.php#id2017-11-22-2</id>
+  <id>https://www.php.net/archive/2017.php#id2017-11-22-2</id>
   <published>2017-11-22T09:00:00+00:00</published>
   <updated>2017-11-22T09:00:00+00:00</updated>
   <default:finalTeaserDate xmlns="http://php.net/ns/news">2018-01-31</default:finalTeaserDate>
   <category term="cfp" label="Call for Papers"/>
-  <link href="http://php.net/conferences/index.php#id2017-11-22-2" rel="alternate" type="text/html"/>
+  <link href="https://www.php.net/conferences/index.php#id2017-11-22-2" rel="alternate" type="text/html"/>
   <default:newsImage xmlns="http://php.net/ns/news" link="https://cfp.phpkonf.org/" title="PHPKonf Istanbul PHP Conference 2018">phpkonf_2015.png</default:newsImage>
   <link href="https://cfp.phpkonf.org/" rel="via" type="text/html"/>
   <content type="xhtml">

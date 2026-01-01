@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <entry xmlns="http://www.w3.org/2005/Atom" xmlns:default="http://php.net/ns/news">
   <title>Laracon Online</title>
-  <id>http://php.net/archive/2019.php#id2019-01-22-1</id>
+  <id>https://www.php.net/archive/2019.php#id2019-01-22-1</id>
   <published>2019-01-22T02:42:11+00:00</published>
   <updated>2019-01-22T02:42:11+00:00</updated>
   <default:finalTeaserDate xmlns="http://php.net/ns/news">2019-03-06</default:finalTeaserDate>
   <category term="conferences" label="Conference announcement"/>
-  <link href="http://php.net/conferences/index.php#id2019-01-22-1" rel="alternate" type="text/html"/>
+  <link href="https://www.php.net/conferences/index.php#id2019-01-22-1" rel="alternate" type="text/html"/>
   <default:newsImage xmlns="http://php.net/ns/news" link="https://laracon.net/" title="Laracon Online">laracon-online-2019.png</default:newsImage>
   <link href="https://laracon.net/" rel="via" type="text/html"/>
   <content type="xhtml">
     <div xmlns="http://www.w3.org/1999/xhtml">
         <p><a href="https://laracon.net">Laracon Online</a> is the easiest and most affordable way to get the Laracon experience from anywhere in the world. </p>
-     
+
      <p>We’ve put together a full day of talks featuring some of Laravel’s brightest minds, and streaming them directly to your home or office.</p>
 
      <p>These talks are brand new, never before presented at any Laracon and tickets are just $12 during early registration. Don't miss the largest Laravel event ever!</p>

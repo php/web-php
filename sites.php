@@ -12,7 +12,7 @@ site_header("A Tourist's Guide", ["current" => "help"]);
  Come with me, I'll show you.
 </p>
 
-<h2 id="www" class="content-header"><a href="http://php.net/">php.net</a>: Main Website</h2>
+<h2 id="www" class="content-header"><a href="https://www.php.net/">php.net</a>: Main Website</h2>
 
 <div class="content-box">
 <p>
@@ -25,7 +25,7 @@ site_header("A Tourist's Guide", ["current" => "help"]);
  This is the home of the <a href="/downloads.php">download page</a>, for
  everyone to get the latest version of the PHP source code and binaries
  for Windows. The current and next-to-current versions are available there.
- (There is also a <a href="http://museum.php.net/">PHP Museum</a>, which has
+ (There is also a <a href="https://museum.php.net/">PHP Museum</a>, which has
  all of the source distributions since June 1996.)
 </p>
 
@@ -52,7 +52,7 @@ site_header("A Tourist's Guide", ["current" => "help"]);
 </div>
 
 <h2 id="talks" class="content-header">
- <a href="http://talks.php.net/">talks.php.net</a>: Conference Materials
+ <a href="https://talks.php.net/">talks.php.net</a>: Conference Materials
 </h2>
 
 <p class="content-box">
@@ -63,7 +63,7 @@ site_header("A Tourist's Guide", ["current" => "help"]);
 </p>
 
 <h2 id="news" class="content-header">
- <a href="http://news.php.net/">news.php.net</a>:
+ <a href="https://news.php.net/">news.php.net</a>:
  Mailing Lists Web and NNTP Interface
 </h2>
 
@@ -76,7 +76,7 @@ site_header("A Tourist's Guide", ["current" => "help"]);
 </p>
 
 <h2 id="pear" class="content-header">
- <a href="http://pear.php.net/">pear.php.net</a>:
+ <a href="https://pear.php.net/">pear.php.net</a>:
  The PHP Extension and Application Repository
 </h2>
 
@@ -89,7 +89,7 @@ site_header("A Tourist's Guide", ["current" => "help"]);
 </p>
 
 <h2 id="pecl" class="content-header">
- <a href="http://pecl.php.net/">pecl.php.net</a>:
+ <a href="https://pecl.php.net/">pecl.php.net</a>:
  The PHP Extension Community Library
 </h2>
 

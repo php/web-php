@@ -27,8 +27,8 @@ Windows source and binaries can be found on <a href="https://windows.php.net/dow
 The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-8.php#8.0.0">ChangeLog</a>.
 </p>
 
-<p>The <a href="http://php.net/manual/en/migration80.php">migration guide</a> is available in the PHP Manual.
-Please consult it for the detailed list of new features and backward incompatible changes.</p> 
+<p>The <a href="https://www.php.net/manual/en/migration80.php">migration guide</a> is available in the PHP Manual.
+Please consult it for the detailed list of new features and backward incompatible changes.</p>
 
 <p>Many thanks to all the contributors and supporters!</p>
 

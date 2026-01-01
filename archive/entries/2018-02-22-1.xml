@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <entry xmlns="http://www.w3.org/2005/Atom" xmlns:default="http://php.net/ns/news">
   <title>Northeast PHP 2018 Boston - Call for Speakers</title>
-  <id>http://php.net/archive/2018.php#id2018-02-22-1</id>
+  <id>https://www.php.net/archive/2018.php#id2018-02-22-1</id>
   <published>2018-02-22T22:41:47-05:00</published>
   <updated>2018-02-22T22:41:47-05:00</updated>
   <default:finalTeaserDate xmlns="http://php.net/ns/news">2018-04-11</default:finalTeaserDate>
   <category term="cfp" label="Call for Papers"/>
-  <link href="http://php.net/conferences/index.php#id2018-02-22-1" rel="alternate" type="text/html"/>
+  <link href="https://www.php.net/conferences/index.php#id2018-02-22-1" rel="alternate" type="text/html"/>
   <default:newsImage xmlns="http://php.net/ns/news" link="http://cfp.northeastphp.org/" title="Northeast PHP Logo">northeast_logo_2015.png</default:newsImage>
   <link href="http://cfp.northeastphp.org/" rel="via" type="text/html"/>
   <content type="xhtml">

@@ -112,8 +112,8 @@ site_header("News Archive - 1999", ["cache" => true]);
 <p>
  <span class="newsdate">[04-Jan-1999]</span>
  <strong>Zend</strong>, a new optimized engine for PHP has been
- <a href="http://www.zend.com/PR.html">announced</a>. Visit the
- <a href="http://www.zend.com/">Zend Web site</a> for more
+ <a href="https://www.zend.com/PR.html">announced</a>. Visit the
+ <a href="https://www.zend.com/">Zend Web site</a> for more
  information!
 </p>
 

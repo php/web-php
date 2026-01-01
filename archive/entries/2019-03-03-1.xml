@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <entry xmlns="http://www.w3.org/2005/Atom" xmlns:default="http://php.net/ns/news">
   <title>Bulgaria PHP Conference 2019</title>
-  <id>http://php.net/archive/2019.php#id2019-03-03-1</id>
+  <id>https://www.php.net/archive/2019.php#id2019-03-03-1</id>
   <published>2019-03-03T13:37:07+02:00</published>
   <updated>2019-03-03T13:37:07+02:00</updated>
   <default:finalTeaserDate xmlns="http://php.net/ns/news">2019-11-08</default:finalTeaserDate>
   <category term="conferences" label="Conference announcement"/>
-  <link href="http://php.net/conferences/index.php#id2019-03-03-1" rel="alternate" type="text/html"/>
+  <link href="https://www.php.net/conferences/index.php#id2019-03-03-1" rel="alternate" type="text/html"/>
   <default:newsImage xmlns="http://php.net/ns/news" link="https://www.bgphp.org/" title="Bulgaria PHP Conference 2019">bgphp-logo-dark-350.png</default:newsImage>
   <link href="https://www.bgphp.org/" rel="via" type="text/html"/>
   <content type="xhtml">
@@ -16,9 +16,9 @@
      in the emblematic National Palace of Culture in the heart of Sofia, Bulgaria.
      The conference will consist of a training day and two conference days with two tracks,
      an unConf, a great theme, an awesome party, exquisite food and lot's of beer (we take fun really seriously on the Balkans).</p>
-     
+
      <p>Follow us on twitter <a href="https://twitter.com/bgphpconf">@bgphpconf</a>, on <a href="https://www.bgphp.org/">www.bgphp.org</a> and on our Facebook page <a href="https://www.facebook.com/Bulgaria-PHP-Conference-792916594079571">https://www.facebook.com/Bulgaria-PHP-Conference-792916594079571</a> for more news!</p>
-     
+
      <p>Our Call for Papers will start on the 8th of March, so, please, do apply and see you in November in Bulgaria!</p>
     </div>
   </content>

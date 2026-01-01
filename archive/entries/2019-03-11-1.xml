@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <entry xmlns="http://www.w3.org/2005/Atom" xmlns:default="http://php.net/ns/news">
   <title>Laracon EU 2019 Amsterdam</title>
-  <id>http://php.net/archive/2019.php#id2019-03-11-1</id>
+  <id>https://www.php.net/archive/2019.php#id2019-03-11-1</id>
   <published>2019-03-11T17:26:39+00:00</published>
   <updated>2019-03-11T17:26:39+00:00</updated>
   <default:finalTeaserDate xmlns="http://php.net/ns/news">2019-08-28</default:finalTeaserDate>
   <category term="conferences" label="Conference announcement"/>
-  <link href="http://php.net/conferences/index.php#id2019-03-11-1" rel="alternate" type="text/html"/>
+  <link href="https://www.php.net/conferences/index.php#id2019-03-11-1" rel="alternate" type="text/html"/>
   <default:newsImage xmlns="http://php.net/ns/news" link="https://laracon.eu/2019/" title="Laracon Logo">laracon-logo.png</default:newsImage>
   <link href="https://laracon.eu/2019/" rel="via" type="text/html"/>
   <content type="xhtml">

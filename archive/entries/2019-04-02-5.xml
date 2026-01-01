@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <entry xmlns="http://www.w3.org/2005/Atom" xmlns:default="http://php.net/ns/news">
   <title>SymfonyLive Berlin 2019</title>
-  <id>http://php.net/archive/2019.php#id2019-04-02-5</id>
+  <id>https://www.php.net/archive/2019.php#id2019-04-02-5</id>
   <published>2019-04-02T10:24:43+00:00</published>
   <updated>2019-04-02T10:24:43+00:00</updated>
   <default:finalTeaserDate xmlns="http://php.net/ns/news">2019-09-26</default:finalTeaserDate>
   <category term="conferences" label="Conference announcement"/>
-  <link href="http://php.net/conferences/index.php#id2019-04-02-5" rel="alternate" type="text/html"/>
+  <link href="https://www.php.net/conferences/index.php#id2019-04-02-5" rel="alternate" type="text/html"/>
   <default:newsImage xmlns="http://php.net/ns/news" link="https://berlin2019.live.symfony.com/" title="SymfonyLive Berlin 2019 Conference">symfonylive-berlin-2019.png</default:newsImage>
   <link href="https://berlin2019.live.symfony.com/" rel="via" type="text/html"/>
   <content type="xhtml">
     <div xmlns="http://www.w3.org/1999/xhtml">
      <p>The SymfonyLive conference is coming back to Berlin! Join the big Symfony
      German community and learn all about the latest Symfony features.</p>
-     
+
      <p>Symfony fans, don't miss the opportunity to attend inspiring and exciting
      talks and hands-on workshops from the 24th to the 27th of September!</p>
     </div>

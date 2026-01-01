@@ -57,7 +57,7 @@ site_header("Zend Grant", ["current" => "help"]);
     As you know, Zend Technologies, Ltd. ("Zend") remains deeply committed to the advancement and
     proliferation of PHP as an open source web scripting language. Zend currently makes its Zend Engine
     software available, as a standalone product, under the open-source agreement that may be found at
-    http://www.zend.com/license/ZendLicense.txt (the "Zend Open Source License", a copy of which is
+    https://www.zend.com/license/ZendLicense.txt (the "Zend Open Source License", a copy of which is
     attached as Exhibit 1). Since Zend Engine is a crucial component of PHP, Zend hereby makes the following
     commitments and assurances to The PHP Association (the "Association"):
 </p>
@@ -68,7 +68,7 @@ site_header("Zend Grant", ["current" => "help"]);
             Zend will continue to make Zend Engine available as an open source product under the Zend
             Open Source License. If Zend changes the terms of the Zend Open Source License, the new
             license will be consistent with the Open Source Definition of the Open Source Initiative (see
-            http://www.opensource.org/osd.html, a copy of which is attached as Exhibit 2).
+            https://opensource.org/osd.html, a copy of which is attached as Exhibit 2).
         </p>
     </li>
     <li>

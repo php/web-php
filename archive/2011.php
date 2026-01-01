@@ -20,10 +20,10 @@ site_header("News Archive - 2011", ["cache" => true]);
         <div>
      <p>
        The PHP development team is proud to announce the 4th
-       <a href="http://qa.php.net">release candidate</a> of PHP 5.4.
+       <a href="https://qa.php.net">release candidate</a> of PHP 5.4.
        PHP 5.4 includes new language features and removes several legacy
        (deprecated) behaviours. Windows binaries can be downloaded from the
-       <a href="http://windows.php.net/qa/">Windows QA site</a>.
+       <a href="https://windows.php.net/qa/">Windows QA site</a>.
      </p>
      <p>
        <strong>THIS IS A RELEASE CANDIDATE - DO NOT USE IT IN PRODUCTION!</strong>.
@@ -85,10 +85,10 @@ site_header("News Archive - 2011", ["cache" => true]);
         <div>
       <p>
         The PHP development team is proud to announce the third
-        <a href="http://qa.php.net">release candidate</a> of PHP 5.4.
+        <a href="https://qa.php.net">release candidate</a> of PHP 5.4.
         PHP 5.4 includes new language features and removes several legacy
         (deprecated) behaviours. Windows binaries can be downloaded from the
-        <a href="http://windows.php.net/qa/">Windows QA site</a>.
+        <a href="https://windows.php.net/qa/">Windows QA site</a>.
       </p>
       <p>
         <strong>THIS IS A RELEASE CANDIDATE - DO NOT USE IT IN PRODUCTION!</strong>.
@@ -131,10 +131,10 @@ site_header("News Archive - 2011", ["cache" => true]);
         <div>
       <p>
         The PHP development team is proud to announce the second
-        <a href="http://qa.php.net">release candidate</a> of PHP 5.4.
+        <a href="https://qa.php.net">release candidate</a> of PHP 5.4.
         PHP 5.4 includes new language features and removes several legacy
         (deprecated) behaviours. Windows binaries can be downloaded from the
-        <a href="http://windows.php.net/qa/">Windows QA site</a>.
+        <a href="https://windows.php.net/qa/">Windows QA site</a>.
       </p>
       <p>
         <strong>THIS IS A RELEASE CANDIDATE - DO NOT USE IT IN PRODUCTION!</strong>.
@@ -208,10 +208,10 @@ site_header("News Archive - 2011", ["cache" => true]);
         <div>
      <p>
       The PHP development team is proud to announce the first
-      <a href="http://qa.php.net/">release candidate</a> of PHP 5.4.
+      <a href="https://qa.php.net/">release candidate</a> of PHP 5.4.
       PHP 5.4 includes new language features and removes several legacy
       (deprecated) behaviours. Windows binaries can be downloaded from the
-      <a href="http://windows.php.net/qa/">Windows QA site</a>.
+      <a href="https://windows.php.net/qa/">Windows QA site</a>.
      </p>
      <p>
       <strong>THIS IS A RELEASE CANDIDATE - DO NOT USE IT IN PRODUCTION!</strong>
@@ -253,9 +253,9 @@ site_header("News Archive - 2011", ["cache" => true]);
         <abbr class="published newsdate" title="2011-10-26T19:16:50+00:00">[26-Oct-2011]</abbr>
         <div>
       <p>
-       The PHP development team is proud to announce the second <a href="http://qa.php.net/">beta release</a> of PHP 5.4.
+       The PHP development team is proud to announce the second <a href="https://qa.php.net/">beta release</a> of PHP 5.4.
        PHP 5.4 includes new language features and removes several legacy (deprecated) behaviours.
-       Windows binaries can be downloaded from the <a href="http://windows.php.net/qa/">Windows QA site</a>.
+       Windows binaries can be downloaded from the <a href="https://windows.php.net/qa/">Windows QA site</a>.
       </p>
       <p>
        <strong>THIS IS A DEVELOPMENT PREVIEW - DO NOT USE IT IN PRODUCTION!</strong>
@@ -358,9 +358,9 @@ site_header("News Archive - 2011", ["cache" => true]);
         <abbr class="published newsdate" title="2011-09-27T01:05:49+02:00">[27-Sep-2011]</abbr>
         <div>
       <p>
-       The PHP development team is proud to announce the first <a href="http://qa.php.net/">beta release</a> of PHP 5.4.
+       The PHP development team is proud to announce the first <a href="https://qa.php.net/">beta release</a> of PHP 5.4.
        PHP 5.4 includes new language features and removes several legacy (deprecated) behaviors.
-       Windows binaries can be downloaded from the <a href="http://windows.php.net/qa/"> Windows QA site</a>.
+       Windows binaries can be downloaded from the <a href="https://windows.php.net/qa/"> Windows QA site</a>.
       </p>
       <p>
        <strong>THIS IS A DEVELOPMENT PREVIEW - DO NOT USE IT IN PRODUCTION!</strong>
@@ -491,9 +491,9 @@ site_header("News Archive - 2011", ["cache" => true]);
 
      <p>For a full list of changes in PHP 5.3.8, see the <a href="/ChangeLog-5.php#5.3.8">ChangeLog</a>. For source downloads please
         visit our <a href="/downloads.php">downloads page</a>, Windows binaries
-    can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.</p>
+    can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.</p>
     <p>
-         <strong>For more details on the crypt() blowfish security issue in pre 5.3.6 see <a href="http://php.net/security/crypt_blowfish">the crypt blowfish page</a></strong>
+         <strong>For more details on the crypt() blowfish security issue in pre 5.3.6 see <a href="https://www.php.net/security/crypt_blowfish">the crypt blowfish page</a></strong>
     </p>
     </div>
 
@@ -556,7 +556,7 @@ site_header("News Archive - 2011", ["cache" => true]);
 
      <p><b>Security Enhancements and Fixes in PHP 5.3.7:</b></p>
      <ul>
-         <li>Updated crypt_blowfish to 1.2. (CVE-2011-2483) <a href="http://php.net/security/crypt_blowfish">(more info)</a></li>
+         <li>Updated crypt_blowfish to 1.2. (CVE-2011-2483) <a href="https://www.php.net/security/crypt_blowfish">(more info)</a></li>
          <li>Fixed crash in error_log(). Reported by Mateusz Kocielski</li>
          <li>Fixed buffer overflow on overlog salt in crypt().</li>
          <li>Fixed bug #54939 (File path injection vulnerability in RFC1867 File upload filename). Reported by Krzysztof Kotowicz. (CVE-2011-2202)</li>
@@ -610,7 +610,7 @@ site_header("News Archive - 2011", ["cache" => true]);
     <p xmlns="http://www.w3.org/2005/Atom">For a full list of changes in PHP 5.3.7, see the
      <a href="/ChangeLog-5.php#5.3.7">ChangeLog</a>. For source downloads
      please visit our <a href="/downloads.php">downloads page</a>, Windows
-     binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.</p>
+     binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.</p>
 
     </div>
 </div>
@@ -649,7 +649,7 @@ site_header("News Archive - 2011", ["cache" => true]);
         <abbr class="published newsdate" title="2011-06-28T23:34:42+02:00">[28-Jun-2011]</abbr>
         <div>
      <p>
-      The PHP development team is proud to announce the first PHP 5.4 <a href="http://qa.php.net/">alpha release</a>.
+      The PHP development team is proud to announce the first PHP 5.4 <a href="https://qa.php.net/">alpha release</a>.
       PHP 5.4 includes new language features and removes several legacy (deprecated) behaviors.
       Read the <a href="/releases/NEWS_5_4_0_alpha1.txt">NEWS</a>
       file for a complete list of changes.
@@ -663,7 +663,7 @@ site_header("News Archive - 2011", ["cache" => true]);
       and documented before PHP 5.4.0 is released. Please report findings to
       the <a href="mailto:php-qa@lists.php.net">QA mailing list</a> and/or
       the <a href="https://bugs.php.net/">PHP bug tracker</a>. Windows binaries
-      can be downloaded from the <a href="http://windows.php.net/qa/">
+      can be downloaded from the <a href="https://windows.php.net/qa/">
       Windows QA site</a>.
      </p>
      <p>
@@ -926,7 +926,7 @@ site_header("News Archive - 2011", ["cache" => true]);
      <p>For a full list of changes in PHP 5.3.6, see the
      <a href="/ChangeLog-5.php#5.3.6">ChangeLog</a>. For source downloads
      please visit our <a href="/downloads.php">downloads page</a>, Windows
-     binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.</p>
+     binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.</p>
     </div>
 
     </div>

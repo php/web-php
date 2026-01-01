@@ -60,7 +60,7 @@ site_header("News Archive - 2000", ["cache" => true]);
 <p>
  <span class="newsdate">[06-Oct-2000]</span>
  You can now go directly to PHP manual pages with a URL such as
- <a href="http://php.net/strlen">php.net/strlen</a>.
+ <a href="https://www.php.net/strlen">php.net/strlen</a>.
 </p>
 
 <hr>
@@ -122,9 +122,9 @@ site_header("News Archive - 2000", ["cache" => true]);
 <h1>Zend Optimizer released!</h1>
 <p>
  <span class="newsdate">[08-Mar-2000]</span>
- <a href="http://www.zend.com">Zend Technologies</a> has announced the
+ <a href="https://www.zend.com">Zend Technologies</a> has announced the
  availability of the Zend Optimizer for PHP 4.0 Beta 4. The optimizer is
- available for <a href="http://www.zend.com/store/products/zend-optimizer.php">free
+ available for <a href="https://www.zend.com/store/products/zend-optimizer.php">free
  download</a>
 </p>
 

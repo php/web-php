@@ -14,7 +14,7 @@ site_header("News Archive - 2010", ["cache" => true]);
 <hr>
 <div class="newsItem hentry">
     <div class="newsImage"></div>
-    <h1 class="summary entry-title"><a id="id2010-12-16-1" href="http://www.php.net/archive/2010.php#id2010-12-16-1" rel="bookmark" class="bookmark">PHP 5.2.16 Released!</a></h1>
+    <h1 class="summary entry-title"><a id="id2010-12-16-1" href="https://www.php.net/archive/2010.php#id2010-12-16-1" rel="bookmark" class="bookmark">PHP 5.2.16 Released!</a></h1>
     <div class="entry-content description">
         <abbr class="published newsdate" title="2010-12-16T00:22:44-05:00">[16-Dec-2010]</abbr>
         <div>
@@ -32,11 +32,11 @@ site_header("News Archive - 2010", ["cache" => true]);
      </p>
 
      <p>To prepare for upgrading to PHP 5.3, now that PHP 5.2's support ended, a
-     migration guide available on <a href="/migration53">http://php.net/migration53</a>, details the changes between
+     migration guide available on <a href="/migration53">https://www.php.net/migration53</a>, details the changes between
      PHP 5.2 and PHP 5.3.</p>
 
      <p>For a full list of changes in PHP 5.2.16 see the ChangeLog at
-     <a href="/ChangeLog-5.php#5.2.16">http://www.php.net/ChangeLog-5.php#5.2.16</a>.</p>
+     <a href="/ChangeLog-5.php#5.2.16">https://www.php.net/ChangeLog-5.php#5.2.16</a>.</p>
     </div>
 
     </div>
@@ -45,7 +45,7 @@ site_header("News Archive - 2010", ["cache" => true]);
 <hr>
 <div class="newsItem hentry">
     <div class="newsImage"></div>
-    <h1 class="summary entry-title"><a id="id2010-12-10-1" href="http://www.php.net/archive/2010.php#id2010-12-10-1" rel="bookmark" class="bookmark">PHP 5.3.4 Released!</a></h1>
+    <h1 class="summary entry-title"><a id="id2010-12-10-1" href="https://www.php.net/archive/2010.php#id2010-12-10-1" rel="bookmark" class="bookmark">PHP 5.3.4 Released!</a></h1>
     <div class="entry-content description">
         <abbr class="published newsdate" title="2010-12-10T01:19:36+01:00">[10-Dec-2010]</abbr>
         <div>
@@ -88,7 +88,7 @@ site_header("News Archive - 2010", ["cache" => true]);
 
      <p>
      For users upgrading from PHP 5.2 there is a migration guide
-     available <a href="http://php.net/migration53">here</a>, detailing
+     available <a href="https://www.php.net/migration53">here</a>, detailing
      the changes between those releases and PHP 5.3.
      </p>
 
@@ -96,7 +96,7 @@ site_header("News Archive - 2010", ["cache" => true]);
       For a full list of changes in PHP 5.3.4, see the
       <a href="/ChangeLog-5.php#5.3.4">ChangeLog</a>. For source downloads
       please visit our <a href="/downloads.php">downloads page</a>, Windows
-      binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
+      binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
      </p>
     </div>
 
@@ -106,7 +106,7 @@ site_header("News Archive - 2010", ["cache" => true]);
 <hr>
 <div class="newsItem hentry">
     <div class="newsImage"></div>
-    <h1 class="summary entry-title"><a id="id2010-12-09-1" href="http://www.php.net/archive/2010.php#id2010-12-09-1" rel="bookmark" class="bookmark">PHP 5.2.15 Released!</a></h1>
+    <h1 class="summary entry-title"><a id="id2010-12-09-1" href="https://www.php.net/archive/2010.php#id2010-12-09-1" rel="bookmark" class="bookmark">PHP 5.2.15 Released!</a></h1>
     <div class="entry-content description">
         <abbr class="published newsdate" title="2010-12-09T15:29:10-05:00">[09-Dec-2010]</abbr>
         <div>
@@ -142,11 +142,11 @@ site_header("News Archive - 2010", ["cache" => true]);
      </ul>
 
      <p>To prepare for upgrading to PHP 5.3, now that PHP 5.2's support ended, a
-     migration guide available on <a href="/migration53">http://php.net/migration53</a>, details the changes between
+     migration guide available on <a href="/migration53">https://www.php.net/migration53</a>, details the changes between
      PHP 5.2 and PHP 5.3.</p>
 
      <p>For a full list of changes in PHP 5.2.15 see the ChangeLog at
-     <a href="http://www.php.net/ChangeLog-5.php#5.2.15">http://www.php.net/ChangeLog-5.php#5.2.15</a>.</p>
+     <a href="https://www.php.net/ChangeLog-5.php#5.2.15">https://www.php.net/ChangeLog-5.php#5.2.15</a>.</p>
     </div>
 
     </div>
@@ -318,7 +318,7 @@ site_header("News Archive - 2010", ["cache" => true]);
 <hr>
 <div class="newsItem hentry vevent">
     <div class="newsImage"><?php news_image("http://conference.phpnw.org.uk/phpnw10/", "phpnw10_logo.png", "PHP | OSI Days 2010"); ?></div>
-    <h1 class="summary entry-title"><a id="id2010-09-09-1" href="http://www.php.net/archive/2010.php#id2010-09-09-1" rel="bookmark" class="bookmark">PHPNW10</a></h1>
+    <h1 class="summary entry-title"><a id="id2010-09-09-1" href="https://www.php.net/archive/2010.php#id2010-09-09-1" rel="bookmark" class="bookmark">PHPNW10</a></h1>
     <div class="entry-content description">
         <abbr class="published newsdate" title="2010-09-09T23:53:00+08:00">[09-Sep-2010]</abbr>
         <p>
@@ -348,7 +348,7 @@ site_header("News Archive - 2010", ["cache" => true]);
 <hr>
 <div class="newsItem hentry">
     <div class="newsImage"></div>
-    <h1 class="summary entry-title"><a id="id2010-07-22-2" href="http://www.php.net/archive/2010.php#id2010-07-22-2" rel="bookmark" class="bookmark">PHP 5.3.3 Released!</a></h1>
+    <h1 class="summary entry-title"><a id="id2010-07-22-2" href="https://www.php.net/archive/2010.php#id2010-07-22-2" rel="bookmark" class="bookmark">PHP 5.3.3 Released!</a></h1>
     <div class="entry-content description">
         <abbr class="published newsdate" title="2010-07-22T15:44:32+02:00">[22-Jul-2010]</abbr>
         <div>
@@ -423,7 +423,7 @@ class Bar {<br>
 
      <p>
      For users upgrading from PHP 5.2 there is a migration guide available on
-     <a href="/migration53">http://php.net/migration53</a>, detailing the changes between those
+     <a href="/migration53">https://www.php.net/migration53</a>, detailing the changes between those
      releases and PHP 5.3.
      </p>
      <p>
@@ -438,7 +438,7 @@ class Bar {<br>
 <hr>
 <div class="newsItem hentry">
     <div class="newsImage"></div>
-    <h1 class="summary entry-title"><a id="id2010-07-22-1" href="http://www.php.net/archive/2010.php#id2010-07-22-1" rel="bookmark" class="bookmark">PHP 5.2.14 Released!</a></h1>
+    <h1 class="summary entry-title"><a id="id2010-07-22-1" href="https://www.php.net/archive/2010.php#id2010-07-22-1" rel="bookmark" class="bookmark">PHP 5.2.14 Released!</a></h1>
     <div class="entry-content description">
         <abbr class="published newsdate" title="2010-07-22T15:42:03+02:00">[22-Jul-2010]</abbr>
         <div>
@@ -487,10 +487,10 @@ class Bar {<br>
      </ul>
 
      <p>To prepare for upgrading to PHP 5.3, now that PHP 5.2's support ended, a
-     migration guide available on <a href="/migration53">http://php.net/migration53</a>, details the changes between
+     migration guide available on <a href="/migration53">https://www.php.net/migration53</a>, details the changes between
      PHP 5.2 and PHP 5.3.</p>
      <p>For a full list of changes in PHP 5.2.14 see the ChangeLog at
-     <a href="/ChangeLog-5.php#5.2.14">http://www.php.net/ChangeLog-5.php#5.2.14</a>.</p>
+     <a href="/ChangeLog-5.php#5.2.14">https://www.php.net/ChangeLog-5.php#5.2.14</a>.</p>
     </div>
 
     </div>
@@ -499,7 +499,7 @@ class Bar {<br>
 <hr>
 <div class="newsItem hentry">
     <div class="newsImage"></div>
-    <h1 class="summary entry-title"><a id="id2010-06-23-1" href="http://www.php.net/archive/2010.php#id2010-06-23-1" rel="bookmark" class="bookmark">TestFest 2010</a></h1>
+    <h1 class="summary entry-title"><a id="id2010-06-23-1" href="https://www.php.net/archive/2010.php#id2010-06-23-1" rel="bookmark" class="bookmark">TestFest 2010</a></h1>
     <div class="entry-content description">
         <abbr class="published newsdate" title="2010-06-23T22:51:00-05:00">[23-Jun-2010]</abbr>
         <div>
@@ -520,7 +520,7 @@ class Bar {<br>
         tools as well as screencasts showing those build tools in action.
       </p>
       <p>
-        Please visit the <a href="http://wiki.php.net/qa/testfest-2010">TestFest
+        Please visit the <a href="https://wiki.php.net/qa/testfest-2010">TestFest
         2010</a> wiki page for all the details on events being organized in your area,
         or find out how you can organize your own event.
       </p>
@@ -532,7 +532,7 @@ class Bar {<br>
 <hr>
 <div class="newsItem hentry vevent">
     <div class="newsImage"><?php news_image("http://osidays.com/node/add/proposal", "php_osi_2010.png", "PHP | OSI Days 2010"); ?></div>
-    <h1 class="summary entry-title"><a id="id2010-06-05-1" href="http://www.php.net/archive/2010.php#id2010-06-05-1" rel="bookmark" class="bookmark">PHP | OSI Days 2010: Participate at the confluence of PHP's finest!</a></h1>
+    <h1 class="summary entry-title"><a id="id2010-06-05-1" href="https://www.php.net/archive/2010.php#id2010-06-05-1" rel="bookmark" class="bookmark">PHP | OSI Days 2010: Participate at the confluence of PHP's finest!</a></h1>
     <div class="entry-content description">
         <abbr class="published newsdate" title="2010-06-05T18:21:05-03:00">[05-Jun-2010]</abbr>
         <p>PHP | OSI Days 2010 is the premier PHP conference being organised at
@@ -610,7 +610,7 @@ class Bar {<br>
 <hr>
 <div class="newsItem hentry">
     <div class="newsImage"></div>
-    <h1 class="summary entry-title"><a id="id2010-03-04-1" href="http://www.php.net/archive/2010.php#id2010-03-04-1" rel="bookmark" class="bookmark">PHP 5.3.2 Released!</a></h1>
+    <h1 class="summary entry-title"><a id="id2010-03-04-1" href="https://www.php.net/archive/2010.php#id2010-03-04-1" rel="bookmark" class="bookmark">PHP 5.3.2 Released!</a></h1>
     <div class="entry-content description">
         <abbr class="published newsdate" title="2010-03-04T14:57:33+00:00">[04-Mar-2010]</abbr>
         <div>
@@ -649,7 +649,7 @@ class Bar {<br>
 
      <p>
      For users upgrading from PHP 5.2 there is a migration guide
-     available <a href="http://php.net/migration53">here</a>, detailing
+     available <a href="https://www.php.net/migration53">here</a>, detailing
      the changes between those releases and PHP 5.3.
      </p>
 
@@ -661,7 +661,7 @@ class Bar {<br>
      For a full list of changes in PHP 5.3.2, see the
      <a href="/ChangeLog-5.php#5.3.2">ChangeLog</a>. For source downloads
      please visit our <a href="/downloads.php">downloads page</a>, Windows
-     binaries can be found on <a href="http://windows.php.net/download/">
+     binaries can be found on <a href="https://windows.php.net/download/">
      windows.php.net/download/</a>.
      </p>
 
@@ -673,7 +673,7 @@ class Bar {<br>
 <hr>
 <div class="newsItem hentry">
     <div class="newsImage"></div>
-    <h1 class="summary entry-title"><a id="id2010-02-25-1" href="http://www.php.net/archive/2010.php#id2010-02-25-1" rel="bookmark" class="bookmark">PHP 5.2.13 Released!</a></h1>
+    <h1 class="summary entry-title"><a id="id2010-02-25-1" href="https://www.php.net/archive/2010.php#id2010-02-25-1" rel="bookmark" class="bookmark">PHP 5.2.13 Released!</a></h1>
     <div class="entry-content description">
         <abbr class="published newsdate" title="2010-02-25T16:41:39-05:00">[25-Feb-2010]</abbr>
         <div>

@@ -12,7 +12,7 @@ changelog_header(5, $MINOR_VERSIONS);
 <b><?php release_date('10-Jan-2019'); ?></b>
 <ul><li>GD:
 <ul>
-  <li><?php bugfix(77269); ?> (efree() on uninitialized Heap data in imagescale leads to 
+  <li><?php bugfix(77269); ?> (efree() on uninitialized Heap data in imagescale leads to
 use-after-free). (CVE-2016-10166)</li>
   <li><?php bugfix(77270); ?> (imagecolormatch Out Of Bounds Write on Heap). (CVE-2019-6977)</li>
 </ul></li>
@@ -9380,7 +9380,7 @@ FILTER_FLAG_NO_PRIV_RANGE).</li>
 
 <li>Core:
 <ul>
-  <li>Updated crypt_blowfish to 1.2. (CVE-2011-2483) (Solar Designer) <a href="http://php.net/security/crypt_blowfish">(more info)</a></li>
+  <li>Updated crypt_blowfish to 1.2. (CVE-2011-2483) (Solar Designer) <a href="https://www.php.net/security/crypt_blowfish">(more info)</a></li>
   <li>Removed warning when argument of is_a() or is_subclass_of() is not  a known class. (Stas)</li>
   <li>Fixed crash in error_log(). (Felipe) Reported by Mateusz Kocielski.</li>
   <li>Added PHP_MANDIR constant telling where the manpages were installed into, and an --man-dir argument to php-config. (Hannes)</li>
@@ -15829,7 +15829,7 @@ fault?]).  (Sterling, Marcus)</li>
 <?php release_date('29-Jun-2003'); ?>
 <ul>
 <li>Switch to using Zend Engine 2, which includes numerous engine level improvements.
-A full overview may be downloaded from <a href="http://www.zend.com/engine2/ZendEngine-2.0.pdf">http://www.zend.com/engine2/ZendEngine-2.0.pdf</a> (PDF).
+A full overview may be downloaded from <a href="https://www.zend.com/engine2/ZendEngine-2.0.pdf">https://www.zend.com/engine2/ZendEngine-2.0.pdf</a> (PDF).
 </li>
 <li>The SQLite (<a href="http://www.hwaci.com/sw/sqlite/">http://www.hwaci.com/sw/sqlite/</a>) extension is now bundled and
 enabled by default. (Wez, Marcus, Tal)</li>

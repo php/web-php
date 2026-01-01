@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <entry xmlns="http://www.w3.org/2005/Atom" xmlns:default="http://php.net/ns/news">
   <title>Midwest PHP Call for Papers</title>
-  <id>http://php.net/archive/2017.php#id2017-08-13-1</id>
+  <id>https://www.php.net/archive/2017.php#id2017-08-13-1</id>
   <published>2017-08-13T19:56:28+00:00</published>
   <updated>2017-08-13T19:56:28+00:00</updated>
   <default:finalTeaserDate xmlns="http://php.net/ns/news">2017-11-20</default:finalTeaserDate>
   <category term="cfp" label="Call for Papers"/>
-  <link href="http://php.net/conferences/index.php#id2017-08-13-1" rel="alternate" type="text/html"/>
+  <link href="https://www.php.net/conferences/index.php#id2017-08-13-1" rel="alternate" type="text/html"/>
   <default:newsImage xmlns="http://php.net/ns/news" link="https://2018.midwestphp.org" title="Midwest PHP Conference">midwest-php-logo.png</default:newsImage>
   <link href="https://2018.midwestphp.org" rel="via" type="text/html"/>
   <content type="xhtml">

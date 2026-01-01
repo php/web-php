@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <entry xmlns="http://www.w3.org/2005/Atom" xmlns:default="http://php.net/ns/news">
   <title>PHPKonf Istanbul PHP Conference 2019 - Call for Papers</title>
-  <id>http://php.net/archive/2018.php#id2018-12-10-1</id>
+  <id>https://www.php.net/archive/2018.php#id2018-12-10-1</id>
   <published>2018-12-10T09:00:00+00:00</published>
   <updated>2018-12-10T09:00:00+00:00</updated>
   <default:finalTeaserDate xmlns="http://php.net/ns/news">2019-01-31</default:finalTeaserDate>
   <category term="cfp" label="Call for Papers"/>
-  <link href="http://php.net/conferences/index.php#id2018-12-10-1" rel="alternate" type="text/html"/>
+  <link href="https://www.php.net/conferences/index.php#id2018-12-10-1" rel="alternate" type="text/html"/>
   <default:newsImage xmlns="http://php.net/ns/news" link="https://cfp.phpkonf.org/" title="PHPKonf Istanbul PHP Conference 2019">phpkonf_2015.png</default:newsImage>
   <link href="https://cfp.phpkonf.org/" rel="via" type="text/html"/>
   <content type="xhtml">
@@ -14,9 +14,9 @@
 	 <p>PHPKonf 2019 is an annual PHP oriented conference in Istanbul, Turkey and will take place on Saturday, 4th of May, 2019.</p>
 
      <p>The <a href="https://cfp.phpkonf.org/">call for papers</a> for the PHPKonf 2019 Istanbul PHP conference is open! If you have a burning desire to hold forth about PHP, DevOps, databases, JavaScript, or any other web development topics, we want to see your proposals. Call for Papers is open only from December 10, 2018 to January 31, 2019, so hurry. An added benefit: we will cover your travel and hotel.</p>
-     
+
      <p>You’ll have 45 minutes for the talk, with 35 minutes for your topic and 10 minutes for Q&amp;A. We can’t wait to see your proposals! Check out the <a href="http://2018.phpkonf.org/">last conference</a> to get an idea of what to expect.</p>
-     
+
      <p>Follow us on <a href="https://twitter.com/istanbulphp">Twitter</a> to stay updated with news from the PHPKonf crew.</p>
     </div>
   </content>

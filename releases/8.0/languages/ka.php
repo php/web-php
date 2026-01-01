@@ -73,9 +73,9 @@ return [
 
     'footer_title' => 'უკეთესი წარმადობა, უკეთესი სინტაქსი, უფრო საიმედო ტიპების სისტემა.',
     'footer_description' => '<p>
-            PHP 8 წყაროს კოდის ჩამოსატვირთად ეწვიეთ <a href="http://www.php.net/downloads">ჩამოტვირთვის</a> გვერდს.
-            Windows-ის ბინარული ფაილები განთავსებულია საიტზე <a href="http://windows.php.net/download">PHP Windows-თვის</a>.
-            ცვლილებების სია წარმოდგენილია <a href="http://www.php.net/ChangeLog-8.php">ChangeLog-ში</a>.
+            PHP 8 წყაროს კოდის ჩამოსატვირთად ეწვიეთ <a href="https://www.php.net/downloads">ჩამოტვირთვის</a> გვერდს.
+            Windows-ის ბინარული ფაილები განთავსებულია საიტზე <a href="https://windows.php.net/download">PHP Windows-თვის</a>.
+            ცვლილებების სია წარმოდგენილია <a href="https://www.php.net/ChangeLog-8.php">ChangeLog-ში</a>.
         </p>
         <p>
             <a href="/manual/en/migration80.php">მიგრაციის გზამკვლევი</a> ხელმისაწვდომია დოკუმენტაციის განყოფილებაში. გთხოვთ,

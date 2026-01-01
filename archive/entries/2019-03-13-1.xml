@@ -1,28 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 <entry xmlns="http://www.w3.org/2005/Atom" xmlns:default="http://php.net/ns/news">
   <title>PHPerKaigi 2019</title>
-  <id>http://php.net/archive/2019.php#id2019-03-13-1</id>
+  <id>https://www.php.net/archive/2019.php#id2019-03-13-1</id>
   <published>2019-03-13T08:01:54+00:00</published>
   <updated>2019-03-13T08:01:54+00:00</updated>
   <default:finalTeaserDate xmlns="http://php.net/ns/news">2019-03-29</default:finalTeaserDate>
   <category term="conferences" label="Conference announcement"/>
-  <link href="http://php.net/conferences/index.php#id2019-03-13-1" rel="alternate" type="text/html"/>
+  <link href="https://www.php.net/conferences/index.php#id2019-03-13-1" rel="alternate" type="text/html"/>
   <default:newsImage xmlns="http://php.net/ns/news" link="https://phperkaigi.jp/2019/" title="phperkaigi-2019-logo">phperkaigi-2019.png</default:newsImage>
   <link href="https://phperkaigi.jp/2019/" rel="via" type="text/html"/>
   <content type="xhtml">
     <div xmlns="http://www.w3.org/1999/xhtml">
      <p>PHPerKaigi 2019, Nerima, Tokyo, Japan.</p>
-     
+
      <p>PHPerKaigi is conference for all of the PHPer, that who using php now on, who used php in purpose, who want to use in future, and who like php. In this we sharing know-how to php and "#love" to it.</p>
-     
+
      <p>The conference consist of talk sessions by public speakers. In addition to We have  "Interactive Round Table" discuss specific themes, unconference, social gathering and so on for all of developers from all from Japan. Let's talking about PHP!</p>
-     
+
      <p>Follow us on twitter <a href="https://twitter.com/phperkaigi">@phperkaigi</a>, <a href="https://twitter.com/search?q=%23phperkaigi">#phperkaigi</a>.</p>
-     
+
      <p>Note:</p>
-     
+
      <p>*Kaigi* means meeting in Japanese.</p>
-     
+
      <p>*PHPer* means PHP lovers.</p>
     </div>
   </content>

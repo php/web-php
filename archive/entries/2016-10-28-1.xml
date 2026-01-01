@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <entry xmlns="http://www.w3.org/2005/Atom" xmlns:default="http://php.net/ns/news">
   <title>ConFoo Vancouver &amp; Montreal</title>
-  <id>http://php.net/archive/2016.php#id2016-10-28-1</id>
+  <id>https://www.php.net/archive/2016.php#id2016-10-28-1</id>
   <published>2016-10-28T12:22:24-04:00</published>
   <updated>2016-10-28T12:22:24-04:00</updated>
   <default:finalTeaserDate xmlns="http://php.net/ns/news">2016-12-05</default:finalTeaserDate>
   <category term="conferences" label="Conference announcement"/>
-  <link href="http://php.net/conferences/index.php#id2016-10-28-1" rel="alternate" type="text/html"/>
+  <link href="https://www.php.net/conferences/index.php#id2016-10-28-1" rel="alternate" type="text/html"/>
   <default:newsImage xmlns="http://php.net/ns/news" link="https://confoo.ca/en" title="ConFoo Vancouver 2016 and Montreal 2017">confoo-yvr2016-yul2017.jpg</default:newsImage>
   <link href="https://confoo.ca/en" rel="via" type="text/html"/>
   <content type="xhtml">

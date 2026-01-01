@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <entry xmlns="http://www.w3.org/2005/Atom" xmlns:default="http://php.net/ns/news">
   <title>Dutch PHP Conference - CfP is open!</title>
-  <id>http://php.net/archive/2018.php#id2018-11-20-1</id>
+  <id>https://www.php.net/archive/2018.php#id2018-11-20-1</id>
   <published>2018-11-20T14:00:23+00:00</published>
   <updated>2018-11-20T14:00:23+00:00</updated>
   <default:finalTeaserDate xmlns="http://php.net/ns/news">2019-01-28</default:finalTeaserDate>
   <category term="cfp" label="Call for Papers"/>
-  <link href="http://php.net/conferences/index.php#id2018-11-20-1" rel="alternate" type="text/html"/>
+  <link href="https://www.php.net/conferences/index.php#id2018-11-20-1" rel="alternate" type="text/html"/>
   <default:newsImage xmlns="http://php.net/ns/news" link="https://www.phpconference.nl" title="DPC 2019">dpc-2019.png</default:newsImage>
   <link href="https://www.phpconference.nl" rel="via" type="text/html"/>
   <content type="xhtml">
@@ -18,7 +18,7 @@
      <li>Date: June 6 - 8, 2019</li>
      <li>Venue: RAI Amsterdam</li>
      </ul>
-     
+
     </div>
   </content>
 </entry>

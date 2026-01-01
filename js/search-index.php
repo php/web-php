@@ -8,7 +8,7 @@ if (empty($_SERVER["DOCUMENT_ROOT"])) {
 }
 include __DIR__ . '/../include/prepend.inc';
 if (!isset(Languages::ACTIVE_ONLINE_LANGUAGES[$lang])) {
-    header("Location: http://php.net");
+    header("Location: https://www.php.net");
 }
 
 $combinedIndex = $_SERVER["DOCUMENT_ROOT"] . "/manual/$lang/search-combined.json";

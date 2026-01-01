@@ -25,11 +25,11 @@ This release marks the fourth feature update to the PHP 7 series.</p>
 <li><a href="https://www.php.net/manual/migration74.removed-extensions.php">Extensions Removed from the Core</a></li>
 </ul>
 
-<p>For source downloads of PHP 7.4.0 please visit our <a href="http://www.php.net/downloads">downloads</a> page
-Windows binaries can be found on the <a href="http://windows.php.net/download">PHP for Windows</a> site.
-The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.4.0">ChangeLog</a>.</p>
+<p>For source downloads of PHP 7.4.0 please visit our <a href="https://www.php.net/downloads">downloads</a> page
+Windows binaries can be found on the <a href="https://windows.php.net/download">PHP for Windows</a> site.
+The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-7.php#7.4.0">ChangeLog</a>.</p>
 
-<p>The <a href="http://php.net/manual/en/migration74.php">migration guide</a> is available in the PHP Manual.
+<p>The <a href="https://www.php.net/manual/en/migration74.php">migration guide</a> is available in the PHP Manual.
 Please consult it for the detailed list of new features and backward incompatible changes.</p>
 
 <p>Many thanks to all the contributors and supporters!</p>

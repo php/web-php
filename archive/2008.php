@@ -15,14 +15,14 @@ site_header("News Archive - 2008", ["cache" => true]);
 
 <div class="newsItem hentry">
     <div class="newsImage"></div>
-    <h1 class="summary entry-title"><a id="id2008-12-10-1" href="http://www.php.net/archive/2008.php#id2008-12-10-1" rel="bookmark" class="bookmark">Windows PECL binaries</a></h1>
+    <h1 class="summary entry-title"><a id="id2008-12-10-1" href="https://www.php.net/archive/2008.php#id2008-12-10-1" rel="bookmark" class="bookmark">Windows PECL binaries</a></h1>
     <div class="entry-content description">
         <abbr class="published newsdate" title="2008-12-10T19:50:38+01:00">[10-Dec-2008]</abbr>
 
         <div>
-        <p>Due to unfortunate circumstances Windows binaries for PECL extensions will no longer be available on http://pecl4win.php.net.</p>
-        <p>Work is being done to incorporate Windows binaries for PECL extensions into <a href="http://pecl.php.net">pecl.php.net</a> and will hopefully be ready early 2009</p>
-        <p>If anyone is interested in the project please join the <a href="mailto:internals-win@lists.php.net">PHP Windows Development</a> <a href="http://php.net/mailinglist">mailinglist</a>.</p>
+        <p>Due to unfortunate circumstances Windows binaries for PECL extensions will no longer be available on https://pecl4win.php.net.</p>
+        <p>Work is being done to incorporate Windows binaries for PECL extensions into <a href="https://pecl.php.net">pecl.php.net</a> and will hopefully be ready early 2009</p>
+        <p>If anyone is interested in the project please join the <a href="mailto:internals-win@lists.php.net">PHP Windows Development</a> <a href="https://www.php.net/mailinglist">mailinglist</a>.</p>
 
       </div>
 
@@ -32,7 +32,7 @@ site_header("News Archive - 2008", ["cache" => true]);
 <hr>
 <div class="newsItem hentry">
     <div class="newsImage"></div>
-    <h1 class="summary entry-title"><a id="id2008-12-08-1" href="http://www.php.net/archive/2008.php#id2008-12-08-1" rel="bookmark" class="bookmark">PHP 5.2.8 Released!</a></h1>
+    <h1 class="summary entry-title"><a id="id2008-12-08-1" href="https://www.php.net/archive/2008.php#id2008-12-08-1" rel="bookmark" class="bookmark">PHP 5.2.8 Released!</a></h1>
     <div class="entry-content description">
         <abbr class="published newsdate" title="2008-12-08T15:58:43-05:00">[08-Dec-2008]</abbr>
 
@@ -46,7 +46,7 @@ site_header("News Archive - 2008", ["cache" => true]);
 <hr>
 <div class="newsItem hentry">
     <div class="newsImage"></div>
-    <h1 class="summary entry-title"><a id="id2008-12-07-1" href="http://www.php.net/archive/2008.php#id2008-12-07-1" rel="bookmark" class="bookmark">PHP 5.2.7 has been removed from distribution</a></h1>
+    <h1 class="summary entry-title"><a id="id2008-12-07-1" href="https://www.php.net/archive/2008.php#id2008-12-07-1" rel="bookmark" class="bookmark">PHP 5.2.7 has been removed from distribution</a></h1>
 
     <div class="entry-content description">
         <abbr class="published newsdate" title="2008-12-07T22:01:14-08:00">[07-Dec-2008]</abbr>
@@ -66,7 +66,7 @@ site_header("News Archive - 2008", ["cache" => true]);
 <hr>
 <div class="newsItem hentry">
     <div class="newsImage"></div>
-    <h1 class="summary entry-title"><a id="id2008-12-04-3" href="http://www.php.net/archive/2008.php#id2008-12-04-3" rel="bookmark" class="bookmark">PHP 5.2.7 Released</a></h1>
+    <h1 class="summary entry-title"><a id="id2008-12-04-3" href="https://www.php.net/archive/2008.php#id2008-12-04-3" rel="bookmark" class="bookmark">PHP 5.2.7 Released</a></h1>
     <div class="entry-content description">
         <abbr class="published newsdate" title="2008-12-04T20:44:17-05:00">[04-Dec-2008]</abbr>
 
@@ -130,32 +130,32 @@ site_header("News Archive - 2008", ["cache" => true]);
 
 <div class="newsItem hentry">
     <div class="newsImage"></div>
-    <h1 class="summary entry-title"><a id="id2008-12-04-2" href="http://www.php.net/archive/2008.php#id2008-12-04-2" rel="bookmark" class="bookmark">PHP 5.3 alpha3 released!</a></h1>
+    <h1 class="summary entry-title"><a id="id2008-12-04-2" href="https://www.php.net/archive/2008.php#id2008-12-04-2" rel="bookmark" class="bookmark">PHP 5.3 alpha3 released!</a></h1>
     <div class="entry-content description">
         <abbr class="published newsdate" title="2008-12-04T17:00:32+01:00">[04-Dec-2008]</abbr>
         <div>
-        <p>The PHP development team is proud to announce the <a href="http://qa.php.net/">third alpha release</a>
+        <p>The PHP development team is proud to announce the <a href="https://qa.php.net/">third alpha release</a>
 
         of the upcoming PHP 5.3.0 minor version update of PHP.
-        Several new features have already been documented in the <a href="http://php.net/docs.php">official documentation</a>,
-        others are listed on the <a href="http://wiki.php.net/doc/scratchpad/upgrade/53">wiki</a>
+        Several new features have already been documented in the <a href="https://www.php.net/docs.php">official documentation</a>,
+        others are listed on the <a href="https://wiki.php.net/doc/scratchpad/upgrade/53">wiki</a>
         in preparation of getting documented. It is imperative that more people
         join the effort to complete the documentation for PHP 5.3.0.
-        Please also review the <a href="http://php.net/php5news">NEWS</a> file.</p>
+        Please also review the <a href="https://www.php.net/php5news">NEWS</a> file.</p>
         <strong>THIS IS A DEVELOPMENT PREVIEW - DO NOT USE IT IN PRODUCTION!</strong>
         <p>The purpose of this alpha release is to encourage users to not only actively
          participate in identifying bugs, but also in ensuring that all new features or
          necessary backwards compatibility breaks are noted in the documentation. Please
          report any findings to the <a href="mailto:php-qa@lists.php.net">QA mailinglist</a>
 
-         or the <a href="http://bugs.php.net">bug tracker</a>.</p>
+         or the <a href="https://bugs.php.net">bug tracker</a>.</p>
         <p>There have been a great number of other additions and improvements since the last alpha,
         but here is a short overview of the most important changes:</p>
         <ul>
-          <li><a href="http://php.net/language.namespaces">Namespaces</a> (documentation has been updated to the current state)</li>
+          <li><a href="https://www.php.net/language.namespaces">Namespaces</a> (documentation has been updated to the current state)</li>
           <li>
 
-            <a href="http://wiki.php.net/rfc/rounding">Rounding behavior</a>
+            <a href="https://wiki.php.net/rfc/rounding">Rounding behavior</a>
           </li>
           <li>ext/msql has been removed, while ext/ereg will now raise E_DEPRECATED notices</li>
           <li>ext/mhash has been replaced by ext/hash but full BC is maintained</li>
@@ -165,7 +165,7 @@ site_header("News Archive - 2008", ["cache" => true]);
         </ul>
         <p>Several under the hood changes also require in depth testing with existing
         applications to ensure that any backwards compatibility breaks are minimized.</p>
-        <p>The current <a href="http://wiki.php.net/todo/php53">release plan</a> expects
+        <p>The current <a href="https://wiki.php.net/todo/php53">release plan</a> expects
         a stable release sometime around the end of Q1 2009.</p>
       </div>
 
@@ -175,7 +175,7 @@ site_header("News Archive - 2008", ["cache" => true]);
 <hr>
 <div class="newsItem hentry">
     <div class="newsImage"></div>
-    <h1 class="summary entry-title"><a id="id2008-12-04-1" href="http://www.php.net/archive/2008.php#id2008-12-04-1" rel="bookmark" class="bookmark">PHP Advent 2008</a></h1>
+    <h1 class="summary entry-title"><a id="id2008-12-04-1" href="https://www.php.net/archive/2008.php#id2008-12-04-1" rel="bookmark" class="bookmark">PHP Advent 2008</a></h1>
     <div class="entry-content description">
         <abbr class="published newsdate" title="2008-12-04T09:30:00-05:00">[04-Dec-2008]</abbr>
         <div>
@@ -195,7 +195,7 @@ site_header("News Archive - 2008", ["cache" => true]);
 <hr>
 <div class="newsItem hentry vevent">
     <div class="newsImage"><?php news_image("http://www.afup.org/", "afup2008.png", "Forum AFUP Paris 2008"); ?></div>
-    <h1 class="summary entry-title"><a id="id2008-11-15-1" href="http://www.php.net/archive/2008.php#id2008-11-15-1" rel="bookmark" class="bookmark">Forum PHP Paris 2008</a></h1>
+    <h1 class="summary entry-title"><a id="id2008-11-15-1" href="https://www.php.net/archive/2008.php#id2008-11-15-1" rel="bookmark" class="bookmark">Forum PHP Paris 2008</a></h1>
 
     <div class="entry-content description">
         <abbr class="published newsdate" title="2008-11-15T21:56:55-07:00">[15-Nov-2008]</abbr>
@@ -260,7 +260,7 @@ site_header("News Archive - 2008", ["cache" => true]);
 <hr>
 <div class="newsItem hentry vevent">
     <div class="newsImage"></div>
-    <h1 class="summary entry-title"><a id="id2008-09-16-1" href="http://www.php.net/archive/2008.php#id2008-09-16-1" rel="bookmark" class="bookmark">PHP Quebec 2009</a></h1>
+    <h1 class="summary entry-title"><a id="id2008-09-16-1" href="https://www.php.net/archive/2008.php#id2008-09-16-1" rel="bookmark" class="bookmark">PHP Quebec 2009</a></h1>
     <div class="entry-content description">
         <abbr class="published newsdate" title="2008-09-16T10:12:12+02:00">[16-Sep-2008]</abbr>
         <p>
@@ -405,7 +405,7 @@ site_header("News Archive - 2008", ["cache" => true]);
 <hr>
 <div class="newsItem hentry">
     <div class="newsImage"></div>
-    <h1 class="summary entry-title"><a id="id2008-08-07-1" href="http://www.php.net/archive/2008.php#id2008-08-07-1" rel="bookmark" class="bookmark">PHP 4.4.9 released!</a></h1>
+    <h1 class="summary entry-title"><a id="id2008-08-07-1" href="https://www.php.net/archive/2008.php#id2008-08-07-1" rel="bookmark" class="bookmark">PHP 4.4.9 released!</a></h1>
 
     <div class="entry-content description">
         <abbr class="published newsdate" title="2008-08-07T20:12:42+02:00">[07-Aug-2008]</abbr>
@@ -438,37 +438,37 @@ site_header("News Archive - 2008", ["cache" => true]);
 <div class="newsItem hentry">
     <div class="newsImage"></div>
 
-    <h1 class="summary entry-title"><a id="id2008-08-01-1" href="http://www.php.net/archive/2008.php#id2008-08-01-1" rel="bookmark" class="bookmark">PHP 5.3 alpha1 released!</a></h1>
+    <h1 class="summary entry-title"><a id="id2008-08-01-1" href="https://www.php.net/archive/2008.php#id2008-08-01-1" rel="bookmark" class="bookmark">PHP 5.3 alpha1 released!</a></h1>
     <div class="entry-content description">
         <abbr class="published newsdate" title="2008-08-01T08:50:37+02:00">[01-Aug-2008]</abbr>
         <div>
-        <p>The PHP development team is proud to announce the <a href="http://qa.php.net/">first alpha release</a> of the upcoming minor version update of PHP. <a href="http://windows.php.net/download/">Windows binaries</a> will be available starting with alpha2 (intermediate snapshots available at <a href="http://snaps.php.net">snaps.php.net</a>). The new version PHP 5.3 is expected to improve stability and performance as well as add new language syntax and extensions. Several new features have already been documented in the <a href="http://php.net/docs.php">official documentation</a>, others are listed on the <a href="http://wiki.php.net/doc/scratchpad/upgrade/53">wiki</a> in preparation of getting documented. Please also review the <a href="http://php.net/php5news">NEWS</a> file.</p>
+        <p>The PHP development team is proud to announce the <a href="https://qa.php.net/">first alpha release</a> of the upcoming minor version update of PHP. <a href="https://windows.php.net/download/">Windows binaries</a> will be available starting with alpha2 (intermediate snapshots available at <a href="https://snaps.php.net">snaps.php.net</a>). The new version PHP 5.3 is expected to improve stability and performance as well as add new language syntax and extensions. Several new features have already been documented in the <a href="https://www.php.net/docs.php">official documentation</a>, others are listed on the <a href="https://wiki.php.net/doc/scratchpad/upgrade/53">wiki</a> in preparation of getting documented. Please also review the <a href="https://www.php.net/php5news">NEWS</a> file.</p>
 
         <strong>THIS IS A DEVELOPMENT PREVIEW - DO NOT USE IT IN PRODUCTION!</strong>
         <p>The purpose of this alpha release is to encourage users to not only actively
          participate in identifying bugs, but also in ensuring that all new features or
          necessary backwards compatibility breaks are noted in the documentation. Please
          report any findings to the <a href="mailto:php-qa@lists.php.net">QA mailinglist</a>
-         or the <a href="http://bugs.php.net">bug tracker</a>.</p>
+         or the <a href="https://bugs.php.net">bug tracker</a>.</p>
         <p>There have been a great number of other additions and improvements, but here is a short overview of the most important changes:</p>
         <ul>
 
-          <li><a href="http://php.net/language.namespaces">Namespaces</a> (documentation maybe out dated)</li>
-          <li><a href="http://php.net/oop5.late-static-bindings">Late static binding</a> and <a href="http://php.net/language.oop5.overloading">__callStatic</a></li>
+          <li><a href="https://www.php.net/language.namespaces">Namespaces</a> (documentation maybe out dated)</li>
+          <li><a href="https://www.php.net/oop5.late-static-bindings">Late static binding</a> and <a href="https://www.php.net/language.oop5.overloading">__callStatic</a></li>
           <li>
-            <a href="http://wiki.php.net/rfc/closures">Lambda functions and closures</a>
+            <a href="https://wiki.php.net/rfc/closures">Lambda functions and closures</a>
           </li>
 
-          <li>Addition of the <a href="http://php.net/book.intl">intl</a>, <a href="http://php.net/book.phar">phar</a> (phar is scheduled for some more work a head of alpha2), <a href="http://php.net/book.fileinfo">fileinfo </a> and <a href="http://php.net/book.sqlite3">sqlite3</a> extensions</li>
+          <li>Addition of the <a href="https://www.php.net/book.intl">intl</a>, <a href="https://www.php.net/book.phar">phar</a> (phar is scheduled for some more work a head of alpha2), <a href="https://www.php.net/book.fileinfo">fileinfo </a> and <a href="https://www.php.net/book.sqlite3">sqlite3</a> extensions</li>
           <li>Optional cyclic garbage collection</li>
 
           <li>Optional support for the <a href="http://forge.mysql.com/wiki/PHP_MYSQLND">MySQLnd</a> replacement driver for libmysql</li>
-          <li>Windows older than Windows 2000 (Windows 98, NT4, etc.) are not supported anymore (<a href="http://wiki.php.net/internals/windows/releasenotes">details</a>)</li>
-          <li>New syntax features like <a href="http://php.net/language.types.string#language.types.string.syntax.nowdoc">NOWDOC</a>, limited GOTO, ternary short cut "?:"</li>
+          <li>Windows older than Windows 2000 (Windows 98, NT4, etc.) are not supported anymore (<a href="https://wiki.php.net/internals/windows/releasenotes">details</a>)</li>
+          <li>New syntax features like <a href="https://www.php.net/language.types.string#language.types.string.syntax.nowdoc">NOWDOC</a>, limited GOTO, ternary short cut "?:"</li>
         </ul>
 
         <p>Several under the hood changes also require in depth testing with existing applications to ensure that any backwards compatibility breaks are minimized. This is especially important for users that require the undocumented Zend engine multibyte support.</p>
-        <p>The current <a href="http://wiki.php.net/todo/php53">release plan</a> states that there will be alpha/beta/RC releases in 2-3 week intervals with an expected stable release of PHP 5.3 between mid September and mid October of 2008.</p>
+        <p>The current <a href="https://wiki.php.net/todo/php53">release plan</a> states that there will be alpha/beta/RC releases in 2-3 week intervals with an expected stable release of PHP 5.3 between mid September and mid October of 2008.</p>
       </div>
 
     </div>
@@ -478,11 +478,11 @@ site_header("News Archive - 2008", ["cache" => true]);
 <div class="newsItem hentry">
 
     <div class="newsImage"></div>
-    <h1 class="summary entry-title"><a id="id2008-07-30-1" href="http://www.php.net/archive/2008.php#id2008-07-30-1" rel="bookmark" class="bookmark">TestFest 2008 wrap-up</a></h1>
+    <h1 class="summary entry-title"><a id="id2008-07-30-1" href="https://www.php.net/archive/2008.php#id2008-07-30-1" rel="bookmark" class="bookmark">TestFest 2008 wrap-up</a></h1>
     <div class="entry-content description">
         <abbr class="published newsdate" title="2008-07-30T00:23:14+01:00">[30-Jul-2008]</abbr>
         <div>
-        <p>Overall 158 tests have been submitted as part of <a href="http://qa.php.net/testfest.php">TestFest 2008</a> since the launch of the <a href="http://testfest.php.net">TestFest submission site</a> by 30 different people from people all over the world. Actually this is not counting the various submissions by existing core developers, who also took this opportunity to add some more tests. This has actually increased total <a href="http://gcov.php.net/" target="_new">test coverage</a> for ext/reflection, ext/dom and ext/exif by about 10% each. While the organization of the TestFest was a bit adhoc, there were numerous TestFest events in local user groups. So the number of people exposed to the PHP test framework is much greater. Hopefully this will lead to more people submitting bug reports with an accompanying <a href="http://qa.php.net/write-test.php">phpt</a> test file!</p>
+        <p>Overall 158 tests have been submitted as part of <a href="https://qa.php.net/testfest.php">TestFest 2008</a> since the launch of the <a href="https://testfest.php.net">TestFest submission site</a> by 30 different people from people all over the world. Actually this is not counting the various submissions by existing core developers, who also took this opportunity to add some more tests. This has actually increased total <a href="https://gcov.php.net/" target="_new">test coverage</a> for ext/reflection, ext/dom and ext/exif by about 10% each. While the organization of the TestFest was a bit adhoc, there were numerous TestFest events in local user groups. So the number of people exposed to the PHP test framework is much greater. Hopefully this will lead to more people submitting bug reports with an accompanying <a href="https://qa.php.net/write-test.php">phpt</a> test file!</p>
 
         <p>Our top submitter Felix De Vliegher has actually committed his last submissions himself since, based on the high quality of his submissions, he has been granted commit rights to the PHP repository. We have not heard back from all participants, but we encourage everybody to <a href="http://www.deshong.net/?p=76" target="_new">blog</a> about their experience and provide us with feedback on how to improve future events.</p>
         <p>Now better late than never, here are the 10 winners of the promised <a href="http://flickr.com/groups/elephpants/pool/">elePHPant</a> raffle sponsored by <a href="http://www.nexen.net">Nexen</a>. Note that Felix asked me not to include him in the raffle, since he is already herding quite a number of elePHPants at home.</p>
@@ -500,7 +500,7 @@ site_header("News Archive - 2008", ["cache" => true]);
           <li>Sebastian Schürmann</li>
           <li>Stefan Koopmanschap</li>
         </ul>
-        <p>We will provide Nexen with the email addresses of the winners, so that they can arrange to get the elePHPants shipped. Also for those people wondering, you can continue to submit tests on the <a href="http://testfest.php.net">TestFest submission site</a>. A bit thank you to all participants and TestFest organizers! Without the countless people that helped organize local events, implement the infrastructure and submissions reviewers, the TestFest would have obviously not worked out as well as it has. We will surely do similar events in the future based on the big success of TestFest 2008.</p>
+        <p>We will provide Nexen with the email addresses of the winners, so that they can arrange to get the elePHPants shipped. Also for those people wondering, you can continue to submit tests on the <a href="https://testfest.php.net">TestFest submission site</a>. A bit thank you to all participants and TestFest organizers! Without the countless people that helped organize local events, implement the infrastructure and submissions reviewers, the TestFest would have obviously not worked out as well as it has. We will surely do similar events in the future based on the big success of TestFest 2008.</p>
       </div>
 
 
@@ -510,7 +510,7 @@ site_header("News Archive - 2008", ["cache" => true]);
 <hr>
 <div class="newsItem hentry">
     <div class="newsImage"></div>
-    <h1 class="summary entry-title"><a id="id2008-07-29-1" href="http://www.php.net/archive/2008.php#id2008-07-29-1" rel="bookmark" class="bookmark">Manual restructure and license change</a></h1>
+    <h1 class="summary entry-title"><a id="id2008-07-29-1" href="https://www.php.net/archive/2008.php#id2008-07-29-1" rel="bookmark" class="bookmark">Manual restructure and license change</a></h1>
     <div class="entry-content description">
         <abbr class="published newsdate" title="2008-07-29T23:50:37+02:00">[29-Jul-2008]</abbr>
         <div>
@@ -534,7 +534,7 @@ site_header("News Archive - 2008", ["cache" => true]);
 
         <p>
         The upcomming PHP5.3 release introduces
-        <a href="http://wiki.php.net/doc/scratchpad/upgrade/53">several major features</a>
+        <a href="https://wiki.php.net/doc/scratchpad/upgrade/53">several major features</a>
         such as <a href="/namespaces">namespaces</a>, closures,
         <a href="/lsb">late static bindings</a>, <a href="/intl">internationalization functions</a>,
         <a href="/ini.sections">INI sections</a>, and <a href="/phar">Phar</a> among others.
@@ -579,7 +579,7 @@ site_header("News Archive - 2008", ["cache" => true]);
 
 <div class="newsItem hentry vevent">
     <div class="newsImage"><?php news_image("http://www.afup.org/", "elephpants.jpg", "elePHPants"); ?></div>
-    <h1 class="summary entry-title"><a id="id2008-05-13-1" href="http://www.php.net/archive/2008.php#id2008-05-13-1" rel="bookmark" class="bookmark">Call for PUG, for elePHPants, 2008 generation</a></h1>
+    <h1 class="summary entry-title"><a id="id2008-05-13-1" href="https://www.php.net/archive/2008.php#id2008-05-13-1" rel="bookmark" class="bookmark">Call for PUG, for elePHPants, 2008 generation</a></h1>
     <div class="entry-content description">
         <abbr class="published newsdate" title="2008-05-13T11:56:55-07:00">[13-May-2008]</abbr>
 
@@ -607,7 +607,7 @@ and join the <a href="http://www.flickr.com/photos/tags/elephpant/">world of blu
 <hr>
 <div class="newsItem hentry">
     <div class="newsImage"></div>
-    <h1 class="summary entry-title"><a id="id2008-04-22-1" href="http://www.php.net/archive/2008.php#id2008-04-22-1" rel="bookmark" class="bookmark">Google Summer of Code: php.net students</a></h1>
+    <h1 class="summary entry-title"><a id="id2008-04-22-1" href="https://www.php.net/archive/2008.php#id2008-04-22-1" rel="bookmark" class="bookmark">Google Summer of Code: php.net students</a></h1>
     <div class="entry-content description">
         <abbr class="published newsdate" title="2008-04-22T20:04:48+02:00">[22-Apr-2008]</abbr>
 
@@ -688,7 +688,7 @@ and join the <a href="http://www.flickr.com/photos/tags/elephpant/">world of blu
 <hr>
 <div class="newsItem hentry">
     <div class="newsImage"></div>
-    <h1 class="summary entry-title"><a id="id2008-05-01-1" href="http://www.php.net/archive/2008.php#id2008-05-01-1" rel="bookmark" class="bookmark">PHP 5.2.6 Released</a></h1>
+    <h1 class="summary entry-title"><a id="id2008-05-01-1" href="https://www.php.net/archive/2008.php#id2008-05-01-1" rel="bookmark" class="bookmark">PHP 5.2.6 Released</a></h1>
     <div class="entry-content description">
         <abbr class="published newsdate" title="2008-05-01T19:27:58-04:00">[01-May-2008]</abbr>
 
@@ -722,7 +722,7 @@ and join the <a href="http://www.flickr.com/photos/tags/elephpant/">world of blu
 <hr>
 <div class="newsItem hentry vevent">
     <div class="newsImage"><?php news_image("http://www.afup.org/", "afup2008.png", "Forum AFUP Paris 2008"); ?></div>
-    <h1 class="summary entry-title"><a id="id2008-04-13-2" href="http://www.php.net/archive/2008.php#id2008-04-13-2" rel="bookmark" class="bookmark">Call for speakers for Forum PHP Paris 2008</a></h1>
+    <h1 class="summary entry-title"><a id="id2008-04-13-2" href="https://www.php.net/archive/2008.php#id2008-04-13-2" rel="bookmark" class="bookmark">Call for speakers for Forum PHP Paris 2008</a></h1>
     <div class="entry-content description">
         <abbr class="published newsdate" title="2008-04-13T21:56:55-07:00">[13-Apr-2008]</abbr>
         <p>The AFUP, Association Française des Utilisateurs de PHP,
@@ -791,15 +791,15 @@ and join the <a href="http://www.flickr.com/photos/tags/elephpant/">world of blu
 <div class="newsItem hentry">
     <div class="newsImage"></div>
 
-    <h1 class="summary entry-title"><a id="2008-03-30-1" href="http://www.php.net/archive/2008.php#2008-03-30-1" rel="bookmark" class="bookmark">TestFest 2008</a></h1>
+    <h1 class="summary entry-title"><a id="2008-03-30-1" href="https://www.php.net/archive/2008.php#2008-03-30-1" rel="bookmark" class="bookmark">TestFest 2008</a></h1>
     <div class="entry-content description">
         <abbr class="published newsdate" title="2008-03-30T21:06:55+01:00">[30-Mar-2008]</abbr>
         <div>
         <p>The PHP-QA team would like to announce the
-        <a href="http://qa.php.net/testfest.php">TestFest</a> for the month of
+        <a href="https://qa.php.net/testfest.php">TestFest</a> for the month of
         May 2008. The TestFest is an event that aims at improving the
-        <a href="http://gcov.php.net">code coverage</a> of the
-        <a href="http://qa.php.net/running-tests.php">test suite</a> for the PHP
+        <a href="https://gcov.php.net">code coverage</a> of the
+        <a href="https://qa.php.net/running-tests.php">test suite</a> for the PHP
         language itself. As part of this event, local User Groups (UG) are
         invited to join the TestFest. These UGs can meet physically or come
         together virtually. The point however is that people network to learn
@@ -809,10 +809,10 @@ and join the <a href="http://www.flickr.com/photos/tags/elephpant/">world of blu
 
         <p>All it takes is someone to organize a UG to spearhead the event and
         to get others involved in
-        <a href="http://qa.php.net/write-test.php">writing phpt tests</a>.
+        <a href="https://qa.php.net/write-test.php">writing phpt tests</a>.
         The submissions will then be reviewed by members of php.net before
         getting included in the official test suite. Please visit the
-        <a href="http://qa.php.net/testfest.php">TestFest homepage</a> to get
+        <a href="https://qa.php.net/testfest.php">TestFest homepage</a> to get
         additional details on the TestFest on how to get involved, either as a
         UG or by setting up the necessary infrastructure.</p>
       </div>
@@ -823,13 +823,13 @@ and join the <a href="http://www.flickr.com/photos/tags/elephpant/">world of blu
 <hr>
 <div class="newsItem hentry">
     <div class="newsImage"></div>
-    <h1 class="summary entry-title"><a id="2008-03-19-1" href="http://www.php.net/archive/2008.php#2008-03-19-1" rel="bookmark" class="bookmark">Google Summer of Code 2008</a></h1>
+    <h1 class="summary entry-title"><a id="2008-03-19-1" href="https://www.php.net/archive/2008.php#2008-03-19-1" rel="bookmark" class="bookmark">Google Summer of Code 2008</a></h1>
     <div class="entry-content description">
         <abbr class="published newsdate" title="2008-03-19T13:53:55-04:00">[19-Mar-2008]</abbr>
         <div>
         <p>Once again we are glad to announce that we have been accepted to be a Google Summer of Code project. See <a href="http://code.google.com/soc/2008/php/about.html">our program</a> for this year's GSoC.</p>
 
-        <p>We would like to take this opportunity to say thanks to Google Inc. for this privilege to participate once again, and would like to invite everyone to look at our list of ideas: <a href="http://wiki.php.net/gsoc/2008">http://wiki.php.net/gsoc/2008</a>. Students are of course more than welcome to come up with their own ideas for their proposals and we will consider each and every application that we will receive.</p>
+        <p>We would like to take this opportunity to say thanks to Google Inc. for this privilege to participate once again, and would like to invite everyone to look at our list of ideas: <a href="https://wiki.php.net/gsoc/2008">https://wiki.php.net/gsoc/2008</a>. Students are of course more than welcome to come up with their own ideas for their proposals and we will consider each and every application that we will receive.</p>
         <p>So once again, thanks to everyone who is involved in this magnificent journey and we hope to see many of you great students and open source passionate join us in our most enjoyable <a href="http://code.google.com/soc/2008">Google Summer of Code</a> projects.</p>
       </div>
 
@@ -913,13 +913,13 @@ visit the website: <a href="http://conf.phpquebec.com">http://conf.phpquebec.com
 <hr>
 <div class="newsItem hentry">
     <div class="newsImage"></div>
-    <h1 class="summary entry-title"><a id="2008-01-03-1" href="http://www.php.net/archive/2008.php#2008-01-03-1" rel="bookmark" class="bookmark">PHP 4.4.8 Released</a></h1>
+    <h1 class="summary entry-title"><a id="2008-01-03-1" href="https://www.php.net/archive/2008.php#2008-01-03-1" rel="bookmark" class="bookmark">PHP 4.4.8 Released</a></h1>
     <div class="entry-content description">
         <abbr class="published newsdate" title="2008-01-03T10:13:50+01:00">[03-Jan-2008]</abbr>
 
         <div>
         <p>
-The PHP development team would like to announce the immediate <a href="http://www.php.net/downloads.php#v4">availability of
+The PHP development team would like to announce the immediate <a href="https://www.php.net/downloads.php#v4">availability of
 PHP 4.4.8</a>.  It continues to improve the security and the stability of the 4.4
 branch and all users are strongly encouraged to upgrade to it as soon as
 possible. This release wraps up all the outstanding patches for the PHP 4.4
@@ -942,7 +942,7 @@ releases to address security issues could be made until 2008-08-08.
           <li>Fixed session.save_path and error_log values to be checked against open_basedir and safe_mode (CVE-2007-3378).</li>
         </ul>
         <p>
- For a full list of changes in PHP 4.4.8, see the <a href="http://www.php.net/ChangeLog-4.php#4.4.8">ChangeLog</a>.
+ For a full list of changes in PHP 4.4.8, see the <a href="https://www.php.net/ChangeLog-4.php#4.4.8">ChangeLog</a>.
 </p>
       </div>
 

@@ -65,7 +65,7 @@ site_header(
  Connect with local and regional PHP User Groups and find upcoming meetups, conferences, and training sessions:
 </p>
 <ul>
- <li>Find a user group near you on <a href="http://php.ug/">PHP.ug</a>.</li>
+ <li>Find a user group near you on <a href="https://php.ug/">PHP.ug</a>.</li>
  <li>Browse upcoming events on the <a href="/cal.php">event calendar</a>.</li>
  <li>Want to list an event? Submit it <a href="/submit-event.php">here</a>.</li>
 </ul>

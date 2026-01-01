@@ -1,23 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <entry xmlns="http://www.w3.org/2005/Atom" xmlns:default="http://php.net/ns/news">
   <title>Longhorn PHP 2019 Schedule</title>
-  <id>http://php.net/archive/2019.php#id2019-02-14-1</id>
+  <id>https://www.php.net/archive/2019.php#id2019-02-14-1</id>
   <published>2019-02-14T15:03:51+00:00</published>
   <updated>2019-02-14T15:03:51+00:00</updated>
   <default:finalTeaserDate xmlns="http://php.net/ns/news">2019-02-14</default:finalTeaserDate>
   <category term="conferences" label="Conference announcement"/>
-  <link href="http://php.net/conferences/index.php#id2019-02-14-1" rel="alternate" type="text/html"/>
+  <link href="https://www.php.net/conferences/index.php#id2019-02-14-1" rel="alternate" type="text/html"/>
   <default:newsImage xmlns="http://php.net/ns/news" link="https://www.longhornphp.com/" title="Longhorn PHP 2019">longhornphp.png</default:newsImage>
   <link href="https://www.longhornphp.com/" rel="via" type="text/html"/>
   <content type="xhtml">
     <div xmlns="http://www.w3.org/1999/xhtml">
-     The Longhorn PHP Schedule has been announced - we have an amazing list of speakers this year, you won't want to miss it! 
+     The Longhorn PHP Schedule has been announced - we have an amazing list of speakers this year, you won't want to miss it!
 
 At Longhorn PHP you'll get to learn from and alongside a diverse group of developers from all over the region, country, and even the globe. The conference will consist of a tutorial day with in-depth workshops, followed by two main conference days with multiple tracks of traditional 1 hour sessions, and new 30 minute sessions! Register now to take the next step toward leveling up your development career!
-     
+
      Early Bird Tickets are on sale until March 15, 2019, so get yours now before the price increases!
-     
-     <b>Dates</b>: May 2nd-4th, 2019  
+
+     <b>Dates</b>: May 2nd-4th, 2019
 
 <b>Website</b>: https://www.longhornphp.com
     </div>

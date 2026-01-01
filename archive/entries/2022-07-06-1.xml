@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <entry xmlns="http://www.w3.org/2005/Atom" xmlns:default="http://php.net/ns/news">
   <title>International PHP Conference Munich 2022</title>
-  <id>http://php.net/archive/2021.php#id2022-07-06-1</id>
+  <id>https://www.php.net/archive/2021.php#id2022-07-06-1</id>
   <published>2022-07-06T14:37:00+02:00</published>
   <updated>2022-07-06T14:37:00+02:00</updated>
   <default:finalTeaserDate xmlns="http://php.net/ns/news">2022-10-24</default:finalTeaserDate>
   <category term="conferences" label="Conference announcement"/>
-  <link href="http://php.net/conferences/index.php#id2022-07-06-1" rel="alternate" type="text/html"/>
+  <link href="https://www.php.net/conferences/index.php#id2022-07-06-1" rel="alternate" type="text/html"/>
   <default:newsImage xmlns="http://php.net/ns/news" link="https://phpconference.com/munich/" title="International PHP Conference Munich 2022">IPC_MUN_Hybrid_Logo_250_2022.png</default:newsImage>
   <link href="https://phpconference.com/munich/" rel="via" type="text/html"/>
   <content type="xhtml">

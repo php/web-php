@@ -59,7 +59,7 @@ mirror_setcookie("LAST_NEWS", $_SERVER["REQUEST_TIME"], 60 * 60 * 24 * 365);
 
 $content = "<div class='home-content'>";
 foreach ((new NewsHandler())->getFrontPageNews() as $entry) {
-    $link = preg_replace('~^(http://php.net/|https://www.php.net/)~', '', $entry["id"]);
+    $link = preg_replace('~^(https://www.php.net/|https://www.php.net/)~', '', $entry["id"]);
     $id = parse_url($entry["id"], PHP_URL_FRAGMENT);
     $date = date_create($entry['updated']);
     $date_human = date_format($date, 'd M Y');

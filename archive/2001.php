@@ -43,10 +43,10 @@ site_header("News Archive - 2001", ["cache" => true]);
 
 <p>
  <span class="newsdate">[18-Oct-2001]</span>
- <a href="http://gtk.php.net/">PHP-GTK</a>
- <a href="http://gtk.php.net/docs.php">documentation</a> is starting
+ <a href="https://gtk.php.net/">PHP-GTK</a>
+ <a href="https://gtk.php.net/docs.php">documentation</a> is starting
  to be more filled out. The manual is now rebuilt every night and
- <a href="http://gtk.php.net/download-docs.php">downloadable versions</a>
+ <a href="https://gtk.php.net/download-docs.php">downloadable versions</a>
  of it in different formats are also available. If you have been working with
  PHP-GTK and would like to contribute to the documentation effort, please
  let us know.
@@ -105,7 +105,7 @@ site_header("News Archive - 2001", ["cache" => true]);
 
 <hr>
 
-<?php news_image("http://gtk.php.net/", "php-gtk-white.gif", "PHP-GTK"); ?>
+<?php news_image("https://gtk.php.net/", "php-gtk-white.gif", "PHP-GTK"); ?>
 <h1>PHP-GTK version 0.1 released</h1>
 
 <p>
@@ -122,8 +122,8 @@ site_header("News Archive - 2001", ["cache" => true]);
 <p>
  A talk on PHP-GTK was presented by Andrei Zmievski and Frank Kromann at the 2001
  O'Reilly Open Source Conference in San Diego. The slides from the talk can be
- <a href="http://conf.php.net/sd-gtk">viewed online</a>.
- For more information, visit <a href="http://gtk.php.net/">the PHP-GTK website</a>.
+ <a href="https://conf.php.net/sd-gtk">viewed online</a>.
+ For more information, visit <a href="https://gtk.php.net/">the PHP-GTK website</a>.
 </p>
 
 <hr>
@@ -143,10 +143,10 @@ site_header("News Archive - 2001", ["cache" => true]);
  Some presentations, you can see online:
 </p>
 <ul>
- <li>Rasmus Lerdorf's <a href="http://conf.php.net/or2001">PHP - Spinal Injection</a></li>
- <li>Thies Arntzen on <a href="http://conf.php.net/oci2">Making efficient use of Oracle8i thru Apache and PHP 4</a></li>
- <li>Andrei Zmievski and Frank M. Kromann with <a href="http://conf.php.net/sd-gtk">PHP-GTK</a></li>
- <li>Jon Parise on <a href="http://conf.php.net/pear2">The PHP Extension and Application Repository</a></li>
+ <li>Rasmus Lerdorf's <a href="https://conf.php.net/or2001">PHP - Spinal Injection</a></li>
+ <li>Thies Arntzen on <a href="https://conf.php.net/oci2">Making efficient use of Oracle8i thru Apache and PHP 4</a></li>
+ <li>Andrei Zmievski and Frank M. Kromann with <a href="https://conf.php.net/sd-gtk">PHP-GTK</a></li>
+ <li>Jon Parise on <a href="https://conf.php.net/pear2">The PHP Extension and Application Repository</a></li>
 </ul>
 
 <p>
@@ -161,9 +161,9 @@ site_header("News Archive - 2001", ["cache" => true]);
  <span class="newsdate">[29-Jul-2001]</span>
  You don't need to go online anymore, to access the PHP FAQ,
  because we integrated it for you in the PHP Manual, so you can
- <a href="http://www.php.net/docs.php">download it</a> in
+ <a href="https://www.php.net/docs.php">download it</a> in
  various formats with the Manual packages, and
- <a href="http://www.php.net/manual/en/faq.php">annotate
+ <a href="https://www.php.net/manual/en/faq.php">annotate
  the pages online</a>, as you wish.
 </p>
 
@@ -260,11 +260,11 @@ site_header("News Archive - 2001", ["cache" => true]);
  presentations online. Check out:
 </p>
 <ul>
- <li>Thies Arntzen on <a href="http://conf.php.net/oci">Making efficient use of Oracle8i thru Apache and PHP 4</a></li>
- <li>Stig Bakken on <a href="http://conf.php.net/pear">The PHP Extension and Application Repository</a></li>
+ <li>Thies Arntzen on <a href="https://conf.php.net/oci">Making efficient use of Oracle8i thru Apache and PHP 4</a></li>
+ <li>Stig Bakken on <a href="https://conf.php.net/pear">The PHP Extension and Application Repository</a></li>
  <li>Daniel Beckham and Brian Moon on <a href="http://dealnews.com/apachecon/">Caching Dynamic Web Content to Increase Dependability and Performance</a></li>
- <li>Rasmus Lerdorf's <a href="http://conf.php.net/ac2">Introduction to PHP</a></li>
- <li>Zeev Suraski on <a href="http://conf.php.net/pres/other/internals/">PHP 4 Internals</a></li>
+ <li>Rasmus Lerdorf's <a href="https://conf.php.net/ac2">Introduction to PHP</a></li>
+ <li>Zeev Suraski on <a href="https://conf.php.net/pres/other/internals/">PHP 4 Internals</a></li>
  <li>Nathan Wallace with <a href="http://www.e-gineer.com/articles/php-hackers-paradise-revisited.phtml">PHP: Hackers Paradise Revisited</a></li>
 </ul>
 
@@ -294,14 +294,14 @@ site_header("News Archive - 2001", ["cache" => true]);
 
 <hr>
 
-<?php news_image("http://gtk.php.net/", "php-gtk-white.gif", "PHP-GTK"); ?>
+<?php news_image("https://gtk.php.net/", "php-gtk-white.gif", "PHP-GTK"); ?>
 <h1>Announcing PHP-GTK</h1>
 <p>
  <span class="newsdate">[01-Mar-2001]</span>
  The first release of PHP-GTK is now available. PHP-GTK is a PHP extension that
  provides an object-oriented interface to the GTK+ toolkit and enables you to write
  client-side cross-platform GUI applications. For more information, visit
- <a href="http://gtk.php.net/">http://gtk.php.net/</a>.
+ <a href="https://gtk.php.net/">https://gtk.php.net/</a>.
 </p>
 
 <hr>

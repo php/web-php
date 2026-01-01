@@ -17,8 +17,8 @@ $SIDEBAR_DATA = '
 <h3>Other PHP related mailing lists</h3>
 
 <p>
- Find the <a href="http://pear.php.net/support/lists.php">PEAR
- lists</a> and the <a href="http://pecl.php.net/support.php">PECL
+ Find the <a href="https://pear.php.net/support/lists.php">PEAR
+ lists</a> and the <a href="https://pecl.php.net/support.php">PECL
  lists</a> on their own pages.
 </p>
 
@@ -118,7 +118,7 @@ if (isset($_POST['action'])) {
 </p>
 <p>
  There is an experimental web interface for the news server at
- <a href="http://news.php.net/">http://news.php.net/</a>, and
+ <a href="https://news.php.net/">https://news.php.net/</a>, and
  there are also other archives provided by
  <a href="http://marc.info/">Marc</a>.
 </p>
@@ -300,7 +300,7 @@ function output_lists_table($mailing_lists): void
                 $larchive = ($listinfo[4] === true ? $listinfo[0] : $listinfo[4]);
             } else { $larchive = false; }
             echo '<td>' . ($larchive ? "<a href=\"http://marc.info/?l={$larchive}\">yes</a>" : 'n/a') . '</td>';
-            echo '<td>' . ($listinfo[6] ? "<a href=\"news://news.php.net/{$listinfo[6]}\">yes</a> <a href=\"http://news.php.net/group.php?group={$listinfo[6]}\">http</a>" : 'n/a') . '</td>';
+            echo '<td>' . ($listinfo[6] ? "<a href=\"news://news.php.net/{$listinfo[6]}\">yes</a> <a href=\"https://news.php.net/group.php?group={$listinfo[6]}\">http</a>" : 'n/a') . '</td>';
             echo '<td><input name="maillist" type="radio" value="' . $listinfo[0] . '"></td>';
             echo '<td>' . ($listinfo[5] ? '<input name="maillist" type="radio" value="' . $listinfo[0] . '-digest">' : 'n/a') . '</td>';
             echo '<td><code><small>' . $listinfo[0] . '</small></code></td>';
@@ -360,7 +360,7 @@ function output_lists_table($mailing_lists): void
 <h2>Mailing list options</h2>
 
 <p>
- All the mailing lists hosted at <a href="http://lists.php.net/">lists.php.net</a>
+ All the mailing lists hosted at <a href="https://lists.php.net/">lists.php.net</a>
  are managed using the <a href="http://mlmmj.org/">mlmmj</a> mailing list
  software. There are a variety of commands you may use to modify your
  subscription. For a full overview, send a message to

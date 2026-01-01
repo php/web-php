@@ -930,7 +930,7 @@ There is a <a href="release_4_3_4.php">separate announcement</a> available for t
 </li>
 <li>Fixed "mysql.connect_timeout" php.ini option to be settable with ini_set(). (Rasmus)</li>
 <li>Fixed ext/yaz to not log if "yaz.log_file" php.ini option is not set. (Adam)</li>
-<li>Fixed a bug in bundled libmysql (mysql bug <a href="http://bugs.mysql.com/564">564</a>). (Georg)</li>
+<li>Fixed a bug in bundled libmysql (mysql bug <a href="https://bugs.mysql.com/564">564</a>). (Georg)</li>
 <li>Fixed ext/exif to honor "magic_quotes_runtime" php.ini option. (Marcus)</li>
 <li>Fixed FastCGI IIS document root problem. (Shane)</li>
 <li>Fixed corruption of multibyte character including 0x5c as second byte in multipart/form-data. (Rui)</li>
@@ -1260,7 +1260,7 @@ More information on this release on <a href="/releases.php#4.3.1">our Releases p
   <li>sapi/fhttpd</li>
   </ul>
 </li>
-<li>Moved extensions to PECL (http://pear.php.net/): (James, Derick)
+<li>Moved extensions to PECL (https://pear.php.net/): (James, Derick)
   <ul>
   <li>ext/vpopmail</li>
   <li>ext/cybermut</li>

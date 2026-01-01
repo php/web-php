@@ -1,28 +1,28 @@
 <?php $NEWS_ENTRIES = array (
-  0 => 
+  0 =>
   array (
     'title' => 'PHP 7.4.0RC1 Released!',
     'id' => 'https://www.php.net/archive/2019.php#2019-09-05-1',
     'published' => '2019-09-05T08:39:13+00:00',
     'updated' => '2019-09-05T08:39:13+00:00',
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
         'href' => 'https://www.php.net/index.php#id2019-09-05-1',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
         'href' => 'https://www.php.net/archive/2019.php#2019-09-05-1',
         'rel' => 'via',
         'type' => 'text/html',
       ),
     ),
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'frontpage',
         'label' => 'PHP.net frontpage news',
@@ -35,21 +35,21 @@
      which is specified in the <a href="https://wiki.php.net/todo/php74">PHP
      Wiki</a>.
      </p>
-     
+
      <p>
      <b>Please DO NOT use this version in production, it is an early test
      version.</b>
      </p>
-     
+
      <p>
      For source downloads of PHP 7.4.0RC1 please visit the
      <a href="https://downloads.php.net/~derick">download page</a>.
      </p>
-     
+
      <p>
      Please carefully test this version and report any issues found in the <a href="https://bugs.php.net">bug reporting system</a>.
      </p>
-     
+
      <p>
      For more information on the new features and other changes, you can read the
      <a href="https://github.com/php/php-src/blob/php-7.4.0RC1/NEWS">NEWS</a>
@@ -58,17 +58,17 @@
      file for a complete list of upgrading notes. These files can also be found in
      the release archive.
      </p>
-     
+
      <p>
      The next release would be <b>7.4.0RC2</b>, planned for September 19th.
      </p>
-     
+
      <p>
      The signatures for the release can be found in
      <a href="https://gist.github.com/derickr/eb4025dd8f09f0e4af0bdf462ada14c2">the
      manifest</a> or on <a href="https://qa.php.net/">the QA site</a>.
      </p>
-     
+
      <p>Thank you for helping us make PHP better.</p>
     </div>
   ',
@@ -82,35 +82,35 @@
      version.</b>
      </p><p class=\'fullArticleLink\'><a href=\'https://www.php.net/archive/2019.php#2019-09-05-1\' class>&hellip; read full article</a></p></div>',
   ),
-  1 => 
+  1 =>
   array (
     'title' => 'PHP 7.1.32 Released',
     'id' => 'https://www.php.net/archive/2019.php#2019-08-30-1',
     'published' => '2019-08-30T06:42:02+00:00',
     'updated' => '2019-08-30T06:42:02+00:00',
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
         'href' => 'https://www.php.net/index.php#id2019-08-30-1',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
         'href' => 'https://www.php.net/archive/2019.php#2019-08-30-1',
         'rel' => 'via',
         'type' => 'text/html',
       ),
     ),
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'frontpage',
         'label' => 'PHP.net frontpage news',
       ),
-      1 => 
+      1 =>
       array (
         'term' => 'releases',
         'label' => 'New PHP release',
@@ -119,47 +119,47 @@
     'content' => '<div>
        <p>The PHP development team announces the immediate availability of PHP
        7.1.32. This is a security release.</p>
-     
+
        <p>All PHP 7.1 users are encouraged to upgrade to this version.</p>
-     
-       <p>For source downloads of PHP 7.1.32 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-       Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-       The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.1.32">ChangeLog</a>.
+
+       <p>For source downloads of PHP 7.1.32 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
+       Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
+       The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-7.php#7.1.32">ChangeLog</a>.
        </p>
     </div>
   ',
     'intro' => '<div><p>The PHP development team announces the immediate availability of PHP
        7.1.32. This is a security release.</p><p>All PHP 7.1 users are encouraged to upgrade to this version.</p><p class=\'fullArticleLink\'><a href=\'https://www.php.net/archive/2019.php#2019-08-30-1\' class>&hellip; read full article</a></p></div>',
   ),
-  2 => 
+  2 =>
   array (
     'title' => 'PHP 7.2.22 Released',
     'id' => 'https://www.php.net/archive/2019.php#2019-08-29-2',
     'published' => '2019-08-29T20:27:22+00:00',
     'updated' => '2019-08-29T20:27:22+00:00',
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
         'href' => 'https://www.php.net/index.php#id2019-08-29-2',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
         'href' => 'https://www.php.net/archive/2019.php#2019-08-29-2',
         'rel' => 'via',
         'type' => 'text/html',
       ),
     ),
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'frontpage',
         'label' => 'PHP.net frontpage news',
       ),
-      1 => 
+      1 =>
       array (
         'term' => 'releases',
         'label' => 'New PHP release',
@@ -168,47 +168,47 @@
     'content' => '<div>
        <p>The PHP development team announces the immediate availability of PHP
        7.2.22. This is a security release which also contains several bug fixes.</p>
-     
+
        <p>All PHP 7.2 users are encouraged to upgrade to this version.</p>
-     
-       <p>For source downloads of PHP 7.2.22 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-       Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-       The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.2.22">ChangeLog</a>.
+
+       <p>For source downloads of PHP 7.2.22 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
+       Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
+       The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-7.php#7.2.22">ChangeLog</a>.
        </p>
     </div>
   ',
     'intro' => '<div><p>The PHP development team announces the immediate availability of PHP
        7.2.22. This is a security release which also contains several bug fixes.</p><p>All PHP 7.2 users are encouraged to upgrade to this version.</p><p class=\'fullArticleLink\'><a href=\'https://www.php.net/archive/2019.php#2019-08-29-2\' class>&hellip; read full article</a></p></div>',
   ),
-  3 => 
+  3 =>
   array (
     'title' => 'PHP 7.3.9 Release Announcement',
     'id' => 'https://www.php.net/archive/2019.php#2019-08-29-1',
     'published' => '2019-08-29T11:55:58+00:00',
     'updated' => '2019-08-29T11:55:58+00:00',
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
         'href' => 'https://www.php.net/index.php#id2019-08-29-1',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
         'href' => 'https://www.php.net/archive/2019.php#2019-08-29-1',
         'rel' => 'via',
         'type' => 'text/html',
       ),
     ),
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'frontpage',
         'label' => 'PHP.net frontpage news',
       ),
-      1 => 
+      1 =>
       array (
         'term' => 'releases',
         'label' => 'New PHP release',
@@ -217,42 +217,42 @@
     'content' => '<div>
       <p>The PHP development team announces the immediate availability of PHP
       7.3.9. This is a security release which also contains several bug fixes.</p>
-    
+
       <p>All PHP 7.3 users are encouraged to upgrade to this version.</p>
-    
-      <p>For source downloads of PHP 7.3.9 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-      Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.3.9">ChangeLog</a>.
+
+      <p>For source downloads of PHP 7.3.9 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
+      Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
+      The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-7.php#7.3.9">ChangeLog</a>.
       </p>
     </div>
   ',
     'intro' => '<div><p>The PHP development team announces the immediate availability of PHP
       7.3.9. This is a security release which also contains several bug fixes.</p><p>All PHP 7.3 users are encouraged to upgrade to this version.</p><p class=\'fullArticleLink\'><a href=\'https://www.php.net/archive/2019.php#2019-08-29-1\' class>&hellip; read full article</a></p></div>',
   ),
-  4 => 
+  4 =>
   array (
     'title' => 'PHP 7.4.0beta4 released!',
     'id' => 'https://www.php.net/archive/2019.php#2019-08-22-1',
     'published' => '2019-08-22T14:51:16+00:00',
     'updated' => '2019-08-22T14:51:16+00:00',
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
         'href' => 'https://www.php.net/index.php#id2019-08-22-1',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
         'href' => 'https://www.php.net/archive/2019.php#2019-08-22-1',
         'rel' => 'via',
         'type' => 'text/html',
       ),
     ),
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'frontpage',
         'label' => 'PHP.net frontpage news',
@@ -265,21 +265,21 @@
      which is specified in the <a href="https://wiki.php.net/todo/php74">PHP
      Wiki</a>.
      </p>
-     
+
      <p>
      For source downloads of PHP 7.4.0beta4 please visit the
      <a href="https://downloads.php.net/~derick">download page</a>.
      </p>
-     
+
      <p>
      Please carefully test this version and report any issues found in the <a href="https://bugs.php.net">bug reporting system</a>.
      </p>
-     
+
      <p>
      <b>Please DO NOT use this version in production, it is an early test
      version.</b>
      </p>
-     
+
      <p>
      For more information on the new features and other changes, you can read the
      <a href="https://github.com/php/php-src/blob/php-7.4.0beta4/NEWS">NEWS</a>
@@ -288,17 +288,17 @@
      file for a complete list of upgrading notes. These files can also be found in
      the release archive.
      </p>
-     
+
      <p>
      The next release would be <b>RC 1</b>, planned for September 5th.
      </p>
-     
+
      <p>
      The signatures for the release can be found in
      <a href="https://gist.github.com/derickr/3c8d6ca0c4ec904fd5a3c47dbf9bf637">the
      manifest</a> or on <a href="https://qa.php.net/">the QA site</a>.
      </p>
-     
+
      <p>Thank you for helping us make PHP better.</p>
     </div>
   ',
@@ -312,37 +312,37 @@
      <a href="https://downloads.php.net/~derick">download page</a>.
      </p><p class=\'fullArticleLink\'><a href=\'https://www.php.net/archive/2019.php#2019-08-22-1\' class>&hellip; read full article</a></p></div>',
   ),
-  5 => 
+  5 =>
   array (
     'title' => 'SunshinePHP 2020 CFP Started',
-    'id' => 'http://php.net/archive/2019.php#id2019-08-17-1',
+    'id' => 'https://www.php.net/archive/2019.php#id2019-08-17-1',
     'published' => '2019-08-17T00:00:01+00:00',
     'updated' => '2019-08-17T12:23:00+00:00',
     'finalTeaserDate' => '2019-09-15',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'cfp',
         'label' => 'Call for Papers',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/conferences/index.php#id2019-08-17-1',
+        'href' => 'https://www.php.net/conferences/index.php#id2019-08-17-1',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
         'href' => 'https://sunshinephp.com',
         'rel' => 'via',
         'type' => 'text/html',
       ),
     ),
-    'newsImage' => 
+    'newsImage' =>
     array (
       'xmlns' => 'http://php.net/ns/news',
       'link' => 'https://sunshinephp.com',
@@ -359,21 +359,21 @@
 	',
     'intro' => '<div><p>We are happy to announce the CFP for SunshinePHP 2020 has launched at <a href="https://cfp.sunshinephp.com" title="SunshinePHP CFP">https://cfp.sunshinephp.com</a> where we will accept talk submissions until September 15th, 2019.</p><p>SunshinePHP hit it\'s 8th year and will happen from February 6th to 8th, 2020 in sunny Miami, Florida. As one of the largest community conferences in the U.S. there is no doubt the schedule will be amazing this year. We will have a full tutorial day featuring 3-hour sessions followed by 2 days of 1-hour talks, plus inspirational keynotes and general session talks.</p><p class=\'fullArticleLink\'><a href=\'https://sunshinephp.com\' class>&hellip; read full article</a></p></div>',
   ),
-  6 => 
+  6 =>
   array (
     'title' => 'PHP Conference Brasil 2019',
     'id' => 'https://www.php.net/archive/2019.php#2019-08-12-1',
     'published' => '2019-08-12T05:21:22-03:00',
     'updated' => '2019-08-12T05:21:22-03:00',
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
         'href' => 'https://www.php.net/conferences/index.php#id2019-08-12-1',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
         'href' => 'https://phpconference.com.br/',
         'rel' => 'via',
@@ -381,15 +381,15 @@
       ),
     ),
     'finalTeaserDate' => '2019-04-15',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'conferences',
         'label' => 'Conference announcement',
       ),
     ),
-    'newsImage' => 
+    'newsImage' =>
     array (
       'xmlns' => 'http://php.net/ns/news',
       'link' => 'https://phpconference.com.br/',
@@ -398,26 +398,26 @@
     ),
     'content' => '<div>
      PHP Conference Brasil, the Main PHP Event in Latin America, will have it\'s 14th Edition on December 5-7th in Porto Alegre, RS, Brazil. Keynotes will feature Adam Culp, Enrico Zimuel, Diana Arnos and Flavio Lisboa. On Sunday the 8th the event will hold a recreational day at Vinicola Stopassola, a Vineyard located at Serra Gaucha. Participants who opt-in will be treated to a genuine Gaucho Barbecue and a tour through the vineyard.
-     
+
     </div>
   ',
     'intro' => '<div></div>',
   ),
-  7 => 
+  7 =>
   array (
     'title' => 'PHP Conference Japan 2019 CFP Started',
     'id' => 'https://www.php.net/archive/2019.php#2019-08-08-3',
     'published' => '2019-08-08T11:33:52+00:00',
     'updated' => '2019-08-08T11:33:52+00:00',
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
         'href' => 'https://www.php.net/conferences/index.php#id2019-08-08-3',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
         'href' => 'http://phpcon.php.gr.jp/2019/',
         'rel' => 'via',
@@ -425,15 +425,15 @@
       ),
     ),
     'finalTeaserDate' => '2019-09-02',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'cfp',
         'label' => 'Call for Papers',
       ),
     ),
-    'newsImage' => 
+    'newsImage' =>
     array (
       'xmlns' => 'http://php.net/ns/news',
       'link' => 'http://phpcon.php.gr.jp/2019/',
@@ -452,21 +452,21 @@ Sorry for the inconvenience.</p>
   ',
     'intro' => '<div><p><a href="http://phpcon.php.gr.jp/2019/" target="_blank">PHP Conference Japan 2019</a></p><p>Conference Date : 2019/12/1 in Tokyo/JAPAN</p><p class=\'fullArticleLink\'><a href=\'http://phpcon.php.gr.jp/2019/\' class>&hellip; read full article</a></p></div>',
   ),
-  8 => 
+  8 =>
   array (
     'title' => 'PHP Conference Japan 2019',
     'id' => 'https://www.php.net/archive/2019.php#2019-08-08-2',
     'published' => '2019-08-08T10:29:31+00:00',
     'updated' => '2019-08-08T10:29:31+00:00',
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
         'href' => 'https://www.php.net/conferences/index.php#id2019-08-08-2',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
         'href' => 'http://phpcon.php.gr.jp/2019/',
         'rel' => 'via',
@@ -474,15 +474,15 @@ Sorry for the inconvenience.</p>
       ),
     ),
     'finalTeaserDate' => '2019-12-01',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'conferences',
         'label' => 'Conference announcement',
       ),
     ),
-    'newsImage' => 
+    'newsImage' =>
     array (
       'xmlns' => 'http://php.net/ns/news',
       'link' => 'http://phpcon.php.gr.jp/2019/',
@@ -498,30 +498,30 @@ Sorry for the inconvenience.</p>
   ',
     'intro' => '<div><p>About <a href="http://phpcon.php.gr.jp/2019/" target="_blank">PHP Conference Japan 2019</a></p><p>PHP Conference Japan is the biggest PHP festival in Japan held at Tokyo, with more than 1,500 attendees for 2018. This one day festival covers all topics of PHP from introductory seminar for early beginners to dedicated topics in details for wide variety of topics like frameworks, DevOps, security, or PHP internals.</p><p class=\'fullArticleLink\'><a href=\'http://phpcon.php.gr.jp/2019/\' class>&hellip; read full article</a></p></div>',
   ),
-  9 => 
+  9 =>
   array (
     'title' => 'PHP 7.4.0beta2 released!',
     'id' => 'https://www.php.net/archive/2019.php#2019-08-08-1',
     'published' => '2019-08-08T08:15:01+00:00',
     'updated' => '2019-08-08T08:15:01+00:00',
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
         'href' => 'https://www.php.net/index.php#id2019-08-08-1',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
         'href' => 'https://www.php.net/archive/2019.php#2019-08-08-1',
         'rel' => 'via',
         'type' => 'text/html',
       ),
     ),
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'frontpage',
         'label' => 'PHP.net frontpage news',
@@ -534,21 +534,21 @@ Sorry for the inconvenience.</p>
      which is specified in the <a href="https://wiki.php.net/todo/php74">PHP
      Wiki</a>.
      </p>
-     
+
      <p>
      For source downloads of PHP 7.4.0beta2 please visit the
      <a href="https://downloads.php.net/~derick">download page</a>.
      </p>
-     
+
      <p>
      Please carefully test this version and report any issues found in the <a href="https://bugs.php.net">bug reporting system</a>.
      </p>
-     
+
      <p>
      <b>Please DO NOT use this version in production, it is an early test
      version.</b>
      </p>
-     
+
      <p>
      For more information on the new features and other changes, you can read the
      <a href="https://github.com/php/php-src/blob/php-7.4.0beta2/NEWS">NEWS</a>
@@ -557,17 +557,17 @@ Sorry for the inconvenience.</p>
      file for a complete list of upgrading notes. These files can also be found in
      the release archive.
      </p>
-     
+
      <p>
      The next release would be <b>Beta 3</b>, planned for August 22nd.
      </p>
-     
+
      <p>
      The signatures for the release can be found in
      <a href="https://gist.github.com/derickr/4cec1996b1110f6127b51b90d9426bf9">the
      manifest</a> or on <a href="https://qa.php.net/">the QA site</a>.
      </p>
-     
+
      <p>Thank you for helping us make PHP better.</p>
     </div>
   ',
@@ -581,35 +581,35 @@ Sorry for the inconvenience.</p>
      <a href="https://downloads.php.net/~derick">download page</a>.
      </p><p class=\'fullArticleLink\'><a href=\'https://www.php.net/archive/2019.php#2019-08-08-1\' class>&hellip; read full article</a></p></div>',
   ),
-  10 => 
+  10 =>
   array (
     'title' => 'PHP 7.1.31 Released',
     'id' => 'https://www.php.net/archive/2019.php#2019-08-01-3',
     'published' => '2019-08-01T19:19:53+00:00',
     'updated' => '2019-08-01T19:19:53+00:00',
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
         'href' => 'https://www.php.net/index.php#id2019-08-01-3',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
         'href' => 'https://www.php.net/archive/2019.php#2019-08-01-3',
         'rel' => 'via',
         'type' => 'text/html',
       ),
     ),
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'frontpage',
         'label' => 'PHP.net frontpage news',
       ),
-      1 => 
+      1 =>
       array (
         'term' => 'releases',
         'label' => 'New PHP release',
@@ -618,47 +618,47 @@ Sorry for the inconvenience.</p>
     'content' => '<div>
        <p>The PHP development team announces the immediate availability of PHP
        7.1.31. This is a security release.</p>
-     
+
        <p>All PHP 7.1 users are encouraged to upgrade to this version.</p>
-     
-       <p>For source downloads of PHP 7.1.31 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-       Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-       The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.1.31">ChangeLog</a>.
+
+       <p>For source downloads of PHP 7.1.31 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
+       Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
+       The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-7.php#7.1.31">ChangeLog</a>.
        </p>
     </div>
   ',
     'intro' => '<div><p>The PHP development team announces the immediate availability of PHP
        7.1.31. This is a security release.</p><p>All PHP 7.1 users are encouraged to upgrade to this version.</p><p class=\'fullArticleLink\'><a href=\'https://www.php.net/archive/2019.php#2019-08-01-3\' class>&hellip; read full article</a></p></div>',
   ),
-  11 => 
+  11 =>
   array (
     'title' => 'PHP 7.2.21 Released',
     'id' => 'https://www.php.net/archive/2019.php#2019-08-01-2',
     'published' => '2019-08-01T08:43:45+00:00',
     'updated' => '2019-08-01T08:43:45+00:00',
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
         'href' => 'https://www.php.net/index.php#id2019-08-01-2',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
         'href' => 'https://www.php.net/archive/2019.php#2019-08-01-2',
         'rel' => 'via',
         'type' => 'text/html',
       ),
     ),
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'frontpage',
         'label' => 'PHP.net frontpage news',
       ),
-      1 => 
+      1 =>
       array (
         'term' => 'releases',
         'label' => 'New PHP release',
@@ -670,44 +670,44 @@ Sorry for the inconvenience.</p>
 
      <p>All PHP 7.2 users are encouraged to upgrade to this version.</p>
 
-     <p>For source downloads of PHP 7.2.21 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-     The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.2.21">ChangeLog</a>.
+     <p>For source downloads of PHP 7.2.21 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
+     Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
+     The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-7.php#7.2.21">ChangeLog</a>.
      </p>
     </div>
   ',
     'intro' => '<div><p>The PHP development team announces the immediate availability of PHP
      7.2.21. This is a security release which also contains several minor bug fixes.</p><p>All PHP 7.2 users are encouraged to upgrade to this version.</p><p class=\'fullArticleLink\'><a href=\'https://www.php.net/archive/2019.php#2019-08-01-2\' class>&hellip; read full article</a></p></div>',
   ),
-  12 => 
+  12 =>
   array (
     'title' => 'PHP 7.3.8 Release Announcement',
     'id' => 'https://www.php.net/archive/2019.php#2019-08-01-1',
     'published' => '2019-08-01T08:19:59+00:00',
     'updated' => '2019-08-01T08:19:59+00:00',
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
         'href' => 'https://www.php.net/index.php#id2019-08-01-1',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
         'href' => 'https://www.php.net/archive/2019.php#2019-08-01-1',
         'rel' => 'via',
         'type' => 'text/html',
       ),
     ),
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'frontpage',
         'label' => 'PHP.net frontpage news',
       ),
-      1 => 
+      1 =>
       array (
         'term' => 'releases',
         'label' => 'New PHP release',
@@ -716,33 +716,33 @@ Sorry for the inconvenience.</p>
     'content' => '<div>
       <p>The PHP development team announces the immediate availability of PHP
       7.3.8. This is a security release which also contains several bug fixes.</p>
-    
+
       <p>All PHP 7.3 users are encouraged to upgrade to this version.</p>
-    
-      <p>For source downloads of PHP 7.3.8 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-      Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.3.8">ChangeLog</a>.
+
+      <p>For source downloads of PHP 7.3.8 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
+      Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
+      The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-7.php#7.3.8">ChangeLog</a>.
       </p>
     </div>
   ',
     'intro' => '<div><p>The PHP development team announces the immediate availability of PHP
       7.3.8. This is a security release which also contains several bug fixes.</p><p>All PHP 7.3 users are encouraged to upgrade to this version.</p><p class=\'fullArticleLink\'><a href=\'https://www.php.net/archive/2019.php#2019-08-01-1\' class>&hellip; read full article</a></p></div>',
   ),
-  13 => 
+  13 =>
   array (
     'title' => 'PHP fwdays\'20',
     'id' => 'https://www.php.net/archive/2019.php#2019-07-31-2',
     'published' => '2019-07-31T16:50:41+03:00',
     'updated' => '2019-07-31T16:29:41+03:00',
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
         'href' => 'https://www.php.net/conferences/index.php#id2019-07-31-2',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
         'href' => 'https://fwdays.com/en/event/php-fwdays-2020',
         'rel' => 'via',
@@ -750,15 +750,15 @@ Sorry for the inconvenience.</p>
       ),
     ),
     'finalTeaserDate' => '2019-12-24',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'conferences',
         'label' => 'Conference announcement',
       ),
     ),
-    'newsImage' => 
+    'newsImage' =>
     array (
       'xmlns' => 'http://php.net/ns/news',
       'link' => 'https://fwdays.com/en/event/php-fwdays-2020',
@@ -773,21 +773,21 @@ Sorry for the inconvenience.</p>
   ',
     'intro' => '<div><p>We are thrilled to announce the 8th edition of <a href="https://fwdays.com/en/event/php-fwdays-2020">PHP fwdays conference</a> â the biggest PHP conf of Eastern Europe, which will be held on <strong>May 30, 2020 in Kyiv, Ukraine</strong>.</p><p>Three parallel tracks and community discussions are all dedicated to PHP development, tools and issues to be solved. Join more than 900 developers from all over the world to learn, discuss and solve.</p><p class=\'fullArticleLink\'><a href=\'https://fwdays.com/en/event/php-fwdays-2020\' class>&hellip; read full article</a></p></div>',
   ),
-  14 => 
+  14 =>
   array (
     'title' => 'php Central Europe 2019',
     'id' => 'https://www.php.net/archive/2019.php#2019-07-31-1',
     'published' => '2019-07-31T08:29:41+02:00',
     'updated' => '2019-07-31T08:29:41+02:00',
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
         'href' => 'https://www.php.net/conferences/index.php#id2019-07-31-1',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
         'href' => 'https://2019.phpce.eu/',
         'rel' => 'via',
@@ -795,15 +795,15 @@ Sorry for the inconvenience.</p>
       ),
     ),
     'finalTeaserDate' => '2019-10-04',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'conferences',
         'label' => 'Conference announcement',
       ),
     ),
-    'newsImage' => 
+    'newsImage' =>
     array (
       'xmlns' => 'http://php.net/ns/news',
       'link' => 'https://2019.phpce.eu/',
@@ -818,30 +818,30 @@ Sorry for the inconvenience.</p>
   ',
     'intro' => '<div><p>Thanks to the support of PHP Usergroup Dresden, our conference will be held in the Federal Republic of Germany. phpCE is an event addressed to a vast group of developers and PHP enthusiasts from Central Europe. We hope that you enjoy our diverse <a href="https://2019.phpce.eu/en/#agenda">line-up</a> and it will turn out to be so interesting that you too will want to join us. In addition, for the first time we will meet at... the cinema!</p><p><strong>Location and dates:</strong><br/><strong>October 4, 2019</strong> - the Workshop Day in the <strong>Pullman Dresden Newa</strong> hotel,<br/><strong>October 5-6, 2019</strong> - Conference Days in the <strong>UFA Kristallpalast</strong> multiplex.</p><p class=\'fullArticleLink\'><a href=\'https://2019.phpce.eu/\' class>&hellip; read full article</a></p></div>',
   ),
-  15 => 
+  15 =>
   array (
     'title' => 'PHP 7.4.0beta1 released!',
     'id' => 'https://www.php.net/archive/2019.php#2019-07-25-1',
     'published' => '2019-07-25T09:39:51+00:00',
     'updated' => '2019-07-25T09:39:51+00:00',
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
         'href' => 'https://www.php.net/index.php#id2019-07-25-1',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
         'href' => 'https://www.php.net/archive/2019.php#2019-07-25-1',
         'rel' => 'via',
         'type' => 'text/html',
       ),
     ),
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'frontpage',
         'label' => 'PHP.net frontpage news',
@@ -854,21 +854,21 @@ Sorry for the inconvenience.</p>
      which is specified in the <a href="https://wiki.php.net/todo/php74">PHP
      Wiki</a>.
      </p>
-     
+
      <p>
      For source downloads of PHP 7.4.0beta1 please visit the
      <a href="https://downloads.php.net/~derick">download page</a>.
      </p>
-     
+
      <p>
-     Please carefully test this version and report any issues found in the <a href="http://bugs.php.net">bug reporting system</a>.
+     Please carefully test this version and report any issues found in the <a href="https://bugs.php.net">bug reporting system</a>.
      </p>
-     
+
      <p>
      <b>Please DO NOT use this version in production, it is an early test
      version.</b>
      </p>
-     
+
      <p>
      For more information on the new features and other changes, you can read the
      <a href="https://github.com/php/php-src/blob/php-7.4.0beta1/NEWS">NEWS</a>
@@ -877,17 +877,17 @@ Sorry for the inconvenience.</p>
      file for a complete list of upgrading notes. These files can also be found in
      the release archive.
      </p>
-     
+
      <p>
      The next release would be <b>Beta 2</b>, planned for August 8th.
      </p>
-     
+
      <p>
      The signatures for the release can be found in
      <a href="https://gist.github.com/derickr/6062a94c900289397130deb562ed17e1">the
      manifest</a> or on <a href="https://qa.php.net/">the QA site</a>.
      </p>
-     
+
      <p>Thank you for helping us make PHP better.</p>
     </div>
   ',
@@ -901,21 +901,21 @@ Sorry for the inconvenience.</p>
      <a href="https://downloads.php.net/~derick">download page</a>.
      </p><p class=\'fullArticleLink\'><a href=\'https://www.php.net/archive/2019.php#2019-07-25-1\' class>&hellip; read full article</a></p></div>',
   ),
-  16 => 
+  16 =>
   array (
     'title' => 'php[world] 2019 — 25 years of PHP',
     'id' => 'https://www.php.net/archive/2019.php#2019-07-17-1',
     'published' => '2019-07-17T16:31:10+00:00',
     'updated' => '2019-07-17T16:31:10+00:00',
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
         'href' => 'https://www.php.net/conferences/index.php#id2019-07-17-1',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
         'href' => 'https://world.phparch.com/?utm_campaign=phpnet',
         'rel' => 'via',
@@ -923,15 +923,15 @@ Sorry for the inconvenience.</p>
       ),
     ),
     'finalTeaserDate' => '2019-10-23',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'conferences',
         'label' => 'Conference announcement',
       ),
     ),
-    'newsImage' => 
+    'newsImage' =>
     array (
       'xmlns' => 'http://php.net/ns/news',
       'link' => 'https://world.phparch.com/?utm_campaign=phpnet',
@@ -939,43 +939,43 @@ Sorry for the inconvenience.</p>
       'content' => 'world2019-25th-400px.png',
     ),
     'content' => '<div>
-     
+
          <p>PHP has been around for 25 years this fall and we will be celebrating this momentous landmark at the annual <a href="https://world.phparch.com/?utm_campaign=phpnet">php[world] conference</a>.</p>
-     
+
          <p>We have curated a <a href="https://world.phparch.com/schedule/?utm_campaign=phpnet">special lineup of talks, workshops, and full-day training classes</a> for our attendees.  There will also be a couple of amazing keynotes and two panels on the past and future of PHP and frameworks.</p>
-     
+
          <p>It will be an amazing time, with some special events to help us all celebrate.  <a href="https://world.phparch.com/register/?utm_campaign=phpnet">Tickets are currently available</a> and we look forward to seeing you this fall.</p>
-     
+
          <p style="text-align: center; font-weight: bold">Washington, D.C. — October 23-24 — Training on October 22</p>
-     
+
     </div>
   ',
     'intro' => '<div><p>PHP has been around for 25 years this fall and we will be celebrating this momentous landmark at the annual <a href="https://world.phparch.com/?utm_campaign=phpnet">php[world] conference</a>.</p><p>We have curated a <a href="https://world.phparch.com/schedule/?utm_campaign=phpnet">special lineup of talks, workshops, and full-day training classes</a> for our attendees.  There will also be a couple of amazing keynotes and two panels on the past and future of PHP and frameworks.</p><p class=\'fullArticleLink\'><a href=\'https://world.phparch.com/?utm_campaign=phpnet\' class>&hellip; read full article</a></p></div>',
   ),
-  17 => 
+  17 =>
   array (
     'title' => 'PHP 7.4.0 alpha 3 Released',
     'id' => 'https://www.php.net/archive/2019.php#2019-07-11-1',
     'published' => '2019-07-11T10:15:12+00:00',
     'updated' => '2019-07-11T10:15:12+00:00',
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
         'href' => 'https://www.php.net/index.php#id2019-07-11-1',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
         'href' => 'https://www.php.net/archive/2019.php#2019-07-11-1',
         'rel' => 'via',
         'type' => 'text/html',
       ),
     ),
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'frontpage',
         'label' => 'PHP.net frontpage news',
@@ -988,32 +988,32 @@ Sorry for the inconvenience.</p>
      which is specified in the <a href="https://wiki.php.net/todo/php74">PHP
      Wiki</a>.
      </p>
-     
+
      <p>For source downloads of PHP 7.4.0 Alpha 3 please visit the <a href="https://downloads.php.net/~derick">download page</a>.</p>
-     
+
      <p>
-     Please carefully test this version and report any issues found in the <a href="http://bugs.php.net">bug reporting system</a>.
+     Please carefully test this version and report any issues found in the <a href="https://bugs.php.net">bug reporting system</a>.
      </p>
-     
+
      <p>
      <b>Please DO NOT use this version in production, it is an early test
      version.</b>
      </p>
-     
+
      <p>
       For more information on the new features and other changes, you can read the
       <a href="https://github.com/php/php-src/blob/php-7.4.0alpha3/NEWS">NEWS</a> file,
       or the <a href="https://github.com/php/php-src/blob/php-7.4.0alpha3/UPGRADING">UPGRADING</a>
       file for a complete list of upgrading notes. These files can also be found in the release archive.
      </p>
-     
+
      <p>
      The next release would be <b>Beta 1</b>, planned for July 25th.
      </p>
-     
+
      <p>The signatures for the release can be found in <a href="https://gist.github.com/derickr/dc86e4edfedf69bd121026cbf3db8643">the
      manifest</a> or on <a href="https://qa.php.net/">the QA site</a>. </p>
-     
+
      <p>Thank you for helping us make PHP better.</p>
     </div>
   ',
@@ -1024,37 +1024,37 @@ Sorry for the inconvenience.</p>
      Wiki</a>.
      </p><p>For source downloads of PHP 7.4.0 Alpha 3 please visit the <a href="https://downloads.php.net/~derick">download page</a>.</p><p class=\'fullArticleLink\'><a href=\'https://www.php.net/archive/2019.php#2019-07-11-1\' class>&hellip; read full article</a></p></div>',
   ),
-  18 => 
+  18 =>
   array (
     'title' => 'Lightning PHP Conference',
-    'id' => 'http://php.net/archive/2019.php#id2019-07-10-1',
+    'id' => 'https://www.php.net/archive/2019.php#id2019-07-10-1',
     'published' => '2019-07-10T01:27:54+00:00',
     'updated' => '2019-07-10T01:27:54+00:00',
     'finalTeaserDate' => '2019-10-04',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'conferences',
         'label' => 'Conference announcement',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/conferences/index.php#id2019-07-10-1',
+        'href' => 'https://www.php.net/conferences/index.php#id2019-07-10-1',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
         'href' => 'https://lightningphp.org',
         'rel' => 'via',
         'type' => 'text/html',
       ),
     ),
-    'newsImage' => 
+    'newsImage' =>
     array (
       'xmlns' => 'http://php.net/ns/news',
       'link' => 'https://lightningphp.org',
@@ -1070,36 +1070,36 @@ Sorry for the inconvenience.</p>
   ',
     'intro' => '<div><a href="https://lightningphp.org" title="Lightning PHP 2019">Lightning PHP Conference</a></div>',
   ),
-  19 => 
+  19 =>
   array (
     'title' => 'PHP 7.2.20 Released',
-    'id' => 'http://php.net/archive/2019.php#id2019-07-04-2',
+    'id' => 'https://www.php.net/archive/2019.php#id2019-07-04-2',
     'published' => '2019-07-04T09:14:21+00:00',
     'updated' => '2019-07-04T09:14:21+00:00',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'frontpage',
         'label' => 'PHP.net frontpage news',
       ),
-      1 => 
+      1 =>
       array (
         'term' => 'releases',
         'label' => 'New PHP release',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/index.php#id2019-07-04-2',
+        'href' => 'https://www.php.net/index.php#id2019-07-04-2',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
-        'href' => 'http://php.net/archive/2019.php#id2019-07-04-2',
+        'href' => 'https://www.php.net/archive/2019.php#id2019-07-04-2',
         'rel' => 'via',
         'type' => 'text/html',
       ),
@@ -1110,45 +1110,45 @@ Sorry for the inconvenience.</p>
 
      <p>All PHP 7.2 users are encouraged to upgrade to this version.</p>
 
-     <p>For source downloads of PHP 7.2.20 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-     The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.2.20">ChangeLog</a>.
+     <p>For source downloads of PHP 7.2.20 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
+     Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
+     The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-7.php#7.2.20">ChangeLog</a>.
      </p>
     </div>
   ',
     'intro' => '<div><p>The PHP development team announces the immediate availability of PHP 7.2.20.
-     This is a bugfix release.</p><p>All PHP 7.2 users are encouraged to upgrade to this version.</p><p class=\'fullArticleLink\'><a href=\'http://php.net/archive/2019.php#id2019-07-04-2\' class>&hellip; read full article</a></p></div>',
+     This is a bugfix release.</p><p>All PHP 7.2 users are encouraged to upgrade to this version.</p><p class=\'fullArticleLink\'><a href=\'https://www.php.net/archive/2019.php#id2019-07-04-2\' class>&hellip; read full article</a></p></div>',
   ),
-  20 => 
+  20 =>
   array (
     'title' => 'PHP 7.3.7 Release Announcement',
-    'id' => 'http://php.net/archive/2019.php#id2019-07-04-1',
+    'id' => 'https://www.php.net/archive/2019.php#id2019-07-04-1',
     'published' => '2019-07-04T08:29:00+00:00',
     'updated' => '2019-07-04T08:29:00+00:00',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'frontpage',
         'label' => 'PHP.net frontpage news',
       ),
-      1 => 
+      1 =>
       array (
         'term' => 'releases',
         'label' => 'New PHP release',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/index.php#id2019-07-04-1',
+        'href' => 'https://www.php.net/index.php#id2019-07-04-1',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
-        'href' => 'http://php.net/archive/2019.php#id2019-07-04-1',
+        'href' => 'https://www.php.net/archive/2019.php#id2019-07-04-1',
         'rel' => 'via',
         'type' => 'text/html',
       ),
@@ -1156,43 +1156,43 @@ Sorry for the inconvenience.</p>
     'content' => '<div>
       <p>The PHP development team announces the immediate availability of PHP
       7.3.7. This is a bug fix release.</p>
-    
+
       <p>All PHP 7.3 users are encouraged to upgrade to this version.</p>
-    
-      <p>For source downloads of PHP 7.3.7 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-      Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.3.7">ChangeLog</a>.
+
+      <p>For source downloads of PHP 7.3.7 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
+      Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
+      The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-7.php#7.3.7">ChangeLog</a>.
       </p>
     </div>
   ',
     'intro' => '<div><p>The PHP development team announces the immediate availability of PHP
-      7.3.7. This is a bug fix release.</p><p>All PHP 7.3 users are encouraged to upgrade to this version.</p><p class=\'fullArticleLink\'><a href=\'http://php.net/archive/2019.php#id2019-07-04-1\' class>&hellip; read full article</a></p></div>',
+      7.3.7. This is a bug fix release.</p><p>All PHP 7.3 users are encouraged to upgrade to this version.</p><p class=\'fullArticleLink\'><a href=\'https://www.php.net/archive/2019.php#id2019-07-04-1\' class>&hellip; read full article</a></p></div>',
   ),
-  21 => 
+  21 =>
   array (
     'title' => 'PHP 7.4.0 alpha 2 Released',
-    'id' => 'http://php.net/archive/2019.php#id2019-06-26-1',
+    'id' => 'https://www.php.net/archive/2019.php#id2019-06-26-1',
     'published' => '2019-06-26T23:34:49+00:00',
     'updated' => '2019-06-26T23:34:49+00:00',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'frontpage',
         'label' => 'PHP.net frontpage news',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/index.php#id2019-06-26-1',
+        'href' => 'https://www.php.net/index.php#id2019-06-26-1',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
-        'href' => 'http://php.net/archive/2019.php#id2019-06-26-1',
+        'href' => 'https://www.php.net/archive/2019.php#id2019-06-26-1',
         'rel' => 'via',
         'type' => 'text/html',
       ),
@@ -1203,32 +1203,32 @@ Sorry for the inconvenience.</p>
      This continues the PHP 7.4 release cycle, the rough outline of which is specified in the
      <a href="https://wiki.php.net/todo/php74">PHP Wiki</a>.
      </p>
-     
+
      <p>For source downloads of PHP 7.4.0 Alpha 2 please visit the <a href="https://downloads.php.net/~derick">download page</a>.</p>
-     
+
      <p>
-     Please carefully test this version and report any issues found in the <a href="http://bugs.php.net">bug reporting system</a>.
+     Please carefully test this version and report any issues found in the <a href="https://bugs.php.net">bug reporting system</a>.
      </p>
-     
+
      <p>
      <b>Please DO NOT use this version in production, it is an early test version.</b>
      </p>
-     
+
      <p>
          For more information on the new features and other changes, you can read the
          <a href="https://github.com/php/php-src/blob/php-7.4.0alpha2/NEWS">NEWS</a> file,
          or the <a href="https://github.com/php/php-src/blob/php-7.4.0alpha2/UPGRADING">UPGRADING</a>
          file for a complete list of upgrading notes. These files can also be found in the release archive.
      </p>
-     
+
      <p>
      The next release would be Alpha 3, planned for July 11th.
      </p>
-     
+
      <p>The signatures for the release can be found in <a href="https://gist.github.com/derickr/0cb88c72a785ae8642ae1d81cc2e96f8">the manifest</a> or on <a href="https://qa.php.net/">the
      QA site</a>.
      </p>
-     
+
      <p>Thank you for helping us make PHP better.</p>
     </div>
   ',
@@ -1236,39 +1236,39 @@ Sorry for the inconvenience.</p>
      PHP team is glad to announce the release of the second PHP 7.4.0 version, PHP 7.4.0 Alpha 2.
      This continues the PHP 7.4 release cycle, the rough outline of which is specified in the
      <a href="https://wiki.php.net/todo/php74">PHP Wiki</a>.
-     </p><p>For source downloads of PHP 7.4.0 Alpha 2 please visit the <a href="https://downloads.php.net/~derick">download page</a>.</p><p class=\'fullArticleLink\'><a href=\'http://php.net/archive/2019.php#id2019-06-26-1\' class>&hellip; read full article</a></p></div>',
+     </p><p>For source downloads of PHP 7.4.0 Alpha 2 please visit the <a href="https://downloads.php.net/~derick">download page</a>.</p><p class=\'fullArticleLink\'><a href=\'https://www.php.net/archive/2019.php#id2019-06-26-1\' class>&hellip; read full article</a></p></div>',
   ),
-  22 => 
+  22 =>
   array (
     'title' => 'The 7th Annual China PHP Conference',
-    'id' => 'http://php.net/archive/2019.php#id2019-06-24-1',
+    'id' => 'https://www.php.net/archive/2019.php#id2019-06-24-1',
     'published' => '2019-06-24T19:01:22+08:00',
     'updated' => '2019-06-24T19:01:22+08:00',
     'finalTeaserDate' => '2019-08-10',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'conferences',
         'label' => 'Conference announcement',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/conferences/index.php#id2019-06-24-1',
+        'href' => 'https://www.php.net/conferences/index.php#id2019-06-24-1',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
         'href' => 'https://www.phpconchina.com/',
         'rel' => 'via',
         'type' => 'text/html',
       ),
     ),
-    'newsImage' => 
+    'newsImage' =>
     array (
       'xmlns' => 'http://php.net/ns/news',
       'link' => 'http://www.phpconchina.com',
@@ -1287,37 +1287,37 @@ Sorry for the inconvenience.</p>
   ',
     'intro' => '<div><p>The 7th Annual China PHP Conference â Aug 10 to 11, Shanghai</p><p>We will be hosting a 2-day event filled with high quality, technical sessions about PHP Core, PHP High Performance, PHP Engineering, AI and Blockchain more.</p><p class=\'fullArticleLink\'><a href=\'https://www.phpconchina.com/\' class>&hellip; read full article</a></p></div>',
   ),
-  23 => 
+  23 =>
   array (
     'title' => 'LaravelConf Taiwan 2019 announcement',
-    'id' => 'http://php.net/archive/2019.php#id2019-06-19-1',
+    'id' => 'https://www.php.net/archive/2019.php#id2019-06-19-1',
     'published' => '2019-06-19T22:46:22+08:00',
     'updated' => '2019-06-19T22:46:22+08:00',
     'finalTeaserDate' => '2019-07-13',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'conferences',
         'label' => 'Conference announcement',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/conferences/index.php#id2019-06-19-1',
+        'href' => 'https://www.php.net/conferences/index.php#id2019-06-19-1',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
         'href' => 'https://laravelconf.tw/',
         'rel' => 'via',
         'type' => 'text/html',
       ),
     ),
-    'newsImage' => 
+    'newsImage' =>
     array (
       'xmlns' => 'http://php.net/ns/news',
       'link' => 'https://laravelconf.tw/',
@@ -1347,31 +1347,31 @@ Sorry for the inconvenience.</p>
   ',
     'intro' => '<div><p>The third Laravel conference in Taiwan awaits you at LaravelConf Taiwan 2019 at Taipei, Taiwan.</p><p><a href="https://laravelconf.tw/">LaravelConf Taiwan 2019</a> is for anyone who is passionate about building web applications, or anyone who is sharing better experiences about PHP developments.</p><p class=\'fullArticleLink\'><a href=\'https://laravelconf.tw/\' class>&hellip; read full article</a></p></div>',
   ),
-  24 => 
+  24 =>
   array (
     'title' => 'PHP 7.4.0 alpha 1 Released',
-    'id' => 'http://php.net/archive/2019.php#id2019-06-13-1',
+    'id' => 'https://www.php.net/archive/2019.php#id2019-06-13-1',
     'published' => '2019-06-13T11:24:11+00:00',
     'updated' => '2019-06-13T11:24:11+00:00',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'frontpage',
         'label' => 'PHP.net frontpage news',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/index.php#id2019-06-13-1',
+        'href' => 'https://www.php.net/index.php#id2019-06-13-1',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
-        'href' => 'http://php.net/archive/2019.php#id2019-06-13-1',
+        'href' => 'https://www.php.net/archive/2019.php#id2019-06-13-1',
         'rel' => 'via',
         'type' => 'text/html',
       ),
@@ -1382,32 +1382,32 @@ Sorry for the inconvenience.</p>
      This starts the PHP 7.4 release cycle, the rough outline of which is specified in the
      <a href="https://wiki.php.net/todo/php74">PHP Wiki</a>.
      </p>
-     
+
      <p>For source downloads of PHP 7.4.0 Alpha 1 please visit the <a href="https://downloads.php.net/~derick">download page</a>.</p>
-     
+
      <p>
-     Please carefully test this version and report any issues found in the <a href=" http://bugs.php.net">bug reporting system</a>.
+     Please carefully test this version and report any issues found in the <a href=" https://bugs.php.net">bug reporting system</a>.
      </p>
-     
+
      <p>
      <b>Please DO NOT use this version in production, it is an early test version.</b>
      </p>
-     
+
      <p>
          For more information on the new features and other changes, you can read the
          <a href="https://github.com/php/php-src/blob/php-7.4.0alpha1/NEWS">NEWS</a> file,
          or the <a href="https://github.com/php/php-src/blob/php-7.4.0alpha1/UPGRADING">UPGRADING</a>
          file for a complete list of upgrading notes. These files can also be found in the release archive.
      </p>
-     
+
      <p>
      The next release would be Alpha 2, planned for June 27.
      </p>
-     
+
      <p>The signatures for the release can be found in <a href="https://gist.github.com/derickr/000139654a28966ae0bb74560f51f2a7">the manifest</a> or on <a href="https://qa.php.net/">the
      QA site</a>.
      </p>
-     
+
      <p>Thank you for helping us make PHP better.</p>
     </div>
   ',
@@ -1415,39 +1415,39 @@ Sorry for the inconvenience.</p>
      PHP team is glad to announce the release of the first PHP 7.4.0 version, PHP 7.4.0 Alpha 1.
      This starts the PHP 7.4 release cycle, the rough outline of which is specified in the
      <a href="https://wiki.php.net/todo/php74">PHP Wiki</a>.
-     </p><p>For source downloads of PHP 7.4.0 Alpha 1 please visit the <a href="https://downloads.php.net/~derick">download page</a>.</p><p class=\'fullArticleLink\'><a href=\'http://php.net/archive/2019.php#id2019-06-13-1\' class>&hellip; read full article</a></p></div>',
+     </p><p>For source downloads of PHP 7.4.0 Alpha 1 please visit the <a href="https://downloads.php.net/~derick">download page</a>.</p><p class=\'fullArticleLink\'><a href=\'https://www.php.net/archive/2019.php#id2019-06-13-1\' class>&hellip; read full article</a></p></div>',
   ),
-  25 => 
+  25 =>
   array (
     'title' => 'International PHP Conference 2019 - Fall Edition',
-    'id' => 'http://php.net/archive/2019.php#id2019-06-07-1',
+    'id' => 'https://www.php.net/archive/2019.php#id2019-06-07-1',
     'published' => '2019-06-07T14:37:00+02:00',
     'updated' => '2019-06-07T14:37:00+02:00',
     'finalTeaserDate' => '2019-10-21',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'conferences',
         'label' => 'Conference announcement',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/conferences/index.php#id2019-06-07-1',
+        'href' => 'https://www.php.net/conferences/index.php#id2019-06-07-1',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
         'href' => 'https://phpconference.com',
         'rel' => 'via',
         'type' => 'text/html',
       ),
     ),
-    'newsImage' => 
+    'newsImage' =>
     array (
       'xmlns' => 'http://php.net/ns/news',
       'link' => 'https://phpconference.com',
@@ -1488,36 +1488,36 @@ Sorry for the inconvenience.</p>
   ',
     'intro' => '<div><p>The <a href="https://phpconference.com">International PHP Conference</a> is the world\'s first PHP conference and stands since more than a decade for top-notch pragmatic expertise in PHP and web technologies. At the IPC, internationally renowned experts from the PHP industry meet up with PHP users and developers from large and small companies. Here is the place where concepts emerge and ideas are born - the IPC signifies knowledge transfer at highest level.</p><p>All delegates of the International PHP Conference have, in addition to PHP program, free access to the entire range of the <a href="https://javascript-conference.com">International JavaScript Conference</a> taking place at the same time.</p><p class=\'fullArticleLink\'><a href=\'https://phpconference.com\' class>&hellip; read full article</a></p></div>',
   ),
-  26 => 
+  26 =>
   array (
     'title' => 'PHP 7.1.30 Released',
-    'id' => 'http://php.net/archive/2019.php#id2019-05-30-3',
+    'id' => 'https://www.php.net/archive/2019.php#id2019-05-30-3',
     'published' => '2019-05-30T17:03:08+00:00',
     'updated' => '2019-05-30T17:03:08+00:00',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'frontpage',
         'label' => 'PHP.net frontpage news',
       ),
-      1 => 
+      1 =>
       array (
         'term' => 'releases',
         'label' => 'New PHP release',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/index.php#id2019-05-30-3',
+        'href' => 'https://www.php.net/index.php#id2019-05-30-3',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
-        'href' => 'http://php.net/archive/2019.php#id2019-05-30-3',
+        'href' => 'https://www.php.net/archive/2019.php#id2019-05-30-3',
         'rel' => 'via',
         'type' => 'text/html',
       ),
@@ -1525,48 +1525,48 @@ Sorry for the inconvenience.</p>
     'content' => '<div>
        <p>The PHP development team announces the immediate availability of PHP
        7.1.30. This is a security release.</p>
-     
+
        <p>All PHP 7.1 users are encouraged to upgrade to this version.</p>
-     
-       <p>For source downloads of PHP 7.1.30 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-       Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-       The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.1.30">ChangeLog</a>.
+
+       <p>For source downloads of PHP 7.1.30 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
+       Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
+       The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-7.php#7.1.30">ChangeLog</a>.
        </p>
     </div>
   ',
     'intro' => '<div><p>The PHP development team announces the immediate availability of PHP
-       7.1.30. This is a security release.</p><p>All PHP 7.1 users are encouraged to upgrade to this version.</p><p class=\'fullArticleLink\'><a href=\'http://php.net/archive/2019.php#id2019-05-30-3\' class>&hellip; read full article</a></p></div>',
+       7.1.30. This is a security release.</p><p>All PHP 7.1 users are encouraged to upgrade to this version.</p><p class=\'fullArticleLink\'><a href=\'https://www.php.net/archive/2019.php#id2019-05-30-3\' class>&hellip; read full article</a></p></div>',
   ),
-  27 => 
+  27 =>
   array (
     'title' => 'PHP 7.2.19 Release Announcement',
-    'id' => 'http://php.net/archive/2019.php#id2019-05-30-2',
+    'id' => 'https://www.php.net/archive/2019.php#id2019-05-30-2',
     'published' => '2019-05-30T14:19:20+00:00',
     'updated' => '2019-05-30T14:19:20+00:00',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'frontpage',
         'label' => 'PHP.net frontpage news',
       ),
-      1 => 
+      1 =>
       array (
         'term' => 'releases',
         'label' => 'New PHP release',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/index.php#id2019-05-30-2',
+        'href' => 'https://www.php.net/index.php#id2019-05-30-2',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
-        'href' => 'http://php.net/archive/2019.php#id2019-05-30-2',
+        'href' => 'https://www.php.net/archive/2019.php#id2019-05-30-2',
         'rel' => 'via',
         'type' => 'text/html',
       ),
@@ -1574,48 +1574,48 @@ Sorry for the inconvenience.</p>
     'content' => '<div>
      <p>The PHP development team announces the immediate availability of PHP 7.2.19.
      This is a security release which also contains several minor bug fixes.</p>
-     
+
      <p>All PHP 7.2 users are encouraged to upgrade to this version.</p>
-     
-     <p>For source downloads of PHP 7.2.19 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-     The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.2.19">ChangeLog</a>.
+
+     <p>For source downloads of PHP 7.2.19 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
+     Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
+     The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-7.php#7.2.19">ChangeLog</a>.
      </p>
     </div>
   ',
     'intro' => '<div><p>The PHP development team announces the immediate availability of PHP 7.2.19.
-     This is a security release which also contains several minor bug fixes.</p><p>All PHP 7.2 users are encouraged to upgrade to this version.</p><p class=\'fullArticleLink\'><a href=\'http://php.net/archive/2019.php#id2019-05-30-2\' class>&hellip; read full article</a></p></div>',
+     This is a security release which also contains several minor bug fixes.</p><p>All PHP 7.2 users are encouraged to upgrade to this version.</p><p class=\'fullArticleLink\'><a href=\'https://www.php.net/archive/2019.php#id2019-05-30-2\' class>&hellip; read full article</a></p></div>',
   ),
-  28 => 
+  28 =>
   array (
     'title' => 'PHP 7.3.6 Release Announcement',
-    'id' => 'http://php.net/archive/2019.php#id2019-05-30-1',
+    'id' => 'https://www.php.net/archive/2019.php#id2019-05-30-1',
     'published' => '2019-05-30T09:11:36+00:00',
     'updated' => '2019-05-30T09:11:36+00:00',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'frontpage',
         'label' => 'PHP.net frontpage news',
       ),
-      1 => 
+      1 =>
       array (
         'term' => 'releases',
         'label' => 'New PHP release',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/index.php#id2019-05-30-1',
+        'href' => 'https://www.php.net/index.php#id2019-05-30-1',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
-        'href' => 'http://php.net/archive/2019.php#id2019-05-30-1',
+        'href' => 'https://www.php.net/archive/2019.php#id2019-05-30-1',
         'rel' => 'via',
         'type' => 'text/html',
       ),
@@ -1626,48 +1626,48 @@ Sorry for the inconvenience.</p>
 
       <p>All PHP 7.3 users are encouraged to upgrade to this version.</p>
 
-      <p>For source downloads of PHP 7.3.6 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-      Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.3.6">ChangeLog</a>.
+      <p>For source downloads of PHP 7.3.6 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
+      Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
+      The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-7.php#7.3.6">ChangeLog</a>.
       </p>
     </div>
   ',
     'intro' => '<div><p>The PHP development team announces the immediate availability of PHP
-      7.3.6. This is a security release which also contains several bug fixes.</p><p>All PHP 7.3 users are encouraged to upgrade to this version.</p><p class=\'fullArticleLink\'><a href=\'http://php.net/archive/2019.php#id2019-05-30-1\' class>&hellip; read full article</a></p></div>',
+      7.3.6. This is a security release which also contains several bug fixes.</p><p>All PHP 7.3 users are encouraged to upgrade to this version.</p><p class=\'fullArticleLink\'><a href=\'https://www.php.net/archive/2019.php#id2019-05-30-1\' class>&hellip; read full article</a></p></div>',
   ),
-  29 => 
+  29 =>
   array (
     'title' => 'CakeFest 2019 Tokyo Japan, the Official CakePHP Conference',
-    'id' => 'http://php.net/archive/2019.php#id2019-05-29-1',
+    'id' => 'https://www.php.net/archive/2019.php#id2019-05-29-1',
     'published' => '2019-05-29T10:26:22+00:00',
     'updated' => '2019-05-29T10:26:22+00:00',
     'finalTeaserDate' => '2019-11-07',
-    'newsImage' => 
+    'newsImage' =>
     array (
       'xmlns' => 'http://php.net/ns/news',
       'link' => 'https://cakefest.org',
       'title' => 'CakeFest 2019',
       'content' => 'cakefest-2017.png',
     ),
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'conferences',
         'label' => 'Conference announcement',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/conferences/index.php#id2019-05-29-1',
+        'href' => 'https://www.php.net/conferences/index.php#id2019-05-29-1',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
-        'href' => 'http://php.net/archive/2019.php#id2019-05-29-1',
+        'href' => 'https://www.php.net/archive/2019.php#id2019-05-29-1',
         'rel' => 'via',
         'type' => 'text/html',
       ),
@@ -1693,37 +1693,37 @@ Sorry for the inconvenience.</p>
          Check out the full schedule on <a href="https://cakefest.org/schedule">CakeFest.org</a>
      </p></div>',
   ),
-  30 => 
+  30 =>
   array (
     'title' => 'PHP fwdays 2019',
-    'id' => 'http://php.net/archive/2019.php#id2019-05-27-1',
+    'id' => 'https://www.php.net/archive/2019.php#id2019-05-27-1',
     'published' => '2019-05-27T23:30:01+02:00',
     'updated' => '2019-05-27T23:30:01+02:00',
     'finalTeaserDate' => '2019-06-01',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'conferences',
         'label' => 'Conference announcement',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/conferences/index.php#id2019-05-27-1',
+        'href' => 'https://www.php.net/conferences/index.php#id2019-05-27-1',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
         'href' => 'https://fwdays.com/event/php-fwdays-2019',
         'rel' => 'via',
         'type' => 'text/html',
       ),
     ),
-    'newsImage' => 
+    'newsImage' =>
     array (
       'xmlns' => 'http://php.net/ns/news',
       'link' => 'https://fwdays.com/event/php-fwdays-2019',
@@ -1744,37 +1744,37 @@ Sorry for the inconvenience.</p>
       Join more than 800 developers from all over the world to learn, discuss and solve.
      </p><p class=\'fullArticleLink\'><a href=\'https://fwdays.com/event/php-fwdays-2019\' class>&hellip; read full article</a></p></div>',
   ),
-  31 => 
+  31 =>
   array (
     'title' => 'php[world] 2019 Call for Speakers',
-    'id' => 'http://php.net/archive/2019.php#id2019-05-10-1',
+    'id' => 'https://www.php.net/archive/2019.php#id2019-05-10-1',
     'published' => '2019-05-10T13:18:25+00:00',
     'updated' => '2019-05-10T13:18:25+00:00',
     'finalTeaserDate' => '2019-06-07',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'cfp',
         'label' => 'Call for Papers',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/conferences/index.php#id2019-05-10-1',
+        'href' => 'https://www.php.net/conferences/index.php#id2019-05-10-1',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
         'href' => 'https://world.phparch.com/?utm_campaign=phpnetworld2019',
         'rel' => 'via',
         'type' => 'text/html',
       ),
     ),
-    'newsImage' => 
+    'newsImage' =>
     array (
       'xmlns' => 'http://php.net/ns/news',
       'link' => 'https://world.phparch.com/?utm_campaign=phpnetworld2019',
@@ -1791,37 +1791,37 @@ Sorry for the inconvenience.</p>
   ',
     'intro' => '<div><p>We are excited to announce the <a href="https://sessionize.com/phpworld-2019?utm_campaign=phpnetworld2019">Call for Speakers</a> for php[world] 2019!  Taking place this year at the Sheraton Tyson\'s Corner on <b>October 23-24</b> (with full-day training options on the 22nd.)</p><p>At itâs heart, <a href="https://world.phparch.com/?utm_campaign=phpnetworld2019">php[world] 2019</a> is the Washington D.C. area conference for programmers who use the PHP programming language. Weâve been running annually since 2014.</p><p class=\'fullArticleLink\'><a href=\'https://world.phparch.com/?utm_campaign=phpnetworld2019\' class>&hellip; read full article</a></p></div>',
   ),
-  32 => 
+  32 =>
   array (
     'title' => 'phpday 2019',
-    'id' => 'http://php.net/archive/2019.php#id2019-05-08-1',
+    'id' => 'https://www.php.net/archive/2019.php#id2019-05-08-1',
     'published' => '2019-05-08T09:28:01+02:00',
     'updated' => '2019-05-08T09:28:01+02:00',
     'finalTeaserDate' => '2019-05-11',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'conferences',
         'label' => 'Conference announcement',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/conferences/index.php#id2019-05-08-1',
+        'href' => 'https://www.php.net/conferences/index.php#id2019-05-08-1',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
         'href' => 'https://2019.phpday.it/',
         'rel' => 'via',
         'type' => 'text/html',
       ),
     ),
-    'newsImage' => 
+    'newsImage' =>
     array (
       'xmlns' => 'http://php.net/ns/news',
       'link' => 'https://2019.phpday.it/',
@@ -1836,36 +1836,36 @@ Sorry for the inconvenience.</p>
   ',
     'intro' => '<div><p>The Italian PHP user group GrUSP is pleased to announce the <b><a href="https://2019.phpday.it/">16th edition</a></b> of <b>phpday</b>, taking place on May 10-11th, 2019 in Verona, Italy. </p><p>It is the first historic Italian conference dedicated solely to PHP development, technologies and management. It is aimed to IT managers, developers and innovators. Each year it renews the opportunity to link to new business partners.</p><p class=\'fullArticleLink\'><a href=\'https://2019.phpday.it/\' class>&hellip; read full article</a></p></div>',
   ),
-  33 => 
+  33 =>
   array (
     'title' => 'PHP 7.1.29 Released',
-    'id' => 'http://php.net/archive/2019.php#id2019-05-03-1',
+    'id' => 'https://www.php.net/archive/2019.php#id2019-05-03-1',
     'published' => '2019-05-03T06:05:20+00:00',
     'updated' => '2019-05-03T06:05:20+00:00',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'frontpage',
         'label' => 'PHP.net frontpage news',
       ),
-      1 => 
+      1 =>
       array (
         'term' => 'releases',
         'label' => 'New PHP release',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/index.php#id2019-05-03-1',
+        'href' => 'https://www.php.net/index.php#id2019-05-03-1',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
-        'href' => 'http://php.net/archive/2019.php#id2019-05-03-1',
+        'href' => 'https://www.php.net/archive/2019.php#id2019-05-03-1',
         'rel' => 'via',
         'type' => 'text/html',
       ),
@@ -1873,48 +1873,48 @@ Sorry for the inconvenience.</p>
     'content' => '<div>
        <p>The PHP development team announces the immediate availability of PHP
        7.1.29. This is a security release.</p>
-     
+
        <p>All PHP 7.1 users are encouraged to upgrade to this version.</p>
-     
-       <p>For source downloads of PHP 7.1.29 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-       Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-       The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.1.29">ChangeLog</a>.
+
+       <p>For source downloads of PHP 7.1.29 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
+       Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
+       The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-7.php#7.1.29">ChangeLog</a>.
        </p>
     </div>
   ',
     'intro' => '<div><p>The PHP development team announces the immediate availability of PHP
-       7.1.29. This is a security release.</p><p>All PHP 7.1 users are encouraged to upgrade to this version.</p><p class=\'fullArticleLink\'><a href=\'http://php.net/archive/2019.php#id2019-05-03-1\' class>&hellip; read full article</a></p></div>',
+       7.1.29. This is a security release.</p><p>All PHP 7.1 users are encouraged to upgrade to this version.</p><p class=\'fullArticleLink\'><a href=\'https://www.php.net/archive/2019.php#id2019-05-03-1\' class>&hellip; read full article</a></p></div>',
   ),
-  34 => 
+  34 =>
   array (
     'title' => 'PHP 7.2.18 Released',
-    'id' => 'http://php.net/archive/2019.php#id2019-05-02-2',
+    'id' => 'https://www.php.net/archive/2019.php#id2019-05-02-2',
     'published' => '2019-05-02T09:47:58+00:00',
     'updated' => '2019-05-02T09:47:58+00:00',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'frontpage',
         'label' => 'PHP.net frontpage news',
       ),
-      1 => 
+      1 =>
       array (
         'term' => 'releases',
         'label' => 'New PHP release',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/index.php#id2019-05-02-2',
+        'href' => 'https://www.php.net/index.php#id2019-05-02-2',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
-        'href' => 'http://php.net/archive/2019.php#id2019-05-02-2',
+        'href' => 'https://www.php.net/archive/2019.php#id2019-05-02-2',
         'rel' => 'via',
         'type' => 'text/html',
       ),
@@ -1925,45 +1925,45 @@ Sorry for the inconvenience.</p>
 
      <p>All PHP 7.2 users are encouraged to upgrade to this version.</p>
 
-     <p>For source downloads of PHP 7.2.18 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-     The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.2.18">ChangeLog</a>.
+     <p>For source downloads of PHP 7.2.18 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
+     Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
+     The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-7.php#7.2.18">ChangeLog</a>.
      </p>
     </div>
   ',
     'intro' => '<div><p>The PHP development team announces the immediate availability of PHP
-     7.2.18. This is a security release which also contains several minor bug fixes.</p><p>All PHP 7.2 users are encouraged to upgrade to this version.</p><p class=\'fullArticleLink\'><a href=\'http://php.net/archive/2019.php#id2019-05-02-2\' class>&hellip; read full article</a></p></div>',
+     7.2.18. This is a security release which also contains several minor bug fixes.</p><p>All PHP 7.2 users are encouraged to upgrade to this version.</p><p class=\'fullArticleLink\'><a href=\'https://www.php.net/archive/2019.php#id2019-05-02-2\' class>&hellip; read full article</a></p></div>',
   ),
-  35 => 
+  35 =>
   array (
     'title' => 'PHP 7.3.5 Release Announcement',
-    'id' => 'http://php.net/archive/2019.php#id2019-05-02-1',
+    'id' => 'https://www.php.net/archive/2019.php#id2019-05-02-1',
     'published' => '2019-05-02T10:27:19+02:00',
     'updated' => '2019-05-02T10:27:19+02:00',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'frontpage',
         'label' => 'PHP.net frontpage news',
       ),
-      1 => 
+      1 =>
       array (
         'term' => 'releases',
         'label' => 'New PHP release',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/index.php#id2019-05-02-1',
+        'href' => 'https://www.php.net/index.php#id2019-05-02-1',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
-        'href' => 'http://php.net/archive/2019.php#id2019-05-02-1',
+        'href' => 'https://www.php.net/archive/2019.php#id2019-05-02-1',
         'rel' => 'via',
         'type' => 'text/html',
       ),
@@ -1974,46 +1974,46 @@ Sorry for the inconvenience.</p>
 
       <p>All PHP 7.3 users are encouraged to upgrade to this version.</p>
 
-      <p>For source downloads of PHP 7.3.5 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-      Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.3.5">ChangeLog</a>.
+      <p>For source downloads of PHP 7.3.5 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
+      Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
+      The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-7.php#7.3.5">ChangeLog</a>.
       </p>
     </div>
   ',
     'intro' => '<div><p>The PHP development team announces the immediate availability of PHP
-      7.3.5. This is a security release which also contains several bug fixes.</p><p>All PHP 7.3 users are encouraged to upgrade to this version.</p><p class=\'fullArticleLink\'><a href=\'http://php.net/archive/2019.php#id2019-05-02-1\' class>&hellip; read full article</a></p></div>',
+      7.3.5. This is a security release which also contains several bug fixes.</p><p>All PHP 7.3 users are encouraged to upgrade to this version.</p><p class=\'fullArticleLink\'><a href=\'https://www.php.net/archive/2019.php#id2019-05-02-1\' class>&hellip; read full article</a></p></div>',
   ),
-  36 => 
+  36 =>
   array (
     'title' => 'CoderCruise 2019',
-    'id' => 'http://php.net/archive/2019.php#id2019-04-16-1',
+    'id' => 'https://www.php.net/archive/2019.php#id2019-04-16-1',
     'published' => '2019-04-16T18:59:25+00:00',
     'updated' => '2019-04-16T18:59:25+00:00',
     'finalTeaserDate' => '2019-08-19',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'conferences',
         'label' => 'Conference announcement',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/conferences/index.php#id2019-04-16-1',
+        'href' => 'https://www.php.net/conferences/index.php#id2019-04-16-1',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
         'href' => 'https://www.codercruise.com/',
         'rel' => 'via',
         'type' => 'text/html',
       ),
     ),
-    'newsImage' => 
+    'newsImage' =>
     array (
       'xmlns' => 'http://php.net/ns/news',
       'link' => 'https://www.codercruise.com/',
@@ -2039,37 +2039,37 @@ Sorry for the inconvenience.</p>
            <a href="https://www.codercruise.com/register/?utm_campaign=ccphp19">starting as low as $435</a> per person
            (including 5-day cruise, food, drink <b>and the conference</b>!)</p></div>',
   ),
-  37 => 
+  37 =>
   array (
     'title' => 'PHPConf.Asia 2019',
-    'id' => 'http://php.net/archive/2019.php#id2019-04-04-4',
+    'id' => 'https://www.php.net/archive/2019.php#id2019-04-04-4',
     'published' => '2019-04-04T12:51:44+08:00',
     'updated' => '2019-04-04T12:51:44+08:00',
     'finalTeaserDate' => '2019-06-24',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'conferences',
         'label' => 'Conference announcement',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/conferences/index.php#id2019-04-04-4',
+        'href' => 'https://www.php.net/conferences/index.php#id2019-04-04-4',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
         'href' => 'https://2019.phpconf.asia',
         'rel' => 'via',
         'type' => 'text/html',
       ),
     ),
-    'newsImage' => 
+    'newsImage' =>
     array (
       'xmlns' => 'http://php.net/ns/news',
       'link' => 'https://2019.phpconf.asia',
@@ -2086,36 +2086,36 @@ Sorry for the inconvenience.</p>
   ',
     'intro' => '<div><p><b>PHPConf.Asia 2019</b></p><p>Announcing PHPConf.Asia 2019 - The Pan-Asian PHP Conference - Ticket Sales are Open!</p><p class=\'fullArticleLink\'><a href=\'https://2019.phpconf.asia\' class>&hellip; read full article</a></p></div>',
   ),
-  38 => 
+  38 =>
   array (
     'title' => 'PHP 7.1.28 Released',
-    'id' => 'http://php.net/archive/2019.php#id2019-04-04-3',
+    'id' => 'https://www.php.net/archive/2019.php#id2019-04-04-3',
     'published' => '2019-04-04T16:56:38+00:00',
     'updated' => '2019-04-04T16:56:38+00:00',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'frontpage',
         'label' => 'PHP.net frontpage news',
       ),
-      1 => 
+      1 =>
       array (
         'term' => 'releases',
         'label' => 'New PHP release',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/index.php#id2019-04-04-3',
+        'href' => 'https://www.php.net/index.php#id2019-04-04-3',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
-        'href' => 'http://php.net/archive/2019.php#id2019-04-04-3',
+        'href' => 'https://www.php.net/archive/2019.php#id2019-04-04-3',
         'rel' => 'via',
         'type' => 'text/html',
       ),
@@ -2123,48 +2123,48 @@ Sorry for the inconvenience.</p>
     'content' => '<div>
        <p>The PHP development team announces the immediate availability of PHP
        7.1.28. This is a security release.</p>
-     
+
        <p>All PHP 7.1 users are encouraged to upgrade to this version.</p>
-     
-       <p>For source downloads of PHP 7.1.28 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-       Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-       The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.1.28">ChangeLog</a>.
+
+       <p>For source downloads of PHP 7.1.28 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
+       Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
+       The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-7.php#7.1.28">ChangeLog</a>.
        </p>
     </div>
   ',
     'intro' => '<div><p>The PHP development team announces the immediate availability of PHP
-       7.1.28. This is a security release.</p><p>All PHP 7.1 users are encouraged to upgrade to this version.</p><p class=\'fullArticleLink\'><a href=\'http://php.net/archive/2019.php#id2019-04-04-3\' class>&hellip; read full article</a></p></div>',
+       7.1.28. This is a security release.</p><p>All PHP 7.1 users are encouraged to upgrade to this version.</p><p class=\'fullArticleLink\'><a href=\'https://www.php.net/archive/2019.php#id2019-04-04-3\' class>&hellip; read full article</a></p></div>',
   ),
-  39 => 
+  39 =>
   array (
     'title' => 'PHP 7.2.17 Release Announcement',
-    'id' => 'http://php.net/archive/2019.php#id2019-04-04-2',
+    'id' => 'https://www.php.net/archive/2019.php#id2019-04-04-2',
     'published' => '2019-04-04T14:17:48+00:00',
     'updated' => '2019-04-04T14:17:48+00:00',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'frontpage',
         'label' => 'PHP.net frontpage news',
       ),
-      1 => 
+      1 =>
       array (
         'term' => 'releases',
         'label' => 'New PHP release',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/index.php#id2019-04-04-2',
+        'href' => 'https://www.php.net/index.php#id2019-04-04-2',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
-        'href' => 'http://php.net/archive/2019.php#id2019-04-04-2',
+        'href' => 'https://www.php.net/archive/2019.php#id2019-04-04-2',
         'rel' => 'via',
         'type' => 'text/html',
       ),
@@ -2172,48 +2172,48 @@ Sorry for the inconvenience.</p>
     'content' => '<div>
      <p>The PHP development team announces the immediate availability of PHP 7.2.17.
      This is a security release which also contains several minor bug fixes.</p>
-     
+
      <p>All PHP 7.2 users are encouraged to upgrade to this version.</p>
-     
-     <p>For source downloads of PHP 7.2.17 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-     The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.2.17">ChangeLog</a>.
+
+     <p>For source downloads of PHP 7.2.17 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
+     Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
+     The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-7.php#7.2.17">ChangeLog</a>.
      </p>
     </div>
   ',
     'intro' => '<div><p>The PHP development team announces the immediate availability of PHP 7.2.17.
-     This is a security release which also contains several minor bug fixes.</p><p>All PHP 7.2 users are encouraged to upgrade to this version.</p><p class=\'fullArticleLink\'><a href=\'http://php.net/archive/2019.php#id2019-04-04-2\' class>&hellip; read full article</a></p></div>',
+     This is a security release which also contains several minor bug fixes.</p><p>All PHP 7.2 users are encouraged to upgrade to this version.</p><p class=\'fullArticleLink\'><a href=\'https://www.php.net/archive/2019.php#id2019-04-04-2\' class>&hellip; read full article</a></p></div>',
   ),
-  40 => 
+  40 =>
   array (
     'title' => 'PHP 7.3.4 Release Announcement',
-    'id' => 'http://php.net/archive/2019.php#id2019-04-04-1',
+    'id' => 'https://www.php.net/archive/2019.php#id2019-04-04-1',
     'published' => '2019-04-04T14:02:16+02:00',
     'updated' => '2019-04-04T14:02:16+02:00',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'frontpage',
         'label' => 'PHP.net frontpage news',
       ),
-      1 => 
+      1 =>
       array (
         'term' => 'releases',
         'label' => 'New PHP release',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/index.php#id2019-04-04-1',
+        'href' => 'https://www.php.net/index.php#id2019-04-04-1',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
-        'href' => 'http://php.net/archive/2019.php#id2019-04-04-1',
+        'href' => 'https://www.php.net/archive/2019.php#id2019-04-04-1',
         'rel' => 'via',
         'type' => 'text/html',
       ),
@@ -2221,49 +2221,49 @@ Sorry for the inconvenience.</p>
     'content' => '<div>
        <p>The PHP development team announces the immediate availability of PHP
        7.3.4. This is a security release which also contains several bug fixes.</p>
-     
+
        <p>All PHP 7.3 users are encouraged to upgrade to this version.</p>
-     
-       <p>For source downloads of PHP 7.3.4 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-       Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-       The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.3.4">ChangeLog</a>.
+
+       <p>For source downloads of PHP 7.3.4 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
+       Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
+       The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-7.php#7.3.4">ChangeLog</a>.
        </p>
     </div>
   ',
     'intro' => '<div><p>The PHP development team announces the immediate availability of PHP
-       7.3.4. This is a security release which also contains several bug fixes.</p><p>All PHP 7.3 users are encouraged to upgrade to this version.</p><p class=\'fullArticleLink\'><a href=\'http://php.net/archive/2019.php#id2019-04-04-1\' class>&hellip; read full article</a></p></div>',
+       7.3.4. This is a security release which also contains several bug fixes.</p><p>All PHP 7.3 users are encouraged to upgrade to this version.</p><p class=\'fullArticleLink\'><a href=\'https://www.php.net/archive/2019.php#id2019-04-04-1\' class>&hellip; read full article</a></p></div>',
   ),
-  41 => 
+  41 =>
   array (
     'title' => 'SymfonyCon Amsterdam 2019',
-    'id' => 'http://php.net/archive/2019.php#id2019-04-02-6',
+    'id' => 'https://www.php.net/archive/2019.php#id2019-04-02-6',
     'published' => '2019-04-02T10:28:14+00:00',
     'updated' => '2019-04-02T10:28:14+00:00',
     'finalTeaserDate' => '2019-11-21',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'conferences',
         'label' => 'Conference announcement',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/conferences/index.php#id2019-04-02-6',
+        'href' => 'https://www.php.net/conferences/index.php#id2019-04-02-6',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
         'href' => 'https://amsterdam2019.symfony.com/',
         'rel' => 'via',
         'type' => 'text/html',
       ),
     ),
-    'newsImage' => 
+    'newsImage' =>
     array (
       'xmlns' => 'http://php.net/ns/news',
       'link' => 'https://amsterdam2019.symfony.com/',
@@ -2288,37 +2288,37 @@ Sorry for the inconvenience.</p>
 ',
     'intro' => '<div></div>',
   ),
-  42 => 
+  42 =>
   array (
     'title' => 'SymfonyLive Berlin 2019',
-    'id' => 'http://php.net/archive/2019.php#id2019-04-02-5',
+    'id' => 'https://www.php.net/archive/2019.php#id2019-04-02-5',
     'published' => '2019-04-02T10:24:43+00:00',
     'updated' => '2019-04-02T10:24:43+00:00',
     'finalTeaserDate' => '2019-09-26',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'conferences',
         'label' => 'Conference announcement',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/conferences/index.php#id2019-04-02-5',
+        'href' => 'https://www.php.net/conferences/index.php#id2019-04-02-5',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
         'href' => 'https://berlin2019.live.symfony.com/',
         'rel' => 'via',
         'type' => 'text/html',
       ),
     ),
-    'newsImage' => 
+    'newsImage' =>
     array (
       'xmlns' => 'http://php.net/ns/news',
       'link' => 'https://berlin2019.live.symfony.com/',
@@ -2328,7 +2328,7 @@ Sorry for the inconvenience.</p>
     'content' => '<div>
      <p>The SymfonyLive conference is coming back to Berlin! Join the big Symfony
      German community and learn all about the latest Symfony features.</p>
-     
+
      <p>Symfony fans, don\'t miss the opportunity to attend inspiring and exciting
      talks and hands-on workshops from the 24th to the 27th of September!</p>
     </div>
@@ -2337,37 +2337,37 @@ Sorry for the inconvenience.</p>
      German community and learn all about the latest Symfony features.</p><p>Symfony fans, don\'t miss the opportunity to attend inspiring and exciting
      talks and hands-on workshops from the 24th to the 27th of September!</p></div>',
   ),
-  43 => 
+  43 =>
   array (
     'title' => 'SymfonyLive London 2019',
-    'id' => 'http://php.net/archive/2019.php#id2019-04-02-4',
+    'id' => 'https://www.php.net/archive/2019.php#id2019-04-02-4',
     'published' => '2019-04-02T10:23:10+00:00',
     'updated' => '2019-04-02T10:23:10+00:00',
     'finalTeaserDate' => '2019-09-13',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'conferences',
         'label' => 'Conference announcement',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/conferences/index.php#id2019-04-02-4',
+        'href' => 'https://www.php.net/conferences/index.php#id2019-04-02-4',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
         'href' => 'https://london2019.live.symfony.com/',
         'rel' => 'via',
         'type' => 'text/html',
       ),
     ),
-    'newsImage' => 
+    'newsImage' =>
     array (
       'xmlns' => 'http://php.net/ns/news',
       'link' => 'https://london2019.live.symfony.com/',
@@ -2378,7 +2378,7 @@ Sorry for the inconvenience.</p>
      <p>Join us from September 12th to 13th 2019 for SymfonyLive London 2019! We are
      proud to organize the 8th edition of the Symfony conference in London and to
      welcome the Symfony community from all over the UK.</p>
-     
+
      <p>Come for 2 days of Symfony to share best practices, experience, knowledge, make
      new contacts, and hear the latest developments with the framework!</p>
     </div>
@@ -2388,37 +2388,37 @@ Sorry for the inconvenience.</p>
      welcome the Symfony community from all over the UK.</p><p>Come for 2 days of Symfony to share best practices, experience, knowledge, make
      new contacts, and hear the latest developments with the framework!</p></div>',
   ),
-  44 => 
+  44 =>
   array (
     'title' => 'SymfonyLive Warszawa 2019',
-    'id' => 'http://php.net/archive/2019.php#id2019-04-02-3',
+    'id' => 'https://www.php.net/archive/2019.php#id2019-04-02-3',
     'published' => '2019-04-02T10:21:12+00:00',
     'updated' => '2019-04-02T10:21:12+00:00',
     'finalTeaserDate' => '2019-06-13',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'conferences',
         'label' => 'Conference announcement',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/conferences/index.php#id2019-04-02-3',
+        'href' => 'https://www.php.net/conferences/index.php#id2019-04-02-3',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
         'href' => 'https://warszawa2019.live.symfony.com/',
         'rel' => 'via',
         'type' => 'text/html',
       ),
     ),
-    'newsImage' => 
+    'newsImage' =>
     array (
       'xmlns' => 'http://php.net/ns/news',
       'link' => 'https://warszawa2019.live.symfony.com/',
@@ -2428,7 +2428,7 @@ Sorry for the inconvenience.</p>
     'content' => '<div>
      <p>The SymfonyLive conference is coming to Warsaw (Poland) for the first time! Join the
      big Symfony Polish community and learn all about the latest Symfony features.</p>
-     
+
      <p>Symfony fans, don\'t miss the opportunity to attend inspiring and exciting
      talks and hands-on workshops from the 11th to the 14th of June!</p>
     </div>
@@ -2437,37 +2437,37 @@ Sorry for the inconvenience.</p>
      big Symfony Polish community and learn all about the latest Symfony features.</p><p>Symfony fans, don\'t miss the opportunity to attend inspiring and exciting
      talks and hands-on workshops from the 11th to the 14th of June!</p></div>',
   ),
-  45 => 
+  45 =>
   array (
     'title' => 'SymfonyLive São Paulo 2019',
-    'id' => 'http://php.net/archive/2019.php#id2019-04-02-2',
+    'id' => 'https://www.php.net/archive/2019.php#id2019-04-02-2',
     'published' => '2019-04-02T10:13:07+00:00',
     'updated' => '2019-04-02T10:13:07+00:00',
     'finalTeaserDate' => '2019-05-16',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'conferences',
         'label' => 'Conference announcement',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/conferences/index.php#id2019-04-02-2',
+        'href' => 'https://www.php.net/conferences/index.php#id2019-04-02-2',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
         'href' => 'https://brasil2019.live.symfony.com/',
         'rel' => 'via',
         'type' => 'text/html',
       ),
     ),
-    'newsImage' => 
+    'newsImage' =>
     array (
       'xmlns' => 'http://php.net/ns/news',
       'link' => 'https://brasil2019.live.symfony.com/',
@@ -2477,7 +2477,7 @@ Sorry for the inconvenience.</p>
     'content' => '<div>
      <p>The SymfonyLive conference is coming to Brazil for the first time! Join the
      big Symfony Brazilian community and learn all about the latest Symfony features.</p>
-     
+
      <p>Symfony fans, don\'t miss the opportunity to attend inspiring and exciting
      talks and hands-on workshops from the 14th to the 17th of May!</p>
     </div>
@@ -2486,37 +2486,37 @@ Sorry for the inconvenience.</p>
      big Symfony Brazilian community and learn all about the latest Symfony features.</p><p>Symfony fans, don\'t miss the opportunity to attend inspiring and exciting
      talks and hands-on workshops from the 14th to the 17th of May!</p></div>',
   ),
-  46 => 
+  46 =>
   array (
     'title' => 'SymfonyLive Tunis 2019',
-    'id' => 'http://php.net/archive/2019.php#id2019-04-02-1',
+    'id' => 'https://www.php.net/archive/2019.php#id2019-04-02-1',
     'published' => '2019-04-02T10:03:21+00:00',
     'updated' => '2019-04-02T10:03:21+00:00',
     'finalTeaserDate' => '2019-04-27',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'conferences',
         'label' => 'Conference announcement',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/conferences/index.php#id2019-04-02-1',
+        'href' => 'https://www.php.net/conferences/index.php#id2019-04-02-1',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
         'href' => 'https://tunis2019.live.symfony.com/',
         'rel' => 'via',
         'type' => 'text/html',
       ),
     ),
-    'newsImage' => 
+    'newsImage' =>
     array (
       'xmlns' => 'http://php.net/ns/news',
       'link' => 'https://tunis2019.live.symfony.com/',
@@ -2526,47 +2526,47 @@ Sorry for the inconvenience.</p>
     'content' => '<div>
      <p>The SymfonyLive conference is coming to Tunis for the first time! From the
      25th to the 27th of April there will be two workshop days and a conference day.</p>
-     
+
      <p>Symfony fans, don\'t miss the opportunity to attend inspiring and exciting
      talks and hands-on workshops!</p>
-     
+
     </div>
   ',
     'intro' => '<div><p>The SymfonyLive conference is coming to Tunis for the first time! From the
      25th to the 27th of April there will be two workshop days and a conference day.</p><p>Symfony fans, don\'t miss the opportunity to attend inspiring and exciting
      talks and hands-on workshops!</p></div>',
   ),
-  47 => 
+  47 =>
   array (
     'title' => 'Mid-Atlantic Developer Conference',
-    'id' => 'http://php.net/archive/2019.php#id2019-03-23-1',
+    'id' => 'https://www.php.net/archive/2019.php#id2019-03-23-1',
     'published' => '2019-03-23T23:55:18+00:00',
     'updated' => '2019-03-23T23:55:18+00:00',
     'finalTeaserDate' => '2019-04-13',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'cfp',
         'label' => 'Call for Papers',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/conferences/index.php#id2019-03-23-1',
+        'href' => 'https://www.php.net/conferences/index.php#id2019-03-23-1',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
         'href' => 'https://www.middevcon.com/',
         'rel' => 'via',
         'type' => 'text/html',
       ),
     ),
-    'newsImage' => 
+    'newsImage' =>
     array (
       'xmlns' => 'http://php.net/ns/news',
       'link' => 'https://www.middevcon.com/',
@@ -2579,7 +2579,7 @@ Sorry for the inconvenience.</p>
      It is designed to bring together programmers from the region for two full days of learning from each other and
      building a stronger regional community. We are currently hosting an open <a href="https://www.middevcon.com/call-for-speakers/?utm_campaign=phpnet">Call for Speakers</a>, which will end on April 13th!
      </p>
-     
+
      <p>
      We are looking for a broad range of submissions covering a wide range of topics that are of
      interest to today’s computer developers. This means not only programming topics, such as various
@@ -2587,7 +2587,7 @@ Sorry for the inconvenience.</p>
      caching, performance, scalability, APIs, etc — We also are looking for non-technical proposals that will
      appeal to a tech audience: open source, leadership, mentoring, health, work-life balance, management, customer service, and more!
      </p>
-     
+
      <p>
      Given the nature of the event, extra emphasis will be placed on submissions that appeal to a larger range of developers,
      as well as submissions from more local/regional presenters.
@@ -2606,37 +2606,37 @@ Sorry for the inconvenience.</p>
      appeal to a tech audience: open source, leadership, mentoring, health, work-life balance, management, customer service, and more!
      </p><p class=\'fullArticleLink\'><a href=\'https://www.middevcon.com/\' class>&hellip; read full article</a></p></div>',
   ),
-  48 => 
+  48 =>
   array (
     'title' => 'PHPerKaigi 2019',
-    'id' => 'http://php.net/archive/2019.php#id2019-03-13-1',
+    'id' => 'https://www.php.net/archive/2019.php#id2019-03-13-1',
     'published' => '2019-03-13T08:01:54+00:00',
     'updated' => '2019-03-13T08:01:54+00:00',
     'finalTeaserDate' => '2019-03-29',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'conferences',
         'label' => 'Conference announcement',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/conferences/index.php#id2019-03-13-1',
+        'href' => 'https://www.php.net/conferences/index.php#id2019-03-13-1',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
         'href' => 'https://phperkaigi.jp/2019/',
         'rel' => 'via',
         'type' => 'text/html',
       ),
     ),
-    'newsImage' => 
+    'newsImage' =>
     array (
       'xmlns' => 'http://php.net/ns/news',
       'link' => 'https://phperkaigi.jp/2019/',
@@ -2645,53 +2645,53 @@ Sorry for the inconvenience.</p>
     ),
     'content' => '<div>
      <p>PHPerKaigi 2019, Nerima, Tokyo, Japan.</p>
-     
+
      <p>PHPerKaigi is conference for all of the PHPer, that who using php now on, who used php in purpose, who want to use in future, and who like php. In this we sharing know-how to php and "#love" to it.</p>
-     
+
      <p>The conference consist of talk sessions by public speakers. In addition to We have  "Interactive Round Table" discuss specific themes, unconference, social gathering and so on for all of developers from all from Japan. Let\'s talking about PHP!</p>
-     
+
      <p>Follow us on twitter <a href="https://twitter.com/phperkaigi">@phperkaigi</a>, <a href="https://twitter.com/search?q=%23phperkaigi">#phperkaigi</a>.</p>
-     
+
      <p>Note:</p>
-     
+
      <p>*Kaigi* means meeting in Japanese.</p>
-     
+
      <p>*PHPer* means PHP lovers.</p>
     </div>
   ',
     'intro' => '<div><p>PHPerKaigi 2019, Nerima, Tokyo, Japan.</p><p>PHPerKaigi is conference for all of the PHPer, that who using php now on, who used php in purpose, who want to use in future, and who like php. In this we sharing know-how to php and "#love" to it.</p><p class=\'fullArticleLink\'><a href=\'https://phperkaigi.jp/2019/\' class>&hellip; read full article</a></p></div>',
   ),
-  49 => 
+  49 =>
   array (
     'title' => 'Bulgaria PHP Conference 2019',
-    'id' => 'http://php.net/archive/2019.php#id2019-03-12-3',
+    'id' => 'https://www.php.net/archive/2019.php#id2019-03-12-3',
     'published' => '2019-03-10T10:32:05+02:00',
     'updated' => '2019-03-10T10:32:05+02:00',
     'finalTeaserDate' => '2019-05-08',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'cfp',
         'label' => 'Call for Papers',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/conferences/index.php#id2019-03-12-3',
+        'href' => 'https://www.php.net/conferences/index.php#id2019-03-12-3',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
         'href' => 'https://www.bgphp.org/',
         'rel' => 'via',
         'type' => 'text/html',
       ),
     ),
-    'newsImage' => 
+    'newsImage' =>
     array (
       'xmlns' => 'http://php.net/ns/news',
       'link' => 'https://www.bgphp.org/',
@@ -2724,37 +2724,37 @@ Sorry for the inconvenience.</p>
          an unConf, a great theme, an awesome party, exquisite food and lot\'s of beer (we take fun really seriously on the Balkans).
      </p><p class=\'fullArticleLink\'><a href=\'https://www.bgphp.org/\' class>&hellip; read full article</a></p></div>',
   ),
-  50 => 
+  50 =>
   array (
     'title' => 'PHP Russia 2019',
-    'id' => 'http://php.net/archive/2019.php#id2019-03-12-2',
+    'id' => 'https://www.php.net/archive/2019.php#id2019-03-12-2',
     'published' => '2019-03-12T16:51:35+00:00',
     'updated' => '2019-03-12T16:51:35+00:00',
     'finalTeaserDate' => '2019-05-17',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'conferences',
         'label' => 'Conference announcement',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/conferences/index.php#id2019-03-12-2',
+        'href' => 'https://www.php.net/conferences/index.php#id2019-03-12-2',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
         'href' => 'https://cfp.phprussia.ru/',
         'rel' => 'via',
         'type' => 'text/html',
       ),
     ),
-    'newsImage' => 
+    'newsImage' =>
     array (
       'xmlns' => 'http://php.net/ns/news',
       'link' => 'https://cfp.phprussia.ru/',
@@ -2773,37 +2773,37 @@ Sorry for the inconvenience.</p>
   ',
     'intro' => '<div><p>PHP Russia is the only Russian confenrence focused on PHP. It will be held in Moscow Main topics are PHP ecosytem (PHP itself, standards, frameworks, libraries and OpenSource) and major players experience in building complex projects using best practices and modern approaches.</p><p>We expect 500+ attendees and 20+ speakers!</p><p class=\'fullArticleLink\'><a href=\'https://cfp.phprussia.ru/\' class>&hellip; read full article</a></p></div>',
   ),
-  51 => 
+  51 =>
   array (
     'title' => 'Web Summer Camp 2019',
-    'id' => 'http://php.net/archive/2019.php#id2019-03-12-1',
+    'id' => 'https://www.php.net/archive/2019.php#id2019-03-12-1',
     'published' => '2019-03-12T11:48:51+00:00',
     'updated' => '2019-03-12T11:48:51+00:00',
     'finalTeaserDate' => '2019-08-28',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'conferences',
         'label' => 'Conference announcement',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/conferences/index.php#id2019-03-12-1',
+        'href' => 'https://www.php.net/conferences/index.php#id2019-03-12-1',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
         'href' => 'http://websummercamp.com',
         'rel' => 'via',
         'type' => 'text/html',
       ),
     ),
-    'newsImage' => 
+    'newsImage' =>
     array (
       'xmlns' => 'http://php.net/ns/news',
       'link' => 'http://websummercamp.com',
@@ -2824,37 +2824,37 @@ Sorry for the inconvenience.</p>
   ',
     'intro' => '<div><a href="https://2019.websummercamp.com/">learn &amp; fun summer event</a><b>PHP</b><p class=\'fullArticleLink\'><a href=\'http://websummercamp.com\' class>&hellip; read full article</a></p></div>',
   ),
-  52 => 
+  52 =>
   array (
     'title' => 'Laracon EU 2019 Madrid',
-    'id' => 'http://php.net/archive/2019.php#id2019-03-11-2',
+    'id' => 'https://www.php.net/archive/2019.php#id2019-03-11-2',
     'published' => '2019-03-11T17:28:17+00:00',
     'updated' => '2019-03-11T17:28:17+00:00',
     'finalTeaserDate' => '2019-05-23',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'conferences',
         'label' => 'Conference announcement',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/conferences/index.php#id2019-03-11-2',
+        'href' => 'https://www.php.net/conferences/index.php#id2019-03-11-2',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
         'href' => 'https://laracon.eu/2019/',
         'rel' => 'via',
         'type' => 'text/html',
       ),
     ),
-    'newsImage' => 
+    'newsImage' =>
     array (
       'xmlns' => 'http://php.net/ns/news',
       'link' => 'https://laracon.eu/2019/',
@@ -2867,37 +2867,37 @@ Sorry for the inconvenience.</p>
   ',
     'intro' => '<div></div>',
   ),
-  53 => 
+  53 =>
   array (
     'title' => 'Laracon EU 2019 Amsterdam',
-    'id' => 'http://php.net/archive/2019.php#id2019-03-11-1',
+    'id' => 'https://www.php.net/archive/2019.php#id2019-03-11-1',
     'published' => '2019-03-11T17:26:39+00:00',
     'updated' => '2019-03-11T17:26:39+00:00',
     'finalTeaserDate' => '2019-08-28',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'conferences',
         'label' => 'Conference announcement',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/conferences/index.php#id2019-03-11-1',
+        'href' => 'https://www.php.net/conferences/index.php#id2019-03-11-1',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
         'href' => 'https://laracon.eu/2019/',
         'rel' => 'via',
         'type' => 'text/html',
       ),
     ),
-    'newsImage' => 
+    'newsImage' =>
     array (
       'xmlns' => 'http://php.net/ns/news',
       'link' => 'https://laracon.eu/2019/',
@@ -2910,36 +2910,36 @@ Sorry for the inconvenience.</p>
   ',
     'intro' => '<div></div>',
   ),
-  54 => 
+  54 =>
   array (
     'title' => 'PHP 7.1.27 Released',
-    'id' => 'http://php.net/archive/2019.php#id2019-03-07-3',
+    'id' => 'https://www.php.net/archive/2019.php#id2019-03-07-3',
     'published' => '2019-03-07T11:49:58+00:00',
     'updated' => '2019-03-07T11:49:58+00:00',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'frontpage',
         'label' => 'PHP.net frontpage news',
       ),
-      1 => 
+      1 =>
       array (
         'term' => 'releases',
         'label' => 'New PHP release',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/index.php#id2019-03-07-3',
+        'href' => 'https://www.php.net/index.php#id2019-03-07-3',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
-        'href' => 'http://php.net/archive/2019.php#id2019-03-07-3',
+        'href' => 'https://www.php.net/archive/2019.php#id2019-03-07-3',
         'rel' => 'via',
         'type' => 'text/html',
       ),
@@ -2947,48 +2947,48 @@ Sorry for the inconvenience.</p>
     'content' => '<div>
        <p>The PHP development team announces the immediate availability of PHP
        7.1.27. This is a security release which also contains several bug fixes.</p>
-     
+
        <p>All PHP 7.1 users are encouraged to upgrade to this version.</p>
-     
-       <p>For source downloads of PHP 7.1.27 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-       Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-       The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.1.27">ChangeLog</a>.
+
+       <p>For source downloads of PHP 7.1.27 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
+       Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
+       The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-7.php#7.1.27">ChangeLog</a>.
        </p>
     </div>
   ',
     'intro' => '<div><p>The PHP development team announces the immediate availability of PHP
-       7.1.27. This is a security release which also contains several bug fixes.</p><p>All PHP 7.1 users are encouraged to upgrade to this version.</p><p class=\'fullArticleLink\'><a href=\'http://php.net/archive/2019.php#id2019-03-07-3\' class>&hellip; read full article</a></p></div>',
+       7.1.27. This is a security release which also contains several bug fixes.</p><p>All PHP 7.1 users are encouraged to upgrade to this version.</p><p class=\'fullArticleLink\'><a href=\'https://www.php.net/archive/2019.php#id2019-03-07-3\' class>&hellip; read full article</a></p></div>',
   ),
-  55 => 
+  55 =>
   array (
     'title' => 'PHP 7.2.16 Released',
-    'id' => 'http://php.net/archive/2019.php#id2019-03-07-2',
+    'id' => 'https://www.php.net/archive/2019.php#id2019-03-07-2',
     'published' => '2019-03-07T10:08:52+00:00',
     'updated' => '2019-03-07T10:08:52+00:00',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'frontpage',
         'label' => 'PHP.net frontpage news',
       ),
-      1 => 
+      1 =>
       array (
         'term' => 'releases',
         'label' => 'New PHP release',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/index.php#id2019-03-07-2',
+        'href' => 'https://www.php.net/index.php#id2019-03-07-2',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
-        'href' => 'http://php.net/archive/2019.php#id2019-03-07-2',
+        'href' => 'https://www.php.net/archive/2019.php#id2019-03-07-2',
         'rel' => 'via',
         'type' => 'text/html',
       ),
@@ -2999,45 +2999,45 @@ Sorry for the inconvenience.</p>
 
      <p>All PHP 7.2 users are encouraged to upgrade to this version.</p>
 
-     <p>For source downloads of PHP 7.2.16 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-     The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.2.16">ChangeLog</a>.
+     <p>For source downloads of PHP 7.2.16 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
+     Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
+     The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-7.php#7.2.16">ChangeLog</a>.
      </p>
     </div>
   ',
     'intro' => '<div><p>The PHP development team announces the immediate availability of PHP
-     7.2.16. This is a security release which also contains several minor bug fixes.</p><p>All PHP 7.2 users are encouraged to upgrade to this version.</p><p class=\'fullArticleLink\'><a href=\'http://php.net/archive/2019.php#id2019-03-07-2\' class>&hellip; read full article</a></p></div>',
+     7.2.16. This is a security release which also contains several minor bug fixes.</p><p>All PHP 7.2 users are encouraged to upgrade to this version.</p><p class=\'fullArticleLink\'><a href=\'https://www.php.net/archive/2019.php#id2019-03-07-2\' class>&hellip; read full article</a></p></div>',
   ),
-  56 => 
+  56 =>
   array (
     'title' => 'PHP 7.3.3 Released',
-    'id' => 'http://php.net/archive/2019.php#id2019-03-07-1',
+    'id' => 'https://www.php.net/archive/2019.php#id2019-03-07-1',
     'published' => '2019-03-07T10:10:40+01:00',
     'updated' => '2019-03-07T10:10:40+01:00',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'frontpage',
         'label' => 'PHP.net frontpage news',
       ),
-      1 => 
+      1 =>
       array (
         'term' => 'releases',
         'label' => 'New PHP release',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/index.php#id2019-03-07-1',
+        'href' => 'https://www.php.net/index.php#id2019-03-07-1',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
-        'href' => 'http://php.net/archive/2019.php#id2019-03-07-1',
+        'href' => 'https://www.php.net/archive/2019.php#id2019-03-07-1',
         'rel' => 'via',
         'type' => 'text/html',
       ),
@@ -3048,46 +3048,46 @@ Sorry for the inconvenience.</p>
 
       <p>All PHP 7.3 users are encouraged to upgrade to this version.</p>
 
-      <p>For source downloads of PHP 7.3.3 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-      Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.3.3">ChangeLog</a>.
+      <p>For source downloads of PHP 7.3.3 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
+      Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
+      The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-7.php#7.3.3">ChangeLog</a>.
       </p>
     </div>
   ',
     'intro' => '<div><p>The PHP development team announces the immediate availability of PHP
-      7.3.3. This is a security release which also contains several bug fixes.</p><p>All PHP 7.3 users are encouraged to upgrade to this version.</p><p class=\'fullArticleLink\'><a href=\'http://php.net/archive/2019.php#id2019-03-07-1\' class>&hellip; read full article</a></p></div>',
+      7.3.3. This is a security release which also contains several bug fixes.</p><p>All PHP 7.3 users are encouraged to upgrade to this version.</p><p class=\'fullArticleLink\'><a href=\'https://www.php.net/archive/2019.php#id2019-03-07-1\' class>&hellip; read full article</a></p></div>',
   ),
-  57 => 
+  57 =>
   array (
     'title' => 'Bulgaria PHP Conference 2019',
-    'id' => 'http://php.net/archive/2019.php#id2019-03-03-1',
+    'id' => 'https://www.php.net/archive/2019.php#id2019-03-03-1',
     'published' => '2019-03-03T13:37:07+02:00',
     'updated' => '2019-03-03T13:37:07+02:00',
     'finalTeaserDate' => '2019-11-08',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'conferences',
         'label' => 'Conference announcement',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/conferences/index.php#id2019-03-03-1',
+        'href' => 'https://www.php.net/conferences/index.php#id2019-03-03-1',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
         'href' => 'https://www.bgphp.org/',
         'rel' => 'via',
         'type' => 'text/html',
       ),
     ),
-    'newsImage' => 
+    'newsImage' =>
     array (
       'xmlns' => 'http://php.net/ns/news',
       'link' => 'https://www.bgphp.org/',
@@ -3100,9 +3100,9 @@ Sorry for the inconvenience.</p>
      in the emblematic National Palace of Culture in the heart of Sofia, Bulgaria.
      The conference will consist of a training day and two conference days with two tracks,
      an unConf, a great theme, an awesome party, exquisite food and lot\'s of beer (we take fun really seriously on the Balkans).</p>
-     
+
      <p>Follow us on twitter <a href="https://twitter.com/bgphpconf">@bgphpconf</a>, on <a href="https://www.bgphp.org/">www.bgphp.org</a> and on our Facebook page <a href="https://www.facebook.com/Bulgaria-PHP-Conference-792916594079571">https://www.facebook.com/Bulgaria-PHP-Conference-792916594079571</a> for more news!</p>
-     
+
      <p>Our Call for Papers will start on the 8th of March, so, please, do apply and see you in November in Bulgaria!</p>
     </div>
   ',
@@ -3111,37 +3111,37 @@ Sorry for the inconvenience.</p>
      The conference will consist of a training day and two conference days with two tracks,
      an unConf, a great theme, an awesome party, exquisite food and lot\'s of beer (we take fun really seriously on the Balkans).</p><p class=\'fullArticleLink\'><a href=\'https://www.bgphp.org/\' class>&hellip; read full article</a></p></div>',
   ),
-  58 => 
+  58 =>
   array (
     'title' => 'Longhorn PHP 2019 Schedule',
-    'id' => 'http://php.net/archive/2019.php#id2019-02-14-1',
+    'id' => 'https://www.php.net/archive/2019.php#id2019-02-14-1',
     'published' => '2019-02-14T15:03:51+00:00',
     'updated' => '2019-02-14T15:03:51+00:00',
     'finalTeaserDate' => '2019-02-14',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'conferences',
         'label' => 'Conference announcement',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/conferences/index.php#id2019-02-14-1',
+        'href' => 'https://www.php.net/conferences/index.php#id2019-02-14-1',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
         'href' => 'https://www.longhornphp.com/',
         'rel' => 'via',
         'type' => 'text/html',
       ),
     ),
-    'newsImage' => 
+    'newsImage' =>
     array (
       'xmlns' => 'http://php.net/ns/news',
       'link' => 'https://www.longhornphp.com/',
@@ -3149,50 +3149,50 @@ Sorry for the inconvenience.</p>
       'content' => 'longhornphp.png',
     ),
     'content' => '<div>
-     The Longhorn PHP Schedule has been announced - we have an amazing list of speakers this year, you won\'t want to miss it! 
+     The Longhorn PHP Schedule has been announced - we have an amazing list of speakers this year, you won\'t want to miss it!
 
 At Longhorn PHP you\'ll get to learn from and alongside a diverse group of developers from all over the region, country, and even the globe. The conference will consist of a tutorial day with in-depth workshops, followed by two main conference days with multiple tracks of traditional 1 hour sessions, and new 30 minute sessions! Register now to take the next step toward leveling up your development career!
-     
+
      Early Bird Tickets are on sale until March 15, 2019, so get yours now before the price increases!
-     
-     <b>Dates</b>: May 2nd-4th, 2019  
+
+     <b>Dates</b>: May 2nd-4th, 2019
 
 <b>Website</b>: https://www.longhornphp.com
     </div>
   ',
     'intro' => '<div><b>Dates</b><b>Website</b></div>',
   ),
-  59 => 
+  59 =>
   array (
     'title' => 'PHP.Barcelona 2019',
-    'id' => 'http://php.net/archive/2019.php#id2019-02-07-3',
+    'id' => 'https://www.php.net/archive/2019.php#id2019-02-07-3',
     'published' => '2019-02-07T15:22:17+00:00',
     'updated' => '2019-02-07T15:22:17+00:00',
     'finalTeaserDate' => '2019-11-12',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'conferences',
         'label' => 'Conference announcement',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/conferences/index.php#id2019-02-07-3',
+        'href' => 'https://www.php.net/conferences/index.php#id2019-02-07-3',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
         'href' => 'https://php.barcelona/',
         'rel' => 'via',
         'type' => 'text/html',
       ),
     ),
-    'newsImage' => 
+    'newsImage' =>
     array (
       'xmlns' => 'http://php.net/ns/news',
       'link' => 'https://php.barcelona/',
@@ -3206,36 +3206,36 @@ At Longhorn PHP you\'ll get to learn from and alongside a diverse group of devel
   ',
     'intro' => '<div><p>What an incredible 2018 and 2019 for the PHP community! Part of the PHP Core Team that was working for Zend left. Some found excellent companies and they are rocking most than ever, like Nikita at JetBrains. PHP 7.4 is about to be released, and PHP 8 has been branched. Lavarel and Symfony have healthy growth. JIT is part of the imminent future, and I/O non-blocking frameworks are getting more often adopted in production.</p><p>We\'ve crafted the best PHP conference possible just for you. To allow you to see the future and get ready before nobody else. You\'ll gather top-notch speakers and an awesome community eager to share a lot of knowledge. All of this will take place in the very center of the gorgeous city of Barcelona in an excellent venue. What are you waiting for? Go get your tickets <a href="https://php.barcelona/tickets" target="_blank">here</a>!</p></div>',
   ),
-  60 => 
+  60 =>
   array (
     'title' => 'PHP 7.2.15 Released',
-    'id' => 'http://php.net/archive/2019.php#id2019-02-07-2',
+    'id' => 'https://www.php.net/archive/2019.php#id2019-02-07-2',
     'published' => '2019-02-07T11:30:07+00:00',
     'updated' => '2019-02-07T11:30:07+00:00',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'frontpage',
         'label' => 'PHP.net frontpage news',
       ),
-      1 => 
+      1 =>
       array (
         'term' => 'releases',
         'label' => 'New PHP release',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/index.php#id2019-02-07-2',
+        'href' => 'https://www.php.net/index.php#id2019-02-07-2',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
-        'href' => 'http://php.net/archive/2019.php#id2019-02-07-2',
+        'href' => 'https://www.php.net/archive/2019.php#id2019-02-07-2',
         'rel' => 'via',
         'type' => 'text/html',
       ),
@@ -3246,45 +3246,45 @@ At Longhorn PHP you\'ll get to learn from and alongside a diverse group of devel
 
       <p>All PHP 7.2 users are encouraged to upgrade to this version.</p>
 
-      <p>For source downloads of PHP 7.2.15 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-      Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.2.15">ChangeLog</a>.
+      <p>For source downloads of PHP 7.2.15 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
+      Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
+      The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-7.php#7.2.15">ChangeLog</a>.
       </p>
     </div>
   ',
     'intro' => '<div><p>The PHP development team announces the immediate availability of PHP 7.2.15.
-      This is a bugfix release.</p><p>All PHP 7.2 users are encouraged to upgrade to this version.</p><p class=\'fullArticleLink\'><a href=\'http://php.net/archive/2019.php#id2019-02-07-2\' class>&hellip; read full article</a></p></div>',
+      This is a bugfix release.</p><p>All PHP 7.2 users are encouraged to upgrade to this version.</p><p class=\'fullArticleLink\'><a href=\'https://www.php.net/archive/2019.php#id2019-02-07-2\' class>&hellip; read full article</a></p></div>',
   ),
-  61 => 
+  61 =>
   array (
     'title' => 'PHP 7.3.2 Release Announcement',
-    'id' => 'http://php.net/archive/2019.php#id2019-02-07-1',
+    'id' => 'https://www.php.net/archive/2019.php#id2019-02-07-1',
     'published' => '2019-02-07T12:00:19+01:00',
     'updated' => '2019-02-07T12:00:19+01:00',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'frontpage',
         'label' => 'PHP.net frontpage news',
       ),
-      1 => 
+      1 =>
       array (
         'term' => 'releases',
         'label' => 'New PHP release',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/index.php#id2019-02-07-1',
+        'href' => 'https://www.php.net/index.php#id2019-02-07-1',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
-        'href' => 'http://php.net/archive/2019.php#id2019-02-07-1',
+        'href' => 'https://www.php.net/archive/2019.php#id2019-02-07-1',
         'rel' => 'via',
         'type' => 'text/html',
       ),
@@ -3292,49 +3292,49 @@ At Longhorn PHP you\'ll get to learn from and alongside a diverse group of devel
     'content' => '<div>
       <p>The PHP development team announces the immediate availability of PHP
       7.3.2. This is a bugfix release, with several bug fixes included.</p>
-    
+
       <p>All PHP 7.3 users are encouraged to upgrade to this version.</p>
-    
-      <p>For source downloads of PHP 7.3.2 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-      Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.3.2">ChangeLog</a>.
+
+      <p>For source downloads of PHP 7.3.2 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
+      Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
+      The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-7.php#7.3.2">ChangeLog</a>.
       </p>
     </div>
   ',
     'intro' => '<div><p>The PHP development team announces the immediate availability of PHP
-      7.3.2. This is a bugfix release, with several bug fixes included.</p><p>All PHP 7.3 users are encouraged to upgrade to this version.</p><p class=\'fullArticleLink\'><a href=\'http://php.net/archive/2019.php#id2019-02-07-1\' class>&hellip; read full article</a></p></div>',
+      7.3.2. This is a bugfix release, with several bug fixes included.</p><p>All PHP 7.3 users are encouraged to upgrade to this version.</p><p class=\'fullArticleLink\'><a href=\'https://www.php.net/archive/2019.php#id2019-02-07-1\' class>&hellip; read full article</a></p></div>',
   ),
-  62 => 
+  62 =>
   array (
     'title' => 'Midwest PHP 2019',
-    'id' => 'http://php.net/archive/2019.php#id2019-02-06-1',
+    'id' => 'https://www.php.net/archive/2019.php#id2019-02-06-1',
     'published' => '2019-02-06T11:22:01+00:00',
     'updated' => '2019-02-06T11:22:01+00:00',
     'finalTeaserDate' => '2019-03-08',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'conferences',
         'label' => 'Conference announcement',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/conferences/index.php#id2019-02-06-1',
+        'href' => 'https://www.php.net/conferences/index.php#id2019-02-06-1',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
         'href' => 'https://2019.midwestphp.org',
         'rel' => 'via',
         'type' => 'text/html',
       ),
     ),
-    'newsImage' => 
+    'newsImage' =>
     array (
       'xmlns' => 'http://php.net/ns/news',
       'link' => 'https://2019.midwestphp.org',
@@ -3348,37 +3348,37 @@ At Longhorn PHP you\'ll get to learn from and alongside a diverse group of devel
   ',
     'intro' => '<div><p>The Midwest PHP Conference is hosted by the Minnesota PHP User Group community through the North Foundation in Bloomington, Minnesota from March 8th - 9th, 2019. This is our seventh year and each year the conference continues to become better. Our goal is to share best practices, ideas, and techniques about building state-of-the-art software applications.</p><p>The conference is at the Radisson Blu Mall of America in Bloomington, Minnesota. We can\'t think of a better place to connect with friends, old and new, than in a relaxed environment with entertainment at your front door, and inspiring talks from people doing amazing things.</p></div>',
   ),
-  63 => 
+  63 =>
   array (
     'title' => 'JestPHP Conference - February 22nd 2019, Mesa Arizona',
-    'id' => 'http://php.net/archive/2019.php#id2019-02-01-1',
+    'id' => 'https://www.php.net/archive/2019.php#id2019-02-01-1',
     'published' => '2019-02-01T18:59:28+00:00',
     'updated' => '2019-02-01T18:59:28+00:00',
     'finalTeaserDate' => '2018-12-01',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'conferences',
         'label' => 'Conference announcement',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/conferences/index.php#id2019-02-01-1',
+        'href' => 'https://www.php.net/conferences/index.php#id2019-02-01-1',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
         'href' => 'https://jestphp.com/',
         'rel' => 'via',
         'type' => 'text/html',
       ),
     ),
-    'newsImage' => 
+    'newsImage' =>
     array (
       'xmlns' => 'http://php.net/ns/news',
       'link' => 'https://jestphp.com/',
@@ -3391,37 +3391,37 @@ At Longhorn PHP you\'ll get to learn from and alongside a diverse group of devel
   ',
     'intro' => '<div></div>',
   ),
-  64 => 
+  64 =>
   array (
     'title' => 'CoderCruise 2019 - Call for Speakers',
-    'id' => 'http://php.net/archive/2019.php#id2019-01-31-1',
+    'id' => 'https://www.php.net/archive/2019.php#id2019-01-31-1',
     'published' => '2019-01-31T22:01:27+00:00',
     'updated' => '2019-01-31T22:01:27+00:00',
     'finalTeaserDate' => '2019-03-03',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'cfp',
         'label' => 'Call for Papers',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/conferences/index.php#id2019-01-31-1',
+        'href' => 'https://www.php.net/conferences/index.php#id2019-01-31-1',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
         'href' => 'https://www.codercruise.com/',
         'rel' => 'via',
         'type' => 'text/html',
       ),
     ),
-    'newsImage' => 
+    'newsImage' =>
     array (
       'xmlns' => 'http://php.net/ns/news',
       'link' => 'https://www.codercruise.com/',
@@ -3436,37 +3436,37 @@ At Longhorn PHP you\'ll get to learn from and alongside a diverse group of devel
   ',
     'intro' => '<div><p>Now for the 3rd year the team behind the original php[cruise] is bringing a conference to the open seas. <a href="https://www.codercruise.com/?utm_campaign=ccphp19">CoderCruise 2019</a> will be a premiere conference experience, giving you an exclusive connection to your fellow community members. It will set sail from Port Canaveral on August 19th for a 5 day cruise that also visits Princess Cays and Nassau!</p><p>Just like last year we\'ve negotiated a low rate for our participants that is all inclusive, <a href="https://www.codercruise.com/register/?utm_campaign=ccphp19">starting as low as $435</a> per person (including 5-day cruise, food, drink <b>and the conference</b>!)</p><p class=\'fullArticleLink\'><a href=\'https://www.codercruise.com/\' class>&hellip; read full article</a></p></div>',
   ),
-  65 => 
+  65 =>
   array (
     'title' => 'php[tek] 2019',
-    'id' => 'http://php.net/archive/2019.php#id2019-01-29-1',
+    'id' => 'https://www.php.net/archive/2019.php#id2019-01-29-1',
     'published' => '2019-01-29T17:59:31+00:00',
     'updated' => '2019-01-29T17:59:31+00:00',
     'finalTeaserDate' => '2019-05-21',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'conferences',
         'label' => 'Conference announcement',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/conferences/index.php#id2019-01-29-1',
+        'href' => 'https://www.php.net/conferences/index.php#id2019-01-29-1',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
         'href' => 'https://tek.phparch.com/',
         'rel' => 'via',
         'type' => 'text/html',
       ),
     ),
-    'newsImage' => 
+    'newsImage' =>
     array (
       'xmlns' => 'http://php.net/ns/news',
       'link' => 'https://tek.phparch.com/',
@@ -3481,42 +3481,42 @@ At Longhorn PHP you\'ll get to learn from and alongside a diverse group of devel
      <p>Each track’s design is a <a href="https://tek.phparch.com/schedule/?utm_campaign=phpnet2019">series of new talks</a> that flow together smoothly, and yet, you can drop in/out of a track throughout the day as needed.  Each session is in a 1-hr timeslot.  You can choose to sit in one room all day and learn a topic from beginning to end or bounce between the various tracks, putting together a unique learning experience tailored to your needs.  The choice is yours.</p>
      <p>We hope that you <a href="https://tek.phparch.com/registration/?utm_campaign=phpnet2019">choose to join us </a>for this unique experience.  <a href="https://tek.phparch.com/registration/?utm_campaign=phpnet2019">Ticket sales are open</a> with a few different price points, and the earlier you buy, the more you save.</p>
      <p>See you in Atlanta!</p>
-     
+
     </div>
   ',
     'intro' => '<div><p>We are announcing some exciting changes to <a href="https://tek.phparch.com/?utm_campaign=phpnet2019">php[tek]</a> in 2019, our 14th consecutive year for this event!</p><p>Once again we\'ll be taking place in <a href="https://tek.phparch.com/venue/?utm_campaign=phpnet2019">Atlanta</a> in May, but this year we are moving to 3 full days of conference sessions: May 21-23</p><p class=\'fullArticleLink\'><a href=\'https://tek.phparch.com/\' class>&hellip; read full article</a></p></div>',
   ),
-  66 => 
+  66 =>
   array (
     'title' => 'Laracon Online',
-    'id' => 'http://php.net/archive/2019.php#id2019-01-22-1',
+    'id' => 'https://www.php.net/archive/2019.php#id2019-01-22-1',
     'published' => '2019-01-22T02:42:11+00:00',
     'updated' => '2019-01-22T02:42:11+00:00',
     'finalTeaserDate' => '2019-03-06',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'conferences',
         'label' => 'Conference announcement',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/conferences/index.php#id2019-01-22-1',
+        'href' => 'https://www.php.net/conferences/index.php#id2019-01-22-1',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
         'href' => 'https://laracon.net/',
         'rel' => 'via',
         'type' => 'text/html',
       ),
     ),
-    'newsImage' => 
+    'newsImage' =>
     array (
       'xmlns' => 'http://php.net/ns/news',
       'link' => 'https://laracon.net/',
@@ -3525,7 +3525,7 @@ At Longhorn PHP you\'ll get to learn from and alongside a diverse group of devel
     ),
     'content' => '<div>
         <p><a href="https://laracon.net">Laracon Online</a> is the easiest and most affordable way to get the Laracon experience from anywhere in the world. </p>
-     
+
      <p>We’ve put together a full day of talks featuring some of Laravel’s brightest minds, and streaming them directly to your home or office.</p>
 
      <p>These talks are brand new, never before presented at any Laracon and tickets are just $12 during early registration. Don\'t miss the largest Laravel event ever!</p>
@@ -3533,37 +3533,37 @@ At Longhorn PHP you\'ll get to learn from and alongside a diverse group of devel
   ',
     'intro' => '<div><p><a href="https://laracon.net">Laracon Online</a> is the easiest and most affordable way to get the Laracon experience from anywhere in the world. </p><p>Weâve put together a full day of talks featuring some of Laravelâs brightest minds, and streaming them directly to your home or office.</p><p class=\'fullArticleLink\'><a href=\'https://laracon.net/\' class>&hellip; read full article</a></p></div>',
   ),
-  67 => 
+  67 =>
   array (
     'title' => 'ScotlandPHP 2019',
-    'id' => 'http://php.net/archive/2019.php#id2019-01-15-1',
+    'id' => 'https://www.php.net/archive/2019.php#id2019-01-15-1',
     'published' => '2019-01-15T21:41:40+00:00',
     'updated' => '2019-01-15T21:41:40+00:00',
     'finalTeaserDate' => '2019-03-31',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'cfp',
         'label' => 'Call for Papers',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/conferences/index.php#id2019-01-15-1',
+        'href' => 'https://www.php.net/conferences/index.php#id2019-01-15-1',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
         'href' => 'https://scophp.co/2019/',
         'rel' => 'via',
         'type' => 'text/html',
       ),
     ),
-    'newsImage' => 
+    'newsImage' =>
     array (
       'xmlns' => 'http://php.net/ns/news',
       'link' => 'https://scophp.co/2019/',
@@ -3572,42 +3572,42 @@ At Longhorn PHP you\'ll get to learn from and alongside a diverse group of devel
     ),
     'content' => '<div>
      We are delighted to announce we are back in 2019 to do it all again! We will be staying put this year at the EICC in Edinburgh but the date has shifted forward a little to the 9th of November. Make sure to stick it in your diary!
-     
+
      No conference is possible without speakers and we\'re happy to announce this years call for speakers is open from Febuary 1st to March 31st.
     </div>
   ',
     'intro' => '<div></div>',
   ),
-  68 => 
+  68 =>
   array (
     'title' => 'PHP 5.6.40 Released',
-    'id' => 'http://php.net/archive/2019.php#id2019-01-10-4',
+    'id' => 'https://www.php.net/archive/2019.php#id2019-01-10-4',
     'published' => '2019-01-10T15:01:12-08:00',
     'updated' => '2019-01-10T15:01:12-08:00',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'frontpage',
         'label' => 'PHP.net frontpage news',
       ),
-      1 => 
+      1 =>
       array (
         'term' => 'releases',
         'label' => 'New PHP release',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/index.php#id2019-01-10-4',
+        'href' => 'https://www.php.net/index.php#id2019-01-10-4',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
-        'href' => 'http://php.net/archive/2019.php#id2019-01-10-4',
+        'href' => 'https://www.php.net/archive/2019.php#id2019-01-10-4',
         'rel' => 'via',
         'type' => 'text/html',
       ),
@@ -3620,12 +3620,12 @@ At Longhorn PHP you\'ll get to learn from and alongside a diverse group of devel
      All PHP 5.6 users are encouraged to upgrade to this version.
      </p>
 
-     <p>For source downloads of PHP 5.6.40 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-     The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.6.40">ChangeLog</a>.
+     <p>For source downloads of PHP 5.6.40 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
+     Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
+     The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-5.php#5.6.40">ChangeLog</a>.
      </p>
 
-     <p>Please note that according to the <a href="http://php.net/supported-versions.php">PHP version
+     <p>Please note that according to the <a href="https://www.php.net/supported-versions.php">PHP version
 support timelines</a>,
         PHP 5.6.40 is the last scheduled release of PHP 5.6 branch. There may be additional release if we
 discover
@@ -3642,41 +3642,41 @@ the upgrade
      in this release.
 
      All PHP 5.6 users are encouraged to upgrade to this version.
-     </p><p>For source downloads of PHP 5.6.40 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-     The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.6.40">ChangeLog</a>.
-     </p><p class=\'fullArticleLink\'><a href=\'http://php.net/archive/2019.php#id2019-01-10-4\' class>&hellip; read full article</a></p></div>',
+     </p><p>For source downloads of PHP 5.6.40 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
+     Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
+     The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-5.php#5.6.40">ChangeLog</a>.
+     </p><p class=\'fullArticleLink\'><a href=\'https://www.php.net/archive/2019.php#id2019-01-10-4\' class>&hellip; read full article</a></p></div>',
   ),
-  69 => 
+  69 =>
   array (
     'title' => 'PHP 7.1.26 Release Announcement',
-    'id' => 'http://php.net/archive/2019.php#id2019-01-10-3',
+    'id' => 'https://www.php.net/archive/2019.php#id2019-01-10-3',
     'published' => '2019-01-10T18:52:00+00:00',
     'updated' => '2019-01-10T18:52:00+00:00',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'frontpage',
         'label' => 'PHP.net frontpage news',
       ),
-      1 => 
+      1 =>
       array (
         'term' => 'releases',
         'label' => 'New PHP release',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/index.php#id2019-01-10-3',
+        'href' => 'https://www.php.net/index.php#id2019-01-10-3',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
-        'href' => 'http://php.net/archive/2019.php#id2019-01-10-3',
+        'href' => 'https://www.php.net/archive/2019.php#id2019-01-10-3',
         'rel' => 'via',
         'type' => 'text/html',
       ),
@@ -3684,48 +3684,48 @@ the upgrade
     'content' => '<div>
        <p>The PHP development team announces the immediate availability of PHP
        7.1.26. This is a security release which also contains several bug fixes.</p>
-     
+
        <p>All PHP 7.1 users are encouraged to upgrade to this version.</p>
-     
-       <p>For source downloads of PHP 7.1.26 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-       Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-       The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.1.26">ChangeLog</a>.
+
+       <p>For source downloads of PHP 7.1.26 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
+       Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
+       The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-7.php#7.1.26">ChangeLog</a>.
        </p>
     </div>
   ',
     'intro' => '<div><p>The PHP development team announces the immediate availability of PHP
-       7.1.26. This is a security release which also contains several bug fixes.</p><p>All PHP 7.1 users are encouraged to upgrade to this version.</p><p class=\'fullArticleLink\'><a href=\'http://php.net/archive/2019.php#id2019-01-10-3\' class>&hellip; read full article</a></p></div>',
+       7.1.26. This is a security release which also contains several bug fixes.</p><p>All PHP 7.1 users are encouraged to upgrade to this version.</p><p class=\'fullArticleLink\'><a href=\'https://www.php.net/archive/2019.php#id2019-01-10-3\' class>&hellip; read full article</a></p></div>',
   ),
-  70 => 
+  70 =>
   array (
     'title' => 'PHP 7.3.1 Released',
-    'id' => 'http://php.net/archive/2019.php#id2019-01-10-2',
+    'id' => 'https://www.php.net/archive/2019.php#id2019-01-10-2',
     'published' => '2019-01-10T11:51:06+01:00',
     'updated' => '2019-01-10T11:51:06+01:00',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'frontpage',
         'label' => 'PHP.net frontpage news',
       ),
-      1 => 
+      1 =>
       array (
         'term' => 'releases',
         'label' => 'New PHP release',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/index.php#id2019-01-10-2',
+        'href' => 'https://www.php.net/index.php#id2019-01-10-2',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
-        'href' => 'http://php.net/archive/2019.php#id2019-01-10-2',
+        'href' => 'https://www.php.net/archive/2019.php#id2019-01-10-2',
         'rel' => 'via',
         'type' => 'text/html',
       ),
@@ -3736,45 +3736,45 @@ the upgrade
 
       <p>All PHP 7.3 users are encouraged to upgrade to this version.</p>
 
-      <p>For source downloads of PHP 7.3.1 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-      Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.3.1">ChangeLog</a>.
+      <p>For source downloads of PHP 7.3.1 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
+      Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
+      The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-7.php#7.3.1">ChangeLog</a>.
       </p>
     </div>
   ',
     'intro' => '<div><p>The PHP development team announces the immediate availability of PHP
-      7.3.1. This is a security release which also contains several bug fixes.</p><p>All PHP 7.3 users are encouraged to upgrade to this version.</p><p class=\'fullArticleLink\'><a href=\'http://php.net/archive/2019.php#id2019-01-10-2\' class>&hellip; read full article</a></p></div>',
+      7.3.1. This is a security release which also contains several bug fixes.</p><p>All PHP 7.3 users are encouraged to upgrade to this version.</p><p class=\'fullArticleLink\'><a href=\'https://www.php.net/archive/2019.php#id2019-01-10-2\' class>&hellip; read full article</a></p></div>',
   ),
-  71 => 
+  71 =>
   array (
     'title' => 'PHP 7.2.14 Released',
-    'id' => 'http://php.net/archive/2019.php#id2019-01-10-1',
+    'id' => 'https://www.php.net/archive/2019.php#id2019-01-10-1',
     'published' => '2019-01-10T08:30:27+00:00',
     'updated' => '2019-01-10T08:30:27+00:00',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'frontpage',
         'label' => 'PHP.net frontpage news',
       ),
-      1 => 
+      1 =>
       array (
         'term' => 'releases',
         'label' => 'New PHP release',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/index.php#id2019-01-10-1',
+        'href' => 'https://www.php.net/index.php#id2019-01-10-1',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
-        'href' => 'http://php.net/archive/2019.php#id2019-01-10-1',
+        'href' => 'https://www.php.net/archive/2019.php#id2019-01-10-1',
         'rel' => 'via',
         'type' => 'text/html',
       ),
@@ -3785,46 +3785,46 @@ the upgrade
 
      <p>All PHP 7.2 users are encouraged to upgrade to this version.</p>
 
-     <p>For source downloads of PHP 7.2.14 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-     The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.2.14">ChangeLog</a>.
+     <p>For source downloads of PHP 7.2.14 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
+     Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
+     The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-7.php#7.2.14">ChangeLog</a>.
      </p>
     </div>
   ',
     'intro' => '<div><p>The PHP development team announces the immediate availability of PHP
-     7.2.14. This is a security release which also contains several minor bug fixes.</p><p>All PHP 7.2 users are encouraged to upgrade to this version.</p><p class=\'fullArticleLink\'><a href=\'http://php.net/archive/2019.php#id2019-01-10-1\' class>&hellip; read full article</a></p></div>',
+     7.2.14. This is a security release which also contains several minor bug fixes.</p><p>All PHP 7.2 users are encouraged to upgrade to this version.</p><p class=\'fullArticleLink\'><a href=\'https://www.php.net/archive/2019.php#id2019-01-10-1\' class>&hellip; read full article</a></p></div>',
   ),
-  72 => 
+  72 =>
   array (
     'title' => 'SunshinePHP 2019',
-    'id' => 'http://php.net/archive/2018.php#id2018-12-15-1',
+    'id' => 'https://www.php.net/archive/2018.php#id2018-12-15-1',
     'published' => '2018-12-15T00:00:01+00:00',
     'updated' => '2018-12-15T12:23:00+00:00',
     'finalTeaserDate' => '2019-02-06',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'conferences',
         'label' => 'Conference Announcement',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/conferences/index.php#id2018-12-15-1',
+        'href' => 'https://www.php.net/conferences/index.php#id2018-12-15-1',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
         'href' => 'http://sunshinephp.com',
         'rel' => 'via',
         'type' => 'text/html',
       ),
     ),
-    'newsImage' => 
+    'newsImage' =>
     array (
       'xmlns' => 'http://php.net/ns/news',
       'link' => 'http://sunshinephp.com',
@@ -3861,37 +3861,37 @@ the upgrade
 	',
     'intro' => '<div><p>In February 2019 come to Miami, Florida and escape the cold to learn more about PHP and speak with other developers, like you, to see what others are doing. The <a href="http://sunshinephp.com/speakers" title="SunshinePHP 2019 Speaker List">SunshinePHP 2019 speaker list</a> has been announced, and we\'ve assembled a great line-up with the most current PHP related topics for you.</p><p>Topics include:</p><p class=\'fullArticleLink\'><a href=\'http://sunshinephp.com\' class>&hellip; read full article</a></p></div>',
   ),
-  73 => 
+  73 =>
   array (
     'title' => 'PHPKonf Istanbul PHP Conference 2019 - Call for Papers',
-    'id' => 'http://php.net/archive/2018.php#id2018-12-10-1',
+    'id' => 'https://www.php.net/archive/2018.php#id2018-12-10-1',
     'published' => '2018-12-10T09:00:00+00:00',
     'updated' => '2018-12-10T09:00:00+00:00',
     'finalTeaserDate' => '2019-01-31',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'cfp',
         'label' => 'Call for Papers',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/conferences/index.php#id2018-12-10-1',
+        'href' => 'https://www.php.net/conferences/index.php#id2018-12-10-1',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
         'href' => 'https://cfp.phpkonf.org/',
         'rel' => 'via',
         'type' => 'text/html',
       ),
     ),
-    'newsImage' => 
+    'newsImage' =>
     array (
       'xmlns' => 'http://php.net/ns/news',
       'link' => 'https://cfp.phpkonf.org/',
@@ -3902,44 +3902,44 @@ the upgrade
 	 <p>PHPKonf 2019 is an annual PHP oriented conference in Istanbul, Turkey and will take place on Saturday, 4th of May, 2019.</p>
 
      <p>The <a href="https://cfp.phpkonf.org/">call for papers</a> for the PHPKonf 2019 Istanbul PHP conference is open! If you have a burning desire to hold forth about PHP, DevOps, databases, JavaScript, or any other web development topics, we want to see your proposals. Call for Papers is open only from December 10, 2018 to January 31, 2019, so hurry. An added benefit: we will cover your travel and hotel.</p>
-     
+
      <p>You’ll have 45 minutes for the talk, with 35 minutes for your topic and 10 minutes for Q&amp;A. We can’t wait to see your proposals! Check out the <a href="http://2018.phpkonf.org/">last conference</a> to get an idea of what to expect.</p>
-     
+
      <p>Follow us on <a href="https://twitter.com/istanbulphp">Twitter</a> to stay updated with news from the PHPKonf crew.</p>
     </div>
   ',
     'intro' => '<div><p>PHPKonf 2019 is an annual PHP oriented conference in Istanbul, Turkey and will take place on Saturday, 4th of May, 2019.</p><p>The <a href="https://cfp.phpkonf.org/">call for papers</a> for the PHPKonf 2019 Istanbul PHP conference is open! If you have a burning desire to hold forth about PHP, DevOps, databases, JavaScript, or any other web development topics, we want to see your proposals. Call for Papers is open only from December 10, 2018 to January 31, 2019, so hurry. An added benefit: we will cover your travel and hotel.</p><p class=\'fullArticleLink\'><a href=\'https://cfp.phpkonf.org/\' class>&hellip; read full article</a></p></div>',
   ),
-  74 => 
+  74 =>
   array (
     'title' => 'PHP 7.0.33 Released',
-    'id' => 'http://php.net/archive/2018.php#id2018-12-06-5',
+    'id' => 'https://www.php.net/archive/2018.php#id2018-12-06-5',
     'published' => '2018-12-06T13:00:00+01:00',
     'updated' => '2018-12-06T13:00:00+01:00',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'releases',
         'label' => 'New PHP release',
       ),
-      1 => 
+      1 =>
       array (
         'term' => 'frontpage',
         'label' => 'PHP.net frontpage news',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/index.php#id2018-12-06-5',
+        'href' => 'https://www.php.net/index.php#id2018-12-06-5',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
-        'href' => 'http://php.net/archive/2018.php#id2018-12-06-5',
+        'href' => 'https://www.php.net/archive/2018.php#id2018-12-06-5',
         'rel' => 'via',
         'type' => 'text/html',
       ),
@@ -3950,12 +3950,12 @@ the upgrade
          All PHP 7.0 users are encouraged to upgrade to this version.
       </p>
 
-      <p>For source downloads of PHP 7.0.33 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-         Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-         The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.0.33">ChangeLog</a>.
+      <p>For source downloads of PHP 7.0.33 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
+         Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
+         The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-7.php#7.0.33">ChangeLog</a>.
       </p>
 
-      <p>Please note that according to the <a href="http://php.net/supported-versions.php">PHP version support timelines</a>,
+      <p>Please note that according to the <a href="https://www.php.net/supported-versions.php">PHP version support timelines</a>,
          PHP 7.0.33 is the last scheduled release of PHP 7.0 branch. There may be additional release if we discover
          important security issues that warrant it, otherwise this release will be the final one in the PHP 7.0 branch.
          If your PHP installation is based on PHP 7.0, it may be a good time to start making the plans for the upgrade
@@ -3966,41 +3966,41 @@ the upgrade
     'intro' => '<div><p>The PHP development team announces the immediate availability of PHP
          7.0.33. Five security-related issues were fixed in this release.
          All PHP 7.0 users are encouraged to upgrade to this version.
-      </p><p>For source downloads of PHP 7.0.33 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-         Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-         The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.0.33">ChangeLog</a>.
-      </p><p class=\'fullArticleLink\'><a href=\'http://php.net/archive/2018.php#id2018-12-06-5\' class>&hellip; read full article</a></p></div>',
+      </p><p>For source downloads of PHP 7.0.33 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
+         Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
+         The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-7.php#7.0.33">ChangeLog</a>.
+      </p><p class=\'fullArticleLink\'><a href=\'https://www.php.net/archive/2018.php#id2018-12-06-5\' class>&hellip; read full article</a></p></div>',
   ),
-  75 => 
+  75 =>
   array (
     'title' => 'PHP 7.1.25 Released',
-    'id' => 'http://php.net/archive/2018.php#id2018-12-06-4',
+    'id' => 'https://www.php.net/archive/2018.php#id2018-12-06-4',
     'published' => '2018-12-06T16:10:25+00:00',
     'updated' => '2018-12-06T16:10:25+00:00',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'frontpage',
         'label' => 'PHP.net frontpage news',
       ),
-      1 => 
+      1 =>
       array (
         'term' => 'releases',
         'label' => 'New PHP release',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/index.php#id2018-12-06-4',
+        'href' => 'https://www.php.net/index.php#id2018-12-06-4',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
-        'href' => 'http://php.net/archive/2018.php#id2018-12-06-4',
+        'href' => 'https://www.php.net/archive/2018.php#id2018-12-06-4',
         'rel' => 'via',
         'type' => 'text/html',
       ),
@@ -4008,48 +4008,48 @@ the upgrade
     'content' => '<div>
      <p>The PHP development team announces the immediate availability of PHP 7.1.25.
      This is a security release.</p>
-     
+
      <p>All PHP 7.1 users are encouraged to upgrade to this version.</p>
-     
-     <p>For source downloads of PHP 7.1.25 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-     The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.1.25">ChangeLog</a>.
+
+     <p>For source downloads of PHP 7.1.25 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
+     Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
+     The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-7.php#7.1.25">ChangeLog</a>.
      </p>
     </div>
   ',
     'intro' => '<div><p>The PHP development team announces the immediate availability of PHP 7.1.25.
-     This is a security release.</p><p>All PHP 7.1 users are encouraged to upgrade to this version.</p><p class=\'fullArticleLink\'><a href=\'http://php.net/archive/2018.php#id2018-12-06-4\' class>&hellip; read full article</a></p></div>',
+     This is a security release.</p><p>All PHP 7.1 users are encouraged to upgrade to this version.</p><p class=\'fullArticleLink\'><a href=\'https://www.php.net/archive/2018.php#id2018-12-06-4\' class>&hellip; read full article</a></p></div>',
   ),
-  76 => 
+  76 =>
   array (
     'title' => 'PHP 7.2.13 Released',
-    'id' => 'http://php.net/archive/2018.php#id2018-12-06-3',
+    'id' => 'https://www.php.net/archive/2018.php#id2018-12-06-3',
     'published' => '2018-12-06T16:09:43+00:00',
     'updated' => '2018-12-06T16:09:43+00:00',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'frontpage',
         'label' => 'PHP.net frontpage news',
       ),
-      1 => 
+      1 =>
       array (
         'term' => 'releases',
         'label' => 'New PHP release',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/index.php#id2018-12-06-3',
+        'href' => 'https://www.php.net/index.php#id2018-12-06-3',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
-        'href' => 'http://php.net/archive/2018.php#id2018-12-06-3',
+        'href' => 'https://www.php.net/archive/2018.php#id2018-12-06-3',
         'rel' => 'via',
         'type' => 'text/html',
       ),
@@ -4057,48 +4057,48 @@ the upgrade
     'content' => '<div>
      <p>The PHP development team announces the immediate availability of PHP 7.2.13.
      This is a security release.</p>
-     
+
      <p>All PHP 7.2 users are encouraged to upgrade to this version.</p>
-     
-     <p>For source downloads of PHP 7.2.13 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-     The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.2.13">ChangeLog</a>.
+
+     <p>For source downloads of PHP 7.2.13 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
+     Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
+     The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-7.php#7.2.13">ChangeLog</a>.
      </p>
     </div>
   ',
     'intro' => '<div><p>The PHP development team announces the immediate availability of PHP 7.2.13.
-     This is a security release.</p><p>All PHP 7.2 users are encouraged to upgrade to this version.</p><p class=\'fullArticleLink\'><a href=\'http://php.net/archive/2018.php#id2018-12-06-3\' class>&hellip; read full article</a></p></div>',
+     This is a security release.</p><p>All PHP 7.2 users are encouraged to upgrade to this version.</p><p class=\'fullArticleLink\'><a href=\'https://www.php.net/archive/2018.php#id2018-12-06-3\' class>&hellip; read full article</a></p></div>',
   ),
-  77 => 
+  77 =>
   array (
     'title' => 'PHP 5.6.39 Released',
-    'id' => 'http://php.net/archive/2018.php#id2018-12-06-2',
+    'id' => 'https://www.php.net/archive/2018.php#id2018-12-06-2',
     'published' => '2018-12-06T06:14:16-08:00',
     'updated' => '2018-12-06T06:14:16-08:00',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'frontpage',
         'label' => 'PHP.net frontpage news',
       ),
-      1 => 
+      1 =>
       array (
         'term' => 'releases',
         'label' => 'New PHP release',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/index.php#id2018-12-06-2',
+        'href' => 'https://www.php.net/index.php#id2018-12-06-2',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
-        'href' => 'http://php.net/archive/2018.php#id2018-12-06-2',
+        'href' => 'https://www.php.net/archive/2018.php#id2018-12-06-2',
         'rel' => 'via',
         'type' => 'text/html',
       ),
@@ -4111,12 +4111,12 @@ the upgrade
      All PHP 5.6 users are encouraged to upgrade to this version.
      </p>
 
-     <p>For source downloads of PHP 5.6.39 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-     The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.6.39">ChangeLog</a>.
+     <p>For source downloads of PHP 5.6.39 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
+     Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
+     The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-5.php#5.6.39">ChangeLog</a>.
      </p>
 
-     <p>Please note that according to the <a href="http://php.net/supported-versions.php">PHP version
+     <p>Please note that according to the <a href="https://www.php.net/supported-versions.php">PHP version
 support timelines</a>,
         PHP 5.6.39 is the last scheduled release of PHP 5.6 branch. There may be additional release if we
 discover
@@ -4133,41 +4133,41 @@ the upgrade
      in this release.
 
      All PHP 5.6 users are encouraged to upgrade to this version.
-     </p><p>For source downloads of PHP 5.6.39 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-     The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.6.39">ChangeLog</a>.
-     </p><p class=\'fullArticleLink\'><a href=\'http://php.net/archive/2018.php#id2018-12-06-2\' class>&hellip; read full article</a></p></div>',
+     </p><p>For source downloads of PHP 5.6.39 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
+     Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
+     The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-5.php#5.6.39">ChangeLog</a>.
+     </p><p class=\'fullArticleLink\'><a href=\'https://www.php.net/archive/2018.php#id2018-12-06-2\' class>&hellip; read full article</a></p></div>',
   ),
-  78 => 
+  78 =>
   array (
     'title' => 'PHP 7.3.0 Released',
-    'id' => 'http://php.net/archive/2018.php#id2018-12-06-1',
+    'id' => 'https://www.php.net/archive/2018.php#id2018-12-06-1',
     'published' => '2018-12-06T13:57:53+01:00',
     'updated' => '2018-12-06T13:57:53+01:00',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'frontpage',
         'label' => 'PHP.net frontpage news',
       ),
-      1 => 
+      1 =>
       array (
         'term' => 'releases',
         'label' => 'New PHP release',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/index.php#id2018-12-06-1',
+        'href' => 'https://www.php.net/index.php#id2018-12-06-1',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
-        'href' => 'http://php.net/archive/2018.php#id2018-12-06-1',
+        'href' => 'https://www.php.net/archive/2018.php#id2018-12-06-1',
         'rel' => 'via',
         'type' => 'text/html',
       ),
@@ -4179,53 +4179,53 @@ the upgrade
       <p>PHP 7.3.0 comes with numerous improvements and new features such as</p>
 
       <ul>
-      <li><a href="http://php.net/manual/migration73.new-features.php#migration73.new-features.core.heredoc">Flexible Heredoc and Nowdoc Syntax</a></li>
-      <li><a href="http://php.net/manual/migration73.other-changes.php#migration73.other-changes.pcre">PCRE2 Migration</a></li>
-      <li><a href="http://php.net/manual/migration73.new-features.php#migration73.new-features.mbstring">Multiple MBString Improvements</a></li>
-      <li><a href="http://php.net/manual/migration73.new-features.php#migration73.new-features.ldap">LDAP Controls Support</a></li>
-      <li><a href="http://php.net/manual/migration73.new-features.php#migration73.new-features.fpm">Improved FPM Logging</a></li>
-      <li><a href="http://php.net/manual/migration73.windows-support.php#migration73.windows-support.core.file-descriptors">Windows File Deletion Improvements</a></li>
-      <li><a href="http://php.net/manual/migration73.deprecated.php">Several Deprecations</a></li>
+      <li><a href="https://www.php.net/manual/migration73.new-features.php#migration73.new-features.core.heredoc">Flexible Heredoc and Nowdoc Syntax</a></li>
+      <li><a href="https://www.php.net/manual/migration73.other-changes.php#migration73.other-changes.pcre">PCRE2 Migration</a></li>
+      <li><a href="https://www.php.net/manual/migration73.new-features.php#migration73.new-features.mbstring">Multiple MBString Improvements</a></li>
+      <li><a href="https://www.php.net/manual/migration73.new-features.php#migration73.new-features.ldap">LDAP Controls Support</a></li>
+      <li><a href="https://www.php.net/manual/migration73.new-features.php#migration73.new-features.fpm">Improved FPM Logging</a></li>
+      <li><a href="https://www.php.net/manual/migration73.windows-support.php#migration73.windows-support.core.file-descriptors">Windows File Deletion Improvements</a></li>
+      <li><a href="https://www.php.net/manual/migration73.deprecated.php">Several Deprecations</a></li>
       </ul>
 
-      <p>For source downloads of PHP 7.3.0 please visit our <a href="http://www.php.net/downloads">downloads</a> page
-      Windows binaries can be found on the <a href="http://windows.php.net/download">PHP for Windows</a> site.
-      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.3.0">ChangeLog</a>.</p>
+      <p>For source downloads of PHP 7.3.0 please visit our <a href="https://www.php.net/downloads">downloads</a> page
+      Windows binaries can be found on the <a href="https://windows.php.net/download">PHP for Windows</a> site.
+      The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-7.php#7.3.0">ChangeLog</a>.</p>
 
-      <p>The <a href="http://php.net/manual/en/migration73.php">migration guide</a> is available in the PHP Manual.
+      <p>The <a href="https://www.php.net/manual/en/migration73.php">migration guide</a> is available in the PHP Manual.
       Please consult it for the detailed list of new features and backward incompatible changes.</p>
 
       <p>Many thanks to all the contributors and supporters!</p>
     </div>
   ',
     'intro' => '<div><p>The PHP development team announces the immediate availability of PHP 7.3.0.
-      This release marks the third feature update to the PHP 7 series.</p><p>PHP 7.3.0 comes with numerous improvements and new features such as</p><p class=\'fullArticleLink\'><a href=\'http://php.net/archive/2018.php#id2018-12-06-1\' class>&hellip; read full article</a></p></div>',
+      This release marks the third feature update to the PHP 7 series.</p><p>PHP 7.3.0 comes with numerous improvements and new features such as</p><p class=\'fullArticleLink\'><a href=\'https://www.php.net/archive/2018.php#id2018-12-06-1\' class>&hellip; read full article</a></p></div>',
   ),
-  79 => 
+  79 =>
   array (
     'title' => 'PHP 7.3.0RC6 Released',
-    'id' => 'http://php.net/archive/2018.php#id2018-11-22-1',
+    'id' => 'https://www.php.net/archive/2018.php#id2018-11-22-1',
     'published' => '2018-11-22T12:22:47+01:00',
     'updated' => '2018-11-22T12:22:47+01:00',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'frontpage',
         'label' => 'PHP.net frontpage news',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/index.php#id2018-11-22-1',
+        'href' => 'https://www.php.net/index.php#id2018-11-22-1',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
-        'href' => 'http://php.net/archive/2018.php#id2018-11-22-1',
+        'href' => 'https://www.php.net/archive/2018.php#id2018-11-22-1',
         'rel' => 'via',
         'type' => 'text/html',
       ),
@@ -4280,39 +4280,39 @@ the upgrade
       </p><p>
         For source downloads of PHP 7.3.0RC6 please visit the <a href="https://downloads.php.net/~cmb/">download page</a>.
         Windows sources and binaries can be found on <a href="https://windows.php.net/qa/">windows.php.net/qa/</a>.
-      </p><p class=\'fullArticleLink\'><a href=\'http://php.net/archive/2018.php#id2018-11-22-1\' class>&hellip; read full article</a></p></div>',
+      </p><p class=\'fullArticleLink\'><a href=\'https://www.php.net/archive/2018.php#id2018-11-22-1\' class>&hellip; read full article</a></p></div>',
   ),
-  80 => 
+  80 =>
   array (
     'title' => 'Dutch PHP Conference 2019',
-    'id' => 'http://php.net/archive/2018.php#id2018-11-20-2',
+    'id' => 'https://www.php.net/archive/2018.php#id2018-11-20-2',
     'published' => '2018-11-20T14:02:37+00:00',
     'updated' => '2018-11-20T14:02:37+00:00',
     'finalTeaserDate' => '2019-06-06',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'conferences',
         'label' => 'Conference announcement',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/conferences/index.php#id2018-11-20-2',
+        'href' => 'https://www.php.net/conferences/index.php#id2018-11-20-2',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
         'href' => 'https://www.phpconference.nl',
         'rel' => 'via',
         'type' => 'text/html',
       ),
     ),
-    'newsImage' => 
+    'newsImage' =>
     array (
       'xmlns' => 'http://php.net/ns/news',
       'link' => 'https://www.phpconference.nl',
@@ -4321,11 +4321,11 @@ the upgrade
     ),
     'content' => '<div>
      This year marks the 13th edition of the Dutch PHP Conference, once again hosted in the beautiful city of Amsterdam. Our tutorial day will be Thursday, June 6th, with the main 2-day conference following on the June 7 and 8.
-     
+
      The Dutch PHP Conference is an annual web technology conference around PHP technology. Last year we’ve invited more than 50 speakers from all around the world to share their expertise and experience with the 600+ attendees in a 3-day conference in the RAI, Amsterdam. The conference is completely in English and is focused on mobile- and web development related to PHP technology.
-     
+
      <a href="https://www.phpconference.nl">Conference website</a>
-     
+
       <ul>
         <li>Date: June 6 - 8, 2019</li>
         <li>Venue: RAI Amsterdam</li>
@@ -4336,37 +4336,37 @@ the upgrade
         <li>Venue: RAI Amsterdam</li>
       </ul></div>',
   ),
-  81 => 
+  81 =>
   array (
     'title' => 'Dutch PHP Conference - CfP is open!',
-    'id' => 'http://php.net/archive/2018.php#id2018-11-20-1',
+    'id' => 'https://www.php.net/archive/2018.php#id2018-11-20-1',
     'published' => '2018-11-20T14:00:23+00:00',
     'updated' => '2018-11-20T14:00:23+00:00',
     'finalTeaserDate' => '2019-01-28',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'cfp',
         'label' => 'Call for Papers',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/conferences/index.php#id2018-11-20-1',
+        'href' => 'https://www.php.net/conferences/index.php#id2018-11-20-1',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
         'href' => 'https://www.phpconference.nl',
         'rel' => 'via',
         'type' => 'text/html',
       ),
     ),
-    'newsImage' => 
+    'newsImage' =>
     array (
       'xmlns' => 'http://php.net/ns/news',
       'link' => 'https://www.phpconference.nl',
@@ -4381,92 +4381,92 @@ the upgrade
      <li>Date: June 6 - 8, 2019</li>
      <li>Venue: RAI Amsterdam</li>
      </ul>
-     
+
     </div>
   ',
     'intro' => '<div><a href="https://cfp.phpconference.nl">start submitting</a><a href="https://www.phpconference.nl">Conference website</a><p class=\'fullArticleLink\'><a href=\'https://www.phpconference.nl\' class>&hellip; read full article</a></p></div>',
   ),
-  82 => 
+  82 =>
   array (
     'title' => 'PHP 7.1.24 Released',
-    'id' => 'http://php.net/archive/2018.php#id2018-11-08-3',
+    'id' => 'https://www.php.net/archive/2018.php#id2018-11-08-3',
     'published' => '2018-11-08T15:28:08+00:00',
     'updated' => '2018-11-08T15:28:08+00:00',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'frontpage',
         'label' => 'PHP.net frontpage news',
       ),
-      1 => 
+      1 =>
       array (
         'term' => 'releases',
         'label' => 'New PHP release',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/index.php#id2018-11-08-3',
+        'href' => 'https://www.php.net/index.php#id2018-11-08-3',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
-        'href' => 'http://php.net/archive/2018.php#id2018-11-08-3',
+        'href' => 'https://www.php.net/archive/2018.php#id2018-11-08-3',
         'rel' => 'via',
         'type' => 'text/html',
       ),
     ),
     'content' => '<div>
      <h1>PHP 7.1.24 Release Announcement</h1>
-     
+
      <p>The PHP development team announces the immediate availability of PHP 7.1.24.
      This is a bugfix release.</p>
-     
+
      <p>All PHP 7.1 users are encouraged to upgrade to this version.</p>
-     
-     <p>For source downloads of PHP 7.1.24 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-     The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.1.24">ChangeLog</a>.
+
+     <p>For source downloads of PHP 7.1.24 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
+     Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
+     The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-7.php#7.1.24">ChangeLog</a>.
      </p>
     </div>
   ',
     'intro' => '<div><h1>PHP 7.1.24 Release Announcement</h1><p>The PHP development team announces the immediate availability of PHP 7.1.24.
-     This is a bugfix release.</p><p class=\'fullArticleLink\'><a href=\'http://php.net/archive/2018.php#id2018-11-08-3\' class>&hellip; read full article</a></p></div>',
+     This is a bugfix release.</p><p class=\'fullArticleLink\'><a href=\'https://www.php.net/archive/2018.php#id2018-11-08-3\' class>&hellip; read full article</a></p></div>',
   ),
-  83 => 
+  83 =>
   array (
     'title' => 'PHP 7.2.12 Released',
-    'id' => 'http://php.net/archive/2018.php#id2018-11-08-2',
+    'id' => 'https://www.php.net/archive/2018.php#id2018-11-08-2',
     'published' => '2018-11-08T10:28:15+00:00',
     'updated' => '2018-11-08T10:28:15+00:00',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'releases',
         'label' => 'New PHP release',
       ),
-      1 => 
+      1 =>
       array (
         'term' => 'frontpage',
         'label' => 'PHP.net frontpage news',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/index.php#id2018-11-08-2',
+        'href' => 'https://www.php.net/index.php#id2018-11-08-2',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
-        'href' => 'http://php.net/archive/2018.php#id2018-11-08-2',
+        'href' => 'https://www.php.net/archive/2018.php#id2018-11-08-2',
         'rel' => 'via',
         'type' => 'text/html',
       ),
@@ -4477,40 +4477,40 @@ the upgrade
 
      <p>All PHP 7.2 users are encouraged to upgrade to this version.</p>
 
-     <p>For source downloads of PHP 7.2.12 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-     The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.2.12">ChangeLog</a>.
+     <p>For source downloads of PHP 7.2.12 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
+     Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
+     The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-7.php#7.2.12">ChangeLog</a>.
      </p>
     </div>
   ',
     'intro' => '<div><p>The PHP development team announces the immediate availability of PHP
-     7.2.12. This is a bugfix release.</p><p>All PHP 7.2 users are encouraged to upgrade to this version.</p><p class=\'fullArticleLink\'><a href=\'http://php.net/archive/2018.php#id2018-11-08-2\' class>&hellip; read full article</a></p></div>',
+     7.2.12. This is a bugfix release.</p><p>All PHP 7.2 users are encouraged to upgrade to this version.</p><p class=\'fullArticleLink\'><a href=\'https://www.php.net/archive/2018.php#id2018-11-08-2\' class>&hellip; read full article</a></p></div>',
   ),
-  84 => 
+  84 =>
   array (
     'title' => 'PHP 7.3.0RC5 Released',
-    'id' => 'http://php.net/archive/2018.php#id2018-11-08-1',
+    'id' => 'https://www.php.net/archive/2018.php#id2018-11-08-1',
     'published' => '2018-11-08T11:11:26+01:00',
     'updated' => '2018-11-08T11:11:26+01:00',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'frontpage',
         'label' => 'PHP.net frontpage news',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/index.php#id2018-11-08-1',
+        'href' => 'https://www.php.net/index.php#id2018-11-08-1',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
-        'href' => 'http://php.net/archive/2018.php#id2018-11-08-1',
+        'href' => 'https://www.php.net/archive/2018.php#id2018-11-08-1',
         'rel' => 'via',
         'type' => 'text/html',
       ),
@@ -4565,33 +4565,33 @@ the upgrade
       </p><p>
         For source downloads of PHP 7.3.0RC5 please visit the <a href="https://downloads.php.net/~cmb/">download page</a>.
         Windows sources and binaries can be found on <a href="https://windows.php.net/qa/">windows.php.net/qa/</a>.
-      </p><p class=\'fullArticleLink\'><a href=\'http://php.net/archive/2018.php#id2018-11-08-1\' class>&hellip; read full article</a></p></div>',
+      </p><p class=\'fullArticleLink\'><a href=\'https://www.php.net/archive/2018.php#id2018-11-08-1\' class>&hellip; read full article</a></p></div>',
   ),
-  85 => 
+  85 =>
   array (
     'title' => 'PHP 7.3.0RC4 Released',
-    'id' => 'http://php.net/archive/2018.php#id2018-10-25-1',
+    'id' => 'https://www.php.net/archive/2018.php#id2018-10-25-1',
     'published' => '2018-10-25T11:07:32+02:00',
     'updated' => '2018-10-25T11:07:32+02:00',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'frontpage',
         'label' => 'PHP.net frontpage news',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/index.php#id2018-10-25-1',
+        'href' => 'https://www.php.net/index.php#id2018-10-25-1',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
-        'href' => 'http://php.net/archive/2018.php#id2018-10-25-1',
+        'href' => 'https://www.php.net/archive/2018.php#id2018-10-25-1',
         'rel' => 'via',
         'type' => 'text/html',
       ),
@@ -4646,39 +4646,39 @@ the upgrade
       </p><p>
         For source downloads of PHP 7.3.0RC4 please visit the <a href="https://downloads.php.net/~cmb/">download page</a>.
         Windows sources and binaries can be found on <a href="https://windows.php.net/qa/">windows.php.net/qa/</a>.
-      </p><p class=\'fullArticleLink\'><a href=\'http://php.net/archive/2018.php#id2018-10-25-1\' class>&hellip; read full article</a></p></div>',
+      </p><p class=\'fullArticleLink\'><a href=\'https://www.php.net/archive/2018.php#id2018-10-25-1\' class>&hellip; read full article</a></p></div>',
   ),
-  86 => 
+  86 =>
   array (
     'title' => 'International PHP Conference 2019 - Spring Edition',
-    'id' => 'http://php.net/archive/2018.php#id2018-10-12-2',
+    'id' => 'https://www.php.net/archive/2018.php#id2018-10-12-2',
     'published' => '2018-10-12T16:20:54-04:00',
     'updated' => '2018-10-12T16:20:54-04:00',
     'finalTeaserDate' => '2019-06-03',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'conferences',
         'label' => 'Conference announcement',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/conferences/index.php#id2018-10-12-2',
+        'href' => 'https://www.php.net/conferences/index.php#id2018-10-12-2',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
         'href' => 'https://phpconference.com',
         'rel' => 'via',
         'type' => 'text/html',
       ),
     ),
-    'newsImage' => 
+    'newsImage' =>
     array (
       'xmlns' => 'http://php.net/ns/news',
       'link' => 'https://phpconference.com',
@@ -4718,37 +4718,37 @@ the upgrade
   ',
     'intro' => '<div><p>The <a href="https://phpconference.com">International PHP Conference</a> is the world\'s first PHP conference and stands since more than a decade for top-notch pragmatic expertise in PHP and web technologies. At the IPC, internationally renowned experts from the PHP industry meet up with PHP users and developers from large and small companies. Here is the place where concepts emerge and ideas are born - the IPC signifies knowledge transfer at highest level.</p><p>All delegates of the International PHP Conference have, in addition to PHP program, free access to the entire range of the <a href="https://webinale.de">webinale</a> taking place at the same time.</p><p class=\'fullArticleLink\'><a href=\'https://phpconference.com\' class>&hellip; read full article</a></p></div>',
   ),
-  87 => 
+  87 =>
   array (
     'title' => 'Longhorn PHP 2019 CFP is open!',
-    'id' => 'http://php.net/archive/2018.php#id2018-10-12-1',
+    'id' => 'https://www.php.net/archive/2018.php#id2018-10-12-1',
     'published' => '2018-10-12T18:08:06+00:00',
     'updated' => '2018-10-12T18:08:06+00:00',
     'finalTeaserDate' => '2018-12-15',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'conferences',
         'label' => 'Conference announcement',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/conferences/index.php#id2018-10-12-1',
+        'href' => 'https://www.php.net/conferences/index.php#id2018-10-12-1',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
         'href' => 'https://www.longhornphp.com/',
         'rel' => 'via',
         'type' => 'text/html',
       ),
     ),
-    'newsImage' => 
+    'newsImage' =>
     array (
       'xmlns' => 'http://php.net/ns/news',
       'link' => 'https://www.longhornphp.com/',
@@ -4767,36 +4767,36 @@ the upgrade
   ',
     'intro' => '<div><p>Longhorn PHP is back for another exciting weekend of fun and learning!</p><p>At Longhorn PHP you\'ll get to learn from and alongside a diverse group of developers from all over the region, country, and even the globe. The conference will consist of a tutorial day with in-depth workshops, followed by two main conference days with multiple tracks of traditional 1 hour sessions, and new 30 minute sessions! <a href="https://www.longhornphp.com/register/">Register now</a> to take the next step toward leveling up your development career!</p><p class=\'fullArticleLink\'><a href=\'https://www.longhornphp.com/\' class>&hellip; read full article</a></p></div>',
   ),
-  88 => 
+  88 =>
   array (
     'title' => 'PHP 7.1.23 Released',
-    'id' => 'http://php.net/archive/2018.php#id2018-10-11-3',
+    'id' => 'https://www.php.net/archive/2018.php#id2018-10-11-3',
     'published' => '2018-10-11T14:11:47+00:00',
     'updated' => '2018-10-11T14:11:47+00:00',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'frontpage',
         'label' => 'PHP.net frontpage news',
       ),
-      1 => 
+      1 =>
       array (
         'term' => 'releases',
         'label' => 'New PHP release',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/index.php#id2018-10-11-3',
+        'href' => 'https://www.php.net/index.php#id2018-10-11-3',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
-        'href' => 'http://php.net/archive/2018.php#id2018-10-11-3',
+        'href' => 'https://www.php.net/archive/2018.php#id2018-10-11-3',
         'rel' => 'via',
         'type' => 'text/html',
       ),
@@ -4807,45 +4807,45 @@ the upgrade
 
      <p>All PHP 7.1 users are encouraged to upgrade to this version.</p>
 
-     <p>For source downloads of PHP 7.1.23 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-     The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.1.23">ChangeLog</a>.
+     <p>For source downloads of PHP 7.1.23 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
+     Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
+     The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-7.php#7.1.23">ChangeLog</a>.
      </p>
     </div>
   ',
     'intro' => '<div><p>The PHP development team announces the immediate availability of PHP 7.1.23.
-     This is a bugfix release.</p><p>All PHP 7.1 users are encouraged to upgrade to this version.</p><p class=\'fullArticleLink\'><a href=\'http://php.net/archive/2018.php#id2018-10-11-3\' class>&hellip; read full article</a></p></div>',
+     This is a bugfix release.</p><p>All PHP 7.1 users are encouraged to upgrade to this version.</p><p class=\'fullArticleLink\'><a href=\'https://www.php.net/archive/2018.php#id2018-10-11-3\' class>&hellip; read full article</a></p></div>',
   ),
-  89 => 
+  89 =>
   array (
     'title' => 'PHP 7.2.11 Released',
-    'id' => 'http://php.net/archive/2018.php#id2018-10-11-2',
+    'id' => 'https://www.php.net/archive/2018.php#id2018-10-11-2',
     'published' => '2018-10-11T14:11:19+00:00',
     'updated' => '2018-10-11T14:11:19+00:00',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'frontpage',
         'label' => 'PHP.net frontpage news',
       ),
-      1 => 
+      1 =>
       array (
         'term' => 'releases',
         'label' => 'New PHP release',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/index.php#id2018-10-11-2',
+        'href' => 'https://www.php.net/index.php#id2018-10-11-2',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
-        'href' => 'http://php.net/archive/2018.php#id2018-10-11-2',
+        'href' => 'https://www.php.net/archive/2018.php#id2018-10-11-2',
         'rel' => 'via',
         'type' => 'text/html',
       ),
@@ -4856,40 +4856,40 @@ the upgrade
 
      <p>All PHP 7.2 users are encouraged to upgrade to this version.</p>
 
-     <p>For source downloads of PHP 7.2.11 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-     The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.2.11">ChangeLog</a>.
+     <p>For source downloads of PHP 7.2.11 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
+     Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
+     The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-7.php#7.2.11">ChangeLog</a>.
      </p>
     </div>
   ',
     'intro' => '<div><p>The PHP development team announces the immediate availability of PHP 7.2.11.
-     This is a bugfix release.</p><p>All PHP 7.2 users are encouraged to upgrade to this version.</p><p class=\'fullArticleLink\'><a href=\'http://php.net/archive/2018.php#id2018-10-11-2\' class>&hellip; read full article</a></p></div>',
+     This is a bugfix release.</p><p>All PHP 7.2 users are encouraged to upgrade to this version.</p><p class=\'fullArticleLink\'><a href=\'https://www.php.net/archive/2018.php#id2018-10-11-2\' class>&hellip; read full article</a></p></div>',
   ),
-  90 => 
+  90 =>
   array (
     'title' => 'PHP 7.3.0RC3 Released',
-    'id' => 'http://php.net/archive/2018.php#id2018-10-11-1',
+    'id' => 'https://www.php.net/archive/2018.php#id2018-10-11-1',
     'published' => '2018-10-11T13:47:50+02:00',
     'updated' => '2018-10-11T13:47:50+02:00',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'frontpage',
         'label' => 'PHP.net frontpage news',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/index.php#id2018-10-11-1',
+        'href' => 'https://www.php.net/index.php#id2018-10-11-1',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
-        'href' => 'http://php.net/archive/2018.php#id2018-10-11-1',
+        'href' => 'https://www.php.net/archive/2018.php#id2018-10-11-1',
         'rel' => 'via',
         'type' => 'text/html',
       ),
@@ -4944,33 +4944,33 @@ the upgrade
       </p><p>
         For source downloads of PHP 7.3.0RC3 please visit the <a href="https://downloads.php.net/~cmb/">download page</a>.
         Windows sources and binaries can be found on <a href="https://windows.php.net/qa/">windows.php.net/qa/</a>.
-      </p><p class=\'fullArticleLink\'><a href=\'http://php.net/archive/2018.php#id2018-10-11-1\' class>&hellip; read full article</a></p></div>',
+      </p><p class=\'fullArticleLink\'><a href=\'https://www.php.net/archive/2018.php#id2018-10-11-1\' class>&hellip; read full article</a></p></div>',
   ),
-  91 => 
+  91 =>
   array (
     'title' => 'PHP 7.3.0RC2 Released',
-    'id' => 'http://php.net/archive/2018.php#id2018-09-28-1',
+    'id' => 'https://www.php.net/archive/2018.php#id2018-09-28-1',
     'published' => '2018-09-28T10:31:16+02:00',
     'updated' => '2018-09-28T10:31:16+02:00',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'frontpage',
         'label' => 'PHP.net frontpage news',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/index.php#id2018-09-28-1',
+        'href' => 'https://www.php.net/index.php#id2018-09-28-1',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
-        'href' => 'http://php.net/archive/2018.php#id2018-09-28-1',
+        'href' => 'https://www.php.net/archive/2018.php#id2018-09-28-1',
         'rel' => 'via',
         'type' => 'text/html',
       ),
@@ -5025,38 +5025,38 @@ the upgrade
       </p><p>
         For source downloads of PHP 7.3.0RC2 please visit the <a href="https://downloads.php.net/~cmb/">download page</a>.
         Windows sources and binaries can be found on <a href="https://windows.php.net/qa/">windows.php.net/qa/</a>.
-      </p><p class=\'fullArticleLink\'><a href=\'http://php.net/archive/2018.php#id2018-09-28-1\' class>&hellip; read full article</a></p></div>',
+      </p><p class=\'fullArticleLink\'><a href=\'https://www.php.net/archive/2018.php#id2018-09-28-1\' class>&hellip; read full article</a></p></div>',
   ),
-  92 => 
+  92 =>
   array (
     'title' => 'PHP 5.6.38 Released',
-    'id' => 'http://php.net/archive/2018.php#id2018-09-13-5',
+    'id' => 'https://www.php.net/archive/2018.php#id2018-09-13-5',
     'published' => '2018-09-13T19:56:28+02:00',
     'updated' => '2018-09-13T19:56:28+02:00',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'frontpage',
         'label' => 'PHP.net frontpage news',
       ),
-      1 => 
+      1 =>
       array (
         'term' => 'releases',
         'label' => 'New PHP release',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/index.php#id2018-09-13-5',
+        'href' => 'https://www.php.net/index.php#id2018-09-13-5',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
-        'href' => 'http://php.net/archive/2018.php#id2018-09-13-5',
+        'href' => 'https://www.php.net/archive/2018.php#id2018-09-13-5',
         'rel' => 'via',
         'type' => 'text/html',
       ),
@@ -5068,9 +5068,9 @@ the upgrade
 
      All PHP 5.6 users are encouraged to upgrade to this version.</p>
 
-     <p>For source downloads of PHP 5.6.38 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-     The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.6.38">ChangeLog</a>.
+     <p>For source downloads of PHP 5.6.38 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
+     Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
+     The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-5.php#5.6.38">ChangeLog</a>.
      </p>
     </div>
   ',
@@ -5078,41 +5078,41 @@ the upgrade
         5.6.38. This is a security release. One security bug has been fixed
         in this release.
 
-     All PHP 5.6 users are encouraged to upgrade to this version.</p><p>For source downloads of PHP 5.6.38 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-     The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.6.38">ChangeLog</a>.
+     All PHP 5.6 users are encouraged to upgrade to this version.</p><p>For source downloads of PHP 5.6.38 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
+     Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
+     The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-5.php#5.6.38">ChangeLog</a>.
      </p></div>',
   ),
-  93 => 
+  93 =>
   array (
     'title' => 'PHP 7.1.22 Released',
-    'id' => 'http://php.net/archive/2018.php#id2018-09-13-4',
+    'id' => 'https://www.php.net/archive/2018.php#id2018-09-13-4',
     'published' => '2018-09-13T13:21:55+00:00',
     'updated' => '2018-09-13T13:21:55+00:00',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'frontpage',
         'label' => 'PHP.net frontpage news',
       ),
-      1 => 
+      1 =>
       array (
         'term' => 'releases',
         'label' => 'New PHP release',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/index.php#id2018-09-13-4',
+        'href' => 'https://www.php.net/index.php#id2018-09-13-4',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
-        'href' => 'http://php.net/archive/2018.php#id2018-09-13-4',
+        'href' => 'https://www.php.net/archive/2018.php#id2018-09-13-4',
         'rel' => 'via',
         'type' => 'text/html',
       ),
@@ -5124,9 +5124,9 @@ the upgrade
 
      All PHP 7.1 users are encouraged to upgrade to this version.</p>
 
-     <p>For source downloads of PHP 7.1.22 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-     The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.1.22">ChangeLog</a>.
+     <p>For source downloads of PHP 7.1.22 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
+     Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
+     The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-7.php#7.1.22">ChangeLog</a>.
      </p>
 
     </div>
@@ -5135,41 +5135,41 @@ the upgrade
      7.1.22. This is a security release. One security bug has been fixed
      in this release.
 
-     All PHP 7.1 users are encouraged to upgrade to this version.</p><p>For source downloads of PHP 7.1.22 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-     The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.1.22">ChangeLog</a>.
+     All PHP 7.1 users are encouraged to upgrade to this version.</p><p>For source downloads of PHP 7.1.22 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
+     Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
+     The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-7.php#7.1.22">ChangeLog</a>.
      </p></div>',
   ),
-  94 => 
+  94 =>
   array (
     'title' => 'PHP 7.0.32 Released',
-    'id' => 'http://php.net/archive/2018.php#id2018-09-13-3',
+    'id' => 'https://www.php.net/archive/2018.php#id2018-09-13-3',
     'published' => '2018-09-13T13:00:00+01:00',
     'updated' => '2018-09-13T13:00:00+01:00',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'releases',
         'label' => 'New PHP release',
       ),
-      1 => 
+      1 =>
       array (
         'term' => 'frontpage',
         'label' => 'PHP.net frontpage news',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/index.php#id2018-09-13-3',
+        'href' => 'https://www.php.net/index.php#id2018-09-13-3',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
-        'href' => 'http://php.net/archive/2018.php#id2018-09-13-3',
+        'href' => 'https://www.php.net/archive/2018.php#id2018-09-13-3',
         'rel' => 'via',
         'type' => 'text/html',
       ),
@@ -5181,9 +5181,9 @@ the upgrade
 
      All PHP 7.0 users are encouraged to upgrade to this version.</p>
 
-     <p>For source downloads of PHP 7.0.32 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-     The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.0.32">ChangeLog</a>.
+     <p>For source downloads of PHP 7.0.32 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
+     Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
+     The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-7.php#7.0.32">ChangeLog</a>.
      </p>
     </div>
   ',
@@ -5191,36 +5191,36 @@ the upgrade
 	7.0.32. This is a security release. One security bug has been fixed
 	in this release.
 
-     All PHP 7.0 users are encouraged to upgrade to this version.</p><p>For source downloads of PHP 7.0.32 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-     The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.0.32">ChangeLog</a>.
+     All PHP 7.0 users are encouraged to upgrade to this version.</p><p>For source downloads of PHP 7.0.32 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
+     Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
+     The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-7.php#7.0.32">ChangeLog</a>.
      </p></div>',
   ),
-  95 => 
+  95 =>
   array (
     'title' => 'PHP 7.3.0RC1 Released',
-    'id' => 'http://php.net/archive/2018.php#id2018-09-13-2',
+    'id' => 'https://www.php.net/archive/2018.php#id2018-09-13-2',
     'published' => '2018-09-13T10:57:40+02:00',
     'updated' => '2018-09-13T10:57:40+02:00',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'frontpage',
         'label' => 'PHP.net frontpage news',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/index.php#id2018-09-13-2',
+        'href' => 'https://www.php.net/index.php#id2018-09-13-2',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
-        'href' => 'http://php.net/archive/2018.php#id2018-09-13-2',
+        'href' => 'https://www.php.net/archive/2018.php#id2018-09-13-2',
         'rel' => 'via',
         'type' => 'text/html',
       ),
@@ -5275,38 +5275,38 @@ the upgrade
       </p><p>
         For source downloads of PHP 7.3.0RC1 please visit the <a href="https://downloads.php.net/~cmb/">download page</a>.
         Windows sources and binaries can be found on <a href="https://windows.php.net/qa/">windows.php.net/qa/</a>.
-      </p><p class=\'fullArticleLink\'><a href=\'http://php.net/archive/2018.php#id2018-09-13-2\' class>&hellip; read full article</a></p></div>',
+      </p><p class=\'fullArticleLink\'><a href=\'https://www.php.net/archive/2018.php#id2018-09-13-2\' class>&hellip; read full article</a></p></div>',
   ),
-  96 => 
+  96 =>
   array (
     'title' => 'PHP 7.2.10 Released',
-    'id' => 'http://php.net/archive/2018.php#id2018-09-13-1',
+    'id' => 'https://www.php.net/archive/2018.php#id2018-09-13-1',
     'published' => '2018-09-13T08:44:08+00:00',
     'updated' => '2018-09-13T08:44:08+00:00',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'releases',
         'label' => 'New PHP release',
       ),
-      1 => 
+      1 =>
       array (
         'term' => 'frontpage',
         'label' => 'PHP.net frontpage news',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/index.php#id2018-09-13-1',
+        'href' => 'https://www.php.net/index.php#id2018-09-13-1',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
-        'href' => 'http://php.net/archive/2018.php#id2018-09-13-1',
+        'href' => 'https://www.php.net/archive/2018.php#id2018-09-13-1',
         'rel' => 'via',
         'type' => 'text/html',
       ),
@@ -5317,46 +5317,46 @@ the upgrade
 
      <p>All PHP 7.2 users are encouraged to upgrade to this version.</p>
 
-     <p>For source downloads of PHP 7.2.10 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-     The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.2.10">ChangeLog</a>.
+     <p>For source downloads of PHP 7.2.10 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
+     Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
+     The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-7.php#7.2.10">ChangeLog</a>.
      </p>
     </div>
   ',
     'intro' => '<div><p>The PHP development team announces the immediate availability of PHP
-     7.2.10. This is a security release which also contains several minor bug fixes.</p><p>All PHP 7.2 users are encouraged to upgrade to this version.</p><p class=\'fullArticleLink\'><a href=\'http://php.net/archive/2018.php#id2018-09-13-1\' class>&hellip; read full article</a></p></div>',
+     7.2.10. This is a security release which also contains several minor bug fixes.</p><p>All PHP 7.2 users are encouraged to upgrade to this version.</p><p class=\'fullArticleLink\'><a href=\'https://www.php.net/archive/2018.php#id2018-09-13-1\' class>&hellip; read full article</a></p></div>',
   ),
-  97 => 
+  97 =>
   array (
     'title' => 'PHP Day Curitiba 2018',
-    'id' => 'http://php.net/archive/2018.php#id2018-09-03-1',
+    'id' => 'https://www.php.net/archive/2018.php#id2018-09-03-1',
     'published' => '2018-09-03T21:49:30+00:00',
     'updated' => '2018-09-03T21:49:30+00:00',
     'finalTeaserDate' => '2018-10-06',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'conferences',
         'label' => 'Conference announcement',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/conferences/index.php#id2018-09-03-1',
+        'href' => 'https://www.php.net/conferences/index.php#id2018-09-03-1',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
         'href' => 'http://www.phpdaycuritiba.com.br',
         'rel' => 'via',
         'type' => 'text/html',
       ),
     ),
-    'newsImage' => 
+    'newsImage' =>
     array (
       'xmlns' => 'http://php.net/ns/news',
       'link' => 'http://www.phpdaycuritiba.com.br',
@@ -5384,31 +5384,31 @@ the upgrade
        <li>Free Admission + Coffee-break + A lot of networking</li>
       </ul><p class=\'fullArticleLink\'><a href=\'http://www.phpdaycuritiba.com.br\' class>&hellip; read full article</a></p></div>',
   ),
-  98 => 
+  98 =>
   array (
     'title' => 'PHP 7.3.0.beta3 Released',
-    'id' => 'http://php.net/archive/2018.php#id2018-08-30-1',
+    'id' => 'https://www.php.net/archive/2018.php#id2018-08-30-1',
     'published' => '2018-08-30T17:37:34+02:00',
     'updated' => '2018-08-30T17:37:34+02:00',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'frontpage',
         'label' => 'PHP.net frontpage news',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/index.php#id2018-08-30-1',
+        'href' => 'https://www.php.net/index.php#id2018-08-30-1',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
-        'href' => 'http://php.net/archive/2018.php#id2018-08-30-1',
+        'href' => 'https://www.php.net/archive/2018.php#id2018-08-30-1',
         'rel' => 'via',
         'type' => 'text/html',
       ),
@@ -5463,39 +5463,39 @@ the upgrade
       </p><p>
         For source downloads of PHP 7.3.0beta3 please visit the <a href="https://downloads.php.net/~cmb/">download page</a>.
         Windows sources and binaries can be found on <a href="https://windows.php.net/qa/">windows.php.net/qa/</a>.
-      </p><p class=\'fullArticleLink\'><a href=\'http://php.net/archive/2018.php#id2018-08-30-1\' class>&hellip; read full article</a></p></div>',
+      </p><p class=\'fullArticleLink\'><a href=\'https://www.php.net/archive/2018.php#id2018-08-30-1\' class>&hellip; read full article</a></p></div>',
   ),
-  99 => 
+  99 =>
   array (
     'title' => 'PHP UK Conference 2019 CFP is Open',
-    'id' => 'http://php.net/archive/2018.php#id2018-08-28-1',
+    'id' => 'https://www.php.net/archive/2018.php#id2018-08-28-1',
     'published' => '2018-08-28T19:02:06+00:00',
     'updated' => '2018-08-28T19:02:06+00:00',
     'finalTeaserDate' => '2018-08-22',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'cfp',
         'label' => 'Call for Papers',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/conferences/index.php#id2018-08-28-1',
+        'href' => 'https://www.php.net/conferences/index.php#id2018-08-28-1',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
         'href' => 'https://phpconference.co.uk',
         'rel' => 'via',
         'type' => 'text/html',
       ),
     ),
-    'newsImage' => 
+    'newsImage' =>
     array (
       'xmlns' => 'http://php.net/ns/news',
       'link' => 'https://phpconference.co.uk',
@@ -5516,37 +5516,37 @@ the upgrade
   ',
     'intro' => '<div><p>Dates announced for PHP UK 2019</p><p>We are pleased to announce that PHP UK is back in 2019 for our 14th annual conference. As always PHP UK will feature an optional workshop day followed by two days of amazing talks, plentiful networking opportunities and great social events.</p><p class=\'fullArticleLink\'><a href=\'https://phpconference.co.uk\' class>&hellip; read full article</a></p></div>',
   ),
-  100 => 
+  100 =>
   array (
     'title' => 'Cascadia PHP',
-    'id' => 'http://php.net/archive/2018.php#id2018-08-21-1',
+    'id' => 'https://www.php.net/archive/2018.php#id2018-08-21-1',
     'published' => '2018-08-21T22:29:36+00:00',
     'updated' => '2018-08-21T22:29:36+00:00',
     'finalTeaserDate' => '2018-09-14',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'conferences',
         'label' => 'Conference announcement',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/conferences/index.php#id2018-08-21-1',
+        'href' => 'https://www.php.net/conferences/index.php#id2018-08-21-1',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
         'href' => 'https://www.cascadiaphp.com/',
         'rel' => 'via',
         'type' => 'text/html',
       ),
     ),
-    'newsImage' => 
+    'newsImage' =>
     array (
       'xmlns' => 'http://php.net/ns/news',
       'link' => 'https://www.cascadiaphp.com/',
@@ -5559,36 +5559,36 @@ the upgrade
   ',
     'intro' => '<div></div>',
   ),
-  101 => 
+  101 =>
   array (
     'title' => 'PHP 7.1.21 Released',
-    'id' => 'http://php.net/archive/2018.php#id2018-08-17-1',
+    'id' => 'https://www.php.net/archive/2018.php#id2018-08-17-1',
     'published' => '2018-08-17T14:52:00+00:00',
     'updated' => '2018-08-17T14:52:00+00:00',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'frontpage',
         'label' => 'PHP.net frontpage news',
       ),
-      1 => 
+      1 =>
       array (
         'term' => 'releases',
         'label' => 'New PHP release',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/index.php#id2018-08-17-1',
+        'href' => 'https://www.php.net/index.php#id2018-08-17-1',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
-        'href' => 'http://php.net/archive/2018.php#id2018-08-17-1',
+        'href' => 'https://www.php.net/archive/2018.php#id2018-08-17-1',
         'rel' => 'via',
         'type' => 'text/html',
       ),
@@ -5600,9 +5600,9 @@ the upgrade
           All PHP 7.1 users are encouraged to upgrade to this version.
           </p>
 
-          <p>For source downloads of PHP 7.1.21 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-          Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-          The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.1.21">ChangeLog</a>.
+          <p>For source downloads of PHP 7.1.21 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
+          Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
+          The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-7.php#7.1.21">ChangeLog</a>.
           </p>
     </div>
   ',
@@ -5610,41 +5610,41 @@ the upgrade
           7.1.21. This is a bugfix release.
 
           All PHP 7.1 users are encouraged to upgrade to this version.
-          </p><p>For source downloads of PHP 7.1.21 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-          Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-          The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.1.21">ChangeLog</a>.
+          </p><p>For source downloads of PHP 7.1.21 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
+          Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
+          The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-7.php#7.1.21">ChangeLog</a>.
           </p></div>',
   ),
-  102 => 
+  102 =>
   array (
     'title' => 'PHP 7.2.9 Released',
-    'id' => 'http://php.net/archive/2018.php#id2018-08-16-3',
+    'id' => 'https://www.php.net/archive/2018.php#id2018-08-16-3',
     'published' => '2018-08-16T19:14:25+00:00',
     'updated' => '2018-08-16T19:14:25+00:00',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'releases',
         'label' => 'New PHP release',
       ),
-      1 => 
+      1 =>
       array (
         'term' => 'frontpage',
         'label' => 'PHP.net frontpage news',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/index.php#id2018-08-16-3',
+        'href' => 'https://www.php.net/index.php#id2018-08-16-3',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
-        'href' => 'http://php.net/archive/2018.php#id2018-08-16-2',
+        'href' => 'https://www.php.net/archive/2018.php#id2018-08-16-2',
         'rel' => 'via',
         'type' => 'text/html',
       ),
@@ -5655,46 +5655,46 @@ the upgrade
 
      <p>All PHP 7.2 users are encouraged to upgrade to this version.</p>
 
-     <p>For source downloads of PHP 7.2.9 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-     The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.2.9">ChangeLog</a>.
+     <p>For source downloads of PHP 7.2.9 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
+     Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
+     The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-7.php#7.2.9">ChangeLog</a>.
      </p>
     </div>
   ',
     'intro' => '<div><p>The PHP development team announces the immediate availability of PHP
-     7.2.9. This is a bugfix release.</p><p>All PHP 7.2 users are encouraged to upgrade to this version.</p><p class=\'fullArticleLink\'><a href=\'http://php.net/archive/2018.php#id2018-08-16-2\' class>&hellip; read full article</a></p></div>',
+     7.2.9. This is a bugfix release.</p><p>All PHP 7.2 users are encouraged to upgrade to this version.</p><p class=\'fullArticleLink\'><a href=\'https://www.php.net/archive/2018.php#id2018-08-16-2\' class>&hellip; read full article</a></p></div>',
   ),
-  103 => 
+  103 =>
   array (
     'title' => 'php[world] 2018',
-    'id' => 'http://php.net/archive/2018.php#id2018-08-16-2',
+    'id' => 'https://www.php.net/archive/2018.php#id2018-08-16-2',
     'published' => '2018-08-16T14:31:44+00:00',
     'updated' => '2018-08-16T14:31:44+00:00',
     'finalTeaserDate' => '2018-11-14',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'conferences',
         'label' => 'Conference announcement',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/conferences/index.php#id2018-08-16-2',
+        'href' => 'https://www.php.net/conferences/index.php#id2018-08-16-2',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
         'href' => 'https://world.phparch.com/',
         'rel' => 'via',
         'type' => 'text/html',
       ),
     ),
-    'newsImage' => 
+    'newsImage' =>
     array (
       'xmlns' => 'http://php.net/ns/news',
       'link' => 'https://world.phparch.com/',
@@ -5714,31 +5714,31 @@ the upgrade
   ',
     'intro' => '<div><p>We are excited to announce the <a href="https://world.phparch.com/?utm_campaign=phpnet">5th annual php[world] conference</a>, produced by the publishers of <a href="https://www.phparch.com">php[architect] magazine</a>.  As always, it is taking place over two days in November (14th-15th) in the Washington D.C. area.</p><p>This year we have streamlined our event <a href="https://world.phparch.com/schedule?utm_campaign=phpnet">schedule</a> to add in even more content for you! 40 sessions, 6 workshops, and 12 birds of a feather sessions are waiting for you at this year\'s php[world] conference.</p><p class=\'fullArticleLink\'><a href=\'https://world.phparch.com/\' class>&hellip; read full article</a></p></div>',
   ),
-  104 => 
+  104 =>
   array (
     'title' => 'PHP 7.3.0.beta2 Released',
-    'id' => 'http://php.net/archive/2018.php#id2018-08-16-1',
+    'id' => 'https://www.php.net/archive/2018.php#id2018-08-16-1',
     'published' => '2018-08-16T14:11:38+02:00',
     'updated' => '2018-08-16T14:11:38+02:00',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'frontpage',
         'label' => 'PHP.net frontpage news',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/index.php#id2018-08-16-1',
+        'href' => 'https://www.php.net/index.php#id2018-08-16-1',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
-        'href' => 'http://php.net/archive/2018.php#id2018-08-16-1',
+        'href' => 'https://www.php.net/archive/2018.php#id2018-08-16-1',
         'rel' => 'via',
         'type' => 'text/html',
       ),
@@ -5793,39 +5793,39 @@ the upgrade
       </p><p>
         For source downloads of PHP 7.3.0beta2 please visit the <a href="https://downloads.php.net/~cmb/">download page</a>.
         Windows sources and binaries can be found on <a href="https://windows.php.net/qa/">windows.php.net/qa/</a>.
-      </p><p class=\'fullArticleLink\'><a href=\'http://php.net/archive/2018.php#id2018-08-16-1\' class>&hellip; read full article</a></p></div>',
+      </p><p class=\'fullArticleLink\'><a href=\'https://www.php.net/archive/2018.php#id2018-08-16-1\' class>&hellip; read full article</a></p></div>',
   ),
-  105 => 
+  105 =>
   array (
     'title' => 'SunshinePHP 2019 CFP Started',
-    'id' => 'http://php.net/archive/2018.php#id2018-08-14-1',
+    'id' => 'https://www.php.net/archive/2018.php#id2018-08-14-1',
     'published' => '2018-08-14T00:00:01+00:00',
     'updated' => '2018-08-14T12:23:00+00:00',
     'finalTeaserDate' => '2018-09-15',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'cfp',
         'label' => 'Call for Papers',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/conferences/index.php#id2018-08-14-1',
+        'href' => 'https://www.php.net/conferences/index.php#id2018-08-14-1',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
         'href' => 'http://sunshinephp.com',
         'rel' => 'via',
         'type' => 'text/html',
       ),
     ),
-    'newsImage' => 
+    'newsImage' =>
     array (
       'xmlns' => 'http://php.net/ns/news',
       'link' => 'http://sunshinephp.com',
@@ -5842,37 +5842,37 @@ the upgrade
 	',
     'intro' => '<div><p>We are happy to announce the CFP for SunshinePHP 2019 has launched at <a href="https://cfp.sunshinephp.com" title="SunshinePHP CFP">https://cfp.sunshinephp.com</a> where we will accept talk submissions until September 15th, 2018.</p><p>SunshinePHP hit it\'s 7th year and will happen from February 7th to 9th, 2019 in sunny Miami, Florida. As one of the largest community conferences in the U.S. there is no doubt the schedule will be amazing this year. We will have a full tutorial day featuring 3-hour sessions followed by 2 days of 1-hour talks and inspirational keynotes.</p><p class=\'fullArticleLink\'><a href=\'http://sunshinephp.com\' class>&hellip; read full article</a></p></div>',
   ),
-  106 => 
+  106 =>
   array (
     'title' => 'Northeast PHP Boston 2018',
-    'id' => 'http://php.net/archive/2018.php#id2018-08-09-1',
+    'id' => 'https://www.php.net/archive/2018.php#id2018-08-09-1',
     'published' => '2018-08-09T21:41:10-04:00',
     'updated' => '2018-08-09T21:41:10-04:00',
     'finalTeaserDate' => '2018-09-19',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'conferences',
         'label' => 'Conference announcement',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/conferences/index.php#id2018-08-09-1',
+        'href' => 'https://www.php.net/conferences/index.php#id2018-08-09-1',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
         'href' => 'http://2018.northeastphp.org/',
         'rel' => 'via',
         'type' => 'text/html',
       ),
     ),
-    'newsImage' => 
+    'newsImage' =>
     array (
       'xmlns' => 'http://php.net/ns/news',
       'link' => 'http://2018.northeastphp.org/',
@@ -5889,31 +5889,31 @@ the upgrade
   ',
     'intro' => '<div><p>Join us September 19-21 for this year\'s PHP, Web Development, and UX Conference by <a href="http://2018.northeastphp.org/">Northeast PHP</a>. We\'re returning to Boston and will be hosted at Wayfair HQ in historic Copley Square.</p><p>Our schedule has been announced and this year\'s has another great lineup of talks for the PHP community, including a security hackathon, IBM sponsored event night, keynote by PJ Hagerty, and a full day workshop covering application development using containers by Red Hat.</p><p class=\'fullArticleLink\'><a href=\'http://2018.northeastphp.org/\' class>&hellip; read full article</a></p></div>',
   ),
-  107 => 
+  107 =>
   array (
     'title' => 'PHP 7.3.0.beta1 Released',
-    'id' => 'http://php.net/archive/2018.php#id2018-08-02-1',
+    'id' => 'https://www.php.net/archive/2018.php#id2018-08-02-1',
     'published' => '2018-08-02T11:44:58+02:00',
     'updated' => '2018-08-02T11:44:58+02:00',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'frontpage',
         'label' => 'PHP.net frontpage news',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/index.php#id2018-08-02-1',
+        'href' => 'https://www.php.net/index.php#id2018-08-02-1',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
-        'href' => 'http://php.net/archive/2018.php#id2018-08-02-1',
+        'href' => 'https://www.php.net/archive/2018.php#id2018-08-02-1',
         'rel' => 'via',
         'type' => 'text/html',
       ),
@@ -5967,38 +5967,38 @@ the upgrade
       </p><p>
         For source downloads of PHP 7.3.0beta1 please visit the <a href="https://downloads.php.net/~cmb/">download page</a>.
         Windows sources and binaries can be found on <a href="https://windows.php.net/qa/">windows.php.net/qa/</a>.
-      </p><p class=\'fullArticleLink\'><a href=\'http://php.net/archive/2018.php#id2018-08-02-1\' class>&hellip; read full article</a></p></div>',
+      </p><p class=\'fullArticleLink\'><a href=\'https://www.php.net/archive/2018.php#id2018-08-02-1\' class>&hellip; read full article</a></p></div>',
   ),
-  108 => 
+  108 =>
   array (
     'title' => 'PHP 7.1.20 Released',
-    'id' => 'http://php.net/archive/2018.php#id2018-07-20-2',
+    'id' => 'https://www.php.net/archive/2018.php#id2018-07-20-2',
     'published' => '2018-07-20T08:13:03+00:00',
     'updated' => '2018-07-20T08:13:03+00:00',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'frontpage',
         'label' => 'PHP.net frontpage news',
       ),
-      1 => 
+      1 =>
       array (
         'term' => 'releases',
         'label' => 'New PHP release',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/index.php#id2018-07-20-2',
+        'href' => 'https://www.php.net/index.php#id2018-07-20-2',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
-        'href' => 'http://php.net/archive/2018.php#id2018-07-20-2',
+        'href' => 'https://www.php.net/archive/2018.php#id2018-07-20-2',
         'rel' => 'via',
         'type' => 'text/html',
       ),
@@ -6011,9 +6011,9 @@ the upgrade
           All PHP 7.1 users are encouraged to upgrade to this version.
           </p>
 
-          <p>For source downloads of PHP 7.1.20 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-          Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-          The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.1.20">ChangeLog</a>.
+          <p>For source downloads of PHP 7.1.20 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
+          Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
+          The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-7.php#7.1.20">ChangeLog</a>.
           </p>
     </div>
   ',
@@ -6022,41 +6022,41 @@ the upgrade
           in this release.
 
           All PHP 7.1 users are encouraged to upgrade to this version.
-          </p><p>For source downloads of PHP 7.1.20 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-          Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-          The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.1.20">ChangeLog</a>.
+          </p><p>For source downloads of PHP 7.1.20 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
+          Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
+          The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-7.php#7.1.20">ChangeLog</a>.
           </p></div>',
   ),
-  109 => 
+  109 =>
   array (
     'title' => 'PHP 5.6.37 Released',
-    'id' => 'http://php.net/archive/2018.php#id2018-07-20-1',
+    'id' => 'https://www.php.net/archive/2018.php#id2018-07-20-1',
     'published' => '2018-07-20T04:41:46+02:00',
     'updated' => '2018-07-20T04:41:46+02:00',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'frontpage',
         'label' => 'PHP.net frontpage news',
       ),
-      1 => 
+      1 =>
       array (
         'term' => 'releases',
         'label' => 'New PHP release',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/index.php#id2018-07-20-1',
+        'href' => 'https://www.php.net/index.php#id2018-07-20-1',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
-        'href' => 'http://php.net/archive/2018.php#id2018-07-20-1',
+        'href' => 'https://www.php.net/archive/2018.php#id2018-07-20-1',
         'rel' => 'via',
         'type' => 'text/html',
       ),
@@ -6068,9 +6068,9 @@ the upgrade
 
      All PHP 5.6 users are encouraged to upgrade to this version.</p>
 
-     <p>For source downloads of PHP 5.6.37 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-     The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.6.37">ChangeLog</a>.
+     <p>For source downloads of PHP 5.6.37 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
+     Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
+     The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-5.php#5.6.37">ChangeLog</a>.
      </p>
     </div>
   ',
@@ -6078,41 +6078,41 @@ the upgrade
         5.6.37. This is a security release. Several security bugs have been fixed
         in this release.
 
-     All PHP 5.6 users are encouraged to upgrade to this version.</p><p>For source downloads of PHP 5.6.37 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-     The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.6.37">ChangeLog</a>.
+     All PHP 5.6 users are encouraged to upgrade to this version.</p><p>For source downloads of PHP 5.6.37 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
+     Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
+     The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-5.php#5.6.37">ChangeLog</a>.
      </p></div>',
   ),
-  110 => 
+  110 =>
   array (
     'title' => 'PHP 7.0.31 Released',
-    'id' => 'http://php.net/archive/2018.php#id2018-07-19-3',
+    'id' => 'https://www.php.net/archive/2018.php#id2018-07-19-3',
     'published' => '2018-07-19T13:00:00+01:00',
     'updated' => '2018-07-19T13:00:00+01:00',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'releases',
         'label' => 'New PHP release',
       ),
-      1 => 
+      1 =>
       array (
         'term' => 'frontpage',
         'label' => 'PHP.net frontpage news',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/index.php#id2018-07-19-2',
+        'href' => 'https://www.php.net/index.php#id2018-07-19-2',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
-        'href' => 'http://php.net/archive/2018.php#id2018-07-19-2',
+        'href' => 'https://www.php.net/archive/2018.php#id2018-07-19-2',
         'rel' => 'via',
         'type' => 'text/html',
       ),
@@ -6124,9 +6124,9 @@ the upgrade
 
      All PHP 7.0 users are encouraged to upgrade to this version.</p>
 
-     <p>For source downloads of PHP 7.0.31 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-     The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.0.31">ChangeLog</a>.
+     <p>For source downloads of PHP 7.0.31 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
+     Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
+     The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-7.php#7.0.31">ChangeLog</a>.
      </p>
     </div>
   ',
@@ -6134,41 +6134,41 @@ the upgrade
 	7.0.31. This is a security release. Several security bugs have been fixed
 	in this release.
 
-     All PHP 7.0 users are encouraged to upgrade to this version.</p><p>For source downloads of PHP 7.0.31 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-     The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.0.31">ChangeLog</a>.
+     All PHP 7.0 users are encouraged to upgrade to this version.</p><p>For source downloads of PHP 7.0.31 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
+     Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
+     The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-7.php#7.0.31">ChangeLog</a>.
      </p></div>',
   ),
-  111 => 
+  111 =>
   array (
     'title' => 'PHP 7.2.8 Released',
-    'id' => 'http://php.net/archive/2018.php#id2018-07-19-2',
+    'id' => 'https://www.php.net/archive/2018.php#id2018-07-19-2',
     'published' => '2018-07-19T09:42:31+00:00',
     'updated' => '2018-07-19T09:42:31+00:00',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'releases',
         'label' => 'New PHP release',
       ),
-      1 => 
+      1 =>
       array (
         'term' => 'frontpage',
         'label' => 'PHP.net frontpage news',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/index.php#id2018-07-19-2',
+        'href' => 'https://www.php.net/index.php#id2018-07-19-2',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
-        'href' => 'http://php.net/archive/2018.php#id2018-07-19-2',
+        'href' => 'https://www.php.net/archive/2018.php#id2018-07-19-2',
         'rel' => 'via',
         'type' => 'text/html',
       ),
@@ -6179,40 +6179,40 @@ the upgrade
 
      <p>All PHP 7.2 users are encouraged to upgrade to this version.</p>
 
-     <p>For source downloads of PHP 7.2.8 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-     The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.2.8">ChangeLog</a>.
+     <p>For source downloads of PHP 7.2.8 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
+     Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
+     The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-7.php#7.2.8">ChangeLog</a>.
      </p>
     </div>
   ',
     'intro' => '<div><p>The PHP development team announces the immediate availability of PHP
-     7.2.8. This is a security release which also contains several minor bug fixes.</p><p>All PHP 7.2 users are encouraged to upgrade to this version.</p><p class=\'fullArticleLink\'><a href=\'http://php.net/archive/2018.php#id2018-07-19-2\' class>&hellip; read full article</a></p></div>',
+     7.2.8. This is a security release which also contains several minor bug fixes.</p><p>All PHP 7.2 users are encouraged to upgrade to this version.</p><p class=\'fullArticleLink\'><a href=\'https://www.php.net/archive/2018.php#id2018-07-19-2\' class>&hellip; read full article</a></p></div>',
   ),
-  112 => 
+  112 =>
   array (
     'title' => 'PHP 7.3.0alpha4 Released',
-    'id' => 'http://php.net/archive/2018.php#id2018-07-19-1',
+    'id' => 'https://www.php.net/archive/2018.php#id2018-07-19-1',
     'published' => '2018-07-19T11:02:21+02:00',
     'updated' => '2018-07-19T11:02:21+02:00',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'frontpage',
         'label' => 'PHP.net frontpage news',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/index.php#id2018-07-19-1',
+        'href' => 'https://www.php.net/index.php#id2018-07-19-1',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
-        'href' => 'http://php.net/archive/2018.php#id2018-07-19-1',
+        'href' => 'https://www.php.net/archive/2018.php#id2018-07-19-1',
         'rel' => 'via',
         'type' => 'text/html',
       ),
@@ -6264,33 +6264,33 @@ the upgrade
       </p><p>
         For source downloads of PHP 7.3.0alpha4 please visit the <a href="https://downloads.php.net/~cmb/">download page</a>.
         Windows sources and binaries can be found on <a href="https://windows.php.net/qa/">windows.php.net/qa/</a>.
-      </p><p class=\'fullArticleLink\'><a href=\'http://php.net/archive/2018.php#id2018-07-19-1\' class>&hellip; read full article</a></p></div>',
+      </p><p class=\'fullArticleLink\'><a href=\'https://www.php.net/archive/2018.php#id2018-07-19-1\' class>&hellip; read full article</a></p></div>',
   ),
-  113 => 
+  113 =>
   array (
     'title' => 'PHP 7.3.0 alpha 3 Released',
-    'id' => 'http://php.net/archive/2018.php#id2018-07-05-1',
+    'id' => 'https://www.php.net/archive/2018.php#id2018-07-05-1',
     'published' => '2018-07-05T11:41:41+02:00',
     'updated' => '2018-07-05T11:41:41+02:00',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'frontpage',
         'label' => 'PHP.net frontpage news',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/index.php#id2018-07-05-1',
+        'href' => 'https://www.php.net/index.php#id2018-07-05-1',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
-        'href' => 'http://php.net/archive/2018.php#id2018-07-05-1',
+        'href' => 'https://www.php.net/archive/2018.php#id2018-07-05-1',
         'rel' => 'via',
         'type' => 'text/html',
       ),
@@ -6308,7 +6308,7 @@ the upgrade
      </p>
 
      <p>
-      Please carefully test this version and report any issues found in the <a href=" http://bugs.php.net">bug reporting system</a>.
+      Please carefully test this version and report any issues found in the <a href=" https://bugs.php.net">bug reporting system</a>.
      </p>
 
      <p>
@@ -6342,39 +6342,39 @@ the upgrade
      </p><p>
       For source downloads of PHP 7.3.0 Alpha 3 please visit the <a href="https://downloads.php.net/~cmb/">download page</a>.
       Windows sources and binaries can be found on <a href="https://windows.php.net/qa/">windows.php.net/qa/</a>.
-     </p><p class=\'fullArticleLink\'><a href=\'http://php.net/archive/2018.php#id2018-07-05-1\' class>&hellip; read full article</a></p></div>',
+     </p><p class=\'fullArticleLink\'><a href=\'https://www.php.net/archive/2018.php#id2018-07-05-1\' class>&hellip; read full article</a></p></div>',
   ),
-  114 => 
+  114 =>
   array (
     'title' => 'ZendCon & OpenEnterprise 2018',
-    'id' => 'http://php.net/archive/2018.php#id2018-06-26-1',
+    'id' => 'https://www.php.net/archive/2018.php#id2018-06-26-1',
     'published' => '2018-06-26T08:41:29+00:00',
     'updated' => '2018-06-26T08:41:29+00:00',
     'finalTeaserDate' => '2018-10-01',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'conferences',
         'label' => 'Conference announcement',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/conferences/index.php#id2018-06-26-1',
+        'href' => 'https://www.php.net/conferences/index.php#id2018-06-26-1',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
         'href' => 'http://www.zendcon.com',
         'rel' => 'via',
         'type' => 'text/html',
       ),
     ),
-    'newsImage' => 
+    'newsImage' =>
     array (
       'xmlns' => 'http://php.net/ns/news',
       'link' => 'http://www.zendcon.com',
@@ -6395,37 +6395,37 @@ the upgrade
           business leaders, strategists, and developers will assemble to discuss case studies and best practices around
           the application of PHP and open source to transform business.</p></div>',
   ),
-  115 => 
+  115 =>
   array (
     'title' => 'SymfonyCon Lisbon 2018',
-    'id' => 'http://php.net/archive/2018.php#id2018-06-25-4',
+    'id' => 'https://www.php.net/archive/2018.php#id2018-06-25-4',
     'published' => '2018-06-25T14:46:40+02:00',
     'updated' => '2018-06-25T14:46:40+02:00',
     'finalTeaserDate' => '2018-12-06',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'conferences',
         'label' => 'Conference announcement',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/conferences/index.php#id2018-06-25-4',
+        'href' => 'https://www.php.net/conferences/index.php#id2018-06-25-4',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
         'href' => 'https://lisbon2018.symfony.com/',
         'rel' => 'via',
         'type' => 'text/html',
       ),
     ),
-    'newsImage' => 
+    'newsImage' =>
     array (
       'xmlns' => 'http://php.net/ns/news',
       'link' => 'https://lisbon2018.symfony.com/',
@@ -6454,37 +6454,37 @@ the upgrade
      serious work around Symfony and its environment, then sharing this very special
      Portuguese atmosphere... And of course, celebrate the community reunion!</p></div>',
   ),
-  116 => 
+  116 =>
   array (
     'title' => 'SymfonyLive Berlin 2018',
-    'id' => 'http://php.net/archive/2018.php#id2018-06-25-3',
+    'id' => 'https://www.php.net/archive/2018.php#id2018-06-25-3',
     'published' => '2018-06-25T13:29:40+02:00',
     'updated' => '2018-06-25T13:29:40+02:00',
     'finalTeaserDate' => '2018-10-24',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'conferences',
         'label' => 'Conference announcement',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/conferences/index.php#id2018-06-25-3',
+        'href' => 'https://www.php.net/conferences/index.php#id2018-06-25-3',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
         'href' => 'http://berlin2018.live.symfony.com/',
         'rel' => 'via',
         'type' => 'text/html',
       ),
     ),
-    'newsImage' => 
+    'newsImage' =>
     array (
       'xmlns' => 'http://php.net/ns/news',
       'link' => 'http://berlin2018.live.symfony.com/',
@@ -6503,37 +6503,37 @@ the upgrade
      26th of October there will be two workshop days and a conference day with two tracks.</p><p>Symfony German-speaking fans, don\'t miss the opportunity to attend inspiring
      and exciting talks and hands-on workshops!</p></div>',
   ),
-  117 => 
+  117 =>
   array (
     'title' => 'SymfonyLive USA 2018',
-    'id' => 'http://php.net/archive/2018.php#id2018-06-25-2',
+    'id' => 'https://www.php.net/archive/2018.php#id2018-06-25-2',
     'published' => '2018-06-25T13:17:59+02:00',
     'updated' => '2018-06-25T13:17:59+02:00',
     'finalTeaserDate' => '2018-10-11',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'conferences',
         'label' => 'Conference announcement',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/conferences/index.php#id2018-06-25-2',
+        'href' => 'https://www.php.net/conferences/index.php#id2018-06-25-2',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
         'href' => 'https://usa2018.live.symfony.com/',
         'rel' => 'via',
         'type' => 'text/html',
       ),
     ),
-    'newsImage' => 
+    'newsImage' =>
     array (
       'xmlns' => 'http://php.net/ns/news',
       'link' => 'https://usa2018.live.symfony.com/',
@@ -6557,36 +6557,36 @@ the upgrade
       from October 11th-12th. We are excited to return to the city by the bay
       and host the American Symfony community.</p><p class=\'fullArticleLink\'><a href=\'https://usa2018.live.symfony.com/\' class>&hellip; read full article</a></p></div>',
   ),
-  118 => 
+  118 =>
   array (
     'title' => 'PHP 7.1.19 Released',
-    'id' => 'http://php.net/archive/2018.php#id2018-06-25-1',
+    'id' => 'https://www.php.net/archive/2018.php#id2018-06-25-1',
     'published' => '2018-06-25T07:02:15+00:00',
     'updated' => '2018-06-25T07:02:15+00:00',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'frontpage',
         'label' => 'PHP.net frontpage news',
       ),
-      1 => 
+      1 =>
       array (
         'term' => 'releases',
         'label' => 'New PHP release',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/index.php#id2018-06-25-1',
+        'href' => 'https://www.php.net/index.php#id2018-06-25-1',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
-        'href' => 'http://php.net/archive/2018.php#id2018-06-25-1',
+        'href' => 'https://www.php.net/archive/2018.php#id2018-06-25-1',
         'rel' => 'via',
         'type' => 'text/html',
       ),
@@ -6598,9 +6598,9 @@ the upgrade
        All PHP 7.1 users are encouraged to upgrade to this version.
        </p>
 
-       <p>For source downloads of PHP 7.1.19 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-       Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-       The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.1.19">ChangeLog</a>.
+       <p>For source downloads of PHP 7.1.19 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
+       Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
+       The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-7.php#7.1.19">ChangeLog</a>.
        </p>
     </div>
   ',
@@ -6608,41 +6608,41 @@ the upgrade
        7.1.19.
 
        All PHP 7.1 users are encouraged to upgrade to this version.
-       </p><p>For source downloads of PHP 7.1.19 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-       Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-       The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.1.19">ChangeLog</a>.
+       </p><p>For source downloads of PHP 7.1.19 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
+       Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
+       The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-7.php#7.1.19">ChangeLog</a>.
        </p></div>',
   ),
-  119 => 
+  119 =>
   array (
     'title' => 'PHP 7.2.7 Released',
-    'id' => 'http://php.net/archive/2018.php#id2018-06-21-2',
+    'id' => 'https://www.php.net/archive/2018.php#id2018-06-21-2',
     'published' => '2018-06-21T15:12:22+00:00',
     'updated' => '2018-06-21T15:12:22+00:00',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'frontpage',
         'label' => 'PHP.net frontpage news',
       ),
-      1 => 
+      1 =>
       array (
         'term' => 'releases',
         'label' => 'New PHP release',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/index.php#id2018-06-21-2',
+        'href' => 'https://www.php.net/index.php#id2018-06-21-2',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
-        'href' => 'http://php.net/archive/2018.php#id2018-06-21-2',
+        'href' => 'https://www.php.net/archive/2018.php#id2018-06-21-2',
         'rel' => 'via',
         'type' => 'text/html',
       ),
@@ -6653,40 +6653,40 @@ the upgrade
 
      <p>PHP 7.2 users are encouraged to upgrade to this version.</p>
 
-     <p>For source downloads of PHP 7.2.7 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-     The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.2.7">ChangeLog</a>.
+     <p>For source downloads of PHP 7.2.7 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
+     Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
+     The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-7.php#7.2.7">ChangeLog</a>.
      </p>
     </div>
   ',
     'intro' => '<div><p>The PHP development team announces the immediate availability of PHP 7.2.7.
-     This is a primarily a bugfix release which includes a segfault fix for opcache.</p><p>PHP 7.2 users are encouraged to upgrade to this version.</p><p class=\'fullArticleLink\'><a href=\'http://php.net/archive/2018.php#id2018-06-21-2\' class>&hellip; read full article</a></p></div>',
+     This is a primarily a bugfix release which includes a segfault fix for opcache.</p><p>PHP 7.2 users are encouraged to upgrade to this version.</p><p class=\'fullArticleLink\'><a href=\'https://www.php.net/archive/2018.php#id2018-06-21-2\' class>&hellip; read full article</a></p></div>',
   ),
-  120 => 
+  120 =>
   array (
     'title' => 'PHP 7.3.0 alpha 2 Released',
-    'id' => 'http://php.net/archive/2018.php#id2018-06-21-1',
+    'id' => 'https://www.php.net/archive/2018.php#id2018-06-21-1',
     'published' => '2018-06-21T11:46:20+02:00',
     'updated' => '2018-06-21T11:46:20+02:00',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'frontpage',
         'label' => 'PHP.net frontpage news',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/index.php#id2018-06-21-1',
+        'href' => 'https://www.php.net/index.php#id2018-06-21-1',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
-        'href' => 'http://php.net/archive/2018.php#id2018-06-21-1',
+        'href' => 'https://www.php.net/archive/2018.php#id2018-06-21-1',
         'rel' => 'via',
         'type' => 'text/html',
       ),
@@ -6704,7 +6704,7 @@ the upgrade
      </p>
 
      <p>
-      Please carefully test this version and report any issues found in the <a href=" http://bugs.php.net">bug reporting system</a>.
+      Please carefully test this version and report any issues found in the <a href=" https://bugs.php.net">bug reporting system</a>.
      </p>
 
      <p>
@@ -6738,39 +6738,39 @@ the upgrade
      </p><p>
       For source downloads of PHP 7.3.0 Alpha 2 please visit the <a href="https://downloads.php.net/~cmb/">download page</a>.
       Windows sources and binaries can be found on <a href="https://windows.php.net/qa/">windows.php.net/qa/</a>.
-     </p><p class=\'fullArticleLink\'><a href=\'http://php.net/archive/2018.php#id2018-06-21-1\' class>&hellip; read full article</a></p></div>',
+     </p><p class=\'fullArticleLink\'><a href=\'https://www.php.net/archive/2018.php#id2018-06-21-1\' class>&hellip; read full article</a></p></div>',
   ),
-  121 => 
+  121 =>
   array (
     'title' => 'SymfonyLive London 2018',
-    'id' => 'http://php.net/archive/2018.php#id2018-06-18-1',
+    'id' => 'https://www.php.net/archive/2018.php#id2018-06-18-1',
     'published' => '2018-06-18T10:37:31+02:00',
     'updated' => '2018-06-18T10:37:31+02:00',
     'finalTeaserDate' => '2018-09-28',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'conferences',
         'label' => 'Conference announcement',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/conferences/index.php#id2018-06-18-1',
+        'href' => 'https://www.php.net/conferences/index.php#id2018-06-18-1',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
         'href' => 'https://london2018.live.symfony.com/',
         'rel' => 'via',
         'type' => 'text/html',
       ),
     ),
-    'newsImage' => 
+    'newsImage' =>
     array (
       'xmlns' => 'http://php.net/ns/news',
       'link' => 'https://london2018.live.symfony.com/',
@@ -6794,37 +6794,37 @@ the upgrade
       professionals will meet at Westminster, for
       <a href="https://london2018.live.symfony.com/">SymfonyLive London 2018</a>.</p><p class=\'fullArticleLink\'><a href=\'https://london2018.live.symfony.com/\' class>&hellip; read full article</a></p></div>',
   ),
-  122 => 
+  122 =>
   array (
     'title' => 'php Central Europe Conference 2018',
-    'id' => 'http://php.net/archive/2018.php#id2018-06-14-1',
+    'id' => 'https://www.php.net/archive/2018.php#id2018-06-14-1',
     'published' => '2018-06-14T20:49:21+02:00',
     'updated' => '2018-06-14T20:49:21+02:00',
     'finalTeaserDate' => '2018-06-30',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'cfp',
         'label' => 'Call for Papers',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/conferences/index.php#id2018-06-14-1',
+        'href' => 'https://www.php.net/conferences/index.php#id2018-06-14-1',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
         'href' => 'https://cfp.phpce.eu/',
         'rel' => 'via',
         'type' => 'text/html',
       ),
     ),
-    'newsImage' => 
+    'newsImage' =>
     array (
       'xmlns' => 'http://php.net/ns/news',
       'link' => 'https://cfp.phpce.eu/',
@@ -6855,37 +6855,37 @@ the upgrade
   ',
     'intro' => '<div><p>New season and new challenges! As conference organisers we understand perfectly that you can stay with peleton only when you focus on development. That is why phpCE, as an event aimed at a wide group of PHP programmers from Central Europe, leaves Poland for the first time. We are stronger than before thanks to the organisers of Brno PHP Conference and volunteers from the PehapkaÅi group. Together we have been working for the success of this yearâs edition and <strong>we are inviting you to Prague.</strong><br/></p><p style="text-align:center;font-size:120%">Our Special Guest this year will be <strong>Rasmus Lerdorf</strong>, The PHP Language Creator.</p><p class=\'fullArticleLink\'><a href=\'https://cfp.phpce.eu/\' class>&hellip; read full article</a></p></div>',
   ),
-  123 => 
+  123 =>
   array (
     'title' => 'php[world] 2018 - Call for Speakers',
-    'id' => 'http://php.net/archive/2018.php#id2018-06-13-1',
+    'id' => 'https://www.php.net/archive/2018.php#id2018-06-13-1',
     'published' => '2018-06-13T12:00:51+00:00',
     'updated' => '2018-06-13T12:00:51+00:00',
     'finalTeaserDate' => '2018-07-22',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'cfp',
         'label' => 'Call for Papers',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/conferences/index.php#id2018-06-13-1',
+        'href' => 'https://www.php.net/conferences/index.php#id2018-06-13-1',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
         'href' => 'https://world.phparch.com/',
         'rel' => 'via',
         'type' => 'text/html',
       ),
     ),
-    'newsImage' => 
+    'newsImage' =>
     array (
       'xmlns' => 'http://php.net/ns/news',
       'link' => 'https://world.phparch.com/',
@@ -6929,37 +6929,37 @@ the upgrade
                 Ideas surrounding the entire software life cycle are often big hits for our attendees. Finally, we do welcome non-technical
                 proposals that will appeal to a developer audience.</p><p class=\'fullArticleLink\'><a href=\'https://world.phparch.com/\' class>&hellip; read full article</a></p></div>',
   ),
-  124 => 
+  124 =>
   array (
     'title' => 'LaravelConf Taiwan 2018',
-    'id' => 'http://php.net/archive/2018.php#id2018-06-11-1',
+    'id' => 'https://www.php.net/archive/2018.php#id2018-06-11-1',
     'published' => '2018-06-11T11:00:00+00:00',
     'updated' => '2018-06-11T11:00:00+00:00',
     'finalTeaserDate' => '2018-07-08',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'conferences',
         'label' => 'Conference announcement',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/conferences/index.php#id2018-06-11-1',
+        'href' => 'https://www.php.net/conferences/index.php#id2018-06-11-1',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
         'href' => 'https://laravelconf.tw/',
         'rel' => 'via',
         'type' => 'text/html',
       ),
     ),
-    'newsImage' => 
+    'newsImage' =>
     array (
       'xmlns' => 'http://php.net/ns/news',
       'link' => 'https://laravelconf.tw/',
@@ -6978,31 +6978,31 @@ the upgrade
   ',
     'intro' => '<div><p>As the biggest PHP and Laravel community in Taiwan, we are proud to announce <a href="https://laravelconf.tw/">LaravelConf Taiwan</a> will take place on July 8, 2018.</p><p>Come and enjoy inspirational talks and making friends with enthusiastic developers like you!</p><p class=\'fullArticleLink\'><a href=\'https://laravelconf.tw/\' class>&hellip; read full article</a></p></div>',
   ),
-  125 => 
+  125 =>
   array (
     'title' => 'PHP 7.3.0 alpha 1 Released',
-    'id' => 'http://php.net/archive/2018.php#id2018-06-07-1',
+    'id' => 'https://www.php.net/archive/2018.php#id2018-06-07-1',
     'published' => '2018-06-07T18:36:37+00:00',
     'updated' => '2018-06-07T18:36:37+00:00',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'frontpage',
         'label' => 'PHP.net frontpage news',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/index.php#id2018-06-07-1',
+        'href' => 'https://www.php.net/index.php#id2018-06-07-1',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
-        'href' => 'http://php.net/archive/2018.php#id2018-06-07-1',
+        'href' => 'https://www.php.net/archive/2018.php#id2018-06-07-1',
         'rel' => 'via',
         'type' => 'text/html',
       ),
@@ -7017,7 +7017,7 @@ the upgrade
      <p>For source downloads of PHP 7.3.0 Alpha 1 please visit the <a href="https://downloads.php.net/~stas/">download page</a>.</p>
 
      <p>
-     Please carefully test this version and report any issues found in the <a href=" http://bugs.php.net">bug reporting system</a>.
+     Please carefully test this version and report any issues found in the <a href=" https://bugs.php.net">bug reporting system</a>.
      </p>
 
      <p>
@@ -7045,39 +7045,39 @@ the upgrade
      PHP team is glad to announce the release of the first PHP 7.3.0 version, PHP 7.3.0 Alpha 1.
 	 This starts the PHP 7.3 release cycle, the rough outline of which is specified in the
 	 <a href="https://wiki.php.net/todo/php73">PHP Wiki</a>.
-     </p><p>For source downloads of PHP 7.3.0 Alpha 1 please visit the <a href="https://downloads.php.net/~stas/">download page</a>.</p><p class=\'fullArticleLink\'><a href=\'http://php.net/archive/2018.php#id2018-06-07-1\' class>&hellip; read full article</a></p></div>',
+     </p><p>For source downloads of PHP 7.3.0 Alpha 1 please visit the <a href="https://downloads.php.net/~stas/">download page</a>.</p><p class=\'fullArticleLink\'><a href=\'https://www.php.net/archive/2018.php#id2018-06-07-1\' class>&hellip; read full article</a></p></div>',
   ),
-  126 => 
+  126 =>
   array (
     'title' => 'PHPSC Conference 2018',
-    'id' => 'http://php.net/archive/2018.php#id2018-06-06-3',
+    'id' => 'https://www.php.net/archive/2018.php#id2018-06-06-3',
     'published' => '2018-06-06T13:14:56-03:00',
     'updated' => '2018-06-06T13:14:56-03:00',
     'finalTeaserDate' => '2018-06-09',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'conferences',
         'label' => 'Conference announcement',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/conferences/index.php#id2018-06-06-3',
+        'href' => 'https://www.php.net/conferences/index.php#id2018-06-06-3',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
         'href' => 'https://conf.phpsc.com.br',
         'rel' => 'via',
         'type' => 'text/html',
       ),
     ),
-    'newsImage' => 
+    'newsImage' =>
     array (
       'xmlns' => 'http://php.net/ns/news',
       'link' => 'https://conf.phpsc.com.br',
@@ -7098,37 +7098,37 @@ the upgrade
   ',
     'intro' => '<div><p>The Santa Catarina PHP user group (PHPSC) announce the <b><a href="https://conf.phpsc.com.br/">8th edition</a></b> of the <b>PHPSC Conference</b>, taking place on June 8-9th, 2018 in FlorianÃ³polis, Brazil.</p><p>This Conference aims to discuss best practices in PHP technology and related areas such as design, development techniques, database, open source, agile methodologies, design patterns, etc.</p><p class=\'fullArticleLink\'><a href=\'https://conf.phpsc.com.br\' class>&hellip; read full article</a></p></div>',
   ),
-  127 => 
+  127 =>
   array (
     'title' => 'Madison PHP Conference 2018',
-    'id' => 'http://php.net/archive/2018.php#id2018-06-06-2',
+    'id' => 'https://www.php.net/archive/2018.php#id2018-06-06-2',
     'published' => '2018-06-06T20:10:02+00:00',
     'updated' => '2018-06-06T20:10:02+00:00',
     'finalTeaserDate' => '2018-06-01',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'cfp',
         'label' => 'Call for Papers',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/conferences/index.php#id2018-06-06-2',
+        'href' => 'https://www.php.net/conferences/index.php#id2018-06-06-2',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
         'href' => 'https://www.MadisonPHPConference.com',
         'rel' => 'via',
         'type' => 'text/html',
       ),
     ),
-    'newsImage' => 
+    'newsImage' =>
     array (
       'xmlns' => 'http://php.net/ns/news',
       'link' => 'https://www.MadisonPHPConference.com',
@@ -7143,36 +7143,36 @@ the upgrade
   ',
     'intro' => '<div><p>Join us on Friday, November 2nd, 2018 for a full day of tutorials followed by multiple tracks of amazing talks on Saturday, November 3rd, 2018. Now in its sixth year, <a href="https://www.madisonphpconference.com">Madison PHP Conference</a> in Madison, Wisconsin, USA focuses on PHP, related web technologies, and professional development - everything you need to energize your career. This event is organized by the locally-run <a href="http://www.madisonphp.com">Madison PHP user group</a> and is designed to offer something for attendees at all skill levels. <a href="https://www.madisonphpconference.com">Madison PHP Conference 2018</a> will be two days of networking, learning, sharing, and great fun! </p><p>The <a href="https://cfp.madisonphpconference.com">Call for Papers</a> will be open until May 31st, 2018. Madison PHP Conference offers reimbursement for travel and accommodations. To view the full speaker package and to submit a talk, please visit: <a href="https://cfp.madisonphpconference.com">https://cfp.MadisonPHPConference.com</a>.</p></div>',
   ),
-  128 => 
+  128 =>
   array (
     'title' => 'Southeast PHP Conference',
-    'id' => 'http://php.net/archive/2018.php#id2018-06-06-1',
+    'id' => 'https://www.php.net/archive/2018.php#id2018-06-06-1',
     'published' => '2018-06-06T11:02:22+00:00',
     'finalTeaserDate' => '2018-06-06',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'conferences',
         'label' => 'Conference announcement',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/conferences/index.php#id2018-06-06-1',
+        'href' => 'https://www.php.net/conferences/index.php#id2018-06-06-1',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
         'href' => 'https://southeastphp.com',
         'rel' => 'via',
         'type' => 'text/html',
       ),
     ),
-    'newsImage' => 
+    'newsImage' =>
     array (
       'xmlns' => 'http://php.net/ns/news',
       'link' => 'https://southeastphp.com',
@@ -7187,36 +7187,36 @@ the upgrade
   ',
     'intro' => '<div><p><a href="https://southeastphp.com">Southeast PHP</a> is a two-day, regional PHP conference that brings the community together to learn and grow. We\'re bringing the community conference to Nashville, TN which hasn\'t had a conference since the old PHP Community Conference back in 2011! We will have two full days of amazing talks from members of our community talking about security, framework-less php, deployment and more!</p><p>The conference is scheduled to run <strong>August 16th - August 17th</strong>, at the beautiful <a href="https://www.hotelpreston.com/">Hotel Preston</a>. We welcome developers and enthusiasts of all skill levels to come join us while we discuss the latest trends and technologies in our industry. You can use the code `SOUTHEAST` to reserve a room today!</p><p class=\'fullArticleLink\'><a href=\'https://southeastphp.com\' class>&hellip; read full article</a></p></div>',
   ),
-  129 => 
+  129 =>
   array (
     'title' => 'PHP 7.1.18 Released',
-    'id' => 'http://php.net/archive/2018.php#id2018-05-25-1',
+    'id' => 'https://www.php.net/archive/2018.php#id2018-05-25-1',
     'published' => '2018-05-25T12:43:22+00:00',
     'updated' => '2018-05-25T12:43:22+00:00',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'frontpage',
         'label' => 'PHP.net frontpage news',
       ),
-      1 => 
+      1 =>
       array (
         'term' => 'releases',
         'label' => 'New PHP release',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/index.php#id2018-05-25-1',
+        'href' => 'https://www.php.net/index.php#id2018-05-25-1',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
-        'href' => 'http://php.net/archive/2018.php#id2018-05-25-1',
+        'href' => 'https://www.php.net/archive/2018.php#id2018-05-25-1',
         'rel' => 'via',
         'type' => 'text/html',
       ),
@@ -7228,9 +7228,9 @@ the upgrade
        All PHP 7.1 users are encouraged to upgrade to this version.
        </p>
 
-       <p>For source downloads of PHP 7.1.18 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-       Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-       The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.1.18">ChangeLog</a>.
+       <p>For source downloads of PHP 7.1.18 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
+       Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
+       The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-7.php#7.1.18">ChangeLog</a>.
        </p>
     </div>
   ',
@@ -7238,41 +7238,41 @@ the upgrade
        7.1.18.
 
        All PHP 7.1 users are encouraged to upgrade to this version.
-       </p><p>For source downloads of PHP 7.1.18 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-       Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-       The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.1.18">ChangeLog</a>.
+       </p><p>For source downloads of PHP 7.1.18 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
+       Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
+       The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-7.php#7.1.18">ChangeLog</a>.
        </p></div>',
   ),
-  130 => 
+  130 =>
   array (
     'title' => 'PHP 7.2.6 Released',
-    'id' => 'http://php.net/archive/2018.php#id2018-05-24-1',
+    'id' => 'https://www.php.net/archive/2018.php#id2018-05-24-1',
     'published' => '2018-05-24T21:55:35+00:00',
     'updated' => '2018-05-24T21:55:35+00:00',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'releases',
         'label' => 'New PHP release',
       ),
-      1 => 
+      1 =>
       array (
         'term' => 'frontpage',
         'label' => 'PHP.net frontpage news',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/index.php#id2018-05-24-1',
+        'href' => 'https://www.php.net/index.php#id2018-05-24-1',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
-        'href' => 'http://php.net/archive/2018.php#id2018-05-24-1',
+        'href' => 'https://www.php.net/archive/2018.php#id2018-05-24-1',
         'rel' => 'via',
         'type' => 'text/html',
       ),
@@ -7283,46 +7283,46 @@ the upgrade
 
      <p>PHP 7.2 users are encouraged to upgrade to this version.</p>
 
-     <p>For source downloads of PHP 7.2.6 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-     The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.2.6">ChangeLog</a>.
+     <p>For source downloads of PHP 7.2.6 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
+     Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
+     The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-7.php#7.2.6">ChangeLog</a>.
      </p>
     </div>
   ',
     'intro' => '<div><p>The PHP development team announces the immediate availability of PHP 7.2.6.
-     This is a primarily a bugfix release which includes a memory corruption fix for EXIF.</p><p>PHP 7.2 users are encouraged to upgrade to this version.</p><p class=\'fullArticleLink\'><a href=\'http://php.net/archive/2018.php#id2018-05-24-1\' class>&hellip; read full article</a></p></div>',
+     This is a primarily a bugfix release which includes a memory corruption fix for EXIF.</p><p>PHP 7.2 users are encouraged to upgrade to this version.</p><p class=\'fullArticleLink\'><a href=\'https://www.php.net/archive/2018.php#id2018-05-24-1\' class>&hellip; read full article</a></p></div>',
   ),
-  131 => 
+  131 =>
   array (
     'title' => 'phpDay 2018',
-    'id' => 'http://php.net/archive/2018.php#id2018-05-02-1',
+    'id' => 'https://www.php.net/archive/2018.php#id2018-05-02-1',
     'published' => '2018-05-02T14:39:18+02:00',
     'updated' => '2018-05-02T14:39:18+02:00',
     'finalTeaserDate' => '2018-05-11',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'conferences',
         'label' => 'Conference announcement',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/conferences/index.php#id2018-05-02-1',
+        'href' => 'https://www.php.net/conferences/index.php#id2018-05-02-1',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
         'href' => 'https://2018.phpday.it/',
         'rel' => 'via',
         'type' => 'text/html',
       ),
     ),
-    'newsImage' => 
+    'newsImage' =>
     array (
       'xmlns' => 'http://php.net/ns/news',
       'link' => 'https://2018.phpday.it/',
@@ -7339,37 +7339,37 @@ the upgrade
   ',
     'intro' => '<div><p>The Italian PHP user group GrUSP is pleased to announce the <b><a href="https://2018.phpday.it/">15th edition</a></b> of <b>phpday</b>, taking place on May 11-12th, 2018 in Verona, Italy. </p><p>It is the first historic Italian conference dedicated solely to PHP development, technologies and management. It is aimed to IT managers, developers and innovators. Each year it renews the opportunity to link to new business partners.</p><p class=\'fullArticleLink\'><a href=\'https://2018.phpday.it/\' class>&hellip; read full article</a></p></div>',
   ),
-  132 => 
+  132 =>
   array (
     'title' => 'ZendCon & OpenEnterprise 2018 - Call for Speakers',
-    'id' => 'http://php.net/archive/2018.php#id2018-04-29-1',
+    'id' => 'https://www.php.net/archive/2018.php#id2018-04-29-1',
     'published' => '2018-04-29T08:41:29+00:00',
     'updated' => '2018-04-29T08:41:29+00:00',
     'finalTeaserDate' => '2018-05-25',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'cfp',
         'label' => 'Call for Papers',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/conferences/index.php#id2018-04-29-1',
+        'href' => 'https://www.php.net/conferences/index.php#id2018-04-29-1',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
         'href' => 'http://www.zendcon.com',
         'rel' => 'via',
         'type' => 'text/html',
       ),
     ),
-    'newsImage' => 
+    'newsImage' =>
     array (
       'xmlns' => 'http://php.net/ns/news',
       'link' => 'http://www.zendcon.com',
@@ -7384,36 +7384,36 @@ the upgrade
   ',
     'intro' => '<div><p><a href="http://www.zendcon.com/cfp/">The Call For Papers</a> for <a href="http://www.zendcon.com">ZendCon &amp; OpenEnterprise 2018</a> is now open!</p><p>ZendCon &amp; OpenEnterprise is the premier open source conference designed to teach and share practical experiences from the front lines of business critical and enterprise environments, giving you the opportunity to speak in front of technical business leaders, strategists, and developers seeking the best knowledge around the operational advantages of open source. This is your chance to tell everyone what youâve learned and enrich our community of enterprise technology practitioners.</p><p class=\'fullArticleLink\'><a href=\'http://www.zendcon.com\' class>&hellip; read full article</a></p></div>',
   ),
-  133 => 
+  133 =>
   array (
     'title' => 'PHP 5.6.36 Released',
-    'id' => 'http://php.net/archive/2018.php#id2018-04-26-4',
+    'id' => 'https://www.php.net/archive/2018.php#id2018-04-26-4',
     'published' => '2018-04-26T13:29:24-07:00',
     'updated' => '2018-04-26T13:29:24-07:00',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'frontpage',
         'label' => 'PHP.net frontpage news',
       ),
-      1 => 
+      1 =>
       array (
         'term' => 'releases',
         'label' => 'New PHP release',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/index.php#id2018-04-26-4',
+        'href' => 'https://www.php.net/index.php#id2018-04-26-4',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
-        'href' => 'http://php.net/archive/2018.php#id2018-04-26-4',
+        'href' => 'https://www.php.net/archive/2018.php#id2018-04-26-4',
         'rel' => 'via',
         'type' => 'text/html',
       ),
@@ -7425,9 +7425,9 @@ the upgrade
 
      All PHP 5.6 users are encouraged to upgrade to this version.</p>
 
-     <p>For source downloads of PHP 5.6.36 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-     The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.6.36">ChangeLog</a>.
+     <p>For source downloads of PHP 5.6.36 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
+     Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
+     The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-5.php#5.6.36">ChangeLog</a>.
      </p>
     </div>
   ',
@@ -7435,41 +7435,41 @@ the upgrade
         5.6.36. This is a security release. Several security bugs have been fixed
         in this release.
 
-     All PHP 5.6 users are encouraged to upgrade to this version.</p><p>For source downloads of PHP 5.6.36 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-     The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.6.36">ChangeLog</a>.
+     All PHP 5.6 users are encouraged to upgrade to this version.</p><p>For source downloads of PHP 5.6.36 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
+     Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
+     The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-5.php#5.6.36">ChangeLog</a>.
      </p></div>',
   ),
-  134 => 
+  134 =>
   array (
     'title' => 'PHP 7.1.17 Released',
-    'id' => 'http://php.net/archive/2018.php#id2018-04-26-3',
+    'id' => 'https://www.php.net/archive/2018.php#id2018-04-26-3',
     'published' => '2018-04-26T16:11:23+00:00',
     'updated' => '2018-04-26T16:11:23+00:00',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'frontpage',
         'label' => 'PHP.net frontpage news',
       ),
-      1 => 
+      1 =>
       array (
         'term' => 'releases',
         'label' => 'New PHP release',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/index.php#id2018-04-26-3',
+        'href' => 'https://www.php.net/index.php#id2018-04-26-3',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
-        'href' => 'http://php.net/archive/2018.php#id2018-04-26-3',
+        'href' => 'https://www.php.net/archive/2018.php#id2018-04-26-3',
         'rel' => 'via',
         'type' => 'text/html',
       ),
@@ -7481,9 +7481,9 @@ the upgrade
        All PHP 7.1 users are encouraged to upgrade to this version.
        </p>
 
-       <p>For source downloads of PHP 7.1.17 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-       Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-       The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.1.17">ChangeLog</a>.
+       <p>For source downloads of PHP 7.1.17 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
+       Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
+       The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-7.php#7.1.17">ChangeLog</a>.
        </p>
     </div>
   ',
@@ -7491,41 +7491,41 @@ the upgrade
        7.1.17. This is a security fix release, containing many bugfixes.
 
        All PHP 7.1 users are encouraged to upgrade to this version.
-       </p><p>For source downloads of PHP 7.1.17 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-       Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-       The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.1.17">ChangeLog</a>.
+       </p><p>For source downloads of PHP 7.1.17 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
+       Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
+       The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-7.php#7.1.17">ChangeLog</a>.
        </p></div>',
   ),
-  135 => 
+  135 =>
   array (
     'title' => 'PHP 7.0.30 Released',
-    'id' => 'http://php.net/archive/2018.php#id2018-04-26-2',
+    'id' => 'https://www.php.net/archive/2018.php#id2018-04-26-2',
     'published' => '2018-04-26T13:00:00+01:00',
     'updated' => '2018-04-26T13:00:00+01:00',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'releases',
         'label' => 'New PHP release',
       ),
-      1 => 
+      1 =>
       array (
         'term' => 'frontpage',
         'label' => 'PHP.net frontpage news',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/index.php#id2018-04-26-2',
+        'href' => 'https://www.php.net/index.php#id2018-04-26-2',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
-        'href' => 'http://php.net/archive/2018.php#id2018-04-26-2',
+        'href' => 'https://www.php.net/archive/2018.php#id2018-04-26-2',
         'rel' => 'via',
         'type' => 'text/html',
       ),
@@ -7537,9 +7537,9 @@ the upgrade
 
      All PHP 7.0 users are encouraged to upgrade to this version.</p>
 
-     <p>For source downloads of PHP 7.0.30 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-     The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.0.30">ChangeLog</a>.
+     <p>For source downloads of PHP 7.0.30 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
+     Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
+     The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-7.php#7.0.30">ChangeLog</a>.
      </p>
     </div>
   ',
@@ -7547,41 +7547,41 @@ the upgrade
 	7.0.30. This is a security release. Several security bugs have been fixed
 	in this release.
 
-     All PHP 7.0 users are encouraged to upgrade to this version.</p><p>For source downloads of PHP 7.0.30 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-     The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.0.30">ChangeLog</a>.
+     All PHP 7.0 users are encouraged to upgrade to this version.</p><p>For source downloads of PHP 7.0.30 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
+     Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
+     The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-7.php#7.0.30">ChangeLog</a>.
      </p></div>',
   ),
-  136 => 
+  136 =>
   array (
     'title' => 'PHP 7.2.5 Released',
-    'id' => 'http://php.net/archive/2018.php#id2018-04-26-1',
+    'id' => 'https://www.php.net/archive/2018.php#id2018-04-26-1',
     'published' => '2018-04-26T09:12:18+00:00',
     'updated' => '2018-04-26T09:12:18+00:00',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'releases',
         'label' => 'New PHP release',
       ),
-      1 => 
+      1 =>
       array (
         'term' => 'frontpage',
         'label' => 'PHP.net frontpage news',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/index.php#id2018-04-26-1',
+        'href' => 'https://www.php.net/index.php#id2018-04-26-1',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
-        'href' => 'http://php.net/archive/2018.php#id2018-04-26-1',
+        'href' => 'https://www.php.net/archive/2018.php#id2018-04-26-1',
         'rel' => 'via',
         'type' => 'text/html',
       ),
@@ -7592,46 +7592,46 @@ the upgrade
 
      <p>All PHP 7.2 users are encouraged to upgrade to this version.</p>
 
-     <p>For source downloads of PHP 7.2.5 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-     The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.2.5">ChangeLog</a>.
+     <p>For source downloads of PHP 7.2.5 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
+     Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
+     The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-7.php#7.2.5">ChangeLog</a>.
      </p>
     </div>
   ',
     'intro' => '<div><p>The PHP development team announces the immediate availability of PHP
-     7.2.5. This is a security release which also contains several minor bug fixes.</p><p>All PHP 7.2 users are encouraged to upgrade to this version.</p><p class=\'fullArticleLink\'><a href=\'http://php.net/archive/2018.php#id2018-04-26-1\' class>&hellip; read full article</a></p></div>',
+     7.2.5. This is a security release which also contains several minor bug fixes.</p><p>All PHP 7.2 users are encouraged to upgrade to this version.</p><p class=\'fullArticleLink\'><a href=\'https://www.php.net/archive/2018.php#id2018-04-26-1\' class>&hellip; read full article</a></p></div>',
   ),
-  137 => 
+  137 =>
   array (
     'title' => 'Mid-Atlantic Developer Conference',
-    'id' => 'http://php.net/archive/2018.php#id2018-04-25-1',
+    'id' => 'https://www.php.net/archive/2018.php#id2018-04-25-1',
     'published' => '2018-04-25T19:31:27+00:00',
     'updated' => '2018-04-25T19:31:27+00:00',
     'finalTeaserDate' => '2018-07-13',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'conferences',
         'label' => 'Conference announcement',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/conferences/index.php#id2018-04-25-1',
+        'href' => 'https://www.php.net/conferences/index.php#id2018-04-25-1',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
         'href' => 'https://www.middevcon.com/',
         'rel' => 'via',
         'type' => 'text/html',
       ),
     ),
-    'newsImage' => 
+    'newsImage' =>
     array (
       'xmlns' => 'http://php.net/ns/news',
       'link' => 'https://www.middevcon.com/',
@@ -7650,37 +7650,37 @@ the upgrade
   ',
     'intro' => '<div><p>We are excited to announce the <a href="https://www.middevcon.com/schedule/">schedule</a> for the 1st annual <a href="https://www.middevcon.com/">Mid-Atlantic Developer Conference</a> taking place this summer on July 13-14 near Baltimore, MD.</p><p>This is a brand new polyglot developer event designed to bring together programmers from the region for two full days of learning. We\'ve put together an electic set of sessions and workshops for you. You\'ll recognize some names from the PHP community, as well as see brand new speakers at this event. We are including sessions on Caching, Hiring, Polymer, Bots, Security, Encryption, SVG, WebAssembly, GraphQL, Accessibility, Mentorship, Augmented Reality, Testing, AWS, Docker, Troubleshooting, Gherkin, Ethereum, Health and much more!</p><p class=\'fullArticleLink\'><a href=\'https://www.middevcon.com/\' class>&hellip; read full article</a></p></div>',
   ),
-  138 => 
+  138 =>
   array (
     'title' => 'International PHP Conference 2018 - Fall Edition',
-    'id' => 'http://php.net/archive/2018.php#id2018-04-23-1',
+    'id' => 'https://www.php.net/archive/2018.php#id2018-04-23-1',
     'published' => '2018-04-23T09:44:54-04:00',
     'updated' => '2018-04-23T09:44:54-04:00',
     'finalTeaserDate' => '2018-10-15',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'conferences',
         'label' => 'Conference announcement',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/conferences/index.php#id2018-04-23-1',
+        'href' => 'https://www.php.net/conferences/index.php#id2018-04-23-1',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
         'href' => 'https://phpconference.com',
         'rel' => 'via',
         'type' => 'text/html',
       ),
     ),
-    'newsImage' => 
+    'newsImage' =>
     array (
       'xmlns' => 'http://php.net/ns/news',
       'link' => 'https://phpconference.com',
@@ -7719,37 +7719,37 @@ the upgrade
   ',
     'intro' => '<div><p>The <a href="https://phpconference.com">International PHP Conference</a> is the world\'s first PHP conference and stands since more than a decade for top-notch pragmatic expertise in PHP and web technologies. At the IPC, internationally renowned experts from the PHP industry meet up with PHP users and developers from large and small companies. Here is the place where concepts emerge and ideas are born - the IPC signifies knowledge transfer at highest level.</p><p>All delegates of the International PHP Conference have, in addition to PHP program, free access to the entire range of the <a href="https://javascript-conference.com">International JavaScript Conference</a> taking place at the same time.</p><p class=\'fullArticleLink\'><a href=\'https://phpconference.com\' class>&hellip; read full article</a></p></div>',
   ),
-  139 => 
+  139 =>
   array (
     'title' => 'CoderCruise 2018 - The Bahamas!',
-    'id' => 'http://php.net/archive/2018.php#id2018-04-11-1',
+    'id' => 'https://www.php.net/archive/2018.php#id2018-04-11-1',
     'published' => '2018-04-11T13:40:58+00:00',
     'updated' => '2018-04-11T13:40:58+00:00',
     'finalTeaserDate' => '2018-08-30',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'conferences',
         'label' => 'Conference announcement',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/conferences/index.php#id2018-04-11-1',
+        'href' => 'https://www.php.net/conferences/index.php#id2018-04-11-1',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
         'href' => 'https://www.codercruise.com/',
         'rel' => 'via',
         'type' => 'text/html',
       ),
     ),
-    'newsImage' => 
+    'newsImage' =>
     array (
       'xmlns' => 'http://php.net/ns/news',
       'link' => 'https://www.codercruise.com/',
@@ -7766,37 +7766,37 @@ the upgrade
   ',
     'intro' => '<div><p>The team behind the original php[cruise] is once again bringing a conference to the open seas. <a href="https://www.codercruise.com/">CoderCruise 2018</a> is be a premiere conference experience, giving you have an exclusive connection to your fellow community members. It is setting sail from Ft. Lauderdale on August 30th for an extended weekend 5-day cruise that also visits Half Moon Cay and Nassau!</p><p>This year we\'ve managed to negotiate a much cheaper overall rate for our participants, starting as low as $410 per person (including the 5-day cruise, food, drink, the conference, and all taxes and fees wrapped into one package!)</p><p class=\'fullArticleLink\'><a href=\'https://www.codercruise.com/\' class>&hellip; read full article</a></p></div>',
   ),
-  140 => 
+  140 =>
   array (
     'title' => 'PHP Developer Days 2018 • Dresden, Germany',
-    'id' => 'http://php.net/archive/2018.php#id2018-04-09-1',
+    'id' => 'https://www.php.net/archive/2018.php#id2018-04-09-1',
     'published' => '2018-04-09T16:29:11+00:00',
     'updated' => '2018-04-09T16:29:11+00:00',
     'finalTeaserDate' => '2018-09-21',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'conferences',
         'label' => 'Conference announcement',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/conferences/index.php#id2018-04-09-1',
+        'href' => 'https://www.php.net/conferences/index.php#id2018-04-09-1',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
         'href' => 'https://2018.phpdd.org',
         'rel' => 'via',
         'type' => 'text/html',
       ),
     ),
-    'newsImage' => 
+    'newsImage' =>
     array (
       'xmlns' => 'http://php.net/ns/news',
       'link' => 'https://2018.phpdd.org',
@@ -7812,37 +7812,37 @@ the upgrade
   ',
     'intro' => '<div><p>The 4th annual PHP community event â September 21st &amp; 22nd in Dresden, Germany</p><p>The PHP USERGROUP DRESDEN e.V. is proud to host an international 2-day event with workshops, a single track conference and awesome side events.</p><p class=\'fullArticleLink\'><a href=\'https://2018.phpdd.org\' class>&hellip; read full article</a></p></div>',
   ),
-  141 => 
+  141 =>
   array (
     'title' => 'PHPConf.Asia 2018 - Call for Speakers',
-    'id' => 'http://php.net/archive/2018.php#id2018-04-08-1',
+    'id' => 'https://www.php.net/archive/2018.php#id2018-04-08-1',
     'published' => '2018-04-08T19:09:50+00:00',
     'updated' => '2018-04-08T19:09:50+00:00',
     'finalTeaserDate' => '2018-06-02',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'cfp',
         'label' => 'Call for Papers',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/conferences/index.php#id2018-04-08-1',
+        'href' => 'https://www.php.net/conferences/index.php#id2018-04-08-1',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
         'href' => 'https://2018.phpconf.asia',
         'rel' => 'via',
         'type' => 'text/html',
       ),
     ),
-    'newsImage' => 
+    'newsImage' =>
     array (
       'xmlns' => 'http://php.net/ns/news',
       'link' => 'https://2018.phpconf.asia',
@@ -7858,36 +7858,36 @@ the upgrade
   ',
     'intro' => '<div><p><strong>Announcing <a href="https://2018.phpconf.asia" target="_blank">PHPConf.Asia 2018</a> - The Pan-Asian PHP Conference - CFP Opens Now</strong></p><p>The third pan-Asian PHP conference will take place between 26<sup>th</sup> to 29<sup>th</sup> September 2018 in <a href="https://en.wikipedia.org/wiki/Singapore" target="_blank">Singapore</a> - the Garden City of the East! This is a single track, 2 days <strong>Conference</strong> (27<sup>th</sup> to 28<sup>th</sup> September 2018). Followed by 1 day of <strong>Tutorials</strong> on 29<sup>th</sup> September 2018.</p><p class=\'fullArticleLink\'><a href=\'https://2018.phpconf.asia\' class>&hellip; read full article</a></p></div>',
   ),
-  142 => 
+  142 =>
   array (
     'title' => 'PHP 7.1.16 Released',
-    'id' => 'http://php.net/archive/2018.php#id2018-03-30-2',
+    'id' => 'https://www.php.net/archive/2018.php#id2018-03-30-2',
     'published' => '2018-03-30T05:35:50+00:00',
     'updated' => '2018-03-30T05:35:50+00:00',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'frontpage',
         'label' => 'PHP.net frontpage news',
       ),
-      1 => 
+      1 =>
       array (
         'term' => 'releases',
         'label' => 'New PHP release',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/index.php#id2018-03-30-2',
+        'href' => 'https://www.php.net/index.php#id2018-03-30-2',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
-        'href' => 'http://php.net/archive/2018.php#id2018-03-30-2',
+        'href' => 'https://www.php.net/archive/2018.php#id2018-03-30-2',
         'rel' => 'via',
         'type' => 'text/html',
       ),
@@ -7899,9 +7899,9 @@ the upgrade
        All PHP 7.1 users are encouraged to upgrade to this version.
        </p>
 
-       <p>For source downloads of PHP 7.1.16 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-       Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-       The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.1.16">ChangeLog</a>.
+       <p>For source downloads of PHP 7.1.16 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
+       Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
+       The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-7.php#7.1.16">ChangeLog</a>.
        </p>
     </div>
   ',
@@ -7909,42 +7909,42 @@ the upgrade
        7.1.16. This is a security fix release, containing one security fix and many bug fixes.
 
        All PHP 7.1 users are encouraged to upgrade to this version.
-       </p><p>For source downloads of PHP 7.1.16 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-       Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-       The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.1.16">ChangeLog</a>.
+       </p><p>For source downloads of PHP 7.1.16 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
+       Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
+       The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-7.php#7.1.16">ChangeLog</a>.
        </p></div>',
   ),
-  143 => 
+  143 =>
   array (
     'title' => 'The 6th Annual China PHP Conference',
-    'id' => 'http://php.net/archive/2018.php#id2018-03-30-1',
+    'id' => 'https://www.php.net/archive/2018.php#id2018-03-30-1',
     'published' => '2018-03-30T10:00:21+00:00',
     'updated' => '2018-03-30T10:00:21+00:00',
     'finalTeaserDate' => '2018-05-19',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'conferences',
         'label' => 'Conference announcement',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/conferences/index.php#id2018-03-30-1',
+        'href' => 'https://www.php.net/conferences/index.php#id2018-03-30-1',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
-        'href' => 'http://php.net/archive/2018.php#id2018-03-30-1',
+        'href' => 'https://www.php.net/archive/2018.php#id2018-03-30-1',
         'rel' => 'via',
         'type' => 'text/html',
       ),
     ),
-    'newsImage' => 
+    'newsImage' =>
     array (
       'xmlns' => 'http://php.net/ns/news',
       'link' => 'http://www.phpconchina.com',
@@ -7961,38 +7961,38 @@ the upgrade
 		<p>Go to www.phpconchina.com for tickets and more information.</p>
     </div>
   ',
-    'intro' => '<div><p>The 6th Annual China PHP Conference â May 19 to 20, Shanghai</p><p>We will be hosting a 2-day event filled with high quality, technical sessions about PHP Core, PHP High Performance, PHP Engineering, AI and Blockchain more.</p><p class=\'fullArticleLink\'><a href=\'http://php.net/archive/2018.php#id2018-03-30-1\' class>&hellip; read full article</a></p></div>',
+    'intro' => '<div><p>The 6th Annual China PHP Conference â May 19 to 20, Shanghai</p><p>We will be hosting a 2-day event filled with high quality, technical sessions about PHP Core, PHP High Performance, PHP Engineering, AI and Blockchain more.</p><p class=\'fullArticleLink\'><a href=\'https://www.php.net/archive/2018.php#id2018-03-30-1\' class>&hellip; read full article</a></p></div>',
   ),
-  144 => 
+  144 =>
   array (
     'title' => 'PHP 5.6.35 Released',
-    'id' => 'http://php.net/archive/2018.php#id2018-03-29-3',
+    'id' => 'https://www.php.net/archive/2018.php#id2018-03-29-3',
     'published' => '2018-03-29T16:26:07-07:00',
     'updated' => '2018-03-29T16:26:07-07:00',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'frontpage',
         'label' => 'PHP.net frontpage news',
       ),
-      1 => 
+      1 =>
       array (
         'term' => 'releases',
         'label' => 'New PHP release',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/index.php#id2018-03-29-3',
+        'href' => 'https://www.php.net/index.php#id2018-03-29-3',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
-        'href' => 'http://php.net/archive/2018.php#id2018-03-29-3',
+        'href' => 'https://www.php.net/archive/2018.php#id2018-03-29-3',
         'rel' => 'via',
         'type' => 'text/html',
       ),
@@ -8004,9 +8004,9 @@ the upgrade
 
      All PHP 5.6 users are encouraged to upgrade to this version.</p>
 
-     <p>For source downloads of PHP 5.6.35 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-     The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.6.35">ChangeLog</a>.
+     <p>For source downloads of PHP 5.6.35 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
+     Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
+     The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-5.php#5.6.35">ChangeLog</a>.
      </p>
     </div>
   ',
@@ -8014,41 +8014,41 @@ the upgrade
      5.6.35. This is a security release. One security bug was fixed in
      this release.
 
-     All PHP 5.6 users are encouraged to upgrade to this version.</p><p>For source downloads of PHP 5.6.35 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-     The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.6.35">ChangeLog</a>.
+     All PHP 5.6 users are encouraged to upgrade to this version.</p><p>For source downloads of PHP 5.6.35 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
+     Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
+     The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-5.php#5.6.35">ChangeLog</a>.
      </p></div>',
   ),
-  145 => 
+  145 =>
   array (
     'title' => 'PHP 7.2.4 Released',
-    'id' => 'http://php.net/archive/2018.php#id2018-03-29-2',
+    'id' => 'https://www.php.net/archive/2018.php#id2018-03-29-2',
     'published' => '2018-03-29T10:58:52+00:00',
     'updated' => '2018-03-29T10:58:52+00:00',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'releases',
         'label' => 'New PHP release',
       ),
-      1 => 
+      1 =>
       array (
         'term' => 'frontpage',
         'label' => 'PHP.net frontpage news',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/index.php#id2018-03-29-2',
+        'href' => 'https://www.php.net/index.php#id2018-03-29-2',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
-        'href' => 'http://php.net/archive/2018.php#id2018-03-29-2',
+        'href' => 'https://www.php.net/archive/2018.php#id2018-03-29-2',
         'rel' => 'via',
         'type' => 'text/html',
       ),
@@ -8059,45 +8059,45 @@ the upgrade
 
      <p>All PHP 7.2 users are encouraged to upgrade to this version.</p>
 
-     <p>For source downloads of PHP 7.2.4 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-     The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.2.4">ChangeLog</a>.
+     <p>For source downloads of PHP 7.2.4 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
+     Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
+     The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-7.php#7.2.4">ChangeLog</a>.
      </p>
     </div>
   ',
     'intro' => '<div><p>The PHP development team announces the immediate availability of PHP
-     7.2.4. This is a security release which also contains several minor bug fixes.</p><p>All PHP 7.2 users are encouraged to upgrade to this version.</p><p class=\'fullArticleLink\'><a href=\'http://php.net/archive/2018.php#id2018-03-29-2\' class>&hellip; read full article</a></p></div>',
+     7.2.4. This is a security release which also contains several minor bug fixes.</p><p>All PHP 7.2 users are encouraged to upgrade to this version.</p><p class=\'fullArticleLink\'><a href=\'https://www.php.net/archive/2018.php#id2018-03-29-2\' class>&hellip; read full article</a></p></div>',
   ),
-  146 => 
+  146 =>
   array (
     'title' => 'PHP 7.0.29 Released',
-    'id' => 'http://php.net/archive/2018.php#id2018-03-29-1',
+    'id' => 'https://www.php.net/archive/2018.php#id2018-03-29-1',
     'published' => '2018-03-29T13:00:00+01:00',
     'updated' => '2018-03-29T13:00:00+01:00',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'releases',
         'label' => 'New PHP release',
       ),
-      1 => 
+      1 =>
       array (
         'term' => 'frontpage',
         'label' => 'PHP.net frontpage news',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/index.php#id2018-03-29-1',
+        'href' => 'https://www.php.net/index.php#id2018-03-29-1',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
-        'href' => 'http://php.net/archive/2018.php#id2018-03-29-1',
+        'href' => 'https://www.php.net/archive/2018.php#id2018-03-29-1',
         'rel' => 'via',
         'type' => 'text/html',
       ),
@@ -8109,9 +8109,9 @@ the upgrade
 
      All PHP 7.0 users are encouraged to upgrade to this version.</p>
 
-     <p>For source downloads of PHP 7.0.29 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-     The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.0.29">ChangeLog</a>.
+     <p>For source downloads of PHP 7.0.29 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
+     Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
+     The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-7.php#7.0.29">ChangeLog</a>.
      </p>
     </div>
   ',
@@ -8119,42 +8119,42 @@ the upgrade
      7.0.29. This is a security release. One security bug was fixed in
      this release.
 
-     All PHP 7.0 users are encouraged to upgrade to this version.</p><p>For source downloads of PHP 7.0.29 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-     The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.0.29">ChangeLog</a>.
+     All PHP 7.0 users are encouraged to upgrade to this version.</p><p>For source downloads of PHP 7.0.29 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
+     Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
+     The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-7.php#7.0.29">ChangeLog</a>.
      </p></div>',
   ),
-  147 => 
+  147 =>
   array (
     'title' => 'International PHP Conference 2018 - Call for Papers',
-    'id' => 'http://php.net/archive/2018.php#id2018-03-23-1',
+    'id' => 'https://www.php.net/archive/2018.php#id2018-03-23-1',
     'published' => '2018-03-23T15:44:54-04:00',
     'updated' => '2018-03-23T15:44:54-04:00',
     'finalTeaserDate' => '2018-04-18',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'cfp',
         'label' => 'Call for Papers',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/conferences/index.php#id2018-03-23-1',
+        'href' => 'https://www.php.net/conferences/index.php#id2018-03-23-1',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
         'href' => 'https://callforpapers.sandsmedia.com',
         'rel' => 'via',
         'type' => 'text/html',
       ),
     ),
-    'newsImage' => 
+    'newsImage' =>
     array (
       'xmlns' => 'http://php.net/ns/news',
       'link' => 'https://callforpapers.sandsmedia.com',
@@ -8192,37 +8192,37 @@ the upgrade
     'intro' => '<div><p>IPC Spring will take place in June 4th to 8th in Berlin and we are looking very much forward to it!<br/>
 			But at the same time we are already preparing for the fall edition of IPC 2018, that is going to take place together with the international JavaScript Conference again. The conferenceÃ­s date is October 15th to 19th and the location will be Munich again.</p><p>The International PHP Conference is the worldÃ­s first PHP conference and stands since more than a decade for top-notch pragmatic expertise in PHP and web technologies. Internationally renowned experts from the PHP industry meet up with PHP users and developers from large and small companies.</p><p class=\'fullArticleLink\'><a href=\'https://callforpapers.sandsmedia.com\' class>&hellip; read full article</a></p></div>',
   ),
-  148 => 
+  148 =>
   array (
     'title' => 'Darkmira Tour PHP 2018',
-    'id' => 'http://php.net/archive/2018.php#id2018-03-13-1',
+    'id' => 'https://www.php.net/archive/2018.php#id2018-03-13-1',
     'published' => '2018-03-13T11:35:08-03:00',
     'updated' => '2018-03-13T11:35:08-03:00',
     'finalTeaserDate' => '2018-04-14',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'conferences',
         'label' => 'Conference announcement',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/conferences/index.php#id2018-03-13-1',
+        'href' => 'https://www.php.net/conferences/index.php#id2018-03-13-1',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
         'href' => 'https://php.darkmiratour.rocks/2018',
         'rel' => 'via',
         'type' => 'text/html',
       ),
     ),
-    'newsImage' => 
+    'newsImage' =>
     array (
       'xmlns' => 'http://php.net/ns/news',
       'link' => 'https://php.darkmiratour.rocks/2018',
@@ -8238,36 +8238,36 @@ the upgrade
   ',
     'intro' => '<div><p>With a lot of PHP\'s Rockstars, Darkmira Tour PHP 2018 is a conference focused on security and quality in PHP\'s ecosystems, in Brazil\'s capital in April 14-15. During the two days of Darkmira, you can interact with all the 400 participants along the coffee breaks, demonstrations and networking, and learn a lot about the PHP\'s ecosystems!</p><p>For more information, visit <a href="https://php.darkmiratour.rocks/2018" title="Darkmira Tour PHP 2018">https://php.darkmiratour.rocks/2018</a>.</p></div>',
   ),
-  149 => 
+  149 =>
   array (
     'title' => 'PHP 7.1.15 Released',
-    'id' => 'http://php.net/archive/2018.php#id2018-03-02-1',
+    'id' => 'https://www.php.net/archive/2018.php#id2018-03-02-1',
     'published' => '2018-03-02T05:54:19+00:00',
     'updated' => '2018-03-02T05:54:19+00:00',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'frontpage',
         'label' => 'PHP.net frontpage news',
       ),
-      1 => 
+      1 =>
       array (
         'term' => 'releases',
         'label' => 'New PHP release',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/index.php#id2018-03-02-1',
+        'href' => 'https://www.php.net/index.php#id2018-03-02-1',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
-        'href' => 'http://php.net/archive/2018.php#id2018-03-02-1',
+        'href' => 'https://www.php.net/archive/2018.php#id2018-03-02-1',
         'rel' => 'via',
         'type' => 'text/html',
       ),
@@ -8279,9 +8279,9 @@ the upgrade
        All PHP 7.1 users are encouraged to upgrade to this version.
        </p>
 
-       <p>For source downloads of PHP 7.1.15 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-       Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-       The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.1.15">ChangeLog</a>.
+       <p>For source downloads of PHP 7.1.15 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
+       Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
+       The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-7.php#7.1.15">ChangeLog</a>.
        </p>
     </div>
   ',
@@ -8289,42 +8289,42 @@ the upgrade
        7.1.15. This is a security fix release, containing one security fix and many bug fixes.
 
        All PHP 7.1 users are encouraged to upgrade to this version.
-       </p><p>For source downloads of PHP 7.1.15 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-       Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-       The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.1.15">ChangeLog</a>.
+       </p><p>For source downloads of PHP 7.1.15 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
+       Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
+       The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-7.php#7.1.15">ChangeLog</a>.
        </p></div>',
   ),
-  150 => 
+  150 =>
   array (
     'title' => 'PHPDetroit Conference 2018 - Call for Papers',
-    'id' => 'http://php.net/archive/2018.php#id2018-03-01-5',
+    'id' => 'https://www.php.net/archive/2018.php#id2018-03-01-5',
     'published' => '2018-03-01T19:09:18+00:00',
     'updated' => '2018-03-01T19:09:18+00:00',
     'finalTeaserDate' => '2018-03-22',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'cfp',
         'label' => 'Call for Papers',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/conferences/index.php#id2018-03-01-5',
+        'href' => 'https://www.php.net/conferences/index.php#id2018-03-01-5',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
         'href' => 'https://cfp.phpdetroit.io',
         'rel' => 'via',
         'type' => 'text/html',
       ),
     ),
-    'newsImage' => 
+    'newsImage' =>
     array (
       'xmlns' => 'http://php.net/ns/news',
       'link' => 'https://cfp.phpdetroit.io',
@@ -8340,37 +8340,37 @@ the upgrade
   ',
     'intro' => '<div><p>We\'re happy to announce that the <a href="https://cfp.phpdetroit.io">Call for Papers</a> has commenced for <a href="https://phpdetroit.io">PHPDetroit 2018</a>. We will be accepting submissions through March 22nd, 2018.</p><p>The conference will consist of a tutorial day featuring 4 separate 3-4 hour tutorials, 2 in the morning, and 2 in the afternoon, followed by 2 days of 1 hour sessions. We\'re also having an opening keynote on the first conference day, and a closing keynote on the last day. We\'re inviting world-class PHP speakers from around the world to submit their best talks to put together an event that will forever be remembered.</p><p class=\'fullArticleLink\'><a href=\'https://cfp.phpdetroit.io\' class>&hellip; read full article</a></p></div>',
   ),
-  151 => 
+  151 =>
   array (
     'title' => 'PHPDetroit Conference 2018',
-    'id' => 'http://php.net/archive/2018.php#id2018-03-01-4',
+    'id' => 'https://www.php.net/archive/2018.php#id2018-03-01-4',
     'published' => '2018-03-01T18:53:16+00:00',
     'updated' => '2018-03-01T18:53:16+00:00',
     'finalTeaserDate' => '2018-07-26',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'conferences',
         'label' => 'Conference announcement',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/conferences/index.php#id2018-03-01-4',
+        'href' => 'https://www.php.net/conferences/index.php#id2018-03-01-4',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
         'href' => 'https://phpdetroit.io',
         'rel' => 'via',
         'type' => 'text/html',
       ),
     ),
-    'newsImage' => 
+    'newsImage' =>
     array (
       'xmlns' => 'http://php.net/ns/news',
       'link' => 'https://phpdetroit.io',
@@ -8385,36 +8385,36 @@ the upgrade
   ',
     'intro' => '<div><p><a href="https://phpdetroit.io">PHPDetroit</a> is a three-day, regional PHP conference that brings the community together to learn and grow. We\'re preceding the conference with a 2 track tutorial day that will feature 4 sessions covering various topics. We will also be running an UnCon alongside the main tracks on Friday and Saturday, where attendees can share unscheduled talks.</p><p>The conference is scheduled to run <strong>July 26th - July 28th</strong>, at the beautiful <a href="http://www.marriott.com/hotels/travel/dtwli-detroit-marriott-livonia/">Detroit Marriott Livonia.</a> We welcome developers and enthusiasts of all skill levels to come join us while we discuss the latest trends and technologies in our industry.</p><p class=\'fullArticleLink\'><a href=\'https://phpdetroit.io\' class>&hellip; read full article</a></p></div>',
   ),
-  152 => 
+  152 =>
   array (
     'title' => 'PHP 5.6.34 Released',
-    'id' => 'http://php.net/archive/2018.php#id2018-03-01-3',
+    'id' => 'https://www.php.net/archive/2018.php#id2018-03-01-3',
     'published' => '2018-03-01T15:48:47-08:00',
     'updated' => '2018-03-01T15:48:47-08:00',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'frontpage',
         'label' => 'PHP.net frontpage news',
       ),
-      1 => 
+      1 =>
       array (
         'term' => 'releases',
         'label' => 'New PHP release',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/index.php#id2018-03-01-3',
+        'href' => 'https://www.php.net/index.php#id2018-03-01-3',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
-        'href' => 'http://php.net/archive/2018.php#id2018-03-01-3',
+        'href' => 'https://www.php.net/archive/2018.php#id2018-03-01-3',
         'rel' => 'via',
         'type' => 'text/html',
       ),
@@ -8426,9 +8426,9 @@ the upgrade
 
      All PHP 5.6 users are encouraged to upgrade to this version.</p>
 
-     <p>For source downloads of PHP 5.6.34 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-     The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.6.34">ChangeLog</a>.
+     <p>For source downloads of PHP 5.6.34 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
+     Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
+     The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-5.php#5.6.34">ChangeLog</a>.
      </p>
     </div>
   ',
@@ -8436,41 +8436,41 @@ the upgrade
      5.6.34. This is a security release. One security bug was fixed in
      this release.
 
-     All PHP 5.6 users are encouraged to upgrade to this version.</p><p>For source downloads of PHP 5.6.34 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-     The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.6.34">ChangeLog</a>.
+     All PHP 5.6 users are encouraged to upgrade to this version.</p><p>For source downloads of PHP 5.6.34 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
+     Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
+     The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-5.php#5.6.34">ChangeLog</a>.
      </p></div>',
   ),
-  153 => 
+  153 =>
   array (
     'title' => 'PHP 7.2.3 Released',
-    'id' => 'http://php.net/archive/2018.php#id2018-03-01-2',
+    'id' => 'https://www.php.net/archive/2018.php#id2018-03-01-2',
     'published' => '2018-03-01T19:43:30+00:00',
     'updated' => '2018-03-01T19:43:30+00:00',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'frontpage',
         'label' => 'PHP.net frontpage news',
       ),
-      1 => 
+      1 =>
       array (
         'term' => 'releases',
         'label' => 'New PHP release',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/index.php#id2018-03-01-2',
+        'href' => 'https://www.php.net/index.php#id2018-03-01-2',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
-        'href' => 'http://php.net/archive/2018.php#id2018-03-01-2',
+        'href' => 'https://www.php.net/archive/2018.php#id2018-03-01-2',
         'rel' => 'via',
         'type' => 'text/html',
       ),
@@ -8481,45 +8481,45 @@ the upgrade
 
      <p>All PHP 7.2 users are encouraged to upgrade to this version.</p>
 
-     <p>For source downloads of PHP 7.2.3 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-     The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.2.3">ChangeLog</a>.
+     <p>For source downloads of PHP 7.2.3 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
+     Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
+     The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-7.php#7.2.3">ChangeLog</a>.
      </p>
     </div>
   ',
     'intro' => '<div><p>The PHP development team announces the immediate availability of PHP
-     7.2.3. This is a security release with also contains several minor bug fixes.</p><p>All PHP 7.2 users are encouraged to upgrade to this version.</p><p class=\'fullArticleLink\'><a href=\'http://php.net/archive/2018.php#id2018-03-01-2\' class>&hellip; read full article</a></p></div>',
+     7.2.3. This is a security release with also contains several minor bug fixes.</p><p>All PHP 7.2 users are encouraged to upgrade to this version.</p><p class=\'fullArticleLink\'><a href=\'https://www.php.net/archive/2018.php#id2018-03-01-2\' class>&hellip; read full article</a></p></div>',
   ),
-  154 => 
+  154 =>
   array (
     'title' => 'PHP 7.0.28 Released',
-    'id' => 'http://php.net/archive/2018.php#id2018-03-01-1',
+    'id' => 'https://www.php.net/archive/2018.php#id2018-03-01-1',
     'published' => '2018-03-01T11:45:00+01:00',
     'updated' => '2018-03-01T11:45:00+01:00',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'releases',
         'label' => 'New PHP release',
       ),
-      1 => 
+      1 =>
       array (
         'term' => 'frontpage',
         'label' => 'PHP.net frontpage news',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/index.php#id2018-03-01-1',
+        'href' => 'https://www.php.net/index.php#id2018-03-01-1',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
-        'href' => 'http://php.net/archive/2018.php#id2018-03-01-1',
+        'href' => 'https://www.php.net/archive/2018.php#id2018-03-01-1',
         'rel' => 'via',
         'type' => 'text/html',
       ),
@@ -8531,9 +8531,9 @@ the upgrade
 
      All PHP 7.0 users are encouraged to upgrade to this version.</p>
 
-     <p>For source downloads of PHP 7.0.28 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-     The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.0.28">ChangeLog</a>.
+     <p>For source downloads of PHP 7.0.28 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
+     Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
+     The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-7.php#7.0.28">ChangeLog</a>.
      </p>
     </div>
   ',
@@ -8541,42 +8541,42 @@ the upgrade
      7.0.28. This is a security release. One security bug was fixed in
      this release.
 
-     All PHP 7.0 users are encouraged to upgrade to this version.</p><p>For source downloads of PHP 7.0.28 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-     The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.0.28">ChangeLog</a>.
+     All PHP 7.0 users are encouraged to upgrade to this version.</p><p>For source downloads of PHP 7.0.28 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
+     Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
+     The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-7.php#7.0.28">ChangeLog</a>.
      </p></div>',
   ),
-  155 => 
+  155 =>
   array (
     'title' => 'CakeFest 2018 Nashville, The Official CakePHP Conference',
-    'id' => 'http://php.net/archive/2018.php#id2018-02-26-1',
+    'id' => 'https://www.php.net/archive/2018.php#id2018-02-26-1',
     'published' => '2018-02-26T12:21:11+00:00',
     'updated' => '2018-02-26T12:21:11+00:00',
     'finalTeaserDate' => '2018-06-14',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'conferences',
         'label' => 'Conference announcement',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/conferences/index.php#id2018-02-26-1',
+        'href' => 'https://www.php.net/conferences/index.php#id2018-02-26-1',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
         'href' => 'https://cakefest.org',
         'rel' => 'via',
         'type' => 'text/html',
       ),
     ),
-    'newsImage' => 
+    'newsImage' =>
     array (
       'xmlns' => 'http://php.net/ns/news',
       'link' => 'https://cakefest.org',
@@ -8620,37 +8620,37 @@ the upgrade
         will be an event not to miss.
       </p><p class=\'fullArticleLink\'><a href=\'https://cakefest.org\' class>&hellip; read full article</a></p></div>',
   ),
-  156 => 
+  156 =>
   array (
     'title' => 'Northeast PHP 2018 Boston - Call for Speakers',
-    'id' => 'http://php.net/archive/2018.php#id2018-02-22-1',
+    'id' => 'https://www.php.net/archive/2018.php#id2018-02-22-1',
     'published' => '2018-02-22T22:41:47-05:00',
     'updated' => '2018-02-22T22:41:47-05:00',
     'finalTeaserDate' => '2018-04-11',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'cfp',
         'label' => 'Call for Papers',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/conferences/index.php#id2018-02-22-1',
+        'href' => 'https://www.php.net/conferences/index.php#id2018-02-22-1',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
         'href' => 'http://cfp.northeastphp.org/',
         'rel' => 'via',
         'type' => 'text/html',
       ),
     ),
-    'newsImage' => 
+    'newsImage' =>
     array (
       'xmlns' => 'http://php.net/ns/news',
       'link' => 'http://cfp.northeastphp.org/',
@@ -8663,37 +8663,37 @@ the upgrade
   ',
     'intro' => '<div><p>The team at Northeast PHP is excited to annouce that we\'re returning to Boston, September 19-21 2018, and the <a href="http://cfp.northeastphp.org/">Call for Speakers</a> is now open until April 11.</p><p>We\'re pleased to announce our conference, <a href="http://2018.northeastphp.org/">the 2018 Web Development and UX Conference by Northeast PHP</a>, where community members come together to learn and share information about the latest trends and technologies in professional PHP development, User Experience design, and Web Technologies.</p><p class=\'fullArticleLink\'><a href=\'http://cfp.northeastphp.org/\' class>&hellip; read full article</a></p></div>',
   ),
-  157 => 
+  157 =>
   array (
     'title' => 'Mid-Atlantic Developer Conference - Call for Speakers',
-    'id' => 'http://php.net/archive/2018.php#id2018-02-16-1',
+    'id' => 'https://www.php.net/archive/2018.php#id2018-02-16-1',
     'published' => '2018-02-16T13:07:48+00:00',
     'updated' => '2018-02-16T13:07:48+00:00',
     'finalTeaserDate' => '2018-03-31',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'cfp',
         'label' => 'Call for Papers',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/conferences/index.php#id2018-02-16-1',
+        'href' => 'https://www.php.net/conferences/index.php#id2018-02-16-1',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
         'href' => 'https://www.middevcon.com/',
         'rel' => 'via',
         'type' => 'text/html',
       ),
     ),
-    'newsImage' => 
+    'newsImage' =>
     array (
       'xmlns' => 'http://php.net/ns/news',
       'link' => 'https://www.middevcon.com/',
@@ -8710,37 +8710,37 @@ the upgrade
   ',
     'intro' => '<div><p><a href="https://www.middevcon.com/">Mid-Atlantic Dev Con</a> is a brand new polyglot event taking place July 13th and 14th, 2018 near Baltimore, MD. It is designed to bring together programmers from the region for two full days of learning from each other and building a stronger regional community. We are currently hosting an open <a href="https://www.middevcon.com/call-for-speakers/">Call for Speakers</a>, which will end on March 31st at Midnight UTC!</p><p>We are looking for a broad range of submissions covering a wide range of topics that are of interest to todayâs computer developers. This means not only programming topics, such as various sessions on PHP, but also broader topics related to development such as: deployment, DevOps, databases, caching, performance, scalability, APIs, etc â We also are looking for non-technical proposals that will appeal to a tech audience: open source, leadership, mentoring, health, work-life balance, management, customer service, and more!</p><p class=\'fullArticleLink\'><a href=\'https://www.middevcon.com/\' class>&hellip; read full article</a></p></div>',
   ),
-  158 => 
+  158 =>
   array (
     'title' => 'ConFoo: THE web development conference you don’t want to miss!',
-    'id' => 'http://php.net/archive/2018.php#id2018-02-14-1',
+    'id' => 'https://www.php.net/archive/2018.php#id2018-02-14-1',
     'published' => '2018-02-14T17:46:24+00:00',
     'updated' => '2018-02-14T17:46:24+00:00',
     'finalTeaserDate' => '2018-03-07',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'conferences',
         'label' => 'Conference announcement',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/conferences/index.php#id2018-02-14-1',
+        'href' => 'https://www.php.net/conferences/index.php#id2018-02-14-1',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
         'href' => 'https://confoo.ca/en/yul2018',
         'rel' => 'via',
         'type' => 'text/html',
       ),
     ),
-    'newsImage' => 
+    'newsImage' =>
     array (
       'xmlns' => 'http://php.net/ns/news',
       'link' => 'https://confoo.ca/en/yul2018',
@@ -8768,37 +8768,37 @@ the upgrade
   ',
     'intro' => '<div><p>ConFoo is a multi-technology conference specifically crafted for web developers. With 150+ presentations by local and international speakers, this conference offers outstanding diversity of content to expand your knowledge, increase your productivity and boost your development skills.</p><strong>See you in Montreal on March 7-8-9!</strong><p class=\'fullArticleLink\'><a href=\'https://confoo.ca/en/yul2018\' class>&hellip; read full article</a></p></div>',
   ),
-  159 => 
+  159 =>
   array (
     'title' => 'php[tek] 2018',
-    'id' => 'http://php.net/archive/2018.php#id2018-02-07-2',
+    'id' => 'https://www.php.net/archive/2018.php#id2018-02-07-2',
     'published' => '2018-02-07T17:27:41+00:00',
     'updated' => '2018-02-07T17:27:41+00:00',
     'finalTeaserDate' => '2018-05-31',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'conferences',
         'label' => 'Conference announcement',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/conferences/index.php#id2018-02-07-2',
+        'href' => 'https://www.php.net/conferences/index.php#id2018-02-07-2',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
         'href' => 'https://tek.phparch.com/',
         'rel' => 'via',
         'type' => 'text/html',
       ),
     ),
-    'newsImage' => 
+    'newsImage' =>
     array (
       'xmlns' => 'http://php.net/ns/news',
       'link' => 'https://tek.phparch.com/',
@@ -8824,37 +8824,37 @@ the upgrade
   ',
     'intro' => '<div><p>We are excited to announce the <a href="https://tek.phparch.com/schedule?utm_campaign=phpnet">full schedule</a> for the 13th annual <a href="https://tek.phparch.com/?utm_campaign=phpnet">php[tek]</a>, the premier PHP conference experience. The 2018 edition will be better than ever, now taking place in Downtown Atlanta, GA. The main conference is two days: May 31 and June 1, while we will have a workshop day on May 30, and a day of Training Classes on May 29th.</p><p>There is an <a href="https://tek.phparch.com/schedule?utm_campaign=phpnet">amazing list of sessions</a> that have been put together for you, including:</p><p class=\'fullArticleLink\'><a href=\'https://tek.phparch.com/\' class>&hellip; read full article</a></p></div>',
   ),
-  160 => 
+  160 =>
   array (
     'title' => 'WavePHP 2018 - Call for Speakers',
-    'id' => 'http://php.net/archive/2018.php#id2018-02-06-1',
+    'id' => 'https://www.php.net/archive/2018.php#id2018-02-06-1',
     'published' => '2018-02-06T17:20:49+00:00',
     'updated' => '2018-02-06T17:20:49+00:00',
     'finalTeaserDate' => '2018-02-28',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'cfp',
         'label' => 'Call for Papers',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/conferences/index.php#id2018-02-06-1',
+        'href' => 'https://www.php.net/conferences/index.php#id2018-02-06-1',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
-        'href' => 'http://php.net/archive/2018.php#id2018-02-06-1',
+        'href' => 'https://www.php.net/archive/2018.php#id2018-02-06-1',
         'rel' => 'via',
         'type' => 'text/html',
       ),
     ),
-    'newsImage' => 
+    'newsImage' =>
     array (
       'xmlns' => 'http://php.net/ns/news',
       'link' => 'https://www.wavephp.com/',
@@ -8869,39 +8869,39 @@ the upgrade
      <a href="https://www.wavephp.com/#tickets" title="Register for WavePHP 2018">Register today</a> and make plans for a great time in San Diego, CA!
     </div>
   ',
-    'intro' => '<div><a href="https://www.wavephp.com" title="WavePHP 2018">WavePHP</a><a href="https://cfp.wavephp.com" title="WavePHP 2018 Call for Speakers">Call for Speakers</a><p class=\'fullArticleLink\'><a href=\'http://php.net/archive/2018.php#id2018-02-06-1\' class>&hellip; read full article</a></p></div>',
+    'intro' => '<div><a href="https://www.wavephp.com" title="WavePHP 2018">WavePHP</a><a href="https://cfp.wavephp.com" title="WavePHP 2018 Call for Speakers">Call for Speakers</a><p class=\'fullArticleLink\'><a href=\'https://www.php.net/archive/2018.php#id2018-02-06-1\' class>&hellip; read full article</a></p></div>',
   ),
-  161 => 
+  161 =>
   array (
     'title' => 'PHP Experience 2018',
-    'id' => 'http://php.net/archive/2018.php#id2018-02-01-3',
+    'id' => 'https://www.php.net/archive/2018.php#id2018-02-01-3',
     'published' => '2018-02-01T10:20:29-02:00',
     'updated' => '2018-02-01T10:20:29-02:00',
     'finalTeaserDate' => '2018-03-05',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'conferences',
         'label' => 'Conference announcement',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/conferences/index.php#id2018-02-01-3',
+        'href' => 'https://www.php.net/conferences/index.php#id2018-02-01-3',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
         'href' => 'https://eventos.imasters.com.br/phpexperience/',
         'rel' => 'via',
         'type' => 'text/html',
       ),
     ),
-    'newsImage' => 
+    'newsImage' =>
     array (
       'xmlns' => 'http://php.net/ns/news',
       'link' => 'https://eventos.imasters.com.br/phpexperience/',
@@ -8918,36 +8918,36 @@ the upgrade
   ',
     'intro' => '<div><p>With big names from PHP community, the sixth edition of PHP Experience brings together about 1200 PHP developers in SÃ£o Paulo/SP - Brazil from March 05 to 06, 2018.</p><p>In two days of content we will have: international keynotes, three tracks, in addition to several actions to exchange experiences and networking.</p><p class=\'fullArticleLink\'><a href=\'https://eventos.imasters.com.br/phpexperience/\' class>&hellip; read full article</a></p></div>',
   ),
-  162 => 
+  162 =>
   array (
     'title' => 'PHP 7.1.14 Released',
-    'id' => 'http://php.net/archive/2018.php#id2018-02-01-2',
+    'id' => 'https://www.php.net/archive/2018.php#id2018-02-01-2',
     'published' => '2018-02-01T14:54:13+00:00',
     'updated' => '2018-02-01T14:54:13+00:00',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'frontpage',
         'label' => 'PHP.net frontpage news',
       ),
-      1 => 
+      1 =>
       array (
         'term' => 'releases',
         'label' => 'New PHP release',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/index.php#id2018-02-01-2',
+        'href' => 'https://www.php.net/index.php#id2018-02-01-2',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
-        'href' => 'http://php.net/archive/2018.php#id2018-02-01-2',
+        'href' => 'https://www.php.net/archive/2018.php#id2018-02-01-2',
         'rel' => 'via',
         'type' => 'text/html',
       ),
@@ -8959,40 +8959,40 @@ the upgrade
 
       <p>All PHP 7.1 users are encouraged to upgrade to this version.</p>
 
-      <p>For source downloads of PHP 7.1.14 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,  Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.1.14">ChangeLog</a>.
+      <p>For source downloads of PHP 7.1.14 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,  Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
+      The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-7.php#7.1.14">ChangeLog</a>.
       </p>
     </div>
   ',
     'intro' => '<div><p>The PHP development team announces the immediate availability of PHP
       7.1.14. This is a bugfix release. Several bugs were fixed
-      in this release.</p><p>All PHP 7.1 users are encouraged to upgrade to this version.</p><p class=\'fullArticleLink\'><a href=\'http://php.net/archive/2018.php#id2018-02-01-2\' class>&hellip; read full article</a></p></div>',
+      in this release.</p><p>All PHP 7.1 users are encouraged to upgrade to this version.</p><p class=\'fullArticleLink\'><a href=\'https://www.php.net/archive/2018.php#id2018-02-01-2\' class>&hellip; read full article</a></p></div>',
   ),
-  163 => 
+  163 =>
   array (
     'title' => 'PHP 7.2.2 Released',
-    'id' => 'http://php.net/archive/2018.php#id2018-02-01-1',
+    'id' => 'https://www.php.net/archive/2018.php#id2018-02-01-1',
     'published' => '2018-02-01T09:12:34+00:00',
     'updated' => '2018-02-01T09:12:34+00:00',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'frontpage',
         'label' => 'PHP.net frontpage news',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/index.php#id2018-02-01-1',
+        'href' => 'https://www.php.net/index.php#id2018-02-01-1',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
-        'href' => 'http://php.net/archive/2018.php#id2018-02-01-1',
+        'href' => 'https://www.php.net/archive/2018.php#id2018-02-01-1',
         'rel' => 'via',
         'type' => 'text/html',
       ),
@@ -9003,46 +9003,46 @@ the upgrade
 
       <p>All PHP 7.2 users are encouraged to upgrade to this version.</p>
 
-      <p>For source downloads of PHP 7.2.2 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-      Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.2.2">ChangeLog</a>.
+      <p>For source downloads of PHP 7.2.2 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
+      Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
+      The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-7.php#7.2.2">ChangeLog</a>.
       </p>
     </div>
   ',
     'intro' => '<div><p>The PHP development team announces the immediate availability of PHP
-      7.2.2. This is a bugfix release, with several bug fixes included.</p><p>All PHP 7.2 users are encouraged to upgrade to this version.</p><p class=\'fullArticleLink\'><a href=\'http://php.net/archive/2018.php#id2018-02-01-1\' class>&hellip; read full article</a></p></div>',
+      7.2.2. This is a bugfix release, with several bug fixes included.</p><p>All PHP 7.2 users are encouraged to upgrade to this version.</p><p class=\'fullArticleLink\'><a href=\'https://www.php.net/archive/2018.php#id2018-02-01-1\' class>&hellip; read full article</a></p></div>',
   ),
-  164 => 
+  164 =>
   array (
     'title' => 'CoderCruise 2018 - Call for Speakers',
-    'id' => 'http://php.net/archive/2018.php#id2018-01-31-1',
+    'id' => 'https://www.php.net/archive/2018.php#id2018-01-31-1',
     'published' => '2018-01-31T21:00:37+00:00',
     'updated' => '2018-01-31T21:00:37+00:00',
     'finalTeaserDate' => '2018-02-28',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'cfp',
         'label' => 'Call for Papers',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/conferences/index.php#id2018-01-31-1',
+        'href' => 'https://www.php.net/conferences/index.php#id2018-01-31-1',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
         'href' => 'https://www.codercruise.com/',
         'rel' => 'via',
         'type' => 'text/html',
       ),
     ),
-    'newsImage' => 
+    'newsImage' =>
     array (
       'xmlns' => 'http://php.net/ns/news',
       'link' => 'https://www.codercruise.com/',
@@ -9055,37 +9055,37 @@ the upgrade
 ',
     'intro' => '<div></div>',
   ),
-  165 => 
+  165 =>
   array (
     'title' => 'Dutch PHP Conference 2018 – Call for Papers',
-    'id' => 'http://php.net/archive/2018.php#id2018-01-09-2',
+    'id' => 'https://www.php.net/archive/2018.php#id2018-01-09-2',
     'published' => '2018-01-09T13:35:18+00:00',
     'updated' => '2018-01-09T13:35:18+00:00',
     'finalTeaserDate' => '2018-01-28',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'cfp',
         'label' => 'Call for Papers',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/conferences/index.php#id2018-01-09-2',
+        'href' => 'https://www.php.net/conferences/index.php#id2018-01-09-2',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
         'href' => 'https://cfp.phpconference.nl/',
         'rel' => 'via',
         'type' => 'text/html',
       ),
     ),
-    'newsImage' => 
+    'newsImage' =>
     array (
       'xmlns' => 'http://php.net/ns/news',
       'link' => 'https://cfp.phpconference.nl/',
@@ -9102,37 +9102,37 @@ the upgrade
 ',
     'intro' => '<div></div>',
   ),
-  166 => 
+  166 =>
   array (
     'title' => 'Dutch PHP Conference 2018',
-    'id' => 'http://php.net/archive/2018.php#id2018-01-09-1',
+    'id' => 'https://www.php.net/archive/2018.php#id2018-01-09-1',
     'published' => '2018-01-09T13:30:36+00:00',
     'updated' => '2018-01-09T13:30:36+00:00',
     'finalTeaserDate' => '2018-06-07',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'conferences',
         'label' => 'Conference announcement',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/conferences/index.php#id2018-01-09-1',
+        'href' => 'https://www.php.net/conferences/index.php#id2018-01-09-1',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
         'href' => 'https://www.phpconference.nl/',
         'rel' => 'via',
         'type' => 'text/html',
       ),
     ),
-    'newsImage' => 
+    'newsImage' =>
     array (
       'xmlns' => 'http://php.net/ns/news',
       'link' => 'https://www.phpconference.nl/',
@@ -9151,36 +9151,36 @@ the upgrade
   ',
     'intro' => '<div></div>',
   ),
-  167 => 
+  167 =>
   array (
     'title' => 'PHP 5.6.33 Released',
-    'id' => 'http://php.net/archive/2018.php#id2018-01-04-4',
+    'id' => 'https://www.php.net/archive/2018.php#id2018-01-04-4',
     'published' => '2018-01-04T12:21:10-08:00',
     'updated' => '2018-01-04T12:21:10-08:00',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'frontpage',
         'label' => 'PHP.net frontpage news',
       ),
-      1 => 
+      1 =>
       array (
         'term' => 'releases',
         'label' => 'New PHP release',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/index.php#id2018-01-04-4',
+        'href' => 'https://www.php.net/index.php#id2018-01-04-4',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
-        'href' => 'http://php.net/archive/2018.php#id2018-01-04-4',
+        'href' => 'https://www.php.net/archive/2018.php#id2018-01-04-4',
         'rel' => 'via',
         'type' => 'text/html',
       ),
@@ -9192,9 +9192,9 @@ the upgrade
 
      All PHP 5.6 users are encouraged to upgrade to this version.</p>
 
-     <p>For source downloads of PHP 5.6.33 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-     The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.6.33">ChangeLog</a>.
+     <p>For source downloads of PHP 5.6.33 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
+     Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
+     The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-5.php#5.6.33">ChangeLog</a>.
      </p>
     </div>
   ',
@@ -9202,41 +9202,41 @@ the upgrade
      5.6.33. This is a security release. Several security bugs were fixed in
      this release.
 
-     All PHP 5.6 users are encouraged to upgrade to this version.</p><p>For source downloads of PHP 5.6.33 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-     The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.6.33">ChangeLog</a>.
+     All PHP 5.6 users are encouraged to upgrade to this version.</p><p>For source downloads of PHP 5.6.33 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
+     Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
+     The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-5.php#5.6.33">ChangeLog</a>.
      </p></div>',
   ),
-  168 => 
+  168 =>
   array (
     'title' => 'PHP 7.1.13 Released',
-    'id' => 'http://php.net/archive/2018.php#id2018-01-04-3',
+    'id' => 'https://www.php.net/archive/2018.php#id2018-01-04-3',
     'published' => '2018-01-04T15:27:53+00:00',
     'updated' => '2018-01-04T15:27:53+00:00',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'frontpage',
         'label' => 'PHP.net frontpage news',
       ),
-      1 => 
+      1 =>
       array (
         'term' => 'releases',
         'label' => 'New PHP release',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/index.php#id2018-01-04-3',
+        'href' => 'https://www.php.net/index.php#id2018-01-04-3',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
-        'href' => 'http://php.net/archive/2018.php#id2018-01-04-3',
+        'href' => 'https://www.php.net/archive/2018.php#id2018-01-04-3',
         'rel' => 'via',
         'type' => 'text/html',
       ),
@@ -9248,45 +9248,45 @@ the upgrade
 
        <p>All PHP 7.1 users are encouraged to upgrade to this version.</p>
 
-       <p>For source downloads of PHP 7.1.13 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,  Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-       The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.1.13">ChangeLog</a>.
+       <p>For source downloads of PHP 7.1.13 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,  Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
+       The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-7.php#7.1.13">ChangeLog</a>.
        </p>
     </div>
   ',
     'intro' => '<div><p>The PHP development team announces the immediate availability of PHP
        7.1.13. This is a security release. Several security bugs were fixed
-       in this release.</p><p>All PHP 7.1 users are encouraged to upgrade to this version.</p><p class=\'fullArticleLink\'><a href=\'http://php.net/archive/2018.php#id2018-01-04-3\' class>&hellip; read full article</a></p></div>',
+       in this release.</p><p>All PHP 7.1 users are encouraged to upgrade to this version.</p><p class=\'fullArticleLink\'><a href=\'https://www.php.net/archive/2018.php#id2018-01-04-3\' class>&hellip; read full article</a></p></div>',
   ),
-  169 => 
+  169 =>
   array (
     'title' => 'PHP 7.2.1 Released',
-    'id' => 'http://php.net/archive/2018.php#id2018-01-04-2',
+    'id' => 'https://www.php.net/archive/2018.php#id2018-01-04-2',
     'published' => '2018-01-04T15:26:15+00:00',
     'updated' => '2018-01-04T15:26:15+00:00',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'frontpage',
         'label' => 'PHP.net frontpage news',
       ),
-      1 => 
+      1 =>
       array (
         'term' => 'releases',
         'label' => 'New PHP release',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/index.php#id2018-01-04-2',
+        'href' => 'https://www.php.net/index.php#id2018-01-04-2',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
-        'href' => 'http://php.net/archive/2018.php#id2018-01-04-2',
+        'href' => 'https://www.php.net/archive/2018.php#id2018-01-04-2',
         'rel' => 'via',
         'type' => 'text/html',
       ),
@@ -9298,46 +9298,46 @@ the upgrade
 
        <p>All PHP 7.2 users are encouraged to upgrade to this version.</p>
 
-       <p>For source downloads of PHP 7.2.1 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-       Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-       The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.2.1">ChangeLog</a>.
+       <p>For source downloads of PHP 7.2.1 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
+       Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
+       The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-7.php#7.2.1">ChangeLog</a>.
        </p>
     </div>
   ',
     'intro' => '<div><p>The PHP development team announces the immediate availability of PHP
        7.2.1. This is a security release. Several security bugs were fixed in
-       this release.</p><p>All PHP 7.2 users are encouraged to upgrade to this version.</p><p class=\'fullArticleLink\'><a href=\'http://php.net/archive/2018.php#id2018-01-04-2\' class>&hellip; read full article</a></p></div>',
+       this release.</p><p>All PHP 7.2 users are encouraged to upgrade to this version.</p><p class=\'fullArticleLink\'><a href=\'https://www.php.net/archive/2018.php#id2018-01-04-2\' class>&hellip; read full article</a></p></div>',
   ),
-  170 => 
+  170 =>
   array (
     'title' => 'PHP 7.0.27 Released',
-    'id' => 'http://php.net/archive/2018.php#id2018-01-04-1',
+    'id' => 'https://www.php.net/archive/2018.php#id2018-01-04-1',
     'published' => '2018-01-04T15:00:00+01:00',
     'updated' => '2018-01-04T15:00:00+01:00',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'releases',
         'label' => 'New PHP release',
       ),
-      1 => 
+      1 =>
       array (
         'term' => 'frontpage',
         'label' => 'PHP.net frontpage news',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/index.php#id2018-01-04-1',
+        'href' => 'https://www.php.net/index.php#id2018-01-04-1',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
-        'href' => 'http://php.net/archive/2018.php#id2018-01-04-1',
+        'href' => 'https://www.php.net/archive/2018.php#id2018-01-04-1',
         'rel' => 'via',
         'type' => 'text/html',
       ),
@@ -9356,9 +9356,9 @@ the upgrade
 	     is a good time to plan the migration to PHP 7.1 or 7.2.
      </p>
 
-     <p>For source downloads of PHP 7.0.27 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-     The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.0.27">ChangeLog</a>.
+     <p>For source downloads of PHP 7.0.27 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
+     Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
+     The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-7.php#7.0.27">ChangeLog</a>.
      </p>
     </div>
   ',
@@ -9371,39 +9371,39 @@ the upgrade
 	     The further releases of the 7.0 branch will be issued on demand and contain only critical
 	     security relevant bug fixes. The security support is provided till December 3rd, 2018. It
 	     is a good time to plan the migration to PHP 7.1 or 7.2.
-     </p><p class=\'fullArticleLink\'><a href=\'http://php.net/archive/2018.php#id2018-01-04-1\' class>&hellip; read full article</a></p></div>',
+     </p><p class=\'fullArticleLink\'><a href=\'https://www.php.net/archive/2018.php#id2018-01-04-1\' class>&hellip; read full article</a></p></div>',
   ),
-  171 => 
+  171 =>
   array (
     'title' => 'PHP Serbia Conference 2018',
-    'id' => 'http://php.net/archive/2017.php#id2017-12-23-1',
+    'id' => 'https://www.php.net/archive/2017.php#id2017-12-23-1',
     'published' => '2017-12-23T21:54:52+01:00',
     'updated' => '2017-12-23T21:54:52+01:00',
     'finalTeaserDate' => '2018-05-25',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'conferences',
         'label' => 'Conference announcement',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/conferences/index.php#id2017-12-23-1',
+        'href' => 'https://www.php.net/conferences/index.php#id2017-12-23-1',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
         'href' => 'https://conf2018.phpsrbija.rs',
         'rel' => 'via',
         'type' => 'text/html',
       ),
     ),
-    'newsImage' => 
+    'newsImage' =>
     array (
       'xmlns' => 'http://php.net/ns/news',
       'link' => 'https://conf2018.phpsrbija.rs',
@@ -9420,36 +9420,36 @@ the upgrade
   ',
     'intro' => '<div><p>"PHP Srbija" is happy to announce a brand new PHP Serbia Conference 2018!</p><p>This year\'s edition features Workshop Day prior to the main 2-day event of awesome talks on PHP and related technologies presented by best speakers from all over the globe.</p><p class=\'fullArticleLink\'><a href=\'https://conf2018.phpsrbija.rs\' class>&hellip; read full article</a></p></div>',
   ),
-  172 => 
+  172 =>
   array (
     'title' => 'PHP 7.2.0 Released',
-    'id' => 'http://php.net/archive/2017.php#id2017-11-30-1',
+    'id' => 'https://www.php.net/archive/2017.php#id2017-11-30-1',
     'published' => '2017-11-30T10:04:21+00:00',
     'updated' => '2017-11-30T10:04:21+00:00',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'frontpage',
         'label' => 'PHP.net frontpage news',
       ),
-      1 => 
+      1 =>
       array (
         'term' => 'releases',
         'label' => 'New PHP release',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/index.php#id2017-11-30-1',
+        'href' => 'https://www.php.net/index.php#id2017-11-30-1',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
-        'href' => 'http://php.net/archive/2017.php#id2017-11-30-1',
+        'href' => 'https://www.php.net/archive/2017.php#id2017-11-30-1',
         'rel' => 'via',
         'type' => 'text/html',
       ),
@@ -9472,49 +9472,49 @@ the upgrade
 	<li><a href="https://wiki.php.net/rfc/libsodium">New sodium extension</a></li>
 	</ul>
 
-	<p>For source downloads of PHP 7.2.0 please visit our <a href="http://www.php.net/downloads">downloads</a> page
-	Windows binaries can be found on the <a href="http://windows.php.net/download">PHP for Windows</a> site.
-	The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.2.0">ChangeLog</a>.</p>
+	<p>For source downloads of PHP 7.2.0 please visit our <a href="https://www.php.net/downloads">downloads</a> page
+	Windows binaries can be found on the <a href="https://windows.php.net/download">PHP for Windows</a> site.
+	The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-7.php#7.2.0">ChangeLog</a>.</p>
 
-	<p>The <a href="http://php.net/manual/en/migration72.php">migration guide</a> is available in the PHP Manual.
+	<p>The <a href="https://www.php.net/manual/en/migration72.php">migration guide</a> is available in the PHP Manual.
 	Please consult it for the detailed list of new features and backward incompatible changes.</p>
 
 	<p>Many thanks to all the contributors and supporters!</p>
     </div>
   ',
     'intro' => '<div><p>The PHP development team announces the immediate availability of PHP 7.2.0.
-	This release marks the second feature update to the PHP 7 series.</p><p>PHP 7.2.0 comes with numerous improvements and new features such as</p><p class=\'fullArticleLink\'><a href=\'http://php.net/archive/2017.php#id2017-11-30-1\' class>&hellip; read full article</a></p></div>',
+	This release marks the second feature update to the PHP 7 series.</p><p>PHP 7.2.0 comes with numerous improvements and new features such as</p><p class=\'fullArticleLink\'><a href=\'https://www.php.net/archive/2017.php#id2017-11-30-1\' class>&hellip; read full article</a></p></div>',
   ),
-  173 => 
+  173 =>
   array (
     'title' => 'PHP 7.1.12 Released',
-    'id' => 'http://php.net/archive/2017.php#id2017-11-24-1',
+    'id' => 'https://www.php.net/archive/2017.php#id2017-11-24-1',
     'published' => '2017-11-24T06:02:50+00:00',
     'updated' => '2017-11-24T06:02:50+00:00',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'frontpage',
         'label' => 'PHP.net frontpage news',
       ),
-      1 => 
+      1 =>
       array (
         'term' => 'releases',
         'label' => 'New PHP release',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/index.php#id2017-11-24-1',
+        'href' => 'https://www.php.net/index.php#id2017-11-24-1',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
-        'href' => 'http://php.net/archive/2017.php#id2017-11-24-1',
+        'href' => 'https://www.php.net/archive/2017.php#id2017-11-24-1',
         'rel' => 'via',
         'type' => 'text/html',
       ),
@@ -9526,9 +9526,9 @@ the upgrade
        All PHP 7.1 users are encouraged to upgrade to this version.
        </p>
 
-       <p>For source downloads of PHP 7.1.12 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-       Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-       The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.1.12">ChangeLog</a>.
+       <p>For source downloads of PHP 7.1.12 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
+       Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
+       The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-7.php#7.1.12">ChangeLog</a>.
        </p>
     </div>
   ',
@@ -9536,41 +9536,41 @@ the upgrade
        7.1.12. This is a bugfix release, with several bug fixes included.
 
        All PHP 7.1 users are encouraged to upgrade to this version.
-       </p><p>For source downloads of PHP 7.1.12 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-       Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-       The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.1.12">ChangeLog</a>.
+       </p><p>For source downloads of PHP 7.1.12 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
+       Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
+       The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-7.php#7.1.12">ChangeLog</a>.
        </p></div>',
   ),
-  174 => 
+  174 =>
   array (
     'title' => 'PHP 7.0.26 Released',
-    'id' => 'http://php.net/archive/2017.php#id2017-11-23-2',
+    'id' => 'https://www.php.net/archive/2017.php#id2017-11-23-2',
     'published' => '2017-11-23T13:00:00+01:00',
     'updated' => '2017-11-23T13:00:00+01:00',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'releases',
         'label' => 'New PHP release',
       ),
-      1 => 
+      1 =>
       array (
         'term' => 'frontpage',
         'label' => 'PHP.net frontpage news',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/index.php#id2017-11-23-2',
+        'href' => 'https://www.php.net/index.php#id2017-11-23-2',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
-        'href' => 'http://php.net/archive/2017.php#id2017-11-23-2',
+        'href' => 'https://www.php.net/archive/2017.php#id2017-11-23-2',
         'rel' => 'via',
         'type' => 'text/html',
       ),
@@ -9582,9 +9582,9 @@ the upgrade
       All PHP 7.0 users are encouraged to upgrade to this version.
       </p>
 
-      <p>For source downloads of PHP 7.0.26 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-      Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.0.26">ChangeLog</a>.
+      <p>For source downloads of PHP 7.0.26 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
+      Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
+      The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-7.php#7.0.26">ChangeLog</a>.
       </p>
     </div>
   ',
@@ -9592,42 +9592,42 @@ the upgrade
       7.0.26. Several bugs have been fixed.
 
       All PHP 7.0 users are encouraged to upgrade to this version.
-      </p><p>For source downloads of PHP 7.0.26 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-      Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.0.26">ChangeLog</a>.
+      </p><p>For source downloads of PHP 7.0.26 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
+      Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
+      The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-7.php#7.0.26">ChangeLog</a>.
       </p></div>',
   ),
-  175 => 
+  175 =>
   array (
     'title' => 'PHPKonf Istanbul PHP Conference 2018 - Call for Papers',
-    'id' => 'http://php.net/archive/2017.php#id2017-11-22-2',
+    'id' => 'https://www.php.net/archive/2017.php#id2017-11-22-2',
     'published' => '2017-11-22T09:00:00+00:00',
     'updated' => '2017-11-22T09:00:00+00:00',
     'finalTeaserDate' => '2018-01-31',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'cfp',
         'label' => 'Call for Papers',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/conferences/index.php#id2017-11-22-2',
+        'href' => 'https://www.php.net/conferences/index.php#id2017-11-22-2',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
         'href' => 'https://cfp.phpkonf.org/',
         'rel' => 'via',
         'type' => 'text/html',
       ),
     ),
-    'newsImage' => 
+    'newsImage' =>
     array (
       'xmlns' => 'http://php.net/ns/news',
       'link' => 'https://cfp.phpkonf.org/',
@@ -9646,37 +9646,37 @@ the upgrade
   ',
     'intro' => '<div><p>PHPKonf 2018 is an annual PHP oriented conference in Istanbul, Turkey and will take place on Sunday, 20th of May, 2018.</p><p>The <a href="https://cfp.phpkonf.org/">call for papers</a> for the PHPKonf 2018 Istanbul PHP conference is open! If you have a burning desire to hold forth about PHP, DevOps, databases, JavaScript, or any other web development topics, we want to see your proposals. Call for Papers is open only from November 20, 2017 to January 31, 2018, so hurry. An added benefit: we will cover your travel and hotel.</p><p class=\'fullArticleLink\'><a href=\'https://cfp.phpkonf.org/\' class>&hellip; read full article</a></p></div>',
   ),
-  176 => 
+  176 =>
   array (
     'title' => 'International PHP Conference 2018 - spring edition',
-    'id' => 'http://php.net/archive/2017.php#id2017-11-22-1',
+    'id' => 'https://www.php.net/archive/2017.php#id2017-11-22-1',
     'published' => '2017-11-22T09:54:24+01:00',
     'updated' => '2017-11-22T09:54:24+01:00',
     'finalTeaserDate' => '2018-06-04',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'conferences',
         'label' => 'Conference announcement',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/conferences/index.php#id2017-11-22-1',
+        'href' => 'https://www.php.net/conferences/index.php#id2017-11-22-1',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
         'href' => 'https://phpconference.com',
         'rel' => 'via',
         'type' => 'text/html',
       ),
     ),
-    'newsImage' => 
+    'newsImage' =>
     array (
       'xmlns' => 'http://php.net/ns/news',
       'link' => 'https://phpconference.com',
@@ -9715,37 +9715,37 @@ the upgrade
   ',
     'intro' => '<div><p><a href="https://phpconference.com">The International PHP Conference</a> is the world\'s first PHP conference and stands since more than a decade for top-notch pragmatic expertise in PHP and web technologies. At the IPC, internationally renowned experts from the PHP industry meet up with PHP users and developers from large and small companies. Here is the place where concepts emerge and ideas are born - the IPC signifies knowledge transfer at highest level.</p><p>All delegates of the <a href="https://phpconference.com">International PHP Conference</a> have, in addition to PHP program, free access to the entire range of the <a href="https://webinale.de">webinale \'18</a> taking place at the same time.</p><p class=\'fullArticleLink\'><a href=\'https://phpconference.com\' class>&hellip; read full article</a></p></div>',
   ),
-  177 => 
+  177 =>
   array (
     'title' => 'php[tek] 2018 : Call for Speakers',
-    'id' => 'http://php.net/archive/2017.php#id2017-11-20-1',
+    'id' => 'https://www.php.net/archive/2017.php#id2017-11-20-1',
     'published' => '2017-11-20T21:55:38+00:00',
     'updated' => '2017-11-20T21:55:38+00:00',
     'finalTeaserDate' => '2017-12-29',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'cfp',
         'label' => 'Call for Papers',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/conferences/index.php#id2017-11-20-1',
+        'href' => 'https://www.php.net/conferences/index.php#id2017-11-20-1',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
         'href' => 'https://tek.phparch.com/',
         'rel' => 'via',
         'type' => 'text/html',
       ),
     ),
-    'newsImage' => 
+    'newsImage' =>
     array (
       'xmlns' => 'http://php.net/ns/news',
       'link' => 'https://tek.phparch.com/',
@@ -9771,37 +9771,37 @@ the upgrade
   ',
     'intro' => '<div><a href="https://tek.phparch.com/?paref=phpnet&amp;utm_campaign=phpnet">php[tek]</a><a href="https://tek.phparch.com/call-for-speakers/?paref=phpnet&amp;utm_campaign=phpnet">Call for Speakers</a><p class=\'fullArticleLink\'><a href=\'https://tek.phparch.com/\' class>&hellip; read full article</a></p></div>',
   ),
-  178 => 
+  178 =>
   array (
     'title' => 'Longhorn PHP 2018',
-    'id' => 'http://php.net/archive/2017.php#id2017-11-16-1',
+    'id' => 'https://www.php.net/archive/2017.php#id2017-11-16-1',
     'published' => '2017-11-16T04:42:00+00:00',
     'updated' => '2017-11-16T04:42:00+00:00',
     'finalTeaserDate' => '2018-04-19',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'conferences',
         'label' => 'Conference announcement',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/conferences/index.php#id2017-11-16-1',
+        'href' => 'https://www.php.net/conferences/index.php#id2017-11-16-1',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
         'href' => 'https://www.longhornphp.com/',
         'rel' => 'via',
         'type' => 'text/html',
       ),
     ),
-    'newsImage' => 
+    'newsImage' =>
     array (
       'xmlns' => 'http://php.net/ns/news',
       'link' => 'https://www.longhornphp.com/',
@@ -9819,36 +9819,36 @@ the upgrade
   ',
     'intro' => '<div><p>The Austin PHP Meetup, the longest-running tech meetup in Texasâ capital, is excited to announce a brand-new PHP conference: Longhorn PHP. 2018 will be the inaugural year for Longhorn PHP, which follows in the tradition of the now-retired Lone Star PHP conference in Dallas.</p><p>At Longhorn PHP youâll get to learn from and alongside a diverse group of developers from all over the region, country, and even the globe. The conference will consist of one tutorial day with in-depth workshops, and two main conference days with multiple tracks of traditional 1 hour sessions. <a href="https://www.longhornphp.com/register/">Register now</a> to take the next step toward leveling up your development career!</p><p class=\'fullArticleLink\'><a href=\'https://www.longhornphp.com/\' class>&hellip; read full article</a></p></div>',
   ),
-  179 => 
+  179 =>
   array (
     'title' => 'PHP 7.2.0RC6 Released',
-    'id' => 'http://php.net/archive/2017.php#id2017-11-09-1',
+    'id' => 'https://www.php.net/archive/2017.php#id2017-11-09-1',
     'published' => '2017-11-09T13:57:49+00:00',
     'updated' => '2017-11-09T13:57:49+00:00',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'frontpage',
         'label' => 'PHP.net frontpage news',
       ),
-      1 => 
+      1 =>
       array (
         'term' => 'releases',
         'label' => 'New PHP release',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/index.php#id2017-11-09-1',
+        'href' => 'https://www.php.net/index.php#id2017-11-09-1',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
-        'href' => 'http://php.net/archive/2017.php#id2017-11-09-1',
+        'href' => 'https://www.php.net/archive/2017.php#id2017-11-09-1',
         'rel' => 'via',
         'type' => 'text/html',
       ),
@@ -9876,7 +9876,7 @@ the upgrade
      For source downloads of PHP 7.2.0 Release Candidate 6 please visit the
      <a href="https://downloads.php.net/~pollita/">download</a> page,
      Windows sources and binaries can be found at
-     <a href="http://windows.php.net/qa/">windows.php.net/qa/</a>.
+     <a href="https://windows.php.net/qa/">windows.php.net/qa/</a>.
      </p>
 
      <p>Thank you for helping us make PHP better.</p>
@@ -9889,39 +9889,39 @@ the upgrade
      with Nov 30th\'s GA release being not-substantially different.
      All users of PHP are encouraged to test this version carefully, and report any bugs
      and incompatibilities in the <a href="https://bugs.php.net/">bug tracking system</a>.
-     </p><p><strong>THIS IS A DEVELOPMENT PREVIEW - DO NOT USE IT IN PRODUCTION!</strong></p><p class=\'fullArticleLink\'><a href=\'http://php.net/archive/2017.php#id2017-11-09-1\' class>&hellip; read full article</a></p></div>',
+     </p><p><strong>THIS IS A DEVELOPMENT PREVIEW - DO NOT USE IT IN PRODUCTION!</strong></p><p class=\'fullArticleLink\'><a href=\'https://www.php.net/archive/2017.php#id2017-11-09-1\' class>&hellip; read full article</a></p></div>',
   ),
-  180 => 
+  180 =>
   array (
     'title' => 'SunshinePHP 2018 Conference',
-    'id' => 'http://php.net/archive/2017.php#id2017-11-08-1',
+    'id' => 'https://www.php.net/archive/2017.php#id2017-11-08-1',
     'published' => '2017-11-08T00:00:01+00:00',
     'updated' => '2017-11-15T09:40:00+00:00',
     'finalTeaserDate' => '2018-12-15',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'conferences',
         'label' => 'Conference announcement',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/conferences/index.php#id2017-11-08-1',
+        'href' => 'https://www.php.net/conferences/index.php#id2017-11-08-1',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
         'href' => 'http://sunshinephp.com',
         'rel' => 'via',
         'type' => 'text/html',
       ),
     ),
-    'newsImage' => 
+    'newsImage' =>
     array (
       'xmlns' => 'http://php.net/ns/news',
       'link' => 'http://sunshinephp.com',
@@ -9955,37 +9955,37 @@ the upgrade
 	',
     'intro' => '<div><p>In February 2018 come to Miami, Florida and escape the cold to learn more about PHP and speak with other developers, like you, to see what others are doing. The <a href="http://sunshinephp.com/speakers" title="SunshinePHP 2018 Speaker List">SunshinePHP 2018 speaker list</a> has been announced, and we\'ve assembled a great line-up with the most current PHP related topics for you.</p><p>Topics include:</p><p class=\'fullArticleLink\'><a href=\'http://sunshinephp.com\' class>&hellip; read full article</a></p></div>',
   ),
-  181 => 
+  181 =>
   array (
     'title' => 'International PHP Conference Spring Edition 2018  - Call for Papers',
-    'id' => 'http://php.net/archive/2017.php#id2017-11-06-1',
+    'id' => 'https://www.php.net/archive/2017.php#id2017-11-06-1',
     'published' => '2017-11-06T11:44:54-04:00',
     'updated' => '2017-11-06T11:44:54-04:00',
     'finalTeaserDate' => '2017-11-06',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'cfp',
         'label' => 'Call for Papers',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/conferences/index.php#id2017-11-06-1',
+        'href' => 'https://www.php.net/conferences/index.php#id2017-11-06-1',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
         'href' => 'https://callforpapers.sandsmedia.com',
         'rel' => 'via',
         'type' => 'text/html',
       ),
     ),
-    'newsImage' => 
+    'newsImage' =>
     array (
       'xmlns' => 'http://php.net/ns/news',
       'link' => 'https://callforpapers.sandsmedia.com',
@@ -10017,36 +10017,36 @@ the upgrade
   ',
     'intro' => '<div></div>',
   ),
-  182 => 
+  182 =>
   array (
     'title' => 'PHP 7.1.11 Released',
-    'id' => 'http://php.net/archive/2017.php#id2017-10-27-1',
+    'id' => 'https://www.php.net/archive/2017.php#id2017-10-27-1',
     'published' => '2017-10-27T05:52:49+00:00',
     'updated' => '2017-10-27T05:52:49+00:00',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'frontpage',
         'label' => 'PHP.net frontpage news',
       ),
-      1 => 
+      1 =>
       array (
         'term' => 'releases',
         'label' => 'New PHP release',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/index.php#id2017-10-27-1',
+        'href' => 'https://www.php.net/index.php#id2017-10-27-1',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
-        'href' => 'http://php.net/archive/2017.php#id2017-10-27-1',
+        'href' => 'https://www.php.net/archive/2017.php#id2017-10-27-1',
         'rel' => 'via',
         'type' => 'text/html',
       ),
@@ -10058,9 +10058,9 @@ the upgrade
        All PHP 7.1 users are encouraged to upgrade to this version.
        </p>
 
-       <p>For source downloads of PHP 7.1.11 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-       Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-       The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.1.11">ChangeLog</a>.
+       <p>For source downloads of PHP 7.1.11 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
+       Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
+       The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-7.php#7.1.11">ChangeLog</a>.
        </p>
     </div>
   ',
@@ -10068,41 +10068,41 @@ the upgrade
        7.1.11. This is a bugfix release, with several bug fixes included.
 
        All PHP 7.1 users are encouraged to upgrade to this version.
-       </p><p>For source downloads of PHP 7.1.11 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-       Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-       The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.1.11">ChangeLog</a>.
+       </p><p>For source downloads of PHP 7.1.11 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
+       Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
+       The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-7.php#7.1.11">ChangeLog</a>.
        </p></div>',
   ),
-  183 => 
+  183 =>
   array (
     'title' => 'PHP 5.6.32 Released',
-    'id' => 'http://php.net/archive/2017.php#id2017-10-26-3',
+    'id' => 'https://www.php.net/archive/2017.php#id2017-10-26-3',
     'published' => '2017-10-26T13:32:22-07:00',
     'updated' => '2017-10-26T13:32:22-07:00',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'frontpage',
         'label' => 'PHP.net frontpage news',
       ),
-      1 => 
+      1 =>
       array (
         'term' => 'releases',
         'label' => 'New PHP release',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/index.php#id2017-10-26-3',
+        'href' => 'https://www.php.net/index.php#id2017-10-26-3',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
-        'href' => 'http://php.net/archive/2017.php#id2017-10-26-3',
+        'href' => 'https://www.php.net/archive/2017.php#id2017-10-26-3',
         'rel' => 'via',
         'type' => 'text/html',
       ),
@@ -10114,9 +10114,9 @@ the upgrade
 
      All PHP 5.6 users are encouraged to upgrade to this version.</p>
 
-     <p>For source downloads of PHP 5.6.32 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-     The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.6.32">ChangeLog</a>.
+     <p>For source downloads of PHP 5.6.32 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
+     Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
+     The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-5.php#5.6.32">ChangeLog</a>.
      </p>
     </div>
   ',
@@ -10124,41 +10124,41 @@ the upgrade
      5.6.32. This is a security release. Several security bugs were fixed in
      this release.
 
-     All PHP 5.6 users are encouraged to upgrade to this version.</p><p>For source downloads of PHP 5.6.32 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-     The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.6.32">ChangeLog</a>.
+     All PHP 5.6 users are encouraged to upgrade to this version.</p><p>For source downloads of PHP 5.6.32 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
+     Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
+     The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-5.php#5.6.32">ChangeLog</a>.
      </p></div>',
   ),
-  184 => 
+  184 =>
   array (
     'title' => 'PHP 7.2.0 Release Candidate 5 Released',
-    'id' => 'http://php.net/archive/2017.php#id2017-10-26-2',
+    'id' => 'https://www.php.net/archive/2017.php#id2017-10-26-2',
     'published' => '2017-10-26T16:26:36+00:00',
     'updated' => '2017-10-26T16:26:36+00:00',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'frontpage',
         'label' => 'PHP.net frontpage news',
       ),
-      1 => 
+      1 =>
       array (
         'term' => 'releases',
         'label' => 'New PHP release',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/index.php#id2017-10-26-2',
+        'href' => 'https://www.php.net/index.php#id2017-10-26-2',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
-        'href' => 'http://php.net/archive/2017.php#id2017-10-26-2',
+        'href' => 'https://www.php.net/archive/2017.php#id2017-10-26-2',
         'rel' => 'via',
         'type' => 'text/html',
       ),
@@ -10184,7 +10184,7 @@ the upgrade
      For source downloads of PHP 7.2.0 Release Candidate 5 please visit the
      <a href="https://downloads.php.net/~pollita/">download</a> page,
      Windows sources and binaries can be found at
-     <a href="http://windows.php.net/qa/">windows.php.net/qa/</a>.
+     <a href="https://windows.php.net/qa/">windows.php.net/qa/</a>.
      </p>
 
      <p>
@@ -10201,38 +10201,38 @@ the upgrade
      This release is the fifth Release Candidate for 7.2.0.
      All users of PHP are encouraged to test this version carefully, and report any bugs
      and incompatibilities in the <a href="https://bugs.php.net/">bug tracking system</a>.
-     </p><p><strong>THIS IS A DEVELOPMENT PREVIEW - DO NOT USE IT IN PRODUCTION!</strong></p><p class=\'fullArticleLink\'><a href=\'http://php.net/archive/2017.php#id2017-10-26-2\' class>&hellip; read full article</a></p></div>',
+     </p><p><strong>THIS IS A DEVELOPMENT PREVIEW - DO NOT USE IT IN PRODUCTION!</strong></p><p class=\'fullArticleLink\'><a href=\'https://www.php.net/archive/2017.php#id2017-10-26-2\' class>&hellip; read full article</a></p></div>',
   ),
-  185 => 
+  185 =>
   array (
     'title' => 'PHP 7.0.25 Released',
-    'id' => 'http://php.net/archive/2017.php#id2017-10-26-1',
+    'id' => 'https://www.php.net/archive/2017.php#id2017-10-26-1',
     'published' => '2017-10-26T13:00:00+01:00',
     'updated' => '2017-10-26T13:00:00+01:00',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'releases',
         'label' => 'New PHP release',
       ),
-      1 => 
+      1 =>
       array (
         'term' => 'frontpage',
         'label' => 'PHP.net frontpage news',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/index.php#id2017-10-26-1',
+        'href' => 'https://www.php.net/index.php#id2017-10-26-1',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
-        'href' => 'http://php.net/archive/2017.php#id2017-10-26-1',
+        'href' => 'https://www.php.net/archive/2017.php#id2017-10-26-1',
         'rel' => 'via',
         'type' => 'text/html',
       ),
@@ -10244,9 +10244,9 @@ the upgrade
 
      All PHP 7.0 users are encouraged to upgrade to this version.</p>
 
-     <p>For source downloads of PHP 7.0.25 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-     The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.0.25">ChangeLog</a>.
+     <p>For source downloads of PHP 7.0.25 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
+     Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
+     The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-7.php#7.0.25">ChangeLog</a>.
      </p>
     </div>
   ',
@@ -10254,42 +10254,42 @@ the upgrade
      7.0.25. This is a security release. Several security bugs were fixed in
      this release.
 
-     All PHP 7.0 users are encouraged to upgrade to this version.</p><p>For source downloads of PHP 7.0.25 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-     The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.0.25">ChangeLog</a>.
+     All PHP 7.0 users are encouraged to upgrade to this version.</p><p>For source downloads of PHP 7.0.25 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
+     Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
+     The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-7.php#7.0.25">ChangeLog</a>.
      </p></div>',
   ),
-  186 => 
+  186 =>
   array (
     'title' => 'ScotlandPHP',
-    'id' => 'http://php.net/archive/2017.php#id2017-10-19-1',
+    'id' => 'https://www.php.net/archive/2017.php#id2017-10-19-1',
     'published' => '2017-10-19T17:46:40+00:00',
     'updated' => '2017-10-19T17:46:40+00:00',
     'finalTeaserDate' => '2017-11-04',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'conferences',
         'label' => 'Conference announcement',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/conferences/index.php#id2017-10-19-1',
+        'href' => 'https://www.php.net/conferences/index.php#id2017-10-19-1',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
         'href' => 'https://conference.scotlandphp.co.uk/',
         'rel' => 'via',
         'type' => 'text/html',
       ),
     ),
-    'newsImage' => 
+    'newsImage' =>
     array (
       'xmlns' => 'http://php.net/ns/news',
       'link' => 'https://conference.scotlandphp.co.uk/',
@@ -10327,31 +10327,31 @@ the upgrade
   ',
     'intro' => '<div><p>Scotland\'s Original and Best PHP Conference</p><p>Saturday 4th November 2017, EICC, Edinburgh</p><p class=\'fullArticleLink\'><a href=\'https://conference.scotlandphp.co.uk/\' class>&hellip; read full article</a></p></div>',
   ),
-  187 => 
+  187 =>
   array (
     'title' => 'PHP 7.2.0 Release Candidate 4 Released',
-    'id' => 'http://php.net/archive/2017.php#id2017-10-12-1',
+    'id' => 'https://www.php.net/archive/2017.php#id2017-10-12-1',
     'published' => '2017-10-12T11:46:49+02:00',
     'updated' => '2017-10-12T11:46:49+02:00',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'frontpage',
         'label' => 'PHP.net frontpage news',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/index.php#id2017-10-12-1',
+        'href' => 'https://www.php.net/index.php#id2017-10-12-1',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
-        'href' => 'http://php.net/archive/2017.php#id2017-10-12-1',
+        'href' => 'https://www.php.net/archive/2017.php#id2017-10-12-1',
         'rel' => 'via',
         'type' => 'text/html',
       ),
@@ -10377,7 +10377,7 @@ the upgrade
      For source downloads of PHP 7.2.0 Release Candidate 4 please visit the
      <a href="https://downloads.php.net/~remi/">download</a> page,
      Windows sources and binaries can be found at
-     <a href="http://windows.php.net/qa/">windows.php.net/qa/</a>.
+     <a href="https://windows.php.net/qa/">windows.php.net/qa/</a>.
      </p>
 
      <p>
@@ -10394,38 +10394,38 @@ the upgrade
      This release is the fourth Release Candidate for 7.2.0.
      All users of PHP are encouraged to test this version carefully, and report any bugs
      and incompatibilities in the <a href="https://bugs.php.net/">bug tracking system</a>.
-     </p><p><strong>THIS IS A DEVELOPMENT PREVIEW - DO NOT USE IT IN PRODUCTION!</strong></p><p class=\'fullArticleLink\'><a href=\'http://php.net/archive/2017.php#id2017-10-12-1\' class>&hellip; read full article</a></p></div>',
+     </p><p><strong>THIS IS A DEVELOPMENT PREVIEW - DO NOT USE IT IN PRODUCTION!</strong></p><p class=\'fullArticleLink\'><a href=\'https://www.php.net/archive/2017.php#id2017-10-12-1\' class>&hellip; read full article</a></p></div>',
   ),
-  188 => 
+  188 =>
   array (
     'title' => 'PHP 7.1.10 Release Announcement',
-    'id' => 'http://php.net/archive/2017.php#id2017-09-29-1',
+    'id' => 'https://www.php.net/archive/2017.php#id2017-09-29-1',
     'published' => '2017-09-29T08:10:14+00:00',
     'updated' => '2017-09-29T08:10:14+00:00',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'frontpage',
         'label' => 'PHP.net frontpage news',
       ),
-      1 => 
+      1 =>
       array (
         'term' => 'releases',
         'label' => 'New PHP release',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/index.php#id2017-09-29-1',
+        'href' => 'https://www.php.net/index.php#id2017-09-29-1',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
-        'href' => 'http://php.net/archive/2017.php#id2017-09-29-1',
+        'href' => 'https://www.php.net/archive/2017.php#id2017-09-29-1',
         'rel' => 'via',
         'type' => 'text/html',
       ),
@@ -10437,9 +10437,9 @@ the upgrade
        All PHP 7.1 users are encouraged to upgrade to this version.
        </p>
 
-       <p>For source downloads of PHP 7.1.10 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-       Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-       The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.1.10">ChangeLog</a>.
+       <p>For source downloads of PHP 7.1.10 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
+       Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
+       The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-7.php#7.1.10">ChangeLog</a>.
        </p>
     </div>
   ',
@@ -10447,36 +10447,36 @@ the upgrade
        7.1.10. This is a bugfix release, with several bug fixes included.
 
        All PHP 7.1 users are encouraged to upgrade to this version.
-       </p><p>For source downloads of PHP 7.1.10 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-       Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-       The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.1.10">ChangeLog</a>.
+       </p><p>For source downloads of PHP 7.1.10 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
+       Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
+       The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-7.php#7.1.10">ChangeLog</a>.
        </p></div>',
   ),
-  189 => 
+  189 =>
   array (
     'title' => 'PHP 7.2.0 Release Candidate 3 Released',
-    'id' => 'http://php.net/archive/2017.php#id2017-09-28-2',
+    'id' => 'https://www.php.net/archive/2017.php#id2017-09-28-2',
     'published' => '2017-09-28T12:58:56+02:00',
     'updated' => '2017-09-28T12:58:56+02:00',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'frontpage',
         'label' => 'PHP.net frontpage news',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/index.php#id2017-09-28-2',
+        'href' => 'https://www.php.net/index.php#id2017-09-28-2',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
-        'href' => 'http://php.net/archive/2017.php#id2017-09-28-2',
+        'href' => 'https://www.php.net/archive/2017.php#id2017-09-28-2',
         'rel' => 'via',
         'type' => 'text/html',
       ),
@@ -10502,7 +10502,7 @@ the upgrade
      For source downloads of PHP 7.2.0 Release Candidate 3 please visit the
      <a href="https://downloads.php.net/~remi/">download</a> page,
      Windows sources and binaries can be found at
-     <a href="http://windows.php.net/qa/">windows.php.net/qa/</a>.
+     <a href="https://windows.php.net/qa/">windows.php.net/qa/</a>.
      </p>
 
      <p>
@@ -10519,38 +10519,38 @@ the upgrade
      This release is the third Release Candidate for 7.2.0.
      All users of PHP are encouraged to test this version carefully, and report any bugs
      and incompatibilities in the <a href="https://bugs.php.net/">bug tracking system</a>.
-     </p><p><strong>THIS IS A DEVELOPMENT PREVIEW - DO NOT USE IT IN PRODUCTION!</strong></p><p class=\'fullArticleLink\'><a href=\'http://php.net/archive/2017.php#id2017-09-28-2\' class>&hellip; read full article</a></p></div>',
+     </p><p><strong>THIS IS A DEVELOPMENT PREVIEW - DO NOT USE IT IN PRODUCTION!</strong></p><p class=\'fullArticleLink\'><a href=\'https://www.php.net/archive/2017.php#id2017-09-28-2\' class>&hellip; read full article</a></p></div>',
   ),
-  190 => 
+  190 =>
   array (
     'title' => 'PHP 7.0.24 Released',
-    'id' => 'http://php.net/archive/2017.php#id2017-09-28-2',
+    'id' => 'https://www.php.net/archive/2017.php#id2017-09-28-2',
     'published' => '2017-09-28T13:00:00+01:00',
     'updated' => '2017-09-28T13:00:00+01:00',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'releases',
         'label' => 'New PHP release',
       ),
-      1 => 
+      1 =>
       array (
         'term' => 'frontpage',
         'label' => 'PHP.net frontpage news',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/index.php#id2017-09-28-2',
+        'href' => 'https://www.php.net/index.php#id2017-09-28-2',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
-        'href' => 'http://php.net/archive/2017.php#id2017-09-28-2',
+        'href' => 'https://www.php.net/archive/2017.php#id2017-09-28-2',
         'rel' => 'via',
         'type' => 'text/html',
       ),
@@ -10562,9 +10562,9 @@ the upgrade
       All PHP 7.0 users are encouraged to upgrade to this version.
       </p>
 
-      <p>For source downloads of PHP 7.0.24 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-      Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.0.24">ChangeLog</a>.
+      <p>For source downloads of PHP 7.0.24 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
+      Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
+      The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-7.php#7.0.24">ChangeLog</a>.
       </p>
     </div>
   ',
@@ -10572,41 +10572,41 @@ the upgrade
       7.0.24. Several bugs have been fixed.
 
       All PHP 7.0 users are encouraged to upgrade to this version.
-      </p><p>For source downloads of PHP 7.0.24 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-      Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.0.24">ChangeLog</a>.
+      </p><p>For source downloads of PHP 7.0.24 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
+      Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
+      The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-7.php#7.0.24">ChangeLog</a>.
       </p></div>',
   ),
-  191 => 
+  191 =>
   array (
     'title' => 'PHP 7.2.0 Release Candidate 2 Released',
-    'id' => 'http://php.net/archive/2017.php#id2017-09-14-1',
+    'id' => 'https://www.php.net/archive/2017.php#id2017-09-14-1',
     'published' => '2017-09-14T16:07:16+00:00',
     'updated' => '2017-09-14T16:07:16+00:00',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'frontpage',
         'label' => 'PHP.net frontpage news',
       ),
-      1 => 
+      1 =>
       array (
         'term' => 'releases',
         'label' => 'New PHP release',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/index.php#id2017-09-14-1',
+        'href' => 'https://www.php.net/index.php#id2017-09-14-1',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
-        'href' => 'http://php.net/archive/2017.php#id2017-09-14-1',
+        'href' => 'https://www.php.net/archive/2017.php#id2017-09-14-1',
         'rel' => 'via',
         'type' => 'text/html',
       ),
@@ -10632,7 +10632,7 @@ the upgrade
      For source downloads of PHP 7.2.0 Release Candidate 2 please visit the
      <a href="https://downloads.php.net/~pollita/">download</a> page,
      Windows sources and binaries can be found at
-     <a href="http://windows.php.net/qa/">windows.php.net/qa/</a>.
+     <a href="https://windows.php.net/qa/">windows.php.net/qa/</a>.
      </p>
 
      <p>
@@ -10649,39 +10649,39 @@ the upgrade
      This release is the second Release Candidate for 7.2.0.
      All users of PHP are encouraged to test this version carefully, and report any bugs
      and incompatibilities in the <a href="https://bugs.php.net/">bug tracking system</a>.
-     </p><p><strong>THIS IS A DEVELOPMENT PREVIEW - DO NOT USE IT IN PRODUCTION!</strong></p><p class=\'fullArticleLink\'><a href=\'http://php.net/archive/2017.php#id2017-09-14-1\' class>&hellip; read full article</a></p></div>',
+     </p><p><strong>THIS IS A DEVELOPMENT PREVIEW - DO NOT USE IT IN PRODUCTION!</strong></p><p class=\'fullArticleLink\'><a href=\'https://www.php.net/archive/2017.php#id2017-09-14-1\' class>&hellip; read full article</a></p></div>',
   ),
-  192 => 
+  192 =>
   array (
     'title' => 'PHP North West 2017 (PHPNW17)',
-    'id' => 'http://php.net/archive/2017.php#id2017-09-13-1',
+    'id' => 'https://www.php.net/archive/2017.php#id2017-09-13-1',
     'published' => '2017-09-13T19:00:00+00:00',
     'updated' => '2017-09-13T19:00:00+00:00',
     'finalTeaserDate' => '2017-09-29',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'conferences',
         'label' => 'Conference announcement',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/conferences/index.php#id2017-09-13-1',
+        'href' => 'https://www.php.net/conferences/index.php#id2017-09-13-1',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
         'href' => 'http://conference.phpnw.org.uk/phpnw17/',
         'rel' => 'via',
         'type' => 'text/html',
       ),
     ),
-    'newsImage' => 
+    'newsImage' =>
     array (
       'xmlns' => 'http://php.net/ns/news',
       'link' => 'http://conference.phpnw.org.uk/phpnw17/',
@@ -10698,36 +10698,36 @@ the upgrade
   ',
     'intro' => '<div><p>One of the largest and most popular PHP Conferences in Europe, <a href="http://conference.phpnw.org.uk/phpnw17/">PHPNW17</a> is a long-running community-based conference, held in Manchester, UK and run on a not-for-profit basis. It is overwhelmingly supported by industry leaders, code experts, web developers and businesses across the world. This year, we are celebrating our 10th conference year, and we aim to be bigger and better than ever before.</p><p>The PHPNW Conference has a reputation within the PHP community as a "go to" conference due to its inspiring content, friendly atmosphere and networking opportunities. Our delegates come to our Conference because they are specifically interested in new technologies and ways to improve their skills through our tutorials and talks, as well as the awesome (unofficial) corridor track!</p><p class=\'fullArticleLink\'><a href=\'http://conference.phpnw.org.uk/phpnw17/\' class>&hellip; read full article</a></p></div>',
   ),
-  193 => 
+  193 =>
   array (
     'title' => 'PHP 7.1.9 Released',
-    'id' => 'http://php.net/archive/2017.php#id2017-09-01-1',
+    'id' => 'https://www.php.net/archive/2017.php#id2017-09-01-1',
     'published' => '2017-09-01T06:31:35+00:00',
     'updated' => '2017-09-01T06:31:35+00:00',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'frontpage',
         'label' => 'PHP.net frontpage news',
       ),
-      1 => 
+      1 =>
       array (
         'term' => 'releases',
         'label' => 'New PHP release',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/index.php#id2017-09-01-1',
+        'href' => 'https://www.php.net/index.php#id2017-09-01-1',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
-        'href' => 'http://php.net/archive/2017.php#id2017-09-01-1',
+        'href' => 'https://www.php.net/archive/2017.php#id2017-09-01-1',
         'rel' => 'via',
         'type' => 'text/html',
       ),
@@ -10739,9 +10739,9 @@ the upgrade
        All PHP 7.1 users are encouraged to upgrade to this version.
        </p>
 
-       <p>For source downloads of PHP 7.1.9 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-       Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-       The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.1.9">ChangeLog</a>.
+       <p>For source downloads of PHP 7.1.9 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
+       Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
+       The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-7.php#7.1.9">ChangeLog</a>.
        </p>
     </div>
   ',
@@ -10749,36 +10749,36 @@ the upgrade
        7.1.9. This is a bugfix release, with several bug fixes included.
 
        All PHP 7.1 users are encouraged to upgrade to this version.
-       </p><p>For source downloads of PHP 7.1.9 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-       Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-       The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.1.9">ChangeLog</a>.
+       </p><p>For source downloads of PHP 7.1.9 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
+       Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
+       The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-7.php#7.1.9">ChangeLog</a>.
        </p></div>',
   ),
-  194 => 
+  194 =>
   array (
     'title' => 'PHP 7.2.0 Release Candidate 1 Released',
-    'id' => 'http://php.net/archive/2017.php#id2017-08-31-1',
+    'id' => 'https://www.php.net/archive/2017.php#id2017-08-31-1',
     'published' => '2017-08-31T10:53:58+02:00',
     'updated' => '2017-08-31T10:53:58+02:00',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'frontpage',
         'label' => 'PHP.net frontpage news',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/index.php#id2017-08-31-1',
+        'href' => 'https://www.php.net/index.php#id2017-08-31-1',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
-        'href' => 'http://php.net/archive/2017.php#id2017-08-31-1',
+        'href' => 'https://www.php.net/archive/2017.php#id2017-08-31-1',
         'rel' => 'via',
         'type' => 'text/html',
       ),
@@ -10804,7 +10804,7 @@ the upgrade
       For source downloads of PHP 7.2.0 Release Candidate 1 please visit the
       <a href="https://downloads.php.net/~remi/">download</a> page,
       Windows sources and binaries can be found at
-      <a href="http://windows.php.net/qa/">windows.php.net/qa/</a>.
+      <a href="https://windows.php.net/qa/">windows.php.net/qa/</a>.
       </p>
 
       <p>
@@ -10821,38 +10821,38 @@ the upgrade
       Candidate 1. This release is the first Release Candidate for 7.2.0.
       All users of PHP are encouraged to test this version carefully, and report any bugs
       and incompatibilities in the <a href="https://bugs.php.net/">bug tracking system</a>.
-      </p><p><strong>THIS IS A DEVELOPMENT PREVIEW - DO NOT USE IT IN PRODUCTION!</strong></p><p class=\'fullArticleLink\'><a href=\'http://php.net/archive/2017.php#id2017-08-31-1\' class>&hellip; read full article</a></p></div>',
+      </p><p><strong>THIS IS A DEVELOPMENT PREVIEW - DO NOT USE IT IN PRODUCTION!</strong></p><p class=\'fullArticleLink\'><a href=\'https://www.php.net/archive/2017.php#id2017-08-31-1\' class>&hellip; read full article</a></p></div>',
   ),
-  195 => 
+  195 =>
   array (
     'title' => 'PHP 7.0.23 Released',
-    'id' => 'http://php.net/archive/2017.php#id2017-08-31-2',
+    'id' => 'https://www.php.net/archive/2017.php#id2017-08-31-2',
     'published' => '2017-08-31T13:00:00+01:00',
     'updated' => '2017-08-31T13:00:00+01:00',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'releases',
         'label' => 'New PHP release',
       ),
-      1 => 
+      1 =>
       array (
         'term' => 'frontpage',
         'label' => 'PHP.net frontpage news',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/index.php#id2017-08-31-2',
+        'href' => 'https://www.php.net/index.php#id2017-08-31-2',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
-        'href' => 'http://php.net/archive/2017.php#id2017-08-31-2',
+        'href' => 'https://www.php.net/archive/2017.php#id2017-08-31-2',
         'rel' => 'via',
         'type' => 'text/html',
       ),
@@ -10864,9 +10864,9 @@ the upgrade
       All PHP 7.0 users are encouraged to upgrade to this version.
       </p>
 
-      <p>For source downloads of PHP 7.0.23 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-      Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.0.23">ChangeLog</a>.
+      <p>For source downloads of PHP 7.0.23 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
+      Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
+      The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-7.php#7.0.23">ChangeLog</a>.
       </p>
     </div>
   ',
@@ -10874,36 +10874,36 @@ the upgrade
       7.0.23. Several bugs have been fixed.
 
       All PHP 7.0 users are encouraged to upgrade to this version.
-      </p><p>For source downloads of PHP 7.0.23 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-      Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.0.23">ChangeLog</a>.
+      </p><p>For source downloads of PHP 7.0.23 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
+      Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
+      The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-7.php#7.0.23">ChangeLog</a>.
       </p></div>',
   ),
-  196 => 
+  196 =>
   array (
     'title' => 'PHP 7.2.0 Beta 3 Released',
-    'id' => 'http://php.net/archive/2017.php#id2017-08-17-1',
+    'id' => 'https://www.php.net/archive/2017.php#id2017-08-17-1',
     'published' => '2017-08-17T10:17:44+02:00',
     'updated' => '2017-08-17T10:17:44+02:00',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'frontpage',
         'label' => 'PHP.net frontpage news',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/index.php#id2017-08-17-1',
+        'href' => 'https://www.php.net/index.php#id2017-08-17-1',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
-        'href' => 'http://php.net/archive/2017.php#id2017-08-17-1',
+        'href' => 'https://www.php.net/archive/2017.php#id2017-08-17-1',
         'rel' => 'via',
         'type' => 'text/html',
       ),
@@ -10929,7 +10929,7 @@ the upgrade
       For source downloads of PHP 7.2.0 Beta 3 please visit the
       <a href="https://downloads.php.net/~remi/">download</a> page,
       Windows sources and binaries can be found at
-      <a href="http://windows.php.net/qa/">windows.php.net/qa/</a>.
+      <a href="https://windows.php.net/qa/">windows.php.net/qa/</a>.
       </p>
 
       <p>
@@ -10946,39 +10946,39 @@ the upgrade
       This release is the third and final beta for 7.2.0. All users of PHP are encouraged
       to test this version carefully, and report any bugs and incompatibilities in the
       <a href="https://bugs.php.net/">bug tracking system</a>.
-      </p><p><strong>THIS IS A DEVELOPMENT PREVIEW - DO NOT USE IT IN PRODUCTION!</strong></p><p class=\'fullArticleLink\'><a href=\'http://php.net/archive/2017.php#id2017-08-17-1\' class>&hellip; read full article</a></p></div>',
+      </p><p><strong>THIS IS A DEVELOPMENT PREVIEW - DO NOT USE IT IN PRODUCTION!</strong></p><p class=\'fullArticleLink\'><a href=\'https://www.php.net/archive/2017.php#id2017-08-17-1\' class>&hellip; read full article</a></p></div>',
   ),
-  197 => 
+  197 =>
   array (
     'title' => 'SunshinePHP 2018 CFP Started',
-    'id' => 'http://php.net/archive/2017.php#id2017-08-16-1',
+    'id' => 'https://www.php.net/archive/2017.php#id2017-08-16-1',
     'published' => '2017-08-16T00:00:01+00:00',
     'updated' => '2017-08-16T12:23:00+00:00',
     'finalTeaserDate' => '2017-09-30',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'cfp',
         'label' => 'Call for Papers',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/conferences/index.php#id2017-08-16-1',
+        'href' => 'https://www.php.net/conferences/index.php#id2017-08-16-1',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
         'href' => 'http://sunshinephp.com',
         'rel' => 'via',
         'type' => 'text/html',
       ),
     ),
-    'newsImage' => 
+    'newsImage' =>
     array (
       'xmlns' => 'http://php.net/ns/news',
       'link' => 'http://sunshinephp.com',
@@ -10995,37 +10995,37 @@ the upgrade
 	',
     'intro' => '<div><p>We are happy to announce the CFP for SunshinePHP 2018 has launched at <a href="https://cfp.sunshinephp.com" title="SunshinePHP CFP">https://cfp.sunshinephp.com</a> where we will accept talk submissions until September 30th, 2017.</p><p>SunshinePHP hit it\'s 6th year and will happen from February 8th to 10th, 2018 in sunny Miami, Florida. As one of the largest community conferences in the U.S. there is no doubt the schedule will be amazing this year. We will have a full tutorial day featuring 3-hour sessions followed by 2 days of 1-hour talks and inspirational keynotes.</p><p class=\'fullArticleLink\'><a href=\'http://sunshinephp.com\' class>&hellip; read full article</a></p></div>',
   ),
-  198 => 
+  198 =>
   array (
     'title' => 'Midwest PHP Call for Papers',
-    'id' => 'http://php.net/archive/2017.php#id2017-08-13-1',
+    'id' => 'https://www.php.net/archive/2017.php#id2017-08-13-1',
     'published' => '2017-08-13T19:56:28+00:00',
     'updated' => '2017-08-13T19:56:28+00:00',
     'finalTeaserDate' => '2017-11-20',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'cfp',
         'label' => 'Call for Papers',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/conferences/index.php#id2017-08-13-1',
+        'href' => 'https://www.php.net/conferences/index.php#id2017-08-13-1',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
         'href' => 'https://2018.midwestphp.org',
         'rel' => 'via',
         'type' => 'text/html',
       ),
     ),
-    'newsImage' => 
+    'newsImage' =>
     array (
       'xmlns' => 'http://php.net/ns/news',
       'link' => 'https://2018.midwestphp.org',
@@ -11051,36 +11051,36 @@ the upgrade
     'intro' => '<div><p>The <a href="https://www.meetup.com/mn-php">Minnesota PHP User Group</a> is proud to announce that the Call for Papers for the Midwest PHP 2018 Conference is now open through November 20, 2017. Abstracts can be submitted to <a href="https://cfp.midwestphp.org">https://cfp.midwestphp.org</a>. Whether you are a seasoned speaker or someone just looking to speak at your first conference, we want to see your submissions.</p><p>This year\'s speaker package includes:
         </p><p class=\'fullArticleLink\'><a href=\'https://2018.midwestphp.org\' class>&hellip; read full article</a></p></div>',
   ),
-  199 => 
+  199 =>
   array (
     'title' => 'PHP 7.1.8 Released',
-    'id' => 'http://php.net/archive/2017.php#id2017-08-03-3',
+    'id' => 'https://www.php.net/archive/2017.php#id2017-08-03-3',
     'published' => '2017-08-03T14:35:42+00:00',
     'updated' => '2017-08-03T14:35:42+00:00',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'frontpage',
         'label' => 'PHP.net frontpage news',
       ),
-      1 => 
+      1 =>
       array (
         'term' => 'releases',
         'label' => 'New PHP release',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/index.php#id2017-08-03-3',
+        'href' => 'https://www.php.net/index.php#id2017-08-03-3',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
-        'href' => 'http://php.net/archive/2017.php#id2017-08-03-3',
+        'href' => 'https://www.php.net/archive/2017.php#id2017-08-03-3',
         'rel' => 'via',
         'type' => 'text/html',
       ),
@@ -11092,9 +11092,9 @@ the upgrade
        All PHP 7.1 users are encouraged to upgrade to this version.
        </p>
 
-       <p>For source downloads of PHP 7.1.8 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-       Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-       The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.1.8">ChangeLog</a>.
+       <p>For source downloads of PHP 7.1.8 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
+       Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
+       The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-7.php#7.1.8">ChangeLog</a>.
        </p>
     </div>
   ',
@@ -11102,41 +11102,41 @@ the upgrade
        7.1.8. This is a bugfix release, with several bug fixes included.
 
        All PHP 7.1 users are encouraged to upgrade to this version.
-       </p><p>For source downloads of PHP 7.1.8 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-       Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-       The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.1.8">ChangeLog</a>.
+       </p><p>For source downloads of PHP 7.1.8 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
+       Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
+       The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-7.php#7.1.8">ChangeLog</a>.
        </p></div>',
   ),
-  200 => 
+  200 =>
   array (
     'title' => 'PHP 7.2.0 Beta 2 Released',
-    'id' => 'http://php.net/archive/2017.php#id2017-08-03-2',
+    'id' => 'https://www.php.net/archive/2017.php#id2017-08-03-2',
     'published' => '2017-08-03T12:48:35+00:00',
     'updated' => '2017-08-03T12:48:35+00:00',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'frontpage',
         'label' => 'PHP.net frontpage news',
       ),
-      1 => 
+      1 =>
       array (
         'term' => 'releases',
         'label' => 'New PHP release',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/index.php#id2017-08-03-2',
+        'href' => 'https://www.php.net/index.php#id2017-08-03-2',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
-        'href' => 'http://php.net/archive/2017.php#id2017-08-03-2',
+        'href' => 'https://www.php.net/archive/2017.php#id2017-08-03-2',
         'rel' => 'via',
         'type' => 'text/html',
       ),
@@ -11162,7 +11162,7 @@ the upgrade
       For source downloads of PHP 7.2.0 Beta 2 please visit the
       <a href="https://downloads.php.net/~pollita/">download</a> page,
       Windows sources and binaries can be found at
-      <a href="http://windows.php.net/qa/">windows.php.net/qa/</a>.
+      <a href="https://windows.php.net/qa/">windows.php.net/qa/</a>.
       </p>
 
       <p>
@@ -11179,38 +11179,38 @@ the upgrade
       This release is the second beta for 7.2.0. All users of PHP are encouraged to test this
       version carefully, and report any bugs and incompatibilities in the
       <a href="https://bugs.php.net/">bug tracking system</a>.
-      </p><p><strong>THIS IS A DEVELOPMENT PREVIEW - DO NOT USE IT IN PRODUCTION!</strong></p><p class=\'fullArticleLink\'><a href=\'http://php.net/archive/2017.php#id2017-08-03-2\' class>&hellip; read full article</a></p></div>',
+      </p><p><strong>THIS IS A DEVELOPMENT PREVIEW - DO NOT USE IT IN PRODUCTION!</strong></p><p class=\'fullArticleLink\'><a href=\'https://www.php.net/archive/2017.php#id2017-08-03-2\' class>&hellip; read full article</a></p></div>',
   ),
-  201 => 
+  201 =>
   array (
     'title' => 'PHP 7.0.22 Released',
-    'id' => 'http://php.net/archive/2017.php#id2017-08-03-1',
+    'id' => 'https://www.php.net/archive/2017.php#id2017-08-03-1',
     'published' => '2017-08-03T13:00:00+01:00',
     'updated' => '2017-08-03T13:00:00+01:00',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'releases',
         'label' => 'New PHP release',
       ),
-      1 => 
+      1 =>
       array (
         'term' => 'frontpage',
         'label' => 'PHP.net frontpage news',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/index.php#id2017-08-03-1',
+        'href' => 'https://www.php.net/index.php#id2017-08-03-1',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
-        'href' => 'http://php.net/archive/2017.php#id2017-08-03-1',
+        'href' => 'https://www.php.net/archive/2017.php#id2017-08-03-1',
         'rel' => 'via',
         'type' => 'text/html',
       ),
@@ -11222,9 +11222,9 @@ the upgrade
       All PHP 7.0 users are encouraged to upgrade to this version.
       </p>
 
-      <p>For source downloads of PHP 7.0.22 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-      Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.0.22">ChangeLog</a>.
+      <p>For source downloads of PHP 7.0.22 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
+      Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
+      The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-7.php#7.0.22">ChangeLog</a>.
       </p>
     </div>
   ',
@@ -11232,42 +11232,42 @@ the upgrade
       7.0.22. Several bugs have been fixed.
 
       All PHP 7.0 users are encouraged to upgrade to this version.
-      </p><p>For source downloads of PHP 7.0.22 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-      Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.0.22">ChangeLog</a>.
+      </p><p>For source downloads of PHP 7.0.22 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
+      Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
+      The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-7.php#7.0.22">ChangeLog</a>.
       </p></div>',
   ),
-  202 => 
+  202 =>
   array (
     'title' => 'Calling all proposals for PHPBenelux Conference 2018',
-    'id' => 'http://php.net/archive/2017.php#id2017-07-31-1',
+    'id' => 'https://www.php.net/archive/2017.php#id2017-07-31-1',
     'published' => '2017-07-31T11:25:07+02:00',
     'updated' => '2017-07-31T11:25:07+02:00',
     'finalTeaserDate' => '2017-10-02',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'cfp',
         'label' => 'Call for Papers',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/conferences/index.php#id2017-07-31-1',
+        'href' => 'https://www.php.net/conferences/index.php#id2017-07-31-1',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
         'href' => 'https://cfp.phpbenelux.eu/?utm_source=php_net&utm_medium=phpbnl18_logo&utm_campaign=phpbnl18&utm_term=php%2Bconference%2Bcfp&utm_content=cfp_announcement',
         'rel' => 'via',
         'type' => 'text/html',
       ),
     ),
-    'newsImage' => 
+    'newsImage' =>
     array (
       'xmlns' => 'http://php.net/ns/news',
       'link' => 'https://cfp.phpbenelux.eu/?utm_source=php_net&utm_medium=phpbnl18_logo&utm_campaign=phpbnl18&utm_term=php%2Bconference%2Bcfp&utm_content=cfp_announcement',
@@ -11282,36 +11282,36 @@ the upgrade
   ',
     'intro' => '<div><p>PHPBenelux Conference is an annual PHP oriented conference in Antwerp, Belgium and will take place on January 26 &amp; 27 2018. We offer two days of stellar tutorials and talks, epic social events and a lineup of the best local and international businesses involved with PHP.</p><p>We like to invite speakers to submit their tutorials and talks at <a href="https://cfp.phpbenelux.eu/?utm_source=php_net&amp;utm_medium=phpbnl18_logo&amp;utm_campaign=phpbnl18&amp;utm_term=php%2Bconference%2Bcfp&amp;utm_content=cfp_announcement" tel="via" type="text/html">PHPBenelux CfP</a>. Speakers have until Monday, October 2, 2017 to submit their proposals.</p><p class=\'fullArticleLink\'><a href=\'https://cfp.phpbenelux.eu/?utm_source=php_net&utm_medium=phpbnl18_logo&utm_campaign=phpbnl18&utm_term=php%2Bconference%2Bcfp&utm_content=cfp_announcement\' class>&hellip; read full article</a></p></div>',
   ),
-  203 => 
+  203 =>
   array (
     'title' => 'PHP 7.2.0 Beta 1 Released',
-    'id' => 'http://php.net/archive/2017.php#id2017-07-20-1',
+    'id' => 'https://www.php.net/archive/2017.php#id2017-07-20-1',
     'published' => '2017-07-20T12:00:00+00:00',
     'updated' => '2017-07-21T02:21:00+00:00',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'frontpage',
         'label' => 'PHP.net frontpage news',
       ),
-      1 => 
+      1 =>
       array (
         'term' => 'releases',
         'label' => 'New PHP release',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/index.php#id2017-07-20-1',
+        'href' => 'https://www.php.net/index.php#id2017-07-20-1',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
-        'href' => 'http://php.net/archive/2017.php#id2017-07-20-1',
+        'href' => 'https://www.php.net/archive/2017.php#id2017-07-20-1',
         'rel' => 'via',
         'type' => 'text/html',
       ),
@@ -11347,7 +11347,7 @@ the upgrade
      For source downloads of PHP 7.2.0 Beta 1 please visit the
      <a href="https://downloads.php.net/~pollita/">download</a> page,
      Windows sources and binaries can be found at
-     <a href="http://windows.php.net/qa/">windows.php.net/qa/</a>.
+     <a href="https://windows.php.net/qa/">windows.php.net/qa/</a>.
      </p>
 
      <p>
@@ -11364,39 +11364,39 @@ the upgrade
      This release is the first beta for 7.2.0. All users of PHP are encouraged to test this
      version carefully, and report any bugs and incompatibilities in the
      <a href="https://bugs.php.net/">bug tracking system</a>.
-     </p><p><strong>THIS IS A DEVELOPMENT PREVIEW - DO NOT USE IT IN PRODUCTION!</strong></p><p class=\'fullArticleLink\'><a href=\'http://php.net/archive/2017.php#id2017-07-20-1\' class>&hellip; read full article</a></p></div>',
+     </p><p><strong>THIS IS A DEVELOPMENT PREVIEW - DO NOT USE IT IN PRODUCTION!</strong></p><p class=\'fullArticleLink\'><a href=\'https://www.php.net/archive/2017.php#id2017-07-20-1\' class>&hellip; read full article</a></p></div>',
   ),
-  204 => 
+  204 =>
   array (
     'title' => 'php[world] 2017',
-    'id' => 'http://php.net/archive/2017.php#id2017-07-10-1',
+    'id' => 'https://www.php.net/archive/2017.php#id2017-07-10-1',
     'published' => '2017-07-10T17:14:04-04:00',
     'updated' => '2017-07-10T17:14:04-04:00',
     'finalTeaserDate' => '2017-11-15',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'conferences',
         'label' => 'Conference announcement',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/conferences/index.php#id2017-07-10-1',
+        'href' => 'https://www.php.net/conferences/index.php#id2017-07-10-1',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
         'href' => 'https://world.phparch.com/?paref=phpnet&utm_campaign=phpnet',
         'rel' => 'via',
         'type' => 'text/html',
       ),
     ),
-    'newsImage' => 
+    'newsImage' =>
     array (
       'xmlns' => 'http://php.net/ns/news',
       'link' => 'https://world.phparch.com/?paref=phpnet&utm_campaign=phpnet',
@@ -11415,37 +11415,37 @@ the upgrade
   ',
     'intro' => '<div><p>From the publishers of <a href="https://www.phparch.com">php[architect] magazine</a> comes the <a href="https://world.phparch.com/?paref=phpnet&amp;utm_campaign=phpnet">4th annual php[world] conference</a>!  As always this November in the Washington D.C. area.</p><p>This year a number of changes have been made based upon attendee feedback, the biggest being an over 50% a drop in cost, with <a href="https://world.phparch.com/register?paref=phpnet&amp;utm_campaign=phpnet">tickets available</a> now as low as $325.  The conference also is now just 2 days long, running on November 15th &amp; 16th, and includes workshops as well as regular sessions.</p><p class=\'fullArticleLink\'><a href=\'https://world.phparch.com/?paref=phpnet&utm_campaign=phpnet\' class>&hellip; read full article</a></p></div>',
   ),
-  205 => 
+  205 =>
   array (
     'title' => 'php Central Europe Conference 2017',
-    'id' => 'http://php.net/archive/2017.php#id2017-07-07-1',
+    'id' => 'https://www.php.net/archive/2017.php#id2017-07-07-1',
     'published' => '2017-07-07T00:04:38+02:00',
     'updated' => '2017-07-07T00:04:38+02:00',
     'finalTeaserDate' => '2017-07-31',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'cfp',
         'label' => 'Call for Papers',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/conferences/index.php#id2017-07-07-1',
+        'href' => 'https://www.php.net/conferences/index.php#id2017-07-07-1',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
         'href' => 'https://2017.phpce.eu/',
         'rel' => 'via',
         'type' => 'text/html',
       ),
     ),
-    'newsImage' => 
+    'newsImage' =>
     array (
       'xmlns' => 'http://php.net/ns/news',
       'link' => 'https://2017.phpce.eu/',
@@ -11491,36 +11491,36 @@ the upgrade
   ',
     'intro' => '<div><p><a href="https://2017.phpce.eu/">phpCE</a> is a first edition of the community conference for PHP programmers and enthusiasts. The meeting was stablished by merging two nation-wide events: PHPCon Poland and Brno PHP Conference. This edition will take place in the Ossa Congress &amp; Spa Hotel near Rawa Mazowicka, Poland on November 3rd - 5th.</p><p>The unique feature of the php Central Europe Conference is three-path split of agenda, according to difficulty level of talks: Relaxing, Intermediate and Geek. Submitting a talk you must point a proper level and suggest the Program Committee, which one do you prefer. In general, talks given in the Relaxing path should be done in native language of hosting country (Polish this year).</p><p class=\'fullArticleLink\'><a href=\'https://2017.phpce.eu/\' class>&hellip; read full article</a></p></div>',
   ),
-  206 => 
+  206 =>
   array (
     'title' => 'PHP 5.6.31 Released',
-    'id' => 'http://php.net/archive/2017.php#id2017-07-06-4',
+    'id' => 'https://www.php.net/archive/2017.php#id2017-07-06-4',
     'published' => '2017-07-06T15:03:21-07:00',
     'updated' => '2017-07-06T15:03:21-07:00',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'frontpage',
         'label' => 'PHP.net frontpage news',
       ),
-      1 => 
+      1 =>
       array (
         'term' => 'releases',
         'label' => 'New PHP release',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/index.php#id2017-07-06-4',
+        'href' => 'https://www.php.net/index.php#id2017-07-06-4',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
-        'href' => 'http://php.net/archive/2017.php#id2017-07-06-4',
+        'href' => 'https://www.php.net/archive/2017.php#id2017-07-06-4',
         'rel' => 'via',
         'type' => 'text/html',
       ),
@@ -11532,9 +11532,9 @@ the upgrade
 
      All PHP 5.6 users are encouraged to upgrade to this version.</p>
 
-     <p>For source downloads of PHP 5.6.31 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-     The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.6.31">ChangeLog</a>.
+     <p>For source downloads of PHP 5.6.31 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
+     Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
+     The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-5.php#5.6.31">ChangeLog</a>.
      </p>
     </div>
   ',
@@ -11542,41 +11542,41 @@ the upgrade
      5.6.31. This is a security release. Several security bugs were fixed in
      this release.
 
-     All PHP 5.6 users are encouraged to upgrade to this version.</p><p>For source downloads of PHP 5.6.31 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-     The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.6.31">ChangeLog</a>.
+     All PHP 5.6 users are encouraged to upgrade to this version.</p><p>For source downloads of PHP 5.6.31 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
+     Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
+     The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-5.php#5.6.31">ChangeLog</a>.
      </p></div>',
   ),
-  207 => 
+  207 =>
   array (
     'title' => 'PHP 7.1.7 Released',
-    'id' => 'http://php.net/archive/2017.php#id2017-07-06-3',
+    'id' => 'https://www.php.net/archive/2017.php#id2017-07-06-3',
     'published' => '2017-07-06T17:35:10+00:00',
     'updated' => '2017-07-06T17:35:10+00:00',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'frontpage',
         'label' => 'PHP.net frontpage news',
       ),
-      1 => 
+      1 =>
       array (
         'term' => 'releases',
         'label' => 'New PHP release',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/index.php#id2017-07-06-3',
+        'href' => 'https://www.php.net/index.php#id2017-07-06-3',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
-        'href' => 'http://php.net/archive/2017.php#id2017-07-06-3',
+        'href' => 'https://www.php.net/archive/2017.php#id2017-07-06-3',
         'rel' => 'via',
         'type' => 'text/html',
       ),
@@ -11588,9 +11588,9 @@ the upgrade
        All PHP 7.1 users are encouraged to upgrade to this version.
        </p>
 
-       <p>For source downloads of PHP 7.1.7 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-       Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-       The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.1.7">ChangeLog</a>.
+       <p>For source downloads of PHP 7.1.7 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
+       Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
+       The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-7.php#7.1.7">ChangeLog</a>.
        </p>
     </div>
   ',
@@ -11598,36 +11598,36 @@ the upgrade
        7.1.7. This is a security release with several bug fixes included.
 
        All PHP 7.1 users are encouraged to upgrade to this version.
-       </p><p>For source downloads of PHP 7.1.7 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-       Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-       The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.1.7">ChangeLog</a>.
+       </p><p>For source downloads of PHP 7.1.7 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
+       Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
+       The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-7.php#7.1.7">ChangeLog</a>.
        </p></div>',
   ),
-  208 => 
+  208 =>
   array (
     'title' => 'PHP 7.2.0 Alpha 3 Released',
-    'id' => 'http://php.net/archive/2017.php#id2017-07-06-2',
+    'id' => 'https://www.php.net/archive/2017.php#id2017-07-06-2',
     'published' => '2017-07-06T12:25:08+02:00',
     'updated' => '2017-07-06T12:25:08+02:00',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'frontpage',
         'label' => 'PHP.net frontpage news',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/index.php#id2017-07-06-2',
+        'href' => 'https://www.php.net/index.php#id2017-07-06-2',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
-        'href' => 'http://php.net/archive/2017.php#id2017-07-06-2',
+        'href' => 'https://www.php.net/archive/2017.php#id2017-07-06-2',
         'rel' => 'via',
         'type' => 'text/html',
       ),
@@ -11647,7 +11647,7 @@ the upgrade
      for a complete list of upgrading notes. These files can also be found in the release archive.</p>
 
      <p>For source downloads of PHP 7.2.0 Alpha 3 please visit the <a href="https://downloads.php.net/~remi/">download</a> page,
-     Windows sources and binaries can be found on <a href="http://windows.php.net/qa/">windows.php.net/qa/</a>.</p>
+     Windows sources and binaries can be found on <a href="https://windows.php.net/qa/">windows.php.net/qa/</a>.</p>
 
      <p>The first beta will be released on the 20th of July. You can also read the full list of planned releases on our
      <a href="https://wiki.php.net/todo/php72#timetable">wiki</a>.</p>
@@ -11659,38 +11659,38 @@ the upgrade
      This release contains fixes and improvements relative to Alpha 2.
      All users of PHP are encouraged to test this version carefully,
      and report any bugs and incompatibilities in the
-     <a href="https://bugs.php.net/">bug tracking system</a>.</p><p><strong>THIS IS A DEVELOPMENT PREVIEW - DO NOT USE IT IN PRODUCTION!</strong></p><p class=\'fullArticleLink\'><a href=\'http://php.net/archive/2017.php#id2017-07-06-2\' class>&hellip; read full article</a></p></div>',
+     <a href="https://bugs.php.net/">bug tracking system</a>.</p><p><strong>THIS IS A DEVELOPMENT PREVIEW - DO NOT USE IT IN PRODUCTION!</strong></p><p class=\'fullArticleLink\'><a href=\'https://www.php.net/archive/2017.php#id2017-07-06-2\' class>&hellip; read full article</a></p></div>',
   ),
-  209 => 
+  209 =>
   array (
     'title' => 'PHP 7.0.21 Released',
-    'id' => 'http://php.net/archive/2017.php#id2017-07-06-1',
+    'id' => 'https://www.php.net/archive/2017.php#id2017-07-06-1',
     'published' => '2017-07-06T13:00:00+01:00',
     'updated' => '2017-07-06T13:00:00+01:00',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'releases',
         'label' => 'New PHP release',
       ),
-      1 => 
+      1 =>
       array (
         'term' => 'frontpage',
         'label' => 'PHP.net frontpage news',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/index.php#id2017-07-06-1',
+        'href' => 'https://www.php.net/index.php#id2017-07-06-1',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
-        'href' => 'http://php.net/archive/2017.php#id2017-07-06-1',
+        'href' => 'https://www.php.net/archive/2017.php#id2017-07-06-1',
         'rel' => 'via',
         'type' => 'text/html',
       ),
@@ -11702,9 +11702,9 @@ the upgrade
 
      All PHP 7.0 users are encouraged to upgrade to this version.</p>
 
-     <p>For source downloads of PHP 7.0.21 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-     The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.0.21">ChangeLog</a>.
+     <p>For source downloads of PHP 7.0.21 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
+     Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
+     The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-7.php#7.0.21">ChangeLog</a>.
      </p>
     </div>
   ',
@@ -11712,42 +11712,42 @@ the upgrade
      7.0.21. This is a security release. Several security bugs were fixed in
      this release.
 
-     All PHP 7.0 users are encouraged to upgrade to this version.</p><p>For source downloads of PHP 7.0.21 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-     The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.0.21">ChangeLog</a>.
+     All PHP 7.0 users are encouraged to upgrade to this version.</p><p>For source downloads of PHP 7.0.21 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
+     Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
+     The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-7.php#7.0.21">ChangeLog</a>.
      </p></div>',
   ),
-  210 => 
+  210 =>
   array (
     'title' => 'PHP Developer Day 2017',
-    'id' => 'http://php.net/archive/2017.php#id2017-06-29-1',
+    'id' => 'https://www.php.net/archive/2017.php#id2017-06-29-1',
     'published' => '2017-06-29T17:24:31+02:00',
     'updated' => '2017-06-29T17:24:31+02:00',
     'finalTeaserDate' => '2017-09-22',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'conferences',
         'label' => 'Conference announcement',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/conferences/index.php#id2017-06-29-1',
+        'href' => 'https://www.php.net/conferences/index.php#id2017-06-29-1',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
         'href' => 'http://phpug-dresden.org/en/phpdd17.html',
         'rel' => 'via',
         'type' => 'text/html',
       ),
     ),
-    'newsImage' => 
+    'newsImage' =>
     array (
       'xmlns' => 'http://php.net/ns/news',
       'link' => 'http://phpug-dresden.org/en/phpdd17.html',
@@ -11789,32 +11789,32 @@ the upgrade
          We have 6 talks covering the following topics:
      </p><p class=\'fullArticleLink\'><a href=\'http://phpug-dresden.org/en/phpdd17.html\' class>&hellip; read full article</a></p></div>',
   ),
-  211 => 
+  211 =>
   array (
     'title' => 'Forum PHP 2017',
-    'id' => 'http://php.net/archive/2017.php#id2017-06-23-1',
+    'id' => 'https://www.php.net/archive/2017.php#id2017-06-23-1',
     'published' => '2017-06-23T14:33:24+00:00',
     'updated' => '2017-06-23T14:33:24+00:00',
     'finalTeaserDate' => '2017-10-27',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'conferences',
         'label' => 'Conference announcement',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/conferences/index.php#id2017-06-23-1',
+        'href' => 'https://www.php.net/conferences/index.php#id2017-06-23-1',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
-        'href' => 'http://php.net/archive/2017.php#id2017-06-23-1',
+        'href' => 'https://www.php.net/archive/2017.php#id2017-06-23-1',
         'rel' => 'via',
         'type' => 'text/html',
       ),
@@ -11837,38 +11837,38 @@ the upgrade
 
      The annual conference organized by AFUP, the French PHP-users group, gathering all PHP and Open Source communities,
      pros and PHP lovers.
-     </p><p class=\'fullArticleLink\'><a href=\'http://php.net/archive/2017.php#id2017-06-23-1\' class>&hellip; read full article</a></p></div>',
+     </p><p class=\'fullArticleLink\'><a href=\'https://www.php.net/archive/2017.php#id2017-06-23-1\' class>&hellip; read full article</a></p></div>',
   ),
-  212 => 
+  212 =>
   array (
     'title' => 'PHP 7.2.0 Alpha 2 Released',
-    'id' => 'http://php.net/archive/2017.php#id2017-06-22-1',
+    'id' => 'https://www.php.net/archive/2017.php#id2017-06-22-1',
     'published' => '2017-06-22T11:00:00+00:00',
     'updated' => '2017-06-22T11:00:00+00:00',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'frontpage',
         'label' => 'PHP.net frontpage news',
       ),
-      1 => 
+      1 =>
       array (
         'term' => 'releases',
         'label' => 'New PHP release',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/index.php#id2017-06-22-1',
+        'href' => 'https://www.php.net/index.php#id2017-06-22-1',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
-        'href' => 'http://php.net/archive/2017.php#id2017-06-22-1',
+        'href' => 'https://www.php.net/archive/2017.php#id2017-06-22-1',
         'rel' => 'via',
         'type' => 'text/html',
       ),
@@ -11888,7 +11888,7 @@ the upgrade
      for a complete list of upgrading notes. These files can also be found in the release archive.</p>
 
      <p>For source downloads of PHP 7.2.0 Alpha 2 please visit the <a href="https://downloads.php.net/~pollita/">download</a> page,
-     Windows sources and binaries can be found on <a href="http://windows.php.net/qa/">windows.php.net/qa/</a>.</p>
+     Windows sources and binaries can be found on <a href="https://windows.php.net/qa/">windows.php.net/qa/</a>.</p>
 
      <p>The third and final alpha will be released on the 6th of July. You can also read the full list of planned releases on our
      <a href="https://wiki.php.net/todo/php72#timetable">wiki</a>.</p>
@@ -11900,39 +11900,39 @@ the upgrade
      This release contains fixes and improvements relative to Alpha 1.
      All users of PHP are encouraged to test this version carefully,
      and report any bugs and incompatibilities in the
-     <a href="https://bugs.php.net/">bug tracking system</a>.</p><p><strong>THIS IS A DEVELOPMENT PREVIEW - DO NOT USE IT IN PRODUCTION!</strong></p><p class=\'fullArticleLink\'><a href=\'http://php.net/archive/2017.php#id2017-06-22-1\' class>&hellip; read full article</a></p></div>',
+     <a href="https://bugs.php.net/">bug tracking system</a>.</p><p><strong>THIS IS A DEVELOPMENT PREVIEW - DO NOT USE IT IN PRODUCTION!</strong></p><p class=\'fullArticleLink\'><a href=\'https://www.php.net/archive/2017.php#id2017-06-22-1\' class>&hellip; read full article</a></p></div>',
   ),
-  213 => 
+  213 =>
   array (
     'title' => 'LaravelConf Taiwan 2017',
-    'id' => 'http://php.net/archive/2017.php#id2017-06-17-1',
+    'id' => 'https://www.php.net/archive/2017.php#id2017-06-17-1',
     'published' => '2017-06-17T18:48:00+00:00',
     'updated' => '2017-06-17T18:48:00+00:00',
     'finalTeaserDate' => '2017-07-01',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'conferences',
         'label' => 'Conference announcement',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/conferences/index.php#id2017-06-17-1',
+        'href' => 'https://www.php.net/conferences/index.php#id2017-06-17-1',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
         'href' => 'https://laravelconf.tw/',
         'rel' => 'via',
         'type' => 'text/html',
       ),
     ),
-    'newsImage' => 
+    'newsImage' =>
     array (
       'xmlns' => 'http://php.net/ns/news',
       'link' => 'https://laravelconf.tw/',
@@ -11961,37 +11961,37 @@ the upgrade
   ',
     'intro' => '<div><p>The first Laravel conference in Taiwan awaits you at LaravelConf Taiwan 2017 at Taipei, Taiwan.</p><p><a href="https://laravelconf.tw/">LaravelConf Taiwan 2017</a> is for anyone who is passionate about building web-application, or anyone who is trying to make better experience on teamwork.</p><p class=\'fullArticleLink\'><a href=\'https://laravelconf.tw/\' class>&hellip; read full article</a></p></div>',
   ),
-  214 => 
+  214 =>
   array (
     'title' => 'ZendCon 2017',
-    'id' => 'http://php.net/archive/2017.php#id2017-06-14-1',
+    'id' => 'https://www.php.net/archive/2017.php#id2017-06-14-1',
     'published' => '2017-06-14T00:00:01+00:00',
     'updated' => '2017-09-13T19:06:00+01:00',
     'finalTeaserDate' => '2017-09-01',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'conferences',
         'label' => 'Conference announcement',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/conferences/index.php#id2017-06-14-1',
+        'href' => 'https://www.php.net/conferences/index.php#id2017-06-14-1',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
         'href' => 'http://zendcon.com',
         'rel' => 'via',
         'type' => 'text/html',
       ),
     ),
-    'newsImage' => 
+    'newsImage' =>
     array (
       'xmlns' => 'http://php.net/ns/news',
       'link' => 'http://zendcon.com',
@@ -12013,37 +12013,37 @@ the upgrade
 	',
     'intro' => '<div><p>With over 250 million PHP applications driven by a global community of more than 5 million active developers and all enterprises adopting open source software, ZendCon 2017 brings you a curated selection of the best experts, training, and networking opportunities to embrace this vast ecosystem.</p><p>Take advantage of unique opportunities to attend a wide variety of in-depth technical sessions, participate in exhibit hall activities, and connect with experts. Learn about the best in enterprise PHP and open source development, focusing on the latest for PHP 7, the evolution of frameworks and tools, API excellence, and innovation on many open source technologies related to the web.</p><p class=\'fullArticleLink\'><a href=\'http://zendcon.com\' class>&hellip; read full article</a></p></div>',
   ),
-  215 => 
+  215 =>
   array (
     'title' => 'International PHP Conference 2017 - fall edition',
-    'id' => 'http://php.net/archive/2017.php#id2017-06-09-1',
+    'id' => 'https://www.php.net/archive/2017.php#id2017-06-09-1',
     'published' => '2017-06-09T09:54:24+01:00',
     'updated' => '2017-06-09T09:54:24+01:00',
     'finalTeaserDate' => '2017-06-23',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'conferences',
         'label' => 'Conference announcement',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/conferences/index.php#id2017-06-09-1',
+        'href' => 'https://www.php.net/conferences/index.php#id2017-06-09-1',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
         'href' => 'https://phpconference.com',
         'rel' => 'via',
         'type' => 'text/html',
       ),
     ),
-    'newsImage' => 
+    'newsImage' =>
     array (
       'xmlns' => 'http://php.net/ns/news',
       'link' => 'https://phpconference.com',
@@ -12082,36 +12082,36 @@ the upgrade
   ',
     'intro' => '<div><p><a href="https://phpconference.com">The International PHP Conference</a>  is the world\'s first PHP conference and stands since more than a decade for top-notch pragmatic expertise in PHP and web technologies. At the IPC, internationally renowned experts from the PHP industry meet up with PHP users and developers from large and small companies. Here is the place where concepts emerge and ideas are born - the IPC signifies knowledge transfer at highest level.</p><p>All delegates of the International PHP Conference have, in addition to PHP program, free access to the entire range of the <a href="https://javascript-conference.com">International JavaScript Conference</a> taking place at the same time.</p><p class=\'fullArticleLink\'><a href=\'https://phpconference.com\' class>&hellip; read full article</a></p></div>',
   ),
-  216 => 
+  216 =>
   array (
     'title' => 'PHP 7.1.6 Released',
-    'id' => 'http://php.net/archive/2017.php#id2017-06-08-3',
+    'id' => 'https://www.php.net/archive/2017.php#id2017-06-08-3',
     'published' => '2017-06-08T19:40:06+00:00',
     'updated' => '2017-06-08T19:40:06+00:00',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'frontpage',
         'label' => 'PHP.net frontpage news',
       ),
-      1 => 
+      1 =>
       array (
         'term' => 'releases',
         'label' => 'New PHP release',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/index.php#id2017-06-08-3',
+        'href' => 'https://www.php.net/index.php#id2017-06-08-3',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
-        'href' => 'http://php.net/archive/2017.php#id2017-06-08-3',
+        'href' => 'https://www.php.net/archive/2017.php#id2017-06-08-3',
         'rel' => 'via',
         'type' => 'text/html',
       ),
@@ -12122,43 +12122,43 @@ the upgrade
       All PHP 7.1 users are encouraged to upgrade to this version.
       </p>
 
-	  <p xmlns="http://www.w3.org/2005/Atom">For source downloads of PHP 7.1.6 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-      Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.1.6">ChangeLog</a>.
+	  <p xmlns="http://www.w3.org/2005/Atom">For source downloads of PHP 7.1.6 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
+      Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
+      The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-7.php#7.1.6">ChangeLog</a>.
       </p>
   ',
     'intro' => '<div></div>',
   ),
-  217 => 
+  217 =>
   array (
     'title' => 'PHP 7.2.0 Alpha 1 Released',
-    'id' => 'http://php.net/archive/2017.php#id2017-06-08-2',
+    'id' => 'https://www.php.net/archive/2017.php#id2017-06-08-2',
     'published' => '2017-06-08T17:03:24+00:00',
     'updated' => '2017-07-13T10:02:00+00:00',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'releases',
         'label' => 'New PHP release',
       ),
-      1 => 
+      1 =>
       array (
         'term' => 'frontpage',
         'label' => 'PHP.net frontpage news',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/index.php#id2017-06-08-2',
+        'href' => 'https://www.php.net/index.php#id2017-06-08-2',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
-        'href' => 'http://php.net/archive/2017.php#id2017-06-08-2',
+        'href' => 'https://www.php.net/archive/2017.php#id2017-06-08-2',
         'rel' => 'via',
         'type' => 'text/html',
       ),
@@ -12178,7 +12178,7 @@ the upgrade
      for a complete list of upgrading notes. These files can also be found in the release archive.</p>
 
      <p>For source downloads of PHP 7.2.0 Alpha 1 please visit the <a href="https://downloads.php.net/~pollita/">download</a> page,
-     Windows sources and binaries can be found on <a href="http://windows.php.net/qa/">windows.php.net/qa/</a>.</p>
+     Windows sources and binaries can be found on <a href="https://windows.php.net/qa/">windows.php.net/qa/</a>.</p>
 
      <p>The second alpha will be released on the 22nd of June. You can also read the full list of planned releases on our
      <a href="https://wiki.php.net/todo/php72#timetable">wiki</a>.</p>
@@ -12190,38 +12190,38 @@ the upgrade
      This release marks the beginning of the second minor release in the PHP 7.x series.
      All users of PHP are encouraged to test this version carefully,
      and report any bugs and incompatibilities in the
-     <a href="https://bugs.php.net/">bug tracking system</a>.</p><p><strong>THIS IS A DEVELOPMENT PREVIEW - DO NOT USE IT IN PRODUCTION!</strong></p><p class=\'fullArticleLink\'><a href=\'http://php.net/archive/2017.php#id2017-06-08-2\' class>&hellip; read full article</a></p></div>',
+     <a href="https://bugs.php.net/">bug tracking system</a>.</p><p><strong>THIS IS A DEVELOPMENT PREVIEW - DO NOT USE IT IN PRODUCTION!</strong></p><p class=\'fullArticleLink\'><a href=\'https://www.php.net/archive/2017.php#id2017-06-08-2\' class>&hellip; read full article</a></p></div>',
   ),
-  218 => 
+  218 =>
   array (
     'title' => 'PHP 7.0.20 Released',
-    'id' => 'http://php.net/archive/2017.php#id2017-06-08-1',
+    'id' => 'https://www.php.net/archive/2017.php#id2017-06-08-1',
     'published' => '2017-06-08T13:00:00+01:00',
     'updated' => '2017-06-08T13:00:00+01:00',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'releases',
         'label' => 'New PHP release',
       ),
-      1 => 
+      1 =>
       array (
         'term' => 'frontpage',
         'label' => 'PHP.net frontpage news',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/index.php#id2017-06-08-1',
+        'href' => 'https://www.php.net/index.php#id2017-06-08-1',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
-        'href' => 'http://php.net/archive/2017.php#id2017-06-08-1',
+        'href' => 'https://www.php.net/archive/2017.php#id2017-06-08-1',
         'rel' => 'via',
         'type' => 'text/html',
       ),
@@ -12233,9 +12233,9 @@ the upgrade
       All PHP 7.0 users are encouraged to upgrade to this version.
       </p>
 
-      <p>For source downloads of PHP 7.0.20 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-      Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.0.20">ChangeLog</a>.
+      <p>For source downloads of PHP 7.0.20 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
+      Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
+      The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-7.php#7.0.20">ChangeLog</a>.
       </p>
     </div>
   ',
@@ -12243,42 +12243,42 @@ the upgrade
       7.0.20. Several bugs have been fixed.
 
       All PHP 7.0 users are encouraged to upgrade to this version.
-      </p><p>For source downloads of PHP 7.0.20 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-      Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.0.20">ChangeLog</a>.
+      </p><p>For source downloads of PHP 7.0.20 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
+      Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
+      The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-7.php#7.0.20">ChangeLog</a>.
       </p></div>',
   ),
-  219 => 
+  219 =>
   array (
     'title' => 'China PHP Developer Conference',
-    'id' => 'http://php.net/archive/2017.php#id2017-06-06-1',
+    'id' => 'https://www.php.net/archive/2017.php#id2017-06-06-1',
     'published' => '2017-06-06T19:36:21+00:00',
     'updated' => '2017-06-06T19:36:21+00:00',
     'finalTeaserDate' => '2017-06-10',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'conferences',
         'label' => 'Conference announcement',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/conferences/index.php#id2017-06-06-1',
+        'href' => 'https://www.php.net/conferences/index.php#id2017-06-06-1',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
-        'href' => 'http://php.net/archive/2017.php#id2017-06-06-1',
+        'href' => 'https://www.php.net/archive/2017.php#id2017-06-06-1',
         'rel' => 'via',
         'type' => 'text/html',
       ),
     ),
-    'newsImage' => 
+    'newsImage' =>
     array (
       'xmlns' => 'http://php.net/ns/news',
       'link' => 'http://php2017.devlink.cn/',
@@ -12292,39 +12292,39 @@ the upgrade
 		<p>More information about the China PHP Conference at: <a href="http://php2017.devlink.cn/">php2017.devlink.cn</a></p>
     </div>
   ',
-    'intro' => '<div><p>China PHP Developer Conference which organized by the DevLink will hold in Beijing on June 10thÂ and 11th. </p><p>After âThe High Performance PHPâ, Itâs the another global developer interchange activity that DevLink hosts.</p><p class=\'fullArticleLink\'><a href=\'http://php.net/archive/2017.php#id2017-06-06-1\' class>&hellip; read full article</a></p></div>',
+    'intro' => '<div><p>China PHP Developer Conference which organized by the DevLink will hold in Beijing on June 10thÂ and 11th. </p><p>After âThe High Performance PHPâ, Itâs the another global developer interchange activity that DevLink hosts.</p><p class=\'fullArticleLink\'><a href=\'https://www.php.net/archive/2017.php#id2017-06-06-1\' class>&hellip; read full article</a></p></div>',
   ),
-  220 => 
+  220 =>
   array (
     'title' => 'The 5th Annual China PHP Conference ',
-    'id' => 'http://php.net/archive/2017.php#id2017-05-22-1',
+    'id' => 'https://www.php.net/archive/2017.php#id2017-05-22-1',
     'published' => '2017-05-22T11:50:21+00:00',
     'updated' => '2017-05-22T11:50:21+00:00',
     'finalTeaserDate' => '2017-06-17',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'conferences',
         'label' => 'Conference announcement',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/conferences/index.php#id2017-05-22-1',
+        'href' => 'https://www.php.net/conferences/index.php#id2017-05-22-1',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
-        'href' => 'http://php.net/archive/2017.php#id2017-05-22-1',
+        'href' => 'https://www.php.net/archive/2017.php#id2017-05-22-1',
         'rel' => 'via',
         'type' => 'text/html',
       ),
     ),
-    'newsImage' => 
+    'newsImage' =>
     array (
       'xmlns' => 'http://php.net/ns/news',
       'link' => 'http://www.phpconchina.com/',
@@ -12340,39 +12340,39 @@ the upgrade
 		<p>Go to <a href="http://www.phpconchina.com/">www.phpconchina.com</a> for tickets and more information.</p>
     </div>
   ',
-    'intro' => '<div><p>The 5th Annual China PHP Conference â June 17 to 18, Shanghai</p><p>We will be hosting a 2-days event filled with high quality, technical sessions about PHP Core, PHP High Performance, PHP Engineering, and MySQL 5.7/8.0 more.</p><p class=\'fullArticleLink\'><a href=\'http://php.net/archive/2017.php#id2017-05-22-1\' class>&hellip; read full article</a></p></div>',
+    'intro' => '<div><p>The 5th Annual China PHP Conference â June 17 to 18, Shanghai</p><p>We will be hosting a 2-days event filled with high quality, technical sessions about PHP Core, PHP High Performance, PHP Engineering, and MySQL 5.7/8.0 more.</p><p class=\'fullArticleLink\'><a href=\'https://www.php.net/archive/2017.php#id2017-05-22-1\' class>&hellip; read full article</a></p></div>',
   ),
-  221 => 
+  221 =>
   array (
     'title' => 'DevCOnf 2017',
-    'id' => 'http://php.net/archive/2017.php#id2017-05-18-1',
+    'id' => 'https://www.php.net/archive/2017.php#id2017-05-18-1',
     'published' => '2017-05-18T13:43:56+00:00',
     'updated' => '2017-05-18T13:43:56+00:00',
     'finalTeaserDate' => '2017-06-17',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'conferences',
         'label' => 'Conference announcement',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/conferences/index.php#id2017-05-18-1',
+        'href' => 'https://www.php.net/conferences/index.php#id2017-05-18-1',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
         'href' => 'http://devconf.ru',
         'rel' => 'via',
         'type' => 'text/html',
       ),
     ),
-    'newsImage' => 
+    'newsImage' =>
     array (
       'xmlns' => 'http://php.net/ns/news',
       'link' => 'http://devconf.ru',
@@ -12427,37 +12427,37 @@ the upgrade
       This year the conference will take place in <a href="http://devconf.ru/ru/members/location">Izmaylovo</a>.
      </p><p class=\'fullArticleLink\'><a href=\'http://devconf.ru\' class>&hellip; read full article</a></p></div>',
   ),
-  222 => 
+  222 =>
   array (
     'title' => 'php[world] 2017: Call for Speakers',
-    'id' => 'http://php.net/archive/2017.php#id2017-05-16-1',
+    'id' => 'https://www.php.net/archive/2017.php#id2017-05-16-1',
     'published' => '2017-05-16T18:08:03-04:00',
     'updated' => '2017-05-16T18:08:03-04:00',
     'finalTeaserDate' => '2017-06-23',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'cfp',
         'label' => 'Call for Papers',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/conferences/index.php#id2017-05-16-1',
+        'href' => 'https://www.php.net/conferences/index.php#id2017-05-16-1',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
         'href' => 'https://world.phparch.com',
         'rel' => 'via',
         'type' => 'text/html',
       ),
     ),
-    'newsImage' => 
+    'newsImage' =>
     array (
       'xmlns' => 'http://php.net/ns/news',
       'link' => 'https://world.phparch.com',
@@ -12486,36 +12486,36 @@ the upgrade
   ',
     'intro' => '<div><p>The teams at <a href="https://www.phparch.com">php[architect]</a> and <a href="http://www.oneforall.events" title="One for All Events">One for All Events</a> are excited to announce we have opened up our <a href="https://world.phparch.com/call-for-speakers/?paref=phpnet&amp;utm_campaign=phpnet">Call for Speakers</a> for the 4th annual edition of <a href="https://world.phparch.com/?paref=phpnet&amp;utm_campaign=phpnet">php[world]</a>.</p><p>This year we are refactoring php[world] into a more focused PHP conference concentrating on providing our attendees deep-dive content which teach core lessons about PHP. We also want talks covering advanced topics in applications and frameworks built in PHP (such as Drupal, WordPress, Laravel, Symfony, and Magento). We encourage submissions on technologies crucial to modern Web development such as HTML5, JavaScript, and emerging technologies. Ideas surrounding the entire software life cycle are often big hits for our attendees. Finally, we do welcome non-technical proposals that will appeal to a developer audience.</p><p class=\'fullArticleLink\'><a href=\'https://world.phparch.com\' class>&hellip; read full article</a></p></div>',
   ),
-  223 => 
+  223 =>
   array (
     'title' => 'PHP 7.1.5 Released',
-    'id' => 'http://php.net/archive/2017.php#id2017-05-11-2',
+    'id' => 'https://www.php.net/archive/2017.php#id2017-05-11-2',
     'published' => '2017-05-11T17:44:29+00:00',
     'updated' => '2017-05-11T12:03:00-07:00',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'frontpage',
         'label' => 'PHP.net frontpage news',
       ),
-      1 => 
+      1 =>
       array (
         'term' => 'releases',
         'label' => 'New PHP release',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/index.php#id2017-05-11-2',
+        'href' => 'https://www.php.net/index.php#id2017-05-11-2',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
-        'href' => 'http://php.net/archive/2017.php#id2017-05-11-2',
+        'href' => 'https://www.php.net/archive/2017.php#id2017-05-11-2',
         'rel' => 'via',
         'type' => 'text/html',
       ),
@@ -12527,9 +12527,9 @@ the upgrade
      	All PHP 7.1 users are encouraged to upgrade to this version.
      	</p>
 
-     	<p>For source downloads of PHP 7.1.5 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     	Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-     	The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.1.5">ChangeLog</a>.
+     	<p>For source downloads of PHP 7.1.5 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
+     	Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
+     	The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-7.php#7.1.5">ChangeLog</a>.
      	</p>
     </div>
   ',
@@ -12537,41 +12537,41 @@ the upgrade
      	7.1.5. Several bugs have been fixed.
 
      	All PHP 7.1 users are encouraged to upgrade to this version.
-     	</p><p>For source downloads of PHP 7.1.5 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     	Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-     	The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.1.5">ChangeLog</a>.
+     	</p><p>For source downloads of PHP 7.1.5 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
+     	Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
+     	The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-7.php#7.1.5">ChangeLog</a>.
      	</p></div>',
   ),
-  224 => 
+  224 =>
   array (
     'title' => 'PHP 7.0.19 Released',
-    'id' => 'http://php.net/archive/2017.php#id2017-05-11-1',
+    'id' => 'https://www.php.net/archive/2017.php#id2017-05-11-1',
     'published' => '2017-05-11T13:00:00+01:00',
     'updated' => '2017-05-11T13:00:00+01:00',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'releases',
         'label' => 'New PHP release',
       ),
-      1 => 
+      1 =>
       array (
         'term' => 'frontpage',
         'label' => 'PHP.net frontpage news',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/index.php#id2017-05-11-1',
+        'href' => 'https://www.php.net/index.php#id2017-05-11-1',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
-        'href' => 'http://php.net/archive/2017.php#id2017-05-11-1',
+        'href' => 'https://www.php.net/archive/2017.php#id2017-05-11-1',
         'rel' => 'via',
         'type' => 'text/html',
       ),
@@ -12583,9 +12583,9 @@ the upgrade
       All PHP 7.0 users are encouraged to upgrade to this version.
       </p>
 
-      <p>For source downloads of PHP 7.0.19 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-      Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.0.19">ChangeLog</a>.
+      <p>For source downloads of PHP 7.0.19 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
+      Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
+      The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-7.php#7.0.19">ChangeLog</a>.
       </p>
     </div>
   ',
@@ -12593,42 +12593,42 @@ the upgrade
       7.0.19. Several bugs have been fixed.
 
       All PHP 7.0 users are encouraged to upgrade to this version.
-      </p><p>For source downloads of PHP 7.0.19 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-      Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.0.19">ChangeLog</a>.
+      </p><p>For source downloads of PHP 7.0.19 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
+      Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
+      The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-7.php#7.0.19">ChangeLog</a>.
       </p></div>',
   ),
-  225 => 
+  225 =>
   array (
     'title' => 'International PHP Conference 2017 Fall - Call for Papers',
-    'id' => 'http://php.net/archive/2017.php#id2017-05-09-1',
+    'id' => 'https://www.php.net/archive/2017.php#id2017-05-09-1',
     'published' => '2017-05-09T15:44:54-04:00',
     'updated' => '2017-05-09T15:44:54-04:00',
     'finalTeaserDate' => '2017-05-09',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'cfp',
         'label' => 'Call for Papers',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/conferences/index.php#id2017-05-09-1',
+        'href' => 'https://www.php.net/conferences/index.php#id2017-05-09-1',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
         'href' => 'https://callforpapers.sandsmedia.com',
         'rel' => 'via',
         'type' => 'text/html',
       ),
     ),
-    'newsImage' => 
+    'newsImage' =>
     array (
       'xmlns' => 'http://php.net/ns/news',
       'link' => 'https://callforpapers.sandsmedia.com',
@@ -12691,37 +12691,37 @@ the upgrade
   ',
     'intro' => '<div></div>',
   ),
-  226 => 
+  226 =>
   array (
     'title' => 'Dutch PHP Conference 2017',
-    'id' => 'http://php.net/archive/2017.php#id2017-04-14-1',
+    'id' => 'https://www.php.net/archive/2017.php#id2017-04-14-1',
     'published' => '2017-04-14T13:21:13+00:00',
     'updated' => '2017-04-14T13:21:13+00:00',
     'finalTeaserDate' => '2017-06-29',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'conferences',
         'label' => 'Conference announcement',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/conferences/index.php#id2017-04-14-1',
+        'href' => 'https://www.php.net/conferences/index.php#id2017-04-14-1',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
         'href' => 'https://www.phpconference.nl/',
         'rel' => 'via',
         'type' => 'text/html',
       ),
     ),
-    'newsImage' => 
+    'newsImage' =>
     array (
       'xmlns' => 'http://php.net/ns/news',
       'link' => 'https://www.phpconference.nl/',
@@ -12769,37 +12769,37 @@ the upgrade
         presenters can respond to individual questions, and as a result places are limited.
       </p><p class=\'fullArticleLink\'><a href=\'https://www.phpconference.nl/\' class>&hellip; read full article</a></p></div>',
   ),
-  227 => 
+  227 =>
   array (
     'title' => 'ConFoo Vancouver 2017 Calling for Papers',
-    'id' => 'http://php.net/archive/2017.php#id2017-04-13-3',
+    'id' => 'https://www.php.net/archive/2017.php#id2017-04-13-3',
     'published' => '2017-04-13T15:58:29-04:00',
     'updated' => '2017-04-13T15:58:29-04:00',
     'finalTeaserDate' => '2017-05-08',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'cfp',
         'label' => 'Call for Papers',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/conferences/index.php#id2017-04-13-3',
+        'href' => 'https://www.php.net/conferences/index.php#id2017-04-13-3',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
         'href' => 'https://confoo.ca/en/yvr2017/call-for-papers',
         'rel' => 'via',
         'type' => 'text/html',
       ),
     ),
-    'newsImage' => 
+    'newsImage' =>
     array (
       'xmlns' => 'http://php.net/ns/news',
       'link' => 'https://confoo.ca/en/yvr2017/call-for-papers',
@@ -12816,36 +12816,36 @@ the upgrade
   ',
     'intro' => '<div><p>Want to get your web development ideas in front of a live audience? The <a href="https://confoo.ca/en/yvr2017/call-for-papers">call for papers</a> for the ConFoo Vancouver 2017 web developer conference is open! If you have a burning desire to hold forth about PHP, databases, JavaScript, or any other web development topics, we want to see your proposals. The window is open only from April 10 to May 8, 2017, so hurry. An added benefit: If your proposal is selected and you live outside of the Vancouver area, we will cover your travel and hotel.</p><p>Youâll have 45 minutes for the talk, with 35 minutes for your topic and 10 minutes for Q&amp;A. We canât wait to see your proposals!</p><p class=\'fullArticleLink\'><a href=\'https://confoo.ca/en/yvr2017/call-for-papers\' class>&hellip; read full article</a></p></div>',
   ),
-  228 => 
+  228 =>
   array (
     'title' => 'PHP 7.1.4 Released',
-    'id' => 'http://php.net/archive/2017.php#id2017-04-13-2',
+    'id' => 'https://www.php.net/archive/2017.php#id2017-04-13-2',
     'published' => '2017-04-13T16:12:01+00:00',
     'updated' => '2017-04-13T16:12:01+00:00',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'frontpage',
         'label' => 'PHP.net frontpage news',
       ),
-      1 => 
+      1 =>
       array (
         'term' => 'releases',
         'label' => 'New PHP release',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/index.php#id2017-04-13-2',
+        'href' => 'https://www.php.net/index.php#id2017-04-13-2',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
-        'href' => 'http://php.net/archive/2017.php#id2017-04-13-2',
+        'href' => 'https://www.php.net/archive/2017.php#id2017-04-13-2',
         'rel' => 'via',
         'type' => 'text/html',
       ),
@@ -12857,9 +12857,9 @@ the upgrade
        All PHP 7.1 users are encouraged to upgrade to this version.
        </p>
 
-       <p>For source downloads of PHP 7.1.4 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-       Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-       The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.1.4">ChangeLog</a>.
+       <p>For source downloads of PHP 7.1.4 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
+       Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
+       The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-7.php#7.1.4">ChangeLog</a>.
        </p>
     </div>
   ',
@@ -12867,41 +12867,41 @@ the upgrade
        7.1.4. Several bugs have been fixed.
 
        All PHP 7.1 users are encouraged to upgrade to this version.
-       </p><p>For source downloads of PHP 7.1.4 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-       Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-       The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.1.4">ChangeLog</a>.
+       </p><p>For source downloads of PHP 7.1.4 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
+       Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
+       The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-7.php#7.1.4">ChangeLog</a>.
        </p></div>',
   ),
-  229 => 
+  229 =>
   array (
     'title' => 'PHP 7.0.18 Released',
-    'id' => 'http://php.net/archive/2017.php#id2017-04-13-1',
+    'id' => 'https://www.php.net/archive/2017.php#id2017-04-13-1',
     'published' => '2017-04-13T13:00:00+01:00',
     'updated' => '2017-04-13T13:00:00+01:00',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'releases',
         'label' => 'New PHP release',
       ),
-      1 => 
+      1 =>
       array (
         'term' => 'frontpage',
         'label' => 'PHP.net frontpage news',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/index.php#id2017-04-13-1',
+        'href' => 'https://www.php.net/index.php#id2017-04-13-1',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
-        'href' => 'http://php.net/archive/2017.php#id2017-04-13-1',
+        'href' => 'https://www.php.net/archive/2017.php#id2017-04-13-1',
         'rel' => 'via',
         'type' => 'text/html',
       ),
@@ -12913,9 +12913,9 @@ the upgrade
       All PHP 7.0 users are encouraged to upgrade to this version.
       </p>
 
-      <p>For source downloads of PHP 7.0.18 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-      Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.0.18">ChangeLog</a>.
+      <p>For source downloads of PHP 7.0.18 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
+      Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
+      The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-7.php#7.0.18">ChangeLog</a>.
       </p>
     </div>
   ',
@@ -12923,42 +12923,42 @@ the upgrade
       7.0.18. Several bugs have been fixed.
 
       All PHP 7.0 users are encouraged to upgrade to this version.
-      </p><p>For source downloads of PHP 7.0.18 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-      Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.0.18">ChangeLog</a>.
+      </p><p>For source downloads of PHP 7.0.18 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
+      Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
+      The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-7.php#7.0.18">ChangeLog</a>.
       </p></div>',
   ),
-  230 => 
+  230 =>
   array (
     'title' => 'PNWPHP 2017 CfP',
-    'id' => 'http://php.net/archive/2017.php#id2017-03-30-2',
+    'id' => 'https://www.php.net/archive/2017.php#id2017-03-30-2',
     'published' => '2017-03-30T07:49:46-04:00',
     'updated' => '2017-03-30T07:49:46-04:00',
     'finalTeaserDate' => '2017-05-15',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'cfp',
         'label' => 'Call for Papers',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/conferences/index.php#id2017-03-30-2',
+        'href' => 'https://www.php.net/conferences/index.php#id2017-03-30-2',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
         'href' => 'http://www.pnwphp.com',
         'rel' => 'via',
         'type' => 'text/html',
       ),
     ),
-    'newsImage' => 
+    'newsImage' =>
     array (
       'xmlns' => 'http://php.net/ns/news',
       'link' => 'http://www.pnwphp.com',
@@ -12975,37 +12975,37 @@ the upgrade
   ',
     'intro' => '<div><p>We are happy to announce the dates for *Pacific Northwest PHP Conference (PNWPHP) 2017 are September 7-9, and will held at University of Washington in Seattle! The CFP site - <a href="http://cfp.pnwphp.com" title="Pacific Northwest PHP">http://cfp.pnwphp.com</a> - has launched, where talk submissions will accepted through May 15th, 2017.</p><p>The <b>Pacific Northwest PHP Conference</b> is a 3-day event in Seattle, Washington for PHP and Web developers. Our past conferences have included <b>world renown speakers</b> from the PHP community, about a <b>wide range of topics</b> â from APIs and CMS to unit testing and version control</p><p class=\'fullArticleLink\'><a href=\'http://www.pnwphp.com\' class>&hellip; read full article</a></p></div>',
   ),
-  231 => 
+  231 =>
   array (
     'title' => 'Northeast PHP Conference CfP',
-    'id' => 'http://php.net/archive/2017.php#id2017-03-30-1',
+    'id' => 'https://www.php.net/archive/2017.php#id2017-03-30-1',
     'published' => '2017-03-30T07:40:09-04:00',
     'updated' => '2017-03-30T07:40:09-04:00',
     'finalTeaserDate' => '2017-04-15',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'cfp',
         'label' => 'Call for Papers',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/conferences/index.php#id2017-03-30-1',
+        'href' => 'https://www.php.net/conferences/index.php#id2017-03-30-1',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
         'href' => 'http://2017.northeastphp.org',
         'rel' => 'via',
         'type' => 'text/html',
       ),
     ),
-    'newsImage' => 
+    'newsImage' =>
     array (
       'xmlns' => 'http://php.net/ns/news',
       'link' => 'http://2017.northeastphp.org',
@@ -13029,36 +13029,36 @@ the upgrade
      The conference will take place August 9-11, and <a href="http://2017.northeastphp.org">Early Bird Tickets</a> are now available.
      </p></div>',
   ),
-  232 => 
+  232 =>
   array (
     'title' => 'PHP 7.1.3 Released',
-    'id' => 'http://php.net/archive/2017.php#id2017-03-16-2',
+    'id' => 'https://www.php.net/archive/2017.php#id2017-03-16-2',
     'published' => '2017-03-16T15:34:44+00:00',
     'updated' => '2017-03-16T15:34:44+00:00',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'frontpage',
         'label' => 'PHP.net frontpage news',
       ),
-      1 => 
+      1 =>
       array (
         'term' => 'releases',
         'label' => 'New PHP release',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/index.php#id2017-03-16-2',
+        'href' => 'https://www.php.net/index.php#id2017-03-16-2',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
-        'href' => 'http://php.net/archive/2017.php#id2017-03-16-2',
+        'href' => 'https://www.php.net/archive/2017.php#id2017-03-16-2',
         'rel' => 'via',
         'type' => 'text/html',
       ),
@@ -13070,9 +13070,9 @@ the upgrade
           All PHP 7.1 users are encouraged to upgrade to this version.
           </p>
 
-          <p>For source downloads of PHP 7.1.3 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-          Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-          The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.1.3">ChangeLog</a>.
+          <p>For source downloads of PHP 7.1.3 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
+          Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
+          The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-7.php#7.1.3">ChangeLog</a>.
           </p>
     </div>
   ',
@@ -13080,41 +13080,41 @@ the upgrade
           7.1.3. Several bugs have been fixed.
 
           All PHP 7.1 users are encouraged to upgrade to this version.
-          </p><p>For source downloads of PHP 7.1.3 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-          Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-          The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.1.3">ChangeLog</a>.
+          </p><p>For source downloads of PHP 7.1.3 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
+          Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
+          The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-7.php#7.1.3">ChangeLog</a>.
           </p></div>',
   ),
-  233 => 
+  233 =>
   array (
     'title' => 'PHP 7.0.17 Released',
-    'id' => 'http://php.net/archive/2017.php#id2017-03-16-1',
+    'id' => 'https://www.php.net/archive/2017.php#id2017-03-16-1',
     'published' => '2017-03-16T13:00:00+01:00',
     'updated' => '2017-03-16T13:00:00+01:00',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'releases',
         'label' => 'New PHP release',
       ),
-      1 => 
+      1 =>
       array (
         'term' => 'frontpage',
         'label' => 'PHP.net frontpage news',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/index.php#id2017-03-16-1',
+        'href' => 'https://www.php.net/index.php#id2017-03-16-1',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
-        'href' => 'http://php.net/archive/2017.php#id2017-03-16-1',
+        'href' => 'https://www.php.net/archive/2017.php#id2017-03-16-1',
         'rel' => 'via',
         'type' => 'text/html',
       ),
@@ -13126,9 +13126,9 @@ the upgrade
       All PHP 7.0 users are encouraged to upgrade to this version.
       </p>
 
-      <p>For source downloads of PHP 7.0.17 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-      Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.0.17">ChangeLog</a>.
+      <p>For source downloads of PHP 7.0.17 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
+      Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
+      The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-7.php#7.0.17">ChangeLog</a>.
       </p>
     </div>
   ',
@@ -13136,42 +13136,42 @@ the upgrade
       7.0.17. Several bugs have been fixed.
 
       All PHP 7.0 users are encouraged to upgrade to this version.
-      </p><p>For source downloads of PHP 7.0.17 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-      Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.0.17">ChangeLog</a>.
+      </p><p>For source downloads of PHP 7.0.17 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
+      Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
+      The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-7.php#7.0.17">ChangeLog</a>.
       </p></div>',
   ),
-  234 => 
+  234 =>
   array (
     'title' => 'PHP Unicorn Conference (Online)',
-    'id' => 'http://php.net/archive/2017.php#id2017-03-15-1',
+    'id' => 'https://www.php.net/archive/2017.php#id2017-03-15-1',
     'published' => '2017-03-15T02:45:21+00:00',
     'updated' => '2017-03-15T02:45:21+00:00',
     'finalTeaserDate' => '2017-04-19',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'conferences',
         'label' => 'Conference announcement',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/conferences/index.php#id2017-03-15-1',
+        'href' => 'https://www.php.net/conferences/index.php#id2017-03-15-1',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
         'href' => 'http://www.phpunicorn.com',
         'rel' => 'via',
         'type' => 'text/html',
       ),
     ),
-    'newsImage' => 
+    'newsImage' =>
     array (
       'xmlns' => 'http://php.net/ns/news',
       'link' => 'http://www.phpunicorn.com',
@@ -13200,37 +13200,37 @@ the upgrade
         It is true there are many great PHP conferences happening around the world and you should go to as many as can, but if you have a hard time getting to one or canât spare the time, why not let the conference come to you? The PHP Unicorn Conference comes streaming right to your computer, wherever in the world you might be.
       </p><p class=\'fullArticleLink\'><a href=\'http://www.phpunicorn.com\' class>&hellip; read full article</a></p></div>',
   ),
-  235 => 
+  235 =>
   array (
     'title' => 'ZendCon 2017 CFP Started',
-    'id' => 'http://php.net/archive/2017.php#id2017-03-14-1',
+    'id' => 'https://www.php.net/archive/2017.php#id2017-03-14-1',
     'published' => '2017-03-14T00:00:01+00:00',
     'updated' => '2017-03-14T12:23:00+00:00',
     'finalTeaserDate' => '2017-04-14',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'cfp',
         'label' => 'Call for Papers',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/conferences/index.php#id2017-03-14-1',
+        'href' => 'https://www.php.net/conferences/index.php#id2017-03-14-1',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
         'href' => 'http://zendcon.com',
         'rel' => 'via',
         'type' => 'text/html',
       ),
     ),
-    'newsImage' => 
+    'newsImage' =>
     array (
       'xmlns' => 'http://php.net/ns/news',
       'link' => 'http://zendcon.com',
@@ -13254,37 +13254,37 @@ the upgrade
 	',
     'intro' => '<div><p>We are happy to announce the CFP for ZendCon 2017 has launched at <a href="https://cfp.zendcon.com" title="ZendCon 2017 CFP">https://cfp.zendcon.com</a> where we will accept talk submissions until April 14th, 2017.</p><p>With over 250 million PHP applications driven by a global community of more than 5 million active developers and all enterprises adopting open source software, ZendCon 2017 brings you a curated selection of the best experts, training, and networking opportunities to embrace this vast ecosystem.</p><p class=\'fullArticleLink\'><a href=\'http://zendcon.com\' class>&hellip; read full article</a></p></div>',
   ),
-  236 => 
+  236 =>
   array (
     'title' => 'Conferência PHPRS 2017',
-    'id' => 'http://php.net/archive/2017.php#id2017-03-04-1',
+    'id' => 'https://www.php.net/archive/2017.php#id2017-03-04-1',
     'published' => '2017-03-04T16:33:51-03:00',
     'updated' => '2017-03-04T16:33:51-03:00',
     'finalTeaserDate' => '2017-05-12',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'conferences',
         'label' => 'Conference announcement',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/conferences/index.php#id2017-03-04-1',
+        'href' => 'https://www.php.net/conferences/index.php#id2017-03-04-1',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
         'href' => 'http://conf.phprs.com.br/',
         'rel' => 'via',
         'type' => 'text/html',
       ),
     ),
-    'newsImage' => 
+    'newsImage' =>
     array (
       'xmlns' => 'http://php.net/ns/news',
       'link' => 'http://conf.phprs.com.br/',
@@ -13302,37 +13302,37 @@ the upgrade
   ',
     'intro' => '<div><p>An event for the PHP Developer community of Rio Grande do Sul, focused on professional growth, exchange of experiences and networking. Strengthening language and the labor market.</p><p>From May 12 to 13, 2017, in Porto Alegre / RS-Brazil, the first day will be held workshops and the second lectures.</p><p class=\'fullArticleLink\'><a href=\'http://conf.phprs.com.br/\' class>&hellip; read full article</a></p></div>',
   ),
-  237 => 
+  237 =>
   array (
     'title' => 'Madison PHP Conference 2017',
-    'id' => 'http://php.net/archive/2017.php#id2017-02-24-1',
+    'id' => 'https://www.php.net/archive/2017.php#id2017-02-24-1',
     'published' => '2017-02-24T16:59:19+00:00',
     'updated' => '2017-02-24T16:59:19+00:00',
     'finalTeaserDate' => '2017-09-22',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'cfp',
         'label' => 'Call for Papers',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/conferences/index.php#id2017-02-24-1',
+        'href' => 'https://www.php.net/conferences/index.php#id2017-02-24-1',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
         'href' => 'http://2017.madisonphpconference.com/',
         'rel' => 'via',
         'type' => 'text/html',
       ),
     ),
-    'newsImage' => 
+    'newsImage' =>
     array (
       'xmlns' => 'http://php.net/ns/news',
       'link' => 'http://www.madisonphpconference.com/',
@@ -13352,37 +13352,37 @@ the upgrade
     ',
     'intro' => '<div><p>Join us on Friday, September 22nd, 2017 for a full day of tutorials followed by three tracks of amazing talks on Saturday, September 23rd, 2017. Now in its fifth year, Madison PHP Conference in Madison, Wisconsin, USA focuses on PHP, related web technologies, and professional development - everything you need to energize your career. This event is organized by the locally-run <a href="http://www.madisonphp.com">Madison PHP user group</a> and is designed to offer something for attendees at all skill levels. <a href="http://www.madisonphpconference.com">Madison PHP Conference 2017</a> will be two days of networking, learning, sharing, and great fun!</p><p>The <a href="http://cfp.madisonphpconference.com">Call for Papers</a> will be open until April 30th, 2017. Madison PHP Conference offers reimbursement for travel and accommodations. To view the full speaker package and to submit a talk, please visit: <a href="http://cfp.madisonphpconference.com">http://cfp.madisonphpconference.com</a>.</p><p class=\'fullArticleLink\'><a href=\'http://2017.madisonphpconference.com/\' class>&hellip; read full article</a></p></div>',
   ),
-  238 => 
+  238 =>
   array (
     'title' => 'Madison PHP Conference 2017',
-    'id' => 'http://php.net/archive/2017.php#id2017-02-24-1',
+    'id' => 'https://www.php.net/archive/2017.php#id2017-02-24-1',
     'published' => '2017-02-24T16:59:19+00:00',
     'updated' => '2017-02-24T16:59:19+00:00',
     'finalTeaserDate' => '2017-09-22',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'conferences',
         'label' => 'Conference announcement',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/conferences/index.php#id2017-02-24-1',
+        'href' => 'https://www.php.net/conferences/index.php#id2017-02-24-1',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
         'href' => 'http://2017.madisonphpconference.com/',
         'rel' => 'via',
         'type' => 'text/html',
       ),
     ),
-    'newsImage' => 
+    'newsImage' =>
     array (
       'xmlns' => 'http://php.net/ns/news',
       'link' => 'http://www.madisonphpconference.com/',
@@ -13396,42 +13396,42 @@ the upgrade
     ',
     'intro' => '<div><p>Join us on Friday, September 22nd, 2017 for a full day of tutorials followed by three tracks of amazing talks on Saturday, September 23rd, 2017. Now in its fifth year, Madison PHP Conference in Madison, Wisconsin, USA focuses on PHP, related web technologies, and professional development - everything you need to energize your career. This event is organized by the locally-run <a href="http://www.madisonphp.com">Madison PHP user group</a> and is designed to offer something for attendees at all skill levels. <a href="http://www.madisonphpconference.com">Madison PHP Conference 2017</a> will be two days of networking, learning, sharing, and great fun!</p></div>',
   ),
-  239 => 
+  239 =>
   array (
     'title' => 'CakeFest 2017 NYC, the Official CakePHP Conference',
-    'id' => 'http://php.net/archive/2017.php#id2017-02-21-1',
+    'id' => 'https://www.php.net/archive/2017.php#id2017-02-21-1',
     'published' => '2017-02-21T09:19:04+00:00',
     'updated' => '2017-02-21T09:19:04+00:00',
     'finalTeaserDate' => '2017-06-08',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'conferences',
         'label' => 'Conference announcement',
       ),
-      1 => 
+      1 =>
       array (
         'term' => 'cfp',
         'label' => 'Call for Papers',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/conferences/index.php#id2017-02-21-1',
+        'href' => 'https://www.php.net/conferences/index.php#id2017-02-21-1',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
         'href' => 'https://cakefest.org',
         'rel' => 'via',
         'type' => 'text/html',
       ),
     ),
-    'newsImage' => 
+    'newsImage' =>
     array (
       'xmlns' => 'http://php.net/ns/news',
       'link' => 'https://cakefest.org',
@@ -13472,36 +13472,36 @@ the upgrade
        will be an event not to miss.
      </p><p class=\'fullArticleLink\'><a href=\'https://cakefest.org\' class>&hellip; read full article</a></p></div>',
   ),
-  240 => 
+  240 =>
   array (
     'title' => 'PHP 7.1.2 Released',
-    'id' => 'http://php.net/archive/2017.php#id2017-02-17-1',
+    'id' => 'https://www.php.net/archive/2017.php#id2017-02-17-1',
     'published' => '2017-02-17T06:00:25+00:00',
     'updated' => '2017-02-17T06:00:25+00:00',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'frontpage',
         'label' => 'PHP.net frontpage news',
       ),
-      1 => 
+      1 =>
       array (
         'term' => 'releases',
         'label' => 'New PHP release',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/index.php#id2017-02-17-1',
+        'href' => 'https://www.php.net/index.php#id2017-02-17-1',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
-        'href' => 'http://php.net/archive/2017.php#id2017-02-17-1',
+        'href' => 'https://www.php.net/archive/2017.php#id2017-02-17-1',
         'rel' => 'via',
         'type' => 'text/html',
       ),
@@ -13513,9 +13513,9 @@ the upgrade
           All PHP 7.1 users are encouraged to upgrade to this version.
           </p>
 
-          <p>For source downloads of PHP 7.1.2 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-          Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-          The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.1.2">ChangeLog</a>.
+          <p>For source downloads of PHP 7.1.2 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
+          Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
+          The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-7.php#7.1.2">ChangeLog</a>.
           </p>
     </div>
   ',
@@ -13523,41 +13523,41 @@ the upgrade
           7.1.2. Several bugs have been fixed.
 
           All PHP 7.1 users are encouraged to upgrade to this version.
-          </p><p>For source downloads of PHP 7.1.2 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-          Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-          The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.1.2">ChangeLog</a>.
+          </p><p>For source downloads of PHP 7.1.2 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
+          Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
+          The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-7.php#7.1.2">ChangeLog</a>.
           </p></div>',
   ),
-  241 => 
+  241 =>
   array (
     'title' => 'PHP 7.0.16 Released',
-    'id' => 'http://php.net/archive/2017.php#id2017-02-16-1',
+    'id' => 'https://www.php.net/archive/2017.php#id2017-02-16-1',
     'published' => '2017-02-16T13:00:00+01:00',
     'updated' => '2017-02-16T13:00:00+01:00',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'releases',
         'label' => 'New PHP release',
       ),
-      1 => 
+      1 =>
       array (
         'term' => 'frontpage',
         'label' => 'PHP.net frontpage news',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/index.php#id2017-02-16-1',
+        'href' => 'https://www.php.net/index.php#id2017-02-16-1',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
-        'href' => 'http://php.net/archive/2017.php#id2017-02-16-1',
+        'href' => 'https://www.php.net/archive/2017.php#id2017-02-16-1',
         'rel' => 'via',
         'type' => 'text/html',
       ),
@@ -13569,9 +13569,9 @@ the upgrade
       All PHP 7.0 users are encouraged to upgrade to this version.
       </p>
 
-      <p>For source downloads of PHP 7.0.16 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-      Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.0.16">ChangeLog</a>.
+      <p>For source downloads of PHP 7.0.16 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
+      Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
+      The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-7.php#7.0.16">ChangeLog</a>.
       </p>
     </div>
   ',
@@ -13579,42 +13579,42 @@ the upgrade
       7.0.16. Several bugs have been fixed.
 
       All PHP 7.0 users are encouraged to upgrade to this version.
-      </p><p>For source downloads of PHP 7.0.16 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-      Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.0.16">ChangeLog</a>.
+      </p><p>For source downloads of PHP 7.0.16 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
+      Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
+      The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-7.php#7.0.16">ChangeLog</a>.
       </p></div>',
   ),
-  242 => 
+  242 =>
   array (
     'title' => 'PHP Experience 2017',
-    'id' => 'http://php.net/archive/2017.php#id2017-02-15-1',
+    'id' => 'https://www.php.net/archive/2017.php#id2017-02-15-1',
     'published' => '2017-02-15T02:35:13+00:00',
     'updated' => '2017-02-15T02:35:13+00:00',
     'finalTeaserDate' => '2017-03-27',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'conferences',
         'label' => 'Conference announcement',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/conferences/index.php#id2017-02-15-1',
+        'href' => 'https://www.php.net/conferences/index.php#id2017-02-15-1',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
         'href' => 'http://phpexperience2017.imasters.com.br/?paref=phpnet&utm_campaign=phpnet',
         'rel' => 'via',
         'type' => 'text/html',
       ),
     ),
-    'newsImage' => 
+    'newsImage' =>
     array (
       'xmlns' => 'http://php.net/ns/news',
       'link' => 'http://phpexperience2017.imasters.com.br/?paref=phpnet&utm_campaign=phpnet',
@@ -13626,37 +13626,37 @@ the upgrade
   ',
     'intro' => '<div></div>',
   ),
-  243 => 
+  243 =>
   array (
     'title' => 'php[tek] 2017: Atlanta',
-    'id' => 'http://php.net/archive/2017.php#id2017-01-23-1',
+    'id' => 'https://www.php.net/archive/2017.php#id2017-01-23-1',
     'published' => '2017-01-23T08:25:57-05:00',
     'updated' => '2017-01-23T08:25:57-05:00',
     'finalTeaserDate' => '2017-05-24',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'conferences',
         'label' => 'Conference announcement',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/conferences/index.php#id2017-01-23-1',
+        'href' => 'https://www.php.net/conferences/index.php#id2017-01-23-1',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
         'href' => 'https://tek.phparch.com/?paref=phpnet&utm_campaign=phpnet',
         'rel' => 'via',
         'type' => 'text/html',
       ),
     ),
-    'newsImage' => 
+    'newsImage' =>
     array (
       'xmlns' => 'http://php.net/ns/news',
       'link' => 'https://tek.phparch.com/?paref=phpnet&utm_campaign=phpnet',
@@ -13680,36 +13680,36 @@ the upgrade
   ',
     'intro' => '<div></div>',
   ),
-  244 => 
+  244 =>
   array (
     'title' => 'PHP 5.6.30 Released',
-    'id' => 'http://php.net/archive/2017.php#id2017-01-19-3',
+    'id' => 'https://www.php.net/archive/2017.php#id2017-01-19-3',
     'published' => '2017-01-19T13:30:25-08:00',
     'updated' => '2017-01-19T13:30:25-08:00',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'frontpage',
         'label' => 'PHP.net frontpage news',
       ),
-      1 => 
+      1 =>
       array (
         'term' => 'releases',
         'label' => 'New PHP release',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/index.php#id2017-01-19-3',
+        'href' => 'https://www.php.net/index.php#id2017-01-19-3',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
-        'href' => 'http://php.net/archive/2017.php#id2017-01-19-3',
+        'href' => 'https://www.php.net/archive/2017.php#id2017-01-19-3',
         'rel' => 'via',
         'type' => 'text/html',
       ),
@@ -13723,15 +13723,15 @@ the upgrade
      All PHP 5.6 users are encouraged to upgrade to this version.</p>
 
      <p>
-     According to <a href="http://php.net/supported-versions.php">our release calendar</a>, this PHP 5.6 version
+     According to <a href="https://www.php.net/supported-versions.php">our release calendar</a>, this PHP 5.6 version
      is the last planned release that contains regular bugfixes. All the consequent releases
      will contain only security-relevant fixes, for the term of two years.
      PHP 5.6 users that need further bugfixes are encouraged to upgrade to PHP 7.
      </p>
 
-     <p>For source downloads of PHP 5.6.30 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-     The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.6.30">ChangeLog</a>.
+     <p>For source downloads of PHP 5.6.30 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
+     Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
+     The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-5.php#5.6.30">ChangeLog</a>.
      </p>
     </div>
 
@@ -13745,48 +13745,48 @@ the upgrade
      All PHP 5.6 users are encouraged to upgrade to this version.</p>
 
      <p>
-     According to <a href="http://php.net/supported-versions.php">our release calendar</a>, this PHP 5.6 version
+     According to <a href="https://www.php.net/supported-versions.php">our release calendar</a>, this PHP 5.6 version
      is the last planned release that contains regular bugfixes. All the consequent releases
      will contain only security-relevant fixes, for the term of two years.
      PHP 5.6 users that need further bugfixes are encouraged to upgrade to PHP 7.
      </p>
 
-     <p>For source downloads of PHP 5.6.30 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-     The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.6.30">ChangeLog</a>.
+     <p>For source downloads of PHP 5.6.30 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
+     Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
+     The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-5.php#5.6.30">ChangeLog</a>.
      </p>
     </div></div>',
   ),
-  245 => 
+  245 =>
   array (
     'title' => 'PHP 7.0.15 Released',
-    'id' => 'http://php.net/archive/2017.php#id2017-01-19-2',
+    'id' => 'https://www.php.net/archive/2017.php#id2017-01-19-2',
     'published' => '2017-01-19T13:00:00+01:00',
     'updated' => '2017-01-19T13:00:00+01:00',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'releases',
         'label' => 'New PHP release',
       ),
-      1 => 
+      1 =>
       array (
         'term' => 'frontpage',
         'label' => 'PHP.net frontpage news',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/index.php#id2017-01-19-2',
+        'href' => 'https://www.php.net/index.php#id2017-01-19-2',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
-        'href' => 'http://php.net/archive/2017.php#id2017-01-19-2',
+        'href' => 'https://www.php.net/archive/2017.php#id2017-01-19-2',
         'rel' => 'via',
         'type' => 'text/html',
       ),
@@ -13798,9 +13798,9 @@ the upgrade
 
      All PHP 7.0 users are encouraged to upgrade to this version.</p>
 
-     <p>For source downloads of PHP 7.0.15 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-     The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.0.15">ChangeLog</a>.
+     <p>For source downloads of PHP 7.0.15 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
+     Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
+     The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-7.php#7.0.15">ChangeLog</a>.
      </p>
     </div>
   ',
@@ -13808,41 +13808,41 @@ the upgrade
      7.0.15. This is a security release. Several security bugs were fixed in
      this release.
 
-     All PHP 7.0 users are encouraged to upgrade to this version.</p><p>For source downloads of PHP 7.0.15 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-     The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.0.15">ChangeLog</a>.
+     All PHP 7.0 users are encouraged to upgrade to this version.</p><p>For source downloads of PHP 7.0.15 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
+     Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
+     The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-7.php#7.0.15">ChangeLog</a>.
      </p></div>',
   ),
-  246 => 
+  246 =>
   array (
     'title' => 'PHP 7.1.1 Released',
-    'id' => 'http://php.net/archive/2017.php#id2017-01-19-1',
+    'id' => 'https://www.php.net/archive/2017.php#id2017-01-19-1',
     'published' => '2017-01-19T09:56:45+00:00',
     'updated' => '2017-01-19T09:56:45+00:00',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'frontpage',
         'label' => 'PHP.net frontpage news',
       ),
-      1 => 
+      1 =>
       array (
         'term' => 'releases',
         'label' => 'New PHP release',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/index.php#id2017-01-19-1',
+        'href' => 'https://www.php.net/index.php#id2017-01-19-1',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
-        'href' => 'http://php.net/archive/2017.php#id2017-01-19-1',
+        'href' => 'https://www.php.net/archive/2017.php#id2017-01-19-1',
         'rel' => 'via',
         'type' => 'text/html',
       ),
@@ -13854,9 +13854,9 @@ the upgrade
      All PHP 7.1 users are encouraged to upgrade to this version.
      </p>
 
-     <p>For source downloads of PHP 7.1.1 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-     The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.1.1">ChangeLog</a>.
+     <p>For source downloads of PHP 7.1.1 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
+     Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
+     The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-7.php#7.1.1">ChangeLog</a>.
      </p>
     </div>
   ',
@@ -13864,42 +13864,42 @@ the upgrade
      7.1.1. Several bugs have been fixed.
 
      All PHP 7.1 users are encouraged to upgrade to this version.
-     </p><p>For source downloads of PHP 7.1.1 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-     The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.1.1">ChangeLog</a>.
+     </p><p>For source downloads of PHP 7.1.1 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
+     Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
+     The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-7.php#7.1.1">ChangeLog</a>.
      </p></div>',
   ),
-  247 => 
+  247 =>
   array (
     'title' => 'PHPKonf: Istanbul PHP Conference 2017',
-    'id' => 'http://php.net/archive/2017.php#id2017-12-27-1',
+    'id' => 'https://www.php.net/archive/2017.php#id2017-12-27-1',
     'published' => '2017-03-27T18:00:00+00:00',
     'updated' => '2017-03-27T18:00:00+00:00',
     'finalTeaserDate' => '2017-05-20',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'conferences',
         'label' => 'Conference announcement',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/conferences/index.php#id2017-12-27-1',
+        'href' => 'https://www.php.net/conferences/index.php#id2017-12-27-1',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
         'href' => 'http://phpkonf.org/',
         'rel' => 'via',
         'type' => 'text/html',
       ),
     ),
-    'newsImage' => 
+    'newsImage' =>
     array (
       'xmlns' => 'http://php.net/ns/news',
       'link' => 'http://phpkonf.org/',
@@ -13914,42 +13914,42 @@ the upgrade
   ',
     'intro' => '<div><p>Istanbul PHP User Group is proud to announce that the PHPKonf 2017! We\'ll host some of the best speakers, awesome talk topics, latest technologies, and up to date news in PHP. Join us on 20th of May for a multi-track conference in ancient city Istanbul! Weâve something for every level of PHP developer with 1 keynotes, 14 talks.</p><a href="http://phpkonf.org">http://phpkonf.org</a></div>',
   ),
-  248 => 
+  248 =>
   array (
     'title' => 'PHPSerbia Conference 2017',
-    'id' => 'http://php.net/archive/2016.php#id2016-12-20-1',
+    'id' => 'https://www.php.net/archive/2016.php#id2016-12-20-1',
     'published' => '2016-12-20T13:08:01+00:00',
     'updated' => '2016-12-20T13:08:01+00:00',
     'finalTeaserDate' => '2017-05-27',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'conferences',
         'label' => 'Conference announcement',
       ),
-      1 => 
+      1 =>
       array (
         'term' => 'cfp',
         'label' => 'Call for Papers',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/conferences/index.php#id2016-12-20-1',
+        'href' => 'https://www.php.net/conferences/index.php#id2016-12-20-1',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
         'href' => 'http://conf2017.phpsrbija.rs/',
         'rel' => 'via',
         'type' => 'text/html',
       ),
     ),
-    'newsImage' => 
+    'newsImage' =>
     array (
       'xmlns' => 'http://php.net/ns/news',
       'link' => 'http://conf2017.phpsrbija.rs',
@@ -13966,36 +13966,36 @@ the upgrade
   ',
     'intro' => '<div><p>Conference that delivers high-value technical content about PHP and related web technologies, architecture, best practices and testing. Two days of amazing talks by some of the most prominent experts and professionals in the PHP world in a comfortable and professional setting.</p><p>At PHPSerbia Conference, youâll have the unique opportunity to learn about the latest development trends and innovations, as well as to network with fellow attendees and the speakers.</p><p class=\'fullArticleLink\'><a href=\'http://conf2017.phpsrbija.rs/\' class>&hellip; read full article</a></p></div>',
   ),
-  249 => 
+  249 =>
   array (
     'title' => 'PHP 5.6.29 Released',
-    'id' => 'http://php.net/archive/2016.php#id2016-12-08-2',
+    'id' => 'https://www.php.net/archive/2016.php#id2016-12-08-2',
     'published' => '2016-12-08T19:00:37-08:00',
     'updated' => '2016-12-08T19:00:37-08:00',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'frontpage',
         'label' => 'PHP.net frontpage news',
       ),
-      1 => 
+      1 =>
       array (
         'term' => 'releases',
         'label' => 'New PHP release',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/index.php#id2016-12-08-2',
+        'href' => 'https://www.php.net/index.php#id2016-12-08-2',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
-        'href' => 'http://php.net/archive/2016.php#id2016-12-08-2',
+        'href' => 'https://www.php.net/archive/2016.php#id2016-12-08-2',
         'rel' => 'via',
         'type' => 'text/html',
       ),
@@ -14007,9 +14007,9 @@ the upgrade
 
      All PHP 5.6 users are encouraged to upgrade to this version.</p>
 
-     <p>For source downloads of PHP 5.6.29 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-     The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.6.29">ChangeLog</a>.
+     <p>For source downloads of PHP 5.6.29 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
+     Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
+     The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-5.php#5.6.29">ChangeLog</a>.
      </p>
     </div>
   ',
@@ -14017,41 +14017,41 @@ the upgrade
      5.6.29. This is a security release. Several security bugs were fixed in
      this release.
 
-     All PHP 5.6 users are encouraged to upgrade to this version.</p><p>For source downloads of PHP 5.6.29 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-     The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.6.29">ChangeLog</a>.
+     All PHP 5.6 users are encouraged to upgrade to this version.</p><p>For source downloads of PHP 5.6.29 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
+     Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
+     The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-5.php#5.6.29">ChangeLog</a>.
      </p></div>',
   ),
-  250 => 
+  250 =>
   array (
     'title' => 'PHP 7.0.14 Released',
-    'id' => 'http://php.net/archive/2016.php#id2016-12-08-1',
+    'id' => 'https://www.php.net/archive/2016.php#id2016-12-08-1',
     'published' => '2016-12-08T13:00:00+01:00',
     'updated' => '2016-12-08T13:00:00+01:00',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'releases',
         'label' => 'New PHP release',
       ),
-      1 => 
+      1 =>
       array (
         'term' => 'frontpage',
         'label' => 'PHP.net frontpage news',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/index.php#id2016-12-08-1',
+        'href' => 'https://www.php.net/index.php#id2016-12-08-1',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
-        'href' => 'http://php.net/archive/2016.php#id2016-12-08-1',
+        'href' => 'https://www.php.net/archive/2016.php#id2016-12-08-1',
         'rel' => 'via',
         'type' => 'text/html',
       ),
@@ -14063,9 +14063,9 @@ the upgrade
 
      All PHP 7.0 users are encouraged to upgrade to this version.</p>
 
-     <p>For source downloads of PHP 7.0.14 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-     The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.0.14">ChangeLog</a>.
+     <p>For source downloads of PHP 7.0.14 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
+     Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
+     The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-7.php#7.0.14">ChangeLog</a>.
      </p>
     </div>
   ',
@@ -14073,42 +14073,42 @@ the upgrade
      7.0.14. This is a security release. Several security bugs were fixed in
      this release.
 
-     All PHP 7.0 users are encouraged to upgrade to this version.</p><p>For source downloads of PHP 7.0.14 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-     The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.0.14">ChangeLog</a>.
+     All PHP 7.0 users are encouraged to upgrade to this version.</p><p>For source downloads of PHP 7.0.14 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
+     Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
+     The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-7.php#7.0.14">ChangeLog</a>.
      </p></div>',
   ),
-  251 => 
+  251 =>
   array (
     'title' => 'CoderCruise',
-    'id' => 'http://php.net/archive/2016.php#id2016-12-07-1',
+    'id' => 'https://www.php.net/archive/2016.php#id2016-12-07-1',
     'published' => '2016-12-07T14:31:23-05:00',
     'updated' => '2016-12-07T14:31:23-05:00',
     'finalTeaserDate' => '2017-01-06',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'cfp',
         'label' => 'Call for Papers',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/conferences/index.php#id2016-12-07-1',
+        'href' => 'https://www.php.net/conferences/index.php#id2016-12-07-1',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
         'href' => 'https://www.codercruise.com/?paref=phpnet&utm_campaign=phpnet',
         'rel' => 'via',
         'type' => 'text/html',
       ),
     ),
-    'newsImage' => 
+    'newsImage' =>
     array (
       'xmlns' => 'http://php.net/ns/news',
       'link' => 'https://www.codercruise.com/?paref=phpnet&utm_campaign=phpnet',
@@ -14123,36 +14123,36 @@ the upgrade
   ',
     'intro' => '<div><p><a href="https://www.codercruise.com/?paref=phpnet&amp;utm_campaign=phpnet">CoderCruise</a> is the spiritual successor to php[cruise] that was run in 2016. The PHP community had so much fun that we decided we needed to expand the idea to the greater web tech community! This will be a 7-day cruise out of the port of New Orleans that will include 3 days of conference (while at sea) and 3 days at the ports of Montego Bay, Grand Cayman, and Cozumel.  Yes, you read that right.  This is a conference on a cruise ship.</p><p>We currently have our <a href="https://www.codercruise.com/call-for-speakers/?paref=phpnet&amp;utm_campaign=phpnet">Call for Speakers</a> open until January 6th, 2017.  For <a href="https://www.codercruise.com/?paref=phpnet&amp;utm_campaign=phpnet">CoderCruise</a> we are looking for submissions covering a wide range of web technology topics including coding, design, content, and more. Given the scope of this conference, emphasis will be given to talks that appeal to all web technologists regardless of their programming language of choice (or lack thereof).  We also welcome non-technical proposals that will appeal to a tech audience, and most importantly of all, we would love to have <strong>family-friendly sessions</strong> designed to teach kids to code or use related technologies.</p></div>',
   ),
-  252 => 
+  252 =>
   array (
     'title' => 'PHP 7.1.0 Released',
-    'id' => 'http://php.net/archive/2016.php#id2016-12-01-3',
+    'id' => 'https://www.php.net/archive/2016.php#id2016-12-01-3',
     'published' => '2016-12-01T17:55:05+00:00',
     'updated' => '2016-12-01T17:55:05+00:00',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'frontpage',
         'label' => 'PHP.net frontpage news',
       ),
-      1 => 
+      1 =>
       array (
         'term' => 'releases',
         'label' => 'New PHP release',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/index.php#id2016-12-01-3',
+        'href' => 'https://www.php.net/index.php#id2016-12-01-3',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
-        'href' => 'http://php.net/archive/2016.php#id2016-12-01-3',
+        'href' => 'https://www.php.net/archive/2016.php#id2016-12-01-3',
         'rel' => 'via',
         'type' => 'text/html',
       ),
@@ -14172,46 +14172,46 @@ the upgrade
      <li><a href="https://wiki.php.net/rfc#php_71">Many more features and changes…</a></li>
      </ul>
 
-     <p>For source downloads of PHP 7.1.0 please visit our <a href="http://www.php.net/downloads">downloads</a> page, Windows binaries can be found on the <a href="http://windows.php.net/download">PHP for Windows</a> site. The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.1.0">ChangeLog</a>.</p>
+     <p>For source downloads of PHP 7.1.0 please visit our <a href="https://www.php.net/downloads">downloads</a> page, Windows binaries can be found on the <a href="https://windows.php.net/download">PHP for Windows</a> site. The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-7.php#7.1.0">ChangeLog</a>.</p>
 
-     <p>The <a href="http://php.net/manual/en/migration71.php">migration guide</a> is available in the PHP Manual. Please consult it for the detailed list of new features and backward incompatible changes.</p>
+     <p>The <a href="https://www.php.net/manual/en/migration71.php">migration guide</a> is available in the PHP Manual. Please consult it for the detailed list of new features and backward incompatible changes.</p>
 
      <p>Many thanks to all the contributors and supporters!</p>
     </div>
   ',
-    'intro' => '<div><p>The PHP development team announces the immediate availability of PHP 7.1.0. This release is the first point release in the 7.x series.</p><p>PHP 7.1.0 comes with numerous improvements and new features such as</p><p class=\'fullArticleLink\'><a href=\'http://php.net/archive/2016.php#id2016-12-01-3\' class>&hellip; read full article</a></p></div>',
+    'intro' => '<div><p>The PHP development team announces the immediate availability of PHP 7.1.0. This release is the first point release in the 7.x series.</p><p>PHP 7.1.0 comes with numerous improvements and new features such as</p><p class=\'fullArticleLink\'><a href=\'https://www.php.net/archive/2016.php#id2016-12-01-3\' class>&hellip; read full article</a></p></div>',
   ),
-  253 => 
+  253 =>
   array (
     'title' => 'PHP South Coast 2017 - CFP opened',
-    'id' => 'http://php.net/archive/2016.php#id2016-12-01-2',
+    'id' => 'https://www.php.net/archive/2016.php#id2016-12-01-2',
     'published' => '2016-12-01T22:48:54+00:00',
     'updated' => '2016-12-01T22:48:54+00:00',
     'finalTeaserDate' => '2017-01-31',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'cfp',
         'label' => 'Call for Papers',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/conferences/index.php#id2016-12-01-2',
+        'href' => 'https://www.php.net/conferences/index.php#id2016-12-01-2',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
         'href' => 'https://2017.phpsouthcoast.co.uk/',
         'rel' => 'via',
         'type' => 'text/html',
       ),
     ),
-    'newsImage' => 
+    'newsImage' =>
     array (
       'xmlns' => 'http://php.net/ns/news',
       'link' => 'https://2017.phpsouthcoast.co.uk/',
@@ -14224,37 +14224,37 @@ the upgrade
   ',
     'intro' => '<div><a href="https://cfp.phpsouthcoast.co.uk/">call for papers site</a><a href="https://www.phpsouthcoast.co.uk/">PHP South Coast</a></div>',
   ),
-  254 => 
+  254 =>
   array (
     'title' => 'Web Summer Camp 2017',
-    'id' => 'http://php.net/archive/2016.php#id2016-12-01-1',
+    'id' => 'https://www.php.net/archive/2016.php#id2016-12-01-1',
     'published' => '2016-12-01T14:20:42+00:00',
     'updated' => '2016-12-01T14:20:42+00:00',
     'finalTeaserDate' => '2017-03-31',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'cfp',
         'label' => 'Call for Papers',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/conferences/index.php#id2016-12-01-1',
+        'href' => 'https://www.php.net/conferences/index.php#id2016-12-01-1',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
         'href' => 'http://2017.websummercamp.com',
         'rel' => 'via',
         'type' => 'text/html',
       ),
     ),
-    'newsImage' => 
+    'newsImage' =>
     array (
       'xmlns' => 'http://php.net/ns/news',
       'link' => 'http://2017.websummercamp.com',
@@ -14283,37 +14283,37 @@ the upgrade
      <a href="http://2016.websummercamp.com/PHP" title="Web Summer Camp 2016">http://2016.websummercamp.com/PHP</a>
      </p></div>',
   ),
-  255 => 
+  255 =>
   array (
     'title' => 'International PHP Conference 2017',
-    'id' => 'http://php.net/archive/2016.php#id2016-11-24-1',
+    'id' => 'https://www.php.net/archive/2016.php#id2016-11-24-1',
     'published' => '2016-11-24T09:54:24+01:00',
     'updated' => '2016-11-24T09:54:24+01:00',
     'finalTeaserDate' => '2016-12-30',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'conferences',
         'label' => 'Conference announcement',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/conferences/index.php#id2016-11-24-1',
+        'href' => 'https://www.php.net/conferences/index.php#id2016-11-24-1',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
         'href' => 'https://phpconference.com',
         'rel' => 'via',
         'type' => 'text/html',
       ),
     ),
-    'newsImage' => 
+    'newsImage' =>
     array (
       'xmlns' => 'http://php.net/ns/news',
       'link' => 'https://phpconference.com',
@@ -14353,37 +14353,37 @@ the upgrade
   ',
     'intro' => '<div><p><a href="https://phpconference.com">The International PHP Conference</a> is the world\'s first PHP conference and stands since more than a decade for top-notch pragmatic expertise in PHP and web technologies. At the IPC, internationally renowned experts from the PHP industry meet up with PHP users and developers from large and small companies. Here is the place where concepts emerge and ideas are born - the IPC signifies knowledge transfer at highest level.</p><p>All delegates of the <a href="https://phpconference.com">International PHP Conference</a> have, in addition to PHP program, free access to the entire range of the <a href="https://webinale.de">webinale \'17</a> taking place at the same time.</p><p class=\'fullArticleLink\'><a href=\'https://phpconference.com\' class>&hellip; read full article</a></p></div>',
   ),
-  256 => 
+  256 =>
   array (
     'title' => 'php[tek] 2017 — Call for Speakers',
-    'id' => 'http://php.net/archive/2016.php#id2016-11-11-1',
+    'id' => 'https://www.php.net/archive/2016.php#id2016-11-11-1',
     'published' => '2016-11-11T16:01:34-05:00',
     'updated' => '2016-11-11T16:01:34-05:00',
     'finalTeaserDate' => '2016-12-30',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'cfp',
         'label' => 'Call for Papers',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/conferences/index.php#id2016-11-11-1',
+        'href' => 'https://www.php.net/conferences/index.php#id2016-11-11-1',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
         'href' => 'https://tek.phparch.com/?paref=phpnet&utm_campaign=phpnet',
         'rel' => 'via',
         'type' => 'text/html',
       ),
     ),
-    'newsImage' => 
+    'newsImage' =>
     array (
       'xmlns' => 'http://php.net/ns/news',
       'link' => 'https://tek.phparch.com/?paref=phpnet&utm_campaign=phpnet',
@@ -14413,36 +14413,36 @@ the upgrade
   ',
     'intro' => '<div><p>The 12th annual edition of <a href="https://tek.phparch.com/?paref=phpnet&amp;utm_campaign=phpnet">php[tek]</a>, the longest running community focused PHP conference, will be taking place May 24-26, 2017 in Atlanta!  We have opened up our <a href="https://tek.phparch.com/call-for-speakers?paref=phpnet&amp;utm_campaign=phpnet">Call for Speakers</a> and look forward to seeing all the amazing proposals that you will submit to us.</p><p>This year we hope for a broad range of topics to share with our attendees. Besides core PHP matters such as PHP7, Security, and Testing, we want talks on the technologies crucial to modern Web development as well such as HTML5, JavaScript, mobile development, and emerging technologies. We also welcome non-technical proposals that will appeal to a developer audience.</p><p class=\'fullArticleLink\'><a href=\'https://tek.phparch.com/?paref=phpnet&utm_campaign=phpnet\' class>&hellip; read full article</a></p></div>',
   ),
-  257 => 
+  257 =>
   array (
     'title' => 'PHP 5.6.28 Released',
-    'id' => 'http://php.net/archive/2016.php#id2016-11-10-3',
+    'id' => 'https://www.php.net/archive/2016.php#id2016-11-10-3',
     'published' => '2016-11-10T19:24:41+00:00',
     'updated' => '2016-11-10T19:24:41+00:00',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'frontpage',
         'label' => 'PHP.net frontpage news',
       ),
-      1 => 
+      1 =>
       array (
         'term' => 'releases',
         'label' => 'New PHP release',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/index.php#id2016-11-10-3',
+        'href' => 'https://www.php.net/index.php#id2016-11-10-3',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
-        'href' => 'http://php.net/archive/2016.php#id2016-11-10-3',
+        'href' => 'https://www.php.net/archive/2016.php#id2016-11-10-3',
         'rel' => 'via',
         'type' => 'text/html',
       ),
@@ -14454,9 +14454,9 @@ the upgrade
 
      All PHP 5.6 users are encouraged to upgrade to this version.</p>
 
-     <p>For source downloads of PHP 5.6.28 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-     The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.6.28">ChangeLog</a>.
+     <p>For source downloads of PHP 5.6.28 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
+     Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
+     The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-5.php#5.6.28">ChangeLog</a>.
      </p>
     </div>
   ',
@@ -14464,41 +14464,41 @@ the upgrade
      5.6.28. This is a security release. Several security bugs were fixed in
      this release.
 
-     All PHP 5.6 users are encouraged to upgrade to this version.</p><p>For source downloads of PHP 5.6.28 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-     The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.6.28">ChangeLog</a>.
+     All PHP 5.6 users are encouraged to upgrade to this version.</p><p>For source downloads of PHP 5.6.28 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
+     Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
+     The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-5.php#5.6.28">ChangeLog</a>.
      </p></div>',
   ),
-  258 => 
+  258 =>
   array (
     'title' => 'PHP 7.1.0 Release Candidate 6 Released',
-    'id' => 'http://php.net/archive/2016.php#id2016-11-10-2',
+    'id' => 'https://www.php.net/archive/2016.php#id2016-11-10-2',
     'published' => '2016-11-10T17:00:00+00:00',
     'updated' => '2016-11-10T17:00:00+00:00',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'frontpage',
         'label' => 'PHP.net frontpage news',
       ),
-      1 => 
+      1 =>
       array (
         'term' => 'releases',
         'label' => 'New PHP release',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/index.php#id2016-11-10-2',
+        'href' => 'https://www.php.net/index.php#id2016-11-10-2',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
-        'href' => 'http://php.net/archive/2016.php#id2016-11-10-2',
+        'href' => 'https://www.php.net/archive/2016.php#id2016-11-10-2',
         'rel' => 'via',
         'type' => 'text/html',
       ),
@@ -14518,7 +14518,7 @@ the upgrade
      </p>
 
      <p>
-       For source downloads of PHP 7.1.0 Release Candidate 6 please visit the <a href="https://downloads.php.net/~krakjoe/">download</a> page, Windows sources and binaries can be found on <a href="http://windows.php.net/qa/">windows.php.net/qa/</a>.
+       For source downloads of PHP 7.1.0 Release Candidate 6 please visit the <a href="https://downloads.php.net/~krakjoe/">download</a> page, Windows sources and binaries can be found on <a href="https://windows.php.net/qa/">windows.php.net/qa/</a>.
      </p>
 
      <p>
@@ -14530,38 +14530,38 @@ the upgrade
        The PHP development team announces the immediate availability of PHP 7.1.0 Release Candidate 6. This release is the sixth and final release candidate for 7.1.0. All users of PHP are encouraged to test this version carefully, and report any bugs and incompatibilities in the bug tracking system.
      </p><p>
        <strong>THIS IS A DEVELOPMENT PREVIEW - DO NOT USE IT IN PRODUCTION!</strong>
-     </p><p class=\'fullArticleLink\'><a href=\'http://php.net/archive/2016.php#id2016-11-10-2\' class>&hellip; read full article</a></p></div>',
+     </p><p class=\'fullArticleLink\'><a href=\'https://www.php.net/archive/2016.php#id2016-11-10-2\' class>&hellip; read full article</a></p></div>',
   ),
-  259 => 
+  259 =>
   array (
     'title' => 'PHP 7.0.13 Released',
-    'id' => 'http://php.net/archive/2016.php#id2016-11-10-1',
+    'id' => 'https://www.php.net/archive/2016.php#id2016-11-10-1',
     'published' => '2016-11-10T13:00:00+01:00',
     'updated' => '2016-11-10T13:00:00+01:00',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'releases',
         'label' => 'New PHP release',
       ),
-      1 => 
+      1 =>
       array (
         'term' => 'frontpage',
         'label' => 'PHP.net frontpage news',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/index.php#id2016-11-10-1',
+        'href' => 'https://www.php.net/index.php#id2016-11-10-1',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
-        'href' => 'http://php.net/archive/2016.php#id2016-11-10-1',
+        'href' => 'https://www.php.net/archive/2016.php#id2016-11-10-1',
         'rel' => 'via',
         'type' => 'text/html',
       ),
@@ -14573,9 +14573,9 @@ the upgrade
 
      All PHP 7.0 users are encouraged to upgrade to this version.</p>
 
-     <p>For source downloads of PHP 7.0.13 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-     The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.0.13">ChangeLog</a>.
+     <p>For source downloads of PHP 7.0.13 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
+     Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
+     The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-7.php#7.0.13">ChangeLog</a>.
      </p>
     </div>
   ',
@@ -14583,42 +14583,42 @@ the upgrade
      7.0.13. This is a security release. Several security bugs were fixed in
      this release.
 
-     All PHP 7.0 users are encouraged to upgrade to this version.</p><p>For source downloads of PHP 7.0.13 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-     The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.0.13">ChangeLog</a>.
+     All PHP 7.0 users are encouraged to upgrade to this version.</p><p>For source downloads of PHP 7.0.13 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
+     Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
+     The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-7.php#7.0.13">ChangeLog</a>.
      </p></div>',
   ),
-  260 => 
+  260 =>
   array (
     'title' => 'International PHP Conference 2017 - Call for Papers',
-    'id' => 'http://php.net/archive/2016.php#id2016-11-02-1',
+    'id' => 'https://www.php.net/archive/2016.php#id2016-11-02-1',
     'published' => '2016-11-02T15:44:54-04:00',
     'updated' => '2016-11-02T15:44:54-04:00',
     'finalTeaserDate' => '2016-11-02',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'cfp',
         'label' => 'Call for Papers',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/conferences/index.php#id2016-11-02-1',
+        'href' => 'https://www.php.net/conferences/index.php#id2016-11-02-1',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
         'href' => 'https://callforpapers.sandsmedia.com',
         'rel' => 'via',
         'type' => 'text/html',
       ),
     ),
-    'newsImage' => 
+    'newsImage' =>
     array (
       'xmlns' => 'http://php.net/ns/news',
       'link' => 'https://callforpapers.sandsmedia.com',
@@ -14647,37 +14647,37 @@ the upgrade
   ',
     'intro' => '<div></div>',
   ),
-  261 => 
+  261 =>
   array (
     'title' => 'SunshinePHP 2017 Schedule Announced',
-    'id' => 'http://php.net/archive/2016.php#id2016-11-01-1',
+    'id' => 'https://www.php.net/archive/2016.php#id2016-11-01-1',
     'published' => '2016-11-01T00:00:01+00:00',
     'updated' => '2016-11-01T12:23:00+00:00',
     'finalTeaserDate' => '2016-11-01',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'conferences',
         'label' => 'Conference announcement',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/conferences/index.php#id2016-11-01-1',
+        'href' => 'https://www.php.net/conferences/index.php#id2016-11-01-1',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
         'href' => 'http://sunshinephp.com',
         'rel' => 'via',
         'type' => 'text/html',
       ),
     ),
-    'newsImage' => 
+    'newsImage' =>
     array (
       'xmlns' => 'http://php.net/ns/news',
       'link' => 'http://sunshinephp.com',
@@ -14698,37 +14698,37 @@ the upgrade
 	',
     'intro' => '<div><p>We are pleased to announce the <a href="http://sunshinephp.com/schedule" title="SunshinePHP Schedule">2017 SunshinePHP Schedule</a>. Our highly diverse lineup of 45 speakers will be delivering 5 keynotes, 8 in-depth 3-hour tutorials, and 40 talks 1-hour in length over this 3 day event.</p><p>SunshinePHP hit it\'s 5th year and will happen from February 2nd to 4th, 2017 in sunny Miami, Florida. As one of the largest community conferences in the U.S. the schedule is amazing this year. We will have a full tutorial day featuring 3-hour sessions followed by 2 days of 1-hour talks and inspirational keynotes.</p><p class=\'fullArticleLink\'><a href=\'http://sunshinephp.com\' class>&hellip; read full article</a></p></div>',
   ),
-  262 => 
+  262 =>
   array (
     'title' => 'ConFoo Vancouver & Montreal',
-    'id' => 'http://php.net/archive/2016.php#id2016-10-28-1',
+    'id' => 'https://www.php.net/archive/2016.php#id2016-10-28-1',
     'published' => '2016-10-28T12:22:24-04:00',
     'updated' => '2016-10-28T12:22:24-04:00',
     'finalTeaserDate' => '2016-12-05',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'conferences',
         'label' => 'Conference announcement',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/conferences/index.php#id2016-10-28-1',
+        'href' => 'https://www.php.net/conferences/index.php#id2016-10-28-1',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
         'href' => 'https://confoo.ca/en',
         'rel' => 'via',
         'type' => 'text/html',
       ),
     ),
-    'newsImage' => 
+    'newsImage' =>
     array (
       'xmlns' => 'http://php.net/ns/news',
       'link' => 'https://confoo.ca/en',
@@ -14747,36 +14747,36 @@ the upgrade
   ',
     'intro' => '<div><p>We recently released the presentations for <a href="https://confoo.ca/en/yul2017/sessions">ConFoo Montreal</a>. This giant conference will be held on March 8-10, 2017.</p><p>It\'s also the last chance to get tickets for <a href="https://confoo.ca/en/yvr2016/sessions">ConFoo Vancouver</a>, held on December 5-7, 2016.</p><p class=\'fullArticleLink\'><a href=\'https://confoo.ca/en\' class>&hellip; read full article</a></p></div>',
   ),
-  263 => 
+  263 =>
   array (
     'title' => 'PHP 7.1.0 Release Candidate 5 Released',
-    'id' => 'http://php.net/archive/2016.php#id2016-10-27-1',
+    'id' => 'https://www.php.net/archive/2016.php#id2016-10-27-1',
     'published' => '2016-10-27T15:00:00+00:00',
     'updated' => '2016-10-27T15:00:00+00:00',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'frontpage',
         'label' => 'PHP.net frontpage news',
       ),
-      1 => 
+      1 =>
       array (
         'term' => 'releases',
         'label' => 'New PHP release',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/index.php#id2016-10-27-1',
+        'href' => 'https://www.php.net/index.php#id2016-10-27-1',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
-        'href' => 'http://php.net/archive/2016.php#id2016-10-27-1',
+        'href' => 'https://www.php.net/archive/2016.php#id2016-10-27-1',
         'rel' => 'via',
         'type' => 'text/html',
       ),
@@ -14796,7 +14796,7 @@ the upgrade
      </p>
 
      <p>
-       For source downloads of PHP 7.1.0 Release Candidate 5 please visit the <a href="https://downloads.php.net/~krakjoe/">download</a> page, Windows sources and binaries can be found on <a href="http://windows.php.net/qa/">windows.php.net/qa/</a>.
+       For source downloads of PHP 7.1.0 Release Candidate 5 please visit the <a href="https://downloads.php.net/~krakjoe/">download</a> page, Windows sources and binaries can be found on <a href="https://windows.php.net/qa/">windows.php.net/qa/</a>.
      </p>
 
      <p>
@@ -14812,39 +14812,39 @@ the upgrade
        The PHP development team announces the immediate availability of PHP 7.1.0 Release Candidate 5. This release is the fifth release candidate for 7.1.0. All users of PHP are encouraged to test this version carefully, and report any bugs and incompatibilities in the bug tracking system.
      </p><p>
        <strong>THIS IS A DEVELOPMENT PREVIEW - DO NOT USE IT IN PRODUCTION!</strong>
-     </p><p class=\'fullArticleLink\'><a href=\'http://php.net/archive/2016.php#id2016-10-27-1\' class>&hellip; read full article</a></p></div>',
+     </p><p class=\'fullArticleLink\'><a href=\'https://www.php.net/archive/2016.php#id2016-10-27-1\' class>&hellip; read full article</a></p></div>',
   ),
-  264 => 
+  264 =>
   array (
     'title' => 'PhpConference Brasil 2016',
-    'id' => 'http://php.net/archive/2016.php#id2016-10-26-1',
+    'id' => 'https://www.php.net/archive/2016.php#id2016-10-26-1',
     'published' => '2016-10-26T10:22:11-02:00',
     'updated' => '2016-10-26T10:22:11-02:00',
     'finalTeaserDate' => '2016-12-07',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'conferences',
         'label' => 'Conference announcement',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/conferences/index.php#id2016-10-26-1',
+        'href' => 'https://www.php.net/conferences/index.php#id2016-10-26-1',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
         'href' => 'http://www.phpconference.com.br/',
         'rel' => 'via',
         'type' => 'text/html',
       ),
     ),
-    'newsImage' => 
+    'newsImage' =>
     array (
       'xmlns' => 'http://php.net/ns/news',
       'link' => 'http://www.phpconference.com.br/',
@@ -14885,36 +14885,36 @@ the upgrade
      The 11th edition of PhpConference Brasil will happen between December 7th (Wednesday) and December 11th (Sunday).
      </p><p class=\'fullArticleLink\'><a href=\'http://www.phpconference.com.br/\' class>&hellip; read full article</a></p></div>',
   ),
-  265 => 
+  265 =>
   array (
     'title' => 'PHP 7.1.0 Release Candidate 4 Released',
-    'id' => 'http://php.net/archive/2016.php#id2016-10-19-1',
+    'id' => 'https://www.php.net/archive/2016.php#id2016-10-19-1',
     'published' => '2016-10-19T14:00:00+00:00',
     'updated' => '2016-10-19T14:00:00+00:00',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'frontpage',
         'label' => 'PHP.net frontpage news',
       ),
-      1 => 
+      1 =>
       array (
         'term' => 'releases',
         'label' => 'New PHP release',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/index.php#id2016-10-19-1',
+        'href' => 'https://www.php.net/index.php#id2016-10-19-1',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
-        'href' => 'http://php.net/archive/2016.php#id2016-10-19-1',
+        'href' => 'https://www.php.net/archive/2016.php#id2016-10-19-1',
         'rel' => 'via',
         'type' => 'text/html',
       ),
@@ -14934,7 +14934,7 @@ the upgrade
      </p>
 
      <p>
-       For source downloads of PHP 7.1.0 Release Candidate 4 please visit the <a href="https://downloads.php.net/~krakjoe/">download</a> page, Windows sources and binaries can be found on <a href="http://windows.php.net/qa/">windows.php.net/qa/</a>.
+       For source downloads of PHP 7.1.0 Release Candidate 4 please visit the <a href="https://downloads.php.net/~krakjoe/">download</a> page, Windows sources and binaries can be found on <a href="https://windows.php.net/qa/">windows.php.net/qa/</a>.
      </p>
 
      <p>
@@ -14950,39 +14950,39 @@ the upgrade
        The PHP development team announces the immediate availability of PHP 7.1.0 Release Candidate 4. This release is the fourth release candidate for 7.1.0. All users of PHP are encouraged to test this version carefully, and report any bugs and incompatibilities in the bug tracking system.
      </p><p>
        <strong>THIS IS A DEVELOPMENT PREVIEW - DO NOT USE IT IN PRODUCTION!</strong>
-     </p><p class=\'fullArticleLink\'><a href=\'http://php.net/archive/2016.php#id2016-10-19-1\' class>&hellip; read full article</a></p></div>',
+     </p><p class=\'fullArticleLink\'><a href=\'https://www.php.net/archive/2016.php#id2016-10-19-1\' class>&hellip; read full article</a></p></div>',
   ),
-  266 => 
+  266 =>
   array (
     'title' => 'Midwest PHP 2017 Conference Call for Papers is Open',
-    'id' => 'http://php.net/archive/2016.php#id2016-10-18-1',
+    'id' => 'https://www.php.net/archive/2016.php#id2016-10-18-1',
     'published' => '2016-10-18T10:46:00-06:00',
     'updated' => '2016-10-18T10:46:00-06:00',
     'finalTeaserDate' => '2016-11-15',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'conferences',
         'label' => 'Conference announcement',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/conferences/index.php#id2016-10-18-1',
+        'href' => 'https://www.php.net/conferences/index.php#id2016-10-18-1',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
         'href' => 'https://2017.midwestphp.org',
         'rel' => 'via',
         'type' => 'text/html',
       ),
     ),
-    'newsImage' => 
+    'newsImage' =>
     array (
       'xmlns' => 'http://php.net/ns/news',
       'link' => 'https://2017.midwestphp.org',
@@ -15014,36 +15014,36 @@ the upgrade
                  is launching into its fifth year at the Radisson Blu at Mall of America on March 17-18. With the growth of the
                 Midwest PHP conference this is the one conference you cannot afford to miss in 2017.</p><p class=\'fullArticleLink\'><a href=\'https://2017.midwestphp.org\' class>&hellip; read full article</a></p></div>',
   ),
-  267 => 
+  267 =>
   array (
     'title' => 'PHP 5.6.27 Released',
-    'id' => 'http://php.net/archive/2016.php#id2016-10-14-1',
+    'id' => 'https://www.php.net/archive/2016.php#id2016-10-14-1',
     'published' => '2016-10-14T21:29:35+00:00',
     'updated' => '2016-10-14T21:29:35+00:00',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'frontpage',
         'label' => 'PHP.net frontpage news',
       ),
-      1 => 
+      1 =>
       array (
         'term' => 'releases',
         'label' => 'New PHP release',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/index.php#id2016-10-14-1',
+        'href' => 'https://www.php.net/index.php#id2016-10-14-1',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
-        'href' => 'http://php.net/archive/2016.php#id2016-10-14-1',
+        'href' => 'https://www.php.net/archive/2016.php#id2016-10-14-1',
         'rel' => 'via',
         'type' => 'text/html',
       ),
@@ -15055,9 +15055,9 @@ the upgrade
 
      All PHP 5.6 users are encouraged to upgrade to this version.</p>
 
-     <p>For source downloads of PHP 5.6.27 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-     The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.6.27">ChangeLog</a>.
+     <p>For source downloads of PHP 5.6.27 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
+     Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
+     The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-5.php#5.6.27">ChangeLog</a>.
      </p>
     </div>
   ',
@@ -15065,41 +15065,41 @@ the upgrade
      5.6.27. This is a security release. Several security bugs were fixed in
      this release.
 
-     All PHP 5.6 users are encouraged to upgrade to this version.</p><p>For source downloads of PHP 5.6.27 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-     The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.6.27">ChangeLog</a>.
+     All PHP 5.6 users are encouraged to upgrade to this version.</p><p>For source downloads of PHP 5.6.27 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
+     Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
+     The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-5.php#5.6.27">ChangeLog</a>.
      </p></div>',
   ),
-  268 => 
+  268 =>
   array (
     'title' => 'PHP 7.0.12 Released',
-    'id' => 'http://php.net/archive/2016.php#id2016-10-13-1',
+    'id' => 'https://www.php.net/archive/2016.php#id2016-10-13-1',
     'published' => '2016-10-13T23:00:00+01:00',
     'updated' => '2016-10-13T23:00:00+01:00',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'releases',
         'label' => 'New PHP release',
       ),
-      1 => 
+      1 =>
       array (
         'term' => 'frontpage',
         'label' => 'PHP.net frontpage news',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/index.php#id2016-10-13-1',
+        'href' => 'https://www.php.net/index.php#id2016-10-13-1',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
-        'href' => 'http://php.net/archive/2016.php#id2016-10-13-1',
+        'href' => 'https://www.php.net/archive/2016.php#id2016-10-13-1',
         'rel' => 'via',
         'type' => 'text/html',
       ),
@@ -15111,9 +15111,9 @@ the upgrade
 
      All PHP 7.0 users are encouraged to upgrade to this version.</p>
 
-     <p>For source downloads of PHP 7.0.12 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-     The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.0.12">ChangeLog</a>.
+     <p>For source downloads of PHP 7.0.12 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
+     Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
+     The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-7.php#7.0.12">ChangeLog</a>.
      </p>
     </div>
   ',
@@ -15121,41 +15121,41 @@ the upgrade
      7.0.12. This is a security release. Several security bugs were fixed in
      this release.
 
-     All PHP 7.0 users are encouraged to upgrade to this version.</p><p>For source downloads of PHP 7.0.12 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-     The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.0.12">ChangeLog</a>.
+     All PHP 7.0 users are encouraged to upgrade to this version.</p><p>For source downloads of PHP 7.0.12 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
+     Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
+     The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-7.php#7.0.12">ChangeLog</a>.
      </p></div>',
   ),
-  269 => 
+  269 =>
   array (
     'title' => 'PHP 7.1.0 Release Candidate 3 Released',
-    'id' => 'http://php.net/archive/2016.php#id2016-09-29-1',
+    'id' => 'https://www.php.net/archive/2016.php#id2016-09-29-1',
     'published' => '2016-09-29T17:46:09+00:00',
     'updated' => '2016-09-29T17:46:09+00:00',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'frontpage',
         'label' => 'PHP.net frontpage news',
       ),
-      1 => 
+      1 =>
       array (
         'term' => 'releases',
         'label' => 'New PHP release',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/index.php#id2016-09-29-1',
+        'href' => 'https://www.php.net/index.php#id2016-09-29-1',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
-        'href' => 'http://php.net/archive/2016.php#id2016-09-29-1',
+        'href' => 'https://www.php.net/archive/2016.php#id2016-09-29-1',
         'rel' => 'via',
         'type' => 'text/html',
       ),
@@ -15175,7 +15175,7 @@ the upgrade
      </p>
 
      <p>
-       For source downloads of PHP 7.1.0 Release Candidate 3 please visit the <a href="https://downloads.php.net/~davey/">download</a> page, Windows sources and binaries can be found on <a href="http://windows.php.net/qa/">windows.php.net/qa/</a>.
+       For source downloads of PHP 7.1.0 Release Candidate 3 please visit the <a href="https://downloads.php.net/~davey/">download</a> page, Windows sources and binaries can be found on <a href="https://windows.php.net/qa/">windows.php.net/qa/</a>.
      </p>
 
      <p>
@@ -15191,39 +15191,39 @@ the upgrade
        The PHP development team announces the immediate availability of PHP 7.1.0 Release Candidate 3. This release is the third release candidate for 7.1.0. All users of PHP are encouraged to test this version carefully, and report any bugs and incompatibilities in the bug tracking system.
      </p><p>
        <strong>THIS IS A DEVELOPMENT PREVIEW - DO NOT USE IT IN PRODUCTION!</strong>
-     </p><p class=\'fullArticleLink\'><a href=\'http://php.net/archive/2016.php#id2016-09-29-1\' class>&hellip; read full article</a></p></div>',
+     </p><p class=\'fullArticleLink\'><a href=\'https://www.php.net/archive/2016.php#id2016-09-29-1\' class>&hellip; read full article</a></p></div>',
   ),
-  270 => 
+  270 =>
   array (
     'title' => 'PHP UK Conference 2017 Call for Papers',
-    'id' => 'http://php.net/archive/2016.php#id2016-09-22-2',
+    'id' => 'https://www.php.net/archive/2016.php#id2016-09-22-2',
     'published' => '2016-09-22T09:00:00+00:00',
     'updated' => '2016-09-22T09:00:00+00:00',
     'finalTeaserDate' => '2016-10-17',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'cfp',
         'label' => 'Call for Papers',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/conferences/index.php#id2016-09-22-2',
+        'href' => 'https://www.php.net/conferences/index.php#id2016-09-22-2',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
         'href' => 'http://phpconference.co.uk',
         'rel' => 'via',
         'type' => 'text/html',
       ),
     ),
-    'newsImage' => 
+    'newsImage' =>
     array (
       'xmlns' => 'http://php.net/ns/news',
       'link' => 'http://phpconference.co.uk',
@@ -15251,36 +15251,36 @@ the upgrade
         Open until: October 17th 2016 6pm GMT
       </h4><p>The PHP UK Conference 2017 Call for Papers is now open!</p><p class=\'fullArticleLink\'><a href=\'http://phpconference.co.uk\' class>&hellip; read full article</a></p></div>',
   ),
-  271 => 
+  271 =>
   array (
     'title' => 'PHP 7.1.0 Release Candidate 2 Released',
-    'id' => 'http://php.net/archive/2016.php#id2016-09-16-2',
+    'id' => 'https://www.php.net/archive/2016.php#id2016-09-16-2',
     'published' => '2016-09-16T23:33:30+00:00',
     'updated' => '2016-09-16T23:33:30+00:00',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'frontpage',
         'label' => 'PHP.net frontpage news',
       ),
-      1 => 
+      1 =>
       array (
         'term' => 'releases',
         'label' => 'New PHP release',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/index.php#id2016-09-16-2',
+        'href' => 'https://www.php.net/index.php#id2016-09-16-2',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
-        'href' => 'http://php.net/archive/2016.php#id2016-09-16-2',
+        'href' => 'https://www.php.net/archive/2016.php#id2016-09-16-2',
         'rel' => 'via',
         'type' => 'text/html',
       ),
@@ -15300,7 +15300,7 @@ the upgrade
      </p>
 
      <p>
-       For source downloads of PHP 7.1.0 Release Candidate 2 please visit the <a href="https://downloads.php.net/~davey/">download</a> page, Windows sources and binaries can be found on <a href="http://windows.php.net/qa/">windows.php.net/qa/</a>.
+       For source downloads of PHP 7.1.0 Release Candidate 2 please visit the <a href="https://downloads.php.net/~davey/">download</a> page, Windows sources and binaries can be found on <a href="https://windows.php.net/qa/">windows.php.net/qa/</a>.
      </p>
 
      <p>
@@ -15316,38 +15316,38 @@ the upgrade
        The PHP development team announces the immediate availability of PHP 7.1.0 Release Candidate 2. This release is the second release candidate for 7.1.0. All users of PHP are encouraged to test this version carefully, and report any bugs and incompatibilities in the bug tracking system.
      </p><p>
        <strong>THIS IS A DEVELOPMENT PREVIEW - DO NOT USE IT IN PRODUCTION!</strong>
-     </p><p class=\'fullArticleLink\'><a href=\'http://php.net/archive/2016.php#id2016-09-16-2\' class>&hellip; read full article</a></p></div>',
+     </p><p class=\'fullArticleLink\'><a href=\'https://www.php.net/archive/2016.php#id2016-09-16-2\' class>&hellip; read full article</a></p></div>',
   ),
-  272 => 
+  272 =>
   array (
     'title' => 'PHP 5.6.26 is released',
-    'id' => 'http://php.net/archive/2016.php#id2016-09-16-1',
+    'id' => 'https://www.php.net/archive/2016.php#id2016-09-16-1',
     'published' => '2016-09-16T06:39:08+00:00',
     'updated' => '2016-09-16T06:39:08+00:00',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'frontpage',
         'label' => 'PHP.net frontpage news',
       ),
-      1 => 
+      1 =>
       array (
         'term' => 'releases',
         'label' => 'New PHP release',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/index.php#id2016-09-16-1',
+        'href' => 'https://www.php.net/index.php#id2016-09-16-1',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
-        'href' => 'http://php.net/archive/2016.php#id2016-09-16-1',
+        'href' => 'https://www.php.net/archive/2016.php#id2016-09-16-1',
         'rel' => 'via',
         'type' => 'text/html',
       ),
@@ -15359,9 +15359,9 @@ the upgrade
 
      All PHP 5.6 users are encouraged to upgrade to this version.</p>
 
-     <p>For source downloads of PHP 5.6.26 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-     The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.6.26">ChangeLog</a>.
+     <p>For source downloads of PHP 5.6.26 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
+     Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
+     The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-5.php#5.6.26">ChangeLog</a>.
      </p>
     </div>
   ',
@@ -15369,41 +15369,41 @@ the upgrade
      5.6.26. This is a security release. Several security bugs were fixed in
      this release.
 
-     All PHP 5.6 users are encouraged to upgrade to this version.</p><p>For source downloads of PHP 5.6.26 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-     The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.6.26">ChangeLog</a>.
+     All PHP 5.6 users are encouraged to upgrade to this version.</p><p>For source downloads of PHP 5.6.26 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
+     Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
+     The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-5.php#5.6.26">ChangeLog</a>.
      </p></div>',
   ),
-  273 => 
+  273 =>
   array (
     'title' => 'PHP 7.0.11 Released',
-    'id' => 'http://php.net/archive/2016.php#id2016-09-15-1',
+    'id' => 'https://www.php.net/archive/2016.php#id2016-09-15-1',
     'published' => '2016-09-15T13:00:00+01:00',
     'updated' => '2016-09-15T13:00:00+01:00',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'releases',
         'label' => 'New PHP release',
       ),
-      1 => 
+      1 =>
       array (
         'term' => 'frontpage',
         'label' => 'PHP.net frontpage news',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/index.php#id2016-09-15-1',
+        'href' => 'https://www.php.net/index.php#id2016-09-15-1',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
-        'href' => 'http://php.net/archive/2016.php#id2016-09-15-1',
+        'href' => 'https://www.php.net/archive/2016.php#id2016-09-15-1',
         'rel' => 'via',
         'type' => 'text/html',
       ),
@@ -15415,9 +15415,9 @@ the upgrade
 
      All PHP 7.0 users are encouraged to upgrade to this version.</p>
 
-     <p>For source downloads of PHP 7.0.11 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-     The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.0.11">ChangeLog</a>.
+     <p>For source downloads of PHP 7.0.11 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
+     Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
+     The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-7.php#7.0.11">ChangeLog</a>.
      </p>
     </div>
   ',
@@ -15425,42 +15425,42 @@ the upgrade
      7.0.11. This is a security release. Several security bugs were fixed in
      this release.
 
-     All PHP 7.0 users are encouraged to upgrade to this version.</p><p>For source downloads of PHP 7.0.11 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-     The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.0.11">ChangeLog</a>.
+     All PHP 7.0 users are encouraged to upgrade to this version.</p><p>For source downloads of PHP 7.0.11 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
+     Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
+     The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-7.php#7.0.11">ChangeLog</a>.
      </p></div>',
   ),
-  274 => 
+  274 =>
   array (
     'title' => 'php[world] 2016',
-    'id' => 'http://php.net/archive/2016.php#id2016-09-09-1',
+    'id' => 'https://www.php.net/archive/2016.php#id2016-09-09-1',
     'published' => '2016-09-09T08:05:18-04:00',
     'updated' => '2016-09-09T08:05:18-04:00',
     'finalTeaserDate' => '2016-11-14',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'conferences',
         'label' => 'Conference announcement',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/conferences/index.php#id2016-09-09-1',
+        'href' => 'https://www.php.net/conferences/index.php#id2016-09-09-1',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
         'href' => 'https://world.phparch.com/?paref=phpnet&utm_campaign=phpnet',
         'rel' => 'via',
         'type' => 'text/html',
       ),
     ),
-    'newsImage' => 
+    'newsImage' =>
     array (
       'xmlns' => 'http://php.net/ns/news',
       'link' => 'https://world.phparch.com/?paref=phpnet&utm_campaign=phpnet',
@@ -15487,37 +15487,37 @@ the upgrade
   ',
     'intro' => '<div><p>The team behind php[architect] magazine are excited to announce the full schedule for our Fall conference: <a href="https://world.phparch.com/?paref=phpnet&amp;utm_campaign=phpnet">php[world] 2016</a> coming up from November 14-18 in Washington, D.C.</p><p>This conference will be our biggest yet, featuring 60 sessions, 10 workshops, and 5 one and two-day <a href="https://world.phparch.com/session-track/training/?paref=phpnet&amp;utm_campaign=phpnet">training classes</a>.  Not to mention 5 <a href="https://world.phparch.com/session-track/keynote/?paref=phpnet&amp;utm_campaign=phpnet">amazing keynotes</a> from leaders in the PHP community, and a <a href="https://world.phparch.com/sessions/keynote-cruft-class-nprs-15-year-journey-php/?paref=phpnet&amp;utm_campaign=phpnet">special keynote</a> by developers from NPR Radio to talk about their experiences with PHP.</p><p class=\'fullArticleLink\'><a href=\'https://world.phparch.com/?paref=phpnet&utm_campaign=phpnet\' class>&hellip; read full article</a></p></div>',
   ),
-  275 => 
+  275 =>
   array (
     'title' => 'PHPBenelux Conference 2017 CfP Opened',
-    'id' => 'http://php.net/archive/2016.php#id2016-09-06-1',
+    'id' => 'https://www.php.net/archive/2016.php#id2016-09-06-1',
     'published' => '2016-09-06T01:53:15+02:00',
     'updated' => '2016-09-06T01:53:15+02:00',
     'finalTeaserDate' => '2016-10-02',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'cfp',
         'label' => 'Call for Papers',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/conferences/index.php#id2016-09-06-1',
+        'href' => 'https://www.php.net/conferences/index.php#id2016-09-06-1',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
         'href' => 'https://cfp.phpbenelux.eu/',
         'rel' => 'via',
         'type' => 'text/html',
       ),
     ),
-    'newsImage' => 
+    'newsImage' =>
     array (
       'xmlns' => 'http://php.net/ns/news',
       'link' => 'https://cfp.phpbenelux.eu/',
@@ -15539,36 +15539,36 @@ the upgrade
          We like to invite speakers to submit their tutorials and talks at <a href="https://cfp.phpbenelux.eu/?utm_source=php_net&amp;utm_medium=announcement&amp;utm_term=phpbnl17%2Bcfp&amp;utm_content=textlink&amp;utm_campaign=phpbnl17_cfp">PHPBenelux CFP</a>. Follow us on <a href="https://twitter.com/phpbenelux">Twitter</a> or like us on <a href="https://www.facebook.com/PHPBenelux-194314644038733/">Facebook</a> to stay updated with news from the PHPBenelux crew.
       </p></div>',
   ),
-  276 => 
+  276 =>
   array (
     'title' => 'PHP 7.1.0 Release Candidate 1 Released',
-    'id' => 'http://php.net/archive/2016.php#id2016-09-01-1',
+    'id' => 'https://www.php.net/archive/2016.php#id2016-09-01-1',
     'published' => '2016-09-01T15:18:32+00:00',
     'updated' => '2016-09-01T15:18:32+00:00',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'frontpage',
         'label' => 'PHP.net frontpage news',
       ),
-      1 => 
+      1 =>
       array (
         'term' => 'releases',
         'label' => 'New PHP release',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/index.php#id2016-09-01-1',
+        'href' => 'https://www.php.net/index.php#id2016-09-01-1',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
-        'href' => 'http://php.net/archive/2016.php#id2016-09-01-1',
+        'href' => 'https://www.php.net/archive/2016.php#id2016-09-01-1',
         'rel' => 'via',
         'type' => 'text/html',
       ),
@@ -15588,7 +15588,7 @@ the upgrade
      </p>
 
      <p>
-     For source downloads of PHP 7.1.0 Release Candidate 1 please visit the <a href="https://downloads.php.net/~davey/">download</a> page, Windows sources and binaries can be found on <a href="http://windows.php.net/qa/">windows.php.net/qa/</a>.
+     For source downloads of PHP 7.1.0 Release Candidate 1 please visit the <a href="https://downloads.php.net/~davey/">download</a> page, Windows sources and binaries can be found on <a href="https://windows.php.net/qa/">windows.php.net/qa/</a>.
      </p>
 
      <p>
@@ -15604,39 +15604,39 @@ the upgrade
      The PHP development team announces the immediate availability of PHP 7.1.0 Release Candidate 1. This release is the first release candidate for 7.1.0. All users of PHP are encouraged to test this version carefully, and report any bugs and incompatibilities in the bug tracking system.
      </p><p>
      <strong>THIS IS A DEVELOPMENT PREVIEW - DO NOT USE IT IN PRODUCTION!</strong>
-     </p><p class=\'fullArticleLink\'><a href=\'http://php.net/archive/2016.php#id2016-09-01-1\' class>&hellip; read full article</a></p></div>',
+     </p><p class=\'fullArticleLink\'><a href=\'https://www.php.net/archive/2016.php#id2016-09-01-1\' class>&hellip; read full article</a></p></div>',
   ),
-  277 => 
+  277 =>
   array (
     'title' => 'ScotlandPHP 2016',
-    'id' => 'http://php.net/archive/2016.php#id2016-08-27-1',
+    'id' => 'https://www.php.net/archive/2016.php#id2016-08-27-1',
     'published' => '2016-08-27T12:14:42+00:00',
     'updated' => '2016-08-29T20:00:00+01:00',
     'finalTeaserDate' => '2016-10-29',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'conferences',
         'label' => 'Conference announcement',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/conferences/index.php#id2016-08-27-1',
+        'href' => 'https://www.php.net/conferences/index.php#id2016-08-27-1',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
         'href' => 'https://conference.scotlandphp.co.uk',
         'rel' => 'via',
         'type' => 'text/html',
       ),
     ),
-    'newsImage' => 
+    'newsImage' =>
     array (
       'xmlns' => 'http://php.net/ns/news',
       'link' => 'https://conference.scotlandphp.co.uk',
@@ -15674,37 +15674,37 @@ the upgrade
         and bookended by keynotes from world class speakers: Anthony Ferrara and Jessica Rose.
       </p><p class=\'fullArticleLink\'><a href=\'https://conference.scotlandphp.co.uk\' class>&hellip; read full article</a></p></div>',
   ),
-  278 => 
+  278 =>
   array (
     'title' => 'ConFoo Montreal 2017 Calling for Papers',
-    'id' => 'http://php.net/archive/2016.php#id2016-08-22-2',
+    'id' => 'https://www.php.net/archive/2016.php#id2016-08-22-2',
     'published' => '2016-08-22T16:50:54-04:00',
     'updated' => '2016-08-22T16:50:54-04:00',
     'finalTeaserDate' => '2016-09-20',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'cfp',
         'label' => 'Call for Papers',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/conferences/index.php#id2016-08-22-2',
+        'href' => 'https://www.php.net/conferences/index.php#id2016-08-22-2',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
         'href' => 'https://confoo.ca/en/yul2017/call-for-papers',
         'rel' => 'via',
         'type' => 'text/html',
       ),
     ),
-    'newsImage' => 
+    'newsImage' =>
     array (
       'xmlns' => 'http://php.net/ns/news',
       'link' => 'https://confoo.ca/en/yul2017/call-for-papers',
@@ -15719,37 +15719,37 @@ the upgrade
   ',
     'intro' => '<div></div>',
   ),
-  279 => 
+  279 =>
   array (
     'title' => 'Bulgaria PHP Conference 2016',
-    'id' => 'http://php.net/archive/2016.php#id2016-08-22-1',
+    'id' => 'https://www.php.net/archive/2016.php#id2016-08-22-1',
     'published' => '2016-08-22T18:00:00+03:00',
     'updated' => '2016-08-22T18:00:00+03:00',
     'finalTeaserDate' => '2016-10-07',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'conferences',
         'label' => 'Conference announcement',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/conferences/index.php#id2016-08-22-1',
+        'href' => 'https://www.php.net/conferences/index.php#id2016-08-22-1',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
         'href' => 'http://www.bgphp.org',
         'rel' => 'via',
         'type' => 'text/html',
       ),
     ),
-    'newsImage' => 
+    'newsImage' =>
     array (
       'xmlns' => 'http://php.net/ns/news',
       'link' => 'http://www.bgphp.org',
@@ -15778,36 +15778,36 @@ the upgrade
   ',
     'intro' => '<div><p><a href="http://www.bgphp.org">Bulgaria PHP Conference</a> is the premier PHP conference, gathering PHP and frontend developers and engineers from all around Europe. Co-organized by the Bulgaria PHP User Group and SiteGround web hosting, the conference is bringing internationally renowned experts from the PHP industry to talk about APIs, Frameworks, Security, Testing, Continuous Integration, and much more!</p><p>Highlights:</p><p class=\'fullArticleLink\'><a href=\'http://www.bgphp.org\' class>&hellip; read full article</a></p></div>',
   ),
-  280 => 
+  280 =>
   array (
     'title' => 'PHP 7.1.0 Beta 3 Released',
-    'id' => 'http://php.net/archive/2016.php#id2016-08-18-3',
+    'id' => 'https://www.php.net/archive/2016.php#id2016-08-18-3',
     'published' => '2016-08-18T23:10:34+00:00',
     'updated' => '2016-08-18T23:10:34+00:00',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'frontpage',
         'label' => 'PHP.net frontpage news',
       ),
-      1 => 
+      1 =>
       array (
         'term' => 'releases',
         'label' => 'New PHP release',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/index.php#id2016-08-18-3',
+        'href' => 'https://www.php.net/index.php#id2016-08-18-3',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
-        'href' => 'http://php.net/archive/2016.php#id2016-08-18-3',
+        'href' => 'https://www.php.net/archive/2016.php#id2016-08-18-3',
         'rel' => 'via',
         'type' => 'text/html',
       ),
@@ -15827,7 +15827,7 @@ the upgrade
      </p>
 
      <p>
-       For source downloads of PHP 7.1.0 Beta 3 please visit the <a href="https://downloads.php.net/~davey/">download</a> page, Windows sources and binaries can be found on <a href="http://windows.php.net/qa/">windows.php.net/qa/</a>.
+       For source downloads of PHP 7.1.0 Beta 3 please visit the <a href="https://downloads.php.net/~davey/">download</a> page, Windows sources and binaries can be found on <a href="https://windows.php.net/qa/">windows.php.net/qa/</a>.
      </p>
 
      <p>
@@ -15843,38 +15843,38 @@ the upgrade
        The PHP development team announces the immediate availability of PHP 7.1.0 Beta 3. This release is the last beta for 7.1.0. All users of PHP are encouraged to test this version carefully, and report any bugs and incompatibilities in the bug tracking system.
      </p><p>
        <strong>THIS IS A DEVELOPMENT PREVIEW - DO NOT USE IT IN PRODUCTION!</strong>
-     </p><p class=\'fullArticleLink\'><a href=\'http://php.net/archive/2016.php#id2016-08-18-3\' class>&hellip; read full article</a></p></div>',
+     </p><p class=\'fullArticleLink\'><a href=\'https://www.php.net/archive/2016.php#id2016-08-18-3\' class>&hellip; read full article</a></p></div>',
   ),
-  281 => 
+  281 =>
   array (
     'title' => 'PHP 5.6.25 is released',
-    'id' => 'http://php.net/archive/2016.php#id2016-08-18-2',
+    'id' => 'https://www.php.net/archive/2016.php#id2016-08-18-2',
     'published' => '2016-08-18T16:43:25-07:00',
     'updated' => '2016-08-19T13:19:00+01:00',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'frontpage',
         'label' => 'PHP.net frontpage news',
       ),
-      1 => 
+      1 =>
       array (
         'term' => 'releases',
         'label' => 'New PHP release',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/index.php#id2016-08-18-2',
+        'href' => 'https://www.php.net/index.php#id2016-08-18-2',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
-        'href' => 'http://php.net/archive/2016.php#id2016-08-18-2',
+        'href' => 'https://www.php.net/archive/2016.php#id2016-08-18-2',
         'rel' => 'via',
         'type' => 'text/html',
       ),
@@ -15886,9 +15886,9 @@ the upgrade
 
      All PHP 5.6 users are encouraged to upgrade to this version.</p>
 
-     <p>For source downloads of PHP 5.6.25 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-     The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.6.25">ChangeLog</a>.
+     <p>For source downloads of PHP 5.6.25 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
+     Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
+     The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-5.php#5.6.25">ChangeLog</a>.
      </p>
     </div>
   ',
@@ -15896,41 +15896,41 @@ the upgrade
      5.6.25. This is a security release. Several security bugs were fixed in
      this release.
 
-     All PHP 5.6 users are encouraged to upgrade to this version.</p><p>For source downloads of PHP 5.6.25 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-     The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.6.25">ChangeLog</a>.
+     All PHP 5.6 users are encouraged to upgrade to this version.</p><p>For source downloads of PHP 5.6.25 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
+     Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
+     The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-5.php#5.6.25">ChangeLog</a>.
      </p></div>',
   ),
-  282 => 
+  282 =>
   array (
     'title' => 'PHP 7.0.10 Released',
-    'id' => 'http://php.net/archive/2016.php#id2016-08-18-1',
+    'id' => 'https://www.php.net/archive/2016.php#id2016-08-18-1',
     'published' => '2016-08-18T23:59:00+01:00',
     'updated' => '2016-08-18T23:59:00+01:00',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'releases',
         'label' => 'New PHP release',
       ),
-      1 => 
+      1 =>
       array (
         'term' => 'frontpage',
         'label' => 'PHP.net frontpage news',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/index.php#id2016-08-18-1',
+        'href' => 'https://www.php.net/index.php#id2016-08-18-1',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
-        'href' => 'http://php.net/archive/2016.php#id2016-08-18-1',
+        'href' => 'https://www.php.net/archive/2016.php#id2016-08-18-1',
         'rel' => 'via',
         'type' => 'text/html',
       ),
@@ -15942,9 +15942,9 @@ the upgrade
 
      All PHP 7.0 users are encouraged to upgrade to this version.</p>
 
-     <p>For source downloads of PHP 7.0.10 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-     The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.0.10">ChangeLog</a>.
+     <p>For source downloads of PHP 7.0.10 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
+     Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
+     The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-7.php#7.0.10">ChangeLog</a>.
      </p>
     </div>
   ',
@@ -15952,42 +15952,42 @@ the upgrade
      7.0.10. This is a security release. Several security bugs were fixed in
      this release.
 
-     All PHP 7.0 users are encouraged to upgrade to this version.</p><p>For source downloads of PHP 7.0.10 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-     The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.0.10">ChangeLog</a>.
+     All PHP 7.0 users are encouraged to upgrade to this version.</p><p>For source downloads of PHP 7.0.10 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
+     Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
+     The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-7.php#7.0.10">ChangeLog</a>.
      </p></div>',
   ),
-  283 => 
+  283 =>
   array (
     'title' => 'SunshinePHP 2017 CFP Started',
-    'id' => 'http://php.net/archive/2016.php#id2016-08-16-2',
+    'id' => 'https://www.php.net/archive/2016.php#id2016-08-16-2',
     'published' => '2016-08-16T00:00:01+00:00',
     'updated' => '2016-08-16T12:23:00+00:00',
     'finalTeaserDate' => '2016-09-30',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'cfp',
         'label' => 'Call for Papers',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/conferences/index.php#id2016-08-16-2',
+        'href' => 'https://www.php.net/conferences/index.php#id2016-08-16-2',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
         'href' => 'http://sunshinephp.com',
         'rel' => 'via',
         'type' => 'text/html',
       ),
     ),
-    'newsImage' => 
+    'newsImage' =>
     array (
       'xmlns' => 'http://php.net/ns/news',
       'link' => 'http://sunshinephp.com',
@@ -16004,37 +16004,37 @@ the upgrade
 	',
     'intro' => '<div><p>We are happy to announce the CFP for SunshinePHP 2017 has launched at <a href="https://cfp.sunshinephp.com" title="SunshinePHP CFP">https://cfp.sunshinephp.com</a> where we will accept talk submissions until September 30th, 2016.</p><p>SunshinePHP hit it\'s 5th year and will happen from February 2nd to 4th, 2017 in sunny Miami, Florida. As one of the largest community conferences in the U.S. there is no doubt the schedule will be amazing this year. We will have a full tutorial day featuring 3-hour sessions followed by 2 days of 1-hour talks and inspirational keynotes.</p><p class=\'fullArticleLink\'><a href=\'http://sunshinephp.com\' class>&hellip; read full article</a></p></div>',
   ),
-  284 => 
+  284 =>
   array (
     'title' => 'ZendCon 2016',
-    'id' => 'http://php.net/archive/2016.php#id2016-08-16-1',
+    'id' => 'https://www.php.net/archive/2016.php#id2016-08-16-1',
     'published' => '2016-08-16T00:00:01+00:00',
     'updated' => '2016-08-16T12:23:00+00:00',
     'finalTeaserDate' => '2016-10-18',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'conferences',
         'label' => 'Conference announcement',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/conferences/index.php#id2016-08-16-1',
+        'href' => 'https://www.php.net/conferences/index.php#id2016-08-16-1',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
         'href' => 'http://zendcon.com',
         'rel' => 'via',
         'type' => 'text/html',
       ),
     ),
-    'newsImage' => 
+    'newsImage' =>
     array (
       'xmlns' => 'http://php.net/ns/news',
       'link' => 'http://zendcon.com',
@@ -16053,36 +16053,36 @@ the upgrade
 	',
     'intro' => '<div><p>With over 250 million PHP applications and websites driven by a global community of more than 5 million active developers, ZendCon 2016 brings you a curated selection of the best experts, training, and networking opportunities to help you become a PHP authority.</p><p>In its 12th year, ZendCon offers authoritative sessions, in-depth technical tutorials, exhibit hall activities, and informal opportunities to spotlight the best in enterprise PHP development, the latest for PHP 7, and innovations on many open source technologies related to the web.</p><p class=\'fullArticleLink\'><a href=\'http://zendcon.com\' class>&hellip; read full article</a></p></div>',
   ),
-  285 => 
+  285 =>
   array (
     'title' => 'PHP 7.1.0 Beta 2 Released',
-    'id' => 'http://php.net/archive/2016.php#id2016-08-04-1',
+    'id' => 'https://www.php.net/archive/2016.php#id2016-08-04-1',
     'published' => '2016-08-04T09:00:07+00:00',
     'updated' => '2016-08-04T09:00:07+00:00',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'frontpage',
         'label' => 'PHP.net frontpage news',
       ),
-      1 => 
+      1 =>
       array (
         'term' => 'releases',
         'label' => 'New PHP release',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/index.php#id2016-08-04-1',
+        'href' => 'https://www.php.net/index.php#id2016-08-04-1',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
-        'href' => 'http://php.net/archive/2016.php#id2016-08-04-1',
+        'href' => 'https://www.php.net/archive/2016.php#id2016-08-04-1',
         'rel' => 'via',
         'type' => 'text/html',
       ),
@@ -16102,7 +16102,7 @@ the upgrade
      </p>
 
      <p>
-       For source downloads of PHP 7.1.0 Beta 2 please visit the <a href="https://downloads.php.net/~davey/">download</a> page, Windows sources and binaries can be found on <a href="http://windows.php.net/qa/">windows.php.net/qa/</a>.
+       For source downloads of PHP 7.1.0 Beta 2 please visit the <a href="https://downloads.php.net/~davey/">download</a> page, Windows sources and binaries can be found on <a href="https://windows.php.net/qa/">windows.php.net/qa/</a>.
      </p>
 
      <p>
@@ -16118,39 +16118,39 @@ the upgrade
        The PHP development team announces the immediate availability of PHP 7.1.0 Beta 2. This release is the second beta for 7.1.0. All users of PHP are encouraged to test this version carefully, and report any bugs and incompatibilities in the bug tracking system.
      </p><p>
        <strong>THIS IS A DEVELOPMENT PREVIEW - DO NOT USE IT IN PRODUCTION!</strong>
-     </p><p class=\'fullArticleLink\'><a href=\'http://php.net/archive/2016.php#id2016-08-04-1\' class>&hellip; read full article</a></p></div>',
+     </p><p class=\'fullArticleLink\'><a href=\'https://www.php.net/archive/2016.php#id2016-08-04-1\' class>&hellip; read full article</a></p></div>',
   ),
-  286 => 
+  286 =>
   array (
     'title' => 'Early Bird Ticket Sale for PHPConf.Asia 2016',
-    'id' => 'http://php.net/archive/2016.php#id2016-07-24-1',
+    'id' => 'https://www.php.net/archive/2016.php#id2016-07-24-1',
     'published' => '2016-07-24T14:38:59+08:00',
     'updated' => '2016-07-24T14:38:59+08:00',
     'finalTeaserDate' => '2016-08-24',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'conferences',
         'label' => 'Conference announcement',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/conferences/index.php#id2016-07-24-1',
+        'href' => 'https://www.php.net/conferences/index.php#id2016-07-24-1',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
         'href' => 'https://2016.phpconf.asia',
         'rel' => 'via',
         'type' => 'text/html',
       ),
     ),
-    'newsImage' => 
+    'newsImage' =>
     array (
       'xmlns' => 'http://php.net/ns/news',
       'link' => 'https://2016.phpconf.asia',
@@ -16167,36 +16167,36 @@ the upgrade
   ',
     'intro' => '<div><p><a href="https://2016.phpconf.asia" target="_blank">PHPConf.Asia 2016</a> is happening in Singapore on 22-24 August 2016. Tutorial Day on 22 Aug. 2 day single track conference on 23 and 24 August.</p><p><strong>Keynote Speakers:</strong> Davey Shafik (<a href="https://twitter.com/dshafik" target="_blank">@dshafik</a>) and Samantha QuiÃ±ones (<a href="https://twitter.com/ieatkillerbees">@ieatkillerbees</a>)</p><p class=\'fullArticleLink\'><a href=\'https://2016.phpconf.asia\' class>&hellip; read full article</a></p></div>',
   ),
-  287 => 
+  287 =>
   array (
     'title' => 'PHP 5.6.24 is released',
-    'id' => 'http://php.net/archive/2016.php#id2016-07-21-4',
+    'id' => 'https://www.php.net/archive/2016.php#id2016-07-21-4',
     'published' => '2016-07-21T19:49:46+00:00',
     'updated' => '2016-07-21T19:49:46+00:00',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'frontpage',
         'label' => 'PHP.net frontpage news',
       ),
-      1 => 
+      1 =>
       array (
         'term' => 'releases',
         'label' => 'New PHP release',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/index.php#id2016-07-21-4',
+        'href' => 'https://www.php.net/index.php#id2016-07-21-4',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
-        'href' => 'http://php.net/archive/2016.php#id2016-07-21-4',
+        'href' => 'https://www.php.net/archive/2016.php#id2016-07-21-4',
         'rel' => 'via',
         'type' => 'text/html',
       ),
@@ -16209,9 +16209,9 @@ the upgrade
      All PHP 5.6 users are encouraged to upgrade to this version.
      </p>
 
-     <p>For source downloads of PHP 5.6.24 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-     The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.6.24">ChangeLog</a>.
+     <p>For source downloads of PHP 5.6.24 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
+     Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
+     The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-5.php#5.6.24">ChangeLog</a>.
      </p>
     </div>
   ',
@@ -16220,41 +16220,41 @@ the upgrade
      this release.
 
      All PHP 5.6 users are encouraged to upgrade to this version.
-     </p><p>For source downloads of PHP 5.6.24 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-     The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.6.24">ChangeLog</a>.
+     </p><p>For source downloads of PHP 5.6.24 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
+     Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
+     The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-5.php#5.6.24">ChangeLog</a>.
      </p></div>',
   ),
-  288 => 
+  288 =>
   array (
     'title' => 'PHP 5.5.38 is released',
-    'id' => 'http://php.net/archive/2016.php#id2016-07-21-2',
+    'id' => 'https://www.php.net/archive/2016.php#id2016-07-21-2',
     'published' => '2016-07-21T16:01:29+00:00',
     'updated' => '2016-07-21T16:01:29+00:00',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'frontpage',
         'label' => 'PHP.net frontpage news',
       ),
-      1 => 
+      1 =>
       array (
         'term' => 'releases',
         'label' => 'New PHP release',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/index.php#id2016-07-21-2',
+        'href' => 'https://www.php.net/index.php#id2016-07-21-2',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
-        'href' => 'http://php.net/archive/2016.php#id2016-07-21-2',
+        'href' => 'https://www.php.net/archive/2016.php#id2016-07-21-2',
         'rel' => 'via',
         'type' => 'text/html',
       ),
@@ -16266,10 +16266,10 @@ the upgrade
     </p>
     <p>All PHP 5.5 users are encouraged to upgrade to this version.</p>
 
-	<p>For source downloads of PHP 5.5.38 please visit our downloads page, Windows source and binaries can be found on <a href="http://windows.php.net/download/"> windows.php.net/download</a>. The list of changes is recorded in the <a href="http://php.net/ChangeLog-5.php#5.5.38">ChangeLog</a>.</p>
+	<p>For source downloads of PHP 5.5.38 please visit our downloads page, Windows source and binaries can be found on <a href="https://windows.php.net/download/"> windows.php.net/download</a>. The list of changes is recorded in the <a href="https://php.net/ChangeLog-5.php#5.5.38">ChangeLog</a>.</p>
 
 	<p>
-	Note that according to <a href="http://www.php.net/supported-versions.php">our release schedule</a>, PHP 5.5.38 is the last release of the PHP 5.5 branch.
+	Note that according to <a href="https://www.php.net/supported-versions.php">our release schedule</a>, PHP 5.5.38 is the last release of the PHP 5.5 branch.
 	There may be additional release if we discover important security issues that warrant it, otherwise this release will be the final one in the PHP 5.5 branch. If your PHP installation is based on PHP 5.5, it may be a good time to start making the plans for the upgrade to PHP 5.6 or PHP 7.0.
      </p>
 
@@ -16278,38 +16278,38 @@ the upgrade
     'intro' => '<div><p>
        The PHP development team announces the immediate availability of PHP 5.5.38. This is a security release that fixes
        some security related bugs.
-    </p><p>All PHP 5.5 users are encouraged to upgrade to this version.</p><p class=\'fullArticleLink\'><a href=\'http://php.net/archive/2016.php#id2016-07-21-2\' class>&hellip; read full article</a></p></div>',
+    </p><p>All PHP 5.5 users are encouraged to upgrade to this version.</p><p class=\'fullArticleLink\'><a href=\'https://www.php.net/archive/2016.php#id2016-07-21-2\' class>&hellip; read full article</a></p></div>',
   ),
-  289 => 
+  289 =>
   array (
     'title' => 'PHP 7.0.9 Released',
-    'id' => 'http://php.net/archive/2016.php#id2016-07-21-3',
+    'id' => 'https://www.php.net/archive/2016.php#id2016-07-21-3',
     'published' => '2016-07-21T13:00:00+01:00',
     'updated' => '2016-07-21T13:00:00+01:00',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'releases',
         'label' => 'New PHP release',
       ),
-      1 => 
+      1 =>
       array (
         'term' => 'frontpage',
         'label' => 'PHP.net frontpage news',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/index.php#id2016-07-21-3',
+        'href' => 'https://www.php.net/index.php#id2016-07-21-3',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
-        'href' => 'http://php.net/archive/2016.php#id2016-07-21-3',
+        'href' => 'https://www.php.net/archive/2016.php#id2016-07-21-3',
         'rel' => 'via',
         'type' => 'text/html',
       ),
@@ -16321,9 +16321,9 @@ the upgrade
 
      All PHP 7.0 users are encouraged to upgrade to this version.</p>
 
-     <p>For source downloads of PHP 7.0.9 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-     The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.0.9">ChangeLog</a>.
+     <p>For source downloads of PHP 7.0.9 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
+     Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
+     The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-7.php#7.0.9">ChangeLog</a>.
      </p>
     </div>
   ',
@@ -16331,41 +16331,41 @@ the upgrade
      7.0.9. This is a security release. Several security bugs were fixed in
      this release, including the HTTP_PROXY issue.
 
-     All PHP 7.0 users are encouraged to upgrade to this version.</p><p>For source downloads of PHP 7.0.9 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-     The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.0.9">ChangeLog</a>.
+     All PHP 7.0 users are encouraged to upgrade to this version.</p><p>For source downloads of PHP 7.0.9 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
+     Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
+     The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-7.php#7.0.9">ChangeLog</a>.
      </p></div>',
   ),
-  290 => 
+  290 =>
   array (
     'title' => 'PHP 7.1.0 Beta 1 Released',
-    'id' => 'http://php.net/archive/2016.php#id2016-07-21-1',
+    'id' => 'https://www.php.net/archive/2016.php#id2016-07-21-1',
     'published' => '2016-07-21T09:32:07+00:00',
     'updated' => '2016-07-21T09:32:07+00:00',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'frontpage',
         'label' => 'PHP.net frontpage news',
       ),
-      1 => 
+      1 =>
       array (
         'term' => 'releases',
         'label' => 'New PHP release',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/index.php#id2016-07-21-1',
+        'href' => 'https://www.php.net/index.php#id2016-07-21-1',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
-        'href' => 'http://php.net/archive/2016.php#id2016-07-21-1',
+        'href' => 'https://www.php.net/archive/2016.php#id2016-07-21-1',
         'rel' => 'via',
         'type' => 'text/html',
       ),
@@ -16398,7 +16398,7 @@ the upgrade
      </p>
 
      <p>
-       For source downloads of PHP 7.1.0 Beta 1 please visit the <a href="https://downloads.php.net/~ab/">download</a> page, Windows sources and binaries can be found on <a href="http://windows.php.net/qa/">windows.php.net/qa/</a>.
+       For source downloads of PHP 7.1.0 Beta 1 please visit the <a href="https://downloads.php.net/~ab/">download</a> page, Windows sources and binaries can be found on <a href="https://windows.php.net/qa/">windows.php.net/qa/</a>.
      </p>
 
      <p>
@@ -16414,38 +16414,38 @@ the upgrade
        The PHP development team announces the immediate availability of PHP 7.1.0 Beta 1. This release is the first beta for 7.1.0. All users of PHP are encouraged to test this version carefully, and report any bugs and incompatibilities in the bug tracking system.
      </p><p>
        <strong>THIS IS A DEVELOPMENT PREVIEW - DO NOT USE IT IN PRODUCTION!</strong>
-     </p><p class=\'fullArticleLink\'><a href=\'http://php.net/archive/2016.php#id2016-07-21-1\' class>&hellip; read full article</a></p></div>',
+     </p><p class=\'fullArticleLink\'><a href=\'https://www.php.net/archive/2016.php#id2016-07-21-1\' class>&hellip; read full article</a></p></div>',
   ),
-  291 => 
+  291 =>
   array (
     'title' => 'PHP 7.1.0 Alpha 3 Released',
-    'id' => 'http://php.net/archive/2016.php#id2016-07-07-1',
+    'id' => 'https://www.php.net/archive/2016.php#id2016-07-07-1',
     'published' => '2016-07-07T19:40:54+00:00',
     'updated' => '2016-07-07T19:40:54+00:00',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'frontpage',
         'label' => 'PHP.net frontpage news',
       ),
-      1 => 
+      1 =>
       array (
         'term' => 'releases',
         'label' => 'New PHP release',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/index.php#id2016-07-07-1',
+        'href' => 'https://www.php.net/index.php#id2016-07-07-1',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
-        'href' => 'http://php.net/archive/2016.php#id2016-07-07-1',
+        'href' => 'https://www.php.net/archive/2016.php#id2016-07-07-1',
         'rel' => 'via',
         'type' => 'text/html',
       ),
@@ -16490,7 +16490,7 @@ the upgrade
      </p>
 
      <p>
-       For source downloads of PHP 7.1.0 Alpha 3 please visit the <a href="https://downloads.php.net/~krakjoe/">download</a> page, Windows sources and binaries can be found on <a href="http://windows.php.net/qa/">windows.php.net/qa/</a>.
+       For source downloads of PHP 7.1.0 Alpha 3 please visit the <a href="https://downloads.php.net/~krakjoe/">download</a> page, Windows sources and binaries can be found on <a href="https://windows.php.net/qa/">windows.php.net/qa/</a>.
      </p>
 
      <p>
@@ -16506,38 +16506,38 @@ the upgrade
        The PHP development team announces the immediate availability of PHP 7.1.0 Alpha 3. This release is the last alpha for 7.1.0. All users of PHP are encouraged to test this version carefully, and report any bugs and incompatibilities in the bug tracking system.
      </p><p>
        <strong>THIS IS A DEVELOPMENT PREVIEW - DO NOT USE IT IN PRODUCTION!</strong>
-     </p><p class=\'fullArticleLink\'><a href=\'http://php.net/archive/2016.php#id2016-07-07-1\' class>&hellip; read full article</a></p></div>',
+     </p><p class=\'fullArticleLink\'><a href=\'https://www.php.net/archive/2016.php#id2016-07-07-1\' class>&hellip; read full article</a></p></div>',
   ),
-  292 => 
+  292 =>
   array (
     'title' => 'PHP 7.1.0 Alpha 2 Released',
-    'id' => 'http://php.net/archive/2016.php#id2016-06-24-1',
+    'id' => 'https://www.php.net/archive/2016.php#id2016-06-24-1',
     'published' => '2016-06-27T16:00:00+00:00',
     'updated' => '2016-06-27T16:00:00+00:00',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'frontpage',
         'label' => 'PHP.net frontpage news',
       ),
-      1 => 
+      1 =>
       array (
         'term' => 'releases',
         'label' => 'New PHP release',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/index.php#id2016-06-24-1',
+        'href' => 'https://www.php.net/index.php#id2016-06-24-1',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
-        'href' => 'http://php.net/archive/2016.php#id2016-06-24-1',
+        'href' => 'https://www.php.net/archive/2016.php#id2016-06-24-1',
         'rel' => 'via',
         'type' => 'text/html',
       ),
@@ -16556,7 +16556,7 @@ the upgrade
      </p>
 
      <p>
-       For source downloads of PHP 7.1.0 Alpha 2 please visit the <a href="https://downloads.php.net/~krakjoe/">download page</a>, Windows sources and binaries can be found on <a href="http://windows.php.net/qa/">windows.php.net/qa/</a>.
+       For source downloads of PHP 7.1.0 Alpha 2 please visit the <a href="https://downloads.php.net/~krakjoe/">download page</a>, Windows sources and binaries can be found on <a href="https://windows.php.net/qa/">windows.php.net/qa/</a>.
      </p>
 
      <p>
@@ -16572,38 +16572,38 @@ the upgrade
        The PHP development team announces the immediate availability of PHP 7.1.0 Alpha 2. This is the second alpha release for PHP 7.1.0. All users of PHP are encouraged to test this version carefully, and report any bugs and incompatibilities in the bug tracking system.
      </p><p>
        <strong>THIS IS A DEVELOPMENT PREVIEW - DO NOT USE IT IN PRODUCTION!</strong>
-     </p><p class=\'fullArticleLink\'><a href=\'http://php.net/archive/2016.php#id2016-06-24-1\' class>&hellip; read full article</a></p></div>',
+     </p><p class=\'fullArticleLink\'><a href=\'https://www.php.net/archive/2016.php#id2016-06-24-1\' class>&hellip; read full article</a></p></div>',
   ),
-  293 => 
+  293 =>
   array (
     'title' => 'PHP 5.5.37 is released',
-    'id' => 'http://php.net/archive/2016.php#id2016-06-23-3',
+    'id' => 'https://www.php.net/archive/2016.php#id2016-06-23-3',
     'published' => '2016-06-23T18:11:22+00:00',
     'updated' => '2016-06-23T18:11:22+00:00',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'frontpage',
         'label' => 'PHP.net frontpage news',
       ),
-      1 => 
+      1 =>
       array (
         'term' => 'releases',
         'label' => 'New PHP release',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/index.php#id2016-06-23-3',
+        'href' => 'https://www.php.net/index.php#id2016-06-23-3',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
-        'href' => 'http://php.net/archive/2016.php#id2016-06-23-3',
+        'href' => 'https://www.php.net/archive/2016.php#id2016-06-23-3',
         'rel' => 'via',
         'type' => 'text/html',
       ),
@@ -16615,9 +16615,9 @@ the upgrade
      All PHP 5.5 users are encouraged to upgrade to this version.
      </p>
 
-     <p>For source downloads of PHP 5.5.37 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-     The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.5.37">ChangeLog</a>.
+     <p>For source downloads of PHP 5.5.37 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
+     Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
+     The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-5.php#5.5.37">ChangeLog</a>.
      </p>
     </div>
   ',
@@ -16625,41 +16625,41 @@ the upgrade
      5.5.37. This is a security release, several security bugs were fixed.
 
      All PHP 5.5 users are encouraged to upgrade to this version.
-     </p><p>For source downloads of PHP 5.5.37 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-     The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.5.37">ChangeLog</a>.
+     </p><p>For source downloads of PHP 5.5.37 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
+     Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
+     The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-5.php#5.5.37">ChangeLog</a>.
      </p></div>',
   ),
-  294 => 
+  294 =>
   array (
     'title' => 'PHP 5.6.23 is released',
-    'id' => 'http://php.net/archive/2016.php#id2016-06-23-2',
+    'id' => 'https://www.php.net/archive/2016.php#id2016-06-23-2',
     'published' => '2016-06-23T17:36:17+00:00',
     'updated' => '2016-06-23T17:36:17+00:00',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'frontpage',
         'label' => 'PHP.net frontpage news',
       ),
-      1 => 
+      1 =>
       array (
         'term' => 'releases',
         'label' => 'New PHP release',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/index.php#id2016-06-23-2',
+        'href' => 'https://www.php.net/index.php#id2016-06-23-2',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
-        'href' => 'http://php.net/archive/2016.php#id2016-06-23-2',
+        'href' => 'https://www.php.net/archive/2016.php#id2016-06-23-2',
         'rel' => 'via',
         'type' => 'text/html',
       ),
@@ -16671,9 +16671,9 @@ the upgrade
      All PHP 5.6 users are encouraged to upgrade to this version.
      </p>
 
-     <p>For source downloads of PHP 5.6.23 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-     The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.6.23">ChangeLog</a>.
+     <p>For source downloads of PHP 5.6.23 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
+     Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
+     The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-5.php#5.6.23">ChangeLog</a>.
      </p>
     </div>
   ',
@@ -16681,41 +16681,41 @@ the upgrade
      5.6.23. Several bugs were fixed in this release, including security-related ones.
 
      All PHP 5.6 users are encouraged to upgrade to this version.
-     </p><p>For source downloads of PHP 5.6.23 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-     The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.6.23">ChangeLog</a>.
+     </p><p>For source downloads of PHP 5.6.23 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
+     Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
+     The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-5.php#5.6.23">ChangeLog</a>.
      </p></div>',
   ),
-  295 => 
+  295 =>
   array (
     'title' => 'PHP 7.0.8 Released',
-    'id' => 'http://php.net/archive/2016.php#id2016-06-23-1',
+    'id' => 'https://www.php.net/archive/2016.php#id2016-06-23-1',
     'published' => '2016-06-23T13:00:00+01:00',
     'updated' => '2016-06-23T13:00:00+01:00',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'releases',
         'label' => 'New PHP release',
       ),
-      1 => 
+      1 =>
       array (
         'term' => 'frontpage',
         'label' => 'PHP.net frontpage news',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/index.php#id2016-06-23-1',
+        'href' => 'https://www.php.net/index.php#id2016-06-23-1',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
-        'href' => 'http://php.net/archive/2016.php#id2016-06-23-1',
+        'href' => 'https://www.php.net/archive/2016.php#id2016-06-23-1',
         'rel' => 'via',
         'type' => 'text/html',
       ),
@@ -16727,9 +16727,9 @@ the upgrade
 
      All PHP 7.0 users are encouraged to upgrade to this version.</p>
 
-     <p>For source downloads of PHP 7.0.8 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-     The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.0.8">ChangeLog</a>.
+     <p>For source downloads of PHP 7.0.8 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
+     Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
+     The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-7.php#7.0.8">ChangeLog</a>.
      </p>
     </div>
   ',
@@ -16737,42 +16737,42 @@ the upgrade
      7.0.8. This is a security release. Several security bugs were fixed in
      this release.
 
-     All PHP 7.0 users are encouraged to upgrade to this version.</p><p>For source downloads of PHP 7.0.8 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-     The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.0.8">ChangeLog</a>.
+     All PHP 7.0 users are encouraged to upgrade to this version.</p><p>For source downloads of PHP 7.0.8 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
+     Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
+     The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-7.php#7.0.8">ChangeLog</a>.
      </p></div>',
   ),
-  296 => 
+  296 =>
   array (
     'title' => 'International PHP Conference 2016 - fall edition',
-    'id' => 'http://php.net/archive/2016.php#id2016-06-15-1',
+    'id' => 'https://www.php.net/archive/2016.php#id2016-06-15-1',
     'published' => '2016-06-15T09:54:24+01:00',
     'updated' => '2016-06-15T09:54:24+01:00',
     'finalTeaserDate' => '2016-10-23',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'conferences',
         'label' => 'Conference announcement',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/conferences/index.php#id2016-06-15-1',
+        'href' => 'https://www.php.net/conferences/index.php#id2016-06-15-1',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
         'href' => 'https://phpconference.com',
         'rel' => 'via',
         'type' => 'text/html',
       ),
     ),
-    'newsImage' => 
+    'newsImage' =>
     array (
       'xmlns' => 'http://php.net/ns/news',
       'link' => 'https://phpconference.com',
@@ -16818,36 +16818,36 @@ the upgrade
   ',
     'intro' => '<div><p><a href="https://phpconference.com">The International PHP Conference</a> is the world\'s first PHP conference and stands since more than a decade for top-notch pragmatic expertise in PHP and web technologies. At the IPC, internationally renowned experts from the PHP industry meet up with PHP users and developers from large and small companies. Here is the place where concepts emerge and ideas are born - the IPC signifies knowledge transfer at highest level.</p><p>All delegates of the International PHP Conference have, in addition to PHP program, free access to the entire range of the <a href="https://webtechcon.de">WebTechCon</a> taking place at the same time.</p><p class=\'fullArticleLink\'><a href=\'https://phpconference.com\' class>&hellip; read full article</a></p></div>',
   ),
-  297 => 
+  297 =>
   array (
     'title' => 'PHP 7.1.0 Alpha 1 Released',
-    'id' => 'http://php.net/archive/2016.php#id2016-06-09-1',
+    'id' => 'https://www.php.net/archive/2016.php#id2016-06-09-1',
     'published' => '2016-06-09T12:39:55-04:00',
     'updated' => '2016-06-09T12:39:55-04:00',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'frontpage',
         'label' => 'PHP.net frontpage news',
       ),
-      1 => 
+      1 =>
       array (
         'term' => 'releases',
         'label' => 'New PHP release',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/index.php#id2016-06-09-1',
+        'href' => 'https://www.php.net/index.php#id2016-06-09-1',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
-        'href' => 'http://php.net/archive/2016.php#id2016-06-09-1',
+        'href' => 'https://www.php.net/archive/2016.php#id2016-06-09-1',
         'rel' => 'via',
         'type' => 'text/html',
       ),
@@ -16901,7 +16901,7 @@ the upgrade
             <p>
                 For source downloads of PHP 7.1.0 Alpha 1 please visit
                 the <a href="https://downloads.php.net/~krakjoe/">download page</a>, Windows sources and binaries
-                can be found on <a href="http://windows.php.net/qa/">windows.php.net/qa/</a>.
+                can be found on <a href="https://windows.php.net/qa/">windows.php.net/qa/</a>.
             </p>
 
             <p>
@@ -16920,39 +16920,39 @@ the upgrade
                 this version carefully, and report any bugs and incompatibilities in the bug tracking system.
             </p><p>
                 <strong>THIS IS A DEVELOPMENT PREVIEW - DO NOT USE IT IN PRODUCTION!</strong>
-            </p><p class=\'fullArticleLink\'><a href=\'http://php.net/archive/2016.php#id2016-06-09-1\' class>&hellip; read full article</a></p></div>',
+            </p><p class=\'fullArticleLink\'><a href=\'https://www.php.net/archive/2016.php#id2016-06-09-1\' class>&hellip; read full article</a></p></div>',
   ),
-  298 => 
+  298 =>
   array (
     'title' => 'DevConf 2016',
-    'id' => 'http://php.net/archive/2016.php#id2016-06-06-1',
+    'id' => 'https://www.php.net/archive/2016.php#id2016-06-06-1',
     'published' => '2016-06-06T09:10:08+00:00',
     'updated' => '2016-06-06T09:10:08+00:00',
     'finalTeaserDate' => '2016-06-17',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'conferences',
         'label' => 'Conference announcement',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/conferences/index.php#id2016-06-06-1',
+        'href' => 'https://www.php.net/conferences/index.php#id2016-06-06-1',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
         'href' => 'http://devconf.ru',
         'rel' => 'via',
         'type' => 'text/html',
       ),
     ),
-    'newsImage' => 
+    'newsImage' =>
     array (
       'xmlns' => 'http://php.net/ns/news',
       'link' => 'http://devconf.ru',
@@ -16997,37 +16997,37 @@ the upgrade
               This year the conference will take place in <a href="http://devconf.ru/ru/members/location">Skolkovo Moscow School of Management</a>.
           </p><p class=\'fullArticleLink\'><a href=\'http://devconf.ru\' class>&hellip; read full article</a></p></div>',
   ),
-  299 => 
+  299 =>
   array (
     'title' => 'Madison PHP Conference 2016 Call For Papers',
-    'id' => 'http://php.net/archive/2016.php#id2016-06-03-1',
+    'id' => 'https://www.php.net/archive/2016.php#id2016-06-03-1',
     'published' => '2016-06-03T21:05:00-04:00',
     'updated' => '2016-06-03T21:05:00-04:00',
     'finalTeaserDate' => '2016-06-20',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'cfp',
         'label' => 'Call for Papers',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/conferences/index.php#id2016-06-03-1',
+        'href' => 'https://www.php.net/conferences/index.php#id2016-06-03-1',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
         'href' => 'http://2016.madisonphpconference.com',
         'rel' => 'via',
         'type' => 'text/html',
       ),
     ),
-    'newsImage' => 
+    'newsImage' =>
     array (
       'xmlns' => 'http://php.net/ns/news',
       'link' => 'http://2016.madisonphpconference.com/',
@@ -17047,37 +17047,37 @@ the upgrade
        Join us on Friday, September 30th, 2016 for a full day of tutorials followed by a three tracks of talks on Saturday, October 1st, 2016. Madison PHP Conference in Madison, Wisconsin focuses on PHP and related web technologies. This event is organized by Madison PHP and is designed to offer something to attendees at all skill levels. It will be two days of networking, learning, sharing, and great fun!
      </p></div>',
   ),
-  300 => 
+  300 =>
   array (
     'title' => 'php[world] 2016 Call for Speakers',
-    'id' => 'http://php.net/archive/2016.php#id2016-06-02-1',
+    'id' => 'https://www.php.net/archive/2016.php#id2016-06-02-1',
     'published' => '2016-06-02T11:36:27-04:00',
     'updated' => '2016-06-02T11:36:27-04:00',
     'finalTeaserDate' => '2016-06-24',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'cfp',
         'label' => 'Call for Papers',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/conferences/index.php#id2016-06-02-1',
+        'href' => 'https://www.php.net/conferences/index.php#id2016-06-02-1',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
         'href' => 'https://world.phparch.com/',
         'rel' => 'via',
         'type' => 'text/html',
       ),
     ),
-    'newsImage' => 
+    'newsImage' =>
     array (
       'xmlns' => 'http://php.net/ns/news',
       'link' => 'https://world.phparch.com/',
@@ -17104,37 +17104,37 @@ the upgrade
      </p><p>Now in its 3rd year, <a href="https://world.phparch.com">php[world]</a> is the conference designed to bring the entire world of PHP together in one place, with dedicated tracks for the biggest applications and frameworks in the PHP community such as WordPress, Drupal, Magento, Joomla!, Symfony, Zend Framework, CakePHP, and Laravel.
      </p><p class=\'fullArticleLink\'><a href=\'https://world.phparch.com/\' class>&hellip; read full article</a></p></div>',
   ),
-  301 => 
+  301 =>
   array (
     'title' => 'The 4th Annual China PHP Conference',
-    'id' => 'http://php.net/archive/2016.php#id2016-05-30-1',
+    'id' => 'https://www.php.net/archive/2016.php#id2016-05-30-1',
     'published' => '2016-05-30T15:53:21+00:00',
     'updated' => '2016-05-30T15:53:21+00:00',
     'finalTeaserDate' => '2016-06-25',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'conferences',
         'label' => 'Conference announcement',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/conferences/index.php#id2016-05-30-1',
+        'href' => 'https://www.php.net/conferences/index.php#id2016-05-30-1',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
-        'href' => 'http://php.net/archive/2016.php#id2016-05-30-1',
+        'href' => 'https://www.php.net/archive/2016.php#id2016-05-30-1',
         'rel' => 'via',
         'type' => 'text/html',
       ),
     ),
-    'newsImage' => 
+    'newsImage' =>
     array (
       'xmlns' => 'http://php.net/ns/news',
       'link' => 'http://www.phpconchina.com/',
@@ -17151,38 +17151,38 @@ the upgrade
 					<p>Go to <a href="http://www.phpconchina.com/">www.phpconchina.com</a> for tickets and more information.</p>
     </div>
   ',
-    'intro' => '<div><p>The 4th Annual China PHP Conference â June 25 to 26, Shanghai</p><p>We will be hosting a 2-days event filled with high quality, technical sessions about PHP Core, PHP High Performance, PHP Engineering, and PHP more.</p><p class=\'fullArticleLink\'><a href=\'http://php.net/archive/2016.php#id2016-05-30-1\' class>&hellip; read full article</a></p></div>',
+    'intro' => '<div><p>The 4th Annual China PHP Conference â June 25 to 26, Shanghai</p><p>We will be hosting a 2-days event filled with high quality, technical sessions about PHP Core, PHP High Performance, PHP Engineering, and PHP more.</p><p class=\'fullArticleLink\'><a href=\'https://www.php.net/archive/2016.php#id2016-05-30-1\' class>&hellip; read full article</a></p></div>',
   ),
-  302 => 
+  302 =>
   array (
     'title' => 'PHP 5.6.22 is available',
-    'id' => 'http://php.net/archive/2016.php#id2016-05-26-3',
+    'id' => 'https://www.php.net/archive/2016.php#id2016-05-26-3',
     'published' => '2016-05-26T12:59:08-07:00',
     'updated' => '2016-05-26T12:59:08-07:00',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'frontpage',
         'label' => 'PHP.net frontpage news',
       ),
-      1 => 
+      1 =>
       array (
         'term' => 'releases',
         'label' => 'New PHP release',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/index.php#id2016-05-26-3',
+        'href' => 'https://www.php.net/index.php#id2016-05-26-3',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
-        'href' => 'http://php.net/archive/2016.php#id2016-05-26-3',
+        'href' => 'https://www.php.net/archive/2016.php#id2016-05-26-3',
         'rel' => 'via',
         'type' => 'text/html',
       ),
@@ -17195,9 +17195,9 @@ the upgrade
      All PHP 5.6 users are encouraged to upgrade to this version.
      </p>
 
-     <p>For source downloads of PHP 5.6.22 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-     The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.6.22">ChangeLog</a>.
+     <p>For source downloads of PHP 5.6.22 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
+     Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
+     The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-5.php#5.6.22">ChangeLog</a>.
      </p>
     </div>
   ',
@@ -17206,41 +17206,41 @@ the upgrade
      this release.
 
      All PHP 5.6 users are encouraged to upgrade to this version.
-     </p><p>For source downloads of PHP 5.6.22 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-     The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.6.22">ChangeLog</a>.
+     </p><p>For source downloads of PHP 5.6.22 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
+     Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
+     The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-5.php#5.6.22">ChangeLog</a>.
      </p></div>',
   ),
-  303 => 
+  303 =>
   array (
     'title' => 'PHP 5.5.36 is available',
-    'id' => 'http://php.net/archive/2016.php#id2016-05-26-2',
+    'id' => 'https://www.php.net/archive/2016.php#id2016-05-26-2',
     'published' => '2016-05-26T12:50:50+00:00',
     'updated' => '2016-05-26T12:50:50+00:00',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'frontpage',
         'label' => 'PHP.net frontpage news',
       ),
-      1 => 
+      1 =>
       array (
         'term' => 'releases',
         'label' => 'New PHP release',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/index.php#id2016-05-26-2',
+        'href' => 'https://www.php.net/index.php#id2016-05-26-2',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
-        'href' => 'http://php.net/archive/2016.php#id2016-05-26-2',
+        'href' => 'https://www.php.net/archive/2016.php#id2016-05-26-2',
         'rel' => 'via',
         'type' => 'text/html',
       ),
@@ -17253,9 +17253,9 @@ the upgrade
      All PHP 5.5 users are encouraged to upgrade to this version.
      </p>
 
-     <p>For source downloads of PHP 5.5.36 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-     The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.5.36">ChangeLog</a>.
+     <p>For source downloads of PHP 5.5.36 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
+     Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
+     The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-5.php#5.5.36">ChangeLog</a>.
      </p>
     </div>
   ',
@@ -17264,41 +17264,41 @@ the upgrade
      this release.
 
      All PHP 5.5 users are encouraged to upgrade to this version.
-     </p><p>For source downloads of PHP 5.5.36 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-     The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.5.36">ChangeLog</a>.
+     </p><p>For source downloads of PHP 5.5.36 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
+     Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
+     The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-5.php#5.5.36">ChangeLog</a>.
      </p></div>',
   ),
-  304 => 
+  304 =>
   array (
     'title' => 'PHP 7.0.7 Released',
-    'id' => 'http://php.net/archive/2016.php#id2016-05-26-1',
+    'id' => 'https://www.php.net/archive/2016.php#id2016-05-26-1',
     'published' => '2016-05-26T13:00:00+01:00',
     'updated' => '2016-05-26T13:00:00+01:00',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'releases',
         'label' => 'New PHP release',
       ),
-      1 => 
+      1 =>
       array (
         'term' => 'frontpage',
         'label' => 'PHP.net frontpage news',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/index.php#id2016-05-26-1',
+        'href' => 'https://www.php.net/index.php#id2016-05-26-1',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
-        'href' => 'http://php.net/archive/2016.php#id2016-05-26-1',
+        'href' => 'https://www.php.net/archive/2016.php#id2016-05-26-1',
         'rel' => 'via',
         'type' => 'text/html',
       ),
@@ -17311,9 +17311,9 @@ the upgrade
      All PHP 7.0 users are encouraged to upgrade to this version.
      </p>
 
-     <p>For source downloads of PHP 7.0.7 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-     The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.0.7">ChangeLog</a>.
+     <p>For source downloads of PHP 7.0.7 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
+     Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
+     The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-7.php#7.0.7">ChangeLog</a>.
      </p>
     </div>
   ',
@@ -17322,42 +17322,42 @@ the upgrade
      this release.
 
      All PHP 7.0 users are encouraged to upgrade to this version.
-     </p><p>For source downloads of PHP 7.0.7 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-     The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.0.7">ChangeLog</a>.
+     </p><p>For source downloads of PHP 7.0.7 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
+     Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
+     The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-7.php#7.0.7">ChangeLog</a>.
      </p></div>',
   ),
-  305 => 
+  305 =>
   array (
     'title' => 'ConFoo Vancouver 2016 Calling for Papers',
-    'id' => 'http://php.net/archive/2016.php#id2016-05-12-1',
+    'id' => 'https://www.php.net/archive/2016.php#id2016-05-12-1',
     'published' => '2016-05-12T20:03:15-04:00',
     'updated' => '2016-05-12T20:03:15-04:00',
     'finalTeaserDate' => '2016-06-06',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'cfp',
         'label' => 'Call for Papers',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/conferences/index.php#id2016-05-12-1',
+        'href' => 'https://www.php.net/conferences/index.php#id2016-05-12-1',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
         'href' => 'https://confoo.ca/en/yvr2016',
         'rel' => 'via',
         'type' => 'text/html',
       ),
     ),
-    'newsImage' => 
+    'newsImage' =>
     array (
       'xmlns' => 'http://php.net/ns/news',
       'link' => 'https://confoo.ca/en/yvr2016',
@@ -17372,42 +17372,42 @@ the upgrade
   ',
     'intro' => '<div></div>',
   ),
-  306 => 
+  306 =>
   array (
     'title' => 'Announcing PHPConf.Asia 2016. CFP Opens Now!',
-    'id' => 'http://php.net/archive/2016.php#id2016-05-02-2',
+    'id' => 'https://www.php.net/archive/2016.php#id2016-05-02-2',
     'published' => '2016-05-02T00:28:11+08:00',
     'updated' => '2016-05-02T00:28:11+08:00',
     'finalTeaserDate' => '2016-08-22',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'conferences',
         'label' => 'Conference announcement',
       ),
-      1 => 
+      1 =>
       array (
         'term' => 'cfp',
         'label' => 'Call for Papers',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/conferences/index.php#id2016-05-02-2',
+        'href' => 'https://www.php.net/conferences/index.php#id2016-05-02-2',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
         'href' => 'https://2016.phpconf.asia',
         'rel' => 'via',
         'type' => 'text/html',
       ),
     ),
-    'newsImage' => 
+    'newsImage' =>
     array (
       'xmlns' => 'http://php.net/ns/news',
       'link' => 'https://2016.phpconf.asia',
@@ -17423,36 +17423,36 @@ the upgrade
   ',
     'intro' => '<div><p><strong>Announcing <a href="http://2016.phpconf.asia" target="_blank">PHPConf.Asia 2016</a> - The Pan-Asian PHP Conference - CFP Opens Now</strong></p><p>The second pan-Asian PHP conference will take place between 22<sup>nd</sup> and 24<sup>th</sup> August 2016 in <a href="https://en.wikipedia.org/wiki/Singapore" target="_blank">Singapore</a> - the Garden City of the East! Monday, 22<sup>nd</sup> August 2016 will be a <strong>Tutorial</strong> day. Followed by 2 days of <strong>Conference</strong>.</p><p class=\'fullArticleLink\'><a href=\'https://2016.phpconf.asia\' class>&hellip; read full article</a></p></div>',
   ),
-  307 => 
+  307 =>
   array (
     'title' => 'PHP 7.0.6 Released',
-    'id' => 'http://php.net/archive/2016.php#id2016-04-29-1',
+    'id' => 'https://www.php.net/archive/2016.php#id2016-04-29-1',
     'published' => '2016-04-29T02:30:00+01:00',
     'updated' => '2016-04-29T02:30:00+01:00',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'releases',
         'label' => 'New PHP release',
       ),
-      1 => 
+      1 =>
       array (
         'term' => 'frontpage',
         'label' => 'PHP.net frontpage news',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/index.php#id2016-04-29-1',
+        'href' => 'https://www.php.net/index.php#id2016-04-29-1',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
-        'href' => 'http://php.net/archive/2016.php#id2016-04-29-1',
+        'href' => 'https://www.php.net/archive/2016.php#id2016-04-29-1',
         'rel' => 'via',
         'type' => 'text/html',
       ),
@@ -17470,9 +17470,9 @@ the upgrade
      All PHP 7.0 users are encouraged to upgrade to this version.
      </p>
 
-     <p>For source downloads of PHP 7.0.6 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-     The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.0.6">ChangeLog</a>.
+     <p>For source downloads of PHP 7.0.6 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
+     Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
+     The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-7.php#7.0.6">ChangeLog</a>.
      </p>
     </div>
   ',
@@ -17481,38 +17481,38 @@ the upgrade
      this release, including
      </p><ul><li>CVE-2016-3078</li>
          <li>CVE-2016-3074</li>
-     </ul><p class=\'fullArticleLink\'><a href=\'http://php.net/archive/2016.php#id2016-04-29-1\' class>&hellip; read full article</a></p></div>',
+     </ul><p class=\'fullArticleLink\'><a href=\'https://www.php.net/archive/2016.php#id2016-04-29-1\' class>&hellip; read full article</a></p></div>',
   ),
-  308 => 
+  308 =>
   array (
     'title' => 'PHP 5.6.21 is available',
-    'id' => 'http://php.net/archive/2016.php#id2016-04-28-2',
+    'id' => 'https://www.php.net/archive/2016.php#id2016-04-28-2',
     'published' => '2016-04-28T16:04:29-07:00',
     'updated' => '2016-04-28T16:04:29-07:00',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'frontpage',
         'label' => 'PHP.net frontpage news',
       ),
-      1 => 
+      1 =>
       array (
         'term' => 'releases',
         'label' => 'New PHP release',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/index.php#id2016-04-28-2',
+        'href' => 'https://www.php.net/index.php#id2016-04-28-2',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
-        'href' => 'http://php.net/archive/2016.php#id2016-04-28-2',
+        'href' => 'https://www.php.net/archive/2016.php#id2016-04-28-2',
         'rel' => 'via',
         'type' => 'text/html',
       ),
@@ -17524,9 +17524,9 @@ the upgrade
      <p>
      All PHP 5.6 users are encouraged to upgrade to this version.
      </p>
-     <p>For source downloads of PHP 5.6.21 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-     The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.6.21">ChangeLog</a>.
+     <p>For source downloads of PHP 5.6.21 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
+     Windows binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
+     The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-5.php#5.6.21">ChangeLog</a>.
      </p>
     </div>
   ',
@@ -17534,38 +17534,38 @@ the upgrade
      5.6.21. This is a security release. Several security bugs were fixed in this release.
      </p><p>
      All PHP 5.6 users are encouraged to upgrade to this version.
-     </p><p class=\'fullArticleLink\'><a href=\'http://php.net/archive/2016.php#id2016-04-28-2\' class>&hellip; read full article</a></p></div>',
+     </p><p class=\'fullArticleLink\'><a href=\'https://www.php.net/archive/2016.php#id2016-04-28-2\' class>&hellip; read full article</a></p></div>',
   ),
-  309 => 
+  309 =>
   array (
     'title' => 'PHP 5.5.35 Release',
-    'id' => 'http://php.net/archive/2016.php#id2016-04-28-1',
+    'id' => 'https://www.php.net/archive/2016.php#id2016-04-28-1',
     'published' => '2016-04-28T19:57:38+00:00',
     'updated' => '2016-04-28T19:57:38+00:00',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'frontpage',
         'label' => 'PHP.net frontpage news',
       ),
-      1 => 
+      1 =>
       array (
         'term' => 'releases',
         'label' => 'New PHP release',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/index.php#id2016-04-28-1',
+        'href' => 'https://www.php.net/index.php#id2016-04-28-1',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
-        'href' => 'http://php.net/archive/2016.php#id2016-04-28-1',
+        'href' => 'https://www.php.net/archive/2016.php#id2016-04-28-1',
         'rel' => 'via',
         'type' => 'text/html',
       ),
@@ -17577,9 +17577,9 @@ the upgrade
      <p>
      All PHP 5.5 users are encouraged to upgrade to this version.
      </p>
-     <p>For source downloads of PHP 5.5.35 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-     The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.5.35">ChangeLog</a>.
+     <p>For source downloads of PHP 5.5.35 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
+     Windows binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
+     The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-5.php#5.5.35">ChangeLog</a>.
      </p>
     </div>
   ',
@@ -17587,39 +17587,39 @@ the upgrade
      5.5.35. This is a security release. Several security bugs were fixed in this release.
      </p><p>
      All PHP 5.5 users are encouraged to upgrade to this version.
-     </p><p class=\'fullArticleLink\'><a href=\'http://php.net/archive/2016.php#id2016-04-28-1\' class>&hellip; read full article</a></p></div>',
+     </p><p class=\'fullArticleLink\'><a href=\'https://www.php.net/archive/2016.php#id2016-04-28-1\' class>&hellip; read full article</a></p></div>',
   ),
-  310 => 
+  310 =>
   array (
     'title' => 'phpDay 2016',
-    'id' => 'http://php.net/archive/2016.php#id2016-04-18-1',
+    'id' => 'https://www.php.net/archive/2016.php#id2016-04-18-1',
     'published' => '2016-04-18T10:35:47+02:00',
     'updated' => '2016-04-18T10:35:47+02:00',
     'finalTeaserDate' => '2016-05-13',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'conferences',
         'label' => 'Conference announcement',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/conferences/index.php#id2016-04-18-1',
+        'href' => 'https://www.php.net/conferences/index.php#id2016-04-18-1',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
         'href' => 'http://2016.phpday.it/',
         'rel' => 'via',
         'type' => 'text/html',
       ),
     ),
-    'newsImage' => 
+    'newsImage' =>
     array (
       'xmlns' => 'http://php.net/ns/news',
       'link' => 'http://2016.phpday.it/',
@@ -17637,37 +17637,37 @@ the upgrade
   ',
     'intro' => '<div></div>',
   ),
-  311 => 
+  311 =>
   array (
     'title' => 'CakeFest 2016 - The CakePHP Conference',
-    'id' => 'http://php.net/archive/2016.php#id2016-04-05-1',
+    'id' => 'https://www.php.net/archive/2016.php#id2016-04-05-1',
     'published' => '2016-04-05T11:30:00+00:00',
     'updated' => '2016-04-05T11:30:00+00:00',
     'finalTeaserDate' => '2016-05-26',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'conferences',
         'label' => 'Conference announcement',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/conferences/index.php#id2016-04-05-1',
+        'href' => 'https://www.php.net/conferences/index.php#id2016-04-05-1',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
         'href' => 'http://cakefest.org',
         'rel' => 'via',
         'type' => 'text/html',
       ),
     ),
-    'newsImage' => 
+    'newsImage' =>
     array (
       'xmlns' => 'http://php.net/ns/news',
       'link' => 'http://cakefest.org',
@@ -17710,36 +17710,36 @@ the upgrade
                 who love code.</p><p>That\'s why we ask you join us at <a href="http://cakefest.org">CakeFest 2016</a> which will be running from May 26th till May 29th, and experience open
                 source at it\'s very best! As always, <a href="http://cakefest.org">CakeFest</a> will consist of a two day workshop (At beginner and advanced levels) and a two day conference. This year we are in the beautiful city of Amsterdam, Netherlands.</p><p class=\'fullArticleLink\'><a href=\'http://cakefest.org\' class>&hellip; read full article</a></p></div>',
   ),
-  312 => 
+  312 =>
   array (
     'title' => 'PHP 5.6.20 is available',
-    'id' => 'http://php.net/archive/2016.php#id2016-03-31-4',
+    'id' => 'https://www.php.net/archive/2016.php#id2016-03-31-4',
     'published' => '2016-03-31T16:28:02-07:00',
     'updated' => '2016-03-31T16:28:02-07:00',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'frontpage',
         'label' => 'PHP.net frontpage news',
       ),
-      1 => 
+      1 =>
       array (
         'term' => 'releases',
         'label' => 'New PHP release',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/index.php#id2016-03-31-4',
+        'href' => 'https://www.php.net/index.php#id2016-03-31-4',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
-        'href' => 'http://php.net/archive/2016.php#id2016-03-31-4',
+        'href' => 'https://www.php.net/archive/2016.php#id2016-03-31-4',
         'rel' => 'via',
         'type' => 'text/html',
       ),
@@ -17751,9 +17751,9 @@ the upgrade
      All PHP 5.6 users are encouraged to upgrade to this version.
      </p>
 
-     <p>For source downloads of PHP 5.6.20 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-     The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.6.20">ChangeLog</a>.
+     <p>For source downloads of PHP 5.6.20 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
+     Windows binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
+     The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-5.php#5.6.20">ChangeLog</a>.
      </p>
     </div>
   ',
@@ -17761,42 +17761,42 @@ the upgrade
      5.6.20. This is a security release. Several security bugs were fixed in this release.
 
      All PHP 5.6 users are encouraged to upgrade to this version.
-     </p><p>For source downloads of PHP 5.6.20 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-     The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.6.20">ChangeLog</a>.
+     </p><p>For source downloads of PHP 5.6.20 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
+     Windows binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
+     The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-5.php#5.6.20">ChangeLog</a>.
      </p></div>',
   ),
-  313 => 
+  313 =>
   array (
     'title' => 'PHPSerbia Conference 2016',
-    'id' => 'http://php.net/archive/2016.php#id2016-03-31-3',
+    'id' => 'https://www.php.net/archive/2016.php#id2016-03-31-3',
     'published' => '2016-03-31T20:00:00+02:00',
     'updated' => '2016-03-31T22:00:00+02:00',
     'finalTeaserDate' => '2016-05-27',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'conferences',
         'label' => 'Conference announcement',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/conferences/index.php#id2016-03-31-3',
+        'href' => 'https://www.php.net/conferences/index.php#id2016-03-31-3',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
         'href' => 'http://conf2016.phpsrbija.rs',
         'rel' => 'via',
         'type' => 'text/html',
       ),
     ),
-    'newsImage' => 
+    'newsImage' =>
     array (
       'xmlns' => 'http://php.net/ns/news',
       'link' => 'http://conf2016.phpsrbija.rs',
@@ -17813,36 +17813,36 @@ the upgrade
     ',
     'intro' => '<div><p>Conference that delivers high-value technical content about PHP and related web technologies, architecture, best practices and testing. Two days of amazing talks by some of the most prominent experts and professionals in the PHP world in a comfortable and professional setting.</p><p>At PHPSerbia Conference, youâll have the unique opportunity to learn about the latest development trends and innovations, as well as to network with fellow attendees and the speakers.</p><p class=\'fullArticleLink\'><a href=\'http://conf2016.phpsrbija.rs\' class>&hellip; read full article</a></p></div>',
   ),
-  314 => 
+  314 =>
   array (
     'title' => 'PHP 5.5.34 is available',
-    'id' => 'http://php.net/archive/2016.php#id2016-03-31-2',
+    'id' => 'https://www.php.net/archive/2016.php#id2016-03-31-2',
     'published' => '2016-03-31T12:58:50+00:00',
     'updated' => '2016-03-31T12:58:50+00:00',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'frontpage',
         'label' => 'PHP.net frontpage news',
       ),
-      1 => 
+      1 =>
       array (
         'term' => 'releases',
         'label' => 'New PHP release',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/index.php#id2016-03-31-2',
+        'href' => 'https://www.php.net/index.php#id2016-03-31-2',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
-        'href' => 'http://php.net/archive/2016.php#id2016-03-31-2',
+        'href' => 'https://www.php.net/archive/2016.php#id2016-03-31-2',
         'rel' => 'via',
         'type' => 'text/html',
       ),
@@ -17854,9 +17854,9 @@ the upgrade
      All PHP 5.5 users are encouraged to upgrade to this version.
      </p>
 
-     <p>For source downloads of PHP 5.5.34 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-     The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.5.34">ChangeLog</a>.
+     <p>For source downloads of PHP 5.5.34 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
+     Windows binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
+     The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-5.php#5.5.34">ChangeLog</a>.
      </p>
     </div>
   ',
@@ -17864,41 +17864,41 @@ the upgrade
      5.5.34. This is a security release. Several security bugs were fixed in this release.
 
      All PHP 5.5 users are encouraged to upgrade to this version.
-     </p><p>For source downloads of PHP 5.5.34 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-     The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.5.34">ChangeLog</a>.
+     </p><p>For source downloads of PHP 5.5.34 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
+     Windows binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
+     The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-5.php#5.5.34">ChangeLog</a>.
      </p></div>',
   ),
-  315 => 
+  315 =>
   array (
     'title' => 'PHP 7.0.5 Released',
-    'id' => 'http://php.net/archive/2016.php#id2016-03-31-1',
+    'id' => 'https://www.php.net/archive/2016.php#id2016-03-31-1',
     'published' => '2016-03-31T13:00:00+01:00',
     'updated' => '2016-03-31T13:00:00+01:00',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'releases',
         'label' => 'New PHP release',
       ),
-      1 => 
+      1 =>
       array (
         'term' => 'frontpage',
         'label' => 'PHP.net frontpage news',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/index.php#id2016-03-31-1',
+        'href' => 'https://www.php.net/index.php#id2016-03-31-1',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
-        'href' => 'http://php.net/archive/2016.php#id2016-03-31-1',
+        'href' => 'https://www.php.net/archive/2016.php#id2016-03-31-1',
         'rel' => 'via',
         'type' => 'text/html',
       ),
@@ -17911,9 +17911,9 @@ the upgrade
      All PHP 7.0 users are encouraged to upgrade to this version.
      </p>
 
-     <p>For source downloads of PHP 7.0.5 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-     The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.0.5">ChangeLog</a>.
+     <p>For source downloads of PHP 7.0.5 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
+     Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
+     The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-7.php#7.0.5">ChangeLog</a>.
      </p>
     </div>
   ',
@@ -17922,42 +17922,42 @@ the upgrade
      this release.
 
      All PHP 7.0 users are encouraged to upgrade to this version.
-     </p><p>For source downloads of PHP 7.0.5 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-     The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.0.5">ChangeLog</a>.
+     </p><p>For source downloads of PHP 7.0.5 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
+     Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
+     The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-7.php#7.0.5">ChangeLog</a>.
      </p></div>',
   ),
-  316 => 
+  316 =>
   array (
     'title' => 'China PHP conference 2016',
-    'id' => 'http://php.net/archive/2016.php#id2016-03-30-1',
+    'id' => 'https://www.php.net/archive/2016.php#id2016-03-30-1',
     'published' => '2016-03-30T15:53:21+00:00',
     'updated' => '2016-03-30T15:53:21+00:00',
     'finalTeaserDate' => '2016-05-14',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'conferences',
         'label' => 'Conference announcement',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/conferences/index.php#id2016-03-30-1',
+        'href' => 'https://www.php.net/conferences/index.php#id2016-03-30-1',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
-        'href' => 'http://php.net/archive/2016.php#id2016-03-30-1',
+        'href' => 'https://www.php.net/archive/2016.php#id2016-03-30-1',
         'rel' => 'via',
         'type' => 'text/html',
       ),
     ),
-    'newsImage' => 
+    'newsImage' =>
     array (
       'xmlns' => 'http://php.net/ns/news',
       'link' => 'http://devlink.cn',
@@ -17973,34 +17973,34 @@ the upgrade
 					<p>Go to <a href="http://devlink.cn/">devlink.cn</a> for tickets and more information, we are looking forward to seeing you in Beijing! </p>
     </div>
   ',
-    'intro' => '<div><p>DevLink is pleased to announce the China PHP Conference 2016.</p><p>DevLink is a group dedicated to helping developers continuous improvement. China PHP Conference 2016 face to senior PHP programmers, found for better communication in China. It will be held on 5.14-5.15 2016 for a two-days in Beijing, and we have invited Rasums Lerdorf, Xinchen Hui and other best PHP experts as speakers. There\'re over 10 topics foucus on PHP performance optimization in the Alibaba double-11 events; PHP development of big data analysis; Swoole cluster development, and SOA applications programming; upgraded to PHP7 experience of enterprise application. </p><p class=\'fullArticleLink\'><a href=\'http://php.net/archive/2016.php#id2016-03-30-1\' class>&hellip; read full article</a></p></div>',
+    'intro' => '<div><p>DevLink is pleased to announce the China PHP Conference 2016.</p><p>DevLink is a group dedicated to helping developers continuous improvement. China PHP Conference 2016 face to senior PHP programmers, found for better communication in China. It will be held on 5.14-5.15 2016 for a two-days in Beijing, and we have invited Rasums Lerdorf, Xinchen Hui and other best PHP experts as speakers. There\'re over 10 topics foucus on PHP performance optimization in the Alibaba double-11 events; PHP development of big data analysis; Swoole cluster development, and SOA applications programming; upgraded to PHP7 experience of enterprise application. </p><p class=\'fullArticleLink\'><a href=\'https://www.php.net/archive/2016.php#id2016-03-30-1\' class>&hellip; read full article</a></p></div>',
   ),
-  317 => 
+  317 =>
   array (
     'title' => 'PHPTour 2016',
-    'id' => 'http://php.net/archive/2016.php#id2016-03-15-1',
+    'id' => 'https://www.php.net/archive/2016.php#id2016-03-15-1',
     'published' => '2016-03-15T09:54:21+00:00',
     'updated' => '2016-03-15T09:54:21+00:00',
     'finalTeaserDate' => '2016-05-23',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'conferences',
         'label' => 'Conference announcement',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/conferences/index.php#id2016-03-15-1',
+        'href' => 'https://www.php.net/conferences/index.php#id2016-03-15-1',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
-        'href' => 'http://php.net/archive/2016.php#id2016-03-15-1',
+        'href' => 'https://www.php.net/archive/2016.php#id2016-03-15-1',
         'rel' => 'via',
         'type' => 'text/html',
       ),
@@ -18019,38 +18019,38 @@ the upgrade
     </div>
   ',
     'intro' => '<div><p>After Nantes, Lille, Lyon,and Luxembourg-City, this year the PHP Tour, the itinerant conference organized by the French PHP users group, goes to Clermont-Ferrand, a lovely city surrounded by volcanoes. Helped by Clermont\'ech, a local developers organization, AFUP is happy to welcome you on May 23rd and 24th at the Polydome convention centre.</p><p>This year, part of the program will focus on performance.
-"The big don\'t eat the little, the fast eat the slow" (Eberhard von Kuenheim, BMW)</p><p class=\'fullArticleLink\'><a href=\'http://php.net/archive/2016.php#id2016-03-15-1\' class>&hellip; read full article</a></p></div>',
+"The big don\'t eat the little, the fast eat the slow" (Eberhard von Kuenheim, BMW)</p><p class=\'fullArticleLink\'><a href=\'https://www.php.net/archive/2016.php#id2016-03-15-1\' class>&hellip; read full article</a></p></div>',
   ),
-  318 => 
+  318 =>
   array (
     'title' => 'PHP 5.6.19 is available',
-    'id' => 'http://php.net/archive/2016.php#id2016-03-03-3',
+    'id' => 'https://www.php.net/archive/2016.php#id2016-03-03-3',
     'published' => '2016-03-03T14:27:37-08:00',
     'updated' => '2016-03-03T14:27:37-08:00',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'frontpage',
         'label' => 'PHP.net frontpage news',
       ),
-      1 => 
+      1 =>
       array (
         'term' => 'releases',
         'label' => 'New PHP release',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/index.php#id2016-03-03-3',
+        'href' => 'https://www.php.net/index.php#id2016-03-03-3',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
-        'href' => 'http://php.net/archive/2016.php#id2016-03-03-3',
+        'href' => 'https://www.php.net/archive/2016.php#id2016-03-03-3',
         'rel' => 'via',
         'type' => 'text/html',
       ),
@@ -18062,9 +18062,9 @@ the upgrade
      All PHP 5.6 users are encouraged to upgrade to this version.
      </p>
 
-     <p>For source downloads of PHP 5.6.19 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-     The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.6.19">ChangeLog</a>.
+     <p>For source downloads of PHP 5.6.19 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
+     Windows binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
+     The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-5.php#5.6.19">ChangeLog</a>.
      </p>
 
     </div>
@@ -18073,41 +18073,41 @@ the upgrade
      5.6.19. This is a security release in which several security bugs were fixed.
 
      All PHP 5.6 users are encouraged to upgrade to this version.
-     </p><p>For source downloads of PHP 5.6.19 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-     The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.6.19">ChangeLog</a>.
+     </p><p>For source downloads of PHP 5.6.19 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
+     Windows binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
+     The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-5.php#5.6.19">ChangeLog</a>.
      </p></div>',
   ),
-  319 => 
+  319 =>
   array (
     'title' => 'PHP 5.5.33 is available',
-    'id' => 'http://php.net/archive/2016.php#id2016-03-03-2',
+    'id' => 'https://www.php.net/archive/2016.php#id2016-03-03-2',
     'published' => '2016-03-03T12:04:41+00:00',
     'updated' => '2016-03-03T12:04:41+00:00',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'frontpage',
         'label' => 'PHP.net frontpage news',
       ),
-      1 => 
+      1 =>
       array (
         'term' => 'releases',
         'label' => 'New PHP release',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/index.php#id2016-03-03-2',
+        'href' => 'https://www.php.net/index.php#id2016-03-03-2',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
-        'href' => 'http://php.net/archive/2016.php#id2016-03-03-2',
+        'href' => 'https://www.php.net/archive/2016.php#id2016-03-03-2',
         'rel' => 'via',
         'type' => 'text/html',
       ),
@@ -18119,9 +18119,9 @@ the upgrade
      All PHP 5.5 users are encouraged to upgrade to this version.
      </p>
 
-     <p>For source downloads of PHP 5.5.33 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-     The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.5.33">ChangeLog</a>.
+     <p>For source downloads of PHP 5.5.33 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
+     Windows binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
+     The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-5.php#5.5.33">ChangeLog</a>.
      </p>
 
     </div>
@@ -18130,41 +18130,41 @@ the upgrade
      5.5.33. This is a security release in which two security bugs were fixed.
 
      All PHP 5.5 users are encouraged to upgrade to this version.
-     </p><p>For source downloads of PHP 5.5.33 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-     The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.5.33">ChangeLog</a>.
+     </p><p>For source downloads of PHP 5.5.33 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
+     Windows binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
+     The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-5.php#5.5.33">ChangeLog</a>.
      </p></div>',
   ),
-  320 => 
+  320 =>
   array (
     'title' => 'PHP 7.0.4 Released',
-    'id' => 'http://php.net/archive/2016.php#id2016-03-03-1',
+    'id' => 'https://www.php.net/archive/2016.php#id2016-03-03-1',
     'published' => '2016-03-03T13:00:00+01:00',
     'updated' => '2016-03-03T13:00:00+01:00',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'releases',
         'label' => 'New PHP release',
       ),
-      1 => 
+      1 =>
       array (
         'term' => 'frontpage',
         'label' => 'PHP.net frontpage news',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/index.php#id2016-03-03-1',
+        'href' => 'https://www.php.net/index.php#id2016-03-03-1',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
-        'href' => 'http://php.net/archive/2016.php#id2016-03-03-1',
+        'href' => 'https://www.php.net/archive/2016.php#id2016-03-03-1',
         'rel' => 'via',
         'type' => 'text/html',
       ),
@@ -18177,9 +18177,9 @@ the upgrade
      All PHP 7.0 users are encouraged to upgrade to this version.
      </p>
 
-     <p>For source downloads of PHP 7.0.4 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-     The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.0.4">ChangeLog</a>.
+     <p>For source downloads of PHP 7.0.4 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
+     Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
+     The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-7.php#7.0.4">ChangeLog</a>.
      </p>
     </div>
   ',
@@ -18188,42 +18188,42 @@ the upgrade
      this release.
 
      All PHP 7.0 users are encouraged to upgrade to this version.
-     </p><p>For source downloads of PHP 7.0.4 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-     The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.0.4">ChangeLog</a>.
+     </p><p>For source downloads of PHP 7.0.4 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
+     Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
+     The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-7.php#7.0.4">ChangeLog</a>.
      </p></div>',
   ),
-  321 => 
+  321 =>
   array (
     'title' => 'PHPKonf: Istanbul PHP Conference 2016',
-    'id' => 'http://php.net/archive/2016.php#id2016-03-01-1',
+    'id' => 'https://www.php.net/archive/2016.php#id2016-03-01-1',
     'published' => '2016-03-01T09:00:00+00:00',
     'updated' => '2016-03-01T09:00:00+00:00',
     'finalTeaserDate' => '2016-05-21',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'conferences',
         'label' => 'Conference announcement',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/conferences/index.php#id2016-03-01-1',
+        'href' => 'https://www.php.net/conferences/index.php#id2016-03-01-1',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
         'href' => 'http://phpkonf.org/',
         'rel' => 'via',
         'type' => 'text/html',
       ),
     ),
-    'newsImage' => 
+    'newsImage' =>
     array (
       'xmlns' => 'http://php.net/ns/news',
       'link' => 'http://phpkonf.org/',
@@ -18238,37 +18238,37 @@ the upgrade
   ',
     'intro' => '<div><p>Istanbul PHP User Group is proud to announce that the PHPKonf 2016! We\'ll host some of the best speakers, awesome talk topics, latest technologies, and up to date news in PHP. Join us on 21st/22nd of May for a two day, double track conference in ancient city Istanbul! Weâve something for every level of PHP developer with 2 keynotes, 28 talks and 2 panels.</p><a href="http://phpkonf.org">http://phpkonf.org</a></div>',
   ),
-  322 => 
+  322 =>
   array (
     'title' => 'php[tek] 2016',
-    'id' => 'http://php.net/archive/2016.php#id2016-02-18-1',
+    'id' => 'https://www.php.net/archive/2016.php#id2016-02-18-1',
     'published' => '2016-02-18T14:47:35-05:00',
     'updated' => '2016-02-18T14:47:35-05:00',
     'finalTeaserDate' => '2016-05-23',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'conferences',
         'label' => 'Conference announcement',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/conferences/index.php#id2016-02-18-1',
+        'href' => 'https://www.php.net/conferences/index.php#id2016-02-18-1',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
         'href' => 'https://tek.phparch.com',
         'rel' => 'via',
         'type' => 'text/html',
       ),
     ),
-    'newsImage' => 
+    'newsImage' =>
     array (
       'xmlns' => 'http://php.net/ns/news',
       'link' => 'https://tek.phparch.com',
@@ -18305,37 +18305,37 @@ the upgrade
          â running from May 23th-27th.</p><p>This year we have moved the conference to a <a href="https://tek.phparch.com/location-hotel/">bigger venue</a>,
          in St. Louis, in order to expand this year and for years to come.</p><p class=\'fullArticleLink\'><a href=\'https://tek.phparch.com\' class>&hellip; read full article</a></p></div>',
   ),
-  323 => 
+  323 =>
   array (
     'title' => 'Midwest PHP 2016 Conference',
-    'id' => 'http://php.net/archive/2016.php#id2016-02-16-1',
+    'id' => 'https://www.php.net/archive/2016.php#id2016-02-16-1',
     'published' => '2016-02-16T10:46:00-06:00',
     'updated' => '2016-02-16T10:46:00-06:00',
     'finalTeaserDate' => '2016-03-05',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'conferences',
         'label' => 'Conference announcement',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/conferences/index.php#id2016-02-16-1',
+        'href' => 'https://www.php.net/conferences/index.php#id2016-02-16-1',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
         'href' => 'http://2016.midwestphp.org',
         'rel' => 'via',
         'type' => 'text/html',
       ),
     ),
-    'newsImage' => 
+    'newsImage' =>
     array (
       'xmlns' => 'http://php.net/ns/news',
       'link' => 'http://2016.midwestphp.org',
@@ -18372,36 +18372,36 @@ the upgrade
                     <a href="http://2016.midwestphp.org/register">http://2016.midwestphp.org/register</a> and we look
                     forward to seeing you there.</p><p class=\'fullArticleLink\'><a href=\'http://2016.midwestphp.org\' class>&hellip; read full article</a></p></div>',
   ),
-  324 => 
+  324 =>
   array (
     'title' => 'PHP 5.6.18 is available',
-    'id' => 'http://php.net/archive/2016.php#id2016-02-04-3',
+    'id' => 'https://www.php.net/archive/2016.php#id2016-02-04-3',
     'published' => '2016-02-04T12:08:37-08:00',
     'updated' => '2016-02-04T12:08:37-08:00',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'frontpage',
         'label' => 'PHP.net frontpage news',
       ),
-      1 => 
+      1 =>
       array (
         'term' => 'releases',
         'label' => 'New PHP release',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/index.php#id2016-02-04-3',
+        'href' => 'https://www.php.net/index.php#id2016-02-04-3',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
-        'href' => 'http://php.net/archive/2016.php#id2016-02-04-3',
+        'href' => 'https://www.php.net/archive/2016.php#id2016-02-04-3',
         'rel' => 'via',
         'type' => 'text/html',
       ),
@@ -18413,9 +18413,9 @@ the upgrade
      All PHP 5.6 users are encouraged to upgrade to this version.
      </p>
 
-     <p>For source downloads of PHP 5.6.18 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-     The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.6.18">ChangeLog</a>.
+     <p>For source downloads of PHP 5.6.18 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
+     Windows binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
+     The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-5.php#5.6.18">ChangeLog</a>.
      </p>
     </div>
   ',
@@ -18423,41 +18423,41 @@ the upgrade
      5.6.18. This is a security release. Several security bugs were fixed in this release.
 
      All PHP 5.6 users are encouraged to upgrade to this version.
-     </p><p>For source downloads of PHP 5.6.18 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-     The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.6.18">ChangeLog</a>.
+     </p><p>For source downloads of PHP 5.6.18 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
+     Windows binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
+     The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-5.php#5.6.18">ChangeLog</a>.
      </p></div>',
   ),
-  325 => 
+  325 =>
   array (
     'title' => 'PHP 5.5.32 is available',
-    'id' => 'http://php.net/archive/2016.php#id2016-02-04-2',
+    'id' => 'https://www.php.net/archive/2016.php#id2016-02-04-2',
     'published' => '2016-02-04T10:39:10+00:00',
     'updated' => '2016-02-04T10:39:10+00:00',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'frontpage',
         'label' => 'PHP.net frontpage news',
       ),
-      1 => 
+      1 =>
       array (
         'term' => 'releases',
         'label' => 'New PHP release',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/index.php#id2016-02-04-2',
+        'href' => 'https://www.php.net/index.php#id2016-02-04-2',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
-        'href' => 'http://php.net/archive/2016.php#id2016-02-04-2',
+        'href' => 'https://www.php.net/archive/2016.php#id2016-02-04-2',
         'rel' => 'via',
         'type' => 'text/html',
       ),
@@ -18469,9 +18469,9 @@ the upgrade
      All PHP 5.5 users are encouraged to upgrade to this version.
      </p>
 
-     <p>For source downloads of PHP 5.5.32 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-     The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.5.32">ChangeLog</a>.
+     <p>For source downloads of PHP 5.5.32 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
+     Windows binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
+     The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-5.php#5.5.32">ChangeLog</a>.
      </p>
     </div>
   ',
@@ -18479,41 +18479,41 @@ the upgrade
      5.5.32. This is a security release. Several security bugs were fixed in this release.
 
      All PHP 5.5 users are encouraged to upgrade to this version.
-     </p><p>For source downloads of PHP 5.5.32 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-     The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.5.32">ChangeLog</a>.
+     </p><p>For source downloads of PHP 5.5.32 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
+     Windows binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
+     The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-5.php#5.5.32">ChangeLog</a>.
      </p></div>',
   ),
-  326 => 
+  326 =>
   array (
     'title' => 'PHP 7.0.3 Released',
-    'id' => 'http://php.net/archive/2016.php#id2016-02-04-1',
+    'id' => 'https://www.php.net/archive/2016.php#id2016-02-04-1',
     'published' => '2016-02-04T13:00:00+01:00',
     'updated' => '2016-02-04T13:00:00+01:00',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'releases',
         'label' => 'New PHP release',
       ),
-      1 => 
+      1 =>
       array (
         'term' => 'frontpage',
         'label' => 'PHP.net frontpage news',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/index.php#id2016-02-04-1',
+        'href' => 'https://www.php.net/index.php#id2016-02-04-1',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
-        'href' => 'http://php.net/archive/2016.php#id2016-02-04-1',
+        'href' => 'https://www.php.net/archive/2016.php#id2016-02-04-1',
         'rel' => 'via',
         'type' => 'text/html',
       ),
@@ -18526,9 +18526,9 @@ the upgrade
      All PHP 7.0 users are encouraged to upgrade to this version.
      </p>
 
-     <p>For source downloads of PHP 7.0.3 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-     The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.0.3">ChangeLog</a>.
+     <p>For source downloads of PHP 7.0.3 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
+     Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
+     The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-7.php#7.0.3">ChangeLog</a>.
      </p>
     </div>
   ',
@@ -18537,42 +18537,42 @@ the upgrade
      this release.
 
      All PHP 7.0 users are encouraged to upgrade to this version.
-     </p><p>For source downloads of PHP 7.0.3 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-     The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.0.3">ChangeLog</a>.
+     </p><p>For source downloads of PHP 7.0.3 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
+     Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
+     The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-7.php#7.0.3">ChangeLog</a>.
      </p></div>',
   ),
-  327 => 
+  327 =>
   array (
     'title' => 'NortheastPHP Conference CfP Opens',
-    'id' => 'http://php.net/archive/2016.php#id2016-01-30-1',
+    'id' => 'https://www.php.net/archive/2016.php#id2016-01-30-1',
     'published' => '2016-01-30T04:50:46-05:00',
     'updated' => '2016-01-30T04:50:46-05:00',
     'finalTeaserDate' => '2016-03-31',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'cfp',
         'label' => 'Call for Papers',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/conferences/index.php#id2016-01-30-1',
+        'href' => 'https://www.php.net/conferences/index.php#id2016-01-30-1',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
         'href' => 'http://2016.northeastphp.org/call-for-papers/',
         'rel' => 'via',
         'type' => 'text/html',
       ),
     ),
-    'newsImage' => 
+    'newsImage' =>
     array (
       'xmlns' => 'http://php.net/ns/news',
       'link' => 'http://2016.northeastphp.org/call-for-papers/',
@@ -18593,37 +18593,37 @@ the upgrade
   ',
     'intro' => '<div><p>The team at NortheastPHP is excited to annouce that the Call for Speakers is open for our 2016 conference.</p><p>This 5th annual conference that is focused on community is moving to Charlottetown, Prince Edward Island! We have a number of other updates that will be announced in the coming months as well.</p><p class=\'fullArticleLink\'><a href=\'http://2016.northeastphp.org/call-for-papers/\' class>&hellip; read full article</a></p></div>',
   ),
-  328 => 
+  328 =>
   array (
     'title' => 'International PHP Conference 2016',
-    'id' => 'http://php.net/archive/2016.php#id2016-01-25-1',
+    'id' => 'https://www.php.net/archive/2016.php#id2016-01-25-1',
     'published' => '2016-01-25T09:54:24+01:00',
     'updated' => '2016-01-25T09:54:24+01:00',
     'finalTeaserDate' => '2016-05-29',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'conferences',
         'label' => 'Conference announcement',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/conferences/index.php#id2016-01-25-1',
+        'href' => 'https://www.php.net/conferences/index.php#id2016-01-25-1',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
         'href' => 'https://phpconference.com',
         'rel' => 'via',
         'type' => 'text/html',
       ),
     ),
-    'newsImage' => 
+    'newsImage' =>
     array (
       'xmlns' => 'http://php.net/ns/news',
       'link' => 'https://phpconference.com',
@@ -18672,36 +18672,36 @@ the upgrade
   ',
     'intro' => '<div><p><a href="https://phpconference.com">The International PHP Conference</a> is the world\'s first PHP conference and stands since more than a decade for top-notch pragmatic expertise in PHP and web technologies. At the IPC, internationally renowned experts from the PHP industry meet up with PHP users and developers from large and small companies. Here is the place where concepts emerge and ideas are born - the IPC signifies knowledge transfer at highest level.</p><p>All delegates of the International PHP Conference have, in addition to PHP program, free access to the entire range of the <a href="https://webinale.de">webinale</a> taking place at the same time.</p><p class=\'fullArticleLink\'><a href=\'https://phpconference.com\' class>&hellip; read full article</a></p></div>',
   ),
-  329 => 
+  329 =>
   array (
     'title' => 'PHP 5.6.17 is available',
-    'id' => 'http://php.net/archive/2016.php#id2016-01-07-3',
+    'id' => 'https://www.php.net/archive/2016.php#id2016-01-07-3',
     'published' => '2016-01-07T09:44:28-08:00',
     'updated' => '2016-01-07T09:44:28-08:00',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'frontpage',
         'label' => 'PHP.net frontpage news',
       ),
-      1 => 
+      1 =>
       array (
         'term' => 'releases',
         'label' => 'New PHP release',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/index.php#id2016-01-07-3',
+        'href' => 'https://www.php.net/index.php#id2016-01-07-3',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
-        'href' => 'http://php.net/archive/2016.php#id2016-01-07-3',
+        'href' => 'https://www.php.net/archive/2016.php#id2016-01-07-3',
         'rel' => 'via',
         'type' => 'text/html',
       ),
@@ -18713,9 +18713,9 @@ the upgrade
      All PHP 5.6 users are encouraged to upgrade to this version.
      </p>
 
-     <p>For source downloads of PHP 5.6.17 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-     The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.6.17">ChangeLog</a>.
+     <p>For source downloads of PHP 5.6.17 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
+     Windows binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
+     The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-5.php#5.6.17">ChangeLog</a>.
      </p>
     </div>
   ',
@@ -18723,41 +18723,41 @@ the upgrade
      5.6.17. This is a security release. Several security bugs were fixed in this release.
 
      All PHP 5.6 users are encouraged to upgrade to this version.
-     </p><p>For source downloads of PHP 5.6.17 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-     The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.6.17">ChangeLog</a>.
+     </p><p>For source downloads of PHP 5.6.17 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
+     Windows binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
+     The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-5.php#5.6.17">ChangeLog</a>.
      </p></div>',
   ),
-  330 => 
+  330 =>
   array (
     'title' => 'PHP 5.5.31 is available',
-    'id' => 'http://php.net/archive/2016.php#id2016-01-07-2',
+    'id' => 'https://www.php.net/archive/2016.php#id2016-01-07-2',
     'published' => '2016-01-07T11:59:59+00:00',
     'updated' => '2016-01-07T11:59:59+00:00',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'frontpage',
         'label' => 'PHP.net frontpage news',
       ),
-      1 => 
+      1 =>
       array (
         'term' => 'releases',
         'label' => 'New PHP release',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/index.php#id2016-01-07-2',
+        'href' => 'https://www.php.net/index.php#id2016-01-07-2',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
-        'href' => 'http://php.net/archive/2016.php#id2016-01-07-2',
+        'href' => 'https://www.php.net/archive/2016.php#id2016-01-07-2',
         'rel' => 'via',
         'type' => 'text/html',
       ),
@@ -18769,9 +18769,9 @@ the upgrade
      All PHP 5.5 users are encouraged to upgrade to this version.
      </p>
 
-     <p>For source downloads of PHP 5.5.31 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-     The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.5.31">ChangeLog</a>.
+     <p>For source downloads of PHP 5.5.31 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
+     Windows binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
+     The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-5.php#5.5.31">ChangeLog</a>.
      </p>
     </div>
   ',
@@ -18779,41 +18779,41 @@ the upgrade
      5.5.31. This is a security release. Several security bugs were fixed in this release.
 
      All PHP 5.5 users are encouraged to upgrade to this version.
-     </p><p>For source downloads of PHP 5.5.31 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-     The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.5.31">ChangeLog</a>.
+     </p><p>For source downloads of PHP 5.5.31 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
+     Windows binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
+     The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-5.php#5.5.31">ChangeLog</a>.
      </p></div>',
   ),
-  331 => 
+  331 =>
   array (
     'title' => 'PHP 7.0.2 Released',
-    'id' => 'http://php.net/archive/2016.php#id2016-01-07-1',
+    'id' => 'https://www.php.net/archive/2016.php#id2016-01-07-1',
     'published' => '2016-01-07T13:00:00+01:00',
     'updated' => '2016-01-07T13:00:00+01:00',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'releases',
         'label' => 'New PHP release',
       ),
-      1 => 
+      1 =>
       array (
         'term' => 'frontpage',
         'label' => 'PHP.net frontpage news',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/index.php#id2016-01-07-1',
+        'href' => 'https://www.php.net/index.php#id2016-01-07-1',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
-        'href' => 'http://php.net/archive/2016.php#id2016-01-07-1',
+        'href' => 'https://www.php.net/archive/2016.php#id2016-01-07-1',
         'rel' => 'via',
         'type' => 'text/html',
       ),
@@ -18825,9 +18825,9 @@ the upgrade
 	     All PHP 7.0 users are encouraged to upgrade to this version.
 	     </p>
 
-	     <p>For source downloads of PHP 7.0.2 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-	     Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-	     The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.0.2">ChangeLog</a>.
+	     <p>For source downloads of PHP 7.0.2 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
+	     Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
+	     The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-7.php#7.0.2">ChangeLog</a>.
 	     </p>
     </div>
   ',
@@ -18835,41 +18835,41 @@ the upgrade
 	     7.0.2. 31 reported bugs has been fixed, including 6 security related issues.
 
 	     All PHP 7.0 users are encouraged to upgrade to this version.
-	     </p><p>For source downloads of PHP 7.0.2 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-	     Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-	     The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.0.2">ChangeLog</a>.
+	     </p><p>For source downloads of PHP 7.0.2 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
+	     Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
+	     The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-7.php#7.0.2">ChangeLog</a>.
 	     </p></div>',
   ),
-  332 => 
+  332 =>
   array (
     'title' => 'PHP 7.0.1 Released',
-    'id' => 'http://php.net/archive/2015.php#id2015-12-17-1',
+    'id' => 'https://www.php.net/archive/2015.php#id2015-12-17-1',
     'published' => '2015-12-17T15:30:00+01:00',
     'updated' => '2015-12-17T15:30:00+01:00',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'releases',
         'label' => 'New PHP release',
       ),
-      1 => 
+      1 =>
       array (
         'term' => 'frontpage',
         'label' => 'PHP.net frontpage news',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/index.php#id2015-12-17-1',
+        'href' => 'https://www.php.net/index.php#id2015-12-17-1',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
-        'href' => 'http://php.net/archive/2015.php#id2015-12-17-1',
+        'href' => 'https://www.php.net/archive/2015.php#id2015-12-17-1',
         'rel' => 'via',
         'type' => 'text/html',
       ),
@@ -18881,9 +18881,9 @@ the upgrade
       All PHP 7.0 users are encouraged to upgrade to this version.
       </p>
 
-      <p>For source downloads of PHP 7.0.1 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-      Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.0.1">ChangeLog</a>.
+      <p>For source downloads of PHP 7.0.1 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
+      Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
+      The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-7.php#7.0.1">ChangeLog</a>.
       </p>
     </div>
   ',
@@ -18891,42 +18891,42 @@ the upgrade
       7.0.1. Several bugs have been fixed.
 
       All PHP 7.0 users are encouraged to upgrade to this version.
-      </p><p>For source downloads of PHP 7.0.1 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-      Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.0.1">ChangeLog</a>.
+      </p><p>For source downloads of PHP 7.0.1 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
+      Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
+      The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-7.php#7.0.1">ChangeLog</a>.
       </p></div>',
   ),
-  333 => 
+  333 =>
   array (
     'title' => 'php[tek] 2016 Call for Speakers',
-    'id' => 'http://php.net/archive/2015.php#id2015-12-16-1',
+    'id' => 'https://www.php.net/archive/2015.php#id2015-12-16-1',
     'published' => '2015-12-16T13:33:38+00:00',
     'updated' => '2015-12-16T13:33:38+00:00',
     'finalTeaserDate' => '2016-01-16',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'cfp',
         'label' => 'Call for Papers',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/conferences/index.php#id2015-12-16-1',
+        'href' => 'https://www.php.net/conferences/index.php#id2015-12-16-1',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
         'href' => 'https://tek.phparch.com/',
         'rel' => 'via',
         'type' => 'text/html',
       ),
     ),
-    'newsImage' => 
+    'newsImage' =>
     array (
       'xmlns' => 'http://php.net/ns/news',
       'link' => 'https://tek.phparch.com/',
@@ -18951,36 +18951,36 @@ the upgrade
   ',
     'intro' => '<div><p>The team at <a href="https://www.phparch.com/">php[architect]</a> is excited to annouce that the <a href="https://tek.phparch.com/call-for-speakers/">Call for Speakers</a> is open for <a href="https://tek.phparch.com/">php[tek] 2016</a>.</p><p>This 11th annual conference that is focused on community is this year moving to a <a href="https://tek.phparch.com/location-hotel/">bigger venue in Saint Louis</a> so that we can expand and give our attendees some elbow room!  We have a number of other updates that will be announced in the coming months as well.</p><p class=\'fullArticleLink\'><a href=\'https://tek.phparch.com/\' class>&hellip; read full article</a></p></div>',
   ),
-  334 => 
+  334 =>
   array (
     'title' => 'PHP 7.0.0 Released',
-    'id' => 'http://php.net/archive/2015.php#id2015-12-03-1',
+    'id' => 'https://www.php.net/archive/2015.php#id2015-12-03-1',
     'published' => '2015-12-03T22:30:00+01:00',
     'updated' => '2015-12-03T22:30:00+01:00',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'releases',
         'label' => 'New PHP release',
       ),
-      1 => 
+      1 =>
       array (
         'term' => 'frontpage',
         'label' => 'PHP.net frontpage news',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/index.php#id2015-12-03-1',
+        'href' => 'https://www.php.net/index.php#id2015-12-03-1',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
-        'href' => 'http://php.net/archive/2015.php#id2015-12-03-1',
+        'href' => 'https://www.php.net/archive/2015.php#id2015-12-03-1',
         'rel' => 'via',
         'type' => 'text/html',
       ),
@@ -19008,12 +19008,12 @@ the upgrade
 	<li>Zero cost asserts</li>
      </ul>
 
-     <p>For source downloads of PHP 7.0.0 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-     The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.0.0">ChangeLog</a>.
+     <p>For source downloads of PHP 7.0.0 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
+     Windows binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
+     The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-7.php#7.0.0">ChangeLog</a>.
      </p>
      <p>
-     The <a href="http://php.net/manual/migration70.php">migration guide</a> is available in the PHP Manual. Please consult
+     The <a href="https://www.php.net/manual/migration70.php">migration guide</a> is available in the PHP Manual. Please consult
      it for the detailed list of new features and backward incompatible changes.
      </p>
 
@@ -19040,39 +19040,39 @@ the upgrade
      </p><p>
      PHP 7.0.0 comes with a new version of the Zend Engine, numerous improvements
      and new features such as
-     </p><p class=\'fullArticleLink\'><a href=\'http://php.net/archive/2015.php#id2015-12-03-1\' class>&hellip; read full article</a></p></div>',
+     </p><p class=\'fullArticleLink\'><a href=\'https://www.php.net/archive/2015.php#id2015-12-03-1\' class>&hellip; read full article</a></p></div>',
   ),
-  335 => 
+  335 =>
   array (
     'title' => 'php[cruise]',
-    'id' => 'http://php.net/archive/2015.php#id2015-12-01-1',
+    'id' => 'https://www.php.net/archive/2015.php#id2015-12-01-1',
     'published' => '2015-12-01T18:12:59+00:00',
     'updated' => '2015-12-01T18:12:59+00:00',
     'finalTeaserDate' => '2016-07-17',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'conferences',
         'label' => 'Conference announcement',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/conferences/index.php#id2015-12-01-1',
+        'href' => 'https://www.php.net/conferences/index.php#id2015-12-01-1',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
         'href' => 'https://cruise.phparch.com/',
         'rel' => 'via',
         'type' => 'text/html',
       ),
     ),
-    'newsImage' => 
+    'newsImage' =>
     array (
       'xmlns' => 'http://php.net/ns/news',
       'link' => 'https://cruise.phparch.com/',
@@ -19108,36 +19108,36 @@ the upgrade
      any questions donât hesitate to contact us.
      </p><p class=\'fullArticleLink\'><a href=\'https://cruise.phparch.com/\' class>&hellip; read full article</a></p></div>',
   ),
-  336 => 
+  336 =>
   array (
     'title' => 'PHP 5.6.16 is available',
-    'id' => 'http://php.net/archive/2015.php#id2015-11-26-2',
+    'id' => 'https://www.php.net/archive/2015.php#id2015-11-26-2',
     'published' => '2015-11-26T14:18:28-08:00',
     'updated' => '2015-11-26T14:18:28-08:00',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'frontpage',
         'label' => 'PHP.net frontpage news',
       ),
-      1 => 
+      1 =>
       array (
         'term' => 'releases',
         'label' => 'New PHP release',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/index.php#id2015-11-26-2',
+        'href' => 'https://www.php.net/index.php#id2015-11-26-2',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
-        'href' => 'http://php.net/archive/2015.php#id2015-11-26-2',
+        'href' => 'https://www.php.net/archive/2015.php#id2015-11-26-2',
         'rel' => 'via',
         'type' => 'text/html',
       ),
@@ -19150,9 +19150,9 @@ the upgrade
      All PHP 5.6 users are encouraged to upgrade to this version.
      </p>
 
-     <p>For source downloads of PHP 5.6.16 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-     The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.6.16">ChangeLog</a>.
+     <p>For source downloads of PHP 5.6.16 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
+     Windows binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
+     The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-5.php#5.6.16">ChangeLog</a>.
      </p>
 
     </div>
@@ -19161,41 +19161,41 @@ the upgrade
      5.6.16. Several bugs have been fixed.
 
      All PHP 5.6 users are encouraged to upgrade to this version.
-     </p><p>For source downloads of PHP 5.6.16 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-     The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.6.16">ChangeLog</a>.
+     </p><p>For source downloads of PHP 5.6.16 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
+     Windows binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
+     The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-5.php#5.6.16">ChangeLog</a>.
      </p></div>',
   ),
-  337 => 
+  337 =>
   array (
     'title' => 'PHP 7.0.0 RC 8 Released',
-    'id' => 'http://php.net/archive/2015.php#id2015-11-26-1',
+    'id' => 'https://www.php.net/archive/2015.php#id2015-11-26-1',
     'published' => '2015-11-26T13:00:00+01:00',
     'updated' => '2015-11-26T13:00:00+01:00',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'releases',
         'label' => 'New PHP release',
       ),
-      1 => 
+      1 =>
       array (
         'term' => 'frontpage',
         'label' => 'PHP.net frontpage news',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/index.php#id2015-11-26-1',
+        'href' => 'https://www.php.net/index.php#id2015-11-26-1',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
-        'href' => 'http://php.net/archive/2015.php#id2015-11-26-1',
+        'href' => 'https://www.php.net/archive/2015.php#id2015-11-26-1',
         'rel' => 'via',
         'type' => 'text/html',
       ),
@@ -19232,7 +19232,7 @@ the upgrade
      <p>
       For more information on the new features and other changes, you can read the
       <a href="https://github.com/php/php-src/blob/php-7.0.0RC8/NEWS">NEWS file</a>, or the
-      <a href="http://php.net/manual/migration70.php">migration guide</a>
+      <a href="https://www.php.net/manual/migration70.php">migration guide</a>
       for a complete list of upgrading notes. NEWS and UPGRADING files can also be found in
       the release archive.
      </p>
@@ -19240,7 +19240,7 @@ the upgrade
      <p>
       For source downloads of PHP 7.0.0 RC 8 please visit
       the <a href="https://downloads.php.net/ab/">download page</a>, Windows source and binaries
-      can be found on <a href="http://windows.php.net/qa/">windows.php.net/qa/</a>.
+      can be found on <a href="https://windows.php.net/qa/">windows.php.net/qa/</a>.
      </p>
 
      <p>
@@ -19259,38 +19259,38 @@ the upgrade
         PHP 7.0.0 RC 8. This is the thirteenth pre-release of the new PHP 7
         major series. All users of PHP are encouraged to test this version carefully,
         and report any bugs and incompatibilities in <a href="https://bugs.php.net">the bug tracking system</a>.
-     </p><strong>THIS IS A DEVELOPMENT PREVIEW - DO <u>NOT</u> USE IT IN PRODUCTION!</strong><p class=\'fullArticleLink\'><a href=\'http://php.net/archive/2015.php#id2015-11-26-1\' class>&hellip; read full article</a></p></div>',
+     </p><strong>THIS IS A DEVELOPMENT PREVIEW - DO <u>NOT</u> USE IT IN PRODUCTION!</strong><p class=\'fullArticleLink\'><a href=\'https://www.php.net/archive/2015.php#id2015-11-26-1\' class>&hellip; read full article</a></p></div>',
   ),
-  338 => 
+  338 =>
   array (
     'title' => 'PHP 7.0.0 RC 7 Released',
-    'id' => 'http://php.net/archive/2015.php#id2015-11-12-1',
+    'id' => 'https://www.php.net/archive/2015.php#id2015-11-12-1',
     'published' => '2015-11-12T13:00:00+01:00',
     'updated' => '2015-11-12T13:00:00+01:00',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'releases',
         'label' => 'New PHP release',
       ),
-      1 => 
+      1 =>
       array (
         'term' => 'frontpage',
         'label' => 'PHP.net frontpage news',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/index.php#id2015-11-12-1',
+        'href' => 'https://www.php.net/index.php#id2015-11-12-1',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
-        'href' => 'http://php.net/archive/2015.php#id2015-11-12-1',
+        'href' => 'https://www.php.net/archive/2015.php#id2015-11-12-1',
         'rel' => 'via',
         'type' => 'text/html',
       ),
@@ -19327,7 +19327,7 @@ the upgrade
      <p>
       For more information on the new features and other changes, you can read the
       <a href="https://github.com/php/php-src/blob/php-7.0.0RC7/NEWS">NEWS file</a>, or the
-      <a href="http://php.net/manual/migration70.php">migration guide</a>
+      <a href="https://www.php.net/manual/migration70.php">migration guide</a>
       for a complete list of upgrading notes. NEWS and UPGRADING files can also be found in
       the release archive.
      </p>
@@ -19335,7 +19335,7 @@ the upgrade
      <p>
       For source downloads of PHP 7.0.0 RC 7 please visit
       the <a href="https://downloads.php.net/ab/">download page</a>, Windows source and binaries
-      can be found on <a href="http://windows.php.net/qa/">windows.php.net/qa/</a>.
+      can be found on <a href="https://windows.php.net/qa/">windows.php.net/qa/</a>.
      </p>
 
      <p>
@@ -19355,38 +19355,38 @@ the upgrade
         PHP 7.0.0 RC 7. This is the twelfth pre-release of the new PHP 7
         major series. All users of PHP are encouraged to test this version carefully,
         and report any bugs and incompatibilities in <a href="https://bugs.php.net">the bug tracking system</a>.
-     </p><strong>THIS IS A DEVELOPMENT PREVIEW - DO <u>NOT</u> USE IT IN PRODUCTION!</strong><p class=\'fullArticleLink\'><a href=\'http://php.net/archive/2015.php#id2015-11-12-1\' class>&hellip; read full article</a></p></div>',
+     </p><strong>THIS IS A DEVELOPMENT PREVIEW - DO <u>NOT</u> USE IT IN PRODUCTION!</strong><p class=\'fullArticleLink\'><a href=\'https://www.php.net/archive/2015.php#id2015-11-12-1\' class>&hellip; read full article</a></p></div>',
   ),
-  339 => 
+  339 =>
   array (
     'title' => 'PHP 5.6.15 is available',
-    'id' => 'http://php.net/archive/2015.php#id2015-10-29-2',
+    'id' => 'https://www.php.net/archive/2015.php#id2015-10-29-2',
     'published' => '2015-10-29T23:18:58-07:00',
     'updated' => '2015-10-29T23:18:58-07:00',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'frontpage',
         'label' => 'PHP.net frontpage news',
       ),
-      1 => 
+      1 =>
       array (
         'term' => 'releases',
         'label' => 'New PHP release',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/index.php#id2015-10-29-2',
+        'href' => 'https://www.php.net/index.php#id2015-10-29-2',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
-        'href' => 'http://php.net/archive/2015.php#id2015-10-29-2',
+        'href' => 'https://www.php.net/archive/2015.php#id2015-10-29-2',
         'rel' => 'via',
         'type' => 'text/html',
       ),
@@ -19399,9 +19399,9 @@ the upgrade
      All PHP 5.6 users are encouraged to upgrade to this version.
      </p>
 
-     <p>For source downloads of PHP 5.6.15 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-     The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.6.15">ChangeLog</a>.
+     <p>For source downloads of PHP 5.6.15 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
+     Windows binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
+     The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-5.php#5.6.15">ChangeLog</a>.
      </p>
 
     </div>
@@ -19410,41 +19410,41 @@ the upgrade
      5.6.15. Several bugs have been fixed.
 
      All PHP 5.6 users are encouraged to upgrade to this version.
-     </p><p>For source downloads of PHP 5.6.15 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-     The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.6.15">ChangeLog</a>.
+     </p><p>For source downloads of PHP 5.6.15 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
+     Windows binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
+     The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-5.php#5.6.15">ChangeLog</a>.
      </p></div>',
   ),
-  340 => 
+  340 =>
   array (
     'title' => 'PHP 7.0.0 RC 6 Released',
-    'id' => 'http://php.net/archive/2015.php#id2015-10-29-1',
+    'id' => 'https://www.php.net/archive/2015.php#id2015-10-29-1',
     'published' => '2015-10-29T13:00:00+01:00',
     'updated' => '2015-10-29T13:00:00+01:00',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'releases',
         'label' => 'New PHP release',
       ),
-      1 => 
+      1 =>
       array (
         'term' => 'frontpage',
         'label' => 'PHP.net frontpage news',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/index.php#id2015-10-29-1',
+        'href' => 'https://www.php.net/index.php#id2015-10-29-1',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
-        'href' => 'http://php.net/archive/2015.php#id2015-10-29-1',
+        'href' => 'https://www.php.net/archive/2015.php#id2015-10-29-1',
         'rel' => 'via',
         'type' => 'text/html',
       ),
@@ -19481,7 +19481,7 @@ the upgrade
      <p>
       For more information on the new features and other changes, you can read the
       <a href="https://github.com/php/php-src/blob/php-7.0.0RC6/NEWS">NEWS file</a>, or the
-      <a href="http://php.net/manual/migration70.php">migration guide</a>
+      <a href="https://www.php.net/manual/migration70.php">migration guide</a>
       for a complete list of upgrading notes. NEWS and UPGRADING files can also be found in
       the release archive.
      </p>
@@ -19489,7 +19489,7 @@ the upgrade
      <p>
       For source downloads of PHP 7.0.0 RC 6 please visit
       the <a href="https://downloads.php.net/ab/">download page</a>, Windows source and binaries
-      can be found on <a href="http://windows.php.net/qa/">windows.php.net/qa/</a>.
+      can be found on <a href="https://windows.php.net/qa/">windows.php.net/qa/</a>.
      </p>
 
      <p>
@@ -19507,39 +19507,39 @@ the upgrade
         PHP 7.0.0 RC 6. This is the eleventh pre-release of the new PHP 7
         major series. All users of PHP are encouraged to test this version carefully,
         and report any bugs and incompatibilities in <a href="https://bugs.php.net">the bug tracking system</a>.
-     </p><strong>THIS IS A DEVELOPMENT PREVIEW - DO <u>NOT</u> USE IT IN PRODUCTION!</strong><p class=\'fullArticleLink\'><a href=\'http://php.net/archive/2015.php#id2015-10-29-1\' class>&hellip; read full article</a></p></div>',
+     </p><strong>THIS IS A DEVELOPMENT PREVIEW - DO <u>NOT</u> USE IT IN PRODUCTION!</strong><p class=\'fullArticleLink\'><a href=\'https://www.php.net/archive/2015.php#id2015-10-29-1\' class>&hellip; read full article</a></p></div>',
   ),
-  341 => 
+  341 =>
   array (
     'title' => 'PhpConference Brasil 2015',
-    'id' => 'http://php.net/archive/2015.php#id2015-10-15-3',
+    'id' => 'https://www.php.net/archive/2015.php#id2015-10-15-3',
     'published' => '2015-10-15T22:00:00-03:00',
     'updated' => '2015-10-15T22:00:00-03:00',
     'finalTeaserDate' => '2015-12-02',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'conferences',
         'label' => 'Conference announcement',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/conferences/index.php#id2015-10-15-3',
+        'href' => 'https://www.php.net/conferences/index.php#id2015-10-15-3',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
         'href' => 'http://phpconference.com.br',
         'rel' => 'via',
         'type' => 'text/html',
       ),
     ),
-    'newsImage' => 
+    'newsImage' =>
     array (
       'xmlns' => 'http://php.net/ns/news',
       'link' => 'http://phpconference.com.br',
@@ -19584,36 +19584,36 @@ the upgrade
       wednesday, december 2nd, and ending on december 6th - on a beach!
       </p><p class=\'fullArticleLink\'><a href=\'http://phpconference.com.br\' class>&hellip; read full article</a></p></div>',
   ),
-  342 => 
+  342 =>
   array (
     'title' => 'PHP 7.0.0 RC 5 Released',
-    'id' => 'http://php.net/archive/2015.php#id2015-10-15-2',
+    'id' => 'https://www.php.net/archive/2015.php#id2015-10-15-2',
     'published' => '2015-10-15T13:00:00+01:00',
     'updated' => '2015-10-15T13:00:00+01:00',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'releases',
         'label' => 'New PHP release',
       ),
-      1 => 
+      1 =>
       array (
         'term' => 'frontpage',
         'label' => 'PHP.net frontpage news',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/index.php#id2015-10-15-2',
+        'href' => 'https://www.php.net/index.php#id2015-10-15-2',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
-        'href' => 'http://php.net/archive/2015.php#id2015-10-15-2',
+        'href' => 'https://www.php.net/archive/2015.php#id2015-10-15-2',
         'rel' => 'via',
         'type' => 'text/html',
       ),
@@ -19650,7 +19650,7 @@ the upgrade
      <p>
       For more information on the new features and other changes, you can read the
       <a href="https://github.com/php/php-src/blob/php-7.0.0RC5/NEWS">NEWS file</a>, or the
-      <a href="http://php.net/manual/migration70.php">migration guide</a>
+      <a href="https://www.php.net/manual/migration70.php">migration guide</a>
       for a complete list of upgrading notes. NEWS and UPGRADING files can also be found in
       the release archive.
      </p>
@@ -19658,7 +19658,7 @@ the upgrade
      <p>
       For source downloads of PHP 7.0.0 RC 5 please visit
       the <a href="https://downloads.php.net/ab/">download page</a>, Windows source and binaries
-      can be found on <a href="http://windows.php.net/qa/">windows.php.net/qa/</a>.
+      can be found on <a href="https://windows.php.net/qa/">windows.php.net/qa/</a>.
      </p>
 
      <p>
@@ -19676,39 +19676,39 @@ the upgrade
         PHP 7.0.0 RC 5. This is the tenth pre-release of the new PHP 7
         major series. All users of PHP are encouraged to test this version carefully,
         and report any bugs and incompatibilities in <a href="https://bugs.php.net">the bug tracking system</a>.
-     </p><strong>THIS IS A DEVELOPMENT PREVIEW - DO <u>NOT</u> USE IT IN PRODUCTION!</strong><p class=\'fullArticleLink\'><a href=\'http://php.net/archive/2015.php#id2015-10-15-2\' class>&hellip; read full article</a></p></div>',
+     </p><strong>THIS IS A DEVELOPMENT PREVIEW - DO <u>NOT</u> USE IT IN PRODUCTION!</strong><p class=\'fullArticleLink\'><a href=\'https://www.php.net/archive/2015.php#id2015-10-15-2\' class>&hellip; read full article</a></p></div>',
   ),
-  343 => 
+  343 =>
   array (
     'title' => 'PHP Frameworks Day 2015',
-    'id' => 'http://php.net/archive/2015.php#id2015-10-15-1',
+    'id' => 'https://www.php.net/archive/2015.php#id2015-10-15-1',
     'published' => '2015-10-15T12:05:32-04:00',
     'updated' => '2015-10-15T12:05:32-04:00',
     'finalTeaserDate' => '2015-10-19',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'conferences',
         'label' => 'Conference announcement',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/conferences/index.php#id2015-10-15-1',
+        'href' => 'https://www.php.net/conferences/index.php#id2015-10-15-1',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
         'href' => 'http://frameworksdays.com/event/php-frameworks-day-2015',
         'rel' => 'via',
         'type' => 'text/html',
       ),
     ),
-    'newsImage' => 
+    'newsImage' =>
     array (
       'xmlns' => 'http://php.net/ns/news',
       'link' => 'http://frameworksdays.com/event/php-frameworks-day-2015',
@@ -19741,37 +19741,37 @@ the upgrade
   ',
     'intro' => '<div><p>#fwdays invites everybody interested in PHP topic to attend PHP Frameworks Day 2015 conference on October 17.</p><p>This is the third time PHP Frameworks Day is being held and each time it grows and becomes more interesting! <a href="https://www.youtube.com/watch?v=qPlQQqnGM-s" title="Watch">Watch</a> how we spent PHP Frameworks Day 2014.</p><p class=\'fullArticleLink\'><a href=\'http://frameworksdays.com/event/php-frameworks-day-2015\' class>&hellip; read full article</a></p></div>',
   ),
-  344 => 
+  344 =>
   array (
     'title' => 'SunshinePHP 2016',
-    'id' => 'http://php.net/archive/2015.php#id2015-10-07-1',
+    'id' => 'https://www.php.net/archive/2015.php#id2015-10-07-1',
     'published' => '2015-10-07T12:05:32-04:00',
     'updated' => '2015-10-07T12:05:32-04:00',
     'finalTeaserDate' => '2016-02-04',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'conferences',
         'label' => 'Conference announcement',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/conferences/index.php#id2015-10-07-1',
+        'href' => 'https://www.php.net/conferences/index.php#id2015-10-07-1',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
         'href' => 'http://2016.sunshinephp.com',
         'rel' => 'via',
         'type' => 'text/html',
       ),
     ),
-    'newsImage' => 
+    'newsImage' =>
     array (
       'xmlns' => 'http://php.net/ns/news',
       'link' => 'http://2016.sunshinephp.com',
@@ -19794,36 +19794,36 @@ the upgrade
   ',
     'intro' => '<div><p>WooHoo! SunshinePHP has hit it\'s 4th year and will happen from February 4th - 6th, 2016 in sunny Miami, Florida.</p><p>As one of the largest community conferences in the U.S. our call for papers ended with 600+ submissions, so there is no doubt the schedule will be amazing this year. We will have a full tutorial day featuring 3-hour sessions followed by 2 days of 1-hour talks and inspirational keynotes.</p><p class=\'fullArticleLink\'><a href=\'http://2016.sunshinephp.com\' class>&hellip; read full article</a></p></div>',
   ),
-  345 => 
+  345 =>
   array (
     'title' => 'PHP 5.6.14 is available',
-    'id' => 'http://php.net/archive/2015.php#id2015-10-01-3',
+    'id' => 'https://www.php.net/archive/2015.php#id2015-10-01-3',
     'published' => '2015-10-01T16:32:14-07:00',
     'updated' => '2015-10-01T16:32:14-07:00',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'frontpage',
         'label' => 'PHP.net frontpage news',
       ),
-      1 => 
+      1 =>
       array (
         'term' => 'releases',
         'label' => 'New PHP release',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/index.php#id2015-10-01-3',
+        'href' => 'https://www.php.net/index.php#id2015-10-01-3',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
-        'href' => 'http://php.net/archive/2015.php#id2015-10-01-3',
+        'href' => 'https://www.php.net/archive/2015.php#id2015-10-01-3',
         'rel' => 'via',
         'type' => 'text/html',
       ),
@@ -19835,9 +19835,9 @@ the upgrade
      All PHP 5.6 users are encouraged to upgrade to this version.
      </p>
 
-     <p>For source downloads of PHP 5.6.14 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-     The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.6.14">ChangeLog</a>.
+     <p>For source downloads of PHP 5.6.14 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
+     Windows binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
+     The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-5.php#5.6.14">ChangeLog</a>.
      </p>
     </div>
   ',
@@ -19845,41 +19845,41 @@ the upgrade
      5.6.14. This is a security release. Two security bugs were fixed in this release.
 
      All PHP 5.6 users are encouraged to upgrade to this version.
-     </p><p>For source downloads of PHP 5.6.14 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-     The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.6.14">ChangeLog</a>.
+     </p><p>For source downloads of PHP 5.6.14 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
+     Windows binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
+     The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-5.php#5.6.14">ChangeLog</a>.
      </p></div>',
   ),
-  346 => 
+  346 =>
   array (
     'title' => 'PHP 5.5.30 is available',
-    'id' => 'http://php.net/archive/2015.php#id2015-10-01-2',
+    'id' => 'https://www.php.net/archive/2015.php#id2015-10-01-2',
     'published' => '2015-10-01T15:44:13+00:00',
     'updated' => '2015-10-01T15:44:13+00:00',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'frontpage',
         'label' => 'PHP.net frontpage news',
       ),
-      1 => 
+      1 =>
       array (
         'term' => 'releases',
         'label' => 'New PHP release',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/index.php#id2015-10-01-2',
+        'href' => 'https://www.php.net/index.php#id2015-10-01-2',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
-        'href' => 'http://php.net/archive/2015.php#id2015-10-01-2',
+        'href' => 'https://www.php.net/archive/2015.php#id2015-10-01-2',
         'rel' => 'via',
         'type' => 'text/html',
       ),
@@ -19891,9 +19891,9 @@ the upgrade
      All PHP 5.5 users are encouraged to upgrade to this version.
      </p>
 
-     <p>For source downloads of PHP 5.5.30 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-     The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.5.30">ChangeLog</a>.
+     <p>For source downloads of PHP 5.5.30 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
+     Windows binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
+     The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-5.php#5.5.30">ChangeLog</a>.
      </p>
     </div>
   ',
@@ -19901,41 +19901,41 @@ the upgrade
      5.5.30. This is a security release. Two security bugs were fixed in this release.
 
      All PHP 5.5 users are encouraged to upgrade to this version.
-     </p><p>For source downloads of PHP 5.5.30 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-     The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.5.30">ChangeLog</a>.
+     </p><p>For source downloads of PHP 5.5.30 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
+     Windows binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
+     The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-5.php#5.5.30">ChangeLog</a>.
      </p></div>',
   ),
-  347 => 
+  347 =>
   array (
     'title' => 'PHP 7.0.0 RC 4 Released',
-    'id' => 'http://php.net/archive/2015.php#id2015-10-01-1',
+    'id' => 'https://www.php.net/archive/2015.php#id2015-10-01-1',
     'published' => '2015-10-01T13:00:00+01:00',
     'updated' => '2015-10-01T13:00:00+01:00',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'releases',
         'label' => 'New PHP release',
       ),
-      1 => 
+      1 =>
       array (
         'term' => 'frontpage',
         'label' => 'PHP.net frontpage news',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/index.php#id2015-10-01-1',
+        'href' => 'https://www.php.net/index.php#id2015-10-01-1',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
-        'href' => 'http://php.net/archive/2015.php#id2015-10-01-1',
+        'href' => 'https://www.php.net/archive/2015.php#id2015-10-01-1',
         'rel' => 'via',
         'type' => 'text/html',
       ),
@@ -19972,7 +19972,7 @@ the upgrade
      <p>
       For more information on the new features and other changes, you can read the
       <a href="https://github.com/php/php-src/blob/php-7.0.0RC4/NEWS">NEWS file</a>, or the
-      <a href="http://php.net/manual/migration70.php">migration guide</a>
+      <a href="https://www.php.net/manual/migration70.php">migration guide</a>
       for a complete list of upgrading notes. NEWS and UPGRADING files can also be found in
       the release archive.
      </p>
@@ -19980,7 +19980,7 @@ the upgrade
      <p>
       For source downloads of PHP 7.0.0 RC 4 please visit
       the <a href="https://downloads.php.net/ab/">download page</a>, Windows source and binaries
-      can be found on <a href="http://windows.php.net/qa/">windows.php.net/qa/</a>.
+      can be found on <a href="https://windows.php.net/qa/">windows.php.net/qa/</a>.
      </p>
 
      <p>
@@ -19998,44 +19998,44 @@ the upgrade
         PHP 7.0.0 RC 4. This is the ninth pre-release of the new PHP 7
         major series. All users of PHP are encouraged to test this version carefully,
         and report any bugs and incompatibilities in <a href="https://bugs.php.net">the bug tracking system</a>.
-     </p><strong>THIS IS A DEVELOPMENT PREVIEW - DO <u>NOT</u> USE IT IN PRODUCTION!</strong><p class=\'fullArticleLink\'><a href=\'http://php.net/archive/2015.php#id2015-10-01-1\' class>&hellip; read full article</a></p></div>',
+     </p><strong>THIS IS A DEVELOPMENT PREVIEW - DO <u>NOT</u> USE IT IN PRODUCTION!</strong><p class=\'fullArticleLink\'><a href=\'https://www.php.net/archive/2015.php#id2015-10-01-1\' class>&hellip; read full article</a></p></div>',
   ),
-  348 => 
+  348 =>
   array (
     'title' => 'PHPBenelux Conference 2016',
-    'id' => 'http://php.net/archive/2015.php#id2015-09-30-1',
+    'id' => 'https://www.php.net/archive/2015.php#id2015-09-30-1',
     'published' => '2015-09-30T09:56:51-04:00',
     'updated' => '2015-09-30T09:56:51-04:00',
     'finalTeaserDate' => '2015-10-14',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'cfp',
         'label' => 'Call for Papers',
       ),
-      1 => 
+      1 =>
       array (
         'term' => 'conferences',
         'label' => 'Conference announcement',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/conferences/index.php#id2015-09-30-1',
+        'href' => 'https://www.php.net/conferences/index.php#id2015-09-30-1',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
         'href' => 'https://conference.phpbenelux.eu/',
         'rel' => 'via',
         'type' => 'text/html',
       ),
     ),
-    'newsImage' => 
+    'newsImage' =>
     array (
       'xmlns' => 'http://php.net/ns/news',
       'link' => 'https://conference.phpbenelux.eu/',
@@ -20082,36 +20082,36 @@ the upgrade
      hallway tracks between and after the sessions.
      </p><p class=\'fullArticleLink\'><a href=\'https://conference.phpbenelux.eu/\' class>&hellip; read full article</a></p></div>',
   ),
-  349 => 
+  349 =>
   array (
     'title' => 'PHP 7.0.0 RC 3 Released',
-    'id' => 'http://php.net/archive/2015.php#id2015-09-17-2',
+    'id' => 'https://www.php.net/archive/2015.php#id2015-09-17-2',
     'published' => '2015-09-17T12:30:00+01:00',
     'updated' => '2015-09-17T12:30:00+01:00',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'releases',
         'label' => 'New PHP release',
       ),
-      1 => 
+      1 =>
       array (
         'term' => 'frontpage',
         'label' => 'PHP.net frontpage news',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/index.php#id2015-09-17-2',
+        'href' => 'https://www.php.net/index.php#id2015-09-17-2',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
-        'href' => 'http://php.net/archive/2015.php#id2015-09-17-2',
+        'href' => 'https://www.php.net/archive/2015.php#id2015-09-17-2',
         'rel' => 'via',
         'type' => 'text/html',
       ),
@@ -20161,7 +20161,7 @@ the upgrade
      <p>
       For source downloads of PHP 7.0.0 RC 3 please visit
       the <a href="https://downloads.php.net/ab/">download page</a>, Windows source and binaries
-      can be found on <a href="http://windows.php.net/qa/">windows.php.net/qa/</a>.
+      can be found on <a href="https://windows.php.net/qa/">windows.php.net/qa/</a>.
      </p>
 
      <p>
@@ -20179,39 +20179,39 @@ the upgrade
         PHP 7.0.0 RC 3. This is the eighth pre-release of the new PHP 7
         major series. All users of PHP are encouraged to test this version carefully,
         and report any bugs and incompatibilities in <a href="https://bugs.php.net">the bug tracking system</a>.
-     </p><strong>THIS IS A DEVELOPMENT PREVIEW - DO <u>NOT</u> USE IT IN PRODUCTION!</strong><p class=\'fullArticleLink\'><a href=\'http://php.net/archive/2015.php#id2015-09-17-2\' class>&hellip; read full article</a></p></div>',
+     </p><strong>THIS IS A DEVELOPMENT PREVIEW - DO <u>NOT</u> USE IT IN PRODUCTION!</strong><p class=\'fullArticleLink\'><a href=\'https://www.php.net/archive/2015.php#id2015-09-17-2\' class>&hellip; read full article</a></p></div>',
   ),
-  350 => 
+  350 =>
   array (
     'title' => 'PHPConf Taiwan 2015',
-    'id' => 'http://php.net/archive/2015.php#id2015-09-15-1',
+    'id' => 'https://www.php.net/archive/2015.php#id2015-09-15-1',
     'published' => '2015-09-15T16:25:12+00:00',
     'updated' => '2015-09-30T09:09:09+01:00',
     'finalTeaserDate' => '2015-10-09',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'conferences',
         'label' => 'Conference announcement',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/conferences/index.php#id2015-09-15-1',
+        'href' => 'https://www.php.net/conferences/index.php#id2015-09-15-1',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
         'href' => 'http://2015.phpconf.tw',
         'rel' => 'via',
         'type' => 'text/html',
       ),
     ),
-    'newsImage' => 
+    'newsImage' =>
     array (
       'xmlns' => 'http://php.net/ns/news',
       'link' => 'http://2015.phpconf.tw',
@@ -20225,37 +20225,37 @@ the upgrade
   ',
     'intro' => '<div><p>We are honored to announce <a href="http://2015.phpconf.tw">PHPConf Taiwan 2015</a> will be held in Taipei, Taiwan on Oct. 9th. As the biggest PHP event in Taiwan, PHPConf attracts hundreds of developers and users in Taiwan to share their knowledge on PHP. This year, to celebrate the 20th anniversary of the invention of PHP and the release of PHP 7, Mr. Rasmus Lerdorf, creator of PHP, and Mr. Xinchen Hui, member from the PHP core developer team, are invited to be our keynote speakers. In addition, we also invited well-known developers in Taiwan to share their expertise and experience at PHPConf. The <a href="http://2015.phpconf.tw/#schedule-section">two-track agenda</a> covers various topics, including Big Data, horizontal extension, software architecture, ORM and Async I/Oâ¦ etc.</p><p>For ticketing and other information, please visit <a href="http://2015.phpconf.tw">http://2015.phpconf.tw</a>. We look forward to seeing you in Taipei this October!</p></div>',
   ),
-  351 => 
+  351 =>
   array (
     'title' => 'PHPConf.Asia 2015',
-    'id' => 'http://php.net/archive/2015.php#id2015-09-04-5',
+    'id' => 'https://www.php.net/archive/2015.php#id2015-09-04-5',
     'published' => '2015-09-04T11:29:00+08:00',
     'updated' => '2015-09-04T11:29:00+08:00',
     'finalTeaserDate' => '2015-09-22',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'conferences',
         'label' => 'Conference announcement',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/conferences/index.php#id2015-09-04-5',
+        'href' => 'https://www.php.net/conferences/index.php#id2015-09-04-5',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
         'href' => 'http://phpconf.asia',
         'rel' => 'via',
         'type' => 'text/html',
       ),
     ),
-    'newsImage' => 
+    'newsImage' =>
     array (
       'xmlns' => 'http://php.net/ns/news',
       'link' => 'http://phpconf.asia',
@@ -20274,36 +20274,36 @@ the upgrade
   ',
     'intro' => '<div><p><strong>Join us at <a href="http://phpconf.asia" target="_blank">PHPConf.Asia 2015</a> - The First Pan-Asian PHP Conference</strong></p><p>The inaugural pan-Asian PHP conference will take place on 22 &amp; 23 September 2015 in <a href="https://en.wikipedia.org/wiki/Singapore" target="_blank">Singapore</a> - the Garden City of the East! Come and meet with the fastest growing PHP communities in Asia. More than 200 attendees are expected in this single track conference.</p><p class=\'fullArticleLink\'><a href=\'http://phpconf.asia\' class>&hellip; read full article</a></p></div>',
   ),
-  352 => 
+  352 =>
   array (
     'title' => 'PHP 5.4.45 Released',
-    'id' => 'http://php.net/archive/2015.php#id2015-09-04-4',
+    'id' => 'https://www.php.net/archive/2015.php#id2015-09-04-4',
     'published' => '2015-09-04T12:37:46-07:00',
     'updated' => '2015-09-04T12:37:46-07:00',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'frontpage',
         'label' => 'PHP.net frontpage news',
       ),
-      1 => 
+      1 =>
       array (
         'term' => 'releases',
         'label' => 'New PHP release',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/index.php#id2015-09-04-4',
+        'href' => 'https://www.php.net/index.php#id2015-09-04-4',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
-        'href' => 'http://php.net/archive/2015.php#id2015-09-04-4',
+        'href' => 'https://www.php.net/archive/2015.php#id2015-09-04-4',
         'rel' => 'via',
         'type' => 'text/html',
       ),
@@ -20314,12 +20314,12 @@ the upgrade
      All PHP 5.4 users are encouraged to upgrade to this version.
      </p>
 
-     <p>For source downloads of PHP 5.4.45 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-     The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.4.45">ChangeLog</a>.
+     <p>For source downloads of PHP 5.4.45 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
+     Windows binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
+     The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-5.php#5.4.45">ChangeLog</a>.
      </p>
 
-     <p>Please note that according to the <a href="http://php.net/supported-versions.php">PHP version support timelines</a>,
+     <p>Please note that according to the <a href="https://www.php.net/supported-versions.php">PHP version support timelines</a>,
      PHP 5.4.45 is the last scheduled release of PHP 5.4 branch. There may be additional release if we discover
      important security issues that warrant it, otherwise this release will be the final one in the PHP 5.4 branch.
      If your PHP installation is based on PHP 5.4, it may be a good time to start making the plans for the upgrade to PHP 5.5 or PHP 5.6.
@@ -20329,41 +20329,41 @@ the upgrade
     'intro' => '<div><p>The PHP development team announces the immediate availability of PHP
      5.4.45. Ten security-related issues were fixed in this release.
      All PHP 5.4 users are encouraged to upgrade to this version.
-     </p><p>For source downloads of PHP 5.4.45 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-     The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.4.45">ChangeLog</a>.
-     </p><p class=\'fullArticleLink\'><a href=\'http://php.net/archive/2015.php#id2015-09-04-4\' class>&hellip; read full article</a></p></div>',
+     </p><p>For source downloads of PHP 5.4.45 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
+     Windows binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
+     The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-5.php#5.4.45">ChangeLog</a>.
+     </p><p class=\'fullArticleLink\'><a href=\'https://www.php.net/archive/2015.php#id2015-09-04-4\' class>&hellip; read full article</a></p></div>',
   ),
-  353 => 
+  353 =>
   array (
     'title' => 'PHP 5.5.29 is available',
-    'id' => 'http://php.net/archive/2015.php#id2015-09-04-3',
+    'id' => 'https://www.php.net/archive/2015.php#id2015-09-04-3',
     'published' => '2015-09-04T16:00:38+00:00',
     'updated' => '2015-09-04T16:00:38+00:00',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'frontpage',
         'label' => 'PHP.net frontpage news',
       ),
-      1 => 
+      1 =>
       array (
         'term' => 'releases',
         'label' => 'New PHP release',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/index.php#id2015-09-04-3',
+        'href' => 'https://www.php.net/index.php#id2015-09-04-3',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
-        'href' => 'http://php.net/archive/2015.php#id2015-09-04-3',
+        'href' => 'https://www.php.net/archive/2015.php#id2015-09-04-3',
         'rel' => 'via',
         'type' => 'text/html',
       ),
@@ -20375,9 +20375,9 @@ the upgrade
      All PHP 5.5 users are encouraged to upgrade to this version.
      </p>
 
-     <p>For source downloads of PHP 5.5.29 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-     The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.5.29">ChangeLog</a>.
+     <p>For source downloads of PHP 5.5.29 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
+     Windows binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
+     The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-5.php#5.5.29">ChangeLog</a>.
      </p>
 
     </div>
@@ -20386,41 +20386,41 @@ the upgrade
      5.5.29. This is a security release. Many security-related issues were fixed in this release.
 
      All PHP 5.5 users are encouraged to upgrade to this version.
-     </p><p>For source downloads of PHP 5.5.29 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-     The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.5.29">ChangeLog</a>.
+     </p><p>For source downloads of PHP 5.5.29 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
+     Windows binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
+     The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-5.php#5.5.29">ChangeLog</a>.
      </p></div>',
   ),
-  354 => 
+  354 =>
   array (
     'title' => 'PHP 5.6.13 is available',
-    'id' => 'http://php.net/archive/2015.php#id2015-09-04-2',
+    'id' => 'https://www.php.net/archive/2015.php#id2015-09-04-2',
     'published' => '2015-09-04T08:40:46-07:00',
     'updated' => '2015-09-04T08:40:46-07:00',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'frontpage',
         'label' => 'PHP.net frontpage news',
       ),
-      1 => 
+      1 =>
       array (
         'term' => 'releases',
         'label' => 'New PHP release',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/index.php#id2015-09-04-2',
+        'href' => 'https://www.php.net/index.php#id2015-09-04-2',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
-        'href' => 'http://php.net/archive/2015.php#id2015-09-04-2',
+        'href' => 'https://www.php.net/archive/2015.php#id2015-09-04-2',
         'rel' => 'via',
         'type' => 'text/html',
       ),
@@ -20433,9 +20433,9 @@ the upgrade
      All PHP 5.6 users are encouraged to upgrade to this version.
      </p>
 
-     <p>For source downloads of PHP 5.6.13 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-     The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.6.13">ChangeLog</a>.
+     <p>For source downloads of PHP 5.6.13 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
+     Windows binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
+     The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-5.php#5.6.13">ChangeLog</a>.
      </p>
 
     </div>
@@ -20444,41 +20444,41 @@ the upgrade
      5.6.13. 11 security-related issues were fixed in this release.
 
      All PHP 5.6 users are encouraged to upgrade to this version.
-     </p><p>For source downloads of PHP 5.6.13 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-     The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.6.13">ChangeLog</a>.
+     </p><p>For source downloads of PHP 5.6.13 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
+     Windows binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
+     The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-5.php#5.6.13">ChangeLog</a>.
      </p></div>',
   ),
-  355 => 
+  355 =>
   array (
     'title' => 'PHP 7.0.0 RC 2 Released',
-    'id' => 'http://php.net/archive/2015.php#id2015-09-04-1',
+    'id' => 'https://www.php.net/archive/2015.php#id2015-09-04-1',
     'published' => '2015-09-04T11:30:00+01:00',
     'updated' => '2015-09-04T11:30:00+01:00',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'releases',
         'label' => 'New PHP release',
       ),
-      1 => 
+      1 =>
       array (
         'term' => 'frontpage',
         'label' => 'PHP.net frontpage news',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/index.php#id2015-09-04-1',
+        'href' => 'https://www.php.net/index.php#id2015-09-04-1',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
-        'href' => 'http://php.net/archive/2015.php#id2015-09-04-1',
+        'href' => 'https://www.php.net/archive/2015.php#id2015-09-04-1',
         'rel' => 'via',
         'type' => 'text/html',
       ),
@@ -20522,7 +20522,7 @@ the upgrade
      <p>
       For source downloads of PHP 7.0.0 RC 2 please visit
       the <a href="https://downloads.php.net/ab/">download page</a>, Windows source and binaries
-      can be found on <a href="http://windows.php.net/qa/">windows.php.net/qa/</a>.
+      can be found on <a href="https://windows.php.net/qa/">windows.php.net/qa/</a>.
      </p>
 
      <p>
@@ -20540,39 +20540,39 @@ the upgrade
         PHP 7.0.0 RC 2. This is the seventh pre-release of the new PHP 7
         major series. All users of PHP are encouraged to test this version carefully,
         and report any bugs and incompatibilities in <a href="https://bugs.php.net">the bug tracking system</a>.
-     </p><strong>THIS IS A DEVELOPMENT PREVIEW - DO <u>NOT</u> USE IT IN PRODUCTION!</strong><p class=\'fullArticleLink\'><a href=\'http://php.net/archive/2015.php#id2015-09-04-1\' class>&hellip; read full article</a></p></div>',
+     </p><strong>THIS IS A DEVELOPMENT PREVIEW - DO <u>NOT</u> USE IT IN PRODUCTION!</strong><p class=\'fullArticleLink\'><a href=\'https://www.php.net/archive/2015.php#id2015-09-04-1\' class>&hellip; read full article</a></p></div>',
   ),
-  356 => 
+  356 =>
   array (
     'title' => 'International PHP Conference 2015',
-    'id' => 'http://php.net/archive/2015.php#id2015-08-31-1',
+    'id' => 'https://www.php.net/archive/2015.php#id2015-08-31-1',
     'published' => '2015-08-31T11:33:03+02:00',
     'updated' => '2015-08-31T11:33:03+02:00',
     'finalTeaserDate' => '2015-10-25',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'conferences',
         'label' => 'Conference announcement',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/conferences/index.php#id2015-08-31-1',
+        'href' => 'https://www.php.net/conferences/index.php#id2015-08-31-1',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
         'href' => 'https://phpconference.com',
         'rel' => 'via',
         'type' => 'text/html',
       ),
     ),
-    'newsImage' => 
+    'newsImage' =>
     array (
       'xmlns' => 'http://php.net/ns/news',
       'link' => 'https://phpconference.com',
@@ -20622,36 +20622,36 @@ the upgrade
 ',
     'intro' => '<div><p><a href="https://phpconference.com">The International PHP Conference</a> is the worldâs first PHP conference and stands since more than a decade for top-notch pragmatic expertise in PHP and web technologies. At the IPC, internationally renowned experts from the PHP industry meet up with PHP users and developers from large and small companies. Here is the place where concepts emerge and ideas are born â the IPC signifies knowledge transfer at highest level.</p><p>All delegates of the International PHP Conference have, in addition to PHP program, free access to the entire range of the <a href="https://webtechcon.de/">WebTechCon</a> taking place at the same time.</p><p class=\'fullArticleLink\'><a href=\'https://phpconference.com\' class>&hellip; read full article</a></p></div>',
   ),
-  357 => 
+  357 =>
   array (
     'title' => 'PHP 7.0.0 RC 1 Released',
-    'id' => 'http://php.net/archive/2015.php#id2015-08-21-1',
+    'id' => 'https://www.php.net/archive/2015.php#id2015-08-21-1',
     'published' => '2015-08-21T10:10:00+01:00',
     'updated' => '2015-08-21T10:10:00+01:00',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'releases',
         'label' => 'New PHP release',
       ),
-      1 => 
+      1 =>
       array (
         'term' => 'frontpage',
         'label' => 'PHP.net frontpage news',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/index.php#id2015-08-21-1',
+        'href' => 'https://www.php.net/index.php#id2015-08-21-1',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
-        'href' => 'http://php.net/archive/2015.php#id2015-08-21-1',
+        'href' => 'https://www.php.net/archive/2015.php#id2015-08-21-1',
         'rel' => 'via',
         'type' => 'text/html',
       ),
@@ -20695,7 +20695,7 @@ the upgrade
      <p>
       For source downloads of PHP 7.0.0 RC 1 please visit
       the <a href="https://downloads.php.net/ab/">download page</a>, Windows source and binaries
-      can be found on <a href="http://windows.php.net/qa/">windows.php.net/qa/</a>.
+      can be found on <a href="https://windows.php.net/qa/">windows.php.net/qa/</a>.
      </p>
 
      <p>
@@ -20713,38 +20713,38 @@ the upgrade
         PHP 7.0.0 RC 1. This is the sixth pre-release of the new PHP 7
         major series. All users of PHP are encouraged to test this version carefully,
         and report any bugs and incompatibilities in <a href="https://bugs.php.net">the bug tracking system</a>.
-     </p><strong>THIS IS A DEVELOPMENT PREVIEW - DO <u>NOT</u> USE IT IN PRODUCTION!</strong><p class=\'fullArticleLink\'><a href=\'http://php.net/archive/2015.php#id2015-08-21-1\' class>&hellip; read full article</a></p></div>',
+     </p><strong>THIS IS A DEVELOPMENT PREVIEW - DO <u>NOT</u> USE IT IN PRODUCTION!</strong><p class=\'fullArticleLink\'><a href=\'https://www.php.net/archive/2015.php#id2015-08-21-1\' class>&hellip; read full article</a></p></div>',
   ),
-  358 => 
+  358 =>
   array (
     'title' => 'PHP 5.6.12 is available',
-    'id' => 'http://php.net/archive/2015.php#id2015-08-06-4',
+    'id' => 'https://www.php.net/archive/2015.php#id2015-08-06-4',
     'published' => '2015-08-06T23:30:25-07:00',
     'updated' => '2015-08-06T23:30:25-07:00',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'frontpage',
         'label' => 'PHP.net frontpage news',
       ),
-      1 => 
+      1 =>
       array (
         'term' => 'releases',
         'label' => 'New PHP release',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/index.php#id2015-08-06-4',
+        'href' => 'https://www.php.net/index.php#id2015-08-06-4',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
-        'href' => 'http://php.net/archive/2015.php#id2015-08-06-4',
+        'href' => 'https://www.php.net/archive/2015.php#id2015-08-06-4',
         'rel' => 'via',
         'type' => 'text/html',
       ),
@@ -20756,9 +20756,9 @@ the upgrade
           All PHP 5.6 users are encouraged to upgrade to this version.
           </p>
 
-          <p>For source downloads of PHP 5.6.12 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-          Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-          The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.6.12">ChangeLog</a>.
+          <p>For source downloads of PHP 5.6.12 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
+          Windows binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
+          The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-5.php#5.6.12">ChangeLog</a>.
           </p>
     </div>
   ',
@@ -20766,41 +20766,41 @@ the upgrade
           5.6.12. 12 security-related issues were fixed in this release.
 
           All PHP 5.6 users are encouraged to upgrade to this version.
-          </p><p>For source downloads of PHP 5.6.12 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-          Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-          The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.6.12">ChangeLog</a>.
+          </p><p>For source downloads of PHP 5.6.12 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
+          Windows binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
+          The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-5.php#5.6.12">ChangeLog</a>.
           </p></div>',
   ),
-  359 => 
+  359 =>
   array (
     'title' => 'PHP 5.5.28 Released',
-    'id' => 'http://php.net/archive/2015.php#id2015-08-06-3',
+    'id' => 'https://www.php.net/archive/2015.php#id2015-08-06-3',
     'published' => '2015-08-06T21:59:41-07:00',
     'updated' => '2015-08-06T21:59:41-07:00',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'frontpage',
         'label' => 'PHP.net frontpage news',
       ),
-      1 => 
+      1 =>
       array (
         'term' => 'releases',
         'label' => 'New PHP release',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/index.php#id2015-08-06-3',
+        'href' => 'https://www.php.net/index.php#id2015-08-06-3',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
-        'href' => 'http://php.net/archive/2015.php#id2015-08-06-3',
+        'href' => 'https://www.php.net/archive/2015.php#id2015-08-06-3',
         'rel' => 'via',
         'type' => 'text/html',
       ),
@@ -20813,15 +20813,15 @@ the upgrade
           </p>
 
           <p>
-          According to <a href="http://php.net/supported-versions.php">our release calendar</a>, this PHP 5.5 version
+          According to <a href="https://www.php.net/supported-versions.php">our release calendar</a>, this PHP 5.5 version
           is the first security release of the PHP 5.5 branch. This and all the following releases of this branch
      	 do not contain bugfixes that are not considered relevant for security.
           PHP 5.5 users that need further bugfixes are encouraged to upgrade to PHP 5.6.
           </p>
 
-          <p>For source downloads of PHP 5.5.28 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-          Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-          The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.5.28">ChangeLog</a>.
+          <p>For source downloads of PHP 5.5.28 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
+          Windows binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
+          The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-5.php#5.5.28">ChangeLog</a>.
           </p>
     </div>
   ',
@@ -20830,42 +20830,42 @@ the upgrade
 
           All PHP 5.5 users are encouraged to upgrade to this version.
           </p><p>
-          According to <a href="http://php.net/supported-versions.php">our release calendar</a>, this PHP 5.5 version
+          According to <a href="https://www.php.net/supported-versions.php">our release calendar</a>, this PHP 5.5 version
           is the first security release of the PHP 5.5 branch. This and all the following releases of this branch
      	 do not contain bugfixes that are not considered relevant for security.
           PHP 5.5 users that need further bugfixes are encouraged to upgrade to PHP 5.6.
-          </p><p class=\'fullArticleLink\'><a href=\'http://php.net/archive/2015.php#id2015-08-06-3\' class>&hellip; read full article</a></p></div>',
+          </p><p class=\'fullArticleLink\'><a href=\'https://www.php.net/archive/2015.php#id2015-08-06-3\' class>&hellip; read full article</a></p></div>',
   ),
-  360 => 
+  360 =>
   array (
     'title' => 'PHP 5.4.44 Released',
-    'id' => 'http://php.net/archive/2015.php#id2015-08-06-2',
+    'id' => 'https://www.php.net/archive/2015.php#id2015-08-06-2',
     'published' => '2015-08-06T21:58:57-07:00',
     'updated' => '2015-08-06T21:58:57-07:00',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'frontpage',
         'label' => 'PHP.net frontpage news',
       ),
-      1 => 
+      1 =>
       array (
         'term' => 'releases',
         'label' => 'New PHP release',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/index.php#id2015-08-06-2',
+        'href' => 'https://www.php.net/index.php#id2015-08-06-2',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
-        'href' => 'http://php.net/archive/2015.php#id2015-08-06-2',
+        'href' => 'https://www.php.net/archive/2015.php#id2015-08-06-2',
         'rel' => 'via',
         'type' => 'text/html',
       ),
@@ -20876,12 +20876,12 @@ the upgrade
      All PHP 5.4 users are encouraged to upgrade to this version.
      </p>
 
-     <p>For source downloads of PHP 5.4.44 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-     The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.4.44">ChangeLog</a>.
+     <p>For source downloads of PHP 5.4.44 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
+     Windows binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
+     The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-5.php#5.4.44">ChangeLog</a>.
      </p>
 
-     <p>Please note that PHP 5.4 branch is nearing the end of its <a href="http://php.net/supported-versions.php">support timeframe</a>. Either September or October release, depending on discovered issues, will be the last official release of PHP 5.4.
+     <p>Please note that PHP 5.4 branch is nearing the end of its <a href="https://www.php.net/supported-versions.php">support timeframe</a>. Either September or October release, depending on discovered issues, will be the last official release of PHP 5.4.
      If your PHP installation is based on PHP 5.4, it may be a good time to start making the plans for the upgrade.
      </p>
     </div>
@@ -20889,41 +20889,41 @@ the upgrade
     'intro' => '<div><p>The PHP development team announces the immediate availability of PHP
      5.4.44. 11 security-related issues were fixed in this release.
      All PHP 5.4 users are encouraged to upgrade to this version.
-     </p><p>For source downloads of PHP 5.4.44 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-     The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.4.44">ChangeLog</a>.
-     </p><p class=\'fullArticleLink\'><a href=\'http://php.net/archive/2015.php#id2015-08-06-2\' class>&hellip; read full article</a></p></div>',
+     </p><p>For source downloads of PHP 5.4.44 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
+     Windows binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
+     The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-5.php#5.4.44">ChangeLog</a>.
+     </p><p class=\'fullArticleLink\'><a href=\'https://www.php.net/archive/2015.php#id2015-08-06-2\' class>&hellip; read full article</a></p></div>',
   ),
-  361 => 
+  361 =>
   array (
     'title' => 'PHP 7.0.0 Beta 3 Released',
-    'id' => 'http://php.net/archive/2015.php#id2015-08-06-1',
+    'id' => 'https://www.php.net/archive/2015.php#id2015-08-06-1',
     'published' => '2015-08-06T17:20:00+01:00',
     'updated' => '2015-08-06T17:20:00+01:00',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'releases',
         'label' => 'New PHP release',
       ),
-      1 => 
+      1 =>
       array (
         'term' => 'frontpage',
         'label' => 'PHP.net frontpage news',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/index.php#id2015-08-06-1',
+        'href' => 'https://www.php.net/index.php#id2015-08-06-1',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
-        'href' => 'http://php.net/archive/2015.php#id2015-08-06-1',
+        'href' => 'https://www.php.net/archive/2015.php#id2015-08-06-1',
         'rel' => 'via',
         'type' => 'text/html',
       ),
@@ -20967,7 +20967,7 @@ the upgrade
      <p>
       For source downloads of PHP 7.0.0 Beta 3 please visit
       the <a href="https://downloads.php.net/ab/">download page</a>, Windows source and binaries
-      can be found on <a href="http://windows.php.net/qa/">windows.php.net/qa/</a>.
+      can be found on <a href="https://windows.php.net/qa/">windows.php.net/qa/</a>.
      </p>
 
      <p>
@@ -20985,38 +20985,38 @@ the upgrade
         PHP 7.0.0 Beta 3. This is the fifth pre-release of the new PHP 7
         major series. All users of PHP are encouraged to test this version carefully,
         and report any bugs and incompatibilities in <a href="https://bugs.php.net">the bug tracking system</a>.
-     </p><strong>THIS IS A DEVELOPMENT PREVIEW - DO <u>NOT</u> USE IT IN PRODUCTION!</strong><p class=\'fullArticleLink\'><a href=\'http://php.net/archive/2015.php#id2015-08-06-1\' class>&hellip; read full article</a></p></div>',
+     </p><strong>THIS IS A DEVELOPMENT PREVIEW - DO <u>NOT</u> USE IT IN PRODUCTION!</strong><p class=\'fullArticleLink\'><a href=\'https://www.php.net/archive/2015.php#id2015-08-06-1\' class>&hellip; read full article</a></p></div>',
   ),
-  362 => 
+  362 =>
   array (
     'title' => 'PHP 7.0.0 Beta 2 Released',
-    'id' => 'http://php.net/archive/2015.php#id2015-07-24-1',
+    'id' => 'https://www.php.net/archive/2015.php#id2015-07-24-1',
     'published' => '2015-07-24T02:40:00+01:00',
     'updated' => '2015-07-24T02:00:40+01:00',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'releases',
         'label' => 'New PHP release',
       ),
-      1 => 
+      1 =>
       array (
         'term' => 'frontpage',
         'label' => 'PHP.net frontpage news',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/index.php#id2015-07-24-1',
+        'href' => 'https://www.php.net/index.php#id2015-07-24-1',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
-        'href' => 'http://php.net/archive/2015.php#id2015-07-24-1',
+        'href' => 'https://www.php.net/archive/2015.php#id2015-07-24-1',
         'rel' => 'via',
         'type' => 'text/html',
       ),
@@ -21060,7 +21060,7 @@ the upgrade
      <p>
       For source downloads of PHP 7.0.0 Beta 2 please visit
       the <a href="https://downloads.php.net/ab/">download page</a>, Windows source and binaries
-      can be found on <a href="http://windows.php.net/qa/">windows.php.net/qa/</a>.
+      can be found on <a href="https://windows.php.net/qa/">windows.php.net/qa/</a>.
      </p>
 
      <p>
@@ -21078,38 +21078,38 @@ the upgrade
         PHP 7.0.0 Beta 2. This is the fourth pre-release of the new PHP 7
         major series. All users of PHP are encouraged to test this version carefully,
         and report any bugs and incompatibilities in <a href="https://bugs.php.net">the bug tracking system</a>.
-     </p><strong>THIS IS A DEVELOPMENT PREVIEW - DO <u>NOT</u> USE IT IN PRODUCTION!</strong><p class=\'fullArticleLink\'><a href=\'http://php.net/archive/2015.php#id2015-07-24-1\' class>&hellip; read full article</a></p></div>',
+     </p><strong>THIS IS A DEVELOPMENT PREVIEW - DO <u>NOT</u> USE IT IN PRODUCTION!</strong><p class=\'fullArticleLink\'><a href=\'https://www.php.net/archive/2015.php#id2015-07-24-1\' class>&hellip; read full article</a></p></div>',
   ),
-  363 => 
+  363 =>
   array (
     'title' => 'PHP 7.0.0 Beta 1 Released',
-    'id' => 'http://php.net/archive/2015.php#id2015-07-10-4',
+    'id' => 'https://www.php.net/archive/2015.php#id2015-07-10-4',
     'published' => '2015-07-10T23:30:00+01:00',
     'updated' => '2015-07-10T23:30:00+01:00',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'releases',
         'label' => 'New PHP release',
       ),
-      1 => 
+      1 =>
       array (
         'term' => 'frontpage',
         'label' => 'PHP.net frontpage news',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/index.php#id2015-07-10-4',
+        'href' => 'https://www.php.net/index.php#id2015-07-10-4',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
-        'href' => 'http://php.net/archive/2015.php#id2015-07-10-4',
+        'href' => 'https://www.php.net/archive/2015.php#id2015-07-10-4',
         'rel' => 'via',
         'type' => 'text/html',
       ),
@@ -21157,7 +21157,7 @@ the upgrade
      <p>
       For source downloads of PHP 7.0.0 Beta 1 please visit
       the <a href="https://downloads.php.net/ab/">download page</a>, Windows source and binaries
-      can be found on <a href="http://windows.php.net/qa/">windows.php.net/qa/</a>.
+      can be found on <a href="https://windows.php.net/qa/">windows.php.net/qa/</a>.
      </p>
 
      <p>
@@ -21175,38 +21175,38 @@ the upgrade
         PHP 7.0.0 Beta 1. This is the third pre-release of the new PHP 7
         major series. All users of PHP are encouraged to test this version carefully,
         and report any bugs and incompatibilities in <a href="https://bugs.php.net">the bug tracking system</a>.
-     </p><strong>THIS IS A DEVELOPMENT PREVIEW - DO <u>NOT</u> USE IT IN PRODUCTION!</strong><p class=\'fullArticleLink\'><a href=\'http://php.net/archive/2015.php#id2015-07-10-4\' class>&hellip; read full article</a></p></div>',
+     </p><strong>THIS IS A DEVELOPMENT PREVIEW - DO <u>NOT</u> USE IT IN PRODUCTION!</strong><p class=\'fullArticleLink\'><a href=\'https://www.php.net/archive/2015.php#id2015-07-10-4\' class>&hellip; read full article</a></p></div>',
   ),
-  364 => 
+  364 =>
   array (
     'title' => 'PHP 5.6.11 is available',
-    'id' => 'http://php.net/archive/2015.php#id2015-07-10-3',
+    'id' => 'https://www.php.net/archive/2015.php#id2015-07-10-3',
     'published' => '2015-07-10T02:52:09-07:00',
     'updated' => '2015-07-10T02:52:09-07:00',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'frontpage',
         'label' => 'PHP.net frontpage news',
       ),
-      1 => 
+      1 =>
       array (
         'term' => 'releases',
         'label' => 'New PHP release',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/index.php#id2015-07-10-3',
+        'href' => 'https://www.php.net/index.php#id2015-07-10-3',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
-        'href' => 'http://php.net/archive/2015.php#id2015-07-10-3',
+        'href' => 'https://www.php.net/archive/2015.php#id2015-07-10-3',
         'rel' => 'via',
         'type' => 'text/html',
       ),
@@ -21217,9 +21217,9 @@ the upgrade
      All PHP 5.6 users are encouraged to upgrade to this version.
      </p>
 
-     <p>For source downloads of PHP 5.6.11 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-     The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.6.11">ChangeLog</a>.
+     <p>For source downloads of PHP 5.6.11 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
+     Windows binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
+     The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-5.php#5.6.11">ChangeLog</a>.
      </p>
 
     </div>
@@ -21227,41 +21227,41 @@ the upgrade
     'intro' => '<div><p>The PHP development team announces the immediate availability of PHP
      5.6.11. Five security-related issues in PHP were fixed in this release, including CVE-2015-3152.
      All PHP 5.6 users are encouraged to upgrade to this version.
-     </p><p>For source downloads of PHP 5.6.11 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-     The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.6.11">ChangeLog</a>.
+     </p><p>For source downloads of PHP 5.6.11 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
+     Windows binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
+     The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-5.php#5.6.11">ChangeLog</a>.
      </p></div>',
   ),
-  365 => 
+  365 =>
   array (
     'title' => 'PHP 5.5.27 released',
-    'id' => 'http://php.net/archive/2015.php#id2015-07-10-2',
+    'id' => 'https://www.php.net/archive/2015.php#id2015-07-10-2',
     'published' => '2015-07-10T09:24:47+00:00',
     'updated' => '2015-07-10T09:24:47+00:00',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'frontpage',
         'label' => 'PHP.net frontpage news',
       ),
-      1 => 
+      1 =>
       array (
         'term' => 'releases',
         'label' => 'New PHP release',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/index.php#id2015-07-10-2',
+        'href' => 'https://www.php.net/index.php#id2015-07-10-2',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
-        'href' => 'http://php.net/archive/2015.php#id2015-07-10-2',
+        'href' => 'https://www.php.net/archive/2015.php#id2015-07-10-2',
         'rel' => 'via',
         'type' => 'text/html',
       ),
@@ -21274,15 +21274,15 @@ the upgrade
      </p>
 
      <p>
-     According to <a href="http://php.net/supported-versions.php">our release calendar</a>, this PHP 5.5 version
+     According to <a href="https://www.php.net/supported-versions.php">our release calendar</a>, this PHP 5.5 version
      is the last planned release that contains regular bugfixes. All the consequent releases
      will contain only security-relevant fixes, for the term of one year.
      PHP 5.5 users that need further bugfixes are encouraged to upgrade to PHP 5.6.
      </p>
 
-     <p>For source downloads of PHP 5.5.27 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-     The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.5.27">ChangeLog</a>.
+     <p>For source downloads of PHP 5.5.27 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
+     Windows binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
+     The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-5.php#5.5.27">ChangeLog</a>.
      </p>
     </div>
   ',
@@ -21291,42 +21291,42 @@ the upgrade
 
      All PHP 5.5 users are encouraged to upgrade to this version.
      </p><p>
-     According to <a href="http://php.net/supported-versions.php">our release calendar</a>, this PHP 5.5 version
+     According to <a href="https://www.php.net/supported-versions.php">our release calendar</a>, this PHP 5.5 version
      is the last planned release that contains regular bugfixes. All the consequent releases
      will contain only security-relevant fixes, for the term of one year.
      PHP 5.5 users that need further bugfixes are encouraged to upgrade to PHP 5.6.
-     </p><p class=\'fullArticleLink\'><a href=\'http://php.net/archive/2015.php#id2015-07-10-2\' class>&hellip; read full article</a></p></div>',
+     </p><p class=\'fullArticleLink\'><a href=\'https://www.php.net/archive/2015.php#id2015-07-10-2\' class>&hellip; read full article</a></p></div>',
   ),
-  366 => 
+  366 =>
   array (
     'title' => 'PHP 5.4.43 Released',
-    'id' => 'http://php.net/archive/2015.php#id2015-07-09-1',
+    'id' => 'https://www.php.net/archive/2015.php#id2015-07-09-1',
     'published' => '2015-07-09T21:09:50-07:00',
     'updated' => '2015-07-09T21:09:50-07:00',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'frontpage',
         'label' => 'PHP.net frontpage news',
       ),
-      1 => 
+      1 =>
       array (
         'term' => 'releases',
         'label' => 'New PHP release',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/index.php#id2015-07-09-1',
+        'href' => 'https://www.php.net/index.php#id2015-07-09-1',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
-        'href' => 'http://php.net/archive/2015.php#id2015-07-09-1',
+        'href' => 'https://www.php.net/archive/2015.php#id2015-07-09-1',
         'rel' => 'via',
         'type' => 'text/html',
       ),
@@ -21337,12 +21337,12 @@ the upgrade
      All PHP 5.4 users are encouraged to upgrade to this version.
      </p>
 
-     <p>For source downloads of PHP 5.4.43 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-     The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.4.43">ChangeLog</a>.
+     <p>For source downloads of PHP 5.4.43 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
+     Windows binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
+     The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-5.php#5.4.43">ChangeLog</a>.
      </p>
 
-     <p>Please note that PHP 5.4 branch is nearing the end of its <a href="http://php.net/supported-versions.php">support timeframe</a>.
+     <p>Please note that PHP 5.4 branch is nearing the end of its <a href="https://www.php.net/supported-versions.php">support timeframe</a>.
      If your PHP installations is based on PHP 5.4, it may be a good time to start making the plans for the upgrade.
      </p>
 
@@ -21351,42 +21351,42 @@ the upgrade
     'intro' => '<div><p>The PHP development team announces the immediate availability of PHP
      5.4.43. Five security-related issues in PHP were fixed in this release, including CVE-2015-3152.
      All PHP 5.4 users are encouraged to upgrade to this version.
-     </p><p>For source downloads of PHP 5.4.43 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-     The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.4.43">ChangeLog</a>.
-     </p><p class=\'fullArticleLink\'><a href=\'http://php.net/archive/2015.php#id2015-07-09-1\' class>&hellip; read full article</a></p></div>',
+     </p><p>For source downloads of PHP 5.4.43 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
+     Windows binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
+     The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-5.php#5.4.43">ChangeLog</a>.
+     </p><p class=\'fullArticleLink\'><a href=\'https://www.php.net/archive/2015.php#id2015-07-09-1\' class>&hellip; read full article</a></p></div>',
   ),
-  367 => 
+  367 =>
   array (
     'title' => 'Pacific Northwest PHP Conference 2015',
-    'id' => 'http://php.net/archive/2015.php#id2015-07-10-1',
+    'id' => 'https://www.php.net/archive/2015.php#id2015-07-10-1',
     'published' => '2015-07-10T02:00:00+01:00',
     'updated' => '2015-07-10T02:00:00+01:00',
     'finalTeaserDate' => '2015-07-20',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'conferences',
         'label' => 'Conference announcement',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/conferences/index.php#id2015-07-10-1',
+        'href' => 'https://www.php.net/conferences/index.php#id2015-07-10-1',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
         'href' => 'http://www.pnwphp.com/',
         'rel' => 'via',
         'type' => 'text/html',
       ),
     ),
-    'newsImage' => 
+    'newsImage' =>
     array (
       'xmlns' => 'http://php.net/ns/news',
       'link' => 'http://www.pnwphp.com/',
@@ -21413,37 +21413,37 @@ the upgrade
        For tickets and more information: <a href="http://www.pnwphp.com">http://www.pnwphp.com/</a>.
       </p></div>',
   ),
-  368 => 
+  368 =>
   array (
     'title' => 'PHPKonf İstanbul PHP Conference 2015',
-    'id' => 'http://php.net/archive/2015.php#id2015-07-04-1',
+    'id' => 'https://www.php.net/archive/2015.php#id2015-07-04-1',
     'published' => '2015-07-04T10:00:00+00:00',
     'updated' => '2015-07-04T10:00:00+00:00',
     'finalTeaserDate' => '2015-07-25',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'conferences',
         'label' => 'Conference announcement',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/conferences/index.php#id2015-07-04-1',
+        'href' => 'https://www.php.net/conferences/index.php#id2015-07-04-1',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
         'href' => 'http://phpkonf.org/',
         'rel' => 'via',
         'type' => 'text/html',
       ),
     ),
-    'newsImage' => 
+    'newsImage' =>
     array (
       'xmlns' => 'http://php.net/ns/news',
       'link' => 'http://phpkonf.org/',
@@ -21458,37 +21458,37 @@ the upgrade
   ',
     'intro' => '<div><p>Ä°stanbul PHP User Group is proud to announce that the PHPKonf 2015! We\'ll host some of the best speakers, awesome talk topics, latest technologies, and up to date news in PHP. Join us on 25/26 of July for a two day, double track conference in ancient city Istanbul! Weâve something for every level of PHP developer with 2 keynotes, 29 talks and 2 panels.</p><a href="http://phpkonf.org">http://phpkonf.org</a></div>',
   ),
-  369 => 
+  369 =>
   array (
     'title' => 'php[world] 2015 Schedule Announced',
-    'id' => 'http://php.net/archive/2015.php#id2015-06-29-1',
+    'id' => 'https://www.php.net/archive/2015.php#id2015-06-29-1',
     'published' => '2015-06-29T15:58:16+00:00',
     'updated' => '2015-06-29T15:58:16+00:00',
     'finalTeaserDate' => '2015-11-16',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'conferences',
         'label' => 'Conference announcement',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/conferences/index.php#id2015-06-29-1',
+        'href' => 'https://www.php.net/conferences/index.php#id2015-06-29-1',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
         'href' => 'https://world.phparch.com/',
         'rel' => 'via',
         'type' => 'text/html',
       ),
     ),
-    'newsImage' => 
+    'newsImage' =>
     array (
       'xmlns' => 'http://php.net/ns/news',
       'link' => 'https://world.phparch.com/',
@@ -21510,37 +21510,37 @@ the upgrade
   ',
     'intro' => '<div><p>The team at php[architect] is excited to announce the schedule for <a href="https://world.phparch.com">php[world] 2015</a>!  As always our conference is designed to bring all the various PHP communities together in one place to learn from each other.  We will have separate tracks for PHP, Drupal, WordPress, Magento, Joomla!, Zend Framework, Symfony, Laravel, and CakePHP.</p><p>This year we are expanding the conference to 6 concurrent sessions so that we can cover even more material.  Join us for this very unique event from November 16th through November 20th.</p><p class=\'fullArticleLink\'><a href=\'https://world.phparch.com/\' class>&hellip; read full article</a></p></div>',
   ),
-  370 => 
+  370 =>
   array (
     'title' => 'AFUP ForumPHP 2015',
-    'id' => 'http://php.net/archive/2015.php#id2015-06-27-1',
+    'id' => 'https://www.php.net/archive/2015.php#id2015-06-27-1',
     'published' => '2015-06-27T09:03:03+00:00',
     'updated' => '2015-06-27T09:03:03+00:00',
     'finalTeaserDate' => '2015-08-15',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'conferences',
         'label' => 'Conference announcement',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/conferences/index.php#id2015-06-27-1',
+        'href' => 'https://www.php.net/conferences/index.php#id2015-06-27-1',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
         'href' => 'http://www.afup.org/pages/forumphp2015/appel-a-conferenciers-en.php',
         'rel' => 'via',
         'type' => 'text/html',
       ),
     ),
-    'newsImage' => 
+    'newsImage' =>
     array (
       'xmlns' => 'http://php.net/ns/news',
       'link' => 'http://www.afup.org/pages/forumphp2015/appel-a-conferenciers-en.php',
@@ -21560,36 +21560,36 @@ In 1995, Rasmus Lerdorf started creating PHP. 20 years later, 80% of websites in
   ',
     'intro' => '<div><p>Come and join us at Forum PHP 2015, our annual conference gathering all PHP and Open Source communities, pros and PHP lovers.</p><p>This year, the event will be held at Beffroi de Montrouge, on November, 23rd and 24th. </p><p class=\'fullArticleLink\'><a href=\'http://www.afup.org/pages/forumphp2015/appel-a-conferenciers-en.php\' class>&hellip; read full article</a></p></div>',
   ),
-  371 => 
+  371 =>
   array (
     'title' => 'PHP 7.0.0 Alpha 2 Released',
-    'id' => 'http://php.net/archive/2015.php#id2015-06-25-1',
+    'id' => 'https://www.php.net/archive/2015.php#id2015-06-25-1',
     'published' => '2015-06-25T12:00:00+01:00',
     'updated' => '2015-06-25T12:00:00+01:00',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'releases',
         'label' => 'New PHP release',
       ),
-      1 => 
+      1 =>
       array (
         'term' => 'frontpage',
         'label' => 'PHP.net frontpage news',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/index.php#id2015-06-25-1',
+        'href' => 'https://www.php.net/index.php#id2015-06-25-1',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
-        'href' => 'http://php.net/archive/2015.php#id2015-06-25-1',
+        'href' => 'https://www.php.net/archive/2015.php#id2015-06-25-1',
         'rel' => 'via',
         'type' => 'text/html',
       ),
@@ -21634,7 +21634,7 @@ In 1995, Rasmus Lerdorf started creating PHP. 20 years later, 80% of websites in
      <p>
       For source downloads of PHP 7.0.0 Alpha 2 please visit
       the <a href="https://downloads.php.net/ab/">download page</a>, Windows source and binaries
-      can be found on <a href="http://windows.php.net/qa/">windows.php.net/qa/</a>.
+      can be found on <a href="https://windows.php.net/qa/">windows.php.net/qa/</a>.
      </p>
 
      <p>
@@ -21652,44 +21652,44 @@ In 1995, Rasmus Lerdorf started creating PHP. 20 years later, 80% of websites in
         PHP 7.0.0 Alpha 2. This is the second pre-release of the new PHP 7
         major series. All users of PHP are encouraged to test this version carefully,
         and report any bugs and incompatibilities in <a href="https://bugs.php.net">the bug tracking system</a>.
-     </p><strong>THIS IS A DEVELOPMENT PREVIEW - DO <u>NOT</u> USE IT IN PRODUCTION!</strong><p class=\'fullArticleLink\'><a href=\'http://php.net/archive/2015.php#id2015-06-25-1\' class>&hellip; read full article</a></p></div>',
+     </p><strong>THIS IS A DEVELOPMENT PREVIEW - DO <u>NOT</u> USE IT IN PRODUCTION!</strong><p class=\'fullArticleLink\'><a href=\'https://www.php.net/archive/2015.php#id2015-06-25-1\' class>&hellip; read full article</a></p></div>',
   ),
-  372 => 
+  372 =>
   array (
     'title' => 'Madison PHP Conference 2015',
-    'id' => 'http://php.net/archive/2015.php#id2015-06-23-1',
+    'id' => 'https://www.php.net/archive/2015.php#id2015-06-23-1',
     'published' => '2015-06-23T11:00:00+00:00',
     'updated' => '2015-06-23T11:00:00+00:00',
     'finalTeaserDate' => '2015-11-14',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'conferences',
         'label' => 'Conference announcement',
       ),
-      1 => 
+      1 =>
       array (
         'term' => 'cfp',
         'label' => 'Call for Papers',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/conferences/index.php#id2015-06-23-1',
+        'href' => 'https://www.php.net/conferences/index.php#id2015-06-23-1',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
         'href' => 'http://www.madisonphpconference.com/',
         'rel' => 'via',
         'type' => 'text/html',
       ),
     ),
-    'newsImage' => 
+    'newsImage' =>
     array (
       'xmlns' => 'http://php.net/ns/news',
       'link' => 'http://www.madisonphpconference.com/',
@@ -21704,37 +21704,37 @@ In 1995, Rasmus Lerdorf started creating PHP. 20 years later, 80% of websites in
   ',
     'intro' => '<div><p>Join us on Saturday, November 14th, 2015 for a one day, three track conference in Madison, Wisconsin, USA that focuses on PHP and related web technologies. This event is organized by Madison PHP and is designed to offer something to attendees at all skill levels. It will be a day of networking, learning, sharing, and great fun!</p><p>Our Call for Papers is open until August 4th, 2015:<br/><a href="http://cfp.madisonphpconference.com/">http://cfp.madisonphpconference.com/</a></p></div>',
   ),
-  373 => 
+  373 =>
   array (
     'title' => 'ZendCon 2015',
-    'id' => 'http://php.net/archive/2015.php#id2015-06-19-1',
+    'id' => 'https://www.php.net/archive/2015.php#id2015-06-19-1',
     'published' => '2015-06-19T10:00:00+00:00',
     'updated' => '2015-06-19T10:00:00+00:00',
     'finalTeaserDate' => '2015-10-19',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'conferences',
         'label' => 'Conference announcement',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/conferences/index.php#id2015-06-19-1',
+        'href' => 'https://www.php.net/conferences/index.php#id2015-06-19-1',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
         'href' => 'http://www.zendcon.com/',
         'rel' => 'via',
         'type' => 'text/html',
       ),
     ),
-    'newsImage' => 
+    'newsImage' =>
     array (
       'xmlns' => 'http://php.net/ns/news',
       'link' => 'http://www.zendcon.com/',
@@ -21751,36 +21751,36 @@ In 1995, Rasmus Lerdorf started creating PHP. 20 years later, 80% of websites in
   ',
     'intro' => '<div><p>Announcing ZendCon 2015, the global PHP conference, happening at the exciting Hard Rock Hotel &amp; Casino in Las Vegas, Nevada. It will start with a full day of tutorials on October 19th and then continue with inspirational keynotes and breakout sessions through the 22nd.</p><p>The conference will feature many of the top developers and speakers in the PHP space to deliver dedicated tracks centered around Zend Framework, Symfony, Laravel, WordPress, Joomla!, Drupal, and Magento. We will also host additional tracks for PHP best practices, PHP architecture, IBM i, and PHP 7.</p><p class=\'fullArticleLink\'><a href=\'http://www.zendcon.com/\' class>&hellip; read full article</a></p></div>',
   ),
-  374 => 
+  374 =>
   array (
     'title' => 'PHP 5.4.42 Released',
-    'id' => 'http://php.net/archive/2015.php#id2015-06-11-4',
+    'id' => 'https://www.php.net/archive/2015.php#id2015-06-11-4',
     'published' => '2015-06-11T20:43:05-07:00',
     'updated' => '2015-06-11T20:43:05-07:00',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'frontpage',
         'label' => 'PHP.net frontpage news',
       ),
-      1 => 
+      1 =>
       array (
         'term' => 'releases',
         'label' => 'New PHP release',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/index.php#id2015-06-11-4',
+        'href' => 'https://www.php.net/index.php#id2015-06-11-4',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
-        'href' => 'http://php.net/archive/2015.php#id2015-06-11-4',
+        'href' => 'https://www.php.net/archive/2015.php#id2015-06-11-4',
         'rel' => 'via',
         'type' => 'text/html',
       ),
@@ -21793,9 +21793,9 @@ In 1995, Rasmus Lerdorf started creating PHP. 20 years later, 80% of websites in
      All PHP 5.4 users are encouraged to upgrade to this version.
      </p>
 
-     <p>For source downloads of PHP 5.4.42 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-     The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.4.42">ChangeLog</a>.
+     <p>For source downloads of PHP 5.4.42 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
+     Windows binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
+     The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-5.php#5.4.42">ChangeLog</a>.
      </p>
     </div>
   ',
@@ -21804,41 +21804,41 @@ In 1995, Rasmus Lerdorf started creating PHP. 20 years later, 80% of websites in
      as well as several security issues in bundled sqlite library (CVE-2015-3414, CVE-2015-3415, CVE-2015-3416).
 
      All PHP 5.4 users are encouraged to upgrade to this version.
-     </p><p>For source downloads of PHP 5.4.42 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-     The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.4.42">ChangeLog</a>.
+     </p><p>For source downloads of PHP 5.4.42 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
+     Windows binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
+     The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-5.php#5.4.42">ChangeLog</a>.
      </p></div>',
   ),
-  375 => 
+  375 =>
   array (
     'title' => 'PHP 7.0.0 Alpha 1 Released',
-    'id' => 'http://php.net/archive/2015.php#id2015-06-11-3',
+    'id' => 'https://www.php.net/archive/2015.php#id2015-06-11-3',
     'published' => '2015-06-11T23:24:10+01:00',
     'updated' => '2015-06-12T17:07:56+01:00',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'releases',
         'label' => 'New PHP release',
       ),
-      1 => 
+      1 =>
       array (
         'term' => 'frontpage',
         'label' => 'PHP.net frontpage news',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/index.php#id2015-06-11-3',
+        'href' => 'https://www.php.net/index.php#id2015-06-11-3',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
-        'href' => 'http://php.net/archive/2015.php#id2015-06-11-3',
+        'href' => 'https://www.php.net/archive/2015.php#id2015-06-11-3',
         'rel' => 'via',
         'type' => 'text/html',
       ),
@@ -21878,7 +21878,7 @@ In 1995, Rasmus Lerdorf started creating PHP. 20 years later, 80% of websites in
      <p>
       For source downloads of PHP 7.0.0 Alpha 1 please visit
       the <a href="https://downloads.php.net/ab/">download page</a>, Windows sources and binaries
-      can be found on <a href="http://windows.php.net/qa/">windows.php.net/qa/</a>.
+      can be found on <a href="https://windows.php.net/qa/">windows.php.net/qa/</a>.
      </p>
 
      <p>
@@ -21896,38 +21896,38 @@ In 1995, Rasmus Lerdorf started creating PHP. 20 years later, 80% of websites in
         PHP 7.0.0 Alpha 1. This release marks the beginning of the PHP 7 major series.
         All users of PHP are encouraged to test this version carefully,
         and report any bugs and incompatibilities in <a href="https://bugs.php.net">the bug tracking system</a>.
-     </p><strong>THIS IS A DEVELOPMENT PREVIEW - DO <u>NOT</u> USE IT IN PRODUCTION!</strong><p class=\'fullArticleLink\'><a href=\'http://php.net/archive/2015.php#id2015-06-11-3\' class>&hellip; read full article</a></p></div>',
+     </p><strong>THIS IS A DEVELOPMENT PREVIEW - DO <u>NOT</u> USE IT IN PRODUCTION!</strong><p class=\'fullArticleLink\'><a href=\'https://www.php.net/archive/2015.php#id2015-06-11-3\' class>&hellip; read full article</a></p></div>',
   ),
-  376 => 
+  376 =>
   array (
     'title' => 'PHP 5.6.10 is available',
-    'id' => 'http://php.net/archive/2015.php#id2015-06-11-2',
+    'id' => 'https://www.php.net/archive/2015.php#id2015-06-11-2',
     'published' => '2015-06-11T11:34:42-07:00',
     'updated' => '2015-06-11T11:34:42-07:00',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'frontpage',
         'label' => 'PHP.net frontpage news',
       ),
-      1 => 
+      1 =>
       array (
         'term' => 'releases',
         'label' => 'New PHP release',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/index.php#id2015-06-11-2',
+        'href' => 'https://www.php.net/index.php#id2015-06-11-2',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
-        'href' => 'http://php.net/archive/2015.php#id2015-06-11-2',
+        'href' => 'https://www.php.net/archive/2015.php#id2015-06-11-2',
         'rel' => 'via',
         'type' => 'text/html',
       ),
@@ -21940,9 +21940,9 @@ In 1995, Rasmus Lerdorf started creating PHP. 20 years later, 80% of websites in
      All PHP 5.6 users are encouraged to upgrade to this version.
      </p>
 
-     <p>For source downloads of PHP 5.6.10 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-     The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.6.10">ChangeLog</a>.
+     <p>For source downloads of PHP 5.6.10 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
+     Windows binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
+     The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-5.php#5.6.10">ChangeLog</a>.
      </p>
     </div>
   ',
@@ -21951,41 +21951,41 @@ In 1995, Rasmus Lerdorf started creating PHP. 20 years later, 80% of websites in
      bundled libraries (CVE-2015-3414, CVE-2015-3415, CVE-2015-3416, CVE-2015-2325 and CVE-2015-2326).
 
      All PHP 5.6 users are encouraged to upgrade to this version.
-     </p><p>For source downloads of PHP 5.6.10 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-     The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.6.10">ChangeLog</a>.
+     </p><p>For source downloads of PHP 5.6.10 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
+     Windows binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
+     The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-5.php#5.6.10">ChangeLog</a>.
      </p></div>',
   ),
-  377 => 
+  377 =>
   array (
     'title' => 'PHP 5.5.26 is available',
-    'id' => 'http://php.net/archive/2015.php#id2015-06-11-1',
+    'id' => 'https://www.php.net/archive/2015.php#id2015-06-11-1',
     'published' => '2015-06-11T15:39:10+00:00',
     'updated' => '2015-06-11T15:39:10+00:00',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'frontpage',
         'label' => 'PHP.net frontpage news',
       ),
-      1 => 
+      1 =>
       array (
         'term' => 'releases',
         'label' => 'New PHP release',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/index.php#id2015-06-11-1',
+        'href' => 'https://www.php.net/index.php#id2015-06-11-1',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
-        'href' => 'http://php.net/archive/2015.php#id2015-06-11-1',
+        'href' => 'https://www.php.net/archive/2015.php#id2015-06-11-1',
         'rel' => 'via',
         'type' => 'text/html',
       ),
@@ -21998,9 +21998,9 @@ In 1995, Rasmus Lerdorf started creating PHP. 20 years later, 80% of websites in
      All PHP 5.5 users are encouraged to upgrade to this version.
      </p>
 
-     <p>For source downloads of PHP 5.5.26 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-     The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.5.26">ChangeLog</a>.
+     <p>For source downloads of PHP 5.5.26 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
+     Windows binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
+     The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-5.php#5.5.26">ChangeLog</a>.
      </p>
     </div>
   ',
@@ -22009,47 +22009,47 @@ In 1995, Rasmus Lerdorf started creating PHP. 20 years later, 80% of websites in
      bundled libraries (CVE-2015-3414, CVE-2015-3415, CVE-2015-3416, CVE-2015-2325 and CVE-2015-2326).
 
      All PHP 5.5 users are encouraged to upgrade to this version.
-     </p><p>For source downloads of PHP 5.5.26 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-     The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.5.26">ChangeLog</a>.
+     </p><p>For source downloads of PHP 5.5.26 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
+     Windows binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
+     The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-5.php#5.5.26">ChangeLog</a>.
      </p></div>',
   ),
-  378 => 
+  378 =>
   array (
     'title' => 'PHP Barcelona Conference 2015',
-    'id' => 'http://php.net/archive/2015.php#id2015-06-01-1',
+    'id' => 'https://www.php.net/archive/2015.php#id2015-06-01-1',
     'published' => '2015-06-01T23:45:28-04:00',
     'updated' => '2015-06-01T23:45:28-04:00',
     'finalTeaserDate' => '2015-10-30',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'conferences',
         'label' => 'Conference announcement',
       ),
-      1 => 
+      1 =>
       array (
         'term' => 'cfp',
         'label' => 'Call for Papers',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/conferences/index.php#id2015-06-01-1',
+        'href' => 'https://www.php.net/conferences/index.php#id2015-06-01-1',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
         'href' => 'http://2015.phpconference.es/',
         'rel' => 'via',
         'type' => 'text/html',
       ),
     ),
-    'newsImage' => 
+    'newsImage' =>
     array (
       'xmlns' => 'http://php.net/ns/news',
       'link' => 'http://2015.phpconference.es/',
@@ -22064,37 +22064,37 @@ In 1995, Rasmus Lerdorf started creating PHP. 20 years later, 80% of websites in
   ',
     'intro' => '<div><p>The PHP Barcelona User Group is proud to announce that the PHP Barcelona Conference is back! This year we are preparing a bigger event in the heart of a glamorous city. 2 days, 30th - 31st October, one track with amazing and stunning talks.</p><p>We opened the call for papers that will end on the 30th September 2015 â <a href="http://2015.phpconference.es/call-for-papers">2015.phpconference.es/call-for-papers</a>. So what are you waiting for, go, submit your paper! We offer attractive packages to speakers who want to enroll! Come and join us! :)</p></div>',
   ),
-  379 => 
+  379 =>
   array (
     'title' => 'php[world] 2015 Call for Speakers',
-    'id' => 'http://php.net/archive/2015.php#id2015-05-27-3',
+    'id' => 'https://www.php.net/archive/2015.php#id2015-05-27-3',
     'published' => '2015-05-27T23:48:38-04:00',
     'updated' => '2015-05-27T23:48:38-04:00',
     'finalTeaserDate' => '2015-06-06',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'cfp',
         'label' => 'Call for Papers',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/conferences/index.php#id2015-05-27-3',
+        'href' => 'https://www.php.net/conferences/index.php#id2015-05-27-3',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
         'href' => 'https://world.phparch.com/call-for-papers/',
         'rel' => 'via',
         'type' => 'text/html',
       ),
     ),
-    'newsImage' => 
+    'newsImage' =>
     array (
       'xmlns' => 'http://php.net/ns/news',
       'link' => 'https://world.phparch.com/call-for-papers/',
@@ -22112,42 +22112,42 @@ In 1995, Rasmus Lerdorf started creating PHP. 20 years later, 80% of websites in
   ',
     'intro' => '<div><p>The team at <a href="http://www.phparch.com/">php[architect]</a> is once again running <a href="https://world.phparch.com/">php[world]</a>.  The original conference designed to bring the whole world of PHP together in one place.  With dedicated tracks for WordPress, Drupal, Joomla!, Magneto, Laravel, Symfony, Zend Framework, and CakePHP!</p><p>The <a href="https://world.phparch.com/call-for-papers/">Call for Speakers</a> is currently open, but only until June 6th, so get those submissions in soon!  We are interested in sessions on any framework, application, or general PHP topics.  We especially want to see sessions that are designed to encourage people to mingle and be exposed to other PHP communities that they don\'t interact with on a daily basis.</p><p class=\'fullArticleLink\'><a href=\'https://world.phparch.com/call-for-papers/\' class>&hellip; read full article</a></p></div>',
   ),
-  380 => 
+  380 =>
   array (
     'title' => 'PHP Craft Johannesburg',
-    'id' => 'http://php.net/archive/2015.php#id2015-05-27-2',
+    'id' => 'https://www.php.net/archive/2015.php#id2015-05-27-2',
     'published' => '2015-05-27T23:45:28-04:00',
     'updated' => '2015-05-27T23:45:28-04:00',
     'finalTeaserDate' => '2015-06-17',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'conferences',
         'label' => 'Conference announcement',
       ),
-      1 => 
+      1 =>
       array (
         'term' => 'cfp',
         'label' => 'Call for Papers',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/conferences/index.php#id2015-05-27-2',
+        'href' => 'https://www.php.net/conferences/index.php#id2015-05-27-2',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
         'href' => 'http://phpsouthafrica.com/',
         'rel' => 'via',
         'type' => 'text/html',
       ),
     ),
-    'newsImage' => 
+    'newsImage' =>
     array (
       'xmlns' => 'http://php.net/ns/news',
       'link' => 'http://phpsouthafrica.com/',
@@ -22163,37 +22163,37 @@ In 1995, Rasmus Lerdorf started creating PHP. 20 years later, 80% of websites in
   ',
     'intro' => '<div><p>Our 2nd Annual PHP Craft Conference will be hosted in Johannesburg South Africa. 2 Days of fantastic content presented by local and international speakers. </p><p>Our Call for Papers now open and will close 17th June 2015. We hope to see some great topics covering fancy new tools and/or best Practice â <a href="http://www.phpsouthafrica.com/">www.phpsouthafrica.com</a></p></div>',
   ),
-  381 => 
+  381 =>
   array (
     'title' => 'China PHP Conference 2015',
-    'id' => 'http://php.net/archive/2015.php#id2015-05-27-1',
+    'id' => 'https://www.php.net/archive/2015.php#id2015-05-27-1',
     'published' => '2015-05-27T23:36:31-04:00',
     'updated' => '2015-05-27T23:36:31-04:00',
     'finalTeaserDate' => '2015-06-06',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'conferences',
         'label' => 'Conference announcement',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/conferences/index.php#id2015-05-27-1',
+        'href' => 'https://www.php.net/conferences/index.php#id2015-05-27-1',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
         'href' => 'http://www.phpconchina.com/',
         'rel' => 'via',
         'type' => 'text/html',
       ),
     ),
-    'newsImage' => 
+    'newsImage' =>
     array (
       'xmlns' => 'http://php.net/ns/news',
       'link' => 'http://www.phpconchina.com/',
@@ -22215,37 +22215,37 @@ In 1995, Rasmus Lerdorf started creating PHP. 20 years later, 80% of websites in
   ',
     'intro' => '<div><p>China PHP Conference 2015</p><p>3rd Annual China PHP Conference â June 6 to 7, Beijing  and July 11 to 12, Shanghai</p><p class=\'fullArticleLink\'><a href=\'http://www.phpconchina.com/\' class>&hellip; read full article</a></p></div>',
   ),
-  382 => 
+  382 =>
   array (
     'title' => 'DevConf 2015',
-    'id' => 'http://www.php.net/archive/2015.php#id2015-05-25-1',
+    'id' => 'https://www.php.net/archive/2015.php#id2015-05-25-1',
     'published' => '2015-05-25T16:57:52+00:00',
     'updated' => '2015-05-25T16:57:52+00:00',
     'finalTeaserDate' => '2015-06-20',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'conferences',
         'label' => 'Conference announcement',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/conferences/index.php#id2015-05-25-1',
+        'href' => 'https://www.php.net/conferences/index.php#id2015-05-25-1',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
         'href' => 'http://devconf.ru',
         'rel' => 'via',
         'type' => 'text/html',
       ),
     ),
-    'newsImage' => 
+    'newsImage' =>
     array (
       'xmlns' => 'http://php.net/ns/news',
       'link' => 'http://devconf.ru',
@@ -22285,36 +22285,36 @@ In 1995, Rasmus Lerdorf started creating PHP. 20 years later, 80% of websites in
       combining several language-specific conferences under one roof.
      </p><p class=\'fullArticleLink\'><a href=\'http://devconf.ru\' class>&hellip; read full article</a></p></div>',
   ),
-  383 => 
+  383 =>
   array (
     'title' => 'PHP 5.6.9 is available',
-    'id' => 'http://php.net/archive/2015.php#id2015-05-14-3',
+    'id' => 'https://www.php.net/archive/2015.php#id2015-05-14-3',
     'published' => '2015-05-14T23:20:57-07:00',
     'updated' => '2015-05-14T23:20:57-07:00',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'frontpage',
         'label' => 'PHP.net frontpage news',
       ),
-      1 => 
+      1 =>
       array (
         'term' => 'releases',
         'label' => 'New PHP release',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/index.php#id2015-05-14-3',
+        'href' => 'https://www.php.net/index.php#id2015-05-14-3',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
-        'href' => 'http://php.net/archive/2015.php#id2015-05-14-3',
+        'href' => 'https://www.php.net/archive/2015.php#id2015-05-14-3',
         'rel' => 'via',
         'type' => 'text/html',
       ),
@@ -22326,9 +22326,9 @@ In 1995, Rasmus Lerdorf started creating PHP. 20 years later, 80% of websites in
      All PHP 5.6 users are encouraged to upgrade to this version.
      </p>
 
-     <p>For source downloads of PHP 5.6.9 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-     The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.6.9">ChangeLog</a>.
+     <p>For source downloads of PHP 5.6.9 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
+     Windows binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
+     The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-5.php#5.6.9">ChangeLog</a>.
    </p>
     </div>
   ',
@@ -22336,41 +22336,41 @@ In 1995, Rasmus Lerdorf started creating PHP. 20 years later, 80% of websites in
      5.6.9. Several bugs have been fixed.
 
      All PHP 5.6 users are encouraged to upgrade to this version.
-     </p><p>For source downloads of PHP 5.6.9 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-     The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.6.9">ChangeLog</a>.
+     </p><p>For source downloads of PHP 5.6.9 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
+     Windows binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
+     The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-5.php#5.6.9">ChangeLog</a>.
    </p></div>',
   ),
-  384 => 
+  384 =>
   array (
     'title' => 'PHP 5.4.41 Released',
-    'id' => 'http://php.net/archive/2015.php#id2015-05-14-2',
+    'id' => 'https://www.php.net/archive/2015.php#id2015-05-14-2',
     'published' => '2015-05-14T21:35:21-07:00',
     'updated' => '2015-05-14T21:35:21-07:00',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'frontpage',
         'label' => 'PHP.net frontpage news',
       ),
-      1 => 
+      1 =>
       array (
         'term' => 'releases',
         'label' => 'New PHP release',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/index.php#id2015-05-14-2',
+        'href' => 'https://www.php.net/index.php#id2015-05-14-2',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
-        'href' => 'http://php.net/archive/2015.php#id2015-05-14-2',
+        'href' => 'https://www.php.net/archive/2015.php#id2015-05-14-2',
         'rel' => 'via',
         'type' => 'text/html',
       ),
@@ -22382,9 +22382,9 @@ In 1995, Rasmus Lerdorf started creating PHP. 20 years later, 80% of websites in
      All PHP 5.4 users are encouraged to upgrade to this version.
      </p>
 
-     <p>For source downloads of PHP 5.4.41 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-     The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.4.41">ChangeLog</a>.
+     <p>For source downloads of PHP 5.4.41 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
+     Windows binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
+     The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-5.php#5.4.41">ChangeLog</a>.
      </p>
     </div>
   ',
@@ -22392,41 +22392,41 @@ In 1995, Rasmus Lerdorf started creating PHP. 20 years later, 80% of websites in
      5.4.41. Seven security-related issues were fixed in this version.
 
      All PHP 5.4 users are encouraged to upgrade to this version.
-     </p><p>For source downloads of PHP 5.4.41 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-     The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.4.41">ChangeLog</a>.
+     </p><p>For source downloads of PHP 5.4.41 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
+     Windows binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
+     The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-5.php#5.4.41">ChangeLog</a>.
      </p></div>',
   ),
-  385 => 
+  385 =>
   array (
     'title' => 'PHP 5.5.25 is available',
-    'id' => 'http://php.net/archive/2015.php#id2015-05-14-1',
+    'id' => 'https://www.php.net/archive/2015.php#id2015-05-14-1',
     'published' => '2015-05-14T17:06:54+00:00',
     'updated' => '2015-05-14T17:06:54+00:00',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'frontpage',
         'label' => 'PHP.net frontpage news',
       ),
-      1 => 
+      1 =>
       array (
         'term' => 'releases',
         'label' => 'New PHP release',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/index.php#id2015-05-14-1',
+        'href' => 'https://www.php.net/index.php#id2015-05-14-1',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
-        'href' => 'http://php.net/archive/2015.php#id2015-05-14-1',
+        'href' => 'https://www.php.net/archive/2015.php#id2015-05-14-1',
         'rel' => 'via',
         'type' => 'text/html',
       ),
@@ -22438,9 +22438,9 @@ In 1995, Rasmus Lerdorf started creating PHP. 20 years later, 80% of websites in
      All PHP 5.5 users are encouraged to upgrade to this version.
      </p>
 
-     <p>For source downloads of PHP 5.5.25 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-     The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.5.25">ChangeLog</a>.
+     <p>For source downloads of PHP 5.5.25 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
+     Windows binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
+     The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-5.php#5.5.25">ChangeLog</a>.
      </p>
     </div>
   ',
@@ -22448,47 +22448,47 @@ In 1995, Rasmus Lerdorf started creating PHP. 20 years later, 80% of websites in
      5.5.25. Several bugs have been fixed.
 
      All PHP 5.5 users are encouraged to upgrade to this version.
-     </p><p>For source downloads of PHP 5.5.25 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-     The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.5.25">ChangeLog</a>.
+     </p><p>For source downloads of PHP 5.5.25 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
+     Windows binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
+     The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-5.php#5.5.25">ChangeLog</a>.
      </p></div>',
   ),
-  386 => 
+  386 =>
   array (
     'title' => '2015 Northeast PHP Conference',
-    'id' => 'http://php.net/archive/2015.php#id2015-05-06-1',
+    'id' => 'https://www.php.net/archive/2015.php#id2015-05-06-1',
     'published' => '2015-05-06T00:32:35+02:00',
     'updated' => '2015-07-23T21:13:00+02:00',
     'finalTeaserDate' => '2015-08-23',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'conferences',
         'label' => 'Conference announcement',
       ),
-      1 => 
+      1 =>
       array (
         'term' => 'cfp',
         'label' => 'Call for Papers',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/conferences/index.php#id2015-05-06-1',
+        'href' => 'https://www.php.net/conferences/index.php#id2015-05-06-1',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
         'href' => 'http://2015.northeastphp.org',
         'rel' => 'via',
         'type' => 'text/html',
       ),
     ),
-    'newsImage' => 
+    'newsImage' =>
     array (
       'xmlns' => 'http://php.net/ns/news',
       'link' => 'http://2015.northeastphp.org',
@@ -22517,36 +22517,36 @@ In 1995, Rasmus Lerdorf started creating PHP. 20 years later, 80% of websites in
         Weâve got all the <a href="http://2015.northeastphp.org/speakers/" title="speakers">rockstars</a> from our industry in one place just for you! With talks ranging from starting to work in the industry to expanding your skill set as an experienced user; we have sessions for everyone!
       </p><p class=\'fullArticleLink\'><a href=\'http://2015.northeastphp.org\' class>&hellip; read full article</a></p></div>',
   ),
-  387 => 
+  387 =>
   array (
     'title' => 'PHP 5.4.40 Released',
-    'id' => 'http://php.net/archive/2015.php#id2015-04-16-3',
+    'id' => 'https://www.php.net/archive/2015.php#id2015-04-16-3',
     'published' => '2015-04-16T13:43:02-07:00',
     'updated' => '2015-04-16T13:43:02-07:00',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'frontpage',
         'label' => 'PHP.net frontpage news',
       ),
-      1 => 
+      1 =>
       array (
         'term' => 'releases',
         'label' => 'New PHP release',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/index.php#id2015-04-16-3',
+        'href' => 'https://www.php.net/index.php#id2015-04-16-3',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
-        'href' => 'http://php.net/archive/2015.php#id2015-04-16-3',
+        'href' => 'https://www.php.net/archive/2015.php#id2015-04-16-3',
         'rel' => 'via',
         'type' => 'text/html',
       ),
@@ -22559,9 +22559,9 @@ In 1995, Rasmus Lerdorf started creating PHP. 20 years later, 80% of websites in
      All PHP 5.4 users are encouraged to upgrade to this version.
      </p>
 
-     <p>For source downloads of PHP 5.4.40 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-     The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.4.40">ChangeLog</a>.
+     <p>For source downloads of PHP 5.4.40 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
+     Windows binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
+     The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-5.php#5.4.40">ChangeLog</a>.
      </p>
     </div>
   ',
@@ -22570,41 +22570,41 @@ In 1995, Rasmus Lerdorf started creating PHP. 20 years later, 80% of websites in
      CVE-2014-9709, CVE-2015-2301, CVE-2015-2783, CVE-2015-1352.
 
      All PHP 5.4 users are encouraged to upgrade to this version.
-     </p><p>For source downloads of PHP 5.4.40 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-     The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.4.40">ChangeLog</a>.
+     </p><p>For source downloads of PHP 5.4.40 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
+     Windows binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
+     The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-5.php#5.4.40">ChangeLog</a>.
      </p></div>',
   ),
-  388 => 
+  388 =>
   array (
     'title' => 'PHP 5.6.8 is available',
-    'id' => 'http://php.net/archive/2015.php#id2015-04-16-2',
+    'id' => 'https://www.php.net/archive/2015.php#id2015-04-16-2',
     'published' => '2015-04-16T10:50:30-07:00',
     'updated' => '2015-04-16T10:50:30-07:00',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'frontpage',
         'label' => 'PHP.net frontpage news',
       ),
-      1 => 
+      1 =>
       array (
         'term' => 'releases',
         'label' => 'New PHP release',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/index.php#id2015-04-16-2',
+        'href' => 'https://www.php.net/index.php#id2015-04-16-2',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
-        'href' => 'http://php.net/archive/2015.php#id2015-04-16-2',
+        'href' => 'https://www.php.net/archive/2015.php#id2015-04-16-2',
         'rel' => 'via',
         'type' => 'text/html',
       ),
@@ -22616,9 +22616,9 @@ In 1995, Rasmus Lerdorf started creating PHP. 20 years later, 80% of websites in
      All PHP 5.6 users are encouraged to upgrade to this version.
      </p>
 
-     <p>For source downloads of PHP 5.6.8 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-     The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.6.8">ChangeLog</a>.
+     <p>For source downloads of PHP 5.6.8 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
+     Windows binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
+     The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-5.php#5.6.8">ChangeLog</a>.
      </p>
     </div>
   ',
@@ -22626,41 +22626,41 @@ In 1995, Rasmus Lerdorf started creating PHP. 20 years later, 80% of websites in
      5.6.8. Several bugs have been fixed some of them beeing security related, like CVE-2015-1351 and CVE-2015-1352.
 
      All PHP 5.6 users are encouraged to upgrade to this version.
-     </p><p>For source downloads of PHP 5.6.8 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-     The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.6.8">ChangeLog</a>.
+     </p><p>For source downloads of PHP 5.6.8 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
+     Windows binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
+     The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-5.php#5.6.8">ChangeLog</a>.
      </p></div>',
   ),
-  389 => 
+  389 =>
   array (
     'title' => 'PHP 5.5.24 is available',
-    'id' => 'http://php.net/archive/2015.php#id2015-04-16-1',
+    'id' => 'https://www.php.net/archive/2015.php#id2015-04-16-1',
     'published' => '2015-04-16T15:25:09+00:00',
     'updated' => '2015-04-16T15:25:09+00:00',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'frontpage',
         'label' => 'PHP.net frontpage news',
       ),
-      1 => 
+      1 =>
       array (
         'term' => 'releases',
         'label' => 'New PHP release',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/index.php#id2015-04-16-1',
+        'href' => 'https://www.php.net/index.php#id2015-04-16-1',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
-        'href' => 'http://php.net/archive/2015.php#id2015-04-16-1',
+        'href' => 'https://www.php.net/archive/2015.php#id2015-04-16-1',
         'rel' => 'via',
         'type' => 'text/html',
       ),
@@ -22672,9 +22672,9 @@ In 1995, Rasmus Lerdorf started creating PHP. 20 years later, 80% of websites in
      All PHP 5.5 users are encouraged to upgrade to this version.
      </p>
 
-     <p>For source downloads of PHP 5.5.24 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-     The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.5.24">ChangeLog</a>.
+     <p>For source downloads of PHP 5.5.24 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
+     Windows binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
+     The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-5.php#5.5.24">ChangeLog</a>.
      </p>
     </div>
   ',
@@ -22682,41 +22682,41 @@ In 1995, Rasmus Lerdorf started creating PHP. 20 years later, 80% of websites in
      5.5.24. Several bugs have been fixed some of them beeing security related, like CVE-2015-1351 and CVE-2015-1352.
 
      All PHP 5.5 users are encouraged to upgrade to this version.
-     </p><p>For source downloads of PHP 5.5.24 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-     The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.5.24">ChangeLog</a>.
+     </p><p>For source downloads of PHP 5.5.24 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
+     Windows binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
+     The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-5.php#5.5.24">ChangeLog</a>.
      </p></div>',
   ),
-  390 => 
+  390 =>
   array (
     'title' => 'PHP 5.6.7 is available',
-    'id' => 'http://php.net/archive/2015.php#id2015-03-20-2',
+    'id' => 'https://www.php.net/archive/2015.php#id2015-03-20-2',
     'published' => '2015-03-20T04:21:46-07:00',
     'updated' => '2015-03-20T04:21:46-07:00',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'frontpage',
         'label' => 'PHP.net frontpage news',
       ),
-      1 => 
+      1 =>
       array (
         'term' => 'releases',
         'label' => 'New PHP release',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/index.php#id2015-03-20-2',
+        'href' => 'https://www.php.net/index.php#id2015-03-20-2',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
-        'href' => 'http://php.net/archive/2015.php#id2015-03-20-2',
+        'href' => 'https://www.php.net/archive/2015.php#id2015-03-20-2',
         'rel' => 'via',
         'type' => 'text/html',
       ),
@@ -22729,9 +22729,9 @@ In 1995, Rasmus Lerdorf started creating PHP. 20 years later, 80% of websites in
      All PHP 5.6 users are encouraged to upgrade to this version.
      </p>
 
-     <p>For source downloads of PHP 5.6.7 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-     The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.6.7">ChangeLog</a>.
+     <p>For source downloads of PHP 5.6.7 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
+     Windows binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
+     The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-5.php#5.6.7">ChangeLog</a>.
      </p>
     </div>
   ',
@@ -22739,41 +22739,41 @@ In 1995, Rasmus Lerdorf started creating PHP. 20 years later, 80% of websites in
      5.6.7. Several bugs have been fixed as well as CVE-2015-0231, CVE-2015-2305 and CVE-2015-2331.
 
      All PHP 5.6 users are encouraged to upgrade to this version.
-     </p><p>For source downloads of PHP 5.6.7 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-     The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.6.7">ChangeLog</a>.
+     </p><p>For source downloads of PHP 5.6.7 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
+     Windows binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
+     The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-5.php#5.6.7">ChangeLog</a>.
      </p></div>',
   ),
-  391 => 
+  391 =>
   array (
     'title' => 'PHP 5.5.23 is available',
-    'id' => 'http://php.net/archive/2015.php#id2015-03-20-1',
+    'id' => 'https://www.php.net/archive/2015.php#id2015-03-20-1',
     'published' => '2015-03-20T09:11:37+00:00',
     'updated' => '2015-03-20T09:11:37+00:00',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'frontpage',
         'label' => 'PHP.net frontpage news',
       ),
-      1 => 
+      1 =>
       array (
         'term' => 'releases',
         'label' => 'New PHP release',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/index.php#id2015-03-20-1',
+        'href' => 'https://www.php.net/index.php#id2015-03-20-1',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
-        'href' => 'http://php.net/archive/2015.php#id2015-03-20-1',
+        'href' => 'https://www.php.net/archive/2015.php#id2015-03-20-1',
         'rel' => 'via',
         'type' => 'text/html',
       ),
@@ -22785,9 +22785,9 @@ In 1995, Rasmus Lerdorf started creating PHP. 20 years later, 80% of websites in
      All PHP 5.5 users are encouraged to upgrade to this version.
      </p>
 
-     <p>For source downloads of PHP 5.5.23 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-     The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.5.23">ChangeLog</a>.
+     <p>For source downloads of PHP 5.5.23 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
+     Windows binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
+     The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-5.php#5.5.23">ChangeLog</a>.
      </p>
     </div>
   ',
@@ -22795,41 +22795,41 @@ In 1995, Rasmus Lerdorf started creating PHP. 20 years later, 80% of websites in
      5.5.23. Several bugs have been fixed as well as CVE-2015-0231, CVE-2015-2305 and CVE-2015-2331.
 
      All PHP 5.5 users are encouraged to upgrade to this version.
-     </p><p>For source downloads of PHP 5.5.23 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-     The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.5.23">ChangeLog</a>.
+     </p><p>For source downloads of PHP 5.5.23 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
+     Windows binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
+     The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-5.php#5.5.23">ChangeLog</a>.
      </p></div>',
   ),
-  392 => 
+  392 =>
   array (
     'title' => 'PHP 5.4.39 Released',
-    'id' => 'http://php.net/archive/2015.php#id2015-03-19-2',
+    'id' => 'https://www.php.net/archive/2015.php#id2015-03-19-2',
     'published' => '2015-03-19T23:01:55-07:00',
     'updated' => '2015-03-19T23:01:55-07:00',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'frontpage',
         'label' => 'PHP.net frontpage news',
       ),
-      1 => 
+      1 =>
       array (
         'term' => 'releases',
         'label' => 'New PHP release',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/index.php#id2015-03-19-2',
+        'href' => 'https://www.php.net/index.php#id2015-03-19-2',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
-        'href' => 'http://php.net/archive/2015.php#id2015-03-19-2',
+        'href' => 'https://www.php.net/archive/2015.php#id2015-03-19-2',
         'rel' => 'via',
         'type' => 'text/html',
       ),
@@ -22841,9 +22841,9 @@ In 1995, Rasmus Lerdorf started creating PHP. 20 years later, 80% of websites in
      All PHP 5.4 users are encouraged to upgrade to this version.
      </p>
 
-     <p>For source downloads of PHP 5.4.39 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-     The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.4.39">ChangeLog</a>.
+     <p>For source downloads of PHP 5.4.39 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
+     Windows binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
+     The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-5.php#5.4.39">ChangeLog</a>.
      </p>
     </div>
   ',
@@ -22851,42 +22851,42 @@ In 1995, Rasmus Lerdorf started creating PHP. 20 years later, 80% of websites in
      5.4.39. Six security-related bugs were fixed in this release, including CVE-2015-0231, CVE-2015-2305 and CVE-2015-2331.
 
      All PHP 5.4 users are encouraged to upgrade to this version.
-     </p><p>For source downloads of PHP 5.4.39 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-     The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.4.39">ChangeLog</a>.
+     </p><p>For source downloads of PHP 5.4.39 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
+     Windows binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
+     The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-5.php#5.4.39">ChangeLog</a>.
      </p></div>',
   ),
-  393 => 
+  393 =>
   array (
     'title' => 'PHP Tour Luxembourg',
-    'id' => 'http://php.net/archive/2015.php#id2015-03-19-1',
+    'id' => 'https://www.php.net/archive/2015.php#id2015-03-19-1',
     'published' => '2015-03-19T15:33:43+00:00',
     'updated' => '2015-03-19T15:33:43+00:00',
     'finalTeaserDate' => '2015-05-12',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'conferences',
         'label' => 'Conference announcement',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/conferences/index.php#id2015-03-19-1',
+        'href' => 'https://www.php.net/conferences/index.php#id2015-03-19-1',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
         'href' => 'http://www.afup.org/pages/phptourluxembourg2015/apropos-en.php',
         'rel' => 'via',
         'type' => 'text/html',
       ),
     ),
-    'newsImage' => 
+    'newsImage' =>
     array (
       'xmlns' => 'http://php.net/ns/news',
       'link' => 'http://www.afup.org/pages/phptourluxembourg2015/apropos-en.php',
@@ -22906,37 +22906,37 @@ Presentation length is 45 minutes which includes question time. 3 hours workshop
   ',
     'intro' => '<div><p>For the first time, the PHP Tour will take place outside of France: AFUP and the locale branch of Luxembourg will welcome you at the Abbey of NeumÃ¼nster, a historical venue in the heart of Luxembourg City. English speakers? Come and join us, many talks will be proposed in english.</p><p>AFUP, The French PHP usergroup, is glad to announce that the fourth edition of the PHP Tour will be held in Luxembourg City on May 12 &amp; 13, 2015. PHP experts will share their advanced knowledge and experience with developers, decision makers and companies, during keynotes, sessions and workshops.</p><p class=\'fullArticleLink\'><a href=\'http://www.afup.org/pages/phptourluxembourg2015/apropos-en.php\' class>&hellip; read full article</a></p></div>',
   ),
-  394 => 
+  394 =>
   array (
     'title' => 'Italian phpDay 2015',
-    'id' => 'http://php.net/archive/2015.php#id2015-03-18-1',
+    'id' => 'https://www.php.net/archive/2015.php#id2015-03-18-1',
     'published' => '2015-03-18T19:55:00+01:00',
     'updated' => '2015-03-18T19:55:00+01:00',
     'finalTeaserDate' => '2015-05-15',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'conferences',
         'label' => 'Conference announcement',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/conferences/index.php#id2015-03-18-1',
+        'href' => 'https://www.php.net/conferences/index.php#id2015-03-18-1',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
         'href' => 'http://2015.phpday.it/',
         'rel' => 'via',
         'type' => 'text/html',
       ),
     ),
-    'newsImage' => 
+    'newsImage' =>
     array (
       'xmlns' => 'http://php.net/ns/news',
       'link' => 'http://2015.phpday.it/',
@@ -22951,42 +22951,42 @@ Presentation length is 45 minutes which includes question time. 3 hours workshop
   ',
     'intro' => '<div><p>The Italian PHP user group GrUSP is pleased to announce the 12th edition of the Italian phpDay (<a href="http://www.phpday.it/">http://www.phpday.it/</a>) conference, taking place on May 15th and 16th, 2015 in Verona. </p><p>phpDay is the first historic Italian conference dedicated solely to PHP development, technologies and management. It is aimed to IT managers, developers and innovators. Each year it renews the opportunity to link to new business partners.</p></div>',
   ),
-  395 => 
+  395 =>
   array (
     'title' => 'Bulgaria PHP Conference',
-    'id' => 'http://php.net/archive/2015.php#id2015-02-25-3',
+    'id' => 'https://www.php.net/archive/2015.php#id2015-02-25-3',
     'published' => '2015-02-25T12:53:27+01:00',
     'updated' => '2015-02-25T12:53:27+01:00',
     'finalTeaserDate' => '2015-03-16',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'conferences',
         'label' => 'Conference announcement',
       ),
-      1 => 
+      1 =>
       array (
         'term' => 'cfp',
         'label' => 'Call for Papers',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/conferences/index.php#id2015-02-25-3',
+        'href' => 'https://www.php.net/conferences/index.php#id2015-02-25-3',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
         'href' => 'http://bgphp.org/',
         'rel' => 'via',
         'type' => 'text/html',
       ),
     ),
-    'newsImage' => 
+    'newsImage' =>
     array (
       'xmlns' => 'http://php.net/ns/news',
       'link' => 'http://bgphp.org/',
@@ -23003,37 +23003,37 @@ Presentation length is 45 minutes which includes question time. 3 hours workshop
   ',
     'intro' => '<div><p>The Bulgaria PHP Conference is an event organized by the local PHP user group: @bgphp. This is going to be our first conference but nonetheless we have attracted a number of prominent international and local speakers (<a href="http://www.bgphp.org/confirmed-speakers/" title="Confirmed speakers">http://www.bgphp.org/confirmed-speakers/</a>). We expect 450 attendees from Bulgaria, the Balkans region, Europe, and other parts of the world. We welcome a diverse crowd of PHP developers who want to learn new things and share their passion for code.</p><p>Bulgaria is one of the fastest growing IT regions. A lot of international companies outsource their IT departments in the country. The PHP community is large and actively travels abroad to attend international summits of all kinds. The official language of the conference is English and all talks and sessions will be in English. Attendees and sponsors will be pleasantly surprised by the affordability of all services in the country. Hotel accommodation, food and even the tickets for the event are quite affordable, given the high quality of service youâll get in return.</p><p class=\'fullArticleLink\'><a href=\'http://bgphp.org/\' class>&hellip; read full article</a></p></div>',
   ),
-  396 => 
+  396 =>
   array (
     'title' => 'Lone Star PHP 2015',
-    'id' => 'http://php.net/archive/2015.php#id2015-02-25-2',
+    'id' => 'https://www.php.net/archive/2015.php#id2015-02-25-2',
     'published' => '2015-02-25T11:21:44+01:00',
     'updated' => '2015-02-25T11:21:44+01:00',
     'finalTeaserDate' => '2015-04-16',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'conferences',
         'label' => 'Conference announcement',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/conferences/index.php#id2015-02-25-2',
+        'href' => 'https://www.php.net/conferences/index.php#id2015-02-25-2',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
         'href' => 'http://lonestarphp.com/',
         'rel' => 'via',
         'type' => 'text/html',
       ),
     ),
-    'newsImage' => 
+    'newsImage' =>
     array (
       'xmlns' => 'http://php.net/ns/news',
       'link' => 'http://lonestarphp.com/',
@@ -23048,37 +23048,37 @@ Presentation length is 45 minutes which includes question time. 3 hours workshop
   ',
     'intro' => '<div><p>Welcome back to Lone Star PHP for another great year! We\'re in our <strong>fifth year</strong> and we\'re making things better all the time. This year\'s event will provide all of the great PHP speakers and content you\'ve come to expect from Lone Star PHP. This year we are <strong>introducing the Training Day</strong>. Training Day will provide a more hands-on experience for all that attend. There\'ll be plenty of time to spend with the local PHP community too through after-parties and other events.</p><p>Thanks to the generous support of our sponsors year after year we\'re able to present this conference at minimal cost to our attendees, opening up attendance to many who could not normally justify the cost of similar events. We couldn\'t do it without their support and we hope that this year you\'ll help us share this experience with the community. With the amazing feedback we receive each year from our attendees and sponsors we continue to improve our event to keep our place as the best php community conference around.</p></div>',
   ),
-  397 => 
+  397 =>
   array (
     'title' => 'SOLIDay 2015',
-    'id' => 'http://php.net/archive/2015.php#id2015-02-25-1',
+    'id' => 'https://www.php.net/archive/2015.php#id2015-02-25-1',
     'published' => '2015-02-25T11:14:34+01:00',
     'updated' => '2015-02-25T11:14:34+01:00',
     'finalTeaserDate' => '2015-05-30',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'conferences',
         'label' => 'Conference announcement',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/conferences/index.php#id2015-02-25-1',
+        'href' => 'https://www.php.net/conferences/index.php#id2015-02-25-1',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
         'href' => 'http://soliday.phpsrbija.rs/',
         'rel' => 'via',
         'type' => 'text/html',
       ),
     ),
-    'newsImage' => 
+    'newsImage' =>
     array (
       'xmlns' => 'http://php.net/ns/news',
       'link' => 'http://soliday.phpsrbija.rs/',
@@ -23093,36 +23093,36 @@ Presentation length is 45 minutes which includes question time. 3 hours workshop
   ',
     'intro' => '<div><p>Conference about software architecture, best programming practices and design patterns.</p><p>PHP Serbia will be organizing a big event on May 30, 2015 â SOLIDay conference. Nicely coined name, huh? It will be one of the major events in the region, on which you will have opportunity to attend presentations of world-famous PHP experts and professionals, on topic of OOP principles, design patterns, software architecture, frameworks and similar. Whether you are a novice, intermediate or advanced developer, join us on this conference and expand, improve or simply refresh your knowledge of this important topic.</p></div>',
   ),
-  398 => 
+  398 =>
   array (
     'title' => 'PHP 5.6.6 is available',
-    'id' => 'http://php.net/archive/2015.php#id2015-02-19-2',
+    'id' => 'https://www.php.net/archive/2015.php#id2015-02-19-2',
     'published' => '2015-02-19T12:43:52-08:00',
     'updated' => '2015-02-19T12:43:52-08:00',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'frontpage',
         'label' => 'PHP.net frontpage news',
       ),
-      1 => 
+      1 =>
       array (
         'term' => 'releases',
         'label' => 'New PHP release',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/index.php#id2015-02-19-2',
+        'href' => 'https://www.php.net/index.php#id2015-02-19-2',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
-        'href' => 'http://php.net/archive/2015.php#id2015-02-19-2',
+        'href' => 'https://www.php.net/archive/2015.php#id2015-02-19-2',
         'rel' => 'via',
         'type' => 'text/html',
       ),
@@ -23134,9 +23134,9 @@ Presentation length is 45 minutes which includes question time. 3 hours workshop
      All PHP 5.6 users are encouraged to upgrade to this version.
      </p>
 
-     <p>For source downloads of PHP 5.6.6 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-     The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.6.6">ChangeLog</a>.
+     <p>For source downloads of PHP 5.6.6 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
+     Windows binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
+     The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-5.php#5.6.6">ChangeLog</a>.
      </p>
     </div>
   ',
@@ -23144,41 +23144,41 @@ Presentation length is 45 minutes which includes question time. 3 hours workshop
      5.6.6. This release fixes several bugs and addresses CVE-2015-0235 and CVE-2015-0273.
 
      All PHP 5.6 users are encouraged to upgrade to this version.
-     </p><p>For source downloads of PHP 5.6.6 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-     The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.6.6">ChangeLog</a>.
+     </p><p>For source downloads of PHP 5.6.6 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
+     Windows binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
+     The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-5.php#5.6.6">ChangeLog</a>.
      </p></div>',
   ),
-  399 => 
+  399 =>
   array (
     'title' => 'PHP 5.5.22 is available',
-    'id' => 'http://php.net/archive/2015.php#id2015-02-19-1',
+    'id' => 'https://www.php.net/archive/2015.php#id2015-02-19-1',
     'published' => '2015-02-19T12:45:19+00:00',
     'updated' => '2015-02-19T12:45:19+00:00',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'frontpage',
         'label' => 'PHP.net frontpage news',
       ),
-      1 => 
+      1 =>
       array (
         'term' => 'releases',
         'label' => 'New PHP release',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/index.php#id2015-02-19-1',
+        'href' => 'https://www.php.net/index.php#id2015-02-19-1',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
-        'href' => 'http://php.net/archive/2015.php#id2015-02-19-1',
+        'href' => 'https://www.php.net/archive/2015.php#id2015-02-19-1',
         'rel' => 'via',
         'type' => 'text/html',
       ),
@@ -23190,9 +23190,9 @@ Presentation length is 45 minutes which includes question time. 3 hours workshop
      All PHP 5.5 users are encouraged to upgrade to this version.
      </p>
 
-     <p>For source downloads of PHP 5.5.22 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-     The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.5.22">ChangeLog</a>.
+     <p>For source downloads of PHP 5.5.22 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
+     Windows binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
+     The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-5.php#5.5.22">ChangeLog</a>.
      </p>
     </div>
   ',
@@ -23200,41 +23200,41 @@ Presentation length is 45 minutes which includes question time. 3 hours workshop
      5.5.22. This release fixes several bugs and addresses CVE-2015-0235 and CVE-2015-0273.
 
      All PHP 5.5 users are encouraged to upgrade to this version.
-     </p><p>For source downloads of PHP 5.5.22 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-     The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.5.22">ChangeLog</a>.
+     </p><p>For source downloads of PHP 5.5.22 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
+     Windows binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
+     The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-5.php#5.5.22">ChangeLog</a>.
      </p></div>',
   ),
-  400 => 
+  400 =>
   array (
     'title' => 'PHP 5.4.38 Released',
-    'id' => 'http://php.net/archive/2015.php#id2015-02-18-1',
+    'id' => 'https://www.php.net/archive/2015.php#id2015-02-18-1',
     'published' => '2015-02-18T23:56:18-08:00',
     'updated' => '2015-02-18T23:56:18-08:00',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'frontpage',
         'label' => 'PHP.net frontpage news',
       ),
-      1 => 
+      1 =>
       array (
         'term' => 'releases',
         'label' => 'New PHP release',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/index.php#id2015-02-18-1',
+        'href' => 'https://www.php.net/index.php#id2015-02-18-1',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
-        'href' => 'http://php.net/archive/2015.php#id2015-02-18-1',
+        'href' => 'https://www.php.net/archive/2015.php#id2015-02-18-1',
         'rel' => 'via',
         'type' => 'text/html',
       ),
@@ -23246,9 +23246,9 @@ Presentation length is 45 minutes which includes question time. 3 hours workshop
      All PHP 5.4 users are encouraged to upgrade to this version.
      </p>
 
-     <p>For source downloads of PHP 5.4.38 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-     The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.4.38">ChangeLog</a>.
+     <p>For source downloads of PHP 5.4.38 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
+     Windows binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
+     The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-5.php#5.4.38">ChangeLog</a>.
      </p>
     </div>
   ',
@@ -23256,41 +23256,41 @@ Presentation length is 45 minutes which includes question time. 3 hours workshop
      5.4.38. Seven security-related bugs were fixed in this release, including CVE-2015-0273 and mitigation for CVE-2015-0235.
 
      All PHP 5.4 users are encouraged to upgrade to this version.
-     </p><p>For source downloads of PHP 5.4.38 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-     The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.4.38">ChangeLog</a>.
+     </p><p>For source downloads of PHP 5.4.38 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
+     Windows binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
+     The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-5.php#5.4.38">ChangeLog</a>.
      </p></div>',
   ),
-  401 => 
+  401 =>
   array (
     'title' => 'PHP 5.4.37 Released',
-    'id' => 'http://php.net/archive/2015.php#id2015-01-22-3',
+    'id' => 'https://www.php.net/archive/2015.php#id2015-01-22-3',
     'published' => '2015-01-22T20:20:52-08:00',
     'updated' => '2015-01-22T20:20:52-08:00',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'frontpage',
         'label' => 'PHP.net frontpage news',
       ),
-      1 => 
+      1 =>
       array (
         'term' => 'releases',
         'label' => 'New PHP release',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/index.php#id2015-01-22-3',
+        'href' => 'https://www.php.net/index.php#id2015-01-22-3',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
-        'href' => 'http://php.net/archive/2015.php#id2015-01-22-3',
+        'href' => 'https://www.php.net/archive/2015.php#id2015-01-22-3',
         'rel' => 'via',
         'type' => 'text/html',
       ),
@@ -23304,9 +23304,9 @@ Presentation length is 45 minutes which includes question time. 3 hours workshop
      All PHP 5.4 users are encouraged to upgrade to this version.
      </p>
 
-     <p>For source downloads of PHP 5.4.37 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-     The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.4.37">ChangeLog</a>.
+     <p>For source downloads of PHP 5.4.37 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
+     Windows binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
+     The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-5.php#5.4.37">ChangeLog</a>.
      </p>
     </div>
   ',
@@ -23315,41 +23315,41 @@ Presentation length is 45 minutes which includes question time. 3 hours workshop
      and CVE-2015-0232.
 
      All PHP 5.4 users are encouraged to upgrade to this version.
-     </p><p>For source downloads of PHP 5.4.37 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-     The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.4.37">ChangeLog</a>.
+     </p><p>For source downloads of PHP 5.4.37 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
+     Windows binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
+     The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-5.php#5.4.37">ChangeLog</a>.
      </p></div>',
   ),
-  402 => 
+  402 =>
   array (
     'title' => 'PHP 5.6.5 is available',
-    'id' => 'http://php.net/archive/2015.php#id2015-01-22-2',
+    'id' => 'https://www.php.net/archive/2015.php#id2015-01-22-2',
     'published' => '2015-01-22T12:31:59-08:00',
     'updated' => '2015-01-22T12:31:59-08:00',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'frontpage',
         'label' => 'PHP.net frontpage news',
       ),
-      1 => 
+      1 =>
       array (
         'term' => 'releases',
         'label' => 'New PHP release',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/index.php#id2015-01-22-2',
+        'href' => 'https://www.php.net/index.php#id2015-01-22-2',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
-        'href' => 'http://php.net/archive/2015.php#id2015-01-22-2',
+        'href' => 'https://www.php.net/archive/2015.php#id2015-01-22-2',
         'rel' => 'via',
         'type' => 'text/html',
       ),
@@ -23361,9 +23361,9 @@ Presentation length is 45 minutes which includes question time. 3 hours workshop
      All PHP 5.6 users are encouraged to upgrade to this version.
      </p>
 
-     <p>For source downloads of PHP 5.6.5 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-     The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.6.5">ChangeLog</a>.
+     <p>For source downloads of PHP 5.6.5 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
+     Windows binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
+     The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-5.php#5.6.5">ChangeLog</a>.
      </p>
     </div>
   ',
@@ -23371,41 +23371,41 @@ Presentation length is 45 minutes which includes question time. 3 hours workshop
      5.6.5. This release fixes several bugs as well as CVE-2015-0231, CVE-2014-9427 and CVE-2015-0232.
 
      All PHP 5.6 users are encouraged to upgrade to this version.
-     </p><p>For source downloads of PHP 5.6.5 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-     The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.6.5">ChangeLog</a>.
+     </p><p>For source downloads of PHP 5.6.5 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
+     Windows binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
+     The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-5.php#5.6.5">ChangeLog</a>.
      </p></div>',
   ),
-  403 => 
+  403 =>
   array (
     'title' => 'PHP 5.5.21 is released',
-    'id' => 'http://php.net/archive/2015.php#id2015-01-22-1',
+    'id' => 'https://www.php.net/archive/2015.php#id2015-01-22-1',
     'published' => '2015-01-22T16:04:04+00:00',
     'updated' => '2015-01-22T16:04:04+00:00',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'frontpage',
         'label' => 'PHP.net frontpage news',
       ),
-      1 => 
+      1 =>
       array (
         'term' => 'releases',
         'label' => 'New PHP release',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/index.php#id2015-01-22-1',
+        'href' => 'https://www.php.net/index.php#id2015-01-22-1',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
-        'href' => 'http://php.net/archive/2015.php#id2015-01-22-1',
+        'href' => 'https://www.php.net/archive/2015.php#id2015-01-22-1',
         'rel' => 'via',
         'type' => 'text/html',
       ),
@@ -23417,9 +23417,9 @@ Presentation length is 45 minutes which includes question time. 3 hours workshop
      All PHP 5.5 users are encouraged to upgrade to this version.
      </p>
 
-     <p>For source downloads of PHP 5.5.21 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-     The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.5.21">ChangeLog</a>.
+     <p>For source downloads of PHP 5.5.21 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
+     Windows binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
+     The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-5.php#5.5.21">ChangeLog</a>.
      </p>
     </div>
   ',
@@ -23427,42 +23427,42 @@ Presentation length is 45 minutes which includes question time. 3 hours workshop
      5.5.21. This release fixes several bugs as well as CVE-2015-0231, CVE-2014-9427 and CVE-2015-0232.
 
      All PHP 5.5 users are encouraged to upgrade to this version.
-     </p><p>For source downloads of PHP 5.5.21 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-     The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.5.21">ChangeLog</a>.
+     </p><p>For source downloads of PHP 5.5.21 please visit our <a href="https://www.php.net/downloads.php">downloads page</a>,
+     Windows binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
+     The list of changes is recorded in the <a href="https://www.php.net/ChangeLog-5.php#5.5.21">ChangeLog</a>.
      </p></div>',
   ),
-  404 => 
+  404 =>
   array (
     'title' => 'Dutch PHP Conference 2015',
-    'id' => 'http://php.net/archive/2015.php#id2015-01-16-1',
+    'id' => 'https://www.php.net/archive/2015.php#id2015-01-16-1',
     'published' => '2015-01-16T10:07:58+01:00',
     'updated' => '2015-01-16T10:07:58+01:00',
     'finalTeaserDate' => '2015-02-22',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'cfp',
         'label' => 'Call for Papers',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/conferences/index.php#id2015-01-16-1',
+        'href' => 'https://www.php.net/conferences/index.php#id2015-01-16-1',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
         'href' => 'http://www.phpconference.nl/',
         'rel' => 'via',
         'type' => 'text/html',
       ),
     ),
-    'newsImage' => 
+    'newsImage' =>
     array (
       'xmlns' => 'http://php.net/ns/news',
       'link' => 'http://www.phpconference.nl/',
@@ -23477,37 +23477,37 @@ Presentation length is 45 minutes which includes question time. 3 hours workshop
   ',
     'intro' => '<div><p>We\'re back! And we are glad to announce that weâll be organising the 9th edition of the <a href="http://www.phpconference.nl/">Dutch PHP Conference</a>, which will be held in Amsterdam from 25th to 27th June 2015. Thursday 25th will be the tutorial day and June 26th and 27th will be the main conference days.</p><p>Speakers, the call for papers is now open! Weâre looking for high-quality, technical sessions from speakers who can cover advanced topics and keep our demanding audience inspired. The call for papers is open until February 22nd. You can send in as many proposals as you like, so <a href="http://www.phpconference.nl/call-for-papers-dpc">start submitting</a> your talks. </p><p class=\'fullArticleLink\'><a href=\'http://www.phpconference.nl/\' class>&hellip; read full article</a></p></div>',
   ),
-  405 => 
+  405 =>
   array (
     'title' => 'Midwest PHP 2015',
-    'id' => 'http://php.net/archive/2015.php#id2015-01-10-1',
+    'id' => 'https://www.php.net/archive/2015.php#id2015-01-10-1',
     'published' => '2015-01-10T05:09:25+01:00',
     'updated' => '2015-01-10T05:09:25+01:00',
     'finalTeaserDate' => '2015-03-14',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'conferences',
         'label' => 'Conference announcement',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/conferences/index.php#id2015-01-10-1',
+        'href' => 'https://www.php.net/conferences/index.php#id2015-01-10-1',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
         'href' => 'http://2015.midwestphp.org/',
         'rel' => 'via',
         'type' => 'text/html',
       ),
     ),
-    'newsImage' => 
+    'newsImage' =>
     array (
       'xmlns' => 'http://php.net/ns/news',
       'link' => 'http://2015.midwestphp.org/',
@@ -23520,37 +23520,37 @@ Presentation length is 45 minutes which includes question time. 3 hours workshop
   ',
     'intro' => '<div><p>Midwest PHP is taking over beautiful Minneapolis once again this year, bringing leading experts from around the world to talk about APIs, Frameworks, Security, Version Control, Testing, Continuous Integration, and much more!  Midwest PHP welcomes developers of all levels and encourages diversity - we promise there will be something for everyone.  So join us March 14-15th for great talks, great people, and of course great food!  Register today at <a href="http://www.midwestphp.org">http://www.midwestphp.org</a></p></div>',
   ),
-  406 => 
+  406 =>
   array (
     'title' => 'ConFoo 2015 - Become a Master',
-    'id' => 'http://php.net/archive/2015.php#id2015-01-06-1',
+    'id' => 'https://www.php.net/archive/2015.php#id2015-01-06-1',
     'published' => '2015-01-06T18:15:50+00:00',
     'updated' => '2015-01-06T18:15:50+00:00',
     'finalTeaserDate' => '2015-02-18',
-    'category' => 
+    'category' =>
     array (
-      0 => 
+      0 =>
       array (
         'term' => 'conferences',
         'label' => 'Conference announcement',
       ),
     ),
-    'link' => 
+    'link' =>
     array (
-      0 => 
+      0 =>
       array (
-        'href' => 'http://php.net/conferences/index.php#id2015-01-06-1',
+        'href' => 'https://www.php.net/conferences/index.php#id2015-01-06-1',
         'rel' => 'alternate',
         'type' => 'text/html',
       ),
-      1 => 
+      1 =>
       array (
         'href' => 'http://confoo.ca',
         'rel' => 'via',
         'type' => 'text/html',
       ),
     ),
-    'newsImage' => 
+    'newsImage' =>
     array (
       'xmlns' => 'http://php.net/ns/news',
       'link' => 'http://confoo.ca',

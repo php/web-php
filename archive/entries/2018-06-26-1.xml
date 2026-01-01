@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <entry xmlns="http://www.w3.org/2005/Atom" xmlns:default="http://php.net/ns/news">
   <title>ZendCon &amp; OpenEnterprise 2018</title>
-  <id>http://php.net/archive/2018.php#id2018-06-26-1</id>
+  <id>https://www.php.net/archive/2018.php#id2018-06-26-1</id>
   <published>2018-06-26T08:41:29+00:00</published>
   <updated>2018-06-26T08:41:29+00:00</updated>
   <default:finalTeaserDate xmlns="http://php.net/ns/news">2018-10-01</default:finalTeaserDate>
   <category term="conferences" label="Conference announcement"/>
-  <link href="http://php.net/conferences/index.php#id2018-06-26-1" rel="alternate" type="text/html"/>
+  <link href="https://www.php.net/conferences/index.php#id2018-06-26-1" rel="alternate" type="text/html"/>
   <default:newsImage xmlns="http://php.net/ns/news" link="http://www.zendcon.com" title="ZendCon &amp; OpenEnterprise 2018">zcoe2018.png</default:newsImage>
   <link href="http://www.zendcon.com" rel="via" type="text/html"/>
   <content type="xhtml">

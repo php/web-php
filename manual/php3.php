@@ -29,8 +29,8 @@ site_header('PHP Version 3 Documentation');
 </p>
 
 <p>
- See the <a href="http://museum.php.net/">PHP Museum</a> for downloads, and
- also read the <a href="http://php.net/history">history</a> for further
+ See the <a href="https://museum.php.net/">PHP Museum</a> for downloads, and
+ also read the <a href="https://www.php.net/history">history</a> for further
  information about PHP 3.
 </p>
 

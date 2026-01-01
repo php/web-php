@@ -13,12 +13,12 @@ site_header("News Archive - 2003", ["cache" => true]);
 
 <hr>
 
-<?php news_image("http://vancouver.php.net/", "vancouver_conference_2004.gif", "Vancouver PHP Conference 2004"); ?>
+<?php news_image("https://vancouver.php.net/", "vancouver_conference_2004.gif", "Vancouver PHP Conference 2004"); ?>
 
 <h1>Vancouver PHP Conference 2004</h1>
 <p>
  <span class="newsdate">[22-Dec-2003]</span>
- The Vancouver PHP Users Association presents <a href="http://vancouver.php.net/">The PHP Vancouver Conference</a>
+ The Vancouver PHP Users Association presents <a href="https://vancouver.php.net/">The PHP Vancouver Conference</a>
  on January 22-23, a professional and technical conference focused on the PHP scripting language.
  The goal of this conference is to bring together some of the world's leading PHP developers and
  business professionals to share their experience with both students and PHP professionals in a series of talks.
@@ -166,7 +166,7 @@ site_header("News Archive - 2003", ["cache" => true]);
  You can autocomplete the name with the space key and navigate in the dropdown
  with the up and down cursor keys. We welcome feedback on this feature at
  <a href="/contact.php">the webmasters email address</a>, but
- please submit any bugs you find <a href="http://bugs.php.net/">in the
+ please submit any bugs you find <a href="https://bugs.php.net/">in the
  bug system</a> classifying them as a "PHP.net website problem" and providing
  as much information as possible (OS, Browser version, Javascript errors, etc..).
 </p>
@@ -293,12 +293,12 @@ site_header("News Archive - 2003", ["cache" => true]);
 
 <hr>
 
-<?php news_image("http://www.zend.com/zend/php_survey_results.php", "zendtech_logo.gif", "Zend Technologies"); ?>
+<?php news_image("https://www.zend.com/zend/php_survey_results.php", "zendtech_logo.gif", "Zend Technologies"); ?>
 
 <h1>PHP Usage Survey Results</h1>
 <p>
  <span class="newsdate">[18-Sep-2003]</span>
- <a href="http://www.zend.com/zend/php_survey_results.php">Check out</a> the results
+ <a href="https://www.zend.com/zend/php_survey_results.php">Check out</a> the results
  of the PHP Usage Survey conducted by Zend Technologies, including feedback
  from thousands of PHP users around the world.  Thanks for all who contributed!
 </p>
@@ -551,14 +551,14 @@ site_header("News Archive - 2003", ["cache" => true]);
  <strong>Note</strong>: <em>This is a beta version. It should not be used in
  production or even semi-production web sites.</em> There are known bugs in it,
  and in addition, some of the features may change (based on feedback). We
- encourage you to download and play with it (and <a href="http://bugs.php.net/">report
+ encourage you to download and play with it (and <a href="https://bugs.php.net/">report
  bugs</a> if you find any!), but please do not replace your production
  installations of PHP 4 at this time.
 </p>
 
 <hr>
 
-<?php news_image("http://www.zend.com/survey/php_net.php", "zendtech_logo.gif", "Zend Technologies"); ?>
+<?php news_image("https://www.zend.com/survey/php_net.php", "zendtech_logo.gif", "Zend Technologies"); ?>
 
 <h1>PHP Usage Survey</h1>
 <p>
@@ -567,7 +567,7 @@ site_header("News Archive - 2003", ["cache" => true]);
  The results will be shared with the PHP Group, and will help
  us to better understand the ways in which PHP is being used,
  and what may need improvement.
- <a href="http://www.zend.com/survey/php_net.php">Fill it out</a>
+ <a href="https://www.zend.com/survey/php_net.php">Fill it out</a>
  and get a chance to win one of 50 PHP T-shirts!
 </p>
 
@@ -789,7 +789,7 @@ site_header("News Archive - 2003", ["cache" => true]);
 <p>
  <span class="newsdate">[11-Jan-2003]</span>
  The PEAR development team is proud to announce that
- <a href="http://pear.php.net/">PEAR</a> is finally out of its long
+ <a href="https://pear.php.net/">PEAR</a> is finally out of its long
  beta period. As of PHP 4.3, the PEAR installer is installed by default.
  Unix support is considered stable, while Windows and Darwin are still
  of beta-quality.

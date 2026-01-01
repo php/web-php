@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <entry xmlns="http://www.w3.org/2005/Atom" xmlns:default="http://php.net/ns/news">
   <title>SymfonyLive São Paulo 2019</title>
-  <id>http://php.net/archive/2019.php#id2019-04-02-2</id>
+  <id>https://www.php.net/archive/2019.php#id2019-04-02-2</id>
   <published>2019-04-02T10:13:07+00:00</published>
   <updated>2019-04-02T10:13:07+00:00</updated>
   <default:finalTeaserDate xmlns="http://php.net/ns/news">2019-05-16</default:finalTeaserDate>
   <category term="conferences" label="Conference announcement"/>
-  <link href="http://php.net/conferences/index.php#id2019-04-02-2" rel="alternate" type="text/html"/>
+  <link href="https://www.php.net/conferences/index.php#id2019-04-02-2" rel="alternate" type="text/html"/>
   <default:newsImage xmlns="http://php.net/ns/news" link="https://brasil2019.live.symfony.com/" title="SymfonyLive São Paulo 2019 Conference">symfonylive-saopaulo-2019.png</default:newsImage>
   <link href="https://brasil2019.live.symfony.com/" rel="via" type="text/html"/>
   <content type="xhtml">
     <div xmlns="http://www.w3.org/1999/xhtml">
      <p>The SymfonyLive conference is coming to Brazil for the first time! Join the
      big Symfony Brazilian community and learn all about the latest Symfony features.</p>
-     
+
      <p>Symfony fans, don't miss the opportunity to attend inspiring and exciting
      talks and hands-on workshops from the 14th to the 17th of May!</p>
     </div>

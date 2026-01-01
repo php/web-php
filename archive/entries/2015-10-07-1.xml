@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <entry xmlns="http://www.w3.org/2005/Atom" xmlns:default="http://php.net/ns/news">
   <title>SunshinePHP 2016</title>
-  <id>http://php.net/archive/2015.php#id2015-10-07-1</id>
+  <id>https://www.php.net/archive/2015.php#id2015-10-07-1</id>
   <published>2015-10-07T12:05:32-04:00</published>
   <updated>2015-10-07T12:05:32-04:00</updated>
   <default:finalTeaserDate xmlns="http://php.net/ns/news">2016-02-04</default:finalTeaserDate>
   <category term="conferences" label="Conference announcement"/>
-  <link href="http://php.net/conferences/index.php#id2015-10-07-1" rel="alternate" type="text/html"/>
+  <link href="https://www.php.net/conferences/index.php#id2015-10-07-1" rel="alternate" type="text/html"/>
   <default:newsImage xmlns="http://php.net/ns/news" link="http://2016.sunshinephp.com" title="SunshinePHP 2016">sunshine2015.gif</default:newsImage>
   <link href="http://2016.sunshinephp.com" rel="via" type="text/html"/>
   <content type="xhtml">

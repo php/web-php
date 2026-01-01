@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <entry xmlns="http://www.w3.org/2005/Atom">
   <title>PHP 7.4.0 alpha 2 Released</title>
-  <id>http://php.net/archive/2019.php#id2019-06-26-1</id>
+  <id>https://www.php.net/archive/2019.php#id2019-06-26-1</id>
   <published>2019-06-26T23:34:49+00:00</published>
   <updated>2019-06-26T23:34:49+00:00</updated>
   <category term="frontpage" label="PHP.net frontpage news"/>
-  <link href="http://php.net/index.php#id2019-06-26-1" rel="alternate" type="text/html"/>
-  <link href="http://php.net/archive/2019.php#id2019-06-26-1" rel="via" type="text/html"/>
+  <link href="https://www.php.net/index.php#id2019-06-26-1" rel="alternate" type="text/html"/>
+  <link href="https://www.php.net/archive/2019.php#id2019-06-26-1" rel="via" type="text/html"/>
   <content type="xhtml">
     <div xmlns="http://www.w3.org/1999/xhtml">
      <p>
@@ -14,32 +14,32 @@
      This continues the PHP 7.4 release cycle, the rough outline of which is specified in the
      <a href="https://wiki.php.net/todo/php74">PHP Wiki</a>.
      </p>
-     
+
      <p>For source downloads of PHP 7.4.0 Alpha 2 please visit the <a href="https://downloads.php.net/~derick">download page</a>.</p>
-     
+
      <p>
-     Please carefully test this version and report any issues found in the <a href="http://bugs.php.net">bug reporting system</a>.
+     Please carefully test this version and report any issues found in the <a href="https://bugs.php.net">bug reporting system</a>.
      </p>
-     
+
      <p>
      <b>Please DO NOT use this version in production, it is an early test version.</b>
      </p>
-     
+
      <p>
          For more information on the new features and other changes, you can read the
          <a href="https://github.com/php/php-src/blob/php-7.4.0alpha2/NEWS">NEWS</a> file,
          or the <a href="https://github.com/php/php-src/blob/php-7.4.0alpha2/UPGRADING">UPGRADING</a>
          file for a complete list of upgrading notes. These files can also be found in the release archive.
      </p>
-     
+
      <p>
      The next release would be Alpha 3, planned for July 11th.
      </p>
-     
+
      <p>The signatures for the release can be found in <a href="https://gist.github.com/derickr/0cb88c72a785ae8642ae1d81cc2e96f8">the manifest</a> or on <a href="https://qa.php.net/">the
      QA site</a>.
      </p>
-     
+
      <p>Thank you for helping us make PHP better.</p>
     </div>
   </content>

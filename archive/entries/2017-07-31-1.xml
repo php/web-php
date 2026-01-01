@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <entry xmlns="http://www.w3.org/2005/Atom" xmlns:default="http://php.net/ns/news">
   <title>Calling all proposals for PHPBenelux Conference 2018</title>
-  <id>http://php.net/archive/2017.php#id2017-07-31-1</id>
+  <id>https://www.php.net/archive/2017.php#id2017-07-31-1</id>
   <published>2017-07-31T11:25:07+02:00</published>
   <updated>2017-07-31T11:25:07+02:00</updated>
   <default:finalTeaserDate xmlns="http://php.net/ns/news">2017-10-02</default:finalTeaserDate>
   <category term="cfp" label="Call for Papers"/>
-  <link href="http://php.net/conferences/index.php#id2017-07-31-1" rel="alternate" type="text/html"/>
+  <link href="https://www.php.net/conferences/index.php#id2017-07-31-1" rel="alternate" type="text/html"/>
   <default:newsImage xmlns="http://php.net/ns/news" link="https://cfp.phpbenelux.eu/?utm_source=php_net&amp;utm_medium=phpbnl18_logo&amp;utm_campaign=phpbnl18&amp;utm_term=php%2Bconference%2Bcfp&amp;utm_content=cfp_announcement" title="PHPBenelux Conference 2018 - CfP open">phpbnl18_logo_horizontal.png</default:newsImage>
   <link href="https://cfp.phpbenelux.eu/?utm_source=php_net&amp;utm_medium=phpbnl18_logo&amp;utm_campaign=phpbnl18&amp;utm_term=php%2Bconference%2Bcfp&amp;utm_content=cfp_announcement" rel="via" type="text/html"/>
   <content type="xhtml">

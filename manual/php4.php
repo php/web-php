@@ -44,7 +44,7 @@ site_header('PHP Version 4 Documentation');
 <h2>Migrating to supported PHP version</h2>
 <p>
  All users are strongly encouraged to upgrade their environments to  newest PHP version.
- Please read our guides for <a href="http://php.net/manual/en/migration5.php">Migrating
+ Please read our guides for <a href="https://www.php.net/manual/en/migration5.php">Migrating
  from PHP 4 to PHP 5.0.x</a> for more information.
 </p>
 

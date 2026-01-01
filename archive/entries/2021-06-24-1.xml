@@ -10,21 +10,21 @@
   <content type="xhtml">
     <div xmlns="http://www.w3.org/1999/xhtml">
      <p>The PHP team is pleased to announce the second testing release of PHP 8.1.0, Alpha 2. This continues the PHP 8.1 release cycle, the rough outline of which is specified in the <a href="https://wiki.php.net/todo/php81">PHP Wiki</a>.</p>
-     
+
      <p>For source downloads of PHP 8.1.0 Alpha 2 please visit the <a href="https://downloads.php.net/~patrickallaert/">download page</a>.</p>
-     
-     <p>Please carefully test this version and report any issues found in the <a href="http://bugs.php.net">bug reporting system</a>.</p>
-     
+
+     <p>Please carefully test this version and report any issues found in the <a href="https://bugs.php.net">bug reporting system</a>.</p>
+
      <p><strong>Please DO NOT use this version in production, it is an early test version.</strong></p>
-     
+
      <p>For more information on the new features and other changes, you can read the <a href="https://github.com/php/php-src/blob/php-8.1.0alpha2/NEWS">NEWS</a> file, or the <a href="https://github.com/php/php-src/blob/php-8.1.0alpha2/UPGRADING">UPGRADING</a> file for a complete list of upgrading notes. These files can also be found in the release archive.</p>
-     
+
      <p>The next release will be Alpha 3, planned for 8 Jul 2021.</p>
-     
+
      <p>The signatures for the release can be found in <a href="https://gist.github.com/patrickallaert/9ebb69f3dba393e0c7f0f553ed16d8b7">the manifest</a> or on <a href="https://qa.php.net/">the QA site</a>.</p>
-     
+
      <p>Thank you for helping us make PHP better.</p>
-     
+
     </div>
   </content>
 </entry>

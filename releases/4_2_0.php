@@ -23,7 +23,7 @@ site_header("PHP 4.2.0 Release Announcement");
 <ul>
  <li><a href="/variables.predefined">PHP Manual: Predefined variables</a></li>
  <li><a href="/releases/4_1_0.php">The PHP 4.1.0 release announcement</a></li>
- <li><a href="http://www.zend.com/zend/art/art-oertli.php">Thomas Oertli's article on secure programming in PHP</a></li>
+ <li><a href="https://www.zend.com/zend/art/art-oertli.php">Thomas Oertli's article on secure programming in PHP</a></li>
 </ul>
 
 <h2>Compatibility</h2>

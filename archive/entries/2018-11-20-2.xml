@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <entry xmlns="http://www.w3.org/2005/Atom" xmlns:default="http://php.net/ns/news">
   <title>Dutch PHP Conference 2019</title>
-  <id>http://php.net/archive/2018.php#id2018-11-20-2</id>
+  <id>https://www.php.net/archive/2018.php#id2018-11-20-2</id>
   <published>2018-11-20T14:02:37+00:00</published>
   <updated>2018-11-20T14:02:37+00:00</updated>
   <default:finalTeaserDate xmlns="http://php.net/ns/news">2019-06-06</default:finalTeaserDate>
   <category term="conferences" label="Conference announcement"/>
-  <link href="http://php.net/conferences/index.php#id2018-11-20-2" rel="alternate" type="text/html"/>
+  <link href="https://www.php.net/conferences/index.php#id2018-11-20-2" rel="alternate" type="text/html"/>
   <default:newsImage xmlns="http://php.net/ns/news" link="https://www.phpconference.nl" title="DPC 2019">dpc-2019.png</default:newsImage>
   <link href="https://www.phpconference.nl" rel="via" type="text/html"/>
   <content type="xhtml">
     <div xmlns="http://www.w3.org/1999/xhtml">
      This year marks the 13th edition of the Dutch PHP Conference, once again hosted in the beautiful city of Amsterdam. Our tutorial day will be Thursday, June 6th, with the main 2-day conference following on the June 7 and 8.
-     
+
      The Dutch PHP Conference is an annual web technology conference around PHP technology. Last year we’ve invited more than 50 speakers from all around the world to share their expertise and experience with the 600+ attendees in a 3-day conference in the RAI, Amsterdam. The conference is completely in English and is focused on mobile- and web development related to PHP technology.
-     
+
      <a href="https://www.phpconference.nl">Conference website</a>
-     
+
       <ul>
         <li>Date: June 6 - 8, 2019</li>
         <li>Venue: RAI Amsterdam</li>

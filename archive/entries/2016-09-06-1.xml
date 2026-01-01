@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <entry xmlns="http://www.w3.org/2005/Atom" xmlns:default="http://php.net/ns/news">
   <title>PHPBenelux Conference 2017 CfP Opened</title>
-  <id>http://php.net/archive/2016.php#id2016-09-06-1</id>
+  <id>https://www.php.net/archive/2016.php#id2016-09-06-1</id>
   <published>2016-09-06T01:53:15+02:00</published>
   <updated>2016-09-06T01:53:15+02:00</updated>
   <default:finalTeaserDate xmlns="http://php.net/ns/news">2016-10-02</default:finalTeaserDate>
   <category term="cfp" label="Call for Papers"/>
-  <link href="http://php.net/conferences/index.php#id2016-09-06-1" rel="alternate" type="text/html"/>
+  <link href="https://www.php.net/conferences/index.php#id2016-09-06-1" rel="alternate" type="text/html"/>
   <default:newsImage xmlns="http://php.net/ns/news" link="https://cfp.phpbenelux.eu/" title="PHPBenelux Conference 2017">phpbenelux_conference_logo_2017.png</default:newsImage>
   <link href="https://cfp.phpbenelux.eu/" rel="via" type="text/html"/>
   <content type="xhtml">

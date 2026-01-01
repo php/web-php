@@ -491,7 +491,7 @@ META
         $config["css_overwrite"] = ["/styles/i-love-markdown.css"];
     }
 
-    // shorturl; http://wiki.snaplog.com/short_url
+    // shorturl; https://wiki.snaplog.com/short_url
     if (isset($_SERVER['BASE_PAGE']) && $shortname = get_shortname($_SERVER["BASE_PAGE"])) {
         $shorturl = "https://www.php.net/" . $shortname;
     }
@@ -556,7 +556,7 @@ function get_news_changes()
 
     $date->modify("+1 week");
     if ($date->getTimestamp() > $_SERVER["REQUEST_TIME"]) {
-        $link = preg_replace('~^(http://php.net/|https://www.php.net/)~', '/', $lastNews["link"][0]["href"]);
+        $link = preg_replace('~^(http://php.net/|https://www.php.net/|https://www.php.net/)~', '/', $lastNews["link"][0]["href"]);
         $title = $lastNews["title"];
         return "<a href='{$link}'>{$title}</a>";
     }

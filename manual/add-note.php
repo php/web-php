@@ -1,5 +1,5 @@
 <?php
-$ip_spam_lookup_url = 'http://www.dnsbl.info/dnsbl-database-check.php?IP=';
+$ip_spam_lookup_url = 'https://www.dnsbl.info/dnsbl-database-check.php?IP=';
 
 $_SERVER['BASE_PAGE'] = 'manual/add-note.php';
 include_once __DIR__ . '/../include/prepend.inc';

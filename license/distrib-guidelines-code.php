@@ -8,7 +8,7 @@ site_header("License Information", ["current" => "help"]);
 <p>
   The PHP code can be redistributed in source or binary form provided that
   the terms of the PHP license are respected (see
-  <a href="http://www.php.net/license/3_01.txt">version 3.01</a>).
+  <a href="https://www.php.net/license/3_01.txt">version 3.01</a>).
 </p>
 <p>
   In plain English, this means that you have to include the full license text
@@ -58,7 +58,7 @@ site_header("License Information", ["current" => "help"]);
   you don't use the name "PHP" without permission, either
   to promote your own product or within your product's name
   (see clauses #3 and #4 in the PHP license
-  <a href="http://www.php.net/license/3_01.txt">version 3.01</a>).
+  <a href="https://www.php.net/license/3_01.txt">version 3.01</a>).
  </li>
 </ul>
 

@@ -37,10 +37,10 @@ PHP 5.2.x branch with a small number, of predominatly security fixes.
 </ul>
 
 <p>To prepare for upgrading to PHP 5.3, now that PHP 5.2's support ended, a
-migration guide available on <a href="/migration53">http://php.net/migration53</a>, details the changes between
+migration guide available on <a href="/migration53">https://www.php.net/migration53</a>, details the changes between
 PHP 5.2 and PHP 5.3.</p>
 
 <p>For a full list of changes in PHP 5.2.15 see the ChangeLog at
-<a href="http://www.php.net/ChangeLog-5.php#5.2.15">http://www.php.net/ChangeLog-5.php#5.2.15</a>.</p>
+<a href="https://www.php.net/ChangeLog-5.php#5.2.15">https://www.php.net/ChangeLog-5.php#5.2.15</a>.</p>
 
 <?php site_footer(); ?>

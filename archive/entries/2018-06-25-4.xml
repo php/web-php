@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <entry xmlns="http://www.w3.org/2005/Atom" xmlns:default="http://php.net/ns/news">
   <title>SymfonyCon Lisbon 2018</title>
-  <id>http://php.net/archive/2018.php#id2018-06-25-4</id>
+  <id>https://www.php.net/archive/2018.php#id2018-06-25-4</id>
   <published>2018-06-25T14:46:40+02:00</published>
   <updated>2018-06-25T14:46:40+02:00</updated>
   <default:finalTeaserDate xmlns="http://php.net/ns/news">2018-12-06</default:finalTeaserDate>
   <category term="conferences" label="Conference announcement"/>
-  <link href="http://php.net/conferences/index.php#id2018-06-25-4" rel="alternate" type="text/html"/>
+  <link href="https://www.php.net/conferences/index.php#id2018-06-25-4" rel="alternate" type="text/html"/>
   <default:newsImage xmlns="http://php.net/ns/news" link="https://lisbon2018.symfony.com/" title="SymfonyCon Lisbon 2018 Conference">symfony-con-lisbon-2018.png</default:newsImage>
   <link href="https://lisbon2018.symfony.com/" rel="via" type="text/html"/>
   <content type="xhtml">
