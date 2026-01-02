@@ -15,8 +15,11 @@ use phpweb\News\NewsHandler;
     }
 })($_SERVER['REQUEST_URI'] ?? '');
 
+// Import functions to deal with files in a safe manner
+include_once __DIR__ . '/include/file.inc';
+
 // Get the modification date of this PHP file
-$timestamps = [@getlastmod()];
+$timestamps = [getlastmod()];
 
 /*
    The date of prepend.inc represents the age of ALL
@@ -25,13 +28,13 @@ $timestamps = [@getlastmod()];
    the display of the index page). The cost of stat'ing
    them all is prohibitive.
 */
-$timestamps[] = @filemtime("include/prepend.inc");
+$timestamps[] = file_get_mtime("include/prepend.inc");
 
 // These are the only dynamic parts of the frontpage
-$timestamps[] = @filemtime("include/pregen-confs.inc");
-$timestamps[] = @filemtime("include/pregen-news.inc");
-$timestamps[] = @filemtime("include/version.inc");
-$timestamps[] = @filemtime("js/common.js");
+$timestamps[] = file_get_mtime("include/pregen-confs.inc");
+$timestamps[] = file_get_mtime("include/pregen-news.inc");
+$timestamps[] = file_get_mtime("include/version.inc");
+$timestamps[] = file_get_mtime("js/common.js");
 
 // The latest of these modification dates is our real Last-Modified date
 $timestamp = max($timestamps);

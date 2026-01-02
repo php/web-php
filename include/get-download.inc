@@ -18,7 +18,7 @@ $site_config = [
 // Find out what is the exact file requested
 $file = false;
 foreach ($possible_files as $name) {
-    if (@file_exists($_SERVER['DOCUMENT_ROOT'] . '/distributions/' . $name)) {
+    if (file_exists($_SERVER['DOCUMENT_ROOT'] . '/distributions/' . $name)) {
         $file = $name;
         break;
     }
@@ -43,7 +43,7 @@ EOT;
     // Set local file name
     $local_file = $_SERVER['DOCUMENT_ROOT'] . '/distributions/' . $file;
     // Try to get filesize to display
-    $size = @filesize($local_file);
+    $size = file_get_size($local_file);
 }
 ?>
 </div>
