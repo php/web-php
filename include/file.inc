@@ -1,7 +1,9 @@
 <?php
 
 /*
- *
+ * This file contains helper functions to deal with files in a safe manner.
+ * These functions check for file existence and readability before performing
+ * any operations on them.
 */
 
 function file_get_size(string $filename): int|false
@@ -29,7 +31,4 @@ function file_get_contents_if_exists(string $filename): string|false
     }
 
     return file_get_contents($filename);
-}
-{
-
 }
