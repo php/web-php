@@ -10,5 +10,5 @@ sudo port install php<?= $versionNoDot; ?>
 
 
 # Switch Active PHP <?= $version; ?> version
-sudo port select php php<?= $versionNoDot; ?>
+sudo port select --set php php<?= $versionNoDot; ?>
 </code></pre>
