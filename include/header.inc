@@ -20,14 +20,14 @@ foreach($css_files as $filename) {
         $filename = "/styles/$filename";
     }
     $path = dirname(__DIR__) . $filename;
-    $CSS[$filename] = @filemtime($path);
+    $CSS[$filename] = filemtime($path);
 }
 
 $JS = [];
 if (isset($config["js_files"])) {
     foreach($config['js_files'] as $filename) {
         $path = dirname(__DIR__) . '/' . $filename;
-        $JS[$filename] = @filemtime($path);
+        $JS[$filename] = filemtime($path);
     }
 }
 

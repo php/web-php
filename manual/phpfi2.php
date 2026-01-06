@@ -2927,7 +2927,7 @@ nibble, like 0?755:
   messages appear on the web screen. This can be done by putting
   the "@" character in front of the function call. ie.</p>
   <pre>
-    $err_code = @dbmopen($filename,"w");
+    $err_code = dbmopen($filename,"w");
 </pre>
 
   <p>The actual error message that would have been printed can be
