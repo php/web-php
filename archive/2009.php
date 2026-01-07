@@ -483,7 +483,7 @@ site_header("News Archive - 2009", ["cache" => true]);
       The keynote speaker is Jan Schneider, who will also
       talk about the Horde project. In addition, we will
       have sessions about other frameworks and include a
-      <a href="http://qa.php.net/testfest.php">PHP TestFest</a>.
+      <a href="https://phptestfest.org">PHP TestFest</a>.
      </p>
      <p>
       PHP'n Rio sessions go from 6-9 pm. Then the PHP TestFest follows up
@@ -522,7 +522,7 @@ site_header("News Archive - 2009", ["cache" => true]);
       Please download and test these release candidates, and report any issues
       found. A stable release is expected next week . In case of critical
       issues we will continue producing weekly RCs. Downloads and further
-      information is available at <a href="http://qa.php.net/">qa.php.net</a>.
+      information is available at <a href="https://qa.php.net/">qa.php.net</a>.
       See also the work in progress
       <a href="http://cvs.php.net/viewvc.cgi/php-src/UPGRADING?revision=PHP_5_3">5.3 upgrade guide</a>.
      </p>
@@ -565,7 +565,7 @@ site_header("News Archive - 2009", ["cache" => true]);
     <h1 class="summary entry-title"><a id="id2009-06-12-1" href="http://www.php.net/archive/2009.php#id2009-06-12-1" rel="bookmark" class="bookmark">PHP 5.2.10RC2 and PHP 5.3.0RC3 Release Announcements</a></h1>
     <div class="entry-content description">
         <abbr class="published newsdate" title="2009-06-12T17:39:42+02:00">[12-Jun-2009]</abbr>
-        <div>     <p>      The PHP development team is proud to announce the second release candidate of PHP 5.2.10 (PHP 5.2.10RC2) and      the third release candidate of PHP 5.3.0 (PHP 5.3.0RC3).      These RCs focuses on bug fixes and stability improvements, and we hope only minimal changes are required      for the next candidate or final stable releases.     </p>     <p>      PHP 5.2.10 is a pure maintenance release for providing bugfixes and stability updates. PHP 5.3.0      is a newly developed version of PHP featuring long-awaited features like namespaces, late      static binding, closures and much more.     </p>     <p>      Please download and test these release candidates, and report any issues found.      Downloads and further information is available at <a href="http://qa.php.net/">qa.php.net</a>.      See also the work in progress <a href="http://wiki.php.net/doc/scratchpad/upgrade/53">5.3 upgrade guide</a>.     </p></div>
+        <div>     <p>      The PHP development team is proud to announce the second release candidate of PHP 5.2.10 (PHP 5.2.10RC2) and      the third release candidate of PHP 5.3.0 (PHP 5.3.0RC3).      These RCs focuses on bug fixes and stability improvements, and we hope only minimal changes are required      for the next candidate or final stable releases.     </p>     <p>      PHP 5.2.10 is a pure maintenance release for providing bugfixes and stability updates. PHP 5.3.0      is a newly developed version of PHP featuring long-awaited features like namespaces, late      static binding, closures and much more.     </p>     <p>      Please download and test these release candidates, and report any issues found.      Downloads and further information is available at <a href="https://qa.php.net/">qa.php.net</a>.      See also the work in progress <a href="http://wiki.php.net/doc/scratchpad/upgrade/53">5.3 upgrade guide</a>.     </p></div>
 
     </div>
 </div>
@@ -666,7 +666,7 @@ site_header("News Archive - 2009", ["cache" => true]);
       </p>
       <p>
         Getting involved couldn't be simpler. Visit the
-        <a href="http://qa.php.net/testfest.php">QA TestFest page</a> to
+        <a href="https://phptestfest.org">QA TestFest page</a> to
         find out how you can organize a TestFest event in your community.
         We are looking forward to seeing your communities tests being
         committed into PHP.
@@ -695,7 +695,7 @@ site_header("News Archive - 2009", ["cache" => true]);
      </p>
      <p>
       Please download and test this release candidate, and report any issues found.
-      Downloads and further information is available at <a href="http://qa.php.net/">qa.php.net</a>.
+      Downloads and further information is available at <a href="https://qa.php.net/">qa.php.net</a>.
       See also the work in progress <a href="http://wiki.php.net/doc/scratchpad/upgrade/53">5.3 upgrade guide</a>.
      </p>
     </div>
