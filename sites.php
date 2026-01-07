@@ -63,15 +63,15 @@ site_header("A Tourist's Guide", ["current" => "help"]);
 </p>
 
 <h2 id="news" class="content-header">
- <a href="http://news.php.net/">news.php.net</a>:
+ <a href="https://news-web.php.net/">news-web.php.net</a>:
  Mailing Lists Web and NNTP Interface
 </h2>
 
 <p class="content-box">
- news.php.net is the web interface to the PHP mailing lists. If you're not
+ news-web.php.net is the web interface to the PHP mailing lists. If you're not
  subscribed to the mailing lists, but you still want to keep in touch regularly,
  this is your place. An infinite pile of fresh news and trends of PHP. You can
- also point your news reader at the NNTP server at news.php.net to follow the
+ also point your news reader at the NNTP server at <a href="news://news.php.net">news server</a> to follow the
  lists.
 </p>
 

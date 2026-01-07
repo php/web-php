@@ -17149,7 +17149,7 @@ $OLDRELEASES = array (
       ),
       'announcement' => 
       array (
-        'English' => 'http://news.php.net/php.announce/55',
+        'English' => 'https://news-web.php.net/php.announce/55',
       ),
       'museum' => true,
     ),
@@ -17184,7 +17184,7 @@ $OLDRELEASES = array (
       ),
       'announcement' => 
       array (
-        'English' => 'http://news.php.net/php.announce/54',
+        'English' => 'https://news-web.php.net/php.announce/54',
       ),
       'museum' => true,
     ),
@@ -17219,7 +17219,7 @@ $OLDRELEASES = array (
       ),
       'announcement' => 
       array (
-        'English' => 'http://news.php.net/php.announce/53',
+        'English' => 'https://news-web.php.net/php.announce/53',
       ),
       'museum' => true,
     ),
@@ -17249,7 +17249,7 @@ $OLDRELEASES = array (
       ),
       'announcement' => 
       array (
-        'English' => 'http://news.php.net/php.announce/51',
+        'English' => 'https://news-web.php.net/php.announce/51',
       ),
       'museum' => true,
     ),
@@ -17284,7 +17284,7 @@ $OLDRELEASES = array (
       ),
       'announcement' => 
       array (
-        'English' => 'http://news.php.net/php.announce/50',
+        'English' => 'https://news-web.php.net/php.announce/50',
       ),
       'museum' => true,
     ),
@@ -18054,7 +18054,7 @@ $OLDRELEASES = array (
       ),
       'announcement' => 
       array (
-        'English' => 'http://news.php.net/php.announce/37',
+        'English' => 'https://news-web.php.net/php.announce/37',
       ),
       'museum' => true,
     ),
@@ -18315,7 +18315,7 @@ $OLDRELEASES = array (
       ),
       'announcement' => 
       array (
-        'English' => 'http://news.php.net/php.announce/28',
+        'English' => 'https://news-web.php.net/php.announce/28',
       ),
       'museum' => true,
     ),
@@ -18350,8 +18350,8 @@ $OLDRELEASES = array (
       ),
       'announcement' => 
       array (
-        'English' => 'http://news.php.net/php.announce/26',
-        'English (pl1)' => 'http://news.php.net/php.announce/27',
+        'English' => 'https://news-web.php.net/php.announce/26',
+        'English (pl1)' => 'https://news-web.php.net/php.announce/27',
       ),
       'museum' => true,
     ),
@@ -18376,7 +18376,7 @@ $OLDRELEASES = array (
       ),
       'announcement' => 
       array (
-        'English' => 'http://news.php.net/php.announce/24',
+        'English' => 'https://news-web.php.net/php.announce/24',
       ),
       'museum' => true,
     ),
@@ -18411,7 +18411,7 @@ $OLDRELEASES = array (
       ),
       'announcement' => 
       array (
-        'English' => 'http://news.php.net/php.announce/23',
+        'English' => 'https://news-web.php.net/php.announce/23',
       ),
       'museum' => true,
     ),
@@ -18436,7 +18436,7 @@ $OLDRELEASES = array (
       ),
       'announcement' => 
       array (
-        'English' => 'http://news.php.net/php.announce/22',
+        'English' => 'https://news-web.php.net/php.announce/22',
       ),
       'museum' => true,
     ),

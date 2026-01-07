@@ -456,7 +456,7 @@ site_header("News Archive - 2002", ["cache" => true]);
  various sites that make up the PHP.net family of sites. Did you know you can
  browse a hyperlinked version of the PHP source code at <a
  href="http://lxr.php.net/">lxr.php.net</a>? View the archives of all of the
- mailing lists at <a href="http://news.php.net/">news.php.net</a>? See what else
+ mailing lists at <a href="https://news-web.php.net/">news-web.php.net</a>? See what else
  you've been missing.
 </p>
 
