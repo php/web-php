@@ -76,7 +76,7 @@ site_header("A Tourist's Guide", ["current" => "help"]);
 </p>
 
 <h2 id="pear" class="content-header">
- <a href="http://pear.php.net/">pear.php.net</a>:
+ <a href="https://pear.php.net/">pear.php.net</a>:
  The PHP Extension and Application Repository
 </h2>
 
@@ -89,7 +89,7 @@ site_header("A Tourist's Guide", ["current" => "help"]);
 </p>
 
 <h2 id="pecl" class="content-header">
- <a href="http://pecl.php.net/">pecl.php.net</a>:
+ <a href="https://pecl.php.net/">pecl.php.net</a>:
  The PHP Extension Community Library
 </h2>
 

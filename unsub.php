@@ -5,8 +5,8 @@ $SIDEBAR_DATA = '
 <h3>Other PHP related mailing lists</h3>
 
 <p>
- Unsubscribe from the <a href="http://pear.php.net/support/lists.php">PEAR
- lists</a> and the <a href="http://pecl.php.net/support.php">PECL
+ Unsubscribe from the <a href="https://pear.php.net/support/lists.php">PEAR
+ lists</a> and the <a href="https://pecl.php.net/support.php">PECL
  lists</a> on their own pages.
 </p>
 ';

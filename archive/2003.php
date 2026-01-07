@@ -789,7 +789,7 @@ site_header("News Archive - 2003", ["cache" => true]);
 <p>
  <span class="newsdate">[11-Jan-2003]</span>
  The PEAR development team is proud to announce that
- <a href="http://pear.php.net/">PEAR</a> is finally out of its long
+ <a href="https://pear.php.net/">PEAR</a> is finally out of its long
  beta period. As of PHP 4.3, the PEAR installer is installed by default.
  Unix support is considered stable, while Windows and Darwin are still
  of beta-quality.

@@ -38,7 +38,7 @@ and includes a large number of new features and bug fixes.
 </ul>
 
 <p>
-<b>Extensions moved to <a href="http://pecl.php.net">PECL</a>:</b>
+<b>Extensions moved to <a href="https://pecl.php.net">PECL</a>:</b>
 </p>
 <ul>
   <li><a href="http://www.php.net/manual/ref.sqlite.php">ext/sqlite</a> (<a href="http://www.php.net/manual/book.sqlite3.php">ext/sqlite3</a> and <a href="http://www.php.net/manual/ref.pdo-sqlite.php">ext/pdo_sqlite</a> are not affected)</li>

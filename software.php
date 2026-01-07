@@ -18,12 +18,12 @@ site_header("PHP Software", ["current" => "help"]);
 </p>
 <p>
  <?php echo make_image("pear-icon.png", $alt = "pear.php.net", "left") ?>&nbsp;
- <a href="http://pear.php.net/">pear.php.net</a><br>
+ <a href="https://pear.php.net/">pear.php.net</a><br>
  &nbsp;The PEAR project where you can find reusable components for PHP .<br clear="left">
 </p>
 <p>
  <?php echo make_image("pecl-icon.png", $alt = "pecl.php.net", "left") ?>&nbsp;
- <a href="http://pecl.php.net/">pecl.php.net</a><br>
+ <a href="https://pecl.php.net/">pecl.php.net</a><br>
  &nbsp;The PECL project where you can find PHP extensions.<br clear="left">
 </p>
 

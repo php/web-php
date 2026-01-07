@@ -452,7 +452,7 @@ those releases and PHP 5.2.3.
     <li>
         Mentored by Helgi Þormar Þorbjörnsson, Igor Feghali will add support
         for foreign keys to
-        <a href="http://pear.php.net/package/MDB2_Schema/">MDB2_Schema</a>,
+        <a href="https://pear.php.net/package/MDB2_Schema/">MDB2_Schema</a>,
         a package that "enables users to maintain RDBMS independant schema
         files in XML that can be used to create, alter and drop database
         entities and insert data into a database".
