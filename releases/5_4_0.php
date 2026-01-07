@@ -17,8 +17,8 @@ and includes a large number of new features and bug fixes.
 </p>
 <ul>
  <li>New language syntax including <a href="http://php.net/traits">Traits</a>,
-    <a href="http://docs.php.net/manual/language.types.array.php">shortened array syntax</a>
-    and <a href="http://docs.php.net/manual/migration54.new-features.php">more</a></li>
+    <a href="https://www.php.net/manual/language.types.array.php">shortened array syntax</a>
+    and <a href="https://www.php.net/manual/migration54.new-features.php">more</a></li>
  <li>Improved performance and reduced memory consumption</li>
  <li>Support for multibyte languages now available in all builds of PHP at the flip of a runtime switch</li>
  <li><a href="http://php.net/manual/features.commandline.webserver.php">

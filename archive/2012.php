@@ -607,7 +607,7 @@ site_header("News Archive - 2012", ["cache" => true]);
       encouraged to upgrade to PHP 5.4.4 or PHP 5.3.14.</p>
 
       <p>The release fixes multiple security issues: A weakness in the DES
-      implementation of <a href="http://docs.php.net/crypt">crypt</a> and a
+      implementation of <a href="https://www.php.net/crypt">crypt</a> and a
       heap overflow issue in the phar extension</p>
 
      <p>PHP 5.4.4 and PHP 5.3.14 fixes over 30 bugs. Please note that the
@@ -918,7 +918,7 @@ site_header("News Archive - 2012", ["cache" => true]);
      <p>
       Some of the key new features include:
       <a href="http://php.net/traits">traits</a>,
-      <a href="http://docs.php.net/manual/en/language.types.array.php">a shortened array syntax</a>,
+      <a href="https://www.php.net/manual/en/language.types.array.php">a shortened array syntax</a>,
       <a href="http://php.net/manual/en/features.commandline.webserver.php">
       a built-in webserver for testing purposes</a>
       and more. PHP 5.4.0 significantly improves performance, memory footprint and fixes over
