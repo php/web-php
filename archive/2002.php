@@ -568,7 +568,7 @@ site_header("News Archive - 2002", ["cache" => true]);
 
 <p>
  <span class="newsdate">[24-Jan-2002]</span>
- <a href="http://gtk.php.net/">PHP-GTK</a> has reached version
+ <a href="https://qa.php.net/">PHP-GTK</a> has reached version
  0.5.0, also known as <em>"monday starts on saturday"</em>. The version number
  was bumped from 0.1.1 to this one to indicate that PHP-GTK is now a fairly
  mature and stable extension and can be used for a variety of applications
