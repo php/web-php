@@ -166,7 +166,7 @@ site_header("News Archive - 2003", ["cache" => true]);
  You can autocomplete the name with the space key and navigate in the dropdown
  with the up and down cursor keys. We welcome feedback on this feature at
  <a href="/contact.php">the webmasters email address</a>, but
- please submit any bugs you find <a href="http://bugs.php.net/">in the
+ please submit any bugs you find <a href="https://bugs.php.net/">in the
  bug system</a> classifying them as a "PHP.net website problem" and providing
  as much information as possible (OS, Browser version, Javascript errors, etc..).
 </p>
@@ -551,7 +551,7 @@ site_header("News Archive - 2003", ["cache" => true]);
  <strong>Note</strong>: <em>This is a beta version. It should not be used in
  production or even semi-production web sites.</em> There are known bugs in it,
  and in addition, some of the features may change (based on feedback). We
- encourage you to download and play with it (and <a href="http://bugs.php.net/">report
+ encourage you to download and play with it (and <a href="https://bugs.php.net/">report
  bugs</a> if you find any!), but please do not replace your production
  installations of PHP 4 at this time.
 </p>

@@ -138,7 +138,7 @@ site_header("News Archive - 2008", ["cache" => true]);
 
         of the upcoming PHP 5.3.0 minor version update of PHP.
         Several new features have already been documented in the <a href="http://php.net/docs.php">official documentation</a>,
-        others are listed on the <a href="http://wiki.php.net/doc/scratchpad/upgrade/53">wiki</a>
+        others are listed on the <a href="https://wiki.php.net/doc/scratchpad/upgrade/53">wiki</a>
         in preparation of getting documented. It is imperative that more people
         join the effort to complete the documentation for PHP 5.3.0.
         Please also review the <a href="http://php.net/php5news">NEWS</a> file.</p>
@@ -148,14 +148,14 @@ site_header("News Archive - 2008", ["cache" => true]);
          necessary backwards compatibility breaks are noted in the documentation. Please
          report any findings to the <a href="mailto:php-qa@lists.php.net">QA mailinglist</a>
 
-         or the <a href="http://bugs.php.net">bug tracker</a>.</p>
+         or the <a href="https://bugs.php.net">bug tracker</a>.</p>
         <p>There have been a great number of other additions and improvements since the last alpha,
         but here is a short overview of the most important changes:</p>
         <ul>
           <li><a href="http://php.net/language.namespaces">Namespaces</a> (documentation has been updated to the current state)</li>
           <li>
 
-            <a href="http://wiki.php.net/rfc/rounding">Rounding behavior</a>
+            <a href="https://wiki.php.net/rfc/rounding">Rounding behavior</a>
           </li>
           <li>ext/msql has been removed, while ext/ereg will now raise E_DEPRECATED notices</li>
           <li>ext/mhash has been replaced by ext/hash but full BC is maintained</li>
@@ -165,7 +165,7 @@ site_header("News Archive - 2008", ["cache" => true]);
         </ul>
         <p>Several under the hood changes also require in depth testing with existing
         applications to ensure that any backwards compatibility breaks are minimized.</p>
-        <p>The current <a href="http://wiki.php.net/todo/php53">release plan</a> expects
+        <p>The current <a href="https://wiki.php.net/todo/php53">release plan</a> expects
         a stable release sometime around the end of Q1 2009.</p>
       </div>
 
@@ -442,33 +442,33 @@ site_header("News Archive - 2008", ["cache" => true]);
     <div class="entry-content description">
         <abbr class="published newsdate" title="2008-08-01T08:50:37+02:00">[01-Aug-2008]</abbr>
         <div>
-        <p>The PHP development team is proud to announce the <a href="http://qa.php.net/">first alpha release</a> of the upcoming minor version update of PHP. <a href="http://windows.php.net/download/">Windows binaries</a> will be available starting with alpha2 (intermediate snapshots available at <a href="http://snaps.php.net">snaps.php.net</a>). The new version PHP 5.3 is expected to improve stability and performance as well as add new language syntax and extensions. Several new features have already been documented in the <a href="http://php.net/docs.php">official documentation</a>, others are listed on the <a href="http://wiki.php.net/doc/scratchpad/upgrade/53">wiki</a> in preparation of getting documented. Please also review the <a href="http://php.net/php5news">NEWS</a> file.</p>
+        <p>The PHP development team is proud to announce the <a href="http://qa.php.net/">first alpha release</a> of the upcoming minor version update of PHP. <a href="http://windows.php.net/download/">Windows binaries</a> will be available starting with alpha2 (intermediate snapshots available at <a href="http://snaps.php.net">snaps.php.net</a>). The new version PHP 5.3 is expected to improve stability and performance as well as add new language syntax and extensions. Several new features have already been documented in the <a href="http://php.net/docs.php">official documentation</a>, others are listed on the <a href="https://wiki.php.net/doc/scratchpad/upgrade/53">wiki</a> in preparation of getting documented. Please also review the <a href="http://php.net/php5news">NEWS</a> file.</p>
 
         <strong>THIS IS A DEVELOPMENT PREVIEW - DO NOT USE IT IN PRODUCTION!</strong>
         <p>The purpose of this alpha release is to encourage users to not only actively
          participate in identifying bugs, but also in ensuring that all new features or
          necessary backwards compatibility breaks are noted in the documentation. Please
          report any findings to the <a href="mailto:php-qa@lists.php.net">QA mailinglist</a>
-         or the <a href="http://bugs.php.net">bug tracker</a>.</p>
+         or the <a href="https://bugs.php.net">bug tracker</a>.</p>
         <p>There have been a great number of other additions and improvements, but here is a short overview of the most important changes:</p>
         <ul>
 
           <li><a href="http://php.net/language.namespaces">Namespaces</a> (documentation maybe out dated)</li>
           <li><a href="http://php.net/oop5.late-static-bindings">Late static binding</a> and <a href="http://php.net/language.oop5.overloading">__callStatic</a></li>
           <li>
-            <a href="http://wiki.php.net/rfc/closures">Lambda functions and closures</a>
+            <a href="https://wiki.php.net/rfc/closures">Lambda functions and closures</a>
           </li>
 
           <li>Addition of the <a href="http://php.net/book.intl">intl</a>, <a href="http://php.net/book.phar">phar</a> (phar is scheduled for some more work a head of alpha2), <a href="http://php.net/book.fileinfo">fileinfo </a> and <a href="http://php.net/book.sqlite3">sqlite3</a> extensions</li>
           <li>Optional cyclic garbage collection</li>
 
           <li>Optional support for the <a href="http://forge.mysql.com/wiki/PHP_MYSQLND">MySQLnd</a> replacement driver for libmysql</li>
-          <li>Windows older than Windows 2000 (Windows 98, NT4, etc.) are not supported anymore (<a href="http://wiki.php.net/internals/windows/releasenotes">details</a>)</li>
+          <li>Windows older than Windows 2000 (Windows 98, NT4, etc.) are not supported anymore (<a href="https://wiki.php.net/internals/windows/releasenotes">details</a>)</li>
           <li>New syntax features like <a href="http://php.net/language.types.string#language.types.string.syntax.nowdoc">NOWDOC</a>, limited GOTO, ternary short cut "?:"</li>
         </ul>
 
         <p>Several under the hood changes also require in depth testing with existing applications to ensure that any backwards compatibility breaks are minimized. This is especially important for users that require the undocumented Zend engine multibyte support.</p>
-        <p>The current <a href="http://wiki.php.net/todo/php53">release plan</a> states that there will be alpha/beta/RC releases in 2-3 week intervals with an expected stable release of PHP 5.3 between mid September and mid October of 2008.</p>
+        <p>The current <a href="https://wiki.php.net/todo/php53">release plan</a> states that there will be alpha/beta/RC releases in 2-3 week intervals with an expected stable release of PHP 5.3 between mid September and mid October of 2008.</p>
       </div>
 
     </div>
@@ -534,7 +534,7 @@ site_header("News Archive - 2008", ["cache" => true]);
 
         <p>
         The upcomming PHP5.3 release introduces
-        <a href="http://wiki.php.net/doc/scratchpad/upgrade/53">several major features</a>
+        <a href="https://wiki.php.net/doc/scratchpad/upgrade/53">several major features</a>
         such as <a href="/namespaces">namespaces</a>, closures,
         <a href="/lsb">late static bindings</a>, <a href="/intl">internationalization functions</a>,
         <a href="/ini.sections">INI sections</a>, and <a href="/phar">Phar</a> among others.
@@ -829,7 +829,7 @@ and join the <a href="http://www.flickr.com/photos/tags/elephpant/">world of blu
         <div>
         <p>Once again we are glad to announce that we have been accepted to be a Google Summer of Code project. See <a href="http://code.google.com/soc/2008/php/about.html">our program</a> for this year's GSoC.</p>
 
-        <p>We would like to take this opportunity to say thanks to Google Inc. for this privilege to participate once again, and would like to invite everyone to look at our list of ideas: <a href="http://wiki.php.net/gsoc/2008">http://wiki.php.net/gsoc/2008</a>. Students are of course more than welcome to come up with their own ideas for their proposals and we will consider each and every application that we will receive.</p>
+        <p>We would like to take this opportunity to say thanks to Google Inc. for this privilege to participate once again, and would like to invite everyone to look at our list of ideas: <a href="https://wiki.php.net/gsoc/2008">https://wiki.php.net/gsoc/2008</a>. Students are of course more than welcome to come up with their own ideas for their proposals and we will consider each and every application that we will receive.</p>
         <p>So once again, thanks to everyone who is involved in this magnificent journey and we hope to see many of you great students and open source passionate join us in our most enjoyable <a href="http://code.google.com/soc/2008">Google Summer of Code</a> projects.</p>
       </div>
 

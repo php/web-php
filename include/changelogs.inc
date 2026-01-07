@@ -5,7 +5,7 @@ function bugfix($number): void {
 }
 
 function bugl($number): void {
-    echo "<a href=\"http://bugs.php.net/$number\">#$number</a>";
+    echo "<a href=\"https://bugs.php.net/$number\">#$number</a>";
 }
 
 function implemented($number): void {

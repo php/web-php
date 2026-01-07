@@ -304,7 +304,7 @@ EOT;
  patient!), gives you access to a number of things. First, and most
  importantly, it gives you access to modify those parts of the PHP Git tree for
  which you have requested and been granted access. It also allows you to comment
- on and close bugs in our <a href="http://bugs.php.net/">bug database</a>, and
+ on and close bugs in our <a href="https://bugs.php.net/">bug database</a>, and
  allows you to modify the documentation notes in the <a href="/manual/">annotated
  manual</a>. Your Git account also translates into a foo@php.net forwarding email
  address where <strong>foo</strong> is your Git user id. Feel free to use it!

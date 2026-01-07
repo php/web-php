@@ -7,7 +7,7 @@ $SIDEBAR_DATA = '
   <div class="body">
     <p>
       This page is intended to help setup a development environment for PHP, if mistakes are found
-      please <a href="http://bugs.php.net">report</a> them.
+      please <a href="https://bugs.php.net">report</a> them.
     </p>
   </div>
 </div>

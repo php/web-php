@@ -87,7 +87,7 @@ site_header("News Archive - 2013", ["cache" => true]);
       Bootstrap for our theme base.</p>
 
       <p>To provide valuable feedback, you can use the 'Feedback' widget on the side of the page (not visible
-      on smartphones) and to report bugs, you can make use of the <a href="http://bugs.php.net" title="PHP Bug Tracker">bugs.php.net</a>
+      on smartphones) and to report bugs, you can make use of the <a href="https://bugs.php.net" title="PHP Bug Tracker">bugs.php.net</a>
       tracker. Despite our extensive multi-device/multi-browser testing, we may have missed something. So, if you
       spot any issues please do get in touch.</p>
 
