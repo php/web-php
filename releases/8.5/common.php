@@ -33,7 +33,6 @@ function common_header(string $description): void {
         'current' => 'php85',
         'css' => ['php85.css'],
         'language_switcher' => $languages,
-        'theme_switcher' => true,
         'meta_tags' => <<<META
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:site" content="@official_php" />
