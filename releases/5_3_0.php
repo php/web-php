@@ -28,7 +28,7 @@ large number of new features and bug fixes.
   <li>Under the hood performance improvements</li>
   <li>Optional <a href="http://php.net/gc_enable">garbage collection</a> for cyclic references</li>
   <li>Optional <a href="http://php.net/mysqli.mysqlnd">mysqlnd</a> PHP native replacement for libmysql</li>
-  <li>Improved <a href="http://windows.php.net">Windows</a> support including VC9 and experimental X64 binaries
+  <li>Improved <a href="https://windows.php.net">Windows</a> support including VC9 and experimental X64 binaries
   as well as portability to other supported platforms</li>
   <li>More consistent float rounding</li>
   <li>Deprecation notices are now handled via <code>E_DEPRECATED</code> (part of <code>E_ALL</code>)

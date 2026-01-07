@@ -20,7 +20,7 @@ site_header("PHP 7.1.0 Release Announcement");
           <li><a href="https://wiki.php.net/rfc#php_71">Many more features and changes…</a></li>
      </ul>
 
-     <p>For source downloads of PHP 7.1.0 please visit our <a href="http://www.php.net/downloads">downloads</a> page, Windows binaries can be found on the <a href="http://windows.php.net/download">PHP for Windows</a> site. The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.1.0">ChangeLog</a>.</p>
+     <p>For source downloads of PHP 7.1.0 please visit our <a href="http://www.php.net/downloads">downloads</a> page, Windows binaries can be found on the <a href="https://windows.php.net/download">PHP for Windows</a> site. The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.1.0">ChangeLog</a>.</p>
 
      <p>The <a href="http://php.net/manual/en/migration71.php">migration guide</a> is available in the PHP Manual. Please consult it for the detailed list of new features and backward incompatible changes.</p>
 

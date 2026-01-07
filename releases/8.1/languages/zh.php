@@ -85,7 +85,7 @@ return [
     'footer_title' => '更好的性能、更好的语法、改进类型安全。',
     'footer_content' => '<p>
         请访问 <a href="http://www.php.net/downloads">下载</a> 页面下载 PHP 8.1 源代码。
-        在 <a href="http://windows.php.net/download">PHP for Windows</a> 站点中可找到 Windows 二进制文件。
+        在 <a href="https://windows.php.net/download">PHP for Windows</a> 站点中可找到 Windows 二进制文件。
         <a href="https://www.php.net/ChangeLog-8.php#PHP_8_1">ChangeLog</a> 中有变更历史记录清单。
       </p>
       <p>

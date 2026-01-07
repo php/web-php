@@ -71,7 +71,7 @@ return [
     'footer_title' => 'Betere prestaties, betere syntaxis, verbeterd type systeem.',
     'footer_description' => '<p>
             Ga naar de <a href="http://www.php.net/downloads">downloads</a> pagina om de PHP 8 code te verkrijgen.
-            Uitvoerbare bestanden voor Windows kan je vinden op de <a href="http://windows.php.net/download">PHP voor Windows</a> website.
+            Uitvoerbare bestanden voor Windows kan je vinden op de <a href="https://windows.php.net/download">PHP voor Windows</a> website.
             De volledige lijst met wijzigingen is vastgelegd in een <a href="http://www.php.net/ChangeLog-8.php">ChangeLog</a>.
         </p>
         <p>

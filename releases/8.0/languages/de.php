@@ -73,7 +73,7 @@ return [
     'footer_title' => 'Bessere Performance, bessere Syntax, optimierte Typsicherheit.',
     'footer_description' => '<p>
             Für den direkten Code-Download von PHP 8 schaue bitte auf der <a href="http://www.php.net/downloads">Downloads</a> Seite vorbei.
-            Windows Pakete können auf der <a href="http://windows.php.net/download">PHP für Windows</a> Seite gefunden werden.
+            Windows Pakete können auf der <a href="https://windows.php.net/download">PHP für Windows</a> Seite gefunden werden.
             Die Liste der Änderungen ist im <a href="http://www.php.net/ChangeLog-8.php">ChangeLog</a> festgehalten.
         </p>
         <p>

@@ -123,7 +123,7 @@
        <p>All PHP 7.1 users are encouraged to upgrade to this version.</p>
      
        <p>For source downloads of PHP 7.1.32 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-       Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
+       Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
        The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.1.32">ChangeLog</a>.
        </p>
     </div>
@@ -172,7 +172,7 @@
        <p>All PHP 7.2 users are encouraged to upgrade to this version.</p>
      
        <p>For source downloads of PHP 7.2.22 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-       Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
+       Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
        The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.2.22">ChangeLog</a>.
        </p>
     </div>
@@ -221,7 +221,7 @@
       <p>All PHP 7.3 users are encouraged to upgrade to this version.</p>
     
       <p>For source downloads of PHP 7.3.9 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-      Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
+      Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
       The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.3.9">ChangeLog</a>.
       </p>
     </div>
@@ -622,7 +622,7 @@ Sorry for the inconvenience.</p>
        <p>All PHP 7.1 users are encouraged to upgrade to this version.</p>
      
        <p>For source downloads of PHP 7.1.31 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-       Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
+       Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
        The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.1.31">ChangeLog</a>.
        </p>
     </div>
@@ -671,7 +671,7 @@ Sorry for the inconvenience.</p>
      <p>All PHP 7.2 users are encouraged to upgrade to this version.</p>
 
      <p>For source downloads of PHP 7.2.21 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
+     Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.2.21">ChangeLog</a>.
      </p>
     </div>
@@ -720,7 +720,7 @@ Sorry for the inconvenience.</p>
       <p>All PHP 7.3 users are encouraged to upgrade to this version.</p>
     
       <p>For source downloads of PHP 7.3.8 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-      Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
+      Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
       The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.3.8">ChangeLog</a>.
       </p>
     </div>
@@ -1111,7 +1111,7 @@ Sorry for the inconvenience.</p>
      <p>All PHP 7.2 users are encouraged to upgrade to this version.</p>
 
      <p>For source downloads of PHP 7.2.20 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
+     Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.2.20">ChangeLog</a>.
      </p>
     </div>
@@ -1160,7 +1160,7 @@ Sorry for the inconvenience.</p>
       <p>All PHP 7.3 users are encouraged to upgrade to this version.</p>
     
       <p>For source downloads of PHP 7.3.7 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-      Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
+      Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
       The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.3.7">ChangeLog</a>.
       </p>
     </div>
@@ -1529,7 +1529,7 @@ Sorry for the inconvenience.</p>
        <p>All PHP 7.1 users are encouraged to upgrade to this version.</p>
      
        <p>For source downloads of PHP 7.1.30 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-       Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
+       Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
        The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.1.30">ChangeLog</a>.
        </p>
     </div>
@@ -1578,7 +1578,7 @@ Sorry for the inconvenience.</p>
      <p>All PHP 7.2 users are encouraged to upgrade to this version.</p>
      
      <p>For source downloads of PHP 7.2.19 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
+     Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.2.19">ChangeLog</a>.
      </p>
     </div>
@@ -1627,7 +1627,7 @@ Sorry for the inconvenience.</p>
       <p>All PHP 7.3 users are encouraged to upgrade to this version.</p>
 
       <p>For source downloads of PHP 7.3.6 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-      Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
+      Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
       The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.3.6">ChangeLog</a>.
       </p>
     </div>
@@ -1877,7 +1877,7 @@ Sorry for the inconvenience.</p>
        <p>All PHP 7.1 users are encouraged to upgrade to this version.</p>
      
        <p>For source downloads of PHP 7.1.29 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-       Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
+       Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
        The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.1.29">ChangeLog</a>.
        </p>
     </div>
@@ -1926,7 +1926,7 @@ Sorry for the inconvenience.</p>
      <p>All PHP 7.2 users are encouraged to upgrade to this version.</p>
 
      <p>For source downloads of PHP 7.2.18 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
+     Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.2.18">ChangeLog</a>.
      </p>
     </div>
@@ -1975,7 +1975,7 @@ Sorry for the inconvenience.</p>
       <p>All PHP 7.3 users are encouraged to upgrade to this version.</p>
 
       <p>For source downloads of PHP 7.3.5 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-      Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
+      Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
       The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.3.5">ChangeLog</a>.
       </p>
     </div>
@@ -2127,7 +2127,7 @@ Sorry for the inconvenience.</p>
        <p>All PHP 7.1 users are encouraged to upgrade to this version.</p>
      
        <p>For source downloads of PHP 7.1.28 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-       Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
+       Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
        The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.1.28">ChangeLog</a>.
        </p>
     </div>
@@ -2176,7 +2176,7 @@ Sorry for the inconvenience.</p>
      <p>All PHP 7.2 users are encouraged to upgrade to this version.</p>
      
      <p>For source downloads of PHP 7.2.17 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
+     Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.2.17">ChangeLog</a>.
      </p>
     </div>
@@ -2225,7 +2225,7 @@ Sorry for the inconvenience.</p>
        <p>All PHP 7.3 users are encouraged to upgrade to this version.</p>
      
        <p>For source downloads of PHP 7.3.4 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-       Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
+       Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
        The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.3.4">ChangeLog</a>.
        </p>
     </div>
@@ -2951,7 +2951,7 @@ Sorry for the inconvenience.</p>
        <p>All PHP 7.1 users are encouraged to upgrade to this version.</p>
      
        <p>For source downloads of PHP 7.1.27 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-       Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
+       Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
        The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.1.27">ChangeLog</a>.
        </p>
     </div>
@@ -3000,7 +3000,7 @@ Sorry for the inconvenience.</p>
      <p>All PHP 7.2 users are encouraged to upgrade to this version.</p>
 
      <p>For source downloads of PHP 7.2.16 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
+     Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.2.16">ChangeLog</a>.
      </p>
     </div>
@@ -3049,7 +3049,7 @@ Sorry for the inconvenience.</p>
       <p>All PHP 7.3 users are encouraged to upgrade to this version.</p>
 
       <p>For source downloads of PHP 7.3.3 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-      Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
+      Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
       The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.3.3">ChangeLog</a>.
       </p>
     </div>
@@ -3247,7 +3247,7 @@ At Longhorn PHP you\'ll get to learn from and alongside a diverse group of devel
       <p>All PHP 7.2 users are encouraged to upgrade to this version.</p>
 
       <p>For source downloads of PHP 7.2.15 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-      Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
+      Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
       The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.2.15">ChangeLog</a>.
       </p>
     </div>
@@ -3296,7 +3296,7 @@ At Longhorn PHP you\'ll get to learn from and alongside a diverse group of devel
       <p>All PHP 7.3 users are encouraged to upgrade to this version.</p>
     
       <p>For source downloads of PHP 7.3.2 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-      Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
+      Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
       The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.3.2">ChangeLog</a>.
       </p>
     </div>
@@ -3621,7 +3621,7 @@ At Longhorn PHP you\'ll get to learn from and alongside a diverse group of devel
      </p>
 
      <p>For source downloads of PHP 5.6.40 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
+     Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.6.40">ChangeLog</a>.
      </p>
 
@@ -3643,7 +3643,7 @@ the upgrade
 
      All PHP 5.6 users are encouraged to upgrade to this version.
      </p><p>For source downloads of PHP 5.6.40 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
+     Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.6.40">ChangeLog</a>.
      </p><p class=\'fullArticleLink\'><a href=\'http://php.net/archive/2019.php#id2019-01-10-4\' class>&hellip; read full article</a></p></div>',
   ),
@@ -3688,7 +3688,7 @@ the upgrade
        <p>All PHP 7.1 users are encouraged to upgrade to this version.</p>
      
        <p>For source downloads of PHP 7.1.26 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-       Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
+       Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
        The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.1.26">ChangeLog</a>.
        </p>
     </div>
@@ -3737,7 +3737,7 @@ the upgrade
       <p>All PHP 7.3 users are encouraged to upgrade to this version.</p>
 
       <p>For source downloads of PHP 7.3.1 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-      Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
+      Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
       The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.3.1">ChangeLog</a>.
       </p>
     </div>
@@ -3786,7 +3786,7 @@ the upgrade
      <p>All PHP 7.2 users are encouraged to upgrade to this version.</p>
 
      <p>For source downloads of PHP 7.2.14 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
+     Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.2.14">ChangeLog</a>.
      </p>
     </div>
@@ -3951,7 +3951,7 @@ the upgrade
       </p>
 
       <p>For source downloads of PHP 7.0.33 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-         Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
+         Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
          The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.0.33">ChangeLog</a>.
       </p>
 
@@ -3967,7 +3967,7 @@ the upgrade
          7.0.33. Five security-related issues were fixed in this release.
          All PHP 7.0 users are encouraged to upgrade to this version.
       </p><p>For source downloads of PHP 7.0.33 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-         Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
+         Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
          The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.0.33">ChangeLog</a>.
       </p><p class=\'fullArticleLink\'><a href=\'http://php.net/archive/2018.php#id2018-12-06-5\' class>&hellip; read full article</a></p></div>',
   ),
@@ -4012,7 +4012,7 @@ the upgrade
      <p>All PHP 7.1 users are encouraged to upgrade to this version.</p>
      
      <p>For source downloads of PHP 7.1.25 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
+     Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.1.25">ChangeLog</a>.
      </p>
     </div>
@@ -4061,7 +4061,7 @@ the upgrade
      <p>All PHP 7.2 users are encouraged to upgrade to this version.</p>
      
      <p>For source downloads of PHP 7.2.13 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
+     Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.2.13">ChangeLog</a>.
      </p>
     </div>
@@ -4112,7 +4112,7 @@ the upgrade
      </p>
 
      <p>For source downloads of PHP 5.6.39 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
+     Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.6.39">ChangeLog</a>.
      </p>
 
@@ -4134,7 +4134,7 @@ the upgrade
 
      All PHP 5.6 users are encouraged to upgrade to this version.
      </p><p>For source downloads of PHP 5.6.39 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
+     Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.6.39">ChangeLog</a>.
      </p><p class=\'fullArticleLink\'><a href=\'http://php.net/archive/2018.php#id2018-12-06-2\' class>&hellip; read full article</a></p></div>',
   ),
@@ -4189,7 +4189,7 @@ the upgrade
       </ul>
 
       <p>For source downloads of PHP 7.3.0 please visit our <a href="http://www.php.net/downloads">downloads</a> page
-      Windows binaries can be found on the <a href="http://windows.php.net/download">PHP for Windows</a> site.
+      Windows binaries can be found on the <a href="https://windows.php.net/download">PHP for Windows</a> site.
       The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.3.0">ChangeLog</a>.</p>
 
       <p>The <a href="http://php.net/manual/en/migration73.php">migration guide</a> is available in the PHP Manual.
@@ -4429,7 +4429,7 @@ the upgrade
      <p>All PHP 7.1 users are encouraged to upgrade to this version.</p>
      
      <p>For source downloads of PHP 7.1.24 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
+     Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.1.24">ChangeLog</a>.
      </p>
     </div>
@@ -4478,7 +4478,7 @@ the upgrade
      <p>All PHP 7.2 users are encouraged to upgrade to this version.</p>
 
      <p>For source downloads of PHP 7.2.12 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
+     Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.2.12">ChangeLog</a>.
      </p>
     </div>
@@ -4808,7 +4808,7 @@ the upgrade
      <p>All PHP 7.1 users are encouraged to upgrade to this version.</p>
 
      <p>For source downloads of PHP 7.1.23 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
+     Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.1.23">ChangeLog</a>.
      </p>
     </div>
@@ -4857,7 +4857,7 @@ the upgrade
      <p>All PHP 7.2 users are encouraged to upgrade to this version.</p>
 
      <p>For source downloads of PHP 7.2.11 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
+     Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.2.11">ChangeLog</a>.
      </p>
     </div>
@@ -5069,7 +5069,7 @@ the upgrade
      All PHP 5.6 users are encouraged to upgrade to this version.</p>
 
      <p>For source downloads of PHP 5.6.38 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
+     Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.6.38">ChangeLog</a>.
      </p>
     </div>
@@ -5079,7 +5079,7 @@ the upgrade
         in this release.
 
      All PHP 5.6 users are encouraged to upgrade to this version.</p><p>For source downloads of PHP 5.6.38 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
+     Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.6.38">ChangeLog</a>.
      </p></div>',
   ),
@@ -5125,7 +5125,7 @@ the upgrade
      All PHP 7.1 users are encouraged to upgrade to this version.</p>
 
      <p>For source downloads of PHP 7.1.22 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
+     Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.1.22">ChangeLog</a>.
      </p>
 
@@ -5136,7 +5136,7 @@ the upgrade
      in this release.
 
      All PHP 7.1 users are encouraged to upgrade to this version.</p><p>For source downloads of PHP 7.1.22 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
+     Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.1.22">ChangeLog</a>.
      </p></div>',
   ),
@@ -5182,7 +5182,7 @@ the upgrade
      All PHP 7.0 users are encouraged to upgrade to this version.</p>
 
      <p>For source downloads of PHP 7.0.32 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
+     Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.0.32">ChangeLog</a>.
      </p>
     </div>
@@ -5192,7 +5192,7 @@ the upgrade
 	in this release.
 
      All PHP 7.0 users are encouraged to upgrade to this version.</p><p>For source downloads of PHP 7.0.32 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
+     Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.0.32">ChangeLog</a>.
      </p></div>',
   ),
@@ -5318,7 +5318,7 @@ the upgrade
      <p>All PHP 7.2 users are encouraged to upgrade to this version.</p>
 
      <p>For source downloads of PHP 7.2.10 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
+     Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.2.10">ChangeLog</a>.
      </p>
     </div>
@@ -5601,7 +5601,7 @@ the upgrade
           </p>
 
           <p>For source downloads of PHP 7.1.21 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-          Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
+          Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
           The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.1.21">ChangeLog</a>.
           </p>
     </div>
@@ -5611,7 +5611,7 @@ the upgrade
 
           All PHP 7.1 users are encouraged to upgrade to this version.
           </p><p>For source downloads of PHP 7.1.21 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-          Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
+          Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
           The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.1.21">ChangeLog</a>.
           </p></div>',
   ),
@@ -5656,7 +5656,7 @@ the upgrade
      <p>All PHP 7.2 users are encouraged to upgrade to this version.</p>
 
      <p>For source downloads of PHP 7.2.9 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
+     Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.2.9">ChangeLog</a>.
      </p>
     </div>
@@ -6012,7 +6012,7 @@ the upgrade
           </p>
 
           <p>For source downloads of PHP 7.1.20 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-          Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
+          Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
           The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.1.20">ChangeLog</a>.
           </p>
     </div>
@@ -6023,7 +6023,7 @@ the upgrade
 
           All PHP 7.1 users are encouraged to upgrade to this version.
           </p><p>For source downloads of PHP 7.1.20 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-          Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
+          Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
           The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.1.20">ChangeLog</a>.
           </p></div>',
   ),
@@ -6069,7 +6069,7 @@ the upgrade
      All PHP 5.6 users are encouraged to upgrade to this version.</p>
 
      <p>For source downloads of PHP 5.6.37 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
+     Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.6.37">ChangeLog</a>.
      </p>
     </div>
@@ -6079,7 +6079,7 @@ the upgrade
         in this release.
 
      All PHP 5.6 users are encouraged to upgrade to this version.</p><p>For source downloads of PHP 5.6.37 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
+     Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.6.37">ChangeLog</a>.
      </p></div>',
   ),
@@ -6125,7 +6125,7 @@ the upgrade
      All PHP 7.0 users are encouraged to upgrade to this version.</p>
 
      <p>For source downloads of PHP 7.0.31 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
+     Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.0.31">ChangeLog</a>.
      </p>
     </div>
@@ -6135,7 +6135,7 @@ the upgrade
 	in this release.
 
      All PHP 7.0 users are encouraged to upgrade to this version.</p><p>For source downloads of PHP 7.0.31 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
+     Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.0.31">ChangeLog</a>.
      </p></div>',
   ),
@@ -6180,7 +6180,7 @@ the upgrade
      <p>All PHP 7.2 users are encouraged to upgrade to this version.</p>
 
      <p>For source downloads of PHP 7.2.8 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
+     Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.2.8">ChangeLog</a>.
      </p>
     </div>
@@ -6599,7 +6599,7 @@ the upgrade
        </p>
 
        <p>For source downloads of PHP 7.1.19 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-       Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
+       Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
        The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.1.19">ChangeLog</a>.
        </p>
     </div>
@@ -6609,7 +6609,7 @@ the upgrade
 
        All PHP 7.1 users are encouraged to upgrade to this version.
        </p><p>For source downloads of PHP 7.1.19 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-       Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
+       Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
        The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.1.19">ChangeLog</a>.
        </p></div>',
   ),
@@ -6654,7 +6654,7 @@ the upgrade
      <p>PHP 7.2 users are encouraged to upgrade to this version.</p>
 
      <p>For source downloads of PHP 7.2.7 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
+     Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.2.7">ChangeLog</a>.
      </p>
     </div>
@@ -7229,7 +7229,7 @@ the upgrade
        </p>
 
        <p>For source downloads of PHP 7.1.18 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-       Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
+       Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
        The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.1.18">ChangeLog</a>.
        </p>
     </div>
@@ -7239,7 +7239,7 @@ the upgrade
 
        All PHP 7.1 users are encouraged to upgrade to this version.
        </p><p>For source downloads of PHP 7.1.18 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-       Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
+       Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
        The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.1.18">ChangeLog</a>.
        </p></div>',
   ),
@@ -7284,7 +7284,7 @@ the upgrade
      <p>PHP 7.2 users are encouraged to upgrade to this version.</p>
 
      <p>For source downloads of PHP 7.2.6 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
+     Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.2.6">ChangeLog</a>.
      </p>
     </div>
@@ -7426,7 +7426,7 @@ the upgrade
      All PHP 5.6 users are encouraged to upgrade to this version.</p>
 
      <p>For source downloads of PHP 5.6.36 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
+     Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.6.36">ChangeLog</a>.
      </p>
     </div>
@@ -7436,7 +7436,7 @@ the upgrade
         in this release.
 
      All PHP 5.6 users are encouraged to upgrade to this version.</p><p>For source downloads of PHP 5.6.36 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
+     Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.6.36">ChangeLog</a>.
      </p></div>',
   ),
@@ -7482,7 +7482,7 @@ the upgrade
        </p>
 
        <p>For source downloads of PHP 7.1.17 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-       Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
+       Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
        The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.1.17">ChangeLog</a>.
        </p>
     </div>
@@ -7492,7 +7492,7 @@ the upgrade
 
        All PHP 7.1 users are encouraged to upgrade to this version.
        </p><p>For source downloads of PHP 7.1.17 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-       Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
+       Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
        The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.1.17">ChangeLog</a>.
        </p></div>',
   ),
@@ -7538,7 +7538,7 @@ the upgrade
      All PHP 7.0 users are encouraged to upgrade to this version.</p>
 
      <p>For source downloads of PHP 7.0.30 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
+     Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.0.30">ChangeLog</a>.
      </p>
     </div>
@@ -7548,7 +7548,7 @@ the upgrade
 	in this release.
 
      All PHP 7.0 users are encouraged to upgrade to this version.</p><p>For source downloads of PHP 7.0.30 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
+     Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.0.30">ChangeLog</a>.
      </p></div>',
   ),
@@ -7593,7 +7593,7 @@ the upgrade
      <p>All PHP 7.2 users are encouraged to upgrade to this version.</p>
 
      <p>For source downloads of PHP 7.2.5 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
+     Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.2.5">ChangeLog</a>.
      </p>
     </div>
@@ -7900,7 +7900,7 @@ the upgrade
        </p>
 
        <p>For source downloads of PHP 7.1.16 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-       Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
+       Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
        The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.1.16">ChangeLog</a>.
        </p>
     </div>
@@ -7910,7 +7910,7 @@ the upgrade
 
        All PHP 7.1 users are encouraged to upgrade to this version.
        </p><p>For source downloads of PHP 7.1.16 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-       Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
+       Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
        The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.1.16">ChangeLog</a>.
        </p></div>',
   ),
@@ -8005,7 +8005,7 @@ the upgrade
      All PHP 5.6 users are encouraged to upgrade to this version.</p>
 
      <p>For source downloads of PHP 5.6.35 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
+     Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.6.35">ChangeLog</a>.
      </p>
     </div>
@@ -8015,7 +8015,7 @@ the upgrade
      this release.
 
      All PHP 5.6 users are encouraged to upgrade to this version.</p><p>For source downloads of PHP 5.6.35 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
+     Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.6.35">ChangeLog</a>.
      </p></div>',
   ),
@@ -8060,7 +8060,7 @@ the upgrade
      <p>All PHP 7.2 users are encouraged to upgrade to this version.</p>
 
      <p>For source downloads of PHP 7.2.4 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
+     Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.2.4">ChangeLog</a>.
      </p>
     </div>
@@ -8110,7 +8110,7 @@ the upgrade
      All PHP 7.0 users are encouraged to upgrade to this version.</p>
 
      <p>For source downloads of PHP 7.0.29 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
+     Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.0.29">ChangeLog</a>.
      </p>
     </div>
@@ -8120,7 +8120,7 @@ the upgrade
      this release.
 
      All PHP 7.0 users are encouraged to upgrade to this version.</p><p>For source downloads of PHP 7.0.29 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
+     Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.0.29">ChangeLog</a>.
      </p></div>',
   ),
@@ -8280,7 +8280,7 @@ the upgrade
        </p>
 
        <p>For source downloads of PHP 7.1.15 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-       Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
+       Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
        The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.1.15">ChangeLog</a>.
        </p>
     </div>
@@ -8290,7 +8290,7 @@ the upgrade
 
        All PHP 7.1 users are encouraged to upgrade to this version.
        </p><p>For source downloads of PHP 7.1.15 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-       Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
+       Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
        The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.1.15">ChangeLog</a>.
        </p></div>',
   ),
@@ -8427,7 +8427,7 @@ the upgrade
      All PHP 5.6 users are encouraged to upgrade to this version.</p>
 
      <p>For source downloads of PHP 5.6.34 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
+     Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.6.34">ChangeLog</a>.
      </p>
     </div>
@@ -8437,7 +8437,7 @@ the upgrade
      this release.
 
      All PHP 5.6 users are encouraged to upgrade to this version.</p><p>For source downloads of PHP 5.6.34 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
+     Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.6.34">ChangeLog</a>.
      </p></div>',
   ),
@@ -8482,7 +8482,7 @@ the upgrade
      <p>All PHP 7.2 users are encouraged to upgrade to this version.</p>
 
      <p>For source downloads of PHP 7.2.3 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
+     Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.2.3">ChangeLog</a>.
      </p>
     </div>
@@ -8532,7 +8532,7 @@ the upgrade
      All PHP 7.0 users are encouraged to upgrade to this version.</p>
 
      <p>For source downloads of PHP 7.0.28 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
+     Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.0.28">ChangeLog</a>.
      </p>
     </div>
@@ -8542,7 +8542,7 @@ the upgrade
      this release.
 
      All PHP 7.0 users are encouraged to upgrade to this version.</p><p>For source downloads of PHP 7.0.28 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
+     Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.0.28">ChangeLog</a>.
      </p></div>',
   ),
@@ -8959,7 +8959,7 @@ the upgrade
 
       <p>All PHP 7.1 users are encouraged to upgrade to this version.</p>
 
-      <p>For source downloads of PHP 7.1.14 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,  Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
+      <p>For source downloads of PHP 7.1.14 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,  Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
       The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.1.14">ChangeLog</a>.
       </p>
     </div>
@@ -9004,7 +9004,7 @@ the upgrade
       <p>All PHP 7.2 users are encouraged to upgrade to this version.</p>
 
       <p>For source downloads of PHP 7.2.2 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-      Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
+      Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
       The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.2.2">ChangeLog</a>.
       </p>
     </div>
@@ -9193,7 +9193,7 @@ the upgrade
      All PHP 5.6 users are encouraged to upgrade to this version.</p>
 
      <p>For source downloads of PHP 5.6.33 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
+     Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.6.33">ChangeLog</a>.
      </p>
     </div>
@@ -9203,7 +9203,7 @@ the upgrade
      this release.
 
      All PHP 5.6 users are encouraged to upgrade to this version.</p><p>For source downloads of PHP 5.6.33 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
+     Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.6.33">ChangeLog</a>.
      </p></div>',
   ),
@@ -9248,7 +9248,7 @@ the upgrade
 
        <p>All PHP 7.1 users are encouraged to upgrade to this version.</p>
 
-       <p>For source downloads of PHP 7.1.13 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,  Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
+       <p>For source downloads of PHP 7.1.13 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,  Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
        The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.1.13">ChangeLog</a>.
        </p>
     </div>
@@ -9299,7 +9299,7 @@ the upgrade
        <p>All PHP 7.2 users are encouraged to upgrade to this version.</p>
 
        <p>For source downloads of PHP 7.2.1 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-       Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
+       Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
        The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.2.1">ChangeLog</a>.
        </p>
     </div>
@@ -9357,7 +9357,7 @@ the upgrade
      </p>
 
      <p>For source downloads of PHP 7.0.27 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
+     Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.0.27">ChangeLog</a>.
      </p>
     </div>
@@ -9473,7 +9473,7 @@ the upgrade
 	</ul>
 
 	<p>For source downloads of PHP 7.2.0 please visit our <a href="http://www.php.net/downloads">downloads</a> page
-	Windows binaries can be found on the <a href="http://windows.php.net/download">PHP for Windows</a> site.
+	Windows binaries can be found on the <a href="https://windows.php.net/download">PHP for Windows</a> site.
 	The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.2.0">ChangeLog</a>.</p>
 
 	<p>The <a href="http://php.net/manual/en/migration72.php">migration guide</a> is available in the PHP Manual.
@@ -9527,7 +9527,7 @@ the upgrade
        </p>
 
        <p>For source downloads of PHP 7.1.12 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-       Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
+       Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
        The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.1.12">ChangeLog</a>.
        </p>
     </div>
@@ -9537,7 +9537,7 @@ the upgrade
 
        All PHP 7.1 users are encouraged to upgrade to this version.
        </p><p>For source downloads of PHP 7.1.12 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-       Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
+       Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
        The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.1.12">ChangeLog</a>.
        </p></div>',
   ),
@@ -9583,7 +9583,7 @@ the upgrade
       </p>
 
       <p>For source downloads of PHP 7.0.26 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-      Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
+      Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
       The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.0.26">ChangeLog</a>.
       </p>
     </div>
@@ -9593,7 +9593,7 @@ the upgrade
 
       All PHP 7.0 users are encouraged to upgrade to this version.
       </p><p>For source downloads of PHP 7.0.26 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-      Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
+      Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
       The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.0.26">ChangeLog</a>.
       </p></div>',
   ),
@@ -9876,7 +9876,7 @@ the upgrade
      For source downloads of PHP 7.2.0 Release Candidate 6 please visit the
      <a href="https://downloads.php.net/~pollita/">download</a> page,
      Windows sources and binaries can be found at
-     <a href="http://windows.php.net/qa/">windows.php.net/qa/</a>.
+     <a href="https://windows.php.net/qa/">windows.php.net/qa/</a>.
      </p>
 
      <p>Thank you for helping us make PHP better.</p>
@@ -10059,7 +10059,7 @@ the upgrade
        </p>
 
        <p>For source downloads of PHP 7.1.11 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-       Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
+       Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
        The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.1.11">ChangeLog</a>.
        </p>
     </div>
@@ -10069,7 +10069,7 @@ the upgrade
 
        All PHP 7.1 users are encouraged to upgrade to this version.
        </p><p>For source downloads of PHP 7.1.11 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-       Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
+       Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
        The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.1.11">ChangeLog</a>.
        </p></div>',
   ),
@@ -10115,7 +10115,7 @@ the upgrade
      All PHP 5.6 users are encouraged to upgrade to this version.</p>
 
      <p>For source downloads of PHP 5.6.32 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
+     Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.6.32">ChangeLog</a>.
      </p>
     </div>
@@ -10125,7 +10125,7 @@ the upgrade
      this release.
 
      All PHP 5.6 users are encouraged to upgrade to this version.</p><p>For source downloads of PHP 5.6.32 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
+     Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.6.32">ChangeLog</a>.
      </p></div>',
   ),
@@ -10184,7 +10184,7 @@ the upgrade
      For source downloads of PHP 7.2.0 Release Candidate 5 please visit the
      <a href="https://downloads.php.net/~pollita/">download</a> page,
      Windows sources and binaries can be found at
-     <a href="http://windows.php.net/qa/">windows.php.net/qa/</a>.
+     <a href="https://windows.php.net/qa/">windows.php.net/qa/</a>.
      </p>
 
      <p>
@@ -10245,7 +10245,7 @@ the upgrade
      All PHP 7.0 users are encouraged to upgrade to this version.</p>
 
      <p>For source downloads of PHP 7.0.25 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
+     Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.0.25">ChangeLog</a>.
      </p>
     </div>
@@ -10255,7 +10255,7 @@ the upgrade
      this release.
 
      All PHP 7.0 users are encouraged to upgrade to this version.</p><p>For source downloads of PHP 7.0.25 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
+     Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.0.25">ChangeLog</a>.
      </p></div>',
   ),
@@ -10377,7 +10377,7 @@ the upgrade
      For source downloads of PHP 7.2.0 Release Candidate 4 please visit the
      <a href="https://downloads.php.net/~remi/">download</a> page,
      Windows sources and binaries can be found at
-     <a href="http://windows.php.net/qa/">windows.php.net/qa/</a>.
+     <a href="https://windows.php.net/qa/">windows.php.net/qa/</a>.
      </p>
 
      <p>
@@ -10438,7 +10438,7 @@ the upgrade
        </p>
 
        <p>For source downloads of PHP 7.1.10 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-       Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
+       Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
        The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.1.10">ChangeLog</a>.
        </p>
     </div>
@@ -10448,7 +10448,7 @@ the upgrade
 
        All PHP 7.1 users are encouraged to upgrade to this version.
        </p><p>For source downloads of PHP 7.1.10 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-       Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
+       Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
        The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.1.10">ChangeLog</a>.
        </p></div>',
   ),
@@ -10502,7 +10502,7 @@ the upgrade
      For source downloads of PHP 7.2.0 Release Candidate 3 please visit the
      <a href="https://downloads.php.net/~remi/">download</a> page,
      Windows sources and binaries can be found at
-     <a href="http://windows.php.net/qa/">windows.php.net/qa/</a>.
+     <a href="https://windows.php.net/qa/">windows.php.net/qa/</a>.
      </p>
 
      <p>
@@ -10563,7 +10563,7 @@ the upgrade
       </p>
 
       <p>For source downloads of PHP 7.0.24 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-      Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
+      Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
       The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.0.24">ChangeLog</a>.
       </p>
     </div>
@@ -10573,7 +10573,7 @@ the upgrade
 
       All PHP 7.0 users are encouraged to upgrade to this version.
       </p><p>For source downloads of PHP 7.0.24 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-      Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
+      Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
       The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.0.24">ChangeLog</a>.
       </p></div>',
   ),
@@ -10632,7 +10632,7 @@ the upgrade
      For source downloads of PHP 7.2.0 Release Candidate 2 please visit the
      <a href="https://downloads.php.net/~pollita/">download</a> page,
      Windows sources and binaries can be found at
-     <a href="http://windows.php.net/qa/">windows.php.net/qa/</a>.
+     <a href="https://windows.php.net/qa/">windows.php.net/qa/</a>.
      </p>
 
      <p>
@@ -10740,7 +10740,7 @@ the upgrade
        </p>
 
        <p>For source downloads of PHP 7.1.9 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-       Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
+       Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
        The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.1.9">ChangeLog</a>.
        </p>
     </div>
@@ -10750,7 +10750,7 @@ the upgrade
 
        All PHP 7.1 users are encouraged to upgrade to this version.
        </p><p>For source downloads of PHP 7.1.9 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-       Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
+       Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
        The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.1.9">ChangeLog</a>.
        </p></div>',
   ),
@@ -10804,7 +10804,7 @@ the upgrade
       For source downloads of PHP 7.2.0 Release Candidate 1 please visit the
       <a href="https://downloads.php.net/~remi/">download</a> page,
       Windows sources and binaries can be found at
-      <a href="http://windows.php.net/qa/">windows.php.net/qa/</a>.
+      <a href="https://windows.php.net/qa/">windows.php.net/qa/</a>.
       </p>
 
       <p>
@@ -10865,7 +10865,7 @@ the upgrade
       </p>
 
       <p>For source downloads of PHP 7.0.23 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-      Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
+      Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
       The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.0.23">ChangeLog</a>.
       </p>
     </div>
@@ -10875,7 +10875,7 @@ the upgrade
 
       All PHP 7.0 users are encouraged to upgrade to this version.
       </p><p>For source downloads of PHP 7.0.23 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-      Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
+      Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
       The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.0.23">ChangeLog</a>.
       </p></div>',
   ),
@@ -10929,7 +10929,7 @@ the upgrade
       For source downloads of PHP 7.2.0 Beta 3 please visit the
       <a href="https://downloads.php.net/~remi/">download</a> page,
       Windows sources and binaries can be found at
-      <a href="http://windows.php.net/qa/">windows.php.net/qa/</a>.
+      <a href="https://windows.php.net/qa/">windows.php.net/qa/</a>.
       </p>
 
       <p>
@@ -11093,7 +11093,7 @@ the upgrade
        </p>
 
        <p>For source downloads of PHP 7.1.8 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-       Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
+       Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
        The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.1.8">ChangeLog</a>.
        </p>
     </div>
@@ -11103,7 +11103,7 @@ the upgrade
 
        All PHP 7.1 users are encouraged to upgrade to this version.
        </p><p>For source downloads of PHP 7.1.8 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-       Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
+       Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
        The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.1.8">ChangeLog</a>.
        </p></div>',
   ),
@@ -11162,7 +11162,7 @@ the upgrade
       For source downloads of PHP 7.2.0 Beta 2 please visit the
       <a href="https://downloads.php.net/~pollita/">download</a> page,
       Windows sources and binaries can be found at
-      <a href="http://windows.php.net/qa/">windows.php.net/qa/</a>.
+      <a href="https://windows.php.net/qa/">windows.php.net/qa/</a>.
       </p>
 
       <p>
@@ -11223,7 +11223,7 @@ the upgrade
       </p>
 
       <p>For source downloads of PHP 7.0.22 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-      Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
+      Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
       The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.0.22">ChangeLog</a>.
       </p>
     </div>
@@ -11233,7 +11233,7 @@ the upgrade
 
       All PHP 7.0 users are encouraged to upgrade to this version.
       </p><p>For source downloads of PHP 7.0.22 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-      Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
+      Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
       The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.0.22">ChangeLog</a>.
       </p></div>',
   ),
@@ -11347,7 +11347,7 @@ the upgrade
      For source downloads of PHP 7.2.0 Beta 1 please visit the
      <a href="https://downloads.php.net/~pollita/">download</a> page,
      Windows sources and binaries can be found at
-     <a href="http://windows.php.net/qa/">windows.php.net/qa/</a>.
+     <a href="https://windows.php.net/qa/">windows.php.net/qa/</a>.
      </p>
 
      <p>
@@ -11533,7 +11533,7 @@ the upgrade
      All PHP 5.6 users are encouraged to upgrade to this version.</p>
 
      <p>For source downloads of PHP 5.6.31 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
+     Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.6.31">ChangeLog</a>.
      </p>
     </div>
@@ -11543,7 +11543,7 @@ the upgrade
      this release.
 
      All PHP 5.6 users are encouraged to upgrade to this version.</p><p>For source downloads of PHP 5.6.31 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
+     Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.6.31">ChangeLog</a>.
      </p></div>',
   ),
@@ -11589,7 +11589,7 @@ the upgrade
        </p>
 
        <p>For source downloads of PHP 7.1.7 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-       Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
+       Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
        The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.1.7">ChangeLog</a>.
        </p>
     </div>
@@ -11599,7 +11599,7 @@ the upgrade
 
        All PHP 7.1 users are encouraged to upgrade to this version.
        </p><p>For source downloads of PHP 7.1.7 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-       Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
+       Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
        The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.1.7">ChangeLog</a>.
        </p></div>',
   ),
@@ -11647,7 +11647,7 @@ the upgrade
      for a complete list of upgrading notes. These files can also be found in the release archive.</p>
 
      <p>For source downloads of PHP 7.2.0 Alpha 3 please visit the <a href="https://downloads.php.net/~remi/">download</a> page,
-     Windows sources and binaries can be found on <a href="http://windows.php.net/qa/">windows.php.net/qa/</a>.</p>
+     Windows sources and binaries can be found on <a href="https://windows.php.net/qa/">windows.php.net/qa/</a>.</p>
 
      <p>The first beta will be released on the 20th of July. You can also read the full list of planned releases on our
      <a href="https://wiki.php.net/todo/php72#timetable">wiki</a>.</p>
@@ -11703,7 +11703,7 @@ the upgrade
      All PHP 7.0 users are encouraged to upgrade to this version.</p>
 
      <p>For source downloads of PHP 7.0.21 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
+     Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.0.21">ChangeLog</a>.
      </p>
     </div>
@@ -11713,7 +11713,7 @@ the upgrade
      this release.
 
      All PHP 7.0 users are encouraged to upgrade to this version.</p><p>For source downloads of PHP 7.0.21 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
+     Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.0.21">ChangeLog</a>.
      </p></div>',
   ),
@@ -11888,7 +11888,7 @@ the upgrade
      for a complete list of upgrading notes. These files can also be found in the release archive.</p>
 
      <p>For source downloads of PHP 7.2.0 Alpha 2 please visit the <a href="https://downloads.php.net/~pollita/">download</a> page,
-     Windows sources and binaries can be found on <a href="http://windows.php.net/qa/">windows.php.net/qa/</a>.</p>
+     Windows sources and binaries can be found on <a href="https://windows.php.net/qa/">windows.php.net/qa/</a>.</p>
 
      <p>The third and final alpha will be released on the 6th of July. You can also read the full list of planned releases on our
      <a href="https://wiki.php.net/todo/php72#timetable">wiki</a>.</p>
@@ -12123,7 +12123,7 @@ the upgrade
       </p>
 
 	  <p xmlns="http://www.w3.org/2005/Atom">For source downloads of PHP 7.1.6 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-      Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
+      Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
       The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.1.6">ChangeLog</a>.
       </p>
   ',
@@ -12178,7 +12178,7 @@ the upgrade
      for a complete list of upgrading notes. These files can also be found in the release archive.</p>
 
      <p>For source downloads of PHP 7.2.0 Alpha 1 please visit the <a href="https://downloads.php.net/~pollita/">download</a> page,
-     Windows sources and binaries can be found on <a href="http://windows.php.net/qa/">windows.php.net/qa/</a>.</p>
+     Windows sources and binaries can be found on <a href="https://windows.php.net/qa/">windows.php.net/qa/</a>.</p>
 
      <p>The second alpha will be released on the 22nd of June. You can also read the full list of planned releases on our
      <a href="https://wiki.php.net/todo/php72#timetable">wiki</a>.</p>
@@ -12234,7 +12234,7 @@ the upgrade
       </p>
 
       <p>For source downloads of PHP 7.0.20 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-      Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
+      Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
       The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.0.20">ChangeLog</a>.
       </p>
     </div>
@@ -12244,7 +12244,7 @@ the upgrade
 
       All PHP 7.0 users are encouraged to upgrade to this version.
       </p><p>For source downloads of PHP 7.0.20 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-      Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
+      Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
       The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.0.20">ChangeLog</a>.
       </p></div>',
   ),
@@ -12528,7 +12528,7 @@ the upgrade
      	</p>
 
      	<p>For source downloads of PHP 7.1.5 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     	Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
+     	Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
      	The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.1.5">ChangeLog</a>.
      	</p>
     </div>
@@ -12538,7 +12538,7 @@ the upgrade
 
      	All PHP 7.1 users are encouraged to upgrade to this version.
      	</p><p>For source downloads of PHP 7.1.5 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     	Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
+     	Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
      	The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.1.5">ChangeLog</a>.
      	</p></div>',
   ),
@@ -12584,7 +12584,7 @@ the upgrade
       </p>
 
       <p>For source downloads of PHP 7.0.19 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-      Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
+      Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
       The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.0.19">ChangeLog</a>.
       </p>
     </div>
@@ -12594,7 +12594,7 @@ the upgrade
 
       All PHP 7.0 users are encouraged to upgrade to this version.
       </p><p>For source downloads of PHP 7.0.19 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-      Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
+      Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
       The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.0.19">ChangeLog</a>.
       </p></div>',
   ),
@@ -12858,7 +12858,7 @@ the upgrade
        </p>
 
        <p>For source downloads of PHP 7.1.4 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-       Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
+       Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
        The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.1.4">ChangeLog</a>.
        </p>
     </div>
@@ -12868,7 +12868,7 @@ the upgrade
 
        All PHP 7.1 users are encouraged to upgrade to this version.
        </p><p>For source downloads of PHP 7.1.4 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-       Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
+       Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
        The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.1.4">ChangeLog</a>.
        </p></div>',
   ),
@@ -12914,7 +12914,7 @@ the upgrade
       </p>
 
       <p>For source downloads of PHP 7.0.18 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-      Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
+      Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
       The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.0.18">ChangeLog</a>.
       </p>
     </div>
@@ -12924,7 +12924,7 @@ the upgrade
 
       All PHP 7.0 users are encouraged to upgrade to this version.
       </p><p>For source downloads of PHP 7.0.18 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-      Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
+      Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
       The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.0.18">ChangeLog</a>.
       </p></div>',
   ),
@@ -13071,7 +13071,7 @@ the upgrade
           </p>
 
           <p>For source downloads of PHP 7.1.3 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-          Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
+          Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
           The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.1.3">ChangeLog</a>.
           </p>
     </div>
@@ -13081,7 +13081,7 @@ the upgrade
 
           All PHP 7.1 users are encouraged to upgrade to this version.
           </p><p>For source downloads of PHP 7.1.3 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-          Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
+          Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
           The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.1.3">ChangeLog</a>.
           </p></div>',
   ),
@@ -13127,7 +13127,7 @@ the upgrade
       </p>
 
       <p>For source downloads of PHP 7.0.17 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-      Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
+      Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
       The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.0.17">ChangeLog</a>.
       </p>
     </div>
@@ -13137,7 +13137,7 @@ the upgrade
 
       All PHP 7.0 users are encouraged to upgrade to this version.
       </p><p>For source downloads of PHP 7.0.17 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-      Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
+      Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
       The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.0.17">ChangeLog</a>.
       </p></div>',
   ),
@@ -13514,7 +13514,7 @@ the upgrade
           </p>
 
           <p>For source downloads of PHP 7.1.2 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-          Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
+          Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
           The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.1.2">ChangeLog</a>.
           </p>
     </div>
@@ -13524,7 +13524,7 @@ the upgrade
 
           All PHP 7.1 users are encouraged to upgrade to this version.
           </p><p>For source downloads of PHP 7.1.2 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-          Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
+          Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
           The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.1.2">ChangeLog</a>.
           </p></div>',
   ),
@@ -13570,7 +13570,7 @@ the upgrade
       </p>
 
       <p>For source downloads of PHP 7.0.16 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-      Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
+      Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
       The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.0.16">ChangeLog</a>.
       </p>
     </div>
@@ -13580,7 +13580,7 @@ the upgrade
 
       All PHP 7.0 users are encouraged to upgrade to this version.
       </p><p>For source downloads of PHP 7.0.16 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-      Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
+      Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
       The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.0.16">ChangeLog</a>.
       </p></div>',
   ),
@@ -13730,7 +13730,7 @@ the upgrade
      </p>
 
      <p>For source downloads of PHP 5.6.30 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
+     Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.6.30">ChangeLog</a>.
      </p>
     </div>
@@ -13752,7 +13752,7 @@ the upgrade
      </p>
 
      <p>For source downloads of PHP 5.6.30 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
+     Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.6.30">ChangeLog</a>.
      </p>
     </div></div>',
@@ -13799,7 +13799,7 @@ the upgrade
      All PHP 7.0 users are encouraged to upgrade to this version.</p>
 
      <p>For source downloads of PHP 7.0.15 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
+     Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.0.15">ChangeLog</a>.
      </p>
     </div>
@@ -13809,7 +13809,7 @@ the upgrade
      this release.
 
      All PHP 7.0 users are encouraged to upgrade to this version.</p><p>For source downloads of PHP 7.0.15 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
+     Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.0.15">ChangeLog</a>.
      </p></div>',
   ),
@@ -13855,7 +13855,7 @@ the upgrade
      </p>
 
      <p>For source downloads of PHP 7.1.1 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
+     Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.1.1">ChangeLog</a>.
      </p>
     </div>
@@ -13865,7 +13865,7 @@ the upgrade
 
      All PHP 7.1 users are encouraged to upgrade to this version.
      </p><p>For source downloads of PHP 7.1.1 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
+     Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.1.1">ChangeLog</a>.
      </p></div>',
   ),
@@ -14008,7 +14008,7 @@ the upgrade
      All PHP 5.6 users are encouraged to upgrade to this version.</p>
 
      <p>For source downloads of PHP 5.6.29 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
+     Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.6.29">ChangeLog</a>.
      </p>
     </div>
@@ -14018,7 +14018,7 @@ the upgrade
      this release.
 
      All PHP 5.6 users are encouraged to upgrade to this version.</p><p>For source downloads of PHP 5.6.29 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
+     Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.6.29">ChangeLog</a>.
      </p></div>',
   ),
@@ -14064,7 +14064,7 @@ the upgrade
      All PHP 7.0 users are encouraged to upgrade to this version.</p>
 
      <p>For source downloads of PHP 7.0.14 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
+     Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.0.14">ChangeLog</a>.
      </p>
     </div>
@@ -14074,7 +14074,7 @@ the upgrade
      this release.
 
      All PHP 7.0 users are encouraged to upgrade to this version.</p><p>For source downloads of PHP 7.0.14 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
+     Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.0.14">ChangeLog</a>.
      </p></div>',
   ),
@@ -14172,7 +14172,7 @@ the upgrade
      <li><a href="https://wiki.php.net/rfc#php_71">Many more features and changes…</a></li>
      </ul>
 
-     <p>For source downloads of PHP 7.1.0 please visit our <a href="http://www.php.net/downloads">downloads</a> page, Windows binaries can be found on the <a href="http://windows.php.net/download">PHP for Windows</a> site. The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.1.0">ChangeLog</a>.</p>
+     <p>For source downloads of PHP 7.1.0 please visit our <a href="http://www.php.net/downloads">downloads</a> page, Windows binaries can be found on the <a href="https://windows.php.net/download">PHP for Windows</a> site. The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.1.0">ChangeLog</a>.</p>
 
      <p>The <a href="http://php.net/manual/en/migration71.php">migration guide</a> is available in the PHP Manual. Please consult it for the detailed list of new features and backward incompatible changes.</p>
 
@@ -14455,7 +14455,7 @@ the upgrade
      All PHP 5.6 users are encouraged to upgrade to this version.</p>
 
      <p>For source downloads of PHP 5.6.28 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
+     Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.6.28">ChangeLog</a>.
      </p>
     </div>
@@ -14465,7 +14465,7 @@ the upgrade
      this release.
 
      All PHP 5.6 users are encouraged to upgrade to this version.</p><p>For source downloads of PHP 5.6.28 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
+     Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.6.28">ChangeLog</a>.
      </p></div>',
   ),
@@ -14518,7 +14518,7 @@ the upgrade
      </p>
 
      <p>
-       For source downloads of PHP 7.1.0 Release Candidate 6 please visit the <a href="https://downloads.php.net/~krakjoe/">download</a> page, Windows sources and binaries can be found on <a href="http://windows.php.net/qa/">windows.php.net/qa/</a>.
+       For source downloads of PHP 7.1.0 Release Candidate 6 please visit the <a href="https://downloads.php.net/~krakjoe/">download</a> page, Windows sources and binaries can be found on <a href="https://windows.php.net/qa/">windows.php.net/qa/</a>.
      </p>
 
      <p>
@@ -14574,7 +14574,7 @@ the upgrade
      All PHP 7.0 users are encouraged to upgrade to this version.</p>
 
      <p>For source downloads of PHP 7.0.13 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
+     Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.0.13">ChangeLog</a>.
      </p>
     </div>
@@ -14584,7 +14584,7 @@ the upgrade
      this release.
 
      All PHP 7.0 users are encouraged to upgrade to this version.</p><p>For source downloads of PHP 7.0.13 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
+     Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.0.13">ChangeLog</a>.
      </p></div>',
   ),
@@ -14796,7 +14796,7 @@ the upgrade
      </p>
 
      <p>
-       For source downloads of PHP 7.1.0 Release Candidate 5 please visit the <a href="https://downloads.php.net/~krakjoe/">download</a> page, Windows sources and binaries can be found on <a href="http://windows.php.net/qa/">windows.php.net/qa/</a>.
+       For source downloads of PHP 7.1.0 Release Candidate 5 please visit the <a href="https://downloads.php.net/~krakjoe/">download</a> page, Windows sources and binaries can be found on <a href="https://windows.php.net/qa/">windows.php.net/qa/</a>.
      </p>
 
      <p>
@@ -14934,7 +14934,7 @@ the upgrade
      </p>
 
      <p>
-       For source downloads of PHP 7.1.0 Release Candidate 4 please visit the <a href="https://downloads.php.net/~krakjoe/">download</a> page, Windows sources and binaries can be found on <a href="http://windows.php.net/qa/">windows.php.net/qa/</a>.
+       For source downloads of PHP 7.1.0 Release Candidate 4 please visit the <a href="https://downloads.php.net/~krakjoe/">download</a> page, Windows sources and binaries can be found on <a href="https://windows.php.net/qa/">windows.php.net/qa/</a>.
      </p>
 
      <p>
@@ -15056,7 +15056,7 @@ the upgrade
      All PHP 5.6 users are encouraged to upgrade to this version.</p>
 
      <p>For source downloads of PHP 5.6.27 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
+     Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.6.27">ChangeLog</a>.
      </p>
     </div>
@@ -15066,7 +15066,7 @@ the upgrade
      this release.
 
      All PHP 5.6 users are encouraged to upgrade to this version.</p><p>For source downloads of PHP 5.6.27 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
+     Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.6.27">ChangeLog</a>.
      </p></div>',
   ),
@@ -15112,7 +15112,7 @@ the upgrade
      All PHP 7.0 users are encouraged to upgrade to this version.</p>
 
      <p>For source downloads of PHP 7.0.12 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
+     Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.0.12">ChangeLog</a>.
      </p>
     </div>
@@ -15122,7 +15122,7 @@ the upgrade
      this release.
 
      All PHP 7.0 users are encouraged to upgrade to this version.</p><p>For source downloads of PHP 7.0.12 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
+     Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.0.12">ChangeLog</a>.
      </p></div>',
   ),
@@ -15175,7 +15175,7 @@ the upgrade
      </p>
 
      <p>
-       For source downloads of PHP 7.1.0 Release Candidate 3 please visit the <a href="https://downloads.php.net/~davey/">download</a> page, Windows sources and binaries can be found on <a href="http://windows.php.net/qa/">windows.php.net/qa/</a>.
+       For source downloads of PHP 7.1.0 Release Candidate 3 please visit the <a href="https://downloads.php.net/~davey/">download</a> page, Windows sources and binaries can be found on <a href="https://windows.php.net/qa/">windows.php.net/qa/</a>.
      </p>
 
      <p>
@@ -15300,7 +15300,7 @@ the upgrade
      </p>
 
      <p>
-       For source downloads of PHP 7.1.0 Release Candidate 2 please visit the <a href="https://downloads.php.net/~davey/">download</a> page, Windows sources and binaries can be found on <a href="http://windows.php.net/qa/">windows.php.net/qa/</a>.
+       For source downloads of PHP 7.1.0 Release Candidate 2 please visit the <a href="https://downloads.php.net/~davey/">download</a> page, Windows sources and binaries can be found on <a href="https://windows.php.net/qa/">windows.php.net/qa/</a>.
      </p>
 
      <p>
@@ -15360,7 +15360,7 @@ the upgrade
      All PHP 5.6 users are encouraged to upgrade to this version.</p>
 
      <p>For source downloads of PHP 5.6.26 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
+     Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.6.26">ChangeLog</a>.
      </p>
     </div>
@@ -15370,7 +15370,7 @@ the upgrade
      this release.
 
      All PHP 5.6 users are encouraged to upgrade to this version.</p><p>For source downloads of PHP 5.6.26 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
+     Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.6.26">ChangeLog</a>.
      </p></div>',
   ),
@@ -15416,7 +15416,7 @@ the upgrade
      All PHP 7.0 users are encouraged to upgrade to this version.</p>
 
      <p>For source downloads of PHP 7.0.11 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
+     Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.0.11">ChangeLog</a>.
      </p>
     </div>
@@ -15426,7 +15426,7 @@ the upgrade
      this release.
 
      All PHP 7.0 users are encouraged to upgrade to this version.</p><p>For source downloads of PHP 7.0.11 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
+     Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.0.11">ChangeLog</a>.
      </p></div>',
   ),
@@ -15588,7 +15588,7 @@ the upgrade
      </p>
 
      <p>
-     For source downloads of PHP 7.1.0 Release Candidate 1 please visit the <a href="https://downloads.php.net/~davey/">download</a> page, Windows sources and binaries can be found on <a href="http://windows.php.net/qa/">windows.php.net/qa/</a>.
+     For source downloads of PHP 7.1.0 Release Candidate 1 please visit the <a href="https://downloads.php.net/~davey/">download</a> page, Windows sources and binaries can be found on <a href="https://windows.php.net/qa/">windows.php.net/qa/</a>.
      </p>
 
      <p>
@@ -15827,7 +15827,7 @@ the upgrade
      </p>
 
      <p>
-       For source downloads of PHP 7.1.0 Beta 3 please visit the <a href="https://downloads.php.net/~davey/">download</a> page, Windows sources and binaries can be found on <a href="http://windows.php.net/qa/">windows.php.net/qa/</a>.
+       For source downloads of PHP 7.1.0 Beta 3 please visit the <a href="https://downloads.php.net/~davey/">download</a> page, Windows sources and binaries can be found on <a href="https://windows.php.net/qa/">windows.php.net/qa/</a>.
      </p>
 
      <p>
@@ -15887,7 +15887,7 @@ the upgrade
      All PHP 5.6 users are encouraged to upgrade to this version.</p>
 
      <p>For source downloads of PHP 5.6.25 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
+     Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.6.25">ChangeLog</a>.
      </p>
     </div>
@@ -15897,7 +15897,7 @@ the upgrade
      this release.
 
      All PHP 5.6 users are encouraged to upgrade to this version.</p><p>For source downloads of PHP 5.6.25 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
+     Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.6.25">ChangeLog</a>.
      </p></div>',
   ),
@@ -15943,7 +15943,7 @@ the upgrade
      All PHP 7.0 users are encouraged to upgrade to this version.</p>
 
      <p>For source downloads of PHP 7.0.10 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
+     Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.0.10">ChangeLog</a>.
      </p>
     </div>
@@ -15953,7 +15953,7 @@ the upgrade
      this release.
 
      All PHP 7.0 users are encouraged to upgrade to this version.</p><p>For source downloads of PHP 7.0.10 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
+     Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.0.10">ChangeLog</a>.
      </p></div>',
   ),
@@ -16102,7 +16102,7 @@ the upgrade
      </p>
 
      <p>
-       For source downloads of PHP 7.1.0 Beta 2 please visit the <a href="https://downloads.php.net/~davey/">download</a> page, Windows sources and binaries can be found on <a href="http://windows.php.net/qa/">windows.php.net/qa/</a>.
+       For source downloads of PHP 7.1.0 Beta 2 please visit the <a href="https://downloads.php.net/~davey/">download</a> page, Windows sources and binaries can be found on <a href="https://windows.php.net/qa/">windows.php.net/qa/</a>.
      </p>
 
      <p>
@@ -16210,7 +16210,7 @@ the upgrade
      </p>
 
      <p>For source downloads of PHP 5.6.24 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
+     Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.6.24">ChangeLog</a>.
      </p>
     </div>
@@ -16221,7 +16221,7 @@ the upgrade
 
      All PHP 5.6 users are encouraged to upgrade to this version.
      </p><p>For source downloads of PHP 5.6.24 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
+     Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.6.24">ChangeLog</a>.
      </p></div>',
   ),
@@ -16266,7 +16266,7 @@ the upgrade
     </p>
     <p>All PHP 5.5 users are encouraged to upgrade to this version.</p>
 
-	<p>For source downloads of PHP 5.5.38 please visit our downloads page, Windows source and binaries can be found on <a href="http://windows.php.net/download/"> windows.php.net/download</a>. The list of changes is recorded in the <a href="http://php.net/ChangeLog-5.php#5.5.38">ChangeLog</a>.</p>
+	<p>For source downloads of PHP 5.5.38 please visit our downloads page, Windows source and binaries can be found on <a href="https://windows.php.net/download/"> windows.php.net/download</a>. The list of changes is recorded in the <a href="http://php.net/ChangeLog-5.php#5.5.38">ChangeLog</a>.</p>
 
 	<p>
 	Note that according to <a href="http://www.php.net/supported-versions.php">our release schedule</a>, PHP 5.5.38 is the last release of the PHP 5.5 branch.
@@ -16322,7 +16322,7 @@ the upgrade
      All PHP 7.0 users are encouraged to upgrade to this version.</p>
 
      <p>For source downloads of PHP 7.0.9 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
+     Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.0.9">ChangeLog</a>.
      </p>
     </div>
@@ -16332,7 +16332,7 @@ the upgrade
      this release, including the HTTP_PROXY issue.
 
      All PHP 7.0 users are encouraged to upgrade to this version.</p><p>For source downloads of PHP 7.0.9 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
+     Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.0.9">ChangeLog</a>.
      </p></div>',
   ),
@@ -16398,7 +16398,7 @@ the upgrade
      </p>
 
      <p>
-       For source downloads of PHP 7.1.0 Beta 1 please visit the <a href="https://downloads.php.net/~ab/">download</a> page, Windows sources and binaries can be found on <a href="http://windows.php.net/qa/">windows.php.net/qa/</a>.
+       For source downloads of PHP 7.1.0 Beta 1 please visit the <a href="https://downloads.php.net/~ab/">download</a> page, Windows sources and binaries can be found on <a href="https://windows.php.net/qa/">windows.php.net/qa/</a>.
      </p>
 
      <p>
@@ -16490,7 +16490,7 @@ the upgrade
      </p>
 
      <p>
-       For source downloads of PHP 7.1.0 Alpha 3 please visit the <a href="https://downloads.php.net/~krakjoe/">download</a> page, Windows sources and binaries can be found on <a href="http://windows.php.net/qa/">windows.php.net/qa/</a>.
+       For source downloads of PHP 7.1.0 Alpha 3 please visit the <a href="https://downloads.php.net/~krakjoe/">download</a> page, Windows sources and binaries can be found on <a href="https://windows.php.net/qa/">windows.php.net/qa/</a>.
      </p>
 
      <p>
@@ -16556,7 +16556,7 @@ the upgrade
      </p>
 
      <p>
-       For source downloads of PHP 7.1.0 Alpha 2 please visit the <a href="https://downloads.php.net/~krakjoe/">download page</a>, Windows sources and binaries can be found on <a href="http://windows.php.net/qa/">windows.php.net/qa/</a>.
+       For source downloads of PHP 7.1.0 Alpha 2 please visit the <a href="https://downloads.php.net/~krakjoe/">download page</a>, Windows sources and binaries can be found on <a href="https://windows.php.net/qa/">windows.php.net/qa/</a>.
      </p>
 
      <p>
@@ -16616,7 +16616,7 @@ the upgrade
      </p>
 
      <p>For source downloads of PHP 5.5.37 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
+     Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.5.37">ChangeLog</a>.
      </p>
     </div>
@@ -16626,7 +16626,7 @@ the upgrade
 
      All PHP 5.5 users are encouraged to upgrade to this version.
      </p><p>For source downloads of PHP 5.5.37 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
+     Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.5.37">ChangeLog</a>.
      </p></div>',
   ),
@@ -16672,7 +16672,7 @@ the upgrade
      </p>
 
      <p>For source downloads of PHP 5.6.23 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
+     Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.6.23">ChangeLog</a>.
      </p>
     </div>
@@ -16682,7 +16682,7 @@ the upgrade
 
      All PHP 5.6 users are encouraged to upgrade to this version.
      </p><p>For source downloads of PHP 5.6.23 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
+     Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.6.23">ChangeLog</a>.
      </p></div>',
   ),
@@ -16728,7 +16728,7 @@ the upgrade
      All PHP 7.0 users are encouraged to upgrade to this version.</p>
 
      <p>For source downloads of PHP 7.0.8 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
+     Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.0.8">ChangeLog</a>.
      </p>
     </div>
@@ -16738,7 +16738,7 @@ the upgrade
      this release.
 
      All PHP 7.0 users are encouraged to upgrade to this version.</p><p>For source downloads of PHP 7.0.8 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
+     Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.0.8">ChangeLog</a>.
      </p></div>',
   ),
@@ -16901,7 +16901,7 @@ the upgrade
             <p>
                 For source downloads of PHP 7.1.0 Alpha 1 please visit
                 the <a href="https://downloads.php.net/~krakjoe/">download page</a>, Windows sources and binaries
-                can be found on <a href="http://windows.php.net/qa/">windows.php.net/qa/</a>.
+                can be found on <a href="https://windows.php.net/qa/">windows.php.net/qa/</a>.
             </p>
 
             <p>
@@ -17196,7 +17196,7 @@ the upgrade
      </p>
 
      <p>For source downloads of PHP 5.6.22 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
+     Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.6.22">ChangeLog</a>.
      </p>
     </div>
@@ -17207,7 +17207,7 @@ the upgrade
 
      All PHP 5.6 users are encouraged to upgrade to this version.
      </p><p>For source downloads of PHP 5.6.22 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
+     Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.6.22">ChangeLog</a>.
      </p></div>',
   ),
@@ -17254,7 +17254,7 @@ the upgrade
      </p>
 
      <p>For source downloads of PHP 5.5.36 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
+     Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.5.36">ChangeLog</a>.
      </p>
     </div>
@@ -17265,7 +17265,7 @@ the upgrade
 
      All PHP 5.5 users are encouraged to upgrade to this version.
      </p><p>For source downloads of PHP 5.5.36 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
+     Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.5.36">ChangeLog</a>.
      </p></div>',
   ),
@@ -17312,7 +17312,7 @@ the upgrade
      </p>
 
      <p>For source downloads of PHP 7.0.7 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
+     Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.0.7">ChangeLog</a>.
      </p>
     </div>
@@ -17323,7 +17323,7 @@ the upgrade
 
      All PHP 7.0 users are encouraged to upgrade to this version.
      </p><p>For source downloads of PHP 7.0.7 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
+     Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.0.7">ChangeLog</a>.
      </p></div>',
   ),
@@ -17471,7 +17471,7 @@ the upgrade
      </p>
 
      <p>For source downloads of PHP 7.0.6 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
+     Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.0.6">ChangeLog</a>.
      </p>
     </div>
@@ -17525,7 +17525,7 @@ the upgrade
      All PHP 5.6 users are encouraged to upgrade to this version.
      </p>
      <p>For source downloads of PHP 5.6.21 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
+     Windows binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.6.21">ChangeLog</a>.
      </p>
     </div>
@@ -17578,7 +17578,7 @@ the upgrade
      All PHP 5.5 users are encouraged to upgrade to this version.
      </p>
      <p>For source downloads of PHP 5.5.35 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
+     Windows binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.5.35">ChangeLog</a>.
      </p>
     </div>
@@ -17752,7 +17752,7 @@ the upgrade
      </p>
 
      <p>For source downloads of PHP 5.6.20 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
+     Windows binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.6.20">ChangeLog</a>.
      </p>
     </div>
@@ -17762,7 +17762,7 @@ the upgrade
 
      All PHP 5.6 users are encouraged to upgrade to this version.
      </p><p>For source downloads of PHP 5.6.20 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
+     Windows binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.6.20">ChangeLog</a>.
      </p></div>',
   ),
@@ -17855,7 +17855,7 @@ the upgrade
      </p>
 
      <p>For source downloads of PHP 5.5.34 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
+     Windows binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.5.34">ChangeLog</a>.
      </p>
     </div>
@@ -17865,7 +17865,7 @@ the upgrade
 
      All PHP 5.5 users are encouraged to upgrade to this version.
      </p><p>For source downloads of PHP 5.5.34 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
+     Windows binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.5.34">ChangeLog</a>.
      </p></div>',
   ),
@@ -17912,7 +17912,7 @@ the upgrade
      </p>
 
      <p>For source downloads of PHP 7.0.5 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
+     Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.0.5">ChangeLog</a>.
      </p>
     </div>
@@ -17923,7 +17923,7 @@ the upgrade
 
      All PHP 7.0 users are encouraged to upgrade to this version.
      </p><p>For source downloads of PHP 7.0.5 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
+     Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.0.5">ChangeLog</a>.
      </p></div>',
   ),
@@ -18063,7 +18063,7 @@ the upgrade
      </p>
 
      <p>For source downloads of PHP 5.6.19 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
+     Windows binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.6.19">ChangeLog</a>.
      </p>
 
@@ -18074,7 +18074,7 @@ the upgrade
 
      All PHP 5.6 users are encouraged to upgrade to this version.
      </p><p>For source downloads of PHP 5.6.19 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
+     Windows binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.6.19">ChangeLog</a>.
      </p></div>',
   ),
@@ -18120,7 +18120,7 @@ the upgrade
      </p>
 
      <p>For source downloads of PHP 5.5.33 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
+     Windows binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.5.33">ChangeLog</a>.
      </p>
 
@@ -18131,7 +18131,7 @@ the upgrade
 
      All PHP 5.5 users are encouraged to upgrade to this version.
      </p><p>For source downloads of PHP 5.5.33 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
+     Windows binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.5.33">ChangeLog</a>.
      </p></div>',
   ),
@@ -18178,7 +18178,7 @@ the upgrade
      </p>
 
      <p>For source downloads of PHP 7.0.4 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
+     Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.0.4">ChangeLog</a>.
      </p>
     </div>
@@ -18189,7 +18189,7 @@ the upgrade
 
      All PHP 7.0 users are encouraged to upgrade to this version.
      </p><p>For source downloads of PHP 7.0.4 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
+     Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.0.4">ChangeLog</a>.
      </p></div>',
   ),
@@ -18414,7 +18414,7 @@ the upgrade
      </p>
 
      <p>For source downloads of PHP 5.6.18 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
+     Windows binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.6.18">ChangeLog</a>.
      </p>
     </div>
@@ -18424,7 +18424,7 @@ the upgrade
 
      All PHP 5.6 users are encouraged to upgrade to this version.
      </p><p>For source downloads of PHP 5.6.18 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
+     Windows binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.6.18">ChangeLog</a>.
      </p></div>',
   ),
@@ -18470,7 +18470,7 @@ the upgrade
      </p>
 
      <p>For source downloads of PHP 5.5.32 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
+     Windows binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.5.32">ChangeLog</a>.
      </p>
     </div>
@@ -18480,7 +18480,7 @@ the upgrade
 
      All PHP 5.5 users are encouraged to upgrade to this version.
      </p><p>For source downloads of PHP 5.5.32 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
+     Windows binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.5.32">ChangeLog</a>.
      </p></div>',
   ),
@@ -18527,7 +18527,7 @@ the upgrade
      </p>
 
      <p>For source downloads of PHP 7.0.3 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
+     Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.0.3">ChangeLog</a>.
      </p>
     </div>
@@ -18538,7 +18538,7 @@ the upgrade
 
      All PHP 7.0 users are encouraged to upgrade to this version.
      </p><p>For source downloads of PHP 7.0.3 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
+     Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.0.3">ChangeLog</a>.
      </p></div>',
   ),
@@ -18714,7 +18714,7 @@ the upgrade
      </p>
 
      <p>For source downloads of PHP 5.6.17 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
+     Windows binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.6.17">ChangeLog</a>.
      </p>
     </div>
@@ -18724,7 +18724,7 @@ the upgrade
 
      All PHP 5.6 users are encouraged to upgrade to this version.
      </p><p>For source downloads of PHP 5.6.17 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
+     Windows binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.6.17">ChangeLog</a>.
      </p></div>',
   ),
@@ -18770,7 +18770,7 @@ the upgrade
      </p>
 
      <p>For source downloads of PHP 5.5.31 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
+     Windows binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.5.31">ChangeLog</a>.
      </p>
     </div>
@@ -18780,7 +18780,7 @@ the upgrade
 
      All PHP 5.5 users are encouraged to upgrade to this version.
      </p><p>For source downloads of PHP 5.5.31 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
+     Windows binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.5.31">ChangeLog</a>.
      </p></div>',
   ),
@@ -18826,7 +18826,7 @@ the upgrade
 	     </p>
 
 	     <p>For source downloads of PHP 7.0.2 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-	     Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
+	     Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
 	     The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.0.2">ChangeLog</a>.
 	     </p>
     </div>
@@ -18836,7 +18836,7 @@ the upgrade
 
 	     All PHP 7.0 users are encouraged to upgrade to this version.
 	     </p><p>For source downloads of PHP 7.0.2 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-	     Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
+	     Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
 	     The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.0.2">ChangeLog</a>.
 	     </p></div>',
   ),
@@ -18882,7 +18882,7 @@ the upgrade
       </p>
 
       <p>For source downloads of PHP 7.0.1 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-      Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
+      Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
       The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.0.1">ChangeLog</a>.
       </p>
     </div>
@@ -18892,7 +18892,7 @@ the upgrade
 
       All PHP 7.0 users are encouraged to upgrade to this version.
       </p><p>For source downloads of PHP 7.0.1 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-      Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
+      Windows source and binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
       The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.0.1">ChangeLog</a>.
       </p></div>',
   ),
@@ -19009,7 +19009,7 @@ the upgrade
      </ul>
 
      <p>For source downloads of PHP 7.0.0 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
+     Windows binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.0.0">ChangeLog</a>.
      </p>
      <p>
@@ -19151,7 +19151,7 @@ the upgrade
      </p>
 
      <p>For source downloads of PHP 5.6.16 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
+     Windows binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.6.16">ChangeLog</a>.
      </p>
 
@@ -19162,7 +19162,7 @@ the upgrade
 
      All PHP 5.6 users are encouraged to upgrade to this version.
      </p><p>For source downloads of PHP 5.6.16 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
+     Windows binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.6.16">ChangeLog</a>.
      </p></div>',
   ),
@@ -19240,7 +19240,7 @@ the upgrade
      <p>
       For source downloads of PHP 7.0.0 RC 8 please visit
       the <a href="https://downloads.php.net/ab/">download page</a>, Windows source and binaries
-      can be found on <a href="http://windows.php.net/qa/">windows.php.net/qa/</a>.
+      can be found on <a href="https://windows.php.net/qa/">windows.php.net/qa/</a>.
      </p>
 
      <p>
@@ -19335,7 +19335,7 @@ the upgrade
      <p>
       For source downloads of PHP 7.0.0 RC 7 please visit
       the <a href="https://downloads.php.net/ab/">download page</a>, Windows source and binaries
-      can be found on <a href="http://windows.php.net/qa/">windows.php.net/qa/</a>.
+      can be found on <a href="https://windows.php.net/qa/">windows.php.net/qa/</a>.
      </p>
 
      <p>
@@ -19400,7 +19400,7 @@ the upgrade
      </p>
 
      <p>For source downloads of PHP 5.6.15 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
+     Windows binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.6.15">ChangeLog</a>.
      </p>
 
@@ -19411,7 +19411,7 @@ the upgrade
 
      All PHP 5.6 users are encouraged to upgrade to this version.
      </p><p>For source downloads of PHP 5.6.15 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
+     Windows binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.6.15">ChangeLog</a>.
      </p></div>',
   ),
@@ -19489,7 +19489,7 @@ the upgrade
      <p>
       For source downloads of PHP 7.0.0 RC 6 please visit
       the <a href="https://downloads.php.net/ab/">download page</a>, Windows source and binaries
-      can be found on <a href="http://windows.php.net/qa/">windows.php.net/qa/</a>.
+      can be found on <a href="https://windows.php.net/qa/">windows.php.net/qa/</a>.
      </p>
 
      <p>
@@ -19658,7 +19658,7 @@ the upgrade
      <p>
       For source downloads of PHP 7.0.0 RC 5 please visit
       the <a href="https://downloads.php.net/ab/">download page</a>, Windows source and binaries
-      can be found on <a href="http://windows.php.net/qa/">windows.php.net/qa/</a>.
+      can be found on <a href="https://windows.php.net/qa/">windows.php.net/qa/</a>.
      </p>
 
      <p>
@@ -19836,7 +19836,7 @@ the upgrade
      </p>
 
      <p>For source downloads of PHP 5.6.14 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
+     Windows binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.6.14">ChangeLog</a>.
      </p>
     </div>
@@ -19846,7 +19846,7 @@ the upgrade
 
      All PHP 5.6 users are encouraged to upgrade to this version.
      </p><p>For source downloads of PHP 5.6.14 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
+     Windows binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.6.14">ChangeLog</a>.
      </p></div>',
   ),
@@ -19892,7 +19892,7 @@ the upgrade
      </p>
 
      <p>For source downloads of PHP 5.5.30 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
+     Windows binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.5.30">ChangeLog</a>.
      </p>
     </div>
@@ -19902,7 +19902,7 @@ the upgrade
 
      All PHP 5.5 users are encouraged to upgrade to this version.
      </p><p>For source downloads of PHP 5.5.30 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
+     Windows binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.5.30">ChangeLog</a>.
      </p></div>',
   ),
@@ -19980,7 +19980,7 @@ the upgrade
      <p>
       For source downloads of PHP 7.0.0 RC 4 please visit
       the <a href="https://downloads.php.net/ab/">download page</a>, Windows source and binaries
-      can be found on <a href="http://windows.php.net/qa/">windows.php.net/qa/</a>.
+      can be found on <a href="https://windows.php.net/qa/">windows.php.net/qa/</a>.
      </p>
 
      <p>
@@ -20161,7 +20161,7 @@ the upgrade
      <p>
       For source downloads of PHP 7.0.0 RC 3 please visit
       the <a href="https://downloads.php.net/ab/">download page</a>, Windows source and binaries
-      can be found on <a href="http://windows.php.net/qa/">windows.php.net/qa/</a>.
+      can be found on <a href="https://windows.php.net/qa/">windows.php.net/qa/</a>.
      </p>
 
      <p>
@@ -20315,7 +20315,7 @@ the upgrade
      </p>
 
      <p>For source downloads of PHP 5.4.45 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
+     Windows binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.4.45">ChangeLog</a>.
      </p>
 
@@ -20330,7 +20330,7 @@ the upgrade
      5.4.45. Ten security-related issues were fixed in this release.
      All PHP 5.4 users are encouraged to upgrade to this version.
      </p><p>For source downloads of PHP 5.4.45 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
+     Windows binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.4.45">ChangeLog</a>.
      </p><p class=\'fullArticleLink\'><a href=\'http://php.net/archive/2015.php#id2015-09-04-4\' class>&hellip; read full article</a></p></div>',
   ),
@@ -20376,7 +20376,7 @@ the upgrade
      </p>
 
      <p>For source downloads of PHP 5.5.29 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
+     Windows binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.5.29">ChangeLog</a>.
      </p>
 
@@ -20387,7 +20387,7 @@ the upgrade
 
      All PHP 5.5 users are encouraged to upgrade to this version.
      </p><p>For source downloads of PHP 5.5.29 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
+     Windows binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.5.29">ChangeLog</a>.
      </p></div>',
   ),
@@ -20434,7 +20434,7 @@ the upgrade
      </p>
 
      <p>For source downloads of PHP 5.6.13 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
+     Windows binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.6.13">ChangeLog</a>.
      </p>
 
@@ -20445,7 +20445,7 @@ the upgrade
 
      All PHP 5.6 users are encouraged to upgrade to this version.
      </p><p>For source downloads of PHP 5.6.13 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
+     Windows binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.6.13">ChangeLog</a>.
      </p></div>',
   ),
@@ -20522,7 +20522,7 @@ the upgrade
      <p>
       For source downloads of PHP 7.0.0 RC 2 please visit
       the <a href="https://downloads.php.net/ab/">download page</a>, Windows source and binaries
-      can be found on <a href="http://windows.php.net/qa/">windows.php.net/qa/</a>.
+      can be found on <a href="https://windows.php.net/qa/">windows.php.net/qa/</a>.
      </p>
 
      <p>
@@ -20695,7 +20695,7 @@ the upgrade
      <p>
       For source downloads of PHP 7.0.0 RC 1 please visit
       the <a href="https://downloads.php.net/ab/">download page</a>, Windows source and binaries
-      can be found on <a href="http://windows.php.net/qa/">windows.php.net/qa/</a>.
+      can be found on <a href="https://windows.php.net/qa/">windows.php.net/qa/</a>.
      </p>
 
      <p>
@@ -20757,7 +20757,7 @@ the upgrade
           </p>
 
           <p>For source downloads of PHP 5.6.12 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-          Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
+          Windows binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
           The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.6.12">ChangeLog</a>.
           </p>
     </div>
@@ -20767,7 +20767,7 @@ the upgrade
 
           All PHP 5.6 users are encouraged to upgrade to this version.
           </p><p>For source downloads of PHP 5.6.12 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-          Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
+          Windows binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
           The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.6.12">ChangeLog</a>.
           </p></div>',
   ),
@@ -20820,7 +20820,7 @@ the upgrade
           </p>
 
           <p>For source downloads of PHP 5.5.28 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-          Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
+          Windows binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
           The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.5.28">ChangeLog</a>.
           </p>
     </div>
@@ -20877,7 +20877,7 @@ the upgrade
      </p>
 
      <p>For source downloads of PHP 5.4.44 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
+     Windows binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.4.44">ChangeLog</a>.
      </p>
 
@@ -20890,7 +20890,7 @@ the upgrade
      5.4.44. 11 security-related issues were fixed in this release.
      All PHP 5.4 users are encouraged to upgrade to this version.
      </p><p>For source downloads of PHP 5.4.44 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
+     Windows binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.4.44">ChangeLog</a>.
      </p><p class=\'fullArticleLink\'><a href=\'http://php.net/archive/2015.php#id2015-08-06-2\' class>&hellip; read full article</a></p></div>',
   ),
@@ -20967,7 +20967,7 @@ the upgrade
      <p>
       For source downloads of PHP 7.0.0 Beta 3 please visit
       the <a href="https://downloads.php.net/ab/">download page</a>, Windows source and binaries
-      can be found on <a href="http://windows.php.net/qa/">windows.php.net/qa/</a>.
+      can be found on <a href="https://windows.php.net/qa/">windows.php.net/qa/</a>.
      </p>
 
      <p>
@@ -21060,7 +21060,7 @@ the upgrade
      <p>
       For source downloads of PHP 7.0.0 Beta 2 please visit
       the <a href="https://downloads.php.net/ab/">download page</a>, Windows source and binaries
-      can be found on <a href="http://windows.php.net/qa/">windows.php.net/qa/</a>.
+      can be found on <a href="https://windows.php.net/qa/">windows.php.net/qa/</a>.
      </p>
 
      <p>
@@ -21157,7 +21157,7 @@ the upgrade
      <p>
       For source downloads of PHP 7.0.0 Beta 1 please visit
       the <a href="https://downloads.php.net/ab/">download page</a>, Windows source and binaries
-      can be found on <a href="http://windows.php.net/qa/">windows.php.net/qa/</a>.
+      can be found on <a href="https://windows.php.net/qa/">windows.php.net/qa/</a>.
      </p>
 
      <p>
@@ -21218,7 +21218,7 @@ the upgrade
      </p>
 
      <p>For source downloads of PHP 5.6.11 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
+     Windows binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.6.11">ChangeLog</a>.
      </p>
 
@@ -21228,7 +21228,7 @@ the upgrade
      5.6.11. Five security-related issues in PHP were fixed in this release, including CVE-2015-3152.
      All PHP 5.6 users are encouraged to upgrade to this version.
      </p><p>For source downloads of PHP 5.6.11 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
+     Windows binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.6.11">ChangeLog</a>.
      </p></div>',
   ),
@@ -21281,7 +21281,7 @@ the upgrade
      </p>
 
      <p>For source downloads of PHP 5.5.27 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
+     Windows binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.5.27">ChangeLog</a>.
      </p>
     </div>
@@ -21338,7 +21338,7 @@ the upgrade
      </p>
 
      <p>For source downloads of PHP 5.4.43 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
+     Windows binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.4.43">ChangeLog</a>.
      </p>
 
@@ -21352,7 +21352,7 @@ the upgrade
      5.4.43. Five security-related issues in PHP were fixed in this release, including CVE-2015-3152.
      All PHP 5.4 users are encouraged to upgrade to this version.
      </p><p>For source downloads of PHP 5.4.43 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
+     Windows binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.4.43">ChangeLog</a>.
      </p><p class=\'fullArticleLink\'><a href=\'http://php.net/archive/2015.php#id2015-07-09-1\' class>&hellip; read full article</a></p></div>',
   ),
@@ -21634,7 +21634,7 @@ In 1995, Rasmus Lerdorf started creating PHP. 20 years later, 80% of websites in
      <p>
       For source downloads of PHP 7.0.0 Alpha 2 please visit
       the <a href="https://downloads.php.net/ab/">download page</a>, Windows source and binaries
-      can be found on <a href="http://windows.php.net/qa/">windows.php.net/qa/</a>.
+      can be found on <a href="https://windows.php.net/qa/">windows.php.net/qa/</a>.
      </p>
 
      <p>
@@ -21794,7 +21794,7 @@ In 1995, Rasmus Lerdorf started creating PHP. 20 years later, 80% of websites in
      </p>
 
      <p>For source downloads of PHP 5.4.42 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
+     Windows binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.4.42">ChangeLog</a>.
      </p>
     </div>
@@ -21805,7 +21805,7 @@ In 1995, Rasmus Lerdorf started creating PHP. 20 years later, 80% of websites in
 
      All PHP 5.4 users are encouraged to upgrade to this version.
      </p><p>For source downloads of PHP 5.4.42 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
+     Windows binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.4.42">ChangeLog</a>.
      </p></div>',
   ),
@@ -21878,7 +21878,7 @@ In 1995, Rasmus Lerdorf started creating PHP. 20 years later, 80% of websites in
      <p>
       For source downloads of PHP 7.0.0 Alpha 1 please visit
       the <a href="https://downloads.php.net/ab/">download page</a>, Windows sources and binaries
-      can be found on <a href="http://windows.php.net/qa/">windows.php.net/qa/</a>.
+      can be found on <a href="https://windows.php.net/qa/">windows.php.net/qa/</a>.
      </p>
 
      <p>
@@ -21941,7 +21941,7 @@ In 1995, Rasmus Lerdorf started creating PHP. 20 years later, 80% of websites in
      </p>
 
      <p>For source downloads of PHP 5.6.10 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
+     Windows binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.6.10">ChangeLog</a>.
      </p>
     </div>
@@ -21952,7 +21952,7 @@ In 1995, Rasmus Lerdorf started creating PHP. 20 years later, 80% of websites in
 
      All PHP 5.6 users are encouraged to upgrade to this version.
      </p><p>For source downloads of PHP 5.6.10 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
+     Windows binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.6.10">ChangeLog</a>.
      </p></div>',
   ),
@@ -21999,7 +21999,7 @@ In 1995, Rasmus Lerdorf started creating PHP. 20 years later, 80% of websites in
      </p>
 
      <p>For source downloads of PHP 5.5.26 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
+     Windows binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.5.26">ChangeLog</a>.
      </p>
     </div>
@@ -22010,7 +22010,7 @@ In 1995, Rasmus Lerdorf started creating PHP. 20 years later, 80% of websites in
 
      All PHP 5.5 users are encouraged to upgrade to this version.
      </p><p>For source downloads of PHP 5.5.26 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
+     Windows binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.5.26">ChangeLog</a>.
      </p></div>',
   ),
@@ -22327,7 +22327,7 @@ In 1995, Rasmus Lerdorf started creating PHP. 20 years later, 80% of websites in
      </p>
 
      <p>For source downloads of PHP 5.6.9 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
+     Windows binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.6.9">ChangeLog</a>.
    </p>
     </div>
@@ -22337,7 +22337,7 @@ In 1995, Rasmus Lerdorf started creating PHP. 20 years later, 80% of websites in
 
      All PHP 5.6 users are encouraged to upgrade to this version.
      </p><p>For source downloads of PHP 5.6.9 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
+     Windows binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.6.9">ChangeLog</a>.
    </p></div>',
   ),
@@ -22383,7 +22383,7 @@ In 1995, Rasmus Lerdorf started creating PHP. 20 years later, 80% of websites in
      </p>
 
      <p>For source downloads of PHP 5.4.41 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
+     Windows binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.4.41">ChangeLog</a>.
      </p>
     </div>
@@ -22393,7 +22393,7 @@ In 1995, Rasmus Lerdorf started creating PHP. 20 years later, 80% of websites in
 
      All PHP 5.4 users are encouraged to upgrade to this version.
      </p><p>For source downloads of PHP 5.4.41 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
+     Windows binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.4.41">ChangeLog</a>.
      </p></div>',
   ),
@@ -22439,7 +22439,7 @@ In 1995, Rasmus Lerdorf started creating PHP. 20 years later, 80% of websites in
      </p>
 
      <p>For source downloads of PHP 5.5.25 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
+     Windows binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.5.25">ChangeLog</a>.
      </p>
     </div>
@@ -22449,7 +22449,7 @@ In 1995, Rasmus Lerdorf started creating PHP. 20 years later, 80% of websites in
 
      All PHP 5.5 users are encouraged to upgrade to this version.
      </p><p>For source downloads of PHP 5.5.25 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
+     Windows binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.5.25">ChangeLog</a>.
      </p></div>',
   ),
@@ -22560,7 +22560,7 @@ In 1995, Rasmus Lerdorf started creating PHP. 20 years later, 80% of websites in
      </p>
 
      <p>For source downloads of PHP 5.4.40 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
+     Windows binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.4.40">ChangeLog</a>.
      </p>
     </div>
@@ -22571,7 +22571,7 @@ In 1995, Rasmus Lerdorf started creating PHP. 20 years later, 80% of websites in
 
      All PHP 5.4 users are encouraged to upgrade to this version.
      </p><p>For source downloads of PHP 5.4.40 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
+     Windows binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.4.40">ChangeLog</a>.
      </p></div>',
   ),
@@ -22617,7 +22617,7 @@ In 1995, Rasmus Lerdorf started creating PHP. 20 years later, 80% of websites in
      </p>
 
      <p>For source downloads of PHP 5.6.8 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
+     Windows binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.6.8">ChangeLog</a>.
      </p>
     </div>
@@ -22627,7 +22627,7 @@ In 1995, Rasmus Lerdorf started creating PHP. 20 years later, 80% of websites in
 
      All PHP 5.6 users are encouraged to upgrade to this version.
      </p><p>For source downloads of PHP 5.6.8 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
+     Windows binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.6.8">ChangeLog</a>.
      </p></div>',
   ),
@@ -22673,7 +22673,7 @@ In 1995, Rasmus Lerdorf started creating PHP. 20 years later, 80% of websites in
      </p>
 
      <p>For source downloads of PHP 5.5.24 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
+     Windows binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.5.24">ChangeLog</a>.
      </p>
     </div>
@@ -22683,7 +22683,7 @@ In 1995, Rasmus Lerdorf started creating PHP. 20 years later, 80% of websites in
 
      All PHP 5.5 users are encouraged to upgrade to this version.
      </p><p>For source downloads of PHP 5.5.24 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
+     Windows binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.5.24">ChangeLog</a>.
      </p></div>',
   ),
@@ -22730,7 +22730,7 @@ In 1995, Rasmus Lerdorf started creating PHP. 20 years later, 80% of websites in
      </p>
 
      <p>For source downloads of PHP 5.6.7 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
+     Windows binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.6.7">ChangeLog</a>.
      </p>
     </div>
@@ -22740,7 +22740,7 @@ In 1995, Rasmus Lerdorf started creating PHP. 20 years later, 80% of websites in
 
      All PHP 5.6 users are encouraged to upgrade to this version.
      </p><p>For source downloads of PHP 5.6.7 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
+     Windows binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.6.7">ChangeLog</a>.
      </p></div>',
   ),
@@ -22786,7 +22786,7 @@ In 1995, Rasmus Lerdorf started creating PHP. 20 years later, 80% of websites in
      </p>
 
      <p>For source downloads of PHP 5.5.23 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
+     Windows binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.5.23">ChangeLog</a>.
      </p>
     </div>
@@ -22796,7 +22796,7 @@ In 1995, Rasmus Lerdorf started creating PHP. 20 years later, 80% of websites in
 
      All PHP 5.5 users are encouraged to upgrade to this version.
      </p><p>For source downloads of PHP 5.5.23 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
+     Windows binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.5.23">ChangeLog</a>.
      </p></div>',
   ),
@@ -22842,7 +22842,7 @@ In 1995, Rasmus Lerdorf started creating PHP. 20 years later, 80% of websites in
      </p>
 
      <p>For source downloads of PHP 5.4.39 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
+     Windows binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.4.39">ChangeLog</a>.
      </p>
     </div>
@@ -22852,7 +22852,7 @@ In 1995, Rasmus Lerdorf started creating PHP. 20 years later, 80% of websites in
 
      All PHP 5.4 users are encouraged to upgrade to this version.
      </p><p>For source downloads of PHP 5.4.39 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
+     Windows binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.4.39">ChangeLog</a>.
      </p></div>',
   ),
@@ -23135,7 +23135,7 @@ Presentation length is 45 minutes which includes question time. 3 hours workshop
      </p>
 
      <p>For source downloads of PHP 5.6.6 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
+     Windows binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.6.6">ChangeLog</a>.
      </p>
     </div>
@@ -23145,7 +23145,7 @@ Presentation length is 45 minutes which includes question time. 3 hours workshop
 
      All PHP 5.6 users are encouraged to upgrade to this version.
      </p><p>For source downloads of PHP 5.6.6 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
+     Windows binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.6.6">ChangeLog</a>.
      </p></div>',
   ),
@@ -23191,7 +23191,7 @@ Presentation length is 45 minutes which includes question time. 3 hours workshop
      </p>
 
      <p>For source downloads of PHP 5.5.22 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
+     Windows binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.5.22">ChangeLog</a>.
      </p>
     </div>
@@ -23201,7 +23201,7 @@ Presentation length is 45 minutes which includes question time. 3 hours workshop
 
      All PHP 5.5 users are encouraged to upgrade to this version.
      </p><p>For source downloads of PHP 5.5.22 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
+     Windows binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.5.22">ChangeLog</a>.
      </p></div>',
   ),
@@ -23247,7 +23247,7 @@ Presentation length is 45 minutes which includes question time. 3 hours workshop
      </p>
 
      <p>For source downloads of PHP 5.4.38 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
+     Windows binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.4.38">ChangeLog</a>.
      </p>
     </div>
@@ -23257,7 +23257,7 @@ Presentation length is 45 minutes which includes question time. 3 hours workshop
 
      All PHP 5.4 users are encouraged to upgrade to this version.
      </p><p>For source downloads of PHP 5.4.38 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
+     Windows binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.4.38">ChangeLog</a>.
      </p></div>',
   ),
@@ -23305,7 +23305,7 @@ Presentation length is 45 minutes which includes question time. 3 hours workshop
      </p>
 
      <p>For source downloads of PHP 5.4.37 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
+     Windows binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.4.37">ChangeLog</a>.
      </p>
     </div>
@@ -23316,7 +23316,7 @@ Presentation length is 45 minutes which includes question time. 3 hours workshop
 
      All PHP 5.4 users are encouraged to upgrade to this version.
      </p><p>For source downloads of PHP 5.4.37 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
+     Windows binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.4.37">ChangeLog</a>.
      </p></div>',
   ),
@@ -23362,7 +23362,7 @@ Presentation length is 45 minutes which includes question time. 3 hours workshop
      </p>
 
      <p>For source downloads of PHP 5.6.5 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
+     Windows binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.6.5">ChangeLog</a>.
      </p>
     </div>
@@ -23372,7 +23372,7 @@ Presentation length is 45 minutes which includes question time. 3 hours workshop
 
      All PHP 5.6 users are encouraged to upgrade to this version.
      </p><p>For source downloads of PHP 5.6.5 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
+     Windows binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.6.5">ChangeLog</a>.
      </p></div>',
   ),
@@ -23418,7 +23418,7 @@ Presentation length is 45 minutes which includes question time. 3 hours workshop
      </p>
 
      <p>For source downloads of PHP 5.5.21 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
+     Windows binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.5.21">ChangeLog</a>.
      </p>
     </div>
@@ -23428,7 +23428,7 @@ Presentation length is 45 minutes which includes question time. 3 hours workshop
 
      All PHP 5.5 users are encouraged to upgrade to this version.
      </p><p>For source downloads of PHP 5.5.21 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
-     Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
+     Windows binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.5.21">ChangeLog</a>.
      </p></div>',
   ),

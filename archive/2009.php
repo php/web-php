@@ -838,7 +838,7 @@ site_header("News Archive - 2009", ["cache" => true]);
         </li>
         <li>Optional <a href="http://php.net/gc_enable">garbage collection</a> for cyclic references</li>
         <li>Optional <a href="http://php.net/mysqli.mysqlnd">mysqlnd</a> PHP native replacement for libmysql</li>
-        <li>Improved <a href="http://windows.php.net">windows</a> support including VC6 and VC9 binaries</li>
+        <li>Improved <a href="https://windows.php.net">windows</a> support including VC6 and VC9 binaries</li>
         <li>More consistent float rounding</li>
         <li>Deprecation notices are now handle via E_DEPRECATED (part of E_ALL) instead of the E_STRICT error level</li>
         <li>Several enhancements to enable more <a href="http://php.net/ini.sections">flexiblity in php.ini</a> (and ini parsing in general)</li>

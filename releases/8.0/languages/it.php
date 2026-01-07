@@ -72,7 +72,7 @@ return [
     'footer_title' => 'Performance migliorate, migliore sintassi, e migliore sicurezza dei tipi.',
     'footer_description' => '<p>
             Per scaricare il codice sorgente visita di PHP 8 visita la pagina di <a href="http://www.php.net/downloads">download</a>.
-            I binari eseguibili per Windows possono essere trovati sul sito <a href="http://windows.php.net/download">PHP for Windows</a>.
+            I binari eseguibili per Windows possono essere trovati sul sito <a href="https://windows.php.net/download">PHP for Windows</a>.
             Una lista dei cambiamenti è registrata nel <a href="http://www.php.net/ChangeLog-8.php">ChangeLog</a>.
         </p>
         <p>

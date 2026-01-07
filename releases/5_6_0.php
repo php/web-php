@@ -41,7 +41,7 @@ This new version comes with new features, some backward incompatible changes and
 </p>
 
 <p>For source downloads of PHP 5.6.0, please visit our <a href="http://www.php.net/downloads.php">downloads page</a>.
-Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
+Windows binaries can be found on <a href="https://windows.php.net/download/">windows.php.net/download/</a>.
 The full list of changes is available in the <a href="http://www.php.net/ChangeLog-5.php#5.6.0">ChangeLog</a>.
 </p>
 

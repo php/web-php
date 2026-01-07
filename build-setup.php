@@ -57,32 +57,32 @@ site_header("Operating System Preparation", ["current" => "community"]);
     <td align="center">5.3</td>
     <td align="center">Visual Studio 2008</td>
     <td align="center">6.1</td>
-    <td align="center"><a href="http://windows.php.net/downloads/php-sdk/deps-5.3-vc9-x86.7z">x86</a></td>
-    <td align="center"><a href="http://windows.php.net/downloads/php-sdk/php-sdk-binary-tools-20110512.zip">here</a></td>
+    <td align="center"><a href="https://windows.php.net/downloads/php-sdk/deps-5.3-vc9-x86.7z">x86</a></td>
+    <td align="center"><a href="https://windows.php.net/downloads/php-sdk/php-sdk-binary-tools-20110512.zip">here</a></td>
 </tr>
 <tr>
     <td align="center">5.4</td>
     <td align="center">Visual Studio 2008</td>
     <td align="center">6.1</td>
-    <td align="center"><a href="http://windows.php.net/downloads/php-sdk/deps-5.4-vc9-x86.7z">x86</a></td>
-    <td align="center"><a href="http://windows.php.net/downloads/php-sdk/php-sdk-binary-tools-20110915.zip">here</a></td>
+    <td align="center"><a href="https://windows.php.net/downloads/php-sdk/deps-5.4-vc9-x86.7z">x86</a></td>
+    <td align="center"><a href="https://windows.php.net/downloads/php-sdk/php-sdk-binary-tools-20110915.zip">here</a></td>
 </tr>
 <tr>
     <td align="center">5.5</td>
     <td align="center">Visual Studio 2008</td>
     <td align="center">6.1</td>
-    <td align="center"><a href="http://windows.php.net/downloads/php-sdk/deps-5.5-vc9-x86.7z">x86</a></td>
-    <td align="center"><a href="http://windows.php.net/downloads/php-sdk/php-sdk-binary-tools-20110915.zip">here</a></td>
+    <td align="center"><a href="https://windows.php.net/downloads/php-sdk/deps-5.5-vc9-x86.7z">x86</a></td>
+    <td align="center"><a href="https://windows.php.net/downloads/php-sdk/php-sdk-binary-tools-20110915.zip">here</a></td>
 </tr>
 <tr>
     <td align="center">5.5</td>
     <td align="center">Visual Studio 2012</td>
     <td align="center">N/A</td>
     <td align="center">
-        <a href="http://windows.php.net/downloads/php-sdk/deps-5.5-vc11-x86.7z">x86</a>,
-        <a href="http://windows.php.net/downloads/php-sdk/deps-5.5-vc11-x64.7z">x64</a>
+        <a href="https://windows.php.net/downloads/php-sdk/deps-5.5-vc11-x86.7z">x86</a>,
+        <a href="https://windows.php.net/downloads/php-sdk/deps-5.5-vc11-x64.7z">x64</a>
     </td>
-    <td align="center"><a href="http://windows.php.net/downloads/php-sdk/php-sdk-binary-tools-20110915.zip">here</a></td>
+    <td align="center"><a href="https://windows.php.net/downloads/php-sdk/php-sdk-binary-tools-20110915.zip">here</a></td>
 </tr>
 </table>
 <p><b>Note:</b>&nbsp;If a Windows SDK is required, it is advised to install the SDK <i>before</i> Visual Studio.</p>
