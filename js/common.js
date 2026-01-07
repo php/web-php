@@ -248,7 +248,7 @@ function globalsearch(txt) {
     }
 
     const language = getLanguage()
-    const key = `search-${language}`;
+    const key = `search2-${language}`;
     let cache = window.localStorage.getItem(key);
     cache = JSON.parse(cache);
 
