@@ -1,15 +1,17 @@
 ============= An example PHP License, version 3.0 file =============
 
-This is the original PHP License, version 3.0 which applies only to
-very old versions of PHP software (such as versions 5.1.1, 4.4.1, and
+This is the original PHP License, version 3.0, which applies only to
+old versions of PHP software (such as versions 5.1.1, 4.4.1, and
 earlier).
 
-The PHP License, version 3.0 is an Open Source Initiative approved
-license, available at <https://opensource.org/licenses/PHP-3.0>.
+The PHP License, version 3.0, is an Open Source Initiative approved
+license, available at <https://opensource.org/license/php-3-0>. This
+license is provided for historical purposes only.
 
-This license has been superseded by the PHP License, version 3.01,
-available at <https://www.php.net/license/3_01.txt>. All new works
-using the PHP License should use the PHP License, version 3.01.
+This license has been superseded by the PHP License, version 4,
+available at <https://www.php.net/license/>. The PHP License, version 4
+is the Modified BSD License (BSD-3-Clause). All new works using the PHP
+License should use the Modified BSD License.
 
 
 --------------------------------------------------------------------

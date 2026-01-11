@@ -1,6 +1,21 @@
+============= An example PHP License, version 3.01 file ============
+
+This is the original PHP License, version 3.01, which applies only to
+old versions of PHP software (such as versions 8.5 and earlier).
+
+The PHP License, version 3.01, is an Open Source Initiative approved
+license, available at <https://opensource.org/license/php-3-01>. This
+license is provided for historical purposes only.
+
+This license has been superseded by the PHP License, version 4,
+available at <https://www.php.net/license/>. The PHP License, version 4
+is the Modified BSD License (BSD-3-Clause). All new works using the PHP
+License should use the Modified BSD License.
+
+
 --------------------------------------------------------------------
                   The PHP License, version 3.01
-Copyright (c) 1999 - 2019 The PHP Group. All rights reserved.
+Copyright (c) 1999 - 2026 The PHP Group. All rights reserved.
 --------------------------------------------------------------------
 
 Redistribution and use in source and binary forms, with or without

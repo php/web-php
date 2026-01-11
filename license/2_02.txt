@@ -1,13 +1,14 @@
 ============= An example PHP License, version 2.02 file ============
 
-This is the original PHP License, version 2.02 which applies only to
-very old versions of PHP software (such as versions 4.2.2 and earlier).
+This is the original PHP License, version 2.02, which applies only to
+old versions of PHP software (such as versions 4.2.2 and earlier).
 
-This license is provided here for historical purposes only.
+This license is provided for historical purposes only.
 
-This license has been superseded by the PHP License, version 3.01,
-available at <https://www.php.net/license/3_01.txt>. All new works
-using the PHP License should use the PHP License, version 3.01.
+This license has been superseded by the PHP License, version 4,
+available at <https://www.php.net/license/>. The PHP License, version 4
+is the Modified BSD License (BSD-3-Clause). All new works using the PHP
+License should use the Modified BSD License.
 
 
 --------------------------------------------------------------------
