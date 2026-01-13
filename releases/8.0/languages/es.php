@@ -71,7 +71,7 @@ return [
     'footer_title' => 'Mejor performancia, mejor syntax, aumentada seguridad de tipos.',
     'footer_description' => '<p>
             Para bajar el código fuente de PHP8 visita la página <a href="http://www.php.net/downloads">downloads</a>.
-            Código binario para windows lo puedes encontrar en la página <a href="http://windows.php.net/download">PHP for Windows</a>.
+            Código binario para windows lo puedes encontrar en la página <a href="https://windows.php.net/download">PHP for Windows</a>.
             La lista de cambios está disponible en la página <a href="http://www.php.net/ChangeLog-8.php">ChangeLog</a>.
         </p>
         <p>

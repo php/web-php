@@ -73,7 +73,7 @@ return [
     'footer_description' => '<p>
             PHP 8 のソースコードのダウンロードは、
             <a href="http://www.php.net/downloads">downloads</a> のページをどうぞ。
-            Windows 用のバイナリは <a href="http://windows.php.net/download">PHP for Windows</a> のページにあります。
+            Windows 用のバイナリは <a href="https://windows.php.net/download">PHP for Windows</a> のページにあります。
             変更の一覧は <a href="http://www.php.net/ChangeLog-8.php">ChangeLog</a> にあります。
         </p>
         <p>

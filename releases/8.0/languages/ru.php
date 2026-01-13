@@ -76,7 +76,7 @@ return [
     'footer_title' => 'Выше производительность, лучше синтаксис, надежнее система типов.',
     'footer_description' => '<p>
             Для загрузки исходного кода PHP 8 посетите страницу <a href="http://www.php.net/downloads">downloads</a>.
-            Бинарные файлы Windows находятся на сайте <a href="http://windows.php.net/download">PHP для Windows</a>.
+            Бинарные файлы Windows находятся на сайте <a href="https://windows.php.net/download">PHP для Windows</a>.
             Список изменений представлен в <a href="http://www.php.net/ChangeLog-8.php">ChangeLog</a>.
         </p>
         <p>
