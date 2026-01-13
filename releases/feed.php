@@ -30,7 +30,7 @@ foreach ($RELEASED_VERSIONS as $version => $release) {
     if ($release["announcement"]) {
         $id = "http://php.net/releases/" . str_replace(".", "_", $version) . ".php";
     } else {
-        $id = "http://qa.php.net/#$version";
+        $id = "https://qa.php.net/#$version";
     }
 
     echo <<<XML

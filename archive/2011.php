@@ -20,7 +20,7 @@ site_header("News Archive - 2011", ["cache" => true]);
         <div>
      <p>
        The PHP development team is proud to announce the 4th
-       <a href="http://qa.php.net">release candidate</a> of PHP 5.4.
+       <a href="https://qa.php.net">release candidate</a> of PHP 5.4.
        PHP 5.4 includes new language features and removes several legacy
        (deprecated) behaviours. Windows binaries can be downloaded from the
        <a href="http://windows.php.net/qa/">Windows QA site</a>.
@@ -85,7 +85,7 @@ site_header("News Archive - 2011", ["cache" => true]);
         <div>
       <p>
         The PHP development team is proud to announce the third
-        <a href="http://qa.php.net">release candidate</a> of PHP 5.4.
+        <a href="https://qa.php.net">release candidate</a> of PHP 5.4.
         PHP 5.4 includes new language features and removes several legacy
         (deprecated) behaviours. Windows binaries can be downloaded from the
         <a href="http://windows.php.net/qa/">Windows QA site</a>.
@@ -131,7 +131,7 @@ site_header("News Archive - 2011", ["cache" => true]);
         <div>
       <p>
         The PHP development team is proud to announce the second
-        <a href="http://qa.php.net">release candidate</a> of PHP 5.4.
+        <a href="https://qa.php.net">release candidate</a> of PHP 5.4.
         PHP 5.4 includes new language features and removes several legacy
         (deprecated) behaviours. Windows binaries can be downloaded from the
         <a href="http://windows.php.net/qa/">Windows QA site</a>.
@@ -208,7 +208,7 @@ site_header("News Archive - 2011", ["cache" => true]);
         <div>
      <p>
       The PHP development team is proud to announce the first
-      <a href="http://qa.php.net/">release candidate</a> of PHP 5.4.
+      <a href="https://qa.php.net/">release candidate</a> of PHP 5.4.
       PHP 5.4 includes new language features and removes several legacy
       (deprecated) behaviours. Windows binaries can be downloaded from the
       <a href="http://windows.php.net/qa/">Windows QA site</a>.
@@ -253,7 +253,7 @@ site_header("News Archive - 2011", ["cache" => true]);
         <abbr class="published newsdate" title="2011-10-26T19:16:50+00:00">[26-Oct-2011]</abbr>
         <div>
       <p>
-       The PHP development team is proud to announce the second <a href="http://qa.php.net/">beta release</a> of PHP 5.4.
+       The PHP development team is proud to announce the second <a href="https://qa.php.net/">beta release</a> of PHP 5.4.
        PHP 5.4 includes new language features and removes several legacy (deprecated) behaviours.
        Windows binaries can be downloaded from the <a href="http://windows.php.net/qa/">Windows QA site</a>.
       </p>
@@ -358,7 +358,7 @@ site_header("News Archive - 2011", ["cache" => true]);
         <abbr class="published newsdate" title="2011-09-27T01:05:49+02:00">[27-Sep-2011]</abbr>
         <div>
       <p>
-       The PHP development team is proud to announce the first <a href="http://qa.php.net/">beta release</a> of PHP 5.4.
+       The PHP development team is proud to announce the first <a href="https://qa.php.net/">beta release</a> of PHP 5.4.
        PHP 5.4 includes new language features and removes several legacy (deprecated) behaviors.
        Windows binaries can be downloaded from the <a href="http://windows.php.net/qa/"> Windows QA site</a>.
       </p>
@@ -649,7 +649,7 @@ site_header("News Archive - 2011", ["cache" => true]);
         <abbr class="published newsdate" title="2011-06-28T23:34:42+02:00">[28-Jun-2011]</abbr>
         <div>
      <p>
-      The PHP development team is proud to announce the first PHP 5.4 <a href="http://qa.php.net/">alpha release</a>.
+      The PHP development team is proud to announce the first PHP 5.4 <a href="https://qa.php.net/">alpha release</a>.
       PHP 5.4 includes new language features and removes several legacy (deprecated) behaviors.
       Read the <a href="/releases/NEWS_5_4_0_alpha1.txt">NEWS</a>
       file for a complete list of changes.
