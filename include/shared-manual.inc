@@ -254,6 +254,28 @@ CONTRIBUTE;
     ]);
 }
 
+function contributors($setup) {
+    if (!isset($_GET["contributors"])
+        || !isset($setup["history"]["contributors"])
+        || count($setup["history"]["contributors"]) < 1) {
+        return;
+    }
+
+    $contributorList = "<li>" . implode("</li><li>", $setup["history"]["contributors"]) . "</li>";
+
+    echo <<<CONTRIBUTORS
+<div class="book">
+  <h1 class="title">Output Buffering Control</h1>
+  The following have authored commits that contributed to this page:
+  <ul>
+   $contributorList
+  </ul>
+</div>
+CONTRIBUTORS;
+    manual_footer($setup);
+    exit;
+}
+
 function autogen(string $text, string $lang) {
     static $translations = [];
 
