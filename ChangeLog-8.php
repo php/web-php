@@ -9,6 +9,80 @@ changelog_header(8, $MINOR_VERSIONS);
 
 <a id="PHP_8_5"></a>
 
+<section class="version" id="8.5.2"><!-- {{{ 8.5.2 -->
+<h3>Version 8.5.2</h3>
+<b><?php release_date('15-Jan-2026'); ?></b>
+<ul><li>Core:
+<ul>
+  <li>Fix OSS-Fuzz #465488618 (Wrong assumptions when dumping function signature with dynamic class const lookup default argument).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 20695); ?> (Assertion failure in normalize_value() when parsing malformed INI input via parse_ini_string()).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 20714); ?> (Uncatchable exception thrown in generator).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 20352); ?> (UAF in php_output_handler_free via re-entrant ob_start() during error deactivation).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 20745); ?> ("Casting out of range floats to int" applies to strings).</li>
+</ul></li>
+<li>DOM:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 20722); ?> (Null pointer dereference in DOM namespace node cloning via clone on malformed objects).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 20444); ?> (Dom\XMLDocument::C14N() seems broken compared to DOMDocument::C14N()).</li>
+</ul></li>
+<li>EXIF:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 20631); ?> (Integer underflow in exif HEIF parsing when pos.size &lt; 2).</li>
+</ul></li>
+<li>Intl:
+<ul>
+  <li>Fix leak in umsg_format_helper().</li>
+</ul></li>
+<li>LDAP:
+<ul>
+  <li>Fix memory leak in ldap_set_options().</li>
+</ul></li>
+<li>Lexbor:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 20668); ?> (\Uri\WhatWg\Url::withHost() crashes (SEGV) for URLs using the file: scheme).</li>
+</ul></li>
+<li>Mbstring:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 20674); ?> (mb_decode_mimeheader does not handle separator).</li>
+</ul></li>
+<li>PCNTL:
+<ul>
+  <li>Fixed bug with pcntl_getcpuaffinity() on solaris regarding invalid process ids handling.</li>
+</ul></li>
+<li>Phar:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 20732); ?> (Phar::LoadPhar undefined behavior when reading fails).</li>
+  <li>Fix SplFileInfo::openFile() in write mode.</li>
+  <li>Fix build on legacy OpenSSL 1.1.0 systems.</li>
+  <li><?php bugfix(74154); ?> (Phar extractTo creates empty files).</li>
+</ul></li>
+<li>Session:
+<ul>
+  <li>Fix support for MM module.</li>
+</ul></li>
+<li>Sqlite3:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 20699); ?> (SQLite3Result fetchArray return array|false, null returned).</li>
+</ul></li>
+<li>Standard:
+<ul>
+  <li>Fix error check for proc_open() command.</li>
+  <li>Fix memory leak in mail() when header key is numeric.</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 20582); ?> (Heap Buffer Overflow in iptcembed).</li>
+</ul></li>
+<li>URI:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 20771); ?> (Assertion failure when getUnicodeHost() returns empty string).</li>
+</ul></li>
+<li>Zlib:
+<ul>
+  <li>Fix OOB gzseek() causing assertion failure.</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
+
+
 <section class="version" id="8.5.1"><!-- {{{ 8.5.1 -->
 <h3>Version 8.5.1</h3>
 <b><?php release_date('18-Dec-2025'); ?></b>
