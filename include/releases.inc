@@ -2,6 +2,117 @@
 $OLDRELEASES = array (
   8 => 
   array (
+    '8.5.1' => 
+    array (
+      'announcement' => 
+      array (
+        'English' => '/releases/8_5_1.php',
+      ),
+      'tags' => 
+      array (
+        0 => 'security',
+      ),
+      'date' => '18 Dec 2025',
+      'source' => 
+      array (
+        0 => 
+        array (
+          'filename' => 'php-8.5.1.tar.gz',
+          'name' => 'PHP 8.5.1 (tar.gz)',
+          'sha256' => '915492958081409a5e3ef99df969bcfa5b33bdf9517bd077991747e17fa2c1b7',
+          'date' => '18 Dec 2025',
+        ),
+        1 => 
+        array (
+          'filename' => 'php-8.5.1.tar.bz2',
+          'name' => 'PHP 8.5.1 (tar.bz2)',
+          'sha256' => '55f428c426e7241752ea9afff160bb64c32a9321cbd6d17d1c145b8df8823737',
+          'date' => '18 Dec 2025',
+        ),
+        2 => 
+        array (
+          'filename' => 'php-8.5.1.tar.xz',
+          'name' => 'PHP 8.5.1 (tar.xz)',
+          'sha256' => '3f5bf99ce81201f526d25e288eddb2cfa111d068950d1e9a869530054ff98815',
+          'date' => '18 Dec 2025',
+        ),
+      ),
+      'museum' => false,
+    ),
+    '8.3.29' => 
+    array (
+      'announcement' => 
+      array (
+        'English' => '/releases/8_3_29.php',
+      ),
+      'tags' => 
+      array (
+        0 => 'security',
+      ),
+      'date' => '18 Dec 2025',
+      'source' => 
+      array (
+        0 => 
+        array (
+          'filename' => 'php-8.3.29.tar.gz',
+          'name' => 'PHP 8.3.29 (tar.gz)',
+          'sha256' => '8565fa8733c640b60da5ab4944bf2d4081f859915b39e29b3af26cf23443ed97',
+          'date' => '18 Dec 2025',
+        ),
+        1 => 
+        array (
+          'filename' => 'php-8.3.29.tar.bz2',
+          'name' => 'PHP 8.3.29 (tar.bz2)',
+          'sha256' => 'c7337212e655325d499ea8108fa76f69ddde2fff7cb0fad36aa63eed540cb8a5',
+          'date' => '18 Dec 2025',
+        ),
+        2 => 
+        array (
+          'filename' => 'php-8.3.29.tar.xz',
+          'name' => 'PHP 8.3.29 (tar.xz)',
+          'sha256' => 'f7950ca034b15a78f5de9f1b22f4d9bad1dd497114d175cb1672a4ca78077af5',
+          'date' => '18 Dec 2025',
+        ),
+      ),
+      'museum' => false,
+    ),
+    '8.4.16' => 
+    array (
+      'announcement' => 
+      array (
+        'English' => '/releases/8_4_16.php',
+      ),
+      'tags' => 
+      array (
+        0 => 'security',
+      ),
+      'date' => '18 Dec 2025',
+      'source' => 
+      array (
+        0 => 
+        array (
+          'filename' => 'php-8.4.16.tar.gz',
+          'name' => 'PHP 8.4.16 (tar.gz)',
+          'sha256' => '8e35d24f148ea7c2a93e9b9bcc329e8bf78b5bb922f3723a727c74c19d184e98',
+          'date' => '18 Dec 2025',
+        ),
+        1 => 
+        array (
+          'filename' => 'php-8.4.16.tar.bz2',
+          'name' => 'PHP 8.4.16 (tar.bz2)',
+          'sha256' => '6c48c65eba6a2f7a102925d08772239b1f45110aed2187fdd81b933ed439c692',
+          'date' => '18 Dec 2025',
+        ),
+        2 => 
+        array (
+          'filename' => 'php-8.4.16.tar.xz',
+          'name' => 'PHP 8.4.16 (tar.xz)',
+          'sha256' => 'f66f8f48db34e9e29f7bfd6901178e9cf4a1b163e6e497716dfcb8f88bcfae30',
+          'date' => '18 Dec 2025',
+        ),
+      ),
+      'museum' => false,
+    ),
     '8.1.34' => 
     array (
       'announcement' => 
