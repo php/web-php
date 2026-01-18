@@ -292,7 +292,7 @@ function autogen(string $text, string $lang) {
         throw new \InvalidArgumentException("Cannot autogenerate text for '$text'");
     }
 
-    $translationFile = __DIR__ . \DIRECTORY_SEPARATOR . "ui_translation" . \DIRECTORY_SEPARATOR . $lang . ".ini";
+    $translationFile = __DIR__ . \DIRECTORY_SEPARATOR . "ui_translation" . \DIRECTORY_SEPARATOR . strtolower($lang) . ".ini";
 
     if (!\file_exists($translationFile)) {
         if ($lang !== "en") {
