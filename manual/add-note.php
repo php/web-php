@@ -8,7 +8,6 @@ include_once __DIR__ . '/../include/shared-manual.inc';
 include __DIR__ . '/spam_challenge.php';
 
 use phpweb\UserNotes\UserNote;
-use phpweb\UserNotes\UserNoteService;
 
 site_header("Add Manual Note", ['css' => 'add-note.css']);
 
@@ -147,10 +146,9 @@ if ($process) {
     if ($error) { echo "<p class=\"formerror\">$error</p>\n"; }
 
     // Print out preview of note
-    $userNoteService = new UserNoteService();
     echo '<p>This is what your entry will look like, roughly:</p>';
     echo '<div id="usernotes">';
-    $userNoteService->displaySingle(new UserNote('', '', '', time(), $user, $note));
+    manual_note_display(new UserNote('', '', '', time(), $user, $note));
     echo '</div><br><br>';
 }
 
