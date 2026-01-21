@@ -33,7 +33,7 @@ foreach ((new NewsHandler())->getConferences() as $entry) {
     $content .= '</div>';
     $content .= '</div>';
 
-    $panels .= sprintf('<p class="panel"><a href="%s">%s</a></p>', $entry["newsImage"]["link"], $entry["title"]);
+    $panels .= sprintf('<p class="panel"><a href="%s">%s</a></p>', $entry["newsImage"]["link"] ?? $link, $entry["title"]);
 }
 $content .= "</div>";
 
