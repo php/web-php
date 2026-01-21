@@ -18,7 +18,7 @@ $panels = '<p class="prepend"><a href="https://wiki.php.net/conferences">Want to
 foreach ((new NewsHandler())->getConferences() as $entry) {
     $link = preg_replace('~^(http://php.net/|https://www.php.net/)~', '', $entry["id"]);
     $id = parse_url($entry["id"], PHP_URL_FRAGMENT);
-    $date = date_format(date_create($entry["updated"]), 'Y-m-d');
+    $date = date_format(date_create($entry["updated"] ?? $entry["published"]), 'Y-m-d');
     $content .= '<div class="newsentry">';
     $content .= '<h3 class="newstitle title"><a href="' . $MYSITE . $link . '" id="' . $id . '">' . $entry["title"] . '</a></h3>';
     $content .= '<div class="newsimage">';
