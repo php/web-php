@@ -18,22 +18,30 @@ $panels = '<p class="prepend"><a href="https://wiki.php.net/conferences">Want to
 foreach ((new NewsHandler())->getConferences() as $entry) {
     $link = preg_replace('~^(http://php.net/|https://www.php.net/)~', '', $entry["id"]);
     $id = parse_url($entry["id"], PHP_URL_FRAGMENT);
-    $date = date_format(date_create($entry["updated"]), 'Y-m-d');
-    $content .= '<div class="newsentry">';
-    $content .= '<h3 class="newstitle title"><a href="' . $MYSITE . $link . '" id="' . $id . '">' . $entry["title"] . '</a></h3>';
-    $content .= '<div class="newsimage">';
 
-    if (isset($entry["newsImage"])) {
-        $content .= sprintf('<a href="%s"><img src="/images/news/%s"></a>', $entry["newsImage"]["link"], $entry["newsImage"]["content"]);
+    $nixtimestamp = date_create($entry["updated"]);
+    if(isset($entry["finalTeaserDate"])) {
+        $nixtimestamp = date_create($entry["finalTeaserDate"]);
     }
 
+    $date = date_format($nixtimestamp, 'd M Y');
+    $date_w3c = date_format($nixtimestamp, DATE_W3C);
+
+    $content .= '<article class="news__item" itemscope itemtype="https://schema.org/Event">';
+    $content .= '<div class="news__heading">';
+    $content .= '<div class="news__title">';
+    $content .= '<a href="' . $link . '" id="' . $id . '" itemprop="name">' . $entry["title"] . '</a>';
     $content .= '</div>';
-    $content .= '<div class="newscontent">';
-    $content .= $entry["content"];
-    $content .= '</div>';
+    $content .= '<div class="news__date" itemprop="startDate" content="' . $date_w3c . '"><time datetime="' . $date_w3c . '">' . $date . '</time></div>';
     $content .= '</div>';
 
-    $panels .= sprintf('<p class="panel"><a href="%s">%s</a></p>', $entry["newsImage"]["link"], $entry["title"]);
+    $content .= '<div class="news__content">';
+    $content .= '<div class="news__text" itemprop="description">' . $entry["content"] . '</div>';
+    $content .= '<div class="news__image">';
+    $content .= sprintf('<a href="%s"><img src="/images/news/%s" itemprop="image" alt="%s"></a>', $entry["newsImage"]["link"], $entry["newsImage"]["content"], $entry["title"]);
+    $content .= '</div>';
+    $content .= '</div>';
+    $content .= '</article>';
 }
 $content .= "</div>";
 

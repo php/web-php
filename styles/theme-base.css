@@ -546,7 +546,7 @@ pre.info {
 
 
 #layout {
-    margin: 0 auto 1.5rem;
+    margin: 0 auto;
     clear:both;
 }
 
@@ -610,37 +610,6 @@ pre.info {
 #results_nav_list li.current {
     font-weight: bolder;
 }
-/* Footer styling */
-
-body > footer {
-  clear: both;
-  overflow: auto;
-  line-height:3rem;
-}
-body > footer .footer-content {
-  margin: 1.5rem auto 0 ;
-  padding:0 1.5rem;
-  -moz-box-sizing:border-box;
-  box-sizing:border-box;
-}
-
-body > footer ul {
-    margin:0;
-    padding:0;
-}
-
-body > footer .footmenu li {
-  display: inline-block;
-  margin:0 0.75rem;
-}
-body > footer a {
-  display:inline-block;
-  border-bottom:0;
-}
-body > footer a:hover,
-body > footer a:focus {
-    color:var(--light-magenta-color);
-}
 
 /* {{{ ElePHPants photo stream */
 
@@ -653,6 +622,12 @@ div.elephpants div.images {
     height: 75px;
     text-align: center;
     white-space: nowrap;
+}
+
+div.elephpants a {
+    display: inline-block;
+    line-height: 0;
+    border-bottom: 0;
 }
 
 div.elephpants img {
@@ -1416,45 +1391,6 @@ aside.tips div.inner {
 }
 /* }}} */
 
-/* {{{ News */
-.newsentry header h2,
-.newsItem header h2 {
-  margin:0;
-}
-.newsentry {
-  margin: 0 0 3rem;
-  position: relative;
-}
-.newsentry h2 {
-  font-weight:normal;
-}
-.newsentry h2 .release-state {
-  float: right;
-  opacity: 0.8;
-}
-.newsentry header time,
-.newsItem header time {
-  float:right;
-  line-height:3rem;
-}
-
-.newsentry p {
-    line-height: 1.7rem;
-}
-
-.newsentry .newsimage a,
-.newsItem .newsImage a {
-  float: right;
-  border: 0;
-  padding: 10px;
-}
-
-.newsentry .newsimage img,
-.newsItem .newsImage img {
-    max-width: 350px;
-}
-/* }}} */
-
 /* {{{ Logo Downloads */
 
 .logo-list ul{
@@ -1479,6 +1415,85 @@ aside.tips div.inner {
 
 td {
   word-wrap: break-word;
+}
+
+.news {
+    flex-direction: row;
+}
+
+.news__item {
+    padding-bottom: calc(calc(var(--spacing) * 10) * calc(1 - var(--tw-space-y-reverse)));
+    margin-block-start: calc(calc(var(--spacing) * 10) * var(--tw-space-y-reverse));
+    margin-block-end: calc(calc(var(--spacing) * 10) * calc(1 - var(--tw-space-y-reverse)));
+    border-color: color-mix(in oklab, var(--color-gray-900) 10%, transparent);
+    border-width: 0 0 1px 0;
+    border-style: solid;
+}
+
+.news__heading {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: calc(var(--spacing) * 10);
+    border-bottom: 1px dotted;
+    padding-bottom: calc(var(--spacing) * 3);
+    margin-bottom: calc(var(--spacing) * 3);
+}
+
+.news__item:last-child {
+    border-width: 0;
+}
+
+.news__content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: calc(var(--spacing) * 10);
+    font-size: var(--text-lg);
+    line-height: var(--tw-leading, var(--text-lg--line-height));
+    color: var(--color-gray-600);
+}
+
+.news__date {
+    color: var(--content-text-color);
+    font-size: var(--text-base);
+    line-height: var(--tw-leading, var(--text-base--line-height));
+}
+
+.news__title {
+    margin-top: calc(var(--spacing) * 3);
+}
+
+#layout-content .news__title a,
+#layout-content .news__title a:link,
+#layout-content .news__title a:visited {
+    color: #369;
+    font-weight: var(--font-weight-medium);
+    text-decoration: none;
+    border: 0;
+    font-size: var(--text-xl);
+    line-height: var(--tw-leading, var(--text-3xl--line-height));
+}
+
+.news__text {
+    color: var(--content-text-color);
+    font-size: var(--text-base);
+    line-height: calc(var(--spacing) * 6);
+}
+
+.news__image {
+    width: calc(var(--spacing) * 64);
+    flex-shrink: 0;
+}
+
+.news__image a {
+    border: 0;
+}
+
+.news__image img {
+    max-width: 100%;
+    background-color: var(--color-gray-100);
 }
 
 @media only screen and (max-width: 760px), (min-device-width: 768px) and (max-device-width: 1024px) {
@@ -1517,4 +1532,23 @@ td {
     unicode-bidi: isolate;
     content: attr(data-label);
   }
+
+    .news__heading,
+    .news__content {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: var(--spacing);
+    }
+
+    .news__content {
+        gap: calc(var(--spacing) * 3);
+    }
+    .news__image {
+        width: 100%;
+        order: 1;
+    }
+
+    .news__text {
+        order: 2;
+    }
 }

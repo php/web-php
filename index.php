@@ -65,16 +65,16 @@ foreach ((new NewsHandler())->getFrontPageNews() as $entry) {
     $date_human = date_format($date, 'd M Y');
     $date_w3c = date_format($date, DATE_W3C);
     $content .= <<<NEWSENTRY
-<article class="newsentry">
-  <header class="title">
-    <time datetime="$date_w3c">$date_human</time>
-    <h2 class="newstitle">
-      <a href="{$MYSITE}{$link}" id="{$id}">{$entry["title"]}</a>
-    </h2>
-  </header>
-  <div class="newscontent">
-    {$entry["content"]}
-  </div>
+<article class="news__item" itemscope itemtype="https://schema.org/Event">
+    <div class="news__heading">
+        <div class="news__title">
+          <a href="{$link}" id="{$id}" itemprop="name">{$entry["title"]}</a>
+        </div>
+        <div class="news__date" itemprop="startDate" content="$date_w3c"><time datetime="{$date_w3c}">$date_human</time></div>
+    </div>
+    <div class="news__content">
+        <div class="news__text" itemprop="description">{$entry["content"]}</div>
+    </div>
 </article>
 NEWSENTRY;
 }

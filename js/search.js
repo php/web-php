@@ -218,7 +218,7 @@ const initSearchModal = () => {
         backdropElement.removeAttribute("aria-modal");
         backdropElement.removeAttribute("role");
         onModalTransitionEnd(() => {
-            document.body.style.overflow = "auto";
+          document.body.style.overflow = "initial";
             document.documentElement.style.overflow = "auto";
             document.body.style.paddingRight = "0px";
             backdropElement.classList.remove("hiding");
@@ -226,27 +226,8 @@ const initSearchModal = () => {
         });
     };
 
-    const searchLink = document.getElementById("navbar__search-link");
-    const searchButtonMobile = document.getElementById(
-        "navbar__search-button-mobile",
-    );
     const searchButton = document.getElementById("navbar__search-button");
     let buttons = [searchButton];
-
-    // Enhance mobile search
-    if (searchLink !== null) {
-        searchLink.setAttribute("hidden", "true");
-        searchButtonMobile.removeAttribute("hidden");
-        buttons.push(searchButtonMobile);
-    }
-
-    // Enhance desktop search
-    const searchForm = document
-        .querySelector(".navbar__search-form");
-    if (searchForm !== null) {
-        searchForm.setAttribute("hidden", "true");
-    }
-    searchButton.removeAttribute("hidden");
 
     // Open when the search button is clicked
     buttons.forEach((button) =>

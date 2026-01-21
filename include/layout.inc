@@ -382,7 +382,13 @@ function print_news($news, $dog, $max = 5, $return = false) {
 
         $published = substr($item["published"], 0, 10);
         $nixtimestamp = strtotime($published);
+
+        if(isset($item["finalTeaserDate"])) {
+            $nixtimestamp = strtotime($item["finalTeaserDate"]);
+        }
+
         $newsdate = date("d M Y", $nixtimestamp);
+        $newsdate_w3c = date(DATE_W3C, $nixtimestamp);
 
         if ($return) {
             $retval[] = [
@@ -394,25 +400,35 @@ function print_news($news, $dog, $max = 5, $return = false) {
             continue;
         }
 
-        echo <<<EOT
-<article class="newsItem">
-  <header class="title">
-    <time class="newsdate" datetime="{$item["published"]}">{$newsdate}</time>
-    <h2 class="newstitle"><a id="{$id}" href="{$permlink}" rel="bookmark" class="bookmark">{$item["title"]}</a></h2>
-  </header>
-  <div class="newscontent">
-    <div class="newsImage">{$image}</div>
-    {$item["content"]}
-  </div>
-</article>
+        $imageBlock = '';
+        if ($image) {
+            $imageBlock = <<<EOT
+            <div class="news__image">
+                {$image}
+            </div>
+            EOT;
+        }
 
+        echo <<<EOT
+<article class="news__item" itemscope itemtype="https://schema.org/Event">
+    <div class="news__heading">
+        <div class="news__title">
+          <a href="{$permlink}" id="{$id}" rel="bookmark" itemprop="name">{$item["title"]}</a>
+        </div>
+        <div class="news__date" itemprop="startDate" content="$newsdate_w3c"><time datetime="{$newsdate_w3c}">$newsdate</time></div>
+    </div>
+    <div class="news__content">
+        <div class="news__text" itemprop="description">{$item["content"]}</div>
+        {$imageBlock}
+    </div>
+</article>
 EOT;
     }
 
     return $retval;
 }
 
-function site_header(?string $title = NULL, array $config = []): void
+function site_header(?string $title = null, array $config = []): void
 {
     global $MYSITE, $LANG;
 
@@ -424,6 +440,7 @@ function site_header(?string $title = NULL, array $config = []): void
         "lang" => $LANG,
         "current" => "",
         "meta-navigation" => [],
+        "theme_switcher" => true,
         'classes' => '',
         'layout_span' => 9,
         "cache" => false,

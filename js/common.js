@@ -423,6 +423,7 @@ $(document).ready(function () {
                         for (photo in data) {
                             photo = data[photo];
                             link = $('<a>');
+                            link.attr('aria-label', "See elephpant photo");
                             link.attr('href', photo.url);
                             link.attr('title', photo.title);
                             image = $('<img>');
@@ -459,87 +460,6 @@ $(document).ready(function () {
             $this.remove();
         }
     });
-
-    /*{{{ 2024 Navbar */
-    const offcanvasElement = document.getElementById("navbar__offcanvas");
-    const offcanvasSelectables =
-        offcanvasElement.querySelectorAll("input, button, a");
-    const backdropElement = document.getElementById("navbar__backdrop");
-
-    const documentWidth = document.documentElement.clientWidth;
-    const scrollbarWidth = Math.abs(window.innerWidth - documentWidth);
-
-    const offcanvasFocusTrapHandler = (event) => {
-        if (event.key != "Tab") {
-            return;
-        }
-
-        const firstElement = offcanvasSelectables[0];
-        const lastElement =
-            offcanvasSelectables[offcanvasSelectables.length - 1];
-
-        if (event.shiftKey) {
-            if (document.activeElement === firstElement) {
-                event.preventDefault();
-                lastElement.focus();
-            }
-        } else if (document.activeElement === lastElement) {
-            event.preventDefault();
-            firstElement.focus();
-        }
-    };
-
-    const openOffcanvasNav = () => {
-        offcanvasElement.classList.add("show");
-        offcanvasElement.setAttribute("aria-modal", "true");
-        offcanvasElement.setAttribute("role", "dialog");
-        offcanvasElement.style.visibility = "visible";
-        backdropElement.classList.add("show");
-        document.body.style.overflow = "hidden";
-        // Disable scroll on the html element as well to prevent the offcanvas
-        // nav from being pushed off screen when the page has horizontal scroll,
-        // like downloads.php has.
-        document.documentElement.style.overflow = "hidden";
-        document.body.style.paddingRight = `${scrollbarWidth}px`;
-        offcanvasElement.querySelector(".navbar__link").focus();
-        document.addEventListener("keydown", offcanvasFocusTrapHandler);
-    };
-
-    const closeOffcanvasNav = () => {
-        offcanvasElement.classList.remove("show");
-        offcanvasElement.removeAttribute("aria-modal");
-        offcanvasElement.removeAttribute("role");
-        backdropElement.classList.remove("show");
-        document.removeEventListener("keydown", offcanvasFocusTrapHandler);
-        offcanvasElement.addEventListener(
-            "transitionend",
-            () => {
-                document.body.style.overflow = "auto";
-                document.documentElement.style.overflow = "auto";
-                document.body.style.paddingRight = "0px";
-                offcanvasElement.style.removeProperty("visibility");
-            },
-            { once: true },
-        );
-    };
-
-    const closeOffCanvasByClickOutside = (event) => {
-        if (event.target === backdropElement) {
-            closeOffcanvasNav();
-        }
-    };
-
-    document.getElementById("navbar__menu-link").setAttribute("hidden", "true");
-
-    const menuButton = document.getElementById("navbar__menu-button");
-    menuButton.removeAttribute("hidden");
-    menuButton.addEventListener("click", openOffcanvasNav);
-
-    document
-        .getElementById("navbar__close-button")
-        .addEventListener("click", closeOffcanvasNav);
-
-    backdropElement.addEventListener("click", closeOffCanvasByClickOutside);
 
     /*}}}*/
 
@@ -868,3 +788,25 @@ function applyTheme(theme) {
 }
 
 applyTheme(savedTheme)
+
+const mobileMenuButton = document.getElementById('mobile-menu-button');
+const navMenu = document.getElementById('js-nav-menu');
+const [menuIcon, closeIcon] = ['menu-icon', 'close-icon'].map(id => document.getElementById(id));
+
+const toggleMenu = () => {
+  const isExpanded = mobileMenuButton.getAttribute('aria-expanded') === 'true';
+  navMenu.style.display = isExpanded ? 'none' : 'block';
+  menuIcon.classList.toggle('hidden');
+  closeIcon.classList.toggle('hidden');
+  mobileMenuButton.setAttribute('aria-expanded', !isExpanded);
+};
+
+mobileMenuButton?.addEventListener('click', toggleMenu);
+window.addEventListener('resize', () => {
+  if (window.innerWidth >= 768) {
+    navMenu.style.display = '';
+    menuIcon.classList.remove('hidden');
+    closeIcon.classList.add('hidden');
+    mobileMenuButton.setAttribute('aria-expanded', 'false');
+  }
+});
