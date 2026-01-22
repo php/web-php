@@ -542,6 +542,8 @@ $uri_aliases = [
     "tips.php" => "urlhowto",
     "tips" => "urlhowto",
     "release-candidates.php" => "pre-release-builds",
+
+    "changelog-8.php" => "ChangeLog-8",
 ];
 
 $external_redirects = [
