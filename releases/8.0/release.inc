@@ -20,6 +20,198 @@ common_header(message('common_header', $lang));
 $ohNoText = message('oh_no', $lang);
 $expectedText = message('this_is_expected', $lang);
 
+$comparisons = [
+    [
+        'id' => 'named-arguments',
+        'title' => message('named_arguments_title', $lang),
+        'description' => '<ul>' . message('named_arguments_description', $lang) . '</ul>',
+        'links' => [
+            'RFC|https://wiki.php.net/rfc/named_params',
+            message('documentation', $lang) . "|/manual/$documentation/functions.arguments.php#functions.named-arguments",
+        ],
+        'before' => <<<'PHP'
+            htmlspecialchars($string, ENT_COMPAT | ENT_HTML401, 'UTF-8', false);
+            PHP,
+        'after' => <<<'PHP'
+            htmlspecialchars($string, double_encode: false);
+            PHP,
+    ],
+    [
+        'id' => 'attributes',
+        'title' => message('attributes_title', $lang),
+        'description' => '<p>' . message('attributes_description', $lang) . '</p>',
+        'links' => [
+            'RFC|https://wiki.php.net/rfc/attributes_v2',
+            message('documentation', $lang) . "|/manual/$documentation/language.attributes.php",
+        ],
+        'before' => <<<'PHP'
+            class PostsController
+            {
+                /**
+                 * @Route("/api/posts/{id}", methods={"GET"})
+                 */
+                public function get($id) { /* ... */ }
+            }
+            PHP,
+        'after' => <<<'PHP'
+            class PostsController
+            {
+                #[Route("/api/posts/{id}", methods: ["GET"])]
+                public function get($id) { /* ... */ }
+            }
+            PHP,
+    ],
+    [
+        'id' => 'constructor-property-promotion',
+        'title' => message('constructor_promotion_title', $lang),
+        'description' => '<p>' . message('constructor_promotion_description', $lang) . '</p>',
+        'links' => [
+            'RFC|https://wiki.php.net/rfc/constructor_promotion',
+            message('documentation', $lang) . "|/manual/$documentation/language.oop5.decon.php#language.oop5.decon.constructor.promotion",
+        ],
+        'before' => <<<'PHP'
+            class Point {
+                public float $x;
+                public float $y;
+                public float $z;
+
+                public function __construct(
+                    float $x = 0.0,
+                    float $y = 0.0,
+                    float $z = 0.0
+                ) {
+                    $this->x = $x;
+                    $this->y = $y;
+                    $this->z = $z;
+                }
+            }
+            PHP,
+        'after' => <<<'PHP'
+            class Point {
+                public function __construct(
+                    public float $x = 0.0,
+                    public float $y = 0.0,
+                    public float $z = 0.0,
+                ) {}
+            }
+            PHP,
+    ],
+    [
+        'id' => 'union-types',
+        'title' => message('union_types_title', $lang),
+        'description' => '<p>' . message('union_types_description', $lang) . '</p>',
+        'links' => [
+            'RFC|https://wiki.php.net/rfc/union_types_v2',
+            message('documentation', $lang) . "|/manual/$documentation/language.types.declarations.php#language.types.declarations.union",
+        ],
+        'before' => <<<'PHP'
+            class Number {
+                /** @var int|float */
+                private $number;
+
+                /**
+                 * @param float|int $number
+                 */
+                public function __construct($number) {
+                    $this->number = $number;
+                }
+            }
+
+            new Number('NaN'); //
+            PHP
+            . ' ' . message('ok', $lang),
+        'after' => <<<'PHP'
+            class Number {
+                public function __construct(
+                    private int|float $number
+                ) {}
+            }
+
+            new Number('NaN'); // TypeError
+            PHP,
+    ],
+    [
+        'id' => 'match-expression',
+        'title' => message('match_expression_title', $lang),
+        'description' => message('match_expression_description', $lang),
+        'links' => [
+            'RFC|https://wiki.php.net/rfc/match_expression_v2',
+            message('documentation', $lang) . "|/manual/$documentation/control-structures.match.php",
+        ],
+        'before' => <<<PHP
+            switch (8.0) {
+                case '8.0':
+                    \$result = "{$ohNoText}";
+                    break;
+                case 8.0:
+                    \$result = "{$expectedText}";
+                    break;
+            }
+            echo \$result;
+            //> {$ohNoText}
+            PHP,
+        'after' => <<<PHP
+            echo match (8.0) {
+                '8.0' => "{$ohNoText}",
+                8.0 => "{$expectedText}",
+            };
+            //> {$expectedText}
+            PHP,
+    ],
+    [
+        'id' => 'nullsafe-operator',
+        'title' => message('nullsafe_operator_title', $lang),
+        'description' => '<p>' . message('nullsafe_operator_description', $lang) . '</p>',
+        'links' => ['RFC|https://wiki.php.net/rfc/nullsafe_operator'],
+        'before' => <<<'PHP'
+            $country =  null;
+
+            if ($session !== null) {
+                $user = $session->user;
+
+                if ($user !== null) {
+                    $address = $user->getAddress();
+
+                    if ($address !== null) {
+                        $country = $address->country;
+                    }
+                }
+            }
+            PHP,
+        'after' => <<<'PHP'
+            $country = $session?->user?->getAddress()?->country;
+            PHP,
+    ],
+    [
+        'id' => 'saner-string-to-number-comparisons',
+        'title' => message('saner_string_number_comparisons_title', $lang),
+        'description' => '<p>' . message('saner_string_number_comparisons_description', $lang) . '</p>',
+        'links' => ['RFC|https://wiki.php.net/rfc/string_to_number_comparison'],
+        'before' => <<<'PHP'
+            0 == 'foobar' // true
+            PHP,
+        'after' => <<<'PHP'
+            0 == 'foobar' // false
+            PHP,
+    ],
+    [
+        'id' => 'consistent-type-errors-for-internal-functions',
+        'title' => message('consistent_internal_function_type_errors_title', $lang),
+        'description' => '<p>' . message('consistent_internal_function_type_errors_description', $lang) . '</p>',
+        'links' => ['RFC|https://wiki.php.net/rfc/consistent_type_errors'],
+        'before' => <<<'PHP'
+            strlen([]); // Warning: strlen() expects parameter 1 to be string, array given
+
+            array_chunk([], -1); // Warning: array_chunk(): Size parameter expected to be greater than 0
+            PHP,
+        'after' => <<<'PHP'
+            strlen([]); // TypeError: strlen(): Argument #1 ($str) must be of type string, array given
+
+            array_chunk([], -1); // ValueError: array_chunk(): Argument #2 ($length) must be greater than 0
+            PHP,
+    ],
+];
+
 ?>
     <section class="php8-section php8-section_dark php8-section_header center">
         <div class="page-tools">
@@ -39,356 +231,7 @@ $expectedText = message('this_is_expected', $lang);
         </div>
     </section>
 
-    <section class="php8-section center">
-        <div class="php8-compare">
-            <h2 class="php8-h2" id="named-arguments">
-                <?= message('named_arguments_title', $lang) ?>
-                <a class="php8-rfc" href="https://wiki.php.net/rfc/named_params">RFC</a>
-                <a class="php8-rfc" href="/manual/<?= $documentation ?>/functions.arguments.php#functions.named-arguments"><?= message('documentation', $lang) ?></a>
-            </h2>
-            <div class="php8-compare__main">
-                <div class="php8-compare__block example-contents">
-                    <div class="php8-compare__label">PHP 7</div>
-                    <div class="php8-code phpcode">
-                        <?php highlight_php_trimmed(
-                            <<<'PHP'
-                            htmlspecialchars($string, ENT_COMPAT | ENT_HTML401, 'UTF-8', false);
-                            PHP
-                        );?>
-                    </div>
-                </div>
-                <div class="php8-compare__arrow"></div>
-                <div class="php8-compare__block example-contents">
-                    <div class="php8-compare__label php8-compare__label_new">PHP 8</div>
-                    <div class="php8-code phpcode">
-                        <?php highlight_php_trimmed(
-                            <<<'PHP'
-                            htmlspecialchars($string, double_encode: false);
-                            PHP
-                        );?>
-                    </div>
-                </div>
-            </div>
-            <div class="php8-compare__content">
-                <ul>
-                    <?= message('named_arguments_description', $lang) ?>
-                </ul>
-            </div>
-        </div>
-
-        <div class="php8-compare">
-            <h2 class="php8-h2" id="attributes">
-                <?= message('attributes_title', $lang) ?>
-                <a class="php8-rfc" href="https://wiki.php.net/rfc/attributes_v2">RFC</a>
-                <a class="php8-rfc" href="/manual/<?= $documentation ?>/language.attributes.php"><?= message('documentation', $lang) ?></a>
-            </h2>
-            <div class="php8-compare__main">
-                <div class="php8-compare__block example-contents">
-                    <div class="php8-compare__label">PHP 7</div>
-                    <div class="php8-code phpcode">
-                        <?php highlight_php_trimmed(
-                            <<<'PHP'
-                            class PostsController
-                            {
-                                /**
-                                 * @Route("/api/posts/{id}", methods={"GET"})
-                                 */
-                                public function get($id) { /* ... */ }
-                            }
-                            PHP
-                        );?>
-                    </div>
-                </div>
-                <div class="php8-compare__arrow"></div>
-                <div class="php8-compare__block example-contents">
-                    <div class="php8-compare__label php8-compare__label_new">PHP 8</div>
-                    <div class="php8-code phpcode">
-                        <?php highlight_php_trimmed(
-                            <<<'PHP'
-                            class PostsController
-                            {
-                                #[Route("/api/posts/{id}", methods: ["GET"])]
-                                public function get($id) { /* ... */ }
-                            }
-                            PHP
-                        );?>
-                    </div>
-                </div>
-            </div>
-            <div class="php8-compare__content">
-                <p><?= message('attributes_description', $lang) ?></p>
-            </div>
-        </div>
-
-        <div class="php8-compare">
-            <h2 class="php8-h2" id="constructor-property-promotion">
-                <?= message('constructor_promotion_title', $lang) ?>
-                <a class="php8-rfc" href="https://wiki.php.net/rfc/constructor_promotion">RFC</a>
-                <a class="php8-rfc" href="/manual/<?= $documentation ?>/language.oop5.decon.php#language.oop5.decon.constructor.promotion"><?= message('documentation', $lang) ?></a>
-            </h2>
-            <div class="php8-compare__main">
-                <div class="php8-compare__block example-contents">
-                    <div class="php8-compare__label">PHP 7</div>
-                    <div class="php8-code phpcode">
-                        <?php highlight_php_trimmed(
-                            <<<'PHP'
-                            class Point {
-                                public float $x;
-                                public float $y;
-                                public float $z;
-
-                                public function __construct(
-                                    float $x = 0.0,
-                                    float $y = 0.0,
-                                    float $z = 0.0
-                                ) {
-                                    $this->x = $x;
-                                    $this->y = $y;
-                                    $this->z = $z;
-                                }
-                            }
-                            PHP
-                        );?>
-                    </div>
-                </div>
-                <div class="php8-compare__arrow"></div>
-                <div class="php8-compare__block example-contents">
-                    <div class="php8-compare__label php8-compare__label_new">PHP 8</div>
-                    <div class="php8-code phpcode">
-                        <?php highlight_php_trimmed(
-                            <<<'PHP'
-                            class Point {
-                                public function __construct(
-                                    public float $x = 0.0,
-                                    public float $y = 0.0,
-                                    public float $z = 0.0,
-                                ) {}
-                            }
-                            PHP
-                        );?>
-                    </div>
-                </div>
-            </div>
-            <div class="php8-compare__content">
-                <p><?= message('constructor_promotion_description', $lang) ?></p>
-            </div>
-        </div>
-
-        <div class="php8-compare">
-            <h2 class="php8-h2" id="union-types">
-                <?= message('union_types_title', $lang) ?>
-                <a class="php8-rfc" href="https://wiki.php.net/rfc/union_types_v2">RFC</a>
-                <a class="php8-rfc" href="/manual/<?= $documentation ?>/language.types.declarations.php#language.types.declarations.union"><?= message('documentation', $lang) ?></a>
-            </h2>
-            <div class="php8-compare__main">
-                <div class="php8-compare__block example-contents">
-                    <div class="php8-compare__label">PHP 7</div>
-                    <div class="php8-code phpcode">
-                        <?php highlight_php_trimmed(
-                            <<<'PHP'
-                            class Number {
-                                /** @var int|float */
-                                private $number;
-
-                                /**
-                                 * @param float|int $number
-                                 */
-                                public function __construct($number) {
-                                    $this->number = $number;
-                                }
-                            }
-
-                            new Number('NaN'); //
-                            PHP
-                            . ' ' . message('ok', $lang),
-                        );?>
-                    </div>
-                </div>
-                <div class="php8-compare__arrow"></div>
-                <div class="php8-compare__block example-contents">
-                    <div class="php8-compare__label php8-compare__label_new">PHP 8</div>
-                    <div class="php8-code phpcode">
-                        <?php highlight_php_trimmed(
-                            <<<'PHP'
-                            class Number {
-                                public function __construct(
-                                    private int|float $number
-                                ) {}
-                            }
-
-                            new Number('NaN'); // TypeError
-                            PHP
-                        );?>
-                    </div>
-                </div>
-            </div>
-            <div class="php8-compare__content">
-                <p><?= message('union_types_description', $lang) ?></p>
-            </div>
-        </div>
-
-        <div class="php8-compare">
-            <h2 class="php8-h2" id="match-expression">
-                <?= message('match_expression_title', $lang) ?>
-                <a class="php8-rfc" href="https://wiki.php.net/rfc/match_expression_v2">RFC</a>
-                <a class="php8-rfc" href="/manual/<?= $documentation ?>/control-structures.match.php"><?= message('documentation', $lang) ?></a>
-            </h2>
-            <div class="php8-compare__main">
-                <div class="php8-compare__block example-contents">
-                    <div class="php8-compare__label">PHP 7</div>
-                    <div class="php8-code phpcode">
-                        <?php highlight_php_trimmed(
-                            <<<PHP
-                            switch (8.0) {
-                                case '8.0':
-                                    \$result = "{$ohNoText}";
-                                    break;
-                                case 8.0:
-                                    \$result = "{$expectedText}";
-                                    break;
-                            }
-                            echo \$result;
-                            //> {$ohNoText}
-                            PHP
-                        );?>
-                    </div>
-                </div>
-                <div class="php8-compare__arrow"></div>
-                <div class="php8-compare__block example-contents">
-                    <div class="php8-compare__label php8-compare__label_new">PHP 8</div>
-                    <div class="php8-code phpcode">
-                        <?php highlight_php_trimmed(
-                            <<<PHP
-                            echo match (8.0) {
-                                '8.0' => "{$ohNoText}",
-                                8.0 => "{$expectedText}",
-                            };
-                            //> {$expectedText}
-                            PHP
-                        );?>
-                    </div>
-                </div>
-            </div>
-            <div class="php8-compare__content">
-                <?= message('match_expression_description', $lang) ?>
-            </div>
-        </div>
-
-        <div class="php8-compare">
-            <h2 class="php8-h2" id="nullsafe-operator">
-                <?= message('nullsafe_operator_title', $lang) ?>
-                <a class="php8-rfc" href="https://wiki.php.net/rfc/nullsafe_operator">RFC</a>
-            </h2>
-            <div class="php8-compare__main">
-                <div class="php8-compare__block example-contents">
-                    <div class="php8-compare__label">PHP 7</div>
-                    <div class="php8-code phpcode">
-                        <?php highlight_php_trimmed(
-                            <<<'PHP'
-                            $country =  null;
-
-                            if ($session !== null) {
-                                $user = $session->user;
-
-                                if ($user !== null) {
-                                    $address = $user->getAddress();
-
-                                    if ($address !== null) {
-                                        $country = $address->country;
-                                    }
-                                }
-                            }
-                            PHP
-                        );?>
-                    </div>
-                </div>
-                <div class="php8-compare__arrow"></div>
-                <div class="php8-compare__block example-contents">
-                    <div class="php8-compare__label php8-compare__label_new">PHP 8</div>
-                    <div class="php8-code phpcode">
-                        <?php highlight_php_trimmed(
-                            <<<'PHP'
-                            $country = $session?->user?->getAddress()?->country;
-                            PHP
-                        );?>
-                    </div>
-                </div>
-            </div>
-            <div class="php8-compare__content">
-                <p><?= message('nullsafe_operator_description', $lang) ?></p>
-            </div>
-        </div>
-
-        <div class="php8-compare">
-            <h2 class="php8-h2" id="saner-string-to-number-comparisons">
-                <?= message('saner_string_number_comparisons_title', $lang) ?>
-                <a class="php8-rfc" href="https://wiki.php.net/rfc/string_to_number_comparison">RFC</a>
-            </h2>
-            <div class="php8-compare__main">
-                <div class="php8-compare__block example-contents">
-                    <div class="php8-compare__label">PHP 7</div>
-                    <div class="php8-code phpcode">
-                        <?php highlight_php_trimmed(
-                            <<<'PHP'
-                            0 == 'foobar' // true
-                            PHP
-                        );?>
-                    </div>
-                </div>
-                <div class="php8-compare__arrow"></div>
-                <div class="php8-compare__block example-contents">
-                    <div class="php8-compare__label php8-compare__label_new">PHP 8</div>
-                    <div class="php8-code phpcode">
-                        <?php highlight_php_trimmed(
-                            <<<'PHP'
-                            0 == 'foobar' // false
-                            PHP
-                        );?>
-                    </div>
-                </div>
-            </div>
-            <div class="php8-compare__content">
-                <p><?= message('saner_string_number_comparisons_description', $lang) ?></p>
-            </div>
-        </div>
-
-        <div class="php8-compare">
-            <h2 class="php8-h2" id="consistent-type-errors-for-internal-functions">
-                <?= message('consistent_internal_function_type_errors_title', $lang) ?>
-                <a class="php8-rfc" href="https://wiki.php.net/rfc/consistent_type_errors">RFC</a>
-            </h2>
-            <div class="php8-compare__main">
-                <div class="php8-compare__block example-contents">
-                    <div class="php8-compare__label">PHP 7</div>
-                    <div class="php8-code phpcode">
-                        <?php highlight_php_trimmed(
-                            <<<'PHP'
-                            strlen([]); // Warning: strlen() expects parameter 1 to be string, array given
-
-                            array_chunk([], -1); // Warning: array_chunk(): Size parameter expected to be greater than 0
-                            PHP
-                        );?>
-                    </div>
-                </div>
-                <div class="php8-compare__arrow"></div>
-                <div class="php8-compare__block example-contents">
-                    <div class="php8-compare__label php8-compare__label_new">PHP 8</div>
-                    <div class="php8-code phpcode">
-                        <?php highlight_php_trimmed(
-                            <<<'PHP'
-                            strlen([]); // TypeError: strlen(): Argument #1 ($str) must be of type string, array given
-
-                            array_chunk([], -1); // ValueError: array_chunk(): Argument #2 ($length) must be greater than 0
-                            PHP
-                        );?>
-                    </div>
-                </div>
-            </div>
-            <div class="php8-compare__content">
-                <p><?= message('consistent_internal_function_type_errors_description', $lang) ?></p>
-            </div>
-        </div>
-    </section>
+    <?= feature_comparisons($comparisons, 'PHP 8', 'PHP 7') ?>
 
     <section class="php8-section php8-section_light">
         <h2 class="php8-h2" id="jit_compilation"><?= message('jit_compilation_title', $lang) ?></h2>

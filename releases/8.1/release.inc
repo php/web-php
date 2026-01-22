@@ -17,6 +17,300 @@ include_once __DIR__ . '/common.php';
 
 common_header(message('common_header', $lang));
 
+$comparisons = [
+    [
+        'id' => 'enumerations',
+        'title' => message('enumerations_title', $lang),
+        'description' => message('enumerations_content', $lang),
+        'links' => [
+            'RFC|https://wiki.php.net/rfc/enumerations',
+            message('documentation', $lang) . "|/manual/$documentation/language.enumerations.php",
+        ],
+        'before' => <<<'PHP'
+            class Status
+            {
+                const DRAFT = 'draft';
+                const PUBLISHED = 'published';
+                const ARCHIVED = 'archived';
+            }
+            function acceptStatus(string $status) {...}
+            PHP,
+        'after' => <<<'PHP'
+            enum Status
+            {
+                case Draft;
+                case Published;
+                case Archived;
+            }
+            function acceptStatus(Status $status) {...}
+            PHP,
+    ],
+    [
+        'id' => 'readonly_properties',
+        'title' => message('readonly_properties_title', $lang),
+        'description' => message('readonly_properties_content', $lang),
+        'links' => [
+            'RFC|https://wiki.php.net/rfc/readonly_properties_v2',
+            message('documentation', $lang) . "|/manual/$documentation/language.oop5.properties.php#language.oop5.properties.readonly-properties",
+        ],
+        'before' => <<<'PHP'
+            class BlogData
+            {
+                private Status $status;
+
+                public function __construct(Status $status)
+                {
+                    $this->status = $status;
+                }
+
+                public function getStatus(): Status
+                {
+                    return $this->status;
+                }
+            }
+            PHP,
+        'after' => <<<'PHP'
+            class BlogData
+            {
+                public readonly Status $status;
+
+                public function __construct(Status $status)
+                {
+                    $this->status = $status;
+                }
+            }
+            PHP,
+    ],
+    [
+        'id' => 'first_class_callable_syntax',
+        'title' => message('first_class_callable_syntax_title', $lang),
+        'description' => message('first_class_callable_syntax_content', $lang),
+        'links' => [
+            'RFC|https://wiki.php.net/rfc/first_class_callable_syntax',
+            message('documentation', $lang) . "|/manual/$documentation/functions.first_class_callable_syntax.php",
+        ],
+        'before' => <<<'PHP'
+            $foo = [$this, 'foo'];
+
+            $fn = Closure::fromCallable('strlen');
+            PHP,
+        'after' => <<<'PHP'
+            $foo = $this->foo(...);
+
+            $fn = strlen(...);
+            PHP,
+    ],
+    [
+        'id' => 'new_in_initializers',
+        'title' => message('new_in_initializers_title', $lang),
+        'description' => message('new_in_initializers_content', $lang),
+        'links' => ['RFC|https://wiki.php.net/rfc/new_in_initializers'],
+        'before' => <<<'PHP'
+            class Service
+            {
+                private Logger $logger;
+
+                public function __construct(
+                    ?Logger $logger = null,
+                ) {
+                    $this->logger = $logger ?? new NullLogger();
+                }
+            }
+            PHP,
+        'after' => <<<'PHP'
+            class Service
+            {
+                private Logger $logger;
+
+                public function __construct(
+                    Logger $logger = new NullLogger(),
+                ) {
+                    $this->logger = $logger;
+                }
+            }
+            PHP,
+        'before2' => <<<'PHP'
+            class User
+            {
+                /**
+                 * @Assert\All({
+                 *     @Assert\NotNull,
+                 *     @Assert\Length(min=5)
+                 * })
+                 */
+                public string $name = '';
+            }
+            PHP,
+        'after2' => <<<'PHP'
+            class User
+            {
+                #[\Assert\All(
+                    new \Assert\NotNull,
+                    new \Assert\Length(min: 5))
+                ]
+                public string $name = '';
+            }
+            PHP,
+    ],
+    [
+        'id' => 'pure_intersection_types',
+        'title' => message('pure_intersection_types_title', $lang),
+        'description' => message('pure_intersection_types_content', $lang),
+        'links' => [
+            'RFC|https://wiki.php.net/rfc/pure-intersection-types',
+            message('documentation', $lang) . "|/manual/$documentation/language.types.declarations.php#language.types.declarations.composite.intersection",
+        ],
+        'before' => <<<'PHP'
+            function count_and_iterate(Iterator $value) {
+                if (!($value instanceof Countable)) {
+                    throw new TypeError('value must be Countable');
+                }
+
+                foreach ($value as $val) {
+                    echo $val;
+                }
+
+                count($value);
+            }
+            PHP,
+        'after' => <<<'PHP'
+            function count_and_iterate(Iterator&Countable $value) {
+                foreach ($value as $val) {
+                    echo $val;
+                }
+
+                count($value);
+            }
+            PHP,
+    ],
+    [
+        'id' => 'never_return_type',
+        'title' => message('never_return_type_title', $lang),
+        'description' => message('never_return_type_content', $lang),
+        'links' => [
+            'RFC|https://wiki.php.net/rfc/noreturn_type',
+            message('documentation', $lang) . "|/manual/$documentation/language.types.declarations.php#language.types.declarations.never",
+        ],
+        'before' => <<<'PHP'
+            function redirect(string $uri) {
+                header('Location: ' . $uri);
+                exit();
+            }
+
+            function redirectToLoginPage() {
+                redirect('/login');
+                echo 'Hello'; // <- dead code
+            }
+            PHP,
+        'after' => <<<'PHP'
+            function redirect(string $uri): never {
+                header('Location: ' . $uri);
+                exit();
+            }
+
+            function redirectToLoginPage(): never {
+                redirect('/login');
+                echo 'Hello'; // <- dead code detected by static analysis
+            }
+            PHP,
+    ],
+    [
+        'id' => 'final_class_constants',
+        'title' => message('final_class_constants_title', $lang),
+        'description' => message('final_class_constants_content', $lang),
+        'links' => [
+            'RFC|https://wiki.php.net/rfc/final_class_const',
+            message('documentation', $lang) . "|/manual/$documentation/language.oop5.final.php#language.oop5.final.example.php81",
+        ],
+        'before' => <<<'PHP'
+            class Foo
+            {
+                public const XX = "foo";
+            }
+
+            class Bar extends Foo
+            {
+                public const XX = "bar"; // No error
+            }
+            PHP,
+        'after' => <<<'PHP'
+            class Foo
+            {
+                final public const XX = "foo";
+            }
+
+            class Bar extends Foo
+            {
+                public const XX = "bar"; // Fatal error
+            }
+            PHP,
+    ],
+    [
+        'id' => 'explicit_octal_numeral_notation',
+        'title' => message('octal_numeral_notation_title', $lang),
+        'description' => message('octal_numeral_notation_content', $lang),
+        'links' => [
+            'RFC|https://wiki.php.net/rfc/explicit_octal_notation',
+            message('documentation', $lang) . "|/manual/$documentation/migration81.new-features.php#migration81.new-features.core.octal-literal-prefix",
+        ],
+        'before' => <<<'PHP'
+            016 === 16; // false because `016` is octal for `14` and it's confusing
+            016 === 14; // true
+            PHP,
+        'after' => <<<'PHP'
+            0o16 === 16; // false — not confusing with explicit notation
+            0o16 === 14; // true
+            PHP,
+    ],
+    [
+        'id' => 'fibers',
+        'title' => message('fibers_title', $lang),
+        'description' => message('fibers_content', $lang),
+        'links' => [
+            'RFC|https://wiki.php.net/rfc/fibers',
+            message('documentation', $lang) . "|/manual/$documentation/language.fibers.php",
+        ],
+        'before' => <<<'PHP'
+            $httpClient->request('https://example.com/')
+                    ->then(function (Response $response) {
+                        return $response->getBody()->buffer();
+                    })
+                    ->then(function (string $responseBody) {
+                        print json_decode($responseBody)['code'];
+                    });
+            PHP,
+        'after' => <<<'PHP'
+            $response = $httpClient->request('https://example.com/');
+            print json_decode($response->getBody()->buffer())['code'];
+            PHP,
+    ],
+    [
+        'id' => 'array_unpacking_support_for_string_keyed_arrays',
+        'title' => message('array_unpacking_title', $lang),
+        'description' => message('array_unpacking_content', $lang),
+        'links' => [
+            'RFC|https://wiki.php.net/rfc/array_unpacking_string_keys',
+            message('documentation', $lang) . "|/manual/$documentation/language.types.array.php#language.types.array.unpacking",
+        ],
+        'before' => <<<'PHP'
+            $arrayA = ['a' => 1];
+            $arrayB = ['b' => 2];
+
+            $result = array_merge(['a' => 0], $arrayA, $arrayB);
+
+            // ['a' => 1, 'b' => 2]
+            PHP,
+        'after' => <<<'PHP'
+            $arrayA = ['a' => 1];
+            $arrayB = ['b' => 2];
+
+            $result = ['a' => 0, ...$arrayA, ...$arrayB];
+
+            // ['a' => 1, 'b' => 2]
+            PHP,
+    ],
+];
+
 ?>
 <section class="php8-section php8-section_dark php8-section_header center">
     <div class="page-tools">
@@ -36,518 +330,7 @@ common_header(message('common_header', $lang));
     </div>
 </section>
 
-<section class="php8-section center">
-    <div class="php8-compare">
-        <h2 class="php8-h2" id="enumerations">
-            <?= message('enumerations_title', $lang) ?>
-            <a class="php8-rfc" href="https://wiki.php.net/rfc/enumerations">RFC</a>
-            <a class="php8-rfc" href="/manual/<?= $documentation ?>/language.enumerations.php"><?= message('documentation', $lang) ?></a>
-        </h2>
-        <div class="php8-compare__main">
-            <div class="php8-compare__block example-contents">
-                <div class="php8-compare__label">PHP &lt; 8.1</div>
-                <div class="php8-code phpcode">
-                    <?php highlight_php_trimmed(
-                        <<<'PHP'
-class Status
-{
-    const DRAFT = 'draft';
-    const PUBLISHED = 'published';
-    const ARCHIVED = 'archived';
-}
-function acceptStatus(string $status) {...}
-PHP
-
-                    );?>
-                </div>
-            </div>
-            <div class="php8-compare__arrow"></div>
-            <div class="php8-compare__block example-contents">
-                <div class="php8-compare__label php8-compare__label_new">PHP 8.1</div>
-                <div class="php8-code phpcode">
-                    <?php highlight_php_trimmed(
-                        <<<'PHP'
-enum Status
-{
-    case Draft;
-    case Published;
-    case Archived;
-}
-function acceptStatus(Status $status) {...}
-PHP
-
-                    );?>
-                </div>
-            </div>
-        </div>
-        <div class="php8-compare__content">
-            <?= message('enumerations_content', $lang) ?>
-        </div>
-    </div>
-
-    <div class="php8-compare">
-        <h2 class="php8-h2" id="readonly_properties">
-            <?= message('readonly_properties_title', $lang) ?>
-            <a class="php8-rfc" href="https://wiki.php.net/rfc/readonly_properties_v2">RFC</a>
-            <a class="php8-rfc" href="/manual/<?= $documentation ?>/language.oop5.properties.php#language.oop5.properties.readonly-properties"><?= message('documentation', $lang) ?></a>
-        </h2>
-        <div class="php8-compare__main">
-            <div class="php8-compare__block example-contents">
-                <div class="php8-compare__label">PHP &lt; 8.1</div>
-                <div class="php8-code phpcode">
-                    <?php highlight_php_trimmed(
-                        <<<'PHP'
-class BlogData
-{
-    private Status $status;
-
-    public function __construct(Status $status)
-    {
-        $this->status = $status;
-    }
-
-    public function getStatus(): Status
-    {
-        return $this->status;
-    }
-}
-PHP
-
-                    );?>
-                </div>
-            </div>
-            <div class="php8-compare__arrow"></div>
-            <div class="php8-compare__block example-contents">
-                <div class="php8-compare__label php8-compare__label_new">PHP 8.1</div>
-                <div class="php8-code phpcode">
-                    <?php highlight_php_trimmed(
-                            <<<'PHP'
-class BlogData
-{
-    public readonly Status $status;
-
-    public function __construct(Status $status)
-    {
-        $this->status = $status;
-    }
-}
-PHP
-                    );?>
-                </div>
-            </div>
-        </div>
-        <div class="php8-compare__content">
-            <?= message('readonly_properties_content', $lang) ?>
-        </div>
-    </div>
-
-    <div class="php8-compare">
-        <h2 class="php8-h2" id="first_class_callable_syntax">
-            <?= message('first_class_callable_syntax_title', $lang) ?>
-            <a class="php8-rfc" href="https://wiki.php.net/rfc/first_class_callable_syntax">RFC</a>
-            <a class="php8-rfc" href="/manual/<?= $documentation ?>/functions.first_class_callable_syntax.php"><?= message('documentation', $lang) ?></a>
-        </h2>
-        <div class="php8-compare__main">
-            <div class="php8-compare__block example-contents">
-                <div class="php8-compare__label">PHP &lt; 8.1</div>
-                <div class="php8-code phpcode">
-                    <?php highlight_php_trimmed(
-                        <<<'PHP'
-$foo = [$this, 'foo'];
-
-$fn = Closure::fromCallable('strlen');
-PHP
-                    );?>
-                </div>
-            </div>
-            <div class="php8-compare__arrow"></div>
-            <div class="php8-compare__block example-contents">
-                <div class="php8-compare__label php8-compare__label_new">PHP 8.1</div>
-                <div class="php8-code phpcode">
-                    <?php highlight_php_trimmed(
-                        <<<'PHP'
-$foo = $this->foo(...);
-
-$fn = strlen(...);
-PHP
-                    );?>
-                </div>
-            </div>
-        </div>
-        <div class="php8-compare__content">
-            <?= message('first_class_callable_syntax_content', $lang) ?>
-        </div>
-    </div>
-
-    <div class="php8-compare">
-        <h2 class="php8-h2" id="new_in_initializers">
-            <?= message('new_in_initializers_title', $lang) ?>
-            <a class="php8-rfc" href="https://wiki.php.net/rfc/new_in_initializers">RFC</a>
-        </h2>
-        <div class="php8-compare__main">
-            <div class="php8-compare__block example-contents">
-                <div class="php8-compare__label">PHP &lt; 8.1</div>
-                <div class="php8-code phpcode">
-                    <?php highlight_php_trimmed(
-                        <<<'PHP'
-class Service
-{
-    private Logger $logger;
-
-    public function __construct(
-        ?Logger $logger = null,
-    ) {
-        $this->logger = $logger ?? new NullLogger();
-    }
-}
-PHP
-                    );?>
-                </div>
-            </div>
-            <div class="php8-compare__arrow"></div>
-            <div class="php8-compare__block example-contents">
-                <div class="php8-compare__label php8-compare__label_new">PHP 8.1</div>
-                <div class="php8-code phpcode">
-                    <?php highlight_php_trimmed(
-                        <<<'PHP'
-class Service
-{
-    private Logger $logger;
-
-    public function __construct(
-        Logger $logger = new NullLogger(),
-    ) {
-        $this->logger = $logger;
-    }
-}
-PHP
-                    );?>
-                </div>
-            </div>
-        </div>
-
-        <div class="php8-compare__content php8-compare__content--spaced">
-            <?= message('new_in_initializers_content', $lang) ?>
-        </div>
-        <div class="php8-compare__main">
-            <div class="php8-compare__block example-contents">
-                <div class="php8-compare__label">PHP &lt; 8.1</div>
-                <div class="php8-code phpcode">
-                    <?php highlight_php_trimmed(
-                        <<<'PHP'
-class User
-{
-    /**
-     * @Assert\All({
-     *     @Assert\NotNull,
-     *     @Assert\Length(min=5)
-     * })
-     */
-    public string $name = '';
-}
-PHP
-                    );?>
-                </div>
-            </div>
-            <div class="php8-compare__arrow"></div>
-            <div class="php8-compare__block example-contents">
-                <div class="php8-compare__label php8-compare__label_new">PHP 8.1</div>
-                <div class="php8-code phpcode">
-                    <?php highlight_php_trimmed(
-                        <<<'PHP'
-class User
-{
-    #[\Assert\All(
-        new \Assert\NotNull,
-        new \Assert\Length(min: 5))
-    ]
-    public string $name = '';
-}
-PHP
-                    );?>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="php8-compare">
-        <h2 class="php8-h2" id="pure_intersection_types">
-            <?= message('pure_intersection_types_title', $lang) ?>
-            <a class="php8-rfc" href="https://wiki.php.net/rfc/pure-intersection-types">RFC</a>
-            <a class="php8-rfc" href="/manual/<?= $documentation ?>/language.types.declarations.php#language.types.declarations.composite.intersection"><?= message('documentation', $lang) ?></a>
-        </h2>
-        <div class="php8-compare__main">
-            <div class="php8-compare__block example-contents">
-                <div class="php8-compare__label">PHP &lt; 8.1</div>
-                <div class="php8-code phpcode">
-                    <?php highlight_php_trimmed(
-                        <<<'PHP'
-function count_and_iterate(Iterator $value) {
-    if (!($value instanceof Countable)) {
-        throw new TypeError('value must be Countable');
-    }
-
-    foreach ($value as $val) {
-        echo $val;
-    }
-
-    count($value);
-}
-PHP
-
-                    );?>
-                </div>
-            </div>
-            <div class="php8-compare__arrow"></div>
-            <div class="php8-compare__block example-contents">
-                <div class="php8-compare__label php8-compare__label_new">PHP 8.1</div>
-                <div class="php8-code phpcode">
-                    <?php highlight_php_trimmed(
-                        <<<'PHP'
-function count_and_iterate(Iterator&Countable $value) {
-    foreach ($value as $val) {
-        echo $val;
-    }
-
-    count($value);
-}
-PHP
-                    );?>
-                </div>
-            </div>
-        </div>
-        <div class="php8-compare__content">
-            <?= message('pure_intersection_types_content', $lang) ?>
-        </div>
-    </div>
-
-    <div class="php8-compare">
-        <h2 class="php8-h2" id="never_return_type">
-            <?= message('never_return_type_title', $lang) ?>
-            <a class="php8-rfc" href="https://wiki.php.net/rfc/noreturn_type">RFC</a>
-            <a class="php8-rfc" href="/manual/<?= $documentation ?>/language.types.declarations.php#language.types.declarations.never"><?= message('documentation', $lang) ?></a>
-        </h2>
-        <div class="php8-compare__main">
-            <div class="php8-compare__block example-contents">
-                <div class="php8-compare__label">PHP &lt; 8.1</div>
-                <div class="php8-code phpcode">
-                    <?php highlight_php_trimmed(
-                        <<<'PHP'
-function redirect(string $uri) {
-    header('Location: ' . $uri);
-    exit();
-}
-
-function redirectToLoginPage() {
-    redirect('/login');
-    echo 'Hello'; // <- dead code
-}
-PHP
-
-                    );?>
-                </div>
-            </div>
-            <div class="php8-compare__arrow"></div>
-            <div class="php8-compare__block example-contents">
-                <div class="php8-compare__label php8-compare__label_new">PHP 8.1</div>
-                <div class="php8-code phpcode">
-                    <?php highlight_php_trimmed(
-                        <<<'PHP'
-function redirect(string $uri): never {
-    header('Location: ' . $uri);
-    exit();
-}
-
-function redirectToLoginPage(): never {
-    redirect('/login');
-    echo 'Hello'; // <- dead code detected by static analysis
-}
-PHP
-
-                    );?>
-                </div>
-            </div>
-        </div>
-        <div class="php8-compare__content">
-            <?= message('never_return_type_content', $lang) ?>
-        </div>
-    </div>
-
-    <div class="php8-compare">
-        <h2 class="php8-h2" id="final_class_constants">
-            <?= message('final_class_constants_title', $lang) ?>
-            <a class="php8-rfc" href="https://wiki.php.net/rfc/final_class_const">RFC</a>
-            <a class="php8-rfc" href="/manual/<?= $documentation ?>/language.oop5.final.php#language.oop5.final.example.php81"><?= message('documentation', $lang) ?></a>
-        </h2>
-        <div class="php8-compare__main">
-            <div class="php8-compare__block example-contents">
-                <div class="php8-compare__label">PHP &lt; 8.1</div>
-                <div class="php8-code phpcode">
-                    <?php highlight_php_trimmed(
-                        <<<'PHP'
-class Foo
-{
-    public const XX = "foo";
-}
-
-class Bar extends Foo
-{
-    public const XX = "bar"; // No error
-}
-PHP
-
-                    );?>
-                </div>
-            </div>
-            <div class="php8-compare__arrow"></div>
-            <div class="php8-compare__block example-contents">
-                <div class="php8-compare__label php8-compare__label_new">PHP 8.1</div>
-                <div class="php8-code phpcode">
-                    <?php highlight_php_trimmed(
-                        <<<'PHP'
-class Foo
-{
-    final public const XX = "foo";
-}
-
-class Bar extends Foo
-{
-    public const XX = "bar"; // Fatal error
-}
-PHP
-
-                    );?>
-                </div>
-            </div>
-        </div>
-        <div class="php8-compare__content">
-            <?= message('final_class_constants_content', $lang) ?>
-        </div>
-    </div>
-
-    <div class="php8-compare">
-        <h2 class="php8-h2" id="explicit_octal_numeral_notation">
-            <?= message('octal_numeral_notation_title', $lang) ?>
-            <a class="php8-rfc" href="https://wiki.php.net/rfc/explicit_octal_notation">RFC</a>
-            <a class="php8-rfc" href="/manual/<?= $documentation ?>/migration81.new-features.php#migration81.new-features.core.octal-literal-prefix"><?= message('documentation', $lang) ?></a>
-        </h2>
-        <div class="php8-compare__main">
-            <div class="php8-compare__block example-contents">
-                <div class="php8-compare__label">PHP &lt; 8.1</div>
-                <div class="php8-code phpcode">
-                    <?php highlight_php_trimmed(
-                        <<<'PHP'
-016 === 16; // false because `016` is octal for `14` and it's confusing
-016 === 14; // true
-PHP
-
-                    );?>
-                </div>
-            </div>
-            <div class="php8-compare__arrow"></div>
-            <div class="php8-compare__block example-contents">
-                <div class="php8-compare__label php8-compare__label_new">PHP 8.1</div>
-                <div class="php8-code phpcode">
-                    <?php highlight_php_trimmed(
-                        <<<'PHP'
-0o16 === 16; // false — not confusing with explicit notation
-0o16 === 14; // true
-PHP
-                    );?>
-                </div>
-            </div>
-        </div>
-        <div class="php8-compare__content">
-            <?= message('octal_numeral_notation_content', $lang) ?>
-        </div>
-    </div>
-
-    <div class="php8-compare">
-        <h2 class="php8-h2" id="fibers">
-            <?= message('fibers_title', $lang) ?>
-            <a class="php8-rfc" href="https://wiki.php.net/rfc/fibers">RFC</a>
-            <a class="php8-rfc" href="/manual/<?= $documentation ?>/language.fibers.php"><?= message('documentation', $lang) ?></a>
-        </h2>
-        <div class="php8-compare__main">
-            <div class="php8-compare__block example-contents">
-                <div class="php8-compare__label">PHP &lt; 8.1</div>
-                <div class="php8-code phpcode">
-                    <?php highlight_php_trimmed(
-                        <<<'PHP'
-$httpClient->request('https://example.com/')
-        ->then(function (Response $response) {
-            return $response->getBody()->buffer();
-        })
-        ->then(function (string $responseBody) {
-            print json_decode($responseBody)['code'];
-        });
-PHP
-
-                    );?>
-                </div>
-            </div>
-            <div class="php8-compare__arrow"></div>
-            <div class="php8-compare__block example-contents">
-                <div class="php8-compare__label php8-compare__label_new">PHP 8.1</div>
-                <div class="php8-code phpcode">
-                    <?php highlight_php_trimmed(
-                        <<<'PHP'
-$response = $httpClient->request('https://example.com/');
-print json_decode($response->getBody()->buffer())['code'];
-PHP
-                    );?>
-                </div>
-            </div>
-        </div>
-        <div class="php8-compare__content">
-            <?= message('fibers_content', $lang) ?>
-        </div>
-    </div>
-
-    <div class="php8-compare">
-        <h2 class="php8-h2" id="array_unpacking_support_for_string_keyed_arrays">
-            <?= message('array_unpacking_title', $lang) ?>
-            <a class="php8-rfc" href="https://wiki.php.net/rfc/array_unpacking_string_keys">RFC</a>
-            <a class="php8-rfc" href="/manual/<?= $documentation ?>/language.types.array.php#language.types.array.unpacking"><?= message('documentation', $lang) ?></a>
-        </h2>
-        <div class="php8-compare__main">
-            <div class="php8-compare__block example-contents">
-                <div class="php8-compare__label">PHP &lt; 8.1</div>
-                <div class="php8-code phpcode">
-                    <?php highlight_php_trimmed(
-                        <<<'PHP'
-$arrayA = ['a' => 1];
-$arrayB = ['b' => 2];
-
-$result = array_merge(['a' => 0], $arrayA, $arrayB);
-
-// ['a' => 1, 'b' => 2]
-PHP
-                    );?>
-                </div>
-            </div>
-            <div class="php8-compare__arrow"></div>
-            <div class="php8-compare__block example-contents">
-                <div class="php8-compare__label php8-compare__label_new">PHP 8.1</div>
-                <div class="php8-code phpcode">
-                    <?php highlight_php_trimmed(
-                        <<<'PHP'
-$arrayA = ['a' => 1];
-$arrayB = ['b' => 2];
-
-$result = ['a' => 0, ...$arrayA, ...$arrayB];
-
-// ['a' => 1, 'b' => 2]
-PHP
-                    );?>
-                </div>
-            </div>
-        </div>
-        <div class="php8-compare__content">
-            <?= message('array_unpacking_content', $lang) ?>
-        </div>
-    </div>
-</section>
+<?= feature_comparisons($comparisons, 'PHP 8.1', 'PHP < 8.1') ?>
 
 <section class="php8-section center php8-section_light php8-columns">
     <div class="php8-column">
