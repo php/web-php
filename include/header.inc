@@ -149,6 +149,7 @@ if (!isset($config["languages"])) {
       tabindex="-1"
       class="navbar__offcanvas"
       aria-label="Menu"
+      role="navigation"
     >
       <button
         id="navbar__close-button"
