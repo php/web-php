@@ -35,6 +35,7 @@ $config
         'indentation_type' => true,
         'is_null' => true,
         'line_ending' => true,
+        'modifier_keywords' => true,
         'new_with_parentheses' => true,
         'no_extra_blank_lines' => true,
         'no_mixed_echo_print' => true,
@@ -64,7 +65,6 @@ $config
         ],
         'trim_array_spaces' => true,
         'unary_operator_spaces' => true,
-        'visibility_required' => true,
         'void_return' => true,
         'whitespace_after_comma_in_array' => true,
     ]);
