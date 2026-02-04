@@ -260,6 +260,8 @@ changelog_header(8, $MINOR_VERSIONS);
   <li>Implement <?php githubissuel('php/php-src', 15680); ?> (Enhance zend_dump_op_array to properly represent non-printable characters in string literals).</li>
   <li>Fixed bug <?php githubissuel('php/php-src', 17442); ?> (Engine UAF with reference assign and dtor).</li>
   <li>Do not use RTLD_DEEPBIND if dlmopen is available.</li>
+  <li>Implement <?php githubissuel('php/php-src', 17725); ?> (It is now allowed to substitute static with self or the concrete class name
+      in final subclasses)</li>
 </ul></li>
 <li>BCMath:
 <ul>
