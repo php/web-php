@@ -44,9 +44,9 @@ function quickref_table($functions, $sort = true): void
 
 // Open directory, fall back to English,
 // if there is no dir for that language
-$dirh = @opendir($_SERVER['DOCUMENT_ROOT'] . "/manual/$LANG");
-if (!$dirh) {
-    error_noservice();
+$path = $_SERVER['DOCUMENT_ROOT'] . "/manual/$LANG";
+if (!is_dir($path) || !is_readable($path) || !$dirh = opendir($path)) {
+  error_noservice();
 }
 
 $functions = $maybe = $temp = $parts = [];

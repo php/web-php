@@ -14,7 +14,7 @@ function get_actual_download_file($file)
     // Find out what is the exact file requested
     $found = false;
     foreach ($possible_files as $name => $log) {
-        if (@file_exists($_SERVER['DOCUMENT_ROOT'] . '/distributions/' . $name)) {
+        if (file_exists($_SERVER['DOCUMENT_ROOT'] . '/distributions/' . $name)) {
             $found = $name;
             break;
         }

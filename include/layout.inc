@@ -94,8 +94,11 @@ function make_image($file, $alt = false, $align = false, $extras = false,
     // If no / was provided at the start of $dir, add it
     $webdir = $_SERVER['MYSITE'] . ($dir[0] == '/' ? '' : '/') . $dir;
 
-    // Get width and height values if possible
-    if ($addsize && ($size = @getimagesize($_SERVER['DOCUMENT_ROOT'] . "$dir/$file"))) {
+  // Get width and height values if possible
+    $filePath = $_SERVER['DOCUMENT_ROOT'] . "$dir/$file";
+    if (!file_exists($filePath)) {
+        $sizeparams = '';
+    } else if ($addsize && ($size = getimagesize($filePath))) {
         $sizeparams = ' ' . trim($size[3]);
     } else {
         $sizeparams = '';
@@ -194,14 +197,14 @@ function download_link($file, $title): void
         $local_file = "distributions/$file";
     }
 
-    if (@file_exists($local_file . ".asc")) {
+    if (file_exists($local_file . ".asc")) {
         echo " ";
         $sig_link = "/distributions/$file.asc";
         echo make_link($sig_link, "(sig)");
     }
 
     // Try to get the size of the file
-    $size = @filesize($local_file);
+    $size = file_get_size($local_file);
 
     // Print out size in bytes (if size is
     // less then 1Kb, or else in Kb)

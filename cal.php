@@ -253,8 +253,11 @@ function display_events_for_day($day, $events): void
 // Find a single event in the events file by ID
 function load_event($id)
 {
+    $path = "backend/events.csv";
+    if (!file_exists($path) || !is_readable($path)) { return false; }
+
     // Open events CSV file, return on error
-    $fp = @fopen("backend/events.csv",'r');
+    $fp = fopen($path,'r');
     if (!$fp) { return false; }
 
     // Read as we can, event by event
@@ -289,7 +292,10 @@ function load_events($from, $whole_month = false)
     $events = $seen = [];
 
     // Try to open the events file for reading, return if unable to
-    $fp = @fopen("backend/events.csv",'r');
+    $path = "backend/events.csv";
+    if (!file_exists($path) || !is_readable($path)) { return false; }
+
+    $fp = fopen($path,'r');
     if (!$fp) { return false; }
 
     // For all events, read in the event and check it if fits our scope
@@ -357,7 +363,9 @@ function read_event($fp)
     ] = $linearr;
 
     // Get info on recurring event
-    @[$recur, $recur_day] = explode(":", $recur, 2);
+    $recurParts = explode(":", $recur, 2);
+    $recur = $recurParts[0];
+    $recur_day = $recurParts[1] ?? null;
 
     // Return with SQL-resultset like array
     return [
