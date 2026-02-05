@@ -43,10 +43,10 @@ site_header("News Archive - 2001", ["cache" => true]);
 
 <p>
  <span class="newsdate">[18-Oct-2001]</span>
- <a href="http://gtk.php.net/">PHP-GTK</a>
- <a href="http://gtk.php.net/docs.php">documentation</a> is starting
+ <a href="https://qa.php.net/">PHP-GTK</a>
+ <a href="https://gtk.php.net/manual/en/html/index.html">documentation</a> is starting
  to be more filled out. The manual is now rebuilt every night and
- <a href="http://gtk.php.net/download-docs.php">downloadable versions</a>
+ <a href="https://gtk.php.net/documentation.php">downloadable versions</a>
  of it in different formats are also available. If you have been working with
  PHP-GTK and would like to contribute to the documentation effort, please
  let us know.
@@ -105,7 +105,7 @@ site_header("News Archive - 2001", ["cache" => true]);
 
 <hr>
 
-<?php news_image("http://gtk.php.net/", "php-gtk-white.gif", "PHP-GTK"); ?>
+<?php news_image("https://qa.php.net/", "php-gtk-white.gif", "PHP-GTK"); ?>
 <h1>PHP-GTK version 0.1 released</h1>
 
 <p>
@@ -123,7 +123,7 @@ site_header("News Archive - 2001", ["cache" => true]);
  A talk on PHP-GTK was presented by Andrei Zmievski and Frank Kromann at the 2001
  O'Reilly Open Source Conference in San Diego. The slides from the talk can be
  <a href="http://conf.php.net/sd-gtk">viewed online</a>.
- For more information, visit <a href="http://gtk.php.net/">the PHP-GTK website</a>.
+ For more information, visit <a href="https://qa.php.net/">the PHP-GTK website</a>.
 </p>
 
 <hr>
@@ -294,14 +294,14 @@ site_header("News Archive - 2001", ["cache" => true]);
 
 <hr>
 
-<?php news_image("http://gtk.php.net/", "php-gtk-white.gif", "PHP-GTK"); ?>
+<?php news_image("https://qa.php.net/", "php-gtk-white.gif", "PHP-GTK"); ?>
 <h1>Announcing PHP-GTK</h1>
 <p>
  <span class="newsdate">[01-Mar-2001]</span>
  The first release of PHP-GTK is now available. PHP-GTK is a PHP extension that
  provides an object-oriented interface to the GTK+ toolkit and enables you to write
  client-side cross-platform GUI applications. For more information, visit
- <a href="http://gtk.php.net/">http://gtk.php.net/</a>.
+ <a href="https://qa.php.net/">https://gtk.php.net/</a>.
 </p>
 
 <hr>

@@ -25,7 +25,7 @@ site_header("A Tourist's Guide", ["current" => "help"]);
  This is the home of the <a href="/downloads.php">download page</a>, for
  everyone to get the latest version of the PHP source code and binaries
  for Windows. The current and next-to-current versions are available there.
- (There is also a <a href="http://museum.php.net/">PHP Museum</a>, which has
+ (There is also a <a href="https://museum.php.net/">PHP Museum</a>, which has
  all of the source distributions since June 1996.)
 </p>
 
