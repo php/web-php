@@ -57,6 +57,8 @@ switch ($options['os']) {
     case 'windows':
         if($options['osvariant'] === "{$options['os']}-docker") {
             $file = "{$options['osvariant']}-{$options['usage']}";
+        } elseif($options['osvariant'] === "{$options['os']}-scoop") {
+            $file = "{$options['osvariant']}-" . ($options['version'] == $latestPhpVersion ? 'main' : 'versions');
         } else {
             $file = "{$options['osvariant']}";
         }
