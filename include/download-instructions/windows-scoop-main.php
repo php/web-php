@@ -6,6 +6,6 @@ On the command line, run the following commands:
 powershell -c "irm https://get.scoop.sh | iex"
 
 # Download and install PHP.
-scoop bucket add versions
-scoop install php<?= $versionNoDot; ?>
+scoop bucket add main
+scoop install main/php
 </code></pre>
