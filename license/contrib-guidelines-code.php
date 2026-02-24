@@ -29,14 +29,4 @@ site_header("Contributor Guidelines for Code Developers", ["current" => "help"])
     <li>Extensions which link to GPL-licensed libraries will not be accepted.</li>
 </ul>
 
-<h2>Guidelines for Related Projects</h2>
-
-<p>
-  For related projects, please refer to the Project websites:
-</p>
-<ul>
-  <li><a href="https://pecl.php.net/copyright.php">PECL</a></li>
-  <li><a href="https://pear.php.net/copyright.php">PEAR</a></li>
-</ul>
-
 <?php site_footer();
