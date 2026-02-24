@@ -12,7 +12,6 @@ $SIDEBAR_DATA = <<<EOF
         <li><a href="#web-lic">PHP Website</a></li>
         <li><a href="#logo-lic">PHP Logo</a></li>
         <li><a href="#faq-lic">FAQ's</a></li>
-        <li><a href="#other-lic">Licensing information for related projects</a></li>
     </ol>
 </aside>
 EOF;
@@ -193,11 +192,11 @@ site_header("License Information", ["current" => "help"]);
 
 <p>
     While the OSI approved versions 3.0 and 3.01 of the PHP License through their legacy approval process, the licenses
-    were not compatible with the GPL. Additionally, some of the wording in clauses 4, 5, and 6 was challenging or
-    impossible to enforce, and various readings and interpretations sometimes caused confusion among distributors.
-    As a result, the PHP Group decided to invoke clause 5 of the PHP License to publish a new version. The new version
-    resolves all problems with the PHP License (perceived or actual) while preserving the rights granted by
-    contributors and the rights granted to users.
+    were not compatible with the GPL. Additionally, clauses 4, 5, and 6 were challenging or impossible to enforce, and
+    various readings and interpretations sometimes caused confusion among distributors. As a result, the PHP Group
+    decided to invoke clause 5 of the PHP License to publish a new version. The new version resolves all problems with
+    the PHP License (perceived or actual) while preserving the rights granted by contributors and the rights granted to
+    users.
 </p>
 
 <h3>Change in licensing from PHP 4 and later</h3>
