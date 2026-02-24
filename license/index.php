@@ -212,16 +212,4 @@ site_header("License Information", ["current" => "help"]);
     by more people.
 </p>
 
-<a id="other-lic"></a>
-<h2>Licensing information for related projects</h2>
-
-<p>
-    For related projects, please refer to licensing information on the project websites:
-</p>
-
-<ul>
-    <li><a href="https://pecl.php.net/copyright.php">PECL</a></li>
-    <li><a href="https://pear.php.net/copyright.php">PEAR</a></li>
-</ul>
-
 <?php site_footer(['sidebar' => $SIDEBAR_DATA]);
