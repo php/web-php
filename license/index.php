@@ -51,7 +51,7 @@ site_header("License Information", ["current" => "help"]);
 
 <p>
     Copyright &copy; The PHP Group and Contributors.<br>
-    Copyright &copy; Zend by Perforce.
+    Copyright &copy; Zend Technologies Ltd., a subsidiary company of Perforce Software, Inc.
 </p>
 
 <p>
