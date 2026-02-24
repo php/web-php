@@ -15,6 +15,7 @@ const LANGUAGES = [
     'tr' => 'Türkçe',
     'uk' => 'Українська',
     'zh' => '简体中文',
+    'vi' => 'Tiếng Việt',
 ];
 
 function common_header(string $description): void {
