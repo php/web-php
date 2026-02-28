@@ -43,6 +43,10 @@ pre.line-numbers .line-numbers-rows > span:before {
     padding-right: 1em !important;
 }
 
+.token.operator {
+    background: transparent !important;
+}
+
 div.code-toolbar > .toolbar > .toolbar-item > a, div.code-toolbar > .toolbar > .toolbar-item > button, div.code-toolbar > .toolbar > .toolbar-item > span {
     color: #000;
     background: transparent;
