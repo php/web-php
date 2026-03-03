@@ -96,3 +96,11 @@ button.copy-to-clipboard-button:hover {
 .instructions .sha256 {
     word-break: break-all;
 }
+
+.content-box .code-toolbar {
+    margin: 0 0 1rem;
+}
+
+.content-box .code-toolbar pre.small {
+    padding: 0.75rem;
+}
