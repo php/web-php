@@ -457,6 +457,16 @@ $uri_aliases = [
     "language.oop5.reflection" => "book.reflection", // BC
     "::" => "language.oop5.paamayim-nekudotayim",
 
+    "__line__" => "language.constants.magic",
+    "__file__" => "language.constants.magic",
+    "__dir__" => "language.constants.magic",
+    "__function__" => "language.constants.magic",
+    "__class__" => "language.constants.magic",
+    "__trait__" => "language.constants.magic",
+    "__method__" => "language.constants.magic",
+    "__property__" => "language.constants.magic",
+    "__namespace__" => "language.constants.magic",
+
     "__construct" => "language.oop5.decon",
     "__destruct" => "language.oop5.decon",
     "__call" => "language.oop5.overloading",
