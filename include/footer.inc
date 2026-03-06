@@ -101,14 +101,14 @@ if (!empty($_SERVER['BASE_PAGE'])
  $jsfiles = ["ext/jquery-3.6.0.min.js", "ext/FuzzySearch.min.js", "ext/mousetrap.min.js", "ext/jquery.scrollTo.min.js", "search.js", "common.js"];
  foreach ($jsfiles as $filename) {
    $path = dirname(__DIR__) . '/js/' . $filename;
-   echo '<script src="/cached.php?t=' . @filemtime($path) . '&amp;f=/js/' . $filename . '"></script>' . "\n";
+   echo '<script src="/cached.php?t=' . filemtime($path) . '&amp;f=/js/' . $filename . '"></script>' . "\n";
  }
 ?>
 <?php
  $jsfiles = ["interactive-examples.js"];
  foreach ($jsfiles as $filename) {
    $path = dirname(__DIR__) . '/js/' . $filename;
-   echo '<script type="module" src="/cached.php?t=' . @filemtime($path) . '&amp;f=/js/' . $filename . '"></script>' . "\n";
+   echo '<script type="module" src="/cached.php?t=' . filemtime($path) . '&amp;f=/js/' . $filename . '"></script>' . "\n";
  }
 ?>
 
