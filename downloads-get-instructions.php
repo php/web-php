@@ -47,17 +47,29 @@ if (array_key_exists('source', $options)) {
 
 switch ($options['os']) {
     case 'linux':
-        $defaultOrCommunity = ($options['version'] !== 'default' || $multiversion) ? 'community' : 'default';
-        if ($defaultOrCommunity === 'community' && $options['version'] == 'default') {
-            $options['version'] = $latestPhpVersion;
+        if ($options['osvariant'] === 'linux-frankenphp') {
+            if ($options['version'] === 'default') {
+                $options['version'] = $latestPhpVersion;
+            }
+            $file = 'frankenphp';
+        } else {
+            $defaultOrCommunity = ($options['version'] !== 'default' || $multiversion) ? 'community' : 'default';
+            if ($defaultOrCommunity === 'community' && $options['version'] == 'default') {
+                $options['version'] = $latestPhpVersion;
+            }
+            $file = "{$options['osvariant']}-{$options['usage']}-{$defaultOrCommunity}";
         }
-        $file = "{$options['osvariant']}-{$options['usage']}-{$defaultOrCommunity}";
         break;
     case 'osx':
     case 'windows':
-        if($options['osvariant'] === "{$options['os']}-docker") {
+        if ($options['osvariant'] === "{$options['os']}-docker") {
             $file = "{$options['osvariant']}-{$options['usage']}";
-        } elseif($options['osvariant'] === "{$options['os']}-scoop") {
+        } elseif ($options['osvariant'] === "{$options['os']}-frankenphp") {
+            if ($options['version'] === 'default') {
+                $options['version'] = $latestPhpVersion;
+            }
+            $file = 'frankenphp';
+        } elseif ($options['osvariant'] === "{$options['os']}-scoop") {
             $file = "{$options['osvariant']}-" . ($options['version'] == $latestPhpVersion ? 'main' : 'versions');
         } else {
             $file = "{$options['osvariant']}";
