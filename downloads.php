@@ -138,6 +138,12 @@ $defaults = [
 
 $options = array_merge($defaults, $_GET);
 
+if ($options['usage'] === 'web') {
+    $os['linux']['variants']['linux-frankenphp'] = 'FrankenPHP';
+    $os['osx']['variants']['osx-frankenphp'] = 'FrankenPHP';
+    $os['windows']['variants']['windows-frankenphp'] = 'FrankenPHP';
+}
+
 if ($auto_osvariant && (!array_key_exists('osvariant', $options) || !array_key_exists($options['osvariant'], $os[$options['os']]['variants']))) {
     $options['osvariant'] = $auto_osvariant;
 } elseif (!array_key_exists('osvariant', $options) || !array_key_exists($options['osvariant'], $os[$options['os']]['variants'])) {
@@ -187,6 +193,7 @@ if ($auto_osvariant && (!array_key_exists('osvariant', $options) || !array_key_e
         </select>
     </div>
 
+    <?php if (!str_ends_with($options['osvariant'] ?? '', '-frankenphp')): ?>
     <label for="multiversion" class="instructions-label">
         I want to be able to use multiple PHP versions:
         <input type="checkbox" id="multiversion" name="multiversion" value="Y"
@@ -198,6 +205,7 @@ if ($auto_osvariant && (!array_key_exists('osvariant', $options) || !array_key_e
         <input type="checkbox" id="source" name="source" value="Y"
             <?= array_key_exists('source', $options) && $options['source'] === 'Y' ? 'checked' : '' ?>/>
     </label>
+    <?php endif; ?>
 
         <button type="submit" class="button">Update Instructions</button>
 </form>
