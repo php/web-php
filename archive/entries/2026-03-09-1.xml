@@ -18,7 +18,7 @@
             <p>
                 The latest release brings
                 <a href="https://dunglas.dev/2026/03/windows-support-for-frankenphp-its-finally-alive/">Windows support</a>,
-                making FrankenPHP available on Linux, macOS, and Windows.
+                making FrankenPHP available on Linux, macOS, FreeBSD, and Windows.
             </p>
             <p>
                 FrankenPHP is now also listed as an installation option on the
