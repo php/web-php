@@ -9,6 +9,61 @@ changelog_header(8, $MINOR_VERSIONS);
 
 <a id="PHP_8_5"></a>
 
+<section class="version" id="8.5.4"><!-- {{{ 8.5.4 -->
+<h3>Version 8.5.4</h3>
+<b><?php release_date('12-Mar-2026'); ?></b>
+<ul><li>Core:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 21029); ?> (zend_mm_heap corrupted on Aarch64, LTO builds).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 21059); ?> (Segfault when preloading constant AST closure).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 21072); ?> (Crash on (unset) cast in constant expression).</li>
+  <li>Fix deprecation now showing when accessing null key of an array with JIT.</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 20657); ?> (Assertion failure in zend_lazy_object_get_info triggered by setRawValueWithoutLazyInitialization() and newLazyGhost()).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 20504); ?> (Assertion failure in zend_get_property_guard when accessing properties on Reflection LazyProxy via isset()).</li>
+  <li>Fixed OSS-Fuzz #478009707 (Borked assign-op/inc/dec on untyped hooked property backing value).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 21215); ?> (Build fails with -std=).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 13674); ?> (Build system installs libtool wrappers when using slibtool).</li>
+</ul></li>
+<li>Curl:
+<ul>
+  <li>Don't truncate length.</li>
+</ul></li>
+<li>Date:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 20936); ?> (DatePeriod::__set_state() cannot handle null start).</li>
+  <li>Fix timezone offset with seconds losing precision.</li>
+</ul></li>
+<li>DOM:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 21077); ?> (Accessing Dom\Node::baseURI can throw TypeError).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 21097); ?> (Accessing Dom\Node properties can can throw TypeError).</li>
+</ul></li>
+<li>LDAP:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 21262); ?> (ldap_modify() too strict controls argument validation makes it impossible to unset attribute).</li>
+</ul></li>
+<li>MBString:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 21223); ?>; mb_guess_encoding no longer crashes when passed huge list of candidate encodings (with 200,000+ entries).</li>
+</ul></li>
+<li>Opcache:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 20718); ?> ("Insufficient shared memory" when using JIT on Solaris).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 21227); ?> (Borked SCCP of array containing partial object).</li>
+</ul></li>
+<li>OpenSSL:
+<ul>
+  <li>Fix a bunch of leaks and error propagation.</li>
+</ul></li>
+<li>Windows:
+<ul>
+  <li>Fixed compilation with clang (missing intrin.h include).</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
+
+
 <section class="version" id="8.5.3"><!-- {{{ 8.5.3 -->
 <h3>Version 8.5.3</h3>
 <b><?php release_date('12-Feb-2026'); ?></b>
