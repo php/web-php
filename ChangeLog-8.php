@@ -743,6 +743,80 @@ changelog_header(8, $MINOR_VERSIONS);
 
 <a id="PHP_8_4"></a>
 
+<section class="version" id="8.4.19"><!-- {{{ 8.4.19 -->
+<h3>Version 8.4.19</h3>
+<b><?php release_date('12-Mar-2026'); ?></b>
+<ul><li>Core:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 21029); ?> (zend_mm_heap corrupted on Aarch64, LTO builds).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 20657); ?> (Assertion failure in zend_lazy_object_get_info triggered by setRawValueWithoutLazyInitialization() and newLazyGhost()).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 20504); ?> (Assertion failure in zend_get_property_guard when accessing properties on Reflection LazyProxy via isset()).</li>
+  <li>Fixed OSS-Fuzz #478009707 (Borked assign-op/inc/dec on untyped hooked property backing value).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 21215); ?> (Build fails with -std=).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 13674); ?> (Build system installs libtool wrappers when using slibtool).</li>
+</ul></li>
+<li>Curl:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 21023); ?> (CURLOPT_XFERINFOFUNCTION crash with a null callback).</li>
+  <li>Don't truncate length.</li>
+</ul></li>
+<li>Date:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 20936); ?> (DatePeriod::__set_state() cannot handle null start).</li>
+  <li>Fix timezone offset with seconds losing precision.</li>
+</ul></li>
+<li>DOM:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 21077); ?> (Accessing Dom\Node::baseURI can throw TypeError).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 21097); ?> (Accessing Dom\Node properties can can throw TypeError).</li>
+</ul></li>
+<li>MBString:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 21223); ?>; mb_guess_encoding no longer crashes when passed huge list of candidate encodings (with 200,000+ entries).</li>
+</ul></li>
+<li>Opcache:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 20718); ?> ("Insufficient shared memory" when using JIT on Solaris).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 21227); ?> (Borked SCCP of array containing partial object).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 21052); ?> (Preloaded constant erroneously propagated to file-cached script).</li>
+</ul></li>
+<li>OpenSSL:
+<ul>
+  <li>Fix a bunch of leaks and error propagation.</li>
+</ul></li>
+<li>PCNTL:
+<ul>
+  <li>Fixed pcntl_setns() internal errors handling regarding errnos.</li>
+  <li>Fixed cpuset leak in pcntl_setcpuaffinity on out-of-range CPU ID on NetBSD/Solaris platforms.</li>
+  <li>Fixed pcntl_signal() signal table registering the callback first OS-wise before the internal list.</li>
+  <li>Fixed pcntl_signal_dispatch() stale pointer and exception handling.</li>
+</ul></li>
+<li>PCRE:
+<ul>
+  <li>Fixed preg_match memory leak with invalid regexes.</li>
+</ul></li>
+<li>PDO_PGSQL:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 21055); ?> (connection attribute status typo for GSS negotiation).</li>
+</ul></li>
+<li>PGSQL:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 21162); ?> (pg_connect() memory leak on error).</li>
+</ul></li>
+<li>Sockets:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 21161); ?> (socket_set_option() crash with array 'addr' entry as null).</li>
+  <li>Fixed possible addr length overflow with socket_connect() and AF_UNIX family sockets.</li>
+</ul></li>
+<li>Windows:
+<ul>
+  <li>Fixed compilation with clang (missing intrin.h include).</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
+
+
 <section class="version" id="8.4.18"><!-- {{{ 8.4.18 -->
 <h3>Version 8.4.18</h3>
 <b><?php release_date('12-Feb-2026'); ?></b>
