@@ -1,7 +1,7 @@
 <?php
 $baseDownloads  = 'https://downloads.php.net/~windows/releases/archives/';
 
-$dataStr = @file_get_contents(__DIR__ . '/../../backend/win-releases.json');
+$dataStr = file_get_contents_if_exists(__DIR__ . '/../../backend/win-releases.json');
 $releases = $dataStr ? json_decode($dataStr, true) : null;
 
 if (!is_array($releases)) {
