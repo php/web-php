@@ -568,6 +568,7 @@ PHP
                     <li><?= message('bc_standard', $lang) ?></li>
                     <li><?= message('bc_core', $lang) ?></li>
                     <li><?= message('bc_warnings', $lang) ?></li>
+                    <li><?= message('bc_trigger_error', $lang) ?></li>
                 </ul>
             </div>
         </div>
