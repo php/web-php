@@ -6,13 +6,13 @@ site_header("A Tourist's Guide", ["current" => "help"]);
 
 <h1 class="content-header">PHP.net: A Tourist's Guide</h1>
 <p class="content-box">
- Everyone knows the <code>php.net</code> site. All of us went there sooner or later,
+ Everyone knows the <code>www.php.net</code> site. All of us went there sooner or later,
  and will keep going back there. This is the central reference point for PHP
  users, and there is a wealth of information there. Not all of it is obvious.
  Come with me, I'll show you.
 </p>
 
-<h2 id="www" class="content-header"><a href="http://php.net/">php.net</a>: Main Website</h2>
+<h2 id="www" class="content-header"><a href="https://www.php.net/">php.net</a>: Main Website</h2>
 
 <div class="content-box">
 <p>
@@ -25,7 +25,7 @@ site_header("A Tourist's Guide", ["current" => "help"]);
  This is the home of the <a href="/downloads.php">download page</a>, for
  everyone to get the latest version of the PHP source code and binaries
  for Windows. The current and next-to-current versions are available there.
- (There is also a <a href="http://museum.php.net/">PHP Museum</a>, which has
+ (There is also a <a href="https://museum.php.net/">PHP Museum</a>, which has
  all of the source distributions since June 1996.)
 </p>
 
@@ -52,7 +52,7 @@ site_header("A Tourist's Guide", ["current" => "help"]);
 </div>
 
 <h2 id="talks" class="content-header">
- <a href="http://talks.php.net/">talks.php.net</a>: Conference Materials
+ <a href="https://talks.php.net/">talks.php.net</a>: Conference Materials
 </h2>
 
 <p class="content-box">
