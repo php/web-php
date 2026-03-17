@@ -237,7 +237,7 @@ to verify the tags:
 <h2>Binaries</h2>
 
 <p>
-    <a href="https://windows.php.net/download/">Binaries are available for
+    <a href="https://www.php.net/downloads.php?usage=web&amp;os=windows&amp;osvariant=windows-downloads&amp;version=default">Binaries are available for
     Microsoft Windows</a>. The PHP project does not currently release binary packages
     for other platforms such as Linux or macOS, but they are packaged by distributions
     and other providers. For more information, see:

@@ -142,13 +142,6 @@ site_header("A Tourist's Guide", ["current" => "help"]);
  has a wiki section and everyone is able to apply for wiki commit access.
 </p>
 
-<h2 id="windows" class="content-header"><a href="https://windows.php.net/">windows.php.net</a>: PHP for Windows</h2>
-
-<p class="content-box">
- This site is dedicated to supporting PHP on Microsoft Windows.
- It also supports ports of PHP extensions or features as well as providing special builds for the various Windows architectures.
-</p>
-
 <h2 id="people" class="content-header"><a href="https://people.php.net/">people.php.net</a>: The PHP Developers Profiles</h2>
 
 <p class="content-box">
@@ -168,7 +161,6 @@ $SIDEBAR = <<<SIDEBAR_DATA
 <p class='panel'><a href="#doc">Documentation collaboration</a></p>
 <p class='panel'><a href="#git">Git Repository</a></p>
 <p class='panel'><a href="#wiki">The PHP Wiki</a></h2>
-<p class='panel'><a href="#windows">PHP for Windows</a></h2>
 <p class='panel'><a href="#people">The PHP Developers Profiles</a></h2>
 
 SIDEBAR_DATA;
