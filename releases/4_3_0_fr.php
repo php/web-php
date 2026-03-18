@@ -23,7 +23,7 @@ site_header("Annonce de publication de PHP 4.3.0", ["lang" => "fr"]);
 <p>
  PHP 4.3.0 ach&egrave;ve la s&eacute;paration du mode d'utilisation en
  ligne de commande (dit CLI) qui permet de d&eacute;velopper des
- applications shell ou graphiques (avec <a href="http://gtk.php.net/">PHP-GTK</a>).
+ applications shell ou graphiques (avec <a href="https://gtk.php.net/">PHP-GTK</a>).
  La version CLI de PHP est toujours compil&eacute;es, mais elle n'est
  install&eacute;e que si la version CGI est d&eacute;sactiv&eacute;e
  avec l'option --disable-cgi. De plus, vous pouvez utilisez la commande
