@@ -482,8 +482,7 @@ site_header("News Archive - 2009", ["cache" => true]);
      <p>
       The keynote speaker is Jan Schneider, who will also
       talk about the Horde project. In addition, we will
-      have sessions about other frameworks and include a
-      <a href="https://phptestfest.org">PHP TestFest</a>.
+      have sessions about other frameworks and include a PHP TestFest.
      </p>
      <p>
       PHP'n Rio sessions go from 6-9 pm. Then the PHP TestFest follows up
@@ -665,8 +664,7 @@ site_header("News Archive - 2009", ["cache" => true]);
         have 2 months left to go.
       </p>
       <p>
-        Getting involved couldn't be simpler. Visit the
-        <a href="https://phptestfest.org">QA TestFest page</a> to
+        Getting involved couldn't be simpler. Visit the QA TestFest page to
         find out how you can organize a TestFest event in your community.
         We are looking forward to seeing your communities tests being
         committed into PHP.
@@ -695,16 +693,8 @@ site_header("News Archive - 2009", ["cache" => true]);
      </p>
      <p>
       Please download and test this release candidate, and report any issues found.
-<<<<<<< HEAD
-      Downloads and further information is available at <a href="http://qa.php.net/">qa.php.net</a>.
-      See also the work in progress <a href="https://wiki.php.net/doc/scratchpad/upgrade/53">5.3 upgrade guide</a>.
-||||||| parent of c89eec8e (fix: update qa.php.net links to https)
-      Downloads and further information is available at <a href="http://qa.php.net/">qa.php.net</a>.
-      See also the work in progress <a href="http://wiki.php.net/doc/scratchpad/upgrade/53">5.3 upgrade guide</a>.
-=======
-      Downloads and further information is available at <a href="https://qa.php.net/">qa.php.net</a>.
-      See also the work in progress <a href="http://wiki.php.net/doc/scratchpad/upgrade/53">5.3 upgrade guide</a>.
->>>>>>> c89eec8e (fix: update qa.php.net links to https)
+       Downloads and further information is available at <a href="https://qa.php.net/">qa.php.net</a>.
+       See also the work in progress <a href="https://wiki.php.net/doc/scratchpad/upgrade/53">5.3 upgrade guide</a>.
      </p>
     </div>
 
