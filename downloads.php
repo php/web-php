@@ -22,7 +22,7 @@ $SIDEBAR_DATA = '
 
 <p class="panel"><a href="/pre-release-builds.php">Pre-Release Builds</a></p>
 <p class="panel"><a href="/git.php">Development Sources (git)</a></p>
-<p class="panel"><a href="/releases/">Old Archives</a></p>
+<p class="panel">Old Archives: <a href="/releases/">Source</a>, <a href="https://downloads.php.net/~windows/releases/archives/">Windows Downloads</a></p>
 ';
 
 site_header("Downloads",
