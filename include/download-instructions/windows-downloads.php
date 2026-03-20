@@ -42,6 +42,15 @@ function ws_build_label(string $k, array $entry): string {
 	return trim(($tool ? $tool . ' ' : '') . ($arch ? $arch . ' ' : '') . $ts . ($mt ? ' <span class="time">' . $mt . ' UTC</span>' : ''));
 }
 
+echo <<<'HTML'
+<strong>Architecture</strong>
+<p>It is recommended to use x64 builds of PHP as almost all Windows installations currently support x64.</p>
+<strong>Thread Safety</strong>
+<p>NTS builds are for single-threaded use cases, typically PHP running via FastCGI or on the CLI. TS builds support multithreaded SAPIs and are intended for PHP loaded as a web server module. So, if you want to use PHP as FastCGI with IIS, use the Non-Thread Safe (NTS) builds of PHP, or if you want to use the Apache HTTP Server, use the Thread Safe (TS) builds of PHP.</p>
+<strong>Visual Studio Versions</strong>
+<p>The builds below are built using Visual Studio 2019 (VS16) or Visual Studio 2022 (VS17) compiler. They require the Visual C++ Redistributable for Visual Studio 2015-2022 <a href="https://aka.ms/vs/17/release/vc_redist.x64.exe">x64</a> or <a href="https://aka.ms/vs/17/release/vc_redist.x86.exe">x86</a> installed.</p>
+HTML;
+
 echo '<h3>PHP ' . htmlspecialchars($version) . ' (' . $fullVersion . ')</h3>';
 
 if (!empty($verBlock['source']['path'])) {
