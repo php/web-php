@@ -26,7 +26,7 @@ header("Permissions-Policy: interest-cohort=()");
     }
 
     $host = parse_url($_SERVER["HTTP_ORIGIN"]);
-    if (strncmp(strrev($host["host"]), strrev("php.net"), strlen("php.net")) != 0) {
+    if (!preg_match('/^(.+\.)?php\.net$/', $host["host"])) {
         if ($host["host"] != $_SERVER["SERVER_NAME"]) {
             exit(10);
         }
