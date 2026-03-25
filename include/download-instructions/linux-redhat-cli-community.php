@@ -1,9 +1,12 @@
+<div class="note">
 <p>
-On the command line, run the commands below.
+	This installation method uses binaries provided by a third-party provider.
+	It contains patches to the PHP source code added by the build provider,
+	over which the PHP project has no control.
 </p>
+</div>
 <p>
-This installation method uses binaries provided by a third-party provider,
-adding patches to the PHP source code that the PHP project has no control over.
+On the command line, run the commands below:
 </p>
 <pre><code class="language-bash line-numbers">
 # Add the Remi's RPM repository.
