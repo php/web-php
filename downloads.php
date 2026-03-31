@@ -52,16 +52,6 @@ function option(string $value, string $desc, $attributes = []): string
     return '<option value="' . $value . '"' . implode(' ', array_keys(array_filter($attributes))) . '>' . $desc . '</option>';
 }
 
-$usage = [
-    'web' => 'Web Development',
-    'cli' => 'CLI/Library Development',
-    'fw-drupal' => 'Drupal Development',
-    'fw-joomla' => 'Joomla Development',
-    'fw-laravel' => 'Laravel Development',
-    'fw-symfony' => 'Symfony Development',
-    'fw-wordpress' => 'WordPress Development',
-];
-
 $os = [
     'linux' => [
         'name' => 'Linux',
@@ -70,7 +60,8 @@ $os = [
             'linux-fedora' => 'Fedora',
             'linux-redhat' => 'RedHat',
             'linux-ubuntu' => 'Ubuntu',
-            'linux-docker' => 'Docker',
+            'linux-docker-cli' => 'Docker (Command Line Interface)',
+            'linux-docker-web' => 'Docker (Web Development)',
         ],
     ],
     'osx' => [
@@ -78,7 +69,8 @@ $os = [
         'variants' => [
             'osx-homebrew' => 'Homebrew',
             'osx-homebrew-php' => 'Homebrew-PHP',
-            'osx-docker' => 'Docker',
+            'osx-docker-cli' => 'Docker (Command Line Interface)',
+            'osx-docker-web' => 'Docker (Web Development)',
             'osx-macports' => 'MacPorts',
         ],
     ],
@@ -90,7 +82,8 @@ $os = [
             'windows-chocolatey' => 'Chocolatey',
             'windows-scoop' => 'Scoop',
             'windows-winget' => 'Winget',
-            'windows-docker' => 'Docker',
+            'windows-docker-cli' => 'Docker (Command Line Interface)',
+            'windows-docker-web' => 'Docker (Web Development)',
             'windows-wsl-debian' => 'WSL/Debian',
             'windows-wsl-ubuntu' => 'WSL/Ubuntu',
         ],
@@ -134,7 +127,6 @@ if (!empty($platform) || !empty($ua)) {
 $defaults = [
     'os' => $auto_os ?? 'linux',
     'version' => 'default',
-    'usage' => 'web',
 ];
 
 $options = array_merge($defaults, $_GET);
@@ -148,17 +140,6 @@ if ($auto_osvariant && (!array_key_exists('osvariant', $options) || !array_key_e
 <h1>Downloads &amp; Installation Instructions</h1>
 
     <form class="instructions-form" id="instructions-form">
-    <div class="instructions-row">
-        I want to use PHP for
-        <select id="usage" name="usage">
-            <?php foreach ($usage as $value => $description) { ?>
-                <?= option($value, $description, [
-                    'selected' => array_key_exists('usage', $options) && $options['usage'] === $value,
-                ]); ?>
-            <?php } ?>
-        </select>.
-    </div>
-
     <div class="instructions-row">
         I work with
         <select id="os" name="os">
@@ -231,7 +212,7 @@ to verify the tags:
 <h2>Binaries</h2>
 
 <p>
-    <a href="https://www.php.net/downloads.php?usage=web&amp;os=windows&amp;osvariant=windows-downloads&amp;version=default">Binaries are available for
+    <a href="https://www.php.net/downloads.php?os=windows&amp;osvariant=windows-downloads&amp;version=default">Binaries are available for
     Microsoft Windows</a>. The PHP project does not currently release binary packages
     for other platforms such as Linux or macOS, but they are packaged by distributions
     and other providers. For more information, see:
