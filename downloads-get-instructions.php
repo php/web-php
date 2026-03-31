@@ -5,7 +5,6 @@ $latestPhpVersion = '8.5';
 if (!isset($options)) {
     $options = [
         'os' => '',
-        'usage' => '',
         'version' => '',
     ];
 }
@@ -24,11 +23,6 @@ if ($options['os'] === 'osx' || $options['os'] === 'windows') {
     if ($options['version'] === 'default') {
         $options['version'] = $latestPhpVersion;
     }
-}
-
-if (in_array($options['usage'], ['fw-drupal', 'fw-laravel', 'fw-symfony', 'fw-wordpress', 'fw-joomla'])) {
-    $file = "{$options['usage']}";
-    $options['os'] = null;
 }
 
 $multiversion = false;
@@ -51,13 +45,15 @@ switch ($options['os']) {
         if ($defaultOrCommunity === 'community' && $options['version'] == 'default') {
             $options['version'] = $latestPhpVersion;
         }
-        $file = "{$options['osvariant']}-{$options['usage']}-{$defaultOrCommunity}";
+        if (str_starts_with("{$options['osvariant']}", 'linux-docker')) {
+            $file = "{$options['osvariant']}-{$defaultOrCommunity}";
+        } else {
+            $file = "{$options['osvariant']}-web-{$defaultOrCommunity}";
+        }
         break;
     case 'osx':
     case 'windows':
-        if($options['osvariant'] === "{$options['os']}-docker") {
-            $file = "{$options['osvariant']}-{$options['usage']}";
-        } elseif($options['osvariant'] === "{$options['os']}-scoop") {
+        if ($options['osvariant'] === "{$options['os']}-scoop") {
             $file = "{$options['osvariant']}-" . ($options['version'] == $latestPhpVersion ? 'main' : 'versions');
         } else {
             $file = "{$options['osvariant']}";
