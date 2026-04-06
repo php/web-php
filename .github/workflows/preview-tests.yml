@@ -1,0 +1,89 @@
+name: Preview Tests
+on:
+  pull_request:
+    types: [ labeled ]
+
+jobs:
+  tests_visual:
+    name: "Visual Tests"
+    runs-on: "ubuntu-latest"
+    if: "github.repository_owner == 'php' && contains(github.event.pull_request.labels.*.name, 'Status: Preview Allowed')"
+
+    strategy:
+      matrix:
+        php-version:
+          - "8.2"
+        node-version:
+          - "22.x"
+
+    env:
+      HTTP_HOST: "localhost:8080"
+
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          ref: "refs/pull/${{ github.event.number }}/merge"
+
+      - name: Save PR number
+        run: echo ${{ github.event.number }} > pr-number.txt
+
+      - name: Upload PR code as artifact
+        uses: actions/upload-artifact@v7
+        with:
+          name: pr-code
+          path: ./
+          retention-days: 1
+
+      - name: Upload PR number artifact
+        uses: actions/upload-artifact@v7
+        with:
+          name: pr-number.txt
+          path: ./pr-number.txt
+          retention-days: 1
+
+      - uses: shivammathur/setup-php@v2
+        with:
+          coverage: "none"
+          extensions: "none, curl, dom, json, mbstring, tokenizer, xml, xmlwriter, iconv"
+          php-version: "${{ matrix.php-version }}"
+
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v6
+        with:
+          node-version: ${{ matrix.node-version }}
+
+      - name: "Set up problem matchers for PHP"
+        run: "echo \"::add-matcher::${{ runner.tool_cache }}/php.json\""
+
+      - name: "Set up problem matchers for phpunit/phpunit"
+        run: "echo \"::add-matcher::${{ runner.tool_cache }}/phpunit.json\""
+
+      - name: "Determine composer cache directory"
+        run: "echo \"COMPOSER_CACHE_DIR=$(composer config cache-dir)\" >> $GITHUB_ENV"
+
+      - name: "Cache dependencies installed with composer"
+        uses: actions/cache@v5
+        with:
+          path: "${{ env.COMPOSER_CACHE_DIR }}"
+          key: "php-${{ matrix.php-version }}-composer-${{ hashFiles('composer.lock') }}"
+          restore-keys: "php-${{ matrix.php-version }}-composer-"
+
+      - name: "Install dependencies with composer"
+        run: "composer install --ansi --no-interaction --no-progress"
+
+      - name: "Install dependencies"
+        run: "yarn install"
+
+      - name: "Install Playwright"
+        run: "npx playwright install"
+
+      - name: "Run visual tests"
+        run: "make tests_visual"
+
+      - name: Upload playwright report
+        uses: actions/upload-artifact@v7
+        if: ${{ !cancelled() }}
+        with:
+          name: playwright-report
+          path: ./playwright-report/
+          retention-days: 7

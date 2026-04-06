@@ -1,0 +1,130 @@
+name: Preview Deploy
+on:
+  workflow_run:
+    workflows: ["Preview Tests"]
+    types:
+      - completed
+
+jobs:
+  deploy:
+    runs-on: "ubuntu-22.04"
+    if: >
+      github.repository_owner == 'php' &&
+      github.event.workflow_run.event == 'pull_request' &&
+      github.event.workflow_run.conclusion == 'success'
+
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          ref: ${{ github.event.workflow_run.head_branch }}
+
+      - name: Download PR number
+        uses: actions/download-artifact@v8
+        with:
+          name: pr-number.txt
+          path: ./pr-number-artifact/
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          run-id: ${{ github.event.workflow_run.id }}
+
+      - name: Set PR number
+        id: pr-number
+        run: |
+          PR_NUMBER=$(cat ./pr-number-artifact/pr-number.txt)
+          echo "pr_number=$PR_NUMBER" >> $GITHUB_OUTPUT
+
+      - name: Download PR code as artifact
+        uses: actions/download-artifact@v8
+        with:
+          name: pr-code
+          path: ./
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          run-id: ${{ github.event.workflow_run.id }}
+
+      - name: Deploy preview
+        uses: easingthemes/ssh-deploy@main
+        with:
+          REMOTE_HOST: ${{ secrets.PREVIEW_REMOTE_HOST }}
+          REMOTE_USER: ${{ secrets.PREVIEW_REMOTE_USER }}
+          SSH_PRIVATE_KEY: ${{ secrets.PREVIEW_SSH_KEY }}
+          SOURCE: "./"
+          TARGET: "/home/thephpfoundation/preview/web-php-pr-${{ steps.pr-number.outputs.pr_number }}/public"
+          SCRIPT_BEFORE: bash /home/thephpfoundation/scripts/pr_created_pre.sh web-php ${{ steps.pr-number.outputs.pr_number }}
+          SCRIPT_AFTER: bash /home/thephpfoundation/scripts/pr_created.sh web-php ${{ steps.pr-number.outputs.pr_number }}
+
+      - name: Find existing preview comment
+        uses: peter-evans/find-comment@v4
+        id: fc
+        with:
+          issue-number: ${{ steps.pr-number.outputs.pr_number }}
+          comment-author: 'github-actions[bot]'
+          body-includes: 'Preview for commit'
+
+      - name: Create or update preview comment
+        uses: peter-evans/create-or-update-comment@v5
+        with:
+          issue-number: ${{ steps.pr-number.outputs.pr_number }}
+          comment-id: ${{ steps.fc.outputs.comment-id }}
+          edit-mode: 'replace'
+          body: |
+            🚀 Preview for commit ${{ github.event.workflow_run.head_sha }} is available at https://web-php-pr-${{ steps.pr-number.outputs.pr_number }}.preview.thephp.foundation
+
+  deploy-regression-report:
+    runs-on: "ubuntu-22.04"
+    if: >
+      github.repository_owner == 'php' &&
+      github.event.workflow_run.event == 'pull_request' &&
+      github.event.workflow_run.conclusion == 'success'
+
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          ref: ${{ github.event.workflow_run.head_branch }}
+
+      - name: Download PR number
+        uses: actions/download-artifact@v8
+        with:
+          name: pr-number.txt
+          path: ./pr-number-artifact/
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          run-id: ${{ github.event.workflow_run.id }}
+
+      - name: Set PR number
+        id: pr-number
+        run: |
+          PR_NUMBER=$(cat ./pr-number-artifact/pr-number.txt)
+          echo "pr_number=$PR_NUMBER" >> $GITHUB_OUTPUT
+
+      - name: Download regression report
+        uses: actions/download-artifact@v8
+        with:
+          name: playwright-report
+          path: ./playwright-report/
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          run-id: ${{ github.event.workflow_run.id }}
+
+      - name: Deploy regression report
+        uses: easingthemes/ssh-deploy@main
+        with:
+          REMOTE_HOST: ${{ secrets.PREVIEW_REMOTE_HOST }}
+          REMOTE_USER: ${{ secrets.PREVIEW_REMOTE_USER }}
+          SSH_PRIVATE_KEY: ${{ secrets.PREVIEW_SSH_KEY }}
+          SOURCE: "./playwright-report/"
+          TARGET: "/home/thephpfoundation/preview/web-php-regression-report-pr-${{ steps.pr-number.outputs.pr_number }}/public"
+          SCRIPT_BEFORE: bash /home/thephpfoundation/scripts/pr_created_pre.sh web-php-regression-report ${{ steps.pr-number.outputs.pr_number }}
+
+      - name: Find regression report comment
+        uses: peter-evans/find-comment@v4
+        id: snapshot
+        with:
+          issue-number: ${{ steps.pr-number.outputs.pr_number }}
+          comment-author: 'github-actions[bot]'
+          body-includes: 'Regression report for commit'
+
+      - name: Create or update regression report comment
+        uses: peter-evans/create-or-update-comment@v5
+        with:
+          issue-number: ${{ steps.pr-number.outputs.pr_number }}
+          comment-id: ${{ steps.snapshot.outputs.comment-id }}
+          edit-mode: 'replace'
+          body: |
+            📊 Regression report for commit ${{ github.event.workflow_run.head_sha }} is at https://web-php-regression-report-pr-${{ steps.pr-number.outputs.pr_number }}.preview.thephp.foundation
