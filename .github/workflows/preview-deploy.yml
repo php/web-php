@@ -14,10 +14,6 @@ jobs:
       github.event.workflow_run.conclusion == 'success'
 
     steps:
-      - uses: actions/checkout@v6
-        with:
-          ref: ${{ github.event.workflow_run.head_branch }}
-
       - name: Download PR number
         uses: actions/download-artifact@v8
         with:
@@ -76,10 +72,6 @@ jobs:
       github.event.workflow_run.conclusion == 'success'
 
     steps:
-      - uses: actions/checkout@v6
-        with:
-          ref: ${{ github.event.workflow_run.head_branch }}
-
       - name: Download PR number
         uses: actions/download-artifact@v8
         with:
