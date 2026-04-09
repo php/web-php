@@ -9,6 +9,85 @@ changelog_header(8, $MINOR_VERSIONS);
 
 <a id="PHP_8_5"></a>
 
+<section class="version" id="8.5.5"><!-- {{{ 8.5.5 -->
+<h3>Version 8.5.5</h3>
+<b><?php release_date('09-Apr-2026'); ?></b>
+<ul><li>Core:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 20672); ?> (Incorrect property_info sizing for locally shadowed trait properties).</li>
+  <li>Fixed bugs <?php githubissuel('php/php-src', 20875); ?>, <?php githubissuel('php/php-src', 20873); ?>, <?php githubissuel('php/php-src', 20854); ?> (Propagate IN_GET guard in get_property_ptr_ptr for lazy proxies).</li>
+</ul></li>
+<li>Bz2:
+<ul>
+  <li>Fix truncation of total output size causing erroneous errors.</li>
+</ul></li>
+<li>DOM:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 21486); ?> (Dom\HTMLDocument parser mangles xml:space and xml:lang attributes).</li>
+</ul></li>
+<li>FFI:
+<ul>
+  <li>Fixed resource leak in FFI::cdef() onsymbol resolution failure.</li>
+</ul></li>
+<li>GD:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 21431); ?> (phpinfo() to display libJPEG 10.0 support).</li>
+</ul></li>
+<li>Opcache:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 21052); ?> (Preloaded constant erroneously propagated to file-cached script).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 20838); ?> (JIT compiler produces wrong arithmetic results).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 21267); ?> (JIT tracing: infinite loop on FETCH_OBJ_R with IS_UNDEF property in polymorphic context).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 21395); ?> (uaf in jit).</li>
+</ul></li>
+<li>OpenSSL:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 21083); ?> (Skip private_key_bits validation for EC/curve-based keys).</li>
+  <li>Fix missing error propagation for BIO_printf() calls.</li>
+</ul></li>
+<li>PCNTL:
+<ul>
+  <li>Fixed signal handler installation on AIX by bumping the storage size of the num_signals global.</li>
+</ul></li>
+<li>PCRE:
+<ul>
+  <li>Fixed re-entrancy issue on php_pcre_match_impl, php_pcre_replace_impl, php_pcre_split_impl, and php_pcre_grep_impl.</li>
+</ul></li>
+<li>Phar:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 21333); ?> (use after free when unlinking entries during iteration of a compressed phar).</li>
+</ul></li>
+<li>SNMP:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 21336); ?> (SNMP::setSecurity() undefined behavior with NULL arguments).</li>
+</ul></li>
+<li>SOAP:
+<ul>
+  <li>Fixed Set-Cookie parsing bug wrong offset while scanning attributes.</li>
+</ul></li>
+<li>SPL:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 21454); ?> (missing write lock validation in SplHeap).</li>
+</ul></li>
+<li>Standard:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 20906); ?> (Assertion failure when messing up output buffers).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 20627); ?> (Cannot identify some avif images with getimagesize).</li>
+</ul></li>
+<li>Sysvshm:
+<ul>
+  <li>Fix memory leak in shm_get_var() when variable is corrupted.</li>
+</ul></li>
+<li>XSL:
+<ul>
+  <li>Fix <?php githubissuel('php/php-src', 21357); ?> (XSLTProcessor works with DOMDocument, but fails with Dom\XMLDocument).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 21496); ?> (UAF in dom_objects_free_storage).</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
+
+
 <section class="version" id="8.5.4"><!-- {{{ 8.5.4 -->
 <h3>Version 8.5.4</h3>
 <b><?php release_date('12-Mar-2026'); ?></b>
