@@ -86,21 +86,24 @@ site_header("Thanks", ["current" => "community"]);
 </p>
 <ul>
     <li>
-        <a href="https://yahoo.com/">Yahoo! Inc.</a> provided us with many many
-        terabytes of bandwidth and hosting for www.php.net, and svn.php.net and git.php.net
-        for many years.
+        <a href="https://www.appveyor.com">AppVeyor</a> provided continuous
+        integration for Windows builds of PHP.
     </li>
 
     <li>
-        <a href="https://synacor.com">Synacor</a> provided us with many
-        terabytes of bandwidth and hosting for www.php.net and others for
-        many years.
+        <a href="https://www.bauer-kirch.de">Bauer + Kirch GmbH</a> provided us
+        with SSL certificates and a server and bandwidth for the php.net
+        monitoring infrastructure.
     </li>
 
     <li>
-        <a href="https://vasoftware.com">VA Software Corp.</a> helped us
-        by donating a server and resources to enable us to build manuals
-        and distribute our content via rsync.
+        <a href="https://www.deft.com/">Deft</a> provided a server and
+        bandwidth for rsync.php.net.
+    </li>
+
+    <li>
+        <a href="https://directi.com">Directi</a> provided IP address to
+        country lookup information.
     </li>
 
     <li>
@@ -140,39 +143,36 @@ site_header("Thanks", ["current" => "community"]);
     </li>
 
     <li>
-        <a href="https://www.spry.com/">Spry VPS Hosting</a> provided servers
-        and resources for various php.net services.
-    </li>
-
-    <li>
-        <a href="https://www.appveyor.com">AppVeyor</a> provided continuous
-        integration for Windows builds of PHP.
-    </li>
-
-    <li>
-        <a href="https://www.bauer-kirch.de">Bauer + Kirch GmbH</a> provided us
-        with SSL certificates and a server and bandwidth for the php.net
-        monitoring infrastructure.
-    </li>
-
-    <li>
-        <a href="https://www.deft.com/">Deft</a> provided a server and
-        bandwidth for rsync.php.net.
-    </li>
-
-    <li>
-        <a href="https://directi.com">Directi</a> provided IP address to
-        country lookup information.
-    </li>
-
-    <li>
         <a href="https://sinnerg.nl">SinnerG</a> provided servers and bandwidth
         for svn.php.net, gtk.php.net, and people.php.net.
     </li>
 
     <li>
+        <a href="https://www.spry.com/">Spry VPS Hosting</a> provided servers
+        and resources for various php.net services.
+    </li>
+
+    <li>
+        <a href="https://synacor.com">Synacor</a> provided us with many
+        terabytes of bandwidth and hosting for www.php.net and others for
+        many years.
+    </li>
+
+    <li>
         <a href="https://www.travis-ci.org">Travis CI</a> provided continuous
         integration for builds of PHP.
+    </li>
+
+    <li>
+        <a href="https://vasoftware.com">VA Software Corp.</a> helped us
+        by donating a server and resources to enable us to build manuals
+        and distribute our content via rsync.
+    </li>
+
+    <li>
+        <a href="https://yahoo.com/">Yahoo! Inc.</a> provided us with many many
+        terabytes of bandwidth and hosting for www.php.net, and svn.php.net and git.php.net
+        for many years.
     </li>
 </ul>
 
