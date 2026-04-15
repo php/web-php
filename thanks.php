@@ -24,7 +24,7 @@ site_header("Thanks", ["current" => "community"]);
         </a>
         <section>
             <strong class="thanks__heading"><a href="https://www.myrasecurity.com/ddos-protection/">Myra Security</a></strong>
-            <p class="thanks__description">DDoS protection, along with hosting www.php.net and git.php.net for us.</p>
+            <p class="thanks__description">DDoS protection, along with hosting our mail server for us.</p>
         </section>
     </li>
 
@@ -35,19 +35,7 @@ site_header("Thanks", ["current" => "community"]);
         <section>
             <strong class="thanks__heading"><a href="https://sinnerg.nl">SinnerG</a></strong>
             <p class="thanks__description">
-                Provides servers and bandwidth for svn.php.net, gtk.php.net, people.php.net and europe.rsync.php.net.
-            </p>
-        </section>
-    </li>
-
-    <li class="thanks">
-        <a href="https://directi.com" class="thanks__logo thanks__logo--dark">
-            <img src="images/sponsors/directi.svg" alt="Directi">
-        </a>
-        <section>
-            <strong class="thanks__heading"><a href="https://directi.com">Directi</a></strong>
-            <p class="thanks__description">
-                Provides IP address to country lookup information.
+                Provides a server and bandwidth for rsync.php.net.
             </p>
         </section>
     </li>
@@ -59,19 +47,7 @@ site_header("Thanks", ["current" => "community"]);
         <section>
             <strong class="thanks__heading"><a href="https://digitalocean.com">DigitalOcean</a></strong>
             <p class="thanks__description">
-                Provides VMs for a number of PHP services.
-            </p>
-        </section>
-    </li>
-
-    <li class="thanks">
-        <a href="https://www.deft.com/" class="thanks__logo">
-            <img src="images/sponsors/deft.svg" alt="Deft">
-        </a>
-        <section>
-            <strong class="thanks__heading"><a href="https://www.deft.com/">Deft</a></strong>
-            <p class="thanks__description">
-                Provides a server and bandwidth for rsync.php.net.
+                Provides VMs and bandwidth for all PHP web services, and our rsync server.
             </p>
         </section>
     </li>
@@ -83,55 +59,7 @@ site_header("Thanks", ["current" => "community"]);
         <section>
             <strong class="thanks__heading"><a href="https://eukhost.com/">EUKhost</a></strong>
             <p class="thanks__description">
-                Provides a server and bandwidth for various php.net services.
-            </p>
-        </section>
-    </li>
-
-    <li class="thanks">
-        <a href="https://duocast.nl/" class="thanks__logo thanks__logo--dark">
-            <img src="images/sponsors/duocast.svg" alt="Duocast">
-        </a>
-        <section>
-            <strong class="thanks__heading"><a href="https://duocast.nl/">Duocast</a></strong>
-            <p class="thanks__description">
-                Provides the servers and bandwidth used for buildbot testing and various Windows based servers.
-            </p>
-        </section>
-    </li>
-
-    <li class="thanks">
-        <a href="https://www.bauer-kirch.de" class="thanks__logo">
-            <img src="images/sponsors/bauer+kirch.png" alt="Bauer + Kirch GmbH">
-        </a>
-        <section>
-            <strong class="thanks__heading"><a href="https://www.bauer-kirch.de">Bauer + Kirch GmbH</a></strong>
-            <p class="thanks__description">
-                Provides us with SSL certificates and a server and bandwidth for the php.net monitoring infrastructure.
-            </p>
-        </section>
-    </li>
-
-    <li class="thanks">
-        <a href="https://www.appveyor.com" class="thanks__logo">
-            <img src="images/sponsors/appveyor.png" alt="AppVeyor">
-        </a>
-        <section>
-            <strong class="thanks__heading"><a href="https://www.appveyor.com">AppVeyor</a></strong>
-            <p class="thanks__description">
-                Provides continuous integration for Windows builds of PHP.
-            </p>
-        </section>
-    </li>
-
-    <li class="thanks">
-        <a href="https://www.travis-ci.org" class="thanks__logo">
-            <img src="images/sponsors/travis.png" alt="Travis CI">
-        </a>
-        <section>
-            <strong class="thanks__heading"><a href="https://www.travis-ci.org">Travis CI</a></strong>
-            <p class="thanks__description">
-                Provides continuous integration for builds of PHP.
+                Provides a server and bandwidth for various PEAR services.
             </p>
         </section>
     </li>
@@ -145,21 +73,29 @@ site_header("Thanks", ["current" => "community"]);
 </p>
 <ul>
     <li>
-        <a href="https://yahoo.com/">Yahoo! Inc.</a> provided us with many many
-        terabytes of bandwidth and hosting for www.php.net, and svn.php.net and git.php.net
-        for many years.
+        <a href="https://www.appveyor.com">AppVeyor</a> provided continuous
+        integration for Windows builds of PHP.
     </li>
 
     <li>
-        <a href="https://synacor.com">Synacor</a> provided us with many
-        terabytes of bandwidth and hosting for www.php.net and others for
-        many years.
+        <a href="https://www.bauer-kirch.de">Bauer + Kirch GmbH</a> provided us
+        with SSL certificates and a server and bandwidth for the php.net
+        monitoring infrastructure.
     </li>
 
     <li>
-        <a href="https://vasoftware.com">VA Software Corp.</a> helped us
-        by donating a server and resources to enable us to build manuals
-        and distribute our content via rsync.
+        <a href="https://www.deft.com/">Deft</a> provided a server and
+        bandwidth for rsync.php.net.
+    </li>
+
+    <li>
+        <a href="https://directi.com">Directi</a> provided IP address to
+        country lookup information.
+    </li>
+
+    <li>
+        <a href="https://duocast.nl/">Duocast</a> provided servers and
+        bandwidth used for buildbot testing and various Windows based servers.
     </li>
 
     <li>
@@ -199,8 +135,36 @@ site_header("Thanks", ["current" => "community"]);
     </li>
 
     <li>
+        <a href="https://sinnerg.nl">SinnerG</a> provided servers and bandwidth
+        for svn.php.net, gtk.php.net, and people.php.net.
+    </li>
+
+    <li>
         <a href="https://www.spry.com/">Spry VPS Hosting</a> provided servers
         and resources for various php.net services.
+    </li>
+
+    <li>
+        <a href="https://synacor.com">Synacor</a> provided us with many
+        terabytes of bandwidth and hosting for www.php.net and others for
+        many years.
+    </li>
+
+    <li>
+        <a href="https://www.travis-ci.org">Travis CI</a> provided continuous
+        integration for builds of PHP.
+    </li>
+
+    <li>
+        <a href="https://vasoftware.com">VA Software Corp.</a> helped us
+        by donating a server and resources to enable us to build manuals
+        and distribute our content via rsync.
+    </li>
+
+    <li>
+        <a href="https://yahoo.com/">Yahoo! Inc.</a> provided us with many many
+        terabytes of bandwidth and hosting for www.php.net, and svn.php.net and git.php.net
+        for many years.
     </li>
 </ul>
 
