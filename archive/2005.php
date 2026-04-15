@@ -240,7 +240,7 @@ For changes in PHP 4.4.0 since PHP 4.3.11, please consult the
  applications - in cases where PHP formerly just silently ignored this
  and often causing memory corruptions - we also recommend to test PHP
  4.4.0RC2 with your applications. The final release is planned for July
- 11th. PHP 4.4.0RC2 can be found <a href="http://qa.php.net/~derick/">here</a>.
+ 11th. PHP 4.4.0RC2 can be found <a href="https://downloads.php.net/~derick/">here</a>.
 </p>
 
 <hr>

@@ -674,7 +674,7 @@ The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.p
 
       <p>
         For source downloads of PHP 5.6.0RC4 please visit
-        the <a href="http://qa.php.net/">download page</a>. Windows binaries
+        the <a href="https://qa.php.net/">download page</a>. Windows binaries
         can be found on <a href="http://windows.php.net/qa/">windows.php.net/qa/</a>.
       </p>
 
@@ -832,7 +832,7 @@ The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.p
 
       <p>
         For source downloads of PHP 5.6.0RC3 please visit
-        the <a href="http://qa.php.net/">download page</a>. Windows binaries
+        the <a href="https://qa.php.net/">download page</a>. Windows binaries
         can be found on <a href="http://windows.php.net/qa/">windows.php.net/qa/</a>.
       </p>
 
@@ -965,7 +965,7 @@ The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.p
 
       <p>
         For source downloads of PHP 5.6.0RC2 please visit
-        the <a href="http://qa.php.net/">download page</a>. Windows binaries
+        the <a href="https://qa.php.net/">download page</a>. Windows binaries
         can be found on <a href="http://windows.php.net/qa/">windows.php.net/qa/</a>.
       </p>
 
@@ -1155,7 +1155,7 @@ The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.p
 
       <p>
         For source downloads of PHP 5.6.0RC1 please visit
-        the <a href="http://qa.php.net/">download page</a>. Windows binaries
+        the <a href="https://qa.php.net/">download page</a>. Windows binaries
         can be found on <a href="http://windows.php.net/qa/">windows.php.net/qa/</a>.
       </p>
 
@@ -1204,7 +1204,7 @@ The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.p
 
       <p>
         For source downloads of PHP 5.6.0beta4 please visit
-        the <a href="http://qa.php.net/">download page</a>. Windows binaries
+        the <a href="https://qa.php.net/">download page</a>. Windows binaries
         can be found on <a href="http://windows.php.net/qa/">windows.php.net/qa/</a>.
       </p>
 
@@ -1403,7 +1403,7 @@ The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.p
 
      <p>
       For source downloads of PHP 5.6.0beta3 please visit
-      the <a href="http://qa.php.net/">download page</a>. Windows binaries
+      the <a href="https://qa.php.net/">download page</a>. Windows binaries
       can be found on <a href="http://windows.php.net/qa/">windows.php.net/qa/</a>.
      </p>
 
@@ -1453,7 +1453,7 @@ The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.p
 
      <p>
       For source downloads of PHP 5.6.0beta2 please visit
-      the <a href="http://qa.php.net/">download page</a>. Windows binaries
+      the <a href="https://qa.php.net/">download page</a>. Windows binaries
       can be found on <a href="http://windows.php.net/qa/">windows.php.net/qa/</a>.
      </p>
 
@@ -1548,7 +1548,7 @@ The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.p
 
      <p>
       For source downloads of PHP 5.6.0beta1 please visit
-      the <a href="http://qa.php.net/">download page</a>. Windows binaries
+      the <a href="https://qa.php.net/">download page</a>. Windows binaries
       can be found on <a href="http://windows.php.net/qa/">windows.php.net/qa/</a>.
      </p>
 

@@ -62,7 +62,7 @@ site_header("News Archive - 2001", ["cache" => true]);
  Thanks to the generous folks at <a
  href="http://www.rackspace.com/?supbid=php.net">Rackspace</a>, we have added additional
  capacity for hosting the PHP project's efforts. Currently, the machine they
- have provided is serving downloads for www.php.net and snaps.php.net. We will
+ have provided is serving downloads for www.php.net. We will
  continue to re-balance our resource needs across all of the machines provided
  by our supporters.
 </p>
