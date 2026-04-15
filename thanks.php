@@ -63,19 +63,6 @@ site_header("Thanks", ["current" => "community"]);
             </p>
         </section>
     </li>
-
-    <li class="thanks">
-        <a href="https://duocast.nl/" class="thanks__logo thanks__logo--dark">
-            <img src="images/sponsors/duocast.svg" alt="Duocast">
-        </a>
-        <section>
-            <strong class="thanks__heading"><a href="https://duocast.nl/">Duocast</a></strong>
-            <p class="thanks__description">
-                Provides the servers and bandwidth used for buildbot testing and various Windows based servers.
-            </p>
-        </section>
-    </li>
-
 </ul>
 
 <h1>Thanks Emeritus</h1>
@@ -104,6 +91,11 @@ site_header("Thanks", ["current" => "community"]);
     <li>
         <a href="https://directi.com">Directi</a> provided IP address to
         country lookup information.
+    </li>
+
+    <li>
+        <a href="https://duocast.nl/">Duocast</a> provided servers and
+        bandwidth used for buildbot testing and various Windows based servers.
     </li>
 
     <li>
