@@ -113,6 +113,13 @@ function gpg_key_get(string $rm): ?string {
                 "      Key fingerprint = 5289 95BF EDFB A719 1D46  839E F9BA 0ADA 31CB D89E\n" .
                 "uid                  Joe Watkins <krakjoe@php.net>";
 
+        case 'mbeccati':
+            return
+                "pub   ed25519 2026-04-16 [SC]\n" .
+                "      0168 95DE 9A47 5111 D537  A6E6 9134 FF30 BC5A 99B5\n" .
+                "uid           [ultimate] Matteo Beccati <mbeccati@php.net>\n" .
+                "sub   cv25519 2026-04-16 [E]";
+
         case 'patrickallaert':
             return
                 "pub   rsa4096 2021-04-01 [SC]\n" .
@@ -190,6 +197,7 @@ function gpg_key_get(string $rm): ?string {
 
 function gpg_key_get_branches(bool $activeOnly): array {
     $branches = [
+        '8.6' => ['daniels', 'mbeccati'],
         '8.5' => ['pierrick', 'edorian', 'daniels'],
         '8.4' => ['ericmann', 'calvinb', 'saki'],
         '8.3' => ['pierrick', 'ericmann', 'bukka'],
