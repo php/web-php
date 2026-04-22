@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom" xmlns:default="http://php.net/ns/news">
+  <title>PHPTek 2026</title>
+  <id>https://www.php.net/archive/2026.php#2026-04-22-1</id>
+  <published>2026-04-22T18:19:38+00:00</published>
+  <updated>2026-04-22T18:19:38+00:00</updated>
+  <link href="https://www.php.net/conferences/index.php#2026-04-22-1" rel="alternate" type="text/html"/>
+  <link href="https://phptek.io/" rel="via" type="text/html"/>
+  <default:finalTeaserDate xmlns="http://php.net/ns/news">2026-05-19</default:finalTeaserDate>
+  <category term="conferences" label="Conference announcement"/>
+  <default:newsImage xmlns="http://php.net/ns/news" link="https://phptek.io/" title="PHPTek 2026">php-tek-2026.png</default:newsImage>
+  <content type="xhtml">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+      <p>The Premier PHP Conference of 2026</p>
+      <p>Join us May 19-21 for 3 days of multiple track expert-led sessions, hands-on workshops, and unparalleled networking opportunities with the PHP community. </p>
+      <p>Learn from 25+ industry experts and PHP core developers sharing their knowledge and experience. Participate in intensive workshops on advanced PHP techniques, frameworks, and tooling. Connect with 200+ PHP developers, community leaders, and industry professionals</p>
+      <p><a href="https://phptek.io/#register">Register Here</a></p>
+    </div>
+  </content>
+</entry>
