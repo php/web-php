@@ -118,9 +118,6 @@ function cycleMenuItems(current, forward) {
     var nextOrPreviousSibling = getNextOrPreviousSibling(current, forward);
     if (nextOrPreviousSibling.length) {
         cycle(nextOrPreviousSibling, current);
-        curr.children("a").first().focus().css({
-            outline: "none"
-        });
     }
 }
 
