@@ -95,7 +95,7 @@ $versions = [
     '8.4' => 'version 8.4',
     '8.3' => 'version 8.3',
     '8.2' => 'version 8.2',
-    'default' => 'OS default version',
+    'default' => 'default PHP version for OS',
 ];
 
 
