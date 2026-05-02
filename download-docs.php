@@ -110,8 +110,8 @@ foreach (Languages::LANGUAGES as $langcode => $language) {
             $link_to = "/distributions/manual/$filename";
 
             // Try to get size and changed date
-            $size = @filesize($filepath);
-            $changed = @filemtime($filepath);
+            $size = file_get_size($filepath);
+            $changed = file_get_size($filepath);
 
             // Size available, collect information
             if ($size !== false) {
@@ -134,8 +134,8 @@ $formats['<a href="/docs-echm.php">Extended HTML Help</a>'] = "zip"; // Add a li
 $actual_file = $_SERVER['DOCUMENT_ROOT'] . "/distributions/manual/php_manual_chm.zip";
 if (file_exists($actual_file)) {
     $link_to = "/get/php_manual_chm.zip/from/a/mirror";
-    $size    = @filesize($actual_file);
-    $changed = @filemtime($actual_file);
+    $size    = file_get_size($actual_file);
+    $changed = filemtime($actual_file);
     if ($size !== FALSE) {
         $files["en"]["zip"] = array(
             $link_to,

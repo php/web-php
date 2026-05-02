@@ -11,7 +11,7 @@ if (count($_SERVER['argv']) < 2) {
 }
 $news_file = array_shift($_SERVER['argv']);
 $version = array_shift($_SERVER['argv']);
-$changelog = @array_shift($_SERVER['argv']);
+$changelog = array_shift($_SERVER['argv']);
 
 // find NEWS entry
 $fp = fopen($news_file, "r");
