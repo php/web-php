@@ -95,7 +95,7 @@ jobs:
         run: "composer install --ansi --no-interaction --no-progress"
 
       - name: "Run friendsofphp/php-cs-fixer"
-        run: "vendor/bin/php-cs-fixer fix --ansi --config=.php-cs-fixer.php --diff --dry-run --show-progress=dots --verbose"
+        run: "vendor/bin/php-cs-fixer check --diff --show-progress=dots --verbose --ansi"
 
       - name: "Get libxml2-utils"
         run: |
