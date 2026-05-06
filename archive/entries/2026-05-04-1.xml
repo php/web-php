@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom" xmlns:default="http://php.net/ns/news">
+  <title>Laracon US 2026</title>
+  <id>https://www.php.net/archive/2026.php#2026-05-04-1</id>
+  <published>2026-05-04T16:50:29+00:00</published>
+  <updated>2026-05-04T16:50:29+00:00</updated>
+  <link href="https://www.php.net/conferences/index.php#2026-05-04-1" rel="alternate" type="text/html"/>
+  <link href="https://laracon.us" rel="via" type="text/html"/>
+  <default:finalTeaserDate xmlns="http://php.net/ns/news">2026-07-29</default:finalTeaserDate>
+  <category term="conferences" label="Conference announcement"/>
+  <default:newsImage xmlns="http://php.net/ns/news" link="https://laracon.us" title="Laracon US 2026">laraconus2026.jpg</default:newsImage>
+  <content type="xhtml">
+    <div xmlns="http://www.w3.org/1999/xhtml"><p>
+    Laracon US 2026 is the flagship Laravel conference, returning to the East Coast on July 28-29, 2026 at the SoWa Power Station in Boston, Massachusetts.
+</p>
+<p>
+    Join Laravel and PHP developers from around the world for two days of world-class talks, hands-on learning, and community connection. Come ready to level up, leave ready to ship.
+</p>
+Information:<br/>
+<ul>
+    <li>July 28-29, 2026</li>
+    <li>SoWa Power Station, 550 Harrison Ave, Boston, MA, USA</li>
+    <li>14+ confirmed speakers, including Taylor Otwell and Nuno Maduro</li>
+</ul>
+<p>
+    Additional events like:
+</p>
+<ul>
+    <li><a href="https://luma.com/a97xou0l">Dodgeball</a> — July 27, 3:00 PM</li>
+    <li><a href="https://luma.com/0j18sp8t">Larabelles Meetup</a> — July 27, 4:00 PM</li>
+    <li><a href="https://luma.com/3ma69cwe">Laraprom with Mostly Technical</a> — July 27, 8:00 PM</li>
+</ul>
+<p>
+    Plus an after party, VIP dinner, and <a href="https://nativephp.com/the-vibes">The Vibes with NativePHP</a> are happening throughout the week.
+</p>
+<p>
+    For full information and schedule, visit <a href="https://laracon.us">Laracon US 2026</a>.
+</p>
+<p>
+    You can also find us on <a href="https://twitter.com/LaraconUS">X / Twitter</a>.
+</p>
+    </div>
+  </content>
+</entry>
