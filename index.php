@@ -182,12 +182,6 @@ $announcements
       <div class='body'>
         <ul>
           <li>
-            <a href="https://twitter.com/official_php" target="_blank" rel="noopener noreferrer">
-              <i class="icon-x-twitter"></i>
-              @official_php
-            </a>
-          </li>
-          <li>
             <a href="https://fosstodon.org/@php" target="_blank" rel="noopener noreferrer">
               <i class="icon-mastodon"></i>
               @php@fosstodon.org
