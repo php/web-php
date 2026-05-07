@@ -9,6 +9,119 @@ changelog_header(8, $MINOR_VERSIONS);
 
 <a id="PHP_8_5"></a>
 
+<section class="version" id="8.5.6"><!-- {{{ 8.5.6 -->
+<h3>Version 8.5.6</h3>
+<b><?php release_date('07-May-2026'); ?></b>
+<ul><li>Core:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 19983); ?> (GC assertion failure with fibers, generators and destructors).</li>
+  <li>Fixed ZEND_API mismatch on zend_ce_closure forward decl for Windows+Clang.</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 21504); ?> (Incorrect RC-handling for ZEND_EXT_STMT op1).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 21478); ?> (Forward property operations to real instance for initialized lazy proxies).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 21605); ?> (Missing addref for Countable::count()).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 21699); ?> (Assertion failure in shutdown_executor when resolving self::/parent::/static:: callables if the error handler throws).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 21603); ?> (Missing addref for __unset).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 21760); ?> (Trait with class constant name conflict against enum case causes SEGV).</li>
+</ul></li>
+<li>CLI:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 21754); ?> (`--rf` command line option with a method triggers ext/reflection deprecation warnings).</li>
+</ul></li>
+<li>Curl:
+<ul>
+  <li>Add support for brotli and zstd on Windows.</li>
+</ul></li>
+<li>DOM:
+<ul>
+  <li>Fixed <?php githubsecurityl('php/php-src', '4jhr-8w89-j733'); ?> and <?php githubissuel('php/php-src', 21566); ?> (Dom\XMLDocument::C14N() emits duplicate xmlns declarations after setAttributeNS()). (CVE-2026-7263)</li>
+</ul></li>
+<li>FPM:
+<ul>
+  <li>Fixed <?php githubsecurityl('php/php-src', '7qg2-v9fj-4mwv'); ?> (XSS within status endpoint). (CVE-2026-6735)</li>
+</ul></li>
+<li>Iconv:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 17399); ?> (iconv memory leak on bailout).</li>
+</ul></li>
+<li>Lexbor:
+<ul>
+  <li>Upgrade to lexbor v2.7.0.</li>
+</ul></li>
+<li>MBString:
+<ul>
+  <li>Fixed <?php githubsecurityl('php/php-src', 'wm6j-2649-pv75'); ?> (Null pointer dereference in php_mb_check_encoding() via mb_ereg_search_init()). (CVE-2026-7259)</li>
+  <li>Fixed <?php githubsecurityl('php/php-src', '74r9-qxhc-fx53'); ?> (Out-of-bounds access in mbfl_name2encoding_ex()). (CVE-2026-6104)</li>
+</ul></li>
+<li>Opcache:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 21158); ?> (JIT: Assertion jit-&gt;ra[var].flags &amp; (1&lt;&lt;0) failed in zend_jit_use_reg).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 21593); ?> (Borked function JIT JMPNZ smart branch).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 21460); ?> (COND optimization regression).</li>
+  <li>Fixed faulty returns out of zend_try block in zend_jit_trace().</li>
+</ul></li>
+<li>OpenSSL:
+<ul>
+  <li>Fix memory leak regression in openssl_pbkdf2().</li>
+  <li>Fix a bunch of memory leaks and crashes on edge cases.</li>
+</ul></li>
+<li>PDO_Firebird:
+<ul>
+  <li>Fixed <?php githubsecurityl('php/php-src', 'w476-322c-wpvm'); ?> (SQL injection via NUL bytes in quoted strings). (CVE-2025-14179)</li>
+</ul></li>
+<li>PDO_PGSQL:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 21683); ?> (pdo_pgsql throws with ATTR_PREFETCH=0 on empty result set).</li>
+</ul></li>
+<li>Phar:
+<ul>
+  <li>Restore is_link handler in phar_intercept_functions_shutdown.</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 21797); ?> (phar: NULL dereference in Phar::webPhar() when SCRIPT_NAME is absent from SAPI environment).</li>
+  <li>Fix memory leak in Phar::offsetGet().</li>
+  <li>Fix memory leak in phar_add_file().</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 21799); ?> (phar: propagate phar_stream_flush return value from phar_stream_close).</li>
+  <li>Fix memory leak in phar_verify_signature() when md_ctx is invalid.</li>
+</ul></li>
+<li>Random:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 21731); ?> (Random\Engine\Xoshiro256StarStar::__unserialize() accepts all-zero state).</li>
+</ul></li>
+<li>Session:
+<ul>
+  <li>Fixed memory leak when session GC callback return a refcounted value.</li>
+</ul></li>
+<li>SOAP:
+<ul>
+  <li>Fixed <?php githubsecurityl('php/php-src', '85c2-q967-79q5'); ?> (Stale SOAP_GLOBAL(ref_map) pointer with Apache Map). (CVE-2026-6722)</li>
+  <li>Fixed <?php githubsecurityl('php/php-src', 'm33r-qmcv-p97q'); ?> (Use-after-free after header parsing failure with SOAP_PERSISTENCE_SESSION). (CVE-2026-7261)</li>
+  <li>Fixed <?php githubsecurityl('php/php-src', 'hmxp-6pc4-f3vv'); ?> (Broken Apache map value NULL check). (CVE-2026-7262)</li>
+</ul></li>
+<li>SPL:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 21499); ?> (RecursiveArrayIterator getChildren UAF after parent free).</li>
+  <li>Fix concurrent iteration and deletion issues in SplObjectStorage.</li>
+</ul></li>
+<li>Sqlite3:
+<ul>
+  <li>Fixed wrong free list comparator pointer type.</li>
+</ul></li>
+<li>Standard:
+<ul>
+  <li>Fixed <?php githubsecurityl('php/php-src', '96wq-48vp-hh57'); ?> (Signed integer overflow of char array offset). (CVE-2026-7568)</li>
+  <li>Fixed <?php githubsecurityl('php/php-src', 'm8rr-4c36-8gq4'); ?> (Consistently pass unsigned char to ctype.h functions). (CVE-2026-7258)</li>
+</ul></li>
+<li>Streams:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 21468); ?> (Segfault in file_get_contents w/ a https URL and a proxy set).</li>
+</ul></li>
+<li>URI:
+<ul>
+  <li>Fixed CVE-2026-42371 (uriparser before 1.0.1 has numeric truncation in text range comparison). (CVE-2026-42371)</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
+
+
 <section class="version" id="8.5.5"><!-- {{{ 8.5.5 -->
 <h3>Version 8.5.5</h3>
 <b><?php release_date('09-Apr-2026'); ?></b>
