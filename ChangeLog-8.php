@@ -5868,6 +5868,45 @@ changelog_header(8, $MINOR_VERSIONS);
 
 <a id="PHP_8_2"></a>
 
+<section class="version" id="8.2.31"><!-- {{{ 8.2.31 -->
+<h3>Version 8.2.31</h3>
+<b><?php release_date('07-May-2026'); ?></b>
+<ul><li>Curl:
+<ul>
+  <li>Add support for brotli and zstd on Windows.</li>
+</ul></li>
+<li>FPM:
+<ul>
+  <li>Fixed <?php githubsecurityl('php/php-src', '7qg2-v9fj-4mwv'); ?> (XSS within status endpoint). (CVE-2026-6735)</li>
+</ul></li>
+<li>MBString:
+<ul>
+  <li>Fixed <?php githubsecurityl('php/php-src', 'wm6j-2649-pv75'); ?> (Null pointer dereference in php_mb_check_encoding() via mb_ereg_search_init()). (CVE-2026-7259)</li>
+</ul></li>
+<li>OpenSSL:
+<ul>
+  <li>Fix compatibility issues with OpenSSL 4.0.</li>
+</ul></li>
+<li>PDO_Firebird:
+<ul>
+  <li>Fixed <?php githubsecurityl('php/php-src', 'w476-322c-wpvm'); ?> (SQL injection via NUL bytes in quoted strings). (CVE-2025-14179)</li>
+</ul></li>
+<li>SOAP:
+<ul>
+  <li>Fixed <?php githubsecurityl('php/php-src', '85c2-q967-79q5'); ?> (Stale SOAP_GLOBAL(ref_map) pointer with Apache Map). (CVE-2026-6722)</li>
+  <li>Fixed <?php githubsecurityl('php/php-src', 'm33r-qmcv-p97q'); ?> (Use-after-free after header parsing failure with SOAP_PERSISTENCE_SESSION). (CVE-2026-7261)</li>
+  <li>Fixed <?php githubsecurityl('php/php-src', 'hmxp-6pc4-f3vv'); ?> (Broken Apache map value NULL check). (CVE-2026-7262)</li>
+</ul></li>
+<li>Standard:
+<ul>
+  <li>Fixed <?php githubsecurityl('php/php-src', '96wq-48vp-hh57'); ?> (Signed integer overflow of char array offset). (CVE-2026-7568)</li>
+  <li>Fixed <?php githubsecurityl('php/php-src', 'm8rr-4c36-8gq4'); ?> (Consistently pass unsigned char to ctype.h functions). (CVE-2026-7258)</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
+
+
 <section class="version" id="8.2.30"><!-- {{{ 8.2.30 -->
 <h3>Version 8.2.30</h3>
 <b><?php release_date('18-Dec-2025'); ?></b>

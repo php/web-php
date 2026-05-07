@@ -2,6 +2,43 @@
 $OLDRELEASES = array (
   8 => 
   array (
+    '8.2.30' => 
+    array (
+      'announcement' => 
+      array (
+        'English' => '/releases/8_2_30.php',
+      ),
+      'tags' => 
+      array (
+        0 => 'security',
+      ),
+      'date' => '18 Dec 2025',
+      'source' => 
+      array (
+        0 => 
+        array (
+          'filename' => 'php-8.2.30.tar.gz',
+          'name' => 'PHP 8.2.30 (tar.gz)',
+          'sha256' => 'a0fa6673ba4b0c8335fbab08afb7c2e13a3791f2b5a0928c7ad3d7ad872edf26',
+          'date' => '18 Dec 2025',
+        ),
+        1 => 
+        array (
+          'filename' => 'php-8.2.30.tar.bz2',
+          'name' => 'PHP 8.2.30 (tar.bz2)',
+          'sha256' => '104820b6c8fc959dde4b3342135f42bdabf246e86918a16381a17d8447c866fa',
+          'date' => '18 Dec 2025',
+        ),
+        2 => 
+        array (
+          'filename' => 'php-8.2.30.tar.xz',
+          'name' => 'PHP 8.2.30 (tar.xz)',
+          'sha256' => 'bc90523e17af4db46157e75d0c9ef0b9d0030b0514e62c26ba7b513b8c4eb015',
+          'date' => '18 Dec 2025',
+        ),
+      ),
+      'museum' => false,
+    ),
     '8.4.20' => 
     array (
       'announcement' => 
