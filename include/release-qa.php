@@ -58,7 +58,7 @@ $QA_RELEASES = [
         ],
     ],
 
-    '8.3.30' => [
+    '8.3.31' => [
         'active'  => true,
         'release' => [
             'type'       => 'RC',
@@ -66,7 +66,7 @@ $QA_RELEASES = [
             'sha256_bz2' => '',
             'sha256_gz'  => '',
             'sha256_xz'  => '',
-            'date'       => '01 Jan 2026',
+            'date'       => '07 May 2026',
             'baseurl'    => 'https://downloads.php.net/',
         ],
     ],
@@ -75,12 +75,12 @@ $QA_RELEASES = [
         'active'  => true,
         'release' => [
             'type'       => 'RC',
-            'number'     => 1,
-            'sha256_bz2' => '92be1ab180946fb6fe21456cfae08190fe556fb643d56043bd56f034ae145368',
-            'sha256_gz'  => 'e4c3eb09b3948bda0a0e41c73424a73c1d3ca6c7ee81efb22f26f07cb7476929',
-            'sha256_xz'  => 'c1a77cbbfe2dc7dd37b11f88ff68f112dbed6eaa9ba2d232e0a1b57852c93096',
-            'date'       => '23 Apr 2026',
-            'baseurl'    => 'https://downloads.php.net/~calvinb/',
+            'number'     => 0,
+            'sha256_bz2' => '',
+            'sha256_gz'  => '',
+            'sha256_xz'  => '',
+            'date'       => '07 May 2026',
+            'baseurl'    => 'https://downloads.php.net/',
         ],
     ],
 
@@ -88,10 +88,10 @@ $QA_RELEASES = [
         'active'  => true,
         'release' => [
             'type'       => 'RC',
-            'number'     => 3,
-            'sha256_bz2' => '7084b65f8a37558950a657654d0cabda0778d9c3b49f1c79a16bf2c9611d109b',
-            'sha256_gz'  => '01e12f91a9c6924d42d208a1d97a32930562caa410f49f0caae62e07bfe014ff',
-            'sha256_xz'  => '5faeca2a67e766f897a51c7a93414706d168d75c862f86343f6c4658c318eee5',
+            'number'     => 0,
+            'sha256_bz2' => '',
+            'sha256_gz'  => '',
+            'sha256_xz'  => '',
             'date'       => '30 Apr 2026',
             'baseurl'    => 'https://downloads.php.net/~daniels/',
         ],
