@@ -10,20 +10,10 @@ site_header("Documentation", ["current" => "docs"]);
 ?>
 
 <h1>Documentation</h1>
-<div class="content-box">
-
 <p>
  The PHP Manual is available online in a selection of languages.
  Please pick a language from the list below.
 </p>
-
-<p>
- Note, that many languages are just under translation, and
- the untranslated parts are still in English. Also some translated
- parts might be outdated. The translation teams are
- <a href="https://doc.php.net/">open to contributions</a>.
-</p>
-</div>
 
 <p>
   View Online:
@@ -46,6 +36,13 @@ foreach (Languages::ACTIVE_ONLINE_LANGUAGES as $langcode => $langname) {
 }
 
 ?>
+</p>
+
+<p>
+ Note that many languages are still being translated, and
+ the untranslated parts are still in English. Some translated
+ parts might be outdated. The translation teams are
+ <a href="https://doc.php.net/">open to contributions</a>.
 </p>
 
 <p>
