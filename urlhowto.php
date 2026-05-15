@@ -32,17 +32,17 @@ function a($href): void {
 
 ?>
 
-<h1>Navigation tips&tricks</h1>
+<h1>Navigation tips & tricks</h1>
 
 <p>
- When using the PHP.net website, there is even no need to get to
+ When using the PHP.net website, there is no need to use
  a search box to access the content you would like to see quickly.
- You can use short PHP.net URLs to access pages directly.
+ You can instead use short PHP.net URLs to access pages directly.
 </p>
 
 <p>
- Note, that these shortcuts are expected to work on all mirror
- sites, not just at the main site. If you find that some of these
+ Note that these shortcuts are expected to work on all mirror
+ sites, not just on the main site. If you find that some of these
  shortcuts are not working on your mirror site, please report them
  as a "PHP.net Website Problem" at
  <a href="https://bugs.php.net/">https://bugs.php.net/</a>.
