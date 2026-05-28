@@ -104,7 +104,7 @@ Mousetrap.bind("b o r k", function () {
 function cycle(to, from) {
     from.removeClass("current");
     to.addClass("current");
-    $.scrollTo(to.offset().top);
+    to[0].scrollIntoView({ block: "center" });
 }
 
 function getNextOrPreviousSibling(node, forward) {
