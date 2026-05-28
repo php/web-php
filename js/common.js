@@ -688,6 +688,11 @@ $(document).ready(function () {
         flashMessage($(this));
     });
     /* }}} */
+
+    const activeItem = document.querySelector(".layout-menu .current");
+    if (activeItem) {
+        activeItem.scrollIntoView({ block: "center" });
+    }
 });
 
 /* {{{ add-user.php animations */
