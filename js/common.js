@@ -104,7 +104,7 @@ Mousetrap.bind("b o r k", function () {
 function cycle(to, from) {
     from.removeClass("current");
     to.addClass("current");
-    to[0].scrollIntoView({ block: "center" });
+    scrollToActiveItem();
 }
 
 function getNextOrPreviousSibling(node, forward) {
@@ -142,6 +142,18 @@ function cycleHeaders(matches, forward) {
         cycle($(matches[forward ? 0 : matches.length - 1]), $(matches[forward ? matches.length - 1 : 0]));
     }
 }
+
+function scrollToActiveItem() {
+    const sidebar = document.querySelector(".layout-menu");
+    const activeItem = sidebar.querySelector(".current");
+
+    if (sidebar && activeItem) {
+        sidebar.scrollTo({
+            top: activeItem.offsetTop - sidebar.offsetTop - (sidebar.clientHeight / 2) + (activeItem.clientHeight / 2)
+        });
+    }
+}
+
 Mousetrap.bind("j", function () {
     /* Doc page */
     var node = $(".layout-menu .current");
@@ -689,10 +701,7 @@ $(document).ready(function () {
     });
     /* }}} */
 
-    const activeItem = document.querySelector(".layout-menu .current");
-    if (activeItem) {
-        activeItem.scrollIntoView({ block: "center" });
-    }
+    scrollToActiveItem();
 });
 
 /* {{{ add-user.php animations */
