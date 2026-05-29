@@ -1337,7 +1337,10 @@ div.soft-deprecation-notice blockquote.sidebar {
     height: 100%;
     width: 100%;
     position: fixed;
-    top: 64px;
+    top: 0;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    overscroll-behavior: contain;
     z-index: 5000;
 }
 #goto div,
@@ -1350,6 +1353,14 @@ div.soft-deprecation-notice blockquote.sidebar {
 #trick dl {
     display: inline-block;
     vertical-align: top;
+}
+#trick dt {
+    margin: .5rem 0 .25rem;
+    line-height: 1.4;
+}
+#trick dd {
+    margin: 0 0 .75rem 1rem;
+    line-height: 1.6;
 }
 #trick a {
     color: #E6E6E6;
