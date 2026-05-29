@@ -145,7 +145,7 @@ function cycleHeaders(matches, forward) {
 
 function scrollToActiveItem() {
     const sidebar = document.querySelector(".layout-menu");
-    const activeItem = sidebar.querySelector(".current");
+    const activeItem = sidebar?.querySelector(".current");
 
     if (sidebar && activeItem) {
         sidebar.scrollTo({
