@@ -248,11 +248,6 @@ if (isset($_POST['action'])) {
           'General bug activity are posted here',
           false, false, false, "php.bugs",
       ],
-      [
-          'standards', 'PHP Standardization and interoperability list',
-          'Development of language standards',
-          false, false, false, "php.standards",
-      ],
 
       'PHP internal website mailing lists',
       [
