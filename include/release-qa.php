@@ -58,7 +58,7 @@ $QA_RELEASES = [
         ],
     ],
 
-    '8.3.30' => [
+    '8.3.31' => [
         'active'  => true,
         'release' => [
             'type'       => 'RC',
@@ -66,34 +66,34 @@ $QA_RELEASES = [
             'sha256_bz2' => '',
             'sha256_gz'  => '',
             'sha256_xz'  => '',
-            'date'       => '01 Jan 2026',
+            'date'       => '07 May 2026',
             'baseurl'    => 'https://downloads.php.net/',
         ],
     ],
 
-    '8.4.21' => [
+    '8.4.22' => [
         'active'  => true,
         'release' => [
             'type'       => 'RC',
             'number'     => 1,
-            'sha256_bz2' => '92be1ab180946fb6fe21456cfae08190fe556fb643d56043bd56f034ae145368',
-            'sha256_gz'  => 'e4c3eb09b3948bda0a0e41c73424a73c1d3ca6c7ee81efb22f26f07cb7476929',
-            'sha256_xz'  => 'c1a77cbbfe2dc7dd37b11f88ff68f112dbed6eaa9ba2d232e0a1b57852c93096',
-            'date'       => '23 Apr 2026',
-            'baseurl'    => 'https://downloads.php.net/~calvinb/',
+            'sha256_bz2' => '7d36abec8664850c5bc81691a349b3d1fdb888f8598c6d0230342fe8a4a6f2d4',
+            'sha256_gz'  => '34ad40683315db9cf76f2d8f79eb06f4363e76e76bc88f489a64c9512af38c43',
+            'sha256_xz'  => 'f68e7270cc4460b9816bdf647dfe9fc8e8b6e385e77299ac7b8d6f17f75d3098',
+            'date'       => '21 May 2026',
+            'baseurl'    => 'https://downloads.php.net/~saki/',
         ],
     ],
 
-    '8.5.6' => [
+    '8.5.7' => [
         'active'  => true,
         'release' => [
             'type'       => 'RC',
-            'number'     => 3,
-            'sha256_bz2' => '7084b65f8a37558950a657654d0cabda0778d9c3b49f1c79a16bf2c9611d109b',
-            'sha256_gz'  => '01e12f91a9c6924d42d208a1d97a32930562caa410f49f0caae62e07bfe014ff',
-            'sha256_xz'  => '5faeca2a67e766f897a51c7a93414706d168d75c862f86343f6c4658c318eee5',
-            'date'       => '30 Apr 2026',
-            'baseurl'    => 'https://downloads.php.net/~daniels/',
+            'number'     => 2,
+            'sha256_bz2' => '3970d5f90355461be5ad2cb5693127fc4fdbef7887fcb62d865447de20be0dc0',
+            'sha256_gz'  => 'de7f6c6b374e939a38996a499371d8f7e9eeae7d95aee766ad8f025449d780e7',
+            'sha256_xz'  => 'b723228ff7b6656555707811447b505215cc363438aeb24e877b9ff6bf59bc0e',
+            'date'       => '28 May 2026',
+            'baseurl'    => 'https://downloads.php.net/~edorian/',
         ],
     ],
 ];

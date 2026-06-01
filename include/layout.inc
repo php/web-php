@@ -566,7 +566,7 @@ function get_news_changes()
 function doc_toc($lang): void {
     $file = __DIR__ . "/../manual/$lang/toc/index.inc";
     if (!file_exists($file)) {
-        $lang = "en"; // Fallback on english if the translation doesn't exist
+        $lang = "en"; // Fallback on English if the translation doesn't exist
         $file = __DIR__ . "/../manual/en/toc/index.inc";
     }
     require __DIR__ . "/../manual/$lang/toc/index.inc";

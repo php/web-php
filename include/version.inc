@@ -20,51 +20,51 @@ $RELEASES = (function () {
 
     /* PHP 8.5 Release */
     $data['8.5'] = [
-        'version' => '8.5.5',
-        'date' => '09 Apr 2026',
-        'tags' => [], // Set to ['security'] for security releases.
+        'version' => '8.5.6',
+        'date' => '07 May 2026',
+        'tags' => ['security'], // Set to ['security'] for security releases.
         'sha256' => [
             // WARNING: Order of SHA256 entries here is DIFFERENT from the
             // order in the manifest
-            'tar.gz' => '276279f637a875a514346b332bba6d8b06c036cf7979a858e5c55f72c4874884',
-            'tar.bz2' => 'ee262beff61c431965d1f97192854b36208adeac38983c3498bb3500ae87283c',
-            'tar.xz' => '95bec382f4bd00570a8ef52a58ec04d8d9b9a90494781f1c106d1b274a3902f2',
+            'tar.gz' => '169aaa21c2834b38df8e39169f43bc5bea8d4059a816cfbc59be08fc2bae60cd',
+            'tar.bz2' => '4457240f65f0c59a620920d66cdab1b12100a431e03ad9febe38b13a1b25957f',
+            'tar.xz' => '826c600b7c6f956bd335558ca3bdbcab23b22126c1cc8d9348be2280a2204bb7',
         ]
     ];
 
     /* PHP 8.4 Release */
     $data['8.4'] = [
-        'version' => '8.4.20',
-        'date' => '09 Apr 2026',
-        'tags' => [], // Set to ['security'] for security releases.
+        'version' => '8.4.21',
+        'date' => '07 May 2026',
+        'tags' => ['security'], // Set to ['security'] for security releases.
         'sha256' => [
-            'tar.gz' => 'a2def5d534d57c6a0236f2265de7537608af871900a4f7955eff463e9e38247d',
-            'tar.bz2' => 'ce25d2610a5f9522ac8f53fbb7b8280b5c021991e9bd9137068c9c629d9ffb56',
-            'tar.xz' => 'e454c6f7c89a42f41ebb06dc5c3578e8c8b5f1a3f0da6675665affab04e221f7',
+            'tar.gz' => 'db96ee0a8e5ee7b73a4913a2aeddc162ba2ef16cd34b9347b5b9a6150e1f8e48',
+            'tar.bz2' => '5e0bd287f3be35bf57c211b010527ae5e10a88170f96e64d336044eb5faef430',
+            'tar.xz' => '7cf5d8ab12c3b2016875bcfaec71bef1ef0b07bed6148f2c447577074431f984',
         ]
     ];
 
     /* PHP 8.3 Release */
     $data['8.3'] = [
-        'version' => '8.3.30',
-        'date' => '15 Jan 2026',
-        'tags' => [], // Set to ['security'] for security releases.
+        'version' => '8.3.31',
+        'date' => '07 May 2026',
+        'tags' => ['security'], // Set to ['security'] for security releases.
         'sha256' => [
-            'tar.gz' => 'e587dc95fb7f62730299fa7b36b6e4f91e6708aaefa2fff68a0098d320c16386',
-            'tar.bz2' => '800b7b6ed50b73c8ee7844ee5f2f7cc612faa7875a0aa7c4529e8ed5866a5030',
-            'tar.xz' => '67f084d36852daab6809561a7c8023d130ca07fc6af8fb040684dd1414934d48',
+            'tar.gz' => '4e7baaf0a690e954a20e7ced3dd633ce8cb8094e2b6b612a55e703ecbbdcbf4f',
+            'tar.bz2' => 'e6986b1fd37eb25402127fe4a7278a3e03b7f9025bb7a4bd292a271bdf930fb9',
+            'tar.xz' => '66410cee07f4b2baeb0843140bb2a2b52ef930b5cf9b3d6e6d158b33aae8fa37',
         ]
     ];
 
     /* PHP 8.2 Release */
     $data['8.2'] = [
-        'version' => '8.2.30',
-        'date' => '18 Dec 2025',
+        'version' => '8.2.31',
+        'date' => '07 May 2026',
         'tags' => ['security'], // Set to ['security'] for security releases.
         'sha256' => [
-            'tar.gz' => 'a0fa6673ba4b0c8335fbab08afb7c2e13a3791f2b5a0928c7ad3d7ad872edf26',
-            'tar.bz2' => '104820b6c8fc959dde4b3342135f42bdabf246e86918a16381a17d8447c866fa',
-            'tar.xz' => 'bc90523e17af4db46157e75d0c9ef0b9d0030b0514e62c26ba7b513b8c4eb015',
+            'tar.gz' => '083c2f61cc5f527eb293c4c468a91af46a9678785957e023b2796a9db290d870',
+            'tar.bz2' => '948183fa04cf261c9b9363c02f428977b9ddf8c0bfdff8e8e1fba816ed570803',
+            'tar.xz' => '95eae411d594fe6f6e5678b76645dc13ae47d3c0a5325c1d969b58dea56ee45a',
         ]
     ];
 
