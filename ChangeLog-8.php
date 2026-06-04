@@ -9,6 +9,46 @@ changelog_header(8, $MINOR_VERSIONS);
 
 <a id="PHP_8_5"></a>
 
+<section class="version" id="8.5.7"><!-- {{{ 8.5.7 -->
+<h3>Version 8.5.7</h3>
+<b><?php release_date('04-Jun-2026'); ?></b>
+<ul><li>CLI:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 21901); ?> (Stale getopt() optional value).</li>
+</ul></li>
+<li>Date:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 18422); ?> (int overflow in php_date_llabs).</li>
+</ul></li>
+<li>DOM:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 22077); ?> (UAF in custom XPath function).</li>
+</ul></li>
+<li>Opcache:
+<ul>
+  <li>Fixed tracing JIT crash when a VM interrupt is handled during an observed user function call.</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 21746); ?> (Segfault with tracing JIT).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 22004); ?> (Assertion failure at ext/opcache/jit/zend_jit_trace.c).</li>
+  <li>Fixed tailcall VM crash when a VM interrupt is handled from a VM helper.</li>
+</ul></li>
+<li>OpenSSL:
+<ul>
+  <li>Fix compatibility issues with OpenSSL 4.0.</li>
+</ul></li>
+<li>Standard:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 21689); ?> (version_compare() incorrectly handles versions ending with a dot).</li>
+</ul></li>
+<li>URI:
+<ul>
+  <li>Fixed CVE-2026-44927 (In uriparser before 1.0.2, there is pointer difference truncation to int in various places). (CVE-2026-44927)</li>
+  <li>Fixed CVE-2026-44928 (In uriparser before 1.0.2, the function family EqualsUri can misclassify two unequal URIs as equal). (CVE-2026-44928)</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
+
+
 <section class="version" id="8.5.6"><!-- {{{ 8.5.6 -->
 <h3>Version 8.5.6</h3>
 <b><?php release_date('07-May-2026'); ?></b>
