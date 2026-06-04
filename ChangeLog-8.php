@@ -1030,6 +1030,47 @@ changelog_header(8, $MINOR_VERSIONS);
 
 <a id="PHP_8_4"></a>
 
+<section class="version" id="8.4.22"><!-- {{{ 8.4.22 -->
+<h3>Version 8.4.22</h3>
+<b><?php release_date('04-Jun-2026'); ?></b>
+<ul><li>Date:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 18422); ?> (int overflow in php_date_llabs).</li>
+</ul></li>
+<li>Intl:
+<ul>
+  <li>Fix incorrect argument positions in out-of-bounds errors for IntlCalendar::set(), IntlCalendar::setDate(), IntlCalendar::setDateTime(), and IntlGregorianCalendar date/time construction.</li>
+  <li>Expose Spoofchecker restriction-level APIs on all supported ICU versions.</li>
+  <li>Fix SpoofChecker::setAllowedChars() and IntlDateFormatter::__construct() to report PHP constant names instead of ICU constant names in user-visible error messages.</li>
+</ul></li>
+<li>MySQLnd:
+<ul>
+  <li>Fix persistent free of non-persistent connect_attr key (David Carlier).</li>
+</ul></li>
+<li>Opcache:
+<ul>
+  <li>Fixed tracing JIT crash when a VM interrupt is handled during an observed user function call.</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 22004); ?> (Assertion failure at ext/opcache/jit/zend_jit_trace.c).</li>
+</ul></li>
+<li>OpenSSL:
+<ul>
+  <li>Fix compatibility issues with OpenSSL 4.0.</li>
+</ul></li>
+<li>SPL:
+<ul>
+  <li>Fix SplFixedArray::setSize leak when destructor grows during clear.</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 21933); ?> (use after free of self-freeing MultipleIterator children).</li>
+</ul></li>
+<li>Standard:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 21689); ?> (version_compare() incorrectly handles versions ending with a dot).</li>
+  <li>Fixed ip2long() leading zeros handling inconsistency on AIX.</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
+
+
 <section class="version" id="8.4.21"><!-- {{{ 8.4.21 -->
 <h3>Version 8.4.21</h3>
 <b><?php release_date('07-May-2026'); ?></b>
