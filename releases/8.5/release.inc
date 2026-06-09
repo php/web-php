@@ -686,7 +686,7 @@ PHP
         <div class="release-notes-grid-container">
             <div class="release-notes-grid">
                 <div>
-                    <h2><?= message('new_classes_title', $lang) ?></h2>
+                    <h2 id="additional-improvements"><?= message('new_classes_title', $lang) ?></h2>
                     <ul class="new">
                         <li><?= message('fatal_error_backtrace', $lang) ?></li>
                         <li><?= message('const_attribute_target', $lang) ?></li>
@@ -712,7 +712,7 @@ PHP
                     </ul>
                 </div>
                 <div>
-                    <h2><?= message('bc_title', $lang) ?></h2>
+                    <h2 id="deprecations-and-bc-breaks"><?= message('bc_title', $lang) ?></h2>
                     <ul class="old">
                         <li><?= message('bc_backtick_operator', $lang, [
                                 '<a href="/manual/' . $documentation . '/function.shell-exec.php"><code>shell_exec()</code></a>'

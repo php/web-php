@@ -75,6 +75,7 @@ code[class*=language-], pre[class*=language-] {
 }
 
 .features-title h2,
+.release-notes h2,
 .before-and-after-title-and-description h2 {
     position: relative;
     overflow: visible;
@@ -82,6 +83,7 @@ code[class*=language-], pre[class*=language-] {
 }
 
 .features-title h2 .genanchor,
+.release-notes h2 .genanchor,
 .before-and-after-title-and-description h2 .genanchor {
     position: absolute;
     top: 4px;
@@ -97,11 +99,13 @@ code[class*=language-], pre[class*=language-] {
 }
 
 .dark .features-title h2 .genanchor,
+.dark .release-notes h2 .genanchor,
 .dark .before-and-after-title-and-description h2 .genanchor {
     background: url("/images/php8/anchor-white.svg") scroll no-repeat left center / 21px 16px transparent;
 }
 
 .features-title h2:hover .genanchor,
+.release-notes h2:hover .genanchor,
 .before-and-after-title-and-description h2:hover .genanchor {
     display: block;
 }
@@ -2170,7 +2174,6 @@ header nav {
 }
 
 .release-notes ul {
-    margin-top: calc(var(--spacing) * 6);
     margin-left: calc(var(--spacing) * 4);
     list-style-type: disc
 }
