@@ -14,23 +14,17 @@ return [
     'key_features' => 'Key Features in PHP 8.5',
     'key_features_description' => '<p><strong>Faster</strong>, <strong>cleaner</strong>, and <strong>built for developers</strong>.</p>',
 
-    'features_pipe_operator_title' => 'Pipe Operator',
     'features_pipe_operator_description' => '<p>The <code>|></code> operator enables chaining callables left-to-right, passing values smoothly through multiple functions without intermediary variables.</p>',
-    'features_persistent_curl_share_handles_title' => 'Persistent cURL Share Handles',
     'features_persistent_curl_share_handles_description' => '<p>Handles can now be persisted across multiple PHP requests, avoiding the cost of repeated connection initialization to the same hosts.</p>',
-    'features_clone_with_title' => 'Clone With',
     'features_clone_with_description' => '<p>Clone objects and update properties with the new <code>clone()</code> syntax, making the "with-er" pattern simple for <code>readonly</code> classes.</p>',
-    'features_uri_extension_title' => 'URI Extension',
     'features_uri_extension_description' => '<p>PHP 8.5 adds a built-in URI extension to parse, normalize, and handle URLs following <em>RFC 3986</em> and <em>WHATWG URL</em> standards.</p>',
-    'features_no_discard_title' => '#[\NoDiscard] Attribute',
     'features_no_discard_description' => '<p>The <code>#[\NoDiscard]</code> attribute warns when a return value isn’t used, helping prevent mistakes and improving overall API safety.</p>',
-    'features_fcc_in_const_expr_title' => 'Closures and First-Class Callables in Constant Expressions',
     'features_fcc_in_const_expr_description' => '<p>Static closures and first-class callables can now be used in constant expressions, such as attribute parameters.</p>',
 
     'pipe_operator_title' => 'Pipe Operator',
     'pipe_operator_description' => '<p>The pipe operator allows chaining function calls together without dealing with intermediary variables. This enables replacing many "nested calls" with a chain that can be read forwards, rather than inside-out.</p><p>Learn more about the backstory of this feature in <a href="https://thephp.foundation/blog/2025/07/11/php-85-adds-pipe-operator/" target="_blank" rel="noopener noreferrer">The PHP Foundation’s blog</a>.</p>',
 
-    'array_first_last_title' => 'array_first() and array_last() functions',
+    'array_first_last_title' => '<code>array_first()</code> and <code>array_last()</code> functions',
     'array_first_last_description' => '<p>The <code>array_first()</code> and <code>array_last()</code> functions return the first or last value of an array, respectively. If the array is empty, <code>null</code> is returned (making it easy to compose with the <code>??</code> operator).</p>',
 
     'clone_with_title' => 'Clone With',
@@ -39,7 +33,7 @@ return [
     'uri_extension_title' => 'URI Extension',
     'uri_extension_description' => '<p>The new always-available URI extension provides APIs to securely parse and modify URIs and URLs according to the RFC 3986 and the WHATWG URL standards.</p><p>Powered by the <a href="https://uriparser.github.io/" target="_blank" rel="noopener noreferrer">uriparser</a> (RFC 3986) and <a href="https://lexbor.com/" target="_blank" rel="noopener noreferrer">Lexbor</a> (WHATWG URL) libraries.</p><p>Learn more about the backstory of this feature in <a href="https://thephp.foundation/blog/2025/10/10/php-85-uri-extension/" target="_blank" rel="noopener noreferrer">The PHP Foundation’s blog</a>.</p>',
 
-    'no_discard_title' => '#[\NoDiscard] Attribute',
+    'no_discard_title' => '<code>#[\NoDiscard]</code> Attribute',
     'no_discard_description' => '<p>By adding the <code>#[\NoDiscard]</code> attribute to a function, PHP will check whether the returned value is consumed and emit a warning if it is not. This allows improving the safety of APIs where the returned value is important, but it\'s easy to forget using the return value by accident.</p><p>The associated <code>(void)</code> cast can be used to indicate that a value is intentionally unused.</p>',
 
     'persistent_curl_share_handles_title' => 'Persistent cURL Share Handles',
