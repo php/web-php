@@ -900,6 +900,40 @@ a {
     position: absolute
 }
 
+.hero-orb-1-x,
+.hero-orb-1-y,
+.hero-orb-1-r,
+.hero-orb-2-x,
+.hero-orb-2-y,
+.hero-orb-2-r,
+.hero-orb-3-x,
+.hero-orb-3-y,
+.hero-orb-3-r {
+    transform-box: view-box;
+    transform-origin: 50% 50%
+}
+
+.hero-orb-1-x { animation: hero-orb1-x 10s linear infinite alternate }
+.hero-orb-1-y { animation: hero-orb1-y 10.5s linear infinite alternate }
+.hero-orb-1-r { animation: hero-orb-rotate-fwd 7s linear infinite }
+
+.hero-orb-2-x { animation: hero-orb2-x 11.5s linear infinite alternate }
+.hero-orb-2-y { animation: hero-orb2-y 12s linear infinite alternate }
+.hero-orb-2-r { animation: hero-orb-rotate-fwd 12s linear infinite }
+
+.hero-orb-3-x { animation: hero-orb3-x 12.5s linear infinite alternate }
+.hero-orb-3-y { animation: hero-orb3-y 6s linear infinite alternate }
+.hero-orb-3-r { animation: hero-orb-rotate-rev 9s linear infinite }
+
+@keyframes hero-orb1-x { from { transform: translateX(25%) } to { transform: translateX(0%) } }
+@keyframes hero-orb1-y { from { transform: translateY(0%) } to { transform: translateY(25%) } }
+@keyframes hero-orb2-x { from { transform: translateX(-25%) } to { transform: translateX(0%) } }
+@keyframes hero-orb2-y { from { transform: translateY(0%) } to { transform: translateY(50%) } }
+@keyframes hero-orb3-x { from { transform: translateX(0%) } to { transform: translateX(25%) } }
+@keyframes hero-orb3-y { from { transform: translateY(0%) } to { transform: translateY(25%) } }
+@keyframes hero-orb-rotate-fwd { from { transform: rotate(0deg) } to { transform: rotate(360deg) } }
+@keyframes hero-orb-rotate-rev { from { transform: rotate(360deg) } to { transform: rotate(0deg) } }
+
 .hero-badge {
     margin-bottom: calc(var(--spacing) * 6);
     background-color: #ffffffa6;
