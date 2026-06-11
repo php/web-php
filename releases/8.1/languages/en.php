@@ -8,7 +8,7 @@ return [
     'documentation' => 'Doc',
 
     'enumerations_title' => 'Enumerations',
-    'enumerations_content' => 'Use enum instead of a set of constants and get validation out of the box.',
+    'enumerations_content' => 'Use an enum instead of a set of constants to get validation out of the box.',
 
     'readonly_properties_title' => 'Readonly Properties',
     'readonly_properties_content' => '<p>Readonly properties cannot be changed after initialization, i.e. after a value is assigned to them.<br>They are a great way to model value objects and data-transfer objects.</p>',

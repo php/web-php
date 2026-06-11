@@ -14,23 +14,17 @@ return [
     'key_features' => 'Características clave en PHP 8.5',
     'key_features_description' => '<p><strong>Más rápido</strong>, <strong>limpio</strong> y <strong>construido para desarrolladores</strong>.</p>',
 
-    'features_pipe_operator_title' => 'Operador Pipe',
     'features_pipe_operator_description' => '<p>El operador <code>|></code> permite encadenar callables de izquierda a derecha, pasando valores suavemente a través de múltiples funciones sin variables intermedias.</p>',
-    'features_persistent_curl_share_handles_title' => 'Handles cURL Persistentes Compartidos',
     'features_persistent_curl_share_handles_description' => '<p>Los handles ahora pueden persistir a través de múltiples peticiones PHP, evitando el costo de inicialización repetida de conexiones a los mismos hosts.</p>',
-    'features_clone_with_title' => 'Clone With',
     'features_clone_with_description' => '<p>Clona objetos y actualiza propiedades con la nueva sintaxis <code>clone()</code>, simplificando el patrón en clases <code>readonly</code>.</p>',
-    'features_uri_extension_title' => 'Extensión URI',
     'features_uri_extension_description' => '<p>PHP 8.5 añade una extensión URI integrada para analizar, normalizar y manejar URLs siguiendo los estándares <em>RFC 3986</em> y <em>WHATWG URL</em>.</p>',
-    'features_no_discard_title' => 'Atributo #[\NoDiscard]',
     'features_no_discard_description' => '<p>El atributo <code>#[\NoDiscard]</code> advierte cuando un valor de retorno no se usa, ayudando a prevenir errores y mejorando la seguridad.</p>',
-    'features_fcc_in_const_expr_title' => 'Closures y Callables de Primera Clase en Expresiones Constantes',
     'features_fcc_in_const_expr_description' => '<p>Los closures estáticos y callables de primera clase ahora pueden usarse en expresiones constantes, como parámetros de atributos.</p>',
 
     'pipe_operator_title' => 'Operador Pipe',
     'pipe_operator_description' => '<p>El operador pipe permite encadenar llamadas a funciones sin tener que lidiar con variables intermedias. Esto permite reemplazar muchas "llamadas anidadas" con una cadena que se puede leer hacia adelante, en lugar de hacerlo de adentro hacia afuera.</p><p>Aprende más sobre esta característica en el artículo de <a href="https://thephp.foundation/blog/2025/07/11/php-85-adds-pipe-operator/" target="_blank" rel="noopener noreferrer">The PHP Foundation</a>.</p>',
 
-    'array_first_last_title' => 'Funciones array_first() y array_last()',
+    'array_first_last_title' => 'Funciones <code>array_first()</code> y <code>array_last()</code>',
     'array_first_last_description' => '<p>Las funciones <code>array_first()</code> y <code>array_last()</code> devuelven el primer o último valor de un array, respectivamente. Si el array está vacío, se devuelve <code>null</code> (facilitando su usabilidad con el operador <code>??</code>).</p>',
 
     'clone_with_title' => 'Clone With',
@@ -39,10 +33,10 @@ return [
     'uri_extension_title' => 'Extensión URI',
     'uri_extension_description' => '<p>La nueva extensión URI proporciona APIs para analizar y modificar de forma segura URIs y URLs de acuerdo con los estándares RFC 3986 y WHATWG URL.</p><p>Desarrollado por las librerías <a href="https://uriparser.github.io/" target="_blank" rel="noopener noreferrer">uriparser</a> (RFC 3986) y <a href="https://lexbor.com/" target="_blank" rel="noopener noreferrer">Lexbor</a> (WHATWG URL).</p><p>Aprende más sobre esta característica en el artículo de <a href="https://thephp.foundation/blog/2025/10/10/php-85-uri-extension/" target="_blank" rel="noopener noreferrer">The PHP Foundation</a>.</p>',
 
-    'no_discard_title' => 'Atributo #[\NoDiscard]',
+    'no_discard_title' => 'Atributo <code>#[\NoDiscard]</code>',
     'no_discard_description' => '<p>Al agregar el atributo <code>#[\NoDiscard]</code> a una función, PHP verificará si el valor devuelto se consume y emitirá una advertencia si no lo es. Esto permite mejorar la seguridad de APIs donde el valor devuelto es importante, pero se podría olvidar usar el valor de retorno por accidente.</p><p>El cast <code>(void)</code> puede usarse para indicar que un valor no se usa intencionalmente.</p>',
 
-    'persistent_curl_share_handles_title' => 'Handles cURL persistentes compartidos',
+    'persistent_curl_share_handles_title' => 'Handles cURL Persistentes Compartidos',
     'persistent_curl_share_handles_description' => '<p>A diferencia de <code>curl_share_init()</code>, los handles creados por <code>curl_share_init_persistent()</code> no serán destruidos al final de la petición PHP. Si se encuentra un handle persistente compartido con el mismo conjunto de opciones compartidas, será reutilizado, evitando el costo de inicializar handles cURL de nuevo.</p>',
 
     'fcc_in_const_expr_title' => 'Closures y Callables de Primera Clase en Expresiones Constantes',

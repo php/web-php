@@ -22,15 +22,22 @@ const LANGUAGES = [
 ];
 
 function common_header(string $description): void {
-    global $MYSITE;
+    global $MYSITE, $lang;
 
     $meta_image_path = \htmlspecialchars(
         \filter_var($MYSITE . 'images/php8/php_8_released.png', \FILTER_VALIDATE_URL));
     $meta_description = \htmlspecialchars($description);
 
-    \site_header("PHP 8.0.0 Release Announcement", [
-        'current' => 'php8',
-        'css' => ['php8.css'],
+    $languages = [];
+    foreach (LANGUAGES as $code => $text) {
+        $languages[] = ['name' => $text, 'selected' => $lang === $code, 'url' => '/releases/8.0/' . $code . '.php'];
+    }
+
+    \site_header("PHP 8.0 Release Announcement", [
+        'current' => 'php85',
+        'css' => ['php85.css'],
+        'language_switcher' => $languages,
+        'theme_switcher' => true,
         'meta_tags' => <<<META
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:site" content="@official_php" />
@@ -49,28 +56,7 @@ META
     ]);
 }
 
-function language_chooser(string $currentLang): void {
-    // Print out the form with all the options
-    echo '
-      <form action="" method="get" id="changelang" name="changelang">
-        <fieldset>
-          <label for="changelang-langs">Change language:</label>
-          <select onchange="location = this.value + \'.php\'" name="lang" id="changelang-langs">
-';
-
-    $tab = '            ';
-    foreach (LANGUAGES as $lang => $text) {
-        $selected = ($lang === $currentLang) ? ' selected="selected"' : '';
-        echo $tab, "<option value='$lang'$selected>$text</option>\n";
-    }
-
-    echo '          </select>
-        </fieldset>
-      </form>
-';
-}
-
-function message($code, $language = 'en')
+function message($code, $language = 'en'): string
 {
     $original = require __DIR__ . '/languages/en.php';
     if (($language !== 'en') && file_exists(__DIR__ . '/languages/' . $language . '.php')) {

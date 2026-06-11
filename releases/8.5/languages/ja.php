@@ -14,23 +14,17 @@ return [
     'key_features' => 'PHP 8.5 の主な機能',
     'key_features_description' => '<p><strong>より速く</strong>、<strong>よりクリーンに</strong>。そして<strong>開発者のために</strong>。</p>',
 
-    'features_pipe_operator_title' => 'パイプ演算子',
     'features_pipe_operator_description' => '<p><code>|></code> 演算子を使うと callable を左から右にチェインさせ、中間変数を使わずに値を複数の関数にスムーズに受け渡せます。</p>',
-    'features_persistent_curl_share_handles_title' => '持続的な cURL 共有ハンドル',
     'features_persistent_curl_share_handles_description' => '<p>ハンドルを複数の PHP リクエストにまたがって持続させられるようになります。同じホストへの接続初期化を繰り返すコストを避けることができます。</p>',
-    'features_clone_with_title' => 'Clone With',
     'features_clone_with_description' => '<p>新しい <code>clone()</code> 構文でオブジェクトを clone してプロパティを更新します。<code>readonly</code> クラスの "with-er" パターンが簡潔になります。</p>',
-    'features_uri_extension_title' => 'URI 拡張モジュール',
     'features_uri_extension_description' => '<p>URL のパース、正規化、処理を行う新しい組み込みの URI 拡張モジュールが PHP 8.5 で追加されました。</p>',
-    'features_no_discard_title' => '#[\NoDiscard] アトリビュート',
     'features_no_discard_description' => '<p><code>#[\NoDiscard]</code> アトリビュートを使うと、戻り値が利用されていない場合に警告を出します。ミスを防ぎ全体の API 安全性を向上するのに役立ちます。</p>',
-    'features_fcc_in_const_expr_title' => '定数式でのクロージャと第一級 callable',
     'features_fcc_in_const_expr_description' => '<p>static なクロージャと第一級 callable が、アトリビュートの引数などの定数式で使えるようになります。</p>',
 
     'pipe_operator_title' => 'パイプ演算子',
     'pipe_operator_description' => '<p>パイプ演算子を使うと、中間変数を扱うことなく複数の関数呼び出しを繋げることができます。これによってたくさんの「入れ子呼び出し」を置き換え、中から外ではなく先に向かって読むことができるようになります。</p><p>この機能の背景について詳しくは <a href="https://thephp.foundation/blog/2025/07/11/php-85-adds-pipe-operator/" target="_blank" rel="noopener noreferrer">PHP Foundation のブログ</a>をお読みください。</p>',
 
-    'array_first_last_title' => 'array_first() ・ array_last() 関数',
+    'array_first_last_title' => '<code>array_first()</code> ・ <code>array_last()</code> 関数',
     'array_first_last_description' => '<p><code>array_first()</code>、<code>array_last()</code> 関数は、それぞれ配列の最初と最後の値を返します。空配列の場合は <code>null</code> を返します（そのため <code>??</code> 演算子と組み合わせやすいです）。</p>',
 
     'clone_with_title' => 'Clone With',
@@ -39,7 +33,7 @@ return [
     'uri_extension_title' => 'URI 拡張モジュール',
     'uri_extension_description' => '<p>常に有効な新しい URI 拡張モジュールは、RFC 3986 と WHATWG URL 標準にしたがって URI や URL を安全にパース・編集できる API を提供します。</p><p><a href="https://uriparser.github.io/" target="_blank" rel="noopener noreferrer">uriparser</a> (RFC 3986) と <a href="https://lexbor.com/" target="_blank" rel="noopener noreferrer">Lexbor</a> (WHATWG URL) ライブラリを利用しています。</p><p>この機能の背景は <a href="https://thephp.foundation/blog/2025/10/10/php-85-uri-extension/" target="_blank" rel="noopener noreferrer">PHP Foundation のブログ</a>をお読みください。</p>',
 
-    'no_discard_title' => '#[\NoDiscard] アトリビュート',
+    'no_discard_title' => '<code>#[\NoDiscard]</code> アトリビュート',
     'no_discard_description' => '<p><code>#[\NoDiscard]</code> アトリビュートを関数に追加すると、戻り値が利用されたかを PHP がチェックし、されていなければ警告を出します。これにより、戻り値が重要なのにそれを利用することをうっかり忘れやすい API の安全性を高めることができます。</p><p>関連する <code>(void)</code> キャストを使うと、戻り値を使っていないのが意図的であることを明示できます。</p>',
 
     'persistent_curl_share_handles_title' => '持続的な cURL 共有ハンドル',

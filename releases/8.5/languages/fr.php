@@ -14,23 +14,17 @@ return [
     'key_features' => 'Fonctionnalités clés de PHP 8.5',
     'key_features_description' => '<p><strong>Plus rapide</strong>, <strong>plus propre</strong> et <strong>conçu pour les développeurs</strong>.</p>',
 
-    'features_pipe_operator_title' => 'Opérateur Pipe',
     'features_pipe_operator_description' => '<p>L\'opérateur <code>|></code> permet d\'enchaîner des callables de gauche à droite, en transmettant les valeurs fluidement à travers plusieurs fonctions sans variables intermédiaires.</p>',
-    'features_persistent_curl_share_handles_title' => 'Handles cURL partagés persistants',
     'features_persistent_curl_share_handles_description' => '<p>Les handles peuvent désormais être conservés entre plusieurs requêtes PHP, évitant le coût de l\'initialisation répétée des connexions vers les mêmes hôtes.</p>',
-    'features_clone_with_title' => 'Clone With',
     'features_clone_with_description' => '<p>Clonez des objets et mettez à jour leurs propriétés grâce à la nouvelle syntaxe <code>clone()</code>, simplifiant le pattern « with-er » pour les classes <code>readonly</code>.</p>',
-    'features_uri_extension_title' => 'Extension URI',
     'features_uri_extension_description' => '<p>PHP 8.5 ajoute une extension URI native pour analyser, normaliser et gérer les URL conformément aux standards <em>RFC 3986</em> et <em>WHATWG URL</em>.</p>',
-    'features_no_discard_title' => 'Attribut #[\NoDiscard]',
     'features_no_discard_description' => '<p>L\'attribut <code>#[\NoDiscard]</code> émet un avertissement lorsqu\'une valeur de retour n\'est pas utilisée, aidant à prévenir les erreurs et à améliorer la sécurité globale des API.</p>',
-    'features_fcc_in_const_expr_title' => 'Closures et callables de première classe dans les expressions constantes',
     'features_fcc_in_const_expr_description' => '<p>Les closures statiques et les callables de première classe peuvent désormais être utilisés dans les expressions constantes, comme les paramètres d\'attributs.</p>',
 
     'pipe_operator_title' => 'Opérateur Pipe',
     'pipe_operator_description' => '<p>L\'opérateur pipe permet d\'enchaîner des appels de fonctions sans avoir recours à des variables intermédiaires. Il permet de remplacer de nombreux « appels imbriqués » par une chaîne qui se lit de gauche à droite, plutôt que de l\'intérieur vers l\'extérieur.</p><p>Pour en savoir plus sur l\'histoire de cette fonctionnalité, consultez <a href="https://thephp.foundation/blog/2025/07/11/php-85-adds-pipe-operator/" target="_blank" rel="noopener noreferrer">le blog de la PHP Foundation</a>.</p>',
 
-    'array_first_last_title' => 'Fonctions array_first() et array_last()',
+    'array_first_last_title' => 'Fonctions <code>array_first()</code> et <code>array_last()</code>',
     'array_first_last_description' => '<p>Les fonctions <code>array_first()</code> et <code>array_last()</code> retournent respectivement la première ou la dernière valeur d\'un tableau. Si le tableau est vide, <code>null</code> est retourné (ce qui facilite la composition avec l\'opérateur <code>??</code>).</p>',
 
     'clone_with_title' => 'Clone With',
@@ -39,7 +33,7 @@ return [
     'uri_extension_title' => 'Extension URI',
     'uri_extension_description' => '<p>La nouvelle extension URI, toujours disponible, fournit des API pour analyser et modifier de manière sécurisée les URI et URL selon les standards RFC 3986 et WHATWG URL.</p><p>Propulsée par les bibliothèques <a href="https://uriparser.github.io/" target="_blank" rel="noopener noreferrer">uriparser</a> (RFC 3986) et <a href="https://lexbor.com/" target="_blank" rel="noopener noreferrer">Lexbor</a> (WHATWG URL).</p><p>Pour en savoir plus sur l\'histoire de cette fonctionnalité, consultez <a href="https://thephp.foundation/blog/2025/10/10/php-85-uri-extension/" target="_blank" rel="noopener noreferrer">le blog de la PHP Foundation</a>.</p>',
 
-    'no_discard_title' => 'Attribut #[\NoDiscard]',
+    'no_discard_title' => 'Attribut <code>#[\NoDiscard]</code>',
     'no_discard_description' => '<p>En ajoutant l\'attribut <code>#[\NoDiscard]</code> à une fonction, PHP vérifie si la valeur retournée est consommée et émet un avertissement dans le cas contraire. Cela permet d\'améliorer la sécurité des API pour lesquelles la valeur de retour est importante, mais peut facilement être oubliée par inadvertance.</p><p>Le cast associé <code>(void)</code> peut être utilisé pour indiquer qu\'une valeur est intentionnellement ignorée.</p>',
 
     'persistent_curl_share_handles_title' => 'Handles cURL partagés persistants',

@@ -14,23 +14,17 @@ return [
     'key_features' => 'Các tính năng chính trong PHP 8.5',
     'key_features_description' => '<p><strong>Nhanh hơn</strong>, <strong>sạch hơn</strong>, và <strong>được tối ưu cho lập trình viên</strong>.</p>',
 
-    'features_pipe_operator_title' => 'Toán tử Pipe',
     'features_pipe_operator_description' => '<p>Toán tử <code>|></code> cho phép chuỗi hóa các lệnh gọi từ trái sang phải, truyền giá trị mượt mà qua nhiều hàm mà không cần biến trung gian.</p>',
-    'features_persistent_curl_share_handles_title' => 'Persistent cURL Share Handles',
     'features_persistent_curl_share_handles_description' => '<p>Các Handle hiện có thể duy trì qua nhiều request PHP, giúp tránh chi phí khởi tạo kết nối lặp lại tới cùng một host.</p>',
-    'features_clone_with_title' => 'Clone With (Sao chép kèm sửa đổi)',
     'features_clone_with_description' => '<p>Sao chép đối tượng và cập nhật thuộc tính với cú pháp <code>clone()</code> mới, giúp triển khai mô hình "with-er" đơn giản hơn cho các lớp <code>readonly</code>.</p>',
-    'features_uri_extension_title' => 'URI Extension',
     'features_uri_extension_description' => '<p>PHP 8.5 bổ sung một extension URI tích hợp để phân tích, chuẩn hóa và xử lý URL theo các tiêu chuẩn <em>RFC 3986</em> và <em>WHATWG URL</em>.</p>',
-    'features_no_discard_title' => 'Attribute #[\NoDiscard]',
     'features_no_discard_description' => '<p>Attribute <code>#[\NoDiscard]</code> sẽ đưa ra cảnh báo khi giá trị trả về không được sử dụng, giúp ngăn ngừa sai sót và cải thiện tính an toàn của API.</p>',
-    'features_fcc_in_const_expr_title' => 'Closures và First-Class Callables trong biểu thức hằng số',
     'features_fcc_in_const_expr_description' => '<p>Các Static closure và first-class callable hiện có thể được dùng trong các biểu thức hằng số, chẳng hạn như tham số của attribute.</p>',
 
     'pipe_operator_title' => 'Toán tử Pipe',
     'pipe_operator_description' => '<p>Toán tử pipe cho phép kết nối các lệnh gọi hàm với nhau mà không cần xử lý biến trung gian. Điều này giúp thay thế các "lệnh gọi lồng nhau" bằng một chuỗi có thể đọc từ trước ra sau, thay vì từ trong ra ngoài.</p><p>Tìm hiểu thêm về lịch sử tính năng này tại <a href="https://thephp.foundation/blog/2025/07/11/php-85-adds-pipe-operator/" target="_blank" rel="noopener noreferrer">Blog của PHP Foundation</a>.</p>',
 
-    'array_first_last_title' => 'Hàm array_first() và array_last()',
+    'array_first_last_title' => 'Hàm <code>array_first()</code> và <code>array_last()</code>',
     'array_first_last_description' => '<p>Các hàm <code>array_first()</code> và <code>array_last()</code> trả về giá trị đầu tiên hoặc cuối cùng của một mảng. Nếu mảng trống, giá trị <code>null</code> sẽ được trả về (giúp dễ dàng kết hợp với toán tử <code>??</code>).</p>',
 
     'clone_with_title' => 'Clone With (Sao chép kèm sửa đổi)',
@@ -39,7 +33,7 @@ return [
     'uri_extension_title' => 'URI Extension',
     'uri_extension_description' => '<p>Extension URI mới (luôn sẵn có) cung cấp các API để phân tích và chỉnh sửa URI/URL một cách an toàn theo tiêu chuẩn RFC 3986 và WHATWG URL.</p><p>Được vận hành bởi các thư viện <a href="https://uriparser.github.io/" target="_blank" rel="noopener noreferrer">uriparser</a> (RFC 3986) và <a href="https://lexbor.com/" target="_blank" rel="noopener noreferrer">Lexbor</a> (WHATWG URL).</p>',
 
-    'no_discard_title' => 'Attribute #[\NoDiscard]',
+    'no_discard_title' => 'Attribute <code>#[\NoDiscard]</code>',
     'no_discard_description' => '<p>Bằng cách thêm attribute <code>#[\NoDiscard]</code> vào một hàm, PHP sẽ kiểm tra xem giá trị trả về có được tiêu thụ hay không và phát cảnh báo nếu không. Điều này giúp tăng độ an toàn cho API khi giá trị trả về là quan trọng nhưng dễ bị bỏ quên.</p><p>Ép kiểu <code>(void)</code> có thể được dùng để chỉ thị rằng giá trị đó cố tình không được sử dụng.</p>',
 
     'persistent_curl_share_handles_title' => 'Persistent cURL Share Handles',
