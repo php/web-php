@@ -61,7 +61,7 @@ if (!isset($config["languages"])) {
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <base href="https://www.php.net">
+  <base href="https://www.php.net/<?php echo $_SERVER['BASE_PAGE'] ?? '' ?>">
 
   <title><?php echo $title ?></title>
 
