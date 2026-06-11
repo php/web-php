@@ -61,7 +61,9 @@ if (!isset($config["languages"])) {
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <base href="https://www.php.net">
+  <?php if (!empty($_SERVER["BASE_HREF"])): ?>
+   <base href="<?php echo $_SERVER["BASE_HREF"]; ?>">
+  <?php endif ?>
 
   <title><?php echo $title ?></title>
 
@@ -102,6 +104,10 @@ if (!isset($config["languages"])) {
 <?php foreach($JS as $filename => $modified): ?>
 <script type="text/javascript" src="/cached.php?t=<?php echo $modified?>&amp;f=<?php echo $filename?>"></script>
 <?php endforeach ?>
+
+<?php if (!empty($_SERVER["BASE_HREF"])): ?>
+ <base href="<?php echo $_SERVER["BASE_HREF"] ?>">
+<?php endif ?>
 
 <?php if (isset($config['meta_tags'])) { echo $config['meta_tags']; } ?>
 
