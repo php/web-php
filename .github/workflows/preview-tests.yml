@@ -4,8 +4,8 @@ on:
     types: [ labeled ]
 
 jobs:
-  tests_visual:
-    name: "Visual Tests"
+  tests_e2e:
+    name: "E2E Tests"
     runs-on: "ubuntu-latest"
     if: "github.repository_owner == 'php' && contains(github.event.pull_request.labels.*.name, 'Status: Preview Allowed')"
 
@@ -77,8 +77,8 @@ jobs:
       - name: "Install Playwright"
         run: "npx playwright install"
 
-      - name: "Run visual tests"
-        run: "make tests_visual"
+      - name: "Run E2E tests"
+        run: "make tests_e2e"
 
       - name: Upload playwright report
         uses: actions/upload-artifact@v7

@@ -26,14 +26,9 @@ tests: vendor ## Runs unit and end-to-end tests with phpunit/phpunit
 	vendor/bin/phpunit --configuration=tests/phpunit.xml --testsuite=end-to-end;
 	tests/server stop
 
-tests_visual:
+tests_e2e:
 	tests/server start;
-	npx playwright test --workers=$(CORES)
-	tests/server stop
-
-tests_update_snapshots:
-	tests/server start;
-	npx playwright test --update-snapshots
+	npx playwright test
 	tests/server stop
 
 vendor: composer.json composer.lock

@@ -31,11 +31,6 @@ export default defineConfig({
 
     projects: [
         {
-            name: 'chromium',
-            use: {...devices['Desktop Chrome']},
-            testDir: './tests/Visual',
-        },
-        {
             name: 'End-to-End Chromium',
             use: {...devices['Desktop Chrome']},
             testDir: './tests/EndToEnd',
