@@ -67,7 +67,7 @@ class ReleasePage
 
                 <div class="hero-actions">
                     $featuresLink
-                    <a href="/downloads" class="button-secondary">$upgradeNow</a>
+                    <a href="/downloads.php" class="button-secondary">$upgradeNow</a>
                 </div>
             </div>
         </section>
