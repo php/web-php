@@ -131,11 +131,9 @@ $defaults = [
 
 $options = array_merge($defaults, $_GET);
 
-if ($options['usage'] === 'web') {
-    $os['linux']['variants']['linux-frankenphp'] = 'FrankenPHP';
-    $os['osx']['variants']['osx-frankenphp'] = 'FrankenPHP';
-    $os['windows']['variants']['windows-frankenphp'] = 'FrankenPHP';
-}
+$os['linux']['variants']['linux-frankenphp'] = 'FrankenPHP';
+$os['osx']['variants']['osx-frankenphp'] = 'FrankenPHP';
+$os['windows']['variants']['windows-frankenphp'] = 'FrankenPHP';
 
 if ($auto_osvariant && (!array_key_exists('osvariant', $options) || !array_key_exists($options['osvariant'], $os[$options['os']]['variants']))) {
     $options['osvariant'] = $auto_osvariant;
