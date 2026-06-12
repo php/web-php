@@ -9,8 +9,8 @@ curl https://frankenphp.dev/install.sh | sh
 # Serve the current directory.
 frankenphp php-server
 </code></pre>
-<div class="note">
-<p>
+<blockquote class="note"><p>
+	<strong class="note">Note</strong>:
 	The install script uses your distribution's packages (deb or RPM) when
 	available, and those receive updates through the system package manager.
 	If a standalone binary is installed instead, FrankenPHP does not update
@@ -18,8 +18,7 @@ frankenphp php-server
 	into the binary, so you are responsible for updating FrankenPHP yourself,
 	including when security fixes are released for those dependencies. To
 	update the standalone binary, re-run the install script.
-</p>
-</div>
+</p></blockquote>
 <?php elseif ($options['os'] === 'osx'): ?>
 <p>
 On the command line, run the following commands:
@@ -42,15 +41,14 @@ irm https://frankenphp.dev/install.ps1 | iex
 # Serve the current directory.
 frankenphp php-server
 </code></pre>
-<div class="note">
-<p>
+<blockquote class="note"><p>
+	<strong class="note">Note</strong>:
 	The standalone binary installed by this script does not update
 	automatically: its dependencies (such as OpenSSL) are statically compiled
 	into the binary, so you are responsible for updating FrankenPHP yourself,
 	including when security fixes are released for those dependencies. To
 	update, re-run the install script in PowerShell.
-</p>
-</div>
+</p></blockquote>
 <?php endif; ?>
 
 <p>
