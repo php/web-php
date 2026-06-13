@@ -4,11 +4,11 @@ includes:
 parameters:
 	level: 3
 	paths:
-		- bin
-		- src
-		- tests
-		- manual
-		- include
+		- .
 	fileExtensions:
 		- php
 		- inc
+
+	excludePaths:
+		analyse:
+			- vendor/
