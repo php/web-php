@@ -120,7 +120,7 @@ $winQaMessage = '';
 $winQaReleases = [];
 
 if (is_readable($winQaFile)) {
-  $raw = @file_get_contents($winQaFile);
+  $raw = file_get_contents_if_exists($winQaFile);
   $decoded = $raw ? json_decode($raw, true) : null;
   if (is_array($decoded)) {
     $allowedBranches = [];

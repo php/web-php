@@ -101,11 +101,11 @@ function manual_notes_load(string $id): array
 
     // Open the note file for reading and get the data (12KB)
     // ..if it exists
-    if (!file_exists($notes_file)) {
+//    if (!file_exists($notes_file) || !is_readable($notes_file)) {
         return [];
     }
     $notes = [];
-    if ($fp = @fopen($notes_file, "r")) {
+    if ($fp = fopen($notes_file, "r")) {
         while (!feof($fp)) {
             $line = chop(fgets($fp, 12288));
             if ($line == "") { continue; }

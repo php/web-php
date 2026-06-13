@@ -79,6 +79,9 @@ $userPreferences = new UserPreferences();
 // Load the My PHP.net settings before any includes
 $userPreferences->load();
 
+// Import functions to deal with files in a safe manner
+include_once __DIR__ . '/file.inc';
+
 // Site details (mirror site information)
 include __DIR__ . '/site.inc';
 
