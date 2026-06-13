@@ -41,14 +41,6 @@ function a($href): void {
 </p>
 
 <p>
- Note that these shortcuts are expected to work on all mirror
- sites, not just on the main site. If you find that some of these
- shortcuts are not working on your mirror site, please report them
- as a "PHP.net Website Problem" at
- <a href="https://bugs.php.net/">https://bugs.php.net/</a>.
-</p>
-
-<p>
  There are currently three types of URLs you can use this way.
 </p>
 
