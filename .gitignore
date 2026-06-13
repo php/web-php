@@ -1,4 +1,5 @@
 /.build/
+/.php-cs-fixer.php
 /vendor/
 
 backend/mirror.gif

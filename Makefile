@@ -12,7 +12,7 @@ code-coverage: vendor ## Collects code coverage from running unit tests with php
 
 .PHONY: coding-standards
 coding-standards: vendor ## Fixes code style issues with friendsofphp/php-cs-fixer
-	vendor/bin/php-cs-fixer fix --config=.php-cs-fixer.php --diff --show-progress=dots --verbose
+	vendor/bin/php-cs-fixer fix --diff --show-progress=dots --verbose
 
 .PHONY: help
 help: ## Displays this list of targets with descriptions
