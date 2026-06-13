@@ -1,6 +1,228 @@
 parameters:
 	ignoreErrors:
 		-
+			message: '#^Variable \$SIDEBAR_DATA might not be defined\.$#'
+			identifier: variable.undefined
+			count: 1
+			path: archive/1998.php
+
+		-
+			message: '#^Variable \$SIDEBAR_DATA might not be defined\.$#'
+			identifier: variable.undefined
+			count: 1
+			path: archive/1999.php
+
+		-
+			message: '#^Variable \$SIDEBAR_DATA might not be defined\.$#'
+			identifier: variable.undefined
+			count: 1
+			path: archive/2000.php
+
+		-
+			message: '#^Variable \$SIDEBAR_DATA might not be defined\.$#'
+			identifier: variable.undefined
+			count: 1
+			path: archive/2001.php
+
+		-
+			message: '#^Variable \$SIDEBAR_DATA might not be defined\.$#'
+			identifier: variable.undefined
+			count: 1
+			path: archive/2002.php
+
+		-
+			message: '#^Variable \$SIDEBAR_DATA might not be defined\.$#'
+			identifier: variable.undefined
+			count: 1
+			path: archive/2003.php
+
+		-
+			message: '#^Variable \$SIDEBAR_DATA might not be defined\.$#'
+			identifier: variable.undefined
+			count: 1
+			path: archive/2004.php
+
+		-
+			message: '#^Variable \$SIDEBAR_DATA might not be defined\.$#'
+			identifier: variable.undefined
+			count: 1
+			path: archive/2005.php
+
+		-
+			message: '#^Variable \$SIDEBAR_DATA might not be defined\.$#'
+			identifier: variable.undefined
+			count: 1
+			path: archive/2006.php
+
+		-
+			message: '#^Variable \$SIDEBAR_DATA might not be defined\.$#'
+			identifier: variable.undefined
+			count: 1
+			path: archive/2007.php
+
+		-
+			message: '#^Variable \$SIDEBAR_DATA might not be defined\.$#'
+			identifier: variable.undefined
+			count: 1
+			path: archive/2008.php
+
+		-
+			message: '#^Variable \$SIDEBAR_DATA might not be defined\.$#'
+			identifier: variable.undefined
+			count: 1
+			path: archive/2009.php
+
+		-
+			message: '#^Variable \$SIDEBAR_DATA might not be defined\.$#'
+			identifier: variable.undefined
+			count: 1
+			path: archive/2010.php
+
+		-
+			message: '#^Variable \$SIDEBAR_DATA might not be defined\.$#'
+			identifier: variable.undefined
+			count: 1
+			path: archive/2011.php
+
+		-
+			message: '#^Variable \$SIDEBAR_DATA might not be defined\.$#'
+			identifier: variable.undefined
+			count: 1
+			path: archive/2012.php
+
+		-
+			message: '#^Variable \$SIDEBAR_DATA might not be defined\.$#'
+			identifier: variable.undefined
+			count: 1
+			path: archive/2013.php
+
+		-
+			message: '#^Variable \$SIDEBAR_DATA might not be defined\.$#'
+			identifier: variable.undefined
+			count: 1
+			path: archive/2014.php
+
+		-
+			message: '#^Variable \$SIDEBAR_DATA might not be defined\.$#'
+			identifier: variable.undefined
+			count: 1
+			path: archive/2015.php
+
+		-
+			message: '#^Variable \$SIDEBAR_DATA might not be defined\.$#'
+			identifier: variable.undefined
+			count: 1
+			path: archive/2016.php
+
+		-
+			message: '#^Variable \$SIDEBAR_DATA might not be defined\.$#'
+			identifier: variable.undefined
+			count: 1
+			path: archive/2017.php
+
+		-
+			message: '#^Variable \$SIDEBAR_DATA might not be defined\.$#'
+			identifier: variable.undefined
+			count: 1
+			path: archive/2018.php
+
+		-
+			message: '#^Variable \$SIDEBAR_DATA might not be defined\.$#'
+			identifier: variable.undefined
+			count: 1
+			path: archive/2019.php
+
+		-
+			message: '#^Variable \$SIDEBAR_DATA might not be defined\.$#'
+			identifier: variable.undefined
+			count: 1
+			path: archive/2020.php
+
+		-
+			message: '#^Variable \$SIDEBAR_DATA might not be defined\.$#'
+			identifier: variable.undefined
+			count: 1
+			path: archive/2021.php
+
+		-
+			message: '#^Variable \$SIDEBAR_DATA might not be defined\.$#'
+			identifier: variable.undefined
+			count: 1
+			path: archive/2022.php
+
+		-
+			message: '#^Variable \$SIDEBAR_DATA might not be defined\.$#'
+			identifier: variable.undefined
+			count: 1
+			path: archive/2023.php
+
+		-
+			message: '#^Variable \$SIDEBAR_DATA might not be defined\.$#'
+			identifier: variable.undefined
+			count: 1
+			path: archive/2024.php
+
+		-
+			message: '#^Variable \$SIDEBAR_DATA might not be defined\.$#'
+			identifier: variable.undefined
+			count: 1
+			path: archive/2025.php
+
+		-
+			message: '#^Variable \$SIDEBAR_DATA might not be defined\.$#'
+			identifier: variable.undefined
+			count: 1
+			path: archive/2026.php
+
+		-
+			message: '#^Variable \$cm might not be defined\.$#'
+			identifier: variable.undefined
+			count: 1
+			path: cal.php
+
+		-
+			message: '#^Variable \$cy might not be defined\.$#'
+			identifier: variable.undefined
+			count: 1
+			path: cal.php
+
+		-
+			message: '#^Variable \$MYSITE might not be defined\.$#'
+			identifier: variable.undefined
+			count: 2
+			path: conferences/index.php
+
+		-
+			message: '#^Variable \$LANG might not be defined\.$#'
+			identifier: variable.undefined
+			count: 2
+			path: docs.php
+
+		-
+			message: '#^Variable \$LANG might not be defined\.$#'
+			identifier: variable.undefined
+			count: 1
+			path: download-docs.php
+
+		-
+			message: '#^Variable \$MYSITE might not be defined\.$#'
+			identifier: variable.undefined
+			count: 1
+			path: downloads.php
+
+		-
+			message: '#^Variable \$LANG might not be defined\.$#'
+			identifier: variable.undefined
+			count: 8
+			path: error.php
+
+		-
+			message: '#^Variable \$userPreferences might not be defined\.$#'
+			identifier: variable.undefined
+			count: 1
+			path: error.php
+
+		-
 			message: '#^Variable \$version might not be defined\.$#'
 			identifier: variable.undefined
 			count: 1
@@ -283,6 +505,30 @@ parameters:
 			path: include/mozsearch.inc
 
 		-
+			message: '#^Variable \$CONF_TEASER might not be defined\.$#'
+			identifier: variable.undefined
+			count: 1
+			path: index.php
+
+		-
+			message: '#^Variable \$MYSITE might not be defined\.$#'
+			identifier: variable.undefined
+			count: 5
+			path: index.php
+
+		-
+			message: '#^Variable \$MYSITE might not be defined\.$#'
+			identifier: variable.undefined
+			count: 1
+			path: mailing-lists.php
+
+		-
+			message: '#^Variable \$LANG might not be defined\.$#'
+			identifier: variable.undefined
+			count: 1
+			path: manual-lookup.php
+
+		-
 			message: '#^Variable \$LANG might not be defined\.$#'
 			identifier: variable.undefined
 			count: 1
@@ -293,3 +539,111 @@ parameters:
 			identifier: variable.undefined
 			count: 1
 			path: manual/vote-note.php
+
+		-
+			message: '#^Variable \$LAST_UPDATED might not be defined\.$#'
+			identifier: variable.undefined
+			count: 1
+			path: mirror-info.php
+
+		-
+			message: '#^Variable \$MYSITE might not be defined\.$#'
+			identifier: variable.undefined
+			count: 1
+			path: mirror-info.php
+
+		-
+			message: '#^Variable \$LAST_UPDATED might not be defined\.$#'
+			identifier: variable.undefined
+			count: 1
+			path: mirror.php
+
+		-
+			message: '#^Variable \$MYSITE might not be defined\.$#'
+			identifier: variable.undefined
+			count: 1
+			path: mirror.php
+
+		-
+			message: '#^Variable \$MIRRORS might not be defined\.$#'
+			identifier: variable.undefined
+			count: 1
+			path: my.php
+
+		-
+			message: '#^Variable \$userPreferences might not be defined\.$#'
+			identifier: variable.undefined
+			count: 11
+			path: my.php
+
+		-
+			message: '#^Variable \$QA_CHECKSUM_TYPES might not be defined\.$#'
+			identifier: variable.undefined
+			count: 1
+			path: pre-release-builds.php
+
+		-
+			message: '#^Variable \$QA_RELEASES might not be defined\.$#'
+			identifier: variable.undefined
+			count: 1
+			path: pre-release-builds.php
+
+		-
+			message: '#^Variable \$LANG might not be defined\.$#'
+			identifier: variable.undefined
+			count: 1
+			path: quickref.php
+
+		-
+			message: '#^Variable \$RELEASES might not be defined\.$#'
+			identifier: variable.undefined
+			count: 1
+			path: releases/feed.php
+
+		-
+			message: '#^Variable \$OLDRELEASES might not be defined\.$#'
+			identifier: variable.undefined
+			count: 3
+			path: releases/index.php
+
+		-
+			message: '#^Variable \$RELEASES might not be defined\.$#'
+			identifier: variable.undefined
+			count: 2
+			path: releases/index.php
+
+		-
+			message: '#^Variable \$LANG might not be defined\.$#'
+			identifier: variable.undefined
+			count: 2
+			path: search.php
+
+		-
+			message: '#^Variable \$MYSITE might not be defined\.$#'
+			identifier: variable.undefined
+			count: 3
+			path: search.php
+
+		-
+			message: '#^Variable \$COUNTRIES might not be defined\.$#'
+			identifier: variable.undefined
+			count: 1
+			path: submit-event.php
+
+		-
+			message: '#^Variable \$COUNTRIES might not be defined\.$#'
+			identifier: variable.undefined
+			count: 1
+			path: thanks.php
+
+		-
+			message: '#^Variable \$historical_mirrors might not be defined\.$#'
+			identifier: variable.undefined
+			count: 1
+			path: thanks.php
+
+		-
+			message: '#^Variable \$MYSITE might not be defined\.$#'
+			identifier: variable.undefined
+			count: 19
+			path: urlhowto.php
