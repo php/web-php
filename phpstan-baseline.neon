@@ -1,0 +1,295 @@
+parameters:
+	ignoreErrors:
+		-
+			message: '#^Variable \$version might not be defined\.$#'
+			identifier: variable.undefined
+			count: 1
+			path: include/download-instructions/linux-debian-cli-community.php
+
+		-
+			message: '#^Variable \$version might not be defined\.$#'
+			identifier: variable.undefined
+			count: 1
+			path: include/download-instructions/linux-debian-web-community.php
+
+		-
+			message: '#^Variable \$version might not be defined\.$#'
+			identifier: variable.undefined
+			count: 2
+			path: include/download-instructions/linux-docker-cli-community.php
+
+		-
+			message: '#^Variable \$version might not be defined\.$#'
+			identifier: variable.undefined
+			count: 2
+			path: include/download-instructions/linux-docker-web-community.php
+
+		-
+			message: '#^Variable \$multiversion might not be defined\.$#'
+			identifier: variable.undefined
+			count: 1
+			path: include/download-instructions/linux-fedora-cli-community.php
+
+		-
+			message: '#^Variable \$version might not be defined\.$#'
+			identifier: variable.undefined
+			count: 1
+			path: include/download-instructions/linux-fedora-cli-community.php
+
+		-
+			message: '#^Variable \$versionNoDot might not be defined\.$#'
+			identifier: variable.undefined
+			count: 1
+			path: include/download-instructions/linux-fedora-cli-community.php
+
+		-
+			message: '#^Variable \$multiversion might not be defined\.$#'
+			identifier: variable.undefined
+			count: 1
+			path: include/download-instructions/linux-fedora-web-community.php
+
+		-
+			message: '#^Variable \$version might not be defined\.$#'
+			identifier: variable.undefined
+			count: 1
+			path: include/download-instructions/linux-fedora-web-community.php
+
+		-
+			message: '#^Variable \$versionNoDot might not be defined\.$#'
+			identifier: variable.undefined
+			count: 1
+			path: include/download-instructions/linux-fedora-web-community.php
+
+		-
+			message: '#^Variable \$multiversion might not be defined\.$#'
+			identifier: variable.undefined
+			count: 1
+			path: include/download-instructions/linux-redhat-cli-community.php
+
+		-
+			message: '#^Variable \$version might not be defined\.$#'
+			identifier: variable.undefined
+			count: 1
+			path: include/download-instructions/linux-redhat-cli-community.php
+
+		-
+			message: '#^Variable \$versionNoDot might not be defined\.$#'
+			identifier: variable.undefined
+			count: 1
+			path: include/download-instructions/linux-redhat-cli-community.php
+
+		-
+			message: '#^Variable \$multiversion might not be defined\.$#'
+			identifier: variable.undefined
+			count: 1
+			path: include/download-instructions/linux-redhat-web-community.php
+
+		-
+			message: '#^Variable \$version might not be defined\.$#'
+			identifier: variable.undefined
+			count: 1
+			path: include/download-instructions/linux-redhat-web-community.php
+
+		-
+			message: '#^Variable \$versionNoDot might not be defined\.$#'
+			identifier: variable.undefined
+			count: 1
+			path: include/download-instructions/linux-redhat-web-community.php
+
+		-
+			message: '#^Variable \$version might not be defined\.$#'
+			identifier: variable.undefined
+			count: 1
+			path: include/download-instructions/linux-ubuntu-cli-community.php
+
+		-
+			message: '#^Variable \$version might not be defined\.$#'
+			identifier: variable.undefined
+			count: 1
+			path: include/download-instructions/linux-ubuntu-web-community.php
+
+		-
+			message: '#^Variable \$version might not be defined\.$#'
+			identifier: variable.undefined
+			count: 2
+			path: include/download-instructions/osx-docker-cli.php
+
+		-
+			message: '#^Variable \$version might not be defined\.$#'
+			identifier: variable.undefined
+			count: 2
+			path: include/download-instructions/osx-docker-web.php
+
+		-
+			message: '#^Variable \$version might not be defined\.$#'
+			identifier: variable.undefined
+			count: 2
+			path: include/download-instructions/osx-homebrew-php.php
+
+		-
+			message: '#^Variable \$version might not be defined\.$#'
+			identifier: variable.undefined
+			count: 2
+			path: include/download-instructions/osx-homebrew.php
+
+		-
+			message: '#^Variable \$version might not be defined\.$#'
+			identifier: variable.undefined
+			count: 2
+			path: include/download-instructions/osx-macports.php
+
+		-
+			message: '#^Variable \$versionNoDot might not be defined\.$#'
+			identifier: variable.undefined
+			count: 2
+			path: include/download-instructions/osx-macports.php
+
+		-
+			message: '#^Variable \$version might not be defined\.$#'
+			identifier: variable.undefined
+			count: 1
+			path: include/download-instructions/windows-chocolatey.php
+
+		-
+			message: '#^Variable \$version might not be defined\.$#'
+			identifier: variable.undefined
+			count: 2
+			path: include/download-instructions/windows-docker-cli.php
+
+		-
+			message: '#^Variable \$version might not be defined\.$#'
+			identifier: variable.undefined
+			count: 2
+			path: include/download-instructions/windows-docker-web.php
+
+		-
+			message: '#^Variable \$version might not be defined\.$#'
+			identifier: variable.undefined
+			count: 1
+			path: include/download-instructions/windows-downloads.php
+
+		-
+			message: '#^Variable \$version might not be defined\.$#'
+			identifier: variable.undefined
+			count: 1
+			path: include/download-instructions/windows-native.php
+
+		-
+			message: '#^Variable \$versionNoDot might not be defined\.$#'
+			identifier: variable.undefined
+			count: 1
+			path: include/download-instructions/windows-scoop-versions.php
+
+		-
+			message: '#^Variable \$version might not be defined\.$#'
+			identifier: variable.undefined
+			count: 4
+			path: include/download-instructions/windows-winget.php
+
+		-
+			message: '#^Variable \$MYSITE might not be defined\.$#'
+			identifier: variable.undefined
+			count: 1
+			path: include/get-download.inc
+
+		-
+			message: '#^Variable \$CSS might not be defined\.$#'
+			identifier: variable.undefined
+			count: 1
+			path: include/header.inc
+
+		-
+			message: '#^Variable \$MYSITE might not be defined\.$#'
+			identifier: variable.undefined
+			count: 9
+			path: include/header.inc
+
+		-
+			message: '#^Variable \$classes might not be defined\.$#'
+			identifier: variable.undefined
+			count: 1
+			path: include/header.inc
+
+		-
+			message: '#^Variable \$config might not be defined\.$#'
+			identifier: variable.undefined
+			count: 3
+			path: include/header.inc
+
+		-
+			message: '#^Variable \$curr might not be defined\.$#'
+			identifier: variable.undefined
+			count: 2
+			path: include/header.inc
+
+		-
+			message: '#^Variable \$lang might not be defined\.$#'
+			identifier: variable.undefined
+			count: 1
+			path: include/header.inc
+
+		-
+			message: '#^Variable \$shorturl might not be defined\.$#'
+			identifier: variable.undefined
+			count: 3
+			path: include/header.inc
+
+		-
+			message: '#^Variable \$title might not be defined\.$#'
+			identifier: variable.undefined
+			count: 1
+			path: include/header.inc
+
+		-
+			message: '#^Variable \$userPreferences might not be defined\.$#'
+			identifier: variable.undefined
+			count: 1
+			path: include/langchooser.inc
+
+		-
+			message: '#^Variable \$MYSITE might not be defined\.$#'
+			identifier: variable.undefined
+			count: 2
+			path: include/layout.inc
+
+		-
+			message: '#^Variable \$TOC might not be defined\.$#'
+			identifier: variable.undefined
+			count: 6
+			path: include/layout.inc
+
+		-
+			message: '#^Variable \$link might not be defined\.$#'
+			identifier: variable.undefined
+			count: 1
+			path: include/layout.inc
+
+		-
+			message: '#^Variable \$title might not be defined\.$#'
+			identifier: variable.undefined
+			count: 1
+			path: include/layout.inc
+
+		-
+			message: '#^Variable \$MYSITE might not be defined\.$#'
+			identifier: variable.undefined
+			count: 2
+			path: include/mozopensearch.inc
+
+		-
+			message: '#^Variable \$MYSITE might not be defined\.$#'
+			identifier: variable.undefined
+			count: 5
+			path: include/mozsearch.inc
+
+		-
+			message: '#^Variable \$LANG might not be defined\.$#'
+			identifier: variable.undefined
+			count: 1
+			path: manual/index.php
+
+		-
+			message: '#^Variable \$N might not be defined\.$#'
+			identifier: variable.undefined
+			count: 1
+			path: manual/vote-note.php
