@@ -21,6 +21,14 @@ foreach ((new NewsHandler())->getConferences() as $entry) {
     $date = date_format(date_create($entry["updated"] ?? $entry["published"]), 'Y-m-d');
     $content .= '<div class="newsentry">';
     $content .= '<h3 class="newstitle title"><a href="' . $MYSITE . $link . '" id="' . $id . '">' . $entry["title"] . '</a></h3>';
+
+    if (!empty($entry["finalTeaserDate"])) {
+        $confDate = date_create($entry["finalTeaserDate"]);
+        if ($confDate) {
+            $content .= '<p class="conference-date"><strong>' . date_format($confDate, 'F j, Y') . '</strong></p>';
+        }
+    }
+
     $content .= '<div class="newsimage">';
 
     if (isset($entry["newsImage"])) {
@@ -33,7 +41,14 @@ foreach ((new NewsHandler())->getConferences() as $entry) {
     $content .= '</div>';
     $content .= '</div>';
 
-    $panels .= sprintf('<p class="panel"><a href="%s">%s</a></p>', $entry["newsImage"]["link"] ?? $link, $entry["title"]);
+    $panelExtra = '';
+    if (!empty($entry["finalTeaserDate"])) {
+        $confDate = date_create($entry["finalTeaserDate"]);
+        if ($confDate) {
+            $panelExtra = ' <small>' . date_format($confDate, 'M j, Y') . '</small>';
+        }
+    }
+    $panels .= sprintf('<p class="panel"><a href="%s">%s</a>%s</p>', $entry["newsImage"]["link"] ?? $link, $entry["title"], $panelExtra);
 }
 $content .= "</div>";
 
