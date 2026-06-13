@@ -4,7 +4,7 @@ HTTP_HOST:=localhost:8080
 CORES?=$(shell (nproc  || sysctl -n hw.ncpu) 2> /dev/null)
 
 .PHONY: it
-it: coding-standards tests ## Runs all the targets
+it: coding-standards static-analysis tests ## Runs all the targets
 
 .PHONY: code-coverage
 code-coverage: vendor ## Collects code coverage from running unit tests with phpunit/phpunit
@@ -17,6 +17,14 @@ coding-standards: vendor ## Fixes code style issues with friendsofphp/php-cs-fix
 .PHONY: help
 help: ## Displays this list of targets with descriptions
 	@grep -E '^[a-zA-Z0-9_-]+:.*?## .*$$' $(MAKEFILE_LIST) | sort | awk 'BEGIN {FS = ":.*?## "}; {printf "\033[32m%-30s\033[0m %s\n", $$1, $$2}'
+
+.PHONY: static-analysis
+static-analysis: vendor ## Runs a static code analysis
+	vendor/bin/phpstan
+
+.PHONY: static-analysis-baseline
+static-analysis-baseline: vendor ## Generates a baseline for static analysis
+	vendor/bin/phpstan --generate-baseline
 
 .PHONY: tests
 tests: vendor ## Runs unit and end-to-end tests with phpunit/phpunit
