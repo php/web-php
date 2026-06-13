@@ -1,0 +1,13 @@
+includes:
+	- phpstan-baseline.neon
+
+parameters:
+	level: 3
+	paths:
+		- src
+		- tests
+		- manual
+		- include
+	fileExtensions:
+		- php
+		- inc
