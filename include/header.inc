@@ -58,43 +58,39 @@ if (!isset($config["languages"])) {
 <html xmlns="http://www.w3.org/1999/xhtml" lang="<?php echo $lang?>">
 <head>
 
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <?php if (!empty($_SERVER["BASE_HREF"])): ?>
-   <base href="<?php echo $_SERVER["BASE_HREF"]; ?>">
-  <?php endif ?>
+<title><?php echo $title ?></title>
 
-  <title><?php echo $title ?></title>
+<?php foreach($CSS as $filename => $modified): ?>
+<link rel="stylesheet" type="text/css" href="/cached.php?t=<?php echo $modified?>&amp;f=<?php echo $filename?>" media="screen">
+<?php endforeach ?>
 
-  <?php foreach($CSS as $filename => $modified): ?>
-    <link rel="stylesheet" type="text/css" href="/cached.php?t=<?php echo $modified?>&amp;f=<?php echo $filename?>" media="screen">
-  <?php endforeach ?>
+<link rel="icon" type="image/svg+xml" sizes="any" href="<?php echo $MYSITE ?>favicon.svg?v=2">
+<link rel="icon" type="image/png" sizes="196x196" href="<?php echo $MYSITE ?>favicon-196x196.png?v=2">
+<link rel="icon" type="image/png" sizes="32x32" href="<?php echo $MYSITE ?>favicon-32x32.png?v=2">
+<link rel="icon" type="image/png" sizes="16x16" href="<?php echo $MYSITE ?>favicon-16x16.png?v=2">
+<link rel="shortcut icon" href="<?php echo $MYSITE ?>favicon.ico?v=2">
 
- <link rel="icon" type="image/svg+xml" sizes="any" href="<?php echo $MYSITE ?>favicon.svg?v=2">
- <link rel="icon" type="image/png" sizes="196x196" href="<?php echo $MYSITE ?>favicon-196x196.png?v=2">
- <link rel="icon" type="image/png" sizes="32x32" href="<?php echo $MYSITE ?>favicon-32x32.png?v=2">
- <link rel="icon" type="image/png" sizes="16x16" href="<?php echo $MYSITE ?>favicon-16x16.png?v=2">
- <link rel="shortcut icon" href="<?php echo $MYSITE ?>favicon.ico?v=2">
-
- <link rel="search" type="application/opensearchdescription+xml" href="https://www.php.net/phpnetimprovedsearch.src" title="Add PHP.net search">
- <link rel="alternate" type="application/atom+xml" href="<?php echo $MYSITE ?>releases/feed.php" title="PHP Release feed">
- <link rel="alternate" type="application/atom+xml" href="<?php echo $MYSITE ?>feed.atom" title="PHP: Hypertext Preprocessor">
+<link rel="search" type="application/opensearchdescription+xml" href="https://www.php.net/phpnetimprovedsearch.src" title="Add PHP.net search">
+<link rel="alternate" type="application/atom+xml" href="<?php echo $MYSITE ?>releases/feed.php" title="PHP Release feed">
+<link rel="alternate" type="application/atom+xml" href="<?php echo $MYSITE ?>feed.atom" title="PHP: Hypertext Preprocessor">
 
 <?php if (isset($_SERVER['BASE_PAGE'])): ?>
- <link rel="canonical" href="https://www.php.net/<?php echo $_SERVER['BASE_PAGE']?>">
+<link rel="canonical" href="https://www.php.net/<?php echo $_SERVER['BASE_PAGE']?>">
 <?php if ($shortname): ?>
- <link rel="shorturl" href="<?php echo $shorturl ?>">
- <link rel="alternate" href="<?php echo $shorturl ?>" hreflang="x-default">
+<link rel="shorturl" href="<?php echo $shorturl ?>">
+<link rel="alternate" href="<?php echo $shorturl ?>" hreflang="x-default">
 <?php endif ?>
 <?php endif ?>
 
 <?php foreach($config["meta-navigation"] as $rel => $page): ?>
- <link rel="<?php echo $rel ?>" href="<?php echo $MYSITE ?><?php echo $page ?>">
+<link rel="<?php echo $rel ?>" href="<?php echo $MYSITE ?><?php echo $page ?>">
 <?php endforeach ?>
 
 <?php foreach($config["languages"] as $code): ?>
- <link rel="alternate" href="<?php echo $MYSITE ?>manual/<?php echo $code?>/<?php echo $config["thispage"] ?>" hreflang="<?php echo $code?>">
+<link rel="alternate" href="<?php echo $MYSITE ?>manual/<?php echo $code?>/<?php echo $config["thispage"] ?>" hreflang="<?php echo $code?>">
 <?php endforeach ?>
 
 <?php foreach($CSS as $filename => $modified): ?>
@@ -106,7 +102,7 @@ if (!isset($config["languages"])) {
 <?php endforeach ?>
 
 <?php if (!empty($_SERVER["BASE_HREF"])): ?>
- <base href="<?php echo $_SERVER["BASE_HREF"] ?>">
+<base href="<?php echo $_SERVER["BASE_HREF"] ?>">
 <?php endif ?>
 
 <?php if (isset($config['meta_tags'])) { echo $config['meta_tags']; } ?>
