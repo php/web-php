@@ -98,7 +98,7 @@ class ReleasePage
                     <h2>$title</h2>
 
                     <div class="cta-footer-button-container">
-                        <a href="/downloads" class="button-primary">$upgradeNow</a>
+                        <a href="/downloads.php" class="button-primary">$upgradeNow</a>
                     </div>
 
                     $description
