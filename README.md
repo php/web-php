@@ -13,7 +13,7 @@ git clone https://github.com/php/web-php.git
 Change into `web-php`:
 
 ```
-cd web-php
+cd web-php/public
 ```
 
 Start the built-in web server:
