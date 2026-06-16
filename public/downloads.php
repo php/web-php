@@ -203,7 +203,7 @@ to verify the tags:
 <?php gpg_key_show_keys(true /* activeOnly */); ?>
 
 <p>
-    <a href="../gpg-keys.php">
+    <a href="/gpg-keys.php">
         A full list of GPG keys used for current and older releases is also
         available.
     </a>
