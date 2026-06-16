@@ -115,7 +115,7 @@ if (preg_match("!^manual/(\\w+)/(print|printwn|html)((/.+)|$)!", $URI, $array)) 
 // send them to the /releases page since that is likely to be most helpful.
 if (preg_match("!^distributions/.*!", $URI, $array)) {
     status_header(404);
-    require_once __DIR__ . "/releases/index.php";
+    require_once ProjectGlobals::getPublicRoot() . "/releases/index.php";
 }
 
 // ============================================================================
@@ -142,7 +142,7 @@ if (preg_match("!^get/([^/]+)/from/([^/]+)(/mirror)?$!", $URI, $dlinfo)) {
 
     $df = $dlinfo[1];
     if (strpos($df, "7-LATEST") !== false) {
-        require_once __DIR__ . "/include/version.inc";
+        require_once __DIR__ . "/../include/version.inc";
         [$latest] = release_get_latest();
         $df = str_replace("7-LATEST", $latest, $df);
     }
@@ -740,7 +740,7 @@ if ($URI == 'mirror-info') {
 
 // ============================================================================
 // Try to find the page using the preferred language as a manual page
-require_once __DIR__ . "/include/manual-lookup.inc";
+require_once ProjectGlobals::getProjectRoot() . "/include/manual-lookup.inc";
 $try = find_manual_page($LANG, $URI);
 if ($try) {
     status_header(200);
