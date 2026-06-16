@@ -186,7 +186,7 @@ if ($auto_osvariant && (!array_key_exists('osvariant', $options) || !array_key_e
 
 <h2>Instructions</h2>
 <div id="instructions" class="instructions">
-<?php $instructionsShown = include 'downloads-get-instructions.php'; ?>
+<?php $instructionsShown = require 'downloads-get-instructions.php'; ?>
 <?php if (!$instructionsShown): ?>
 
 <h2>Source Code</h2>
