@@ -1,8 +1,8 @@
 <?php
 
 $_SERVER['BASE_PAGE'] = 'manual-lookup.php';
-include __DIR__ . '/include/prepend.inc';
-include __DIR__ . '/include/manual-lookup.inc';
+require_once __DIR__ . '/../include/prepend.inc';
+require_once __DIR__ . '/../include/manual-lookup.inc';
 
 // BC code, so pattern and function can both be used as
 // parameters to specify the function name

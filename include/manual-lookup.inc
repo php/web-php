@@ -3,7 +3,7 @@
 // We need this for error reporting
 use phpweb\ProjectGlobals;
 
-include_once __DIR__ . '/errors.inc';
+require_once __DIR__ . '/errors.inc';
 
 // Try to find some variations of keyword with $prefix in the $lang manual
 function tryprefix($lang, $keyword, $prefix)

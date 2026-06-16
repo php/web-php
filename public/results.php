@@ -1,7 +1,7 @@
 <?php
 
 $_SERVER['BASE_PAGE'] = 'results.php';
-include __DIR__ . '/include/prepend.inc';
+include __DIR__ . '/../include/prepend.inc';
 
 if (!empty($_GET['p']) && is_string($_GET['p'])) {
     $show = htmlspecialchars($_GET['p'], ENT_QUOTES, 'UTF-8');
