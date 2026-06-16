@@ -8,7 +8,7 @@
         "source": "https://github.com/php/web-php"
     },
     "require": {
-        "php": "~8.2.0"
+        "php": "~8.4.0"
     },
     "require-dev": {
         "ext-curl": "*",
@@ -27,7 +27,7 @@
     },
     "config": {
         "platform": {
-            "php": "8.2.0"
+            "php": "8.4.0"
         },
         "sort-packages": true
     }
